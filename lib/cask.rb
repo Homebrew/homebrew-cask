@@ -98,10 +98,10 @@ class Cask
         puts "#{symlink_destination} exists but is symlink; removing and relinking"
         puts "#{symlink_destination} -> #{symlink_target}"
         symlink_destination.delete
-        symlink_destination.make_symlink(symlink_destination)
+        symlink_destination.make_symlink(symlink_target)
       else
         puts "#{symlink_destination} -> #{symlink_target}"
-        symlink_destination.make_symlink(symlink_destination)
+        symlink_destination.make_symlink(symlink_target)
       end
     end
   end
