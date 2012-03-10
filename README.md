@@ -12,18 +12,13 @@ command](https://github.com/mxcl/homebrew/wiki/External-Commands)" called
 
 # Let's try it!
 
-## Install and set up brew-cask
+## Get brew-cask
 
-This is still a little ornery.  You'll probably want to also see "Known
-Ugliness" below.
+Pull down my work-in-progress Homebrew formula from https://gist.github.com/2010774 like so:
 
-    # be sure you have Homebrew installed first
-    
-    $ git clone https://github.com/phinze/brew-cask
-    $ ln -s brew-cask/bin/brew-cask.rb ~/bin # or anywhere in your $PATH
-    $ ln -s brew-cask/Casks /usr/local/Library/
-    
-## Now let's install something
+    $ brew install --HEAD https://gist.github.com/raw/2010774/8744c097cc9fdfda21fb4a07d140b23cfaf06b78/brew-cask.rb
+
+## Now let's install our first Cask
 
 Let's see if there's a Cask for Chrome:
     
@@ -45,29 +40,24 @@ And there we have it.  Google Chrome installed with a few quick commands; no cli
     
     open "~/Applications/Google Chrome.app"
 
+# What Casks are available?
+
+Just run `brew cask search` with no arguments to get a list.
+
+# How do I update brew-cask?
+
+Currently you'll have to `brew rm brew-cask` and then run the command above to reinstall.
+
 # What is a Cask?
 
 A `Cask` is like a `Formula` in Homebrew except it describes how to download
 and install a binary application.
 
-Casks have two important fields:
+Casks currently have three fields:
 
  * __url__: (required) points to binary distribution of the application
  * __version__: (required) describes the version of the application available at the URL
-
-# What Casks are available?
-
-Just run `brew cask search` with no arguments to get a list.
-
-Here's the current list:
-
-<pre>
-alfred
-dropbox
-google-chrome
-keepass-x
-nv-alt
-</pre>
+ * __homepage__: the same as Homebrew's - it doesn't do anything yet, but will be wired in
 
 # What's the status of this project?  Where's it headed?
 
@@ -88,14 +78,9 @@ application should be installed.  If all goes well - I'm hoping to build up a
 community-maintained collection of Casks that becomes the standard way that
 hackers install Mac apps.
 
-# Known Ugliness
+# Alfred Integration
 
-The interactions with Old Uncle Homebrew are a little funky at this point.  I'm
-still playing with sharing Homebrew's Cellar (which we do in the current
-implementation).  This means that `cask` applications show up in regular old
-`brew list`, and can be `unlink`ed and `uninstall`ed by `brew`.  But `cask`
-apps are not regular formula, so they won't show up in `brew search` and `brew
-info` will not return anything for you.
-
-So there's some coolness out of playing in @mxcl's playground, but also some
-confusing behavior.  We'll see how it plays out.
+I've been using Casks along with Alfred to great effect.  Just add
+`/usr/local/Cellar` as a Search Scope in Alfred's preferences, and then
+applications become available in Alfred immediately after a `brew cask
+install`.  Your fingertips will thank you!
