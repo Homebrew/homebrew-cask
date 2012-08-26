@@ -1,5 +1,5 @@
 class GoogleChrome < Cask
   url 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'  
   homepage 'https://www.google.com/chrome/'
-  version '17.0.963.56'
+  version 'stable-channel'
 end
