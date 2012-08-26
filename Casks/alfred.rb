@@ -1,5 +1,5 @@
 class Alfred < Cask
-  url 'http://rwc.cachefly.net/alfred_1.1_189.dmg'
+  url 'http://cachefly.alfredapp.com/alfred_1.3.1_261.dmg'
   homepage 'http://www.alfredapp.com/'
-  version '1.1_189'
+  version '1.3.1_261'
 end
