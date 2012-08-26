@@ -1,4 +1,5 @@
 require 'download_strategy'
+require 'formula_support'
 require 'plist/parser'
 require 'uri'
 
@@ -76,7 +77,7 @@ class Cask
   end
 
   def install
-    downloader = CurlDownloadStrategy.new(self.url.to_s, self.title, self.version, {})
+    downloader = CurlDownloadStrategy.new(self.title, SoftwareSpec.new(self.url.to_s, self.version))
     downloaded_path = downloader.fetch
 
     FileUtils.mkdir_p destination_path
