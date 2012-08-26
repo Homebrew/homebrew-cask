@@ -14,9 +14,10 @@ command](https://github.com/mxcl/homebrew/wiki/External-Commands)" called
 
 ## Get brew-cask
 
-Pull down my work-in-progress Homebrew formula from https://gist.github.com/2010774 like so:
+Tap this repository and install the `brew-cask` tool:
 
-    $ brew install --HEAD https://gist.github.com/raw/2010774/8744c097cc9fdfda21fb4a07d140b23cfaf06b78/brew-cask.rb
+    $ brew tap phinze/homebrew-cask
+    $ brew install brew-cask
 
 ## Now let's install our first Cask
 
