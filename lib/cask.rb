@@ -15,7 +15,7 @@ require 'plist/parser'
 
 class Cask
   def self.path
-    HOMEBREW_PREFIX.join("Library", "Casks")
+    HOMEBREW_PREFIX.join("Library", "Taps", "phinze-cask", "Casks")
   end
 
   def self.cellarpath
