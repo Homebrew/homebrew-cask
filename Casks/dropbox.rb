@@ -1,5 +1,5 @@
 class Dropbox < Cask
-  url 'http://dl-web.dropbox.com/u/17/Dropbox%201.2.52.dmg'
+  url 'https://ddr3luum8vl5r.cloudfront.net/Dropbox%201.4.12.dmg'
   homepage 'http://www.dropbox.com/'
-  version '1.2.52'
+  version '1.4.12'
 end
