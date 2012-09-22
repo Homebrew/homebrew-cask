@@ -86,7 +86,7 @@ class Cask
       puts `ditto #{mountpoint} #{destination_path}`
     end
 
-    puts "Success! #{self} installed to #{destination_path}"
+    ohai "Success! #{self} installed to #{destination_path}"
   end
 
   def linkapps
