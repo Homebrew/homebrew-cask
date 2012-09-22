@@ -142,6 +142,15 @@ class Cask
       ensure
         `rm -rf '#{destdir}'`
       end
+    elsif _tar_bzip?(path)
+      destdir = "/tmp/brewcask_#{@title}_extracted"
+      `mkdir -p #{destdir}`
+      `tar jxf '#{path}' -C '#{destdir}'`
+      begin
+        yield destdir
+      ensure
+        `rm -rf '#{destdir}'`
+      end
     else
       raise "uh oh, could not identify type of #{path}"
     end
@@ -155,6 +164,11 @@ class Cask
   def _zip?(path)
     output = `file -Izb #{path}`
     output.chomp == 'application/x-empty compressed-encoding=application/zip; charset=binary; charset=binary'
+  end
+
+  def _tar_bzip?(path)
+    output = `file -Izb #{path}`
+    output.chomp == 'application/x-tar; charset=binary compressed-encoding=application/x-bzip2; charset=binary; charset=binary'
   end
 
   def to_s
