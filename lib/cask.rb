@@ -8,10 +8,12 @@ HOME_APPS = Pathname.new(File.expand_path("~/Applications"))
 class Cask; end
 
 require 'cask/cli'
+require 'cask/cli/edit'
 require 'cask/cli/install'
 require 'cask/cli/linkapps'
 require 'cask/cli/list'
 require 'cask/cli/search'
+require 'cask/exceptions'
 require 'plist/parser'
 
 class Cask
