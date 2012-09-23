@@ -1,7 +1,21 @@
 class Cask::CLI::Search
   def self.run(*arguments)
     search_term, *rest = *arguments
-    puts Cask.all.map(&:to_s).grep(/#{search_term}/).join("\n")
+    casks = {}
+    Cask.all.grep(/#{search_term}/).each { |c|
+      repo, name = c.split "/"
+      casks[name] ||= []
+      casks[name].push repo
+    }
+    list = []
+    casks.each { |name,repos|
+      if repos.length == 1
+        list.push name
+      else
+        repos.each { |r| list.push [r,name].join "/" }
+      end
+    }
+    puts list.join "\n"
   end
 
   def self.help

@@ -17,8 +17,8 @@ require 'cask/exceptions'
 require 'plist/parser'
 
 class Cask
-  def self.path
-    HOMEBREW_PREFIX.join("Library", "Taps", "phinze-cask", "Casks")
+  def self.tapspath
+    HOMEBREW_PREFIX.join "Library", "Taps"
   end
 
   def self.cellarpath
@@ -26,12 +26,23 @@ class Cask
   end
 
   def self.all
-    cask_titles = path.entries.map(&:to_s).grep(/.rb$/).map { |p| p.to_s.split('.').first }
-    cask_titles.map { |c| self.load(c) }
+    cask_titles = Dir[tapspath.join("*", "Casks", "*.rb")]
+    cask_titles.map { |c|
+      # => "/usr/local/Library/Taps/example-tap/Casks/example.rb"
+      c.sub! /\.rb$/, ''
+      # => ".../example"
+      c = c.split("/").last 3
+      # => ["example-tap", "Casks", "example"]
+      c.delete_at 1
+      # => ["example-tap", "example"]
+      c = c.join "/"
+      # => "example-tap/example"
+      self.load c
+      c
+    }
   end
 
   def self.init
-    path.mkpath
     HOMEBREW_CACHE.mkpath
     HOME_APPS.mkpath
   end
@@ -46,8 +57,9 @@ class Cask
   end
 
   def self.load(cask_title)
-    require path.join(cask_title)
-    const_get(cask_title.split('-').map(&:capitalize).join).new
+    path = tapspath.join cask_title.sub("/", "/Casks/") 
+    require path
+    const_get(cask_title.split('/').last.split('-').map(&:capitalize).join).new
   end
 
   def self.title
