@@ -15,7 +15,7 @@ class Cask::CLI::Search
         repos.each { |r| list.push [r,name].join "/" }
       end
     }
-    puts list.join "\n"
+    puts list.sort.join "\n"
   end
 
   def self.help
