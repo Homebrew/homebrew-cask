@@ -41,6 +41,24 @@ class Cask
       c
     }
   end
+  
+  def self.nice_listing(cask_list)
+    casks = {}
+    cask_list.each { |c|
+      repo, name = c.split "/"
+      casks[name] ||= []
+      casks[name].push repo
+    }
+    list = []
+    casks.each { |name,repos|
+      if repos.length == 1
+        list.push name
+      else
+        repos.each { |r| list.push [r,name].join "/" }
+      end
+    }
+    list.sort
+  end
 
   def self.init
     HOMEBREW_CACHE.mkpath
@@ -53,12 +71,16 @@ class Cask
   def homepage; self.class.homepage; end
 
   def self.installed
-    self.all.select(&:installed?)
+    self.all.select { |c| load(c).installed? }
+  end
+  
+  def self.path(cask_title)
+    cask_title = all.grep(/#{cask_title}$/).first unless cask_title =~ /\//
+    tapspath.join(cask_title.sub("/", "/Casks/") + ".rb") unless cask_title.nil?
   end
 
   def self.load(cask_title)
-    path = tapspath.join cask_title.sub("/", "/Casks/") 
-    require path
+    require path cask_title
     const_get(cask_title.split('/').last.split('-').map(&:capitalize).join).new
   end
 
