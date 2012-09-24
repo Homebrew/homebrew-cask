@@ -99,6 +99,11 @@ together.
 The whole idea is to build a _community-maintained_ list of easily installable
 packages, so the community part is important! Every little bit counts.
 
+# Taps
+
+You can add Casks to your existing (or new) taps: just create a directory named
+`Casks` inside your tap, put your Casks there, and everything will just work.
+
 # Alfred Integration
 
 I've been using Casks along with Alfred to great effect.  Just add

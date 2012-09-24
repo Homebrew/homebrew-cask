@@ -1,7 +1,8 @@
 class Cask::CLI::Search
   def self.run(*arguments)
     search_term, *rest = *arguments
-    puts Cask.all.map(&:to_s).grep(/#{search_term}/).join("\n")
+    casks = {}
+    puts_columns Cask.nice_listing(Cask.all.grep(/#{search_term}/))
   end
 
   def self.help
