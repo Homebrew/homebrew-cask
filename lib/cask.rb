@@ -17,8 +17,8 @@ require 'cask/exceptions'
 require 'plist/parser'
 
 class Cask
-  def self.path
-    HOMEBREW_PREFIX.join("Library", "Taps", "phinze-cask", "Casks")
+  def self.tapspath
+    HOMEBREW_PREFIX.join "Library", "Taps"
   end
 
   def self.cellarpath
@@ -26,12 +26,41 @@ class Cask
   end
 
   def self.all
-    cask_titles = path.entries.map(&:to_s).grep(/.rb$/).map { |p| p.to_s.split('.').first }
-    cask_titles.map { |c| self.load(c) }
+    cask_titles = Dir[tapspath.join("*", "Casks", "*.rb")]
+    cask_titles.map { |c|
+      # => "/usr/local/Library/Taps/example-tap/Casks/example.rb"
+      c.sub! /\.rb$/, ''
+      # => ".../example"
+      c = c.split("/").last 3
+      # => ["example-tap", "Casks", "example"]
+      c.delete_at 1
+      # => ["example-tap", "example"]
+      c = c.join "/"
+      # => "example-tap/example"
+      self.load c
+      c
+    }
+  end
+  
+  def self.nice_listing(cask_list)
+    casks = {}
+    cask_list.each { |c|
+      repo, name = c.split "/"
+      casks[name] ||= []
+      casks[name].push repo
+    }
+    list = []
+    casks.each { |name,repos|
+      if repos.length == 1
+        list.push name
+      else
+        repos.each { |r| list.push [r,name].join "/" }
+      end
+    }
+    list.sort
   end
 
   def self.init
-    path.mkpath
     HOMEBREW_CACHE.mkpath
     HOME_APPS.mkpath
   end
@@ -42,12 +71,17 @@ class Cask
   def homepage; self.class.homepage; end
 
   def self.installed
-    self.all.select(&:installed?)
+    self.all.select { |c| load(c).installed? }
+  end
+  
+  def self.path(cask_title)
+    cask_title = all.grep(/#{cask_title}$/).first unless cask_title =~ /\//
+    tapspath.join(cask_title.sub("/", "/Casks/") + ".rb") unless cask_title.nil?
   end
 
   def self.load(cask_title)
-    require path.join(cask_title)
-    const_get(cask_title.split('-').map(&:capitalize).join).new
+    require path cask_title
+    const_get(cask_title.split('/').last.split('-').map(&:capitalize).join).new
   end
 
   def self.title
@@ -165,7 +199,7 @@ class Cask
 
   def _zip?(path)
     output = `file -Izb #{path}`
-    output.chomp == 'application/x-empty compressed-encoding=application/zip; charset=binary; charset=binary'
+    output.chomp.include? 'compressed-encoding=application/zip; charset=binary; charset=binary'
   end
 
   def _tar_bzip?(path)
