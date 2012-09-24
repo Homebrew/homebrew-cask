@@ -199,7 +199,7 @@ class Cask
 
   def _zip?(path)
     output = `file -Izb #{path}`
-    output.chomp == 'application/x-empty compressed-encoding=application/zip; charset=binary; charset=binary'
+    output.chomp.include? 'compressed-encoding=application/zip; charset=binary; charset=binary'
   end
 
   def _tar_bzip?(path)
