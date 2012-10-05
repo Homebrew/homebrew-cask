@@ -1,7 +1,7 @@
 class Cask::CLI::Linkapps
   def self.run(*arguments)
     Cask.installed.map { |app|
-      Cask.load(app).linkapp
+      Cask.load(app).linkapps
     }
   end
 
