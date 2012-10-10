@@ -115,3 +115,23 @@ With this setup, you don't actually need `brew cask linkapps` if you always
 open your apps from Alfred. This means that everything stays nice and tidy.
 
 Oh, and you can `brew cask install alfred` too! Not bad, eh?
+
+# Why use the Homebrew's Cellar? Why not just manage apps directly in `Applications`?
+
+The short answer to this would be: for the same reason that Homebrew does not
+install applications directly into `/usr/local`.
+
+We don't know up-front precisely what files are going to be in the
+dmg/zip/tgz/etc, so it's really helpful to have a place to dump all of them
+safely then iterate through and act on the files we care about. For a `.app`
+file this may be symlinking it into `~/Applications` or `/Applications`, for a
+`.pkg` file this might be running the installer. For a screensaver it may be
+symlinking it into the appropriate directory for it to show up in System
+Preferences.
+
+The reason I implemented this project on top of Homebrew was because I believe
+that their methodology for managing applications has a lot of merit. I'd prefer
+to try and work things so that we can keep ourselves Homebrewy both in
+implementation and idioms. Trying to manage all of `~/Applications` would move
+the project more towards a standalone system, which would mean reimplementing a
+lot of the Homebrew stuff we lean on now.
