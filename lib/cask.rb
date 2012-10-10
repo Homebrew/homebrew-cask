@@ -187,6 +187,15 @@ class Cask
       ensure
         `rm -rf '#{destdir}'`
       end
+    elsif _tar_gzip?(path)
+      destdir = "/tmp/brewcask_#{@title}_extracted"
+      `mkdir -p '#{destdir}'`
+      `tar zxf '#{path}' -C '#{destdir}'`
+      begin
+        yield destdir
+      ensure
+        `rm -rf '#{destdir}'`
+      end
     else
       raise "uh oh, could not identify type of #{path}"
     end
