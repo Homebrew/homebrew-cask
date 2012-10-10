@@ -119,7 +119,7 @@ class Cask
     FileUtils.mkdir_p destination_path
 
     _with_extracted_mountpoints(downloaded_path) do |mountpoint|
-      puts `ditto #{mountpoint} #{destination_path}`
+      puts `ditto '#{mountpoint}' '#{destination_path}'`
     end
 
     ohai "Success! #{self} installed to #{destination_path}"
@@ -153,7 +153,7 @@ class Cask
   def _with_extracted_mountpoints(path)
     if _dmg?(path)
       File.open(path) do |dmg|
-        xml_str = `hdiutil mount -plist -nobrowse -readonly -noidme -mountrandom /tmp #{dmg.path}`
+        xml_str = `hdiutil mount -plist -nobrowse -readonly -noidme -mountrandom /tmp '#{dmg.path}'`
         hdiutil_info = Plist::parse_xml(xml_str)
         raise Exception.new("No disk entities returned by mount at #{dmg.path}") unless hdiutil_info.has_key?("system-entities")
         mounts = hdiutil_info["system-entities"].collect { |entity|
@@ -165,13 +165,13 @@ class Cask
           end
         ensure
           mounts.each do |mountpoint|
-            `hdiutil eject #{mountpoint}`
+            `hdiutil eject '#{mountpoint}'`
           end
         end
       end
     elsif _zip?(path)
       destdir = "/tmp/brewcask_#{@title}_extracted"
-      `mkdir -p #{destdir}`
+      `mkdir -p '#{destdir}'`
       `unzip -d '#{destdir}' '#{path}'`
       begin
         yield destdir
@@ -180,7 +180,7 @@ class Cask
       end
     elsif _tar_bzip?(path)
       destdir = "/tmp/brewcask_#{@title}_extracted"
-      `mkdir -p #{destdir}`
+      `mkdir -p '#{destdir}'`
       `tar jxf '#{path}' -C '#{destdir}'`
       begin
         yield destdir
@@ -193,17 +193,17 @@ class Cask
   end
 
   def _dmg?(path)
-    output = `hdiutil imageinfo #{path} 2>/dev/null`
+    output = `hdiutil imageinfo '#{path}' 2>/dev/null`
     output != ''
   end
 
   def _zip?(path)
-    output = `file -Izb #{path}`
+    output = `file -Izb '#{path}'`
     output.chomp.include? 'compressed-encoding=application/zip; charset=binary; charset=binary'
   end
 
   def _tar_bzip?(path)
-    output = `file -Izb #{path}`
+    output = `file -Izb '#{path}'`
     output.chomp == 'application/x-tar; charset=binary compressed-encoding=application/x-bzip2; charset=binary; charset=binary'
   end
 
