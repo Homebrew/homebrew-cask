@@ -116,7 +116,7 @@ open your apps from Alfred. This means that everything stays nice and tidy.
 
 Oh, and you can `brew cask install alfred` too! Not bad, eh?
 
-# Why use the Homebrew's Cellar? Why not just manage apps directly in `Applications`?
+# Why use Homebrew's Cellar? Why not just manage apps directly in `Applications`?
 
 The short answer to this would be: for the same reason that Homebrew does not
 install applications directly into `/usr/local`.
