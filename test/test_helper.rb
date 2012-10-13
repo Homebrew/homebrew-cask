@@ -9,7 +9,7 @@ lib_path = brew_cask_path.join('lib')
 $:.push(lib_path)
 
 # add vendored homebrew to load path
-homebrew_path = brew_cask_path.join('spec', 'support', 'homebrew')
+homebrew_path = brew_cask_path.join('test', 'support', 'homebrew')
 $:.push(homebrew_path.join('Library', 'Homebrew'))
 
 # require homebrew testing env
@@ -23,6 +23,9 @@ HOMEBREW_LIBRARY = HOMEBREW_REPOSITORY/"Library"
 require 'minitest/spec'
 require 'minitest/autorun'
 require 'purdytest'
+
+# sometimes you need to mock
+require 'mocha'
 
 # our baby
 require 'cask'

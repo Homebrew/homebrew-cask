@@ -1,3 +1,3 @@
-[submodule "spec/support/homebrew"]
-	path = spec/support/homebrew
+[submodule "test/support/homebrew"]
+	path = test/support/homebrew
 	url = https://github.com/mxcl/homebrew.git
