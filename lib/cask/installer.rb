@@ -7,7 +7,7 @@ class Cask::Installer
       FileUtils.mkdir_p cask.destination_path
 
       _with_extracted_mountpoints(downloaded_path) do |mountpoint|
-        puts `ditto '#{mountpoint}' '#{cask.destination_path}'`
+        `ditto '#{mountpoint}' '#{cask.destination_path}' 2>/dev/null`
       end
 
       ohai "Success! #{cask} installed to #{cask.destination_path}"
