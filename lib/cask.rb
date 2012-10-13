@@ -80,7 +80,9 @@ class Cask
   end
 
   def self.load(cask_title)
-    require path cask_title
+    cask_path = path(cask_title)
+    raise CaskUnavailableError, cask_title unless cask_path
+    require cask_path
     const_get(cask_title.split('/').last.split('-').map(&:capitalize).join).new
   end
 

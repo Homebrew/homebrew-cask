@@ -1,0 +1,12 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    minitest (2.12.1)
+    purdytest (1.0.0)
+      minitest (~> 2.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  purdytest
