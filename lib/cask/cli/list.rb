@@ -1,6 +1,6 @@
 class Cask::CLI::List
   def self.run(*arguments)
-    puts_columns Cask.nice_listing(Cask.installed)
+    puts_columns Cask::CLI.nice_listing(Cask.installed)
   end
 
   def self.help

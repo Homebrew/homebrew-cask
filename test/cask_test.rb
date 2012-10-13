@@ -14,4 +14,12 @@ describe Cask do
       }.must_raise(CaskUnavailableError)
     end
   end
+
+  describe "all" do
+    it "returns every cask that there is as a string" do
+      all_casks = Cask.all
+      all_casks.count.must_be :>, 20
+      all_casks.each { |cask| cask.must_be_kind_of String }
+    end
+  end
 end

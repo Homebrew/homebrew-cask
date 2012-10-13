@@ -14,9 +14,12 @@ require 'cask/cli/linkapps'
 require 'cask/cli/list'
 require 'cask/cli/search'
 require 'cask/exceptions'
+require 'cask/scopes'
 require 'plist/parser'
 
 class Cask
+  include Cask::Scopes
+
   def self.tapspath
     HOMEBREW_PREFIX.join "Library", "Taps"
   end
@@ -24,42 +27,7 @@ class Cask
   def self.cellarpath
     HOMEBREW_CELLAR
   end
-
-  def self.all
-    cask_titles = Dir[tapspath.join("*", "Casks", "*.rb")]
-    cask_titles.map { |c|
-      # => "/usr/local/Library/Taps/example-tap/Casks/example.rb"
-      c.sub! /\.rb$/, ''
-      # => ".../example"
-      c = c.split("/").last 3
-      # => ["example-tap", "Casks", "example"]
-      c.delete_at 1
-      # => ["example-tap", "example"]
-      c = c.join "/"
-      # => "example-tap/example"
-      self.load c
-      c
-    }
-  end
   
-  def self.nice_listing(cask_list)
-    casks = {}
-    cask_list.each { |c|
-      repo, name = c.split "/"
-      casks[name] ||= []
-      casks[name].push repo
-    }
-    list = []
-    casks.each { |name,repos|
-      if repos.length == 1
-        list.push name
-      else
-        repos.each { |r| list.push [r,name].join "/" }
-      end
-    }
-    list.sort
-  end
-
   def self.init
     HOMEBREW_CACHE.mkpath
     HOME_APPS.mkpath
@@ -70,10 +38,6 @@ class Cask
   end
   def homepage; self.class.homepage; end
 
-  def self.installed
-    self.all.select { |c| load(c).installed? }
-  end
-  
   def self.path(cask_title)
     cask_title = all.grep(/#{cask_title}$/).first unless cask_title =~ /\//
     tapspath.join(cask_title.sub("/", "/Casks/") + ".rb") unless cask_title.nil?
