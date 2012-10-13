@@ -13,14 +13,17 @@ require 'cask/cli/install'
 require 'cask/cli/linkapps'
 require 'cask/cli/list'
 require 'cask/cli/search'
+require 'cask/actions'
 require 'cask/dsl'
 require 'cask/exceptions'
+require 'cask/installer'
 require 'cask/scopes'
 require 'plist/parser'
 
 class Cask
-  include Cask::Scopes
+  include Cask::Actions
   include Cask::DSL
+  include Cask::Scopes
 
   def self.tapspath
     HOMEBREW_PREFIX.join "Library", "Taps"
@@ -56,41 +59,8 @@ class Cask
     @title = title
   end
 
-  VALID_SUFFIXES = ['dmg', 'pkg', 'app']
-
   def destination_path
     HOMEBREW_CELLAR.join(self.title).join(self.version)
-  end
-
-  def install
-    downloader = CurlDownloadStrategy.new(self.title, SoftwareSpec.new(self.url.to_s, self.version))
-    downloaded_path = downloader.fetch
-
-    FileUtils.mkdir_p destination_path
-
-    _with_extracted_mountpoints(downloaded_path) do |mountpoint|
-      puts `ditto '#{mountpoint}' '#{destination_path}'`
-    end
-
-    ohai "Success! #{self} installed to #{destination_path}"
-  end
-
-  def linkapps
-    destination_path.entries.select { |f| f.basename.to_s =~ /.app$/ }.each do |app|
-      symlink_destination = HOME_APPS.join(app.basename)
-      symlink_target = destination_path.join(app)
-      if symlink_destination.symlink?
-        puts "#{symlink_destination} exists but is symlink; removing and relinking"
-        puts "#{symlink_destination} -> #{symlink_target}"
-        symlink_destination.delete
-        symlink_destination.make_symlink(symlink_target)
-      elsif symlink_destination.directory? || symlink_destination.file?
-        puts "#{symlink_destination} already exists and is not a symlink, not linking #{self}"
-      else
-        puts "#{symlink_destination} -> #{symlink_target}"
-        symlink_destination.make_symlink(symlink_target)
-      end
-    end
   end
 
   def installed?
@@ -98,63 +68,6 @@ class Cask
     destination_path.entries.any? do |f|
       f.basename.to_s =~ /.app$/
     end
-  end
-
-  def _with_extracted_mountpoints(path)
-    if _dmg?(path)
-      File.open(path) do |dmg|
-        xml_str = `hdiutil mount -plist -nobrowse -readonly -noidme -mountrandom /tmp '#{dmg.path}'`
-        hdiutil_info = Plist::parse_xml(xml_str)
-        raise Exception.new("No disk entities returned by mount at #{dmg.path}") unless hdiutil_info.has_key?("system-entities")
-        mounts = hdiutil_info["system-entities"].collect { |entity|
-          entity["mount-point"]
-        }.compact
-        begin
-          mounts.each do |mountpoint|
-            yield Pathname.new(mountpoint)
-          end
-        ensure
-          mounts.each do |mountpoint|
-            `hdiutil eject '#{mountpoint}'`
-          end
-        end
-      end
-    elsif _zip?(path)
-      destdir = "/tmp/brewcask_#{@title}_extracted"
-      `mkdir -p '#{destdir}'`
-      `unzip -d '#{destdir}' '#{path}'`
-      begin
-        yield destdir
-      ensure
-        `rm -rf '#{destdir}'`
-      end
-    elsif _tar_bzip?(path)
-      destdir = "/tmp/brewcask_#{@title}_extracted"
-      `mkdir -p '#{destdir}'`
-      `tar jxf '#{path}' -C '#{destdir}'`
-      begin
-        yield destdir
-      ensure
-        `rm -rf '#{destdir}'`
-      end
-    else
-      raise "uh oh, could not identify type of #{path}"
-    end
-  end
-
-  def _dmg?(path)
-    output = `hdiutil imageinfo '#{path}' 2>/dev/null`
-    output != ''
-  end
-
-  def _zip?(path)
-    output = `file -Izb '#{path}'`
-    output.chomp.include? 'compressed-encoding=application/zip; charset=binary; charset=binary'
-  end
-
-  def _tar_bzip?(path)
-    output = `file -Izb '#{path}'`
-    output.chomp == 'application/x-tar; charset=binary compressed-encoding=application/x-bzip2; charset=binary; charset=binary'
   end
 
   def to_s

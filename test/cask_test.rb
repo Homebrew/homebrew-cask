@@ -22,4 +22,19 @@ describe Cask do
       all_casks.each { |cask| cask.must_be_kind_of String }
     end
   end
+
+  describe "install" do
+    it "downloads and installs a nice fresh Cask" do
+      caffeine = Cask.load('caffeine')
+
+      shutup do
+        caffeine.install
+      end
+
+      dest_path = HOMEBREW_CELLAR/'caffeine'/caffeine.version
+      dest_path.must_be :directory?
+      application = dest_path/'Caffeine.app'
+      application.must_be :directory?
+    end
+  end
 end
