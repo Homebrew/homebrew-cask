@@ -38,3 +38,6 @@ require 'cmd/tap'
 shutup do 
   Homebrew.install_tap 'phinze', 'cask'
 end
+
+# a test cask
+require 'support/Casks/test-cask'

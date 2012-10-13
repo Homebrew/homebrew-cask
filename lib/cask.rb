@@ -13,12 +13,14 @@ require 'cask/cli/install'
 require 'cask/cli/linkapps'
 require 'cask/cli/list'
 require 'cask/cli/search'
+require 'cask/dsl'
 require 'cask/exceptions'
 require 'cask/scopes'
 require 'plist/parser'
 
 class Cask
   include Cask::Scopes
+  include Cask::DSL
 
   def self.tapspath
     HOMEBREW_PREFIX.join "Library", "Taps"
@@ -32,11 +34,6 @@ class Cask
     HOMEBREW_CACHE.mkpath
     HOME_APPS.mkpath
   end
-
-  def self.homepage(homepage=nil)
-    @homepage ||= homepage
-  end
-  def homepage; self.class.homepage; end
 
   def self.path(cask_title)
     cask_title = all.grep(/#{cask_title}$/).first unless cask_title =~ /\//
@@ -54,23 +51,10 @@ class Cask
     self.name.gsub(/([a-z\d])([A-Z])/,'\1-\2').downcase
   end
 
-  def self.url(url=nil)
-    @url ||= URI.parse(url)
-  end
-  def url; self.class.url; end
-
   attr_reader :title
   def initialize(title=self.class.title)
     @title = title
   end
-
-  def self.version(version=nil)
-    @version ||= version
-  end
-  def version; self.class.version; end
-  # def version
-  #   Pathname.new(self.url.path.to_s).version
-  # end
 
   VALID_SUFFIXES = ['dmg', 'pkg', 'app']
 
