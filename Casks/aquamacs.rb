@@ -1,5 +1,5 @@
 class Aquamacs < Cask
-  url 'http://downloads.sourceforge.net/project/aquamacs/Releases/Aquamacs-Emacs-2.4.dmg'
+  url 'http://braeburn.aquamacs.org/~dr/Aquamacs/24/Aquamacs-nightly.tar.bz2'
   homepage 'http://aquamacs.org/'
-  version '2.4'
+  version '3.x Nightly'
 end
