@@ -3,8 +3,6 @@ require 'formula_support'
 require 'plist/parser'
 require 'uri'
 
-HOME_APPS = Pathname.new(File.expand_path("~/Applications"))
-
 class Cask; end
 
 require 'cask/cli'
@@ -31,6 +29,10 @@ class Cask
 
   def self.cellarpath
     HOMEBREW_CELLAR
+  end
+
+  def self.appdir
+    Pathname.new(File.expand_path("~/Applications"))
   end
   
   def self.init
