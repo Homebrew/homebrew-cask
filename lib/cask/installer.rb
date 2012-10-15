@@ -41,7 +41,7 @@ class Cask::Installer
         ensure
           `rm -rf '#{destdir}'`
         end
-      elsif _tar_bzip?(path)
+      elsif _tar?(path)
         destdir = "/tmp/brewcask_#{@title}_extracted"
         `mkdir -p '#{destdir}'`
         `tar jxf '#{path}' -C '#{destdir}'`
@@ -65,9 +65,18 @@ class Cask::Installer
       output.chomp.include? 'compressed-encoding=application/zip; charset=binary; charset=binary'
     end
 
+    def _tar?(path)
+      _tar_bzip?(path) || _tar_gzip?(path)
+    end
+
     def _tar_bzip?(path)
       output = `file -Izb '#{path}'`
       output.chomp == 'application/x-tar; charset=binary compressed-encoding=application/x-bzip2; charset=binary; charset=binary'
+    end
+
+    def _tar_gzip?(path)
+      output = `file -Izb '#{path}'`
+      output.chomp == 'application/x-tar; charset=binary compressed-encoding=application/x-gzip; charset=binary; charset=binary'
     end
   end
 end
