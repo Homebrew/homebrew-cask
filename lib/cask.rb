@@ -3,7 +3,7 @@ require 'formula_support'
 require 'plist/parser'
 require 'uri'
 
-HOME_APPS = Pathname.new(File.expand_path("~/Applications"))
+HOME_APPS = Pathname.new(File.expand_path("/Applications"))
 
 class Cask; end
 
