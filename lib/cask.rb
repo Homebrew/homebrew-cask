@@ -32,12 +32,12 @@ class Cask
   end
 
   def self.appdir
-    Pathname.new(File.expand_path("~/Applications"))
+    @appdir ||= Pathname.new(File.expand_path("~/Applications"))
   end
   
   def self.init
-    HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exists?
-    appdir.mkpath unless appdir.exists?
+    HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?
+    appdir.mkpath unless appdir.exist?
   end
 
   def self.path(cask_title)

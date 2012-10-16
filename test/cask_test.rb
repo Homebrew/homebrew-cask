@@ -37,4 +37,14 @@ describe Cask do
       application.must_be :directory?
     end
   end
+
+  describe "init" do
+    it "sets up dependent directories required for us to properly function" do
+      HOMEBREW_CACHE.stubs(:exist?).returns(false)
+      Cask.appdir.stubs(:exist?).returns(false)
+      HOMEBREW_CACHE.expects :mkpath
+      Cask.appdir.expects :mkpath
+      Cask.init
+    end
+  end
 end
