@@ -2,8 +2,8 @@ require 'formula'
 
 class BrewCask < Formula
   homepage 'https://github.com/phinze/homebrew-cask/'
-  url 'https://github.com/phinze/homebrew-cask.git', :tag => 'v0.3.6'
-  version '0.3.6'
+  url 'https://github.com/phinze/homebrew-cask.git', :tag => 'v0.3.7'
+  version '0.3.7'
 
   head 'https://github.com/phinze/homebrew-cask.git', :branch => 'master'
 
