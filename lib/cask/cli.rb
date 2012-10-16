@@ -17,6 +17,25 @@ class Cask::CLI
     lookup_command(command).run(*rest)
   end
 
+  def self.nice_listing(cask_list)
+    casks = {}
+    cask_list.each { |c|
+      repo, name = c.split "/"
+      casks[name] ||= []
+      casks[name].push repo
+    }
+    list = []
+    casks.each { |name,repos|
+      if repos.length == 1
+        list.push name
+      else
+        repos.each { |r| list.push [r,name].join "/" }
+      end
+    }
+    list.sort
+  end
+
+
   class NullCommand
     def initialize(attempted_name)
       @attempted_name = attempted_name
