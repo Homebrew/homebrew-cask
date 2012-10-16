@@ -36,8 +36,8 @@ class Cask
   end
   
   def self.init
-    HOMEBREW_CACHE.mkpath
-    HOME_APPS.mkpath
+    HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exists?
+    appdir.mkpath unless appdir.exists?
   end
 
   def self.path(cask_title)
