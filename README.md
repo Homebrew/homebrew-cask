@@ -14,6 +14,11 @@ command](https://github.com/mxcl/homebrew/wiki/External-Commands)" called
 
 ## Get brew-cask
 
+First ensure you have Homebrew version '0.9' or higher:
+
+    $ brew --version
+    0.9.3
+
 Tap this repository and install the `brew-cask` tool:
 
     $ brew tap phinze/homebrew-cask
