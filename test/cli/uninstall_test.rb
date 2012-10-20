@@ -23,4 +23,21 @@ describe Cask::CLI::Uninstall do
     Cask::Installer.expects(:uninstall).with(fake_cask)
     Cask::CLI::Uninstall.run('fake-cask')
   end 
+
+  it "can uninstall multiple casks at once" do
+    caffeine = Cask.load('caffeine')
+    anvil = Cask.load('anvil')
+
+    shutup do
+      Cask::Installer.install(caffeine)
+      Cask::Installer.install(anvil)
+    end
+
+    shutup do
+      Cask::CLI::Uninstall.run('caffeine', 'anvil')
+    end
+
+    caffeine.wont_be :installed?
+    anvil.wont_be :installed?
+  end
 end

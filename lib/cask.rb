@@ -65,10 +65,7 @@ class Cask
   end
 
   def installed?
-    return false unless destination_path.exist?
-    destination_path.entries.any? do |f|
-      f.basename.to_s =~ /.app$/
-    end
+    destination_path.exist?
   end
 
   def to_s
