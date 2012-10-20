@@ -1,8 +1,4 @@
 module Cask::Actions
-  def install
-    Cask::Installer.install(self)
-  end
-
   def linkapps
     puts "looking in #{destination_path}/**/*.app"
     puts "found #{Pathname.glob("#{destination_path}/**/*.app").inspect}"

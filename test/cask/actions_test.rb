@@ -9,7 +9,7 @@ describe Cask::Actions do
       Cask.stubs(:appdir).returns(fake_appdir)
 
       @caffeine = Cask.load('caffeine')
-      shutup { @caffeine.install }
+      shutup { Cask::Installer.install(@caffeine) }
       @appdir = HOMEBREW_CELLAR/'caffeine'/@caffeine.version
       @app = @appdir/'Caffeine.app'
     end

@@ -23,21 +23,6 @@ describe Cask do
     end
   end
 
-  describe "install" do
-    it "downloads and installs a nice fresh Cask" do
-      caffeine = Cask.load('caffeine')
-
-      shutup do
-        caffeine.install
-      end
-
-      dest_path = HOMEBREW_CELLAR/'caffeine'/caffeine.version
-      dest_path.must_be :directory?
-      application = dest_path/'Caffeine.app'
-      application.must_be :directory?
-    end
-  end
-
   describe "init" do
     it "sets up dependent directories required for us to properly function" do
       HOMEBREW_CACHE.stubs(:exist?).returns(false)

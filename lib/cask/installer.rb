@@ -1,6 +1,7 @@
 class Cask::Installer
   class << self
     def install(cask)
+      require 'formula_support'
       downloader = CurlDownloadStrategy.new(cask.title, SoftwareSpec.new(cask.url.to_s, cask.version))
       downloaded_path = downloader.fetch
 
@@ -11,6 +12,15 @@ class Cask::Installer
       end
 
       ohai "Success! #{cask} installed to #{cask.destination_path}"
+    end
+
+    def uninstall(cask)
+      raise CaskNotInstalledError.new(cask) unless cask.installed?
+
+      require 'cmd/uninstall'
+      ARGV.clear
+      ARGV << cask.title
+      Homebrew.uninstall
     end
 
     def _with_extracted_mountpoints(path)

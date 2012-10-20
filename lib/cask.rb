@@ -1,5 +1,3 @@
-require 'download_strategy'
-require 'formula_support'
 require 'plist/parser'
 require 'uri'
 
@@ -8,6 +6,7 @@ class Cask; end
 require 'cask/cli'
 require 'cask/cli/edit'
 require 'cask/cli/install'
+require 'cask/cli/uninstall'
 require 'cask/cli/linkapps'
 require 'cask/cli/list'
 require 'cask/cli/search'
