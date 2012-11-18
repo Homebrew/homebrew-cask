@@ -22,6 +22,7 @@ class Cask::Installer
 
     def _with_extracted_mountpoints(path)
       if _dmg?(path)
+        require 'plist/parser'
         File.open(path) do |dmg|
           xml_str = `hdiutil mount -plist -nobrowse -readonly -noidme -mountrandom /tmp '#{dmg.path}'`
           hdiutil_info = Plist::parse_xml(xml_str)

@@ -1,21 +1,9 @@
-require 'plist/parser'
 require 'uri'
 
 class Cask; end
+class Cask::CLI; end
 
-require 'cask/cli'
-require 'cask/cli/edit'
-require 'cask/cli/install'
-require 'cask/cli/uninstall'
-require 'cask/cli/linkapps'
-require 'cask/cli/list'
-require 'cask/cli/search'
-require 'cask/actions'
-require 'cask/dsl'
-require 'cask/exceptions'
-require 'cask/installer'
-require 'cask/scopes'
-require 'plist/parser'
+Dir['lib/**/*.rb'].each { |file| require file.sub(/^lib\/(.*).rb$/, '\1') }
 
 class Cask
   include Cask::Actions
