@@ -14,17 +14,10 @@ class Cask::Installer
       ohai "Success! #{cask} installed to #{cask.destination_path}"
     end
 
-    def uninstall(*casks)
-      casks.each do |cask|
-        raise CaskNotInstalledError.new(cask) unless cask.installed?
-      end
+    def uninstall(cask)
+      raise CaskNotInstalledError.new(cask) unless cask.installed?
 
-      require 'cmd/uninstall'
-      ARGV.clear
-      casks.each do |cask|
-        ARGV << cask.title
-      end
-      Homebrew.uninstall
+      cask.destination_path.rmtree
     end
 
     def _with_extracted_mountpoints(path)

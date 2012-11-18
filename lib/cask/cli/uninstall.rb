@@ -2,7 +2,9 @@ class Cask::CLI::Uninstall
   def self.run(*cask_names)
     begin
       casks = cask_names.map { |cn| Cask.load(cn) }
-      Cask::Installer.uninstall(*casks)
+      casks.each do |cask|
+        Cask::Installer.uninstall(cask)
+      end
     rescue CaskUnavailableError,CaskNotInstalledError => e
       onoe e
     end
