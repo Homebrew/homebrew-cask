@@ -1,6 +1,5 @@
 class MenuBarFilter < Cask
-  url 'http://eece.github.com/MenuBarFilter/MenuBarFilter.zip'
-  homepage 'http://eece.github.com/MenuBarFilter/'
-  version 'latest'
-  content_length '84486'
+  url 'https://github.com/downloads/wez/MenuBarFilter/MenuBarFilter_1.2.2.zip'
+  homepage 'http://wez.github.com/MenuBarFilter/'
+  version '1.2.2'
 end
