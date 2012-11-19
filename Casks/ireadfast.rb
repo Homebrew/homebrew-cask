@@ -3,4 +3,3 @@ class Ireadfast < Cask
   homepage 'http://gengis.110mb.com/en/index.php'
   version '2.0'
 end
-
