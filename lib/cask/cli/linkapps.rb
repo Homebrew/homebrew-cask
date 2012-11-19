@@ -1,8 +1,8 @@
 class Cask::CLI::Linkapps
-  def self.run(*arguments)
-    casks_to_link = arguments.empty? ? Cask.installed : arguments
-    casks_to_link.each do |app|
-      Cask.load(app).linkapps
+  def self.run(*args)
+    casks_to_link = args.empty? ? Cask.installed : args.map { |arg| Cask.load(arg) }
+    casks_to_link.each do |cask|
+      cask.linkapps
     end
   end
 

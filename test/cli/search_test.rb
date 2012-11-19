@@ -2,7 +2,7 @@ require 'test_helper'
 
 describe Cask::CLI::Search do
   it "lists the available casks that match the search term" do
-    Cask.stubs(:all).returns(%w[
+    Cask.stubs(:all_titles).returns(%w[
       phinze-cask/foo
       phinze-cask/bar
       phinze-cask/baz

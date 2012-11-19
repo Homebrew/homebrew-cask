@@ -28,7 +28,7 @@ class Cask
   end
 
   def self.path(cask_title)
-    cask_title = all.grep(/#{cask_title}$/).first unless cask_title =~ /\//
+    cask_title = all_titles.grep(/#{cask_title}$/).first unless cask_title =~ /\//
     tapspath.join(cask_title.sub("/", "/Casks/") + ".rb") unless cask_title.nil?
   end
 

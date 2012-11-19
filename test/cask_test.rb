@@ -15,9 +15,9 @@ describe Cask do
     end
   end
 
-  describe "all" do
+  describe "all_titles" do
     it "returns every cask that there is as a string" do
-      all_casks = Cask.all
+      all_casks = Cask.all_titles
       all_casks.count.must_be :>, 20
       all_casks.each { |cask| cask.must_be_kind_of String }
     end

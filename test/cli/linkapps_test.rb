@@ -14,10 +14,7 @@ describe Cask::CLI::Linkapps do
     mock_cask = mock()
     mock_cask.expects(:linkapps).times(3)
 
-    Cask.expects(:installed).returns(['foo', 'bar', 'baz'])
-    Cask.expects(:load).with('foo').returns(mock_cask)
-    Cask.expects(:load).with('bar').returns(mock_cask)
-    Cask.expects(:load).with('baz').returns(mock_cask)
+    Cask.expects(:installed).returns([mock_cask, mock_cask, mock_cask])
 
     Cask::CLI::Linkapps.run
   end

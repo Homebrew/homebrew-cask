@@ -5,6 +5,10 @@ module Cask::Scopes
 
   module ClassMethods
     def all
+      all_titles.map { |c| self.load c }
+    end
+
+    def all_titles
       cask_titles = Dir[tapspath.join("*", "Casks", "*.rb")]
       cask_titles.map { |c|
         # => "/usr/local/Library/Taps/example-tap/Casks/example.rb"
@@ -15,14 +19,11 @@ module Cask::Scopes
         c.delete_at 1
         # => ["example-tap", "example"]
         c = c.join "/"
-        # => "example-tap/example"
-        self.load c
-        c
       }
     end
 
     def installed
-      all.select { |c| load(c).installed? }
+      all.select { |c| c.installed? }
     end
   end
 end
