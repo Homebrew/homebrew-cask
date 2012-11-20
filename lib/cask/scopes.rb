@@ -23,7 +23,7 @@ module Cask::Scopes
     end
 
     def installed
-      all.select { |c| c.installed? }
+      all_titles.select { |c| Cask.load(c).installed? }
     end
   end
 end
