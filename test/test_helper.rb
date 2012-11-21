@@ -33,11 +33,22 @@ require 'mocha'
 # our baby
 require 'cask'
 
-# "install" brew-cask into homebrew testing env
-require 'cmd/tap'
-shutup do 
-  Homebrew.install_tap 'phinze', 'cask'
+class TestHelper
+  # helper for test casks to reference local files easily
+  def self.local_binary(name)
+    path = File.join(File.dirname(__FILE__), 'support', 'binaries', name)
+    "file://#{path}"
+  end
 end
 
-# a test cask
-require 'support/Casks/test-cask'
+
+# pretend like we installed the cask tap
+project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
+taps_dest = HOMEBREW_LIBRARY/"Taps"
+
+taps_dest.mkdir
+
+FileUtils.ln_s project_root, taps_dest/"phinze-cask"
+
+# also jack in some test casks
+FileUtils.ln_s project_root/'test'/'support', taps_dest/"phinze-testcasks"

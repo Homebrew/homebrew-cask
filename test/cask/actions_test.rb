@@ -8,15 +8,14 @@ describe Cask::Actions do
       fake_appdir.mkpath
       Cask.stubs(:appdir).returns(fake_appdir)
 
-      @caffeine = Cask.load('caffeine')
+      @caffeine = Cask.load('local-caffeine')
       shutup { Cask::Installer.install(@caffeine) }
-      @appdir = HOMEBREW_CELLAR/'caffeine'/@caffeine.version
+      @appdir = HOMEBREW_CELLAR/'local-caffeine'/@caffeine.version
       @app = @appdir/'Caffeine.app'
     end
 
     after do
-      ARGV.replace ['caffeine']
-      shutup { Homebrew.uninstall }
+      Cask::Installer.uninstall(@caffeine)
     end
 
     it "works with an applistion in the root directory" do
