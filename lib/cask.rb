@@ -3,9 +3,11 @@ require 'uri'
 class Cask; end
 class Cask::CLI; end
 
-Dir[File.join(File.dirname(__FILE__), '**', '*.rb')].each { |file| 
-  require file.sub(/^lib\/(.*).rb$/, '\1')
-}
+libdir = File.dirname(__FILE__)
+rubyfiles = Dir[File.join(libdir, '**', '*.rb')]
+rubyfiles.each do |file|
+  require file.sub(/^#{libdir}\/(.*).rb$/, '\1')
+end
 
 class Cask
   include Cask::Actions

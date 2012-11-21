@@ -14,6 +14,19 @@ describe Cask::Installer do
       application = dest_path/'Caffeine.app'
       application.must_be :directory?
     end
+
+    it "works with dmg-based casks" do
+      transmission = Cask.load('local-transmission')
+
+      shutup do
+        Cask::Installer.install(transmission)
+      end
+
+      dest_path = HOMEBREW_CELLAR/'local-transmission'/transmission.version
+      dest_path.must_be :directory?
+      application = dest_path/'Transmission.app'
+      application.must_be :directory?
+    end
   end
 
   describe "uninstall" do
