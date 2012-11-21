@@ -1,19 +1,17 @@
 module Cask::Actions
   def linkapps
-    puts "looking in #{destination_path}/**/*.app"
-    puts "found #{Pathname.glob("#{destination_path}/**/*.app").inspect}"
     Pathname.glob("#{destination_path}/**/*.app").each do |app|
       destination = Cask.appdir.join(app.basename)
       target = destination_path.join(app)
       if destination.symlink?
-        puts "#{destination} exists but is symlink; removing and relinking"
-        puts "#{destination} -> #{target}"
+        # destination exists but is symlink; removing and relinking
+        puts "[#{self}] linking #{File.basename(destination)}"
         destination.delete
         destination.make_symlink(target)
       elsif destination.directory? || destination.file?
-        puts "#{destination} already exists and is not a symlink, not linking #{self}"
+        puts "[#{self}] NOT linking #{File.basename(destination)} - already exists"
       else
-        puts "#{destination} -> #{target}"
+        puts "[#{self}] linking #{File.basename(destination)}"
         destination.make_symlink(target)
       end
     end

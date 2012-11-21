@@ -18,7 +18,7 @@ describe Cask::Actions do
       Cask::Installer.uninstall(@caffeine)
     end
 
-    it "works with an applistion in the root directory" do
+    it "works with an application in the root directory" do
       shutup do
         @caffeine.linkapps
       end
