@@ -1,17 +1,11 @@
 require 'test_helper'
-require 'cmd/uninstall'
 
 describe Cask::Actions do
   describe 'linkapps' do
     before do 
-      fake_appdir = HOMEBREW_PREFIX/"Applications"
-      fake_appdir.mkpath
-      Cask.stubs(:appdir).returns(fake_appdir)
-
       @caffeine = Cask.load('local-caffeine')
       shutup { Cask::Installer.install(@caffeine) }
-      @appdir = HOMEBREW_CELLAR/'local-caffeine'/@caffeine.version
-      @app = @appdir/'Caffeine.app'
+      @app = @caffeine.destination_path/'Caffeine.app'
     end
 
     after do
@@ -30,7 +24,7 @@ describe Cask::Actions do
     end
 
     it "works with an application in a subdir" do
-      appsubdir = @appdir/'subdir'
+      appsubdir = @caffeine.destination_path/'subdir'
       appsubdir.mkpath
       FileUtils.mv @app, appsubdir
       appinsubdir = appsubdir/'Caffeine.app'

@@ -10,10 +10,10 @@ module FakeAppdirHooks
 
   def after_teardown
     super
-    CANNED_APPDIR.rm_rf
+    FileUtils.rm_rf(CANNED_APPDIR)
   end
 end
 
 class MiniTest::Spec
-  include FakeFetcherHooks
+  include FakeAppdirHooks
 end

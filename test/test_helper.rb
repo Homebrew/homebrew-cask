@@ -52,10 +52,6 @@ end
 require 'support/fake_fetcher'
 require 'support/fake_appdir'
 
-# wire in a fake linkapps destination
-canned_appdir = (HOMEBREW_REPOSITORY/"Applications").tap(&:mkdir)
-Cask.set_appdir(canned_appdir)
-
 # pretend like we installed the cask tap
 project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
 taps_dest = HOMEBREW_LIBRARY/"Taps"
