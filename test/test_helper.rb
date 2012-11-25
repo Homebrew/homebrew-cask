@@ -27,9 +27,6 @@ require 'minitest/spec'
 require 'minitest/autorun'
 require 'purdytest'
 
-# sometimes you need to mock
-require 'mocha'
-
 # our baby
 require 'cask'
 
@@ -39,6 +36,36 @@ class TestHelper
     path = File.join(File.dirname(__FILE__), 'support', 'binaries', name)
     "file://#{path}"
   end
+
+  def self.test_cask
+    Cask.load('test-cask')
+  end
+
+  def self.fake_fetcher
+    Cask::FakeFetcher
+  end
+
+  def self.fake_response_for(*args)
+    Cask::FakeFetcher.fake_response_for(*args)
+  end
+end
+
+require 'support/fake_fetcher'
+
+module FakeFetcherHooks
+  def before_setup
+    super 
+    Cask::FakeFetcher.init
+  end
+
+  def after_teardown
+    super
+    Cask::FakeFetcher.clear
+  end
+end
+
+class MiniTest::Spec
+  include FakeFetcherHooks
 end
 
 
