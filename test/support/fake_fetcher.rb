@@ -19,3 +19,19 @@ class Cask::FakeFetcher
     @responses = {}
   end
 end
+
+module FakeFetcherHooks
+  def before_setup
+    super
+    Cask::FakeFetcher.init
+  end
+
+  def after_teardown
+    super
+    Cask::FakeFetcher.clear
+  end
+end
+
+class MiniTest::Spec
+  include FakeFetcherHooks
+end

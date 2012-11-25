@@ -25,6 +25,10 @@ class Cask
   def self.appdir
     @appdir ||= Pathname.new(File.expand_path("~/Applications"))
   end
+
+  def self.set_appdir(canned_appdir)
+    @appdir = canned_appdir
+  end
   
   def self.init
     HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?

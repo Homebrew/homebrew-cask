@@ -21,7 +21,6 @@ HOMEBREW_LIBRARY = HOMEBREW_REPOSITORY/"Library"
 # making homebrew's cache dir allows us to actually download casks in tests
 HOMEBREW_CACHE.mkpath
 
-
 # must be called after testing_env so at_exit hooks are in proper order
 require 'minitest/spec'
 require 'minitest/autorun'
@@ -51,23 +50,11 @@ class TestHelper
 end
 
 require 'support/fake_fetcher'
+require 'support/fake_appdir'
 
-module FakeFetcherHooks
-  def before_setup
-    super 
-    Cask::FakeFetcher.init
-  end
-
-  def after_teardown
-    super
-    Cask::FakeFetcher.clear
-  end
-end
-
-class MiniTest::Spec
-  include FakeFetcherHooks
-end
-
+# wire in a fake linkapps destination
+canned_appdir = (HOMEBREW_REPOSITORY/"Applications").tap(&:mkdir)
+Cask.set_appdir(canned_appdir)
 
 # pretend like we installed the cask tap
 project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
