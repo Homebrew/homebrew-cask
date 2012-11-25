@@ -21,14 +21,10 @@ HOMEBREW_LIBRARY = HOMEBREW_REPOSITORY/"Library"
 # making homebrew's cache dir allows us to actually download casks in tests
 HOMEBREW_CACHE.mkpath
 
-
 # must be called after testing_env so at_exit hooks are in proper order
 require 'minitest/spec'
 require 'minitest/autorun'
 require 'purdytest'
-
-# sometimes you need to mock
-require 'mocha'
 
 # our baby
 require 'cask'
@@ -39,8 +35,22 @@ class TestHelper
     path = File.join(File.dirname(__FILE__), 'support', 'binaries', name)
     "file://#{path}"
   end
+
+  def self.test_cask
+    Cask.load('test-cask')
+  end
+
+  def self.fake_fetcher
+    Cask::FakeFetcher
+  end
+
+  def self.fake_response_for(*args)
+    Cask::FakeFetcher.fake_response_for(*args)
+  end
 end
 
+require 'support/fake_fetcher'
+require 'support/fake_appdir'
 
 # pretend like we installed the cask tap
 project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))

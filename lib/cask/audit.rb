@@ -1,11 +1,12 @@
 class Cask::Audit
   attr_reader :cask, :errors, :warnings, :headers, :response_status
 
-  def initialize(cask)
+  def initialize(cask, fetcher=Cask::Fetcher)
     @cask = cask
     @errors = []
     @warnings = []
     @headers = {}
+    @fetcher = fetcher
   end
 
   def run!
@@ -94,7 +95,7 @@ class Cask::Audit
   end
 
   def _get_data_from_request
-    response = _curl(cask.url)
+    response = @fetcher.head(cask.url)
 
     if response.empty?
       add_error "timeout while requesting #{cask.url}"
@@ -122,7 +123,4 @@ class Cask::Audit
     end
   end
 
-  def _curl(url)
-    `curl --max-time 5 --silent --location --head '#{url}'`
-  end
 end

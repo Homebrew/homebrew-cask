@@ -1,21 +1,33 @@
 require 'test_helper'
 
 describe Cask::CLI::Linkapps do
-  it "only links casks provided in arguments" do
-    mock_cask = mock()
-    mock_cask.expects(:linkapps).twice
-    Cask.expects(:load).with('adium').returns(mock_cask)
-    Cask.expects(:load).with('google-chrome').returns(mock_cask)
-    Cask::CLI::Linkapps.run('adium', 'google-chrome')
+  it "only links casks mentioned when arguments are provided" do
+    caffeine = Cask.load('local-caffeine')
+    transmission = Cask.load('local-transmission')
+
+    shutup do
+      Cask::Installer.install caffeine
+      Cask::Installer.install transmission
+
+      Cask::CLI::Linkapps.run('local-transmission')
+    end
+
+    (Cask.appdir/"Transmission.app").must_be :symlink?
+    (Cask.appdir/"Caffeine.app").wont_be :symlink?
   end
 
   it "links all installed casks when no arguments supplied" do
-    mock_cask = mock()
-    mock_cask.expects(:linkapps).times(3)
-    Cask.expects(:load).times(3).returns(mock_cask)
+    caffeine = Cask.load('local-caffeine')
+    transmission = Cask.load('local-transmission')
 
-    Cask.expects(:installed).returns(['mock1', 'mock2', 'mock3'])
+    shutup do
+      Cask::Installer.install caffeine
+      Cask::Installer.install transmission
 
-    Cask::CLI::Linkapps.run
+      Cask::CLI::Linkapps.run
+    end
+
+    (Cask.appdir/"Transmission.app").must_be :symlink?
+    (Cask.appdir/"Caffeine.app").must_be :symlink?
   end
 end

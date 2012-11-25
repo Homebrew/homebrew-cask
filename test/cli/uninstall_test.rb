@@ -17,21 +17,21 @@ describe Cask::CLI::Uninstall do
     OUTPUT
   end
 
-  it "delegates to the installer to properly uninstall" do
-    fake_cask = stub('fake-cask')
-    Cask.stubs(:load).with('fake-cask').returns(fake_cask)
-    Cask::Installer.expects(:uninstall).with(fake_cask)
-    Cask::CLI::Uninstall.run('fake-cask')
-  end 
-
   it "can uninstall multiple casks at once" do
-    Cask::Installer.expects(:uninstall).with do |cask|
-      cask.title == 'caffeine'
-    end
-    Cask::Installer.expects(:uninstall).with do |cask|
-      cask.title == 'anvil'
+    caffeine = Cask.load('local-caffeine')
+    transmission = Cask.load('local-transmission')
+
+    shutup do
+      Cask::Installer.install caffeine
+      Cask::Installer.install transmission
     end
 
-    Cask::CLI::Uninstall.run('caffeine', 'anvil')
+    caffeine.must_be :installed?
+    transmission.must_be :installed?
+
+    Cask::CLI::Uninstall.run('local-caffeine', 'local-transmission')
+
+    caffeine.wont_be :installed?
+    transmission.wont_be :installed?
   end
 end
