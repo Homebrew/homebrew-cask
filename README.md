@@ -30,5 +30,5 @@ Code maps
 I've also spent (and am still spending) some time creating
 code maps to visualize how it all works. Here they are:
 
-> ![Map 0](http://i.imgur.com/5YDBO.png)
-> Incomplete map. Vanilla phinze/cask v.0.5.4
+> ![Map 1](http://i.imgur.com/oBMyI.png)
+> Vanilla phinze/cask v.0.5.4

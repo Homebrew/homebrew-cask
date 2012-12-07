@@ -1,4 +1,4 @@
-0                             |
+1                             |
     FILES                     |    PATHWAYS
    --------                   |   -----------
                               |
@@ -27,7 +27,7 @@
    /lib/plist/                |                  |                 |           |         >CURL<         |  |
   +---------------------+     |                  v  <-fallback-+   v           +------------------------+  |  +-------------------+
   | PList parser        |     |         +-------------+      +-+----------+    | CurlDownloadStrategy   |  +->| Otherwise:        |
-  | -------------       |     |         | NullCommand |      | Cask::CLI  |    |   ^                    |  |  |                   |
+  | -------------       |     |         | NullCommand |      | Cask::CLI  |    |   |                    |  |  |                   |
   | Pulled from github: |     |         |  .new()  *  |      | const_get *|    |   +--- SoftwareSpec    |  |  | > Ignore silently.|
   |  bleything/plist    |     |         +----------+--+      +-----------++    |                        |  |  +-------------------+
   +---------------------+     |                    |                     |     +------------------------+  |
@@ -38,43 +38,80 @@
   +------------------------+  |                        |+--------+|            | * version              |  |
                               |                        || .run() ||            +------------+-----------+  |
 ------------------------------+                        |+--------+|                         |              |
-                                                                                            +--------------+
+                              |                                                             +--------------+
+  EXCEPTIONS                  |
+ -------------                |
+                              |
+ CaskNotInstalledError        |       Uninstalling a cask:              Listing/Searching casks:                         Linkapps
+                              |   
+    < RuntimeError            |     +----------------------+         +-----------------+   +-------------------+       +---------------------+
+                              |     | Cask::CLI::Uninstall |         | Cask::CLI::List |   | Cask::CLI::Search |       | Cask::CLI::Linkapps |
+ Param: cask  (Cask)          |     |       .run()         |         |      .run()     |   |        .run()     |       |         .run()      |
+                              |     +----------------------+         +-----------------+   +-------------------+       +---------------------+
+                              |      --------- * ----------            ----------------  *  ------------------          --------- * ---------
+                              |                |                                         |                                        |
+ CaskUnavailableError         |        +-------+---------+                               v                                +-------+---------+         
+                              |        |       *         |                +------------------------------+                |       *         |
+    < RuntimeError            |        |  Cask | .load() |                |       Cask.all_titles        |                |  Cask | .load() |
+                              |        +-------+---------+                +------------------------------+                +-------+---------+
+ Param: cask_name (String)    |                |                          | All: Taps/*/Casks/*.rb  *-+  |                        |
+                              |                v                          |                           |  |  Err, that's kinda     v                        
+------------------------------+   +----------------------+                |  +- <----- map  <---------+  |   |  badly named +-------------------------+
+                              |   | Cask::Installer      |                |  |                           |   +------------> |        #linkapps        |   
+  DSL                         |   |         .uninstall() |                |  +--> From:                  |  Also, that      +-------------------------+
+ ------                       |   +------------+---------+                |   Taps/example/Casks/cask.rb |     method lives | List all .app files in  |
+                              |                |                          |                              |  in actions.rb   | . and all subdirs (look |
+ * content_length             |                v                          |       To: example/cask       |             :/ :S| in destination_path).   |
+                              |         +---------------+                 +---+--------------------------+                  +-------------------------+
+   (Basic content checking)   |         | Remove entire |                     |                                             | For each:               |
+                              |         |   tree in     |                     |  +----------------------+                   |                         |
+ * homepage                   |         |    Cellar     |                     +->| Filter by installed  |                   |  > if symlink exists:   |
+                              |         +---------------+                        |  or keywords… or not +-+                 |    * destroy and relink |
+   (For human use only atm)   |          ---- DONE. ----                         +----------------------+ |                 |                         |
+                              |                                                                           v                 |  > if not symlink:      |
+ * url                        |                                                             +----------------+              |    * do nothing, say so |
+                              |                                                             | Pretty listing |              |                         |
+   (To download archive)      |                                                             +----------------+              |  > else:                |
+                              |                                                              ----- DONE -----               |    * create symlink in  |
+ * version                    |                                                                                             |     ~/Applications      |
+                              |                                                                                             +-------------------------+
+   (For DL, but not rly used) |
+                              |         
+------------------------------+
 
 
-
-                                  Uninstalling a cask:              Listing/Searching casks:
-                                  
-                                    +----------------------+         +-----------------+   +-------------------+
-                                    | Cask::CLI::Uninstall |         | Cask::CLI::List |   | Cask::CLI::Search |
-                                    |       .run()         |         |      .run()     |   |        .run()     |
-                                    +----------------------+         +-----------------+   +-------------------+
-                                     --------- * ----------            ----------------  *  ------------------
-                                               |                                         |
-                                       +-------+---------+                               v
-                                       |       *         |                +------------------------------+
-                                       |  Cask | .load() |                |       Cask.all_titles        |
-                                       +-------+---------+                +------------------------------+
-                                               |                          | All: Taps/*/Casks/*.rb  *-+  |
-                                               v                          |                           |  |
-                                  +----------------------+                |  +- <----- map  <---------+  |
-                                  | Cask::Installer      |                |  |                           |
-                                  |         .uninstall() |                |  +--> From:                  |
-                                  +------------+---------+                |   Taps/example/Casks/cask.rb |
-                                               |                          |                              |
-                                               v                          |       To: example/cask       |
-                                        +---------------+                 +---+--------------------------+
-                                        | Remove entire |                     |
-                                        |   tree in     |                     |  +----------------------+
-                                        |    Cellar     |                     +->| Filter by installed  |
-                                        +---------------+                        |  or keywords… or not +-+
-                                         ---- DONE. ----                         +----------------------+ |
-                                                                                                          v
-                                                                                            +----------------+
-                                                                                            | Pretty listing |
-                                                                                            +----------------+
-                                                                                             ----- DONE -----                                
-                                        
-                                        
-                                        
-                                        
-                                        
+                                 Editing a cask:         Creating a cask:                    Auditing a cask:      +------------------------+
+                                                                                                              +--> | Check required fields: |
+                            +-----------------+                                          +------------------+ |    |                        |
+                            | Cask::CLI::Edit |            +-- There is a file  --+      | Cask::CLI::Audit | |    | * url                  |
+                            |         .run()  |            |                      |      |         .run()   | |    | * version              |
+                            +-----------------+               lib/cli/create.rb          +------------------+ |    | * homepage             |
+                             ------- * -------             |                      |       -------- * -------  |    +------------------------+
+                                     |                     +-- but it's empty.  --+                |          |
+                             +-------+-------+                                            +--------+-------+  |    +-------------------------+
+                             |       *       |                                            |        *       |  +--> | Check URL is valid,     |
+                             | Cask  | .path |                                            | Cask   | .load |  |    |  that the scheme://     |
+                             +-------+-------+                                            +--------+-------+  |    |  is known, and that     |
+                                     |                                                             |          |    |  content_length matches.|
+                                     v                                                             v          |    +-------------------------+
+                             +----------------+                                           +-----------------+ |
+                             |  Cask formula  |NO  +-------+                              | Cask::Auditor   | |    +--------------------------+
+                             |    exists ?    +--->| Error |                              |        .audit() | +--> | Don't just stop at first |
+                             +-------+--------+    +-------+                              +-----------------+ |    |  error, create summary   |
+                                     |                                                    | This is just a  | |    |  of all of them.         |
+                                     v YES                                                |  proxy for      | |    +--------------------------+
+                                +---------+                                               | Cask::Audit#run!| |
+                                |  Open   |                                               +--------+--------+ |
+                                |         |                                                        |          |
+                                | $EDITOR |                                                        +----------+
+                                +---------+
+                                
+                                               
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
