@@ -22,3 +22,13 @@ following issues:
 - [#41](https://github.com/phinze/homebrew-cask/issues/41)   — Better version management
 - [#69](https://github.com/phinze/homebrew-cask/issues/69)   — Features for installing different types
 - [#82](https://github.com/phinze/homebrew-cask/issues/82)   — Checksums
+
+
+Code maps
+---------
+
+I've also spent (and am still spending) some time creating
+code maps to visualize how it all works. Here they are:
+
+> ![Map 0](http://i.imgur.com/5YDBO.png)
+> Incomplete map. Vanilla phinze/cask v.0.5.4
