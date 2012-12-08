@@ -76,3 +76,8 @@ code maps to visualize how it all works. Here they are:
 
 > ![Map 1](http://i.imgur.com/oBMyI.png)
 > Vanilla phinze/cask v.0.5.4
+
+- - - - -
+
+> ![Map 2](https://f.cloud.github.com/assets/155787/2089/f3b428e2-418b-11e2-9ac9-db796fa166c7.png)
+> Current situation

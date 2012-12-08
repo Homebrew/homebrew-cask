@@ -1,4 +1,4 @@
-1                             |
+2                             |
     FILES                     |    PATHWAYS
    --------                   |   -----------
                               |
@@ -17,13 +17,13 @@
   | Casks Library |           |               +-+------+---+                               |               |      +------------------+
   +---------------+           |                 |      |                                   v               |      | Extract and      |
                               |         +-------+      +---+                  +----------------------+     |      |   copy to Cellar |
-   /Gemfile                   |         |                  |                  | Cask::Installer      |     |      +----------+-------+
-   /Rakefile                  |         v        +---------+----------+       |           .install() |     |                 |
-   /test/                     |  +------------+  | self.   *          |       +--------+-------------+     |                 |
-  +----------------+          |  | Cask.init  |  | lookup_ | _command |                |                   |           +-----*-----+
-  | Used for tests |          |  |            |  +---------+----------+                |                   |           |+---------+|
-  +----------------+          |  +------------+            |                           v                   |           ||  DONE.  ||
-                              |                  +---------+-------+           +------------------------+  |           |+---------+|
+   /Gemfile                   |         |                  |                  | Cask::Installer      |     |      +------------------+
+   /Rakefile                  |         v        +---------+----------+       |           .install() |     |       ------ DONE ------
+   /test/                     |  +------------+  | self.   *          |       +--------+-------------+     |                  
+  +----------------+          |  | Cask.init  |  | lookup_ | _command |                |                   |                        
+  | Used for tests |          |  |            |  +---------+----------+                |                   |           
+  +----------------+          |  +------------+            |                           v                   |                        
+                              |                  +---------+-------+           +------------------------+  |           
    /lib/plist/                |                  |                 |           |         >CURL<         |  |
   +---------------------+     |                  v  <-fallback-+   v           +------------------------+  |  +-------------------+
   | PList parser        |     |         +-------------+      +-+----------+    | CurlDownloadStrategy   |  +->| Otherwise:        |
@@ -36,11 +36,11 @@
   +------------------------+  |                             |                  | * title                |  |
   | The Meat of the Matter |  |                        +----*-----+            | * url                  |  |
   +------------------------+  |                        |+--------+|            | * version              |  |
-                              |                        || .run() ||            +------------+-----------+  |
-------------------------------+                        |+--------+|                         |              |
-                              |                                                             +--------------+
-  EXCEPTIONS                  |
- -------------                |
+                              |                        || .run() ||            +------------+-----------+  |YES
+------------------------------+                        |+--------+|                         |            +-+---------+NO  +-------+
+                              |                                                             +----------->| Checksums +--->| Error |
+  EXCEPTIONS                  |                                                                          |   match?  |    +-------+
+ -------------                |                                                                          +-----------+
                               |
  CaskNotInstalledError        |       Uninstalling a cask:              Listing/Searching casks:                         Linkapps
                               |   
@@ -61,53 +61,53 @@
   DSL                         |   |         .uninstall() |                |  +--> From:                  |  Also, that      +-------------------------+
  ------                       |   +------------+---------+                |   Taps/example/Casks/cask.rb |     method lives | List all .app files in  |
                               |                |                          |                              |  in actions.rb   | . and all subdirs (look |
- * content_length             |                v                          |       To: example/cask       |             :/ :S| in destination_path).   |
+ * homepage                   |                v                          |       To: example/cask       |             :/ :S| in destination_path).   |
                               |         +---------------+                 +---+--------------------------+                  +-------------------------+
-   (Basic content checking)   |         | Remove entire |                     |                                             | For each:               |
+   (For human use only atm)   |         | Remove entire |                     |                                             | For each:               |
                               |         |   tree in     |                     |  +----------------------+                   |                         |
- * homepage                   |         |    Cellar     |                     +->| Filter by installed  |                   |  > if symlink exists:   |
+ * url                        |         |    Cellar     |                     +->| Filter by installed  |                   |  > if symlink exists:   |
                               |         +---------------+                        |  or keywords… or not +-+                 |    * destroy and relink |
-   (For human use only atm)   |          ---- DONE. ----                         +----------------------+ |                 |                         |
+   (To download archive)      |          ---- DONE. ----                         +----------------------+ |                 |                         |
                               |                                                                           v                 |  > if not symlink:      |
- * url                        |                                                             +----------------+              |    * do nothing, say so |
+ * version                    |                                                             +----------------+              |    * do nothing, say so |
                               |                                                             | Pretty listing |              |                         |
-   (To download archive)      |                                                             +----------------+              |  > else:                |
+   (For DL, but not rly used) |                                                             +----------------+              |  > else:                |
                               |                                                              ----- DONE -----               |    * create symlink in  |
- * version                    |                                                                                             |     ~/Applications      |
+ * md5 / sha1 / sha256        |                                                                                             |     ~/Applications      |
                               |                                                                                             +-------------------------+
-   (For DL, but not rly used) |
+   (For checksumming)         |
                               |         
-------------------------------+
-
-
-                                 Editing a cask:         Creating a cask:                    Auditing a cask:      +------------------------+
-                                                                                                              +--> | Check required fields: |
-                            +-----------------+                                          +------------------+ |    |                        |
-                            | Cask::CLI::Edit |            +-- There is a file  --+      | Cask::CLI::Audit | |    | * url                  |
-                            |         .run()  |            |                      |      |         .run()   | |    | * version              |
-                            +-----------------+               lib/cli/create.rb          +------------------+ |    | * homepage             |
-                             ------- * -------             |                      |       -------- * -------  |    +------------------------+
-                                     |                     +-- but it's empty.  --+                |          |
-                             +-------+-------+                                            +--------+-------+  |    +-------------------------+
-                             |       *       |                                            |        *       |  +--> | Check URL is valid,     |
-                             | Cask  | .path |                                            | Cask   | .load |  |    |  that the scheme://     |
-                             +-------+-------+                                            +--------+-------+  |    |  is known, and that     |
-                                     |                                                             |          |    |  content_length matches.|
-                                     v                                                             v          |    +-------------------------+
-                             +----------------+                                           +-----------------+ |
-                             |  Cask formula  |NO  +-------+                              | Cask::Auditor   | |    +--------------------------+
-                             |    exists ?    +--->| Error |                              |        .audit() | +--> | Don't just stop at first |
-                             +-------+--------+    +-------+                              +-----------------+ |    |  error, create summary   |
-                                     |                                                    | This is just a  | |    |  of all of them.         |
-                                     v YES                                                |  proxy for      | |    +--------------------------+
-                                +---------+                                               | Cask::Audit#run!| |
-                                |  Open   |                                               +--------+--------+ |
-                                |         |                                                        |          |
-                                | $EDITOR |                                                        +----------+
-                                +---------+
-                                
-                                               
-                                
+ * no_checksum                | 
+                              |
+   (To avoid checksumming)    |
+                              |          Editing a cask:         Creating a cask:                    Auditing a cask:      +---------------+
+                              |                                                                                        +-->| File mod 644? |
+                              |     +-----------------+                                          +------------------+  |   +---------------+
+                              |     | Cask::CLI::Edit |            +-- There is a file  --+      | Cask::CLI::Audit |  |
+                              |     |         .run()  |            |                      |      |         .run()   |  |   +---------------+
+                              |     +-----------------+               lib/cli/create.rb          +------------------+  +-->| Correct URLs? |
+                              |      ------- * -------             |                      |       -------- * -------   |   +---------------+
+                              |              |                     +-- but it's empty.  --+                |           |
+                              |      +-------+-------+                                            +--------+-------+   |   +-----------------+
+                              |      |       *       |                                            |        *       |   +-->| Bad whitespace? |
+                              |      | Cask  | .path |                                            | Cask   | .load |   |   +-----------------+
+                              |      +-------+-------+                                            +--------+-------+   |
+                              |              |                                                             |           |   +------------------+
+                              |              v                                                             v           +-->| Good code style? |
+                              |      +----------------+                                           +-----------------+  |   +------------------+
+                              |      |  Cask formula  |NO  +-------+                              | Cask::Auditor   |  |
+                              |      |    exists ?    +--->| Error |                              |        .new()   |  |   +--------------+
+                              |      +-------+--------+    +-------+                              +-----------------+  +   | Checksumming | Disabled
+                              |              |                                                    | ca.audit *------+--+   +--------------+ for now
+                              |              v YES                                                |                 |                              
+                                        +---------+                                               | ca.problems *   |                
+                                        |  Open   |                                               +-------------+---+                
+                                        |         |                                                             |                   
+                                        | $EDITOR |                                                             v ANY?  
+                                        +---------+                                                         +-------+
+                                                                                                            | Error |
+                                                                                                            +-------+
+                                                                                                            
                                 
                                 
                                 
