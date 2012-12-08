@@ -24,6 +24,41 @@ following issues:
 - [#82](https://github.com/phinze/homebrew-cask/issues/82)   — Checksums
 
 
+Checksums
+---------
+
+`content_length` has been removed. In its stead, there
+are four new checksumming methods:
+
+* `md5`, `sha1`, `sha256` all take a hexdigest string, e.g:
+  
+  ```ruby
+  class Candybar < Cask
+    url 'http://panic.com/museum/candybar/CandyBar%203.3.4.zip'
+    homepage 'http://panic.com/museum/candybar/'
+    version '3.3.4'
+    sha1 'f645e9da45a621415a07a7492c45923b1a1fd4d4'
+  end
+  ```
+
+* `no_checksum` takes no argument, and indicates there is no checksum
+  for this cask. This is *not recommended*, and should only be used for
+  casks that have no versioned downloads.
+  
+  ```ruby
+  class Bartender < Cask
+    url 'http://www.macbartender.com/Demo/Bartender.zip'
+    homepage 'http://www.macbartender.com/'
+    version 'latest'
+    no_checksum
+  end
+  ```
+
+`brew cask install` will complain if there is no sum provided (unless
+`no_checksum` has been invoked), or if the sums do not match. It will
+provide the computed checksum so the cask can be easily amended.
+
+
 Code maps
 ---------
 

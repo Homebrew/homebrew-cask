@@ -1,3 +1,5 @@
+require 'exceptions'
+
 class CaskNotInstalledError < RuntimeError
   attr_reader :cask
   def initialize cask

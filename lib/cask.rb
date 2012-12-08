@@ -48,7 +48,9 @@ class Cask
   end
 
   def self.title
-    self.name.gsub(/([a-z\d])([A-Z])/,'\1-\2').downcase
+    # Have to gsub it twice to deal with edge cases such as:
+    # BootXChange which should yield: boot-x-change, not boot-xchange
+    self.name.gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase
   end
 
   attr_reader :title
@@ -62,6 +64,10 @@ class Cask
 
   def installed?
     destination_path.exist?
+  end
+  
+  def path
+    self.class.path @title
   end
 
   def to_s
