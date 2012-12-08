@@ -59,6 +59,15 @@ are four new checksumming methods:
 provide the computed checksum so the cask can be easily amended.
 
 
+Audit
+-----
+
+`brew cask audit` has had a facelift, and is now based on `brew audit`.
+It checks whitespace, URLs, and code style just like Homebrew's one,
+albeit modified to fit Casks (a lot of compiling-related stuff was
+removed).
+
+
 Code maps
 ---------
 
