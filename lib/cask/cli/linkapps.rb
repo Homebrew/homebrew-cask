@@ -7,6 +7,6 @@ class Cask::CLI::Linkapps
   end
 
   def self.help
-    "makes a symlink from all cask-installed .app files into ~/Applications"
+    "makes a symlink from all cask-installed .app files into #{Cask.appdir}"
   end
 end

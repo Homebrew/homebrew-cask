@@ -17,8 +17,8 @@ following issues:
 - [#99](https://github.com/phinze/homebrew-cask/issues/99)   — Spotlight visibility
 - [#89](https://github.com/phinze/homebrew-cask/issues/89)   — ~~Don't make `brew doctor` complain~~ (done for unlinked kegs, not for formulae)
 - [#72](https://github.com/phinze/homebrew-cask/issues/72)   — Features for metadata
-- [#38](https://github.com/phinze/homebrew-cask/issues/38)   — Moar configuration
-- [#30](https://github.com/phinze/homebrew-cask/pull/30)     — Config: install/link path
+- [#38](https://github.com/phinze/homebrew-cask/issues/38)   — ~~Moar configuration~~
+- [#30](https://github.com/phinze/homebrew-cask/pull/30)     — ~~Config: install/link path~~
 - [#41](https://github.com/phinze/homebrew-cask/issues/41)   — Better version management
 - [#69](https://github.com/phinze/homebrew-cask/issues/69)   — Features for installing different types
 - [#82](https://github.com/phinze/homebrew-cask/issues/82)   — ~~Checksums~~
@@ -75,6 +75,28 @@ Casks are now installed in `$HOMEBREW_PREFIX/Caskroom/$name/$version/`
 instead of in the Cellar. This stops Homebrew from complaining about
 unlinked kegs, and from listing our casks on `brew list`.
 
+Configuration
+-------------
+
+You can now configure some aspects of `brew cask`'s operation. You can set
+options on the command:
+
+    $ brew cask install adium --linkpath=/Applications
+
+or you can set them in the `HOMEBREW_CASK_OPTS` environment variable:
+
+```bash
+# ~/.bashrc, somewhere at the end of the file
+
+export HOMEBREW_CASK_OPTS='--linkpath=/Applications'
+```
+
+Command-line options override environment ones.
+
+### Available options:
+
+* `--linkpath` — Where applications are linked / aliased. Defaults to ~/Applications.
+
 
 Code maps
 ---------
@@ -87,5 +109,5 @@ code maps to visualize how it all works. Here they are:
 
 - - - - -
 
-> ![Map 3](https://f.cloud.github.com/assets/155787/2685/a7a77568-424d-11e2-9fa5-88986c1f2c32.png)
+> ![Map 4](https://f.cloud.github.com/assets/155787/2748/f04feb64-4258-11e2-8022-a84b1fa57b3d.png)
 > Current situation
