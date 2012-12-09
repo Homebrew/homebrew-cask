@@ -18,20 +18,21 @@ class Cask
     HOMEBREW_PREFIX.join "Library", "Taps"
   end
 
-  def self.cellarpath
-    HOMEBREW_CELLAR
+  def self.caskroom
+    HOMEBREW_PREFIX.join "Caskroom"
   end
 
   def self.appdir
     @appdir ||= Pathname.new(File.expand_path("~/Applications"))
   end
 
-  def self.set_appdir(canned_appdir)
-    @appdir = canned_appdir
+  def self.set_appdir(_appdir)
+    @appdir = _appdir
   end
   
   def self.init
     HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?
+    caskroom.mkpath unless caskroom.exist?
     appdir.mkpath unless appdir.exist?
   end
 
@@ -59,7 +60,7 @@ class Cask
   end
 
   def destination_path
-    HOMEBREW_CELLAR.join(self.title).join(self.version)
+    self.class.caskroom.join(self.title).join(self.version)
   end
 
   def installed?

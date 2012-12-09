@@ -15,13 +15,13 @@ following issues:
 - [#113](https://github.com/phinze/homebrew-cask/issues/113) — Uninstalling removes symlinks/aliases/shortcuts
 - [#105](https://github.com/phinze/homebrew-cask/issues/105) — Features to help manage multiple .app folders
 - [#99](https://github.com/phinze/homebrew-cask/issues/99)   — Spotlight visibility
-- [#89](https://github.com/phinze/homebrew-cask/issues/89)   — Don't make `brew doctor` complain
+- [#89](https://github.com/phinze/homebrew-cask/issues/89)   — ~~Don't make `brew doctor` complain~~ (done for unlinked kegs, not for formulae)
 - [#72](https://github.com/phinze/homebrew-cask/issues/72)   — Features for metadata
 - [#38](https://github.com/phinze/homebrew-cask/issues/38)   — Moar configuration
 - [#30](https://github.com/phinze/homebrew-cask/pull/30)     — Config: install/link path
 - [#41](https://github.com/phinze/homebrew-cask/issues/41)   — Better version management
 - [#69](https://github.com/phinze/homebrew-cask/issues/69)   — Features for installing different types
-- [#82](https://github.com/phinze/homebrew-cask/issues/82)   — Checksums
+- [#82](https://github.com/phinze/homebrew-cask/issues/82)   — ~~Checksums~~
 
 
 Checksums
@@ -68,6 +68,14 @@ albeit modified to fit Casks (a lot of compiling-related stuff was
 removed).
 
 
+Caskroom
+--------
+
+Casks are now installed in `$HOMEBREW_PREFIX/Caskroom/$name/$version/`
+instead of in the Cellar. This stops Homebrew from complaining about
+unlinked kegs, and from listing our casks on `brew list`.
+
+
 Code maps
 ---------
 
@@ -79,5 +87,5 @@ code maps to visualize how it all works. Here they are:
 
 - - - - -
 
-> ![Map 2](https://f.cloud.github.com/assets/155787/2089/f3b428e2-418b-11e2-9ac9-db796fa166c7.png)
+> ![Map 3](https://f.cloud.github.com/assets/155787/2685/a7a77568-424d-11e2-9fa5-88986c1f2c32.png)
 > Current situation
