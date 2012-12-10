@@ -118,11 +118,6 @@ class Cask::Auditor
       problem "Use a space in class inheritance: class Foo < #{$1}"
     end
 
-    # FileUtils is included in Formula
-    if text =~ /FileUtils\.(\w+)/
-      problem "Don't need 'FileUtils.' before #{$1}."
-    end
-
     # Check for string interpolation of single values.
     if text =~ /(system|gsub!) .* ['"]#\{(\w+(\.\w+)?)\}['"]/
       problem "Don't need to interpolate \"#{$2}\" with #{$1}"
@@ -133,39 +128,9 @@ class Cask::Auditor
       problem "Try not to concatenate paths in string interpolation:\n #{$1}"
     end
 
-    # Prefer formula path shortcuts in Pathname+
-    if text =~ %r{\(\s*(prefix\s*\+\s*(['"])(applications|share)[/'"])}
-      problem "\"(#{$1}...#{$2})\" should be \"(#{$3}+...)\""
-    end
-
-    if text =~ %r[((man)\s*\+\s*(['"])(man[1-8])(['"]))]
-      problem "\"#{$1}\" should be \"#{$4}\""
-    end
-
-    # Prefer formula path shortcuts in strings
-    if text =~ %r[(\#\{prefix\}/(applications|share))]
-      problem "\"#{$1}\" should be \"\#{#{$2}}\""
-    end
-
-    if text =~ %r[((\#\{prefix\}/share/man/|\#\{man\}/)(man[1-8]))]
-      problem "\"#{$1}\" should be \"\#{#{$3}}\""
-    end
-
-    if text =~ %r[((\#\{share\}/(man)))[/'"]]
-      problem "\"#{$1}\" should be \"\#{#{$3}}\""
-    end
-
-    if text =~ %r[(\#\{prefix\}/share/(info|man))]
-      problem "\"#{$1}\" should be \"\#{#{$2}}\""
-    end
-
     # No trailing whitespace, please
     if text =~ /(\t|[ ])+$/
       problem "Trailing whitespace was found"
-    end
-
-    if text =~ /if\s+ARGV\.include\?\s+'--(HEAD|devel)'/
-      problem "Use \"if ARGV.build_#{$1.downcase}?\" instead"
     end
 
     if text =~ /^[ ]*\t/
@@ -177,15 +142,7 @@ class Cask::Auditor
     end
 
     if text =~ /version == ['"]HEAD['"]/
-      problem "Use 'build.head?' instead of inspecting 'version'"
-    end
-
-    if text =~ /build\.include\?\s+['"]\-\-(.*)['"]/
-      problem "Reference '#{$1}' without dashes"
-    end
-
-    if text =~ /ARGV\.(?!(debug|verbose|find)\?)/
-      problem "Use build instead of ARGV to check options"
+      problem "Use 'Cask.install_edge?' instead of inspecting 'version'"
     end
 
     if text =~ /def options/
@@ -198,10 +155,6 @@ class Cask::Auditor
 
     if text =~ /(MacOS.((snow_)?leopard|leopard|(mountain_)?lion)\?)/
       problem "#{$1} is deprecated, use a comparison to MacOS.version instead"
-    end
-
-    if text =~ /skip_clean\s+:all/
-      problem "`skip_clean :all` is deprecated; brew no longer strips symbols"
     end
   end
 
