@@ -70,6 +70,29 @@ class Cask
   def path
     self.class.path @title
   end
+  
+  def info
+    installation = if self.installed?
+      "#{self.destination_path} (#{self.destination_path.abv})"
+    else
+      "Not installed"
+    end
+    
+    <<-PURPOSE.undent
+    #{self}: #{self.version}
+    #{self.homepage}
+    #{installation}
+    #{self.github_info}
+    PURPOSE
+  end
+  
+  def github_info
+    tap = self.title
+    tap = self.class.all_titles.grep(/#{tap}$/).first unless tap =~ /\//
+    tap, name = tap.split "/"
+    user, repo = tap.split "-"
+    "https://github.com/#{user}/#{repo}/commits/master/Casks/#{name}.rb"
+  end
 
   def to_s
     @title

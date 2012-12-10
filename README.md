@@ -98,6 +98,19 @@ Command-line options override environment ones.
 * `--linkpath` — Where applications are linked / aliased. Defaults to ~/Applications.
 
 
+Cask info
+---------
+
+`brew cask info <a cask>` now gives:
+
+```plain
+adium: 1.5.3
+http://www.adium.im/
+/usr/local/Caskroom/adium/1.5.3 (2947 files, 69M)
+https://github.com/phinze/cask/commits/master/Casks/adium.rb
+```
+
+
 Code maps
 ---------
 
