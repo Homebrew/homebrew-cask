@@ -1,6 +1,6 @@
 class Gitx < Cask
-  url 'http://frim.frim.nl/GitXStable.app.zip'
   homepage 'http://gitx.frim.nl/'
-  version 'latest'
-  no_checksum
+  edge do
+    url 'http://frim.frim.nl/GitXStable.app.zip'
+  end
 end

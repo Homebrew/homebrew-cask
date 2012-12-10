@@ -22,14 +22,18 @@ class Cask
     HOMEBREW_PREFIX.join "Caskroom"
   end
 
-  def self.appdir
-    @appdir ||= Pathname.new(File.expand_path("~/Applications"))
-  end
-
-  def self.set_appdir(_appdir)
-    @appdir = _appdir
-  end
+  def self.appdir; @appdir ||= Pathname.new(File.expand_path("~/Applications")); end
+  def self.appdir=(a) @appdir = a; end
+  def self.audit_ignore_edge; @ignore_edge || false; end
+  def self.audit_ignore_edge=(i) @ignore_edge = i; end
   
+  def self.install_edge!; @spec = :edge end
+  def self.install_edge?; @spec == :edge end
+  def self.install_devel!; @spec = :devel end
+  def self.install_devel?; @spec == :devel end
+  def self.install_stable!; @spec = :stable end
+  def self.install_stable?; @spec == :stable end
+
   def self.init
     HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?
     caskroom.mkpath unless caskroom.exist?
@@ -54,10 +58,34 @@ class Cask
     self.name.gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase
   end
 
-  attr_reader :title
+  attr_reader :title, :homepage
+  attr_reader :stable, :devel, :edge, :active_spec
+
   def initialize(title=self.class.title)
+    set_instance_variable :homepage
+    set_instance_variable :stable
+    set_instance_variable :devel
+    set_instance_variable :edge
+
     @title = title
+    validate_variable :title
+    
+    @stable = @stable.spec if @stable.is_a? Cask::DSL::SpecBlock
+    @active_spec = if @edge and Cask.install_edge? then @edge     # --edge
+      elsif @devel and Cask.install_devel? then @devel            # --devel
+      elsif @stable and Cask.install_stable? then @stable         # --stable
+      elsif @stable.nil? and @edge then Cask.install_edge!; @edge # edge-only
+      else Cask.install_stable!; @stable                          # default
+      end
+    
+    raise "No url provided for cask #{title}" if @active_spec.url.nil?
+    raise "No version provided for cask #{title}" if @active_spec.version.nil?
   end
+
+  def url; @active_spec.url; end
+  def version; @active_spec.version; end
+  def specs; @active_spec.specs; end
+  def mirrors; @active_spec.mirrors; end
 
   def destination_path
     self.class.caskroom.join(self.title).join(self.version)
@@ -66,11 +94,11 @@ class Cask
   def installed?
     destination_path.exist?
   end
-  
+
   def path
     self.class.path @title
   end
-  
+
   def info
     installation = if self.installed?
       "#{self.destination_path} (#{self.destination_path.abv})"
@@ -78,14 +106,18 @@ class Cask
       "Not installed"
     end
     
+    version = if Cask.install_edge? then "latest (edge)"
+      else self.version
+      end
+    
     <<-PURPOSE.undent
-    #{self}: #{self.version}
+    #{self}: #{version}
     #{self.homepage}
     #{installation}
     #{self.github_info}
     PURPOSE
   end
-  
+
   def github_info
     tap = self.title
     tap = self.class.all_titles.grep(/#{tap}$/).first unless tap =~ /\//
@@ -96,5 +128,18 @@ class Cask
 
   def to_s
     @title
+  end
+
+private
+
+  def validate_variable name
+    v = instance_variable_get("@#{name}")
+    raise "Invalid @#{name}" if v.to_s.empty? or v.to_s =~ /\s/
+  end
+
+  def set_instance_variable(type)
+    return if instance_variable_defined? "@#{type}"
+    class_value = self.class.send(type)
+    instance_variable_set("@#{type}", class_value) if class_value
   end
 end

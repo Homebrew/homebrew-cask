@@ -1,6 +1,6 @@
 class Ripit < Cask
-  url 'http://files.thelittleappfactory.com/ripit/RipIt.zip'
   homepage 'http://thelittleappfactory.com/ripit/'
-  version 'latest'
-  no_checksum
+  edge do
+    url 'http://files.thelittleappfactory.com/ripit/RipIt.zip'
+  end
 end

@@ -1,6 +1,6 @@
 class Bettertouchtool < Cask
-  url 'http://www.boastr.de/BetterTouchTool.zip'
   homepage 'http://blog.boastr.net/'
-  version 'latest'
-  no_checksum
+  edge do
+    url 'http://www.boastr.de/BetterTouchTool.zip'
+  end
 end

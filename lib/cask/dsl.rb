@@ -5,44 +5,74 @@ module Cask::DSL
     base.extend(ClassMethods)
   end
   
-  def url; self.class.url end
-  def version; self.class.version end
-  def homepage; self.class.homepage end
-  
-  def sums; self.class.sums || [] end
-  
   module ClassMethods
-    def url(url=nil)
-      @url ||= (url && URI.parse(url))
+    def stable(&block)
+      return @stable unless block_given?
+      blk = SpecBlock.new
+      blk.instance_eval &block
+      @stable = blk.spec
     end
-
-    def version(version=nil)
-      @version ||= version
+    
+    def edge(&block)
+      return @edge unless block_given?
+      blk = SpecBlock.new HeadSoftwareSpec
+      blk.instance_eval &block
+      @edge = blk.spec
+    end
+    
+    def devel(&block)
+      return @devel unless block_given?
+      blk = SpecBlock.new
+      blk.instance_eval &block
+      @devel = blk.spec
     end
     
     def homepage(homepage=nil)
       @homepage ||= homepage
     end
     
-    attr_reader :sums
-    
-    def md5(md5=nil)
-      @sums ||= []
-      @sums << Checksum.new(:md5, md5) unless md5.nil?
+    # The methods below define the
+    # (shortcuts for the) stable spec.
+    def url(url=nil)
+      @stable ||= SpecBlock.new
+      @stable.url url
     end
     
-    def sha1(sha1=nil)
-      @sums ||= []
-      @sums << Checksum.new(:sha1, sha1) unless sha1.nil?
+    def version(version=nil)
+      @stable ||= SpecBlock.new
+      @stable.version version
     end
     
-    def sha256(sha2=nil)
-      @sums ||= []
-      @sums << Checksum.new(:sha2, sha2) unless sha2.nil?
+    def md5(sum=nil)
+      @stable ||= SpecBlock.new
+      @stable.md5 sum
     end
     
-    def no_checksum
-      @sums = 0
+    def sha1(sum=nil)
+      @stable ||= SpecBlock.new
+      @stable.sha1 sum
+    end
+    
+    def sha256(sum=nil)
+      @stable ||= SpecBlock.new
+      @stable.sha256 sum
+    end
+    
+    def mirror(mirror=nil)
+      @stable ||= SpecBlock.new
+      @stable.mirror mirror
+    end
+  end
+  
+  class SpecBlock
+    attr_reader :spec
+    
+    def initialize(spec_klass=SoftwareSpec)
+      @spec = spec_klass.new
+    end
+    
+    def method_missing(m, *args)
+      @spec.send(m, *args)
     end
   end
 end

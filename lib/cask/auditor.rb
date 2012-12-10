@@ -2,7 +2,7 @@ class Cask::Auditor
   attr :f
   attr :text
   attr :problems, true
-
+  
   def initialize f
     @f = f
     @problems = []
@@ -29,7 +29,7 @@ class Cask::Auditor
       problem "Google Code homepage should end with a slash."
     end
 
-    urls = [(f.url rescue nil), (f.stable.url rescue nil), (f.devel.url rescue nil), (f.head.url rescue nil)].compact
+    urls = [(f.stable.url rescue nil), (f.devel.url rescue nil), (f.edge.url rescue nil)].compact
     
     # Check GNU urls; doesn't apply to mirrors
     if urls.any? { |p| p =~ %r[^(https?|ftp)://(.+)/gnu/] }
@@ -40,8 +40,12 @@ class Cask::Auditor
     urls.concat([(f.stable.mirrors rescue nil), (f.devel.mirrors rescue nil)].flatten.compact)
     
     # Check protocols
-    if urls.any? { |p| p =~ %r[^(https?|ftp)://] }
-      problem "This url's protocol is not supported."
+    protos = []
+    urls.each { |p|
+      protos << p.split(":")[0] unless p =~ %r[^(https?|ftp)://]
+    }
+    if protos.any?
+      problem "These protocols are not supported: '#{protos.join("', '")}'."
     end
     
     # Check SourceForge urls
@@ -71,9 +75,8 @@ class Cask::Auditor
     end
   end
   
-  # This isn't used for the moment
   def audit_specs
-    problem "Head-only (no stable download)" if f.head_only?
+    problem "Edge-only (no stable download)" if f.stable.nil? and f.devel.nil? and f.edge and !Cask.audit_ignore_edge
 
     [:stable, :devel].each do |spec|
       s = f.send(spec)
@@ -204,7 +207,7 @@ class Cask::Auditor
 
   def audit
     audit_file
-    #audit_specs
+    audit_specs
     audit_urls
     audit_text
   end

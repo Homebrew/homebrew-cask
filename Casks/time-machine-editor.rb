@@ -1,6 +1,6 @@
 class TimeMachineEditor < Cask
-  url 'http://timesoftware.free.fr/timemachineeditor/TimeMachineEditor.zip'
   homepage 'http://timesoftware.free.fr/timemachineeditor/'
-  version 'latest'
-  no_checksum
+  edge do
+    url 'http://timesoftware.free.fr/timemachineeditor/TimeMachineEditor.zip'
+  end
 end

@@ -1,6 +1,6 @@
 class Anvil < Cask
-  url 'http://anvilformac.com/download'
   homepage 'http://anvilformac.com/'
-  version 'latest'
-  no_checksum
+  edge do
+    url 'http://anvilformac.com/download'
+  end
 end

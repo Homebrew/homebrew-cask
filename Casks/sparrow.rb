@@ -1,6 +1,7 @@
 class Sparrow < Cask
-  url 'http://download.sparrowmailapp.com/appcast/Sparrow-latest.dmg'
   homepage 'http://www.sparrowmailapp.com/'
-  version 'latest'
-  no_checksum
+
+  edge do
+    url 'http://download.sparrowmailapp.com/appcast/Sparrow-latest.dmg'
+  end
 end

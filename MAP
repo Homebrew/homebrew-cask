@@ -1,4 +1,4 @@
-4                             |
+5                             |
     FILES                     |    PATHWAYS
    --------                   |   -----------
                               |
@@ -10,37 +10,37 @@
    /brew-cask.rb              |   -- * --------- * --                           +--------------------+     |  |  * zip              |                   
   +------------------+        |      |           |                               --------- * --------      |  |  * tar              |
   | Homebrew formula |        |      v           v                                         |               |  |  * tar+bzip         |
-  +------------------+        |  +---------+  +------------+                       +-------+---------+     |  |  * tar+gzip         |
-                              |  | require |  | Cask::CLI  |                       |       *         |     |  +--------------+------+
-   /Casks/                    |  | "cask"  |  | .process() |                       | Cask  | .load() |     |                 |
-  +---------------+           |  +---------+  | *      *   |                       +-------+---------+     |                 v
-  | Casks Library |           |               +-+------+---+                               |               |      +------------------+
-  +---------------+           |                 |      |                                   v               |      | Extract and      |
-                              |         +-------+      +---+                  +----------------------+     |      | copy to Caskroom |
-   /Gemfile                   |         |                  |                  | Cask::Installer      |     |      +------------------+
-   /Rakefile                  |         v        +---------+----------+       |           .install() |     |       ------ DONE ------
-   /test/                     |  +------------+  | self.   *          |       +--------+-------------+     |                  
-  +----------------+          |  | Cask.init  |  | lookup_ | _command |                |                   |                        
-  | Used for tests |          |  |            |  +---------+----------+                |                   |           
-  +----------------+          |  +------------+            |                           v                   |                        
-                              |                  +---------+-------+           +------------------------+  |           
-   /lib/plist/                |                  |                 |           |         >CURL<         |  |
-  +---------------------+     |                  v  <-fallback-+   v           +------------------------+  |  +-------------------+
-  | PList parser        |     |         +-------------+      +-+----------+    | CurlDownloadStrategy   |  +->| Otherwise:        |
-  | -------------       |     |         | NullCommand |      | Cask::CLI  |    |   |                    |  |  |                   |
-  | Pulled from github: |     |         |  .new()  *  |      | const_get *|    |   +--- SoftwareSpec    |  |  | > Ignore silently.|
-  |  bleything/plist    |     |         +----------+--+      +-----------++    |                        |  |  +-------------------+
-  +---------------------+     |                    |                     |     +------------------------+  |
-                              |                    +--------+------------+     | Uses properties:       |  |
-   /lib/cask*                 |                             |                  |                        |  |
-  +------------------------+  |                             |                  | * title                |  |
-  | The Meat of the Matter |  |                        +----*-----+            | * url                  |  |
-  +------------------------+  |                        |+--------+|            | * version              |  |
-                              |                        || .run() ||            +------------+-----------+  |YES
-------------------------------+                        |+--------+|                         |            +-+---------+NO  +-------+
-                              |                                                             +----------->| Checksums +--->| Error |
-  EXCEPTIONS                  |                                                                          |   match?  |    +-------+
- -------------                |                                                                          +-----------+
+  +------------------+        |  +---------+  +----------------+                   +-------+---------+     |  |  * tar+gzip         |
+                              |  | require |  | Cask::CLI      |                   |       *         |     |  +--------------+------+
+   /Casks/                    |  | "cask"  |  | .process()     |                   | Cask  | .load() |     |                 |
+  +---------------+           |  +---------+  | *          *   |                   +-------+---------+     |                 v
+  | Casks Library |           |               +-+----------+---+                           |               |      +------------------+
+  +---------------+           |                 |          |                               v               |      | Extract and      |
+                              |         +-------+          v                  +----------------------+     |      | copy to Caskroom |
+   /Gemfile                   |         |        +--------------------+       | Cask::Installer      |     |      +------------------+
+   /Rakefile                  |         v        | self.   *          |       |           .install() |     |       ------ DONE ------
+   /test/                     |  +------------+  | lookup_ | _command |       +--------+-------------+     |                  
+  +----------------+          |  | Cask.init  |  +---------+----------+                |                   |                        
+  | Used for tests |          |  +------------+            |                           |                   |           
+  +----------------+          |                     +------+-----+                     v                   |                        
+                              |                +--->+ Parse opts |             +------------------------+  |           
+   /lib/plist/                |     +------+   |    +------+-----+             |         >CURL<         |  |
+  +---------------------+     |     | Cask |<--+           |                   +------------------------+  |  +-------------------+
+  | PList parser        |     |     +------+     +---------+-------+           | CurlDownloadStrategy   |  +->| Otherwise:        |
+  | -------------       |     |                  |                 |           |   |                    |  |  |                   |
+  | Pulled from github: |     |                  v  <-fallback-+   v           |   +--- SoftwareSpec    |  |  | > Ignore silently.|
+  |  bleything/plist    |     |         +-------------+      +-+----------+    |                        |  |  +-------------------+
+  +---------------------+     |         | NullCommand |      | Cask::CLI  |    +------------------------+  |
+                              |         |  .new()  *  |      | const_get *|    | Uses properties:       |  |
+   /lib/cask*                 |         +----------+--+      +-----------++    |                        |  |
+  +------------------------+  |                    |                     |     | * title                |  |
+  | The Meat of the Matter |  |                    +--------+------------+     | * url                  |  |
+  +------------------------+  |                             |                  | * version              |  |
+                              |                             |                  +------------+-----------+  |YES
+------------------------------+                        +----*-----+                         |            +-+---------+NO  +-------+
+                              |                        |+--------+|                         +----------->| Checksums +--->| Error |
+  EXCEPTIONS                  |                        || .run() ||                                      |   match?  |    +-------+
+ -------------                |                        |+--------+|                                      +-----------+
                               |
  CaskNotInstalledError        |       Uninstalling a cask:              Listing/Searching casks:                         Linkapps
                               |   
@@ -63,7 +63,7 @@
                               |                |                          |                              |  in actions.rb   | . and all subdirs (look |
  * homepage                   |                v                          |       To: example/cask       |             :/ :S| in destination_path).   |
                               |         +---------------+                 +---+--------------------------+                  +-------------------------+
-   (For human use only atm)   |         | Remove entire |                     |                                             | For each:               |
+   (For brew info/open)       |         | Remove entire |                     |                                             | For each:               |
                               |         |   tree in     |                     |  +----------------------+                   |                         |
  * url                        |         |    Cellar     |                     +->| Filter by installed  |                   |  > if symlink exists:   |
                               |         +---------------+                        |  or keywords… or not +-+                 |    * destroy and relink |
@@ -71,38 +71,38 @@
                               |                                                                           v                 |  > if not symlink:      |
  * version                    |                                                             +----------------+              |    * do nothing, say so |
                               |                                                             | Pretty listing |              |                         |
-   (For DL, but not rly used) |                                                             +----------------+              |  > else:                |
+   (To set or override ver.)  |                                                             +----------------+              |  > else:                |
                               |                                                              ----- DONE -----               |    * create symlink in  |
  * md5 / sha1 / sha256        |                                                                                             |     {Cask.appdir}       |
                               |                                                                                             +-------------------------+
    (For checksumming)         |                                                                                                     ^        
                               |                                                                                                     | This can be set
- * no_checksum                |                                                                                                     | with an option
+ * stable / devel / edge      |                                                                                                     | with an option
                               |
-   (To avoid checksumming)    |
+   (Spec blocks)              |
                               |          Editing a cask:         Creating a cask:                    Auditing a cask:      +---------------+
-                              |                                                                                        +-->| File mod 644? |
+ * mirror                     |                                                                                        +--*| File mod 644? |
                               |     +-----------------+                                          +------------------+  |   +---------------+
-                              |     | Cask::CLI::Edit |            +-- There is a file  --+      | Cask::CLI::Audit |  |
+   (Add a download mirror)    |     | Cask::CLI::Edit |            +-- There is a file  --+      | Cask::CLI::Audit |  |
                               |     |         .run()  |            |                      |      |         .run()   |  |   +---------------+
-                              |     +-----------------+               lib/cli/create.rb          +------------------+  +-->| Correct URLs? |
+------------------------------+     +-----------------+               lib/cli/create.rb          +------------------+  +--*| Correct URLs? |
                               |      ------- * -------             |                      |       -------- * -------   |   +---------------+
-                              |              |                     +-- but it's empty.  --+                |           |
-                              |      +-------+-------+                                            +--------+-------+   |   +-----------------+
-                              |      |       *       |                                            |        *       |   +-->| Bad whitespace? |
-                              |      | Cask  | .path |                                            | Cask   | .load |   |   +-----------------+
+  OPTIONS                     |              |                     +-- but it's empty.  --+                |           |
+ ----------                   |      +-------+-------+                                            +--------+-------+   |   +-----------------+
+                              |      |       *       |                                            |        *       |   +--*| Bad whitespace? |
+ ––linkpath=PATH              |      | Cask  | .path |                                            | Cask   | .load |   |   +-----------------+
                               |      +-------+-------+                                            +--------+-------+   |
-                              |              |                                                             |           |   +------------------+
-                              |              v                                                             v           +-->| Good code style? |
-                              |      +----------------+                                           +-----------------+  |   +------------------+
+ ––edge / devel / stable      |              |                                                             |           |   +------------------+
+                              |              v                                                             v           +--*| Good code style? |
+ ––[no–]ignore–edge–only      |      +----------------+                                           +-----------------+  |   +------------------+
                               |      |  Cask formula  |NO  +-------+                              | Cask::Auditor   |  |
-                              |      |    exists ?    +--->| Error |                              |        .new()   |  |   +--------------+
-                              |      +-------+--------+    +-------+                              +-----------------+  +   | Checksumming | Disabled
-                              |              |                                                    | ca.audit *------+--+   +--------------+ for now
-                              |              v YES                                                |                 |                              
-                                        +---------+                                               | ca.problems *   |                
-                                        |  Open   |                                               +-------------+---+                
-                                        |         |                                                             |                   
+ Also can be set using        |      |    exists ?    +--->| Error |                              |        .new()   |  |   +--------------+
+                              |      +-------+--------+    +-------+                              +-----------------+  +--*| Checksumming |
+ HOMEBREW_CASK_OPTS env var.  |              |                                                    | ca.audit <------+--+   +--------------+ 
+                              |              v YES                                                |                 |  |                           
+------------------------------+         +---------+                                               | ca.problems *   |  |   +--------------------+
+                                        |  Open   |                                               +-------------+---+  +--*| Redundant version? |
+                                        |         |                                                             |          +--------------------+
                                         | $EDITOR |                                                             v ANY?  
                                         +---------+                                                         +-------+
                                                                                                             | Error |

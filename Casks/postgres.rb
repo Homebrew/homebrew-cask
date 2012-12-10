@@ -1,6 +1,7 @@
 class Postgres < Cask
-  url 'http://postgresapp.com/download'
   homepage 'http://www.postgresapp.com/'
-  version 'latest'
-  no_checksum
+
+  edge do
+    url 'http://postgresapp.com/download'
+  end
 end

@@ -5,7 +5,7 @@ module Cask::Actions
       target = destination_path.join(app)
       if destination.symlink?
         # destination exists but is symlink; removing and relinking
-        ohai "[#{self}] linking #{File.basename(destination)}"
+        ohai "[#{self}] re-linking #{File.basename(destination)}"
         destination.delete
         destination.make_symlink(target)
       elsif destination.directory? || destination.file?

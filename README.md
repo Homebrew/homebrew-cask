@@ -19,7 +19,7 @@ following issues:
 - [#72](https://github.com/phinze/homebrew-cask/issues/72)   — ~~Features for metadata~~
 - [#38](https://github.com/phinze/homebrew-cask/issues/38)   — ~~Moar configuration~~
 - [#30](https://github.com/phinze/homebrew-cask/pull/30)     — ~~Config: install/link path~~
-- [#41](https://github.com/phinze/homebrew-cask/issues/41)   — Better version management
+- [#41](https://github.com/phinze/homebrew-cask/issues/41)   — ~~Better version management~~
 - [#69](https://github.com/phinze/homebrew-cask/issues/69)   — Features for installing different types
 - [#82](https://github.com/phinze/homebrew-cask/issues/82)   — ~~Checksums~~
 
@@ -27,45 +27,28 @@ following issues:
 Checksums
 ---------
 
-`content_length` has been removed. In its stead, there
-are four new checksumming methods:
-
-* `md5`, `sha1`, `sha256` all take a hexdigest string, e.g:
+`content_length` has been removed. In its stead, there are
+`md5`, `sha1`, and `sha256` which all take a hexdigest string, e.g:
   
-  ```ruby
-  class Candybar < Cask
-    url 'http://panic.com/museum/candybar/CandyBar%203.3.4.zip'
-    homepage 'http://panic.com/museum/candybar/'
-    version '3.3.4'
-    sha1 'f645e9da45a621415a07a7492c45923b1a1fd4d4'
-  end
-  ```
+```ruby
+class Candybar < Cask
+  url 'http://panic.com/museum/candybar/CandyBar 3.3.4.zip'
+  homepage 'http://panic.com/museum/candybar/'
+  sha1 'f645e9da45a621415a07a7492c45923b1a1fd4d4'
+end
+```
 
-* `no_checksum` takes no argument, and indicates there is no checksum
-  for this cask. This is *not recommended*, and should only be used for
-  casks that have no versioned downloads.
-  
-  ```ruby
-  class Bartender < Cask
-    url 'http://www.macbartender.com/Demo/Bartender.zip'
-    homepage 'http://www.macbartender.com/'
-    version 'latest'
-    no_checksum
-  end
-  ```
-
-`brew cask install` will complain if there is no sum provided (unless
-`no_checksum` has been invoked), or if the sums do not match. It will
-provide the computed checksum so the cask can be easily amended.
+`brew cask install` will warn if there is no checksum provided, and
+error if the sums do not match.
 
 
 Audit
 -----
 
 `brew cask audit` has had a facelift, and is now based on `brew audit`.
-It checks whitespace, URLs, and code style just like Homebrew's one,
-albeit modified to fit Casks (a lot of compiling-related stuff was
-removed).
+It checks whitespace, URLs, checksums, versions, and code style just
+like Homebrew's one, albeit modified to fit Casks (a lot of stuff
+related to compiling was removed).
 
 
 Caskroom
@@ -74,6 +57,54 @@ Caskroom
 Casks are now installed in `$HOMEBREW_PREFIX/Caskroom/$name/$version/`
 instead of in the Cellar. This stops Homebrew from complaining about
 unlinked kegs, and from listing our casks on `brew list`.
+
+
+Devel & Edge
+------------
+
+You can now specify alternate specs for *devel* (checksummed, versioned)
+and *edge* (un-checksummed, unversioned) using blocks, e.g.
+
+```ruby
+class Firefox < Cask
+  url 'http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/17.0.1/mac/en-US/Firefox%2017.0.1.dmg'
+  homepage 'http://www.mozilla.org/en-US/firefox/'
+  version '17.0.1'
+  sha1 'a9888ce69440574fabff712549c8ff503fd1acb7'
+  
+  # Beta
+  devel do
+    url 'http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/18.0b3/mac/en-US/Firefox%2018.0b3.dmg'
+    version '18.0b3'
+    sha1 '31e383782b4fbbcbf3a1ef578d82cbf6861912cb'
+  end
+  
+  # Nightly
+  edge do
+    url 'http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/firefox-20.0a1.en-US.mac.dmg'
+  end
+end
+```
+
+If the top level `url` is unspecified, then the *edge* spec will be used, e.g.
+
+```ruby
+class FirefoxAurora < Cask
+  homepage 'http://www.mozilla.org/en-US/firefox/aurora/'
+  
+  edge do
+    url 'https://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-mozilla-aurora/firefox-19.0a2.en-US.mac.dmg'
+    version '19.0a2'
+  end
+end
+```
+
+### Version parsing
+
+Additionally, we will attempt to parse the URL to get the version, so if
+the correct version is within the URL, there is no need to specify it
+explicitely using `version`. This also applies to *devel* specs.
+
 
 Configuration
 -------------
@@ -95,7 +126,12 @@ Command-line options override environment ones.
 
 ### Available options:
 
-* `--linkpath` — Where applications are linked / aliased. Defaults to ~/Applications.
+* `--linkpath=PATH` — Where applications are linked / aliased. Defaults to ~/Applications.
+* `--edge` — Use the edge spec for that cask.
+* `--devel` — Use the devel spec for that cask.
+* `--stable` — Use the stable spec for that cask. Useful to override the ENV.
+* `--[no-]ignore-edge-only` — Ignore “edge-only” problems when auditing casks. If you're
+  working with `brew cask audit` a lot, I recommend you put it in your `HOMEBREW_CASK_OPTS`.
 
 
 Cask info
@@ -124,5 +160,5 @@ code maps to visualize how it all works. Here they are:
 
 - - - - -
 
-> ![Map 4](https://f.cloud.github.com/assets/155787/2748/f04feb64-4258-11e2-8022-a84b1fa57b3d.png)
+> ![Map 5](https://f.cloud.github.com/assets/155787/3085/16d3675a-42a1-11e2-8de3-d7d237552f1b.png)
 > Current situation

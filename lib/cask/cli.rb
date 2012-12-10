@@ -17,7 +17,7 @@ class Cask::CLI
   def self.process(arguments)
     Cask.init
     command, *rest = *arguments
-    process_options(rest)
+    rest = process_options(rest)
     lookup_command(command).run(*rest)
   end
 
@@ -40,11 +40,34 @@ class Cask::CLI
   end
   
   def self.process_options(args)
+    allrgs = Shellwords.shellsplit(ENV['HOMEBREW_CASK_OPTS'] || "") + args
     OptionParser.new do |opts|
       opts.on("--linkpath=MANDATORY") do |v|
-        Cask.set_appdir Pathname.new v
+        v.sub! "~", ENV['HOME'] if v =~ /^~/
+        Cask.appdir = Pathname.new v
       end
-    end.parse!(Shellwords.shellsplit(ENV['HOMEBREW_CASK_OPTS']) + args)
+      
+      opts.on("--edge") do
+        Cask.install_edge!
+      end
+      
+      opts.on("--devel") do
+        Cask.install_devel!
+      end
+      
+      opts.on("--stable") do
+        Cask.install_stable!
+      end
+      
+      opts.on("--ignore-edge-only") do |i|
+        Cask.audit_ignore_edge = true
+      end
+      
+      opts.on("--no-ignore-edge-only") do |i|
+        Cask.audit_ignore_edge = false
+      end
+    end.parse!(allrgs)
+    return allrgs
   end
 
 
