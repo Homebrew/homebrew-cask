@@ -16,7 +16,7 @@ following issues:
 - [#105](https://github.com/phinze/homebrew-cask/issues/105) — Features to help manage multiple .app folders
 - [#99](https://github.com/phinze/homebrew-cask/issues/99)   — Spotlight visibility
 - [#89](https://github.com/phinze/homebrew-cask/issues/89)   — ~~Don't make `brew doctor` complain~~ (done for unlinked kegs, not for formulae)
-- [#72](https://github.com/phinze/homebrew-cask/issues/72)   — Features for metadata
+- [#72](https://github.com/phinze/homebrew-cask/issues/72)   — ~~Features for metadata~~
 - [#38](https://github.com/phinze/homebrew-cask/issues/38)   — ~~Moar configuration~~
 - [#30](https://github.com/phinze/homebrew-cask/pull/30)     — ~~Config: install/link path~~
 - [#41](https://github.com/phinze/homebrew-cask/issues/41)   — Better version management
@@ -109,6 +109,8 @@ http://www.adium.im/
 /usr/local/Caskroom/adium/1.5.3 (2947 files, 69M)
 https://github.com/phinze/cask/commits/master/Casks/adium.rb
 ```
+
+And you can use `brew cask open <cask name>` to open its homepage.
 
 
 Code maps
