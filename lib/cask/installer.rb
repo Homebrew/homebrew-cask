@@ -15,6 +15,8 @@ class Cask::Installer
         `ditto '#{mountpoint}' '#{cask.destination_path}' 2>/dev/null`
       end
 
+      cask.link!
+      
       ohai "Success! #{cask} installed to #{cask.destination_path}"
     end
 

@@ -10,7 +10,7 @@ rubyfiles.each do |file|
 end
 
 class Cask
-  include Cask::Actions
+  include Cask::Link
   include Cask::DSL
   include Cask::Scopes
 
@@ -22,10 +22,13 @@ class Cask
     HOMEBREW_PREFIX.join "Caskroom"
   end
 
-  def self.appdir; @appdir ||= Pathname.new(File.expand_path("~/Applications")); end
-  def self.appdir=(a) @appdir = a; end
+  
   def self.audit_ignore_edge; @ignore_edge || false; end
   def self.audit_ignore_edge=(i) @ignore_edge = i; end
+  def self.appdir; @appdir ||= Pathname.new(File.expand_path("~/Applications")); end
+  def self.appdir=(a) @appdir = a; end
+  def self.prefdir; @prefdir ||= Pathname.new(File.expand_path("~/Library/PreferencePanes")); end
+  def self.prefdir=(a) @prefdir = a; end
   
   def self.install_edge!; @spec = :edge end
   def self.install_edge?; @spec == :edge end

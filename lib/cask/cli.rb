@@ -42,9 +42,12 @@ class Cask::CLI
   def self.process_options(args)
     allrgs = Shellwords.shellsplit(ENV['HOMEBREW_CASK_OPTS'] || "") + args
     OptionParser.new do |opts|
-      opts.on("--linkpath=MANDATORY") do |v|
-        v.sub! "~", ENV['HOME'] if v =~ /^~/
-        Cask.appdir = Pathname.new v
+      opts.on("--appdir=MANDATORY") do |v|
+        Cask.appdir = Pathname.new File.expand_path(v)
+      end
+      
+      opts.on("--prefdir=MANDATORY") do |v|
+        Cask.prefdir = Pathname.new File.expand_path(v)
       end
       
       opts.on("--edge") do

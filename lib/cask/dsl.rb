@@ -31,36 +31,16 @@ module Cask::DSL
       @homepage ||= homepage
     end
     
-    # The methods below define the
-    # (shortcuts for the) stable spec.
-    def url(url=nil)
-      @stable ||= SpecBlock.new
-      @stable.url url
-    end
-    
-    def version(version=nil)
-      @stable ||= SpecBlock.new
-      @stable.version version
-    end
-    
-    def md5(sum=nil)
-      @stable ||= SpecBlock.new
-      @stable.md5 sum
-    end
-    
-    def sha1(sum=nil)
-      @stable ||= SpecBlock.new
-      @stable.sha1 sum
-    end
-    
-    def sha256(sum=nil)
-      @stable ||= SpecBlock.new
-      @stable.sha256 sum
-    end
-    
-    def mirror(mirror=nil)
-      @stable ||= SpecBlock.new
-      @stable.mirror mirror
+    %w(url version md5 sha1 sha256 mirror install).each do |m|
+      class_eval <<-CODE.undent
+      def #{m}(val=nil)
+        unless val.nil?
+          @stable ||= SpecBlock.new
+          @stable.#{m}(val)
+        end
+        return @stable ? @stable.spec.#{m} : @#{m}
+      end
+      CODE
     end
   end
   
@@ -71,8 +51,17 @@ module Cask::DSL
       @spec = spec_klass.new
     end
     
+    def install(opts)
+      @spec.install = opts
+    end
+    
     def method_missing(m, *args)
       @spec.send(m, *args)
     end
   end
+end
+
+class SoftwareSpec
+  attr_reader :install
+  def install=(opts) @install ||= []; @install << opts; end
 end

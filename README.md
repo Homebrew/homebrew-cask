@@ -13,14 +13,14 @@ of installing Casks. It develops ideas exposed in the
 following issues:
 
 - [#113](https://github.com/phinze/homebrew-cask/issues/113) — Uninstalling removes symlinks/aliases/shortcuts
-- [#105](https://github.com/phinze/homebrew-cask/issues/105) — Features to help manage multiple .app folders
+- [#105](https://github.com/phinze/homebrew-cask/issues/105) — ~~Features to help manage multiple .app folders~~
 - [#99](https://github.com/phinze/homebrew-cask/issues/99)   — Spotlight visibility
 - [#89](https://github.com/phinze/homebrew-cask/issues/89)   — ~~Don't make `brew doctor` complain~~ (done for unlinked kegs, not for formulae)
 - [#72](https://github.com/phinze/homebrew-cask/issues/72)   — ~~Features for metadata~~
 - [#38](https://github.com/phinze/homebrew-cask/issues/38)   — ~~Moar configuration~~
 - [#30](https://github.com/phinze/homebrew-cask/pull/30)     — ~~Config: install/link path~~
 - [#41](https://github.com/phinze/homebrew-cask/issues/41)   — ~~Better version management~~
-- [#69](https://github.com/phinze/homebrew-cask/issues/69)   — Features for installing different types
+- [#69](https://github.com/phinze/homebrew-cask/issues/69)   — ~~Features for installing different types~~
 - [#82](https://github.com/phinze/homebrew-cask/issues/82)   — ~~Checksums~~
 
 
@@ -106,27 +106,57 @@ the correct version is within the URL, there is no need to specify it
 explicitely using `version`. This also applies to *devel* specs.
 
 
+Linking
+-------
+
+Moar breaking changes: `brew cask linkapps` is removed. Linking is done at
+install-time, and by default has the same behaviour (link every `.app` found
+recursively). However, that behaviour can be overridden in the formula:
+
+```ruby
+class Brackets < Cask
+  url 'https://github.com/downloads/adobe/brackets/brackets-sprint-16-MAC.dmg'
+  homepage 'http://brackets.io'
+  version 'sprint-16'
+  sha1 '94322762ecb00baab857e324a98e543d548bf961'
+  
+  install :app => 'Brackets Sprint 16.app'
+end
+```
+
+`install` is spec-specific (so you have a different one for *devel* and *edge*),
+and takes a hash with a single pair of the form:
+
+    :type => 'path/to/file.ext'
+
+You can have as many `install ...` statements as necessary. Currently, the only
+types supported are `app` (`.app` files, linked into `~/Applications` or whatever
+`--appdir` is set to) and `pref` (`.prefPane` files, linked into `~/Library/PreferencePanes`
+or whatever `--prefdir` is set to).
+
+
 Configuration
 -------------
 
 You can now configure some aspects of `brew cask`'s operation. You can set
 options on the command:
 
-    $ brew cask install adium --linkpath=/Applications
+    $ brew cask install adium --appdir=/Applications
 
 or you can set them in the `HOMEBREW_CASK_OPTS` environment variable:
 
 ```bash
 # ~/.bashrc, somewhere at the end of the file
 
-export HOMEBREW_CASK_OPTS='--linkpath=/Applications'
+export HOMEBREW_CASK_OPTS='--appdir=/Applications'
 ```
 
 Command-line options override environment ones.
 
 ### Available options:
 
-* `--linkpath=PATH` — Where applications are linked / aliased. Defaults to ~/Applications.
+* `--appdir=PATH` — Where applications are linked / aliased. Defaults to ~/Applications.
+* `--prefdir=PATH` — Where preference panes are linked / aliased. Defaults to ~/Library/PreferencePanes.
 * `--edge` — Use the edge spec for that cask.
 * `--devel` — Use the devel spec for that cask.
 * `--stable` — Use the stable spec for that cask. Useful to override the ENV.
@@ -160,5 +190,5 @@ code maps to visualize how it all works. Here they are:
 
 - - - - -
 
-> ![Map 5](https://f.cloud.github.com/assets/155787/3085/16d3675a-42a1-11e2-8de3-d7d237552f1b.png)
+> ![Map 6](https://f.cloud.github.com/assets/155787/3354/b7475b0a-42c0-11e2-97be-0f751a9a0eb0.png)
 > Current situation

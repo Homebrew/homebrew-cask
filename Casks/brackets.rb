@@ -3,4 +3,6 @@ class Brackets < Cask
   homepage 'http://brackets.io'
   version 'sprint-16'
   sha1 '94322762ecb00baab857e324a98e543d548bf961'
+
+  install :app => 'Brackets Sprint 16.app'
 end
