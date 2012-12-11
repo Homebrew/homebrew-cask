@@ -1,69 +1,77 @@
-Homebrew Casks
-==============
+“To install, drag this icon...” no more!
+========================================
 
-This project's main development is at:
-https://github.com/phinze/homebrew-cask
+Let's see if we can get the elegance, simplicity, and speed of Homebrew for the
+installation and management GUI Mac applications like Google Chrome and Adium.
 
+`brew-cask` provides a friendly homebrew-style CLI workflow for the
+administration of Mac applications distributed as binaries.
 
-Installation Revamp
--------------------
-
-This fork/branch is testing out a radically different way
-of installing Casks. It develops ideas exposed in the
-following issues:
-
-- [#113](https://github.com/phinze/homebrew-cask/issues/113) — Uninstalling removes symlinks/aliases/shortcuts
-- [#105](https://github.com/phinze/homebrew-cask/issues/105) — ~~Features to help manage multiple .app folders~~
-- [#99](https://github.com/phinze/homebrew-cask/issues/99)   — Spotlight visibility
-- [#89](https://github.com/phinze/homebrew-cask/issues/89)   — ~~Don't make `brew doctor` complain~~ (done for unlinked kegs, not for formulae)
-- [#72](https://github.com/phinze/homebrew-cask/issues/72)   — ~~Features for metadata~~
-- [#38](https://github.com/phinze/homebrew-cask/issues/38)   — ~~Moar configuration~~
-- [#30](https://github.com/phinze/homebrew-cask/pull/30)     — ~~Config: install/link path~~
-- [#41](https://github.com/phinze/homebrew-cask/issues/41)   — ~~Better version management~~
-- [#69](https://github.com/phinze/homebrew-cask/issues/69)   — ~~Features for installing different types~~
-- [#82](https://github.com/phinze/homebrew-cask/issues/82)   — ~~Checksums~~
+It's implemented as a `homebrew`
+“[external command](https://github.com/mxcl/homebrew/wiki/External-Commands)”
+called `cask`.
 
 
-Checksums
----------
+Let's try it!
+-------------
 
-`content_length` has been removed. In its stead, there are
-`md5`, `sha1`, and `sha256` which all take a hexdigest string, e.g:
-  
-```ruby
-class Candybar < Cask
-  url 'http://panic.com/museum/candybar/CandyBar 3.3.4.zip'
-  homepage 'http://panic.com/museum/candybar/'
-  sha1 'f645e9da45a621415a07a7492c45923b1a1fd4d4'
-end
-```
+### Get brew-cask
 
-`brew cask install` will warn if there is no checksum provided, and
-error if the sums do not match.
+First ensure you have Homebrew version ‘0.9’ or higher:
+
+    $ brew --version
+    0.9.3
+
+Tap this repository and install the `brew-cask` tool:
+
+    $ brew tap phinze/homebrew-cask
+    $ brew install brew-cask
+
+### Now let's install our first Cask
+
+Let's see if there's a Cask for Chrome:
+    
+    $ brew cask search chrome
+    google-chrome
+    
+Cool, there it is.  Let's install it.
+
+    $ brew cask install google-chrome
+    Downloading...
+    ==> [google-chrome] linking Google Chrome.app
+    Success! google-chrome installed to /usr/local/Caskroom/google-chrome/stable-channel
+
+Now we have `Google Chrome.app` in our Caskroom, and in ~/Applications. And there we have
+it. Google Chrome installed with a few quick commands; no clicking, no dragging, no dropping.
+    
+    open "~/Applications/Google Chrome.app"
+
+#### What if I want Casks to be linked to /Applications instead?
+
+You can add `--appdir=/Applications` to the `HOMEBREW_CASK_OPTS` environment variable (e.g
+in your .bashrc). For a complete list of available options, see
+[the wiki](https://github.com/phinze/homebrew-cask/wiki/CLI-Options).
 
 
-Audit
------
+What Casks are available?
+-------------------------
 
-`brew cask audit` has had a facelift, and is now based on `brew audit`.
-It checks whitespace, URLs, checksums, versions, and code style just
-like Homebrew's one, albeit modified to fit Casks (a lot of stuff
-related to compiling was removed).
+Just run `brew cask search` with no arguments to get a list.
 
 
-Caskroom
---------
+How do I update brew-cask?
+--------------------------
 
-Casks are now installed in `$HOMEBREW_PREFIX/Caskroom/$name/$version/`
-instead of in the Cellar. This stops Homebrew from complaining about
-unlinked kegs, and from listing our casks on `brew list`.
+Since this repository is a Tap, you'll pull down the latest Casks with a simple
+`brew update`. When the `brew-cask` tool itself is updated, it will show in
+`brew outdated` and you can upgrade it via the normal Homebrew workflow.
 
 
-Devel & Edge
-------------
+What is a Cask?
+---------------
 
-You can now specify alternate specs for *devel* (checksummed, versioned)
-and *edge* (un-checksummed, unversioned) using blocks, e.g.
+A `Cask` is like a `Formula` in Homebrew except it describes how to download
+and install a binary application.  It looks like this:
 
 ```ruby
 class Firefox < Cask
@@ -71,14 +79,14 @@ class Firefox < Cask
   homepage 'http://www.mozilla.org/en-US/firefox/'
   version '17.0.1'
   sha1 'a9888ce69440574fabff712549c8ff503fd1acb7'
-  
-  # Beta
+
+  # Beta:
   devel do
     url 'http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/18.0b3/mac/en-US/Firefox%2018.0b3.dmg'
     version '18.0b3'
     sha1 '31e383782b4fbbcbf3a1ef578d82cbf6861912cb'
   end
-  
+
   # Nightly
   edge do
     url 'http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/firefox-20.0a1.en-US.mac.dmg'
@@ -86,109 +94,55 @@ class Firefox < Cask
 end
 ```
 
-If the top level `url` is unspecified, then the *edge* spec will be used, e.g.
-
-```ruby
-class FirefoxAurora < Cask
-  homepage 'http://www.mozilla.org/en-US/firefox/aurora/'
-  
-  edge do
-    url 'https://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-mozilla-aurora/firefox-19.0a2.en-US.mac.dmg'
-    version '19.0a2'
-  end
-end
-```
-
-### Version parsing
-
-Additionally, we will attempt to parse the URL to get the version, so if
-the correct version is within the URL, there is no need to specify it
-explicitely using `version`. This also applies to *devel* specs.
+For details and a complete syntax guide, see
+[Cask DSL on the wiki](https://github.com/phinze/homebrew-cask/wiki/Cask-DSL).
 
 
-Linking
--------
+What's the status of this project?  Where's it headed?
+------------------------------------------------------
 
-Moar breaking changes: `brew cask linkapps` is removed. Linking is done at
-install-time, and by default has the same behaviour (link every `.app` found
-recursively). However, that behaviour can be overridden in the formula:
+It's really just a start at this point, but it works, and I've got big plans!
 
-```ruby
-class Brackets < Cask
-  url 'https://github.com/downloads/adobe/brackets/brackets-sprint-16-MAC.dmg'
-  homepage 'http://brackets.io'
-  version 'sprint-16'
-  sha1 '94322762ecb00baab857e324a98e543d548bf961'
-  
-  install :app => 'Brackets Sprint 16.app'
-end
-```
+`brew-cask` currently understands how to install `dmg` and `zip` files that
+contain a `.app` file. I'd like to extend it to be able to handle `pkg` files
+as well as the numerous other permutations of compression and distribution in
+the wild (`.app` inside `dmg` inside `zip`; folder inside `dmg`; etc.).
 
-`install` is spec-specific (so you have a different one for *devel* and *edge*),
-and takes a hash with a single pair of the form:
-
-    :type => 'path/to/file.ext'
-
-You can have as many `install ...` statements as necessary. Currently, the only
-types supported are `app` (`.app` files, linked into `~/Applications` or whatever
-`--appdir` is set to) and `pref` (`.prefPane` files, linked into `~/Library/PreferencePanes`
-or whatever `--prefdir` is set to).
+Each Cask will then encapsulate and automate the story of how a given
+application should be installed. If all goes well - I'm hoping to build up a
+community-maintained collection of Casks that becomes the standard way that
+hackers install Mac apps.
 
 
-Configuration
--------------
+Can I contribute?
+-----------------
 
-You can now configure some aspects of `brew cask`'s operation. You can set
-options on the command:
+__Yes, yes, yes!__ Please fork/pull request to update Casks, to add features,
+to clean up documentation--anything at all that you can do to help out is very
+welcome.
 
-    $ brew cask install adium --appdir=/Applications
+It's also __pretty darn easy__ to create Casks, so please build more of them
+for the software you use. And if `brew-cask` doesn't support the packaging
+format of your software, please open an issue and we can get it working
+together.
 
-or you can set them in the `HOMEBREW_CASK_OPTS` environment variable:
-
-```bash
-# ~/.bashrc, somewhere at the end of the file
-
-export HOMEBREW_CASK_OPTS='--appdir=/Applications'
-```
-
-Command-line options override environment ones.
-
-### Available options:
-
-* `--appdir=PATH` — Where applications are linked / aliased. Defaults to ~/Applications.
-* `--prefdir=PATH` — Where preference panes are linked / aliased. Defaults to ~/Library/PreferencePanes.
-* `--edge` — Use the edge spec for that cask.
-* `--devel` — Use the devel spec for that cask.
-* `--stable` — Use the stable spec for that cask. Useful to override the ENV.
-* `--[no-]ignore-edge-only` — Ignore “edge-only” problems when auditing casks. If you're
-  working with `brew cask audit` a lot, I recommend you put it in your `HOMEBREW_CASK_OPTS`.
+The whole idea is to build a _community-maintained_ list of easily installable
+packages, so the community part is important! Every little bit counts.
 
 
-Cask info
----------
+Taps
+----
 
-`brew cask info <a cask>` now gives:
-
-```plain
-adium: 1.5.3
-http://www.adium.im/
-/usr/local/Caskroom/adium/1.5.3 (2947 files, 69M)
-https://github.com/phinze/cask/commits/master/Casks/adium.rb
-```
-
-And you can use `brew cask open <cask name>` to open its homepage.
+You can add Casks to your existing (or new) taps: just create a directory named
+`Casks` inside your tap, put your Casks there, and everything will just work.
 
 
-Code maps
----------
+Alfred Integration
+------------------
 
-I've also spent (and am still spending) some time creating
-code maps to visualize how it all works. Here they are:
+I've been using Casks along with Alfred to great effect. Just add
+`/usr/local/Caskroom` as a Search Scope in Alfred's preferences, and then
+applications become available in Alfred immediately after a `brew cask
+install`. Your fingertips will thank you.
 
-> ![Map 1](http://i.imgur.com/oBMyI.png)
-> Vanilla phinze/cask v.0.5.4
-
-- - - - -
-
-> ![Map 6](https://f.cloud.github.com/assets/155787/3354/b7475b0a-42c0-11e2-97be-0f751a9a0eb0.png)
-> Current situation
+Oh, and you can `brew cask install alfred` too! Not bad, eh?
