@@ -1,9 +1,13 @@
+require 'digest'
+
 class Cask::Installer
   class << self
     def install(cask)
       require 'formula_support'
-      downloader = CurlDownloadStrategy.new(cask.title, SoftwareSpec.new(cask.url.to_s, cask.version))
+      downloader = CurlDownloadStrategy.new(cask.title, cask.active_spec)
       downloaded_path = downloader.fetch
+      
+      cask.active_spec.verify_download_integrity downloaded_path
 
       FileUtils.mkdir_p cask.destination_path
 
@@ -11,6 +15,8 @@ class Cask::Installer
         `ditto '#{mountpoint}' '#{cask.destination_path}' 2>/dev/null`
       end
 
+      cask.link!
+      
       ohai "Success! #{cask} installed to #{cask.destination_path}"
     end
 

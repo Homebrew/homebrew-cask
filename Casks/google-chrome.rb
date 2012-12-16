@@ -1,6 +1,8 @@
 class GoogleChrome < Cask
-  url 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'  
   homepage 'https://www.google.com/chrome/'
-  version 'stable-channel'
-  content_length '56466358'
+
+  edge do # Always the latest version
+    url 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
+    install :app => 'Google Chrome.app'
+  end
 end
