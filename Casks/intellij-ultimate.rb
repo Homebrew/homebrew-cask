@@ -1,7 +1,7 @@
 class IntellijUltimate < Cask
-  url 'http://download.jetbrains.com/idea/ideaIU-11.1.4.dmg'
+  url 'http://download.jetbrains.com/idea/ideaIU-12.0.dmg'
   homepage 'https://www.jetbrains.com/idea/index.html'
-  version '11.1.4'
-  content_length '198099319'
-  sha1 '9f2d70d934ac41fe522df99f1fea9ac3b44f31a7'
+  version '12.0'
+  content_length '209034753'
+  sha1 '5d3150ac7e5b2a4754f646f8560918bec3adcdeb'
 end
