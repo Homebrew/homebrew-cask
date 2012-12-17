@@ -1,6 +1,6 @@
 class IntellijCommunity < Cask
-  url 'http://download.jetbrains.com/idea/ideaIC-11.1.4.dmg'
+  url 'http://download.jetbrains.com/idea/ideaIC-12.0.dmg'
   homepage 'https://www.jetbrains.com/idea/index.html'
-  version '11.1.4'
-  content_length '113789795'
+  version '12.0'
+  content_length '115776432'
 end
