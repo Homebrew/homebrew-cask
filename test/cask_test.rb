@@ -22,4 +22,16 @@ describe Cask do
       all_casks.each { |cask| cask.must_be_kind_of String }
     end
   end
+
+  describe "title" do
+    it "converts class constant to dasherized string" do
+      PascalCasedConstant = Class.new(Cask)
+      PascalCasedConstant.title.must_equal 'pascal-cased-constant'
+    end
+
+    it "properly dasherizes constants with single letters in the middle" do
+      GamesXChange = Class.new(Cask)
+      GamesXChange.title.must_equal 'games-x-change'
+    end
+  end
 end
