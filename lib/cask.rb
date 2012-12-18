@@ -26,8 +26,8 @@ class Cask
     @appdir ||= Pathname.new(File.expand_path("~/Applications"))
   end
 
-  def self.set_appdir(canned_appdir)
-    @appdir = canned_appdir
+  def self.appdir=(_appdir)
+    @appdir = _appdir
   end
   
   def self.init
