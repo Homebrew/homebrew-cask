@@ -3,4 +3,5 @@ class FirefoxAurora < Cask
   homepage 'http://www.mozilla.org/en-US/firefox/aurora/'
   content_length '49254741'
   version '19.0a2'
+  no_checksum # This is a nightly
 end

@@ -3,5 +3,6 @@ class Candybar < Cask
   homepage 'http://panic.com/museum/candybar/'
   version '3.3.4'
   content_length '133007800'
+  sha1 'f645e9da45a621415a07a7492c45923b1a1fd4d4'
 end
 

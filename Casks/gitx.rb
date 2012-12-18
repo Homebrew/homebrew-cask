@@ -3,4 +3,5 @@ class Gitx < Cask
   homepage 'http://gitx.frim.nl/'
   version 'latest'
   content_length '1665028'
+  no_checksum
 end

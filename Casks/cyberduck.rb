@@ -3,4 +3,5 @@ class Cyberduck < Cask
   homepage 'http://cyberduck.ch'
   version '4.2.1'
   content_length '24746156'
+  sha1 '6f1e220830f324ba136b4301b12711f6037176c7'
 end

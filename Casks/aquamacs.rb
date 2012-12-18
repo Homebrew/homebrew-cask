@@ -3,4 +3,5 @@ class Aquamacs < Cask
   homepage 'http://aquamacs.org/'
   version '3.x Nightly'
   content_length '50220871'
+  no_checksum
 end

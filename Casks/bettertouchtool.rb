@@ -3,4 +3,5 @@ class Bettertouchtool < Cask
   homepage 'http://blog.boastr.net/'
   version 'latest'
   content_length '3527830'
+  no_checksum
 end

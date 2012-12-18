@@ -3,4 +3,5 @@ class DiskInventoryX < Cask
   homepage 'http://www.derlien.com/'
   version 'latest'
   content_length '2969560'
+  no_checksum
 end

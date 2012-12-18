@@ -27,6 +27,32 @@ describe Cask::Installer do
       application = dest_path/'Transmission.app'
       application.must_be :directory?
     end
+
+    it "blows up on a bad checksum" do
+      bad_checksum = Cask.load('bad-checksum')
+      lambda {
+        shutup do
+          Cask::Installer.install(bad_checksum)
+        end
+      }.must_raise(ChecksumMismatchError)
+    end
+
+    it "blows up on a missing checksum" do
+      missing_checksum = Cask.load('missing-checksum')
+      lambda {
+        shutup do
+          Cask::Installer.install(missing_checksum)
+        end
+      }.must_raise(ChecksumMissingError)
+    end
+
+    it "installs fine if no_checksum is included in cask" do
+      no_checksum = Cask.load('no-checksum')
+      shutup do
+        Cask::Installer.install(no_checksum)
+      end
+      no_checksum.must_be :installed?
+    end
   end
 
   describe "uninstall" do

@@ -3,4 +3,5 @@ class Sparrow < Cask
   homepage 'http://www.sparrowmailapp.com/'
   version 'latest'
   content_length '12139098'
+  no_checksum
 end

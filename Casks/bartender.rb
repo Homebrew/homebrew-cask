@@ -3,4 +3,5 @@ class Bartender < Cask
   homepage 'http://www.macbartender.com/'
   version 'latest'
   content_length '4380381'
+  no_checksum
 end

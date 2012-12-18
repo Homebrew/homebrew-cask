@@ -3,4 +3,5 @@ class Flux < Cask
   homepage 'http://stereopsis.com/flux/'
   version 'latest'
   content_length '1314863'
+  no_checksum
 end

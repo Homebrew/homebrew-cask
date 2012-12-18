@@ -3,4 +3,5 @@ class TimeMachineEditor < Cask
   homepage 'http://timesoftware.free.fr/timemachineeditor/'
   version 'latest'
   content_length '480641'
+  no_checksum
 end

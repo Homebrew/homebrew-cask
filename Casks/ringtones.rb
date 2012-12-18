@@ -3,4 +3,5 @@ class Ringtones < Cask
   version 'latest'
   homepage 'http://thelittleappfactory.com/ringtones/'
   content_length '2519864'
+  no_checksum
 end

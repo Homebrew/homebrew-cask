@@ -3,4 +3,5 @@ class Quicksilver < Cask
   homepage 'http://qsapp.com/'
   version 'latest'
   content_length '3473822'
+  no_checksum
 end

@@ -3,4 +3,5 @@ class MenuBarFilter < Cask
   homepage 'http://wez.github.com/MenuBarFilter/'
   version '1.2.2'
   content_length '501304'
+  sha1 'aecadf43bdba901e254012cc21e746f39f244bd8'
 end

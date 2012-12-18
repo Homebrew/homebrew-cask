@@ -3,4 +3,5 @@ class Arq < Cask
   homepage 'http://www.haystacksoftware.com/arq/'
   version 'latest'
   content_length '9118163'
+  no_checksum
 end

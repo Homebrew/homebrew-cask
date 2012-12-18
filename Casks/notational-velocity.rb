@@ -3,4 +3,5 @@ class NotationalVelocity < Cask
   homepage 'http://notational.net'
   version 'latest'
   content_length '2550864'
+  no_checksum
 end

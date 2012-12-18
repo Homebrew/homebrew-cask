@@ -3,4 +3,5 @@ class AtMonitor < Cask
   homepage 'http://www.atpurpose.com/atMonitor/'
   version 'latest'
   content_length '1380053'
+  no_checksum
 end

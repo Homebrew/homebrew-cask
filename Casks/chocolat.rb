@@ -3,5 +3,6 @@ class Chocolat < Cask
   homepage 'http://chocolatapp.com/'
   version 'latest'
   content_length '14545811'
+  no_checksum
 end
 

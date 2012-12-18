@@ -3,4 +3,5 @@ class Spotify < Cask
   homepage 'https://www.spotify.com'
   version 'stable'
   content_length '25870514'
+  no_checksum
 end

@@ -3,4 +3,5 @@ class LibreOffice < Cask
   homepage 'http://www.libreoffice.org/'
   version '3.5.7'
   content_length '178067623'
+  sha1 'a9c32610d9f9b50be5058c115f62d3660ae74b17'
 end

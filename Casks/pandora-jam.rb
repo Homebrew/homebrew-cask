@@ -3,4 +3,5 @@ class PandoraJam < Cask
   homepage 'http://www.bitcartel.com/pandorajam/'
   version 'latest'
   content_length '5366519'
+  no_checksum
 end

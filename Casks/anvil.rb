@@ -3,4 +3,5 @@ class Anvil < Cask
   homepage 'http://anvilformac.com/'
   version 'latest'
   content_length '2322000'
+  no_checksum
 end

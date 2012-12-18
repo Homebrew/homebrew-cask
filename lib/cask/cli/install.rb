@@ -6,6 +6,10 @@ class Cask::CLI::Install
        Cask::Installer.install(cask)
       rescue CaskUnavailableError => e
         onoe e
+      rescue ChecksumMissingError => e
+        onoe e
+      rescue ChecksumMismatchError => e
+        onoe e
       end
     end
   end

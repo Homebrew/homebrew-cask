@@ -3,4 +3,5 @@ class Propane < Cask
   homepage 'http://propaneapp.com/'
   version 'latest'
   content_length '2840383'
+  no_checksum
 end

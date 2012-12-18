@@ -3,4 +3,5 @@ class Irip < Cask
   version 'latest'
   homepage 'http://thelittleappfactory.com/irip/'
   content_length '2085303'
+  no_checksum
 end

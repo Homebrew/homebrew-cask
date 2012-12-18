@@ -3,4 +3,5 @@ class Brackets < Cask
   homepage 'http://brackets.io'
   version 'sprint-16'
   content_length '25020067'
+  sha1 '94322762ecb00baab857e324a98e543d548bf961'
 end

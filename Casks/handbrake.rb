@@ -3,4 +3,5 @@ class Handbrake < Cask
   homepage 'http://handbrake.fr/'
   version '0.9.8'
   content_length '7485495'
+  sha1 'd255b4daa64cc359209e306ff9ef8a24a66e20aa'
 end

@@ -3,4 +3,5 @@ class OnePassword < Cask
   homepage 'https://agilebits.com/onepassword'
   version '3.8.20'
   content_length '19241282'
+  sha1 'b8aaa60f32c0431a95347b8fb4e814472e89bb2b'
 end

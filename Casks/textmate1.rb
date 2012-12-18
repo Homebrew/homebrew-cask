@@ -3,4 +3,5 @@ class Textmate1 < Cask
   homepage 'http://macromates.com/'
   version '1.5.11_r1635'
   content_length '12998020'
+  sha1 '41e09022f7f9bd0962e3d7032699064c60d3ae19'
 end

@@ -3,4 +3,5 @@ class Moom < Cask
   homepage 'http://manytricks.com/moom/'
   version 'latest'
   content_length '6121023'
+  no_checksum
 end

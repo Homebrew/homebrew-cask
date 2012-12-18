@@ -3,4 +3,5 @@ class Handbrakebatch < Cask
   homepage 'http://www.osomac.com/apps/osx/handbrake-batch/'
   version 'latest'
   content_length '14008464'
+  no_checksum
 end

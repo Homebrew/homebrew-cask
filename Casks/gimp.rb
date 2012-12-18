@@ -3,4 +3,5 @@ class Gimp < Cask
   homepage 'http://www.gimp.org'
   version '2.8.2'
   content_length '63881252'
+  sha1 '0bd1d9d5b1da69b77217949b788597a952cbd846'
 end

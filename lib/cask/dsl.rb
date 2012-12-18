@@ -1,3 +1,5 @@
+require 'formula_support'
+
 module Cask::DSL
   def self.included(base)
     base.extend(ClassMethods)
@@ -10,6 +12,8 @@ module Cask::DSL
   def url; self.class.url; end
 
   def version; self.class.version; end
+
+  def sums; self.class.sums || []; end
 
   module ClassMethods
     def content_length(content_length=nil)
@@ -26,6 +30,27 @@ module Cask::DSL
 
     def version(version=nil)
       @version ||= version
+    end
+
+    attr_reader :sums
+
+    def md5(md5=nil)
+      @sums ||= []
+      @sums << Checksum.new(:md5, md5) unless md5.nil?
+    end
+
+    def sha1(sha1=nil)
+      @sums ||= []
+      @sums << Checksum.new(:sha1, sha1) unless sha1.nil?
+    end
+
+    def sha256(sha2=nil)
+      @sums ||= []
+      @sums << Checksum.new(:sha2, sha2) unless sha2.nil?
+    end
+
+    def no_checksum
+      @sums = 0
     end
   end
 end
