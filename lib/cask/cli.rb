@@ -1,3 +1,6 @@
+require 'optparse'
+require 'shellwords'
+
 class Cask::CLI
   def self.commands
     Cask::CLI.constants - ["NullCommand"]
@@ -14,6 +17,7 @@ class Cask::CLI
   def self.process(arguments)
     Cask.init
     command, *rest = *arguments
+    rest = process_options(rest)
     lookup_command(command).run(*rest)
   end
 
@@ -34,6 +38,16 @@ class Cask::CLI
     }
     list.sort
   end
+  
+  def self.process_options(args)
+    allrgs = Shellwords.shellsplit(ENV['HOMEBREW_CASK_OPTS'] || "") + args
+    OptionParser.new do |opts|
+      opts.on("--appdir=MANDATORY") do |v|
+        Cask.appdir = Pathname.new File.expand_path(v)
+      end
+    end.parse!(allrgs)
+    return allrgs
+  end
 
 
   class NullCommand
@@ -43,7 +57,7 @@ class Cask::CLI
 
     def run(*args)
       purpose
-      if @attempted_name
+      if @attempted_name and @attempted_name != "help"
         puts "!! "
         puts "!! no command with name: #{@attempted_name}"
         puts "!! "
@@ -52,7 +66,7 @@ class Cask::CLI
     end
 
     def purpose
-      puts <<-PURPOSE.gsub(/^ {6}/, '')
+      puts <<-PURPOSE.undent
       {{ brew-cask }}
         brew-cask provides a friendly homebrew-style CLI workflow for the
         administration Mac applications distributed as binaries

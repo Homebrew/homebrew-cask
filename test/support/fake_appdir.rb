@@ -1,6 +1,6 @@
 # wire in a fake appdir for linkapps
 CANNED_APPDIR = (HOMEBREW_REPOSITORY/"Applications")
-Cask.set_appdir(CANNED_APPDIR)
+Cask.appdir = CANNED_APPDIR
 
 module FakeAppdirHooks
   def before_setup
