@@ -109,6 +109,22 @@ packages, so the community part is important! Every little bit counts.
 You can add Casks to your existing (or new) taps: just create a directory named
 `Casks` inside your tap, put your Casks there, and everything will just work.
 
+# Options
+
+You can set options on the command-line and/or using the `HOMEBREW_CASK_OPTS`
+environment variable, e.g.:
+
+```bash
+# This probably should happen in your ~/.{ba|z}shrc
+$ export HOMEBREW_CASK_OPTS="/Applications"
+
+# Installs to /Applications
+$ brew cask install a-cask
+
+# Trumps the ENV and installs to ~/Applications
+$ brew cask install --appdir="~/Applications" a-cask
+```
+
 # Alfred Integration
 
 I've been using Casks along with Alfred to great effect.  Just add
