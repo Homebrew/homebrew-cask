@@ -116,7 +116,7 @@ environment variable, e.g.:
 
 ```bash
 # This probably should happen in your ~/.{ba|z}shrc
-$ export HOMEBREW_CASK_OPTS="/Applications"
+$ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Installs to /Applications
 $ brew cask install a-cask
