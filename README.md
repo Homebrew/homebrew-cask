@@ -93,16 +93,20 @@ hackers install Mac apps.
 # Can I contribute?
 
 __Yes, yes, yes!__ Please fork/pull request to update Casks, to add features,
-to clean up documentation--anything at all that you can do to help out is very
+to clean up documentation—anything at all that you can do to help out is very
 welcome.
 
-It's also __pretty darn easy__ to create Casks, so please build more of them
-for the software you use. And if `brew-cask` doesn't support the packaging
-format of your software, please open an issue and we can get it working
-together.
+It's also [__pretty darn easy__ to create Casks (see wiki)][c1], so please
+build more of them for the software you use. And if `brew-cask` doesn't
+support the packaging format of your software, please [open an issue][c2]
+and we can get it working together.
 
 The whole idea is to build a _community-maintained_ list of easily installable
 packages, so the community part is important! Every little bit counts.
+
+[c1]: https://github.com/phinze/homebrew-cask/wiki/How-to-Contribute
+[c2]: https://github.com/phinze/homebrew-cask/issues
+
 
 # Taps
 
