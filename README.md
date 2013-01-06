@@ -128,9 +128,10 @@ $ brew cask install --appdir="~/Applications" a-cask
 # Alfred Integration
 
 I've been using Casks along with Alfred to great effect.  Just add
-`/usr/local/Cellar` as a Search Scope in Alfred's preferences, and then
-applications become available in Alfred immediately after a `brew cask
-install`.  Your fingertips will thank you.
+`/usr/local/Cellar` as a Search Scope in Alfred's preferences (you
+may need to press Cmd-Shift-G in the file chooser), and then
+applications become available in Alfred immediately after a
+`brew cask install`.  Your fingertips will thank you.
 
 With this setup, you don't actually need `brew cask linkapps` if you always
 open your apps from Alfred. This means that everything stays nice and tidy.
