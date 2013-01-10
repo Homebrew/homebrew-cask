@@ -1,4 +1,4 @@
-class AdobeAirInstaller < Cask
+class AdobeAir < Cask
   url 'http://airdownload.adobe.com/air/mac/download/3.5/AdobeAIR.dmg'
   homepage 'https://get.adobe.com/air/'
   version '3.5'
