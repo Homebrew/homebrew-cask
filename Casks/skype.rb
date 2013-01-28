@@ -1,7 +1,7 @@
 class Skype < Cask
   homepage 'http://www.skype.com'
-  version '6.0.60.2946'
-  url 'http://download.skype.com/macosx/Skype_6.0.60.2946.dmg'
-  content_length '34496472'
-  sha1 'd2d538eeb42e9918fe1c1d84113c74dce99ef57d'
+  version '6.1.0.2295'
+  url 'http://download.skype.com/macosx/Skype_6.1.0.2295.dmg'
+  content_length '38875054'
+  sha1 'c19b0c2c4121c30c9eec0ad929f5d372459b6698'
 end
