@@ -1,5 +1,5 @@
 class Cfxr < Cask
-  url 'http://github.com/downloads/nevyn/cfxr/cfxr 0.2.1.zip'
+  url 'http://github.com/downloads/nevyn/cfxr/cfxr%200.2.1.zip'
   homepage 'http://thirdcog.eu/apps/cfxr'
   version '0.2.1'
   content_length '756001'
