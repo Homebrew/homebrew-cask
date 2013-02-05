@@ -1,7 +1,7 @@
 class IstatMenus < Cask
-  url 'http://s3.amazonaws.com/bjango/files/istatmenus3/istatmenus3.21.zip'
+  url 'http://s3.amazonaws.com/bjango/files/istatmenus4/istatmenus4.03.zip'
   homepage 'http://bjango.com/mac/istatmenus/'
-  version '3.21'
-  content_length '8353594'
-  sha1 '07b6a0d1f3d6c0ce30fd0e7b62ee9275405bead9'
+  version '4.03'
+  content_length '15127450'
+  sha1 'f31fa1f9ad353c7df248d029666ab74fed9b1531'
 end
