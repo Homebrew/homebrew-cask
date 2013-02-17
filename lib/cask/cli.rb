@@ -78,6 +78,10 @@ class Cask::CLI
       puts Cask::CLI.commands.map {|c| " - #{c.downcase}: #{_help_for(c)}"}.join("\n")
     end
 
+    def help
+      ''
+    end
+
     def _help_for(command)
       Cask::CLI.lookup_command(command).help
     end

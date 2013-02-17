@@ -9,7 +9,7 @@ describe Cask::Installer do
         Cask::Installer.install(caffeine)
       end
 
-      dest_path = HOMEBREW_CELLAR/'local-caffeine'/caffeine.version
+      dest_path = Cask.caskroom/'local-caffeine'/caffeine.version
       dest_path.must_be :directory?
       application = dest_path/'Caffeine.app'
       application.must_be :directory?
@@ -22,7 +22,7 @@ describe Cask::Installer do
         Cask::Installer.install(transmission)
       end
 
-      dest_path = HOMEBREW_CELLAR/'local-transmission'/transmission.version
+      dest_path = Cask.caskroom/'local-transmission'/transmission.version
       dest_path.must_be :directory?
       application = dest_path/'Transmission.app'
       application.must_be :directory?
