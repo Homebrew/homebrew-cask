@@ -35,16 +35,16 @@ Cool, there it is.  Let's install it.
 
     $ brew cask install google-chrome
     Downloading...
-    Success! google-chrome installed to /usr/local/Cellar/google-chrome/stable-channel
+    Success! google-chrome installed to /usr/local/Caskroom/google-chrome/stable-channel
 
-Now we have `Google Chrome.app` in our Cellar. Cool.
+Now we have `Google Chrome.app` in our Caskroom. Cool.
 
 If you like, it's easy to get it linked somewhere more visible (see ["Alfred
 Integration"](#alfred-integration) below for an idea that makes this step
 unnecessary):
     
     $ brew cask linkapps
-    /Users/phinze/Applications/Google Chrome.app -> /usr/local/Cellar/google-chrome/17.0.963.56/Google Chrome.app
+    /Users/phinze/Applications/Google Chrome.app -> /usr/local/Caskroom/google-chrome/17.0.963.56/Google Chrome.app
     
 And there we have it.  Google Chrome installed with a few quick commands; no clicking, no dragging, no dropping.
     
@@ -132,7 +132,7 @@ $ brew cask install --appdir="~/Applications" a-cask
 # Alfred Integration
 
 I've been using Casks along with Alfred to great effect.  Just add
-`/usr/local/Cellar` as a Search Scope in Alfred's preferences (you
+`/usr/local/Caskroom` as a Search Scope in Alfred's preferences (you
 may need to press Cmd-Shift-G in the file chooser), and then
 applications become available in Alfred immediately after a
 `brew cask install`.  Your fingertips will thank you.
@@ -142,7 +142,7 @@ open your apps from Alfred. This means that everything stays nice and tidy.
 
 Oh, and you can `brew cask install alfred` too! Not bad, eh?
 
-# Why use Homebrew's Cellar? Why not just manage apps directly in `Applications`?
+# Why use the Caskroom? Why not just manage apps directly in `Applications`?
 
 The short answer to this would be: for the same reason that Homebrew does not
 install applications directly into `/usr/local`.
