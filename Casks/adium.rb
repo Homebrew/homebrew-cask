@@ -1,7 +1,7 @@
 class Adium < Cask
-  url 'http://download.adium.im/Adium_1.5.3.dmg'
+  url 'http://download.adium.im/Adium_1.5.4.dmg'
   homepage 'http://www.adium.im/'
-  version '1.5.3'
-  content_length '23726161'
-  sha1 'ea16f7b65b8b37caa9025f4d68c0dd71845a4027'
+  version '1.5.4'
+  content_length '23840321'
+  sha1 '4aff5c040143fb8a8176662c1881815c41874bd0'
 end
