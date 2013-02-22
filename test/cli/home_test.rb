@@ -14,25 +14,25 @@ module RecordSystemCalls
   end
 end
 
-module Cask::CLI::Open
+module Cask::CLI::Home
   extend RecordSystemCalls
 end
 
-describe Cask::CLI::Open do
+describe Cask::CLI::Home do
   before do
-    Cask::CLI::Open.reset!
+    Cask::CLI::Home.reset!
   end
 
   it 'opens the homepage for the specified cask' do
-    Cask::CLI::Open.run('alfred')
-    Cask::CLI::Open.system_commands.must_equal [
+    Cask::CLI::Home.run('alfred')
+    Cask::CLI::Home.system_commands.must_equal [
       ['open', 'http://www.alfredapp.com/']
     ]
   end
 
   it 'works for multiple casks' do
-    Cask::CLI::Open.run('alfred', 'adium')
-    Cask::CLI::Open.system_commands.must_equal [
+    Cask::CLI::Home.run('alfred', 'adium')
+    Cask::CLI::Home.system_commands.must_equal [
       ['open', 'http://www.alfredapp.com/'],
       ['open', 'http://www.adium.im/']
     ]

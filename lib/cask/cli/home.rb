@@ -1,4 +1,4 @@
-module Cask::CLI::Open
+module Cask::CLI::Home
   def self.run(*cask_names)
     cask_names.each do |cask_name|
       begin
