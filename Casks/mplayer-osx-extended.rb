@@ -1,4 +1,4 @@
-class MplayerOSXExtended < Cask
+class Mplayerosxext < Cask
   url 'https://mplayerosxext.googlecode.com/files/MPlayer-OSX-Extended_rev15-test2.zip'
   homepage 'http://www.mplayerosx.ch/'
   version 'rev15-test2'
