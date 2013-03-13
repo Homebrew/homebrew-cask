@@ -1,12 +1,12 @@
-class Cask::Audit
-  attr_reader :cask, :errors, :warnings, :headers, :response_status
+require 'cask/checkable'
 
-  def initialize(cask, fetcher=Cask::Fetcher)
+class Cask::Audit
+  attr_reader :cask
+
+  include Cask::Checkable
+
+  def initialize(cask)
     @cask = cask
-    @errors = []
-    @warnings = []
-    @headers = {}
-    @fetcher = fetcher
   end
 
   def run!
@@ -14,44 +14,8 @@ class Cask::Audit
     return if errors?
   end
 
-  def add_error(message)
-    @errors << message
-  end
-
-  def add_warning(message)
-    @warnings << message
-  end
-
-  def errors?
-    !@errors.empty?
-  end
-
-  def warnings?
-    !@warnings.empty?
-  end
-
-  def result
-    if errors?
-      "#{Tty.red}failed#{Tty.reset}"
-    elsif warnings?
-      "#{Tty.yellow}warning#{Tty.reset}"
-    else
-      "#{Tty.green}passed#{Tty.reset}"
-    end
-  end
-
-  def summary
-    summary = ["audit for #{cask}: #{result}"]
-
-    @errors.each do |error|
-      summary << " #{Tty.red}-#{Tty.reset} #{error}"
-    end
-
-    @warnings.each do |warning|
-      summary << " #{Tty.yellow}-#{Tty.reset} #{warning}"
-    end
-
-    summary.join("\n")
+  def summary_header
+    "audit for #{cask}"
   end
 
   def _check_required_fields
@@ -59,5 +23,4 @@ class Cask::Audit
     add_error "version is required" unless cask.version
     add_error "homepage is required" unless cask.homepage
   end
-
 end

@@ -1,58 +1,24 @@
+require 'cask/checkable'
+
 class Cask::LinkChecker
-  attr_accessor :cask, :errors, :response_status, :headers
+  attr_accessor :cask, :response_status, :headers
+
+  include Cask::Checkable
 
   def initialize(cask, fetcher=Cask::Fetcher)
     @cask = cask
-    @errors = []
-    @warnings = []
-    @headers = {}
     @fetcher = fetcher
+    @headers = {}
+  end
+
+  def summary_header
+    "link check result for #{cask}"
   end
 
   def run
     _get_data_from_request
     return if errors?
     _check_response_status
-  end
-
-  def add_error(message)
-    @errors << message
-  end
-
-  def add_warning(message)
-    @warnings << message
-  end
-
-  def errors?
-    !@errors.empty?
-  end
-
-  def warnings?
-    !@warnings.empty?
-  end
-
-  def result
-    if errors?
-      "#{Tty.red}failed#{Tty.reset}"
-    elsif warnings?
-      "#{Tty.yellow}warning#{Tty.reset}"
-    else
-      "#{Tty.green}passed#{Tty.reset}"
-    end
-  end
-
-  def summary
-    summary = ["audit for #{cask}: #{result}"]
-
-    @errors.each do |error|
-      summary << " #{Tty.red}-#{Tty.reset} #{error}"
-    end
-
-    @warnings.each do |warning|
-      summary << " #{Tty.yellow}-#{Tty.reset} #{warning}"
-    end
-
-    summary.join("\n")
   end
 
   HTTP_RESPONSES = [
