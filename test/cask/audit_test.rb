@@ -57,34 +57,5 @@ describe Cask::Audit do
       end
     end
 
-    describe "request processing" do
-      it "adds an error if response is empty" do
-        cask = TestHelper.test_cask
-        TestHelper.fake_response_for(cask.url, "")
-        audit = Cask::Audit.new(cask, TestHelper.fake_fetcher)
-        audit.run!
-        audit.errors.must_include "timeout while requesting #{cask.url}"
-      end
-
-      it "properly populates the response code and headers from an http response" do
-        TestHelper.fake_response_for(TestHelper.test_cask.url, <<-RESPONSE.gsub(/^          /, ''))
-          HTTP/1.1 200 OK
-          Content-Type: application/x-apple-diskimage
-          ETag: "b4208f3e84967be4b078ecaa03fba941"
-          Content-Length: 23726161
-          Last-Modified: Sun, 12 Aug 2012 21:17:21 GMT
-        RESPONSE
-
-        audit = Cask::Audit.new(TestHelper.test_cask, TestHelper.fake_fetcher)
-        audit.run!
-        audit.response_status.must_equal 'HTTP/1.1 200 OK'
-        audit.headers.must_equal({
-          'Content-Type' => 'application/x-apple-diskimage',
-          'ETag' => '"b4208f3e84967be4b078ecaa03fba941"',
-          'Content-Length' => '23726161',
-          'Last-Modified' => 'Sun, 12 Aug 2012 21:17:21 GMT'
-        })
-      end
-    end
   end
 end
