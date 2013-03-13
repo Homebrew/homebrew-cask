@@ -22,4 +22,15 @@ describe Cask::DSL do
       Checksum.new(:sha2, 'imasha2')
     ]
   end
+
+  it "still lets you set content_length even though it is deprecated" do
+    OldContentLengthCask = Class.new(Cask)
+    begin
+      OldContentLengthCask.class_eval do
+        content_length '12345'
+      end
+    rescue Exception => e
+      flunk("expected content_length to work, but got exception #{e}")
+    end
+  end
 end

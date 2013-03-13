@@ -5,8 +5,6 @@ module Cask::DSL
     base.extend(ClassMethods)
   end
 
-  def content_length; self.class.content_length; end
-
   def homepage; self.class.homepage; end
 
   def url; self.class.url; end
@@ -17,7 +15,7 @@ module Cask::DSL
 
   module ClassMethods
     def content_length(content_length=nil)
-      @content_length ||= content_length
+      # deprecated, but retained for backwards compatibility
     end
 
     def homepage(homepage=nil)
