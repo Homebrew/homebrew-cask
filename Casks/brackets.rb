@@ -1,6 +1,6 @@
 class Brackets < Cask
-  url 'http://download.brackets.io/file.cfm?platform=OSX&build=19'
+  url 'http://download.brackets.io/file.cfm?platform=OSX&build=21'
   homepage 'http://brackets.io'
-  version 'sprint-19'
-  sha1 'e08c6ea3b4951a3111c768ee9ac522126190b4d1'
+  version 'sprint-21'
+  sha1 '1849a894e18596d142e117f83b8a100c636ecc8a'
 end
