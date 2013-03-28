@@ -1,6 +1,6 @@
 class UTorrent < Cask
   homepage 'http://www.utorrent.com/'
-  version '1.5.14'
-  url 'http://download.utorrent.com/1.5.14/uTorrent.dmg'
-  sha1 '4399d289b7719e4c17b6806d94a68e6aa886d1d1'
+  version '1.8.3'
+  url 'http://download.utorrent.com/1.8.3/uTorrent.dmg'
+  sha1 '903a097ab89e15f1207f286276670b6a7cde9398'
 end
