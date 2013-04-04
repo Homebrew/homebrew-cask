@@ -8,8 +8,8 @@ lib_path = brew_cask_path.join('lib')
 
 $:.push(lib_path)
 
-# add vendored homebrew to load path
-homebrew_path = brew_cask_path.join('test', 'support', 'homebrew')
+# add homebrew to load path
+homebrew_path = Pathname(`brew --prefix`.chomp)
 $:.push(homebrew_path.join('Library', 'Homebrew'))
 
 # require homebrew testing env
