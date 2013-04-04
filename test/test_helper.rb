@@ -15,9 +15,6 @@ $:.push(homebrew_path.join('Library', 'Homebrew'))
 # require homebrew testing env
 require 'test/testing_env'
 
-# add in HOMEBREW_LIBRARY constant, which is for some reason not set in testing_env
-HOMEBREW_LIBRARY = HOMEBREW_REPOSITORY/"Library"
-
 # making homebrew's cache dir allows us to actually download casks in tests
 HOMEBREW_CACHE.mkpath
 
