@@ -3,27 +3,27 @@ require 'test_helper'
 describe Cask::CLI::Info do
   it 'displays some nice info about the specified cask' do
     lambda {
-      Cask::CLI::Info.run('alfred')
+      Cask::CLI::Info.run('local-caffeine')
     }.must_output <<-CLIOUTPUT.undent
-      alfred: 1.3.2_265
-      http://www.alfredapp.com/
+      local-caffeine: 1.2.3
+      http://example.com/local-caffeine
       Not installed
-      https://github.com/phinze/cask/commits/master/Casks/alfred.rb
+      https://github.com/phinze/testcasks/commits/master/Casks/local-caffeine.rb
     CLIOUTPUT
   end
 
   it 'works for multiple casks' do
     lambda {
-      Cask::CLI::Info.run('alfred', 'firefox')
+      Cask::CLI::Info.run('local-caffeine', 'local-transmission')
     }.must_output <<-CLIOUTPUT.undent
-      alfred: 1.3.2_265
-      http://www.alfredapp.com/
+      local-caffeine: 1.2.3
+      http://example.com/local-caffeine
       Not installed
-      https://github.com/phinze/cask/commits/master/Casks/alfred.rb
-      firefox: 17.0.1
-      http://www.mozilla.org/en-US/firefox/
+      https://github.com/phinze/testcasks/commits/master/Casks/local-caffeine.rb
+      local-transmission: 2.61
+      http://example.com/local-transmission
       Not installed
-      https://github.com/phinze/cask/commits/master/Casks/firefox.rb
+      https://github.com/phinze/testcasks/commits/master/Casks/local-transmission.rb
     CLIOUTPUT
   end
 end
