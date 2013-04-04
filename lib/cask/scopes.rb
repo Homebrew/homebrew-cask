@@ -12,7 +12,7 @@ module Cask::Scopes
       cask_titles = Dir[tapspath.join("*", "Casks", "*.rb")]
       cask_titles.map { |c|
         # => "/usr/local/Library/Taps/example-tap/Casks/example.rb"
-        c.sub! /\.rb$/, ''
+        c.sub!(/\.rb$/, '')
         # => ".../example"
         c = c.split("/").last 3
         # => ["example-tap", "Casks", "example"]
