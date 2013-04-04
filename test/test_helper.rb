@@ -26,6 +26,9 @@ require 'purdytest'
 # our baby
 require 'cask'
 
+# look for casks in testscasks by default
+Cask.default_tap = 'phinze-testcasks'
+
 class TestHelper
   # helper for test casks to reference local files easily
   def self.local_binary(name)

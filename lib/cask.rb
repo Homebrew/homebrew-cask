@@ -29,7 +29,15 @@ class Cask
   def self.appdir=(_appdir)
     @appdir = _appdir
   end
-  
+
+  def self.default_tap
+    @default_tap ||= 'phinze-cask'
+  end
+
+  def self.default_tap=(_tap)
+    @default_tap = _tap
+  end
+
   def self.init
     HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?
     caskroom.mkpath unless caskroom.exist?
@@ -37,13 +45,25 @@ class Cask
   end
 
   def self.path(cask_title)
-    cask_title = all_titles.grep(/#{cask_title}$/).first unless cask_title =~ /\//
-    tapspath.join(cask_title.sub("/", "/Casks/") + ".rb") unless cask_title.nil?
+    if cask_title.include?('/')
+      cask_with_tap = cask_title
+    else
+      cask_with_tap = all_titles.grep(/#{cask_title}$/).first
+    end
+
+    if cask_with_tap
+      tap, cask = cask_with_tap.split('/')
+      tapspath.join(tap, 'Casks', "#{cask}.rb")
+    else
+      tapspath.join(default_tap, 'Casks', "#{cask_title}.rb")
+    end
   end
 
   def self.load(cask_title)
     cask_path = path(cask_title)
-    raise CaskUnavailableError, cask_title unless cask_path
+    unless cask_path.exist?
+      raise CaskUnavailableError, cask_title
+    end
     require cask_path
     const_get(cask_title.split('/').last.split('-').map(&:capitalize).join).new
   end
