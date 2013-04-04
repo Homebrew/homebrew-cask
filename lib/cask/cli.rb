@@ -38,17 +38,29 @@ class Cask::CLI
     }
     list.sort
   end
-  
-  def self.process_options(args)
-    allrgs = Shellwords.shellsplit(ENV['HOMEBREW_CASK_OPTS'] || "") + args
-    OptionParser.new do |opts|
+
+  def self.parser
+    @parser ||= OptionParser.new do |opts|
       opts.on("--appdir=MANDATORY") do |v|
         Cask.appdir = Pathname.new File.expand_path(v)
       end
-    end.parse!(allrgs)
-    return allrgs
+    end
   end
 
+  def self.process_options(args)
+    all_args = Shellwords.shellsplit(ENV['HOMEBREW_CASK_OPTS'] || "") + args
+    remaining = []
+    while !all_args.empty?
+      begin
+        head = all_args.shift
+        remaining.concat(parser.parse([head]))
+      rescue OptionParser::InvalidOption
+        remaining << head
+        retry
+      end
+    end
+    remaining
+  end
 
   class NullCommand
     def initialize(attempted_name)

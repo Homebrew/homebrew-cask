@@ -36,4 +36,17 @@ describe Cask::CLI::Edit do
       [Cask.path('adium')]
     ]
   end
+
+  it 'raises an exception when the cask doesnt exist' do
+    lambda {
+      Cask::CLI::Edit.run('notacask')
+    }.must_raise CaskUnavailableError
+  end
+
+  it 'allows new casks to be created with the --create flag' do
+    Cask::CLI::Edit.run('brand-spankin-new', '--create')
+    Cask::CLI::Edit.editor_commands.must_equal [
+      [Cask.tapspath.join(Cask.default_tap, 'Casks', 'brand-spankin-new.rb')]
+    ]
+  end
 end
