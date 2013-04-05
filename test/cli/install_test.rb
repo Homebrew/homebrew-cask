@@ -11,9 +11,11 @@ describe Cask::CLI::Install do
   end
 
   it "properly handles casks that are not present" do
-    lambda {
+    out, err = capture_subprocess_io do 
       Cask::CLI::Install.run('what-the-balls')
-    }.must_output <<-OUTPUT.gsub(/^ */, '')
+    end
+
+    (out+err).must_equal <<-OUTPUT.gsub(/^ */, '')
       Error: No available cask for what-the-balls
     OUTPUT
   end

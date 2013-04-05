@@ -1,14 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    minitest (2.12.1)
-    purdytest (1.0.0)
-      minitest (~> 2.2)
-    rake (10.0.1)
+    minitest (4.7.0)
+    minitest-colorize (0.0.5)
+      minitest (>= 2.0)
+    rake (10.0.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  purdytest
+  minitest (= 4.7.0)
+  minitest-colorize
   rake

@@ -1,5 +1,5 @@
 require 'bundler/setup'
-require 'pp'
+
 
 # add cask lib to load path
 brew_cask_path = Pathname.new(File.expand_path(__FILE__+'/../../'))
@@ -19,20 +19,19 @@ require 'test/testing_env'
 HOMEBREW_CACHE.mkpath
 
 # must be called after testing_env so at_exit hooks are in proper order
-require 'minitest/spec'
 require 'minitest/autorun'
-require 'purdytest'
+require 'minitest-colorize'
 
 # our baby
 require 'cask'
 
-# look for casks in testscasks by default
+# look for casks in testcasks by default
 Cask.default_tap = 'phinze-testcasks'
 
 class TestHelper
   # helper for test casks to reference local files easily
   def self.local_binary(name)
-    path = File.join(File.dirname(__FILE__), 'support', 'binaries', name)
+    path = File.expand_path(File.join(File.dirname(__FILE__), 'support', 'binaries', name))
     "file://#{path}"
   end
 
