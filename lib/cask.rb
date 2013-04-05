@@ -10,7 +10,6 @@ rubyfiles.each do |file|
 end
 
 class Cask
-  include Cask::Actions
   include Cask::DSL
   include Cask::Scopes
 
@@ -83,6 +82,14 @@ class Cask
 
   def installed?
     destination_path.exist?
+  end
+
+  def linkable_apps
+    if linkables.has_key? :app
+      linkables[:app].map { |app| Pathname.glob("#{destination_path}/**/#{app}").first }
+    else
+      Pathname.glob("#{destination_path}/**/*.app")
+    end
   end
 
   def to_s
