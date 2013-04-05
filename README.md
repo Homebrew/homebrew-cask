@@ -1,5 +1,7 @@
 # "To install, drag this icon..." no more!
 
+[![Build Status](https://travis-ci.org/phinze/homebrew-cask.png?branch=get-travis-passing)](https://travis-ci.org/phinze/homebrew-cask)
+
 Let's see if we can get the elegance, simplicity, and speed of Homebrew for the
 installation and management GUI Mac applications like Google Chrome and Adium.
 
