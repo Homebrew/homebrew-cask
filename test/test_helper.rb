@@ -28,6 +28,9 @@ require 'cask'
 # look for casks in testcasks by default
 Cask.default_tap = 'phinze-testcasks'
 
+# our own testy caskroom
+Cask.caskroom = HOMEBREW_PREFIX.join('TestCaskroom')
+
 # silence some extraneous UI messages for tests
 ENV['QUIET_TESTS'] = '1'
 

@@ -18,7 +18,11 @@ class Cask
   end
 
   def self.caskroom
-    HOMEBREW_PREFIX.join "Caskroom"
+    @@caskroom ||= Pathname('/opt/homebrew-cask/Caskroom')
+  end
+
+  def self.caskroom=(caskroom)
+    @@caskroom = caskroom
   end
 
   def self.appdir
@@ -39,7 +43,13 @@ class Cask
 
   def self.init
     HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?
-    caskroom.mkpath unless caskroom.exist?
+    unless caskroom.exist?
+      ohai "We need to make Caskroom for the first time at #{caskroom}"
+      ohai "We'll set permissions properly so this is the only time homebrew-cask will ever need sudo"
+      current_user = ENV['USER']
+      system "sudo mkdir -p #{caskroom}"
+      system "sudo chown #{current_user}:staff #{caskroom.parent}"
+    end
     appdir.mkpath unless appdir.exist?
   end
 
