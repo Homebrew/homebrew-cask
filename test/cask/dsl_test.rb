@@ -39,13 +39,11 @@ describe Cask::DSL do
   it "prevents the entire world from crashing when a cask includes an unknown method" do
     UnexpectedMethodCask = Class.new(Cask)
     begin
-      lambda {
+      TestHelper.must_output(self, lambda {
         UnexpectedMethodCask.class_eval do
           future_feature :not_yet_on_your_machine
         end
-      }.must_output(
-        "Warning: Unexpected method future_feature called on UnexpectedMethodCask. Running `brew update; brew upgrade brew-cask` will likely fix it.\n"
-      )
+      }, 'Warning: Unexpected method future_feature called on UnexpectedMethodCask. Running `brew update; brew upgrade brew-cask` will likely fix it.')
     rescue Exception => e
       flunk("Wanted unexpected method to simply warn, but got exception #{e}")
     end
