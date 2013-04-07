@@ -14,10 +14,6 @@ module Cask::DSL
   def sums; self.class.sums || []; end
 
   module ClassMethods
-    def content_length(content_length=nil)
-      # deprecated, but retained for backwards compatibility
-    end
-
     def homepage(homepage=nil)
       @homepage ||= homepage
     end
@@ -49,6 +45,10 @@ module Cask::DSL
 
     def no_checksum
       @sums = 0
+    end
+
+    def method_missing(method, *args)
+      opoo "Unexpected method #{method} called on #{self}. Running `brew update; brew upgrade brew-cask` will likely fix it."
     end
   end
 end

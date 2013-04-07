@@ -26,11 +26,28 @@ describe Cask::DSL do
   it "still lets you set content_length even though it is deprecated" do
     OldContentLengthCask = Class.new(Cask)
     begin
-      OldContentLengthCask.class_eval do
-        content_length '12345'
+      shutup do
+        OldContentLengthCask.class_eval do
+          content_length '12345'
+        end
       end
     rescue Exception => e
       flunk("expected content_length to work, but got exception #{e}")
+    end
+  end
+
+  it "prevents the entire world from crashing when a cask includes an unknown method" do
+    UnexpectedMethodCask = Class.new(Cask)
+    begin
+      lambda {
+        UnexpectedMethodCask.class_eval do
+          future_feature :not_yet_on_your_machine
+        end
+      }.must_output(
+        "Warning: Unexpected method future_feature called on UnexpectedMethodCask. Running `brew update; brew upgrade brew-cask` will likely fix it.\n"
+      )
+    rescue Exception => e
+      flunk("Wanted unexpected method to simply warn, but got exception #{e}")
     end
   end
 end
