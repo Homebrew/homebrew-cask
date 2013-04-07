@@ -2,23 +2,15 @@ require 'test_helper'
 
 describe Cask::CLI::Uninstall do
   it "shows an error when a bad cask is provided" do
-    out, err = capture_subprocess_io do 
+    TestHelper.must_output(self, lambda {
       Cask::CLI::Uninstall.run('notacask')
-    end
-
-    (out+err).must_equal <<-OUTPUT.gsub(/^ */, '')
-      Error: No available cask for notacask
-    OUTPUT
+    }, 'Error: No available cask for notacask')
   end
 
   it "shows an error when a cask is provided that's not installed" do
-    out, err = capture_subprocess_io do 
+    TestHelper.must_output(self, lambda {
       Cask::CLI::Uninstall.run('anvil')
-    end
-
-    (out+err).must_equal <<-OUTPUT.gsub(/^ */, '')
-      Error: anvil is not installed
-    OUTPUT
+    }, 'Error: anvil is not installed')
   end
 
   it "can uninstall multiple casks at once" do

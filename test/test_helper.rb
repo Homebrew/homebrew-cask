@@ -46,6 +46,14 @@ class TestHelper
   def self.fake_response_for(*args)
     Cask::FakeFetcher.fake_response_for(*args)
   end
+
+  def self.must_output(test, lambda, expected)
+    out, err = test.capture_subprocess_io do
+      lambda.call
+    end
+
+    (out+err).chomp.must_equal expected.gsub(/^ */, '')
+  end
 end
 
 require 'support/fake_fetcher'

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-describe Cask do
+describe "Cask" do
   describe "load" do
     it "returns an instance of the cask with the given name" do
       c = Cask.load("adium")
