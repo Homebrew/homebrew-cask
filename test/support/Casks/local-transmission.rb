@@ -1,4 +1,4 @@
-class LocalTransmission < Cask
+class LocalTransmission < TestCask
   url TestHelper.local_binary('transmission-2.61.dmg')
   homepage 'http://example.com/local-transmission'
   version '2.61'

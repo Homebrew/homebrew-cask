@@ -36,7 +36,7 @@ class TestHelper
   end
 
   def self.test_cask
-    Cask.load('test-cask')
+    Cask.load('basic-cask')
   end
 
   def self.fake_fetcher
@@ -66,6 +66,9 @@ taps_dest = HOMEBREW_LIBRARY/"Taps"
 taps_dest.mkdir
 
 FileUtils.ln_s project_root, taps_dest/"phinze-cask"
+
+# Common superclass for tests casks for when we need to filter them out
+class TestCask < Cask; end
 
 # also jack in some test casks
 FileUtils.ln_s project_root/'test'/'support', taps_dest/"phinze-testcasks"

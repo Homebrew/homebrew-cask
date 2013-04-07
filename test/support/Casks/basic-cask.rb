@@ -1,4 +1,4 @@
-class TestCask < Cask
+class BasicCask < TestCask
   url 'http://example.com/TestCask.dmg'
   homepage 'http://example.com/'
   version '1.2.3'
