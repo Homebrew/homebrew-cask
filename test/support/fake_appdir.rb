@@ -1,16 +1,15 @@
-# wire in a fake appdir for linkapps
-CANNED_APPDIR = (HOMEBREW_REPOSITORY/"Applications")
-Cask.appdir = CANNED_APPDIR
-
+# wire in a fake appdir per-test
 module FakeAppdirHooks
   def before_setup
     super
-    CANNED_APPDIR.mkdir
+    @canned_appdir = HOMEBREW_REPOSITORY/"Applications-#{Time.now.to_i}-#{rand(1024)}"
+    @canned_appdir.mkpath
+    Cask.appdir = @canned_appdir
   end
 
   def after_teardown
     super
-    FileUtils.rm_rf(CANNED_APPDIR)
+    @canned_appdir.rmtree
   end
 end
 

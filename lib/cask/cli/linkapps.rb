@@ -2,7 +2,7 @@ class Cask::CLI::Linkapps
   def self.run(*args)
     casks_to_link = args.empty? ? Cask.installed : args
     casks_to_link.each do |cask_name|
-      Cask.load(cask_name).linkapps
+      Cask::AppLinker.new(Cask.load(cask_name)).link
     end
   end
 

@@ -13,6 +13,8 @@ module Cask::DSL
 
   def sums; self.class.sums || []; end
 
+  def linkables; self.class.linkables || {}; end
+
   module ClassMethods
     def homepage(homepage=nil)
       @homepage ||= homepage
@@ -24,6 +26,14 @@ module Cask::DSL
 
     def version(version=nil)
       @version ||= version
+    end
+
+    def linkables
+      @linkables ||= Hash.new([])
+    end
+
+    def link(type, *files)
+      linkables[type] += files
     end
 
     attr_reader :sums

@@ -1,33 +1,27 @@
 require 'test_helper'
 
 describe Cask::CLI::Linkapps do
-  it "only links casks mentioned when arguments are provided" do
-    caffeine = Cask.load('local-caffeine')
-    transmission = Cask.load('local-transmission')
-
+  before do
     shutup do
+      caffeine = Cask.load('local-caffeine')
+      transmission = Cask.load('local-transmission')
+
       Cask::Installer.install caffeine
       Cask::Installer.install transmission
-
-      Cask::CLI::Linkapps.run('local-transmission')
     end
+  end
 
-    (Cask.appdir/"Transmission.app").must_be :symlink?
-    (Cask.appdir/"Caffeine.app").wont_be :symlink?
+  it "only links casks mentioned when arguments are provided" do
+    Cask::CLI::Linkapps.run('local-transmission')
+
+    TestHelper.valid_alias?(Cask.appdir/"Transmission.app").must_equal true
+    TestHelper.valid_alias?(Cask.appdir/"Caffeine.app").wont_equal true
   end
 
   it "links all installed casks when no arguments supplied" do
-    caffeine = Cask.load('local-caffeine')
-    transmission = Cask.load('local-transmission')
+    Cask::CLI::Linkapps.run
 
-    shutup do
-      Cask::Installer.install caffeine
-      Cask::Installer.install transmission
-
-      Cask::CLI::Linkapps.run
-    end
-
-    (Cask.appdir/"Transmission.app").must_be :symlink?
-    (Cask.appdir/"Caffeine.app").must_be :symlink?
+    TestHelper.valid_alias?(Cask.appdir/"Transmission.app").must_equal true
+    TestHelper.valid_alias?(Cask.appdir/"Caffeine.app").must_equal true
   end
 end
