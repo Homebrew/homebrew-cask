@@ -48,7 +48,7 @@ class Cask
       ohai "We'll set permissions properly so this is the only time homebrew-cask will ever need sudo"
       current_user = ENV['USER']
       system "sudo mkdir -p #{caskroom}"
-      system "sudo chown #{current_user}:staff #{caskroom.parent}"
+      system "sudo chown -R #{current_user}:staff #{caskroom.parent}"
     end
     appdir.mkpath unless appdir.exist?
   end
