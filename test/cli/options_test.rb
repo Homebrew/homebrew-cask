@@ -24,6 +24,5 @@ describe Cask::CLI do
 
   after do
     ENV['HOMEBREW_CASK_OPTS'] = nil
-    Cask.appdir = CANNED_APPDIR
   end
 end
