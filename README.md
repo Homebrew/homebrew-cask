@@ -118,18 +118,17 @@ You can add Casks to your existing (or new) taps: just create a directory named
 
 # Options
 
-You can set options on the command-line and/or using the `HOMEBREW_CASK_OPTS`
-environment variable, e.g.:
+You can set options on the command-line and/or using the `HOMEBREW_CASK_OPTS` environment variable, e.g. (again, using google-chrome):
 
 ```bash
 # This probably should happen in your ~/.{ba|z}shrc
 $ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Installs to /Applications
-$ brew cask install a-cask
+$ brew cask install google-chrome
 
 # Trumps the ENV and installs to ~/Applications
-$ brew cask install --appdir="~/Applications" a-cask
+$ brew cask install --appdir="~/Applications" google-chrome
 ```
 
 # Alfred Integration
