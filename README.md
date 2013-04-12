@@ -124,10 +124,10 @@ You can set options on the command-line and/or using the `HOMEBREW_CASK_OPTS` en
 # This probably should happen in your ~/.{ba|z}shrc
 $ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# Installs to /Applications
+# Installs app links to /Applications
 $ brew cask install google-chrome
 
-# Trumps the ENV and installs to ~/Applications
+# Trumps the ENV and installs app links to ~/Applications
 $ brew cask install --appdir="~/Applications" google-chrome
 ```
 
