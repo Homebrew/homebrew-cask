@@ -31,7 +31,7 @@ class Cask
         ohai "It seems there is already an app at #{app_path}; not linking."
         return
       end
-      `ln -s #{app} #{app_path}`
+      `ln -s "#{app}" "#{app_path}"`
     end
   end
 end
