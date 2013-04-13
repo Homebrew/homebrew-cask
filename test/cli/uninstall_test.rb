@@ -13,13 +13,15 @@ describe Cask::CLI::Uninstall do
     }, 'Error: anvil is not installed')
   end
 
-  it "can uninstall multiple casks at once" do
+  it "can uninstall and unlink multiple casks at once" do
     caffeine = Cask.load('local-caffeine')
     transmission = Cask.load('local-transmission')
 
     shutup do
       Cask::Installer.install caffeine
+      Cask::AppLinker.new(caffeine).link
       Cask::Installer.install transmission
+      Cask::AppLinker.new(transmission).link
     end
 
     caffeine.must_be :installed?
@@ -28,6 +30,8 @@ describe Cask::CLI::Uninstall do
     Cask::CLI::Uninstall.run('local-caffeine', 'local-transmission')
 
     caffeine.wont_be :installed?
+    Cask.appdir.join('Transmission.app').wont_be :symlink?
     transmission.wont_be :installed?
+    Cask.appdir.join('Caffeine.app').wont_be :symlink?
   end
 end
