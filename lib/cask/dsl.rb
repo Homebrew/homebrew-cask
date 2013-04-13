@@ -1,4 +1,5 @@
 require 'formula_support'
+require 'set'
 
 module Cask::DSL
   def self.included(base)
@@ -29,7 +30,7 @@ module Cask::DSL
     end
 
     def linkables
-      @linkables ||= Hash.new([])
+      @linkables ||= Hash.new(Set.new)
     end
 
     def link(type, *files)

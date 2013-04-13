@@ -9,14 +9,18 @@ describe Cask::CLI::Unlinkapps do
   end
 
   it "only unlinks casks mentioned when arguments are provided" do
-    Cask::CLI::Unlinkapps.run('local-transmission')
+    shutup do
+      Cask::CLI::Unlinkapps.run('local-transmission')
+    end
 
     (Cask.appdir/"Transmission.app").wont_be :symlink?
     (Cask.appdir/"Caffeine.app").must_be :symlink?
   end
 
   it "unlinks all installed casks when no arguments supplied" do
-    Cask::CLI::Unlinkapps.run
+    shutup do
+      Cask::CLI::Unlinkapps.run
+    end
 
     (Cask.appdir/"Transmission.app").wont_be :symlink?
     (Cask.appdir/"Caffeine.app").wont_be :symlink?

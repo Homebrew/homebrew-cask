@@ -57,6 +57,6 @@ describe Cask::DSL do
     end
 
     instance = CaskWithLinkables.new
-    instance.linkables[:app].must_equal %w[Foo.app Bar.app]
+    Array(instance.linkables[:app]).must_equal %w[Foo.app Bar.app]
   end
 end

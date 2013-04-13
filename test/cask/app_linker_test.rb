@@ -13,7 +13,9 @@ describe Cask::AppLinker do
     end
 
     it "works with an application in the root directory" do
-      Cask::AppLinker.new(@caffeine).link
+      shutup do
+        Cask::AppLinker.new(@caffeine).link
+      end
       TestHelper.valid_alias?(Cask.appdir/'Caffeine.app').must_equal true
     end
 
@@ -23,7 +25,9 @@ describe Cask::AppLinker do
       FileUtils.mv @app, appsubdir
       appinsubdir = appsubdir/'Caffeine.app'
 
-      Cask::AppLinker.new(@caffeine).link
+      shutup do
+        Cask::AppLinker.new(@caffeine).link
+      end
 
       TestHelper.valid_alias?(Cask.appdir/'Caffeine.app').must_equal true
     end
@@ -31,7 +35,9 @@ describe Cask::AppLinker do
     it "only uses linkables when they are specified" do
       FileUtils.cp_r @app, @app.sub('Caffeine.app', 'CaffeineAgain.app')
 
-      Cask::AppLinker.new(@caffeine).link
+      shutup do
+        Cask::AppLinker.new(@caffeine).link
+      end
 
       TestHelper.valid_alias?(Cask.appdir/'Caffeine.app').must_equal true
       TestHelper.valid_alias?(Cask.appdir/'CaffeineAgain.app').must_equal false
@@ -40,11 +46,21 @@ describe Cask::AppLinker do
     it "avoids clobbering an existing app by linking over it" do
       (Cask.appdir/'Caffeine.app').mkpath
 
-      shutup do
+      TestHelper.must_output(self, lambda {
         Cask::AppLinker.new(@caffeine).link
-      end
+      }, "==> It seems there is already an app at #{Cask.appdir.join('Caffeine.app')}; not linking.")
 
-      (Cask.appdir/'Caffeine.app').directory?.must_equal true
+      (Cask.appdir/'Caffeine.app').wont_be :symlink?
+    end
+
+    it "happily clobbers an existing symlink" do
+      (Cask.appdir/'Caffeine.app').make_symlink('/tmp')
+
+      TestHelper.must_output(self, lambda {
+        Cask::AppLinker.new(@caffeine).link
+      }, "==> Linking Caffeine.app to #{Cask.appdir.join('Caffeine.app')}")
+
+      File.readlink(Cask.appdir/'Caffeine.app').wont_equal '/tmp'
     end
   end
 end

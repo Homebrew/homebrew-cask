@@ -27,7 +27,9 @@ describe Cask::CLI::Uninstall do
     caffeine.must_be :installed?
     transmission.must_be :installed?
 
-    Cask::CLI::Uninstall.run('local-caffeine', 'local-transmission')
+    shutup do
+      Cask::CLI::Uninstall.run('local-caffeine', 'local-transmission')
+    end
 
     caffeine.wont_be :installed?
     Cask.appdir.join('Transmission.app').wont_be :symlink?
