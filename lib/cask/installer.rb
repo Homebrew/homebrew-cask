@@ -4,6 +4,11 @@ class Cask::Installer
   class << self
     def install(cask)
       require 'formula_support'
+
+      if cask.installed?
+        raise FormulaAlreadyInstalledError, "#{cask.title}-#{cask.version} already installed"
+      end
+
       software_spec = SoftwareSpec.new(cask.url.to_s, cask.version)
       downloader = CurlDownloadStrategy.new(cask.title, software_spec)
       downloaded_path = downloader.fetch
