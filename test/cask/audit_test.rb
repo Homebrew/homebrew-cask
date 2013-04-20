@@ -15,6 +15,18 @@ class CaskMissingHomepage < Cask
   version '1.2.3'
 end
 
+class CaskSourceForgeIncorrectURLFormat < Cask
+  version '1.2.3'
+  homepage 'http://sourceforge.net/projects/something/'
+  url 'http://sourceforge.net/projects/something/files/Something-1.2.3.dmg/download'
+end
+
+class CaskSourceForgeCorrectURLFormat < Cask
+  version '1.2.3'
+  homepage 'http://sourceforge.net/projects/something/'
+  url 'http://downloads.sourceforge.net/project/something/Something-1.2.3.dmg'
+end
+
 describe Cask::Audit do
   describe "result" do
     it "is 'failed' if there are have been any errors added" do
@@ -56,6 +68,18 @@ describe Cask::Audit do
         audit.errors.must_include 'homepage is required'
       end
     end
+    describe "preferred download URL formats" do
+      it "adds a warning if SourceForge doesn't use download subdomain" do
+        warning_msg = 'SourceForge URL format incorrect. See https://github.com/phinze/homebrew-cask/pull/225#issuecomment-16536889 for details'
 
+        audit = Cask::Audit.new(CaskSourceForgeIncorrectURLFormat.new)
+        audit.run!
+        audit.warnings.must_include warning_msg
+
+        audit = Cask::Audit.new(CaskSourceForgeCorrectURLFormat.new)
+        audit.run!
+        audit.warnings.wont_include warning_msg
+      end
+    end
   end
 end
