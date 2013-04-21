@@ -12,6 +12,7 @@ class Cask::Audit
   def run!
     _check_required_fields
     _check_checksums
+    _check_sourceforge_download_url_format
     return if errors?
   end
 
@@ -28,5 +29,13 @@ class Cask::Audit
   def _check_checksums
     return if cask.sums == 0
     add_error "could not find checksum or no_checksum" unless cask.sums.is_a?(Array) && cask.sums.length > 0
+  end
+
+  def _check_sourceforge_download_url_format
+    if cask.url.to_s.match(/\S*sourceforge\.\S*\/\S*/i)
+      unless cask.url.to_s.match(/\S*downloads.sourceforge.net\/\S+/i)
+        add_warning "SourceForge URL format incorrect. See https://github.com/phinze/homebrew-cask/pull/225#issuecomment-16536889 for details"
+      end
+    end
   end
 end
