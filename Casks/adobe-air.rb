@@ -6,4 +6,6 @@ class AdobeAir < Cask
   #caveat 'You need to run {{install_path}}/AdobeAIRInstaller.app to actually install Adobe AIR'
   
   sha1 '8fbd2dffc20442903d8b51e7362a3191f39752b4'
+
+  link :app, :none
 end

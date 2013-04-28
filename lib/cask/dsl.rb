@@ -34,7 +34,11 @@ module Cask::DSL
     end
 
     def link(type, *files)
-      linkables[type] += files
+      if files == [:none]
+        linkables[type] = []
+      else
+        linkables[type] += files
+      end
     end
 
     attr_reader :sums
