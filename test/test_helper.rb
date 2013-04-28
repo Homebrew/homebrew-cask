@@ -73,6 +73,7 @@ end
 
 require 'support/fake_fetcher'
 require 'support/fake_appdir'
+require 'support/fake_system_command'
 
 # pretend like we installed the cask tap
 project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
