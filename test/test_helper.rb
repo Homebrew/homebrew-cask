@@ -32,10 +32,6 @@ Cask.default_tap = 'phinze-testcasks'
 # our own testy caskroom
 Cask.caskroom = HOMEBREW_PREFIX.join('TestCaskroom')
 
-# coveralls.io integration
-require 'coveralls'
-Coveralls.wear!
-
 class TestHelper
   # helper for test casks to reference local files easily
   def self.local_binary(name)
