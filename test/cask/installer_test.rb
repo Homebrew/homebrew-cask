@@ -61,6 +61,14 @@ describe Cask::Installer do
       }, /Here are some things you might want to know/)
       with_caveats.must_be :installed?
     end
+
+    it "does not extract __MACOSX directories from zips" do
+      with_macosx_dir = Cask.load('with-macosx-dir')
+      shutup do
+        Cask::Installer.install(with_macosx_dir)
+      end
+      with_macosx_dir.destination_path.join('__MACOSX').wont_be :directory?
+    end
   end
 
   describe "uninstall" do
