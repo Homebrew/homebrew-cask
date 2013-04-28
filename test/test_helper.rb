@@ -1,3 +1,4 @@
+require 'bundler'
 require 'bundler/setup'
 
 
@@ -31,8 +32,9 @@ Cask.default_tap = 'phinze-testcasks'
 # our own testy caskroom
 Cask.caskroom = HOMEBREW_PREFIX.join('TestCaskroom')
 
-# silence some extraneous UI messages for tests
-ENV['QUIET_TESTS'] = '1'
+# coveralls.io integration
+require 'coveralls'
+Coveralls.wear!
 
 class TestHelper
   # helper for test casks to reference local files easily
