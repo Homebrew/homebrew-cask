@@ -117,7 +117,26 @@ If your application and homebrew-cask do not work well together, feel free to
 [file an issue](https://github.com/phinze/homebrew-cask/issues) after checking
 out open issues.
 
-## Submitting your Cask
+## Working on homebrew-cask itself
+
+If you'd like to hack on the ruby code in the project itself, one way to play
+with changes is to symlink the `rubylib` folder to your working repository. So assuming your fork is cloned at `~/homebrew-cask` you could do something like this:
+
+  ```bash
+  $ cd $(brew --prefix brew-cask)
+  $ mv rubylib{,.orig}
+  $ ln -s ~/homebrew-cask/lib rubylib
+  ```
+
+Now you can hack on `~/homebrew-cask` and use the cli to interact with the code.
+
+### Mind the test suite!
+
+If you're making changes - please write some tests for them! Also be sure to
+run the whole test suite before submitting (if you forget Travis-CI will do
+that for you and embarass you in front of all your friends). :)
+
+## Submitting your Changes
 
 Now that you have your Cask ready and you have verified it works correctly, you
 can commit your changes and submit a
