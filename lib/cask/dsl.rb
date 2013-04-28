@@ -16,6 +16,8 @@ module Cask::DSL
 
   def linkables; self.class.linkables || {}; end
 
+  def caveats; ''; end
+
   module ClassMethods
     def homepage(homepage=nil)
       @homepage ||= homepage

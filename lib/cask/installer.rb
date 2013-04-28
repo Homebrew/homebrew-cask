@@ -17,6 +17,10 @@ class Cask::Installer
       end
 
       ohai "Success! #{cask} installed to #{cask.destination_path}"
+
+      unless cask.caveats.empty?
+        ohai 'Caveats', cask.caveats
+      end
     end
 
     def uninstall(cask)

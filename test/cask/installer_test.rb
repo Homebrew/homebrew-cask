@@ -53,6 +53,14 @@ describe Cask::Installer do
       end
       no_checksum.must_be :installed?
     end
+
+    it "prints caveats if they're present" do
+      with_caveats = Cask.load('with-caveats')
+      TestHelper.must_output(self, lambda {
+        Cask::Installer.install(with_caveats)
+      }, /Here are some things you might want to know/)
+      with_caveats.must_be :installed?
+    end
   end
 
   describe "uninstall" do

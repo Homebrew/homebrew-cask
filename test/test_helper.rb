@@ -58,7 +58,11 @@ class TestHelper
       lambda.call
     end
 
-    (out+err).chomp.must_equal expected.gsub(/^ */, '')
+    if expected.is_a? Regexp
+      (out+err).chomp.must_match expected
+    else
+      (out+err).chomp.must_equal expected.gsub(/^ */, '')
+    end
   end
 
   def self.valid_alias?(candidate)

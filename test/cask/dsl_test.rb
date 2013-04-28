@@ -69,4 +69,24 @@ describe Cask::DSL do
     instance = CaskWithNoLinkables.new
     Array(instance.linkable_apps).must_equal %w[]
   end
+
+  it "allows caveats to be specified via a method define" do
+    PlainCask = Class.new(Cask)
+
+    instance = PlainCask.new
+
+    instance.caveats.must_be :empty?
+
+    CaskWithCaveats = Class.new(Cask)
+    CaskWithCaveats.class_eval do
+      def caveats; <<-EOS.undent
+        When you install this cask, you probably want to know this.
+        EOS
+      end
+    end
+
+    instance = CaskWithCaveats.new
+
+    instance.caveats.must_equal "When you install this cask, you probably want to know this.\n"
+  end
 end
