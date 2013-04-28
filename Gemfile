@@ -4,5 +4,6 @@ group :test do
   gem 'rake'
   gem 'minitest', '4.7.0'
   gem 'minitest-colorize'
+  gem 'json'
   gem 'coveralls', :require => false
 end

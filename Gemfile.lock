@@ -8,6 +8,7 @@ GEM
       rest-client
       simplecov (>= 0.7)
       thor
+    json (1.7.7)
     mime-types (1.23)
     minitest (4.7.0)
     minitest-colorize (0.0.5)
@@ -27,6 +28,7 @@ PLATFORMS
 
 DEPENDENCIES
   coveralls
+  json
   minitest (= 4.7.0)
   minitest-colorize
   rake
