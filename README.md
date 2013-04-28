@@ -38,7 +38,7 @@ Cool, there it is.  Let's install it.
 
     $ brew cask install google-chrome
     Downloading...
-    Success! google-chrome installed to /usr/local/Caskroom/google-chrome/stable-channel
+    Success! google-chrome installed to /opt/homebrew-cask/Caskroom/google-chrome/stable-channel
 
 Now we have `Google Chrome.app` in our Caskroom. Cool.
 
@@ -47,7 +47,7 @@ Integration"](#alfred-integration) below for an idea that makes this step
 unnecessary):
     
     $ brew cask linkapps
-    /Users/phinze/Applications/Google Chrome.app -> /usr/local/Caskroom/google-chrome/17.0.963.56/Google Chrome.app
+    /Users/phinze/Applications/Google Chrome.app -> /opt/homebrew-cask/Caskroom/google-chrome/17.0.963.56/Google Chrome.app
     
 And there we have it.  Google Chrome installed with a few quick commands; no clicking, no dragging, no dropping.
     
@@ -134,7 +134,7 @@ $ brew cask install --appdir="~/Applications" google-chrome
 # Alfred Integration
 
 I've been using Casks along with Alfred to great effect.  Just add
-`/usr/local/Caskroom` as a Search Scope in Alfred's preferences (you
+`/opt/homebrew-cask/Caskroom` as a Search Scope in Alfred's preferences (you
 may need to press Cmd-Shift-G in the file chooser), and then
 applications become available in Alfred immediately after a
 `brew cask install`.  Your fingertips will thank you.
