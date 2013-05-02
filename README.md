@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/phinze/homebrew-cask.png?branch=master)](https://travis-ci.org/phinze/homebrew-cask)
 [![Code Climate](https://codeclimate.com/github/phinze/homebrew-cask.png)](https://codeclimate.com/github/phinze/homebrew-cask)
-[![Coverage Status](https://coveralls.io/repos/phinze/homebrew-cask/badge.png?branch=master)](https://coveralls.io/r/phinze/homebrew-cask)
 
 Let's see if we can get the elegance, simplicity, and speed of Homebrew for the
 installation and management GUI Mac applications like Google Chrome and Adium.
