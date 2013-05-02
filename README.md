@@ -25,7 +25,7 @@ command](https://github.com/mxcl/homebrew/wiki/External-Commands)" called
 
 And there we have it.  Google Chrome installed with a few quick commands; no clicking, no dragging, no dropping.
     
-    open "~/Applications/Google Chrome.app"
+    open ~/Applications/"Google Chrome.app"
 
 ## Learn More
 
