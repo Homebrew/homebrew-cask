@@ -1,6 +1,6 @@
 class Skype < Cask
   homepage 'http://www.skype.com'
-  version '6.1.0.2295'
-  url 'http://download.skype.com/macosx/Skype_6.1.0.2295.dmg'
-  sha1 'c19b0c2c4121c30c9eec0ad929f5d372459b6698'
+  version '6.3.0.602'
+  url 'http://download.skype.com/macosx/Skype_6.3.0.602.dmg'
+  sha1 '86e9640765ec479af9f4ffd721a416e208cf3866'
 end
