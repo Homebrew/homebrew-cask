@@ -3,15 +3,24 @@ require 'test_helper'
 class CaskMissingUrl < Cask
   version '1.2.3'
   homepage 'http://example.com'
+  link :app, 'Something.app'
 end
 
 class CaskMissingVersion < Cask
   url 'http://localhost/something.dmg'
   homepage 'http://example.com'
+  link :app, 'Something.app'
 end
 
 class CaskMissingHomepage < Cask
   url 'http://localhost/something.dmg'
+  version '1.2.3'
+  link :app, 'Something.app'
+end
+
+class CaskMissingLink < Cask
+  url 'http://localhost/something.dmg'
+  homepage 'http://example.com'
   version '1.2.3'
 end
 
@@ -19,12 +28,14 @@ class CaskSourceForgeIncorrectURLFormat < Cask
   version '1.2.3'
   homepage 'http://sourceforge.net/projects/something/'
   url 'http://sourceforge.net/projects/something/files/Something-1.2.3.dmg/download'
+  link :app, 'Something.app'
 end
 
 class CaskSourceForgeCorrectURLFormat < Cask
   version '1.2.3'
   homepage 'http://sourceforge.net/projects/something/'
   url 'http://downloads.sourceforge.net/project/something/Something-1.2.3.dmg'
+  link :app, 'Something.app'
 end
 
 describe Cask::Audit do
@@ -67,7 +78,14 @@ describe Cask::Audit do
         audit.run!
         audit.errors.must_include 'homepage is required'
       end
+
+      it "adds an error if link is missing" do
+        audit = Cask::Audit.new(CaskMissingLink.new)
+        audit.run!
+        audit.errors.must_include 'link is required'
+      end
     end
+    
     describe "preferred download URL formats" do
       it "adds a warning if SourceForge doesn't use download subdomain" do
         warning_msg = 'SourceForge URL format incorrect. See https://github.com/phinze/homebrew-cask/pull/225#issuecomment-16536889 for details'
