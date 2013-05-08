@@ -67,7 +67,8 @@ end
       only `.app` files are supported)
     * Application homepage
     * Application version
-    * Checksum of the file
+    * SHA-1 Checksum of the file
+    * name of the linked `.app` file, via `link :app, 'MyApp.app'`
 
   In order to find out the checksum for the file, you need to download the file
   and then:
@@ -81,12 +82,8 @@ end
 
   Some developers (like Mozilla) and hosts (like Sourceforge) provide checksums,
   so you can use those directly, without needing to download the file separately.
-
-  In addition to `sha1` you can provide the checksum with `md5`, `sha256`, or `sha512`
-  in the same manner.  Use commands `md5 my-app.dmg` or `shasum -a 256 my-app.dmg`
-  to obtain these checksums.
-
-  If the application does not have versioned downloads, you can provide option
+  
+  If the application does not have versioned downloads, you can provide the option
   `no_checksum`, which takes no arguments.
 
 This is all you need to do to write a Cask!
