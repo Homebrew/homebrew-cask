@@ -3,6 +3,5 @@ class Quicksilver < Cask
   homepage 'http://qsapp.com/'
   version 'latest'
   no_checksum
-
   link :app, 'Quicksilver.app'
 end

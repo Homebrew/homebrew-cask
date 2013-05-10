@@ -3,6 +3,5 @@ class Feeds < Cask
   homepage 'http://www.feedsapp.com/'
   version '2.0.5.1'
   sha1 '7ea1ac6556812a19d417b38bd3a8b261bfb7f501'
-
   link :app, 'Feeds.app'
 end
