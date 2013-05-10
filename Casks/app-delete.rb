@@ -3,4 +3,5 @@ class AppDelete < Cask
   homepage 'http://www.reggieashworth.com/appdelete'
   version 'latest'
   no_checksum
+  link :app, 'AppDelete.app'
 end
