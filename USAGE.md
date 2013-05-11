@@ -44,7 +44,7 @@ Details about a single Cask:
     caffeine: 1.1.1
     http://lightheadsw.com/caffeine/
     Not installed
-    https://github.com/phinze/cask/commits/master/Casks/caffeine.rb
+    https://github.com/phinze/homebrew-cask/commits/master/Casks/caffeine.rb
 
 ## Updating/Upgrading Casks
 
