@@ -19,7 +19,7 @@ describe Cask::CLI::Info do
       local-caffeine: 1.2.3
       http://example.com/local-caffeine
       Not installed
-      https://github.com/phinze/testcasks/commits/master/Casks/local-caffeine.rb
+      https://github.com/phinze/homebrew-testcasks/commits/master/Casks/local-caffeine.rb
       local-transmission: 2.61
       http://example.com/local-transmission
       Not installed
