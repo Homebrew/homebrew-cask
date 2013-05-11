@@ -1,7 +1,7 @@
 class CarbonCopyCloner < Cask
-  url 'http://files.bombich.com/ccc-3.5.2.zip'
+  url 'http://www.bombich.com/software/download_ccc.php'
   homepage 'http://bombich.com/'
-  version '3.5.2'
-  sha1 'ea191a2d7aa88721f06536f091eac46207aeba89'
+  version 'latest'
+  no_checksum
   link :app, 'Carbon Copy Cloner.app'
 end
