@@ -1,6 +1,7 @@
 class GasMask < Cask
-  url 'https://gmask.googlecode.com/files/Gas%20Mask%200.6.dmg'
-  homepage 'https://code.google.com/p/gmask/'
-  version '0.6'
-  sha1 '34a23dea65cc2d3fbb0a8b6adfeebd374d8e2956'
+  url 'http://gmask.clockwise.ee/files/gas_mask_0.7.zip'
+  version '0.7'
+  homepage 'http://www.clockwise.ee/gasmask/'
+  sha1 '5d0286e594a3fcc21db800105eecd78d5a92f11c'
+  link :app, 'Gas Mask.app'
 end
