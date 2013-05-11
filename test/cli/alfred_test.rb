@@ -1,24 +1,34 @@
 require 'test_helper'
 
-def _fake_alfred_scope_paths(response)
-  Cask::FakeSystemCommand.fake_response_for('defaults read com.alfredapp.Alfred scope.paths', response)
+def fake_alfred_preference(key, response)
+  Cask::FakeSystemCommand.fake_response_for("defaults read com.runningwithcrayons.Alfred-Preferences #{key}", response)
+end
+
+def fake_alfred_installed(installed=true)
+  if installed
+    fake_alfred_preference 'version', '2.0.3'
+  else
+    fake_alfred_preference 'version', <<-VERSION.undent
+      2013-05-11 13:32:51.086 defaults[5072:707]
+      The domain/default pair of (com.runningwithcrayons.Alfred-Preferences, version) does not exist
+    VERSION
+  end
 end
 
 describe Cask::CLI::Alfred do
   describe "status" do
     it "properly reports when alfred is not installed" do
-      _fake_alfred_scope_paths <<-SCOPE_RESPONSE.undent
-        2013-04-28 12:55:52.417 defaults[69808:707]
-        The domain/default pair of (com.alfredapp.Alfred, scope.paths) does not exist
-      SCOPE_RESPONSE
+      fake_alfred_installed(false)
 
       TestHelper.must_output(self, lambda {
         Cask::CLI::Alfred.run('status', Cask::FakeSystemCommand)
-      }, "Warning: Could not find any Alfred scopes, Alfred is probably not installed.")
+      }, "Warning: Could not find Alfred preferences, Alfred is probably not installed.")
     end
 
     it "properly reports when alfred is installed but unlinked" do
-      _fake_alfred_scope_paths <<-SCOPE_RESPONSE.undent
+      fake_alfred_installed(true)
+
+      fake_alfred_preference 'features.defaultresults.scope', <<-SCOPE_RESPONSE.undent
         (
           "/Applications",
           "/Library/PreferencePanes",
@@ -34,18 +44,16 @@ describe Cask::CLI::Alfred do
 
   describe "link" do
     it "properly reports when alfred is not installed" do
-      _fake_alfred_scope_paths <<-SCOPE_RESPONSE.undent
-        2013-04-28 12:55:52.417 defaults[69808:707]
-        The domain/default pair of (com.alfredapp.Alfred, scope.paths) does not exist
-      SCOPE_RESPONSE
+      fake_alfred_installed(false)
 
       TestHelper.must_output(self, lambda {
         Cask::CLI::Alfred.run('link', Cask::FakeSystemCommand)
-      }, "Warning: Could not find any Alfred scopes, Alfred is probably not installed.")
+      }, "Warning: Could not find Alfred preferences, Alfred is probably not installed.")
     end
 
     it "warns when alfred is already linked" do
-      _fake_alfred_scope_paths <<-SCOPE_RESPONSE.undent
+      fake_alfred_installed(true)
+      fake_alfred_preference 'features.defaultresults.scope', <<-SCOPE_RESPONSE.undent
         (
           "/Applications",
           "/Library/PreferencePanes",
@@ -60,7 +68,8 @@ describe Cask::CLI::Alfred do
     end
 
     it "links when it needs to" do
-      _fake_alfred_scope_paths <<-SCOPE_RESPONSE.undent
+      fake_alfred_installed(true)
+      fake_alfred_preference 'features.defaultresults.scope', <<-SCOPE_RESPONSE.undent
         (
           "/Applications",
           "/Library/PreferencePanes",
@@ -69,7 +78,24 @@ describe Cask::CLI::Alfred do
       SCOPE_RESPONSE
 
       Cask::FakeSystemCommand.fake_response_for(
-        "defaults write com.alfredapp.Alfred scope.paths '(/Applications,/Library/PreferencePanes,/System/Library/PreferencePanes,#{Cask.caskroom})'"
+        %Q(defaults write com.runningwithcrayons.Alfred-Preferences features.defaultresults.scope "('/Applications','/Library/PreferencePanes','/System/Library/PreferencePanes','#{Cask.caskroom}')")
+      )
+
+      TestHelper.must_output(self, lambda {
+        Cask::CLI::Alfred.run('link', Cask::FakeSystemCommand)
+      }, "==> Successfully linked Alfred to homebrew-cask.")
+    end
+
+    it "links with default scopes if the preference hasn't been customized" do
+      fake_alfred_installed(true)
+      fake_alfred_preference 'features.defaultresults.scope', <<-SCOPE_RESPONSE.undent
+        2013-05-11 13:32:51.086 defaults[5072:707]
+        The domain/default pair of (com.runningwithcrayons.Alfred-Preferences, features.defaultresults.scope) does not exist
+      SCOPE_RESPONSE
+
+      expected_scopes = (Cask::CLI::Alfred::DEFAULT_SCOPES + [Cask.caskroom]).map { |s| "'#{s}'" }
+      Cask::FakeSystemCommand.fake_response_for(
+        %Q(defaults write com.runningwithcrayons.Alfred-Preferences features.defaultresults.scope "(#{expected_scopes.join(',')})")
       )
 
       TestHelper.must_output(self, lambda {
@@ -80,18 +106,16 @@ describe Cask::CLI::Alfred do
 
   describe "unlink" do
     it "properly reports when alfred is not installed" do
-      _fake_alfred_scope_paths <<-SCOPE_RESPONSE.undent
-        2013-04-28 12:55:52.417 defaults[69808:707]
-        The domain/default pair of (com.alfredapp.Alfred, scope.paths) does not exist
-      SCOPE_RESPONSE
+      fake_alfred_installed(false)
 
       TestHelper.must_output(self, lambda {
         Cask::CLI::Alfred.run('unlink', Cask::FakeSystemCommand)
-      }, "Warning: Could not find any Alfred scopes, Alfred is probably not installed.")
+      }, "Warning: Could not find Alfred preferences, Alfred is probably not installed.")
     end
 
     it "warns when alfred is already unlinked" do
-      _fake_alfred_scope_paths <<-SCOPE_RESPONSE.undent
+      fake_alfred_installed(true)
+      fake_alfred_preference 'features.defaultresults.scope', <<-SCOPE_RESPONSE.undent
         (
           "/Applications",
           "/Library/PreferencePanes",
@@ -105,7 +129,8 @@ describe Cask::CLI::Alfred do
     end
 
     it "unlinks when it needs to" do
-      _fake_alfred_scope_paths <<-SCOPE_RESPONSE.undent
+      fake_alfred_installed(true)
+      fake_alfred_preference 'features.defaultresults.scope', <<-SCOPE_RESPONSE.undent
         (
           "/Applications",
           "/Library/PreferencePanes",
@@ -115,7 +140,7 @@ describe Cask::CLI::Alfred do
       SCOPE_RESPONSE
 
       Cask::FakeSystemCommand.fake_response_for(
-        "defaults write com.alfredapp.Alfred scope.paths '(/Applications,/Library/PreferencePanes,/System/Library/PreferencePanes)'"
+        %Q(defaults write com.runningwithcrayons.Alfred-Preferences features.defaultresults.scope "('/Applications','/Library/PreferencePanes','/System/Library/PreferencePanes')")
       )
 
       TestHelper.must_output(self, lambda {

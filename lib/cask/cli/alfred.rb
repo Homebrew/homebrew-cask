@@ -1,4 +1,17 @@
 class Cask::CLI::Alfred
+  DEFAULT_SCOPES = [
+    '/Applications',
+    '/Applications/Xcode.app/Contents/Applications',
+    '/Developer/Applications',
+    '/Library/PreferencePanes',
+    '/System/Library/PreferencePanes',
+    '~/Library/Caches/Metadata/',
+    '~/Library/Mobile Documents/',
+    '~/Library/PreferencePanes'
+  ]
+  DOMAIN = "com.runningwithcrayons.Alfred-Preferences"
+  KEY = "features.defaultresults.scope"
+
   def self.run(*args)
     subcommand = args.first
 
@@ -13,27 +26,25 @@ class Cask::CLI::Alfred
     when "unlink" then unlink
     when "status" then status
     else
-      alfred_help
+      usage
     end
   end
 
-  def self.alfred_help
-    ohai 'brew cask alfred', <<-ALFREDHELP.undent
-      manages integration with Alfred; allows applications installed with
-      homebrew cask to be launched by Alfred by adding the Caskroom to Alfreds
-      search paths
+  def self.help
+    "used to modify Alfred's scope to include the Caskroom"
+  end
 
-      subcommands:
-        status - reports whether Alfred is linked
-        link   - adds Caskroom to alfred search paths
-        link   - removes Cakroom from Alfred search paths
-    ALFREDHELP
+  def self.assert_installed
+    if !alfred_installed?
+      opoo "Could not find Alfred preferences, Alfred is probably not installed."
+    end
+    alfred_installed?
   end
 
   def self.link
-    if !alfred_installed?
-      opoo "Could not find any Alfred scopes, Alfred is probably not installed."
-    elsif linked?
+    return unless assert_installed
+
+    if linked?
       opoo "Alfred is already linked to homebrew-cask."
     else
       save_alfred_scopes(alfred_scopes << Cask.caskroom)
@@ -42,9 +53,9 @@ class Cask::CLI::Alfred
   end
 
   def self.unlink
-    if !alfred_installed?
-      opoo "Could not find any Alfred scopes, Alfred is probably not installed."
-    elsif !linked?
+    return unless assert_installed
+
+    if !linked?
       opoo "Alfred is already unlinked from homebrew-cask."
     else
       save_alfred_scopes(alfred_scopes.reject { |x| x == Cask.caskroom.to_s })
@@ -53,26 +64,21 @@ class Cask::CLI::Alfred
   end
 
   def self.status
-    if !alfred_installed?
-      opoo "Could not find any Alfred scopes, Alfred is probably not installed."
-    elsif linked?
+    return unless assert_installed
+
+    if linked?
       ohai "Alfred is happily linked to homebrew-cask!"
     else
       ohai "Alfred is not linked to homebrew-cask."
     end
   end
 
-  def self.help
-    "used to modify Alfred's scope to include the Caskroom"
-  end
-
   def self.save_alfred_scopes(scopes)
-    scopes_arg = "(#{scopes.join(",")})"
-    @system_command.run("defaults write com.alfredapp.Alfred scope.paths '#{scopes_arg}'")
+    alfred_preference(KEY, "(#{scopes.map { |s| "'#{s}'" }.join(",")})")
   end
 
   def self.alfred_installed?
-    !alfred_scopes.empty?
+    alfred_preference('version').first =~ /^[0-9]\.[0-9]\.[0-9]$/
   end
 
   def self.linked?
@@ -89,13 +95,32 @@ class Cask::CLI::Alfred
   SCOPE_REGEXP = /^\s*"(.*)",?$/
   
   def self.alfred_scopes
-    alfred_preference("scope.paths").map do |line|
+    scopes = alfred_preference(KEY).map do |line|
       matchdata = line.match(SCOPE_REGEXP)
       matchdata ? matchdata.captures.first : nil
     end.compact
+
+    scopes.empty? ? DEFAULT_SCOPES : scopes
   end
 
-  def self.alfred_preference(key)
-    @system_command.run("defaults read com.alfredapp.Alfred #{key}")
+  def self.alfred_preference(key, value=nil)
+    if value
+      @system_command.run(%Q(defaults write #{DOMAIN} #{key} "#{value}"))
+    else
+      @system_command.run("defaults read #{DOMAIN} #{key}")
+    end
+  end
+
+  def self.usage
+    ohai 'brew cask alfred', <<-ALFREDHELP.undent
+      manages integration with Alfred; allows applications installed with
+      homebrew cask to be launched by Alfred by adding the Caskroom to Alfreds
+      search paths
+
+      subcommands:
+        status - reports whether Alfred is linked
+        link   - adds Caskroom to alfred search paths
+        unlink - removes Cakroom from Alfred search paths
+    ALFREDHELP
   end
 end

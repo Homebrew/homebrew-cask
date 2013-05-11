@@ -16,6 +16,8 @@ module Cask::DSL
 
   def linkables; self.class.linkables || {}; end
 
+  def installables; self.class.installables || []; end
+
   def caveats; ''; end
 
   module ClassMethods
@@ -41,6 +43,14 @@ module Cask::DSL
       else
         linkables[type] += files
       end
+    end
+
+    def installables
+      @installables ||= Set.new
+    end
+
+    def install(*files)
+      installables += files
     end
 
     attr_reader :sums

@@ -1,5 +1,5 @@
 class Cask::SystemCommand
   def self.run(command)
-    %x(#{command}).split("\n")
+    %x(#{command} 2>&1).split("\n")
   end
 end
