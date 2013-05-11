@@ -71,17 +71,17 @@ end
 
   In order to find out the checksum for the file, you need to download the file
   and then:
-  
+
   ``` bash
   $ curl -OL http://example-server.com/path/to/file/my-app.dmg
   # Download the file that contains the application
   $ shasum my-app.dmg
   # Calculate SHA-1 sum for the downloaded file
   ```
-  
+
   Some developers (like Mozilla) and hosts (like Sourceforge) provide checksums,
   so you can use those directly, without needing to download the file separately.
-  
+
   In addition to `sha1` you can provide the checksum with `md5`, `sha256`, or `sha512`
   in the same manner.  Use commands `md5 my-app.dmg` or `shasum -a 256 my-app.dmg`
   to obtain these checksums.
@@ -96,7 +96,7 @@ This is all you need to do to write a Cask!
 When Casks are installed, they are searched in `/usr/local/Library/Taps`.  You
 can replace the files in folder `phinze-cask` but you are recommended to make
 your own folder in which you place the tested Casks.
-  
+
   ```bash
   $ mkdir -p /usr/local/Library/Taps/my-casks/Casks
   # Create directory in which the tested Casks are placed
