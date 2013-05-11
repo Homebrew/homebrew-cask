@@ -34,6 +34,6 @@ class Cask::CLI::Info
     tap = cask.class.all_titles.grep(/#{tap}$/).first unless tap =~ /\//
     tap, name = tap.split "/"
     user, repo = tap.split "-"
-    "https://github.com/#{user}/#{repo}/commits/master/Casks/#{name}.rb"
+    "https://github.com/#{user}/homebrew-#{repo}/commits/master/Casks/#{name}.rb"
   end
 end
