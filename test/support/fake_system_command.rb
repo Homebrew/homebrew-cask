@@ -1,6 +1,11 @@
 class Cask::FakeSystemCommand
   def self.fake_response_for(command, response='')
+    @responses ||= {}
     @responses[command] = response
+  end
+
+  def self.system_calls
+    @system_calls
   end
 
   def self.init
@@ -9,13 +14,16 @@ class Cask::FakeSystemCommand
 
   def self.clear
     @responses = {}
+    @system_calls = Hash.new(0)
   end
 
   def self.run(command)
     @responses ||= {}
+    @system_calls ||= Hash.new(0)
     unless @responses.key?(command)
-      fail("no response faked for #{command.inspect}")
+      fail("no response faked for #{command.inspect}, faked responses are: #{@responses.inspect}")
     end
+    @system_calls[command] += 1
     @responses[command].split("\n")
   end
 end

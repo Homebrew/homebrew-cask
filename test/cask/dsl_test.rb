@@ -89,4 +89,15 @@ describe Cask::DSL do
 
     instance.caveats.must_equal "When you install this cask, you probably want to know this.\n"
   end
+
+  it "allows installable pkgs to be specified" do
+    CaskWithInstallables = Class.new(Cask)
+    CaskWithInstallables.class_eval do
+      install 'Foo.pkg'
+      install 'Bar.pkg'
+    end
+
+    instance = CaskWithInstallables.new
+    Array(instance.installables).sort.must_equal %w[Bar.pkg Foo.pkg]
+  end
 end

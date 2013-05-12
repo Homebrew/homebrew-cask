@@ -102,6 +102,10 @@ class Cask
     end
   end
 
+  def installable_pkgs
+    installables.map { |pkg| Pathname.glob("#{destination_path}/**/#{pkg}").first }
+  end
+
   def to_s
     @title
   end

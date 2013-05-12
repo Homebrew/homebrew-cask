@@ -5,6 +5,7 @@ class Cask::CLI::Install
        cask = Cask.load(cask_name)
        Cask::Installer.install(cask)
        Cask::AppLinker.new(cask).link
+       Cask::PkgInstaller.new(cask).install
       rescue CaskUnavailableError => e
         onoe e
       rescue ChecksumMissingError => e

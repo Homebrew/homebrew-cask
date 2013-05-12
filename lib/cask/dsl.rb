@@ -50,7 +50,7 @@ module Cask::DSL
     end
 
     def install(*files)
-      installables += files
+      installables.merge files
     end
 
     attr_reader :sums
