@@ -1,4 +1,3 @@
 language: objective-c
-before_install: brew update
 install: bundle
 script: bundle exec rake test
