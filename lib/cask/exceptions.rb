@@ -19,3 +19,14 @@ class CaskUnavailableError < RuntimeError
     "No available cask for #{name}"
   end
 end
+
+class CaskAlreadyCreatedError < RuntimeError
+  attr_reader :name
+  def initialize name
+    @name = name
+  end
+
+  def to_s
+    "Cask for #{name} already exists. Use `brew cask edit #{name}` to see it."
+  end
+end
