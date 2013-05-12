@@ -12,6 +12,26 @@ describe Cask::CLI::Install do
     Cask.appdir.join('Caffeine.app').must_be :symlink?
   end
 
+  it "prevents double install" do
+    shutup do
+      Cask::CLI::Install.run('local-transmission')
+    end
+
+    TestHelper.must_output(self, lambda {
+      Cask::CLI::Install.run('local-transmission')
+    }, 'Error: Cask for local-transmission is already installed. Use `--force` to install anyways.')
+  end
+
+  it "allows double install with --force" do
+    shutup do
+      Cask::CLI::Install.run('local-transmission')
+    end
+
+    TestHelper.must_output(self, lambda {
+      Cask::CLI::Install.run('local-transmission', '--force')
+    }, 'Error: Cask for local-transmission is already installed. Use `--force` to install anyways.')
+  end
+
   it "properly handles casks that are not present" do
     TestHelper.must_output(self, lambda {
       Cask::CLI::Install.run('what-the-balls')

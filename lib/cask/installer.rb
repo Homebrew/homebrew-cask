@@ -2,7 +2,11 @@ require 'digest'
 
 class Cask::Installer
   class << self
-    def install(cask)
+    def install(cask, force=false)
+      if cask.installed? && !force
+        raise CaskAlreadyInstalledError.new(cask)
+      end
+
       require 'formula_support'
       software_spec = SoftwareSpec.new(cask.url.to_s, cask.version)
       downloader = CurlDownloadStrategy.new(cask.title, software_spec)

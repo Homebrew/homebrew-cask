@@ -69,6 +69,33 @@ describe Cask::Installer do
       end
       with_macosx_dir.destination_path.join('__MACOSX').wont_be :directory?
     end
+
+    it "prevents already installed casks from being installed" do
+      transmission = Cask.load('local-transmission')
+      transmission.installed?.must_equal false
+
+      shutup do
+        Cask::Installer.install(transmission)
+      end
+      lambda {
+        shutup do
+          Cask::Installer.install(transmission)
+        end
+      }.must_raise(CaskAlreadyInstalledError)
+    end
+
+    it "allows already installed casks to being installed if force is provided" do
+      transmission = Cask.load('local-transmission')
+      transmission.installed?.must_equal false
+
+      shutup do
+        Cask::Installer.install(transmission)
+      end
+      shutup do
+        Cask::Installer.install(transmission, true)
+      end # wont_raise
+    end
+
   end
 
   describe "uninstall" do

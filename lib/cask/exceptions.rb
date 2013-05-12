@@ -1,4 +1,6 @@
-class CaskNotInstalledError < RuntimeError
+class CaskError < RuntimeError; end
+
+class CaskNotInstalledError < CaskError
   attr_reader :cask
   def initialize cask
     @cask = cask
@@ -9,7 +11,7 @@ class CaskNotInstalledError < RuntimeError
   end
 end
 
-class CaskUnavailableError < RuntimeError
+class CaskUnavailableError < CaskError
   attr_reader :name
   def initialize name
     @name = name
@@ -20,7 +22,7 @@ class CaskUnavailableError < RuntimeError
   end
 end
 
-class CaskAlreadyCreatedError < RuntimeError
+class CaskAlreadyCreatedError < CaskError
   attr_reader :name
   def initialize name
     @name = name
@@ -28,5 +30,16 @@ class CaskAlreadyCreatedError < RuntimeError
 
   def to_s
     "Cask for #{name} already exists. Use `brew cask edit #{name}` to see it."
+  end
+end
+
+class CaskAlreadyInstalledError < CaskError
+  attr_reader :name
+  def initialize name
+    @name = name
+  end
+
+  def to_s
+    "Cask for #{name} is already installed. Use `--force` to install anyways."
   end
 end

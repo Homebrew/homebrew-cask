@@ -1,16 +1,14 @@
 class Cask::CLI::Install
-  def self.run(*cask_names)
+  def self.run(*args)
+    cask_names = args.reject { |a| a == '--force' }
+    force = args.include? '--force'
     cask_names.each do |cask_name|
       begin
        cask = Cask.load(cask_name)
        Cask::Installer.install(cask)
        Cask::AppLinker.new(cask).link
        Cask::PkgInstaller.new(cask).install
-      rescue CaskUnavailableError => e
-        onoe e
-      rescue ChecksumMissingError => e
-        onoe e
-      rescue ChecksumMismatchError => e
+      rescue CaskError => e
         onoe e
       end
     end
