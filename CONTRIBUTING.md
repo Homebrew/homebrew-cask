@@ -1,8 +1,7 @@
 # How to Contribute
 
-So you want to contribute to the project. THIS IS GREAT NEWS!
-
-Seriously. We're all pretty happy about this.
+So you want to contribute to the project. **THIS IS GREAT NEWS!**  Seriously. We're
+all pretty happy about this.
 
 ## Getting set up to contribute
 
@@ -10,14 +9,18 @@ Fork the homebrew-cask repository as per instructions in the
 [GitHub help pages](https://help.github.com/articles/fork-a-repo):
 
 1. Fork the repository in GitHub with the 'Fork' button
-2. Clone your GitHub fork into your computer
-3. Configure upstream remote to point at
-  [phinze/homebrew-cask](https://github.com/phinze/homebrew-cask.git).
+2. Add your GitHub fork as a remote for your homebrew-cask Tap
+
+```bash
+github_user='<my-github-username>'
+cd $(brew --prefix)/Library/Taps/phinze-cask
+git remote add $github_user https://github/$github_user/homebrew-cask
+```
 
 ## Adding a Cask
 
 Making a Cask is easy: a Cask is a Ruby file that is only eight lines long.
-See the Cask for Alfred.app for an example:
+Here's a Cask for Alfred.app as an example:
 
 ```ruby
 class Alfred < Cask
@@ -29,96 +32,133 @@ class Alfred < Cask
 end
 ```
 
-### Preliminary steps
+To get started, use the handy dandy `brew cask create` command.
 
-1. Go to the folder in which you cloned `phinze/homebrew-cask` (assuming
-  `~/homebrew-cask`)
-  ```bash
-  $ cd ~/homebrew-cask
-  ```
-2. If you have forked a longer while ago, there might be upstream changes.
-  Pull those in (assuming upstream branch is called `upstream`):
-  ```bash
-  $ git fetch upstream
-  # Fetches any new changes from the original repo
-  $ git checkout master
-  # Check out branch "master" (just to make sure)
-  $ git merge upstream/master
-  # Merges any changes fetched into your working files
-  ```
-3. Make a topic branch for your work
-  ```bash
-  $ git checkout -b my-branch
-  # Create a new branch called "my-branch" and make it active
-  ```
+```bash
+brew cask create my-new-cask
+```
 
-### Write the Cask file
+This will open `$EDITOR` with a template for your new cask. Note that the
+convention is that hyphens in the name indicate casing in the class name, so
+the Cask name 'my-new-cask' becomes `MyNewCask` stored in `my-new-cask.rb`. So
+running the above command will get you a template that looks like this:
 
-1. Copy a template cask to help writing the new one
-  ```bash
-  $ cp test/support/Casks/basic-cask.rb Casks/my-app.rb
-  ```
-2. Edit the Cask with your preferred editor
-  ```bash
-  $ emacs Casks/my-app.rb
-  ```
-  Include the following fields in your Cask:
-    * URL to the `.dmg`/`.zip` file that contains the application (currently
-      only `.app` files are supported)
-    * Application homepage
-    * Application version
-    * SHA-1 Checksum of the file
-    * name of the linked `.app` file, via `link :app, 'MyApp.app'`
+```ruby
+class MyNewCask < Cask
+  url ''
+  homepage ''
+  version ''
+  sha1 ''
+  link :app, ''
+end
+```
 
-  In order to find out the checksum for the file, you need to download the file
-  and then:
+Fill in the following fields for your Cask:
 
-  ``` bash
-  $ curl -OL http://example-server.com/path/to/file/my-app.dmg
-  # Download the file that contains the application
-  $ shasum my-app.dmg
-  # Calculate SHA-1 sum for the downloaded file
-  ```
+| field | explanation |
+| ----- | ----------- |
+| `url` |  URL to the `.dmg`/`.zip`/`.tgz` file that contains the application
+| `homepage` | application homepage;used for the `brew cask home` command
+| `version` | application version; determines the directory structure in the Caskroom
+| `sha1` | SHA-1 Checksum of the file; checked when the file is downloaded to prevent any funny business
+| `link` | indicate which file(s) should be linked into the `Applications` folder on installation
 
-  Some developers (like Mozilla) and hosts (like Sourceforge) provide checksums,
-  so you can use those directly, without needing to download the file separately.
-  
-  If the application does not have versioned downloads, you can provide the option
-  `no_checksum`, which takes no arguments.
+### Good Things to Know
 
-This is all you need to do to write a Cask!
+* In order to find out the checksum for the file, the easiest way is to leave
+  it blank and attempt installation. The checksum will fail and tell you what the
+  real sha1 should be.
+* You can specify `link :app, :none` if no files should be linked
+* If the application does not have versioned downloads, you can skip the
+  checksum by specifying `no_checksum`, which takes no arguments
+* We have some conventions for projects without version-specific URLs. `latest`
+  is a common version for those, but you can grep through the existing casks for
+  other examples
 
 ## Testing your new Cask
 
-When Casks are installed, they are searched in `` `brew --prefix`/Library/Taps ``.  You
-can replace the files in folder `phinze-cask` but you are recommended to make
-your own folder in which you place the tested Casks.
+Give it a shot with `brew cask install my-new-cask`
 
-  ```bash
-  $ mkdir -p `brew --prefix`/Library/Taps/my-casks/Casks
-  # Create directory in which the tested Casks are placed
-  $ ln -s ~/homebrew-cask/Casks/my-app.rb `brew --prefix`/Library/Taps/my-casks/Casks
-  # Create a symbolic link to the Cask you created
-  ```
+Did it install? If something went wrong, `brew cask uninstall my-new-cask` and
+edit your Cask to fix it.
 
-Now you can either audit your Cask with `brew cask audit my-app` or try to
-install it: `brew cask install my-app`.
-
-Did it install?  If yes, you can continue with submitting a pull request.  If
-something went wrong, `brew cask uninstall my-app` and edit your Cask in
-`~/homebrew-cask/Casks/my-app.rb` or whereever you placed it.  Since you
-created a symbolic link in `` `brew --prefix`/Library/Taps/my-casks/Casks ``, changes
-are automatically reflected in there, so you can directly try installing after
-those changes.
+If everything looks good, you'll also want to make sure you cask passes audit
+with `brew cask audit my-new-cask`
 
 If your application and homebrew-cask do not work well together, feel free to
 [file an issue](https://github.com/phinze/homebrew-cask/issues) after checking
 out open issues.
 
+## Submitting your Changes
+
+Hop into your Tap and check to make sure your new cask is there:
+
+```bash
+cd $(brew --prefix)/Library/Taps/phinze-cask
+git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       Casks/my-new-cask.rb
+```
+
+So far, so good. Now make a feature branch that you'll use in your pull
+request:
+
+```bash
+git checkout -b my-new-cask
+Switched to a new branch 'my-new-cask'
+```
+
+Stage your Cask with `git add Casks/my-new-cask.rb`. You can view the changes
+that are to be committed with `git diff --cached`.
+
+Commit your changes with `git commit -v`.  Write your commit message with:
+
+ * the first line being commit summary, 50 characters or less,
+ * followed by an empty line
+ * and an explanation of the commit, wrapped to 72 characters.
+
+See [a note about git commit
+messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+for a more thorough explanation.
+
+Push your changes to your GitHub account:
+
+```bash
+github_user='<my-github-username>'
+git push $github_user my-new-cask
+```
+
+### Filing a pull request on GitHub
+
+Now go to *your* GitHub repository at
+https://github.com/my-github-username/homebrew-cask, switch branch to your
+topic branch and click on 'Pull Request' button.  You can then add further
+comments to your pull request.
+
+Congratulations! You are done now, and your Cask should be pulled in or
+otherwise noticed in a while.
+
+## Cleaning up
+
+After your Pull Request is away, you might want to get yourself back on master,
+so that `brew update` will pull down new Casks properly.
+
+```bash
+cd $(brew --prefix)/Library/Taps/phinze-cask
+git checkout master
+```
+
+Neat and tidy!
+
 ## Working on homebrew-cask itself
 
 If you'd like to hack on the ruby code in the project itself, one way to play
-with changes is to symlink the `rubylib` folder to your working repository. So assuming your fork is cloned at `~/homebrew-cask` you could do something like this:
+with changes is to symlink the `rubylib` folder to your Tap repository. So
+assuming your fork is cloned at `~/homebrew-cask` you could do something like
+this:
 
   ```bash
   $ cd $(brew --prefix brew-cask)
@@ -134,35 +174,4 @@ If you're making changes - please write some tests for them! Also be sure to
 run the whole test suite before submitting (if you forget Travis-CI will do
 that for you and embarass you in front of all your friends). :)
 
-## Submitting your Changes
-
-Now that you have your Cask ready and you have verified it works correctly, you
-can commit your changes and submit a
-[pull request](https://help.github.com/articles/using-pull-requests).
-
-### Committing your changes
-
-Go back to the folder in which you cloned homebrew-cask.  Use `git status` to
-verify that you are on the right branch and that you have changed the right
-files.
-
-1. Stage your Cask with `git add Casks/my-app.rb`.  You can view the changes
-  that are to be committed with `git diff --cached`.
-2. Commit your changes with `git commit`.  Write your commit message with
-    * the first line being commit summary, 50 characters or less,
-    * followed by an empty line
-    * and an explanation of the commit, wrapped to 72 characters.
-  See
-  [a note about git commit messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-  for a more thorough explanation.
-3. Push your changes to your GitHub account: `git push origin my-branch`.
-
-### Filing a pull request on GitHub
-
-Now go to *your* GitHub repository at
-https://github.com/your-github-username/homebrew-cask, switch branch to your
-topic branch and click on 'Pull Request' button.  You can then add further
-comments to your pull request.
-
-You are done now, and your Cask should be pulled in or otherwise noticed in a
-while.
+# <3 THANK YOU! <3
