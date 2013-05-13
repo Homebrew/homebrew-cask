@@ -14,7 +14,7 @@ Fork the homebrew-cask repository as per instructions in the
 ```bash
 github_user='<my-github-username>'
 cd $(brew --prefix)/Library/Taps/phinze-cask
-git remote add $github_user https://github/$github_user/homebrew-cask
+git remote add $github_user https://github.com/$github_user/homebrew-cask
 ```
 
 ## Adding a Cask
