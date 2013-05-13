@@ -10,6 +10,8 @@ class Cask::CLI::Install
        Cask::PkgInstaller.new(cask).install
       rescue CaskError => e
         onoe e
+      rescue FormulaAlreadyInstalledError => e
+        opoo e.message
       end
     end
   end
