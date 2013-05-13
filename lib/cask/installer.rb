@@ -28,8 +28,6 @@ class Cask::Installer
     end
 
     def uninstall(cask)
-      raise CaskNotInstalledError.new(cask) unless cask.installed?
-
       cask.destination_path.rmtree
     end
 

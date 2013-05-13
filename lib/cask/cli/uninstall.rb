@@ -3,10 +3,11 @@ class Cask::CLI::Uninstall
     begin
       casks = cask_names.map { |cn| Cask.load(cn) }
       casks.each do |cask|
+        raise CaskNotInstalledError.new(cask) unless cask.installed?
         Cask::AppLinker.new(cask).unlink
         Cask::Installer.uninstall(cask)
       end
-    rescue CaskUnavailableError,CaskNotInstalledError => e
+    rescue CaskError => e
       onoe e
     end
   end

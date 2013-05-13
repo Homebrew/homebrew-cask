@@ -1,6 +1,7 @@
 class Anvil < Cask
-  url 'http://anvilformac.com/download'
+  url 'http://sparkler.herokuapp.com/apps/3/download'
   homepage 'http://anvilformac.com/'
   version 'latest'
   no_checksum
+  link :app, 'Anvil.app'
 end
