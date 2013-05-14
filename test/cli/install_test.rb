@@ -29,7 +29,7 @@ describe Cask::CLI::Install do
 
     TestHelper.must_output(self, lambda {
       Cask::CLI::Install.run('local-transmission', '--force')
-    }, 'Error: Cask for local-transmission is already installed. Use `--force` to install anyways.')
+    }, /Success! local-transmission installed/)
   end
 
   it "properly handles casks that are not present" do
