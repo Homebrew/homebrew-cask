@@ -27,7 +27,7 @@ class Cask
         return
       end
       ohai "Linking #{app.basename} to #{app_path}"
-      system %Q(ln -hfs "#{app}" "#{app_path}")
+      system %Q(/bin/ln -hfs "#{app}" "#{app_path}")
     end
   end
 end
