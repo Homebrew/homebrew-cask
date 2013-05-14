@@ -1,6 +1,7 @@
 class Textwrangler < Cask
-  url 'http://ash.barebones.com/TextWrangler_4.0.1.dmg'
+  url 'http://ash.barebones.com/TextWrangler_4.5.1.dmg'
   homepage 'http://www.barebones.com/products/textwrangler'
-  version '4.0.1'
-  sha1 '7205c48f94d588682bf82923b579e1674701f218'
+  version '4.5.1'
+  sha1 'af2b085fd5a76b29339fc6f0164cb2c1d880d99e'
+  link :app, 'TextWrangler.app'
 end
