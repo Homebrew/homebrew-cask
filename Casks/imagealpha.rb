@@ -3,4 +3,5 @@ class Imagealpha < Cask
   homepage 'http://pngmini.com/'
   version '1.3.0.6'
   sha1 '1cb44cd72245e112f146ace5d8685d727f777bdc'
+  link :app, 'ImageAlpha.app'
 end
