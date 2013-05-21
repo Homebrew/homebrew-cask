@@ -1,7 +1,7 @@
 class Imageoptim < Cask
-  url 'http://imageoptim.com/ImageOptim.tbz2'
+  url 'http://imageoptim.com/ImageOptim1.4.1.2.tar.bz2'
   homepage 'http://imageoptim.com/'
-  version '1.4.0'
-  sha1 '2199d54cf1c781e48590b8047f55565aec07d74a'
+  version '1.4.1.2'
+  sha1 'dff8448cb4ff2ba754769db55cdd13ee88a10cf2'
   link :app, 'ImageOptim.app'
 end
