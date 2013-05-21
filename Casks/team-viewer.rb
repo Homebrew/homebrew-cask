@@ -4,4 +4,5 @@ class TeamViewer < Cask
   version 'latest'
   no_checksum
   install 'Install TeamViewer.pkg'
+  uninstall 'Uninstall TeamViewer.app'
 end
