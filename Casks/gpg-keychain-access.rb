@@ -3,5 +3,5 @@ class GpgKeychainAccess < Cask
   homepage 'https://gpgtools.org/keychain/index.html'
   version '1.0'
   sha1 '8fd8268094865ec278ac60f2bfdd01a23be180d0'
-  link :app, 'GPG Keychain Access.app'
+  install 'GPGKeychainAccess.pkg'
 end
