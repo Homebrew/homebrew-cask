@@ -3,4 +3,5 @@ class BadChecksum < TestCask
   homepage 'http://example.com/local-caffeine'
   version '1.2.3'
   sha1 'badbadbadbadbadbadbadbadbadbad'
+  link 'Caffeine.app'
 end

@@ -49,22 +49,30 @@ describe Cask::DSL do
     end
   end
 
-  it "allows you to specify linkables" do
-    CaskWithLinkables = Class.new(Cask)
-    CaskWithLinkables.class_eval do
+  it "allows you to specify linkables in the old way, for backcompat" do
+    CaskWithOldSchoolLinkables = Class.new(Cask)
+    CaskWithOldSchoolLinkables.class_eval do
       link :app, 'Foo.app'
       link :app, 'Bar.app'
     end
 
+    instance = CaskWithOldSchoolLinkables.new
+    Array(instance.linkables).sort.must_equal %w[Bar.app Foo.app]
+  end
+
+  it "allows you to specify linkables" do
+    CaskWithLinkables = Class.new(Cask)
+    CaskWithLinkables.class_eval do
+      link 'Foo.app'
+      link 'Bar.app'
+    end
+
     instance = CaskWithLinkables.new
-    Array(instance.linkables[:app]).sort.must_equal %w[Bar.app Foo.app]
+    Array(instance.linkables).sort.must_equal %w[Bar.app Foo.app]
   end
 
   it "allow linkables to be set to empty" do
     CaskWithNoLinkables = Class.new(Cask)
-    CaskWithNoLinkables.class_eval do
-      link :app, :none
-    end
 
     instance = CaskWithNoLinkables.new
     Array(instance.linkable_apps).must_equal %w[]

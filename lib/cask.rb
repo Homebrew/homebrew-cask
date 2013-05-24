@@ -95,11 +95,7 @@ class Cask
   end
 
   def linkable_apps
-    if linkables.has_key? :app
-      linkables[:app].map { |app| Pathname.glob("#{destination_path}/**/#{app}").first }
-    else
-      Pathname.glob("#{destination_path}/**/*.app")
-    end
+    linkables.map { |app| Pathname.glob("#{destination_path}/**/#{app}").first }
   end
 
   def installable_pkgs

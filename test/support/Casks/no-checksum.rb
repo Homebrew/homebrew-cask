@@ -3,4 +3,5 @@ class NoChecksum < TestCask
   homepage 'http://example.com/local-caffeine'
   version '1.2.3'
   no_checksum
+  link 'Caffeine.app'
 end

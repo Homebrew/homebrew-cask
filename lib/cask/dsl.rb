@@ -34,15 +34,14 @@ module Cask::DSL
     end
 
     def linkables
-      @linkables ||= Hash.new(Set.new)
+      @linkables ||= Set.new
     end
 
-    def link(type, *files)
-      if files == [:none]
-        linkables[type] = []
-      else
-        linkables[type] += files
-      end
+    def link(*args)
+      # handle old-style casks using link :app, 'Foo.app'
+      args.shift if args.first.is_a? Symbol
+
+      linkables.merge args
     end
 
     def installables
