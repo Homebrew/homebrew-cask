@@ -18,6 +18,8 @@ module Cask::DSL
 
   def installables; self.class.installables || []; end
 
+  def uninstallables; self.class.uninstallables || []; end
+
   def caveats; ''; end
 
   module ClassMethods
@@ -50,6 +52,14 @@ module Cask::DSL
 
     def install(*files)
       installables.merge files
+    end
+
+    def uninstallables
+      @uninstallables ||= Set.new
+    end
+
+    def uninstall(options)
+      uninstallables.merge [options]
     end
 
     attr_reader :sums

@@ -4,4 +4,5 @@ class Virtualbox < Cask
   version '4.2.16-86992'
   sha1 '94a2f1ab48d2daa0b0a0640efd79ecdd5556c4d7'
   install 'VirtualBox.pkg'
+  uninstall :script => 'VirtualBox_Uninstall.tool', :args => %w[--unattended]
 end
