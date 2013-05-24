@@ -24,6 +24,7 @@ class Cask::Audit
     add_error "url is required" unless cask.url
     add_error "version is required" unless cask.version
     add_error "homepage is required" unless cask.homepage
+    add_error "either link or install is required" if cask.installables.empty? && cask.linkables.empty?
   end
 
   def _check_checksums
