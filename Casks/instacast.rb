@@ -1,7 +1,7 @@
 class Instacast < Cask
-  url 'http://assets.vemedio.com/software/snowtape/Instacast-0.7.1b-1623.zip'
+  url 'http://assets.vemedio.com/software/snowtape/Instacast-0.9.2b-1707.zip'
   homepage 'http://vemedio.com/products/instacast-mac'
-  version '0.7.1b-1623'
-  sha1 '48d3e47e16633e90dfff78f8155a1603bdf7feb0'
-  link :app, 'Instacast.app'
+  version '0.9.2b-1707'
+  sha1 'b529532c8a0063a9ecbc8c4ec8c34230558328b1'
+  link 'Instacast.app'
 end
