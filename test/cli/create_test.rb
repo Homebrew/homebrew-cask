@@ -44,7 +44,7 @@ describe Cask::CLI::Create do
         homepage ''
         version ''
         sha1 ''
-        link :app, ''
+        link ''
       end
     TEMPLATE
   end

@@ -22,7 +22,7 @@ module Cask::CLI::Create
         homepage ''
         version ''
         sha1 ''
-        link :app, ''
+        link ''
       end
     EOS
   end
