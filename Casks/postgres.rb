@@ -3,5 +3,5 @@ class Postgres < Cask
   homepage 'http://www.postgresapp.com/'
   version 'latest'
   no_checksum
-  link :app, 'Postgres.app'
+  link 'Postgres.app'
 end
