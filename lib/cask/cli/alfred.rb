@@ -120,7 +120,7 @@ class Cask::CLI::Alfred
       subcommands:
         status - reports whether Alfred is linked
         link   - adds Caskroom to alfred search paths
-        unlink - removes Cakroom from Alfred search paths
+        unlink - removes Caskroom from Alfred search paths
     ALFREDHELP
   end
 end
