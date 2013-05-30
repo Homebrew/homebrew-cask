@@ -28,7 +28,7 @@ class Alfred < Cask
   homepage 'http://www.alfredapp.com/'
   version '1.3.2_265'
   sha1 'e10f15a0ae758cae2a22557f14890fa5989260ce'
-  link :app, 'Alfred.app'
+  link 'Alfred.app'
 end
 ```
 
@@ -49,7 +49,7 @@ class MyNewCask < Cask
   homepage ''
   version ''
   sha1 ''
-  link :app, ''
+  link ''
 end
 ```
 
@@ -68,7 +68,7 @@ Fill in the following fields for your Cask:
 * In order to find out the checksum for the file, the easiest way is to leave
   it blank and attempt installation. The checksum will fail and tell you what the
   real sha1 should be.
-* You can specify `link :app, :none` if no files should be linked
+* You can specify `link :none` if no files should be linked
 * If the application does not have versioned downloads, you can skip the
   checksum by specifying `no_checksum`, which takes no arguments
 * We have some conventions for projects without version-specific URLs. `latest`
