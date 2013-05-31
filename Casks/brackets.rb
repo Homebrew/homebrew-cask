@@ -3,5 +3,5 @@ class Brackets < Cask
   homepage 'http://brackets.io'
   version 'sprint-25'
   sha1 '836c4c0b441ac2a9ddbfaa5021e219b331307214'
-  link :app, 'Brackets Sprint 25.app'
+  link 'Brackets Sprint 25.app'
 end

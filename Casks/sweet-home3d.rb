@@ -3,5 +3,5 @@ class SweetHome3d < Cask
   homepage 'http://www.sweethome3d.com/'
   version '4.0'
   sha1 '15b0ec1d8b70267707b00637ac7289cf8267f15d'
-  link :app, 'Sweet Home 3D.app'
+  link 'Sweet Home 3D.app'
 end

@@ -3,5 +3,5 @@ class Subtitles < Cask
   homepage 'http://subtitlesapp.com'
   version '2.0'
   sha1 '1efca24e5935306ea7cd6543e61d0558a119401d'
-  link :app, 'Subtitles.app'
+  link 'Subtitles.app'
 end

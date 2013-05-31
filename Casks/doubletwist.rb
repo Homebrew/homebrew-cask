@@ -3,5 +3,5 @@ class Doubletwist < Cask
   homepage 'http://www.doubletwist.com/'
   version 'latest'
   no_checksum
-  link :app, 'doubleTwist.app'
+  link 'doubleTwist.app'
 end

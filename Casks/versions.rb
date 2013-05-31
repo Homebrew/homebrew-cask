@@ -3,5 +3,5 @@ class Versions < Cask
   homepage 'http://versionsapp.com/'
   version 'latest'
   no_checksum
-  link :app, 'Versions.app'
+  link 'Versions.app'
 end

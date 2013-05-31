@@ -3,5 +3,5 @@ class Anvil < Cask
   homepage 'http://anvilformac.com/'
   version 'latest'
   no_checksum
-  link :app, 'Anvil.app'
+  link 'Anvil.app'
 end

@@ -3,5 +3,5 @@ class Steam < Cask
   homepage 'http://store.steampowered.com/about/'
   version 'stable'
   no_checksum
-  link :app, 'Steam.app'
+  link 'Steam.app'
 end

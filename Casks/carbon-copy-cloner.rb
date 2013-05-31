@@ -3,5 +3,5 @@ class CarbonCopyCloner < Cask
   homepage 'http://bombich.com/'
   version 'latest'
   no_checksum
-  link :app, 'Carbon Copy Cloner.app'
+  link 'Carbon Copy Cloner.app'
 end

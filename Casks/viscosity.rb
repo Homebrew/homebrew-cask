@@ -3,5 +3,5 @@ class Viscosity < Cask
   homepage 'http://www.sparklabs.com/viscosity/'
   version 'latest'
   no_checksum
-  link :app, 'Viscosity.app'
+  link 'Viscosity.app'
 end

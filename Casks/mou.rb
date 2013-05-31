@@ -3,5 +3,5 @@ class Mou < Cask
   homepage 'http://mouapp.com/'
   version 'latest'
   no_checksum
-  link :app, 'Mou.app'
+  link 'Mou.app'
 end

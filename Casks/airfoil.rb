@@ -3,5 +3,5 @@ class Airfoil < Cask
   homepage 'http://www.rogueamoeba.com/airfoil/mac/'
   version 'latest'
   no_checksum
-  link :app, 'Airfoil Speakers.app', 'Airfoil.app', 'Airfoil Video Player.app'
+  link 'Airfoil Speakers.app', 'Airfoil.app', 'Airfoil Video Player.app'
 end

@@ -3,5 +3,5 @@ class AppZapper < Cask
   homepage 'http://www.appzapper.com/'
   version 'latest'
   no_checksum
-  link :app, 'AppZapper.app'
+  link 'AppZapper.app'
 end

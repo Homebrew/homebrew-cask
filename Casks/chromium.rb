@@ -3,5 +3,5 @@ class Chromium < Cask
   homepage 'http://www.freesmug.org/chromium'
   version '27.0.1453.93'
   sha1 '16ac219088dfdd3e6ef2d1800c887a8f686d040f'
-  link :app, 'Chromium.app'
+  link 'Chromium.app'
 end

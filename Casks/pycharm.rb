@@ -3,5 +3,5 @@ class Pycharm < Cask
   homepage 'http://www.jetbrains.com/pycharm/'
   version '2.7.2'
   sha1 '2b4f9d856d546fd2ef2e54ee7d15910e935de403'
-  link :app, 'PyCharm.app'
+  link 'PyCharm.app'
 end

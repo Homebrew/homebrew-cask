@@ -3,5 +3,5 @@ class Lyx < Cask
   homepage 'http://www.lyx.org'
   version '2.0.6'
   sha1 '7fc3350afb6b5b9ebad04d6a1370ca8670b24e04'
-  link :app, 'LyX.app'
+  link 'LyX.app'
 end

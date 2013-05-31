@@ -3,5 +3,5 @@ class GoogleChrome < Cask
   homepage 'https://www.google.com/chrome/'
   version 'stable-channel'
   no_checksum
-  link :app, 'Google Chrome.app'
+  link 'Google Chrome.app'
 end

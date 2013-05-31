@@ -3,5 +3,5 @@ class Fiji < Cask
   homepage 'http://fiji.sc'
   version 'latest'
   no_checksum
-  link :app, 'Fiji.app'
+  link 'Fiji.app'
 end

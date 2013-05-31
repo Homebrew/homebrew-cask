@@ -3,5 +3,5 @@ class LibreOffice < Cask
   homepage 'http://www.libreoffice.org/'
   version '4.0.3'
   sha1 '8a275083892ee38f5829795eae5e7e870229efe8'
-  link :app, 'LibreOffice.app'
+  link 'LibreOffice.app'
 end

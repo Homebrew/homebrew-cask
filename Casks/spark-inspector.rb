@@ -3,5 +3,5 @@ class SparkInspector < Cask
   homepage 'http://sparkinspector.com/'
   version 'latest'
   no_checksum
-  link :app, 'Spark Inspector.app'
+  link 'Spark Inspector.app'
 end

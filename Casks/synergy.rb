@@ -3,5 +3,5 @@ class Synergy < Cask
   homepage 'http://synergy-foss.org/'
   version '1.4.12'
   sha1 '8ef61785e8570772e8ecb317101d9045c579602f'
-  link :app, 'Synergy.app'
+  link 'Synergy.app'
 end

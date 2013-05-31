@@ -3,5 +3,5 @@ class Flux < Cask
   homepage 'http://www.theescapers.com/flux/'
   version '4'
   no_checksum
-  link :app, 'Flux.app'
+  link 'Flux.app'
 end

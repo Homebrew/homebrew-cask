@@ -3,5 +3,5 @@ class Tunnelblick < Cask
   homepage 'https://code.google.com/p/tunnelblick/'
   version '3.2.9'
   sha1 '85985883a519c0e8801a44420b4c490861ad4e03'
-  link :app, 'Tunnelblick.app'
+  link 'Tunnelblick.app'
 end

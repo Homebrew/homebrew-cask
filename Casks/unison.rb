@@ -3,5 +3,5 @@ class Unison < Cask
   homepage 'http://www.cis.upenn.edu/~bcpierce/unison/'
   version '2.40.61'
   sha1 '7b11e4a8a27a414e227ec2fcf825a2180faa1c30'
-  link :app, 'Unison.app'
+  link 'Unison.app'
 end

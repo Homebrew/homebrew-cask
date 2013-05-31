@@ -3,5 +3,5 @@ class Rstudio < Cask
   homepage 'http://www.rstudio.com/'
   version '0.97.449'
   sha1 'fd08b0c39da8b22ae58a1591e2ba013ed81b8fcd'
-  link :app, 'RStudio.app'
+  link 'RStudio.app'
 end

@@ -3,5 +3,5 @@ class Eggscellent < Cask
   homepage 'http://www.eggscellentapp.com/'
   version 'beta2'
   sha1 '0fee4fb819fc51541322d671c4a6ca2829137f9f'
-  link :app, 'Eggscellent.app'
+  link 'Eggscellent.app'
 end

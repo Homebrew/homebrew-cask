@@ -3,5 +3,5 @@ class Frizzix < Cask
   homepage 'http://mac.frizzix.de/'
   version 'latest'
   no_checksum
-  link :app, 'Frizzix.app'
+  link 'Frizzix.app'
 end

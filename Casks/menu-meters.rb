@@ -3,7 +3,7 @@ class MenuMeters < Cask
   homepage 'http://www.ragingmenace.com/software/menumeters/'
   version 'latest'
   no_checksum
-  link :app, 'MenuMeters Installer.app'
+  link 'MenuMeters Installer.app'
 
   def caveats; <<-EOS.undent
     You need to run MenuMeters Installer.app to actually install MenuMeters

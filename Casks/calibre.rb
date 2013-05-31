@@ -3,5 +3,5 @@ class Calibre < Cask
   homepage 'http://calibre-ebook.com/'
   version 'latest'
   no_checksum
-  link :app, 'calibre.app'
+  link 'calibre.app'
 end

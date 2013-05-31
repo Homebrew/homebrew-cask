@@ -3,5 +3,5 @@ class Textmate2 < Cask
   homepage 'http://macromates.com/'
   version 'latest'
   no_checksum
-  link :app, 'TextMate.app'
+  link 'TextMate.app'
 end

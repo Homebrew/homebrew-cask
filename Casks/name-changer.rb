@@ -3,5 +3,5 @@ class NameChanger < Cask
   homepage 'http://www.mrrsoftware.com/MRRSoftware/NameChanger.html'
   version '2.3.3'
   sha1 'b9af8add259a0055a3748aeddfd56984a82cb6f2'
-  link :app, 'NameChanger.app'
+  link 'NameChanger.app'
 end

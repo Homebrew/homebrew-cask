@@ -3,5 +3,5 @@ class Poedit < Cask
   homepage 'http://www.poedit.net'
   version '1.5.5'
   sha1 'ea5ec89695c302c781579794ab8f75ca1678bb72'
-  link :app, 'Poedit.app'
+  link 'Poedit.app'
 end

@@ -3,5 +3,5 @@ class Cloak < Cask
   homepage 'https://www.getcloak.com'
   version '1.2'
   sha1 '4fce763c135f571cb42daf0e4c05822ecb9fa94e'
-  link :app, 'Cloak.app'
+  link 'Cloak.app'
 end

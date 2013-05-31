@@ -3,5 +3,5 @@ class HipChat < Cask
   homepage 'https://www.hipchat.com/'
   version '0.34'
   sha1 '7472a565182444d2cb5eb16e7c9c6e34420e1d07'
-  link :app, 'HipChat.app'
+  link 'HipChat.app'
 end

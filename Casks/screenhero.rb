@@ -3,5 +3,5 @@ class Screenhero < Cask
   homepage 'http://screenhero.com'
   version 'latest'
   no_checksum
-  link :app, 'Screenhero.app'
+  link 'Screenhero.app'
 end

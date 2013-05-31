@@ -3,5 +3,5 @@ class Pencil < Cask
   homepage 'http://pencil.evolus.vn'
   version '2.0.3'
   sha1 'cb1951ab2e9e6f155af52f425371ee74a9bb1981'
-  link :app, 'Pencil.app'
+  link 'Pencil.app'
 end

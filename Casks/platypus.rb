@@ -3,5 +3,5 @@ class Platypus < Cask
   homepage 'http://sveinbjorn.org/platypus'
   version 'latest'
   no_checksum
-  link :app, 'Platypus.app'
+  link 'Platypus.app'
 end

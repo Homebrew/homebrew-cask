@@ -3,5 +3,5 @@ class Aquamacs < Cask
   homepage 'http://aquamacs.org/'
   version '3.x Nightly'
   no_checksum
-  link :app, 'Aquamacs.app'
+  link 'Aquamacs.app'
 end

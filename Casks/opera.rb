@@ -3,5 +3,5 @@ class Opera < Cask
   homepage 'http://www.opera.com/'
   version '12.15'
   sha1 '5889d940e3c61eb92ea4045909e6def50e1839ba' 
-  link :app, 'Opera.app'
+  link 'Opera.app'
 end
