@@ -3,4 +3,5 @@ class Rdio < Cask
   homepage 'http://www.rdio.com'
   version 'latest'
   no_checksum
+  link 'Rdio.app'
 end

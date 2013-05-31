@@ -3,4 +3,5 @@ class Github < Cask
   homepage 'http://mac.github.com'
   version 'latest'
   no_checksum
+  link 'GitHub.app'
 end
