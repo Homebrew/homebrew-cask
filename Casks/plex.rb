@@ -3,5 +3,5 @@ class Plex < Cask
   homepage 'http://plexapp.com'
   version '0.9.7.22.511'
   sha1 '0739fde3c20389b454d8f365a475ef5ad4d99860'
-  link 'Plex Media Server'
+  link 'Plex Media Server.app'
 end
