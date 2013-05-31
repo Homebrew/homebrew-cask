@@ -3,5 +3,5 @@ class Divvy < Cask
   homepage 'http://mizage.com/divvy/'
   version 'latest'
   no_checksum
-  link :app, 'Divvy.app'
+  link 'Divvy.app'
 end
