@@ -1,6 +1,7 @@
 class Plex < Cask
-  url 'http://plex-downloads.s3.amazonaws.com/plex-laika/0.9.5.4/Plex-0.9.5.4-973998f.zip'
+  url 'http://plex.r.worldssl.net/PlexMediaServer/0.9.7.22.511-4b5280f/PlexMediaServer-0.9.7.22.511-4b5280f-OSX.dmg'
   homepage 'http://plexapp.com'
-  version '0.9.5.4'
-  sha1 '6d544de6c56861eab05a5621ecee1777cefe49fc'
+  version '0.9.7.22.511'
+  sha1 '0739fde3c20389b454d8f365a475ef5ad4d99860'
+  link 'Plex Media Server'
 end
