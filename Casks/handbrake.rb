@@ -3,5 +3,5 @@ class Handbrake < Cask
   homepage 'http://handbrake.fr/'
   version '0.9.9'
   sha1 '9b6f0259f3378b0cc136378d7859162aa95c0eb7'
-  link :app, 'HandBrake.app'
+  link 'HandBrake.app'
 end
