@@ -1,7 +1,8 @@
 class Colloquy < Cask
-  url 'http://colloquy.info/downloads/colloquy-2.4.zip'
+  url 'http://colloquy.info/downloads/colloquy-2.4.2zip'
   homepage 'http://colloquy.info/'
-  version '2.4'
-  sha1 'e0f6d4df8a09c5b48e0d972dc732cc1203b2384c'
+  version '2.4.2'
+  sha1 '19892476af32f83685a37af16676b0098ad3bacc'
+  link 'Colloquy.app'
 end
 
