@@ -3,5 +3,5 @@ class Emacs < Cask
   homepage 'http://emacsformacosx.com/'
   version '24.3'
   sha1 '1ee96baa50806b255d2114549acf2e6710949213'
-  link :app, 'Emacs.app'
+  link 'Emacs.app'
 end
