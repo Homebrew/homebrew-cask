@@ -3,5 +3,5 @@ class Fluid < Cask
   homepage 'http://fluidapp.com/'
   version '1.6.1'
   sha1 '7de2fe4372e9d055bd2bb6f5afcefa549740a7ce'
-  link :app, 'Fluid.app'
+  link 'Fluid.app'
 end
