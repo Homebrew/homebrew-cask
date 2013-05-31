@@ -1,6 +1,7 @@
 class LimeChat < Cask
-  url 'http://cloud.github.com/downloads/psychs/limechat/LimeChat_2.33a.tbz'
+  url 'https://downloads.sourceforge.net/project/limechat/limechat/LimeChat_2.35.tbz'
   homepage 'http://limechat.net/mac/'
-  version '2.33a'
-  sha1 'c1ee6f02cda8e5d6b7ab104e461d1cc1b73b89bf'
+  version '2.35'
+  sha1 '84bde1bbc5f8b19cd53a392f459d55162d0bc579'
+  link 'LimeChat.app'
 end
