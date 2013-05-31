@@ -1,7 +1,7 @@
 class Dropbox < Cask
   url 'https://www.dropbox.com/download?plat=mac'
-  homepage 'http://www.dropbox.com/'
+  homepage 'https://www.dropbox.com/'
   version 'latest'
   no_checksum
-  link :app, 'Dropbox.app'
+  link 'Dropbox.app'
 end
