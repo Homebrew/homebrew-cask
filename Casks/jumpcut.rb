@@ -3,6 +3,6 @@ class Jumpcut < Cask
   homepage 'http://jumpcut.sourceforge.net/'
   version '0.63'
   sha1 '6ac88694f84b549f87c7c20bbf028f1d174d9e40'
-  link :app, 'Jumpcut.app'
+  link 'Jumpcut.app'
 end
 
