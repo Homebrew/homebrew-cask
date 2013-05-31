@@ -3,5 +3,5 @@ class Anki < Cask
   homepage 'http://ankisrs.net/'
   version '2.0.8'
   sha1 '764b28d7584c4efa787495ae32a781ac9a0d5172'
-  link :app, 'Anki.app'
+  link 'Anki.app'
 end
