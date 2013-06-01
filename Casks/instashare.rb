@@ -1,6 +1,7 @@
 class Instashare < Cask
-  url 'http://instashareapp.com/files/InstashareB6.zip'
+  url 'http://instashareapp.com/files/InstashareB9.zip'
   homepage 'http://instashareapp.com/'
-  version 'Beta 6'
-  sha1 '2d59eae196539ec02f2a870469c2239bf27362aa'
+  version 'Beta 9'
+  sha1 '4daa68baf2a695dd32d22aab0de5db2297b898b0'
+  link 'Instashare.app'
 end
