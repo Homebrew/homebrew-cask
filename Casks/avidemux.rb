@@ -1,6 +1,7 @@
 class Avidemux < Cask
-  url 'http://downloads.sourceforge.net/project/avidemux/avidemux/2.6.3/Avidemux_2.6.3_ml_64bits.dmg'
+  url 'http://downloads.sourceforge.net/avidemux/avidemux_2.6.4_64bits_ml.dmg'
   homepage 'http://www.avidemux.org/'
-  version '2.6.3'
-  sha1 'e6b1d24d7f4f98a9bfa7079164eb9ca51fce6899'
+  version '2.6.4'
+  sha1 'ff70d323ab8a0c72f4d733e28338bd16f8bda761'
+  link 'Avidemux2.6.app'
 end
