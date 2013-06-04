@@ -3,5 +3,5 @@ class Boxcryptor < Cask
   homepage 'https://www.boxcryptor.com/'
   version 'latest'
   no_checksum
-  install 'Install BoxCryptor'
+  install 'Install BoxCryptor.pkg'
 end
