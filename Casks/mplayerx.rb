@@ -3,4 +3,5 @@ class Mplayerx < Cask
   homepage 'http://mplayerx.org/'
   version '1.0.17'
   sha1 'e26e9c54dca2404eaab881586f04d73de7d9bdc9'
+  link 'MPlayerX.app'
 end
