@@ -3,4 +3,5 @@ class Propane < Cask
   homepage 'http://propaneapp.com/'
   version 'latest'
   no_checksum
+  link 'Propane.app'
 end
