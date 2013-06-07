@@ -3,5 +3,5 @@ class Sabnzbd < Cask
   homepage 'http://sabnzbd.org/'
   version '0.7.12'
   sha1 'e68c71c9d34cf5f7991da2fdc7eb6586fb392b3d'
-  link :app, 'SABnzbd.app'
+  link 'OS\ X\ 10.8\ \(Mountain\ Lion\)/SABnzbd.app'
 end
