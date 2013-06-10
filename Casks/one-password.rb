@@ -3,4 +3,5 @@ class OnePassword < Cask
   homepage 'https://agilebits.com/onepassword'
   version '3.8.21'
   sha1 '5ead1fcfeaca615c8b7ed3ca5c5ff681edb9ef56'
+  link '1Password.app'
 end
