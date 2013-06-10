@@ -3,4 +3,5 @@ class BootXChanger < Cask
   homepage 'http://namedfork.net/bootxchanger'
   version '2.0'
   sha1 'bc8c80913ba09c1fc2f354b954b321f261bb2e36'
+  link 'BootXChanger.app'
 end
