@@ -50,7 +50,6 @@ class Cask
       system "sudo mkdir -p #{caskroom}"
       system "sudo chown -R #{current_user}:staff #{caskroom.parent}"
     end
-    appdir.mkpath unless appdir.exist?
   end
 
   def self.path(cask_title)
