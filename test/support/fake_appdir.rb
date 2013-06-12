@@ -9,7 +9,7 @@ module FakeAppdirHooks
 
   def after_teardown
     super
-    @canned_appdir.rmtree
+    @canned_appdir.rmtree if @canned_appdir.exist?
   end
 end
 

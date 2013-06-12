@@ -15,9 +15,9 @@ class Cask::CLI
   end
 
   def self.process(arguments)
-    Cask.init
     command, *rest = *arguments
     rest = process_options(rest)
+    Cask.init
     lookup_command(command).run(*rest)
   end
 

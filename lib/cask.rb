@@ -47,8 +47,9 @@ class Cask
       ohai "We need to make Caskroom for the first time at #{caskroom}"
       ohai "We'll set permissions properly so we won't need sudo in the future"
       current_user = ENV['USER']
-      system "sudo mkdir -p #{caskroom}"
-      system "sudo chown -R #{current_user}:staff #{caskroom.parent}"
+      sudo = 'sudo' unless caskroom.parent.writable?
+      system "#{sudo} mkdir -p #{caskroom}"
+      system "#{sudo} chown -R #{current_user}:staff #{caskroom.parent}"
     end
     appdir.mkpath unless appdir.exist?
   end
