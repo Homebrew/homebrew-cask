@@ -1,7 +1,7 @@
 class Fluid < Cask
-  url 'http://fluidapp.com/dist/Fluid_1.6.1.zip'
+  url 'http://fluidapp.com/dist/Fluid_1.7.1.zip'
   homepage 'http://fluidapp.com/'
-  version '1.6.1'
-  sha1 '7de2fe4372e9d055bd2bb6f5afcefa549740a7ce'
+  version '1.7.1'
+  sha1 '052e8655cf07aeecdbdf274c179cf9faa8fbbf36'
   link 'Fluid.app'
 end
