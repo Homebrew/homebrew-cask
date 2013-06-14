@@ -1,7 +1,7 @@
 class Vlc < Cask
   homepage 'http://www.videolan.org/vlc/'
-  url 'http://downloads.sourceforge.net/project/vlc/2.0.6/macosx/vlc-2.0.6.dmg'
-  version '2.0.6'
-  sha1 '65742a2194185790925a4dcd6105ca27eb3e386a'
+  url 'http://downloads.sourceforge.net/project/vlc/2.0.7/macosx/vlc-2.0.7.dmg'
+  version '2.0.7'
+  sha1 'ea190de6108f77d5ed9eb775b872eea4ce9eee3c'
   link 'VLC.app'
 end
