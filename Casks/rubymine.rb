@@ -1,6 +1,7 @@
 class Rubymine < Cask
-  url 'http://download.jetbrains.com/ruby/RubyMine-5.4.1.dmg'
+  url 'http://download.jetbrains.com/ruby/RubyMine-5.4.2.dmg'
   homepage 'http://www.jetbrains.com/ruby/'
-  version '5.4.1'
-  sha1 '10f8e8250d040bf173859dbfa24da068795d8fb2'
+  version '5.4.2'
+  sha1 '661021d1737c856297727681a6c0d8c9d944ec19'
+  link 'RubyMine.app'
 end
