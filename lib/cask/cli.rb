@@ -18,6 +18,7 @@ class Cask::CLI
     Cask.init
     command, *rest = *arguments
     rest = process_options(rest)
+    Cask.appdir.mkpath unless Cask.appdir.exist?
     lookup_command(command).run(*rest)
   end
 
