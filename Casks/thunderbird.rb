@@ -4,4 +4,5 @@ class Thunderbird < Cask
   version '17.0.3esr'
   # http://download.cdn.mozilla.net/pub/mozilla.org/thunderbird/releases/17.0.3esr/SHA1SUMS
   sha1 '67805f04011db557f3df967e6d3afdcfdb9cd839'
+  link 'Thunderbird.app'
 end
