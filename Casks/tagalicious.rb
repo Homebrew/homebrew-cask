@@ -3,4 +3,5 @@ class Tagalicious < Cask
   homepage 'http://files.thelittleappfactory.com/ringtones/Ringtones.zip'
   version 'latest'
   no_checksum
+  link 'Tagalicious.app'
 end
