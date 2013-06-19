@@ -3,4 +3,5 @@ class Scrivener < Cask
   homepage 'http://literatureandlatte.com/scrivener.php'
   version 'latest'
   no_checksum
+  link 'Scrivener.app'
 end
