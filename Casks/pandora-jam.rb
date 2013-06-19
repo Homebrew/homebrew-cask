@@ -3,4 +3,5 @@ class PandoraJam < Cask
   homepage 'http://www.bitcartel.com/pandorajam/'
   version 'latest'
   no_checksum
+  link 'PandoraJam.app'
 end
