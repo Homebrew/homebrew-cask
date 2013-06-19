@@ -3,4 +3,5 @@ class SimpleComic < Cask
   homepage 'http://dancingtortoise.com/simplecomic/'
   version '1.7.252'
   sha1 'c8efa6078ce2691b7dddf2b3b7b808f65cead227'
+  link 'Simple Comic.app'
 end
