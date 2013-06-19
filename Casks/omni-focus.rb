@@ -1,6 +1,7 @@
 class OmniFocus < Cask
-  url 'http://downloads2.omnigroup.com/software/MacOSX/10.6/OmniFocus-1.10.4.dmg'
+  url 'http://www.omnigroup.com/download/latest/omnifocus'
   homepage 'http://www.omnigroup.com/products/omnifocus/'
-  version '1.10.4'
-  sha1 'd8067a36403e351015fd16e1569140e93d98a9de'
+  version 'latest'
+  no_checksum
+  link 'OmniFocus.app'
 end
