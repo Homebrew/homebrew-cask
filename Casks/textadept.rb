@@ -3,4 +3,5 @@ class Textadept < Cask
   homepage 'http://foicica.com/textadept/'
   version '6.4'
   sha1 '5dce4781a7ae583463d4d730d8f5d396e42e81cc'
+  link 'Textadept.app'
 end
