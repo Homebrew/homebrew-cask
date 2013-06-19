@@ -3,4 +3,5 @@ class FreeCad < Cask
   homepage 'http://sourceforge.net/projects/free-cad/'
   version '0.12'
   sha1 'f2629f5d113e7bd59b27364d9940d857b0433359'
+  link 'FreeCAD.app'
 end
