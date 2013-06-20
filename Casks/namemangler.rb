@@ -3,4 +3,5 @@ class Namemangler < Cask
   version 'latest'
   homepage 'http://manytricks.com/namemangler/'
   no_checksum
+  link 'Name Mangler.app'
 end

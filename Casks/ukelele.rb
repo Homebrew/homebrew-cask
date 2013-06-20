@@ -3,4 +3,5 @@ class Ukelele < Cask
   homepage 'http://scripts.sil.org/ukelele'
   version '2.2.4'
   sha1 'f322ccfbc5b2efb24d0d5cf902dfd0ae552322e5'
+  link 'Ukelele.app'
 end

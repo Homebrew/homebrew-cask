@@ -3,4 +3,5 @@ class Ireadfast < Cask
   homepage 'http://gengis.110mb.com/en/index.php'
   version '2.0'
   sha1 '57a5963ae3c6bd02aaf29b60987df2f1b76c956c'
+  link 'iReadFast.app'
 end

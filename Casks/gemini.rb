@@ -3,5 +3,5 @@ class Gemini < Cask
   homepage 'http://macpaw.com/gemini'
   version '1.4'
   sha1 'ecb79224c0c89841b6b130fe35793bf2c931aa74'
-  link 'MacPaw\ Gemini.app'
+  link 'MacPaw Gemini.app'
 end

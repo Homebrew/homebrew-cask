@@ -3,4 +3,5 @@ class KeyboardMaestro < Cask
   homepage 'http://www.keyboardmaestro.com/'
   version 'latest'
   no_checksum
+  link 'Keyboard Maestro.app'
 end

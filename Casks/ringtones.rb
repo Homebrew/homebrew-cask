@@ -3,4 +3,5 @@ class Ringtones < Cask
   version 'latest'
   homepage 'http://thelittleappfactory.com/ringtones/'
   no_checksum
+  link 'Ringtones.app'
 end

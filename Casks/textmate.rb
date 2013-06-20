@@ -1,4 +1,4 @@
-class Textmate2 < Cask
+class Textmate < Cask
   url 'http://api.textmate.org/downloads/beta'
   homepage 'http://macromates.com/'
   version 'latest'
