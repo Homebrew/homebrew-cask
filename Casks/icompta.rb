@@ -3,5 +3,5 @@ class Icompta < Cask
   homepage 'http://www.lyricapps.fr/iCompta/'
   version 'latest'
   no_checksum
-  link 'iCompta'
+  link 'iCompta.app'
 end
