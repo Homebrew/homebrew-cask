@@ -1,5 +1,5 @@
 class Renamer < Cask
-  url 'http://creativebe.com/download/renamer'
+  url 'http://creativebe.com/download/renamer/'
   homepage 'http://renamer.com'
   version 'latest'
   no_checksum
