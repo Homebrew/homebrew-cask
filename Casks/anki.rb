@@ -1,7 +1,7 @@
 class Anki < Cask
-  url 'https://anki.googlecode.com/files/anki-2.0.9.dmg'
+  url 'https://anki.googlecode.com/files/anki-2.0.11.dmg'
   homepage 'http://ankisrs.net/'
-  version '2.0.9'
-  sha1 'f04ae632eb9d1374098e2c5533e4b5ce2a2feab6'
+  version '2.0.11'
+  sha1 '1d5b3618499228df4fa7f4c5d8e35931981dff35'
   link 'Anki.app'
 end
