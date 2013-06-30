@@ -1,4 +1,4 @@
-class KeyRemap4MacBook < Cask
+class Keyremap4macbook < Cask
   url 'https://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-8.3.0.dmg'
   homepage 'https://pqrs.org/macosx/keyremap4macbook/'
   version '8.3.0'
