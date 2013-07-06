@@ -68,6 +68,7 @@ describe Cask::Audit do
         audit.errors.must_include 'homepage is required'
       end
     end
+
     describe "preferred download URL formats" do
       it "adds a warning if SourceForge doesn't use download subdomain" do
         warning_msg = 'SourceForge URL format incorrect. See https://github.com/phinze/homebrew-cask/pull/225#issuecomment-16536889 for details'
@@ -79,6 +80,18 @@ describe Cask::Audit do
         audit = Cask::Audit.new(CaskSourceForgeCorrectURLFormat.new)
         audit.run!
         audit.warnings.wont_include warning_msg
+      end
+    end
+
+    describe "audit of downloads" do
+      it "creates an error if the download fails" do
+        error_message = "Download Failed"
+        download = mock()
+        download.expects(:perform).raises(StandardError.new(error_message))
+
+        audit = Cask::Audit.new(TestHelper.test_cask)
+        audit.run!(download)
+        audit.errors.first.must_match /#{error_message}/
       end
     end
   end

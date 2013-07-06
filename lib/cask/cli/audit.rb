@@ -1,12 +1,40 @@
 class Cask::CLI::Audit
+  def self.help
+    "verifies installability of casks"
+  end
+  
   def self.run(*args)
-    casks_to_audit = args.empty? ? Cask.all : args.map { |arg| Cask.load(arg) }
-    casks_to_audit.each do |cask|
-      Cask::Auditor.audit(cask)
+    new(args, Cask::Auditor).run 
+  end
+
+  def initialize(args, auditor)
+    @args = args
+    @auditor = auditor
+  end
+
+  def run
+    casks_to_audit.each { |cask| audit(cask) }
+  end
+
+  def audit(cask) 
+      @auditor.audit(cask, :audit_download => audit_download?)
+  end
+
+  def audit_download?
+    @args.include?('--download')
+  end
+
+  def casks_to_audit
+    if cask_list.empty?
+      Cask.all
+    else
+      cask_list.map { |arg| Cask.load(arg) }
     end
   end
 
-  def self.help
-    "verifies installability of casks"
+  def cask_list
+    args = @args.dup
+    args.delete('--download')
+    args
   end
 end

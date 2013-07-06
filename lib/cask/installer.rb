@@ -1,4 +1,5 @@
 require 'digest'
+require 'cask/download'
 
 class Cask::Installer
   class << self
@@ -7,12 +8,8 @@ class Cask::Installer
         raise CaskAlreadyInstalledError.new(cask)
       end
 
-      require 'formula_support'
-      software_spec = SoftwareSpec.new(cask.url.to_s, cask.version)
-      downloader = CurlDownloadStrategy.new(cask.title, software_spec)
-      downloaded_path = downloader.fetch
-
-      _check_sums(downloaded_path, cask.sums) unless cask.sums === 0
+      download = Cask::Download.new(cask)
+      downloaded_path = download.perform
 
       FileUtils.mkdir_p cask.destination_path
 
@@ -29,18 +26,6 @@ class Cask::Installer
 
     def uninstall(cask)
       cask.destination_path.rmtree
-    end
-
-    def _check_sums(path, sums)
-      has_sum = false
-      sums.each do |sum|
-        unless sum.empty?
-          computed = Checksum.new(sum.hash_type, Digest.const_get(sum.hash_type.to_s.upcase).file(path).hexdigest)
-          raise ChecksumMismatchError.new(sum, computed) unless sum == computed
-          has_sum = true
-        end
-      end
-      raise ChecksumMissingError.new("Checksum required. SHA1: '#{Digest::SHA1.file(path).hexdigest}'") unless has_sum
     end
 
     def _with_extracted_mountpoints(path)
