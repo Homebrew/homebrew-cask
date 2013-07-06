@@ -23,6 +23,11 @@ HOMEBREW_CACHE.mkpath
 require 'minitest/autorun'
 require 'minitest-colorize'
 
+# Force mocha to patch MiniTest since we have both loaded thanks to homebrew's testing_env
+require 'mocha/api'
+require 'mocha/integration/mini_test'
+Mocha::Integration::MiniTest.activate
+
 # our baby
 require 'cask'
 

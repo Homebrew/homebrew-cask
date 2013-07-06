@@ -1,7 +1,13 @@
 class Cask::Auditor
-  def self.audit(cask)
+  def self.audit(cask, options = {})
     audit = Cask::Audit.new(cask)
-    audit.run!
+
+    if options.fetch(:audit_download, false)
+      audit.run!(Cask::Download.new(cask))
+    else
+      audit.run!
+    end
+
     puts audit.summary
   end
 end
