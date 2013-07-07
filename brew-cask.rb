@@ -10,7 +10,7 @@ class BrewCask < Formula
   skip_clean 'bin'
 
   def install
-    prefix.install_p 'lib', 'rubylib'
+    prefix.install 'lib' => 'rubylib'
     inreplace 'bin/brew-cask.rb', '/lib', '/rubylib'
 
     prefix.install 'Casks', 'bin'
