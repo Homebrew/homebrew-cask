@@ -83,7 +83,11 @@ Did it install? If something went wrong, `brew cask uninstall my-new-cask` and
 edit your Cask to fix it.
 
 If everything looks good, you'll also want to make sure you cask passes audit
-with `brew cask audit my-new-cask`
+with 
+
+```bash
+$brew cask audit my-new-cask --download
+```
 
 If your application and homebrew-cask do not work well together, feel free to
 [file an issue](https://github.com/phinze/homebrew-cask/issues) after checking
