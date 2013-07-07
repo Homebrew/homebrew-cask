@@ -3,5 +3,5 @@ class Charles < Cask
   homepage 'http://www.charlesproxy.com/'
   version '3.7'
   sha1 'ed099ef07b5f5e3eacd8299e9bea7f9a3bc5eaa1'
-  link '3.7/Charles.app'
+  link 'Charles.app'
 end
