@@ -31,3 +31,10 @@ And there we have it.  Google Chrome installed with a few quick commands; no cli
  * Find basic documentation on using `homebrew-cask` in [USAGE.md](https://github.com/phinze/homebrew-cask/blob/master/USAGE.md)
  * Want to contribute? Awesome! See [CONTRIBUTING.md](https://github.com/phinze/homebrew-cask/blob/master/CONTRIBUTING.md)
  * More project related details and discussion available in [FAQ.md](https://github.com/phinze/homebrew-cask/blob/master/FAQ.md)
+
+## Questions? Wanna chat?
+
+We're really rather friendly! Here are the best places to talk about the project:
+
+ * Start an [issue on GitHub](https://github.com/phinze/homebrew-cask/issues/new)
+ * Join us on IRC, we're at `#homebrew-cask` on Freenode
