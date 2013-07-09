@@ -5,4 +5,3 @@ class Chocolat < Cask
   no_checksum
   link 'Chocolat.app'
 end
-

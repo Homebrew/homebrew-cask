@@ -5,4 +5,3 @@ class Changes < Cask
   no_checksum
   link 'Changes.app'
 end
-

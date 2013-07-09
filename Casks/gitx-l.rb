@@ -5,4 +5,3 @@ class GitxL < Cask
   sha1 '86517311dcdc7348e308b542e3d5aad1a304f94f'
   link 'GitX.app'
 end
-
