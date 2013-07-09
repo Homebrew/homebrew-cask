@@ -1,7 +1,7 @@
 class Codekit < Cask
-  url 'http://incident57.com/codekit/files/codekit-8300.zip'
+  url 'http://incident57.com/codekit/files/codekit-8316.zip'
   homepage 'http://incident57.com/codekit/'
-  version '1.6.2 (8300)'
-  sha1 '842ba4f5d6ecf596abee1f80e3672b9771e2be22'
+  version '1.7 (8316)'
+  sha1 'f1b5250149390da62e893e53841a0cdb7cc5f902'
   link 'CodeKit.app'
 end
