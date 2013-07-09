@@ -1,7 +1,7 @@
 class Totals < Cask
-  url 'http://www.kedisoft.com/dl/totals/Totals-2.2.5.dmg'
+  url 'http://www.kedisoft.com/dl/totals/Totals-2.2.6.dmg'
   homepage 'http://www.kedisoft.com/totals/'
-  version '2.2.5'
-  sha1 'fc20ca2cec5515772ae16c718063f6672a0fe988'
+  version '2.2.6'
+  sha1 '85fe222392cd3d3a065f2d9d3b659c58170d59bb'
   link 'Totals.app'
 end
