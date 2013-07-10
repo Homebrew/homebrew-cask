@@ -1,7 +1,7 @@
 class Uncrustifyx < Cask
-  url 'http://www.cactuslab.com/uncrustifyx/UncrustifyX-0.4.2.zip'
+  url 'http://www.cactuslab.com/uncrustifyx/UncrustifyX-0.4.3.zip'
   homepage 'https://github.com/ryanmaxwell/UncrustifyX'
-  version '0.4.2'
-  sha1 'f957db63b58cf73aa5580bb4df86854442309422'
+  version '0.4.3'
+  sha1 '10dea3d913dfc1a0c39404e244d0f0225a2ba880'
   link "UncrustifyX.app"
 end
