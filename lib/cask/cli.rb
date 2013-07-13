@@ -81,7 +81,7 @@ class Cask::CLI
       puts <<-PURPOSE.undent
       {{ brew-cask }}
         brew-cask provides a friendly homebrew-style CLI workflow for the
-        administration Mac applications distributed as binaries
+        administration of Mac applications distributed as binaries
       PURPOSE
     end
 
