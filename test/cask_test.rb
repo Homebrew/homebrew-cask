@@ -7,6 +7,12 @@ describe "Cask" do
       c.must_be_kind_of(Cask)
       c.must_be_instance_of(Adium)
     end
+    
+    it "returns an instance of the cask from a specific file location" do
+      c = Cask.load("./Casks/dia.rb")
+      c.must_be_kind_of(Cask)
+      c.must_be_instance_of(Dia)
+    end
 
     it "raises an error when attempting to load a cask that doesn't exist" do
       lambda {
