@@ -1,3 +1,6 @@
 language: objective-c
 install: bundle
 script: bundle exec rake test
+notifications:
+  irc:
+    - "chat.freenode.net#homebrew-cask"
