@@ -3,4 +3,6 @@ install: bundle
 script: bundle exec rake test
 notifications:
   irc:
-    - "chat.freenode.net#homebrew-cask"
+    channels:
+      - "chat.freenode.net#homebrew-cask"
+    use_notice: true
