@@ -9,6 +9,13 @@ describe "Cask" do
     end
     
     it "returns an instance of the cask from a specific file location" do
+      location = File.expand_path('./Casks/dia.rb')
+      c = Cask.load(location)
+      c.must_be_kind_of(Cask)
+      c.must_be_instance_of(Dia)
+    end
+
+    it "returns an instance of the cask from a relative file location" do
       c = Cask.load("./Casks/dia.rb")
       c.must_be_kind_of(Cask)
       c.must_be_instance_of(Dia)
