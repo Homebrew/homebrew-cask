@@ -42,7 +42,7 @@ class Cask
   end
 
   def self._file_source?(cask_title)
-    %r{(^file://|^\./|\.rb$)} =~ cask_title
+    File.file?(cask_title)
   end
 
   def self.init
