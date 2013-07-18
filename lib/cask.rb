@@ -41,6 +41,10 @@ class Cask
     @default_tap = _tap
   end
 
+  def self._file_source?(cask_title)
+    File.file?(cask_title)
+  end
+
   def self.init
     HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?
     unless caskroom.exist?
@@ -69,13 +73,43 @@ class Cask
     end
   end
 
-  def self.load(cask_title)
-    cask_path = path(cask_title)
-    unless cask_path.exist?
-      raise CaskUnavailableError, cask_title
+  def self._load_from_tap(cask_title)
+    if cask_title.include?('/')
+      cask_with_tap = cask_title
+    else
+      cask_with_tap = all_titles.grep(/#{cask_title}$/).first
     end
-    require cask_path
-    const_get(cask_title.split('/').last.split('-').map(&:capitalize).join).new
+
+    if cask_with_tap
+      tap, cask = cask_with_tap.split('/')
+      source = tapspath.join(tap, 'Casks', "#{cask}.rb")
+    else
+      source = tapspath.join(default_tap, 'Casks', "#{cask_title}.rb")
+    end
+    raise CaskUnavailableError, cask_title unless source.exist?
+    _load_from_file(source)
+  end
+
+  def self._load_from_path(cask_title)
+    _load_from_file(Pathname.new(File::expand_path(cask_title)))
+  end
+
+  def self._load_from_file(source)
+    raise CaskUnavailableError, source unless source.exist?
+    require source
+    const_get(cask_class_name(source)).new
+  end
+
+  def self.load(cask_title)
+    if _file_source?(cask_title)
+      _load_from_path(cask_title)
+    else
+      _load_from_tap(cask_title)
+    end
+  end
+
+  def self.cask_class_name(pathname)
+    pathname.basename.to_s.sub(/\.rb/, '').split('-').map(&:capitalize).join
   end
 
   def self.title
