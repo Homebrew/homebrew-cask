@@ -20,7 +20,7 @@ class Cask::Installer
       ohai "Success! #{cask} installed to #{cask.destination_path}"
 
       unless cask.caveats.empty?
-        ohai 'Caveats', cask.caveats 
+        ohai 'Caveats', cask.caveats
       end
     end
 
@@ -50,7 +50,7 @@ class Cask::Installer
       elsif _zip?(path)
         destdir = "/tmp/brewcask_#{@title}_extracted"
         `mkdir -p '#{destdir}'`
-        `unzip -d '#{destdir}' '#{path}' -x '__MACOSX/*'`
+        `unzip -qq -d '#{destdir}' '#{path}' -x '__MACOSX/*'`
         begin
           yield destdir
         ensure
