@@ -1,0 +1,38 @@
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
+
+body {
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #46351F;
+  background-color: #D2C3A8;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 70px;
+  font-family: 'Vollkorn', serif;
+}
+
+code, pre {
+  font-family: courier;
+}
+
+pre {
+  padding: 5px 10px;
+  background: ghostwhite;
+  border: 1px solid #DDD;
+  overflow: auto;
+}
+
+a {
+  color: #46351F;
+}
