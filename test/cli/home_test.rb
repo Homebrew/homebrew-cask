@@ -34,7 +34,7 @@ describe Cask::CLI::Home do
     Cask::CLI::Home.run('alfred', 'adium')
     Cask::CLI::Home.system_commands.must_equal [
       ['open', 'http://www.alfredapp.com/'],
-      ['open', 'http://www.adium.im/']
+      ['open', 'https://www.adium.im/']
     ]
   end
 end
