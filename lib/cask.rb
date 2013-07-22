@@ -133,7 +133,7 @@ class Cask
     linkables.map { |app| Pathname.glob("#{destination_path}/**/#{app}").first }
   end
 
-  def installable_pkgs
+  def installers
     installables.map { |pkg| Pathname.glob("#{destination_path}/**/#{pkg}").first }
   end
 

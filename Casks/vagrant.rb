@@ -4,4 +4,5 @@ class Vagrant < Cask
   version '1.2.4'
   sha1 'f3a9e3503690755eec7901cd72e73dab4c133a89'
   install 'Vagrant.pkg'
+  uninstall :script => 'uninstall.tool', :input => %w[Yes]
 end

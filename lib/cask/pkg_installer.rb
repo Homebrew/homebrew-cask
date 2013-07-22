@@ -5,11 +5,39 @@ class Cask::PkgInstaller
   end
 
   def install
-    @cask.installable_pkgs.each do |pkg|
+    @cask.installers.each do |installer|
       ohai "Running installer for #{@cask}; your password may be necessary."
-      output = @command.run("sudo installer -pkg '#{pkg}' -target /")
-      output.each do |line|
-        ohai line
+      @command.run("installer", {
+        :sudo => true,
+        :args => %W[-pkg #{installer} -target /]
+      })
+    end
+  end
+
+  def uninstall
+    @cask.uninstallables.each do |uninstall_options|
+      ohai "Running uninstall process for #{@cask}; your password may be necessary."
+      if uninstall_options.key? :script
+        @command.run(@cask.destination_path.join(uninstall_options[:script]), uninstall_options.merge(:sudo => true))
+      end
+
+      if uninstall_options.key? :pkgutil
+        pkgs = Cask::Pkg.all_matching(uninstall_options[:pkgutil], @command)
+        pkgs.each(&:uninstall)
+      end
+
+      if uninstall_options.key? :launchctl
+        [*uninstall_options[:launchctl]].each do |service|
+          ohai "Removing launchctl service #{service}"
+          @command.run('launchctl', :args => ['remove', service], :sudo => true)
+        end
+      end
+
+      if uninstall_options.key? :files
+        uninstall_options[:files].each do |file|
+          ohai "Removing file #{file}"
+          @command.run('rm', :args => [file], :sudo => true)
+        end
       end
     end
   end
