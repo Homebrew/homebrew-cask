@@ -3,5 +3,6 @@ class OpenOffice < Cask
   homepage 'http://www.openoffice.org/'
   version '3.4.1'
   sha1 '63623a1cc77bfc3c0fe207c317ecd087eded3016'
+  link 'OpenOffice.org.app'
 end
 
