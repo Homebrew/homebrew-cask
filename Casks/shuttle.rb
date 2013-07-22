@@ -1,7 +1,7 @@
 class Shuttle < Cask
-  url 'https://github.com/fitztrev/shuttle/releases/download/v1.0.1/Shuttle.dmg'
+  url 'https://github.com/fitztrev/shuttle/releases/download/v1.1.1/Shuttle.dmg'
   homepage 'http://fitztrev.github.io/shuttle/'
-  version '1.0.1'
-  sha1 'a3647e2f20a67f9f0491d17bad420539ebcf96d2'
+  version '1.1.1'
+  sha1 '0abd1b042b46d996e5643c21a658ff10877417e6'
   link 'Shuttle.app'
 end
