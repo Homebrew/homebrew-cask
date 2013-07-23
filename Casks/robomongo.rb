@@ -3,5 +3,5 @@ class Robomongo < Cask
   homepage 'http://robomongo.org'
   version '0.7.1'
   sha1 'f6bc6a2b8f044d11caa4980b98dddb9dcf36eb43'
-  link :app, 'Robomongo.app'
+  link 'Robomongo.app'
 end
