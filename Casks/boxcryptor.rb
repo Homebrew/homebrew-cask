@@ -5,4 +5,5 @@ class Boxcryptor < Cask
   no_checksum
   link ''
   uninstall 'Uninstall.command'
+  install 'Install BoxCryptor.pkg'
 end
