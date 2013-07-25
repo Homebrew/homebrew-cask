@@ -5,4 +5,3 @@ class Colloquy < Cask
   sha1 '19892476af32f83685a37af16676b0098ad3bacc'
   link 'Colloquy.app'
 end
-

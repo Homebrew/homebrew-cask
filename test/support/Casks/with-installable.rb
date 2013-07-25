@@ -2,6 +2,7 @@ class WithInstallable < TestCask
   url TestHelper.local_binary('MyFancyPkg.zip')
   homepage 'http://example.com/fancy-pkg'
   version '1.2.3'
-  sha1 'd3540d05a48518cc808ad854a8ab64da94b635b7'
+  sha1 '8588bd8175a54b8e0a1310cc18e6567d520ab7c4'
   install 'Fancy.pkg'
+  uninstall :script => 'MyFancyPkg/FancyUninstaller.tool', :args => %w[--please]
 end

@@ -3,4 +3,5 @@ class NotationalVelocity < Cask
   homepage 'http://notational.net'
   version 'latest'
   no_checksum
+  link 'Notational Velocity.app'
 end

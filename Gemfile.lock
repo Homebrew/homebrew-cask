@@ -5,7 +5,7 @@ GEM
     minitest (4.7.0)
     minitest-colorize (0.0.5)
       minitest (>= 2.0)
-    mocha (0.13.3)
+    mocha (0.14.0)
       metaclass (~> 0.0.1)
     rake (10.0.4)
 
@@ -15,5 +15,5 @@ PLATFORMS
 DEPENDENCIES
   minitest (= 4.7.0)
   minitest-colorize
-  mocha (= 0.13.3)
+  mocha (= 0.14.0)
   rake

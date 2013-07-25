@@ -1,3 +1,11 @@
 language: objective-c
 install: bundle
 script: bundle exec rake test
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#homebrew-cask"
+    template:
+      - "%{build_number}: %{branch}@%{commit} %{author} -> %{message} %{build_url}"
+    use_notice: true
+    skip_join: true

@@ -1,6 +1,7 @@
 class NvAlt < Cask
-  url 'http://abyss.designheresy.com/nvalt/files/nvalt2.2b105.zip'
+  url 'http://abyss.designheresy.com/nvaltb/nvalt2.2b111.zip'
   homepage 'http://brettterpstra.com/project/nvalt/'
-  version '2.2b105'
-  sha1 '2b70957942c233240338eaf679ebbd5d6089f5d3'
+  version '2.2b111'
+  sha1 '957703bf63b52275d30bc70786cfcff086d0903f'
+  link 'nvALT.app'
 end

@@ -2,15 +2,15 @@ require 'formula'
 
 class BrewCask < Formula
   homepage 'https://github.com/phinze/homebrew-cask/'
-  url 'https://github.com/phinze/homebrew-cask.git', :tag => 'v0.14.0'
-  version '0.14.0'
+  url 'https://github.com/phinze/homebrew-cask.git', :tag => 'v0.15.0'
+  version '0.15.0'
 
   head 'https://github.com/phinze/homebrew-cask.git', :branch => 'master'
 
   skip_clean 'bin'
 
   def install
-    prefix.install_p 'lib', 'rubylib'
+    prefix.install 'lib' => 'rubylib'
     inreplace 'bin/brew-cask.rb', '/lib', '/rubylib'
 
     prefix.install 'Casks', 'bin'

@@ -17,7 +17,8 @@ class Cask::FakeSystemCommand
     @system_calls = Hash.new(0)
   end
 
-  def self.run(command)
+  def self.run(command, options={})
+    command = Cask::SystemCommand._process_options(command, options)
     @responses ||= {}
     @system_calls ||= Hash.new(0)
     unless @responses.key?(command)

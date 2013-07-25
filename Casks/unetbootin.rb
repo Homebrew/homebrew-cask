@@ -1,6 +1,7 @@
 class Unetbootin < Cask
-  url 'http://downloads.sourceforge.net/sourceforge/unetbootin/unetbootin-mac-583.zip'
   homepage 'http://unetbootin.sourceforge.net/'
-  version '583'
-  sha1 'afdf677dc7fa6668a4772c25ce279c91900df86a'
+  url 'http://downloads.sourceforge.net/sourceforge/unetbootin/unetbootin-mac-585.zip'
+  version '585'
+  sha1 '18050ffa1c510fbf85de485c0d5190e9581cc6ce'
+  link 'unetbootin.app'
 end

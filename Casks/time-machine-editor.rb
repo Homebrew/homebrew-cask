@@ -3,4 +3,5 @@ class TimeMachineEditor < Cask
   homepage 'http://timesoftware.free.fr/timemachineeditor/'
   version 'latest'
   no_checksum
+  link 'TimeMachineEditor.app'
 end

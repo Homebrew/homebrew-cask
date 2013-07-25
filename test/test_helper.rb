@@ -23,6 +23,11 @@ HOMEBREW_CACHE.mkpath
 require 'minitest/autorun'
 require 'minitest-colorize'
 
+# Force mocha to patch MiniTest since we have both loaded thanks to homebrew's testing_env
+require 'mocha/api'
+require 'mocha/integration/mini_test'
+Mocha::Integration::MiniTest.activate
+
 # our baby
 require 'cask'
 
@@ -73,6 +78,7 @@ require 'support/fake_fetcher'
 require 'support/fake_appdir'
 require 'support/fake_system_command'
 require 'support/cleanup'
+require 'tmpdir'
 
 # pretend like we installed the cask tap
 project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))

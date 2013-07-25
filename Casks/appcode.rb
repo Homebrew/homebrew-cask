@@ -1,7 +1,7 @@
 class Appcode < Cask
-  url 'http://download.jetbrains.com/objc/AppCode-2.0.3.dmg'
+  url 'http://download.jetbrains.com/objc/AppCode-2.1.2.dmg'
   homepage 'http://www.jetbrains.com/objc/'
-  version '2.0.3'
-  sha1 '5564abb9bebcff335e02cd227130585873a21c12'
+  version '2.1.2'
+  sha1 '23985daf9ee814cbc3f58f300c9105a573a5b130'
   link 'AppCode.app'
 end

@@ -3,4 +3,5 @@ class Irip < Cask
   version 'latest'
   homepage 'http://thelittleappfactory.com/irip/'
   no_checksum
+  link 'iRip.app'
 end

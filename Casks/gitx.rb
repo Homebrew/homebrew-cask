@@ -3,4 +3,5 @@ class Gitx < Cask
   homepage 'http://gitx.frim.nl/'
   version 'latest'
   no_checksum
+  link 'GitX.app'
 end

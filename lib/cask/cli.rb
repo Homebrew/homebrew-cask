@@ -15,9 +15,9 @@ class Cask::CLI
   end
 
   def self.process(arguments)
-    Cask.init
     command, *rest = *arguments
     rest = process_options(rest)
+    Cask.init
     lookup_command(command).run(*rest)
   end
 
@@ -81,7 +81,7 @@ class Cask::CLI
       puts <<-PURPOSE.undent
       {{ brew-cask }}
         brew-cask provides a friendly homebrew-style CLI workflow for the
-        administration Mac applications distributed as binaries
+        administration of Mac applications distributed as binaries
       PURPOSE
     end
 
