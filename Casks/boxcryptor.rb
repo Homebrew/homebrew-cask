@@ -4,4 +4,5 @@ class Boxcryptor < Cask
   version 'latest'
   no_checksum
   link ''
+  uninstall 'Uninstall.command'
 end
