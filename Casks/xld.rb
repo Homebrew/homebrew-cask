@@ -1,7 +1,7 @@
 class Xld < Cask
-  url 'http://xld.googlecode.com/files/xld-20130602.dmg'
+  url 'http://xld.googlecode.com/files/xld-20130720.dmg'
   homepage 'http://tmkk.undo.jp/xld/index_e.html'
-  version '2013-06-02'
-  sha1 'e98cb8b361384904e8a8eead180ab8c422f4a9f6'
+  version '2013-07-20'
+  sha1 '60360d4bb454a9a7051f6a61b8f853689b6e9c64'
   link 'XLD.app'
 end
