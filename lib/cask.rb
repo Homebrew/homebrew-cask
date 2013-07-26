@@ -43,12 +43,12 @@ class Cask
     @default_tap = _tap
   end
 
-  def self._file_source?(cask_title)
-    File.file?(cask_title)
+  def self._file_source?(requested_cask)
+    File.file?(requested_cask)
   end
 
-  def self._uri_source?(cask_title)
-    !!URI.parse(cask_title).scheme
+  def self._uri_source?(requested_cask)
+    !!URI.parse(requested_cask).scheme
   rescue URI::InvalidURIError
     false
   end
