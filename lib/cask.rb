@@ -1,5 +1,7 @@
 require 'uri'
 
+HOMEBREW_CACHE_CASKS = HOMEBREW_CACHE.join('Casks')
+
 class Cask; end
 class Cask::CLI; end
 
@@ -43,6 +45,12 @@ class Cask
 
   def self._file_source?(cask_title)
     File.file?(cask_title)
+  end
+
+  def self._uri_source?(cask_title)
+    !!URI.parse(cask_title).scheme
+  rescue URI::InvalidURIError
+    false
   end
 
   def self.init
@@ -90,8 +98,17 @@ class Cask
     _load_from_file(source)
   end
 
-  def self._load_from_path(cask_title)
-    _load_from_file(Pathname.new(File::expand_path(cask_title)))
+  def self._load_from_path(cask_path)
+    _load_from_file(Pathname.new(File::expand_path(cask_path)))
+  end
+
+  def self._load_from_uri(url)
+    HOMEBREW_CACHE_CASKS.mkpath
+    path = HOMEBREW_CACHE_CASKS.join(File.basename(url))
+    curl(url, '-o', path.to_s)
+    _load_from_path(path.to_s)
+  rescue ErrorDuringExecution
+    raise CaskUnavailableError, url
   end
 
   def self._load_from_file(source)
@@ -100,11 +117,13 @@ class Cask
     const_get(cask_class_name(source)).new
   end
 
-  def self.load(cask_title)
-    if _file_source?(cask_title)
-      _load_from_path(cask_title)
+  def self.load(requested_cask)
+    if _uri_source?(requested_cask)
+      _load_from_uri(requested_cask)
+    elsif _file_source?(requested_cask)
+      _load_from_path(requested_cask)
     else
-      _load_from_tap(cask_title)
+      _load_from_tap(requested_cask)
     end
   end
 
