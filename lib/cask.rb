@@ -48,9 +48,7 @@ class Cask
   end
 
   def self._uri_source?(requested_cask)
-    !!URI.parse(requested_cask).scheme
-  rescue URI::InvalidURIError
-    false
+    !!(requested_cask =~ URI.regexp)
   end
 
   def self.init
