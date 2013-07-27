@@ -16,7 +16,7 @@ describe "Cask" do
     end
 
     it "returns an instance of the cask from a url" do
-      url = "file:" + File.expand_path('./Casks/dia.rb')
+      url = "file://" + File.expand_path('./Casks/dia.rb')
       c = Cask.load(url)
       c.must_be_kind_of(Cask)
       c.must_be_instance_of(Dia)
