@@ -1,8 +1,8 @@
 class OpenOffice < Cask
-  url 'http://downloads.sourceforge.net/sourceforge/openofficeorg.mirror/Apache_OpenOffice_incubating_3.4.1_MacOS_x86_install_en-US.dmg'
+  url 'http://downloads.sourceforge.net/project/openofficeorg.mirror/4.0.0/binaries/en-US/Apache_OpenOffice_4.0.0_MacOS_x86_install_en-US.dmg'
   homepage 'http://www.openoffice.org/'
-  version '3.4.1'
-  sha1 '63623a1cc77bfc3c0fe207c317ecd087eded3016'
-  link 'OpenOffice.org.app'
+  version '4.0.0'
+  sha1 '0184893223701aead7d627316cb2dceb92dd31cc'
+  link 'OpenOffice.app'
 end
 
