@@ -1,7 +1,7 @@
 class Brackets < Cask
-  url 'http://download.brackets.io/file.cfm?platform=OSX&build=26'
+  url 'http://download.brackets.io/file.cfm?platform=OSX&build=27'
   homepage 'http://brackets.io'
-  version 'sprint-26'
-  sha1 'e4863ba9d0d65cfe3cf823295feab22d667d35d6'
-  link 'Brackets Sprint 26.app'
+  version 'sprint-27'
+  sha1 'fa33599fd00100bf08224595a3250bf53a56246e'
+  link 'Brackets Sprint 27.app'
 end
