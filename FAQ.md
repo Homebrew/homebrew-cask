@@ -5,11 +5,13 @@
 A `Cask` is like a `Formula` in Homebrew except it describes how to download
 and install a binary application.
 
-Casks currently have three fields:
+Casks currently have five fields:
 
  * __url__: (required) points to binary distribution of the application
- * __version__: (required) describes the version of the application available at the URL
  * __homepage__: the same as Homebrew's - it doesn't do anything yet, but will be wired in
+ * __version__: (required) describes the version of the application available at the URL
+ * __sha1__: (required unless using no_checksum) SHA-1 Checksum of the file
+ * __link__: (required) indicates which file(s) should be linked into the Applications folder on installation
 
 ## What's the status of this project?  Where's it headed?
 
@@ -25,20 +27,17 @@ install Mac apps.
 
 ## Can I contribute?
 
-__Yes, yes, yes!__ Please fork/pull request to update Casks, to add features,
-to clean up documentation—anything at all that you can do to help out is very
-welcome.
+__Yes, yes, yes!__ Please fork/pull request to update Casks, add features and 
+clean up documentation! Anything you can do to help out is very welcome.
 
-It's also [__pretty darn easy__ to create Casks (see CONTRIBUTING.md)][c1], so
+It's also [__pretty darn easy__ to create Casks](CONTRIBUTING.md), so
 please build more of them for the software you use. And if `brew-cask` doesn't
-support the packaging format of your software, please [open an issue][c2]
+support the packaging format of your software, please [open an issue](https://github.com/phinze/homebrew-cask/issues)
 and we can get it working together.
 
 The whole idea is to build a _community-maintained_ list of easily installable
 packages, so the community part is important! Every little bit counts.
 
-[c1]: https://github.com/phinze/homebrew-cask/blob/master/CONTRIBUTING.md
-[c2]: https://github.com/phinze/homebrew-cask/issues
 
 ## Why use Homebrew's Cellar? Why not just manage apps directly in Applications?
 
