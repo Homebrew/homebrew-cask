@@ -1,4 +1,4 @@
-class Goagentx < Cask
+class GoAgentX < Cask
   url 'http://goagentx.googlecode.com/files/GoAgentX-v1.3.29.dmg'
   homepage 'https://github.com/ohdarling/GoAgentX'
   version '1.3.29'
