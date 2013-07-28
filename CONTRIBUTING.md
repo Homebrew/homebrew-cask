@@ -19,16 +19,31 @@ git remote add $github_user https://github.com/$github_user/homebrew-cask
 
 ## Adding a Cask
 
-Making a Cask is easy: a Cask is a Ruby file that is only eight lines long.
+Making a Cask is easy: a Cask is a Ruby file that is between seven and eight lines long.
+There are two forms of Casks, those with `.pkgs` and those with `.app`. 
+
 Here's a Cask for Alfred.app as an example:
 
 ```ruby
 class Alfred < Cask
-  url 'http://cachefly.alfredapp.com/alfred_1.3.2_265.zip'
+  url 'http://cachefly.alfredapp.com/Alfred_2.0.6_203.zip'
   homepage 'http://www.alfredapp.com/'
-  version '1.3.2_265'
-  sha1 'e10f15a0ae758cae2a22557f14890fa5989260ce'
-  link 'Alfred.app'
+  version '2.0.6_203'
+  sha1 'fcbcc1c0076bbd118c825e0e3253246244e65396'
+  link 'Alfred 2.app', 'Alfred Preferences.app'
+end
+```
+
+Here is another Cask for Vagrant.pkg
+
+```ruby
+class Vagrant < Cask
+  url 'http://files.vagrantup.com/packages/22b76517d6ccd4ef232a4b4ecbaa276aff8037b8/Vagrant-1.2.6.dmg'
+  homepage 'http://www.vagrantup.com'
+  version '1.2.6'
+  sha1 '5f3e1bc5761b41e476bc8035f5ba03d42c0e12f0'
+  install 'Vagrant.pkg'
+  uninstall :script => 'uninstall.tool', :input => %w[Yes]
 end
 ```
 
@@ -61,7 +76,9 @@ Fill in the following fields for your Cask:
 | `homepage` | application homepage;used for the `brew cask home` command
 | `version` | application version; determines the directory structure in the Caskroom
 | `sha1` | SHA-1 Checksum of the file; checked when the file is downloaded to prevent any funny business
-| `link` | indicate which file(s) should be linked into the `Applications` folder on installation
+| `link` | indicate which file(s) should be linked into the `Applications` folder on installation (for .app)
+| `install` | indicates which package should be run to install the Application (for .pkg)
+| `uninstall` | indicates what commands/scripts must be run to uninstall the Application (for .pkg)
 
 ### Good Things to Know
 
