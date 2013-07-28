@@ -1,160 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>homebrew-cask by phinze</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <title>homebrew-cask</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/app.css">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>homebrew-cask</h1>
-        <p>a friendly homebrew-style CLI workflow for the administration of Mac applications distributed as binaries</p>
+<a href="https://github.com/phinze/homebrew-cask"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
-        <p class="view"><a href="https://github.com/phinze/homebrew-cask">View the Project on GitHub <small>phinze/homebrew-cask</small></a></p>
+<header>
+  <h1>homebrew-cask</h1>
+</header>
 
+<p>Let's see if we can get the elegance, simplicity, and speed of Homebrew for the installation and management GUI Mac applications like Google Chrome, Adium, and more.</p>
 
-        <ul>
-          <li><a href="https://github.com/phinze/homebrew-cask/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/phinze/homebrew-cask/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/phinze/homebrew-cask">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>"To install, drag this icon..." no more!</h1>
+<p><code>brew-cask</code> provides a friendly homebrew-style CLI workflow for the administration of Mac applications distributed as binaries.</p>
 
-<p>Let's see if we can get the elegance, simplicity, and speed of Homebrew for the
-installation and management GUI Mac applications like Google Chrome and Adium.</p>
+<p>It's implemented as a <code>homebrew</code> "<a href='https://github.com/mxcl/homebrew/wiki/External-Commands'>external command</a>" called <code>cask</code>.</p>
 
-<p><code>brew-cask</code> provides a friendly homebrew-style CLI workflow for the
-administration of Mac applications distributed as binaries.</p>
+<h2>Usage</h2>
 
-<p>It's implemented as a <code>homebrew</code> "<a href="https://github.com/mxcl/homebrew/wiki/External-Commands">external
-command</a>" called
-<code>cask</code>.</p>
+<h3>Installing Casks</h3>
 
-<h1>Let's try it!</h1>
-
-<h2>Get brew-cask</h2>
-
-<p>Tap this repository and install the <code>brew-cask</code> tool:</p>
-
-<pre><code>$ brew tap phinze/homebrew-cask
-$ brew install brew-cask
+<pre><code>$ brew cask install google-chrome
+==> Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
+==> Success! google-chrome installed to /opt/homebrew-cask/Caskroom/google-chrome/stable-channel
+==> Linking Google Chrome.app to /Users/phinze/Applications/Google Chrome.app
 </code></pre>
 
-<h2>Now let's install our first Cask</h2>
+And there we have it. Google Chrome installed with a few quick commands; no clicking, no dragging, no dropping.
 
-<p>Let's see if there's a Cask for Chrome:</p>
+<pre><code>$ open ~/Applications/"Google Chrome.app"</code></pre>
+
+<h3>Finding Casks</h3>
 
 <pre><code>$ brew cask search chrome
 google-chrome
 </code></pre>
 
-<p>Cool, there it is.  Let's install it.</p>
+<h2>Installing homebrew-cask</h2>
 
-<pre><code>$ brew cask install google-chrome
-Downloading...
-Success! google-chrome installed to /usr/local/Cellar/google-chrome/stable-channel
+<pre><code>$ brew tap phinze/homebrew-cask
+$ brew install brew-cask
 </code></pre>
 
-<p>Now we have <code>Google Chrome.app</code> in our Cellar. Cool.</p>
+<h2>Contributing to this Project</h2>
 
-<p>If you like, it's easy to get it linked somewhere more visible (see <a href="#alfred-integration">"Alfred
-Integration"</a> below for an idea that makes this step
-unnecessary):</p>
+<p>Anyone and everyone is welcome to contribute. Please take a moment to review the <a href="https://github.com/phinze/homebrew-cask/blob/master/CONTRIBUTING.md">guidelines for contributing</a>.</p>
 
-<pre><code>$ brew cask linkapps
-/Users/phinze/Applications/Google Chrome.app -&gt; /usr/local/Cellar/google-chrome/17.0.963.56/Google Chrome.app
-</code></pre>
-
-<p>And there we have it.  Google Chrome installed with a few quick commands; no clicking, no dragging, no dropping.</p>
-
-<pre><code>open "~/Applications/Google Chrome.app"
-</code></pre>
-
-<h1>What Casks are available?</h1>
-
-<p>Just run <code>brew cask search</code> with no arguments to get a list.</p>
-
-<h1>How do I update brew-cask?</h1>
-
-<p>Since this repository is a Tap, you'll pull down the latest Casks with a simple
-<code>brew-update</code>. When the <code>brew-cask</code> tool itself is updated, it will show in
-<code>brew outdated</code> and you can upgrade it via the normal Homebrew workflow.</p>
-
-<h1>What is a Cask?</h1>
-
-<p>A <code>Cask</code> is like a <code>Formula</code> in Homebrew except it describes how to download
-and install a binary application.</p>
-
-<p>Casks currently have three fields:</p>
-
-<ul>
-<li>
-<strong>url</strong>: (required) points to binary distribution of the application</li>
-<li>
-<strong>version</strong>: (required) describes the version of the application available at the URL</li>
-<li>
-<strong>homepage</strong>: the same as Homebrew's - it doesn't do anything yet, but will be wired in</li>
-</ul><h1>What's the status of this project?  Where's it headed?</h1>
-
-<p>It's really just a start at this point, but it works, and I've got big plans!</p>
-
-<p><code>brew-cask</code> currently understands how to install <code>dmg</code> and <code>zip</code> files that
-contain a <code>.app</code> file.  I'd like to extend it to be able to handle <code>pkg</code> files
-as well as the numerous other permutations of compression and distribution in
-the wild (<code>.app</code> inside <code>dmg</code> inside <code>zip</code>; folder inside <code>dmg</code>; etc.).</p>
-
-<p>I plan to use the <code>Cask</code> model to allow per-project customization of behavior,
-like Homebrew does with <code>Formula</code>.  This would allow weirdo applications like,
-say, Eclipse ("you really want me to drag that whole <em>folder</em> to
-<code>Applications</code>? ew.") to contain their complexity.</p>
-
-<p>Each Cask will then encapsulate and automate the story of how a given
-application should be installed.  If all goes well - I'm hoping to build up a
-community-maintained collection of Casks that becomes the standard way that
-hackers install Mac apps.</p>
-
-<h1>Can I contribute?</h1>
-
-<p><strong>Yes, yes, yes!</strong> Please fork/pull request to update Casks, to add features,
-to clean up documentation--anything at all that you can do to help out is very
-welcome.</p>
-
-<p>It's also <strong>pretty darn easy</strong> to create Casks, so please build more of them
-for the software you use. And if <code>brew-cask</code> doesn't support the packaging
-format of your software, please open an issue and we can get it working
-together.</p>
-
-<p>The whole idea is to build a <em>community-maintained</em> list of easily installable
-packages, so the community part is important! Every little bit counts.</p>
-
-<h1>Alfred Integration</h1>
-
-<p>I've been using Casks along with Alfred to great effect.  Just add
-<code>/usr/local/Cellar</code> as a Search Scope in Alfred's preferences, and then
-applications become available in Alfred immediately after a <code>brew cask
-install</code>.  Your fingertips will thank you.</p>
-
-<p>With this setup, you don't actually need <code>brew cask linkapps</code> if you always
-open your apps from Alfred. This means that everything stays nice and tidy.</p>
-
-<p>Oh, and you can <code>brew cask install alfred</code> too! Not bad, eh?</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/phinze">phinze</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
   </body>
 </html>
