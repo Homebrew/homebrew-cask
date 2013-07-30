@@ -3,5 +3,5 @@ class OmniGraffleStandard < Cask
   homepage 'http://www.omnigroup.com/products/omnigraffle'
   version 'latest'
   no_checksum
-  link 'OmniGraffle'
+  link 'OmniGraffle.app'
 end
