@@ -24,7 +24,7 @@ describe "Cask" do
 
     it "raises an error when failing to download a cask from a url" do
       lambda {
-        url = "file:" + File.expand_path('./Casks/notacask.rb')
+        url = "file://" + File.expand_path('./Casks/notacask.rb')
         Cask.load(url)
       }.must_raise(CaskUnavailableError)
     end
