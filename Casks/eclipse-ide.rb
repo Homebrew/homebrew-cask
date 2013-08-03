@@ -1,4 +1,4 @@
-class Eclipse < Cask
+class EclipseIde < Cask
   url 'http://download.eclipse.org/technology/epp/downloads/release/kepler/R/eclipse-standard-kepler-R-macosx-cocoa-x86_64.tar.gz'
   homepage 'http://eclipse.org'
   version '4.3'
