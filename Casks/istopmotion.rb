@@ -1,7 +1,7 @@
 class Istopmotion < Cask
-  url 'https://cdn.boinx.com/software/istopmotion/Boinx_iStopMotion_3.1-15351.zip'
+  url 'https://cdn.boinx.com/software/istopmotion/Boinx_iStopMotion_3.1.1-15400.zip'
   homepage 'http://www.boinx.com/istopmotion/mac/'
-  version '3.1-15351'
-  sha1 'f16216f55c12118a8131273d1ec34b2732bf1a13'
+  version '3.1.1-15400'
+  sha1 '142620d409e62984b63123a01bf4874b5e7bfd0a'
   link 'iStopMotion 3.app'
 end
