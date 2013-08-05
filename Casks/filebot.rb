@@ -1,7 +1,7 @@
 class Filebot < Cask
-  url 'http://downloads.sourceforge.net/project/filebot/filebot/FileBot_3.6/FileBot_3.6.app.tar.gz'
+  url 'http://downloads.sourceforge.net/project/filebot/filebot/FileBot_3.61/FileBot_3.61.app.tar.gz'
   homepage 'http://www.filebot.net/'
-  version '3.6'
-  sha1 'ad492132226c0f6eb019a5dc62e59449cd5d98cd'
+  version '3.61'
+  sha1 'f2814c61a1dc449689d0929906a5504c91f22a1b'
   link 'FileBot.app'
 end
