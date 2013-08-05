@@ -1,7 +1,7 @@
 class Cutesdr < Cask
-  url 'http://downloads.sourceforge.net/project/cutesdr/CuteSdr110.dmg'
+  url 'http://downloads.sourceforge.net/project/cutesdr/CuteSdr111.dmg'
   homepage 'http://sourceforge.net/projects/cutesdr'
-  version '1.10'
-  sha1 'e6153abd1186b3e0fad0111d339a8e41a6c51418'
+  version '1.11'
+  sha1 'e7cb27206bd9d1d6c144f1980da38bad66c5559c'
   link 'CuteSdr.app'
 end
