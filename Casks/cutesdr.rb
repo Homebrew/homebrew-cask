@@ -3,5 +3,5 @@ class Cutesdr < Cask
   homepage 'http://sourceforge.net/projects/cutesdr'
   version '1.11'
   sha1 'e7cb27206bd9d1d6c144f1980da38bad66c5559c'
-  link 'CuteSdr.app'
+  link 'cutesdr.app'
 end
