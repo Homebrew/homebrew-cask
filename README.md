@@ -38,3 +38,7 @@ We're really rather friendly! Here are the best places to talk about the project
 
  * Start an [issue on GitHub](https://github.com/phinze/homebrew-cask/issues/new)
  * Join us on IRC, we're at `#homebrew-cask` on Freenode
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/phinze/homebrew-cask/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
