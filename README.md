@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/phinze/homebrew-cask.png?branch=master)](https://travis-ci.org/phinze/homebrew-cask)
 [![Code Climate](https://codeclimate.com/github/phinze/homebrew-cask.png)](https://codeclimate.com/github/phinze/homebrew-cask)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/phinze/homebrew-cask/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 
 Let's see if we can get the elegance, simplicity, and speed of Homebrew for the
 installation and management GUI Mac applications like Google Chrome and Adium.
