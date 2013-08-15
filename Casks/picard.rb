@@ -3,5 +3,5 @@ class Picard < Cask
   homepage 'http://musicbrainz.org/doc/MusicBrainz_Picard'
   version '1.2'
   sha1 'dbf7b778bf4232e1ab718fb7f663a4da7a2d3a65'
-  link 'MusicBrainz Picard'
+  link 'MusicBrainz Picard.app'
 end
