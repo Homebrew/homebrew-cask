@@ -1,4 +1,4 @@
-class KindleForMac < Cask
+class Kindle < Cask
   url 'http://kindleformac.amazon.com/40499/KindleForMac.dmg'
   homepage 'http://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000464931'
   version '1.10.6 (40499)'
