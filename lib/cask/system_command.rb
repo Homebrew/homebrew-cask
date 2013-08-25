@@ -17,7 +17,7 @@ class Cask::SystemCommand
 
   def self._process_options(command, options)
     if options[:sudo]
-      command = "sudo #{_quote(command)}"
+      command = "sudo -E #{_quote(command)}"
     end
     if options[:args]
       command = "#{command} #{options[:args].map { |arg| _quote(arg) }.join(' ')}"
