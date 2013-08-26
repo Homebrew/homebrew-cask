@@ -10,6 +10,8 @@ module Cask::DSL
 
   def url; self.class.url; end
 
+  def cookies; self.class.cookies; end
+
   def version; self.class.version; end
 
   def sums; self.class.sums || []; end
@@ -27,8 +29,13 @@ module Cask::DSL
       @homepage ||= homepage
     end
 
-    def url(url=nil)
+    def url(url=nil, opts={})
+      @cookies ||= opts[:cookies]
       @url ||= (url && URI.parse(url))
+    end
+
+    def cookies
+      @cookies
     end
 
     def version(version=nil)

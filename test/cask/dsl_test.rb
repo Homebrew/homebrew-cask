@@ -8,6 +8,11 @@ describe Cask::DSL do
     test_cask.version.must_equal '1.2.3'
   end
 
+  it "lets you define cookies to be sent when downloading" do
+    test_cask = Cask.load('with-cookies')
+    test_cask.cookies.must_equal "foo" => "bar"
+  end
+
   it "lets you set checksum via sha1, sha256, and/or md5" do
     ChecksumCask = Class.new(Cask)
     ChecksumCask.class_eval do

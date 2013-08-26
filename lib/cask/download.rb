@@ -8,7 +8,7 @@ class Cask::Download
   def perform
     require 'formula_support'
     software_spec = SoftwareSpec.new(cask.url.to_s, cask.version)
-    downloader = CurlDownloadStrategy.new(cask.title, software_spec)
+    downloader = Cask::DownloadStrategy.new(cask.title, software_spec, cask.cookies)
     downloaded_path = downloader.fetch
 
     _check_sums(downloaded_path, cask.sums) unless cask.sums === 0
