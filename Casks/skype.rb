@@ -1,7 +1,7 @@
 class Skype < Cask
-  url 'http://download.skype.com/macosx/Skype_6.7.59.373.dmg'
+  url 'http://download.skype.com/macosx/Skype_6.8.60.351.dmg'
   homepage 'http://www.skype.com'
-  version '6.7.59.373'
-  sha1 '33e16704585cb82853f048b38e195d06666aca5e'
+  version '6.8.60.351'
+  sha1 '7ccb27d8de542adf176db69e6e27b520b66dd91f'
   link 'Skype.app'
 end
