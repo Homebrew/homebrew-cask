@@ -1,7 +1,7 @@
 class Lyn < Cask
-  url 'http://www.lynapp.com/downloads/Lyn-1.3.1.dmg'
+  url 'http://www.lynapp.com/downloads/Lyn-1.3.2.dmg'
   homepage 'http://www.lynapp.com/'
-  version '1.3.1'
-  sha1 '675e3107d82b3d6a336760a5baa0f7c5f6e4d574'
+  version '1.3.2'
+  sha1 '2defc28aadf6b2df5f41b6b0a66b8ecc6cb36763'
   link 'Lyn.app'
 end
