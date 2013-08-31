@@ -1,7 +1,7 @@
 class Skitch < Cask
-  url 'http://cdn1.evernote.com/skitch/mac/release/Skitch-2.5.2.zip'
+  url 'http://cdn1.evernote.com/skitch/mac/release/Skitch-2.6.2.zip'
   homepage 'http://evernote.com/skitch/'
-  version '2.5.2'
-  sha1 '2c4dd590d70759ff69f293e1ae00a4b55cca9e37'
+  version '2.6.2'
+  sha1 '12dc49fda210ead50905f3a7f91d71974e0d8cf1'
   link 'Skitch.app'
 end
