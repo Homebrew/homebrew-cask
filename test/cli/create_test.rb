@@ -22,7 +22,7 @@ describe Cask::CLI::Create do
   before { Cask::CLI::Create.reset! }
 
   after {
-    %w[ new-cask additional-cask another-cask ].each do |cask|
+    %w[ new-cask additional-cask another-cask feine ].each do |cask|
       path = Cask.path(cask)
       path.delete if path.exist?
     end
@@ -60,5 +60,12 @@ describe Cask::CLI::Create do
     lambda {
       Cask::CLI::Create.run('caffeine')
     }.must_raise CaskAlreadyCreatedError
+  end
+
+  it 'allows creating casks that are substrings of existing casks' do
+    Cask::CLI::Create.run('feine')
+    Cask::CLI::Create.editor_commands.must_equal [
+      [Cask.path('feine')]
+    ]
   end
 end
