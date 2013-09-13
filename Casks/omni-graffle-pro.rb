@@ -3,5 +3,5 @@ class OmniGrafflePro < Cask
   homepage 'http://www.omnigroup.com/products/omnigraffle'
   version 'latest'
   no_checksum
-  link 'OmniGraffle Professional'
+  link 'OmniGraffle Professional 5.app'
 end
