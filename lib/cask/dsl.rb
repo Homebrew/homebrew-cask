@@ -1,4 +1,4 @@
-require 'formula_support'
+require 'checksum'
 require 'set'
 
 module Cask::DSL
