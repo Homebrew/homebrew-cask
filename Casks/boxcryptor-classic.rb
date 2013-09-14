@@ -1,5 +1,5 @@
 class BoxcryptorClassic < Cask
-  url 'https://www.boxcryptor.com/download/Boxcryptor_Installer.dmg'
+  url 'https://www.boxcryptor.com/download/Boxcryptor_Classic_v1.3.4_Installer.dmg'
   homepage 'https://www.boxcryptor.com/en/boxcryptor-classic'
   version '1.3.4'
   sha1 '36495597f367a73e73d162567a5307fbd78c52ef'
