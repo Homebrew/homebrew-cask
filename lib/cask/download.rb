@@ -6,7 +6,7 @@ class Cask::Download
   end
 
   def perform
-    require 'formula_support'
+    require 'software_spec'
     software_spec = SoftwareSpec.new(cask.url.to_s, cask.version)
     downloader = CurlDownloadStrategy.new(cask.title, software_spec)
     downloaded_path = downloader.fetch
