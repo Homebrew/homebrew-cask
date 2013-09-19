@@ -5,20 +5,21 @@
 A `Cask` is like a `Formula` in Homebrew except it describes how to download
 and install a binary application.
 
-Casks currently have five fields:
+Casks currently have five/six fields:
 
  * __url__: (required) points to binary distribution of the application
  * __homepage__: the same as Homebrew's - it doesn't do anything yet, but will be wired in
  * __version__: (required) describes the version of the application available at the URL
  * __sha1__: (required unless using no_checksum) SHA-1 Checksum of the file
- * __link__: (required) indicates which file(s) should be linked into the Applications folder on installation
+ * __link__: (required for `.app`) indicates which file(s) should be linked into the Applications folder on installation
+ * __install__: (required for `.pkg`) indicates which package should be installed
+ * __uninstall__: (optional for `.pkg`) indicates how to uninstall a package.
 
 ## What's the status of this project?  Where's it headed?
 
 `brew-cask` currently understands how to install `dmg` and `zip` files that
-contain a `.app` file.  I'd like to extend it to be able to handle `pkg` files
-as well as the numerous other permutations of compression and distribution in
-the wild (`.app` inside `dmg` inside `zip`; folder inside `dmg`; etc.).
+contain a `.app` or a `.pkg` file.  I'd like to extend it to be able to handle other permutations of 
+compression and distribution in the wild (`.app` inside `dmg` inside `zip`; folder inside `dmg`; etc.).
 
 The idea is for each Cask to encapsulate and automate the story of how a given
 application should be installed.  Join us in building up a community-maintained
