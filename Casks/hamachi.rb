@@ -4,4 +4,9 @@ class Hamachi < Cask
   version 'latest'
   no_checksum
   link 'LogMeInHamachiInstaller.app'
+
+  def caveats; <<-EOS.undent
+    This brew cask installs the specialized LogMeIn Hamachi installer. Run it once to install Hamachi.
+    EOS
+  end
 end
