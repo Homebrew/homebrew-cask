@@ -24,7 +24,7 @@ module Cask::DSL
     end
 
     def url(url=nil)
-      @url ||= (url && URI.parse(url))
+      @url ||= Cask::UnderscoreSupportingURI.parse(url)
     end
 
     def version(version=nil)
