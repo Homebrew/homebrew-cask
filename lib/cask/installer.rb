@@ -28,31 +28,15 @@ class Cask::Installer
       cask.destination_path.rmtree
     end
 
-    def _with_extracted_mountpoints(path)
+    def _with_extracted_mountpoints(path, &block)
       if _dmg?(path)
-        File.open(path) do |dmg|
-          xml_str = `hdiutil mount -plist -nobrowse -readonly -noidme -mountrandom /tmp '#{dmg.path}'`
-          hdiutil_info = Plist::parse_xml(xml_str)
-          raise Exception.new("No disk entities returned by mount at #{dmg.path}") unless hdiutil_info.has_key?("system-entities")
-          mounts = hdiutil_info["system-entities"].collect { |entity|
-            entity["mount-point"]
-          }.compact
-          begin
-            mounts.each do |mountpoint|
-              yield Pathname.new(mountpoint)
-            end
-          ensure
-            mounts.each do |mountpoint|
-              `hdiutil eject '#{mountpoint}'`
-            end
-          end
-        end
+        _extract_dmg(path, &block)
       elsif _zip?(path)
         destdir = "/tmp/brewcask_#{@title}_extracted"
         `mkdir -p '#{destdir}'`
         `unzip -qq -d '#{destdir}' '#{path}' -x '__MACOSX/*'`
         begin
-          yield destdir
+          _maybe_compressed_dmg?(destdir, &block)
         ensure
           `rm -rf '#{destdir}'`
         end
@@ -61,12 +45,47 @@ class Cask::Installer
         `mkdir -p '#{destdir}'`
         `tar jxf '#{path}' -C '#{destdir}'`
         begin
-          yield destdir
+          _maybe_compressed_dmg?(destdir, &block)
         ensure
           `rm -rf '#{destdir}'`
         end
       else
         raise "uh oh, could not identify type of #{path}"
+      end
+    end
+
+    # Assumes no one places dmg in dmg..
+    def _maybe_compressed_dmg?(path, &block)
+      if dmg = Dir["#{path}/*.dmg"].first
+        _extract_dmg(dmg, &block)
+      else
+        yield path
+      end
+    end
+
+    def _extract_dmg(path)
+
+      if $TEST_RUN
+        old_path, path = path, path.to_s.gsub(/\.dmg$/, '.cdr')
+        `hdiutil convert -quiet -format UDTO '#{old_path}' -o '#{path}'`
+      end
+
+      File.open(path) do |dmg|
+        xml_str = `hdiutil mount -plist -nobrowse -readonly -noidme -mountrandom /tmp '#{dmg.path}'`
+        hdiutil_info = Plist::parse_xml(xml_str)
+        raise Exception.new("No disk entities returned by mount at #{dmg.path}") unless hdiutil_info.has_key?("system-entities")
+        mounts = hdiutil_info["system-entities"].collect { |entity|
+          entity["mount-point"]
+        }.compact
+        begin
+          mounts.each do |mountpoint|
+            yield Pathname.new(mountpoint)
+          end
+        ensure
+          mounts.each do |mountpoint|
+            `hdiutil eject '#{mountpoint}'`
+          end
+        end
       end
     end
 
