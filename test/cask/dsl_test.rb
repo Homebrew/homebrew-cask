@@ -108,4 +108,9 @@ describe Cask::DSL do
     instance = CaskWithInstallables.new
     Array(instance.installables).sort.must_equal %w[Bar.pkg Foo.pkg]
   end
+
+  it "allow for underscores in url domain" do
+    test_cask = Cask.load('qqbrowser')
+    test_cask.url.host.must_include '_'
+  end
 end
