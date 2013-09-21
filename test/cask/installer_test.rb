@@ -28,6 +28,19 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
+    it "works with zipped dmgs" do
+      speed_download = Cask.load('speed-download')
+
+      shutup do
+        Cask::Installer.install(speed_download)
+      end
+
+      dest_path = Cask.caskroom/'speed-download'/speed_download.version
+      dest_path.must_be :directory?
+      application = dest_path/'Speed Download 5/Speed Download.app'
+      application.must_be :directory?
+    end
+
     it "blows up on a bad checksum" do
       bad_checksum = Cask.load('bad-checksum')
       lambda {

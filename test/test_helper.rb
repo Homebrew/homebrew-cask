@@ -1,6 +1,7 @@
 require 'bundler'
 require 'bundler/setup'
 
+$TEST_RUN = true
 
 # add cask lib to load path
 brew_cask_path = Pathname.new(File.expand_path(__FILE__+'/../../'))
