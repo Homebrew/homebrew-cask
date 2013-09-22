@@ -6,8 +6,8 @@ describe Cask::CLI::Linkapps do
       caffeine = Cask.load('local-caffeine')
       transmission = Cask.load('local-transmission')
 
-      Cask::Installer.install caffeine
-      Cask::Installer.install transmission
+      Cask::Installer.new(caffeine).install
+      Cask::Installer.new(transmission).install
     end
   end
 

@@ -6,7 +6,7 @@ class Cask::CLI::Uninstall
         raise CaskNotInstalledError.new(cask) unless cask.installed?
         Cask::PkgInstaller.new(cask).uninstall
         Cask::AppLinker.new(cask).unlink
-        Cask::Installer.uninstall(cask)
+        Cask::Installer.new(cask).uninstall
       end
     rescue CaskError => e
       onoe e

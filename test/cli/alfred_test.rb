@@ -1,7 +1,7 @@
 require 'test_helper'
 
 def fake_alfred_preference(key, response)
-  Cask::FakeSystemCommand.fake_response_for("defaults read com.runningwithcrayons.Alfred-Preferences #{key}", response)
+  Cask::FakeSystemCommand.fake_response_for("defaults read com.runningwithcrayons.Alfred-Preferences #{key} 2>&1", response)
 end
 
 def fake_alfred_installed(installed=true)
@@ -78,7 +78,7 @@ describe Cask::CLI::Alfred do
       SCOPE_RESPONSE
 
       Cask::FakeSystemCommand.fake_response_for(
-        %Q(defaults write com.runningwithcrayons.Alfred-Preferences features.defaultresults.scope "('/Applications','/Library/PreferencePanes','/System/Library/PreferencePanes','#{Cask.caskroom}')")
+        %Q(defaults write com.runningwithcrayons.Alfred-Preferences features.defaultresults.scope "('/Applications','/Library/PreferencePanes','/System/Library/PreferencePanes','#{Cask.caskroom}')" 2>&1)
       )
 
       TestHelper.must_output(self, lambda {
@@ -95,7 +95,7 @@ describe Cask::CLI::Alfred do
 
       expected_scopes = (Cask::CLI::Alfred::DEFAULT_SCOPES + [Cask.caskroom]).map { |s| "'#{s}'" }
       Cask::FakeSystemCommand.fake_response_for(
-        %Q(defaults write com.runningwithcrayons.Alfred-Preferences features.defaultresults.scope "(#{expected_scopes.join(',')})")
+        %Q(defaults write com.runningwithcrayons.Alfred-Preferences features.defaultresults.scope "(#{expected_scopes.join(',')})" 2>&1)
       )
 
       TestHelper.must_output(self, lambda {
@@ -140,7 +140,7 @@ describe Cask::CLI::Alfred do
       SCOPE_RESPONSE
 
       Cask::FakeSystemCommand.fake_response_for(
-        %Q(defaults write com.runningwithcrayons.Alfred-Preferences features.defaultresults.scope "('/Applications','/Library/PreferencePanes','/System/Library/PreferencePanes')")
+        %Q(defaults write com.runningwithcrayons.Alfred-Preferences features.defaultresults.scope "('/Applications','/Library/PreferencePanes','/System/Library/PreferencePanes')" 2>&1)
       )
 
       TestHelper.must_output(self, lambda {
