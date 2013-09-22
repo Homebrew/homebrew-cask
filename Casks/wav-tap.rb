@@ -4,4 +4,5 @@ class WavTap < Cask
   version '0.2.0'
   sha1 '9d71dcf769dd546d66278dc9cbf675df6b006fe6'
   install 'WavTap 0.2.0.pkg'
+  uninstall :pkgutil => 'com.wavtap.*', :kext => 'com.wavtap.driver.WavTap'
 end

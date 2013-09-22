@@ -79,6 +79,7 @@ describe Cask::PkgInstaller do
 </plist>
         PLIST
       )
+      Cask::FakeSystemCommand.fake_response_for(%Q(sudo 'kextunload' '-b' 'my.fancy.package.kernelextension' 2>&1))
       Cask::FakeSystemCommand.fake_response_for(%Q(sudo 'pkgutil' '--forget' 'my.fancy.package.main' 2>&1))
 
       Cask::FakeSystemCommand.fake_response_for(
