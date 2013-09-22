@@ -40,3 +40,6 @@ We're really rather friendly! Here are the best places to talk about the project
 
  * Start an [issue on GitHub](https://github.com/phinze/homebrew-cask/issues/new)
  * Join us on IRC, we're at `#homebrew-cask` on Freenode
+
+## License:
+Code is under the [BSD 2 Clause (NetBSD) license](https://github.com/phinze/homebrew-cask/blob/master/LICENSE)
