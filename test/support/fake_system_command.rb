@@ -25,7 +25,11 @@ class Cask::FakeSystemCommand
       fail("no response faked for #{command.inspect}, faked responses are: #{@responses.inspect}")
     end
     @system_calls[command] += 1
-    @responses[command].split("\n")
+    if options[:plist]
+      Plist::parse_xml(@responses[command])
+    else
+      @responses[command]
+    end
   end
 end
 

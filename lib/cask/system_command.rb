@@ -12,7 +12,11 @@ class Cask::SystemCommand
         ohai line.chomp if options[:print]
       end
     end
-    output
+    if options[:plist]
+      Plist::parse_xml(output)
+    else
+      output
+    end
   end
 
   def self._process_options(command, options)

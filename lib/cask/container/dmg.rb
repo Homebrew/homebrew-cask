@@ -3,6 +3,7 @@ class Cask::Container::Dmg < Cask::Container::Base
     criteria.imageinfo != ''
   end
 
+  attr_reader :mounts
   def initialize(*args)
     super(*args)
     @mounts = []
@@ -23,10 +24,14 @@ class Cask::Container::Dmg < Cask::Container::Base
       'mount',
       '-plist', '-nobrowse', '-readonly', '-noidme', '-mountrandom',
       '/tmp', @path
-    ])
-    Plist::parse_xml(plist).fetch('system-entities', []).each do |entity|
-      @mounts << entity['mount-point']
-    end
+    ], :plist => true)
+    @mounts = mounts_from_plist(plist)
+  end
+
+  def mounts_from_plist(plist)
+    plist.fetch('system-entities', []).map do |entity|
+      entity['mount-point']
+    end.compact
   end
 
   def assert_mounts_found

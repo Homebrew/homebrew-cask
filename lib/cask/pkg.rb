@@ -1,6 +1,6 @@
 class Cask::Pkg
   def self.all_matching(regexp, command)
-    command.run(%Q(pkgutil --pkgs="#{regexp}")).map do |package_id|
+    command.run(%Q(pkgutil --pkgs="#{regexp}")).split("\n").map do |package_id|
       new(package_id.chomp, command)
     end
   end
@@ -29,29 +29,32 @@ class Cask::Pkg
   end
 
   def dirs
-    _run('pkgutil', :args => ['--only-dirs', '--files', package_id]).map { |path| root.join(path) }
+    @command.run('pkgutil',
+      :args => ['--only-dirs', '--files', package_id]
+    ).split("\n").map { |path| root.join(path) }
   end
 
   def files
-    _run('pkgutil', :args => ['--only-files', '--files', package_id]).map { |path| root.join(path) }
+    @command.run('pkgutil',
+      :args => ['--only-files', '--files', package_id]
+    ).split("\n").map { |path| root.join(path) }
   end
 
   def root
-    @root ||= Pathname(info['volume']).join(info['install-location'])
+    @root ||= Pathname(info.fetch('volume')).join(info.fetch('install-location'))
   end
 
   def info
-    @info ||= Plist::parse_xml(_run('pkgutil', :args => ['--pkg-info-plist', package_id]).join("\n"))
+    @command.run('pkgutil',
+      :args => ['--pkg-info-plist', package_id],
+      :plist => true
+    )
   end
 
   def _deepest_path_first(paths)
     paths.sort do |path_a, path_b|
       path_b.to_s.split('/').count <=> path_a.to_s.split('/').count
     end
-  end
-
-  def _run(command, options={})
-    @command.run(command, options).map(&:chomp)
   end
 
   def _clean_symlinks(dir)
