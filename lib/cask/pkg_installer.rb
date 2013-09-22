@@ -21,6 +21,13 @@ class Cask::PkgInstaller
         @command.run(@cask.destination_path.join(uninstall_options[:script]), uninstall_options.merge(:sudo => true))
       end
 
+      if uninstall_options.key? :kext
+        [*uninstall_options[:kext]].each do |kext|
+          ohai "Unloading kernel extension #{kext}"
+          @command.run('kextunload', :args => ['-b', kext], :sudo => true)
+        end
+      end
+
       if uninstall_options.key? :pkgutil
         pkgs = Cask::Pkg.all_matching(uninstall_options[:pkgutil], @command)
         pkgs.each(&:uninstall)
