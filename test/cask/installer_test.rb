@@ -6,7 +6,7 @@ describe Cask::Installer do
       caffeine = Cask.load('local-caffeine')
 
       shutup do
-        Cask::Installer.install(caffeine)
+        Cask::Installer.new(caffeine).install
       end
 
       dest_path = Cask.caskroom/'local-caffeine'/caffeine.version
@@ -19,7 +19,7 @@ describe Cask::Installer do
       transmission = Cask.load('local-transmission')
 
       shutup do
-        Cask::Installer.install(transmission)
+        Cask::Installer.new(transmission).install
       end
 
       dest_path = Cask.caskroom/'local-transmission'/transmission.version
@@ -32,7 +32,7 @@ describe Cask::Installer do
       bad_checksum = Cask.load('bad-checksum')
       lambda {
         shutup do
-          Cask::Installer.install(bad_checksum)
+          Cask::Installer.new(bad_checksum).install
         end
       }.must_raise(ChecksumMismatchError)
     end
@@ -41,7 +41,7 @@ describe Cask::Installer do
       missing_checksum = Cask.load('missing-checksum')
       lambda {
         shutup do
-          Cask::Installer.install(missing_checksum)
+          Cask::Installer.new(missing_checksum).install
         end
       }.must_raise(ChecksumMissingError)
     end
@@ -49,7 +49,7 @@ describe Cask::Installer do
     it "installs fine if no_checksum is included in cask" do
       no_checksum = Cask.load('no-checksum')
       shutup do
-        Cask::Installer.install(no_checksum)
+        Cask::Installer.new(no_checksum).install
       end
       no_checksum.must_be :installed?
     end
@@ -57,7 +57,7 @@ describe Cask::Installer do
     it "prints caveats if they're present" do
       with_caveats = Cask.load('with-caveats')
       TestHelper.must_output(self, lambda {
-        Cask::Installer.install(with_caveats)
+        Cask::Installer.new(with_caveats).install
       }, /Here are some things you might want to know/)
       with_caveats.must_be :installed?
     end
@@ -65,7 +65,7 @@ describe Cask::Installer do
     it "does not extract __MACOSX directories from zips" do
       with_macosx_dir = Cask.load('with-macosx-dir')
       shutup do
-        Cask::Installer.install(with_macosx_dir)
+        Cask::Installer.new(with_macosx_dir).install
       end
       with_macosx_dir.destination_path.join('__MACOSX').wont_be :directory?
     end
@@ -73,41 +73,49 @@ describe Cask::Installer do
     it "prevents already installed casks from being installed" do
       transmission = Cask.load('local-transmission')
       transmission.installed?.must_equal false
+      installer = Cask::Installer.new(transmission)
 
-      shutup do
-        Cask::Installer.install(transmission)
-      end
+      shutup { installer.install }
       lambda {
-        shutup do
-          Cask::Installer.install(transmission)
-        end
+        shutup { installer.install }
       }.must_raise(CaskAlreadyInstalledError)
     end
 
     it "allows already installed casks to being installed if force is provided" do
       transmission = Cask.load('local-transmission')
       transmission.installed?.must_equal false
+      installer = Cask::Installer.new(transmission)
 
-      shutup do
-        Cask::Installer.install(transmission)
-      end
-      shutup do
-        Cask::Installer.install(transmission, true)
-      end # wont_raise
+      shutup { installer.install }
+      shutup {
+        installer.install(true)
+      } # wont_raise
     end
 
+    it "works properly with a direct link to a pkg" do
+      naked_pkg = Cask.load('naked-pkg')
+
+      shutup do
+        Cask::Installer.new(naked_pkg).install
+      end
+
+      dest_path = Cask.caskroom/'naked-pkg'/naked_pkg.version
+      pkg = dest_path/'Naked.pkg'
+      pkg.must_be :file?
+    end
   end
 
   describe "uninstall" do
     it "fully uninstalls a cask" do
       caffeine = Cask.load('local-caffeine')
+      installer = Cask::Installer.new(caffeine)
 
       shutup do
-        Cask::Installer.install(caffeine)
-        Cask::Installer.uninstall(caffeine)
+        installer.install
+        installer.uninstall
       end
 
-      dest_path = HOMEBREW_CELLAR/'local-caffeine'/caffeine.version
+      dest_path = Cask.caskroom/'local-caffeine'/caffeine.version
       application = dest_path/'Caffeine.app'
 
       application.wont_be :directory?
