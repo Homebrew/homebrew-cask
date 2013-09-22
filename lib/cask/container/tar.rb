@@ -1,3 +1,5 @@
+require 'tmpdir'
+
 class Cask::Container::Tar < Cask::Container::Base
   def self.me?(criteria)
     criteria.file.include? 'application/x-tar'
