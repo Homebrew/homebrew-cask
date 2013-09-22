@@ -28,6 +28,19 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
+    it "works with plain pkg casks" do
+      heroku_toolbelt = Cask.load('heroku-toolbelt')
+
+      shutup do
+        Cask::Installer.install(heroku_toolbelt)
+      end
+
+      dest_path = Cask.caskroom/'heroku-toolbelt'/heroku_toolbelt.version
+      dest_path.must_be :directory?
+      application = Pathname.new('/usr/bin/heroku')
+      application.must_be :symlink?
+    end
+
     it "blows up on a bad checksum" do
       bad_checksum = Cask.load('bad-checksum')
       lambda {

@@ -65,6 +65,8 @@ class Cask::Installer
         ensure
           `rm -rf '#{destdir}'`
         end
+      elsif _pkg?(path)
+        yield path
       else
         raise "uh oh, could not identify type of #{path}"
       end
@@ -92,6 +94,11 @@ class Cask::Installer
     def _tar_gzip?(path)
       output = `file -Izb '#{path}'`
       output.chomp == 'application/x-tar; charset=binary compressed-encoding=application/x-gzip; charset=binary; charset=binary'
+    end
+
+    def _pkg?(path)
+      output = `file -Izb '#{path}'`
+      output.chomp == 'application/octet-stream; charset=binary'
     end
   end
 end
