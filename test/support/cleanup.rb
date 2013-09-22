@@ -1,7 +1,7 @@
 module Cask::CleanupHooks
   def after_teardown
     super
-    Cask.all.select(&:installed?).each { |c| Cask::Installer.uninstall(c) }
+    Cask.all.select(&:installed?).each { |c| Cask::Installer.new(c).uninstall }
   end
 end
 

@@ -18,9 +18,9 @@ describe Cask::CLI::Uninstall do
     transmission = Cask.load('local-transmission')
 
     shutup do
-      Cask::Installer.install caffeine
+      Cask::Installer.new(caffeine).install
       Cask::AppLinker.new(caffeine).link
-      Cask::Installer.install transmission
+      Cask::Installer.new(transmission).install
       Cask::AppLinker.new(transmission).link
     end
 
