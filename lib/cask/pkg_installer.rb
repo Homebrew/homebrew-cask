@@ -9,7 +9,8 @@ class Cask::PkgInstaller
       ohai "Running installer for #{@cask}; your password may be necessary."
       @command.run("installer", {
         :sudo => true,
-        :args => %W[-pkg #{installer} -target /]
+        :args => %W[-pkg #{installer} -target /],
+        :print => true
       })
     end
   end
@@ -18,7 +19,10 @@ class Cask::PkgInstaller
     @cask.uninstallables.each do |uninstall_options|
       ohai "Running uninstall process for #{@cask}; your password may be necessary."
       if uninstall_options.key? :script
-        @command.run(@cask.destination_path.join(uninstall_options[:script]), uninstall_options.merge(:sudo => true))
+        @command.run(
+          @cask.destination_path.join(uninstall_options[:script]),
+          uninstall_options.merge(:sudo => true, :print => true)
+        )
       end
 
       if uninstall_options.key? :kext

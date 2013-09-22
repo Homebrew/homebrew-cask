@@ -1,6 +1,6 @@
 class Cask::Pkg
   def self.all_matching(regexp, command)
-    command.run(%Q(pkgutil --pkgs="#{regexp}"), :print => false).map do |package_id|
+    command.run(%Q(pkgutil --pkgs="#{regexp}")).map do |package_id|
       new(package_id.chomp, command)
     end
   end
@@ -51,7 +51,7 @@ class Cask::Pkg
   end
 
   def _run(command, options={})
-    @command.run(command, options.merge(:print => false)).map(&:chomp)
+    @command.run(command, options).map(&:chomp)
   end
 
   def _clean_symlinks(dir)
