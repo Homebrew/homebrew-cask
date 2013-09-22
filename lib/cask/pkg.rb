@@ -17,6 +17,7 @@ class Cask::Pkg
       @command.run('rm', :args => [file], :sudo => true) if file.exist?
     end
     _deepest_path_first(dirs).each do |dir|
+      @command.run('chmod', :args => ['777', dir], :sudo => true)
       _clean_symlinks(dir)
       @command.run('rmdir', :args => [dir], :sudo => true) if dir.exist? && dir.children.empty?
     end
