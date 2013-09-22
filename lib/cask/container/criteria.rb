@@ -7,7 +7,7 @@ class Cask::Container::Criteria
   end
 
   def file
-    @file ||= @command.run('file', :args => ['-Izb', path], :print => false)
+    @file ||= @command.run('file', :args => ['-Izb', path])
   end
 
   def imageinfo

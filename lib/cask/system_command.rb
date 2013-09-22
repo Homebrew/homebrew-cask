@@ -9,7 +9,7 @@ class Cask::SystemCommand
       pipe.close_write
       while line = pipe.gets
         output << line
-        ohai line.chomp if options.fetch(:print, true)
+        ohai line.chomp if options[:print]
       end
     end
     output
