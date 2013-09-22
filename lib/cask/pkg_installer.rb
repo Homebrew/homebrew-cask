@@ -36,7 +36,7 @@ class Cask::PkgInstaller
       if uninstall_options.key? :files
         uninstall_options[:files].each do |file|
           ohai "Removing file #{file}"
-          @command.run('rm', :args => [file], :sudo => true)
+          @command.run('rm', :args => ['-rf', file], :sudo => true)
         end
       end
     end

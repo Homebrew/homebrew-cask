@@ -3,13 +3,25 @@ require 'uri'
 HOMEBREW_CACHE_CASKS = HOMEBREW_CACHE.join('Casks')
 
 class Cask; end
-class Cask::CLI; end
 
-libdir = File.dirname(__FILE__)
-rubyfiles = Dir[File.join(libdir, '**', '*.rb')]
-rubyfiles.each do |file|
-  require file.sub(/^#{libdir}\/(.*).rb$/, '\1')
-end
+require 'cask/app_linker'
+require 'cask/audit'
+require 'cask/auditor'
+require 'cask/checkable'
+require 'cask/cli'
+require 'cask/container'
+require 'cask/download'
+require 'cask/dsl'
+require 'cask/exceptions'
+require 'cask/fetcher'
+require 'cask/installer'
+require 'cask/link_checker'
+require 'cask/pkg'
+require 'cask/pkg_installer'
+require 'cask/scopes'
+require 'cask/system_command'
+
+require 'plist/parser'
 
 class Cask
   include Cask::DSL
