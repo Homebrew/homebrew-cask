@@ -19,9 +19,7 @@ describe Cask::CLI::Uninstall do
 
     shutup do
       Cask::Installer.new(caffeine).install
-      Cask::AppLinker.new(caffeine).link
       Cask::Installer.new(transmission).install
-      Cask::AppLinker.new(transmission).link
     end
 
     caffeine.must_be :installed?
