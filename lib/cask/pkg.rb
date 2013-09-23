@@ -19,6 +19,7 @@ class Cask::Pkg
     _deepest_path_first(dirs).each do |dir|
       @command.run('chmod', :args => ['777', dir], :sudo => true)
       _clean_symlinks(dir)
+      _clean_ds_store(dir)
       @command.run('rmdir', :args => [dir], :sudo => true) if dir.exist? && dir.children.empty?
     end
     forget
@@ -65,5 +66,12 @@ class Cask::Pkg
     dir.children.each do |child|
       @command.run('rm', :args => [child], :sudo => true) if child.symlink?
     end
+  end
+
+  def _clean_ds_store(dir)
+    # Clean .DS_Store files:
+    # https://en.wikipedia.org/wiki/.DS_Store
+    ds_store = dir.join('.DS_Store')
+    @command.run('rm', :args => [ds_store], :sudo => true) if ds_store.exist?
   end
 end
