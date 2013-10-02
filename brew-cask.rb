@@ -1,6 +1,6 @@
 require 'formula'
 
-HOMEBREW_CASK_VERSION = '0.17.2'
+HOMEBREW_CASK_VERSION = '0.17.3'
 
 class BrewCask < Formula
   homepage 'https://github.com/phinze/homebrew-cask/'
