@@ -24,7 +24,7 @@ class Cask::Container::Dmg < Cask::Container::Base
       'mount',
       '-plist', '-nobrowse', '-readonly', '-noidme', '-mountrandom',
       '/tmp', @path
-    ], :plist => true, :input => 'y')
+    ], :plist => true, :input => ['y'])
     @mounts = mounts_from_plist(plist)
   end
 
