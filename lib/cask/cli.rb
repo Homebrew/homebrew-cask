@@ -1,5 +1,21 @@
+class Cask::CLI; end
+
 require 'optparse'
 require 'shellwords'
+
+require 'cask/cli/alfred'
+require 'cask/cli/audit'
+require 'cask/cli/checklinks'
+require 'cask/cli/create'
+require 'cask/cli/edit'
+require 'cask/cli/home'
+require 'cask/cli/info'
+require 'cask/cli/install'
+require 'cask/cli/linkapps'
+require 'cask/cli/list'
+require 'cask/cli/search'
+require 'cask/cli/uninstall'
+require 'cask/cli/unlinkapps'
 
 class Cask::CLI
   def self.commands

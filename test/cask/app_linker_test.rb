@@ -4,12 +4,8 @@ describe Cask::AppLinker do
   describe 'linkapps' do
     before do
       @caffeine = Cask.load('local-caffeine')
-      shutup { Cask::Installer.install(@caffeine) }
+      shutup { Cask::Installer.new(@caffeine).install }
       @app = @caffeine.destination_path/'Caffeine.app'
-    end
-
-    after do
-      Cask::Installer.uninstall(@caffeine)
     end
 
     it "works with an application in the root directory" do

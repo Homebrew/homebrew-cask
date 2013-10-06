@@ -1,6 +1,6 @@
 class Cask::Pkg
   def self.all_matching(regexp, command)
-    command.run(%Q(pkgutil --pkgs="#{regexp}"), :print => false).map do |package_id|
+    command.run(%Q(pkgutil --pkgs="#{regexp}")).split("\n").map do |package_id|
       new(package_id.chomp, command)
     end
   end
@@ -17,7 +17,9 @@ class Cask::Pkg
       @command.run('rm', :args => [file], :sudo => true) if file.exist?
     end
     _deepest_path_first(dirs).each do |dir|
+      @command.run('chmod', :args => ['777', dir], :sudo => true)
       _clean_symlinks(dir)
+      _clean_ds_store(dir)
       @command.run('rmdir', :args => [dir], :sudo => true) if dir.exist? && dir.children.empty?
     end
     forget
@@ -28,29 +30,32 @@ class Cask::Pkg
   end
 
   def dirs
-    _run('pkgutil', :args => ['--only-dirs', '--files', package_id]).map { |path| root.join(path) }
+    @command.run('pkgutil',
+      :args => ['--only-dirs', '--files', package_id]
+    ).split("\n").map { |path| root.join(path) }
   end
 
   def files
-    _run('pkgutil', :args => ['--only-files', '--files', package_id]).map { |path| root.join(path) }
+    @command.run('pkgutil',
+      :args => ['--only-files', '--files', package_id]
+    ).split("\n").map { |path| root.join(path) }
   end
 
   def root
-    @root ||= Pathname(info['volume']).join(info['install-location'])
+    @root ||= Pathname(info.fetch('volume')).join(info.fetch('install-location'))
   end
 
   def info
-    @info ||= Plist::parse_xml(_run('pkgutil', :args => ['--pkg-info-plist', package_id]).join("\n"))
+    @command.run('pkgutil',
+      :args => ['--pkg-info-plist', package_id],
+      :plist => true
+    )
   end
 
   def _deepest_path_first(paths)
     paths.sort do |path_a, path_b|
       path_b.to_s.split('/').count <=> path_a.to_s.split('/').count
     end
-  end
-
-  def _run(command, options={})
-    @command.run(command, options.merge(:print => false)).map(&:chomp)
   end
 
   def _clean_symlinks(dir)
@@ -61,5 +66,12 @@ class Cask::Pkg
     dir.children.each do |child|
       @command.run('rm', :args => [child], :sudo => true) if child.symlink?
     end
+  end
+
+  def _clean_ds_store(dir)
+    # Clean .DS_Store files:
+    # https://en.wikipedia.org/wiki/.DS_Store
+    ds_store = dir.join('.DS_Store')
+    @command.run('rm', :args => [ds_store], :sudo => true) if ds_store.exist?
   end
 end

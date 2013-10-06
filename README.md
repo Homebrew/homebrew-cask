@@ -16,18 +16,18 @@ command](https://github.com/mxcl/homebrew/wiki/External-Commands)" called
 `cask`.
 
 ## Let's try it!
-
-    $ brew tap phinze/homebrew-cask
-    $ brew install brew-cask
-    $ brew cask install google-chrome
-    ==> Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
-    ==> Success! google-chrome installed to /opt/homebrew-cask/Caskroom/google-chrome/stable-channel
-    ==> Linking Google Chrome.app to /Users/phinze/Applications/Google Chrome.app
-
+```sh
+$ brew tap phinze/homebrew-cask
+$ brew install brew-cask
+$ brew cask install google-chrome
+=> Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
+=> Success! google-chrome installed to /opt/homebrew-cask/Caskroom/google-chrome/stable-channel
+=> Linking Google Chrome.app to /Users/phinze/Applications/Google Chrome.app
+```
 And there we have it.  Google Chrome installed with a few quick commands; no clicking, no dragging, no dropping.
-    
-    open ~/Applications/"Google Chrome.app"
-
+```sh
+open ~/Applications/"Google Chrome.app"
+```
 ## Learn More
 
  * Find basic documentation on using `homebrew-cask` in [USAGE.md](https://github.com/phinze/homebrew-cask/blob/master/USAGE.md)
@@ -40,3 +40,6 @@ We're really rather friendly! Here are the best places to talk about the project
 
  * Start an [issue on GitHub](https://github.com/phinze/homebrew-cask/issues/new)
  * Join us on IRC, we're at `#homebrew-cask` on Freenode
+
+## License:
+Code is under the [BSD 2 Clause (NetBSD) license](https://github.com/phinze/homebrew-cask/blob/master/LICENSE)

@@ -2,11 +2,11 @@ require 'test_helper'
 
 describe Cask::Scopes do
   describe 'installed' do
-    it "returns a list of strings" do 
+    it "returns a list of strings" do
       caffeine = Cask.load('local-caffeine')
 
       shutup do
-        Cask::Installer.install(caffeine)
+        Cask::Installer.new(caffeine).install
       end
 
       installed_casks = Cask.installed

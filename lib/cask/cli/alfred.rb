@@ -78,7 +78,7 @@ class Cask::CLI::Alfred
   end
 
   def self.alfred_installed?
-    alfred_preference('version').first =~ /^[0-9]\.[0-9]\.[0-9]$/
+    alfred_preference('version') =~ /^[0-9]\.[0-9]\.[0-9]$/
   end
 
   def self.linked?
@@ -93,9 +93,9 @@ class Cask::CLI::Alfred
   #
   # and we would like %w[/some/path /other/path]
   SCOPE_REGEXP = /^\s*"(.*)",?$/
-  
+
   def self.alfred_scopes
-    scopes = alfred_preference(KEY).map do |line|
+    scopes = alfred_preference(KEY).split("\n").map do |line|
       matchdata = line.match(SCOPE_REGEXP)
       matchdata ? matchdata.captures.first : nil
     end.compact
@@ -105,9 +105,9 @@ class Cask::CLI::Alfred
 
   def self.alfred_preference(key, value=nil)
     if value
-      @system_command.run(%Q(defaults write #{DOMAIN} #{key} "#{value}"), :print => false)
+      @system_command.run(%Q(defaults write #{DOMAIN} #{key} "#{value}"))
     else
-      @system_command.run("defaults read #{DOMAIN} #{key}", :print => false)
+      @system_command.run("defaults read #{DOMAIN} #{key}")
     end
   end
 

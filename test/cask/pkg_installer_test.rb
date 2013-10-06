@@ -4,13 +4,7 @@ describe Cask::PkgInstaller do
   before {
     @cask = Cask.load('with-installable')
     shutup do
-      Cask::Installer.install(@cask)
-    end
-  }
-
-  after {
-    shutup do
-      Cask::Installer.uninstall(@cask)
+      Cask::Installer.new(@cask).install
     end
   }
 
@@ -18,7 +12,7 @@ describe Cask::PkgInstaller do
     it 'runs the system installer on the specified pkgs' do
       pkg_installer = Cask::PkgInstaller.new(@cask, Cask::FakeSystemCommand)
 
-      expected_command = "sudo 'installer' '-pkg' '#{@cask.destination_path/'MyFancyPkg'/'Fancy.pkg'}' '-target' '/'"
+      expected_command = "sudo 'installer' '-pkg' '#{@cask.destination_path/'MyFancyPkg'/'Fancy.pkg'}' '-target' '/' 2>&1"
       Cask::FakeSystemCommand.fake_response_for(expected_command)
 
       shutup do
@@ -33,7 +27,7 @@ describe Cask::PkgInstaller do
     it 'runs the specified uninstaller for the cask' do
       pkg_installer = Cask::PkgInstaller.new(@cask, Cask::FakeSystemCommand)
 
-      expected_command = "sudo '#{@cask.destination_path/'MyFancyPkg'/'FancyUninstaller.tool'}' '--please'"
+      expected_command = "sudo '#{@cask.destination_path/'MyFancyPkg'/'FancyUninstaller.tool'}' '--please' 2>&1"
       Cask::FakeSystemCommand.fake_response_for(expected_command)
 
       shutup do
@@ -48,7 +42,7 @@ describe Cask::PkgInstaller do
       pkg_installer = Cask::PkgInstaller.new(cask, Cask::FakeSystemCommand)
 
       Cask::FakeSystemCommand.fake_response_for(
-        %Q(pkgutil --pkgs="my.fancy.package.*"),
+        %Q(pkgutil --pkgs="my.fancy.package.*" 2>&1),
         [
           'my.fancy.package.main',
           'my.fancy.package.agent',
@@ -56,14 +50,14 @@ describe Cask::PkgInstaller do
       )
 
       Cask::FakeSystemCommand.fake_response_for(
-        %Q(pkgutil '--only-files' '--files' 'my.fancy.package.main'),
+        %Q(pkgutil '--only-files' '--files' 'my.fancy.package.main' 2>&1),
         [
           'fancy/bin/fancy.exe',
           'fancy/var/fancy.data',
         ].join("\n")
       )
       Cask::FakeSystemCommand.fake_response_for(
-        %Q(pkgutil '--only-dirs' '--files' 'my.fancy.package.main'),
+        %Q(pkgutil '--only-dirs' '--files' 'my.fancy.package.main' 2>&1),
         [
           'fancy',
           'fancy/bin',
@@ -71,7 +65,7 @@ describe Cask::PkgInstaller do
         ].join("\n")
       )
       Cask::FakeSystemCommand.fake_response_for(
-        %Q(pkgutil '--pkg-info-plist' 'my.fancy.package.main'),
+        %Q(pkgutil '--pkg-info-plist' 'my.fancy.package.main' 2>&1),
         <<-PLIST
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -85,10 +79,11 @@ describe Cask::PkgInstaller do
 </plist>
         PLIST
       )
-      Cask::FakeSystemCommand.fake_response_for(%Q(sudo 'pkgutil' '--forget' 'my.fancy.package.main'))
+      Cask::FakeSystemCommand.fake_response_for(%Q(sudo 'kextunload' '-b' 'my.fancy.package.kernelextension' 2>&1))
+      Cask::FakeSystemCommand.fake_response_for(%Q(sudo 'pkgutil' '--forget' 'my.fancy.package.main' 2>&1))
 
       Cask::FakeSystemCommand.fake_response_for(
-        %Q(pkgutil '--only-files' '--files' 'my.fancy.package.agent'),
+        %Q(pkgutil '--only-files' '--files' 'my.fancy.package.agent' 2>&1),
         [
           'fancy/agent/fancy-agent.exe',
           'fancy/agent/fancy-agent.pid',
@@ -96,14 +91,14 @@ describe Cask::PkgInstaller do
         ].join("\n")
       )
       Cask::FakeSystemCommand.fake_response_for(
-        %Q(pkgutil '--only-dirs' '--files' 'my.fancy.package.agent'),
+        %Q(pkgutil '--only-dirs' '--files' 'my.fancy.package.agent' 2>&1),
         [
           'fancy',
           'fancy/agent',
         ].join("\n")
       )
       Cask::FakeSystemCommand.fake_response_for(
-        %Q(pkgutil '--pkg-info-plist' 'my.fancy.package.agent'),
+        %Q(pkgutil '--pkg-info-plist' 'my.fancy.package.agent' 2>&1),
         <<-PLIST
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -117,7 +112,17 @@ describe Cask::PkgInstaller do
 </plist>
         PLIST
       )
-      Cask::FakeSystemCommand.fake_response_for(%Q(sudo 'pkgutil' '--forget' 'my.fancy.package.agent'))
+
+      %w[
+        /tmp/fancy
+        /tmp/fancy/agent
+        /tmp/fancy/bin
+        /tmp/fancy/var
+      ].each do |dir|
+        Cask::FakeSystemCommand.fake_response_for(%Q(sudo 'chmod' '777' '#{dir}' 2>&1))
+      end
+
+      Cask::FakeSystemCommand.fake_response_for(%Q(sudo 'pkgutil' '--forget' 'my.fancy.package.agent' 2>&1))
 
       # No assertions after call since all assertions are implicit from the interactions setup above.
       # TODO: verify rmdir / rm commands (requires setting up actual file tree or faking out .exists?
