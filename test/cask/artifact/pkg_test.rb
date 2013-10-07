@@ -1,22 +1,22 @@
 require 'test_helper'
 
-describe Cask::PkgInstaller do
+describe Cask::Artifact::Pkg do
   before {
     @cask = Cask.load('with-installable')
     shutup do
-      Cask::Installer.new(@cask).install
+      TestHelper.install_without_artifacts(@cask)
     end
   }
 
   describe 'install' do
     it 'runs the system installer on the specified pkgs' do
-      pkg_installer = Cask::PkgInstaller.new(@cask, Cask::FakeSystemCommand)
+      pkg = Cask::Artifact::Pkg.new(@cask, Cask::FakeSystemCommand)
 
       expected_command = "sudo 'installer' '-pkg' '#{@cask.destination_path/'MyFancyPkg'/'Fancy.pkg'}' '-target' '/' 2>&1"
       Cask::FakeSystemCommand.fake_response_for(expected_command)
 
       shutup do
-        pkg_installer.install
+        pkg.install
       end
 
       Cask::FakeSystemCommand.system_calls[expected_command].must_equal 1
@@ -25,13 +25,13 @@ describe Cask::PkgInstaller do
 
   describe 'uninstall' do
     it 'runs the specified uninstaller for the cask' do
-      pkg_installer = Cask::PkgInstaller.new(@cask, Cask::FakeSystemCommand)
+      pkg = Cask::Artifact::Pkg.new(@cask, Cask::FakeSystemCommand)
 
       expected_command = "sudo '#{@cask.destination_path/'MyFancyPkg'/'FancyUninstaller.tool'}' '--please' 2>&1"
       Cask::FakeSystemCommand.fake_response_for(expected_command)
 
       shutup do
-        pkg_installer.uninstall
+        pkg.uninstall
       end
 
       Cask::FakeSystemCommand.system_calls[expected_command].must_equal 1
@@ -39,7 +39,7 @@ describe Cask::PkgInstaller do
 
     it 'can uninstall using pkgutil, launchctl, and file lists' do
       cask = Cask.load('with-pkgutil-uninstall')
-      pkg_installer = Cask::PkgInstaller.new(cask, Cask::FakeSystemCommand)
+      pkg = Cask::Artifact::Pkg.new(cask, Cask::FakeSystemCommand)
 
       Cask::FakeSystemCommand.fake_response_for(
         %Q(pkgutil --pkgs="my.fancy.package.*" 2>&1),
@@ -127,7 +127,7 @@ describe Cask::PkgInstaller do
       # No assertions after call since all assertions are implicit from the interactions setup above.
       # TODO: verify rmdir / rm commands (requires setting up actual file tree or faking out .exists?
       shutup do
-        pkg_installer.uninstall
+        pkg.uninstall
       end
     end
   end

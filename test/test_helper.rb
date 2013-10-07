@@ -72,6 +72,13 @@ class TestHelper
     return false unless candidate.symlink?
     candidate.readlink.exist?
   end
+
+  def self.install_without_artifacts(cask)
+    Cask::Installer.new(cask).tap do |i|
+      shutup { i.download }
+      i.extract_container
+    end
+  end
 end
 
 require 'support/fake_fetcher'
