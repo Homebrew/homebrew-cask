@@ -6,8 +6,6 @@ class Cask::CLI::Install
       begin
        cask = Cask.load(cask_name)
        Cask::Installer.new(cask).install(force)
-       Cask::AppLinker.new(cask).link
-       Cask::PkgInstaller.new(cask).install
       rescue CaskError => e
         onoe e
       end

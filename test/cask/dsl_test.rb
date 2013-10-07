@@ -23,19 +23,6 @@ describe Cask::DSL do
     ]
   end
 
-  it "still lets you set content_length even though it is deprecated" do
-    OldContentLengthCask = Class.new(Cask)
-    begin
-      shutup do
-        OldContentLengthCask.class_eval do
-          content_length '12345'
-        end
-      end
-    rescue Exception => e
-      flunk("expected content_length to work, but got exception #{e}")
-    end
-  end
-
   it "prevents the entire world from crashing when a cask includes an unknown method" do
     UnexpectedMethodCask = Class.new(Cask)
     begin
@@ -49,17 +36,6 @@ describe Cask::DSL do
     end
   end
 
-  it "allows you to specify linkables in the old way, for backcompat" do
-    CaskWithOldSchoolLinkables = Class.new(Cask)
-    CaskWithOldSchoolLinkables.class_eval do
-      link :app, 'Foo.app'
-      link :app, 'Bar.app'
-    end
-
-    instance = CaskWithOldSchoolLinkables.new
-    Array(instance.linkables).sort.must_equal %w[Bar.app Foo.app]
-  end
-
   it "allows you to specify linkables" do
     CaskWithLinkables = Class.new(Cask)
     CaskWithLinkables.class_eval do
@@ -68,14 +44,14 @@ describe Cask::DSL do
     end
 
     instance = CaskWithLinkables.new
-    Array(instance.linkables).sort.must_equal %w[Bar.app Foo.app]
+    Array(instance.artifacts[:link]).sort.must_equal %w[Bar.app Foo.app]
   end
 
   it "allow linkables to be set to empty" do
     CaskWithNoLinkables = Class.new(Cask)
 
     instance = CaskWithNoLinkables.new
-    Array(instance.linkable_apps).must_equal %w[]
+    Array(instance.artifacts[:link]).must_equal %w[]
   end
 
   it "allows caveats to be specified via a method define" do
@@ -106,6 +82,6 @@ describe Cask::DSL do
     end
 
     instance = CaskWithInstallables.new
-    Array(instance.installables).sort.must_equal %w[Bar.pkg Foo.pkg]
+    Array(instance.artifacts[:install]).sort.must_equal %w[Bar.pkg Foo.pkg]
   end
 end

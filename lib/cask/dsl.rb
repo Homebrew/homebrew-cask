@@ -14,11 +14,7 @@ module Cask::DSL
 
   def sums; self.class.sums || []; end
 
-  def linkables; self.class.linkables || {}; end
-
-  def installables; self.class.installables || []; end
-
-  def uninstallables; self.class.uninstallables || []; end
+  def artifacts; self.class.artifacts; end
 
   def caveats; ''; end
 
@@ -35,31 +31,21 @@ module Cask::DSL
       @version ||= version
     end
 
-    def linkables
-      @linkables ||= Set.new
+    def artifacts
+      @artifacts ||= Hash.new { |hash, key| hash[key] = Set.new }
     end
 
-    def link(*args)
-      # handle old-style casks using link :app, 'Foo.app'
-      args.shift if args.first.is_a? Symbol
+    ARTIFACT_TYPES = [
+      :link,
+      :prefpane,
+      :install,
+      :uninstall
+    ]
 
-      linkables.merge args
-    end
-
-    def installables
-      @installables ||= Set.new
-    end
-
-    def install(*files)
-      installables.merge files
-    end
-
-    def uninstallables
-      @uninstallables ||= Set.new
-    end
-
-    def uninstall(options)
-      uninstallables.merge [options]
+    ARTIFACT_TYPES.each do |type|
+      define_method(type) do |*args|
+        artifacts[type].merge(args)
+      end
     end
 
     attr_reader :sums
