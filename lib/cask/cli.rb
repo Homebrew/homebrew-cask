@@ -56,7 +56,10 @@ class Cask::CLI
   def self.parser
     @parser ||= OptionParser.new do |opts|
       opts.on("--appdir=MANDATORY") do |v|
-        Cask.appdir = Pathname.new File.expand_path(v)
+        Cask.appdir = Pathname(v).expand_path
+      end
+      opts.on("--prefpanedir=MANDATORY") do |v|
+        Cask.prefpanedir = Pathname(v).expand_path
       end
     end
   end
