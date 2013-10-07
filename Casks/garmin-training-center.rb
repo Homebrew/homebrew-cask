@@ -1,4 +1,4 @@
-class TrainingCenter < Cask
+class GarminTrainingCenter < Cask
   url 'http://www8.garmin.com/software/TrainingCenterforMac_321.dmg'
   homepage 'http://www.garmin.com/garmin/cms/intosports/training_center'
   version '3.2.1'
