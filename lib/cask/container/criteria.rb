@@ -14,7 +14,8 @@ class Cask::Container::Criteria
     @imageinfo ||= @command.run(
       'hdiutil',
       :args => ['imageinfo', path],
-      :stderr => :silence
+      :stderr => :silence,
+      :print => false
     )
   end
 end
