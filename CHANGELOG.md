@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 0.18.1
+
+Release Date: 2013-10-07
+
+* __Features__
+  - adds `--prefpanedir=` option to link to a different location
+* __Fixes__
+* __Breaking Changes__
+
 ## 0.18.0 - Preference Pane Support
 
 Release Date: 2013-10-07
@@ -7,7 +16,6 @@ Release Date: 2013-10-07
 * __Features__
   - adds support for Preference Pane linking
     - adds `prefpane` keyword in Cask dsl indicates a prefpane to by symlinked to `~/Library/PreferencePanes`
-    - adds `--prefpanedir=` option to link to a different location
   - internal refactor to `Artifact` system; opens up easier implementation path to supporting additional things like widgets
 * __Fixes__
 * __Breaking Changes__
