@@ -20,6 +20,7 @@ require 'cask/locations'
 require 'cask/pkg'
 require 'cask/scopes'
 require 'cask/system_command'
+require 'cask/underscore_supporting_uri'
 
 require 'plist/parser'
 
