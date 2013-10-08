@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 0.18.2
+
+Release Date: 2013-10-07
+
+* __Features__
+* __Fixes__
+ - properly handle underscores ([#981](https://github.com/phinze/homebrew-cask/issues/981))
+* __Breaking Changes__
+
+
 ## 0.18.1
 
 Release Date: 2013-10-07
