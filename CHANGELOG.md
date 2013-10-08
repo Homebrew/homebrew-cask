@@ -1,6 +1,8 @@
 # CHANGELOG
 
-## 0.18.0 (unreleased)
+## 0.18.0 - Preference Pane Support
+
+Release Date: 2013-10-07
 
 * __Features__
   - adds support for Preference Pane linking
