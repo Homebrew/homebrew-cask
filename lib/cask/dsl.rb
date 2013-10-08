@@ -25,6 +25,12 @@ module Cask::DSL
 
     def url(url=nil)
       @url ||= (url && URI.parse(url))
+    rescue URI::InvalidURIError
+      # Ulgly fix for underscores in hostname
+      # As URI::parser is not available in 1.8.7
+      host = url.match(".+\:\/\/([^\/]+)")[1]
+      @url ||= URI.parse(url.sub(host, 'dummy-host'))
+      @url.instance_variable_set('@host', host)
     end
 
     def version(version=nil)
