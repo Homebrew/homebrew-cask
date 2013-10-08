@@ -15,6 +15,20 @@ describe Cask::CLI do
     Cask.appdir.must_equal Pathname('/some/path/bar')
   end
 
+  it "supports setting the prefpanedir" do
+    Cask::CLI.process_options %w{help --prefpanedir=/some/path/foo}
+
+    Cask.prefpanedir.must_equal Pathname('/some/path/foo')
+  end
+
+  it "supports setting the prefpanedir from ENV" do
+    ENV['HOMEBREW_CASK_OPTS'] = "--prefpanedir=/some/path/bar"
+
+    Cask::CLI.process_options %w{help}
+
+    Cask.prefpanedir.must_equal Pathname('/some/path/bar')
+  end
+
   it "allows additional options to be passed through" do
     rest = Cask::CLI.process_options %w{edit foo --create --appdir=/some/path/qux}
 
