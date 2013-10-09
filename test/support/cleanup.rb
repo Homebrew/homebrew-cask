@@ -1,7 +1,11 @@
 module Cask::CleanupHooks
   def after_teardown
     super
-    Cask.all.select(&:installed?).each { |c| Cask::Installer.uninstall(c) }
+    Cask.all.select(&:installed?).each do |cask|
+      Cask::Installer.new(cask).tap do |installer|
+        installer.purge_files
+      end
+    end
   end
 end
 

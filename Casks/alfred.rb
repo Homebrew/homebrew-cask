@@ -1,7 +1,7 @@
 class Alfred < Cask
-  url 'http://cachefly.alfredapp.com/Alfred_2.0.7_205.zip'
+  url 'http://cachefly.alfredapp.com/Alfred_2.0.9_214.zip'
   homepage 'http://www.alfredapp.com/'
-  version '2.0.7_205'
-  sha1 '004c9950bb831c670273f1fdc763e184607e8a43'
+  version '2.0.9_214'
+  sha1 '550cba6dc44250ae5940c3d302cf06e199eb6958'
   link 'Alfred 2.app', 'Alfred Preferences.app'
 end

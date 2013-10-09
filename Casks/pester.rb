@@ -1,7 +1,7 @@
 class Pester < Cask
-  url 'http://sabi.net/nriley/software/Pester-1.1b15.dmg'
+  url 'http://sabi.net/nriley/software/Pester-1.1b17.dmg'
   homepage 'http://sabi.net/nriley/software/index.html#pester'
-  version '1.1b15'
-  sha1 '06aa24ddf39c866e9852c9e70b4c92d8b9a7861d'
+  version '1.1b17'
+  sha1 '0cb20fb60d95e14739bcbe2d2239308e18129b09'
   link 'Pester.app'
 end

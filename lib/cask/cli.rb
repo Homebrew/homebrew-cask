@@ -1,5 +1,19 @@
+class Cask::CLI; end
+
 require 'optparse'
 require 'shellwords'
+
+require 'cask/cli/alfred'
+require 'cask/cli/audit'
+require 'cask/cli/checklinks'
+require 'cask/cli/create'
+require 'cask/cli/edit'
+require 'cask/cli/home'
+require 'cask/cli/info'
+require 'cask/cli/install'
+require 'cask/cli/list'
+require 'cask/cli/search'
+require 'cask/cli/uninstall'
 
 class Cask::CLI
   def self.commands
@@ -42,7 +56,10 @@ class Cask::CLI
   def self.parser
     @parser ||= OptionParser.new do |opts|
       opts.on("--appdir=MANDATORY") do |v|
-        Cask.appdir = Pathname.new File.expand_path(v)
+        Cask.appdir = Pathname(v).expand_path
+      end
+      opts.on("--prefpanedir=MANDATORY") do |v|
+        Cask.prefpanedir = Pathname(v).expand_path
       end
     end
   end

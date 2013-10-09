@@ -1,11 +1,10 @@
 require 'formula'
 
-HOMEBREW_CASK_VERSION = '0.16.2'
+HOMEBREW_CASK_VERSION = '0.18.2'
 
 class BrewCask < Formula
   homepage 'https://github.com/phinze/homebrew-cask/'
   url 'https://github.com/phinze/homebrew-cask.git', :tag => "v#{HOMEBREW_CASK_VERSION}"
-  version HOMEBREW_CASK_VERSION
 
   head 'https://github.com/phinze/homebrew-cask.git', :branch => 'master'
 

@@ -1,7 +1,7 @@
 class MarsEdit < Cask
-  url 'http://www.red-sweater.com/marsedit/MarsEdit3.6.1.zip'
+  url 'http://www.red-sweater.com/marsedit/MarsEdit3.6.2.zip'
   homepage 'http://www.red-sweater.com/marsedit/'
-  version '3.6.1'
-  sha1 'a457d1dcaec4ed0f99bd4b3ebf4f0a411744ddf1'
+  version '3.6.2'
+  sha1 '0b3937da41bfa51a7fd95b41c14a8d35d2cc8751'
   link 'MarsEdit.app'
 end

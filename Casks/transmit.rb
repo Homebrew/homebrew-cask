@@ -1,7 +1,7 @@
 class Transmit < Cask
-  url 'http://www.panic.com/transmit/d/Transmit%204.4.2.zip'
+  url 'http://www.panic.com/transmit/d/Transmit%204.4.3.zip'
   homepage 'http://panic.com/transmit'
-  version '4.4.2'
-  sha1 '6d59753372ecf4abf9dd935eb45b01448fd5ca83'
+  version '4.4.3'
+  sha1 'c66c2e0dcf7ebd7e5b354152f6d9cd57246835e4'
   link 'Transmit.app'
 end

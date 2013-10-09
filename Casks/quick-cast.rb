@@ -1,7 +1,7 @@
 class QuickCast < Cask
-  url 'https://github.com/petetak/QuickCast/releases/download/0.75/QuickCast.zip'
+  url 'https://s3.amazonaws.com/quickcast-app/mac/QuickCast.dmg'
   homepage 'http://quickcast.io/'
-  version '0.75'
-  sha1 '9b8f7f8e82c23520ef8268e339b67d43c7dd706d'
+  version 'latest'
+  no_checksum
   link 'QuickCast.app'
 end
