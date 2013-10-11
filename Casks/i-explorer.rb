@@ -1,7 +1,7 @@
 class IExplorer < Cask
-  url 'http://downloads.macroplant.com/iExplorer-3.2.2.0.dmg'
+  url 'http://downloads.macroplant.com/iExplorer-3.2.2.4b.dmg'
   homepage 'http://www.macroplant.com/'
-  version '3.2.2.0'
-  sha1 '12c27e47611b1c34276eb53baa68a1e6bcf77a1d'
+  version '3.2.2.4b'
+  sha1 '2a26a08506caae91ddbefc7b2a12ec2b811d5adc'
   link 'iExplorer.app'
 end
