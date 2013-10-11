@@ -1,4 +1,4 @@
-class Pycharm < Cask
+class PycharmPro < Cask
   url 'http://download-ln.jetbrains.com/python/pycharm-professional-3.0.dmg'
   homepage 'http://www.jetbrains.com/pycharm/'
   version '3.0.0'
