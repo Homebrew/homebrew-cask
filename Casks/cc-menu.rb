@@ -3,5 +3,5 @@ class CcMenu < Cask
   homepage 'http://ccmenu.sourceforge.net/'
   version '1.6.3'
   sha1 'dea62d5597d5ebe0cb0e0c5b07de30708cd14f39'
-  link 'CC Menu.app'
+  link 'CCMenu.app'
 end
