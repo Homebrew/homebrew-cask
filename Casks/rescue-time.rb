@@ -3,5 +3,5 @@ class RescueTime < Cask
   homepage 'https://www.rescuetime.com'
   version 'latest'
   no_checksum
-  link 'RescueTime'
+  link 'RescueTime.app'
 end
