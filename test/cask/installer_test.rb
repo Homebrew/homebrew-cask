@@ -103,6 +103,17 @@ describe Cask::Installer do
       pkg = dest_path/'Naked.pkg'
       pkg.must_be :file?
     end
+
+    it "works fine with a nested container" do
+      nested_app = Cask.load('nested-app')
+
+      shutup do
+        Cask::Installer.new(nested_app).install
+      end
+
+      dest_path = Cask.appdir/'MyNestedApp.app'
+      TestHelper.valid_alias?(dest_path).must_equal true
+    end
   end
 
   describe "uninstall" do
