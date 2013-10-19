@@ -1,14 +1,33 @@
 # CHANGELOG
 
+## 0.18.3
+
+Release Date: 2013-10-19
+
+* __Features__
+* __Fixes__
+  - [#1168][] - support systems that have `ln` overridden with GNU version <3 [@wenbin1989][]
+  - [#1181][] - fix a small bug that could stop the check link process <3 [@andizzle][]
+
+[#1168]: https://github.com/phinze/homebrew-cask/issues/1168
+[@wenbin1989]: https://github.com/wenbin1989
+[#1181]: https://github.com/phinze/homebrew-cask/pull/1181
+[@andizzle]: https://github.com/andizzle
+
+* __Breaking Changes__
+
 ## 0.18.2
 
 Release Date: 2013-10-07
 
 * __Features__
 * __Fixes__
- - properly handle underscores ([#981](https://github.com/phinze/homebrew-cask/issues/981))
+  - [#981][] - properly handle underscores in URLs <3 [@sheerun][]
 * __Breaking Changes__
 
+
+[#981]: https://github.com/phinze/homebrew-cask/issues/981
+[@sheerun]: https://github.com/sheerun
 
 ## 0.18.1
 
