@@ -12,7 +12,7 @@ class Cask::Installer
     end
 
     download
-    extract_container
+    extract_primary_container
     install_artifacts
 
     ohai "Success! #{@cask} installed to #{@cask.destination_path}"
@@ -26,11 +26,11 @@ class Cask::Installer
     @downloaded_path = download.perform
   end
 
-  def extract_container
+  def extract_primary_container
     FileUtils.mkdir_p @cask.destination_path
     container = Cask::Container.for_path(@downloaded_path, @command)
     unless container
-      raise "uh oh, could not identify container for #{@downloaded_path}"
+      raise "uh oh, could not identify primary container for #{@downloaded_path}"
     end
     container.new(@cask, @downloaded_path, @command).extract
   end
