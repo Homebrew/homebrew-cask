@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 0.19.0
+
+* __Features__
+  - [#602][] support for nested containers
+* __Fixes__
+* __Breaking Changes__
+
+[#602]: https://github.com/phinze/homebrew-cask/issues/602
+
+
 ## 0.18.3
 
 * __Features__
