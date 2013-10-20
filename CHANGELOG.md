@@ -1,18 +1,39 @@
 # CHANGELOG
 
-## 0.18.2
+## 0.19.0
 
-Release Date: 2013-10-07
+* __Features__
+  - [#602][] support for nested containers
+* __Fixes__
+* __Breaking Changes__
+
+[#602]: https://github.com/phinze/homebrew-cask/issues/602
+
+
+## 0.18.3
 
 * __Features__
 * __Fixes__
- - properly handle underscores ([#981](https://github.com/phinze/homebrew-cask/issues/981))
+  - [#1168][] - support systems that have `ln` overridden with GNU version <3 [@wenbin1989][]
+  - [#1181][] - fix a small bug that could stop the check link process <3 [@andizzle][]
 * __Breaking Changes__
 
+[#1168]: https://github.com/phinze/homebrew-cask/issues/1168
+[@wenbin1989]: https://github.com/wenbin1989
+[#1181]: https://github.com/phinze/homebrew-cask/pull/1181
+[@andizzle]: https://github.com/andizzle
+
+## 0.18.2
+
+* __Features__
+* __Fixes__
+  - [#981][] - properly handle underscores in URLs <3 [@sheerun][]
+* __Breaking Changes__
+
+[#981]: https://github.com/phinze/homebrew-cask/issues/981
+[@sheerun]: https://github.com/sheerun
 
 ## 0.18.1
-
-Release Date: 2013-10-07
 
 * __Features__
   - adds `--prefpanedir=` option to link to a different location
@@ -20,8 +41,6 @@ Release Date: 2013-10-07
 * __Breaking Changes__
 
 ## 0.18.0 - Preference Pane Support
-
-Release Date: 2013-10-07
 
 * __Features__
   - adds support for Preference Pane linking
@@ -38,7 +57,6 @@ Release Date: 2013-10-07
 * __Fixes__
   - Bugfixes addressing ([#1105](https://github.com/phinze/homebrew-cask/issues/1105))
 * __Breaking Changes__
-
 
 ## 0.17.1
 
@@ -61,6 +79,7 @@ Release Date: 2013-10-07
 * __Breaking Changes__
 
 ## 0.16.{1,2}
+
 * __Features__
 * __Fixes__
   - homebrew made some changes ([#1015](https://github.com/phinze/homebrew-cask/issues/1015)) that broke our integration; this bugfix release brings us back into parity with the mothership.
@@ -69,6 +88,7 @@ Release Date: 2013-10-07
 Thanks @billwanjohi for his work to fix this.
 
 ## 0.16.0
+
 * __Features__
   - Adds ability to install a cask directly from a URL:
     `brew cask install http://example.com/casks/my-personal-app.rb`
@@ -77,6 +97,7 @@ Thanks @billwanjohi for his work to fix this.
 * __Breaking Changes__
 
 ## 0.15.0
+
 * __Features__
   - Adds `.pkg` install/uninstall support
 * __Fixes__

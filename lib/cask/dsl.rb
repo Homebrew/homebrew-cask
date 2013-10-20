@@ -36,10 +36,11 @@ module Cask::DSL
     end
 
     ARTIFACT_TYPES = [
-      :link,
-      :prefpane,
       :install,
-      :uninstall
+      :link,
+      :nested_container,
+      :prefpane,
+      :uninstall,
     ]
 
     ARTIFACT_TYPES.each do |type|
