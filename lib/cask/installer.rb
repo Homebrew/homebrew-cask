@@ -11,13 +11,16 @@ class Cask::Installer
       raise CaskAlreadyInstalledError.new(@cask)
     end
 
+    print_caveats
+
     download
     extract_primary_container
     install_artifacts
 
     ohai "Success! #{@cask} installed to #{@cask.destination_path}"
-
-    print_caveats
+  rescue
+    purge_files
+    raise
   end
 
 
@@ -61,6 +64,6 @@ class Cask::Installer
   end
 
   def purge_files
-    @cask.destination_path.rmtree
+    @cask.destination_path.rmtree if @cask.destination_path.exist?
   end
 end

@@ -17,7 +17,7 @@ class Cask::Artifact::App < Cask::Artifact::Base
 
     return unless preflight_checks(source, target)
     ohai "Linking #{source.basename} to #{target}"
-    @command.run('/bin/ln', :args => ['-hfs', source, target])
+    @command.run!('/bin/ln', :args => ['-hfs', source, target])
   end
 
   def preflight_checks(source, target)

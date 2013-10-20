@@ -31,6 +31,10 @@ class Cask::FakeSystemCommand
       @responses[command]
     end
   end
+
+  def self.run!(*args)
+    run(*args)
+  end
 end
 
 module FakeSystemCommandHooks
