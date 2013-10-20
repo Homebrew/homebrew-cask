@@ -1,9 +1,21 @@
 # CHANGELOG
 
+## 0.19.1
+
+* __Features__
+* __Fixes__
+  - [#954][] - preserve environment when running `sudo` <3 [@kdeldycke][]
+  - [#1247][] - clean up on install failure; raise an explicit error when a command fail for better feedback
+* __Breaking Changes__
+
+[#954]: https://github.com/phinze/homebrew-cask/issues/954
+[@kdeldycke]: https://github.com/phinze/homebrew-cask/commit/f787afdc26cb5a5b81c2d6142d93c77b7aa5d28e
+[#1247]: https://github.com/phinze/homebrew-cask/issues/1247
+
 ## 0.19.0
 
 * __Features__
-  - [#602][] support for nested containers
+  - [#602][] - support for nested containers
 * __Fixes__
 * __Breaking Changes__
 
