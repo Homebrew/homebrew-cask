@@ -20,11 +20,11 @@ class Cask::Container::Dmg < Cask::Container::Base
   end
 
   def mount!
-    plist = @command.run('hdiutil', :args => [
-      'mount',
-      '-plist', '-nobrowse', '-readonly', '-noidme', '-mountrandom',
-      '/tmp', @path
-    ], :plist => true, :input => ['y'])
+    plist = @command.run!('hdiutil',
+      :args => %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp] + [@path],
+      :input => %w[y],
+      :plist => true
+    )
     @mounts = mounts_from_plist(plist)
   end
 
@@ -42,7 +42,7 @@ class Cask::Container::Dmg < Cask::Container::Base
 
   def eject!
     @mounts.each do |mount|
-      @command.run('hdiutil', :args => ['eject', mount])
+      @command.run!('hdiutil', :args => ['eject', mount])
     end
   end
 end
