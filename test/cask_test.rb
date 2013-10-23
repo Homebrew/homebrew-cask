@@ -60,5 +60,10 @@ describe "Cask" do
       GamesXChange = Class.new(Cask)
       GamesXChange.title.must_equal 'games-x-change'
     end
+
+    it "properly dasherizes constants with an integer at the end" do
+      SuperApp3 = Class.new(Cask)
+      SuperApp3.title.must_equal 'super-app-3'
+    end
   end
 end

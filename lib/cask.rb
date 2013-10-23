@@ -101,7 +101,7 @@ class Cask
   end
 
   def self.title
-    self.name.gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase
+    self.name.gsub(/([a-zA-Z\d])([A-Z\d])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z\d])/,'\1-\2').downcase
   end
 
   attr_reader :title
