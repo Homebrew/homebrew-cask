@@ -13,7 +13,7 @@ describe Cask::Artifact::Pkg do
       pkg = Cask::Artifact::Pkg.new(@cask, Cask::FakeSystemCommand)
 
       expected_command = "sudo -E 'installer' '-pkg' '#{@cask.destination_path/'MyFancyPkg'/'Fancy.pkg'}' '-target' '/' 2>&1"
-      Cask::FakeSystemCommand.fake_response_for(expected_command)
+      Cask::FakeSystemCommand.stubs_command(expected_command)
 
       shutup do
         pkg.install
@@ -28,7 +28,7 @@ describe Cask::Artifact::Pkg do
       pkg = Cask::Artifact::Pkg.new(@cask, Cask::FakeSystemCommand)
 
       expected_command = "sudo -E '#{@cask.destination_path/'MyFancyPkg'/'FancyUninstaller.tool'}' '--please' 2>&1"
-      Cask::FakeSystemCommand.fake_response_for(expected_command)
+      Cask::FakeSystemCommand.stubs_command(expected_command)
 
       shutup do
         pkg.uninstall
@@ -41,7 +41,7 @@ describe Cask::Artifact::Pkg do
       cask = Cask.load('with-pkgutil-uninstall')
       pkg = Cask::Artifact::Pkg.new(cask, Cask::FakeSystemCommand)
 
-      Cask::FakeSystemCommand.fake_response_for(
+      Cask::FakeSystemCommand.stubs_command(
         %Q(pkgutil --pkgs="my.fancy.package.*" 2>&1),
         [
           'my.fancy.package.main',
@@ -49,14 +49,14 @@ describe Cask::Artifact::Pkg do
         ].join("\n")
       )
 
-      Cask::FakeSystemCommand.fake_response_for(
+      Cask::FakeSystemCommand.stubs_command(
         %Q(pkgutil '--only-files' '--files' 'my.fancy.package.main' 2>&1),
         [
           'fancy/bin/fancy.exe',
           'fancy/var/fancy.data',
         ].join("\n")
       )
-      Cask::FakeSystemCommand.fake_response_for(
+      Cask::FakeSystemCommand.stubs_command(
         %Q(pkgutil '--only-dirs' '--files' 'my.fancy.package.main' 2>&1),
         [
           'fancy',
@@ -64,7 +64,7 @@ describe Cask::Artifact::Pkg do
           'fancy/var',
         ].join("\n")
       )
-      Cask::FakeSystemCommand.fake_response_for(
+      Cask::FakeSystemCommand.stubs_command(
         %Q(pkgutil '--pkg-info-plist' 'my.fancy.package.main' 2>&1),
         <<-PLIST
 <?xml version="1.0" encoding="UTF-8"?>
@@ -79,10 +79,10 @@ describe Cask::Artifact::Pkg do
 </plist>
         PLIST
       )
-      Cask::FakeSystemCommand.fake_response_for(%Q(sudo -E 'kextunload' '-b' 'my.fancy.package.kernelextension' 2>&1))
-      Cask::FakeSystemCommand.fake_response_for(%Q(sudo -E 'pkgutil' '--forget' 'my.fancy.package.main' 2>&1))
+      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E 'kextunload' '-b' 'my.fancy.package.kernelextension' 2>&1))
+      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E 'pkgutil' '--forget' 'my.fancy.package.main' 2>&1))
 
-      Cask::FakeSystemCommand.fake_response_for(
+      Cask::FakeSystemCommand.stubs_command(
         %Q(pkgutil '--only-files' '--files' 'my.fancy.package.agent' 2>&1),
         [
           'fancy/agent/fancy-agent.exe',
@@ -90,14 +90,14 @@ describe Cask::Artifact::Pkg do
           'fancy/agent/fancy-agent.log',
         ].join("\n")
       )
-      Cask::FakeSystemCommand.fake_response_for(
+      Cask::FakeSystemCommand.stubs_command(
         %Q(pkgutil '--only-dirs' '--files' 'my.fancy.package.agent' 2>&1),
         [
           'fancy',
           'fancy/agent',
         ].join("\n")
       )
-      Cask::FakeSystemCommand.fake_response_for(
+      Cask::FakeSystemCommand.stubs_command(
         %Q(pkgutil '--pkg-info-plist' 'my.fancy.package.agent' 2>&1),
         <<-PLIST
 <?xml version="1.0" encoding="UTF-8"?>
@@ -119,10 +119,10 @@ describe Cask::Artifact::Pkg do
         /tmp/fancy/bin
         /tmp/fancy/var
       ].each do |dir|
-        Cask::FakeSystemCommand.fake_response_for(%Q(sudo -E 'chmod' '777' '#{dir}' 2>&1))
+        Cask::FakeSystemCommand.stubs_command(%Q(sudo -E 'chmod' '777' '#{dir}' 2>&1))
       end
 
-      Cask::FakeSystemCommand.fake_response_for(%Q(sudo -E 'pkgutil' '--forget' 'my.fancy.package.agent' 2>&1))
+      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E 'pkgutil' '--forget' 'my.fancy.package.agent' 2>&1))
 
       # No assertions after call since all assertions are implicit from the interactions setup above.
       # TODO: verify rmdir / rm commands (requires setting up actual file tree or faking out .exists?
