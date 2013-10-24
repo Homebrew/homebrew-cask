@@ -85,7 +85,9 @@ require 'support/fake_fetcher'
 require 'support/fake_appdir'
 require 'support/fake_system_command'
 require 'support/cleanup'
+require 'support/never_sudo_system_command'
 require 'tmpdir'
+require 'tempfile'
 
 # pretend like we installed the cask tap
 project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))

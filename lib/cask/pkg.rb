@@ -7,7 +7,7 @@ class Cask::Pkg
 
   attr_reader :package_id
 
-  def initialize(package_id, command)
+  def initialize(package_id, command=Cask::SystemCommand)
     @package_id = package_id
     @command = command
   end
@@ -17,10 +17,13 @@ class Cask::Pkg
       @command.run!('rm', :args => [file], :sudo => true) if file.exist?
     end
     _deepest_path_first(dirs).each do |dir|
-      @command.run!('chmod', :args => ['777', dir], :sudo => true)
-      _clean_symlinks(dir)
-      _clean_ds_store(dir)
-      @command.run!('rmdir', :args => [dir], :sudo => true) if dir.exist? && dir.children.empty?
+      if dir.exist?
+        _with_full_permissions(dir) do
+          _clean_broken_symlinks(dir)
+          _clean_ds_store(dir)
+          dir.rmdir if dir.children.empty?
+        end
+      end
     end
     forget
   end
@@ -52,24 +55,39 @@ class Cask::Pkg
     )
   end
 
+  def _with_full_permissions(path, &block)
+    original_mode = (path.stat.mode % 01000).to_s(8)
+    @command.run!('chmod', :args => ['777', path], :sudo => true)
+    block.call
+  ensure
+    if path.exist? # block may have removed dir
+      @command.run!('chmod', :args => [original_mode, path], :sudo => true)
+    end
+  end
+
   def _deepest_path_first(paths)
     paths.sort do |path_a, path_b|
       path_b.to_s.split('/').count <=> path_a.to_s.split('/').count
     end
   end
 
-  def _clean_symlinks(dir)
-    # Some pkgs leave broken symlinks hanging around; we clean them out before
-    # attempting to rmdir to prevent extra cruft from lying around after
-    # uninstall
-    return unless dir.exist?
+  # Some pkgs leave broken symlinks hanging around; we clean them out before
+  # attempting to rmdir to prevent extra cruft from lying around after
+  # uninstall
+  def _clean_broken_symlinks(dir)
     dir.children.each do |child|
-      @command.run!('rm', :args => [child], :sudo => true) if child.symlink?
+      if _broken_symlink?(child)
+        @command.run!('rm', :args => [child], :sudo => true)
+      end
     end
   end
 
   def _clean_ds_store(dir)
     ds_store = dir.join('.DS_Store')
     @command.run!('rm', :args => [ds_store], :sudo => true) if ds_store.exist?
+  end
+
+  def _broken_symlink?(path)
+    path.symlink? && !path.readlink.exist?
   end
 end

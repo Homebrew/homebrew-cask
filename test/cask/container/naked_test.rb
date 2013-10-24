@@ -12,7 +12,7 @@ describe Cask::Container::Naked do
     path                 = '/tmp/downloads/kevin-spacey-1.2.pkg'
     expected_destination = cask.destination_path.join('kevin spacey.pkg')
     expected_command     = %Q(ditto '#{path}' '#{expected_destination}' 2>&1)
-    Cask::FakeSystemCommand.fake_response_for(expected_command)
+    Cask::FakeSystemCommand.stubs_command(expected_command)
 
     container = Cask::Container::Naked.new(cask, path, Cask::FakeSystemCommand)
     container.extract
