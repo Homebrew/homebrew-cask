@@ -1,7 +1,7 @@
 class Feeder < Cask
-  url 'http://reinventedsoftware.com/feeder/downloads/Feeder_2.4.dmg'
+  url 'http://reinventedsoftware.com/feeder/downloads/Feeder_2.4.1.dmg'
   homepage 'http://reinventedsoftware.com/feeder/'
-  version '2.4'
-  sha1 'fa7c00f4454b207f5553c3e9c58c4db4d60ff51a'
+  version '2.4.1'
+  sha1 'cc7df00b98c8827e55d54174ce37024b5ddd2c6c'
   link 'Feeder.app'
 end

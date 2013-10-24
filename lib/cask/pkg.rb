@@ -14,29 +14,29 @@ class Cask::Pkg
 
   def uninstall
     files.each do |file|
-      @command.run('rm', :args => [file], :sudo => true) if file.exist?
+      @command.run!('rm', :args => [file], :sudo => true) if file.exist?
     end
     _deepest_path_first(dirs).each do |dir|
-      @command.run('chmod', :args => ['777', dir], :sudo => true)
+      @command.run!('chmod', :args => ['777', dir], :sudo => true)
       _clean_symlinks(dir)
       _clean_ds_store(dir)
-      @command.run('rmdir', :args => [dir], :sudo => true) if dir.exist? && dir.children.empty?
+      @command.run!('rmdir', :args => [dir], :sudo => true) if dir.exist? && dir.children.empty?
     end
     forget
   end
 
   def forget
-    @command.run('pkgutil', :args => ['--forget', package_id], :sudo => true)
+    @command.run!('pkgutil', :args => ['--forget', package_id], :sudo => true)
   end
 
   def dirs
-    @command.run('pkgutil',
+    @command.run!('pkgutil',
       :args => ['--only-dirs', '--files', package_id]
     ).split("\n").map { |path| root.join(path) }
   end
 
   def files
-    @command.run('pkgutil',
+    @command.run!('pkgutil',
       :args => ['--only-files', '--files', package_id]
     ).split("\n").map { |path| root.join(path) }
   end
@@ -46,7 +46,7 @@ class Cask::Pkg
   end
 
   def info
-    @command.run('pkgutil',
+    @command.run!('pkgutil',
       :args => ['--pkg-info-plist', package_id],
       :plist => true
     )
@@ -64,14 +64,12 @@ class Cask::Pkg
     # uninstall
     return unless dir.exist?
     dir.children.each do |child|
-      @command.run('rm', :args => [child], :sudo => true) if child.symlink?
+      @command.run!('rm', :args => [child], :sudo => true) if child.symlink?
     end
   end
 
   def _clean_ds_store(dir)
-    # Clean .DS_Store files:
-    # https://en.wikipedia.org/wiki/.DS_Store
     ds_store = dir.join('.DS_Store')
-    @command.run('rm', :args => [ds_store], :sudo => true) if ds_store.exist?
+    @command.run!('rm', :args => [ds_store], :sudo => true) if ds_store.exist?
   end
 end

@@ -1,7 +1,7 @@
 class KomodoEdit < Cask
-  url 'http://downloads.activestate.com/Komodo/releases/8.5.0/Komodo-Edit-8.5.0-13638-macosx-x86_64.dmg'
+  url 'http://downloads.activestate.com/Komodo/releases/8.5.1/Komodo-Edit-8.5.1-13781-macosx-x86_64.dmg'
   homepage 'http://www.activestate.com/komodo-edit'
-  version '8.5'
-  sha1 'b92a670b711e59f1d17772ae7b3f67c946cb50cc'
+  version '8.5.1'
+  sha1 '960ddeac2e0e81def7c3b297c08097ff0b193cb6'
   link 'Komodo Edit 8.app'
 end

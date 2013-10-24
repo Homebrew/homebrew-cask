@@ -17,7 +17,7 @@ class Cask::Artifact::Prefpane < Cask::Artifact::Base
 
     return unless preflight_checks(source, target)
     ohai "Linking prefPane #{source.basename} to #{target}"
-    @command.run('ln', :args => ['-hfs', source, target])
+    @command.run!('/bin/ln', :args => ['-hfs', source, target])
   end
 
   def preflight_checks(source, target)

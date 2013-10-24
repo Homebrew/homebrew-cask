@@ -1,7 +1,7 @@
 class LightTable < Cask
-  url 'https://d35ac8ww5dfjyg.cloudfront.net/playground/bins/0.5.4/LightTableMac.zip'
+  url 'https://d35ac8ww5dfjyg.cloudfront.net/playground/bins/0.5.10/LightTableMac.zip'
   homepage 'http://www.lighttable.com/'
-  version '0.5.4'
-  sha1 'dd704ed5681f9b6bdfe38f8e31c4a92f84192c12'
-  link 'LightTable.app'
+  version '0.5.10'
+  sha1 '3e09d84f2fba65d648801ac640c1ada2df98a255'
+  link 'LightTable/LightTable.app'
 end

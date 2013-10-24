@@ -1,8 +1,8 @@
 class Unity3d < Cask
-  url 'http://netstorage.unity3d.com/unity/unity-4.2.1.dmg'
+  url 'http://netstorage.unity3d.com/unity/unity-4.2.2.dmg'
   homepage 'http://unity3d.com/unity/'
-  version '4.2.1'
-  sha1 'cbca9a117d474608a56e6c7a994140ae41a1f03b'
+  version '4.2.2'
+  sha1 '099ea47e16ccf7954ffc59b756c345d0137c8f9c'
   install 'Unity.pkg'
   uninstall(
     :pkgutil => 'com.unity3d.*'
