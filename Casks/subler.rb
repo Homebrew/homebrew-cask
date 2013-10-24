@@ -1,7 +1,7 @@
 class Subler < Cask
-  url 'https://subler.googlecode.com/files/Subler-0-23.zip'
+  url 'https://subler.googlecode.com/files/Subler-0.24.zip'
   homepage 'https://code.google.com/p/subler/'
-  version '0.23'
-  sha1 'c95a49b4aa07a820547f1db5bb444fee8c865750'
+  version '0.24'
+  sha1 '16750ed009b37a54a047f528e52525836651fdba'
   link 'Subler.app'
 end
