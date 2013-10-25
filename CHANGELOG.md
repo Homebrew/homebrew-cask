@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## 0.19.3
+
+* __Features__
+* __Fixes__
+  - [#1274][] - various fixes to prevent evil from happening during certain pkg uninstall processes
+* __Breaking Changes__
+
+[#1274]: https://github.com/phinze/homebrew-cask/issues/1247
+
+## 0.19.2
+
+* __Features__
+* __Fixes__
+  - fix bug introduced in `0.19.1` where a double-install would result in a silent uninstall of a cask
+* __Breaking Changes__
+
 ## 0.19.1
 
 * __Features__

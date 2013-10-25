@@ -13,14 +13,16 @@ class Cask::Installer
 
     print_caveats
 
-    download
-    extract_primary_container
-    install_artifacts
+    begin
+      download
+      extract_primary_container
+      install_artifacts
+    rescue
+      purge_files
+      raise
+    end
 
     ohai "Success! #{@cask} installed to #{@cask.destination_path}"
-  rescue
-    purge_files
-    raise
   end
 
 
