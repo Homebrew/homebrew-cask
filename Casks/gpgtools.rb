@@ -1,8 +1,8 @@
 class Gpgtools < Cask
-  url 'https://s3.amazonaws.com/gpgtools/GPG%20Suite%20-%202013.08.06.dmg'
+  url 'https://releases.gpgtools.org/GPG%20Suite%20-%202013.10.22.dmg'
   homepage 'https://gpgtools.org/index.html'
-  version '2013.08.06'
-  sha1 '19ff2dbace8d9b28b9a71ada914d84c0ac7a41d0'
+  version '2013.10.22'
+  sha1 'ac7a636bfee1027d8f43a12a82eea54e7566dcb8'
   install 'Install.pkg'
   uninstall(
     :pkgutil => 'org.gpgtools.*'
