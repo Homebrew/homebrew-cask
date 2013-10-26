@@ -3,5 +3,5 @@ class EclipseIde < Cask
   homepage 'http://eclipse.org'
   version '4.3'
   sha1 'c9aeb9ba9db87d8d5c81b6abf9c11283f15a0cd2'
-  link 'Eclipse.app'
+  link 'eclipse/Eclipse.app'
 end
