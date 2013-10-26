@@ -78,7 +78,7 @@ class Cask::CLI::Alfred
   end
 
   def self.alfred_installed?
-    alfred_preference('version') =~ /^[0-9]\.[0-9]\.[0-9]$/
+    alfred_preference('version') =~ /^[0-9]\.[0-9](\.[0-9])?$/
   end
 
   def self.linked?
