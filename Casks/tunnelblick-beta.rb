@@ -1,7 +1,7 @@
 class TunnelblickBeta < Cask
-  url 'http://downloads.sourceforge.net/project/tunnelblick/All%20files/Tunnelblick_3.4beta12.dmg'
+  url 'http://downloads.sourceforge.net/project/tunnelblick/All%20files/Tunnelblick_3.4beta14.dmg'
   homepage 'https://code.google.com/p/tunnelblick/'
-  version '3.4beta12'
-  sha1 '4b19a506a1f40bada56a6936660992ed1de9b0a1'
+  version '3.4beta14'
+  sha1 'de32db3d94bf0a3b77247892643cbeb984e2106f'
   link 'Tunnelblick.app'
 end
