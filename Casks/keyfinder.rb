@@ -3,5 +3,5 @@ class Keyfinder < Cask
   homepage 'http://www.ibrahimshaath.co.uk/keyfinder/'
   version 'latest'
   no_checksum
-  link 'KeyFinder.app'
+  link 'KeyFinder-OSX/KeyFinder.app'
 end
