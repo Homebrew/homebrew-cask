@@ -1,7 +1,7 @@
 class MysqlWorkbench < Cask
-  url 'http://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-gpl-5.2.47-osx-i686.dmg'
+  url 'http://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-6.0.7.1-osx-i686.dmg'
   homepage 'http://www.mysql.com/products/workbench'
-  version '5.2.47'
-  sha1 '54b814b418ce8513efdf2a1ac48f4deace867dc3'
+  version '6.0.7.1'
+  sha1 '9989e1ece9459419b965eeb3912be0394b5570df'
   link 'MySQLWorkbench.app'
 end
