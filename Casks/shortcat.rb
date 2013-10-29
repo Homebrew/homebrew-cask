@@ -1,7 +1,7 @@
 class Shortcat < Cask
-  url 'https://files.shortcatapp.com/v0.5.3/Shortcat.zip'
+  url 'https://files.shortcatapp.com/v0.6.1/Shortcat.zip'
   homepage 'http://shortcatapp.com/'
-  version '0.5.3'
-  sha1 '357e1e3c40b0dffdda9fe92700072472f39019b3'
+  version '0.6.1'
+  sha1 'd99bf7374d37d04333e9dc288ff3deea2e7621c2'
   link 'Shortcat.app'
 end
