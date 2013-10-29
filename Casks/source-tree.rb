@@ -1,4 +1,4 @@
-class Sourcetree < Cask
+class SourceTree < Cask
   url 'http://downloads.atlassian.com/software/sourcetree/SourceTree_1.7.3.dmg'
   homepage 'http://www.sourcetreeapp.com/'
   version '1.7.3'
