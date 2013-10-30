@@ -73,6 +73,18 @@ class TestHelper
     candidate.readlink.exist?
   end
 
+  def self.not_nil?(candidate)
+    not candidate.nil?
+  end
+
+  def self.is_equal?(first, second)
+    first == second
+  end
+
+  def self.isnt_equal?(first, second)
+    not is_equal?(first, second)
+  end
+
   def self.install_without_artifacts(cask)
     Cask::Installer.new(cask).tap do |i|
       shutup { i.download }
