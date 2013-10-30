@@ -4,5 +4,6 @@ class GoogleHangouts < Cask
   version 'latest'
   no_checksum
   install 'Google Voice and Video.pkg'
-  uninstall :pkgutil => 'com.google.pkg.GoogleVoiceAndVideo'
+  uninstall :script => '/usr/bin/open',
+            :args => %w[/Library/Application\ Support/Google/GoogleVoiceAndVideoUninstaller.app/Contents/MacOS/GoogleVoiceAndVideoUninstaller]
 end
