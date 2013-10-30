@@ -13,7 +13,7 @@ class Cask::CLI::Fetch
   end
 
   def self.help
-    "grabs the installer to CASK_FETCH_DIR, or the current directory if undefined, or finally (as a fallback) to ~/Downloads/Cask"
+    "downloads and copies a Cask's installer to CASK_FETCH_DIR, or ~/Downloads/Cask if undefined, or finally (as a fallback) to the current directory."
   end
 
   def self.grab(cask, dest)
