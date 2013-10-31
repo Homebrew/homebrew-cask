@@ -79,6 +79,10 @@ Fill in the following fields for your Cask:
 | `install`          | relative path to `pkg` that should be run to install the application
 | `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see "Uninstall Support" for more information)
 
+### Naming convention
+
+Please, be sure to follow this [issue](https://github.com/phinze/homebrew-cask/issues/365) to name your cask correctly.
+
 ### Uninstall Support
 
 Since OS X has no standard uninstall behavior, there's a wide variety of
