@@ -1,7 +1,7 @@
 class AirmailBeta < Cask
-  url 'https://dl0tgz6ee3upo.cloudfront.net/production/app/builds/000/636/568/original/e513b517ecc42f1d36ad9fe51766622c/AirMail_Beta.zip'
+  url 'https://dl0tgz6ee3upo.cloudfront.net/production/app/builds/000/654/561/original/4fb8e021b4f6308a8399c956b56980d9/AirMail_Beta.zip'
   homepage 'http://airmailapp.com/'
-  version '1.2(212)'
-  sha1 '68406f85b8a7c74027720aca393ad4a328a73ab5'
+  version '1.2.1(213)'
+  sha1 'd984271a4ee72ddc5808682634d0bc617dc847bc'
   link 'AirMail Beta.app'
 end
