@@ -1,7 +1,7 @@
 class AirServer < Cask
-  url 'http://dl.airserver.com/mac/AirServer-4.7.1.dmg'
+  url 'http://dl.airserver.com/mac/AirServer-4.8.1.dmg'
   homepage 'http://www.airserver.com'
-  version '4.7.1'
-  sha1 '47ef78b9b28b875a1f3197ff79964906b9a2e100'
+  version '4.8.1'
+  sha1 'df63d016780d8e2881193b73b121d5b418e7d86f'
   link 'AirServer.app'
 end
