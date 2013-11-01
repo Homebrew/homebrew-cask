@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 0.19.4
+
+* __Features__
+* __Fixes__
+  - [#1274][] - fix permissions problems on certain pkg uninstalls
+* __Breaking Changes__
+
+[#1274]: https://github.com/phinze/homebrew-cask/issues/1374
+
 ## 0.19.3
 
 * __Features__
