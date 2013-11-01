@@ -21,7 +21,7 @@ class Cask::Pkg
         _with_full_permissions(dir) do
           _clean_broken_symlinks(dir)
           _clean_ds_store(dir)
-          dir.rmdir if dir.children.empty?
+          _rmdir(dir)
         end
       end
     end
@@ -53,6 +53,12 @@ class Cask::Pkg
       :args => ['--pkg-info-plist', package_id],
       :plist => true
     )
+  end
+
+  def _rmdir(path)
+    if path.children.empty?
+      @command.run!('rmdir', :args => [path], :sudo => true)
+    end
   end
 
   def _with_full_permissions(path, &block)
