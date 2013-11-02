@@ -3,5 +3,10 @@ class MenuMeters < Cask
   homepage 'http://www.ragingmenace.com/software/menumeters/'
   version 'latest'
   no_checksum
-  install 'MenuMeters Installer.app'
+  link 'MenuMeters Installer.app'
+
+  def caveats; <<-EOS.undent
+    You need to run #{destination_path/'MenuMeters Installer.app'} to actually install MenuMetres
+    EOS
+  end
 end
