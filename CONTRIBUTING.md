@@ -79,9 +79,62 @@ Fill in the following fields for your Cask:
 | `install`          | relative path to `pkg` that should be run to install the application
 | `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see "Uninstall Support" for more information)
 
-### Naming convention
+### Naming Casks
 
-Please, be sure to follow this [issue](https://github.com/phinze/homebrew-cask/issues/365) to name your cask correctly.
+We try to maintain a consistent naming policy so everything stays clean and predictable.
+
+#### Start from the app's canonical name
+
+  * do your best to find the canonical name for the title of the app you're submitting a cask for
+  * however the author writes the app name is how it should be styled; this can usually be found on the author's website or within the application itself;
+  * pay attention to details, for example: `"Git Hub" != "git_hub" != "GitHub"`
+
+#### Cask name
+
+A Cask's "name" is its primary identifier in our project. It's the string people will use to interact with this Cask on their system.
+
+To get from an app's canonical name to a Cask name:
+
+  * all lower case
+  * spaces become hyphens
+  * digits stay digits
+  * examples
+
+Casks are stored in a ruby file matching their name.
+
+#### Cask class
+
+Casks are implemented as Ruby classes, so a Cask's "class" needs to be a valid Ruby class name.
+
+When going from a Cask's __name__ to its __class name__:
+
+  * UpperCamelCased
+  * wherever a hyphen occurs in the __Cask name__, the __class__ has a case change
+  * invalid characters are replaced with english word equivalents
+
+
+#### Cask Naming Examples
+
+These illustrate most of the naming rules in our policy.
+
+Canonical App Name | Cask Name           | Cask Class
+-------------------|---------------------|------------------------
+Audio Hijack Pro   | `audio-hijack-pro`  | `AudioHijackPro`
+VLC                | `vlc`               | `Vlc`
+BetterTouchTool    | `bettertouchtool`   | `Bettertouchtool`
+iTerm2             | `iterm2`            | `Iterm2`
+Akai LPK25 Editor  | `akai-lpk25-editor` | `AkaiLpk25Editor`
+Sublime Text 3     | `sublime-text-3`    | `SublimeText3`
+1Password          | `1password`         | `OnePassword` (see __NAMING NOTE__)
+
+
+#### NAMING NOTE
+
+When a Cask's _name_ does not map to a valid ruby class (like when it starts with a number) there's an incoming feature to allow Cask _classes_ to indicate the proper name using a keyword.
+
+This feature is not yet complete, so you'll see some __Cask name__s that don't fully conform to the rules. For example, currently the cask for 1Password is called `one-password` instead of `1password`.
+
+When all this is sorted out, this message will go away.
 
 ### Uninstall Support
 
