@@ -14,7 +14,7 @@ class Cask::SystemCommand
     end
     _assert_success($?, command, output) if options[:must_succeed]
     if options[:plist]
-      Plist::parse_xml(output)
+      _parse_plist(command, output)
     else
       output
     end
@@ -48,5 +48,19 @@ class Cask::SystemCommand
 
   def self._quote(string)
     %Q('#{string}')
+  end
+
+  def self._parse_plist(command, output)
+    begin
+      Plist::parse_xml(output)
+    rescue Plist::ParseError
+      raise CaskError.new(<<-ERRMSG)
+Error parsing plist output from command.
+  command was:
+  #{command}
+  output we attempted to parse:
+  #{output}
+        ERRMSG
+    end
   end
 end
