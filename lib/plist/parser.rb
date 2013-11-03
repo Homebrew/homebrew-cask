@@ -68,7 +68,14 @@ module Plist
         @xml = plist_data_or_file
       end
 
+      trim_to_xml_start!
+
       @listener = listener
+    end
+
+    def trim_to_xml_start!
+      _, xml_tag, rest = @xml.partition(/^<\?xml/)
+      @xml = [xml_tag, rest].join
     end
 
     TEXT       = /([^<]+)/
@@ -101,7 +108,7 @@ module Plist
         elsif @scanner.scan(end_tag)
           @listener.tag_end(@scanner[1])
         else
-          raise "Unimplemented element"
+          raise ParseError.new("Unimplemented element #{@xml}")
         end
       end
     end
@@ -127,7 +134,7 @@ module Plist
     end
 
     def to_ruby
-      raise "Unimplemented: " + self.class.to_s + "#to_ruby on #{self.inspect}"
+      raise ParseError.new("Unimplemented: " + self.class.to_s + "#to_ruby on #{self.inspect}")
     end
   end
 
@@ -222,4 +229,6 @@ module Plist
       end
     end
   end
+
+  class ParseError < RuntimeError; end
 end
