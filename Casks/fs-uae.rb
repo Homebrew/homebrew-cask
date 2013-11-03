@@ -3,5 +3,5 @@ class FsUae < Cask
   homepage 'http://fs-uae.net/'
   version '2.2.3'
   sha1 '9120d97c2a2e0d330f53a640b95e30ffce9ef138'
-  link 'FS-UAE.app', 'FS-UAE Launcher.app'
+  link 'fs-uae-2.2.3-macosx/FS-UAE.app', 'fs-uae-2.2.3-macosx/FS-UAE Launcher.app'
 end
