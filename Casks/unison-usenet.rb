@@ -3,5 +3,5 @@ class UnisonUsenet < Cask
   homepage 'http://panic.com/unison/'
   version '2.1.10'
   sha1 '9c0e8cd3c2a33a6e8692c96042da278e63d29279'
-  link 'Unison'
+  link 'Unison.app'
 end

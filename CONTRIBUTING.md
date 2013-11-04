@@ -5,9 +5,6 @@ all pretty happy about this.
 
 ## Getting set up to contribute
 
-Fork the homebrew-cask repository as per instructions in the
-[GitHub help pages](https://help.github.com/articles/fork-a-repo):
-
 1. Fork the repository in GitHub with the 'Fork' button
 2. Add your GitHub fork as a remote for your homebrew-cask Tap
 
@@ -19,8 +16,7 @@ git remote add $github_user https://github.com/$github_user/homebrew-cask
 
 ## Adding a Cask
 
-Making a Cask is easy: a Cask is a Ruby file that is between seven and eight lines long.
-There are two forms of Casks, those with `.pkgs` and those with `.app`. 
+Making a Cask is easy: a Cask is a small Ruby file.
 
 Here's a Cask for Alfred.app as an example:
 
@@ -70,22 +66,46 @@ end
 
 Fill in the following fields for your Cask:
 
-| field | explanation |
-| ----- | ----------- |
-| `url` |  URL to the `.dmg`/`.zip`/`.tgz` file that contains the application
-| `homepage` | application homepage;used for the `brew cask home` command
-| `version` | application version; determines the directory structure in the Caskroom
-| `sha1` | SHA-1 Checksum of the file; checked when the file is downloaded to prevent any funny business
-| `link` | indicate which file(s) should be linked into the `Applications` folder on installation (for .app)
-| `install` | indicates which package should be run to install the Application (for .pkg)
-| `uninstall` | indicates what commands/scripts must be run to uninstall the Application (for .pkg)
+| field              | explanation |
+| ------------------ | ----------- |
+| __cask metadata__  | information about the cask (required)
+| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application
+| `homepage`         | application homepage; used for the `brew cask home` command
+| `version`          | application version; determines the directory structure in the Caskroom
+| `sha1`             | SHA-1 Checksum of the file; checked when the file is downloaded to prevent any funny business (can be omitted with `no_checksum`)
+| __artifact info__  | information about artifacts inside the cask (can be specified multiple times)
+| `nested_container` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
+| `link`             | relative path to a file that should be linked into the `Applications` folder on installation
+| `install`          | relative path to `pkg` that should be run to install the application
+| `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see "Uninstall Support" for more information)
+
+### Naming convention
+
+Please, be sure to follow this [issue](https://github.com/phinze/homebrew-cask/issues/365) to name your cask correctly.
+
+### Uninstall Support
+
+Since OS X has no standard uninstall behavior, there's a wide variety of
+methods by which applications can be uninstalled. The `uninstall` directive has
+many features to help properly remove a Cask-installed application.
+
+These features are utilized via a hash argument to `uninstall` with any number
+of the following keys:
+
+* `:script` (string) - relative path to an uninstall script to be run via sudo
+  - `:args` - array of arguments to the uninstall script
+  - `:input` - array of lines of input to be sent to `stdin` of the script
+* `:kext` (string or array) - bundle id of kext(s) to unload from the system before proceeding with the uninstaller
+* `:pkgutil` (string or regexp) - regexp matching bundle id(s) of packages to uninstall using `pkgutil`
+* `:launchctl` (string or array) - ids of launchctl services to remove
+* `:files` (array) - absolute path of files or directories to remove
+  - should only be used as a last resort, since this is the blunt force approach
 
 ### Good Things to Know
 
 * In order to find out the checksum for the file, the easiest way is to leave
   it blank and attempt installation. The checksum will fail and tell you what the
   real sha1 should be.
-* You can specify `link :none` if no files should be linked
 * If the application does not have versioned downloads, you can skip the
   checksum by specifying `no_checksum`, which takes no arguments
 * We have some conventions for projects without version-specific URLs. `latest`

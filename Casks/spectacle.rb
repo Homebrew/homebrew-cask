@@ -1,7 +1,7 @@
 class Spectacle < Cask
-  url 'https://s3.amazonaws.com/spectacle/downloads/Spectacle+0.8.2.zip'
+  url 'https://s3.amazonaws.com/spectacle/downloads/Spectacle+0.8.4.zip'
   homepage 'http://www.spectacleapp.com/'
-  version '0.8.2'
-  sha1 'e0f6b3869357694264213a014a6d270d5ab55579'
+  version '0.8.4'
+  sha1 'd2585cd30ec2c14f14c05bdc1d743d631cb616a9'
   link 'Spectacle.app'
 end

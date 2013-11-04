@@ -1,7 +1,7 @@
 class SteerMouse < Cask
-  url 'http://plentycom.jp/ctrl/files_sm/SteerMouse4.1.6.dmg'
+  url 'http://plentycom.jp/ctrl/files_sm/SteerMouse4.1.7.dmg'
   homepage 'http://plentycom.jp/en/steermouse/'
-  version '4.1.6'
-  sha1 '7cd5569964de3ef10e042cb9048345d9c30f9af1'
+  version '4.1.7'
+  sha1 'a2db2f88e3e7dcb22f01b9c6587c9eb746bb0048'
   install 'SteerMouse Installer.app/Contents/Resources/SteerMouse.pkg'
 end

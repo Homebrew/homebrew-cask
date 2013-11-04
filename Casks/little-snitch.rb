@@ -1,6 +1,6 @@
 class LittleSnitch < Cask
-  url 'http://www.obdev.at/downloads/LittleSnitch/LittleSnitch-3.1.1.dmg'
+  url 'http://www.obdev.at/downloads/LittleSnitch/LittleSnitch-3.3.dmg'
   homepage 'http://www.obdev.at/products/littlesnitch/index.html'
-  version '3.1.1'
-  sha1 '8d42c4aa3164a754e07aeacdccf22ebb9be601a2'
+  version '3.3'
+  sha1 'ed3c1a11dad0efedb959bf5935f23d722eb488f8'
 end

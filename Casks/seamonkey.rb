@@ -1,7 +1,7 @@
 class Seamonkey < Cask
-  url 'https://download.mozilla.org/?product=seamonkey-2.20&os=osx&lang=en-US'
+  url 'https://download.mozilla.org/?product=seamonkey-2.22&os=osx&lang=en-US'
   homepage 'http://www.seamonkey-project.org/'
-  version '2.20'
-  sha1 '69fe66739a1be49f3e9e9993e8b58f90c3d6764e'
+  version '2.22'
+  sha1 'a4fc6f6180a8c52c75e8730e44de08a8b52d22db'
   link 'SeaMonkey.app'
 end

@@ -72,13 +72,22 @@ class TestHelper
     return false unless candidate.symlink?
     candidate.readlink.exist?
   end
+
+  def self.install_without_artifacts(cask)
+    Cask::Installer.new(cask).tap do |i|
+      shutup { i.download }
+      i.extract_primary_container
+    end
+  end
 end
 
 require 'support/fake_fetcher'
 require 'support/fake_appdir'
 require 'support/fake_system_command'
 require 'support/cleanup'
+require 'support/never_sudo_system_command'
 require 'tmpdir'
+require 'tempfile'
 
 # pretend like we installed the cask tap
 project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))

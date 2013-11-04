@@ -3,5 +3,5 @@ class Blender < Cask
   homepage 'http://www.blender.org/'
   version '2.68a'
   sha1 '0ba47d7cfa740c5cb6b9b9d6a5bd96c49c35176c'
-  link 'blender.app', 'blenderplayer.app'
+  link 'Blender/blender.app', 'Blender/blenderplayer.app'
 end

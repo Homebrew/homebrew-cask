@@ -1,7 +1,7 @@
 class Dashlane < Cask
-  url 'https://d3mfqat9ni8wb5.cloudfront.net/releases/2.1.1/2.1.1.38498/Dashlane.dmg'
+  url 'https://d3mfqat9ni8wb5.cloudfront.net/releases/2.2.1/2.2.1.47479/Dashlane.dmg'
   homepage 'https://www.dashlane.com/'
-  version '2.1.1.38498'
-  sha1 'b94f20cf9f8469bccd1e4f221be906c8e71228e0'
+  version '2.2.1.47479'
+  sha1 'a01f107d1967efb5bfa11de2e19fc2cefac9bae4'
   link 'Dashlane.app'
 end

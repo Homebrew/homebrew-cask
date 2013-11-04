@@ -1,7 +1,7 @@
 class Robomongo < Cask
-  url 'https://dl.dropboxusercontent.com/sh/u0s0i8e4m0a8i9f/kNdxvKHscL/Robomongo-0.7.1.dmg'
+  url 'http://robomongo.org/files/mac/Robomongo-0.8.3-x86_64.dmg'
   homepage 'http://robomongo.org'
-  version '0.7.1'
-  sha1 'f6bc6a2b8f044d11caa4980b98dddb9dcf36eb43'
+  version '0.8.3'
+  sha1 '1195c56f80d96314e238b0f4538f2ef023ff942d'
   link 'Robomongo.app'
 end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-describe Cask::Installer do
+describe Cask::LinkChecker do
   describe "request processing" do
     it "adds an error if response is empty" do
       cask = TestHelper.test_cask

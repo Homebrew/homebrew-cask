@@ -4,7 +4,7 @@ HOMEBREW_CACHE_CASKS = HOMEBREW_CACHE.join('Casks')
 
 class Cask; end
 
-require 'cask/app_linker'
+require 'cask/artifact'
 require 'cask/audit'
 require 'cask/auditor'
 require 'cask/checkable'
@@ -16,44 +16,19 @@ require 'cask/exceptions'
 require 'cask/fetcher'
 require 'cask/installer'
 require 'cask/link_checker'
+require 'cask/locations'
 require 'cask/pkg'
-require 'cask/pkg_installer'
+require 'cask/pretty_listing'
 require 'cask/scopes'
 require 'cask/system_command'
+require 'cask/underscore_supporting_uri'
 
 require 'plist/parser'
 
 class Cask
   include Cask::DSL
+  include Cask::Locations
   include Cask::Scopes
-
-  def self.tapspath
-    HOMEBREW_PREFIX.join "Library", "Taps"
-  end
-
-  def self.caskroom
-    @@caskroom ||= Pathname('/opt/homebrew-cask/Caskroom')
-  end
-
-  def self.caskroom=(caskroom)
-    @@caskroom = caskroom
-  end
-
-  def self.appdir
-    @appdir ||= Pathname.new(File.expand_path("~/Applications"))
-  end
-
-  def self.appdir=(_appdir)
-    @appdir = _appdir
-  end
-
-  def self.default_tap
-    @default_tap ||= 'phinze-cask'
-  end
-
-  def self.default_tap=(_tap)
-    @default_tap = _tap
-  end
 
   def self._file_source?(requested_cask)
     File.file?(requested_cask)
@@ -74,24 +49,6 @@ class Cask
       system "#{sudo} chown -R #{current_user}:staff #{caskroom.parent}"
     end
     appdir.mkpath unless appdir.exist?
-  end
-
-  def self.path(cask_title)
-    if cask_title.include?('/')
-      cask_with_tap = cask_title
-    else
-      cask_with_tap = all_titles.detect { |tap_and_title|
-        _, title = tap_and_title.split('/')
-        title == cask_title
-      }
-    end
-
-    if cask_with_tap
-      tap, cask = cask_with_tap.split('/')
-      tapspath.join(tap, 'Casks', "#{cask}.rb")
-    else
-      tapspath.join(default_tap, 'Casks', "#{cask_title}.rb")
-    end
   end
 
   def self._load_from_tap(cask_title)
@@ -159,14 +116,6 @@ class Cask
 
   def installed?
     destination_path.exist?
-  end
-
-  def linkable_apps
-    linkables.map { |app| Pathname.glob("#{destination_path}/**/#{app}").first }
-  end
-
-  def installers
-    installables.map { |pkg| Pathname.glob("#{destination_path}/**/#{pkg}").first }
   end
 
   def to_s

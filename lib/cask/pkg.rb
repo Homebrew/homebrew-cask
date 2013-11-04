@@ -7,36 +7,39 @@ class Cask::Pkg
 
   attr_reader :package_id
 
-  def initialize(package_id, command)
+  def initialize(package_id, command=Cask::SystemCommand)
     @package_id = package_id
     @command = command
   end
 
   def uninstall
     files.each do |file|
-      @command.run('rm', :args => [file], :sudo => true) if file.exist?
+      @command.run!('rm', :args => [file], :sudo => true) if file.exist?
     end
     _deepest_path_first(dirs).each do |dir|
-      @command.run('chmod', :args => ['777', dir], :sudo => true)
-      _clean_symlinks(dir)
-      _clean_ds_store(dir)
-      @command.run('rmdir', :args => [dir], :sudo => true) if dir.exist? && dir.children.empty?
+      if dir.exist?
+        _with_full_permissions(dir) do
+          _clean_broken_symlinks(dir)
+          _clean_ds_store(dir)
+          _rmdir(dir)
+        end
+      end
     end
     forget
   end
 
   def forget
-    @command.run('pkgutil', :args => ['--forget', package_id], :sudo => true)
+    @command.run!('pkgutil', :args => ['--forget', package_id], :sudo => true)
   end
 
   def dirs
-    @command.run('pkgutil',
+    @command.run!('pkgutil',
       :args => ['--only-dirs', '--files', package_id]
     ).split("\n").map { |path| root.join(path) }
   end
 
   def files
-    @command.run('pkgutil',
+    @command.run!('pkgutil',
       :args => ['--only-files', '--files', package_id]
     ).split("\n").map { |path| root.join(path) }
   end
@@ -46,10 +49,26 @@ class Cask::Pkg
   end
 
   def info
-    @command.run('pkgutil',
+    @command.run!('pkgutil',
       :args => ['--pkg-info-plist', package_id],
       :plist => true
     )
+  end
+
+  def _rmdir(path)
+    if path.children.empty?
+      @command.run!('rmdir', :args => [path], :sudo => true)
+    end
+  end
+
+  def _with_full_permissions(path, &block)
+    original_mode = (path.stat.mode % 01000).to_s(8)
+    @command.run!('chmod', :args => ['777', path], :sudo => true)
+    block.call
+  ensure
+    if path.exist? # block may have removed dir
+      @command.run!('chmod', :args => [original_mode, path], :sudo => true)
+    end
   end
 
   def _deepest_path_first(paths)
@@ -58,20 +77,23 @@ class Cask::Pkg
     end
   end
 
-  def _clean_symlinks(dir)
-    # Some pkgs leave broken symlinks hanging around; we clean them out before
-    # attempting to rmdir to prevent extra cruft from lying around after
-    # uninstall
-    return unless dir.exist?
+  # Some pkgs leave broken symlinks hanging around; we clean them out before
+  # attempting to rmdir to prevent extra cruft from lying around after
+  # uninstall
+  def _clean_broken_symlinks(dir)
     dir.children.each do |child|
-      @command.run('rm', :args => [child], :sudo => true) if child.symlink?
+      if _broken_symlink?(child)
+        @command.run!('rm', :args => [child], :sudo => true)
+      end
     end
   end
 
   def _clean_ds_store(dir)
-    # Clean .DS_Store files:
-    # https://en.wikipedia.org/wiki/.DS_Store
     ds_store = dir.join('.DS_Store')
-    @command.run('rm', :args => [ds_store], :sudo => true) if ds_store.exist?
+    @command.run!('rm', :args => [ds_store], :sudo => true) if ds_store.exist?
+  end
+
+  def _broken_symlink?(path)
+    path.symlink? && !path.readlink.exist?
   end
 end
