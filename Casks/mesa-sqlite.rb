@@ -1,7 +1,7 @@
 class MesaSqlite < Cask
-  url 'http://www.desertsandsoftware.com/DEMOS/MesaSQLite406.zip'
+  url 'http://www.desertsandsoftware.com/DEMOS/MesaSQLite408.zip'
   homepage 'http://www.desertsandsoftware.com'
-  version '4.0.6'
-  sha1 'b435c9b9505ed9efe683c9468d44c74b615e3cd1'
+  version '4.0.8'
+  sha1 '7be90189020cffe2a26b3609be9c92b3e5358446'
   link 'MesaSQLite.app'
 end
