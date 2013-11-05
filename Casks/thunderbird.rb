@@ -1,7 +1,7 @@
 class Thunderbird < Cask
-  url 'http://download.cdn.mozilla.net/pub/mozilla.org/thunderbird/releases/17.0.10esr/mac/en-US/Thunderbird%2017.0.10esr.dmg'
-  homepage 'https://www.mozilla.org/en-US/thunderbird/organizations/all-esr.html'
-  version '17.0.10esr'
-  sha1 '2446cb70c414c1c693542b4b7634c4b41a130eeb'
+  url 'http://download-installer.cdn.mozilla.net/pub/mozilla.org/thunderbird/releases/24.1.0/mac/en-US/Thunderbird%2024.1.0.dmg'
+  homepage 'http://www.mozilla.org/en-US/thunderbird/'
+  version '24.1.0'
+  sha1 '04968b3ad034576fe17dfa923b5fa9fb7bb51877'
   link 'Thunderbird.app'
 end
