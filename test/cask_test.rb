@@ -7,7 +7,7 @@ describe "Cask" do
       c.must_be_kind_of(Cask)
       c.must_be_instance_of(Adium)
     end
-    
+
     it "returns an instance of the cask from a specific file location" do
       location = File.expand_path('./Casks/dia.rb')
       c = Cask.load(location)
@@ -33,6 +33,11 @@ describe "Cask" do
       c = Cask.load("./Casks/dia.rb")
       c.must_be_kind_of(Cask)
       c.must_be_instance_of(Dia)
+    end
+
+    it "uses exact match when loading by name" do
+      Cask.load('rest-client').must_be_instance_of(RestClient)
+      Cask.load('cocoa-rest-client').must_be_instance_of(CocoaRestClient)
     end
 
     it "raises an error when attempting to load a cask that doesn't exist" do
