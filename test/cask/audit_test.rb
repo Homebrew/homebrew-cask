@@ -27,6 +27,13 @@ class CaskSourceForgeCorrectURLFormat < Cask
   url 'http://downloads.sourceforge.net/project/something/Something-1.2.3.dmg'
 end
 
+class CaskSourceForgeOtherCorrectURLFormat < Cask
+  version 'latest'
+  homepage 'http://sourceforge.net/projects/something/'
+  url 'http://sourceforge.net/projects/something/files/latest/download'
+end
+
+
 describe Cask::Audit do
   describe "result" do
     it "is 'failed' if there are have been any errors added" do
@@ -71,13 +78,18 @@ describe Cask::Audit do
 
     describe "preferred download URL formats" do
       it "adds a warning if SourceForge doesn't use download subdomain" do
-        warning_msg = 'SourceForge URL format incorrect. See https://github.com/phinze/homebrew-cask/pull/225#issuecomment-16536889 for details'
+        warning_msg = 'SourceForge URL format incorrect. See https://github.com/phinze/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforge-urls'
+
 
         audit = Cask::Audit.new(CaskSourceForgeIncorrectURLFormat.new)
         audit.run!
         audit.warnings.must_include warning_msg
 
         audit = Cask::Audit.new(CaskSourceForgeCorrectURLFormat.new)
+        audit.run!
+        audit.warnings.wont_include warning_msg
+
+        audit = Cask::Audit.new(CaskSourceForgeOtherCorrectURLFormat.new)
         audit.run!
         audit.warnings.wont_include warning_msg
       end

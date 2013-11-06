@@ -79,6 +79,24 @@ Fill in the following fields for your Cask:
 | `install`          | relative path to `pkg` that should be run to install the application
 | `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see "Uninstall Support" for more information)
 
+### Sourceforge URLs
+
+Sourceforge projects are a common way to distribute binaries, but they provide many different styles of URLs to get to the goods.
+
+We prefer URLs of this format:
+
+```
+http://sourceforge.net/projects/$PROJECTNAME/files/latest/download
+```
+
+This lets the project maintainers choose the best URL for download.
+
+If the "latest" URL does not point to a valid file for a mac app, then we fall back this format:
+
+```
+http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
+```
+
 ### Naming Casks
 
 We try to maintain a consistent naming policy so everything stays clean and predictable.

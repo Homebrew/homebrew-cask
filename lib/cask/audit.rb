@@ -40,10 +40,17 @@ class Cask::Audit
   end
 
   def _check_sourceforge_download_url_format
-    if cask.url.to_s.match(/\S*sourceforge\.\S*\/\S*/i)
-      unless cask.url.to_s.match(/\S*downloads.sourceforge.net\/\S+/i)
-        add_warning "SourceForge URL format incorrect. See https://github.com/phinze/homebrew-cask/pull/225#issuecomment-16536889 for details"
-      end
+    if _bad_sourceforge_url?
+      add_warning "SourceForge URL format incorrect. See https://github.com/phinze/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforge-urls"
     end
+  end
+
+  def _bad_sourceforge_url?
+    return false unless cask.url.to_s =~ /sourceforge/
+    valid_url_formats = [
+      %r{https?://sourceforge.net/projects/.*/files/latest/download},
+      %r{https?://downloads.sourceforge.net/},
+    ]
+    valid_url_formats.none? { |format| cask.url.to_s =~ format }
   end
 end
