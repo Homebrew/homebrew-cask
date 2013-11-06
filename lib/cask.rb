@@ -55,7 +55,7 @@ class Cask
     if cask_title.include?('/')
       cask_with_tap = cask_title
     else
-      cask_with_tap = all_titles.grep(/#{cask_title}$/).first
+      cask_with_tap = all_titles.find { |t| t.split('/').last == cask_title }
     end
 
     if cask_with_tap
