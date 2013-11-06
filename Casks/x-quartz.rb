@@ -1,7 +1,7 @@
 class XQuartz < Cask
-  url 'http://xquartz.macosforge.org/downloads/SL/XQuartz-2.7.4.dmg'
+  url 'http://xquartz.macosforge.org/downloads/SL/XQuartz-2.7.5_rc4.dmg'
   homepage 'http://xquartz.macosforge.org/'
-  version '2.7.4'
-  sha1 '98b2ca8580046d5b91250c5a244c8182437dc9d7'
+  version '2.7.5_rc4'
+  sha1 '273b5b208546779d3e35842d84efd2ba7927b253'
   install 'XQuartz.pkg'
 end
