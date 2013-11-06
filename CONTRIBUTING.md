@@ -143,14 +143,14 @@ BetterTouchTool    | `bettertouchtool`   | `Bettertouchtool`
 iTerm2             | `iterm2`            | `Iterm2`
 Akai LPK25 Editor  | `akai-lpk25-editor` | `AkaiLpk25Editor`
 Sublime Text 3     | `sublime-text-3`    | `SublimeText3`
-1Password          | `1password`         | `OnePassword` (see __NAMING NOTE__)
+1Password          | `1password`         | `Onepassword` (see __NAMING NOTE__)
 
 
 #### NAMING NOTE
 
 When a Cask's _name_ does not map to a valid ruby class (like when it starts with a number) there's an incoming feature to allow Cask _classes_ to indicate the proper name using a keyword.
 
-This feature is not yet complete, so you'll see some __Cask name__s that don't fully conform to the rules. For example, currently the cask for 1Password is called `one-password` instead of `1password`.
+This feature is not yet complete, so you'll see some __Cask name__s that don't fully conform to the rules. For example, currently the cask for 1Password is called `onepassword` instead of `1password`.
 
 When all this is sorted out, this message will go away.
 

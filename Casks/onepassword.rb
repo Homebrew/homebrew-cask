@@ -1,4 +1,4 @@
-class OnePassword < Cask
+class Onepassword < Cask
   url 'http://i.agilebits.com/dist/1P/mac4/1Password-4.0.7.zip'
   homepage 'https://agilebits.com/onepassword'
   version '4.0.7'
