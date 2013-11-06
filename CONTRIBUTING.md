@@ -79,6 +79,24 @@ Fill in the following fields for your Cask:
 | `install`          | relative path to `pkg` that should be run to install the application
 | `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see "Uninstall Support" for more information)
 
+### Sourceforge URLs
+
+Sourceforge projects are a common way to distribute binaries, but they provide many different styles of URLs to get to the goods.
+
+We prefer URLs of this format:
+
+```
+http://sourceforge.net/projects/$PROJECTNAME/files/latest/download
+```
+
+This lets the project maintainers choose the best URL for download.
+
+If the "latest" URL does not point to a valid file for a mac app, then we fall back this format:
+
+```
+http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
+```
+
 ### Naming Casks
 
 We try to maintain a consistent naming policy so everything stays clean and predictable.
@@ -125,14 +143,14 @@ BetterTouchTool    | `bettertouchtool`   | `Bettertouchtool`
 iTerm2             | `iterm2`            | `Iterm2`
 Akai LPK25 Editor  | `akai-lpk25-editor` | `AkaiLpk25Editor`
 Sublime Text 3     | `sublime-text-3`    | `SublimeText3`
-1Password          | `1password`         | `OnePassword` (see __NAMING NOTE__)
+1Password          | `1password`         | `Onepassword` (see __NAMING NOTE__)
 
 
 #### NAMING NOTE
 
 When a Cask's _name_ does not map to a valid ruby class (like when it starts with a number) there's an incoming feature to allow Cask _classes_ to indicate the proper name using a keyword.
 
-This feature is not yet complete, so you'll see some __Cask name__s that don't fully conform to the rules. For example, currently the cask for 1Password is called `one-password` instead of `1password`.
+This feature is not yet complete, so you'll see some __Cask name__s that don't fully conform to the rules. For example, currently the cask for 1Password is called `onepassword` instead of `1password`.
 
 When all this is sorted out, this message will go away.
 

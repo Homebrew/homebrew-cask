@@ -28,6 +28,19 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
+    it "works with tar-based casks" do
+      tarball = Cask.load('tarball')
+
+      shutup do
+        Cask::Installer.new(tarball).install
+      end
+
+      dest_path = Cask.caskroom/'tarball'/tarball.version
+      dest_path.must_be :directory?
+      application = dest_path/'Tarball.app'
+      application.must_be :directory?
+    end
+
     it "blows up on a bad checksum" do
       bad_checksum = Cask.load('bad-checksum')
       lambda {
