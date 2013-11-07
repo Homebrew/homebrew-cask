@@ -1,5 +1,5 @@
 class OmniGrafflePro < Cask
-  url 'http://www.omnigroup.com/download/latest/omnigrafflePro'
+  url 'http://www.omnigroup.com/download/latest/omnigraffle'
   homepage 'http://www.omnigroup.com/products/omnigraffle'
   version 'latest'
   no_checksum
