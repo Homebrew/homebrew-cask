@@ -26,4 +26,10 @@ describe Cask::CLI::Info do
       https://github.com/phinze/homebrew-testcasks/commits/master/Casks/local-transmission.rb
     CLIOUTPUT
   end
+
+  it "raises an exception when no cask is specified" do
+    lambda {
+      Cask::CLI::Info.run
+    }.must_raise CaskUnspecifiedError
+  end
 end

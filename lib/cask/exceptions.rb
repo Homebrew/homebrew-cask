@@ -62,3 +62,9 @@ class CaskCommandFailedError < CaskError
     EOS
   end
 end
+
+class CaskUnspecifiedError < CaskError
+  def to_s
+    'This command requires a cask argument'
+  end
+end

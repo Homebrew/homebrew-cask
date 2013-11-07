@@ -33,6 +33,8 @@ class Cask::CLI
     rest = process_options(rest)
     Cask.init
     lookup_command(command).run(*rest)
+  rescue CaskUnspecifiedError => e
+    abort e
   end
 
   def self.nice_listing(cask_list)
