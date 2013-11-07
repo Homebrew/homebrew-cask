@@ -1,5 +1,6 @@
 class Cask::CLI::Uninstall
   def self.run(*cask_names)
+    raise CaskUnspecifiedError if cask_names.empty?
     begin
       casks = cask_names.map { |cn| Cask.load(cn) }
       casks.each do |cask|

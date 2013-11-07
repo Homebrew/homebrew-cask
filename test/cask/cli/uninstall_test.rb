@@ -34,4 +34,10 @@ describe Cask::CLI::Uninstall do
     transmission.wont_be :installed?
     Cask.appdir.join('Caffeine.app').wont_be :symlink?
   end
+
+  it "raises an exception when no cask is specified" do
+    lambda {
+      Cask::CLI::Uninstall.run
+    }.must_raise CaskUnspecifiedError
+  end
 end

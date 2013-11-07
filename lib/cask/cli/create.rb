@@ -1,5 +1,6 @@
 module Cask::CLI::Create
   def self.run(*arguments)
+    raise CaskUnspecifiedError if arguments.empty?
     cask_name, *_ = *arguments
     cask_path = Cask.path(cask_name)
 
