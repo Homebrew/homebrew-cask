@@ -1,4 +1,4 @@
-class LimeChat < Cask
+class Limechat < Cask
   url 'https://downloads.sourceforge.net/project/limechat/limechat/LimeChat_2.39.tbz'
   homepage 'http://limechat.net/mac/'
   version '2.39'
