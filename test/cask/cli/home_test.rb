@@ -37,5 +37,11 @@ describe Cask::CLI::Home do
       ['open', 'https://www.adium.im/']
     ]
   end
+
+  it "raises an exception when no cask is specified" do
+    lambda {
+      Cask::CLI::Home.run
+    }.must_raise CaskUnspecifiedError
+  end
 end
 

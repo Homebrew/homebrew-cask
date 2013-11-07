@@ -39,4 +39,10 @@ describe Cask::CLI::Install do
       Cask::CLI::Install.run('what-the-balls')
     }, 'Error: No available cask for what-the-balls')
   end
+
+  it "raises an exception when no cask is specified" do
+    lambda {
+      Cask::CLI::Install.run
+    }.must_raise CaskUnspecifiedError
+  end
 end

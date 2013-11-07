@@ -42,4 +42,10 @@ describe Cask::CLI::Edit do
       Cask::CLI::Edit.run('notacask')
     }.must_raise CaskUnavailableError
   end
+
+  it "raises an exception when no cask is specified" do
+    lambda {
+      Cask::CLI::Edit.run
+    }.must_raise CaskUnspecifiedError
+  end
 end

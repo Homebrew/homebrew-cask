@@ -39,4 +39,10 @@ describe Cask::CLI::Info do
       Here are some things you might want to know.
     CLIOUTPUT
   end
+
+  it "raises an exception when no cask is specified" do
+    lambda {
+      Cask::CLI::Info.run
+    }.must_raise CaskUnspecifiedError
+  end
 end
