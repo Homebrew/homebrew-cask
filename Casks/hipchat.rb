@@ -1,4 +1,4 @@
-class HipChat < Cask
+class Hipchat < Cask
   url 'http://downloads.hipchat.com.s3.amazonaws.com/osx/HipChat-2.3.zip'
   homepage 'https://www.hipchat.com/'
   version '2.3'
