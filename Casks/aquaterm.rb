@@ -1,4 +1,4 @@
-class AquaTerm < Cask
+class Aquaterm < Cask
   url 'http://downloads.sourceforge.net/project/aquaterm/AquaTerm/AquaTerm1.1.1.dmg'
   homepage 'http://aquaterm.sourceforge.net/'
   version '1.1.1'
