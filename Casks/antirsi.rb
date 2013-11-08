@@ -1,4 +1,4 @@
-class AntiRsi < Cask
+class Antirsi < Cask
   url 'http://sabi.net/nriley/software/AntiRSI-1.4njr4.zip'
   homepage 'http://sabi.net/nriley/software/#antirsi'
   version '1.4njr4'
