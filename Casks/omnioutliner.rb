@@ -1,4 +1,4 @@
-class OmniOutliner < Cask
+class Omnioutliner < Cask
   url 'http://www.omnigroup.com/download/latest/omnioutlinerpro'
   homepage 'http://www.omnigroup.com/products/omnioutliner/'
   version 'latest'
