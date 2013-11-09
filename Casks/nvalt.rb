@@ -1,4 +1,4 @@
-class NvAlt < Cask
+class Nvalt < Cask
   url 'http://abyss.designheresy.com/nvaltb/nvalt2.2b111.zip'
   homepage 'http://brettterpstra.com/project/nvalt/'
   version '2.2b111'
