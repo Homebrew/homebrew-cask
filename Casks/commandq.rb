@@ -1,4 +1,4 @@
-class CommandQ < Cask
+class Commandq < Cask
   url 'http://clickontyler.com/commandq/download/'
   homepage 'http://clickontyler.com/commandq/'
   version 'latest'
