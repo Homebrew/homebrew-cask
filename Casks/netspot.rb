@@ -1,4 +1,4 @@
-class NetSpot < Cask
+class Netspot < Cask
   url 'http://www.netspotapp.com/download/NetSpot.dmg'
   homepage 'http://www.netspotapp.com'
   version 'latest'
