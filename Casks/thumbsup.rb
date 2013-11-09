@@ -1,4 +1,4 @@
-class ThumbsUp < Cask
+class Thumbsup < Cask
   url 'https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/thumbsup/4.5/ThumbsUp.dmg.zip'
   homepage 'http://www.devontechnologies.com/products/freeware.html#c966'
   version '4.5'
