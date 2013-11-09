@@ -1,4 +1,4 @@
-class MarsEdit < Cask
+class Marsedit < Cask
   url 'http://www.red-sweater.com/marsedit/MarsEdit3.6.2.zip'
   homepage 'http://www.red-sweater.com/marsedit/'
   version '3.6.2'
