@@ -1,4 +1,4 @@
-class GrabBox < Cask
+class Grabbox < Cask
   url 'http://grabbox.devsoft.no/updates/GrabBox%20Beta%20v0.4.2.zip'
   homepage 'http://grabbox.devsoft.no/'
   version '0.4.2'
