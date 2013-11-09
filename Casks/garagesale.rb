@@ -1,4 +1,4 @@
-class GarageSale < Cask
+class Garagesale < Cask
   url 'http://www.iwascoding.de/downloads/GarageSale_6.6.5.dmg'
   homepage 'http://www.iwascoding.com/GarageSale/index.html'
   version '6.6.5'
