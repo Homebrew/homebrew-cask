@@ -1,4 +1,4 @@
-class HockeyCoach < Cask
+class Hockeycoach < Cask
   url 'http://download.hockeyapp.net/apps/HockeyCoach/HockeyCoach-1.0.2.zip'
   homepage 'http://hockeyapp.net/releases/hockeycoach/'
   version '1.0.2'
