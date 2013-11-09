@@ -1,4 +1,4 @@
-class SuperDuper < Cask
+class Superduper < Cask
   url 'http://www.shirt-pocket.com/downloads/SuperDuper!.dmg'
   homepage 'http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html'
   version '2.7.1'
