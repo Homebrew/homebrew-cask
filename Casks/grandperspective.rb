@@ -1,4 +1,4 @@
-class GrandPerspective < Cask
+class Grandperspective < Cask
   url 'http://downloads.sourceforge.net/project/grandperspectiv/grandperspective/1.5.1/GrandPerspective-1_5_1.dmg'
   homepage 'http://grandperspectiv.sourceforge.net/'
   version '1.5.1'
