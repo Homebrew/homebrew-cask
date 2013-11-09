@@ -1,4 +1,4 @@
-class NetNewsWire < Cask
+class Netnewswire < Cask
   url 'http://cdn.netnewswireapp.com/releases/NetNewsWire-4.0.0-135.zip'
   homepage 'http://netnewswireapp.com/'
   version '4.0.0-135'
