@@ -1,4 +1,4 @@
-class ScummVm < Cask
+class Scummvm < Cask
   url 'http://downloads.sourceforge.net/project/scummvm/scummvm/1.6.0/scummvm-1.6.0-macosx.dmg'
   homepage 'http://scummvm.org/'
   version '1.6.0'
