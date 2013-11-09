@@ -1,4 +1,4 @@
-class IceFloor < Cask
+class Icefloor < Cask
   url 'http://www.hanynet.com/icefloor-1.6.2.zip'
   homepage 'http://www.hanynet.com/icefloor'
   version '1.6.2'
