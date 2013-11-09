@@ -65,6 +65,6 @@ end
 
 class CaskUnspecifiedError < CaskError
   def to_s
-    'This command requires a cask argument'
+    "This command requires a cask's name"
   end
 end
