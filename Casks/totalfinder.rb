@@ -1,4 +1,4 @@
-class TotalFinder < Cask
+class Totalfinder < Cask
   url 'http://downloads.binaryage.com/TotalFinder-1.5.2.dmg'
   homepage 'http://totalfinder.binaryage.com'
   version '1.5.2'
