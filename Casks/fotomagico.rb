@@ -1,4 +1,4 @@
-class FotoMagico < Cask
+class Fotomagico < Cask
   url 'https://cdn.boinx.com/software/fotomagico/Boinx_FotoMagico_4.3.1-18650.zip'
   homepage 'http://www.boinx.com/fotomagico/'
   version '4.3.1-18650'
