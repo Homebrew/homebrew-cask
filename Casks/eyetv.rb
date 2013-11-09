@@ -1,4 +1,4 @@
-class EyeTv < Cask
+class Eyetv < Cask
   url 'http://edgedownloads.elgato.com/eyetvdownloads/support/eyetv_361_7120.dmg'
   homepage 'http://www.elgato.com/'
   version '3.6.1'
