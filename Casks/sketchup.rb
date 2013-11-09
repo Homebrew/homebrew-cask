@@ -1,4 +1,4 @@
-class SketchUp < Cask
+class Sketchup < Cask
   url 'http://dl.trimble.com/sketchup/SketchUpMEN.dmg'
   homepage 'http://www.sketchup.com/intl/en/'
   version '2013'
