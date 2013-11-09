@@ -1,4 +1,4 @@
-class SoundNote < Cask
+class Soundnote < Cask
   url 'http://download.mrgeckosmedia.com/SoundNote.zip'
   homepage 'https://mrgeckosmedia.com/applications/info/SoundNote'
   version 'latest'
