@@ -1,4 +1,4 @@
-class AppZapper < Cask
+class Appzapper < Cask
   url 'http://www.appzapper.com/downloads/appzapper.dmg'
   homepage 'http://www.appzapper.com/'
   version 'latest'
