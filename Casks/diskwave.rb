@@ -1,4 +1,4 @@
-class DiskWave < Cask
+class Diskwave < Cask
   url 'http://diskwave.barthe.ph/download/DiskWave_0.4.dmg'
   homepage 'http://diskwave.barthe.ph/'
   version '0.4.0'
