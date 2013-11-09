@@ -1,4 +1,4 @@
-class SelfControl < Cask
+class Selfcontrol < Cask
   url 'http://downloads.selfcontrolapp.com/SelfControl-1.5.1.zip'
   homepage 'http://selfcontrolapp.com/'
   version '1.5.1'
