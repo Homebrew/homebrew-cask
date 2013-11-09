@@ -1,4 +1,4 @@
-class TeamViz < Cask
+class Teamviz < Cask
   url 'http://www.teamviz.com/d/TeamViz.3.2.dmg'
   homepage 'http://www.teamviz.com/'
   version '3.2'
