@@ -4,6 +4,9 @@ class Cask::CLI::Info
       begin
         cask = Cask.load(cask_name)
         puts info(cask)
+        unless cask.caveats.empty?
+          ohai "Caveats", cask.caveats
+        end
       rescue CaskUnavailableError => e
         onoe e
       end
