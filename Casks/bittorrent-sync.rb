@@ -1,6 +1,6 @@
-class BitTorrentSync < Cask
+class BittorrentSync < Cask
   url 'http://download-lb.utorrent.com/endpoint/btsync/os/osx/track/stable'
-  homepage 'http://labs.bittorrent.com/experiments/sync.html'
+  homepage 'http://www.bittorrent.com/sync'
   version 'latest'
   no_checksum
   link 'BitTorrent Sync.app'
