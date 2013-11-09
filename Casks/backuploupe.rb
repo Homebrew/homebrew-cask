@@ -1,4 +1,4 @@
-class BackupLoupe < Cask
+class Backuploupe < Cask
   url 'http://www.soma-zone.com/download/files/BackupLoupe_2.4.2.tar.bz2'
   homepage 'http://www.soma-zone.com/BackupLoupe/'
   version '2.4.2'
