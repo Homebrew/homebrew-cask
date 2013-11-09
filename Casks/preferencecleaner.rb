@@ -1,4 +1,4 @@
-class PreferenceCleaner < Cask
+class Preferencecleaner < Cask
   url 'http://www.echomist.co.uk/software/downloads/PreferenceCleaner.dmg'
   homepage 'http://www.echomist.co.uk/software/PreferenceCleaner.shtml'
   version '1.5'
