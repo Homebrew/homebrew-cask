@@ -1,4 +1,4 @@
-class SlimBatteryMonitor < Cask
+class Slimbatterymonitor < Cask
   url 'http://quux.orange-carb.org/dist/SlimBatteryMonitor-1.5.dmg'
   homepage 'http://www.orange-carb.org/SBM/'
   version '1.5'
