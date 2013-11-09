@@ -1,4 +1,4 @@
-class TeamViewer < Cask
+class Teamviewer < Cask
   url 'http://download.teamviewer.com/download/TeamViewer.dmg'
   homepage 'http://www.teamviewer.com/'
   version 'latest'
