@@ -36,6 +36,13 @@ describe Cask::CLI do
     rest.must_equal %w{edit foo --create}
   end
 
+  describe "--debug" do
+    it "sets the CLI's debug variable to true" do
+      Cask::CLI.process_options %w{help --debug}
+      Cask::CLI.instance_variable_get(:@debug).must_equal true
+    end
+  end
+
   after do
     ENV['HOMEBREW_CASK_OPTS'] = nil
   end
