@@ -1,4 +1,4 @@
-class PowerKey < Cask
+class Powerkey < Cask
   url 'https://github.com/pkamb/PowerKey/releases/download/v1.1/PowerKey.zip'
   homepage 'http://pkamb.github.io/PowerKey/'
   version '1.1'
