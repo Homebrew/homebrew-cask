@@ -1,4 +1,4 @@
-class FreeCad < Cask
+class Freecad < Cask
   url 'http://downloads.sourceforge.net/sourceforge/free-cad/FreeCAD_0.12_MacOSX10.7_20120110_x64.dmg'
   homepage 'http://sourceforge.net/projects/free-cad/'
   version '0.12'
