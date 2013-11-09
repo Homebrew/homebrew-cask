@@ -1,4 +1,4 @@
-class TimeMachineSchedulerBeta < Cask
+class TimemachineschedulerBeta < Cask
   url 'http://www.klieme.com/Downloads/TimeMachineScheduler/TimeMachineScheduler_4.0b2Full.zip'
   homepage 'http://www.klieme.com/TimeMachineScheduler.html'
   version '4.0b2(470)'
