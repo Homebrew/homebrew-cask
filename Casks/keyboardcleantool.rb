@@ -1,4 +1,4 @@
-class KeyboardCleanTool < Cask
+class Keyboardcleantool < Cask
   url 'http://bettertouchtool.net/KeyboardCleanTool.zip'
   homepage 'http://bettertouchtool.net'
   version 'latest'
