@@ -1,4 +1,4 @@
-class MenuMeters < Cask
+class Menumeters < Cask
   url 'http://www.ragingmenace.com/software/download/MenuMeters.dmg'
   homepage 'http://www.ragingmenace.com/software/menumeters/'
   version 'latest'
@@ -6,7 +6,7 @@ class MenuMeters < Cask
   link 'MenuMeters Installer.app'
 
   def caveats; <<-EOS.undent
-    You need to run #{destination_path/'MenuMeters Installer.app'} to actually install MenuMetres
+    You need to run #{destination_path/'MenuMeters Installer.app'} to actually install MenuMeters
     EOS
   end
 end
