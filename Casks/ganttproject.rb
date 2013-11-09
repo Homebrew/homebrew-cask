@@ -1,4 +1,4 @@
-class GanttProject < Cask
+class Ganttproject < Cask
   url 'https://ganttproject.googlecode.com/files/ganttproject-2.6.1-r1499.dmg'
   homepage 'http://www.ganttproject.biz'
   version '2.6.1'
