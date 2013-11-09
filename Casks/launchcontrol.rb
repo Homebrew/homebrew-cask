@@ -1,4 +1,4 @@
-class LaunchControl < Cask
+class Launchcontrol < Cask
   url 'http://www.soma-zone.com/download/files/LaunchControl_1.10.tar.bz2'
   homepage 'http://www.soma-zone.com/LaunchControl/'
   version '1.10'
