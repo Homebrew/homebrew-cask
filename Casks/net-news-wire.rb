@@ -1,7 +1,7 @@
 class NetNewsWire < Cask
-  url 'http://cdn.netnewswireapp.com/releases/NetNewsWire-4.0.0-132.zip'
+  url 'http://cdn.netnewswireapp.com/releases/NetNewsWire-4.0.0-135.zip'
   homepage 'http://netnewswireapp.com/'
-  version '4.0.0-132'
-  sha1 '329c553b10edf2269c1d37bf65a6642a4fffea26'
+  version '4.0.0-135'
+  sha1 '673a38eef21bd341afa3a88decee0f5df499b607'
   link 'NetNewsWire.app'
 end
