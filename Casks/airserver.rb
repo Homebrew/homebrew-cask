@@ -1,4 +1,4 @@
-class AirServer < Cask
+class Airserver < Cask
   url 'http://dl.airserver.com/mac/AirServer-4.8.1.dmg'
   homepage 'http://www.airserver.com'
   version '4.8.1'
