@@ -1,4 +1,4 @@
-class RescueTime < Cask
+class Rescuetime < Cask
   url 'https://www.rescuetime.com/installers/RescueTimeInstaller.dmg'
   homepage 'https://www.rescuetime.com'
   version 'latest'
