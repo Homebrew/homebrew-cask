@@ -1,4 +1,4 @@
-class NameChanger < Cask
+class Namechanger < Cask
   url 'http://www.mrrsoftware.com/Downloads/NameChanger/Updates/NameChanger-2_3_3.zip'
   homepage 'http://www.mrrsoftware.com/MRRSoftware/NameChanger.html'
   version '2.3.3'
