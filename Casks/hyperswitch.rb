@@ -1,4 +1,4 @@
-class HyperSwitch < Cask
+class Hyperswitch < Cask
   url 'http://bahoom.com/hyperswitch/download'
   homepage 'http://bahoom.com/hyperswitch'
   version 'latest'
