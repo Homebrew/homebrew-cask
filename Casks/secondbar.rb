@@ -1,4 +1,4 @@
-class SecondBar < Cask
+class Secondbar < Cask
   url 'http://boastr.de/SecondBar.zip'
   homepage 'http://blog.boastr.net/?page_id=79'
   version '1.1'
