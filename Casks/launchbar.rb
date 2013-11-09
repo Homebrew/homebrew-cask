@@ -1,4 +1,4 @@
-class LaunchBar < Cask
+class Launchbar < Cask
   url 'http://www.obdev.at/downloads/launchbar/LaunchBar-5.5.2.dmg'
   homepage 'http://www.obdev.at/products/launchbar/'
   version '5.5.2'
