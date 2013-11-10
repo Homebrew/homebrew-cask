@@ -1,4 +1,4 @@
-class PcKeyboardhack < Cask
+class Pckeyboardhack < Cask
   url 'https://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-10.0.0.dmg'
   homepage 'https://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en'
   version '10.0.0'
