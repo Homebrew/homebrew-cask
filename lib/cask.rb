@@ -110,8 +110,12 @@ class Cask
     @title = title
   end
 
+  def caskroom_path
+    self.class.caskroom.join(self.title)
+  end
+
   def destination_path
-    self.class.caskroom.join(self.title).join(self.version)
+    caskroom_path.join(self.version)
   end
 
   def installed?

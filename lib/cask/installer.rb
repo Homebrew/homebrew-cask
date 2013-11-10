@@ -66,6 +66,9 @@ class Cask::Installer
   end
 
   def purge_files
-    @cask.destination_path.rmtree if @cask.destination_path.exist?
+    if @cask.destination_path.exist?
+      @cask.destination_path.rmtree
+    end
+    @cask.caskroom_path.rmdir_if_possible
   end
 end
