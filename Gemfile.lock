@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     metaclass (0.0.1)
-    minitest (4.7.0)
+    minitest (5.0.8)
     minitest-colorize (0.0.5)
       minitest (>= 2.0)
     mocha (0.14.0)
@@ -13,7 +13,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  minitest (= 4.7.0)
-  minitest-colorize
+  minitest (= 5.0.8)
+  minitest-colorize (= 0.0.5)
   mocha (= 0.14.0)
   rake
