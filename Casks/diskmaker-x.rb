@@ -1,4 +1,4 @@
-class DiskMakerX < Cask
+class DiskmakerX < Cask
   url 'http://liondiskmaker.com/downloads/DiskMakerX.dmg'
   homepage 'http://diskmakerx.com/'
   version 'latest'
