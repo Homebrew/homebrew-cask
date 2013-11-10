@@ -1,5 +1,31 @@
 # CHANGELOG
 
+## 0.20.0
+
+* __Features__
+  - [#1417][] - brew cask list, when given args, list installed files
+  - Guard against unspecified casks in the CLI <3 [@aah][]
+  - `brew cask info` also reports cask caveats <3 [@linc01n][]
+* __Fixes__
+  - [#393][] - use non-zero exit code on error <3 [@aah][]
+  - [#914][] - more robust plist parsing with better error handling
+  - [#1035][] - use exact matching when loading a cask
+  - [#1461][] - remove empty app dirs from caskroom on uninstall
+* __Breaking Changes__
+  - [#1436][] - new preferred sourceforge url style
+
+[#1417]: https://github.com/phinze/homebrew-cask/issues/1417
+[@aah]: https://github.com/aah
+[@linc01n]: https://github.com/linc01n
+
+[#393]: https://github.com/phinze/homebrew-cask/issues/393
+[#914]: https://github.com/phinze/homebrew-cask/issues/914
+[#1035]: https://github.com/phinze/homebrew-cask/issues/1035
+[#1461]: https://github.com/phinze/homebrew-cask/issues/1461
+
+[#1436]: https://github.com/phinze/homebrew-cask/issues/1436
+
+
 ## 0.19.4
 
 * __Features__
