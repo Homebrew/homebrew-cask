@@ -1,4 +1,4 @@
-class SteerMouse < Cask
+class Steermouse < Cask
   url 'http://plentycom.jp/ctrl/files_sm/SteerMouse4.1.7.dmg'
   homepage 'http://plentycom.jp/en/steermouse/'
   version '4.1.7'
