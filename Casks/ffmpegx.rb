@@ -1,4 +1,4 @@
-class FfmpegX < Cask
+class Ffmpegx < Cask
   url 'ftp://ftp2.ffmpegx.com/ffmpegx/ffmpegX.dmg'
   homepage 'http://www.ffmpegx.com/download.html'
   version 'latest'
