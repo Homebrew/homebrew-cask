@@ -1,4 +1,4 @@
-class MuCommander < Cask
+class Mucommander < Cask
   url 'http://www.mucommander.com/download/mucommander-0_9_0.dmg'
   version '0.9.0'
   homepage 'http://www.mucommander.com/index.php'
