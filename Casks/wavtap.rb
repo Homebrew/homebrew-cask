@@ -1,4 +1,4 @@
-class WavTap < Cask
+class Wavtap < Cask
   url 'https://github.com/downloads/pje/WavTap/WavTap%200.2.0.pkg'
   homepage 'https://github.com/pje/wavtap'
   version '0.2.0'
