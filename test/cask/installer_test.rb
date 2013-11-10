@@ -139,11 +139,9 @@ describe Cask::Installer do
         installer.uninstall
       end
 
-      dest_path = Cask.caskroom/'local-caffeine'/caffeine.version
-      application = dest_path/'Caffeine.app'
-
-      application.wont_be :directory?
-      dest_path.wont_be :directory?
+      (Cask.caskroom/'local-caffeine'/caffeine.version/'Caffeine.app').wont_be :directory?
+      (Cask.caskroom/'local-caffeine'/caffeine.version).wont_be :directory?
+      (Cask.caskroom/'local-caffeine').wont_be :directory?
     end
   end
 end
