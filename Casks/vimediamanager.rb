@@ -1,4 +1,4 @@
-class ViMediaManager < Cask
+class Vimediamanager < Cask
   url 'http://mariusth.channelwood.org/vimediamanager/files/vimediamanager_v0.7a11c.dmg'
   homepage 'http://mariusth.channelwood.org/vimediamanager/'
   version '0.7a11c'
