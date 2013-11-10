@@ -1,4 +1,4 @@
-class VisualVm < Cask
+class Visualvm < Cask
   url 'https://java.net/projects/visualvm/downloads/download/release136/VisualVM_136.dmg'
   homepage 'http://visualvm.java.net'
   version '1.3.6'
