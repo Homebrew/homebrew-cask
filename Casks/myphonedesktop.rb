@@ -1,4 +1,4 @@
-class MyPhoneDesktop < Cask
+class Myphonedesktop < Cask
   url 'http://www.myphonedesktop.com/dwn/myPhoneDesktop_macos_2_0_3.dmg'
   homepage 'http://www.myphonedesktop.com/'
   version '2.0.3'
