@@ -1,4 +1,4 @@
-class IExplorer < Cask
+class Iexplorer < Cask
   url 'http://downloads.macroplant.com/iExplorer-3.2.3.0b.dmg'
   homepage 'http://www.macroplant.com/'
   version '3.2.3.0b'
