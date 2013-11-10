@@ -1,4 +1,4 @@
-class CamRanger < Cask
+class Camranger < Cask
   url 'http://www.camranger.com/downloadFiles/CamRanger_1_3_1.zip'
   homepage 'http://www.camranger.com/downloads/#fbox_5594'
   version '1.3.1'
