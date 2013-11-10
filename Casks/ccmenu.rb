@@ -1,4 +1,4 @@
-class CcMenu < Cask
+class Ccmenu < Cask
   url 'http://downloads.sourceforge.net/project/ccmenu/CCMenu/1.6.3/ccmenu-1.6.3-b.dmg'
   homepage 'http://ccmenu.sourceforge.net/'
   version '1.6.3'
