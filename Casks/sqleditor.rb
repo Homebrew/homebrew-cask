@@ -1,4 +1,4 @@
-class SqlEditor < Cask
+class Sqleditor < Cask
   url 'http://www.malcolmhardie.com/sqleditor/releases/2.5.1/SQLEditor-2-5-1.zip'
   homepage 'http://www.malcolmhardie.com/sqleditor/'
   version '2.5.1'
