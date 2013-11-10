@@ -1,4 +1,4 @@
-class FnFlip < Cask
+class Functionflip < Cask
   url 'http://kevingessner.com/public/downloads/FunctionFlip/2.2.2/FunctionFlip.prefPane.zip'
   homepage 'http://kevingessner.com/software/functionflip/'
   version '2.2.2'
