@@ -1,4 +1,4 @@
-class TrueCrypt < Cask
+class Truecrypt < Cask
   url 'http://www.truecrypt.org/download/TrueCrypt%207.1a%20Mac%20OS%20X.dmg'
   homepage 'http://truecrypt.org/'
   version '7.1a'
