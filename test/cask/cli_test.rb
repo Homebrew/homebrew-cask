@@ -43,5 +43,13 @@ describe Cask::CLI do
       default_applications_dir.directory?.must_equal false
       custom_applications_dir.directory?.must_equal true
     end
+
+    it "exits with a status of 1 when something goes wrong" do
+      Cask::CLI.expects(:exit).with(1)
+      Cask::CLI.expects(:lookup_command).raises(CaskError)
+      shutup {
+        Cask::CLI.process('list')
+      }
+    end
   end
 end

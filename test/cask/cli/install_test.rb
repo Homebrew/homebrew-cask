@@ -17,9 +17,11 @@ describe Cask::CLI::Install do
       Cask::CLI::Install.run('local-transmission')
     end
 
-    TestHelper.must_output(self, lambda {
+    e = lambda {
       Cask::CLI::Install.run('local-transmission')
-    }, 'Error: Cask for local-transmission is already installed. Use `--force` to install anyways.')
+    }.must_raise CaskAlreadyInstalledError
+
+    e.message.must_equal 'Cask for local-transmission is already installed. Use `--force` to install anyways.'
 
     Cask.load('local-transmission').must_be :installed?
   end
@@ -35,9 +37,9 @@ describe Cask::CLI::Install do
   end
 
   it "properly handles casks that are not present" do
-    TestHelper.must_output(self, lambda {
-      Cask::CLI::Install.run('what-the-balls')
-    }, 'Error: No available cask for what-the-balls')
+    lambda {
+      Cask::CLI::Install.run('notacask')
+    }.must_raise CaskUnavailableError
   end
 
   it "raises an exception when no cask is specified" do
