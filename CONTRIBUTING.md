@@ -64,6 +64,10 @@ class MyNewCask < Cask
 end
 ```
 
+If you are submitting a non-stable version of an application that already has a
+cask (e.g. beta or nightly), then the cask should be submitted to the
+[caskroom/versions](https://github.com/caskroom/homebrew-versions) repo.
+
 Fill in the following fields for your Cask:
 
 | field              | explanation |

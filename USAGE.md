@@ -12,6 +12,12 @@ Tap this repository and install the `brew-cask` tool:
     $ brew tap phinze/homebrew-cask
     $ brew install brew-cask
 
+Optional: to install alternate versions of casks (e.g. betas or nightly
+releases), tap the [caskroom/versions](https://github.com/caskroom/homebrew-versions)
+repo:
+
+    $ brew tap caskroom/versions
+
 ## Searching for Casks
 
 Let's see if there's a Cask for Chrome:
