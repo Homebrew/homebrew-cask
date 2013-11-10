@@ -1,4 +1,4 @@
-class XQuartz < Cask
+class Xquartz < Cask
   url 'http://xquartz.macosforge.org/downloads/SL/XQuartz-2.7.5_rc4.dmg'
   homepage 'http://xquartz.macosforge.org/'
   version '2.7.5_rc4'
