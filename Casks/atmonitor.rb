@@ -1,4 +1,4 @@
-class AtMonitor < Cask
+class Atmonitor < Cask
   url 'http://download.atpurpose.com/atMonitor/atMonitor.zip'
   homepage 'http://www.atpurpose.com/atMonitor/'
   version 'latest'
