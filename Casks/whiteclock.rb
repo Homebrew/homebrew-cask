@@ -1,4 +1,4 @@
-class WhiteClock < Cask
+class Whiteclock < Cask
   url 'http://www.taimila.com/downloads/WhiteClock2.zip'
   homepage 'http://www.taimila.com/?p=1221'
   version '2.0'
