@@ -1,4 +1,4 @@
-class ZipCleaner < Cask
+class Zipcleaner < Cask
   url 'http://roger-jolly.nl/software/downloads/zipcleaner/ZipCleaner.zip'
   homepage 'http://roger-jolly.nl/software/#zipcleaner'
   version 'latest'
