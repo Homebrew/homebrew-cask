@@ -1,4 +1,4 @@
-class IStumbler < Cask
+class Istumbler < Cask
   url 'http://istumbler.net/downloads/istumbler-99.zip'
   homepage 'http://istumbler.net/'
   version '99'
