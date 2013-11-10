@@ -1,4 +1,4 @@
-class PngCommentator < Cask
+class Pngcommentator < Cask
   url 'http://www.echomist.co.uk/software/downloads/PNGCommentator_1.3.2.dmg'
   homepage 'http://www.echomist.co.uk/software/PNGCommentator.html'
   version '1.3.2'
