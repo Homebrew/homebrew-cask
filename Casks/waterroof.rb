@@ -1,4 +1,4 @@
-class WaterRoof < Cask
+class Waterroof < Cask
   url 'http://www.hanynet.com/waterroof-3.8.zip'
   homepage 'http://www.hanynet.com/waterroof/index.html'
   version '3.8'
