@@ -1,4 +1,4 @@
-class HyperDock < Cask
+class Hyperdock < Cask
   url 'http://hyperdock.bahoom.com/HyperDock.dmg'
   homepage 'http://hyperdock.bahoom.com/'
   version 'latest'
