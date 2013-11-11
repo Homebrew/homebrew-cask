@@ -80,6 +80,7 @@ Fill in the following fields for your Cask:
 | __artifact info__  | information about artifacts inside the cask (can be specified multiple times)
 | `nested_container` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `link`             | relative path to a file that should be linked into the `Applications` folder on installation
+| `prefpane`         | relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
 | `install`          | relative path to `pkg` that should be run to install the application
 | `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see "Uninstall Support" for more information)
 
