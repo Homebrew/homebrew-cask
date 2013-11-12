@@ -1,7 +1,7 @@
 class SmartGit < Cask
-  url 'http://www.syntevo.com/download/smartgithg/smartgithg-macosx-4_6_4.dmg'
+  url 'http://www.syntevo.com/download/smartgithg/smartgithg-macosx-5_0_1.dmg'
   homepage 'http://www.syntevo.com/'
-  version '4.6.4'
-  sha1 '211e37880fe584496180aff6cf603e5f0521117f'
-  link 'SmartGitHg 4.6.app'
+  version '5.0.1'
+  sha1 '67af01d2f58b3cf6b4c032deb505bc5fbc559a14'
+  link 'SmartGitHg 5.app'
 end
