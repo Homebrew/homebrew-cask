@@ -2,7 +2,7 @@ class AdobeAir < Cask
   url 'http://airdownload.adobe.com/air/mac/download/3.9/AdobeAIR.dmg'
   homepage 'https://get.adobe.com/air/'
   version '3.9'
-  sha1 '5a7d72b74bb2d95535d866ad71db9577129f1e28'
+  sha1 'd2ea487a8f20e7042e9d8e99f312056daf5dc925'
   link 'Adobe AIR Installer.app'
   
   def caveats; <<-EOS.undent
