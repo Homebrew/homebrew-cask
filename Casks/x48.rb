@@ -7,7 +7,7 @@ class X48 < Cask
 
   def caveats; <<-EOS.undent
     x48 requires XQuartz/X11 to be installed,which can be done as:
-        brew cask install x-quartz
+        brew cask install xquartz
     or from:
         http://xquartz.macosforge.org
     EOS
