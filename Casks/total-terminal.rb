@@ -1,4 +1,4 @@
-class Totalterminal < Cask
+class TotalTerminal < Cask
   url 'http://downloads.binaryage.com/TotalTerminal-1.4.6.dmg'
   homepage 'http://totalterminal.binaryage.com'
   version '1.4.6'
