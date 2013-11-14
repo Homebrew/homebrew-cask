@@ -29,6 +29,20 @@ describe Cask::CLI do
     Cask.prefpanedir.must_equal Pathname('/some/path/bar')
   end
 
+  it "supports setting the qlplugindir" do
+    Cask::CLI.process_options %w{help --qlplugindir=/some/path/foo}
+
+    Cask.qlplugindir.must_equal Pathname('/some/path/foo')
+  end
+
+  it "supports setting the qlplugindir from ENV" do
+    ENV['HOMEBREW_CASK_OPTS'] = "--qlplugindir=/some/path/bar"
+
+    Cask::CLI.process_options %w{help}
+
+    Cask.qlplugindir.must_equal Pathname('/some/path/bar')
+  end
+
   it "allows additional options to be passed through" do
     rest = Cask::CLI.process_options %w{edit foo --create --appdir=/some/path/qux}
 
