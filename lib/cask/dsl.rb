@@ -40,6 +40,7 @@ module Cask::DSL
       :link,
       :nested_container,
       :prefpane,
+      :qlplugin,
       :uninstall,
     ]
 

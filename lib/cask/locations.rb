@@ -32,6 +32,14 @@ module Cask::Locations
       @prefpanedir = _prefpanedir
     end
 
+    def qlplugindir
+      @qlplugindir ||= Pathname.new('~/Library/QuickLook').expand_path
+    end
+
+    def qlplugindir=(_qlplugindir)
+      @qlplugindir = _qlplugindir
+    end
+
     def default_tap
       @default_tap ||= 'phinze-cask'
     end
