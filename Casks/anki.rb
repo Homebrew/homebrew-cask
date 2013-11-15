@@ -1,7 +1,7 @@
 class Anki < Cask
-  url 'http://ankisrs.net/download/mirror/anki-2.0.17.dmg'
+  url 'http://ankisrs.net/download/mirror/anki-2.0.18.dmg'
   homepage 'http://ankisrs.net/'
-  version '2.0.17'
-  sha1 '58cd3fa4ba568f380a4c8382ac878553e70f3a46'
+  version '2.0.18'
+  sha1 'b9b22375e55b9aaac949e23c1eacc05b4fa6bb65'
   link 'Anki.app'
 end
