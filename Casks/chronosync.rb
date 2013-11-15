@@ -4,5 +4,4 @@ class Chronosync < Cask
   version 'latest'
   no_checksum
   install 'Install.pkg'
-  uninstall 'Remove.pkg'
 end
