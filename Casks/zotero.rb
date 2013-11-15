@@ -1,7 +1,7 @@
 class Zotero < Cask
-  url 'http://download.zotero.org/standalone/4.0.11/Zotero-4.0.11.dmg'
+  url 'http://download.zotero.org/standalone/4.0.15/Zotero-4.0.15.dmg'
   homepage 'http://www.zotero.org/'
-  version '4.0.11'
-  sha1 '97719f9247094daa15608fca2b8f233d216b98cd'
+  version '4.0.15'
+  sha1 'fcc66cc47a14afcb10475533b7cebcf0548d5f36'
   link 'Zotero.app'
 end
