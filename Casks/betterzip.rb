@@ -1,4 +1,4 @@
-class BetterZip < Cask
+class Betterzip < Cask
   url 'http://macitbetter.com/BetterZip.zip'
   homepage 'http://macitbetter.com'
   version 'latest'
