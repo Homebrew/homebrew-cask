@@ -271,9 +271,7 @@ Neat and tidy!
 ## Working on homebrew-cask itself
 
 If you'd like to hack on the ruby code in the project itself, one way to play
-with changes is to symlink the `rubylib` folder to your Tap repository. So
-assuming your fork is cloned at `~/homebrew-cask` you could do something like
-this:
+with changes is to symlink the `rubylib` folder to your Tap repository.
 
   ```bash
   $ cd $(brew --prefix brew-cask)
@@ -281,7 +279,8 @@ this:
   $ ln -s $(brew --prefix)/Library/Taps/phinze-cask/lib rubylib
   ```
 
-Now you can hack on `~/homebrew-cask` and use the cli to interact with the code.
+Now you can hack on `homebrew-cask` in the Tap and use the `brew cask` CLI like
+normal to interact with your latest code.
 
 ### Mind the test suite!
 
