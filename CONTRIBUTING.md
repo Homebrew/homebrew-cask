@@ -278,7 +278,7 @@ this:
   ```bash
   $ cd $(brew --prefix brew-cask)
   $ mv rubylib{,.orig}
-  $ ln -s $(brew --prefix)/Library/Taps/phinze-cask/lib rubylib
+  $ ln -s ~/homebrew-cask/lib rubylib
   ```
 
 Now you can hack on `~/homebrew-cask` and use the cli to interact with the code.
