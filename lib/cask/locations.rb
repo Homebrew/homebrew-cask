@@ -5,7 +5,7 @@ module Cask::Locations
 
   module ClassMethods
     def tapspath
-      HOMEBREW_PREFIX.join "Library", "Taps"
+      HOMEBREW_REPOSITORY.join "Library", "Taps"
     end
 
     def caskroom
