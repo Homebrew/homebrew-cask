@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 0.20.1
+
+* __Features__
+* __Fixes__
+  - [#1765][] - fix tapspath to work with non-standard homebrew location <3 [@njam][]
+* __Breaking Changes__
+
+[#1765]: https://github.com/phinze/homebrew-cask/issues/1765
+[@njam]: https://github.com/njam
+
 ## 0.20.0
 
 * __Features__
