@@ -1,9 +1,9 @@
 class Netbeans < Cask
-  url 'http://download.netbeans.org/netbeans/7.3.1/final/bundles/netbeans-7.3.1-macosx.dmg'
+  url 'http://download.netbeans.org/netbeans/7.4/final/bundles/netbeans-7.4-macosx.dmg'
   homepage 'https://netbeans.org/'
-  version '7.3.1'
-  sha1 '2dadd046e7d60b8ce74bf26b685eff092e4c5fb3'
-  install 'NetBeans 7.3.1.mpkg'
+  version '7.4'
+  sha1 '40f3a0dcb8ed0a41fbfd7e6c5263b74571f542a6'
+  install 'NetBeans 7.4.mpkg'
   # Theoretically this uninstall could conflict with a separate GlassFish
   # installation.
   #
