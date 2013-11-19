@@ -1,4 +1,4 @@
-class QuickRadar < Cask
+class Quickradar < Cask
   url 'http://www.quickradar.com/0.8.zip'
   homepage 'http://www.quickradar.com/'
   version '0.8'
