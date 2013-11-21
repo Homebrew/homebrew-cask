@@ -3,5 +3,5 @@ class DiskmakerX < Cask
   homepage 'http://diskmakerx.com/'
   version 'latest'
   no_checksum
-  link "DiskMaker X.app"
+  link 'DiskMaker X.app'
 end
