@@ -4,5 +4,5 @@ class Osxfuse < Cask
   version '2.6.1'
   sha1 '2e43a6593aee5fa45166b8abc70ad054a83d083b'
   install 'Install OSXFUSE 2.6.pkg'
-  uninstall :pkgutil => 'com.github.osxfuse.*'
+  uninstall :pkgutil => 'com.github.osxfuse.pkg.Core|com.github.osxfuse.pkg.PrefPane'
 end
