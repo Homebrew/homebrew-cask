@@ -1,7 +1,7 @@
 class Xunlei < Cask
-  url 'http://down.sandai.net/mac/thunder_dl2.0.2.928_Beta.dmg'
+  url 'http://down.sandai.net/mac/thunder_dl2.0.3.1000_Beta.dmg'
   homepage 'http://mac.xunlei.com/'
-  version '2.0.2.928_Beta'
-  sha1 '1b5f89afc928a2e4f95f872a7d0614c1e51b682b'
+  version '2.0.3.1000_Beta'
+  sha1 '93c0c0342bacafc41ae3528249238e4d2868f88a'
   link 'Thunder.app'
 end
