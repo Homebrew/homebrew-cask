@@ -3,5 +3,5 @@ class VitaminR < Cask
   homepage 'http://www.publicspace.net/Vitamin-R/'
   version 'latest'
   no_checksum
-  link 'Vitamin-R.app'
+  link 'Vitamin-R 2.app'
 end
