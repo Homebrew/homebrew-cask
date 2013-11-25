@@ -5,7 +5,7 @@ class GitAnnex < Cask
     url 'http://downloads.kitenet.net/git-annex/OSX/current/10.8.2_Mountain_Lion/git-annex.dmg.bz2'
   end
   homepage 'http://git-annex.branchable.com/'
-  version '0.0.1'
+  version 'latest'
   no_checksum
   link 'git-annex.app'
   def caveats; <<-EOS.undent
