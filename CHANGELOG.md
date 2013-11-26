@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 0.21.0
+
+* __Features__
+  - [#1733][] - QuickLook plugin support <3 [@lgarron][]
+* __Fixes__
+* __Breaking Changes__
+
+[#1733]: https://github.com/phinze/homebrew-cask/issues/1733
+[@lgarron]: https://github.com/lgarron
+
 ## 0.20.1
 
 * __Features__
