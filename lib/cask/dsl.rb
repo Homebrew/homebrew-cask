@@ -41,6 +41,7 @@ module Cask::DSL
       :nested_container,
       :prefpane,
       :qlplugin,
+      :font,
       :uninstall,
     ]
 

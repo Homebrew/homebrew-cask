@@ -68,6 +68,9 @@ class Cask::CLI
       opts.on("--qlplugindir=MANDATORY") do |v|
         Cask.qlplugindir = Pathname(v).expand_path
       end
+      opts.on("--fontdir=MANDATORY") do |v|
+        Cask.fontdir = Pathname(v).expand_path
+      end
       opts.on("--debug") do |v|
         @debug = true
       end
