@@ -1,7 +1,7 @@
 class Keyremap4macbook < Cask
-  url 'https://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-8.4.0.dmg'
+  url 'https://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-9.0.0.dmg'
   homepage 'https://pqrs.org/macosx/keyremap4macbook/'
-  version '8.4.0'
-  sha1 'c2839a17437eebeb3e70684154b1715beefda511'
+  version '9.0.0'
+  sha1 'dc01547d60eec94f53d4914b8d0d76d6c75e17c0'
   install 'KeyRemap4MacBook.pkg'
 end
