@@ -42,6 +42,7 @@ class Cask
       system "#{sudo} chown -R #{current_user}:staff #{caskroom.parent}"
     end
     appdir.mkpath unless appdir.exist?
+    qlplugindir.mkpath unless qlplugindir.exist?
   end
 
   def self.load(query)
