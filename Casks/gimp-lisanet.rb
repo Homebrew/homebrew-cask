@@ -1,7 +1,7 @@
 class GimpLisanet < Cask
-  url 'http://downloads.sourceforge.net/gimponosx/Gimp-2.8.6p1-MountainLion.dmg'
+  url 'http://downloads.sourceforge.net/gimponosx/Gimp-2.8.10-Mavericks.dmg'
   homepage 'http://gimp.lisanet.de'
-  version '2.8.6'
-  sha1 '0b93fc41a5c7705c403453452b91c6c034829d4f'
+  version '2.8.10'
+  sha1 '026d1fb3eb9ebdc1365bfc71fb8d66f943731bd9'
   link 'GIMP.app'
 end
