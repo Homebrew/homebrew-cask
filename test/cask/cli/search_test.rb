@@ -5,8 +5,8 @@ describe Cask::CLI::Search do
     lambda {
       Cask::CLI::Search.run('intellij')
     }.must_output <<-OUTPUT.gsub(/^ */, '')
-      intellij-community
-      intellij-ultimate
+      intellij-idea-community
+      intellij-idea-ultimate
     OUTPUT
   end
 end
