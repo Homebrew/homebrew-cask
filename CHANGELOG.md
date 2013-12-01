@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.21.1
+
+* __Features__
+* __Fixes__
+  - [#1882][] - Ensure QuickLook directory exists [@peeja][]
+* __Breaking Changes__
+
 ## 0.21.0
 
 * __Features__
