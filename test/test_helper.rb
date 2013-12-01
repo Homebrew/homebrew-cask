@@ -82,7 +82,7 @@ class TestHelper
 end
 
 require 'support/fake_fetcher'
-require 'support/fake_appdir'
+require 'support/fake_dirs'
 require 'support/fake_system_command'
 require 'support/cleanup'
 require 'support/never_sudo_system_command'
