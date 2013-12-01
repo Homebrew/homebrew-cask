@@ -286,7 +286,7 @@ normal to interact with your latest code.
 ### Mind the test suite!
 
 If you're making changes - please write some tests for them! Also be sure to
-run the whole test suite before submitting (if you forget Travis-CI will do
+run the whole test suite using `rake` before submitting (if you forget Travis-CI will do
 that for you and embarass you in front of all your friends). :)
 
 # <3 THANK YOU! <3
