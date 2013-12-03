@@ -1,7 +1,7 @@
 class IntellijIdeaUltimate < Cask
-  url 'http://download.jetbrains.com/idea/ideaIU-12.1.6.dmg'
+  url 'http://download.jetbrains.com/idea/ideaIU-13.dmg'
   homepage 'https://www.jetbrains.com/idea/index.html'
-  version '12.1.6'
-  sha1 '4d0cb823bf0ff154357aedc1eee8eca3974556a3'
-  link 'IntelliJ IDEA 12.app'
+  version '13'
+  sha1 '165a64f4f11b52b2cb53aedb7a3561fd02d5f82f'
+  link 'IntelliJ IDEA 13.app'
 end
