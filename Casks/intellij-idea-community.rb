@@ -1,7 +1,7 @@
 class IntellijIdeaCommunity < Cask
-  url 'http://download.jetbrains.com/idea/ideaIC-12.1.6.dmg'
+  url 'http://download-ln.jetbrains.com/idea/ideaIC-13.dmg'
   homepage 'https://www.jetbrains.com/idea/index.html'
-  version '12.1.6'
-  sha1 '276301bd01fffdc3e6ddd0c4e2acccfb49b82b54'
-  link 'IntelliJ IDEA 12 CE.app'
+  version '13.0'
+  sha1 '0961703869efb124c5d964b18376c668d52cc90b'
+  link 'IntelliJ IDEA 13 CE.app'
 end
