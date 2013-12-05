@@ -18,6 +18,10 @@ module Cask::DSL
 
   def caveats; ''; end
 
+  def headers; self.class.headers; end
+
+  def fake_user_agent; self.class.fake_user_agent; end
+
   module ClassMethods
     def homepage(homepage=nil)
       @homepage ||= homepage
@@ -25,6 +29,14 @@ module Cask::DSL
 
     def url(url=nil)
       @url ||= Cask::UnderscoreSupportingURI.parse(url)
+    end
+
+    def headers(headers={})
+      @headers ||= Cask::Headers.new(headers)
+    end
+
+    def fake_user_agent
+      headers({:user_agent => 'Chrome/32.0.1000.00'})
     end
 
     def version(version=nil)
