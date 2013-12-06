@@ -3,11 +3,12 @@ module Cask::Artifact; end
 require 'cask/artifact/base'
 
 require 'cask/artifact/app'
+require 'cask/artifact/block'
+require 'cask/artifact/font'
 require 'cask/artifact/nested_container'
 require 'cask/artifact/pkg'
 require 'cask/artifact/prefpane'
 require 'cask/artifact/qlplugin'
-require 'cask/artifact/font'
 
 module Cask::Artifact
   #
@@ -22,6 +23,7 @@ module Cask::Artifact
       Cask::Artifact::Prefpane,
       Cask::Artifact::Qlplugin,
       Cask::Artifact::Font,
+      Cask::Artifact::Block,
     ]
   end
 
