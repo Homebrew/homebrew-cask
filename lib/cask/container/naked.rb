@@ -1,7 +1,9 @@
 class Cask::Container::Naked < Cask::Container::Base
   def self.me?(criteria)
     %w[
+      .otf
       .pkg
+      .ttf
     ].include?(criteria.path.extname)
   end
 
