@@ -23,7 +23,10 @@ module Cask::Scopes
     end
 
     def installed
-      all_titles.select { |c| Cask.load(c).installed? }
+      installed_cask_dirs = Pathname.glob(caskroom.join("*"))
+      installed_cask_dirs.map do |dir|
+        Cask.load(dir.basename.to_s)
+      end
     end
   end
 end

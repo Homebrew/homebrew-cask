@@ -14,6 +14,26 @@ describe Cask::CLI::List do
     OUTPUT
   end
 
+  describe 'when casks have been renamed' do
+    before do
+      @renamed_path = Cask.caskroom.join('ive-been-renamed','latest','Renamed.app').tap(&:mkpath)
+      @renamed_path.join('Info.plist').open('w') { |f| f.puts "Oh plist" }
+    end
+
+    after do
+      @renamed_path.rmtree if @renamed_path.exist?
+    end
+
+    it 'lists installed casks without backing ruby files (due to renames or otherwise)' do
+      lambda {
+        Cask::CLI::List.run
+      }.must_output <<-OUTPUT.gsub(/^ */, '')
+        ive-been-renamed (!)
+      OUTPUT
+    end
+  end
+
+
   it 'given a set of installed casks, lists the installed files for those casks' do
     casks = %w[local-caffeine local-transmission].map { |c| Cask.load(c) }
 
