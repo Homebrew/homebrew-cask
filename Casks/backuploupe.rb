@@ -1,7 +1,7 @@
 class Backuploupe < Cask
-  url 'http://www.soma-zone.com/download/files/BackupLoupe_2.4.2.tar.bz2'
+  url 'http://www.soma-zone.com/download/files/BackupLoupe_2.5.1.tar.bz2'
   homepage 'http://www.soma-zone.com/BackupLoupe/'
-  version '2.4.2'
-  sha1 'fb2321b585dbe8827e437ab715186e1cf49c1cd5'
+  version '2.5.1'
+  sha1 '316d5edb0f4ebd9c87e142eb5e9ca3d5266e96c9'
   link 'BackupLoupe.app'
 end
