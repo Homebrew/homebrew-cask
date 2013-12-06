@@ -19,7 +19,7 @@ class Cask::CLI::List
   end
 
   def self.list_installed
-    puts_columns Cask::CLI.nice_listing(Cask.installed)
+    system "ls", "/opt/homebrew-cask/Caskroom"
   end
 
   def self.help
