@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 0.21.1
+## 0.22.0
 
 * __Features__
   - support for installing fonts via the `font` artifact <3 [@rolandwalker][]
