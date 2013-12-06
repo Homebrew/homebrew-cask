@@ -40,6 +40,14 @@ module Cask::Locations
       @qlplugindir = _qlplugindir
     end
 
+    def fontdir
+      @fontdir ||= Pathname.new('~/Library/Fonts').expand_path
+    end
+
+    def fontdir=(_fontdir)
+      @fontdir = _fontdir
+    end
+
     def default_tap
       @default_tap ||= 'phinze-cask'
     end

@@ -43,6 +43,20 @@ describe Cask::CLI do
     Cask.qlplugindir.must_equal Pathname('/some/path/bar')
   end
 
+  it "supports setting the fontdir" do
+    Cask::CLI.process_options %w{help --fontdir=/some/path/foo}
+
+    Cask.fontdir.must_equal Pathname('/some/path/foo')
+  end
+
+  it "supports setting the fontdir from ENV" do
+    ENV['HOMEBREW_CASK_OPTS'] = "--fontdir=/some/path/bar"
+
+    Cask::CLI.process_options %w{help}
+
+    Cask.fontdir.must_equal Pathname('/some/path/bar')
+  end
+
   it "allows additional options to be passed through" do
     rest = Cask::CLI.process_options %w{edit foo --create --appdir=/some/path/qux}
 
