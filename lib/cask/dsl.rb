@@ -51,6 +51,17 @@ module Cask::DSL
       end
     end
 
+    ARTIFACT_BLOCK_TYPES = [
+      :after_install,
+      :after_uninstall
+    ]
+
+    ARTIFACT_BLOCK_TYPES.each do |type|
+      define_method(type) do |&block|
+        artifacts[type] << block
+      end
+    end
+
     attr_reader :sums
 
     def md5(md5=nil)
