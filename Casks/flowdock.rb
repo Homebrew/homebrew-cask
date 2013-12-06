@@ -1,7 +1,7 @@
 class Flowdock < Cask
-  url 'https://d2ph5hv9wbwvla.cloudfront.net/mac/Flowdock_v1_1_0.zip'
+  url 'https://flowdock-resources.s3.amazonaws.com/mac/Flowdock.zip'
   homepage 'https://www.flowdock.com/help/desktop'
-  version '1.1.0'
-  sha1 '62332957d869b813c9402d24e2bbaa79dece0bd0'
+  version 'latest'
+  no_checksum
   link 'Flowdock.app'
 end
