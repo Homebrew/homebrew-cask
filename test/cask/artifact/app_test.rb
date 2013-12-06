@@ -28,18 +28,26 @@ describe Cask::Artifact::App do
         link 'subdir/Caffeine.app'
       end
 
-      subdir_cask = SubDirCask.new.tap do |cask|
-        TestHelper.install_without_artifacts(cask)
+      begin
+        subdir_cask = SubDirCask.new.tap do |cask|
+          TestHelper.install_without_artifacts(cask)
+        end
+
+        appsubdir = (subdir_cask.destination_path/'subdir').tap(&:mkpath)
+        FileUtils.mv((subdir_cask.destination_path/'Caffeine.app'), appsubdir)
+
+        shutup do
+          Cask::Artifact::App.new(subdir_cask).install
+        end
+
+        TestHelper.valid_alias?(Cask.appdir/'Caffeine.app').must_equal true
+      ensure
+        if defined?(subdir_cask)
+          shutup do
+            Cask::Installer.new(subdir_cask).uninstall
+          end
+        end
       end
-
-      appsubdir = (subdir_cask.destination_path/'subdir').tap(&:mkpath)
-      FileUtils.mv((subdir_cask.destination_path/'Caffeine.app'), appsubdir)
-
-      shutup do
-        Cask::Artifact::App.new(subdir_cask).install
-      end
-
-      TestHelper.valid_alias?(Cask.appdir/'Caffeine.app').must_equal true
     end
 
     it "only uses linkables when they are specified" do

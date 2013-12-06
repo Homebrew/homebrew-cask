@@ -1,6 +1,21 @@
 class Cask::Source::Tap
   def self.me?(query)
-    true # this is the fallback source
+    path_for_query(query).exist?
+  end
+
+  def self.path_for_query(query)
+    if query.include?('/')
+      cask_with_tap = query
+    else
+      cask_with_tap = Cask.all_titles.find { |t| t.split('/').last == query }
+    end
+
+    if cask_with_tap
+      tap, cask = cask_with_tap.split('/')
+      Cask.tapspath.join(tap, 'Casks', "#{cask}.rb")
+    else
+      Cask.tapspath.join(Cask.default_tap, 'Casks', "#{query}.rb")
+    end
   end
 
   attr_reader :title
@@ -10,19 +25,7 @@ class Cask::Source::Tap
   end
 
   def load
-    if title.include?('/')
-      cask_with_tap = title
-    else
-      cask_with_tap = Cask.all_titles.find { |t| t.split('/').last == title }
-    end
-
-    if cask_with_tap
-      tap, cask = cask_with_tap.split('/')
-      source = Cask.tapspath.join(tap, 'Casks', "#{cask}.rb")
-    else
-      source = Cask.tapspath.join(Cask.default_tap, 'Casks', "#{title}.rb")
-    end
-    raise CaskUnavailableError, title unless source.exist?
-    Cask::Source::Path.new(source).load
+    path = self.class.path_for_query(title)
+    Cask::Source::Path.new(path).load
   end
 end
