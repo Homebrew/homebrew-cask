@@ -35,6 +35,25 @@ describe Cask::CLI::Uninstall do
     Cask.appdir.join('Caffeine.app').wont_be :symlink?
   end
 
+  describe "when casks have been renamed" do
+    before do
+      @renamed_path = Cask.caskroom.join('ive-been-renamed','latest','Renamed.app').tap(&:mkpath)
+      @renamed_path.join('Info.plist').open('w') { |f| f.puts "Oh plist" }
+    end
+
+    after do
+      @renamed_path.rmtree if @renamed_path.exist?
+    end
+
+    it "can uninstall non-ruby-backed casks" do
+      shutup do
+        Cask::CLI::Uninstall.run('ive-been-renamed')
+      end
+
+      @renamed_path.wont_be :exist?
+    end
+  end
+
   it "raises an exception when no cask is specified" do
     lambda {
       Cask::CLI::Uninstall.run
