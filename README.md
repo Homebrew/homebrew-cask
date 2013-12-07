@@ -6,7 +6,7 @@
 
 
 Let's see if we can get the elegance, simplicity, and speed of Homebrew for the
-installation and management GUI Mac applications like Google Chrome and Adium.
+installation and management of GUI Mac applications such as Google Chrome and Adium.
 
 `brew-cask` provides a friendly homebrew-style CLI workflow for the
 administration of Mac applications distributed as binaries.
@@ -24,7 +24,7 @@ $ brew cask install google-chrome
 => Success! google-chrome installed to /opt/homebrew-cask/Caskroom/google-chrome/stable-channel
 => Linking Google Chrome.app to /Users/phinze/Applications/Google Chrome.app
 ```
-And there we have it.  Google Chrome installed with a few quick commands; no clicking, no dragging, no dropping.
+And there we have it. Google Chrome installed with a few quick commands: no clicking, no dragging, no dropping.
 ```sh
 open ~/Applications/"Google Chrome.app"
 ```
@@ -32,7 +32,7 @@ open ~/Applications/"Google Chrome.app"
 
  * Find basic documentation on using `homebrew-cask` in [USAGE.md](https://github.com/phinze/homebrew-cask/blob/master/USAGE.md)
  * Want to contribute? Awesome! See [CONTRIBUTING.md](https://github.com/phinze/homebrew-cask/blob/master/CONTRIBUTING.md)
- * More project related details and discussion available in [FAQ.md](https://github.com/phinze/homebrew-cask/blob/master/FAQ.md)
+ * More project-related details and discussion are available in [FAQ.md](https://github.com/phinze/homebrew-cask/blob/master/FAQ.md)
 
 ## Questions? Wanna chat?
 
