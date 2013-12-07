@@ -1,4 +1,4 @@
-# Release standards
+# Release Standards
 
 Here's where we document how homebrew-cask is released.
 
@@ -25,7 +25,7 @@ down then floating in a brain somewhere.
 4. Push the commit and the tag: `git push --follow-tags`
 5. Rejoice!
 
-## Things to consider
+## Things to Consider
 
 The way `brew update` works, users will always be tracking `HEAD` in their tap.
 This means that the latest updates to Casks are going to trickle out
