@@ -1,7 +1,7 @@
 class Mailplane < Cask
-  url 'http://dist.mailplaneapp.com/builds/Mailplane_3_827.tbz'
+  url 'http://dist.mailplaneapp.com/builds/Mailplane_3_878.tbz'
   homepage 'http://mailplaneapp.com/'
-  version '3.0.3 (827)'
-  sha1 '32ea96deffae3a8a351180d96fe9caac6809c6be'
+  version '3.1.1 (878)'
+  sha1 '3bf4ab3ef6093f6891e3ee3b0ece44cf534cf8a2'
   link 'Mailplane 3.app'
 end
