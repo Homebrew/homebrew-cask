@@ -4,4 +4,9 @@ class PathFinder < Cask
   version 'latest'
   no_checksum
   link 'Path Finder.app'
+
+  after_install do
+    # Don't ask to move the app bundle to /Applications
+    system 'defaults write com.cocoatech.PathFinder kNTMoveToApplicationsFolderAlertSuppress -bool true'
+  end
 end
