@@ -1,7 +1,7 @@
 class Maxthon < Cask
-  url 'http://dl.maxthon.com/mac/Maxthon-4.1.2.2000.dmg'
+  url 'http://dl.maxthon.com/mac/Maxthon-4.1.3.2000.dmg'
   homepage 'http://www.maxthon.com/'
-  version '4.1.2.2000'
-  sha1 'ff0a087bd30d234ba95d83fa540746cfa7086489'
+  version '4.1.3.2000'
+  sha1 '80176508dd94b65c86f6db65e295ba27b76876f3'
   link 'Maxthon.app'
 end
