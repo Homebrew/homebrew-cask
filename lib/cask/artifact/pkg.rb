@@ -13,11 +13,12 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
 
   def run_installer(pkg_relative_path)
     ohai "Running installer for #{@cask}; your password may be necessary."
-    @command.run!("installer", {
-      :sudo => true,
-      :args => %W[-pkg #{@cask.destination_path.join(pkg_relative_path)} -target /],
-      :print => true
-    })
+    args = [
+      '-pkg',    @cask.destination_path.join(pkg_relative_path),
+      '-target', '/'
+    ]
+    args << '-verboseR' if ARGV.verbose?
+    @command.run!('installer', {:sudo => true, :args => args, :print => true})
   end
 
   def manually_uninstall(uninstall_options)
