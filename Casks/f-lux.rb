@@ -6,7 +6,7 @@ class FLux < Cask
   link 'Flux.app'
 
   after_install do
-    # Prevent f.lux from asking the user whether he wants the app bundle moved to /Applications
+    # Don't ask to move the app bundle to /Applications
     system 'defaults write org.herf.Flux moveToApplicationsFolderAlertSuppress -int 1'
   end
 end
