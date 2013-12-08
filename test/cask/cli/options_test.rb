@@ -43,6 +43,20 @@ describe Cask::CLI do
     Cask.qlplugindir.must_equal Pathname('/some/path/bar')
   end
 
+  it "supports setting the colorpickerdir" do
+    Cask::CLI.process_options %w{help --colorpickerdir=/some/path/foo}
+
+    Cask.colorpickerdir.must_equal Pathname('/some/path/foo')
+  end
+
+  it "supports setting the colorpickerdir from ENV" do
+    ENV['HOMEBREW_CASK_OPTS'] = "--colorpickerdir=/some/path/bar"
+
+    Cask::CLI.process_options %w{help}
+
+    Cask.colorpickerdir.must_equal Pathname('/some/path/bar')
+  end
+
   it "supports setting the fontdir" do
     Cask::CLI.process_options %w{help --fontdir=/some/path/foo}
 
