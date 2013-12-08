@@ -43,6 +43,7 @@ module Cask::DSL
       :qlplugin,
       :font,
       :uninstall,
+      :widget,
     ]
 
     ARTIFACT_TYPES.each do |type|

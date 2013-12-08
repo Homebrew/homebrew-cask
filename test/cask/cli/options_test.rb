@@ -57,6 +57,20 @@ describe Cask::CLI do
     Cask.fontdir.must_equal Pathname('/some/path/bar')
   end
 
+  it "supports setting the widgetdir" do
+    Cask::CLI.process_options %w{help --widgetdir=/some/path/foo}
+
+    Cask.widgetdir.must_equal Pathname('/some/path/foo')
+  end
+
+  it "supports setting the widgetdir from ENV" do
+    ENV['HOMEBREW_CASK_OPTS'] = "--widgetdir=/some/path/bar"
+
+    Cask::CLI.process_options %w{help}
+
+    Cask.widgetdir.must_equal Pathname('/some/path/bar')
+  end
+
   it "allows additional options to be passed through" do
     rest = Cask::CLI.process_options %w{edit foo --create --appdir=/some/path/qux}
 

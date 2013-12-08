@@ -83,6 +83,7 @@ Fill in the following fields for your Cask:
 | `prefpane`         | relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
 | `qlplugin`         | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `font`             | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
+| `widget`           | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation
 | `install`          | relative path to `pkg` that should be run to install the application
 | `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see __Uninstall Support__ for more information)
 

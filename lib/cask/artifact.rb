@@ -9,6 +9,8 @@ require 'cask/artifact/nested_container'
 require 'cask/artifact/pkg'
 require 'cask/artifact/prefpane'
 require 'cask/artifact/qlplugin'
+require 'cask/artifact/widget'
+
 
 module Cask::Artifact
   #
@@ -23,6 +25,7 @@ module Cask::Artifact
       Cask::Artifact::Prefpane,
       Cask::Artifact::Qlplugin,
       Cask::Artifact::Font,
+      Cask::Artifact::Widget,
       Cask::Artifact::Block,
     ]
   end
