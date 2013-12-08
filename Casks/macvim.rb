@@ -9,4 +9,16 @@ class Macvim < Cask
   homepage 'http://code.google.com/p/macvim/'
   version '7.4-72'
   link 'MacVim-snapshot-72/MacVim.app'
+
+  def caveats; <<-EOS.undent
+    If you'd like, you can link in the mvim binary to somewhere in your $PATH
+    with a command like this:
+
+      ln -s "#{destination_path}/MacVim-snapshot-72/mvim" "/usr/local/bin/mvim"
+
+    Note that homebrew also provides a compiled macvim Formula that links its
+    binary to /usr/local/bin/mvim. It's not recommended to install both the
+    Cask and the Formula of MacVim.
+    EOS
+  end
 end
