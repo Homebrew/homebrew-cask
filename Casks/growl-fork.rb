@@ -4,4 +4,5 @@ class GrowlFork < Cask
   version '1.2.2f1'
   sha1 '34ee60ee276cc85f144667a25d70999c308afa36'
   install 'Growl.pkg'
+  uninstall :files => '/Library/PreferencePanes/Growl.prefPane'
 end
