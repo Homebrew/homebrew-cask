@@ -71,6 +71,9 @@ class Cask::CLI
       opts.on("--fontdir=MANDATORY") do |v|
         Cask.fontdir = Pathname(v).expand_path
       end
+      opts.on("--widgetdir=MANDATORY") do |v|
+        Cask.widgetdir = Pathname(v).expand_path
+      end
       opts.on("--debug") do |v|
         @debug = true
       end
