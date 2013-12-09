@@ -30,6 +30,16 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       )
     end
 
+    if uninstall_options.key? :quit
+      [*uninstall_options[:quit]].each do |id|
+        ohai "Quitting application ID #{id}"
+        is_running = @command.run!('osascript', :args => ['-e', "if application id \"#{id}\" is running then 1"], :sudo => true)
+        if is_running == "1\n"
+          @command.run!('osascript', :args => ['-e', "tell application id \"#{id}\" to quit"], :sudo => true)
+        end
+      end
+    end
+
     if uninstall_options.key? :kext
       [*uninstall_options[:kext]].each do |kext|
         ohai "Unloading kernel extension #{kext}"
