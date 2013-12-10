@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## 0.24.0
+
+* __Features__
+  - #2018 - add :quit key to uninstall <3 @rolandwalker
+* __Fixes__
+  - #2019 - validate keys given to uninstall @rolandwalker
+* __Breaking Changes__>
+
+## 0.23.0
+
+* __Features__
+  - #2012 - support `--verbose` flag for pkg installer
+  - #2013 - support for installing widgets via the `widget` artifact
+* __Fixes__
+* __Breaking Changes__
+
 ## 0.22.0
 
 * __Features__
