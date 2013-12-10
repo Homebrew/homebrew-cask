@@ -33,7 +33,10 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     if uninstall_options.key? :kext
       [*uninstall_options[:kext]].each do |kext|
         ohai "Unloading kernel extension #{kext}"
-        @command.run!('kextunload', :args => ['-b', kext], :sudo => true)
+        is_loaded = @command.run!('kextstat', :args => ['-l', '-b', kext], :sudo => true)
+        if is_loaded.length > 1
+          @command.run!('kextunload', :args => ['-b', kext], :sudo => true)
+        end
       end
     end
 
