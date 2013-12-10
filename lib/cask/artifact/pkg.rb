@@ -22,6 +22,12 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
   end
 
   def manually_uninstall(uninstall_options)
+
+    unknown_keys = uninstall_options.keys - [:script, :quit, :kext, :pkgutil, :launchctl, :files]
+    unless unknown_keys.empty?
+      opoo "Unknown arguments to uninstall: #{unknown_keys.join(", ")}. Running `brew update; brew upgrade brew-cask` will likely fix it.'"
+    end
+
     ohai "Running uninstall process for #{@cask}; your password may be necessary."
     if uninstall_options.key? :script
       @command.run!(
