@@ -17,10 +17,13 @@ Casks currently have five required fields:
  * __qlplugin__: (required for `.qlgenerator`) indicates which file(s) should be linked into the QuickLook folder on installation
  * __font__ : (required for fonts) indicates which file(s) should be linked into the Fonts folder on installation
 
-and two optional fields:
+and five optional fields:
 
 * __uninstall__: (optional for `.pkg`) indicates how to uninstall a package
 * __nested_container__: relative path to a nested inner container
+* __caveats__: a Ruby block providing the user with Cask-specific information at install time
+* __after_install__: a Ruby block containing postflight install operations
+* __after_uninstall__: a Ruby block containing postflight uninstall operations
 
 ## What's the status of this project?  Where's it headed?
 
