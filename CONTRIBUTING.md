@@ -78,14 +78,22 @@ Fill in the following fields for your Cask:
 | `version`          | application version; determines the directory structure in the Caskroom
 | `sha1`             | SHA-1 Checksum of the file; checked when the file is downloaded to prevent any funny business (can be omitted with `no_checksum`)
 | __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
-| `nested_container` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `link`             | relative path to a file that should be linked into the `Applications` folder on installation
+| `install`          | relative path to `pkg` that should be run to install the application
+| `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see __Uninstall Support__ for more information)
+
+Additional fields you might need for special use-cases:
+
+| field              | explanation |
 | `prefpane`         | relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
 | `qlplugin`         | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `font`             | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
 | `widget`           | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation
-| `install`          | relative path to `pkg` that should be run to install the application
-| `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see __Uninstall Support__ for more information)
+| `nested_container` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
+| `caveats`          | a Ruby block providing the user with Cask-specific information at install time
+| `after_install`    | a Ruby block containing postflight install operations
+| `after_uninstall`  | a Ruby block containing postflight uninstall operations
+
 
 ### SourceForge URLs
 
