@@ -196,12 +196,15 @@ of the following keys:
 * `:script` (string) - relative path to an uninstall script to be run via sudo
   - `:args` - array of arguments to the uninstall script
   - `:input` - array of lines of input to be sent to `stdin` of the script
+* `:launchctl` (string or array) - ids of launchctl services to remove
 * `:quit` (string or array) - bundle id of running applications to quit before proceeding with the uninstaller
 * `:kext` (string or array) - bundle id of kext(s) to unload from the system before proceeding with the uninstaller
 * `:pkgutil` (string or regexp) - regexp matching bundle id(s) of packages to uninstall using `pkgutil`
-* `:launchctl` (string or array) - ids of launchctl services to remove
 * `:files` (array) - absolute paths of files or directories to remove
   - should only be used as a last resort, since this is the blunt force approach
+
+Each defined `uninstall` method is applied according to the order above. The order
+in which `uninstall` keys appear in the Cask file is ignored.
 
 ### Good Things to Know
 

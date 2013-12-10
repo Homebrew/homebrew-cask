@@ -36,6 +36,13 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       )
     end
 
+    if uninstall_options.key? :launchctl
+      [*uninstall_options[:launchctl]].each do |service|
+        ohai "Removing launchctl service #{service}"
+        @command.run!('launchctl', :args => ['remove', service], :sudo => true)
+      end
+    end
+
     if uninstall_options.key? :quit
       [*uninstall_options[:quit]].each do |id|
         ohai "Quitting application ID #{id}"
@@ -56,13 +63,6 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     if uninstall_options.key? :pkgutil
       pkgs = Cask::Pkg.all_matching(uninstall_options[:pkgutil], @command)
       pkgs.each(&:uninstall)
-    end
-
-    if uninstall_options.key? :launchctl
-      [*uninstall_options[:launchctl]].each do |service|
-        ohai "Removing launchctl service #{service}"
-        @command.run!('launchctl', :args => ['remove', service], :sudo => true)
-      end
     end
 
     if uninstall_options.key? :files
