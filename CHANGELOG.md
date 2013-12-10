@@ -3,10 +3,10 @@
 ## 0.24.0
 
 * __Features__
-  - #2018 - add :quit key to uninstall <3 @rolandwalker
+  - #2018 - add :quit key to uninstall
 * __Fixes__
-  - #2019 - validate keys given to uninstall @rolandwalker
-* __Breaking Changes__>
+  - #2019 - validate keys given to uninstall
+* __Breaking Changes__
 
 ## 0.23.0
 
