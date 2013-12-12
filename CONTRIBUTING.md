@@ -85,6 +85,7 @@ Fill in the following fields for your Cask:
 Additional fields you might need for special use-cases:
 
 | field              | explanation |
+| ------------------ | ----------- |
 | `prefpane`         | relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
 | `qlplugin`         | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `font`             | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
