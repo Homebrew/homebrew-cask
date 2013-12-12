@@ -68,7 +68,10 @@ This will both uninstall and unlink the Cask.
 
 ## Options
 
-You can set options on the command-line and/or using the `HOMEBREW_CASK_OPTS` environment variable, e.g. (again, using google-chrome):
+You can set [a number of options](https://github.com/phinze/homebrew-cask/blob/master/lib/cask/cli.rb#L60) on the command-line and/or using the `HOMEBREW_CASK_OPTS` environment variable.
+Among others you can change the location of where applications will be installed (if `/opt/homebrew-cask/Caskroom` doesn't work well for you).
+
+This is an example of how to apply an option (again, using google-chrome):
 
 ```bash
 # This probably should happen in your ~/.{ba|z}shrc
