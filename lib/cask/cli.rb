@@ -59,6 +59,9 @@ class Cask::CLI
 
   def self.parser
     @parser ||= OptionParser.new do |opts|
+      opts.on("--caskroom=MANDATORY") do |v|
+        Cask.caskroom = Pathname(v).expand_path
+      end
       opts.on("--appdir=MANDATORY") do |v|
         Cask.appdir = Pathname(v).expand_path
       end
