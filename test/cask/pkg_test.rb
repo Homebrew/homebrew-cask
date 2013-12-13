@@ -6,10 +6,10 @@ describe Cask::Pkg do
       pkg = Cask::Pkg.new('my.fake.pkg', Cask::NeverSudoSystemCommand)
 
       some_files = Array.new(3) { Pathname(Tempfile.new('testfile').path) }
-      pkg.stubs(:files).returns some_files
+      pkg.stubs(:list).with('files').returns some_files
 
       some_dirs = Array.new(3) { Pathname(Dir.mktmpdir) }
-      pkg.stubs(:dirs).returns some_dirs
+      pkg.stubs(:list).with('dirs').returns some_dirs
 
       pkg.stubs(:forget)
 
@@ -22,8 +22,12 @@ describe Cask::Pkg do
     it 'forgets the pkg' do
       pkg = Cask::Pkg.new('my.fake.pkg', Cask::FakeSystemCommand)
 
-      pkg.stubs(:files).returns([])
-      pkg.stubs(:dirs).returns([])
+      Cask::FakeSystemCommand.stubs_command(
+        "pkgutil '--only-files' '--files' 'my.fake.pkg' 2>&1"
+      )
+      Cask::FakeSystemCommand.stubs_command(
+        "pkgutil '--only-dirs' '--files' 'my.fake.pkg' 2>&1"
+      )
 
       Cask::FakeSystemCommand.expects_command(
         %q(sudo -E 'pkgutil' '--forget' 'my.fake.pkg' 2>&1)
@@ -41,8 +45,8 @@ describe Cask::Pkg do
       intact_symlink = fake_dir.join('intact_symlink').tap { |path| path.make_symlink(fake_file) }
       broken_symlink = fake_dir.join('broken_symlink').tap { |path| path.make_symlink('im_nota_file') }
 
-      pkg.stubs(:files).returns([])
-      pkg.stubs(:dirs).returns([fake_dir])
+      pkg.stubs(:list).with('files').returns([])
+      pkg.stubs(:list).with('dirs').returns([fake_dir])
       pkg.stubs(:forget)
 
       pkg.uninstall
@@ -62,8 +66,8 @@ describe Cask::Pkg do
 
       fake_dir.chmod(0000)
 
-      pkg.stubs(:files).returns([fake_file])
-      pkg.stubs(:dirs).returns([fake_dir])
+      pkg.stubs(:list).with('files').returns([fake_file])
+      pkg.stubs(:list).with('dirs').returns([fake_dir])
       pkg.stubs(:forget)
 
       pkg.uninstall
