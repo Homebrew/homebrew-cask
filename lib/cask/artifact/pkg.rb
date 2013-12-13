@@ -46,8 +46,8 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     if uninstall_options.key? :quit
       [*uninstall_options[:quit]].each do |id|
         ohai "Quitting application ID #{id}"
-        is_running = @command.run!('osascript', :args => ['-e', "if application id \"#{id}\" is running then 1"], :sudo => true)
-        if is_running == "1\n"
+        num_running = @command.run!('osascript', :args => ['-e', "tell application \"System Events\" to count processes whose bundle identifier is \"#{id}\""], :sudo => true).to_i
+        if num_running > 0
           @command.run!('osascript', :args => ['-e', "tell application id \"#{id}\" to quit"], :sudo => true)
         end
       end
