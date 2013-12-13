@@ -56,6 +56,14 @@ module Cask::Locations
       @fontdir = _fontdir
     end
 
+    def colorpickerdir
+      @colorpickerdir ||= Pathname.new('~/Library/ColorPickers').expand_path
+    end
+
+    def colorpickerdir=(_colorpickerdir)
+      @colorpickerdir = _colorpickerdir
+    end
+
     def default_tap
       @default_tap ||= 'phinze-cask'
     end

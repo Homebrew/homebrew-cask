@@ -62,6 +62,9 @@ class Cask::CLI
       opts.on("--appdir=MANDATORY") do |v|
         Cask.appdir = Pathname(v).expand_path
       end
+      opts.on("--colorpickerdir=MANDATORY") do |v|
+        Cask.colorpickerdir = Pathname(v).expand_path
+      end
       opts.on("--prefpanedir=MANDATORY") do |v|
         Cask.prefpanedir = Pathname(v).expand_path
       end

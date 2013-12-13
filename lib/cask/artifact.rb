@@ -4,6 +4,7 @@ require 'cask/artifact/base'
 
 require 'cask/artifact/app'
 require 'cask/artifact/block'
+require 'cask/artifact/colorpicker'
 require 'cask/artifact/font'
 require 'cask/artifact/nested_container'
 require 'cask/artifact/pkg'
@@ -21,6 +22,7 @@ module Cask::Artifact
     [
       Cask::Artifact::NestedContainer,
       Cask::Artifact::App,
+      Cask::Artifact::Colorpicker,
       Cask::Artifact::Pkg,
       Cask::Artifact::Prefpane,
       Cask::Artifact::Qlplugin,
