@@ -13,10 +13,10 @@ class Cask::Pkg
   end
 
   def uninstall
-    files.each do |file|
+    list('files').each do |file|
       @command.run!('rm', :args => [file], :sudo => true) if file.exist?
     end
-    _deepest_path_first(dirs).each do |dir|
+    _deepest_path_first(list('dirs')).each do |dir|
       if dir.exist?
         _with_full_permissions(dir) do
           _clean_broken_symlinks(dir)
@@ -32,19 +32,9 @@ class Cask::Pkg
     @command.run!('pkgutil', :args => ['--forget', package_id], :sudo => true)
   end
 
-  def dirs
-    fs_command
-  end
-
-  def files
-    fs_command
-  end
-
-  def fs_command
-    _caller = caller[0][/`([^']*)'/, 1]
-
+  def list(type)
     @command.run!('pkgutil',
-      :args => ["--only-#{_caller}", '--files', package_id]
+      :args => ["--only-#{type}", '--files', package_id]
     ).split("\n").map { |path| root.join(path) }
   end
 
