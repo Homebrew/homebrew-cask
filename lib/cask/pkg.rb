@@ -33,14 +33,18 @@ class Cask::Pkg
   end
 
   def dirs
-    @command.run!('pkgutil',
-      :args => ['--only-dirs', '--files', package_id]
-    ).split("\n").map { |path| root.join(path) }
+    fs_command
   end
 
   def files
+    fs_command
+  end
+
+  def fs_command
+    _caller = caller[0][/`([^']*)'/, 1]
+
     @command.run!('pkgutil',
-      :args => ['--only-files', '--files', package_id]
+      :args => ["--only-#{_caller}", '--files', package_id]
     ).split("\n").map { |path| root.join(path) }
   end
 
