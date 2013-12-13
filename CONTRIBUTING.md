@@ -88,7 +88,6 @@ Additional fields you might need for special use-cases:
 | ------------------ | ----------- |
 | `prefpane`         | relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
 | `colorpicker`      | relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
-
 | `qlplugin`         | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `font`             | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
 | `widget`           | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation
