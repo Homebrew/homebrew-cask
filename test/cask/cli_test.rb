@@ -74,7 +74,7 @@ describe Cask::CLI do
       custom_qlplugin_dir.directory?.must_equal true
     end
 
-    it "respects the env variable when choosing what caskroom to create, not touching the default caskroom" do
+    it "respects the ENV variable when choosing a non-default Caskroom location" do
       default_caskroom_dir = Cask.caskroom
       default_caskroom_dir.rmdir
       custom_caskroom_dir = Pathname(Dir.mktmpdir('custom_caskroom_dir'))
