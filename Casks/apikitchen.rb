@@ -1,4 +1,4 @@
-class ApiKitchen < Cask
+class Apikitchen < Cask
   url 'https://s3.amazonaws.com/envolto-static/ApiKitchen_0.1.dmg'
   homepage 'http://apikitchen.com/'
   version '0.1'
