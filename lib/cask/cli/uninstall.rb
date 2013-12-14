@@ -1,8 +1,9 @@
 class Cask::CLI::Uninstall
-  def self.run(*cask_names)
-    raise CaskUnspecifiedError if cask_names.empty?
-    casks = cask_names.map { |cn| Cask.load(cn) }
-    casks.each do |cask|
+  def self.run(*args)
+    raise CaskUnspecifiedError if args.empty?
+    cask_names = args.reject { |a| a.chars.first == '-' }
+    cask_names.each do |cask_name|
+      cask = Cask.load(cask_name)
       raise CaskNotInstalledError.new(cask) unless cask.installed?
       Cask::Installer.new(cask).uninstall
     end
