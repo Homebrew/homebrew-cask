@@ -71,31 +71,33 @@ This will both uninstall and unlink the Cask.
 You can provide a number of options to the `brew cask` command to modify the default
 installation locations.
 
-* `--caskroom=/custom/path` determines where the actual applications will be located.
+* `--caskroom=/my/path` determines where the actual applications will be located.
 Default is `/opt/homebrew-cask/Caskroom`
-* `--appdir=/custom/path/Applications` changes the path where the symlinks to the applications
-will be generated. This is commonly used to create the links in the root Applications directory
-by specifying `--appdir=/Applications`. Default is `~/Applications`.
-* `--prefpanedir=/custom/path` changes the path for PreferencePane symlinks.
+* `--appdir=/my/path` changes the path where the symlinks to the applications (above)
+will be generated. This is commonly used to create the links in the _root_ Applications directory
+instead of the _home_ Applications directory by specifying `--appdir=/Applications`. Default is `~/Applications`.
+* `--prefpanedir=/my/path` changes the path for PreferencePane symlinks.
 Default is `~/Library/PreferencePanes`
-* `--qlplugindir=/custom/path` changes the path for Quicklook Plugin symlinks.
+* `--qlplugindir=/my/path` changes the path for Quicklook Plugin symlinks.
 Default is `~/Library/QuickLook`
-* `--widgetdir=/custom/path` changes the path for Dashboard Widget symlinks.
+* `--widgetdir=/my/path` changes the path for Dashboard Widget symlinks.
 Default is `~/Library/Widgets`
-* `--fontdir=/custom/path` changes the path for Fonts symlinks.
+* `--fontdir=/my/path` changes the path for Fonts symlinks.
 Default is `~/Library/Fonts`
 
-To make these changes permanent, you might want to add the following line to your `.bash_profile` or `.zshenv`
+To make these changes permanent, you might want to add the following line to your `.bash_profile` or `.zshenv`:
 
 ```bash
+# Specify your defaults in this environment variable
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/etc/Caskroom"
 ```
 
-Note that you still can override the environment variable `HOMEBREW_CASK_OPTS` by explicitly providing
+Note that you still can override the environment variable `HOMEBREW_CASK_OPTS` by _explicitly_ providing
 the options in the command line:
 
 ```bash
 # Will force the Chrome app to be linked to ~/Applications
+# even though HOMEBREW_CASK_OPTS specified /Applications
 $ brew cask install --appdir="~/Applications" google-chrome
 ```
 
