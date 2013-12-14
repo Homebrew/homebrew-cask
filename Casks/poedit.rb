@@ -1,7 +1,7 @@
 class Poedit < Cask
-  url 'http://downloads.sourceforge.net/project/poedit/poedit/1.5/poedit-1.5.7.dmg'
+  url 'http://www.poedit.net/dl/Poedit-1.6.2.zip'
   homepage 'http://www.poedit.net'
-  version '1.5.7'
-  sha1 'f3b55eba126d482b966ab115e492217f632e5146'
+  version '1.6.2'
+  sha1 '7cc906ff6874f0022702918e280e1dd99fccb396'
   link 'Poedit.app'
 end
