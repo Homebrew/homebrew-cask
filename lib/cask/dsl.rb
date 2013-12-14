@@ -44,6 +44,7 @@ module Cask::DSL
       :font,
       :uninstall,
       :widget,
+      :service,
       :colorpicker,
     ]
 

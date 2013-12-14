@@ -91,6 +91,7 @@ Additional fields you might need for special use-cases:
 | `qlplugin`         | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `font`             | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
 | `widget`           | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation
+| `service`          | relative path to a service that should be linked into the `~/Library/Services` folder on installation
 | `nested_container` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `caveats`          | a Ruby block providing the user with Cask-specific information at install time
 | `after_install`    | a Ruby block containing postflight install operations
