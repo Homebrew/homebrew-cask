@@ -11,8 +11,8 @@ class Cask::Download
     resource = Resource.new(cask.title) do |r|
       r.url     cask.url.to_s
       r.version cask.version
-    end
-    downloader = CurlDownloadStrategy.new(cask.title, resource)
+    end    
+    downloader = Cask::DownloadStrategy.new(cask, resource)
     downloaded_path = downloader.fetch
 
     _check_sums(downloaded_path, cask.sums) unless cask.sums === 0
