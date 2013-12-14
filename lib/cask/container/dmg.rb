@@ -13,14 +13,14 @@ class Cask::Container::Dmg < Cask::Container::Base
     mount!
     assert_mounts_found
     @mounts.each do |mount|
-      @command.run('ditto', :args => [mount, @cask.destination_path])
+      @command.run('/usr/bin/ditto', :args => [mount, @cask.destination_path])
     end
   ensure
     eject!
   end
 
   def mount!
-    plist = @command.run!('hdiutil',
+    plist = @command.run!('/usr/bin/hdiutil',
       :args => %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp] + [@path],
       :input => %w[y],
       :plist => true
@@ -42,7 +42,7 @@ class Cask::Container::Dmg < Cask::Container::Base
 
   def eject!
     @mounts.each do |mount|
-      @command.run!('hdiutil', :args => ['eject', mount])
+      @command.run!('/usr/bin/hdiutil', :args => ['eject', mount])
     end
   end
 end

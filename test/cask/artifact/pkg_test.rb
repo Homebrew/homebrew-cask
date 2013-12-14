@@ -12,7 +12,7 @@ describe Cask::Artifact::Pkg do
     it 'runs the system installer on the specified pkgs' do
       pkg = Cask::Artifact::Pkg.new(@cask, Cask::FakeSystemCommand)
 
-      expected_command = "sudo -E 'installer' '-pkg' '#{@cask.destination_path/'MyFancyPkg'/'Fancy.pkg'}' '-target' '/' 2>&1"
+      expected_command = "sudo -E '/usr/sbin/installer' '-pkg' '#{@cask.destination_path/'MyFancyPkg'/'Fancy.pkg'}' '-target' '/' 2>&1"
       Cask::FakeSystemCommand.stubs_command(expected_command)
 
       shutup do
@@ -42,7 +42,7 @@ describe Cask::Artifact::Pkg do
       pkg = Cask::Artifact::Pkg.new(cask, Cask::FakeSystemCommand)
 
       Cask::FakeSystemCommand.stubs_command(
-        %Q(pkgutil --pkgs="my.fancy.package.*" 2>&1),
+        %Q(/usr/sbin/pkgutil --pkgs="my.fancy.package.*" 2>&1),
         [
           'my.fancy.package.main',
           'my.fancy.package.agent',
@@ -50,14 +50,14 @@ describe Cask::Artifact::Pkg do
       )
 
       Cask::FakeSystemCommand.stubs_command(
-        %Q(pkgutil '--only-files' '--files' 'my.fancy.package.main' 2>&1),
+        %Q(/usr/sbin/pkgutil '--only-files' '--files' 'my.fancy.package.main' 2>&1),
         [
           'fancy/bin/fancy.exe',
           'fancy/var/fancy.data',
         ].join("\n")
       )
       Cask::FakeSystemCommand.stubs_command(
-        %Q(pkgutil '--only-dirs' '--files' 'my.fancy.package.main' 2>&1),
+        %Q(/usr/sbin/pkgutil '--only-dirs' '--files' 'my.fancy.package.main' 2>&1),
         [
           'fancy',
           'fancy/bin',
@@ -65,7 +65,7 @@ describe Cask::Artifact::Pkg do
         ].join("\n")
       )
       Cask::FakeSystemCommand.stubs_command(
-        %Q(pkgutil '--pkg-info-plist' 'my.fancy.package.main' 2>&1),
+        %Q(/usr/sbin/pkgutil '--pkg-info-plist' 'my.fancy.package.main' 2>&1),
         <<-PLIST
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -79,11 +79,11 @@ describe Cask::Artifact::Pkg do
 </plist>
         PLIST
       )
-      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E 'kextunload' '-b' 'my.fancy.package.kernelextension' 2>&1))
-      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E 'pkgutil' '--forget' 'my.fancy.package.main' 2>&1))
+      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E '/sbin/kextunload' '-b' 'my.fancy.package.kernelextension' 2>&1))
+      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E '/usr/sbin/pkgutil' '--forget' 'my.fancy.package.main' 2>&1))
 
       Cask::FakeSystemCommand.stubs_command(
-        %Q(pkgutil '--only-files' '--files' 'my.fancy.package.agent' 2>&1),
+        %Q(/usr/sbin/pkgutil '--only-files' '--files' 'my.fancy.package.agent' 2>&1),
         [
           'fancy/agent/fancy-agent.exe',
           'fancy/agent/fancy-agent.pid',
@@ -91,14 +91,14 @@ describe Cask::Artifact::Pkg do
         ].join("\n")
       )
       Cask::FakeSystemCommand.stubs_command(
-        %Q(pkgutil '--only-dirs' '--files' 'my.fancy.package.agent' 2>&1),
+        %Q(/usr/sbin/pkgutil '--only-dirs' '--files' 'my.fancy.package.agent' 2>&1),
         [
           'fancy',
           'fancy/agent',
         ].join("\n")
       )
       Cask::FakeSystemCommand.stubs_command(
-        %Q(pkgutil '--pkg-info-plist' 'my.fancy.package.agent' 2>&1),
+        %Q(/usr/sbin/pkgutil '--pkg-info-plist' 'my.fancy.package.agent' 2>&1),
         <<-PLIST
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -119,10 +119,10 @@ describe Cask::Artifact::Pkg do
         /tmp/fancy/bin
         /tmp/fancy/var
       ].each do |dir|
-        Cask::FakeSystemCommand.stubs_command(%Q(sudo -E 'chmod' '777' '#{dir}' 2>&1))
+        Cask::FakeSystemCommand.stubs_command(%Q(sudo -E '/bin/chmod' '777' '#{dir}' 2>&1))
       end
 
-      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E 'pkgutil' '--forget' 'my.fancy.package.agent' 2>&1))
+      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E '/usr/sbin/pkgutil' '--forget' 'my.fancy.package.agent' 2>&1))
 
       # No assertions after call since all assertions are implicit from the interactions setup above.
       # TODO: verify rmdir / rm commands (requires setting up actual file tree or faking out .exists?

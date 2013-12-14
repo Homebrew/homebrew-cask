@@ -7,12 +7,12 @@ class Cask::Container::Criteria
   end
 
   def file
-    @file ||= @command.run('file', :args => ['-Izb', path])
+    @file ||= @command.run('/usr/bin/file', :args => ['-Izb', path])
   end
 
   def imageinfo
     @imageinfo ||= @command.run(
-      'hdiutil',
+      '/usr/bin/hdiutil',
       :args => ['imageinfo', path],
       :stderr => :silence,
       :print => false

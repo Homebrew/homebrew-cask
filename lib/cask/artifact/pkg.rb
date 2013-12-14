@@ -18,7 +18,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       '-target', '/'
     ]
     args << '-verboseR' if ARGV.verbose?
-    @command.run!('installer', {:sudo => true, :args => args, :print => true})
+    @command.run!('/usr/sbin/installer', {:sudo => true, :args => args, :print => true})
   end
 
   def manually_uninstall(uninstall_options)
@@ -39,16 +39,16 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     if uninstall_options.key? :launchctl
       [*uninstall_options[:launchctl]].each do |service|
         ohai "Removing launchctl service #{service}"
-        @command.run!('launchctl', :args => ['remove', service], :sudo => true)
+        @command.run!('/bin/launchctl', :args => ['remove', service], :sudo => true)
       end
     end
 
     if uninstall_options.key? :quit
       [*uninstall_options[:quit]].each do |id|
         ohai "Quitting application ID #{id}"
-        num_running = @command.run!('osascript', :args => ['-e', "tell application \"System Events\" to count processes whose bundle identifier is \"#{id}\""], :sudo => true).to_i
+        num_running = @command.run!('/usr/bin/osascript', :args => ['-e', "tell application \"System Events\" to count processes whose bundle identifier is \"#{id}\""], :sudo => true).to_i
         if num_running > 0
-          @command.run!('osascript', :args => ['-e', "tell application id \"#{id}\" to quit"], :sudo => true)
+          @command.run!('/usr/bin/osascript', :args => ['-e', "tell application id \"#{id}\" to quit"], :sudo => true)
         end
       end
     end
@@ -56,7 +56,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     if uninstall_options.key? :kext
       [*uninstall_options[:kext]].each do |kext|
         ohai "Unloading kernel extension #{kext}"
-        @command.run!('kextunload', :args => ['-b', kext], :sudo => true)
+        @command.run!('/sbin/kextunload', :args => ['-b', kext], :sudo => true)
       end
     end
 
@@ -68,7 +68,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     if uninstall_options.key? :files
       uninstall_options[:files].each do |file|
         ohai "Removing file #{file}"
-        @command.run!('rm', :args => ['-rf', file], :sudo => true)
+        @command.run!('/bin/rm', :args => ['-rf', file], :sudo => true)
       end
     end
   end

@@ -1,6 +1,6 @@
 class Cask::Pkg
   def self.all_matching(regexp, command)
-    command.run(%Q(pkgutil --pkgs="#{regexp}")).split("\n").map do |package_id|
+    command.run(%Q(/usr/sbin/pkgutil --pkgs="#{regexp}")).split("\n").map do |package_id|
       new(package_id.chomp, command)
     end
   end
@@ -14,7 +14,7 @@ class Cask::Pkg
 
   def uninstall
     list('files').each do |file|
-      @command.run!('rm', :args => [file], :sudo => true) if file.exist?
+      @command.run!('/bin/rm', :args => [file], :sudo => true) if file.exist?
     end
     _deepest_path_first(list('dirs')).each do |dir|
       if dir.exist?
@@ -29,11 +29,11 @@ class Cask::Pkg
   end
 
   def forget
-    @command.run!('pkgutil', :args => ['--forget', package_id], :sudo => true)
+    @command.run!('/usr/sbin/pkgutil', :args => ['--forget', package_id], :sudo => true)
   end
 
   def list(type)
-    @command.run!('pkgutil',
+    @command.run!('/usr/sbin/pkgutil',
       :args => ["--only-#{type}", '--files', package_id]
     ).split("\n").map { |path| root.join(path) }
   end
@@ -43,7 +43,7 @@ class Cask::Pkg
   end
 
   def info
-    @command.run!('pkgutil',
+    @command.run!('/usr/sbin/pkgutil',
       :args => ['--pkg-info-plist', package_id],
       :plist => true
     )
@@ -51,17 +51,17 @@ class Cask::Pkg
 
   def _rmdir(path)
     if path.children.empty?
-      @command.run!('rmdir', :args => [path], :sudo => true)
+      @command.run!('/bin/rmdir', :args => [path], :sudo => true)
     end
   end
 
   def _with_full_permissions(path, &block)
     original_mode = (path.stat.mode % 01000).to_s(8)
-    @command.run!('chmod', :args => ['777', path], :sudo => true)
+    @command.run!('/bin/chmod', :args => ['777', path], :sudo => true)
     block.call
   ensure
     if path.exist? # block may have removed dir
-      @command.run!('chmod', :args => [original_mode, path], :sudo => true)
+      @command.run!('/bin/chmod', :args => [original_mode, path], :sudo => true)
     end
   end
 
@@ -77,14 +77,14 @@ class Cask::Pkg
   def _clean_broken_symlinks(dir)
     dir.children.each do |child|
       if _broken_symlink?(child)
-        @command.run!('rm', :args => [child], :sudo => true)
+        @command.run!('/bin/rm', :args => [child], :sudo => true)
       end
     end
   end
 
   def _clean_ds_store(dir)
     ds_store = dir.join('.DS_Store')
-    @command.run!('rm', :args => [ds_store], :sudo => true) if ds_store.exist?
+    @command.run!('/bin/rm', :args => [ds_store], :sudo => true) if ds_store.exist?
   end
 
   def _broken_symlink?(path)
