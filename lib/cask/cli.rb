@@ -33,6 +33,10 @@ class Cask::CLI
     rest = process_options(rest)
     Cask.init
     lookup_command(command).run(*rest)
+  rescue CaskAlreadyInstalledError => e
+    opoo e
+    $stderr.puts e.backtrace if @debug
+    exit 0
   rescue CaskError => e
     onoe e
     $stderr.puts e.backtrace if @debug
