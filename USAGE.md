@@ -68,19 +68,34 @@ This will both uninstall and unlink the Cask.
 
 ## Options
 
-You can set [a number of options](https://github.com/phinze/homebrew-cask/blob/master/lib/cask/cli.rb#L60) on the command-line and/or using the `HOMEBREW_CASK_OPTS` environment variable.
-Among others you can change the location of where applications will be installed (if `/opt/homebrew-cask/Caskroom` doesn't work well for you).
+You can provide a number of options to the `brew cask` command to modify the default
+installation locations.
 
-This is an example of how to apply an option (again, using google-chrome):
+* `--caskroom=/custom/path` determines where the actual applications will be located.
+Default is `/opt/homebrew-cask/Caskroom`
+* `--appdir=/custom/path/Applications` changes the path where the symlinks to the applications
+will be generated. This is commonly used to create the links in the root Applications directory
+by specifying `--appdir=/Applications`. Default is `~/Applications`.
+* `--prefpanedir=/custom/path` changes the path for PreferencePane symlinks.
+Default is `~/Library/PreferencePanes`
+* `--qlplugindir=/custom/path` changes the path for Quicklook Plugin symlinks.
+Default is `~/Library/QuickLook`
+* `--widgetdir=/custom/path` changes the path for Dashboard Widget symlinks.
+Default is `~/Library/Widgets`
+* `--fontdir=/custom/path` changes the path for Fonts symlinks.
+Default is `~/Library/Fonts`
+
+To make these changes permanent, you might want to add the following line to your `.bash_profile` or `.zshenv`
 
 ```bash
-# This probably should happen in your ~/.{ba|z}shrc
-$ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/etc/Caskroom"
+```
 
-# Installs app links to /Applications
-$ brew cask install google-chrome
+Note that you still can override the environment variable `HOMEBREW_CASK_OPTS` by explicitly providing
+the options in the command line:
 
-# Trumps the ENV and installs app links to ~/Applications
+```bash
+# Will force the Chrome app to be linked to ~/Applications
 $ brew cask install --appdir="~/Applications" google-chrome
 ```
 
