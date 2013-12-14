@@ -1,7 +1,7 @@
 class SnippetsMe < Cask
-  url 'http://snippets.me/download/mac/Snippets-444.zip'
+  url 'http://snippets.me/download/mac/Snippets-468.zip'
   homepage 'http://snippets.me/'
-  version '0.8.1'
-  sha1 '18c7d8d8082a089407fb27d8a805b26bff69106c'
+  version '0.8.2'
+  sha1 '0e0464668f364f799e38cf4c2e2cc60837d347c0'
   link 'Snippets.app'
 end
