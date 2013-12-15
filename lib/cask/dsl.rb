@@ -88,7 +88,16 @@ module Cask::DSL
     end
 
     def method_missing(method, *args)
-      opoo "Unexpected method #{method} called on #{self}. Running `brew update; brew upgrade brew-cask` will likely fix it."
+      poo = <<-EOPOO.undent
+        Unexpected method '#{method}' called on #{self}.
+
+          If you are working on #{self}, this may point to a typo. Otherwise
+          it probably means this Cask is using a new feature. If that feature
+          has been released, running `brew update; brew upgrade brew-cask`
+          should fix it. Otherwise you should wait to use #{self} until the
+          new feature is released.
+      EOPOO
+      poo.split("\n").each { |line| opoo line }
     end
   end
 end
