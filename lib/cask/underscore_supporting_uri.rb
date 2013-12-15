@@ -1,3 +1,5 @@
+require 'uri'
+
 module Cask::UnderscoreSupportingURI
   def self.parse(maybe_uri)
     return nil if maybe_uri.nil?

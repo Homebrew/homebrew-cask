@@ -23,8 +23,10 @@ module Cask::DSL
       @homepage ||= homepage
     end
 
-    def url(url=nil)
-      @url ||= Cask::UnderscoreSupportingURI.parse(url)
+    def url(*args)
+      @url ||= begin
+        Cask::URL.new(*args) unless args.empty?
+      end
     end
 
     def version(version=nil)
