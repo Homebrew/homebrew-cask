@@ -84,4 +84,29 @@ describe Cask::DSL do
     instance = CaskWithInstallables.new
     Array(instance.artifacts[:install]).sort.must_equal %w[Bar.pkg Foo.pkg]
   end
+
+  it 'allows :user_agent to be specified via headers' do
+    options = { user_agent: 'Mozilla/25.0.1' }
+    test_cask = Cask.load('with-headers')
+
+    test_cask.headers.headers.must_equal options
+    test_cask.headers.user_agent.must_equal options[:user_agent]
+  end
+
+  it 'allows :cookies to be specified via headers' do
+    options = { cookies: { cookie_key: 'cookie_value' } }
+    test_cask = Cask.load('with-cookies')
+
+    test_cask.headers.headers.must_equal options
+    test_cask.headers.cookies.must_equal options[:cookies]
+  end
+
+  it 'configures a default fake :user_agent via fake_user_agent' do
+    options = { :user_agent => 'Chrome/32.0.1000.00' }
+    test_cask = Cask.load('with-fake-user-agent')
+
+    test_cask.headers.headers.must_equal options
+    test_cask.headers.user_agent.must_equal options[:user_agent]
+    test_cask.fake_user_agent.must_be_instance_of Cask::Headers
+  end
 end
