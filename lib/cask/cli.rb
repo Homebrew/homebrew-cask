@@ -85,6 +85,9 @@ class Cask::CLI
       opts.on("--widgetdir=MANDATORY") do |v|
         Cask.widgetdir = Pathname(v).expand_path
       end
+      opts.on("--servicedir=MANDATORY") do |v|
+        Cask.servicedir = Pathname(v).expand_path
+      end
       opts.on("--debug") do |v|
         @debug = true
       end

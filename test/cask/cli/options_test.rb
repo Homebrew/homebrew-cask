@@ -85,6 +85,20 @@ describe Cask::CLI do
     Cask.widgetdir.must_equal Pathname('/some/path/bar')
   end
 
+  it "supports setting the servicedir" do
+    Cask::CLI.process_options %w{help --servicedir=/some/path/foo}
+
+    Cask.servicedir.must_equal Pathname('/some/path/foo')
+  end
+
+  it "supports setting the servicedir from ENV" do
+    ENV['HOMEBREW_CASK_OPTS'] = "--servicedir=/some/path/bar"
+
+    Cask::CLI.process_options %w{help}
+
+    Cask.servicedir.must_equal Pathname('/some/path/bar')
+  end
+
   it "allows additional options to be passed through" do
     rest = Cask::CLI.process_options %w{edit foo --create --appdir=/some/path/qux}
 
