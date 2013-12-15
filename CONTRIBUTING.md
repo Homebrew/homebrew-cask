@@ -70,10 +70,10 @@ cask (e.g. beta or nightly), then the Cask should be submitted to the
 
 Fill in the following fields for your Cask:
 
-| field              | explanation |
+| field              | description |
 | ------------------ | ----------- |
 | __cask metadata__  | information about the Cask (required)
-| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application
+| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see __URL Details__ for more information)
 | `homepage`         | application homepage; used for the `brew cask home` command
 | `version`          | application version; determines the directory structure in the Caskroom
 | `sha1`             | SHA-1 Checksum of the file; checked when the file is downloaded to prevent any funny business (can be omitted with `no_checksum`)
@@ -84,7 +84,7 @@ Fill in the following fields for your Cask:
 
 Additional fields you might need for special use-cases:
 
-| field              | explanation |
+| field              | description |
 | ------------------ | ----------- |
 | `prefpane`         | relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
 | `colorpicker`      | relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
@@ -97,7 +97,17 @@ Additional fields you might need for special use-cases:
 | `after_uninstall`  | a Ruby block containing postflight uninstall operations
 
 
-### SourceForge URLs
+### URL Details
+
+In most cases, a plain URL is all you need to specify for Cask to download and extract a file. Sometimes, additional information is required for the `curl`-based downloader to successfully fetch the file. There are a few options to help in these cases, which are specified in a hash as a second argument to `url`.
+
+| option             | description |
+| ------------------ | ----------- |
+| `:cookies`         | a hash of cookies to be set in the download request
+| `:referer`         | a URL to set as referrer in the download request
+| `:user_agent`      | user agent string to set for the download request. can also be set to `:fake`, which will use a generic Browser-like user agent string. we prefer `:fake` when the server does not require a specific user agent.
+
+#### SourceForge URLs
 
 SourceForge projects are a common way to distribute binaries, but they provide many different styles of URLs to get to the goods.
 
