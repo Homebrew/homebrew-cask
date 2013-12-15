@@ -79,7 +79,8 @@ describe Cask::Artifact::Pkg do
 </plist>
         PLIST
       )
-      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E '/sbin/kextunload' '-b' 'my.fancy.package.kernelextension' 2>&1))
+      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E '/usr/sbin/kextstat' '-l' '-b' 'my.fancy.package.kernelextension' 2>&1), 'loaded')
+      Cask::FakeSystemCommand.expects_command(%Q(sudo -E '/sbin/kextunload' '-b' 'my.fancy.package.kernelextension' 2>&1))
       Cask::FakeSystemCommand.stubs_command(%Q(sudo -E '/usr/sbin/pkgutil' '--forget' 'my.fancy.package.main' 2>&1))
 
       Cask::FakeSystemCommand.stubs_command(
