@@ -64,6 +64,14 @@ module Cask::Locations
       @colorpickerdir = _colorpickerdir
     end
 
+    def servicedir
+      @servicedir ||= Pathname.new('~/Library/Services').expand_path
+    end
+
+    def servicedir=(_servicedir)
+      @servicedir = _servicedir
+    end
+
     def default_tap
       @default_tap ||= 'phinze-cask'
     end
