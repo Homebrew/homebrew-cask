@@ -12,11 +12,22 @@ Tap this repository and install the `brew-cask` tool:
     $ brew tap phinze/homebrew-cask
     $ brew install brew-cask
 
-Optional: to install alternate versions of Casks (e.g. betas or nightly
-releases), tap the [caskroom/versions](https://github.com/caskroom/homebrew-versions)
-repo:
+### Additional Taps (optional)
 
-    $ brew tap caskroom/versions
+The primary tap includes most of the Casks that a normal user will be
+interested it. There are a few additional Taps where we store different kinds
+of Casks.
+
+| tap name | description |
+| -------- | ----------- |
+| [caskroom/versions](https://github.com/caskroom/homebrew-versions) | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
+| [caskroom/fonts](https://github.com/caskroom/homebrew-fonts) | contains casks that install fonts, which are kept separate so we can educate users about the different licensing landscape around font installation/usage
+
+You can tap any of the above with a command like this:
+
+    $ brew tap (tap name)
+
+Once that command completes, you should see the list of Casks in the tap alongside the Casks in the main repo. You use the same commands to interact with these additional Casks, and `brew update` will automatically update all Taps.
 
 ## Searching for Casks
 
