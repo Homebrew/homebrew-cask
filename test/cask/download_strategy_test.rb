@@ -1,43 +1,97 @@
 require 'test_helper'
-require 'download_strategy'
+
+def includes_args?(args, expected)
+  ((args & expected) == expected).must_equal true,
+    "expected #{args.inspect} to include #{expected.inspect}"
+end
 
 describe Cask::DownloadStrategy do
-  class StubbedDownloadStrategy < Cask::DownloadStrategy
-    def curl(*args)
-      args
+  it 'properly assigns a name and Resource based on the cask' do
+    cask = Cask.load('basic-cask')
+
+    downloader = Cask::DownloadStrategy.new(BasicCask)
+    downloader.name.must_equal 'basic-cask'
+    downloader.resource.name.must_equal 'basic-cask'
+    downloader.resource.url.must_equal cask.url.to_s
+    downloader.resource.version.to_s.must_equal cask.version
+  end
+
+  it 'calls curl with default arguments for a simple cask' do
+    cask = Cask.load('basic-cask')
+
+    downloader = Cask::DownloadStrategy.new(cask)
+    downloader.temporary_path.stubs(:rename)
+    downloader.expects(:curl).with(
+      cask.url,
+      '-C', 0,
+      '-o', kind_of(Pathname)
+    )
+    shutup { downloader.fetch }
+  end
+
+  it 'adds curl args for explicit user agent' do
+    WithExplicitUserAgent = Class.new(Cask) do
+      url 'http://host/path/to/app.dmg',
+        :user_agent => 'Mozilla/25.0.1'
+      version '1.2.3.4'
     end
+
+    downloader = Cask::DownloadStrategy.new(WithExplicitUserAgent)
+    downloader.temporary_path.stubs(:rename)
+    downloader.expects(:curl).with do |*args|
+      includes_args?(args, ['-A', 'Mozilla/25.0.1'])
+    end
+
+    shutup { downloader.fetch }
   end
 
-  before do
-    @resource = Class.new
-    @resource.stubs(:url).returns('example.com')
-    @resource.stubs(:version).returns('3.1')
+  it 'adds curl args for generalized fake user agent' do
+    WithFakeUserAgent = Class.new(Cask) do
+      url 'http://host/path/to/app.dmg',
+        :user_agent => :fake
+      version '1.2.3.4'
+    end
+
+    downloader = Cask::DownloadStrategy.new(WithFakeUserAgent)
+    downloader.temporary_path.stubs(:rename)
+    downloader.expects(:curl).with do |*args|
+      includes_args?(args, ['-A', 'Chrome/32.0.1000.00'])
+    end
+
+    shutup { downloader.fetch }
   end
 
-  it 'provides user_agent options down to curl' do
-    cask = Cask.load('with-headers')
-    downloader = StubbedDownloadStrategy.new(cask, @resource)
+  it 'adds curl args for cookies' do
+    WithCookies = Class.new(Cask) do
+      url 'http://host/path/to/app.dmg', :cookies => {
+        :coo => 'kie',
+        :mon => 'ster'
+      }
+      version '1.2.3.4'
+    end
 
-    downloader._fetch.must_include '-A'
-    downloader._fetch.must_include 'Mozilla/25.0.1'
-    downloader.must_respond_to :headers
+    downloader = Cask::DownloadStrategy.new(WithCookies)
+    downloader.temporary_path.stubs(:rename)
+    downloader.expects(:curl).with do |*args|
+      includes_args?(args, ['-b', 'coo=kie;mon=ster'])
+    end
+
+    shutup { downloader.fetch }
   end
 
-  it 'provides :cookie options down to curl' do
-    cask = Cask.load('with-cookies')
-    downloader = StubbedDownloadStrategy.new(cask, @resource)
+  it 'adds curl args for referer' do
+    WithReferer = Class.new(Cask) do
+      url 'http://host/path/to/app.dmg',
+        :referer => 'http://somehost/also'
+      version '1.2.3.4'
+    end
 
-    downloader._fetch.must_include '-b'
-    downloader._fetch.must_include 'cookie_key=cookie_value'
-    downloader.must_respond_to :headers
-  end
+    downloader = Cask::DownloadStrategy.new(WithReferer)
+    downloader.temporary_path.stubs(:rename)
+    downloader.expects(:curl).with do |*args|
+      includes_args?(args, ['-e', 'http://somehost/also'])
+    end
 
-  it 'provides :fake_user_agent options down to curl' do
-    cask = Cask.load('with-fake-user-agent')
-    downloader = StubbedDownloadStrategy.new(cask, @resource)
-
-    downloader._fetch.must_include '-A'
-    downloader._fetch.must_include 'Chrome/32.0.1000.00'
-    downloader.must_respond_to :headers
+    shutup { downloader.fetch }
   end
 end

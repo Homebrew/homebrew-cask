@@ -1,5 +1,3 @@
-require 'uri'
-
 HOMEBREW_CACHE_CASKS = HOMEBREW_CACHE.join('Casks')
 
 class Cask; end
@@ -16,7 +14,6 @@ require 'cask/download_strategy'
 require 'cask/dsl'
 require 'cask/exceptions'
 require 'cask/fetcher'
-require 'cask/headers'
 require 'cask/installer'
 require 'cask/link_checker'
 require 'cask/locations'
@@ -26,6 +23,7 @@ require 'cask/scopes'
 require 'cask/source'
 require 'cask/system_command'
 require 'cask/underscore_supporting_uri'
+require 'cask/url'
 
 require 'plist/parser'
 
