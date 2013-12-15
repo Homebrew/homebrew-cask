@@ -1,4 +1,4 @@
-class Sts < Cask
+class SpringToolSuite < Cask
   url 'http://download.springsource.com/release/STS/3.4.0/dist/e4.3/spring-tool-suite-3.4.0.RELEASE-e4.3.1-macosx-cocoa-x86_64.tar.gz'
   homepage 'http://spring.io/tools/sts'
   version '3.4.0'
