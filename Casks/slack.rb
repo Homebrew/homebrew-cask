@@ -1,7 +1,7 @@
 class Slack < Cask
-  url 'https://rink.hockeyapp.net/api/2/apps/89dc0a9e3d01fb65e383b13c9ce0d3ac?format=zip'
+  url 'https://dl0tgz6ee3upo.cloudfront.net/production/app/builds/000/747/368/original/7eeaf12b3a8c610df252bf02713c6e29/Slack_0.34.zip'
   homepage 'www.slack.com'
-  version 'latest'
-  no_checksum
+  version '0.34'
+  sha1 'ec584efd8dd27070ca4c1acb8666ee6ce30156b5'
   link 'Slack.app'
 end
