@@ -171,7 +171,7 @@ VLC                | `vlc`               | `Vlc`
 BetterTouchTool    | `bettertouchtool`   | `Bettertouchtool`
 iTerm2             | `iterm2`            | `Iterm2`
 Akai LPK25 Editor  | `akai-lpk25-editor` | `AkaiLpk25Editor`
-Sublime Text 3     | `sublime-text-3`    | `SublimeText3`
+Sublime Text 3     | `sublime-text3`     | `SublimeText3`
 1Password          | `1password`         | `Onepassword` (see __NAMING NOTE__)
 
 
