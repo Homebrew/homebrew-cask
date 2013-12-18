@@ -1,7 +1,7 @@
 class Subtitles < Cask
-  url 'http://subtitlesapp.com/download/Subtitles-mac-2.0.zip'
+  url 'http://subtitlesapp.com/download/Subtitles-mac-2.1.zip'
   homepage 'http://subtitlesapp.com'
-  version '2.0'
-  sha1 '1efca24e5935306ea7cd6543e61d0558a119401d'
+  version '2.1'
+  sha1 '1d0273128894bb2b850c7fcda02777852a4fe230'
   link 'Subtitles.app'
 end
