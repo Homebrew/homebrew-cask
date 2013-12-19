@@ -13,6 +13,6 @@ describe Cask::CLI::Search do
   it "shows that there are no casks matching a search term that did not result in anything" do
   	lambda {
   		Cask::CLI::Search.run('foo-bar-baz')
-  	}.must_output("No cask found for: foo-bar-baz\n")
+  	}.must_output("No cask found for \"foo-bar-baz\".\n")
   end
 end
