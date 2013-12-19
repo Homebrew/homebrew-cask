@@ -15,7 +15,7 @@ Tap this repository and install the `brew-cask` tool:
 ### Additional Taps (optional)
 
 The primary tap includes most of the Casks that a normal user will be
-interested it. There are a few additional Taps where we store different kinds
+interested in. There are a few additional Taps where we store different kinds
 of Casks.
 
 | tap name | description |
