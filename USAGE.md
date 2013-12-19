@@ -12,7 +12,12 @@ Tap this repository and install the `brew-cask` tool:
     $ brew tap phinze/homebrew-cask
     $ brew install brew-cask
 
-### Additional Taps (optional)
+## Taps
+
+A Tap is homebrew-speak for a git repository containing extra formulae. Homebrew has the capability to add (and remove) multiple taps to your local installation with the `brew tap` and `brew untap` command. Type man brew in your Terminal. The main homebrew cask repository `https://github.com/phinze/homebrew-cask` you just added in the "Getting Started" section. Reade more about [Taps at the parent homebrew project](https://github.com/Homebrew/homebrew/wiki/Interesting-Taps-%26-Branches).
+
+
+### Additional Cask Taps (optional)
 
 The primary tap includes most of the Casks that a normal user will be
 interested it. There are a few additional Taps where we store different kinds
@@ -25,9 +30,21 @@ of Casks.
 
 You can tap any of the above with a command like this:
 
-    $ brew tap (tap name)
+    # brew tap (tap name)
+    $ brew tap caskroom/versions
 
 Once that command completes, you should see the list of Casks in the tap alongside the Casks in the main repo. You use the same commands to interact with these additional Casks, and `brew update` will automatically update all Taps.
+
+
+### Private Taps
+
+You can add Casks to your existing (or new) taps: just create a directory named
+`Casks` inside your tap, put your Casks there, and everything will just work.
+
+Feel free to create a git repo (for example with a `homebrew-` prefix) and you can your special casks or use your casks on other computers.
+
+if you create your own tap that's private, you can maintain your own set of private Casks in that tap.
+
 
 ## Searching for Casks
 
@@ -112,12 +129,8 @@ the options in the command line:
 $ brew cask install --appdir="~/Applications" google-chrome
 ```
 
-# Taps
 
-You can add Casks to your existing (or new) taps: just create a directory named
-`Casks` inside your tap, put your Casks there, and everything will just work.
-
-# Alfred Integration
+## Alfred Integration
 
 I've been using Casks along with Alfred to great effect. Just add
 `/opt/homebrew-cask/Caskroom` as a Search Scope in Alfred's preferences or
