@@ -6,7 +6,7 @@ class Cask::CLI::Search
     unless casks.empty?
     	puts_columns casks
     else
-    	puts "No casks matching: #{search_term}"
+    	puts "No cask found for: #{search_term}"
     end
   end
 
