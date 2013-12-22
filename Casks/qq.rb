@@ -1,7 +1,7 @@
 class Qq < Cask
-  url 'http://dl_dir.qq.com/qqfile/qq/QQforMac/QQ_V3.0.1.dmg'
+  url 'http://dldir1.qq.com/qqfile/QQforMac/QQ_V3.0.2.dmg'
   homepage 'http://im.qq.com/macqq/index.shtml'
-  version '3.0.1'
-  sha1 'c48f1f37583d0cdf484979e4d2f5c0244138f1f8'
+  version '3.0.2'
+  sha1 '8d9d8c9ace5e11dacf73a270b2852945a5f73b57'
   link 'QQ.app'
 end

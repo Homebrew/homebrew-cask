@@ -13,14 +13,21 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
 
   def run_installer(pkg_relative_path)
     ohai "Running installer for #{@cask}; your password may be necessary."
-    @command.run!("installer", {
-      :sudo => true,
-      :args => %W[-pkg #{@cask.destination_path.join(pkg_relative_path)} -target /],
-      :print => true
-    })
+    args = [
+      '-pkg',    @cask.destination_path.join(pkg_relative_path),
+      '-target', '/'
+    ]
+    args << '-verboseR' if ARGV.verbose?
+    @command.run!('/usr/sbin/installer', {:sudo => true, :args => args, :print => true})
   end
 
   def manually_uninstall(uninstall_options)
+
+    unknown_keys = uninstall_options.keys - [:script, :quit, :kext, :pkgutil, :launchctl, :files]
+    unless unknown_keys.empty?
+      opoo "Unknown arguments to uninstall: #{unknown_keys.join(", ")}. Running `brew update; brew upgrade brew-cask` will likely fix it.'"
+    end
+
     ohai "Running uninstall process for #{@cask}; your password may be necessary."
     if uninstall_options.key? :script
       @command.run!(
@@ -29,10 +36,30 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       )
     end
 
+    if uninstall_options.key? :launchctl
+      [*uninstall_options[:launchctl]].each do |service|
+        ohai "Removing launchctl service #{service}"
+        @command.run!('/bin/launchctl', :args => ['remove', service], :sudo => true)
+      end
+    end
+
+    if uninstall_options.key? :quit
+      [*uninstall_options[:quit]].each do |id|
+        ohai "Quitting application ID #{id}"
+        num_running = @command.run!('/usr/bin/osascript', :args => ['-e', "tell application \"System Events\" to count processes whose bundle identifier is \"#{id}\""], :sudo => true).to_i
+        if num_running > 0
+          @command.run!('/usr/bin/osascript', :args => ['-e', "tell application id \"#{id}\" to quit"], :sudo => true)
+        end
+      end
+    end
+
     if uninstall_options.key? :kext
       [*uninstall_options[:kext]].each do |kext|
         ohai "Unloading kernel extension #{kext}"
-        @command.run!('kextunload', :args => ['-b', kext], :sudo => true)
+        is_loaded = @command.run!('/usr/sbin/kextstat', :args => ['-l', '-b', kext], :sudo => true)
+        if is_loaded.length > 1
+          @command.run!('/sbin/kextunload', :args => ['-b', kext], :sudo => true)
+        end
       end
     end
 
@@ -41,17 +68,10 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       pkgs.each(&:uninstall)
     end
 
-    if uninstall_options.key? :launchctl
-      [*uninstall_options[:launchctl]].each do |service|
-        ohai "Removing launchctl service #{service}"
-        @command.run!('launchctl', :args => ['remove', service], :sudo => true)
-      end
-    end
-
     if uninstall_options.key? :files
       uninstall_options[:files].each do |file|
         ohai "Removing file #{file}"
-        @command.run!('rm', :args => ['-rf', file], :sudo => true)
+        @command.run!('/bin/rm', :args => ['-rf', file], :sudo => true)
       end
     end
   end

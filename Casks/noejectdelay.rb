@@ -4,4 +4,6 @@ class Noejectdelay < Cask
   version '5.3.0'
   sha1 '806a85565a0652f3d1eefbe742d88dd797566233'
   install 'NoEjectDelay.pkg'
+  uninstall :kext => 'org.pqrs.driver.NoEjectDelay',
+            :pkgutil => 'org.pqrs.driver.NoEjectDelay'
 end

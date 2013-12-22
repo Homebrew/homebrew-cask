@@ -1,7 +1,7 @@
 class Texts < Cask
-  url 'http://www.texts.io/Texts-0.17.dmg'
+  url 'http://www.texts.io/Texts-0.17.1.dmg'
   homepage 'http://www.texts.io'
-  version '0.17'
-  sha1 'f9782f922390198e96aa464a099d8e20ef210ba2'
+  version '0.17.1'
+  sha1 '7bdd4b7c9edb4eb2e7736ea21e0880c31f5c49a3'
   link 'Texts.app'
 end

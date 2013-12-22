@@ -3,7 +3,7 @@ require 'test_helper'
 describe Cask::DSL do
   it "lets you set url, homepage, and version" do
     test_cask = Cask.load('basic-cask')
-    test_cask.url.must_equal URI('http://example.com/TestCask.dmg')
+    test_cask.url.to_s.must_equal 'http://example.com/TestCask.dmg'
     test_cask.homepage.must_equal 'http://example.com/'
     test_cask.version.must_equal '1.2.3'
   end
@@ -30,7 +30,15 @@ describe Cask::DSL do
         UnexpectedMethodCask.class_eval do
           future_feature :not_yet_on_your_machine
         end
-      }, 'Warning: Unexpected method future_feature called on UnexpectedMethodCask. Running `brew update; brew upgrade brew-cask` will likely fix it.')
+      }, <<-WARNING.undent.chomp)
+        Warning: Unexpected method 'future_feature' called on UnexpectedMethodCask.
+        Warning:#{' '}
+        Warning:   If you are working on UnexpectedMethodCask, this may point to a typo. Otherwise
+        Warning:   it probably means this Cask is using a new feature. If that feature
+        Warning:   has been released, running `brew update; brew upgrade brew-cask`
+        Warning:   should fix it. Otherwise you should wait to use UnexpectedMethodCask until the
+        Warning:   new feature is released.
+      WARNING
     rescue Exception => e
       flunk("Wanted unexpected method to simply warn, but got exception #{e}")
     end

@@ -1,5 +1,40 @@
 # CHANGELOG
 
+## 0.25.0
+
+* __Features__
+  - #1944 - options for Cask URLs: ability to specify user agent, cookies, and referer <3 [@jonahoffline][]
+  - #2066 - Caskroom location now configurable <3 [@halo][]
+  - #2081 - support for services <3 [@leoj3n][]
+* __Fixes__
+  - a clearer error message when an unexpected cask method is called; hopefully
+    will help confusion around unreleased features
+  - #2084 - handle CaskAlreadyInstalledError gracefully; helps `Brewfile` integration <3 [@pstadler][]
+* __Breaking Changes__
+  - #2100 - font Casks have been moved to their own tap at [caskroom/fonts][] so that we can be more disclaimery about font licenses
+
+[@leoj3n]: https://github.com/leoj3n
+[@jonahoffline]: https://github.com/jonahoffline
+[@pstadler]: https://github.com/pstadler
+[@halo]: https://github.com/halo
+[caskroom/fonts]: https://github.com/caskroom/homebrew-fonts
+
+## 0.24.0
+
+* __Features__
+  - #2018 - add :quit key to uninstall
+* __Fixes__
+  - #2019 - validate keys given to uninstall
+* __Breaking Changes__
+
+## 0.23.0
+
+* __Features__
+  - #2012 - support `--verbose` flag for pkg installer
+  - #2013 - support for installing widgets via the `widget` artifact
+* __Fixes__
+* __Breaking Changes__
+
 ## 0.22.0
 
 * __Features__

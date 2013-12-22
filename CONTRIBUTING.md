@@ -70,23 +70,45 @@ cask (e.g. beta or nightly), then the Cask should be submitted to the
 
 Fill in the following fields for your Cask:
 
-| field              | explanation |
+| field              | description |
 | ------------------ | ----------- |
 | __cask metadata__  | information about the Cask (required)
-| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application
+| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see __URL Details__ for more information)
 | `homepage`         | application homepage; used for the `brew cask home` command
 | `version`          | application version; determines the directory structure in the Caskroom
 | `sha1`             | SHA-1 Checksum of the file; checked when the file is downloaded to prevent any funny business (can be omitted with `no_checksum`)
 | __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
-| `nested_container` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `link`             | relative path to a file that should be linked into the `Applications` folder on installation
-| `prefpane`         | relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
-| `qlplugin`         | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
-| `font`             | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
 | `install`          | relative path to `pkg` that should be run to install the application
 | `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see __Uninstall Support__ for more information)
 
-### SourceForge URLs
+Additional fields you might need for special use-cases:
+
+| field              | description |
+| ------------------ | ----------- |
+| `prefpane`         | relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
+| `colorpicker`      | relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
+| `qlplugin`         | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
+| `font`             | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
+| `widget`           | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation
+| `service`          | relative path to a service that should be linked into the `~/Library/Services` folder on installation
+| `nested_container` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
+| `caveats`          | a Ruby block providing the user with Cask-specific information at install time
+| `after_install`    | a Ruby block containing postflight install operations
+| `after_uninstall`  | a Ruby block containing postflight uninstall operations
+
+
+### URL Details
+
+In most cases, a plain URL is all you need to specify for Cask to download and extract a file. Sometimes, additional information is required for the `curl`-based downloader to successfully fetch the file. There are a few options to help in these cases, which are specified in a hash as a second argument to `url`.
+
+| option             | description |
+| ------------------ | ----------- |
+| `:cookies`         | a hash of cookies to be set in the download request
+| `:referer`         | a URL to set as referrer in the download request
+| `:user_agent`      | user agent string to set for the download request. can also be set to `:fake`, which will use a generic Browser-like user agent string. we prefer `:fake` when the server does not require a specific user agent.
+
+#### SourceForge URLs
 
 SourceForge projects are a common way to distribute binaries, but they provide many different styles of URLs to get to the goods.
 
@@ -149,7 +171,7 @@ VLC                | `vlc`               | `Vlc`
 BetterTouchTool    | `bettertouchtool`   | `Bettertouchtool`
 iTerm2             | `iterm2`            | `Iterm2`
 Akai LPK25 Editor  | `akai-lpk25-editor` | `AkaiLpk25Editor`
-Sublime Text 3     | `sublime-text-3`    | `SublimeText3`
+Sublime Text 3     | `sublime-text3`     | `SublimeText3`
 1Password          | `1password`         | `Onepassword` (see __NAMING NOTE__)
 
 
@@ -195,11 +217,15 @@ of the following keys:
 * `:script` (string) - relative path to an uninstall script to be run via sudo
   - `:args` - array of arguments to the uninstall script
   - `:input` - array of lines of input to be sent to `stdin` of the script
+* `:launchctl` (string or array) - ids of launchctl services to remove
+* `:quit` (string or array) - bundle id of running applications to quit before proceeding with the uninstaller
 * `:kext` (string or array) - bundle id of kext(s) to unload from the system before proceeding with the uninstaller
 * `:pkgutil` (string or regexp) - regexp matching bundle id(s) of packages to uninstall using `pkgutil`
-* `:launchctl` (string or array) - ids of launchctl services to remove
 * `:files` (array) - absolute paths of files or directories to remove
   - should only be used as a last resort, since this is the blunt force approach
+
+Each defined `uninstall` method is applied according to the order above. The order
+in which `uninstall` keys appear in the Cask file is ignored.
 
 ### Good Things to Know
 

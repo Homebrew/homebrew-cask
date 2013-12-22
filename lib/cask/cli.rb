@@ -33,6 +33,10 @@ class Cask::CLI
     rest = process_options(rest)
     Cask.init
     lookup_command(command).run(*rest)
+  rescue CaskAlreadyInstalledError => e
+    opoo e
+    $stderr.puts e.backtrace if @debug
+    exit 0
   rescue CaskError => e
     onoe e
     $stderr.puts e.backtrace if @debug
@@ -58,9 +62,16 @@ class Cask::CLI
   end
 
   def self.parser
+    # If you modify these arguments, please update USAGE.md
     @parser ||= OptionParser.new do |opts|
+      opts.on("--caskroom=MANDATORY") do |v|
+        Cask.caskroom = Pathname(v).expand_path
+      end
       opts.on("--appdir=MANDATORY") do |v|
         Cask.appdir = Pathname(v).expand_path
+      end
+      opts.on("--colorpickerdir=MANDATORY") do |v|
+        Cask.colorpickerdir = Pathname(v).expand_path
       end
       opts.on("--prefpanedir=MANDATORY") do |v|
         Cask.prefpanedir = Pathname(v).expand_path
@@ -70,6 +81,12 @@ class Cask::CLI
       end
       opts.on("--fontdir=MANDATORY") do |v|
         Cask.fontdir = Pathname(v).expand_path
+      end
+      opts.on("--widgetdir=MANDATORY") do |v|
+        Cask.widgetdir = Pathname(v).expand_path
+      end
+      opts.on("--servicedir=MANDATORY") do |v|
+        Cask.servicedir = Pathname(v).expand_path
       end
       opts.on("--debug") do |v|
         @debug = true
