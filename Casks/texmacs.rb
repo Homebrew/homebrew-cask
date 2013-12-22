@@ -1,7 +1,7 @@
 class Texmacs < Cask
-  url 'http://www.texmacs.org/Download/ftp/tmftp/macos/TeXmacs-1.0.7.21.dmg'
+  url 'http://www.texmacs.org/Download/ftp/tmftp/macos/TeXmacs-1.99.1.dmg'
   homepage 'http://www.texmacs.org/'
-  version '1.0.7.21'
-  sha1 '372ad88359d5e19a4fa850529fa658f24f2f2fba'
-  link 'TeXmacs-1.0.7.21.app'
+  version '1.99.1'
+  sha1 'c1b16aa8f4d21c793dee50dfb9bc70d60579486d'
+  link 'TeXmacs-1.99.1.app'
 end
