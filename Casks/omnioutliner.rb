@@ -1,7 +1,7 @@
 class Omnioutliner < Cask
-  url 'http://www.omnigroup.com/download/latest/omnioutlinerpro'
-  homepage 'http://www.omnigroup.com/products/omnioutliner/'
+  url 'http://www.omnigroup.com/download/latest/omnioutliner'
+  homepage 'http://www.omnigroup.com/omnioutliner/'
   version 'latest'
   no_checksum
-  link 'OmniOutliner Professional.app'
+  link 'OmniOutliner.app'
 end

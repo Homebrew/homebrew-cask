@@ -1,8 +1,8 @@
 class Icefloor < Cask
-  url 'http://www.hanynet.com/icefloor-1.6.2.zip'
-  homepage 'http://www.hanynet.com/icefloor'
-  version '1.6.2'
-  sha1 '0015958727e419145afb30cac1ce6b3ac3138620'
-  nested_container 'IceFloor 1.6.2.dmg'
+  url 'http://www.hanynet.com/icefloor-2.0.zip'
+  homepage 'http://www.hanynet.com/icefloor/'
+  version '2.0'
+  sha1 '6cb7c2f99504ba1675b2473fbcd98a86f0af78f1'
+  nested_container 'IceFloor 2.0.dmg'
   link 'IceFloor.app'
 end

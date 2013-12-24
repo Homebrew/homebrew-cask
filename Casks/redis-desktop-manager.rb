@@ -1,7 +1,7 @@
 class RedisDesktopManager < Cask
-  url 'https://github.com/uglide/RedisDesktopManager/releases/download/0.6.2/rdm-0.6.2.dmg'
+  url 'https://github.com/uglide/RedisDesktopManager/releases/download/0.7.1/redis-desktop-manager-0.7.1.dmg'
   homepage 'http://redisdesktop.com'
-  version '0.6.2'
-  sha1 '9b76691d37558e1c94ffd446279b90e68c3b60b1'
+  version '0.7.1'
+  sha1 'ca743be26f08a6127c89f8a59e1fe252cfc716cc'
   link 'rdm.app'
 end
