@@ -3,5 +3,5 @@ class Burn < Cask
   homepage 'http://burn-osx.sourceforge.net/'
   version '2.5.1'
   sha1 '2a71f7b7e837cf5358d20228da51b4f3fc247844'
-  link 'Burn/Burn.app'
+  link 'Burn.localized/Burn.app'
 end
