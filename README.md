@@ -17,7 +17,7 @@ command](https://github.com/mxcl/homebrew/wiki/External-Commands)" called
 
 ## Let's try it!
 ```sh
-$ brew tap phinze/homebrew-cask
+$ brew tap phinze/cask
 $ brew install brew-cask
 $ brew cask install google-chrome
 => Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
