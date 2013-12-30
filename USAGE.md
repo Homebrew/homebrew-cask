@@ -66,7 +66,7 @@ Details about a single Cask:
 ## Updating/Upgrading Casks
 
 Since this repository is a Tap, you'll pull down the latest Casks with a simple
-`brew-update`. When the `brew-cask` tool itself is updated, it will show in
+`brew update`. When the `brew-cask` tool itself is updated, it will show in
 `brew outdated` and you can upgrade it via the normal Homebrew workflow.
 
 ## Uninstalling Casks
