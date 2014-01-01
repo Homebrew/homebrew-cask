@@ -1,7 +1,7 @@
 class Vistrails < Cask
-  url 'http://downloads.sourceforge.net/project/vistrails/vistrails/v2.0.3/vistrails-mac-10.6-intel-2.0.3-a6ad79347667.dmg'
+  url 'http://downloads.sourceforge.net/project/vistrails/vistrails/v2.1/vistrails-mac-10.6-intel-2.1-179c82045907.dmg'
   homepage 'http://www.vistrails.org/index.php/Main_Page'
-  version '2.0.3'
-  sha1 '1381f58a8946792ed448ae072607cee9ed32a041'
+  version '2.1'
+  sha1 'cdd0039a02120bf5015fffb6864b1a961325e066'
   link 'VisTrails'
 end
