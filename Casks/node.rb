@@ -1,8 +1,8 @@
 class Node < Cask
-  url 'http://nodejs.org/dist/v0.10.23/node-v0.10.23.pkg'
+  url 'http://nodejs.org/dist/v0.10.24/node-v0.10.24.pkg'
   homepage 'http://nodejs.org'
-  version '0.10.23'
-  sha1 'a7711fbb958350011641c218dae64c0c6f1f80a8'
-  install  'node-v0.10.23.pkg'
+  version '0.10.24'
+  sha1 '74aba302d8b34e1fc93b3e0babc3f5d9bd8c09f3'
+  install  'node-v0.10.24.pkg'
   uninstall :pkgutil => 'org.nodejs'
 end
