@@ -1,6 +1,7 @@
 class Cask::Artifact::Pkg < Cask::Artifact::Base
-  def self.me?(cask)
-    cask.artifacts[:install].any?
+  # this class actually covers two keys, :install and :uninstall
+  def self.artifact_dsl_key
+    :install
   end
 
   def install

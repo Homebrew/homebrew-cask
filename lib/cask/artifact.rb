@@ -1,6 +1,7 @@
 module Cask::Artifact; end
 
 require 'cask/artifact/base'
+require 'cask/artifact/symlinked'
 
 require 'cask/artifact/app'
 require 'cask/artifact/block'

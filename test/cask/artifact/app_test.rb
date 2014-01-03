@@ -71,7 +71,7 @@ describe Cask::Artifact::App do
 
       TestHelper.must_output(self, lambda {
         Cask::Artifact::App.new(cask).install
-      }, "==> It seems there is already an app at #{Cask.appdir.join('Caffeine.app')}; not linking.")
+      }, "==> It seems there is already an App at '#{Cask.appdir.join('Caffeine.app')}'; not linking.")
 
       (Cask.appdir/'Caffeine.app').wont_be :symlink?
     end
@@ -83,7 +83,7 @@ describe Cask::Artifact::App do
 
       TestHelper.must_output(self, lambda {
         Cask::Artifact::App.new(cask).install
-      }, "==> Linking Caffeine.app to #{Cask.appdir.join('Caffeine.app')}")
+      }, "==> Linking App 'Caffeine.app' to '#{Cask.appdir.join('Caffeine.app')}'")
 
       File.readlink(Cask.appdir/'Caffeine.app').wont_equal '/tmp'
     end

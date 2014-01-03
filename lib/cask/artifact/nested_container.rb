@@ -1,8 +1,4 @@
 class Cask::Artifact::NestedContainer < Cask::Artifact::Base
-  def self.me?(cask)
-    cask.artifacts[:nested_container].any?
-  end
-
   def install
     @cask.artifacts[:nested_container].each { |container| extract(container) }
   end
