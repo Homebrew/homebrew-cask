@@ -1,7 +1,7 @@
 class Orange < Cask
-  url 'https://bitbucket.org/biolab/orange/downloads/Orange-2.6.1.dmg'
+  url 'http://orange.biolab.si/download/orange-bundle-hg-0.0.11812.dmg'
   homepage 'http://orange.biolab.si/'
-  version '2.6.1'
-  sha1 '79d1e42662eab5138aac2c408361c2b9ad6de448'
+  version '2.7'
+  sha1 'b86b2a46e23d81899b66fad3c0332ae711b032d9'
   link 'Orange.app'
 end
