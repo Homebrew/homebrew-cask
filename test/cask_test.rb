@@ -17,7 +17,9 @@ describe "Cask" do
 
     it "returns an instance of the cask from a url" do
       url = "file://" + File.expand_path('./Casks/dia.rb')
-      c = Cask.load(url)
+      c = shutup do
+        Cask.load(url)
+      end
       c.must_be_kind_of(Cask)
       c.must_be_instance_of(Dia)
     end
@@ -25,7 +27,9 @@ describe "Cask" do
     it "raises an error when failing to download a cask from a url" do
       lambda {
         url = "file://" + File.expand_path('./Casks/notacask.rb')
-        Cask.load(url)
+        shutup do
+          Cask.load(url)
+        end
       }.must_raise(CaskUnavailableError)
     end
 
