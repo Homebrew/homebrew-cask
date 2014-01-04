@@ -12,6 +12,7 @@ class Cask::Source::URI
   def load
     HOMEBREW_CACHE_CASKS.mkpath
     path = HOMEBREW_CACHE_CASKS.join(File.basename(uri))
+    ohai "Downloading #{uri}"
     curl(uri, '-o', path.to_s)
     Cask::Source::Path.new(path).load
   rescue ErrorDuringExecution
