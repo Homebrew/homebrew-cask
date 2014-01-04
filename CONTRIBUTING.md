@@ -229,8 +229,10 @@ in which `uninstall` keys appear in the Cask file is ignored.
 
 ### Good Things to Know
 
-* In order to get the checksum for the file, the easiest way is to run
-  `shasum <file>`.
+* In order to get the SHA-1 checksum for the file, the easiest way is to run
+  `shasum <file>`. A few casks use SHA-256 checksums instead of SHA-1 checksums:
+  they replace the `sha1` field with a `sha256` field. The easiest way to get
+  the SHA-256 checksum is to run `shasum -a 256 <file>`.
 * If the application does not have versioned downloads, you can skip the
   checksum by specifying `no_checksum`, which takes no arguments.
 * We have some conventions for projects without version-specific URLs. `latest`
