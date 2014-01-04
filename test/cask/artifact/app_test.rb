@@ -83,7 +83,7 @@ describe Cask::Artifact::App do
 
       TestHelper.must_output(self, lambda {
         Cask::Artifact::App.new(cask).install
-      }, "==> Linking App 'Caffeine.app' to '#{Cask.appdir.join('Caffeine.app')}'")
+      }, "==> Symlinking App 'Caffeine.app' to '#{Cask.appdir.join('Caffeine.app')}'")
 
       File.readlink(Cask.appdir/'Caffeine.app').wont_equal '/tmp'
     end
