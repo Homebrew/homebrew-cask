@@ -1,4 +1,5 @@
 class Cask::Artifact::Hardlinked < Cask::Artifact::Symlinked
+  
   def islink?(path)
     return false unless path.respond_to?(:stat)
     path.stat.nlink > 1
