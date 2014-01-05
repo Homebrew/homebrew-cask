@@ -5,4 +5,12 @@ class Basictex < Cask
   no_checksum
   install 'mactex-basic.pkg'
   uninstall :pkgutil => 'org.tug.mactex.basictex2013'
+
+  def caveats; <<-EOS.undent
+    You may need to add the MacTeX bin directory to your PATH.
+
+    export PATH=/usr/texbin:$PATH
+
+    EOS
+  end
 end
