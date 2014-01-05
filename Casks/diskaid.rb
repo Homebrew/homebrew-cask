@@ -1,7 +1,7 @@
 class Diskaid < Cask
-  url 'http://cdn-5.digidna.net/downloads/DiskAid_6_5_0.dmg'
+  url 'http://cdn-5.digidna.net/downloads/DiskAid_6_5_2.dmg'
   homepage 'http://www.digidna.net/diskaid'
-  version '6.5.0'
-  sha1 '1e390c45ce6af576ea86df33d75e2f76b72926f2'
+  version '6.5.2'
+  sha1 '455431fe4e283296c88c2d86300967f8bee57bd1'
   link 'DiskAid.app'
 end
