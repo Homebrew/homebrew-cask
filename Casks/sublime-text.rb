@@ -4,4 +4,5 @@ class SublimeText < Cask
   version '2.0.2'
   sha1 '14fba173566d4415f1881a38ad98cf22144f1f63'
   link 'Sublime Text 2.app'
+  binary 'Sublime Text 2.app/Contents/SharedSupport/bin/subl'
 end
