@@ -17,6 +17,7 @@ require 'cask/fetcher'
 require 'cask/installer'
 require 'cask/link_checker'
 require 'cask/locations'
+require 'cask/options'
 require 'cask/pkg'
 require 'cask/pretty_listing'
 require 'cask/scopes'
@@ -31,6 +32,7 @@ class Cask
   include Cask::DSL
   include Cask::Locations
   include Cask::Scopes
+  include Cask::Options
 
   def self.init
     HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?

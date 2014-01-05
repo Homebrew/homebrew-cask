@@ -1,6 +1,6 @@
 # wire in a set of fake link dirs per-test
 module FakeDirHooks
-  DIRS = [:appdir, :qlplugindir]
+  DIRS = [:appdir, :qlplugindir, :binarydir]
 
   def before_setup
     super
