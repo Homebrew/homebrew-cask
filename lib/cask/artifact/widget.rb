@@ -1,2 +1,2 @@
-class Cask::Artifact::Widget < Cask::Artifact::Symlinked
+class Cask::Artifact::Widget < Cask::Artifact::Hardlinked
 end
