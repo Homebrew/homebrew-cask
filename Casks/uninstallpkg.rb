@@ -1,7 +1,7 @@
 class Uninstallpkg < Cask
-  url 'http://www.corecode.at/downloads/uninstallpkg_1.0b6.zip'
+  url 'http://www.corecode.at/downloads/uninstallpkg_1.0.zip'
   homepage 'http://www.corecode.at/uninstallpkg/'
-  version '1.0b6'
-  sha1 '10452fb8cb58450a4ab8909caef27dbf990d15f4'
+  version '1.0'
+  sha1 '75461872551462b2918fb153e4f3a961aa329f6c'
   link 'UninstallPKG.app'
 end
