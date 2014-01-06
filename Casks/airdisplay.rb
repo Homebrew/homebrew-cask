@@ -1,5 +1,5 @@
 class Airdisplay < Cask
-  url 'http://avatron.com/downloads/AirDisplayInstaller.zip'
+  url 'http://downloads.avatron.com/AirDisplayInstaller.zip'
   homepage 'http://avatron.com/apps/air-display/'
   version 'latest'
   no_checksum
