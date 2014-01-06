@@ -33,9 +33,9 @@ class Cask::LinkChecker
   }
 
   def _check_response_status
-    ok = OK_RESPONSES[cask.url.scheme]
-    unless ok.include?(@response_status)
-      add_error "unexpected http response, expecting #{ok.map(&:inspect).join(' or ')}, got #{@response_status.inspect}"
+    ok = OK_RESPONSES[cask.url.scheme.strip]
+    unless ok.include?(@response_status.strip)
+      add_error "unexpected http response, expecting #{ok.map(&:inspect).join(' or ')}, got #{@response_status.inspect.strip}"
     end
   end
 
