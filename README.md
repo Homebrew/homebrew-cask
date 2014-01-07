@@ -30,9 +30,9 @@ open ~/Applications/"Google Chrome.app"
 ```
 ## Learn More
 
- * Find basic documentation on using `homebrew-cask` in [USAGE.md](https://github.com/phinze/homebrew-cask/blob/master/USAGE.md)
- * Want to contribute? Awesome! See [CONTRIBUTING.md](https://github.com/phinze/homebrew-cask/blob/master/CONTRIBUTING.md)
- * More project-related details and discussion are available in [FAQ.md](https://github.com/phinze/homebrew-cask/blob/master/FAQ.md)
+ * Find basic documentation on using `homebrew-cask` in [USAGE.md](USAGE.md)
+ * Want to contribute? Awesome! See [CONTRIBUTING.md](CONTRIBUTING.md)
+ * More project-related details and discussion are available in [FAQ.md](FAQ.md)
 
 ## Questions? Wanna chat?
 
@@ -42,4 +42,4 @@ We're really rather friendly! Here are the best places to talk about the project
  * Join us on IRC, we're at `#homebrew-cask` on Freenode
 
 ## License:
-Code is under the [BSD 2 Clause (NetBSD) license](https://github.com/phinze/homebrew-cask/blob/master/LICENSE)
+Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
