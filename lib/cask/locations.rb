@@ -72,6 +72,14 @@ module Cask::Locations
       @servicedir = _servicedir
     end
 
+    def binarydir
+      @binarydir ||= Pathname.new('/usr/local/bin').expand_path
+    end
+
+    def binarydir=(_binarydir)
+      @binarydir = _binarydir
+    end
+
     def default_tap
       @default_tap ||= 'phinze-cask'
     end

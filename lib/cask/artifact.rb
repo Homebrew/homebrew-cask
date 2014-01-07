@@ -4,6 +4,7 @@ require 'cask/artifact/base'
 require 'cask/artifact/symlinked'
 
 require 'cask/artifact/app'
+require 'cask/artifact/binary'
 require 'cask/artifact/block'
 require 'cask/artifact/colorpicker'
 require 'cask/artifact/font'
@@ -32,6 +33,7 @@ module Cask::Artifact
       Cask::Artifact::Widget,
       Cask::Artifact::Service,
       Cask::Artifact::Block,
+      Cask::Artifact::Binary,
     ]
   end
 

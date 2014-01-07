@@ -48,6 +48,7 @@ module Cask::DSL
       :widget,
       :service,
       :colorpicker,
+      :binary,
     ]
 
     ARTIFACT_TYPES.each do |type|

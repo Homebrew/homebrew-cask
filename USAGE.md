@@ -79,7 +79,13 @@ This will both uninstall and unlink the Cask.
 
 ## Options
 
-You can provide a number of options to the `brew cask` command to modify the default
+`brew cask` accepts a number of options:
+
+* `--version`: print version and exit
+* `--debug`: output debug information
+* `--no-binaries`: skip symlinkning binaries into `/usr/local/bin`
+
+You can also provide a number of options to the `brew cask` command to modify the default
 installation locations.
 
 * `--caskroom=/my/path` determines where the actual applications will be located.
@@ -95,6 +101,8 @@ Default is `~/Library/QuickLook`
 Default is `~/Library/Widgets`
 * `--fontdir=/my/path` changes the path for Fonts symlinks.
 Default is `~/Library/Fonts`
+* `--binarydir=/my/path` changes the path for binary symlinks.
+Default is `/usr/local/bin`
 
 To make these changes permanent, you might want to add the following line to your `.bash_profile` or `.zshenv`:
 

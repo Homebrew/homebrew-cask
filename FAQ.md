@@ -19,6 +19,7 @@ Casks currently have five required fields:
 
 and five optional fields:
 
+* __binary__: relative path to a binary to be installed
 * __uninstall__: (optional for `.pkg`) indicates how to uninstall a package
 * __nested_container__: relative path to a nested inner container
 * __caveats__: a Ruby block providing the user with Cask-specific information at install time
