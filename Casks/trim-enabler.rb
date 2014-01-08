@@ -1,5 +1,5 @@
 class TrimEnabler < Cask
-  url 'http://groths.org/trimenabler/TrimEnabler.dmg'
+  url 'https://s3.amazonaws.com/groths/TrimEnabler.dmg'
   homepage 'http://www.groths.org/trim-enabler/'
   version 'latest'
   no_checksum
