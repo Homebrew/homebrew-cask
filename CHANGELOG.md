@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.26.1
+
+* __Features__
+* __Fixes__
+  - #2275 - Force a require of Homebrew's `download_strategy`
+* __Breaking Changes__
+
 ## 0.26.0
 
 * __Features__
