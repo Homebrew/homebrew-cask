@@ -1,2 +1,2 @@
-class Cask::Artifact::Font < Cask::Artifact::Symlinked
+class Cask::Artifact::Font < Cask::Artifact::Hardlinked
 end
