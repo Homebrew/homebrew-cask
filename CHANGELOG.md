@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 0.26.0
+
+* __Features__
+  - New `binary` artifact for installing executables.
+  - Start a `brew cask doctor` command to help with support.
+* __Fixes__
+  - #2275 - Prepend brew cask to Ruby's load path
+* __Breaking Changes__
+
 ## 0.25.0
 
 * __Features__
