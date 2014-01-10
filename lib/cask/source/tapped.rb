@@ -1,15 +1,10 @@
-class Cask::Source::Tap
+class Cask::Source::Tapped
   def self.me?(query)
     path_for_query(query).exist?
   end
 
   def self.path_for_query(query)
-    if query.include?('/')
-      cask_with_tap = query
-    else
-      cask_with_tap = Cask.all_titles.find { |t| t.split('/').last == query }
-    end
-
+    cask_with_tap = Cask.all_titles.find { |t| t.split('/').last == query }
     if cask_with_tap
       tap, cask = cask_with_tap.split('/')
       Cask.tapspath.join(tap, 'Casks', "#{cask}.rb")

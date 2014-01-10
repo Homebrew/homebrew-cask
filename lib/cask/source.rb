@@ -2,7 +2,9 @@ module Cask::Source; end
 
 require 'cask/source/gone'
 require 'cask/source/path'
-require 'cask/source/tap'
+require 'cask/source/tapped_qualified'
+require 'cask/source/untapped_qualified'
+require 'cask/source/tapped'
 require 'cask/source/uri'
 
 module Cask::Source
@@ -10,7 +12,9 @@ module Cask::Source
     [
       Cask::Source::URI,
       Cask::Source::Path,
-      Cask::Source::Tap,
+      Cask::Source::TappedQualified,
+      Cask::Source::UntappedQualified,
+      Cask::Source::Tapped,
       Cask::Source::Gone,
     ]
   end
