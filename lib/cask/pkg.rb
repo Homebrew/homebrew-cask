@@ -13,8 +13,8 @@ class Cask::Pkg
   end
 
   def uninstall
-    list('files').each do |file|
-      @command.run!('/bin/rm', :args => [file], :sudo => true) if file.exist?
+    list('files').each_slice(500) do |file_slice|
+      @command.run('/bin/rm', :args => file_slice.unshift('-f'), :sudo => true)
     end
     _deepest_path_first(list('dirs')).each do |dir|
       if dir.exist?

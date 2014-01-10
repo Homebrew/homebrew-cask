@@ -125,8 +125,11 @@ describe Cask::Artifact::Pkg do
 
       Cask::FakeSystemCommand.stubs_command(%Q(sudo -E '/usr/sbin/pkgutil' '--forget' 'my.fancy.package.agent' 2>&1))
 
+      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E '/bin/rm' '-f' '/tmp/fancy/bin/fancy.exe' '/tmp/fancy/var/fancy.data' 2>&1))
+      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E '/bin/rm' '-f' '/tmp/fancy/agent/fancy-agent.exe' '/tmp/fancy/agent/fancy-agent.pid' '/tmp/fancy/agent/fancy-agent.log' 2>&1))
+
       # No assertions after call since all assertions are implicit from the interactions setup above.
-      # TODO: verify rmdir / rm commands (requires setting up actual file tree or faking out .exists?
+      # TODO: verify rmdir commands (requires setting up actual file tree or faking out .exists?
       shutup do
         pkg.uninstall
       end
