@@ -30,10 +30,10 @@ down then floating in a brain somewhere.
    Like this: `git tag -m v0.26.0 v0.26.0`
 6. Push the commit and the tag: `git push --follow-tags`
 7. Hop to the GitHub project and click "Releases" then the link for your newly
-   pushed tag. Click the "Draft Release" button in the top right corner of that
+   pushed tag. Click the "Edit Tag" button in the top right corner of that
    page.
 8. Paste the markdown summary from the CHANGELOG in the body of the release and
-   click "Publish".
+   click "Publish Release".
 9. Rejoice! Have a :cookie:.
 
 ## Things to Consider
