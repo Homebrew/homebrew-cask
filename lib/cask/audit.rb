@@ -55,6 +55,7 @@ class Cask::Audit
     valid_url_formats = [
       %r{https?://sourceforge.net/projects/.*/files/latest/download},
       %r{https?://downloads.sourceforge.net/},
+      %r{https?://dl.sourceforge.jp/},
     ]
     valid_url_formats.none? { |format| cask.url.to_s =~ format }
   end
