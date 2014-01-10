@@ -2,6 +2,8 @@ HOMEBREW_CACHE_CASKS = HOMEBREW_CACHE.join('Casks')
 
 class Cask; end
 
+require 'download_strategy'
+
 require 'cask/artifact'
 require 'cask/audit'
 require 'cask/auditor'
