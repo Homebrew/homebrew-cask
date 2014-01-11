@@ -322,22 +322,7 @@ Neat and tidy!
 
 ## Working on homebrew-cask itself
 
-If you'd like to hack on the Ruby code in the project itself, one way to play
-with changes is to symlink the `rubylib` folder to your Tap repository.
-
-  ```bash
-  $ cd $(brew --prefix brew-cask)
-  $ mv rubylib{,.orig}
-  $ ln -s $(brew --prefix)/Library/Taps/phinze-cask/lib rubylib
-  ```
-
-Now you can hack on `homebrew-cask` in the Tap and use the `brew cask` CLI like
-normal to interact with your latest code.
-
-### Mind the test suite!
-
-If you're making changes - please write some tests for them! Also be sure to
-run the whole test suite using `rake` before submitting (if you forget Travis-CI will do
-that for you and embarrass you in front of all your friends). :)
+If you'd like to hack on the Ruby code in the project itself, please
+see [HACKING.md](HACKING.md).
 
 # <3 THANK YOU! <3
