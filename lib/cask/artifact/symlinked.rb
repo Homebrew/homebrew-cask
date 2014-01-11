@@ -11,6 +11,16 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
     @command.run!('/bin/ln', :args => ['-hfs', '--', source, target])
   end
 
+  def summary
+    {
+      :description => "#{self.class.artifact_english_name} #{self.class.link_type_english_name}s managed by brew-cask:",
+
+      :contents    => @cask.artifacts[self.class.artifact_dsl_key].map do |artifact|
+                        summarize_one_link(artifact)
+                      end - [nil]
+    }
+  end
+
   def link(artifact_relative_path)
     source_string, target_hash = artifact_relative_path
 
@@ -21,6 +31,20 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
     return unless preflight_checks(source, target)
     ohai "#{self.class.link_type_english_name}ing #{self.class.artifact_english_name} '#{source.basename}' to '#{target}'"
     create_filesystem_link(source, target)
+  end
+
+  def summarize_one_link(artifact_relative_path)
+    source_string, target_hash = artifact_relative_path
+    sanity_check source_string, target_hash
+    source = @cask.destination_path.join(source_string)
+    target = Cask.send(self.class.artifact_dirmethod).join(target_hash ? target_hash[:target] : source.basename)
+    linked_path = Cask.send(self.class.artifact_dirmethod).join(Pathname(target).basename)
+    if self.class.islink?(linked_path)
+      link_description = linked_path.exist? ? '' : "#{Tty.red}Broken Link#{Tty.reset}: "
+      printable_linked_path = "'#{linked_path}'"
+      printable_linked_path.sub!(%r{^'#{ENV['HOME']}/*}, %q{~/'})
+      "#{link_description}#{printable_linked_path} -> '#{linked_path.readlink}'"
+    end
   end
 
   def unlink(artifact_relative_path)
