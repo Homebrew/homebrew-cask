@@ -215,7 +215,8 @@ many features to help properly remove a Cask-installed application.
 These features are utilized via a hash argument to `uninstall` with any number
 of the following keys:
 
-* `:script` (string) - relative path to an uninstall script to be run via sudo
+* `:script` (string or hash) - relative path to an uninstall script to be run via sudo; use hash if args are needed
+  - `:executable` - relative path to an uninstall script to be run via sudo (required for hash)
   - `:args` - array of arguments to the uninstall script
   - `:input` - array of lines of input to be sent to `stdin` of the script
 * `:launchctl` (string or array) - ids of launchctl services to remove

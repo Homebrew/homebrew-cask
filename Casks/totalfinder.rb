@@ -4,6 +4,8 @@ class Totalfinder < Cask
   version '1.5.6'
   sha1 'ce0e2fe7fc3bd7b98622c95e2bb73e9fb2f55546'
   install 'TotalFinder.pkg'
-  uninstall :script => 'TotalFinder Uninstaller.app/Contents/MacOS/TotalFinder Uninstaller',
-            :args => %w[--headless]
+  uninstall :script => {
+    :executable => 'TotalFinder Uninstaller.app/Contents/MacOS/TotalFinder Uninstaller',
+    :args => %w[--headless]
+  }
 end

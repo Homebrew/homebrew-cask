@@ -4,6 +4,8 @@ class Totalterminal < Cask
   version '1.4.6'
   sha1 'd0163f80f4c993b05952cef84b55aabaa37af0cc'
   install 'TotalTerminal.pkg'
-  uninstall :script => 'TotalTerminal Uninstaller.app/Contents/MacOS/TotalTerminal Uninstaller',
-            :args => %w[--headless]
+  uninstall :script => {
+    :executable => 'TotalTerminal Uninstaller.app/Contents/MacOS/TotalTerminal Uninstaller',
+    :args => %w[--headless]
+  }
 end

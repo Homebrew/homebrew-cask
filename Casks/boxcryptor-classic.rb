@@ -4,5 +4,5 @@ class BoxcryptorClassic < Cask
   version 'latest'
   no_checksum
   install 'Install Boxcryptor Classic.pkg'
-  uninstall :script => 'Uninstall.command', :args => %w[--unattended]
+  uninstall :script => { :executable => 'Uninstall.command', :args => %w[--unattended] }
 end

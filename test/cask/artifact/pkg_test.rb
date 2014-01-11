@@ -27,6 +27,9 @@ describe Cask::Artifact::Pkg do
     it 'runs the specified uninstaller for the cask' do
       pkg = Cask::Artifact::Pkg.new(@cask, Cask::FakeSystemCommand)
 
+      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E '/usr/bin/osascript' '-e' 'tell application "System Events" to count processes whose bundle identifier is "my.fancy.package.app"' 2>&1), '1')
+      Cask::FakeSystemCommand.stubs_command(%Q(sudo -E '/usr/bin/osascript' '-e' 'tell application id "my.fancy.package.app" to quit' 2>&1))
+
       expected_command = "sudo -E '#{@cask.destination_path/'MyFancyPkg'/'FancyUninstaller.tool'}' '--please' 2>&1"
       Cask::FakeSystemCommand.stubs_command(expected_command)
 
