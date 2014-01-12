@@ -1,7 +1,7 @@
 class Supercollider < Cask
-  url 'http://downloads.sourceforge.net/project/supercollider/Mac%20OS%20X/3.6/SuperCollider-3.6.5-OSX-universal.dmg'
+  url 'http://sourceforge.net/projects/supercollider/files/latest/download'
   homepage 'http://supercollider.sourceforge.net/'
-  version '3.6.5'
-  sha1 'f778f6d3c42f8662001b241287836bbe5c532604'
+  version '3.6.6'
+  sha1 '8ca786becbc8c6d2464d39615aab39ea66066506'
   link 'SuperCollider/SuperCollider.app'
 end
