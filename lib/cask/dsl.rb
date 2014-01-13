@@ -50,6 +50,7 @@ module Cask::DSL
       :colorpicker,
       :binary,
       :caskroom_only,
+      :input_method,
     ]
 
     ARTIFACT_TYPES.each do |type|
