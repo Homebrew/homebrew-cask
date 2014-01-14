@@ -16,7 +16,7 @@ module Cask::DSL
 
   def artifacts; self.class.artifacts; end
 
-  def caveats; ''; end
+  def caveats; self.class.caveats; end
 
   module ClassMethods
     def homepage(homepage=nil)
@@ -35,6 +35,18 @@ module Cask::DSL
 
     def artifacts
       @artifacts ||= Hash.new { |hash, key| hash[key] = Set.new }
+    end
+
+    def caveats(*string, &block)
+      @caveats ||= []
+      if block_given?
+        @caveats << Cask::Caveats.new(block)
+      elsif string.any?
+        @caveats << string
+      else
+        # accessor
+        @caveats
+      end
     end
 
     ARTIFACT_TYPES = [

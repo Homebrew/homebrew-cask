@@ -4,9 +4,7 @@ class LeagueOfLegends < Cask
   version 'latest'
   no_checksum
   link 'League of Legends.app'
-
-  def caveats; <<-EOS.undent
-    You need to run #{destination_path/'League of Legends.app'} to update the game to the latest version.
-    EOS
+  caveats do
+    manual_installer 'League of Legends.app'
   end
 end

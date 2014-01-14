@@ -4,9 +4,17 @@ class WithCaveats < TestCask
   version '1.2.3'
   sha1 'd2fbdad1619934313026fc831e6c6e3dd97ac030'
   link 'Caffeine.app'
-
-  def caveats; <<-EOS.undent
+  # simple string is evaluated at compile-time
+  caveats <<-EOS.undent
     Here are some things you might want to know.
     EOS
+  # do block is evaluated at install-time
+  caveats do
+    "Cask title: #{title}"
+  end
+  # a do block may print and use a DSL
+  caveats do
+    puts 'Custom text via puts followed by DSL-generated text:'
+    manual_installer('Installer.app')
   end
 end

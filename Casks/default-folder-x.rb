@@ -4,9 +4,7 @@ class DefaultFolderX < Cask
   version '4.6.2'
   sha1 '64da17e2a863711a0959210546ffc2182b3e802a'
   link 'Default Folder X Installer.app'
-
-  def caveats; <<-EOS.undent
-    You need to run #{destination_path/'Default Folder X Installer.app'} to actually install Default Folder X
-    EOS
+  caveats do
+    manual_installer 'Default Folder X Installer.app'
   end
 end

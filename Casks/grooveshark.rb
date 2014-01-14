@@ -4,11 +4,8 @@ class Grooveshark < Cask
   version 'latest'
   no_checksum
   link 'Grooveshark.app'
-
-  def caveats
-    <<-EOS.undent
-      Grooveshark requires Adobe Flash to run:
-        brew cask install flash
+  caveats <<-EOS.undent
+    Grooveshark requires Adobe Flash.  Flash can be installed via:
+      brew cask install flash
     EOS
-  end
 end

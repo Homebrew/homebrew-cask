@@ -4,8 +4,7 @@ class Jdownloader < Cask
   version 'latest'
   no_checksum
   link 'JDownloader Installer.app'
-  def caveats; <<-EOS.undent
-    You need to run #{destination_path/'JDownloader Installer.app'} to actually install JDownloader
-    EOS
+  caveats do
+    manual_installer 'JDownloader Installer.app'
   end
 end
