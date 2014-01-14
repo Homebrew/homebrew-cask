@@ -33,6 +33,7 @@ class Cask::Download
         if sum == computed
           odebug "Checksums match"
         else
+          ohai 'Note: running "brew update" may fix checksum errors'
           raise ChecksumMismatchError.new(path, sum, computed)
         end
         has_sum = true
