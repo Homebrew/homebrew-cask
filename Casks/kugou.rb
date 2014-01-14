@@ -5,3 +5,4 @@ class Kugou < Cask
   no_checksum
   link 'KugouMusic.app'
 end
+
