@@ -1,4 +1,4 @@
-class Platypus < Cask
+class PlatypusApp < Cask
   url 'http://sveinbjorn.org/files/software/platypus.zip'
   homepage 'http://sveinbjorn.org/platypus'
   version '4.8'
