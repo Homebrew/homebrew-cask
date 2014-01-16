@@ -50,16 +50,16 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
   end
 
   def manually_uninstall(uninstall_options)
+    ohai "Running uninstall process for #{@cask}; your password may be necessary"
 
     unknown_keys = uninstall_options.keys - [:script, :quit, :kext, :pkgutil, :launchctl, :files]
     unless unknown_keys.empty?
       opoo "Unknown arguments to uninstall: #{unknown_keys.join(", ")}. Running `brew update; brew upgrade brew-cask` will likely fix it.'"
     end
 
-    ohai "Running uninstall process for #{@cask}; your password may be necessary."
-
     if uninstall_options.key? :script
       executable, script_arguments = self.class.read_script_arguments(uninstall_options, :script)
+      ohai "Running uninstall script #{executable}"
       raise "Error in Cask #{@cask}: uninstall :script without :executable." if executable.nil?
       @command.run!(@cask.destination_path.join(executable), script_arguments)
     end
@@ -92,6 +92,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     end
 
     if uninstall_options.key? :pkgutil
+      ohai "Removing files from pkgutil Bill-of-Materials"
       pkgs = Cask::Pkg.all_matching(uninstall_options[:pkgutil], @command)
       pkgs.each(&:uninstall)
     end
