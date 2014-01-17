@@ -1,8 +1,8 @@
 class DefaultFolderX < Cask
-  url 'https://stclairsoft.s3.amazonaws.com/DefaultFolderX-4.6.1.dmg'
+  url 'https://stclairsoft.s3.amazonaws.com/DefaultFolderX-4.6.2.dmg'
   homepage 'http://www.stclairsoft.com/DefaultFolderX'
-  version '4.6.1'
-  sha1 'e18306fa47d1d04717b206745de83cfb7e112002'
+  version '4.6.2'
+  sha1 '64da17e2a863711a0959210546ffc2182b3e802a'
   link 'Default Folder X Installer.app'
 
   def caveats; <<-EOS.undent
