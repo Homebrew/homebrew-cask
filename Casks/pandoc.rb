@@ -1,7 +1,7 @@
 class Pandoc < Cask
   homepage 'http://johnmacfarlane.net/pandoc'
-  url 'https://pandoc.googlecode.com/files/pandoc-1.12.2.1.pkg.zip'
+  url 'https://pandoc.googlecode.com/files/pandoc-1.12.3.pkg.zip'
   version '1.12.2.1'
-  sha1 '5d3fe6e120028e0079e62fde2cd736d234c6ac95'
-  install 'pandoc-1.12.2.1.pkg'
+  sha1 '3fbdcbebb7f0fc966918933d792a08bbeda127c1'
+  install 'pandoc-1.12.3.pkg'
 end
