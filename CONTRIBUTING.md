@@ -56,18 +56,43 @@ class Vagrant < Cask
 end
 ```
 
+### Naming the Cask
+
+We try to maintain consistent naming for the benefit of our users.
+
+The Cask **name** is the string people will use to interact with the Cask
+via `brew cask install`, `brew cask search`, etc.  The Cask **file**
+is simply the Cask name with the extension `.rb` appended.
+
+The easiest way to name a Cask is to run this command:
+```bash
+$ "$(brew --prefix)/Library/Taps/phinze-cask/developer/bin/cask_namer" '/full/path/to/new/software.app'
+```
+
+If the software you wish to Cask is not installed, or does not have an
+associated App bundle, just give the full proper name of the software
+instead of a pathname:
+```bash
+$ "$(brew --prefix)/Library/Taps/phinze-cask/developer/bin/cask_namer" 'Google Chrome'
+```
+
+If the `cask_namer` script does not work for you, see [Cask Naming Details](#cask-naming-details).
+
+
 ### The `brew cask create` Command
 
-To get started, use the handy dandy `brew cask create` command.
+Once you know the name for your Cask, create it with the handy-dandy
+`brew cask create` command.
 
 ```bash
 $ brew cask create my-new-cask
 ```
 
-This will open `$EDITOR` with a template for your new Cask. Note that the
-convention is that hyphens in the name indicate casing in the class name, so
-the Cask name 'my-new-cask' becomes `MyNewCask` stored in `my-new-cask.rb`. So
-running the above command will get you a template that looks like this:
+This will open `$EDITOR` with a template for your new Cask. Hyphens in the
+Cask name indicate case-changes in the class name, so the Cask name
+'my-new-cask' becomes class `MyNewCask` stored in file `my-new-cask.rb`.
+Running the `create` command above will get you a template that looks like
+this:
 
 ```ruby
 class MyNewCask < Cask
@@ -141,91 +166,17 @@ When possible, it is best to use a download URL from the original developer
 or vendor, rather than an aggregator such as macupdate.com.
 
 
-### Naming Casks
+### Cask Naming Details
 
-We try to maintain consistent naming so everything stays clean and predictable.
+If a Cask name conflicts with an already-existing Cask, authors should manually
+make the new Cask name unique by prepending the vendor name.  Example:
+[unison.rb](../Casks/unison.rb) and [panic-unison.rb](../Casks/panic-unison.rb).
 
-#### Find the Canonical Name of the Author's Distribution
+If possible, avoid creating Cask names which differ only by the placement of
+hyphens.
 
-##### Canonical Names of Apps
+To name a Cask manually, or to learn about exceptions for unusual cases, see [CASK_NAMING_REFERENCE.md](doc/CASK_NAMING_REFERENCE.md).
 
-  * Start with the exact name of the Application bundle as it appears on disk,
-    such as `Google Chrome.app`
-  * Remove `.app` from the end
-  * Translate the name into English if necessary
-  * Remove from the end: version numbers or incremental release designations such
-    as "alpha", "beta", or "release candidate".  Strings which distinguish different
-    capabilities or codebases such as "Community Edition" are currently accepted.
-    Exception: when a number is not an incremental release counter, but a
-    differentiator for a different product from a different vendor: [iterm2.rb](../Casks/iterm2.rb).
-  * If the version number is arranged to occur in the middle of the App name,
-    it should also be removed.  Example: [IntelliJ IDEA 13 CE.app](../Casks/intellij-idea-ce.rb).
-  * Remove from the end: "mac", "for mac", "for OS X".  These terms are generally
-    added to ports such as "MAME OS X.app".  Exception: when the software is not
-    a port, but "Mac" is an inseparable part of the name or branding, as in
-    'PlayForMac.app'
-  * Remove from the end: hardware designations such as "for x86", "32-bit", "ppc".
-  * Remove from the end: software framework names such as "Qt", "Gtk", "Wx", "Java", "Oracle JVM", etc.
-    Exception: the framework is the product being Casked: [java.rb](../Casks/java.rb).
-  * Remove from the end: localization strings such as "en-US"
-  * Pay attention to details, for example: `"Git Hub" != "git_hub" != "GitHub"`
-  * If the result of that process is something unhelpful, such as `Macintosh Installer`,
-    then just create the best name you can, based on the author's web page.
-  * If the result conflicts with the name of an existing Cask, make yours unique
-    by prepending the name of the vendor or developer, followed by a separator.
-    Example: [unison.rb](../Casks/unison.rb) and [panic-unison.rb](../Casks/panic-unison.rb).
-
-##### Canonical Names of `pkg`-based Installers
-
-  * The Canonical Name of a `pkg` may be more tricky to determine than that
-    of an App.  If a `pkg` installs an App, then use that App name with the
-    rules above.  If not, just create the best name you can, based on the
-    author's web page.
-
-#### Cask Name
-
-A "Cask name" is the primary identifier for a package in our project. It's
-the string people will use to interact with this Cask on their system.
-
-To get from the App's canonical name to the Cask name:
-
-  * convert all letters to lower case
-  * hyphens stay hyphens
-  * spaces become hyphens
-  * digits stay digits
-  * delete any character which is not alphanumeric or hyphen
-  * collapse a series of multiple hyphens into one hyphen
-  * delete a leading hyphen
-  * a leading digit gets spelled out into English: `1password` becomes `onepassword`
-
-Casks are stored in a Ruby file matching their name.  If possible, avoid creating
-Cask files which differ only by the placement of hyphens.
-
-#### Cask Class
-
-Casks are implemented as Ruby classes, so a Cask's "class" needs to be a
-valid Ruby class name.
-
-When going from a Cask's __name__ to its __class name__:
-
-  * UpperCamelCased
-  * wherever a hyphen occurs in the __Cask name__, the __class__ has a case change
-  * invalid characters are replaced with English word equivalents
-
-
-#### Cask Naming Examples
-
-These illustrate most of the naming rules:
-
-Canonical App Name | Cask Name           | Cask Class
--------------------|---------------------|------------------------
-Audio Hijack Pro   | `audio-hijack-pro`  | `AudioHijackPro`
-VLC                | `vlc`               | `Vlc`
-BetterTouchTool    | `bettertouchtool`   | `Bettertouchtool`
-iTerm2             | `iterm2`            | `Iterm2`
-Akai LPK25 Editor  | `akai-lpk25-editor` | `AkaiLpk25Editor`
-Sublime Text 3     | `sublime-text3`     | `SublimeText3`
-1Password          | `1password`         | `Onepassword`
 
 ### Archives With Subfolders
 
