@@ -15,6 +15,7 @@ require 'cask/artifact/prefpane'
 require 'cask/artifact/qlplugin'
 require 'cask/artifact/widget'
 require 'cask/artifact/service'
+require 'cask/artifact/caskroom_only'
 
 
 module Cask::Artifact
@@ -33,6 +34,7 @@ module Cask::Artifact
       Cask::Artifact::Font,
       Cask::Artifact::Widget,
       Cask::Artifact::Service,
+      Cask::Artifact::CaskroomOnly,
       Cask::Artifact::Block,
       Cask::Artifact::Binary,
     ]
