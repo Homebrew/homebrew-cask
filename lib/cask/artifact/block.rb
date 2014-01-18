@@ -5,11 +5,11 @@ class Cask::Artifact::Block < Cask::Artifact::Base
   end
 
   def install
-    @cask.artifacts[:after_install].each { |block| block.call(@cask) }
+    @cask.artifacts[:after_install].each { |block| @cask.instance_eval &block }
   end
 
   def uninstall
-    @cask.artifacts[:after_uninstall].each { |block| block.call(@cask) }
+    @cask.artifacts[:after_uninstall].each { |block| @cask.instance_eval &block }
   end
 end
 
