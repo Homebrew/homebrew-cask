@@ -19,7 +19,7 @@ Homebrew-cask is designed to work like a traditional Unix tool:
 
 - All functionality should be accessible from the CLI. The user should
   be freed (**freed!**) from interacting with a GUI.
-- Homebrew-cask should itself be scriptable.
+- homebrew-cask should itself be scriptable.
 
 Homebrew-cask is designed to work like Homebrew:
 
@@ -43,7 +43,7 @@ always comes first.
 ## Are You Interested in New Types of Packages?
 
 Yes! (We call them "artifacts"). If something is useful (and precompiled)
-then we'd like to enable users to install it via Homebrew-cask.
+then we'd like to enable users to install it via homebrew-cask.
 
 ## Could Homebrew-cask Also Be Used to Manage Settings?
 
@@ -77,7 +77,7 @@ directly if you want to help.
 
 We are independent of Homebrew as a project.
 
-From the user's point of view, Homebrew-cask is a subcommand of Homebrew,
+From the user's point of view, homebrew-cask is a subcommand of Homebrew,
 so we try to match Homebrew semantics and philosophy wherever possible.
 
 From the programmer's point of view, very little code is shared with Homebrew.
@@ -96,13 +96,13 @@ $ mv rubylib{,.orig}
 $ ln -s $(brew --prefix)/Library/Taps/phinze-cask/lib rubylib
 ```
 
-Now you can hack on Homebrew-cask in the Tap and use the `brew cask` CLI
+Now you can hack on homebrew-cask in the Tap and use the `brew cask` CLI
 like normal to interact with your latest code.
 
 ## Hanging out on IRC
 
 We're on IRC at `#homebrew-cask` on Freenode. If you are going to develop for
-`homebrew-cask`, it's a great idea to hang out with us there. Here's why:
+homebrew-cask, it's a great idea to hang out with us there. Here's why:
 - discuss your thoughts before coding and maybe get new ideas
 - get feedback from the Travis-CI bot on build failures
 - talk to [caskbot](https://github.com/passcod/caskbot) about checksums, version info, and releases

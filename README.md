@@ -8,7 +8,7 @@
 Let's see if we can get the elegance, simplicity, and speed of Homebrew for the
 installation and management of GUI Mac applications such as Google Chrome and Adium.
 
-`brew-cask` provides a friendly homebrew-style CLI workflow for the
+Homebrew-cask provides a friendly homebrew-style CLI workflow for the
 administration of Mac applications distributed as binaries.
 
 It's implemented as a `homebrew` "[external
@@ -30,7 +30,7 @@ open ~/Applications/"Google Chrome.app"
 ```
 ## Learn More
 
- * Find basic documentation on using `homebrew-cask` in [USAGE.md](USAGE.md)
+ * Find basic documentation on using homebrew-cask in [USAGE.md](USAGE.md)
  * Want to contribute? Awesome! See [CONTRIBUTING.md](CONTRIBUTING.md)
  * More project-related details and discussion are available in [FAQ.md](FAQ.md)
 
