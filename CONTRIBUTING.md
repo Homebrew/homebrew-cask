@@ -1,16 +1,16 @@
-# How to Contribute
+# How To Contribute
 
 So you want to contribute to the project. **THIS IS GREAT NEWS!**  Seriously. We're
 all pretty happy about this.
 
-## Getting set up to contribute
+## Getting Set Up To Contribute
 
 1. Fork the repository in GitHub with the 'Fork' button
 2. Add your GitHub fork as a remote for your homebrew-cask Tap
 
 ```bash
 github_user='<my-github-username>'
-cd $(brew --prefix)/Library/Taps/phinze-cask
+cd "$(brew --prefix)"/Library/Taps/phinze-cask
 git remote add $github_user https://github.com/$github_user/homebrew-cask
 ```
 
@@ -39,7 +39,10 @@ class Vagrant < Cask
   version '1.2.6'
   sha1 '5f3e1bc5761b41e476bc8035f5ba03d42c0e12f0'
   install 'Vagrant.pkg'
-  uninstall :script => 'uninstall.tool', :input => %w[Yes]
+  uninstall {
+    :script => 'uninstall.tool',
+    :input => %w[Yes]
+  }
 end
 ```
 
@@ -131,13 +134,13 @@ http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 
 We try to maintain a consistent naming policy so everything stays clean and predictable.
 
-#### Start from the app's canonical name
+#### Start From the App's Canonical Name
 
   * do your best to find the canonical name for the title of the app you're submitting a Cask for
   * however the author writes the app name is how it should be styled; this can usually be found on the author's website or within the application itself;
   * pay attention to details, for example: `"Git Hub" != "git_hub" != "GitHub"`
 
-#### Cask name
+#### Cask Name
 
 A Cask's "name" is its primary identifier in our project. It's the string people will use to interact with this Cask on their system.
 
@@ -150,7 +153,7 @@ To get from an app's canonical name to a Cask name:
 
 Casks are stored in a Ruby file matching their name.
 
-#### Cask class
+#### Cask Class
 
 Casks are implemented as Ruby classes, so a Cask's "class" needs to be a valid Ruby class name.
 
@@ -229,7 +232,7 @@ of the following keys:
 Each defined `uninstall` method is applied according to the order above. The order
 in which `uninstall` keys appear in the Cask file is ignored.
 
-### Good Things to Know
+### Good Things To Know
 
 * In order to get the SHA-1 checksum for the file, the easiest way is to run
   `shasum <file>`. A few casks use SHA-256 checksums instead of SHA-1 checksums:
@@ -241,7 +244,7 @@ in which `uninstall` keys appear in the Cask file is ignored.
   is a common version for those, but you can grep through the existing Casks for
   other examples.
 
-## Testing your new Cask
+## Testing Your New Cask
 
 Give it a shot with `brew cask install my-new-cask`
 
@@ -257,12 +260,12 @@ If your application and homebrew-cask do not work well together, feel free to
 [file an issue](https://github.com/phinze/homebrew-cask/issues) after checking
 out open issues.
 
-## Submitting your Changes
+## Submitting Your Changes
 
 Hop into your Tap and check to make sure your new Cask is there:
 
 ```bash
-cd $(brew --prefix)/Library/Taps/phinze-cask
+cd "$(brew --prefix)"/Library/Taps/phinze-cask
 git status
 # On branch master
 # Untracked files:
@@ -299,7 +302,7 @@ github_user='<my-github-username>'
 git push $github_user my-new-cask
 ```
 
-### Filing a pull request on GitHub
+### Filing a Pull Request on GitHub
 
 Now go to *your* GitHub repository at
 https://github.com/my-github-username/homebrew-cask, switch branch to your
@@ -315,13 +318,13 @@ After your Pull Request is away, you might want to get yourself back on master,
 so that `brew update` will pull down new Casks properly.
 
 ```bash
-cd $(brew --prefix)/Library/Taps/phinze-cask
+cd "$(brew --prefix)"/Library/Taps/phinze-cask
 git checkout master
 ```
 
 Neat and tidy!
 
-## Working on homebrew-cask itself
+## Working On homebrew-cask Itself
 
 If you'd like to hack on the Ruby code in the project itself, please
 see [HACKING.md](HACKING.md).
