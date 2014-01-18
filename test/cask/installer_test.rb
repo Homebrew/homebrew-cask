@@ -60,6 +60,18 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
+    it "works with Adobe AIR-based Casks" do
+      skip unless Pathname('/Applications/Utilities/Adobe AIR Application Installer.app/Contents/MacOS/Adobe AIR Application Installer').exist?
+      air_container = Cask.load('adobe-air-container')
+      shutup do
+        Cask::Installer.new(air_container).install
+      end
+      dest_path = Cask.caskroom/'adobe-air-container'/air_container.version
+      dest_path.must_be :directory?
+      application = dest_path/'GMDesk.app'
+      application.must_be :directory?
+    end
+
     it "blows up on a bad checksum" do
       bad_checksum = Cask.load('bad-checksum')
       lambda {

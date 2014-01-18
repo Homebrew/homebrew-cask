@@ -1,6 +1,7 @@
 class Cask::Container; end
 
 require 'cask/container/base'
+require 'cask/container/air'
 require 'cask/container/cab'
 require 'cask/container/criteria'
 require 'cask/container/dmg'
@@ -11,6 +12,7 @@ require 'cask/container/zip'
 class Cask::Container
   def self.containers
     [
+      Cask::Container::Air,
       Cask::Container::Cab,
       Cask::Container::Dmg,
       Cask::Container::Tar,
