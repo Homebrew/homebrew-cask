@@ -9,7 +9,7 @@ $ brew --version
 0.9.5
 ```
 
-Install the Homebrew-cask tool:
+Install the homebrew-cask tool:
 
 ```bash
 $ brew install phinze/cask/brew-cask
@@ -17,7 +17,7 @@ $ brew install phinze/cask/brew-cask
 
 ## Frequently Used Commands
 
-Homebrew-cask is implemented as a subcommand of Homebrew.  All Homebrew-cask
+Homebrew-cask is implemented as a subcommand of Homebrew.  All homebrew-cask
 commands begin with `brew cask`.  Homebrew-cask has its own set of command
 verbs many of which are similar to Homebrew's.  The most frequently-used
 commands are:
@@ -102,9 +102,9 @@ https://github.com/phinze/homebrew-cask/commits/master/Casks/caffeine.rb
 
 ## Updating/Upgrading Casks
 
-Since the Homebrew-cask repository is a Homebrew Tap, you'll pull down the latest
+Since the homebrew-cask repository is a Homebrew Tap, you'll pull down the latest
 Casks every time you issue the regular Homebrew command `brew update`. Currently,
-Homebrew-cask cannot always detect if an Application has been updated. You
+homebrew-cask cannot always detect if an Application has been updated. You
 can force an update via the command `brew cask install --force`. We are working
 on improving this.
 
@@ -112,13 +112,13 @@ It is generally safe to run updates from within an Application.
 
 ## Updating/Upgrading the Homebrew-cask Tool
 
-When a new version Homebrew-cask is released, it will appear in the output of
+When a new version homebrew-cask is released, it will appear in the output of
 `brew outdated` after running `brew update`.  You can upgrade it via the normal
 Homebrew workflow: `brew upgrade brew-cask`.
 
 ## Additional Taps (optional)
 
-The primary Homebrew-cask Tap includes most of the Casks that a typical user will
+The primary homebrew-cask Tap includes most of the Casks that a typical user will
 be interested in. There are a few additional Taps where we store different kinds
 of Casks.
 
