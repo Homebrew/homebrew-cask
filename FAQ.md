@@ -18,11 +18,12 @@ Casks currently have five required fields:
  * __font__ : (required for fonts) indicates which file(s) should be linked into the Fonts folder on installation
  * __input_method__: (required for input method) indicates which file(s) should be linked into the Input Methods folder on installation
 
-and five optional fields:
+and six optional fields:
 
 * __binary__: relative path to a binary to be installed
 * __uninstall__: (optional for `.pkg`) indicates how to uninstall a package
 * __nested_container__: relative path to a nested inner container
+* __depends_on_formula__: a list of Homebrew Formulae upon which this Cask depends
 * __caveats__: a string or Ruby block providing the user with Cask-specific information at install time
 * __after_install__: a Ruby block containing postflight install operations
 * __after_uninstall__: a Ruby block containing postflight uninstall operations

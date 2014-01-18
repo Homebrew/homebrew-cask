@@ -98,6 +98,7 @@ Additional fields you might need for special use-cases:
 | `binary`           | relative path to a binary that should be linked into the `~/usr/local/bin` folder on installation
 | `input_method`     | relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
 | `nested_container` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
+| `depends_on_formula` | a list of Homebrew Formulae upon which this Cask depends
 | `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see __Caveats Details__ for more information)
 | `after_install`    | a Ruby block containing postflight install operations
 | `after_uninstall`  | a Ruby block containing postflight uninstall operations
