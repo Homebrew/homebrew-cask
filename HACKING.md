@@ -103,6 +103,7 @@ like normal to interact with your latest code.
 
 We're on IRC at `#homebrew-cask` on Freenode. If you are going to develop for
 homebrew-cask, it's a great idea to hang out with us there. Here's why:
+
 - discuss your thoughts before coding and maybe get new ideas
 - get feedback from the Travis-CI bot on build failures
 - talk to [caskbot](https://github.com/passcod/caskbot) about checksums, version info, and releases
