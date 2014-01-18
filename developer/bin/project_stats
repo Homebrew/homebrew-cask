@@ -1,0 +1,91 @@
+#!/bin/bash
+#
+# project_stats
+#
+# stats on project/release from git database
+#
+
+set -e                # exit on any uncaught error
+set +o histexpand     # don't expand history expressions
+shopt -s nocasematch
+
+start_object="5a0d1d5556e3f963a0d34da46e16ecffa59ea2fc" # initial commit
+end_object="HEAD"
+
+# these paths relative to project root
+cask_paths="Casks"
+code_paths="bin developer lib test brew-cask.rb Rakefile Gemfile Gemfile.lock"
+doc_paths="LICENSE *.md"
+
+# cd to project root
+script_dir="$(/usr/bin/dirname $0)"
+cd "$script_dir"
+git_root="$(git rev-parse --show-toplevel)"
+cd "$git_root"
+
+# remember initial commit hash
+git_log_alltime="git log --format='%ae' ${start_object}..${end_object}"
+
+###
+### main
+###
+
+if [[ $1 =~ ^-+h(elp)?$ ]]; then
+    printf "project_stats
+
+Usage:
+
+   project_stats [ <commit-object> ]
+
+   With optional single argument, (eg a tag or commit-hash)
+   show statistics since that commit object.
+
+   Without argument, show statistics since first commit.
+
+"
+    exit
+fi
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+if [[ "$branch" != "master" ]]; then
+    printf "\nWARNING: you are running from branch '$branch', not 'master'\n\n"
+fi
+
+printf "Unique contributors"
+if [[ -n "$1" ]]; then
+    start_object="$1"
+    printf " since $1"
+fi
+printf "\n"
+
+if ! git rev-parse --verify "$start_object" > /dev/null 2>/dev/null; then
+    printf "\nERROR: No such commit object: $start_object\n\n"
+    exit 1
+fi
+
+git_log="git log --format='%ae' ${start_object}..${end_object}"
+
+printf "  Casks\t"
+$git_log -- $cask_paths | sort | uniq | wc -l
+printf "  code\t"
+$git_log -- $code_paths | sort | uniq | wc -l
+printf "  docs\t"
+$git_log -- $doc_paths  | sort | uniq | wc -l
+printf "  any\t"
+$git_log -- .           | sort | uniq | wc -l
+if [[ -n "$1" ]]; then
+    printf "\nAll-time contibutors\t"
+    $git_log_alltime -- . | sort | uniq | wc -l
+fi
+
+printf "\n"
+
+if [[ -n "$1" ]]; then
+    printf "Casks created since $1\t"
+    git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^A.*\.rb' | cut -f2 | sort | uniq | wc -l
+fi
+
+printf "Total current Casks in HEAD\t"
+find Casks -name '*.rb' | wc -l
+
+#
