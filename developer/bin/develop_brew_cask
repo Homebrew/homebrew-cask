@@ -1,0 +1,44 @@
+#!/bin/bash
+#
+# develop_brew_cask
+#
+# symlink repo directories into homebrew cellar so that the
+# 'brew cask' command will use the current devel branch.
+#
+# Saves the production directories under new names.
+#
+
+set -e;              # exit on any uncaught error
+set +o histexpand;   # don't expand history expressions
+
+script_dir="$(/usr/bin/dirname $0)"
+cd "$script_dir"
+
+git_root="$(git rev-parse --show-toplevel)"
+brew_prefix="$(brew --prefix)"
+cellar_dir="$brew_prefix/Cellar/brew-cask"
+version_dir=$(/bin/ls "$cellar_dir/" | sort | tail -1)
+
+if [ -z "$version_dir" ]; then
+    echo "Can't get version dir under $cellar_dir/"
+    exit 1;
+fi
+cd "$cellar_dir/$version_dir"
+
+if [ -e "production_rubylib" ]; then
+    echo brew-cask is already set up for development
+    exit 1
+else
+    mv rubylib production_rubylib
+    mv Casks   production_Casks
+    ln -s "$git_root/Casks" .
+    ln -s "$git_root/lib"   rubylib
+    cd "$brew_prefix/Library/Taps/phinze-cask"
+    mv lib   production_lib
+    mv Casks production_Casks
+    ln -s "$git_root/Casks" .
+    ln -s "$git_root/lib"   .
+    echo brew-cask is now in development mode
+fi
+
+#
