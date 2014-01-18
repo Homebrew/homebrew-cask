@@ -23,7 +23,8 @@ class Cask::LinkChecker
 
   HTTP_RESPONSES = [
     'HTTP/1.0 200 OK',
-    'HTTP/1.1 200 OK'
+    'HTTP/1.1 200 OK',
+    'HTTP/1.1 302 Found'
   ]
 
   OK_RESPONSES = {
