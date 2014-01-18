@@ -128,4 +128,11 @@ code, it is better to [squash](http://davidwalsh.name/squash-commits-git) those 
 But you don't always have to squash -- it is fine for a pull request to
 contain multiple commits when there is a logical reason for the separation.
 
+### Commit Messages
+
+The first line of a commit message (the summary line) is like the subject
+line of an email. (See [CONTRIBUTING.md](CONTRIBUTING.md#commit-messages)).
+A short but complete summary line helps the maintainers respond to your
+pull request more quickly.
+
 # <3 THANK YOU! <3
