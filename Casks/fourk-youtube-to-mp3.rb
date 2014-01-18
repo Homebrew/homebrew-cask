@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 class FourkYoutubeToMp3 < Cask
 =======
 class FourKYoutubeToMp3 < Cask
 >>>>>>> 2e13f38... add ruby file for 4K YouTube to Mp3
+=======
+class FourkYoutubeToMp3 < Cask
+>>>>>>> 2fdf25bd913ea07630f4bc1f4d3185c14930de9f
   url 'https://4kdownload.googlecode.com/files/4kyoutubetomp3_2.5.dmg'
   homepage 'http://www.4kdownload.com/products/product-youtubetomp3'
   version '3.2.5'
