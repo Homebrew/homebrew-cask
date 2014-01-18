@@ -2,7 +2,7 @@ class Cask::CLI::Search
   def self.run(*arguments)
     search_term, *rest = *arguments
     casks = {}
-    casks = Cask::CLI.nice_listing(Cask.all_titles.grep(/#{search_term}/))
+    casks = Cask::CLI.nice_listing(Cask.all_titles.grep(/#{search_term}/i))
     unless casks.empty?
     	puts_columns casks
     else
