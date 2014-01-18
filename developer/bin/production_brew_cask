@@ -2,12 +2,24 @@
 #
 # production_brew_cask
 #
-# undo symlinks created by 'develop_brew_cask' so that
-# the 'brew cask' command will use only released code
-#
 
 set -e;              # exit on any uncaught error
 set +o histexpand;   # don't expand history expressions
+
+tap_subdir="Library/Taps/phinze-cask"
+
+if [[ $1 =~ ^-+h(elp)?$ ]]; then
+    printf "production_brew_cask
+
+   Undo all symlinks created by 'develop_brew_cask' so that
+   the 'brew cask' command will use only released code within
+   Homebrew.
+
+   After running this command it is safe to run 'brew update'.
+
+"
+    exit
+fi
 
 script_dir="$(/usr/bin/dirname $0)"
 cd "$script_dir"
@@ -16,6 +28,13 @@ git_root="$(git rev-parse --show-toplevel)"
 brew_prefix="$(brew --prefix)"
 cellar_dir="$brew_prefix/Cellar/brew-cask"
 version_dir=$(/bin/ls "$cellar_dir/" | sort | tail -1)
+tap_dir="$brew_prefix/$tap_subdir"
+
+# sanity check
+if [[ $(/usr/bin/stat -L -f '%i' "$tap_dir") -eq $(/usr/bin/stat -L -f '%i' "$git_root") ]]; then
+    printf "\nERROR: run this script in your private repo, not inside Homebrew.\n"
+    exit 1;
+fi
 
 if [ -z "$version_dir" ]; then
     echo "Can't get version dir under $cellar_dir/"
@@ -27,13 +46,14 @@ if [ -e "production_rubylib" ]; then
     rm rubylib Casks
     mv production_rubylib rubylib
     mv production_Casks   Casks
-    cd "$brew_prefix/Library/Taps/phinze-cask"
+    cd "$tap_dir"
     rm lib Casks
     mv production_lib   lib
     mv production_Casks Casks
-    echo brew-cask is now in production mode
+    echo "brew-cask is now in production mode"
+    echo "It is safe to run 'brew update'"
 else
-    echo brew-cask is already set up for production
+    echo "brew-cask is already set up for production"
     exit 1
 fi
 

@@ -2,14 +2,29 @@
 #
 # develop_brew_cask
 #
-# symlink repo directories into homebrew cellar so that the
-# 'brew cask' command will use the current devel branch.
-#
-# Saves the production directories under new names.
-#
 
 set -e;              # exit on any uncaught error
 set +o histexpand;   # don't expand history expressions
+
+tap_subdir="Library/Taps/phinze-cask"
+
+if [[ $1 =~ ^-+h(elp)?$ ]]; then
+    printf "develop_brew_cask
+
+   Symlink private repo directories into Homebrew's Cellar, so
+   that the 'brew cask' command will use the current development
+   branch in your private repo.
+
+   Saves the production Homebrew directories under new names.
+
+   You can reverse this operation with 'production_brew_cask'.
+
+   Note: it is not safe to run 'brew update' while development
+   mode is in effect.
+
+"
+    exit
+fi
 
 script_dir="$(/usr/bin/dirname $0)"
 cd "$script_dir"
@@ -18,6 +33,13 @@ git_root="$(git rev-parse --show-toplevel)"
 brew_prefix="$(brew --prefix)"
 cellar_dir="$brew_prefix/Cellar/brew-cask"
 version_dir=$(/bin/ls "$cellar_dir/" | sort | tail -1)
+tap_dir="$brew_prefix/$tap_subdir"
+
+# sanity check
+if [[ $(/usr/bin/stat -L -f '%i' "$tap_dir") -eq $(/usr/bin/stat -L -f '%i' "$git_root") ]]; then
+    printf "\nERROR: run this script in your private repo, not inside Homebrew.\n"
+    exit 1;
+fi
 
 if [ -z "$version_dir" ]; then
     echo "Can't get version dir under $cellar_dir/"
@@ -26,19 +48,22 @@ fi
 cd "$cellar_dir/$version_dir"
 
 if [ -e "production_rubylib" ]; then
-    echo brew-cask is already set up for development
+    echo "brew-cask is already set up for development"
     exit 1
 else
     mv rubylib production_rubylib
     mv Casks   production_Casks
     ln -s "$git_root/Casks" .
     ln -s "$git_root/lib"   rubylib
-    cd "$brew_prefix/Library/Taps/phinze-cask"
+    cd "$tap_dir"
     mv lib   production_lib
     mv Casks production_Casks
     ln -s "$git_root/Casks" .
     ln -s "$git_root/lib"   .
-    echo brew-cask is now in development mode
+
+    echo "brew-cask is now in development mode"
+    echo "Note: it is not safe 'brew update' while in development mode"
+
 fi
 
 #
