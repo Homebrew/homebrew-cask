@@ -1,7 +1,7 @@
 class Seafile < Cask
-  url 'http://seafile.googlecode.com/files/seafile-2.0.5.dmg'
+  url 'https://seafile.googlecode.com/files/seafile-client-2.0.6.dmg'
   homepage 'http://seafile.com/'
-  version '2.0.5'
-  sha1 '4117800abe1da56a9f47fe8ba8db096d0717fb4f'
+  version '2.0.6'
+  sha1 '964ca66636a431bc790beaa023af53efc53ce293'
   link 'seafile.app'
 end
