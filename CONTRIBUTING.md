@@ -336,15 +336,40 @@ Switched to a new branch 'my-new-cask'
 Stage your Cask with `git add Casks/my-new-cask.rb`. You can view the changes
 that are to be committed with `git diff --cached`.
 
-Commit your changes with `git commit -v`. Write your commit message with:
+Commit your changes with `git commit -v`.
 
- * the first line being commit summary, 50 characters or less,
+### Commit Messages
+
+For any git project, some good rules for commit messages are
+
+ * the first line is commit summary, 50 characters or less,
  * followed by an empty line
- * and an explanation of the commit, wrapped to 72 characters.
+ * followed by an explanation of the commit, wrapped to 72 characters.
 
-See [a note about git commit
-messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-for a more thorough explanation.
+See [a note about git commit messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+for more.
+
+The first line of a commit message becomes the **title** of a pull
+request on GitHub, like the subject line of an email.  Including
+the key info in the first line will help us respond faster to
+your pull.
+
+For Cask commits in the homebrew-cask project, we like to include
+the Application name, version number, and purpose of the commit
+in the first line.
+
+Examples of good, clear commit summaries:
+
+* `Add Transmission.app v1.0`
+* `Upgrade Transmission.app to v2.82`
+* `Fix checksum in Transmission.app Cask`
+
+Examples of difficult, unclear commit summaries:
+
+* `Upgrade to v2.82`
+* `Checksum was bad`
+
+### Pushing
 
 Push your changes to your GitHub account:
 
