@@ -1,5 +1,57 @@
 # CHANGELOG
 
+## 0.27.0
+
+* __Casks__
+ - 47 Casks added (59 updated) by 45 contributors since 0.26.1
+ - 1046 total Casks
+* __Features__
+ - [#2416][] new `input_method` artifact <3 [@linc01n][]
+ - [#2471][], [#2461][], [#2152][], improvements to `brew cask search` <3 [@voanhduy1512][], [@vmrob][], [@Dillon-Benson][]
+ - [#2426][] `caveats` first-class in Cask DSL, gets own mini-DSL
+ - [#2303][], [#2235][] support implicit `tap` on fully-qualified cask names, matching Homebrew <3 [@sonots][]
+ - [#2417][], [#2444][] developer support scripts
+* __Fixes__
+ - [#2329][] improve `brew cask checklinks` <3 [@karbassi][]
+ - [#2360][] run `chown` as superuser <3 [@jfb][]
+ - [#2263][] `uninstall` speedup <3 [@philoserf][]
+ - [#2370][] allow `sourceforge.jp` URLs <3 [@troter][]
+ - [#2258][] use hardlinks for fonts (fonts should actually work now) <3 [@jgarber623][]
+ - [#2456][] instance methods available in Cask `do` blocks
+ - [#2240][] `brew cask audit` verifies `no_checksum` for version `latest` <3 [@linc01n][]
+ - Documentation updates
+* __Breaking Changes__
+ - In rare cases, the new `caveats` form may not be backward-compatible with
+   old Casks which used undocumented features.
+
+[#2416]: https://github.com/phinze/homebrew-cask/issues/#2416
+[@linc01n]: https://github.com/linc01n
+[#2471]: https://github.com/phinze/homebrew-cask/issues/#2471
+[#2461]: https://github.com/phinze/homebrew-cask/issues/#2461
+[#2152]: https://github.com/phinze/homebrew-cask/issues/#2152
+[@voanhduy1512]: https://github.com/voanhduy1512
+[@vmrob]: https://github.com/vmrob
+[@Dillon-Benson]: https://github.com/Dillon-Benson
+[#2426]: https://github.com/phinze/homebrew-cask/issues/#2426
+[#2303]: https://github.com/phinze/homebrew-cask/issues/#2303
+[#2235]: https://github.com/phinze/homebrew-cask/issues/#2235
+[@sonots]: https://github.com/sonots
+[#2417]: https://github.com/phinze/homebrew-cask/issues/#2417
+[#2444]: https://github.com/phinze/homebrew-cask/issues/#2444
+
+[#2329]: https://github.com/phinze/homebrew-cask/issues/#2329
+[@karbassi]: https://github.com/karbassi
+[#2360]: https://github.com/phinze/homebrew-cask/issues/#2360
+[@jfb]: https://github.com/jfb
+[#2263]: https://github.com/phinze/homebrew-cask/issues/#2263
+[@philoserf]: https://github.com/philoserf
+[#2370]: https://github.com/phinze/homebrew-cask/issues/#2370
+[@troter]: https://github.com/troter
+[#2258]: https://github.com/phinze/homebrew-cask/issues/#2258
+[@jgarber623]: https://github.com/jgarber623
+[#2456]: https://github.com/phinze/homebrew-cask/issues/#2456
+[#2240]: https://github.com/phinze/homebrew-cask/issues/#2240
+
 ## 0.26.1
 
 * __Features__
