@@ -24,40 +24,42 @@
  - In rare cases, the new `caveats` form may not be backward-compatible with
    old Casks which used undocumented features.
 
-[#2416]: https://github.com/phinze/homebrew-cask/issues/#2416
+[#2416]: https://github.com/phinze/homebrew-cask/issues/2416
 [@linc01n]: https://github.com/linc01n
-[#2471]: https://github.com/phinze/homebrew-cask/issues/#2471
-[#2461]: https://github.com/phinze/homebrew-cask/issues/#2461
-[#2152]: https://github.com/phinze/homebrew-cask/issues/#2152
+[#2471]: https://github.com/phinze/homebrew-cask/issues/2471
+[#2461]: https://github.com/phinze/homebrew-cask/issues/2461
+[#2152]: https://github.com/phinze/homebrew-cask/issues/2152
 [@voanhduy1512]: https://github.com/voanhduy1512
 [@vmrob]: https://github.com/vmrob
 [@Dillon-Benson]: https://github.com/Dillon-Benson
-[#2426]: https://github.com/phinze/homebrew-cask/issues/#2426
-[#2303]: https://github.com/phinze/homebrew-cask/issues/#2303
-[#2235]: https://github.com/phinze/homebrew-cask/issues/#2235
+[#2426]: https://github.com/phinze/homebrew-cask/issues/2426
+[#2303]: https://github.com/phinze/homebrew-cask/issues/2303
+[#2235]: https://github.com/phinze/homebrew-cask/issues/2235
 [@sonots]: https://github.com/sonots
-[#2417]: https://github.com/phinze/homebrew-cask/issues/#2417
-[#2444]: https://github.com/phinze/homebrew-cask/issues/#2444
+[#2417]: https://github.com/phinze/homebrew-cask/issues/2417
+[#2444]: https://github.com/phinze/homebrew-cask/issues/2444
 
-[#2329]: https://github.com/phinze/homebrew-cask/issues/#2329
+[#2329]: https://github.com/phinze/homebrew-cask/issues/2329
 [@karbassi]: https://github.com/karbassi
-[#2360]: https://github.com/phinze/homebrew-cask/issues/#2360
+[#2360]: https://github.com/phinze/homebrew-cask/issues/2360
 [@jfb]: https://github.com/jfb
-[#2263]: https://github.com/phinze/homebrew-cask/issues/#2263
+[#2263]: https://github.com/phinze/homebrew-cask/issues/2263
 [@philoserf]: https://github.com/philoserf
-[#2370]: https://github.com/phinze/homebrew-cask/issues/#2370
+[#2370]: https://github.com/phinze/homebrew-cask/issues/2370
 [@troter]: https://github.com/troter
-[#2258]: https://github.com/phinze/homebrew-cask/issues/#2258
+[#2258]: https://github.com/phinze/homebrew-cask/issues/2258
 [@jgarber623]: https://github.com/jgarber623
-[#2456]: https://github.com/phinze/homebrew-cask/issues/#2456
-[#2240]: https://github.com/phinze/homebrew-cask/issues/#2240
+[#2456]: https://github.com/phinze/homebrew-cask/issues/2456
+[#2240]: https://github.com/phinze/homebrew-cask/issues/2240
 
 ## 0.26.1
 
 * __Features__
 * __Fixes__
-  - #2275 - Force a require of Homebrew's `download_strategy`
+  - [#2275][] - Force a require of Homebrew's `download_strategy`
 * __Breaking Changes__
+
+[#2275]: https://github.com/phinze/homebrew-cask/issues/2275
 
 ## 0.26.0
 
@@ -65,43 +67,56 @@
   - New `binary` artifact for installing executables.
   - Start a `brew cask doctor` command to help with support.
 * __Fixes__
-  - #2275 - Prepend brew cask to Ruby's load path
+  - [#2275][] - Prepend brew cask to Ruby's load path
 * __Breaking Changes__
+
+[#2275]: https://github.com/phinze/homebrew-cask/issues/2275
 
 ## 0.25.0
 
 * __Features__
-  - #1944 - options for Cask URLs: ability to specify user agent, cookies, and referer <3 [@jonahoffline][]
-  - #2066 - Caskroom location now configurable <3 [@halo][]
-  - #2081 - support for services <3 [@leoj3n][]
+  - [#1944][] - options for Cask URLs: ability to specify user agent, cookies, and referer <3 [@jonahoffline][]
+  - [#2066][] - Caskroom location now configurable <3 [@halo][]
+  - [#2081][] - support for services <3 [@leoj3n][]
 * __Fixes__
   - a clearer error message when an unexpected cask method is called; hopefully
     will help confusion around unreleased features
-  - #2084 - handle CaskAlreadyInstalledError gracefully; helps `Brewfile` integration <3 [@pstadler][]
+  - [#2084][] - handle CaskAlreadyInstalledError gracefully; helps `Brewfile` integration <3 [@pstadler][]
 * __Breaking Changes__
-  - #2100 - font Casks have been moved to their own tap at [caskroom/fonts][] so that we can be more disclaimery about font licenses
+  - [#2100][] - font Casks have been moved to their own tap at [caskroom/fonts][] so that we can be more disclaimery about font licenses
 
 [@leoj3n]: https://github.com/leoj3n
 [@jonahoffline]: https://github.com/jonahoffline
 [@pstadler]: https://github.com/pstadler
 [@halo]: https://github.com/halo
 [caskroom/fonts]: https://github.com/caskroom/homebrew-fonts
+[#1944]:  https://github.com/phinze/homebrew-cask/issues/1944
+[#2066]:  https://github.com/phinze/homebrew-cask/issues/2066
+[#2081]:  https://github.com/phinze/homebrew-cask/issues/2081
+[#2084]:  https://github.com/phinze/homebrew-cask/issues/2084
+[#2100]:  https://github.com/phinze/homebrew-cask/issues/2100
 
 ## 0.24.0
 
 * __Features__
-  - #2018 - add :quit key to uninstall
+  - [#2018][] - add :quit key to uninstall
 * __Fixes__
-  - #2019 - validate keys given to uninstall
+  - [#2019][] - validate keys given to uninstall
 * __Breaking Changes__
+
+[#2018]: https://github.com/phinze/homebrew-cask/issues/2018
+[#2019]: https://github.com/phinze/homebrew-cask/issues/2019
 
 ## 0.23.0
 
 * __Features__
-  - #2012 - support `--verbose` flag for pkg installer
-  - #2013 - support for installing widgets via the `widget` artifact
+  - [#2012][] - support `--verbose` flag for pkg installer
+  - [#2013][] - support for installing widgets via the `widget` artifact
 * __Fixes__
 * __Breaking Changes__
+
+[#2012]: https://github.com/phinze/homebrew-cask/issues/2012
+[#2013]: https://github.com/phinze/homebrew-cask/issues/2013
 
 ## 0.22.0
 
@@ -124,6 +139,7 @@
 * __Breaking Changes__
 
 [@peeja]: https://github.com/peeja
+[#1882]: https://github.com/phinze/homebrew-cask/issues/1882
 
 ## 0.21.0
 

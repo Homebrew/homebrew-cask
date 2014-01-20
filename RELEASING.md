@@ -21,7 +21,7 @@ down then floating in a brain somewhere.
    Like this: `git log v0.25.0..HEAD lib`
 2. Optionally run `developer/bin/project_stats <previous-release-tag>` for
    overall release stats.
-3. Bump the version, which is stored in the `brew-cask.rb` formula. Decide
+3. Bump the version, which is stored in the file `lib/cask/version.rb`. Decide
    whether to bump minor or patch based on whether or not features were added.
 4. Populate the CHANGELOG with a new section for the release you are creating.
    Follow the patterns used elsewhere in the file.
