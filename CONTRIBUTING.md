@@ -388,6 +388,14 @@ comments to your pull request.
 Congratulations! You are done now, and your Cask should be pulled in or
 otherwise noticed in a while.
 
+### Squashing
+
+If your pull request has multiple commits which revise the same lines of
+code, it is better to [squash](http://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
+
+But you don't always have to squash -- it is fine for a pull request to
+contain multiple commits when there is a logical reason for the separation.
+
 ## Cleaning up
 
 After your Pull Request is away, you might want to get yourself back on master,
