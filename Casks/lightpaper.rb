@@ -1,7 +1,7 @@
 class Lightpaper < Cask
-  url 'http://cl.ly/0r191O0G0t1x/download/LightPaper_v0.8.5.dmg'
+  url 'http://cl.ly/3c370B2o0J2A/download/LightPaper_v0.8.7.dmg'
   homepage 'http://clockworkengine.com/lightpaper-mac/'
-  version '0.8.5'
-  sha1 '251428745d7d600226aefa9a51711cb4ec85b343'
+  version '0.8.7'
+  sha1 '5250a9c50d23613b629116d95ce83f08f03edcb1'
   link 'LightPaper.app'
 end
