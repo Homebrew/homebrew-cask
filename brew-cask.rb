@@ -1,10 +1,11 @@
+require 'pathname'
 require 'formula'
 
-HOMEBREW_CASK_VERSION = '0.26.1'
+require Pathname(__FILE__).realpath.dirname.join('lib', 'cask', 'version')
 
 class BrewCask < Formula
   homepage 'https://github.com/phinze/homebrew-cask/'
-  url 'https://github.com/phinze/homebrew-cask.git', :tag => "v#{HOMEBREW_CASK_VERSION}"
+  url 'https://github.com/phinze/homebrew-cask.git', :tag => "v#{Cask::VERSION}"
 
   head 'https://github.com/phinze/homebrew-cask.git', :branch => 'master'
 
