@@ -80,6 +80,14 @@ module Cask::Locations
       @binarydir = _binarydir
     end
 
+    def input_methoddir
+      @input_methoddir ||= Pathname.new('~/Library/Input Methods').expand_path
+    end
+
+    def input_methoddir=(_input_methoddir)
+      @input_methoddir = _input_methoddir
+    end
+
     def default_tap
       @default_tap ||= 'phinze-cask'
     end

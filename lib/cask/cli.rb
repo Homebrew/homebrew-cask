@@ -92,6 +92,9 @@ class Cask::CLI
       opts.on("--binarydir=MANDATORY") do |v|
         Cask.binarydir = Pathname(v).expand_path
       end
+      opts.on("--input_methoddir=MANDATORY") do |v|
+        Cask.input_methoddir = Pathname(v).expand_path
+      end
       opts.on("--no-binaries") do |v|
         Cask.no_binaries = true
       end
