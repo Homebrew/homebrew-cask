@@ -87,17 +87,44 @@ Formula definition.  Casks are defined differently than Formulae, which
 
 ## How Should I Set Up a Development Environment?
 
-When developing, one way to play with your changes is to symlink
-the `rubylib` folder to your Tap repository.
+Cask authors often work directly within the Homebrew directory
+under `/usr/local`.  For coding, that is usually not sufficient.
 
-```bash
-$ cd $(brew --prefix brew-cask)
-$ mv rubylib{,.orig}
-$ ln -s $(brew --prefix)/Library/Taps/phinze-cask/lib rubylib
-```
+We recommend the following:
 
-Now you can hack on homebrew-cask in the Tap and use the `brew cask` CLI
-like normal to interact with your latest code.
+1. Fork our repo: <https://github.com/phinze/homebrew-cask/fork>
+2. Clone a private copy of the repo:
+
+	```bash
+	git clone https://github.com/<username>/homebrew-cask.git
+	```
+
+3. Add the official repo as the `upstream` remote:
+
+	```bash
+	cd homebrew-cask
+	git remote add upstream https://github.com/phinze/homebrew-cask.git
+	```
+
+4. Now you have two copies of the homebrew-cask codebase on disk: the
+   released version in `/usr/local/Library/Taps/phinze-cask`, and a
+   development version in your private repo.  To symlink the `Casks`
+   and `rubylib` folders from `/usr/local/...` into your private repo,
+   run the following script:
+
+	```bash
+	/<path>/<to>/<private>/<repo>/developer/bin/develop_brew_cask
+	```
+   Now you can hack on your private repo, and use the `brew cask`
+   CLI like normal -- it will interact with your latest code.
+
+5. Important: while in development mode, you can't safely run
+   Homebrew's `brew update` command.  To switch back to production
+   mode, run
+
+	```bash
+	/<path>/<to>/<private>/<repo>/developer/bin/production_brew_cask
+	```
 
 ## Hanging out on IRC
 
