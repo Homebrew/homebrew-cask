@@ -65,14 +65,14 @@ class Cask::CaveatsDSL
   end
 
   def logout
-    puts <<-EOS
+    puts <<-EOS.undent
     You must log out and log back in for the installation of #{@cask}
     to take effect.
     EOS
   end
 
   def reboot
-    puts <<-EOS
+    puts <<-EOS.undent
     You must reboot for the installation of #{@cask} to take effect.
     EOS
   end
