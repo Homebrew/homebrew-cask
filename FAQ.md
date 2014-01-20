@@ -23,7 +23,7 @@ and five optional fields:
 * __binary__: relative path to a binary to be installed
 * __uninstall__: (optional for `.pkg`) indicates how to uninstall a package
 * __nested_container__: relative path to a nested inner container
-* __caveats__: a Ruby block providing the user with Cask-specific information at install time
+* __caveats__: a string or Ruby block providing the user with Cask-specific information at install time
 * __after_install__: a Ruby block containing postflight install operations
 * __after_uninstall__: a Ruby block containing postflight uninstall operations
 

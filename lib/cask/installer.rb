@@ -6,6 +6,19 @@ class Cask::Installer
     @command = command
   end
 
+  def self.print_caveats(cask)
+    unless cask.caveats.empty?
+      ohai "Caveats"
+      cask.caveats.each do |caveat|
+        if caveat.respond_to?(:eval_and_print)
+          caveat.eval_and_print(cask)
+        else
+          puts caveat
+        end
+      end
+    end
+  end
+
   def install(force=false)
     if @cask.installed? && !force
       raise CaskAlreadyInstalledError.new(@cask)
@@ -48,9 +61,7 @@ class Cask::Installer
   end
 
   def print_caveats
-    unless @cask.caveats.empty?
-      ohai 'Caveats', @cask.caveats
-    end
+    self.class.print_caveats(@cask)
   end
 
   def uninstall

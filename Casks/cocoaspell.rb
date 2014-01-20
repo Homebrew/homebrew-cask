@@ -8,10 +8,8 @@ class Cocoaspell < Cask
     '/Application Support/cocoAspell/aspell6-en-6.0-0',
     '/Library/PreferencePanes/Spelling.prefPane'
   ]
-
-  def caveats; <<-EOS.undent
+  caveats <<-EOS.undent
     Non-English dictionaries must be installed separately.  For more information,
     see http://people.ict.usc.edu/~leuski/cocoaspell/install_dict.php .
     EOS
-  end
 end

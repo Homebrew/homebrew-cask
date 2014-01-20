@@ -4,13 +4,10 @@ class X48 < Cask
   version '0.6.4'
   sha1 '8b7390fccaf682eb9f02a09889060ac65e60f561'
   link 'x48-0.6.4 osx/x48.app'
-
-  def caveats; <<-EOS.undent
-    x48 requires XQuartz/X11 to be installed,which can be done as:
+  caveats <<-EOS.undent
+    x48 requires XQuartz/X11, which can be installed via homebrew-cask by
         brew cask install xquartz
-    or from:
+    or manually, by downloading the package from
         http://xquartz.macosforge.org
     EOS
-  end
-
 end

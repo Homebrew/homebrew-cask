@@ -3,9 +3,7 @@ class LittleSnitch < Cask
   homepage 'http://www.obdev.at/products/littlesnitch/index.html'
   version '3.3'
   sha1 'ed3c1a11dad0efedb959bf5935f23d722eb488f8'
-
-  def caveats; <<-EOS.undent
-    You need to run #{destination_path/'Little Snitch Installer.app'} to actually install Little Snitch
-    EOS
+  caveats do
+    manual_installer 'Little Snitch Installer.app'
   end
 end

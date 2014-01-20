@@ -6,9 +6,8 @@ class Synergy < Cask
   link 'Synergy.app'
 
   # Should be fixed in the next version
-  def caveats; <<-EOS.undent
+  caveats <<-EOS.undent
     After installation please follow the instruction here to make it work on Mavericks
       http://synergy-foss.org/blog/mac-os-x-10-9-mavericks-support/
     EOS
-  end
 end

@@ -98,7 +98,7 @@ Additional fields you might need for special use-cases:
 | `binary`           | relative path to a binary that should be linked into the `~/usr/local/bin` folder on installation
 | `input_method`     | relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
 | `nested_container` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
-| `caveats`          | a Ruby block providing the user with Cask-specific information at install time
+| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see __Caveats Details__ for more information)
 | `after_install`    | a Ruby block containing postflight install operations
 | `after_uninstall`  | a Ruby block containing postflight uninstall operations
 
@@ -232,6 +232,56 @@ of the following keys:
 
 Each defined `uninstall` method is applied according to the order above. The order
 in which `uninstall` keys appear in the Cask file is ignored.
+
+### Caveats Details
+
+#### Caveats as a String
+
+When `caveats` is a string, it is evaluated at compile time. Use this only for a static
+message in which you don't need to interpolate any runtime variables.  Example:
+
+	caveats 'Using this software is hazardous to your health.'
+
+#### Caveats as a Block
+
+When `caveats` is a Ruby block, evaluation is deferred until install time. Here you may
+refer to the Cask instance in your message to the user:
+
+```ruby
+caveats do
+  puts "Using #{@cask} is hazardous to your health."
+end
+```
+
+#### Caveats Mini-DSL
+
+There is a mini-DSL available within `caveats` blocks.
+
+The following methods may be called to generate standard warning messages:
+
+| method                            | description |
+| --------------------------------- | ----------- |
+| `manual_installer(path)`          | The user should execute an installer to complete the installation. `path` may be absolute, or relative to the Cask.
+| `path_environment_variable(path)` | The user should make sure `path` is in their `$PATH` environment variable
+| `logout`                          | The user should log out and log back in to complete installation
+| `reboot`                          | The user should reboot to complete installation
+| `files_in_usr_local`              | The Cask installs files to `/usr/local`, which may confuse Homebrew
+
+Example:
+
+```ruby
+caveats do
+  manual_installer 'Little Snitch Installer.app'
+end
+```
+
+And the following methods may be useful for interpolation:
+
+| method             | description |
+| ------------------ | ----------- |
+| `title`            | the Cask title
+| `caskroom_path`    | eg `/opt/homebrew-cask/Caskroom`
+| `destination_path` | where this particular Cask is stored, including version number, eg `/opt/homebrew-cask/Caskroom/google-chrome/stable-channel`
 
 ### Good Things To Know
 

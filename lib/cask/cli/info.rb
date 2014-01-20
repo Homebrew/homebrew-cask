@@ -4,9 +4,7 @@ class Cask::CLI::Info
     cask_names.each do |cask_name|
       cask = Cask.load(cask_name)
       puts info(cask)
-      unless cask.caveats.empty?
-        ohai "Caveats", cask.caveats
-      end
+      Cask::Installer.print_caveats(cask)
     end
   end
 

@@ -8,12 +8,7 @@ class GitAnnex < Cask
   version 'latest'
   no_checksum
   link 'git-annex.app'
-  def caveats; <<-EOS.undent
-    You may want to add #{destination_path}/git-annex.app/Contents/MacOS to your PATH
-    to get git annex entry points.
-    
-    export PATH=#{destination_path}/git-annex.app/Contents/MacOS:$PATH
-    
-    EOS
+  caveats do
+    path_environment_variable "#{destination_path}/git-annex.app/Contents/MacOS"
   end
 end

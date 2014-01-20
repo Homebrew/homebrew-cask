@@ -4,13 +4,11 @@ class Middleclick < Cask
   version 'latest'
   no_checksum
   link 'MiddleClick.app'
-
-  def caveats; <<-EOS.undent
+  caveats <<-EOS.undent
     This cask requires OS X 10.9 Mavericks for the installed application to
-    function correctly. 
+    function correctly.
 
-    Casks for installing this application under older versions of OS X, Mountain 
-    Lion and Snow Leopard, can be found in caskroom/homebrew-versions.
+    Casks for installing this application under older versions of OS X, Mountain
+    Lion and Snow Leopard can be found in caskroom/homebrew-versions.
     EOS
-  end
 end
