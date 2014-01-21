@@ -81,7 +81,7 @@ $git_log -- $doc_paths  | sort | uniq | wc -l
 printf "  any\t"
 $git_log -- .           | sort | uniq | wc -l
 if [[ -n "$1" ]]; then
-    printf "\nAll-time contibutors\t"
+    printf "\nAll-time contributors\t"
     $git_log_alltime -- . | sort | uniq | wc -l
 fi
 
