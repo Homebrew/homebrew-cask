@@ -97,6 +97,6 @@ if [[ -n "$1" ]]; then
 fi
 
 printf "Total current Casks in HEAD\t"
-find Casks -name '*.rb' | wc -l
+find $cask_paths -name '*.rb' | wc -l
 
 #
