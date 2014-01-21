@@ -71,8 +71,9 @@ fi
 
 git_log="git log --format='%ae' ${start_object}..${end_object}"
 
-printf "  Casks\t"
-$git_log -- $cask_paths | sort | uniq | wc -l
+cask_authors="$($git_log -- $cask_paths | sort | uniq | wc -l)"
+printf "  Casks\t$cask_authors\n"
+
 printf "  code\t"
 $git_log -- $code_paths | sort | uniq | wc -l
 printf "  docs\t"
@@ -87,8 +88,12 @@ fi
 printf "\n"
 
 if [[ -n "$1" ]]; then
-    printf "Casks created since $1\t"
-    git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^A.*\.rb' | cut -f2 | sort | uniq | wc -l
+    new_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^A.*\.rb' | cut -f2 | sort | uniq | wc -l)"
+    updated_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^M.*\.rb' | cut -f2 | sort | uniq | wc -l)"
+    ((cask_authors  += 0))
+    ((new_casks     += 0))
+    ((updated_casks += 0))
+    printf "$new_casks Casks added ($updated_casks updated) by $cask_authors contributors since $start_object\n"
 fi
 
 printf "Total current Casks in HEAD\t"
