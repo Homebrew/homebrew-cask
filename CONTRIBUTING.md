@@ -294,6 +294,13 @@ And the following methods may be useful for interpolation:
 * We have some conventions for projects without version-specific URLs. `latest`
   is a common version for those, but you can grep through the existing Casks for
   other examples.
+* One method for finding package bundle id(s) is the following:
+  1. Unpack `/path/to/my.pkg` (replace with your package name) with `pkgutil --expand /path/to/my.pkg /tmp/expanded.unpkg`.
+  2. The unpacked package is a folder. Bundle id(s) are contained within files named `PackageInfo`. These files can be found
+     with the command `find /tmp/expanded.unpkg -name PackageInfo`.
+  3. `PackageInfo` files are XML files, and bundle id(s) are found within the `identifier` attributes of `<pkg-info>` tags that look like
+  `<pkg-info ... identifier="com.oracle.jdk7u51" ... >`, where extraneous attributes have been snipped out and replaced with ellipses.
+  4. Once bundle id(s) have been identified, the unpacked package directory can be deleted.
 
 ## Testing Your New Cask
 
