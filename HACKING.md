@@ -136,6 +136,13 @@ homebrew-cask, it's a great idea to hang out with us there. Here's why:
 - talk to [caskbot](https://github.com/passcod/caskbot) about checksums, version info, and releases
 - just to be social!
 
+## What Version of Ruby Should I Target?
+
+We target the vendor-supplied Ruby interpreter. Apple provided Ruby 1.8.7
+as recently as OS X 10.8 (Mountain Lion).  Therefore, even though OS X 10.9
+(Mavericks) has Ruby 2.0.0-p247, this project targets Ruby 1.8.7 for
+backwards compatibility.
+
 ## Mind the test suite!
 
 If you're making changes - please write some tests for them! Also be sure to
