@@ -40,6 +40,9 @@ Usage:
    With optional single argument, (eg a tag or commit-hash)
    show statistics since that commit object.
 
+   Use the special argument 'release' to calculate since the
+   most recent tag (usually the same as the last release).
+
    Without argument, show statistics since first commit.
 
 "
@@ -52,9 +55,12 @@ if [[ "$branch" != "master" ]]; then
 fi
 
 printf "Unique contributors"
-if [[ -n "$1" ]]; then
+if [[ "$1" = 'release' ]]; then
+    start_object="$(git describe --tags --abbrev=0)"
+    printf " since $start_object"
+elif [[ -n "$1" ]]; then
     start_object="$1"
-    printf " since $1"
+    printf " since $start_object"
 fi
 printf "\n"
 
