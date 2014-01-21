@@ -9,7 +9,7 @@ class Cask::CLI::Search
       all_titles = Cask.all_titles
       simplified_titles = all_titles.map { |t| t.gsub('-', '') }
       if search_term.nil?
-	cask_names = simplified_titles
+	cask_names = all_titles
       else
         simplified_search_term = search_term.gsub('-', '')
         cask_names = simplified_titles.grep(/#{simplified_search_term}/i) { |t| all_titles[simplified_titles.index(t)] }
