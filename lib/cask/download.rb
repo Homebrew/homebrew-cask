@@ -5,10 +5,16 @@ class Cask::Download
     @cask = cask
   end
 
-  def perform
+  def perform(force_download=false)
+
     require 'software_spec'
     cask = @cask
     downloader = Cask::CurlDownloadStrategy.new(cask)
+
+    if force_download && downloader.cached_location.exist?
+      downloader.cached_location.rmtree
+    end
+
     downloaded_path = downloader.fetch
     begin
       # this symlink helps track which downloads are ours
