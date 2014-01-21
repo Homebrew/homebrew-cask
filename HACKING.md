@@ -147,14 +147,6 @@ Travis-CI will do that for you and embarrass you in front of all your friends). 
 See the relevant section in `CONTRIBUTING.md`:
 [Submitting Your Changes](CONTRIBUTING.md#submitting-your-changes)
 
-### Squashing
-
-If your pull request has multiple commits which revise the same lines of
-code, it is better to [squash](http://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
-
-But you don't always have to squash -- it is fine for a pull request to
-contain multiple commits when there is a logical reason for the separation.
-
 ### Commit Messages
 
 The first line of a commit message (the summary line) is like the subject
