@@ -61,6 +61,13 @@ It's a neat idea! We have talked about it but nobody has worked on it:
 
 We would want to make sure that uninstall works equally well when copying.
 
+## What About a `brew cask upgrade` Command?
+
+Yes, definitely! We have talked about it, and worked on some aspects
+of it. But there is much left to do:
+
+- <https://github.com/phinze/homebrew-cask/issues/309>
+
 ## What About Installing Multiple Versions of a Package?
 
 Yes, definitely! We have started working on it, so please contact us
