@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 0.27.1
+
+* __Casks__
+ - 10 Casks added (14 updated) by 17 contributors since 0.27.0
+ - 1060 total Casks
+* __Features__
+ - [#2496][] improvements to `brew search` (still undocumented)
+* __Fixes__
+ - [#2496][] restore functionality of `brew search` with no arguments
+* __Breaking Changes__
+
+[#2496]: https://github.com/phinze/homebrew-cask/issues/2496
+
 ## 0.27.0
 
 * __Casks__
