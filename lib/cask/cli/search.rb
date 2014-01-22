@@ -12,9 +12,9 @@ class Cask::CLI::Search
       cask_names = simplified_titles.grep(/#{simplified_search_term}/i) { |t| all_titles[simplified_titles.index(t)] }
     end
     unless cask_names.empty?
-    	puts_columns Cask::CLI.nice_listing cask_names
+      puts_columns Cask::CLI.nice_listing cask_names
     else
-    	puts "No cask found for \"#{search_term}\"."
+      puts "No cask found for \"#{search_term}\"."
     end
   end
 
