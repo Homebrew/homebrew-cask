@@ -107,9 +107,10 @@ describe Cask::CLI do
   end
 
   describe "--debug" do
-    it "sets the CLI's debug variable to true" do
+    it "sets the Cask debug method to true" do
       Cask::CLI.process_options %w{help --debug}
-      Cask::CLI.instance_variable_get(:@debug).must_equal true
+      Cask.debug.must_equal true
+      Cask.debug = false
     end
   end
 

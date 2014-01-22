@@ -1,6 +1,7 @@
 class Cask::SystemCommand
   def self.run(command, options={})
     command = _process_options(command, options)
+    odebug "Executing: #{command}"
     output = ''
     IO.popen(command, 'r+') do |pipe|
       if options[:input]

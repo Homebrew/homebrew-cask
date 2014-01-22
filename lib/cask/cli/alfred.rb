@@ -47,6 +47,7 @@ class Cask::CLI::Alfred
     if linked?
       opoo "Alfred is already linked to homebrew-cask."
     else
+      odebug 'Linking Alfred scopes'
       save_alfred_scopes(alfred_scopes << Cask.caskroom)
       ohai "Successfully linked Alfred to homebrew-cask."
     end
@@ -58,6 +59,7 @@ class Cask::CLI::Alfred
     if !linked?
       opoo "Alfred is already unlinked from homebrew-cask."
     else
+      odebug 'Unlinking Alfred scopes'
       save_alfred_scopes(alfred_scopes.reject { |x| x == Cask.caskroom.to_s })
       ohai "Successfully unlinked Alfred from homebrew-cask."
     end
@@ -105,8 +107,10 @@ class Cask::CLI::Alfred
 
   def self.alfred_preference(key, value=nil)
     if value
+      odebug 'Writing Alfred preferences'
       @system_command.run('/usr/bin/defaults', :args => ['write', DOMAIN, key, %Q("#{value}")])
     else
+      odebug 'Reading Alfred preferences'
       @system_command.run('/usr/bin/defaults', :args => ['read', DOMAIN, key])
     end
   end

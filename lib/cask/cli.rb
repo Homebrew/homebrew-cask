@@ -49,11 +49,11 @@ class Cask::CLI
     run_command(command, *rest)
   rescue CaskAlreadyInstalledError => e
     opoo e
-    $stderr.puts e.backtrace if @debug
+    $stderr.puts e.backtrace if Cask.debug
     exit 0
   rescue CaskError => e
     onoe e
-    $stderr.puts e.backtrace if @debug
+    $stderr.puts e.backtrace if Cask.debug
     exit 1
   end
 
@@ -112,7 +112,7 @@ class Cask::CLI
         Cask.no_binaries = true
       end
       opts.on("--debug") do |v|
-        @debug = true
+        Cask.debug = true
       end
     end
   end

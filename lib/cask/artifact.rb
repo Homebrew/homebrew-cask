@@ -43,6 +43,10 @@ module Cask::Artifact
   end
 
   def self.for_cask(cask)
-    artifacts.select { |artifact| artifact.me?(cask) }
+    odebug "Determining which artifacts are present in Cask #{cask}"
+    artifacts.select do |artifact|
+      odebug "Checking for artifact class #{artifact}"
+      artifact.me?(cask)
+    end
   end
 end

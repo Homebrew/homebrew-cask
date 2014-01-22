@@ -4,6 +4,7 @@ class Cask::CLI::Install
     cask_names = args.reject { |a| a.chars.first == '-' }
     force = args.include? '--force'
     cask_names.each do |cask_name|
+      odebug "Installing Cask #{cask_name}"
       cask = Cask.load(cask_name)
       Cask::Installer.new(cask).install(force)
     end

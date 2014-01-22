@@ -17,6 +17,7 @@ class Cask::CLI::Audit
   end
 
   def audit(cask)
+    odebug "Auditing Cask #{cask}"
     @auditor.audit(cask, :audit_download => audit_download?)
   end
 

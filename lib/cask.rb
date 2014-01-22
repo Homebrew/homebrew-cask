@@ -29,6 +29,7 @@ require 'cask/source'
 require 'cask/system_command'
 require 'cask/underscore_supporting_uri'
 require 'cask/url'
+require 'cask/utils'
 
 require 'plist/parser'
 
@@ -39,6 +40,7 @@ class Cask
   include Cask::Options
 
   def self.init
+    odebug 'Creating directories'
     HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?
     unless caskroom.exist?
       ohai "We need to make Caskroom for the first time at #{caskroom}"
@@ -57,7 +59,10 @@ class Cask
   end
 
   def self.load(query)
-    Cask::Source.for_query(query).load
+    odebug 'Loading Cask definitions'
+    cask = Cask::Source.for_query(query).load
+    odumpcask cask
+    cask
   end
 
   def self.title
