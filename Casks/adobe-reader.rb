@@ -4,4 +4,5 @@ class AdobeReader < Cask
   version '11.0.06'
   sha1 '3d1b7a9a931e587ecdddedce163e6458945844fd'
   install 'Adobe Reader XI Installer.pkg'
+  uninstall :pkgutil => 'com.adobe.acrobat.reader.11006.*'
 end
