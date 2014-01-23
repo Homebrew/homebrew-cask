@@ -1,4 +1,4 @@
-class NethackCocoa < Cask
+class Nethackcocoa < Cask
   url 'https://nethack-cocoa.googlecode.com/files/NetHackCocoa-0.3.4.dmg'
   homepage 'https://code.google.com/p/nethack-cocoa/'
   version '0.3.4'
