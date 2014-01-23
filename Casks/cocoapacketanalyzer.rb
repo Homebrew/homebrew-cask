@@ -1,4 +1,4 @@
-class CocoaPacketAnalyzer < Cask
+class Cocoapacketanalyzer < Cask
   url 'http://tastycocoabytes.com/_downloads/CPA_121.dmg'
   homepage 'http://www.tastycocoabytes.com/cpa/'
   version '1.21'
