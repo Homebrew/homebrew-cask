@@ -1,4 +1,4 @@
-class ComicBookLoverSync < Cask
+class Comicbookloversync < Cask
   url 'http://www.bitcartel.com/downloads/comicbookloversync.zip'
   homepage 'http://www.bitcartel.com/comicbooklover'
   version 'latest'
