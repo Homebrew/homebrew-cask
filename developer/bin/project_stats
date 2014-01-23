@@ -5,98 +5,113 @@
 # stats on project/release from git database
 #
 
-set -e                # exit on any uncaught error
-set +o histexpand     # don't expand history expressions
-shopt -s nocasematch
+set -e;               # exit on any uncaught error
+set +o histexpand;    # don't expand history expressions
+shopt -s nocasematch; # case-insensitive regular expressions
 
-start_object="5a0d1d5556e3f963a0d34da46e16ecffa59ea2fc" # initial commit
-end_object="HEAD"
+cd_to_project_root () {
+    local script_dir="$(/usr/bin/dirname $0)"
+    cd "$script_dir"
+    local git_root="$(git rev-parse --show-toplevel)"
+    if [[ -z "$git_root" ]]; then
+        printf "Could not find git project root"
+        exit 1;
+    fi
+    cd "$git_root"
+}
 
-# these paths relative to project root
-cask_paths="Casks"
-code_paths="bin developer lib test brew-cask.rb Rakefile Gemfile Gemfile.lock"
-doc_paths="LICENSE *.md"
+warn_if_off_branch () {
+    local branch="$(git rev-parse --abbrev-ref HEAD)"
+    local wanted_branch='master'
+    if [[ -n "$1" ]]; then
+        wanted_branch="$1"
+    fi
+    if [[ "$branch" != "$wanted_branch" ]]; then
+        printf "\nWARNING: you are running from branch '$branch', not '$wanted_branch'\n\n"
+    fi
+}
 
-# cd to project root
-script_dir="$(/usr/bin/dirname $0)"
-cd "$script_dir"
-git_root="$(git rev-parse --show-toplevel)"
-cd "$git_root"
+verify_git_object () {
+    if ! git rev-parse --verify "$1" > /dev/null 2>/dev/null; then
+        printf "\nERROR: No such commit object: $1\n\n"
+        exit 1
+    fi
+}
 
-# remember initial commit hash
-git_log_alltime="git log --format='%ae' ${start_object}..${end_object}"
+_homebrew_cask_project_stats () {
 
-###
-### main
-###
+    local initial_commit="5a0d1d5556e3f963a0d34da46e16ecffa59ea2fc"
+    local start_object="$initial_commit"
+    local end_object="HEAD"
+
+    # these paths relative to project root
+    local cask_paths="Casks"
+    local code_paths="bin developer lib test brew-cask.rb Rakefile Gemfile Gemfile.lock"
+    local doc_paths="LICENSE *.md"
+
+    cd_to_project_root;
+    warn_if_off_branch 'master';
+
+    if [[ "$1" = 'release' ]]; then
+        start_object="$(git describe --tags --abbrev=0)"
+    elif [[ -n "$1" ]]; then
+        start_object="$1"
+    fi
+    verify_git_object "$start_object";
+
+    printf "Unique contributors"
+    if [[ "$start_object" != "$initial_commit" ]]; then
+        printf " since $start_object"
+    fi
+    printf "\n"
+
+    local git_log_cmd="git log --format='%ae' ${start_object}..${end_object}"
+
+    local cask_authors="$($git_log_cmd -- $cask_paths | sort | uniq | wc -l)"
+    printf "  Casks\t$cask_authors\n"
+    printf "  code\t"
+    $git_log_cmd -- $code_paths | sort | uniq | wc -l
+    printf "  docs\t"
+    $git_log_cmd -- $doc_paths  | sort | uniq | wc -l
+    printf "  any\t"
+    $git_log_cmd -- .           | sort | uniq | wc -l
+    if [[ "$start_object" != "$initial_commit" ]]; then
+        printf "\nAll-time contributors\t"
+        git log --format='%ae' ${initial_commit}..${end_object} -- . | sort | uniq | wc -l
+    fi
+
+    printf "\n"
+
+    if [[ "$start_object" != "$initial_commit" ]]; then
+        local new_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^A.*\.rb' | cut -f2 | sort | uniq | wc -l)"
+        local updated_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^M.*\.rb' | cut -f2 | sort | uniq | wc -l)"
+        # arithmetic removes whitespace
+        ((cask_authors  += 0))
+        ((new_casks     += 0))
+        ((updated_casks += 0))
+        printf "$new_casks Casks added ($updated_casks updated) by $cask_authors contributors since $start_object\n"
+    fi
+
+    printf "Total current Casks in HEAD\t"
+    find $cask_paths -name '*.rb' | wc -l
+
+}
 
 if [[ $1 =~ ^-+h(elp)?$ ]]; then
-    printf "project_stats
+    printf "project_stats [ <commit-object> ]
 
-Usage:
+With optional single argument, (eg a tag or commit-hash)
+show statistics since that commit object.
 
-   project_stats [ <commit-object> ]
+Use the special argument 'release' to calculate since the
+most recent tag (usually the same as the last release).
 
-   With optional single argument, (eg a tag or commit-hash)
-   show statistics since that commit object.
-
-   Use the special argument 'release' to calculate since the
-   most recent tag (usually the same as the last release).
-
-   Without argument, show statistics since first commit.
+Without argument, show statistics since first commit.
 
 "
     exit
 fi
 
-branch="$(git rev-parse --abbrev-ref HEAD)"
-if [[ "$branch" != "master" ]]; then
-    printf "\nWARNING: you are running from branch '$branch', not 'master'\n\n"
-fi
-
-printf "Unique contributors"
-if [[ "$1" = 'release' ]]; then
-    start_object="$(git describe --tags --abbrev=0)"
-    printf " since $start_object"
-elif [[ -n "$1" ]]; then
-    start_object="$1"
-    printf " since $start_object"
-fi
-printf "\n"
-
-if ! git rev-parse --verify "$start_object" > /dev/null 2>/dev/null; then
-    printf "\nERROR: No such commit object: $start_object\n\n"
-    exit 1
-fi
-
-git_log="git log --format='%ae' ${start_object}..${end_object}"
-
-cask_authors="$($git_log -- $cask_paths | sort | uniq | wc -l)"
-printf "  Casks\t$cask_authors\n"
-
-printf "  code\t"
-$git_log -- $code_paths | sort | uniq | wc -l
-printf "  docs\t"
-$git_log -- $doc_paths  | sort | uniq | wc -l
-printf "  any\t"
-$git_log -- .           | sort | uniq | wc -l
-if [[ -n "$1" ]]; then
-    printf "\nAll-time contributors\t"
-    $git_log_alltime -- . | sort | uniq | wc -l
-fi
-
-printf "\n"
-
-if [[ -n "$1" ]]; then
-    new_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^A.*\.rb' | cut -f2 | sort | uniq | wc -l)"
-    updated_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^M.*\.rb' | cut -f2 | sort | uniq | wc -l)"
-    ((cask_authors  += 0))
-    ((new_casks     += 0))
-    ((updated_casks += 0))
-    printf "$new_casks Casks added ($updated_casks updated) by $cask_authors contributors since $start_object\n"
-fi
-
-printf "Total current Casks in HEAD\t"
-find $cask_paths -name '*.rb' | wc -l
+_homebrew_cask_project_stats "$@";
 
 #
