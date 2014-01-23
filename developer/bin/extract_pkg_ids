@@ -1,0 +1,59 @@
+#!/bin/bash
+#
+# extract_pkg_ids
+#
+
+set -e;                # exit on any uncaught error
+set +o histexpand;     # don't expand history expressions
+shopt -s nocasematch;  # case-insensitive regular expressions
+
+_extract_pkg_ids () {
+
+    local tmpdir=`/usr/bin/mktemp -d -t extract_pkg_ids`
+    trap "/bin/rm -rf '$tmpdir'" EXIT
+
+    /usr/sbin/pkgutil --expand "$1" "$tmpdir/unpack"
+
+    /usr/bin/find "$tmpdir" -name PackageInfo -print0 |                                \
+    /usr/bin/xargs -0 /usr/bin/perl -0777 -ne                                          \
+      'while (m{<pkg-info.*?\sid(?:entifier)?\s*=\s*"([^"]*?)"}sg) { print "$1\n" }' | \
+    /usr/bin/sort | /usr/bin/uniq |                                                    \
+    /usr/bin/egrep -v '^com\.apple\.' |                                                \
+    /usr/bin/egrep -v 'sparkle\.finish-installation$' |                                \
+    /usr/bin/xargs -I{} -n1 /bin/bash -c                                               \
+      'printf "{}"; /usr/sbin/pkgutil --pkg-info "{}" >/dev/null 2>&1 && printf " (+)"; printf "\n"'
+
+}
+
+if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
+   printf "extract_pkg_ids <file.pkg>
+
+    Given a package file, extract a list of candidate Package IDs
+    which may be useful in a Cask uninstall stanza, eg
+
+        uninstall :pkgutil => 'package.id.goes.here'
+
+    The given package file need not be installed.
+
+    The output of this script should be overly inclusive -- not
+    every candidate package id in the output will be needed at
+    uninstall time.
+
+    Package IDs designated by Apple or the Sparkle framework will
+    be omitted.
+
+    If a package id is already installed, it will be followed by
+    a plus symbol '(+)' in the output.  This can be verified via
+    the command
+
+        /usr/sbin/pkgutil --pkg-info 'package.id.goes.here'
+
+    See CONTRIBUTING.md and 'man pkgutil' for more information.
+
+"
+    exit
+fi
+
+_extract_pkg_ids "$@";
+
+#
