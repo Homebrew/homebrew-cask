@@ -45,11 +45,11 @@ class Cask
       ohai "We'll set permissions properly so we won't need sudo in the future"
       current_user = ENV['USER']
       if caskroom.parent.writable?
-        system "mkdir #{caskroom}"
+        system "/bin/mkdir #{caskroom}"
       else
         # sudo in system is rude.
-        system "sudo mkdir -p #{caskroom}"
-        system "sudo chown -R #{current_user}:staff #{caskroom.parent}"
+        system "/usr/bin/sudo /bin/mkdir -p #{caskroom}"
+        system "/usr/bin/sudo /usr/sbin/chown -R #{current_user}:staff #{caskroom.parent}"
       end
     end
     appdir.mkpath unless appdir.exist?

@@ -3,7 +3,7 @@ module Cask::CLI::Home
     raise CaskUnspecifiedError if cask_names.empty?
     cask_names.each do |cask_name|
       cask = Cask.load(cask_name)
-      system "open", cask.homepage
+      system "/usr/bin/open", cask.homepage
     end
   end
 
