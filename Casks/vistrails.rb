@@ -3,5 +3,5 @@ class Vistrails < Cask
   homepage 'http://www.vistrails.org/index.php/Main_Page'
   version '2.1.1'
   sha1 '2067df8a6ccb755f271e9c4e070971ba749557fe'
-  link 'VisTrails'
+  link 'VisTrails/VisTrails.app'
 end
