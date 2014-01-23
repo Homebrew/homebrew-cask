@@ -1,52 +1,52 @@
 require 'test_helper'
 
 describe Cask::Artifact::App do
-	let(:cask) {
-		Cask.load('with-binary').tap do |cask|
-			TestHelper.install_without_artifacts(cask)
-		end
-	}
-	let(:expected_path) {
-		Cask.binarydir/'binary'
-	}
+  let(:cask) {
+    Cask.load('with-binary').tap do |cask|
+      TestHelper.install_without_artifacts(cask)
+    end
+  }
+  let(:expected_path) {
+    Cask.binarydir/'binary'
+  }
 
-	it "links the binary to the proper directory" do
-		shutup do
-			Cask::Artifact::Binary.new(cask).install
-		end
+  it "links the binary to the proper directory" do
+    shutup do
+      Cask::Artifact::Binary.new(cask).install
+    end
 
-		TestHelper.valid_alias?(expected_path).must_equal true
-	end
+    TestHelper.valid_alias?(expected_path).must_equal true
+  end
 
-	it "avoids clobbering an existing binary by linking over it" do
-		FileUtils.touch expected_path
-		
-		shutup do
-			Cask::Artifact::Binary.new(cask).install
-		end
+  it "avoids clobbering an existing binary by linking over it" do
+    FileUtils.touch expected_path
 
-		expected_path.wont_be :symlink?
-	end
+    shutup do
+      Cask::Artifact::Binary.new(cask).install
+    end
 
-	it "clobbers an existing symlink" do
-		expected_path.make_symlink('/tmp')
+    expected_path.wont_be :symlink?
+  end
 
-		shutup do
-			Cask::Artifact::Binary.new(cask).install
-		end
+  it "clobbers an existing symlink" do
+    expected_path.make_symlink('/tmp')
 
-		File.readlink(expected_path).wont_equal '/tmp'
-	end
+    shutup do
+      Cask::Artifact::Binary.new(cask).install
+    end
 
-	it "respects --no-binaries flag" do
-		Cask.no_binaries = true
+    File.readlink(expected_path).wont_equal '/tmp'
+  end
 
-		shutup do
-			Cask::Artifact::Binary.new(cask).install
-		end
+  it "respects --no-binaries flag" do
+    Cask.no_binaries = true
 
-		expected_path.exist?.must_equal false
+    shutup do
+      Cask::Artifact::Binary.new(cask).install
+    end
 
-		Cask.no_binaries = false
-	end
+    expected_path.exist?.must_equal false
+
+    Cask.no_binaries = false
+  end
 end

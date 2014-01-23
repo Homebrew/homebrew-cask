@@ -5,12 +5,12 @@ class CrosspackAvr < Cask
   sha1 'd255e7822e961c002691fbb0d19a564a819c7386'
   install 'CrossPack-AVR.pkg'
   after_uninstall do
-  	IO.popen('yes | sudo -E /usr/local/CrossPack-AVR/uninstall && sudo pkgutil --forget at.obdev.CrossPack-AVR', 'r+') do |pipe|
-  		pipe.close_write
-  		while line = pipe.gets
-  			puts line
-  		end
-  	end
+    IO.popen('yes | sudo -E /usr/local/CrossPack-AVR/uninstall && sudo pkgutil --forget at.obdev.CrossPack-AVR', 'r+') do |pipe|
+      pipe.close_write
+      while line = pipe.gets
+        puts line
+      end
+    end
   end
 
   caveats do

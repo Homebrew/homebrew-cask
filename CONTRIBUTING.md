@@ -311,6 +311,11 @@ If your application and homebrew-cask do not work well together, feel free to
 [file an issue](https://github.com/phinze/homebrew-cask/issues) after checking
 out open issues.
 
+## Indenting
+
+All Casks and code in the homebrew-cask project should be indented using two
+spaces (never tabs).
+
 ## Submitting Your Changes
 
 Hop into your Tap and check to make sure your new Cask is there:
