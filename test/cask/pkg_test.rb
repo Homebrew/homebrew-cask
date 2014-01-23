@@ -30,7 +30,7 @@ describe Cask::Pkg do
       )
 
       Cask::FakeSystemCommand.expects_command(
-        %q(sudo -E '/usr/sbin/pkgutil' '--forget' 'my.fake.pkg' 2>&1)
+        %q(/usr/bin/sudo -E '/usr/sbin/pkgutil' '--forget' 'my.fake.pkg' 2>&1)
       )
 
       pkg.uninstall
