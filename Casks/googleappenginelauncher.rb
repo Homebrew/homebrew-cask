@@ -1,4 +1,4 @@
-class GoogleAppEngineLauncher < Cask
+class Googleappenginelauncher < Cask
   url 'https://googleappengine.googlecode.com/files/GoogleAppEngineLauncher-1.8.8.dmg'
   homepage 'https://developers.google.com/appengine/'
   version '1.8.8'
