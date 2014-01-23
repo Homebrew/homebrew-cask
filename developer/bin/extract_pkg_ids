@@ -26,29 +26,29 @@ _extract_pkg_ids () {
 }
 
 if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
-   printf "extract_pkg_ids <file.pkg>
+    printf "extract_pkg_ids <file.pkg>
 
-    Given a package file, extract a list of candidate Package IDs
-    which may be useful in a Cask uninstall stanza, eg
+Given a package file, extract a list of candidate Package IDs
+which may be useful in a Cask uninstall stanza, eg
 
-        uninstall :pkgutil => 'package.id.goes.here'
+    uninstall :pkgutil => 'package.id.goes.here'
 
-    The given package file need not be installed.
+The given package file need not be installed.
 
-    The output of this script should be overly inclusive -- not
-    every candidate package id in the output will be needed at
-    uninstall time.
+The output of this script should be overly inclusive -- not
+every candidate package id in the output will be needed at
+uninstall time.
 
-    Package IDs designated by Apple or the Sparkle framework will
-    be omitted.
+Package IDs designated by Apple or the Sparkle framework will
+be omitted.
 
-    If a package id is already installed, it will be followed by
-    a plus symbol '(+)' in the output.  This can be verified via
-    the command
+If a package id is already installed, it will be followed by
+a plus symbol '(+)' in the output.  This can be verified via
+the command
 
-        /usr/sbin/pkgutil --pkg-info 'package.id.goes.here'
+    /usr/sbin/pkgutil --pkg-info 'package.id.goes.here'
 
-    See CONTRIBUTING.md and 'man pkgutil' for more information.
+See CONTRIBUTING.md and 'man pkgutil' for more information.
 
 "
     exit
