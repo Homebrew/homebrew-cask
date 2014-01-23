@@ -40,6 +40,9 @@ Usage:
    With optional single argument, (eg a tag or commit-hash)
    show statistics since that commit object.
 
+   Use the special argument 'release' to calculate since the
+   most recent tag (usually the same as the last release).
+
    Without argument, show statistics since first commit.
 
 "
@@ -52,9 +55,12 @@ if [[ "$branch" != "master" ]]; then
 fi
 
 printf "Unique contributors"
-if [[ -n "$1" ]]; then
+if [[ "$1" = 'release' ]]; then
+    start_object="$(git describe --tags --abbrev=0)"
+    printf " since $start_object"
+elif [[ -n "$1" ]]; then
     start_object="$1"
-    printf " since $1"
+    printf " since $start_object"
 fi
 printf "\n"
 
@@ -65,8 +71,9 @@ fi
 
 git_log="git log --format='%ae' ${start_object}..${end_object}"
 
-printf "  Casks\t"
-$git_log -- $cask_paths | sort | uniq | wc -l
+cask_authors="$($git_log -- $cask_paths | sort | uniq | wc -l)"
+printf "  Casks\t$cask_authors\n"
+
 printf "  code\t"
 $git_log -- $code_paths | sort | uniq | wc -l
 printf "  docs\t"
@@ -74,18 +81,22 @@ $git_log -- $doc_paths  | sort | uniq | wc -l
 printf "  any\t"
 $git_log -- .           | sort | uniq | wc -l
 if [[ -n "$1" ]]; then
-    printf "\nAll-time contibutors\t"
+    printf "\nAll-time contributors\t"
     $git_log_alltime -- . | sort | uniq | wc -l
 fi
 
 printf "\n"
 
 if [[ -n "$1" ]]; then
-    printf "Casks created since $1\t"
-    git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^A.*\.rb' | cut -f2 | sort | uniq | wc -l
+    new_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^A.*\.rb' | cut -f2 | sort | uniq | wc -l)"
+    updated_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^M.*\.rb' | cut -f2 | sort | uniq | wc -l)"
+    ((cask_authors  += 0))
+    ((new_casks     += 0))
+    ((updated_casks += 0))
+    printf "$new_casks Casks added ($updated_casks updated) by $cask_authors contributors since $start_object\n"
 fi
 
 printf "Total current Casks in HEAD\t"
-find Casks -name '*.rb' | wc -l
+find $cask_paths -name '*.rb' | wc -l
 
 #
