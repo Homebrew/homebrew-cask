@@ -264,6 +264,7 @@ The following methods may be called to generate standard warning messages:
 | `logout`                          | The user should log out and log back in to complete installation
 | `reboot`                          | The user should reboot to complete installation
 | `files_in_usr_local`              | The Cask installs files to `/usr/local`, which may confuse Homebrew
+| `arch_only(list)`                 | The Cask only supports certain architectures.  Currently valid elements of `list` are `intel-32` and `intel-64`
 
 Example:
 

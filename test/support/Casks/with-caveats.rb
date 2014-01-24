@@ -17,4 +17,9 @@ class WithCaveats < TestCask
     puts 'Custom text via puts followed by DSL-generated text:'
     manual_installer('Installer.app')
   end
+  caveats do
+    # since both valid arches are specified, no output should be
+    # generated here during the test
+    arch_only('intel-32', 'intel-64')
+  end
 end
