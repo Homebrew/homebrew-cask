@@ -1,4 +1,4 @@
-class Gurpscharactersheet < Cask
+class GurpsCharacterSheet < Cask
   url 'http://downloads.sourceforge.net/project/gcs-java/GCS-2011.01.02.1054.zip'
   homepage 'http://gurpscharactersheet.com'
   version '2011.01.02.1054'
