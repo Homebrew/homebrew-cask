@@ -17,6 +17,10 @@ class Cask::FakeSystemCommand
     @system_calls = nil
   end
 
+  # The command string should be formatted to execute from the shell and then escaped again for the hash key.
+  # example:
+  #  %{echo "test"} --> %{echo \"hi\"}
+  #  %{echo "test \"test\" test"} --> %{echo \"test \\\"test\\\" test\"}
   def self.stubs_command(command, response='')
     responses[command] = response
   end

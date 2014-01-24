@@ -78,7 +78,7 @@ describe Cask::CLI::Alfred do
       SCOPE_RESPONSE
 
       Cask::FakeSystemCommand.stubs_command(
-        %Q(/usr/bin/defaults write com.runningwithcrayons.Alfred-Preferences features.defaultresults.scope "('/Applications','/Library/PreferencePanes','/System/Library/PreferencePanes','#{Cask.caskroom}')" 2>&1)
+        %Q(/usr/bin/defaults write com.runningwithcrayons.Alfred-Preferences features.defaultresults.scope \"('/Applications','/Library/PreferencePanes','/System/Library/PreferencePanes','#{Cask.caskroom}')\" 2>&1)
       )
 
       TestHelper.must_output(self, lambda {
