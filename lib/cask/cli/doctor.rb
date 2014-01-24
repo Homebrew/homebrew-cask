@@ -2,6 +2,7 @@ class Cask::CLI::Doctor
   def self.run
     ohai 'OS X Version:'
     puts MACOS_FULL_VERSION
+    ohai "Hardware Architecture:", "#{Hardware::CPU.type}-#{Hardware::CPU.bits}"
     ohai 'Ruby Version:'
     puts "#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}"
     ohai 'Ruby Path:'
