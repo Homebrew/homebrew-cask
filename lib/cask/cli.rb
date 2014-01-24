@@ -21,19 +21,32 @@ class Cask::CLI
     Cask::CLI.constants - ["NullCommand"]
   end
 
-  def self.lookup_command(command)
-    if command && Cask::CLI.const_defined?(command.capitalize)
-      Cask::CLI.const_get(command.capitalize)
+  def self.lookup_command(command_string)
+    if command_string && Cask::CLI.const_defined?(command_string.capitalize)
+      Cask::CLI.const_get(command_string.capitalize)
     else
-      Cask::CLI::NullCommand.new(command)
+      command_string
+    end
+  end
+
+  def self.run_command(command, *rest)
+    if command.respond_to?(:run)
+      command.run(*rest)
+    elsif which "brewcask-#{command}"
+      exec "brewcask-#{command}", *ARGV[1..-1]
+    elsif require? which("brewcask-#{command}.rb").to_s
+      exit 0
+    else
+      Cask::CLI::NullCommand.new(command).run
     end
   end
 
   def self.process(arguments)
-    command, *rest = *arguments
+    command_string, *rest = *arguments
     rest = process_options(rest)
     Cask.init
-    lookup_command(command).run(*rest)
+    command = lookup_command(command_string)
+    run_command(command, *rest)
   rescue CaskAlreadyInstalledError => e
     opoo e
     $stderr.puts e.backtrace if @debug
@@ -151,8 +164,11 @@ class Cask::CLI
       ''
     end
 
-    def _help_for(command)
-      Cask::CLI.lookup_command(command).help
+    def _help_for(command_string)
+      command = Cask::CLI.lookup_command(command_string)
+      if command.respond_to?(:help)
+        command.help
+      end
     end
   end
 end
