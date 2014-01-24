@@ -105,9 +105,9 @@ class Cask::CLI::Alfred
 
   def self.alfred_preference(key, value=nil)
     if value
-      @system_command.run(%Q(/usr/bin/defaults write #{DOMAIN} #{key} "#{value}"))
+      @system_command.run('/usr/bin/defaults', :args => ['write', DOMAIN, key, %Q("#{value}")])
     else
-      @system_command.run("/usr/bin/defaults read #{DOMAIN} #{key}")
+      @system_command.run('/usr/bin/defaults', :args => ['read', DOMAIN, key])
     end
   end
 
