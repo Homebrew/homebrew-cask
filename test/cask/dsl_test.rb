@@ -52,7 +52,7 @@ describe Cask::DSL do
     end
 
     instance = CaskWithLinkables.new
-    Array(instance.artifacts[:link]).sort.must_equal %w[Bar.app Foo.app]
+    Array(instance.artifacts[:link]).sort.must_equal [['Bar.app'], ['Foo.app']]
   end
 
   it "allow linkables to be set to empty" do
