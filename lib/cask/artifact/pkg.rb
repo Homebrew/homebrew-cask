@@ -74,7 +74,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
         [false, true].each do |with_sudo|
           xml_status = @command.run('/bin/launchctl', :args => ['list', '-x', service], :sudo => with_sudo)
           if %r{^<\?xml}.match(xml_status)
-            @command.run!('/bin/launchctl', :args => ['remove', service], :sudo => with_sudo)
+            @command.run!('/bin/launchctl', :args => ['remove', '--', service], :sudo => with_sudo)
           end
         end
       end
