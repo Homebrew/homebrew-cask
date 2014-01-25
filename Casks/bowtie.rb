@@ -3,5 +3,5 @@ class Bowtie < Cask
   homepage 'http://bowtieapp.com/'
   version '1.5'
   sha1 '6db52cf49d806856477f666a0032041471435d8f'
-  link 'Bowtie.app'
+  link 'Bowtie 1.5/Bowtie.app'
 end
