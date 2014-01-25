@@ -130,6 +130,21 @@ If the "latest" URL does not point to a valid file for a Mac app, then we fall b
 http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 ```
 
+### Override symlink
+
+If you want to override the symlink of following artifacts `:link, :prefpane, :qlplugin, :font, :widget, :service, :colorpicker, :binary, :caskroom_only, :input_method`, use the target option like this:
+
+```ruby
+class Alfred < Cask
+  url 'http://cachefly.alfredapp.com/Alfred_2.1.1_227.zip'
+  homepage 'http://www.alfredapp.com/'
+  version '2.1.1_227'
+  sha1 'db28d2a5c655a4611c780c3f46252530118ddd9d'
+  link 'Alfred 2.app', :target => 'AnotherName.app'
+  link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
+end
+```
+
 ### Naming Casks
 
 We try to maintain a consistent naming policy so everything stays clean and predictable.
