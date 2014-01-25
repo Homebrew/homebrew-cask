@@ -15,7 +15,7 @@ class Cask::Pkg
   def uninstall
     odebug "Deleting pkg files"
     list('files').each_slice(500) do |file_slice|
-      @command.run('/bin/rm', :args => file_slice.unshift('-f'), :sudo => true)
+      @command.run('/bin/rm', :args => file_slice.unshift('-f', '--'), :sudo => true)
     end
     odebug "Deleting pkg directories"
     _deepest_path_first(list('dirs')).each do |dir|
@@ -80,14 +80,14 @@ class Cask::Pkg
   def _clean_broken_symlinks(dir)
     dir.children.each do |child|
       if _broken_symlink?(child)
-        @command.run!('/bin/rm', :args => [child], :sudo => true)
+        @command.run!('/bin/rm', :args => ['--', child], :sudo => true)
       end
     end
   end
 
   def _clean_ds_store(dir)
     ds_store = dir.join('.DS_Store')
-    @command.run!('/bin/rm', :args => [ds_store], :sudo => true) if ds_store.exist?
+    @command.run!('/bin/rm', :args => ['--', ds_store], :sudo => true) if ds_store.exist?
   end
 
   def _broken_symlink?(path)

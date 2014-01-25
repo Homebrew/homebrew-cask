@@ -118,7 +118,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     if uninstall_options.key? :files
       uninstall_options[:files].each do |file|
         ohai "Removing file #{file}"
-        @command.run!('/bin/rm', :args => ['-rf', file], :sudo => true)
+        @command.run!('/bin/rm', :args => ['-rf', '--', file], :sudo => true)
       end
     end
   end
