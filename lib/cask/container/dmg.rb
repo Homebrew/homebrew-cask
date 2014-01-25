@@ -13,7 +13,7 @@ class Cask::Container::Dmg < Cask::Container::Base
     mount!
     assert_mounts_found
     @mounts.each do |mount|
-      @command.run('/usr/bin/ditto', :args => [mount, @cask.destination_path])
+      @command.run('/usr/bin/ditto', :args => ['--', mount, @cask.destination_path])
     end
   ensure
     eject!
