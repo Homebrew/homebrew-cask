@@ -64,12 +64,12 @@ not_inside_homebrew () {
 remove_dev_links () {
     local tap_dir="$1"
     /bin/rm rubylib Casks
-    /bin/mv production_rubylib rubylib
-    /bin/mv production_Casks   Casks
+    /bin/mv -- production_rubylib rubylib
+    /bin/mv -- production_Casks   Casks
     cd "$tap_dir"
     /bin/rm lib Casks
-    /bin/mv production_lib   lib
-    /bin/mv production_Casks Casks
+    /bin/mv -- production_lib   lib
+    /bin/mv -- production_Casks Casks
     printf "brew-cask is now in production mode\n"
     printf "It is safe to run 'brew update' if you are in production mode for all Caskroom repos.\n"
 }
