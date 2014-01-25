@@ -1,6 +1,6 @@
 class Cask::Pkg
   def self.all_matching(regexp, command)
-    command.run(%Q(/usr/sbin/pkgutil --pkgs="#{regexp}")).split("\n").map do |package_id|
+    command.run('/usr/sbin/pkgutil', :args => [%Q{--pkgs="#{regexp}"}]).split("\n").map do |package_id|
       new(package_id.chomp, command)
     end
   end
@@ -14,7 +14,7 @@ class Cask::Pkg
 
   def uninstall
     list('files').each_slice(500) do |file_slice|
-      @command.run('/bin/rm', :args => file_slice.unshift('-f'), :sudo => true)
+      @command.run('/bin/rm', :args => file_slice.unshift('-f', '--'), :sudo => true)
     end
     _deepest_path_first(list('dirs')).each do |dir|
       if dir.exist?
@@ -51,7 +51,7 @@ class Cask::Pkg
 
   def _rmdir(path)
     if path.children.empty?
-      @command.run!('/bin/rmdir', :args => [path], :sudo => true)
+      @command.run!('/bin/rmdir', :args => ['--', path], :sudo => true)
     end
   end
 
@@ -77,14 +77,14 @@ class Cask::Pkg
   def _clean_broken_symlinks(dir)
     dir.children.each do |child|
       if _broken_symlink?(child)
-        @command.run!('/bin/rm', :args => [child], :sudo => true)
+        @command.run!('/bin/rm', :args => ['--', child], :sudo => true)
       end
     end
   end
 
   def _clean_ds_store(dir)
     ds_store = dir.join('.DS_Store')
-    @command.run!('/bin/rm', :args => [ds_store], :sudo => true) if ds_store.exist?
+    @command.run!('/bin/rm', :args => ['--', ds_store], :sudo => true) if ds_store.exist?
   end
 
   def _broken_symlink?(path)

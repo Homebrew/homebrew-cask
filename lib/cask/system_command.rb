@@ -1,6 +1,6 @@
 class Cask::SystemCommand
-  def self.run(command, options={})
-    command = _process_options(command, options)
+  def self.run(executable, options={})
+    command = _process_options(executable, options)
     output = ''
     IO.popen(command, 'r+') do |pipe|
       if options[:input]
@@ -24,12 +24,35 @@ class Cask::SystemCommand
     run(command, options.merge(:must_succeed => true))
   end
 
-  def self._process_options(command, options)
+  # from Shellwords.shellescape
+  def self._shellescape(str)
+    return "''" if str.empty?
+
+    str = str.dup
+
+    str.gsub!(/([^A-Za-z0-9_\-.,:\/@\n])/n, "\\\\\\1")
+    str.gsub!(/\n/, "'\n'")
+
+    return str
+  end
+
+  # returns shell-escaped command
+  # arguments wrapped in single or double quotes are not escaped
+  def self._process_options(executable, options)
+    command_array = Array(executable)
     if options[:sudo]
-      command = "/usr/bin/sudo -E #{_quote(command)}"
+      command_array.unshift('/usr/bin/sudo', '-E')
     end
     if options[:args]
-      command = "#{command} #{options[:args].map { |arg| _quote(arg) }.join(' ')}"
+      command_array.push(*options[:args])
+      command = command_array.map { |arg|
+        # don't escape arguments wrapped in single or double quotes
+        if /^\s*('|").*(\1)\s*$/ !~ arg
+          _shellescape("#{arg}")
+        else
+          "#{arg}"
+        end
+      }.join(' ')
     end
     case options[:stderr]
     when :silence then
@@ -44,10 +67,6 @@ class Cask::SystemCommand
     unless status.success?
       raise CaskCommandFailedError.new(command, output)
     end
-  end
-
-  def self._quote(string)
-    %Q('#{string}')
   end
 
   def self._parse_plist(command, output)
