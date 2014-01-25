@@ -4,5 +4,7 @@ class WithPkgutilUninstall < TestCask
   version '1.2.3'
   sha1 '8588bd8175a54b8e0a1310cc18e6567d520ab7c4'
   install 'Fancy.pkg'
-  uninstall :pkgutil => 'my.fancy.package.*', :kext => 'my.fancy.package.kernelextension'
+  uninstall :pkgutil => 'my.fancy.package.*',
+            :kext => 'my.fancy.package.kernelextension',
+            :launchctl => 'my.fancy.package.service'
 end

@@ -67,7 +67,12 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     if uninstall_options.key? :launchctl
       [*uninstall_options[:launchctl]].each do |service|
         ohai "Removing launchctl service #{service}"
-        @command.run!('/bin/launchctl', :args => ['remove', service], :sudo => true)
+        [false, true].each do |with_sudo|
+          xml_status = @command.run('/bin/launchctl', :args => ['list', '-x', service], :sudo => with_sudo)
+          if %r{^<\?xml}.match(xml_status)
+            @command.run!('/bin/launchctl', :args => ['remove', service], :sudo => with_sudo)
+          end
+        end
       end
     end
 
