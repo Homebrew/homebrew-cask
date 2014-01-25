@@ -51,8 +51,8 @@ class Cask
         system '/bin/mkdir', caskroom
       else
         # sudo in system is rude.
-        system '/usr/bin/sudo', '/bin/mkdir', '-p', caskroom
-        system '/usr/bin/sudo', '/usr/sbin/chown', '-R', "#{current_user}:staff", caskroom.parent
+        system '/usr/bin/sudo', '--', '/bin/mkdir', '-p', '--', caskroom
+        system '/usr/bin/sudo', '--', '/usr/sbin/chown', '-R', '--', "#{current_user}:staff", caskroom.parent
       end
     end
     appdir.mkpath unless appdir.exist?
