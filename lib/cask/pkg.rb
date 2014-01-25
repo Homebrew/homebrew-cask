@@ -60,11 +60,11 @@ class Cask::Pkg
 
   def _with_full_permissions(path, &block)
     original_mode = (path.stat.mode % 01000).to_s(8)
-    @command.run!('/bin/chmod', :args => ['777', path], :sudo => true)
+    @command.run!('/bin/chmod', :args => ['--', '777', path], :sudo => true)
     block.call
   ensure
     if path.exist? # block may have removed dir
-      @command.run!('/bin/chmod', :args => [original_mode, path], :sudo => true)
+      @command.run!('/bin/chmod', :args => ['--', original_mode, path], :sudo => true)
     end
   end
 
