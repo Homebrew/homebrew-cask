@@ -1,4 +1,4 @@
-class Hexfiend < Cask
+class HexFiend < Cask
   url 'http://ridiculousfish.com/hexfiend/files/HexFiend.zip'
   homepage 'http://ridiculousfish.com/hexfiend/'
   version 'latest'
