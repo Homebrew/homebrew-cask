@@ -231,7 +231,9 @@ which points to a source file such as
 /opt/homebrew-cask/Caskroom/alfred/2.1.1_227/Alfred 2.app
 ```
 
-However, you can rename the target link which appears in your
+#### Renaming the Target
+
+You can rename the target link which appears in your
 `~/Applications` directory by adding a `:target` key to `link`,
 like this:
 
@@ -242,6 +244,16 @@ link 'Alfred 2.app', :target => 'Jeeves.app'
 The `:target` key works in a similar way for these Cask fields as well: `binary`,
 `colorpicker`, `font`, `input_method`, `prefpane`, `qlplugin`, `service`, and
 `widget`.
+
+#### Subfolders in .zip and .dmg
+
+When the application is in a subfolder within a downloaded .zip or .dmg, that folder's name must be included in the `link` field in order for the app to be installed.  So, if the downloaded zip unzips to a folder 'TexmakerMacosxLion' containing texmaker.app, the link must be specified as:
+
+```ruby
+link 'TexmakerMacosxLion/texmaker.app'
+```
+
+Linking to the .app file without reference to the containing folder will result in installation failing with a "symlink source is not there" error.
 
 ### Uninstall Support
 
