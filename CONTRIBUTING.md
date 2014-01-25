@@ -232,6 +232,7 @@ which points to a source file such as
 ```
 
 #### Renaming the Target
+
 You can rename the target link which appears in your
 `~/Applications` directory by adding a `:target` key to `link`,
 like this:
@@ -251,6 +252,8 @@ When the application is in a subfolder within a downloaded .zip or .dmg, that fo
 ```ruby
 link 'TexmakerMacosxLion/texmaker.app'
 ```
+
+Linking to the .app file without reference to the containing folder will result in installation failing with a "symlink source is not there" error.
 
 ### Uninstall Support
 
