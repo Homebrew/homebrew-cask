@@ -54,7 +54,7 @@ class Cask::Pkg
 
   def _rmdir(path)
     if path.children.empty?
-      @command.run!('/bin/rmdir', :args => [path], :sudo => true)
+      @command.run!('/bin/rmdir', :args => ['--', path], :sudo => true)
     end
   end
 
