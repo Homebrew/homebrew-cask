@@ -26,7 +26,8 @@ class Alfred < Cask
   homepage 'http://www.alfredapp.com/'
   version '2.0.6_203'
   sha1 'fcbcc1c0076bbd118c825e0e3253246244e65396'
-  link 'Alfred 2.app', 'Alfred Preferences.app'
+  link 'Alfred 2.app'
+  link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
 ```
 
