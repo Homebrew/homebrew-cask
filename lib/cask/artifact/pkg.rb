@@ -97,7 +97,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
         ohai "Unloading kernel extension #{kext}"
         is_loaded = @command.run!('/usr/sbin/kextstat', :args => ['-l', '-b', kext], :sudo => true)
         if is_loaded.length > 1
-          @command.run!('/sbin/kextunload', :args => ['-b', kext], :sudo => true)
+          @command.run!('/sbin/kextunload', :args => ['-b', '--', kext], :sudo => true)
         end
       end
     end
