@@ -243,6 +243,12 @@ The `:target` key works in a similar way for these Cask fields as well: `binary`
 `colorpicker`, `font`, `input_method`, `prefpane`, `qlplugin`, `service`, and
 `widget`.
 
+When the application is in a subfolder within a downloaded .zip or .dmg, that folder's name must be included in the `link` field in order for the app to be installed.  So, if the downloaded zip unzips to a folder 'TexmakerMacosxLion' containing texmaker.app, the link must be specified as:
+
+```ruby
+link 'TexmakerMacosxLion/texmaker.app'
+```
+
 ### Uninstall Support
 
 Since OS X has no standard uninstall behavior, there's a wide variety of
