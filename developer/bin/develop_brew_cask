@@ -66,13 +66,13 @@ create_dev_links () {
     local git_root="$2"
     /bin/mv -- rubylib production_rubylib
     /bin/mv -- Casks   production_Casks
-    /bin/ln -s "$git_root/Casks" .
-    /bin/ln -s "$git_root/lib"   rubylib
+    /bin/ln -s -- "$git_root/Casks" .
+    /bin/ln -s -- "$git_root/lib"   rubylib
     cd "$tap_dir"
     /bin/mv -- lib   production_lib
     /bin/mv -- Casks production_Casks
-    /bin/ln -s "$git_root/Casks" .
-    /bin/ln -s "$git_root/lib"   .
+    /bin/ln -s -- "$git_root/Casks" .
+    /bin/ln -s -- "$git_root/lib"   .
     printf "brew-cask is now in development mode\n"
     printf "Note: it is not safe to run 'brew update' while in development mode\n"
 }
