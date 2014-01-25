@@ -47,7 +47,11 @@ class Cask::SystemCommand
   end
 
   def self._quote(string)
-    %Q('#{string}')
+    if %r{^(['"]).*\1$}.match(string)
+      string
+    else
+      %Q('#{string}')
+    end
   end
 
   def self._parse_plist(command, output)
