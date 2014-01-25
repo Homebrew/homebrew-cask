@@ -1,4 +1,4 @@
-class Tvbrowser < Cask
+class TvBrowser < Cask
   url 'http://downloads.sourceforge.net/sourceforge/tvbrowser/tvbrowser_3.3.3_mac.dmg'
   homepage 'http://www.tvbrowser.org/index.php?setlang=en'
   version '3.3.3'
