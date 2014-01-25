@@ -18,7 +18,8 @@ git remote add $github_user https://github.com/$github_user/homebrew-cask
 
 Making a Cask is easy: a Cask is a small Ruby file.
 
-Here's a Cask for Alfred.app as an example:
+Here's a Cask for Alfred.app as an example.  Note that you may repeat
+the `link` stanza as many times as you need, to create multiple links:
 
 ```ruby
 class Alfred < Cask
@@ -80,7 +81,7 @@ Fill in the following fields for your Cask:
 | `version`          | application version; determines the directory structure in the Caskroom
 | `sha1`             | SHA-1 Checksum of the file; checked when the file is downloaded to prevent any funny business (can be omitted with `no_checksum`)
 | __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
-| `link`             | relative path to a file that should be linked into the `Applications` folder on installation
+| `link`             | relative path to a file that should be linked into the `Applications` folder on installation (see __Link Details__ for more information)
 | `install`          | relative path to `pkg` that should be run to install the application
 | `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see __Uninstall Support__ for more information)
 
@@ -128,21 +129,6 @@ If the "latest" URL does not point to a valid file for a Mac app, then we fall b
 
 ```
 http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
-```
-
-### Override symlink
-
-If you want to override the symlink of following artifacts `:link, :prefpane, :qlplugin, :font, :widget, :service, :colorpicker, :binary, :caskroom_only, :input_method`, use the target option like this:
-
-```ruby
-class Alfred < Cask
-  url 'http://cachefly.alfredapp.com/Alfred_2.1.1_227.zip'
-  homepage 'http://www.alfredapp.com/'
-  version '2.1.1_227'
-  sha1 'db28d2a5c655a4611c780c3f46252530118ddd9d'
-  link 'Alfred 2.app', :target => 'AnotherName.app'
-  link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
-end
 ```
 
 ### Naming Casks
@@ -223,6 +209,39 @@ Anonymous Pro       | `font-anonymous-pro`  | `FontAnonymousPro`
 
 Multiple font faces or families are often supplied in a single distribution. When fonts are distributed together, they should be installed together. Each Cask should correspond to a single binary distribution, not necessarily a single font face.
 
+### Link Details
+
+In the simple case of a single string argument to `link`, a symlink is
+created in the target `~/Applications` directory using the same name as
+the source file.  For example:
+
+```ruby
+link 'Alfred 2.app'
+```
+
+causes the creation of this symlink
+
+```bash
+~/Applications/Alfred 2.app
+```
+
+which points to a source file such as
+
+```bash
+/opt/homebrew-cask/Caskroom/alfred/2.1.1_227/Alfred 2.app
+```
+
+However, you can rename the target link which appears in your
+`~/Applications` directory by adding a `:target` key to `link`,
+like this:
+
+```ruby
+link 'Alfred 2.app', :target => 'Jeeves.app'
+```
+
+The `:target` key works in a similar way for these Cask fields as well: `binary`,
+`colorpicker`, `font`, `input_method`, `prefpane`, `qlplugin`, `service`, and
+`widget`.
 
 ### Uninstall Support
 
