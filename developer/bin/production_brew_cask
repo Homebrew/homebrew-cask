@@ -85,7 +85,7 @@ _production_brew_cask () {
     local git_root="$(/bin/pwd)"
     local brew_prefix="$(brew --prefix)"
     local cellar_dir="$brew_prefix/Cellar/brew-cask"
-    local version_dir="$(/bin/ls "$cellar_dir/" | /usr/bin/sort | /usr/bin/tail -1)"
+    local version_dir="$(/bin/ls -- "$cellar_dir/" | /usr/bin/sort | /usr/bin/tail -1)"
     local tap_dir="$brew_prefix/$tap_subdir"
 
     # sanity check
