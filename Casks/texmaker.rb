@@ -3,5 +3,5 @@ class Texmaker < Cask
   homepage 'http://www.xm1math.net/texmaker'
   version 'latest'
   no_checksum
-  link 'texmaker.app'
+  link 'TexmakerMacosxLion/texmaker.app'
 end
