@@ -12,6 +12,8 @@ module Cask::DSL
 
   def version; self.class.version; end
 
+  def depends_on_formula; self.class.depends_on_formula; end
+
   def sums; self.class.sums || []; end
 
   def artifacts; self.class.artifacts; end
@@ -31,6 +33,10 @@ module Cask::DSL
 
     def version(version=nil)
       @version ||= version
+    end
+
+    def depends_on_formula(*args)
+      @depends_on_formula ||= args
     end
 
     def artifacts
