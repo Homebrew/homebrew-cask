@@ -4,4 +4,8 @@ class Sage < Cask
   version '6.0'
   sha1 '0690169fb945237b3b5ef854e5ed460baae55a1c'
   link 'Sage-6.0.app'
+  binary 'Sage-6.0.app/Contents/Resources/sage/sage'
+  caveats do
+    files_in_usr_local
+  end
 end
