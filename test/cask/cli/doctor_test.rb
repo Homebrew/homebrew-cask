@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'cask/version'
 
-HOMEBREW_BREW_FILE ||= '/usr/local/bin/brew'
+HOMEBREW_BREW_FILE = '/usr/local/bin/brew'
 
 describe Cask::CLI::Doctor do
   it 'displays some nice info about the environment' do
