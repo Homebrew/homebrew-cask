@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class QqMusic < Cask
   url 'http://dldir1.qq.com/music/clntupate/QQMusicForMacV1.3.0.dmg'
   homepage 'http://y.qq.com'
