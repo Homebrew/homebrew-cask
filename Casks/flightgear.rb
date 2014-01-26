@@ -1,4 +1,4 @@
-class FlightGear < Cask
+class Flightgear < Cask
   url      'http://ftp.snt.utwente.nl/pub/software/flightgear/ftp/MacOSX/FlightGear-2.12.1.dmg'
   homepage 'http://www.flightgear.org/'
   version  '2.12.1'
