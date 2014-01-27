@@ -133,6 +133,18 @@ module Cask::DSL
       end
     end
 
+    ARTIFACT_AGRS_WITH_BLOCKS_TYPES = [
+      :container
+    ]
+
+    ARTIFACT_AGRS_WITH_BLOCKS_TYPES.each do |type|
+      define_method(type) do |*args, &block|
+        artifacts[type].merge(args)
+        block.call(args)
+      end
+    end
+
+
     attr_reader :sums
 
     def hash_name(hash_type)

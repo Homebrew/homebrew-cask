@@ -10,6 +10,7 @@ require 'cask/artifact/after_block'
 require 'cask/artifact/before_block'
 require 'cask/artifact/colorpicker'
 require 'cask/artifact/font'
+require 'cask/artifact/container'
 require 'cask/artifact/nested_container'
 require 'cask/artifact/pkg'
 require 'cask/artifact/prefpane'
@@ -20,7 +21,6 @@ require 'cask/artifact/caskroom_only'
 require 'cask/artifact/input_method'
 require 'cask/artifact/screen_saver'
 
-
 module Cask::Artifact
   #
   # NOTE: order is important here, since we want to extract nested containers
@@ -29,6 +29,7 @@ module Cask::Artifact
   def self.artifacts
     [
       Cask::Artifact::BeforeBlock,
+      Cask::Artifact::Container,
       Cask::Artifact::NestedContainer,
       Cask::Artifact::App,
       Cask::Artifact::Colorpicker,
