@@ -4,6 +4,8 @@ class Cask::CLI::Uninstall
     cask_names = args.reject { |a| a.chars.first == '-' }
     cask_names.each do |cask_name|
       cask = Cask.load(cask_name)
+      channel = ARGV.get_channel
+      cask.use_channel channel unless channel.nil?
       raise CaskNotInstalledError.new(cask) unless cask.installed?
       Cask::Installer.new(cask).uninstall
     end

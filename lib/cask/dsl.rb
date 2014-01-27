@@ -20,23 +20,26 @@ module Cask::DSL
 
   def caveats; self.class.caveats; end
 
+  def channels; self.class.channels; end
+
+  def use_channel channel; self.class.use_channel channel; end
+
+
   module ClassMethods
     def homepage(homepage=nil)
-      @homepage ||= homepage
+      @homepage = homepage || @homepage
     end
 
     def url(*args)
-      @url ||= begin
-        Cask::URL.new(*args) unless args.empty?
-      end
+      @url = args.empty? ? @url : Cask::URL.new(*args)
     end
 
     def version(version=nil)
-      @version ||= version
+      @version = version || @version
     end
 
     def depends_on_formula(*args)
-      @depends_on_formula ||= args
+      @depends_on_formula = args
     end
 
     def artifacts
@@ -53,6 +56,19 @@ module Cask::DSL
         # accessor
         @caveats
       end
+    end
+
+    def channel(*args, &block)
+      @channels ||= Hash.new { |hash, key| hash[key] = [] }
+      if block_given?
+        args.each do |c|
+          @channels[c.to_s] << args << block
+        end
+      end
+    end
+
+    def channels
+      @channels
     end
 
     ARTIFACT_TYPES = [
@@ -100,17 +116,17 @@ module Cask::DSL
     attr_reader :sums
 
     def md5(md5=nil)
-      @sums ||= []
+      @sums = [] if @sums == 0 || @sums.nil?
       @sums << Checksum.new(:md5, md5) unless md5.nil?
     end
 
     def sha1(sha1=nil)
-      @sums ||= []
+      @sums = [] if @sums == 0 || @sums.nil?
       @sums << Checksum.new(:sha1, sha1) unless sha1.nil?
     end
 
     def sha256(sha2=nil)
-      @sums ||= []
+      @sums = [] if @sums == 0 || @sums.nil?
       @sums << Checksum.new(:sha2, sha2) unless sha2.nil?
     end
 
@@ -129,6 +145,21 @@ module Cask::DSL
           new feature is released.
       EOPOO
       poo.split("\n").each { |line| opoo line }
+    end
+
+    def use_channel(channel)
+      if channels.keys.include? channel
+        backup_artifacts = @artifacts
+        @artifacts = Hash.new { |hash, key| hash[key] = Set.new }
+        backup_caveats = @caveats
+        @caveats = []
+
+        channels[channel][1].call channels[channel][0]
+
+        @artifacts = backup_artifacts unless @artifacts.any?
+        @caveats = backup_caveats unless @caveats.any?
+      else
+      end
     end
   end
 end
