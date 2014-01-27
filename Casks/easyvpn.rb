@@ -1,4 +1,4 @@
-class EasyVpn < Cask
+class Easyvpn < Cask
   url 'http://www.squashedsoftware.com/downloads/easyVPN_1.6.zip'
   homepage 'http://www.squashedsoftware.com/products-easyvpn.php'
   version '1.6'
