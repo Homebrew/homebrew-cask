@@ -42,5 +42,14 @@ We're really rather friendly! Here are the best places to talk about the project
  * Start an [issue on GitHub](https://github.com/phinze/homebrew-cask/issues/new)
  * Join us on IRC, we're at `#homebrew-cask` on Freenode
 
+## Reporting Bugs
+
+We still have bugs -- and we are busy fixing them!  If you have a problem, don't
+be shy about reporting it on our [GitHub issues page](https://github.com/phinze/homebrew-cask/issues?state=open).
+
+When reporting bugs, remember that homebrew-cask is an independent project from
+Homebrew.  Do your best to direct bug reports to the appropriate project.  If
+your command-line started with `brew cask`, bring the bug to us first!
+
 ## License:
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
