@@ -136,22 +136,36 @@ http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 
 We try to maintain a consistent naming policy so everything stays clean and predictable.
 
-#### Start From the App's Canonical Name
+#### Find the Canonical Name of the Author's Distribution
 
-  * do your best to find the canonical name for the title of the app you're submitting a Cask for
-  * however the author writes the app name is how it should be styled; this can usually be found on the author's website or within the application itself;
-  * pay attention to details, for example: `"Git Hub" != "git_hub" != "GitHub"`
+##### Canonical Names of Apps
+
+  * Start with the exact name of the Application bundle as it appears on disk,
+    such as `Google Chrome.app`
+  * Remove `.app` from the end
+  * Translate the name into English if necessary
+  * Pay attention to details, for example: `"Git Hub" != "git_hub" != "GitHub"`
+  * If the result of that process is something unhelpful, such as `Macintosh Installer`,
+    then just create the best name you can, based on the author's web page.
+
+##### Canonical Names of `pkg`-based Installers
+
+  * The Canonical Name of a `pkg` may be more tricky to determine than that
+    of an App.  If so, just create the best name you can, based on the
+    author's web page.
 
 #### Cask Name
 
-A Cask's "name" is its primary identifier in our project. It's the string people will use to interact with this Cask on their system.
+A "Cask name" is the primary identifier for a package in our project. It's the string
+people will use to interact with this Cask on their system.
 
-To get from an app's canonical name to a Cask name:
+To get from the App's canonical name to the Cask name:
 
-  * all lower case
+  * convert all letters to lower case
+  * hyphens stay hyphens
   * spaces become hyphens
   * digits stay digits
-  * examples
+  * a leading digit gets spelled out into English: `1password` becomes `onepassword`
 
 Casks are stored in a Ruby file matching their name.
 
