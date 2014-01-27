@@ -3,5 +3,5 @@ class ColorpickerDeveloper < Cask
   homepage 'http://panic.com/~wade/picker/'
   version 'latest'
   no_checksum
-  colorpicker 'DeveloperColorPicker.colorPicker'
+  colorpicker 'Developer Color Picker/DeveloperColorPicker.colorPicker'
 end
