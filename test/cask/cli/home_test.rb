@@ -38,10 +38,11 @@ describe Cask::CLI::Home do
     ]
   end
 
-  it "raises an exception when no cask is specified" do
-    lambda {
-      Cask::CLI::Home.run
-    }.must_raise CaskUnspecifiedError
+  it "opens the project page when no cask is specified" do
+    Cask::CLI::Home.run
+    Cask::CLI::Home.system_commands.must_equal [
+      ['/usr/bin/open', 'http://caskroom.io/'],
+    ]
   end
 end
 

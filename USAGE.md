@@ -71,7 +71,7 @@ This will both uninstall the Cask and remove symlinks which were created in
 * `info` -- displays information about the given Cask
 * `list` -- with no args, lists installed Casks; given installed Casks, lists installed files
 * `doctor` -- checks for configuration issues
-* `home` -- opens the homepage of the given Cask
+* `home` -- opens the homepage of the given Cask; or with no arguments, the homebrew-cask project page
 * `alfred` -- modifies Alfred's scope to include the Caskroom
 
 The following commands are for Cask authors:
