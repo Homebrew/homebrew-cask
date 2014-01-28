@@ -161,4 +161,17 @@ line of an email. (See [CONTRIBUTING.md](CONTRIBUTING.md#commit-messages)).
 A short but complete summary line helps the maintainers respond to your
 pull request more quickly.
 
+### External Commands
+
+Advanced users may create their own external commands for homebrew-cask by
+following conventions similar to external commands for git or Homebrew.  An
+external command may be any executable on your `$PATH` which follows the
+form `brewcask-<command>`.  (So long as `<command>` does not conflict with
+an existing command verb.)  The command will be invoked by `exec` and passed
+any unprocessed arguments from the original command-line.  An external
+command may also be implemented as an executable Ruby file, on your `$PATH`,
+which follows the form `brewcask-<command>.rb`.  The Ruby file will be
+`required` and will have full access to the Ruby environments of both
+homebrew-cask and Homebrew.
+
 # <3 THANK YOU! <3
