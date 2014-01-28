@@ -52,18 +52,22 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
   def manually_uninstall(uninstall_options)
     ohai "Running uninstall process for #{@cask}; your password may be necessary"
 
-    unknown_keys = uninstall_options.keys - [:script, :quit, :kext, :pkgutil, :launchctl, :files]
+    unknown_keys = uninstall_options.keys - [:early_script, :launchctl, :quit, :kext, :script, :pkgutil, :files]
     unless unknown_keys.empty?
       opoo "Unknown arguments to uninstall: #{unknown_keys.join(", ")}. Running `brew update; brew upgrade brew-cask` will likely fix it.'"
     end
 
-    if uninstall_options.key? :script
-      executable, script_arguments = self.class.read_script_arguments(uninstall_options, :script)
+    # Preserve prior functionality of script which runs first. Should rarely be needed.
+    # :early_script should not delete files, better defer that to :script.
+    # If Cask writers never need :early_script it may be removed in the future.
+    if uninstall_options.key? :early_script
+      executable, script_arguments = self.class.read_script_arguments(uninstall_options, :early_script)
       ohai "Running uninstall script #{executable}"
-      raise "Error in Cask #{@cask}: uninstall :script without :executable." if executable.nil?
+      raise "Error in Cask #{@cask}: uninstall :early_script without :executable." if executable.nil?
       @command.run!(@cask.destination_path.join(executable), script_arguments)
     end
 
+    # :launchctl must come before :quit for cases where app would instantly re-launch
     if uninstall_options.key? :launchctl
       [*uninstall_options[:launchctl]].each do |service|
         ohai "Removing launchctl service #{service}"
@@ -76,6 +80,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       end
     end
 
+    # :quit must come before :kext so the kext will not be in use by the app
     if uninstall_options.key? :quit
       [*uninstall_options[:quit]].each do |id|
         ohai "Quitting application ID #{id}"
@@ -86,6 +91,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       end
     end
 
+    # :kext should be unloaded before attempting to delete the relevant file
     if uninstall_options.key? :kext
       [*uninstall_options[:kext]].each do |kext|
         ohai "Unloading kernel extension #{kext}"
@@ -94,6 +100,13 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
           @command.run!('/sbin/kextunload', :args => ['-b', kext], :sudo => true)
         end
       end
+    end
+
+    # :script must come before :pkgutil or :files so that the script file is not already deleted
+    if uninstall_options.key? :script
+      executable, script_arguments = self.class.read_script_arguments(uninstall_options, :script)
+      raise "Error in Cask #{@cask}: uninstall :script without :executable." if executable.nil?
+      @command.run!(@cask.destination_path.join(executable), script_arguments)
     end
 
     if uninstall_options.key? :pkgutil
