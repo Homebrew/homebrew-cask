@@ -1,15 +1,15 @@
 #!/bin/bash
 #
-# extract_pkg_ids
+# list_ids_in_pkg
 #
 
 set -e;                # exit on any uncaught error
 set +o histexpand;     # don't expand history expressions
 shopt -s nocasematch;  # case-insensitive regular expressions
 
-_extract_pkg_ids () {
+_list_ids_in_pkg () {
 
-    local tmpdir=`/usr/bin/mktemp -d -t extract_pkg_ids`
+    local tmpdir=`/usr/bin/mktemp -d -t list_ids_in_pkg`
     trap "/bin/rm -rf '$tmpdir'" EXIT
 
     /usr/sbin/pkgutil --expand "$1" "$tmpdir/unpack"
@@ -26,7 +26,7 @@ _extract_pkg_ids () {
 }
 
 if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
-    printf "extract_pkg_ids <file.pkg>
+    printf "list_ids_in_pkg <file.pkg>
 
 Given a package file, extract a list of candidate Package IDs
 which may be useful in a Cask uninstall stanza, eg
@@ -54,6 +54,6 @@ See CONTRIBUTING.md and 'man pkgutil' for more information.
     exit
 fi
 
-_extract_pkg_ids "$@";
+_list_ids_in_pkg "$@";
 
 #
