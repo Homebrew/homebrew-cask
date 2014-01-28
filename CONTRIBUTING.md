@@ -347,6 +347,12 @@ And the following methods may be useful for interpolation:
   3. `PackageInfo` files are XML files, and bundle id(s) are found within the `identifier` attributes of `<pkg-info>` tags that look like
   `<pkg-info ... identifier="com.oracle.jdk7u51" ... >`, where extraneous attributes have been snipped out and replaced with ellipses.
   4. Once bundle id(s) have been identified, the unpacked package directory can be deleted.
+* Package kernel extensions (kexts) are also contained in `PackageInfo` files (see previous bullet point for finding them). 
+  Once the `PackageInfo` files have been located, `grep` for `kext`. If any kernel extensions are present, a command like 
+  `grep -i kext /path/to/PackageInfo` should return a `<bundle id>` tag with a `path` attribute that contains a `.kext` extension.
+  One example of a `<bundle id>` containing a kext comes from WavTap: 
+  `<bundle id="com.wavtap.driver.WavTap" ... path="./WavTap.kext" ... />`; extraneous attributes have been snipped out and 
+  replaced with ellipses.
 
 ## Testing Your New Cask
 
