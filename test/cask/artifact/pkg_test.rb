@@ -82,6 +82,37 @@ describe Cask::Artifact::Pkg do
 </plist>
         PLIST
       )
+      Cask::FakeSystemCommand.stubs_command(
+        %Q(/bin/launchctl 'list' '-x' 'my.fancy.package.service' 2>&1),
+        "launchctl list returned unknown response\n"
+      )
+      Cask::FakeSystemCommand.stubs_command(
+        %Q(/usr/bin/sudo -E '/bin/launchctl' 'list' '-x' 'my.fancy.package.service' 2>&1),
+        <<-PLIST
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>my.fancy.package.service</string>
+	<key>LastExitStatus</key>
+	<integer>0</integer>
+	<key>LimitLoadToSessionType</key>
+	<string>System</string>
+	<key>OnDemand</key>
+	<true/>
+	<key>ProgramArguments</key>
+	<array>
+		<string>argument</string>
+	</array>
+	<key>TimeOut</key>
+	<integer>30</integer>
+</dict>
+</plist>
+        PLIST
+      )
+      Cask::FakeSystemCommand.expects_command(%Q(/usr/bin/sudo -E '/bin/launchctl' 'remove' 'my.fancy.package.service' 2>&1))
+
       Cask::FakeSystemCommand.stubs_command(%Q(/usr/bin/sudo -E '/usr/sbin/kextstat' '-l' '-b' 'my.fancy.package.kernelextension' 2>&1), 'loaded')
       Cask::FakeSystemCommand.expects_command(%Q(/usr/bin/sudo -E '/sbin/kextunload' '-b' 'my.fancy.package.kernelextension' 2>&1))
       Cask::FakeSystemCommand.stubs_command(%Q(/usr/bin/sudo -E '/usr/sbin/pkgutil' '--forget' 'my.fancy.package.main' 2>&1))
