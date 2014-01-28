@@ -108,6 +108,10 @@ class Cask::CLI
       opts.on("--input_methoddir=MANDATORY") do |v|
         Cask.input_methoddir = Pathname(v).expand_path
       end
+      opts.on("--screen_saverdir=MANDATORY") do |v|
+       Cask.screen_saverdir = Pathname(v).expand_path
+      end
+
       opts.on("--no-binaries") do |v|
         Cask.no_binaries = true
       end
