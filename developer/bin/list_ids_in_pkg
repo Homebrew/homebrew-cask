@@ -20,7 +20,8 @@ _list_ids_in_pkg () {
     /usr/bin/sort | /usr/bin/uniq |                                                    \
     /usr/bin/egrep -v '^com\.apple\.' |                                                \
     /usr/bin/egrep -v 'sparkle\.finish-installation$' |                                \
-    /usr/bin/xargs -I{} -n1 /bin/bash -c                                               \
+    /usr/bin/perl -pe 's{\n}{\000}sg' |                                                \
+    /usr/bin/xargs -0 -I{} -n1 /bin/bash -c                                            \
       'printf "{}"; /usr/sbin/pkgutil --pkg-info "{}" >/dev/null 2>&1 && printf " (+)"; printf "\n"'
 
 }
