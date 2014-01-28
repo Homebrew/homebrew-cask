@@ -1,7 +1,7 @@
 class Visualvm < Cask
-  url 'https://java.net/projects/visualvm/downloads/download/release136/VisualVM_136.dmg'
+  url 'https://java.net/projects/visualvm/downloads/download/release137/visualvm_137.zip'
   homepage 'http://visualvm.java.net'
-  version '1.3.6'
-  sha1 '5d97e4dff9684490fd7ebced78c850e7e4319a10'
+  version '1.3.7'
+  sha1 '49e01d6c547c0bddcab38dbe46f688fd1c5f36f7'
   link 'VisualVM.app'
 end
