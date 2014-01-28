@@ -18,7 +18,11 @@ class Cask::Container
   end
 
   def self.for_path(path, command)
+    odebug "Determining which containers to use"
     criteria = Cask::Container::Criteria.new(path, command)
-    containers.find { |c| c.me?(criteria) }
+    containers.find do |c|
+      odebug "Checking container class #{c}"
+      c.me?(criteria)
+    end
   end
 end

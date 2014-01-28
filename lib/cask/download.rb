@@ -21,7 +21,11 @@ class Cask::Download
     sums.each do |sum|
       unless sum.empty?
         computed = Checksum.new(sum.hash_type, Digest.const_get(sum.hash_type.to_s.upcase).file(path).hexdigest)
-        raise ChecksumMismatchError.new(sum, computed) unless sum == computed
+        if sum == computed
+          odebug "Checksums match"
+        else
+          raise ChecksumMismatchError.new(sum, computed)
+        end
         has_sum = true
       end
     end

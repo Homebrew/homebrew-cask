@@ -16,6 +16,7 @@ class Cask::DownloadStrategy < CurlDownloadStrategy
   end
 
   def _fetch
+    odebug "Calling curl with args #{curl_args}"
     curl(*curl_args)
   end
 

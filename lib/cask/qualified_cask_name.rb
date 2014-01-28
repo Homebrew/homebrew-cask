@@ -44,6 +44,7 @@ module Cask::QualifiedCaskName
       user, repo, cask = path_elements
     end
     repo.sub!(%r{^#{repo_prefix}}, '')
+    odebug "[user, repo, cask] might be [#{user}, #{repo}, #{cask}]"
     [user, repo, cask]
   end
 end

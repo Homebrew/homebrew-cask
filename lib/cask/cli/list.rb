@@ -9,6 +9,7 @@ class Cask::CLI::List
 
   def self.list_files(*cask_names)
     cask_names.each do |cask_name|
+      odebug "Listing files for Cask #{cask_name}"
       cask = Cask.load(cask_name)
       if cask.installed?
         Cask::PrettyListing.new(cask).print
