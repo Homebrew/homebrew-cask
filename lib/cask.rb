@@ -29,6 +29,8 @@ require 'cask/source'
 require 'cask/system_command'
 require 'cask/underscore_supporting_uri'
 require 'cask/url'
+require 'cask/extend/ARGV'
+ARGV.extend(Cask::ArgvExtension)
 
 require 'plist/parser'
 

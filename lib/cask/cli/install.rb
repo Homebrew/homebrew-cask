@@ -5,6 +5,8 @@ class Cask::CLI::Install
     force = args.include? '--force'
     cask_names.each do |cask_name|
       cask = Cask.load(cask_name)
+      channel = ARGV.get_channel
+      cask.use_channel channel unless channel.nil?
       Cask::Installer.new(cask).install(force)
     end
   end
