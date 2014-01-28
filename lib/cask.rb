@@ -54,6 +54,7 @@ class Cask
     end
     appdir.mkpath unless appdir.exist?
     qlplugindir.mkpath unless qlplugindir.exist?
+    screen_saverdir.mkpath unless screen_saverdir.exist?
   end
 
   def self.load(query)

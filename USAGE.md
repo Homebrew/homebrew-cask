@@ -169,6 +169,9 @@ Default is `~/Library/Fonts`
 Default is `/usr/local/bin`
 * `--input_methoddir=/my/path` changes the path for Input Methods symlinks.
 Default is `~/Library/Input Methods`
+* `--screensaverdir=/my/path` changes the path for Screen Saver symlinks.
+Default is `~/Library/Screen Savers`
+
 
 To make these settings persistent, you might want to add the following line to your `.bash_profile` or `.zshenv`:
 
