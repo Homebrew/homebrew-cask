@@ -65,7 +65,7 @@ _homebrew_cask_project_stats () {
     fi
     printf "\n"
 
-    local git_log_cmd="git log --format='%ae' ${start_object}..${end_object}"
+    local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
 
     local cask_authors="$($git_log_cmd -- $cask_paths | sort | uniq | wc -l)"
     printf "  Casks\t$cask_authors\n"
@@ -77,7 +77,7 @@ _homebrew_cask_project_stats () {
     $git_log_cmd -- .           | sort | uniq | wc -l
     if [[ "$start_object" != "$initial_commit" ]]; then
         printf "\nAll-time contributors\t"
-        git log --format='%ae' ${initial_commit}..${end_object} -- . | sort | uniq | wc -l
+        git log --no-merges --format='%ae' ${initial_commit}..${end_object} -- . | sort | uniq | wc -l
     fi
 
     printf "\n"
