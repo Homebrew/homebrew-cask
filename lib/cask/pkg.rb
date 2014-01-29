@@ -91,6 +91,6 @@ class Cask::Pkg
   end
 
   def _broken_symlink?(path)
-    path.symlink? && !path.readlink.exist?
+    path.symlink? and !path.exist?
   end
 end
