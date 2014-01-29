@@ -4,5 +4,6 @@ class Flash < Cask
   version '12'
   no_checksum
   install 'Install Adobe Flash Player.app/Contents/Resources/Adobe Flash Player.pkg'
-  uninstall :pkgutil => 'com.adobe.pkg.FlashPlayer'
+  uninstall :pkgutil => 'com.adobe.pkg.FlashPlayer',
+            :files => '/Library/Internet Plug-Ins/Flash Player.plugin'
 end
