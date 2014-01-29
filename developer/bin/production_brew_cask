@@ -56,7 +56,7 @@ cd_to_version_dir () {
 not_inside_homebrew () {
     local tap_dir="$1"
     local git_root="$2"
-    if [[ "$(/usr/bin/stat -L -f '%i' "$tap_dir")" -eq "$(/usr/bin/stat -L -f '%i' "$git_root")" ]]; then
+    if [[ "$(/usr/bin/stat -L -f '%i' -- "$tap_dir")" -eq "$(/usr/bin/stat -L -f '%i' -- "$git_root")" ]]; then
         die "\nERROR: Run this script in your private repo, not inside Homebrew.\n"
     fi
 }
