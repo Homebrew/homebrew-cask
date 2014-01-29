@@ -67,25 +67,25 @@ _homebrew_cask_project_stats () {
 
     local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
 
-    local cask_authors="$($git_log_cmd -- $cask_paths | sort | uniq | wc -l)"
+    local cask_authors="$($git_log_cmd -- $cask_paths | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
     printf "  Casks\t$cask_authors\n"
     printf "  code\t"
-    $git_log_cmd -- $code_paths | sort | uniq | wc -l
+    $git_log_cmd -- $code_paths | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
     printf "  docs\t"
-    $git_log_cmd -- $doc_paths  | sort | uniq | wc -l
+    $git_log_cmd -- $doc_paths  | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
     printf "  any\t"
-    $git_log_cmd -- .           | sort | uniq | wc -l
+    $git_log_cmd -- .           | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
     if [[ "$start_object" != "$initial_commit" ]]; then
         printf "\nAll-time contributors\t"
-        git log --no-merges --format='%ae' ${initial_commit}..${end_object} -- . | sort | uniq | wc -l
+        git log --no-merges --format='%ae' ${initial_commit}..${end_object} -- . | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
     fi
 
     printf "\n"
 
     if [[ "$start_object" != "$initial_commit" ]]; then
-        local new_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^A.*\.rb' | cut -f2 | sort | uniq | wc -l)"
-        local deleted_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^D.*\.rb' | cut -f2 | sort | uniq | wc -l)"
-        local updated_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^M.*\.rb' | cut -f2 | sort | uniq | wc -l)"
+        local new_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^A.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        local deleted_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^D.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        local updated_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^M.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
         # arithmetic removes whitespace
         ((cask_authors  += 0))
         ((deleted_casks += 0))
@@ -95,7 +95,7 @@ _homebrew_cask_project_stats () {
     fi
 
     printf "Total current Casks in HEAD\t"
-    find $cask_paths -name '*.rb' | wc -l
+    /usr/bin/find $cask_paths -name '*.rb' | /usr/bin/wc -l
 
 }
 
