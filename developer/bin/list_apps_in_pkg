@@ -1,0 +1,64 @@
+#!/bin/bash
+#
+# list_apps_in_pkg
+#
+
+set -e;                # exit on any uncaught error
+set +o histexpand;     # don't expand history expressions
+shopt -s nocasematch;  # case-insensitive regular expressions
+
+_list_apps_in_pkg () {
+
+    local tmpdir=`/usr/bin/mktemp -d -t list_apps_in_pkg`
+    trap "/bin/rm -rf '$tmpdir'" EXIT
+
+    /usr/sbin/pkgutil --expand "$1" "$tmpdir/unpack"
+
+    {
+      # source 1
+      /usr/bin/find "$tmpdir" -name PackageInfo -print0 |   \
+      /usr/bin/xargs -0 /usr/bin/perl -0777 -ne             \
+       'while (m{<pkg-info[^\n]*install-location="/Applications".*?path\s*=\s*"([^"]+)"}sg) { my $p = $1; $p =~ s{\A.*/}{}; print "$p\n" }'; \
+      # source 2
+      /usr/bin/find "$tmpdir" -name PackageInfo -print0  |  \
+      /usr/bin/xargs -0 /usr/bin/perl -0777 -ne             \
+        'while (m{<pkg-info[^\n]*install-location="/".*?path\s*=\s*"./Applications/([^"]+)"}sg) { my $p = $1; $p =~ s{\A.*/}{}; print "$p\n" }';
+      # source 3
+      /usr/bin/find "$tmpdir" -type d -name '*.app' |       \
+      perl -pe 's{\A.*/}{}';                                \
+    } |                                                     \
+    # merge sources
+    /usr/bin/sort | /usr/bin/uniq |                         \
+    # markup
+    /usr/bin/perl -pe 's{\n}{\000}sg' |                     \
+    /usr/bin/xargs -0 -I{} -n1 /bin/bash -c                 \
+      'printf "{}"; /bin/test -n "$(/usr/bin/find /Applications -type d -maxdepth 3 -name "{}" -print0; /usr/bin/find ~/Applications -type d -maxdepth 3 -name "{}")" && printf " (+)"; printf "\n"'
+
+}
+
+if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
+    printf "list_apps_in_pkg <file.pkg>
+
+Given a package file, extract a list of candidate App names from
+inside the pkg, which may be useful for naming a Cask.
+
+The given package file need not be installed.
+
+If an App of the listed name is already installed in /Applications
+or ~/Applications, it will be followed by a plus symbol '(+)' in
+the output.  This can be verified via 'ls' or the Finder.
+
+This script is imperfect.
+ - It does not fully parse PackageInfo files
+ - An App can be hidden within a nested archive and not found
+ - Some pkg files simply don't contain any Apps
+
+See CONTRIBUTING.md and 'man pkgutil' for more information.
+
+"
+    exit
+fi
+
+_list_apps_in_pkg "$@";
+
+#
