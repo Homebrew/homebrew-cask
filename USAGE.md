@@ -28,7 +28,7 @@ commands are:
 
 ## Searching for Casks
 
-The `brew cask search` command accepts a substring (or regular expression) argument.
+The `brew cask search` command accepts a series of substring arguments.
 Let's see if there's a Cask for Google Chrome:
 
 ```bash
@@ -187,6 +187,18 @@ options in the command line:
 # Will force the Chrome app to be linked to ~/Applications
 # even though HOMEBREW_CASK_OPTS specified /Applications
 $ brew cask install --appdir="~/Applications" google-chrome
+```
+
+## Advanced searching
+
+The default search algorithm is a lax substring approach, which does not
+use the command-line arguments exactly as given.  If you need to specify
+a search more precisely, a single search argument enclosed in `/` characters
+will be taken as a Ruby regular expression:
+
+```bash
+$ brew cask search '/^google.c[a-z]rome$/'
+google-chrome
 ```
 
 ## Other Ways to Specify a Cask
