@@ -169,7 +169,7 @@ Default is `~/Library/Fonts`
 Default is `/usr/local/bin`
 * `--input_methoddir=/my/path` changes the path for Input Methods symlinks.
 Default is `~/Library/Input Methods`
-* `--screensaverdir=/my/path` changes the path for Screen Saver symlinks.
+* `--screen_saverdir=/my/path` changes the path for Screen Saver symlinks.
 Default is `~/Library/Screen Savers`
 
 
