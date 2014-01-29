@@ -84,10 +84,12 @@ _homebrew_cask_project_stats () {
 
     if [[ "$start_object" != "$initial_commit" ]]; then
         local new_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^A.*\.rb' | cut -f2 | sort | uniq | wc -l)"
+        local deleted_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^D.*\.rb' | cut -f2 | sort | uniq | wc -l)"
         local updated_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^M.*\.rb' | cut -f2 | sort | uniq | wc -l)"
         # arithmetic removes whitespace
         ((cask_authors  += 0))
-        ((new_casks     += 0))
+        ((deleted_casks += 0))
+        ((new_casks     -= deleted_casks))
         ((updated_casks += 0))
         printf "$new_casks Casks added ($updated_casks updated) by $cask_authors contributors since $start_object\n"
     fi
