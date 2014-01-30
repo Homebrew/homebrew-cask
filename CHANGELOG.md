@@ -29,6 +29,7 @@
 [#2594]: https://github.com/phinze/homebrew-cask/issues/2594
 [#2592]: https://github.com/phinze/homebrew-cask/issues/2592
 [#2581]: https://github.com/phinze/homebrew-cask/issues/2581
+[@goxberry]: https://github.com/goxberry
 [#2576]: https://github.com/phinze/homebrew-cask/issues/2576
 [#2555]: https://github.com/phinze/homebrew-cask/issues/2555
 [#2697]: https://github.com/phinze/homebrew-cask/issues/2697
@@ -45,11 +46,12 @@
 [#2545]: https://github.com/phinze/homebrew-cask/issues/2545
 [#2391]: https://github.com/phinze/homebrew-cask/issues/2391
 [#2618]: https://github.com/phinze/homebrew-cask/issues/2618
+[@stylerw]: https://github.com/stylerw
 
 ## 0.27.1
 
 * __Casks__
- - 10 Casks added (14 updated) by 17 contributors since 0.27.0
+ - 14 Casks added (14 updated) by 17 contributors since 0.27.0
  - 1060 total Casks
 * __Features__
  - [#2496][] improvements to `brew search` (still undocumented)
