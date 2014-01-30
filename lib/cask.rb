@@ -30,6 +30,7 @@ require 'cask/system_command'
 require 'cask/underscore_supporting_uri'
 require 'cask/url'
 require 'cask/utils'
+require 'cask/version'
 
 require 'plist/parser'
 
