@@ -1,5 +1,51 @@
 # CHANGELOG
 
+## 0.28.0
+
+* __Casks__
+ - 24 Casks added (46 updated) by 39 contributors since v0.27.1
+ - 1084 total Casks
+* __Features__
+ - [#2532][] Allow customizing the target symlink <3 [@voanhduy1512][]
+ - [#2647][] Add support for screensaver artifact <3 [@jedahan][]
+ - [#2305][] Add dependencies on Homebrew Formulae
+ - [#2594][] Support external commands beneath `brew cask`
+ - [#2592][], [#2581][] add `arch_only` to `caveats` mini-DSL <3 [@goxberry][]
+ - [#2576][] `brew cask home` with no args opens project homepage
+ - [#2555][] Add copious debugging with --debug
+ - [#2697][], [#2593][], [#2418][] Numerous additions to `brew cask doctor`
+ - [#2676][], [#2560][], [#2567][], [#2536][] Scripts to assist Cask authors [@goxberry][]
+* __Fixes__
+ - [#2670][], [#2650][] **IMPORTANT**: don't delete system symlinks.  **All users should upgrade.** <3 [@wallacewinfrey][], [@vmrob][]
+ - [#2545][] Improvements to `brew cask search`
+ - [#2391][], [#2618][] Refinements to `uninstall` processes
+ - 19 commits to documentation <3 [@goxberry][], [@stylerw][]
+
+[#2532]: https://github.com/phinze/homebrew-cask/issues/2532
+[@voanhduy1512]: https://github.com/voanhduy1512
+[#2647]: https://github.com/phinze/homebrew-cask/issues/2647
+[@jedahan]: https://github.com/jedahan
+[#2305]: https://github.com/phinze/homebrew-cask/issues/2305
+[#2594]: https://github.com/phinze/homebrew-cask/issues/2594
+[#2592]: https://github.com/phinze/homebrew-cask/issues/2592
+[#2581]: https://github.com/phinze/homebrew-cask/issues/2581
+[#2576]: https://github.com/phinze/homebrew-cask/issues/2576
+[#2555]: https://github.com/phinze/homebrew-cask/issues/2555
+[#2697]: https://github.com/phinze/homebrew-cask/issues/2697
+[#2593]: https://github.com/phinze/homebrew-cask/issues/2593
+[#2418]: https://github.com/phinze/homebrew-cask/issues/2418
+[#2676]: https://github.com/phinze/homebrew-cask/issues/2676
+[#2560]: https://github.com/phinze/homebrew-cask/issues/2560
+[#2567]: https://github.com/phinze/homebrew-cask/issues/2567
+[#2536]: https://github.com/phinze/homebrew-cask/issues/2536
+[#2670]: https://github.com/phinze/homebrew-cask/issues/2670
+[#2650]: https://github.com/phinze/homebrew-cask/issues/2650
+[@wallacewinfrey]: https://github.com/wallacewinfrey
+[@vmrob]: https://github.com/vmrob
+[#2545]: https://github.com/phinze/homebrew-cask/issues/2545
+[#2391]: https://github.com/phinze/homebrew-cask/issues/2391
+[#2618]: https://github.com/phinze/homebrew-cask/issues/2618
+
 ## 0.27.1
 
 * __Casks__
