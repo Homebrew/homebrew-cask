@@ -3,9 +3,17 @@
 # production_brew_cask
 #
 
+###
+### settings
+###
+
 set -e               # exit on any uncaught error
 set +o histexpand    # don't expand history expressions
 shopt -s nocasematch # case-insensitive regular expressions
+
+###
+### functions
+###
 
 warn () {
     local message="$@"
@@ -50,6 +58,10 @@ remove_dev_links () {
     /bin/mv production_Casks Casks
 }
 
+###
+### main
+###
+
 _production_brew_cask () {
 
     # configurable
@@ -80,6 +92,7 @@ _production_brew_cask () {
 
 }
 
+# process args
 if [[ $1 =~ ^-+h(elp)?$ ]]; then
     printf "production_brew_cask
 
@@ -93,6 +106,7 @@ After running this command it is safe to run 'brew update'.
     exit
 fi
 
+# dispatch main
 _production_brew_cask "${@}"
 
 #

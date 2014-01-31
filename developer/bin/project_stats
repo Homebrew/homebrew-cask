@@ -5,9 +5,17 @@
 # stats on project/release from git database
 #
 
+###
+### settings
+###
+
 set -e               # exit on any uncaught error
 set +o histexpand    # don't expand history expressions
 shopt -s nocasematch # case-insensitive regular expressions
+
+###
+### functions
+###
 
 warn () {
     local message="$@"
@@ -48,6 +56,10 @@ verify_git_object () {
         die "\nERROR: No such commit object: $1"
     fi
 }
+
+###
+### main
+###
 
 _homebrew_cask_project_stats () {
 
@@ -115,6 +127,7 @@ _homebrew_cask_project_stats () {
 
 }
 
+# process args
 if [[ $1 =~ ^-+h(elp)?$ ]]; then
     printf "project_stats [ <commit-object> ]
 
@@ -130,6 +143,7 @@ Without argument, show statistics since first commit.
     exit
 fi
 
+# dispatch main
 _homebrew_cask_project_stats "${@}"
 
 #

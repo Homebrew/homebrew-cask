@@ -3,11 +3,23 @@
 # list_ids_in_pkg
 #
 
+###
+### settings
+###
+
 set -e                # exit on any uncaught error
 set +o histexpand     # don't expand history expressions
 shopt -s nocasematch  # case-insensitive regular expressions
 
+###
+### global variables
+###
+
 tmpdir=''
+
+###
+### functions
+###
 
 bundle_id_source_1 () {
     /usr/bin/find "$tmpdir" -name PackageInfo -print0 |                                \
@@ -30,6 +42,10 @@ mark_up_sources () {
       'printf "{}"; /usr/sbin/pkgutil --pkg-info "{}" >/dev/null 2>&1 && printf " (+)"; printf "\n"'
 }
 
+###
+### main
+###
+
 _list_ids_in_pkg () {
 
     tmpdir=`/usr/bin/mktemp -d -t list_ids_in_pkg`
@@ -47,6 +63,7 @@ _list_ids_in_pkg () {
 
 }
 
+# process args
 if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
     printf "list_ids_in_pkg <file.pkg>
 
@@ -76,6 +93,7 @@ See CONTRIBUTING.md and 'man pkgutil' for more information.
     exit
 fi
 
+# dispatch main
 _list_ids_in_pkg "${@}"
 
 #

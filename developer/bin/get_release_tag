@@ -3,13 +3,25 @@
 # get_release_tag
 #
 
+###
+### settings
+###
+
 set -e               # exit on any uncaught error
 set +o histexpand    # don't expand history expressions
 shopt -s nocasematch # case-insensitive regular expressions
 
+###
+### global variables
+###
+
 opt_next=''
 opt_latest=''
 opt_verbose=''
+
+###
+### functions
+###
 
 warn () {
     local message="$@"
@@ -146,6 +158,10 @@ See RELEASING.md for more information.
     done
 }
 
+###
+### main
+###
+
 _get_release_tag () {
     cd_to_project_root
     local latest_tag="$(git describe --tags --abbrev=0 2>/dev/null)"
@@ -169,6 +185,7 @@ _get_release_tag () {
 
 process_args "${@}"
 
+# dispatch main
 _get_release_tag
 
 #

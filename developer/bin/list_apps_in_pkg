@@ -3,13 +3,25 @@
 # list_apps_in_pkg
 #
 
+###
+### settings
+###
+
 set -e                # exit on any uncaught error
 set +o histexpand     # don't expand history expressions
 shopt -s nocasematch  # case-insensitive regular expressions
 
+###
+### global variables
+###
+
 opt_lax=''
 opt_pkg=''
 tmpdir=''
+
+###
+### functions
+###
 
 warn () {
     local message="$@"
@@ -104,6 +116,10 @@ See CONTRIBUTING.md and 'man pkgutil' for more information.
     fi
 }
 
+###
+### main
+###
+
 _list_apps_in_pkg () {
 
     tmpdir=`/usr/bin/mktemp -d -t list_apps_in_pkg`
@@ -112,7 +128,7 @@ _list_apps_in_pkg () {
     /usr/sbin/pkgutil --expand "$opt_pkg" "$tmpdir/unpack"
 
     {
-      # strings that look like appnames (Something.app)
+      # strings that look like App names (Something.app)
       app_source_1;
       app_source_2;
       app_source_3;
@@ -126,6 +142,7 @@ _list_apps_in_pkg () {
 
 process_args "${@}"
 
+# dispatch main
 _list_apps_in_pkg
 
 #

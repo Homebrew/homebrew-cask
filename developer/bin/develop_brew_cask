@@ -3,9 +3,17 @@
 # develop_brew_cask
 #
 
+###
+### settings
+###
+
 set -e               # exit on any uncaught error
 set +o histexpand    # don't expand history expressions
 shopt -s nocasematch # case-insensitive regular expressions
+
+###
+### functions
+###
 
 warn () {
     local message="$@"
@@ -53,6 +61,10 @@ create_dev_links () {
     /bin/ln -s "$git_root/lib"   .
 }
 
+###
+### main
+###
+
 _develop_brew_cask () {
 
     # configurable
@@ -83,6 +95,7 @@ _develop_brew_cask () {
 
 }
 
+# process args
 if [[ $1 =~ ^-+h(elp)?$ ]]; then
     printf "develop_brew_cask
 
@@ -101,6 +114,7 @@ mode is in effect.
     exit
 fi
 
+# dispatch main
 _develop_brew_cask "${@}"
 
 #
