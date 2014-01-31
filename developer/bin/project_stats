@@ -24,6 +24,12 @@ declare -a doc_paths=(LICENSE "*.md")
 end_object="HEAD"
 
 ###
+### global variables
+###
+
+cask_authors=''
+
+###
 ### functions
 ###
 
@@ -70,6 +76,36 @@ verify_git_object () {
     fi
 }
 
+print_contributor_stats () {
+    local start_object="$1"
+    local initial_commit="$2"
+
+    local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
+    printf "Unique contributors"
+    if ! [[ "$start_object" = "$initial_commit" ]]; then
+        printf " since $start_object"
+    fi
+    printf "\n"
+    cask_authors="$($git_log_cmd -- "${cask_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+    printf "  Casks\t$cask_authors\n"
+    printf "  code\t"
+    $git_log_cmd -- "${code_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
+    printf "  docs\t"
+    $git_log_cmd -- "${doc_paths[@]}"  | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
+    printf "  any\t"
+    $git_log_cmd -- .           | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
+    if ! [[ "$start_object" = "$initial_commit" ]]; then
+        local alltime_contribs="$(git log --no-merges --format='%ae' ${initial_commit}..${end_object} -- . | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        local prior_contribs="$(git log --no-merges --format='%ae' ${initial_commit}..${start_object} -- . | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        # arithmetic removes whitespace
+        ((alltime_contribs += 0))
+        ((new_contribs      = alltime_contribs - prior_contribs))
+        printf "\nAll-time contributors\t$alltime_contribs\n"
+        printf "New contributors since $start_object\t$new_contribs\n"
+    fi
+    printf "\n"
+}
+
 ###
 ### main
 ###
@@ -91,33 +127,7 @@ _project_stats () {
     fi
     verify_git_object "$start_object"
 
-    printf "Unique contributors"
-    if ! [[ "$start_object" = "$initial_commit" ]]; then
-        printf " since $start_object"
-    fi
-    printf "\n"
-
-    local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
-
-    local cask_authors="$($git_log_cmd -- "${cask_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
-    printf "  Casks\t$cask_authors\n"
-    printf "  code\t"
-    $git_log_cmd -- "${code_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
-    printf "  docs\t"
-    $git_log_cmd -- "${doc_paths[@]}"  | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
-    printf "  any\t"
-    $git_log_cmd -- .           | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
-    if ! [[ "$start_object" = "$initial_commit" ]]; then
-        local alltime_contribs="$(git log --no-merges --format='%ae' ${initial_commit}..${end_object} -- . | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
-        local prior_contribs="$(git log --no-merges --format='%ae' ${initial_commit}..${start_object} -- . | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
-        # arithmetic removes whitespace
-        ((alltime_contribs += 0))
-        ((new_contribs      = alltime_contribs - prior_contribs))
-        printf "\nAll-time contributors\t$alltime_contribs\n"
-        printf "New contributors since $start_object\t$new_contribs\n"
-    fi
-
-    printf "\n"
+    print_contributor_stats "$start_object" "$initial_commit"
 
     if ! [[ "$start_object" = "$initial_commit" ]]; then
         local new_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^A.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
