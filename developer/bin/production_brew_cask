@@ -70,6 +70,8 @@ remove_dev_links () {
     /bin/rm lib Casks
     /bin/mv production_lib   lib
     /bin/mv production_Casks Casks
+    printf "brew-cask is now in production mode\n"
+    printf "It is safe to run 'brew update'\n"
 }
 
 ###
@@ -93,8 +95,6 @@ _production_brew_cask () {
     cd_to_version_dir "$cellar_dir" "$version_dir"
     if [[ -e "production_rubylib" ]]; then
         remove_dev_links "$tap_dir"
-        printf "brew-cask is now in production mode\n"
-        printf "It is safe to run 'brew update'\n"
     else
         die "brew-cask is already set up for production"
     fi

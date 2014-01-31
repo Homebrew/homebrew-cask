@@ -73,6 +73,8 @@ create_dev_links () {
     /bin/mv Casks production_Casks
     /bin/ln -s "$git_root/Casks" .
     /bin/ln -s "$git_root/lib"   .
+    printf "brew-cask is now in development mode\n"
+    printf "Note: it is not safe to run 'brew update' while in development mode\n"
 }
 
 ###
@@ -98,8 +100,6 @@ _develop_brew_cask () {
         die "brew-cask is already set up for development"
     else
         create_dev_links "$tap_dir" "$git_root"
-        printf "brew-cask is now in development mode\n"
-        printf "Note: it is not safe to run 'brew update' while in development mode\n"
     fi
 
 }
