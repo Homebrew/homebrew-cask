@@ -265,6 +265,27 @@ of the following keys:
 Each defined `uninstall` method is applied according to the order above. The order
 in which `uninstall` keys appear in the Cask file is ignored.
 
+#### Uninstall Key :pkgutil
+
+* One method for finding package bundle id(s) is the following:
+  1. Unpack `/path/to/my.pkg` (replace with your package name) with `pkgutil --expand /path/to/my.pkg /tmp/expanded.unpkg`.
+  2. The unpacked package is a folder. Bundle id(s) are contained within files named `PackageInfo`. These files can be found
+     with the command `find /tmp/expanded.unpkg -name PackageInfo`.
+  3. `PackageInfo` files are XML files, and bundle id(s) are found within the `identifier` attributes of `<pkg-info>` tags that look like
+  `<pkg-info ... identifier="com.oracle.jdk7u51" ... >`, where extraneous attributes have been snipped out and replaced with ellipses.
+  4. Once bundle id(s) have been identified, the unpacked package directory can be deleted.
+
+#### Uninstall Key :kext
+
+* If the kernel extension (kext) you are targeting is currently loaded, you can get its bundle id by running `developer/bin/list_loaded_kext_ids`.
+
+* Package kexts are also described in `PackageInfo` files (see __Uninstall Key :pkgutil__ for finding them).
+  Once the `PackageInfo` files have been located, `grep` for `kext`. If any kernel extensions are present, a command like
+  `grep -i kext /path/to/PackageInfo` should return a `<bundle id>` tag with a `path` attribute that contains a `.kext` extension.
+  One example of a `<bundle id>` containing a kext comes from WavTap:
+  `<bundle id="com.wavtap.driver.WavTap" ... path="./WavTap.kext" ... />`; extraneous attributes have been snipped out and
+  replaced with ellipses.
+
 ### Caveats Details
 
 #### Caveats as a String
@@ -327,19 +348,6 @@ And the following methods may be useful for interpolation:
 * We have some conventions for projects without version-specific URLs. `latest`
   is a common version for those, but you can grep through the existing Casks for
   other examples.
-* One method for finding package bundle id(s) is the following:
-  1. Unpack `/path/to/my.pkg` (replace with your package name) with `pkgutil --expand /path/to/my.pkg /tmp/expanded.unpkg`.
-  2. The unpacked package is a folder. Bundle id(s) are contained within files named `PackageInfo`. These files can be found
-     with the command `find /tmp/expanded.unpkg -name PackageInfo`.
-  3. `PackageInfo` files are XML files, and bundle id(s) are found within the `identifier` attributes of `<pkg-info>` tags that look like
-  `<pkg-info ... identifier="com.oracle.jdk7u51" ... >`, where extraneous attributes have been snipped out and replaced with ellipses.
-  4. Once bundle id(s) have been identified, the unpacked package directory can be deleted.
-* Package kernel extensions (kexts) are also contained in `PackageInfo` files (see previous bullet point for finding them). 
-  Once the `PackageInfo` files have been located, `grep` for `kext`. If any kernel extensions are present, a command like 
-  `grep -i kext /path/to/PackageInfo` should return a `<bundle id>` tag with a `path` attribute that contains a `.kext` extension.
-  One example of a `<bundle id>` containing a kext comes from WavTap: 
-  `<bundle id="com.wavtap.driver.WavTap" ... path="./WavTap.kext" ... />`; extraneous attributes have been snipped out and 
-  replaced with ellipses.
 
 ## Testing Your New Cask
 
