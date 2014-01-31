@@ -7,6 +7,22 @@ set -e                # exit on any uncaught error
 set +o histexpand     # don't expand history expressions
 shopt -s nocasematch  # case-insensitive regular expressions
 
+opt_lax=''
+opt_pkg=''
+
+warn () {
+    local message="$@"
+    if ! [[ $message =~ "\n"$ ]]; then
+        message="${message}\n"
+    fi
+    printf "$message" 1>&2
+}
+
+die () {
+    warn "$@"
+    exit 1
+}
+
 app_source_1 () {
     /usr/bin/find "$tmpdir" -name PackageInfo -print0 |   \
     /usr/bin/xargs -0 /usr/bin/perl -0777 -ne             \
@@ -24,6 +40,12 @@ app_source_3 () {
     perl -pe 's{\A.*/}{}';
 }
 
+app_source_4 () {
+    /usr/bin/find "$tmpdir" -name PackageInfo -print0  |  \
+    /usr/bin/xargs -0 /usr/bin/perl -0777 -ne             \
+      'while (m{path\s*=\s*"([^"]+\.app)"}sg) { my $p = $1; $p =~ s{\A.*/}{}; print "$p\n" }';
+}
+
 merge_sources () {
     /usr/bin/sort | /usr/bin/uniq
 }
@@ -34,25 +56,16 @@ mark_up_sources () {
       'printf "{}"; /bin/test -n "$(/usr/bin/find /Applications -type d -maxdepth 3 -name "{}" -print0; /usr/bin/find ~/Applications -type d -maxdepth 3 -name "{}")" && printf " (+)"; printf "\n"'
 }
 
-_list_apps_in_pkg () {
-
-    local tmpdir=`/usr/bin/mktemp -d -t list_apps_in_pkg`
-    trap "/bin/rm -rf '$tmpdir'" EXIT
-
-    /usr/sbin/pkgutil --expand "$1" "$tmpdir/unpack"
-
-    {
-      # strings that look like appnames (Something.app)
-      app_source_1;
-      app_source_2;
-      app_source_3;
-    } |                \
-    merge_sources |    \
-    mark_up_sources
-}
-
-if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
-    printf "list_apps_in_pkg <file.pkg>
+process_args () {
+    local arg
+    if [[ "$#" -eq 0 ]]; then
+        die "ERROR: A file argument is required"
+    else
+        opt_pkg="${!#}"   # last arg
+    fi
+    for arg in "$@"; do
+        if [[ $arg =~ ^-+h(elp)?$ ]]; then
+            printf "list_apps_in_pkg [ -lax ] <file.pkg>
 
 Given a package file, extract a list of candidate App names from
 inside the pkg, which may be useful for naming a Cask.
@@ -63,7 +76,12 @@ If an App of the listed name is already installed in /Applications
 or ~/Applications, it will be followed by a plus symbol '(+)' in
 the output.  This can be verified via 'ls' or the Finder.
 
-This script is imperfect.
+Arguments
+
+   -lax   Be less selective in looking for App names.  Generate
+          more, but less accurate, guesses.
+
+Bugs: This script is imperfect.
  - It does not fully parse PackageInfo files
  - An App can be hidden within a nested archive and not found
  - Some pkg files simply don't contain any Apps
@@ -71,9 +89,42 @@ This script is imperfect.
 See CONTRIBUTING.md and 'man pkgutil' for more information.
 
 "
-    exit
-fi
+            exit
+        elif [[ $arg =~ ^-+lax$ ]]; then
+            opt_lax='true'
+        elif [[ "$arg" = "$opt_pkg" ]]; then
+            opt_latest='true'
+        else
+            die "ERROR: Unknown argument '$arg'"
+        fi
+    done
+    if ! [[ -e "$opt_pkg" ]]; then
+        die "ERROR: No such pkg file: '$opt_pkg'"
+    fi
+}
 
-_list_apps_in_pkg "${@}"
+_list_apps_in_pkg () {
+
+    local tmpdir=`/usr/bin/mktemp -d -t list_apps_in_pkg`
+    trap "/bin/rm -rf '$tmpdir'" EXIT
+
+    /usr/sbin/pkgutil --expand "$opt_pkg" "$tmpdir/unpack"
+
+    {
+      # strings that look like appnames (Something.app)
+      app_source_1;
+      app_source_2;
+      app_source_3;
+      if [[ -n "$opt_lax" ]]; then
+          app_source_4;
+      fi
+    } |                \
+    merge_sources |    \
+    mark_up_sources
+}
+
+process_args "${@}"
+
+_list_apps_in_pkg
 
 #
