@@ -27,7 +27,7 @@ cd_to_project_root () {
     cd "$script_dir"
     local git_root="$(git rev-parse --show-toplevel)"
     if [[ -z "$git_root" ]]; then
-        die "Could not find git project root"
+        die "ERROR: Could not find git project root"
     fi
     cd "$git_root"
 }

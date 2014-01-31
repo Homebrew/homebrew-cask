@@ -25,7 +25,7 @@ cd_to_project_root () {
     cd "$script_dir"
     local git_root="$(git rev-parse --show-toplevel)"
     if [[ -z "$git_root" ]]; then
-        die "Could not find git project root"
+        die "ERROR: Could not find git project root"
     fi
     cd "$git_root"
 }
@@ -34,7 +34,7 @@ cd_to_version_dir () {
     local cellar_dir="$1"
     local version_dir="$2"
     if [[ -z "$version_dir" ]]; then
-        die "Can't get version dir under $cellar_dir/"
+        die "ERROR: Could not find version dir under $cellar_dir/"
     fi
     cd "$cellar_dir/$version_dir"
 }
@@ -68,7 +68,7 @@ _develop_brew_cask () {
 
     # sanity check
     if [[ "$(/usr/bin/stat -L -f '%i' "$tap_dir")" -eq "$(/usr/bin/stat -L -f '%i' "$git_root")" ]]; then
-        die "\nERROR: run this script in your private repo, not inside Homebrew."
+        die "\nERROR: Run this script in your private repo, not inside Homebrew."
     fi
 
     # action

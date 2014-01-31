@@ -29,23 +29,23 @@ cd_to_project_root () {
     cd "$script_dir"
     local git_root="$(git rev-parse --show-toplevel)"
     if [[ -z "$git_root" ]]; then
-        die "Could not find git project root"
+        die "ERROR: Could not find git project root"
     fi
     cd "$git_root"
 }
 
 verify_git_object_is_new () {
     if git rev-parse --verify "$1" >/dev/null 2>&1; then
-        die "\nERROR: proposed new tag: '$1' already exists as a commit object\n\n"
+        die "\nERROR: Proposed new tag: '$1' already exists as a commit object\n\n"
     fi
 }
 
 sanity_check_parsed_version () {
     if [[ $# -ne 3 ]]; then
-        die "Error: can't parse version tag, wrong number of elements"
+        die "ERROR: Could not parse version tag: wrong number of elements"
     fi
     if ! [[ $1 =~ ^v[0-9]+$ ]]; then
-        die "Error: can't parse version tag, does not start with v[0-9]"
+        die "ERROR: Could not parse version tag: does not start with v[0-9]"
     fi
 }
 
@@ -127,21 +127,21 @@ See RELEASING.md for more information.
             fi
         elif [[ $arg =~ ^-+patch$ ]]; then
             if [[ "$opt_next" == 'major' ]]; then
-                die "Error: -patch is incompatible with -major"
+                die "ERROR: -patch is incompatible with -major"
             fi
             opt_next='patch'
         elif [[ $arg =~ ^-+major$ ]]; then
             if [[ "$opt_next" == 'patch' ]]; then
-                die "Error: -patch is incompatible with -major"
+                die "ERROR: -patch is incompatible with -major"
             fi
             opt_next='major'
         elif [[ $arg =~ ^-+latest$ ]]; then
             opt_latest='true'
         else
-            die "Error: unknown argument '$arg'"
+            die "ERROR: Unknown argument '$arg'"
         fi
         if [[ -n "$opt_latest" && -n "$opt_next" ]]; then
-            die "Error: -latest is incompatible with -next/-patch/-major"
+            die "ERROR: -latest is incompatible with -next/-patch/-major"
         fi
     done
 }
@@ -150,7 +150,7 @@ _get_release_tag () {
     cd_to_project_root
     local latest_tag="$(git describe --tags --abbrev=0 2>/dev/null)"
     if [[ -z "$latest_tag" ]]; then
-        die "Error: no recent tag found"
+        die "ERROR: No recent tag found"
     elif [[ -z "$opt_next" ]]; then
         if [[ -n "$opt_verbose" ]]; then
             printf "Latest tag\t"
@@ -163,7 +163,7 @@ _get_release_tag () {
     elif [[ "$opt_next" == 'patch' ]]; then
         generate_next_patch_tag "$latest_tag"
     else
-        die "Error: should not happen. Unknown argument?"
+        die "ERROR: Should not happen. Unknown argument?"
     fi
 }
 
