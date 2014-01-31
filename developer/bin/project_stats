@@ -52,13 +52,14 @@ cd_to_project_root () {
 }
 
 warn_if_off_branch () {
-    local branch="$(git rev-parse --abbrev-ref HEAD)"
     local wanted_branch='master'
     if [[ -n "$1" ]]; then
         wanted_branch="$1"
     fi
-    if ! [[ "$branch" = "$wanted_branch" ]]; then
-        warn "\nWARNING: you are running from branch '$branch', not '$wanted_branch'\n\n"
+
+    local current_branch="$(git rev-parse --abbrev-ref HEAD)"
+    if ! [[ "$current_branch" = "$wanted_branch" ]]; then
+        warn "\nWARNING: you are running from branch '$current_branch', not '$wanted_branch'\n\n"
     fi
 }
 
