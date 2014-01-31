@@ -21,7 +21,6 @@ shopt -s nocasematch # case-insensitive regular expressions
 cask_paths="Casks"
 code_paths="bin developer lib test brew-cask.rb Rakefile Gemfile Gemfile.lock"
 doc_paths="LICENSE *.md"
-initial_commit="5a0d1d5556e3f963a0d34da46e16ecffa59ea2fc"
 end_object="HEAD"
 
 ###
@@ -78,10 +77,12 @@ verify_git_object () {
 _project_stats () {
     local arg_object="$1"
 
-    local start_object="$initial_commit"
-
     cd_to_project_root
     warn_if_off_branch 'master'
+
+    local initial_commit="$(git log --pretty=format:%H -- | /usr/bin/tail -1)"
+    verify_git_object "$initial_commit"
+    local start_object="$initial_commit"
 
     if [[ "$arg_object" = 'release' ]]; then
         start_object="$(git describe --tags --abbrev=0)"
