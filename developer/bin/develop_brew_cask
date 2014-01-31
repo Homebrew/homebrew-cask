@@ -53,6 +53,14 @@ cd_to_version_dir () {
     cd "$cellar_dir/$version_dir"
 }
 
+not_inside_homebrew () {
+    local tap_dir="$1"
+    local git_root="$2"
+    if [[ "$(/usr/bin/stat -L -f '%i' "$tap_dir")" -eq "$(/usr/bin/stat -L -f '%i' "$git_root")" ]]; then
+        die "\nERROR: Run this script in your private repo, not inside Homebrew.\n"
+    fi
+}
+
 create_dev_links () {
     local git_root="$1"
     local tap_dir="$2"
@@ -82,9 +90,7 @@ _develop_brew_cask () {
     local tap_dir="$brew_prefix/$tap_subdir"
 
     # sanity check
-    if [[ "$(/usr/bin/stat -L -f '%i' "$tap_dir")" -eq "$(/usr/bin/stat -L -f '%i' "$git_root")" ]]; then
-        die "\nERROR: Run this script in your private repo, not inside Homebrew."
-    fi
+    not_inside_homebrew "$tap_dir" "$git_root"
 
     # action
     cd_to_version_dir "$cellar_dir" "$version_dir"
