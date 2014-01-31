@@ -31,6 +31,6 @@ See CONTRIBUTING.md for more information.
     exit
 fi
 
-_list_recent_pkg_ids "$@"
+_list_recent_pkg_ids "${@}"
 
 #

@@ -130,6 +130,6 @@ Without argument, show statistics since first commit.
     exit
 fi
 
-_homebrew_cask_project_stats "$@"
+_homebrew_cask_project_stats "${@}"
 
 #

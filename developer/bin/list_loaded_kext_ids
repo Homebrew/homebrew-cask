@@ -30,6 +30,6 @@ See CONTRIBUTING.md for more information.
     exit
 fi
 
-_list_loaded_kext_ids "$@"
+_list_loaded_kext_ids "${@}"
 
 #

@@ -93,6 +93,6 @@ After running this command it is safe to run 'brew update'.
     exit
 fi
 
-_production_brew_cask "$@"
+_production_brew_cask "${@}"
 
 #

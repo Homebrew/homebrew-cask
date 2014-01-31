@@ -55,6 +55,6 @@ See CONTRIBUTING.md and 'man pkgutil' for more information.
     exit
 fi
 
-_list_ids_in_pkg "$@"
+_list_ids_in_pkg "${@}"
 
 #

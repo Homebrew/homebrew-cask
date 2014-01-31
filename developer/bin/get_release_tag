@@ -167,7 +167,7 @@ _get_release_tag () {
     fi
 }
 
-process_args "$@"
+process_args "${@}"
 
 _get_release_tag
 

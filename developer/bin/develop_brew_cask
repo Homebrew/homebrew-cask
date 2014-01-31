@@ -101,6 +101,6 @@ mode is in effect.
     exit
 fi
 
-_develop_brew_cask "$@"
+_develop_brew_cask "${@}"
 
 #
