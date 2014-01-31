@@ -9,13 +9,25 @@ set -e               # exit on any uncaught error
 set +o histexpand    # don't expand history expressions
 shopt -s nocasematch # case-insensitive regular expressions
 
+warn () {
+    local message="$@"
+    if ! [[ $message =~ "\n"$ ]]; then
+        message="${message}\n"
+    fi
+    printf "$message" 1>&2
+}
+
+die () {
+    warn "$@"
+    exit 1
+}
+
 cd_to_project_root () {
     local script_dir="$(/usr/bin/dirname $0)"
     cd "$script_dir"
     local git_root="$(git rev-parse --show-toplevel)"
     if [[ -z "$git_root" ]]; then
-        printf "Could not find git project root"
-        exit 1
+        die "Could not find git project root"
     fi
     cd "$git_root"
 }
@@ -27,14 +39,13 @@ warn_if_off_branch () {
         wanted_branch="$1"
     fi
     if ! [[ "$branch" = "$wanted_branch" ]]; then
-        printf "\nWARNING: you are running from branch '$branch', not '$wanted_branch'\n\n"
+        warn "\nWARNING: you are running from branch '$branch', not '$wanted_branch'\n\n"
     fi
 }
 
 verify_git_object () {
     if ! git rev-parse --verify "$1" > /dev/null 2>/dev/null; then
-        printf "\nERROR: No such commit object: $1\n\n"
-        exit 1
+        die "\nERROR: No such commit object: $1"
     fi
 }
 

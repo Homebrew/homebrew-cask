@@ -11,12 +11,16 @@ opt_next=''
 opt_latest=''
 opt_verbose=''
 
-die () {
+warn () {
     local message="$@"
     if ! [[ $message =~ "\n"$ ]]; then
         message="${message}\n"
     fi
     printf "$message" 1>&2
+}
+
+die () {
+    warn "$@"
     exit 1
 }
 
