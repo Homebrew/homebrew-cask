@@ -3,12 +3,15 @@
 # list_loaded_kext_ids
 #
 
-set -e;               # exit on any uncaught error
-set +o histexpand;    # don't expand history expressions
-shopt -s nocasematch; # case-insensitive regular expressions
+set -e               # exit on any uncaught error
+set +o histexpand    # don't expand history expressions
+shopt -s nocasematch # case-insensitive regular expressions
 
 _list_loaded_kext_ids () {
-    /usr/sbin/kextstat -kl | /usr/bin/cut -c53- | /usr/bin/cut -f1 -d' ' | /usr/bin/egrep -v '^com\.apple\.'
+    /usr/sbin/kextstat -kl |             \
+    /usr/bin/cut -c53- |                 \
+    /usr/bin/cut -f1 -d' ' |             \
+    /usr/bin/egrep -v '^com\.apple\.'
 }
 
 if [[ $1 =~ ^-+h(elp)?$ ]]; then
@@ -27,6 +30,6 @@ See CONTRIBUTING.md for more information.
     exit
 fi
 
-_list_loaded_kext_ids "$@";
+_list_loaded_kext_ids "$@"
 
 #

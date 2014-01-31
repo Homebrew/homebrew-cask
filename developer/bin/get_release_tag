@@ -3,16 +3,16 @@
 # get_release_tag
 #
 
-set -e;               # exit on any uncaught error
-set +o histexpand;    # don't expand history expressions
-shopt -s nocasematch; # case-insensitive regular expressions
+set -e               # exit on any uncaught error
+set +o histexpand    # don't expand history expressions
+shopt -s nocasematch # case-insensitive regular expressions
 
-opt_next='';
-opt_latest='';
-opt_verbose='';
+opt_next=''
+opt_latest=''
+opt_verbose=''
 
 die () {
-    local message="$@";
+    local message="$@"
     if ! [[ $message =~ "\n"$ ]]; then
         message="${message}\n"
     fi
@@ -71,7 +71,7 @@ generate_next_major_tag () {
 
 generate_next_minor_tag () {
     local -a version_elts
-    IFS='.' read -a version_elts <<< "$1";
+    IFS='.' read -a version_elts <<< "$1"
     sanity_check_parsed_version "${version_elts[@]}"
     (( version_elts[1] += 1 ))      # increment minor field
     version_elts[2]='0'             # reset patch field
@@ -123,12 +123,12 @@ See RELEASING.md for more information.
             fi
         elif [[ $arg =~ ^-+patch$ ]]; then
             if [[ "$opt_next" == 'major' ]]; then
-                die "Error: -patch is incompatible with -major";
+                die "Error: -patch is incompatible with -major"
             fi
             opt_next='patch'
         elif [[ $arg =~ ^-+major$ ]]; then
             if [[ "$opt_next" == 'patch' ]]; then
-                die "Error: -patch is incompatible with -major";
+                die "Error: -patch is incompatible with -major"
             fi
             opt_next='major'
         elif [[ $arg =~ ^-+latest$ ]]; then
@@ -143,7 +143,7 @@ See RELEASING.md for more information.
 }
 
 _get_release_tag () {
-    cd_to_project_root;
+    cd_to_project_root
     local latest_tag="$(git describe --tags --abbrev=0 2>/dev/null)"
     if [[ -z "$latest_tag" ]]; then
         die "Error: no recent tag found"
@@ -163,8 +163,8 @@ _get_release_tag () {
     fi
 }
 
-process_args "$@";
+process_args "$@"
 
-_get_release_tag;
+_get_release_tag
 
 #

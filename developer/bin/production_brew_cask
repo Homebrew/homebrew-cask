@@ -3,9 +3,9 @@
 # production_brew_cask
 #
 
-set -e;               # exit on any uncaught error
-set +o histexpand;    # don't expand history expressions
-shopt -s nocasematch; # case-insensitive regular expressions
+set -e               # exit on any uncaught error
+set +o histexpand    # don't expand history expressions
+shopt -s nocasematch # case-insensitive regular expressions
 
 cd_to_project_root () {
     local script_dir="$(/usr/bin/dirname $0)"
@@ -13,7 +13,7 @@ cd_to_project_root () {
     local git_root="$(git rev-parse --show-toplevel)"
     if [[ -z "$git_root" ]]; then
         printf "Could not find git project root"
-        exit 1;
+        exit 1
     fi
     cd "$git_root"
 }
@@ -22,8 +22,8 @@ cd_to_version_dir () {
     local cellar_dir="$1"
     local version_dir="$2"
     if [[ -z "$version_dir" ]]; then
-        printf "Can't get version dir under $cellar_dir/\n";
-        exit 1;
+        printf "Can't get version dir under $cellar_dir/\n"
+        exit 1
     fi
     cd "$cellar_dir/$version_dir"
 }
@@ -45,7 +45,7 @@ _production_brew_cask () {
     local tap_subdir="Library/Taps/phinze-cask"
 
     # initialization
-    cd_to_project_root;
+    cd_to_project_root
     local git_root="$(pwd)"
     local brew_prefix="$(brew --prefix)"
     local cellar_dir="$brew_prefix/Cellar/brew-cask"
@@ -55,13 +55,13 @@ _production_brew_cask () {
     # sanity check
     if [[ "$(/usr/bin/stat -L -f '%i' "$tap_dir")" -eq "$(/usr/bin/stat -L -f '%i' "$git_root")" ]]; then
         printf "\nERROR: run this script in your private repo, not inside Homebrew.\n"
-        exit 1;
+        exit 1
     fi
 
     # action
-    cd_to_version_dir "$cellar_dir" "$version_dir";
+    cd_to_version_dir "$cellar_dir" "$version_dir"
     if [[ -e "production_rubylib" ]]; then
-        remove_dev_links "$tap_dir";
+        remove_dev_links "$tap_dir"
         printf "brew-cask is now in production mode\n"
         printf "It is safe to run 'brew update'\n"
     else
@@ -84,6 +84,6 @@ After running this command it is safe to run 'brew update'.
     exit
 fi
 
-_production_brew_cask "$@";
+_production_brew_cask "$@"
 
 #

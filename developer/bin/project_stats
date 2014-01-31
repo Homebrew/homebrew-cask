@@ -5,9 +5,9 @@
 # stats on project/release from git database
 #
 
-set -e;               # exit on any uncaught error
-set +o histexpand;    # don't expand history expressions
-shopt -s nocasematch; # case-insensitive regular expressions
+set -e               # exit on any uncaught error
+set +o histexpand    # don't expand history expressions
+shopt -s nocasematch # case-insensitive regular expressions
 
 cd_to_project_root () {
     local script_dir="$(/usr/bin/dirname $0)"
@@ -15,7 +15,7 @@ cd_to_project_root () {
     local git_root="$(git rev-parse --show-toplevel)"
     if [[ -z "$git_root" ]]; then
         printf "Could not find git project root"
-        exit 1;
+        exit 1
     fi
     cd "$git_root"
 }
@@ -49,15 +49,15 @@ _homebrew_cask_project_stats () {
     local code_paths="bin developer lib test brew-cask.rb Rakefile Gemfile Gemfile.lock"
     local doc_paths="LICENSE *.md"
 
-    cd_to_project_root;
-    warn_if_off_branch 'master';
+    cd_to_project_root
+    warn_if_off_branch 'master'
 
     if [[ "$1" = 'release' ]]; then
         start_object="$(git describe --tags --abbrev=0)"
     elif [[ -n "$1" ]]; then
         start_object="$1"
     fi
-    verify_git_object "$start_object";
+    verify_git_object "$start_object"
 
     printf "Unique contributors"
     if [[ "$start_object" != "$initial_commit" ]]; then
@@ -119,6 +119,6 @@ Without argument, show statistics since first commit.
     exit
 fi
 
-_homebrew_cask_project_stats "$@";
+_homebrew_cask_project_stats "$@"
 
 #

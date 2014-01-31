@@ -3,9 +3,9 @@
 # list_ids_in_pkg
 #
 
-set -e;                # exit on any uncaught error
-set +o histexpand;     # don't expand history expressions
-shopt -s nocasematch;  # case-insensitive regular expressions
+set -e                # exit on any uncaught error
+set +o histexpand     # don't expand history expressions
+shopt -s nocasematch  # case-insensitive regular expressions
 
 _list_ids_in_pkg () {
 
@@ -55,6 +55,6 @@ See CONTRIBUTING.md and 'man pkgutil' for more information.
     exit
 fi
 
-_list_ids_in_pkg "$@";
+_list_ids_in_pkg "$@"
 
 #

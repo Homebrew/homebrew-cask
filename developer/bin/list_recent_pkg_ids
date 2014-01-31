@@ -3,9 +3,9 @@
 # list_recent_pkg_ids
 #
 
-set -e;               # exit on any uncaught error
-set +o histexpand;    # don't expand history expressions
-shopt -s nocasematch; # case-insensitive regular expressions
+set -e               # exit on any uncaught error
+set +o histexpand    # don't expand history expressions
+shopt -s nocasematch # case-insensitive regular expressions
 
 _list_recent_pkg_ids () {
     /bin/ls -t /var/db/receipts |                        \
@@ -31,6 +31,6 @@ See CONTRIBUTING.md for more information.
     exit
 fi
 
-_list_recent_pkg_ids "$@";
+_list_recent_pkg_ids "$@"
 
 #
