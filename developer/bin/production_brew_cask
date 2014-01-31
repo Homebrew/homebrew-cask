@@ -71,7 +71,7 @@ remove_dev_links () {
     /bin/mv production_lib   lib
     /bin/mv production_Casks Casks
     printf "brew-cask is now in production mode\n"
-    printf "It is safe to run 'brew update'\n"
+    printf "It is safe to run 'brew update' if you are in production mode for all Caskroom repos.\n"
 }
 
 ###
@@ -105,11 +105,13 @@ _production_brew_cask () {
 if [[ $1 =~ ^-+h(elp)?$ ]]; then
     printf "production_brew_cask
 
-Undo all symlinks created by 'develop_brew_cask' so that
-the 'brew cask' command will use only released code within
-Homebrew.
+Undo all symlinks created by 'develop_brew_cask' so that the
+'brew cask' command will use only released code and Casks
+within Homebrew.
 
-After running this command it is safe to run 'brew update'.
+After running this command it is safe to run 'brew update',
+unless you are using similar scripts to create symlinks into
+other Caskroom development repos.
 
 "
     exit
