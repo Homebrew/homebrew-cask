@@ -62,8 +62,8 @@ not_inside_homebrew () {
 }
 
 create_dev_links () {
-    local git_root="$1"
-    local tap_dir="$2"
+    local tap_dir="$1"
+    local git_root="$2"
     /bin/mv rubylib production_rubylib
     /bin/mv Casks   production_Casks
     /bin/ln -s "$git_root/Casks" .
@@ -97,7 +97,7 @@ _develop_brew_cask () {
     if [[ -e "production_rubylib" ]]; then
         die "brew-cask is already set up for development"
     else
-        create_dev_links "$git_root" "$tap_dir"
+        create_dev_links "$tap_dir" "$git_root"
         printf "brew-cask is now in development mode\n"
         printf "Note: it is not safe to run 'brew update' while in development mode\n"
     fi
