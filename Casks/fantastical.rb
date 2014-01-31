@@ -1,7 +1,12 @@
 class Fantastical < Cask
-  url 'http://cdn.flexibits.com/Fantastical_1.3.10.zip'
+  url 'http://cdn.flexibits.com/Fantastical_1.3.11.zip'
   homepage 'http://flexibits.com/fantastical'
-  version '1.3.10'
-  sha1 '62443ccd47b8bd8bfb5e88d1bc2efbaeeb37691a'
+  version '1.3.11'
+  sha1 '73522b88b177f42a8217a470fe0a1a09f182286a'
   link 'Fantastical.app'
+
+  after_install do
+    # Don't ask to move the app bundle to /Applications
+    system 'defaults write com.flexibits.fantastical moveToApplicationsFolderAlertSuppress -bool true'
+  end
 end

@@ -9,21 +9,18 @@ class Cask::CLI::List
 
   def self.list_files(*cask_names)
     cask_names.each do |cask_name|
-      begin
-        cask = Cask.load(cask_name)
-        if cask.installed?
-          Cask::PrettyListing.new(cask).print
-        else
-          opoo "#{cask} is not installed"
-        end
-      rescue CaskError => e
-        onoe e
+      odebug "Listing files for Cask #{cask_name}"
+      cask = Cask.load(cask_name)
+      if cask.installed?
+        Cask::PrettyListing.new(cask).print
+      else
+        opoo "#{cask} is not installed"
       end
     end
   end
 
   def self.list_installed
-    puts_columns Cask::CLI.nice_listing(Cask.installed)
+    puts_columns Cask.installed.map(&:to_s)
   end
 
   def self.help

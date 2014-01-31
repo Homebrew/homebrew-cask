@@ -1,14 +1,12 @@
 class Cask::CLI::Install
   def self.run(*args)
-    cask_names = args.reject { |a| a == '--force' }
+    raise CaskUnspecifiedError if args.empty?
+    cask_names = args.reject { |a| a.chars.first == '-' }
     force = args.include? '--force'
     cask_names.each do |cask_name|
-      begin
-       cask = Cask.load(cask_name)
-       Cask::Installer.new(cask).install(force)
-      rescue CaskError => e
-        onoe e
-      end
+      odebug "Installing Cask #{cask_name}"
+      cask = Cask.load(cask_name)
+      Cask::Installer.new(cask).install(force)
     end
   end
 

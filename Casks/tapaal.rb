@@ -1,7 +1,7 @@
 class Tapaal < Cask
-  url 'http://www.tapaal.net/fileadmin/download/tapaal-2.4/tapaal-2.4.0-mac.dmg'
+  url 'http://www.tapaal.net/fileadmin/download/tapaal-2.4/tapaal-2.4.2-mac.dmg'
   homepage 'http://www.tapaal.net'
-  version '2.4.0'
-  sha1 'e02f47e3a8ae83bb951b0d6f167437e19f1a6ba7'
+  version '2.4.2'
+  sha1 '5590ebea1dee27d43ef1268f98c1e8683e64658b'
   link 'Tapaal.app'
 end

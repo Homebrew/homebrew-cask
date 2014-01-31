@@ -4,4 +4,5 @@ class ElectricSheep < Cask
   version '2.7b35b'
   sha1 'fed402ee86bd91de8166c2e297f4cf3a06c99b70'
   install 'Electric Sheep.mpkg'
+  uninstall :pkgutil => 'org.electricsheep.electricSheep.*'
 end

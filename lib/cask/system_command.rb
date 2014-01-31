@@ -1,6 +1,7 @@
 class Cask::SystemCommand
   def self.run(command, options={})
     command = _process_options(command, options)
+    odebug "Executing: #{command}"
     output = ''
     IO.popen(command, 'r+') do |pipe|
       if options[:input]
@@ -26,7 +27,7 @@ class Cask::SystemCommand
 
   def self._process_options(command, options)
     if options[:sudo]
-      command = "sudo -E #{_quote(command)}"
+      command = "/usr/bin/sudo -E #{_quote(command)}"
     end
     if options[:args]
       command = "#{command} #{options[:args].map { |arg| _quote(arg) }.join(' ')}"
@@ -47,7 +48,11 @@ class Cask::SystemCommand
   end
 
   def self._quote(string)
-    %Q('#{string}')
+    if %r{^(['"]).*\1$}.match(string)
+      string
+    else
+      %Q('#{string}')
+    end
   end
 
   def self._parse_plist(command, output)

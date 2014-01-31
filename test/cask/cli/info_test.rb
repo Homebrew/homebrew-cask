@@ -26,4 +26,30 @@ describe Cask::CLI::Info do
       https://github.com/phinze/homebrew-testcasks/commits/master/Casks/local-transmission.rb
     CLIOUTPUT
   end
+
+  it 'should print caveats if the cask provided one' do
+    lambda {
+      Cask::CLI::Info.run('with-caveats')
+    }.must_output <<-CLIOUTPUT.undent
+      with-caveats: 1.2.3
+      http://example.com/local-caffeine
+      Not installed
+      https://github.com/phinze/homebrew-testcasks/commits/master/Casks/with-caveats.rb
+      ==> Caveats
+      Here are some things you might want to know.
+      Cask title: with-caveats
+      Custom text via puts followed by DSL-generated text:
+      To complete the installation of Cask with-caveats, you must also
+      run the installer at
+
+        '#{Cask.caskroom}/with-caveats/1.2.3/Installer.app'
+
+    CLIOUTPUT
+  end
+
+  it "raises an exception when no cask is specified" do
+    lambda {
+      Cask::CLI::Info.run
+    }.must_raise CaskUnspecifiedError
+  end
 end

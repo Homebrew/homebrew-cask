@@ -1,7 +1,7 @@
 class Clementine < Cask
-  url 'http://clementine-player.googlecode.com/files/clementine-1.1.0.dmg'
+  url 'http://clementine-player.googlecode.com/files/clementine-1.2.1.dmg'
   homepage 'http://www.clementine-player.org/'
-  version '1.1.0'
-  sha1 'dda3baeda071f6b46e8bb168eb5f856280807ba8'
+  version '1.2.1'
+  sha1 'dc56ddafe6ff21977f7e2d1c73c4e5605d912b96'
   link 'clementine.app'
 end

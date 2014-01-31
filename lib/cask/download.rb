@@ -8,11 +8,7 @@ class Cask::Download
   def perform
     require 'software_spec'
     cask = @cask
-    resource = Resource.new(cask.title) do |r|
-      r.url     cask.url.to_s
-      r.version cask.version
-    end
-    downloader = CurlDownloadStrategy.new(cask.title, resource)
+    downloader = Cask::DownloadStrategy.new(cask)
     downloaded_path = downloader.fetch
 
     _check_sums(downloaded_path, cask.sums) unless cask.sums === 0
@@ -25,7 +21,11 @@ class Cask::Download
     sums.each do |sum|
       unless sum.empty?
         computed = Checksum.new(sum.hash_type, Digest.const_get(sum.hash_type.to_s.upcase).file(path).hexdigest)
-        raise ChecksumMismatchError.new(sum, computed) unless sum == computed
+        if sum == computed
+          odebug "Checksums match"
+        else
+          raise ChecksumMismatchError.new(sum, computed)
+        end
         has_sum = true
       end
     end

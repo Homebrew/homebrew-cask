@@ -1,11 +1,24 @@
 module Cask::Artifact; end
 
 require 'cask/artifact/base'
+require 'cask/artifact/symlinked'
+require 'cask/artifact/hardlinked'
 
 require 'cask/artifact/app'
+require 'cask/artifact/binary'
+require 'cask/artifact/block'
+require 'cask/artifact/colorpicker'
+require 'cask/artifact/font'
 require 'cask/artifact/nested_container'
 require 'cask/artifact/pkg'
 require 'cask/artifact/prefpane'
+require 'cask/artifact/qlplugin'
+require 'cask/artifact/widget'
+require 'cask/artifact/service'
+require 'cask/artifact/caskroom_only'
+require 'cask/artifact/input_method'
+require 'cask/artifact/screensaver'
+
 
 module Cask::Artifact
   #
@@ -16,12 +29,26 @@ module Cask::Artifact
     [
       Cask::Artifact::NestedContainer,
       Cask::Artifact::App,
+      Cask::Artifact::Colorpicker,
       Cask::Artifact::Pkg,
       Cask::Artifact::Prefpane,
+      Cask::Artifact::Qlplugin,
+      Cask::Artifact::Font,
+      Cask::Artifact::Widget,
+      Cask::Artifact::Service,
+      Cask::Artifact::CaskroomOnly,
+      Cask::Artifact::Block,
+      Cask::Artifact::Binary,
+      Cask::Artifact::InputMethod,
+      Cask::Artifact::ScreenSaver,
     ]
   end
 
   def self.for_cask(cask)
-    artifacts.select { |artifact| artifact.me?(cask) }
+    odebug "Determining which artifacts are present in Cask #{cask}"
+    artifacts.select do |artifact|
+      odebug "Checking for artifact class #{artifact}"
+      artifact.me?(cask)
+    end
   end
 end

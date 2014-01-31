@@ -1,7 +1,8 @@
 class Genymotion < Cask
-  url 'https://ssl-files.genymotion.com/genymotion/genymotion-1.3.1/genymotion-1.3.1.dmg'
+  url 'https://ssl-files.genymotion.com/genymotion/genymotion-2.0.3/genymotion-2.0.3.dmg'
   homepage 'http://www.genymotion.com/'
-  version '1.3.1'
-  sha1 '92a4f3b25acd6fc777d9cf42da3efdd2d4d589fa'
-  link 'Genymotion.app', 'Genymotion Shell.app'
+  version '2.0.3'
+  sha1 '4124868d90befe69e2448f7c8b714c2a2819f082'
+  link 'Genymotion.app'
+  link 'Genymotion Shell.app'
 end

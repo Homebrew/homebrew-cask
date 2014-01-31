@@ -1,8 +1,8 @@
 class Asepsis < Cask
-  url 'http://downloads.binaryage.com/Asepsis-1.3.2.dmg'
+  url 'http://downloads.binaryage.com/Asepsis-1.4.dmg'
   homepage 'http://asepsis.binaryage.com/'
-  version '1.3.2'
-  sha1 'fbb97a5b91c3020e5bdb1a5088afa912512f02b0'
+  version '1.4.0'
+  sha1 '2f4a731213dfee5b06b51e472fb73f9f2b6f7c5a'
   install 'Asepsis.mpkg'
   uninstall :pkgutil => 'com.binaryage.pkg.asepsis'
 end

@@ -7,7 +7,7 @@ describe "Cask" do
       c.must_be_kind_of(Cask)
       c.must_be_instance_of(Adium)
     end
-    
+
     it "returns an instance of the cask from a specific file location" do
       location = File.expand_path('./Casks/dia.rb')
       c = Cask.load(location)
@@ -17,7 +17,9 @@ describe "Cask" do
 
     it "returns an instance of the cask from a url" do
       url = "file://" + File.expand_path('./Casks/dia.rb')
-      c = Cask.load(url)
+      c = shutup do
+        Cask.load(url)
+      end
       c.must_be_kind_of(Cask)
       c.must_be_instance_of(Dia)
     end
@@ -25,7 +27,9 @@ describe "Cask" do
     it "raises an error when failing to download a cask from a url" do
       lambda {
         url = "file://" + File.expand_path('./Casks/notacask.rb')
-        Cask.load(url)
+        shutup do
+          Cask.load(url)
+        end
       }.must_raise(CaskUnavailableError)
     end
 
@@ -33,6 +37,11 @@ describe "Cask" do
       c = Cask.load("./Casks/dia.rb")
       c.must_be_kind_of(Cask)
       c.must_be_instance_of(Dia)
+    end
+
+    it "uses exact match when loading by name" do
+      Cask.load('rest-client').must_be_instance_of(RestClient)
+      Cask.load('cocoa-rest-client').must_be_instance_of(CocoaRestClient)
     end
 
     it "raises an error when attempting to load a cask that doesn't exist" do

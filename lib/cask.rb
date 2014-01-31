@@ -1,27 +1,36 @@
-require 'uri'
-
 HOMEBREW_CACHE_CASKS = HOMEBREW_CACHE.join('Casks')
 
 class Cask; end
 
+require 'download_strategy'
+
 require 'cask/artifact'
 require 'cask/audit'
 require 'cask/auditor'
+require 'cask/without_source'
 require 'cask/checkable'
 require 'cask/cli'
+require 'cask/caveats'
 require 'cask/container'
 require 'cask/download'
+require 'cask/download_strategy'
 require 'cask/dsl'
 require 'cask/exceptions'
 require 'cask/fetcher'
 require 'cask/installer'
 require 'cask/link_checker'
 require 'cask/locations'
+require 'cask/options'
 require 'cask/pkg'
 require 'cask/pretty_listing'
+require 'cask/qualified_cask_name'
 require 'cask/scopes'
+require 'cask/source'
 require 'cask/system_command'
 require 'cask/underscore_supporting_uri'
+require 'cask/url'
+require 'cask/utils'
+require 'cask/version'
 
 require 'plist/parser'
 
@@ -29,76 +38,33 @@ class Cask
   include Cask::DSL
   include Cask::Locations
   include Cask::Scopes
-
-  def self._file_source?(requested_cask)
-    File.file?(requested_cask)
-  end
-
-  def self._uri_source?(requested_cask)
-    !!(requested_cask =~ URI.regexp)
-  end
+  include Cask::Options
 
   def self.init
+    odebug 'Creating directories'
     HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?
     unless caskroom.exist?
       ohai "We need to make Caskroom for the first time at #{caskroom}"
       ohai "We'll set permissions properly so we won't need sudo in the future"
       current_user = ENV['USER']
-      sudo = 'sudo' unless caskroom.parent.writable?
-      system "#{sudo} mkdir -p #{caskroom}"
-      system "#{sudo} chown -R #{current_user}:staff #{caskroom.parent}"
+      if caskroom.parent.writable?
+        system '/bin/mkdir', caskroom
+      else
+        # sudo in system is rude.
+        system '/usr/bin/sudo', '/bin/mkdir', '-p', caskroom
+        system '/usr/bin/sudo', '/usr/sbin/chown', '-R', "#{current_user}:staff", caskroom.parent
+      end
     end
     appdir.mkpath unless appdir.exist?
+    qlplugindir.mkpath unless qlplugindir.exist?
+    screen_saverdir.mkpath unless screen_saverdir.exist?
   end
 
-  def self._load_from_tap(cask_title)
-    if cask_title.include?('/')
-      cask_with_tap = cask_title
-    else
-      cask_with_tap = all_titles.grep(/#{cask_title}$/).first
-    end
-
-    if cask_with_tap
-      tap, cask = cask_with_tap.split('/')
-      source = tapspath.join(tap, 'Casks', "#{cask}.rb")
-    else
-      source = tapspath.join(default_tap, 'Casks', "#{cask_title}.rb")
-    end
-    raise CaskUnavailableError, cask_title unless source.exist?
-    _load_from_file(source)
-  end
-
-  def self._load_from_path(cask_path)
-    _load_from_file(Pathname.new(File::expand_path(cask_path)))
-  end
-
-  def self._load_from_uri(url)
-    HOMEBREW_CACHE_CASKS.mkpath
-    path = HOMEBREW_CACHE_CASKS.join(File.basename(url))
-    curl(url, '-o', path.to_s)
-    _load_from_path(path.to_s)
-  rescue ErrorDuringExecution
-    raise CaskUnavailableError, url
-  end
-
-  def self._load_from_file(source)
-    raise CaskUnavailableError, source unless source.exist?
-    require source
-    const_get(cask_class_name(source)).new
-  end
-
-  def self.load(requested_cask)
-    if _uri_source?(requested_cask)
-      _load_from_uri(requested_cask)
-    elsif _file_source?(requested_cask)
-      _load_from_path(requested_cask)
-    else
-      _load_from_tap(requested_cask)
-    end
-  end
-
-  def self.cask_class_name(pathname)
-    pathname.basename.to_s.sub(/\.rb/, '').split('-').map(&:capitalize).join
+  def self.load(query)
+    odebug 'Loading Cask definitions'
+    cask = Cask::Source.for_query(query).load
+    odumpcask cask
+    cask
   end
 
   def self.title
@@ -110,8 +76,12 @@ class Cask
     @title = title
   end
 
+  def caskroom_path
+    self.class.caskroom.join(title)
+  end
+
   def destination_path
-    self.class.caskroom.join(self.title).join(self.version)
+    caskroom_path.join(version)
   end
 
   def installed?

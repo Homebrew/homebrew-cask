@@ -1,7 +1,18 @@
 class Macvim < Cask
-  url 'https://github.com/eee19/macvim/releases/download/snapshot-71/MacVim-snapshot-71-Mountain-Lion.tbz'
+  if MacOS.version == :mavericks
+    url 'https://github.com/b4winckler/macvim/releases/download/snapshot-72/MacVim-snapshot-72-Mavericks.tbz'
+    sha1 'dc983ae1e3ffae1c80f06eea9eacee49019a0c8a'
+  else
+    url 'https://github.com/eee19/macvim/releases/download/snapshot-72/MacVim-snapshot-72-Mountain-Lion.tbz'
+    sha1 'bc3b899634d73908ddba5afd9b9a74778988aec3'
+  end
   homepage 'http://code.google.com/p/macvim/'
-  version '7.4-71'
-  sha1 '495a29e92769034e25779a66ee7fb120ada08792'
-  link 'MacVim-snapshot-71/MacVim.app'
+  version '7.4-72'
+  link 'MacVim-snapshot-72/MacVim.app'
+  binary 'MacVim-snapshot-72/mvim'
+  caveats <<-EOS.undent
+    Note that homebrew also provides a compiled macvim Formula that links its
+    binary to /usr/local/bin/mvim. It's not recommended to install both the
+    Cask and the Formula of MacVim.
+    EOS
 end

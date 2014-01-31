@@ -7,6 +7,7 @@ require 'cask/cli/alfred'
 require 'cask/cli/audit'
 require 'cask/cli/checklinks'
 require 'cask/cli/create'
+require 'cask/cli/doctor'
 require 'cask/cli/edit'
 require 'cask/cli/home'
 require 'cask/cli/info'
@@ -20,19 +21,40 @@ class Cask::CLI
     Cask::CLI.constants - ["NullCommand"]
   end
 
-  def self.lookup_command(command)
-    if command && Cask::CLI.const_defined?(command.capitalize)
-      Cask::CLI.const_get(command.capitalize)
+  def self.lookup_command(command_string)
+    if command_string && Cask::CLI.const_defined?(command_string.capitalize)
+      Cask::CLI.const_get(command_string.capitalize)
     else
-      Cask::CLI::NullCommand.new(command)
+      command_string
+    end
+  end
+
+  def self.run_command(command, *rest)
+    if command.respond_to?(:run)
+      command.run(*rest)
+    elsif which "brewcask-#{command}"
+      exec "brewcask-#{command}", *ARGV[1..-1]
+    elsif require? which("brewcask-#{command}.rb").to_s
+      exit 0
+    else
+      Cask::CLI::NullCommand.new(command).run
     end
   end
 
   def self.process(arguments)
-    command, *rest = *arguments
+    command_string, *rest = *arguments
     rest = process_options(rest)
     Cask.init
-    lookup_command(command).run(*rest)
+    command = lookup_command(command_string)
+    run_command(command, *rest)
+  rescue CaskAlreadyInstalledError => e
+    opoo e
+    $stderr.puts e.backtrace if Cask.debug
+    exit 0
+  rescue CaskError => e
+    onoe e
+    $stderr.puts e.backtrace if Cask.debug
+    exit 1
   end
 
   def self.nice_listing(cask_list)
@@ -54,12 +76,47 @@ class Cask::CLI
   end
 
   def self.parser
+    # If you modify these arguments, please update USAGE.md
     @parser ||= OptionParser.new do |opts|
+      opts.on("--caskroom=MANDATORY") do |v|
+        Cask.caskroom = Pathname(v).expand_path
+      end
       opts.on("--appdir=MANDATORY") do |v|
         Cask.appdir = Pathname(v).expand_path
       end
+      opts.on("--colorpickerdir=MANDATORY") do |v|
+        Cask.colorpickerdir = Pathname(v).expand_path
+      end
       opts.on("--prefpanedir=MANDATORY") do |v|
         Cask.prefpanedir = Pathname(v).expand_path
+      end
+      opts.on("--qlplugindir=MANDATORY") do |v|
+        Cask.qlplugindir = Pathname(v).expand_path
+      end
+      opts.on("--fontdir=MANDATORY") do |v|
+        Cask.fontdir = Pathname(v).expand_path
+      end
+      opts.on("--widgetdir=MANDATORY") do |v|
+        Cask.widgetdir = Pathname(v).expand_path
+      end
+      opts.on("--servicedir=MANDATORY") do |v|
+        Cask.servicedir = Pathname(v).expand_path
+      end
+      opts.on("--binarydir=MANDATORY") do |v|
+        Cask.binarydir = Pathname(v).expand_path
+      end
+      opts.on("--input_methoddir=MANDATORY") do |v|
+        Cask.input_methoddir = Pathname(v).expand_path
+      end
+      opts.on("--screen_saverdir=MANDATORY") do |v|
+       Cask.screen_saverdir = Pathname(v).expand_path
+      end
+
+      opts.on("--no-binaries") do |v|
+        Cask.no_binaries = true
+      end
+      opts.on("--debug") do |v|
+        Cask.debug = true
       end
     end
   end
@@ -67,7 +124,7 @@ class Cask::CLI
   def self.process_options(args)
     all_args = Shellwords.shellsplit(ENV['HOMEBREW_CASK_OPTS'] || "") + args
     remaining = []
-    while !all_args.empty?
+    until all_args.empty?
       begin
         head = all_args.shift
         remaining.concat(parser.parse([head]))
@@ -111,8 +168,11 @@ class Cask::CLI
       ''
     end
 
-    def _help_for(command)
-      Cask::CLI.lookup_command(command).help
+    def _help_for(command_string)
+      command = Cask::CLI.lookup_command(command_string)
+      if command.respond_to?(:help)
+        command.help
+      end
     end
   end
 end

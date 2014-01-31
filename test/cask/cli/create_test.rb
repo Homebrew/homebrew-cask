@@ -68,4 +68,10 @@ describe Cask::CLI::Create do
       [Cask.path('feine')]
     ]
   end
+
+  it "raises an exception when no cask is specified" do
+    lambda {
+      Cask::CLI::Create.run
+    }.must_raise CaskUnspecifiedError
+  end
 end

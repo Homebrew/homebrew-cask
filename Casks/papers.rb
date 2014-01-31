@@ -1,7 +1,7 @@
 class Papers < Cask
-  url 'http://www.papersapp.com/papers2/download'
+  url 'http://papersapp.com/papers/download'
   homepage 'http://www.papersapp.com/papers/'
-  version '2'
+  version '3'
   no_checksum
-  link 'Papers2.app'
+  link 'Papers.app'
 end

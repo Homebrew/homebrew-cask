@@ -43,5 +43,65 @@ describe Cask::CLI do
       default_applications_dir.directory?.must_equal false
       custom_applications_dir.directory?.must_equal true
     end
+
+    it "creates the qlplugindir if it does not exist" do
+      Cask.qlplugindir.rmdir
+      shutup {
+        Cask::CLI.process('list')
+      }
+      Cask.qlplugindir.directory?.must_equal true
+    end
+
+    it "respects the env variable when choosing what qlplugindir to create, not touching the default qlplugindir" do
+      default_qlplugin_dir = Cask.qlplugindir
+      default_qlplugin_dir.rmdir
+      custom_qlplugin_dir = Pathname(Dir.mktmpdir('custom_qlplugin_dir'))
+      custom_qlplugin_dir.rmdir
+
+      default_qlplugin_dir.directory?.must_equal false
+      custom_qlplugin_dir.directory?.must_equal false
+
+      begin
+        ENV['HOMEBREW_CASK_OPTS'] = "--qlplugindir=#{custom_qlplugin_dir}"
+        shutup {
+          Cask::CLI.process('list')
+        }
+      ensure
+        ENV.delete 'HOMEBREW_CASK_OPTS'
+      end
+
+      default_qlplugin_dir.directory?.must_equal false
+      custom_qlplugin_dir.directory?.must_equal true
+    end
+
+    it "respects the ENV variable when choosing a non-default Caskroom location" do
+      default_caskroom_dir = Cask.caskroom
+      default_caskroom_dir.rmdir
+      custom_caskroom_dir = Pathname(Dir.mktmpdir('custom_caskroom_dir'))
+      custom_caskroom_dir.rmdir
+
+      default_caskroom_dir.directory?.must_equal false
+      custom_caskroom_dir.directory?.must_equal false
+
+      begin
+        ENV['HOMEBREW_CASK_OPTS'] = "--caskroom=#{custom_caskroom_dir}"
+        shutup {
+          Cask::CLI.process('list')
+        }
+      ensure
+        ENV.delete 'HOMEBREW_CASK_OPTS'
+      end
+
+      default_caskroom_dir.directory?.must_equal false
+      custom_caskroom_dir.directory?.must_equal true
+    end
+
+    it "exits with a status of 1 when something goes wrong" do
+      Cask::CLI.expects(:exit).with(1)
+      Cask::CLI.expects(:lookup_command).raises(CaskError)
+      shutup {
+        Cask::CLI.process('list')
+      }
+    end
   end
 end

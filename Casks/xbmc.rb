@@ -1,7 +1,7 @@
 class Xbmc < Cask
-  url 'http://mirrors.xbmc.org/releases/osx/xbmc-12.2-x86_64.dmg'
+  url 'http://mirrors.xbmc.org/releases/osx/xbmc-12.3-x86_64.dmg'
   homepage 'http://xbmc.org/'
-  version '12.2'
-  sha1 '546e1002d51985b8e5c042e5a9b223e87189f457'
+  version '12.3'
+  sha1 '8cd28b4aef3081353269e7159d3d237844961dd4'
   link 'XBMC.app'
 end

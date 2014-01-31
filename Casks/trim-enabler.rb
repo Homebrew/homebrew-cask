@@ -1,6 +1,6 @@
 class TrimEnabler < Cask
-  url 'http://groths.org/trimenabler/TrimEnabler.dmg'
-  homepage 'http://www.groths.org/trim-enabler/'
+  url 'https://s3.amazonaws.com/groths/TrimEnabler.dmg'
+  homepage 'http://www.groths.org/software/trimenabler/'
   version 'latest'
   no_checksum
   link 'Trim Enabler.app'

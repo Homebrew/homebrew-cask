@@ -1,7 +1,7 @@
 class Vlc < Cask
+  url 'http://get.videolan.org/vlc/2.1.2/macosx/vlc-2.1.2.dmg'
   homepage 'http://www.videolan.org/vlc/'
-  url 'http://get.videolan.org/vlc/2.1.0/macosx/vlc-2.1.0.dmg'
-  version '2.1.0'
-  sha1 'a28961b75ca445ac8daad7944c71d6dbab0c7397'
+  version '2.1.2'
+  sha1 '2a4dceba046682a0f56528045ed637aacae03a33'
   link 'VLC.app'
 end

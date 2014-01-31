@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+#
+# list_running_app_ids
+#
+
+if ARGV.length > 0
+  puts <<-EOS
+list_running_app_ids
+
+Print a list of currently running Applications and associated Bundle IDs,
+which may be useful in a Cask uninstall stanza, eg
+
+    uninstall :quit => 'bundle.id.goes.here'
+
+Applications attributed to Apple are excluded from the output.
+
+See CONTRIBUTING.md for more information.
+
+EOS
+  exit
+end
+
+require 'open3'
+
+out, err, status = Open3.capture3('/usr/bin/osascript', '-e', 'tell application "System Events" to get (name, bundle identifier, unix id) of every process')
+if status.exitstatus > 0
+  puts err
+  exit status.exitstatus
+end
+
+out = out.split(', ')
+one_third  = out.length / 3
+app_names  = out.shift(one_third)
+bundle_ids = out.shift(one_third)
+unix_ids   = out.shift(one_third)
+
+puts "bundle_id\tapp_name\n"
+puts "--------------------------------------\n"
+app_names.zip(bundle_ids, unix_ids).each do |app_name, bundle_id, unix_id|
+  next if bundle_id =~ %r{^com\.apple\.}
+  next if app_name == 'osascript'   # this script itself
+  bundle_id.gsub!(/^(missing value)$/, '<\1>')
+  puts "#{bundle_id}\t#{app_name}\n"
+end
+
+#

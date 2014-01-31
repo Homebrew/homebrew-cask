@@ -1,7 +1,7 @@
 class Multibit < Cask
-  url 'https://multibit.org/releases/multibit-0.5.14/multibit-0.5.14.dmg'
+  url 'https://multibit.org/releases/multibit-0.5.16/multibit-0.5.16.dmg'
   homepage 'https://multibit.org/'
-  version '0.5.14'
-  sha1 '1a26137861b45014363454296bd8e1b3cc7d316d'
+  version '0.5.16'
+  sha1 'ec15502cd5387b8a1bb0d0eaf46ad50e5ecdd41c'
   link 'MultiBit.app'
 end
