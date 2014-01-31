@@ -106,6 +106,26 @@ print_contributor_stats () {
     printf "\n"
 }
 
+print_cask_stats () {
+    local start_object="$1"
+    local initial_commit="$2"
+
+    if ! [[ "$start_object" = "$initial_commit" ]]; then
+        local new_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^A.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        local deleted_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^D.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        local updated_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^M.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        # arithmetic removes whitespace
+        ((cask_authors  += 0))
+        ((deleted_casks += 0))
+        ((new_casks     -= deleted_casks))
+        ((updated_casks += 0))
+        printf "$new_casks Casks added ($updated_casks updated) by $cask_authors contributors since $start_object\n"
+    fi
+
+    printf "Total current Casks in HEAD\t"
+    /usr/bin/find "${cask_paths[@]}" -name '*.rb' | /usr/bin/wc -l
+}
+
 ###
 ### main
 ###
@@ -128,22 +148,7 @@ _project_stats () {
     verify_git_object "$start_object"
 
     print_contributor_stats "$start_object" "$initial_commit"
-
-    if ! [[ "$start_object" = "$initial_commit" ]]; then
-        local new_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^A.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
-        local deleted_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^D.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
-        local updated_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^M.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
-        # arithmetic removes whitespace
-        ((cask_authors  += 0))
-        ((deleted_casks += 0))
-        ((new_casks     -= deleted_casks))
-        ((updated_casks += 0))
-        printf "$new_casks Casks added ($updated_casks updated) by $cask_authors contributors since $start_object\n"
-    fi
-
-    printf "Total current Casks in HEAD\t"
-    /usr/bin/find "${cask_paths[@]}" -name '*.rb' | /usr/bin/wc -l
-
+    print_cask_stats        "$start_object" "$initial_commit"
 }
 
 # process args
