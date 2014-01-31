@@ -18,9 +18,9 @@ shopt -s nocasematch # case-insensitive regular expressions
 ###
 
 # these paths relative to project root
-cask_paths="Casks"
-code_paths="bin developer lib test brew-cask.rb Rakefile Gemfile Gemfile.lock"
-doc_paths="LICENSE *.md"
+declare -a cask_paths=(Casks)
+declare -a code_paths=(bin developer lib test brew-cask.rb Rakefile Gemfile Gemfile.lock)
+declare -a doc_paths=(LICENSE "*.md")
 end_object="HEAD"
 
 ###
@@ -99,12 +99,12 @@ _project_stats () {
 
     local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
 
-    local cask_authors="$($git_log_cmd -- $cask_paths | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+    local cask_authors="$($git_log_cmd -- "${cask_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
     printf "  Casks\t$cask_authors\n"
     printf "  code\t"
-    $git_log_cmd -- $code_paths | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
+    $git_log_cmd -- "${code_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
     printf "  docs\t"
-    $git_log_cmd -- $doc_paths  | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
+    $git_log_cmd -- "${doc_paths[@]}"  | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
     printf "  any\t"
     $git_log_cmd -- .           | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
     if ! [[ "$start_object" = "$initial_commit" ]]; then
@@ -120,9 +120,9 @@ _project_stats () {
     printf "\n"
 
     if ! [[ "$start_object" = "$initial_commit" ]]; then
-        local new_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^A.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
-        local deleted_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^D.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
-        local updated_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^M.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        local new_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^A.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        local deleted_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^D.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        local updated_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^M.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
         # arithmetic removes whitespace
         ((cask_authors  += 0))
         ((deleted_casks += 0))
@@ -132,7 +132,7 @@ _project_stats () {
     fi
 
     printf "Total current Casks in HEAD\t"
-    /usr/bin/find $cask_paths -name '*.rb' | /usr/bin/wc -l
+    /usr/bin/find "${cask_paths[@]}" -name '*.rb' | /usr/bin/wc -l
 
 }
 
