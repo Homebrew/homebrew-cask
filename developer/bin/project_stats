@@ -64,8 +64,10 @@ warn_if_off_branch () {
 }
 
 verify_git_object () {
-    if ! git rev-parse --verify "$1" > /dev/null 2>/dev/null; then
-        die "\nERROR: No such commit object: $1"
+    local object="$1"
+
+    if ! git rev-parse --verify "$object" -- >/dev/null 2>&1; then
+        die "\nERROR: No such commit object: '$object'\n\n"
     fi
 }
 
