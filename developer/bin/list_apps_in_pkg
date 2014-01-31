@@ -9,6 +9,7 @@ shopt -s nocasematch  # case-insensitive regular expressions
 
 opt_lax=''
 opt_pkg=''
+tmpdir=''
 
 warn () {
     local message="$@"
@@ -105,7 +106,7 @@ See CONTRIBUTING.md and 'man pkgutil' for more information.
 
 _list_apps_in_pkg () {
 
-    local tmpdir=`/usr/bin/mktemp -d -t list_apps_in_pkg`
+    tmpdir=`/usr/bin/mktemp -d -t list_apps_in_pkg`
     trap "/bin/rm -rf '$tmpdir'" EXIT
 
     /usr/sbin/pkgutil --expand "$opt_pkg" "$tmpdir/unpack"

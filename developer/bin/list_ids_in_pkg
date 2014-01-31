@@ -7,6 +7,8 @@ set -e                # exit on any uncaught error
 set +o histexpand     # don't expand history expressions
 shopt -s nocasematch  # case-insensitive regular expressions
 
+tmpdir=''
+
 bundle_id_source_1 () {
     /usr/bin/find "$tmpdir" -name PackageInfo -print0 |                                \
     /usr/bin/xargs -0 /usr/bin/perl -0777 -ne                                          \
@@ -30,7 +32,7 @@ mark_up_sources () {
 
 _list_ids_in_pkg () {
 
-    local tmpdir=`/usr/bin/mktemp -d -t list_ids_in_pkg`
+    tmpdir=`/usr/bin/mktemp -d -t list_ids_in_pkg`
     trap "/bin/rm -rf '$tmpdir'" EXIT
 
     /usr/sbin/pkgutil --expand "$1" "$tmpdir/unpack"
