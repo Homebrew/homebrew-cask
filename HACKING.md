@@ -172,6 +172,7 @@ any unprocessed arguments from the original command-line.  An external
 command may also be implemented as an executable Ruby file, on your `$PATH`,
 which follows the form `brewcask-<command>.rb`.  The Ruby file will be
 `required` and will have full access to the Ruby environments of both
-homebrew-cask and Homebrew.
+homebrew-cask and Homebrew.  Example external commands may be found in
+`developer/examples`.
 
 # <3 THANK YOU! <3
