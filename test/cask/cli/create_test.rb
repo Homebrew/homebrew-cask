@@ -43,7 +43,7 @@ describe Cask::CLI::Create do
         url ''
         homepage ''
         version ''
-        sha1 ''
+        sha256 ''
         link ''
       end
     TEMPLATE
