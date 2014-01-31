@@ -76,16 +76,17 @@ verify_git_object () {
 ###
 
 _project_stats () {
+    local arg_object="$1"
 
     local start_object="$initial_commit"
 
     cd_to_project_root
     warn_if_off_branch 'master'
 
-    if [[ "$1" = 'release' ]]; then
+    if [[ "$arg_object" = 'release' ]]; then
         start_object="$(git describe --tags --abbrev=0)"
-    elif [[ -n "$1" ]]; then
-        start_object="$1"
+    elif [[ -n "$arg_object" ]]; then
+        start_object="$arg_object"
     fi
     verify_git_object "$start_object"
 
