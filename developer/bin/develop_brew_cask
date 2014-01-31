@@ -12,6 +12,12 @@ set +o histexpand    # don't expand history expressions
 shopt -s nocasematch # case-insensitive regular expressions
 
 ###
+### configurable global variables
+###
+
+tap_subdir="Library/Taps/phinze-cask"
+
+###
 ### functions
 ###
 
@@ -66,9 +72,6 @@ create_dev_links () {
 ###
 
 _develop_brew_cask () {
-
-    # configurable
-    local tap_subdir="Library/Taps/phinze-cask"
 
     # initialization
     cd_to_project_root
