@@ -93,7 +93,7 @@ print_contributor_stats () {
     printf "  docs\t"
     $git_log_cmd -- "${doc_paths[@]}"  | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
     printf "  any\t"
-    $git_log_cmd -- .           | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
+    $git_log_cmd -- .                  | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
     if ! [[ "$start_object" = "$initial_commit" ]]; then
         local alltime_contribs="$(git log --no-merges --format='%ae' ${initial_commit}..${end_object} -- . | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
         local prior_contribs="$(git log --no-merges --format='%ae' ${initial_commit}..${start_object} -- . | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
@@ -136,7 +136,7 @@ print_cask_stats () {
     local initial_commit="$2"
 
     if ! [[ "$start_object" = "$initial_commit" ]]; then
-        local new_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^A.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        local     new_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^A.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
         local deleted_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^D.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
         local updated_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^M.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
         # arithmetic removes whitespace
