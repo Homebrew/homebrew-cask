@@ -85,7 +85,7 @@ _project_stats () {
     local start_object="$initial_commit"
 
     if [[ "$arg_object" = 'release' ]]; then
-        start_object="$(git describe --tags --abbrev=0)"
+        start_object="$(./developer/bin/get_release_tag)"
     elif [[ -n "$arg_object" ]]; then
         start_object="$arg_object"
     fi
