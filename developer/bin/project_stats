@@ -61,7 +61,7 @@ verify_git_object () {
 ### main
 ###
 
-_homebrew_cask_project_stats () {
+_project_stats () {
 
     local initial_commit="5a0d1d5556e3f963a0d34da46e16ecffa59ea2fc"
     local start_object="$initial_commit"
@@ -144,6 +144,6 @@ Without argument, show statistics since first commit.
 fi
 
 # dispatch main
-_homebrew_cask_project_stats "${@}"
+_project_stats "${@}"
 
 #
