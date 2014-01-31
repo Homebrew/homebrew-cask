@@ -22,6 +22,7 @@ end
 
 require 'open3'
 
+running = {}
 out, err, status = Open3.capture3('/usr/bin/osascript', '-e', 'tell application "System Events" to get (name, bundle identifier, unix id) of every process')
 if status.exitstatus > 0
   puts err
@@ -34,13 +35,13 @@ app_names  = out.shift(one_third)
 bundle_ids = out.shift(one_third)
 unix_ids   = out.shift(one_third)
 
-puts "bundle_id\tapp_name\n"
-puts "--------------------------------------\n"
 app_names.zip(bundle_ids, unix_ids).each do |app_name, bundle_id, unix_id|
   next if bundle_id =~ %r{^com\.apple\.}
   next if app_name == 'osascript'   # this script itself
   bundle_id.gsub!(/^(missing value)$/, '<\1>')
-  puts "#{bundle_id}\t#{app_name}\n"
+  running["#{bundle_id}\t#{app_name}"] = 1
 end
 
-#
+puts "bundle_id\tapp_name\n"
+puts "--------------------------------------\n"
+puts running.keys.sort
