@@ -25,7 +25,7 @@ def odumpcask cask
   if Cask.respond_to?(:debug) and Cask.debug
     odebug "Cask instance dumps in YAML:"
     odebug "Cask instance toplevel:", cask.to_yaml
-    [:homepage, :url, :version, :sums, :artifacts, :caveats].each do |method|
+    [:homepage, :url, :version, :sums, :artifacts, :caveats, :depends_on_formula].each do |method|
       odebug "Cask instance method '#{method}':", cask.send(method).to_yaml
     end
   end
