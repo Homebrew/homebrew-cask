@@ -46,7 +46,8 @@ class Cask::DownloadStrategy < CurlDownloadStrategy
     if cask_url.cookies
       [
         '-b',
-        cask_url.cookies.map do |key, value|
+        # sort_by is for predictability between Ruby versions
+        cask_url.cookies.sort_by{ |key, value| key.to_s }.map do |key, value|
           "#{CGI.escape(key.to_s)}=#{CGI.escape(value.to_s)}"
         end.join(';')
       ]
