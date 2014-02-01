@@ -3,5 +3,5 @@ class ScalaIde < Cask
   homepage 'http://scala-ide.org/'
   version '3.0.2'
   sha1 '5d467d9054d940cf7e2f750ff60aa3bd11e8dae3'
-  link 'eclipse/Eclipse.app'
+  link 'eclipse/Eclipse.app', :target => 'Scala IDE.app'
 end
