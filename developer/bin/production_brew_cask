@@ -3,17 +3,43 @@
 # production_brew_cask
 #
 
-set -e;               # exit on any uncaught error
-set +o histexpand;    # don't expand history expressions
-shopt -s nocasematch; # case-insensitive regular expressions
+###
+### settings
+###
+
+set -e               # exit on any uncaught error
+set +o histexpand    # don't expand history expressions
+shopt -s nocasematch # case-insensitive regular expressions
+
+###
+### configurable global variables
+###
+
+tap_subdir="Library/Taps/phinze-cask"
+
+###
+### functions
+###
+
+warn () {
+    local message="$@"
+    if ! [[ $message =~ "\n"$ ]]; then
+        message="${message}\n"
+    fi
+    printf "$message" 1>&2
+}
+
+die () {
+    warn "$@"
+    exit 1
+}
 
 cd_to_project_root () {
     local script_dir="$(/usr/bin/dirname $0)"
     cd "$script_dir"
     local git_root="$(git rev-parse --show-toplevel)"
     if [[ -z "$git_root" ]]; then
-        printf "Could not find git project root"
-        exit 1;
+        die "ERROR: Could not find git project root"
     fi
     cd "$git_root"
 }
@@ -22,10 +48,17 @@ cd_to_version_dir () {
     local cellar_dir="$1"
     local version_dir="$2"
     if [[ -z "$version_dir" ]]; then
-        printf "Can't get version dir under $cellar_dir/\n";
-        exit 1;
+        die "ERROR: Could not find version dir under $cellar_dir/"
     fi
     cd "$cellar_dir/$version_dir"
+}
+
+not_inside_homebrew () {
+    local tap_dir="$1"
+    local git_root="$2"
+    if [[ "$(/usr/bin/stat -L -f '%i' "$tap_dir")" -eq "$(/usr/bin/stat -L -f '%i' "$git_root")" ]]; then
+        die "\nERROR: Run this script in your private repo, not inside Homebrew.\n"
+    fi
 }
 
 remove_dev_links () {
@@ -37,53 +70,54 @@ remove_dev_links () {
     /bin/rm lib Casks
     /bin/mv production_lib   lib
     /bin/mv production_Casks Casks
+    printf "brew-cask is now in production mode\n"
+    printf "It is safe to run 'brew update' if you are in production mode for all Caskroom repos.\n"
 }
+
+###
+### main
+###
 
 _production_brew_cask () {
 
-    # configurable
-    local tap_subdir="Library/Taps/phinze-cask"
-
     # initialization
-    cd_to_project_root;
-    local git_root="$(pwd)"
+    cd_to_project_root
+    local git_root="$(/bin/pwd)"
     local brew_prefix="$(brew --prefix)"
     local cellar_dir="$brew_prefix/Cellar/brew-cask"
     local version_dir="$(/bin/ls "$cellar_dir/" | /usr/bin/sort | /usr/bin/tail -1)"
     local tap_dir="$brew_prefix/$tap_subdir"
 
     # sanity check
-    if [[ "$(/usr/bin/stat -L -f '%i' "$tap_dir")" -eq "$(/usr/bin/stat -L -f '%i' "$git_root")" ]]; then
-        printf "\nERROR: run this script in your private repo, not inside Homebrew.\n"
-        exit 1;
-    fi
+    not_inside_homebrew "$tap_dir" "$git_root"
 
     # action
-    cd_to_version_dir "$cellar_dir" "$version_dir";
+    cd_to_version_dir "$cellar_dir" "$version_dir"
     if [[ -e "production_rubylib" ]]; then
-        remove_dev_links "$tap_dir";
-        printf "brew-cask is now in production mode\n"
-        printf "It is safe to run 'brew update'\n"
+        remove_dev_links "$tap_dir"
     else
-        printf "brew-cask is already set up for production\n"
-        exit 1
+        die "brew-cask is already set up for production"
     fi
 
 }
 
+# process args
 if [[ $1 =~ ^-+h(elp)?$ ]]; then
     printf "production_brew_cask
 
-Undo all symlinks created by 'develop_brew_cask' so that
-the 'brew cask' command will use only released code within
-Homebrew.
+Undo all symlinks created by 'develop_brew_cask' so that the
+'brew cask' command will use only released code and Casks
+within Homebrew.
 
-After running this command it is safe to run 'brew update'.
+After running this command it is safe to run 'brew update',
+unless you are using similar scripts to create symlinks into
+other Caskroom development repos.
 
 "
     exit
 fi
 
-_production_brew_cask "$@";
+# dispatch main
+_production_brew_cask "${@}"
 
 #

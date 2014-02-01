@@ -3,29 +3,67 @@
 # list_ids_in_pkg
 #
 
-set -e;                # exit on any uncaught error
-set +o histexpand;     # don't expand history expressions
-shopt -s nocasematch;  # case-insensitive regular expressions
+###
+### settings
+###
+
+set -e                # exit on any uncaught error
+set +o histexpand     # don't expand history expressions
+shopt -s nocasematch  # case-insensitive regular expressions
+
+###
+### global variables
+###
+
+tmpdir=''
+
+###
+### functions
+###
+
+bundle_id_source_1 () {
+    /usr/bin/find "$tmpdir" -name PackageInfo -print0 |                                \
+    /usr/bin/xargs -0 /usr/bin/perl -0777 -ne                                          \
+      'while (m{<pkg-info.*?\sid(?:entifier)?\s*=\s*"([^"]*?)"}sg) { print "$1\n" }'
+}
+
+merge_sources () {
+    /usr/bin/sort | /usr/bin/uniq
+}
+
+clean_sources () {
+    /usr/bin/egrep -v '^com\.apple\.' |                                                \
+    /usr/bin/egrep -v 'sparkle\.finish-installation$'
+}
+
+mark_up_sources () {
+    /usr/bin/perl -pe 's{\n}{\000}sg' |                                                \
+    /usr/bin/xargs -0 -I{} -n1 /bin/bash -c                                            \
+      'printf "{}"; /usr/sbin/pkgutil --pkg-info "{}" >/dev/null 2>&1 && printf " (+)"; printf "\n"'
+}
+
+###
+### main
+###
 
 _list_ids_in_pkg () {
 
-    local tmpdir=`/usr/bin/mktemp -d -t list_ids_in_pkg`
+    tmpdir=`/usr/bin/mktemp -d -t list_ids_in_pkg`
     trap "/bin/rm -rf '$tmpdir'" EXIT
 
     /usr/sbin/pkgutil --expand "$1" "$tmpdir/unpack"
 
-    /usr/bin/find "$tmpdir" -name PackageInfo -print0 |                                \
-    /usr/bin/xargs -0 /usr/bin/perl -0777 -ne                                          \
-      'while (m{<pkg-info.*?\sid(?:entifier)?\s*=\s*"([^"]*?)"}sg) { print "$1\n" }' | \
-    /usr/bin/sort | /usr/bin/uniq |                                                    \
-    /usr/bin/egrep -v '^com\.apple\.' |                                                \
-    /usr/bin/egrep -v 'sparkle\.finish-installation$' |                                \
-    /usr/bin/perl -pe 's{\n}{\000}sg' |                                                \
-    /usr/bin/xargs -0 -I{} -n1 /bin/bash -c                                            \
-      'printf "{}"; /usr/sbin/pkgutil --pkg-info "{}" >/dev/null 2>&1 && printf " (+)"; printf "\n"'
+    {
+      # emit strings that look like bundle ids
+      bundle_id_source_1;
+    } |                     \
+    merge_sources |         \
+    clean_sources |         \
+    mark_up_sources
 
 }
 
+# process args
 if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
     printf "list_ids_in_pkg <file.pkg>
 
@@ -55,6 +93,7 @@ See CONTRIBUTING.md and 'man pkgutil' for more information.
     exit
 fi
 
-_list_ids_in_pkg "$@";
+# dispatch main
+_list_ids_in_pkg "${@}"
 
 #

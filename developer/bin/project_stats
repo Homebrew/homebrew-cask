@@ -5,77 +5,96 @@
 # stats on project/release from git database
 #
 
-set -e;               # exit on any uncaught error
-set +o histexpand;    # don't expand history expressions
-shopt -s nocasematch; # case-insensitive regular expressions
+###
+### settings
+###
+
+set -e               # exit on any uncaught error
+set +o histexpand    # don't expand history expressions
+shopt -s nocasematch # case-insensitive regular expressions
+
+###
+### configurable global variables
+###
+
+# these paths relative to project root
+declare -a cask_paths=(Casks)
+declare -a code_paths=(bin developer lib test brew-cask.rb Rakefile Gemfile Gemfile.lock .travis.yml .gitignore)
+declare -a doc_paths=(doc LICENSE "*.md")
+end_object="HEAD"
+
+###
+### global variables
+###
+
+cask_authors=''
+
+###
+### functions
+###
+
+warn () {
+    local message="$@"
+    if ! [[ $message =~ "\n"$ ]]; then
+        message="${message}\n"
+    fi
+    printf "$message" 1>&2
+}
+
+die () {
+    warn "$@"
+    exit 1
+}
 
 cd_to_project_root () {
     local script_dir="$(/usr/bin/dirname $0)"
     cd "$script_dir"
     local git_root="$(git rev-parse --show-toplevel)"
     if [[ -z "$git_root" ]]; then
-        printf "Could not find git project root"
-        exit 1;
+        die "ERROR: Could not find git project root"
     fi
     cd "$git_root"
 }
 
 warn_if_off_branch () {
-    local branch="$(git rev-parse --abbrev-ref HEAD)"
     local wanted_branch='master'
     if [[ -n "$1" ]]; then
         wanted_branch="$1"
     fi
-    if [[ "$branch" != "$wanted_branch" ]]; then
-        printf "\nWARNING: you are running from branch '$branch', not '$wanted_branch'\n\n"
+
+    local current_branch="$(git rev-parse --abbrev-ref HEAD)"
+    if ! [[ "$current_branch" = "$wanted_branch" ]]; then
+        warn "\nWARNING: you are running from branch '$current_branch', not '$wanted_branch'\n\n"
     fi
 }
 
 verify_git_object () {
-    if ! git rev-parse --verify "$1" > /dev/null 2>/dev/null; then
-        printf "\nERROR: No such commit object: $1\n\n"
-        exit 1
+    local object="$1"
+
+    if ! git rev-parse --verify "$object" -- >/dev/null 2>&1; then
+        die "\nERROR: No such commit object: '$object'\n\n"
     fi
 }
 
-_homebrew_cask_project_stats () {
+print_contributor_stats () {
+    local start_object="$1"
+    local initial_commit="$2"
 
-    local initial_commit="5a0d1d5556e3f963a0d34da46e16ecffa59ea2fc"
-    local start_object="$initial_commit"
-    local end_object="HEAD"
-
-    # these paths relative to project root
-    local cask_paths="Casks"
-    local code_paths="bin developer lib test brew-cask.rb Rakefile Gemfile Gemfile.lock"
-    local doc_paths="LICENSE *.md"
-
-    cd_to_project_root;
-    warn_if_off_branch 'master';
-
-    if [[ "$1" = 'release' ]]; then
-        start_object="$(git describe --tags --abbrev=0)"
-    elif [[ -n "$1" ]]; then
-        start_object="$1"
-    fi
-    verify_git_object "$start_object";
-
+    local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
     printf "Unique contributors"
-    if [[ "$start_object" != "$initial_commit" ]]; then
+    if ! [[ "$start_object" = "$initial_commit" ]]; then
         printf " since $start_object"
     fi
     printf "\n"
-
-    local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
-
-    local cask_authors="$($git_log_cmd -- $cask_paths | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+    cask_authors="$($git_log_cmd -- "${cask_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
     printf "  Casks\t$cask_authors\n"
     printf "  code\t"
-    $git_log_cmd -- $code_paths | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
+    $git_log_cmd -- "${code_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
     printf "  docs\t"
-    $git_log_cmd -- $doc_paths  | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
+    $git_log_cmd -- "${doc_paths[@]}"  | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
     printf "  any\t"
-    $git_log_cmd -- .           | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
-    if [[ "$start_object" != "$initial_commit" ]]; then
+    $git_log_cmd -- .                  | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
+    if ! [[ "$start_object" = "$initial_commit" ]]; then
         local alltime_contribs="$(git log --no-merges --format='%ae' ${initial_commit}..${end_object} -- . | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
         local prior_contribs="$(git log --no-merges --format='%ae' ${initial_commit}..${start_object} -- . | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
         # arithmetic removes whitespace
@@ -84,13 +103,42 @@ _homebrew_cask_project_stats () {
         printf "\nAll-time contributors\t$alltime_contribs\n"
         printf "New contributors since $start_object\t$new_contribs\n"
     fi
-
     printf "\n"
+}
 
-    if [[ "$start_object" != "$initial_commit" ]]; then
-        local new_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^A.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
-        local deleted_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^D.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
-        local updated_casks="$(git diff --name-status "$start_object" "$end_object" -- $cask_paths | /usr/bin/grep '^M.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+print_commit_stats () {
+    local start_object="$1"
+    local initial_commit="$2"
+
+    local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
+    printf "Commit count"
+    if ! [[ "$start_object" = "$initial_commit" ]]; then
+        printf " since $start_object"
+    fi
+    printf "\n"
+    printf "  Casks\t"
+    $git_log_cmd -- "${cask_paths[@]}" | /usr/bin/wc -l
+    printf "  code\t"
+    $git_log_cmd -- "${code_paths[@]}" | /usr/bin/wc -l
+    printf "  docs\t"
+    $git_log_cmd -- "${doc_paths[@]}"  | /usr/bin/wc -l
+    printf "  any\t"
+    $git_log_cmd -- .                  | /usr/bin/wc -l
+    if ! [[ "$start_object" = "$initial_commit" ]]; then
+        printf "\nAll-time commits\t"
+        git log --no-merges --format='%ae' "${initial_commit}".."${end_object}" -- . | /usr/bin/wc -l
+    fi
+    printf "\n"
+}
+
+print_cask_stats () {
+    local start_object="$1"
+    local initial_commit="$2"
+
+    if ! [[ "$start_object" = "$initial_commit" ]]; then
+        local     new_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^A.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        local deleted_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^D.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        local updated_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^M.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
         # arithmetic removes whitespace
         ((cask_authors  += 0))
         ((deleted_casks += 0))
@@ -100,10 +148,36 @@ _homebrew_cask_project_stats () {
     fi
 
     printf "Total current Casks in HEAD\t"
-    /usr/bin/find $cask_paths -name '*.rb' | /usr/bin/wc -l
-
+    /usr/bin/find "${cask_paths[@]}" -name '*.rb' | /usr/bin/wc -l
 }
 
+###
+### main
+###
+
+_project_stats () {
+    local arg_object="$1"
+
+    cd_to_project_root
+    warn_if_off_branch 'master'
+
+    local initial_commit="$(git log --pretty=format:%H -- | /usr/bin/tail -1)"
+    verify_git_object "$initial_commit"
+    local start_object="$initial_commit"
+
+    if [[ "$arg_object" = 'release' ]]; then
+        start_object="$(./developer/bin/get_release_tag)"
+    elif [[ -n "$arg_object" ]]; then
+        start_object="$arg_object"
+    fi
+    verify_git_object "$start_object"
+
+    print_contributor_stats "$start_object" "$initial_commit"
+    print_commit_stats      "$start_object" "$initial_commit"
+    print_cask_stats        "$start_object" "$initial_commit"
+}
+
+# process args
 if [[ $1 =~ ^-+h(elp)?$ ]]; then
     printf "project_stats [ <commit-object> ]
 
@@ -119,6 +193,7 @@ Without argument, show statistics since first commit.
     exit
 fi
 
-_homebrew_cask_project_stats "$@";
+# dispatch main
+_project_stats "${@}"
 
 #
