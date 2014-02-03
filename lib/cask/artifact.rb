@@ -6,7 +6,7 @@ require 'cask/artifact/hardlinked'
 
 require 'cask/artifact/app'
 require 'cask/artifact/binary'
-require 'cask/artifact/block'
+require 'cask/artifact/after_block'
 require 'cask/artifact/colorpicker'
 require 'cask/artifact/font'
 require 'cask/artifact/nested_container'
@@ -37,10 +37,10 @@ module Cask::Artifact
       Cask::Artifact::Widget,
       Cask::Artifact::Service,
       Cask::Artifact::CaskroomOnly,
-      Cask::Artifact::Block,
       Cask::Artifact::Binary,
       Cask::Artifact::InputMethod,
       Cask::Artifact::ScreenSaver,
+      Cask::Artifact::AfterBlock,
     ]
   end
 

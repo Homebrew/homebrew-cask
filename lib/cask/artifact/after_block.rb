@@ -1,4 +1,4 @@
-class Cask::Artifact::Block < Cask::Artifact::Base
+class Cask::Artifact::AfterBlock < Cask::Artifact::Base
   def self.me?(cask)
     cask.artifacts[:after_install].any? ||
       cask.artifacts[:after_uninstall].any?
