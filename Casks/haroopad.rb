@@ -4,4 +4,4 @@ class Haroopad < Cask
   version '0.11.0'
   sha1 'd71eb302f0d1f2484918cf65e47d4579cb12713c'
   link 'haroopad.app'
-end
+end 
