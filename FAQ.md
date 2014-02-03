@@ -59,7 +59,7 @@ We don't know up-front precisely what files are going to be in the
 dmg/zip/tgz/etc, so it's really helpful to have a place to dump all of them
 safely, then iterate through and act on the files we care about. For an `.app` file
 this may be symlinking it into `~/Applications` or `/Applications`, for a `.pkg` file
-this might be running the installer. For a screensaver it may be symlinking it
+this might be running the installer. For a Screen Saver it may be symlinking it
 into the appropriate directory for it to show up in System Preferences.
 
 The reason we implement this project on top of Homebrew was based on a belief
