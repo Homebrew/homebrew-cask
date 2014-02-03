@@ -44,11 +44,7 @@ describe Cask::Installer do
     it "works with cab-based casks" do
       skip unless HOMEBREW_PREFIX.join('bin/cabextract').exist?
       cab_container = Cask.load('cab-container')
-
-      # because I don't know how to do the mocking properly
-      def cab_container.depends_on_formula
-        []
-      end
+      cab_container.stubs(:depends_on_formula).returns([])
 
       shutup do
         Cask::Installer.new(cab_container).install
@@ -69,6 +65,21 @@ describe Cask::Installer do
       dest_path = Cask.caskroom/'adobe-air-container'/air_container.version
       dest_path.must_be :directory?
       application = dest_path/'GMDesk.app'
+      application.must_be :directory?
+    end
+
+    it "works with 7z-based casks" do
+      skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
+      sevenzip_container = Cask.load('sevenzip-container')
+      sevenzip_container.stubs(:depends_on_formula).returns([])
+
+      shutup do
+        Cask::Installer.new(sevenzip_container).install
+      end
+
+      dest_path = Cask.caskroom/'sevenzip-container'/sevenzip_container.version
+      dest_path.must_be :directory?
+      application = dest_path/'sevenzipcontainer/Application.app'
       application.must_be :directory?
     end
 

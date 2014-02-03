@@ -1,11 +1,13 @@
 class Cask::Container; end
 
 require 'cask/container/base'
+require 'cask/container/unarbase'
 require 'cask/container/air'
 require 'cask/container/cab'
 require 'cask/container/criteria'
 require 'cask/container/dmg'
 require 'cask/container/naked'
+require 'cask/container/sevenzip'
 require 'cask/container/tar'
 require 'cask/container/zip'
 
@@ -15,6 +17,7 @@ class Cask::Container
       Cask::Container::Air,
       Cask::Container::Cab,
       Cask::Container::Dmg,
+      Cask::Container::SevenZip,
       Cask::Container::Tar,
       Cask::Container::Zip,
       Cask::Container::Naked,

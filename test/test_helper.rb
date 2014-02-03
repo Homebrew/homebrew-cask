@@ -108,6 +108,8 @@ class TestCask < Cask; end
 
 # jack in some optional utilities
 FileUtils.ln_s '/usr/local/bin/cabextract', HOMEBREW_PREFIX.join('bin/cabextract')
+FileUtils.ln_s '/usr/local/bin/unar', HOMEBREW_PREFIX.join('bin/unar')
+FileUtils.ln_s '/usr/local/bin/lsar', HOMEBREW_PREFIX.join('bin/lsar')
 
 # also jack in some test casks
 FileUtils.ln_s project_root/'test'/'support', taps_dest/"phinze-testcasks"

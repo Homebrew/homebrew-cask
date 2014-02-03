@@ -30,4 +30,28 @@ class Cask::Container::Criteria
       )
     end
   end
+
+  def lsar
+    if HOMEBREW_PREFIX.join('bin/lsar').exist?
+      @lsar ||= @command.run(
+        HOMEBREW_PREFIX.join('bin/lsar'),
+        :args => ['-l', '-t', '--', path],
+        :stderr => :silence,
+        :print => false
+      )
+    end
+  end
+
+  def extension(test)
+    %r{\.([^\.]+)$}.match(path) do |ext|
+      ext.captures.first.casecmp(test)
+    end
+  end
+
+  def magic_number(num, test)
+    File.open(path, "rb") do |file|
+      bytes = file.read(num).unpack('C*')
+      bytes == test
+    end
+  end
 end

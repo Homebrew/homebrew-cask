@@ -3,6 +3,7 @@ before_install:
   - rvm use system
   - brew update
   - brew install cabextract
+  - brew install unar
   - sudo /usr/bin/gem install bundler
 install:
   - sudo /usr/bin/bundle
