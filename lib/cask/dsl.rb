@@ -75,7 +75,8 @@ module Cask::DSL
       :binary,
       :caskroom_only,
       :input_method,
-      :screen_saver
+      :screen_saver,
+      :install,
     ]
 
     ARTIFACT_TYPES.each do |type|
@@ -85,7 +86,6 @@ module Cask::DSL
     end
 
     SPECIAL_ARTIFACT_TYPES = [
-      :install,
       :nested_container,
       :uninstall
     ]

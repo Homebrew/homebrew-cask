@@ -31,21 +31,42 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     return executable, script_arguments
   end
 
+  def load_pkg_description(pkg_description)
+    @pkg_relative_path = pkg_description.shift
+    @pkg_install_opts = pkg_description.shift
+    if @pkg_install_opts.respond_to?(:keys)
+      @pkg_install_opts.assert_valid_keys( :allow_untrusted )
+    elsif @pkg_install_opts
+      raise "Bad install stanza in Cask #{@cask}"
+    end
+    raise "Bad install stanza in Cask #{@cask}" if pkg_description.nil?
+  end
+
+  def pkg_install_opts(opt)
+    @pkg_install_opts[opt] if @pkg_install_opts.respond_to?(:keys)
+  end
+
+  def pkg_relative_path
+    @pkg_relative_path
+  end
+
   def install
-    @cask.artifacts[:install].each { |pkg| run_installer(pkg) }
+    @cask.artifacts[:install].each { |pkg_description| run_installer(pkg_description) }
   end
 
   def uninstall
     @cask.artifacts[:uninstall].each { |opts| manually_uninstall(opts) }
   end
 
-  def run_installer(pkg_relative_path)
+  def run_installer(pkg_description)
+    load_pkg_description pkg_description
     ohai "Running installer for #{@cask}; your password may be necessary."
     args = [
       '-pkg',    @cask.destination_path.join(pkg_relative_path),
       '-target', '/'
     ]
     args << '-verboseR' if ARGV.verbose?
+    args << '-allowUntrusted' if pkg_install_opts :allow_untrusted
     @command.run!('/usr/sbin/installer', {:sudo => true, :args => args, :print => true})
   end
 
