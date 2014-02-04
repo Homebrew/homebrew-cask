@@ -13,7 +13,8 @@ class Cask::Container::Criteria
   def imageinfo
     @imageinfo ||= @command.run(
       '/usr/bin/hdiutil',
-      :args => ['imageinfo', path],
+      # realpath is a failsafe against unusual filenames
+      :args => ['imageinfo', Pathname.new(path).realpath],
       :stderr => :silence,
       :print => false
     )
