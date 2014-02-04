@@ -49,7 +49,7 @@ mark_up_sources () {
 _list_ids_in_pkg () {
 
     tmpdir=`/usr/bin/mktemp -d -t list_ids_in_pkg`
-    trap "/bin/rm -rf '$tmpdir'" EXIT
+    trap "/bin/rm -rf -- '$tmpdir'" EXIT
 
     /usr/sbin/pkgutil --expand "$1" "$tmpdir/unpack"
 

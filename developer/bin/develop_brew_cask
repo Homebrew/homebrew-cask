@@ -56,7 +56,7 @@ cd_to_version_dir () {
 not_inside_homebrew () {
     local tap_dir="$1"
     local git_root="$2"
-    if [[ "$(/usr/bin/stat -L -f '%i' "$tap_dir")" -eq "$(/usr/bin/stat -L -f '%i' "$git_root")" ]]; then
+    if [[ "$(/usr/bin/stat -L -f '%i' -- "$tap_dir")" -eq "$(/usr/bin/stat -L -f '%i' -- "$git_root")" ]]; then
         die "\nERROR: Run this script in your private repo, not inside Homebrew.\n"
     fi
 }
@@ -64,15 +64,15 @@ not_inside_homebrew () {
 create_dev_links () {
     local tap_dir="$1"
     local git_root="$2"
-    /bin/mv rubylib production_rubylib
-    /bin/mv Casks   production_Casks
-    /bin/ln -s "$git_root/Casks" .
-    /bin/ln -s "$git_root/lib"   rubylib
+    /bin/mv -- rubylib production_rubylib
+    /bin/mv -- Casks   production_Casks
+    /bin/ln -s -- "$git_root/Casks" .
+    /bin/ln -s -- "$git_root/lib"   rubylib
     cd "$tap_dir"
-    /bin/mv lib   production_lib
-    /bin/mv Casks production_Casks
-    /bin/ln -s "$git_root/Casks" .
-    /bin/ln -s "$git_root/lib"   .
+    /bin/mv -- lib   production_lib
+    /bin/mv -- Casks production_Casks
+    /bin/ln -s -- "$git_root/Casks" .
+    /bin/ln -s -- "$git_root/lib"   .
     printf "brew-cask is now in development mode\n"
     printf "Note: it is not safe to run 'brew update' while in development mode\n"
 }
@@ -88,7 +88,7 @@ _develop_brew_cask () {
     local git_root="$(/bin/pwd)"
     local brew_prefix="$(brew --prefix)"
     local cellar_dir="$brew_prefix/Cellar/brew-cask"
-    local version_dir="$(/bin/ls "$cellar_dir/" | /usr/bin/sort | /usr/bin/tail -1)"
+    local version_dir="$(/bin/ls -- "$cellar_dir/" | /usr/bin/sort | /usr/bin/tail -1)"
     local tap_dir="$brew_prefix/$tap_subdir"
 
     # sanity check
