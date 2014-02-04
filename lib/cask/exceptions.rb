@@ -68,3 +68,15 @@ class CaskUnspecifiedError < CaskError
     "This command requires a cask's name"
   end
 end
+
+class CaskInvalidError < CaskError
+  attr_reader :name, :submsg
+  def initialize(name, *submsg)
+    @name = name
+    @submsg = submsg.join(' ')
+  end
+
+  def to_s
+    "Cask '#{name}' definition is invalid" + (submsg.length > 0 ? ": #{submsg}" : '')
+  end
+end
