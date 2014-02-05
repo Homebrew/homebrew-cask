@@ -1,7 +1,7 @@
 class PycharmPro < Cask
-  url 'http://download-ln.jetbrains.com/python/pycharm-professional-3.0.2.dmg'
+  url 'http://download.jetbrains.com/python/pycharm-professional-3.1.dmg'
   homepage 'http://www.jetbrains.com/pycharm/'
-  version '3.0.2'
-  sha1 '3f116baa7b70435c505941865d818bdcea552d7d'
+  version '3.1'
+  sha1 '290ce783d198045d5e7dbead5ca4b9655e378979'
   link 'PyCharm.app'
 end
