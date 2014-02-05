@@ -8,7 +8,7 @@ class Cask::Download
   def perform
     require 'software_spec'
     cask = @cask
-    downloader = Cask::DownloadStrategy.new(cask)
+    downloader = Cask::CurlDownloadStrategy.new(cask)
     downloaded_path = downloader.fetch
 
     _check_sums(downloaded_path, cask.sums) unless cask.sums === 0
