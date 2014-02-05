@@ -6,6 +6,7 @@ require 'shellwords'
 require 'cask/cli/alfred'
 require 'cask/cli/audit'
 require 'cask/cli/checklinks'
+require 'cask/cli/cleanup'
 require 'cask/cli/create'
 require 'cask/cli/doctor'
 require 'cask/cli/edit'
@@ -117,6 +118,9 @@ class Cask::CLI
       end
       opts.on("--debug") do |v|
         Cask.debug = true
+      end
+      opts.on("--outdated") do |v|
+        Cask.outdated = true
       end
     end
   end
