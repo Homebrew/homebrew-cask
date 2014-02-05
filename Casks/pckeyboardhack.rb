@@ -1,8 +1,8 @@
 class Pckeyboardhack < Cask
-  url 'https://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-10.4.0.dmg'
+  url 'https://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-10.5.0.dmg'
   homepage 'https://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en'
-  version '10.4.0'
-  sha1 '90e88575a7688448ae371e321914a210a771fbac'
+  version '10.5.0'
+  sha1 '518ff35d257ccc3fbd974f4b6c1e2d8d9de4a901'
   install 'PCKeyboardHack.pkg'
   uninstall :quit => 'org.pqrs.PCKeyboardHack',
             :kext => 'org.pqrs.driver.PCKeyboardHack',
