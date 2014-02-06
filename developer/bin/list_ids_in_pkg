@@ -27,6 +27,12 @@ bundle_id_source_1 () {
       'while (m{<pkg-info.*?\sid(?:entifier)?\s*=\s*"([^"]*?)"}sg) { print "$1\n" }'
 }
 
+bundle_id_source_2 () {
+    /usr/bin/find "$pkgdir" -name Info.plist -print0 |                                 \
+    /usr/bin/xargs -0 /usr/bin/perl -0777 -ne                                          \
+      'while (m{<key>\s*CFBundleIdentifier\s*</key>\s*<string>([^<]+?)</string>}sg) { print "$1\n" }'
+}
+
 merge_sources () {
     /usr/bin/sort | /usr/bin/uniq
 }
@@ -60,6 +66,7 @@ _list_ids_in_pkg () {
     {
       # emit strings that look like bundle ids
       bundle_id_source_1;
+      bundle_id_source_2;
     } |                     \
     merge_sources |         \
     clean_sources |         \

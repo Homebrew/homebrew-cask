@@ -59,6 +59,13 @@ app_source_4 () {
       'while (m{path\s*=\s*"([^"]+\.app)"}sg) { my $p = $1; $p =~ s{\A.*/}{}; print "$p\n" }';
 }
 
+app_source_5 () {
+    /usr/bin/find "$pkgdir" -name Archive.pax.gz -print0  |           \
+    /usr/bin/xargs -0 -n1 -I{} sh -c                                  \
+      "/usr/bin/gunzip -c '{}' | /bin/pax | /usr/bin/egrep '\.app'" | \
+    /usr/bin/perl -pe 's{\A.*/([^/]+\.app).*\Z}{$1}';
+}
+
 merge_sources () {
     /usr/bin/sort | /usr/bin/uniq
 }
@@ -138,6 +145,7 @@ _list_apps_in_pkg () {
       app_source_3;
       if [[ -n "$opt_lax" ]]; then
           app_source_4;
+          app_source_5;
       fi
     } |                \
     merge_sources |    \
