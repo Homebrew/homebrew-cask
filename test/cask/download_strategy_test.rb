@@ -5,11 +5,11 @@ def includes_args?(args, expected)
     "expected #{args.inspect} to include #{expected.inspect}"
 end
 
-describe Cask::DownloadStrategy do
+describe Cask::CurlDownloadStrategy do
   it 'properly assigns a name and Resource based on the cask' do
     cask = Cask.load('basic-cask')
 
-    downloader = Cask::DownloadStrategy.new(BasicCask)
+    downloader = Cask::CurlDownloadStrategy.new(BasicCask)
     downloader.name.must_equal 'basic-cask'
     downloader.resource.name.must_equal 'basic-cask'
     downloader.resource.url.must_equal cask.url.to_s
@@ -19,7 +19,7 @@ describe Cask::DownloadStrategy do
   it 'calls curl with default arguments for a simple cask' do
     cask = Cask.load('basic-cask')
 
-    downloader = Cask::DownloadStrategy.new(cask)
+    downloader = Cask::CurlDownloadStrategy.new(cask)
     downloader.temporary_path.stubs(:rename)
     downloader.expects(:curl).with(
       cask.url,
@@ -36,7 +36,7 @@ describe Cask::DownloadStrategy do
       version '1.2.3.4'
     end
 
-    downloader = Cask::DownloadStrategy.new(WithExplicitUserAgent)
+    downloader = Cask::CurlDownloadStrategy.new(WithExplicitUserAgent)
     downloader.temporary_path.stubs(:rename)
     downloader.expects(:curl).with do |*args|
       includes_args?(args, ['-A', 'Mozilla/25.0.1'])
@@ -52,7 +52,7 @@ describe Cask::DownloadStrategy do
       version '1.2.3.4'
     end
 
-    downloader = Cask::DownloadStrategy.new(WithFakeUserAgent)
+    downloader = Cask::CurlDownloadStrategy.new(WithFakeUserAgent)
     downloader.temporary_path.stubs(:rename)
     downloader.expects(:curl).with do |*args|
       includes_args?(args, ['-A', 'Chrome/32.0.1000.00'])
@@ -70,7 +70,7 @@ describe Cask::DownloadStrategy do
       version '1.2.3.4'
     end
 
-    downloader = Cask::DownloadStrategy.new(WithCookies)
+    downloader = Cask::CurlDownloadStrategy.new(WithCookies)
     downloader.temporary_path.stubs(:rename)
     downloader.expects(:curl).with do |*args|
       includes_args?(args, ['-b', 'coo=kie;mon=ster'])
@@ -86,7 +86,7 @@ describe Cask::DownloadStrategy do
       version '1.2.3.4'
     end
 
-    downloader = Cask::DownloadStrategy.new(WithReferer)
+    downloader = Cask::CurlDownloadStrategy.new(WithReferer)
     downloader.temporary_path.stubs(:rename)
     downloader.expects(:curl).with do |*args|
       includes_args?(args, ['-e', 'http://somehost/also'])

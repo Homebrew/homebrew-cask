@@ -1,6 +1,6 @@
 require 'cgi'
 
-class Cask::DownloadStrategy < CurlDownloadStrategy
+class Cask::CurlDownloadStrategy < CurlDownloadStrategy
   attr_reader :cask, :cask_url
 
   def initialize(cask)
