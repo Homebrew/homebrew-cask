@@ -1,4 +1,4 @@
-class CocoaRestClient < Cask
+class Cocoarestclient < Cask
   url 'https://cocoa-rest-client.googlecode.com/files/CocoaRestClient-1.3.6.dmg'
   homepage 'https://code.google.com/p/cocoa-rest-client/'
   version '1.3.6'

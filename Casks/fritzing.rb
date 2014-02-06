@@ -1,7 +1,7 @@
 class Fritzing < Cask
-  url 'http://fritzing.org/download/0.8.5b/mac-os-x-105/fritzing.2013.12.17.cocoa.dmg'
+  url 'http://fritzing.org/download/0.8.7b/mac-os-x-105/fritzing.0.8.7b.cocoa.dmg'
   homepage 'http://fritzing.org/'
-  version '0.8.5b'
-  sha1 '7b7fc4bf0d9d563aa83d0ab421f36b2ecc47d0f2'
+  version '0.8.7b'
+  sha1 '8e6bbe3f2fcf7d053346ea974655f325cfad9774'
   link 'Fritzing.app'
 end

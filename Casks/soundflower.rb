@@ -5,4 +5,7 @@ class Soundflower < Cask
   sha1 '9c94abe7dd59eb25bb167efee4a14350a3e9dd90'
   install 'Soundflower.pkg'
   uninstall :pkgutil => 'com.cycling74.soundflower.*'
+  caveats do
+    reboot
+  end
 end

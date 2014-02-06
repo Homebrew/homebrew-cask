@@ -74,7 +74,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
         [false, true].each do |with_sudo|
           xml_status = @command.run('/bin/launchctl', :args => ['list', '-x', service], :sudo => with_sudo)
           if %r{^<\?xml}.match(xml_status)
-            @command.run!('/bin/launchctl', :args => ['remove', service], :sudo => with_sudo)
+            @command.run!('/bin/launchctl', :args => ['remove', '--', service], :sudo => with_sudo)
           end
         end
       end
@@ -97,7 +97,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
         ohai "Unloading kernel extension #{kext}"
         is_loaded = @command.run!('/usr/sbin/kextstat', :args => ['-l', '-b', kext], :sudo => true)
         if is_loaded.length > 1
-          @command.run!('/sbin/kextunload', :args => ['-b', kext], :sudo => true)
+          @command.run!('/sbin/kextunload', :args => ['-b', '--', kext], :sudo => true)
         end
       end
     end
@@ -118,7 +118,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     if uninstall_options.key? :files
       uninstall_options[:files].each do |file|
         ohai "Removing file #{file}"
-        @command.run!('/bin/rm', :args => ['-rf', file], :sudo => true)
+        @command.run!('/bin/rm', :args => ['-rf', '--', file], :sudo => true)
       end
     end
   end

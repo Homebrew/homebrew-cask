@@ -8,7 +8,7 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
   end
 
   def create_filesystem_link(source, target)
-    @command.run!('/bin/ln', :args => ['-hfs', source, target])
+    @command.run!('/bin/ln', :args => ['-hfs', '--', source, target])
   end
 
   def link(artifact_relative_path)

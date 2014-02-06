@@ -17,7 +17,7 @@ require 'cask/artifact/widget'
 require 'cask/artifact/service'
 require 'cask/artifact/caskroom_only'
 require 'cask/artifact/input_method'
-require 'cask/artifact/screensaver'
+require 'cask/artifact/screen_saver'
 
 
 module Cask::Artifact

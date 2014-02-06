@@ -41,7 +41,7 @@ describe "Cask" do
 
     it "uses exact match when loading by name" do
       Cask.load('rest-client').must_be_instance_of(RestClient)
-      Cask.load('cocoa-rest-client').must_be_instance_of(CocoaRestClient)
+      Cask.load('cocoarestclient').must_be_instance_of(Cocoarestclient)
     end
 
     it "raises an error when attempting to load a cask that doesn't exist" do
