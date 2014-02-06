@@ -83,7 +83,7 @@ Fill in the following fields for your Cask:
 | __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
 | `link`             | relative path to a file that should be linked into the `Applications` folder on installation (see __Link Details__ for more information)
 | `install`          | relative path to `pkg` that should be run to install the application
-| `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see __Uninstall Support__ for more information)
+| `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see __Uninstall Details__ for more information)
 
 Additional fields you might need for special use-cases:
 
@@ -241,50 +241,125 @@ link 'TexmakerMacosxLion/texmaker.app'
 
 Linking to the .app file without reference to the containing folder will result in installation failing with a "symlink source is not there" error.
 
-### Uninstall Support
+### Uninstall Details
 
-Since OS X has no standard uninstall behavior, there's a wide variety of
-methods by which applications can be uninstalled. The `uninstall` directive has
-many features to help properly remove a Cask-installed application.
+A `pkg`-based Cask using `install` will **not** know how to uninstall
+correctly unless an `uninstall` stanza is given.
 
-These features are utilized via a hash argument to `uninstall` with any number
-of the following keys:
+Since `pkg` installers can do arbitrary things, different techniques are
+needed to uninstall in each case.  You may need to specify one, or several,
+of the following key/value pairs as arguments to `uninstall`.  `:pkgutil`
+is the most useful.
 
-* `:early_script` (string or hash) - like `:script`, but runs early (for backward compat, best avoided)
-* `:launchctl` (string or array) - ids of launchctl services to remove
-* `:quit` (string or array) - bundle id of running applications to quit before proceeding with the uninstaller
-* `:kext` (string or array) - bundle id of kext(s) to unload from the system before proceeding with the uninstaller
-* `:pkgutil` (string or regexp) - regexp matching bundle id(s) of packages to uninstall using `pkgutil`
+* `:early_script` (string or hash) - like `:script`, but runs early (for special cases, best avoided)
+* `:launchctl` (string or array) - ids of `launchctl` jobs to remove
+* `:quit` (string or array) - bundle ids of running applications to quit
+* `:kext` (string or array) - bundle ids of kexts to unload from the system
+* `:pkgutil` (string or regexp) - regexp matching bundle ids of packages to uninstall using `pkgutil`
 * `:script` (string or hash) - relative path to an uninstall script to be run via sudo; use hash if args are needed
-  - `:executable` - relative path to an uninstall script to be run via sudo (required for hash)
+  - `:executable` - relative path to an uninstall script to be run via sudo (required for hash form)
   - `:args` - array of arguments to the uninstall script
   - `:input` - array of lines of input to be sent to `stdin` of the script
-* `:files` (array) - absolute paths of files or directories to remove
-  - should only be used as a last resort, since this is the blunt force approach
+* `:files` (array) - absolute paths of files or directories to remove.  `:files` should only be used as a last resort. `:pkgutil` is strongly preferred
 
-Each defined `uninstall` method is applied according to the order above. The order
+Each `uninstall` technique is applied according to the order above. The order
 in which `uninstall` keys appear in the Cask file is ignored.
+
+For assistance filling in the right values for `uninstall` keys, there are
+several helper scripts found under `developer/bin` in the homebrew-cask
+repository.  Each of these scripts responds to the `-help` option with
+additional documentation.
+
+The easiest way to work out an `uninstall` stanza is on a system where the
+`pkg` is currently installed and operational.  To operate on an uninstalled
+`pkg` file, see __Working With a pkg File Manually__, below.
 
 #### Uninstall Key :pkgutil
 
-* One method for finding package bundle id(s) is the following:
-  1. Unpack `/path/to/my.pkg` (replace with your package name) with `pkgutil --expand /path/to/my.pkg /tmp/expanded.unpkg`.
-  2. The unpacked package is a folder. Bundle id(s) are contained within files named `PackageInfo`. These files can be found
-     with the command `find /tmp/expanded.unpkg -name PackageInfo`.
-  3. `PackageInfo` files are XML files, and bundle id(s) are found within the `identifier` attributes of `<pkg-info>` tags that look like
-  `<pkg-info ... identifier="com.oracle.jdk7u51" ... >`, where extraneous attributes have been snipped out and replaced with ellipses.
-  4. Once bundle id(s) have been identified, the unpacked package directory can be deleted.
+This is the most important and useful uninstall key.  `:pkgutil` is
+often sufficient to completely uninstall a `pkg`.
+
+IDs for the most recently-installed packages can be listed using the
+command
+```bash
+$ ./developer/bin/list_recent_pkg_ids
+```
+
+#### List Files Associated With a `pkg`
+
+Once you know the ID for an installed package, (above), you can list
+all files on your system associated with that package ID using the
+OS X command
+```bash
+$ pkgutil --files <package.id.goes.here>
+```
+Listing the associated files can help you assess whether the package
+included any launchctl jobs or kernel extensions (kexts).
+
+#### Uninstall Key :launchctl
+
+IDs for currently loaded launchctl jobs can be listed using the command
+```bash
+$ ./developer/bin/list_loaded_launchjob_ids
+```
+
+IDs for all installed launchctl jobs can be listed using the command
+```bash
+$ ./developer/bin/list_installed_launchjob_ids
+```
+
+#### Uninstall Key :quit
+
+Bundle IDs for currently running Applications can be listed using the command
+```bash
+$ ./developer/bin/list_running_app_ids
+```
+
+Bundle IDs inside an Application bundle on disk can be listed using the command
+```bash
+$ ./developer/bin/list_ids_in_app </path/to/application.app>
+```
 
 #### Uninstall Key :kext
 
-* If the kernel extension (kext) you are targeting is currently loaded, you can get its bundle id by running `developer/bin/list_loaded_kext_ids`.
+IDs for currently loaded kernel extensions can be listed using the command
+```bash
+$ ./developer/bin/list_loaded_kext_ids
+```
 
-* Package kexts are also described in `PackageInfo` files (see __Uninstall Key :pkgutil__ for finding them).
-  Once the `PackageInfo` files have been located, `grep` for `kext`. If any kernel extensions are present, a command like
-  `grep -i kext /path/to/PackageInfo` should return a `<bundle id>` tag with a `path` attribute that contains a `.kext` extension.
-  One example of a `<bundle id>` containing a kext comes from WavTap:
-  `<bundle id="com.wavtap.driver.WavTap" ... path="./WavTap.kext" ... />`; extraneous attributes have been snipped out and
-  replaced with ellipses.
+IDs inside a kext bundle you have located on disk can be listed using the command
+```bash
+$ ./developer/bin/list_id_in_kext </path/to/name.kext>
+```
+
+#### Working With a pkg File Manually
+
+Advanced users may wish to work with a `pkg` file manually, without having the
+package installed.
+
+Candidate application names helpful for determining the name of a Cask may be
+extracted from a `pkg` file using the command
+```bash
+$ ./developer/bin/list_apps_in_pkg </path/to/my.pkg>
+```
+
+Candidate package IDs which may be useful in a `:pkgutil` key may be
+extracted from a `pkg` file using the command
+```bash
+$ ./developer/bin/list_ids_in_pkg </path/to/my.pkg>
+```
+
+A fully manual method for finding bundle ids in a package file follows:
+
+  1. Unpack `/path/to/my.pkg` (replace with your package name) with `pkgutil --expand /path/to/my.pkg /tmp/expanded.unpkg`.
+  2. The unpacked package is a folder. Bundle ids are contained within files named `PackageInfo`. These files can be found
+     with the command `find /tmp/expanded.unpkg -name PackageInfo`.
+  3. `PackageInfo` files are XML files, and bundle ids are found within the `identifier` attributes of `<pkg-info>` tags that look like
+     `<pkg-info ... identifier="com.oracle.jdk7u51" ... >`, where extraneous attributes have been snipped out and replaced with ellipses.
+  4. Kexts inside packages are also described in `PackageInfo` files.  If any kernel extensions are present, the command
+     `find /tmp/expanded.unpkg -name PackageInfo -print0 | xargs -0 grep -i kext` should return a `<bundle id>` tag with a `path`
+     attribute that contains a `.kext` extension, for example `<bundle id="com.wavtap.driver.WavTap" ... path="./WavTap.kext" ... />`.
+  5. Once bundle ids have been identified, the unpacked package directory can be deleted.
 
 ### Caveats Details
 

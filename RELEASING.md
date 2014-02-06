@@ -38,8 +38,9 @@ down than floating in a brain somewhere.
 6. Bump the `VERSION` string which is stored in the file `lib/cask/version.rb`.
    It should match `$new_tag`, EXCEPT that the leading `v` character should be
    removed fom the version number in the Ruby code.
-7. Populate `CHANGELOG.md` with a new section for the release you are creating.
-   Follow the patterns used elsewhere in the file.
+7. Generate a draft changelog for the new release you are creating by running
+   `developer/bin/generate_changelog`.  Edit the draft changelog, and prepend it
+   to `CHANGELOG.md`, following the patterns used elsewhere in the file.
 8. Make a commit containing `CHANGELOG.md` and `lib/cask/version.rb`.  Like this:
 	```bash
 	git add CHANGELOG.md lib/cask/version.rb
