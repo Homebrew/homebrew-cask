@@ -1,6 +1,6 @@
 require 'test_helper'
 
-describe Cask::Artifact::Block do
+describe Cask::Artifact::AfterBlock do
   describe 'install' do
     it 'calls the specified block after installing, passing the cask' do
       called      = false
@@ -15,7 +15,7 @@ describe Cask::Artifact::Block do
       end
 
       cask = CaskWithAfterInstall.new
-      Cask::Artifact::Block.new(cask).install
+      Cask::Artifact::AfterBlock.new(cask).install
 
       called.must_equal true
       yielded_arg.must_equal cask
@@ -36,7 +36,7 @@ describe Cask::Artifact::Block do
       end
 
       cask = CaskWithAfterUninstall.new
-      Cask::Artifact::Block.new(cask).uninstall
+      Cask::Artifact::AfterBlock.new(cask).uninstall
 
       called.must_equal true
       yielded_arg.must_equal cask
