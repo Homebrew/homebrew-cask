@@ -16,7 +16,7 @@ shopt -s nocasematch  # case-insensitive regular expressions
 ###
 
 appdir=''
-scriptdir="$(dirname '$0')"
+scriptdir="$(dirname "$0")"
 
 ###
 ### functions

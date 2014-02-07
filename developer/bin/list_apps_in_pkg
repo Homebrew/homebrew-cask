@@ -61,7 +61,7 @@ app_source_4 () {
 
 app_source_5 () {
     /usr/bin/find "$pkgdir" -name Archive.pax.gz -print0  |           \
-    /usr/bin/xargs -0 -n1 -I{} sh -c                                  \
+    /usr/bin/xargs -0 -n1 -I{} /bin/bash -c                           \
       "/usr/bin/gunzip -c '{}' | /bin/pax | /usr/bin/egrep '\.app'" | \
     /usr/bin/perl -pe 's{\A.*/([^/]+\.app).*\Z}{$1}';
 }

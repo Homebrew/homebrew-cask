@@ -37,7 +37,7 @@ die () {
 }
 
 cd_to_project_root () {
-    local script_dir="$(/usr/bin/dirname $0)"
+    local script_dir="$(/usr/bin/dirname "$0")"
     cd "$script_dir"
     local git_root="$(git rev-parse --show-toplevel)"
     if [[ -z "$git_root" ]]; then
