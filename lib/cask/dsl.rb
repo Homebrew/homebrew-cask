@@ -22,16 +22,25 @@ module Cask::DSL
 
   module ClassMethods
     def homepage(homepage=nil)
+      if @homepage and !homepage.nil?
+        raise CaskInvalidError.new(self.title, "'homepage' stanza may only appear once")
+      end
       @homepage ||= homepage
     end
 
     def url(*args)
+      if @url and !args.empty?
+        raise CaskInvalidError.new(self.title, "'url' stanza may only appear once")
+      end
       @url ||= begin
         Cask::URL.new(*args) unless args.empty?
       end
     end
 
     def version(version=nil)
+      if @version and !version.nil?
+        raise CaskInvalidError.new(self.title, "'version' stanza may only appear once")
+      end
       @version ||= version
     end
 
@@ -100,22 +109,38 @@ module Cask::DSL
 
     attr_reader :sums
 
+    def hash_name(hash_type)
+      hash_type.to_s == 'sha2' ? 'sha256' : hash_type.to_s
+    end
+
     def md5(md5=nil)
+      if @sums == 0
+        raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'md5'")
+      end
       @sums ||= []
       @sums << Checksum.new(:md5, md5) unless md5.nil?
     end
 
     def sha1(sha1=nil)
+      if @sums == 0
+        raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'sha1'")
+      end
       @sums ||= []
       @sums << Checksum.new(:sha1, sha1) unless sha1.nil?
     end
 
     def sha256(sha2=nil)
+      if @sums == 0
+        raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'sha256'")
+      end
       @sums ||= []
       @sums << Checksum.new(:sha2, sha2) unless sha2.nil?
     end
 
     def no_checksum
+      unless @sums.nil? or @sums.empty?
+        raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with '#{hash_name(@sums.first.hash_type)}'")
+      end
       @sums = 0
     end
 
