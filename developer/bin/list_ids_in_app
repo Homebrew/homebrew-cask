@@ -16,7 +16,7 @@ shopt -s nocasematch  # case-insensitive regular expressions
 ###
 
 appdir=''
-scriptdir="$(dirname '$0')"
+scriptdir="$(dirname "$0")"
 
 ###
 ### functions
@@ -114,6 +114,9 @@ mark_up_sources () {
 _list_ids_in_app () {
 
     appdir="$1"
+    if [[ -h "$appdir" ]]; then
+        appdir="$(/usr/bin/readlink "$appdir")"
+    fi
 
     {
       # emit strings that look like bundle ids

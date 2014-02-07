@@ -48,6 +48,9 @@ mark_up_sources () {
 _list_id_in_kext () {
 
     kextdir="$1"
+    if [[ -h "$kextdir" ]]; then
+        kextdir="$(/usr/bin/readlink "$kextdir")"
+    fi
 
     {
       # emit strings that look like bundle ids

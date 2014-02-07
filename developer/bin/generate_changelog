@@ -147,11 +147,11 @@ def tag_commits
   end
 end
 
-# Collect merge commits separately because git does not always return
-# related merge commits when using a path constraint.  There might be
-# a clever way to do this in a single step already built into git.  In
-# any case (in the opinion of the author) git's default behavior is a
-# bug.
+# Collect merge commits separately because "git log" does not always
+# return related merge commits when using a path constraint.  There
+# might be a clever way to do this in a single step already built into
+# git.  In any case (in the opinion of the author) git's default
+# behavior is a bug.
 #
 # constrained to last_release..HEAD
 def merge_commits
