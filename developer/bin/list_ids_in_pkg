@@ -56,6 +56,9 @@ _list_ids_in_pkg () {
 
     if [[ -d "$1" ]]; then
         pkgdir="$1"
+        if [[ -h "$pkgdir" ]]; then
+            pkgdir="$(/usr/bin/readlink "$pkgdir")"
+        fi
     else
         local tmpdir=`/usr/bin/mktemp -d -t list_ids_in_pkg`
         trap "/bin/rm -rf -- '$tmpdir'" EXIT
