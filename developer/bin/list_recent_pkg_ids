@@ -18,7 +18,7 @@ shopt -s nocasematch # case-insensitive regular expressions
 _list_recent_pkg_ids () {
     /bin/ls -t /var/db/receipts |                        \
     /usr/bin/egrep '\.plist$' |                          \
-    /usr/bin/perl -pe 's{\A.*/([^/]+)\.plist\Z}{$1}sg' | \
+    /usr/bin/perl -pe 's{\A([^/]+)\.plist\Z}{$1}sg' |    \
     /usr/bin/egrep -v '^com\.apple\.' |                  \
     /usr/bin/head -10
 }
