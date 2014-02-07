@@ -29,7 +29,7 @@ class Cask::FakeSystemCommand
   def self.verify_expectations!
     expectations.each do |command, times|
       unless system_calls[command] == times
-        fail("expected #{command} to be run #{times} times, but got #{system_calls[command]}")
+        fail("expected #{command.inspect} to be run #{times} times, but got #{system_calls[command]}")
       end
     end
   end

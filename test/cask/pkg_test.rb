@@ -23,14 +23,14 @@ describe Cask::Pkg do
       pkg = Cask::Pkg.new('my.fake.pkg', Cask::FakeSystemCommand)
 
       Cask::FakeSystemCommand.stubs_command(
-        "/usr/sbin/pkgutil '--only-files' '--files' 'my.fake.pkg' 2>&1"
+        ['/usr/sbin/pkgutil', '--only-files', '--files', 'my.fake.pkg']
       )
       Cask::FakeSystemCommand.stubs_command(
-        "/usr/sbin/pkgutil '--only-dirs' '--files' 'my.fake.pkg' 2>&1"
+        ['/usr/sbin/pkgutil', '--only-dirs', '--files', 'my.fake.pkg']
       )
 
       Cask::FakeSystemCommand.expects_command(
-        %q(/usr/bin/sudo -E -- '/usr/sbin/pkgutil' '--forget' 'my.fake.pkg' 2>&1)
+        ['/usr/bin/sudo', '-E', '--', '/usr/sbin/pkgutil', '--forget', 'my.fake.pkg']
       )
 
       pkg.uninstall

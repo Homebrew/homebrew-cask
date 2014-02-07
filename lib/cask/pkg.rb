@@ -1,6 +1,6 @@
 class Cask::Pkg
   def self.all_matching(regexp, command)
-    command.run(%Q(/usr/sbin/pkgutil --pkgs="#{regexp}")).split("\n").map do |package_id|
+    command.run('/usr/sbin/pkgutil', :args => [%Q{--pkgs=#{regexp}}]).split("\n").map do |package_id|
       new(package_id.chomp, command)
     end
   end

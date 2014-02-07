@@ -1,14 +1,21 @@
+require 'open3'
+
 class Cask::SystemCommand
-  def self.run(command, options={})
-    command = _process_options(command, options)
-    odebug "Executing: #{command}"
+  def self.run(executable, options={})
+    command = _process_options(executable, options)
+    odebug "Executing: #{command.inspect}"
     output = ''
-    IO.popen(command, 'r+') do |pipe|
+    Open3.popen3(*command) do |stdin, stdout, stderr|
       if options[:input]
-        options[:input].each { |line| pipe.puts line }
+        options[:input].each { |line| stdin.puts line }
       end
-      pipe.close_write
-      while line = pipe.gets
+      stdin.close_write
+      while line = stdout.gets
+        output << line
+        ohai line.chomp if options[:print]
+      end
+      while line = stderr.gets
+        next if options[:stderr] == :silence
         output << line
         ohai line.chomp if options[:print]
       end
@@ -25,33 +32,20 @@ class Cask::SystemCommand
     run(command, options.merge(:must_succeed => true))
   end
 
-  def self._process_options(command, options)
+  def self._process_options(executable, options)
+    command = [executable]
     if options[:sudo]
-      command = "/usr/bin/sudo -E -- #{_quote(command)}"
+      command.unshift('/usr/bin/sudo', '-E', '--')
     end
-    if options[:args]
-      command = "#{command} #{options[:args].map { |arg| _quote(arg) }.join(' ')}"
-    end
-    case options[:stderr]
-    when :silence then
-      command = "#{command} 2>/dev/null"
-    when :merge, nil then
-      command = "#{command} 2>&1"
+    if ! options[:args].empty?
+      command.concat options[:args]
     end
     command
   end
 
   def self._assert_success(status, command, output)
     unless status.success?
-      raise CaskCommandFailedError.new(command, output)
-    end
-  end
-
-  def self._quote(string)
-    if %r{^(['"]).*\1$}.match(string)
-      string
-    else
-      %Q('#{string}')
+      raise CaskCommandFailedError.new(command.inspect, output)
     end
   end
 
@@ -62,7 +56,7 @@ class Cask::SystemCommand
       raise CaskError.new(<<-ERRMSG)
 Error parsing plist output from command.
   command was:
-  #{command}
+  #{command.inspect}
   output we attempted to parse:
   #{output}
         ERRMSG
