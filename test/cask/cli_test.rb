@@ -17,7 +17,7 @@ describe Cask::CLI do
     it "creates the appdir if it does not exist" do
       Cask.appdir.rmdir
       shutup {
-        Cask::CLI.process('list')
+          Cask::CLI.process('doctor')
       }
       Cask.appdir.directory?.must_equal true
     end
@@ -34,7 +34,7 @@ describe Cask::CLI do
       begin
         ENV['HOMEBREW_CASK_OPTS'] = "--appdir=#{custom_applications_dir}"
         shutup {
-          Cask::CLI.process('list')
+          Cask::CLI.process('doctor')
         }
       ensure
         ENV.delete 'HOMEBREW_CASK_OPTS'
@@ -47,7 +47,7 @@ describe Cask::CLI do
     it "creates the qlplugindir if it does not exist" do
       Cask.qlplugindir.rmdir
       shutup {
-        Cask::CLI.process('list')
+        Cask::CLI.process('doctor')
       }
       Cask.qlplugindir.directory?.must_equal true
     end
@@ -64,7 +64,7 @@ describe Cask::CLI do
       begin
         ENV['HOMEBREW_CASK_OPTS'] = "--qlplugindir=#{custom_qlplugin_dir}"
         shutup {
-          Cask::CLI.process('list')
+          Cask::CLI.process('doctor')
         }
       ensure
         ENV.delete 'HOMEBREW_CASK_OPTS'
@@ -86,7 +86,7 @@ describe Cask::CLI do
       begin
         ENV['HOMEBREW_CASK_OPTS'] = "--caskroom=#{custom_caskroom_dir}"
         shutup {
-          Cask::CLI.process('list')
+          Cask::CLI.process('doctor')
         }
       ensure
         ENV.delete 'HOMEBREW_CASK_OPTS'
@@ -100,7 +100,7 @@ describe Cask::CLI do
       Cask::CLI.expects(:exit).with(1)
       Cask::CLI.expects(:lookup_command).raises(CaskError)
       shutup {
-        Cask::CLI.process('list')
+        Cask::CLI.process('doctor')
       }
     end
   end
