@@ -96,12 +96,17 @@ require 'tempfile'
 project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
 taps_dest = HOMEBREW_LIBRARY/"Taps"
 
+# create directories
 taps_dest.mkdir
+HOMEBREW_PREFIX.join('bin').mkdir
 
 FileUtils.ln_s project_root, taps_dest/"phinze-cask"
 
 # Common superclass for tests casks for when we need to filter them out
 class TestCask < Cask; end
+
+# jack in some optional utilities
+FileUtils.ln_s '/usr/local/bin/cabextract', HOMEBREW_PREFIX.join('bin/cabextract')
 
 # also jack in some test casks
 FileUtils.ln_s project_root/'test'/'support', taps_dest/"phinze-testcasks"
