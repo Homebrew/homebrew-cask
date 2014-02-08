@@ -18,32 +18,33 @@ git remote add $github_user https://github.com/$github_user/homebrew-cask
 
 Making a Cask is easy: a Cask is a small Ruby file.
 
-Here's a Cask for Alfred.app as an example.  Note that you may repeat
+Here's a Cask for `Alfred.app` as an example.  Note that you may repeat
 the `link` stanza as many times as you need, to create multiple links:
 
 ```ruby
 class Alfred < Cask
-  url 'http://cachefly.alfredapp.com/Alfred_2.0.6_203.zip'
+  url 'http://cachefly.alfredapp.com/Alfred_2.1.1_227.zip'
   homepage 'http://www.alfredapp.com/'
-  version '2.0.6_203'
-  sha1 'fcbcc1c0076bbd118c825e0e3253246244e65396'
+  version '2.1.1_227'
+  sha256 'd19fe7441c6741bf663521e561b842f35707b1e83de21ca195aa033cade66d1b'
   link 'Alfred 2.app'
   link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
+
 ```
 
-Here is another Cask for Vagrant.pkg
+Here is another Cask for `Vagrant.pkg`:
 
 ```ruby
 class Vagrant < Cask
-  url 'http://files.vagrantup.com/packages/22b76517d6ccd4ef232a4b4ecbaa276aff8037b8/Vagrant-1.2.6.dmg'
+  url 'https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg'
   homepage 'http://www.vagrantup.com'
-  version '1.2.6'
-  sha1 '5f3e1bc5761b41e476bc8035f5ba03d42c0e12f0'
+  version '1.4.3'
+  sha256 'e7ff13b01d3766829f3a0c325c1973d15b589fe1a892cf7f857da283a2cbaed1'
   install 'Vagrant.pkg'
-  uninstall :script => { :executable => 'uninstall.tool',
-                         :input => %w[Yes] }
+  uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] }
 end
+
 ```
 
 To get started, use the handy dandy `brew cask create` command.
@@ -62,7 +63,7 @@ class MyNewCask < Cask
   url ''
   homepage ''
   version ''
-  sha1 ''
+  sha256 ''
   link ''
 end
 ```
@@ -79,7 +80,7 @@ Fill in the following fields for your Cask:
 | `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see __URL Details__ for more information)
 | `homepage`         | application homepage; used for the `brew cask home` command
 | `version`          | application version; determines the directory structure in the Caskroom
-| `sha1`             | SHA-1 Checksum of the file; checked when the file is downloaded to prevent any funny business (can be omitted with `no_checksum`)
+| `sha256`           | SHA-256 checksum of the file; checked when the file is downloaded to prevent any funny business (can be omitted with `no_checksum`)
 | __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
 | `link`             | relative path to a file that should be linked into the `Applications` folder on installation (see __Link Details__ for more information)
 | `install`          | relative path to `pkg` that should be run to install the application
@@ -340,10 +341,11 @@ And the following methods may be useful for interpolation:
 
 ### Good Things To Know
 
-* In order to get the SHA-1 checksum for the file, the easiest way is to run
-  `shasum <file>`. A few casks use SHA-256 checksums instead of SHA-1 checksums:
-  they replace the `sha1` field with a `sha256` field. The easiest way to get
-  the SHA-256 checksum is to run `shasum -a 256 <file>`.
+* In order to get the SHA-256 checksum for the file, the easiest way is to run
+  `shasum -a 256 <file>`.
+    * Although new casks/cask updates should use SHA-256, old casks may still
+    use SHA-1 checksums instead of SHA-256 checksums: they have a
+    `sha1` field instead of a `sha256` field (calculated using `shasum <file>`).
 * If the application does not have versioned downloads, you can skip the
   checksum by specifying `no_checksum`, which takes no arguments.
 * We have some conventions for projects without version-specific URLs. `latest`

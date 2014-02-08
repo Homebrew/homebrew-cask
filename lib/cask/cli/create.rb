@@ -23,7 +23,7 @@ module Cask::CLI::Create
         url ''
         homepage ''
         version ''
-        sha1 ''
+        sha256 ''
         link ''
       end
     EOS
