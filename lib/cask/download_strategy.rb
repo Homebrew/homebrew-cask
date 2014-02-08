@@ -1,10 +1,17 @@
 require 'cgi'
 
-class Cask::CurlDownloadStrategy < CurlDownloadStrategy
+# We abuse Homebrew's download strategies considerably here.
+# * Our downloader instances only invoke the fetch method,
+#   ignoring stage and clear_cache.
+# * Our overridden fetch methods are expected to return
+#   a value: the successfully downloaded file.
+
+module Cask::DownloadStrategy
   attr_reader :cask, :cask_url
 
-  def initialize(cask)
+  def initialize(cask, command=Cask::SystemCommand)
     @cask     = cask
+    @command  = command
     @cask_url = cask.url
     super(
       cask.title,
@@ -14,6 +21,11 @@ class Cask::CurlDownloadStrategy < CurlDownloadStrategy
       end
     )
   end
+end
+
+class Cask::CurlDownloadStrategy < CurlDownloadStrategy
+
+  include Cask::DownloadStrategy
 
   def _fetch
     odebug "Calling curl with args #{curl_args}"
@@ -61,5 +73,76 @@ class Cask::CurlDownloadStrategy < CurlDownloadStrategy
     else
       []
     end
+  end
+end
+
+class Cask::SubversionDownloadStrategy < SubversionDownloadStrategy
+  include Cask::DownloadStrategy
+
+  # super does not provide checks for already-existing downloads
+  def fetch
+    if tarball_path.exist?
+      puts "Already downloaded: #{tarball_path}"
+    else
+      super
+      compress
+    end
+    tarball_path
+  end
+
+  # This primary reason for redefining this method is the trust_cert
+  # option, controllable from the Cask definition. The rest of this
+  # method is similar to Homebrew's, but translated to local idiom.
+  def fetch_repo target, url, revision=cask_url.revision, ignore_externals=false
+    # Use "svn up" when the repository already exists locally.
+    # This saves on bandwidth and will have a similar effect to verifying the
+    # cache as it will make any changes to get the right revision.
+    svncommand = target.directory? ? 'up' : 'checkout'
+    args = [svncommand]
+
+    # SVN shipped with XCode 3.1.4 can't force a checkout.
+    args << '--force' unless MacOS.version == :leopard
+
+    if cask_url.trust_cert
+      args << '--trust-server-cert'
+      args << '--non-interactive'
+    end
+
+    args << url unless target.directory?
+    args << target
+    args << '-r' << revision if revision
+    args << '--ignore-externals' if ignore_externals
+    @command.run!('/usr/bin/svn',
+                  :args => args,
+                  :stderr => :silence)
+  end
+
+  def tarball_path
+    @tarball_path ||= cached_location.dirname.join(cached_location.basename.to_s + "-#{@cask.version}.tar")
+  end
+
+  private
+
+  # Seems nutty: we "download" the contents into a tape archive.
+  # Why?
+  # * A single file is tractable to the rest of the Cask toolchain,
+  # * An alternative would be to create a Directory container type.
+  #   However, some type of file-serialization trick would still be
+  #   needed in order to enable calculating a single checksum over
+  #   a directory.  So, in that alternative implementation, the
+  #   special cases would propagate outside this class, including
+  #   the use of tar or equivalent.
+  # * SubversionDownloadStrategy.cached_location is not versioned
+  # * tarball_path provides a needed return value for our overridden
+  #   fetch method.
+  # * We can also take this private opportunity to strip files from
+  #   the download which are protocol-specific.
+
+  def compress
+    Dir.chdir(cached_location) do
+      @command.run!('/usr/bin/tar', :args => ['-s/^\.//', '--exclude', '.svn', '-cf', Pathname.new(tarball_path), '--', '.'],
+                                    :stderr => :silent)
+    end
+    clear_cache
   end
 end

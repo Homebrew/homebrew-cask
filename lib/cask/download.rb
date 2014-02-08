@@ -8,7 +8,11 @@ class Cask::Download
   def perform
     require 'software_spec'
     cask = @cask
-    downloader = Cask::CurlDownloadStrategy.new(cask)
+    if cask.url.using == :svn
+      downloader = Cask::SubversionDownloadStrategy.new(cask)
+    else
+      downloader = Cask::CurlDownloadStrategy.new(cask)
+    end
     downloaded_path = downloader.fetch
 
     _check_sums(downloaded_path, cask.sums) unless cask.sums === 0
