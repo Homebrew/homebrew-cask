@@ -1,11 +1,15 @@
 require 'pathname'
 require 'formula'
 
+class BrewCask < Formula; end
 require Pathname(__FILE__).realpath.dirname.join('lib', 'cask', 'version')
 
 class BrewCask < Formula
+
+  include BrewCask::Version
+
   homepage 'https://github.com/phinze/homebrew-cask/'
-  url 'https://github.com/phinze/homebrew-cask.git', :tag => "v#{Cask::VERSION}"
+  url 'https://github.com/phinze/homebrew-cask.git', :tag => "v#{BrewCask::VERSION}"
 
   head 'https://github.com/phinze/homebrew-cask.git', :branch => 'master'
 

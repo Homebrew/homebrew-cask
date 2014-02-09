@@ -1,6 +1,7 @@
 HOMEBREW_CACHE_CASKS = HOMEBREW_CACHE.join('Casks')
 
 class Cask; end
+class BrewCask; end
 
 require 'download_strategy'
 
@@ -35,6 +36,7 @@ require 'cask/version'
 require 'plist/parser'
 
 class Cask
+  include BrewCask::Version
   include Cask::DSL
   include Cask::Locations
   include Cask::Scopes
