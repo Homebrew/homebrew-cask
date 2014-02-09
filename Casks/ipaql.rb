@@ -3,5 +3,5 @@ class Ipaql < Cask
   homepage 'http://ipaql.com/'
   version '1.3.0'
   sha1 'a870da34839b42945cf2334c7a27c2574d41ffcd'
-  qlplugin 'IPAQuickLook-1.3.0/IPAQuickLook.qlgenerator'
+  qlplugin 'ipaql.qlgenerator'
 end
