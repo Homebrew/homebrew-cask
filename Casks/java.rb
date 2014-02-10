@@ -8,11 +8,24 @@ class Java < Cask
   version '1.7.0_51'
   sha1 'd53f71dfb7f24b6c0fc470a17fa0cac3ee304194'
   install 'JDK 7 Update 51.pkg'
-  uninstall :pkgutil => 'com.oracle.jdk7u51'
+  after_install do
+    system "sudo /usr/libexec/PlistBuddy -c \"Add :JavaVM:JVMCapabilities: string BundledApp\" /Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Info.plist"
+    system "sudo /usr/libexec/PlistBuddy -c \"Add :JavaVM:JVMCapabilities: string JNI\" /Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Info.plist"
+    system "sudo /usr/libexec/PlistBuddy -c \"Add :JavaVM:JVMCapabilities: string WebStart\" /Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Info.plist"
+    system "sudo /usr/libexec/PlistBuddy -c \"Add :JavaVM:JVMCapabilities: string Applets\" /Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Info.plist"
+    system "sudo rm -r /System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK 2> /dev/null"
+    system "sudo ln -s /Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents /System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK"
+  end
+  uninstall :pkgutil => 'com.oracle.jdk7u51',
+            :files => '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
   caveats <<-EOS.undent
-    If your Java application still asks for JRE installation, you need to run:
-    sudo sed -i \'\' 's/\\<string\\>CommandLine\\<\\/string\\>/\\<string\\>CommandLine\\<\\/string\\>\\<string\\>JNI\\<\\/string\\>\\<string\\>BundledApp\\<\\/string\\>\\<string\\>WebStart\\<\\/string\\>\\<string\\>Applets\\<\\/string\\>/' /Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Info.plist
-    You might also need to reboot or Logout/Login
-    Above is a workaround for JRE packaging bug discussed here: https://bugs.eclipse.org/bugs/show_bug.cgi?id=411361
+    This Cask makes minor modifications to the JRE to prevent any packaged
+    application issues.
+
+    If your Java application still asks for JRE installation, you might need to
+    reboot or logout/login.
+
+    The JRE packaging bug is discussed here:
+    https://bugs.eclipse.org/bugs/show_bug.cgi?id=411361
     EOS
 end
