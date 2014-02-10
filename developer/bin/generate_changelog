@@ -103,6 +103,25 @@ def last_release
   end
 end
 
+def next_release
+  if @next_release.nil?
+    if ENV.key?('NEW_RELEASE_TAG')
+      @next_release = ENV['NEW_RELEASE_TAG']
+    else
+      @next_release = Open3.popen3(
+                                   './developer/bin/get_release_tag', '-next'
+                                   ) do |stdin, stdout, stderr|
+        begin
+          stdout.gets.chomp
+        rescue
+        end
+      end
+    end
+  else
+    @next_release
+  end
+end
+
 def verify_git_object(object)
   sha = Open3.popen3(*%w[
                          git rev-parse -q --verify
@@ -205,7 +224,7 @@ end
 
 def header
   <<EOT
-## #{last_release}
+## #{next_release}
 
 * __Casks__
 * __Features__
