@@ -37,7 +37,8 @@ class Cask::SystemCommand
     if options[:sudo]
       command.unshift('/usr/bin/sudo', '-E', '--')
     end
-    if ! options[:args].empty?
+    if options.key?(:args) and
+        ! options[:args].empty?
       command.concat options[:args]
     end
     command
