@@ -33,6 +33,7 @@ class Cask::SystemCommand
   end
 
   def self._process_options(executable, options)
+    options.assert_valid_keys :input, :print, :stderr, :args, :must_succeed, :sudo, :plist
     command = [executable]
     if options[:sudo]
       command.unshift('/usr/bin/sudo', '-E', '--')
