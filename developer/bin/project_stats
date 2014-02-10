@@ -80,6 +80,10 @@ print_contributor_stats () {
     local start_object="$1"
     local initial_commit="$2"
 
+    printf "====================\n"
+    printf "Contributors\n"
+    printf "====================\n"
+
     local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
     printf "Unique contributors"
     if ! [[ "$start_object" = "$initial_commit" ]]; then
@@ -110,6 +114,10 @@ print_commit_stats () {
     local start_object="$1"
     local initial_commit="$2"
 
+    printf "====================\n"
+    printf "Commits\n"
+    printf "====================\n"
+
     local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
     printf "Commit count"
     if ! [[ "$start_object" = "$initial_commit" ]]; then
@@ -134,6 +142,11 @@ print_commit_stats () {
 print_doc_stats () {
     local start_object="$1"
     local initial_commit="$2"
+
+    printf "====================\n"
+    printf "Docs\n"
+    printf "====================\n"
+
     local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
     printf "Doc contributors"
     if ! [[ "$start_object" = "$initial_commit" ]]; then
@@ -150,6 +163,10 @@ print_cask_stats () {
     local start_object="$1"
     local initial_commit="$2"
 
+    printf "====================\n"
+    printf "Casks\n"
+    printf "====================\n"
+
     if ! [[ "$start_object" = "$initial_commit" ]]; then
         local     new_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^A.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
         local deleted_casks="$(git diff --name-status "$start_object" "$end_object" -- "${cask_paths[@]}" | /usr/bin/grep '^D.*\.rb' | cut -f2 | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
@@ -164,6 +181,7 @@ print_cask_stats () {
 
     printf "Total current Casks in HEAD\t"
     /usr/bin/find "${cask_paths[@]}" -name '*.rb' | /usr/bin/wc -l
+    printf "\n"
 }
 
 ###
