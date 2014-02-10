@@ -135,7 +135,7 @@ def tag_commits
                                     git show-ref -s --tags --dereference
                                    ]) do |stdin, stdout, stderr|
     stdout.each_line.collect do |line|
-      line.chomp
+      line.chomp!
       if ! %r{\^\{\}\Z}.match(line)
         nil
       elsif %r{\A(#{SHA_PAT}) }.match(line)
@@ -161,7 +161,7 @@ def merge_commits
                                   "#{last_release}..#{end_object}"
                                   ) do |stdin, stdout, stderr|
     stdout.each_line.collect do |line|
-      line.chomp
+      line.chomp!
       # intentionally limited to the simple case of two parents
       if %r{\A(#{SHA_PAT}) (#{SHA_PAT}) (#{SHA_PAT}) (.*)}.match(line)
         [$1, {
@@ -186,7 +186,7 @@ def ordinary_code_commits
                                           '--', *CODE_PATHS
                                           ) do |stdin, stdout, stderr|
     stdout.each_line.collect do |line|
-      line.chomp
+      line.chomp!
       if %r{\A(#{SHA_PAT}) (#{SHA_PAT}) (.*)}.match(line)
         [$1, {
               :trunk_parent  => $2,
