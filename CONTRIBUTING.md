@@ -338,6 +338,12 @@ $ ./developer/bin/list_id_in_kext </path/to/name.kext>
 Advanced users may wish to work with a `pkg` file manually, without having the
 package installed.
 
+A list of files which may be installed from a `pkg` can be extracted using the
+command
+```bash
+$ ./developer/bin/list_payload_in_pkg </path/to/my.pkg>
+```
+
 Candidate application names helpful for determining the name of a Cask may be
 extracted from a `pkg` file using the command
 ```bash
