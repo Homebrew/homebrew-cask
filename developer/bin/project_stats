@@ -131,6 +131,21 @@ print_commit_stats () {
     printf "\n"
 }
 
+print_doc_stats () {
+    local start_object="$1"
+    local initial_commit="$2"
+    local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
+    printf "Doc contributors"
+    if ! [[ "$start_object" = "$initial_commit" ]]; then
+        printf " since $start_object"
+    fi
+    printf "\n  "
+    $git_log_cmd -- "${doc_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | \
+      /usr/bin/egrep -v $'^\'(paul\\.t\\.hinze@gmail\\.com|fanquake@users\\.noreply\\.github\\.com|fanquake@gmail\\.com|kevin@suttle\\.io|leoj3n@gmail\\.com|nano@fdp\\.io|nanoid\\.xd@gmail\\.com|me@passcod\\.name|walker@pobox\\.com|info@vitorgalvao\\.com)\'$' | \
+      /usr/bin/xargs | /usr/bin/perl -pe 's{ }{, }g'           # '
+    printf "\n"
+}
+
 print_cask_stats () {
     local start_object="$1"
     local initial_commit="$2"
@@ -174,6 +189,7 @@ _project_stats () {
 
     print_contributor_stats "$start_object" "$initial_commit"
     print_commit_stats      "$start_object" "$initial_commit"
+    print_doc_stats         "$start_object" "$initial_commit"
     print_cask_stats        "$start_object" "$initial_commit"
 }
 
