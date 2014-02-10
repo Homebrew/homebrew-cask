@@ -28,7 +28,7 @@ class Cask::SystemCommand
     end
   end
 
-  def self.run!(command, options)
+  def self.run!(command, options={})
     run(command, options.merge(:must_succeed => true))
   end
 
