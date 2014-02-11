@@ -31,33 +31,33 @@ down than floating in a brain somewhere.
 4. Decide whether to bump the minor or patch fields in the next tag, based on
    whether or not features were added.  Run the shell command
 	```bash
-	new_tag="$(developer/bin/get_release_tag -next)"; echo "$new_tag"    # or use -next -patch
+	export NEW_RELEASE_TAG="$(developer/bin/get_release_tag -next)"; echo "$NEW_RELEASE_TAG"    # or use -next -patch
 	```
-   and make sure the value in `$new_tag` is what you want.
+   and make sure the value in `$NEW_RELEASE_TAG` is what you want.
 5. Optionally run `developer/bin/project_stats release` for overall release stats.
 6. Bump the `VERSION` string which is stored in the file `lib/cask/version.rb`.
-   It should match `$new_tag`, EXCEPT that the leading `v` character should be
-   removed fom the version number in the Ruby code.
+   It should match `$NEW_RELEASE_TAG`, EXCEPT that the leading `v` character should be
+   removed from the version number in the Ruby code.
 7. Generate a draft changelog for the new release you are creating by running
    `developer/bin/generate_changelog`.  Edit the draft changelog, and prepend it
    to `CHANGELOG.md`, following the patterns used elsewhere in the file.
 8. Make a commit containing `CHANGELOG.md` and `lib/cask/version.rb`.  Like this:
 	```bash
 	git add CHANGELOG.md lib/cask/version.rb
-	git commit -m "cut $new_tag"
+	git commit -m "cut $NEW_RELEASE_TAG"
 	```
 9. Tag that commit, ensuring that you provide a message so we get an annotated
    tag.  Like this:
 	```bash
-	git tag -m "$new_tag" "$new_tag"
+	git tag -m "$NEW_RELEASE_TAG" "$NEW_RELEASE_TAG"
 	```
 10. Push the commit and the tag:
 	```bash
 	git push --follow-tags
 	```
-11. Unset `$new_tag`; you don't need it anymore.
+11. Unset `$NEW_RELEASE_TAG`; you don't need it anymore.
 	```bash
-	unset new_tag
+	unset NEW_RELEASE_TAG
 	```
 12. Open your browser to <https://github.com/phinze/homebrew-cask/releases> .
     Then click the link for your newly-pushed tag. Click the "Edit Tag" button in
