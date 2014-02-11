@@ -21,6 +21,7 @@ require 'test/testing_env'
 
 # making homebrew's cache dir allows us to actually download casks in tests
 HOMEBREW_CACHE.mkpath
+HOMEBREW_CACHE.join('Casks').mkpath
 
 # must be called after testing_env so at_exit hooks are in proper order
 require 'minitest/autorun'
