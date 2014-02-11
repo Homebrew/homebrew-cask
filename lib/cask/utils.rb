@@ -10,6 +10,16 @@ class Tty
   end
 end
 
+# monkeypatch Hash
+class Hash
+  def assert_valid_keys(*valid_keys)
+    unknown_keys = self.keys - valid_keys
+    unless unknown_keys.empty?
+      raise "Unknown keys: #{unknown_keys.join(", :")}. Running `brew update; brew upgrade brew-cask` will likely fix it."
+    end
+  end
+end
+
 def odebug title, *sput
   if Cask.respond_to?(:debug) and Cask.debug
     width = Tty.width * 4 - 6

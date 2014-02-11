@@ -28,16 +28,18 @@ class Cask::SystemCommand
     end
   end
 
-  def self.run!(command, options)
+  def self.run!(command, options={})
     run(command, options.merge(:must_succeed => true))
   end
 
   def self._process_options(executable, options)
+    options.assert_valid_keys :input, :print, :stderr, :args, :must_succeed, :sudo, :plist
     command = [executable]
     if options[:sudo]
       command.unshift('/usr/bin/sudo', '-E', '--')
     end
-    if ! options[:args].empty?
+    if options.key?(:args) and
+        ! options[:args].empty?
       command.concat options[:args]
     end
     command
