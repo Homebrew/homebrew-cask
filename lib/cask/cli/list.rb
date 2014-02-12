@@ -33,7 +33,7 @@ class Cask::CLI::List
     artifacts = Cask::Artifact.for_cask(cask)
     artifacts.each do |artifact|
       summary = artifact.new(cask).summary
-      ohai summary[:description], summary[:contents] unless summary.empty?
+      ohai summary[:english_description], summary[:contents] unless summary.empty?
     end
   end
 
