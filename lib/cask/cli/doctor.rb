@@ -14,7 +14,7 @@ class Cask::CLI::Doctor
     ohai 'Homebrew Cellar Path:'
     puts HOMEBREW_CELLAR
     ohai 'Homebrew-cask Version:'
-    puts Cask::VERSION
+    puts HOMEBREW_CASK_VERSION
     ohai 'Contents of $LOAD_PATH:'
     puts $LOAD_PATH
     ohai 'Contents of $RUBYLIB Environment Variable:'

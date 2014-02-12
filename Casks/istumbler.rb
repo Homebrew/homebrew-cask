@@ -1,7 +1,7 @@
 class Istumbler < Cask
-  url 'http://istumbler.net/downloads/istumbler-99.zip'
+  url 'http://istumbler.net/beta/istumbler-100gmc5b.zip'
   homepage 'http://istumbler.net/'
-  version '99'
-  sha1 '9dfdee3cc1405c4c01417ac0423473142c9b55c9'
+  version '100gmc5b'
+  sha1 '2afefb707f030cac94bc017650dff9f9d4b24bf4'
   link 'iStumbler.app'
 end

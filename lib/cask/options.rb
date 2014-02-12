@@ -19,5 +19,13 @@ module Cask::Options
     def debug=(_debug)
       @debug = _debug
     end
+
+    def outdated
+      @outdated ||= false
+    end
+
+    def outdated=(_outdated)
+      @outdated = _outdated
+    end
   end
 end

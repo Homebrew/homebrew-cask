@@ -41,6 +41,25 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
+    it "works with cab-based casks" do
+      skip unless HOMEBREW_PREFIX.join('bin/cabextract').exist?
+      cab_container = Cask.load('cab-container')
+
+      # because I don't know how to do the mocking properly
+      def cab_container.depends_on_formula
+        []
+      end
+
+      shutup do
+        Cask::Installer.new(cab_container).install
+      end
+
+      dest_path = Cask.caskroom/'cab-container'/cab_container.version
+      dest_path.must_be :directory?
+      application = dest_path/'cabcontainer/Application.app'
+      application.must_be :directory?
+    end
+
     it "blows up on a bad checksum" do
       bad_checksum = Cask.load('bad-checksum')
       lambda {

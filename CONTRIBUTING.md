@@ -18,32 +18,33 @@ git remote add $github_user https://github.com/$github_user/homebrew-cask
 
 Making a Cask is easy: a Cask is a small Ruby file.
 
-Here's a Cask for Alfred.app as an example.  Note that you may repeat
+Here's a Cask for `Alfred.app` as an example.  Note that you may repeat
 the `link` stanza as many times as you need, to create multiple links:
 
 ```ruby
 class Alfred < Cask
-  url 'http://cachefly.alfredapp.com/Alfred_2.0.6_203.zip'
+  url 'http://cachefly.alfredapp.com/Alfred_2.1.1_227.zip'
   homepage 'http://www.alfredapp.com/'
-  version '2.0.6_203'
-  sha1 'fcbcc1c0076bbd118c825e0e3253246244e65396'
+  version '2.1.1_227'
+  sha256 'd19fe7441c6741bf663521e561b842f35707b1e83de21ca195aa033cade66d1b'
   link 'Alfred 2.app'
   link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
+
 ```
 
-Here is another Cask for Vagrant.pkg
+Here is another Cask for `Vagrant.pkg`:
 
 ```ruby
 class Vagrant < Cask
-  url 'http://files.vagrantup.com/packages/22b76517d6ccd4ef232a4b4ecbaa276aff8037b8/Vagrant-1.2.6.dmg'
+  url 'https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg'
   homepage 'http://www.vagrantup.com'
-  version '1.2.6'
-  sha1 '5f3e1bc5761b41e476bc8035f5ba03d42c0e12f0'
+  version '1.4.3'
+  sha256 'e7ff13b01d3766829f3a0c325c1973d15b589fe1a892cf7f857da283a2cbaed1'
   install 'Vagrant.pkg'
-  uninstall :script => { :executable => 'uninstall.tool',
-                         :input => %w[Yes] }
+  uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] }
 end
+
 ```
 
 To get started, use the handy dandy `brew cask create` command.
@@ -62,7 +63,7 @@ class MyNewCask < Cask
   url ''
   homepage ''
   version ''
-  sha1 ''
+  sha256 ''
   link ''
 end
 ```
@@ -79,11 +80,11 @@ Fill in the following fields for your Cask:
 | `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see __URL Details__ for more information)
 | `homepage`         | application homepage; used for the `brew cask home` command
 | `version`          | application version; determines the directory structure in the Caskroom
-| `sha1`             | SHA-1 Checksum of the file; checked when the file is downloaded to prevent any funny business (can be omitted with `no_checksum`)
+| `sha256`           | SHA-256 checksum of the file; checked when the file is downloaded to prevent any funny business (can be omitted with `no_checksum`)
 | __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
 | `link`             | relative path to a file that should be linked into the `Applications` folder on installation (see __Link Details__ for more information)
-| `install`          | relative path to `pkg` that should be run to install the application
-| `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see __Uninstall Support__ for more information)
+| `install`          | relative path to `pkg` that should be run to install the application (see __Install Details__ for more information)
+| `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see __Uninstall Details__ for more information)
 
 Additional fields you might need for special use-cases:
 
@@ -241,50 +242,151 @@ link 'TexmakerMacosxLion/texmaker.app'
 
 Linking to the .app file without reference to the containing folder will result in installation failing with a "symlink source is not there" error.
 
-### Uninstall Support
+### Install Details
 
-Since OS X has no standard uninstall behavior, there's a wide variety of
-methods by which applications can be uninstalled. The `uninstall` directive has
-many features to help properly remove a Cask-installed application.
+The first argument to `install` should be a relative path to the `pkg` file
+to be installed.  For example:
 
-These features are utilized via a hash argument to `uninstall` with any number
-of the following keys:
+```ruby
+install 'Vagrant.pkg'
+```
 
-* `:early_script` (string or hash) - like `:script`, but runs early (for backward compat, best avoided)
-* `:launchctl` (string or array) - ids of launchctl services to remove
-* `:quit` (string or array) - bundle id of running applications to quit before proceeding with the uninstaller
-* `:kext` (string or array) - bundle id of kext(s) to unload from the system before proceeding with the uninstaller
-* `:pkgutil` (string or regexp) - regexp matching bundle id(s) of packages to uninstall using `pkgutil`
+Subsequent arguments to `install` are key/value pairs which modify the
+install process.  Currently supported keys are
+
+  * `:allow_untrusted` -- pass `-allowUntrusted` to `/usr/sbin/installer`
+
+Example:
+
+```ruby
+install 'Soundflower.pkg', :allow_untrusted => true
+```
+
+### Uninstall Details
+
+A `pkg`-based Cask using `install` will **not** know how to uninstall
+correctly unless an `uninstall` stanza is given.
+
+Since `pkg` installers can do arbitrary things, different techniques are
+needed to uninstall in each case.  You may need to specify one, or several,
+of the following key/value pairs as arguments to `uninstall`.  `:pkgutil`
+is the most useful.
+
+* `:early_script` (string or hash) - like `:script`, but runs early (for special cases, best avoided)
+* `:launchctl` (string or array) - ids of `launchctl` jobs to remove
+* `:quit` (string or array) - bundle ids of running applications to quit
+* `:kext` (string or array) - bundle ids of kexts to unload from the system
+* `:pkgutil` (string or regexp) - regexp matching bundle ids of packages to uninstall using `pkgutil`
 * `:script` (string or hash) - relative path to an uninstall script to be run via sudo; use hash if args are needed
-  - `:executable` - relative path to an uninstall script to be run via sudo (required for hash)
+  - `:executable` - relative path to an uninstall script to be run via sudo (required for hash form)
   - `:args` - array of arguments to the uninstall script
   - `:input` - array of lines of input to be sent to `stdin` of the script
-* `:files` (array) - absolute paths of files or directories to remove
-  - should only be used as a last resort, since this is the blunt force approach
+* `:files` (array) - absolute paths of files or directories to remove.  `:files` should only be used as a last resort. `:pkgutil` is strongly preferred
 
-Each defined `uninstall` method is applied according to the order above. The order
+Each `uninstall` technique is applied according to the order above. The order
 in which `uninstall` keys appear in the Cask file is ignored.
+
+For assistance filling in the right values for `uninstall` keys, there are
+several helper scripts found under `developer/bin` in the homebrew-cask
+repository.  Each of these scripts responds to the `-help` option with
+additional documentation.
+
+The easiest way to work out an `uninstall` stanza is on a system where the
+`pkg` is currently installed and operational.  To operate on an uninstalled
+`pkg` file, see __Working With a pkg File Manually__, below.
 
 #### Uninstall Key :pkgutil
 
-* One method for finding package bundle id(s) is the following:
-  1. Unpack `/path/to/my.pkg` (replace with your package name) with `pkgutil --expand /path/to/my.pkg /tmp/expanded.unpkg`.
-  2. The unpacked package is a folder. Bundle id(s) are contained within files named `PackageInfo`. These files can be found
-     with the command `find /tmp/expanded.unpkg -name PackageInfo`.
-  3. `PackageInfo` files are XML files, and bundle id(s) are found within the `identifier` attributes of `<pkg-info>` tags that look like
-  `<pkg-info ... identifier="com.oracle.jdk7u51" ... >`, where extraneous attributes have been snipped out and replaced with ellipses.
-  4. Once bundle id(s) have been identified, the unpacked package directory can be deleted.
+This is the most important and useful uninstall key.  `:pkgutil` is
+often sufficient to completely uninstall a `pkg`.
+
+IDs for the most recently-installed packages can be listed using the
+command
+```bash
+$ ./developer/bin/list_recent_pkg_ids
+```
+
+#### List Files Associated With a `pkg`
+
+Once you know the ID for an installed package, (above), you can list
+all files on your system associated with that package ID using the
+OS X command
+```bash
+$ pkgutil --files <package.id.goes.here>
+```
+Listing the associated files can help you assess whether the package
+included any launchctl jobs or kernel extensions (kexts).
+
+#### Uninstall Key :launchctl
+
+IDs for currently loaded launchctl jobs can be listed using the command
+```bash
+$ ./developer/bin/list_loaded_launchjob_ids
+```
+
+IDs for all installed launchctl jobs can be listed using the command
+```bash
+$ ./developer/bin/list_installed_launchjob_ids
+```
+
+#### Uninstall Key :quit
+
+Bundle IDs for currently running Applications can be listed using the command
+```bash
+$ ./developer/bin/list_running_app_ids
+```
+
+Bundle IDs inside an Application bundle on disk can be listed using the command
+```bash
+$ ./developer/bin/list_ids_in_app </path/to/application.app>
+```
 
 #### Uninstall Key :kext
 
-* If the kernel extension (kext) you are targeting is currently loaded, you can get its bundle id by running `developer/bin/list_loaded_kext_ids`.
+IDs for currently loaded kernel extensions can be listed using the command
+```bash
+$ ./developer/bin/list_loaded_kext_ids
+```
 
-* Package kexts are also described in `PackageInfo` files (see __Uninstall Key :pkgutil__ for finding them).
-  Once the `PackageInfo` files have been located, `grep` for `kext`. If any kernel extensions are present, a command like
-  `grep -i kext /path/to/PackageInfo` should return a `<bundle id>` tag with a `path` attribute that contains a `.kext` extension.
-  One example of a `<bundle id>` containing a kext comes from WavTap:
-  `<bundle id="com.wavtap.driver.WavTap" ... path="./WavTap.kext" ... />`; extraneous attributes have been snipped out and
-  replaced with ellipses.
+IDs inside a kext bundle you have located on disk can be listed using the command
+```bash
+$ ./developer/bin/list_id_in_kext </path/to/name.kext>
+```
+
+#### Working With a pkg File Manually
+
+Advanced users may wish to work with a `pkg` file manually, without having the
+package installed.
+
+A list of files which may be installed from a `pkg` can be extracted using the
+command
+```bash
+$ ./developer/bin/list_payload_in_pkg </path/to/my.pkg>
+```
+
+Candidate application names helpful for determining the name of a Cask may be
+extracted from a `pkg` file using the command
+```bash
+$ ./developer/bin/list_apps_in_pkg </path/to/my.pkg>
+```
+
+Candidate package IDs which may be useful in a `:pkgutil` key may be
+extracted from a `pkg` file using the command
+```bash
+$ ./developer/bin/list_ids_in_pkg </path/to/my.pkg>
+```
+
+A fully manual method for finding bundle ids in a package file follows:
+
+  1. Unpack `/path/to/my.pkg` (replace with your package name) with `pkgutil --expand /path/to/my.pkg /tmp/expanded.unpkg`.
+  2. The unpacked package is a folder. Bundle ids are contained within files named `PackageInfo`. These files can be found
+     with the command `find /tmp/expanded.unpkg -name PackageInfo`.
+  3. `PackageInfo` files are XML files, and bundle ids are found within the `identifier` attributes of `<pkg-info>` tags that look like
+     `<pkg-info ... identifier="com.oracle.jdk7u51" ... >`, where extraneous attributes have been snipped out and replaced with ellipses.
+  4. Kexts inside packages are also described in `PackageInfo` files.  If any kernel extensions are present, the command
+     `find /tmp/expanded.unpkg -name PackageInfo -print0 | xargs -0 grep -i kext` should return a `<bundle id>` tag with a `path`
+     attribute that contains a `.kext` extension, for example `<bundle id="com.wavtap.driver.WavTap" ... path="./WavTap.kext" ... />`.
+  5. Once bundle ids have been identified, the unpacked package directory can be deleted.
 
 ### Caveats Details
 
@@ -320,6 +422,7 @@ The following methods may be called to generate standard warning messages:
 | `reboot`                          | The user should reboot to complete installation
 | `files_in_usr_local`              | The Cask installs files to `/usr/local`, which may confuse Homebrew
 | `arch_only(list)`                 | The Cask only supports certain architectures.  Currently valid elements of `list` are `intel-32` and `intel-64`
+| `os_version_only(list)`           | The Cask only supports certain OS X Versions.  Currently valid elements of `list` are `10.5`, `10.6`, `10.7`, `10.8`, and `10.9`
 
 Example:
 
@@ -339,10 +442,11 @@ And the following methods may be useful for interpolation:
 
 ### Good Things To Know
 
-* In order to get the SHA-1 checksum for the file, the easiest way is to run
-  `shasum <file>`. A few casks use SHA-256 checksums instead of SHA-1 checksums:
-  they replace the `sha1` field with a `sha256` field. The easiest way to get
-  the SHA-256 checksum is to run `shasum -a 256 <file>`.
+* In order to get the SHA-256 checksum for the file, the easiest way is to run
+  `shasum -a 256 <file>`.
+    * Although new casks/cask updates should use SHA-256, old casks may still
+    use SHA-1 checksums instead of SHA-256 checksums: they have a
+    `sha1` field instead of a `sha256` field (calculated using `shasum <file>`).
 * If the application does not have versioned downloads, you can skip the
   checksum by specifying `no_checksum`, which takes no arguments.
 * We have some conventions for projects without version-specific URLs. `latest`

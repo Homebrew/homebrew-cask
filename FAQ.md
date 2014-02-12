@@ -10,7 +10,7 @@ Casks currently have five required fields:
  * __url__: (required) points to binary distribution of the application
  * __homepage__: the same as Homebrew's - it doesn't do anything yet, but will be wired in
  * __version__: (required) describes the version of the application available at the URL
- * __sha1__: (required unless using no_checksum) SHA-1 Checksum of the file
+ * __sha256__: (required unless using no_checksum) SHA-256 checksum of the file
  * __link__: (required for `.app`) indicates which file(s) should be linked into the Applications folder on installation
  * __install__: (required for `.pkg`) indicates which package should be installed
  * __prefpane__: (required for `.prefPane`) indicates which file(s) should be linked into the PreferencePanes folder on installation

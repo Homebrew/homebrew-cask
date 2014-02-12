@@ -17,7 +17,7 @@ shopt -s nocasematch  # case-insensitive regular expressions
 
 opt_lax=''
 opt_pkg=''
-tmpdir=''
+pkgdir=''
 
 ###
 ### functions
@@ -37,26 +37,33 @@ die () {
 }
 
 app_source_1 () {
-    /usr/bin/find "$tmpdir" -name PackageInfo -print0 |   \
+    /usr/bin/find "$pkgdir" -name PackageInfo -print0 |   \
     /usr/bin/xargs -0 /usr/bin/perl -0777 -ne             \
       'while (m{<pkg-info[^\n]*install-location="/Applications".*?path\s*=\s*"([^"]+)"}sg) { my $p = $1; $p =~ s{\A.*/}{}; print "$p\n" }';
 }
 
 app_source_2 () {
-    /usr/bin/find "$tmpdir" -name PackageInfo -print0  |  \
+    /usr/bin/find "$pkgdir" -name PackageInfo -print0  |  \
     /usr/bin/xargs -0 /usr/bin/perl -0777 -ne             \
       'while (m{<pkg-info[^\n]*install-location="/".*?path\s*=\s*"./Applications/([^"]+)"}sg) { my $p = $1; $p =~ s{\A.*/}{}; print "$p\n" }';
 }
 
 app_source_3 () {
-    /usr/bin/find "$tmpdir" -type d -name '*.app' |       \
+    /usr/bin/find "$pkgdir" -type d -name '*.app' |       \
     perl -pe 's{\A.*/}{}';
 }
 
 app_source_4 () {
-    /usr/bin/find "$tmpdir" -name PackageInfo -print0  |  \
+    /usr/bin/find "$pkgdir" -name PackageInfo -print0  |  \
     /usr/bin/xargs -0 /usr/bin/perl -0777 -ne             \
       'while (m{path\s*=\s*"([^"]+\.app)"}sg) { my $p = $1; $p =~ s{\A.*/}{}; print "$p\n" }';
+}
+
+app_source_5 () {
+    /usr/bin/find "$pkgdir" -name Archive.pax.gz -print0  |           \
+    /usr/bin/xargs -0 -n1 -I{} /bin/bash -c                           \
+      "/usr/bin/gunzip -c '{}' | /bin/pax | /usr/bin/egrep '\.app'" | \
+    /usr/bin/perl -pe 's{\A.*/([^/]+\.app).*\Z}{$1}';
 }
 
 merge_sources () {
@@ -111,6 +118,9 @@ See CONTRIBUTING.md and 'man pkgutil' for more information.
             die "ERROR: Unknown argument '$arg'"
         fi
     done
+    if [[ -h "$opt_pkg" ]]; then
+        opt_pkg="$(/usr/bin/readlink "$opt_pkg")"
+    fi
     if ! [[ -e "$opt_pkg" ]]; then
         die "ERROR: No such pkg file: '$opt_pkg'"
     fi
@@ -122,10 +132,14 @@ See CONTRIBUTING.md and 'man pkgutil' for more information.
 
 _list_apps_in_pkg () {
 
-    tmpdir=`/usr/bin/mktemp -d -t list_apps_in_pkg`
-    trap "/bin/rm -rf '$tmpdir'" EXIT
-
-    /usr/sbin/pkgutil --expand "$opt_pkg" "$tmpdir/unpack"
+    if [[ -d "$opt_pkg" ]]; then
+        pkgdir="$opt_pkg"
+    else
+        local tmpdir=`/usr/bin/mktemp -d -t list_ids_in_pkg`
+        trap "/bin/rm -rf -- '$tmpdir'" EXIT
+        pkgdir="$tmpdir/unpack"
+        /usr/sbin/pkgutil --expand "$opt_pkg" "$tmpdir/unpack" "$pkgdir"
+    fi
 
     {
       # strings that look like App names (Something.app)
@@ -134,6 +148,7 @@ _list_apps_in_pkg () {
       app_source_3;
       if [[ -n "$opt_lax" ]]; then
           app_source_4;
+          app_source_5;
       fi
     } |                \
     merge_sources |    \

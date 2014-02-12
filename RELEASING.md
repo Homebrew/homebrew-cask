@@ -20,49 +20,53 @@ tag that exists and/or calculate the proposed next release tag.  Docs are at
 We'll get this scripted someday, but until then it's better to have it written
 down than floating in a brain somewhere.
 
-1. Do a `git log` since the last release to see what changed. You can scope it to
+1. Be running on a checkout of master which is `git status` clean.
+2. Re-compile the man page by running `developer/bin/generate_man_pages`.  If
+   the compiled page has updates other than the datestamp, check in the changes.
+3. Do a `git log` since the last release to see what changed. You can scope it to
    `lib` to just pick up code changes and filter out Casks noise.   Like this:
 	```bash
 	git log "$(developer/bin/get_release_tag)"..HEAD lib
 	```
-2. Decide whether to bump the minor or patch fields in the next tag, based on
+4. Decide whether to bump the minor or patch fields in the next tag, based on
    whether or not features were added.  Run the shell command
 	```bash
-	new_tag="$(developer/bin/get_release_tag -next)"; echo "$new_tag"    # or use -next -patch
+	export NEW_RELEASE_TAG="$(developer/bin/get_release_tag -next)"; echo "$NEW_RELEASE_TAG"    # or use -next -patch
 	```
-   and make sure the value in `$new_tag` is what you want.
-3. Optionally run `developer/bin/project_stats release` for overall release stats.
-4. Bump the `VERSION` string which is stored in the file `lib/cask/version.rb`.
-   It should match `$new_tag`, EXCEPT that the leading `v` character should be
-   removed fom the version number in the Ruby code.
-5. Populate `CHANGELOG.md` with a new section for the release you are creating.
-   Follow the patterns used elsewhere in the file.
-6. Make a commit containing `CHANGELOG.md` and `lib/cask/version.rb`.  Like this:
+   and make sure the value in `$NEW_RELEASE_TAG` is what you want.
+5. Optionally run `developer/bin/project_stats release` for overall release stats.
+6. Bump the `VERSION` string which is stored in the file `lib/cask/version.rb`.
+   It should match `$NEW_RELEASE_TAG`, EXCEPT that the leading `v` character should be
+   removed from the version number in the Ruby code.
+7. Generate a draft changelog for the new release you are creating by running
+   `developer/bin/generate_changelog`.  Edit the draft changelog, and prepend it
+   to `CHANGELOG.md`, following the patterns used elsewhere in the file.
+8. Make a commit containing `CHANGELOG.md` and `lib/cask/version.rb`.  Like this:
 	```bash
 	git add CHANGELOG.md lib/cask/version.rb
-	git commit -m "cut $new_tag"
+	git commit -m "cut $NEW_RELEASE_TAG"
 	```
-7. Tag that commit, ensuring that you provide a message so we get an annotated
+9. Tag that commit, ensuring that you provide a message so we get an annotated
    tag.  Like this:
 	```bash
-	git tag -m "$new_tag" "$new_tag"
+	git tag -m "$NEW_RELEASE_TAG" "$NEW_RELEASE_TAG"
 	```
-8. Push the commit and the tag:
+10. Push the commit and the tag:
 	```bash
 	git push --follow-tags
 	```
-9. Unset `$new_tag`; you don't need it anymore.
+11. Unset `$NEW_RELEASE_TAG`; you don't need it anymore.
 	```bash
-	unset new_tag
+	unset NEW_RELEASE_TAG
 	```
-10. Open your browser to <https://github.com/phinze/homebrew-cask/releases> .
+12. Open your browser to <https://github.com/phinze/homebrew-cask/releases> .
     Then click the link for your newly-pushed tag. Click the "Edit Tag" button in
     the top right corner of that page.
-11. Paste the markdown summary from `CHANGELOG.md` into the textarea on that page.
+13. Paste the markdown summary from `CHANGELOG.md` into the textarea on that page.
     The `## <version number>` heading line from the markdown should not be included.
     The `Release title` field on the GitHub web form may be left blank.
-12. Click "Publish Release".
-13. Rejoice! Have a :cookie:.
+14. Click "Publish Release".
+15. Rejoice! Have a :cookie:.
 
 ## Things to Consider
 

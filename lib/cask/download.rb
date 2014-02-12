@@ -8,9 +8,14 @@ class Cask::Download
   def perform
     require 'software_spec'
     cask = @cask
-    downloader = Cask::DownloadStrategy.new(cask)
+    downloader = Cask::CurlDownloadStrategy.new(cask)
     downloaded_path = downloader.fetch
-
+    begin
+      # this symlink helps track which downloads are ours
+      File.symlink downloaded_path,
+                   HOMEBREW_CACHE_CASKS.join(downloaded_path.basename)
+    rescue
+    end
     _check_sums(downloaded_path, cask.sums) unless cask.sums === 0
     downloaded_path
   end
@@ -29,6 +34,6 @@ class Cask::Download
         has_sum = true
       end
     end
-    raise ChecksumMissingError.new("Checksum required. SHA1: '#{Digest::SHA1.file(path).hexdigest}'") unless has_sum
+    raise ChecksumMissingError.new("Checksum required. SHA-256: '#{Digest::SHA256.file(path).hexdigest}'") unless has_sum
   end
 end

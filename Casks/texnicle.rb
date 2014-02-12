@@ -1,7 +1,7 @@
 class Texnicle < Cask
-  url 'http://www.bobsoft-mac.de/resources/TeXnicle/2.2/TeXnicle.app.2.2.8.zip'
+  url 'http://www.bobsoft-mac.de/resources/TeXnicle/2.2/TeXnicle.app.2.2.9.zip'
   homepage 'http://www.bobsoft-mac.de/texnicle/texnicle.html'
-  version '2.2.8'
-  sha1 'd39a7142e97e7d0787047b02d821b67343099571'
+  version '2.2.9'
+  sha1 '54d8c1f303a20956a70b7fb83c0693a5abbf10a8'
   link 'TeXnicle.app'
 end

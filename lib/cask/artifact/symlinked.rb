@@ -11,26 +11,51 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
     @command.run!('/bin/ln', :args => ['-hfs', '--', source, target])
   end
 
-  def link(artifact_relative_path)
-    source_string, target_hash = artifact_relative_path
+  def summary
+    {
+      :english_description => "#{self.class.artifact_english_name} #{self.class.link_type_english_name}s managed by brew-cask:",
 
-    sanity_check source_string, target_hash
+      :contents => @cask.artifacts[self.class.artifact_dsl_key].map do |artifact|
+                     summarize_one_link(artifact)
+                   end - [nil]
+    }
+  end
 
-    source = @cask.destination_path.join(source_string)
-    target = Cask.send(self.class.artifact_dirmethod).join(target_hash ? target_hash[:target] : source.basename)
+  attr_reader :source, :target, :linked_path
+
+  def load_specification(artifact_spec)
+    source_string, target_hash = artifact_spec
+    raise CaskInvalidError if source_string.nil?
+    @source = @cask.destination_path.join(source_string)
+    if target_hash
+      raise CaskInvalidError unless target_hash.respond_to?(:keys)
+      target_hash.assert_valid_keys(:target)
+      @target = Cask.send(self.class.artifact_dirmethod).join(target_hash[:target])
+    else
+      @target = Cask.send(self.class.artifact_dirmethod).join(source.basename)
+    end
+    @linked_path = Cask.send(self.class.artifact_dirmethod).join(Pathname(target).basename)
+  end
+
+  def link(artifact_spec)
+    load_specification artifact_spec
     return unless preflight_checks(source, target)
     ohai "#{self.class.link_type_english_name}ing #{self.class.artifact_english_name} '#{source.basename}' to '#{target}'"
     create_filesystem_link(source, target)
   end
 
-  def unlink(artifact_relative_path)
-    source_string, target_hash = artifact_relative_path
+  def summarize_one_link(artifact_spec)
+    load_specification artifact_spec
+    if self.class.islink?(linked_path)
+      link_description = linked_path.exist? ? '' : "#{Tty.red}Broken Link#{Tty.reset}: "
+      printable_linked_path = "'#{linked_path}'"
+      printable_linked_path.sub!(%r{^'#{ENV['HOME']}/*}, %q{~/'})
+      "#{link_description}#{printable_linked_path} -> '#{linked_path.readlink}'"
+    end
+  end
 
-    sanity_check source_string, target_hash
-
-    source = @cask.destination_path.join(source_string)
-    target = Cask.send(self.class.artifact_dirmethod).join(target_hash ? target_hash[:target] : source.basename)
-    linked_path = Cask.send(self.class.artifact_dirmethod).join(Pathname(target).basename)
+  def unlink(artifact_spec)
+    load_specification artifact_spec
     if linked_path.exist? && self.class.islink?(linked_path)
       ohai "Removing #{self.class.artifact_english_name} #{self.class.link_type_english_name.downcase}: '#{linked_path}'"
       linked_path.delete
@@ -55,26 +80,4 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
     end
     true
   end
-
-  private
-  def sanity_check source_string, target_hash
-    if source_string.empty?
-      raise "Relative path's missing. Running `brew update; brew upgrade brew-cask` will likely fix it.'"
-    end
-
-    if target_hash.nil?
-      return
-    end
-
-    unless  target_hash.respond_to?(:keys)
-      raise "Unknown arguments. Running `brew update; brew upgrade brew-cask` will likely fix it.'"
-    end
-
-    permitted_keys = [:target]
-    unknown_keys = target_hash.keys - permitted_keys
-    unless unknown_keys.empty?
-      raise "Unknown arguments: :#{unknown_keys.join(", :")} (ignored). Running `brew update; brew upgrade brew-cask` will likely fix it.'"
-    end
-  end
-
 end

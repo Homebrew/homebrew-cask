@@ -19,4 +19,15 @@ class Cask::Container::Criteria
       :print => false
     )
   end
+
+  def cabextract
+    if HOMEBREW_PREFIX.join('bin/cabextract').exist?
+      @cabextract ||= @command.run(
+        HOMEBREW_PREFIX.join('bin/cabextract'),
+        :args => ['-t', '--', path],
+        :stderr => :silence,
+        :print => false
+      )
+    end
+  end
 end

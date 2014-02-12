@@ -1,5 +1,7 @@
 language: objective-c
-before_install: brew update
+before_install:
+ - brew update
+ - brew install cabextract
 install: bundle
 script: bundle exec rake test
 notifications:
