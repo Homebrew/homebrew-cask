@@ -57,7 +57,7 @@ module Cask::DSL
       if block_given?
         @caveats << Cask::Caveats.new(block)
       elsif string.any?
-        @caveats << string
+        @caveats << string.map{ |s| s.to_s.sub(/[\r\n \t]*\Z/, "\n\n") }
       else
         # accessor
         @caveats
