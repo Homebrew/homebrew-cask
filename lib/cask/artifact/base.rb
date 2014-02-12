@@ -24,6 +24,10 @@ class Cask::Artifact::Base
      cask.artifacts[self.artifact_dsl_key].any?
   end
 
+  def summary
+    {}
+  end
+
   def initialize(cask, command=Cask::SystemCommand)
     @cask = cask
     @command = command

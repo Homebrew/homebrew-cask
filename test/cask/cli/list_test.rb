@@ -41,10 +41,17 @@ describe Cask::CLI::List do
 
     caffeine, transmission = casks
 
+    # App Symlinks sections are empty below because the expected links
+    # aren't created under the test harness. Todo: managed links should
+    # be fully mocked and confirmed here.
     lambda {
       Cask::CLI::List.run('local-transmission', 'local-caffeine')
     }.must_output <<-OUTPUT.gsub(/^ */, '')
+      ==> App Symlinks managed by brew-cask:
+      ==> Raw contents of Cask directory:
       #{transmission.destination_path}/Transmission.app/Contents/ (489 files)
+      ==> App Symlinks managed by brew-cask:
+      ==> Raw contents of Cask directory:
       #{caffeine.destination_path}/Caffeine.app/Contents/ (13 files)
     OUTPUT
   end
