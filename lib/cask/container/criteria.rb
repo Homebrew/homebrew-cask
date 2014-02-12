@@ -21,11 +21,13 @@ class Cask::Container::Criteria
   end
 
   def cabextract
-    @cabextract ||= @command.run(
-      HOMEBREW_PREFIX.join('bin/cabextract'),
-      :args => ['-t', '--', path],
-      :stderr => :silence,
-      :print => false
-    )
+    if HOMEBREW_PREFIX.join('bin/cabextract').exist?
+      @cabextract ||= @command.run(
+        HOMEBREW_PREFIX.join('bin/cabextract'),
+        :args => ['-t', '--', path],
+        :stderr => :silence,
+        :print => false
+      )
+    end
   end
 end
