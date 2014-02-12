@@ -4,7 +4,7 @@ class Cask::Container::Cab < Cask::Container::Base
   def self.me?(criteria)
     (criteria.file.include? 'application/octet-stream;' or
      criteria.file.include? 'application/vnd.ms-cab-compressed;') and
-      criteria.cabextract.respond_to?(:include) and
+      ! criteria.cabextract.nil? and
         criteria.cabextract.include? 'All done, no errors'
   end
 
