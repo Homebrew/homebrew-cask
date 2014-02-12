@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class Baiducloud < Cask
   url 'http://bcscdn.baidu.com/netdisk/BaiduYun_2.4.0.dmg'
   homepage 'http://pan.baidu.com'
