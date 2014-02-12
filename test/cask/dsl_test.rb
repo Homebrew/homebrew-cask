@@ -90,7 +90,7 @@ describe Cask::DSL do
     end
 
     instance = CaskWithInstallables.new
-    Array(instance.artifacts[:install]).sort.must_equal %w[Bar.pkg Foo.pkg]
+    Array(instance.artifacts[:install]).sort.must_equal [['Bar.pkg'], ['Foo.pkg']]
   end
 
   it "prevents defining multiple urls" do

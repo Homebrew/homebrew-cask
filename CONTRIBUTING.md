@@ -83,7 +83,7 @@ Fill in the following fields for your Cask:
 | `sha256`           | SHA-256 checksum of the file; checked when the file is downloaded to prevent any funny business (can be omitted with `no_checksum`)
 | __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
 | `link`             | relative path to a file that should be linked into the `Applications` folder on installation (see __Link Details__ for more information)
-| `install`          | relative path to `pkg` that should be run to install the application
+| `install`          | relative path to `pkg` that should be run to install the application (see __Install Details__ for more information)
 | `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see __Uninstall Details__ for more information)
 
 Additional fields you might need for special use-cases:
@@ -241,6 +241,26 @@ link 'TexmakerMacosxLion/texmaker.app'
 ```
 
 Linking to the .app file without reference to the containing folder will result in installation failing with a "symlink source is not there" error.
+
+### Install Details
+
+The first argument to `install` should be a relative path to the `pkg` file
+to be installed.  For example:
+
+```ruby
+install 'Vagrant.pkg'
+```
+
+Subsequent arguments to `install` are key/value pairs which modify the
+install process.  Currently supported keys are
+
+  * `:allow_untrusted` -- pass `-allowUntrusted` to `/usr/sbin/installer`
+
+Example:
+
+```ruby
+install 'Soundflower.pkg', :allow_untrusted => true
+```
 
 ### Uninstall Details
 
