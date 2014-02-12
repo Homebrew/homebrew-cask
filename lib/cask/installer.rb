@@ -22,7 +22,7 @@ class Cask::Installer
     end
   end
 
-  def install(force=false)
+  def install(force=false, force_download=false)
     odebug "Cask::Installer.install"
     if @cask.installed? && !force
       raise CaskAlreadyInstalledError.new(@cask)
@@ -32,7 +32,7 @@ class Cask::Installer
 
     begin
       formula_dependencies
-      download
+      download force_download
       extract_primary_container
       install_artifacts
     rescue
@@ -44,10 +44,11 @@ class Cask::Installer
   end
 
 
-  def download
+
+  def download(force_download=false)
     odebug "Downloading"
     download = Cask::Download.new(@cask)
-    @downloaded_path = download.perform
+    @downloaded_path = download.perform force_download
     odebug "Downloaded to -> #{@downloaded_path}"
     @downloaded_path
   end
