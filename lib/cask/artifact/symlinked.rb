@@ -63,11 +63,13 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
   end
 
   def install
-    @cask.artifacts[self.class.artifact_dsl_key].each { |artifact| link(artifact) }
+    # the sort is for predictability between Ruby versions
+    @cask.artifacts[self.class.artifact_dsl_key].sort.each { |artifact| link(artifact) }
   end
 
   def uninstall
-    @cask.artifacts[self.class.artifact_dsl_key].each { |artifact| unlink(artifact) }
+    # the sort is for predictability between Ruby versions
+    @cask.artifacts[self.class.artifact_dsl_key].sort.each { |artifact| unlink(artifact) }
   end
 
   def preflight_checks(source, target)
