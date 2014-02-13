@@ -98,7 +98,9 @@ module Cask::DSL
 
     ARTIFACT_BLOCK_TYPES = [
       :after_install,
-      :after_uninstall
+      :after_uninstall,
+      :before_install,
+      :before_uninstall,
     ]
 
     ARTIFACT_BLOCK_TYPES.each do |type|
