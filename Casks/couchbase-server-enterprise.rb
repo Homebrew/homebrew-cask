@@ -1,7 +1,7 @@
 class CouchbaseServerEnterprise < Cask
-  url 'http://packages.couchbase.com/releases/2.2.0/couchbase-server-enterprise_2.2.0_x86_64.zip'
+  url 'http://packages.couchbase.com/releases/2.5.0/couchbase-server-enterprise_2.5.0_x86_64.zip'
   homepage 'http://www.couchbase.com/'
-  version '2.2.0'
-  sha1 'c62ecae279f89095a27d956a8d4a48dd5a5a44f7'
+  version '2.5.0'
+  sha1 'c543d6ac46b26e87fc1e224436744253a0eecd00'
   link 'Couchbase Server.app'
 end
