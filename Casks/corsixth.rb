@@ -3,7 +3,5 @@ class Corsixth < Cask
   homepage 'http://th.corsix.org'
   version '0.30'
   sha256 '2d9fbe47ac31955643ee1de0e53fd30ddac9e64d5a1c205c46ecd3bfda1929b4'
-  link 'CorsixTH/CorsixTH.app'
-  link 'CorsixTH/AnimView.app'
-  link 'CorsixTH/MapEdit.app'
+  link 'CorsixTH.app'
 end
