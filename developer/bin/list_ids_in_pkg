@@ -29,7 +29,8 @@ bundle_id_source_1 () {
 
 bundle_id_source_2 () {
     /usr/bin/find "$pkgdir" -name Info.plist -print0 |                                 \
-    /usr/bin/xargs -0 /usr/bin/perl -0777 -ne                                          \
+    /usr/bin/xargs -0 /usr/bin/plutil -convert xml1 -o - -- |                          \
+    /usr/bin/perl -0777 -ne                                                            \
       'while (m{<key>\s*CFBundleIdentifier\s*</key>\s*<string>([^<]+?)</string>}sg) { print "$1\n" }'
 }
 
@@ -92,8 +93,8 @@ The output of this script should be overly inclusive -- not
 every candidate package id in the output will be needed at
 uninstall time.
 
-Package IDs designated by Apple or the Sparkle framework will
-be omitted.
+Package IDs designated by Apple or common development frameworks
+will be excluded from the output.
 
 If a package id is already installed, it will be followed by
 a plus symbol '(+)' in the output.  This can be verified via

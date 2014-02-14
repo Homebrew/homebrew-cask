@@ -23,7 +23,8 @@ kextdir=''
 
 bundle_id_source_1 () {
     /usr/bin/find "$kextdir" -name Info.plist -print0 |                                \
-    /usr/bin/xargs -0 /usr/bin/perl -0777 -ne                                          \
+    /usr/bin/xargs -0 /usr/bin/plutil -convert xml1 -o - -- |                          \
+    /usr/bin/perl -0777 -ne                                                            \
       'while (m{<key>\s*CFBundleIdentifier\s*</key>\s*<string>([^<]+?)</string>}sg) { print "$1\n" }'
 }
 
