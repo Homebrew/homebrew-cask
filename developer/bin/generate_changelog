@@ -224,7 +224,7 @@ end
 
 def header
   <<EOT
-## #{next_release}
+## #{next_release.sub(/^v/,'')}
 
 * __Casks__
 * __Features__

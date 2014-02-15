@@ -87,7 +87,7 @@ print_contributor_stats () {
     local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
     printf "Unique contributors"
     if ! [[ "$start_object" = "$initial_commit" ]]; then
-        printf " since $start_object"
+        printf " since ${start_object#v}"
     fi
     printf "\n"
     cask_authors="$($git_log_cmd -- "${cask_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
@@ -105,7 +105,7 @@ print_contributor_stats () {
         ((alltime_contribs += 0))
         ((new_contribs      = alltime_contribs - prior_contribs))
         printf "\nAll-time contributors\t$alltime_contribs\n"
-        printf "New contributors since $start_object\t$new_contribs\n"
+        printf "New contributors since ${start_object#v}\t$new_contribs\n"
     fi
     printf "\n"
 }
@@ -121,7 +121,7 @@ print_commit_stats () {
     local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
     printf "Commit count"
     if ! [[ "$start_object" = "$initial_commit" ]]; then
-        printf " since $start_object"
+        printf " since ${start_object#v}"
     fi
     printf "\n"
     printf "  Casks\t"
@@ -150,7 +150,7 @@ print_doc_stats () {
     local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
     printf "Doc contributors"
     if ! [[ "$start_object" = "$initial_commit" ]]; then
-        printf " since $start_object"
+        printf " since ${start_object#v}"
     fi
     printf "\n  "
     $git_log_cmd -- "${doc_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | \
@@ -176,7 +176,7 @@ print_cask_stats () {
         ((deleted_casks += 0))
         ((new_casks     -= deleted_casks))
         ((updated_casks += 0))
-        printf "$new_casks Casks added ($updated_casks updated) by $cask_authors contributors since $start_object\n"
+        printf "$new_casks Casks added ($updated_casks updated) by $cask_authors contributors since ${start_object#v}\n"
     fi
 
     printf "Total current Casks in HEAD\t"
