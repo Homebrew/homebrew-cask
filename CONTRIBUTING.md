@@ -108,13 +108,15 @@ Additional fields you might need for special use-cases:
 
 ### URL Details
 
-In most cases, a plain URL is all you need to specify for Cask to download and extract a file. Sometimes, additional information is required for the `curl`-based downloader to successfully fetch the file. There are a few options to help in these cases, which are specified in a hash as a second argument to `url`.
+#### HTTP URLs
 
-| option             | description |
+In most cases, a plain URL string is all you need to specify for a Cask. Sometimes, additional information is required for the `curl`-based downloader to successfully fetch the file. There are a few options to help in these cases, which can be given as key/value pairs appended to `url`:
+
+| key                | value       |
 | ------------------ | ----------- |
 | `:cookies`         | a hash of cookies to be set in the download request
-| `:referer`         | a URL to set as referrer in the download request
-| `:user_agent`      | user agent string to set for the download request. can also be set to `:fake`, which will use a generic Browser-like user agent string. we prefer `:fake` when the server does not require a specific user agent.
+| `:referer`         | a string holding the URL to set as referrer in the download request
+| `:user_agent`      | a string holding the user agent to set for the download request. Can also be set to the symbol `:fake`, which will use a generic Browser-like user agent string. we prefer `:fake` when the server does not require a specific user agent.
 
 #### SourceForge URLs
 
@@ -133,6 +135,17 @@ If the "latest" URL does not point to a valid file for a Mac app, then we fall b
 ```
 http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 ```
+
+#### Subversion URLs
+
+In rare cases, a distribution may not be available over ordinary HTTP.  Subversion URLs are also supported, and can be specified by appending the following key/value pairs to `url`:
+
+| key                | value       |
+| ------------------ | ----------- |
+| `:using`           | the symbol `:svn` is the only legal value
+| `:revision`        | a string identifying the subversion revision to download
+| `:trust_cert`      | set to `true` to automatically trust the certificate presented by the server (avoiding an interactive prompt)
+
 
 ### Naming Casks
 
