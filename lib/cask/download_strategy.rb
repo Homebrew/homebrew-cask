@@ -92,8 +92,9 @@ class Cask::SubversionDownloadStrategy < SubversionDownloadStrategy
   end
 
   # This primary reason for redefining this method is the trust_cert
-  # option, controllable from the Cask definition. The rest of this
-  # method is similar to Homebrew's, but translated to local idiom.
+  # option, controllable from the Cask definition. We also force
+  # consistent timestamps.  The rest of this method is similar to
+  # Homebrew's, but translated to local idiom.
   def fetch_repo target, url, revision=cask_url.revision, ignore_externals=false
     # Use "svn up" when the repository already exists locally.
     # This saves on bandwidth and will have a similar effect to verifying the
@@ -103,6 +104,9 @@ class Cask::SubversionDownloadStrategy < SubversionDownloadStrategy
 
     # SVN shipped with XCode 3.1.4 can't force a checkout.
     args << '--force' unless MacOS.version == :leopard
+
+    # make timestamps consistent for checksumming
+    args.concat(%w[--config-option config:miscellany:use-commit-times=yes])
 
     if cask_url.trust_cert
       args << '--trust-server-cert'

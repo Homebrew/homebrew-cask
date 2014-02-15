@@ -139,6 +139,8 @@ describe Cask::CurlDownloadStrategy do
                                                '/usr/bin/svn',
                                                'checkout',
                                                '--force',
+                                               '--config-option',
+                                               'config:miscellany:use-commit-times=yes',
                                                cask.url.to_s,
                                                downloader.cached_location,
                                               ])
@@ -153,6 +155,8 @@ describe Cask::CurlDownloadStrategy do
                                                '/usr/bin/svn',
                                                'checkout',
                                                '--force',
+                                               '--config-option',
+                                               'config:miscellany:use-commit-times=yes',
                                                '--trust-server-cert',
                                                '--non-interactive',
                                                cask.url.to_s,
@@ -169,6 +173,8 @@ describe Cask::CurlDownloadStrategy do
                                                '/usr/bin/svn',
                                                'checkout',
                                                '--force',
+                                               '--config-option',
+                                               'config:miscellany:use-commit-times=yes',
                                                cask.url.to_s,
                                                downloader.cached_location,
                                                '-r',
@@ -198,17 +204,19 @@ describe Cask::CurlDownloadStrategy do
       shutup { downloader.fetch }.must_equal downloader.tarball_path
     end
   end
-  # does not work yet, for numerous reasons
+  # does not work yet, because (for unknown reasons), the tar command
+  # returns an error code when running under the test suite
   # it 'creates a tarball matching the expected checksum' do
   #   cask = Cask.load('svn-download-check-cask')
   #   downloader = Cask::SubversionDownloadStrategy.new(cask)
   #   # special mocking required for tar to have something to work with
   #   def downloader.fetch_repo(target, url, revision=nil, ignore_externals=false)
   #     target.mkpath
-  #     FileUtils.touch(target.join('empty_file'))
+  #     FileUtils.touch(target.join('empty_file.txt'))
+  #     File.utime(1000,1000,target.join('empty_file.txt'))
   #   end
   #   shutup { downloader.fetch }.must_equal downloader.tarball_path
   #   d = Cask::Download.new(cask)
-  #   d._check_sums(downloader.tarball_path, cask.sums)
+  #   d.send(:_check_sums, downloader.tarball_path, cask.sums)
   # end
 end
