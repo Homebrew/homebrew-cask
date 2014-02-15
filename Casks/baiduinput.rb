@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class Baiduinput < Cask
   url 'http://shouji.baidu.com/download/1000e/baiduinput_mac_v3.2_1000e.dmg'
   homepage 'http://wuxian.baidu.com/input/mac.html'

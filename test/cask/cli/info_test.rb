@@ -37,7 +37,9 @@ describe Cask::CLI::Info do
       https://github.com/phinze/homebrew-testcasks/commits/master/Casks/with-caveats.rb
       ==> Caveats
       Here are some things you might want to know.
+
       Cask title: with-caveats
+
       Custom text via puts followed by DSL-generated text:
       To complete the installation of Cask with-caveats, you must also
       run the installer at

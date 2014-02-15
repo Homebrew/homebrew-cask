@@ -57,7 +57,7 @@ module Cask::DSL
       if block_given?
         @caveats << Cask::Caveats.new(block)
       elsif string.any?
-        @caveats << string
+        @caveats << string.map{ |s| s.to_s.sub(/[\r\n \t]*\Z/, "\n\n") }
       else
         # accessor
         @caveats
@@ -98,7 +98,9 @@ module Cask::DSL
 
     ARTIFACT_BLOCK_TYPES = [
       :after_install,
-      :after_uninstall
+      :after_uninstall,
+      :before_install,
+      :before_uninstall,
     ]
 
     ARTIFACT_BLOCK_TYPES.each do |type|

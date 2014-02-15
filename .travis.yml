@@ -1,9 +1,12 @@
 language: objective-c
 before_install:
- - brew update
- - brew install cabextract
-install: bundle
-script: bundle exec rake test
+  - rvm use system
+  - brew update
+  - brew install cabextract
+  - sudo /usr/bin/gem install bundler
+install:
+  - sudo /usr/bin/bundle
+script: /usr/bin/bundle exec /usr/bin/rake test
 notifications:
   irc:
     channels:

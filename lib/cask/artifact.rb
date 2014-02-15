@@ -7,6 +7,7 @@ require 'cask/artifact/hardlinked'
 require 'cask/artifact/app'
 require 'cask/artifact/binary'
 require 'cask/artifact/after_block'
+require 'cask/artifact/before_block'
 require 'cask/artifact/colorpicker'
 require 'cask/artifact/font'
 require 'cask/artifact/nested_container'
@@ -27,6 +28,7 @@ module Cask::Artifact
   #
   def self.artifacts
     [
+      Cask::Artifact::BeforeBlock,
       Cask::Artifact::NestedContainer,
       Cask::Artifact::App,
       Cask::Artifact::Colorpicker,

@@ -8,7 +8,11 @@ class Cask::Download
   def perform
     require 'software_spec'
     cask = @cask
-    downloader = Cask::CurlDownloadStrategy.new(cask)
+    if cask.url.using == :svn
+      downloader = Cask::SubversionDownloadStrategy.new(cask)
+    else
+      downloader = Cask::CurlDownloadStrategy.new(cask)
+    end
     downloaded_path = downloader.fetch
     begin
       # this symlink helps track which downloads are ours

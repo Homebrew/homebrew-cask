@@ -1,9 +1,103 @@
 # CHANGELOG
 
+## 0.29.0
+
+* __Casks__
+ - 77 Casks added (99 updated) by 66 contributors since 0.28.0
+ - 1161 total Casks
+* __Features__
+ - [#2759][] new command `brew cask cleanup`
+ - [#2392][] show managed links in `brew cask list` <3 [@AlJohri][]
+ - [#1992][] support for CAB container types
+ - [#2822][] support for Subversion download URLs
+ - [#2761][] add `:must_succeed` parameter for `uninstall` scripts <3 [@juuso][], [@lgarron][]
+ - [#2637][] add `os_version_only` to caveats DSL
+ - [#2739][] `:allow_untrusted` modifier on `install` artifact <3 [@tsantor][]
+ - [#2742][] add `before_install` and `before_uninstall` blocks to Cask DSL <3 [@tamird][]
+ - [#2923][], [#2850][], [#2787][], [#2786][], [#2785][], [#2784][], [#2783][], [#2782][], [#2725][], [#2724][], [#2689][], [#2698][], [#2809][], [#2807][], [#2803][] scripts for developers and Cask authors: `list_id_in_kext`, `list_ids_in_app`, `list_installed_launchjob_ids`, `list_loaded_launchjob_ids`, `list_payload_in_pkg`, `list_recent_pkg_ids`, `generate_changelog`, `generate_man_pages`, and sample external commands
+* __Fixes__
+ - [#2624][], [#2623][], [#2613][], [#2851][] **MUCH** more robust approach to external commands <3 [@vmrob][]
+ - [#2719][], [#2840][] Change default hash to SHA-256. <3 [@lgarron][]
+ - [#2625][], [#2890][], [#2734][] make Travis-CI test with the same Ruby we target on the desktop
+ - [#2841][] restrict visibility of Cask namespace in Formula
+ - [#2820][] exit with error code 1 when a list error occurs <3 [@sgtpep][]
+ - [#2748][] enforce: certain DSL elements may appear only once
+ - [#2741][] make sure "after" blocks really run last
+ - [#2760][] make sure directory `HOMEBREW_CACHE_CASKS` exists
+ - [#2732][], [#2875][] improve messages from `--debug` and `caveats`
+* __Documentation__
+ - [#2767][] add code of conduct
+ - [#2701][] add man page
+ - 20 doc commits since 0.28.0 <3 [@lgarron][], [@phillipalexander][]
+* __Breaking Changes__
+ - artifacts may no longer be specified as a list (since 0.28.0).  Instead the artifact should be repeated on multiple lines.
+
+[#2945]: https://github.com/phinze/homebrew-cask/issues/2945
+[#2761]: https://github.com/phinze/homebrew-cask/issues/2761
+[#2925]: https://github.com/phinze/homebrew-cask/issues/2925
+[#2932]: https://github.com/phinze/homebrew-cask/issues/2932
+[#2923]: https://github.com/phinze/homebrew-cask/issues/2923
+[#2822]: https://github.com/phinze/homebrew-cask/issues/2822
+[#2742]: https://github.com/phinze/homebrew-cask/issues/2742
+[#2625]: https://github.com/phinze/homebrew-cask/issues/2625
+[#2890]: https://github.com/phinze/homebrew-cask/issues/2890
+[#2875]: https://github.com/phinze/homebrew-cask/issues/2875
+[#2734]: https://github.com/phinze/homebrew-cask/issues/2734
+[#2739]: https://github.com/phinze/homebrew-cask/issues/2739
+[#2874]: https://github.com/phinze/homebrew-cask/issues/2874
+[#2392]: https://github.com/phinze/homebrew-cask/issues/2392
+[@AlJohri]: https://github.com/AlJohri
+[#2873]: https://github.com/phinze/homebrew-cask/issues/2873
+[#2872]: https://github.com/phinze/homebrew-cask/issues/2872
+[#2851]: https://github.com/phinze/homebrew-cask/issues/2851
+[#2759]: https://github.com/phinze/homebrew-cask/issues/2759
+[#2850]: https://github.com/phinze/homebrew-cask/issues/2850
+[#2841]: https://github.com/phinze/homebrew-cask/issues/2841
+[#2829]: https://github.com/phinze/homebrew-cask/issues/2829
+[#2840]: https://github.com/phinze/homebrew-cask/issues/2840
+[@lgarron]: https://github.com/lgarron
+[@phillipalexander]: https://github.com/phillipalexander
+[@sgtpep]: https://github.com/sgtpep
+[@tamird]: https://github.com/tamird
+[@juuso]: https://github.com/juuso
+[@tsantor]: https://github.com/tsantor
+[#2719]: https://github.com/phinze/homebrew-cask/issues/2719
+[#1992]: https://github.com/phinze/homebrew-cask/issues/1992
+[#2820]: https://github.com/phinze/homebrew-cask/issues/2820
+[#2809]: https://github.com/phinze/homebrew-cask/issues/2809
+[#2807]: https://github.com/phinze/homebrew-cask/issues/2807
+[#2803]: https://github.com/phinze/homebrew-cask/issues/2803
+[#2748]: https://github.com/phinze/homebrew-cask/issues/2748
+[#2624]: https://github.com/phinze/homebrew-cask/issues/2624
+[@vmrob]: https://github.com/vmrob
+[#2792]: https://github.com/phinze/homebrew-cask/issues/2792
+[#2767]: https://github.com/phinze/homebrew-cask/issues/2767
+[#2701]: https://github.com/phinze/homebrew-cask/issues/2701
+[#2787]: https://github.com/phinze/homebrew-cask/issues/2787
+[#2786]: https://github.com/phinze/homebrew-cask/issues/2786
+[#2785]: https://github.com/phinze/homebrew-cask/issues/2785
+[#2637]: https://github.com/phinze/homebrew-cask/issues/2637
+[#2741]: https://github.com/phinze/homebrew-cask/issues/2741
+[#2760]: https://github.com/phinze/homebrew-cask/issues/2760
+[#2762]: https://github.com/phinze/homebrew-cask/issues/2762
+[#2784]: https://github.com/phinze/homebrew-cask/issues/2784
+[#2783]: https://github.com/phinze/homebrew-cask/issues/2783
+[#2782]: https://github.com/phinze/homebrew-cask/issues/2782
+[#2733]: https://github.com/phinze/homebrew-cask/issues/2733
+[#2623]: https://github.com/phinze/homebrew-cask/issues/2623
+[#2613]: https://github.com/phinze/homebrew-cask/issues/2613
+[#2743]: https://github.com/phinze/homebrew-cask/issues/2743
+[#2732]: https://github.com/phinze/homebrew-cask/issues/2732
+[#2631]: https://github.com/phinze/homebrew-cask/issues/2631
+[#2725]: https://github.com/phinze/homebrew-cask/issues/2725
+[#2724]: https://github.com/phinze/homebrew-cask/issues/2724
+[#2689]: https://github.com/phinze/homebrew-cask/issues/2689
+[#2698]: https://github.com/phinze/homebrew-cask/issues/2698
+
 ## 0.28.0
 
 * __Casks__
- - 24 Casks added (46 updated) by 39 contributors since v0.27.1
+ - 24 Casks added (46 updated) by 39 contributors since 0.27.1
  - 1084 total Casks
 * __Features__
  - [#2532][] Allow customizing the target symlink <3 [@voanhduy1512][]
@@ -20,6 +114,7 @@
  - [#2545][] Improvements to `brew cask search`
  - [#2391][], [#2618][] Refinements to `uninstall` processes
  - 19 commits to documentation <3 [@goxberry][], [@stylerw][]
+* __Breaking Changes__
 
 [#2532]: https://github.com/phinze/homebrew-cask/issues/2532
 [@voanhduy1512]: https://github.com/voanhduy1512

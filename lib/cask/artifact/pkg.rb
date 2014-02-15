@@ -13,7 +13,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     end
 
     # key sanity
-    permitted_keys = [:args, :input, :executable]
+    permitted_keys = [:args, :input, :executable, :must_succeed]
     unknown_keys = script_arguments.keys - permitted_keys
     unless unknown_keys.empty?
       opoo "Unknown arguments to uninstall :#{key} -- :#{unknown_keys.join(", :")} (ignored). Running `brew update; brew upgrade brew-cask` will likely fix it.'"
@@ -25,6 +25,10 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       executable = script_arguments.delete(:executable)
     else
       executable = nil
+    end
+
+    unless script_arguments.key?(:must_succeed)
+      script_arguments[:must_succeed] = true
     end
 
     script_arguments.merge!(:sudo => true, :print => true)
@@ -85,7 +89,8 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       executable, script_arguments = self.class.read_script_arguments(uninstall_options, :early_script)
       ohai "Running uninstall script #{executable}"
       raise "Error in Cask #{@cask}: uninstall :early_script without :executable." if executable.nil?
-      @command.run!(@cask.destination_path.join(executable), script_arguments)
+      @command.run(@cask.destination_path.join(executable), script_arguments)
+      sleep 1
     end
 
     # :launchctl must come before :quit for cases where app would instantly re-launch
@@ -96,6 +101,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
           xml_status = @command.run('/bin/launchctl', :args => ['list', '-x', service], :sudo => with_sudo)
           if %r{^<\?xml}.match(xml_status)
             @command.run!('/bin/launchctl', :args => ['remove', '--', service], :sudo => with_sudo)
+            sleep 1
           end
         end
       end
@@ -108,6 +114,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
         num_running = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to count processes whose bundle identifier is "#{id}"}], :sudo => true).to_i
         if num_running > 0
           @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application id "#{id}" to quit}], :sudo => true)
+          sleep 3
         end
       end
     end
@@ -119,6 +126,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
         is_loaded = @command.run!('/usr/sbin/kextstat', :args => ['-l', '-b', kext], :sudo => true)
         if is_loaded.length > 1
           @command.run!('/sbin/kextunload', :args => ['-b', '--', kext], :sudo => true)
+          sleep 1
         end
       end
     end
@@ -127,7 +135,8 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     if uninstall_options.key? :script
       executable, script_arguments = self.class.read_script_arguments(uninstall_options, :script)
       raise "Error in Cask #{@cask}: uninstall :script without :executable." if executable.nil?
-      @command.run!(@cask.destination_path.join(executable), script_arguments)
+      @command.run(@cask.destination_path.join(executable), script_arguments)
+      sleep 1
     end
 
     if uninstall_options.key? :pkgutil
@@ -144,4 +153,3 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     end
   end
 end
-

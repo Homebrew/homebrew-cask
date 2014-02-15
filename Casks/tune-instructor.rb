@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class TuneInstructor < Cask
   url 'http://www.tune-instructor.de/_data/TuneInstructor3.4b.dmg'
   homepage 'http://www.tune-instructor.de/com/start.html'

@@ -14,7 +14,9 @@ class Cask::CaveatsDSL
   def initialize(cask, block)
     @cask = cask
     retval = instance_eval &block
-    puts retval unless retval.nil?
+    unless retval.nil?
+      puts retval.to_s.sub(/[\r\n \t]*\Z/, "\n\n")
+    end
   end
 
   # helpers
@@ -30,9 +32,13 @@ class Cask::CaveatsDSL
     caskroom_path.join(@cask.version)
   end
 
-  # DSL. Each method should handle output. (The return value
-  # of the last method is also output by the caller, but that
-  # feature is only for the convenience of Cask authors.)
+  # DSL. Each method should handle output, following the convention of
+  # at least one trailing blank line so that the user can distinguish
+  # separate caveats.
+  #
+  # ( The return value of the last method in the block is also sent
+  #   to the output by the caller, but that feature is only for the
+  #   convenience of Cask authors. )
   def manual_installer(path)
     puts <<-EOS.undent
     To complete the installation of Cask #{@cask}, you must also
@@ -60,6 +66,7 @@ class Cask::CaveatsDSL
       Cask #{@cask} installs files under "#{localpath}".  The presence of such
       files can cause warnings when running "brew doctor", which is considered
       to be a bug in homebrew-cask.
+
       EOS
     end
   end
@@ -68,12 +75,14 @@ class Cask::CaveatsDSL
     puts <<-EOS.undent
     You must log out and log back in for the installation of #{@cask}
     to take effect.
+
     EOS
   end
 
   def reboot
     puts <<-EOS.undent
     You must reboot for the installation of #{@cask} to take effect.
+
     EOS
   end
 
