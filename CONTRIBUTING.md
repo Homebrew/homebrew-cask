@@ -294,6 +294,7 @@ is the most useful.
   - `:executable` - relative path to an uninstall script to be run via sudo (required for hash form)
   - `:args` - array of arguments to the uninstall script
   - `:input` - array of lines of input to be sent to `stdin` of the script
+  - `:must_succeed` - set to `false` if the script is allowed to fail
 * `:files` (array) - absolute paths of files or directories to remove.  `:files` should only be used as a last resort. `:pkgutil` is strongly preferred
 
 Each `uninstall` technique is applied according to the order above. The order

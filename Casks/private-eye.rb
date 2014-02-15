@@ -4,6 +4,14 @@ class PrivateEye < Cask
   version 'latest'
   no_checksum
   install 'Private Eye.pkg'
-  # We have to try unloading the kext twice to work around a bug. See https://github.com/phinze/homebrew-cask/pull/1802#issuecomment-34171151
-  uninstall :kext => ['com.radiosilenceapp.nke.PrivateEye', 'com.radiosilenceapp.nke.PrivateEye'], :pkgutil => 'com.radiosilenceapp.privateEye.*'
+  # We intentionally unload the kext twice as a workaround
+  # See https://github.com/phinze/homebrew-cask/pull/1802#issuecomment-34171151
+  uninstall :early_script => {
+              :executable => '/sbin/kextunload',
+              :args => ['-b', 'com.radiosilenceapp.nke.PrivateEye'],
+              :must_succeed => false,
+            },
+            :quit => 'com.radiosilenceapp.PrivateEye',
+            :kext => 'com.radiosilenceapp.nke.PrivateEye',
+            :pkgutil => 'com.radiosilenceapp.privateEye.*'
 end
