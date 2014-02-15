@@ -146,7 +146,7 @@ class Cask::SubversionDownloadStrategy < SubversionDownloadStrategy
   def compress
     Dir.chdir(cached_location) do
       @command.run!('/usr/bin/tar', :args => ['-s/^\.//', '--exclude', '.svn', '-cf', Pathname.new(tarball_path), '--', '.'],
-                                    :stderr => :silent)
+                                    :stderr => :silence)
     end
     clear_cache
   end
