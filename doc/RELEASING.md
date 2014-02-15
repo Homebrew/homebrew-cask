@@ -50,9 +50,15 @@ down than floating in a brain somewhere.
 	```
 
    and make sure the value in `$NEW_RELEASE_TAG` is what you want.
-6. Bump the `VERSION` string which is stored in the file `lib/cask/version.rb`.
-   It should match `$NEW_RELEASE_TAG`, **EXCEPT** that the leading `v`
-   character should be removed from the version number in the Ruby code.
+6. Bump the `HOMEBREW_CASK_VERSION` string which is stored in the file
+   `lib/cask/version.rb`:
+
+	```bash
+	$ ./developer/bin/bump_version "$NEW_RELEASE_TAG"
+	```
+
+   The version string in the Ruby code should match `$NEW_RELEASE_TAG`,
+   except that the leading `v` character should be removed.
 7. Generate a draft changelog for the new release by running
 
 	```bash
