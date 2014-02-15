@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 0.29.1
+
+* __Casks__
+ - 7 Casks added (1 updated) by 3 contributors since 0.29.0
+ - 1168 total Casks
+* __Features__
+* __Fixes__
+ - [#2957][] fix bugs with Subversion downloads
+* __Documentation__
+* __Breaking Changes__
+
+[#2957]: https://github.com/phinze/homebrew-cask/issues/2957
+
 ## 0.29.0
 
 * __Casks__
