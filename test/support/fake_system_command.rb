@@ -47,8 +47,8 @@ class Cask::FakeSystemCommand
     end
   end
 
-  def self.run!(*args)
-    run(*args)
+  def self.run!(command, options={})
+    run(command, options.merge(:must_succeed => true))
   end
 end
 
