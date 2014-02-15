@@ -1,7 +1,7 @@
 class Sqleditor < Cask
-  url 'http://www.malcolmhardie.com/sqleditor/releases/2.6.1/SQLEditor-2-6-1.zip'
+  url 'http://www.malcolmhardie.com/sqleditor/releases/2.7/SQLEditor-2-7.zip'
   homepage 'http://www.malcolmhardie.com/sqleditor/'
-  version '2.6.1'
-  sha1 '8f18d1fe043f811ab92b397c548d3d1293a69a1e'
+  version '2.7'
+  sha256 '38f9d93d0ff7d680eff64949601ee4693eb91c38f89bd2f42a7e86809b36e9b5'
   link 'SQLEditor.app'
 end
