@@ -22,7 +22,7 @@ describe Cask::CLI::Alfred do
 
       TestHelper.must_output(self, lambda {
         Cask::CLI::Alfred.run('status', Cask::FakeSystemCommand)
-      }, "Warning: Could not find Alfred preferences, Alfred is probably not installed.")
+      }, "Warning: Could not find Alfred 2 preferences, Alfred 2 is probably not installed.")
     end
 
     it "properly reports when alfred is installed but unlinked" do
@@ -48,7 +48,7 @@ describe Cask::CLI::Alfred do
 
       TestHelper.must_output(self, lambda {
         Cask::CLI::Alfred.run('link', Cask::FakeSystemCommand)
-      }, "Warning: Could not find Alfred preferences, Alfred is probably not installed.")
+      }, "Warning: Could not find Alfred 2 preferences, Alfred 2 is probably not installed.")
     end
 
     it "warns when alfred is already linked" do
@@ -110,7 +110,7 @@ describe Cask::CLI::Alfred do
 
       TestHelper.must_output(self, lambda {
         Cask::CLI::Alfred.run('unlink', Cask::FakeSystemCommand)
-      }, "Warning: Could not find Alfred preferences, Alfred is probably not installed.")
+      }, "Warning: Could not find Alfred 2 preferences, Alfred 2 is probably not installed.")
     end
 
     it "warns when alfred is already unlinked" do

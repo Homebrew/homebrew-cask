@@ -36,7 +36,7 @@ class Cask::CLI::Alfred
 
   def self.assert_installed
     if !alfred_installed?
-      opoo "Could not find Alfred preferences, Alfred is probably not installed."
+      opoo "Could not find Alfred 2 preferences, Alfred 2 is probably not installed."
     end
     alfred_installed?
   end
@@ -80,7 +80,7 @@ class Cask::CLI::Alfred
   end
 
   def self.alfred_installed?
-    alfred_preference('version') =~ /^[0-9]\.[0-9]/
+    alfred_preference('version') =~ /^2\.[0-9]/
   end
 
   def self.linked?
