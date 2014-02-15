@@ -5,7 +5,7 @@ class Cask::Download
     @cask = cask
   end
 
-  def perform
+  def perform(force=false)
     require 'software_spec'
     cask = @cask
     if cask.url.using == :svn
@@ -13,6 +13,7 @@ class Cask::Download
     else
       downloader = Cask::CurlDownloadStrategy.new(cask)
     end
+    downloader.clear_cache if force
     downloaded_path = downloader.fetch
     begin
       # this symlink helps track which downloads are ours
