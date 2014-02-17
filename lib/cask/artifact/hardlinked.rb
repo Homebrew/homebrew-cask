@@ -14,9 +14,9 @@ class Cask::Artifact::Hardlinked < Cask::Artifact::Symlinked
 
   def summarize_one_link(artifact_spec)
     load_specification artifact_spec
-    if self.class.islink?(linked_path)
-      printable_linked_path = "'#{linked_path}'"
-      printable_linked_path.sub!(%r{^'#{ENV['HOME']}/*}, %q{~/'})
+    if self.class.islink?(target)
+      printable_target = "'#{target}'"
+      printable_target.sub!(%r{^'#{ENV['HOME']}/*}, %q{~/'})
     end
   end
 end
