@@ -1,8 +1,8 @@
 class Keyremap4macbook < Cask
-  url 'https://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-9.2.0.dmg'
+  url 'https://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-9.3.0.dmg'
   homepage 'https://pqrs.org/macosx/keyremap4macbook/'
-  version '9.2.0'
-  sha1 'f614c318d2dcf35c5e1e9a85bab58b12238db4de'
+  version '9.3.0'
+  sha1 '093ae5fc252ea61c7a22af197e9930ae7943c119'
   install 'KeyRemap4MacBook.pkg'
   uninstall :quit => 'org.pqrs.KeyRemap4MacBook',
             :pkgutil => 'org.pqrs.driver.KeyRemap4MacBook',
