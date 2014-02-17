@@ -4,4 +4,8 @@ class Candybar < Cask
   version '3.3.4'
   sha1 'f645e9da45a621415a07a7492c45923b1a1fd4d4'
   link 'CandyBar.app'
+  caveats <<-EOS.undent
+    Candybar is free of charge.  Visit the following link for a license
+    http://panic.com/bin/setup.php/cb3/PPQA-YAMA-E3KP-VHXG-B6AL-L
+  EOS
 end
