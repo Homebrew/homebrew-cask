@@ -34,6 +34,10 @@ class Cask::SystemCommand
 
   def self._process_options(executable, options)
     options.assert_valid_keys :input, :print, :stderr, :args, :must_succeed, :sudo, :plist
+    # would probably be better to change :stderr to boolean :silence_stderr
+    if options[:stderr] and options[:stderr] != :silence
+      raise CaskError.new "Unknown value #{options[:stderr]} for key :stderr"
+    end
     command = [executable]
     if options[:sudo]
       command.unshift('/usr/bin/sudo', '-E', '--')
