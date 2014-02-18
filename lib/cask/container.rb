@@ -3,6 +3,7 @@ class Cask::Container; end
 require 'cask/container/base'
 require 'cask/container/unarbase'
 require 'cask/container/air'
+require 'cask/container/bzip2'
 require 'cask/container/cab'
 require 'cask/container/criteria'
 require 'cask/container/dmg'
@@ -24,6 +25,7 @@ class Cask::Container
       Cask::Container::Tar,
       Cask::Container::Rar,
       Cask::Container::Zip,
+      Cask::Container::Bzip2,
       Cask::Container::Naked,
     ]
   end
