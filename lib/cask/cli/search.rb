@@ -21,7 +21,7 @@ class Cask::CLI::Search
       # suppressing search of the font Tap is a quick hack until behavior can be made configurable
       all_titles = Cask::CLI.nice_listing Cask.all_titles.reject{ |t| %r{^caskroom-fonts/}.match(t)}
       simplified_titles = all_titles.map { |t| t.gsub(/[^a-z]+/i, '') }
-      simplified_search_term = search_term.gsub(/[^a-z]+/i, '')
+      simplified_search_term = search_term.sub(/\.rb$/i,'').gsub(/[^a-z]+/i, '')
       exact_match = simplified_titles.grep(/^#{simplified_search_term}$/i) { |t| all_titles[simplified_titles.index(t)] }.first
       partial_matches = simplified_titles.grep(/#{simplified_search_term}/i) { |t| all_titles[simplified_titles.index(t)] }
       partial_matches.delete(exact_match)
