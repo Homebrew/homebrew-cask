@@ -20,6 +20,22 @@ class Hash
   end
 end
 
+# monkeypatch Pathname
+class Pathname
+  # our own version of Homebrew's abv, with better defenses
+  # against unusual filenames
+  def cabv
+    out=''
+    n = Cask::SystemCommand.run!('/usr/bin/find',
+                                 :args => [self.realpath, *%w[-type f ! -name .DS_Store]],
+                                 :stderr => :silence).count("\n")
+    out << "#{n} files, " if n > 1
+    out << Cask::SystemCommand.run!('/usr/bin/du',
+                                    :args => ['-hs', '--', self.to_s],
+                                    :stderr => :silence).split("\t").first.strip
+  end
+end
+
 def odebug title, *sput
   if Cask.respond_to?(:debug) and Cask.debug
     width = Tty.width * 4 - 6
