@@ -60,6 +60,7 @@ def odumpcask cask
      :artifacts,
      :caveats,
      :depends_on_formula,
+     :container_type,
     ].each do |method|
       odebug "Cask instance method '#{method}':", cask.send(method).to_yaml
     end

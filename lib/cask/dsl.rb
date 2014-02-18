@@ -16,6 +16,8 @@ module Cask::DSL
 
   def depends_on_formula; self.class.depends_on_formula; end
 
+  def container_type; self.class.container_type; end
+
   def sums; self.class.sums || []; end
 
   def artifacts; self.class.artifacts; end
@@ -46,6 +48,13 @@ module Cask::DSL
       @appcast ||= begin
         Cask::UnderscoreSupportingURI.parse(*args) unless args.empty?
       end
+    end
+
+    def container_type(type=nil)
+      if @container_type and !type.nil?
+        raise CaskInvalidError.new(self.title, "'container_type' stanza may only appear once")
+      end
+      @container_type ||= type
     end
 
     def version(version=nil)

@@ -55,7 +55,11 @@ class Cask::Installer
   def extract_primary_container
     odebug "Extracting primary container"
     FileUtils.mkdir_p @cask.destination_path
-    container = Cask::Container.for_path(@downloaded_path, @command)
+    container = if @cask.container_type
+       Cask::Container.from_type(@cask.container_type)
+    else
+       Cask::Container.for_path(@downloaded_path, @command)
+    end
     unless container
       raise CaskError.new "Uh oh, could not identify primary container for '#{@downloaded_path}'"
     end
