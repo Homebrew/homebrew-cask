@@ -21,7 +21,7 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
     }
   end
 
-  attr_reader :source, :target, :linked_path
+  attr_reader :source, :target
 
   def load_specification(artifact_spec)
     source_string, target_hash = artifact_spec
@@ -34,7 +34,6 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
     else
       @target = Cask.send(self.class.artifact_dirmethod).join(source.basename)
     end
-    @linked_path = Cask.send(self.class.artifact_dirmethod).join(Pathname(target).basename)
   end
 
   def link(artifact_spec)
@@ -46,19 +45,19 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
 
   def summarize_one_link(artifact_spec)
     load_specification artifact_spec
-    if self.class.islink?(linked_path)
-      link_description = linked_path.exist? ? '' : "#{Tty.red}Broken Link#{Tty.reset}: "
-      printable_linked_path = "'#{linked_path}'"
-      printable_linked_path.sub!(%r{^'#{ENV['HOME']}/*}, %q{~/'})
-      "#{link_description}#{printable_linked_path} -> '#{linked_path.readlink}'"
+    if self.class.islink?(target)
+      link_description = target.exist? ? '' : "#{Tty.red}Broken Link#{Tty.reset}: "
+      printable_target = "'#{target}'"
+      printable_target.sub!(%r{^'#{ENV['HOME']}/*}, %q{~/'})
+      "#{link_description}#{printable_target} -> '#{target.readlink}'"
     end
   end
 
   def unlink(artifact_spec)
     load_specification artifact_spec
-    if linked_path.exist? && self.class.islink?(linked_path)
-      ohai "Removing #{self.class.artifact_english_name} #{self.class.link_type_english_name.downcase}: '#{linked_path}'"
-      linked_path.delete
+    if self.class.islink?(target)
+      ohai "Removing #{self.class.artifact_english_name} #{self.class.link_type_english_name.downcase}: '#{target}'"
+      target.delete
     end
   end
 
