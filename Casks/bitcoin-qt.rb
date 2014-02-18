@@ -1,7 +1,7 @@
 class BitcoinQt < Cask
-  url 'http://downloads.sourceforge.net/project/bitcoin/Bitcoin/bitcoin-0.8.6/bitcoin-0.8.6-macosx.dmg'
-  homepage 'http://sourceforge.net/projects/bitcoin/'
+  url 'https://bitcoin.org/bin/0.8.6/bitcoin-0.8.6-macosx.dmg'
+  homepage 'https://bitcoin.org/'
   version '0.8.6'
-  sha1 '67e038ad4057d0a7c332ed0aaab81203f41feafd'
+  sha256 'ec85816e6cd034230ec5dc83c105334aa91bfa38fd959ba3d1d3bd5d4df3208b'
   link 'Bitcoin-Qt.app'
 end
