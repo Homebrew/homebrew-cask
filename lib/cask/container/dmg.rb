@@ -37,7 +37,7 @@ class Cask::Container::Dmg < Cask::Container::Base
 
   def assert_mounts_found
     if @mounts.empty?
-      raise "no mounts found in #{@path}; perhaps its a bad dmg?"
+      raise CaskError.new "No mounts found in '#{@path}'; perhaps it is a bad DMG?"
     end
   end
 

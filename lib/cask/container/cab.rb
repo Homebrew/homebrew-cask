@@ -11,7 +11,7 @@ class Cask::Container::Cab < Cask::Container::Base
   def extract
     cabextract = HOMEBREW_PREFIX.join('bin/cabextract')
     if ! Pathname.new(cabextract).exist?
-      raise "Expected to find cabextract executable. Cask #{@cask} must add 'depends_on_formula'"
+      raise CaskError.new "Expected to find cabextract executable. Cask '#{@cask}' must add: depends_on_formula 'cabextract'"
     end
     Dir.mktmpdir do |staging_dir|
       @command.run!(cabextract, :args => ['-d', staging_dir, '--', @path])
