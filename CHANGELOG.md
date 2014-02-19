@@ -1,5 +1,28 @@
 # CHANGELOG
 
+## 0.29.2
+
+* __Casks__
+ - 36 Casks added (10 updated) by 15 contributors since 0.29.1
+ - 1204 total Casks
+* __Features__
+* __Fixes__
+ - [#3044][] Adjust arity on exception to match change in Homebrew
+ - [#3015][] Add `strip` to link_checker. <3 [@Red54][]
+ - [#2991][] Make `brew cask info` work for packages with spaces in filenames <3 [@skivvies][]
+ - [#2961][] Enforce valid values for `:stderr` on `command.run`
+* __Documentation__
+ - 1 doc commit since 0.29.1
+* __Breaking Changes__
+
+[#3044]: https://github.com/phinze/homebrew-cask/issues/3044
+[#3015]: https://github.com/phinze/homebrew-cask/issues/3015
+[@Red54]: https://github.com/Red54
+[@skivvies]: https://github.com/skivvies
+[#2994]: https://github.com/phinze/homebrew-cask/issues/2994
+[#2991]: https://github.com/phinze/homebrew-cask/issues/2991
+[#2961]: https://github.com/phinze/homebrew-cask/issues/2961
+
 ## 0.29.1
 
 * __Casks__
