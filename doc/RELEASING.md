@@ -62,7 +62,7 @@ down than floating in a brain somewhere.
 7. Generate a draft changelog for the new release by running
 
 	```bash
-	$ ./developer/bin/project_stats release` >| /var/tmp/draft_release_changelog.md
+	$ ./developer/bin/project_stats release  >| /var/tmp/draft_release_changelog.md
 	$ ./developer/bin/generate_changelog     >> /var/tmp/draft_release_changelog.md
 	```
 
