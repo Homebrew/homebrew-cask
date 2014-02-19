@@ -8,23 +8,30 @@ class Cask::Download
   def perform(force=false)
     require 'software_spec'
     cask = @cask
-    if cask.url.using == :svn
-      downloader = Cask::SubversionDownloadStrategy.new(cask)
-    elsif cask.url.using == :post
-      downloader = Cask::CurlPostDownloadStrategy.new(cask)
-    else
-      downloader = Cask::CurlDownloadStrategy.new(cask)
-    end
-    downloader.clear_cache if force
-    downloaded_path = downloader.fetch
-    begin
-      # this symlink helps track which downloads are ours
-      File.symlink downloaded_path,
-                   HOMEBREW_CACHE_CASKS.join(downloaded_path.basename)
-    rescue
-    end
-    _check_sums(downloaded_path, cask.sums) unless cask.sums === :no_check
-    downloaded_path
+    cask.url.each.collect do |cask_url|
+      if cask_url.using == :svn
+        downloader = Cask::SubversionDownloadStrategy.new(cask, cask_url)
+      elsif cask_url.using == :post
+        downloader = Cask::CurlPostDownloadStrategy.new(cask, cask_url)
+      else
+        downloader = Cask::CurlDownloadStrategy.new(cask, cask_url)
+      end
+      downloader.clear_cache if force
+      downloaded_path = downloader.fetch
+      begin
+        # this symlink helps track which downloads are ours
+        File.symlink downloaded_path,
+                     HOMEBREW_CACHE_CASKS.join(downloaded_path.basename)
+      rescue
+      end
+      url_sums = cask_url.sums.empty? ? cask.sums : cask_url.sums
+      _check_sums(downloaded_path, url_sums) unless url_sums == :no_check
+      if cask_url.multipart
+        nil
+      else
+        downloaded_path
+      end
+    end.compact
   end
 
   private

@@ -12,6 +12,6 @@ class Cask::Container::Naked < Cask::Container::Base
   end
 
   def target_file
-    URI.decode(File.basename(@cask.url.path))
+    Pathname.new(@path).basename
   end
 end

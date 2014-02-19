@@ -12,7 +12,7 @@ describe Cask::CurlDownloadStrategy do
     downloader = Cask::CurlDownloadStrategy.new(BasicCask)
     downloader.name.must_equal 'basic-cask'
     downloader.resource.name.must_equal 'basic-cask'
-    downloader.resource.url.must_equal cask.url.to_s
+    downloader.resource.url.must_equal cask.url.first.to_s
     downloader.resource.version.to_s.must_equal cask.version
   end
 
@@ -22,7 +22,7 @@ describe Cask::CurlDownloadStrategy do
     downloader = Cask::CurlDownloadStrategy.new(cask)
     downloader.temporary_path.stubs(:rename)
     downloader.expects(:curl).with(
-      cask.url,
+      cask.url.first,
       '-C', 0,
       '-o', kind_of(Pathname)
     )
@@ -102,7 +102,7 @@ describe Cask::CurlDownloadStrategy do
       downloader = Cask::CurlPostDownloadStrategy.new(BasicCask)
       downloader.name.must_equal 'basic-cask'
       downloader.resource.name.must_equal 'basic-cask'
-      downloader.resource.url.must_equal cask.url.to_s
+      downloader.resource.url.must_equal cask.url.first.to_s
       downloader.resource.version.to_s.must_equal cask.version
     end
 
@@ -143,7 +143,7 @@ describe Cask::CurlDownloadStrategy do
   describe Cask::SubversionDownloadStrategy do
     it 'recognizes the SVN download strategy' do
       cask = Cask.load('svn-download-cask')
-      cask.url.using.must_equal :svn
+      cask.url.first.using.must_equal :svn
       downloader = Cask::SubversionDownloadStrategy.new(cask, Cask::FakeSystemCommand)
       downloader.must_respond_to(:fetch)
     end
@@ -154,7 +154,7 @@ describe Cask::CurlDownloadStrategy do
       downloader = Cask::SubversionDownloadStrategy.new(cask, Cask::FakeSystemCommand)
       downloader.name.must_equal 'svn-download-cask'
       downloader.resource.name.must_equal 'svn-download-cask'
-      downloader.resource.url.must_equal cask.url.to_s
+      downloader.resource.url.must_equal cask.url.first.to_s
       downloader.resource.version.to_s.must_equal cask.version
     end
 
@@ -172,7 +172,7 @@ describe Cask::CurlDownloadStrategy do
       downloader.stubs(:compress)
       downloader.expects(:fetch_repo).with(
                                            downloader.cached_location,
-                                           cask.url.to_s
+                                           cask.url.first.to_s
                                            )
       shutup { downloader.fetch }.must_equal downloader.tarball_path
     end
@@ -186,7 +186,7 @@ describe Cask::CurlDownloadStrategy do
                                                '--force',
                                                '--config-option',
                                                'config:miscellany:use-commit-times=yes',
-                                               cask.url.to_s,
+                                               cask.url.first.to_s,
                                                downloader.cached_location,
                                               ])
       downloader.stubs(:compress)
@@ -204,7 +204,7 @@ describe Cask::CurlDownloadStrategy do
                                                'config:miscellany:use-commit-times=yes',
                                                '--trust-server-cert',
                                                '--non-interactive',
-                                               cask.url.to_s,
+                                               cask.url.first.to_s,
                                                downloader.cached_location,
                                               ])
       downloader.stubs(:compress)
@@ -220,7 +220,7 @@ describe Cask::CurlDownloadStrategy do
                                                '--force',
                                                '--config-option',
                                                'config:miscellany:use-commit-times=yes',
-                                               cask.url.to_s,
+                                               cask.url.first.to_s,
                                                downloader.cached_location,
                                                '-r',
                                                '10',

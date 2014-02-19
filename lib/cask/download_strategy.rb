@@ -9,17 +9,27 @@ require 'cgi'
 module Cask::DownloadStrategy
   attr_reader :cask, :cask_url
 
-  def initialize(cask, command=Cask::SystemCommand)
+  def initialize(cask, cask_url=cask.url.first, command=Cask::SystemCommand)
     @cask     = cask
+    @cask_url = cask_url
     @command  = command
-    @cask_url = cask.url
     super(
       cask.title,
       ::Resource.new(cask.title) do |r|
-        r.url     cask.url.to_s
+        r.url     cask_url.to_s
         r.version cask.version
       end
     )
+  end
+
+  def tarball_path
+    if cask_url.target == :basename
+      Pathname.new("#{HOMEBREW_CACHE}/#{basename_without_params}")
+    elsif cask_url.target
+      Pathname.new("#{HOMEBREW_CACHE}/#{cask_url.target}")
+    else
+      super
+    end
   end
 end
 

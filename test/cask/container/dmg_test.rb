@@ -7,7 +7,7 @@ describe Cask::Container::Dmg do
 
       dmg = Cask::Container::Dmg.new(
         transmission,
-        Pathname(transmission.url.path),
+        Pathname(transmission.url.first.path),
         Cask::SystemCommand
       )
 

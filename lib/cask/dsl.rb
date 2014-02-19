@@ -33,11 +33,12 @@ module Cask::DSL
     end
 
     def url(*args)
-      if @url and !args.empty?
-        raise CaskInvalidError.new(self.title, "'url' stanza may only appear once")
-      end
-      @url ||= begin
-        Cask::URL.new(*args) unless args.empty?
+      @url ||= []
+      if ! args.empty?
+        @url << Cask::URL.new(*args)
+      else
+        # accessor
+        @url
       end
     end
 
