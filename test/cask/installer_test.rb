@@ -98,6 +98,21 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
+    it "works with RAR-based casks" do
+      skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
+      rar_container = Cask.load('rar-container')
+      rar_container.stubs(:depends_on_formula).returns([])
+
+      shutup do
+        Cask::Installer.new(rar_container).install
+      end
+
+      dest_path = Cask.caskroom/'rar-container'/rar_container.version
+      dest_path.must_be :directory?
+      application = dest_path/'rarcontainer/Application.app'
+      application.must_be :directory?
+    end
+
     it "blows up on a bad checksum" do
       bad_checksum = Cask.load('bad-checksum')
       lambda {
