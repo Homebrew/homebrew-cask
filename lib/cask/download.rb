@@ -33,7 +33,7 @@ class Cask::Download
         if sum == computed
           odebug "Checksums match"
         else
-          raise ChecksumMismatchError.new(sum, computed)
+          raise ChecksumMismatchError.new(path, sum, computed)
         end
         has_sum = true
       end
