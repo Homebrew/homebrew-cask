@@ -38,12 +38,16 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
   def load_pkg_description(pkg_description)
     @pkg_relative_path = pkg_description.shift
     @pkg_install_opts = pkg_description.shift
-    if @pkg_install_opts.respond_to?(:keys)
-      @pkg_install_opts.assert_valid_keys( :allow_untrusted )
-    elsif @pkg_install_opts
-      raise "Bad install stanza in Cask #{@cask}"
+    begin
+      if @pkg_install_opts.respond_to?(:keys)
+        @pkg_install_opts.assert_valid_keys( :allow_untrusted )
+      elsif @pkg_install_opts
+        raise
+      end
+      raise if pkg_description.nil?
+    rescue
+      raise CaskInvalidError.new(@cask, 'Bad install stanza')
     end
-    raise "Bad install stanza in Cask #{@cask}" if pkg_description.nil?
   end
 
   def pkg_install_opts(opt)
@@ -88,7 +92,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     if uninstall_options.key? :early_script
       executable, script_arguments = self.class.read_script_arguments(uninstall_options, :early_script)
       ohai "Running uninstall script #{executable}"
-      raise "Error in Cask #{@cask}: uninstall :early_script without :executable." if executable.nil?
+      raise CaskInvalidError.new(@cask, 'uninstall :early_script without :executable') if executable.nil?
       @command.run(@cask.destination_path.join(executable), script_arguments)
       sleep 1
     end
@@ -134,7 +138,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     # :script must come before :pkgutil or :files so that the script file is not already deleted
     if uninstall_options.key? :script
       executable, script_arguments = self.class.read_script_arguments(uninstall_options, :script)
-      raise "Error in Cask #{@cask}: uninstall :script without :executable." if executable.nil?
+      raise CaskInvalidError.new(@cask, 'uninstall :script without :executable.') if executable.nil?
       @command.run(@cask.destination_path.join(executable), script_arguments)
       sleep 1
     end
