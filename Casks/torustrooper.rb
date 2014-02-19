@@ -1,4 +1,4 @@
-class TorusTrooper < Cask
+class Torustrooper < Cask
   url 'http://workram.com/archives/TorusTrooperOSX0.22.2.dmg'
   homepage 'http://workram.com/games/'
   version '0.22.2'
