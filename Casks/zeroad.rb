@@ -1,4 +1,4 @@
-class ZeroAd < Cask
+class Zeroad < Cask
   url 'http://releases.wildfiregames.com/0ad-0.0.15-alpha-osx64.dmg'
   homepage 'http://www.play0ad.com/'
   version '0.0.15-alpha'
