@@ -1,4 +1,4 @@
-class SerialCloner < Cask
+class Serialcloner < Cask
   url 'http://serialbasics.free.fr/Serial_Cloner-Download_files/SerialCloner2-6.dmg'
   homepage 'http://serialbasics.free.fr/Serial_Cloner.html'
   version '2.6.1'
