@@ -8,6 +8,7 @@ require 'cask/container/criteria'
 require 'cask/container/dmg'
 require 'cask/container/naked'
 require 'cask/container/sevenzip'
+require 'cask/container/sit'
 require 'cask/container/tar'
 require 'cask/container/zip'
 
@@ -18,6 +19,7 @@ class Cask::Container
       Cask::Container::Cab,
       Cask::Container::Dmg,
       Cask::Container::SevenZip,
+      Cask::Container::Sit,
       Cask::Container::Tar,
       Cask::Container::Zip,
       Cask::Container::Naked,

@@ -83,6 +83,21 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
+    it "works with Stuffit-based Casks" do
+      skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
+      stuffit_container = Cask.load('stuffit-container')
+      stuffit_container.stubs(:depends_on_formula).returns([])
+
+      shutup do
+        Cask::Installer.new(stuffit_container).install
+      end
+
+      dest_path = Cask.caskroom/'stuffit-container'/stuffit_container.version
+      dest_path.must_be :directory?
+      application = dest_path/'sheldonmac/v1.0'
+      application.must_be :directory?
+    end
+
     it "blows up on a bad checksum" do
       bad_checksum = Cask.load('bad-checksum')
       lambda {
