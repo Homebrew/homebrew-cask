@@ -144,7 +144,7 @@
  - [#2576][] `brew cask home` with no args opens project homepage
  - [#2555][] Add copious debugging with --debug
  - [#2697][], [#2593][], [#2418][] Numerous additions to `brew cask doctor`
- - [#2676][], [#2560][], [#2567][], [#2536][] Scripts to assist Cask authors [@goxberry][]
+ - [#2676][], [#2560][], [#2567][], [#2536][] Scripts to assist Cask authors <3 [@goxberry][]
 * __Fixes__
  - [#2670][], [#2650][] **IMPORTANT**: don't delete system symlinks.  **All users should upgrade.** <3 [@wallacewinfrey][], [@vmrob][]
  - [#2545][] Improvements to `brew cask search`
