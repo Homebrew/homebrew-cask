@@ -1,4 +1,4 @@
-class Cdto < Cask
+class CdTo < Cask
   url 'https://cdto.googlecode.com/files/cdto_2.5_sign.zip'
   homepage 'http://code.google.com/p/cdto'
   version '2.5'
