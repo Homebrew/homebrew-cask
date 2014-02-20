@@ -3,6 +3,11 @@ class Cask::WithoutSource < Cask
     caskroom_path.children.first
   end
 
+  def initialize(sourcefile_path=nil)
+    @sourcefile_path = sourcefile_path
+    @token = sourcefile_path
+  end
+
   def to_s
     "#{token} (!)"
   end

@@ -59,6 +59,7 @@ class Cask::Installer
       download
       extract_primary_container
       install_artifacts
+      save_caskfile force
       enable_accessibility_access
     rescue StandardError => e
       purge_versioned_files
@@ -215,6 +216,22 @@ class Cask::Installer
         automatically on this version of OS X.  See System Preferences.
       EOS
     end
+  end
+
+  def save_caskfile(force=false)
+    timestamp = :now
+    create    = true
+    savedir   = @cask.metadata_subdir('Casks', timestamp, create)
+    if Dir.entries(savedir).size > 2
+      # should not happen
+      if force
+        savedir.rmtree
+        FileUtils.mkdir_p savedir
+      else
+        raise CaskAlreadyInstalledError.new(@cask)
+      end
+    end
+    FileUtils.copy(@cask.sourcefile_path, savedir) if @cask.sourcefile_path
   end
 
   def uninstall(force=false)
