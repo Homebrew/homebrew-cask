@@ -1,13 +1,7 @@
 class Synergy < Cask
-  url 'http://synergy.googlecode.com/files/synergy-1.4.15-MacOSX108-x86_64.dmg'
+  url 'http://fossfiles.com/synergy/synergy-1.4.16-r1969-MacOSX109-x86_64.dmg'
   homepage 'http://synergy-foss.org/'
-  version '1.4.15'
-  sha1 '90d8ef8e0fc2840437b9f966898b12cb1e779b23'
+  version '1.4.16'
+  sha1 '2645c295e4cac727898ee7f9a5ef868ff55bcdd9'
   link 'Synergy.app'
-
-  # Should be fixed in the next version
-  caveats <<-EOS.undent
-    After installation please follow the instruction here to make it work on Mavericks
-      http://synergy-foss.org/blog/mac-os-x-10-9-mavericks-support/
-    EOS
 end
