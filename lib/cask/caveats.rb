@@ -118,7 +118,7 @@ class Cask::CaveatsDSL
   # appear even if no warning is output.  One workaround would
   # be to spin out os-version-detection from caveats into a separate
   # Cask stanza, and that is probably a sensible design.
-  def os_versions_only(*supported_versions)
+  def os_version_only(*supported_versions)
     known_versions = %w{10.0 10.1 10.2 10.3 10.3 10.5 10.6 10.7 10.8 10.9}
     supported_versions.each do |version|
       unless known_versions.include?(version)

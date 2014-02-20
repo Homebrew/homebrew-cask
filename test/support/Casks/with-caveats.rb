@@ -18,7 +18,7 @@ class WithCaveats < TestCask
     manual_installer('Installer.app')
     # since all known OS versions are specified, no output should be
     # generated here during the test
-    os_versions_only('10.0', '10.1', '10.2', '10.3', '10.3', '10.5', '10.6', '10.7', '10.8', '10.9')
+    os_version_only('10.0', '10.1', '10.2', '10.3', '10.3', '10.5', '10.6', '10.7', '10.8', '10.9')
   end
   caveats do
     # since both valid arches are specified, no output should be
