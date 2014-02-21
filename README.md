@@ -51,5 +51,12 @@ When reporting bugs, remember that homebrew-cask is an independent project from
 Homebrew.  Do your best to direct bug reports to the appropriate project.  If
 your command-line started with `brew cask`, bring the bug to us first!
 
+Before reporting a bug, make sure you have the latest versions of Homebrew,
+homebrew-cask, and all Taps by running the following command:
+
+```bash
+$ brew update && brew upgrade brew-cask && brew cleanup
+```
+
 ## License:
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
