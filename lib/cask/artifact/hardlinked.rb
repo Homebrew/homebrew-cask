@@ -10,6 +10,7 @@ class Cask::Artifact::Hardlinked < Cask::Artifact::Symlinked
 
   def create_filesystem_link(source, target)
     @command.run!('/bin/ln', :args => ['-hf', '--', source, target])
+    add_altname_metadata source, target
   end
 
   def summarize_one_link(artifact_spec)

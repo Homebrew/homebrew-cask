@@ -18,6 +18,20 @@ describe Cask::Artifact::App do
       TestHelper.valid_alias?(Cask.appdir/'AnotherName.app').must_equal true
     end
 
+    it "creates metadata containing the altername target name" do
+      cask = local_alt_caffeine
+
+      shutup do
+        Cask::Artifact::App.new(cask).install
+      end
+
+      Cask::SystemCommand.run('/usr/bin/xattr',
+                              :args => ['-p',
+                                        'com.apple.metadata:kMDItemAlternateNames',
+                                        Cask.appdir/'AnotherName.app'],
+                              :stderr => :silence).must_match(/AnotherName/)
+    end
+
     it "works with an application in a subdir" do
       AltSubDirCask = Class.new(Cask)
       AltSubDirCask.class_eval do
