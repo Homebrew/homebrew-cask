@@ -74,6 +74,7 @@ This will both uninstall the Cask and remove symlinks which were created in
 * `cleanup` -- cleans up cached downloads (with `--outdated`, only cleans old downloads)
 * `home` -- opens the homepage of the given Cask; or with no arguments, the homebrew-cask project page
 * `alfred` -- modifies Alfred's scope to include the Caskroom
+* `update` -- a synonym for `brew update`
 
 The following commands are for Cask authors:
 

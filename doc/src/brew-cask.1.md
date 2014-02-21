@@ -91,6 +91,9 @@ names, and other aspects of this manual are still subject to change.
     is delimited by slashes, it is interpreted as a Ruby regular
     expression.
 
+  * `update`:
+    For convenience, `brew cask update` is a synonym for `brew update`.
+
 ## OPTIONS
 
 Some of these options (such as `--prefpanedir`) may be subject to removal
