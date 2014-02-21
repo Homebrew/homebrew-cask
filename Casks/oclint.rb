@@ -7,4 +7,7 @@ class Oclint < Cask
   binary 'oclint-0.7-x86_64-apple-darwin-10/bin/oclint-json-compilation-database'
   binary 'oclint-0.7-x86_64-apple-darwin-10/bin/oclint-xcodebuild'
   binary 'oclint-0.7-x86_64-apple-darwin-10/lib/oclint', :target => '/usr/local/lib/oclint'
+  caveats do
+    files_in_usr_local
+  end
 end

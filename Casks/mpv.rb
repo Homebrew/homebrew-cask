@@ -5,4 +5,7 @@ class Mpv < Cask
   sha1 '970f2e786f670b73f46e4068ba9f87b755e4150f'
   link 'mpv.app'
   binary 'mpv.app/Contents/MacOS/mpv'
+  caveats do
+    files_in_usr_local
+  end
 end

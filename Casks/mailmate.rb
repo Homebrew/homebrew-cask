@@ -5,4 +5,7 @@ class Mailmate < Cask
   no_checksum
   link 'MailMate.app'
   binary 'MailMate.app/Contents/Resources/emate'
+  caveats do
+    files_in_usr_local
+  end
 end
