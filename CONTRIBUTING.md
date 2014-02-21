@@ -602,6 +602,6 @@ Neat and tidy!
 ## Working On homebrew-cask Itself
 
 If you'd like to hack on the Ruby code in the project itself, please
-see [HACKING.md](HACKING.md).
+see [doc/HACKING.md](doc/HACKING.md).
 
 # <3 THANK YOU! <3

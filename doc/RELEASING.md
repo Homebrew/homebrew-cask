@@ -66,14 +66,14 @@ down than floating in a brain somewhere.
 	$ ./developer/bin/generate_changelog     >> /var/tmp/draft_release_changelog.md
 	```
 
-8. Edit the draft changelog, following the patterns used in `CHANGELOG.md`.
+8. Edit the draft changelog, following the patterns used in `doc/CHANGELOG.md`.
    When complete, insert the new release changelog near the beginning, just
-   after the first line in `CHANGELOG.md`.
-9. Make a commit on `master` with the modifications to `CHANGELOG.md` and
+   after the first line in `doc/CHANGELOG.md`.
+9. Make a commit on `master` with the modifications to `doc/CHANGELOG.md` and
    `lib/cask/version.rb`:
 
 	```bash
-	$ git add CHANGELOG.md lib/cask/version.rb
+	$ git add doc/CHANGELOG.md lib/cask/version.rb
 	$ git commit -m "cut $NEW_RELEASE_TAG"
 	```
 
@@ -100,7 +100,7 @@ down than floating in a brain somewhere.
 13. Open your browser to <https://github.com/phinze/homebrew-cask/releases> .
     Click the link for your newly-pushed tag. Click the "Edit Tag" button in
     the top right corner of that page.
-14. Paste the markdown summary from `CHANGELOG.md` into the textarea on that
+14. Paste the markdown summary from `doc/CHANGELOG.md` into the textarea on that
     page.  The `## <version number>` heading line from the changelog should
     not be included.  The `Release title` field on the GitHub web form may
     be left blank.
