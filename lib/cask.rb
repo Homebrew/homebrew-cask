@@ -56,9 +56,6 @@ class Cask
         system '/usr/bin/sudo', '--', '/usr/sbin/chown', '-R', '--', "#{current_user}:staff", caskroom.parent
       end
     end
-    appdir.mkpath unless appdir.exist?
-    qlplugindir.mkpath unless qlplugindir.exist?
-    screen_saverdir.mkpath unless screen_saverdir.exist?
   end
 
   def self.load(query)

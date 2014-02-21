@@ -14,14 +14,6 @@ describe Cask::CLI do
   end
 
   describe "process" do
-    it "creates the appdir if it does not exist" do
-      Cask.appdir.rmdir
-      shutup {
-          Cask::CLI.process('doctor')
-      }
-      Cask.appdir.directory?.must_equal true
-    end
-
     it "respects the env variable when choosing what appdir to create, not touching the default appdir" do
       default_applications_dir = Cask.appdir
       default_applications_dir.rmdir
@@ -34,7 +26,7 @@ describe Cask::CLI do
       begin
         ENV['HOMEBREW_CASK_OPTS'] = "--appdir=#{custom_applications_dir}"
         shutup {
-          Cask::CLI.process('doctor')
+          Cask::CLI.process(['install', 'local-caffeine'])
         }
       ensure
         ENV.delete 'HOMEBREW_CASK_OPTS'
@@ -42,36 +34,6 @@ describe Cask::CLI do
 
       default_applications_dir.directory?.must_equal false
       custom_applications_dir.directory?.must_equal true
-    end
-
-    it "creates the qlplugindir if it does not exist" do
-      Cask.qlplugindir.rmdir
-      shutup {
-        Cask::CLI.process('doctor')
-      }
-      Cask.qlplugindir.directory?.must_equal true
-    end
-
-    it "respects the env variable when choosing what qlplugindir to create, not touching the default qlplugindir" do
-      default_qlplugin_dir = Cask.qlplugindir
-      default_qlplugin_dir.rmdir
-      custom_qlplugin_dir = Pathname(Dir.mktmpdir('custom_qlplugin_dir'))
-      custom_qlplugin_dir.rmdir
-
-      default_qlplugin_dir.directory?.must_equal false
-      custom_qlplugin_dir.directory?.must_equal false
-
-      begin
-        ENV['HOMEBREW_CASK_OPTS'] = "--qlplugindir=#{custom_qlplugin_dir}"
-        shutup {
-          Cask::CLI.process('doctor')
-        }
-      ensure
-        ENV.delete 'HOMEBREW_CASK_OPTS'
-      end
-
-      default_qlplugin_dir.directory?.must_equal false
-      custom_qlplugin_dir.directory?.must_equal true
     end
 
     it "respects the ENV variable when choosing a non-default Caskroom location" do
