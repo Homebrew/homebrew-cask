@@ -28,5 +28,9 @@ module Cask::Scopes
         Cask.load(dir.basename.to_s)
       end
     end
+
+    def upgradable
+      Cask.installed.select(&:update_available?)
+    end
   end
 end
