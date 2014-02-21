@@ -5,4 +5,7 @@ class SublimeText < Cask
   sha1 '14fba173566d4415f1881a38ad98cf22144f1f63'
   link 'Sublime Text 2.app'
   binary 'Sublime Text 2.app/Contents/SharedSupport/bin/subl'
+  caveats do
+    files_in_usr_local
+  end
 end

@@ -9,4 +9,7 @@ class Undercover < Cask
     '/Library/LaunchAgents/com.orbicule.UCAgent.plist',
     '/usr/local/uc'
   ]
+  caveats do
+    files_in_usr_local
+  end
 end

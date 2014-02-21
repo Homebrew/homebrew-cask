@@ -5,4 +5,7 @@ class Authbuddy < Cask
   no_checksum
   install 'DssW authbuddy.pkg'
   uninstall :files => Array['/usr/local/bin/authbuddy']
+  caveats do
+    files_in_usr_local
+  end
 end
