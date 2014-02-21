@@ -502,6 +502,16 @@ out open issues.
 All Casks and code in the homebrew-cask project should be indented using two
 spaces (never tabs).
 
+## Finding a Home For Your Cask
+
+The organization `caskroom` maintains other repositories that are to be used for certain types of Casks. Here's a quick checklist of them so that you can find the right one to house your Cask:
+
+1. Does your Cask install an unstable, development, or legacy version of a Cask? Please place it in [caskroom/homebrew-versions](http://github.com/caskroom/homebrew-versions). Only the latest stable version (regardless of OS compatibility) should belong here, **unless no stable versions for the app exist yet, in which case beta or development versions are welcomed.**
+2. Does your Cask install a font that is readily available as an installable font file (e.g. TTF, OTF…)? Please place it in [caskroom/homebrew-fonts](http://github.com/caskroom/homebrew-fonts). Also, be careful with licensing on font files before submission.
+3. Does your Cask install an app that has no official app bundle download (in other words, any DMG/ZIP/TGZ/etc. downloads available are not those officially endorsed by the developer)? Please place it in [caskroom/homebrew-unofficial](http://github.com/caskroom/homebrew-unofficial).
+
+If your Cask makes it past these three points, it is likely that your submission will be accepted. Please remember that there are always exceptions to these guidelines, so don't be afraid to ask where something goes if it falls into a gray area.
+
 ## Submitting Your Changes
 
 Hop into your Tap and check to make sure your new Cask is there:
