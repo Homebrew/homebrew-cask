@@ -1,7 +1,7 @@
 class Omnioutliner < Cask
-  url 'http://www.omnigroup.com/download/latest/omnioutliner'
+  url 'http://downloads2.omnigroup.com/software/MacOSX/10.9/OmniOutliner-4.0.1.dmg'
   homepage 'http://www.omnigroup.com/omnioutliner/'
-  version 'latest'
-  no_checksum
+  version '4.0.1'
+  sha1 '5fefad1d26c12a2bf1842577d66a30884e905baa'
   link 'OmniOutliner.app'
 end
