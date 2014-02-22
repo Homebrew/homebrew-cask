@@ -3,5 +3,5 @@ class LogmeinIgnitionBeta < Cask
   homepage 'https://secure.logmein.com/LABS/#IgnitionforMac'
   version 'latest'
   no_checksum
-  link 'LogMeIn Ignition.app'
+  link 'LogMeInIgnition.app'
 end
