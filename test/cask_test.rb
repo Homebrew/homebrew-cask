@@ -15,7 +15,7 @@ describe "Cask" do
         Object.class_eval{remove_const :Dia}
       rescue
       end
-      location = File.expand_path('./Casks/dia.rb')
+      location = File.expand_path('../Casks/dia.rb')
       c = Cask.load(location)
       c.must_be_kind_of(Cask)
       c.must_be_instance_of(Dia)
@@ -27,7 +27,7 @@ describe "Cask" do
         Object.class_eval{remove_const :Dia}
       rescue
       end
-      url = "file://" + File.expand_path('./Casks/dia.rb')
+      url = "file://" + File.expand_path('../Casks/dia.rb')
       c = shutup do
         Cask.load(url)
       end
@@ -38,7 +38,7 @@ describe "Cask" do
 
     it "raises an error when failing to download a cask from a url" do
       lambda {
-        url = "file://" + File.expand_path('./Casks/notacask.rb')
+        url = "file://" + File.expand_path('../Casks/notacask.rb')
         shutup do
           Cask.load(url)
         end
@@ -50,7 +50,7 @@ describe "Cask" do
         Object.class_eval{remove_const :Bbedit}
       rescue
       end
-      c = Cask.load("./Casks/bbedit.rb")
+      c = Cask.load("../Casks/bbedit.rb")
       c.must_be_kind_of(Cask)
       c.must_be_instance_of(Bbedit)
       Object.class_eval{remove_const :Bbedit}
