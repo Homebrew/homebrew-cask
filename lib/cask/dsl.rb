@@ -10,6 +10,8 @@ module Cask::DSL
 
   def url; self.class.url; end
 
+  def appcast; self.class.appcast; end
+
   def version; self.class.version; end
 
   def depends_on_formula; self.class.depends_on_formula; end
@@ -34,6 +36,15 @@ module Cask::DSL
       end
       @url ||= begin
         Cask::URL.new(*args) unless args.empty?
+      end
+    end
+
+    def appcast(*args)
+      if @appcast and !args.empty?
+        raise CaskInvalidError.new(self.title, "'appcast' stanza may only appear once")
+      end
+      @appcast ||= begin
+        Cask::UnderscoreSupportingURI.parse(*args) unless args.empty?
       end
     end
 
