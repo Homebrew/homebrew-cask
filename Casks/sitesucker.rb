@@ -3,5 +3,5 @@ class Sitesucker < Cask
   homepage 'http://www.sitesucker.us/mac/mac.html'
   version 'latest'
   no_checksum
-  link 'SiteSucker.app'
+  link 'SiteSucker/SiteSucker.app'
 end
