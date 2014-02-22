@@ -47,7 +47,7 @@ class Cask
     unless caskroom.exist?
       ohai "We need to make Caskroom for the first time at #{caskroom}"
       ohai "We'll set permissions properly so we won't need sudo in the future"
-      current_user = ENV['USER']
+      current_user = Etc.getpwuid(Process.euid).name
       if caskroom.parent.writable?
         system '/bin/mkdir', caskroom
       else
