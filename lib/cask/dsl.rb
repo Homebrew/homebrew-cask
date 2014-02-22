@@ -115,14 +115,6 @@ module Cask::DSL
       hash_type.to_s == 'sha2' ? 'sha256' : hash_type.to_s
     end
 
-    def md5(md5=nil)
-      if @sums == 0
-        raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'md5'")
-      end
-      @sums ||= []
-      @sums << Checksum.new(:md5, md5) unless md5.nil?
-    end
-
     def sha1(sha1=nil)
       if @sums == 0
         raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'sha1'")
