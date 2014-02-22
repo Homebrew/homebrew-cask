@@ -1,6 +1,9 @@
 require 'bundler'
 require 'bundler/setup'
 
+# force some environment variables
+ENV['HOMEBREW_NO_EMOJI']='1'
+
 # set some Homebrew constants used in our code
 HOMEBREW_TAP_FORMULA_REGEX = %r{^(\w+)/(\w+)/([^/]+)$}
 HOMEBREW_BREW_FILE = '/usr/local/bin/brew'

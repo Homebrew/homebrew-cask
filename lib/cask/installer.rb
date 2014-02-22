@@ -40,9 +40,17 @@ class Cask::Installer
       raise
     end
 
-    ohai "Success! #{@cask} installed to #{@cask.destination_path}"
+    puts summary
   end
 
+  def summary
+    s = if MacOS.version >= :lion and not ENV['HOMEBREW_NO_EMOJI']
+      (ENV['HOMEBREW_INSTALL_BADGE'] || "\xf0\x9f\x8d\xba") + '  '
+    else
+      "#{Tty.blue}==>#{Tty.white} Success!#{Tty.reset} "
+    end
+    s << "#{@cask} installed to '#{@cask.destination_path}' (#{@cask.destination_path.cabv})"
+  end
 
   def download
     odebug "Downloading"
