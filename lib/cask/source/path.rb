@@ -18,4 +18,3 @@ class Cask::Source::Path
     path.basename.to_s.sub(/\.rb/, '').split('-').map(&:capitalize).join
   end
 end
-

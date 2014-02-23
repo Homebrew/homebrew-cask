@@ -33,4 +33,3 @@ module Cask::CLI::Create
     "creates a cask of the given name and opens it in an editor"
   end
 end
-

@@ -6,4 +6,3 @@ class LocalCaffeine < TestCask
 
   link 'Caffeine.app'
 end
-

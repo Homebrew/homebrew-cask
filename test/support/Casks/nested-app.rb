@@ -6,4 +6,3 @@ class NestedApp < TestCask
   nested_container 'NestedApp.dmg'
   link 'MyNestedApp.app'
 end
-

@@ -5,4 +5,3 @@ class Openoffice < Cask
   sha1 '6aed6c0a7fb6226ecbd4b6a2b371dc713ac58cd8'
   link 'OpenOffice.app'
 end
-

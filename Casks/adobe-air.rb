@@ -4,7 +4,7 @@ class AdobeAir < Cask
   version '4.0'
   sha1 'f319c2c603ff39e596c1c78c257980cf4fb0d0ef'
   caskroom_only true
-  
+
   after_install do
     system "sudo #{destination_path}/Adobe\\ AIR\\ Installer.app/Contents/MacOS/Adobe\\ AIR\\ Installer -silent"
   end

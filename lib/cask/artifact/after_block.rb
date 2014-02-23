@@ -12,4 +12,3 @@ class Cask::Artifact::AfterBlock < Cask::Artifact::Base
     @cask.artifacts[:after_uninstall].each { |block| @cask.instance_eval &block }
   end
 end
-

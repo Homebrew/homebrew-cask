@@ -12,4 +12,3 @@ class Cask::Container::Tar < Cask::Container::Base
     end
   end
 end
-

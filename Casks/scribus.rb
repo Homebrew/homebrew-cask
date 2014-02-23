@@ -4,4 +4,4 @@ class Scribus < Cask
   version '1.4.3'
   sha1 '380dbd4ba8ed3e9d617a066ff73cc7bc04c3edb3'
   link 'Scribus.app'
-end 
+end
