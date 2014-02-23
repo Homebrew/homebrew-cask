@@ -32,7 +32,7 @@ class Cask::Audit
 
   def _check_checksums
     odebug "Auditing checksums"
-    return if cask.sums == 0
+    return if cask.sums == :no_check
     add_error "could not find checksum or no_checksum" unless cask.sums.is_a?(Array) && cask.sums.length > 0
   end
 

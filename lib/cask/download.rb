@@ -20,7 +20,7 @@ class Cask::Download
                    HOMEBREW_CACHE_CASKS.join(downloaded_path.basename)
     rescue
     end
-    _check_sums(downloaded_path, cask.sums) unless cask.sums === 0
+    _check_sums(downloaded_path, cask.sums) unless cask.sums === :no_check
     downloaded_path
   end
 
