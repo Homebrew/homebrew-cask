@@ -1,5 +1,5 @@
 class Cask::FakeFetcher
-  def self.fake_response_for(url, response) 
+  def self.fake_response_for(url, response)
     @responses[url] = response
   end
 

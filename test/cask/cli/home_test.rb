@@ -45,4 +45,3 @@ describe Cask::CLI::Home do
     ]
   end
 end
-

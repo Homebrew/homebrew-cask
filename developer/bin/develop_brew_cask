@@ -109,7 +109,7 @@ if [[ $1 =~ ^-+h(elp)?$ ]]; then
     printf "develop_brew_cask
 
 Symlink private repo directories into Homebrew's Cellar, so
-that the 'brew cask' command will use code and Casks from 
+that the 'brew cask' command will use code and Casks from
 the current development branch in your private repo.
 
 Saves the production Homebrew directories under new names.

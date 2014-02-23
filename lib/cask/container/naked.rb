@@ -15,4 +15,3 @@ class Cask::Container::Naked < Cask::Container::Base
     URI.decode(File.basename(@cask.url.path))
   end
 end
-

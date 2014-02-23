@@ -56,14 +56,14 @@ describe Cask::Artifact::App do
     # @@@ todo
     # it "only uses linkables when they are specified" do
     #   cask = local_two_links_caffeine
-    # 
+    #
     #   app_path = cask.destination_path.join('Caffeine.app')
     #   FileUtils.cp_r app_path, app_path.sub('Caffeine.app', 'CaffeineAgain.app')
-    #   
+    #
     #   shutup do
     #     Cask::Artifact::App.new(cask).install
     #   end
-    # 
+    #
     #   TestHelper.valid_alias?(Cask.appdir/'AnotherName.app').must_equal true
     #   TestHelper.valid_alias?(Cask.appdir/'AnotherNameAgain.app').must_equal false
     # end
@@ -97,7 +97,7 @@ describe Cask::Artifact::App do
 
       (Cask.appdir/'AnotherName.app').wont_be :symlink?
     end
-    
+
     it "happily clobbers an existing symlink (link 1)" do
       cask = local_two_links_caffeine
 
