@@ -2,6 +2,6 @@ class Kobito < Cask
   url 'http://kobito.qiita.com/download/Kobito_v1.8.7.zip'
   homepage 'http://kobito.qiita.com/'
   version '1.8.7'
-  sha1 'd55cec2a5cf32d4ec6176fe6aa77f7be97e1536e'
+  sha256 '33e05d9eb6fa24d6bc03073aa0f80c3dd5dc6f07c2f28729aae2327b9a4de41e'
   link 'Kobito.app'
 end

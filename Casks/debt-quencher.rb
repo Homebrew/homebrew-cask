@@ -2,6 +2,6 @@ class DebtQuencher < Cask
   url 'http://downloads.nothirst.com/DebtQuencher_1.2.zip'
   homepage 'http://nothirst.com/debtquencher/'
   version '1.2.2'
-  sha1 'e6ba452009f668500413fe597d03de61e5fa16f8'
+  sha256 '2083fdb28d3138998a0d6b4b5c4405a18a2e8dd7b71554786386623313c166ad'
   link 'Debt Quencher.app'
 end

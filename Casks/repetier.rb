@@ -2,6 +2,6 @@ class Repetier < Cask
   url 'http://www.repetier.com/?wpdmact=process&did=MzYuaG90bGluaw=='
   homepage 'http://www.repetier.com/'
   version '0.56'
-  sha1 '1aa659c363028b333110de51988c5d74364d92f5'
+  sha256 '0d4b43ec7bec5ac85133d00e1a2cf61956ef90abc255c253029e0ef26160adfa'
   link 'Repetier-Host Mac.app'
 end

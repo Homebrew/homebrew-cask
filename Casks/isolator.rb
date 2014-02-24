@@ -2,6 +2,6 @@ class Isolator < Cask
   url 'http://willmore.eu/software/download/Isolator-4.9beta.dmg'
   homepage 'http://willmore.eu/software/isolator'
   version '4.9beta'
-  sha1 '649327e1249769e11c2fd65ef033884c75225137'
+  sha256 '0f77f1165223196af77df9565f0573bce4d42ac6c327c73bb01c6eaa74081d6c'
   link 'Isolator.app'
 end

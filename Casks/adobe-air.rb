@@ -2,7 +2,7 @@ class AdobeAir < Cask
   url 'http://airdownload.adobe.com/air/mac/download/4.0/AdobeAIR.dmg'
   homepage 'https://get.adobe.com/air/'
   version '4.0'
-  sha1 'f319c2c603ff39e596c1c78c257980cf4fb0d0ef'
+  sha256 '7be7fa0b6cd59ca3a85805e519135f738373719017c040ce7021b916427144a0'
   caskroom_only true
 
   after_install do

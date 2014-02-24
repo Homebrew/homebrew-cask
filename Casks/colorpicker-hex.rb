@@ -2,6 +2,6 @@ class ColorpickerHex < Cask
   url 'http://wafflesoftware.net/hexpicker/download/HexColorPicker-1.6.1.zip'
   homepage 'http://wafflesoftware.net/hexpicker/'
   version '1.6.1'
-  sha1 'e2157d5c34aab8553cc6328efb61cad6881e8e6e'
+  sha256 'c35b00fbe1f6b0efcc4520a45deae15809729f3fec3dff8f4027789d26284089'
   colorpicker 'Hex Color Picker/HexColorPicker.colorPicker'
 end

@@ -2,7 +2,7 @@ class Quotefixformac < Cask
   url 'https://github.com/robertklep/quotefixformac/releases/download/v2.5.2/QuoteFix-v2.5.2.zip'
   homepage 'https://github.com/robertklep/quotefixformac'
   version '2.5.2'
-  sha1 '8937c576de13e4d33e64a06ffea18993e8e900cd'
+  sha256 '8d914ae553b84fe5f246ab1eb030d25792ca8d626b3bbac57acee857135e85a9'
   caveats do
     <<-EOS.undent
     Follow these instructions to enable mail plugins and link QuoteFix:

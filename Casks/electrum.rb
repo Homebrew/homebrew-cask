@@ -2,6 +2,6 @@ class Electrum < Cask
   url 'https://download.electrum.org/electrum-1.9.7.dmg'
   homepage 'http://electrum.org/'
   version '1.9.7'
-  sha1 '8fc49bc400892c876e78858a8f8ee7bbd14645cf'
+  sha256 '402cc4b94becd201d364e33f3f10695097566ce0235c7910d21ced199cfc5f1e'
   link 'Electrum.app'
 end

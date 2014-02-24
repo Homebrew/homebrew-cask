@@ -6,7 +6,7 @@ class Java < Cask
     's_sq' => '%5B%5BB%5D%5D' }
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html'
   version '1.7.0_51'
-  sha1 'd53f71dfb7f24b6c0fc470a17fa0cac3ee304194'
+  sha256 '1312b0553bd37a232114637f05b036a6fd5d444e653adef7230ba141328f7734'
   install 'JDK 7 Update 51.pkg'
   after_install do
     system "sudo /usr/libexec/PlistBuddy -c \"Add :JavaVM:JVMCapabilities: string BundledApp\" /Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Info.plist"

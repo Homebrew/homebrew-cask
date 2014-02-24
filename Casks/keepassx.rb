@@ -2,6 +2,6 @@ class Keepassx < Cask
   url 'http://downloads.sourceforge.net/keepassx/KeePassX-0.4.3.dmg'
   homepage 'http://www.keepassx.org'
   version '0.4.3'
-  sha1 '40f61b33f559f1de61e698b9f46b65c985a98955'
+  sha256 '15ce2e950ab78ccb6956de985c1fcbf11d27df6a58ab7bf19e106f0a1dc2fedd'
   link 'KeePassX.app'
 end

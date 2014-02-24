@@ -2,6 +2,6 @@ class Dvdstyler < Cask
   url 'http://downloads.sourceforge.net/sourceforge/dvdstyler/DVDStyler-2.6-MacOSX.zip'
   homepage 'http://dvdstyler.org'
   version '2.6'
-  sha1 '0c66115ef5ef52d24e781693e9b2e6ccf501c74e'
+  sha256 'fbb26aeb2ee50890b4a192d06d16ddc8a98a8465aa4eeff75d16fdc4de375ed6'
   link 'DVDStyler.app'
 end

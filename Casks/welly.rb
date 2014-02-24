@@ -2,6 +2,6 @@ class Welly < Cask
   url 'http://welly.googlecode.com/files/Welly.v2.7.fix.zip'
   homepage 'https://code.google.com/p/welly/'
   version '2.7+'
-  sha1 '9e391615f8f67e8d1048c47a3df19e03dd8126ed'
+  sha256 'cb24a26432d8927b1159a1865602c3f30b5190f628167c954e4d6cc723cfcb0f'
   link 'Welly.app'
 end

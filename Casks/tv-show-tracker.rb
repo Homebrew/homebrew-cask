@@ -2,7 +2,7 @@ class TvShowTracker < Cask
   url 'http://www.pixelperfectwidgets.com/tvshowtracker/download/tvshowtracker_1.3.3.zip'
   homepage 'http://www.pixelperfectwidgets.com/'
   version '1.3.3'
-  sha1 '81e613d6525c49196625271dd76090866c1b2ddd'
+  sha256 '7e489d50083acc217a7587d800d3f708f0ba586397656cce529e8f40a8a612f9'
   widget 'TV Show Tracker.wdgt'
   caveats do
     puts <<-EOS.undent
