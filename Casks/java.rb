@@ -26,6 +26,13 @@ class Java < Cask
     reboot or logout/login.
 
     The JRE packaging bug is discussed here:
-    https://bugs.eclipse.org/bugs/show_bug.cgi?id=411361
+
+        https://bugs.eclipse.org/bugs/show_bug.cgi?id=411361
+
+    Installing this Cask means you have AGREED to the Oracle Binary Code License
+    Agreement for Java SE at
+
+        http://www.oracle.com/technetwork/java/javase/terms/license/index.html
+
     EOS
 end
