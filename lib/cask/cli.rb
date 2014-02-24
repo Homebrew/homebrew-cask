@@ -14,8 +14,10 @@ require 'cask/cli/home'
 require 'cask/cli/info'
 require 'cask/cli/install'
 require 'cask/cli/list'
+require 'cask/cli/outdated'
 require 'cask/cli/search'
 require 'cask/cli/uninstall'
+require 'cask/cli/upgrade'
 
 class Cask::CLI
   def self.commands
