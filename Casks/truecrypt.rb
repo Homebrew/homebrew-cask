@@ -4,4 +4,7 @@ class Truecrypt < Cask
   version '7.1a'
   sha256 '04db58b737c05bb6b0b83f1cb37a29edec844b59ff223b9e213ee1f4e287f586'
   install 'TrueCrypt 7.1a.mpkg'
+  caveats do
+    files_in_usr_local
+  end
 end
