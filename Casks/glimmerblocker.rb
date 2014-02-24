@@ -2,7 +2,7 @@ class Glimmerblocker < Cask
   url 'http://glimmerblocker.org/downloads/GlimmerBlocker-1.5.3.dmg'
   homepage 'http://glimmerblocker.org'
   version '1.5.3'
-  sha1 '04c51e09db1e1a2f2364855d77301831dcd427ad'
+  sha256 '872f3edc5f6dc3b92ba17eaf00236308e561bf353ffb1579cc5d7afc27bbf0a5'
   install 'GlimmerBlocker.pkg'
   uninstall :pkgutil => 'org.glimmerblocker.pkg'
 end

@@ -2,6 +2,6 @@ class Igetter < Cask
   url 'http://www.igetter.net/search/downloads/iGetter2.9.2.dmg'
   homepage 'http://www.igetter.net/'
   version '2.9.2'
-  sha1 'b40aecb56a8645dd1cd84973c9974b4e3d0eefcc'
+  sha256 '86fd84cbd16ad975e586498cad89a7784087a62e11ba969000a1d48a0b634461'
   link 'iGetter 2.9.2/iGetter.app'
 end

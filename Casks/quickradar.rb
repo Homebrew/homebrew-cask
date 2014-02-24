@@ -2,6 +2,6 @@ class Quickradar < Cask
   url 'http://www.quickradar.com/0.8.zip'
   homepage 'http://www.quickradar.com/'
   version '0.8'
-  sha1 '55053143bedf9d75ae3fc15f67184fb179503ea9'
+  sha256 'fbe74ffe8f1615a6af64868b697321fe68b505d4f2e3eba7d5e3cf4cab082a1c'
   link 'QuickRadar.app'
 end

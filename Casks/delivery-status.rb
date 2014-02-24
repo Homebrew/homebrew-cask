@@ -2,7 +2,7 @@ class DeliveryStatus < Cask
   url 'http://junecloud.com/get/delivery-status-widget?6.0'
   homepage 'http://junecloud.com/software/mac/delivery-status.html'
   version '6.0'
-  sha1 '420a90389edd7dd59847ac0cc5a75f79baa55592'
+  sha256 'a885c5802492cb92c994c23111ab1edcf4792b319c30cc9ca4296436f3b8cbaa'
   widget 'Delivery Status.wdgt'
   caveats do
     puts <<-EOS.undent

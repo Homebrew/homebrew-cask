@@ -2,6 +2,6 @@ class Sloth < Cask
   url 'http://sveinbjorn.org/files/software/sloth.zip'
   homepage 'http://sveinbjorn.org/sloth'
   version '1.5'
-  sha1 'd11213dc1ad49556539f2f5173c7b6cd8feafad3'
+  sha256 '01f8f9fec88d5bc0cb0edcf7391d5ed0ac085f7fa8dcb6682059a238d7786165'
   link 'Sloth-1.5/Sloth.app'
 end

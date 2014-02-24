@@ -2,6 +2,6 @@ class Todoist < Cask
   url 'https://d3ptyyxy2at9ui.cloudfront.net/Todoist_v3_1.zip'
   homepage 'https://todoist.com'
   version '3.1'
-  sha1 '3ab77f4b71bdac7284bbf3cf74ae4fec790352f9'
+  sha256 '0fbcc541e8ab310188436056bda88de904a274a1e4204fc4f41ee953516ac729'
   link 'Todoist.app'
 end

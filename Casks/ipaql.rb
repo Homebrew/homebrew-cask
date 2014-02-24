@@ -2,6 +2,6 @@ class Ipaql < Cask
   url 'http://ipaql.com/site/assets/files/1006/ipaql_1-3-0.zip'
   homepage 'http://ipaql.com/'
   version '1.3.0'
-  sha1 'a870da34839b42945cf2334c7a27c2574d41ffcd'
+  sha256 'bcff849e15b351c224fbd65888c1e5901f335ed034758eb673de1ce454000b18'
   qlplugin 'ipaql.qlgenerator'
 end

@@ -2,6 +2,6 @@ class Skreenics < Cask
   url 'https://skreenics.googlecode.com/files/Screeniks-1.0.1.zip'
   homepage 'https://code.google.com/p/skreenics/'
   version '1.0.1'
-  sha1 'edd789fcf8ded94f6d69cc4c346e286943ad8b26'
+  sha256 'c4edd3cb8d066c5b5ce8ab78fe476776d04ad5b8e28eb7128bb183903f7dd8b9'
   link 'Skreenics.app'
 end

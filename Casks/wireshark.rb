@@ -2,7 +2,7 @@ class Wireshark < Cask
   url 'https://2.na.dl.wireshark.org/osx/Wireshark%201.10.5%20Intel%2064.dmg'
   homepage 'http://www.wireshark.org'
   version '1.10.5'
-  sha1 '59c496f52437ce0d2b836abbf546191f50345c8e'
+  sha256 '301ac9f98d09726f8b06bf0a2054dabfaf06040274acc1640e52bdb04db92881'
   install 'Wireshark 1.10.5 Intel 64.pkg'
 
   after_install do

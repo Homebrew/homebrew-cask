@@ -2,7 +2,7 @@ class Ksdiff < Cask
   url 'http://cdn.kaleidoscopeapp.com/releases/ksdiff-111.zip'
   homepage 'http://www.kaleidoscopeapp.com/ksdiff2'
   version '2.0.1 (111)'
-  sha1 '95a6c89123e76b060657d29a90fa8016e68062d1'
+  sha256 '59f1f090135148a0ab6f04df503a5bb229c3ecd0ea5c96da19a1bf6bb1a4c930'
   install 'Install ksdiff.pkg'
   uninstall :pkgutil => 'com.blackpixel.kaleidoscope.ksdiff.installer.pkg'
   # todo: conflicts_with_cask kaleidoscope

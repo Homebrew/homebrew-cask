@@ -2,7 +2,7 @@ class Prepros < Cask
   url 'http://download.alphapixels.com/Prepros-4.0.1.zip'
   homepage 'http://alphapixels.com/prepros/'
   version '4.0.1'
-  sha1 '5263a600ead4711acdacb05b0da952d36197d8a2'
+  sha256 '84510d1252274898b0fc4f95828b60e29a2c946a158bbf7d3188611c62dcd3b1'
   link 'Prepros.app'
   after_install do
     # re: https://github.com/phinze/homebrew-cask/issues/2859,

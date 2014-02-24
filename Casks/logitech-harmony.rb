@@ -2,7 +2,7 @@ class LogitechHarmony < Cask
   url 'http://logitech-sjca.navisite.net/web/ftp/pub/techsupport/harmony/LogitechHarmonyRemoteSoftware7.8.1-OSX.dmg'
   homepage 'http://www.logitech.com/en-us/support/universal-remotes'
   version '7.8.1'
-  sha1 '915c735154df58213f77a9196bfdeac6f95c76aa'
+  sha256 '13a100211fb18569563c9d9bbe6c231cbfaa50989df0b471703ec942be2ecafb'
   install 'LogitechRemoteSoftware.pkg'
   uninstall :quit => 'com.logitech.harmony.cappuccino.client.logitech',
             :kext => [

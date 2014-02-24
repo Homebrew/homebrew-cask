@@ -3,5 +3,5 @@ class AptanaStudio < Cask
   homepage 'http://www.aptana.com/'
   link 'Aptana Studio 3/AptanaStudio3.app'
   version '3.4.2'
-  sha1 '2c73735ada5a5cf81c149787ec1b3665b1813917'
+  sha256 '26d40abf9152f16d8190a1968f16c0158a4992d28333351db6fa455af68958f4'
 end
