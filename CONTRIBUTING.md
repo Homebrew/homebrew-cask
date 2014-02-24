@@ -77,21 +77,21 @@ end
 
 Fill in the following stanzas for your Cask:
 
-| field              | value       |
+| name               | value       |
 | ------------------ | ----------- |
 | __cask metadata__  | information about the Cask (required)
-| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](doc/THE_CASK_LANGUAGE.md#url-stanza-details))
+| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
 | `homepage`         | application homepage; used for the `brew cask home` command
 | `version`          | application version; give value of `'latest'` if versioned downloads are not offered
-| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be omitted on unversioned downloads with `no_checksum`. (see also [Checksum Stanza Details](doc/THE_CASK_LANGUAGE.md#checksum-stanza-details))
+| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be omitted on unversioned downloads by substituting `no_checksum`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
 | __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
-| `link`             | relative path to a file that should be linked into the `Applications` folder on installation (see also [Link Stanza Details](doc/THE_CASK_LANGUAGE.md#link-stanza-details))
-| `install`          | relative path to `pkg` that should be run to install the application (see also [Install Stanza Details](doc/THE_CASK_LANGUAGE.md#install-stanza-details))
-| `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see also [Uninstall Stanza Details](doc/THE_CASK_LANGUAGE.md#uninstall-stanza-details))
+| `link`             | relative path to a file that should be linked into the `Applications` folder on installation (see also [Link Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#link-stanza-details))
+| `install`          | relative path to `pkg` that should be run to install the application (see also [Install Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#install-stanza-details))
+| `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see also [Uninstall Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details))
 
 Additional stanzas you might need for special use-cases:
 
-| field              | value       |
+| name               | value       |
 | ------------------ | ----------- |
 | `prefpane`         | relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
 | `colorpicker`      | relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
@@ -103,10 +103,9 @@ Additional stanzas you might need for special use-cases:
 | `input_method`     | relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
 | `screen_saver`     | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
 | `nested_container` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
-| `depends_on_formula` | a list of Homebrew Formulae upon which this Cask depends
-| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Details](doc/THE_CASK_LANGUAGE.md#caveats-details))
-| `after_install`    | a Ruby block containing postflight install operations
-| `after_uninstall`  | a Ruby block containing postflight uninstall operations
+| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Details](doc/CASK_LANGUAGE_REFERENCE.md#caveats-details))
+
+Additional special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#optional-stanzas) and [Legacy Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#legacy-stanzas).
 
 
 ### SourceForge URLs
