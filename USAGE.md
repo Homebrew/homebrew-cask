@@ -82,6 +82,14 @@ The following commands are for Cask authors:
 * `edit` -- edits the given Cask
 * `checklinks` -- checks for bad Cask links
 
+The following aliases and abbreviations are provided for convenience:
+
+* `ls` -- `list`
+* `-S` -- `search`
+* `rm`, `remove` -- `uninstall`
+* `up` -- `update`
+* `dr` -- `doctor`
+
 ## Inspecting Installed Casks
 
 List all installed Casks
