@@ -8,7 +8,8 @@ class GitAnnex < Cask
   version 'latest'
   no_checksum
   link 'git-annex.app'
+  binary 'git-annex.app/Contents/MacOS/git-annex'
   caveats do
-    path_environment_variable "#{destination_path}/git-annex.app/Contents/MacOS"
+    files_in_usr_local
   end
 end
