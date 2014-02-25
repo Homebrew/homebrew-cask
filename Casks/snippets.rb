@@ -1,4 +1,4 @@
-class SnippetsMe < Cask
+class Snippets < Cask
   url 'http://snippets.me/download/mac/Snippets-468.zip'
   homepage 'http://snippets.me/'
   version '0.8.2'
