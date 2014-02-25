@@ -116,26 +116,34 @@ module Cask::DSL
     end
 
     def sha1(sha1=nil)
-      if @sums == 0
+      if @sums == :no_check
         raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'sha1'")
       end
-      @sums ||= []
-      @sums << Checksum.new(:sha1, sha1) unless sha1.nil?
+      if sha1 == :no_check
+        @sums = sha1
+      else
+        @sums ||= []
+        @sums << Checksum.new(:sha1, sha1) unless sha1.nil?
+      end
     end
 
     def sha256(sha2=nil)
-      if @sums == 0
+      if @sums == :no_check
         raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'sha256'")
       end
-      @sums ||= []
-      @sums << Checksum.new(:sha2, sha2) unless sha2.nil?
+      if sha2 == :no_check
+        @sums = sha2
+      else
+        @sums ||= []
+        @sums << Checksum.new(:sha2, sha2) unless sha2.nil?
+      end
     end
 
     def no_checksum
       unless @sums.nil? or @sums.empty?
         raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with '#{hash_name(@sums.first.hash_type)}'")
       end
-      @sums = 0
+      @sums = :no_check
     end
 
     def method_missing(method, *args)
