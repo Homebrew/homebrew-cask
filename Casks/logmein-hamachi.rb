@@ -1,4 +1,4 @@
-class Hamachi < Cask
+class LogmeinHamachi < Cask
   url 'https://secure.logmein.com/LogMeInHamachi.zip'
   homepage 'http://vpn.net'
   version 'latest'
