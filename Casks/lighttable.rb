@@ -1,4 +1,4 @@
-class LightTable < Cask
+class Lighttable < Cask
   url 'http://d35ac8ww5dfjyg.cloudfront.net/playground/bins/0.6.4/LightTableMac.zip'
   homepage 'http://www.lighttable.com/'
   version '0.6.4'
