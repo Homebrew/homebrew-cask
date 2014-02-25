@@ -57,8 +57,8 @@ describe "Cask" do
     end
 
     it "uses exact match when loading by name" do
-      Cask.load('rest-client').must_be_instance_of(RestClient)
-      Cask.load('cocoarestclient').must_be_instance_of(Cocoarestclient)
+      Cask.load('test-opera').must_be_instance_of(TestOpera)
+      Cask.load('test-opera-mail').must_be_instance_of(TestOperaMail)
     end
 
     it "raises an error when attempting to load a cask that doesn't exist" do
