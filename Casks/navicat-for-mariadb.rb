@@ -1,4 +1,4 @@
-class NavicatMariadb < Cask
+class NavicatForMariadb < Cask
   url 'http://download.navicat.com/download/navicat110_mariadb_en.dmg'
   homepage 'http://www.navicat.com/products/navicat-for-mariadb'
   version '11.0.14'
