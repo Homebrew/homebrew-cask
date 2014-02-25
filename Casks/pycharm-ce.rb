@@ -1,4 +1,4 @@
-class PycharmCommunity < Cask
+class PycharmCe < Cask
   url 'http://download.jetbrains.com/python/pycharm-community-3.1.1.dmg'
   homepage 'http://www.jetbrains.com/pycharm'
   version '3.1.1'
