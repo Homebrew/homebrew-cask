@@ -5,6 +5,7 @@ describe Cask::CLI::Search do
     lambda {
       Cask::CLI::Search.run('intellij')
     }.must_output <<-OUTPUT.gsub(/^ */, '')
+      ==> Partial matches
       intellij-idea-community
       intellij-idea-ultimate
     OUTPUT
@@ -51,7 +52,14 @@ describe Cask::CLI::Search do
   it "accepts a regexp argument" do
     lambda {
       Cask::CLI::Search.run('/^google-c[a-z]rome$/')
-    }.must_output "google-chrome\n"
+    }.must_output "==> Regexp matches\ngoogle-chrome\n"
+  end
+
+  it "Returns both exact and partial matches" do
+    out, err = capture_io do
+      Cask::CLI::Search.run('gitx')
+    end
+    out.must_match(/^==> Exact match\ngitx\n==> Partial matches\ngitx/)
   end
 
   it "does not search the Tap name" do
