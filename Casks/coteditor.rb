@@ -1,10 +1,10 @@
 class Coteditor < Cask
   if MacOS.version < "10.7"
     url 'http://dl.sourceforge.jp/coteditor/54872/CotEditor_1.3.1.dmg'
-    sha1 '6f946bc6cdbb40036124b8cda4b283c25eac5077'
+    sha256 '5c871bd9de30fc3c76fc66acb4ea258d4d3762ae341181d65a7ef1f8de4751c5'
   else
     url 'http://dl.sourceforge.jp/coteditor/54872/CotEditor_1.3.1_For10.7.dmg'
-    sha1 'b169f2b90b7e9355679172d54842759e0239c6f7'
+    sha256 'b064830db8438682f620c0b14aec595022a331defd2f09001fc0578ae91e21b5'
   end
   homepage 'http://sourceforge.jp/projects/coteditor/'
   version '1.3.1'
