@@ -70,6 +70,7 @@ This will both uninstall the Cask and remove symlinks which were created in
 
 * `info` -- displays information about the given Cask
 * `list` -- with no args, lists installed Casks; given installed Casks, lists installed files
+* `fetch` -- downloads Cask resources to local cache (with `--force`, re-download even if already cached)
 * `doctor` -- checks for configuration issues
 * `cleanup` -- cleans up cached downloads (with `--outdated`, only cleans old downloads)
 * `home` -- opens the homepage of the given Cask; or with no arguments, the homebrew-cask project page
