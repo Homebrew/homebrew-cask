@@ -38,6 +38,6 @@ class Cask::Download
         has_sum = true
       end
     end
-    raise ChecksumMissingError.new("Checksum required. SHA-256: '#{Digest::SHA256.file(path).hexdigest}'") unless has_sum
+    raise ChecksumMissingError.new("Checksum required: sha256 '#{Digest::SHA256.file(path).hexdigest}'") unless has_sum
   end
 end

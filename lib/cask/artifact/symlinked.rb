@@ -98,7 +98,7 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
       return false
     end
     unless source.exist?
-      raise "it seems the #{self.class.link_type_english_name.downcase} source is not there: '#{source}'"
+      raise CaskError.new "It seems the #{self.class.link_type_english_name.downcase} source is not there: '#{source}'"
     end
     true
   end
