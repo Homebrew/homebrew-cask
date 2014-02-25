@@ -1,4 +1,4 @@
-class SophosAntivirus < Cask
+class SophosAntiVirusHomeEdition < Cask
   url 'http://downloads.sophos.com/home-edition/savosx_90_he.zip'
   homepage 'http://www.sophos.com/en-us/products/free-tools/sophos-antivirus-for-mac-home-edition.aspx/'
   version '9.0'
