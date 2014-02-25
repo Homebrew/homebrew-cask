@@ -10,6 +10,26 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
   def create_filesystem_link(source, target)
     Pathname.new(target).dirname.mkpath
     @command.run!('/bin/ln', :args => ['-hfs', '--', source, target])
+    add_altname_metadata source, target
+  end
+
+  # Try to make the asset searchable under the target name.  Spotlight
+  # respects this attribute for many filetypes, but ignores it for App
+  # bundles.  Alfred 2.2 respects it even for App bundles.
+  def add_altname_metadata(source, target)
+    attribute = 'com.apple.metadata:kMDItemAlternateNames'
+    return unless source.basename.to_s.casecmp(target.basename)
+    odebug "Adding #{attribute} metadata"
+    altnames = @command.run('/usr/bin/xattr',
+                            :args => ['-p', attribute, target],
+                            :stderr => :silence).sub(/\A\((.*)\)\Z/, "#{$1}")
+    odebug "Existing metadata is: '#{altnames}'"
+    altnames.concat(', ') if altnames.length > 0
+    altnames.concat(%Q{"#{target.basename}"})
+    altnames = %Q{(#{altnames})}
+    @command.run!('/usr/bin/xattr',
+                  :args => ['-w', attribute, altnames, target],
+                  :stderr => :silence)
   end
 
   def summary
