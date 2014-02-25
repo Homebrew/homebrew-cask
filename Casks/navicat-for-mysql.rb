@@ -1,4 +1,4 @@
-class NavicatMysql < Cask
+class NavicatForMysql < Cask
   url 'http://download.navicat.com/download/navicat110_mysql_en.dmg'
   homepage 'http://www.navicat.com/products/navicat-for-mysql'
   version '11.0.14'
