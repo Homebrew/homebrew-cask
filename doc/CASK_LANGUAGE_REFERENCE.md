@@ -1,10 +1,14 @@
-# The Cask DSL (Domain-Specific Language)
+# Cask Language Reference
 
 This document acts as a complete reference, and covers aspects of the Cask
-DSL which are not needed in most cases.
+Domain-Specific Language (DSL) which are not needed in most cases.
 
- * [Stanzas Which May Occur Only Once](#stanzas-which-may-occur-only-once)
- * [Stanzas Which May Occur Multiple Times](#stanzas-which-may-occur-multiple-times)
+ * [Casks Are Ruby Classes](#casks-are-ruby-classes)
+ * [The Cask Language Is Declarative](#the-cask-language-is-declarative)
+ * [Required Stanzas](#required-stanzas)
+ * [At Least One Artifact Stanza Is Also Required](#at-least-one-artifact-stanza-is-also-required)
+ * [Optional Stanzas](#optional-stanzas)
+ * [Legacy Stanzas](#legacy-stanzas)
  * [Conditional Statements](#conditional-statements)
  * [Caveats Stanza Details](#caveats-stanza-details)
  * [Checksum Stanza Details](#checksum-stanza-details)
@@ -14,30 +18,91 @@ DSL which are not needed in most cases.
  * [Uninstall Stanza Details](#uninstall-stanza-details)
 
 
-## Stanzas Which May Occur Only Once
+## Casks Are Ruby Classes
 
- * url
- * homepage
- * version
- * sha256 (or no_checksum)
+Each Cask is a Ruby class, derived from class `Cask`.  The Cask definition
+is always enclosed in a `class ... end` block.  Example:
+
+```ruby
+class Alfred < Cask
+  url 'http://cachefly.alfredapp.com/Alfred_2.1.1_227.zip'
+  homepage 'http://www.alfredapp.com/'
+  version '2.1.1_227'
+  sha256 'd19fe7441c6741bf663521e561b842f35707b1e83de21ca195aa033cade66d1b'
+  link 'Alfred 2.app'
+  link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
+end
+```
 
 
-## Stanzas Which May Occur Multiple Times
+## The Cask Language Is Declarative
 
- * link
- * install
- * prefpane
- * qlplugin
- * font
- * input_method
- * screen_saver
- * binary
- * uninstall
- * nested_container
- * depends_on_formula
- * caveats
- * after_install
- * after_uninstall
+Each Cask contains a series of stanzas (or "fields") which *declare* how the
+software is to be obtained and installed.  In a declarative language, the
+author does not need to worry about order.  As long as all the needed fields
+are present, homebrew-cask will figure out what needs to be done.
+
+Exception: `do` blocks such as `after_install` may enclose a block of
+pure Ruby code.  Lines within that block follow a procedural (order-dependent)
+paradigm.
+
+
+## Required Stanzas
+
+Each of the following stanzas is required for every Cask.
+
+Exception: currently `sha256` may be omitted if `no_checksum` is substituted.
+
+| name               | multiple occurrences allowed? | value       |
+| ------------------ |------------------------------ | ----------- |
+| `url`              | No                            | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](#url-stanza-details))
+| `homepage`         | No                            | application homepage; used for the `brew cask home` command
+| `version`          | No                            | application version; give value of `'latest'` if versioned downloads are not offered
+| `sha256`           | No                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be omitted on unversioned downloads by substituting `no_checksum`. (see also [Checksum Stanza Details](#checksum-stanza-details))
+
+
+## At Least One Artifact Stanza Is Also Required
+
+Each Cask must declare one or more *artifacts* (i.e. something to install)
+
+| name               | multiple occurrences allowed? | value       |
+| ------------------ |------------------------------ | ----------- |
+| `link`             | yes                           |  relative path to a file that should be linked into the `Applications` folder on installation (see also [Link Stanza Details](#link-stanza-details))
+| `install`          | yes                           |  relative path to `pkg` that should be run to install the application (see also [Install Stanza Details](#install-stanza-details))
+| `binary`           | yes                           |  relative path to a binary that should be linked into the `/usr/local/bin` folder on installation
+| `colorpicker`      | yes                           |  relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
+| `font`             | yes                           |  relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
+| `input_method`     | yes                           |  relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
+| `prefpane`         | yes                           |  relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
+| `qlplugin`         | yes                           |  relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
+| `screen_saver`     | yes                           |  relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
+| `service`          | yes                           |  relative path to a service that should be linked into the `~/Library/Services` folder on installation
+| `widget`           | yes                           |  relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation (ALPHA: DOES NOT WORK YET)
+
+
+## Optional Stanzas
+
+| name                 | multiple occurrences allowed? | value       |
+| -------------------- |------------------------------ | ----------- |
+| `uninstall`          | yes                           | indicates what commands/scripts must be run to uninstall a pkg-based application (see also [Uninstall Stanza Details](#uninstall-stanza-details))
+| `nested_container`   | yes                           | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
+| `depends_on_formula` | yes                           | a list of Homebrew Formulae upon which this Cask depends
+| `caveats`            | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Details](#caveats-details))
+| `after_install`      | yes                           | a Ruby block containing postflight install operations
+| `after_uninstall`    | yes                           | a Ruby block containing postflight uninstall operations
+| `before_install`     | yes                           | a Ruby block containing preflight install operations (needed only in very rare cases)
+| `before_uninstall`   | yes                           | a Ruby block containing preflight uninstall operations (needed only in very rare cases)
+
+
+## Legacy Stanzas
+
+The following stanzas may be seen in current use but are deprecated
+and slated for retirement.
+
+| name               | multiple occurrences allowed? | meaning     |
+| ------------------ |------------------------------ | ----------- |
+| `md5`              | No                            | an alternative to `sha256`
+| `sha1`             | No                            | an alternative to `sha256`
 
 
 ## Conditional Statements
@@ -45,8 +110,9 @@ DSL which are not needed in most cases.
 Conditional statements are permitted, but only if they are very efficient.
 Tests on the following values are known to be acceptable:
 
- * `MacOS.version`      (example: `macports.rb`)
-
+ * `MacOS.version`      (example: see [macports.rb](../Casks/macports.rb))
+ * `Hardware::CPU.is_64_bit?`
+ * `Hardware::CPU.is_32_bit?`
 
 ## Caveats Stanza Details
 
@@ -121,7 +187,8 @@ of key/value pairs appended to `url`:
 | `:referer`         | a string holding the URL to set as referrer in the download request
 | `:user_agent`      | a string holding the user agent to set for the download request. Can also be set to the symbol `:fake`, which will use a generic Browser-like user agent string. we prefer `:fake` when the server does not require a specific user agent.
 
-Example: `java.rb`
+Example: [java.rb](../Casks/java.rb)
+
 
 ### Subversion URLs
 
@@ -167,6 +234,19 @@ directory by adding a `:target` key to `link`, like this:
 link 'Alfred 2.app', :target => 'Jeeves.app'
 ```
 
+### :target May Contain an Absolute Path
+
+If `:target` has a leading slash, it is interpreted as an absolute path.
+The containing directory for the absolute path will be created if it does
+not already exist.  Example (from [oclint.rb](../Casks/oclint.rb)).
+
+
+```ruby
+binary 'oclint-0.7-x86_64-apple-darwin-10/lib/oclint', :target => '/usr/local/lib/oclint'
+```
+
+### :target Works on Most Artifact Types
+
 The `:target` key works similarly for other Cask artifacts, such as
 `binary`, `colorpicker`, `font`, `input_method`, `prefpane`, `qlplugin`,
 `service`, and `widget`.
@@ -195,8 +275,16 @@ install 'Soundflower.pkg', :allow_untrusted => true
 
 ## Uninstall Stanza Details
 
+IF YOU CANNOT DESIGN A WORKING `UNINSTALL` STANZA, PLEASE SUBMIT YOUR
+CASK ANYWAY.  The maintainers will help you write an `uninstall` stanza:
+just ask!
+
 A `pkg`-based Cask using `install` will **not** know how to uninstall
 correctly unless an `uninstall` stanza is given.
+
+So, while the `uninstall` stanza is technically optional in the Cask
+language, it is much better for end-users if every `install` has a
+corresponding `uninstall`.
 
 Since `pkg` installers can do arbitrary things, different techniques are
 needed to uninstall in each case.  You may need to specify one, or several,

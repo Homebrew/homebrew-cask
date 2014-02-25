@@ -3,31 +3,9 @@
 ## What is a Cask?
 
 A `Cask` is like a `Formula` in Homebrew except it describes how to download
-and install a binary application.
-
-Casks currently have five required fields:
-
- * __url__: (required) points to binary distribution of the application
- * __homepage__: the same as Homebrew's - it doesn't do anything yet, but will be wired in
- * __version__: (required) describes the version of the application available at the URL
- * __sha256__: (required unless using no_checksum) SHA-256 checksum of the file
- * __link__: (required for `.app`) indicates which file(s) should be linked into the Applications folder on installation
- * __install__: (required for `.pkg`) indicates which package should be installed
- * __prefpane__: (required for `.prefPane`) indicates which file(s) should be linked into the PreferencePanes folder on installation
- * __qlplugin__: (required for `.qlgenerator`) indicates which file(s) should be linked into the QuickLook folder on installation
- * __font__ : (required for fonts) indicates which file(s) should be linked into the Fonts folder on installation
- * __input_method__: (required for input method) indicates which file(s) should be linked into the Input Methods folder on installation
- * __screen_saver__: (required for `.saver`) indicates which file(s) should be linked into the Screen Saver folder on installation
-
-and six optional fields:
-
-* __binary__: relative path to a binary to be installed
-* __uninstall__: (optional for `.pkg`) indicates how to uninstall a package
-* __nested_container__: relative path to a nested inner container
-* __depends_on_formula__: a list of Homebrew Formulae upon which this Cask depends
-* __caveats__: a string or Ruby block providing the user with Cask-specific information at install time
-* __after_install__: a Ruby block containing postflight install operations
-* __after_uninstall__: a Ruby block containing postflight uninstall operations
+and install a binary application.  To learn how to write a Cask, see
+[CONTRIBUTING.md](CONTRIBUTING.md).  For a complete reference, see
+[CASK_LANGUAGE_REFERENCE.md](doc/CASK_LANGUAGE_REFERENCE.md).
 
 ## What's the status of this project?  Where's it headed?
 
