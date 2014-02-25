@@ -1,4 +1,4 @@
-class NavicatPostgresql < Cask
+class NavicatForPostgresql < Cask
   url 'http://download.navicat.com/download/navicat110_pgsql_en.dmg'
   homepage 'http://www.navicat.com/products/navicat-for-postgresql'
   version '11.0.14'
