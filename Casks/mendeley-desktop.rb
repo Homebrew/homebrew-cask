@@ -1,4 +1,4 @@
-class Mendeley < Cask
+class MendeleyDesktop < Cask
   url 'http://download.mendeley.com/Mendeley-Desktop-1.10.3-OSX-Universal.dmg'
   homepage 'http://www.mendeley.com/'
   version '1.10.3'
