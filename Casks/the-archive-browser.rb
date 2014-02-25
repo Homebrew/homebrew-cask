@@ -4,6 +4,8 @@ class TheArchiveBrowser < Cask
   version '1.9.1'
   sha256 'c658cc67fde3773b20731394c3ca2829285b3e02efa10c4efb360b2bf053f26e'
   link 'The Archive Browser.app'
-  caveats 'The Archive Browser is a paid app. This is only a trial version.
-A full license is available for purchase from the official website.'
+  caveats <<-EOS.undent
+    The Archive Browser is a commercial app. Only a trial version will be
+    installed.  A full license may be purchased from the developer website.
+    EOS
 end
