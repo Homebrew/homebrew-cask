@@ -16,6 +16,7 @@ require 'cask/cli/install'
 require 'cask/cli/list'
 require 'cask/cli/search'
 require 'cask/cli/uninstall'
+require 'cask/cli/update'
 
 class Cask::CLI
   def self.commands
