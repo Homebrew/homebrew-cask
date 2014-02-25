@@ -1,4 +1,4 @@
-class Wineskin < Cask
+class WineskinWinery < Cask
   url 'http://downloads.sourceforge.net/project/wineskin/Wineskin%20Winery.app%20Version%201.7.zip'
   homepage 'http://wineskin.urgesoftware.com/'
   version '1.7'
