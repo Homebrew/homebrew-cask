@@ -1,4 +1,4 @@
-class GoogleMusicManager < Cask
+class Musicmanager < Cask
   url 'https://dl.google.com/dl/androidjumper/mac/718015/musicmanager.dmg'
   homepage 'https://music.google.com'
   version '1.0.71.8015'
