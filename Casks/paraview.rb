@@ -1,13 +1,15 @@
 class Paraview < Cask
-  url 'http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v4.1&type=binary&os=osx&downloadFile=ParaView-4.1.0-Darwin-64bit.dmg'
+  if MacOS.version == :mavericks
+    url 'http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v4.1&type=binary&os=osx&downloadFile=ParaView-4.1.0-Darwin-64bit.dmg'
+    sha256 '1eef4a2ee155049059967733e40010e86cc6cd05458de676217af5c276995817'
+  else
+    url 'http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v4.1&type=binary&os=osx&downloadFile=ParaView-4.1.0-Darwin-64bit-Lion-Python27.dmg'
+    sha1 '8784481c90b58b0c6158e21b7f978a7d78caa67c63d28d6d5d770ef43f0ad890'
+  end
   homepage 'http://www.paraview.org/'
   version '4.1.0'
-  sha256 '1eef4a2ee155049059967733e40010e86cc6cd05458de676217af5c276995817'
   link 'paraview.app'
-  caveats <<-EOS.undent
-    This version of Paraview should be installed if your system Python
-    version is 2.7. If you are running OS X Lion (10.7) or Mountain
-    Lion (10.8) and your system Python version is 2.6, please instead
-    run 'brew tap caskroom/versions' and install paraview-lion-python27.
-    EOS
+  caveats do
+    arch_only 'intel-64'
+  end
 end
