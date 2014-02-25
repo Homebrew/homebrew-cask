@@ -53,20 +53,17 @@ names, and other aspects of this manual are still subject to change.
     Generate a Cask for the Caskfile named <Cask> and open a template for
     it in your favorite editor.
 
-  * `doctor`:
+  * `doctor` or `dr`:
     Check for configuration issues.  Can be useful to upload as a gist for
     developers along with a bug report.
 
   * `edit` <Cask>:
     Open the given Caskfile for editing.
 
-  * `home`:
+  * `home` or `homepage`:
     Open the project page <http://caskroom.io> in a browser.
 
-  * `home` <Cask>:
-    Open the homepage for <Cask> in a browser.
-
-  * `info` <Cask>:
+  * `info` or `abv` <Cask>:
     Display information about <Cask>.
 
   * `install [--force]` <Cask>:
@@ -75,18 +72,18 @@ names, and other aspects of this manual are still subject to change.
     <Cask> is usually the name of a Cask as returned by `brew cask search`,
     but see [OTHER WAYS TO SPECIFY A CASK][] for variations.
 
-  * `list` [<Casks>]:
+  * `list` or `ls` [<Casks>]:
     Without any arguments, list all installed Casks.
 
     If <Casks> are given, list the installed files for <Casks>.
 
-  * `uninstall` <Cask>:
+  * `uninstall` or `rm` or `remove` <Cask>:
     Uninstall <Cask>.
 
-  * `search`:
+  * `search` or `-S`:
     Display all Casks available for install.
 
-  * `search` <text> | /<regexp>/:
+  * `search` or `-S` <text> | /<regexp>/:
     Perform a substring search of Cask names for <text>.  If the text
     is delimited by slashes, it is interpreted as a Ruby regular
     expression.
