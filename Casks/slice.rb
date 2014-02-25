@@ -1,4 +1,4 @@
-class SliceEq < Cask
+class Slice < Cask
   url 'http://sliceeq.com/downloads/Slice.dmg'
   homepage 'http://sliceeq.com/'
   version 'latest'
