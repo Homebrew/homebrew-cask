@@ -1,4 +1,4 @@
-class Lingrrader < Cask
+class Lingrradar < Cask
   url 'http://radar.lingr.com/mac/LingrRadar_2.26.tbz'
   homepage 'http://radar.lingr.com/'
   version '2.26'
