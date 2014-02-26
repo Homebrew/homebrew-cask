@@ -6,8 +6,8 @@ describe Cask::CLI::Search do
       Cask::CLI::Search.run('intellij')
     }.must_output <<-OUTPUT.gsub(/^ */, '')
       ==> Partial matches
+      intellij-idea
       intellij-idea-community
-      intellij-idea-ultimate
     OUTPUT
   end
 
