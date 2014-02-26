@@ -1,4 +1,4 @@
-class ViennaRss < Cask
+class Vienna < Cask
   url 'http://downloads.sourceforge.net/vienna-rss/Vienna3.0.0_beta19.tgz'
   homepage 'http://www.vienna-rss.org'
   version '3.0.0_beta19'
