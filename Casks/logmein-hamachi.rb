@@ -3,7 +3,7 @@ class LogmeinHamachi < Cask
   homepage 'http://vpn.net'
   version 'latest'
   no_checksum
-  link 'LogMeInHamachiInstaller.app'
+  caskroom_only true
   caveats do
     manual_installer 'LogMeInHamachiInstaller.app'
   end
