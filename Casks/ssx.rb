@@ -1,4 +1,4 @@
-class Soulseek < Cask
+class Ssx < Cask
   url 'http://chris.schleifer.net/ssX/builds/ssX-06082006-2216.dmg'
   homepage 'http://chris.schleifer.net/ssX/index.cgi/index.html'
   version '06082006-2216'
