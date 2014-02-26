@@ -1,4 +1,4 @@
-class UltrastarDeluxe < Cask
+class Ultrastardeluxe < Cask
   url 'http://downloads.sourceforge.net/sourceforge/ultrastardx/UltraStarDeluxe-1.1.dmg'
   homepage 'http://ultrastardx.sourceforge.net/'
   version '1.1'
