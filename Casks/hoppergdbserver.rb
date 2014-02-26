@@ -1,4 +1,4 @@
-class HopperDisassemblerGdb < Cask
+class Hoppergdbserver < Cask
   url 'http://www.hopperapp.com/HopperGDBServer/HopperGDBServer-1.6.zip'
   homepage 'http://www.hopperapp.com/HopperGDBServer/index.html'
   version '1.6'
