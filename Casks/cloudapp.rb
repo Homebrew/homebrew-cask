@@ -1,7 +1,7 @@
 class Cloudapp < Cask
-  url 'https://s3.amazonaws.com/f.cl.ly/builds/CloudApp1.5.6.zip'
+  url 'https://s3.amazonaws.com/f.cl.ly/builds/CloudApp2.0.1.zip'
   homepage 'http://getcloudapp.com/'
-  version '1.5.6'
-  sha256 '2148fe49e0bc2ada5617141f0a95e2e31b0a6ecc1495752570a9669ca483d4e4'
+  version '2.0.1'
+  sha256 'f4fd440742eba367ab7bf75cf0b190a442177e75fdede510b7b272710f93a7b2'
   link 'Cloud.app'
 end
