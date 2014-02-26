@@ -145,8 +145,10 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
 
     if uninstall_options.key? :pkgutil
       ohai "Removing files from pkgutil Bill-of-Materials"
-      pkgs = Cask::Pkg.all_matching(uninstall_options[:pkgutil], @command)
-      pkgs.each(&:uninstall)
+      Array(uninstall_options[:pkgutil]).each do |regexp|
+        pkgs = Cask::Pkg.all_matching(regexp, @command)
+        pkgs.each(&:uninstall)
+      end
     end
 
     if uninstall_options.key? :files
