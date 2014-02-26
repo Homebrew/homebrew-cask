@@ -1,4 +1,4 @@
-class RedisDesktopManager < Cask
+class Rdm < Cask
   url 'https://github.com/uglide/RedisDesktopManager/releases/download/0.7.5/redis-desktop-manager-0.7.5.dmg'
   homepage 'http://redisdesktop.com'
   version '0.7.5'
