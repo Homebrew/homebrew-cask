@@ -1,4 +1,4 @@
-class Omnigraphsketcher < Cask
+class Graphsketcher < Cask
   url 'https://github.com/graphsketcher/GraphSketcher/releases/download/v2.0_test_45/GraphSketcher.zip'
   homepage 'https://github.com/graphsketcher/GraphSketcher'
   version 'v2.0_test_45'
