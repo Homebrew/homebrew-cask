@@ -1,4 +1,4 @@
-class BattleForWesnoth < Cask
+class Wesnoth < Cask
   url 'http://downloads.sourceforge.net/sourceforge/wesnoth/Wesnoth_1.10.7.dmg'
   homepage 'http://wesnoth.org'
   version '1.10.7'
