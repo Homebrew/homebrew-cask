@@ -131,7 +131,7 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'sha1'")
       end
       if sha1 == :no_check
-        @sums = sha1
+        @sums = :no_check
       else
         @sums ||= []
         @sums << Checksum.new(:sha1, sha1) unless sha1.nil?
@@ -143,7 +143,7 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'sha256'")
       end
       if sha2 == :no_check
-        @sums = sha2
+        @sums = :no_check
       else
         @sums ||= []
         @sums << Checksum.new(:sha2, sha2) unless sha2.nil?
