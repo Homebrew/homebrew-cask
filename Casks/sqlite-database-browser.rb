@@ -1,4 +1,4 @@
-class SqliteBrowser < Cask
+class SqliteDatabaseBrowser < Cask
   url 'http://downloads.sourceforge.net/sourceforge/sqlitebrowser/sqlitebrowser_200_b1_osx.zip'
   homepage 'http://sqlitebrowser.sourceforge.net/'
   version '2.0.0b1'
