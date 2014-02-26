@@ -3,5 +3,8 @@ class VlcRemote < Cask
   homepage 'http://hobbyistsoftware.com/vlc'
   version 'latest'
   no_checksum
-  link 'VLC Setup.app'
+  caskroom_only true
+  caveats do
+    manual_installer 'VLC Setup.app'
+  end
 end
