@@ -168,6 +168,9 @@ To get from the App's canonical name to the Cask name:
   * hyphens stay hyphens
   * spaces become hyphens
   * digits stay digits
+  * delete any character which is not alphanumeric or hyphen
+  * collapse a series of multiple hyphens into one hyphen
+  * delete a leading hyphen
   * a leading digit gets spelled out into English: `1password` becomes `onepassword`
 
 Casks are stored in a Ruby file matching their name.
