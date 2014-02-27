@@ -147,6 +147,14 @@ We try to maintain consistent naming so everything stays clean and predictable.
     such as `Google Chrome.app`
   * Remove `.app` from the end
   * Translate the name into English if necessary
+  * Remove from the end: "mac", "for mac", "for OS X".  These terms are generally
+    added to ports such as "MAME OS X.app".  Exception: when the software is not
+    a port, but "Mac" is an inseparable part of the name or branding, as in
+    'PlayForMac.app'
+  * Remove from the end: hardware designations such as "for x86", "32-bit", "ppc".
+  * Remove from the end: software framework names such as "Qt", "Gtk", "Wx", "Java", "Oracle JVM", etc.
+    Exception: the framework is the product being Casked: [java.rb](../Casks/java.rb).
+  * Remove from the end: localization strings such as "en-US"
   * Pay attention to details, for example: `"Git Hub" != "git_hub" != "GitHub"`
   * If the result of that process is something unhelpful, such as `Macintosh Installer`,
     then just create the best name you can, based on the author's web page.
