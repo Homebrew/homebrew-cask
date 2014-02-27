@@ -128,6 +128,13 @@ fall back to this format:
 http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 ```
 
+
+### Vendor URLs
+
+When possible, it is best to use a download URL from the original developer
+or vendor, rather than an aggregator such as macupdate.com.
+
+
 ### Naming Casks
 
 We try to maintain consistent naming so everything stays clean and predictable.
