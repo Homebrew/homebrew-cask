@@ -4,6 +4,7 @@ class Cask::CLI::Alfred
     '/Applications/Xcode.app/Contents/Applications',
     '/Developer/Applications',
     '/Library/PreferencePanes',
+    '/System/Library/CoreServices/Applications',
     '/System/Library/PreferencePanes',
     '~/Library/Caches/Metadata/',
     '~/Library/Mobile Documents/',
@@ -108,7 +109,7 @@ class Cask::CLI::Alfred
   def self.alfred_preference(key, value=nil)
     if value
       odebug 'Writing Alfred preferences'
-      @system_command.run('/usr/bin/defaults', :args => ['write', DOMAIN, key, %Q("#{value}")])
+      @system_command.run('/usr/bin/defaults', :args => ['write', DOMAIN, key, %Q(#{value})])
     else
       odebug 'Reading Alfred preferences'
       @system_command.run('/usr/bin/defaults', :args => ['read', DOMAIN, key])
