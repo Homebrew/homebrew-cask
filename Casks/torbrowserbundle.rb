@@ -1,4 +1,4 @@
-class TorBrowser < Cask
+class Torbrowserbundle < Cask
   url 'https://www.torproject.org/dist/torbrowser/3.5.2.1/TorBrowserBundle-3.5.2.1-osx32_en-US.zip'
   homepage 'https://www.torproject.org/projects/torbrowser.html'
   version '3.5.2.1'
