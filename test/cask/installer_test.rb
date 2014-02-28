@@ -202,6 +202,18 @@ describe Cask::Installer do
       pkg.must_be :file?
     end
 
+    it "works properly with an overridden container_type" do
+      naked_executable = Cask.load('naked-executable')
+
+      shutup do
+        Cask::Installer.new(naked_executable).install
+      end
+
+      dest_path = Cask.caskroom/'naked-executable'/naked_executable.version
+      executable = dest_path/'naked_executable'
+      executable.must_be :file?
+    end
+
     it "works fine with a nested container" do
       nested_app = Cask.load('nested-app')
 

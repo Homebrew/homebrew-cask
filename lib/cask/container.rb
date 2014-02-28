@@ -31,11 +31,19 @@ class Cask::Container
   end
 
   def self.for_path(path, command)
-    odebug "Determining which containers to use"
+    odebug "Determining which containers to use based on filetype"
     criteria = Cask::Container::Criteria.new(path, command)
     containers.find do |c|
       odebug "Checking container class #{c}"
       c.me?(criteria)
+    end
+  end
+
+  def self.from_type(type)
+    odebug "Determining which containers to use based on 'container_type'"
+    containers.find do |c|
+      odebug "Checking container class #{c}"
+      c.to_s == "Cask::Container::#{type.to_s.capitalize}"
     end
   end
 end
