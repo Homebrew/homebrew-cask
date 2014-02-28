@@ -1,4 +1,4 @@
-class Cloudapp < Cask
+class Cloud < Cask
   url 'https://s3.amazonaws.com/f.cl.ly/builds/CloudApp2.0.1.zip'
   homepage 'http://getcloudapp.com/'
   version '2.0.1'
