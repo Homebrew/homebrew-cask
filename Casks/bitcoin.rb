@@ -1,4 +1,4 @@
-class BitcoinQt < Cask
+class Bitcoin < Cask
   url 'https://bitcoin.org/bin/0.8.6/bitcoin-0.8.6-macosx.dmg'
   homepage 'https://bitcoin.org/'
   version '0.8.6'
