@@ -1,4 +1,4 @@
-class MameOsX < Cask
+class Mame < Cask
   url 'http://downloads.sourceforge.net/mameosx/MAMEOSX-0.135.dmg'
   homepage 'http://mameosx.sourceforge.net/'
   version '0.135'
