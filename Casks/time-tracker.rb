@@ -1,4 +1,4 @@
-class TimeTrackerMac < Cask
+class TimeTracker < Cask
   url 'https://time-tracker-mac.googlecode.com/files/Time%20Tracker-1.3.13.zip'
   homepage 'https://code.google.com/p/time-tracker-mac'
   version '1.3.13'
