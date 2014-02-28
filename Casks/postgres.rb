@@ -1,4 +1,4 @@
-class PostgresApp < Cask
+class Postgres < Cask
   url 'https://github.com/PostgresApp/PostgresApp/releases/download/9.3.2.0-RC2/Postgres-9.3.2.0-RC2.zip'
   homepage 'http://postgresapp.com/'
   version '9.3.2.0-RC2'
