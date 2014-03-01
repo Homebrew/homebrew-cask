@@ -7,6 +7,6 @@ class Fantastical < Cask
 
   after_install do
     # Don't ask to move the app bundle to /Applications
-    system 'defaults write com.flexibits.fantastical moveToApplicationsFolderAlertSuppress -bool true'
+    system '/usr/bin/defaults', 'write', 'com.flexibits.fantastical', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
 end
