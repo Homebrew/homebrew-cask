@@ -1,5 +1,70 @@
 # CHANGELOG
 
+## 0.30.0
+
+* __Casks__
+ - 56 Casks added (667 updated) by 58 contributors since 0.29.2
+ - 1260 total Casks
+* __Features__
+ - [#2970][] add new command verb `brew cask fetch` <3 [@voanhduy1512][]
+ - [#3079][] add new command verb `brew cask update` (synonym for `brew update`)
+ - [#3131][] provide command aliases such as `brew cask dr` for `brew cask doctor`, matching Homebrew
+ - [#2705][] Divide search output into sections
+ - [#3014][], [#3039][], [#3040][], [#2744][], [#2467][] support Bzip2, RAR, StuffIt, 7zip, and Adobe Air container types <3 [@vmrob][]
+ - [#3011][] add Cask DSL element `container_type` to override container auto-detect <3 [@vmrob][]
+ - [#3107][] add `sha256 :no_check` to Cask DSL (synonym for `no_checksum`)
+ - [#3073][] write extended attributes to filesystem for `:target` links (to assist Spotlight and Alfred) <3 [@tmonney][]
+ - [#3190][] add "doutdated" example external command <3 [@doits][]
+ - [#3105][] add optional `appcast` stanza to Cask DSL (for future use; value currently ignored)
+* __Fixes__
+ - [#3275][] Fix broken `brew cask alfred link` <3 [@mecca831][]
+ - [#3075][] create target directories on-demand
+ - [#3013][] accept and ignore trailing `.rb` on command-line arguments
+ - [#3076][] more reliable way to look up username
+ - [#3188][], [#3058][], [#3042][] better error messages <3 [@muescha][]
+* __Documentation__
+ - 22 doc commits since 0.29.2 <3 [@voanhduy1512][]
+* __Breaking Changes__
+ - [#2931][] remove md5 checksum support
+ - [#3025][] temporarily suppress searching the font Tap to reduce false positives
+
+[#3323]: https://github.com/phinze/homebrew-cask/issues/3323
+[#3011]: https://github.com/phinze/homebrew-cask/issues/3011
+[#3275]: https://github.com/phinze/homebrew-cask/issues/3275
+[@mecca831]: https://github.com/mecca831
+[#3190]: https://github.com/phinze/homebrew-cask/issues/3190
+[#3241]: https://github.com/phinze/homebrew-cask/issues/3241
+[#3242]: https://github.com/phinze/homebrew-cask/issues/3242
+[#3013]: https://github.com/phinze/homebrew-cask/issues/3013
+[#3188]: https://github.com/phinze/homebrew-cask/issues/3188
+[@muescha]: https://github.com/muescha
+[#3014]: https://github.com/phinze/homebrew-cask/issues/3014
+[#3039]: https://github.com/phinze/homebrew-cask/issues/3039
+[#3040]: https://github.com/phinze/homebrew-cask/issues/3040
+[#3178]: https://github.com/phinze/homebrew-cask/issues/3178
+[#2705]: https://github.com/phinze/homebrew-cask/issues/2705
+[#2744]: https://github.com/phinze/homebrew-cask/issues/2744
+[#2970]: https://github.com/phinze/homebrew-cask/issues/2970
+[@voanhduy1512]: https://github.com/voanhduy1512
+[#3058]: https://github.com/phinze/homebrew-cask/issues/3058
+[#3073]: https://github.com/phinze/homebrew-cask/issues/3073
+[#3105]: https://github.com/phinze/homebrew-cask/issues/3105
+[#3107]: https://github.com/phinze/homebrew-cask/issues/3107
+[#3131]: https://github.com/phinze/homebrew-cask/issues/3131
+[#2467]: https://github.com/phinze/homebrew-cask/issues/2467
+[@vmrob]: https://github.com/vmrob
+[@tmonney]: https://github.com/tmonney
+[@doits]: https://github.com/doits
+[#3155]: https://github.com/phinze/homebrew-cask/issues/3155
+[#3079]: https://github.com/phinze/homebrew-cask/issues/3079
+[#3108]: https://github.com/phinze/homebrew-cask/issues/3108
+[#2931]: https://github.com/phinze/homebrew-cask/issues/2931
+[#3076]: https://github.com/phinze/homebrew-cask/issues/3076
+[#3075]: https://github.com/phinze/homebrew-cask/issues/3075
+[#3057]: https://github.com/phinze/homebrew-cask/issues/3057
+[#3042]: https://github.com/phinze/homebrew-cask/issues/3042
+[#3025]: https://github.com/phinze/homebrew-cask/issues/3025
+
 ## 0.29.2
 
 * __Casks__
