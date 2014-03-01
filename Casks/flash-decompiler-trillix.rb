@@ -1,4 +1,4 @@
-class FlashDecompiler < Cask
+class FlashDecompilerTrillix < Cask
   url 'http://www.flash-decompiler.com/download/flash_decompiler.dmg'
   homepage 'http://www.flash-decompiler.com/mac.html'
   version 'latest'
