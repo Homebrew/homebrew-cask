@@ -1,4 +1,5 @@
 class Pgadmin3 < Cask
+  # note: "3" is not a version number, but indicates a different vendor
   url 'http://ftp.postgresql.org/pub/pgadmin3/release/v1.18.1/osx/pgadmin3-1.18.1.dmg'
   homepage 'http://pgadmin.org'
   version '1.18.1'

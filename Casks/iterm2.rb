@@ -1,4 +1,5 @@
 class Iterm2 < Cask
+  # note: "2" is not a version number, but indicates a different vendor
   url 'http://www.iterm2.com/downloads/stable/iTerm2_v1_0_0.zip'
   homepage 'http://www.iterm2.com/'
   version '1.0.0'
