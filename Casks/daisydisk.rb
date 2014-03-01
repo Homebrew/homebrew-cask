@@ -7,6 +7,6 @@ class Daisydisk < Cask
 
   after_install do
     # Don't ask to move the app bundle to /Applications
-    system 'defaults write com.daisydiskapp.DaisyDiskStandAlone moveToApplicationsFolderAlertSuppress -bool true'
+    system '/usr/bin/defaults', 'write', 'com.daisydiskapp.DaisyDiskStandAlone', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
 end
