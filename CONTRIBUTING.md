@@ -27,6 +27,8 @@ $ git remote add "$github_user" "https://github.com/$github_user/homebrew-cask"
 
 Making a Cask is easy: a Cask is a small Ruby file.
 
+### Examples
+
 Here's a Cask for `Alfred.app` as an example.  Note that you may repeat
 the `link` stanza as many times as you need, to create multiple links:
 
@@ -54,6 +56,8 @@ class Vagrant < Cask
 end
 ```
 
+### The `brew cask create` Command
+
 To get started, use the handy dandy `brew cask create` command.
 
 ```bash
@@ -74,6 +78,8 @@ class MyNewCask < Cask
   link ''
 end
 ```
+
+### Cask Stanzas
 
 Fill in the following stanzas for your Cask:
 
@@ -105,7 +111,7 @@ Additional stanzas you might need for special use-cases:
 | `nested_container` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Details](doc/CASK_LANGUAGE_REFERENCE.md#caveats-details))
 
-Additional special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#optional-stanzas) and [Legacy Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#legacy-stanzas).
+Even more special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#optional-stanzas) and [Legacy Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#legacy-stanzas).
 
 
 ### SourceForge URLs
@@ -162,7 +168,8 @@ We try to maintain consistent naming so everything stays clean and predictable.
 ##### Canonical Names of `pkg`-based Installers
 
   * The Canonical Name of a `pkg` may be more tricky to determine than that
-    of an App.  If so, just create the best name you can, based on the
+    of an App.  If a `pkg` installs an App, then use that App name with the
+    rules above.  If not, just create the best name you can, based on the
     author's web page.
 
 #### Cask Name
