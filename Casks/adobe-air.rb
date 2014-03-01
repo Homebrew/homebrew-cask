@@ -6,7 +6,8 @@ class AdobeAir < Cask
   caskroom_only true
 
   after_install do
-    system "sudo #{destination_path}/Adobe\\ AIR\\ Installer.app/Contents/MacOS/Adobe\\ AIR\\ Installer -silent"
+    system '/usr/bin/sudo', '-E', '--',
+      "#{destination_path}/Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer", '-silent'
   end
 
   uninstall :script => {
