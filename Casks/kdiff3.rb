@@ -1,4 +1,5 @@
 class Kdiff3 < Cask
+  # note: "3" is not a version number, but an intrinsic part of the product name (3-way diff)
   url 'http://downloads.sourceforge.net/sourceforge/kdiff3/kdiff3_0.9.97_MacOS_64bit.dmg'
   homepage 'http://kdiff3.sourceforge.net/'
   version '0.9.97'

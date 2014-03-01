@@ -1,4 +1,5 @@
 class Kid3 < Cask
+  # note: "3" is not a version number, but an intrinsic part of the product name (ID3 tags)
   url 'http://downloads.sourceforge.net/sourceforge/kid3/kid3-3.0.2-Darwin.dmg'
   homepage 'http://kid3.sourceforge.net/'
   version '3.0.2'

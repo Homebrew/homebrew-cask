@@ -1,4 +1,5 @@
 class Alib1 < Cask
+  # note: "1" is not a version number, but an intrinsic part of the product name
   url 'http://presstube.com/screensavers/Presstube-ALib1-mac.zip'
   homepage 'http://presstube.com/blog/2011/alib1/'
   version 'latest'
