@@ -1,4 +1,4 @@
-class Repetier < Cask
+class RepetierHost < Cask
   url 'http://www.repetier.com/?wpdmact=process&did=MzYuaG90bGluaw=='
   homepage 'http://www.repetier.com/'
   version '0.56'
