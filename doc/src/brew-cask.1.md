@@ -60,15 +60,11 @@ names, and other aspects of this manual are still subject to change.
   * `edit` <Cask>:
     Open the given Caskfile for editing.
 
-<<<<<<< HEAD
-  * `home` or `homepage`:
-=======
   * `fetch` <Cask> [--force]:
     Fetch remote resources for the given Cask to the local cache.  With
     `--force`, force re-download even if the resources are already cached.
 
-  * `home`:
->>>>>>> CLI - Fetch
+  * `home` or `homepage`:
     Open the project page <http://caskroom.io> in a browser.
 
   * `info` or `abv` <Cask>:
