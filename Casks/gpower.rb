@@ -1,4 +1,4 @@
-class Gpower3 < Cask
+class Gpower < Cask
   url 'http://www.psycho.uni-duesseldorf.de/abteilungen/aap/gpower3/download-and-register/Dokumente/GPower3.1.7Mac.zip'
   homepage 'http://www.psycho.uni-duesseldorf.de/abteilungen/aap/gpower3'
   version '3.1.7'
