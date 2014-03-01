@@ -2,7 +2,6 @@ require 'bundler'
 require 'bundler/setup'
 
 # set some Homebrew constants used in our code
-HOMEBREW_TAP_FORMULA_REGEX = %r{^(\w+)/(\w+)/([^/]+)$}
 HOMEBREW_BREW_FILE = '/usr/local/bin/brew'
 
 # add cask lib to load path
