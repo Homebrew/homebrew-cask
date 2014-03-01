@@ -8,6 +8,6 @@ class Alfred < Cask
 
   after_install do
     # Don't ask to move the app bundle to /Applications
-    system 'defaults write com.runningwithcrayons.alfred-2 suppressMoveToApplications -bool true'
+    system '/usr/bin/defaults', 'write', 'com.runningwithcrayons.alfred-2', 'suppressMoveToApplications', '-bool', 'true'
   end
 end
