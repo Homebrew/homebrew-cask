@@ -1,4 +1,5 @@
 class Riffworkst4 < Cask
+  # note: "4" is not a version number, but an intrinsic part of product name "T4"
   url 'http://www.sonomawireworks.com/accountManagerUI/files/RiffWorksT4.dmg'
   homepage 'http://www.sonomawireworks.com/T4/'
   version '2.6'
