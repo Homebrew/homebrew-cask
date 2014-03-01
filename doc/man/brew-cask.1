@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "HOMEBREW\-CASK" "1" "February 2014" "Homebrew-cask" "brew-cask"
+.TH "HOMEBREW\-CASK" "1" "March 2014" "Homebrew-cask" "brew-cask"
 .
 .SH "NAME"
 \fBhomebrew\-cask\fR \- A friendly binary installer for OS X
@@ -55,7 +55,7 @@ Clean up cached downloads\. With \fB\-\-outdated\fR, only clean up cached downlo
 Generate a Cask for the Caskfile named \fICask\fR and open a template for it in your favorite editor\.
 .
 .TP
-\fBdoctor\fR
+\fBdoctor\fR or \fBdr\fR
 Check for configuration issues\. Can be useful to upload as a gist for developers along with a bug report\.
 .
 .TP
@@ -63,15 +63,15 @@ Check for configuration issues\. Can be useful to upload as a gist for developer
 Open the given Caskfile for editing\.
 .
 .TP
-\fBhome\fR
+\fBfetch\fR \fICask\fR [\-\-force]
+Fetch remote resources for the given Cask to the local cache\. With \fB\-\-force\fR, force re\-download even if the resources are already cached\.
+.
+.TP
+\fBhome\fR or \fBhomepage\fR
 Open the project page \fIhttp://caskroom\.io\fR in a browser\.
 .
 .TP
-\fBhome\fR \fICask\fR
-Open the homepage for \fICask\fR in a browser\.
-.
-.TP
-\fBinfo\fR \fICask\fR
+\fBinfo\fR or \fBabv\fR \fICask\fR
 Display information about \fICask\fR\.
 .
 .TP
@@ -82,23 +82,27 @@ Install \fICask\fR\.
 \fICask\fR is usually the name of a Cask as returned by \fBbrew cask search\fR, but see \fIOTHER WAYS TO SPECIFY A CASK\fR for variations\.
 .
 .TP
-\fBlist\fR [\fICasks\fR]
+\fBlist\fR or \fBls\fR [\fICasks\fR]
 Without any arguments, list all installed Casks\.
 .
 .IP
 If \fICasks\fR are given, list the installed files for \fICasks\fR\.
 .
 .TP
-\fBuninstall\fR \fICask\fR
+\fBuninstall\fR or \fBrm\fR or \fBremove\fR \fICask\fR
 Uninstall \fICask\fR\.
 .
 .TP
-\fBsearch\fR
+\fBsearch\fR or \fB\-S\fR
 Display all Casks available for install\.
 .
 .TP
-\fBsearch\fR \fItext\fR | /\fIregexp\fR/
+\fBsearch\fR or \fB\-S\fR \fItext\fR | /\fIregexp\fR/
 Perform a substring search of Cask names for \fItext\fR\. If the text is delimited by slashes, it is interpreted as a Ruby regular expression\.
+.
+.TP
+\fBupdate\fR
+For convenience, \fBbrew cask update\fR is a synonym for \fBbrew update\fR\.
 .
 .SH "OPTIONS"
 Some of these options (such as \fB\-\-prefpanedir\fR) may be subject to removal in a future version\.
