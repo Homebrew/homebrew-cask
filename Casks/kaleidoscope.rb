@@ -8,7 +8,7 @@ class Kaleidoscope < Cask
 
   after_install do
     # Don't ask to move the app bundle to /Applications
-    system 'defaults write com.blackpixel.kaleidoscope moveToApplicationsFolderAlertSuppress -bool true'
+    system '/usr/bin/defaults', 'write', 'com.blackpixel.kaleidoscope', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
   caveats do
     files_in_usr_local
