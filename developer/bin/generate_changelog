@@ -16,7 +16,7 @@ require 'set'
 
 PROJECT_URL = 'https://github.com/phinze/homebrew-cask'
 
-CONTRIBUTORS = %w[
+MAINTAINERS = %w[
                   phinze
                   fanquake
                   kevinSuttle
@@ -25,6 +25,8 @@ CONTRIBUTORS = %w[
                   passcod
                   rolandwalker
                   vitorgalvao
+                  alebcay
+                  ndr-qef
                  ]
 
 CODE_PATHS = %w[
@@ -265,7 +267,7 @@ def read_pull_request(sha)
      %r{\AMerge pull request \#(\d+) from ([^\s/]+)}.match(merge_commits[sha][:log]) then
     {
       :num => $1,
-      :gh_user => CONTRIBUTORS.include?($2) ? '' : $2
+      :gh_user => MAINTAINERS.include?($2) ? '' : $2
     }
   end
 end
