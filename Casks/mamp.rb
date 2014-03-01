@@ -5,7 +5,7 @@ class Mamp < Cask
   sha256 'd01d43a881e0c0fbaa06301364b3e25931dff5863dd987d91ccf856626572e76'
   install 'MAMP_2.2.pkg'
   after_install do
-    system 'sudo', '-E', '--',
+    system '/usr/bin/sudo', '-E', '--',
            '/usr/sbin/chown', '-R', "#{Etc.getpwuid(Process.euid).name}:staff", '/Applications/MAMP', '/Applications/MAMP PRO'
   end
   uninstall :pkgutil => 'de.appsolute.installer.(mamp|mampacticon|mampendinstall|mamppro).pkg'
