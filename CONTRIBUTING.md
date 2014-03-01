@@ -153,6 +153,13 @@ We try to maintain consistent naming so everything stays clean and predictable.
     such as `Google Chrome.app`
   * Remove `.app` from the end
   * Translate the name into English if necessary
+  * Remove from the end: version numbers or incremental release designations such
+    as "alpha", "beta", or "release candidate".  Strings which distinguish different
+    capabilities or codebases such as "Community Edition" are currently accepted.
+    Exception: when a number is not an incremental release counter, but a
+    differentiator for a different product from a different vendor: [iterm2.rb](../Casks/iterm2.rb).
+  * If the version number is arranged to occur in the middle of the App name,
+    it should also be removed.  Example: [IntelliJ IDEA 13 CE.app](../Casks/intellij-idea-ce.rb).
   * Remove from the end: "mac", "for mac", "for OS X".  These terms are generally
     added to ports such as "MAME OS X.app".  Exception: when the software is not
     a port, but "Mac" is an inseparable part of the name or branding, as in
