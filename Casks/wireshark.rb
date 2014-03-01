@@ -15,7 +15,8 @@ class Wireshark < Cask
 
               EOS
     else
-      system 'sudo', '-E', '--', '/usr/sbin/dseditgroup', '-o', 'edit', '-a', Etc.getpwuid(Process.euid).name, '-t', 'user', 'access_bpf'
+      system '/usr/bin/sudo', '-E', '--',
+             '/usr/sbin/dseditgroup', '-o', 'edit', '-a', Etc.getpwuid(Process.euid).name, '-t', 'user', 'access_bpf'
     end
   end
 
