@@ -14,6 +14,7 @@ $:.push(lib_path)
 
 # add homebrew to load path
 homebrew_path = Pathname(`brew --prefix`.chomp)
+homebrew_path = Pathname('/usr/local') unless homebrew_path.exist?
 $:.push(homebrew_path.join('Library', 'Homebrew'))
 
 # require homebrew testing env
