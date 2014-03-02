@@ -1,5 +1,22 @@
 # CHANGELOG
 
+## 0.30.1
+
+* __Casks__
+ - 1 Cask added (16 updated) by 3 contributors since 0.30.0
+ - 1261 total Casks
+* __Features__
+* __Fixes__
+ - [#3335][] test if `lsar` is nil before attempting `split`
+ - [#3327][] devscripts: add new maintainers
+ - [#3324][] remove constant `HOMEBREW_TAP_FORMULA_REGEX`
+* __Documentation__
+* __Breaking Changes__
+
+[#3335]: https://github.com/phinze/homebrew-cask/issues/3335
+[#3327]: https://github.com/phinze/homebrew-cask/issues/3327
+[#3324]: https://github.com/phinze/homebrew-cask/issues/3324
+
 ## 0.30.0
 
 * __Casks__
