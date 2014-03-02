@@ -9,6 +9,8 @@ class BrewCask < Formula
 
   head 'https://github.com/phinze/homebrew-cask.git', :branch => 'master'
 
+  depends_on 'unar'
+
   skip_clean 'bin'
 
   def install
