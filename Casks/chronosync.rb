@@ -4,4 +4,5 @@ class Chronosync < Cask
   version 'latest'
   no_checksum
   install 'Install.pkg'
+  uninstall :pkgutil => 'com.econtechnologies.pkg.ChronoSyncApplication'
 end
