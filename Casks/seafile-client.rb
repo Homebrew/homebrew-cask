@@ -1,4 +1,4 @@
-class Seafile < Cask
+class SeafileClient < Cask
   url 'https://seacloud.cc/group/3/file/d/seafile-client-2.1.1.dmg'
   homepage 'http://seafile.com/'
   version '2.1.1'
