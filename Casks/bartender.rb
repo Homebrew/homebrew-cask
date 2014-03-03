@@ -7,6 +7,6 @@ class Bartender < Cask
 
   after_install do
     # Don't ask to move the app bundle to /Applications
-    system 'defaults write com.surteesstudios.Bartender moveToApplicationsFolderAlertSuppress -bool true'
+    system '/usr/bin/defaults', 'write', 'com.surteesstudios.Bartender', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
 end

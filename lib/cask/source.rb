@@ -2,7 +2,9 @@ module Cask::Source; end
 
 require 'cask/source/gone'
 require 'cask/source/path'
-require 'cask/source/tap'
+require 'cask/source/tapped_qualified'
+require 'cask/source/untapped_qualified'
+require 'cask/source/tapped'
 require 'cask/source/uri'
 
 module Cask::Source
@@ -10,14 +12,21 @@ module Cask::Source
     [
       Cask::Source::URI,
       Cask::Source::Path,
-      Cask::Source::Tap,
+      Cask::Source::TappedQualified,
+      Cask::Source::UntappedQualified,
+      Cask::Source::Tapped,
       Cask::Source::Gone,
     ]
   end
 
   def self.for_query(query)
-    source = sources.find { |s| s.me?(query) }
+    odebug "Translating '#{query}' into a valid Cask source"
+    source = sources.find do |s|
+      odebug "Testing source class #{s}"
+      s.me?(query)
+    end
     raise CaskUnavailableError.new(query) unless source
+    odebug "Using source class #{source}"
     source.new(query)
   end
 end

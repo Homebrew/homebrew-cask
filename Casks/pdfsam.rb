@@ -2,6 +2,6 @@ class Pdfsam < Cask
   url 'http://downloads.sourceforge.net/project/pdfsam/pdfsam/2.2.2/pdfsam-2.2.2.dmg'
   homepage 'http://www.pdfsam.org/'
   version '2.2.2'
-  sha1 '19cce2d4a16813ac65fb2de50416d1a9da645f28'
+  sha256 '235635231c0e2428e9da1b126075d4cafe6b43625645350ff1491033dfc461a8'
   link 'pdfsam.app'
 end

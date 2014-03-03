@@ -1,6 +1,7 @@
+require 'pathname'
 require 'formula'
 
-HOMEBREW_CASK_VERSION = '0.25.0'
+require Pathname(__FILE__).realpath.dirname.join('lib', 'cask', 'version')
 
 class BrewCask < Formula
   homepage 'https://github.com/phinze/homebrew-cask/'
@@ -11,6 +12,7 @@ class BrewCask < Formula
   skip_clean 'bin'
 
   def install
+    man1.install 'doc/man/brew-cask.1'
     prefix.install 'lib' => 'rubylib'
     inreplace 'bin/brew-cask.rb', '/lib', '/rubylib'
 

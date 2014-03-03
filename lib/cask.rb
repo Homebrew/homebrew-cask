@@ -2,12 +2,15 @@ HOMEBREW_CACHE_CASKS = HOMEBREW_CACHE.join('Casks')
 
 class Cask; end
 
+require 'download_strategy'
+
 require 'cask/artifact'
 require 'cask/audit'
 require 'cask/auditor'
 require 'cask/without_source'
 require 'cask/checkable'
 require 'cask/cli'
+require 'cask/caveats'
 require 'cask/container'
 require 'cask/download'
 require 'cask/download_strategy'
@@ -17,13 +20,17 @@ require 'cask/fetcher'
 require 'cask/installer'
 require 'cask/link_checker'
 require 'cask/locations'
+require 'cask/options'
 require 'cask/pkg'
 require 'cask/pretty_listing'
+require 'cask/qualified_cask_name'
 require 'cask/scopes'
 require 'cask/source'
 require 'cask/system_command'
 require 'cask/underscore_supporting_uri'
 require 'cask/url'
+require 'cask/utils'
+require 'cask/version'
 
 require 'plist/parser'
 
@@ -31,23 +38,31 @@ class Cask
   include Cask::DSL
   include Cask::Locations
   include Cask::Scopes
+  include Cask::Options
 
   def self.init
+    odebug 'Creating directories'
     HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?
+    HOMEBREW_CACHE_CASKS.mkpath unless HOMEBREW_CACHE_CASKS.exist?
     unless caskroom.exist?
       ohai "We need to make Caskroom for the first time at #{caskroom}"
       ohai "We'll set permissions properly so we won't need sudo in the future"
-      current_user = ENV['USER']
-      sudo = 'sudo' unless caskroom.parent.writable?
-      system "#{sudo} mkdir -p #{caskroom}"
-      system "#{sudo} chown -R #{current_user}:staff #{caskroom.parent}"
+      current_user = Etc.getpwuid(Process.euid).name
+      if caskroom.parent.writable?
+        system '/bin/mkdir', caskroom
+      else
+        # sudo in system is rude.
+        system '/usr/bin/sudo', '--', '/bin/mkdir', '-p', '--', caskroom
+        system '/usr/bin/sudo', '--', '/usr/sbin/chown', '-R', '--', "#{current_user}:staff", caskroom.parent
+      end
     end
-    appdir.mkpath unless appdir.exist?
-    qlplugindir.mkpath unless qlplugindir.exist?
   end
 
   def self.load(query)
-    Cask::Source.for_query(query).load
+    odebug 'Loading Cask definitions'
+    cask = Cask::Source.for_query(query).load
+    odumpcask cask
+    cask
   end
 
   def self.title

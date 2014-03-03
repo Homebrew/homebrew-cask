@@ -1,7 +1,7 @@
 class Goagentx < Cask
-  url 'https://goagentx.googlecode.com/files/GoAgentX-v2.2.2.dmg'
+  url 'https://goagentx.googlecode.com/files/GoAgentX-v2.2.9.dmg'
   homepage 'http://goagentx.com/'
-  version '2.2.0'
-  sha1 'bdd5eea305950f7af97d317df96921544d1c505a'
+  version '2.2.9'
+  sha256 '5c47d4f0a4f5f5707ec95e73659db52e757c144af39c2a61ad19cf9cb19535c2'
   link 'GoAgentX.app'
 end

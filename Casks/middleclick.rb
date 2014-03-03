@@ -1,16 +1,13 @@
 class Middleclick < Cask
-  url 'http://clement.beffa.org/labs/downloads/MiddleClick-maverick.zip'
+  if MacOS.version == :snowleopard or MacOS.version == :lion
+    url 'http://clement.beffa.org/labs/downloads/MiddleClick.zip'
+  elsif MacOS.version == :mountainlion
+    url 'http://clement.beffa.org/labs/downloads/MiddleClick_ml.zip'
+  else
+    url 'http://clement.beffa.org/labs/downloads/MiddleClick-maverick.zip'
+  end
   homepage 'http://clement.beffa.org/labs/projects/middleclick'
   version 'latest'
   no_checksum
   link 'MiddleClick.app'
-
-  def caveats; <<-EOS.undent
-    This cask requires OS X 10.9 Mavericks for the installed application to
-    function correctly. 
-
-    Casks for installing this application under older versions of OS X, Mountain 
-    Lion and Snow Leopard, can be found in caskroom/homebrew-versions.
-    EOS
-  end
 end

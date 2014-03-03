@@ -7,6 +7,6 @@ class PathFinder < Cask
 
   after_install do
     # Don't ask to move the app bundle to /Applications
-    system 'defaults write com.cocoatech.PathFinder kNTMoveToApplicationsFolderAlertSuppress -bool true'
+    system '/usr/bin/defaults', 'write', 'com.cocoatech.PathFinder', 'kNTMoveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
 end

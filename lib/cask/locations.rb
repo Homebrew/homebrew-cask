@@ -72,6 +72,30 @@ module Cask::Locations
       @servicedir = _servicedir
     end
 
+    def binarydir
+      @binarydir ||= Pathname.new('/usr/local/bin').expand_path
+    end
+
+    def binarydir=(_binarydir)
+      @binarydir = _binarydir
+    end
+
+    def input_methoddir
+      @input_methoddir ||= Pathname.new('~/Library/Input Methods').expand_path
+    end
+
+    def input_methoddir=(_input_methoddir)
+      @input_methoddir = _input_methoddir
+    end
+
+    def screen_saverdir
+      @screen_saverdir ||= Pathname.new('~/Library/Screen Savers').expand_path
+    end
+
+    def screen_saverdir=(_screen_saverdir)
+      @screen_saverdir = _screen_saverdir
+    end
+
     def default_tap
       @default_tap ||= 'phinze-cask'
     end

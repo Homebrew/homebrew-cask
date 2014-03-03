@@ -1,7 +1,7 @@
 require 'test_helper'
 
 def fake_alfred_preference(key, response)
-  Cask::FakeSystemCommand.stubs_command("/usr/bin/defaults read com.runningwithcrayons.Alfred-Preferences #{key} 2>&1", response)
+  Cask::FakeSystemCommand.stubs_command(['/usr/bin/defaults', 'read', 'com.runningwithcrayons.Alfred-Preferences', key], response)
 end
 
 def fake_alfred_installed(installed=true)
@@ -22,7 +22,7 @@ describe Cask::CLI::Alfred do
 
       TestHelper.must_output(self, lambda {
         Cask::CLI::Alfred.run('status', Cask::FakeSystemCommand)
-      }, "Warning: Could not find Alfred preferences, Alfred is probably not installed.")
+      }, "Warning: Could not find Alfred 2 preferences, Alfred 2 is probably not installed.")
     end
 
     it "properly reports when alfred is installed but unlinked" do
@@ -48,7 +48,7 @@ describe Cask::CLI::Alfred do
 
       TestHelper.must_output(self, lambda {
         Cask::CLI::Alfred.run('link', Cask::FakeSystemCommand)
-      }, "Warning: Could not find Alfred preferences, Alfred is probably not installed.")
+      }, "Warning: Could not find Alfred 2 preferences, Alfred 2 is probably not installed.")
     end
 
     it "warns when alfred is already linked" do
@@ -78,7 +78,7 @@ describe Cask::CLI::Alfred do
       SCOPE_RESPONSE
 
       Cask::FakeSystemCommand.stubs_command(
-        %Q(/usr/bin/defaults write com.runningwithcrayons.Alfred-Preferences features.defaultresults.scope "('/Applications','/Library/PreferencePanes','/System/Library/PreferencePanes','#{Cask.caskroom}')" 2>&1)
+        ['/usr/bin/defaults', 'write', 'com.runningwithcrayons.Alfred-Preferences', 'features.defaultresults.scope', %Q{('/Applications','/Library/PreferencePanes','/System/Library/PreferencePanes','#{Cask.caskroom}')}]
       )
 
       TestHelper.must_output(self, lambda {
@@ -95,7 +95,7 @@ describe Cask::CLI::Alfred do
 
       expected_scopes = (Cask::CLI::Alfred::DEFAULT_SCOPES + [Cask.caskroom]).map { |s| "'#{s}'" }
       Cask::FakeSystemCommand.stubs_command(
-        %Q(/usr/bin/defaults write com.runningwithcrayons.Alfred-Preferences features.defaultresults.scope "(#{expected_scopes.join(',')})" 2>&1)
+        ['/usr/bin/defaults', 'write', 'com.runningwithcrayons.Alfred-Preferences', 'features.defaultresults.scope', %Q{(#{expected_scopes.join(',')})}]
       )
 
       TestHelper.must_output(self, lambda {
@@ -110,7 +110,7 @@ describe Cask::CLI::Alfred do
 
       TestHelper.must_output(self, lambda {
         Cask::CLI::Alfred.run('unlink', Cask::FakeSystemCommand)
-      }, "Warning: Could not find Alfred preferences, Alfred is probably not installed.")
+      }, "Warning: Could not find Alfred 2 preferences, Alfred 2 is probably not installed.")
     end
 
     it "warns when alfred is already unlinked" do
@@ -140,7 +140,7 @@ describe Cask::CLI::Alfred do
       SCOPE_RESPONSE
 
       Cask::FakeSystemCommand.stubs_command(
-        %Q(/usr/bin/defaults write com.runningwithcrayons.Alfred-Preferences features.defaultresults.scope "('/Applications','/Library/PreferencePanes','/System/Library/PreferencePanes')" 2>&1)
+        ['/usr/bin/defaults', 'write', 'com.runningwithcrayons.Alfred-Preferences', 'features.defaultresults.scope', %Q{('/Applications','/Library/PreferencePanes','/System/Library/PreferencePanes')}]
       )
 
       TestHelper.must_output(self, lambda {

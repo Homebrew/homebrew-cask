@@ -2,7 +2,7 @@ class NetbeansPhp < Cask
   url 'http://download.netbeans.org/netbeans/7.4/final/bundles/netbeans-7.4-php-macosx.dmg'
   homepage 'https://netbeans.org/'
   version '7.4'
-  sha1 '0d1e95a7038302f0fe2b49778d399810edc6651e'
+  sha256 '200f54223f82d7717f9c7c9484da8d92a94f2ca9bfa0139029a514b106c5f2a7'
   install 'NetBeans 7.4.mpkg'
   # Theoretically this uninstall could conflict with a separate GlassFish
   # installation.

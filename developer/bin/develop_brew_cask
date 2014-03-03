@@ -1,0 +1,129 @@
+#!/bin/bash
+#
+# develop_brew_cask
+#
+
+###
+### settings
+###
+
+set -e               # exit on any uncaught error
+set +o histexpand    # don't expand history expressions
+shopt -s nocasematch # case-insensitive regular expressions
+
+###
+### configurable global variables
+###
+
+tap_subdir="Library/Taps/phinze-cask"
+
+###
+### functions
+###
+
+warn () {
+    local message="$@"
+    if ! [[ $message =~ "\n"$ ]]; then
+        message="${message}\n"
+    fi
+    printf "$message" 1>&2
+}
+
+die () {
+    warn "$@"
+    exit 1
+}
+
+cd_to_project_root () {
+    local script_dir="$(/usr/bin/dirname "$0")"
+    cd "$script_dir"
+    local git_root="$(git rev-parse --show-toplevel)"
+    if [[ -z "$git_root" ]]; then
+        die "ERROR: Could not find git project root"
+    fi
+    cd "$git_root"
+}
+
+cd_to_version_dir () {
+    local cellar_dir="$1"
+    local version_dir="$2"
+    if [[ -z "$version_dir" ]]; then
+        die "ERROR: Could not find version dir under $cellar_dir/"
+    fi
+    cd "$cellar_dir/$version_dir"
+}
+
+not_inside_homebrew () {
+    local tap_dir="$1"
+    local git_root="$2"
+    if [[ "$(/usr/bin/stat -L -f '%i' -- "$tap_dir")" -eq "$(/usr/bin/stat -L -f '%i' -- "$git_root")" ]]; then
+        die "\nERROR: Run this script in your private repo, not inside Homebrew.\n"
+    fi
+}
+
+create_dev_links () {
+    local tap_dir="$1"
+    local git_root="$2"
+    /bin/mv -- rubylib production_rubylib
+    /bin/mv -- Casks   production_Casks
+    /bin/ln -s -- "$git_root/Casks" .
+    /bin/ln -s -- "$git_root/lib"   rubylib
+    cd "$tap_dir"
+    /bin/mv -- lib   production_lib
+    /bin/mv -- Casks production_Casks
+    /bin/ln -s -- "$git_root/Casks" .
+    /bin/ln -s -- "$git_root/lib"   .
+    printf "brew-cask is now in development mode\n"
+    printf "Note: it is not safe to run 'brew update' while in development mode\n"
+}
+
+###
+### main
+###
+
+_develop_brew_cask () {
+
+    # initialization
+    cd_to_project_root
+    local git_root="$(/bin/pwd)"
+    local brew_prefix="$(brew --prefix)"
+    local cellar_dir="$brew_prefix/Cellar/brew-cask"
+    local version_dir="$(/bin/ls -- "$cellar_dir/" | /usr/bin/sort | /usr/bin/tail -1)"
+    local tap_dir="$brew_prefix/$tap_subdir"
+
+    # sanity check
+    not_inside_homebrew "$tap_dir" "$git_root"
+
+    # action
+    cd_to_version_dir "$cellar_dir" "$version_dir"
+    if [[ -e "production_rubylib" ]]; then
+        die "brew-cask is already set up for development"
+    else
+        create_dev_links "$tap_dir" "$git_root"
+    fi
+
+}
+
+# process args
+if [[ $1 =~ ^-+h(elp)?$ ]]; then
+    printf "develop_brew_cask
+
+Symlink private repo directories into Homebrew's Cellar, so
+that the 'brew cask' command will use code and Casks from
+the current development branch in your private repo.
+
+Saves the production Homebrew directories under new names.
+
+You can reverse this operation with 'production_brew_cask'.
+
+Note: it is not safe to run 'brew update' while development
+mode is in effect.
+
+"
+    exit
+fi
+
+# dispatch main
+_develop_brew_cask "${@}"
+
+#

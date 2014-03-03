@@ -8,16 +8,14 @@ describe Cask::DSL do
     test_cask.version.must_equal '1.2.3'
   end
 
-  it "lets you set checksum via sha1, sha256, and/or md5" do
+  it "lets you set checksum via sha1 and/or sha256" do
     ChecksumCask = Class.new(Cask)
     ChecksumCask.class_eval do
-      md5 'imamd5'
       sha1 'imasha1'
       sha256 'imasha2'
     end
     instance = ChecksumCask.new
     instance.sums.must_equal [
-      Checksum.new(:md5, 'imamd5'),
       Checksum.new(:sha1, 'imasha1'),
       Checksum.new(:sha2, 'imasha2')
     ]
@@ -52,7 +50,7 @@ describe Cask::DSL do
     end
 
     instance = CaskWithLinkables.new
-    Array(instance.artifacts[:link]).sort.must_equal %w[Bar.app Foo.app]
+    Array(instance.artifacts[:link]).sort.must_equal [['Bar.app'], ['Foo.app']]
   end
 
   it "allow linkables to be set to empty" do
@@ -90,6 +88,41 @@ describe Cask::DSL do
     end
 
     instance = CaskWithInstallables.new
-    Array(instance.artifacts[:install]).sort.must_equal %w[Bar.pkg Foo.pkg]
+    Array(instance.artifacts[:install]).sort.must_equal [['Bar.pkg'], ['Foo.pkg']]
+  end
+
+  it "prevents defining multiple urls" do
+    err = lambda {
+      invalid_cask = Cask.load('invalid/invalid-two-url')
+    }.must_raise(CaskInvalidError)
+    err.message.must_include "'url' stanza may only appear once"
+  end
+
+  it "prevents defining multiple homepages" do
+    err = lambda {
+      invalid_cask = Cask.load('invalid/invalid-two-homepage')
+    }.must_raise(CaskInvalidError)
+    err.message.must_include "'homepage' stanza may only appear once"
+  end
+
+  it "prevents defining multiple versions" do
+    err = lambda {
+      invalid_cask = Cask.load('invalid/invalid-two-version')
+    }.must_raise(CaskInvalidError)
+    err.message.must_include "'version' stanza may only appear once"
+  end
+
+  it "prevents defining conflicting checksums (first order)" do
+    err = lambda {
+      invalid_cask = Cask.load('invalid/invalid-checksum-conflict1')
+    }.must_raise(CaskInvalidError)
+    err.message.must_include "'no_checksum' stanza conflicts with"
+  end
+
+  it "prevents defining conflicting checksums (second order)" do
+    err = lambda {
+      invalid_cask = Cask.load('invalid/invalid-checksum-conflict2')
+    }.must_raise(CaskInvalidError)
+    err.message.must_include "'no_checksum' stanza conflicts with"
   end
 end

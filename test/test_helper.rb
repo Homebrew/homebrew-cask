@@ -1,6 +1,8 @@
 require 'bundler'
 require 'bundler/setup'
 
+# set some Homebrew constants used in our code
+HOMEBREW_BREW_FILE = '/usr/local/bin/brew'
 
 # add cask lib to load path
 brew_cask_path = Pathname.new(File.expand_path(__FILE__+'/../../'))
@@ -11,6 +13,7 @@ $:.push(lib_path)
 
 # add homebrew to load path
 homebrew_path = Pathname(`brew --prefix`.chomp)
+homebrew_path = Pathname('/usr/local') unless homebrew_path.exist?
 $:.push(homebrew_path.join('Library', 'Homebrew'))
 
 # require homebrew testing env
@@ -18,6 +21,7 @@ require 'test/testing_env'
 
 # making homebrew's cache dir allows us to actually download casks in tests
 HOMEBREW_CACHE.mkpath
+HOMEBREW_CACHE.join('Casks').mkpath
 
 # must be called after testing_env so at_exit hooks are in proper order
 require 'minitest/autorun'
@@ -93,12 +97,19 @@ require 'tempfile'
 project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
 taps_dest = HOMEBREW_LIBRARY/"Taps"
 
+# create directories
 taps_dest.mkdir
+HOMEBREW_PREFIX.join('bin').mkdir
 
 FileUtils.ln_s project_root, taps_dest/"phinze-cask"
 
 # Common superclass for tests casks for when we need to filter them out
 class TestCask < Cask; end
+
+# jack in some optional utilities
+FileUtils.ln_s '/usr/local/bin/cabextract', HOMEBREW_PREFIX.join('bin/cabextract')
+FileUtils.ln_s '/usr/local/bin/unar', HOMEBREW_PREFIX.join('bin/unar')
+FileUtils.ln_s '/usr/local/bin/lsar', HOMEBREW_PREFIX.join('bin/lsar')
 
 # also jack in some test casks
 FileUtils.ln_s project_root/'test'/'support', taps_dest/"phinze-testcasks"

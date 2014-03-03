@@ -8,11 +8,10 @@ class Cask::Container::Naked < Cask::Container::Base
   end
 
   def extract
-    @command.run!('/usr/bin/ditto', :args => [@path, @cask.destination_path.join(target_file)])
+    @command.run!('/usr/bin/ditto', :args => ['--', @path, @cask.destination_path.join(target_file)])
   end
 
   def target_file
     URI.decode(File.basename(@cask.url.path))
   end
 end
-

@@ -1,7 +1,7 @@
 class Inboard < Cask
-  url 'http://dl.devmate.com/com.ideabits.Inboard/182/1382731593/Inboard-182.dmg'
+  url 'http://dl.devmate.com/com.ideabits.Inboard/184/1390822305/Inboard-184.dmg'
   homepage 'http://inboardapp.com/beta'
-  version '182'
-  sha1 '2deb28e3688abd23ef9ecd4f3467c65cefef4de1'
+  version '184'
+  sha256 '3bb602cde63f0b3401fc681cd50a3545c5a47c2326ea81cf66844039fb100522'
   link 'Inboard.app'
 end

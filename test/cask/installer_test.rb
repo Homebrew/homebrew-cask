@@ -41,6 +41,91 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
+    it "works with cab-based casks" do
+      skip unless HOMEBREW_PREFIX.join('bin/cabextract').exist?
+      cab_container = Cask.load('cab-container')
+      cab_container.stubs(:depends_on_formula).returns([])
+
+      shutup do
+        Cask::Installer.new(cab_container).install
+      end
+
+      dest_path = Cask.caskroom/'cab-container'/cab_container.version
+      dest_path.must_be :directory?
+      application = dest_path/'cabcontainer/Application.app'
+      application.must_be :directory?
+    end
+
+    it "works with Adobe AIR-based Casks" do
+      skip unless Pathname('/Applications/Utilities/Adobe AIR Application Installer.app/Contents/MacOS/Adobe AIR Application Installer').exist?
+      air_container = Cask.load('adobe-air-container')
+      shutup do
+        Cask::Installer.new(air_container).install
+      end
+      dest_path = Cask.caskroom/'adobe-air-container'/air_container.version
+      dest_path.must_be :directory?
+      application = dest_path/'GMDesk.app'
+      application.must_be :directory?
+    end
+
+    it "works with 7z-based casks" do
+      skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
+      sevenzip_container = Cask.load('sevenzip-container')
+      sevenzip_container.stubs(:depends_on_formula).returns([])
+
+      shutup do
+        Cask::Installer.new(sevenzip_container).install
+      end
+
+      dest_path = Cask.caskroom/'sevenzip-container'/sevenzip_container.version
+      dest_path.must_be :directory?
+      application = dest_path/'sevenzipcontainer/Application.app'
+      application.must_be :directory?
+    end
+
+    it "works with Stuffit-based Casks" do
+      skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
+      stuffit_container = Cask.load('stuffit-container')
+      stuffit_container.stubs(:depends_on_formula).returns([])
+
+      shutup do
+        Cask::Installer.new(stuffit_container).install
+      end
+
+      dest_path = Cask.caskroom/'stuffit-container'/stuffit_container.version
+      dest_path.must_be :directory?
+      application = dest_path/'sheldonmac/v1.0'
+      application.must_be :directory?
+    end
+
+    it "works with RAR-based casks" do
+      skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
+      rar_container = Cask.load('rar-container')
+      rar_container.stubs(:depends_on_formula).returns([])
+
+      shutup do
+        Cask::Installer.new(rar_container).install
+      end
+
+      dest_path = Cask.caskroom/'rar-container'/rar_container.version
+      dest_path.must_be :directory?
+      application = dest_path/'rarcontainer/Application.app'
+      application.must_be :directory?
+    end
+
+    it "works with bz2-based casks" do
+      asset = Cask.load('bzipped-asset')
+
+      shutup do
+        Cask::Installer.new(asset).install
+      end
+
+      dest_path = Cask.caskroom/'bzipped-asset'/asset.version
+      dest_path.must_be :directory?
+      file = dest_path/"bzipped-asset-#{asset.version}"
+      file.must_be :file?
+    end
+
     it "blows up on a bad checksum" do
       bad_checksum = Cask.load('bad-checksum')
       lambda {
@@ -115,6 +200,18 @@ describe Cask::Installer do
       dest_path = Cask.caskroom/'naked-pkg'/naked_pkg.version
       pkg = dest_path/'Naked.pkg'
       pkg.must_be :file?
+    end
+
+    it "works properly with an overridden container_type" do
+      naked_executable = Cask.load('naked-executable')
+
+      shutup do
+        Cask::Installer.new(naked_executable).install
+      end
+
+      dest_path = Cask.caskroom/'naked-executable'/naked_executable.version
+      executable = dest_path/'naked_executable'
+      executable.must_be :file?
     end
 
     it "works fine with a nested container" do

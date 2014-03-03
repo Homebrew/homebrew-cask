@@ -7,6 +7,6 @@ class FLux < Cask
 
   after_install do
     # Don't ask to move the app bundle to /Applications
-    system 'defaults write org.herf.Flux moveToApplicationsFolderAlertSuppress -bool true'
+    system '/usr/bin/defaults', 'write', 'org.herf.Flux', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
 end

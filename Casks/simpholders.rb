@@ -1,7 +1,7 @@
 class Simpholders < Cask
-  url 'http://simpholders.com/site/assets/files/1016/simpholders-1_2_0.dmg'
-  homepage 'http://simpholders.com'
-  version '1.2.0'
-  sha1 '07a573f89133195e2adcd150259c552aa869e544'
-  link 'Simpholders.app'
+  url 'http://simpholders.com/site/assets/files/1007/simpholders-1_5_0.dmg'
+  homepage 'http://simpholders.com/'
+  version '1.5.0'
+  sha256 '2f4fb58a20d94a858c4d53648ee37fd082e23f50ef3f367fbaef4d6cea840cd6'
+  link 'SimPholders.app'
 end

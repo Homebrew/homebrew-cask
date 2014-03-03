@@ -2,11 +2,10 @@ class Cask::CLI::Info
   def self.run(*cask_names)
     raise CaskUnspecifiedError if cask_names.empty?
     cask_names.each do |cask_name|
+      odebug "Getting info for Cask #{cask_name}"
       cask = Cask.load(cask_name)
       puts info(cask)
-      unless cask.caveats.empty?
-        ohai "Caveats", cask.caveats
-      end
+      Cask::Installer.print_caveats(cask)
     end
   end
 
@@ -16,7 +15,7 @@ class Cask::CLI::Info
 
   def self.info(cask)
     installation = if cask.installed?
-                     "#{cask.destination_path} (#{cask.destination_path.abv})"
+                     "#{cask.destination_path} (#{cask.destination_path.cabv})"
                    else
                      "Not installed"
                    end

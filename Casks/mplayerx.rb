@@ -1,7 +1,7 @@
 class Mplayerx < Cask
-  url 'http://mplayerx.googlecode.com/files/MPlayerX-1.0.20.zip'
+  url 'https://downloads.sourceforge.net/project/mplayerx-osx/MPlayerX-1.0.22.zip'
   homepage 'http://mplayerx.org/'
-  version '1.0.20'
-  sha1 '6282abda7938a6737769a582b41a48a91e1fcc67'
+  version '1.0.22'
+  sha256 '047759fdd76abee111832e62c871381804f97b29381bb4c4940e89c5b7d84fe9'
   link 'MPlayerX.app'
 end

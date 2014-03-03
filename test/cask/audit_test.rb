@@ -33,6 +33,10 @@ class CaskSourceForgeOtherCorrectURLFormat < Cask
   url 'http://sourceforge.net/projects/something/files/latest/download'
 end
 
+class CaskVersionLatestWithChecksum < Cask
+  version 'latest'
+  sha1 '123456'
+end
 
 describe Cask::Audit do
   describe "result" do
@@ -73,6 +77,12 @@ describe Cask::Audit do
         audit = Cask::Audit.new(CaskMissingHomepage.new)
         audit.run!
         audit.errors.must_include 'homepage is required'
+      end
+
+      it "adds an error if version is latest and using sha1" do
+        audit = Cask::Audit.new(CaskVersionLatestWithChecksum.new)
+        audit.run!
+        audit.errors.must_include 'you should use no_checksum when version is latest'
       end
     end
 

@@ -3,5 +3,5 @@ class Crushftp < Cask
   homepage 'https://www.crushftp.com'
   version 'latest'
   no_checksum
-  link 'CrushFTP6_OSX'
+  link 'CrushFTP6_OSX/CrushFTP6.app'
 end

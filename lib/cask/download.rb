@@ -5,13 +5,23 @@ class Cask::Download
     @cask = cask
   end
 
-  def perform
+  def perform(force=false)
     require 'software_spec'
     cask = @cask
-    downloader = Cask::DownloadStrategy.new(cask)
+    if cask.url.using == :svn
+      downloader = Cask::SubversionDownloadStrategy.new(cask)
+    else
+      downloader = Cask::CurlDownloadStrategy.new(cask)
+    end
+    downloader.clear_cache if force
     downloaded_path = downloader.fetch
-
-    _check_sums(downloaded_path, cask.sums) unless cask.sums === 0
+    begin
+      # this symlink helps track which downloads are ours
+      File.symlink downloaded_path,
+                   HOMEBREW_CACHE_CASKS.join(downloaded_path.basename)
+    rescue
+    end
+    _check_sums(downloaded_path, cask.sums) unless cask.sums === :no_check
     downloaded_path
   end
 
@@ -21,10 +31,14 @@ class Cask::Download
     sums.each do |sum|
       unless sum.empty?
         computed = Checksum.new(sum.hash_type, Digest.const_get(sum.hash_type.to_s.upcase).file(path).hexdigest)
-        raise ChecksumMismatchError.new(sum, computed) unless sum == computed
+        if sum == computed
+          odebug "Checksums match"
+        else
+          raise ChecksumMismatchError.new(path, sum, computed)
+        end
         has_sum = true
       end
     end
-    raise ChecksumMissingError.new("Checksum required. SHA1: '#{Digest::SHA1.file(path).hexdigest}'") unless has_sum
+    raise ChecksumMissingError.new("Checksum required: sha256 '#{Digest::SHA256.file(path).hexdigest}'") unless has_sum
   end
 end

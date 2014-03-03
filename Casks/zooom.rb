@@ -2,6 +2,9 @@ class Zooom < Cask
   url 'http://software.coderage-software.com/zooom/Zooom_2.5.0.dmg'
   homepage 'http://coderage-software.com/zooom'
   version '2.5.0'
-  sha1 '1fa66ef73e7005b368bc4c21e37ae676ed7bc1f5'
+  sha256 '944d8c6f0869963ea0c0b11491d05eaa4357953072c43519f674fa81216e9e34'
   install 'Zooom2.pkg'
+  caveats do
+    os_version_only '10.8', '10.7', '10.6', '10.5'
+  end
 end

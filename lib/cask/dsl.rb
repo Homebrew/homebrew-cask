@@ -10,47 +10,107 @@ module Cask::DSL
 
   def url; self.class.url; end
 
+  def appcast; self.class.appcast; end
+
   def version; self.class.version; end
+
+  def depends_on_formula; self.class.depends_on_formula; end
+
+  def container_type; self.class.container_type; end
 
   def sums; self.class.sums || []; end
 
   def artifacts; self.class.artifacts; end
 
-  def caveats; ''; end
+  def caveats; self.class.caveats; end
 
   module ClassMethods
     def homepage(homepage=nil)
+      if @homepage and !homepage.nil?
+        raise CaskInvalidError.new(self.title, "'homepage' stanza may only appear once")
+      end
       @homepage ||= homepage
     end
 
     def url(*args)
+      if @url and !args.empty?
+        raise CaskInvalidError.new(self.title, "'url' stanza may only appear once")
+      end
       @url ||= begin
         Cask::URL.new(*args) unless args.empty?
       end
     end
 
+    def appcast(*args)
+      if @appcast and !args.empty?
+        raise CaskInvalidError.new(self.title, "'appcast' stanza may only appear once")
+      end
+      @appcast ||= begin
+        Cask::UnderscoreSupportingURI.parse(*args) unless args.empty?
+      end
+    end
+
+    def container_type(type=nil)
+      if @container_type and !type.nil?
+        raise CaskInvalidError.new(self.title, "'container_type' stanza may only appear once")
+      end
+      @container_type ||= type
+    end
+
     def version(version=nil)
+      if @version and !version.nil?
+        raise CaskInvalidError.new(self.title, "'version' stanza may only appear once")
+      end
       @version ||= version
+    end
+
+    def depends_on_formula(*args)
+      @depends_on_formula ||= args
     end
 
     def artifacts
       @artifacts ||= Hash.new { |hash, key| hash[key] = Set.new }
     end
 
+    def caveats(*string, &block)
+      @caveats ||= []
+      if block_given?
+        @caveats << Cask::Caveats.new(block)
+      elsif string.any?
+        @caveats << string.map{ |s| s.to_s.sub(/[\r\n \t]*\Z/, "\n\n") }
+      else
+        # accessor
+        @caveats
+      end
+    end
+
     ARTIFACT_TYPES = [
-      :install,
       :link,
-      :nested_container,
       :prefpane,
       :qlplugin,
       :font,
-      :uninstall,
       :widget,
       :service,
       :colorpicker,
+      :binary,
+      :caskroom_only,
+      :input_method,
+      :screen_saver,
+      :install,
     ]
 
     ARTIFACT_TYPES.each do |type|
+      define_method(type) do |*args|
+        artifacts[type] << args
+      end
+    end
+
+    SPECIAL_ARTIFACT_TYPES = [
+      :nested_container,
+      :uninstall
+    ]
+
+    SPECIAL_ARTIFACT_TYPES.each do |type|
       define_method(type) do |*args|
         artifacts[type].merge(args)
       end
@@ -58,7 +118,9 @@ module Cask::DSL
 
     ARTIFACT_BLOCK_TYPES = [
       :after_install,
-      :after_uninstall
+      :after_uninstall,
+      :before_install,
+      :before_uninstall,
     ]
 
     ARTIFACT_BLOCK_TYPES.each do |type|
@@ -69,23 +131,39 @@ module Cask::DSL
 
     attr_reader :sums
 
-    def md5(md5=nil)
-      @sums ||= []
-      @sums << Checksum.new(:md5, md5) unless md5.nil?
+    def hash_name(hash_type)
+      hash_type.to_s == 'sha2' ? 'sha256' : hash_type.to_s
     end
 
     def sha1(sha1=nil)
-      @sums ||= []
-      @sums << Checksum.new(:sha1, sha1) unless sha1.nil?
+      if @sums == :no_check
+        raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'sha1'")
+      end
+      if sha1 == :no_check
+        @sums = sha1
+      else
+        @sums ||= []
+        @sums << Checksum.new(:sha1, sha1) unless sha1.nil?
+      end
     end
 
     def sha256(sha2=nil)
-      @sums ||= []
-      @sums << Checksum.new(:sha2, sha2) unless sha2.nil?
+      if @sums == :no_check
+        raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'sha256'")
+      end
+      if sha2 == :no_check
+        @sums = sha2
+      else
+        @sums ||= []
+        @sums << Checksum.new(:sha2, sha2) unless sha2.nil?
+      end
     end
 
     def no_checksum
-      @sums = 0
+      unless @sums.nil? or @sums.empty?
+        raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with '#{hash_name(@sums.first.hash_type)}'")
+      end
+      @sums = :no_check
     end
 
     def method_missing(method, *args)

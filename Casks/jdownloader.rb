@@ -3,5 +3,8 @@ class Jdownloader < Cask
   homepage 'http://jdownloader.org/'
   version 'latest'
   no_checksum
-  link 'jDownloader.app'
+  caskroom_only true
+  caveats do
+    manual_installer 'JDownloader Installer.app'
+  end
 end

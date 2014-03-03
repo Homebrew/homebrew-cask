@@ -5,4 +5,7 @@ class Basictex < Cask
   no_checksum
   install 'mactex-basic.pkg'
   uninstall :pkgutil => 'org.tug.mactex.basictex2013'
+  caveats do
+    path_environment_variable '/usr/texbin'
+  end
 end

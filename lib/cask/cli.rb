@@ -6,40 +6,75 @@ require 'shellwords'
 require 'cask/cli/alfred'
 require 'cask/cli/audit'
 require 'cask/cli/checklinks'
+require 'cask/cli/cleanup'
 require 'cask/cli/create'
+require 'cask/cli/doctor'
 require 'cask/cli/edit'
+require 'cask/cli/fetch'
 require 'cask/cli/home'
 require 'cask/cli/info'
 require 'cask/cli/install'
 require 'cask/cli/list'
 require 'cask/cli/search'
 require 'cask/cli/uninstall'
+require 'cask/cli/update'
 
 class Cask::CLI
   def self.commands
     Cask::CLI.constants - ["NullCommand"]
   end
 
-  def self.lookup_command(command)
-    if command && Cask::CLI.const_defined?(command.capitalize)
-      Cask::CLI.const_get(command.capitalize)
+  def self.lookup_command(command_string)
+    aliases = {
+               'ls' => 'list',
+               'homepage' => 'home',
+               '-S' => 'search',
+               'up' => 'update',
+               'instal' => 'install', # gem does the same
+               'rm' => 'uninstall',
+               'remove' => 'uninstall',
+               'abv' => 'info',
+               'dr' => 'doctor',
+               # aliases from Homebrew that we don't (yet) support
+               # 'ln' => 'link',
+               # 'configure' => 'diy',
+               # '--repo' => '--repository',
+               # 'environment' => '--env',
+               # '-c1' => '--config',
+              }
+    command_string = aliases[command_string] if aliases.key?(command_string)
+    if command_string && Cask::CLI.const_defined?(command_string.capitalize)
+      Cask::CLI.const_get(command_string.capitalize)
     else
-      Cask::CLI::NullCommand.new(command)
+      command_string
+    end
+  end
+
+  def self.run_command(command, *rest)
+    if command.respond_to?(:run)
+      command.run(*rest)
+    elsif which "brewcask-#{command}"
+      exec "brewcask-#{command}", *ARGV[1..-1]
+    elsif require? which("brewcask-#{command}.rb").to_s
+      exit 0
+    else
+      Cask::CLI::NullCommand.new(command).run
     end
   end
 
   def self.process(arguments)
-    command, *rest = *arguments
+    command_string, *rest = *arguments
     rest = process_options(rest)
     Cask.init
-    lookup_command(command).run(*rest)
+    command = lookup_command(command_string)
+    run_command(command, *rest)
   rescue CaskAlreadyInstalledError => e
     opoo e
-    $stderr.puts e.backtrace if @debug
+    $stderr.puts e.backtrace if Cask.debug
     exit 0
   rescue CaskError => e
     onoe e
-    $stderr.puts e.backtrace if @debug
+    $stderr.puts e.backtrace if Cask.debug
     exit 1
   end
 
@@ -88,8 +123,24 @@ class Cask::CLI
       opts.on("--servicedir=MANDATORY") do |v|
         Cask.servicedir = Pathname(v).expand_path
       end
+      opts.on("--binarydir=MANDATORY") do |v|
+        Cask.binarydir = Pathname(v).expand_path
+      end
+      opts.on("--input_methoddir=MANDATORY") do |v|
+        Cask.input_methoddir = Pathname(v).expand_path
+      end
+      opts.on("--screen_saverdir=MANDATORY") do |v|
+       Cask.screen_saverdir = Pathname(v).expand_path
+      end
+
+      opts.on("--no-binaries") do |v|
+        Cask.no_binaries = true
+      end
       opts.on("--debug") do |v|
-        @debug = true
+        Cask.debug = true
+      end
+      opts.on("--outdated") do |v|
+        Cask.outdated = true
       end
     end
   end
@@ -141,8 +192,11 @@ class Cask::CLI
       ''
     end
 
-    def _help_for(command)
-      Cask::CLI.lookup_command(command).help
+    def _help_for(command_string)
+      command = Cask::CLI.lookup_command(command_string)
+      if command.respond_to?(:help)
+        command.help
+      end
     end
   end
 end
