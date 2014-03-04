@@ -4,4 +4,6 @@ class Eagle < Cask
   version '6.5.0'
   sha256 '902e6f8ebdf0991a7b26a997e66540bf1e2b984b82a683be97fa469b95d35239'
   install 'eagle-6.5.0.pkg'
+  uninstall :pkgutil => 'com.CadSoftComputerGmbH.EAGLE'
+  uninstall :files => '/Applications/EAGLE-6.5.0'
 end
