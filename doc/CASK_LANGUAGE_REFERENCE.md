@@ -296,7 +296,7 @@ is the most useful.
 * `:launchctl` (string or array) - ids of `launchctl` jobs to remove
 * `:quit` (string or array) - bundle ids of running applications to quit
 * `:kext` (string or array) - bundle ids of kexts to unload from the system
-* `:pkgutil` (string or regexp) - regexp matching bundle ids of packages to uninstall using `pkgutil`
+* `:pkgutil` (regexp or array) - regexps matching bundle ids of packages to uninstall using `pkgutil`
 * `:script` (string or hash) - relative path to an uninstall script to be run via sudo; use hash if args are needed
   - `:executable` - relative path to an uninstall script to be run via sudo (required for hash form)
   - `:args` - array of arguments to the uninstall script
