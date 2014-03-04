@@ -171,6 +171,9 @@ We try to maintain consistent naming so everything stays clean and predictable.
   * Pay attention to details, for example: `"Git Hub" != "git_hub" != "GitHub"`
   * If the result of that process is something unhelpful, such as `Macintosh Installer`,
     then just create the best name you can, based on the author's web page.
+  * If the result conflicts with the name of an existing Cask, make yours unique
+    by prepending the name of the vendor or developer, followed by a separator.
+    Example: [unison.rb](../Casks/unison.rb) and [panic-unison.rb](../Casks/panic-unison.rb).
 
 ##### Canonical Names of `pkg`-based Installers
 
@@ -195,7 +198,8 @@ To get from the App's canonical name to the Cask name:
   * delete a leading hyphen
   * a leading digit gets spelled out into English: `1password` becomes `onepassword`
 
-Casks are stored in a Ruby file matching their name.
+Casks are stored in a Ruby file matching their name.  If possible, avoid creating
+Cask files which differ only by the placement of hyphens.
 
 #### Cask Class
 
