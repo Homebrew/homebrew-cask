@@ -7,4 +7,9 @@ class Gpgtools < Cask
   uninstall(
     :pkgutil => 'org.gpgtools.*'
   )
+  after_install do
+    system '/usr/bin/sudo', '-E', '--',
+           '/usr/local/MacGPG2/libexec/fixGpgHome', Etc.getpwuid(Process.euid).name,
+                                                    ENV['GNUPGHOME'] ? ENV['GNUPGHOME'] : "#{ENV['HOME']}/.gnupg"
+  end
 end
