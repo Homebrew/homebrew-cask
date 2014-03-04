@@ -1,7 +1,13 @@
 # Automating with Homebrew Cask
 Homebrew Cask allows you to install several applications at once. Calling `cask install` with multiple arguments works as you would expect:  
-```bash
+```
 brew cask install vagrant virtualbox
+==> Downloading https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg
+==> Running installer for vagrant…
+==> Success! vagrant installed to /opt/homebrew-cask/Caskroom/vagrant/1.4.3
+==> Downloading http://download.virtualbox.org/virtualbox/4.3.8/VirtualBox-4.3.8
+==> Running installer for virtualbox…
+==> Success! virtualbox installed to /opt/homebrew-cask/Caskroom/virtualbox/4.3.8
 ```
 
 However, this approach doesn't scale very well. For large numbers of applications, you want a list that's easy to organize and a way to use it when needed. In Homebrew Cask, the `Caskfile` is one such list, and `brew bundle` is the way to use it.
