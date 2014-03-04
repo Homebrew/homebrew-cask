@@ -1,4 +1,4 @@
-class SecondLife < Cask
+class SecondLifeViewer < Cask
   url 'http://download.cloud.secondlife.com/Viewer_3/Second_Life_3_6_13_284995_i386.dmg'
   homepage 'http://secondlife.com/'
   version '3.6.13.284995'
