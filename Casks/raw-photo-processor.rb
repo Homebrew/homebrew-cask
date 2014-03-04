@@ -1,4 +1,4 @@
-class Rpp < Cask
+class RawPhotoProcessor < Cask
   url 'http://www.raw-photo-processor.com/RPP/RPP_64.zip'
   homepage 'http://www.raw-photo-processor.com/RPP/Overview.html'
   version '4.7.2'
