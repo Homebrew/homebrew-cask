@@ -3,6 +3,6 @@ class RawPhotoProcessor < Cask
   homepage 'http://www.raw-photo-processor.com/RPP/Overview.html'
   version '4.7.2'
   nested_container 'RPP472_1672_64.dmg'
-  sha1 '2896f0d15f1a9252f8545dc50f0c4ef5ea0e7935'
+  sha256 'ce003b7c78916baaf51b39e26633f9ac069e78b7e5bf8904b966c4c409c06f39'
   link 'Raw Photo Processor 64.app'
 end
