@@ -1,7 +1,7 @@
 class Opera < Cask
-  url 'http://get.geo.opera.com/pub/opera/desktop/19.0.1326.47/mac/Opera_19.0.1326.47_Setup.dmg'
+  url 'http://get.geo.opera.com/pub/opera/desktop/20.0.1387.64/mac/Opera_20.0.1387.64_Setup.dmg'
   homepage 'http://www.opera.com/'
-  version '19.0.1326.47'
-  sha1 '9732e4c26c62f3ce3f6b0b46a32cb699d45e9230'
+  version '20.0.1387.64'
+  sha256 '80763ee213a60debacbb9665e2a96a30f1592e925e4eb032806a4ac37c250148'
   link 'Opera.app'
 end
