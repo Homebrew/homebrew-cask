@@ -1,7 +1,7 @@
 class Identify < Cask
-  url 'https://www.macupdate.com/download/33814/iDentifyLite532.zip'
+  url 'https://www.macupdate.com/download/33814/iDentifyLite545.zip'
   homepage 'http://identify2.arrmihardies.com/'
-  version '532'
-  sha1 'cf1ce8abc5f3c2cc545177d40e0a3615e74150fc'
+  version '545'
+  sha256 'e850d12335befe8c092b8758f0ca1b26cb7f0c1decda98e5ef0525b3a37fb2d2'
   link 'iDentify.app'
 end
