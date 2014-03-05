@@ -1,4 +1,4 @@
-class UnisonUsenet < Cask
+class PanicUnison < Cask
   url 'http://download.panic.com/Unison/Unison%202.1.10.zip'
   homepage 'http://panic.com/unison/'
   version '2.1.10'
