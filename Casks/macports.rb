@@ -1,11 +1,11 @@
 class Macports < Cask
   if MacOS.version == :mavericks
     url 'https://distfiles.macports.org/MacPorts/MacPorts-2.2.1-10.9-Mavericks.pkg'
-    sha1 'd72d69e2e024f03da3fc68a201fdf8548b392e97'
+    sha256 '2df01bf88e1e3de32ada0f42a8a46fb992093baee62f9d911fa3ae3ee895d471'
     install 'MacPorts-2.2.1-10.9-Mavericks.pkg'
   else
     url 'https://distfiles.macports.org/MacPorts/MacPorts-2.2.1-10.8-MountainLion.pkg'
-    sha1 '25f81aa439623e3458d2f2867475944727c77a98'
+    sha256 'd10bf4a27f89709501e1370d7d80f415eaf16bae23fd9ff3d4e96f86afdf8cd6'
     install 'MacPorts-2.2.1-10.8-MountainLion.pkg'
   end
   homepage 'http://www.macports.org'
