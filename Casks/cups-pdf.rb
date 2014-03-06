@@ -4,4 +4,5 @@ class CupsPdf < Cask
   version '2.5.0'
   sha256 'a51a44dfb2f12fd6a291a94dcd863690c8246f6d66e10d74b0a30c1b67b080f7'
   install 'CUPS-PDF.mpkg'
+  uninstall :pkgutil => 'net.codepoetry.cupspdf.*pkg'
 end
