@@ -3,7 +3,7 @@ require 'forwardable'
 class Cask::URL
   FAKE_USER_AGENT = 'Chrome/32.0.1000.00'
 
-  attr_reader :using, :revision, :trust_cert, :uri, :cookies, :referer
+  attr_reader :using, :revision, :trust_cert, :uri, :cookies, :referer, :data
 
   extend Forwardable
   def_delegators :uri, :path, :scheme, :to_s
@@ -16,6 +16,7 @@ class Cask::URL
     @using      = options[:using]
     @revision   = options[:revision]
     @trust_cert = options[:trust_cert]
+    @data       = options[:data]
   end
 
   def user_agent
