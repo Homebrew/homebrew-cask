@@ -4,4 +4,5 @@ class LastpassUniversal < Cask
   version 'latest'
   no_checksum
   install 'lpmacosx.pkg'
+  uninstall :pkgutil => 'com.lastpass.lpmacosx'
 end
