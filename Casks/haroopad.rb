@@ -1,7 +1,7 @@
 class Haroopad < Cask
-  url 'https://dl.dropboxusercontent.com/s/30wgt7osktvhpb5/haroopad-v0.11.0.dmg'
+  url 'https://dl.dropbox.com/s/dhclfu538188yox/haroopad-v0.11.1.dmg'
   homepage 'http://pad.haroopress.com/'
-  version '0.11.0'
-  sha256 '770bb81dc799b7028883fccff84a417103b897e6c1abcca6a4c27f4a2268eb82'
+  version '0.11.1'
+  sha256 '82222822ebb4c3193c5a55bd71f24e1510b1bfb31583b5e4f64e05dcfaea3c3d'
   link 'haroopad.app'
 end
