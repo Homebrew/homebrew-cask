@@ -4,8 +4,8 @@
 
 A `Cask` is like a `Formula` in Homebrew except it describes how to download
 and install a binary application.  To learn how to write a Cask, see
-[CONTRIBUTING.md](CONTRIBUTING.md).  For a complete reference, see
-[CASK_LANGUAGE_REFERENCE.md](doc/CASK_LANGUAGE_REFERENCE.md).
+[CONTRIBUTING.md](../CONTRIBUTING.md).  For a complete reference, see
+[CASK_LANGUAGE_REFERENCE.md](CASK_LANGUAGE_REFERENCE.md).
 
 ## What's the status of this project?  Where's it headed?
 
@@ -19,7 +19,7 @@ install Mac apps.
 __Yes, yes, yes!__ Please fork/pull request to update Casks, add features and
 clean up documentation! Anything you can do to help out is very welcome.
 
-It's also [__pretty darn easy__ to create Casks](CONTRIBUTING.md), so
+It's also [__pretty darn easy__ to create Casks](../CONTRIBUTING.md), so
 please build more of them for the software you use. And if homebrew-cask doesn't
 support the packaging format of your software, please [open an issue](https://github.com/phinze/homebrew-cask/issues)
 and we can get it working together.

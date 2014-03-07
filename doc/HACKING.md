@@ -159,12 +159,12 @@ Travis-CI will do that for you and embarrass you in front of all your friends). 
 ## Submitting Your Changes
 
 See the relevant section in `CONTRIBUTING.md`:
-[Submitting Your Changes](CONTRIBUTING.md#submitting-your-changes)
+[Submitting Your Changes](../CONTRIBUTING.md#submitting-your-changes)
 
 ### Commit Messages
 
 The first line of a commit message (the summary line) is like the subject
-line of an email. (See [CONTRIBUTING.md](CONTRIBUTING.md#commit-messages)).
+line of an email. (See [CONTRIBUTING.md](../CONTRIBUTING.md#commit-messages)).
 A short but complete summary line helps the maintainers respond to your
 pull request more quickly.
 
