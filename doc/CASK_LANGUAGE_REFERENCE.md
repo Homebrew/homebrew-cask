@@ -327,6 +327,13 @@ command
 $ ./developer/bin/list_recent_pkg_ids
 ```
 
+`:pkgutil` also accepts a regular expression to match multiple package
+IDs.  To test a regular expression against currently-installed packages,
+use the command
+```bash
+$ ./developer/bin/list_pkg_ids_by_regexp <regular-expression>
+```
+
 ### List Files Associated With a `pkg`
 
 Once you know the ID for an installed package, (above), you can list
