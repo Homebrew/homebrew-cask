@@ -3,7 +3,7 @@ class Mamp < Cask
   homepage 'http://www.mamp.info/en/index.html'
   version '3.0.1'
   sha256 'd43ff397203bef82f80dd237128026f3acc508cea114d560304e3793ca297e0f'
-  install 'MAMP_3.0.1.pkg'
+  install 'MAMP_MAMP_PRO_3.0.1.pkg'
   after_install do
     system '/usr/bin/sudo', '-E', '--',
            '/usr/sbin/chown', '-R', "#{Etc.getpwuid(Process.euid).name}:staff", '/Applications/MAMP', '/Applications/MAMP PRO'
