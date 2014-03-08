@@ -18,6 +18,9 @@ shopt -s nocasematch  # case-insensitive regular expressions
 pkg_arg=''
 tmp_boms=''
 
+# prefer GNU xargs
+xargs="$(/usr/bin/which gxargs || printf '/usr/bin/xargs')"
+
 trap cleanup_tmp_boms EXIT
 
 ###
@@ -31,11 +34,11 @@ cleanup_tmp_boms () {
         /usr/bin/touch "$tmpfile";
         echo "$tmp_boms" |                            \
         /usr/bin/perl -pe 's{\n}{\000}sg' |           \
-        /usr/bin/xargs -0 /bin/rm -f --;
+        "$xargs" -0 /bin/rm -f --;
         {
          echo "$tmp_boms" |                           \
          /usr/bin/perl -pe 's{[^/]+\n}{\000}sg' |     \
-         /usr/bin/xargs -0 /bin/rmdir -p -- || true
+         "$xargs" -0 /bin/rmdir -p -- || true
         } 2>/dev/null
         /bin/rm -- "$tmpfile";
     fi
@@ -43,7 +46,7 @@ cleanup_tmp_boms () {
 
 bom_source_1 () {
     /usr/bin/find "$pkg_arg" -iname '*.pkg' -print0 | \
-    /usr/bin/xargs -0 -I{} -n1 /usr/sbin/pkgutil --bom "{}" 2>/dev/null
+    "$xargs" -0 -I{} -n1 /usr/sbin/pkgutil --bom "{}" 2>/dev/null
 }
 
 bom_source_2 () {
@@ -52,7 +55,7 @@ bom_source_2 () {
 
 expand_sources () {
     /usr/bin/perl -pe 's{\n}{\000}sg' |               \
-    /usr/bin/xargs -0 lsbom --
+    "$xargs" -0 lsbom --
 }
 
 merge_sources () {
@@ -67,7 +70,7 @@ clean_sources () {
 
 mark_up_sources () {
     /usr/bin/perl -pe 's{\n}{\000}sg' |               \
-    /usr/bin/xargs -0 -I{} -n1 /bin/bash -c           \
+    "$xargs" -0 -I{} -n1 /bin/bash -c                 \
       'printf "{}"; /bin/test -e "{}" >/dev/null 2>&1 && printf " (+)"; printf "\n"'
 }
 

@@ -19,6 +19,9 @@ opt_lax=''
 opt_pkg=''
 pkgdir=''
 
+# prefer GNU xargs
+xargs="$(/usr/bin/which gxargs || printf '/usr/bin/xargs')"
+
 ###
 ### functions
 ###
@@ -38,13 +41,13 @@ die () {
 
 app_source_1 () {
     /usr/bin/find "$pkgdir" -name PackageInfo -print0 |   \
-    /usr/bin/xargs -0 /usr/bin/perl -0777 -ne             \
+    "$xargs" -0 /usr/bin/perl -0777 -ne                   \
       'while (m{<pkg-info[^\n]*install-location="/Applications".*?path\s*=\s*"([^"]+)"}sg) { my $p = $1; $p =~ s{\A.*/}{}; print "$p\n" }';
 }
 
 app_source_2 () {
     /usr/bin/find "$pkgdir" -name PackageInfo -print0  |  \
-    /usr/bin/xargs -0 /usr/bin/perl -0777 -ne             \
+    "$xargs" -0 /usr/bin/perl -0777 -ne                   \
       'while (m{<pkg-info[^\n]*install-location="/".*?path\s*=\s*"./Applications/([^"]+)"}sg) { my $p = $1; $p =~ s{\A.*/}{}; print "$p\n" }';
 }
 
@@ -55,13 +58,13 @@ app_source_3 () {
 
 app_source_4 () {
     /usr/bin/find "$pkgdir" -name PackageInfo -print0  |  \
-    /usr/bin/xargs -0 /usr/bin/perl -0777 -ne             \
+    "$xargs" -0 /usr/bin/perl -0777 -ne                   \
       'while (m{path\s*=\s*"([^"]+\.app)"}sg) { my $p = $1; $p =~ s{\A.*/}{}; print "$p\n" }';
 }
 
 app_source_5 () {
     /usr/bin/find "$pkgdir" -name Archive.pax.gz -print0  |           \
-    /usr/bin/xargs -0 -n1 -I{} /bin/bash -c                           \
+    "$xargs" -0 -n1 -I{} /bin/bash -c                                 \
       "/usr/bin/gunzip -c '{}' | /bin/pax | /usr/bin/egrep '\.app'" | \
     /usr/bin/perl -pe 's{\A.*/([^/]+\.app).*\Z}{$1}';
 }
@@ -72,7 +75,7 @@ merge_sources () {
 
 mark_up_sources () {
     /usr/bin/perl -pe 's{\n}{\000}sg' |                     \
-    /usr/bin/xargs -0 -I{} -n1 /bin/bash -c                 \
+    "$xargs" -0 -I{} -n1 /bin/bash -c                       \
       'printf "{}"; /bin/test -n "$(/usr/bin/find /Applications -type d -maxdepth 3 -name "{}" -print0; /usr/bin/find ~/Applications -type d -maxdepth 3 -name "{}")" && printf " (+)"; printf "\n"'
 }
 

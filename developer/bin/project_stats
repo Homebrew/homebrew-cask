@@ -29,6 +29,9 @@ end_object="HEAD"
 
 cask_authors=''
 
+# prefer GNU xargs
+xargs="$(/usr/bin/which gxargs || printf '/usr/bin/xargs')"
+
 ###
 ### functions
 ###
@@ -155,7 +158,7 @@ print_doc_stats () {
     printf "\n  "
     $git_log_cmd -- "${doc_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | \
       /usr/bin/egrep -v $'^\'(paul\\.t\\.hinze@gmail\\.com|fanquake@users\\.noreply\\.github\\.com|fanquake@gmail\\.com|kevin@suttle\\.io|leoj3n@gmail\\.com|nano@fdp\\.io|nanoid\\.xd@gmail\\.com|me@passcod\\.name|walker@pobox\\.com|info@vitorgalvao\\.com|calebcenter@live\\.com|ndr@qef\\.io)\'$' | \
-      /usr/bin/xargs | /usr/bin/perl -pe 's{ }{, }g'           # '
+      "$xargs" | /usr/bin/perl -pe 's{ }{, }g'           # '
     printf "\n"
 }
 
