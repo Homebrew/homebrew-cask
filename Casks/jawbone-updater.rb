@@ -4,5 +4,6 @@ class JawboneUpdater < Cask
   version '2.2.3'
   sha256 '3085edf935347e45573405ee7e51fbacce366847f5f06f783a4e1ea89d70aee6'
   install 'Jawbone_Updater-2.2.3.pkg'
-  uninstall :pkgutil => 'com.Aliph.[Jj]awbone(|Updater.*).pkg'
+  uninstall :quit => 'com.aliph.Jawbone_Updater',
+            :pkgutil => 'com.Aliph.[Jj]awbone(|Updater.*).pkg'
 end
