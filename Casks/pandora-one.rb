@@ -2,6 +2,6 @@ class PandoraOne < Cask
   url 'http://www.pandora.com/static/desktop_app/pandora_2_0_8.air'
   homepage 'http://www.pandora.com/'
   version '2.0.8'
-  sha1 '1f14fa086ce54845b49dc35de4f7b583f1878ec8'
+  sha256 '9ac216fd51bb063f020a86c6f5d250989dfa033a2d6a3d703124c2f4bfa510d8'
   link 'Pandora.app'
 end
