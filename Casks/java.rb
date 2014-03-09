@@ -22,7 +22,7 @@ class Java < Cask
     system '/usr/bin/sudo', '-E', '--',
       '/bin/rm', '-rf', '--', '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
     system '/usr/bin/sudo', '-E', '--',
-      '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents /System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK"
+      '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents" '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
   end
   uninstall :pkgutil => 'com.oracle.jdk7u51',
             :files => '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
