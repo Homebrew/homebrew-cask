@@ -5,4 +5,5 @@ class Kdiff3 < Cask
   version '0.9.97'
   sha256 '9be995cced9d3365d2f7f47f01a28bfc47172da7d049014617976e596756d5ee'
   link 'kdiff3.app'
+  binary 'kdiff3.app/Contents/MacOS/kdiff3'
 end
