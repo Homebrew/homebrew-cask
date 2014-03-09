@@ -10,4 +10,5 @@ class Macports < Cask
   end
   homepage 'http://www.macports.org'
   version '2.2.1'
+  uninstall :pkgutil => 'org.macports.MacPorts'
 end
