@@ -1,7 +1,7 @@
 class Jitsi < Cask
-  url 'https://download.jitsi.org/jitsi/macosx/jitsi-2.2-latest.dmg'
+  url 'https://download.jitsi.org/jitsi/macosx/jitsi-2.4-latest.dmg'
   homepage 'https://jitsi.org/'
-  version '2.2'
-  sha256 'e5ffde2124d2d73ed2c7fb67b9371c6c2e6ce6bf871d062c6fbf91c309261177'
+  version '2.4'
+  sha256 'ceb6b2ab04206a51faf1dbffb704a7a60ae2b7c47834b50f87da5557f543ad13'
   link 'Jitsi.app'
 end
