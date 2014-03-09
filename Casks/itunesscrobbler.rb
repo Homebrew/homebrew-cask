@@ -2,6 +2,6 @@ class Itunesscrobbler < Cask
   url 'http://www.easyclasspage.de/lastfm/files/iTunesScrobbler_060.zip'
   homepage 'http://www.easyclasspage.de/lastfm/seite-19.html'
   version '0.6.0'
-  sha1 'c85aa1b98184194497aa5d1ba15a5c0d806d2d95'
+  sha256 '01dcacb1738e824d853dab7825cee88b017f47a65f8e22fdbd7bf762802cc893'
   link 'iTunesScrobbler.app'
 end
