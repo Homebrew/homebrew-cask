@@ -1,7 +1,7 @@
 class PlexMediaServer < Cask
-  url 'http://downloads.plexapp.com/plex-media-server/0.9.8.18.290-11b7fdd/PlexMediaServer-0.9.8.18.290-11b7fdd-OSX.zip'
+  url 'http://downloads.plexapp.com/plex-media-server/0.9.9.5.411-da1d892/PlexMediaServer-0.9.9.5.411-da1d892-OSX.zip'
   homepage 'http://plexapp.com'
-  version '0.9.8.18.290'
-  sha256 '8da6d5bb2c3d77ed34b497d3070c89a4b4517a874f85962e6dfc13388e1c53cd'
+  version '0.9.9.5.411'
+  sha256 '2f1a436ff9c5c494d7a55c4c2138fa2febde5431243c97de1e643d3d50c6b875'
   link 'Plex Media Server.app'
 end
