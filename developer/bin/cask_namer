@@ -13,7 +13,12 @@
 
 require 'pathname'
 require 'open3'
-require 'active_support/inflector'
+
+begin
+  # not available by default
+  require 'active_support/inflector'
+rescue
+end
 
 ###
 ### configurable constants
@@ -204,6 +209,7 @@ class AppName < String
   def decompose_to_ascii
     # crudely (and incorrectly) decompose extended latin characters to ASCII
     return self if self.ascii_only?
+    return self unless self.respond_to?(:mb_chars)
     AppName.new(self.mb_chars.normalize(:kd).each_char.select(&:ascii_only?).join)
   end
 
