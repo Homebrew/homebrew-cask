@@ -1,7 +1,7 @@
 class Deltawalker < Cask
-  url 'https://s3.amazonaws.com/deltawalker/DeltaWalker-1.9.9.6_64.dmg'
+  url 'https://s3.amazonaws.com/deltawalker/DeltaWalker-2.0.1_64.dmg'
   homepage 'http://www.deltopia.com/compare-merge-sync/macosx/'
-  version '1.9.9.6'
-  sha256 '86f1a31a2c831a86976c04f849857a3b82dd7a54d3e9e1508ef194adac65419c'
+  version '2.0.1'
+  sha256 'eae3127fb05d84885c91e7ce5da5277aaaf128fd53225d1721d66456719b82fa'
   link 'DeltaWalker.app'
 end
