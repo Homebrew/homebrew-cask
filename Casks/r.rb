@@ -1,9 +1,9 @@
 class R < Cask
-  url 'http://cran.rstudio.com/bin/macosx/R-3.0.2.pkg'
+  url 'http://cran.rstudio.com/bin/macosx/R-3.0.3.pkg'
   homepage 'http://www.r-project.org/'
-  version '3.0.2'
-  sha256 'e40f09447c77e3488964efb0623be26520718555a3ab0eb8e048325e5e4c040a'
-  install 'R-3.0.2.pkg'
+  version '3.0.3'
+  sha256 '8a4c5b89bf8f05c8e772f75b72d4b04d860afecf741fa2016806b94b65dd1906'
+  install 'R-3.0.3.pkg'
   # packages: 'org.r-project.R.x86_64.fw.pkg',
   #           'org.r-project.R.x86_64.GUI.pkg',
   #           'org.r-project.x86_64.tcltk.x11'
