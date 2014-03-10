@@ -77,6 +77,25 @@ class Cask::CurlDownloadStrategy < CurlDownloadStrategy
   end
 end
 
+class Cask::CurlPostDownloadStrategy < Cask::CurlDownloadStrategy
+
+  def curl_args
+    super
+    default_curl_args.concat(post_args)
+  end
+
+  def post_args
+    if cask_url.data
+      # sort_by is for predictability between Ruby versions
+      cask_url.data.sort_by{ |key, value| key.to_s }.map do |key, value|
+        ['-d', "#{CGI.escape(key.to_s)}=#{CGI.escape(value.to_s)}"]
+      end.flatten()
+    else
+      ['-X', 'POST']
+    end
+  end
+end
+
 class Cask::SubversionDownloadStrategy < SubversionDownloadStrategy
   include Cask::DownloadStrategy
 

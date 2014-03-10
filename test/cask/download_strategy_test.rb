@@ -95,6 +95,51 @@ describe Cask::CurlDownloadStrategy do
     shutup { downloader.fetch }
   end
 
+  describe Cask::CurlPostDownloadStrategy do
+    it 'properly assigns a name and Resource based on the cask' do
+      cask = Cask.load('basic-cask')
+
+      downloader = Cask::CurlPostDownloadStrategy.new(BasicCask)
+      downloader.name.must_equal 'basic-cask'
+      downloader.resource.name.must_equal 'basic-cask'
+      downloader.resource.url.must_equal cask.url.to_s
+      downloader.resource.version.to_s.must_equal cask.version
+    end
+
+    it 'adds curl args for post arguments' do
+      WithPostArgs = Class.new(Cask) do
+        url 'http://host/path/to/form.html', :data => {
+              :coo => 'kie',
+              :mon => 'ster'
+            }, :using => :post
+        version '1.2.3.4'
+      end
+
+      downloader = Cask::CurlPostDownloadStrategy.new(WithPostArgs)
+      downloader.temporary_path.stubs(:rename)
+      downloader.expects(:curl).with do |*args|
+        # includes_args tests set membership;
+        # repeated options don't pass the test
+        includes_args?(args, ['-d', 'coo=kie', 'mon=ster'])
+      end
+      shutup { downloader.fetch }
+    end
+
+    it 'adds curl args for post arguments with no :data' do
+      WithoutPostArgs = Class.new(Cask) do
+        url 'http://host/path/to/form.html', :using => :post
+        version '1.2.3.4'
+      end
+
+      downloader = Cask::CurlPostDownloadStrategy.new(WithoutPostArgs)
+      downloader.temporary_path.stubs(:rename)
+      downloader.expects(:curl).with do |*args|
+        includes_args?(args, ['-X', 'POST'])
+      end
+      shutup { downloader.fetch }
+    end
+  end
+
   describe Cask::SubversionDownloadStrategy do
     it 'recognizes the SVN download strategy' do
       cask = Cask.load('svn-download-cask')

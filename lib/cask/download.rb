@@ -10,6 +10,8 @@ class Cask::Download
     cask = @cask
     if cask.url.using == :svn
       downloader = Cask::SubversionDownloadStrategy.new(cask)
+    elsif cask.url.using == :post
+      downloader = Cask::CurlPostDownloadStrategy.new(cask)
     else
       downloader = Cask::CurlDownloadStrategy.new(cask)
     end
