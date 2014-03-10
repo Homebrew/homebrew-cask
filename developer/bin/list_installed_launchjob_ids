@@ -15,6 +15,9 @@ shopt -s nocasematch  # case-insensitive regular expressions
 ### global variables
 ###
 
+# prefer GNU xargs
+xargs="$(/usr/bin/which gxargs || printf '/usr/bin/xargs')"
+
 ###
 ### functions
 ###
@@ -25,7 +28,7 @@ launchjob_id_source_1 () {
                   /Library/LaunchAgents/           \
                   /Library/LaunchDaemons/          \
                   -type f -print0 2>/dev/null |    \
-    /usr/bin/xargs -0 /usr/bin/perl -0777 -ne      \
+    "$xargs" -0 /usr/bin/perl -0777 -ne            \
       'while (m{<key>\s*Label\s*</key>\s*<string>([^<]+?)</string>}sg) { print "$1\n" }'
 }
 
@@ -39,7 +42,7 @@ clean_sources () {
 
 mark_up_sources () {
     /usr/bin/perl -pe 's{\n}{\000}sg' |                                                \
-    /usr/bin/xargs -0 -I{} -n1 /bin/bash -c                                            \
+    "$xargs" -0 -I{} -n1 /bin/bash -c                                                  \
       'printf "{}"; /bin/launchctl list "{}" >/dev/null 2>&1 && printf " (+)"; printf "\n"'
 }
 

@@ -17,19 +17,22 @@ shopt -s nocasematch  # case-insensitive regular expressions
 
 pkgdir=''
 
+# prefer GNU xargs
+xargs="$(/usr/bin/which gxargs || printf '/usr/bin/xargs')"
+
 ###
 ### functions
 ###
 
 bundle_id_source_1 () {
     /usr/bin/find "$pkgdir" -name PackageInfo -print0 |                                \
-    /usr/bin/xargs -0 /usr/bin/perl -0777 -ne                                          \
+    "$xargs" -0 /usr/bin/perl -0777 -ne                                                \
       'while (m{<pkg-info.*?\sid(?:entifier)?\s*=\s*"([^"]*?)"}sg) { print "$1\n" }'
 }
 
 bundle_id_source_2 () {
     /usr/bin/find "$pkgdir" -name Info.plist -print0 |                                 \
-    /usr/bin/xargs -0 /usr/bin/plutil -convert xml1 -o - -- |                          \
+    "$xargs" -0 /usr/bin/plutil -convert xml1 -o - -- |                                \
     /usr/bin/perl -0777 -ne                                                            \
       'while (m{<key>\s*CFBundleIdentifier\s*</key>\s*<string>([^<]+?)</string>}sg) { print "$1\n" }'
 }
@@ -45,7 +48,7 @@ clean_sources () {
 
 mark_up_sources () {
     /usr/bin/perl -pe 's{\n}{\000}sg' |                                                \
-    /usr/bin/xargs -0 -I{} -n1 /bin/bash -c                                            \
+    "$xargs" -0 -I{} -n1 /bin/bash -c                                                  \
       'printf "{}"; /usr/sbin/pkgutil --pkg-info "{}" >/dev/null 2>&1 && printf " (+)"; printf "\n"'
 }
 
