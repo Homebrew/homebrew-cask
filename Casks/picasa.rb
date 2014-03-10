@@ -2,6 +2,6 @@ class Picasa < Cask
   url 'http://dl.google.com/photos/picasamac39.dmg'
   homepage 'http://picasa.google.com/'
   version '3.9'
-  sha256 '0c5fb0a914ea163a6f11d46883df8b139ab603f3ad576727128a01a869054f3e'
+  sha256 'a3c4f0f0fdb94471e024469f83b29be333a8f3359aea1c5e0bfeca0d6b5c5d62'
   link 'Picasa.app'
 end
