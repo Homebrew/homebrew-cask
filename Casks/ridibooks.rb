@@ -5,7 +5,7 @@ class Ridibooks < Cask
   no_checksum
   container_type :naked
   before_install do
-	system %Q{mv #{destination_path.join('getapp')} #{destination_path.join('ridibooks.pkg')}}
+    system '/bin/mv', destination_path.join('getapp'), destination_path.join('ridibooks.pkg')
   end
   install 'ridibooks.pkg'
   uninstall :pkgutil => 'com.ridibooks.Ridibooks'
