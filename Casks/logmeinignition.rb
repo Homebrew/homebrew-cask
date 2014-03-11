@@ -1,7 +1,7 @@
 class Logmeinignition < Cask
   url 'https://secure.logmein.com/welcome/labs/LogMeInIgnition.dmg'
-  homepage 'https://secure.logmein.com/LABS/#IgnitionforMac'
+  homepage 'https://secure.logmein.com/products/pro/learnmore/desktopapp.aspx'
   version 'latest'
   no_checksum
-  link 'LogMeInIgnition.app'
+  link 'LogMeIn Client.app'
 end
