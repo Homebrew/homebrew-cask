@@ -1,7 +1,7 @@
 class Launchrocket < Cask
-  url 'https://github.com/jimbojsb/launchrocket/releases/download/v0.5.1/LaunchRocket.prefPane.zip'
+  url 'https://github.com/jimbojsb/launchrocket/releases/download/v0.6/LaunchRocket.prefPane.zip'
   homepage 'https://github.com/jimbojsb/launchrocket'
-  version '0.5.1'
-  sha256 '3248ddcb529a91c90f9894586b205ecfb83c8ecfb819ce7bbdb2f783b92cb406'
+  version '0.6'
+  sha256 '195ac9edeb7dc7b266c2d3cb8fea0df9d91b6f995aa7953f2fc633d48bb92adb'
   prefpane 'LaunchRocket.prefPane'
 end
