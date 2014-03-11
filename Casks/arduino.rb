@@ -1,7 +1,7 @@
 class Arduino < Cask
-  url 'http://downloads.arduino.cc/arduino-1.5.5-macosx.zip'
+  url 'http://arduino.googlecode.com/files/arduino-1.0.5-macosx.zip'
   homepage 'http://arduino.cc/'
-  version '1.5.5'
-  sha256 'c52a6d0ff94f1505eb4550c6e40e41325dbb2c1f671f71cc725385b78c7838c1'
+  version '1.0.5'
+  sha256 '12f2d649b2cfd537317f63d9cb102dc052647c32a5b07c76d344ed959319c05e'
   link 'Arduino.app'
 end
