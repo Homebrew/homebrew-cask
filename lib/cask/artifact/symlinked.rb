@@ -18,7 +18,7 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
   # bundles.  Alfred 2.2 respects it even for App bundles.
   def add_altname_metadata(source, target)
     attribute = 'com.apple.metadata:kMDItemAlternateNames'
-    return unless source.basename.to_s.casecmp(target.basename)
+    return if source.basename.to_s.casecmp(target.basename) == 0
     odebug "Adding #{attribute} metadata"
     altnames = @command.run('/usr/bin/xattr',
                             :args => ['-p', attribute, target],
