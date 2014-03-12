@@ -1,7 +1,7 @@
 class Phpstorm < Cask
-  url 'http://download.jetbrains.com/webide/PhpStorm-7.1.2.dmg'
+  url 'http://download.jetbrains.com/webide/PhpStorm-7.1.3.dmg'
   homepage 'http://www.jetbrains.com/phpstorm/'
-  version '7.1.2'
-  sha256 '3e503d6aa2d96137a24f09ea50e3e105e63051e3cc7e3e070ecbba033e010ad9'
+  version '7.1.3'
+  sha256 '37ab8cb0739388da77d226fbdbf956ef441a8d7cb59e316e22815d57d11f6a1d'
   link 'PhpStorm.app'
 end
