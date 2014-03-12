@@ -9,5 +9,9 @@ class CitrixReceiver < Cask
                            'com.citrix.ReceiverHelper',
                            'com.citrix.ServiceRecords',
                           ],
+            :quit      => [
+                           'Citrix.ServiceRecords',
+                           'com.citrix.ReceiverHelper',
+                          ],
             :pkgutil   => 'com.citrix.ICAClient'
 end
