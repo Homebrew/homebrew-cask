@@ -44,7 +44,7 @@ class Cask::Container::Criteria
 
   def extension(test)
     %r{\.([^\.]+)$}.match(path) do |ext|
-      ext.captures.first.casecmp(test)
+      ext.captures.first.casecmp(test) == 0
     end
   end
 
