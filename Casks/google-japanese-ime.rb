@@ -4,4 +4,9 @@ class GoogleJapaneseIme < Cask
   version 'stable-channel'
   no_checksum
   install 'GoogleJapaneseInput.pkg'
+  uninstall :pkgutil => 'com.google.pkg.GoogleJapaneseInput', 
+            :launchctl => [
+                           'com.google.inputmethod.Japanese.Converter',
+                           'com.google.inputmethod.Japanese.Renderer'
+                          ]
 end
