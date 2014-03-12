@@ -1,9 +1,9 @@
 class Wireshark < Cask
-  url 'https://2.na.dl.wireshark.org/osx/Wireshark%201.10.5%20Intel%2064.dmg'
+  url 'https://2.na.dl.wireshark.org/osx/Wireshark%201.10.6%20Intel%2064.dmg'
   homepage 'http://www.wireshark.org'
-  version '1.10.5'
-  sha256 '301ac9f98d09726f8b06bf0a2054dabfaf06040274acc1640e52bdb04db92881'
-  install 'Wireshark 1.10.5 Intel 64.pkg'
+  version '1.10.6'
+  sha256 '3551e7274d6d9f1264c35cd414822d7439ebb48563b321d83607523b515e54a2'
+  install 'Wireshark 1.10.6 Intel 64.pkg'
 
   after_install do
     if Process.euid == 0 then
