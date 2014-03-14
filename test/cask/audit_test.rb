@@ -35,7 +35,7 @@ end
 
 class CaskVersionLatestWithChecksum < Cask
   version 'latest'
-  sha1 '123456'
+  sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
 end
 
 describe Cask::Audit do
@@ -79,7 +79,7 @@ describe Cask::Audit do
         audit.errors.must_include 'homepage is required'
       end
 
-      it "adds an error if version is latest and using sha1" do
+      it "adds an error if version is latest and using sha256" do
         audit = Cask::Audit.new(CaskVersionLatestWithChecksum.new)
         audit.run!
         audit.errors.must_include 'you should use no_checksum when version is latest'
