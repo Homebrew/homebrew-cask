@@ -1,7 +1,7 @@
 class Trailer < Cask
-  url 'http://dev.housetrip.com/trailer/trailer1017.zip'
+  url 'http://dev.housetrip.com/trailer/trailer1019.zip'
   homepage 'http://dev.housetrip.com/trailer/'
-  version '1.0.17'
-  sha256 '7bd4d3415e4e339c844102b1e03dcce84a2cd15ccfdfec854e5fae35fe1f0127'
+  version '1.0.19'
+  sha256 '651b211c0c678de0719a6535a3c2be390cfd0d100108d310410efecae9eafd5f'
   link 'Trailer.app'
 end
