@@ -1,5 +1,48 @@
 # CHANGELOG
 
+## 0.31.0
+
+* __Casks__
+ - 41 Casks added (94 updated) by 64 contributors since 0.30.1
+ - 1303 total Casks
+* __Features__
+ - [#3422][] add CurlPostDownloadStrategy <3 [@pedros][]
+ - [#3443][] new `cask_namer` script for Cask authors
+ - [#3217][] accept multiple arguments to `uninstall` `:pkgutil`
+ - [#3106][] Emoji and disk usage stats at install success
+ - [#3441][] add developer script `list_pkg_ids_by_regexp`
+* __Fixes__
+ - [#3540][] respect digits in search strings <3 [@cgcai][]
+ - [#3500][] preserve resource forks when unzipping
+ - [#3515][] explicitly unload `:launchctl` service before remove
+ - [#3516][] only set filesystem metadata if `:target` != source
+ - [#2672][] don't try uninstall cleanup inside system dirs
+ - [#3518][] fix erroneous uses of `casecmp`
+ - [#3459][] prefer GNU `xargs` in developer scripts
+ - [#3541][] update test suite to use sha256
+* __Documentation__
+ - 8 doc commits since 0.30.1 <3 [@pedros][], [@cubranic][]
+* __Breaking Changes__
+ - none
+
+[#3515]: https://github.com/phinze/homebrew-cask/issues/3515
+[#3540]: https://github.com/phinze/homebrew-cask/issues/3540
+[#3541]: https://github.com/phinze/homebrew-cask/issues/3541
+[#3518]: https://github.com/phinze/homebrew-cask/issues/3518
+[#3516]: https://github.com/phinze/homebrew-cask/issues/3516
+[#3500]: https://github.com/phinze/homebrew-cask/issues/3500
+[#3503]: https://github.com/phinze/homebrew-cask/issues/3503
+[#3443]: https://github.com/phinze/homebrew-cask/issues/3443
+[#3422]: https://github.com/phinze/homebrew-cask/issues/3422
+[@pedros]: https://github.com/pedros
+[@cgcai]: https://github.com/cgcai
+[@cubranic]: https://github.com/cubranic
+[#3459]: https://github.com/phinze/homebrew-cask/issues/3459
+[#3441]: https://github.com/phinze/homebrew-cask/issues/3441
+[#3106]: https://github.com/phinze/homebrew-cask/issues/3106
+[#3217]: https://github.com/phinze/homebrew-cask/issues/3217
+[#2672]: https://github.com/phinze/homebrew-cask/issues/2672
+
 ## 0.30.1
 
 * __Casks__
@@ -12,6 +55,7 @@
  - [#3324][] remove constant `HOMEBREW_TAP_FORMULA_REGEX`
 * __Documentation__
 * __Breaking Changes__
+ - none
 
 [#3335]: https://github.com/phinze/homebrew-cask/issues/3335
 [#3327]: https://github.com/phinze/homebrew-cask/issues/3327
@@ -96,6 +140,7 @@
 * __Documentation__
  - 1 doc commit since 0.29.1
 * __Breaking Changes__
+ - none
 
 [#3044]: https://github.com/phinze/homebrew-cask/issues/3044
 [#3015]: https://github.com/phinze/homebrew-cask/issues/3015
@@ -115,6 +160,7 @@
  - [#2957][] fix bugs with Subversion downloads
 * __Documentation__
 * __Breaking Changes__
+ - none
 
 [#2957]: https://github.com/phinze/homebrew-cask/issues/2957
 
@@ -233,6 +279,7 @@
  - [#2391][], [#2618][] Refinements to `uninstall` processes
  - 19 commits to documentation <3 [@goxberry][], [@stylerw][]
 * __Breaking Changes__
+ - none
 
 [#2532]: https://github.com/phinze/homebrew-cask/issues/2532
 [@voanhduy1512]: https://github.com/voanhduy1512
@@ -271,6 +318,7 @@
 * __Fixes__
  - [#2496][] restore functionality of `brew search` with no arguments
 * __Breaking Changes__
+ - none
 
 [#2496]: https://github.com/phinze/homebrew-cask/issues/2496
 
@@ -332,6 +380,7 @@
 * __Fixes__
   - [#2275][] - Force a require of Homebrew's `download_strategy`
 * __Breaking Changes__
+ - none
 
 [#2275]: https://github.com/phinze/homebrew-cask/issues/2275
 
@@ -343,6 +392,7 @@
 * __Fixes__
   - [#2275][] - Prepend brew cask to Ruby's load path
 * __Breaking Changes__
+ - none
 
 [#2275]: https://github.com/phinze/homebrew-cask/issues/2275
 
@@ -377,6 +427,7 @@
 * __Fixes__
   - [#2019][] - validate keys given to uninstall
 * __Breaking Changes__
+  - none
 
 [#2018]: https://github.com/phinze/homebrew-cask/issues/2018
 [#2019]: https://github.com/phinze/homebrew-cask/issues/2019
@@ -388,6 +439,7 @@
   - [#2013][] - support for installing widgets via the `widget` artifact
 * __Fixes__
 * __Breaking Changes__
+  - none
 
 [#2012]: https://github.com/phinze/homebrew-cask/issues/2012
 [#2013]: https://github.com/phinze/homebrew-cask/issues/2013
@@ -411,6 +463,7 @@
 * __Fixes__
   - [#1882][] - Ensure QuickLook directory exists <3 [@peeja][]
 * __Breaking Changes__
+  - none
 
 [@peeja]: https://github.com/peeja
 [#1882]: https://github.com/phinze/homebrew-cask/issues/1882
@@ -421,6 +474,7 @@
   - [#1733][] - QuickLook plugin support <3 [@lgarron][]
 * __Fixes__
 * __Breaking Changes__
+  - none
 
 [#1733]: https://github.com/phinze/homebrew-cask/issues/1733
 [@lgarron]: https://github.com/lgarron
@@ -431,6 +485,7 @@
 * __Fixes__
   - [#1765][] - fix tapspath to work with non-standard homebrew location <3 [@njam][]
 * __Breaking Changes__
+  - none
 
 [#1765]: https://github.com/phinze/homebrew-cask/issues/1765
 [@njam]: https://github.com/njam
@@ -467,6 +522,7 @@
 * __Fixes__
   - [#1274][] - fix permissions problems on certain pkg uninstalls
 * __Breaking Changes__
+  - none
 
 [#1274]: https://github.com/phinze/homebrew-cask/issues/1374
 
@@ -476,6 +532,7 @@
 * __Fixes__
   - [#1274][] - various fixes to prevent evil from happening during certain pkg uninstall processes
 * __Breaking Changes__
+  - none
 
 [#1274]: https://github.com/phinze/homebrew-cask/issues/1247
 
@@ -485,6 +542,7 @@
 * __Fixes__
   - fix bug introduced in `0.19.1` where a double-install would result in a silent uninstall of a cask
 * __Breaking Changes__
+  - none
 
 ## 0.19.1
 
@@ -493,6 +551,7 @@
   - [#954][] - preserve environment when running `sudo` <3 [@kdeldycke][]
   - [#1247][] - clean up on install failure; raise an explicit error when a command fail for better feedback
 * __Breaking Changes__
+  - none
 
 [#954]: https://github.com/phinze/homebrew-cask/issues/954
 [@kdeldycke]: https://github.com/phinze/homebrew-cask/commit/f787afdc26cb5a5b81c2d6142d93c77b7aa5d28e
@@ -504,6 +563,7 @@
   - [#602][] - support for nested containers
 * __Fixes__
 * __Breaking Changes__
+  - none
 
 [#602]: https://github.com/phinze/homebrew-cask/issues/602
 
@@ -515,6 +575,7 @@
   - [#1168][] - support systems that have `ln` overridden with GNU version <3 [@wenbin1989][]
   - [#1181][] - fix a small bug that could stop the check link process <3 [@andizzle][]
 * __Breaking Changes__
+  - none
 
 [#1168]: https://github.com/phinze/homebrew-cask/issues/1168
 [@wenbin1989]: https://github.com/wenbin1989
@@ -527,6 +588,7 @@
 * __Fixes__
   - [#981][] - properly handle underscores in URLs <3 [@sheerun][]
 * __Breaking Changes__
+  - none
 
 [#981]: https://github.com/phinze/homebrew-cask/issues/981
 [@sheerun]: https://github.com/sheerun
@@ -537,6 +599,7 @@
   - adds `--prefpanedir=` option to link to a different location
 * __Fixes__
 * __Breaking Changes__
+  - none
 
 ## 0.18.0 - Preference Pane Support
 
@@ -555,6 +618,7 @@
 * __Fixes__
   - Bugfixes addressing ([#1105](https://github.com/phinze/homebrew-cask/issues/1105))
 * __Breaking Changes__
+  - none
 
 ## 0.17.1
 
@@ -562,6 +626,7 @@
 * __Fixes__
   - Fixes typo on `Tar` container, preventing tar-based Casks from being installed. ([#1083](https://github.com/phinze/homebrew-cask/issues/1083))
 * __Breaking Changes__
+  - none
 
 ## 0.17.0
 
@@ -575,6 +640,7 @@
   - require tmpdir to fix container error
   - when uninstalling pkgs; sudo chmod before examining
 * __Breaking Changes__
+  - none
 
 ## 0.16.{1,2}
 
@@ -582,6 +648,7 @@
 * __Fixes__
   - homebrew made some changes ([#1015](https://github.com/phinze/homebrew-cask/issues/1015)) that broke our integration; this bugfix release brings us back into parity with the mothership.
 * __Breaking Changes__
+  - none
 
 Thanks @billwanjohi for his work to fix this.
 
@@ -593,6 +660,7 @@ Thanks @billwanjohi for his work to fix this.
 * __Fixes__
   - Fixes overzealous cask create name matching
 * __Breaking Changes__
+  - none
 
 ## 0.15.0
 
@@ -600,3 +668,4 @@ Thanks @billwanjohi for his work to fix this.
   - Adds `.pkg` install/uninstall support
 * __Fixes__
 * __Breaking Changes__
+  - none
