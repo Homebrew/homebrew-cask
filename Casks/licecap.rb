@@ -1,7 +1,7 @@
 class Licecap < Cask
-  url 'http://www.cockos.com/licecap/licecap123.dmg'
+  url 'http://www.cockos.com/licecap/licecap124.dmg'
   homepage 'http://www.cockos.com/licecap/'
-  version '1.23'
-  sha256 '1dd22375c8d2300a7697447e19b83bd862ebba58788bc6ecbc62129e58dd5cf0'
+  version '1.24'
+  sha256 '0aae74885097731048b7e2111db9afbe77c30eb10779898bf9ea817de845bcbb'
   link 'LICEcap.app'
 end
