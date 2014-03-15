@@ -1,7 +1,7 @@
 class WithBinary < TestCask
   url TestHelper.local_binary('AppWithBinary.zip')
-  sha1 '72de271c9215732374dff1c91a58e1205f116d0d'
   homepage 'http://example.com/with-binary'
+  sha256 'd5b2dfbef7ea28c25f7a77cd7fa14d013d82b626db1d82e00e25822464ba19e2'
   version '1.2.3'
   link 'App.app'
   binary 'binary'

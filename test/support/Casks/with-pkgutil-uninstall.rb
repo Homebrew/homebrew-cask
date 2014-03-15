@@ -2,7 +2,7 @@ class WithPkgutilUninstall < TestCask
   url TestHelper.local_binary('MyFancyPkg.zip')
   homepage 'http://example.com/fancy-pkg'
   version '1.2.3'
-  sha1 '8588bd8175a54b8e0a1310cc18e6567d520ab7c4'
+  sha256 '8c62a2b791cf5f0da6066a0a4b6e85f62949cd60975da062df44adf887f4370b'
   install 'Fancy.pkg'
   uninstall :pkgutil => 'my.fancy.package.*',
             :kext => 'my.fancy.package.kernelextension',

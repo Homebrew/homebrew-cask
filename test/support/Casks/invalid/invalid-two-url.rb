@@ -3,7 +3,7 @@ class InvalidTwoUrl < TestCask
   url 'http://example.com/caffeine.zip'
   homepage 'http://example.com/local-caffeine'
   version '1.2.3'
-  sha1 'd2fbdad1619934313026fc831e6c6e3dd97ac030'
+  sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
 
   link 'Caffeine.app'
 end

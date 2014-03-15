@@ -144,7 +144,7 @@ describe Cask::Installer do
       }.must_raise(ChecksumMissingError)
     end
 
-    it "installs fine if no_checksum is included in cask" do
+    it "installs fine if sha256 :no_check is used" do
       no_checksum = Cask.load('no-checksum')
       shutup do
         Cask::Installer.new(no_checksum).install
