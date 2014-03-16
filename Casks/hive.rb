@@ -1,7 +1,7 @@
 class Hive < Cask
-  url 'https://github.com/hivewallet/hive-osx/releases/download/2014012801/Hive-1.0.zip'
+  url 'https://github.com/hivewallet/hive-osx/releases/download/1.1.3/Hive-1.1.3.zip'
   homepage 'http://www.hivewallet.com'
-  version '1.0'
-  sha1 '0f1f2513c1840c576c61ee0f647f65f2a05fe359'
+  version '1.1.3'
+  sha256 '5ab5dee7be22567be1e41c1fca779377a72724f9e35185fe7d22be9310d93cb0'
   link 'Hive.app'
 end
