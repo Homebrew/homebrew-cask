@@ -1,5 +1,22 @@
 # CHANGELOG
 
+## 0.31.1
+
+* __Casks__
+ - 15 Casks added (9 updated) by 9 contributors since 0.31.0
+ - 1318 total Casks
+* __Features__
+ - none
+* __Fixes__
+ - [#3587][] don't downcase a Pathname object <3 [@bartoszj][]
+* __Documentation__
+ - none
+* __Breaking Changes__
+ - none
+
+[#3587]: https://github.com/phinze/homebrew-cask/issues/3587
+[@bartoszj]: https://github.com/bartoszj
+
 ## 0.31.0
 
 * __Casks__
