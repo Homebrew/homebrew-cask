@@ -2,6 +2,6 @@ class SophosAntiVirusHomeEdition < Cask
   url 'http://downloads.sophos.com/home-edition/savosx_90_he.zip'
   homepage 'http://www.sophos.com/en-us/products/free-tools/sophos-antivirus-for-mac-home-edition.aspx/'
   version '9.0'
-  sha256 '4b2347e44c15efe5fb43c80b745949308f788cce6f30eaa2ef56ecf406cbbc16'
+  sha256 '6a871dbcef238f4fdbb8f068ac556691abb965a430e6fce0061d735404f352ae'
   link 'Sophos Anti-Virus Home Edition.app'
 end
