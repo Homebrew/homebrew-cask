@@ -1,7 +1,7 @@
 class IntellijIdea < Cask
-  url 'http://download-ln.jetbrains.com/idea/ideaIU-13.0.2.dmg'
+  url 'http://download-cf.jetbrains.com/idea/ideaIU-13.0.3.dmg'
   homepage 'https://www.jetbrains.com/idea/index.html'
-  version '13.0.2'
-  sha256 '129e835b81dfe58556070fd925f0ce29bf8f1f1829890c1f2408f6bf73aa6c82'
+  version '13.0.3'
+  sha256 'ec0f215b431237a570b388af62b3bf2a12197b19914ae134a35beffd55268fe5'
   link 'IntelliJ IDEA 13.app'
 end
