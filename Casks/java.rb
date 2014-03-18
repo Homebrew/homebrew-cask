@@ -1,11 +1,8 @@
 class Java < Cask
   url 'http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-macosx-x64.dmg',
       :cookies => {
-                    's_nr' => '1388004420389',
-                    's_cc' => 'true',
-                    'gpw_e24' => 'http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjdk7-downloads-1880260.html',
-                    's_sq' => '%5B%5BB%5D%5D'
-                   }
+                    'oraclelicense' => 'accept-securebackup-cookie'
+                  }
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html'
   version '1.7.0_51'
   sha256 '1312b0553bd37a232114637f05b036a6fd5d444e653adef7230ba141328f7734'
