@@ -1,8 +1,8 @@
 class Totalfinder < Cask
-  url 'http://downloads.binaryage.com/TotalFinder-1.5.19.dmg'
+  url 'http://downloads.binaryage.com/TotalFinder-1.5.22.dmg'
   homepage 'http://totalfinder.binaryage.com'
-  version '1.5.19'
-  sha256 'dd7950409817070be2dcf7730fbd9183422d4641f9bd8d69c798baff235f1eda'
+  version '1.5.22'
+  sha256 'f071e2675e4f523d4c95ab5dbf3b7374d6aa1d1efec9a0e149ae01dcf41e55e5'
   install 'TotalFinder.pkg'
   uninstall :script => {
     :executable => 'TotalFinder Uninstaller.app/Contents/MacOS/TotalFinder Uninstaller',
