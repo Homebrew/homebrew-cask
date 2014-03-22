@@ -1,7 +1,7 @@
 class MendeleyDesktop < Cask
-  url 'http://download.mendeley.com/Mendeley-Desktop-1.10.3-OSX-Universal.dmg'
+  url 'http://download.mendeley.com/Mendeley-Desktop-1.11-OSX-Universal.dmg'
   homepage 'http://www.mendeley.com/'
-  version '1.10.3'
-  sha256 'ea605465c771e697ee1a700b85596db32725b9bb4a6e90dd38b861691bffde58'
+  version '1.11'
+  sha256 '07d4444485df1916defd4719aa1c5561aa59fe6a66ea3476ab796f8196a147a5'
   link 'Mendeley Desktop.app'
 end
