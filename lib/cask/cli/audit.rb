@@ -4,7 +4,13 @@ class Cask::CLI::Audit
   end
 
   def self.run(*args)
-    new(args, Cask::Auditor).run
+    retval = new(args, Cask::Auditor).run
+    # retval is ternary: true/false/nil
+    if retval.nil?
+      raise CaskError.new("audit failed")
+    elsif ! retval
+      raise CaskError.new("some audits failed")
+    end
   end
 
   def initialize(args, auditor)
@@ -13,7 +19,11 @@ class Cask::CLI::Audit
   end
 
   def run
-    casks_to_audit.each { |cask| audit(cask) }
+    count = 0
+    casks_to_audit.each do |cask|
+      count += 1 if audit(cask)
+    end
+    count == 0 ? nil : count == casks_to_audit.length
   end
 
   def audit(cask)

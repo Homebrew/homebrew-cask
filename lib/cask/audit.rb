@@ -16,6 +16,7 @@ class Cask::Audit
     _check_no_checksums_if_latest
     _check_sourceforge_download_url_format
     _check_download(download) if download
+    return !(errors? or warnings?)
   end
 
   def summary_header
