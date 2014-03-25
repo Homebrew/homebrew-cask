@@ -84,22 +84,26 @@ module Cask::DSL
       end
     end
 
-    ARTIFACT_TYPES = [
-      :link,
-      :prefpane,
-      :qlplugin,
-      :font,
-      :widget,
-      :service,
-      :colorpicker,
-      :binary,
-      :caskroom_only,
-      :input_method,
-      :screen_saver,
-      :install,
-    ]
+    def self.ordinary_artifact_types
+      @@ordinary_artifact_types ||= [
+                                     :link,
+                                     :prefpane,
+                                     :qlplugin,
+                                     :font,
+                                     :widget,
+                                     :service,
+                                     :colorpicker,
+                                     :binary,
+                                     :input_method,
+                                     :screen_saver,
+                                     :install,
+                                    ]
+    end
 
-    ARTIFACT_TYPES.each do |type|
+    installable_artifact_types = ordinary_artifact_types
+    installable_artifact_types.push :caskroom_only
+
+    installable_artifact_types.each do |type|
       define_method(type) do |*args|
         artifacts[type] << args
       end
