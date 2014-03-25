@@ -21,7 +21,7 @@ class Java < Cask
     system '/usr/bin/sudo', '-E', '--',
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents", '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
   end
-  uninstall :pkgutil => 'com.oracle.jdk8',
+  uninstall :pkgutil => [ 'com.oracle.jdk8', 'com.oracle.jre' ],
             :files => '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
   caveats <<-EOS.undent
     This Cask makes minor modifications to the JRE to prevent any packaged
