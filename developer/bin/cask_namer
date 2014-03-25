@@ -17,7 +17,7 @@ require 'open3'
 begin
   # not available by default
   require 'active_support/inflector'
-rescue
+rescue LoadError
 end
 
 ###
