@@ -1,4 +1,4 @@
-class YandexDisk < Cask
+class Yandexdisk < Cask
   url 'https://disk.yandex.com/download/Yandex.Disk.Mac.dmg'
   homepage 'https://disk.yandex.com/'
   version 'latest'
