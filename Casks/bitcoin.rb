@@ -1,7 +1,7 @@
 class Bitcoin < Cask
-  url 'https://bitcoin.org/bin/0.8.6/bitcoin-0.8.6-macosx.dmg'
+  url 'https://bitcoin.org/bin/0.9.0/bitcoin-0.9.0-macosx.dmg'
   homepage 'https://bitcoin.org/'
-  version '0.8.6'
-  sha256 'ec85816e6cd034230ec5dc83c105334aa91bfa38fd959ba3d1d3bd5d4df3208b'
+  version '0.9.0'
+  sha256 '80040488c1c03b69beee43c05da472d1cb2f9052fcfa93b73f094298017304e9'
   link 'Bitcoin-Qt.app'
 end
