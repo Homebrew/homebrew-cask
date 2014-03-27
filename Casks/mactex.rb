@@ -4,7 +4,8 @@ class Mactex < Cask
   version 'latest'
   no_checksum
   install 'MacTeX.pkg'
-  uninstall :pkgutil => 'org.tug.mactex.texlive2013'
+  uninstall :pkgutil => 'org.tug.mactex.texlive2013',
+            :files   => '/etc/paths.d/TeX'
   caveats do
     path_environment_variable '/usr/texbin'
   end
