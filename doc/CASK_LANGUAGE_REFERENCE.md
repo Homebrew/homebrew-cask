@@ -147,6 +147,7 @@ The following methods may be called to generate standard warning messages:
 | `path_environment_variable(path)` | The user should make sure `path` is in their `$PATH` environment variable
 | `logout`                          | The user should log out and log back in to complete installation
 | `reboot`                          | The user should reboot to complete installation
+| `assistive_devices`               | The user should grant the application access to assitive devices
 | `files_in_usr_local`              | The Cask installs files to `/usr/local`, which may confuse Homebrew
 | `arch_only(list)`                 | The Cask only supports certain architectures.  Currently valid elements of `list` are `intel-32` and `intel-64`
 | `os_version_only(list)`           | The Cask only supports certain OS X Versions.  Currently valid elements of `list` are `10.5`, `10.6`, `10.7`, `10.8`, and `10.9`
