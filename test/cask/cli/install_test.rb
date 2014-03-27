@@ -42,6 +42,20 @@ describe Cask::CLI::Install do
     }.must_raise CaskUnavailableError
   end
 
+  it "returns a suggestion for a misspelled Cask" do
+    e = lambda {
+      Cask::CLI::Install.run('googlechrome')
+    }.must_raise CaskUnavailableError
+    e.message.must_equal "No available cask for googlechrome\. Did you mean:\ngoogle-chrome"
+  end
+
+  it "returns multiple suggestions for a Cask fragment" do
+    e = lambda {
+      Cask::CLI::Install.run('google')
+    }.must_raise CaskUnavailableError
+    e.message.must_match %r{^No available cask for google\. Did you mean one of:\ngoogle}
+  end
+
   it "raises an exception when no cask is specified" do
     lambda {
       Cask::CLI::Install.run

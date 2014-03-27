@@ -2,6 +2,7 @@
 # see Homebrew Library/Homebrew/utils.rb
 
 require 'yaml'
+require 'open3'
 
 # monkeypatch Tty
 class Tty
@@ -64,5 +65,30 @@ def odumpcask cask
     ].each do |method|
       odebug "Cask instance method '#{method}':", cask.send(method).to_yaml
     end
+  end
+end
+
+# from Homebrew puts_columns
+def stringify_columns items, star_items=[]
+  return if items.empty?
+
+  if star_items && star_items.any?
+    items = items.map{|item| star_items.include?(item) ? "#{item}*" : item}
+  end
+
+  if $stdout.tty?
+    # determine the best width to display for different console sizes
+    console_width = `/bin/stty size`.chomp.split(" ").last.to_i
+    console_width = 80 if console_width <= 0
+  else
+    console_width = 80
+  end
+  longest = items.sort_by { |item| item.length }.last
+  optimal_col_width = (console_width.to_f / (longest.length + 2).to_f).floor
+  cols = optimal_col_width > 1 ? optimal_col_width : 1
+  Open3.popen3('/usr/bin/pr', "-#{cols}", '-t', "-w#{console_width}") do |stdin, stdout, stderr|
+    stdin.puts(items)
+    stdin.close
+    stdout.read
   end
 end
