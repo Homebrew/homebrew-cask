@@ -145,6 +145,7 @@ The following methods may be called to generate standard warning messages:
 | --------------------------------- | ----------- |
 | `manual_installer(path)`          | The user should execute an installer to complete the installation. `path` may be absolute, or relative to the Cask.
 | `path_environment_variable(path)` | The user should make sure `path` is in their `$PATH` environment variable
+| `zsh_path_helper(path)`           | Zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable
 | `logout`                          | The user should log out and log back in to complete installation
 | `reboot`                          | The user should reboot to complete installation
 | `files_in_usr_local`              | The Cask installs files to `/usr/local`, which may confuse Homebrew
