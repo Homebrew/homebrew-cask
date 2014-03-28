@@ -97,6 +97,16 @@ class Cask::CaveatsDSL
     EOS
   end
 
+  def assistive_devices
+    puts <<-EOS.undent
+    To use #{@cask}, you may need to give it access to assistive
+    devices (Accessibility).  For OS X Mavericks:
+
+      System Preferences / Security & Privacy / Privacy / Accessibility
+
+    EOS
+  end
+
   # minor bug: because output from arch_only is conditional, the
   # existence of this directive causes "===> Caveats" header to
   # appear even if no warning is output.  One workaround would
