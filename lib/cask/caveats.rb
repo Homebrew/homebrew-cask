@@ -59,6 +59,17 @@ class Cask::CaveatsDSL
     EOS
   end
 
+  def zsh_path_helper(path)
+    puts <<-EOS.undent
+    To use #{@cask}, zsh users may need to add the following line to their
+    ~/.zprofile.  (Among other effects, #{path} will be added to the
+    PATH environment variable):
+
+      eval `/usr/libexec/path_helper -s`
+
+    EOS
+  end
+
   def files_in_usr_local
     localpath = '/usr/local'
     if HOMEBREW_PREFIX.to_s.downcase.index(localpath) == 0
