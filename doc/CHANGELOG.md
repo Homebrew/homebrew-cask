@@ -1,5 +1,34 @@
 # CHANGELOG
 
+## 0.32.0
+
+* __Casks__
+ - 34 Casks added (64 updated) by 67 contributors since 0.31.1
+ - 1352 total Casks
+* __Features__
+ - [#2706][] suggest replacements on `brew cask install` fail
+ - [#3667][] display artifact summary in `brew cask info` <3 [@drew-gross][]
+ - [#3700][] add `assistive_devices` to `caveats` DSL
+ - [#3699][] add `zsh_path_helper` to `caveats` DSL
+* __Fixes__
+ - [#3647][] bin/brew-cask.rb is meant to be required by Homebrew, not actually executed by the shell <3 [@jasonkarns][]
+ - [#3668][] rescue LoadError for optional `require` in `cask_namer`
+ - [#3662][] make `brew cask audit` return error code on fail
+* __Documentation__
+ - 2 doc commits since 0.31.1
+* __Breaking Changes__
+ - none
+
+[#3667]: https://github.com/phinze/homebrew-cask/issues/3667
+[#3700]: https://github.com/phinze/homebrew-cask/issues/3700
+[#3699]: https://github.com/phinze/homebrew-cask/issues/3699
+[#2706]: https://github.com/phinze/homebrew-cask/issues/2706
+[#3662]: https://github.com/phinze/homebrew-cask/issues/3662
+[#3668]: https://github.com/phinze/homebrew-cask/issues/3668
+[#3647]: https://github.com/phinze/homebrew-cask/issues/3647
+[@jasonkarns]: https://github.com/jasonkarns
+[@drew-gross]: https://github.com/drew-gross
+
 ## 0.31.1
 
 * __Casks__
