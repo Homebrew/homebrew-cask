@@ -3,5 +3,5 @@ class MediaConverter < Cask
   homepage 'http://media-converter.sourceforge.net/'
   version '1.2'
   sha256 '4893e6e5bc18b9cb0f0d8e1bcb861f92595314e4f9768ef638affdfc866f37e1'
-  link 'Media Converter.app'
+  link 'Media Converter.localized/Media Converter.app'
 end
