@@ -3,4 +3,5 @@ class Sidekick < Cask
   homepage 'http://oomphalot.com/sidekick/'
   version 'latest'
   no_checksum
+  link 'Sidekick.app'
 end

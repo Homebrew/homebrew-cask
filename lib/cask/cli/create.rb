@@ -1,7 +1,9 @@
 module Cask::CLI::Create
   def self.run(*arguments)
-    cask_name, *_ = *arguments
+    raise CaskUnspecifiedError if arguments.empty?
+    cask_name = arguments.first.sub(/\.rb$/i,'')
     cask_path = Cask.path(cask_name)
+    odebug "Creating Cask #{cask_name}"
 
     if cask_path.exist?
       raise CaskAlreadyCreatedError.new cask_name
@@ -21,8 +23,8 @@ module Cask::CLI::Create
         url ''
         homepage ''
         version ''
-        sha1 ''
-        link :app, ''
+        sha256 ''
+        link ''
       end
     EOS
   end
@@ -31,4 +33,3 @@ module Cask::CLI::Create
     "creates a cask of the given name and opens it in an editor"
   end
 end
-

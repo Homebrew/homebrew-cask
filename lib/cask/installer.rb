@@ -1,110 +1,138 @@
 require 'digest'
+require 'dependency_collector'
+require 'formula_installer'
 
 class Cask::Installer
-  class << self
-    def install(cask)
-      require 'formula_support'
-      software_spec = SoftwareSpec.new(cask.url.to_s, cask.version)
-      downloader = CurlDownloadStrategy.new(cask.title, software_spec)
-      downloaded_path = downloader.fetch
+  def initialize(cask, command=Cask::SystemCommand)
+    @cask = cask
+    @command = command
+  end
 
-      _check_sums(downloaded_path, cask.sums) unless cask.sums === 0
-
-      FileUtils.mkdir_p cask.destination_path
-
-      _with_extracted_mountpoints(downloaded_path) do |mountpoint|
-        `ditto '#{mountpoint}' '#{cask.destination_path}' 2>/dev/null`
-      end
-
-      ohai "Success! #{cask} installed to #{cask.destination_path}"
-
-      unless cask.caveats.empty?
-        ohai 'Caveats', cask.caveats 
-      end
-    end
-
-    def uninstall(cask)
-      raise CaskNotInstalledError.new(cask) unless cask.installed?
-
-      cask.destination_path.rmtree
-    end
-
-    def _check_sums(path, sums)
-      has_sum = false
-      sums.each do |sum|
-        unless sum.empty?
-          computed = Checksum.new(sum.hash_type, Digest.const_get(sum.hash_type.to_s.upcase).file(path).hexdigest)
-          raise ChecksumMismatchError.new(sum, computed) unless sum == computed
-          has_sum = true
+  def self.print_caveats(cask)
+    odebug "Printing caveats"
+    unless cask.caveats.empty?
+      ohai "Caveats"
+      cask.caveats.each do |caveat|
+        if caveat.respond_to?(:eval_and_print)
+          caveat.eval_and_print(cask)
+        else
+          puts caveat
         end
       end
-      raise ChecksumMissingError.new("Checksum required. SHA1: '#{Digest::SHA1.file(path).hexdigest}'") unless has_sum
+    end
+  end
+
+  def install(force=false)
+    odebug "Cask::Installer.install"
+    if @cask.installed? && !force
+      raise CaskAlreadyInstalledError.new(@cask)
     end
 
-    def _with_extracted_mountpoints(path)
-      if _dmg?(path)
-        File.open(path) do |dmg|
-          xml_str = `hdiutil mount -plist -nobrowse -readonly -noidme -mountrandom /tmp '#{dmg.path}'`
-          hdiutil_info = Plist::parse_xml(xml_str)
-          raise Exception.new("No disk entities returned by mount at #{dmg.path}") unless hdiutil_info.has_key?("system-entities")
-          mounts = hdiutil_info["system-entities"].collect { |entity|
-            entity["mount-point"]
-          }.compact
-          begin
-            mounts.each do |mountpoint|
-              yield Pathname.new(mountpoint)
-            end
-          ensure
-            mounts.each do |mountpoint|
-              `hdiutil eject '#{mountpoint}'`
-            end
-          end
+    print_caveats
+
+    begin
+      formula_dependencies
+      download
+      extract_primary_container
+      install_artifacts
+    rescue
+      purge_files
+      raise
+    end
+
+    puts summary
+  end
+
+  def summary
+    s = if MacOS.version >= :lion and not ENV['HOMEBREW_NO_EMOJI']
+      (ENV['HOMEBREW_INSTALL_BADGE'] || "\xf0\x9f\x8d\xba") + '  '
+    else
+      "#{Tty.blue}==>#{Tty.white} Success!#{Tty.reset} "
+    end
+    s << "#{@cask} installed to '#{@cask.destination_path}' (#{@cask.destination_path.cabv})"
+  end
+
+  def download
+    odebug "Downloading"
+    download = Cask::Download.new(@cask)
+    @downloaded_path = download.perform
+    odebug "Downloaded to -> #{@downloaded_path}"
+    @downloaded_path
+  end
+
+  def extract_primary_container
+    odebug "Extracting primary container"
+    FileUtils.mkdir_p @cask.destination_path
+    container = if @cask.container_type
+       Cask::Container.from_type(@cask.container_type)
+    else
+       Cask::Container.for_path(@downloaded_path, @command)
+    end
+    unless container
+      raise CaskError.new "Uh oh, could not identify primary container for '#{@downloaded_path}'"
+    end
+    odebug "Using container class #{container} for #{@downloaded_path}"
+    container.new(@cask, @downloaded_path, @command).extract
+  end
+
+  def install_artifacts
+    odebug "Installing artifacts"
+    artifacts = Cask::Artifact.for_cask(@cask)
+    odebug "#{artifacts.length} artifact/s defined", artifacts
+    artifacts.each do |artifact|
+      odebug "Installing artifact of class #{artifact}"
+      artifact.new(@cask, @command).install
+    end
+  end
+
+  def formula_dependencies
+    unless @cask.depends_on_formula.empty?
+      ohai 'Installing Formula dependencies from Homebrew'
+      @cask.depends_on_formula.each do |dep_name|
+        dependency_collector = DependencyCollector.new
+        dep = dependency_collector.add(dep_name)
+        unless dep.installed?
+          dep_tab = Tab.for_formula(dep.to_formula)
+          dep_options = dep.options
+          dep = dep.to_formula
+          fi = FormulaInstaller.new(dep)
+          fi.tab = dep_tab
+          fi.options = dep_options
+          fi.ignore_deps = false
+          fi.show_header = true
+          fi.install
+          fi.caveats
+          fi.finish
         end
-      elsif _zip?(path)
-        destdir = "/tmp/brewcask_#{@title}_extracted"
-        `mkdir -p '#{destdir}'`
-        `unzip -d '#{destdir}' '#{path}' -x '__MACOSX/*'`
-        begin
-          yield destdir
-        ensure
-          `rm -rf '#{destdir}'`
-        end
-      elsif _tar?(path)
-        destdir = "/tmp/brewcask_#{@title}_extracted"
-        `mkdir -p '#{destdir}'`
-        `tar jxf '#{path}' -C '#{destdir}'`
-        begin
-          yield destdir
-        ensure
-          `rm -rf '#{destdir}'`
-        end
-      else
-        raise "uh oh, could not identify type of #{path}"
       end
     end
+  end
 
-    def _dmg?(path)
-      output = `hdiutil imageinfo '#{path}' 2>/dev/null`
-      output != ''
-    end
+  def print_caveats
+    self.class.print_caveats(@cask)
+  end
 
-    def _zip?(path)
-      output = `file -Izb '#{path}'`
-      output.chomp.include? 'compressed-encoding=application/zip; charset=binary; charset=binary'
-    end
+  def uninstall
+    odebug "Cask::Installer.uninstall"
+    uninstall_artifacts
+    purge_files
+  end
 
-    def _tar?(path)
-      _tar_bzip?(path) || _tar_gzip?(path)
+  def uninstall_artifacts
+    odebug "Un-installing artifacts"
+    artifacts = Cask::Artifact.for_cask(@cask)
+    odebug "#{artifacts.length} artifact/s defined", artifacts
+    artifacts.each do |artifact|
+      odebug "Un-installing artifact of class #{artifact}"
+      artifact.new(@cask, @command).uninstall
     end
+  end
 
-    def _tar_bzip?(path)
-      output = `file -Izb '#{path}'`
-      output.chomp == 'application/x-tar; charset=binary compressed-encoding=application/x-bzip2; charset=binary; charset=binary'
+  def purge_files
+    odebug "Purging files"
+    if @cask.destination_path.exist?
+      @cask.destination_path.rmtree
     end
-
-    def _tar_gzip?(path)
-      output = `file -Izb '#{path}'`
-      output.chomp == 'application/x-tar; charset=binary compressed-encoding=application/x-gzip; charset=binary; charset=binary'
-    end
+    @cask.caskroom_path.rmdir_if_possible
   end
 end

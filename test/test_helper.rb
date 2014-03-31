@@ -1,6 +1,11 @@
 require 'bundler'
 require 'bundler/setup'
 
+# force some environment variables
+ENV['HOMEBREW_NO_EMOJI']='1'
+
+# set some Homebrew constants used in our code
+HOMEBREW_BREW_FILE = '/usr/local/bin/brew'
 
 # add cask lib to load path
 brew_cask_path = Pathname.new(File.expand_path(__FILE__+'/../../'))
@@ -11,6 +16,7 @@ $:.push(lib_path)
 
 # add homebrew to load path
 homebrew_path = Pathname(`brew --prefix`.chomp)
+homebrew_path = Pathname('/usr/local') unless homebrew_path.exist?
 $:.push(homebrew_path.join('Library', 'Homebrew'))
 
 # require homebrew testing env
@@ -18,10 +24,16 @@ require 'test/testing_env'
 
 # making homebrew's cache dir allows us to actually download casks in tests
 HOMEBREW_CACHE.mkpath
+HOMEBREW_CACHE.join('Casks').mkpath
 
 # must be called after testing_env so at_exit hooks are in proper order
 require 'minitest/autorun'
 require 'minitest-colorize'
+
+# Force mocha to patch MiniTest since we have both loaded thanks to homebrew's testing_env
+require 'mocha/api'
+require 'mocha/integration/mini_test'
+Mocha::Integration::MiniTest.activate
 
 # our baby
 require 'cask'
@@ -67,22 +79,40 @@ class TestHelper
     return false unless candidate.symlink?
     candidate.readlink.exist?
   end
+
+  def self.install_without_artifacts(cask)
+    Cask::Installer.new(cask).tap do |i|
+      shutup { i.download }
+      i.extract_primary_container
+    end
+  end
 end
 
 require 'support/fake_fetcher'
-require 'support/fake_appdir'
+require 'support/fake_dirs'
 require 'support/fake_system_command'
+require 'support/cleanup'
+require 'support/never_sudo_system_command'
+require 'tmpdir'
+require 'tempfile'
 
 # pretend like we installed the cask tap
 project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
 taps_dest = HOMEBREW_LIBRARY/"Taps"
 
+# create directories
 taps_dest.mkdir
+HOMEBREW_PREFIX.join('bin').mkdir
 
 FileUtils.ln_s project_root, taps_dest/"phinze-cask"
 
 # Common superclass for tests casks for when we need to filter them out
 class TestCask < Cask; end
+
+# jack in some optional utilities
+FileUtils.ln_s '/usr/local/bin/cabextract', HOMEBREW_PREFIX.join('bin/cabextract')
+FileUtils.ln_s '/usr/local/bin/unar', HOMEBREW_PREFIX.join('bin/unar')
+FileUtils.ln_s '/usr/local/bin/lsar', HOMEBREW_PREFIX.join('bin/lsar')
 
 # also jack in some test casks
 FileUtils.ln_s project_root/'test'/'support', taps_dest/"phinze-testcasks"

@@ -4,6 +4,7 @@ class Cask::CLI::Alfred
     '/Applications/Xcode.app/Contents/Applications',
     '/Developer/Applications',
     '/Library/PreferencePanes',
+    '/System/Library/CoreServices/Applications',
     '/System/Library/PreferencePanes',
     '~/Library/Caches/Metadata/',
     '~/Library/Mobile Documents/',
@@ -36,7 +37,7 @@ class Cask::CLI::Alfred
 
   def self.assert_installed
     if !alfred_installed?
-      opoo "Could not find Alfred preferences, Alfred is probably not installed."
+      opoo "Could not find Alfred 2 preferences, Alfred 2 is probably not installed."
     end
     alfred_installed?
   end
@@ -47,6 +48,7 @@ class Cask::CLI::Alfred
     if linked?
       opoo "Alfred is already linked to homebrew-cask."
     else
+      odebug 'Linking Alfred scopes'
       save_alfred_scopes(alfred_scopes << Cask.caskroom)
       ohai "Successfully linked Alfred to homebrew-cask."
     end
@@ -58,6 +60,7 @@ class Cask::CLI::Alfred
     if !linked?
       opoo "Alfred is already unlinked from homebrew-cask."
     else
+      odebug 'Unlinking Alfred scopes'
       save_alfred_scopes(alfred_scopes.reject { |x| x == Cask.caskroom.to_s })
       ohai "Successfully unlinked Alfred from homebrew-cask."
     end
@@ -78,7 +81,7 @@ class Cask::CLI::Alfred
   end
 
   def self.alfred_installed?
-    alfred_preference('version').first =~ /^[0-9]\.[0-9]\.[0-9]$/
+    alfred_preference('version') =~ /^2\.[0-9]/
   end
 
   def self.linked?
@@ -93,9 +96,9 @@ class Cask::CLI::Alfred
   #
   # and we would like %w[/some/path /other/path]
   SCOPE_REGEXP = /^\s*"(.*)",?$/
-  
+
   def self.alfred_scopes
-    scopes = alfred_preference(KEY).map do |line|
+    scopes = alfred_preference(KEY).split("\n").map do |line|
       matchdata = line.match(SCOPE_REGEXP)
       matchdata ? matchdata.captures.first : nil
     end.compact
@@ -105,9 +108,11 @@ class Cask::CLI::Alfred
 
   def self.alfred_preference(key, value=nil)
     if value
-      @system_command.run(%Q(defaults write #{DOMAIN} #{key} "#{value}"))
+      odebug 'Writing Alfred preferences'
+      @system_command.run('/usr/bin/defaults', :args => ['write', DOMAIN, key, %Q(#{value})])
     else
-      @system_command.run("defaults read #{DOMAIN} #{key}")
+      odebug 'Reading Alfred preferences'
+      @system_command.run('/usr/bin/defaults', :args => ['read', DOMAIN, key])
     end
   end
 
@@ -120,7 +125,7 @@ class Cask::CLI::Alfred
       subcommands:
         status - reports whether Alfred is linked
         link   - adds Caskroom to alfred search paths
-        unlink - removes Cakroom from Alfred search paths
+        unlink - removes Caskroom from Alfred search paths
     ALFREDHELP
   end
 end

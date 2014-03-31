@@ -1,6 +1,7 @@
 class Dia < Cask
+  url 'http://downloads.sourceforge.net/dia-installer/dia/0.97.2/Dia-0.97.2-7.dmg'
   homepage 'http://dia-installer.de/'
-  url 'http://downloads.sourceforge.net/dia-installer/dia/0.97.2/Dia-0.97.2-5.dmg'
-  version '0.97.2-5'
-  sha1 '20bcc65b63f44aaa2788a7183c4a254f6a57d57d'
+  version '0.97.2-7'
+  sha256 '9d3038c01347716800688830eaf52204deb78affe74a5f0c6e0a48fd414d44be'
+  link 'Dia.app'
 end

@@ -1,4 +1,6 @@
-class CaskNotInstalledError < RuntimeError
+class CaskError < RuntimeError; end
+
+class CaskNotInstalledError < CaskError
   attr_reader :cask
   def initialize cask
     @cask = cask
@@ -9,7 +11,7 @@ class CaskNotInstalledError < RuntimeError
   end
 end
 
-class CaskUnavailableError < RuntimeError
+class CaskUnavailableError < CaskError
   attr_reader :name
   def initialize name
     @name = name
@@ -20,7 +22,7 @@ class CaskUnavailableError < RuntimeError
   end
 end
 
-class CaskAlreadyCreatedError < RuntimeError
+class CaskAlreadyCreatedError < CaskError
   attr_reader :name
   def initialize name
     @name = name
@@ -28,5 +30,53 @@ class CaskAlreadyCreatedError < RuntimeError
 
   def to_s
     "Cask for #{name} already exists. Use `brew cask edit #{name}` to see it."
+  end
+end
+
+class CaskAlreadyInstalledError < CaskError
+  attr_reader :name
+  def initialize name
+    @name = name
+  end
+
+  def to_s
+    "Cask for #{name} is already installed. Use `--force` to install anyways."
+  end
+end
+
+class CaskCommandFailedError < CaskError
+  def initialize cmd, output
+    @cmd = cmd
+    @output = output
+  end
+
+  def to_s;
+    <<-EOS.undent
+      Command failed to execute!
+
+      ==> Failed command:
+      #{@cmd}
+
+      ==> Output of failed command:
+      #{@output}
+    EOS
+  end
+end
+
+class CaskUnspecifiedError < CaskError
+  def to_s
+    "This command requires a cask's name"
+  end
+end
+
+class CaskInvalidError < CaskError
+  attr_reader :name, :submsg
+  def initialize(name, *submsg)
+    @name = name
+    @submsg = submsg.join(' ')
+  end
+
+  def to_s
+    "Cask '#{name}' definition is invalid" + (submsg.length > 0 ? ": #{submsg}" : '')
   end
 end

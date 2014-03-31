@@ -1,7 +1,7 @@
 class Sonos < Cask
-  url 'http://update.sonos.com/software/mac/mdcr/SonosDesktopController40.dmg'
+  url 'http://update.sonos.com/software/mac/mdcr/SonosDesktopController42.dmg'
   homepage 'http://www.sonos.com/'
-  version '4.0'
-  sha1 'd7db3eeab8810e749360968e5f909dea2d384056'
-  link :app, 'Sonos.app'
+  version '4.2'
+  sha256 '91c4d7568e34c74406efdd7ed9678a83cded4e61b61fb657242fe53fc492bc9d'
+  link 'Sonos.app'
 end

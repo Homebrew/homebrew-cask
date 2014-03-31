@@ -3,4 +3,5 @@ class Slate < Cask
   homepage 'https://github.com/jigish/slate'
   version 'latest'
   no_checksum
+  link 'Slate.app'
 end

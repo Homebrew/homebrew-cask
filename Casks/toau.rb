@@ -3,5 +3,5 @@ class Toau < Cask
   homepage 'http://toauapp.com'
   version 'latest'
   no_checksum
-  link :app, 'Toau.app'
+  link 'Toau.app'
 end

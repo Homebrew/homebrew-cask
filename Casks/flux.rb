@@ -1,7 +1,12 @@
 class Flux < Cask
-  url 'http://instruktion.net/theescapers/downloads/FluxV4.zip'
-  homepage 'http://www.theescapers.com/flux/'
-  version '4'
+  url 'https://justgetflux.com/mac/Flux.zip'
+  homepage 'http://justgetflux.com'
+  version 'latest'
   no_checksum
-  link :app, 'Flux.app'
+  link 'Flux.app'
+
+  after_install do
+    # Don't ask to move the app bundle to /Applications
+    system '/usr/bin/defaults', 'write', 'org.herf.Flux', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+  end
 end

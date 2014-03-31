@@ -1,7 +1,7 @@
 class Rstudio < Cask
-  url 'http://download1.rstudio.org/RStudio-0.97.449.dmg'
+  url 'http://download1.rstudio.org/RStudio-0.98.501.dmg'
   homepage 'http://www.rstudio.com/'
-  version '0.97.449'
-  sha1 'fd08b0c39da8b22ae58a1591e2ba013ed81b8fcd'
-  link :app, 'RStudio.app'
+  version '0.98.501'
+  sha256 '26cb3059c9f40d85856c103a3a34331d31a1e099b72c2bbee2319a4e39f82f35'
+  link 'RStudio.app'
 end

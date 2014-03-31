@@ -1,7 +1,7 @@
 class Synergy < Cask
-  url 'http://synergy.googlecode.com/files/synergy-1.4.12-MacOSX108-x86_64.dmg'
+  url 'http://fossfiles.com/synergy/synergy-1.4.17-r2055-MacOSX109-x86_64.dmg'
   homepage 'http://synergy-foss.org/'
-  version '1.4.12'
-  sha1 '8ef61785e8570772e8ecb317101d9045c579602f'
-  link :app, 'Synergy.app'
+  version '1.4.17'
+  sha256 '492412f9ba7891ef09eed8d166bc3efea577a38931b796a0feab52730f7fc868'
+  link 'Synergy.app'
 end

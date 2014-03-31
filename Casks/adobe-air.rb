@@ -1,13 +1,17 @@
 class AdobeAir < Cask
-  url 'http://airdownload.adobe.com/air/mac/download/3.5/AdobeAIR.dmg'
+  url 'http://airdownload.adobe.com/air/mac/download/4.0/AdobeAIR.dmg'
   homepage 'https://get.adobe.com/air/'
-  version '3.5'
-  sha1 '8fbd2dffc20442903d8b51e7362a3191f39752b4'
+  version '4.0'
+  sha256 '7be7fa0b6cd59ca3a85805e519135f738373719017c040ce7021b916427144a0'
+  caskroom_only true
 
-  link :app, :none
-
-  def caveats; <<-EOS.undent
-    You need to run #{destination_path/'AdobeAIRInstaller.app'} to actually install Adobe AIR
-    EOS
+  after_install do
+    system '/usr/bin/sudo', '-E', '--',
+      "#{destination_path}/Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer", '-silent'
   end
+
+  uninstall :script => {
+    :executable => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
+    :args => %w[-uninstall]
+  }
 end

@@ -3,4 +3,5 @@ class Sparrow < Cask
   homepage 'http://www.sparrowmailapp.com/'
   version 'latest'
   no_checksum
+  link 'Sparrow.app'
 end

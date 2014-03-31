@@ -3,5 +3,5 @@ class Pacifist < Cask
   homepage 'http://www.charlessoft.com/'
   version 'latest'
   no_checksum
-  link :app, 'Pacifist.app'
+  link 'Pacifist.app'
 end

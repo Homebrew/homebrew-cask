@@ -1,6 +1,7 @@
 class Paparazzi < Cask
-  url 'http://derailer.org/paparazzi/Paparazzi!%200.6.5.dmg'
+  url 'http://derailer.org/paparazzi/Paparazzi!%200.6.7.dmg'
   homepage 'http://derailer.org/paparazzi/'
-  version '0.6.5'
-  sha1 '3f7e7f0cd6fc498c04a0122f75e8874b7c69bbf7'
+  version '0.6.7'
+  sha256 '111c94994176a7690512aa5303bff14761f308c720b527b541e39edd054777bd'
+  link 'Paparazzi!.app'
 end

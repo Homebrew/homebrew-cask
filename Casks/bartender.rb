@@ -3,5 +3,10 @@ class Bartender < Cask
   homepage 'http://www.macbartender.com/'
   version 'latest'
   no_checksum
-  link :app, 'Bartender.app'
+  link 'Bartender.app'
+
+  after_install do
+    # Don't ask to move the app bundle to /Applications
+    system '/usr/bin/defaults', 'write', 'com.surteesstudios.Bartender', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+  end
 end

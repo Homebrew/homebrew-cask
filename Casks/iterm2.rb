@@ -1,6 +1,8 @@
 class Iterm2 < Cask
-  url 'https://iterm2.googlecode.com/files/iTerm2-1_0_0_20130319.zip'
+  # note: "2" is not a version number, but indicates a different vendor
+  url 'http://www.iterm2.com/downloads/stable/iTerm2_v1_0_0.zip'
   homepage 'http://www.iterm2.com/'
-  version '1.0.0.20130319'
-  sha1 '53eced3a291a82b418e5ee3589404d3fe57c3bb9'
+  version '1.0.0'
+  sha256 '2afad022b1e1f08b3ed40f0c2bde7bf7cce003852c83f85948c7f57a5578d9c5'
+  link 'iTerm.app'
 end

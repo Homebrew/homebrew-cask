@@ -1,6 +1,7 @@
 class SequelPro < Cask
-  url 'http://sequel-pro.googlecode.com/files/Sequel_Pro_0.9.9.1.dmg'
+  url 'https://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg'
   homepage 'http://www.sequelpro.com/'
-  version '0.9.9.1'
-  sha1 '25ee92a23c20ee6f004d5d69cafe3e3e15212b6f'
+  version '1.0.2'
+  sha256 'facd99344d0124cf4444acbef9006d947eadc6f96127b09e7380f014c7775f85'
+  link 'Sequel Pro.app'
 end

@@ -27,6 +27,17 @@ class CaskSourceForgeCorrectURLFormat < Cask
   url 'http://downloads.sourceforge.net/project/something/Something-1.2.3.dmg'
 end
 
+class CaskSourceForgeOtherCorrectURLFormat < Cask
+  version 'latest'
+  homepage 'http://sourceforge.net/projects/something/'
+  url 'http://sourceforge.net/projects/something/files/latest/download'
+end
+
+class CaskVersionLatestWithChecksum < Cask
+  version 'latest'
+  sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
+end
+
 describe Cask::Audit do
   describe "result" do
     it "is 'failed' if there are have been any errors added" do
@@ -67,10 +78,18 @@ describe Cask::Audit do
         audit.run!
         audit.errors.must_include 'homepage is required'
       end
+
+      it "adds an error if version is latest and using sha256" do
+        audit = Cask::Audit.new(CaskVersionLatestWithChecksum.new)
+        audit.run!
+        audit.errors.must_include 'you should use no_checksum when version is latest'
+      end
     end
+
     describe "preferred download URL formats" do
       it "adds a warning if SourceForge doesn't use download subdomain" do
-        warning_msg = 'SourceForge URL format incorrect. See https://github.com/phinze/homebrew-cask/pull/225#issuecomment-16536889 for details'
+        warning_msg = 'SourceForge URL format incorrect. See https://github.com/phinze/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforge-urls'
+
 
         audit = Cask::Audit.new(CaskSourceForgeIncorrectURLFormat.new)
         audit.run!
@@ -79,6 +98,22 @@ describe Cask::Audit do
         audit = Cask::Audit.new(CaskSourceForgeCorrectURLFormat.new)
         audit.run!
         audit.warnings.wont_include warning_msg
+
+        audit = Cask::Audit.new(CaskSourceForgeOtherCorrectURLFormat.new)
+        audit.run!
+        audit.warnings.wont_include warning_msg
+      end
+    end
+
+    describe "audit of downloads" do
+      it "creates an error if the download fails" do
+        error_message = "Download Failed"
+        download = mock()
+        download.expects(:perform).raises(StandardError.new(error_message))
+
+        audit = Cask::Audit.new(TestHelper.test_cask)
+        audit.run!(download)
+        audit.errors.first.must_match(/#{error_message}/)
       end
     end
   end

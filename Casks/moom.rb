@@ -3,4 +3,5 @@ class Moom < Cask
   homepage 'http://manytricks.com/moom/'
   version 'latest'
   no_checksum
+  link 'Moom.app'
 end

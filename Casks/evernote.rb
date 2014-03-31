@@ -1,8 +1,7 @@
 class Evernote < Cask
-  url 'http://www.evernote.com/about/download/get.php?file=EvernoteMac'
-  homepage 'http://evernote.com/'
+  url 'https://www.evernote.com/about/download/get.php?file=EvernoteMac'
+  homepage 'https://evernote.com/'
   version 'latest'
   no_checksum
-
-  link :app, 'Evernote.app'
+  link 'Evernote.app'
 end

@@ -1,6 +1,7 @@
 class MplayerOsxExtended < Cask
-  url 'https://mplayerosxext.googlecode.com/files/MPlayer-OSX-Extended_rev15-test2.zip'
+  url 'https://mplayerosxext.googlecode.com/files/MPlayer-OSX-Extended_rev15-test3.zip'
   homepage 'http://www.mplayerosx.ch/'
-  version 'rev15-test2'
-  sha1 'ef13167d15ca93a8f9b31b597d4d6b6314a26425'
+  version 'rev15-test3'
+  sha256 '1543feec27fcc911e35b20a51a00957145f35b1b970b0cb35004c86727e4a8fe'
+  link 'MPlayer OSX Extended.app'
 end
