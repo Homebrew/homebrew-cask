@@ -1,7 +1,7 @@
 class PopcornTime < Cask
-  url 'http://popcorn.cdnjd.com/releases/Popcorn-Time-2.7-Mac.tgz'
-  homepage 'https://popcorn.yts.re/'
-  version '2.7'
-  sha256 'ae0b6bd37e4caded13b3f6ab693530f4510ed1d7246f0afde12a98e415b89305'
+  url 'http://popcorn.cdnjd.com/releases/Popcorn-Time-0.2.8-Mac.tar.gz'
+  homepage 'http://popcorn.cdnjd.com'
+  version '0.2.8'
+  sha256 '393bad100a3953f7f31207d81c1b59d83a172f42f4c41efeeaed35da91bc8431'
   link 'Popcorn-Time.app'
 end
