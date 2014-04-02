@@ -1,8 +1,8 @@
 class MonoMdk < Cask
-  url 'http://download.mono-project.com/archive/3.2.4/macos-10-x86/MonoFramework-MDK-3.2.4.macos10.xamarin.x86.pkg'
+  url 'http://download.xamarin.com/MonoFrameworkMDK/Macx86/MonoFramework-MDK-3.4.0.185.macos10.xamarin.x86.pkg'
   homepage 'http://mono-project.com/'
-  version '3.2.4'
-  sha256 '2175f275b23bc43321e1a0a71d7c2e66a7d3aa0c9d8706b6130d9a9e01170d94'
-  install 'MonoFramework-MDK-3.2.4.macos10.xamarin.x86.pkg'
+  version '3.4.0.185'
+  sha256 '39c36f322a69e559461622a98e859f304a8611421ce394322723261ad902c17e'
+  install 'MonoFramework-MDK-3.4.0.185.macos10.xamarin.x86.pkg'
   uninstall :pkgutil => 'com.xamarin.mono-MDK.pkg'
 end
