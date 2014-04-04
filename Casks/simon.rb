@@ -1,7 +1,7 @@
 class Simon < Cask
-  url 'http://www.dejal.com/download/simon-3.5.1.zip'
+  url 'http://www.dejal.com/download/simon-3.6.1.zip'
   homepage 'http://www.dejal.com/simon/'
-  version '3.5.1'
-  sha256 '2dc8f6d992df93ef89ab7c4829a858697457b747e478fdaa88cc52a8186eeb1d'
+  version '3.6.1'
+  sha256 '19a3395bdfd0c8c400c4e489e6d6ff192415661033e91023fc4c9297b28b4168'
   link 'Simon.app'
 end
