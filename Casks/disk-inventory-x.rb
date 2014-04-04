@@ -1,5 +1,5 @@
 class DiskInventoryX < Cask
-  url 'http://www.alice-dsl.net/tjark.derlien/DIX1.0Universal.dmg',
+  url 'http://www.derlien.com/diskinventoryx/downloads/dev/DIX1.0Universal.dmg',
     :user_agent => :fake
   homepage 'http://www.derlien.com/'
   version '1.0'
