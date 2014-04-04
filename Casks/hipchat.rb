@@ -1,7 +1,7 @@
 class Hipchat < Cask
-  url 'http://downloads.hipchat.com.s3.amazonaws.com/osx/HipChat-2.5.zip'
+  url 'https://s3.amazonaws.com/uploads.hipchat.com/10804/83133/PII7uW7gugtp5mf/HipChat.zip'
   homepage 'https://www.hipchat.com/'
-  version '2.5'
-  sha256 '528340a6c5107cc4a071dc74714612d5390192149094f9ea607a6bbd32d135e5'
+  version 'latest'
+  no_checksum
   link 'HipChat.app'
 end
