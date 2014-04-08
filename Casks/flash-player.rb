@@ -1,7 +1,7 @@
 class FlashPlayer < Cask
-  url 'http://fpdownload.macromedia.com/pub/flashplayer/updaters/12/flashplayer_12_sa.dmg'
+  url 'http://fpdownload.macromedia.com/pub/flashplayer/updaters/13/flashplayer_13_sa.dmg'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
-  version '12.0.0.77'
-  sha256 'f63c8931502b88bdde25fa38f379f78d851aed9f383f782b10621a508cdf832c'
+  version '13.0.0.182'
+  sha256 '8f82c71bff085133b275455e8c6b51a7da16e2c4e1fa0379802e8e011e01de48'
   link 'Flash Player.app'
 end
