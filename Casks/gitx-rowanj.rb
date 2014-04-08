@@ -4,4 +4,5 @@ class GitxRowanj < Cask
   version 'latest'
   no_checksum
   link 'GitX.app'
+  binary 'GitX.app/Contents/Resources/gitx'
 end
