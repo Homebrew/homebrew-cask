@@ -1,7 +1,7 @@
 class Todoist < Cask
-  url 'https://d3ptyyxy2at9ui.cloudfront.net/Todoist_v3_1.zip'
+  url 'https://d2dq6e731uoz0t.cloudfront.net/3334959e6780bf9ff7dbe8fc936e0700/as/Todoist.app.zip'
   homepage 'https://todoist.com'
-  version '3.1'
-  sha256 '0fbcc541e8ab310188436056bda88de904a274a1e4204fc4f41ee953516ac729'
+  version 'latest'
+  no_checksum
   link 'Todoist.app'
 end
