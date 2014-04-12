@@ -1,7 +1,7 @@
 class Bbedit < Cask
-  url 'http://ven.barebones.com/BBEdit_10.5.8.dmg'
+  url 'http://pine.barebones.com/files/BBEdit_10.5.10.dmg'
   homepage 'http://www.barebones.com/products/bbedit/'
-  version '10.5.8'
-  sha256 'f5f85a09ddc3dc4750854348b99778175ea28755056b136a2a1e1b1db496359c'
+  version '10.5.10'
+  sha256 '8a9cf0d564b6d09f0084fbd881feff46bac16c5e25bd1a147ca1ed6126321fc7'
   link 'BBEdit.app'
 end
