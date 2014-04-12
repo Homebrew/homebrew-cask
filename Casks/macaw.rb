@@ -1,7 +1,7 @@
 class Macaw < Cask
-  url 'http://download.macaw.co/1.0/Macaw1.0.dmg'
+  url 'http://download.macaw.co/1.0.3/Macaw1.0.3.dmg'
   homepage 'http://macaw.co/'
-  version '1.0'
-  sha256 'a474175b6c760d567df4c50fb6b9a94936fe9310185810973f382f3e602a255f'
+  version '1.0.3'
+  sha256 '128bdf1e07ca0942db66972efc00d0badb57cd5ef36f4cc48544b04b300434e6'
   link 'Macaw.app'
 end
