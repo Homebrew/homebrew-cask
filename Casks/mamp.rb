@@ -1,8 +1,8 @@
 class Mamp < Cask
-  url "http://downloads.mamp.info/MAMP-PRO/releases/3.0.3/MAMP_MAMP_PRO_3.0.3.pkg"
+  url 'http://downloads7.mamp.info/MAMP-PRO/releases/3.0.4/MAMP_MAMP_PRO_3.0.4.pkg'
   homepage 'http://www.mamp.info/en/index.html'
-  version '3.0.3'
-  sha256 '1e23c4777a91e7d4181afb8865dc84e1b07ff01d67c843299834e6f8c747e9da'
+  version '3.0.4'
+  sha256 '786538ce247870af4bfbf0195e73d6b67e08fda41c5f8822bbf5154c31402d1a'
   install 'MAMP_MAMP_PRO_3.0.3.pkg'
   after_install do
     system '/usr/bin/sudo', '-E', '--',
