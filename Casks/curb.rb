@@ -1,7 +1,7 @@
 class Curb < Cask
-  url 'http://www.mrrsoftware.com/Downloads/Curb/Curb-1_1.zip'
-  homepage 'http://www.mrrsoftware.com/MRRSoftware/Curb.html'
-  version '1.1'
-  sha256 '26a4b2119f36ed86746e72ba92931abc16903836fcb831a4386c00a8f96eca67'
+  url 'http://mrrsoftware.com/Downloads/Curb/Curb-1_1_1.zip'
+  homepage 'http://mrrsoftware.com/curb'
+  version '1.1.1'
+  sha256 '832750d2a75272763c5c2f681b11670584626c9d93bf993d6b3af96234558f68'
   link 'Curb.app'
 end
