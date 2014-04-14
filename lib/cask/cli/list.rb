@@ -1,15 +1,9 @@
 class Cask::CLI::List
   def self.run(*arguments)
     if arguments.any?
-      retval = list_casks(*arguments)
+      list_casks(*arguments)
     else
-      retval = list_installed
-    end
-    # retval is ternary: true/false/nil
-    if retval.nil?
-      raise CaskError.new("nothing to list")
-    elsif ! retval
-      raise CaskError.new("listing incomplete")
+      list_installed
     end
   end
 
@@ -26,7 +20,9 @@ class Cask::CLI::List
         opoo "#{cask} is not installed"
       end
     end
-    count == 0 ? nil : count == cask_names.length
+    if count != cask_names.length
+      raise CaskError.new("Listing incomplete")
+    end
   end
 
   def self.list_artifacts(cask)
@@ -43,9 +39,7 @@ class Cask::CLI::List
   end
 
   def self.list_installed
-    columns = Cask.installed.map(&:to_s)
-    puts_columns columns
-    columns.empty? ? nil : Cask.installed.length == columns.length
+    puts_columns Cask.installed.map(&:to_s)
   end
 
   def self.help
