@@ -1,7 +1,7 @@
 class Ccmenu < Cask
-  url 'http://downloads.sourceforge.net/project/ccmenu/CCMenu/1.6.5/ccmenu-1.6.5-b.dmg'
+  url 'http://downloads.sourceforge.net/project/ccmenu/CCMenu/1.7/ccmenu-1.7-b.dmg'
   homepage 'http://ccmenu.sourceforge.net/'
-  version '1.6.5'
-  sha256 'fb6140178691235e109d92b7060ba2b78e820764c02994041d3f21b50bc48de1'
+  version '1.7'
+  sha256 '974a2022dbc9494958334ee8f02e08df7ed184e1f421a53d623dfbeaadf08a2c'
   link 'CCMenu.app'
 end
