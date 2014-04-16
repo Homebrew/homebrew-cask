@@ -1,7 +1,7 @@
 class Postgres < Cask
-  url 'https://github.com/PostgresApp/PostgresApp/releases/download/9.3.3.0/Postgres-9.3.3.0.zip'
+  url 'https://github.com/PostgresApp/PostgresApp/releases/download/9.3.3.0/Postgres-9.3.4.1.zip'
   homepage 'http://postgresapp.com/'
-  version '9.3.3.0'
-  sha256 '55a89d1072d3869a0bcb434efbafab08f9025f3dba3f1c535ce861394bdadcce'
+  version '9.3.4.1'
+  sha256 '99e215b697db838eff66c2f99bc94b677cc7fd91f9a0281c06e45e98d8bdb5c6'
   link 'Postgres.app'
 end
