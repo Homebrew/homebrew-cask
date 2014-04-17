@@ -1,7 +1,7 @@
 class Bitmessage < Cask
-  url 'https://bitmessage.org/download/osx/Bitmessage.dmg'
+  url 'https://bitmessage.org/download/osx/Archive/bitmessage-v0.4.2.dmg'
   homepage 'https://bitmessage.org/'
-  version 'latest'
-  no_checksum
+  version '0.4.2'
+  sha256 'aa109705406d9ab86761d03e2cb6387a5a05a51d7a68747f6284ba32ef2aa445'
   link 'Bitmessage.app'
 end
