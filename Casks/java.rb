@@ -1,11 +1,11 @@
 class Java < Cask
-  url 'http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-macosx-x64.dmg',
+  url 'http://download.oracle.com/otn-pub/java/jdk/8u5-b13/jdk-8u5-macosx-x64.dmg',
       :cookies => {
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html'
   version '1.8.0'
-  sha256 '60db4220632adb017cd8315a7a0bf0002a2ee49008c651ffc67ef38eafa46717'
+  sha256 '3dd1047340c2487f7c32c4ae633ba9a9a9e1dee49f6084d7df3846091faece48'
   install 'JDK 8.pkg'
   after_install do
     system '/usr/bin/sudo', '-E', '--',
