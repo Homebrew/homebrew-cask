@@ -4,4 +4,9 @@ class Hive < Cask
   version '1.1.4'
   sha256 '96f759ab0074b718fdf9fbd63dc158bf7063f729930cac2cbc6e87dd237b115d'
   link 'Hive.app'
+
+  after_install do
+    # Don't ask to move the app bundle to /Applications
+    system '/usr/bin/defaults', 'write', 'com.hivewallet.Hive', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+  end
 end
