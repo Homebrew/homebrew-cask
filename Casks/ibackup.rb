@@ -2,6 +2,6 @@ class Ibackup < Cask
   url 'http://www.grapefruit.ch/iBackup/versions/iBackup%207.x/iBackup%207.5.dmg'
   homepage 'http://www.grapefruit.ch/iBackup'
   version '7.5'
-  sha256 'a0f506075f53625e65b8dbeef8111a0c627bf474a34cb0690d2e281b2eed98bf'
+  sha256 'faa69e95f62dfeb04a6ede20e7b856d43645f1bd07aede743c5d364d2845aabf'
   link 'iBackup.app'
 end
