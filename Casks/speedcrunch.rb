@@ -1,7 +1,7 @@
 class Speedcrunch < Cask
-  url 'http://speedcrunch.googlecode.com/files/SpeedCrunch-0.10.1.dmg'
+  url 'https://bitbucket.org/heldercorreia/speedcrunch/downloads/SpeedCrunch-0.11.dmg'
   homepage 'http://www.speedcrunch.org'
-  version '0.10.1'
-  sha256 'e6a15827fc50989d04b02cb73085a0bbf7b37421cf1f9aaa20bb79b10bc550b2'
+  version '0.11'
+  sha256 '1ce5ef9d167614a2e63daad43a23bd8df60b8ea641df6be9aabdf826bbb5a826'
   link 'SpeedCrunch.app'
 end
