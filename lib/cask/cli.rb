@@ -20,6 +20,7 @@ require 'cask/cli/uninstall'
 require 'cask/cli/update'
 
 class Cask::CLI
+  ISSUES_URL = "https://github.com/phinze/homebrew-cask/issues"
   def self.commands
     Cask::CLI.constants - ["NullCommand"]
   end
@@ -75,6 +76,12 @@ class Cask::CLI
   rescue CaskError => e
     onoe e
     $stderr.puts e.backtrace if Cask.debug
+    exit 1
+  rescue StandardError, ScriptError, NoMemoryError => e
+    onoe e
+    puts "#{Tty.white}Please report this bug:"
+    puts "    #{Tty.em}#{ISSUES_URL}#{Tty.reset}"
+    puts e.backtrace
     exit 1
   end
 
