@@ -1,7 +1,7 @@
 class Mactracker < Cask
-  url 'http://www.mactracker.ca/downloads/Mactracker_7.3.zip'
+  url 'http://www.mactracker.ca/downloads/Mactracker_7.3.1.zip'
   homepage 'http://mactracker.ca/'
-  version '7.3'
-  sha256 '6bda8bc13094018204084659b2bc2fc0f69d03a001a72d8c589d4c5cd3c00b39'
+  version '7.3.1'
+  sha256 '96cf9a69bc0d948c37e3ae7d981f018555bd2bebb37378d2198bc4fc1856d96c'
   link 'Mactracker.app'
 end
