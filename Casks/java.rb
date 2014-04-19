@@ -4,7 +4,7 @@ class Java < Cask
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html'
-  version '1.8.0'
+  version '1.8.0_5'
   sha256 '3dd1047340c2487f7c32c4ae633ba9a9a9e1dee49f6084d7df3846091faece48'
   install 'JDK 8 Update 05.pkg'
   after_install do
