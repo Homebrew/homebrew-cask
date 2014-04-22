@@ -1,7 +1,7 @@
 class VmwareFusion < Cask
-  url 'https://download3.vmware.com/software/fusion/file/VMware-Fusion-6.0.2-1398658-light.dmg'
+  url 'https://download3.vmware.com/software/fusion/file/VMware-Fusion-6.0.3-1747349-light.dmg'
   homepage 'http://www.vmware.com/products/fusion/'
-  version '6.0.2-1398658'
-  sha256 'e20dbdff865a45eb8e3f08eb69f3722b1f0d0478d6d7eb4bc9ed6077d78d9f9c'
+  version '6.0.3-1747349'
+  sha256 'd51daed60baef6252136d9024ac6dd59df3b402bc8a9aa7cd1d663d61e6dc6d8'
   link 'VMware Fusion.app'
 end
