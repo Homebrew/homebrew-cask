@@ -1,4 +1,4 @@
-class Adium < Cask
+class Metanota < Cask
   url 'http://j.mp/metanota-2-4-1'
   homepage 'http://www.metanota.com/'
   version '2.4.1'
