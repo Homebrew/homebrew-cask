@@ -1,7 +1,7 @@
 class Latexit < Cask
-  url 'http://pierre.chachatelier.fr/latexit/downloads/LaTeXiT-2_5_4.dmg'
+  url 'http://www.chachatelier.fr/latexit/downloads/LaTeXiT-2_6_0.dmg'
   homepage 'http://www.chachatelier.fr/latexit'
-  version '2.5.4'
-  sha256 '8350f76b0c70a42c552dadd8ddefdace7c2d543b982bd297ceb010eda9edfd81'
+  version '2.6.0'
+  sha256 '9f75fdddc71c7370df6bddeb764753379c19dc4f29e1df3201abdb00cce6605b'
   link 'LaTeXiT.app'
 end
