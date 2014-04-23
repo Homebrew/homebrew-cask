@@ -1,7 +1,7 @@
 class Blueharvest < Cask
-  url 'http://zeroonetwenty.com/downloads/BlueHarvest557.dmg'
+  url 'http://zeroonetwenty.com/downloads/BlueHarvest559.dmg'
   homepage 'http://zeroonetwenty.com/blueharvest/'
-  version '5.5.7'
-  sha256 '8543b2bcc778a035c19813530228072cc8bdbaa36c8fdefea4e422b80f66c6b4'
+  version '5.5.9'
+  sha256 '4711a2ecdaee8364ef7e63d8bfb34d5539cd0e8f20b95fe31028bbcc6b22684f'
   link 'BlueHarvest.app'
 end
