@@ -1,7 +1,7 @@
 class PycharmCe < Cask
-  url 'http://download.jetbrains.com/python/pycharm-community-3.1.1.dmg'
+  url 'http://download.jetbrains.com/python/pycharm-community-3.1.3.dmg'
   homepage 'http://www.jetbrains.com/pycharm'
-  version '3.1.1'
-  sha256 '5e07c011cca1b68298d2260ba204b7a409bbab99a1dae43cc28c61cf7e67a7a9'
+  version '3.1.3'
+  sha256 'b24721824534940a5d9d644d47ff00e7215a3babc881b6b6eb68a376a79f2052'
   link 'PyCharm CE.app'
 end
