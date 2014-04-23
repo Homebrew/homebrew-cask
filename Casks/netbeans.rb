@@ -20,8 +20,8 @@ class Netbeans < Cask
   # The NetBeans installer does some postflight unpacking of paths installed by
   # the OS X installer, so it's insufficient to just delete the paths exposed
   # by pkgutil, hence the additional `:files` option below.
-  uninstall(
-    :pkgutil => 'org.netbeans.ide.*|glassfish-.*',
-    :files => '/Applications/NetBeans'
-  )
+  uninstall :pkgutil => 'org.netbeans.ide.*|glassfish-.*',
+              :files => [
+                         '/Applications/NetBeans'
+                        ]
 end
