@@ -4,11 +4,9 @@ class Teamviewer < Cask
   version 'latest'
   no_checksum
   install 'Install TeamViewer.pkg'
-  uninstall(
-    :pkgutil   => 'com.teamviewer.*',
-    :launchctl => 'com.teamviewer.service',
-    :files     => %w[
-      /Library/LaunchDaemons/com.teamviewer.teamviewer_service.plist
-    ]
-  )
+  uninstall :pkgutil   => 'com.teamviewer.*',
+            :launchctl => 'com.teamviewer.service',
+            :files     => [
+                           '/Library/LaunchDaemons/com.teamviewer.teamviewer_service.plist'
+                          ]
 end
