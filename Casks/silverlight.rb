@@ -1,7 +1,7 @@
 class Silverlight < Cask
-  url 'http://silverlight.dlservice.microsoft.com/download/B/A/9/BA94BEC9-5DBC-4B50-BC2B-046A42399067/30214.00/Silverlight.dmg'
+  url 'http://silverlight.dlservice.microsoft.com/download/D/6/6/D66CF013-1021-437B-9A65-983871CCB3E6/30317.00/Silverlight.dmg'
   homepage 'http://www.microsoft.com/silverlight/'
-  version '5.1.30214.0'
-  sha256 '4b9354d60451b033b4d6695b8d94d8f88663cc8d0b25cebda08b6b4fb0069cba'
+  version '5.1.30317.0'
+  sha256 'a425c522f84c8c3b2bcfb5f40abab0f8d67733f824be5c0e383819d06f230007'
   install 'Silverlight.pkg'
 end
