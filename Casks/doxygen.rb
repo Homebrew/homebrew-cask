@@ -1,7 +1,7 @@
 class Doxygen < Cask
-  url 'ftp://ftp.stack.nl/pub/users/dimitri/Doxygen-1.8.6.dmg'
+  url 'ftp://ftp.stack.nl/pub/users/dimitri/Doxygen-1.8.7.dmg'
   homepage 'http://www.stack.nl/~dimitri/doxygen/index.html'
-  version '1.8.6'
-  sha256 '641ae41f5bea4ef2476a9183c3cf4edf767c886c8ddb2cac448f58b1854a3dde'
+  version '1.8.7'
+  sha256 'd4d23df0372362358d26ab3c3c13d701b1f1751a7b80d427742665739a4f49c0'
   link 'Doxygen.app'
 end
