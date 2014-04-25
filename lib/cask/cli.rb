@@ -88,16 +88,17 @@ class Cask::CLI
   def self.nice_listing(cask_list)
     casks = {}
     cask_list.each { |c|
-      repo, name = c.split "/"
+      user, repo, name = c.split '/'
+      repo.sub!(/^homebrew-/i, '')
       casks[name] ||= []
-      casks[name].push repo
+      casks[name].push "#{user}/#{repo}"
     }
     list = []
-    casks.each { |name,repos|
-      if repos.length == 1
+    casks.each { |name,taps|
+      if taps.length == 1
         list.push name
       else
-        repos.each { |r| list.push [r,name].join "/" }
+        taps.each { |r| list.push [r,name].join '/' }
       end
     }
     list.sort

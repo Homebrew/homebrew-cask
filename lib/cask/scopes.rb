@@ -9,16 +9,16 @@ module Cask::Scopes
     end
 
     def all_titles
-      cask_titles = Dir[tapspath.join("*", "Casks", "*.rb")]
+      cask_titles = Dir[tapspath.join('*', '*', 'Casks', '*.rb')]
       cask_titles.map { |c|
-        # => "/usr/local/Library/Taps/example-tap/Casks/example.rb"
+        # => "/usr/local/Library/Taps/caskroom/example-tap/Casks/example.rb"
         c.sub!(/\.rb$/, '')
         # => ".../example"
-        c = c.split("/").last 3
-        # => ["example-tap", "Casks", "example"]
-        c.delete_at 1
+        c = c.split('/').last 4
+        # => ["caskroom", "example-tap", "Casks", "example"]
+        c.delete_at(-2)
         # => ["example-tap", "example"]
-        c = c.join "/"
+        c = c.join '/'
       }
     end
 
