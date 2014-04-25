@@ -97,7 +97,7 @@ module Cask::Locations
     end
 
     def default_tap
-      @default_tap ||= 'phinze-cask'
+      @default_tap ||= 'phinze/homebrew-cask'
     end
 
     def default_tap=(_tap)
