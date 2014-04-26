@@ -1,5 +1,28 @@
 # CHANGELOG
 
+## 0.33.0
+
+* __Casks__
+ - 81 Casks added (163 updated) by 106 contributors since 0.32.0
+ - 1433 total Casks
+* __Features__
+* __Fixes__
+ - [#4042][] Adapt to Homebrew's move of the Tap directory
+ - [#4039][] Avoid exit code with no Casks are installed
+ - [#2971][] Redirect user to cask issues page on error <3 [@voanhduy1512][]
+* __Documentation__
+ - 2 doc commits since 0.32.0 <3 [@MattiSG][] [@adamchainz][]
+* __Breaking Changes__
+ - The default Tap directory was moved to accommodate a change
+   in the Homebrew project.
+
+[#4042]: https://github.com/phinze/homebrew-cask/issues/4042
+[#4039]: https://github.com/phinze/homebrew-cask/issues/4039
+[#2971]: https://github.com/phinze/homebrew-cask/issues/2971
+[@voanhduy1512]: https://github.com/voanhduy1512
+[@MattiSG]: https://github.com/MattiSG
+[@adamchainz]: https://github.com/adamchainz
+
 ## 0.32.0
 
 * __Casks__
