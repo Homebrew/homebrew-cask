@@ -30,10 +30,21 @@ PURPOSE
   end
 
   def self.github_info(cask)
-    tap = cask.title
-    tap = cask.class.all_titles.grep(/#{tap}$/).first unless tap =~ /\//
-    tap, name = tap.split "/"
-    user, repo = tap.split "-"
+    title = cask.title
+    title = cask.class.all_titles.grep(/#{title}$/).first unless title =~ /\//
+    path_elements = title.split '/'
+    if path_elements.count == 2
+      # eg phinze-cask/google-chrome.
+      # Not certain this form is needed, but it was supported in the past.
+      name = path_elements[1]
+      dash_elements = path_elements[0].split('-')
+      repo = dash_elements.pop
+      dash_elements.pop if dash_elements.count > 1 and dash_elements[-1] + '-' == repo_prefix
+      user = dash_elements.join('-')
+    else
+      user, repo, name = path_elements
+    end
+    repo.sub!(/^homebrew-/i, '')
     "https://github.com/#{user}/homebrew-#{repo}/commits/master/Casks/#{name}.rb"
   end
 

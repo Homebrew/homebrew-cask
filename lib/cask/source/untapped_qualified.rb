@@ -5,7 +5,7 @@ class Cask::Source::UntappedQualified < Cask::Source::TappedQualified
   def self.path_for_query(query)
     user, repo, cask = Cask::QualifiedCaskName::parse(query)
     cask.sub!(/\.rb$/i,'')
-    tap = "#{user}-#{repo}"
+    tap = "#{user}/homebrew-#{repo}"
     unless Cask.tapspath.join(tap).exist?
       ohai "Adding new tap '#{tap}'"
       Homebrew.install_tap(user, repo)

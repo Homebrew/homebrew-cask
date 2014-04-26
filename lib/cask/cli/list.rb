@@ -6,7 +6,9 @@ class Cask::CLI::List
       retval = list_installed
     end
     # retval is ternary: true/false/nil
-    if retval.nil?
+    if retval.nil? and not arguments.any?
+      opoo "nothing to list"  # special case: avoid exit code
+    elsif retval.nil?
       raise CaskError.new("nothing to list")
     elsif ! retval
       raise CaskError.new("listing incomplete")

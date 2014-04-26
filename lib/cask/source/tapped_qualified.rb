@@ -8,7 +8,7 @@ class Cask::Source::TappedQualified < Cask::Source::Tapped
   def self.path_for_query(query)
     user, repo, cask = Cask::QualifiedCaskName::parse(query)
     cask.sub!(/\.rb$/i,'')
-    tap = "#{user}-#{repo}"
+    tap = "#{user}/homebrew-#{repo}"
     Cask.tapspath.join(tap, 'Casks', "#{cask}.rb")
   end
 end

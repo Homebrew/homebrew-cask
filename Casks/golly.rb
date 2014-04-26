@@ -8,7 +8,7 @@ class Golly < Cask
   else
     url 'http://downloads.sourceforge.net/project/golly/golly/golly-2.6/golly-2.6-mac106.zip/'
     version '2.6'
-    sha256 'e97f429065fe9249801b4d04d8e9ed2e354b396e5b107d5d9da25501368a398a'
+    sha256 '6fee35e8e4f63ee2c1b0913b7e8009b2548c4e4469050f9c31791900e1e97f16'
     link 'golly-2.6-mac106/Golly.app'
     binary 'golly-2.6-mac106/bgolly'
   end

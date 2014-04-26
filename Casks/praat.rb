@@ -6,7 +6,7 @@ class Praat < Cask
   else
     url 'http://www.fon.hum.uva.nl/praat/praat5371_mac32.dmg'
     version '5.3.71'
-    sha256 '36cb033de3a4df8e9a8e662994cb0ebdd36cb65c58a9657d8bfe9e27c7e13832'
+    sha256 'e5e20b3035d6831b6c388c1190fe23ceae195e4691152357c4bf0bc739889172'
   end
   homepage 'http://www.fon.hum.uva.nl/praat/'
   link 'Praat.app'
