@@ -6,8 +6,8 @@ class Cask::Source::Tapped
   def self.path_for_query(query)
     cask_with_tap = Cask.all_titles.find { |t| t.split('/').last == query.sub(/\.rb$/i,'') }
     if cask_with_tap
-      tap, cask = cask_with_tap.split('/')
-      Cask.tapspath.join(tap, 'Casks', "#{cask}.rb")
+      user, repo, cask = cask_with_tap.split('/')
+      Cask.tapspath.join(user, repo, 'Casks', "#{cask}.rb")
     else
       Cask.tapspath.join(Cask.default_tap, 'Casks', "#{query.sub(/\.rb$/i,'')}.rb")
     end

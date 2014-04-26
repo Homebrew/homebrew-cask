@@ -97,7 +97,7 @@ module Cask::Locations
     end
 
     def default_tap
-      @default_tap ||= 'phinze-cask'
+      @default_tap ||= 'phinze/homebrew-cask'
     end
 
     def default_tap=(_tap)
@@ -109,14 +109,16 @@ module Cask::Locations
         cask_with_tap = cask_title
       else
         cask_with_tap = all_titles.detect { |tap_and_title|
-          _, title = tap_and_title.split('/')
+          user, repo, title = tap_and_title.split('/')
           title == cask_title
         }
       end
 
       if cask_with_tap
-        tap, cask = cask_with_tap.split('/')
-        tapspath.join(tap, 'Casks', "#{cask}.rb")
+        user, repo, cask = cask_with_tap.split('/')
+        # bug/todo: handle old-style 1-slash form: phinze-cask/name
+        repo = 'homebrew-' + repo unless repo.match(/^homebrew-/)
+        tapspath.join(user, repo, 'Casks', "#{cask}.rb")
       else
         tapspath.join(default_tap, 'Casks', "#{cask_title}.rb")
       end

@@ -15,7 +15,7 @@ shopt -s nocasematch # case-insensitive regular expressions
 ### configurable global variables
 ###
 
-tap_subdir="Library/Taps/phinze-cask"
+tap_subdir="Library/Taps/phinze/homebrew-cask"
 
 ###
 ### functions
