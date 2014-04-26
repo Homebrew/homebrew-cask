@@ -8,7 +8,7 @@ class Displaylink < Cask
       :using => :post
   homepage 'http://www.displaylink.com'
   version '2.2Beta'
-  sha256 '7e37481a9c414df8ae59c51a7c21a4c35d3f494b47304a59bdfa5a3ee5d8e795'
+  sha256 '9b15e0539bbfdd56d1f2406dba4e94916d856fa0a3e830f5e2843164ba19c604'
   install 'DisplayLink Software Installer.pkg'
   uninstall :pkgutil => ['com.displaylink.displaylinkdriversigned',
                          'com.displaylink.displaylinkdriverunsigned']
