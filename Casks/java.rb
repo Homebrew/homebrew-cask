@@ -5,7 +5,7 @@ class Java < Cask
                   }
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html'
   version '1.8.0_5'
-  sha256 '3dd1047340c2487f7c32c4ae633ba9a9a9e1dee49f6084d7df3846091faece48'
+  sha256 '80212f7748c2671b89b6085000717c747851db004409dce3bb97f3a2aeb91cdd'
   install 'JDK 8 Update 05.pkg'
   after_install do
     system '/usr/bin/sudo', '-E', '--',
