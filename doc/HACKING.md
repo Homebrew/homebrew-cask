@@ -114,7 +114,7 @@ We recommend the following:
 	```
 
 4. Now you have two copies of the homebrew-cask codebase on disk: the
-   released version in `/usr/local/Library/Taps/phinze-cask`, and a
+   released version in `/usr/local/Library/Taps/phinze/homebrew-cask`, and a
    development version in your private repo.  To symlink the `Casks`
    and `rubylib` folders from `/usr/local/...` into your private repo,
    run the following script:
