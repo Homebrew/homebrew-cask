@@ -1,7 +1,7 @@
 class Poedit < Cask
-  url 'http://www.poedit.net/dl/Poedit-1.6.4.zip'
-  homepage 'http://www.poedit.net'
-  version '1.6.4'
-  sha256 'e5f8b2da6f50b9cc398cc471d719d4f2f25cf033229cf0b7fef83103e7cbeb88'
+  url 'http://poedit.net/dl/Poedit-1.6.4.2569.zip'
+  homepage 'http://www.trankynam.com/xtrafinder/'
+  version '1.6.4.2569'
+  sha256 'fc2ecab42ba3a166feb9ef753aeed05714a8064064bb2745603f965f08b812fd'
   link 'Poedit.app'
 end
