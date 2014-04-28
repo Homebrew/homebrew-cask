@@ -1,7 +1,7 @@
 class Xld < Cask
-  url 'http://xld.googlecode.com/files/xld-20131102.dmg'
+  url 'http://downloads.sourceforge.net/project/xld/xld-20140427.dmg'
   homepage 'http://tmkk.undo.jp/xld/index_e.html'
-  version '2013-11-02'
-  sha256 '21fff3797fcd6de8bb5cf30ba3730c98ccb76eed333b137e09f44f5cdebbc1bc'
+  version '20140427'
+  sha256 'bbb7b5591f7d6d9b36cfa256ccb2dc13dceb1d76dbdf8465ffc61b0cad9b93ac'
   link 'XLD.app'
 end
