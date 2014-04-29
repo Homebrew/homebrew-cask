@@ -178,7 +178,9 @@ Casks and updates should adopt `sha256`.
 
 ## URL Stanza Details
 
-### HTTP URLs
+### HTTPS URLs
+
+If available, an HTTPS URL is preferred. A plain HTTP URL should only be used in the absence of a secure alternative.
 
 When a plain URL string is insufficient to fetch a file, additional
 information may be provided to the `curl`-based downloader, in the form
@@ -197,7 +199,7 @@ Example: [java.rb](../Casks/java.rb)
 
 ### Subversion URLs
 
-In rare cases, a distribution may not be available over ordinary HTTP.
+In rare cases, a distribution may not be available over ordinary HTTP/S.
 Subversion URLs are also supported, and can be specified by appending the
 following key/value pairs to `url`:
 
