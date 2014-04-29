@@ -15,6 +15,18 @@ class Cask::CLI::Doctor
     puts HOMEBREW_CELLAR
     ohai 'Homebrew-cask Version:'
     puts HOMEBREW_CASK_VERSION
+
+    fq_default_tap = HOMEBREW_REPOSITORY.join 'Library', 'Taps', Cask.default_tap
+    alt_taps = Pathname.glob(HOMEBREW_REPOSITORY.join 'Library', 'Taps', '*', '*', 'Casks').map(&:dirname) -
+               [fq_default_tap]
+    alt_taps = nil unless alt_taps.length > 0
+    ohai 'Homebrew-cask Default Tap Path:'
+    puts fq_default_tap
+    ohai 'Homebrew-cask Alternate Cask Taps:'
+    puts alt_taps
+    ohai 'Homebrew-cask Default Tap Cask Count:'
+    puts HOMEBREW_REPOSITORY.join(fq_default_tap, 'Casks').children.count(&:file?)
+
     ohai 'Contents of $LOAD_PATH:'
     puts $LOAD_PATH
     ohai 'Contents of $RUBYLIB Environment Variable:'
