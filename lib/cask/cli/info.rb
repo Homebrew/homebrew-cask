@@ -22,16 +22,17 @@ class Cask::CLI::Info
 
     <<-PURPOSE
 #{cask}: #{cask.version}
-#{cask.homepage}
+#{cask.homepage or 'No Homepage'}
 #{installation}
-#{github_info(cask)}
-#{artifact_info(cask)}
+#{github_info(cask) or 'No GitHub URL'}
+#{artifact_info(cask) or 'No Artifact Info'}
 PURPOSE
   end
 
   def self.github_info(cask)
     title = cask.title
     title = cask.class.all_titles.grep(/#{title}$/).first unless title =~ /\//
+    return nil unless title.respond_to?(:length) and title.length > 0
     path_elements = title.split '/'
     if path_elements.count == 2
       # eg phinze-cask/google-chrome.
