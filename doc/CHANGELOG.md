@@ -1,11 +1,34 @@
 # CHANGELOG
 
+## 0.33.1
+
+* __Casks__
+ - 8 Casks added (14 updated) by 18 contributors since 0.33.0
+ - 1441 total Casks
+* __Features__
+ - none
+* __Fixes__
+ - [#4094][] better handle renamed Casks in `brew cask info`
+ - [#4064][] Remove issues_url from CLI helpdoc <3 [@linc01n][]
+ - [#4095][] add Tap path info to `brew cask doctor`
+* __Documentation__
+ - 1 doc commit since 0.30.0 <3 [@jcgay][]
+* __Breaking Changes__
+ - none
+
+[#4095]: https://github.com/phinze/homebrew-cask/issues/4095
+[#4094]: https://github.com/phinze/homebrew-cask/issues/4094
+[#4064]: https://github.com/phinze/homebrew-cask/issues/4064
+[@linc01n]: https://github.com/linc01n
+[@jcgay]: https://github.com/jcgay
+
 ## 0.33.0
 
 * __Casks__
  - 81 Casks added (163 updated) by 106 contributors since 0.32.0
  - 1433 total Casks
 * __Features__
+ - none
 * __Fixes__
  - [#4042][] Adapt to Homebrew's move of the Tap directory
  - [#4039][] Avoid exit code with no Casks are installed
