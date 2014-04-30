@@ -1,8 +1,8 @@
 class Fantastical < Cask
-  url 'http://cdn.flexibits.com/Fantastical_1.3.13.zip'
+  url 'http://cdn.flexibits.com/Fantastical_1.3.14.zip'
   homepage 'http://flexibits.com/fantastical'
-  version '1.3.13'
-  sha256 'bc0c7077f27dc113a62f8998aa356948941997ee576c2716fcb76363de82160e'
+  version '1.3.14'
+  sha256 'ffe5e52bf3f2e348852bd67524596e8f8c0ff3626b83319aa6c38988b5eff3b4'
   link 'Fantastical.app'
 
   after_install do
