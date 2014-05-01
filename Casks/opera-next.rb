@@ -1,7 +1,7 @@
 class OperaNext < Cask
-  url 'http://get.geo.opera.com/pub/opera-next/20.0.1387.59/mac/Opera_Next_20.0.1387.59_Setup.dmg'
+  url 'http://get.geo.opera.com/pub/opera-next/21.0.1432.48/mac/Opera_Next_21.0.1432.48_Setup.dmg'
   homepage 'http://www.opera.com/computer/next'
-  version '20.0.1387.59'
-  sha256 '9052e043eecfa9b85aafd0cf6c5881994ca08bf034b2967765b9c56e6d8affd3'
+  version '21.0.1432.48'
+  sha256 '12302e1b843721a3e1c0663f09626241bb7243b27177012571749740edb3e196'
   link 'Opera Next.app'
 end

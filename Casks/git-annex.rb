@@ -15,6 +15,7 @@ class GitAnnex < Cask
   no_checksum
   link 'git-annex.app'
   binary 'git-annex.app/Contents/MacOS/git-annex'
+  binary 'git-annex.app/Contents/MacOS/git-annex-shell'
   caveats do
     files_in_usr_local
   end
