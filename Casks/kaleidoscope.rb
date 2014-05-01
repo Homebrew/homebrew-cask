@@ -1,8 +1,8 @@
 class Kaleidoscope < Cask
-  url 'http://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-2.0.2-116.zip'
+  url 'http://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-2.1.0-134.zip'
   homepage 'http://www.kaleidoscopeapp.com/'
-  version '2.0.2_116'
-  sha256 '2aad3d41a38fa9ce1cf28a097db056ec8d6e4afa2dc0c6347e7e9b6edd5763d3'
+  version '2.1.0_134'
+  sha256 'e16360273fb6d37560c7974b95728d82a0482268641753c49f903bf36445d35b'
   link 'Kaleidoscope.app'
   binary 'Kaleidoscope.app/Contents/Resources/bin/ksdiff'
 
