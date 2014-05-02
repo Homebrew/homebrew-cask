@@ -1,8 +1,8 @@
 class Sourcetree < Cask
-  url 'http://downloads.atlassian.com/software/sourcetree/SourceTree_1.9.0.dmg'
+  url 'http://downloads.atlassian.com/software/sourcetree/SourceTree_1.9.1.dmg'
   homepage 'http://www.sourcetreeapp.com/'
-  version '1.9.0'
-  sha256 '78867c7b9781254bcdb1e366770677519305213f35d4efd106e23d7c5a74ca82'
+  version '1.9.1'
+  sha256 '0034097468b005ff06e2656ee286ee1017dcfa15c890fa5418d6f0739b634196'
   link 'SourceTree.app'
   binary 'SourceTree.app/Contents/Resources/stree'
   caveats do
