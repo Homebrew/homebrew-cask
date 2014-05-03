@@ -1,7 +1,7 @@
 class Tongbu < Cask
-  url 'http://qd.leaderhero.com/qd/zsmac/Tongbu_mac_v1.0.7.dmg'
+  url 'http://qd.leaderhero.com/qd/zsmac/Tongbu_mac_v1.0.9.dmg'
   homepage 'http://www.tongbu.com'
-  version '1.0.7'
-  sha256 'a261cf05a1e3f9a79fcf2f7182a4747a9792316c9a24fe3eda6f00c3fd1bc66a'
+  version '1.0.9'
+  sha256 'be4f09e2d45c8e2b813c171882ad02e7cdc84fd5359d97ef9b2d1476f97112a2'
   link 'Tongbu.app'
 end
