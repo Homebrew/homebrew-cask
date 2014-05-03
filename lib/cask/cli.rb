@@ -20,7 +20,7 @@ require 'cask/cli/uninstall'
 require 'cask/cli/update'
 
 class Cask::CLI
-  ISSUES_URL = "https://github.com/phinze/homebrew-cask/issues"
+  ISSUES_URL = "https://github.com/caskroom/homebrew-cask/issues"
   def self.commands
     Cask::CLI.constants - ["NullCommand", "ISSUES_URL"]
   end

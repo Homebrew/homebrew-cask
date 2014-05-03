@@ -1,8 +1,8 @@
 # "To install, drag this icon..." no more!
 
-[![Build Status](https://travis-ci.org/phinze/homebrew-cask.png?branch=master)](https://travis-ci.org/phinze/homebrew-cask)
-[![Code Climate](https://codeclimate.com/github/phinze/homebrew-cask.png)](https://codeclimate.com/github/phinze/homebrew-cask)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/phinze/homebrew-cask/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Build Status](https://travis-ci.org/caskroom/homebrew-cask.png?branch=master)](https://travis-ci.org/caskroom/homebrew-cask)
+[![Code Climate](https://codeclimate.com/github/caskroom/homebrew-cask.png)](https://codeclimate.com/github/caskroom/homebrew-cask)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/caskroom/homebrew-cask/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 
 Let's see if we can get the elegance, simplicity, and speed of Homebrew for the
@@ -17,7 +17,7 @@ command](https://github.com/mxcl/homebrew/wiki/External-Commands)" called
 
 ## Let's try it!
 ```sh
-$ brew tap phinze/cask
+$ brew tap caskroom/cask
 $ brew install brew-cask
 $ brew cask install google-chrome
 => Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
@@ -39,13 +39,13 @@ open ~/Applications/"Google Chrome.app"
 
 We're really rather friendly! Here are the best places to talk about the project:
 
- * Start an [issue on GitHub](https://github.com/phinze/homebrew-cask/issues/new)
+ * Start an [issue on GitHub](https://github.com/caskroom/homebrew-cask/issues/new)
  * Join us on IRC, we're at `#homebrew-cask` on Freenode
 
 ## Reporting Bugs
 
 We still have bugs -- and we are busy fixing them!  If you have a problem, don't
-be shy about reporting it on our [GitHub issues page](https://github.com/phinze/homebrew-cask/issues?state=open).
+be shy about reporting it on our [GitHub issues page](https://github.com/caskroom/homebrew-cask/issues?state=open).
 
 When reporting bugs, remember that homebrew-cask is an independent project from
 Homebrew.  Do your best to direct bug reports to the appropriate project.  If

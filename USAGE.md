@@ -12,7 +12,7 @@ $ brew --version
 Install the homebrew-cask tool:
 
 ```bash
-$ brew install phinze/cask/brew-cask
+$ brew install caskroom/cask/brew-cask
 ```
 
 ## Frequently Used Commands
@@ -108,7 +108,7 @@ $ brew cask info caffeine
 caffeine: 1.1.1
 http://lightheadsw.com/caffeine/
 Not installed
-https://github.com/phinze/homebrew-cask/commits/master/Casks/caffeine.rb
+https://github.com/caskroom/homebrew-cask/commits/master/Casks/caffeine.rb
 ```
 
 ## Updating/Upgrading Casks
@@ -223,7 +223,7 @@ above, a Cask name on the command line can take the form of:
 `brew cask` also accepts two other forms for Cask names:
 
 * a fully-qualified pathname to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
-* a `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/phinze/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
+* a `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
 
 The last two forms are intended for users who wish to maintain private Casks.
 

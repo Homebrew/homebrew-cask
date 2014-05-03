@@ -39,7 +39,7 @@ Mocha::Integration::MiniTest.activate
 require 'cask'
 
 # look for casks in testcasks by default
-Cask.default_tap = 'phinze/homebrew-testcasks'
+Cask.default_tap = 'caskroom/homebrew-testcasks'
 
 # our own testy caskroom
 Cask.caskroom = HOMEBREW_PREFIX.join('TestCaskroom')
@@ -98,7 +98,7 @@ require 'tempfile'
 
 # pretend like we installed the cask tap
 project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
-taps_dest = HOMEBREW_LIBRARY/"Taps/phinze"
+taps_dest = HOMEBREW_LIBRARY/"Taps/caskroom"
 
 # create directories
 FileUtils.mkdir_p taps_dest

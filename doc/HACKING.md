@@ -33,7 +33,7 @@ revising our goals and adding new ones.
 
 ## What Needs to be Done?
 
-Plenty. Start with [open issues](https://github.com/phinze/homebrew-cask/issues?state=open) !
+Plenty. Start with [open issues](https://github.com/caskroom/homebrew-cask/issues?state=open) !
 
 ## Are You Interested in New Features?
 
@@ -51,13 +51,13 @@ It's a neat idea!  We have talked about it but nobody has worked
 on it:
 
 - <https://gist.github.com/phinze/7cd361150816bd85304e>
-- <https://github.com/phinze/homebrew-cask/issues/1135>
+- <https://github.com/caskroom/homebrew-cask/issues/1135>
 
 ## What About Installing by Copying Instead of Linking?
 
 It's a neat idea! We have talked about it but nobody has worked on it:
 
-- <https://github.com/phinze/homebrew-cask/pull/2312#issuecomment-31859263>
+- <https://github.com/caskroom/homebrew-cask/pull/2312#issuecomment-31859263>
 
 We would want to make sure that uninstall works equally well when copying.
 
@@ -66,14 +66,14 @@ We would want to make sure that uninstall works equally well when copying.
 Yes, definitely! We have talked about it, and worked on some aspects
 of it. But there is much left to do:
 
-- <https://github.com/phinze/homebrew-cask/issues/309>
+- <https://github.com/caskroom/homebrew-cask/issues/309>
 
 ## What About Installing Multiple Versions of a Package?
 
 Yes, definitely! We have started working on it, so please contact us
 directly if you want to help.
 
-- <https://github.com/phinze/homebrew-cask/issues/142>
+- <https://github.com/caskroom/homebrew-cask/issues/142>
 
 ## What About Dependencies?
 
@@ -99,7 +99,7 @@ under `/usr/local`.  For coding, that is usually not sufficient.
 
 We recommend the following:
 
-1. Fork our repo: <https://github.com/phinze/homebrew-cask/fork>
+1. Fork our repo: <https://github.com/caskroom/homebrew-cask/fork>
 2. Clone a private copy of the repo:
 
 	```bash
@@ -110,11 +110,11 @@ We recommend the following:
 
 	```bash
 	cd homebrew-cask
-	git remote add upstream https://github.com/phinze/homebrew-cask.git
+	git remote add upstream https://github.com/caskroom/homebrew-cask.git
 	```
 
 4. Now you have two copies of the homebrew-cask codebase on disk: the
-   released version in `/usr/local/Library/Taps/phinze/homebrew-cask`, and a
+   released version in `/usr/local/Library/Taps/caskroom/homebrew-cask`, and a
    development version in your private repo.  To symlink the `Casks`
    and `rubylib` folders from `/usr/local/...` into your private repo,
    run the following script:

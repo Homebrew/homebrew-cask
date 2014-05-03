@@ -4,10 +4,10 @@ require 'formula'
 require Pathname(__FILE__).realpath.dirname.join('lib', 'cask', 'version')
 
 class BrewCask < Formula
-  homepage 'https://github.com/phinze/homebrew-cask/'
-  url 'https://github.com/phinze/homebrew-cask.git', :tag => "v#{HOMEBREW_CASK_VERSION}"
+  homepage 'https://github.com/caskroom/homebrew-cask/'
+  url 'https://github.com/caskroom/homebrew-cask.git', :tag => "v#{HOMEBREW_CASK_VERSION}"
 
-  head 'https://github.com/phinze/homebrew-cask.git', :branch => 'master'
+  head 'https://github.com/caskroom/homebrew-cask.git', :branch => 'master'
 
   skip_clean 'bin'
 

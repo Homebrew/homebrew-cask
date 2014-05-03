@@ -21,7 +21,7 @@ clean up documentation! Anything you can do to help out is very welcome.
 
 It's also [__pretty darn easy__ to create Casks](../CONTRIBUTING.md), so
 please build more of them for the software you use. And if homebrew-cask doesn't
-support the packaging format of your software, please [open an issue](https://github.com/phinze/homebrew-cask/issues)
+support the packaging format of your software, please [open an issue](https://github.com/caskroom/homebrew-cask/issues)
 and we can get it working together.
 
 The whole idea is to build a _community-maintained_ list of easily installable

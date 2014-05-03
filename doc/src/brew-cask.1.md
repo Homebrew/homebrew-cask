@@ -173,7 +173,7 @@ Homebrew-cask also accepts three other forms for Cask names:
     `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
 
   * A `curl`-retrievable URI to a Cask file, _eg_
-   `https://raw.github.com/phinze/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
+   `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
 
 ## ENVIRONMENT
 
@@ -191,7 +191,7 @@ Environment variables specific to homebrew-cask:
 
 The homebrew-cask home page: <http://caskroom.io>.
 
-The homebrew-cask GitHub page: <https://github.com/phinze/homebrew-cask>.
+The homebrew-cask GitHub page: <https://github.com/caskroom/homebrew-cask>.
 
 Alfred.app: <http://www.alfredapp.com>
 
@@ -206,7 +206,7 @@ Man page format based on `brew.1.md` from Homebrew.
 ## BUGS
 
 We still have bugs -- and we are busy fixing them!  If you have a problem, don't
-be shy about reporting it on our [GitHub issues page](https://github.com/phinze/homebrew-cask/issues?state=open).
+be shy about reporting it on our [GitHub issues page](https://github.com/caskroom/homebrew-cask/issues?state=open).
 
 When reporting bugs, remember that homebrew-cask is an independent project from
 Homebrew.  Do your best to direct bug reports to the appropriate project.  If

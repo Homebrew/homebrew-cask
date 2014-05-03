@@ -14,7 +14,7 @@ require 'set'
 ### configurable constants
 ###
 
-PROJECT_URL = 'https://github.com/phinze/homebrew-cask'
+PROJECT_URL = 'https://github.com/caskroom/homebrew-cask'
 
 MAINTAINERS = %w[
                   phinze
