@@ -18,7 +18,7 @@ A Caskfile is a plain text document containing a set of Homebrew commands, one p
 For example, on a freshly installed OS X, you could `brew bundle` the following `Caskfile` to set up Homebrew Cask and a few basic tools:
 ```bash
 # Install Cask
-install phinze/cask/brew-cask
+install caskroom/cask/brew-cask
 
 # Productivity tools
 cask install alfred
@@ -49,5 +49,5 @@ If you want to fully automate the deployment process by scripting the execution 
 - install git
 - install Homebrew
 1. `brew update`
-2. `brew install phinze/cask/brew-cask`, either in the script or as part of the first Caskfile loaded
+2. `brew install caskroom/cask/brew-cask`, either in the script or as part of the first Caskfile loaded
 3. `brew bundle` your Caskfiles.

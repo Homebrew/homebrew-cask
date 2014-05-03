@@ -35,7 +35,7 @@ PURPOSE
     return nil unless title.respond_to?(:length) and title.length > 0
     path_elements = title.split '/'
     if path_elements.count == 2
-      # eg phinze-cask/google-chrome.
+      # eg caskroom-cask/google-chrome.
       # Not certain this form is needed, but it was supported in the past.
       name = path_elements[1]
       dash_elements = path_elements[0].split('-')

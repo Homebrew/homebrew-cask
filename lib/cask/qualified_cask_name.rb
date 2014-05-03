@@ -14,7 +14,7 @@ module Cask::QualifiedCaskName
   end
 
   def self.cask_regexp
-    # per https://github.com/phinze/homebrew-cask/blob/04a8fa88c7b1d05adcd8307b9297e36f83ddbf5d/CONTRIBUTING.md#cask-name
+    # per https://github.com/caskroom/homebrew-cask/blob/04a8fa88c7b1d05adcd8307b9297e36f83ddbf5d/CONTRIBUTING.md#cask-name
     %r{[a-z0-9\-]+}
   end
 
@@ -39,7 +39,7 @@ module Cask::QualifiedCaskName
       dash_elements.pop if dash_elements.count > 1 and dash_elements[-1] + '-' == repo_prefix
       user = dash_elements.join('-')
     else
-      # eg phinze/cask/google-chrome
+      # eg caskroom/cask/google-chrome
       # per https://github.com/Homebrew/homebrew/wiki/brew-tap
       user, repo, cask = path_elements
     end

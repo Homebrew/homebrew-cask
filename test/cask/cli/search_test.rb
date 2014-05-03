@@ -66,8 +66,8 @@ describe Cask::CLI::Search do
 
   it "does not search the Tap name" do
     out, err = capture_io do
-      Cask::CLI::Search.run('phinze')
+      Cask::CLI::Search.run('caskroom')
     end
-    out.must_match(/^No cask found for "phinze"\.\n/)
+    out.must_match(/^No cask found for "caskroom"\.\n/)
   end
 end

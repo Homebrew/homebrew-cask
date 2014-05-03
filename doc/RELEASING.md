@@ -97,7 +97,7 @@ down than floating in a brain somewhere.
 	$ unset NEW_RELEASE_TAG
 	```
 
-13. Open your browser to <https://github.com/phinze/homebrew-cask/releases> .
+13. Open your browser to <https://github.com/caskroom/homebrew-cask/releases> .
     Click the link for your newly-pushed tag. Click the "Edit Tag" button in
     the top right corner of that page.
 14. Paste the markdown summary from `doc/CHANGELOG.md` into the textarea on that

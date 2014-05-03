@@ -16,9 +16,9 @@
 * __Breaking Changes__
  - none
 
-[#4095]: https://github.com/phinze/homebrew-cask/issues/4095
-[#4094]: https://github.com/phinze/homebrew-cask/issues/4094
-[#4064]: https://github.com/phinze/homebrew-cask/issues/4064
+[#4095]: https://github.com/caskroom/homebrew-cask/issues/4095
+[#4094]: https://github.com/caskroom/homebrew-cask/issues/4094
+[#4064]: https://github.com/caskroom/homebrew-cask/issues/4064
 [@linc01n]: https://github.com/linc01n
 [@jcgay]: https://github.com/jcgay
 
@@ -39,9 +39,9 @@
  - The default Tap directory was moved to accommodate a change
    in the Homebrew project.
 
-[#4042]: https://github.com/phinze/homebrew-cask/issues/4042
-[#4039]: https://github.com/phinze/homebrew-cask/issues/4039
-[#2971]: https://github.com/phinze/homebrew-cask/issues/2971
+[#4042]: https://github.com/caskroom/homebrew-cask/issues/4042
+[#4039]: https://github.com/caskroom/homebrew-cask/issues/4039
+[#2971]: https://github.com/caskroom/homebrew-cask/issues/2971
 [@voanhduy1512]: https://github.com/voanhduy1512
 [@MattiSG]: https://github.com/MattiSG
 [@adamchainz]: https://github.com/adamchainz
@@ -65,13 +65,13 @@
 * __Breaking Changes__
  - none
 
-[#3667]: https://github.com/phinze/homebrew-cask/issues/3667
-[#3700]: https://github.com/phinze/homebrew-cask/issues/3700
-[#3699]: https://github.com/phinze/homebrew-cask/issues/3699
-[#2706]: https://github.com/phinze/homebrew-cask/issues/2706
-[#3662]: https://github.com/phinze/homebrew-cask/issues/3662
-[#3668]: https://github.com/phinze/homebrew-cask/issues/3668
-[#3647]: https://github.com/phinze/homebrew-cask/issues/3647
+[#3667]: https://github.com/caskroom/homebrew-cask/issues/3667
+[#3700]: https://github.com/caskroom/homebrew-cask/issues/3700
+[#3699]: https://github.com/caskroom/homebrew-cask/issues/3699
+[#2706]: https://github.com/caskroom/homebrew-cask/issues/2706
+[#3662]: https://github.com/caskroom/homebrew-cask/issues/3662
+[#3668]: https://github.com/caskroom/homebrew-cask/issues/3668
+[#3647]: https://github.com/caskroom/homebrew-cask/issues/3647
 [@jasonkarns]: https://github.com/jasonkarns
 [@drew-gross]: https://github.com/drew-gross
 
@@ -89,7 +89,7 @@
 * __Breaking Changes__
  - none
 
-[#3587]: https://github.com/phinze/homebrew-cask/issues/3587
+[#3587]: https://github.com/caskroom/homebrew-cask/issues/3587
 [@bartoszj]: https://github.com/bartoszj
 
 ## 0.31.0
@@ -117,23 +117,23 @@
 * __Breaking Changes__
  - none
 
-[#3515]: https://github.com/phinze/homebrew-cask/issues/3515
-[#3540]: https://github.com/phinze/homebrew-cask/issues/3540
-[#3541]: https://github.com/phinze/homebrew-cask/issues/3541
-[#3518]: https://github.com/phinze/homebrew-cask/issues/3518
-[#3516]: https://github.com/phinze/homebrew-cask/issues/3516
-[#3500]: https://github.com/phinze/homebrew-cask/issues/3500
-[#3503]: https://github.com/phinze/homebrew-cask/issues/3503
-[#3443]: https://github.com/phinze/homebrew-cask/issues/3443
-[#3422]: https://github.com/phinze/homebrew-cask/issues/3422
+[#3515]: https://github.com/caskroom/homebrew-cask/issues/3515
+[#3540]: https://github.com/caskroom/homebrew-cask/issues/3540
+[#3541]: https://github.com/caskroom/homebrew-cask/issues/3541
+[#3518]: https://github.com/caskroom/homebrew-cask/issues/3518
+[#3516]: https://github.com/caskroom/homebrew-cask/issues/3516
+[#3500]: https://github.com/caskroom/homebrew-cask/issues/3500
+[#3503]: https://github.com/caskroom/homebrew-cask/issues/3503
+[#3443]: https://github.com/caskroom/homebrew-cask/issues/3443
+[#3422]: https://github.com/caskroom/homebrew-cask/issues/3422
 [@pedros]: https://github.com/pedros
 [@cgcai]: https://github.com/cgcai
 [@cubranic]: https://github.com/cubranic
-[#3459]: https://github.com/phinze/homebrew-cask/issues/3459
-[#3441]: https://github.com/phinze/homebrew-cask/issues/3441
-[#3106]: https://github.com/phinze/homebrew-cask/issues/3106
-[#3217]: https://github.com/phinze/homebrew-cask/issues/3217
-[#2672]: https://github.com/phinze/homebrew-cask/issues/2672
+[#3459]: https://github.com/caskroom/homebrew-cask/issues/3459
+[#3441]: https://github.com/caskroom/homebrew-cask/issues/3441
+[#3106]: https://github.com/caskroom/homebrew-cask/issues/3106
+[#3217]: https://github.com/caskroom/homebrew-cask/issues/3217
+[#2672]: https://github.com/caskroom/homebrew-cask/issues/2672
 
 ## 0.30.1
 
@@ -149,9 +149,9 @@
 * __Breaking Changes__
  - none
 
-[#3335]: https://github.com/phinze/homebrew-cask/issues/3335
-[#3327]: https://github.com/phinze/homebrew-cask/issues/3327
-[#3324]: https://github.com/phinze/homebrew-cask/issues/3324
+[#3335]: https://github.com/caskroom/homebrew-cask/issues/3335
+[#3327]: https://github.com/caskroom/homebrew-cask/issues/3327
+[#3324]: https://github.com/caskroom/homebrew-cask/issues/3324
 
 ## 0.30.0
 
@@ -181,42 +181,42 @@
  - [#2931][] remove md5 checksum support
  - [#3025][] temporarily suppress searching the font Tap to reduce false positives
 
-[#3323]: https://github.com/phinze/homebrew-cask/issues/3323
-[#3011]: https://github.com/phinze/homebrew-cask/issues/3011
-[#3275]: https://github.com/phinze/homebrew-cask/issues/3275
+[#3323]: https://github.com/caskroom/homebrew-cask/issues/3323
+[#3011]: https://github.com/caskroom/homebrew-cask/issues/3011
+[#3275]: https://github.com/caskroom/homebrew-cask/issues/3275
 [@mecca831]: https://github.com/mecca831
-[#3190]: https://github.com/phinze/homebrew-cask/issues/3190
-[#3241]: https://github.com/phinze/homebrew-cask/issues/3241
-[#3242]: https://github.com/phinze/homebrew-cask/issues/3242
-[#3013]: https://github.com/phinze/homebrew-cask/issues/3013
-[#3188]: https://github.com/phinze/homebrew-cask/issues/3188
+[#3190]: https://github.com/caskroom/homebrew-cask/issues/3190
+[#3241]: https://github.com/caskroom/homebrew-cask/issues/3241
+[#3242]: https://github.com/caskroom/homebrew-cask/issues/3242
+[#3013]: https://github.com/caskroom/homebrew-cask/issues/3013
+[#3188]: https://github.com/caskroom/homebrew-cask/issues/3188
 [@muescha]: https://github.com/muescha
-[#3014]: https://github.com/phinze/homebrew-cask/issues/3014
-[#3039]: https://github.com/phinze/homebrew-cask/issues/3039
-[#3040]: https://github.com/phinze/homebrew-cask/issues/3040
-[#3178]: https://github.com/phinze/homebrew-cask/issues/3178
-[#2705]: https://github.com/phinze/homebrew-cask/issues/2705
-[#2744]: https://github.com/phinze/homebrew-cask/issues/2744
-[#2970]: https://github.com/phinze/homebrew-cask/issues/2970
+[#3014]: https://github.com/caskroom/homebrew-cask/issues/3014
+[#3039]: https://github.com/caskroom/homebrew-cask/issues/3039
+[#3040]: https://github.com/caskroom/homebrew-cask/issues/3040
+[#3178]: https://github.com/caskroom/homebrew-cask/issues/3178
+[#2705]: https://github.com/caskroom/homebrew-cask/issues/2705
+[#2744]: https://github.com/caskroom/homebrew-cask/issues/2744
+[#2970]: https://github.com/caskroom/homebrew-cask/issues/2970
 [@voanhduy1512]: https://github.com/voanhduy1512
-[#3058]: https://github.com/phinze/homebrew-cask/issues/3058
-[#3073]: https://github.com/phinze/homebrew-cask/issues/3073
-[#3105]: https://github.com/phinze/homebrew-cask/issues/3105
-[#3107]: https://github.com/phinze/homebrew-cask/issues/3107
-[#3131]: https://github.com/phinze/homebrew-cask/issues/3131
-[#2467]: https://github.com/phinze/homebrew-cask/issues/2467
+[#3058]: https://github.com/caskroom/homebrew-cask/issues/3058
+[#3073]: https://github.com/caskroom/homebrew-cask/issues/3073
+[#3105]: https://github.com/caskroom/homebrew-cask/issues/3105
+[#3107]: https://github.com/caskroom/homebrew-cask/issues/3107
+[#3131]: https://github.com/caskroom/homebrew-cask/issues/3131
+[#2467]: https://github.com/caskroom/homebrew-cask/issues/2467
 [@vmrob]: https://github.com/vmrob
 [@tmonney]: https://github.com/tmonney
 [@doits]: https://github.com/doits
-[#3155]: https://github.com/phinze/homebrew-cask/issues/3155
-[#3079]: https://github.com/phinze/homebrew-cask/issues/3079
-[#3108]: https://github.com/phinze/homebrew-cask/issues/3108
-[#2931]: https://github.com/phinze/homebrew-cask/issues/2931
-[#3076]: https://github.com/phinze/homebrew-cask/issues/3076
-[#3075]: https://github.com/phinze/homebrew-cask/issues/3075
-[#3057]: https://github.com/phinze/homebrew-cask/issues/3057
-[#3042]: https://github.com/phinze/homebrew-cask/issues/3042
-[#3025]: https://github.com/phinze/homebrew-cask/issues/3025
+[#3155]: https://github.com/caskroom/homebrew-cask/issues/3155
+[#3079]: https://github.com/caskroom/homebrew-cask/issues/3079
+[#3108]: https://github.com/caskroom/homebrew-cask/issues/3108
+[#2931]: https://github.com/caskroom/homebrew-cask/issues/2931
+[#3076]: https://github.com/caskroom/homebrew-cask/issues/3076
+[#3075]: https://github.com/caskroom/homebrew-cask/issues/3075
+[#3057]: https://github.com/caskroom/homebrew-cask/issues/3057
+[#3042]: https://github.com/caskroom/homebrew-cask/issues/3042
+[#3025]: https://github.com/caskroom/homebrew-cask/issues/3025
 
 ## 0.29.2
 
@@ -234,13 +234,13 @@
 * __Breaking Changes__
  - none
 
-[#3044]: https://github.com/phinze/homebrew-cask/issues/3044
-[#3015]: https://github.com/phinze/homebrew-cask/issues/3015
+[#3044]: https://github.com/caskroom/homebrew-cask/issues/3044
+[#3015]: https://github.com/caskroom/homebrew-cask/issues/3015
 [@Red54]: https://github.com/Red54
 [@skivvies]: https://github.com/skivvies
-[#2994]: https://github.com/phinze/homebrew-cask/issues/2994
-[#2991]: https://github.com/phinze/homebrew-cask/issues/2991
-[#2961]: https://github.com/phinze/homebrew-cask/issues/2961
+[#2994]: https://github.com/caskroom/homebrew-cask/issues/2994
+[#2991]: https://github.com/caskroom/homebrew-cask/issues/2991
+[#2961]: https://github.com/caskroom/homebrew-cask/issues/2961
 
 ## 0.29.1
 
@@ -254,7 +254,7 @@
 * __Breaking Changes__
  - none
 
-[#2957]: https://github.com/phinze/homebrew-cask/issues/2957
+[#2957]: https://github.com/caskroom/homebrew-cask/issues/2957
 
 ## 0.29.0
 
@@ -288,67 +288,67 @@
 * __Breaking Changes__
  - artifacts may no longer be specified as a list (since 0.28.0).  Instead the artifact should be repeated on multiple lines.
 
-[#2945]: https://github.com/phinze/homebrew-cask/issues/2945
-[#2761]: https://github.com/phinze/homebrew-cask/issues/2761
-[#2925]: https://github.com/phinze/homebrew-cask/issues/2925
-[#2932]: https://github.com/phinze/homebrew-cask/issues/2932
-[#2923]: https://github.com/phinze/homebrew-cask/issues/2923
-[#2822]: https://github.com/phinze/homebrew-cask/issues/2822
-[#2742]: https://github.com/phinze/homebrew-cask/issues/2742
-[#2625]: https://github.com/phinze/homebrew-cask/issues/2625
-[#2890]: https://github.com/phinze/homebrew-cask/issues/2890
-[#2875]: https://github.com/phinze/homebrew-cask/issues/2875
-[#2734]: https://github.com/phinze/homebrew-cask/issues/2734
-[#2739]: https://github.com/phinze/homebrew-cask/issues/2739
-[#2874]: https://github.com/phinze/homebrew-cask/issues/2874
-[#2392]: https://github.com/phinze/homebrew-cask/issues/2392
+[#2945]: https://github.com/caskroom/homebrew-cask/issues/2945
+[#2761]: https://github.com/caskroom/homebrew-cask/issues/2761
+[#2925]: https://github.com/caskroom/homebrew-cask/issues/2925
+[#2932]: https://github.com/caskroom/homebrew-cask/issues/2932
+[#2923]: https://github.com/caskroom/homebrew-cask/issues/2923
+[#2822]: https://github.com/caskroom/homebrew-cask/issues/2822
+[#2742]: https://github.com/caskroom/homebrew-cask/issues/2742
+[#2625]: https://github.com/caskroom/homebrew-cask/issues/2625
+[#2890]: https://github.com/caskroom/homebrew-cask/issues/2890
+[#2875]: https://github.com/caskroom/homebrew-cask/issues/2875
+[#2734]: https://github.com/caskroom/homebrew-cask/issues/2734
+[#2739]: https://github.com/caskroom/homebrew-cask/issues/2739
+[#2874]: https://github.com/caskroom/homebrew-cask/issues/2874
+[#2392]: https://github.com/caskroom/homebrew-cask/issues/2392
 [@AlJohri]: https://github.com/AlJohri
-[#2873]: https://github.com/phinze/homebrew-cask/issues/2873
-[#2872]: https://github.com/phinze/homebrew-cask/issues/2872
-[#2851]: https://github.com/phinze/homebrew-cask/issues/2851
-[#2759]: https://github.com/phinze/homebrew-cask/issues/2759
-[#2850]: https://github.com/phinze/homebrew-cask/issues/2850
-[#2841]: https://github.com/phinze/homebrew-cask/issues/2841
-[#2829]: https://github.com/phinze/homebrew-cask/issues/2829
-[#2840]: https://github.com/phinze/homebrew-cask/issues/2840
+[#2873]: https://github.com/caskroom/homebrew-cask/issues/2873
+[#2872]: https://github.com/caskroom/homebrew-cask/issues/2872
+[#2851]: https://github.com/caskroom/homebrew-cask/issues/2851
+[#2759]: https://github.com/caskroom/homebrew-cask/issues/2759
+[#2850]: https://github.com/caskroom/homebrew-cask/issues/2850
+[#2841]: https://github.com/caskroom/homebrew-cask/issues/2841
+[#2829]: https://github.com/caskroom/homebrew-cask/issues/2829
+[#2840]: https://github.com/caskroom/homebrew-cask/issues/2840
 [@lgarron]: https://github.com/lgarron
 [@phillipalexander]: https://github.com/phillipalexander
 [@sgtpep]: https://github.com/sgtpep
 [@tamird]: https://github.com/tamird
 [@juuso]: https://github.com/juuso
 [@tsantor]: https://github.com/tsantor
-[#2719]: https://github.com/phinze/homebrew-cask/issues/2719
-[#1992]: https://github.com/phinze/homebrew-cask/issues/1992
-[#2820]: https://github.com/phinze/homebrew-cask/issues/2820
-[#2809]: https://github.com/phinze/homebrew-cask/issues/2809
-[#2807]: https://github.com/phinze/homebrew-cask/issues/2807
-[#2803]: https://github.com/phinze/homebrew-cask/issues/2803
-[#2748]: https://github.com/phinze/homebrew-cask/issues/2748
-[#2624]: https://github.com/phinze/homebrew-cask/issues/2624
+[#2719]: https://github.com/caskroom/homebrew-cask/issues/2719
+[#1992]: https://github.com/caskroom/homebrew-cask/issues/1992
+[#2820]: https://github.com/caskroom/homebrew-cask/issues/2820
+[#2809]: https://github.com/caskroom/homebrew-cask/issues/2809
+[#2807]: https://github.com/caskroom/homebrew-cask/issues/2807
+[#2803]: https://github.com/caskroom/homebrew-cask/issues/2803
+[#2748]: https://github.com/caskroom/homebrew-cask/issues/2748
+[#2624]: https://github.com/caskroom/homebrew-cask/issues/2624
 [@vmrob]: https://github.com/vmrob
-[#2792]: https://github.com/phinze/homebrew-cask/issues/2792
-[#2767]: https://github.com/phinze/homebrew-cask/issues/2767
-[#2701]: https://github.com/phinze/homebrew-cask/issues/2701
-[#2787]: https://github.com/phinze/homebrew-cask/issues/2787
-[#2786]: https://github.com/phinze/homebrew-cask/issues/2786
-[#2785]: https://github.com/phinze/homebrew-cask/issues/2785
-[#2637]: https://github.com/phinze/homebrew-cask/issues/2637
-[#2741]: https://github.com/phinze/homebrew-cask/issues/2741
-[#2760]: https://github.com/phinze/homebrew-cask/issues/2760
-[#2762]: https://github.com/phinze/homebrew-cask/issues/2762
-[#2784]: https://github.com/phinze/homebrew-cask/issues/2784
-[#2783]: https://github.com/phinze/homebrew-cask/issues/2783
-[#2782]: https://github.com/phinze/homebrew-cask/issues/2782
-[#2733]: https://github.com/phinze/homebrew-cask/issues/2733
-[#2623]: https://github.com/phinze/homebrew-cask/issues/2623
-[#2613]: https://github.com/phinze/homebrew-cask/issues/2613
-[#2743]: https://github.com/phinze/homebrew-cask/issues/2743
-[#2732]: https://github.com/phinze/homebrew-cask/issues/2732
-[#2631]: https://github.com/phinze/homebrew-cask/issues/2631
-[#2725]: https://github.com/phinze/homebrew-cask/issues/2725
-[#2724]: https://github.com/phinze/homebrew-cask/issues/2724
-[#2689]: https://github.com/phinze/homebrew-cask/issues/2689
-[#2698]: https://github.com/phinze/homebrew-cask/issues/2698
+[#2792]: https://github.com/caskroom/homebrew-cask/issues/2792
+[#2767]: https://github.com/caskroom/homebrew-cask/issues/2767
+[#2701]: https://github.com/caskroom/homebrew-cask/issues/2701
+[#2787]: https://github.com/caskroom/homebrew-cask/issues/2787
+[#2786]: https://github.com/caskroom/homebrew-cask/issues/2786
+[#2785]: https://github.com/caskroom/homebrew-cask/issues/2785
+[#2637]: https://github.com/caskroom/homebrew-cask/issues/2637
+[#2741]: https://github.com/caskroom/homebrew-cask/issues/2741
+[#2760]: https://github.com/caskroom/homebrew-cask/issues/2760
+[#2762]: https://github.com/caskroom/homebrew-cask/issues/2762
+[#2784]: https://github.com/caskroom/homebrew-cask/issues/2784
+[#2783]: https://github.com/caskroom/homebrew-cask/issues/2783
+[#2782]: https://github.com/caskroom/homebrew-cask/issues/2782
+[#2733]: https://github.com/caskroom/homebrew-cask/issues/2733
+[#2623]: https://github.com/caskroom/homebrew-cask/issues/2623
+[#2613]: https://github.com/caskroom/homebrew-cask/issues/2613
+[#2743]: https://github.com/caskroom/homebrew-cask/issues/2743
+[#2732]: https://github.com/caskroom/homebrew-cask/issues/2732
+[#2631]: https://github.com/caskroom/homebrew-cask/issues/2631
+[#2725]: https://github.com/caskroom/homebrew-cask/issues/2725
+[#2724]: https://github.com/caskroom/homebrew-cask/issues/2724
+[#2689]: https://github.com/caskroom/homebrew-cask/issues/2689
+[#2698]: https://github.com/caskroom/homebrew-cask/issues/2698
 
 ## 0.28.0
 
@@ -373,31 +373,31 @@
 * __Breaking Changes__
  - none
 
-[#2532]: https://github.com/phinze/homebrew-cask/issues/2532
+[#2532]: https://github.com/caskroom/homebrew-cask/issues/2532
 [@voanhduy1512]: https://github.com/voanhduy1512
-[#2647]: https://github.com/phinze/homebrew-cask/issues/2647
+[#2647]: https://github.com/caskroom/homebrew-cask/issues/2647
 [@jedahan]: https://github.com/jedahan
-[#2305]: https://github.com/phinze/homebrew-cask/issues/2305
-[#2594]: https://github.com/phinze/homebrew-cask/issues/2594
-[#2592]: https://github.com/phinze/homebrew-cask/issues/2592
-[#2581]: https://github.com/phinze/homebrew-cask/issues/2581
+[#2305]: https://github.com/caskroom/homebrew-cask/issues/2305
+[#2594]: https://github.com/caskroom/homebrew-cask/issues/2594
+[#2592]: https://github.com/caskroom/homebrew-cask/issues/2592
+[#2581]: https://github.com/caskroom/homebrew-cask/issues/2581
 [@goxberry]: https://github.com/goxberry
-[#2576]: https://github.com/phinze/homebrew-cask/issues/2576
-[#2555]: https://github.com/phinze/homebrew-cask/issues/2555
-[#2697]: https://github.com/phinze/homebrew-cask/issues/2697
-[#2593]: https://github.com/phinze/homebrew-cask/issues/2593
-[#2418]: https://github.com/phinze/homebrew-cask/issues/2418
-[#2676]: https://github.com/phinze/homebrew-cask/issues/2676
-[#2560]: https://github.com/phinze/homebrew-cask/issues/2560
-[#2567]: https://github.com/phinze/homebrew-cask/issues/2567
-[#2536]: https://github.com/phinze/homebrew-cask/issues/2536
-[#2670]: https://github.com/phinze/homebrew-cask/issues/2670
-[#2650]: https://github.com/phinze/homebrew-cask/issues/2650
+[#2576]: https://github.com/caskroom/homebrew-cask/issues/2576
+[#2555]: https://github.com/caskroom/homebrew-cask/issues/2555
+[#2697]: https://github.com/caskroom/homebrew-cask/issues/2697
+[#2593]: https://github.com/caskroom/homebrew-cask/issues/2593
+[#2418]: https://github.com/caskroom/homebrew-cask/issues/2418
+[#2676]: https://github.com/caskroom/homebrew-cask/issues/2676
+[#2560]: https://github.com/caskroom/homebrew-cask/issues/2560
+[#2567]: https://github.com/caskroom/homebrew-cask/issues/2567
+[#2536]: https://github.com/caskroom/homebrew-cask/issues/2536
+[#2670]: https://github.com/caskroom/homebrew-cask/issues/2670
+[#2650]: https://github.com/caskroom/homebrew-cask/issues/2650
 [@wallacewinfrey]: https://github.com/wallacewinfrey
 [@vmrob]: https://github.com/vmrob
-[#2545]: https://github.com/phinze/homebrew-cask/issues/2545
-[#2391]: https://github.com/phinze/homebrew-cask/issues/2391
-[#2618]: https://github.com/phinze/homebrew-cask/issues/2618
+[#2545]: https://github.com/caskroom/homebrew-cask/issues/2545
+[#2391]: https://github.com/caskroom/homebrew-cask/issues/2391
+[#2618]: https://github.com/caskroom/homebrew-cask/issues/2618
 [@stylerw]: https://github.com/stylerw
 
 ## 0.27.1
@@ -412,7 +412,7 @@
 * __Breaking Changes__
  - none
 
-[#2496]: https://github.com/phinze/homebrew-cask/issues/2496
+[#2496]: https://github.com/caskroom/homebrew-cask/issues/2496
 
 ## 0.27.0
 
@@ -438,33 +438,33 @@
  - In rare cases, the new `caveats` form may not be backward-compatible with
    old Casks which used undocumented features.
 
-[#2416]: https://github.com/phinze/homebrew-cask/issues/2416
+[#2416]: https://github.com/caskroom/homebrew-cask/issues/2416
 [@linc01n]: https://github.com/linc01n
-[#2471]: https://github.com/phinze/homebrew-cask/issues/2471
-[#2461]: https://github.com/phinze/homebrew-cask/issues/2461
-[#2152]: https://github.com/phinze/homebrew-cask/issues/2152
+[#2471]: https://github.com/caskroom/homebrew-cask/issues/2471
+[#2461]: https://github.com/caskroom/homebrew-cask/issues/2461
+[#2152]: https://github.com/caskroom/homebrew-cask/issues/2152
 [@voanhduy1512]: https://github.com/voanhduy1512
 [@vmrob]: https://github.com/vmrob
 [@Dillon-Benson]: https://github.com/Dillon-Benson
-[#2426]: https://github.com/phinze/homebrew-cask/issues/2426
-[#2303]: https://github.com/phinze/homebrew-cask/issues/2303
-[#2235]: https://github.com/phinze/homebrew-cask/issues/2235
+[#2426]: https://github.com/caskroom/homebrew-cask/issues/2426
+[#2303]: https://github.com/caskroom/homebrew-cask/issues/2303
+[#2235]: https://github.com/caskroom/homebrew-cask/issues/2235
 [@sonots]: https://github.com/sonots
-[#2417]: https://github.com/phinze/homebrew-cask/issues/2417
-[#2444]: https://github.com/phinze/homebrew-cask/issues/2444
+[#2417]: https://github.com/caskroom/homebrew-cask/issues/2417
+[#2444]: https://github.com/caskroom/homebrew-cask/issues/2444
 
-[#2329]: https://github.com/phinze/homebrew-cask/issues/2329
+[#2329]: https://github.com/caskroom/homebrew-cask/issues/2329
 [@karbassi]: https://github.com/karbassi
-[#2360]: https://github.com/phinze/homebrew-cask/issues/2360
+[#2360]: https://github.com/caskroom/homebrew-cask/issues/2360
 [@jfb]: https://github.com/jfb
-[#2263]: https://github.com/phinze/homebrew-cask/issues/2263
+[#2263]: https://github.com/caskroom/homebrew-cask/issues/2263
 [@philoserf]: https://github.com/philoserf
-[#2370]: https://github.com/phinze/homebrew-cask/issues/2370
+[#2370]: https://github.com/caskroom/homebrew-cask/issues/2370
 [@troter]: https://github.com/troter
-[#2258]: https://github.com/phinze/homebrew-cask/issues/2258
+[#2258]: https://github.com/caskroom/homebrew-cask/issues/2258
 [@jgarber623]: https://github.com/jgarber623
-[#2456]: https://github.com/phinze/homebrew-cask/issues/2456
-[#2240]: https://github.com/phinze/homebrew-cask/issues/2240
+[#2456]: https://github.com/caskroom/homebrew-cask/issues/2456
+[#2240]: https://github.com/caskroom/homebrew-cask/issues/2240
 
 ## 0.26.1
 
@@ -474,7 +474,7 @@
 * __Breaking Changes__
  - none
 
-[#2275]: https://github.com/phinze/homebrew-cask/issues/2275
+[#2275]: https://github.com/caskroom/homebrew-cask/issues/2275
 
 ## 0.26.0
 
@@ -486,7 +486,7 @@
 * __Breaking Changes__
  - none
 
-[#2275]: https://github.com/phinze/homebrew-cask/issues/2275
+[#2275]: https://github.com/caskroom/homebrew-cask/issues/2275
 
 ## 0.25.0
 
@@ -506,11 +506,11 @@
 [@pstadler]: https://github.com/pstadler
 [@halo]: https://github.com/halo
 [caskroom/fonts]: https://github.com/caskroom/homebrew-fonts
-[#1944]:  https://github.com/phinze/homebrew-cask/issues/1944
-[#2066]:  https://github.com/phinze/homebrew-cask/issues/2066
-[#2081]:  https://github.com/phinze/homebrew-cask/issues/2081
-[#2084]:  https://github.com/phinze/homebrew-cask/issues/2084
-[#2100]:  https://github.com/phinze/homebrew-cask/issues/2100
+[#1944]:  https://github.com/caskroom/homebrew-cask/issues/1944
+[#2066]:  https://github.com/caskroom/homebrew-cask/issues/2066
+[#2081]:  https://github.com/caskroom/homebrew-cask/issues/2081
+[#2084]:  https://github.com/caskroom/homebrew-cask/issues/2084
+[#2100]:  https://github.com/caskroom/homebrew-cask/issues/2100
 
 ## 0.24.0
 
@@ -521,8 +521,8 @@
 * __Breaking Changes__
   - none
 
-[#2018]: https://github.com/phinze/homebrew-cask/issues/2018
-[#2019]: https://github.com/phinze/homebrew-cask/issues/2019
+[#2018]: https://github.com/caskroom/homebrew-cask/issues/2018
+[#2019]: https://github.com/caskroom/homebrew-cask/issues/2019
 
 ## 0.23.0
 
@@ -533,8 +533,8 @@
 * __Breaking Changes__
   - none
 
-[#2012]: https://github.com/phinze/homebrew-cask/issues/2012
-[#2013]: https://github.com/phinze/homebrew-cask/issues/2013
+[#2012]: https://github.com/caskroom/homebrew-cask/issues/2012
+[#2013]: https://github.com/caskroom/homebrew-cask/issues/2013
 
 ## 0.22.0
 
@@ -558,7 +558,7 @@
   - none
 
 [@peeja]: https://github.com/peeja
-[#1882]: https://github.com/phinze/homebrew-cask/issues/1882
+[#1882]: https://github.com/caskroom/homebrew-cask/issues/1882
 
 ## 0.21.0
 
@@ -568,7 +568,7 @@
 * __Breaking Changes__
   - none
 
-[#1733]: https://github.com/phinze/homebrew-cask/issues/1733
+[#1733]: https://github.com/caskroom/homebrew-cask/issues/1733
 [@lgarron]: https://github.com/lgarron
 
 ## 0.20.1
@@ -579,7 +579,7 @@
 * __Breaking Changes__
   - none
 
-[#1765]: https://github.com/phinze/homebrew-cask/issues/1765
+[#1765]: https://github.com/caskroom/homebrew-cask/issues/1765
 [@njam]: https://github.com/njam
 
 ## 0.20.0
@@ -596,16 +596,16 @@
 * __Breaking Changes__
   - [#1436][] - new preferred sourceforge url style
 
-[#1417]: https://github.com/phinze/homebrew-cask/issues/1417
+[#1417]: https://github.com/caskroom/homebrew-cask/issues/1417
 [@aah]: https://github.com/aah
 [@linc01n]: https://github.com/linc01n
 
-[#393]: https://github.com/phinze/homebrew-cask/issues/393
-[#914]: https://github.com/phinze/homebrew-cask/issues/914
-[#1035]: https://github.com/phinze/homebrew-cask/issues/1035
-[#1461]: https://github.com/phinze/homebrew-cask/issues/1461
+[#393]: https://github.com/caskroom/homebrew-cask/issues/393
+[#914]: https://github.com/caskroom/homebrew-cask/issues/914
+[#1035]: https://github.com/caskroom/homebrew-cask/issues/1035
+[#1461]: https://github.com/caskroom/homebrew-cask/issues/1461
 
-[#1436]: https://github.com/phinze/homebrew-cask/issues/1436
+[#1436]: https://github.com/caskroom/homebrew-cask/issues/1436
 
 
 ## 0.19.4
@@ -616,7 +616,7 @@
 * __Breaking Changes__
   - none
 
-[#1274]: https://github.com/phinze/homebrew-cask/issues/1374
+[#1274]: https://github.com/caskroom/homebrew-cask/issues/1374
 
 ## 0.19.3
 
@@ -626,7 +626,7 @@
 * __Breaking Changes__
   - none
 
-[#1274]: https://github.com/phinze/homebrew-cask/issues/1247
+[#1274]: https://github.com/caskroom/homebrew-cask/issues/1247
 
 ## 0.19.2
 
@@ -645,9 +645,9 @@
 * __Breaking Changes__
   - none
 
-[#954]: https://github.com/phinze/homebrew-cask/issues/954
-[@kdeldycke]: https://github.com/phinze/homebrew-cask/commit/f787afdc26cb5a5b81c2d6142d93c77b7aa5d28e
-[#1247]: https://github.com/phinze/homebrew-cask/issues/1247
+[#954]: https://github.com/caskroom/homebrew-cask/issues/954
+[@kdeldycke]: https://github.com/caskroom/homebrew-cask/commit/f787afdc26cb5a5b81c2d6142d93c77b7aa5d28e
+[#1247]: https://github.com/caskroom/homebrew-cask/issues/1247
 
 ## 0.19.0
 
@@ -657,7 +657,7 @@
 * __Breaking Changes__
   - none
 
-[#602]: https://github.com/phinze/homebrew-cask/issues/602
+[#602]: https://github.com/caskroom/homebrew-cask/issues/602
 
 
 ## 0.18.3
@@ -669,9 +669,9 @@
 * __Breaking Changes__
   - none
 
-[#1168]: https://github.com/phinze/homebrew-cask/issues/1168
+[#1168]: https://github.com/caskroom/homebrew-cask/issues/1168
 [@wenbin1989]: https://github.com/wenbin1989
-[#1181]: https://github.com/phinze/homebrew-cask/pull/1181
+[#1181]: https://github.com/caskroom/homebrew-cask/pull/1181
 [@andizzle]: https://github.com/andizzle
 
 ## 0.18.2
@@ -682,7 +682,7 @@
 * __Breaking Changes__
   - none
 
-[#981]: https://github.com/phinze/homebrew-cask/issues/981
+[#981]: https://github.com/caskroom/homebrew-cask/issues/981
 [@sheerun]: https://github.com/sheerun
 
 ## 0.18.1
@@ -708,7 +708,7 @@
 
 * __Features__
 * __Fixes__
-  - Bugfixes addressing ([#1105](https://github.com/phinze/homebrew-cask/issues/1105))
+  - Bugfixes addressing ([#1105](https://github.com/caskroom/homebrew-cask/issues/1105))
 * __Breaking Changes__
   - none
 
@@ -716,7 +716,7 @@
 
 * __Features__
 * __Fixes__
-  - Fixes typo on `Tar` container, preventing tar-based Casks from being installed. ([#1083](https://github.com/phinze/homebrew-cask/issues/1083))
+  - Fixes typo on `Tar` container, preventing tar-based Casks from being installed. ([#1083](https://github.com/caskroom/homebrew-cask/issues/1083))
 * __Breaking Changes__
   - none
 
@@ -738,7 +738,7 @@
 
 * __Features__
 * __Fixes__
-  - homebrew made some changes ([#1015](https://github.com/phinze/homebrew-cask/issues/1015)) that broke our integration; this bugfix release brings us back into parity with the mothership.
+  - homebrew made some changes ([#1015](https://github.com/caskroom/homebrew-cask/issues/1015)) that broke our integration; this bugfix release brings us back into parity with the mothership.
 * __Breaking Changes__
   - none
 

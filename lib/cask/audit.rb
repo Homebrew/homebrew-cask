@@ -52,7 +52,7 @@ class Cask::Audit
   def _check_sourceforge_download_url_format
     odebug "Auditing URL format"
     if _bad_sourceforge_url?
-      add_warning "SourceForge URL format incorrect. See https://github.com/phinze/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforge-urls"
+      add_warning "SourceForge URL format incorrect. See https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforge-urls"
     end
   end
 

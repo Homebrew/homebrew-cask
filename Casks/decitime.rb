@@ -7,7 +7,7 @@ class Decitime < Cask
   link 'DeciTime.app'
 
   # fix wonky DMG by mounting it once read-write per discussion at
-  # https://github.com/phinze/homebrew-cask/pull/2654
+  # https://github.com/caskroom/homebrew-cask/pull/2654
   before_install do
     system %Q{/usr/bin/hdiutil eject "$(/usr/bin/hdiutil mount -readwrite -noidme -nobrowse -mountrandom /tmp #{destination_path.join(artifacts[:nested_container].first)} | /usr/bin/cut -f3 | /usr/bin/grep '.')" >/dev/null 2>&1}
   end

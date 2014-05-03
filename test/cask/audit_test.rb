@@ -88,7 +88,7 @@ describe Cask::Audit do
 
     describe "preferred download URL formats" do
       it "adds a warning if SourceForge doesn't use download subdomain" do
-        warning_msg = 'SourceForge URL format incorrect. See https://github.com/phinze/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforge-urls'
+        warning_msg = 'SourceForge URL format incorrect. See https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforge-urls'
 
 
         audit = Cask::Audit.new(CaskSourceForgeIncorrectURLFormat.new)
