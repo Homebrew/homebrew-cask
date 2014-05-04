@@ -4,6 +4,9 @@ class Cask; end
 
 require 'download_strategy'
 
+# transitional, for set_up_taps (see below)
+require 'cmd/update'
+
 require 'cask/artifact'
 require 'cask/audit'
 require 'cask/auditor'
@@ -41,6 +44,7 @@ class Cask
   include Cask::Options
 
   def self.init
+    set_up_taps
     odebug 'Creating directories'
     HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?
     HOMEBREW_CACHE_CASKS.mkpath unless HOMEBREW_CACHE_CASKS.exist?
@@ -55,6 +59,32 @@ class Cask
         system '/usr/bin/sudo', '--', '/bin/mkdir', '-p', '--', caskroom
         system '/usr/bin/sudo', '--', '/usr/sbin/chown', '-R', '--', "#{current_user}:staff", caskroom.parent
       end
+    end
+  end
+
+  def self.set_up_taps
+    odebug 'Initializing Taps'
+
+    # transitional: help with Homebrew's move of Tap dirs, Apr 2014
+    Homebrew.send(:rename_taps_dir_if_necessary)
+
+    # transitional: help with our own move to new GitHub project, May 2014
+    legacy_user = 'phinze'
+    new_user = 'caskroom'
+    repo = 'cask'
+    legacy_tap = HOMEBREW_LIBRARY/"Taps/#{legacy_user}/homebrew-#{repo}"
+    new_tap = HOMEBREW_LIBRARY/"Taps/#{new_user}/homebrew-#{repo}"
+    if legacy_tap.directory?
+      ohai 'Removing legacy Tap'
+      files = []
+      legacy_tap.find_formula { |file| files << file }
+      Homebrew.unlink_tap_formula(files)
+      legacy_tap.rmtree
+      legacy_tap.dirname.rmdir_if_possible
+    end
+    unless new_tap.directory?
+      ohai 'Adding caskroom Tap'
+      Homebrew.install_tap(new_user, repo)
     end
   end
 
