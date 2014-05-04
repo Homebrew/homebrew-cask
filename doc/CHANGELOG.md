@@ -1,5 +1,26 @@
 # CHANGELOG
 
+## 0.34.0
+
+* __Casks__
+ - 19 Casks added (42 updated) by 39 contributors since 0.33.1
+ - 1460 total Casks
+* __Features__
+ - [#2427][] Give the user help on checksum errors
+ - [#4169][] automatically transition to new Tap name/location
+ - [#4163][] update all references to new caskroom org home
+* __Fixes__
+ - none
+* __Documentation__
+ - none
+* __Breaking Changes__
+ - The repository has moved under the Caskroom organization. We expect this to
+   be a seamless transition for users.
+
+[#2427]: https://github.com/caskroom/homebrew-cask/issues/2427
+[#4169]: https://github.com/caskroom/homebrew-cask/issues/4169
+[#4163]: https://github.com/caskroom/homebrew-cask/issues/4163
+
 ## 0.33.1
 
 * __Casks__
