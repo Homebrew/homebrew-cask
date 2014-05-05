@@ -3,5 +3,6 @@ class Silk < Cask
   homepage 'http://silk.wbsg.de/'
   version '2.6.0'
   sha256 'a0a4ce95d5cbe589038dd82b311a5a32d751cdc90b34d841d5cc5f8dbc64b878'
-  binary 'silk_2.6.0/workbench/bin/silk-workbench'
+  link 'silk_2.6.0/workbench/bin/silk-workbench', :target 'Silk Workbench'
+  caveats 'After starting Silk Workbench, you need to open a browser and point to http://localhost:9000'
 end
