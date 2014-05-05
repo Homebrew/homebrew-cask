@@ -84,6 +84,9 @@ names, and other aspects of this manual are still subject to change.
   * `uninstall` or `rm` or `remove` <Cask>:
     Uninstall <Cask>.
 
+  * `reinstall` <Cask>:
+    Reinstall <Cask>.
+
   * `search` or `-S`:
     Display all Casks available for install.
 
