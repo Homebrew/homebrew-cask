@@ -1,15 +1,15 @@
 class Macvim < Cask
   if MacOS.version == :mavericks
-    url 'https://github.com/b4winckler/macvim/releases/download/snapshot-72/MacVim-snapshot-72-Mavericks.tbz'
-    sha256 'f2543860b27b7c0db9407d9d38d4c2fb5cda5b23845a6c121936116ccf8b0d39'
+    url 'https://github.com/b4winckler/macvim/releases/download/snapshot-73/MacVim-snapshot-73-Mavericks.tbz'
+    sha256 '557c60f3487ab68426cf982c86270f2adfd15e8a4d535f762e6d55602754d224'
   else
-    url 'https://github.com/eee19/macvim/releases/download/snapshot-72/MacVim-snapshot-72-Mountain-Lion.tbz'
-    sha256 'f01eb54f73d7d8b750886b706468f234af3d34f9a08f5625cbef20113514f4e5'
+    url 'https://github.com/eee19/macvim/releases/download/snapshot-73/MacVim-snapshot-73-Mountain-Lion.tbz'
+    sha256 '7f573fb9693052a86845c0a9cbb0b3c3c33ee23294f9d8111187377e4d89f72c'
   end
   homepage 'http://code.google.com/p/macvim/'
-  version '7.4-72'
-  link 'MacVim-snapshot-72/MacVim.app'
-  binary 'MacVim-snapshot-72/mvim'
+  version '7.4-73'
+  link 'MacVim-snapshot-73/MacVim.app'
+  binary 'MacVim-snapshot-73/mvim'
   caveats do
     puts <<-EOS.undent
     Note that homebrew also provides a compiled macvim Formula that links its
