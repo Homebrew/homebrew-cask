@@ -244,6 +244,10 @@ When an App developer does not offer a binary download, please submit the
 Cask to [caskroom/homebrew-unofficial](http://github.com/caskroom/homebrew-unofficial).
 For a location to host unofficial builds, contact our sister project [alehouse](https://github.com/alehouse).
 
+### Command-line-only Apps
+
+When an App provides solely a command line interface version (meaning it would exclusively use the `binary` [artifact stanza](https://github.com/caskroom/homebrew-cask/blob/master/doc/CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)), it should be submitted first to [homebrew-binary](https://github.com/Homebrew/homebrew-binary). Only if rejected should it be submitted here for consideration.
+
 ### Fonts
 
 Font Casks live in the [caskroom/homebrew-fonts](https://github.com/caskroom/homebrew-fonts)
