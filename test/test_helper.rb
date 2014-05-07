@@ -38,7 +38,8 @@ Mocha::Integration::MiniTest.activate
 # our baby
 require 'cask'
 
-# look for casks in testcasks by default
+# Look for casks in testcasks by default.  It is elsewhere required that
+# the string "test" appear in the directory name.
 Cask.default_tap = 'caskroom/homebrew-testcasks'
 
 # our own testy caskroom

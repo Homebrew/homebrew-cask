@@ -6,6 +6,7 @@ require 'download_strategy'
 
 # transitional, for set_up_taps (see below)
 require 'cmd/update'
+require 'rubygems'
 
 require 'cask/artifact'
 require 'cask/audit'
@@ -65,8 +66,22 @@ class Cask
   def self.set_up_taps
     odebug 'Initializing Taps'
 
+    return true if Cask.default_tap.match(%r{test[^/]*\Z})
+
     # transitional: help with Homebrew's move of Tap dirs, Apr 2014
-    Homebrew.send(:rename_taps_dir_if_necessary)
+    minimum_homebrew_version = '0.9.5'
+    unless Gem::Version.new(HOMEBREW_VERSION) >= Gem::Version.new(minimum_homebrew_version)
+      raise CaskError.new <<-EOS.undent
+        Minimum Homebrew version '#{minimum_homebrew_version}' required.
+        (Homebrew version #{HOMEBREW_VERSION} was detected.)
+        Try running "brew update".
+      EOS
+    end
+    begin
+      Homebrew.send(:rename_taps_dir_if_necessary)
+    rescue StandardError
+      opoo %q{Trouble with automatic Tap migration. You may need to run "brew update && brew upgrade brew-cask"}
+    end
 
     # transitional: help with our own move to new GitHub project, May 2014
     legacy_user = 'phinze'
