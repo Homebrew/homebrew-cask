@@ -12,6 +12,6 @@ module Cask::CLI::Cat
   end
 
   def self.help
-    "display the source of cask."
+    "dump raw source of the given Cask to the standard output"
   end
 end

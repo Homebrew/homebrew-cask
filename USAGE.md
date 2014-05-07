@@ -80,6 +80,7 @@ This will both uninstall the Cask and remove symlinks which were created in
 The following commands are for Cask authors:
 
 * `audit` -- verifies installability of Casks
+* `cat` -- dumps the given Cask to the standard output
 * `create` -- creates a Cask and opens it in an editor
 * `edit` -- edits the given Cask
 * `checklinks` -- checks for bad Cask links

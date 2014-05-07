@@ -42,6 +42,9 @@ names, and other aspects of this manual are still subject to change.
     Modify Alfred's search scope to include the Caskroom directory where
     Applications are stored.
 
+  * `cat` <Cask>:
+    Dump the given Cask definition file to the standard output.
+
   * `checklinks`:
     Check for bad Cask links.
 
