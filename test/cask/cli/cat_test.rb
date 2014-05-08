@@ -29,7 +29,7 @@ describe Cask::CLI::Cat do
     CLIOUTPUT
   end
 
-  it 'raises an exception when the cask doesnt exist' do
+  it %q{raises an exception when the cask doesn't exist} do
     lambda {
       Cask::CLI::Cat.run('notacask')
     }.must_raise CaskUnavailableError
