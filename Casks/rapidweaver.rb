@@ -2,6 +2,6 @@ class Rapidweaver < Cask
   url 'http://realmacsoftware.com/redirects/rapidweaver/direct'
   homepage 'http://realmacsoftware.com/rapidweaver'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'RapidWeaver.app'
 end
