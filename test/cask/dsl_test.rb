@@ -112,6 +112,7 @@ describe Cask::DSL do
     err.message.must_include "'version' stanza may only appear once"
   end
 
+  # @@@ todo this test can be removed when support for no_checksum is dropped
   it "prevents defining conflicting checksums (first order)" do
     err = lambda {
       invalid_cask = Cask.load('invalid/invalid-checksum-conflict1')
@@ -119,6 +120,7 @@ describe Cask::DSL do
     err.message.must_include "'no_checksum' stanza conflicts with"
   end
 
+  # @@@ todo this test can be removed when support for no_checksum is dropped
   it "prevents defining conflicting checksums (second order)" do
     err = lambda {
       invalid_cask = Cask.load('invalid/invalid-checksum-conflict2')

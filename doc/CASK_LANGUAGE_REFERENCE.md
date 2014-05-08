@@ -51,14 +51,12 @@ paradigm.
 
 Each of the following stanzas is required for every Cask.
 
-Exception: currently `sha256` may be omitted if `no_checksum` is substituted.
-
 | name               | multiple occurrences allowed? | value       |
 | ------------------ |------------------------------ | ----------- |
 | `url`              | No                            | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](#url-stanza-details))
 | `homepage`         | No                            | application homepage; used for the `brew cask home` command
 | `version`          | No                            | application version; give value of `'latest'` if versioned downloads are not offered
-| `sha256`           | No                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be omitted on unversioned downloads by substituting `no_checksum`. (see also [Checksum Stanza Details](#checksum-stanza-details))
+| `sha256`           | No                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
 
 
 ## At Least One Artifact Stanza Is Also Required
@@ -102,8 +100,8 @@ and slated for retirement.
 
 | name               | multiple occurrences allowed? | meaning     |
 | ------------------ |------------------------------ | ----------- |
-| `md5`              | No                            | an alternative to `sha256`
-| `sha1`             | No                            | an alternative to `sha256`
+| `sha1`             | No                            | an obsolete alternative to `sha256`
+| `no_checksum`      | No                            | an obsolete alternative to `sha256 :no_check`
 
 
 ## Conditional Statements

@@ -1,4 +1,5 @@
 class InvalidChecksumConflict2 < TestCask
+  # @@@ todo this test cask can be removed when support for no_checksum is dropped
   url TestHelper.local_binary('caffeine.zip')
   homepage 'http://example.com/local-caffeine'
   version '1.2.3'
