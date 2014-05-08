@@ -194,7 +194,8 @@ of key/value pairs appended to `url`:
 | `:user_agent`      | a string holding the user agent to set for the download request. Can also be set to the symbol `:fake`, which will use a generic Browser-like user agent string. we prefer `:fake` when the server does not require a specific user agent.
 | `:data`            | a hash of parameters to be set in the POST request
 
-Example: [java.rb](../Casks/java.rb)
+Example of using `:cookies`: [java.rb](../Casks/java.rb)
+Example of using `:referer`: [freefilesync.rb](../Casks/freefilesync.rb)
 
 
 ### Subversion URLs
