@@ -193,6 +193,7 @@ of key/value pairs appended to `url`:
 | `:data`            | a hash of parameters to be set in the POST request
 
 Example of using `:cookies`: [java.rb](../Casks/java.rb)
+
 Example of using `:referer`: [freefilesync.rb](../Casks/freefilesync.rb)
 
 
