@@ -2,6 +2,6 @@ class Spotify < Cask
   url 'http://download.spotify.com/Spotify.dmg'
   homepage 'https://www.spotify.com'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Spotify.app'
 end

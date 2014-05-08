@@ -2,6 +2,6 @@ class Servus < Cask
   url 'https://servus.io/download'
   homepage 'https://servus.io/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Servus.app'
 end

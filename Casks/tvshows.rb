@@ -2,6 +2,6 @@ class Tvshows < Cask
   url 'http://tvshowsapp.com/TVShows.zip'
   homepage 'http://tvshowsapp.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   prefpane 'TvShows.prefpane'
 end

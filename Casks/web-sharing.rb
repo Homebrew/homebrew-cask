@@ -2,6 +2,6 @@ class WebSharing < Cask
   url 'http://clickontyler.com/web-sharing/download/'
   homepage 'http://clickontyler.com/web-sharing/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   prefpane 'Web Sharing.prefPane'
 end

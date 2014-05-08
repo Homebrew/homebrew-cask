@@ -2,6 +2,6 @@ class BonjourBrowser < Cask
   url 'http://www.tildesoft.com/files/BonjourBrowser.dmg'
   homepage 'http://www.tildesoft.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Bonjour Browser.app'
 end

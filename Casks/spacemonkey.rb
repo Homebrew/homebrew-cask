@@ -2,6 +2,6 @@ class Spacemonkey < Cask
   url 'http://downloads.spacemonkey.com/client/mac/latest'
   homepage 'https://www.spacemonkey.com'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'SpaceMonkey.app'
 end

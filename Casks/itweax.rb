@@ -2,6 +2,6 @@ class Itweax < Cask
   url 'http://www.itweax.net/itweax.dmg'
   homepage 'http://www.itweax.net/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'iTweaX.app'
 end

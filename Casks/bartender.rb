@@ -2,7 +2,7 @@ class Bartender < Cask
   url 'http://www.macbartender.com/Demo/Bartender.zip'
   homepage 'http://www.macbartender.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Bartender.app'
 
   after_install do

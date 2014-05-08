@@ -2,6 +2,6 @@ class Youview < Cask
   url 'http://download.mrgeckosmedia.com/YouView.zip'
   homepage 'https://mrgeckosmedia.com/applications/info/YouView'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'YouView/YouView.app'
 end

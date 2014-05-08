@@ -2,6 +2,6 @@ class Phoneclean < Cask
   url 'http://www.imobie.com/product/phoneclean-mac.dmg'
   homepage 'http://www.imobie.com/phoneclean/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'PhoneClean.app'
 end

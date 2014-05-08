@@ -3,6 +3,6 @@ class Mirrordisplays < Cask
     :referer => 'http://www.fabiancanas.com/Projects/MirrorDisplays'
   homepage 'http://www.fabiancanas.com/Projects/MirrorDisplays'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'MirrorDisplays.app'
 end

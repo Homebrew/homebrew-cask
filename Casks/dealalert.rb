@@ -2,6 +2,6 @@ class Dealalert < Cask
   url 'http://littlefin.com/downloads/dealalert.zip'
   homepage 'http://dealalertapp.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'DealAlert.app'
 end

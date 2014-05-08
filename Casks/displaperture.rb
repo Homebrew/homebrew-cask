@@ -2,6 +2,6 @@ class Displaperture < Cask
   url 'http://manytricks.com/download/displaperture'
   homepage 'http://manytricks.com/displaperture'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Displaperture.app'
 end

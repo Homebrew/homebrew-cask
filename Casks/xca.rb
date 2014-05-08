@@ -3,6 +3,6 @@ class Xca < Cask
     :user_agent => :fake
   homepage 'http://xca.sourceforge.net/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'xca.app'
 end

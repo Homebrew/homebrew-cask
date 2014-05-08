@@ -2,6 +2,6 @@ class Witch < Cask
   url 'http://manytricks.com/download/witch'
   homepage 'http://manytricks.com/witch/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   prefpane 'Witch.prefPane'
 end
