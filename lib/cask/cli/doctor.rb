@@ -20,12 +20,17 @@ class Cask::CLI::Doctor
     alt_taps = Pathname.glob(HOMEBREW_REPOSITORY.join 'Library', 'Taps', '*', '*', 'Casks').map(&:dirname) -
                [fq_default_tap]
     alt_taps = nil unless alt_taps.length > 0
+    default_cask_count = begin
+                             HOMEBREW_REPOSITORY.join(fq_default_tap, 'Casks').children.count(&:file?)
+                         rescue StandardError
+                             "0 #{Tty.red}(Error reading #{fq_default_tap})#{Tty.reset}"
+                         end
     ohai 'Homebrew-cask Default Tap Path:'
     puts fq_default_tap
     ohai 'Homebrew-cask Alternate Cask Taps:'
     puts alt_taps
     ohai 'Homebrew-cask Default Tap Cask Count:'
-    puts HOMEBREW_REPOSITORY.join(fq_default_tap, 'Casks').children.count(&:file?)
+    puts default_cask_count
 
     ohai 'Contents of $LOAD_PATH:'
     puts $LOAD_PATH
