@@ -100,7 +100,6 @@ and slated for retirement.
 
 | name               | multiple occurrences allowed? | meaning     |
 | ------------------ |------------------------------ | ----------- |
-| `sha1`             | No                            | an obsolete alternative to `sha256`
 | `no_checksum`      | No                            | an obsolete alternative to `sha256 :no_check`
 
 
@@ -170,8 +169,8 @@ And the following methods may be useful for interpolation:
 
 ## Checksum Stanza Details
 
-Older Casks may still use `sha1` checksums.  This is OK, but new
-Casks and updates should adopt `sha256`.
+Older Casks may still use `no_checksum` stanzas.  This is OK, but new
+Casks and updates should adopt `sha256 :no_check`.
 
 
 ## URL Stanza Details
