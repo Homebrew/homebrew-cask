@@ -56,9 +56,19 @@ class Cask
       if caskroom.parent.writable?
         system '/bin/mkdir', caskroom
       else
+        toplevel_dir = caskroom
+        toplevel_dir = toplevel_dir.parent until toplevel_dir.parent.root?
+        unless toplevel_dir.directory?
+          # If a toplevel dir such as '/opt' must be created, enforce standard permissions.
+          # sudo in system is rude.
+          system '/usr/bin/sudo', '--', '/bin/mkdir', '--',         toplevel_dir
+          system '/usr/bin/sudo', '--', '/bin/chmod', '--', '0775', toplevel_dir
+        end
         # sudo in system is rude.
         system '/usr/bin/sudo', '--', '/bin/mkdir', '-p', '--', caskroom
-        system '/usr/bin/sudo', '--', '/usr/sbin/chown', '-R', '--', "#{current_user}:staff", caskroom.parent
+        unless caskroom.parent == toplevel_dir
+          system '/usr/bin/sudo', '--', '/usr/sbin/chown', '-R', '--', "#{current_user}:staff", caskroom.parent
+        end
       end
     end
   end
