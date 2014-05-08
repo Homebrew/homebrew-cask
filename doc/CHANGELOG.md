@@ -1,5 +1,34 @@
 # CHANGELOG
 
+## 0.35.0
+
+* __Casks__
+ - 17 Casks added (17 updated) by 24 contributors since 0.34.0
+ - 1478 total Casks
+* __Features__
+ - [#4200][], [#4242][], [#4241][] Add `brew cask cat` command <3 [@linc01n][]
+* __Fixes__
+ - [#4229][] Defend against unusual Homebrew setups (Tap migration improvement)
+ - [#4244][] special case permissions when creating `/opt`
+ - [#4245][] Moved garmin-express.rb to correct location <3 [@ngs][]
+ - [#4226][] handle nil `@response_status`
+ - [#4195][] suppress email notifications from travis
+* __Documentation__
+ - 4 doc commits since 0.34.0
+* __Breaking Changes__
+ - none
+
+[#4244]: https://github.com/caskroom/homebrew-cask/issues/4244
+[#4242]: https://github.com/caskroom/homebrew-cask/issues/4242
+[#4245]: https://github.com/caskroom/homebrew-cask/issues/4245
+[@ngs]: https://github.com/ngs
+[#4229]: https://github.com/caskroom/homebrew-cask/issues/4229
+[#4241]: https://github.com/caskroom/homebrew-cask/issues/4241
+[#4226]: https://github.com/caskroom/homebrew-cask/issues/4226
+[#4200]: https://github.com/caskroom/homebrew-cask/issues/4200
+[@linc01n]: https://github.com/linc01n
+[#4195]: https://github.com/caskroom/homebrew-cask/issues/4195
+
 ## 0.34.0
 
 * __Casks__

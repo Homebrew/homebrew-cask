@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "HOMEBREW\-CASK" "1" "March 2014" "Homebrew-cask" "brew-cask"
+.TH "HOMEBREW\-CASK" "1" "May 2014" "Homebrew-cask" "brew-cask"
 .
 .SH "NAME"
 \fBhomebrew\-cask\fR \- A friendly binary installer for OS X
@@ -43,6 +43,10 @@ Check \fICasks\fR for installability\. If no \fICasks\fR are given on the comman
 Modify Alfred\'s search scope to include the Caskroom directory where Applications are stored\.
 .
 .TP
+\fBcat\fR \fICask\fR
+Dump the given Cask definition file to the standard output\.
+.
+.TP
 \fBchecklinks\fR
 Check for bad Cask links\.
 .
@@ -52,7 +56,7 @@ Clean up cached downloads\. With \fB\-\-outdated\fR, only clean up cached downlo
 .
 .TP
 \fBcreate\fR \fICask\fR
-Generate a Cask for the Caskfile named \fICask\fR and open a template for it in your favorite editor\.
+Generate a Cask definition file for the Cask named \fICask\fR and open a template for it in your favorite editor\.
 .
 .TP
 \fBdoctor\fR or \fBdr\fR
@@ -60,7 +64,7 @@ Check for configuration issues\. Can be useful to upload as a gist for developer
 .
 .TP
 \fBedit\fR \fICask\fR
-Open the given Caskfile for editing\.
+Open the given Cask definition file for editing\.
 .
 .TP
 \fBfetch\fR \fICask\fR [\-\-force]
