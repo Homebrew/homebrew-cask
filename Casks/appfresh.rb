@@ -2,6 +2,6 @@ class Appfresh < Cask
   url 'http://backend.metaquark.de/download/appfresh'
   homepage 'http://metaquark.de/appfresh/mac'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'appfresh.app'
 end

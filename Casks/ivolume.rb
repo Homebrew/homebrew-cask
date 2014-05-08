@@ -2,6 +2,6 @@ class Ivolume < Cask
   url 'http://www.mani.de/download/ivolume/iVolume3Mac.dmg'
   homepage 'http://www.mani.de/en/ivolume/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'iVolume.app'
 end

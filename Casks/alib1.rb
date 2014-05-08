@@ -3,7 +3,7 @@ class Alib1 < Cask
   url 'http://presstube.com/screensavers/Presstube-ALib1-mac.zip'
   homepage 'http://presstube.com/blog/2011/alib1/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   screen_saver 'Presstube-ALib1.app/Contents/Resources/Presstube - ALib1.saver'
 
   after_install do

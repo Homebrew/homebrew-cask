@@ -10,6 +10,6 @@ class Onyx < Cask
   end
   homepage 'http://www.titanium.free.fr/downloadonyx.php'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'OnyX.app'
 end

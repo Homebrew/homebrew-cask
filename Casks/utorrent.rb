@@ -3,7 +3,7 @@ class Utorrent < Cask
   homepage 'http://www.utorrent.com/'
   version 'latest'
   caskroom_only true
-  no_checksum
+  sha256 :no_check
   caveats do
     manual_installer 'uTorrent-Installer.app'
   end

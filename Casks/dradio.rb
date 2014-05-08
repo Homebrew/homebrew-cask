@@ -2,6 +2,6 @@ class Dradio < Cask
   url 'http://dradio.me/download'
   homepage 'http://dradio.me'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'dRadio.app'
 end

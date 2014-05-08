@@ -2,6 +2,6 @@ class Appzapper < Cask
   url 'http://www.appzapper.com/downloads/appzapper.dmg'
   homepage 'http://www.appzapper.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'AppZapper.app'
 end

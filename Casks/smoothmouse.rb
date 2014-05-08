@@ -2,7 +2,7 @@ class Smoothmouse < Cask
   url 'http://smoothmouse.com/download/latest'
   homepage 'http://smoothmouse.com'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   install 'SmoothMouse.pkg'
   uninstall :launchctl => 'com.cyberic.smoothmouse',
             :quit      => 'com.test.SmoothMouseDaemon',

@@ -2,6 +2,6 @@ class Shades < Cask
   url 'http://www.charcoaldesign.co.uk/shades/download/intel'
   homepage 'http://www.charcoaldesign.co.uk/shades'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   prefpane 'Shades Preferences.prefPane'
 end

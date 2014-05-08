@@ -2,6 +2,6 @@ class Zipcleaner < Cask
   url 'http://roger-jolly.nl/software/downloads/zipcleaner/ZipCleaner.zip'
   homepage 'http://roger-jolly.nl/software/#zipcleaner'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'ZipCleaner.app'
 end

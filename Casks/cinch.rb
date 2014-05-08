@@ -2,6 +2,6 @@ class Cinch < Cask
   url 'http://www.irradiatedsoftware.com/download/Cinch.zip'
   homepage 'http://www.irradiatedsoftware.com/cinch/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Cinch.app'
 end

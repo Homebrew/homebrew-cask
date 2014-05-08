@@ -2,6 +2,6 @@ class Xnviewmp < Cask
   url 'http://download.xnview.com/XnViewMP-mac.tgz'
   homepage 'http://www.xnview.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'XnViewMP.app'
 end

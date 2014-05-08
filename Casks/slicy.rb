@@ -2,6 +2,6 @@ class Slicy < Cask
   url 'http://macrabbit.com/slicy/get/'
   homepage 'http://macrabbit.com/slicy/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Slicy.app'
 end

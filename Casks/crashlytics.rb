@@ -2,6 +2,6 @@ class Crashlytics < Cask
   url 'http://crashlytics.com/download/mac'
   homepage 'http://crashlytics.com'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Crashlytics.app'
 end

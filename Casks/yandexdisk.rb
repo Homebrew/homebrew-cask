@@ -2,6 +2,6 @@ class Yandexdisk < Cask
   url 'https://disk.yandex.com/download/Yandex.Disk.Mac.dmg'
   homepage 'https://disk.yandex.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Yandex.Disk.app'
 end

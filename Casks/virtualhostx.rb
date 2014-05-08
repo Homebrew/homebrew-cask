@@ -2,6 +2,6 @@ class Virtualhostx < Cask
   url 'http://clickontyler.com/virtualhostx/download/'
   homepage 'http://clickontyler.com/virtualhostx/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'VirtualHostX.app'
 end

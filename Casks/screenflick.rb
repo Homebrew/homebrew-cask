@@ -2,6 +2,6 @@ class Screenflick < Cask
   url 'http://www.araelium.com/screenflick/downloads/Screenflick.dmg'
   homepage 'http://www.araelium.com/screenflick/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Screenflick.app'
 end

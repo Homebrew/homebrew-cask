@@ -2,6 +2,6 @@ class Musictube < Cask
   url 'http://flavio.tordini.org/files/musictube/musictube.dmg'
   homepage 'http://flavio.tordini.org/musictube'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Musictube.app'
 end
