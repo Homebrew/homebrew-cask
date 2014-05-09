@@ -24,18 +24,22 @@ end
 ### configurable constants
 ###
 
-NUMBERS = {
-            '0' => 'zero',
-            '1' => 'one',
-            '2' => 'two',
-            '3' => 'three',
-            '4' => 'four',
-            '5' => 'five',
-            '6' => 'six',
-            '7' => 'seven',
-            '8' => 'eight',
-            '9' => 'nine',
-          }
+EXPANDED_NUMBERS = {
+                     '0' => 'zero',
+                     '1' => 'one',
+                     '2' => 'two',
+                     '3' => 'three',
+                     '4' => 'four',
+                     '5' => 'five',
+                     '6' => 'six',
+                     '7' => 'seven',
+                     '8' => 'eight',
+                     '9' => 'nine',
+                   }
+
+EXPANDED_SYMBOLS = {
+                    '+' => 'plus',
+                   }
 
 CASK_FILE_EXTENSION = '.rb'
 
@@ -292,8 +296,16 @@ class CaskFileName < String
 
   def spell_out_leading_numbers
     cask_file_name = self
-    NUMBERS.each do |k, v|
+    EXPANDED_NUMBERS.each do |k, v|
       cask_file_name.sub!(/^#{k}/, v)
+    end
+    cask_file_name
+  end
+
+  def spell_out_symbols
+    cask_file_name = self
+    EXPANDED_SYMBOLS.each do |k, v|
+      cask_file_name.gsub!(k, " #{v} ")
     end
     cask_file_name
   end
@@ -313,6 +325,7 @@ class CaskFileName < String
     else
       self.remove_extension
           .downcase
+          .spell_out_symbols
           .spaces_to_hyphens
           .delete_invalid_chars
           .collapse_multiple_hyphens
