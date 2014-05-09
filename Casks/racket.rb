@@ -1,7 +1,7 @@
 class Racket < Cask
-  url 'http://download.racket-lang.org/installers/6.0/racket-6.0-x86_64-macosx.dmg'
+  url 'http://mirror.racket-lang.org/installers/6.0.1/racket-6.0.1-i386-macosx.dmg'
   homepage 'http://racket-lang.org/'
-  version '6.0'
-  sha256 '770d4f7471382319c0d8e083b3acccc0dbe13e6827fdc05cebda93aa51797d9c'
+  version '6.0.1'
+  sha256 '7ad1a0f4476ee15b5537770c4efecc152d8e4425913931abecf710d912dd47c5'
   link 'Racket v6.0'
 end
