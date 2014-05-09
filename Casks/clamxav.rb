@@ -8,4 +8,8 @@ class Clamxav < Cask
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'uk.co.markallan.clamxav', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
+  caveats do
+    # this happens sometime after installation, but still worth warning about
+    files_in_usr_local
+  end
 end
