@@ -2,6 +2,6 @@ class Hostbuddy < Cask
   url 'http://clickontyler.com/hostbuddy/download/'
   homepage 'http://clickontyler.com'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Hostbuddy.app'
 end

@@ -5,6 +5,7 @@ require 'shellwords'
 
 require 'cask/cli/alfred'
 require 'cask/cli/audit'
+require 'cask/cli/cat'
 require 'cask/cli/checklinks'
 require 'cask/cli/cleanup'
 require 'cask/cli/create'

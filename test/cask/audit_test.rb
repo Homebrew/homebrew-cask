@@ -82,7 +82,7 @@ describe Cask::Audit do
       it "adds an error if version is latest and using sha256" do
         audit = Cask::Audit.new(CaskVersionLatestWithChecksum.new)
         audit.run!
-        audit.errors.must_include 'you should use no_checksum when version is latest'
+        audit.errors.must_include %q{you should use sha256 :no_check when version is 'latest'}
       end
     end
 

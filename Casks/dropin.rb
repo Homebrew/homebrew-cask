@@ -2,6 +2,6 @@ class Dropin < Cask
   url 'http://excitedatom.com/downloads/dropin/?p=dropin'
   homepage 'http://excitedatom.com/dropin/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'DropIn.app'
 end

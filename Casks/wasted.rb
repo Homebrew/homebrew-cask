@@ -2,6 +2,6 @@ class Wasted < Cask
   url 'http://wasted.werk01.de/Wasted.zip'
   homepage 'http://wasted.werk01.de'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Wasted.app'
 end

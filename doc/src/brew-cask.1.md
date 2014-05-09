@@ -42,6 +42,9 @@ names, and other aspects of this manual are still subject to change.
     Modify Alfred's search scope to include the Caskroom directory where
     Applications are stored.
 
+  * `cat` <Cask>:
+    Dump the given Cask definition file to the standard output.
+
   * `checklinks`:
     Check for bad Cask links.
 
@@ -50,15 +53,15 @@ names, and other aspects of this manual are still subject to change.
     downloads older than 10 days old.
 
   * `create` <Cask>:
-    Generate a Cask for the Caskfile named <Cask> and open a template for
-    it in your favorite editor.
+    Generate a Cask definition file for the Cask named <Cask> and open a
+    template for it in your favorite editor.
 
   * `doctor` or `dr`:
     Check for configuration issues.  Can be useful to upload as a gist for
     developers along with a bug report.
 
   * `edit` <Cask>:
-    Open the given Caskfile for editing.
+    Open the given Cask definition file for editing.
 
   * `fetch` <Cask> [--force]:
     Fetch remote resources for the given Cask to the local cache.  With

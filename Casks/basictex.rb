@@ -2,7 +2,7 @@ class Basictex < Cask
   url 'http://mirror.ctan.org/systems/mac/mactex/mactex-basic.pkg'
   homepage 'http://www.tug.org/mactex/morepackages.html'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   install 'mactex-basic.pkg'
   uninstall :pkgutil => 'org.tug.mactex.basictex2013'
   caveats do

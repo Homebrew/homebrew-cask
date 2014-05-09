@@ -2,7 +2,7 @@ class Cocktail < Cask
   url 'http://usa.maintain.se/CocktailME.dmg'
   homepage 'http://maintain.se/cocktail'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Cocktail.app'
   caveats <<-EOS.undent
     This version of Cocktail is for OS X Mavericks only. If you are using other versions of

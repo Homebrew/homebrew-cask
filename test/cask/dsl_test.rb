@@ -8,15 +8,13 @@ describe Cask::DSL do
     test_cask.version.must_equal '1.2.3'
   end
 
-  it "lets you set checksum via sha1 and/or sha256" do
+  it "lets you set checksum via sha256" do
     ChecksumCask = Class.new(Cask)
     ChecksumCask.class_eval do
-      sha1 'imasha1'
       sha256 'imasha2'
     end
     instance = ChecksumCask.new
     instance.sums.must_equal [
-      Checksum.new(:sha1, 'imasha1'),
       Checksum.new(:sha2, 'imasha2')
     ]
   end
@@ -112,6 +110,7 @@ describe Cask::DSL do
     err.message.must_include "'version' stanza may only appear once"
   end
 
+  # @@@ todo this test can be removed when support for no_checksum is dropped
   it "prevents defining conflicting checksums (first order)" do
     err = lambda {
       invalid_cask = Cask.load('invalid/invalid-checksum-conflict1')
@@ -119,6 +118,7 @@ describe Cask::DSL do
     err.message.must_include "'no_checksum' stanza conflicts with"
   end
 
+  # @@@ todo this test can be removed when support for no_checksum is dropped
   it "prevents defining conflicting checksums (second order)" do
     err = lambda {
       invalid_cask = Cask.load('invalid/invalid-checksum-conflict2')

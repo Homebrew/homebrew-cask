@@ -18,7 +18,7 @@ all pretty happy about this.  Here's how to get started:
 
 ```bash
 $ github_user='<my-github-username>'
-$ cd "$(brew --prefix)"/Library/Taps/caskroom/homebrew-cask
+$ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 $ git remote add "$github_user" "https://github.com/$github_user/homebrew-cask"
 ```
 
@@ -66,14 +66,14 @@ is simply the Cask name with the extension `.rb` appended.
 
 The easiest way to name a Cask is to run this command:
 ```bash
-$ "$(brew --prefix)/Library/Taps/caskroom/homebrew-cask/developer/bin/cask_namer" '/full/path/to/new/software.app'
+$ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/cask_namer" '/full/path/to/new/software.app'
 ```
 
 If the software you wish to Cask is not installed, or does not have an
 associated App bundle, just give the full proper name of the software
 instead of a pathname:
 ```bash
-$ "$(brew --prefix)/Library/Taps/caskroom/homebrew-cask/developer/bin/cask_namer" 'Google Chrome'
+$ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/cask_namer" 'Google Chrome'
 ```
 
 If the `cask_namer` script does not work for you, see [Cask Naming Details](#cask-naming-details).
@@ -114,7 +114,7 @@ Fill in the following stanzas for your Cask:
 | `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
 | `homepage`         | application homepage; used for the `brew cask home` command
 | `version`          | application version; give value of `'latest'` if versioned downloads are not offered
-| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be omitted on unversioned downloads by substituting `no_checksum`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
+| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
 | __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
 | `link`             | relative path to a file that should be linked into the `Applications` folder on installation (see also [Link Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#link-stanza-details))
 | `install`          | relative path to `pkg` that should be run to install the application (see also [Install Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#install-stanza-details))
@@ -256,7 +256,7 @@ for details.
 Hop into your Tap and check to make sure your new Cask is there:
 
 ```bash
-$ cd "$(brew --prefix)"/Library/Taps/caskroom/homebrew-cask
+$ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 $ git status
 # On branch master
 # Untracked files:
@@ -343,7 +343,7 @@ After your Pull Request is away, you might want to get yourself back onto
 `master`, so that `brew update` will pull down new Casks properly.
 
 ```bash
-cd "$(brew --prefix)"/Library/Taps/caskroom/homebrew-cask
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 git checkout master
 ```
 

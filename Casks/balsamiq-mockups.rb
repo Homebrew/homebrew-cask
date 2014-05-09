@@ -2,6 +2,6 @@ class BalsamiqMockups < Cask
   url 'http://builds.balsamiq.com/b/mockups-desktop/MockupsForDesktop.dmg'
   homepage 'http://balsamiq.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Balsamiq Mockups.app'
 end

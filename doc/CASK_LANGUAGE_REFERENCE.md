@@ -51,14 +51,12 @@ paradigm.
 
 Each of the following stanzas is required for every Cask.
 
-Exception: currently `sha256` may be omitted if `no_checksum` is substituted.
-
 | name               | multiple occurrences allowed? | value       |
 | ------------------ |------------------------------ | ----------- |
 | `url`              | No                            | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](#url-stanza-details))
 | `homepage`         | No                            | application homepage; used for the `brew cask home` command
 | `version`          | No                            | application version; give value of `'latest'` if versioned downloads are not offered
-| `sha256`           | No                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be omitted on unversioned downloads by substituting `no_checksum`. (see also [Checksum Stanza Details](#checksum-stanza-details))
+| `sha256`           | No                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
 
 
 ## At Least One Artifact Stanza Is Also Required
@@ -102,8 +100,7 @@ and slated for retirement.
 
 | name               | multiple occurrences allowed? | meaning     |
 | ------------------ |------------------------------ | ----------- |
-| `md5`              | No                            | an alternative to `sha256`
-| `sha1`             | No                            | an alternative to `sha256`
+| `no_checksum`      | No                            | an obsolete alternative to `sha256 :no_check`
 
 
 ## Conditional Statements
@@ -172,13 +169,15 @@ And the following methods may be useful for interpolation:
 
 ## Checksum Stanza Details
 
-Older Casks may still use `sha1` checksums.  This is OK, but new
-Casks and updates should adopt `sha256`.
+Older Casks may still use `no_checksum` stanzas.  This is OK, but new
+Casks and updates should adopt `sha256 :no_check`.
 
 
 ## URL Stanza Details
 
-### HTTP URLs
+### HTTPS URLs
+
+If available, an HTTPS URL is preferred. A plain HTTP URL should only be used in the absence of a secure alternative.
 
 When a plain URL string is insufficient to fetch a file, additional
 information may be provided to the `curl`-based downloader, in the form
@@ -192,12 +191,14 @@ of key/value pairs appended to `url`:
 | `:user_agent`      | a string holding the user agent to set for the download request. Can also be set to the symbol `:fake`, which will use a generic Browser-like user agent string. we prefer `:fake` when the server does not require a specific user agent.
 | `:data`            | a hash of parameters to be set in the POST request
 
-Example: [java.rb](../Casks/java.rb)
+Example of using `:cookies`: [java.rb](../Casks/java.rb)
+
+Example of using `:referer`: [freefilesync.rb](../Casks/freefilesync.rb)
 
 
 ### Subversion URLs
 
-In rare cases, a distribution may not be available over ordinary HTTP.
+In rare cases, a distribution may not be available over ordinary HTTP/S.
 Subversion URLs are also supported, and can be specified by appending the
 following key/value pairs to `url`:
 

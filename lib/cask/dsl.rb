@@ -139,19 +139,8 @@ module Cask::DSL
       hash_type.to_s == 'sha2' ? 'sha256' : hash_type.to_s
     end
 
-    def sha1(sha1=nil)
-      if @sums == :no_check
-        raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'sha1'")
-      end
-      if sha1 == :no_check
-        @sums = sha1
-      else
-        @sums ||= []
-        @sums << Checksum.new(:sha1, sha1) unless sha1.nil?
-      end
-    end
-
     def sha256(sha2=nil)
+      # @@@ todo remove this after deleting support for legacy no_checksum stanza
       if @sums == :no_check
         raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'sha256'")
       end
@@ -163,6 +152,7 @@ module Cask::DSL
       end
     end
 
+    # @@@ todo remove support for no_checksum stanza
     def no_checksum
       unless @sums.nil? or @sums.empty?
         raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with '#{hash_name(@sums.first.hash_type)}'")

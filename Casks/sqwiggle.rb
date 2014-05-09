@@ -2,6 +2,6 @@ class Sqwiggle < Cask
   url 'https://www.sqwiggle.com/download/mac'
   homepage 'https://www.sqwiggle.com'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Sqwiggle.app'
 end

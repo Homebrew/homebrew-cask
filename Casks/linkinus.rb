@@ -2,6 +2,6 @@ class Linkinus < Cask
   url 'http://conceited.net/downloads/Linkinus.zip'
   homepage 'http://conceited.net/products/linkinus'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'Linkinus.app'
 end

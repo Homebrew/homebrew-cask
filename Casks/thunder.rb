@@ -1,7 +1,7 @@
 class Thunder < Cask
-  url 'http://down.sandai.net/mac/thunder_dl2.6.0.1440_Beta.dmg'
+  url 'http://down.sandai.net/mac/thunder_dl2.6.1.1484_Beta.dmg'
   homepage 'http://mac.xunlei.com/'
-  version '2.6.0.1440'
-  sha256 '2fc8f8a347e56e33de3ac3c2b17c0400e665e2871112d7a7f69880de92cc15a0'
+  version '2.6.1.1484'
+  sha256 'c7ce82eb589b332e6448241f1ba81c8390c988e03121915cbf80eb37658b6474'
   link 'Thunder.app'
 end
