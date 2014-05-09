@@ -11,13 +11,13 @@
 During April-May 2014, the default location of the Homebrew-cask Tap was
 moved to a new location on disk, from
 
-	"$(brew --prefix)"/Library/Taps/phinze-cask
+	"$(brew --repository)"/Library/Taps/phinze-cask
 
 to
 
-	"$(brew --prefix)"/Library/Taps/caskroom/homebrew-cask
+	"$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 
-(where `"$(brew --prefix)"` typically evaluates to `/usr/local`).
+(where `"$(brew --repository)"` typically evaluates to `/usr/local`).
 
 The migration should be seamless, but some users have experienced glitches.
 We are still [making improvements](https://github.com/caskroom/homebrew-cask/pull/4169) to aid in the transition.
@@ -71,14 +71,14 @@ $ brew untap phinze/cask; brew tap caskroom/cask
 The following directory should exist:
 
 ```bash
-$ ls -ld "$(brew --prefix)"/Library/Taps/caskroom/homebrew-cask
+$ ls -ld "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 ```
 
 The following directories should **not** exist:
 
 ```bash
-$ ls -ld "$(brew --prefix)"/Library/Taps/phinze/homebrew-cask
-$ ls -ld "$(brew --prefix)"/Library/Taps/phinze-cask
+$ ls -ld "$(brew --repository)"/Library/Taps/phinze/homebrew-cask
+$ ls -ld "$(brew --repository)"/Library/Taps/phinze-cask
 ```
 
 ### File an Issue
@@ -105,19 +105,19 @@ built on the infrastructure provided by [Homebrew](http://brew.sh).
 On [24 Apr 2014](https://github.com/Homebrew/homebrew/commit/e07584e3fbdc88327bafe23b9c40c904d0fff0a1), the parent project Homebrew changed the layout of
 the Tap directory to follow the form
 
-	"$(brew --prefix)"/Library/Taps/<username>/<repo-fullname>
+	"$(brew --repository)"/Library/Taps/<username>/<repo-fullname>
 
 rather than
 
-	"$(brew --prefix)"/Library/Taps/<username>-<repo-shortname>
+	"$(brew --repository)"/Library/Taps/<username>-<repo-shortname>
 
 causing our project to be moved from
 
-	"$(brew --prefix)"/Library/Taps/phinze-cask
+	"$(brew --repository)"/Library/Taps/phinze-cask
 
 to
 
-	"$(brew --prefix)"/Library/Taps/phinze/homebrew-cask
+	"$(brew --repository)"/Library/Taps/phinze/homebrew-cask
 
 ### Our Project (Homebrew-cask)
 
@@ -134,8 +134,8 @@ https://github.com/caskroom/homebrew-cask
 This means that the username portion of our Tap path changed from `phinze`
 to `caskroom`, *ie*:
 
-	"$(brew --prefix)"/Library/Taps/phinze/homebrew-cask
+	"$(brew --repository)"/Library/Taps/phinze/homebrew-cask
 
 became
 
-	"$(brew --prefix)"/Library/Taps/caskroom/homebrew-cask
+	"$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
