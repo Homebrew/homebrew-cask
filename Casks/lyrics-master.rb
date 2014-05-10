@@ -1,7 +1,7 @@
 class LyricsMaster < Cask
-  url 'http://www.kenichimaehashi.com/lyricsmaster/download/LyricsMaster2390.dmg'
+  url 'http://www.kenichimaehashi.com/lyricsmaster/download/LyricsMaster2400.dmg'
   homepage 'http://www.kenichimaehashi.com/lyricsmaster/'
-  version '2.3.9'
-  sha256 'e76e77b3e8a734a0b53bf7960e3950486ac68d1a927e98a6e3f69279383cc755'
+  version '2.4'
+  sha256 '0f196be99890d65da1fb0ddadea7547898d3b0babbd48eaec69becc3b7d3ef90'
   link 'Lyrics Master'
 end
