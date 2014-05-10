@@ -56,6 +56,7 @@ APP_EXCEPTION_PATS = {
                       %r{\Akismac\Z}i              => 'kismac',
                       %r{\Avoicemac\Z}i            => 'voicemac',
                       %r{\Acleanmymac[\s\d\.]*\Z}i => 'cleanmymac',
+                      %r{\Abitcoin-?qt\Z}i         => 'bitcoin-core',
                      }
 
 # Preserve trailing patterns on App names that could be mistaken
