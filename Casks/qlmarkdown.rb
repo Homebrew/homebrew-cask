@@ -1,7 +1,7 @@
 class Qlmarkdown < Cask
-  url 'https://github.com/downloads/toland/qlmarkdown/QLMarkdown-1.3.zip'
+  url 'https://github.com/toland/qlmarkdown/releases/download/v1.3.1/QLMarkdown.qlgenerator.zip'
   homepage 'https://github.com/toland/qlmarkdown'
-  version '1.3'
-  sha256 '8fd344ec0db6ff084cc198ccef51e82da95bfee37cbbd1a7ae1fea937273de03'
-  qlplugin 'QLMarkdown/QLMarkdown.qlgenerator'
+  version '1.3.1'
+  sha256 '0eade9697cd21c710ab64798f498222b410acdf7080ff5029e7f838eb4bfc2d2'
+  qlplugin 'QLMarkdown.qlgenerator'
 end
