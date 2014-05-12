@@ -1,7 +1,7 @@
 class Chromecast < Cask
-  url 'https://dl.google.com/chromecast/setup/mac/chromecast-setup.1.3.0.428.dmg'
+  url 'https://dl.google.com/chromecast/setup/mac/chromecast-setup.1.5.0.531.dmg'
   homepage 'http://www.google.ca/intl/en/chrome/devices/chromecast/'
-  version '1.3.0.428'
-  sha256 'f17e4a38107ce8ff58edd96a608ada439c1df5cd86540dcf3b653267472eba49'
+  version '1.5.0.531'
+  sha256 '66a70feb3bacb3087fdf4a34300cbc6c54455a8b62a2b340123cc1a03cedcbe9'
   link 'Chromecast.app'
 end
