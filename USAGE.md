@@ -162,7 +162,7 @@ $ brew cask install caskroom/fonts/font-symbola
 * `--debug`: output debug information
 * `--no-binaries`: skip symlinking executable binaries into `/usr/local/bin`
 
-You can also modify the default installation locations used by the `brew cask` command:
+You can also modify the default installation locations used when issuing `brew cask install`:
 
 * `--caskroom=/my/path` determines where the actual applications will be located.
 Default is `/opt/homebrew-cask/Caskroom`
