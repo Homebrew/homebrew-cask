@@ -1,6 +1,12 @@
 class Cask::Source::Path
   def self.me?(query)
-    File.file?(query)
+    query_with_ext = "#{query}"
+    query_with_ext.concat('.rb') unless query_with_ext.match(%r{\.rb\Z}i)
+    # bug? arguably, we should not pick up a relative path
+    # containing a Cask file so easily, since this source
+    # is tested before the default Tap.  Perhaps there
+    # should be two Path sources, absolute and relative.
+    File.file?(query_with_ext)
   end
 
   attr_reader :path
