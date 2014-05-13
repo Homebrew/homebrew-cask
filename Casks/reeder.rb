@@ -1,7 +1,7 @@
 class Reeder < Cask
-  url 'http://reederapp.com/beta-reeder-for-mac/Reeder2.0b2.zip'
+  url 'http://reederapp.com/beta-reeder-for-mac/Reeder2.0b3.zip'
   homepage 'http://reederapp.com/mac/'
-  version '2.0b2'
-  sha256 '67491dcfa999e753c1f220a4f1216f15e14bea32af7e5a9c31499ccf082a1e66'
+  version '2.0b3'
+  sha256 'f9677c80bd1851d288903748151ba79e99ddd4b46f85948f22a0b920a5def5e7'
   link 'Reeder.app'
 end
