@@ -21,6 +21,7 @@ describe Cask::Artifact::Pkg do
   end
 
   describe 'uninstall' do
+    # todo: uninstall tests for :signal (implementation does not use SystemComment)
     it 'runs the specified uninstaller for the cask' do
       pkg = Cask::Artifact::Pkg.new(@cask, Cask::FakeSystemCommand)
 
