@@ -1,7 +1,7 @@
 class Coteditor < Cask
-  url 'https://github.com/coteditor/CotEditor/releases/download/1.4.1/CotEditor_1.4.1.dmg'
-  sha256 '098029167fd913e4a119d08bb7504b491c69d5298d569ca20275994e09501409'
+  url 'https://github.com/coteditor/CotEditor/releases/download/1.5.2/CotEditor_1.5.2.dmg'
+  sha256 'bea41b2d7a82edb8842f66a9101438708cf0dbcca4176660c89b25f848dbe02a'
   homepage 'http://coteditor.github.io/'
-  version '1.4.1'
+  version '1.5.2'
   link 'CotEditor.app'
 end
