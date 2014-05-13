@@ -8,7 +8,7 @@ class AdobeArh < Cask
   container_type :naked
 
   after_install do
-    system "chmod", "755", "#{destination_path}/arh"
+    system '/bin/chmod', '755', "#{destination_path}/arh"
   end
 
   caveats "Please refer to the documention at #{homepage}"
