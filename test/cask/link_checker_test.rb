@@ -4,14 +4,14 @@ describe Cask::LinkChecker do
   describe "request processing" do
     it "adds an error if response is empty" do
       cask = TestHelper.test_cask
-      TestHelper.fake_response_for(cask.url, "")
+      TestHelper.fake_response_for(cask.url.first, "")
       checker = Cask::LinkChecker.new(cask, TestHelper.fake_fetcher)
       checker.run
-      checker.errors.must_include "timeout while requesting #{cask.url}"
+      checker.errors.must_include "timeout while requesting #{cask.url.first}"
     end
 
     it "properly populates the response code and headers from an http response" do
-      TestHelper.fake_response_for(TestHelper.test_cask.url, <<-RESPONSE.gsub(/^ */, ''))
+      TestHelper.fake_response_for(TestHelper.test_cask.url.first, <<-RESPONSE.gsub(/^ */, ''))
         HTTP/1.1 200 OK
         Content-Type: application/x-apple-diskimage
         ETag: "b4208f3e84967be4b078ecaa03fba941"

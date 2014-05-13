@@ -3,7 +3,7 @@ require 'test_helper'
 describe Cask::DSL do
   it "lets you set url, homepage, and version" do
     test_cask = Cask.load('basic-cask')
-    test_cask.url.to_s.must_equal 'http://example.com/TestCask.dmg'
+    test_cask.url.first.to_s.must_equal 'http://example.com/TestCask.dmg'
     test_cask.homepage.must_equal 'http://example.com/'
     test_cask.version.must_equal '1.2.3'
   end
@@ -87,13 +87,6 @@ describe Cask::DSL do
 
     instance = CaskWithInstallables.new
     Array(instance.artifacts[:install]).sort.must_equal [['Bar.pkg'], ['Foo.pkg']]
-  end
-
-  it "prevents defining multiple urls" do
-    err = lambda {
-      invalid_cask = Cask.load('invalid/invalid-two-url')
-    }.must_raise(CaskInvalidError)
-    err.message.must_include "'url' stanza may only appear once"
   end
 
   it "prevents defining multiple homepages" do

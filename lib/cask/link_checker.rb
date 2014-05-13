@@ -16,9 +16,11 @@ class Cask::LinkChecker
   end
 
   def run
-    _get_data_from_request
-    return if errors?
-    _check_response_status
+    cask.url.each do |cask_url|
+      _get_data_from_request(cask_url)
+      return if errors?
+      _check_response_status(cask_url)
+    end
   end
 
   HTTP_RESPONSES = [
@@ -33,24 +35,29 @@ class Cask::LinkChecker
     'ftp'   => [ 'OK' ]
   }
 
-  def _check_response_status
-    ok = OK_RESPONSES[cask.url.scheme]
+  def _check_response_status(cask_url)
+    ok = OK_RESPONSES[cask_url.scheme]
     unless ok.include?(@response_status)
       add_error "unexpected http response, expecting #{ok.map(&:inspect).join(' or ')}, got #{@response_status.inspect}"
     end
   end
 
-  def _get_data_from_request
-    response = @fetcher.head(cask.url)
+  def _get_data_from_request(cask_url)
+    @response_status = nil
+    @headers = {}
+    @errors = []
+    @warnings = []
+
+    response = @fetcher.head(cask_url)
 
     if response.empty?
-      add_error "timeout while requesting #{cask.url}"
-      return
-    end
+      add_error "timeout while requesting #{cask_url}"
+        return
+      end
 
     response_lines = response.split("\n").map(&:chomp)
 
-    case cask.url.scheme
+    case cask_url.scheme
     when 'http', 'https' then
       @response_status = response_lines.grep(/^HTTP/).last
       if @response_status.respond_to?(:strip)
@@ -70,7 +77,7 @@ class Cask::LinkChecker
         @headers[header_name] = header_value
       }
     else
-      add_error "unknown scheme for #{cask.url}"
+      add_error "unknown scheme for #{cask_url}"
     end
   end
 end

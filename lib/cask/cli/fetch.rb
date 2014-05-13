@@ -7,8 +7,10 @@ class Cask::CLI::Fetch
     cask_names.each do |cask_name|
       ohai "Fetching resources for Cask #{cask_name}"
       cask = Cask.load(cask_name)
-      @downloaded_path = Cask::Download.new(cask).perform force
-      ohai "Success! Downloaded to -> #{@downloaded_path}"
+      @downloaded_path = Cask::Download.new(cask).perform(force)
+      @downloaded_path.each do |path|
+        ohai "Success! Downloaded to -> #{path}"
+      end
     end
   end
 

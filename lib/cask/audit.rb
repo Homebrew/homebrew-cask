@@ -26,7 +26,7 @@ class Cask::Audit
 
   def _check_required_fields
     odebug "Auditing required fields"
-    add_error "url is required" unless cask.url
+    add_error "url is required" unless cask.url.length > 0
     add_error "version is required" unless cask.version
     add_error "homepage is required" unless cask.homepage
   end
@@ -57,12 +57,15 @@ class Cask::Audit
   end
 
   def _bad_sourceforge_url?
-    return false unless cask.url.to_s =~ /sourceforge/
     valid_url_formats = [
       %r{https?://sourceforge.net/projects/.*/files/latest/download},
       %r{https?://downloads.sourceforge.net/},
       %r{https?://dl.sourceforge.jp/},
     ]
-    valid_url_formats.none? { |format| cask.url.to_s =~ format }
+    cask.url.each do |cask_url|
+      return true if cask_url.to_s =~ /sourceforge/ and
+                     valid_url_formats.none? { |format| cask_url.to_s =~ format }
+    end
+    return false
   end
 end

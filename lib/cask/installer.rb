@@ -56,23 +56,26 @@ class Cask::Installer
     odebug "Downloading"
     download = Cask::Download.new(@cask)
     @downloaded_path = download.perform
-    odebug "Downloaded to -> #{@downloaded_path}"
+    odebug "Downloaded to -> #{@downloaded_path.inspect}"
     @downloaded_path
   end
 
   def extract_primary_container
-    odebug "Extracting primary container"
+    odebug "Extracting primary containers"
     FileUtils.mkdir_p @cask.destination_path
-    container = if @cask.container_type
-       Cask::Container.from_type(@cask.container_type)
-    else
-       Cask::Container.for_path(@downloaded_path, @command)
+    @downloaded_path.each do |download_item|
+      container = if @cask.container_type
+        # limitation: if container_type is set, it applies to all items
+        Cask::Container.from_type(@cask.container_type)
+      else
+        Cask::Container.for_path(download_item, @command)
+      end
+      unless container
+        raise CaskError.new "Uh oh, could not identify primary container for '#{downloaded_item}'"
+      end
+      odebug "Using container class #{container} for #{download_item}"
+      container.new(@cask, download_item, @command).extract
     end
-    unless container
-      raise CaskError.new "Uh oh, could not identify primary container for '#{@downloaded_path}'"
-    end
-    odebug "Using container class #{container} for #{@downloaded_path}"
-    container.new(@cask, @downloaded_path, @command).extract
   end
 
   def install_artifacts
