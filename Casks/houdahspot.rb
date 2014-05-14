@@ -1,5 +1,6 @@
 class Houdahspot < Cask
   url 'http://www.houdah.com/houdahSpot/download_assets/HoudahSpot_latest.zip'
+  appcast 'http://www.houdah.com/houdahSpot/updates/profileInfo3.php'
   homepage 'http://www.houdah.com/houdahSpot/'
   version 'latest'
   sha256 :no_check
