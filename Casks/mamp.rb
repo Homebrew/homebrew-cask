@@ -6,7 +6,7 @@ class Mamp < Cask
   install 'MAMP_MAMP_PRO_3.0.5.pkg'
   after_install do
     system '/usr/bin/sudo', '-E', '--',
-           '/usr/sbin/chown', '-R', "#{Etc.getpwuid(Process.euid).name}:staff", '/Applications/MAMP', '/Applications/MAMP PRO'
+           '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", '/Applications/MAMP', '/Applications/MAMP PRO'
   end
   uninstall :pkgutil => 'de.appsolute.installer.(mamp|mampacticon|mampendinstall|mamppro).pkg',
             :files   => [
