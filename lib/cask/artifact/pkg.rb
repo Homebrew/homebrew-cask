@@ -81,7 +81,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
   def manually_uninstall(uninstall_options)
     ohai "Running uninstall process for #{@cask}; your password may be necessary"
 
-    unknown_keys = uninstall_options.keys - [:early_script, :launchctl, :quit, :kext, :script, :pkgutil, :files]
+    unknown_keys = uninstall_options.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :files]
     unless unknown_keys.empty?
       opoo "Unknown arguments to uninstall: #{unknown_keys.join(", ")}. Running `brew update; brew upgrade brew-cask` will likely fix it.'"
     end
@@ -97,7 +97,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       sleep 1
     end
 
-    # :launchctl must come before :quit for cases where app would instantly re-launch
+    # :launchctl must come before :quit/:signal for cases where app would instantly re-launch
     if uninstall_options.key? :launchctl
       [*uninstall_options[:launchctl]].each do |service|
         ohai "Removing launchctl service #{service}"
@@ -113,7 +113,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       end
     end
 
-    # :quit must come before :kext so the kext will not be in use by the app
+    # :quit/:signal must come before :kext so the kext will not be in use by a running process
     if uninstall_options.key? :quit
       [*uninstall_options[:quit]].each do |id|
         ohai "Quitting application ID #{id}"
@@ -121,6 +121,30 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
         if num_running > 0
           @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application id "#{id}" to quit}], :sudo => true)
           sleep 3
+        end
+      end
+    end
+
+    # :signal should come after :quit so it can be used as a backup when :quit fails
+    if uninstall_options.key? :signal
+      [*uninstall_options[:signal]].each do |pair|
+        raise CaskInvalidError.new(@cask, 'Each uninstall :signal must have 2 elements.') unless pair.length == 2
+        signal, id = pair
+        ohai "Signalling application ID #{id}"
+        pid_string = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to get the unix id of every process whose bundle identifier is "#{id}"}], :sudo => true)
+        if pid_string.match(%r{\A\d+(?:\s*,\s*\d+)*\Z})    # sanity check
+          pids = pid_string.split(%r{\s*,\s*}).map(&:strip).map(&:to_i)
+          if pids.length > 0
+            # Note that unlike :quit, signals are sent from the
+            # current user (not upgraded to the superuser).  This is a
+            # todo item for the future, but there should be some
+            # additional thought/safety checks about that, as a
+            # misapplied "kill" by root could bring down the system.
+            # The fact that we learned the pid from AppleScript is
+            # already some degree of protection, though indirect.
+            Process.kill(signal, *pids)
+            sleep 3
+          end
         end
       end
     end

@@ -300,6 +300,7 @@ is the most useful.
 * `:early_script` (string or hash) - like `:script`, but runs early (for special cases, best avoided)
 * `:launchctl` (string or array) - ids of `launchctl` jobs to remove
 * `:quit` (string or array) - bundle ids of running applications to quit
+* `:signal` (array of arrays) - signal numbers and bundle ids of running applications to send a Unix signal to (used when `:quit` does not work)
 * `:kext` (string or array) - bundle ids of kexts to unload from the system
 * `:pkgutil` (string, regexp or array of strings and regexps) - strings or regexps matching bundle ids of packages to uninstall using `pkgutil`
 * `:script` (string or hash) - relative path to an uninstall script to be run via sudo; use hash if args are needed
@@ -373,6 +374,37 @@ Bundle IDs inside an Application bundle on disk can be listed using the command
 ```bash
 $ ./developer/bin/list_ids_in_app </path/to/application.app>
 ```
+
+### Uninstall Key :signal
+
+`:signal` should only be needed in the rare case that a process does not
+respond to `:quit`.
+
+Bundle IDs for `:signal` targets may be obtained as for `:quit`.  The value
+for `:signal` is an array-of-arrays, with each cell containing two elements:
+the desired Unix signal followed by the corresponding bundle ID.
+
+The Unix signal may be given in numeric or string form (see the `kill`
+man page for more details).
+
+The `:signal` array is executed in order.  A bundle ID may be repeated to
+send more than one signal to the same process.  Example:
+
+```ruby
+  uninstall :signal => [
+                        ['INT', 'fr.madrau.switchresx.daemon'],
+                        ['KILL', 'fr.madrau.switchresx.daemon'],
+                       ]
+```
+
+Note that when multiple running processes match the given Bundle ID, all
+matching processes will be signaled.
+
+Unlike `:quit` commands, Unix signals originate from the current user, not
+from the superuser.  This is construed as a safety feature, since the
+superuser is capable of bringing down the system via signals.  However, this
+inconsistency may also be considered a bug and should be addressed in some
+fashion in a future version.
 
 ### Uninstall Key :kext
 
