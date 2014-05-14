@@ -1,7 +1,7 @@
 class SynologyAssistant < Cask
-  url 'http://global.download.synology.com/download/Tools/SynologyAssistant/4418/Mac/Synology-Assistant-5.0-4418.dmg'
+  url 'http://global.download.synology.com/download/Tools/SynologyAssistant/4448/Mac/Synology-Assistant-5.0-4448.dmg'
   homepage 'http://www.synology.com/'
-  version '5.0-4418'
-  sha256 '92c792da9cddc54d556a7c1a8e088154e83b7d580d874e1bad33569f4d60f1e7'
+  version '5.0-4448'
+  sha256 'b4e23a43c2b11bd41596809fa84dfad1d17832140145ddf1b79cb8301f2f2014'
   link 'Synology Assistant.app'
 end
