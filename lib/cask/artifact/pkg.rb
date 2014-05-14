@@ -106,7 +106,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
           if %r{^<\?xml}.match(xml_status)
             @command.run('/bin/launchctl',  :args => ['unload', '-w', '--', service], :sudo => with_sudo)
             sleep 1
-            @command.run!('/bin/launchctl', :args => ['remove', '--', service], :sudo => with_sudo)
+            @command.run!('/bin/launchctl', :args => ['remove', service], :sudo => with_sudo)
             sleep 1
           end
         end
