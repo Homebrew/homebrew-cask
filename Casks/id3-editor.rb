@@ -1,7 +1,7 @@
 class Id3Editor < Cask
-  url 'http://www.pa-software.com/release/ID3Editor.ub.1.20.20.dmg'
+  url 'http://www.pa-software.com/release/ID3Editor.ub.1.21.25.dmg'
   homepage 'http://www.pa-software.com/id3editor/'
-  version '1.20.20'
-  sha256 'df3b079de8e91d1e89bdadbfd6bb4e7b8647796e06e683158bb4c866d2505d37'
+  version '1.21.25'
+  sha256 '9d11840530236e9f746f8d050ef3c2b5690e5b48283e711af16cb5ff08914131'
   link 'ID3 Editor.app'
 end
