@@ -14,7 +14,7 @@ class ProgrammerDvorak < Cask
   if MacOS.version == :mavericks
     after_install do
       # clear the layout cache before new layouts are recognized
-      system 'rm', '-f', '/System/Library/Caches/com.apple.IntlDataCache.le*'
+      system 'rm', '-f', '--', '/System/Library/Caches/com.apple.IntlDataCache.le*'
     end
   end
 end
