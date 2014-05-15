@@ -1,7 +1,7 @@
 class Mumble < Cask
-  url 'http://downloads.sourceforge.net/sourceforge/mumble/Mumble-1.2.5.dmg'
+  url 'http://downloads.sourceforge.net/sourceforge/mumble/Mumble-1.2.6.dmg'
   homepage 'http://mumble.sourceforge.net'
-  version '1.2.5'
-  sha256 '4776eadca5bae2fd6d89996c2175653b7249f7283d9aaaaadd5aea489b39ccc2'
+  version '1.2.6'
+  sha256 '859f8d32946d3ac2cb206491016ed04b623fac57c9ae60c2c2b36bea78caf64d'
   link 'Mumble.app'
 end
