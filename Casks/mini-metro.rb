@@ -1,7 +1,7 @@
 class MiniMetro < Cask
-  url 'http://static.dinopoloclub.com/minimetro/builds/alpha11/MiniMetro-alpha11-osx.zip'
+  url 'http://static.dinopoloclub.com/minimetro/builds/alpha12/MiniMetro-alpha12-osx.zip'
   homepage 'http://dinopoloclub.com/minimetro/'
-  version 'Alpha 11'
-  sha256 'c748fc7602057e71d9590fcc039bd6150d4907ade82c80bdce7d96e8aa1ca022'
-  link 'MiniMetro-alpha11-osx.app', :target => 'Mini Metro.app'
+  version 'Alpha 12'
+  sha256 '0c81781fff8984f41276fe2c9c0a1da7bdfd18c8970fbe4b8c4ff2376936e7bd'
+  link 'MiniMetro-alpha12-osx.app', :target => 'Mini Metro.app'
 end
