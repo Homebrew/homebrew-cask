@@ -2,6 +2,7 @@ class GoogleAdwordsEditor < Cask
   url 'https://dl.google.com/adwords_editor/10.4.1/mac/en-US/AdWords-Editor-10.4.1-en-US.dmg'
   homepage 'http://www.google.com/intl/en_US/adwordseditor/'
   version '10.4.1'
-  sha1 '22e0198798d11e02a81146c62e3b8bb2a7cf494c'
+  sha256 '570d606ac6593ac31a82ece928d7b04ad6f0355b0f58382e604be7f922c4c4ba'
   install 'AdWords-Editor-10.4.1-en-US.pkg'
+  uninstall :pkgutil 'com.google.adwordseditor.pkg'
 end
