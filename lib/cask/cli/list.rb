@@ -45,9 +45,10 @@ class Cask::CLI::List
   end
 
   def self.list_installed
-    columns = Cask.installed.map(&:to_s)
+    installed_casks = Cask.installed
+    columns = installed_casks.map(&:to_s)
     puts_columns columns
-    columns.empty? ? nil : Cask.installed.length == columns.length
+    columns.empty? ? nil : installed_casks.length == columns.length
   end
 
   def self.help
