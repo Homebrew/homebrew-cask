@@ -1,6 +1,6 @@
 class Cask::Source::URI
   def self.me?(query)
-    !!(query =~ URI.regexp)
+    !!(query.to_s =~ URI.regexp)
   end
 
   attr_reader :uri

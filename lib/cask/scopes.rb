@@ -9,7 +9,7 @@ module Cask::Scopes
     end
 
     def all_titles
-      cask_titles = Dir[tapspath.join('*', '*', 'Casks', '*.rb')]
+      cask_titles = Dir[tapspath.join('*', '*', 'Casks', '*.rb')].map { |d| Pathname.new(d) }
       cask_titles.map { |c|
         # => "/usr/local/Library/Taps/caskroom/example-tap/Casks/example.rb"
         c.sub!(/\.rb$/, '')
