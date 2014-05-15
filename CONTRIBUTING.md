@@ -336,6 +336,13 @@ code, it is better to [squash](http://davidwalsh.name/squash-commits-git) those 
 But you don't always have to squash -- it is fine for a pull request to
 contain multiple commits when there is a logical reason for the separation.
 
+Roland Walkers favorite squash one-liner:
+
+```
+$ git checkout my-new-cask
+$ git reset --soft 'HEAD^' && git commit --amend -C HEAD
+```
+
 
 ## Cleaning up
 
