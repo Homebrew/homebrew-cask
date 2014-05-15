@@ -5,6 +5,6 @@ class Jxplorer < Cask
   sha256 'b51995a93203590e6690d8ad54f73cd7af1c9f2bef6219adca79c58eda71d860'
   link 'jxplorer-3.3.1.app'
   after_install do
-    system '/bin/chmod', 'a+x', "#{destination_path}/jxplorer-3.3.1.app/Contents/MacOS/jxplorer"
+    system '/bin/chmod', '--', 'a+x', "#{destination_path}/jxplorer-3.3.1.app/Contents/MacOS/jxplorer"
   end
 end
