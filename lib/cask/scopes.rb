@@ -42,8 +42,17 @@ module Cask::Scopes
 
     def installed
       installed_cask_dirs = Pathname.glob(caskroom.join("*"))
-      installed_cask_dirs.map do |dir|
-        Cask.load(dir.basename.to_s)
+      # Cask.load has some DWIM which is slow.  Optimize here
+      # by spoon-feeding Cask.load fully-qualified paths.
+      # todo: speed up Cask::Source::Tapped (main perf drag is calling Cask.all_titles repeatedly)
+      # todo: ability to specify expected source when calling Cask.load (minor perf benefit)
+      installed_cask_dirs.map do |install_dir|
+        cask_name = install_dir.basename.to_s
+        path_to_cask = all_tapped_cask_dirs.find do |tap_dir|
+          tap_dir.join("#{cask_name}.rb").exist?
+        end
+        cask_name = path_to_cask.join("#{cask_name}.rb") if path_to_cask
+        Cask.load(cask_name)
       end
     end
   end
