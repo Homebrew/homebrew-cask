@@ -4,4 +4,5 @@ class Lighttable < Cask
   version '0.6.5'
   sha256 '05b816605b901e63c47e5add543a21b59c811ac424b00fc3f3bcc3145180be77'
   link 'LightTable/LightTable.app'
+  binary 'LightTable/light'
 end
