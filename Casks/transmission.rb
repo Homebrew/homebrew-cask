@@ -1,7 +1,7 @@
 class Transmission < Cask
-  url 'http://download.transmissionbt.com/files/Transmission-2.82.dmg'
+  url 'http://download.transmissionbt.com/files/Transmission-2.83.dmg'
   homepage 'http://www.transmissionbt.com/'
-  version '2.82'
-  sha256 'dd2814594362d6aaeca3037c6ed04ffb0b7144e1d1ae8b3319bb8c23a872955a'
+  version '2.83'
+  sha256 'b0a5248746298990f3360c528c0b714a22c98a84e04e11973584fa997a051698'
   link 'Transmission.app'
 end
