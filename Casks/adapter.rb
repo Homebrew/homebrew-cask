@@ -1,7 +1,7 @@
 class Adapter < Cask
-  url 'http://downloads.macroplant.com/Adapter-2.1.0.dmg'
+  url 'http://downloads.macroplant.com/Adapter-2.1.1.dmg'
   homepage 'http://www.macroplant.com/adapter/'
-  version '2.1.0'
-  sha256 '5e29718a7467234d70af9459a0999de73225ba4c9eb13cdec4af7d912ca6e376'
+  version '2.1.1'
+  sha256 'e46706c1b64acc2cd927456ba03be5220c2bc406c4eacab6fdd28490fb452a94'
   link 'Adapter.app'
 end
