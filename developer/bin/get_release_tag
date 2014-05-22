@@ -66,10 +66,10 @@ output_proposed_tag () {
     sanity_check_parsed_version "$@"
     verify_git_object_is_new "$new_tag"
     if [[ -n "$opt_verbose" ]]; then
-        printf "Latest tag\t$latest_tag\n"
-        printf "Proposed new tag\t$new_tag\n"
+        printf "Latest tag\t%s\n" "$latest_tag"
+        printf "Proposed new tag\t%s\n" "$new_tag"
     else
-        printf "$new_tag\n"
+        printf "%s\n" "$new_tag"
     fi
 }
 
@@ -171,7 +171,7 @@ _get_release_tag () {
         if [[ -n "$opt_verbose" ]]; then
             printf "Latest tag\t"
         fi
-        printf "$latest_tag\n"
+        printf "%s\n" "$latest_tag"
     elif [[ "$opt_next" == 'major' ]]; then
         generate_next_major_tag "$latest_tag"
     elif [[ "$opt_next" == 'minor' ]]; then

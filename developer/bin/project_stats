@@ -90,11 +90,11 @@ print_contributor_stats () {
     local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
     printf "Unique contributors"
     if ! [[ "$start_object" = "$initial_commit" ]]; then
-        printf " since ${start_object#v}"
+        printf " since %s" "${start_object#v}"
     fi
     printf "\n"
     cask_authors="$($git_log_cmd -- "${cask_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
-    printf "  Casks\t$cask_authors\n"
+    printf "  Casks\t%s\n" "$cask_authors"
     printf "  code\t"
     $git_log_cmd -- "${code_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
     printf "  docs\t"
@@ -107,8 +107,8 @@ print_contributor_stats () {
         # arithmetic removes whitespace
         ((alltime_contribs += 0))
         ((new_contribs      = alltime_contribs - prior_contribs))
-        printf "\nAll-time contributors\t$alltime_contribs\n"
-        printf "New contributors since ${start_object#v}\t$new_contribs\n"
+        printf "\nAll-time contributors\t%s\n" "$alltime_contribs"
+        printf "New contributors since %s\t%s\n" "${start_object#v}" "$new_contribs"
     fi
     printf "\n"
 }
@@ -124,7 +124,7 @@ print_commit_stats () {
     local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
     printf "Commit count"
     if ! [[ "$start_object" = "$initial_commit" ]]; then
-        printf " since ${start_object#v}"
+        printf " since %s" "${start_object#v}"
     fi
     printf "\n"
     printf "  Casks\t"
@@ -153,7 +153,7 @@ print_doc_stats () {
     local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
     printf "Doc contributors"
     if ! [[ "$start_object" = "$initial_commit" ]]; then
-        printf " since ${start_object#v}"
+        printf " since %s" "${start_object#v}"
     fi
     printf "\n  "
     $git_log_cmd -- "${doc_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | \
@@ -179,7 +179,7 @@ print_cask_stats () {
         ((deleted_casks += 0))
         ((new_casks     -= deleted_casks))
         ((updated_casks += 0))
-        printf "$new_casks Casks added ($updated_casks updated) by $cask_authors contributors since ${start_object#v}\n"
+        printf "%s Casks added (%s updated) by %s contributors since %s\n" "$new_casks" "$updated_casks" "$cask_authors" "${start_object#v}"
     fi
 
     printf "Total current Casks in HEAD\t"
