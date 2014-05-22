@@ -87,7 +87,7 @@ print_contributor_stats () {
     printf "Contributors\n"
     printf "====================\n"
 
-    local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
+    local git_log_cmd="git log --no-merges --format='%ae' "${start_object}".."${end_object}""
     printf "Unique contributors"
     if ! [[ "$start_object" = "$initial_commit" ]]; then
         printf " since %s" "${start_object#v}"
@@ -102,8 +102,8 @@ print_contributor_stats () {
     printf "  any\t"
     $git_log_cmd -- .                  | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l
     if ! [[ "$start_object" = "$initial_commit" ]]; then
-        local alltime_contribs="$(git log --no-merges --format='%ae' ${initial_commit}..${end_object} -- . | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
-        local prior_contribs="$(git log --no-merges --format='%ae' ${initial_commit}..${start_object} -- . | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        local alltime_contribs="$(git log --no-merges --format='%ae' "${initial_commit}".."${end_object}" -- . | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
+        local prior_contribs="$(git log --no-merges --format='%ae' "${initial_commit}".."${start_object}" -- . | /usr/bin/sort | /usr/bin/uniq | /usr/bin/wc -l)"
         # arithmetic removes whitespace
         ((alltime_contribs += 0))
         ((new_contribs      = alltime_contribs - prior_contribs))
@@ -121,7 +121,7 @@ print_commit_stats () {
     printf "Commits\n"
     printf "====================\n"
 
-    local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
+    local git_log_cmd="git log --no-merges --format='%ae' "${start_object}".."${end_object}""
     printf "Commit count"
     if ! [[ "$start_object" = "$initial_commit" ]]; then
         printf " since %s" "${start_object#v}"
@@ -150,7 +150,7 @@ print_doc_stats () {
     printf "Docs\n"
     printf "====================\n"
 
-    local git_log_cmd="git log --no-merges --format='%ae' ${start_object}..${end_object}"
+    local git_log_cmd="git log --no-merges --format='%ae' "${start_object}".."${end_object}""
     printf "Doc contributors"
     if ! [[ "$start_object" = "$initial_commit" ]]; then
         printf " since %s" "${start_object#v}"
