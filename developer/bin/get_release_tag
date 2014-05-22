@@ -97,7 +97,7 @@ generate_next_minor_tag () {
 generate_next_patch_tag () {
     local -a version_elts
     IFS='.' read -a version_elts <<< "$1"
-    sanity_check_parsed_version ${version_elts[@]}
+    sanity_check_parsed_version "${version_elts[@]}"
     (( version_elts[2] += 1 ))      # increment patch field
     output_proposed_tag "${version_elts[@]}"
 }
