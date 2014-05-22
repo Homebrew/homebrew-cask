@@ -25,10 +25,10 @@ opt_verbose=''
 
 warn () {
     local message="$@"
-    if ! [[ $message =~ "\n"$ ]]; then
-        message="${message}\n"
-    fi
-    printf "$message" 1>&2
+    message="${message//\\t/$'\011'}"
+    message="${message//\\n/$'\012'}"
+    message="${message%"${message##*[![:space:]]}"}"
+    printf "%s\n" "$message" 1>&2
 }
 
 die () {
