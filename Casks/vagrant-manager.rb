@@ -1,7 +1,7 @@
 class VagrantManager < Cask
-  url 'https://github.com/lanayotech/vagrant-manager/releases/download/1.5.1/vagrant-manager-1.5.1.dmg'
+  url 'https://github.com/lanayotech/vagrant-manager/releases/download/1.5.2/vagrant-manager-1.5.2.dmg'
   homepage 'http://vagrantmanager.com/'
-  version '1.5.1'
-  sha256 '33c456d82d792b22c457a672aeef08cd2eb632a4263fc11c9e9955eaf09b5fde'
+  version '1.5.2'
+  sha256 '8b694afb8774e83088d317e18e679199ddb17bace499d519ba81d6ef4c7d7be3'
   link 'Vagrant Manager.app'
 end
