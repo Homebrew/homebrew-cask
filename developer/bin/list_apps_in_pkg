@@ -116,7 +116,7 @@ See CONTRIBUTING.md and 'man pkgutil' for more information.
         elif [[ $arg =~ ^-+lax$ ]]; then
             opt_lax='true'
         elif [[ "$arg" = "$opt_pkg" ]]; then
-            opt_latest='true'
+            true
         else
             die "ERROR: Unknown argument '$arg'"
         fi
