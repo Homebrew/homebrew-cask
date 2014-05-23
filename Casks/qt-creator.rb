@@ -1,7 +1,7 @@
 class QtCreator < Cask
-  url 'http://download.qt-project.org/official_releases/qtcreator/3.1/3.1.0/qt-creator-opensource-mac-x86_64-3.1.0.dmg'
+  url 'http://download.qt-project.org/official_releases/qtcreator/3.1/3.1.1/qt-creator-opensource-mac-x86_64-3.1.1.dmg'
   homepage 'http://qt-project.org/'
-  version '3.1.0'
-  sha256 'f50cbf60d1c0591cbfe9332037789e3f1c7a6387c34f3341682fe890e0a13fce'
+  version '3.1.1'
+  sha256 '5d3219c155252d5364083c4395d326c274020b40c39d4148671d6839d20b369e'
   link 'Qt Creator.app'
 end
