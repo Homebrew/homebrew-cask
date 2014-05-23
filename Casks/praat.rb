@@ -1,12 +1,12 @@
 class Praat < Cask
   if Hardware::CPU.is_64_bit?
-    url 'http://www.fon.hum.uva.nl/praat/praat5376_mac64.dmg'
-    version '5.3.76'
-    sha256 'eef3259bb01466a54bad8b50eea1ee727e34a7c27d8079a0f5738ed19b9f16e6'
+    url 'http://www.fon.hum.uva.nl/praat/praat5377_mac64.dmg'
+    version '5.3.77'
+    sha256 '8015c1a41e6065f51f9bba887a8efd00bb1624d822624b2483c759615a8256a4'
   else
-    url 'http://www.fon.hum.uva.nl/praat/praat5376_mac32.dmg'
-    version '5.3.76'
-    sha256 'd12f23a8c019a9b600c7bf78afb38611199562f8966544a8dda3e619a98f3c7f'
+    url 'http://www.fon.hum.uva.nl/praat/praat5377_mac32.dmg'
+    version '5.3.77'
+    sha256 '6a6fa459c4e076f8e4236c2613e0428a5ff993429fce69e7f9d9fa3d0a821127'
   end
   homepage 'http://www.fon.hum.uva.nl/praat/'
   link 'Praat.app'
