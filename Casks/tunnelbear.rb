@@ -1,7 +1,7 @@
 class Tunnelbear < Cask
-  url 'https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-2.3.2.zip'
+  url 'https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-2.4.1.zip'
   homepage 'https://www.tunnelbear.com/'
-  version '2.3.2'
-  sha256 '2a3ac949f1ed2153b325cbae5ec5dc5d6a9facf7b72d586aecf5ba52f7259034'
+  version '2.4.1'
+  sha256 'e07d63fbba94677525d82a5c24b4a0fd7f572f229e3ef042fe83e7669eddf327'
   link 'TunnelBear.app'
 end
