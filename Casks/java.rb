@@ -22,7 +22,12 @@ class Java < Cask
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents", '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
   end
   uninstall :pkgutil => [ 'com.oracle.jdk8', 'com.oracle.jre' ],
-            :files => '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
+            :files => [
+                       '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
+                       '/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk',
+                       '/Library/PreferencePanes/JavaControlPanel.prefPane',
+                       '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
+                      ]
   caveats <<-EOS.undent
     This Cask makes minor modifications to the JRE to prevent any packaged
     application issues.
