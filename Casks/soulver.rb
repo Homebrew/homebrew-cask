@@ -5,4 +5,9 @@ class Soulver < Cask
   version 'latest'
   sha256 :no_check
   link 'Soulver.app'
+
+  after_install do
+    # Don't ask to move the app bundle to /Applications
+    system '/usr/bin/defaults', 'write', 'com.acqualia.soulver', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+  end
 end
