@@ -21,7 +21,10 @@ class Java < Cask
     system '/usr/bin/sudo', '-E', '--',
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents", '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
   end
-  uninstall :pkgutil => [ 'com.oracle.jdk8u5', 'com.oracle.jre' ],
+  uninstall :pkgutil => [
+                         'com.oracle.jdk8u5',
+                         'com.oracle.jre',
+                        ],
             :launchctl => [
                            'com.oracle.java.Helper-Tool',
                            'com.oracle.java.Java-Updater',
