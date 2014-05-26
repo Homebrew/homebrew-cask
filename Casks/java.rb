@@ -22,6 +22,10 @@ class Java < Cask
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents", '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
   end
   uninstall :pkgutil => [ 'com.oracle.jdk8', 'com.oracle.jre' ],
+            :launchctl => [
+                           'com.oracle.java.Helper-Tool',
+                           'com.oracle.java.Java-Updater',
+                          ],
             :files => [
                        '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
                        '/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk',
