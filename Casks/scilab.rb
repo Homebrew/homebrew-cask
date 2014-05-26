@@ -3,5 +3,5 @@ class Scilab < Cask
   homepage 'https://www.scilab.org'
   version '5.5.0'
   sha256 '58ed168011296c680db12cd4f3a55359647318cd959a9e97b37881ff5e26d592'
-  link 'Scilab.app'
+  link 'scilab-5.5.0.app'
 end
