@@ -1,8 +1,8 @@
 class Dnscrypt < Cask
-  url 'http://download.dnscrypt.org/guis/opendns/osx/dnscrypt-osx-client-0.19.dmg'
+  url 'https://github.com/alterstep/dnscrypt-osxclient/releases/download/1.0.1/dnscrypt-osxclient-1.0.1.zip'
   homepage 'http://opendns.github.io/dnscrypt-osx-client/'
-  version '0.19'
-  sha256 '36b684cc1a90a540e8c38759f509914818a1d3ca0e374ea0ab82e259cb72e1ec'
+  version '1.0.1'
+  sha256 'ac10e1bdcf525208fe24bf773c72a27cd540e15229487dcd042a69e19717e8fe'
   install 'DNSCrypt.mpkg'
   uninstall :pkgutil => 'com.opendns.osx.dnscryptClient.*',
             :launchctl => 'com.opendns.osx.*'
