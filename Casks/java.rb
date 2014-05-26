@@ -34,7 +34,8 @@ class Java < Cask
                        '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
                        "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents",
                        '/Library/PreferencePanes/JavaControlPanel.prefPane',
-                       '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
+                       '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK',
+                       '/usr/lib/java/libjdns_sd.jnilib',
                       ]
   caveats <<-EOS.undent
     This Cask makes minor modifications to the JRE to prevent any packaged
