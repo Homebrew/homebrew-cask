@@ -29,7 +29,10 @@ class Java < Cask
                            'com.oracle.java.Helper-Tool',
                            'com.oracle.java.Java-Updater',
                           ],
-            :quit => 'com.oracle.java.Java-Updater',
+            :quit => [
+                      'com.oracle.java.Java-Updater',
+                      'net.java.openjdk.cmd',         # Java Control Panel
+                     ],
             :files => [
                        '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
                        "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents",
