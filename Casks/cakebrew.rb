@@ -1,7 +1,7 @@
 class Cakebrew < Cask
-  url 'https://www.cakebrew.com/files/cakebrew-1.0.4.dmg'
+  url 'https://www.cakebrew.com/files/cakebrew-1.0.5.dmg'
   homepage 'http://www.cakebrew.com'
-  version '1.0.4'
-  sha256 'f8471e8e82461e1c6def66ee3265439d6b0edcc90ea0439d1204ac0ae057f278'
+  version '1.0.5'
+  sha256 'd9f9c013fd5e4789c4137aa82bc8f7e4848e8bf4d2565852118897f2091458de'
   link 'Cakebrew.app'
 end
