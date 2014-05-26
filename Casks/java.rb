@@ -29,7 +29,7 @@ class Java < Cask
             :quit => 'com.oracle.java.Java-Updater',
             :files => [
                        '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
-                       '/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk',
+                       "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents",
                        '/Library/PreferencePanes/JavaControlPanel.prefPane',
                        '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
                       ]
