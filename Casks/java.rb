@@ -26,6 +26,7 @@ class Java < Cask
                            'com.oracle.java.Helper-Tool',
                            'com.oracle.java.Java-Updater',
                           ],
+            :quit => 'com.oracle.java.Java-Updater',
             :files => [
                        '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
                        '/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk',
