@@ -1,7 +1,7 @@
 class Textexpander < Cask
-  url 'http://cdn.smilesoftware.com/TextExpander_4.2.1.zip'
+  url 'http://cdn.smilesoftware.com/TextExpander_4.3.1.zip'
   homepage 'http://www.smilesoftware.com/TextExpander/index.html'
-  version '4.2.1'
-  sha256 'd0082d2d6ffd1da991364db6de388b361e200ea89765dfbcf1b5e7b0636a593d'
+  version '4.3.1'
+  sha256 '1ab9bcdec7354cdf94da33ad12956799b8982eb3c544c8c89e57800dca8ff5cd'
   link 'TextExpander.app'
 end
