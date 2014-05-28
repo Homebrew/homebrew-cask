@@ -4,6 +4,7 @@ class Hockeyapp < Cask
   version 'latest'
   sha256 :no_check
   link 'HockeyApp.app'
+  binary 'HockeyApp.app/Contents/Resources/puck'
 
   after_install do
     # Don't ask to move the app bundle to /Applications
