@@ -1,8 +1,8 @@
 class Smartsynchronize < Cask
-  url 'http://www.syntevo.com/download/smartsynchronize/smartsynchronize-macosx-3_3_3.dmg'
+  url 'http://www.syntevo.com/download/smartsynchronize/smartsynchronize-macosx-3_3_4.dmg'
   homepage 'http://www.syntevo.com'
-  version '3.3.3'
-  sha256 '5e181292b0a54e50ad66b097eca81c4d7be42d3f001ec4a34b5a003e3cd79c96'
+  version '3.3.4'
+  sha256 'dc3732ef768d06a610742b0e1cf562c3cfce973e378b4c2dead6bf6cff9966f8'
   link 'SmartSynchronize 3.3.app'
   binary 'SmartSynchronize 3.3.app/Contents/MacOS/SmartSynchronize'
   caveats do
