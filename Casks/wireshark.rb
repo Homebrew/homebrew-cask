@@ -1,5 +1,5 @@
 class Wireshark < Cask
-  url 'http://wiresharkdownloads.riverbed.com/wireshark/osx/Wireshark%201.10.7%20Intel%2064.dmg'
+  url 'https://www.wireshark.org/download/osx/Wireshark%201.10.7%20Intel%2064.dmg'
   homepage 'http://www.wireshark.org'
   version '1.10.7'
   sha256 'df89621fdca8bd09aa633b2af6fa3e193872797a1cdf3feaf86f2183d68e2a5a'
