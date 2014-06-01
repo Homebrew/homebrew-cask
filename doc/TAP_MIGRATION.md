@@ -25,8 +25,8 @@ We are still [making improvements](https://github.com/caskroom/homebrew-cask/pul
 
 ## What Users Should Do
 
-All users should upgrade to the latest Homebrew (0.9.5), and the latest
-Homebrew-cask (0.34.0):
+All users should upgrade to the latest Homebrew (0.9.5 or better), and the
+latest Homebrew-cask (0.34.0 or better):
 
 ```bash
 $ brew update && brew upgrade brew-cask
