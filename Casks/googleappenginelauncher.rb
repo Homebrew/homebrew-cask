@@ -1,7 +1,7 @@
 class Googleappenginelauncher < Cask
-  url 'https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-1.9.4.dmg'
+  url 'https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-1.9.5.dmg'
   homepage 'https://developers.google.com/appengine/'
-  version '1.9.4'
-  sha256 '742f2ff640a41bbe28f0770aa2e5e5069090ba94c11e204568160eeac2744c1b'
+  version '1.9.5'
+  sha256 '7e5f765ea89193b0d1176b059a6100c546ff9aea4ad1df8e1dd894f15b81a0bc'
   link 'GoogleAppEngineLauncher.app'
 end
