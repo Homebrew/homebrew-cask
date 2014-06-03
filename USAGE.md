@@ -221,12 +221,15 @@ above, a Cask name on the command line can take the form of:
 * a Cask name as returned by `brew cask search`, _eg_: `google-chrome`
 * a fully-qualified Cask name which includes the Tap, _eg_: `caskroom/fonts/font-symbola`
 
-`brew cask` also accepts two other forms for Cask names:
+`brew cask` also accepts three other forms for Cask names:
 
-* a fully-qualified pathname to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
+* a path to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
 * a `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
+* a file in the current working directory, _eg_: `my-modfied-google-chrome.rb`.  Note
+  that Tapped Casks names will be preferred over this form.  To force the use of a Cask
+  file in the current directory, specify a pathname with slashes, _eg_: `./google-chrome.rb`.
 
-The last two forms are intended for users who wish to maintain private Casks.
+The last three forms are intended for users who wish to maintain private Casks.
 
 ## Taps
 
