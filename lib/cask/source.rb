@@ -28,7 +28,7 @@ module Cask::Source
       s.me?(query)
     end
     raise CaskUnavailableError.new(query) unless source
-    odebug "Using source class #{source}"
+    odebug "Success! Using source class #{source}"
     resolved_cask_source = source.new(query)
     odebug "Resolved Cask URI or file source to '#{resolved_cask_source}'"
     resolved_cask_source
