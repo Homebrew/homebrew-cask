@@ -19,4 +19,8 @@ class Cask::Source::URI
   rescue ErrorDuringExecution
     raise CaskUnavailableError, uri
   end
+
+  def to_s
+    uri.to_s
+  end
 end

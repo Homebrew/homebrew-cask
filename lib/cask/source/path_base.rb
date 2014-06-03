@@ -22,4 +22,9 @@ class Cask::Source::PathBase
   def cask_class_name
     path.basename.to_s.sub(/\.rb/, '').split('-').map(&:capitalize).join
   end
+
+  def to_s
+    # stringify to fully-resolved location
+    path.to_s
+  end
 end
