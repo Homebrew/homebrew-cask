@@ -46,3 +46,7 @@ prefer to try and work things so that we can keep ourselves Homebrewy both in
 implementation and idioms. Trying to manage all of `~/Applications` would move
 the project more towards a standalone system, which would mean reimplementing a
 lot of the Homebrew stuff we lean on now.
+
+## Can I set up my own Cask Tap?
+
+Yes! See [ALTERNATE_CASK_TAPS.md](ALTERNATE_CASK_TAPS.md).
