@@ -15,7 +15,7 @@ class Cask::Source::URI
     ohai "Downloading #{uri}"
     odebug "Download target -> #{path.to_s}"
     curl(uri, '-o', path.to_s)
-    Cask::Source::Path.new(path).load
+    Cask::Source::PathSlashOptional.new(path).load
   rescue ErrorDuringExecution
     raise CaskUnavailableError, uri
   end
