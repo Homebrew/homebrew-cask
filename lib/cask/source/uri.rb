@@ -14,10 +14,12 @@ class Cask::Source::URI
     path = HOMEBREW_CACHE_CASKS.join(File.basename(uri))
     ohai "Downloading #{uri}"
     odebug "Download target -> #{path.to_s}"
-    curl(uri, '-o', path.to_s)
+    begin
+      curl(uri, '-o', path.to_s)
+    rescue ErrorDuringExecution
+      raise CaskUnavailableError.new uri
+    end
     Cask::Source::PathSlashOptional.new(path).load
-  rescue ErrorDuringExecution
-    raise CaskUnavailableError, uri
   end
 
   def to_s
