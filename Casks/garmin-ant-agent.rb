@@ -5,6 +5,6 @@ class GarminAntAgent < Cask
   sha256 '11df82fdd8d39a9d83df03c8efe8b1b1cb3e8f65d1e1bd47f823e9eda9bfcc57'
   install 'Install Garmin ANT Agent.pkg'
   uninstall :quit => 'com.garmin.AntAgent',
- 			:pkgutil => 'com.garmin.garminANTAgent.pkg'
+ 			      :pkgutil => 'com.garmin.garminANTAgent.pkg'
 
 end
