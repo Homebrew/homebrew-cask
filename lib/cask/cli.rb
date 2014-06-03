@@ -70,10 +70,6 @@ class Cask::CLI
     Cask.init
     command = lookup_command(command_string)
     run_command(command, *rest)
-  rescue CaskAlreadyInstalledError => e
-    opoo e
-    $stderr.puts e.backtrace if Cask.debug
-    exit 0
   rescue CaskError => e
     onoe e
     $stderr.puts e.backtrace if Cask.debug
