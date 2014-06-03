@@ -28,4 +28,10 @@ Possible uses of this feature include:
 
 5. Tap the repository using the command `brew tap <github-user>/<tapname>`.
 
+6. Let us know if you wish your Tap to be publicly listed here.
+
+## Alternate Cask Taps Maintained by Users
+
+* [casidiablo/custom](https://github.com/casidiablo/homebrew-custom)
+
 [^1]: While we strive to be inclusive, sometimes this does happen: [#3954](https://github.com/caskroom/homebrew-cask/pull/3954) .
