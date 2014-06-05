@@ -95,8 +95,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 
 ## Legacy Stanzas
 
-The following stanzas may be seen in current use but are deprecated
-and slated for retirement.
+The following stanzas are no longer in use.
 
 | name               | multiple occurrences allowed? | meaning     |
 | ------------------ |------------------------------ | ----------- |
@@ -169,8 +168,8 @@ And the following methods may be useful for interpolation:
 
 ## Checksum Stanza Details
 
-Older Casks may still use `no_checksum` stanzas.  This is OK, but new
-Casks and updates should adopt `sha256 :no_check`.
+Casks should no longer use `no_checksum` stanzas.  That form has
+been superseded by `sha256 :no_check`.
 
 
 ## URL Stanza Details
