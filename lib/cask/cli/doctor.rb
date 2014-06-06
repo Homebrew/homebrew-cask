@@ -63,7 +63,12 @@ class Cask::CLI::Doctor
     ohai 'Contents of $GEM_HOME Environment Variable:',               render_with_none( ENV['GEM_HOME'] )
     ohai 'Contents of $GEM_PATH Environment Variable:',               render_with_none( ENV['GEM_PATH'] )
     ohai 'Contents of $BUNDLE_PATH Environment Variable:',            render_with_none( ENV['BUNDLE_PATH'] )
+    ohai 'Contents of Locale Environment Variables:',                 render_with_none( locale_variables )
     ohai 'Running As Privileged User:',                      render_with_none_as_error( privileged_uid )
+  end
+
+  def self.locale_variables
+    ENV.keys.grep(/^(?:LC_\S+|LANG|LANGUAGE)\Z/).collect_concat { |v| %Q{#{v}="#{ENV[v]}"} }.sort
   end
 
   def self.none_string
