@@ -1,21 +1,5 @@
 class Cask::CLI::Doctor
   def self.run
-    homebrew_origin    = notfound_string
-
-    begin
-      HOMEBREW_REPOSITORY.cd do
-        homebrew_origin = Cask::SystemCommand.run('git',
-                                                  :args => %w{config --get remote.origin.url},
-                                                  :stderr => :silence).strip
-      end
-      if homebrew_origin !~ %r{\S}
-        homebrew_origin = "#{none_string} #{error_string}"
-      elsif homebrew_origin !~ %r{(mxcl|Homebrew)/homebrew(\.git)?\Z}
-        homebrew_origin.concat " #{error_string 'warning: nonstandard origin'}"
-      end
-    rescue StandardError
-      homebrew_origin = error_string 'Not Found - Error running git'
-    end
 
     ohai 'OS X Version:',                                    render_with_none_as_error( MACOS_FULL_VERSION )
     ohai "Hardware Architecture:",                           render_with_none_as_error( "#{Hardware::CPU.type}-#{Hardware::CPU.bits}" )
@@ -69,6 +53,25 @@ class Cask::CLI::Doctor
       default_cask_count = "0 #{error_string %Q{Error reading #{fq_default_tap}}}"
     end
     default_cask_count
+  end
+
+  def self.homebrew_origin
+    homebrew_origin = notfound_string
+    begin
+      HOMEBREW_REPOSITORY.cd do
+        homebrew_origin = Cask::SystemCommand.run('git',
+                                                  :args => %w{config --get remote.origin.url},
+                                                  :stderr => :silence).strip
+      end
+      if homebrew_origin !~ %r{\S}
+        homebrew_origin = "#{none_string} #{error_string}"
+      elsif homebrew_origin !~ %r{(mxcl|Homebrew)/homebrew(\.git)?\Z}
+        homebrew_origin.concat " #{error_string 'warning: nonstandard origin'}"
+      end
+    rescue StandardError
+      homebrew_origin = error_string 'Not Found - Error running git'
+    end
+    homebrew_origin
   end
 
   def self.locale_variables
