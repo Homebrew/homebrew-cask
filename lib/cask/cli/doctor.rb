@@ -1,11 +1,10 @@
 class Cask::CLI::Doctor
   def self.run
-    notfound_msg       = "#{Tty.red}Not Found - Unknown Error#{Tty.reset}"
-    fq_default_tap     = notfound_msg
-    alt_taps           = notfound_msg
-    default_cask_count = notfound_msg
-    privileged_uid     = notfound_msg
-    homebrew_origin    = notfound_msg
+    fq_default_tap     = notfound_string
+    alt_taps           = notfound_string
+    default_cask_count = notfound_string
+    privileged_uid     = notfound_string
+    homebrew_origin    = notfound_string
 
     begin
       privileged_uid = Process.euid == 0 ? "Yes #{error_string 'warning: not recommended'}" : 'No'
@@ -73,6 +72,10 @@ class Cask::CLI::Doctor
 
   def self.none_string
     '<NONE>'
+  end
+
+  def self.notfound_string
+    "#{Tty.red}Not Found - Unknown Error#{Tty.reset}"
   end
 
   def self.error_string(string='Error')
