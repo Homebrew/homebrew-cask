@@ -1,6 +1,5 @@
 class Cask::CLI::Doctor
   def self.run
-
     ohai 'OS X Version:',                                    render_with_none_as_error( MACOS_FULL_VERSION )
     ohai "Hardware Architecture:",                           render_with_none_as_error( "#{Hardware::CPU.type}-#{Hardware::CPU.bits}" )
     ohai 'Ruby Version:',                                    render_with_none_as_error( "#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}" )
