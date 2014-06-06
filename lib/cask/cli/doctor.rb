@@ -15,13 +15,13 @@ class Cask::CLI::Doctor
     ohai 'Homebrew-cask Alternate Cask Taps:',                        render_tap_paths( alt_taps )
     ohai 'Homebrew-cask Default Tap Cask Count:',            render_with_none_as_error( default_cask_count )
     ohai 'Contents of $LOAD_PATH:',                          render_with_none_as_error( $LOAD_PATH )
-    ohai 'Contents of $RUBYLIB Environment Variable:',                render_with_none( ENV['RUBYLIB'] )
-    ohai 'Contents of $RUBYOPT Environment Variable:',                render_with_none( ENV['RUBYOPT'] )
-    ohai 'Contents of $RUBYPATH Environment Variable:',               render_with_none( ENV['RUBYPATH'] )
-    ohai 'Contents of $RBENV_VERSION Environment Variable:',          render_with_none( ENV['RBENV_VERSION'] )
-    ohai 'Contents of $GEM_HOME Environment Variable:',               render_with_none( ENV['GEM_HOME'] )
-    ohai 'Contents of $GEM_PATH Environment Variable:',               render_with_none( ENV['GEM_PATH'] )
-    ohai 'Contents of $BUNDLE_PATH Environment Variable:',            render_with_none( ENV['BUNDLE_PATH'] )
+    ohai 'Contents of $RUBYLIB Environment Variable:',                  render_env_var( 'RUBYLIB' )
+    ohai 'Contents of $RUBYOPT Environment Variable:',                  render_env_var( 'RUBYOPT' )
+    ohai 'Contents of $RUBYPATH Environment Variable:',                 render_env_var( 'RUBYPATH' )
+    ohai 'Contents of $RBENV_VERSION Environment Variable:',            render_env_var( 'RBENV_VERSION' )
+    ohai 'Contents of $GEM_HOME Environment Variable:',                 render_env_var( 'GEM_HOME' )
+    ohai 'Contents of $GEM_PATH Environment Variable:',                 render_env_var( 'GEM_PATH' )
+    ohai 'Contents of $BUNDLE_PATH Environment Variable:',              render_env_var( 'BUNDLE_PATH' )
     ohai 'Contents of Locale Environment Variables:',                 render_with_none( locale_variables )
     ohai 'Running As Privileged User:',                      render_with_none_as_error( privileged_uid )
   end
@@ -124,6 +124,14 @@ class Cask::CLI::Doctor
       else
         dir.to_s
       end
+    end
+  end
+
+  def self.render_env_var(var)
+    if ENV.key?(var)
+      %Q{#{var}="#{ENV[var]}"}
+    else
+      none_string
     end
   end
 
