@@ -13,6 +13,15 @@ before_install:
   - sudo /usr/bin/gem install bundler
 install:
   - sudo /usr/bin/bundle
+before_script:
+  - printenv PATH
+  - /usr/bin/which ruby
+  - ruby --version
+  - /usr/bin/which bundle
+  - bundle --version
+  - /usr/bin/which rake
+  - rake --version
+  - ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin"
 script:
   - /usr/bin/bundle exec /usr/bin/rake test
 notifications:
