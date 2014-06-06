@@ -42,28 +42,28 @@ class Cask::CLI::Doctor
       homebrew_origin = error_string 'Not Found - Error running git'
     end
 
-    ohai 'OS X Version:',                                    MACOS_FULL_VERSION
-    ohai "Hardware Architecture:",                           "#{Hardware::CPU.type}-#{Hardware::CPU.bits}"
-    ohai 'Ruby Version:',                                    "#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}"
-    ohai 'Ruby Path:',                                       RUBY_PATH
-    ohai 'Homebrew Version:',                                HOMEBREW_VERSION
-    ohai 'Homebrew Executable Path:',                        HOMEBREW_BREW_FILE
-    ohai 'Homebrew Cellar Path:',                            HOMEBREW_CELLAR
-    ohai 'Homebrew Repository Path:',                        HOMEBREW_REPOSITORY
-    ohai 'Homebrew Origin:',                                 homebrew_origin
-    ohai 'Homebrew-cask Version:',                           HOMEBREW_CASK_VERSION
-    ohai 'Homebrew-cask Default Tap Path:',                  fq_default_tap
-    ohai 'Homebrew-cask Alternate Cask Taps:',               alt_taps
-    ohai 'Homebrew-cask Default Tap Cask Count:',            default_cask_count
-    ohai 'Contents of $LOAD_PATH:',                          $LOAD_PATH
-    ohai 'Contents of $RUBYLIB Environment Variable:',       ENV['RUBYLIB']
-    ohai 'Contents of $RUBYOPT Environment Variable:',       ENV['RUBYOPT']
-    ohai 'Contents of $RUBYPATH Environment Variable:',      ENV['RUBYPATH']
-    ohai 'Contents of $RBENV_VERSION Environment Variable:', ENV['RBENV_VERSION']
-    ohai 'Contents of $GEM_HOME Environment Variable:',      ENV['GEM_HOME']
-    ohai 'Contents of $GEM_PATH Environment Variable:',      ENV['GEM_PATH']
-    ohai 'Contents of $BUNDLE_PATH Environment Variable:',   ENV['BUNDLE_PATH']
-    ohai 'Running As Privileged User:',                      privileged_uid
+    ohai 'OS X Version:',                                    render_with_none_as_error( MACOS_FULL_VERSION )
+    ohai "Hardware Architecture:",                           render_with_none_as_error( "#{Hardware::CPU.type}-#{Hardware::CPU.bits}" )
+    ohai 'Ruby Version:',                                    render_with_none_as_error( "#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}" )
+    ohai 'Ruby Path:',                                       render_with_none_as_error( RUBY_PATH )
+    ohai 'Homebrew Version:',                                render_with_none_as_error( HOMEBREW_VERSION )
+    ohai 'Homebrew Executable Path:',                        render_with_none_as_error( HOMEBREW_BREW_FILE )
+    ohai 'Homebrew Cellar Path:',                            render_with_none_as_error( HOMEBREW_CELLAR )
+    ohai 'Homebrew Repository Path:',                        render_with_none_as_error( HOMEBREW_REPOSITORY )
+    ohai 'Homebrew Origin:',                                 render_with_none_as_error( homebrew_origin )
+    ohai 'Homebrew-cask Version:',                           render_with_none_as_error( HOMEBREW_CASK_VERSION )
+    ohai 'Homebrew-cask Default Tap Path:',                  render_with_none_as_error( fq_default_tap )
+    ohai 'Homebrew-cask Alternate Cask Taps:',                        render_with_none( alt_taps )
+    ohai 'Homebrew-cask Default Tap Cask Count:',            render_with_none_as_error( default_cask_count )
+    ohai 'Contents of $LOAD_PATH:',                          render_with_none_as_error( $LOAD_PATH )
+    ohai 'Contents of $RUBYLIB Environment Variable:',                render_with_none( ENV['RUBYLIB'] )
+    ohai 'Contents of $RUBYOPT Environment Variable:',                render_with_none( ENV['RUBYOPT'] )
+    ohai 'Contents of $RUBYPATH Environment Variable:',               render_with_none( ENV['RUBYPATH'] )
+    ohai 'Contents of $RBENV_VERSION Environment Variable:',          render_with_none( ENV['RBENV_VERSION'] )
+    ohai 'Contents of $GEM_HOME Environment Variable:',               render_with_none( ENV['GEM_HOME'] )
+    ohai 'Contents of $GEM_PATH Environment Variable:',               render_with_none( ENV['GEM_PATH'] )
+    ohai 'Contents of $BUNDLE_PATH Environment Variable:',            render_with_none( ENV['BUNDLE_PATH'] )
+    ohai 'Running As Privileged User:',                      render_with_none_as_error( privileged_uid )
   end
 
   def self.none_string
@@ -72,6 +72,18 @@ class Cask::CLI::Doctor
 
   def self.error_string(string='Error')
     "#{Tty.red}(#{string})#{Tty.reset}"
+  end
+
+  def self.render_with_none(string)
+    (string.nil? or not string.respond_to?(:to_s) or string.to_s.length == 0) ?
+      none_string :
+      string
+  end
+
+  def self.render_with_none_as_error(string)
+    (string.nil? or not string.respond_to?(:to_s) or string.to_s.length == 0) ?
+      "#{none_string} #{error_string}" :
+       string
   end
 
   def self.help
