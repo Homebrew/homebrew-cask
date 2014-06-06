@@ -116,13 +116,13 @@ class Cask::CaveatsDSL
     known_arches = %w{intel-64 intel-32}
     supported_arches.each do |arch|
       unless known_arches.include?(arch)
-        raise CaskInvalidError.new(@cask, "The only valid arguments to caveats arch_only are: #{known_arches.inspect}")
+        raise CaskInvalidError.new(@cask, "The only valid arguments to caveats arch_only are: #{known_arches.utf8_inspect}")
       end
     end
     this_arch = "#{Hardware::CPU.type}-#{Hardware::CPU.bits}"
     unless supported_arches.include?(this_arch)
       puts <<-EOS.undent
-      Cask #{@cask} provides binaries for these architectures: #{supported_arches.inspect}.
+      Cask #{@cask} provides binaries for these architectures: #{supported_arches.utf8_inspect}.
       But you appear to be running on an unsupported architecture:
 
         #{this_arch}
@@ -142,7 +142,7 @@ class Cask::CaveatsDSL
     known_versions = %w{10.0 10.1 10.2 10.3 10.3 10.5 10.6 10.7 10.8 10.9}
     supported_versions.each do |version|
       unless known_versions.include?(version)
-        raise CaskInvalidError.new(@cask, "The only valid arguments to caveats os_version_only are: #{known_versions.inspect}")
+        raise CaskInvalidError.new(@cask, "The only valid arguments to caveats os_version_only are: #{known_versions.utf8_inspect}")
       end
     end
     unless supported_versions.include?(MACOS_VERSION)

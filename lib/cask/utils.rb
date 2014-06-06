@@ -4,6 +4,23 @@
 require 'yaml'
 require 'open3'
 
+# monkeypatch Object - not a great idea
+class Object
+  def utf8_inspect
+    if not defined?(Encoding)
+      self.inspect
+    else
+      if self.respond_to?(:map)
+        self.map do |sub_elt|
+          sub_elt.utf8_inspect
+        end
+      else
+        self.inspect.force_encoding('UTF-8').sub(%r{\A"(.*)"\Z}, '\1')
+      end
+    end
+  end
+end
+
 # monkeypatch Tty
 class Tty
   class << self
