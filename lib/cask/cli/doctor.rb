@@ -22,6 +22,7 @@ class Cask::CLI::Doctor
     ohai 'Contents of $GEM_HOME Environment Variable:',                 render_env_var( 'GEM_HOME' )
     ohai 'Contents of $GEM_PATH Environment Variable:',                 render_env_var( 'GEM_PATH' )
     ohai 'Contents of $BUNDLE_PATH Environment Variable:',              render_env_var( 'BUNDLE_PATH' )
+    ohai 'Contents of $PATH Environment Variable:',                     render_env_var( 'PATH' )
     ohai 'Contents of Locale Environment Variables:',                 render_with_none( locale_variables )
     ohai 'Running As Privileged User:',                      render_with_none_as_error( privileged_uid )
   end
