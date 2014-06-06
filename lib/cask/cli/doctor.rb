@@ -3,12 +3,7 @@ class Cask::CLI::Doctor
     fq_default_tap     = notfound_string
     alt_taps           = notfound_string
     default_cask_count = notfound_string
-    privileged_uid     = notfound_string
     homebrew_origin    = notfound_string
-
-    begin
-      privileged_uid = Process.euid == 0 ? "Yes #{error_string 'warning: not recommended'}" : 'No'
-    rescue StandardError; end
 
     begin
       fq_default_tap = HOMEBREW_REPOSITORY.join 'Library', 'Taps', Cask.default_tap
@@ -68,6 +63,14 @@ class Cask::CLI::Doctor
 
   def self.locale_variables
     ENV.keys.grep(/^(?:LC_\S+|LANG|LANGUAGE)\Z/).collect_concat { |v| %Q{#{v}="#{ENV[v]}"} }.sort
+  end
+
+  def self.privileged_uid
+    privileged_uid = notfound_string
+    begin
+      privileged_uid = Process.euid == 0 ? "Yes #{error_string 'warning: not recommended'}" : 'No'
+    rescue StandardError; end
+    privileged_uid
   end
 
   def self.none_string
