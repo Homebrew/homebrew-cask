@@ -1,13 +1,8 @@
 class Cask::CLI::Doctor
   def self.run
-    fq_default_tap     = notfound_string
     alt_taps           = notfound_string
     default_cask_count = notfound_string
     homebrew_origin    = notfound_string
-
-    begin
-      fq_default_tap = HOMEBREW_REPOSITORY.join 'Library', 'Taps', Cask.default_tap
-    rescue StandardError; end
 
     begin
       alt_taps = Pathname.glob(HOMEBREW_REPOSITORY.join 'Library', 'Taps', '*', '*', 'Casks').map(&:dirname) -
@@ -59,6 +54,15 @@ class Cask::CLI::Doctor
     ohai 'Contents of $BUNDLE_PATH Environment Variable:',            render_with_none( ENV['BUNDLE_PATH'] )
     ohai 'Contents of Locale Environment Variables:',                 render_with_none( locale_variables )
     ohai 'Running As Privileged User:',                      render_with_none_as_error( privileged_uid )
+  end
+
+  def self.fq_default_tap
+    return @fq_default_tap if @fq_default_tap
+    @fq_default_tap = notfound_string
+    begin
+      @fq_default_tap = HOMEBREW_REPOSITORY.join 'Library', 'Taps', Cask.default_tap
+    rescue StandardError; end
+    @fq_default_tap
   end
 
   def self.locale_variables
