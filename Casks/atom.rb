@@ -1,5 +1,5 @@
 class Atom < Cask
-  url 'http://atom.io/download/mac'
+  url 'https://atom.io/download/mac'
   homepage 'http://atom.io'
   version 'latest'
   sha256 :no_check
