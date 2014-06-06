@@ -11,8 +11,8 @@ class Cask::CLI::Doctor
     ohai 'Homebrew Repository Path:',                        render_with_none_as_error( HOMEBREW_REPOSITORY )
     ohai 'Homebrew Origin:',                                 render_with_none_as_error( homebrew_origin )
     ohai 'Homebrew-cask Version:',                           render_with_none_as_error( HOMEBREW_CASK_VERSION )
-    ohai 'Homebrew-cask Default Tap Path:',                  render_with_none_as_error( fq_default_tap )
-    ohai 'Homebrew-cask Alternate Cask Taps:',                        render_with_none( alt_taps )
+    ohai 'Homebrew-cask Default Tap Path:',                           render_tap_paths( fq_default_tap )
+    ohai 'Homebrew-cask Alternate Cask Taps:',                        render_tap_paths( alt_taps )
     ohai 'Homebrew-cask Default Tap Cask Count:',            render_with_none_as_error( default_cask_count )
     ohai 'Contents of $LOAD_PATH:',                          render_with_none_as_error( $LOAD_PATH )
     ohai 'Contents of $RUBYLIB Environment Variable:',                render_with_none( ENV['RUBYLIB'] )
@@ -90,6 +90,10 @@ class Cask::CLI::Doctor
     '<NONE>'
   end
 
+  def self.legacy_tap_pattern
+    %r{phinze}
+  end
+
   def self.notfound_string
     "#{Tty.red}Not Found - Unknown Error#{Tty.reset}"
   end
@@ -108,6 +112,19 @@ class Cask::CLI::Doctor
     (string.nil? or not string.respond_to?(:to_s) or string.to_s.length == 0) ?
       "#{none_string} #{error_string}" :
        string
+  end
+
+  def self.render_tap_paths(paths)
+    paths = [ paths ] unless paths.respond_to?(:each)
+    paths.collect do |dir|
+      if (dir.nil? or dir.to_s.length == 0) then
+        none_string
+      elsif dir.to_s.match(legacy_tap_pattern)
+        dir.to_s.concat(" #{error_string 'Warning: legacy tap path'}")
+      else
+        dir.to_s
+      end
+    end
   end
 
   def self.help
