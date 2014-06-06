@@ -18,6 +18,7 @@ class Cask::CLI::Doctor
     ohai 'Contents of $RUBYOPT Environment Variable:',                  render_env_var( 'RUBYOPT' )
     ohai 'Contents of $RUBYPATH Environment Variable:',                 render_env_var( 'RUBYPATH' )
     ohai 'Contents of $RBENV_VERSION Environment Variable:',            render_env_var( 'RBENV_VERSION' )
+    ohai 'Contents of $CHRUBY_VERSION Environment Variable:',           render_env_var( 'CHRUBY_VERSION' )
     ohai 'Contents of $GEM_HOME Environment Variable:',                 render_env_var( 'GEM_HOME' )
     ohai 'Contents of $GEM_PATH Environment Variable:',                 render_env_var( 'GEM_PATH' )
     ohai 'Contents of $BUNDLE_PATH Environment Variable:',              render_env_var( 'BUNDLE_PATH' )
