@@ -1,14 +1,7 @@
 class Cask::CLI::Doctor
   def self.run
-    alt_taps           = notfound_string
     default_cask_count = notfound_string
     homebrew_origin    = notfound_string
-
-    begin
-      alt_taps = Pathname.glob(HOMEBREW_REPOSITORY.join 'Library', 'Taps', '*', '*', 'Casks').map(&:dirname) -
-                 [fq_default_tap]
-      alt_taps = nil unless alt_taps.length > 0
-    rescue StandardError; end
 
     begin
       default_cask_count = HOMEBREW_REPOSITORY.join(fq_default_tap, 'Casks').children.count(&:file?)
@@ -63,6 +56,16 @@ class Cask::CLI::Doctor
       @fq_default_tap = HOMEBREW_REPOSITORY.join 'Library', 'Taps', Cask.default_tap
     rescue StandardError; end
     @fq_default_tap
+  end
+
+  def self.alt_taps
+    alt_taps = notfound_string
+    begin
+      alt_taps = Pathname.glob(HOMEBREW_REPOSITORY.join 'Library', 'Taps', '*', '*', 'Casks').map(&:dirname) -
+                 [fq_default_tap]
+      alt_taps = nil unless alt_taps.length > 0
+    rescue StandardError; end
+    alt_taps
   end
 
   def self.locale_variables
