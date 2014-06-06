@@ -8,7 +8,7 @@ class Cask::CLI::Doctor
     homebrew_origin    = notfound_msg
 
     begin
-      privileged_uid = Process.euid == 0 ? "Yes #{Tty.red}(warning: not recommended)#{Tty.reset}" : 'No'
+      privileged_uid = Process.euid == 0 ? "Yes #{error_string 'warning: not recommended'}" : 'No'
     rescue StandardError; end
 
     begin
@@ -24,7 +24,7 @@ class Cask::CLI::Doctor
     begin
       default_cask_count = HOMEBREW_REPOSITORY.join(fq_default_tap, 'Casks').children.count(&:file?)
     rescue StandardError
-      default_cask_count = "0 #{Tty.red}(Error reading #{fq_default_tap})#{Tty.reset}"
+      default_cask_count = "0 #{error_string %Q{Error reading #{fq_default_tap}}}"
     end
 
     begin
@@ -34,12 +34,12 @@ class Cask::CLI::Doctor
                                                   :stderr => :silence).strip
       end
       if homebrew_origin !~ %r{\S}
-        homebrew_origin = "#{none_string} #{Tty.red}(Error)#{Tty.reset}"
+        homebrew_origin = "#{none_string} #{error_string}"
       elsif homebrew_origin !~ %r{(mxcl|Homebrew)/homebrew(\.git)?\Z}
-        homebrew_origin.concat " #{Tty.red}(warning: nonstandard origin)#{Tty.reset}"
+        homebrew_origin.concat " #{error_string 'warning: nonstandard origin'}"
       end
     rescue StandardError
-      homebrew_origin = "#{Tty.red}Not Found - Error running git#{Tty.reset}"
+      homebrew_origin = error_string 'Not Found - Error running git'
     end
 
     ohai 'OS X Version:',                                    MACOS_FULL_VERSION
@@ -68,6 +68,10 @@ class Cask::CLI::Doctor
 
   def self.none_string
     '<NONE>'
+  end
+
+  def self.error_string(string='Error')
+    "#{Tty.red}(#{string})#{Tty.reset}"
   end
 
   def self.help
