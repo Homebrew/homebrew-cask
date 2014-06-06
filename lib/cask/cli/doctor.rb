@@ -34,7 +34,7 @@ class Cask::CLI::Doctor
                                                   :stderr => :silence).strip
       end
       if homebrew_origin !~ %r{\S}
-        homebrew_origin = "<NONE> #{Tty.red}(Error)#{Tty.reset}"
+        homebrew_origin = "#{none_string} #{Tty.red}(Error)#{Tty.reset}"
       elsif homebrew_origin !~ %r{(mxcl|Homebrew)/homebrew(\.git)?\Z}
         homebrew_origin.concat " #{Tty.red}(warning: nonstandard origin)#{Tty.reset}"
       end
@@ -64,6 +64,10 @@ class Cask::CLI::Doctor
     ohai 'Contents of $GEM_PATH Environment Variable:',      ENV['GEM_PATH']
     ohai 'Contents of $BUNDLE_PATH Environment Variable:',   ENV['BUNDLE_PATH']
     ohai 'Running As Privileged User:',                      privileged_uid
+  end
+
+  def self.none_string
+    '<NONE>'
   end
 
   def self.help
