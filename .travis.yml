@@ -1,6 +1,12 @@
 language: objective-c
+env:
+  matrix:
+    - CASK_SYSTEM_RUBY_VERSION="1.8"
+    - CASK_SYSTEM_RUBY_VERSION="2.0"
+    - CASK_SYSTEM_RUBY_VERSION="Current"
 before_install:
   - rvm use system
+  - PATH="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin":"$PATH"
   - brew update
   - brew install cabextract
   - brew install unar
