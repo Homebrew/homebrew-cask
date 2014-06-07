@@ -20,7 +20,7 @@ module Cask::CLI::Create
     cask_class = cask_name.split('-').map(&:capitalize).join
     <<-EOS.undent
       class #{cask_class} < Cask
-        url ''
+        url 'https://'
         homepage ''
         version ''
         sha256 ''
