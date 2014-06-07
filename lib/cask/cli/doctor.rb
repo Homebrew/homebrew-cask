@@ -77,7 +77,7 @@ class Cask::CLI::Doctor
   end
 
   def self.locale_variables
-    ENV.keys.grep(/^(?:LC_\S+|LANG|LANGUAGE)\Z/).collect_concat { |v| %Q{#{v}="#{ENV[v]}"} }.sort
+    ENV.keys.grep(/^(?:LC_\S+|LANG|LANGUAGE)\Z/).collect { |v| %Q{#{v}="#{ENV[v]}"} }.sort.join("\n")
   end
 
   def self.privileged_uid
