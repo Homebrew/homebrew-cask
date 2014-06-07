@@ -25,10 +25,10 @@ is always enclosed in a `class ... end` block.  Example:
 
 ```ruby
 class Alfred < Cask
-  url 'http://cachefly.alfredapp.com/Alfred_2.1.1_227.zip'
+  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
   homepage 'http://www.alfredapp.com/'
-  version '2.1.1_227'
-  sha256 'd19fe7441c6741bf663521e561b842f35707b1e83de21ca195aa033cade66d1b'
+  version '2.3_264'
+  sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
   link 'Alfred 2.app'
   link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
@@ -174,9 +174,11 @@ been superseded by `sha256 :no_check`.
 
 ## URL Stanza Details
 
-### HTTPS URLs
+### HTTPS URLs are Preferred
 
 If available, an HTTPS URL is preferred. A plain HTTP URL should only be used in the absence of a secure alternative.
+
+### Additional HTTP/S URL Parameters
 
 When a plain URL string is insufficient to fetch a file, additional
 information may be provided to the `curl`-based downloader, in the form

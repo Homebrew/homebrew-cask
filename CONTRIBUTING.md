@@ -34,10 +34,10 @@ the `link` stanza as many times as you need, to create multiple links:
 
 ```ruby
 class Alfred < Cask
-  url 'http://cachefly.alfredapp.com/Alfred_2.1.1_227.zip'
+  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
   homepage 'http://www.alfredapp.com/'
-  version '2.1.1_227'
-  sha256 'd19fe7441c6741bf663521e561b842f35707b1e83de21ca195aa033cade66d1b'
+  version '2.3_264'
+  sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
   link 'Alfred 2.app'
   link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
