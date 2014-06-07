@@ -25,14 +25,14 @@ matrix:
 # * informational feedback
 before_install:
   - rvm use system
-  - export PATH="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin":"$PATH"
+  - export PATH="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin":"$PATH"
   - brew update
   - printenv PATH
   - /usr/bin/which ruby
   - ruby --version
   - /usr/bin/which rake
   - rake --version
-  - echo ls_ruby_bindir; ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin"
+  - echo ls_ruby_bindir; ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin"
 
 # install steps
 # * brew Formulae without which some tests will be skipped
@@ -41,8 +41,8 @@ before_install:
 install:
   - brew install cabextract
   - brew install unar
-  - echo gem_install_bundler; sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin/gem" install bundler --bindir="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin"
-  - echo bundle; sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin/bundle" --system
+  - echo gem_install_bundler; sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/gem" install bundler --bindir="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin"
+  - echo bundle; sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/bundle" --system
 
 # informational feedback
 before_script:
@@ -53,12 +53,12 @@ before_script:
   - bundle --version
   - /usr/bin/which rake
   - rake --version
-  - echo ls_ruby_bindir; ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin"
+  - echo ls_ruby_bindir; ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin"
 
 # the test itself
 # path-quoting is different here due to YAML constraints
 script:
-  - /System/Library/Frameworks/Ruby.framework/Versions/"${CASK_SYSTEM_RUBY_VERSION}"/usr/bin/bundle exec "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin/rake" test
+  - /System/Library/Frameworks/Ruby.framework/Versions/"${CASK_RUBY_TEST_VERSION}"/usr/bin/bundle exec "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/rake" test
 
 notifications:
   irc:
