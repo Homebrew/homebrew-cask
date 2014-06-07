@@ -159,6 +159,23 @@ fall back to this format:
 http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 ```
 
+### Dropbox URLs
+
+Some projects **officially** (meaning the URL is linked from the official website)
+distribute binaries via Dropbox.
+Occasionally, instead of a direct download link, they send you to a preview page.
+In these cases, you need to manually change the URL.
+
+For example this preview link:
+```
+https://www.dropbox.com/s/xttkmuvu7hh72vu/MyFile.pdf
+```
+becomes
+```
+https://dl.dropboxusercontent.com/s/xttkmuvu7hh72vu/MyFile.pdf
+```
+
+More: https://www.dropbox.com/help/201/en
 
 ### Vendor URLs
 
