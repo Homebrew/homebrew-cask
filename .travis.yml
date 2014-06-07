@@ -1,21 +1,28 @@
 language: objective-c
 
+# todo
+#
+# test with Ruby 1.9, but allow failure
+# test with Ruby 2.1, but allow failure
+#
+
 # "Current" is currently a duplicate of either 1.8 or 2.0, depending on OS version
 env:
   matrix:
-    - CASK_SYSTEM_RUBY_VERSION="1.8"
-    - CASK_SYSTEM_RUBY_VERSION="2.0"
-    - CASK_SYSTEM_RUBY_VERSION="Current"
+    - CASK_RUBY_TEST_VERSION="1.8"
+    - CASK_RUBY_TEST_VERSION="2.0"
+    - CASK_RUBY_TEST_VERSION="Current"
 
 # permit "Current" to fail without affecting our badge
 matrix:
   allow_failures:
-    - env: CASK_SYSTEM_RUBY_VERSION="Current"
+    - env: CASK_RUBY_TEST_VERSION="Current"
 
-# turn off RVM
-# set PATH according to env matrix
-# update Homebrew
-# informational feedback
+# before_install steps
+# * turn off RVM
+# * set PATH according to env matrix
+# * update Homebrew
+# * informational feedback
 before_install:
   - rvm use system
   - export PATH="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin":"$PATH"
@@ -27,9 +34,10 @@ before_install:
   - rake --version
   - echo ls_ruby_bindir; ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin"
 
-# install brew Formulae
-# install bundler gem
-# install Ruby gems
+# install steps
+# * brew Formulae without which some tests will be skipped
+# * bundler gem
+# * Ruby gems required for brew-cask
 install:
   - brew install cabextract
   - brew install unar
@@ -48,6 +56,7 @@ before_script:
   - echo ls_ruby_bindir; ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin"
 
 # the test itself
+# path-quoting is different here due to YAML constraints
 script:
   - /System/Library/Frameworks/Ruby.framework/Versions/"${CASK_SYSTEM_RUBY_VERSION}"/usr/bin/bundle exec "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin/rake" test
 
