@@ -7,6 +7,11 @@ env:
     - CASK_SYSTEM_RUBY_VERSION="2.0"
     - CASK_SYSTEM_RUBY_VERSION="Current"
 
+# permit "Current" to fail without affecting our badge
+matrix:
+  allow_failures:
+    - env: CASK_SYSTEM_RUBY_VERSION="Current"
+
 # turn off RVM
 # set PATH according to env matrix
 # update Homebrew
