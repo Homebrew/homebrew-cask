@@ -8,10 +8,11 @@ before_install:
   - rvm use system
   - PATH="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin":"$PATH"
   - brew update
+
+install:
   - brew install cabextract
   - brew install unar
   - sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin/gem" install bundler --bindir="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin"
-install:
  - sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin/bundle" --system
 before_script:
   - printenv PATH
