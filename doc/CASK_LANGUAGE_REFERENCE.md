@@ -194,6 +194,19 @@ Example of using `:cookies`: [java.rb](../Casks/java.rb)
 
 Example of using `:referer`: [freefilesync.rb](../Casks/freefilesync.rb)
 
+### Difficulty Finding a URL
+
+Web browsers may obscure the direct `url` download location for a variety of
+reasons.  Homebrew-cask supplies a script which can read extended file
+attributes to extract the actual source URL for most files downloaded by a
+browser on OS X.  The script usually emits multiple candidate URLs; you may
+have to test each of them:
+
+```bash
+$ ./developer/bin/list_url_attributes_on_file <file>
+```
+
+
 
 ### Subversion URLs
 
