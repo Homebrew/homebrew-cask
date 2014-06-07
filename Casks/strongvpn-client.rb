@@ -1,7 +1,8 @@
 class StrongvpnClient < Cask
-  url 'https://mirror2.reliablehosting.com/mac/StrongVPN_Mac_1.0.1.dmg'
+  url 'https://mirror2.reliablehosting.com/mac/StrongVPN_Mac_1.0.4.dmg'
+  appcast 'https://colomovers.com/mac.xml'
   homepage 'http://strongvpn.com/vpnclient.shtml'
-  version '1.0.1'
-  sha256 '435173fb1616d72dc496f9e25bff56f1190cf082a8ec50e7053adbbc200757e9'
+  version '1.0.4'
+  sha256 'cacf4f7a94b1601bae2cf19fe94b6dbae827ed531e05ff0f91723aea5b3845b9'
   link 'StrongVPN Client.app'
 end
