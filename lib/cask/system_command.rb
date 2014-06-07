@@ -3,7 +3,7 @@ require 'open3'
 class Cask::SystemCommand
   def self.run(executable, options={})
     command = _process_options(executable, options)
-    odebug "Executing: #{command.inspect}"
+    odebug "Executing: #{command.utf8_inspect}"
     output = ''
     Open3.popen3(*command) do |stdin, stdout, stderr|
       if options[:input]
@@ -51,7 +51,7 @@ class Cask::SystemCommand
 
   def self._assert_success(status, command, output)
     unless status.success?
-      raise CaskCommandFailedError.new(command.inspect, output)
+      raise CaskCommandFailedError.new(command.utf8_inspect, output)
     end
   end
 
@@ -62,7 +62,7 @@ class Cask::SystemCommand
       raise CaskError.new(<<-ERRMSG)
 Error parsing plist output from command.
   command was:
-  #{command.inspect}
+  #{command.utf8_inspect}
   output we attempted to parse:
   #{output}
         ERRMSG
