@@ -23,7 +23,7 @@ require 'cask/cli/update'
 class Cask::CLI
   ISSUES_URL = "https://github.com/caskroom/homebrew-cask/issues"
   def self.commands
-    Cask::CLI.constants - ["NullCommand", "ISSUES_URL"]
+    Cask::CLI.constants - [:NullCommand, :ISSUES_URL, "NullCommand", "ISSUES_URL"]
   end
 
   def self.lookup_command(command_string)
