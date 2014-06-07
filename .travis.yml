@@ -12,7 +12,7 @@ before_install:
   - brew install unar
   - sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin/gem" install bundler
 install:
- - sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin/bundle"
+ - sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin/bundle" --system
 before_script:
   - printenv PATH
   - /usr/bin/which ruby
