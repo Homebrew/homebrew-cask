@@ -8,6 +8,12 @@ before_install:
   - rvm use system
   - PATH="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin":"$PATH"
   - brew update
+  - printenv PATH
+  - /usr/bin/which ruby
+  - ruby --version
+  - /usr/bin/which rake
+  - rake --version
+  - ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin"
 
 install:
   - brew install cabextract
