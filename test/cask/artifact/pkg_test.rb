@@ -84,25 +84,25 @@ describe Cask::Artifact::Pkg do
       )
       Cask::FakeSystemCommand.stubs_command(
         ['/usr/bin/sudo', '-E', '--', '/bin/launchctl', 'list', '-x', 'my.fancy.package.service'],
-        <<-PLIST
+        <<-"PLIST"
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Label</key>
-	<string>my.fancy.package.service</string>
-	<key>LastExitStatus</key>
-	<integer>0</integer>
-	<key>LimitLoadToSessionType</key>
-	<string>System</string>
-	<key>OnDemand</key>
-	<true/>
-	<key>ProgramArguments</key>
-	<array>
-		<string>argument</string>
-	</array>
-	<key>TimeOut</key>
-	<integer>30</integer>
+\t<key>Label</key>
+\t<string>my.fancy.package.service</string>
+\t<key>LastExitStatus</key>
+\t<integer>0</integer>
+\t<key>LimitLoadToSessionType</key>
+\t<string>System</string>
+\t<key>OnDemand</key>
+\t<true/>
+\t<key>ProgramArguments</key>
+\t<array>
+\t\t<string>argument</string>
+\t</array>
+\t<key>TimeOut</key>
+\t<integer>30</integer>
 </dict>
 </plist>
         PLIST
