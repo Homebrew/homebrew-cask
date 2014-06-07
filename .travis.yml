@@ -18,7 +18,7 @@ matrix:
 # informational feedback
 before_install:
   - rvm use system
-  - PATH="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin":"$PATH"
+  - export PATH="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin":"$PATH"
   - brew update
   - printenv PATH
   - /usr/bin/which ruby
