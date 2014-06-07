@@ -10,7 +10,7 @@ before_install:
   - brew update
   - brew install cabextract
   - brew install unar
-  - sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin/gem" install bundler
+  - sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin/gem" install bundler --bindir="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin"
 install:
  - sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_SYSTEM_RUBY_VERSION}/usr/bin/bundle" --system
 before_script:
