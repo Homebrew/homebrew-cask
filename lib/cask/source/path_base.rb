@@ -15,8 +15,23 @@ class Cask::Source::PathBase
   end
 
   def load
-    require path
-    Cask.const_get(cask_class_name).new
+    raise CaskError.new "File '#{path}' does not exist"      unless path.exist?
+    raise CaskError.new "File '#{path}' is not readable"     unless path.readable?
+    raise CaskError.new "File '#{path}' is not a plain file" unless path.file?
+    begin
+      require path
+    rescue CaskError, StandardError, ScriptError => e
+      # bug: e.message.concat doesn't work with CaskError exceptions
+      e.message.concat(" while loading '#{path}'")
+      raise e
+    end
+    begin
+      Cask.const_get(cask_class_name).new
+    rescue CaskError, StandardError, ScriptError => e
+      # bug: e.message.concat doesn't work with CaskError exceptions
+      e.message.concat(" while instantiating '#{cask_class_name}' from '#{path}'")
+      raise e
+    end
   end
 
   def cask_class_name
