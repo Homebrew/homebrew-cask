@@ -255,6 +255,12 @@ When an App already exists in the main repo, alternate versions can be Casked
 and submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
 Nightly builds always go in [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
 
+### Trial Versions
+
+Before submitting a trial, please make sure it can be made into a full working version
+without the need to be redownloaded. If an App provides a trial but the only way to buy the full version
+is via the Mac App Store, it does not currently belong in any of the official repos.
+
 ### Unofficial Builds
 
 When an App developer does not offer a binary download, please submit the
