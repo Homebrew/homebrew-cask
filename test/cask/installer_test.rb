@@ -168,18 +168,19 @@ describe Cask::Installer do
       with_macosx_dir.destination_path.join('__MACOSX').wont_be :directory?
     end
 
-    it "prevents already installed casks from being installed" do
+    # unlike the CLI, the internal interface throws exception on double-install
+    it "installer method raises an exception when already-installed casks are attempted" do
       transmission = Cask.load('local-transmission')
       transmission.installed?.must_equal false
       installer = Cask::Installer.new(transmission)
 
       shutup { installer.install }
       lambda {
-        shutup { installer.install }
+        installer.install
       }.must_raise(CaskAlreadyInstalledError)
     end
 
-    it "allows already installed casks to being installed if force is provided" do
+    it "allows already-installed casks to be installed if force is provided" do
       transmission = Cask.load('local-transmission')
       transmission.installed?.must_equal false
       installer = Cask::Installer.new(transmission)
