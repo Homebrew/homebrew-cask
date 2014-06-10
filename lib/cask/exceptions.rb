@@ -40,7 +40,7 @@ class CaskAlreadyInstalledError < CaskError
   end
 
   def to_s
-    "Cask for #{name} is already installed. Use `--force` to install anyways."
+    "Cask for #{name} is already installed. Use `--force` to force re-install."
   end
 end
 
