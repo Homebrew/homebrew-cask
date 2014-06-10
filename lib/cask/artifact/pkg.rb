@@ -99,7 +99,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
 
     # :launchctl must come before :quit/:signal for cases where app would instantly re-launch
     if uninstall_options.key? :launchctl
-      [*uninstall_options[:launchctl]].each do |service|
+      Array(uninstall_options[:launchctl]).each do |service|
         ohai "Removing launchctl service #{service}"
         [false, true].each do |with_sudo|
           xml_status = @command.run('/bin/launchctl', :args => ['list', '-x', service], :sudo => with_sudo)
@@ -115,7 +115,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
 
     # :quit/:signal must come before :kext so the kext will not be in use by a running process
     if uninstall_options.key? :quit
-      [*uninstall_options[:quit]].each do |id|
+      Array(uninstall_options[:quit]).each do |id|
         ohai "Quitting application ID #{id}"
         num_running = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to count processes whose bundle identifier is "#{id}"}], :sudo => true).to_i
         if num_running > 0
@@ -127,7 +127,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
 
     # :signal should come after :quit so it can be used as a backup when :quit fails
     if uninstall_options.key? :signal
-      [*uninstall_options[:signal]].each do |pair|
+      Array(uninstall_options[:signal]).each do |pair|
         raise CaskInvalidError.new(@cask, 'Each uninstall :signal must have 2 elements.') unless pair.length == 2
         signal, id = pair
         ohai "Signalling application ID #{id}"
@@ -151,7 +151,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
 
     # :kext should be unloaded before attempting to delete the relevant file
     if uninstall_options.key? :kext
-      [*uninstall_options[:kext]].each do |kext|
+      Array(uninstall_options[:kext]).each do |kext|
         ohai "Unloading kernel extension #{kext}"
         is_loaded = @command.run!('/usr/sbin/kextstat', :args => ['-l', '-b', kext], :sudo => true)
         if is_loaded.length > 1
@@ -178,7 +178,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     end
 
     if uninstall_options.key? :files
-      uninstall_options[:files].each do |file|
+      Array(uninstall_options[:files]).each do |file|
         ohai "Removing file #{file}"
         @command.run!('/bin/rm', :args => ['-rf', '--', file], :sudo => true)
       end
