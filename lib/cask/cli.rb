@@ -181,16 +181,25 @@ class Cask::CLI
     end
 
     def purpose
+      puts "#{Tty.em}brew-cask#{Tty.reset}"
       puts <<-PURPOSE.undent
-      {{ brew-cask }}
         brew-cask provides a friendly homebrew-style CLI workflow for the
-        administration of Mac applications distributed as binaries
+        administration of Mac applications distributed as binaries.
+        
       PURPOSE
     end
 
     def usage
-      puts "available commands: "
-      puts Cask::CLI.commands.map {|c| " - #{c.downcase}: #{_help_for(c)}"}.join("\n")
+      longest_command_name = Cask::CLI.commands.max { |a,b| "#{a}".length <=> "#{b}".length }
+      longest_command_size = longest_command_name.size
+      
+      puts "Commands:"
+      puts ""
+      Cask::CLI.commands.each do |c|
+        command = "#{c.downcase}".ljust(longest_command_size)
+        puts "    #{command}  #{_help_for(c)}"
+      end
+      puts 
     end
 
     def help
