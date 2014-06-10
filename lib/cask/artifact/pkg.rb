@@ -63,7 +63,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
   end
 
   def uninstall
-    @cask.artifacts[:uninstall].each { |opts| manually_uninstall(opts) }
+    manually_uninstall(@cask.artifacts[:uninstall])
   end
 
   def run_installer(pkg_description)
@@ -78,18 +78,20 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     @command.run!('/usr/sbin/installer', {:sudo => true, :args => args, :print => true})
   end
 
-  def manually_uninstall(uninstall_options)
+  def manually_uninstall(uninstall_set)
     ohai "Running uninstall process for #{@cask}; your password may be necessary"
 
-    unknown_keys = uninstall_options.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :files]
-    unless unknown_keys.empty?
-      opoo "Unknown arguments to uninstall: #{unknown_keys.join(", ")}. Running `brew update; brew upgrade brew-cask` will likely fix it.'"
+    uninstall_set.each do |uninstall_options|
+      unknown_keys = uninstall_options.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :files]
+      unless unknown_keys.empty?
+        opoo "Unknown arguments to uninstall: #{unknown_keys.join(", ")}. Running `brew update; brew upgrade brew-cask` will likely fix it.'"
+      end
     end
 
     # Preserve prior functionality of script which runs first. Should rarely be needed.
     # :early_script should not delete files, better defer that to :script.
     # If Cask writers never need :early_script it may be removed in the future.
-    if uninstall_options.key? :early_script
+    uninstall_set.select{ |h| h.key?(:early_script) }.each do |uninstall_options|
       executable, script_arguments = self.class.read_script_arguments(uninstall_options, :early_script)
       ohai "Running uninstall script #{executable}"
       raise CaskInvalidError.new(@cask, 'uninstall :early_script without :executable') if executable.nil?
@@ -98,8 +100,8 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     end
 
     # :launchctl must come before :quit/:signal for cases where app would instantly re-launch
-    if uninstall_options.key? :launchctl
-      [*uninstall_options[:launchctl]].each do |service|
+    uninstall_set.select{ |h| h.key?(:launchctl) }.each do |uninstall_options|
+      Array(uninstall_options[:launchctl]).each do |service|
         ohai "Removing launchctl service #{service}"
         [false, true].each do |with_sudo|
           xml_status = @command.run('/bin/launchctl', :args => ['list', '-x', service], :sudo => with_sudo)
@@ -114,8 +116,8 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     end
 
     # :quit/:signal must come before :kext so the kext will not be in use by a running process
-    if uninstall_options.key? :quit
-      [*uninstall_options[:quit]].each do |id|
+    uninstall_set.select{ |h| h.key?(:quit) }.each do |uninstall_options|
+      Array(uninstall_options[:quit]).each do |id|
         ohai "Quitting application ID #{id}"
         num_running = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to count processes whose bundle identifier is "#{id}"}], :sudo => true).to_i
         if num_running > 0
@@ -126,11 +128,11 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     end
 
     # :signal should come after :quit so it can be used as a backup when :quit fails
-    if uninstall_options.key? :signal
-      [*uninstall_options[:signal]].each do |pair|
+    uninstall_set.select{ |h| h.key?(:signal) }.each do |uninstall_options|
+      Array(uninstall_options[:signal]).flatten.each_slice(2) do |pair|
         raise CaskInvalidError.new(@cask, 'Each uninstall :signal must have 2 elements.') unless pair.length == 2
         signal, id = pair
-        ohai "Signalling application ID #{id}"
+        ohai "Signalling '#{signal}' to application ID '#{id}'"
         pid_string = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to get the unix id of every process whose bundle identifier is "#{id}"}], :sudo => true)
         if pid_string.match(%r{\A\d+(?:\s*,\s*\d+)*\Z})    # sanity check
           pids = pid_string.split(%r{\s*,\s*}).map(&:strip).map(&:to_i)
@@ -150,8 +152,8 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     end
 
     # :kext should be unloaded before attempting to delete the relevant file
-    if uninstall_options.key? :kext
-      [*uninstall_options[:kext]].each do |kext|
+    uninstall_set.select{ |h| h.key?(:kext) }.each do |uninstall_options|
+      Array(uninstall_options[:kext]).each do |kext|
         ohai "Unloading kernel extension #{kext}"
         is_loaded = @command.run!('/usr/sbin/kextstat', :args => ['-l', '-b', kext], :sudo => true)
         if is_loaded.length > 1
@@ -162,14 +164,14 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     end
 
     # :script must come before :pkgutil or :files so that the script file is not already deleted
-    if uninstall_options.key? :script
+    uninstall_set.select{ |h| h.key?(:script) }.each do |uninstall_options|
       executable, script_arguments = self.class.read_script_arguments(uninstall_options, :script)
       raise CaskInvalidError.new(@cask, 'uninstall :script without :executable.') if executable.nil?
       @command.run(@cask.destination_path.join(executable), script_arguments)
       sleep 1
     end
 
-    if uninstall_options.key? :pkgutil
+    uninstall_set.select{ |h| h.key?(:pkgutil) }.each do |uninstall_options|
       ohai "Removing files from pkgutil Bill-of-Materials"
       Array(uninstall_options[:pkgutil]).each do |regexp|
         pkgs = Cask::Pkg.all_matching(regexp, @command)
@@ -177,10 +179,10 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       end
     end
 
-    if uninstall_options.key? :files
-      uninstall_options[:files].each do |file|
-        ohai "Removing file #{file}"
-        @command.run!('/bin/rm', :args => ['-rf', '--', file], :sudo => true)
+    uninstall_set.select{ |h| h.key?(:files) }.each do |uninstall_options|
+      Array(uninstall_options[:files]).flatten.each_slice(500) do |file_slice|
+        ohai "Removing files: #{file_slice.utf8_inspect}"
+        @command.run!('/bin/rm', :args => file_slice.unshift('-rf', '--'), :sudo => true)
       end
     end
   end
