@@ -130,7 +130,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       Array(uninstall_options[:signal]).flatten.each_slice(2) do |pair|
         raise CaskInvalidError.new(@cask, 'Each uninstall :signal must have 2 elements.') unless pair.length == 2
         signal, id = pair
-        ohai "Signalling application ID #{id}"
+        ohai "Signalling '#{signal}' to application ID '#{id}'"
         pid_string = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to get the unix id of every process whose bundle identifier is "#{id}"}], :sudo => true)
         if pid_string.match(%r{\A\d+(?:\s*,\s*\d+)*\Z})    # sanity check
           pids = pid_string.split(%r{\s*,\s*}).map(&:strip).map(&:to_i)
