@@ -133,6 +133,16 @@ We recommend the following:
 	/<path>/<to>/<private>/<repo>/developer/bin/production_brew_cask
 	```
 
+## How Can I Force a Specific Ruby Interpreter?
+
+You can force a specific version of the Ruby interpreter, and/or an
+alternate version of the `brew-cask` subcommand, by invoking `brew cask`
+with fully-qualified paths, like this:
+
+```bash
+$ HOMEBREW_BREW_FILE=/usr/local/bin/brew /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/brew.rb /usr/local/bin/brew-cask.rb help
+```
+
 ## Hanging out on IRC
 
 We're on IRC at `#homebrew-cask` on Freenode. If you are going to develop for
