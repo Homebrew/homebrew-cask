@@ -69,8 +69,12 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
   def run_installer(pkg_description)
     load_pkg_description pkg_description
     ohai "Running installer for #{@cask}; your password may be necessary."
+    source = @cask.destination_path.join(pkg_relative_path)
+    unless source.exist?
+      raise CaskError.new "pkg source file not found: '#{source}'"
+    end
     args = [
-      '-pkg',    @cask.destination_path.join(pkg_relative_path),
+      '-pkg',    source,
       '-target', '/'
     ]
     args << '-verboseR' if ARGV.verbose?
