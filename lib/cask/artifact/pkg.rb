@@ -127,7 +127,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
 
     # :signal should come after :quit so it can be used as a backup when :quit fails
     if uninstall_options.key? :signal
-      Array(uninstall_options[:signal]).each do |pair|
+      Array(uninstall_options[:signal]).flatten.each_slice(2) do |pair|
         raise CaskInvalidError.new(@cask, 'Each uninstall :signal must have 2 elements.') unless pair.length == 2
         signal, id = pair
         ohai "Signalling application ID #{id}"
