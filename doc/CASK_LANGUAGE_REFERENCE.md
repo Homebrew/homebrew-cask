@@ -401,12 +401,22 @@ the desired Unix signal followed by the corresponding bundle ID.
 The Unix signal may be given in numeric or string form (see the `kill`
 man page for more details).
 
-The `:signal` array is executed in order.  A bundle ID may be repeated to
-send more than one signal to the same process.  Example:
+The elements of the `:signal` array are applied in order, only if there is
+an existing process associated the bundle ID, and stopping when that process
+terminates.  A bundle ID may be repeated to send more than one signal to the
+same process.
+
+It is better to use the least-severe signals which are sufficient to stop
+a process.  The `KILL` signal in particular can have unwanted side-effects.
+
+An example, with commonly-used signals in ascending order of severity:
 
 ```ruby
   uninstall :signal => [
-                        ['INT', 'fr.madrau.switchresx.daemon'],
+                        ['TERM', 'fr.madrau.switchresx.daemon'],
+                        ['QUIT', 'fr.madrau.switchresx.daemon'],
+                        ['INT',  'fr.madrau.switchresx.daemon'],
+                        ['HUP',  'fr.madrau.switchresx.daemon'],
                         ['KILL', 'fr.madrau.switchresx.daemon'],
                        ]
 ```
@@ -414,10 +424,10 @@ send more than one signal to the same process.  Example:
 Note that when multiple running processes match the given Bundle ID, all
 matching processes will be signaled.
 
-Unlike `:quit` commands, Unix signals originate from the current user, not
+Unlike `:quit` directives, Unix signals originate from the current user, not
 from the superuser.  This is construed as a safety feature, since the
 superuser is capable of bringing down the system via signals.  However, this
-inconsistency may also be considered a bug and should be addressed in some
+inconsistency may also be considered a bug, and should be addressed in some
 fashion in a future version.
 
 ### Uninstall Key :kext
