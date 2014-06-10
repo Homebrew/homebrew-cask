@@ -1,5 +1,6 @@
 class RawPhotoProcessor < Cask
   url 'http://www.raw-photo-processor.com/RPP/RPP_64.zip'
+  appcast 'http://www.raw-photo-processor.com/rpp_updates.xml'
   homepage 'http://www.raw-photo-processor.com/RPP/Overview.html'
   version '4.7.2'
   nested_container 'RPP472_1672_64.dmg'
