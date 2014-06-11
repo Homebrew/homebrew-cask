@@ -19,14 +19,14 @@ PROJECT_URL = 'https://github.com/caskroom/homebrew-cask'
 MAINTAINERS = %w[
                   phinze
                   fanquake
-                  kevinSuttle
                   leoj3n
                   NanoXD
-                  passcod
                   rolandwalker
                   vitorgalvao
                   alebcay
                   ndr-qef
+                  goxberry
+                  jimbojsb
                  ]
 
 CODE_PATHS = %w[
