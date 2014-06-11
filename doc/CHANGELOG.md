@@ -1,5 +1,34 @@
 # CHANGELOG
 
+## 0.36.1
+
+* __Casks__
+ - 8 Casks added (121 updated) by 17 contributors since 0.36.0
+ - 1599 total Casks
+* __Features__
+ - [#4782][] reformat CLI help output <3 [@Zearin][]
+ - [#4807][] allow invocation of subcommand with full paths
+* __Fixes__
+ - [#4812][] Installation should fail if pkg file nonexistent
+ - [#4787][] Downgrade Cask install errors to warnings
+ - [#4804][] `uninstall` improvements
+     - Ruby 2.0 fix: coerce `:files` to Array in `uninstall`
+     - multiple `uninstall` stanza support
+     - improve `:signal` debug message
+     - `uninstall` `:files` in chunks
+     - more robust `:signal` directive in DSL
+* __Documentation__
+ - 3 doc commits since 0.36.0
+* __Breaking Changes__
+ - none
+
+[#4782]: https://github.com/caskroom/homebrew-cask/issues/4782
+[@Zearin]: https://github.com/Zearin
+[#4812]: https://github.com/caskroom/homebrew-cask/issues/4812
+[#4807]: https://github.com/caskroom/homebrew-cask/issues/4807
+[#4787]: https://github.com/caskroom/homebrew-cask/issues/4787
+[#4804]: https://github.com/caskroom/homebrew-cask/issues/4804
+
 ## 0.36.0
 
 * __Casks__
@@ -50,7 +79,7 @@
 [#4650]: https://github.com/caskroom/homebrew-cask/issues/4650
 [#4616]: https://github.com/caskroom/homebrew-cask/issues/4616
 [@radeksimko]: https://github.com/radeksimko
-[@wizonesolutions][]: https://github.com/wizonesolutions
+[@wizonesolutions]: https://github.com/wizonesolutions
 [#4603]: https://github.com/caskroom/homebrew-cask/issues/4603
 [#4559]: https://github.com/caskroom/homebrew-cask/issues/4559
 [#4508]: https://github.com/caskroom/homebrew-cask/issues/4508
