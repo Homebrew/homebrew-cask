@@ -3,5 +3,5 @@ class Tvmobili < Cask
   homepage 'http://www.tvmobili.com/'
   version 'latest'
   sha256 :no_check
-  install 'tvmobili-mountainlion-universal.2.1.4309.pkg'
+  install 'tvmobili-mountainlion-universal.2.1.4481.pkg'
 end
