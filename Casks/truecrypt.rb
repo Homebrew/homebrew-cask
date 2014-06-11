@@ -11,4 +11,5 @@ class Truecrypt < Cask
       http://truecrypt.sourceforge.net/
     EOS
   end
+  uninstall :pkgutil => 'org.TrueCryptFoundation.TrueCrypt'
 end
