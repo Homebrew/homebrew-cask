@@ -229,10 +229,16 @@ def header
 ## #{next_release.sub(/^v/,'')}
 
 * __Casks__
+ - N Casks added ...
+ - N total Casks
 * __Features__
+ - none
 * __Fixes__
+ - none
 * __Documentation__
+ - none
 * __Breaking Changes__
+ - none
 EOT
 end
 
