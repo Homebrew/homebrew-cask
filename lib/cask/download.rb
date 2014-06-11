@@ -18,8 +18,8 @@ class Cask::Download
     downloader.clear_cache if force
     begin
       downloaded_path = downloader.fetch
-    rescue StandardError
-      raise CaskError.new("Download failed on Cask '#{@cask}'")
+    rescue StandardError => e
+      raise CaskError.new("Download failed on Cask '#{@cask}' with message: #{e}")
     end
     begin
       # this symlink helps track which downloads are ours
