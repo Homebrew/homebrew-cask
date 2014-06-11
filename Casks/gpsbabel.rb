@@ -1,18 +1,21 @@
-def get_token(unix_timestamp)
-  _hour_in_sec = 60 * 60
-  _constant = 1480813383
-
-  unix_hours = unix_timestamp / _hour_in_sec
-  token = _constant + unix_hours
-
-  token.to_s(16)
-end
-
 class Gpsbabel < Cask
+
+  module Utils
+    def self.get_token(unix_timestamp)
+      _hour_in_sec = 60 * 60
+      _constant = 1480813383
+
+      unix_hours = unix_timestamp / _hour_in_sec
+      token = _constant + unix_hours
+
+      token.to_s(16)
+    end
+  end
+
   url 'http://www.gpsbabel.org/plan9.php',
     :data => {
       'dl' => 'GPSBabel-1.5.1.dmg',
-      'token' => get_token(Time.now.utc.to_i)
+      'token' => Utils.get_token(Time.now.utc.to_i)
     },
     :using => :post
   homepage 'http://www.gpsbabel.org'
