@@ -46,7 +46,9 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'appcast' stanza may only appear once")
       end
       @appcast ||= begin
-        Cask::UnderscoreSupportingURI.parse(*args) unless args.empty?
+        Cask::Appcast.new(*args) unless args.empty?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
       end
     end
 
