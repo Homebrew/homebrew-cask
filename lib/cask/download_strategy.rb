@@ -17,7 +17,7 @@ module Cask::DownloadStrategy
       cask.title,
       ::Resource.new(cask.title) do |r|
         r.url     cask.url.to_s
-        r.version cask.version
+        r.version cask.version.to_s
       end
     )
   end

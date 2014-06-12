@@ -135,7 +135,7 @@ class Cask
   end
 
   def destination_path
-    caskroom_path.join(version)
+    caskroom_path.join(version.to_s)
   end
 
   def installed?
