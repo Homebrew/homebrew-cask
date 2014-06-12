@@ -16,6 +16,7 @@ Domain-Specific Language (DSL) which are not needed in most cases.
  * [Link Stanza Details](#link-stanza-details)
  * [Install Stanza Details](#install-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
+ * [Arbitrary Ruby Methods](#arbitrary-ruby-methods)
 
 
 ## Casks Are Ruby Classes
@@ -476,5 +477,30 @@ A fully manual method for finding bundle ids in a package file follows:
      `find /tmp/expanded.unpkg -name PackageInfo -print0 | xargs -0 grep -i kext` should return a `<bundle id>` tag with a `path`
      attribute that contains a `.kext` extension, for example `<bundle id="com.wavtap.driver.WavTap" ... path="./WavTap.kext" ... />`.
   5. Once bundle ids have been identified, the unpacked package directory can be deleted.
+
+
+## Arbitrary Ruby Methods
+
+In the exceptional case that the Cask DSL is insufficient, it is possible to
+define arbitrary Ruby methods inside the Cask by creating a `Utils` namespace:
+
+```ruby
+class Appname < Cask
+  Module Utils
+    def self.arbitrary_method
+      ...
+    end
+  end
+
+  url "https://#{Utils.arbitrary_method}"
+  homepage 'http://www.example.com/'
+  ...
+end
+```
+
+Example: [gpsbabel.rb](../Casks/gpsbabel.rb)
+
+This should be used sparingly: any method which is needed by two or more
+Casks should instead be rolled into the core.
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3
