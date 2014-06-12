@@ -19,14 +19,14 @@ PROJECT_URL = 'https://github.com/caskroom/homebrew-cask'
 MAINTAINERS = %w[
                   phinze
                   fanquake
-                  kevinSuttle
                   leoj3n
                   NanoXD
-                  passcod
                   rolandwalker
                   vitorgalvao
                   alebcay
                   ndr-qef
+                  goxberry
+                  jimbojsb
                  ]
 
 CODE_PATHS = %w[
@@ -229,10 +229,16 @@ def header
 ## #{next_release.sub(/^v/,'')}
 
 * __Casks__
+ - N Casks added ...
+ - N total Casks
 * __Features__
+ - none
 * __Fixes__
+ - none
 * __Documentation__
+ - none
 * __Breaking Changes__
+ - none
 EOT
 end
 
