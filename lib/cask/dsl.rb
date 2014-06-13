@@ -6,6 +6,12 @@ module Cask::DSL
     base.extend(ClassMethods)
   end
 
+  # Slightly confusing: there is a method  "dsl" inside the
+  # namespace Cask::DSL.  Lowercase "dsl" follows the Cask
+  # stanza "dsl", which is nothing more than a version number
+  # for the Cask language spec.
+  def dsl; self.class.dsl; end
+
   def homepage; self.class.homepage; end
 
   def url; self.class.url; end
@@ -25,6 +31,13 @@ module Cask::DSL
   def caveats; self.class.caveats; end
 
   module ClassMethods
+    def dsl(arg=nil)
+      if @dsl and !arg.nil?
+        raise CaskInvalidError.new(self.title, "'dsl' stanza may only appear once")
+      end
+      @dsl ||= arg
+    end
+
     def homepage(homepage=nil)
       if @homepage and !homepage.nil?
         raise CaskInvalidError.new(self.title, "'homepage' stanza may only appear once")

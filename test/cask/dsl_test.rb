@@ -112,4 +112,18 @@ describe Cask::DSL do
     }.must_raise(CaskInvalidError)
     err.message.must_include "'version' stanza may only appear once"
   end
+
+  describe "dsl stanza" do
+    it "allows dsl version to be defined" do
+      cask = Cask.load('with-dsl-stanza')
+      cask.dsl.to_s.must_match %r{\S}
+    end
+
+    it "prevents defining dsl version multiple times" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-dsl-stanza-multiple')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'dsl' stanza may only appear once"
+    end
+  end
 end
