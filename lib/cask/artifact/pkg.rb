@@ -63,7 +63,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
   end
 
   def uninstall
-    dispatch_uninstall_directives(@cask.artifacts[:uninstall])
+    dispatch_uninstall_directives(:uninstall)
   end
 
   def run_installer(pkg_description)
@@ -82,7 +82,8 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     @command.run!('/usr/sbin/installer', {:sudo => true, :args => args, :print => true})
   end
 
-  def dispatch_uninstall_directives(uninstall_set)
+  def dispatch_uninstall_directives(stanza)
+    uninstall_set = @cask.artifacts[stanza]
     ohai "Running uninstall process for #{@cask}; your password may be necessary"
 
     uninstall_set.each do |uninstall_options|
