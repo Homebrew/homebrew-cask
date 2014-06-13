@@ -84,12 +84,12 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
 
   def dispatch_uninstall_directives(stanza)
     uninstall_set = @cask.artifacts[stanza]
-    ohai "Running uninstall process for #{@cask}; your password may be necessary"
+    ohai "Running #{stanza} process for #{@cask}; your password may be necessary"
 
     uninstall_set.each do |uninstall_options|
       unknown_keys = uninstall_options.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :files]
       unless unknown_keys.empty?
-        opoo %Q{Unknown arguments to uninstall: #{unknown_keys.join(", ")}. Running "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" will likely fix it.}
+        opoo %Q{Unknown arguments to #{stanza}: #{unknown_keys.inspect}. Running "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" will likely fix it.}
       end
     end
 
@@ -99,7 +99,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     uninstall_set.select{ |h| h.key?(:early_script) }.each do |uninstall_options|
       executable, script_arguments = self.class.read_script_arguments(uninstall_options, :early_script)
       ohai "Running uninstall script #{executable}"
-      raise CaskInvalidError.new(@cask, 'uninstall :early_script without :executable') if executable.nil?
+      raise CaskInvalidError.new(@cask, "#{stanza} :early_script without :executable") if executable.nil?
       @command.run(@cask.destination_path.join(executable), script_arguments)
       sleep 1
     end
@@ -135,7 +135,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     # :signal should come after :quit so it can be used as a backup when :quit fails
     uninstall_set.select{ |h| h.key?(:signal) }.each do |uninstall_options|
       Array(uninstall_options[:signal]).flatten.each_slice(2) do |pair|
-        raise CaskInvalidError.new(@cask, 'Each uninstall :signal must have 2 elements.') unless pair.length == 2
+        raise CaskInvalidError.new(@cask, "Each #{stanza} :signal must have 2 elements.") unless pair.length == 2
         signal, id = pair
         ohai "Signalling '#{signal}' to application ID '#{id}'"
         pid_string = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to get the unix id of every process whose bundle identifier is "#{id}"}], :sudo => true)
@@ -171,7 +171,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     # :script must come before :pkgutil or :files so that the script file is not already deleted
     uninstall_set.select{ |h| h.key?(:script) }.each do |uninstall_options|
       executable, script_arguments = self.class.read_script_arguments(uninstall_options, :script)
-      raise CaskInvalidError.new(@cask, 'uninstall :script without :executable.') if executable.nil?
+      raise CaskInvalidError.new(@cask, "#{stanza} :script without :executable.") if executable.nil?
       @command.run(@cask.destination_path.join(executable), script_arguments)
       sleep 1
     end
