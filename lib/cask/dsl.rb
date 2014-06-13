@@ -121,7 +121,8 @@ module Cask::DSL
 
     SPECIAL_ARTIFACT_TYPES = [
       :nested_container,
-      :uninstall
+      :uninstall,
+      :zap,
     ]
 
     SPECIAL_ARTIFACT_TYPES.each do |type|
