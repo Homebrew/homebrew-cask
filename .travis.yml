@@ -9,14 +9,18 @@ language: objective-c
 # "Current" is currently a duplicate of either 1.8 or 2.0, depending on OS version
 env:
   matrix:
-    - CASK_RUBY_TEST_VERSION="1.8"
-    - CASK_RUBY_TEST_VERSION="2.0"
-    - CASK_RUBY_TEST_VERSION="Current"
+    - CASK_TEST_RUBY_VERSION="1.8"
+    - CASK_TEST_RUBY_VERSION="1.9"
+    - CASK_TEST_RUBY_VERSION="2.0"
+    - CASK_TEST_RUBY_VERSION="2.1"
+    - CASK_TEST_RUBY_VERSION="Current"
 
 # permit "Current" to fail without affecting our badge
 matrix:
   allow_failures:
-    - env: CASK_RUBY_TEST_VERSION="Current"
+    - env: CASK_TEST_RUBY_VERSION="Current"
+    - env: CASK_TEST_RUBY_VERSION="1.9"
+    - env: CASK_TEST_RUBY_VERSION="2.1"
 
 # before_install steps
 # * turn off RVM
@@ -24,15 +28,17 @@ matrix:
 # * update Homebrew
 # * informational feedback
 before_install:
+  - echo ls_rvm_dir; ls /Users/travis/.rvm/rubies
   - rvm use system
-  - export PATH="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin":"$PATH"
+  - test -e "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_TEST_RUBY_VERSION}/usr/bin" && export CASK_RUBY_BIN_DIR="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_TEST_RUBY_VERSION}/usr/bin" || export CASK_RUBY_BIN_DIR="/Users/travis/.rvm/rubies/${CASK_TEST_RUBY_VERSION}/bin"
+  - export PATH="${CASK_RUBY_BIN_DIR}/usr/bin":"$PATH"
   - brew update
   - printenv PATH
   - /usr/bin/which ruby
   - ruby --version
   - /usr/bin/which rake
   - rake --version
-  - echo ls_ruby_bindir; ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin"
+  - echo ls_ruby_bindir; ls "${CASK_RUBY_BIN_DIR}"
 
 # install steps
 # * brew Formulae without which some tests will be skipped
@@ -41,11 +47,12 @@ before_install:
 install:
   - brew install cabextract
   - brew install unar
-  - echo gem_install_bundler; sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/gem" install bundler --bindir="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin"
-  - echo bundle; sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/bundle" --system
+  - echo gem_install_bundler; sudo "${CASK_RUBY_BIN_DIR}/gem" install bundler --bindir="${CASK_RUBY_BIN_DIR}"
+  - echo bundle; sudo "${CASK_RUBY_BIN_DIR}/bundle" --system
 
 # informational feedback
 before_script:
+  - echo ls_rvm_dir; ls /Users/travis/.rvm/rubies
   - printenv PATH
   - /usr/bin/which ruby
   - ruby --version
@@ -53,12 +60,12 @@ before_script:
   - bundle --version
   - /usr/bin/which rake
   - rake --version
-  - echo ls_ruby_bindir; ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin"
+  - echo ls_ruby_bindir; ls "${CASK_RUBY_BIN_DIR}"
 
 # the test itself
 # path-quoting is different here due to YAML constraints
 script:
-  - /System/Library/Frameworks/Ruby.framework/Versions/"${CASK_RUBY_TEST_VERSION}"/usr/bin/bundle exec "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/rake" test
+  - /"${CASK_RUBY_BIN_DIR}"/bundle exec "${CASK_RUBY_BIN_DIR}/rake" test
 
 notifications:
   irc:
