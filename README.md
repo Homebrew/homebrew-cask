@@ -66,7 +66,7 @@ Before reporting a bug, make sure you have the latest versions of Homebrew,
 homebrew-cask, and all Taps by running the following command:
 
 ```bash
-$ brew update && brew upgrade brew-cask && brew cleanup
+$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 ```
 
 ## License:
