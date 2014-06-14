@@ -1,5 +1,24 @@
 # CHANGELOG
 
+## 0.36.2
+
+* __Casks__
+ - 9 Casks added (38 updated) by 25 contributors since 0.36.1
+ - 1608 total Casks
+* __Features__
+ - [#4830][] add some detail when rescuing download errors
+* __Fixes__
+ - [#4881][] fix encoding typo
+ - [#4828][] better stubs for changelog docs, update contributor list
+* __Documentation__
+ - none
+* __Breaking Changes__
+ - none
+
+[#4881]: https://github.com/caskroom/homebrew-cask/issues/4881
+[#4830]: https://github.com/caskroom/homebrew-cask/issues/4830
+[#4828]: https://github.com/caskroom/homebrew-cask/issues/4828
+
 ## 0.36.1
 
 * __Casks__
