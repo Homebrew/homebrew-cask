@@ -16,9 +16,9 @@ if defined?(Encoding)
   Encoding.default_external = Encoding::UTF_8
   # encode ARGV
   utf8_argv = ARGV.map do |arg|
-    if arg.encoding == Encoding::UTF_8    or
-       arg.encoding == Encoding::US_ASCII or    # these two happen when
-       arg.encoding == Encoding::US_ASCII_8BIT  # LANG is unset
+    if arg.encoding == Encoding::UTF_8      or
+       arg.encoding == Encoding::US_ASCII   or # these two may happen
+       arg.encoding == Encoding::ASCII_8BIT    # when LANG is unset
       arg.dup.force_encoding('UTF-8')
     else
       arg.dup.encode('UTF-8')
