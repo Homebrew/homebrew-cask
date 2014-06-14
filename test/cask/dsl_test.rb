@@ -127,5 +127,29 @@ describe Cask::DSL do
     end
   end
 
+  describe "appcast stanza" do
+    it "allows appcasts to be specified" do
+      cask = Cask.load('with-appcast')
+      cask.appcast.to_s.must_match %r{^http}
+    end
+
+    it "prevents defining multiple appcasts" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-appcast-multiple')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'appcast' stanza may only appear once"
+    end
+
+    it "refuses to load invalid appcast URLs" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-appcast-url')
+      }.must_raise(CaskInvalidError)
+    end
+
+    it "refuses to load if appcast :format is invalid" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-appcast-format')
+      }.must_raise(CaskInvalidError)
+    end
   end
 end
