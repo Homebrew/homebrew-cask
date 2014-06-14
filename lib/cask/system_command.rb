@@ -57,7 +57,12 @@ class Cask::SystemCommand
 
   def self._parse_plist(command, output)
     begin
-      Plist::parse_xml(output)
+      raise Plist::ParseError "Empty XML input" unless output =~ %r{\S}
+      xml = Plist::parse_xml(output)
+      unless xml.respond_to?(:keys) and xml.keys.size > 0
+        raise Plist::ParseError "Empty XML output"
+      end
+      xml
     rescue Plist::ParseError
       raise CaskError.new(<<-ERRMSG)
 Error parsing plist output from command.
