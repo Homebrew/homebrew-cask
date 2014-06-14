@@ -30,6 +30,7 @@ class Cask::Container::Dmg < Cask::Container::Base
   end
 
   def mounts_from_plist(plist)
+    return [] unless plist.respond_to?(:fetch)
     plist.fetch('system-entities', []).map do |entity|
       entity['mount-point']
     end.compact
