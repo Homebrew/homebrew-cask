@@ -1,7 +1,7 @@
 class Librecad < Cask
-  url 'https://downloads.sourceforge.net/project/librecad/OSX/2.0.3/LibreCAD-2.0.3.dmg'
-  version '2.0.3'
-  sha256 '8c24a19cb3dc35a4de9c5ce7f18ad32d2809a838050b0fc03173394cabf14843'
+  url 'https://downloads.sourceforge.net/project/librecad/OSX/2.0.4/LibreCAD-2.0.4.dmg'
   homepage 'http://librecad.org/'
+  version '2.0.4'
+  sha256 'f9a2e56c5a4b79275d45d5578f728fbe3e981e04f550229579de71b0e8ce0604'
   link 'LibreCAD.app'
 end
