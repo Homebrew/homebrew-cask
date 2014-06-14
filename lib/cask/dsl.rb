@@ -14,6 +14,8 @@ module Cask::DSL
 
   def version; self.class.version; end
 
+  def license; self.class.license; end
+
   def depends_on_formula; self.class.depends_on_formula; end
 
   def container_type; self.class.container_type; end
@@ -62,6 +64,17 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'version' stanza may only appear once")
       end
       @version ||= version
+    end
+
+    def license(arg=nil)
+      if @license and !arg.nil?
+        raise CaskInvalidError.new(self.title, "'license' stanza may only appear once")
+      end
+      @license ||= begin
+        Cask::License.new(arg) unless arg.nil?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
+      end
     end
 
     def depends_on_formula(*args)
