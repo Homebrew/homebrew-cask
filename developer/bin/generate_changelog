@@ -27,6 +27,7 @@ MAINTAINERS = %w[
                   ndr-qef
                   goxberry
                   jimbojsb
+                  radeksimko
                  ]
 
 CODE_PATHS = %w[
