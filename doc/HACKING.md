@@ -67,6 +67,7 @@ Yes, definitely! We have talked about it, and worked on some aspects
 of it. But there is much left to do:
 
 - <https://github.com/caskroom/homebrew-cask/issues/309>
+- <https://github.com/caskroom/homebrew-cask/issues/4678>
 
 ## What About Installing Multiple Versions of a Package?
 
