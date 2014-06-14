@@ -51,7 +51,7 @@ class Cask::SystemCommand
 
   def self._assert_success(status, command, output)
     unless status.success?
-      raise CaskCommandFailedError.new(command.utf8_inspect, output)
+      raise CaskCommandFailedError.new(command.utf8_inspect, output, status)
     end
   end
 

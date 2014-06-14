@@ -45,9 +45,10 @@ class CaskAlreadyInstalledError < CaskError
 end
 
 class CaskCommandFailedError < CaskError
-  def initialize cmd, output
+  def initialize cmd, output, status
     @cmd = cmd
     @output = output
+    @status = status
   end
 
   def to_s;
@@ -59,6 +60,9 @@ Command failed to execute!
 
 ==> Output of failed command:
 #{@output}
+
+==> Exit status of failed command:
+#{@status.inspect}
     EOS
   end
 end
