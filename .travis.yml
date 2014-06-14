@@ -17,6 +17,7 @@ env:
 matrix:
   allow_failures:
     - env: CASK_RUBY_TEST_VERSION="Current"
+  fast_finish: true
 
 # before_install steps
 # * turn off RVM
