@@ -63,11 +63,13 @@ class Cask::SystemCommand
         raise Plist::ParseError "Empty XML output"
       end
       xml
-    rescue Plist::ParseError
+    rescue Plist::ParseError => e
       raise CaskError.new(<<-ERRMSG)
 Error parsing plist output from command.
   command was:
   #{command.utf8_inspect}
+  error was:
+  #{e}
   output we attempted to parse:
   #{output}
         ERRMSG
