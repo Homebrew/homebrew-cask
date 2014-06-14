@@ -5,6 +5,10 @@ class Wireshark < Cask
   sha256 'dad35fa72d763b19cbd11ae9d339144d3b205c1b3575d51368d9b81c43f1b527'
   install 'Wireshark 1.10.8 Intel 64.pkg'
 
+  caveats do
+    x11_required
+  end
+
   after_install do
     if Process.euid == 0 then
       ohai "Note:"
