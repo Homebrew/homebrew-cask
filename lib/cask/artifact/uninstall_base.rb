@@ -3,11 +3,11 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
   # todo: these methods were consolidated here from separate
   #       sources and, should be refactored for consistency
 
-  def install
+  def install_phase
     odebug "Nothing to do. The uninstall artifact has no install phase."
   end
 
-  def uninstall
+  def uninstall_phase
     dispatch_uninstall_directives(self.class.artifact_dsl_key)
   end
 

@@ -12,7 +12,7 @@ describe Cask::Artifact::App do
       cask = local_two_links_caffeine
 
       shutup do
-        Cask::Artifact::App.new(cask).install
+        Cask::Artifact::App.new(cask).install_phase
       end
 
       TestHelper.valid_alias?(Cask.appdir/'Caffeine.app').must_equal true
@@ -39,7 +39,7 @@ describe Cask::Artifact::App do
         FileUtils.mv((subdir_cask.destination_path/'Caffeine.app'), appsubdir)
 
         shutup do
-          Cask::Artifact::App.new(subdir_cask).install
+          Cask::Artifact::App.new(subdir_cask).install_phase
         end
 
         TestHelper.valid_alias?(Cask.appdir/'Caffeine.app').must_equal true
@@ -61,7 +61,7 @@ describe Cask::Artifact::App do
     #   FileUtils.cp_r app_path, app_path.sub('Caffeine.app', 'CaffeineAgain.app')
     #
     #   shutup do
-    #     Cask::Artifact::App.new(cask).install
+    #     Cask::Artifact::App.new(cask).install_phase
     #   end
     #
     #   TestHelper.valid_alias?(Cask.appdir/'AnotherName.app').must_equal true
@@ -74,7 +74,7 @@ describe Cask::Artifact::App do
       (Cask.appdir/'Caffeine.app').mkpath
 
       TestHelper.must_output(self, lambda {
-        Cask::Artifact::App.new(cask).install
+        Cask::Artifact::App.new(cask).install_phase
       }, <<-MESSAGE.undent.chomp)
          ==> It seems there is already an App at '#{Cask.appdir.join('Caffeine.app')}'; not linking.
          ==> Symlinking App 'Caffeine.app' to '#{Cask.appdir.join('AnotherName.app')}'
@@ -89,7 +89,7 @@ describe Cask::Artifact::App do
       (Cask.appdir/'AnotherName.app').mkpath
 
       TestHelper.must_output(self, lambda {
-        Cask::Artifact::App.new(cask).install
+        Cask::Artifact::App.new(cask).install_phase
       }, <<-MESSAGE.undent.chomp)
          ==> Symlinking App 'Caffeine.app' to '#{Cask.appdir.join('Caffeine.app')}'
          ==> It seems there is already an App at '#{Cask.appdir.join('AnotherName.app')}'; not linking.
@@ -104,7 +104,7 @@ describe Cask::Artifact::App do
       (Cask.appdir/'Caffeine.app').make_symlink('/tmp')
 
       TestHelper.must_output(self, lambda {
-        Cask::Artifact::App.new(cask).install
+        Cask::Artifact::App.new(cask).install_phase
       }, <<-MESSAGE.undent.chomp)
          ==> Symlinking App 'Caffeine.app' to '#{Cask.appdir.join('Caffeine.app')}'
          ==> Symlinking App 'Caffeine.app' to '#{Cask.appdir.join('AnotherName.app')}'
@@ -119,7 +119,7 @@ describe Cask::Artifact::App do
       (Cask.appdir/'AnotherName.app').make_symlink('/tmp')
 
       TestHelper.must_output(self, lambda {
-        Cask::Artifact::App.new(cask).install
+        Cask::Artifact::App.new(cask).install_phase
       }, <<-MESSAGE.undent.chomp)
          ==> Symlinking App 'Caffeine.app' to '#{Cask.appdir.join('Caffeine.app')}'
          ==> Symlinking App 'Caffeine.app' to '#{Cask.appdir.join('AnotherName.app')}'

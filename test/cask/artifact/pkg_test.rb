@@ -8,23 +8,23 @@ describe Cask::Artifact::Pkg do
     end
   }
 
-  describe 'install' do
+  describe 'install_phase' do
     it 'runs the system installer on the specified pkgs' do
       pkg = Cask::Artifact::Pkg.new(@cask, Cask::FakeSystemCommand)
 
       Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/installer', '-pkg', @cask.destination_path/'MyFancyPkg'/'Fancy.pkg', '-target', '/'])
 
       shutup do
-        pkg.install
+        pkg.install_phase
       end
     end
   end
 
-  describe 'uninstall' do
-    it 'does nothing, because the uninstall method is a no-op' do
+  describe 'uninstall_phase' do
+    it 'does nothing, because the uninstall_phase method is a no-op' do
       pkg = Cask::Artifact::Pkg.new(@cask, Cask::FakeSystemCommand)
       shutup do
-        pkg.uninstall
+        pkg.uninstall_phase
       end
     end
   end

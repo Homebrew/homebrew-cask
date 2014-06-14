@@ -8,16 +8,16 @@ describe Cask::Artifact::Uninstall do
     end
   }
 
-  describe 'install' do
-    it 'does nothing, because the install method is a no-op' do
+  describe 'install_phase' do
+    it 'does nothing, because the install_phase method is a no-op' do
       uninstall_artifact = Cask::Artifact::Uninstall.new(@cask, Cask::FakeSystemCommand)
       shutup do
-        uninstall_artifact.install
+        uninstall_artifact.install_phase
       end
     end
   end
 
-  describe 'uninstall' do
+  describe 'uninstall_phase' do
     # todo: uninstall tests for :signal (implementation does not use SystemComment)
     it 'runs the specified uninstaller for the cask' do
       uninstall_artifact = Cask::Artifact::Uninstall.new(@cask, Cask::FakeSystemCommand)
@@ -28,7 +28,7 @@ describe Cask::Artifact::Uninstall do
       Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', @cask.destination_path/'MyFancyPkg'/'FancyUninstaller.tool', '--please'])
 
       shutup do
-        uninstall_artifact.uninstall
+        uninstall_artifact.uninstall_phase
       end
     end
 
@@ -165,7 +165,7 @@ describe Cask::Artifact::Uninstall do
       # No assertions after call since all assertions are implicit from the interactions setup above.
       # TODO: verify rmdir commands (requires setting up actual file tree or faking out .exists?
       shutup do
-        uninstall_artifact.uninstall
+        uninstall_artifact.uninstall_phase
       end
     end
   end

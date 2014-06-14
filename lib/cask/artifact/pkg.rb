@@ -26,11 +26,11 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     @pkg_relative_path
   end
 
-  def install
+  def install_phase
     @cask.artifacts[:install].each { |pkg_description| run_installer(pkg_description) }
   end
 
-  def uninstall
+  def uninstall_phase
     # Do nothing. Must be handled explicitly by a separate :uninstall stanza.
   end
 

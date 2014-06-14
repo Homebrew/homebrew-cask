@@ -7,12 +7,12 @@ describe Cask::Artifact::App do
     end
   }
 
-  describe 'install' do
+  describe 'install_phase' do
     it "links the noted applications to the proper directory" do
       cask = local_caffeine
 
       shutup do
-        Cask::Artifact::App.new(cask).install
+        Cask::Artifact::App.new(cask).install_phase
       end
 
       TestHelper.valid_alias?(Cask.appdir/'Caffeine.app').must_equal true
@@ -37,7 +37,7 @@ describe Cask::Artifact::App do
         FileUtils.mv((subdir_cask.destination_path/'Caffeine.app'), appsubdir)
 
         shutup do
-          Cask::Artifact::App.new(subdir_cask).install
+          Cask::Artifact::App.new(subdir_cask).install_phase
         end
 
         TestHelper.valid_alias?(Cask.appdir/'Caffeine.app').must_equal true
@@ -57,7 +57,7 @@ describe Cask::Artifact::App do
       FileUtils.cp_r app_path, app_path.sub('Caffeine.app', 'CaffeineAgain.app')
 
       shutup do
-        Cask::Artifact::App.new(cask).install
+        Cask::Artifact::App.new(cask).install_phase
       end
 
       TestHelper.valid_alias?(Cask.appdir/'Caffeine.app').must_equal true
@@ -70,7 +70,7 @@ describe Cask::Artifact::App do
       (Cask.appdir/'Caffeine.app').mkpath
 
       TestHelper.must_output(self, lambda {
-        Cask::Artifact::App.new(cask).install
+        Cask::Artifact::App.new(cask).install_phase
       }, "==> It seems there is already an App at '#{Cask.appdir.join('Caffeine.app')}'; not linking.")
 
       (Cask.appdir/'Caffeine.app').wont_be :symlink?
@@ -82,7 +82,7 @@ describe Cask::Artifact::App do
       (Cask.appdir/'Caffeine.app').make_symlink('/tmp')
 
       TestHelper.must_output(self, lambda {
-        Cask::Artifact::App.new(cask).install
+        Cask::Artifact::App.new(cask).install_phase
       }, "==> Symlinking App 'Caffeine.app' to '#{Cask.appdir.join('Caffeine.app')}'")
 
       File.readlink(Cask.appdir/'Caffeine.app').wont_equal '/tmp'
