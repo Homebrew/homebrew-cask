@@ -11,10 +11,10 @@ the main repository.
 
 Possible uses of this feature include:
 
- * private repositories
- * testing and development
- * Casks that have not yet been accepted
- * Casks that were rejected[^1]
+ * Private repositories.
+ * Testing and development.
+ * Casks that have not yet been accepted.
+ * Casks that were rejected.[^1]
 
 ## Instructions
 
