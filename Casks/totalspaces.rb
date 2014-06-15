@@ -10,4 +10,7 @@ class Totalspaces < Cask
                          ['INT', 'com.binaryage.totalspacescrashwatcher'],
                          ['KILL', 'com.binaryage.totalspacescrashwatcher'],
                         ]
+  caveats do
+    os_version_only '10.8', '10.7'
+  end
 end
