@@ -164,6 +164,7 @@ And the following methods may be useful for interpolation:
 | method             | description |
 | ------------------ | ----------- |
 | `title`            | the Cask title
+| `version`          | the Cask version
 | `caskroom_path`    | eg `/opt/homebrew-cask/Caskroom`
 | `destination_path` | where this particular Cask is stored, including version number, eg `/opt/homebrew-cask/Caskroom/google-chrome/stable-channel`
 
