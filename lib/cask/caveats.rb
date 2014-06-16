@@ -24,6 +24,10 @@ class Cask::CaveatsDSL
     @cask.title
   end
 
+  def version
+    @cask.version
+  end
+
   def caskroom_path
     @cask.class.caskroom.join(title)
   end
