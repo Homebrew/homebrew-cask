@@ -20,7 +20,7 @@ class Cask::Container::Dmg < Cask::Container::Base
   end
 
   def mount!
-    plist = @command.run!('/usr/bin/hdiutil',
+    plist = @command.run('/usr/bin/hdiutil',
       # realpath is a failsafe against unusual filenames
       :args => %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp] + [Pathname.new(@path).realpath],
       :input => %w[y],
