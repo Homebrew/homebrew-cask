@@ -11,10 +11,10 @@ the main repository.
 
 Possible uses of this feature include:
 
- * private repositories
- * testing and development
- * Casks that have not yet been accepted
- * Casks that were rejected[^1]
+ * Private repositories.
+ * Testing and development.
+ * Casks that have not yet been accepted.
+ * Casks that were rejected.<sup>1</sup>
 
 ## Instructions
 
@@ -34,4 +34,4 @@ Possible uses of this feature include:
 
 * [casidiablo/custom](https://github.com/casidiablo/homebrew-custom)
 
-[^1]: While we strive to be inclusive, sometimes this does happen: [#3954](https://github.com/caskroom/homebrew-cask/pull/3954) .
+<sup>1</sup> While we strive to be inclusive, sometimes this does happen: [#3954](https://github.com/caskroom/homebrew-cask/pull/3954) .
