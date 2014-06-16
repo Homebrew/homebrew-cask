@@ -24,35 +24,43 @@ class Cask::Artifact::Base
      cask.artifacts[self.artifact_dsl_key].any?
   end
 
-  def self.read_script_arguments(uninstall_options, key)
-    script_arguments = uninstall_options[key]
+  # todo: this sort of logic would make more sense in dsl.rb, or a
+  # constructor called from dsl.rb, so long as that isn't slow.
+  def self.read_script_arguments(arguments, stanza, key=nil)
+    # todo: when stanza names are harmonized with class names,
+    # stanza may not be needed as an explicit argument
+    description = stanza.to_s
+    if key
+      arguments = arguments[key]
+      description.concat(" #{key.inspect}")
+    end
 
     # backwards-compatible string value
-    if script_arguments.kind_of?(String)
-      script_arguments = { :executable => script_arguments }
+    if arguments.kind_of?(String)
+      arguments = { :executable => arguments }
     end
 
     # key sanity
     permitted_keys = [:args, :input, :executable, :must_succeed]
-    unknown_keys = script_arguments.keys - permitted_keys
+    unknown_keys = arguments.keys - permitted_keys
     unless unknown_keys.empty?
-      opoo "Unknown arguments to uninstall :#{key} -- :#{unknown_keys.join(", :")} (ignored). Running `brew update; brew upgrade brew-cask` will likely fix it.'"
+      opoo "Unknown arguments to #{description} -- :#{unknown_keys.join(", :")} (ignored). Running `brew update; brew upgrade brew-cask` will likely fix it.'"
     end
-    script_arguments.reject! {|k,v| ! permitted_keys.include?(k)}
+    arguments.reject! {|k,v| ! permitted_keys.include?(k)}
 
     # extract executable
-    if script_arguments.key?(:executable)
-      executable = script_arguments.delete(:executable)
+    if arguments.key?(:executable)
+      executable = arguments.delete(:executable)
     else
       executable = nil
     end
 
-    unless script_arguments.key?(:must_succeed)
-      script_arguments[:must_succeed] = true
+    unless arguments.key?(:must_succeed)
+      arguments[:must_succeed] = true
     end
 
-    script_arguments.merge!(:sudo => true, :print => true)
-    return executable, script_arguments
+    arguments.merge!(:sudo => true, :print => true)
+    return executable, arguments
   end
 
   def summary
