@@ -34,10 +34,12 @@ the `link` stanza as many times as you need, to create multiple links:
 
 ```ruby
 class Alfred < Cask
-  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
-  homepage 'http://www.alfredapp.com/'
   version '2.3_264'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
+
+  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
+  homepage 'http://www.alfredapp.com/'
+
   link 'Alfred 2.app'
   link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
@@ -47,10 +49,12 @@ Here is another Cask for `Vagrant.pkg`:
 
 ```ruby
 class Vagrant < Cask
-  url 'https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg'
-  homepage 'http://www.vagrantup.com'
   version '1.4.3'
   sha256 'e7ff13b01d3766829f3a0c325c1973d15b589fe1a892cf7f857da283a2cbaed1'
+
+  url 'https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg'
+  homepage 'http://www.vagrantup.com'
+
   install 'Vagrant.pkg'
   uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] }
 end
@@ -96,10 +100,12 @@ this:
 
 ```ruby
 class MyNewCask < Cask
-  url ''
-  homepage ''
   version ''
   sha256 ''
+
+  url ''
+  homepage ''
+
   link ''
 end
 ```
