@@ -26,7 +26,12 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
     # :early_script should not delete files, better defer that to :script.
     # If Cask writers never need :early_script it may be removed in the future.
     directives_set.select{ |h| h.key?(:early_script) }.each do |directives|
-      executable, script_arguments = self.class.read_script_arguments(directives, 'uninstall', :early_script)
+      executable, script_arguments = self.class.read_script_arguments(directives,
+                                                                      'uninstall',
+                                                                      {:must_succeed => true},
+                                                                      {:sudo => true, :print => true},
+                                                                      :early_script)
+
       ohai "Running uninstall script #{executable}"
       raise CaskInvalidError.new(@cask, "#{stanza} :early_script without :executable") if executable.nil?
       @command.run(@cask.destination_path.join(executable), script_arguments)
@@ -99,7 +104,11 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
 
     # :script must come before :pkgutil or :files so that the script file is not already deleted
     directives_set.select{ |h| h.key?(:script) }.each do |directives|
-      executable, script_arguments = self.class.read_script_arguments(directives, 'uninstall', :script)
+      executable, script_arguments = self.class.read_script_arguments(directives,
+                                                                      'uninstall',
+                                                                      {:must_succeed => true},
+                                                                      {:sudo => true, :print => true},
+                                                                      :script)
       raise CaskInvalidError.new(@cask, "#{stanza} :script without :executable.") if executable.nil?
       @command.run(@cask.destination_path.join(executable), script_arguments)
       sleep 1

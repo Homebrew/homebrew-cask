@@ -26,7 +26,7 @@ class Cask::Artifact::Base
 
   # todo: this sort of logic would make more sense in dsl.rb, or a
   # constructor called from dsl.rb, so long as that isn't slow.
-  def self.read_script_arguments(arguments, stanza, key=nil)
+  def self.read_script_arguments(arguments, stanza, default_arguments={}, override_arguments={}, key=nil)
     # todo: when stanza names are harmonized with class names,
     # stanza may not be needed as an explicit argument
     description = stanza.to_s
@@ -41,12 +41,19 @@ class Cask::Artifact::Base
     end
 
     # key sanity
-    permitted_keys = [:args, :input, :executable, :must_succeed]
+    permitted_keys = [:args, :input, :executable, :must_succeed, :sudo, :print]
     unknown_keys = arguments.keys - permitted_keys
     unless unknown_keys.empty?
       opoo %Q{Unknown arguments to #{description} -- #{unknown_keys.inspect} (ignored). Running "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" will likely fix it.}
     end
     arguments.reject! {|k,v| ! permitted_keys.include?(k)}
+
+    # key warnings
+    override_keys = override_arguments.keys
+    ignored_keys = arguments.keys & override_keys
+    unless ignored_keys.empty?
+      onoe "Some arguments to #{description} will be ignored -- :#{unknown_keys.inspect} (overridden)."
+    end
 
     # extract executable
     if arguments.key?(:executable)
@@ -55,11 +62,9 @@ class Cask::Artifact::Base
       executable = nil
     end
 
-    unless arguments.key?(:must_succeed)
-      arguments[:must_succeed] = true
-    end
+    arguments = default_arguments.merge arguments
+    arguments.merge! override_arguments
 
-    arguments.merge!(:sudo => true, :print => true)
     return executable, arguments
   end
 
