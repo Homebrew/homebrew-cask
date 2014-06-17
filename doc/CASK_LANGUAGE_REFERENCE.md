@@ -26,10 +26,12 @@ is always enclosed in a `class ... end` block.  Example:
 
 ```ruby
 class Alfred < Cask
-  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
-  homepage 'http://www.alfredapp.com/'
   version '2.3_264'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
+
+  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
+  homepage 'http://www.alfredapp.com/'
+
   link 'Alfred 2.app'
   link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
@@ -40,8 +42,12 @@ end
 
 Each Cask contains a series of stanzas (or "fields") which *declare* how the
 software is to be obtained and installed.  In a declarative language, the
-author does not need to worry about order.  As long as all the needed fields
-are present, homebrew-cask will figure out what needs to be done.
+author does not need to worry about **order**.  As long as all the needed fields
+are present, homebrew-cask will figure out what needs to be done at install
+time.
+
+To make maintenance easier, the most-frequently-updated stanzas are usually
+placed at the top.  But that's a convention, not a rule.
 
 Exception: `do` blocks such as `after_install` may enclose a block of
 pure Ruby code.  Lines within that block follow a procedural (order-dependent)
@@ -503,6 +509,9 @@ class Appname < Cask
       ...
     end
   end
+
+  version '1.0'
+  sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
 
   url "https://#{Utils.arbitrary_method}"
   homepage 'http://www.example.com/'
