@@ -229,4 +229,24 @@ describe Cask::DSL do
       cask.artifacts[:install_script].first[:executable].must_equal '/usr/bin/true'
     end
   end
+
+  describe "tags stanza" do
+    it "allows tags stanza to be specified" do
+      cask = Cask.load('with-tags')
+      cask.tags.to_s.must_match %r{\S}
+    end
+
+    it "prevents specifying tags multiple times" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-tags-multiple')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'tags' stanza may only appear once"
+    end
+
+    it "refuses to load if tags key is invalid" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-tags-key')
+      }.must_raise(CaskInvalidError)
+    end
+  end
 end
