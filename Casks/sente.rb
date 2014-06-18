@@ -1,5 +1,5 @@
 class Sente < Cask
-  url 'http://www.thirdstreetsoftware.com/downloads/Sente-6.7.6.11672.zip'
+  url 'https://www.thirdstreetsoftware.com/downloads/Sente-6.7.6.11672.zip'
   appcast 'http://www.thirdstreetsoftware.com/rss/Sente65.xml?v=6.6.0'
   homepage 'http://www.thirdstreetsoftware.com'
   version '6.7.6'
