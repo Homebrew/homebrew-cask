@@ -1,5 +1,5 @@
 class Xquartz < Cask
-  url 'http://xquartz.macosforge.org/downloads/SL/XQuartz-2.7.6.dmg'
+  url 'https://xquartz.macosforge.org/downloads/SL/XQuartz-2.7.6.dmg'
   homepage 'http://xquartz.macosforge.org/'
   appcast 'http://xquartz-dl.macosforge.org/sparkle/release.xml'
   version '2.7.6'
