@@ -10,6 +10,7 @@ class Cask::CLI::Doctor
     ohai 'Homebrew Repository Path:',                        render_with_none_as_error( HOMEBREW_REPOSITORY )
     ohai 'Homebrew Origin:',                                 render_with_none_as_error( homebrew_origin )
     ohai 'Homebrew-cask Version:',                           render_with_none_as_error( HOMEBREW_CASK_VERSION )
+    ohai 'Homebrew-cask Install Location:',                    render_install_location( HOMEBREW_CASK_VERSION )
     ohai 'Homebrew-cask Default Tap Path:',                           render_tap_paths( fq_default_tap )
     ohai 'Homebrew-cask Alternate Cask Taps:',                        render_tap_paths( alt_taps )
     ohai 'Homebrew-cask Default Tap Cask Count:',            render_with_none_as_error( default_cask_count )
@@ -134,6 +135,17 @@ class Cask::CLI::Doctor
       %Q{#{var}="#{ENV[var]}"}
     else
       none_string
+    end
+  end
+
+  # This could be done by calling into Homebrew, but the situation
+  # where "doctor" is needed is precisely the situation where such
+  # things are less dependable.
+  def self.render_install_location(current_version)
+    locations = Dir.glob(HOMEBREW_CELLAR.join('brew-cask', '*')).reverse
+    locations.each do |l|
+      basename = File.basename l
+      l.concat %Q{ #{error_string %Q{error: old version. Run "brew cleanup".}}} unless basename == current_version
     end
   end
 
