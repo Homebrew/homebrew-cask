@@ -5,7 +5,7 @@ module Cask::CLI::Edit
     cask_path = Cask.path(cask_name)
     odebug "Opening editor for Cask #{cask_name}"
     unless cask_path.exist?
-      raise CaskUnavailableError, "#{cask_name}, use `brew cask create #{cask_name}` to make a new cask with this name"
+      raise CaskUnavailableError, %Q{#{cask_name}, run "brew cask create #{cask_name}" to create a new cask with this name}
     end
     exec_editor cask_path
   end
