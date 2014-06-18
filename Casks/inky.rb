@@ -1,5 +1,5 @@
 class Inky < Cask
-  url 'http://inky.com/mail/InkyInstall.pkg'
+  url 'https://inky.com/mail/InkyInstall.pkg'
   homepage 'http://inky.com'
   version 'latest'
   sha256 :no_check
