@@ -1,5 +1,5 @@
 class Gitifier < Cask
-  url 'http://github.com/downloads/jsuder/Gitifier/Gitifier-1.3.zip'
+  url 'https://github.com/downloads/jsuder/Gitifier/Gitifier-1.3.zip'
   appcast 'http://sparkle.psionides.eu/feed/gitifier'
   homepage 'http://psionides.github.io/Gitifier/'
   version '1.3'
