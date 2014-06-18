@@ -1,5 +1,5 @@
 class Snippets < Cask
-  url 'http://snippets.me/download/mac/Snippets-468.zip'
+  url 'https://snippets.me/download/mac/Snippets-468.zip'
   appcast 'http://snippets.me/mac/appcast.xml'
   homepage 'http://snippets.me/'
   version '0.8.2'
