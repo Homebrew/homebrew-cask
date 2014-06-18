@@ -1,5 +1,5 @@
 class Httpscoop < Cask
-  url 'http://s3.amazonaws.com/Trueridge/HTTPScoop_1.4.3.dmg'
+  url 'https://s3.amazonaws.com/Trueridge/HTTPScoop_1.4.3.dmg'
   appcast 'http://www.tuffcode.com/releases/httpscoop-appcast.xml'
   homepage 'http://www.tuffcode.com'
   version '1.4.3'
