@@ -40,10 +40,12 @@ describe Cask::CLI::Create do
     template = File.read(Cask.path('new-cask'))
     template.must_equal <<-TEMPLATE.undent
       class NewCask < Cask
-        url ''
-        homepage ''
         version ''
         sha256 ''
+
+        url 'https://'
+        homepage ''
+
         link ''
       end
     TEMPLATE

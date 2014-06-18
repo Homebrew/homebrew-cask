@@ -1,7 +1,7 @@
 class Mkvtoolnix < Cask
-  url 'http://jonthn.free.fr/MKVtoolnix/Mkvtoolnix-6.2.0_2013-04-28-b48f.dmg'
+  url 'http://jonthn.free.fr/MKVtoolnix/Mkvtoolnix-6.9.1_2014-04-18-ab10.dmg'
   homepage 'http://www.bunkus.org/videotools/mkvtoolnix/'
-  version '6.2.0'
-  sha256 'a9b5bc1c7049aaedb717bb6f6f2d291a1d8b2cad4480f8c76e9552950b0523ba'
+  version '6.9.1'
+  sha256 '16b5f8d5fdaea8c185c66687af99a889a754759251137b4ed0bc711ce9f0f55d'
   link 'Mkvtoolnix.app'
 end

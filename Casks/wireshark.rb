@@ -1,9 +1,13 @@
 class Wireshark < Cask
-  url 'https://2.na.dl.wireshark.org/osx/Wireshark%201.10.7%20Intel%2064.dmg'
+  url 'https://www.wireshark.org/download/osx/Wireshark%201.10.8%20Intel%2064.dmg'
   homepage 'http://www.wireshark.org'
-  version '1.10.7'
-  sha256 'df89621fdca8bd09aa633b2af6fa3e193872797a1cdf3feaf86f2183d68e2a5a'
-  install 'Wireshark 1.10.7 Intel 64.pkg'
+  version '1.10.8'
+  sha256 'dad35fa72d763b19cbd11ae9d339144d3b205c1b3575d51368d9b81c43f1b527'
+  install 'Wireshark 1.10.8 Intel 64.pkg'
+
+  caveats do
+    x11_required
+  end
 
   after_install do
     if Process.euid == 0 then
@@ -16,7 +20,7 @@ class Wireshark < Cask
               EOS
     else
       system '/usr/bin/sudo', '-E', '--',
-             '/usr/sbin/dseditgroup', '-o', 'edit', '-a', Etc.getpwuid(Process.euid).name, '-t', 'user', 'access_bpf'
+             '/usr/sbin/dseditgroup', '-o', 'edit', '-a', Etc.getpwuid(Process.euid).name, '-t', 'user', '--', 'access_bpf'
     end
   end
 

@@ -1,9 +1,9 @@
 class ElmPlatform < Cask
-  url 'http://0726e2be3f48a1ed0f90-ec3c2a753a12d2be9f23ba16873acc23.r35.cf2.rackcdn.com/Elm-Platform-0.12.1.pkg'
+  url 'https://dl.dropboxusercontent.com/s/qfz9n90jszcxa5q/Elm-Platform-0.12.3.pkg'
   homepage 'http://www.elm-lang.org'
-  version '0.12.1'
-  sha256 'f20d3dfb221af5b31eeabf8f77f9828b37bf802d39448f2ae6cf6a01e839e1fc'
-  install 'Elm-Platform-0.12.1.pkg'
+  version '0.12.3'
+  sha256 '155569928a868095b2b27e705f2904496918f28fcb59990ff4449ca4aace330f'
+  install 'Elm-Platform-0.12.3.pkg'
   uninstall :pkgutil => [
                          'org.elm-lang.bin.pkg',
                          'org.elm-lang.share.pkg'

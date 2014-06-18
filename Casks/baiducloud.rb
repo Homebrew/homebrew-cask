@@ -3,6 +3,6 @@ class Baiducloud < Cask
   url 'http://bcscdn.baidu.com/netdisk/BaiduYun_2.4.2.dmg'
   homepage 'http://pan.baidu.com'
   version '2.4.2'
-  sha256 'f994090e8cd2af9a9ed46ef27b731203867698973c12609d1bd7c40674580907'
+  sha256 '194e049020bc11110807d7a157c5ab1f25f987b3e14ead7b452319420b97ad51'
   link '百度云同步盘.app'
 end

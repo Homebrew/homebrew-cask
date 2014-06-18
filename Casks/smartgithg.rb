@@ -1,10 +1,10 @@
 class Smartgithg < Cask
-  url 'http://www.syntevo.com/download/smartgithg/smartgithg-macosx-5_0_8.dmg'
+  url 'http://www.syntevo.com/download/smartgithg/smartgithg-macosx-6_0_2.dmg'
   homepage 'http://www.syntevo.com'
-  version '5.0.8'
-  sha256 '3c445ada002d44bb07d1f5c3a4d3a96576d0f971b0b7e5ef6bf38054e1059b10'
-  link 'SmartGitHg 5.app'
-  binary 'SmartGitHg 5.app/Contents/MacOS/SmartGit'
+  version '6.0.2'
+  sha256 'ca43c8cb5d14f5b0ef74f28a5575a059c241bf6d5d18f38eb93052f2a283c40d'
+  link 'SmartGitHg 6.app'
+  binary 'SmartGitHg 6.app/Contents/MacOS/SmartGit'
   caveats do
     files_in_usr_local
   end

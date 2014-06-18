@@ -20,7 +20,7 @@ class Cask::Container::Dmg < Cask::Container::Base
   end
 
   def mount!
-    plist = @command.run!('/usr/bin/hdiutil',
+    plist = @command.run('/usr/bin/hdiutil',
       # realpath is a failsafe against unusual filenames
       :args => %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp] + [Pathname.new(@path).realpath],
       :input => %w[y],
@@ -30,6 +30,7 @@ class Cask::Container::Dmg < Cask::Container::Base
   end
 
   def mounts_from_plist(plist)
+    return [] unless plist.respond_to?(:fetch)
     plist.fetch('system-entities', []).map do |entity|
       entity['mount-point']
     end.compact

@@ -67,6 +67,7 @@ the string people will use to interact with the Cask on their system.
 To get from the App's canonical name to the Cask name:
 
   * convert all letters to lower case
+  * expand the `+` symbol into a separated English word: `-plus-`
   * hyphens stay hyphens
   * spaces become hyphens
   * digits stay digits

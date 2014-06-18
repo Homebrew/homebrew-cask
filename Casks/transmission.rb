@@ -1,7 +1,8 @@
 class Transmission < Cask
-  url 'http://download.transmissionbt.com/files/Transmission-2.82.dmg'
+  url 'https://transmission.cachefly.net/Transmission-2.83.dmg'
+  appcast 'http://update.transmissionbt.com/appcast.xml'
   homepage 'http://www.transmissionbt.com/'
-  version '2.82'
-  sha256 'dd2814594362d6aaeca3037c6ed04ffb0b7144e1d1ae8b3319bb8c23a872955a'
+  version '2.83'
+  sha256 '78c90b0cdc4a37064d66bba5976a4e46a778acfd4bf97d5bc18b9aeb21e36a64'
   link 'Transmission.app'
 end

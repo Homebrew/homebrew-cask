@@ -16,7 +16,11 @@ class Cask::Download
       downloader = Cask::CurlDownloadStrategy.new(cask)
     end
     downloader.clear_cache if force
-    downloaded_path = downloader.fetch
+    begin
+      downloaded_path = downloader.fetch
+    rescue StandardError => e
+      raise CaskError.new("Download failed on Cask '#{@cask}' with message: #{e}")
+    end
     begin
       # this symlink helps track which downloads are ours
       File.symlink downloaded_path,

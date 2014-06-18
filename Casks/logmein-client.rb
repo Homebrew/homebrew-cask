@@ -3,5 +3,5 @@ class LogmeinClient < Cask
   homepage 'https://secure.logmein.com/products/pro/learnmore/desktopapp.aspx'
   version 'latest'
   sha256 :no_check
-  link 'LogMeIn Client.app'
+  link 'LogMeInIgnition.app', :target => 'LogMeIn Client.app'
 end

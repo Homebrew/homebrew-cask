@@ -138,6 +138,9 @@ of Casks.
 | -------- | ----------- |
 | [caskroom/versions](https://github.com/caskroom/homebrew-versions) | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
 | [caskroom/fonts](https://github.com/caskroom/homebrew-fonts) | contains Casks that install fonts, which are kept separate so we can educate users about the different licensing landscape around font installation/usage
+| [caskroom/unofficial](https://github.com/caskroom/homebrew-unofficial) | contains Casks that install unofficial builds or forks
+
+There are also [alternate Cask Taps](ALTERNATE_CASK_TAPS.md#alternate-cask-taps-maintained-by-users) maintained by users.
 
 You can tap any of the above with a `brew tap` command:
 
@@ -162,7 +165,7 @@ $ brew cask install caskroom/fonts/font-symbola
 * `--debug`: output debug information
 * `--no-binaries`: skip symlinking executable binaries into `/usr/local/bin`
 
-You can also modify the default installation locations used by the `brew cask` command:
+You can also modify the default installation locations used when issuing `brew cask install`:
 
 * `--caskroom=/my/path` determines where the actual applications will be located.
 Default is `/opt/homebrew-cask/Caskroom`
@@ -221,12 +224,15 @@ above, a Cask name on the command line can take the form of:
 * a Cask name as returned by `brew cask search`, _eg_: `google-chrome`
 * a fully-qualified Cask name which includes the Tap, _eg_: `caskroom/fonts/font-symbola`
 
-`brew cask` also accepts two other forms for Cask names:
+`brew cask` also accepts three other forms for Cask names:
 
-* a fully-qualified pathname to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
+* a path to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
 * a `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
+* a file in the current working directory, _eg_: `my-modfied-google-chrome.rb`.  Note
+  that Tapped Casks names will be preferred over this form.  To force the use of a Cask
+  file in the current directory, specify a pathname with slashes, _eg_: `./google-chrome.rb`.
 
-The last two forms are intended for users who wish to maintain private Casks.
+The last three forms are intended for users who wish to maintain private Casks.
 
 ## Taps
 

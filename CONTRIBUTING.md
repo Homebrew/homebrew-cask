@@ -34,10 +34,12 @@ the `link` stanza as many times as you need, to create multiple links:
 
 ```ruby
 class Alfred < Cask
-  url 'http://cachefly.alfredapp.com/Alfred_2.1.1_227.zip'
+  version '2.3_264'
+  sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
+
+  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
   homepage 'http://www.alfredapp.com/'
-  version '2.1.1_227'
-  sha256 'd19fe7441c6741bf663521e561b842f35707b1e83de21ca195aa033cade66d1b'
+
   link 'Alfred 2.app'
   link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
@@ -47,10 +49,12 @@ Here is another Cask for `Vagrant.pkg`:
 
 ```ruby
 class Vagrant < Cask
-  url 'https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg'
-  homepage 'http://www.vagrantup.com'
   version '1.4.3'
   sha256 'e7ff13b01d3766829f3a0c325c1973d15b589fe1a892cf7f857da283a2cbaed1'
+
+  url 'https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg'
+  homepage 'http://www.vagrantup.com'
+
   install 'Vagrant.pkg'
   uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] }
 end
@@ -96,10 +100,12 @@ this:
 
 ```ruby
 class MyNewCask < Cask
-  url ''
-  homepage ''
   version ''
   sha256 ''
+
+  url ''
+  homepage ''
+
   link ''
 end
 ```
@@ -159,6 +165,23 @@ fall back to this format:
 http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 ```
 
+### Dropbox URLs
+
+Some projects **officially** (meaning the URL is linked from the official website)
+distribute binaries via Dropbox.
+Occasionally, instead of a direct download link, they send you to a preview page.
+In these cases, you need to manually change the URL.
+
+For example this preview link:
+```
+https://www.dropbox.com/s/xttkmuvu7hh72vu/MyFile.pdf
+```
+becomes
+```
+https://dl.dropboxusercontent.com/s/xttkmuvu7hh72vu/MyFile.pdf
+```
+
+More: https://www.dropbox.com/help/201/en
 
 ### Vendor URLs
 
@@ -237,6 +260,12 @@ the general standard, then an "unstable" version can go into the main repo.
 When an App already exists in the main repo, alternate versions can be Casked
 and submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
 Nightly builds always go in [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
+
+### Trial Versions
+
+Before submitting a trial, please make sure it can be made into a full working version
+without the need to be redownloaded. If an App provides a trial but the only way to buy the full version
+is via the Mac App Store, it does not currently belong in any of the official repos.
 
 ### Unofficial Builds
 

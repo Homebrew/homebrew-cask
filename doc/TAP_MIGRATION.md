@@ -2,6 +2,7 @@
 
  * [Overview](#overview)
  * [What Users Should Do](#what-users-should-do)
+ * [Uncommitted Casks May Be Deleted](#uncommitted-casks-may-be-deleted)
  * [If Something Goes Wrong](#if-something-goes-wrong)
  * [Technical Background - Parent Project (Homebrew)](#parent-project-homebrew)
  * [Technical Background - Our Project (Homebrew-cask)](#our-project-homebrew-cask)
@@ -24,8 +25,8 @@ We are still [making improvements](https://github.com/caskroom/homebrew-cask/pul
 
 ## What Users Should Do
 
-All users should upgrade to the latest Homebrew (0.9.5), and the latest
-Homebrew-cask (0.34.0):
+All users should upgrade to the latest Homebrew (0.9.5 or better), and the
+latest Homebrew-cask (0.34.0 or better):
 
 ```bash
 $ brew update && brew upgrade brew-cask
@@ -34,7 +35,21 @@ $ brew update && brew upgrade brew-cask
 The first time you execute a `brew cask` command, all Tap migrations
 should happen for you automatically.
 
+## Uncommitted Casks May Be Deleted
+
+If you have recently created a Cask using "brew cask create", and have not
+submitted that Cask to the main GitHub repository (meaning that your local
+repository is dirty), you should be aware that Homebrew may delete your
+uncommited Casks during the process of Tap migration.  See
+
+* <https://github.com/caskroom/homebrew-cask/issues/4312>
+
+If you are not in the midst of authoring a Cask, this issue will not affect
+you.
+
 ## If Something Goes Wrong
+
+If something goes wrong with automatic Tap migration:
 
 ### Run "brew update" Twice
 
@@ -80,6 +95,17 @@ The following directories should **not** exist:
 $ ls -ld "$(brew --repository)"/Library/Taps/phinze/homebrew-cask
 $ ls -ld "$(brew --repository)"/Library/Taps/phinze-cask
 ```
+
+### "Could not tap" Message
+
+You may see the message
+
+	Warning: Could not tap caskroom/homebrew-cask/brew-cask over phinze/homebrew-cask/brew-cask
+
+during Tap migration, which means that two conflicting Taps are present.
+
+The auto-migrate code should fix this problem.  If you continue to see this
+message on subsequent commands, refer to [Manually Check Tap Directories](#manually-check-tap-directories) above.
 
 ### File an Issue
 

@@ -20,22 +20,40 @@ class Java < Cask
       '/bin/rm', '-rf', '--', '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
     system '/usr/bin/sudo', '-E', '--',
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents", '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
+    system '/usr/bin/sudo', '-E', '--',
+      '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Home", '/Library/Java/Home'
   end
-  uninstall :pkgutil => [ 'com.oracle.jdk8', 'com.oracle.jre' ],
-            :files => '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
+  uninstall :pkgutil => [
+                         'com.oracle.jdk8u5',         # manually update this for each version
+                         'com.oracle.jre',
+                        ],
+            :launchctl => [
+                           'com.oracle.java.Helper-Tool',
+                           'com.oracle.java.Java-Updater',
+                          ],
+            :quit => [
+                      'com.oracle.java.Java-Updater',
+                      'net.java.openjdk.cmd',         # Java Control Panel
+                     ],
+            :files => [
+                       '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
+                       "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents",
+                       '/Library/PreferencePanes/JavaControlPanel.prefPane',
+                       '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK',
+                       '/Library/Java/Home',
+                       '/usr/lib/java/libjdns_sd.jnilib',
+                      ]
   caveats <<-EOS.undent
-    This Cask makes minor modifications to the JRE to prevent any packaged
-    application issues.
-
-    If your Java application still asks for JRE installation, you might need to
-    reboot or logout/login.
-
-    The JRE packaging bug is discussed here:
+    This Cask makes minor modifications to the JRE to prevent issues with
+    packaged applications, as discussed here:
 
         https://bugs.eclipse.org/bugs/show_bug.cgi?id=411361
 
-    Installing this Cask means you have AGREED to the Oracle Binary Code License
-    Agreement for Java SE at
+    If your Java application still asks for JRE installation, you might need
+    to reboot or logout/login.
+
+    Installing this Cask means you have AGREED to the Oracle Binary Code
+    License Agreement for Java SE at
 
         http://www.oracle.com/technetwork/java/javase/terms/license/index.html
 

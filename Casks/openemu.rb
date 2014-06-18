@@ -1,7 +1,8 @@
 class Openemu < Cask
-  url 'https://github.com/OpenEmu/OpenEmu/releases/download/v1.0.2/OpenEmu_1.0.2.zip'
+  url 'https://github.com/OpenEmu/OpenEmu/releases/download/v1.0.3/OpenEmu_1.0.3.zip'
+  appcast 'https://raw.github.com/OpenEmu/OpenEmu-Update/master/appcast.xml'
   homepage 'http://openemu.org/'
-  version '1.0.2'
-  sha256 '150e2e560581b1d796fcb1bf644473dd9a917b11ed27757442f3b1f586c8b77c'
+  version '1.0.3'
+  sha256 '0c19ae8f0b3a679829a7620ed3747fc3ecba042e27fa35eb5575904751a516d4'
   link 'OpenEmu.app'
 end

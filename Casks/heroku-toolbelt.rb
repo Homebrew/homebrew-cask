@@ -4,10 +4,11 @@ class HerokuToolbelt < Cask
   version 'latest'
   sha256 :no_check
   install 'heroku-toolbelt.pkg'
-  uninstall :pkgutil => 'com.heroku.toolbelt', :files => [
-    '/usr/local/heroku',
-    '/usr/bin/heroku'
-  ]
+  uninstall :pkgutil => 'com.heroku.toolbelt',
+            :files   => [
+                         '/usr/local/heroku',
+                         '/usr/bin/heroku'
+                        ]
   caveats do
     files_in_usr_local
   end

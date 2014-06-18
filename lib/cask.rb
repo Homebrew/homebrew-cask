@@ -111,6 +111,7 @@ class Cask
       ohai 'Adding caskroom Tap'
       Homebrew.install_tap(new_user, repo)
     end
+    Cask.reset_all_tapped_cask_dirs
   end
 
   def self.load(query)

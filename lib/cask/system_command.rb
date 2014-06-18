@@ -3,7 +3,7 @@ require 'open3'
 class Cask::SystemCommand
   def self.run(executable, options={})
     command = _process_options(executable, options)
-    odebug "Executing: #{command.inspect}"
+    odebug "Executing: #{command.utf8_inspect}"
     output = ''
     Open3.popen3(*command) do |stdin, stdout, stderr|
       if options[:input]
@@ -51,18 +51,25 @@ class Cask::SystemCommand
 
   def self._assert_success(status, command, output)
     unless status.success?
-      raise CaskCommandFailedError.new(command.inspect, output)
+      raise CaskCommandFailedError.new(command.utf8_inspect, output, status)
     end
   end
 
   def self._parse_plist(command, output)
     begin
-      Plist::parse_xml(output)
-    rescue Plist::ParseError
+      raise Plist::ParseError "Empty XML input" unless output =~ %r{\S}
+      xml = Plist::parse_xml(output)
+      unless xml.respond_to?(:keys) and xml.keys.size > 0
+        raise Plist::ParseError "Empty XML output"
+      end
+      xml
+    rescue Plist::ParseError => e
       raise CaskError.new(<<-ERRMSG)
 Error parsing plist output from command.
   command was:
-  #{command.inspect}
+  #{command.utf8_inspect}
+  error was:
+  #{e}
   output we attempted to parse:
   #{output}
         ERRMSG

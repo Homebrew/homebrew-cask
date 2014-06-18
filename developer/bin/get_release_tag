@@ -25,10 +25,10 @@ opt_verbose=''
 
 warn () {
     local message="$@"
-    if ! [[ $message =~ "\n"$ ]]; then
-        message="${message}\n"
-    fi
-    printf "$message" 1>&2
+    message="${message//\\t/$'\011'}"
+    message="${message//\\n/$'\012'}"
+    message="${message%"${message##*[![:space:]]}"}"
+    printf "%s\n" "$message" 1>&2
 }
 
 die () {
@@ -66,10 +66,10 @@ output_proposed_tag () {
     sanity_check_parsed_version "$@"
     verify_git_object_is_new "$new_tag"
     if [[ -n "$opt_verbose" ]]; then
-        printf "Latest tag\t$latest_tag\n"
-        printf "Proposed new tag\t$new_tag\n"
+        printf "Latest tag\t%s\n" "$latest_tag"
+        printf "Proposed new tag\t%s\n" "$new_tag"
     else
-        printf "$new_tag\n"
+        printf "%s\n" "$new_tag"
     fi
 }
 
@@ -97,7 +97,7 @@ generate_next_minor_tag () {
 generate_next_patch_tag () {
     local -a version_elts
     IFS='.' read -a version_elts <<< "$1"
-    sanity_check_parsed_version ${version_elts[@]}
+    sanity_check_parsed_version "${version_elts[@]}"
     (( version_elts[2] += 1 ))      # increment patch field
     output_proposed_tag "${version_elts[@]}"
 }
@@ -171,7 +171,7 @@ _get_release_tag () {
         if [[ -n "$opt_verbose" ]]; then
             printf "Latest tag\t"
         fi
-        printf "$latest_tag\n"
+        printf "%s\n" "$latest_tag"
     elif [[ "$opt_next" == 'major' ]]; then
         generate_next_major_tag "$latest_tag"
     elif [[ "$opt_next" == 'minor' ]]; then

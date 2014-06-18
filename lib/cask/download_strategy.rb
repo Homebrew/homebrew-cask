@@ -28,7 +28,7 @@ class Cask::CurlDownloadStrategy < CurlDownloadStrategy
   include Cask::DownloadStrategy
 
   def _fetch
-    odebug "Calling curl with args #{curl_args.inspect}"
+    odebug "Calling curl with args #{curl_args.utf8_inspect}"
     curl(*curl_args)
   end
 

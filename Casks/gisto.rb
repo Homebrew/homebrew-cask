@@ -1,7 +1,7 @@
 class Gisto < Cask
-  url 'http://download.gistoapp.com/Gisto-0.2.4b-OSX_x86.dmg'
+  url 'http://download.gistoapp.com/Gisto-0.2.5b-OSX_x86.dmg'
   homepage 'http://www.gistoapp.com/'
-  version '0.2.4b'
-  sha256 '6b5420e42f1e3067fb541a76c201fdaa5619aac6daa1cd833f71f5baac7ad5fb'
+  version '0.2.5b'
+  sha256 '4f0b3e599f601483c232363867f3c62754631174c688fba143eadda8ddc9aaf4'
   link 'Gisto.app'
 end

@@ -23,7 +23,7 @@ require 'cask/cli/update'
 class Cask::CLI
   ISSUES_URL = "https://github.com/caskroom/homebrew-cask/issues"
   def self.commands
-    Cask::CLI.constants - ["NullCommand", "ISSUES_URL"]
+    Cask::CLI.constants - [:NullCommand, :ISSUES_URL, "NullCommand", "ISSUES_URL"]
   end
 
   def self.lookup_command(command_string)
@@ -70,11 +70,7 @@ class Cask::CLI
     Cask.init
     command = lookup_command(command_string)
     run_command(command, *rest)
-  rescue CaskAlreadyInstalledError => e
-    opoo e
-    $stderr.puts e.backtrace if Cask.debug
-    exit 0
-  rescue CaskError => e
+  rescue CaskError, ChecksumMismatchError => e
     onoe e
     $stderr.puts e.backtrace if Cask.debug
     exit 1
@@ -186,15 +182,21 @@ class Cask::CLI
 
     def purpose
       puts <<-PURPOSE.undent
-      {{ brew-cask }}
         brew-cask provides a friendly homebrew-style CLI workflow for the
-        administration of Mac applications distributed as binaries
+        administration of Mac applications distributed as binaries.
+
       PURPOSE
     end
 
     def usage
-      puts "available commands: "
-      puts Cask::CLI.commands.map {|c| " - #{c.downcase}: #{_help_for(c)}"}.join("\n")
+      longest_command_size = Cask::CLI.commands.map(&:length).max
+
+      puts "Commands:\n\n"
+      Cask::CLI.commands.each do |c|
+        command = "#{c.downcase}".ljust(longest_command_size)
+        puts "    #{command}  #{_help_for(c)}"
+      end
+      puts %Q{\nSee also "man brew-cask"}
     end
 
     def help

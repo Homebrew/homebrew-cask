@@ -1,7 +1,7 @@
 class Appium < Cask
-  url 'https://bitbucket.org/appium/appium.app/downloads/appium-0.18.0.dmg'
+  url 'https://bitbucket.org/appium/appium.app/downloads/appium-1.0.0.dmg'
   homepage 'http://appium.io'
-  version '0.18.0'
-  sha256 '32b9847b36bb3fba5308ee44f0872f03b522d8c98fe166d847b25c49c6c67fa9'
+  version '1.0.0'
+  sha256 'c54a7af32870ec7046d9978ecd3545d8e10496a1599211debeb723b8deeeea68'
   link 'Appium.app'
 end

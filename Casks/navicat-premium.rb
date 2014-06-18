@@ -1,7 +1,7 @@
 class NavicatPremium < Cask
   url 'http://download.navicat.com/download/navicat110_premium_en.dmg'
   homepage 'http://www.navicat.com/products/navicat-premium'
-  version '11.0.16'
-  sha256 '9fc7908afa24bfd46ec265da408a865528328a0b17a29036891814875a10b88d'
+  version '11.0.18'
+  sha256 '561a5e20e7223f6a1c1431110dd6cc164b7a11c73432667a7a3dbc66b565cc91'
   link 'Navicat Premium.app'
 end
