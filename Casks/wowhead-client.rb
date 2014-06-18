@@ -1,5 +1,5 @@
 class WowheadClient < Cask
-  url 'http://static.wowhead.com/download/Wowhead_Client.dmg'
+  url 'https://static.wowhead.com/download/Wowhead_Client.dmg'
   appcast 'http://client.wowhead.com/files/wowhead-client-appcast.xml'
   homepage 'http://wowhead.com'
   version '1.2.2'
