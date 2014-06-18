@@ -1,7 +1,7 @@
 class Xiami < Cask
-  url 'http://dbison.alicdn.com/updates/xiami-1.3.1-1821.dmg'
+  url 'http://www.xiami.com/software/download?app=music_mac'
   homepage 'http://www.xiami.com/'
-  version '1.3.1-1821'
-  sha256 'c59a31f766e7a937543e2740d02cb152391508b5299e26573e395ffe214647a0'
+  version '1.3.2-1826'
+  sha256 '283c25d9312f7390cf53648926228614b8cdadf32ec627d8e3306e000cf8f989'
   link 'Xiami.app'
 end
