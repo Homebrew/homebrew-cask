@@ -1,5 +1,5 @@
 class Cord < Cask
-  url 'http://downloads.sourceforge.net/sourceforge/cord/CoRD_0.5.7.zip'
+  url 'https://downloads.sourceforge.net/sourceforge/cord/CoRD_0.5.7.zip'
   appcast 'http://cord.sourceforge.net/sparkle.xml'
   homepage 'http://cord.sourceforge.net/'
   version '0.5.7'
