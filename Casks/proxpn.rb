@@ -1,5 +1,5 @@
 class Proxpn < Cask
-  url 'http://proxpn.com/mac.dmg'
+  url 'https://proxpn.com/mac.dmg'
   appcast 'http://www.proxpn.org/updater/appcast.rss'
   homepage 'http://proxpn.com'
   version 'latest'
