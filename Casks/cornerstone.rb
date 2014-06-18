@@ -1,5 +1,5 @@
 class Cornerstone < Cask
-  url 'http://www.zennaware.com/cornerstone/downloads/Cornerstone-2.7.10.zip'
+  url 'https://www.zennaware.com/cornerstone/downloads/Cornerstone-2.7.10.zip'
   appcast 'http://www.zennaware.com/cornerstone/appcast/feed2.php'
   homepage 'http://www.zennaware.com/cornerstone/index.php'
   version '2.7.10'

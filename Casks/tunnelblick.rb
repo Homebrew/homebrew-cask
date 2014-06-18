@@ -1,5 +1,5 @@
 class Tunnelblick < Cask
-  url 'http://downloads.sourceforge.net/project/tunnelblick/All%20files/Tunnelblick_3.3.4.dmg'
+  url 'https://downloads.sourceforge.net/project/tunnelblick/All%20files/Tunnelblick_3.3.4.dmg'
   appcast 'https://www.tunnelblick.net/appcast.rss'
   homepage 'https://code.google.com/p/tunnelblick/'
   version '3.3.4'

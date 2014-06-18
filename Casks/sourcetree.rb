@@ -1,5 +1,5 @@
 class Sourcetree < Cask
-  url 'http://downloads.atlassian.com/software/sourcetree/SourceTree_1.9.4.1.dmg'
+  url 'https://downloads.atlassian.com/software/sourcetree/SourceTree_1.9.4.1.dmg'
   appcast 'http://www.sourcetreeapp.com/update/SparkleAppcast.xml'
   homepage 'http://www.sourcetreeapp.com/'
   version '1.9.4.1'

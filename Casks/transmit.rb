@@ -1,5 +1,5 @@
 class Transmit < Cask
-  url 'http://www.panic.com/transmit/d/Transmit%204.4.6.zip'
+  url 'https://www.panic.com/transmit/d/Transmit%204.4.6.zip'
   appcast 'http://www.panic.com/updates/update.php'
   homepage 'http://panic.com/transmit'
   version '4.4.6'

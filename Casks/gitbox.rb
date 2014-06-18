@@ -1,5 +1,5 @@
 class Gitbox < Cask
-  url 'http://d1oa71y4zxyi0a.cloudfront.net/gitbox-1.6.2-ml.zip'
+  url 'https://d1oa71y4zxyi0a.cloudfront.net/gitbox-1.6.2-ml.zip'
   appcast 'http://gitboxapp.com/updates.xml'
   homepage 'http://gitboxapp.com/'
   version '1.6.2'

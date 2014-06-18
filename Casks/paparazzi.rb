@@ -1,5 +1,5 @@
 class Paparazzi < Cask
-  url 'http://derailer.org/paparazzi/Paparazzi!%200.6.7.dmg'
+  url 'https://derailer.org/paparazzi/Paparazzi!%200.6.7.dmg'
   appcast 'https://derailer.org/paparazzi/appcast/'
   homepage 'http://derailer.org/paparazzi/'
   version '0.6.7'

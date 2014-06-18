@@ -1,5 +1,5 @@
 class Ccmenu < Cask
-  url 'http://downloads.sourceforge.net/project/ccmenu/CCMenu/1.7/ccmenu-1.7-b.dmg'
+  url 'https://downloads.sourceforge.net/project/ccmenu/CCMenu/1.7/ccmenu-1.7-b.dmg'
   appcast 'http://ccmenu.sourceforge.net/update-stable.xml'
   homepage 'http://ccmenu.sourceforge.net/'
   version '1.7'

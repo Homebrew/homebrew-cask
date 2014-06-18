@@ -1,5 +1,5 @@
 class Iphoney < Cask
-  url 'http://download.marketcircle.com/s3/iPhoney_1.2.zip'
+  url 'https://download.marketcircle.com/s3/iPhoney_1.2.zip'
   appcast 'http://www.marketcircle.com/iphoney/iPhoneyAppcast.xml'
   homepage 'https://www.marketcircle.com/iphoney'
   version '1.2'

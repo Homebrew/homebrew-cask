@@ -1,5 +1,5 @@
 class Xscope < Cask
-  url 'http://iconfactory.com/assets/software/xscope/xScope-3.6.3.zip'
+  url 'https://iconfactory.com/assets/software/xscope/xScope-3.6.3.zip'
   appcast 'http://iconfactory.com/appcasts/xScope/appcast.xml'
   homepage 'http://iconfactory.com/software/xscope'
   version '3.6.3'

@@ -1,5 +1,5 @@
 class Chromium < Cask
-  url 'http://downloads.sourceforge.net/sourceforge/osxportableapps/ChromiumOSX_35.0.1916.153.dmg'
+  url 'https://downloads.sourceforge.net/sourceforge/osxportableapps/ChromiumOSX_35.0.1916.153.dmg'
   appcast 'http://osxportableapps.sourceforge.net/chromium/chrcast.xml'
   homepage 'http://www.freesmug.org/chromium'
   version '35.0.1916.153'

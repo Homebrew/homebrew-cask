@@ -1,5 +1,5 @@
 class Marsedit < Cask
-  url 'http://www.red-sweater.com/marsedit/MarsEdit3.6.2.zip'
+  url 'https://www.red-sweater.com/marsedit/MarsEdit3.6.2.zip'
   appcast 'http://www.red-sweater.com/marsedit/appcast3.php'
   homepage 'http://www.red-sweater.com/marsedit/'
   version '3.6.2'

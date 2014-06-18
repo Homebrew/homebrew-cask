@@ -1,5 +1,5 @@
 class Texpad < Cask
-  url 'http://cloud.texpadapp.com/bundles/Texpad_1_6_12.zip'
+  url 'https://cloud.texpadapp.com/bundles/Texpad_1_6_12.zip'
   appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml'
   homepage 'https://www.texpadapp.com/osx'
   version '1.6.12'
