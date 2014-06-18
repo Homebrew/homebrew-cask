@@ -43,6 +43,7 @@ class Cask
   include Cask::Locations
   include Cask::Scopes
   include Cask::Options
+  include Cask::Utils
 
   def self.init
     set_up_taps
@@ -117,7 +118,7 @@ class Cask
   def self.load(query)
     odebug 'Loading Cask definitions'
     cask = Cask::Source.for_query(query).load
-    odumpcask cask
+    cask.dumpcask
     cask
   end
 

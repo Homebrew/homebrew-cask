@@ -38,7 +38,7 @@ class Cask::CLI::Install
     if exact_match
       errmsg.concat(". Did you mean:\n#{exact_match}")
     elsif !partial_matches.empty?
-      errmsg.concat(". Did you mean one of:\n#{stringify_columns(partial_matches.take(20))}\n")
+      errmsg.concat(". Did you mean one of:\n#{Cask::Utils.stringify_columns(partial_matches.take(20))}\n")
     end
     onoe errmsg
   end
