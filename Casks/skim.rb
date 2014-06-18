@@ -1,5 +1,5 @@
 class Skim < Cask
-  url 'http://downloads.sourceforge.net/project/skim-app/Skim/Skim-1.4.8/Skim-1.4.8.dmg'
+  url 'https://downloads.sourceforge.net/project/skim-app/Skim/Skim-1.4.8/Skim-1.4.8.dmg'
   appcast 'http://skim-app.sourceforge.net/skim.xml'
   homepage 'http://skim-app.sourceforge.net/'
   version '1.4.8'
