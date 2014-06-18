@@ -54,6 +54,8 @@ class Pathname
   end
 end
 
+# global methods
+
 def odebug title, *sput
   if Cask.respond_to?(:debug) and Cask.debug
     width = Tty.width * 4 - 6
@@ -65,47 +67,49 @@ def odebug title, *sput
   end
 end
 
-def odumpcask cask
-  if Cask.respond_to?(:debug) and Cask.debug
-    odebug "Cask instance dumps in YAML:"
-    odebug "Cask instance toplevel:", cask.to_yaml
-    [
-     :homepage,
-     :url,
-     :appcast,
-     :version,
-     :sums,
-     :artifacts,
-     :caveats,
-     :depends_on_formula,
-     :container_type,
-    ].each do |method|
-      odebug "Cask instance method '#{method}':", cask.send(method).to_yaml
+module Cask::Utils
+  def dumpcask
+    if Cask.respond_to?(:debug) and Cask.debug
+      odebug "Cask instance dumps in YAML:"
+      odebug "Cask instance toplevel:", self.to_yaml
+      [
+       :homepage,
+       :url,
+       :appcast,
+       :version,
+       :sums,
+       :artifacts,
+       :caveats,
+       :depends_on_formula,
+       :container_type,
+      ].each do |method|
+        odebug "Cask instance method '#{method}':", self.send(method).to_yaml
+      end
     end
   end
-end
 
-# from Homebrew puts_columns
-def stringify_columns items, star_items=[]
-  return if items.empty?
+  # from Homebrew puts_columns
+  def self.stringify_columns items, star_items=[]
+    return if items.empty?
 
-  if star_items && star_items.any?
-    items = items.map{|item| star_items.include?(item) ? "#{item}*" : item}
-  end
+    if star_items && star_items.any?
+      items = items.map{|item| star_items.include?(item) ? "#{item}*" : item}
+    end
 
-  if $stdout.tty?
-    # determine the best width to display for different console sizes
-    console_width = `/bin/stty size`.chomp.split(" ").last.to_i
-    console_width = 80 if console_width <= 0
-  else
-    console_width = 80
-  end
-  longest = items.sort_by { |item| item.length }.last
-  optimal_col_width = (console_width.to_f / (longest.length + 2).to_f).floor
-  cols = optimal_col_width > 1 ? optimal_col_width : 1
-  Open3.popen3('/usr/bin/pr', "-#{cols}", '-t', "-w#{console_width}") do |stdin, stdout, stderr|
-    stdin.puts(items)
-    stdin.close
-    stdout.read
+    if $stdout.tty?
+      # determine the best width to display for different console sizes
+      console_width = `/bin/stty size`.chomp.split(" ").last.to_i
+      console_width = 80 if console_width <= 0
+    else
+      console_width = 80
+    end
+    longest = items.sort_by { |item| item.length }.last
+    optimal_col_width = (console_width.to_f / (longest.length + 2).to_f).floor
+    cols = optimal_col_width > 1 ? optimal_col_width : 1
+    Open3.popen3('/usr/bin/pr', "-#{cols}", '-t', "-w#{console_width}") do |stdin, stdout, stderr|
+      stdin.puts(items)
+      stdin.close
+      stdout.read
+    end
   end
 end
