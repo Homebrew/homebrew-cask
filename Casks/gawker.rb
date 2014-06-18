@@ -1,5 +1,5 @@
 class Gawker < Cask
-  url 'http://sourceforge.net/projects/gawker/files/latest/download'
+  url 'https://sourceforge.net/projects/gawker/files/latest/download'
   appcast 'http://gawker.sourceforge.net/appcast.xml'
   homepage 'http://gawker.sourceforge.net/Gawker.html'
   version 'latest'
