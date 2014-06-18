@@ -1,5 +1,5 @@
 class Clementine < Cask
-  url 'http://clementine-player.googlecode.com/files/clementine-1.2.1.dmg'
+  url 'https://clementine-player.googlecode.com/files/clementine-1.2.1.dmg'
   appcast 'https://clementine-data.appspot.com/sparkle'
   homepage 'http://www.clementine-player.org/'
   version '1.2.1'
