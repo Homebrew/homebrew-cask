@@ -179,7 +179,10 @@ class Cask::CaveatsDSL
 
         If you are working on #{@cask}, this may point to a typo. Otherwise
         it probably means this Cask is using a new feature. If that feature
-        has been released, running `brew update; brew upgrade brew-cask`
+        has been released, running
+
+          brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+
         should fix it. Otherwise you should wait to use #{@cask} until the
         new feature is released.
     EOPOO

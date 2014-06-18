@@ -33,7 +33,7 @@ class Hash
   def assert_valid_keys(*valid_keys)
     unknown_keys = self.keys - valid_keys
     unless unknown_keys.empty?
-      raise CaskError.new "Unknown keys: #{unknown_keys.inspect}. Running `brew update; brew upgrade brew-cask` will likely fix it."
+      raise CaskError.new %Q{Unknown keys: #{unknown_keys.inspect}. Running "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" will likely fix it.}
     end
   end
 end

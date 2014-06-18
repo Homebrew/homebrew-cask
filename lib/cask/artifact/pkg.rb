@@ -16,7 +16,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     permitted_keys = [:args, :input, :executable, :must_succeed]
     unknown_keys = script_arguments.keys - permitted_keys
     unless unknown_keys.empty?
-      opoo "Unknown arguments to uninstall :#{key} -- :#{unknown_keys.join(", :")} (ignored). Running `brew update; brew upgrade brew-cask` will likely fix it.'"
+      opoo %Q{Unknown arguments to uninstall :#{key} -- :#{unknown_keys.join(", :")} (ignored). Running "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" will likely fix it.}
     end
     script_arguments.reject! {|k,v| ! permitted_keys.include?(k)}
 
@@ -88,7 +88,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     uninstall_set.each do |uninstall_options|
       unknown_keys = uninstall_options.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :files]
       unless unknown_keys.empty?
-        opoo "Unknown arguments to uninstall: #{unknown_keys.join(", ")}. Running `brew update; brew upgrade brew-cask` will likely fix it.'"
+        opoo %Q{Unknown arguments to uninstall: #{unknown_keys.join(", ")}. Running "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" will likely fix it.}
       end
     end
 
