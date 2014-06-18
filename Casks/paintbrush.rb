@@ -1,5 +1,5 @@
 class Paintbrush < Cask
-  url 'http://downloads.sourceforge.net/project/paintbrush/Paintbrush%202.x/Paintbrush%202.1.1/Paintbrush-2.1.1.zip'
+  url 'https://downloads.sourceforge.net/project/paintbrush/Paintbrush%202.x/Paintbrush%202.1.1/Paintbrush-2.1.1.zip'
   appcast 'http://paintbrush.sourceforge.net/updates2x.xml'
   homepage 'http://paintbrush.sourceforge.net/'
   version '2.1.1'
