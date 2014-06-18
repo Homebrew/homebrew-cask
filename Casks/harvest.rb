@@ -1,5 +1,5 @@
 class Harvest < Cask
-  url 'http://www.getharvest.com/harvest/mac/Harvest.zip'
+  url 'https://www.getharvest.com/harvest/mac/Harvest.zip'
   appcast 'https://www.getharvest.com/harvest/mac/appcast.xml'
   homepage 'http://www.getharvest.com/mac'
   version 'latest'
