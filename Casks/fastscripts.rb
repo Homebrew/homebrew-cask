@@ -1,5 +1,5 @@
 class Fastscripts < Cask
-  url 'http://www.red-sweater.com/fastscripts/FastScripts2.6.5.zip'
+  url 'https://www.red-sweater.com/fastscripts/FastScripts2.6.5.zip'
   appcast 'http://www.red-sweater.com/fastscripts/appcast2.php'
   homepage 'http://www.red-sweater.com/fastscripts/'
   version '2.6.5'
