@@ -1,5 +1,5 @@
 class Pcalc < Cask
-  url 'http://s3.amazonaws.com/tlasystems/PCalc-3.9.dmg'
+  url 'https://s3.amazonaws.com/tlasystems/PCalc-3.9.dmg'
   appcast 'http://www.pcalc.com/PCalcSUFeed.xml'
   homepage 'http://www.pcalc.com/index.html'
   version '3.9'
