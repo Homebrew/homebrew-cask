@@ -1,5 +1,5 @@
 class Hear < Cask
-  url 'http://s3.amazonaws.com/prosoft-engineering/hear/Hear_1.1.6.dmg'
+  url 'https://s3.amazonaws.com/prosoft-engineering/hear/Hear_1.1.6.dmg'
   appcast 'http://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear'
   homepage 'http://www.prosofteng.com/products/hear.php'
   version '1.1.6'
