@@ -1,5 +1,5 @@
 class Slicy < Cask
-  url 'http://macrabbit.com/slicy/get/'
+  url 'https://macrabbit.com/slicy/get/'
   appcast 'http://update.macrabbit.com/slicy/1.1.3.xml'
   homepage 'http://macrabbit.com/slicy/'
   version 'latest'
