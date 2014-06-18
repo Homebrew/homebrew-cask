@@ -1,5 +1,5 @@
 class Tickets < Cask
-  url 'http://www.irradiatedsoftware.com/download/Tickets.zip'
+  url 'https://www.irradiatedsoftware.com/download/Tickets.zip'
   appcast 'http://www.irradiatedsoftware.com/updates/profiles/tickets.php'
   homepage 'http://www.irradiatedsoftware.com/tickets/'
   version '2.5'
