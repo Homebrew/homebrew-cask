@@ -112,4 +112,25 @@ module Cask::Utils
       stdout.read
     end
   end
+
+  # paths that "look" descendant (textually) will still
+  # return false unless both the given paths exist
+  def self.file_is_descendant(file, dir)
+    file = Pathname.new(file)
+    dir  = Pathname.new(dir)
+    return false unless file.exist? and dir.exist?
+    unless dir.directory?
+      onoe "Argument must be a directory: '#{dir}'"
+      return false
+    end
+    unless file.absolute? and dir.absolute?
+      onoe "Both arguments must be absolute: '#{file}', '#{dir}'"
+      return false
+    end
+    while file.parent != file
+      return true if File.identical?(file, dir)
+      file = file.parent
+    end
+    return false
+  end
 end
