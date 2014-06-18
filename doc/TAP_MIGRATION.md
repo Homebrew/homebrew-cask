@@ -29,7 +29,7 @@ All users should upgrade to the latest Homebrew (0.9.5 or better), and the
 latest Homebrew-cask (0.34.0 or better):
 
 ```bash
-$ brew update && brew upgrade brew-cask
+$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 ```
 
 The first time you execute a `brew cask` command, all Tap migrations
