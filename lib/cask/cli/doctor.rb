@@ -14,7 +14,7 @@ class Cask::CLI::Doctor
     ohai 'Homebrew-cask Default Tap Path:',                           render_tap_paths( fq_default_tap )
     ohai 'Homebrew-cask Alternate Cask Taps:',                        render_tap_paths( alt_taps )
     ohai 'Homebrew-cask Default Tap Cask Count:',            render_with_none_as_error( default_cask_count )
-    ohai 'Contents of $LOAD_PATH:',                          render_with_none_as_error( $LOAD_PATH )
+    ohai 'Contents of $LOAD_PATH:',                                   render_load_path( $LOAD_PATH )
     ohai 'Contents of $RUBYLIB Environment Variable:',                  render_env_var( 'RUBYLIB' )
     ohai 'Contents of $RUBYOPT Environment Variable:',                  render_env_var( 'RUBYOPT' )
     ohai 'Contents of $RUBYPATH Environment Variable:',                 render_env_var( 'RUBYPATH' )
@@ -147,6 +147,17 @@ class Cask::CLI::Doctor
       basename = File.basename l
       l.concat %Q{ #{error_string %Q{error: old version. Run "brew cleanup".}}} unless basename == current_version
     end
+  end
+
+  def self.render_load_path(paths)
+    if paths.nil? or paths.size == 0
+      return "#{none_string} #{error_string}"
+    end
+    copy = Array.new(paths)
+    unless Cask::Utils.file_is_descendant(copy[0], HOMEBREW_CELLAR)
+      copy[0] = "#{copy[0]} #{error_string %Q{error: should be descendant of HOMEBREW_CELLAR}}"
+    end
+    copy
   end
 
   def self.help
