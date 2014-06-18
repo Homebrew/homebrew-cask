@@ -1,5 +1,5 @@
 class Tilemill < Cask
-  url 'http://tilemill.s3.amazonaws.com/latest/TileMill-0.10.1.zip'
+  url 'https://tilemill.s3.amazonaws.com/latest/TileMill-0.10.1.zip'
   appcast 'http://mapbox.com/tilemill/platforms/osx/appcast2.xml'
   homepage 'http://www.mapbox.com/tilemill/'
   version '0.10.1'
