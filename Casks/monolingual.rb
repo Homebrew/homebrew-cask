@@ -1,5 +1,5 @@
 class Monolingual < Cask
-  url 'http://downloads.sourceforge.net/project/monolingual/monolingual/1.5.8/Monolingual-1.5.8.dmg'
+  url 'https://downloads.sourceforge.net/project/monolingual/monolingual/1.5.8/Monolingual-1.5.8.dmg'
   appcast 'http://monolingual.sourceforge.net/appcast.xml'
   homepage 'http://monolingual.sourceforge.net/'
   version '1.5.8'
