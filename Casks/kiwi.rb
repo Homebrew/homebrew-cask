@@ -1,5 +1,5 @@
 class Kiwi < Cask
-  url 'http://s3.amazonaws.com/Kiwi/Kiwi_3.1.0_1492.zip'
+  url 'https://s3.amazonaws.com/Kiwi/Kiwi_3.1.0_1492.zip'
   appcast 'http://yourhead.com/appcast/kiwi/appcast.xml'
   homepage 'http://kiwi-app.net/'
   version '3.1.0'
