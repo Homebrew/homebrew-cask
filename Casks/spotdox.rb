@@ -1,5 +1,5 @@
 class Spotdox < Cask
-  url 'http://spotdox.herokuapp.com/downloads/Spotdox.zip'
+  url 'https://spotdox.herokuapp.com/downloads/Spotdox.zip'
   appcast 'https://spotdox.herokuapp.com/downloads/appcast.xml'
   homepage 'http://spotdox.com/get-started/'
   version 'latest'

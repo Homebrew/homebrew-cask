@@ -1,5 +1,5 @@
 class Puush < Cask
-  url 'http://puush.me/dl/puush.zip'
+  url 'https://puush.me/dl/puush.zip'
   appcast 'https://puush.me/dl/puush.xml?hax=jax'
   homepage 'http://puush.me/'
   version 'latest'

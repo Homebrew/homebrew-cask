@@ -1,5 +1,5 @@
 class Skype < Cask
-  url 'http://www.skype.com/go/getskype-macosx.dmg'
+  url 'https://www.skype.com/go/getskype-macosx.dmg'
   homepage 'http://www.skype.com'
   version 'latest'
   sha256 :no_check

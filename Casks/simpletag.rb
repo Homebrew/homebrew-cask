@@ -1,5 +1,5 @@
 class Simpletag < Cask
-  url 'http://sourceforge.net/projects/simpletag/files/latest/download'
+  url 'https://sourceforge.net/projects/simpletag/files/latest/download'
   homepage 'http://sourceforge.net/projects/simpletag/'
   version 'latest'
   sha256 :no_check

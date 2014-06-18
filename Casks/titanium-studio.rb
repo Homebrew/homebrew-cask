@@ -1,5 +1,5 @@
 class TitaniumStudio < Cask
-  url 'http://titanium-studio.s3.amazonaws.com/latest/Titanium_Studio.dmg'
+  url 'https://titanium-studio.s3.amazonaws.com/latest/Titanium_Studio.dmg'
   homepage 'https://my.appcelerator.com/resources'
   version 'latest'
   sha256 :no_check

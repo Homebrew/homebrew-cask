@@ -1,5 +1,5 @@
 class AxureRpPro < Cask
-  url 'http://axure.cachefly.net/AxureRP-Pro-Setup.dmg'
+  url 'https://axure.cachefly.net/AxureRP-Pro-Setup.dmg'
   homepage 'http://www.axure.com/'
   version 'latest'
   sha256 :no_check
