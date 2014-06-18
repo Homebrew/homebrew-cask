@@ -1,5 +1,5 @@
 class Coccinellida < Cask
-  url 'http://downloads.sourceforge.net/project/coccinellida/Coccinellida-0.6.1.zip'
+  url 'https://downloads.sourceforge.net/project/coccinellida/Coccinellida-0.6.1.zip'
   appcast 'http://coccinellida.sourceforge.net/sparkle.xml'
   homepage 'http://coccinellida.sourceforge.net/'
   version '0.6.1'
