@@ -1,5 +1,5 @@
 class Historyhound < Cask
-  url 'http://www.stclairsoft.com/download/HistoryHound-1.9.9.dmg'
+  url 'https://www.stclairsoft.com/download/HistoryHound-1.9.9.dmg'
   appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?HH'
   homepage 'http://www.stclairsoft.com/HistoryHound/'
   version '1.9.9'
