@@ -1,5 +1,5 @@
 class Chicken < Cask
-  url 'http://downloads.sourceforge.net/project/chicken/Chicken-2.2b2.dmg'
+  url 'https://downloads.sourceforge.net/project/chicken/Chicken-2.2b2.dmg'
   appcast 'http://chicken.sourceforge.net/chicken.xml'
   homepage 'http://sourceforge.net/projects/chicken/'
   version '2.2b2'
