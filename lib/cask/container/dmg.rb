@@ -45,7 +45,7 @@ class Cask::Container::Dmg < Cask::Container::Base
   def eject!
     @mounts.each do |mount|
       # realpath is a failsafe against unusual filenames
-      @command.run!('/usr/bin/hdiutil', :args => ['eject', Pathname.new(mount).realpath])
+      @command.run!('/usr/sbin/diskutil', :args => ['eject', Pathname.new(mount).realpath])
     end
   end
 end
