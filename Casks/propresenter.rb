@@ -1,5 +1,5 @@
 class Propresenter < Cask
-  url 'http://www.renewedvision.com/downloads/ProPresenter5_5.2.8_b11499.dmg'
+  url 'https://www.renewedvision.com/downloads/ProPresenter5_5.2.8_b11499.dmg'
   appcast 'https://www.renewedvision.com/update/ProPresenter5.php'
   homepage 'http://www.renewedvision.com/propresenter.php'
   version '5.2.8'
