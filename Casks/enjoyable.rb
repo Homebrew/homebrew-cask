@@ -1,5 +1,5 @@
 class Enjoyable < Cask
-  url 'http://yukkurigames.com/enjoyable/Enjoyable-1.1.zip'
+  url 'https://yukkurigames.com/enjoyable/Enjoyable-1.1.zip'
   appcast 'http://yukkurigames.com/enjoyable/appcast.xml'
   homepage 'http://yukkurigames.com/enjoyable/'
   version '1.1'
