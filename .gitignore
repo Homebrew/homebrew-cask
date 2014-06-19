@@ -1,2 +1,6 @@
+# toplevel
+/.bundle/
+
+# anywhere in the tree
 .ruby-version
 coverage
