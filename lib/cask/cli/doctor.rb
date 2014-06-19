@@ -11,6 +11,7 @@ class Cask::CLI::Doctor
     ohai 'Homebrew Origin:',                                 render_with_none_as_error( homebrew_origin )
     ohai 'Homebrew-cask Version:',                           render_with_none_as_error( HOMEBREW_CASK_VERSION )
     ohai 'Homebrew-cask Install Location:',                    render_install_location( HOMEBREW_CASK_VERSION )
+    ohai 'Homebrew-cask Cached Downloads:',                     render_cached_downloads
     ohai 'Homebrew-cask Default Tap Path:',                           render_tap_paths( fq_default_tap )
     ohai 'Homebrew-cask Alternate Cask Taps:',                        render_tap_paths( alt_taps )
     ohai 'Homebrew-cask Default Tap Cask Count:',            render_with_none_as_error( default_cask_count )
@@ -158,6 +159,18 @@ class Cask::CLI::Doctor
       copy[0] = "#{copy[0]} #{error_string %Q{error: should be descendant of HOMEBREW_CELLAR}}"
     end
     copy
+  end
+
+  def self.render_cached_downloads
+    files = Cask::CLI::Cleanup.all_cache_files
+    count = files.count
+    space = Cask::CLI::Cleanup.space_in_megs files
+    [
+     HOMEBREW_CACHE,
+     HOMEBREW_CACHE_CASKS,
+     count.to_s.concat(" files").concat(count == 0 ? '' : %Q{ #{error_string %Q{warning: run "brew cask cleanup"}}}),
+     space.to_s.concat(" megs").concat(count == 0 ? '' : %Q{ #{error_string %Q{warning: run "brew cask cleanup"}}}),
+    ]
   end
 
   def self.help

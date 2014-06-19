@@ -49,6 +49,11 @@ class Cask::CLI::Cleanup
     cache_incompletes(outdated) + cache_completes(outdated)
   end
 
+  def self.space_in_megs(files)
+    bytes = files.map { |f| begin File.size(f); rescue; 0; end }.reduce(&:+) || 0
+    sprintf '%0.2f', bytes / (1024.0 * 1024.0)
+  end
+
   def self.remove_dead_symlinks
     ohai "Removing dead symlinks"
     to_delete = dead_symlinks
