@@ -1,5 +1,55 @@
 # CHANGELOG
 
+## 0.37.0
+
+* __Casks__
+ - 12 Casks added (378 updated) by 30 contributors since 0.36.2
+ - 1620 total Casks
+* __Features__
+ - [#4868][], [#4913][] `x11_required` added to `caveats` mini-DSL
+ - [#4927][] `version` helper method added to `caveats` mini-DSL
+ - [#4963][], [#4965][] [#4980][] `brew cask doctor` improvements
+     - detect need for `brew cleanup`
+     - detect need for `brew cask cleanup`
+     - notice broken `$LOAD_PATH`
+ - [#4924][] suggested (not enforced) order for Cask stanzas
+* __Fixes__
+ - [#4969][] standardize the recommended upgrade command.
+   - `brew cleanup` and `brew cask cleanup` have been found to fix several bugs for users, including issues when upgrading to Yosemite
+ - [#4892][], [#4887][], [#4889][], [#4900][], [#4975][], [#4978][], [#4857][] more robust mounting and ejecting of disk images, resolving several bugs
+ - [#4970][], [#4888][], [#4883][], [#4890][], [#4948][], [#4982][] test suite improvements; sync with Homebrew changes; error messages
+ - [#4980][], [#4964][] internal: refactor `utils.rb` and `cleanup.rb`
+ - [#4882][] internal: update maintainers
+* __Documentation__
+ - 11 doc commits since 0.36.2 <3 [@laurent22][]
+* __Breaking Changes__
+ - none
+
+[#4868]: https://github.com/caskroom/homebrew-cask/issues/4868
+[#4913]: https://github.com/caskroom/homebrew-cask/issues/4913
+[@laurent22]: https://github.com/laurent22
+[#4857]: https://github.com/caskroom/homebrew-cask/issues/4857
+[#4980]: https://github.com/caskroom/homebrew-cask/issues/4980
+[#4978]: https://github.com/caskroom/homebrew-cask/issues/4978
+[#4982]: https://github.com/caskroom/homebrew-cask/issues/4982
+[#4975]: https://github.com/caskroom/homebrew-cask/issues/4975
+[#4965]: https://github.com/caskroom/homebrew-cask/issues/4965
+[#4970]: https://github.com/caskroom/homebrew-cask/issues/4970
+[#4969]: https://github.com/caskroom/homebrew-cask/issues/4969
+[#4963]: https://github.com/caskroom/homebrew-cask/issues/4963
+[#4964]: https://github.com/caskroom/homebrew-cask/issues/4964
+[#4948]: https://github.com/caskroom/homebrew-cask/issues/4948
+[#4924]: https://github.com/caskroom/homebrew-cask/issues/4924
+[#4927]: https://github.com/caskroom/homebrew-cask/issues/4927
+[#4900]: https://github.com/caskroom/homebrew-cask/issues/4900
+[#4890]: https://github.com/caskroom/homebrew-cask/issues/4890
+[#4889]: https://github.com/caskroom/homebrew-cask/issues/4889
+[#4883]: https://github.com/caskroom/homebrew-cask/issues/4883
+[#4882]: https://github.com/caskroom/homebrew-cask/issues/4882
+[#4887]: https://github.com/caskroom/homebrew-cask/issues/4887
+[#4888]: https://github.com/caskroom/homebrew-cask/issues/4888
+[#4892]: https://github.com/caskroom/homebrew-cask/issues/4892
+
 ## 0.36.2
 
 * __Casks__
