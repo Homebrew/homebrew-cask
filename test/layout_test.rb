@@ -5,7 +5,7 @@ describe "Repo layout" do
 
   # todo: a more clever way to do this would be to dispense with
   #       the imperfect IGNORE lists and read the actual repo
-  #       contents by running "git ls-files
+  #       contents by reading the output of "git ls-files"
 
   # dot dirs are always a project of Dir.entries
   # other files are items that the developer hopefully has gitignored
