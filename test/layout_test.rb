@@ -13,6 +13,7 @@ describe "Repo layout" do
                     .
                     ..
                     .DS_Store
+                    .bundle
                    }
 
   # the developer has hopefully gitignored these
