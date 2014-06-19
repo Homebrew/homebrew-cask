@@ -22,6 +22,24 @@ $:.push(homebrew_path.join('Library', 'Homebrew'))
 # require homebrew testing env
 require 'test/testing_env'
 
+# todo temporary, copied from old Homebrew, this method is now moved inside a class
+def shutup
+  if ARGV.verbose?
+    yield
+  else
+    begin
+      tmperr = $stderr.clone
+      tmpout = $stdout.clone
+      $stderr.reopen '/dev/null', 'w'
+      $stdout.reopen '/dev/null', 'w'
+      yield
+    ensure
+      $stderr.reopen tmperr
+      $stdout.reopen tmpout
+    end
+  end
+end
+
 # making homebrew's cache dir allows us to actually download casks in tests
 HOMEBREW_CACHE.mkpath
 HOMEBREW_CACHE.join('Casks').mkpath
