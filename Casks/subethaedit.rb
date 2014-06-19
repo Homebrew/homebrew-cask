@@ -1,5 +1,5 @@
 class Subethaedit < Cask
-  url 'http://www.codingmonkeys.de/subethaedit/SubEthaEdit.zip'
+  url 'http://subethaedit.net/downloads/SubEthaEdit-354.zip'
   appcast 'http://www.codingmonkeys.de/subethaedit/appcast.rss'
   homepage 'http://www.codingmonkeys.de/subethaedit/'
   version '3.5.4'
