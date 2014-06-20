@@ -4,7 +4,6 @@ require 'optparse'
 require 'shellwords'
 
 require 'cask/cli/base'
-
 require 'cask/cli/alfred'
 require 'cask/cli/audit'
 require 'cask/cli/cat'
@@ -21,6 +20,8 @@ require 'cask/cli/list'
 require 'cask/cli/search'
 require 'cask/cli/uninstall'
 require 'cask/cli/update'
+
+require 'cask/cli/internal_use_base'
 
 class Cask::CLI
   ISSUES_URL = "https://github.com/caskroom/homebrew-cask/issues"
@@ -200,6 +201,7 @@ class Cask::CLI
 
       puts "Commands:\n\n"
       Cask::CLI.command_classes.each do |klass|
+        next unless klass.visible
         puts "    #{klass.command_name.ljust(longest_command_size)}  #{_help_for(klass)}"
       end
       puts %Q{\nSee also "man brew-cask"}
