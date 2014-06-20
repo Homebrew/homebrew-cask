@@ -1,4 +1,4 @@
-module Cask::CLI::Cat
+class Cask::CLI::Cat
   def self.run(*arguments)
     # only respects the first argument
     raise CaskUnspecifiedError if arguments.empty?

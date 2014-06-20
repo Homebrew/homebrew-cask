@@ -1,21 +1,18 @@
 require 'test_helper'
 
-module RecordSystemCalls
-  def system(*command)
+# monkeypatch for testing
+class Cask::CLI::Home
+  def self.system(*command)
     system_commands << command
   end
 
-  def reset!
+  def self.reset!
     @system_commands = []
   end
 
-  def system_commands
+  def self.system_commands
     @system_commands ||= []
   end
-end
-
-module Cask::CLI::Home
-  extend RecordSystemCalls
 end
 
 describe Cask::CLI::Home do

@@ -1,4 +1,4 @@
-module Cask::CLI::Edit
+class Cask::CLI::Edit
   def self.run(*arguments)
     raise CaskUnspecifiedError if arguments.empty?
     cask_name = arguments.first.sub(/\.rb$/i,'')
