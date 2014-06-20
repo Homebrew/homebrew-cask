@@ -23,6 +23,7 @@ require 'cask/cli/update'
 
 require 'cask/cli/internal_use_base'
 require 'cask/cli/internal_dump'
+require 'cask/cli/internal_help'
 
 class Cask::CLI
   ISSUES_URL = "https://github.com/caskroom/homebrew-cask/issues"
