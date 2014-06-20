@@ -185,7 +185,7 @@ class Cask::CLI
       if @attempted_name and @attempted_name != "help"
         puts "!! "
         puts "!! no command with name: #{@attempted_name}"
-        puts "!! "
+        puts "!! \n\n"
       end
       usage
     end
