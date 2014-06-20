@@ -48,7 +48,7 @@ class Cask::CLI
   end
 
   def self.lookup_command(command_string)
-    command_string = ALIASES[command_string] if ALIASES.key?(command_string)
+    command_string = ALIASES.fetch(command_string, command_string)
     if command_string && Cask::CLI.const_defined?(command_string.capitalize)
       Cask::CLI.const_get(command_string.capitalize)
     else
