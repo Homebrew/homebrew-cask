@@ -46,7 +46,7 @@ PURPOSE
       user, repo, name = path_elements
     end
     repo.sub!(/^homebrew-/i, '')
-    "https://github.com/#{user}/homebrew-#{repo}/commits/master/Casks/#{name}.rb"
+    "https://github.com/#{user}/homebrew-#{repo}/blob/master/Casks/#{name}.rb"
   end
 
   def self.artifact_info(cask)
