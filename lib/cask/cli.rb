@@ -43,6 +43,12 @@ class Cask::CLI
              # '-c1'          => '--config',
             }
 
+  def self.command_classes
+    @@command_classes ||= Cask::CLI.constants.
+                          map    { |sym| Cask::CLI.const_get sym }.
+                          select { |sym| sym.respond_to?(:run)   }
+  end
+
   def self.commands
     Cask::CLI.constants - [:NullCommand, :ISSUES_URL, "NullCommand", "ISSUES_URL"]
   end
