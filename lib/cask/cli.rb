@@ -22,6 +22,7 @@ require 'cask/cli/uninstall'
 require 'cask/cli/update'
 
 require 'cask/cli/internal_use_base'
+require 'cask/cli/internal_dump'
 
 class Cask::CLI
   ISSUES_URL = "https://github.com/caskroom/homebrew-cask/issues"
