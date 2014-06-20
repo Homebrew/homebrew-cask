@@ -50,7 +50,7 @@ class Cask::CLI
   end
 
   def self.commands
-    Cask::CLI.constants - [:NullCommand, :ISSUES_URL, "NullCommand", "ISSUES_URL"]
+    @@commands ||= command_classes.map { |sym| sym.command_name }
   end
 
   def self.lookup_command(command_string)
