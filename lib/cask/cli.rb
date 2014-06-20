@@ -199,12 +199,12 @@ class Cask::CLI
     end
 
     def usage
-      longest_command_size = Cask::CLI.commands.map(&:length).max
+      max_command_len = Cask::CLI.commands.map(&:length).max
 
       puts "Commands:\n\n"
       Cask::CLI.command_classes.each do |klass|
         next unless klass.visible
-        puts "    #{klass.command_name.ljust(longest_command_size)}  #{_help_for(klass)}"
+        puts "    #{klass.command_name.ljust(max_command_len)}  #{_help_for(klass)}"
       end
       puts %Q{\nSee also "man brew-cask"}
     end
