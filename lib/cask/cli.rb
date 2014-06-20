@@ -24,29 +24,31 @@ require 'cask/cli/update'
 
 class Cask::CLI
   ISSUES_URL = "https://github.com/caskroom/homebrew-cask/issues"
+
+  ALIASES = {
+             'ls'             => 'list',
+             'homepage'       => 'home',
+             '-S'             => 'search',    # verb starting with "-" is questionable
+             'up'             => 'update',
+             'instal'         => 'install',   # gem does the same
+             'rm'             => 'uninstall',
+             'remove'         => 'uninstall',
+             'abv'            => 'info',
+             'dr'             => 'doctor',
+             # aliases from Homebrew that we don't (yet) support
+             # 'ln'           => 'link',
+             # 'configure'    => 'diy',
+             # '--repo'       => '--repository',
+             # 'environment'  => '--env',
+             # '-c1'          => '--config',
+            }
+
   def self.commands
     Cask::CLI.constants - [:NullCommand, :ISSUES_URL, "NullCommand", "ISSUES_URL"]
   end
 
   def self.lookup_command(command_string)
-    aliases = {
-               'ls' => 'list',
-               'homepage' => 'home',
-               '-S' => 'search',
-               'up' => 'update',
-               'instal' => 'install', # gem does the same
-               'rm' => 'uninstall',
-               'remove' => 'uninstall',
-               'abv' => 'info',
-               'dr' => 'doctor',
-               # aliases from Homebrew that we don't (yet) support
-               # 'ln' => 'link',
-               # 'configure' => 'diy',
-               # '--repo' => '--repository',
-               # 'environment' => '--env',
-               # '-c1' => '--config',
-              }
-    command_string = aliases[command_string] if aliases.key?(command_string)
+    command_string = ALIASES[command_string] if ALIASES.key?(command_string)
     if command_string && Cask::CLI.const_defined?(command_string.capitalize)
       Cask::CLI.const_get(command_string.capitalize)
     else
