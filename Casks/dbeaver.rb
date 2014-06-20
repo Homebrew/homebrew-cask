@@ -1,7 +1,7 @@
 class Dbeaver < Cask
-  url 'http://dbeaver.jkiss.org/files/dbeaver-2.3.8-macosx.cocoa.x86_64.zip'
+  url 'http://dbeaver.jkiss.org/files/dbeaver-2.4.2-macosx.cocoa.x86_64.zip'
   homepage 'http://dbeaver.jkiss.org/'
-  version '2.3.8'
-  sha256 'd581cecdbc000519ebd3df00e6989fabd6e6d877e0dd65c22979ed81b396c437'
+  version '2.4.2'
+  sha256 'bc9255302f1770b1706465f87191249303532695901a731245f96764708435a6'
   link 'dbeaver/dbeaver.app'
 end
