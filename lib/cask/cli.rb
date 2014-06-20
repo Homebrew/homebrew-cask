@@ -202,9 +202,8 @@ class Cask::CLI
       longest_command_size = Cask::CLI.commands.map(&:length).max
 
       puts "Commands:\n\n"
-      Cask::CLI.commands.each do |c|
-        command = "#{c.downcase}".ljust(longest_command_size)
-        puts "    #{command}  #{_help_for(c)}"
+      Cask::CLI.command_classes.each do |klass|
+        puts "    #{klass.command_name.ljust(longest_command_size)}  #{_help_for(klass)}"
       end
       puts %Q{\nSee also "man brew-cask"}
     end
@@ -213,11 +212,8 @@ class Cask::CLI
       ''
     end
 
-    def _help_for(command_string)
-      command = Cask::CLI.lookup_command(command_string)
-      if command.respond_to?(:help)
-        command.help
-      end
+    def _help_for(klass)
+      klass.respond_to?(:help) ? klass.help : nil
     end
   end
 end
