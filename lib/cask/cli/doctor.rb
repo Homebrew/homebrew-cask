@@ -1,4 +1,4 @@
-class Cask::CLI::Doctor
+class Cask::CLI::Doctor < Cask::CLI::Base
   def self.run
     ohai 'OS X Version:',                                    render_with_none_as_error( MACOS_FULL_VERSION )
     ohai "Hardware Architecture:",                           render_with_none_as_error( "#{Hardware::CPU.type}-#{Hardware::CPU.bits}" )

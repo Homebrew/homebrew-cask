@@ -1,4 +1,4 @@
-class Cask::CLI::Info
+class Cask::CLI::Info < Cask::CLI::Base
   def self.run(*cask_names)
     raise CaskUnspecifiedError if cask_names.empty?
     cask_names.each do |cask_name|

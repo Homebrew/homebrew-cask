@@ -1,4 +1,4 @@
-class Cask::CLI::Uninstall
+class Cask::CLI::Uninstall < Cask::CLI::Base
   def self.run(*args)
     raise CaskUnspecifiedError if args.empty?
     cask_names = args.reject { |a| a.chars.first == '-' }

@@ -3,6 +3,8 @@ class Cask::CLI; end
 require 'optparse'
 require 'shellwords'
 
+require 'cask/cli/base'
+
 require 'cask/cli/alfred'
 require 'cask/cli/audit'
 require 'cask/cli/cat'

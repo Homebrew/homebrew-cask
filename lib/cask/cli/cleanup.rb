@@ -1,4 +1,4 @@
-class Cask::CLI::Cleanup
+class Cask::CLI::Cleanup < Cask::CLI::Base
 
   OUTDATED_DAYS = 10
   OUTDATED_TIMESTAMP = Time.now - (60 * 60 * 24 * OUTDATED_DAYS)
