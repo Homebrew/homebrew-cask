@@ -49,8 +49,8 @@ names, and other aspects of this manual are still subject to change.
     Check for bad Cask links.
 
   * `cleanup` [--outdated]:
-    Clean up cached downloads.  With `--outdated`, only clean up cached
-    downloads older than 10 days old.
+    Clean up cached downloads and tracker symlinks.  With `--outdated`, only
+    clean up cached downloads older than 10 days old.
 
   * `create` <Cask>:
     Generate a Cask definition file for the Cask named <Cask> and open a

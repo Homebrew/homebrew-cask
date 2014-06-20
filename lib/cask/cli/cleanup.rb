@@ -77,6 +77,6 @@ class Cask::CLI::Cleanup
   end
 
   def self.help
-    "cleans up cached downloads"
+    "cleans up cached downloads and tracker symlinks"
   end
 end
