@@ -24,6 +24,7 @@ require 'cask/cli/update'
 require 'cask/cli/internal_use_base'
 require 'cask/cli/internal_dump'
 require 'cask/cli/internal_help'
+require 'cask/cli/internal_stanza'
 
 class Cask::CLI
 
