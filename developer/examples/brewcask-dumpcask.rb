@@ -7,10 +7,10 @@
 #     brew cask dumpcask google-chrome
 #
 
-Cask.debug = true
-
 command_name = ARGV.shift
 cask_name = ARGV.shift
+
 cask = Cask.load(cask_name)
 
-odumpcask cask
+Cask.debug = true
+cask.dumpcask
