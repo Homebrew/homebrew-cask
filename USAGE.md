@@ -109,7 +109,7 @@ $ brew cask info caffeine
 caffeine: 1.1.1
 http://lightheadsw.com/caffeine/
 Not installed
-https://github.com/caskroom/homebrew-cask/commits/master/Casks/caffeine.rb
+https://github.com/caskroom/homebrew-cask/blob/master/Casks/caffeine.rb
 ```
 
 ## Updating/Upgrading Casks
