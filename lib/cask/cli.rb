@@ -63,14 +63,50 @@ class Cask::CLI
     @@lookup.fetch(command_string, command_string)
   end
 
+  # modified from Homebrew
+  def self.require? path
+    require path
+    true    # OK if already loaded
+  rescue LoadError => e
+    # HACK :( because we should raise on syntax errors but
+    # not if the file doesn't exist. TODO make robust!
+    raise unless e.to_s.include? path
+  end
+
   def self.run_command(command, *rest)
     if command.respond_to?(:run)
+      # usual case: built-in command verb
       command.run(*rest)
-    elsif which "brewcask-#{command}"
-      exec "brewcask-#{command}", *ARGV[1..-1]
     elsif require? which("brewcask-#{command}.rb").to_s
+      # external command as Ruby library on PATH, Homebrew-style
       exit 0
+    elsif command.to_s.include?('/') and require? command.to_s
+      # external command as Ruby library with literal path, useful
+      # for development and troubleshooting
+      sym = Pathname.new(command.to_s).basename('.rb').to_s.capitalize
+      klass = begin
+                Cask::CLI.const_get(sym)
+              rescue
+                nil
+              end
+      if klass.respond_to?(:run)
+        # invoke "run" on a Ruby library which follows our coding conventions
+        klass.run(*rest)
+      else
+        # other Ruby libraries must do everything via "require"
+        exit 0
+      end
+    elsif which "brewcask-#{command}"
+      # arbitrary external executable on PATH, Homebrew-style
+      exec "brewcask-#{command}", *ARGV[1..-1]
+    elsif Pathname.new(command.to_s).executable? and
+          command.to_s.include?('/')             and
+          not command.to_s.match(%{\.rb$})
+      # arbitrary external executable with literal path, useful
+      # for development and troubleshooting
+      exec command, *ARGV[1..-1]
     else
+      # failure
       Cask::CLI::NullCommand.new(command).run
     end
   end

@@ -144,6 +144,18 @@ with fully-qualified paths, like this:
 $ HOMEBREW_BREW_FILE=/usr/local/bin/brew /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/brew.rb /usr/local/bin/brew-cask.rb help
 ```
 
+## How Can I Force a Specific Homebrew-cask Subcommand?
+
+If you are developing a subcommand, you can force `brew cask` to dispatch a
+specific file by giving a fully-qualified path to the file containing the
+subcommand, like this:
+
+```bash
+$ brew cask /usr/local/Cellar/brew-cask/0.37.0/rubylib/cask/cli/info.rb google-chrome
+```
+
+This form can also be combined with a specific Ruby interpreter as above.
+
 ## Hanging out on IRC
 
 We're on IRC at `#homebrew-cask` on Freenode. If you are going to develop for
