@@ -42,16 +42,35 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
     }
   end
 
-  attr_reader :source, :target
+  attr_reader :source, :target, :glob
 
   def load_specification(artifact_spec)
-    source_string, target_hash = artifact_spec
+    source_string, parameters = artifact_spec
     raise CaskInvalidError if source_string.nil?
-    @source = @cask.destination_path.join(source_string)
-    if target_hash
-      raise CaskInvalidError unless target_hash.respond_to?(:keys)
-      target_hash.assert_valid_keys(:target)
-      @target = Cask.send(self.class.artifact_dirmethod).join(target_hash[:target])
+    if parameters
+      raise CaskInvalidError unless parameters.respond_to?(:keys)
+      parameters.assert_valid_keys(:target, :glob)
+    end
+    if parameters and parameters.key?(:glob) and source_string.match(%r{^~})
+      source_path_elts = Pathname.new(source_string).split
+      source_path_elts[0] = source_path_elts[0].expand_path
+      expanded_string = source_path_elts.reduce(&:join).to_s
+    end
+    @source = @cask.destination_path.join(expanded_string || source_string)
+    if parameters and parameters.key?(:glob)
+      glob_action = parameters[:glob]
+      glob_action = :first if glob_action === true
+      glob_result = Dir.glob(@source)
+      if glob_result.empty?
+        raise CaskError.new "Failed to perform :glob expansion on '#{source_string}'"
+      end
+      unless glob_result.respond_to? glob_action
+        raise CaskError.new ":glob expansion does not respond to '#{glob_action.inspect}' on '#{source_string}'"
+      end
+      @source = Pathname.new(glob_result.send(glob_action))
+    end
+    if parameters and parameters.key?(:target)
+      @target = Cask.send(self.class.artifact_dirmethod).join(parameters[:target])
     else
       @target = Cask.send(self.class.artifact_dirmethod).join(source.basename)
     end
