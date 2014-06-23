@@ -1,8 +1,8 @@
 class Hr < Cask
-  version '0.3.6'
-  sha256 '520bf9f61d330edf1a82b045c42d81900cddfd9d2379f9f17d889adacedd7769'
+  version '0.3.7'
+  sha256 '71323c46af3b4923b683d0dea774953d9dc89f40ffd88dc71992e4395048750e'
 
-  url 'http://www.hrmacapp.com/releases/hr_036.zip'
+  url 'http://www.hrmacapp.com/releases/hr_037.zip'
   homepage 'http://www.hrmacapp.com/'
 
   link 'hr.app'
