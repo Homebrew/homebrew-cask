@@ -1,5 +1,5 @@
 class Bibdesk < Cask
-  url 'http://downloads.sourceforge.net/project/bibdesk/BibDesk/BibDesk-1.6.2/BibDesk-1.6.2.dmg'
+  url 'https://downloads.sourceforge.net/project/bibdesk/BibDesk/BibDesk-1.6.2/BibDesk-1.6.2.dmg'
   appcast 'http://bibdesk.sourceforge.net/bibdesk.xml'
   homepage 'http://bibdesk.sourceforge.net/'
   version '1.6.2'

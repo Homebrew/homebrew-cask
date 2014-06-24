@@ -1,5 +1,5 @@
 class Reggy < Cask
-  url 'http://github.com/downloads/samsouder/reggy/Reggy_v1.3.tbz'
+  url 'https://github.com/downloads/samsouder/reggy/Reggy_v1.3.tbz'
   appcast 'http://reggyapp.com/appcast.xml'
   homepage 'http://reggyapp.com/'
   version '1.3'

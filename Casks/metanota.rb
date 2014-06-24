@@ -1,5 +1,5 @@
 class Metanota < Cask
-  url 'http://j.mp/metanota-2-4-1'
+  url 'https://j.mp/metanota-2-4-1'
   appcast 'https://s3.amazonaws.com/sparkle.metanota.com/appcast.xml'
   homepage 'http://www.metanota.com/'
   version '2.4.1'

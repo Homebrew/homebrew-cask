@@ -1,5 +1,5 @@
 class Teamviewer < Cask
-  url 'http://download.teamviewer.com/download/TeamViewer.dmg'
+  url 'https://download.teamviewer.com/download/TeamViewer.dmg'
   homepage 'http://www.teamviewer.com/'
   version 'latest'
   sha256 :no_check

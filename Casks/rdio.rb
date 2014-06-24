@@ -1,5 +1,5 @@
 class Rdio < Cask
-  url 'http://www.rdio.com/media/static/desktop/mac/Rdio.dmg'
+  url 'https://www.rdio.com/media/static/desktop/mac/Rdio.dmg'
   appcast 'http://www.rdio.com/media/static/desktop/mac/appcast.xml'
   homepage 'http://www.rdio.com'
   version 'latest'

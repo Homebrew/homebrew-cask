@@ -1,4 +1,4 @@
-class Cask::CLI::Doctor
+class Cask::CLI::Doctor < Cask::CLI::Base
   def self.run
     ohai 'OS X Version:',                                    render_with_none_as_error( MACOS_FULL_VERSION )
     ohai "Hardware Architecture:",                           render_with_none_as_error( "#{Hardware::CPU.type}-#{Hardware::CPU.bits}" )
@@ -10,10 +10,12 @@ class Cask::CLI::Doctor
     ohai 'Homebrew Repository Path:',                        render_with_none_as_error( HOMEBREW_REPOSITORY )
     ohai 'Homebrew Origin:',                                 render_with_none_as_error( homebrew_origin )
     ohai 'Homebrew-cask Version:',                           render_with_none_as_error( HOMEBREW_CASK_VERSION )
+    ohai 'Homebrew-cask Install Location:',                    render_install_location( HOMEBREW_CASK_VERSION )
+    ohai 'Homebrew-cask Cached Downloads:',                     render_cached_downloads
     ohai 'Homebrew-cask Default Tap Path:',                           render_tap_paths( fq_default_tap )
     ohai 'Homebrew-cask Alternate Cask Taps:',                        render_tap_paths( alt_taps )
     ohai 'Homebrew-cask Default Tap Cask Count:',            render_with_none_as_error( default_cask_count )
-    ohai 'Contents of $LOAD_PATH:',                          render_with_none_as_error( $LOAD_PATH )
+    ohai 'Contents of $LOAD_PATH:',                                   render_load_path( $LOAD_PATH )
     ohai 'Contents of $RUBYLIB Environment Variable:',                  render_env_var( 'RUBYLIB' )
     ohai 'Contents of $RUBYOPT Environment Variable:',                  render_env_var( 'RUBYOPT' )
     ohai 'Contents of $RUBYPATH Environment Variable:',                 render_env_var( 'RUBYPATH' )
@@ -135,6 +137,40 @@ class Cask::CLI::Doctor
     else
       none_string
     end
+  end
+
+  # This could be done by calling into Homebrew, but the situation
+  # where "doctor" is needed is precisely the situation where such
+  # things are less dependable.
+  def self.render_install_location(current_version)
+    locations = Dir.glob(HOMEBREW_CELLAR.join('brew-cask', '*')).reverse
+    locations.each do |l|
+      basename = File.basename l
+      l.concat %Q{ #{error_string %Q{error: old version. Run "brew cleanup".}}} unless basename == current_version
+    end
+  end
+
+  def self.render_load_path(paths)
+    if paths.nil? or paths.size == 0
+      return "#{none_string} #{error_string}"
+    end
+    copy = Array.new(paths)
+    unless Cask::Utils.file_is_descendant(copy[0], HOMEBREW_CELLAR)
+      copy[0] = "#{copy[0]} #{error_string %Q{error: should be descendant of HOMEBREW_CELLAR}}"
+    end
+    copy
+  end
+
+  def self.render_cached_downloads
+    files = Cask::CLI::Cleanup.all_cache_files
+    count = files.count
+    space = Cask::CLI::Cleanup.space_in_megs files
+    [
+     HOMEBREW_CACHE,
+     HOMEBREW_CACHE_CASKS,
+     count.to_s.concat(" files").concat(count == 0 ? '' : %Q{ #{error_string %Q{warning: run "brew cask cleanup"}}}),
+     space.to_s.concat(" megs").concat(count == 0 ? '' : %Q{ #{error_string %Q{warning: run "brew cask cleanup"}}}),
+    ]
   end
 
   def self.help

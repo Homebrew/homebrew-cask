@@ -1,5 +1,5 @@
 class Scummvm < Cask
-  url 'http://downloads.sourceforge.net/project/scummvm/scummvm/1.6.0/scummvm-1.6.0-macosx.dmg'
+  url 'https://downloads.sourceforge.net/project/scummvm/scummvm/1.6.0/scummvm-1.6.0-macosx.dmg'
   appcast 'http://www.scummvm.org/appcasts/macosx/release.xml'
   homepage 'http://scummvm.org/'
   version '1.6.0'

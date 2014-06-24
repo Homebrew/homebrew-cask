@@ -1,5 +1,5 @@
 class Invisiblix < Cask
-  url 'http://downloads.sourceforge.net/project/invisiblix/invisibliX-3.2.zip'
+  url 'https://downloads.sourceforge.net/project/invisiblix/invisibliX-3.2.zip'
   appcast 'http://www.read-write.fr/invisiblix/appcast.xml'
   homepage 'http://www.read-write.fr/invisiblix/'
   version '3.2'

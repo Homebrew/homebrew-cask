@@ -1,5 +1,5 @@
 class Welly < Cask
-  url 'http://welly.googlecode.com/files/Welly.v2.7.fix.zip'
+  url 'https://welly.googlecode.com/files/Welly.v2.7.fix.zip'
   appcast 'http://welly.googlecode.com/svn/wiki/WellyUpdate.xml'
   homepage 'https://code.google.com/p/welly/'
   version '2.7+'

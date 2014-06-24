@@ -43,6 +43,7 @@ class Cask
   include Cask::Locations
   include Cask::Scopes
   include Cask::Options
+  include Cask::Utils
 
   def self.init
     set_up_taps
@@ -90,7 +91,7 @@ class Cask
     begin
       Homebrew.send(:rename_taps_dir_if_necessary)
     rescue StandardError
-      opoo %q{Trouble with automatic Tap migration. You may need to run "brew update && brew upgrade brew-cask"}
+      opoo %q{Trouble with automatic Tap migration. You may need to run "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup"}
     end
 
     # transitional: help with our own move to new GitHub project, May 2014
@@ -117,7 +118,7 @@ class Cask
   def self.load(query)
     odebug 'Loading Cask definitions'
     cask = Cask::Source.for_query(query).load
-    odumpcask cask
+    cask.dumpcask
     cask
   end
 

@@ -1,5 +1,5 @@
 class Vlc < Cask
-  url 'http://get.videolan.org/vlc/2.1.4/macosx/vlc-2.1.4.dmg'
+  url 'https://get.videolan.org/vlc/2.1.4/macosx/vlc-2.1.4.dmg'
   appcast 'http://update.videolan.org/vlc/sparkle/vlc-intel64.xml'
   homepage 'http://www.videolan.org/vlc/'
   version '2.1.4'

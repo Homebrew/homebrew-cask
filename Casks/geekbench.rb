@@ -1,5 +1,5 @@
 class Geekbench < Cask
-  url 'http://d34wv75roto0rl.cloudfront.net/Geekbench-3.1.6-Mac.zip'
+  url 'https://d34wv75roto0rl.cloudfront.net/Geekbench-3.1.6-Mac.zip'
   appcast 'http://www.primatelabs.com/appcast/geekbench3.xml'
   homepage 'http://www.primatelabs.com/geekbench/'
   version '3.1.6'

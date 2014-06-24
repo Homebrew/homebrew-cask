@@ -17,8 +17,8 @@ tag that exists and/or calculate the proposed next release tag.  Docs are at
 
 ## Release Process
 
-We'll get this scripted someday, but until then it's better to have it written
-down than floating in a brain somewhere.
+We'll get this fully scripted someday, but until then it's better to have it
+written down than floating in a brain somewhere.
 
 1. Be running on a checkout of master which is up to date and `git status` clean.
 2. `cd` to the project root.
@@ -27,85 +27,100 @@ down than floating in a brain somewhere.
 	$ cd "$(git rev-parse --show-toplevel)"
 	```
 
-3. Re-compile the man page by running `./developer/bin/generate_man_pages`.
-   Run `git diff` to see if the compiled man page has updates other than the
-   datestamp.  If so, check in the changes.  If not, discard the changes:
+3. Compile the man page and check the result by running
 
 	```bash
-	$ git checkout -- ./doc/man/brew-cask.1    # to discard changes
+	$ ./developer/bin/generate_man_pages; git --no-pager diff ./doc/man/brew-cask.1
+	```
+   If the newly-compiled man page has no updates other than the datestamp, you
+   may wish to discard the changes as follows:
+
+	```bash
+	$ git checkout -- ./doc/man/brew-cask.1    # discard changes
 	```
 
 4. Do a `git log` to see what changed since the last release. You can scope it
-   to `lib` to just pick up code changes.   Like this:
+   to just pick up code changes, like this:
 
 	```bash
-	$ git log "$(./developer/bin/get_release_tag)"..HEAD -- lib
+	$ git log "$(./developer/bin/get_release_tag)"..HEAD -- lib test developer bin Gemfile Gemfile.lock Rakefile brew-cask.rb
 	```
 
 5. Decide whether to bump the minor or patch fields in the next release tag,
-   based on whether or not features were added.  Run the shell command
+   based on whether or not features were added.  For a feature release, run the
+   shell command:
 
 	```bash
-	$ export NEW_RELEASE_TAG="$(./developer/bin/get_release_tag -next)"; echo "$NEW_RELEASE_TAG"    # or use -next -patch
+	$ export NEW_RELEASE_TAG="$(./developer/bin/get_release_tag -next)"; echo "$NEW_RELEASE_TAG"
 	```
-
-   and make sure the value in `$NEW_RELEASE_TAG` is what you want.
-6. Bump the `HOMEBREW_CASK_VERSION` string which is stored in the file
+   or for a patch release, add `-patch` to the command:
+	```bash
+	$ export NEW_RELEASE_TAG="$(./developer/bin/get_release_tag -next -patch)"; echo "$NEW_RELEASE_TAG"
+	```
+6. Make sure the value in `$NEW_RELEASE_TAG` is what you want.
+7. Bump the `HOMEBREW_CASK_VERSION` string which is stored in the file
    `lib/cask/version.rb`:
 
 	```bash
 	$ ./developer/bin/bump_version "$NEW_RELEASE_TAG"
 	```
-
    The version string in the Ruby code should match `$NEW_RELEASE_TAG`,
    except that the leading `v` character should be removed.
-7. Generate a draft changelog for the new release by running
+8. Generate a draft changelog for the new release by running
 
 	```bash
 	$ ./developer/bin/project_stats release  >| /var/tmp/draft_release_changelog.md
 	$ ./developer/bin/generate_changelog     >> /var/tmp/draft_release_changelog.md
 	```
 
-8. Edit the draft changelog, following the patterns used in `doc/CHANGELOG.md`.
-   When complete, insert the new release changelog near the beginning, just
-   after the first line in `doc/CHANGELOG.md`.
-9. Make a commit on `master` with the modifications to `doc/CHANGELOG.md` and
-   `lib/cask/version.rb`:
+9. Edit the draft changelog, following the patterns used in `doc/CHANGELOG.md`.
+   Some of the items for the changelog should be extracted from the statistics
+   section at the start of the file, after which the statistics section can be
+   deleted.
+10. When complete, insert the new release changelog near the beginning of
+    `doc/CHANGELOG.md`, just after the first line.
+11. Make a commit on `master` with the modifications to `doc/CHANGELOG.md`,
+   `lib/cask/version.rb`, and/or `doc/man/brew-cask.1`:
 
 	```bash
-	$ git add doc/CHANGELOG.md lib/cask/version.rb
+	$ git add doc/CHANGELOG.md lib/cask/version.rb doc/man/brew-cask.1
 	$ git commit -m "cut $NEW_RELEASE_TAG"
 	```
 
-10. Tag that commit.  Make certain that you provide a `-m` message so the we
-    get an annotated tag in the git history:
+12. Tag that commit.  Make certain to provide a `-m` message so that we get
+    an annotated tag in the git history:
 
 	```bash
 	$ git tag -m "$NEW_RELEASE_TAG" "$NEW_RELEASE_TAG"
 	```
 
-11. Push that commit and the tag:
+13. Push that commit and the tag:
 
 	```bash
 	$ git push --follow-tags
 	```
-    Depending on your git configuration, you may need to append `<repository> <refspec>`
-    to the above command, for example: `git push --follow-tags upstream master`
-12. Unset the shell variable `$NEW_RELEASE_TAG`; you don't need it anymore.
+    Or, depending on your git configuration, you might need to append
+    `<repository> <refspec>` to the above command, for example:
+
+	```bash
+	$ git push --follow-tags upstream master
+	```
+
+14. Unset the shell variable `$NEW_RELEASE_TAG`; you don't need it anymore.
 
 	```bash
 	$ unset NEW_RELEASE_TAG
 	```
 
-13. Open your browser to <https://github.com/caskroom/homebrew-cask/releases> .
+15. Open your browser to <https://github.com/caskroom/homebrew-cask/releases> .
     Click the link for your newly-pushed tag. Click the "Edit Tag" button in
     the top right corner of that page.
-14. Paste the markdown summary from `doc/CHANGELOG.md` into the textarea on that
+16. Paste the markdown summary from `doc/CHANGELOG.md` into the textarea on that
     page.  The `## <version number>` heading line from the changelog should
     not be included.  The `Release title` field on the GitHub web form may
     be left blank.
-15. Click "Publish Release".
-16. Rejoice! Have a :cookie:.
+17. Click "Publish Release".
+18. Rejoice! Have a :cookie:.
 
 ## Things to Consider
 

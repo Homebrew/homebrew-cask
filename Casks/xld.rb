@@ -1,5 +1,5 @@
 class Xld < Cask
-  url 'http://downloads.sourceforge.net/project/xld/xld-20140504.dmg'
+  url 'https://downloads.sourceforge.net/project/xld/xld-20140504.dmg'
   appcast 'http://xld.googlecode.com/svn/appcast/xld-appcast_e.xml'
   homepage 'http://tmkk.undo.jp/xld/index_e.html'
   version '20140504'

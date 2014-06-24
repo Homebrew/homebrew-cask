@@ -109,7 +109,7 @@ $ brew cask info caffeine
 caffeine: 1.1.1
 http://lightheadsw.com/caffeine/
 Not installed
-https://github.com/caskroom/homebrew-cask/commits/master/Casks/caffeine.rb
+https://github.com/caskroom/homebrew-cask/blob/master/Casks/caffeine.rb
 ```
 
 ## Updating/Upgrading Casks
@@ -126,7 +126,10 @@ It is generally safe to run updates from within an Application.
 
 When a new version homebrew-cask is released, it will appear in the output of
 `brew outdated` after running `brew update`.  You can upgrade it via the normal
-Homebrew workflow: `brew upgrade brew-cask`.
+Homebrew `brew upgrade` workflow:
+```bash
+$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+```
 
 ## Additional Taps (optional)
 

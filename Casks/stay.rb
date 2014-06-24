@@ -1,5 +1,5 @@
 class Stay < Cask
-  url 'http://cordlessdog.com/stay/versions/Stay%201.2.3.zip'
+  url 'https://cordlessdog.com/stay/versions/Stay%201.2.3.zip'
   appcast 'http://cordlessdog.com/stay/appcast.xml'
   homepage 'http://cordlessdog.com/stay/'
   version '1.2.3'

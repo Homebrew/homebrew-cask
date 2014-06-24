@@ -1,5 +1,5 @@
 class Iupx < Cask
-  url 'http://sourceforge.net/projects/iupx/files/latest/download'
+  url 'https://sourceforge.net/projects/iupx/files/latest/download'
   appcast 'http://iupx.sourceforge.net/updates/appcast.xml'
   homepage 'http://iupx.sourceforge.net'
   version 'latest'

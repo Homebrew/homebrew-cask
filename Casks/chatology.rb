@@ -1,5 +1,5 @@
 class Chatology < Cask
-  url 'http://flexibits.com/chatology/download'
+  url 'https://flexibits.com/chatology/download'
   appcast 'https://flexibits.com/chatology/appcast.php'
   homepage 'http://flexibits.com/chatology'
   version 'latest'

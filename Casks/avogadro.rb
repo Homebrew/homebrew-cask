@@ -1,5 +1,5 @@
 class Avogadro < Cask
-  url 'http://downloads.sourceforge.net/avogadro/Avogadro-1.1.1.dmg.zip'
+  url 'https://downloads.sourceforge.net/avogadro/Avogadro-1.1.1.dmg.zip'
   homepage 'http://avogadro.openmolecules.net/'
   version '1.1.1'
   nested_container 'Avogadro-1.1.1.dmg'

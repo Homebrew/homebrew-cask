@@ -1,4 +1,4 @@
-class Cask::CLI::List
+class Cask::CLI::List < Cask::CLI::Base
   def self.run(*arguments)
     if arguments.any?
       retval = list_casks(*arguments)

@@ -1,8 +1,8 @@
 class GurpsCharacterSheet < Cask
-  version '4.0.0'
-  sha256 '67ccecc44d28f8cf104094ae988779b8219f79a6e6fbe9c695828034d3307816'
+  version '4.0.1'
+  sha256 'ddff9b883b29be7dce0798cfedfe48c54d02a2adb16dc1e60cbcaa37d2ef902e'
 
-  url "http://downloads.sourceforge.net/project/gcs-java/gcs-#{version}-mac.zip"
+  url "https://downloads.sourceforge.net/project/gcs-java/gcs-#{version}-mac.zip"
   homepage 'http://gurpscharactersheet.com'
 
   link "gcs-#{version}-mac/GURPS Character Sheet.app"

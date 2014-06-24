@@ -1,5 +1,5 @@
 class Xquartz < Cask
-  url 'http://xquartz.macosforge.org/downloads/SL/XQuartz-2.7.6.dmg'
+  url 'https://xquartz.macosforge.org/downloads/SL/XQuartz-2.7.6.dmg'
   homepage 'http://xquartz.macosforge.org/'
   appcast 'http://xquartz-dl.macosforge.org/sparkle/release.xml'
   version '2.7.6'
@@ -8,8 +8,15 @@ class Xquartz < Cask
 
   after_install do
     Pathname.new(Dir.home).join('Library', 'Logs').mkpath
+
+    # Set default path to X11 = avoid the need of manual setup
+    system '/usr/bin/defaults', 'write', 'com.apple.applescript', 'ApplicationMap', '-dict-add', 'X11', 'file://localhost/Applications/Utilities/XQuartz.app/'
+
+    # Load & start XServer = avoid the need of relogin
+    system '/bin/launchctl', 'load', '/Library/LaunchAgents/org.macosforge.xquartz.startx.plist'
   end
 
   uninstall :quit => 'org.macosforge.xquartz.X11',
+            :launchctl => 'org.macosforge.xquartz.startx',
             :pkgutil => 'org.macosforge.xquartz.pkg'
 end

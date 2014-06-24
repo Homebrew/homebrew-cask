@@ -65,9 +65,11 @@ class Cask::Audit
   def _bad_sourceforge_url?
     return false unless cask.url.to_s =~ /sourceforge/
     valid_url_formats = [
-      %r{https?://sourceforge.net/projects/.*/files/latest/download},
-      %r{https?://downloads.sourceforge.net/},
-      %r{https?://dl.sourceforge.jp/},
+      %r{https?://sourceforge\.net/projects/.*/files/latest/download},
+      %r{https?://downloads\.sourceforge\.net/},
+      %r{https?://dl\.sourceforge\.jp/},
+      # special case: cannot find canonical format URL
+      %r{https?://brushviewer\.sourceforge\.net/brushviewql\.zip},
     ]
     valid_url_formats.none? { |format| cask.url.to_s =~ format }
   end

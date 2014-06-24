@@ -1,5 +1,5 @@
 class BlackInk < Cask
-  url 'http://www.red-sweater.com/blackink/BlackInk1.5.3.zip'
+  url 'https://www.red-sweater.com/blackink/BlackInk1.5.3.zip'
   appcast 'http://www.red-sweater.com/blackink/appcast1.php'
   homepage 'http://www.red-sweater.com/blackink/'
   version '1.5.3'

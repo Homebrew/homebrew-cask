@@ -237,7 +237,7 @@ def header
 * __Fixes__
  - none
 * __Documentation__
- - none
+ - N doc commits since ...
 * __Breaking Changes__
  - none
 EOT

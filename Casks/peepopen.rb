@@ -1,5 +1,5 @@
 class Peepopen < Cask
-  url 'http://topfunky.github.io/PeepOpen/dl/PeepOpen.dmg'
+  url 'https://topfunky.github.io/PeepOpen/dl/PeepOpen.dmg'
   appcast 'https://peepcode.com/system/apps/PeepOpen/appcast.xml'
   homepage 'http://topfunky.github.io/PeepOpen/'
   version 'latest'

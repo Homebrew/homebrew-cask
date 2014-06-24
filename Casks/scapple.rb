@@ -1,5 +1,5 @@
 class Scapple < Cask
-  url 'http://scrivener.s3.amazonaws.com/Scapple.dmg'
+  url 'https://scrivener.s3.amazonaws.com/Scapple.dmg'
   appcast 'http://www.literatureandlatte.com/downloads/scapple/scapple.xml'
   homepage 'https://www.literatureandlatte.com/scapple.php'
   version 'latest'

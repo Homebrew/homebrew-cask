@@ -1,5 +1,5 @@
 class SatelliteEyes < Cask
-  url 'http://satellite-eyes.s3.amazonaws.com/satellite-eyes-1.2.4.zip'
+  url 'https://satellite-eyes.s3.amazonaws.com/satellite-eyes-1.2.4.zip'
   appcast 'https://satellite-eyes.s3.amazonaws.com/appcast.xml'
   homepage 'http://satelliteeyes.tomtaylor.co.uk/'
   version '1.2.4'

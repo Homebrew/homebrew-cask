@@ -1,5 +1,5 @@
 class Twitterrific < Cask
-  url 'http://iconfactory.com/assets/software/twitterrific/Twitterrific-4.5.1.zip'
+  url 'https://iconfactory.com/assets/software/twitterrific/Twitterrific-4.5.1.zip'
   appcast 'http://iconfactory.com/appcasts/Twitterrific/appcast.xml'
   homepage 'http://twitterrific.com/mac'
   version '4.5.1'

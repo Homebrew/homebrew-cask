@@ -49,8 +49,8 @@ names, and other aspects of this manual are still subject to change.
     Check for bad Cask links.
 
   * `cleanup` [--outdated]:
-    Clean up cached downloads.  With `--outdated`, only clean up cached
-    downloads older than 10 days old.
+    Clean up cached downloads and tracker symlinks.  With `--outdated`, only
+    clean up cached downloads older than 10 days old.
 
   * `create` <Cask>:
     Generate a Cask definition file for the Cask named <Cask> and open a
@@ -154,7 +154,7 @@ in a future version.
 Homebrew-cask is implemented as a external command for Homebrew.  That means
 this project is entirely built upon the Homebrew infrastructure.  For
 example, upgrades to the Homebrew-cask tool are received through Homebrew:
-    brew update && brew upgrade brew-cask
+    brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 
 And updates to individual Cask definitions are received whenever you issue
 the Homebrew command:

@@ -1,5 +1,5 @@
 class Handbrake < Cask
-  url 'http://downloads.sourceforge.net/sourceforge/handbrake/HandBrake-0.9.9-MacOSX.6_GUI_x86_64.dmg'
+  url 'https://downloads.sourceforge.net/sourceforge/handbrake/HandBrake-0.9.9-MacOSX.6_GUI_x86_64.dmg'
   appcast 'http://handbrake.fr/appcast.x86_64.xml'
   homepage 'http://handbrake.fr/'
   version '0.9.9'

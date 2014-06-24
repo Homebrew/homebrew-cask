@@ -144,6 +144,18 @@ with fully-qualified paths, like this:
 $ HOMEBREW_BREW_FILE=/usr/local/bin/brew /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/brew.rb /usr/local/bin/brew-cask.rb help
 ```
 
+## How Can I Force a Specific Homebrew-cask Subcommand?
+
+If you are developing a subcommand, you can force `brew cask` to dispatch a
+specific file by giving a fully-qualified path to the file containing the
+subcommand, like this:
+
+```bash
+$ brew cask /usr/local/Cellar/brew-cask/0.37.0/rubylib/cask/cli/info.rb google-chrome
+```
+
+This form can also be combined with a specific Ruby interpreter as above.
+
 ## Hanging out on IRC
 
 We're on IRC at `#homebrew-cask` on Freenode. If you are going to develop for
@@ -156,10 +168,17 @@ homebrew-cask, it's a great idea to hang out with us there. Here's why:
 
 ## What Version of Ruby Should I Target?
 
-We target the vendor-supplied Ruby interpreter. Apple provided Ruby 1.8.7
-as recently as OS X 10.8 (Mountain Lion).  Therefore, even though OS X 10.9
-(Mavericks) has Ruby 2.0.0-p247, this project targets Ruby 1.8.7 for
-backwards compatibility.
+Homebrew-cask is `require`d from within the Ruby environment of the parent
+Homebrew command (`brew`).
+
+Therefore, Homebrew-cask uses whichever Ruby interpreter chosen by Homebrew.
+This is generally an Apple-supplied Ruby, though it may change according to
+OS version.  At the time of writing, Homebrew targets Ruby 2.0 on OS X
+Mavericks (10.9) and Yosemite (10.10), and Ruby 1.8.7 on older OS revisions.
+
+So, our code must currently maintain compatibility across Ruby 1.8.7 and
+2.0.  The automated testing provided by Travis-CI will ensure that any pull
+request will be tested under both versions.
 
 ## Mind the test suite!
 

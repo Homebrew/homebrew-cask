@@ -1,7 +1,7 @@
 # Cask Language Reference
 
-This document acts as a complete reference, and covers aspects of the Cask
-Domain-Specific Language (DSL) which are not needed in most cases.
+This document acts as a complete specification, and covers aspects of the
+Cask Domain-Specific Language (DSL) which are not needed in most cases.
 
  * [Casks Are Ruby Classes](#casks-are-ruby-classes)
  * [The Cask Language Is Declarative](#the-cask-language-is-declarative)
@@ -26,10 +26,12 @@ is always enclosed in a `class ... end` block.  Example:
 
 ```ruby
 class Alfred < Cask
-  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
-  homepage 'http://www.alfredapp.com/'
   version '2.3_264'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
+
+  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
+  homepage 'http://www.alfredapp.com/'
+
   link 'Alfred 2.app'
   link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
@@ -40,8 +42,12 @@ end
 
 Each Cask contains a series of stanzas (or "fields") which *declare* how the
 software is to be obtained and installed.  In a declarative language, the
-author does not need to worry about order.  As long as all the needed fields
-are present, homebrew-cask will figure out what needs to be done.
+author does not need to worry about **order**.  As long as all the needed fields
+are present, homebrew-cask will figure out what needs to be done at install
+time.
+
+To make maintenance easier, the most-frequently-updated stanzas are usually
+placed at the top.  But that's a convention, not a rule.
 
 Exception: `do` blocks such as `after_install` may enclose a block of
 pure Ruby code.  Lines within that block follow a procedural (order-dependent)
@@ -148,7 +154,8 @@ The following methods may be called to generate standard warning messages:
 | `assistive_devices`               | The user should grant the application access to assitive devices
 | `files_in_usr_local`              | The Cask installs files to `/usr/local`, which may confuse Homebrew
 | `arch_only(list)`                 | The Cask only supports certain architectures.  Currently valid elements of `list` are `intel-32` and `intel-64`
-| `os_version_only(list)`           | The Cask only supports certain OS X Versions.  Currently valid elements of `list` are `10.5`, `10.6`, `10.7`, `10.8`, and `10.9`
+| `os_version_only(list)`           | The Cask only supports certain OS X Versions.  Currently valid elements of `list` are `10.5`, `10.6`, `10.7`, `10.8`, `10.9`, and `10.10`
+| `x11_required`                    | The Cask requires X11 to run
 
 Example:
 
@@ -163,8 +170,18 @@ And the following methods may be useful for interpolation:
 | method             | description |
 | ------------------ | ----------- |
 | `title`            | the Cask title
+| `version`          | the Cask version
 | `caskroom_path`    | eg `/opt/homebrew-cask/Caskroom`
 | `destination_path` | where this particular Cask is stored, including version number, eg `/opt/homebrew-cask/Caskroom/google-chrome/stable-channel`
+
+Any method from the main Cask DSL can be invoked from inside `caveats` via
+the `@cask` instance variable.  Example (see [sts.rb](../Casks/sts.rb)):
+
+```ruby
+caveats do
+  puts "You must obtain an API key at #{@cask.homepage}"
+end
+```
 
 
 ## Checksum Stanza Details
@@ -482,7 +499,8 @@ A fully manual method for finding bundle ids in a package file follows:
 ## Arbitrary Ruby Methods
 
 In the exceptional case that the Cask DSL is insufficient, it is possible to
-define arbitrary Ruby methods inside the Cask by creating a `Utils` namespace:
+define arbitrary Ruby methods inside the Cask by creating a `Utils` namespace.
+Example:
 
 ```ruby
 class Appname < Cask
@@ -492,15 +510,17 @@ class Appname < Cask
     end
   end
 
+  version '1.0'
+  sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
+
   url "https://#{Utils.arbitrary_method}"
   homepage 'http://www.example.com/'
   ...
 end
 ```
 
-Example: [gpsbabel.rb](../Casks/gpsbabel.rb)
-
 This should be used sparingly: any method which is needed by two or more
-Casks should instead be rolled into the core.
+Casks should instead be rolled into the core.  Care must also be taken
+that such methods be very efficient.
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3

@@ -29,7 +29,7 @@ class CaskAlreadyCreatedError < CaskError
   end
 
   def to_s
-    "Cask for #{name} already exists. Use `brew cask edit #{name}` to see it."
+    %Q{Cask for #{name} already exists. Run "brew cask cat #{name}" to see it.}
   end
 end
 
@@ -40,7 +40,7 @@ class CaskAlreadyInstalledError < CaskError
   end
 
   def to_s
-    "Cask for #{name} is already installed. Use `--force` to force re-install."
+    %Q{Cask for #{name} is already installed. Add the "--force" option to force re-install.}
   end
 end
 
