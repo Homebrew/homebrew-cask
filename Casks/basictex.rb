@@ -4,7 +4,7 @@ class Basictex < Cask
   version 'latest'
   sha256 :no_check
   install 'mactex-basic.pkg'
-  uninstall :pkgutil => 'org.tug.mactex.basictex2013'
+  uninstall :pkgutil => 'org.tug.mactex.basictex2014'
   caveats do
     path_environment_variable '/usr/texbin'
   end
