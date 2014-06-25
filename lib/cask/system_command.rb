@@ -54,12 +54,30 @@ class Cask::SystemCommand
     end
   end
 
+  def self._warn_plist_garbage(command, garbage)
+    return true unless garbage =~ %r{\S}
+    external = File.basename(command.first)
+    lines = garbage.strip.split("\n")
+    opoo "Non-XML output from #{external}:"
+    STDERR.puts lines.map {|l| "    #{l}"}
+  end
+
   def self._parse_plist(command, output)
     begin
-      raise Plist::ParseError "Empty XML input" unless output =~ %r{\S}
+      raise CaskError.new("Empty plist input") unless output =~ %r{\S}
+      output.sub!(%r{\A(.*?)(<\?\s*xml)}m, '\2')
+      _warn_plist_garbage(command, $1)
+      output.sub!(%r{(<\s*/\s*plist\s*>)(.*?)\Z}m, '\1')
+      _warn_plist_garbage(command, $2)
       xml = Plist::parse_xml(output)
       unless xml.respond_to?(:keys) and xml.keys.size > 0
-        raise Plist::ParseError "Empty XML output"
+        raise CaskError.new(<<-ERRMSG)
+Empty result parsing plist output from command.
+  command was:
+  #{command.utf8_inspect}
+  output we attempted to parse:
+  #{output}
+        ERRMSG
       end
       xml
     rescue Plist::ParseError => e
