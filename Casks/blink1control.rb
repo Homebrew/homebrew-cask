@@ -1,7 +1,9 @@
 class Blink1control < Cask
-  url 'https://github.com/todbot/blink1/releases/download/v1.7/Blink1Control-mac.zip'
+  version '1.82'
+  sha256 'ba44651eaa7cec8d732b16994f34574f1b1656ae22f22e7fd515b6b713c27ccd'
+
   homepage 'http://blink1.thingm.com/'
-  version '1.7'
-  sha256 '1ac3637931471bce8f386616051126200b5555fdcc566af999b448d494415d19'
+  url 'https://github.com/todbot/blink1/releases/download/v1.82/Blink1Control-mac.zip'
+
   link 'Blink1Control.app'
 end
