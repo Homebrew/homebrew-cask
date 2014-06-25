@@ -3,5 +3,6 @@ class Minimalclock < Cask
   homepage 'http://ilovecolorz.net/minimalclock/'
   version 'latest'
   sha256 :no_check
-  screen_saver 'MinimalClock.qtz'
+  install ' .pkg'
+  uninstall :pkgutil => 'com.ilovecolorz.minimalclockScreenSaver.*'
 end
