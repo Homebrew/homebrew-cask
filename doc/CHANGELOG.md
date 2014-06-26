@@ -1,5 +1,38 @@
 # CHANGELOG
 
+## 0.37.1
+
+* __Casks__
+ - 16 Casks added (68 updated) by 35 contributors since 0.37.0
+ - 1636 total Casks
+* __Features__
+ - [#5011][], [#5025][] internal: add development subcommands starting with underscore
+ - [#5024][] internal: extend subcommand dispatch to include full paths
+* __Fixes__
+ - [#5063][] Improve plist handling for `hdiutil` commands
+ - [#5014][] Show file contents instead of commits <3 [@ujovlado][]
+ - [#5037][], [#5020][], [#5064][], [#4997][], [#4986][] internal: updates to ignores and test suite
+ - [#4994][] update sourceforge URL patterns
+* __Documentation__
+ - 4 doc commits since 0.37.0 <3 [@ujovlado][]
+* __Breaking Changes__
+ - none
+
+[#5063]: https://github.com/caskroom/homebrew-cask/issues/5063
+[#5064]: https://github.com/caskroom/homebrew-cask/issues/5064
+[#5020]: https://github.com/caskroom/homebrew-cask/issues/5020
+[#5037]: https://github.com/caskroom/homebrew-cask/issues/5037
+[#5025]: https://github.com/caskroom/homebrew-cask/issues/5025
+[#5024]: https://github.com/caskroom/homebrew-cask/issues/5024
+[#5011]: https://github.com/caskroom/homebrew-cask/issues/5011
+[#5014]: https://github.com/caskroom/homebrew-cask/issues/5014
+[@ujovlado]: https://github.com/ujovlado
+[#4997]: https://github.com/caskroom/homebrew-cask/issues/4997
+[#4994]: https://github.com/caskroom/homebrew-cask/issues/4994
+[#4996]: https://github.com/caskroom/homebrew-cask/issues/4996
+[#4998]: https://github.com/caskroom/homebrew-cask/issues/4998
+[#4986]: https://github.com/caskroom/homebrew-cask/issues/4986
+
 ## 0.37.0
 
 * __Casks__
