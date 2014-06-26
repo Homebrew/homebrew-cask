@@ -1,4 +1,5 @@
 class EpubToPdf < Cask
+  # non-Sparkle appcast
   appcast 'https://code.google.com/feeds/p/epub-2-pdf/downloads/basic'
   url 'http://epub-2-pdf.googlecode.com/files/e2p-3.dmg'
   homepage 'https://code.google.com/p/epub-2-pdf'
