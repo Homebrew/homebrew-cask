@@ -1,8 +1,10 @@
 class Chunkulus < Cask
-  url 'http://presstube.com/screensavers/presstube-chunkulus-mac.zip'
-  homepage 'http://presstube.com/blog/2011/chunkulus/'
   version 'latest'
   sha256 :no_check
+
+  url 'http://presstube.com/screensavers/presstube-chunkulus-mac.zip'
+  homepage 'http://presstube.com/blog/2011/chunkulus/'
+
   screen_saver 'presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver'
 
   after_install do
