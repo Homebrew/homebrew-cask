@@ -1,8 +1,10 @@
 class Parallels < Cask
-  url 'https://www.parallels.com/directdownload/pd9'
-  homepage 'http://www.parallels.com/products/desktop/'
   version 'latest'
   sha256 :no_check
+
+  url 'https://www.parallels.com/directdownload/pd9'
+  homepage 'http://www.parallels.com/products/desktop/'
+
   install 'Install.mpkg'
   uninstall :pkgutil => 'com.parallels.pkg.virtualization.bundle',
             :kext    => [
