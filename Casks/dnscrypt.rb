@@ -7,5 +7,10 @@ class Dnscrypt < Cask
 
   install 'DNSCrypt.mpkg'
   uninstall :pkgutil => 'com.opendns.osx.dnscryptClient.*',
-            :launchctl => 'com.opendns.osx.*'
+            :launchctl => [
+                           'com.github.dnscrypt-osxclient.DNSCryptAfterboot',
+                           'com.github.dnscrypt-osxclient.DNSCryptConsoleChange',
+                           'com.github.dnscrypt-osxclient.DNSCryptControlChange',
+                           'com.github.dnscrypt-osxclient.DNSCryptNetworkChange',
+                          ]
 end
