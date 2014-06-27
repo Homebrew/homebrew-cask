@@ -1,7 +1,9 @@
 class Torpedo < Cask
-  url 'https://usetorpedo.com/app/mac/download'
-  homepage 'https://usetorpedo.com'
   version 'latest'
   sha256 :no_check
+
+  url 'https://usetorpedo.com/app/mac/download'
+  homepage 'https://usetorpedo.com'
+
   link 'Torpedo.app'
 end

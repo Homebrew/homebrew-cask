@@ -1,7 +1,9 @@
 class TimeSink < Cask
-  url 'http://manytricks.com/download/timesink'
-  homepage 'http://manytricks.com/timesink/'
   version 'latest'
   sha256 :no_check
+
+  url 'http://manytricks.com/download/timesink'
+  homepage 'http://manytricks.com/timesink/'
+
   link 'Time Sink.App'
 end

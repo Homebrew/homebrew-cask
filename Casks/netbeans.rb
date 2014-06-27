@@ -1,8 +1,10 @@
 class Netbeans < Cask
-  url 'http://download.netbeans.org/netbeans/8.0/final/bundles/netbeans-8.0-macosx.dmg'
-  homepage 'https://netbeans.org/'
   version '8.0'
   sha256 'fcbac4765de78af05e5b4ac29f6d418ad82e29c1cce4f536d93e4bc4272f90d4'
+
+  url 'http://download.netbeans.org/netbeans/8.0/final/bundles/netbeans-8.0-macosx.dmg'
+  homepage 'https://netbeans.org/'
+
   install 'NetBeans 8.0.mpkg'
   # Theoretically this uninstall could conflict with a separate GlassFish
   # installation.

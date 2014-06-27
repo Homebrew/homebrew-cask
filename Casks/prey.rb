@@ -1,8 +1,10 @@
 class Prey < Cask
-  url 'https://preyproject.com/releases/current/prey-0.6.3-mac-batch.mpkg.zip'
-  homepage 'https://preyproject.com'
   version '0.6.3'
   sha256 '7193cf76a776a015c7b533372506963c9ec2720966245dab1e0c02d149da1010'
+
+  url 'https://preyproject.com/releases/current/prey-0.6.3-mac-batch.mpkg.zip'
+  homepage 'https://preyproject.com'
+
   install 'prey-0.6.3-mac-batch.mpkg'
   uninstall :pkgutil => 'com.forkhq.prey'
   caveats <<-EOS.undent

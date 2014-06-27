@@ -1,8 +1,10 @@
 class HerokuToolbelt < Cask
-  url 'http://assets.heroku.com/heroku-toolbelt/heroku-toolbelt.pkg'
-  homepage 'https://toolbelt.heroku.com/'
   version 'latest'
   sha256 :no_check
+
+  url 'http://assets.heroku.com/heroku-toolbelt/heroku-toolbelt.pkg'
+  homepage 'https://toolbelt.heroku.com/'
+
   install 'heroku-toolbelt.pkg'
   uninstall :pkgutil => 'com.heroku.toolbelt',
             :files   => [

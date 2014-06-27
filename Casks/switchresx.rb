@@ -1,8 +1,10 @@
 class Switchresx < Cask
-  url 'http://www.madrau.com/data/switchresx/SwitchResX4.zip'
-  homepage 'http://www.madrau.com'
   version '4.4'
   sha256 "39c36694a1955f3f97bdb3bcb7591be06b601b9557d539abd05b039bcfb8b19f"
+
+  url 'http://www.madrau.com/data/switchresx/SwitchResX4.zip'
+  homepage 'http://www.madrau.com'
+
   prefpane 'SwitchResX.prefPane'
   caskroom_only true # hack to activate uninstall stanza
   uninstall :quit => [
