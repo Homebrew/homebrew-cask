@@ -1,9 +1,11 @@
 class Flux < Cask
+  version 'latest'
+  sha256 :no_check
+  
   url 'https://justgetflux.com/mac/Flux.zip'
   appcast 'https://justgetflux.com/mac/macflux.xml'
   homepage 'http://justgetflux.com'
-  version 'latest'
-  sha256 :no_check
+
   link 'Flux.app'
 
   after_install do
