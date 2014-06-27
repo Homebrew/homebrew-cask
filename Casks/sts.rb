@@ -6,6 +6,7 @@ class Sts < Cask
 
   url "http://download.springsource.com/release/STS/#{version}/dist/e#{based_on_eclipse.gsub(/\.\d$/, '')}/spring-tool-suite-#{version}.RELEASE-e#{based_on_eclipse}-macosx-cocoa-x86_64-installer.dmg"
   homepage 'http://spring.io/tools/sts'
+  
   caskroom_only true
   caveats do
     manual_installer "Installer - Spring Tool Suite #{@cask.version}.RELEASE.app"
