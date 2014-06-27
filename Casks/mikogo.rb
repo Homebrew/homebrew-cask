@@ -1,7 +1,9 @@
 class Mikogo < Cask
-  url 'http://download.mikogo4.com/mikogo.dmg'
-  homepage 'http://www.mikogo.com/'
   version 'latest'
   sha256 :no_check
+
+  url 'http://download.mikogo4.com/mikogo.dmg'
+  homepage 'http://www.mikogo.com/'
+
   link 'Mikogo.app'
 end
