@@ -1,10 +1,10 @@
-class Sketchup < Cask
+class Sketchupviewer < Cask
   version 'latest'
   sha256 :no_check
 
   # downloads can be found at http://www.sketchup.com/download/all
-  url 'https://dl.trimble.com/sketchup/SketchUpMake-en.dmg'
+  url 'https://dl.trimble.com/sketchup/SketchUpViewer-en.dmg'
   homepage 'http://www.sketchup.com/intl/en/'
 
-  link 'SketchUp 2014'
+  link 'SketchUpViewer.app'
 end
