@@ -1,8 +1,10 @@
 class Decitime < Cask
-  url 'http://download.filewell.com/DeciTime101.dmg.zip'
-  homepage 'http://www.tinbert.com/DeciTimeMac/'
   version '1.0.1'
   sha256 '3fcd9d6af7cf4710abd42df4db418432ca1758ba8db7affecb1a466d1996f877'
+
+  url 'http://download.filewell.com/DeciTime101.dmg.zip'
+  homepage 'http://www.tinbert.com/DeciTimeMac/'
+
   nested_container 'DeciTime101.dmg'
   link 'DeciTime.app'
 
