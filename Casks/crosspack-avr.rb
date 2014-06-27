@@ -1,8 +1,10 @@
 class CrosspackAvr < Cask
-  url 'http://www.obdev.at/downloads/crosspack/CrossPack-AVR-20131216.dmg'
-  homepage 'http://www.obdev.at/products/crosspack/'
   version 'CrossPack-AVR 20130-12-16'
   sha256 '959f9bf00429a0e46e649a14d7891cb4086c9cf2d032d9f66899d6efbb628f6e'
+
+  url 'http://www.obdev.at/downloads/crosspack/CrossPack-AVR-20131216.dmg'
+  homepage 'http://www.obdev.at/products/crosspack/'
+
   install 'CrossPack-AVR.pkg'
   after_uninstall do
     IO.popen('/usr/bin/yes | /usr/bin/sudo -E -- /usr/local/CrossPack-AVR/uninstall && /usr/bin/sudo -- /usr/sbin/pkgutil --forget at.obdev.CrossPack-AVR', 'r+') do |pipe|
