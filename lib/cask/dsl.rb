@@ -12,6 +12,8 @@ module Cask::DSL
 
   def appcast; self.class.appcast; end
 
+  def gpg; self.class.gpg; end
+
   def version; self.class.version; end
 
   def depends_on_formula; self.class.depends_on_formula; end
@@ -47,6 +49,17 @@ module Cask::DSL
       end
       @appcast ||= begin
         Cask::Appcast.new(*args) unless args.empty?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
+      end
+    end
+
+    def gpg(*args)
+      if @gpg and !args.empty?
+        raise CaskInvalidError.new(self.title, "'gpg' stanza may only appear once")
+      end
+      @gpg ||= begin
+        Cask::Gpg.new(*args) unless args.empty?
       rescue StandardError => e
         raise CaskInvalidError.new(self.title, e)
       end

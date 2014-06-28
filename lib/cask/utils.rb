@@ -82,6 +82,7 @@ module Cask::Utils
        :caveats,
        :depends_on_formula,
        :container_type,
+       :gpg,
       ].each do |method|
         odebug "Cask instance method '#{method}':", self.send(method).to_yaml
       end

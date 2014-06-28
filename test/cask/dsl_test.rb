@@ -152,4 +152,36 @@ describe Cask::DSL do
       }.must_raise(CaskInvalidError)
     end
   end
+
+  describe "gpg stanza" do
+    it "allows gpg stanza to be specified" do
+      cask = Cask.load('with-gpg')
+      cask.gpg.to_s.must_match %r{\S}
+    end
+
+    it "prevents specifying gpg multiple times" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-multiple')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'gpg' stanza may only appear once"
+    end
+
+    it "refuses to load invalid gpg signature URLs" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-signature-url')
+      }.must_raise(CaskInvalidError)
+    end
+
+    it "refuses to load invalid gpg key URLs" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-key-url')
+      }.must_raise(CaskInvalidError)
+    end
+
+    it "refuses to load if gpg :type is invalid" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-type')
+      }.must_raise(CaskInvalidError)
+    end
+  end
 end
