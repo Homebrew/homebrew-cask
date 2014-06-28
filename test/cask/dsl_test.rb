@@ -222,4 +222,11 @@ describe Cask::DSL do
       }.must_raise(CaskInvalidError)
     end
   end
+
+  describe "install_script stanza" do
+    it "allows install_script to be specified" do
+      cask = Cask.load('with-install-script')
+      cask.artifacts[:install_script].first[:executable].must_equal '/usr/bin/true'
+    end
+  end
 end
