@@ -197,4 +197,29 @@ describe Cask::DSL do
       }.must_raise(CaskInvalidError)
     end
   end
+
+  describe "license stanza" do
+    it "allows the license to be specified" do
+      cask = Cask.load('with-license')
+      cask.license.value.must_equal :gpl
+    end
+
+    it "the license has a category" do
+      cask = Cask.load('with-license')
+      cask.license.category.must_equal :oss
+    end
+
+    it "prevents defining multiple license stanzas" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-license-multiple')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'license' stanza may only appear once"
+    end
+
+    it "refuses to load on invalid license value" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-license-value')
+      }.must_raise(CaskInvalidError)
+    end
+  end
 end

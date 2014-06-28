@@ -77,6 +77,7 @@ module Cask::Utils
        :url,
        :appcast,
        :version,
+       :license,
        :sums,
        :artifacts,
        :caveats,
