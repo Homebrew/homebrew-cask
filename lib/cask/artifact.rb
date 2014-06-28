@@ -1,6 +1,7 @@
 module Cask::Artifact; end
 
 require 'cask/artifact/base'
+require 'cask/artifact/uninstall_base'
 require 'cask/artifact/symlinked'
 require 'cask/artifact/hardlinked'
 
@@ -19,6 +20,7 @@ require 'cask/artifact/service'
 require 'cask/artifact/caskroom_only'
 require 'cask/artifact/input_method'
 require 'cask/artifact/screen_saver'
+require 'cask/artifact/uninstall'
 
 
 module Cask::Artifact
@@ -42,6 +44,7 @@ module Cask::Artifact
       Cask::Artifact::Binary,
       Cask::Artifact::InputMethod,
       Cask::Artifact::ScreenSaver,
+      Cask::Artifact::Uninstall,
       Cask::Artifact::AfterBlock,
     ]
   end
