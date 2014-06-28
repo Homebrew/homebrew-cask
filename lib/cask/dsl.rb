@@ -18,6 +18,8 @@ module Cask::DSL
 
   def depends_on_formula; self.class.depends_on_formula; end
 
+  def depends_on; self.class.depends_on; end
+
   def container_type; self.class.container_type; end
 
   def sums; self.class.sums || []; end
@@ -89,6 +91,23 @@ module Cask::DSL
 
     def depends_on_formula(*args)
       @depends_on_formula ||= args
+    end
+
+    def depends_on(*args)
+      if @depends_on and !args.empty?
+        # todo: remove this constraint, and instead merge multiple depends_on stanzas
+        raise CaskInvalidError.new(self.title, "'depends_on' stanza may only appear once")
+      end
+      @depends_on ||= begin
+        Cask::DependsOn.new(*args) unless args.empty?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
+      end
+      # todo: remove this backwards compatibility section after removing depends_on_formula
+      if @depends_on.formula
+        @depends_on_formula ||= @depends_on.formula
+      end
+      @depends_on
     end
 
     def artifacts
