@@ -33,7 +33,7 @@ class Cask::CaveatsDSL
   end
 
   def destination_path
-    caskroom_path.join(@cask.version)
+    caskroom_path.join(@cask.version.to_s)
   end
 
   # DSL. Each method should handle output, following the convention of

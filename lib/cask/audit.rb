@@ -40,12 +40,16 @@ class Cask::Audit
 
   def _check_sha256_no_check_if_latest
     odebug "Verifying sha256 :no_check with version 'latest'"
-    add_error "you should use sha256 :no_check when version is 'latest'" if cask.version == "latest" && cask.sums.is_a?(Array)
+    if ((cask.version == "latest" or cask.version == :latest) and cask.sums.is_a?(Array))
+      add_error "you should use sha256 :no_check when version is 'latest'"
+    end
   end
 
   def _check_sha256_if_versioned
     odebug "Verifying a sha256 is present when versioned"
-    add_error "you must include a sha256 when version is not 'latest'" if cask.version != "latest" && cask.sums == :no_check
+    if ((cask.version != "latest" and cask.version != :latest) and cask.sums == :no_check)
+      add_error "you must include a sha256 when version is not 'latest'"
+    end
   end
 
   def _check_download(download)

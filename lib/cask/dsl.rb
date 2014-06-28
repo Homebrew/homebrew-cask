@@ -59,11 +59,19 @@ module Cask::DSL
       @container_type ||= type
     end
 
-    def version(version=nil)
-      if @version and !version.nil?
+    SYMBOLIC_VERSIONS = Set.new [
+      :latest,
+    ]
+
+    def version(arg=nil)
+      if arg.nil?
+        @version
+      elsif @version
         raise CaskInvalidError.new(self.title, "'version' stanza may only appear once")
+      elsif !arg.is_a?(String) and !SYMBOLIC_VERSIONS.include?(arg)
+        raise CaskInvalidError.new(self.title, "invalid 'version' value: '#{arg.inspect}'")
       end
-      @version ||= version
+      @version ||= arg
     end
 
     def depends_on_formula(*args)
