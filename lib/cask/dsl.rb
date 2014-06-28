@@ -139,9 +139,24 @@ module Cask::DSL
       end
     end
 
+    # This hash is transitional.  Each of these stanzas will
+    # ultimately either be removed or upgraded with its own
+    # unique semantics.
+    STANZA_ALIASES = {
+                       :pkg                   => :install,          # to remove
+                       :app                   => :link,             # to upgrade
+                       :suite                 => :link,             # to upgrade
+                       :preflight             => :before_install,   # to remove
+                       :postflight            => :after_install,    # to remove
+                       :uninstall_preflight   => :before_uninstall, # to remove
+                       :uninstall_postflight  => :after_uninstall,  # to remove
+                     }
+
     def self.ordinary_artifact_types
       @@ordinary_artifact_types ||= [
                                      :link,
+                                     :app,
+                                     :suite,
                                      :prefpane,
                                      :qlplugin,
                                      :font,
@@ -151,7 +166,8 @@ module Cask::DSL
                                      :binary,
                                      :input_method,
                                      :screen_saver,
-                                     :install,
+                                     :install,      # deprecated
+                                     :pkg,
                                     ]
     end
 
@@ -159,8 +175,9 @@ module Cask::DSL
     installable_artifact_types.push :caskroom_only
 
     installable_artifact_types.each do |type|
+      resolved_type = STANZA_ALIASES.key?(type) ? STANZA_ALIASES[type] : type
       define_method(type) do |*args|
-        artifacts[type] << args
+        artifacts[resolved_type] << args
       end
     end
 
@@ -177,15 +194,20 @@ module Cask::DSL
     end
 
     ARTIFACT_BLOCK_TYPES = [
-      :after_install,
-      :after_uninstall,
-      :before_install,
-      :before_uninstall,
+      :after_install,           # deprecated
+      :after_uninstall,         # deprecated
+      :before_install,          # deprecated
+      :before_uninstall,        # deprecated
+      :preflight,
+      :postflight,
+      :uninstall_preflight,
+      :uninstall_postflight,
     ]
 
     ARTIFACT_BLOCK_TYPES.each do |type|
+      resolved_type = STANZA_ALIASES.key?(type) ? STANZA_ALIASES[type] : type
       define_method(type) do |&block|
-        artifacts[type] << block
+        artifacts[resolved_type] << block
       end
     end
 
