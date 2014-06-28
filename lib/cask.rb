@@ -8,6 +8,7 @@ require 'download_strategy'
 require 'cmd/update'
 require 'rubygems'
 
+require 'cask/appcast'
 require 'cask/artifact'
 require 'cask/audit'
 require 'cask/auditor'

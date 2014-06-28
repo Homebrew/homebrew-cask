@@ -8,17 +8,6 @@ describe Cask::DSL do
     test_cask.version.must_equal '1.2.3'
   end
 
-  it "lets you set checksum via sha256" do
-    ChecksumCask = Class.new(Cask)
-    ChecksumCask.class_eval do
-      sha256 'imasha2'
-    end
-    instance = ChecksumCask.new
-    instance.sums.must_equal [
-      Checksum.new(:sha2, 'imasha2')
-    ]
-  end
-
   it "prevents the entire world from crashing when a cask includes an unknown method" do
     UnexpectedMethodCask = Class.new(Cask)
     begin
@@ -43,73 +32,124 @@ describe Cask::DSL do
     end
   end
 
-  it "allows you to specify linkables" do
-    CaskWithLinkables = Class.new(Cask)
-    CaskWithLinkables.class_eval do
-      link 'Foo.app'
-      link 'Bar.app'
-    end
-
-    instance = CaskWithLinkables.new
-    Array(instance.artifacts[:link]).sort.must_equal [['Bar.app'], ['Foo.app']]
-  end
-
-  it "allow linkables to be set to empty" do
-    CaskWithNoLinkables = Class.new(Cask)
-
-    instance = CaskWithNoLinkables.new
-    Array(instance.artifacts[:link]).must_equal %w[]
-  end
-
-  it "allows caveats to be specified via a method define" do
-    PlainCask = Class.new(Cask)
-
-    instance = PlainCask.new
-
-    instance.caveats.must_be :empty?
-
-    CaskWithCaveats = Class.new(Cask)
-    CaskWithCaveats.class_eval do
-      def caveats; <<-EOS.undent
-        When you install this cask, you probably want to know this.
-        EOS
+  describe "sha256 stanza" do
+    it "lets you set checksum via sha256" do
+      ChecksumCask = Class.new(Cask)
+      ChecksumCask.class_eval do
+        sha256 'imasha2'
       end
+      instance = ChecksumCask.new
+      instance.sums.must_equal [
+                                Checksum.new(:sha2, 'imasha2')
+                               ]
+    end
+  end
+
+  describe "link stanza" do
+    it "allows you to specify linkables" do
+      CaskWithLinkables = Class.new(Cask)
+      CaskWithLinkables.class_eval do
+        link 'Foo.app'
+        link 'Bar.app'
+      end
+
+      instance = CaskWithLinkables.new
+      Array(instance.artifacts[:link]).sort.must_equal [['Bar.app'], ['Foo.app']]
     end
 
-    instance = CaskWithCaveats.new
+    it "allow linkables to be set to empty" do
+      CaskWithNoLinkables = Class.new(Cask)
 
-    instance.caveats.must_equal "When you install this cask, you probably want to know this.\n"
+      instance = CaskWithNoLinkables.new
+      Array(instance.artifacts[:link]).must_equal %w[]
+    end
   end
 
-  it "allows installable pkgs to be specified" do
-    CaskWithInstallables = Class.new(Cask)
-    CaskWithInstallables.class_eval do
-      install 'Foo.pkg'
-      install 'Bar.pkg'
+  describe "caveats stanza" do
+    it "allows caveats to be specified via a method define" do
+      PlainCask = Class.new(Cask)
+
+      instance = PlainCask.new
+
+      instance.caveats.must_be :empty?
+
+      CaskWithCaveats = Class.new(Cask)
+      CaskWithCaveats.class_eval do
+        def caveats; <<-EOS.undent
+          When you install this cask, you probably want to know this.
+          EOS
+        end
+      end
+
+      instance = CaskWithCaveats.new
+
+      instance.caveats.must_equal "When you install this cask, you probably want to know this.\n"
+    end
+  end
+
+  describe "pkg stanza" do
+    it "allows installable pkgs to be specified" do
+      CaskWithInstallables = Class.new(Cask)
+      CaskWithInstallables.class_eval do
+        install 'Foo.pkg'
+        install 'Bar.pkg'
+      end
+
+      instance = CaskWithInstallables.new
+      Array(instance.artifacts[:install]).sort.must_equal [['Bar.pkg'], ['Foo.pkg']]
+    end
+  end
+
+  describe "url stanza" do
+    it "prevents defining multiple urls" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-two-url')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'url' stanza may only appear once"
+    end
+  end
+
+  describe "homepage stanza" do
+    it "prevents defining multiple homepages" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-two-homepage')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'homepage' stanza may only appear once"
+    end
+  end
+
+  describe "version stanza" do
+    it "prevents defining multiple versions" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-two-version')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'version' stanza may only appear once"
+    end
+  end
+
+  describe "appcast stanza" do
+    it "allows appcasts to be specified" do
+      cask = Cask.load('with-appcast')
+      cask.appcast.to_s.must_match %r{^http}
     end
 
-    instance = CaskWithInstallables.new
-    Array(instance.artifacts[:install]).sort.must_equal [['Bar.pkg'], ['Foo.pkg']]
-  end
+    it "prevents defining multiple appcasts" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-appcast-multiple')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'appcast' stanza may only appear once"
+    end
 
-  it "prevents defining multiple urls" do
-    err = lambda {
-      invalid_cask = Cask.load('invalid/invalid-two-url')
-    }.must_raise(CaskInvalidError)
-    err.message.must_include "'url' stanza may only appear once"
-  end
+    it "refuses to load invalid appcast URLs" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-appcast-url')
+      }.must_raise(CaskInvalidError)
+    end
 
-  it "prevents defining multiple homepages" do
-    err = lambda {
-      invalid_cask = Cask.load('invalid/invalid-two-homepage')
-    }.must_raise(CaskInvalidError)
-    err.message.must_include "'homepage' stanza may only appear once"
-  end
-
-  it "prevents defining multiple versions" do
-    err = lambda {
-      invalid_cask = Cask.load('invalid/invalid-two-version')
-    }.must_raise(CaskInvalidError)
-    err.message.must_include "'version' stanza may only appear once"
+    it "refuses to load if appcast :format is invalid" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-appcast-format')
+      }.must_raise(CaskInvalidError)
+    end
   end
 end
