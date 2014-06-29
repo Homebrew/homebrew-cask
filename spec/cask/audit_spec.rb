@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'spec_helper'
 
 class CaskMissingUrl < Cask
   version '1.2.3'
@@ -46,21 +46,21 @@ end
 describe Cask::Audit do
   describe "result" do
     it "is 'failed' if there are have been any errors added" do
-      audit = Cask::Audit.new(TestHelper.test_cask)
+      audit = Cask::Audit.new(Cask.new)
       audit.add_error 'bad'
       audit.add_warning 'eh'
-      audit.result.must_match /failed/
+      expect(audit.result).to match(/failed/)
     end
 
     it "is 'warning' if there are no errors, but there are warnings" do
-      audit = Cask::Audit.new(TestHelper.test_cask)
+      audit = Cask::Audit.new(Cask.new)
       audit.add_warning 'eh'
-      audit.result.must_match /warning/
+      expect(audit.result).to match(/warning/)
     end
 
     it "is 'passed' if there are no errors or warning" do
-      audit = Cask::Audit.new(TestHelper.test_cask)
-      audit.result.must_match /passed/
+      audit = Cask::Audit.new(Cask.new)
+      expect(audit.result).to match(/passed/)
     end
   end
 
@@ -69,31 +69,31 @@ describe Cask::Audit do
       it "adds an error if url is missing" do
         audit = Cask::Audit.new(CaskMissingUrl.new)
         audit.run!
-        audit.errors.must_include 'url is required'
+        expect(audit.errors).to include('url is required')
       end
 
       it "adds an error if version is missing" do
         audit = Cask::Audit.new(CaskMissingVersion.new)
         audit.run!
-        audit.errors.must_include 'version is required'
+        expect(audit.errors).to include('version is required')
       end
 
       it "adds an error if homepage is missing" do
         audit = Cask::Audit.new(CaskMissingHomepage.new)
         audit.run!
-        audit.errors.must_include 'homepage is required'
+        expect(audit.errors).to include('homepage is required')
       end
 
       it "adds an error if version is latest and using sha256" do
         audit = Cask::Audit.new(CaskVersionLatestWithChecksum.new)
         audit.run!
-        audit.errors.must_include %q{you should use sha256 :no_check when version is 'latest'}
+        expect(audit.errors).to include(%q{you should use sha256 :no_check when version is 'latest'})
       end
 
       it "adds an error if versioned and has no checksum" do
         audit = Cask::Audit.new(CaskWithVersionNoChecksum.new)
         audit.run!
-        audit.errors.must_include %q{you must include a sha256 when version is not 'latest'}
+        expect(audit.errors).to include(%q{you must include a sha256 when version is not 'latest'})
       end
     end
 
@@ -104,27 +104,27 @@ describe Cask::Audit do
 
         audit = Cask::Audit.new(CaskSourceForgeIncorrectURLFormat.new)
         audit.run!
-        audit.warnings.must_include warning_msg
+        expect(audit.warnings).to include(warning_msg)
 
         audit = Cask::Audit.new(CaskSourceForgeCorrectURLFormat.new)
         audit.run!
-        audit.warnings.wont_include warning_msg
+        expect(audit.warnings).to_not include(warning_msg)
 
         audit = Cask::Audit.new(CaskSourceForgeOtherCorrectURLFormat.new)
         audit.run!
-        audit.warnings.wont_include warning_msg
+        expect(audit.warnings).to_not include(warning_msg)
       end
     end
 
     describe "audit of downloads" do
       it "creates an error if the download fails" do
         error_message = "Download Failed"
-        download = mock()
+        download = double()
         download.expects(:perform).raises(StandardError.new(error_message))
 
-        audit = Cask::Audit.new(TestHelper.test_cask)
+        audit = Cask::Audit.new(Cask.new)
         audit.run!(download)
-        audit.errors.first.must_match(/#{error_message}/)
+        expect(audit.errors).to include(/#{error_message}/)
       end
     end
   end
