@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    diff-lcs (1.2.5)
     metaclass (0.0.1)
     minitest (5.3)
     minitest-colorize (0.0.5)
@@ -8,6 +9,18 @@ GEM
     mocha (0.14.0)
       metaclass (~> 0.0.1)
     rake (10.0.4)
+    rspec (3.0.0)
+      rspec-core (~> 3.0.0)
+      rspec-expectations (~> 3.0.0)
+      rspec-mocks (~> 3.0.0)
+    rspec-core (3.0.2)
+      rspec-support (~> 3.0.0)
+    rspec-expectations (3.0.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.0.0)
+    rspec-mocks (3.0.2)
+      rspec-support (~> 3.0.0)
+    rspec-support (3.0.2)
 
 PLATFORMS
   ruby
@@ -17,3 +30,4 @@ DEPENDENCIES
   minitest-colorize
   mocha (= 0.14.0)
   rake
+  rspec (~> 3.0.0)

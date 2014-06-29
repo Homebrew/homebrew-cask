@@ -28,11 +28,13 @@ describe "Repo layout" do
                      developer
                      doc
                      lib
+                     spec
                      test
                     }
 
   TOPLEVEL_FILES = %w{
                       .gitignore
+                      .rspec
                       .travis.yml
                       CONDUCT.md
                       CONTRIBUTING.md
@@ -56,7 +58,7 @@ describe "Repo layout" do
       IGNORE_REGEXPS.each do |regexp|
         entries.reject! { |elt| elt.match(regexp) }
       end
-      entries.length.must_be :==, 0
+      entries.must_equal []
     end
   end
 
@@ -72,7 +74,7 @@ describe "Repo layout" do
         entries.reject! { |elt| elt.match(regexp) }
       end
       entries.reject! { |elt| elt.match(%r{\.rb$}) }
-      entries.length.must_be :==, 0
+      entries.must_equal []
     end
   end
 end
