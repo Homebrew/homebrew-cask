@@ -8,14 +8,13 @@ class Undercover < Cask
   install 'undercover_mac.pkg'
 
   uninstall :pkgutil => 'com.orbicule.pkg.Undercover',
-        :quit => [ 'com.orbicule.uc', 'com.orbicule.UCAgent'],
-        :launchctl => 'com.orbicule.uc',
-        :launchctl => 'com.orbicule.UCAgent',
-        :early_script => '/usr/local/uc/bin/Undercover Registration.app/Contents/MacOS/uc-uninstall',
-        :script => {
-          :executable => '/usr/bin/killall',
-          :args => %w[-9 uc UCAgent]
-        }
+            :quit => [ 'com.orbicule.uc', 'com.orbicule.UCAgent' ],
+            :launchctl => [ 'com.orbicule.uc', 'com.orbicule.UCAgent' ],
+            :early_script => '/usr/local/uc/bin/Undercover Registration.app/Contents/MacOS/uc-uninstall',
+            :script => {
+              :executable => '/usr/bin/killall',
+              :args => %w[-9 uc UCAgent]
+            }
 
   caveats do
     files_in_usr_local
