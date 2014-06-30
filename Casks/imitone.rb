@@ -1,6 +1,6 @@
 class Imitone < Cask
-  version '0.5.2'
-  sha256 'e28cb71720c688715a3e19cc0b363cb904354997745897b6594f0888981a3a1c'
+  version '0.5.3'
+  sha256 'd0c9b8f833aa4ce6a709bbbc73200db30b77f2d70cf8a376d9dd67b3547aaec1'
 
   url "http://imitone.com/beta/imitone-#{version}.dmg"
   homepage 'http://imitone.com/'
