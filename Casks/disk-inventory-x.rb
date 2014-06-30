@@ -5,6 +5,6 @@ class DiskInventoryX < Cask
   url 'http://www.derlien.com/diskinventoryx/downloads/dev/DIX1.0Universal.dmg',
     :user_agent => :fake
   homepage 'http://www.derlien.com/'
-  
+
   link 'Disk Inventory X.app'
 end

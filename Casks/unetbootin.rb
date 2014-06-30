@@ -4,6 +4,6 @@ class Unetbootin < Cask
 
   url 'https://downloads.sourceforge.net/sourceforge/unetbootin/unetbootin-mac-585.zip'
   homepage 'http://unetbootin.sourceforge.net/'
-  
+
   link 'unetbootin.app'
 end

@@ -1,7 +1,7 @@
 class Clamxav < Cask
   version '2.6.3'
   sha256 '34791173e31b297353025013e0296f7014e34310542a6e1cdf46e83a0254691f'
-  
+
   url 'http://www.clamxav.com/downloads/ClamXav_2.6.3.dmg'
   appcast 'http://www.clamxav.com/sparkle/profileInfo.php'
   homepage 'http://www.clamxav.com/'

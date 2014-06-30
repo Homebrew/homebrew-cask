@@ -1,7 +1,7 @@
 class Cocktail < Cask
   version 'latest'
   sha256 :no_check
-  
+
   url 'http://usa.maintain.se/CocktailME.dmg'
   appcast 'http://www.maintain.se/downloads/sparkle/mavericks/mavericks.xml'
   homepage 'http://maintain.se/cocktail'
