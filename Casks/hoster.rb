@@ -5,7 +5,7 @@ class Hoster < Cask
   url 'http://www.redwinder.com/macapp/hoster/tmp/Hoster1.208.zip'
   appcast 'http://www.redwinder.com/macapp/hoster/hoster12.xml'
   homepage 'http://www.redwinder.com/macapp/hoster/'
-  
+
   install 'Hoster1.208.mpkg', :allow_untrusted => true
   uninstall :pkgutil => 'com.redwinder.hoster.hoster.pkg'
 end

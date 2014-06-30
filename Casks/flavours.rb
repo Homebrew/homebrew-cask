@@ -1,7 +1,7 @@
 class Flavours < Cask
   version 'latest'
   sha256 :no_check
-  
+
   url 'http://flavours-updates.interacto.net/Flavours.dmg'
   appcast 'http://flavours-updates.interacto.net/appcast.xml'
   homepage 'http://flavours.interacto.net/'

@@ -1,7 +1,7 @@
 class Bartender < Cask
   version 'latest'
   sha256 :no_check
-  
+
   url 'http://www.macbartender.com/Demo/Bartender.zip'
   appcast 'http://www.macbartender.com/updates/updates.php'
   homepage 'http://www.macbartender.com/'
