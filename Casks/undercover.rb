@@ -6,12 +6,19 @@ class Undercover < Cask
   homepage 'http://www.orbicule.com/undercover/mac/'
 
   install 'undercover_mac.pkg'
-  uninstall :files => [
-    '/Library/LaunchDaemons/com.orbicule.uc.plist',
-    '/Library/LaunchAgents/com.orbicule.UCAgent.plist',
-    '/usr/local/uc'
-  ]
+
+  uninstall :pkgutil => 'com.orbicule.pkg.Undercover',
+        :quit => [ 'com.orbicule.uc', 'com.orbicule.UCAgent'],
+        :launchctl => 'com.orbicule.uc',
+        :launchctl => 'com.orbicule.UCAgent',
+        :early_script => '/usr/local/uc/bin/Undercover Registration.app/Contents/MacOS/uc-uninstall',
+        :script => {
+          :executable => '/usr/bin/killall',
+          :args => %w[-9 uc UCAgent]
+        }
+
   caveats do
     files_in_usr_local
+    reboot
   end
 end
