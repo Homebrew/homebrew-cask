@@ -6,5 +6,10 @@ class Diffmerge < Cask
   homepage 'http://www.sourcegear.com/diffmerge'
 
   link 'DiffMerge.app'
-  binary 'Extras/diffmerge.sh', :target => 'diffmerge'
+  binary 'DiffMerge.app/Contents/MacOS/DiffMerge', :target => 'diffmerge'
+  
+  caveats <<-EOS.undent
+    Use `diffmerge --nosplash` when configuring external tools such
+    as git to use diffmerge. This will squlech the splash screen.
+    EOS
 end
