@@ -211,6 +211,13 @@ module Cask::DSL
       end
     end
 
+    def install_script(*args)
+      executable = args.shift
+      args = Hash.new(*args)
+      args.merge!({ :executable => executable })
+      artifacts[:install_script] << args
+    end
+
     attr_reader :sums
 
     def hash_name(hash_type)
