@@ -16,7 +16,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
     ohai "Running #{stanza} process for #{@cask}; your password may be necessary"
 
     directives_set.each do |directives|
-      unknown_keys = directives.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :files]
+      unknown_keys = directives.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :files, :delete, :trash]
       unless unknown_keys.empty?
         opoo %Q{Unknown arguments to #{stanza} -- #{unknown_keys.inspect}. Running "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" will likely fix it.}
       end
@@ -122,6 +122,23 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
       end
     end
 
+    directives_set.select{ |h| h.key?(:delete) }.each do |directives|
+      Array(directives[:delete]).flatten.each_slice(500) do |file_slice|
+        ohai "Removing files: #{file_slice.utf8_inspect}"
+        @command.run!('/bin/rm', :args => file_slice.unshift('-rf', '--'), :sudo => true)
+      end
+    end
+
+    # :trash functionality is stubbed as a synonym for :delete
+    # todo: make :trash work differently, moving files to the Trash
+    directives_set.select{ |h| h.key?(:trash) }.each do |directives|
+      Array(directives[:trash]).flatten.each_slice(500) do |file_slice|
+        ohai "Removing files: #{file_slice.utf8_inspect}"
+        @command.run!('/bin/rm', :args => file_slice.unshift('-rf', '--'), :sudo => true)
+      end
+    end
+
+    # todo: remove support for deprecated :files both here and elsewhere
     directives_set.select{ |h| h.key?(:files) }.each do |directives|
       Array(directives[:files]).flatten.each_slice(500) do |file_slice|
         ohai "Removing files: #{file_slice.utf8_inspect}"
