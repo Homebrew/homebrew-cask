@@ -252,14 +252,13 @@ point release (currently: Mavericks and Mountain Lion).
 
 ### But There Is No Stable Version!
 
-When an App is only available as a Beta, or in cases where a "Beta" has become
+When an App is only available as an unstable version (e.g. beta, nightly), or in cases where such a version is
 the general standard, then an "unstable" version can go into the main repo.
 
 ### Unstable, Development, or Legacy Versions
 
 When an App already exists in the main repo, alternate versions can be Casked
 and submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
-Nightly builds always go in [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
 
 ### Trial Versions
 
