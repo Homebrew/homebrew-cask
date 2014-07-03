@@ -20,5 +20,6 @@ class Xquartz < Cask
 
   uninstall :quit => 'org.macosforge.xquartz.X11',
             :launchctl => 'org.macosforge.xquartz.startx',
-            :pkgutil => 'org.macosforge.xquartz.pkg'
+            :pkgutil => 'org.macosforge.xquartz.pkg',
+            :files => '/opt/X11/'
 end
