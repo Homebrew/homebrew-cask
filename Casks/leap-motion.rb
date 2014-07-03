@@ -1,8 +1,8 @@
 class LeapMotion < Cask
-  version '1.2.0'
-  sha256 '5a9b38764367d91e3a5ebf5bfabc960051605a8532b271a98c95dc5341cbb99d'
+  version '1.2.1'
+  sha256 '70507658b029398f5839603ed0e5998db690608f17dc6d55386f12a41a70edee'
 
-  url 'https://warehouse.leapmotion.com/apps/3250/download'
+  url 'https://warehouse.leapmotion.com/apps/3382/download'
   homepage 'https://www.leapmotion.com/setup'
 
   install 'Leap Motion.pkg'
