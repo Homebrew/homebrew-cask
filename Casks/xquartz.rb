@@ -9,7 +9,7 @@ class Xquartz < Cask
   install 'XQuartz.pkg'
 
   after_install do
-    Pathname.new(Dir.home).join('Library', 'Logs').mkpath
+    Pathname.new(File.expand_path('~')).join('Library', 'Logs').mkpath
 
     # Set default path to X11 = avoid the need of manual setup
     system '/usr/bin/defaults', 'write', 'com.apple.applescript', 'ApplicationMap', '-dict-add', 'X11', 'file://localhost/Applications/Utilities/XQuartz.app/'
