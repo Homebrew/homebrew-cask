@@ -1,9 +1,9 @@
 class Kdiff3 < Cask
   # note: "3" is not a version number, but an intrinsic part of the product name (3-way diff)
-  version '0.9.97'
-  sha256 '9be995cced9d3365d2f7f47f01a28bfc47172da7d049014617976e596756d5ee'
+  version '0.9.98'
+  sha256 '3cbfb7f30989af2b28658a5f9f331c1a20275f16f42f3126119913b65cb06777'
 
-  url 'https://downloads.sourceforge.net/sourceforge/kdiff3/kdiff3_0.9.97_MacOS_64bit.dmg'
+  url 'https://downloads.sourceforge.net/project/kdiff3/kdiff3/0.9.98/kdiff3-0.9.98-MacOSX-64Bit.dmg'
   homepage 'http://kdiff3.sourceforge.net/'
 
   link 'kdiff3.app'
