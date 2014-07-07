@@ -1,8 +1,8 @@
 class Unetbootin < Cask
-  version 'latest'
-  sha256 :no_check
+  version '608'
+  sha256 '6348a25607b08426759063a77719b208f3efef3cf0721c3dbcc521b32e6a5ad5'
 
-  url 'http://sourceforge.net/projects/unetbootin/files/latest/download'
+  url "http://downloads.sourceforge.net/sourceforge/unetbootin/unetbootin-mac-#{version}.zip"
   homepage 'http://unetbootin.sourceforge.net/'
 
   link 'unetbootin.app'
