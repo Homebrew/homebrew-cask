@@ -7,4 +7,3 @@ class DwarfFortress < Cask
   
   link 'df_osx/df', :target => 'Dwarf Fortress/df'
 end
-
