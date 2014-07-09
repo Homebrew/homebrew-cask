@@ -1,6 +1,6 @@
 class Hydra < Cask
-  version '1.0.b10'
-  sha256 'f6d2045d1ae14ef6d4d0d38e8a9044f810e99f65f2cc2b89efe5903db6b6aa66'
+  version '1.0.b11'
+  sha256 '719add886941a4fa346cb630daa67e6d3096b7a98725c32e3cce5bf051b07e48'
 
   url "https://github.com/sdegutis/hydra/releases/download/v#{version}/Hydra-v#{version}.app.zip"
   homepage 'https://github.com/sdegutis/hydra'
