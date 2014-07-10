@@ -7,4 +7,9 @@ class Hipchat < Cask
   homepage 'https://www.hipchat.com/'
 
   link 'HipChat.app'
+
+  after_install do
+    # Don't ask to move the app bundle to /Applications
+    system '/usr/bin/defaults', 'write', 'com.hipchat.HipChat', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+  end
 end
