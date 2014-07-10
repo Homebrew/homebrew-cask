@@ -1,9 +1,9 @@
 class MacupdateDesktop < Cask
-  version '6.0'
-  sha256 '5d1b967e20a5c94f37010da576a87f17a49beadae6eac5dab253c605fd3ed338'
+  version '6.0.1'
+  sha256 '30014e0bb75c7b1b74a70107ce24ccebef7db77a404411b2fa1fd1aee58f0477'
 
   homepage 'https://www.macupdate.com/desktop'
-  url 'http://dl.macupdate.com/MacUpdateDesktop6.zip'
+  url "http://dl.macupdate.com/MacUpdateDesktop#{version}.zip"
   appcast 'https://www.macupdate.com/desktop/updates.xml'
 
   link 'MacUpdate Desktop.app'
