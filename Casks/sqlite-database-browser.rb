@@ -1,9 +1,9 @@
 class SqliteDatabaseBrowser < Cask
-  version '2.0.0b1'
-  sha256 '724d15c3958efc85f457278ba1a957b25b643f4e502e2b6ff3ba999354aadabd'
+  version '3.2.0'
+  sha256 '77ff563d108dc2bf224b3628172df31238fe2d74d7a2e1954b120463a865c4d8'
 
-  url 'https://downloads.sourceforge.net/sourceforge/sqlitebrowser/sqlitebrowser_200_b1_osx.zip'
-  homepage 'http://sqlitebrowser.sourceforge.net/'
+  url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/sqlb-#{version}/sqlitebrowser-#{version}.dmg"
+  homepage 'http://sqlitebrowser.org'
 
-  link 'SQLite Database Browser 2.0 b1.app'
+  link "SQLite Database Browser #{version}.app"
 end

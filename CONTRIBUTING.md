@@ -346,6 +346,8 @@ $ github_user='<my-github-username>'
 $ git push "$github_user" my-new-cask
 ```
 
+If you are using GitHub two factor authenication and set your remote reposity as https you will need to set up a personal access token and use that as your username with a blank password.
+
 ### Filing a Pull Request on GitHub
 
 Now go to *your* GitHub repository at
