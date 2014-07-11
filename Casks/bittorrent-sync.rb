@@ -1,6 +1,6 @@
 class BittorrentSync < Cask
-  version 'latest'
-  sha256 :no_check
+  version '1.3.106'
+  sha256 '31eca603936f5a854567bb75f9d22f7de368469be5f1c5e2637582a60a99c8d1'
 
   url 'http://download-lb.utorrent.com/endpoint/btsync/os/osx/track/stable'
   # todo: response was not XML
