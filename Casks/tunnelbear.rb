@@ -1,8 +1,8 @@
 class Tunnelbear < Cask
-  version '2.4.1'
-  sha256 'e07d63fbba94677525d82a5c24b4a0fd7f572f229e3ef042fe83e7669eddf327'
+  version '2.4.2'
+  sha256 'ad53bff32098e6871b3c3416b632c634672500b415a54d5afbbe7ea4f605d33d'
 
-  url 'https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-2.4.1.zip'
+  url 'https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-2.4.2.zip'
   appcast 'https://s3.amazonaws.com/tunnelbear/downloads/mac/appcast.xml'
   homepage 'https://www.tunnelbear.com/'
 
