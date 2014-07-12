@@ -1,8 +1,8 @@
 class Cakebrew < Cask
-  version '1.0.7'
-  sha256 '647ce281fa3218e7d4531cac0e5b69d19136883d2b95d154b7a818c4d130cace'
+  version '1.0.8'
+  sha256 'bd8c9d5de01ee255ceec1a736c051d8ac0c6215bd243f7d1253f48dd799d9a56'
 
-  url 'https://www.cakebrew.com/files/cakebrew-1.0.7.dmg'
+  url 'https://www.cakebrew.com/files/cakebrew-1.0.8.dmg'
   appcast 'http://www.cakebrew.com/appcast/profileInfo.php'
   homepage 'http://www.cakebrew.com'
 
