@@ -1,15 +1,15 @@
 class R < Cask
   if MacOS.version == :mavericks
-    url 'http://cran.rstudio.com/bin/macosx/R-3.1.0-mavericks.pkg'
-    sha256 '4139dbaf8c1c810c8a785d4b94e6c276f7a8466259108787e38e982c0b163c7d'
-    install 'R-3.1.0-mavericks.pkg'
+    url 'http://cran.rstudio.com/bin/macosx/R-3.1.1-mavericks.pkg'
+    sha256 'd2f4e4f68628d998f81146eacd929ef6fb9bc01ca93d968e6562a3a6372c4d93'
+    install 'R-3.1.1-mavericks.pkg'
   else
-    url 'http://cran.rstudio.com/bin/macosx/R-3.1.0-snowleopard.pkg'
-    sha256 '5c1931ab86166afa3aed07a93fad6415fc80017be4b7777838969a2949d4692c'
-    install 'R-3.1.0-snowleopard.pkg'
+    url 'http://cran.rstudio.com/bin/macosx/R-3.1.1-snowleopard.pkg'
+    sha256 '4db95d2bffdaa342a89d01088f47cfe6575ed7e953c31ea4dea629a0942b56b6'
+    install 'R-3.1.1-snowleopard.pkg'
   end
   homepage 'http://www.r-project.org/'
-  version '3.1.0'
+  version '3.1.1'
   # packages: 'org.r-project.R.x86_64.fw.pkg',
   #           'org.r-project.R.x86_64.GUI.pkg',
   #           'org.r-project.x86_64.tcltk.x11'
