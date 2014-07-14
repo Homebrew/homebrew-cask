@@ -24,6 +24,8 @@ module Cask::DSL
 
   def container_type; self.class.container_type; end
 
+  def tags; self.class.tags; end
+
   def sums; self.class.sums || []; end
 
   def artifacts; self.class.artifacts; end
@@ -89,6 +91,18 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "invalid 'version' value: '#{arg.inspect}'")
       end
       @version ||= arg
+    end
+
+    def tags(*args)
+      if @tags and !args.empty?
+        # consider removing this limitation
+        raise CaskInvalidError.new(self.title, "'tags' stanza may only appear once")
+      end
+      @tags ||= begin
+        Cask::Tags.new(*args) unless args.empty?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
+      end
     end
 
     def license(arg=nil)
