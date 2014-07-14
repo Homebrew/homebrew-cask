@@ -10,11 +10,20 @@ class R < Cask
   end
   homepage 'http://www.r-project.org/'
   version '3.1.1'
-  # packages: 'org.r-project.R.x86_64.fw.pkg',
-  #           'org.r-project.R.x86_64.GUI.pkg',
-  #           'org.r-project.x86_64.tcltk.x11'
-  uninstall :pkgutil => '^org\.r-project\.(R\.)?x86_64\.(fw|GUI|tcltk).*',
-            :files => ['/usr/bin/R', '/usr/bin/Rscript',
+  uninstall :pkgutil => [
+                         # eg org.r-project.R.maverics.fw.pkg
+                         #   org.r-project.R.mavericks.GUI.pkg
+                         'org\.r-project\.R\..*(fw|GUI)\.pkg',
+                         # eg org.r-project.x86_64.tcltk.x11
+                         'org.r-project\..*\.tcltk.x11',
+                        ],
+            :files => [
+                       # symlinks
+                       '/usr/bin/R',
+                       '/usr/bin/Rscript',
+                       '/Library/Frameworks/R.Framework/Versions/Current',
+                       # :pkgutil won't delete this dir if the fontconfig cache was written to at
+                       # /Library/Frameworks/R.Framework/Versions/3.1/Resources/fontconfig/cache
                        '/Library/Frameworks/R.Framework/Versions/3.1',
-                       '/Library/Frameworks/R.Framework/Versions/Current']
+                      ]
 end
