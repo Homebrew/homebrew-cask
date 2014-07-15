@@ -1,4 +1,4 @@
-class Aulab < Cask
+class AuLab < Cask
   url 'http://images.apple.com/itunes/mastered-for-itunes/docs/au_lab.zip'
   nested_container 'AU Lab Image.dmg'
   homepage 'http://www.apple.com/itunes/mastered-for-itunes/'
