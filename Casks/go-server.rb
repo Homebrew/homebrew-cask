@@ -4,6 +4,4 @@ class GoServer < Cask
 
   url 'http://download.go.cd/gocd/go-server-14.2.0-377-osx.zip'
   homepage 'http://www.go.cd/'
-
-  link 'Go Server.app', :target => 'go-server.app'
 end
