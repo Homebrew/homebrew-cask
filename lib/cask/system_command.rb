@@ -66,7 +66,7 @@ class Cask::SystemCommand
     begin
       raise CaskError.new("Empty plist input") unless output =~ %r{\S}
       output.sub!(%r{\A(.*?)(<\?\s*xml)}m, '\2')
-      _warn_plist_garbage(command, $1)
+      _warn_plist_garbage(command, $1) if Cask.debug
       output.sub!(%r{(<\s*/\s*plist\s*>)(.*?)\Z}m, '\1')
       _warn_plist_garbage(command, $2)
       xml = Plist::parse_xml(output)
