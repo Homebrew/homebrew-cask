@@ -19,7 +19,42 @@ class Cask::Source::PathBase
     raise CaskError.new "File '#{path}' is not readable"     unless path.readable?
     raise CaskError.new "File '#{path}' is not a plain file" unless path.file?
     begin
-      require path
+
+      # forward compatibility hack: convert first lines of the new form
+      #
+      #     cask :v1 => 'google-chrome' do
+      #
+      # to the old form
+      #
+      #     class GoogleChrome < Cask
+      #
+      # limitation: does not support Ruby extended quoting such as %Q{}
+      #
+      # in the future, this can be pared down to an "eval"
+
+      # read Cask
+      cask_string = File.open(path, 'rb') do |handle|
+        contents = handle.read
+        if defined?(Encoding)
+          contents.force_encoding('UTF-8')
+        else
+          contents
+        end
+      end
+
+      # munge text
+      cask_string.sub!(%r{\A(\s*\#[^\n]*\n)+}, '');
+      if %r{\A\s*cask\s+:v[\d_]+\s+=>\s+([\'\"])(\S+?)\1(?:\s*,\s*|\s+)do\s*\n}.match(cask_string)
+        cask_string.sub!(%r{\A[^\n]+\n}, "class #{cask_class_name} < Cask\n")
+      end
+
+      # simulate "require"
+      begin
+        Cask.const_get(cask_class_name)
+      rescue NameError
+        eval(cask_string, TOPLEVEL_BINDING)
+      end
+
     rescue CaskError, StandardError, ScriptError => e
       # bug: e.message.concat doesn't work with CaskError exceptions
       e.message.concat(" while loading '#{path}'")
