@@ -1,8 +1,8 @@
 class Prismatik < Cask
-  version '5.10.5'
-  sha256 'c1536aea371ee99fd07243c105e465a13bda2b69a81d80b213ea6ab0e7306650'
+  version '5.11.1'
+  sha256 '178ea51c143c2cb005199f5cfaf24695324b951ba98c55cec83c7882e6420903'
 
-  url 'https://github.com/Atarity/Lightpack/releases/download/5.10.5/Prismatik.5.10.5.dmg'
+  url 'https://github.com/woodenshark/Lightpack/releases/download/5.11.1/Prismatik.5.11.1.dmg'
   homepage 'http://lightpack.tv/'
 
   link 'Prismatik.app'
