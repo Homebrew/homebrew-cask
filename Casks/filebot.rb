@@ -1,6 +1,6 @@
 class Filebot < Cask
   version '4.2'
-  sha256 'f073ae7c56d49212cc33687f22c74510b31af3df3f5fb1db85c88d42b264e6cd'
+  sha256 '92769237a926e13de515c6743d57c0b8b52e4c6ed50dfc5b46355690de1feb95'
 
   homepage 'http://www.filebot.net/'
   url "https://downloads.sourceforge.net/project/filebot/filebot/FileBot_#{version}/FileBot_#{version}.app.tar.gz"
