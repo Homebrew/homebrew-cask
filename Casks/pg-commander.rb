@@ -1,8 +1,8 @@
 class PgCommander < Cask
-  version '1.3.0'
-  sha256 'ca9dcb73ada73fcd5d4896b82ca2f84f37543ea3e1f8866edc7b3bd66e97c817'
+  version '1.4.2'
+  sha256 'e998d9de270f61a21f008815079664d12998d0471ac92b66ceca5c862271fd92'
 
-  url 'https://eggerapps.at/pgcommander/download/pgcommander-1.3.0.zip'
+  url 'https://eggerapps.at/pgcommander/download/pgcommander-1.4.2.zip'
   homepage 'http://eggerapps.at/pgcommander/'
 
   link 'PG Commander.app'
