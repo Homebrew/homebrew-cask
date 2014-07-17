@@ -1,5 +1,5 @@
 class AmazonMusic < Cask
-  version '3.0'
+  version '3.1'
   sha256 '77a402077ae3f43aafa5433f7b26017643080a73fa0ad49953dedbeaca09574a'
 
   url 'https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/20140702/064904ec21/AmazonMusicInstaller.dmg'
