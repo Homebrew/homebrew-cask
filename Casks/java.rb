@@ -1,14 +1,14 @@
 class Java < Cask
-  version '1.8.0_05'
-  sha256 '3dd1047340c2487f7c32c4ae633ba9a9a9e1dee49f6084d7df3846091faece48'
+  version '1.8.0_11'
+  sha256 'baae540ea2c6a3f4dc1d1f49518caf9af9eb08a3f78c080701c6767545acb06e'
 
-  url 'http://download.oracle.com/otn-pub/java/jdk/8u5-b13/jdk-8u5-macosx-x64.dmg',
+  url 'http://download.oracle.com/otn-pub/java/jdk/8u11-b12/jdk-8u11-macosx-x64.dmg',
       :cookies => {
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html'
 
-  install 'JDK 8 Update 05.pkg'
+  install 'JDK 8 Update 11.pkg'
   after_install do
     system '/usr/bin/sudo', '-E', '--',
       '/usr/libexec/PlistBuddy', '-c', 'Add :JavaVM:JVMCapabilities: string BundledApp', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Info.plist"
@@ -30,7 +30,7 @@ class Java < Cask
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Home/jre/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"
   end
   uninstall :pkgutil => [
-                         'com.oracle.jdk8u5',         # manually update this for each version
+                         'com.oracle.jdk8u11',         # manually update this for each version
                          'com.oracle.jre',
                         ],
             :launchctl => [
