@@ -6,5 +6,5 @@ class Marked < Cask
   appcast 'http://abyss.designheresy.com/marked/marked.xml'
   homepage 'http://marked2app.com'
 
-  link 'Marked.app'
+  link 'Marked 2.app'
 end
