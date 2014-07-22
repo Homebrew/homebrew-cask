@@ -1,6 +1,6 @@
 class Macaw < Cask
-  version '1.0.13'
-  sha256 'b7c0ff0a0ae178b64fa100790f0a790e578c3ab272dc493fd12ed288be2f28ad'
+  version '1.5'
+  sha256 'cc531d70a49b1f2b923c944015ca19c5e7db7a0616d857dfb1ef67bd82930a54'
 
   url "http://download.macaw.co/#{version}/Macaw#{version}.dmg"
   appcast 'http://download.macaw.co/appcast.xml'
