@@ -1,8 +1,8 @@
 class Aerofs < Cask
-  version '0.8.41'
-  sha256 '1a416dacbe1e465b3925a6ee21a438e45b05a285cc039ea96b558d95933f0586'
+  version '0.8.58'
+  sha256 '99768572e8fc5a508cb4e4c1653a54de51b8b0a37a242234e520ff86f183c786'
 
-  url 'https://dsy5cjk52fz4a.cloudfront.net/AeroFSInstall-0.8.41.dmg'
+  url "https://dsy5cjk52fz4a.cloudfront.net/AeroFSInstall-#{version}.dmg"
   homepage 'https://www.aerofs.com/'
 
   link 'AeroFS.app'
