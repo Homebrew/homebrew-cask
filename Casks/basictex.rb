@@ -1,6 +1,6 @@
 class Basictex < Cask
-  version 'latest'
-  sha256 :no_check
+  version '20140525'
+  sha256 '574132bcde10221c8e3be1f6ac27eee84393092dae96928bb70fc6cb6e27f9cf'
 
   url 'http://mirror.ctan.org/systems/mac/mactex/mactex-basic.pkg'
   homepage 'http://www.tug.org/mactex/morepackages.html'
