@@ -29,7 +29,7 @@ class Alfred < Cask
   version '2.3_264'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
 
-  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
+  url 'https://cachefly.alfredapp.com/Alfred_#{version}.zip'
   homepage 'http://www.alfredapp.com/'
 
   link 'Alfred 2.app'
@@ -213,6 +213,22 @@ of key/value pairs appended to `url`:
 Example of using `:cookies`: [java.rb](../Casks/java.rb)
 
 Example of using `:referer`: [freefilesync.rb](../Casks/freefilesync.rb)
+
+### Version Numbers in URLs
+
+When the version number is part of the URL, try to incorporate it programmatically. For example:
+
+```ruby
+url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
+```
+
+becomes:
+
+```ruby
+url 'https://cachefly.alfredapp.com/Alfred_#{version}.zip'
+```
+
+as long as `version` is defined at the top of the Cask.
 
 ### Difficulty Finding a URL
 
