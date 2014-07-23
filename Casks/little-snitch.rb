@@ -1,8 +1,8 @@
 class LittleSnitch < Cask
-  version '3.3.2'
-  sha256 '835395e13b9c96b0a5fa32ae9b9e196fb79fb54cb33f1861dd32d16774d7d3bd'
+  version '3.3.3'
+  sha256 '9a9bc01075070b5ca7af9e17591ee8b649753a9a94076c2e7b67d6e99e425450'
 
-  url 'http://www.obdev.at/downloads/LittleSnitch/LittleSnitch-3.3.2.dmg'
+  url "http://www.obdev.at/downloads/LittleSnitch/LittleSnitch-#{version}.dmg"
   homepage 'http://www.obdev.at/products/littlesnitch/index.html'
 
   caveats do
