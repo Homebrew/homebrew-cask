@@ -1,8 +1,8 @@
 class Texts < Cask
-  version '0.18.4'
-  sha256 'dc2613a0793939cb2c5544a9c6c8e4e25c5cf9207f818420d550d3bb9eeeb779'
+  version '0.20'
+  sha256 'b64e1f403deae3dd89eb004df0259b3e62ab122f2add6fee0612cdc43820989c'
 
-  url 'http://www.texts.io/Texts-0.18.4.dmg'
+  url "http://www.texts.io/Texts-#{version}.dmg"
   appcast 'http://www.texts.io/appcast-osx.xml'
   homepage 'http://www.texts.io'
 
