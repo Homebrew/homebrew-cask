@@ -6,4 +6,8 @@ class Rubymine < Cask
   homepage 'http://www.jetbrains.com/ruby/'
 
   link 'RubyMine.app'
+
+  after_install do
+    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/RubyMine.app/Contents/Info.plist"
+  end
 end

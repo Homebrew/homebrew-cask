@@ -6,6 +6,11 @@ class IntellijIdeaCe < Cask
   homepage 'https://www.jetbrains.com/idea/index.html'
 
   link 'IntelliJ IDEA 13 CE.app'
+
+  after_install do
+    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/IntelliJ IDEA 13 CE.app/Contents/Info.plist"
+  end
+
   caveats do
     <<-EOS.undent
     #{@cask} may require Java 7 (an older version) available from the

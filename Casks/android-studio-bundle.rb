@@ -6,4 +6,8 @@ class AndroidStudioBundle < Cask
   homepage 'http://developer.android.com/sdk/installing/studio.html'
 
   link 'Android Studio.app'
+
+  after_install do
+    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/Android Studio.app/Contents/Info.plist"
+  end
 end
