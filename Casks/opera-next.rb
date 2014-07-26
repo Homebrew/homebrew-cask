@@ -1,7 +1,7 @@
 class OperaNext < Cask
-  url 'http://www.opera.com' << %x( curl -Ls 'http://www.opera.com/download/get/?partner=www&opsys=MacOS&product=Opera%20Next' | grep '/download/' | head -1 | perl -pe 's/.*'\\''(\\/.*)'\\''.*/$1/' | tr -d '\n' ) << '&amp;ext=.dmg'
+  url 'http://get.geo.opera.com/pub/opera-next/17.0.1241.36/mac/Opera_Next_17.0.1241.36_Setup.dmg'
   homepage 'http://www.opera.com/developer/next'
-  version 'latest'
-  no_checksum
+  version '17.0.1241.36'
+  sha1 'f4f6e9c4c305c5b3fddcce6dca76eef91c840561'
   link 'Opera Next.app'
 end

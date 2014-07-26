@@ -1,7 +1,7 @@
 class ZapProxy < Cask
-  url 'https://zaproxy.googlecode.com/files/OWASP_ZAP_2.1.0_OSX.zip'
+  url 'https://zaproxy.googlecode.com/files/ZAP_2.2.1_Mac_OS_X.zip'
   homepage 'https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project'
-  version '2.1.0'
-  sha1 '86ebdb90e56a25ce49cd3421252a6c4c147d7d27'
+  version '2.2.1'
+  sha1 'a948e4b03cb095d5b097c824268e756d92205096'
   link 'OWASP ZAP.app'
 end

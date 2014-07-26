@@ -52,11 +52,13 @@ class Cask::LinkChecker
     case cask.url.scheme
     when 'http', 'https' then
       @response_status = response_lines.grep(/^HTTP/).last
-      http_headers = response_lines[(response_lines.index(@response_status)+1)..-1]
-      http_headers.each { |line|
-        header_name, header_value = line.split(': ')
-        @headers[header_name] = header_value
-      }
+      unless response_lines.index(@response_status).nil?
+        http_headers = response_lines[(response_lines.index(@response_status)+1)..-1]
+        http_headers.each { |line|
+          header_name, header_value = line.split(': ')
+          @headers[header_name] = header_value
+        }
+      end
     when 'ftp' then
       @response_status = 'OK'
       response_lines.each { |line|

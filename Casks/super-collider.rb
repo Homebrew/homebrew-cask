@@ -3,5 +3,5 @@ class SuperCollider < Cask
   homepage 'http://supercollider.sourceforge.net/'
   version '3.6.5'
   sha1 'f778f6d3c42f8662001b241287836bbe5c532604'
-  link 'SuperCollider.app'
+  link 'SuperCollider/SuperCollider.app'
 end

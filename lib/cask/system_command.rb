@@ -12,6 +12,7 @@ class Cask::SystemCommand
         ohai line.chomp if options[:print]
       end
     end
+    _assert_success($?, command, output) if options[:must_succeed]
     if options[:plist]
       Plist::parse_xml(output)
     else
@@ -19,9 +20,13 @@ class Cask::SystemCommand
     end
   end
 
+  def self.run!(command, options)
+    run(command, options.merge(:must_succeed => true))
+  end
+
   def self._process_options(command, options)
     if options[:sudo]
-      command = "sudo #{_quote(command)}"
+      command = "sudo -E #{_quote(command)}"
     end
     if options[:args]
       command = "#{command} #{options[:args].map { |arg| _quote(arg) }.join(' ')}"
@@ -33,6 +38,12 @@ class Cask::SystemCommand
       command = "#{command} 2>&1"
     end
     command
+  end
+
+  def self._assert_success(status, command, output)
+    unless status.success?
+      raise CaskCommandFailedError.new(command, output)
+    end
   end
 
   def self._quote(string)

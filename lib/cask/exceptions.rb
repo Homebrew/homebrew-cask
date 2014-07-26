@@ -43,3 +43,22 @@ class CaskAlreadyInstalledError < CaskError
     "Cask for #{name} is already installed. Use `--force` to install anyways."
   end
 end
+
+class CaskCommandFailedError < CaskError
+  def initialize cmd, output
+    @cmd = cmd
+    @output = output
+  end
+
+  def to_s;
+    <<-EOS.undent
+      Command failed to execute!
+
+      ==> Failed command:
+      #{@cmd}
+
+      ==> Output of failed command:
+      #{@output}
+    EOS
+  end
+end

@@ -1,7 +1,7 @@
 class Webstorm < Cask
-  url 'http://download.jetbrains.com/webstorm/WebStorm-6.0.2a.dmg'
+  url 'http://download.jetbrains.com/webstorm/WebStorm-7.0.dmg'
   homepage 'http://www.jetbrains.com/webstorm/'
-  version '6.0.2a'
-  sha1 '4b6a1e0ccc3307c56acddc722e84476939d0129c'
+  version '7.0'
+  sha1 'fcebee6fc15226e2d73eb92a980860fc19766e62'
   link 'WebStorm.app'
 end

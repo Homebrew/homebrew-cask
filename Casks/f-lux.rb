@@ -1,6 +1,6 @@
 class FLux < Cask
-  url 'https://secure.herf.org/flux/Flux.zip'
-  homepage 'http://stereopsis.com/flux/'
+  url 'https://justgetflux.com/mac/Flux.zip'
+  homepage 'http://justgetflux.com'
   version 'latest'
   no_checksum
   link 'Flux.app'
