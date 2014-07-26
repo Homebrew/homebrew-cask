@@ -1,5 +1,3 @@
-require 'tmpdir'
-
 class Cask::Container::Zip < Cask::Container::Base
   def self.me?(criteria)
     criteria.file.include? 'compressed-encoding=application/zip;'
