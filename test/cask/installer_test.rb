@@ -126,6 +126,19 @@ describe Cask::Installer do
       file.must_be :file?
     end
 
+    it "works with pure gz-based casks" do
+      asset = Cask.load('gzipped-asset')
+
+      shutup do
+        Cask::Installer.new(asset).install
+      end
+
+      dest_path = Cask.caskroom/'gzipped-asset'/asset.version
+      dest_path.must_be :directory?
+      file = dest_path/"gzipped-asset-#{asset.version}"
+      file.must_be :file?
+    end
+
     it "blows up on a bad checksum" do
       bad_checksum = Cask.load('bad-checksum')
       lambda {

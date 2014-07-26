@@ -7,6 +7,7 @@ require 'cask/container/bzip2'
 require 'cask/container/cab'
 require 'cask/container/criteria'
 require 'cask/container/dmg'
+require 'cask/container/gzip'
 require 'cask/container/naked'
 require 'cask/container/sevenzip'
 require 'cask/container/sit'
@@ -26,6 +27,7 @@ class Cask::Container
       Cask::Container::Rar,
       Cask::Container::Zip,
       Cask::Container::Bzip2,
+      Cask::Container::Gzip,    # pure gzip, not tar/gzip
       Cask::Container::Naked,
     ]
   end
