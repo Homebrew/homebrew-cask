@@ -1,7 +1,7 @@
 class Spyder < Cask
-  url 'https://spyderlib.googlecode.com/files/spyder-2.2.5.dmg'
-  homepage 'https://code.google.com/p/spyderlib/'
-  version '2.2.5'
-  sha1 'a793cd295fe505bc0a69974b968b9df5ac15e9a8'
+  url 'https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-2.3.0.dmg'
+  homepage 'https://bitbucket.org/spyder-ide/spyderlib/'
+  version '2.3.0'
+  sha1 '24421109d0d9273f4deec89d97fcd373331cbd7c'
   link 'Spyder.app'
 end
