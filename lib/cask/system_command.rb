@@ -5,22 +5,29 @@ class Cask::SystemCommand
     command = _process_options(executable, options)
     odebug "Executing: #{command.utf8_inspect}"
     output = ''
-    Open3.popen3(*command) do |stdin, stdout, stderr|
-      if options[:input]
-        options[:input].each { |line| stdin.puts line }
-      end
-      stdin.close_write
-      while line = stdout.gets
-        output << line
-        ohai line.chomp if options[:print]
-      end
-      while line = stderr.gets
-        next if options[:stderr] == :silence
-        output << line
-        ohai line.chomp if options[:print]
-      end
+    exit_status = nil
+
+    ext_stdin, ext_stdout, ext_stderr, wait_thr = Open3.popen3(*command)
+    if options[:input]
+      options[:input].each { |line| ext_stdin.puts line }
     end
-    _assert_success($?, command, output) if options[:must_succeed]
+    ext_stdin.close_write
+    while line = ext_stdout.gets
+      output << line
+      ohai line.chomp if options[:print]
+    end
+    while line = ext_stderr.gets
+      next if options[:stderr] == :silence
+      output << line
+      ohai line.chomp if options[:print]
+    end
+    ext_stdout.close_read
+    ext_stderr.close_read
+
+    # Ruby 1.8 sets $?. Ruby 1.9+ has wait_thr, and does not set $?.
+    exit_status = wait_thr.nil? ? $? : wait_thr.value
+
+    _assert_success(exit_status, command, output) if options[:must_succeed]
     if options[:plist]
       _parse_plist(command, output)
     else
@@ -49,7 +56,7 @@ class Cask::SystemCommand
   end
 
   def self._assert_success(status, command, output)
-    unless status.success?
+    unless status and status.success?
       raise CaskCommandFailedError.new(command.utf8_inspect, output, status)
     end
   end
