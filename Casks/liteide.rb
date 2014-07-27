@@ -1,8 +1,8 @@
 class Liteide < Cask
-  version 'x22'
-  sha256 '994b2bf68bb7f99ef7ac8001546f437644e9751109e5bf207adee7fb6180c689'
+  version 'x23.1'
+  sha256 '87445988ad3f8074b7c16ebf1a2eeab732621f32794fdb2d59bc40ffe2995820'
 
-  url 'https://downloads.sourceforge.net/project/liteide/X22/liteidex22.macosx.zip'
+  url 'https://downloads.sourceforge.net/project/liteide/X23.1/liteidex23.1.macosx.zip'
   homepage 'https://code.google.com/p/golangide/'
 
   link 'LiteIDE.app'
