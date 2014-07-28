@@ -1,5 +1,16 @@
 # Frequently Asked Questions
 
+# NOTICE: Homebrew-cask has moved!
+
+The original repo at https://github.com/phinze/homebrew-cask has moved
+under the organizational umbrella at https://github.com/caskroom/homebrew-cask .
+
+Web redirection happens automatically.
+
+The location of the Cask Tap on disk has also changed, which should be
+handled automatically upon upgrading.  If you have technical difficulties,
+please see [TAP_MIGRATION.md](TAP_MIGRATION.md).
+
 ## What is a Cask?
 
 A `Cask` is like a `Formula` in Homebrew except it describes how to download
