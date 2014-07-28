@@ -5,10 +5,7 @@ class Cask::Tags
   # So far, we only check the keys.
   VALID_TAGS = Set.new [
                         :vendor,
-                        :font_pitch,
-                        :font_serif,
-                        :font_weight,
-                        :font_slant,
+                        :name,
                        ]
 
   attr_accessor *VALID_TAGS
