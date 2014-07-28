@@ -1,9 +1,9 @@
 class Coconutbattery < Cask
   if MacOS.version == :lion or MacOS.version == :mountain_lion or MacOS.version == :mavericks
-    url 'http://www.coconut-flavour.com/downloads/coconutBattery_3_0_1.zip'
+    url 'http://www.coconut-flavour.com/downloads/coconutBattery_3_1.zip'
     appcast 'http://updates.coconut-flavour.com/coconutBatteryIntel.xml'
-    version '3.0.1'
-    sha256 '8affd652b38060324aa11adf30b8e517e8e39166946dc7e08a0c88ee3756bef3'
+    version '3.1'
+    sha256 'fee4c3e0ccc9c6ea1acc0dc7b3191ff6bf727df03cb9cb269a9347cd0e931618'
   elsif MacOS.version == :leopard or MacOS.version == :snow_leopard
     url 'http://www.coconut-flavour.com/downloads/coconutBattery_2.8.zip'
     version '2.8'
