@@ -1,9 +1,9 @@
 class Memorytamer < Cask
-  version '0.7.8'
-  sha256 '058f8157df1ab496af8eeb130804ddd3c000963d3a22e8e71e6e0d72f56f7bf6'
+  version '0.8.1'
+  sha256 '00f4b53d57e118e580b0b4be74198d0e2cc2d695f6ad63fb19ef4e385887d4fd'
 
   url "https://memorytamer.s3.amazonaws.com/MemoryTamer-#{version}.zip"
-  homepage 'https://github.com/henderea/MemoryTamer'
+  homepage 'http://www.memorytamer.com/'
 
   link 'MemoryTamer.app'
 end
