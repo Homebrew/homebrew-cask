@@ -52,6 +52,7 @@
 * __Breaking Changes__
  - none
 
+[@rstacruz]: https://github.com/rstacruz
 [@ujovlado]: https://github.com/ujovlado
 [@alexbarclay]: https://github.com/alexbarclay
 [@hanjianwei]: https://github.com/hanjianwei
