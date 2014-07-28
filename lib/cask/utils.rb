@@ -73,6 +73,7 @@ module Cask::Utils
       odebug "Cask instance dumps in YAML:"
       odebug "Cask instance toplevel:", self.to_yaml
       [
+       :dsl,
        :homepage,
        :url,
        :appcast,
