@@ -1,5 +1,81 @@
 # CHANGELOG
 
+## 0.38.0
+
+* __Casks__
+ - 100 Casks added (1569 updated) by 146 contributors since 0.37.1
+ - 1736 total Casks
+* __Features__
+ - [#5517][] support pure gzip containers (*ie* not `tar.gz`)
+ - Numerous undocumented changes to DSL, transitioning to DSL 1.0 (see #4688)  
+     - [#4953][], [#5540][] add `tags` stanza
+     - [#4873][] add `license` stanza
+     - [#4869][] add `zap` stanza
+     - [#4896][] add `depends_on` stanza
+     - [#4848][] add `gpg` stanza
+     - [#5365][] add new-style header line which will remove naming limitations
+     - [#4928][] add uninstall `:delete` and `:trash` directives
+     - [#4951][] add `install_script` artifact
+     - [#4849][] allow `version :latest` (symbol not string)
+     - [#4847][] Extend `appcast` stanza to support multiple keys
+     - [#4865][] allow all Cask types to use `uninstall`
+     - [#4866][] remove special properties of `caskroom_only`
+     - [#4845][] forward-compatible DSL synonyms
+         - `pkg` for `install`
+         - `app` for `link`
+         - `suite` for `link`
+         - `preflight` for `before_install`
+         - `postflight` for `before_uninstall`
+         - `uninstall_preflight` for `before_uninstall`
+         - `uninstall_postflight` for `after_uninstall`
+* __Fixes__
+ - [#5520][] Better detection of errors from external commands across Ruby versions
+ - [#5340][] ignore non-XML `hdiutil` output preceding plists
+ - [#5519][] internal: Zip container does not need to `require 'tmpdir'`
+ - [#5120][] internal: install rspec; move first few tests over
+ - [#5132][] internal: rspecify scopes and download strategy tests
+ - [#4951][] internal:  
+     - move `read_script_argument` to `Cask::Artifact::Base`
+     - generalize `read_script_arguments` and harmonize error messages
+     - make `read_script_arguments` accept defaults/overrides
+ - [#4847][] internal: refactor dsl_test.rb into named sections
+ - [#4865][] refactor install/uninstall
+     - recast install/uninstall methods: `install_phase`
+     - promote `:uninstall` to an independent artifact
+     - recast `uninstall_options` as directives
+     - recast `uninstall_set` as `directives_set`
+     - change hardcoded "uninstall" in messages to stanza variable
+     - pass stanza by name to dispatch
+     - recast `manually_uninstall` method
+* __Documentation__
+ - 7 doc commits since 0.37.1, <3 [@rstacruz][],[@alexbarclay][], [@hanjianwei][]
+* __Breaking Changes__
+ - none
+
+[@ujovlado]: https://github.com/ujovlado
+[@alexbarclay]: https://github.com/alexbarclay
+[@hanjianwei]: https://github.com/hanjianwei
+[#5540]: https://github.com/caskroom/homebrew-cask/issues/5540
+[#5365]: https://github.com/caskroom/homebrew-cask/issues/5365
+[#5520]: https://github.com/caskroom/homebrew-cask/issues/5520
+[#5517]: https://github.com/caskroom/homebrew-cask/issues/5517
+[#5519]: https://github.com/caskroom/homebrew-cask/issues/5519
+[#5340]: https://github.com/caskroom/homebrew-cask/issues/5340
+[#4953]: https://github.com/caskroom/homebrew-cask/issues/4953
+[#4928]: https://github.com/caskroom/homebrew-cask/issues/4928
+[#4951]: https://github.com/caskroom/homebrew-cask/issues/4951
+[#5132]: https://github.com/caskroom/homebrew-cask/issues/5132
+[#5120]: https://github.com/caskroom/homebrew-cask/issues/5120
+[#4845]: https://github.com/caskroom/homebrew-cask/issues/4845
+[#4873]: https://github.com/caskroom/homebrew-cask/issues/4873
+[#4869]: https://github.com/caskroom/homebrew-cask/issues/4869
+[#4896]: https://github.com/caskroom/homebrew-cask/issues/4896
+[#4848]: https://github.com/caskroom/homebrew-cask/issues/4848
+[#4849]: https://github.com/caskroom/homebrew-cask/issues/4849
+[#4847]: https://github.com/caskroom/homebrew-cask/issues/4847
+[#4866]: https://github.com/caskroom/homebrew-cask/issues/4866
+[#4865]: https://github.com/caskroom/homebrew-cask/issues/4865
+
 ## 0.37.1
 
 * __Casks__
