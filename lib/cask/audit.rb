@@ -74,6 +74,7 @@ class Cask::Audit
       %r{https?://dl\.sourceforge\.jp/},
       # special case: cannot find canonical format URL
       %r{https?://brushviewer\.sourceforge\.net/brushviewql\.zip},
+      %r{https?://doublecommand\.sourceforge\.net/files/},
     ]
     valid_url_formats.none? { |format| cask.url.to_s =~ format }
   end
