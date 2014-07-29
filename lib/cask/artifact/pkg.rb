@@ -37,6 +37,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
   def run_installer(pkg_description)
     load_pkg_description pkg_description
     ohai "Running installer for #{@cask}; your password may be necessary."
+    ohai "Package installers may write to any location; options such as --appdir are ignored."
     source = @cask.destination_path.join(pkg_relative_path)
     unless source.exist?
       raise CaskError.new "pkg source file not found: '#{source}'"
