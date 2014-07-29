@@ -22,6 +22,8 @@ module Cask::DSL
 
   def depends_on; self.class.depends_on; end
 
+  def conflicts_with; self.class.conflicts_with; end
+
   def container_type; self.class.container_type; end
 
   def tags; self.class.tags; end
@@ -135,6 +137,18 @@ module Cask::DSL
         @depends_on_formula ||= @depends_on.formula
       end
       @depends_on
+    end
+
+    def conflicts_with(*args)
+      if @conflicts_with and !args.empty?
+        # todo: remove this constraint, and instead merge multiple conflicts_with stanzas
+        raise CaskInvalidError.new(self.title, "'conflicts_with' stanza may only appear once")
+      end
+      @conflicts_with ||= begin
+        Cask::ConflictsWith.new(*args) unless args.empty?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
+      end
     end
 
     def artifacts

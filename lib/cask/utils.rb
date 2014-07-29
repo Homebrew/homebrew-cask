@@ -83,6 +83,7 @@ module Cask::Utils
        :artifacts,
        :caveats,
        :depends_on_formula,
+       :conflicts_with,
        :container_type,
        :gpg,
       ].each do |method|
