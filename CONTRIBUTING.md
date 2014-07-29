@@ -346,7 +346,7 @@ $ github_user='<my-github-username>'
 $ git push "$github_user" my-new-cask
 ```
 
-If you are using [GitHub two-factor authentication](https://github.com/blog/1614-two-factor-authentication
+If you are using [GitHub two-factor authentication](https://github.com/blog/1614-two-factor-authentication)
 and set your remote repository as HTTPS you will need to set up
 a personal access token and use that instead your password.
 See more on https://help.github.com/articles/https-cloning-errors#provide-access-token-if-2fa-enabled
