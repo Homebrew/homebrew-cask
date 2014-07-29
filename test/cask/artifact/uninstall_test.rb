@@ -60,6 +60,16 @@ describe Cask::Artifact::Uninstall do
         ].join("\n")
       )
       Cask::FakeSystemCommand.stubs_command(
+        ['/usr/sbin/pkgutil', '--files', 'my.fancy.package.main'],
+        [
+          'fancy',
+          'fancy/bin',
+          'fancy/var',
+          'fancy/bin/fancy.exe',
+          'fancy/var/fancy.data',
+        ].join("\n")
+      )
+      Cask::FakeSystemCommand.stubs_command(
         ['/usr/sbin/pkgutil', '--pkg-info-plist', 'my.fancy.package.main'],
         <<-PLIST
 <?xml version="1.0" encoding="UTF-8"?>
@@ -125,6 +135,16 @@ describe Cask::Artifact::Uninstall do
         [
           'fancy',
           'fancy/agent',
+        ].join("\n")
+      )
+      Cask::FakeSystemCommand.stubs_command(
+        ['/usr/sbin/pkgutil', '--files', 'my.fancy.package.agent'],
+        [
+          'fancy',
+          'fancy/agent',
+          'fancy/agent/fancy-agent.exe',
+          'fancy/agent/fancy-agent.pid',
+          'fancy/agent/fancy-agent.log',
         ].join("\n")
       )
       Cask::FakeSystemCommand.stubs_command(
