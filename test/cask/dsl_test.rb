@@ -198,6 +198,19 @@ describe Cask::DSL do
     end
   end
 
+  describe "conflicts_with stanza" do
+    it "allows conflicts_with stanza to be specified" do
+      cask = Cask.load('with-conflicts-with')
+      cask.conflicts_with.formula.wont_be_nil
+    end
+
+    it "refuses to load invalid conflicts_with key" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-conflicts-with-key')
+      }.must_raise(CaskInvalidError)
+    end
+  end
+
   describe "license stanza" do
     it "allows the license to be specified" do
       cask = Cask.load('with-license')
