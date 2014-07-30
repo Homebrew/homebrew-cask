@@ -7,4 +7,5 @@ class Gitx < Cask
   homepage 'http://gitx.frim.nl/'
 
   link 'GitX.app'
+  binary 'GitX.app/Contents/Resources/gitx'
 end
