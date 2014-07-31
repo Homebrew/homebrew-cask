@@ -45,7 +45,7 @@ class Cask::Container
     odebug "Determining which containers to use based on 'container_type'"
     containers.find do |c|
       odebug "Checking container class #{c}"
-      c.to_s == "Cask::Container::#{type.to_s.capitalize}"
+      c.to_s == "Cask::Container::#{type.to_s.split('_').map(&:capitalize).join}"
     end
   end
 end
