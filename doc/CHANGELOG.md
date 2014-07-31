@@ -1,5 +1,32 @@
 # CHANGELOG
 
+## 0.38.1
+
+* __Casks__
+ - 19 Casks added (21 updated) by 35 contributors since 0.38.0
+ - 1755 total Casks
+* __Features__
+ - none
+* __Fixes__
+ - [#5590][] fix Formula dependencies by invoking Homebrew CLI
+ - [#5579][] bug: use `install_phase` in `caskroom_only` / `qlplugin`
+ - [#5569][] DSL: add `conflicts_with` stanza (bugfix of DSL 1.0, forgotten from #4688)
+ - [#5555][] Delete special files (eg symlinks) from pkg BOMs
+ - [#5548][] Give users hint that `pkg` installs work differently
+ - [#5544][] add another special case for odd SourceForge URL
+* __Documentation__
+ - 3 doc commits since 0.38.0 <3 [@fapper][]
+* __Breaking Changes__
+ - none
+
+[#5590]: https://github.com/caskroom/homebrew-cask/issues/5590
+[#5579]: https://github.com/caskroom/homebrew-cask/issues/5579
+[#5569]: https://github.com/caskroom/homebrew-cask/issues/5569
+[#5555]: https://github.com/caskroom/homebrew-cask/issues/5555
+[#5548]: https://github.com/caskroom/homebrew-cask/issues/5548
+[#5544]: https://github.com/caskroom/homebrew-cask/issues/5544
+[@fapper]: https://github.com/fapper
+
 ## 0.38.0
 
 * __Casks__
