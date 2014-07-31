@@ -1,4 +1,4 @@
-class MessengerForTelegram < Cask
+class Telegram < Cask
   version 'latest'
   sha256 :no_check
 
