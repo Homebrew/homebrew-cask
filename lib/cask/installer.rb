@@ -1,6 +1,4 @@
 require 'digest'
-require 'dependency_collector'
-require 'formula_installer'
 
 class Cask::Installer
   def initialize(cask, command=Cask::SystemCommand)
@@ -89,20 +87,16 @@ class Cask::Installer
     unless @cask.depends_on_formula.empty?
       ohai 'Installing Formula dependencies from Homebrew'
       @cask.depends_on_formula.each do |dep_name|
-        dependency_collector = DependencyCollector.new
-        dep = dependency_collector.add(dep_name)
-        unless dep.installed?
-          dep_tab = Tab.for_formula(dep.to_formula)
-          dep_options = dep.options
-          dep = dep.to_formula
-          fi = FormulaInstaller.new(dep)
-          fi.tab = dep_tab
-          fi.options = dep_options
-          fi.ignore_deps = false
-          fi.show_header = true
-          fi.install
-          fi.caveats
-          fi.finish
+        print "#{dep_name} ... "
+        installed = @command.run(HOMEBREW_BREW_FILE,
+                                 :args => ['list', '--versions', dep_name],
+                                 :stderr => :silence).include?(dep_name)
+        if installed
+          puts "already installed"
+        else
+          @command.run!(HOMEBREW_BREW_FILE,
+                        :args => ['install', dep_name])
+          puts "done"
         end
       end
     end
