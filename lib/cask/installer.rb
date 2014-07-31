@@ -125,7 +125,16 @@ class Cask::Installer
   def purge_files
     odebug "Purging files"
     if @cask.destination_path.exist?
-      @cask.destination_path.rmtree
+      begin
+        @cask.destination_path.rmtree
+      rescue
+        # in case of permissions problems
+        if @cask.destination_path.exist?
+          @command.run('/bin/chmod', :args => ['-R', '--', 'u+rwx', @cask.destination_path])
+          @command.run('/bin/chmod', :args => ['-R', '-N',          @cask.destination_path])
+          @cask.destination_path.rmtree
+        end
+      end
     end
     @cask.caskroom_path.rmdir_if_possible
   end
