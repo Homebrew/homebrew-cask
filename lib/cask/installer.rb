@@ -1,5 +1,3 @@
-require 'digest'
-
 class Cask::Installer
   def initialize(cask, command=Cask::SystemCommand)
     @cask = cask
