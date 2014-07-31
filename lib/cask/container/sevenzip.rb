@@ -1,4 +1,4 @@
-class Cask::Container::SevenZip < Cask::Container::UnarBase
+class Cask::Container::SevenZip < Cask::Container::GenericUnar
   def self.me?(criteria)
     # todo: cover self-extracting archives
     criteria.extension '7z' and

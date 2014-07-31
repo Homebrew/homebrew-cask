@@ -1,6 +1,6 @@
 require 'tmpdir'
 
-class Cask::Container::UnarBase < Cask::Container::Base
+class Cask::Container::GenericUnar < Cask::Container::Base
   def self.me?(criteria)
     ! criteria.lsar.nil? and
       criteria.lsar.include? 'passed, 0 failed'
