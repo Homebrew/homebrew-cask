@@ -1,3 +1,5 @@
+require 'digest'
+
 class Cask::Download
   attr_reader :cask
 
