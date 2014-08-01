@@ -6,4 +6,5 @@ class Typinator < Cask
   homepage 'http://www.ergonis.com/'
 
   link 'Typinator.app'
+  caveats { assistive_devices }
 end
