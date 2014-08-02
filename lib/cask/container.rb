@@ -19,7 +19,7 @@ require 'cask/container/rar'
 require 'cask/container/zip'
 
 class Cask::Container
-  def self.containers
+  def self.autodetect_containers
     [
       Cask::Container::Pkg,
       Cask::Container::Ttf,
@@ -35,12 +35,15 @@ class Cask::Container
       Cask::Container::Bzip2,
       Cask::Container::Gzip,    # pure gzip, not tar/gzip
     ]
+    # for explicit use only (never autodetected):
+    # Cask::Container::Naked
+    # Cask::Container::GenericUnar
   end
 
   def self.for_path(path, command)
     odebug "Determining which containers to use based on filetype"
     criteria = Cask::Container::Criteria.new(path, command)
-    containers.find do |c|
+    autodetect_containers.find do |c|
       odebug "Checking container class #{c}"
       c.me?(criteria)
     end
