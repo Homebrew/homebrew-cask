@@ -9,15 +9,21 @@ require 'cask/container/dmg'
 require 'cask/container/generic_unar'
 require 'cask/container/gzip'
 require 'cask/container/naked'
+require 'cask/container/otf'
+require 'cask/container/pkg'
 require 'cask/container/sevenzip'
 require 'cask/container/sit'
 require 'cask/container/tar'
+require 'cask/container/ttf'
 require 'cask/container/rar'
 require 'cask/container/zip'
 
 class Cask::Container
   def self.containers
     [
+      Cask::Container::Pkg,
+      Cask::Container::Ttf,
+      Cask::Container::Otf,
       Cask::Container::Air,
       Cask::Container::Cab,
       Cask::Container::Dmg,
@@ -28,7 +34,6 @@ class Cask::Container
       Cask::Container::Zip,
       Cask::Container::Bzip2,
       Cask::Container::Gzip,    # pure gzip, not tar/gzip
-      Cask::Container::Naked,
     ]
   end
 
