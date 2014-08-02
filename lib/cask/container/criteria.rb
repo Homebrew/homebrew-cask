@@ -43,9 +43,7 @@ class Cask::Container::Criteria
   end
 
   def extension(test)
-    %r{\.([^\.]+)$}.match(path) do |ext|
-      ext.captures.first.casecmp(test) == 0
-    end
+    path.extname.sub(%r{\A\.}, '').downcase == test.downcase
   end
 
   def magic_number(num, test)
