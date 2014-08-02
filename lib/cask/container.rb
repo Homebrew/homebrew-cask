@@ -43,9 +43,10 @@ class Cask::Container
 
   def self.from_type(type)
     odebug "Determining which containers to use based on 'container_type'"
-    containers.find do |c|
-      odebug "Checking container class #{c}"
-      c.to_s == "Cask::Container::#{type.to_s.split('_').map(&:capitalize).join}"
+    begin
+      Cask::Container.const_get(type.to_s.split('_').map(&:capitalize).join)
+    rescue NameError
+      false
     end
   end
 end
