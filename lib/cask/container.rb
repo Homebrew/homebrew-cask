@@ -23,7 +23,7 @@ class Cask::Container
       Cask::Container::Dmg,
       Cask::Container::SevenZip,
       Cask::Container::Sit,
-      Cask::Container::Tar,
+      Cask::Container::Tar,     # or compressed tar
       Cask::Container::Rar,
       Cask::Container::Zip,
       Cask::Container::Bzip2,
