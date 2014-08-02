@@ -102,7 +102,7 @@ module Cask::Utils
 
     if $stdout.tty?
       # determine the best width to display for different console sizes
-      console_width = `/bin/stty size`.chomp.split(" ").last.to_i
+      console_width = Cask::SystemCommand.run("/bin/stty", :args => ["size"]).chomp.split(" ").last.to_i
       console_width = 80 if console_width <= 0
     else
       console_width = 80
