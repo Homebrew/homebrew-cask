@@ -1,6 +1,6 @@
 class Ghc < Cask
-  version '7.8.3-r0'
-  sha256 '9123e9dd84e9957f47f2b80d642e9e100d2b5f6d8ac3e10615b153e91ca50d47'
+  version '7.8.3-r1'
+  sha256 '4f48e373f3fa682c8c29e2128038c040e69d7852a8529173f53105027199c21c'
 
   url "https://github.com/ghcformacosx/ghc-dot-app/releases/download/v#{version}/ghc-#{version}.zip"
   homepage 'http://ghcformacosx.github.io/'
