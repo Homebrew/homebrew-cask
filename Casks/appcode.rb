@@ -6,4 +6,12 @@ class Appcode < Cask
   homepage 'http://www.jetbrains.com/objc/'
 
   link 'AppCode.app'
+  after_install do
+    java_ver = "1.6*"
+    if (!File.exists?("/System/Library/Java/JavaVirtualMachines/1.6.0.jdk") and !Dir.glob('/Library/Java/JavaVirtualMachines/jdk1.8.0_*.jdk').empty?)
+      java_ver = "1.8*"
+    end
+
+    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion #{java_ver}", "#{destination_path}/AppCode.app/Contents/Info.plist"
+  end
 end
