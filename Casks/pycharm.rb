@@ -6,4 +6,8 @@ class Pycharm < Cask
   homepage 'http://www.jetbrains.com/pycharm/'
 
   link 'PyCharm.app'
+
+  after_install do
+    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/PyCharm.app/Contents/Info.plist"
+  end
 end

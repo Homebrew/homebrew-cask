@@ -6,4 +6,8 @@ class Webstorm < Cask
   homepage 'http://www.jetbrains.com/webstorm/'
 
   link 'WebStorm.app'
+
+  after_install do
+    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/WebStorm.app/Contents/Info.plist"
+  end
 end
