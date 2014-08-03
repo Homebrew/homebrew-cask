@@ -1,8 +1,8 @@
 class Java < Cask
-  version '1.8.0_11'
-  sha256 'baae540ea2c6a3f4dc1d1f49518caf9af9eb08a3f78c080701c6767545acb06e'
+  version '1.8.0_20'
+  sha256 'babc5e77c693dbdb70bcf45df267bede1b3f6c1539b1417dbd9dce86d0e159bd'
 
-  url 'http://download.oracle.com/otn-pub/java/jdk/8u11-b12/jdk-8u11-macosx-x64.dmg',
+  url 'http://download.java.net/jdk8u20/archive/b22/binaries/jdk-8u20-ea-bin-b22-macosx-x86_64-08_jul_2014.dmg?q=download/jdk8u20/archive/b22/binaries/jdk-8u20-ea-bin-b22-macosx-x86_64-08_jul_2014.dmg',
       :cookies => {
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
