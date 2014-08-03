@@ -1,9 +1,9 @@
 # encoding: UTF-8
 class Baiduinput < Cask
-  version '3.2_1000e'
-  sha256 'a8599116bb9248a06b7a26f7be73061cb00263263fe685cb0b7c6c99fce6cf56'
+  version '3.3_1000e'
+  sha256 '57d50c7991e0d833ed5b34297168745590074d838f6948469dbaf8b92a84e082'
 
-  url 'http://wuxian.baidu.com/download/1000e/baiduinput_mac_v3.2_1000e.dmg'
+  url "http://wuxian.baidu.com/download/1000e/baiduinput_mac_v#{version}.dmg"
   homepage 'http://wuxian.baidu.com/input/mac.html'
 
   install '安装百度输入法.pkg'
