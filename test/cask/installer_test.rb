@@ -83,6 +83,19 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
+    it "works with xar-based casks" do
+      xar_container = Cask.load('xar-container')
+
+      shutup do
+        Cask::Installer.new(xar_container).install
+      end
+
+      dest_path = Cask.caskroom/'xar-container'/xar_container.version
+      dest_path.must_be :directory?
+      application = dest_path/'xarcontainer/Application.app'
+      application.must_be :directory?
+    end
+
     it "works with Stuffit-based Casks" do
       skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
       stuffit_container = Cask.load('stuffit-container')

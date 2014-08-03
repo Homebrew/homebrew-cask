@@ -97,7 +97,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `after_uninstall`    | yes                           | a Ruby block containing postflight uninstall operations
 | `before_install`     | yes                           | a Ruby block containing preflight install operations (needed only in very rare cases)
 | `before_uninstall`   | yes                           | a Ruby block containing preflight uninstall operations (needed only in very rare cases)
-| `container_type`     | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:zip`, `:naked`
+| `container_type`     | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`
 
 
 ## Legacy Stanzas

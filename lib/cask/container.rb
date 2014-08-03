@@ -16,6 +16,7 @@ require 'cask/container/sit'
 require 'cask/container/tar'
 require 'cask/container/ttf'
 require 'cask/container/rar'
+require 'cask/container/xar'
 require 'cask/container/zip'
 
 class Cask::Container
@@ -34,6 +35,7 @@ class Cask::Container
       Cask::Container::Zip,
       Cask::Container::Bzip2,
       Cask::Container::Gzip,    # pure gzip, not tar/gzip
+      Cask::Container::Xar,
     ]
     # for explicit use only (never autodetected):
     # Cask::Container::Naked
