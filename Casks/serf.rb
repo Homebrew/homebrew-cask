@@ -1,7 +1,9 @@
 class Serf < Cask
-  url 'https://dl.bintray.com/mitchellh/serf/0.5.0_darwin_amd64.zip'
+  version '0.6.3'
+  sha256 'c406463486282ae9c6dc974a5d8688b8908a1fb6af46a2c1aca3785c16ac590b'
+
+  url 'https://dl.bintray.com/mitchellh/serf/0.6.3_darwin_amd64.zip'
   homepage 'http://www.serfdom.io/'
-  version '0.5.0'
-  sha256 'af445fbb4423da533ccee4c7c9bb4e0438339dbe65b3226d93af88065ecda0d0'
+
   binary 'serf'
 end

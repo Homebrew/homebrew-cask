@@ -1,7 +1,9 @@
 class Textmate < Cask
-  url 'http://api.textmate.org/downloads/release'
-  homepage 'http://macromates.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'https://api.textmate.org/downloads/release'
+  homepage 'http://macromates.com/'
+
   link 'TextMate.app'
 end

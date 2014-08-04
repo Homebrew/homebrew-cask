@@ -1,7 +1,11 @@
 class Atmonitor < Cask
-  url 'http://download.atpurpose.com/atMonitor/atMonitor.zip'
-  homepage 'http://www.atpurpose.com/atMonitor/'
   version 'latest'
-  no_checksum
+  sha256 :no_check  
+
+  url 'http://download.atpurpose.com/atMonitor/atMonitor.zip'
+  # todo: no response
+  # appcast 'http://support.atPurpose.com/atMonitor/updates.xml'
+  homepage 'http://www.atpurpose.com/atMonitor/'
+
   link 'atMonitor.app'
 end

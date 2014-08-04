@@ -1,7 +1,10 @@
 class Iupx < Cask
-  url 'http://sourceforge.net/projects/iupx/files/latest/download'
-  homepage 'http://iupx.sourceforge.net'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'https://sourceforge.net/projects/iupx/files/latest/download'
+  appcast 'http://iupx.sourceforge.net/updates/appcast.xml'
+  homepage 'http://iupx.sourceforge.net'
+
   link 'iUPX.app'
 end

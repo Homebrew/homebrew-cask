@@ -1,7 +1,10 @@
 class AudioEditor < Cask
-  url 'http://www.macsome.com/AudioEditor.dmg'
-  homepage 'http://www.macsome.com/audio-editor-mac/index.html'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://www.macsome.com/AudioEditor.dmg'
+  appcast 'http://www.macsome.com/audio-editor-mac/su_feed.xml'
+  homepage 'http://www.macsome.com/audio-editor-mac/index.html'
+
   link 'Audio Editor.app'
 end

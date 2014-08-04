@@ -1,8 +1,11 @@
 class Anxiety < Cask
-  url 'http://www.anxietyapp.com/Anxiety.zip'
-  homepage 'http://www.anxietyapp.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://www.anxietyapp.com/Anxiety.zip'
+  appcast 'http://www.anxietyapp.com/appcast/appcast.xml'
+  homepage 'http://www.anxietyapp.com/'
+
   nested_container 'Anxiety.dmg'
   link 'Anxiety.app'
 end

@@ -1,7 +1,10 @@
 class LingonX < Cask
-  url 'http://www.peterborgapps.com/downloads/LingonX.zip'
-  homepage 'http://www.peterborgapps.com/lingon/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://www.peterborgapps.com/downloads/LingonX.zip'
+  appcast 'http://www.peterborgapps.com/updates/lingonx-appcast.xml'
+  homepage 'http://www.peterborgapps.com/lingon/'
+
   link 'Lingon X.app'
 end

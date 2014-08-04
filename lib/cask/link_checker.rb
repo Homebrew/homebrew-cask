@@ -36,7 +36,7 @@ class Cask::LinkChecker
   def _check_response_status
     ok = OK_RESPONSES[cask.url.scheme]
     unless ok.include?(@response_status)
-      add_error "unexpected http response, expecting #{ok.map(&:inspect).join(' or ')}, got #{@response_status.inspect}"
+      add_error "unexpected http response, expecting #{ok.map(&:utf8_inspect).join(' or ')}, got #{@response_status.utf8_inspect}"
     end
   end
 
@@ -52,13 +52,16 @@ class Cask::LinkChecker
 
     case cask.url.scheme
     when 'http', 'https' then
-      @response_status = response_lines.grep(/^HTTP/).last.strip
-      unless response_lines.index(@response_status).nil?
-        http_headers = response_lines[(response_lines.index(@response_status)+1)..-1]
-        http_headers.each { |line|
-          header_name, header_value = line.split(': ')
-          @headers[header_name] = header_value
-        }
+      @response_status = response_lines.grep(/^HTTP/).last
+      if @response_status.respond_to?(:strip)
+        @response_status.strip!
+        unless response_lines.index(@response_status).nil?
+          http_headers = response_lines[(response_lines.index(@response_status)+1)..-1]
+          http_headers.each { |line|
+            header_name, header_value = line.split(': ')
+            @headers[header_name] = header_value
+          }
+        end
       end
     when 'ftp' then
       @response_status = 'OK'

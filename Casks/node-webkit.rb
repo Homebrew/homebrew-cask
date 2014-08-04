@@ -1,7 +1,9 @@
 class NodeWebkit < Cask
-  url 'http://dl.node-webkit.org/v0.9.2/node-webkit-v0.9.2-osx-ia32.zip'
+  version '0.10.1'
+  sha256 '8842b014d4c1719dbdbb4a6d5f5172c77375b068c44720f5b7166d7acbdeaf2a'
+
+  url "http://dl.node-webkit.org/v#{version}/node-webkit-v#{version}-osx-x64.zip"
   homepage 'https://github.com/rogerwang/node-webkit'
-  version '0.9.2'
-  sha256 '2133f498d2607e02a1af1b1988fb191ed0467a268afffabbeb3b99ee62384407'
-  link 'node-webkit.app'
+
+  caskroom_only true
 end

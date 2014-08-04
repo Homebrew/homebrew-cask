@@ -1,7 +1,10 @@
 class Jing < Cask
-  url 'http://download.techsmith.com/jing/mac/jing.dmg'
-  homepage 'http://www.techsmith.com/jing.html'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://download.techsmith.com/jing/mac/jing.dmg'
+  appcast 'http://www.techsmith.com/redirect.asp?product=jing&ver=2.0.0&lang=enu&target=SparkleAppcast'
+  homepage 'http://www.techsmith.com/jing.html'
+
   link 'Jing.app'
 end

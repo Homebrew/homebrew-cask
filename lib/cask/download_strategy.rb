@@ -17,7 +17,7 @@ module Cask::DownloadStrategy
       cask.title,
       ::Resource.new(cask.title) do |r|
         r.url     cask.url.to_s
-        r.version cask.version
+        r.version cask.version.to_s
       end
     )
   end
@@ -28,7 +28,7 @@ class Cask::CurlDownloadStrategy < CurlDownloadStrategy
   include Cask::DownloadStrategy
 
   def _fetch
-    odebug "Calling curl with args #{curl_args.inspect}"
+    odebug "Calling curl with args #{curl_args.utf8_inspect}"
     curl(*curl_args)
   end
 

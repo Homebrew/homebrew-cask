@@ -1,3 +1,5 @@
+require 'digest'
+
 class Cask::Download
   attr_reader :cask
 
@@ -16,7 +18,11 @@ class Cask::Download
       downloader = Cask::CurlDownloadStrategy.new(cask)
     end
     downloader.clear_cache if force
-    downloaded_path = downloader.fetch
+    begin
+      downloaded_path = downloader.fetch
+    rescue StandardError => e
+      raise CaskError.new("Download failed on Cask '#{@cask}' with message: #{e}")
+    end
     begin
       # this symlink helps track which downloads are ours
       File.symlink downloaded_path,
@@ -36,6 +42,7 @@ class Cask::Download
         if sum == computed
           odebug "Checksums match"
         else
+          ohai 'Note: running "brew update" may fix checksum errors'
           raise ChecksumMismatchError.new(path, sum, computed)
         end
         has_sum = true

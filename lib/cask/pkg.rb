@@ -241,11 +241,15 @@ class Cask::Pkg
 
   def uninstall
     odebug "Deleting pkg files"
-    list('files').each_slice(500) do |file_slice|
+    pkgutil_bom_files.each_slice(500) do |file_slice|
+      @command.run('/bin/rm', :args => file_slice.unshift('-f', '--'), :sudo => true)
+    end
+    odebug "Deleting pkg symlinks and special files"
+    pkgutil_bom_specials.each_slice(500) do |file_slice|
       @command.run('/bin/rm', :args => file_slice.unshift('-f', '--'), :sudo => true)
     end
     odebug "Deleting pkg directories"
-    _deepest_path_first(list('dirs')).each do |dir|
+    _deepest_path_first(pkgutil_bom_dirs).each do |dir|
       if dir.exist? and !SYSTEM_DIRS.include?(dir)
         _with_full_permissions(dir) do
           _clean_broken_symlinks(dir)
@@ -262,10 +266,26 @@ class Cask::Pkg
     @command.run!('/usr/sbin/pkgutil', :args => ['--forget', package_id], :sudo => true)
   end
 
-  def list(type)
+  def pkgutil_bom_files
     @command.run!('/usr/sbin/pkgutil',
-      :args => ["--only-#{type}", '--files', package_id]
+      :args => ['--only-files', '--files', package_id]
     ).split("\n").map { |path| root.join(path) }
+  end
+
+  def pkgutil_bom_dirs
+    @command.run!('/usr/sbin/pkgutil',
+      :args => ['--only-dirs', '--files', package_id]
+    ).split("\n").map { |path| root.join(path) }
+  end
+
+  def pkgutil_bom_all
+    @command.run!('/usr/sbin/pkgutil',
+      :args => ['--files', package_id]
+    ).split("\n").map { |path| root.join(path) }
+  end
+
+  def pkgutil_bom_specials
+    pkgutil_bom_all - pkgutil_bom_files - pkgutil_bom_dirs
   end
 
   def root

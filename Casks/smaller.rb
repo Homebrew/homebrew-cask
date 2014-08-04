@@ -1,7 +1,10 @@
 class Smaller < Cask
-  url 'http://smallerapp.com/download/Smaller.zip'
-  homepage 'http://smallerapp.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://smallerapp.com/download/Smaller.zip'
+  appcast 'http://smallerapp.com/up/updates.xml'
+  homepage 'http://smallerapp.com/'
+
   link 'Smaller.app'
 end

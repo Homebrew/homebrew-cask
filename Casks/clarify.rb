@@ -1,7 +1,9 @@
 class Clarify < Cask
-  url 'http://www.bluemangolearning.com/download/clarify/1_0/release/clarify.dmg'
-  homepage 'http://www.clarify-it.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://www.clarify-it.com/download/mac/Clarify.dmg'
+  homepage 'http://www.clarify-it.com/'
+
   link 'Clarify.app'
 end

@@ -1,4 +1,4 @@
-class Cask::CLI::List
+class Cask::CLI::List < Cask::CLI::Base
   def self.run(*arguments)
     if arguments.any?
       retval = list_casks(*arguments)
@@ -6,7 +6,9 @@ class Cask::CLI::List
       retval = list_installed
     end
     # retval is ternary: true/false/nil
-    if retval.nil?
+    if retval.nil? and not arguments.any?
+      opoo "nothing to list"  # special case: avoid exit code
+    elsif retval.nil?
       raise CaskError.new("nothing to list")
     elsif ! retval
       raise CaskError.new("listing incomplete")
@@ -43,9 +45,10 @@ class Cask::CLI::List
   end
 
   def self.list_installed
-    columns = Cask.installed.map(&:to_s)
+    installed_casks = Cask.installed
+    columns = installed_casks.map(&:to_s)
     puts_columns columns
-    columns.empty? ? nil : Cask.installed.length == columns.length
+    columns.empty? ? nil : installed_casks.length == columns.length
   end
 
   def self.help

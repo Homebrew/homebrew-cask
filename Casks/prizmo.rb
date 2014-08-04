@@ -1,7 +1,10 @@
 class Prizmo < Cask
-  url 'http://www.creaceed.com/downloads/prizmo2.zip'
-  homepage 'http://www.creaceed.com/prizmo'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://www.creaceed.com/downloads/prizmo2.zip'
+  appcast 'http://www.creaceed.com/appcasts/prizmo2.xml'
+  homepage 'http://www.creaceed.com/prizmo'
+
   link 'Prizmo.app'
 end

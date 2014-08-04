@@ -12,7 +12,7 @@ describe Cask::Artifact::App do
 
   it "links the binary to the proper directory" do
     shutup do
-      Cask::Artifact::Binary.new(cask).install
+      Cask::Artifact::Binary.new(cask).install_phase
     end
 
     TestHelper.valid_alias?(expected_path).must_equal true
@@ -22,7 +22,7 @@ describe Cask::Artifact::App do
     FileUtils.touch expected_path
 
     shutup do
-      Cask::Artifact::Binary.new(cask).install
+      Cask::Artifact::Binary.new(cask).install_phase
     end
 
     expected_path.wont_be :symlink?
@@ -32,7 +32,7 @@ describe Cask::Artifact::App do
     expected_path.make_symlink('/tmp')
 
     shutup do
-      Cask::Artifact::Binary.new(cask).install
+      Cask::Artifact::Binary.new(cask).install_phase
     end
 
     File.readlink(expected_path).wont_equal '/tmp'
@@ -42,7 +42,7 @@ describe Cask::Artifact::App do
     Cask.no_binaries = true
 
     shutup do
-      Cask::Artifact::Binary.new(cask).install
+      Cask::Artifact::Binary.new(cask).install_phase
     end
 
     expected_path.exist?.must_equal false

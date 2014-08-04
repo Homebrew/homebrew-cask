@@ -3,24 +3,31 @@ require 'open3'
 class Cask::SystemCommand
   def self.run(executable, options={})
     command = _process_options(executable, options)
-    odebug "Executing: #{command.inspect}"
+    odebug "Executing: #{command.utf8_inspect}"
     output = ''
-    Open3.popen3(*command) do |stdin, stdout, stderr|
-      if options[:input]
-        options[:input].each { |line| stdin.puts line }
-      end
-      stdin.close_write
-      while line = stdout.gets
-        output << line
-        ohai line.chomp if options[:print]
-      end
-      while line = stderr.gets
-        next if options[:stderr] == :silence
-        output << line
-        ohai line.chomp if options[:print]
-      end
+    exit_status = nil
+
+    ext_stdin, ext_stdout, ext_stderr, wait_thr = Open3.popen3(*command)
+    if options[:input]
+      options[:input].each { |line| ext_stdin.puts line }
     end
-    _assert_success($?, command, output) if options[:must_succeed]
+    ext_stdin.close_write
+    while line = ext_stdout.gets
+      output << line
+      ohai line.chomp if options[:print]
+    end
+    while line = ext_stderr.gets
+      next if options[:stderr] == :silence
+      output << line
+      ohai line.chomp if options[:print]
+    end
+    ext_stdout.close_read
+    ext_stderr.close_read
+
+    # Ruby 1.8 sets $?. Ruby 1.9+ has wait_thr, and does not set $?.
+    exit_status = wait_thr.nil? ? $? : wait_thr.value
+
+    _assert_success(exit_status, command, output) if options[:must_succeed]
     if options[:plist]
       _parse_plist(command, output)
     else
@@ -34,7 +41,6 @@ class Cask::SystemCommand
 
   def self._process_options(executable, options)
     options.assert_valid_keys :input, :print, :stderr, :args, :must_succeed, :sudo, :plist
-    # would probably be better to change :stderr to boolean :silence_stderr
     if options[:stderr] and options[:stderr] != :silence
       raise CaskError.new "Unknown value #{options[:stderr]} for key :stderr"
     end
@@ -50,19 +56,44 @@ class Cask::SystemCommand
   end
 
   def self._assert_success(status, command, output)
-    unless status.success?
-      raise CaskCommandFailedError.new(command.inspect, output)
+    unless status and status.success?
+      raise CaskCommandFailedError.new(command.utf8_inspect, output, status)
     end
+  end
+
+  def self._warn_plist_garbage(command, garbage)
+    return true unless garbage =~ %r{\S}
+    external = File.basename(command.first)
+    lines = garbage.strip.split("\n")
+    opoo "Non-XML output from #{external}:"
+    STDERR.puts lines.map {|l| "    #{l}"}
   end
 
   def self._parse_plist(command, output)
     begin
-      Plist::parse_xml(output)
-    rescue Plist::ParseError
+      raise CaskError.new("Empty plist input") unless output =~ %r{\S}
+      output.sub!(%r{\A(.*?)(<\?\s*xml)}m, '\2')
+      _warn_plist_garbage(command, $1) if Cask.debug
+      output.sub!(%r{(<\s*/\s*plist\s*>)(.*?)\Z}m, '\1')
+      _warn_plist_garbage(command, $2)
+      xml = Plist::parse_xml(output)
+      unless xml.respond_to?(:keys) and xml.keys.size > 0
+        raise CaskError.new(<<-ERRMSG)
+Empty result parsing plist output from command.
+  command was:
+  #{command.utf8_inspect}
+  output we attempted to parse:
+  #{output}
+        ERRMSG
+      end
+      xml
+    rescue Plist::ParseError => e
       raise CaskError.new(<<-ERRMSG)
 Error parsing plist output from command.
   command was:
-  #{command.inspect}
+  #{command.utf8_inspect}
+  error was:
+  #{e}
   output we attempted to parse:
   #{output}
         ERRMSG

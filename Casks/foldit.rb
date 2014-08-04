@@ -1,7 +1,9 @@
 class Foldit < Cask
-  url 'http://fold.it/portal/download/osx'
-  homepage 'http://fold.it'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'https://fold.it/portal/download/osx'
+  homepage 'http://fold.it'
+
   link 'FoldIt.app'
 end

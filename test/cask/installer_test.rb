@@ -83,6 +83,19 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
+    it "works with xar-based casks" do
+      xar_container = Cask.load('xar-container')
+
+      shutup do
+        Cask::Installer.new(xar_container).install
+      end
+
+      dest_path = Cask.caskroom/'xar-container'/xar_container.version
+      dest_path.must_be :directory?
+      application = dest_path/'xarcontainer/Application.app'
+      application.must_be :directory?
+    end
+
     it "works with Stuffit-based Casks" do
       skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
       stuffit_container = Cask.load('stuffit-container')
@@ -123,6 +136,19 @@ describe Cask::Installer do
       dest_path = Cask.caskroom/'bzipped-asset'/asset.version
       dest_path.must_be :directory?
       file = dest_path/"bzipped-asset-#{asset.version}"
+      file.must_be :file?
+    end
+
+    it "works with pure gz-based casks" do
+      asset = Cask.load('gzipped-asset')
+
+      shutup do
+        Cask::Installer.new(asset).install
+      end
+
+      dest_path = Cask.caskroom/'gzipped-asset'/asset.version
+      dest_path.must_be :directory?
+      file = dest_path/"gzipped-asset-#{asset.version}"
       file.must_be :file?
     end
 
@@ -168,18 +194,19 @@ describe Cask::Installer do
       with_macosx_dir.destination_path.join('__MACOSX').wont_be :directory?
     end
 
-    it "prevents already installed casks from being installed" do
+    # unlike the CLI, the internal interface throws exception on double-install
+    it "installer method raises an exception when already-installed casks are attempted" do
       transmission = Cask.load('local-transmission')
       transmission.installed?.must_equal false
       installer = Cask::Installer.new(transmission)
 
       shutup { installer.install }
       lambda {
-        shutup { installer.install }
+        installer.install
       }.must_raise(CaskAlreadyInstalledError)
     end
 
-    it "allows already installed casks to being installed if force is provided" do
+    it "allows already-installed casks to be installed if force is provided" do
       transmission = Cask.load('local-transmission')
       transmission.installed?.must_equal false
       installer = Cask::Installer.new(transmission)

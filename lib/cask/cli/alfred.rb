@@ -1,4 +1,4 @@
-class Cask::CLI::Alfred
+class Cask::CLI::Alfred < Cask::CLI::Base
   DEFAULT_SCOPES = [
     '/Applications',
     '/Applications/Xcode.app/Contents/Applications',

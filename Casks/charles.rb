@@ -1,7 +1,9 @@
 class Charles < Cask
-  url 'http://www.charlesproxy.com/assets/release/3.8.3/charles-proxy-3.8.3-applejava.dmg'
+  version '3.9.2'
+  sha256 '89b017744181ccec18e8a5ff67b9728a2d2ded5de0620a100a98c8686d867b7b'
+
+  url 'http://www.charlesproxy.com/assets/release/3.9.2/charles-proxy-3.9.2-applejava.dmg'
   homepage 'http://www.charlesproxy.com/'
-  version '3.8.3'
-  sha256 '2c1b2d9b5085c34d95d580fec4575bbd0ff183eb1b323b7f260745f91e109083'
+
   link 'Charles.app'
 end

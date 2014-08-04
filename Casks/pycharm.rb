@@ -1,7 +1,13 @@
 class Pycharm < Cask
-  url 'http://download.jetbrains.com/python/pycharm-professional-3.1.2.dmg'
+  version '3.4.1'
+  sha256 'f2af3859b0376927f591d5eac3b8d2c8196d712af811f27cc269965a03324a78'
+
+  url "http://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
   homepage 'http://www.jetbrains.com/pycharm/'
-  version '3.1.2'
-  sha256 '41837e19f95fecba3fd9158290f7eab251fb162bdeaf729e14f49718d7d363ae'
+
   link 'PyCharm.app'
+
+  after_install do
+    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/PyCharm.app/Contents/Info.plist"
+  end
 end

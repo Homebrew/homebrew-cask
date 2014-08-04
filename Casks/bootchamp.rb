@@ -1,7 +1,10 @@
 class Bootchamp < Cask
-  url 'http://www.kainjow.com/downloads/BootChamp.zip'
-  homepage 'http://www.kainjow.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://www.kainjow.com/downloads/BootChamp.zip'
+  appcast 'http://kainjow.com/updates/bootchamp.xml'
+  homepage 'http://www.kainjow.com/'
+
   link 'BootChamp.app'
 end

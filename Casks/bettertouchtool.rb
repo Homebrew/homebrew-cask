@@ -1,7 +1,10 @@
 class Bettertouchtool < Cask
-  url 'http://www.boastr.de/BetterTouchTool.zip'
-  homepage 'http://blog.boastr.net/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://www.boastr.de/BetterTouchTool.zip'
+  appcast 'http://appcast.boastr.net'
+  homepage 'http://blog.boastr.net/'
+
   link 'BetterTouchTool.app'
 end

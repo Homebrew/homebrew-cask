@@ -1,7 +1,9 @@
 class Armory < Cask
-  url 'https://s3.amazonaws.com/bitcoinarmory-releases/armory_0.91-beta_osx.tar.gz'
+  version '0.92.1'
+  sha256 '75d6b7566d6c40a93f7dcf995dfb778b577d0b4698cc52d1ecea8f6fadfdf460'
+
+  url 'https://s3.amazonaws.com/bitcoinarmory-releases/armory_0.92.1_osx.tar.gz'
   homepage 'https://bitcoinarmory.com/'
-  version '0.91-beta'
-  sha256 'ff93bb120d5065d5ffd157ca53bc78c1cff3d908d8d0100090c03845bb1c1990'
+
   link 'Armory.app'
 end

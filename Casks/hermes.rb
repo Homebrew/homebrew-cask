@@ -1,7 +1,10 @@
 class Hermes < Cask
-  url 'https://s3.amazonaws.com/alexcrichton-hermes/Hermes-1.2.0.zip'
+  version '1.2.2'
+  sha256 'f03963ce4fdb8461c269882080beebc56101158bce13e13d3f1adce8b20fd5d2'
+
+  url "https://s3.amazonaws.com/alexcrichton-hermes/Hermes-#{version}.zip"
+  appcast 'http://hermesapp.org/versions.xml'
   homepage 'http://hermesapp.org/'
-  version '1.2.0'
-  sha256 'ac1412575c0fe1a72a69761b711e9ffe7fb6972661c1501e1cec83bb9078b035'
+
   link 'Hermes.app'
 end

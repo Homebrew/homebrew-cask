@@ -1,7 +1,9 @@
 class MediafireDesktop < Cask
-  url 'http://www.mediafire.com/?4xcr491804ncktz/'
-  homepage 'https://www.mediafire.com/software/desktop/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'https://www.mediafire.com/?4xcr491804ncktz/'
+  homepage 'https://www.mediafire.com/software/desktop/'
+
   link 'MediaFire Desktop.app'
 end

@@ -1,12 +1,14 @@
 class Mamp < Cask
-  url 'http://downloads7.mamp.info/MAMP-PRO/releases/3.0.4/MAMP_MAMP_PRO_3.0.4.pkg'
+  version '3.0.5'
+  sha256 '773c5c2b4f55b8f30e0cbbba080432b07f3424229c26ff52d65790bfc6f5b270'
+
+  url 'http://downloads2.mamp.info/MAMP-PRO/releases/3.0.5/MAMP_MAMP_PRO_3.0.5.pkg'
   homepage 'http://www.mamp.info/en/index.html'
-  version '3.0.4'
-  sha256 '786538ce247870af4bfbf0195e73d6b67e08fda41c5f8822bbf5154c31402d1a'
-  install 'MAMP_MAMP_PRO_3.0.4.pkg'
+
+  install 'MAMP_MAMP_PRO_3.0.5.pkg'
   after_install do
     system '/usr/bin/sudo', '-E', '--',
-           '/usr/sbin/chown', '-R', "#{Etc.getpwuid(Process.euid).name}:staff", '/Applications/MAMP', '/Applications/MAMP PRO'
+           '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", '/Applications/MAMP', '/Applications/MAMP PRO'
   end
   uninstall :pkgutil => 'de.appsolute.installer.(mamp|mampacticon|mampendinstall|mamppro).pkg',
             :files   => [

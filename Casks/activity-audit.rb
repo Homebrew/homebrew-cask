@@ -1,7 +1,10 @@
 class ActivityAudit < Cask
-  url 'https://www.dssw.co.uk/activityaudit/dsswactivityaudit.dmg'
-  homepage 'https://www.dssw.co.uk/activityaudit'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'https://www.dssw.co.uk/activityaudit/dsswactivityaudit.dmg'
+  appcast 'http://version.dssw.co.uk/activityaudit/standard'
+  homepage 'https://www.dssw.co.uk/activityaudit'
+
   link 'Activity Audit.app'
 end

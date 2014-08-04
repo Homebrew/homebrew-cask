@@ -1,7 +1,10 @@
 class Porthole < Cask
-  url 'http://getporthole.com/downloads/trial'
-  homepage 'http://getporthole.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://getporthole.com/downloads/trial'
+  appcast 'http://update.getporthole.com/appcast.rss'
+  homepage 'http://getporthole.com/'
+
   link 'Porthole.app'
 end

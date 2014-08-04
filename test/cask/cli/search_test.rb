@@ -49,13 +49,11 @@ describe Cask::CLI::Search do
     out.length.must_be :<, 100
   end
 
-  # @@@ commented out temporarily, travis showing failures, can't duplicate locally,
-  #     may be a Ruby version problem
-  # it "accepts a regexp argument" do
-  #   lambda {
-  #     Cask::CLI::Search.run('/^google-c[a-z]rome$/')
-  #   }.must_output "==> Regexp matches\ngoogle-chrome\n"
-  # end
+  it "accepts a regexp argument" do
+    lambda {
+      Cask::CLI::Search.run('/^google-c[a-z]rome$/')
+    }.must_output "==> Regexp matches\ngoogle-chrome\n"
+  end
 
   it "Returns both exact and partial matches" do
     out, err = capture_io do
@@ -66,8 +64,8 @@ describe Cask::CLI::Search do
 
   it "does not search the Tap name" do
     out, err = capture_io do
-      Cask::CLI::Search.run('phinze')
+      Cask::CLI::Search.run('caskroom')
     end
-    out.must_match(/^No cask found for "phinze"\.\n/)
+    out.must_match(/^No cask found for "caskroom"\.\n/)
   end
 end

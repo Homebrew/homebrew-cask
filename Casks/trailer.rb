@@ -1,7 +1,10 @@
 class Trailer < Cask
-  url 'http://dev.housetrip.com/trailer/trailer1019.zip'
+  version '1.0.26'
+  sha256 '2cad2a5af786429d6917b22cd131e7425054f3792a284620902dcb985308aab8'
+
+  url 'http://dev.housetrip.com/trailer/trailer1026.zip'
+  appcast 'http://dev.housetrip.com/trailer/appcast.xml'
   homepage 'http://dev.housetrip.com/trailer/'
-  version '1.0.19'
-  sha256 '651b211c0c678de0719a6535a3c2be390cfd0d100108d310410efecae9eafd5f'
+
   link 'Trailer.app'
 end

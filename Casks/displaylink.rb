@@ -1,14 +1,14 @@
 class Displaylink < Cask
   url 'http://www.displaylink.com/support/file.php',
       :data => {
-        'file' => 'DisplayLink_MacOSX_V2.2Beta.dmg',
+        'file' => 'DisplayLink_Mac_2.2.dmg',
         'folder' => 'publicsoftware',
         'id' => '330'
       },
       :using => :post
   homepage 'http://www.displaylink.com'
-  version '2.2Beta'
-  sha256 '7e37481a9c414df8ae59c51a7c21a4c35d3f494b47304a59bdfa5a3ee5d8e795'
+  version '2.2'
+  sha256 '5c9a97a476b5ff27811491eebb653a03c96f899562b67566c24100d8593b1daa'
   install 'DisplayLink Software Installer.pkg'
   uninstall :pkgutil => ['com.displaylink.displaylinkdriversigned',
                          'com.displaylink.displaylinkdriverunsigned']

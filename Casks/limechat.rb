@@ -1,7 +1,10 @@
 class Limechat < Cask
-  url 'https://downloads.sourceforge.net/project/limechat/limechat/LimeChat_2.39.tbz'
+  version '2.42'
+  sha256 '708d10591784e5beb7ed80236d809d5cd4f992c133483bc2a82775acdc6f1f0f'
+
+  url 'https://downloads.sourceforge.net/project/limechat/limechat/LimeChat_2.42.tbz'
+  appcast 'http://limechat.net/mac/appcast.xml'
   homepage 'http://limechat.net/mac/'
-  version '2.39'
-  sha256 'a0b46e8238a003922adbec1cd3488fe49cb8de5f610424da08006799e170a633'
+
   link 'LimeChat.app'
 end

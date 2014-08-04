@@ -1,7 +1,10 @@
 class Entropy < Cask
-  url 'http://www.eigenlogik.com/entropy/download'
-  homepage 'http://www.eigenlogik.com/entropy/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://www.eigenlogik.com/entropy/download'
+  appcast 'http://hyperion.eigenlogik.com/appcast/feed/entropy/'
+  homepage 'http://www.eigenlogik.com/entropy/'
+
   link 'Entropy.app'
 end

@@ -1,7 +1,13 @@
 class Rubymine < Cask
-  url 'http://download-cf.jetbrains.com/ruby/RubyMine-6.3.1.dmg'
+  version '6.3.3'
+  sha256 'c79216de02f2564ea60592420342ab9fb5014da7e7c96f92e2856dc49f2090dd'
+
+  url 'http://download-cf.jetbrains.com/ruby/RubyMine-6.3.3.dmg'
   homepage 'http://www.jetbrains.com/ruby/'
-  version '6.3.1'
-  sha256 'c0c5d32b94f6b12f871d76712ba8d1837cd6c190f14237b51c10feb1aa9fe1f3'
+
   link 'RubyMine.app'
+
+  after_install do
+    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/RubyMine.app/Contents/Info.plist"
+  end
 end

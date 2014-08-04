@@ -1,7 +1,9 @@
 class Commandq < Cask
-  url 'http://clickontyler.com/commandq/download/'
-  homepage 'http://clickontyler.com/commandq/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'https://clickontyler.com/commandq/download/'
+  homepage 'http://clickontyler.com/commandq/'
+
   link 'CommandQ.app'
 end

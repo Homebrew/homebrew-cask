@@ -18,7 +18,7 @@ all pretty happy about this.  Here's how to get started:
 
 ```bash
 $ github_user='<my-github-username>'
-$ cd "$(brew --prefix)"/Library/Taps/phinze-cask
+$ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 $ git remote add "$github_user" "https://github.com/$github_user/homebrew-cask"
 ```
 
@@ -34,10 +34,12 @@ the `link` stanza as many times as you need, to create multiple links:
 
 ```ruby
 class Alfred < Cask
-  url 'http://cachefly.alfredapp.com/Alfred_2.1.1_227.zip'
+  version '2.3_264'
+  sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
+
+  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
   homepage 'http://www.alfredapp.com/'
-  version '2.1.1_227'
-  sha256 'd19fe7441c6741bf663521e561b842f35707b1e83de21ca195aa033cade66d1b'
+
   link 'Alfred 2.app'
   link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
@@ -47,10 +49,12 @@ Here is another Cask for `Vagrant.pkg`:
 
 ```ruby
 class Vagrant < Cask
-  url 'https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg'
-  homepage 'http://www.vagrantup.com'
   version '1.4.3'
   sha256 'e7ff13b01d3766829f3a0c325c1973d15b589fe1a892cf7f857da283a2cbaed1'
+
+  url 'https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg'
+  homepage 'http://www.vagrantup.com'
+
   install 'Vagrant.pkg'
   uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] }
 end
@@ -66,14 +70,14 @@ is simply the Cask name with the extension `.rb` appended.
 
 The easiest way to name a Cask is to run this command:
 ```bash
-$ "$(brew --prefix)/Library/Taps/phinze-cask/developer/bin/cask_namer" '/full/path/to/new/software.app'
+$ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/cask_namer" '/full/path/to/new/software.app'
 ```
 
 If the software you wish to Cask is not installed, or does not have an
 associated App bundle, just give the full proper name of the software
 instead of a pathname:
 ```bash
-$ "$(brew --prefix)/Library/Taps/phinze-cask/developer/bin/cask_namer" 'Google Chrome'
+$ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/cask_namer" 'Google Chrome'
 ```
 
 If the `cask_namer` script does not work for you, see [Cask Naming Details](#cask-naming-details).
@@ -96,10 +100,12 @@ this:
 
 ```ruby
 class MyNewCask < Cask
-  url ''
-  homepage ''
   version ''
   sha256 ''
+
+  url ''
+  homepage ''
+
   link ''
 end
 ```
@@ -114,7 +120,7 @@ Fill in the following stanzas for your Cask:
 | `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
 | `homepage`         | application homepage; used for the `brew cask home` command
 | `version`          | application version; give value of `'latest'` if versioned downloads are not offered
-| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be omitted on unversioned downloads by substituting `no_checksum`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
+| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
 | __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
 | `link`             | relative path to a file that should be linked into the `Applications` folder on installation (see also [Link Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#link-stanza-details))
 | `install`          | relative path to `pkg` that should be run to install the application (see also [Install Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#install-stanza-details))
@@ -159,6 +165,23 @@ fall back to this format:
 http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 ```
 
+### Dropbox URLs
+
+Some projects **officially** (meaning the URL is linked from the official website)
+distribute binaries via Dropbox.
+Occasionally, instead of a direct download link, they send you to a preview page.
+In these cases, you need to manually change the URL.
+
+For example this preview link:
+```
+https://www.dropbox.com/s/xttkmuvu7hh72vu/MyFile.pdf
+```
+becomes
+```
+https://dl.dropboxusercontent.com/s/xttkmuvu7hh72vu/MyFile.pdf
+```
+
+More: https://www.dropbox.com/help/201/en
 
 ### Vendor URLs
 
@@ -213,7 +236,7 @@ with
 `brew cask audit my-new-cask --download`
 
 If your application and homebrew-cask do not work well together, feel free to
-[file an issue](https://github.com/phinze/homebrew-cask/issues) after checking
+[file an issue](https://github.com/caskroom/homebrew-cask/issues) after checking
 out open issues.
 
 
@@ -223,20 +246,25 @@ We maintain separate Taps for different types of binaries.
 
 ### Latest Stable Versions
 
-Latest stable versions live in the main repository at [phinze/homebrew-cask](https://github.com/phinze/homebrew-cask).
+Latest stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask).
 Software in the main repo should run on the latest release of OS X or the previous
 point release (currently: Mavericks and Mountain Lion).
 
 ### But There Is No Stable Version!
 
-When an App is only available as a Beta, or in cases where a "Beta" has become
+When an App is only available as an unstable version (e.g. beta, nightly), or in cases where such a version is
 the general standard, then an "unstable" version can go into the main repo.
 
 ### Unstable, Development, or Legacy Versions
 
 When an App already exists in the main repo, alternate versions can be Casked
 and submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
-Nightly builds always go in [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
+
+### Trial Versions
+
+Before submitting a trial, please make sure it can be made into a full working version
+without the need to be redownloaded. If an App provides a trial but the only way to buy the full version
+is via the Mac App Store, it does not currently belong in any of the official repos.
 
 ### Unofficial Builds
 
@@ -256,7 +284,7 @@ for details.
 Hop into your Tap and check to make sure your new Cask is there:
 
 ```bash
-$ cd "$(brew --prefix)"/Library/Taps/phinze-cask
+$ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 $ git status
 # On branch master
 # Untracked files:
@@ -318,6 +346,11 @@ $ github_user='<my-github-username>'
 $ git push "$github_user" my-new-cask
 ```
 
+If you are using [GitHub two-factor authentication](https://github.com/blog/1614-two-factor-authentication)
+and set your remote repository as HTTPS you will need to set up
+a personal access token and use that instead your password.
+See more on https://help.github.com/articles/https-cloning-errors#provide-access-token-if-2fa-enabled
+
 ### Filing a Pull Request on GitHub
 
 Now go to *your* GitHub repository at
@@ -343,7 +376,7 @@ After your Pull Request is away, you might want to get yourself back onto
 `master`, so that `brew update` will pull down new Casks properly.
 
 ```bash
-cd "$(brew --prefix)"/Library/Taps/phinze-cask
+cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 git checkout master
 ```
 

@@ -1,7 +1,9 @@
 class Cura < Cask
-  url 'http://software.ultimaker.com/current/Cura-14.03-MacOS.dmg'
+  version '14.07'
+  sha256 '6f627cd60bc849f86d9f4b29b3d2971744187b7dc5392965464d16dd45a35f9a'
+
+  url "http://software.ultimaker.com/current/Cura-#{version}-MacOS.dmg"
   homepage 'http://daid.github.com/Cura/'
-  version '14.03'
-  sha256 '603cdd3d2c1e59a13345c135d8a1c8d90955e8864368a4e6a2b311ff1d042ccc'
-  link 'Cura/Cura.app'
+
+  link 'Cura.app'
 end

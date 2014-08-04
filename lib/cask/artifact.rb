@@ -1,6 +1,7 @@
 module Cask::Artifact; end
 
 require 'cask/artifact/base'
+require 'cask/artifact/uninstall_base'
 require 'cask/artifact/symlinked'
 require 'cask/artifact/hardlinked'
 
@@ -10,6 +11,7 @@ require 'cask/artifact/after_block'
 require 'cask/artifact/before_block'
 require 'cask/artifact/colorpicker'
 require 'cask/artifact/font'
+require 'cask/artifact/install_script'
 require 'cask/artifact/nested_container'
 require 'cask/artifact/pkg'
 require 'cask/artifact/prefpane'
@@ -19,7 +21,8 @@ require 'cask/artifact/service'
 require 'cask/artifact/caskroom_only'
 require 'cask/artifact/input_method'
 require 'cask/artifact/screen_saver'
-
+require 'cask/artifact/uninstall'
+require 'cask/artifact/zap'
 
 module Cask::Artifact
   #
@@ -30,6 +33,7 @@ module Cask::Artifact
     [
       Cask::Artifact::BeforeBlock,
       Cask::Artifact::NestedContainer,
+      Cask::Artifact::InstallScript,
       Cask::Artifact::App,
       Cask::Artifact::Colorpicker,
       Cask::Artifact::Pkg,
@@ -42,7 +46,9 @@ module Cask::Artifact
       Cask::Artifact::Binary,
       Cask::Artifact::InputMethod,
       Cask::Artifact::ScreenSaver,
+      Cask::Artifact::Uninstall,
       Cask::Artifact::AfterBlock,
+      Cask::Artifact::Zap,
     ]
   end
 

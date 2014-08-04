@@ -1,7 +1,9 @@
 class Fontprep < Cask
+  version 'latest'
+  sha256 :no_check
+
   url 'http://fontprep.com/download'
   homepage 'http://fontprep.com'
-  version 'latest'
-  no_checksum
+
   link 'FontPrep.app'
 end

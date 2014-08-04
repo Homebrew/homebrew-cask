@@ -1,7 +1,10 @@
 class Poedit < Cask
-  url 'http://www.poedit.net/dl/Poedit-1.6.4.zip'
+  version '1.6.6'
+  sha256 '2e1dcbea9867a38720f1d86520b2279d2c4f0857e9da9c6aac4eec0907891234'
+
+  url "http://poedit.net/dl/Poedit-#{version}.zip"
+  appcast 'http://releases.poedit.net/appcast-osx'
   homepage 'http://www.poedit.net'
-  version '1.6.4'
-  sha256 'e5f8b2da6f50b9cc398cc471d719d4f2f25cf033229cf0b7fef83103e7cbeb88'
+
   link 'Poedit.app'
 end

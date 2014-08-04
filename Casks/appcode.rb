@@ -1,7 +1,13 @@
 class Appcode < Cask
-  url 'http://download.jetbrains.com/objc/AppCode-2.5.4.dmg'
+  version '3.0.2'
+  sha256 'f6de20604045b3cf7bc398d5b9ead37b4dd02329385566745b098ce5ad048187'
+
+  url 'http://download.jetbrains.com/objc/AppCode-3.0.2.dmg'
   homepage 'http://www.jetbrains.com/objc/'
-  version '2.5.4'
-  sha256 '39a78089d6b4fd69ceded6494a6f0857b8ef6630c2c5b0ed3599e080358a48f3'
+
   link 'AppCode.app'
+
+  after_install do
+    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/AppCode.app/Contents/Info.plist"
+  end
 end

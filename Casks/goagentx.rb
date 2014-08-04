@@ -1,7 +1,10 @@
 class Goagentx < Cask
-  url 'https://goagentx.googlecode.com/files/GoAgentX-v2.2.9.dmg'
+  version 'latest'
+  sha256 :no_check
+
+  url 'https://goagentx.com/files/GoAgentX.dmg'
+  appcast 'https://goagentx.com/update/SUAppcast.xml'
   homepage 'http://goagentx.com/'
-  version '2.2.9'
-  sha256 '5c47d4f0a4f5f5707ec95e73659db52e757c144af39c2a61ad19cf9cb19535c2'
+
   link 'GoAgentX.app'
 end

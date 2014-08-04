@@ -1,7 +1,10 @@
 class Chromatic < Cask
-  url 'http://download.mrgeckosmedia.com/Chromatic.zip'
-  homepage 'https://mrgeckosmedia.com/applications/info/Chromatic'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://download.mrgeckosmedia.com/Chromatic.zip'
+  appcast 'http://mrgeckosmedia.com/applications/appcast/Chromatic'
+  homepage 'https://mrgeckosmedia.com/applications/info/Chromatic'
+
   link 'Chromatic.app'
 end

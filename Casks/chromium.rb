@@ -1,7 +1,10 @@
 class Chromium < Cask
-  url 'http://downloads.sourceforge.net/sourceforge/osxportableapps/ChromiumOSX_34.0.1847.116.dmg'
+  version '36.0.1985.125'
+  sha256 '2a645ee42f9a9d2bb22c03fe90b6f9082ebb6a8351697b7112b060ed6b766339'
+
+  url "https://downloads.sourceforge.net/sourceforge/osxportableapps/ChromiumOSX_#{version}.dmg"
+  appcast 'http://osxportableapps.sourceforge.net/chromium/chrcast.xml'
   homepage 'http://www.freesmug.org/chromium'
-  version '34.0.1847.116'
-  sha256 '933b63b16b9ddf90752eaf62f6cbd9b31ea91621e1b0283970d95f241cb7a354'
+
   link 'Chromium.app'
 end

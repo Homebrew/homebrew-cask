@@ -33,7 +33,7 @@ revising our goals and adding new ones.
 
 ## What Needs to be Done?
 
-Plenty. Start with [open issues](https://github.com/phinze/homebrew-cask/issues?state=open) !
+Plenty. Start with [open issues](https://github.com/caskroom/homebrew-cask/issues?state=open) !
 
 ## Are You Interested in New Features?
 
@@ -51,13 +51,13 @@ It's a neat idea!  We have talked about it but nobody has worked
 on it:
 
 - <https://gist.github.com/phinze/7cd361150816bd85304e>
-- <https://github.com/phinze/homebrew-cask/issues/1135>
+- <https://github.com/caskroom/homebrew-cask/issues/1135>
 
 ## What About Installing by Copying Instead of Linking?
 
 It's a neat idea! We have talked about it but nobody has worked on it:
 
-- <https://github.com/phinze/homebrew-cask/pull/2312#issuecomment-31859263>
+- <https://github.com/caskroom/homebrew-cask/pull/2312#issuecomment-31859263>
 
 We would want to make sure that uninstall works equally well when copying.
 
@@ -66,14 +66,15 @@ We would want to make sure that uninstall works equally well when copying.
 Yes, definitely! We have talked about it, and worked on some aspects
 of it. But there is much left to do:
 
-- <https://github.com/phinze/homebrew-cask/issues/309>
+- <https://github.com/caskroom/homebrew-cask/issues/309>
+- <https://github.com/caskroom/homebrew-cask/issues/4678>
 
 ## What About Installing Multiple Versions of a Package?
 
 Yes, definitely! We have started working on it, so please contact us
 directly if you want to help.
 
-- <https://github.com/phinze/homebrew-cask/issues/142>
+- <https://github.com/caskroom/homebrew-cask/issues/142>
 
 ## What About Dependencies?
 
@@ -99,7 +100,7 @@ under `/usr/local`.  For coding, that is usually not sufficient.
 
 We recommend the following:
 
-1. Fork our repo: <https://github.com/phinze/homebrew-cask/fork>
+1. Fork our repo: <https://github.com/caskroom/homebrew-cask/fork>
 2. Clone a private copy of the repo:
 
 	```bash
@@ -110,11 +111,11 @@ We recommend the following:
 
 	```bash
 	cd homebrew-cask
-	git remote add upstream https://github.com/phinze/homebrew-cask.git
+	git remote add upstream https://github.com/caskroom/homebrew-cask.git
 	```
 
 4. Now you have two copies of the homebrew-cask codebase on disk: the
-   released version in `/usr/local/Library/Taps/phinze-cask`, and a
+   released version in `/usr/local/Library/Taps/caskroom/homebrew-cask`, and a
    development version in your private repo.  To symlink the `Casks`
    and `rubylib` folders from `/usr/local/...` into your private repo,
    run the following script:
@@ -133,6 +134,28 @@ We recommend the following:
 	/<path>/<to>/<private>/<repo>/developer/bin/production_brew_cask
 	```
 
+## How Can I Force a Specific Ruby Interpreter?
+
+You can force a specific version of the Ruby interpreter, and/or an
+alternate version of the `brew-cask` subcommand, by invoking `brew cask`
+with fully-qualified paths, like this:
+
+```bash
+$ HOMEBREW_BREW_FILE=/usr/local/bin/brew /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/brew.rb /usr/local/bin/brew-cask.rb help
+```
+
+## How Can I Force a Specific Homebrew-cask Subcommand?
+
+If you are developing a subcommand, you can force `brew cask` to dispatch a
+specific file by giving a fully-qualified path to the file containing the
+subcommand, like this:
+
+```bash
+$ brew cask /usr/local/Cellar/brew-cask/0.37.0/rubylib/cask/cli/info.rb google-chrome
+```
+
+This form can also be combined with a specific Ruby interpreter as above.
+
 ## Hanging out on IRC
 
 We're on IRC at `#homebrew-cask` on Freenode. If you are going to develop for
@@ -145,10 +168,17 @@ homebrew-cask, it's a great idea to hang out with us there. Here's why:
 
 ## What Version of Ruby Should I Target?
 
-We target the vendor-supplied Ruby interpreter. Apple provided Ruby 1.8.7
-as recently as OS X 10.8 (Mountain Lion).  Therefore, even though OS X 10.9
-(Mavericks) has Ruby 2.0.0-p247, this project targets Ruby 1.8.7 for
-backwards compatibility.
+Homebrew-cask is `require`d from within the Ruby environment of the parent
+Homebrew command (`brew`).
+
+Therefore, Homebrew-cask uses whichever Ruby interpreter chosen by Homebrew.
+This is generally an Apple-supplied Ruby, though it may change according to
+OS version.  At the time of writing, Homebrew targets Ruby 2.0 on OS X
+Mavericks (10.9) and Yosemite (10.10), and Ruby 1.8.7 on older OS revisions.
+
+So, our code must currently maintain compatibility across Ruby 1.8.7 and
+2.0.  The automated testing provided by Travis-CI will ensure that any pull
+request will be tested under both versions.
 
 ## Mind the test suite!
 

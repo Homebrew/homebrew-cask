@@ -1,7 +1,10 @@
 class Pixelstick < Cask
-  url 'http://plumamazing.com/bin/pixelstick/pixelstick.zip'
-  homepage 'http://plumamazing.com/mac/pixelstick'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'https://plumamazing.com/bin/pixelstick/pixelstick.zip'
+  appcast 'https://plumamazing.com/appcastSSL.php?pid=100'
+  homepage 'http://plumamazing.com/mac/pixelstick'
+
   link 'PixelStick.app'
 end

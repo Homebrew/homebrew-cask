@@ -6,15 +6,16 @@ class GitAnnex < Cask
     # This is a horrible hack to force the file extension.  The
     # backend code should be fixed so that this is not needed.
     before_install do
-      system '/bin/mv', destination_path.join('git-annex-latest'), destination_path.join('git-annex-latest.dmg')
+      system '/bin/mv', '--', destination_path.join('git-annex-latest'), destination_path.join('git-annex-latest.dmg')
     end
     nested_container 'git-annex-latest.dmg'
   end
   homepage 'http://git-annex.branchable.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
   link 'git-annex.app'
   binary 'git-annex.app/Contents/MacOS/git-annex'
+  binary 'git-annex.app/Contents/MacOS/git-annex-shell'
   caveats do
     files_in_usr_local
   end

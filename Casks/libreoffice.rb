@@ -1,7 +1,14 @@
 class Libreoffice < Cask
-  url 'http://download.documentfoundation.org/libreoffice/stable/4.2.3/mac/x86_64/LibreOffice_4.2.3_MacOS_x86-64.dmg'
-  homepage 'http://www.libreoffice.org/'
-  version '4.2.3'
-  sha256 'b54917f4784b17c2c6a0778559f3f9de03480bc4528b181681336d9cc2dba904'
+  homepage 'https://www.libreoffice.org/'
+  version '4.3.0'
+
+  if Hardware::CPU.is_64_bit? && OS::Mac.version >= '10.8'
+    url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
+    sha256 '80772ed238b2033233aa2867962cfbb6f701ae81b3f592971149f8e3e54504bf'
+  else
+    url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86/LibreOffice_#{version}_MacOS_x86.dmg"
+    sha256 '31b84237db80f655aabcc3962c4a5e4fd84318adb6db1b3b311a883f16af1164'
+  end
+
   link 'LibreOffice.app'
 end

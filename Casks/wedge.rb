@@ -1,7 +1,10 @@
 class Wedge < Cask
-  url 'http://wedge.natestedman.com/release/Wedge.app.zip'
-  homepage 'http://wedge.natestedman.com'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://wedge.natestedman.com/release/Wedge.app.zip'
+  appcast 'http://wedge.natestedman.com/appcast.xml'
+  homepage 'http://wedge.natestedman.com'
+
   link 'Wedge.app'
 end

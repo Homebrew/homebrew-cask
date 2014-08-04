@@ -1,7 +1,10 @@
 class Scrivener < Cask
-  url 'http://scrivener.s3.amazonaws.com/Scrivener.dmg'
-  homepage 'http://literatureandlatte.com/scrivener.php'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'https://scrivener.s3.amazonaws.com/Scrivener.dmg'
+  appcast 'http://www.literatureandlatte.com/downloads/scrivener-2.xml'
+  homepage 'http://literatureandlatte.com/scrivener.php'
+
   link 'Scrivener.app'
 end

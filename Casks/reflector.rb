@@ -1,7 +1,10 @@
 class Reflector < Cask
-  url 'http://download.airsquirrels.com/Reflector/Mac/Reflector.dmg'
-  homepage 'http://www.airsquirrels.com/reflector/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://download.airsquirrels.com/Reflector/Mac/Reflector.dmg'
+  appcast 'http://reflectorapp.com/updates/reflector.xml'
+  homepage 'http://www.airsquirrels.com/reflector/'
+
   link 'Reflector.app'
 end

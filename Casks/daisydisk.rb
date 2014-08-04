@@ -1,8 +1,11 @@
 class Daisydisk < Cask
-  url 'http://www.daisydiskapp.com/downloads/DaisyDisk.zip'
-  homepage 'http://www.daisydiskapp.com'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://www.daisydiskapp.com/downloads/DaisyDisk.zip'
+  appcast 'http://www.daisydiskapp.com/downloads/appcastFeed.php'
+  homepage 'http://www.daisydiskapp.com'
+
   link 'DaisyDisk.app'
 
   after_install do

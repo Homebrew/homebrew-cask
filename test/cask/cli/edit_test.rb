@@ -1,21 +1,18 @@
 require 'test_helper'
 
-module RecordEditorCalls
-  def exec_editor(*command)
+# monkeypatch for testing
+class Cask::CLI::Edit
+  def self.exec_editor(*command)
     editor_commands << command
   end
 
-  def reset!
+  def self.reset!
     @editor_commands = []
   end
 
-  def editor_commands
+  def self.editor_commands
     @editor_commands ||= []
   end
-end
-
-module Cask::CLI::Edit
-  extend RecordEditorCalls
 end
 
 describe Cask::CLI::Edit do

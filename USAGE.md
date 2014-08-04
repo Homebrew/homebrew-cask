@@ -12,7 +12,7 @@ $ brew --version
 Install the homebrew-cask tool:
 
 ```bash
-$ brew install phinze/cask/brew-cask
+$ brew install caskroom/cask/brew-cask
 ```
 
 ## Frequently Used Commands
@@ -80,6 +80,7 @@ This will both uninstall the Cask and remove symlinks which were created in
 The following commands are for Cask authors:
 
 * `audit` -- verifies installability of Casks
+* `cat` -- dumps the given Cask to the standard output
 * `create` -- creates a Cask and opens it in an editor
 * `edit` -- edits the given Cask
 * `checklinks` -- checks for bad Cask links
@@ -108,7 +109,7 @@ $ brew cask info caffeine
 caffeine: 1.1.1
 http://lightheadsw.com/caffeine/
 Not installed
-https://github.com/phinze/homebrew-cask/commits/master/Casks/caffeine.rb
+https://github.com/caskroom/homebrew-cask/blob/master/Casks/caffeine.rb
 ```
 
 ## Updating/Upgrading Casks
@@ -125,7 +126,10 @@ It is generally safe to run updates from within an Application.
 
 When a new version homebrew-cask is released, it will appear in the output of
 `brew outdated` after running `brew update`.  You can upgrade it via the normal
-Homebrew workflow: `brew upgrade brew-cask`.
+Homebrew `brew upgrade` workflow:
+```bash
+$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+```
 
 ## Additional Taps (optional)
 
@@ -137,6 +141,9 @@ of Casks.
 | -------- | ----------- |
 | [caskroom/versions](https://github.com/caskroom/homebrew-versions) | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
 | [caskroom/fonts](https://github.com/caskroom/homebrew-fonts) | contains Casks that install fonts, which are kept separate so we can educate users about the different licensing landscape around font installation/usage
+| [caskroom/unofficial](https://github.com/caskroom/homebrew-unofficial) | contains Casks that install unofficial builds or forks
+
+There are also [alternate Cask Taps](doc/ALTERNATE_CASK_TAPS.md#alternate-cask-taps-maintained-by-users) maintained by users.
 
 You can tap any of the above with a `brew tap` command:
 
@@ -161,7 +168,7 @@ $ brew cask install caskroom/fonts/font-symbola
 * `--debug`: output debug information
 * `--no-binaries`: skip symlinking executable binaries into `/usr/local/bin`
 
-You can also modify the default installation locations used by the `brew cask` command:
+You can also modify the default installation locations used when issuing `brew cask install`:
 
 * `--caskroom=/my/path` determines where the actual applications will be located.
 Default is `/opt/homebrew-cask/Caskroom`
@@ -220,12 +227,15 @@ above, a Cask name on the command line can take the form of:
 * a Cask name as returned by `brew cask search`, _eg_: `google-chrome`
 * a fully-qualified Cask name which includes the Tap, _eg_: `caskroom/fonts/font-symbola`
 
-`brew cask` also accepts two other forms for Cask names:
+`brew cask` also accepts three other forms for Cask names:
 
-* a fully-qualified pathname to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
-* a `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/phinze/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
+* a path to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
+* a `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
+* a file in the current working directory, _eg_: `my-modfied-google-chrome.rb`.  Note
+  that Tapped Casks names will be preferred over this form.  To force the use of a Cask
+  file in the current directory, specify a pathname with slashes, _eg_: `./google-chrome.rb`.
 
-The last two forms are intended for users who wish to maintain private Casks.
+The last three forms are intended for users who wish to maintain private Casks.
 
 ## Taps
 

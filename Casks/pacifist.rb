@@ -1,7 +1,10 @@
 class Pacifist < Cask
-  url 'http://www.charlessoft.com/cgi-bin/pacifist_download.cgi?type=dmg'
-  homepage 'http://www.charlessoft.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'https://www.charlessoft.com/cgi-bin/pacifist_download.cgi?type=dmg'
+  appcast 'http://www.charlessoft.com/cgi-bin/pacifist_sparkle.cgi'
+  homepage 'http://www.charlessoft.com/'
+
   link 'Pacifist.app'
 end

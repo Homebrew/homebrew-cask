@@ -1,7 +1,10 @@
 class Boxer < Cask
-  url 'http://boxerapp.com/download/latest'
-  homepage 'http://boxerapp.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://boxerapp.com/download/latest'
+  appcast 'http://boxerapp.com/appcast'
+  homepage 'http://boxerapp.com/'
+
   link 'Boxer.app'
 end

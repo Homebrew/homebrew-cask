@@ -1,7 +1,10 @@
 class Quickcast < Cask
-  url 'https://s3.amazonaws.com/quickcast-app/mac/QuickCast.dmg'
-  homepage 'http://quickcast.io/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'https://s3.amazonaws.com/quickcast-app/mac/QuickCast.dmg'
+  appcast 'https://s3.amazonaws.com/quickcast-app/mac/appcast.xml'
+  homepage 'http://quickcast.io/'
+
   link 'QuickCast.app'
 end

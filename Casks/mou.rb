@@ -1,7 +1,10 @@
 class Mou < Cask
-  url 'http://mouapp.com/download/Mou.zip'
-  homepage 'http://mouapp.com/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://mouapp.com/download/Mou.zip'
+  appcast 'http://mouapp.com/up/updates.xml'
+  homepage 'http://mouapp.com/'
+
   link 'Mou.app'
 end

@@ -1,14 +1,29 @@
 class R < Cask
-  url 'http://cran.rstudio.com/bin/macosx/R-3.0.3.pkg'
+  if MacOS.version == :mavericks
+    url 'http://cran.rstudio.com/bin/macosx/R-3.1.1-mavericks.pkg'
+    sha256 'd2f4e4f68628d998f81146eacd929ef6fb9bc01ca93d968e6562a3a6372c4d93'
+    install 'R-3.1.1-mavericks.pkg'
+  else
+    url 'http://cran.rstudio.com/bin/macosx/R-3.1.1-snowleopard.pkg'
+    sha256 '4db95d2bffdaa342a89d01088f47cfe6575ed7e953c31ea4dea629a0942b56b6'
+    install 'R-3.1.1-snowleopard.pkg'
+  end
   homepage 'http://www.r-project.org/'
-  version '3.0.3'
-  sha256 '8a4c5b89bf8f05c8e772f75b72d4b04d860afecf741fa2016806b94b65dd1906'
-  install 'R-3.0.3.pkg'
-  # packages: 'org.r-project.R.x86_64.fw.pkg',
-  #           'org.r-project.R.x86_64.GUI.pkg',
-  #           'org.r-project.x86_64.tcltk.x11'
-  uninstall :pkgutil => '^org\.r-project\.(R\.)?x86_64\.(fw|GUI|tcltk).*',
-            :files => ['/usr/bin/R', '/usr/bin/Rscript',
-                       '/Library/Frameworks/R.Framework/Versions/3.0',
-                       '/Library/Frameworks/R.Framework/Versions/Current']
+  version '3.1.1'
+  uninstall :pkgutil => [
+                         # eg org.r-project.R.maverics.fw.pkg
+                         #   org.r-project.R.mavericks.GUI.pkg
+                         'org\.r-project\.R\..*(fw|GUI)\.pkg',
+                         # eg org.r-project.x86_64.tcltk.x11
+                         'org.r-project\..*\.tcltk.x11',
+                        ],
+            :files => [
+                       # symlinks
+                       '/usr/bin/R',
+                       '/usr/bin/Rscript',
+                       '/Library/Frameworks/R.Framework/Versions/Current',
+                       # :pkgutil won't delete this dir if the fontconfig cache was written to at
+                       # /Library/Frameworks/R.Framework/Versions/3.1/Resources/fontconfig/cache
+                       '/Library/Frameworks/R.Framework/Versions/3.1',
+                      ]
 end

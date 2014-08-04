@@ -1,7 +1,9 @@
 class Hippoconnect < Cask
+  version 'latest'
+  sha256 :no_check
+
   url 'http://hipporemote.com/HippoConnect/mac/HippoConnect.zip'
   homepage 'http://hipporemote.com/'
-  version 'latest'
-  no_checksum
+
   link 'HippoConnect.app'
 end

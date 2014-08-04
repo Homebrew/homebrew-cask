@@ -1,7 +1,10 @@
 class Swinsian < Cask
-  url 'http://swinsian.com/sparkle/Swinsian.zip'
-  homepage 'http://swinsian.com'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'https://swinsian.com/sparkle/Swinsian.zip'
+  appcast 'http://www.swinsian.com/sparkle/sparklecast.xml'
+  homepage 'http://swinsian.com'
+
   link 'Swinsian.app'
 end

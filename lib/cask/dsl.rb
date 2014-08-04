@@ -12,11 +12,21 @@ module Cask::DSL
 
   def appcast; self.class.appcast; end
 
+  def gpg; self.class.gpg; end
+
   def version; self.class.version; end
+
+  def license; self.class.license; end
 
   def depends_on_formula; self.class.depends_on_formula; end
 
+  def depends_on; self.class.depends_on; end
+
+  def conflicts_with; self.class.conflicts_with; end
+
   def container_type; self.class.container_type; end
+
+  def tags; self.class.tags; end
 
   def sums; self.class.sums || []; end
 
@@ -46,7 +56,20 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'appcast' stanza may only appear once")
       end
       @appcast ||= begin
-        Cask::UnderscoreSupportingURI.parse(*args) unless args.empty?
+        Cask::Appcast.new(*args) unless args.empty?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
+      end
+    end
+
+    def gpg(*args)
+      if @gpg and !args.empty?
+        raise CaskInvalidError.new(self.title, "'gpg' stanza may only appear once")
+      end
+      @gpg ||= begin
+        Cask::Gpg.new(*args) unless args.empty?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
       end
     end
 
@@ -57,15 +80,75 @@ module Cask::DSL
       @container_type ||= type
     end
 
-    def version(version=nil)
-      if @version and !version.nil?
+    SYMBOLIC_VERSIONS = Set.new [
+      :latest,
+    ]
+
+    def version(arg=nil)
+      if arg.nil?
+        @version
+      elsif @version
         raise CaskInvalidError.new(self.title, "'version' stanza may only appear once")
+      elsif !arg.is_a?(String) and !SYMBOLIC_VERSIONS.include?(arg)
+        raise CaskInvalidError.new(self.title, "invalid 'version' value: '#{arg.inspect}'")
       end
-      @version ||= version
+      @version ||= arg
+    end
+
+    def tags(*args)
+      if @tags and !args.empty?
+        # consider removing this limitation
+        raise CaskInvalidError.new(self.title, "'tags' stanza may only appear once")
+      end
+      @tags ||= begin
+        Cask::Tags.new(*args) unless args.empty?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
+      end
+    end
+
+    def license(arg=nil)
+      if @license and !arg.nil?
+        raise CaskInvalidError.new(self.title, "'license' stanza may only appear once")
+      end
+      @license ||= begin
+        Cask::License.new(arg) unless arg.nil?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
+      end
     end
 
     def depends_on_formula(*args)
       @depends_on_formula ||= args
+    end
+
+    def depends_on(*args)
+      if @depends_on and !args.empty?
+        # todo: remove this constraint, and instead merge multiple depends_on stanzas
+        raise CaskInvalidError.new(self.title, "'depends_on' stanza may only appear once")
+      end
+      @depends_on ||= begin
+        Cask::DependsOn.new(*args) unless args.empty?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
+      end
+      # todo: remove this backwards compatibility section after removing depends_on_formula
+      if @depends_on.formula
+        @depends_on_formula ||= @depends_on.formula
+      end
+      @depends_on
+    end
+
+    def conflicts_with(*args)
+      if @conflicts_with and !args.empty?
+        # todo: remove this constraint, and instead merge multiple conflicts_with stanzas
+        raise CaskInvalidError.new(self.title, "'conflicts_with' stanza may only appear once")
+      end
+      @conflicts_with ||= begin
+        Cask::ConflictsWith.new(*args) unless args.empty?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
+      end
     end
 
     def artifacts
@@ -84,9 +167,24 @@ module Cask::DSL
       end
     end
 
+    # This hash is transitional.  Each of these stanzas will
+    # ultimately either be removed or upgraded with its own
+    # unique semantics.
+    STANZA_ALIASES = {
+                       :pkg                   => :install,          # to remove
+                       :app                   => :link,             # to upgrade
+                       :suite                 => :link,             # to upgrade
+                       :preflight             => :before_install,   # to remove
+                       :postflight            => :after_install,    # to remove
+                       :uninstall_preflight   => :before_uninstall, # to remove
+                       :uninstall_postflight  => :after_uninstall,  # to remove
+                     }
+
     def self.ordinary_artifact_types
       @@ordinary_artifact_types ||= [
                                      :link,
+                                     :app,
+                                     :suite,
                                      :prefpane,
                                      :qlplugin,
                                      :font,
@@ -96,7 +194,8 @@ module Cask::DSL
                                      :binary,
                                      :input_method,
                                      :screen_saver,
-                                     :install,
+                                     :install,      # deprecated
+                                     :pkg,
                                     ]
     end
 
@@ -104,14 +203,16 @@ module Cask::DSL
     installable_artifact_types.push :caskroom_only
 
     installable_artifact_types.each do |type|
+      resolved_type = STANZA_ALIASES.key?(type) ? STANZA_ALIASES[type] : type
       define_method(type) do |*args|
-        artifacts[type] << args
+        artifacts[resolved_type] << args
       end
     end
 
     SPECIAL_ARTIFACT_TYPES = [
       :nested_container,
-      :uninstall
+      :uninstall,
+      :zap,
     ]
 
     SPECIAL_ARTIFACT_TYPES.each do |type|
@@ -121,16 +222,28 @@ module Cask::DSL
     end
 
     ARTIFACT_BLOCK_TYPES = [
-      :after_install,
-      :after_uninstall,
-      :before_install,
-      :before_uninstall,
+      :after_install,           # deprecated
+      :after_uninstall,         # deprecated
+      :before_install,          # deprecated
+      :before_uninstall,        # deprecated
+      :preflight,
+      :postflight,
+      :uninstall_preflight,
+      :uninstall_postflight,
     ]
 
     ARTIFACT_BLOCK_TYPES.each do |type|
+      resolved_type = STANZA_ALIASES.key?(type) ? STANZA_ALIASES[type] : type
       define_method(type) do |&block|
-        artifacts[type] << block
+        artifacts[resolved_type] << block
       end
+    end
+
+    def install_script(*args)
+      executable = args.shift
+      args = Hash.new(*args)
+      args.merge!({ :executable => executable })
+      artifacts[:install_script] << args
     end
 
     attr_reader :sums
@@ -139,22 +252,7 @@ module Cask::DSL
       hash_type.to_s == 'sha2' ? 'sha256' : hash_type.to_s
     end
 
-    def sha1(sha1=nil)
-      if @sums == :no_check
-        raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'sha1'")
-      end
-      if sha1 == :no_check
-        @sums = sha1
-      else
-        @sums ||= []
-        @sums << Checksum.new(:sha1, sha1) unless sha1.nil?
-      end
-    end
-
     def sha256(sha2=nil)
-      if @sums == :no_check
-        raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with 'sha256'")
-      end
       if sha2 == :no_check
         @sums = sha2
       else
@@ -163,20 +261,16 @@ module Cask::DSL
       end
     end
 
-    def no_checksum
-      unless @sums.nil? or @sums.empty?
-        raise CaskInvalidError.new(self.title, "'no_checksum' stanza conflicts with '#{hash_name(@sums.first.hash_type)}'")
-      end
-      @sums = :no_check
-    end
-
     def method_missing(method, *args)
       poo = <<-EOPOO.undent
         Unexpected method '#{method}' called on #{self}.
 
           If you are working on #{self}, this may point to a typo. Otherwise
           it probably means this Cask is using a new feature. If that feature
-          has been released, running `brew update; brew upgrade brew-cask`
+          has been released, running
+
+            brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+
           should fix it. Otherwise you should wait to use #{self} until the
           new feature is released.
       EOPOO

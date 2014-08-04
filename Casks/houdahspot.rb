@@ -1,8 +1,11 @@
 class Houdahspot < Cask
-  url 'http://www.houdah.com/houdahSpot/download_assets/HoudahSpot_latest.zip'
-  homepage 'http://www.houdah.com/houdahSpot/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://www.houdah.com/houdahSpot/download_assets/HoudahSpot_latest.zip'
+  appcast 'http://www.houdah.com/houdahSpot/updates/profileInfo3.php'
+  homepage 'http://www.houdah.com/houdahSpot/'
+
   link 'HoudahSpot.app'
 
   after_install do

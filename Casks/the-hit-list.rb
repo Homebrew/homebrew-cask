@@ -1,7 +1,10 @@
 class TheHitList < Cask
-  url 'http://www.potionfactory.com/files/thehitlist/TheHitList.zip'
-  homepage 'http://www.potionfactory.com/thehitlist'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'http://www.potionfactory.com/files/thehitlist/TheHitList.zip'
+  appcast 'http://www.potionfactory.com/appcast/thehitlist.php'
+  homepage 'http://www.potionfactory.com/thehitlist'
+
   link 'The Hit List.app'
 end

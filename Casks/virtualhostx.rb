@@ -1,7 +1,10 @@
 class Virtualhostx < Cask
-  url 'http://clickontyler.com/virtualhostx/download/'
-  homepage 'http://clickontyler.com/virtualhostx/'
   version 'latest'
-  no_checksum
+  sha256 :no_check
+
+  url 'https://clickontyler.com/virtualhostx/download/v5/'
+  appcast 'http://shine.clickontyler.com/appcast.php?id=23'
+  homepage 'http://clickontyler.com/virtualhostx/'
+
   link 'VirtualHostX.app'
 end

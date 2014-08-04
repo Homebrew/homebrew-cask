@@ -1,7 +1,9 @@
 class Mocksmtp < Cask
+  version 'latest'
+  sha256 :no_check
+
   url 'http://mocksmtpapp.com/MockSmtp.zip'
   homepage 'http://mocksmtpapp.com/'
-  version 'latest'
-  no_checksum
+
   link 'MockSmtp.app'
 end

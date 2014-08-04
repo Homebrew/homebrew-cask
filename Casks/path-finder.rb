@@ -1,8 +1,10 @@
 class PathFinder < Cask
+  version 'latest'
+  sha256 :no_check
+
   url 'http://get.cocoatech.com/PF6_LION.zip'
   homepage 'http://www.cocoatech.com/pathfinder/'
-  version 'latest'
-  no_checksum
+
   link 'Path Finder.app'
 
   after_install do
