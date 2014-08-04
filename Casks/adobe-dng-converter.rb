@@ -6,4 +6,6 @@ class AdobeDngConverter < Cask
   homepage 'http://www.adobe.com/support/downloads/product.jsp?product=106&platform=Macintosh'
 
   install 'Adobe DNG Converter.pkg'
+  uninstall :pkgutil => ['com.adobe.adobeDngConverter86.AdobeDNGConverter.pkg', 'com.adobe.adobeDngConverter86.CameraProfiles.pkg', 'com.adobe.adobeDngConverter86.LensProfiles.pkg', 'com.adobe.adobeDngConverter86.postflight.pkg'],
+            :quit => 'com.adobe.DNGConverter'
 end
