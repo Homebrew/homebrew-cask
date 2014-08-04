@@ -40,21 +40,23 @@ describe Cask::CLI::Install do
     }.must_raise CaskError
   end
 
-  # todo: how to re-enable these tests?
-  #       the problem is testing ordinary output-to-stderr when an exception is also thrown
-  # it "returns a suggestion for a misspelled Cask" do
-  #   out, err = capture_io do
-  #     Cask::CLI::Install.run('googlechrome')
-  #     err.must_match %r{No available cask for googlechrome\. Did you mean:\ngoogle-chrome}
-  #   end
-  # end
+  it "returns a suggestion for a misspelled Cask" do
+    out, err = capture_io do
+      begin
+        Cask::CLI::Install.run('googlechrome')
+      rescue CaskError; end
+    end
+    err.must_match %r{No available cask for googlechrome\. Did you mean:\ngoogle-chrome}
+  end
 
-  # it "returns multiple suggestions for a Cask fragment" do
-  #   out, err = capture_io do
-  #     Cask::CLI::Install.run('google')
-  #   end
-  #   err.must_match %r{No available cask for google\. Did you mean one of:\ngoogle}
-  # end
+  it "returns multiple suggestions for a Cask fragment" do
+    out, err = capture_io do
+      begin
+      Cask::CLI::Install.run('google')
+      rescue CaskError; end
+    end
+    err.must_match %r{No available cask for google\. Did you mean one of:\ngoogle}
+  end
 
   it "raises an exception when no cask is specified" do
     lambda {
