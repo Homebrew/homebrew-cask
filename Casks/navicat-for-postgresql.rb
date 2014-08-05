@@ -1,6 +1,6 @@
 class NavicatForPostgresql < Cask
-  version '11.0.18'
-  sha256 'de6e44791b99d33c05da075b33d473a4e512297b17d1549fcda43a831b00ddac'
+  version '11.0.20'
+  sha256 '57f9050d2eafaeb49b352c82dce1bd2dd6efe715514a2f573a5bb2fc674e07aa'
 
   url 'http://download.navicat.com/download/navicat110_pgsql_en.dmg'
   homepage 'http://www.navicat.com/products/navicat-for-postgresql'
