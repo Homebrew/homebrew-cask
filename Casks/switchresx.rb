@@ -1,6 +1,6 @@
 class Switchresx < Cask
-  version '4.4'
-  sha256 "39c36694a1955f3f97bdb3bcb7591be06b601b9557d539abd05b039bcfb8b19f"
+  version '4.4.1'
+  sha256 "a7fd24312ab65a1d3da00da4fc9fb1d15a463f5d93c922bffa4ecfbe87b8e3cf"
 
   url 'http://www.madrau.com/data/switchresx/SwitchResX4.zip'
   homepage 'http://www.madrau.com'
