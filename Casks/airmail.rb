@@ -1,9 +1,9 @@
 class Airmail < Cask
-  version 'latest'
-  sha256 :no_check
+  version '1.5 (250)'
+  sha256 'dcef030522e867425be8e78543dd4193cf1c927c9f858865fdb2926cc5aec60a'
 
-  url 'https://rink.hockeyapp.net/api/2/apps/84be85c3331ee1d222fd7f0b59e41b04?format=zip'
-  homepage 'http://airmailapp.com/'
+  url 'https://dl0tgz6ee3upo.cloudfront.net/production/app/builds/001/799/183/original/6596abef0f477b1adbff58ed27f0782e/Airmail_Beta.zip'
+  homepage 'http://airmailapp.com/beta'
 
   link 'AirMail Beta.app'
 end
