@@ -1,8 +1,8 @@
 class Itools < Cask
-  version '2.3.3'
-  sha256 'a73df4876125d00cabcc7bb135436ad1dff5d98ee55db80a6e0bd773308a71c3'
+  version '2.4.0'
+  sha256 '37d34180cba42aa605eb66bba9b46e01e4ef8bb31a5b65695ced31824a27731a'
 
-  url 'http://dl2.itools.hk/dl/iTools_2.3.3.dmg'
+  url 'http://dl2.itools.hk/dl/iTools_2.4.0.dmg'
   homepage 'http://www.itools.cn/download.php?v=mac_en'
 
   link 'iTools.app'
