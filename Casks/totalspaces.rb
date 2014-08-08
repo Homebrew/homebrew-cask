@@ -1,9 +1,9 @@
 class Totalspaces < Cask
   if MacOS.version == :mavericks
-    url "http://downloads.binaryage.com/TotalSpaces2-2.1.10.zip"
-    version '2.1.10'
+    url "http://downloads.binaryage.com/TotalSpaces2-2.2.6.zip"
+    version '2.2.6'
     install 'TotalSpaces2.pkg'
-    sha256 '1bc4a282f13ffd8473646fcab11da279bc741634d3a322fa3039cd223f052489'
+    sha256 '900ece3f5ceae479b4019f854e1875eb402edf3ef1b17f813a70fe42290a0a12'
     uninstall :pkgutil => 'com.binaryage.TotalSpaces2',
               :quit    => 'com.binaryage.TotalSpaces2',
               :signal  => [
