@@ -1,5 +1,5 @@
 class Macvim < Cask
-  if MacOS.version == :mavericks
+  if MacOS.version >= :mavericks
     url 'https://github.com/b4winckler/macvim/releases/download/snapshot-73/MacVim-snapshot-73-Mavericks.tbz'
   appcast 'http://b4winckler.github.com/macvim/appcast/stable.xml'
     sha256 '557c60f3487ab68426cf982c86270f2adfd15e8a4d535f762e6d55602754d224'
