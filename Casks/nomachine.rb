@@ -6,5 +6,19 @@ class Nomachine < Cask
   homepage 'http://www.nomachine.com'
 
   install 'NoMachine.pkg'
-  uninstall :files => ['/Applications/NoMachine.app']
+  # a launchctl job ordinarily manages uninstall once the app bundle is removed
+  uninstall :files => '/Applications/NoMachine.app'
+  # todo for future use when zap is documented
+  # zap :early_script => {
+  #                       :executable  => '/bin/rm',
+  #                       :args        => ['-f', '--', '/Library/Application Support/NoMachine/nxuninstall.sh']
+  #                      },
+  #             :quit => 'com.nomachine.nxdock',
+  #             :kext => [
+  #                       'com.nomachine.driver.nxau',
+  #                       'com.nomachine.driver.nxtun',
+  #                       'com.nomachine.kext.nxfs',
+  #                      ],
+  #          :pkgutil => 'com.nomachine.nomachine.NoMachine.*',
+  #        :launchctl => 'com.nomachine.uninstall'
 end
