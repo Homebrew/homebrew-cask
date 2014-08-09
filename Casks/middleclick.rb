@@ -1,5 +1,5 @@
 class Middleclick < Cask
-  if MacOS.version == :snow_leopard or MacOS.version == :lion
+  if MacOS.version < :mountain_lion
     url 'http://clement.beffa.org/labs/downloads/MiddleClick.zip'
   elsif MacOS.version == :mountain_lion
     url 'http://clement.beffa.org/labs/downloads/MiddleClick_ml.zip'
