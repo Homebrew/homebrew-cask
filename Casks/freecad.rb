@@ -1,9 +1,9 @@
 class Freecad < Cask
-  version '0.12'
-  sha256 'aa27bafd7cf995d7e625007933dc4cb405dce6fcc7db3ba79c750153adf89969'
+  version '0.14.3703'
+  sha256 'ee7814988c91c489536cfa61b41ef65c90226758f3d4f588d520c6c54ea84dfb'
 
-  url 'https://downloads.sourceforge.net/sourceforge/free-cad/FreeCAD_0.12_MacOSX10.7_20120110_x64.dmg'
+  url "https://downloads.sourceforge.net/sourceforge/free-cad/FreeCAD-#{version}_osx_x64.zip"
   homepage 'http://sourceforge.net/projects/free-cad/'
 
-  link 'FreeCAD.app'
+  link "FreeCAD-#{version}_osx_x64/FreeCAD.app"
 end
