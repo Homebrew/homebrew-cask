@@ -1,5 +1,7 @@
 class Cask::CLI::List < Cask::CLI::Base
   def self.run(*arguments)
+    @options = Hash.new
+    @options[:one] = true if arguments.delete('-1')
     if arguments.any?
       retval = list_casks(*arguments)
     else
@@ -47,7 +49,11 @@ class Cask::CLI::List < Cask::CLI::Base
   def self.list_installed
     installed_casks = Cask.installed
     columns = installed_casks.map(&:to_s)
-    puts_columns columns
+    if @options[:one]
+      puts columns
+    else
+      puts_columns columns
+    end
     columns.empty? ? nil : installed_casks.length == columns.length
   end
 
