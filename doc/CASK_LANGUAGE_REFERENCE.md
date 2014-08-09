@@ -111,12 +111,50 @@ The following stanzas are no longer in use.
 
 ## Conditional Statements
 
+### Efficiency
+
 Conditional statements are permitted, but only if they are very efficient.
 Tests on the following values are known to be acceptable:
 
- * `MacOS.version`      (example: see [macports.rb](../Casks/macports.rb))
- * `Hardware::CPU.is_64_bit?`
- * `Hardware::CPU.is_32_bit?`
+| value                       | examples
+| ----------------------------|--------------------------------------
+| `MacOS.version`             | [macports.rb](../Casks/macports.rb), [coconutbattery.rb](../Casks/coconutbattery.rb)
+| `Hardware::CPU.is_32_bit?`  | [vuescan.rb](../Casks/vuescan.rb)
+| `Hardware::CPU.is_64_bit?`  | none, see [Always Fall Through to the Newest Case](#always-fall-through-to-the-newest-case)
+
+### Version Comparisons
+
+Tests against `MacOS.version` may use either symbolic names or version
+strings with numeric comparison operators:
+
+```ruby
+if MacOS.version < :mavericks     # symbolic name
+```
+
+```ruby
+if MacOS.version < '10.9'         # version string
+```
+
+The available symbols for OS versions are: `:tiger`, `:leopard`,
+`:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, and `:yosemite`.
+
+### Always Fall Through to the Newest Case
+
+Conditionals should be constructed so that the default is the newest OS
+version or hardware type.  When using an `if` statement, test for older
+versions, and then let the `else` statement hold the latest and greatest.
+This makes it more likely that the Cask will work without alteration when
+a new OS is released.  Example (from [coconutbattery.rb](../Casks/coconutbattery.rb)):
+
+```ruby
+if MacOS.version < :leopard
+  # ...
+elsif MacOS.version < :lion
+  # ...
+else
+  # ...
+end
+```
 
 ## Caveats Stanza Details
 
