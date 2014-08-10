@@ -10,8 +10,10 @@ class Dewdrop < Cask
 
   caveats do
     <<-EOF.undent
-    The official PHP server software is available here  https://github.com/dewdrop-org/Server-PHP
-    An unofficial Node.js server is also available `npm install dewdrop-server-node`
+    Available server implementations:
+
+      * https://github.com/dewdrop-org/Server-PHP
+      * https://github.com/dewdrop-org/Server-Node.js
 
     You may wish to script your preferences using `defaults` ... e.g.:
 
