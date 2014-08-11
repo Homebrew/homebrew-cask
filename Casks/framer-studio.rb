@@ -1,8 +1,8 @@
 class FramerStudio < Cask
-  version '1.0.140'
-  sha256 '27148a31f0745cf4e8680a97b3c7063eb10d0dd3aa8cddbc844240e8aa749d2a'
+  version '1.5.8'
+  sha256 '856fdc591a33b94fecb4a3013219f8d9e7ea171b0f83cbb8dd732860f48fff96'
 
-  url 'http://framerstudio-update.s3-website-us-east-1.amazonaws.com/static/downloads/Framer%20Studio-1.0.140.tar.gz'
+  url 'http://studio.update.framerjs.com/static/downloads/Framer%20Studio-1.0.156.tar.gz'
   homepage 'http://framerjs.com/'
 
   link 'Framer Studio.app'
