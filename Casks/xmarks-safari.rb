@@ -1,8 +1,8 @@
 class XmarksSafari < Cask
-  version '2.0.13'
-  sha256 '802666565765dd5d60b6aa6d61e073cea4fb4f59a899b105b6195e7525409775'
+  version '2.0.16'
+  sha256 '502038e06d4dcdded6ccc3b27da55dc62a0b52a099872e6d499045937ffba377'
 
-  url 'https://static.xmarks.com/clients/safari/xmarks_for_safari_2.0.13.dmg'
+  url "https://static.xmarks.com/clients/safari/xmarks_for_safari_#{version}.dmg"
   homepage 'http://www.xmarks.com/'
 
   install 'Xmarks for Safari Installer.pkg'
