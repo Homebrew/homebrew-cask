@@ -1,6 +1,6 @@
 class Istumbler < Cask
   version '100'
-  sha256 '57e480ea70a2b03ae647db93e7641e97f1dcb06da19d3ddec3b6319c680007f0'
+  sha256 'bc260060dd2d2ccff122e523aa3b9d610bea2d158bb8b0a18eb14c304e49ff67'
 
   url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   homepage 'http://istumbler.net/'
