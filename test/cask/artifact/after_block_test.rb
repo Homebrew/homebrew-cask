@@ -2,7 +2,7 @@ require 'test_helper'
 
 describe Cask::Artifact::AfterBlock do
   describe 'install_phase' do
-    it 'calls the specified block after installing, passing the cask' do
+    it 'calls the specified block after installing, passing a cask decorator' do
       called      = false
       yielded_arg = nil
 
@@ -18,12 +18,12 @@ describe Cask::Artifact::AfterBlock do
       Cask::Artifact::AfterBlock.new(cask).install_phase
 
       called.must_equal true
-      yielded_arg.must_equal cask
+      yielded_arg.must_be_kind_of Cask::Decorator
     end
   end
 
   describe 'uninstall_phase' do
-    it 'calls the specified block after uninstalling, passing the cask' do
+    it 'calls the specified block after uninstalling, passing a cask decorator' do
       called      = false
       yielded_arg = nil
 
@@ -39,7 +39,7 @@ describe Cask::Artifact::AfterBlock do
       Cask::Artifact::AfterBlock.new(cask).uninstall_phase
 
       called.must_equal true
-      yielded_arg.must_equal cask
+      yielded_arg.must_be_kind_of Cask::Decorator
     end
   end
 end

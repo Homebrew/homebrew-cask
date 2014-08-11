@@ -1,6 +1,14 @@
 require 'checksum'
 require 'set'
 
+module Cask::DSL; end
+
+require 'cask/dsl/installed'
+require 'cask/dsl/after_install'
+require 'cask/dsl/after_uninstall'
+require 'cask/dsl/before_install'
+require 'cask/dsl/before_uninstall'
+
 module Cask::DSL
   def self.included(base)
     base.extend(ClassMethods)
