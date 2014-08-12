@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 0.39.2
+
+* __Casks__
+ - 1 Casks added (0 updated) by 1 contributors since 0.39.1
+ - 1792 total Casks
+* __Features__
+ - none
+* __Fixes__
+ - repair broken version number in `lib/cask/version.rb`
+   (release 0.39.1 was bad)
+* __Documentation__
+ - none
+* __Breaking Changes__
+ - none
+
 ## 0.39.1
 
 * __Casks__
