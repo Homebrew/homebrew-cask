@@ -1,5 +1,46 @@
 # CHANGELOG
 
+## 0.39.1
+
+* __Casks__
+ - 33 Casks added (96 updated) by 59 contributors since 0.38.1
+ - 1788 total Casks
+* __Features__
+ - [#5723][] Add DSL for after_install and similar blocks (currently undocumented) <3 [@federicobond][]
+ - [#5699][] Implement list -1 <3 [@rochefort][]
+ - [#5622][] add support for xar containers
+ - [#5599][] add support for generic_unar containers
+* __Fixes__
+ - [#5740][] Add uninstall_phase method to CaskroomOnly artifact (fixes [#5739][]) <3 [@federicobond][]
+ - [#5636][] Re-enable suggestion tests <3 [@federicobond][]
+ - [#5623][] Convert backtick commands to Cask::SystemCommand.run <3 [@federicobond][]
+ - [#5596][] force permissions and delete ACLs if rmtree fails
+ - [#5622][], [#5598][] refactor containers and autodetection
+   - fix broken `container_type :seven_zip`
+   - make `pkg`, `ttf`, and `otf` explicit container types
+* __Documentation__
+ - 3 doc commits since 0.38.1
+* __Breaking Changes__
+ - none
+
+[@federicobond]: https://github.com/federicobond
+[@rochefort]: https://github.com/rochefort
+[#5591]: https://github.com/caskroom/homebrew-cask/issues/5591
+[#5596]: https://github.com/caskroom/homebrew-cask/issues/5596
+[#5598]: https://github.com/caskroom/homebrew-cask/issues/5598
+[#5599]: https://github.com/caskroom/homebrew-cask/issues/5599
+[#5622]: https://github.com/caskroom/homebrew-cask/issues/5622
+[#5623]: https://github.com/caskroom/homebrew-cask/issues/5623
+[#5636]: https://github.com/caskroom/homebrew-cask/issues/5636
+[#5699]: https://github.com/caskroom/homebrew-cask/issues/5699
+[#5723]: https://github.com/caskroom/homebrew-cask/issues/5723
+[#5739]: https://github.com/caskroom/homebrew-cask/issues/5739
+[#5740]: https://github.com/caskroom/homebrew-cask/issues/5740
+
+## 0.39.0
+
+* v0.39.0 is a botched tag, and was never released.
+
 ## 0.38.1
 
 * __Casks__
