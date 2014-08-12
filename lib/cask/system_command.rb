@@ -7,7 +7,7 @@ class Cask::SystemCommand
     output = ''
     exit_status = nil
 
-    ext_stdin, ext_stdout, ext_stderr, wait_thr = Open3.popen3(*command)
+    ext_stdin, ext_stdout, ext_stderr, wait_thr = Open3.popen3(*command.map(&:to_s))
     if options[:input]
       options[:input].each { |line| ext_stdin.puts line }
     end
