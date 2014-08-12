@@ -97,13 +97,13 @@ written down than floating in a brain somewhere.
 13. Push that commit and the tag:
 
 	```bash
-	$ git push --follow-tags
+	$ git push && git push --follow-tags
 	```
     Or, depending on your git configuration, you might need to append
     `<repository> <refspec>` to the above command, for example:
 
 	```bash
-	$ git push --follow-tags upstream master
+	$ git push upstream master && git push --follow-tags upstream master
 	```
 
 14. Unset the shell variable `$NEW_RELEASE_TAG`; you don't need it anymore.
