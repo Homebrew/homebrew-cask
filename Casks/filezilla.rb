@@ -1,7 +1,9 @@
 class Filezilla < Cask
-  url 'http://downloads.sourceforge.net/project/filezilla/FileZilla_Client/3.8.0/FileZilla_3.8.0_i686-apple-darwin9.app.tar.bz2'
+  version '3.9.0.2'
+  sha256 '9f1509e0ed1a7cb05260be8a771a4e94e7e8e4d50a4e5f24ad22f8509fb4c71b'
+
+  url "https://downloads.sourceforge.net/project/filezilla/FileZilla_Client/#{version}/FileZilla_#{version}_macosx-x86.app.tar.bz2"
   homepage 'https://filezilla-project.org/'
-  version '3.8.0'
-  sha256 '691e227e3dd2c61815dcd44dabed8fbebac7231bcb09ad5ee8d9c07b477280a0'
+
   link 'FileZilla.app'
 end

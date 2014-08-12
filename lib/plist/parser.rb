@@ -17,7 +17,7 @@ module Plist
 #  + Date elements are returned as DateTime objects.
 #  + Data elements are implemented as Tempfiles
 #
-# Plist::parse_xml will blow up if it encounters a data element.
+# Plist::parse_xml will blow up if it encounters a Date element.
 # If you encounter such an error, or if you have a Date element which
 # can't be parsed into a Time object, please send your plist file to
 # plist@hexane.org so that I can implement the proper support.

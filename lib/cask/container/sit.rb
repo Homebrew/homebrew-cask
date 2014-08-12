@@ -1,4 +1,4 @@
-class Cask::Container::Sit < Cask::Container::UnarBase
+class Cask::Container::Sit < Cask::Container::GenericUnar
   def self.me?(criteria)
     criteria.file.include? 'application/x-stuffit' and
       ! criteria.lsar.nil? and

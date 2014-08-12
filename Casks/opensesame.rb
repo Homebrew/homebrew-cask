@@ -1,5 +1,5 @@
 class Opensesame < Cask
-  if MacOS.version == :snow_leopard
+  if MacOS.version < :lion
     url 'http://files.cogsci.nl/software/opensesame/opensesame_0.26-macos-2.zip'
     version '0.26'
     sha256 'b2a37cfd1c514b2ae8ddd0be09a274844420bfa432318ef87df308fdd3b6a770'

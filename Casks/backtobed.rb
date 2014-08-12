@@ -1,7 +1,9 @@
 class Backtobed < Cask
-  url 'http://backtobed.dadiugames.dk/backtobed_osx.zip'
-  homepage 'http://backtobed.dadiugames.dk/'
   version 'latest'
   sha256 :no_check
+
+  url 'http://backtobed.dadiugames.dk/backtobed_osx.zip'
+  homepage 'http://backtobed.dadiugames.dk/'
+
   link 'BackToBed.app'
 end

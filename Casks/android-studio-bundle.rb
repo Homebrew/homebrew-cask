@@ -1,7 +1,13 @@
 class AndroidStudioBundle < Cask
-  url 'https://dl.google.com/android/studio/install/0.5.2/android-studio-bundle-135.1078000-mac.dmg'
+  version '0.8.0 build-135.1245622'
+  sha256 '7174b6d45c89e986e4a8495078559a161d4b9e091bf6a3556a0237ff5cacfdef'
+
+  url 'https://dl.google.com/android/studio/install/0.8.0/android-studio-bundle-135.1245622-mac.dmg'
   homepage 'http://developer.android.com/sdk/installing/studio.html'
-  version '0.5.2 build-135.1078000'
-  sha256 'fbb0500af402c8fa5435dfac65e16101a70a22c4c8930f072db52ac41556fb8e'
+
   link 'Android Studio.app'
+
+  after_install do
+    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/Android Studio.app/Contents/Info.plist"
+  end
 end

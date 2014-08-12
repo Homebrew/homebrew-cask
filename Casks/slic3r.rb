@@ -1,7 +1,9 @@
 class Slic3r < Cask
-  url 'http://dl.slic3r.org/mac/slic3r-osx-uni-1-0-1-stable.dmg'
+  version '1.1.6'
+  sha256 '544cb36ff905d32790f66c3872b0806e6854f5214fa38fd705afbb610a5f718f'
+
+  url "http://dl.slic3r.org/mac/slic3r-osx-uni-#{version.gsub('.', '-')}-stable.dmg"
   homepage 'http://slic3r.org/'
-  version '1.0.1'
-  sha256 '2c1b07f41f392b5b111307e796158fe21038bca0a296c4d93756a902586c8629'
+
   link 'Slic3r.app'
 end

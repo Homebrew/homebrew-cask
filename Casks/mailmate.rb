@@ -1,8 +1,10 @@
 class Mailmate < Cask
-  url 'http://dl.mailmate-app.com/MailMate.tbz'
-  homepage 'http://freron.com/'
   version 'latest'
   sha256 :no_check
+
+  url 'http://dl.mailmate-app.com/MailMate.tbz'
+  homepage 'http://freron.com/'
+
   link 'MailMate.app'
   binary 'MailMate.app/Contents/Resources/emate'
   caveats do

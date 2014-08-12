@@ -1,7 +1,10 @@
 class Iexplorer < Cask
-  url 'http://downloads.macroplant.com/iExplorer-3.2.3.5.dmg'
+  version '3.4.0.4'
+  sha256 '54dfe7d3347681382343b96548b479146a4e1623ce59ba3b98102d0b5fb89f63'
+
   homepage 'http://www.macroplant.com/'
-  version '3.2.3.5'
-  sha256 '1455dbfd41ab7fff132f3d1464eb17d6617496b1270c9a7cee04a58a3dd82529'
+  appcast 'http://www.macroplant.com/iexplorer/ie3-appcast.xml'
+  url "http://cdn.macroplant.com/release/iExplorer-#{version}.dmg"
+
   link 'iExplorer.app'
 end

@@ -1,10 +1,9 @@
 class Cask::Container::Naked < Cask::Container::Base
   def self.me?(criteria)
-    %w[
-      .otf
-      .pkg
-      .ttf
-    ].include?(criteria.path.extname)
+    # Either inherit from this class and override self.me?,
+    # or use this class directly as "container_type :naked",
+    # in which case self.me? is not called.
+    false
   end
 
   def extract

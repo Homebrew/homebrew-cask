@@ -1,9 +1,16 @@
 class IntellijIdea < Cask
-  url 'http://download-cf.jetbrains.com/idea/ideaIU-13.1.3.dmg'
+  version '13.1.4'
+  sha256 'be5ca65ab5b169ac66f47f02f49d5d9359935c9f56140327a32f9da555d845bb'
+
+  url "http://download-cf.jetbrains.com/idea/ideaIU-#{version}.dmg"
   homepage 'https://www.jetbrains.com/idea/index.html'
-  version '13.1.3'
-  sha256 'ae5239e0a5670dec88c39a5157103084d0ddd2c0b8d732d6af07764f0b98b624'
+
   link 'IntelliJ IDEA 13.app'
+
+  after_install do
+    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/IntelliJ IDEA 13.app/Contents/Info.plist"
+  end
+
   caveats do
     <<-EOS.undent
     #{@cask} may require Java 7 (an older version) available from the

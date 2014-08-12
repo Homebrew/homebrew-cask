@@ -1,8 +1,11 @@
 class Sourcetree < Cask
-  url 'http://downloads.atlassian.com/software/sourcetree/SourceTree_1.9.2.dmg'
+  version '1.9.7'
+  sha256 'b0f643a785ea24e9ae9ca40482c6a5a7fa88d6bbe8dc43840dbaa5526f4f4b32'
+
+  url "https://downloads.atlassian.com/software/sourcetree/SourceTree_#{version}.dmg"
+  appcast 'http://www.sourcetreeapp.com/update/SparkleAppcast.xml'
   homepage 'http://www.sourcetreeapp.com/'
-  version '1.9.2'
-  sha256 'ec6fe203d8ecb985587259066fe489f42c85e18d77929116a8989ab5d1fef376'
+
   link 'SourceTree.app'
   binary 'SourceTree.app/Contents/Resources/stree'
   caveats do

@@ -1,12 +1,12 @@
 class Vuescan < Cask
-  if Hardware::CPU.is_64_bit?
-    url 'http://www.hamrick.com/files/vuex6494.dmg'
-    sha256 'd893cb9982fe637ea08be5075e4db4a4407cfe451832bb2496fa9b30928f9508'
-  else
+  if Hardware::CPU.is_32_bit?
     url 'http://www.hamrick.com/files/vuex3294.dmg'
-    sha256 'cc6e6627f90ae084b9dbadb41dab016db51c97b445710b8e93b404c4afe0e91f'
+    sha256 '9f12d5a180a79c9d297913cdfb793382b512f25388de66f007cb621f4d69f461'
+  else
+    url 'http://www.hamrick.com/files/vuex6494.dmg'
+    sha256 'a6e82863f7d6fc34400f678fb4de3cf5af6cbde9a20693ff4bfb5d95ad59f398'
   end
   homepage 'http://www.hamrick.com'
-  version '9.4.29'
+  version '9.4.37'
   link 'VueScan.app'
 end

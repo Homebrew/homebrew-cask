@@ -1,4 +1,4 @@
-class Cask::CLI::Info
+class Cask::CLI::Info < Cask::CLI::Base
   def self.run(*cask_names)
     raise CaskUnspecifiedError if cask_names.empty?
     cask_names.each do |cask_name|
@@ -46,7 +46,7 @@ PURPOSE
       user, repo, name = path_elements
     end
     repo.sub!(/^homebrew-/i, '')
-    "https://github.com/#{user}/homebrew-#{repo}/commits/master/Casks/#{name}.rb"
+    "https://github.com/#{user}/homebrew-#{repo}/blob/master/Casks/#{name}.rb"
   end
 
   def self.artifact_info(cask)

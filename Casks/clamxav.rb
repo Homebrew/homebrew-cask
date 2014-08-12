@@ -1,8 +1,11 @@
 class Clamxav < Cask
-  url 'http://www.clamxav.com/downloads/ClamXav_2.6.3.dmg'
+  version '2.6.4'
+  sha256 'bbde8181307566bd592930f7318a7c43e253788bf44bab9bae1140b1e50e694f'
+
+  url 'http://www.clamxav.com/downloads/ClamXav_2.6.4.dmg'
+  appcast 'http://www.clamxav.com/sparkle/profileInfo.php'
   homepage 'http://www.clamxav.com/'
-  version '2.6.3'
-  sha256 '34791173e31b297353025013e0296f7014e34310542a6e1cdf46e83a0254691f'
+
   link 'ClamXav.app'
   after_install do
     # Don't ask to move the app bundle to /Applications

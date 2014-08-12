@@ -1,8 +1,8 @@
 require 'test_helper'
 
 describe Cask::Artifact::BeforeBlock do
-  describe 'install' do
-    it 'calls the specified block before installing' do
+  describe 'install_phase' do
+    it 'calls the specified block before installing, passing a cask decorator' do
       called      = false
       yielded_arg = nil
 
@@ -15,15 +15,15 @@ describe Cask::Artifact::BeforeBlock do
       end
 
       cask = CaskWithBeforeInstall.new
-      Cask::Artifact::BeforeBlock.new(cask).install
+      Cask::Artifact::BeforeBlock.new(cask).install_phase
 
       called.must_equal true
-      yielded_arg.must_equal cask
+      yielded_arg.must_be_kind_of Cask::Decorator
     end
   end
 
-  describe 'uninstall' do
-    it 'calls the specified block before uninstalling, passing the cask' do
+  describe 'uninstall_phase' do
+    it 'calls the specified block before uninstalling, passing a cask decorator' do
       called      = false
       yielded_arg = nil
 
@@ -36,10 +36,10 @@ describe Cask::Artifact::BeforeBlock do
       end
 
       cask = CaskWithBeforeUninstall.new
-      Cask::Artifact::BeforeBlock.new(cask).uninstall
+      Cask::Artifact::BeforeBlock.new(cask).uninstall_phase
 
       called.must_equal true
-      yielded_arg.must_equal cask
+      yielded_arg.must_be_kind_of Cask::Decorator
     end
   end
 end

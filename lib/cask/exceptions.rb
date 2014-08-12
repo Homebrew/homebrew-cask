@@ -29,7 +29,7 @@ class CaskAlreadyCreatedError < CaskError
   end
 
   def to_s
-    "Cask for #{name} already exists. Use `brew cask edit #{name}` to see it."
+    %Q{Cask for #{name} already exists. Run "brew cask cat #{name}" to see it.}
   end
 end
 
@@ -40,25 +40,29 @@ class CaskAlreadyInstalledError < CaskError
   end
 
   def to_s
-    "Cask for #{name} is already installed. Use `--force` to install anyways."
+    %Q{Cask for #{name} is already installed. Add the "--force" option to force re-install.}
   end
 end
 
 class CaskCommandFailedError < CaskError
-  def initialize cmd, output
+  def initialize cmd, output, status
     @cmd = cmd
     @output = output
+    @status = status
   end
 
   def to_s;
-    <<-EOS.undent
-      Command failed to execute!
+    <<-EOS
+Command failed to execute!
 
-      ==> Failed command:
-      #{@cmd}
+==> Failed command:
+#{@cmd}
 
-      ==> Output of failed command:
-      #{@output}
+==> Output of failed command:
+#{@output}
+
+==> Exit status of failed command:
+#{@status.inspect}
     EOS
   end
 end

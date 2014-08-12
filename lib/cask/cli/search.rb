@@ -1,4 +1,4 @@
-class Cask::CLI::Search
+class Cask::CLI::Search < Cask::CLI::Base
   def self.run(*arguments)
     render_results *search(*arguments)
   end

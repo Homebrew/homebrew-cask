@@ -4,11 +4,15 @@ class Cask::Artifact::AfterBlock < Cask::Artifact::Base
       cask.artifacts[:after_uninstall].any?
   end
 
-  def install
-    @cask.artifacts[:after_install].each { |block| @cask.instance_eval &block }
+  def install_phase
+    @cask.artifacts[:after_install].each do |block|
+      Cask::Decorator.new(Cask::DSL::AfterInstall, @cask).instance_eval &block
+    end
   end
 
-  def uninstall
-    @cask.artifacts[:after_uninstall].each { |block| @cask.instance_eval &block }
+  def uninstall_phase
+    @cask.artifacts[:after_uninstall].each do |block|
+      Cask::Decorator.new(Cask::DSL::AfterUninstall, @cask).instance_eval &block
+    end
   end
 end

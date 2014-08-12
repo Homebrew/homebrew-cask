@@ -25,6 +25,11 @@ class Cask::Source::Tapped
 
   def load
     path = self.class.path_for_query(title)
-    Cask::Source::Path.new(path).load
+    Cask::Source::PathSlashOptional.new(path).load
+  end
+
+  def to_s
+    # stringify to fully-resolved location
+    self.class.path_for_query(title).expand_path.to_s
   end
 end

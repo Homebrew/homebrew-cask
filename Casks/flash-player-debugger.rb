@@ -1,7 +1,9 @@
 class FlashPlayerDebugger < Cask
-  url 'http://fpdownload.macromedia.com/pub/flashplayer/updaters/13/flashplayer_13_sa_debug.dmg'
+  version '14.0.0.145'
+  sha256 '07637f561f2b57a38396ae5642111d741ae79442787c2a01d99277b1fa9c4ac5'
+
+  url 'https://fpdownload.macromedia.com/pub/flashplayer/updaters/14/flashplayer_14_sa_debug.dmg'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
-  version '13.0.0.214'
-  sha256 '8640692a58115e0a2577702fb298d4e44b310082b25f765decb046c8d54b3dec'
+
   link 'Flash Player.app', :target => 'Flash Player Debugger.app'
 end

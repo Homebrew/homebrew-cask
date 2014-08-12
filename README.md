@@ -1,14 +1,3 @@
-# NOTICE: Homebrew-cask has moved!
-
-The original repo at https://github.com/phinze/homebrew-cask has moved
-under the organizational umbrella at https://github.com/caskroom/homebrew-cask .
-
-Web redirection happens automatically.
-
-The location of the Cask Tap on disk has also changed, which should be
-handled automatically upon upgrading.  If you have technical difficulties,
-please see [TAP_MIGRATION.md](doc/TAP_MIGRATION.md).
-
 # "To install, drag this icon..." no more!
 
 [![Build Status](https://travis-ci.org/caskroom/homebrew-cask.png?branch=master)](https://travis-ci.org/caskroom/homebrew-cask)
@@ -28,8 +17,7 @@ command](https://github.com/mxcl/homebrew/wiki/External-Commands)" called
 
 ## Let's try it!
 ```sh
-$ brew tap caskroom/cask
-$ brew install brew-cask
+$ brew install caskroom/cask/brew-cask
 $ brew cask install google-chrome
 => Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
 => Success! google-chrome installed to /opt/homebrew-cask/Caskroom/google-chrome/stable-channel
@@ -66,7 +54,7 @@ Before reporting a bug, make sure you have the latest versions of Homebrew,
 homebrew-cask, and all Taps by running the following command:
 
 ```bash
-$ brew update && brew upgrade brew-cask && brew cleanup
+$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 ```
 
 ## License:

@@ -1,4 +1,4 @@
-class Cask::CLI::Checklinks
+class Cask::CLI::Checklinks < Cask::CLI::Base
   def self.run(*args)
     casks_to_check = args.empty? ? Cask.all : args.map { |arg| Cask.load(arg) }
     casks_to_check.each do |cask|

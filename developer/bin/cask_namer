@@ -66,6 +66,7 @@ PRESERVE_TRAILING_PATS = [
                           %r{mp3}i,
                           %r{3[\s-]*d}i,
                           %r{diff3}i,
+                          %r{\A[^\d]+\+\Z}i,
                          ]
 
 # The code that employs these patterns against App names
@@ -308,7 +309,7 @@ class CaskFileName < String
     EXPANDED_SYMBOLS.each do |k, v|
       cask_file_name.gsub!(k, " #{v} ")
     end
-    cask_file_name
+    cask_file_name.sub(/ +\Z/, '')
   end
 
   def add_extension

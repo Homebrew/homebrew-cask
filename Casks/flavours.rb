@@ -1,8 +1,11 @@
 class Flavours < Cask
-  url 'http://flavours-updates.interacto.net/Flavours.dmg'
-  homepage 'http://flavours.interacto.net/'
   version 'latest'
   sha256 :no_check
+
+  url 'http://flavours-updates.interacto.net/Flavours.dmg'
+  appcast 'http://flavours-updates.interacto.net/appcast.xml'
+  homepage 'http://flavours.interacto.net/'
+
   link 'Flavours.app'
   caveats do
     files_in_usr_local

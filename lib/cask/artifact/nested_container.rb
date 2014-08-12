@@ -1,9 +1,9 @@
 class Cask::Artifact::NestedContainer < Cask::Artifact::Base
-  def install
+  def install_phase
     @cask.artifacts[:nested_container].each { |container| extract(container) }
   end
 
-  def uninstall
+  def uninstall_phase
     # no need to take action; we will get removed by rmtree of parent
   end
 

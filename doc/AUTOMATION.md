@@ -1,5 +1,6 @@
 # Automating with Homebrew Cask
-Homebrew Cask allows you to install several applications at once. Calling `cask install` with multiple arguments works as you would expect:  
+Homebrew Cask allows you to install several applications at once. Calling `cask install` with multiple arguments works as you would expect:
+
 ```
 brew cask install vagrant virtualbox
 ==> Downloading https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg
@@ -45,7 +46,8 @@ cask install iterm2
 
 Integrating Homebrew Cask in your dotfiles is immediate; indeed, the `Caskfile` is most commonly used as a dotfiles module, to provision machines with binary apps and precompiled software.
 
-If you want to fully automate the deployment process by scripting the execution of `brew bundle`, it is sufficient to ensure that the following steps happen in the correct order: 
+If you want to fully automate the deployment process by scripting the execution of `brew bundle`, it is sufficient to ensure that the following steps happen in the correct order:
+
 - install git
 - install Homebrew
 1. `brew update`

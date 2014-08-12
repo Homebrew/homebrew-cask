@@ -3,7 +3,7 @@ class Cask::Artifact::Qlplugin < Cask::Artifact::Symlinked
     'QuickLook Plugin'
   end
 
-  def install
+  def install_phase
     super
     @command.run!('/usr/bin/qlmanage', :args => ['-r'])
   end

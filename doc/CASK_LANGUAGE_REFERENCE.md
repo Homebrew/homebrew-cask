@@ -1,7 +1,7 @@
 # Cask Language Reference
 
-This document acts as a complete reference, and covers aspects of the Cask
-Domain-Specific Language (DSL) which are not needed in most cases.
+This document acts as a complete specification, and covers aspects of the
+Cask Domain-Specific Language (DSL) which are not needed in most cases.
 
  * [Casks Are Ruby Classes](#casks-are-ruby-classes)
  * [The Cask Language Is Declarative](#the-cask-language-is-declarative)
@@ -16,6 +16,7 @@ Domain-Specific Language (DSL) which are not needed in most cases.
  * [Link Stanza Details](#link-stanza-details)
  * [Install Stanza Details](#install-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
+ * [Arbitrary Ruby Methods](#arbitrary-ruby-methods)
 
 
 ## Casks Are Ruby Classes
@@ -25,10 +26,12 @@ is always enclosed in a `class ... end` block.  Example:
 
 ```ruby
 class Alfred < Cask
-  url 'http://cachefly.alfredapp.com/Alfred_2.1.1_227.zip'
+  version '2.3_264'
+  sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
+
+  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
   homepage 'http://www.alfredapp.com/'
-  version '2.1.1_227'
-  sha256 'd19fe7441c6741bf663521e561b842f35707b1e83de21ca195aa033cade66d1b'
+
   link 'Alfred 2.app'
   link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
@@ -39,8 +42,12 @@ end
 
 Each Cask contains a series of stanzas (or "fields") which *declare* how the
 software is to be obtained and installed.  In a declarative language, the
-author does not need to worry about order.  As long as all the needed fields
-are present, homebrew-cask will figure out what needs to be done.
+author does not need to worry about **order**.  As long as all the needed fields
+are present, homebrew-cask will figure out what needs to be done at install
+time.
+
+To make maintenance easier, the most-frequently-updated stanzas are usually
+placed at the top.  But that's a convention, not a rule.
 
 Exception: `do` blocks such as `after_install` may enclose a block of
 pure Ruby code.  Lines within that block follow a procedural (order-dependent)
@@ -90,13 +97,12 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `after_uninstall`    | yes                           | a Ruby block containing postflight uninstall operations
 | `before_install`     | yes                           | a Ruby block containing preflight install operations (needed only in very rare cases)
 | `before_uninstall`   | yes                           | a Ruby block containing preflight uninstall operations (needed only in very rare cases)
-| `container_type`     | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:tar`, `:sevenzip`, `:rar`, `:sit`, `:zip`, `:naked`
+| `container_type`     | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`
 
 
 ## Legacy Stanzas
 
-The following stanzas may be seen in current use but are deprecated
-and slated for retirement.
+The following stanzas are no longer in use.
 
 | name               | multiple occurrences allowed? | meaning     |
 | ------------------ |------------------------------ | ----------- |
@@ -105,12 +111,50 @@ and slated for retirement.
 
 ## Conditional Statements
 
+### Efficiency
+
 Conditional statements are permitted, but only if they are very efficient.
 Tests on the following values are known to be acceptable:
 
- * `MacOS.version`      (example: see [macports.rb](../Casks/macports.rb))
- * `Hardware::CPU.is_64_bit?`
- * `Hardware::CPU.is_32_bit?`
+| value                       | examples
+| ----------------------------|--------------------------------------
+| `MacOS.version`             | [macports.rb](../Casks/macports.rb), [coconutbattery.rb](../Casks/coconutbattery.rb)
+| `Hardware::CPU.is_32_bit?`  | [vuescan.rb](../Casks/vuescan.rb)
+| `Hardware::CPU.is_64_bit?`  | none, see [Always Fall Through to the Newest Case](#always-fall-through-to-the-newest-case)
+
+### Version Comparisons
+
+Tests against `MacOS.version` may use either symbolic names or version
+strings with numeric comparison operators:
+
+```ruby
+if MacOS.version < :mavericks     # symbolic name
+```
+
+```ruby
+if MacOS.version < '10.9'         # version string
+```
+
+The available symbols for OS versions are: `:tiger`, `:leopard`,
+`:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, and `:yosemite`.
+
+### Always Fall Through to the Newest Case
+
+Conditionals should be constructed so that the default is the newest OS
+version or hardware type.  When using an `if` statement, test for older
+versions, and then let the `else` statement hold the latest and greatest.
+This makes it more likely that the Cask will work without alteration when
+a new OS is released.  Example (from [coconutbattery.rb](../Casks/coconutbattery.rb)):
+
+```ruby
+if MacOS.version < :leopard
+  # ...
+elsif MacOS.version < :lion
+  # ...
+else
+  # ...
+end
+```
 
 ## Caveats Stanza Details
 
@@ -148,7 +192,8 @@ The following methods may be called to generate standard warning messages:
 | `assistive_devices`               | The user should grant the application access to assitive devices
 | `files_in_usr_local`              | The Cask installs files to `/usr/local`, which may confuse Homebrew
 | `arch_only(list)`                 | The Cask only supports certain architectures.  Currently valid elements of `list` are `intel-32` and `intel-64`
-| `os_version_only(list)`           | The Cask only supports certain OS X Versions.  Currently valid elements of `list` are `10.5`, `10.6`, `10.7`, `10.8`, and `10.9`
+| `os_version_only(list)`           | The Cask only supports certain OS X Versions.  Currently valid elements of `list` are `10.5`, `10.6`, `10.7`, `10.8`, `10.9`, and `10.10`
+| `x11_required`                    | The Cask requires X11 to run
 
 Example:
 
@@ -163,21 +208,33 @@ And the following methods may be useful for interpolation:
 | method             | description |
 | ------------------ | ----------- |
 | `title`            | the Cask title
+| `version`          | the Cask version
 | `caskroom_path`    | eg `/opt/homebrew-cask/Caskroom`
 | `destination_path` | where this particular Cask is stored, including version number, eg `/opt/homebrew-cask/Caskroom/google-chrome/stable-channel`
+
+Any method from the main Cask DSL can be invoked from inside `caveats` via
+the `@cask` instance variable.  Example (see [sts.rb](../Casks/sts.rb)):
+
+```ruby
+caveats do
+  puts "You must obtain an API key at #{@cask.homepage}"
+end
+```
 
 
 ## Checksum Stanza Details
 
-Older Casks may still use `no_checksum` stanzas.  This is OK, but new
-Casks and updates should adopt `sha256 :no_check`.
+Casks should no longer use `no_checksum` stanzas.  That form has
+been superseded by `sha256 :no_check`.
 
 
 ## URL Stanza Details
 
-### HTTPS URLs
+### HTTPS URLs are Preferred
 
 If available, an HTTPS URL is preferred. A plain HTTP URL should only be used in the absence of a secure alternative.
+
+### Additional HTTP/S URL Parameters
 
 When a plain URL string is insufficient to fetch a file, additional
 information may be provided to the `curl`-based downloader, in the form
@@ -194,6 +251,19 @@ of key/value pairs appended to `url`:
 Example of using `:cookies`: [java.rb](../Casks/java.rb)
 
 Example of using `:referer`: [freefilesync.rb](../Casks/freefilesync.rb)
+
+### Difficulty Finding a URL
+
+Web browsers may obscure the direct `url` download location for a variety of
+reasons.  Homebrew-cask supplies a script which can read extended file
+attributes to extract the actual source URL for most files downloaded by a
+browser on OS X.  The script usually emits multiple candidate URLs; you may
+have to test each of them:
+
+```bash
+$ ./developer/bin/list_url_attributes_on_file <file>
+```
+
 
 
 ### Subversion URLs
@@ -387,12 +457,22 @@ the desired Unix signal followed by the corresponding bundle ID.
 The Unix signal may be given in numeric or string form (see the `kill`
 man page for more details).
 
-The `:signal` array is executed in order.  A bundle ID may be repeated to
-send more than one signal to the same process.  Example:
+The elements of the `:signal` array are applied in order, only if there is
+an existing process associated the bundle ID, and stopping when that process
+terminates.  A bundle ID may be repeated to send more than one signal to the
+same process.
+
+It is better to use the least-severe signals which are sufficient to stop
+a process.  The `KILL` signal in particular can have unwanted side-effects.
+
+An example, with commonly-used signals in ascending order of severity:
 
 ```ruby
   uninstall :signal => [
-                        ['INT', 'fr.madrau.switchresx.daemon'],
+                        ['TERM', 'fr.madrau.switchresx.daemon'],
+                        ['QUIT', 'fr.madrau.switchresx.daemon'],
+                        ['INT',  'fr.madrau.switchresx.daemon'],
+                        ['HUP',  'fr.madrau.switchresx.daemon'],
                         ['KILL', 'fr.madrau.switchresx.daemon'],
                        ]
 ```
@@ -400,10 +480,10 @@ send more than one signal to the same process.  Example:
 Note that when multiple running processes match the given Bundle ID, all
 matching processes will be signaled.
 
-Unlike `:quit` commands, Unix signals originate from the current user, not
+Unlike `:quit` directives, Unix signals originate from the current user, not
 from the superuser.  This is construed as a safety feature, since the
 superuser is capable of bringing down the system via signals.  However, this
-inconsistency may also be considered a bug and should be addressed in some
+inconsistency may also be considered a bug, and should be addressed in some
 fashion in a future version.
 
 ### Uninstall Key :kext
@@ -452,5 +532,33 @@ A fully manual method for finding bundle ids in a package file follows:
      `find /tmp/expanded.unpkg -name PackageInfo -print0 | xargs -0 grep -i kext` should return a `<bundle id>` tag with a `path`
      attribute that contains a `.kext` extension, for example `<bundle id="com.wavtap.driver.WavTap" ... path="./WavTap.kext" ... />`.
   5. Once bundle ids have been identified, the unpacked package directory can be deleted.
+
+
+## Arbitrary Ruby Methods
+
+In the exceptional case that the Cask DSL is insufficient, it is possible to
+define arbitrary Ruby methods inside the Cask by creating a `Utils` namespace.
+Example:
+
+```ruby
+class Appname < Cask
+  Module Utils
+    def self.arbitrary_method
+      ...
+    end
+  end
+
+  version '1.0'
+  sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
+
+  url "https://#{Utils.arbitrary_method}"
+  homepage 'http://www.example.com/'
+  ...
+end
+```
+
+This should be used sparingly: any method which is needed by two or more
+Casks should instead be rolled into the core.  Care must also be taken
+that such methods be very efficient.
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3

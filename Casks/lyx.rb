@@ -1,7 +1,9 @@
 class Lyx < Cask
-  url 'ftp://ftp.lyx.org/pub/lyx/bin/2.1.0/LyX-2.1.0+qt4-cocoa.dmg'
+  version '2.1.1'
+  sha256 '6e354ef25b2b4b0b46f1c95d048bef93917b794d227d841f03c0c5d1002ba923'
+
+  url 'ftp://ftp.lyx.org/pub/lyx/bin/2.1.1/LyX-2.1.1+qt4-x86_64-cocoa.dmg'
   homepage 'http://www.lyx.org'
-  version '2.1.0'
-  sha256 'b6a44dffb9692e450827c6e39b88b77480ec7c757c458cdbb9000cc751963ffc'
+
   link 'LyX.app'
 end

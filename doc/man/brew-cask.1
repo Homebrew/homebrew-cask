@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "HOMEBREW\-CASK" "1" "May 2014" "Homebrew-cask" "brew-cask"
+.TH "HOMEBREW\-CASK" "1" "July 2014" "Homebrew-cask" "brew-cask"
 .
 .SH "NAME"
 \fBhomebrew\-cask\fR \- A friendly binary installer for OS X
@@ -52,7 +52,7 @@ Check for bad Cask links\.
 .
 .TP
 \fBcleanup\fR [\-\-outdated]
-Clean up cached downloads\. With \fB\-\-outdated\fR, only clean up cached downloads older than 10 days old\.
+Clean up cached downloads and tracker symlinks\. With \fB\-\-outdated\fR, only clean up cached downloads older than 10 days old\.
 .
 .TP
 \fBcreate\fR \fICask\fR
@@ -172,7 +172,7 @@ Target location for "helper" executable links\. The default value is \fB/usr/loc
 Output debugging information of use to Cask authors and developers\.
 .
 .SH "INTERACTION WITH HOMEBREW"
-Homebrew\-cask is implemented as a external command for Homebrew\. That means this project is entirely built upon the Homebrew infrastructure\. For example, upgrades to the Homebrew\-cask tool are received through Homebrew: brew update && brew upgrade brew\-cask
+Homebrew\-cask is implemented as a external command for Homebrew\. That means this project is entirely built upon the Homebrew infrastructure\. For example, upgrades to the Homebrew\-cask tool are received through Homebrew: brew update && brew upgrade brew\-cask && brew cleanup && brew cask cleanup
 .
 .P
 And updates to individual Cask definitions are received whenever you issue the Homebrew command: brew update

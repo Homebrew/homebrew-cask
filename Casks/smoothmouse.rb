@@ -1,8 +1,10 @@
 class Smoothmouse < Cask
-  url 'http://smoothmouse.com/download/latest'
-  homepage 'http://smoothmouse.com'
   version 'latest'
   sha256 :no_check
+
+  url 'http://smoothmouse.com/download/latest'
+  homepage 'http://smoothmouse.com'
+
   install 'SmoothMouse.pkg'
   uninstall :launchctl => [
                            'com.cyberic.smoothmouse',

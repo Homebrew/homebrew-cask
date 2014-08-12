@@ -1,8 +1,10 @@
 class Heart < Cask
-  url 'http://presstube.com/screensavers/presstube-heart-mac.zip'
-  homepage 'http://presstube.com/blog/2011/heart/'
   version 'latest'
   sha256 :no_check
+
+  url 'http://presstube.com/screensavers/presstube-heart-mac.zip'
+  homepage 'http://presstube.com/blog/2011/heart/'
+
   screen_saver 'presstube-heart.app/Contents/Resources/Presstube - Heart.saver'
 
   after_install do

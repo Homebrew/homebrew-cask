@@ -1,5 +1,306 @@
 # CHANGELOG
 
+## 0.38.1
+
+* __Casks__
+ - 19 Casks added (21 updated) by 35 contributors since 0.38.0
+ - 1755 total Casks
+* __Features__
+ - none
+* __Fixes__
+ - [#5590][] fix Formula dependencies by invoking Homebrew CLI
+ - [#5579][] bug: use `install_phase` in `caskroom_only` / `qlplugin`
+ - [#5569][] DSL: add `conflicts_with` stanza (bugfix of DSL 1.0, forgotten from #4688)
+ - [#5555][] Delete special files (eg symlinks) from pkg BOMs
+ - [#5548][] Give users hint that `pkg` installs work differently
+ - [#5544][] add another special case for odd SourceForge URL
+* __Documentation__
+ - 3 doc commits since 0.38.0 <3 [@fapper][]
+* __Breaking Changes__
+ - none
+
+[#5590]: https://github.com/caskroom/homebrew-cask/issues/5590
+[#5579]: https://github.com/caskroom/homebrew-cask/issues/5579
+[#5569]: https://github.com/caskroom/homebrew-cask/issues/5569
+[#5555]: https://github.com/caskroom/homebrew-cask/issues/5555
+[#5548]: https://github.com/caskroom/homebrew-cask/issues/5548
+[#5544]: https://github.com/caskroom/homebrew-cask/issues/5544
+[@fapper]: https://github.com/fapper
+
+## 0.38.0
+
+* __Casks__
+ - 100 Casks added (1569 updated) by 146 contributors since 0.37.1
+ - 1736 total Casks
+* __Features__
+ - [#5517][] support pure gzip containers (*ie* not `tar.gz`)
+ - Numerous undocumented changes to DSL, transitioning to DSL 1.0 (see #4688)  
+     - [#4953][], [#5540][] add `tags` stanza
+     - [#4873][] add `license` stanza
+     - [#4869][] add `zap` stanza
+     - [#4896][] add `depends_on` stanza
+     - [#4848][] add `gpg` stanza
+     - [#5365][] add new-style header line which will remove naming limitations
+     - [#4928][] add uninstall `:delete` and `:trash` directives
+     - [#4951][] add `install_script` artifact
+     - [#4849][] allow `version :latest` (symbol not string)
+     - [#4847][] Extend `appcast` stanza to support multiple keys
+     - [#4865][] allow all Cask types to use `uninstall`
+     - [#4866][] remove special properties of `caskroom_only`
+     - [#4845][] forward-compatible DSL synonyms
+         - `pkg` for `install`
+         - `app` for `link`
+         - `suite` for `link`
+         - `preflight` for `before_install`
+         - `postflight` for `before_uninstall`
+         - `uninstall_preflight` for `before_uninstall`
+         - `uninstall_postflight` for `after_uninstall`
+* __Fixes__
+ - [#5520][] Better detection of errors from external commands across Ruby versions
+ - [#5340][] ignore non-XML `hdiutil` output preceding plists
+ - [#5519][] internal: Zip container does not need to `require 'tmpdir'`
+ - [#5120][] internal: install rspec; move first few tests over
+ - [#5132][] internal: rspecify scopes and download strategy tests
+ - [#4951][] internal:  
+     - move `read_script_argument` to `Cask::Artifact::Base`
+     - generalize `read_script_arguments` and harmonize error messages
+     - make `read_script_arguments` accept defaults/overrides
+ - [#4847][] internal: refactor dsl_test.rb into named sections
+ - [#4865][] refactor install/uninstall
+     - recast install/uninstall methods: `install_phase`
+     - promote `:uninstall` to an independent artifact
+     - recast `uninstall_options` as directives
+     - recast `uninstall_set` as `directives_set`
+     - change hardcoded "uninstall" in messages to stanza variable
+     - pass stanza by name to dispatch
+     - recast `manually_uninstall` method
+* __Documentation__
+ - 7 doc commits since 0.37.1, <3 [@rstacruz][],[@alexbarclay][], [@hanjianwei][]
+* __Breaking Changes__
+ - none
+
+[@rstacruz]: https://github.com/rstacruz
+[@ujovlado]: https://github.com/ujovlado
+[@alexbarclay]: https://github.com/alexbarclay
+[@hanjianwei]: https://github.com/hanjianwei
+[#5540]: https://github.com/caskroom/homebrew-cask/issues/5540
+[#5365]: https://github.com/caskroom/homebrew-cask/issues/5365
+[#5520]: https://github.com/caskroom/homebrew-cask/issues/5520
+[#5517]: https://github.com/caskroom/homebrew-cask/issues/5517
+[#5519]: https://github.com/caskroom/homebrew-cask/issues/5519
+[#5340]: https://github.com/caskroom/homebrew-cask/issues/5340
+[#4953]: https://github.com/caskroom/homebrew-cask/issues/4953
+[#4928]: https://github.com/caskroom/homebrew-cask/issues/4928
+[#4951]: https://github.com/caskroom/homebrew-cask/issues/4951
+[#5132]: https://github.com/caskroom/homebrew-cask/issues/5132
+[#5120]: https://github.com/caskroom/homebrew-cask/issues/5120
+[#4845]: https://github.com/caskroom/homebrew-cask/issues/4845
+[#4873]: https://github.com/caskroom/homebrew-cask/issues/4873
+[#4869]: https://github.com/caskroom/homebrew-cask/issues/4869
+[#4896]: https://github.com/caskroom/homebrew-cask/issues/4896
+[#4848]: https://github.com/caskroom/homebrew-cask/issues/4848
+[#4849]: https://github.com/caskroom/homebrew-cask/issues/4849
+[#4847]: https://github.com/caskroom/homebrew-cask/issues/4847
+[#4866]: https://github.com/caskroom/homebrew-cask/issues/4866
+[#4865]: https://github.com/caskroom/homebrew-cask/issues/4865
+
+## 0.37.1
+
+* __Casks__
+ - 16 Casks added (68 updated) by 35 contributors since 0.37.0
+ - 1636 total Casks
+* __Features__
+ - [#5011][], [#5025][] internal: add development subcommands starting with underscore
+ - [#5024][] internal: extend subcommand dispatch to include full paths
+* __Fixes__
+ - [#5063][] Improve plist handling for `hdiutil` commands
+ - [#5014][] Show file contents instead of commits <3 [@ujovlado][]
+ - [#5037][], [#5020][], [#5064][], [#4997][], [#4986][] internal: updates to ignores and test suite
+ - [#4994][] update sourceforge URL patterns
+* __Documentation__
+ - 4 doc commits since 0.37.0 <3 [@ujovlado][]
+* __Breaking Changes__
+ - none
+
+[#5063]: https://github.com/caskroom/homebrew-cask/issues/5063
+[#5064]: https://github.com/caskroom/homebrew-cask/issues/5064
+[#5020]: https://github.com/caskroom/homebrew-cask/issues/5020
+[#5037]: https://github.com/caskroom/homebrew-cask/issues/5037
+[#5025]: https://github.com/caskroom/homebrew-cask/issues/5025
+[#5024]: https://github.com/caskroom/homebrew-cask/issues/5024
+[#5011]: https://github.com/caskroom/homebrew-cask/issues/5011
+[#5014]: https://github.com/caskroom/homebrew-cask/issues/5014
+[@ujovlado]: https://github.com/ujovlado
+[#4997]: https://github.com/caskroom/homebrew-cask/issues/4997
+[#4994]: https://github.com/caskroom/homebrew-cask/issues/4994
+[#4996]: https://github.com/caskroom/homebrew-cask/issues/4996
+[#4998]: https://github.com/caskroom/homebrew-cask/issues/4998
+[#4986]: https://github.com/caskroom/homebrew-cask/issues/4986
+
+## 0.37.0
+
+* __Casks__
+ - 12 Casks added (378 updated) by 30 contributors since 0.36.2
+ - 1620 total Casks
+* __Features__
+ - [#4868][], [#4913][] `x11_required` added to `caveats` mini-DSL
+ - [#4927][] `version` helper method added to `caveats` mini-DSL
+ - [#4963][], [#4965][] [#4980][] `brew cask doctor` improvements
+     - detect need for `brew cleanup`
+     - detect need for `brew cask cleanup`
+     - notice broken `$LOAD_PATH`
+ - [#4924][] suggested (not enforced) order for Cask stanzas
+* __Fixes__
+ - [#4969][] standardize the recommended upgrade command.
+   - `brew cleanup` and `brew cask cleanup` have been found to fix several bugs for users, including issues when upgrading to Yosemite
+ - [#4892][], [#4887][], [#4889][], [#4900][], [#4975][], [#4978][], [#4857][] more robust mounting and ejecting of disk images, resolving several bugs
+ - [#4970][], [#4888][], [#4883][], [#4890][], [#4948][], [#4982][] test suite improvements; sync with Homebrew changes; error messages
+ - [#4980][], [#4964][] internal: refactor `utils.rb` and `cleanup.rb`
+ - [#4882][] internal: update maintainers
+* __Documentation__
+ - 11 doc commits since 0.36.2 <3 [@laurent22][]
+* __Breaking Changes__
+ - none
+
+[#4868]: https://github.com/caskroom/homebrew-cask/issues/4868
+[#4913]: https://github.com/caskroom/homebrew-cask/issues/4913
+[@laurent22]: https://github.com/laurent22
+[#4857]: https://github.com/caskroom/homebrew-cask/issues/4857
+[#4980]: https://github.com/caskroom/homebrew-cask/issues/4980
+[#4978]: https://github.com/caskroom/homebrew-cask/issues/4978
+[#4982]: https://github.com/caskroom/homebrew-cask/issues/4982
+[#4975]: https://github.com/caskroom/homebrew-cask/issues/4975
+[#4965]: https://github.com/caskroom/homebrew-cask/issues/4965
+[#4970]: https://github.com/caskroom/homebrew-cask/issues/4970
+[#4969]: https://github.com/caskroom/homebrew-cask/issues/4969
+[#4963]: https://github.com/caskroom/homebrew-cask/issues/4963
+[#4964]: https://github.com/caskroom/homebrew-cask/issues/4964
+[#4948]: https://github.com/caskroom/homebrew-cask/issues/4948
+[#4924]: https://github.com/caskroom/homebrew-cask/issues/4924
+[#4927]: https://github.com/caskroom/homebrew-cask/issues/4927
+[#4900]: https://github.com/caskroom/homebrew-cask/issues/4900
+[#4890]: https://github.com/caskroom/homebrew-cask/issues/4890
+[#4889]: https://github.com/caskroom/homebrew-cask/issues/4889
+[#4883]: https://github.com/caskroom/homebrew-cask/issues/4883
+[#4882]: https://github.com/caskroom/homebrew-cask/issues/4882
+[#4887]: https://github.com/caskroom/homebrew-cask/issues/4887
+[#4888]: https://github.com/caskroom/homebrew-cask/issues/4888
+[#4892]: https://github.com/caskroom/homebrew-cask/issues/4892
+
+## 0.36.2
+
+* __Casks__
+ - 9 Casks added (38 updated) by 25 contributors since 0.36.1
+ - 1608 total Casks
+* __Features__
+ - [#4830][] add some detail when rescuing download errors
+* __Fixes__
+ - [#4881][] fix encoding typo
+ - [#4828][] better stubs for changelog docs, update contributor list
+* __Documentation__
+ - none
+* __Breaking Changes__
+ - none
+
+[#4881]: https://github.com/caskroom/homebrew-cask/issues/4881
+[#4830]: https://github.com/caskroom/homebrew-cask/issues/4830
+[#4828]: https://github.com/caskroom/homebrew-cask/issues/4828
+
+## 0.36.1
+
+* __Casks__
+ - 8 Casks added (121 updated) by 17 contributors since 0.36.0
+ - 1599 total Casks
+* __Features__
+ - [#4782][] reformat CLI help output <3 [@Zearin][]
+ - [#4807][] allow invocation of subcommand with full paths
+* __Fixes__
+ - [#4812][] Installation should fail if pkg file nonexistent
+ - [#4787][] Downgrade Cask install errors to warnings
+ - [#4804][] `uninstall` improvements
+     - Ruby 2.0 fix: coerce `:files` to Array in `uninstall`
+     - multiple `uninstall` stanza support
+     - improve `:signal` debug message
+     - `uninstall` `:files` in chunks
+     - more robust `:signal` directive in DSL
+* __Documentation__
+ - 3 doc commits since 0.36.0
+* __Breaking Changes__
+ - none
+
+[#4782]: https://github.com/caskroom/homebrew-cask/issues/4782
+[@Zearin]: https://github.com/Zearin
+[#4812]: https://github.com/caskroom/homebrew-cask/issues/4812
+[#4807]: https://github.com/caskroom/homebrew-cask/issues/4807
+[#4787]: https://github.com/caskroom/homebrew-cask/issues/4787
+[#4804]: https://github.com/caskroom/homebrew-cask/issues/4804
+
+## 0.36.0
+
+* __Casks__
+ - 113 Casks added (810 updated) by 132 contributors since 0.35.0
+ - 1591 total Casks
+* __Features__
+ - [#4732][], [#4760][], [#4735][], [#4739][], [#4733][] Support Ruby 2.0. Homebrew has switched for Mavericks and Yosemite.
+ - [#4730][] Add OS X 10.10 as a known OS version
+ - [#4370][] add `:signal` directive for `uninstall`
+ - [#4757][] prompt for HTTPS URLs in `brew cask create`
+ - [#4719][], [#4603][], [#4405][] additions to `brew cask doctor`: `$SHELL`, `$CHRUBY_VERSION`, `$PATH`, locale variables, Homebrew repo, Homebrew origin
+ - [#4299][], [#4715][] expand the `+` symbol in Cask names
+ - [#4729][] devscript: add `list_url_attributes_on_file`
+* __Fixes__
+ - [#4658][] improve Cask-source-resolution; don't prefer Cask files from the cwd
+ - [#4434][] major speedups for `brew cask list` and related commands
+ - [#4673][] improve error checking and messages on Cask load
+ - [#4650][] better handling for ordinary checksum-mismatch exceptions (no backtrace needed)
+ - [#4559][] better handling for ordinary download exceptions (no backtrace needed)
+ - [#4260][] handle Tap read error in `brew cask doctor`
+ - [#4659][] Fix incorrect permissions on brew-cask.rb
+ - [#4382][] don't use doubledash on `:launchctl` remove during `uninstall`
+ - [#4360][] append the `.rb` extension on `Cask::Source::Path`
+ - [#4300][] add exception for Cask name `bitcoin-core.rb`
+ - [#3328][] Re-enable failing "search" test on Travis
+ - [#4508][] shell script refactoring
+* __Documentation__
+ - 19 doc commits since 0.35.0  <3 [@wizonesolutions][], [@radeksimko][]
+* __Breaking Changes__
+ - [#4264][] Retire support for `sha1` stanza.
+ - [#4689][], [#4257][] retire support for `no_checksum` stanza, transitioning to `sha256 :no_check`
+
+[#4732]: https://github.com/caskroom/homebrew-cask/issues/4732
+[#4757]: https://github.com/caskroom/homebrew-cask/issues/4757
+[#4760]: https://github.com/caskroom/homebrew-cask/issues/4760
+[#4758]: https://github.com/caskroom/homebrew-cask/issues/4758
+[#4735]: https://github.com/caskroom/homebrew-cask/issues/4735
+[#4739]: https://github.com/caskroom/homebrew-cask/issues/4739
+[#4733]: https://github.com/caskroom/homebrew-cask/issues/4733
+[#4729]: https://github.com/caskroom/homebrew-cask/issues/4729
+[#4719]: https://github.com/caskroom/homebrew-cask/issues/4719
+[#4673]: https://github.com/caskroom/homebrew-cask/issues/4673
+[#4715]: https://github.com/caskroom/homebrew-cask/issues/4715
+[#4730]: https://github.com/caskroom/homebrew-cask/issues/4730
+[#4689]: https://github.com/caskroom/homebrew-cask/issues/4689
+[#4658]: https://github.com/caskroom/homebrew-cask/issues/4658
+[#4659]: https://github.com/caskroom/homebrew-cask/issues/4659
+[#4650]: https://github.com/caskroom/homebrew-cask/issues/4650
+[#4616]: https://github.com/caskroom/homebrew-cask/issues/4616
+[@radeksimko]: https://github.com/radeksimko
+[@wizonesolutions]: https://github.com/wizonesolutions
+[#4603]: https://github.com/caskroom/homebrew-cask/issues/4603
+[#4559]: https://github.com/caskroom/homebrew-cask/issues/4559
+[#4508]: https://github.com/caskroom/homebrew-cask/issues/4508
+[#4434]: https://github.com/caskroom/homebrew-cask/issues/4434
+[#4405]: https://github.com/caskroom/homebrew-cask/issues/4405
+[#4370]: https://github.com/caskroom/homebrew-cask/issues/4370
+[#4382]: https://github.com/caskroom/homebrew-cask/issues/4382
+[#4360]: https://github.com/caskroom/homebrew-cask/issues/4360
+[#4300]: https://github.com/caskroom/homebrew-cask/issues/4300
+[#4299]: https://github.com/caskroom/homebrew-cask/issues/4299
+[#4264]: https://github.com/caskroom/homebrew-cask/issues/4264
+[#3328]: https://github.com/caskroom/homebrew-cask/issues/3328
+[#4260]: https://github.com/caskroom/homebrew-cask/issues/4260
+[#4257]: https://github.com/caskroom/homebrew-cask/issues/4257
+
 ## 0.35.0
 
 * __Casks__
