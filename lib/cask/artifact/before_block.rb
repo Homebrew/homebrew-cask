@@ -5,10 +5,14 @@ class Cask::Artifact::BeforeBlock < Cask::Artifact::Base
   end
 
   def install_phase
-    @cask.artifacts[:before_install].each { |block| @cask.instance_eval &block }
+    @cask.artifacts[:before_install].each do |block|
+      Cask::Decorator.new(Cask::DSL::BeforeInstall, @cask).instance_eval &block
+    end
   end
 
   def uninstall_phase
-    @cask.artifacts[:before_uninstall].each { |block| @cask.instance_eval &block }
+    @cask.artifacts[:before_uninstall].each do |block|
+      Cask::Decorator.new(Cask::DSL::BeforeUninstall, @cask).instance_eval &block
+    end
   end
 end
