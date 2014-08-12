@@ -245,7 +245,7 @@ end
 
 def footer
   @footer ||= Set.new
-  @footer.to_a
+  @footer.to_a.sort
 end
 
 def add_to_footer(line)
