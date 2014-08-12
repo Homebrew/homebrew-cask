@@ -28,6 +28,8 @@ MAINTAINERS = %w[
                   goxberry
                   jimbojsb
                   radeksimko
+                  federicobond
+                  caskroom
                  ]
 
 CODE_PATHS = %w[
