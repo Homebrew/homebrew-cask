@@ -1,8 +1,8 @@
 class Smartgithg < Cask
-  version '6.0.4'
-  sha256 '97b15bceb6af2e36a4e179c32895e9def864388d49ee82a6768547b68241d1b7'
+  version '6.0.5'
+  sha256 '4fc8d5db3b373a613cf6be348f001adc48249ac4b37ec03c64b61ce500e0637c'
 
-  url 'http://www.syntevo.com/download/smartgithg/smartgithg-macosx-6_0_4.dmg'
+  url 'http://www.syntevo.com/download/smartgithg/smartgithg-macosx-6_0_5.dmg'
   homepage 'http://www.syntevo.com'
 
   link 'SmartGitHg 6.app'
