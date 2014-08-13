@@ -1,6 +1,6 @@
 class Atraci < Cask
-  version '0.5.2'
-  sha256 '13746212a40c2402482feda2ac70aa5016f435f8b3abaa1982965d5f4738006a'
+  version '0.6.0'
+  sha256 'dddff615d20ab13b52f5d37302c6bc730fda0a9e2b2c38d844276dd1c2d05433'
 
   url "https://github.com/Atraci/Atraci/raw/gh-pages/releases/#{version}/mac/Atraci.zip"
   homepage 'https://github.com/Atraci/Atraci'
