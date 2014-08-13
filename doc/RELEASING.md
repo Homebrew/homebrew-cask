@@ -94,16 +94,10 @@ written down than floating in a brain somewhere.
 	$ git tag -m "$NEW_RELEASE_TAG" "$NEW_RELEASE_TAG"
 	```
 
-13. Push that commit and the tag:
+13. Push that commit and the tag
 
 	```bash
-	$ git push && git push --follow-tags
-	```
-    Or, depending on your git configuration, you might need to append
-    `<repository> <refspec>` to the above command, for example:
-
-	```bash
-	$ git push upstream master && git push --follow-tags upstream master
+	$ git push https://github.com/caskroom/homebrew-cask master && git push https://github.com/caskroom/homebrew-cask tag "$NEW_RELEASE_TAG"
 	```
 
 14. Unset the shell variable `$NEW_RELEASE_TAG`; you don't need it anymore.
@@ -113,14 +107,21 @@ written down than floating in a brain somewhere.
 	```
 
 15. Open your browser to <https://github.com/caskroom/homebrew-cask/releases> .
-    Click the link for your newly-pushed tag. Click the "Edit Tag" button in
-    the top right corner of that page.
-16. Paste the markdown summary from `doc/CHANGELOG.md` into the textarea on that
-    page.  The `## <version number>` heading line from the changelog should
-    not be included.  The `Release title` field on the GitHub web form may
-    be left blank.
-17. Click "Publish Release".
-18. Rejoice! Have a :cookie:.
+    Click the link for your newly-pushed tag.  On the following page, click the
+    `Edit tag` button in the top right corner.  The next page contains a form
+    for the release information and changelog.
+16. On the release page, if the `Tag version` field does not auto-fill, manually
+    select the tag you just created.
+17. Paste the markdown summary for the new release from `doc/CHANGELOG.md`
+    into the main textarea.
+18. The `## <version number>` heading line from the changelog should not be
+    included in the pasted text.
+19. The `Release title` field may be left blank.
+20. Click `Publish Release`.
+21. Announce the release on IRC.
+22. Respond to any pending GitHub issues which may be resolved after users
+    upgrade.
+23. Rejoice! Have a :cookie:.
 
 ## Things to Consider
 
@@ -132,3 +133,16 @@ project we can still break backwards compatibility, but sometimes there might
 be decisions we can make about releasing to make things easier on our users.
 
 In general: go easy on the users!
+
+## Notes
+
+* In step number 13:
+
+  * The full URL is given for the repo because that does not change
+    depending on your local `.git/config`.  Equivalent commands may be
+   `git push`, `git push origin master`, or `git push upstream master`.
+
+  * We push the commits *before* pushing the tag to ensure that there are no
+    conflicts.  The default behavior of `git push --follow-tags` is to push
+    tags to the public repo before commits, which lead to the "lost" tag
+    v0.39.0.
