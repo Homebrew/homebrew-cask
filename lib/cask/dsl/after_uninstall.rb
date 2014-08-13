@@ -1,1 +1,1 @@
-module Cask::DSL::AfterUninstall; end
+class Cask::DSL::AfterUninstall < Cask::DSL::Base; end
