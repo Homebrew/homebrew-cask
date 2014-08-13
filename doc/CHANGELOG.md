@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## 0.39.3
+
+* __Casks__
+ - 0 Casks added, 1 removed, 6 updated by 7 contributors since 0.39.2
+ - 1791 total Casks
+* __Features__
+ - none
+* __Fixes__
+ - [#5754][] Fix `brew cask checklinks`, closes [#5752][]
+ - [#5749][], [#5750][] internal updates to release process
+* __Documentation__
+ - 1 doc commit since 0.39.2
+* __Breaking Changes__
+ - none
+
+[#5749]: https://github.com/caskroom/homebrew-cask/issues/5749
+[#5750]: https://github.com/caskroom/homebrew-cask/issues/5750
+[#5752]: https://github.com/caskroom/homebrew-cask/issues/5752
+[#5754]: https://github.com/caskroom/homebrew-cask/issues/5754
+
 ## 0.39.2
 
 * __Casks__
