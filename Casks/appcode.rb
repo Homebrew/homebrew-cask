@@ -1,8 +1,8 @@
 class Appcode < Cask
-  version '3.0.2'
-  sha256 'f6de20604045b3cf7bc398d5b9ead37b4dd02329385566745b098ce5ad048187'
+  version '3.0.4'
+  sha256 'c94d77401bd4551d40013db4e636fe21e1683d0d916be24cc713c69fe1a0a3e3'
 
-  url 'http://download.jetbrains.com/objc/AppCode-3.0.2.dmg'
+  url 'http://download.jetbrains.com/objc/AppCode-3.0.4.dmg'
   homepage 'http://www.jetbrains.com/objc/'
 
   link 'AppCode.app'
