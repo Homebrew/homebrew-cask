@@ -1,8 +1,8 @@
 class SeafileClient < Cask
-  version '3.0.3'
-  sha256 '27799acfab6555a78f2c735585d192918857a60e99af84be5a2e0b2fde98cf85'
+  version '3.1.5'
+  sha256 '25eedd712d57bcf94fd19ba2783d5f0278c3e95403ee07f300e17dabbd6bb75a'
 
-  url 'https://bitbucket.org/haiwen/seafile/downloads/seafile-client-3.0.3.dmg'
+  url 'https://bitbucket.org/haiwen/seafile/downloads/seafile-client-3.1.5.dmg'
   homepage 'http://seafile.com/'
 
   link 'Seafile Client.app'
