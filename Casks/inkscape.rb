@@ -1,8 +1,8 @@
 class Inkscape < Cask
-  version '0.48.2-1'
-  sha256 'dc45811c450687cf2a455decc047b27a53f79cc926cd3a3c57c60e757e5710f8'
+  version '0.48.5-2'
+  sha256 '72191861ee19a4e047d9084c7181a5ccf6e89d9b4410e197a98c2e1027e65e72'
 
-  url 'https://downloads.sourceforge.net/inkscape/Inkscape-0.48.2-1-SNOWLEOPARD.dmg'
+  url "http://downloads.sourceforge.net/inkscape/Inkscape-#{version}+X11.dmg"
   homepage 'http://inkscape.org'
 
   link 'Inkscape.app'
