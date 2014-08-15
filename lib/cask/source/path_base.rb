@@ -50,7 +50,7 @@ class Cask::Source::PathBase
 
       # simulate "require"
       begin
-        Cask.const_get(cask_class_name)
+        Object.const_get(cask_class_name)
       rescue NameError
         eval(cask_string, TOPLEVEL_BINDING)
       end
@@ -61,7 +61,7 @@ class Cask::Source::PathBase
       raise e
     end
     begin
-      Cask.const_get(cask_class_name).new
+      Object.const_get(cask_class_name).new
     rescue CaskError, StandardError, ScriptError => e
       # bug: e.message.concat doesn't work with CaskError exceptions
       e.message.concat(" while instantiating '#{cask_class_name}' from '#{path}'")
