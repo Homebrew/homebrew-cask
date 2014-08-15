@@ -1,6 +1,6 @@
 class Hive < Cask
-  version '1.3.3'
-  sha256 '62d10ca58f11b984221fdf04d4d1fd307f191275f04815a8f6ed1ec65c51a7cc'
+  version '1.3.4'
+  sha256 'bbf99210f9d359d1f75482abebd24eb7cb3103d437c47a0dbf107f4bf9dcd97b'
 
   url "https://github.com/hivewallet/hive-osx/releases/download/#{version}/Hive-#{version}.zip"
   appcast 'https://hivewallet.com/hive-osx-appcast.xml'
