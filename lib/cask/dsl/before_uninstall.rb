@@ -1,4 +1,4 @@
-module Cask::DSL::BeforeUninstall
+class Cask::DSL::BeforeUninstall < Cask::DSL::Base
   include Cask::DSL::Installed
 
   def remove_accessibility_access

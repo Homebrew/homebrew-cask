@@ -1,6 +1,6 @@
 module Cask::DSL::Installed
   def info_plist
-    "#{destination_path}/#{artifacts[:link].first.first}/Contents/Info.plist"
+    "#{destination_path}/#{@cask.artifacts[:link].first.first}/Contents/Info.plist"
   end
 
   def plist_exec(cmd)

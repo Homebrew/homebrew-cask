@@ -1,1 +1,1 @@
-module Cask::DSL::BeforeInstall; end
+class Cask::DSL::BeforeInstall < Cask::DSL::Base; end

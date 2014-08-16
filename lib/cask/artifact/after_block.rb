@@ -6,13 +6,13 @@ class Cask::Artifact::AfterBlock < Cask::Artifact::Base
 
   def install_phase
     @cask.artifacts[:after_install].each do |block|
-      Cask::Decorator.new(Cask::DSL::AfterInstall, @cask).instance_eval &block
+      Cask::DSL::AfterInstall.new(@cask).instance_eval &block
     end
   end
 
   def uninstall_phase
     @cask.artifacts[:after_uninstall].each do |block|
-      Cask::Decorator.new(Cask::DSL::AfterUninstall, @cask).instance_eval &block
+      Cask::DSL::AfterUninstall.new(@cask).instance_eval &block
     end
   end
 end

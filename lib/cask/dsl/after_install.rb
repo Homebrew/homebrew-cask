@@ -1,4 +1,4 @@
-module Cask::DSL::AfterInstall
+class Cask::DSL::AfterInstall < Cask::DSL::Base
   include Cask::DSL::Installed
 
   def suppress_move_to_applications
