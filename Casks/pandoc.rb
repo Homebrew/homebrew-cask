@@ -1,11 +1,11 @@
 class Pandoc < Cask
-  version '1.12.4'
-  sha256 '86324520853bc6e2ea0d36bf4d3bb4954ff494e99c04b29a5b66803e9cc50c89'
+  version '1.13'
+  sha256 'eee7e5187321c03da5e81de7b0abf31520d5e7430667ec2ce66a2ac0f172be59'
 
-  url 'https://github.com/jgm/pandoc/releases/download/1.12.4/pandoc-1.12.4-osx.pkg.zip'
+  url "https://github.com/jgm/pandoc/releases/download/#{version}/pandoc-#{version}-osx.pkg"
   homepage 'http://johnmacfarlane.net/pandoc'
 
-  install 'pandoc-1.12.4.pkg'
+  install "pandoc-#{version}-osx.pkg"
   uninstall :pkgutil => 'net.johnmacfarlane.pandoc'
   caveats do
     puts <<-EOS.undent
