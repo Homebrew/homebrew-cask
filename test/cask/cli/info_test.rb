@@ -57,6 +57,19 @@ describe Cask::CLI::Info do
     CLIOUTPUT
   end
 
+  it 'should not print caveats title if caveats block has no output' do
+    lambda {
+      Cask::CLI::Info.run('with-conditional-caveats')
+    }.must_output <<-CLIOUTPUT.undent
+      with-conditional-caveats: 1.2.3
+      http://example.com/local-caffeine
+      Not installed
+      https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/with-conditional-caveats.rb
+      ==> Contents
+        Caffeine.app (link)
+    CLIOUTPUT
+  end
+
   it "raises an exception when no cask is specified" do
     lambda {
       Cask::CLI::Info.run

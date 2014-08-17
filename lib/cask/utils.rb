@@ -3,6 +3,7 @@
 
 require 'yaml'
 require 'open3'
+require 'stringio'
 
 # monkeypatch Object - not a great idea
 class Object
@@ -51,6 +52,17 @@ class Pathname
     out << Cask::SystemCommand.run!('/usr/bin/du',
                                     :args => ['-hs', '--', self.to_s],
                                     :stderr => :silence).split("\t").first.strip
+  end
+end
+
+class Buffer < StringIO
+  def initialize(tty = false)
+    super()
+    @tty = tty
+  end
+
+  def tty?
+    @tty
   end
 end
 
