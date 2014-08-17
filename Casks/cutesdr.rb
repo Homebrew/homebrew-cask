@@ -1,8 +1,8 @@
 class Cutesdr < Cask
-  version '1.11'
-  sha256 'feabe63c84e0227c0bacbb4d5b22c6e269fe29f7ab834c28a656d9fb33cd10b3'
+  version '1.14'
+  sha256 'acac69ffe1fd36231d7c1948019fed4ff1eda59e8bfc88bd75797b875238a8ae'
 
-  url 'https://downloads.sourceforge.net/project/cutesdr/CuteSdr111.dmg'
+  url 'https://downloads.sourceforge.net/project/cutesdr/CuteSdr114.dmg'
   homepage 'http://sourceforge.net/projects/cutesdr'
 
   link 'cutesdr.app'
