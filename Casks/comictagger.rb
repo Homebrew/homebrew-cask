@@ -1,8 +1,8 @@
 class Comictagger < Cask
-  version '1.1.9-beta'
-  sha256 'd940b9fc5878f7d1e05e1b4e343ecf3e8ec5a5352180fc6c9792d58bb4469b89'
+  version '1.1.10-beta'
+  sha256 'f59514cfd15e64a8c595c4ad9707266b2c01d7744ca9f5836bee484954ce2fa6'
 
-  url 'https://comictagger.googlecode.com/files/ComicTagger-1.1.9-beta.dmg'
+  url 'https://comictagger.googlecode.com/files/ComicTagger-1.1.10-beta.dmg'
   homepage 'http://code.google.com/p/comictagger/'
 
   link 'ComicTagger.app'
