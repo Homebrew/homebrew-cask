@@ -1,8 +1,8 @@
 class Basictex < Cask
-  version '20140525'
-  sha256 '574132bcde10221c8e3be1f6ac27eee84393092dae96928bb70fc6cb6e27f9cf'
+  version '20140807'
+  sha256 '02b2c0160ddd7a74f25b2ea58d1a79deec9b2230ff41d0c45c1c3157fa607afc'
 
-  url 'http://mirror.ctan.org/systems/mac/mactex/basictex20140525.pkg'
+  url 'http://mirror.ctan.org/systems/mac/mactex/basictex20140807.pkg'
   homepage 'http://www.tug.org/mactex/morepackages.html'
 
   install 'mactex-basic.pkg'
