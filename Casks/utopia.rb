@@ -1,9 +1,9 @@
 class Utopia < Cask
-  version '2.4.0'
-  sha256 '22dd2f84b33218651b65ac965f72bd0dd08b66acb29b1724f4f1c44a77006c17'
+  version '2.4.2'
+  sha256 'c9c0f76a0a9035fe9a8405c6e32368ddf594aac86d742cd6aefdfa64d699e20a'
 
-  url 'http://utopiadocs.cs.man.ac.uk/files/Utopia-2.4.0-Mac.dmg'
-  homepage 'http://utopiadocs.cs.man.ac.uk'
+  url 'http://utopiadocs.com/files/Utopia-2.4.2-Mac.dmg'
+  homepage 'http://utopiadocs.com/'
 
   link 'Utopia.app'
 end
