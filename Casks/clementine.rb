@@ -1,8 +1,8 @@
 class Clementine < Cask
-  version '1.2.1'
-  sha256 '4453ea9a12b6b00e1c2087ffdc98fb9b53c2b760ef475d369417d944ac772f91'
+  version '1.2.2'
+  sha256 '7e3dac7fb184058e69afbf9cf68850debbbacdfbbd3023fbcdce7c159a2eed75'
 
-  url 'https://clementine-player.googlecode.com/files/clementine-1.2.1.dmg'
+  url 'https://github.com/clementine-player/Clementine/releases/download/1.2.2/clementine-1.2.2.dmg'
   appcast 'https://clementine-data.appspot.com/sparkle'
   homepage 'http://www.clementine-player.org/'
 
