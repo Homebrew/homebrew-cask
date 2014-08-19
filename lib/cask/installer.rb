@@ -7,15 +7,30 @@ class Cask::Installer
   def self.print_caveats(cask)
     odebug "Printing caveats"
     unless cask.caveats.empty?
-      ohai "Caveats"
-      cask.caveats.each do |caveat|
-        if caveat.respond_to?(:eval_and_print)
-          caveat.eval_and_print(cask)
-        else
-          puts caveat
+      output = capture_output do
+        cask.caveats.each do |caveat|
+          if caveat.respond_to?(:eval_and_print)
+            caveat.eval_and_print(cask)
+          else
+            puts caveat
+          end
         end
       end
+
+      unless output.empty?
+        ohai "Caveats"
+        puts output
+      end
     end
+  end
+
+  def self.capture_output(&block)
+    old_stdout = $stdout
+    $stdout = Buffer.new($stdout.tty?)
+    block.call
+    output = $stdout.string
+    $stdout = old_stdout
+    output
   end
 
   def install(force=false)
