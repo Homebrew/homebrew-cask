@@ -9,7 +9,7 @@ class TdToolbelt < Cask
   container_type :pkg
 
   before_install do
-    system 'mv', "#{caskroom_path}/#{version}/mac", "#{caskroom_path}/#{version}/#{title}.pkg"
+    system 'mv', "#{destination_path}/mac", "#{destination_path}/#{title}.pkg"
   end
 
   install "#{title}.pkg"
