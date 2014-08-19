@@ -1,8 +1,8 @@
 class Money < Cask
-  version '4.5.2'
-  sha256 '5937760ca804ccafbe640f74b2febb075afbd8cb81ad89f4ba7eb5ad53312359'
+  version '4.5.5'
+  sha256 '6676fcc086b7972a1a13c76b3b27898a1170d808cc570d262fe0bfb902c00582'
 
-  url 'http://download.jumsoft.com/Applications/Money/Money_4.5.2.zip'
+  url "http://download.jumsoft.com/Applications/Money/Money_#{version}.zip"
   appcast 'http://www.jumsoft.com/downloads/updates/money4.rss'
   homepage 'http://www.jumsoft.com/money/'
 
