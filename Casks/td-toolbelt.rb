@@ -5,16 +5,12 @@ class TdToolbelt < Cask
   url 'http://toolbelt.treasuredata.com/mac'
   homepage 'http://toolbelt.treasuredata.com/'
 
-  caskroom_only true
-  container_type :pkg
-
+  container_type :naked
   before_install do
-    system 'mv', "#{destination_path}/mac", "#{destination_path}/#{title}.pkg"
+    system '/bin/mv', '--', "#{destination_path}/mac", "#{destination_path}/td-toolbelt.pkg"
   end
 
-  install "#{title}.pkg"
-
-  uninstall :files => [
-    '/usr/local/td',
-  ]
+  install 'td-toolbelt.pkg'
+  uninstall :pkgutil => 'com.td.toolbelt'
+  # zap :pkgutil => 'org.ruby-lang.installer'
 end
