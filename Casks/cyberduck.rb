@@ -1,8 +1,8 @@
 class Cyberduck < Cask
-  version '4.4.5'
-  sha256 '48da4fc39c4456f427757ec46ca51923cb9f810179fe89e24e2eec4fe4ee62f6'
+  version '4.5.1'
+  sha256 '7446987c801aa8b41f97b1b90a35550760c7be7b65c0bee0d97a2549d2a25f34'
 
-  url 'https://update.cyberduck.io/Cyberduck-4.4.5.zip'
+  url "https://update.cyberduck.io/Cyberduck-#{version}.zip"
   appcast 'https://version.cyberduck.io/changelog.rss'
   homepage 'http://cyberduck.io/'
 
