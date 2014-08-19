@@ -1,8 +1,8 @@
 class Mysqlworkbench < Cask
-  version '6.1.6'
-  sha256 '0d0a48a55947920406e4ea3d08226ed6477dd2e4027f41ec1c3042226a2a7f4a'
+  version '6.1.7'
+  sha256 'b5c5d35df4b8099db639622aa49e22c51eb5127858cfa0d41339967554564e08'
 
-  url 'https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-6.1.6-osx-i686.dmg'
+  url 'https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-6.1.7-osx-i686.dmg'
   homepage 'http://www.mysql.com/products/workbench'
 
   link 'MySQLWorkbench.app'
