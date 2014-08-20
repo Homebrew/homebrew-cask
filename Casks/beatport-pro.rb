@@ -1,6 +1,6 @@
 class BeatportPro < Cask
-  version '2.0.5_124'
-  sha256 '8c1c7dd3bc180eef7f5d12f258241522a659aab1f6dcdc8f077cf151952d1ff2'
+  version '2.1.0_133'
+  sha256 'd668c8fb82be5a5402a2470f7f65df75d08bad84352a609ea694290e29df93e2'
 
   url "http://pro.beatport.com/mac/#{version}/beatportpro_#{version}.dmg"
   homepage 'http://pro.beatport.com/'
