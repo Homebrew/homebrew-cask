@@ -8,6 +8,6 @@ class ChangesMeter < Cask
   link 'Changes Meter.app'
   after_install do
     # Don't ask to move the app bundle to /Applications
-    system 'defaults write com.intuiware.ChangesMeter moveToApplicationsFolderAlertSuppress -bool true'
+    system %Q{/usr/bin/defaults write com.intuiware.ChangesMeter moveToApplicationsFolderAlertSuppress -bool true}
   end
 end
