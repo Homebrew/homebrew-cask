@@ -1,8 +1,8 @@
 class AndroidStudio < Cask
-  version '0.8.4 build-135.1295215'
-  sha256 '595d0f24bc02e3be3ff3d2e4dc7c623d3bbf5a57fd26b48c3613e9292e8fc5ec'
+  version '0.8.6 build-135.1339820'
+  sha256 '3a9f65434a2381019f4487481331f539a69b09b8ea81a8b4dfff9c6a126423f0'
 
-  url 'https://dl.google.com/dl/android/studio/ide-zips/0.8.4/android-studio-ide-135.1295215-mac.zip'
+  url 'http://dl.google.com/android/studio/install/0.8.6/android-studio-bundle-135.1339820-mac.dmg'
   homepage 'https://developer.android.com/sdk/installing/studio.html'
 
   link 'Android Studio.app'
