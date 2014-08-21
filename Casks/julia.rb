@@ -1,9 +1,9 @@
 class Julia < Cask
-  version '0.2.1'
-  sha256 '598c2e9051029ad8943d2de251602881fe183260df9afda8201f46587f1b9df4'
+  version '0.3.0'
+  sha256 'd84153bce860343a0cb9a94b654b7acae64392f787e4365793bc097a7b60f74f'
 
-  url 'https://s3.amazonaws.com/julialang/bin/osx/x64/0.2/julia-0.2.1-osx10.7+.dmg'
+  url 'https://s3.amazonaws.com/julialang/bin/osx/x64/0.3/julia-0.3.0-osx10.7+.dmg'
   homepage 'http://julialang.org/'
 
-  link 'Julia-0.2.1.app'
+  link 'Julia-0.3.0.app'
 end
