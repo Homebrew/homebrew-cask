@@ -1,8 +1,8 @@
 class Litecoin < Cask
-  version '0.8.6.2'
-  sha256 'dbe4a31306d7878ce913a4cfb5ba73f3acba9c4626847459dd4485738b2cd9c9'
+  version '0.8.7.2'
+  sha256 'c5931a4b7b4ca16ba1a7f7f23994f30e47d530f44f70de8a72e24345f04bed2d'
 
-  url 'https://download.litecoin.org/litecoin-0.8.6.2/macosx/Litecoin-Qt-0.8.6.2.dmg'
+  url "https://download.litecoin.org/litecoin-#{version}/macosx/Litecoin-Qt-#{version}.dmg"
   homepage 'https://litecoin.org/'
 
   link 'Litecoin-Qt.app'
