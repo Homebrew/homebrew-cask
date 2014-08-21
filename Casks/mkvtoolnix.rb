@@ -1,10 +1,10 @@
 class Mkvtoolnix < Cask
-  version '7.0.0'
-  sha256 'ae0f2dff515a3b82188b50b1358023ca3a738e34a9262775fb6de6f06e7c4b00'
+  version '7.1.0'
+  sha256 '33a26c756b4763c781913b2db20a1419d530aad6919e63b4f4aa931f442e2310'
 
-  url 'http://www.fosshub.com/download/Mkvtoolnix-7.0.0.dmg',
+  url 'http://www.fosshub.com/download/Mkvtoolnix-7.1.0.dmg',
 	:referer => 'http://www.fosshub.com/MKVToolNix.html'
   homepage 'http://www.bunkus.org/videotools/mkvtoolnix/'
 
-  link 'Mkvtoolnix-7.0.0.app'
+  link 'Mkvtoolnix-7.1.0.app'
 end
