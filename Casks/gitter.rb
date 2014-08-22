@@ -1,8 +1,8 @@
 class Gitter < Cask
-  version '1.141'
-  sha256 '6254727d8e7efe48cac27d6194a11a303fc5b61f4b93b9fc49061b11ea47dfac'
+  version '1.153'
+  sha256 '0f43013164d6c54d580d9bc2859d8325507a73f8db604b04cb42f04adefa6a8f'
 
-  url 'http://update.gitter.im/osx/Gitter-1.141.dmg'
+  url 'http://update.gitter.im/osx/Gitter-1.153.dmg'
   appcast 'http://update.gitter.im/osx/appcast.xml'
   homepage 'https://gitter.im/'
 
