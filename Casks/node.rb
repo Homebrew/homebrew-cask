@@ -1,6 +1,6 @@
 class Node < Cask
-  version '0.10.30'
-  sha256 'cb9d63ebf5030fb8e76b953f11a0fde04441d3a123ce5724afe342062e10e279'
+  version '0.10.31'
+  sha256 '450fc1ff7f3b716d01cec78826b3b708292327a34434871bafd5a05a3429756e'
 
   url "http://nodejs.org/dist/v#{version}/node-v#{version}.pkg"
   homepage 'http://nodejs.org'
