@@ -1,8 +1,8 @@
 class Ubersicht < Cask
-  version '0.2'
-  sha256 'dfa4824289107fd6d1da30cf3a5ea6ccab36e26b3fa34ddb3e32ac9c6bb514e7'
+  version '0.2.7'
+  sha256 '84a104490c06806205a30008472df92a983855f2bf8fba55ad4312d53518a362'
 
-  url 'http://tracesof.net/uebersicht/releases/Uebersicht-0.2.app.zip'
+  url 'http://tracesof.net/uebersicht/releases/Uebersicht-0.2.7.app.zip'
   homepage 'http://tracesof.net/uebersicht'
 
   link 'Übersicht.app'
