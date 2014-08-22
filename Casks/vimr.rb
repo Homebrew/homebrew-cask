@@ -1,8 +1,8 @@
 class Vimr < Cask
-  version '0.1.5'
-  sha256 'a2c49288f466317f13ef89f00b70c3531ca366153c8a97f417a633c59cd563c4'
+  version '0.1.6-18'
+  sha256 '176f5fdcb75d1d64eec96938363f7587cdff91b9122958d56d8a64a82f12e2b3'
 
-  url 'https://github.com/qvacua/vimr/releases/download/v0.1.5-17/VimR-0.1.5.tar.bz2'
+  url "https://github.com/qvacua/vimr/releases/download/v#{version}/VimR-#{version.gsub(/-.*/, '')}.tar.bz2"
   homepage 'http://vimr.org/'
 
   link 'VimR.app'
