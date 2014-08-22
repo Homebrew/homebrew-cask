@@ -2,6 +2,8 @@ class Cask::CLI::List < Cask::CLI::Base
   def self.run(*arguments)
     @options = Hash.new
     @options[:one] = true if arguments.delete('-1')
+    @options[:long] = true if arguments.delete('-l')
+
     if arguments.any?
       retval = list_casks(*arguments)
     else
@@ -51,6 +53,8 @@ class Cask::CLI::List < Cask::CLI::Base
     columns = installed_casks.map(&:to_s)
     if @options[:one]
       puts columns
+    elsif @options[:long]
+      puts Cask::SystemCommand.run!("/bin/ls", :args => ["-l", Cask.caskroom])
     else
       puts_columns columns
     end
