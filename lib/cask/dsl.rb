@@ -9,6 +9,7 @@ require 'cask/dsl/after_install'
 require 'cask/dsl/after_uninstall'
 require 'cask/dsl/before_install'
 require 'cask/dsl/before_uninstall'
+require 'cask/dsl/tags'
 
 module Cask::DSL
   def self.included(base)
@@ -110,7 +111,7 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'tags' stanza may only appear once")
       end
       @tags ||= begin
-        Cask::Tags.new(*args) unless args.empty?
+        Cask::DSL::Tags.new(*args) unless args.empty?
       rescue StandardError => e
         raise CaskInvalidError.new(self.title, e)
       end
