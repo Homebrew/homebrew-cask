@@ -1,6 +1,6 @@
 class Beardedspice < Cask
   version '0.2.1'
-  sha256 'f841adeaf7ee6cd649140e02d462e8497bf664fc3d195ead0539b47be1a8d76a'
+  sha256 '28233946d266a95c390f2393fd80fdd1a82c89499ebae7014d797c75cb28c110'
 
   url "https://github.com/beardedspice/beardedspice/raw/releases/BeardedSpice-#{version}.tar.gz"
   homepage 'http://www.beardedspice.com'
