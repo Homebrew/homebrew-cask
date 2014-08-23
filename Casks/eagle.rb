@@ -1,6 +1,6 @@
 class Eagle < Cask
-  version '6.6.0'
-  sha256 '91b37c4d223d22a46837d76507bbd1c77675ebe1bce5650c4b82a29266496e7a'
+  version '7.1.0'
+  sha256 '95a721bae751ea210fad390c9b414ec5e317332133072f08247b552e125ab2d5'
 
   url "ftp://ftp.cadsoft.de/eagle/program/#{version.gsub(/\.\d$/, '')}/eagle-mac-#{version}.zip"
   homepage 'http://www.cadsoftusa.com/'
