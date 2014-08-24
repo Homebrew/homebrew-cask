@@ -1,8 +1,8 @@
 class Dogecoin < Cask
-  version '1.7.1'
-  sha256 '04fe6443e5541c9c1d5a94ebdf2418e8dfe91a013322229c93e91090bda822bb'
+  version '1.8.0'
+  sha256 '905ae1eba55294dfd32b6e3ffb357010d04b564455434d918c863fe55c2be968'
 
-  url 'https://github.com/dogecoin/dogecoin/releases/download/v1.7.1/dogecoin-core-1.7.1-mac.zip'
+  url 'https://github.com/dogecoin/dogecoin/releases/download/v1.8.0/dogecoin-1.8.0-mac.zip'
   homepage 'http://dogecoin.com/'
 
   link 'Dogecoin-Qt.app'
