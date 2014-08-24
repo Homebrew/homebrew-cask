@@ -1,4 +1,4 @@
-class Cask::Tags
+class Cask::DSL::Tags
 
   # In the future we may want a different data structure
   # here to store limitations/validations on tag values.
