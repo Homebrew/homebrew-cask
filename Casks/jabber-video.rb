@@ -6,4 +6,8 @@ class JabberVideo < Cask
   homepage 'https://www.ciscojabbervideo.com/'
 
   link 'Jabber Video.app'
+
+  after_install do
+    system "/bin/rm", "#{destination_path}/Jabber Video.app/Contents/Resources/ForcedConfig.plist"
+  end
 end
