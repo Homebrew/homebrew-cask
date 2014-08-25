@@ -1,6 +1,6 @@
 class Xact < Cask
-  version '2.32'
-  sha256 '645ff112b59fad2f344b16551472529b589a31d06cb620fb94c54cb453273fa2'
+  version '2.33'
+  sha256 'bd828a3ed879442bf76564fc97c117bee8d49bddabaf3c066413f3dd9e27d714'
 
   url "http://xact.scottcbrown.org/xACT#{version}.zip"
   appcast 'http://xactupdate.scottcbrown.org/xACT.xml'
