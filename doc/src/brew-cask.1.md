@@ -138,6 +138,9 @@ in a future version.
   * `--input_methoddir=<path>`:
     Target location for Input Method links.  The default value is `~/Library/Input Methods`.
 
+  * `--internet_plugindir=<path>`:
+    Target location for Internet Plugin links.  The default value is `~/Library/Internet Plug-Ins`.
+
   * `--screen_saverdir=<path>`:
     Target location for Screen Saver links.  The default value is `~/Library/Screen Savers`.
 

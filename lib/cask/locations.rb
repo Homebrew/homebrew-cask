@@ -88,6 +88,14 @@ module Cask::Locations
       @input_methoddir = _input_methoddir
     end
 
+    def internet_plugindir
+      @internet_plugindir ||= Pathname.new('~/Library/Internet Plug-Ins').expand_path
+    end
+
+    def internet_plugindir=(_internet_plugindir)
+      @internet_plugindir = _internet_plugindir
+    end
+
     def screen_saverdir
       @screen_saverdir ||= Pathname.new('~/Library/Screen Savers').expand_path
     end
