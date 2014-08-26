@@ -203,6 +203,7 @@ module Cask::DSL
                                      :colorpicker,
                                      :binary,
                                      :input_method,
+                                     :internet_plugin,
                                      :screen_saver,
                                      :install,      # deprecated
                                      :pkg,

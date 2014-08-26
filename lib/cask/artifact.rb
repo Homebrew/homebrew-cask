@@ -20,6 +20,7 @@ require 'cask/artifact/widget'
 require 'cask/artifact/service'
 require 'cask/artifact/caskroom_only'
 require 'cask/artifact/input_method'
+require 'cask/artifact/internet_plugin'
 require 'cask/artifact/screen_saver'
 require 'cask/artifact/uninstall'
 require 'cask/artifact/zap'
@@ -45,6 +46,7 @@ module Cask::Artifact
       Cask::Artifact::CaskroomOnly,
       Cask::Artifact::Binary,
       Cask::Artifact::InputMethod,
+      Cask::Artifact::InternetPlugin,
       Cask::Artifact::ScreenSaver,
       Cask::Artifact::Uninstall,
       Cask::Artifact::AfterBlock,
