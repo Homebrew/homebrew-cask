@@ -1,6 +1,6 @@
 class Mailbox < Cask
   version '0.3.7'
-  sha256 'b1ed67b561cbcaa36700a9ad013c723254bc0a73b0d97ac0c1da6532f8d1af7a'
+  sha256 '6ca528ba67b2a02e351f144e430abd01214580f0ff0894ae16e7ec01b43f6031'
 
   url 'https://download.mailboxapp.com/Mailbox-Beta-0.3.7.dmg'
   homepage 'http://www.mailboxapp.com/'
