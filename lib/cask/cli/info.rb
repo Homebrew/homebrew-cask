@@ -31,7 +31,7 @@ PURPOSE
 
   def self.github_info(cask)
     title = cask.title
-    title = cask.class.all_titles.grep(/#{title}$/).first unless title =~ /\//
+    title = cask.class.all_titles.detect { |t| t.split("/").last == title } unless title =~ /\//
     return nil unless title.respond_to?(:length) and title.length > 0
     path_elements = title.split '/'
     if path_elements.count == 2
