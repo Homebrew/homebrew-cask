@@ -1,8 +1,8 @@
 class Wiznote < Cask
-  version '2.1.11'
-  sha256 '2902349c5131236bbb464bf247955b15234f20d883e84cb340099c32c5cb9a9d'
+  version '2.1.12'
+  sha256 '662887408953881fda4d5aef2f8577a09f495d1c11e6607af578b2418ed62e87'
 
-  url 'http://release.wiz.cn/wiznote-macos-2014-07-28.dmg'
+  url 'http://release.wiz.cn/wiznote-macos-2014-08-19.dmg'
   homepage 'http://www.wiznote.com/'
 
   link 'WizNote.app'
