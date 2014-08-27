@@ -1,4 +1,4 @@
-class Cask::License
+class Cask::DSL::License
 
   # a generic category can always be given as a license, so
   # category names should be given as both key and value
