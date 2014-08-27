@@ -1,4 +1,4 @@
-class EpubQuicklook < Cask
+class Epubquicklook < Cask
   version 'latest'
   sha256 :no_check
 
@@ -6,4 +6,5 @@ class EpubQuicklook < Cask
   homepage 'http://people.ict.usc.edu/~leuski/programming/epub-quickview.php'
 
   install 'EpubQuickLook.pkg'
+  uninstall :pkgutil => 'net.leuski.epubQuicklookPlugin.epub.pkg'
 end
