@@ -1,8 +1,8 @@
 class Forklift < Cask
-  version '2.6.1'
-  sha256 '2f08f8a85f62bc38a45f9156e548b293f5e2cb059fd9df4bc0299b6ee01efc64'
+  version '2.6.2'
+  sha256 '326ef943df71204940ce1de537e00ec07724d69012901f5a967fa54747215a34'
 
-  url 'http://download.binarynights.com/ForkLift2.6.1.zip'
+  url "http://download.binarynights.com/ForkLift#{version}.zip"
   appcast 'http://update.binarynights.com/ForkLift2/update.xml'
   homepage 'http://www.binarynights.com/'
 
