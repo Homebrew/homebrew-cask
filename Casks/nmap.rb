@@ -1,10 +1,10 @@
 class Nmap < Cask
-  version '6.46'
-  sha256 '03bd80a10f12fbf702766afe28fc99f953b68c74c4ec8b346349ae2a4fc65033'
+  version '6.47'
+  sha256 'eb277f24d4d77d323400c23c5e0b4296143524dc2e4ddbe844cc3c4c7fc878d2'
 
-  url 'http://nmap.org/dist/nmap-6.46.dmg'
+  url "http://nmap.org/dist/nmap-#{version}.dmg"
   homepage 'http://nmap.org/'
 
-  install 'nmap-6.46.mpkg'
-  uninstall :pkgutil => 'org.insecure.nmap646.*.pkg'
+  install "nmap-#{version}.mpkg"
+  uninstall :pkgutil => 'org.insecure.nmap*.pkg'
 end
