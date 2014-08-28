@@ -1,4 +1,4 @@
-class Cask::ConflictsWith
+class Cask::DSL::ConflictsWith
 
   VALID_KEYS = Set.new [
                         :formula,

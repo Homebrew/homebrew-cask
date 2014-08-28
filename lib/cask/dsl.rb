@@ -9,6 +9,11 @@ require 'cask/dsl/after_install'
 require 'cask/dsl/after_uninstall'
 require 'cask/dsl/before_install'
 require 'cask/dsl/before_uninstall'
+require 'cask/dsl/appcast'
+require 'cask/dsl/conflicts_with'
+require 'cask/dsl/depends_on'
+require 'cask/dsl/gpg'
+require 'cask/dsl/license'
 require 'cask/dsl/tags'
 
 module Cask::DSL
@@ -66,7 +71,7 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'appcast' stanza may only appear once")
       end
       @appcast ||= begin
-        Cask::Appcast.new(*args) unless args.empty?
+        Cask::DSL::Appcast.new(*args) unless args.empty?
       rescue StandardError => e
         raise CaskInvalidError.new(self.title, e)
       end
@@ -77,7 +82,7 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'gpg' stanza may only appear once")
       end
       @gpg ||= begin
-        Cask::Gpg.new(*args) unless args.empty?
+        Cask::DSL::Gpg.new(*args) unless args.empty?
       rescue StandardError => e
         raise CaskInvalidError.new(self.title, e)
       end
@@ -122,7 +127,7 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'license' stanza may only appear once")
       end
       @license ||= begin
-        Cask::License.new(arg) unless arg.nil?
+        Cask::DSL::License.new(arg) unless arg.nil?
       rescue StandardError => e
         raise CaskInvalidError.new(self.title, e)
       end
@@ -138,7 +143,7 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'depends_on' stanza may only appear once")
       end
       @depends_on ||= begin
-        Cask::DependsOn.new(*args) unless args.empty?
+        Cask::DSL::DependsOn.new(*args) unless args.empty?
       rescue StandardError => e
         raise CaskInvalidError.new(self.title, e)
       end
@@ -155,7 +160,7 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'conflicts_with' stanza may only appear once")
       end
       @conflicts_with ||= begin
-        Cask::ConflictsWith.new(*args) unless args.empty?
+        Cask::DSL::ConflictsWith.new(*args) unless args.empty?
       rescue StandardError => e
         raise CaskInvalidError.new(self.title, e)
       end
