@@ -1,11 +1,11 @@
 class Wireshark < Cask
-  version '1.10.8'
-  sha256 'dad35fa72d763b19cbd11ae9d339144d3b205c1b3575d51368d9b81c43f1b527'
+  version '1.12.0'
+  sha256 '2e4131fe32b72339cb8d8191e591711c16f4c5950657428810fdfce91b0dead2'
 
-  url 'https://www.wireshark.org/download/osx/Wireshark%201.10.8%20Intel%2064.dmg'
+  url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   homepage 'http://www.wireshark.org'
 
-  install 'Wireshark 1.10.8 Intel 64.pkg'
+  install "Wireshark #{version} Intel 64.pkg"
 
   caveats do
     x11_required
