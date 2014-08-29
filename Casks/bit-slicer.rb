@@ -1,8 +1,8 @@
 class BitSlicer < Cask
-  version '1.7.1'
-  sha256 '8ea485a718388e14394fbed63c2f2eb7c9cc20c8e5a3b8df82b6abeeb6f507cf'
+  version '1.7.2'
+  sha256 'd2860221b46ab5a3b27936ac71cba55aa9796a2bb336b4e130e2aceb5bac48d3'
 
-  url 'https://bitbucket.org/zorgiepoo/bit-slicer/downloads/Bit%20Slicer%201.7.1.zip'
+  url 'https://bitbucket.org/zorgiepoo/bit-slicer/downloads/Bit%20Slicer%201.7.2.zip'
   appcast 'http://zorg.tejat.net/bitslicer/update.php'
   homepage 'https://github.com/zorgiepoo/bit-slicer/'
 
