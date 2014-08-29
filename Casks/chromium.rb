@@ -1,6 +1,6 @@
 class Chromium < Cask
-  version '36.0.1985.125'
-  sha256 '2a645ee42f9a9d2bb22c03fe90b6f9082ebb6a8351697b7112b060ed6b766339'
+  version '36.0.1985.143'
+  sha256 'd1b4380ce3ab87ad2e414cfe8bdf7ea21779edeb711323a8969101d700209744'
 
   url "https://downloads.sourceforge.net/sourceforge/osxportableapps/ChromiumOSX_#{version}.dmg"
   appcast 'http://osxportableapps.sourceforge.net/chromium/chrcast.xml'
