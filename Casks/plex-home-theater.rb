@@ -1,12 +1,12 @@
 class PlexHomeTheater < Cask
-  version '1.2.1.314'
+  version '1.2.2.331'
 
   if Hardware::CPU.is_32_bit?
-    sha256 '87954578b4aa1ec93876115967b0da61d6fa47f3f1125743a55f688366d56860'
-    url 'http://downloads.plexapp.com/plex-home-theater/1.2.1.314-7cb0133e/PlexHomeTheater-1.2.1.314-7cb0133e-macosx-i386.zip'
+    sha256 'ac3a866d5227aa23b80acfef447c7a27366c11d77ecdd6d506afce013b6d986c'
+    url 'http://downloads.plexapp.com/plex-home-theater/1.2.2.331-2d6426d7/PlexHomeTheater-1.2.2.331-2d6426d7-macosx-i386.zip'
   else
-    sha256 '0e243ca7112cccd11f75bf799ff21a69413dc1eca6652f934ed456ac54fab5ae'
-    url 'http://downloads.plexapp.com/plex-home-theater/1.2.1.314-7cb0133e/PlexHomeTheater-1.2.1.314-7cb0133e-macosx-x86_64.zip'
+    sha256 '7a862680a04867db422c811c3afc1285c9b133e8a00f8fbe04a58a87b9e94cb5'
+    url 'http://downloads.plexapp.com/plex-home-theater/1.2.2.331-2d6426d7/PlexHomeTheater-1.2.2.331-2d6426d7-macosx-x86_64.zip'
   end
 
   homepage 'https://plex.tv'
