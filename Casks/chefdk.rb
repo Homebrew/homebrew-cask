@@ -1,8 +1,8 @@
 class Chefdk < Cask
-  version '0.2.0-2'
-  sha256 'dc6d36d847365e54cc36131b0bb087780c1d2800c4003410bb340a7f924fac83'
+  version '0.2.1-1'
+  sha256 'd4a6023e21c2c3cfb6773382ae7d6111e2de44ac1064aa2b1c0faddcd3bc1d13'
 
-  url 'https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.9/x86_64/chefdk-0.2.0-2.dmg'
+  url 'https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-0.2.1-1.dmg'
   homepage 'http://www.getchef.com/downloads/chef-dk/mac/'
 
   install 'chefdk.pkg'
