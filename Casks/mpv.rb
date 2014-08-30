@@ -1,8 +1,8 @@
 class Mpv < Cask
-  version '0.3.5'
-  sha256 '7502c74aebf0edf9e5fde1bbac1a3f34a5b9df49fec7dac72729153e646ef414'
+  version '0.5.1'
+  sha256 'b7ccc7d1c5ec1768b09329a24f548f6e00d418793cfaad6c3611561719ad4f03'
 
-  url 'https://github.com/mpv-player/mpv/releases/download/v0.3.5/mpv_v0.3.5_osx.zip'
+  url 'https://github.com/mpv-player/mpv/releases/download/v0.5.1/mpv_0.5.1_mac.tar.bz2'
   homepage 'http://mpv.io/'
 
   link 'mpv.app'
