@@ -1,40 +1,36 @@
 class Cask::DSL::Gpg
 
-  VALID_TYPES = Set.new [
-                         :id,   # first one is the default
-                         :url,
-                        ]
+  KEY_PARAMETERS = Set.new [
+                            :key_id,
+                            :key_url,
+                           ]
 
-  REQUIRED_PARAMETERS = [
-                         :signature
-                        ]
+  VALID_PARAMETERS = Set.new [ ]
+  VALID_PARAMETERS.merge KEY_PARAMETERS
 
-  attr_reader :key, :parameters, :type, :signature
+  attr_accessor *VALID_PARAMETERS
+  attr_accessor :signature
 
-  def initialize(key, parameters={})
+  def initialize(signature, parameters={})
     @parameters = parameters
-    REQUIRED_PARAMETERS.each do |param|
-      unless @parameters.key?(param) and not @parameters[param].nil?
-        raise "gpg #{param.inspect} parameter is required"
-      end
+    @signature = Cask::UnderscoreSupportingURI.parse(signature)
+    parameters.each do |hkey, hvalue|
+      raise "invalid 'gpg' parameter: '#{hkey.inspect}'" unless VALID_PARAMETERS.include?(hkey)
+      writer_method = "#{hkey}=".to_sym
+      hvalue = Cask::UnderscoreSupportingURI.parse(hvalue) if hkey == :key_url
+      send(writer_method, hvalue)
     end
-    @key       = key
-    @signature = Cask::UnderscoreSupportingURI.parse(@parameters[:signature])
-    @type      = @parameters[:type]
-    @type      = VALID_TYPES.first if @type.nil?
-    unless VALID_TYPES.include?(@type)
-      raise "invalid gpg type: '#{@type.inspect}'"
-    end
-    if @type == :url
-      @key = Cask::UnderscoreSupportingURI.parse(@key)
+    unless KEY_PARAMETERS.intersection(parameters.keys).length == 1
+      raise "'gpg' stanza must include exactly one of: '#{KEY_PARAMETERS.to_a}'"
     end
   end
 
   def to_yaml
-    [@key, @parameters].to_yaml
+    # bug, :key_url value is not represented as an instance of Cask::UnderscoreSupportingURI
+    [@signature, @parameters].to_yaml
   end
 
   def to_s
-    @key.to_s
+    @signature.to_s
   end
 end
