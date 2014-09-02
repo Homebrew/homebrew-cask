@@ -1,6 +1,6 @@
 class Obs < Cask
-  version '0.4.2'
-  sha256 'fc130505155e343fa27567e4536a230db798b3f3d710ac953f220baaca36cf73'
+  version '0.5.1'
+  sha256 'd1b6f787e169c33f7918962b50bf9e78c5afe49e47ffb8f7de9c1a1cb6ae9bf5'
 
   url "https://github.com/jp9000/obs-studio/releases/download/#{version}/OBSMac-#{version}.zip"
   homepage 'http://obsproject.com/'
