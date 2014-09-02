@@ -1,6 +1,6 @@
 class Textwrangler < Cask
-  version '4.5.9'
-  sha256 '2f498847bd53b9fce5f932de7bed5990cc9587d78abdf731e01bb2f33a9c0c5a'
+  version '4.5.10'
+  sha256 '52eb092165f86a7a6faddd9b97c75f9781ef13462fcdf9a16d919960db8613a8'
 
   url "http://ash.barebones.com/TextWrangler_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/TextWrangler.xml'
