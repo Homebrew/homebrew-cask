@@ -1,8 +1,8 @@
 class VmwareFusion < Cask
-  version '6.0.4-1887983'
-  sha256 'fe392850cd3578b101b3601f19704485fbb66ce1c5fa1367e464a0cf91e41a68'
+  version '7.0.0-2075534'
+  sha256 'd1e104112301a94108fe73605625f5b04b13c86c777c6f9e66e1b39621562322'
 
-  url 'https://download3.vmware.com/software/fusion/file/VMware-Fusion-6.0.4-1887983-light.dmg'
+  url 'https://download3.vmware.com/software/fusion/file/VMware-Fusion-7.0.0-2075534.dmg'
   homepage 'http://www.vmware.com/products/fusion/'
 
   binary 'VMware Fusion.app/Contents/Library/vmrun'
