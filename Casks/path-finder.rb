@@ -2,7 +2,7 @@ class PathFinder < Cask
   version 'latest'
   sha256 :no_check
 
-  url 'http://get.cocoatech.com/PF6_LION.zip'
+  url 'http://get.cocoatech.com/PF7.zip'
   homepage 'http://www.cocoatech.com/pathfinder/'
 
   link 'Path Finder.app'
