@@ -1,8 +1,8 @@
 class Catch < Cask
-  version '1.6'
-  sha256 '72e6606cddde97ef3c26a46d7178489560c45f11b136ec87844129101889fa6c'
+  version '1.8'
+  sha256 '0fd58d79ba869583406b7aa9ed707e4c77480417da9f09805f1497098fbbb138'
 
-  url 'https://github.com/mipstian/catch/releases/download/1.6/Catch-1.6.zip'
+  url 'https://github.com/mipstian/catch/releases/download/1.8/Catch-1.8.zip'
   appcast 'https://raw.github.com/mipstian/catch/master/update/appcast.xml'
   homepage 'http://www.giorgiocalderolla.com/index.html'
 
