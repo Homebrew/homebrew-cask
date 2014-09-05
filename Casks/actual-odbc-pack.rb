@@ -7,6 +7,6 @@ class ActualOdbcPack < Cask
 
   install 'Actual ODBC Pack.pkg'
 
-  uninstall :pkgutil => ["com.actualtechnologies.odbcdriver.*",
-                         "com.actualtechnologies.odbcmanager.pkg"]
+  uninstall :pkgutil => ['com.actualtechnologies.odbcdriver.*',
+                         'com.actualtechnologies.odbcmanager.pkg']
 end
