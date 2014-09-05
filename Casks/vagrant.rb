@@ -1,8 +1,8 @@
 class Vagrant < Cask
-  version '1.6.4'
-  sha256 '21f556c75765bce280eeb1ed5059b7c36f5397f0aec2393862ef0b21b03b16d8'
+  version '1.6.5'
+  sha256 'a94a16b9ed5f63460f64110738067aea029238f8d826c8dd90c5c34615a5be1e'
 
-  url 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.4.dmg'
+  url 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.5.dmg'
   homepage 'http://www.vagrantup.com'
 
   install 'Vagrant.pkg'
