@@ -1,4 +1,4 @@
-class Cask::DependsOn
+class Cask::DSL::DependsOn
 
   VALID_KEYS = Set.new [
                         :formula,

@@ -31,6 +31,7 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
                        :colorpicker,
                        :binary,
                        :input_method,
+                       :internet_plugin,
                        :screen_saver,
                        :install,
                        :caskroom_only,

@@ -1,6 +1,6 @@
 class Mp4tools < Cask
-  version '3.4.3'
-  sha256 'f57adc460f9a6e14ccf807b07cfe1eec0b07689e88e70139a625ab3002fb4289'
+  version '3.4.4'
+  sha256 'faddeb243aedf2387abff39bfd86b538053045f53596cc0650df63b110f0c087'
 
   url "http://www.emmgunn.com/downloads/mp4tools#{version}.zip",
       :referer => 'http://www.emmgunn.com/mp4tools/mp4toolsdownload.html'

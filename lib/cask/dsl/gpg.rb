@@ -1,4 +1,4 @@
-class Cask::Gpg
+class Cask::DSL::Gpg
 
   VALID_TYPES = Set.new [
                          :id,   # first one is the default

@@ -78,6 +78,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `colorpicker`      | yes                           |  relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
 | `font`             | yes                           |  relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
 | `input_method`     | yes                           |  relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
+| `internet_plugin`  | yes                           |  relative path to a service that should be linked into the `~/Library/Internet Plug-Ins` folder on installation
 | `prefpane`         | yes                           |  relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
 | `qlplugin`         | yes                           |  relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `screen_saver`     | yes                           |  relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation

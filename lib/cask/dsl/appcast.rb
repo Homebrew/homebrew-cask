@@ -1,4 +1,4 @@
-class Cask::Appcast
+class Cask::DSL::Appcast
 
   # note  :latest_version is considered experimental
   #       and may be removed
