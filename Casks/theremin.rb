@@ -1,10 +1,10 @@
 class Theremin < Cask
-  version '0.7'
-  sha256 '809d0f7527d072a43f33b9e1088dc2387e08bb1a3696bb60bfd8e82b8853102d'
+  version '0.6.2.3'
+  sha256 'd6dbb55c968eb735ad4b1e85579126965db052af451cfbec8f07ba74a7f27d1a'
 
-  url 'http://f.nn.lv/ms/l5/29/Theremin.app.zip'
+  url 'http://theremin.amd.co.at/0.6.2.3/Theremin_0.6.2.3.tbz'
   appcast 'http://theremin.amd.co.at/appcastProfileInfo.php'
-  homepage 'https://github.com/TheStalwart/Theremin'
+  homepage 'https://github.com/pweiskircher/Theremin'
 
   link 'Theremin.app'
 end
