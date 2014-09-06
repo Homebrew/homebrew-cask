@@ -1,6 +1,6 @@
 class Cyberduck < Cask
   version '4.5.2'
-  sha256 '94afaf396b4fddfb1bacbe9a8f648492949dde437579be273c0a752470d577c1'
+  sha256 'cff337f880b6ebbcc7f2e246b677fa5346fd225ae83289dca71ab35cf4b6eb8f'
 
   url "https://update.cyberduck.io/Cyberduck-#{version}.zip"
   appcast 'https://version.cyberduck.io/changelog.rss'
