@@ -567,8 +567,9 @@ This should be used sparingly: any method which is needed by two or more
 Casks should instead be rolled into the core.  Care must also be taken
 that such methods be very efficient.
 
+
 ## Revisions to the Cask DSL
 
-The Cask DSL is being revised and stabilized.  Changes are tracked in [cask_language_delta_1.0.md](cask_language_delta_1.0.md).
+The Cask DSL is being revised and stabilized.  Changes are tracked in [cask_language_deltas.md](cask_language_deltas.md).
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3
