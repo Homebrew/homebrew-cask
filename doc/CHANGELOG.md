@@ -1,5 +1,47 @@
 # CHANGELOG
 
+## 0.40.0
+
+* __Casks__
+ - 64 Casks added (162 updated) by 119 contributors since 0.39.3
+ - 1855 total Casks
+* __Features__
+ - [#5890][], [#4688][] **Version 0.40.0 marks the start of transition to DSL 1.0**
+ - [#5923][] add `internet_plugin` stanza
+ - [#6068][] change `container_type` stanza to extensible `container`
+ - [#5849][] Add support for long format in `list` command
+ - [#6071][] add NCSA OSS license type
+* __Fixes__
+ - [#5922][] Show correct GitHub URL for Casks with similar names
+ - [#5806][] Avoid printing `caveats` title when caveats output is empty
+ - [#5913][] Reload QuickLook on plugin uninstall
+ - [#5975][] Revise `gpg` stanza order and parameters
+ - [#5931][] re-org more DSL implementaion under `lib/cask/dsl`
+ - [#5891][] move `tags.rb` to `dsl/tags.rb`
+ - [09c5ea4][] Add repo name to Travis IRC output
+ - [#5790][] Fix Cask loading behavior to avoid namespace collision
+ - [#5769][] Remove `Cask::Decorator`
+* __Documentation__
+ - 1 doc commit since 0.39.3
+* __Breaking Changes__
+ - none
+
+[#5890]: https://github.com/caskroom/homebrew-cask/issues/5890
+[#4688]: https://github.com/caskroom/homebrew-cask/issues/4688
+[09c5ea4]: https://github.com/caskroom/homebrew-cask/commit/09c5ea431694d960a1bc05545292b9557db99141
+[#5769]: https://github.com/caskroom/homebrew-cask/issues/5769
+[#5790]: https://github.com/caskroom/homebrew-cask/issues/5790
+[#5806]: https://github.com/caskroom/homebrew-cask/issues/5806
+[#5849]: https://github.com/caskroom/homebrew-cask/issues/5849
+[#5891]: https://github.com/caskroom/homebrew-cask/issues/5891
+[#5913]: https://github.com/caskroom/homebrew-cask/issues/5913
+[#5922]: https://github.com/caskroom/homebrew-cask/issues/5922
+[#5923]: https://github.com/caskroom/homebrew-cask/issues/5923
+[#5931]: https://github.com/caskroom/homebrew-cask/issues/5931
+[#5975]: https://github.com/caskroom/homebrew-cask/issues/5975
+[#6068]: https://github.com/caskroom/homebrew-cask/issues/6068
+[#6071]: https://github.com/caskroom/homebrew-cask/issues/6071
+
 ## 0.39.3
 
 * __Casks__
