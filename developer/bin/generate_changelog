@@ -36,6 +36,7 @@ CODE_PATHS = %w[
                 bin
                 developer
                 lib
+                spec
                 test
                 brew-cask.rb
                 Rakefile
@@ -236,12 +237,17 @@ def header
  - N total Casks
 * __Features__
  - none
+* __Breaking Changes__
+ - none
 * __Fixes__
+ - none
+* __Internal Changes__
  - none
 * __Documentation__
  - N doc commits since ...
-* __Breaking Changes__
- - none
+* __Contributors__
+ - N new contributors since ...
+ - N total contributors
 EOT
 end
 
