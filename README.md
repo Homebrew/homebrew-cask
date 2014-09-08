@@ -1,3 +1,27 @@
+# NOTICE: The Cask syntax is changing! (8 Sep 2014)
+
+There will be a period of transition while we update the Cask DSL to use
+new forms described in #4688.
+
+The Cask DSL 1.0 will be documented in [CASK_LANGUAGE_REFERENCE.md](doc/CASK_LANGUAGE_REFERENCE.md)
+and [cask_language_delta_1.0.md](doc/cask_language_delta_1.0.md).
+
+Code to support most of the new DSL forms has been in release for several
+weeks; most users are already running forward compatible code<sup>1</sup>.
+
+The transition officially begins with version 0.40.0, released today, 8
+Sep 2014.  Cask definitions will also be changing.  If you experience an
+error when running Homebrew-cask, please run
+
+```bash
+$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+```
+
+<sup>1</sup> forward compatibility began with [v0.38.0](https://github.com/caskroom/homebrew-cask/releases/tag/v0.38.0), released 28 Jul 2014
+
+---------------------------------------
+
+
 # "To install, drag this icon..." no more!
 
 [![Build Status](https://travis-ci.org/caskroom/homebrew-cask.png?branch=master)](https://travis-ci.org/caskroom/homebrew-cask)
@@ -11,9 +35,8 @@ installation and management of GUI Mac applications such as Google Chrome and Ad
 Homebrew-cask provides a friendly homebrew-style CLI workflow for the
 administration of Mac applications distributed as binaries.
 
-It's implemented as a `homebrew` "[external
-command](https://github.com/mxcl/homebrew/wiki/External-Commands)" called
-`cask`.
+It's implemented as a `homebrew` "[external command](https://github.com/mxcl/homebrew/wiki/External-Commands)"
+called `cask`.
 
 ## Let's try it!
 ```sh
