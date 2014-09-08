@@ -24,6 +24,7 @@ class Cask::DSL::License
                     :eclipse       => :oss,
                     :gpl           => :oss,
                     :isc           => :oss,
+                    :ncsa          => :oss,
                     :mit           => :oss,
                     :mpl           => :oss,
                     :ofl           => :oss,
