@@ -11,6 +11,7 @@ require 'cask/dsl/before_install'
 require 'cask/dsl/before_uninstall'
 require 'cask/dsl/appcast'
 require 'cask/dsl/conflicts_with'
+require 'cask/dsl/container'
 require 'cask/dsl/depends_on'
 require 'cask/dsl/gpg'
 require 'cask/dsl/license'
@@ -40,6 +41,8 @@ module Cask::DSL
   def conflicts_with; self.class.conflicts_with; end
 
   def container_type; self.class.container_type; end
+
+  def container; self.class.container; end
 
   def tags; self.class.tags; end
 
@@ -93,6 +96,23 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'container_type' stanza may only appear once")
       end
       @container_type ||= type
+    end
+
+    def container(*args)
+      if @container and !args.empty?
+        # todo: remove this constraint, and instead merge multiple container stanzas
+        raise CaskInvalidError.new(self.title, "'container' stanza may only appear once")
+      end
+      @container ||= begin
+        Cask::DSL::Container.new(*args) unless args.empty?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
+      end
+      # todo: remove this backwards compatibility section after removing container_type
+      if @container.formula
+        @container_type ||= @container.formula
+      end
+      @container
     end
 
     SYMBOLIC_VERSIONS = Set.new [
