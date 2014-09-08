@@ -1,8 +1,9 @@
-class InvalidGpgParameter < TestCask
+class InvalidGpgConflictingKeys < TestCask
   url TestHelper.local_binary('caffeine.zip')
-  homepage 'http://example.com/invalid-gpg-type'
+  homepage 'http://example.com/invalid-gpg-conflicting-keys'
   gpg 'http://example.com/gpg-signature.asc',
-      :no_such_parameter => :value
+      :key_id => 'ID',
+      :key_url => 'http://example.com/gpg-key-url'
   sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
   version '1.2.3'
   link 'Caffeine.app'

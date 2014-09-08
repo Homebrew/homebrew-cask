@@ -1,8 +1,10 @@
-class InvalidGpgParameter < TestCask
+class InvalidGpgMultipleStanzas < TestCask
   url TestHelper.local_binary('caffeine.zip')
-  homepage 'http://example.com/invalid-gpg-type'
+  homepage 'http://example.com/invalid-gpg-multiple-stanzas'
   gpg 'http://example.com/gpg-signature.asc',
-      :no_such_parameter => :value
+      :key_id => 'ID'
+  gpg 'http://example.com/gpg-signature.asc',
+      :key_id => 'ID'
   sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
   version '1.2.3'
   link 'Caffeine.app'
