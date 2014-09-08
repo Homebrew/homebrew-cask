@@ -17,6 +17,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Install Stanza Details](#install-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
  * [Arbitrary Ruby Methods](#arbitrary-ruby-methods)
+ * [Revisions to the Cask DSL](#revisions-to-the-cask-dsl)
 
 
 ## Casks Are Ruby Classes
@@ -49,8 +50,8 @@ time.
 To make maintenance easier, the most-frequently-updated stanzas are usually
 placed at the top.  But that's a convention, not a rule.
 
-Exception: `do` blocks such as `after_install` may enclose a block of
-pure Ruby code.  Lines within that block follow a procedural (order-dependent)
+Exception: `do` blocks such as `preflight` may enclose a block of pure Ruby
+code.  Lines within that block follow a procedural (order-dependent)
 paradigm.
 
 
@@ -88,26 +89,30 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 
 ## Optional Stanzas
 
-| name                 | multiple occurrences allowed? | value       |
-| -------------------- |------------------------------ | ----------- |
-| `uninstall`          | yes                           | indicates what commands/scripts must be run to uninstall a pkg-based application (see also [Uninstall Stanza Details](#uninstall-stanza-details))
-| `nested_container`   | yes                           | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
-| `depends_on_formula` | yes                           | a list of Homebrew Formulae upon which this Cask depends
-| `caveats`            | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Details](#caveats-details))
-| `after_install`      | yes                           | a Ruby block containing postflight install operations
-| `after_uninstall`    | yes                           | a Ruby block containing postflight uninstall operations
-| `before_install`     | yes                           | a Ruby block containing preflight install operations (needed only in very rare cases)
-| `before_uninstall`   | yes                           | a Ruby block containing preflight uninstall operations (needed only in very rare cases)
-| `container_type`     | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`
+| name                   | multiple occurrences allowed? | value       |
+| ---------------------- |------------------------------ | ----------- |
+| `uninstall`            | yes                           | indicates what commands/scripts must be run to uninstall a pkg-based application (see also [Uninstall Stanza Details](#uninstall-stanza-details))
+| `nested_container`     | yes                           | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
+| `depends_on_formula`   | yes                           | a list of Homebrew Formulae upon which this Cask depends
+| `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Details](#caveats-details))
+| `preflight`            | yes                           | a Ruby block containing preflight install operations (needed only in very rare cases)
+| `postflight`           | yes                           | a Ruby block containing postflight install operations
+| `uninstall_preflight`  | yes                           | a Ruby block containing preflight uninstall operations (needed only in very rare cases)
+| `uninstall_postflight` | yes                           | a Ruby block containing postflight uninstall operations
+| `container_type`       | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`
 
 
 ## Legacy Stanzas
 
 The following stanzas are no longer in use.
 
-| name               | multiple occurrences allowed? | meaning     |
-| ------------------ |------------------------------ | ----------- |
-| `no_checksum`      | No                            | an obsolete alternative to `sha256 :no_check`
+| name                | multiple occurrences allowed? | meaning     |
+| ------------------- |------------------------------ | ----------- |
+| `no_checksum`       | no                            | an obsolete alternative to `sha256 :no_check`
+| `before_install`    | yes                           | an obsolete alternative to `preflight`
+| `after_install`     | yes                           | an obsolete alternative to `postflight`
+| `before_uninstall`  | yes                           | an obsolete alternative to `uninstall_preflight`
+| `after_uninstall`   | yes                           | an obsolete alternative to `uninstall_postflight`
 
 
 ## Conditional Statements
@@ -561,5 +566,9 @@ end
 This should be used sparingly: any method which is needed by two or more
 Casks should instead be rolled into the core.  Care must also be taken
 that such methods be very efficient.
+
+## Revisions to the Cask DSL
+
+The Cask DSL is being revised and stabilized.  Changes are tracked in [cask_language_delta_1.0.md](cask_language_delta_1.0.md).
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3
