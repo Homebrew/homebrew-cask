@@ -3,12 +3,17 @@
 This document lists changes to the Cask language from the pre-existing
 (unversioned) conventions to the Cask DSL 1.0 standard.
 
- * [Stub](#stub)
+ * [Name Changes](#name-changes)
  * [References](#references)
 
-## Stub
+## Name Changes
 
-**This is only a stub! Future documentation will appear here.**
+| old stanza name     | new stanza name
+| --------------------|---------
+| `before_install`    | `preflight`
+| `after_install`     | `postflight`
+| `before_uninstall`  | `uninstall_preflight`
+| `after_uninstall`   | `uninstall_postflight`
 
 ## References
 
