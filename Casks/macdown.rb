@@ -6,5 +6,5 @@ class Macdown < Cask
   appcast 'http://macdown.uranusjr.com/sparkle/macdown/appcast.xml'
   homepage 'http://macdown.uranusjr.com/'
 
-  link 'MacDown.app'
+  link 'Build/MacDown.app'
 end
