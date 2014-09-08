@@ -246,8 +246,6 @@ You can add Casks to your existing (or new) Taps: just create a directory named
 
 Manually add `/opt/homebrew-cask/Caskroom` as a Search Scope in Alfred's preferences or use `brew cask alfred link` to do the scope addition.
 
-**N.B.** `brew cask alfred link` is currently not compatible with the latest Alfred version (2.4), see [#5820](https://github.com/caskroom/homebrew-cask/issues/5820).
-
 Then applications become available in Alfred immediately after a `brew cask install`. Your fingertips will thank you.
 
 Oh, and you can `brew cask install alfred` too! Not bad, eh?
