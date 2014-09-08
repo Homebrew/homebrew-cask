@@ -1,6 +1,6 @@
 class Owncloud < Cask
-  version '1.6.2.551'
-  sha256 'c90b75be7c2645e6e8f26d31403bb7cdb76729e94c0b0a2d3c277d9c5181af17'
+  version '1.6.3.878'
+  sha256 'ab70a5964071f40c8619429ebde212486e894ca198dd2fbd6148a9c2c2d75990'
 
   url "https://download.owncloud.com/desktop/stable/ownCloud-#{version}.dmg"
   homepage 'http://owncloud.com'
