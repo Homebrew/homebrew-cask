@@ -1,8 +1,8 @@
 class AudioMate < Cask
-  version '2.0.4'
-  sha256 'dd66b67ff57c90d7f2c62c46f6a4049f5cecfbf1d5eb4fd502c447c9f0bef28b'
+  version '2.0.6'
+  sha256 '4513e2313950a0a43c1f42e6b27ae274e3a09977e236bde9109ae9382aba8794'
 
-  url 'https://s3.amazonaws.com/apps-leftbee/products/downloadables/000/000/005/original/AudioMate-v2.0.4.dmg'
+  url "https://s3.amazonaws.com/apps-leftbee/products/downloadables/000/000/005/original/AudioMate-v#{version}.dmg"
   homepage 'http://audiomateapp.com/'
 
   link 'AudioMate.app'
