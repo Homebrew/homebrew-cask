@@ -15,7 +15,7 @@ class ProgrammerDvorak < Cask
                         '/private/var/folders/*/*/-Caches-/com.apple.IntlDataCache.le*'
                       ]
   if MacOS.version >= :mavericks
-    after_install do
+    postflight do
       # clear the layout cache before new layouts are recognized
       # note: this will not work because the glob will not be expanded
       system '/bin/rm', '-f', '--', '/System/Library/Caches/com.apple.IntlDataCache.le*'
