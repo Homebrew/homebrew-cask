@@ -6,7 +6,7 @@ class Jxplorer < Cask
   homepage 'http://jxplorer.org'
 
   link 'jxplorer-3.3.1.app'
-  after_install do
+  postflight do
     system '/bin/chmod', '--', 'a+x', "#{destination_path}/jxplorer-3.3.1.app/Contents/MacOS/jxplorer"
   end
 end
