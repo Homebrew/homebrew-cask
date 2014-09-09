@@ -7,7 +7,7 @@ class AdobeAir < Cask
 
   caskroom_only true
 
-  after_install do
+  postflight do
     system '/usr/bin/sudo', '-E', '--',
       "#{destination_path}/Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer", '-silent'
   end
