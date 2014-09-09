@@ -9,7 +9,7 @@ class AdobeArh < Cask
   binary 'arh'
   container_type :naked
 
-  after_install do
+  postflight do
     system '/bin/chmod', '--', '755', "#{destination_path}/arh"
   end
 
