@@ -1,4 +1,7 @@
 class Cask::Installer
+
+  PERSISTENT_METADATA_SUBDIRS = [ 'gpg' ]
+
   def initialize(cask, command=Cask::SystemCommand)
     @cask = cask
     @command = command
@@ -137,7 +140,9 @@ class Cask::Installer
 
   def purge_files
     odebug "Purging files"
-    if @cask.destination_path.exist?
+
+    # versioned staged distribution
+    if @cask.destination_path.respond_to?(:rmtree) and @cask.destination_path.exist?
       begin
         @cask.destination_path.rmtree
       rescue
@@ -149,6 +154,20 @@ class Cask::Installer
         end
       end
     end
+
+    if @cask.metadata_versioned_container_path.respond_to?(:children) and @cask.metadata_versioned_container_path.exist?
+      @cask.metadata_versioned_container_path.children.each do |subdir|
+        subdir.rmtree unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
+      end
+    end
+    if @cask.metadata_versioned_container_path.respond_to?(:rmdir_if_possible)
+      @cask.metadata_versioned_container_path.rmdir_if_possible
+    end
+    if @cask.metadata_master_container_path.respond_to?(:rmdir_if_possible)
+      @cask.metadata_master_container_path.rmdir_if_possible
+    end
+
+    # toplevel staged distribution
     @cask.caskroom_path.rmdir_if_possible
   end
 end

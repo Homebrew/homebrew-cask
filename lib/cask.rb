@@ -126,6 +126,17 @@ class Cask
     self.name.gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase
   end
 
+  def self.nowstamp_metadata_path(container_path)
+    @timenow ||= Time.now.gmtime
+    if container_path.respond_to?(:join)
+      precision = 3
+      timestamp = @timenow.strftime('%Y%m%d%H%M%S')
+      fraction = ("%.#{precision}f" % (@timenow.to_f - @timenow.to_i))[1..-1]
+      timestamp.concat(fraction)
+      container_path.join(timestamp)
+    end
+  end
+
   attr_reader :title
   def initialize(title=self.class.title)
     @title = title
@@ -136,7 +147,53 @@ class Cask
   end
 
   def destination_path
-    caskroom_path.join(version.to_s)
+    cask_version = version ? version : :unknown
+    caskroom_path.join(cask_version.to_s)
+  end
+
+  def metadata_master_container_path
+    caskroom_path.join(self.class.metadata_subdir)
+  end
+
+  def metadata_versioned_container_path
+    cask_version = version ? version : :unknown
+    metadata_master_container_path.join(cask_version.to_s)
+  end
+
+  def metadata_path(timestamp=:latest, create=false)
+    return nil unless metadata_versioned_container_path.respond_to?(:join)
+    if create and timestamp == :latest
+      raise CaskError.new('Cannot create metadata path when timestamp is :latest')
+    end
+    if timestamp == :latest
+      path = Pathname.glob(metadata_versioned_container_path.join('*')).sort.last
+    elsif timestamp == :now
+      path = self.class.nowstamp_metadata_path(metadata_versioned_container_path)
+    else
+      path = metadata_versioned_container_path.join(timestamp)
+    end
+    if create
+      odebug "Creating metadata directory #{path}"
+      FileUtils.mkdir_p path
+    end
+    path
+  end
+
+  def metadata_subdir(leaf, timestamp=:latest, create=false)
+    if create and timestamp == :latest
+      raise CaskError.new('Cannot create metadata subdir when timestamp is :latest')
+    end
+    unless leaf.respond_to?(:length) and leaf.length > 0
+      raise CaskError.new('Cannot create metadata subdir for empty leaf')
+    end
+    parent = metadata_path(timestamp, create)
+    return nil unless parent.respond_to?(:join)
+    subdir = parent.join(leaf)
+    if create
+      odebug "Creating metadata subdirectory #{subdir}"
+      FileUtils.mkdir_p subdir
+    end
+    subdir
   end
 
   def installed?
