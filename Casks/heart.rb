@@ -7,7 +7,7 @@ class Heart < Cask
 
   screen_saver 'presstube-heart.app/Contents/Resources/Presstube - Heart.saver'
 
-  after_install do
+  postflight do
     system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName Heart (Presstube)', "#{destination_path}/presstube-heart.app/Contents/Resources/Presstube - Heart.saver/Contents/Info.plist"
   end
 
