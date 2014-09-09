@@ -5,7 +5,7 @@ class PrivateInternetAccess < Cask
   url 'https://www.privateinternetaccess.com/installer/installer_osx.dmg'
   homepage 'https://www.privateinternetaccess.com'
 
-  after_install do
+  postflight do
       system '/usr/bin/sudo', '-E', '--',
           "#{destination_path}/Private Internet Access Installer.app/Contents/MacOS/runner.sh"
       system '/usr/bin/sudo', '-E', '--',
