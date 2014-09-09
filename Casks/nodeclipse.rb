@@ -5,7 +5,7 @@ class Nodeclipse < Cask
   url 'https://downloads.sourceforge.net/sourceforge/nodeclipse/Enide-Studio-2014-011-20140228-macosx-cocoa-x86_64.zip'
   homepage 'http://www.nodeclipse.org/'
 
-  before_install do
+  preflight do
     system '/bin/mv', '--', destination_path.join('eclipse/Eclipse.app'), destination_path.join('eclipse/Nodeclipse.app')
   end
   link 'eclipse/Nodeclipse.app'
