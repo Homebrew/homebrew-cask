@@ -7,7 +7,7 @@ class Openarena < Cask
 
   link 'openarena-0.8.8/OpenArena.app'
 
-  after_install do
+  postflight do
     system '/bin/chmod', '--', '755', "#{destination_path}/openarena-0.8.8/OpenArena.app/Contents/MacOS/openarena.ub"
   end
 end
