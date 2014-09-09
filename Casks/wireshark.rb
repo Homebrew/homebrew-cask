@@ -11,7 +11,7 @@ class Wireshark < Cask
     x11_required
   end
 
-  after_install do
+  postflight do
     if Process.euid == 0 then
       ohai "Note:"
       puts <<-EOS.undent
