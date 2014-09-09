@@ -6,7 +6,7 @@ class Gpgtools < Cask
   homepage 'https://gpgtools.org/index.html'
 
   install 'Install.pkg'
-  after_install do
+  postflight do
     system '/usr/bin/sudo', '-E', '--',
            '/usr/local/MacGPG2/libexec/fixGpgHome', Etc.getpwuid(Process.euid).name,
                                                     ENV['GNUPGHOME'] ? ENV['GNUPGHOME'] : "#{ENV['HOME']}/.gnupg"
@@ -35,7 +35,7 @@ class Gpgtools < Cask
                        '/Library/PreferencePanes/GPGPreferences.prefPane',
                        "ENV['HOME']/Library/PreferencePanes/GPGPreferences.prefPane",
                       ]
-  after_uninstall do
+  uninstall_postflight do
     system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg2)"      =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg2'
     system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg)"       =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg'
     system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg-agent)" =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg-agent'
