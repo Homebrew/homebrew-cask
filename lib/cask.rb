@@ -55,7 +55,7 @@ class Cask
       ohai "We'll set permissions properly so we won't need sudo in the future"
       current_user = Etc.getpwuid(Process.euid).name
       if caskroom.parent.writable?
-        system '/bin/mkdir', caskroom
+        system '/bin/mkdir', '--', caskroom
       else
         toplevel_dir = caskroom
         toplevel_dir = toplevel_dir.parent until toplevel_dir.parent.root?
