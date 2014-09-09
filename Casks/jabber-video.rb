@@ -7,7 +7,7 @@ class JabberVideo < Cask
 
   link 'Jabber Video.app'
 
-  after_install do
+  postflight do
     system "/bin/rm", "#{destination_path}/Jabber Video.app/Contents/Resources/ForcedConfig.plist"
   end
 end
