@@ -1,6 +1,6 @@
 class Pandoc < Cask
-  version '1.13'
-  sha256 'eee7e5187321c03da5e81de7b0abf31520d5e7430667ec2ce66a2ac0f172be59'
+  version '1.13.1'
+  sha256 'd82547f5a6838074381a8e97f0f27984bbdb527e211320fc78791d9a64479b2f'
 
   url "https://github.com/jgm/pandoc/releases/download/#{version}/pandoc-#{version}-osx.pkg"
   homepage 'http://johnmacfarlane.net/pandoc'
