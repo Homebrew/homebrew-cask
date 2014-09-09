@@ -7,7 +7,7 @@ class MacupdateDesktop < Cask
   appcast 'https://www.macupdate.com/desktop/updates.xml'
 
   link 'MacUpdate Desktop.app'
-  after_install do
+  postflight do
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'com.macupdate.desktop6', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
