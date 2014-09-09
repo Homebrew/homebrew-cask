@@ -79,9 +79,10 @@ names, and other aspects of this manual are still subject to change.
     <Cask> is usually the name of a Cask as returned by `brew cask search`,
     but see [OTHER WAYS TO SPECIFY A CASK][] for variations.
 
-  * `list` or `ls` [-1] [<Casks>]:
+  * `list` or `ls` [-1 | -l] [<Casks>]:
     Without any arguments, list all installed Casks.  With `-1`, always
-    format the output in a single column.
+    format the output in a single column.  With `-l`, give a more detailed
+    listing.
 
     If <Casks> are given, list the installed files for <Casks>.
 
