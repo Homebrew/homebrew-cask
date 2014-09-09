@@ -8,7 +8,7 @@ class Parse < Cask
   binary 'parse'
   container_type :naked
 
-  after_install do
+  postflight do
     system "chmod", "755", "#{destination_path}/#{title}"
   end
 end

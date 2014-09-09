@@ -7,7 +7,7 @@ class Rubymine < Cask
 
   link 'RubyMine.app'
 
-  after_install do
+  postflight do
     system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/RubyMine.app/Contents/Info.plist"
   end
 end

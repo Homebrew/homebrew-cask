@@ -8,7 +8,7 @@ class Xquartz < Cask
 
   install 'XQuartz.pkg'
 
-  after_install do
+  postflight do
     Pathname.new(File.expand_path('~')).join('Library', 'Logs').mkpath
 
     # Set default path to X11 = avoid the need of manual setup

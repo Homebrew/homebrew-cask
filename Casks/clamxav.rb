@@ -7,7 +7,7 @@ class Clamxav < Cask
   homepage 'http://www.clamxav.com/'
 
   link 'ClamXav.app'
-  after_install do
+  postflight do
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'uk.co.markallan.clamxav', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end

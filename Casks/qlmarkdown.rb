@@ -9,7 +9,7 @@ class Qlmarkdown < Cask
   # not needed for version 1.3.2.  We could add an option to the main
   # DSL to identify such containers and generate a target directory.
   container_type :naked
-  before_install do
+  preflight do
     system '/usr/bin/ditto', '-xk', '--', "#{destination_path}/QLMarkdown.qlgenerator.zip", "#{destination_path}/QLMarkdown.qlgenerator"
   end
 

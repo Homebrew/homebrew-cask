@@ -7,7 +7,7 @@ class PdExtended < Cask
 
   link 'Pd-extended.app'
 
-  before_uninstall do
+  uninstall_preflight do
     system '/bin/chmod', '-R', '--', 'u+w', "#{destination_path}/Pd-extended.app"
   end
 end

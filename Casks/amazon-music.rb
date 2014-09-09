@@ -7,7 +7,7 @@ class AmazonMusic < Cask
 
   caskroom_only true
 
-  after_install do
+  postflight do
     system '/usr/bin/sudo', '-E', '--',
       "#{destination_path}/Amazon Music Installer.app/Contents/MacOS/osx-intel"
   end

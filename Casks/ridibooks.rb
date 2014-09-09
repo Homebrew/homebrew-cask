@@ -6,7 +6,7 @@ class Ridibooks < Cask
   homepage 'http://ridibooks.com/support/introduce_appdown'
 
   container_type :naked
-  before_install do
+  preflight do
     system '/bin/mv', '--', destination_path.join('getapp'), destination_path.join('ridibooks.pkg')
   end
   install 'ridibooks.pkg'

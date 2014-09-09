@@ -7,7 +7,7 @@ class Voicemac < Cask
   homepage 'https://mrgeckosmedia.com/applications/info/VoiceMac'
 
   link 'VoiceMac/VoiceMac.app'
-  after_install do
+  postflight do
     system '/bin/chmod', '--', 'a+r', "#{destination_path}/VoiceMac/VoiceMac.app/Contents/Info.plist"
   end
 end
