@@ -6,7 +6,7 @@ class TdToolbelt < Cask
   homepage 'http://toolbelt.treasuredata.com/'
 
   container_type :naked
-  before_install do
+  preflight do
     system '/bin/mv', '--', "#{destination_path}/mac", "#{destination_path}/td-toolbelt.pkg"
   end
 
