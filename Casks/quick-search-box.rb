@@ -6,7 +6,7 @@ class QuickSearchBox < Cask
   homepage 'http://www.google.com/quicksearchbox/'
 
   link 'Quick Search Box.app'
-  after_install do
+  postflight do
     system '/bin/chmod', '-R', '--', 'u+w', destination_path
   end
 end
