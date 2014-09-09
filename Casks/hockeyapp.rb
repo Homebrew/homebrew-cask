@@ -9,7 +9,7 @@ class Hockeyapp < Cask
   link 'HockeyApp.app'
   binary 'HockeyApp.app/Contents/Resources/puck'
 
-  after_install do
+  postflight do
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'com.hockeyapp.mac', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
