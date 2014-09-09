@@ -7,4 +7,3 @@ class Clion < Cask
 
   link 'CLion EAP.app'
 end
-
