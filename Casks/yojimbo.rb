@@ -6,7 +6,7 @@ class Yojimbo < Cask
   homepage 'http://www.barebones.com/products/yojimbo/'
 
   link 'Yojimbo.app'
-  after_install do
+  postflight do
     system '/usr/bin/defaults', 'write', 'com.barebones.yojimbo4', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
 end
