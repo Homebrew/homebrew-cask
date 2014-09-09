@@ -8,7 +8,7 @@ class Cheatsheet < Cask
 
   link 'CheatSheet.app'
 
-  after_install do
+  postflight do
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'com.mediaatelier.CheatSheet', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
