@@ -7,7 +7,7 @@ class IntellijIdea < Cask
 
   link 'IntelliJ IDEA 13.app'
 
-  after_install do
+  postflight do
     system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/IntelliJ IDEA 13.app/Contents/Info.plist"
   end
 
