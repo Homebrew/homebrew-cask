@@ -5,6 +5,6 @@ class Doublecommand < Cask
   url 'http://doublecommand.sourceforge.net/files/DoubleCommand-1.7.dmg'
   homepage 'http://doublecommand.sourceforge.net'
 
-  install 'DoubleCommand-1.7.pkg'
+  pkg 'DoubleCommand-1.7.pkg'
   uninstall :script => '/Library/StartupItems/DoubleCommand/uninstall.command'
 end
