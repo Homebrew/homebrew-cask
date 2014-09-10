@@ -5,6 +5,6 @@ class RemoteDesktopConnection < Cask
   url 'http://download.microsoft.com/download/C/F/0/CF0AE39A-3307-4D39-9D50-58E699C91B2F/RDC_2.1.1_ALL.dmg'
   homepage 'http://www.microsoft.com/en-us/download/details.aspx?id=18140'
 
-  install 'RDC Installer.mpkg'
+  pkg 'RDC Installer.mpkg'
   uninstall :pkgutil => 'com.microsoft.rdc.all.*'
 end
