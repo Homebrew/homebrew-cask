@@ -5,6 +5,6 @@ class Callnote < Cask
   url 'http://callnote.kandasoft.com/callnote-premium-install-2.3.7.pkg'
   homepage 'http://www.kandasoft.com/home/kanda-apps/skype-call-recorder.html'
 
-  install 'callnote-premium-install-2.3.7.pkg'
+  pkg 'callnote-premium-install-2.3.7.pkg'
   uninstall :pkgutil => 'callnote-pro'
 end
