@@ -5,6 +5,6 @@ class TransmissionRemoteGui < Cask
   url 'https://transmisson-remote-gui.googlecode.com/files/transgui-5.0.1.dmg'
   homepage 'https://code.google.com/p/transmisson-remote-gui/'
 
-  install 'transgui.pkg'
+  pkg 'transgui.pkg'
   uninstall :pkgutil => 'com.transgui.*'
 end
