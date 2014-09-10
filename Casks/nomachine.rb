@@ -5,7 +5,7 @@ class Nomachine < Cask
   url "http://download.nomachine.com/download/#{version.split('.')[0..1].join('.')}/MacOSX/nomachine_#{version}.dmg"
   homepage 'http://www.nomachine.com'
 
-  install 'NoMachine.pkg'
+  pkg 'NoMachine.pkg'
   # a launchctl job ordinarily manages uninstall once the app bundle is removed
   uninstall :files => '/Applications/NoMachine.app'
   # todo for future use when zap is documented
