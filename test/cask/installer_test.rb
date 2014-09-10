@@ -241,6 +241,18 @@ describe Cask::Installer do
       executable.must_be :file?
     end
 
+    it "works properly with the new form container :type => <type>" do
+      naked_executable_dsl_one = Cask.load('naked-executable-dsl-one')
+
+      shutup do
+        Cask::Installer.new(naked_executable_dsl_one).install
+      end
+
+      dest_path = Cask.caskroom/'naked-executable-dsl-one'/naked_executable_dsl_one.version
+      executable = dest_path/'naked_executable'
+      executable.must_be :file?
+    end
+
     it "works fine with a nested container" do
       nested_app = Cask.load('nested-app')
 

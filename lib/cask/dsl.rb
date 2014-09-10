@@ -109,8 +109,8 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, e)
       end
       # todo: remove this backwards compatibility section after removing container_type
-      if @container.formula
-        @container_type ||= @container.formula
+      if @container.type
+        @container_type ||= @container.type
       end
       @container
     end
