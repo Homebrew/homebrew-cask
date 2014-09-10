@@ -5,7 +5,7 @@ class HerokuToolbelt < Cask
   url 'http://assets.heroku.com/heroku-toolbelt/heroku-toolbelt.pkg'
   homepage 'https://toolbelt.heroku.com/'
 
-  install 'heroku-toolbelt.pkg'
+  pkg 'heroku-toolbelt.pkg'
   uninstall :pkgutil => 'com.heroku.toolbelt',
             :files   => [
                          '/usr/local/heroku',
