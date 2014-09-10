@@ -3,8 +3,8 @@ class GdalFramework < Cask
   homepage 'http://www.kyngchaos.com/software/frameworks'
   version '1.11'
   sha256 '8611b80e9e0f2a1ef87ff11429418fbf5996efc6a8041a3e096c3408dcceaf14'
-  install 'GDAL Complete.pkg'
-  install 'Numpy.pkg'
+  pkg 'GDAL Complete.pkg'
+  pkg 'Numpy.pkg'
   uninstall :pkgutil  => [
                             'org.maptools.proj-framework-snow',
                             'org.sqlite.sqlite3b-framework-snow',
