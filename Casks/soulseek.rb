@@ -5,6 +5,6 @@ class Soulseek < Cask
   url 'http://www.soulseekqt.net/SoulseekQt/Mac/SoulseekQt-2014-6-15.pkg'
   homepage 'http://www.soulseekqt.net/'
 
-  install 'SoulseekQt-2014-6-15.pkg'
+  pkg 'SoulseekQt-2014-6-15.pkg'
   uninstall :pkgutil => 'com.soulseek.SoulseekQt.pkg'
 end
