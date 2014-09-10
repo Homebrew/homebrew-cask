@@ -5,7 +5,7 @@ class Pandoc < Cask
   url "https://github.com/jgm/pandoc/releases/download/#{version}/pandoc-#{version}-osx.pkg"
   homepage 'http://johnmacfarlane.net/pandoc'
 
-  install "pandoc-#{version}-osx.pkg"
+  pkg "pandoc-#{version}-osx.pkg"
   uninstall :pkgutil => 'net.johnmacfarlane.pandoc'
   caveats do
     puts <<-EOS.undent
