@@ -5,6 +5,6 @@ class LogitechUnifying < Cask
   url 'http://www.logitech.com/pub/controldevices/unifying/unifying1.10.421.dmg'
   homepage 'http://www.logitech.com/en-us/promotions/6072'
 
-  install 'Logitech Unifying Software.mpkg'
+  pkg 'Logitech Unifying Software.mpkg'
   uninstall :pkgutil => 'com.Logitech.*pkg'
 end
