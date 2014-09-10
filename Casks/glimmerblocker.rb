@@ -5,6 +5,6 @@ class Glimmerblocker < Cask
   url 'http://glimmerblocker.org/downloads/GlimmerBlocker-1.5.3.dmg'
   homepage 'http://glimmerblocker.org'
 
-  install 'GlimmerBlocker.pkg'
+  pkg 'GlimmerBlocker.pkg'
   uninstall :pkgutil => 'org.glimmerblocker.pkg'
 end
