@@ -5,6 +5,6 @@ class Minimalclock < Cask
   url 'http://www.ilovecolorz.net/download/MinimalClockScreenSaver.dmg'
   homepage 'http://ilovecolorz.net/minimalclock/'
 
-  install ' .pkg'
+  pkg ' .pkg'
   uninstall :pkgutil => 'com.ilovecolorz.minimalclockScreenSaver.*'
 end
