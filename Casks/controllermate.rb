@@ -5,6 +5,6 @@ class Controllermate < Cask
   url 'https://s3.amazonaws.com/orderedbytes/ControllerMate.dmg'
   homepage 'http://www.orderedbytes.com/controllermate/'
 
-  install 'ControllerMate.pkg'
+  pkg 'ControllerMate.pkg'
   uninstall :script => 'ControllerMate Uninstaller.app/Contents/MacOS/ControllerMate Uninstaller'
 end
