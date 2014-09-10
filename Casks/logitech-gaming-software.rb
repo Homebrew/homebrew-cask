@@ -5,7 +5,7 @@ class LogitechGamingSoftware < Cask
   url 'http://logitech-viva.navisite.net/web/ftp/pub/techsupport/gaming/LogitechSetup_8.50.133.dmg'
   homepage 'http://www.logitech.com/en-us/support/gaming-software?section=downloads&bit=&osid=36'
 
-  install 'LogiGamingSetup.mpkg'
+  pkg 'LogiGamingSetup.mpkg'
   uninstall :script => '/Applications/Logitech/Uninstaller.app/Contents/Resources/UninstallScript.sh'
   caveats do
     reboot
