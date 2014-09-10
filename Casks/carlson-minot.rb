@@ -5,7 +5,7 @@ class CarlsonMinot < Cask
   url 'https://www.carlson-minot.com/downloads/arm-2013.05-24-arm-none-linux-gnueabi.osx.intelx86.bin.pkg'
   homepage 'http://www.carlson-minot.com'
 
-  install 'arm-2013.05-24-arm-none-linux-gnueabi.osx.intelx86.bin.pkg'
+  pkg 'arm-2013.05-24-arm-none-linux-gnueabi.osx.intelx86.bin.pkg'
   uninstall :pkgutil => 'com.carlson-minot.arm-2013.05-24-arm-none-linux-gnueabi.pkg', :files => [
     '/usr/local/carlson-minot' ]
   caveats do
