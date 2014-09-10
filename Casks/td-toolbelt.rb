@@ -10,7 +10,7 @@ class TdToolbelt < Cask
     system '/bin/mv', '--', "#{destination_path}/mac", "#{destination_path}/td-toolbelt.pkg"
   end
 
-  install 'td-toolbelt.pkg'
+  pkg 'td-toolbelt.pkg'
   uninstall :pkgutil => 'com.td.toolbelt'
   # zap :pkgutil => 'org.ruby-lang.installer'
 end
