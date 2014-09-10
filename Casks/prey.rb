@@ -5,7 +5,7 @@ class Prey < Cask
   url 'https://preyproject.com/releases/current/prey-0.6.3-mac-batch.mpkg.zip'
   homepage 'https://preyproject.com'
 
-  install 'prey-0.6.3-mac-batch.mpkg'
+  pkg 'prey-0.6.3-mac-batch.mpkg'
   uninstall :pkgutil => 'com.forkhq.prey'
   caveats <<-EOS.undent
     Prey requires an API key during installation. If none is found,
