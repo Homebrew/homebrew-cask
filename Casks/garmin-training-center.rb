@@ -5,6 +5,6 @@ class GarminTrainingCenter < Cask
   url 'https://www8.garmin.com/software/TrainingCenterforMac_321.dmg'
   homepage 'http://www.garmin.com/garmin/cms/intosports/training_center'
 
-  install 'Garmin Training Center.pkg'
+  pkg 'Garmin Training Center.pkg'
   uninstall :pkgutil => 'com.garmin.garminTrainingCenter.*pkg'
 end
