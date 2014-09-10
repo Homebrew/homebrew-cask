@@ -4,5 +4,5 @@ class UtcMenuClock < Cask
 
   url "https://github.com/downloads/netik/UTCMenuClock/UTCMenuClock_#{version}_installer.pkg"
   homepage 'https://github.com/netik/UTCMenuClock'
-  install "UTCMenuClock_#{version}_installer.pkg"
+  pkg "UTCMenuClock_#{version}_installer.pkg"
 end
