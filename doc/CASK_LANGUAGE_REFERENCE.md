@@ -14,7 +14,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Checksum Stanza Details](#checksum-stanza-details)
  * [URL Stanza Details](#url-stanza-details)
  * [Link Stanza Details](#link-stanza-details)
- * [Install Stanza Details](#install-stanza-details)
+ * [Pkg Stanza Details](#pkg-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
  * [Arbitrary Ruby Methods](#arbitrary-ruby-methods)
  * [Revisions to the Cask DSL](#revisions-to-the-cask-dsl)
@@ -74,7 +74,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | name               | multiple occurrences allowed? | value       |
 | ------------------ |------------------------------ | ----------- |
 | `link`             | yes                           |  relative path to a file that should be linked into the `Applications` folder on installation (see also [Link Stanza Details](#link-stanza-details))
-| `install`          | yes                           |  relative path to `pkg` that should be run to install the application (see also [Install Stanza Details](#install-stanza-details))
+| `pkg`              | yes                           |  relative path to a `.pkg` file containing the distribution (see also [Pkg Stanza Details](#pkg-stanza-details))
 | `binary`           | yes                           |  relative path to a binary that should be linked into the `/usr/local/bin` folder on installation
 | `colorpicker`      | yes                           |  relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
 | `font`             | yes                           |  relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
@@ -113,6 +113,7 @@ The following stanzas are no longer in use.
 | `after_install`     | yes                           | an obsolete alternative to `postflight`
 | `before_uninstall`  | yes                           | an obsolete alternative to `uninstall_preflight`
 | `after_uninstall`   | yes                           | an obsolete alternative to `uninstall_postflight`
+| `install`           | yes                           | an obsolete alternative to `pkg`
 
 
 ## Conditional Statements
@@ -334,24 +335,24 @@ The `:target` key works similarly for other Cask artifacts, such as
 `service`, and `widget`.
 
 
-## Install Stanza Details
+## Pkg Stanza Details
 
-The first argument to `install` should be a relative path to the `pkg` file
-to be installed.  For example:
+The first argument to the `pkg` stanza should be a relative path to the `.pkg`
+file to be installed.  For example:
 
 ```ruby
-install 'Vagrant.pkg'
+pkg 'Vagrant.pkg'
 ```
 
-Subsequent arguments to `install` are key/value pairs which modify the
-install process.  Currently supported keys are
+Subsequent arguments to `pkg` are key/value pairs which modify the install
+process.  Currently supported keys are
 
   * `:allow_untrusted` -- pass `-allowUntrusted` to `/usr/sbin/installer`
 
 Example:
 
 ```ruby
-install 'Soundflower.pkg', :allow_untrusted => true
+pkg 'Soundflower.pkg', :allow_untrusted => true
 ```
 
 
@@ -361,11 +362,11 @@ IF YOU CANNOT DESIGN A WORKING `UNINSTALL` STANZA, PLEASE SUBMIT YOUR
 CASK ANYWAY.  The maintainers will help you write an `uninstall` stanza:
 just ask!
 
-A `pkg`-based Cask using `install` will **not** know how to uninstall
+A Cask which uses the `pkg` stanza will **not** know how to uninstall
 correctly unless an `uninstall` stanza is given.
 
 So, while the `uninstall` stanza is technically optional in the Cask
-language, it is much better for end-users if every `install` has a
+language, it is much better for end-users if every `pkg` has a
 corresponding `uninstall`.
 
 Since `pkg` installers can do arbitrary things, different techniques are
@@ -416,7 +417,7 @@ use the command
 $ ./developer/bin/list_pkg_ids_by_regexp <regular-expression>
 ```
 
-### List Files Associated With a `pkg`
+### List Files Associated With a `pkg` Id
 
 Once you know the ID for an installed package, (above), you can list
 all files on your system associated with that package ID using the
