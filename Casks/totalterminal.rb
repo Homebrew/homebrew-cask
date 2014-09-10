@@ -5,7 +5,7 @@ class Totalterminal < Cask
   url 'http://downloads.binaryage.com/TotalTerminal-1.5.3.dmg'
   homepage 'http://totalterminal.binaryage.com'
 
-  install 'TotalTerminal.pkg'
+  pkg 'TotalTerminal.pkg'
   uninstall :script => {
     :executable => 'TotalTerminal Uninstaller.app/Contents/MacOS/TotalTerminal Uninstaller',
     :args => %w[--headless]
