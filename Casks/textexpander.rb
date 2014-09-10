@@ -1,8 +1,8 @@
 class Textexpander < Cask
-  version '4.3.1'
-  sha256 '1ab9bcdec7354cdf94da33ad12956799b8982eb3c544c8c89e57800dca8ff5cd'
+  version '4.3.3'
+  sha256 '1aa42fa3b1bcb6e41f662c040f3efde5713ddfe8f1aee9d03c8f60bcd9d65ddf'
 
-  url 'http://cdn.smilesoftware.com/TextExpander_4.3.1.zip'
+  url "http://cdn.smilesoftware.com/TextExpander_#{version}.zip"
   appcast 'http://www.smilesoftware.com/appcast/update.php'
   homepage 'http://www.smilesoftware.com/TextExpander/index.html'
 
