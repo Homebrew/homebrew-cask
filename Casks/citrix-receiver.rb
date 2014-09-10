@@ -5,7 +5,7 @@ class CitrixReceiver < Cask
   url 'http://downloadplugins.citrix.com.edgesuite.net/Mac/CitrixReceiverWeb.dmg'
   homepage 'http://www.citrix.com/receiver'
 
-  install 'Install Citrix Receiver.pkg'
+  pkg 'Install Citrix Receiver.pkg'
   uninstall :launchctl => [
                            'com.citrix.AuthManager_Mac',
                            'com.citrix.ReceiverHelper',
