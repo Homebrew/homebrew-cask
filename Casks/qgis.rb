@@ -4,7 +4,7 @@ class Qgis < Cask
 
   url "http://www.kyngchaos.com/files/software/qgis/QGIS-#{version}.dmg"
   homepage 'http://www.kyngchaos.com/software/qgis'
-  install 'Install QGIS.pkg'
+  pkg 'Install QGIS.pkg'
   uninstall :pkgutil => 'org.qgis.qgis-*'
   caveats do
     <<-EOS.undent
