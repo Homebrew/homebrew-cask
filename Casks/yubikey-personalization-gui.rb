@@ -5,6 +5,6 @@ class YubikeyPersonalizationGui < Cask
   url 'https://www.yubico.com/wp-content/uploads/2012/09/yubikey-personalization-gui-3.1.14.pkg'
   homepage 'http://www.yubico.com/products/services-software/personalization-tools/use/'
 
-  install 'yubikey-personalization-gui-3.1.14.pkg'
+  pkg 'yubikey-personalization-gui-3.1.14.pkg'
   uninstall :pkgutil => 'com.yubico.YKPersonalization'
 end
