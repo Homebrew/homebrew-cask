@@ -5,6 +5,6 @@ class Opennx < Cask
   url 'http://downloads.sourceforge.net/sourceforge/opennx/OpenNX-0.16.0.729.dmg'
   homepage 'http://opennx.net/'
 
-  install 'OpenNX.pkg'
+  pkg 'OpenNX.pkg'
   uninstall :script => { :executable => '/Library/OpenNX/bin/macuninstall', :args => ['--batch'] }
 end
