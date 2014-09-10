@@ -5,6 +5,6 @@ class Hubic < Cask
   url 'http://mir7.ovh.net/ovh-applications/hubic/hubiC-OSX/0.2.5/hubiC-OSX-0.2.5.224-osx.pkg'
   homepage 'https://hubic.com'
 
-  install 'hubiC-OSX-0.2.5.224-osx.pkg'
+  pkg 'hubiC-OSX-0.2.5.224-osx.pkg'
   uninstall :pkgutil => 'com.ovh.hubicmac'
 end
