@@ -1,8 +1,8 @@
 class Flash < Cask
-  version '14.0.0.176'
-  sha256 'c515805c2c1f176015425a4f6a0f70a91ab97dfc4f103eb0d2ca08c5300844d3'
+  version '15.0.0.152'
+  sha256 'dfd22c6f5cc42b8c4dedf1214321d982d32bb7f7969a674463c4b13e55ceb2d4'
 
-  url 'http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_14_osx_pkg.dmg'
+  url 'http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_15_osx_pkg.dmg'
   homepage 'https://www.adobe.com/products/flashplayer/distribution3.html'
 
   install 'Install Adobe Flash Player.pkg'
