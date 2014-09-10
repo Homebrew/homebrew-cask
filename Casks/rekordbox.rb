@@ -5,7 +5,7 @@ class Rekordbox < Cask
   url 'http://rekordbox.com/_app/files/Install_rekordbox_3_0_1.pkg.zip'
   homepage 'http://rekordbox.com/en/'
 
-  install 'Install_rekordbox_3_0_1.pkg'
+  pkg 'Install_rekordbox_3_0_1.pkg'
   uninstall :pkgutil => 'com.pioneer.rekordbox.3.*',
     :files => '/Applications/rekordbox 3/'
 end
