@@ -1,8 +1,8 @@
 class Monochrome < Cask
-  version '3.1'
-  sha256 '8dffdc0da7248a21429996ce727184cf2547de858af3a92502a27d83f1374d55'
+  version '3.3'
+  sha256 '2eaec5156ba7f55ac0afa2e9777f0800da756831e4b66a2e9c2c466154177057'
 
-  url 'https://dl.dropboxusercontent.com/u/63362/monochrome_3_1.zip'
+  url "https://dl.dropboxusercontent.com/u/63362/monochrome_#{version.gsub('.', '_')}.zip"
   homepage 'http://lucianmarin.com/monochrome/'
 
   link 'Monochrome.app'
