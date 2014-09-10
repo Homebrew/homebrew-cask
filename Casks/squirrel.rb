@@ -5,6 +5,6 @@ class Squirrel < Cask
   url 'https://dl.bintray.com/lotem/rime/Squirrel-0.9.25.zip'
   homepage 'https://github.com/lotem/squirrel'
 
-  install 'Squirrel.pkg'
+  pkg 'Squirrel.pkg'
   uninstall :files => '/Library/Input Methods/Squirrel.app'
 end
