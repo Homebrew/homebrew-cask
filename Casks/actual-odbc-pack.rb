@@ -5,7 +5,7 @@ class ActualOdbcPack < Cask
   url 'http://actualtechnologies.cachefly.net/Actual_ODBC_Pack.dmg'
   homepage 'http://www.actualtech.com/products.php'
 
-  install 'Actual ODBC Pack.pkg'
+  pkg 'Actual ODBC Pack.pkg'
 
   uninstall :pkgutil => ['com.actualtechnologies.odbcdriver.*',
                          'com.actualtechnologies.odbcmanager.pkg']
