@@ -5,6 +5,6 @@ class MonoMre < Cask
   url "http://download.mono-project.com/archive/#{version}/macos-10-x86/MonoFramework-MRE-#{version}.macos10.xamarin.x86.pkg"
   homepage 'http://mono-project.com'
 
-  install "MonoFramework-MRE-#{version}.macos10.xamarin.x86.pkg"
+  pkg "MonoFramework-MRE-#{version}.macos10.xamarin.x86.pkg"
   uninstall :pkgutil => 'com.xamarin.mono-MRE.pkg'
 end
