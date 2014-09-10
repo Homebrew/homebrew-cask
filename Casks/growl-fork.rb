@@ -5,6 +5,6 @@ class GrowlFork < Cask
   url 'https://www.macupdate.com/download/41038/Growl-1.2.2f1.dmg'
   homepage 'https://www.macupdate.com/app/mac/41038/growl-fork'
 
-  install 'Growl.pkg'
+  pkg 'Growl.pkg'
   uninstall :files => '/Library/PreferencePanes/Growl.prefPane'
 end
