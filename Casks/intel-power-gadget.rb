@@ -8,6 +8,6 @@ class IntelPowerGadget < Cask
 
   # this bogus-looking character accurately reflects an upstream error
   nested_container 'IntelÆ Power Gadget.dmg'
-  install 'Install Intel Power Gadget.pkg'
+  pkg 'Install Intel Power Gadget.pkg'
   uninstall :pkgutil => 'com.intel.pkg.PowerGadget.*'
 end
