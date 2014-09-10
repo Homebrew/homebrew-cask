@@ -9,6 +9,6 @@ class Ridibooks < Cask
   preflight do
     system '/bin/mv', '--', destination_path.join('getapp'), destination_path.join('ridibooks.pkg')
   end
-  install 'ridibooks.pkg'
+  pkg 'ridibooks.pkg'
   uninstall :pkgutil => 'com.ridibooks.Ridibooks'
 end
