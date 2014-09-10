@@ -5,7 +5,7 @@ class Karabiner < Cask
   url "https://pqrs.org/osx/karabiner/files/Karabiner-#{version}.dmg"
   homepage 'https://pqrs.org/osx/karabiner/'
 
-  install 'Karabiner.pkg'
+  pkg 'Karabiner.pkg'
   binary '/Applications/Karabiner.app/Contents/Library/vendor/bin/blueutil'
   binary '/Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position'
   uninstall :quit => 'org.pqrs.Karabiner',
