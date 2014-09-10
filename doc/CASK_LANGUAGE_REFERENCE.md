@@ -91,7 +91,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 
 | name                   | multiple occurrences allowed? | value       |
 | ---------------------- |------------------------------ | ----------- |
-| `uninstall`            | yes                           | indicates what commands/scripts must be run to uninstall a pkg-based application (see also [Uninstall Stanza Details](#uninstall-stanza-details))
+| `uninstall`            | yes                           | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](#uninstall-stanza-details))
 | `nested_container`     | yes                           | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `depends_on_formula`   | yes                           | a list of Homebrew Formulae upon which this Cask depends
 | `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Details](#caveats-details))
@@ -362,12 +362,19 @@ IF YOU CANNOT DESIGN A WORKING `UNINSTALL` STANZA, PLEASE SUBMIT YOUR
 CASK ANYWAY.  The maintainers will help you write an `uninstall` stanza:
 just ask!
 
-A Cask which uses the `pkg` stanza will **not** know how to uninstall
-correctly unless an `uninstall` stanza is given.
+### `uninstall` Is Required for Casks That Install a `pkg`
 
-So, while the `uninstall` stanza is technically optional in the Cask
-language, it is much better for end-users if every `pkg` has a
-corresponding `uninstall`.
+For most Casks, uninstall actions are determined automatically, and an
+explicit `uninstall` stanza is not needed.  However, a Cask which uses
+the `pkg` stanza will **not** know how to uninstall correctly unless an
+`uninstall` stanza is given.
+
+So, while the Cask language does not enforce the requirement, it is much
+better for end-users if every `pkg` has a corresponding `uninstall`.
+
+The `uninstall` stanza is available for non-`pkg` Casks, and is useful for
+a few corner cases.  However, the documentation below concerns the typical
+case of using `uninstall` to define procedures for a `pkg`.
 
 Since `pkg` installers can do arbitrary things, different techniques are
 needed to uninstall in each case.  You may need to specify one, or several,
