@@ -5,6 +5,6 @@ class Xtrafinder < Cask
   url 'http://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg'
   homepage 'http://www.trankynam.com/xtrafinder/'
 
-  install 'XtraFinder.pkg'
+  pkg 'XtraFinder.pkg'
   uninstall :pkgutil => 'com.trankynam.xtrafinder.*'
 end
