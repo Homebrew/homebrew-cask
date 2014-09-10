@@ -5,7 +5,7 @@ class Cocoaspell < Cask
   url 'http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.2.1.dmg'
   homepage 'http://cocoaspell.leuski.net/'
 
-  install 'cocoAspell.pkg'
+  pkg 'cocoAspell.pkg'
   uninstall :pkgutil => 'net.leuski.cocoaspell.*', :files => [
     '/Application Support/cocoAspell/aspell6-en-6.0-0',
     '/Library/PreferencePanes/Spelling.prefPane'
