@@ -5,6 +5,6 @@ class SynologyPhotoStationUploader < Cask
   url 'https://global.download.synology.com/download/Tools/PhotoStationUploader/046/Mac/PhotoStationUploader-046-Mac-Installer.dmg'
   homepage 'http://www.synology.com/'
 
-  install 'PhotoStationUploader-046-Mac-Installer.pkg'
+  pkg 'PhotoStationUploader-046-Mac-Installer.pkg'
   uninstall :pkgutil => 'com.synology.photostationuploader.installer'
 end
