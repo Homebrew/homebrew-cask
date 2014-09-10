@@ -8,7 +8,7 @@ describe Cask::Artifact::BeforeBlock do
 
       CaskWithBeforeInstall = Class.new(Cask)
       CaskWithBeforeInstall.class_eval do
-        before_install do |c|
+        preflight do |c|
           called = true
           yielded_arg = c
         end
@@ -29,7 +29,7 @@ describe Cask::Artifact::BeforeBlock do
 
       CaskWithBeforeUninstall = Class.new(Cask)
       CaskWithBeforeUninstall.class_eval do
-        before_uninstall do |c|
+        uninstall_preflight do |c|
           called = true
           yielded_arg = c
         end

@@ -8,7 +8,7 @@ describe Cask::Artifact::AfterBlock do
 
       CaskWithAfterInstall = Class.new(Cask)
       CaskWithAfterInstall.class_eval do
-        after_install do |c|
+        postflight do |c|
           called = true
           yielded_arg = c
         end
@@ -29,7 +29,7 @@ describe Cask::Artifact::AfterBlock do
 
       CaskWithAfterUninstall = Class.new(Cask)
       CaskWithAfterUninstall.class_eval do
-        after_uninstall do |c|
+        uninstall_postflight do |c|
           called = true
           yielded_arg = c
         end
