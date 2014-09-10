@@ -5,6 +5,6 @@ class Node < Cask
   url "http://nodejs.org/dist/v#{version}/node-v#{version}.pkg"
   homepage 'http://nodejs.org'
 
-  install  "node-v#{version}.pkg"
+  pkg  "node-v#{version}.pkg"
   uninstall :pkgutil => 'org.nodejs'
 end
