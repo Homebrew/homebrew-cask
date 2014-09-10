@@ -5,6 +5,6 @@ class ElectricSheep < Cask
   url 'https://electricsheep.googlecode.com/files/electricsheep-2.7b35b.dmg'
   homepage 'http://www.electricsheep.org'
 
-  install 'Electric Sheep.mpkg'
+  pkg 'Electric Sheep.mpkg'
   uninstall :pkgutil => 'org.electricsheep.electricSheep.*'
 end
