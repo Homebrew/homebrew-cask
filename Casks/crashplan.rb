@@ -5,7 +5,7 @@ class Crashplan < Cask
   url 'http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_3.6.3_Mac.dmg'
   homepage 'http://www.crashplan.com/'
 
-  install 'Install CrashPlan.pkg'
+  pkg 'Install CrashPlan.pkg'
   uninstall :script  => 'Uninstall.app/Contents/Resources/uninstall.sh',
             :pkgutil => 'com.crashplan.app.pkg'
 end
