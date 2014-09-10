@@ -5,6 +5,6 @@ class Tcpblock < Cask
   url 'http://www.delantis.com/dist/TCPBlock_v4.2.dmg'
   homepage 'http://tcpblock.wordpress.com/'
 
-  install 'TCPBlock_v4.2.pkg'
+  pkg 'TCPBlock_v4.2.pkg'
   uninstall :pkgutil => 'com.delantis.tcpblock.*'
 end
