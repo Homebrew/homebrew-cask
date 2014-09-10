@@ -5,7 +5,7 @@ class Zooom < Cask
   url 'http://software.coderage-software.com/zooom/Zooom_2.6.0.dmg'
   homepage 'http://coderage-software.com/zooom'
 
-  install 'Zooom2.pkg'
+  pkg 'Zooom2.pkg'
   caveats do
     os_version_only '10.10', '10.9'
   end
