@@ -5,6 +5,6 @@ class Epubquicklook < Cask
   url 'http://people.ict.usc.edu/~leuski/programming/EPUBQuickLookPlugin.dmg'
   homepage 'http://people.ict.usc.edu/~leuski/programming/epub-quickview.php'
 
-  install 'EpubQuickLook.pkg'
+  pkg 'EpubQuickLook.pkg'
   uninstall :pkgutil => 'net.leuski.epubQuicklookPlugin.epub.pkg'
 end
