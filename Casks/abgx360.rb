@@ -5,7 +5,7 @@ class Abgx360 < Cask
   url 'http://dl.dropbox.com/u/59058148/abgx360-1.0.6.pkg'
   homepage 'http://abgx360.net/'
 
-  install 'abgx360-1.0.6.pkg'
+  pkg 'abgx360-1.0.6.pkg'
   uninstall :quit => 'net.abgx360.abgx360gui',
             :pkgutil => [
                          'net.abgx360.abgx360.pkg',
