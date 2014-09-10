@@ -5,6 +5,6 @@ class Sshfs < Cask
   url 'https://github.com/osxfuse/sshfs/releases/download/osxfuse-sshfs-2.5.0/sshfs-2.5.0.pkg'
   homepage 'http://osxfuse.github.io/'
 
-  install 'sshfs-2.5.0.pkg'
+  pkg 'sshfs-2.5.0.pkg'
   uninstall :pkgutil => 'com.github.osxfuse.pkg.SSHFS'
 end
