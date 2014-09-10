@@ -5,6 +5,6 @@ class Hosts < Cask
   url "https://github.com/downloads/specialunderwear/Hosts.prefpane/Hosts-#{version}.pkg"
   homepage 'http://permanentmarkers.nl/software.html'
 
-  install "Hosts-#{version}.pkg"
+  pkg "Hosts-#{version}.pkg"
   uninstall :pkgutil => 'nl.permanentmarkers.hosts.Hosts.pkg'
 end
