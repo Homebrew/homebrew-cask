@@ -42,6 +42,7 @@ This notice will be removed for the final form.**
 | `after_install`    | `postflight`
 | `before_uninstall` | `uninstall_preflight`
 | `after_uninstall`  | `uninstall_postflight`
+| `install`          | `pkg`
 
 
 ## All Supported Stanzas (1.0)

@@ -55,7 +55,7 @@ class Vagrant < Cask
   url 'https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg'
   homepage 'http://www.vagrantup.com'
 
-  install 'Vagrant.pkg'
+  pkg 'Vagrant.pkg'
   uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] }
 end
 ```
@@ -123,7 +123,7 @@ Fill in the following stanzas for your Cask:
 | `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
 | __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
 | `link`             | relative path to a file that should be linked into the `Applications` folder on installation (see also [Link Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#link-stanza-details))
-| `install`          | relative path to `pkg` that should be run to install the application (see also [Install Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#install-stanza-details))
+| `pkg`              | relative path to a `.pkg` file containing the distribution (see also [Pkg Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#pkg-stanza-details))
 | `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see also [Uninstall Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details))
 
 Additional stanzas you might need for special use-cases:

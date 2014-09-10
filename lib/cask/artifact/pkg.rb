@@ -14,7 +14,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       end
       raise if pkg_description.nil?
     rescue
-      raise CaskInvalidError.new(@cask, 'Bad install stanza')
+      raise CaskInvalidError.new(@cask, 'Bad pkg stanza')
     end
   end
 
