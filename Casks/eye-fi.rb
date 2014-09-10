@@ -5,6 +5,6 @@ class EyeFi < Cask
   url 'http://download.eyefi.com/x2/3.4.35/Eye-Fi.dmg'
   homepage 'http://support.eye.fi/downloads'
 
-  install 'Eye-Fi.mpkg'
+  pkg 'Eye-Fi.mpkg'
   uninstall :pkgutil => 'fi.eye.*'
 end
