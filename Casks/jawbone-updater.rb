@@ -5,7 +5,7 @@ class JawboneUpdater < Cask
   url 'http://content.jawbone.com/store/dashboard/Jawbone_Updater-2.2.3.pkg'
   homepage 'http://jawbone.com/'
 
-  install 'Jawbone_Updater-2.2.3.pkg'
+  pkg 'Jawbone_Updater-2.2.3.pkg'
   uninstall :quit => 'com.aliph.Jawbone_Updater',
             :pkgutil => 'com.Aliph.[Jj]awbone(|Updater.*).pkg'
 end
