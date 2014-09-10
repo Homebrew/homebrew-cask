@@ -5,7 +5,7 @@ class AdobePhotoshopLightroom < Cask
   url 'http://download.adobe.com/pub/adobe/lightroom/mac/5.x/Lightroom_5_LS11_mac_5_6.dmg'
   homepage 'http://www.adobe.com/products/photoshop-lightroom.html'
 
-  install 'Adobe Photoshop Lightroom 5.pkg'
+  pkg 'Adobe Photoshop Lightroom 5.pkg'
   uninstall :pkgutil => 'com.adobe.Lightroom5',
             :quit => 'com.adobe.Lightroom5',
             :files => '/Applications/Adobe Photoshop Lightroom 5.app'
