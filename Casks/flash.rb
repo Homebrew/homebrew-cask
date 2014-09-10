@@ -5,7 +5,7 @@ class Flash < Cask
   url 'http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_15_osx_pkg.dmg'
   homepage 'https://www.adobe.com/products/flashplayer/distribution3.html'
 
-  install 'Install Adobe Flash Player.pkg'
+  pkg 'Install Adobe Flash Player.pkg'
   uninstall :pkgutil => 'com.adobe.pkg.FlashPlayer',
             :files => '/Library/Internet Plug-Ins/Flash Player.plugin'
 end
