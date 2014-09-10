@@ -5,6 +5,6 @@ class Boot2docker < Cask
   url 'https://github.com/boot2docker/osx-installer/releases/download/v1.2.0/Boot2Docker-1.2.0.pkg'
   homepage 'https://github.com/boot2docker/osx-installer'
 
-  install 'Boot2Docker-1.2.0.pkg'
+  pkg 'Boot2Docker-1.2.0.pkg'
   uninstall :pkgutil => ['io.boot2docker.pkg.boot2docker', 'io.boot2docker.pkg.boot2dockerapp', 'io.boot2dockeriso.pkg.boot2dockeriso', 'io.docker.pkg.docker']
 end
