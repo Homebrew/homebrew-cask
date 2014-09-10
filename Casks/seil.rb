@@ -5,7 +5,7 @@ class Seil < Cask
   url 'https://pqrs.org/macosx/keyremap4macbook/files/Seil-10.10.0.dmg'
   homepage 'https://pqrs.org/macosx/keyremap4macbook/seil.html.en'
 
-  install 'Seil.pkg'
+  pkg 'Seil.pkg'
   uninstall :quit => 'org.pqrs.Seil',
             :kext => 'org.pqrs.driver.Seil',
             :pkgutil => 'org.pqrs.driver.Seil'
