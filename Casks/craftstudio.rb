@@ -5,7 +5,7 @@ class Craftstudio < Cask
   url 'http://craftstud.io/files/OSX/CraftStudio.pkg'
   homepage 'http://craftstud.io'
 
-  install 'CraftStudio.pkg'
+  pkg 'CraftStudio.pkg'
 
   uninstall :quit => 'com.sparklinlabs.CraftStudioLauncher',
             :pkgutil => 'com.sparklinlabs.CraftStudioLauncher'
