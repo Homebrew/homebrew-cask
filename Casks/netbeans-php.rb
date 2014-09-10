@@ -5,7 +5,7 @@ class NetbeansPhp < Cask
   url 'http://download.netbeans.org/netbeans/8.0/final/bundles/netbeans-8.0-php-macosx.dmg'
   homepage 'https://netbeans.org/'
 
-  install 'NetBeans 8.0.mpkg'
+  pkg 'NetBeans 8.0.mpkg'
   uninstall :files => [
                        '/Applications/NetBeans'
                       ]
