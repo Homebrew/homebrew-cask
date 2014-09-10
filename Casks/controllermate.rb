@@ -1,8 +1,8 @@
 class Controllermate < Cask
-  version '4.8.2'
-  sha256 '654096120355452f69de00f46c55ad295515a497255e035707ca195d1b17eac4'
+  version 'latest'
+  sha256 :no_check 
 
-  url 'https://s3.amazonaws.com/orderedbytes/ControllerMate482.dmg'
+  url 'https://s3.amazonaws.com/orderedbytes/ControllerMate.dmg'
   homepage 'http://www.orderedbytes.com/controllermate/'
 
   install 'ControllerMate.pkg'
