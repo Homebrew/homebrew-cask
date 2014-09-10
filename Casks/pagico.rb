@@ -5,7 +5,7 @@ class Pagico < Cask
   url 'http://pagico.com/downloads/Pagico_Desktop_r1549.dmg'
   homepage 'http://pagico.com/'
 
-  install 'Install Pagico 6.pkg'
+  pkg 'Install Pagico 6.pkg'
   uninstall :pkgutil => 'com.pagico.*',
             :files => '/Applications/Pagico'
 end
