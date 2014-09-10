@@ -112,6 +112,10 @@ module Cask::DSL
       if @container.type
         @container_type ||= @container.type
       end
+      # todo: remove this backwards compatibility section after removing nested_container
+      if @container.nested
+        artifacts[:nested_container] << @container.nested
+      end
       @container
     end
 

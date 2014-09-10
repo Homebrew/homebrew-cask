@@ -2,6 +2,7 @@ class Cask::DSL::Container
 
   VALID_KEYS = Set.new [
                         :type,
+                        :nested,
                        ]
 
   attr_accessor *VALID_KEYS
