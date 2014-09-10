@@ -5,7 +5,7 @@ class IstatServer < Cask
   url 'http://download.bjango.com/istatserver/'
   homepage 'http://bjango.com/mac/istatserver/'
 
-  install 'iStat Server.pkg'
+  pkg 'iStat Server.pkg'
   uninstall :script => '/Applications/iStat Server.app/Contents/Resources/Uninstaller',
             :pkgutil => 'com.bjango.istatserver.*'
   caveats do
