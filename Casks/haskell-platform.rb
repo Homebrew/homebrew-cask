@@ -5,6 +5,6 @@ class HaskellPlatform < Cask
   url 'http://www.haskell.org/platform/download/2014.2.0.0/Haskell%20Platform%202014.2.0.0%2064bit.signed.pkg'
   homepage 'http://www.haskell.org/platform/'
 
-  install 'Haskell Platform 2014.2.0.0 64bit.signed.pkg'
+  pkg 'Haskell Platform 2014.2.0.0 64bit.signed.pkg'
   uninstall :script => { :executable => '/usr/bin/uninstall-hs', :args => %w[all --remove] }
 end
