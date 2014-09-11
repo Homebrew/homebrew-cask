@@ -1,5 +1,34 @@
 # CHANGELOG
 
+## 0.41.0
+
+* __Casks__
+ - 9 Casks added (286 updated) by 22 contributors since 0.40.0
+ - 1864 total Casks
+* __Features__
+ - [#6120][] new DSL form `container :nested => <inner-container>`
+* __Breaking Changes__
+ - none
+* __Fixes__
+ - [#6118][] bug: fix `container :type => <type>`
+ - [#6116][] Add doubledash to `mkdir` command
+ - [#6121][] error messages for new stanza `pkg`
+* __Internal Changes__
+ - [#6115][] update test suite for `postflight` and `preflight` DSL forms
+ - [#6073][] updates to release process after v0.40.0
+* __Documentation__
+ - 7 doc commits since 0.40.0
+* __Contributors__
+ - 6 new contributors since 0.40.0
+ - 1010 total contributors
+
+[#6073]: https://github.com/caskroom/homebrew-cask/issues/6073
+[#6115]: https://github.com/caskroom/homebrew-cask/issues/6115
+[#6116]: https://github.com/caskroom/homebrew-cask/issues/6116
+[#6118]: https://github.com/caskroom/homebrew-cask/issues/6118
+[#6120]: https://github.com/caskroom/homebrew-cask/issues/6120
+[#6121]: https://github.com/caskroom/homebrew-cask/issues/6121
+
 ## 0.40.0
 
 * __Casks__
