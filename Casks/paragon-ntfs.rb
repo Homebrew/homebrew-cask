@@ -6,4 +6,11 @@ class ParagonNtfs < Cask
   homepage 'http://www.paragon-software.com/home/ntfs-mac/'
 
   install 'FSInstaller.app/Contents/Resources/Paragon NTFS for Mac OS X.pkg'
+  uninstall :pkgutil => 'com.paragon-software.filesystems.NTFS.pkg'
+  uninstall :files  => [
+                        '/System/Library/Extensions/ntfs.kext',
+                        '/System/Library/Filesystems/ntfs.fs',
+                        '/System/Library/Filesystems/ufsd.fs',
+                        '/System/Library/Filesystems/ufsd_NTFS.fs',
+                       ]	
 end
