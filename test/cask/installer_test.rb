@@ -263,6 +263,17 @@ describe Cask::Installer do
       dest_path = Cask.appdir/'MyNestedApp.app'
       TestHelper.valid_alias?(dest_path).must_equal true
     end
+
+    it "supports new DSL form container :nested => <inner-container>" do
+      nested_app_dsl_one = Cask.load('nested-app-dsl-one')
+
+      shutup do
+        Cask::Installer.new(nested_app_dsl_one).install
+      end
+
+      dest_path = Cask.appdir/'MyNestedApp.app'
+      TestHelper.valid_alias?(dest_path).must_equal true
+    end
   end
 
   describe "uninstall" do
