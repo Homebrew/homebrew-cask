@@ -274,6 +274,31 @@ describe Cask::Installer do
       dest_path = Cask.appdir/'MyNestedApp.app'
       TestHelper.valid_alias?(dest_path).must_equal true
     end
+
+    it "generates and finds a timestamped metadata directory for an installed Cask" do
+      caffeine = Cask.load('local-caffeine')
+
+      shutup do
+        Cask::Installer.new(caffeine).install
+      end
+
+      m_path = caffeine.metadata_path(:now, true)
+      caffeine.metadata_path(:now, false).must_equal(m_path)
+      caffeine.metadata_path(:latest).must_equal(m_path)
+    end
+
+    it "generates and finds a metadata subdirectory for an installed Cask" do
+      caffeine = Cask.load('local-caffeine')
+
+      shutup do
+        Cask::Installer.new(caffeine).install
+      end
+
+      subdir_name = 'Casks'
+      m_subdir = caffeine.metadata_subdir(subdir_name, :now, true)
+      caffeine.metadata_subdir(subdir_name, :now, false).must_equal(m_subdir)
+      caffeine.metadata_subdir(subdir_name, :latest).must_equal(m_subdir)
+    end
   end
 
   describe "uninstall" do

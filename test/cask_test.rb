@@ -87,4 +87,13 @@ describe "Cask" do
       GamesXChange.title.must_equal 'games-x-change'
     end
   end
+
+  describe "metadata" do
+    it "proposes a versioned metadata directory name for each instance" do
+      cask_name = "adium"
+      c = Cask.load(cask_name)
+      metadata_path = Cask.caskroom.join(cask_name, '.metadata', c.version)
+      c.metadata_versioned_container_path.to_s.must_equal(metadata_path.to_s)
+    end
+  end
 end
