@@ -60,6 +60,20 @@ class Vagrant < Cask
 end
 ```
 
+And here is one for Firefox; note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new version is available). This combination of `version 'latest'` and `sha256 :no_check` is currently the preferred mechanism when an unversioned download link is available:
+
+```ruby
+class Firefox < Cask
+  version 'latest'
+  sha256 :no_check
+
+  url 'https://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US'
+  homepage 'https://www.mozilla.org/en-US/firefox/'
+
+  link 'Firefox.app'
+end
+```
+
 ### Naming the Cask
 
 We try to maintain consistent naming for the benefit of our users.
@@ -119,7 +133,7 @@ Fill in the following stanzas for your Cask:
 | __cask metadata__  | information about the Cask (required)
 | `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
 | `homepage`         | application homepage; used for the `brew cask home` command
-| `version`          | application version; give value of `'latest'` if versioned downloads are not offered
+| `version`          | application version; give the value `'latest'` if an unversioned download is available
 | `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
 | __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
 | `link`             | relative path to a file that should be linked into the `Applications` folder on installation (see also [Link Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#link-stanza-details))
@@ -323,14 +337,15 @@ the key info in the first line will help us respond faster to
 your pull.
 
 For Cask commits in the homebrew-cask project, we like to include
-the Application name, version number, and purpose of the commit
-in the first line.
+the Application name, version number (or `'latest'`), and purpose of
+the commit in the first line.
 
 Examples of good, clear commit summaries:
 
 * `Add Transmission.app v1.0`
 * `Upgrade Transmission.app to v2.82`
 * `Fix checksum in Transmission.app Cask`
+* `Add CodeBox Latest`
 
 Examples of difficult, unclear commit summaries:
 
