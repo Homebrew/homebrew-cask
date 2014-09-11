@@ -89,13 +89,13 @@ describe Cask::DSL do
 
   describe "pkg stanza" do
     it "allows installable pkgs to be specified" do
-      CaskWithInstallables = Class.new(Cask)
-      CaskWithInstallables.class_eval do
-        install 'Foo.pkg'
-        install 'Bar.pkg'
+      CaskWithPkgs = Class.new(Cask)
+      CaskWithPkgs.class_eval do
+        pkg 'Foo.pkg'
+        pkg 'Bar.pkg'
       end
 
-      instance = CaskWithInstallables.new
+      instance = CaskWithPkgs.new
       Array(instance.artifacts[:install]).sort.must_equal [['Bar.pkg'], ['Foo.pkg']]
     end
   end
