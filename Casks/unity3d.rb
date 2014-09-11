@@ -1,8 +1,8 @@
 class Unity3d < Cask
-  version '4.5.2f1'
-  sha256 'a6330f8b42865636a8c2055b72fbdff5775b7019254ca41437eca0be1b9baedf'
+  version '4.5.4'
+  sha256 '6fb72bfacf78df072559dd9a024a9d47e49b5717c8f17d53f05e2fc74a721876'
 
-  url 'http://netstorage.unity3d.com/unity/unity-4.5.2.dmg'
+  url 'http://netstorage.unity3d.com/unity/unity-4.5.4.dmg'
   homepage 'http://unity3d.com/unity/'
 
   pkg 'Unity.pkg'
