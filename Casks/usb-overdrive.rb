@@ -5,6 +5,6 @@ class UsbOverdrive < Cask
   url 'http://www.senlick.com/macsw/USB-Overdrive-302.dmg'
   homepage 'http://www.usboverdrive.com/'
 
-  install 'Install USB Overdrive.pkg'
+  pkg 'Install USB Overdrive.pkg'
   uninstall :pkgutil => 'com.usboverdrive.installer'
 end

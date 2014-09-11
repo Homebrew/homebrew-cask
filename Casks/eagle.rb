@@ -5,7 +5,7 @@ class Eagle < Cask
   url "ftp://ftp.cadsoft.de/eagle/program/#{version.gsub(/\.\d$/, '')}/eagle-mac-#{version}.zip"
   homepage 'http://www.cadsoftusa.com/'
 
-  install "eagle-#{version}.pkg"
+  pkg "eagle-#{version}.pkg"
   uninstall :pkgutil => 'com.CadSoftComputerGmbH.EAGLE',
             :files => "/Applications/EAGLE-#{version}"
 end

@@ -5,6 +5,6 @@ class FitbitConnect < Cask
   url 'http://cache.fitbit.com/FitbitConnect/FitbitConnect_Mac_2014110_1.0.1.5104.dmg'
   homepage 'http://www.fitbit.com/'
 
-  install 'Install Fitbit Connect.pkg'
+  pkg 'Install Fitbit Connect.pkg'
   uninstall :script => { :executable => 'Uninstall Fitbit Connect.app/Contents/Resources/uninstall.sh' }
 end

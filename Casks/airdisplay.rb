@@ -5,6 +5,6 @@ class Airdisplay < Cask
   url 'http://downloads.avatron.com/AirDisplayInstaller.zip'
   homepage 'http://avatron.com/apps/air-display/'
 
-  install 'Air Display Installer.pkg'
+  pkg 'Air Display Installer.pkg'
   uninstall :pkgutil => 'com.avatron.pkg.AirDisplay'
 end

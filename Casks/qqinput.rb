@@ -5,6 +5,6 @@ class Qqinput < Cask
   url 'http://qqime.cdn.sogou.com/QQInput_Mac_Setup_2_8_86_400.dmg'
   homepage 'http://qq.pinyin.cn/'
 
-  install '安装QQ输入法2.8.pkg'
+  pkg '安装QQ输入法2.8.pkg'
   uninstall :pkgutil => 'com.tencent.inputmethod.QQInput.*'
 end

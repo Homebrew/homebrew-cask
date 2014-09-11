@@ -5,6 +5,6 @@ class SplashtopPersonal < Cask
   url 'https://d17kmd0va0f0mp.cloudfront.net/macclient/STP/Splashtop_Personal_v2.4.3.1.dmg'
   homepage 'http://www.splashtop.com/personal'
 
-  install 'Splashtop Personal.pkg'
+  pkg 'Splashtop Personal.pkg'
   uninstall :pkgutil => 'com.splashtop.stp.*'
 end

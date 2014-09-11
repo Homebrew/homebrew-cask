@@ -5,7 +5,7 @@ class Noejectdelay < Cask
   url 'https://pqrs.org/macosx/keyremap4macbook/files/NoEjectDelay-5.4.0.dmg'
   homepage 'https://pqrs.org/macosx/keyremap4macbook/noejectdelay.html.en'
 
-  install 'NoEjectDelay.pkg'
+  pkg 'NoEjectDelay.pkg'
   uninstall :kext => 'org.pqrs.driver.NoEjectDelay',
             :pkgutil => 'org.pqrs.driver.NoEjectDelay'
 end

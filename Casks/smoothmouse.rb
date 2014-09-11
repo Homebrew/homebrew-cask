@@ -5,7 +5,7 @@ class Smoothmouse < Cask
   url 'http://smoothmouse.com/download/latest'
   homepage 'http://smoothmouse.com'
 
-  install 'SmoothMouse.pkg'
+  pkg 'SmoothMouse.pkg'
   uninstall :launchctl => [
                            'com.cyberic.smoothmouse',
                            'com.cyberic.smoothmouseupdater',

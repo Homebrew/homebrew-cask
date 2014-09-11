@@ -9,7 +9,7 @@ class Displaylink < Cask
   homepage 'http://www.displaylink.com'
   version '2.2'
   sha256 '5c9a97a476b5ff27811491eebb653a03c96f899562b67566c24100d8593b1daa'
-  install 'DisplayLink Software Installer.pkg'
+  pkg 'DisplayLink Software Installer.pkg'
   uninstall :pkgutil => ['com.displaylink.displaylinkdriversigned',
                          'com.displaylink.displaylinkdriverunsigned']
             # :kext => ['com.displaylink.driver.DisplayLinkDriver',

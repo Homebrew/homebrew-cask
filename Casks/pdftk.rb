@@ -5,6 +5,6 @@ class Pdftk < Cask
   url 'http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-mac_osx-10.6-setup.pkg'
   homepage 'http://www.pdflabs.com/tools/pdftk-server/'
 
-  install 'pdftk_server-2.02-mac_osx-10.6-setup.pkg'
+  pkg 'pdftk_server-2.02-mac_osx-10.6-setup.pkg'
   uninstall :script => '/opt/pdflabs/pdftk/bin/pdftk_uninstall.sh'
 end

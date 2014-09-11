@@ -7,6 +7,6 @@ class XamarinIos < Cask
   appcast 'http://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml'
   homepage 'http://xamarin.com/ios'
 
-  install 'monotouch-7.2.4.4.pkg'
+  pkg 'monotouch-7.2.4.4.pkg'
   uninstall :pkgutil => 'com.xamarin.monotouch.pkg'
 end

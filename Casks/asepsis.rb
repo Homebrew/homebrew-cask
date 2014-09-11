@@ -5,6 +5,6 @@ class Asepsis < Cask
   url "http://downloads.binaryage.com/Asepsis-#{version}.dmg"
   homepage 'http://asepsis.binaryage.com/'
 
-  install 'Asepsis.pkg'
+  pkg 'Asepsis.pkg'
   uninstall :pkgutil => 'com.binaryage.pkg.asepsis'
 end

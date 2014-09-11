@@ -8,7 +8,7 @@ class Mcs783x < Cask
   sha256 'ea1d6245b5accabf041060886f16cc00b43d3e6e7e032f4154b487e96ab05569'
 
   nested_container "#{basename}/MCS7830_v#{version}.dmg"
-  install "MCS7830 v#{version}.pkg"
+  pkg "MCS7830 v#{version}.pkg"
   uninstall :script => { :executable => 'uninstal driver' },
             :pkgutil => 'asix.com.moschipUsbEthernet.pkg'
 end

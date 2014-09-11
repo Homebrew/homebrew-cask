@@ -5,7 +5,7 @@ class Skydrive < Cask
   url 'http://wl.dlservice.microsoft.com/download/5/6/E/56EAD987-4914-4E8D-A7AD-DF4ADA7E2C5F/SkyDrive.pkg'
   homepage 'http://windows.microsoft.com/en-us/skydrive/download'
 
-  install 'SkyDrive.pkg'
+  pkg 'SkyDrive.pkg'
   uninstall :pkgutil => 'com.microsoft.SkyDriveInstaller', :files =>
     '/Applications/SkyDrive.app'
 end

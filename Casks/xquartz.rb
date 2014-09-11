@@ -6,7 +6,7 @@ class Xquartz < Cask
   appcast 'http://xquartz-dl.macosforge.org/sparkle/release.xml'
   homepage 'http://xquartz.macosforge.org/'
 
-  install 'XQuartz.pkg'
+  pkg 'XQuartz.pkg'
 
   postflight do
     Pathname.new(File.expand_path('~')).join('Library', 'Logs').mkpath

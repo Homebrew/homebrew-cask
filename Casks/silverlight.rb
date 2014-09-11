@@ -5,6 +5,6 @@ class Silverlight < Cask
   url 'http://silverlight.dlservice.microsoft.com/download/F/8/C/F8C0EACB-92D0-4722-9B18-965DD2A681E9/30514.00/Silverlight.dmg'
   homepage 'http://www.microsoft.com/silverlight/'
 
-  install 'Silverlight.pkg'
+  pkg 'Silverlight.pkg'
   uninstall :pkgutil => 'com.microsoft.SilverlightInstaller'
 end

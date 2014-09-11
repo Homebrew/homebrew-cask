@@ -5,7 +5,7 @@ class Zendserver < Cask
   url 'http://downloads.zend.com/zendserver/6.3.0/ZendServer-6.3.0-php-5.5.7.dmg'
   homepage 'http://www.zend.com/en/products/server/'
 
-  install 'Zend Server.pkg'
+  pkg 'Zend Server.pkg'
   uninstall :script => { :executable => '/usr/local/zend/bin/uninstall.sh', :args => ['--automatic'] }
   caveats do
     files_in_usr_local

@@ -5,6 +5,6 @@ class CupsPdf < Cask
   url 'https://bitbucket.org/codepoet/cups-pdf-for-mac-os-x/downloads/CUPS-PDF%202.6.1%20Installer.pkg'
   homepage 'http://www.cups-pdf.de'
 
-  install 'CUPS-PDF.mpkg'
+  pkg 'CUPS-PDF.mpkg'
   uninstall :pkgutil => 'net.codepoetry.cupspdf.*pkg'
 end

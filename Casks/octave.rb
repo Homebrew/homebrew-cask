@@ -5,7 +5,7 @@ class Octave < Cask
   url 'http://downloads.sourceforge.net/project/octave/Octave%20MacOSX%20Binary/2013-12-30%20binary%20installer%20of%20Octave%203.8.0%20for%20OSX%2010.9.1%20%28beta%29/GNU_Octave_3.8.0-6.dmg'
   homepage 'https://gnu.org/software/octave/'
 
-  install 'Octave-3.8.0-6.mpkg'
+  pkg 'Octave-3.8.0-6.mpkg'
   uninstall :pkgutil => [
     'org.macports.octave-next',
     'org.octave.cli-app',

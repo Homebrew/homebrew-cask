@@ -5,6 +5,6 @@ class AdobeDigitalEditions < Cask
   url 'http://download.adobe.com/pub/adobe/digitaleditions/ADE_3.0_Installer.dmg'
   homepage 'http://www.adobe.com/pt/products/digital-editions.html'
 
-  install 'Digital Editions 3.0 Installer.pkg'
+  pkg 'Digital Editions 3.0 Installer.pkg'
   uninstall :pkgutil => 'com.adobe.adobedigitaleditions.app'
 end

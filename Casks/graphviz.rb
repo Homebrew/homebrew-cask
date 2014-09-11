@@ -5,6 +5,6 @@ class Graphviz < Cask
   url "http://www.graphviz.org/pub/graphviz/stable/macos/mountainlion/graphviz-#{version}.pkg"
   homepage 'http://www.graphviz.org/'
 
-  install "graphviz-#{version}.pkg"
+  pkg "graphviz-#{version}.pkg"
   uninstall :pkgutil => 'com.att.graphviz.*'
 end

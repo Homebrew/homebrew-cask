@@ -5,7 +5,7 @@ class Undercover < Cask
   url 'http://assets.undercoverhq.com/client/6.0/undercover_mac.pkg'
   homepage 'http://www.orbicule.com/undercover/mac/'
 
-  install 'undercover_mac.pkg'
+  pkg 'undercover_mac.pkg'
 
   uninstall :pkgutil => 'com.orbicule.pkg.Undercover',
             :quit => [ 'com.orbicule.uc', 'com.orbicule.UCAgent' ],

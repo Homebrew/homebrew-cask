@@ -5,7 +5,7 @@ class Parallels < Cask
   url 'http://download.parallels.com/desktop/v9/update2.hotfix2/ParallelsDesktop-9.0.24237.1028877.dmg'
   homepage 'http://www.parallels.com/products/desktop/'
 
-  install 'Install.mpkg'
+  pkg 'Install.mpkg'
   uninstall :pkgutil => 'com.parallels.pkg.virtualization.bundle',
             :kext    => [
                          'com.parallels.kext.usbconnect',

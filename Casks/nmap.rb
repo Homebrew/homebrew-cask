@@ -5,6 +5,6 @@ class Nmap < Cask
   url "http://nmap.org/dist/nmap-#{version}.dmg"
   homepage 'http://nmap.org/'
 
-  install "nmap-#{version}.mpkg"
+  pkg "nmap-#{version}.mpkg"
   uninstall :pkgutil => 'org.insecure.nmap*.pkg'
 end

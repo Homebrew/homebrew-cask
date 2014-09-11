@@ -5,7 +5,7 @@ class PrivateEye < Cask
   url 'http://radiosilenceapp.com/downloads/Private%20Eye.pkg'
   homepage 'http://radiosilenceapp.com/private-eye'
 
-  install 'Private Eye.pkg'
+  pkg 'Private Eye.pkg'
   # We intentionally unload the kext twice as a workaround
   # See https://github.com/caskroom/homebrew-cask/pull/1802#issuecomment-34171151
   uninstall :early_script => {

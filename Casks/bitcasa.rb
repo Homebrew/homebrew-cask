@@ -5,6 +5,6 @@ class Bitcasa < Cask
   url 'https://d1kbf262vwnlmm.cloudfront.net/Bitcasa_1.4.1387.dmg'
   homepage 'https://www.bitcasa.com'
 
-  install 'InstallBitcasa.pkg'
+  pkg 'InstallBitcasa.pkg'
   uninstall :pkgutil => 'com.bitcasa.AutoLaunch|com.bitcasa.Bitcasa'
 end

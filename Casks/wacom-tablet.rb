@@ -5,7 +5,7 @@ class WacomTablet < Cask
   url 'http://cdn.wacom.com/u/drivers/mac/pro/WacomTablet_6.3.8-2.dmg'
   homepage 'http://www.wacom.com/'
 
-  install 'Install Wacom Tablet.pkg'
+  pkg 'Install Wacom Tablet.pkg'
   uninstall :launchctl => 'com.wacom.wacomtablet',
             :quit => [
                       'com.wacom.TabletDriver',

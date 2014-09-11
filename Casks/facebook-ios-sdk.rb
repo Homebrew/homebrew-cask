@@ -5,6 +5,6 @@ class FacebookIosSdk < Cask
   url 'https://developers.facebook.com/resources/facebook-ios-sdk-3.17.pkg'
   homepage 'https://developers.facebook.com/docs/ios'
 
-  install 'facebook-ios-sdk-3.17.pkg'
+  pkg 'facebook-ios-sdk-3.17.pkg'
   uninstall :pkgutil => 'com.facebook.sdk.pkg'
 end

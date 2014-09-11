@@ -8,7 +8,7 @@ class Java < Cask
                   }
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html'
 
-  install 'JDK 8 Update 20.pkg'
+  pkg 'JDK 8 Update 20.pkg'
   postflight do
     system '/usr/bin/sudo', '-E', '--',
       '/usr/libexec/PlistBuddy', '-c', 'Add :JavaVM:JVMCapabilities: string BundledApp', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Info.plist"

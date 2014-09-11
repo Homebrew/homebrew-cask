@@ -6,6 +6,6 @@ class IntelHaxm < Cask
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
 
   nested_container "haxm-macosx_r04/IntelHAXM_#{version}.dmg"
-  install "IntelHAXM_#{version}.mpkg"
+  pkg "IntelHAXM_#{version}.mpkg"
   uninstall :script => { :executable => '/System/Library/Extensions/intelhaxm.kext/Contents/Resources/uninstall.sh', :input => 'y' }
 end

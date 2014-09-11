@@ -5,7 +5,7 @@ class Mamp < Cask
   url 'http://downloads9.mamp.info/MAMP-PRO/releases/3.0.6/MAMP_MAMP_PRO_3.0.6.pkg'
   homepage 'http://www.mamp.info/en/index.html'
 
-  install 'MAMP_MAMP_PRO_3.0.6.pkg'
+  pkg 'MAMP_MAMP_PRO_3.0.6.pkg'
   postflight do
     system '/usr/bin/sudo', '-E', '--',
            '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", '/Applications/MAMP', '/Applications/MAMP PRO'

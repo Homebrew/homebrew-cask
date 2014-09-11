@@ -5,7 +5,7 @@ class Injection < Cask
   url 'http://injectionforxcode.johnholdsworth.com/InjectionPluginV5.1.pkg'
   homepage 'http://injectionforxcode.com/'
 
-  install 'InjectionPluginV5.1.pkg'
+  pkg 'InjectionPluginV5.1.pkg'
   uninstall :pkgutil => 'com.injectionforxcode.injectionPluginForXcode.InjectionPlugin.pkg',
             :quit => 'com.johnholdsworth.InjectionPluginIII',
             :files => '/Users/beng/Library/Application Support/Developer/Shared/Xcode/Plug-ins/InjectionPlugin.xcplugin'

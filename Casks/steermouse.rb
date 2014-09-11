@@ -5,7 +5,7 @@ class Steermouse < Cask
   url 'http://plentycom.jp/ctrl/files_sm/SteerMouse4.1.9.dmg'
   homepage 'http://plentycom.jp/en/steermouse/'
 
-  install 'SteerMouse Installer.app/Contents/Resources/SteerMouse.pkg'
+  pkg 'SteerMouse Installer.app/Contents/Resources/SteerMouse.pkg'
   uninstall :pkgutil => 'jp.plentycom.SteerMouse.pkg.*',
             :kext    => 'com.cyberic.SmoothMouse'
 end

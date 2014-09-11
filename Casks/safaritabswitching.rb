@@ -5,6 +5,6 @@ class Safaritabswitching < Cask
   url 'https://github.com/rs/SafariTabSwitching/releases/download/1.2.6/Safari.Tab.Switching-1.2.6.pkg'
   homepage 'https://github.com/rs/SafariTabSwitching'
 
-  install 'Safari.Tab.Switching-1.2.6.pkg'
+  pkg 'Safari.Tab.Switching-1.2.6.pkg'
   uninstall :pkgutil => 'net.rhapsodyk.SafariTabSwitching.pkg'
 end

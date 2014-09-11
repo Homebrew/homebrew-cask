@@ -5,7 +5,7 @@ class Wireshark < Cask
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   homepage 'http://www.wireshark.org'
 
-  install "Wireshark #{version} Intel 64.pkg"
+  pkg "Wireshark #{version} Intel 64.pkg"
 
   caveats do
     x11_required

@@ -5,7 +5,7 @@ class Zoomus < Cask
   url 'https://zoom.us/client/latest/zoomusInstaller.pkg'
   homepage 'http://www.zoom.us'
 
-  install 'zoomusInstaller.pkg'
+  pkg 'zoomusInstaller.pkg'
   uninstall :files => [
     '/Applications/zoom.us.app',
     "#{ENV['HOME']}/Desktop/Zoom"

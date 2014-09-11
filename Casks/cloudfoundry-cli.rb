@@ -5,7 +5,7 @@ class CloudfoundryCli < Cask
   url 'http://go-cli.s3-website-us-east-1.amazonaws.com/releases/v6.2.0/installer-osx-amd64.pkg'
   homepage 'https://github.com/cloudfoundry/cli'
 
-  install 'installer-osx-amd64.pkg'
+  pkg 'installer-osx-amd64.pkg'
   uninstall :pkgutil => 'com.pivotal.cloudfoundry.pkg'
   caveats do
     files_in_usr_local

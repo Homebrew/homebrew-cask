@@ -5,6 +5,6 @@ class Unity3d < Cask
   url 'http://netstorage.unity3d.com/unity/unity-4.5.2.dmg'
   homepage 'http://unity3d.com/unity/'
 
-  install 'Unity.pkg'
+  pkg 'Unity.pkg'
   uninstall :pkgutil => 'com.unity3d.*'
 end

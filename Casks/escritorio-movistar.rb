@@ -5,7 +5,7 @@ class EscritorioMovistar < Cask
   url 'http://www.movistar.es/estaticos/descargaaplicaciones/Escritorio%20Movistar_v8.9.pkg'
   homepage 'http://www.movistar.es/particulares/servicios/descargaaplicaciones'
 
-  install 'Escritorio Movistar_v8.9.pkg'
+  pkg 'Escritorio Movistar_v8.9.pkg'
   uninstall :quit => 'com.movistar.tgcm.devel.tme',
             :pkgutil => [
                           'com.ZTE.DatacardDriver.MacV1.3.41NDISICAEM1000.01.02',

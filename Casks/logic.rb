@@ -5,6 +5,6 @@ class Logic < Cask
   url 'http://downloads.saleae.com/Logic%201.1.15%20(10.5%2B).pkg'
   homepage 'http://www.saleae.com/'
 
-  install 'Logic 1.1.15 (10.5+).pkg'
+  pkg 'Logic 1.1.15 (10.5+).pkg'
   uninstall :pkgutil => 'com.saleae.saleae.Logic.pkg'
 end

@@ -5,6 +5,6 @@ class BoxcryptorClassic < Cask
   url 'https://www.boxcryptor.com/download/Boxcryptor_Installer.dmg'
   homepage 'https://www.boxcryptor.com/en/boxcryptor-classic'
 
-  install 'Install Boxcryptor Classic.pkg'
+  pkg 'Install Boxcryptor Classic.pkg'
   uninstall :script => { :executable => 'Uninstall.command', :args => %w[--unattended] }
 end

@@ -10,6 +10,6 @@ class Bankid < Cask
     system '/bin/mv', '--', destination_path.join('FileDownloader'), destination_path.join('bankid-latest.pkg')
   end
 
-  install 'bankid-latest.pkg'
+  pkg 'bankid-latest.pkg'
   uninstall :pkgutil => 'com.bankid.bankid.BankID.pkg'
 end

@@ -5,7 +5,7 @@ class MicrosoftIntellipoint < Cask
   url 'http://download.microsoft.com/download/B/1/0/B109F931-70E2-425F-8681-EAAB75845AB8/Microsoft-Mouse_d305.dmg'
   homepage 'http://www.microsoft.com/hardware/en-us/mice'
 
-  install 'Microsoft Mouse Installer.app/Contents/Resources/Microsoft Mouse.pkg'
+  pkg 'Microsoft Mouse Installer.app/Contents/Resources/Microsoft Mouse.pkg'
   uninstall :pkgutil => 'com.microsoft.mouse.installer',
             :kext => [
                       'com.microsoft.driver.MicrosoftMouse',

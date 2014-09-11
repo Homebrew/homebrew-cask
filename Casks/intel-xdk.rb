@@ -5,6 +5,6 @@ class IntelXdk < Cask
   url 'https://d2bnc8freht07j.cloudfront.net/xdk_web_mac_master_0769.dmg'
   homepage 'http://xdk-software.intel.com/'
 
-  install 'xdk_full_0769.pkg'
+  pkg 'xdk_full_0769.pkg'
   uninstall :pkgutil => 'com.intel.pkg.xdk_new'
 end

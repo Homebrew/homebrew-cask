@@ -4,6 +4,6 @@ class Matplotlib < Cask
   url 'http://www.kyngchaos.com/files/software/python/matplotlib-1.3.1-2.dmg'
   homepage 'http://www.kyngchaos.com/software/python'
 
-  install 'matplotlib.pkg'
+  pkg 'matplotlib.pkg'
   uninstall :pkgutil => 'com.kyngchaos.matplotib-lion'
 end

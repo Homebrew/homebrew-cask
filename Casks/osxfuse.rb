@@ -5,7 +5,7 @@ class Osxfuse < Cask
   url "https://downloads.sourceforge.net/project/osxfuse/osxfuse-#{version}/osxfuse-#{version}.dmg"
   homepage 'https://osxfuse.github.io/'
 
-  install "Install OSXFUSE #{version[0..-3]}.pkg"
+  pkg "Install OSXFUSE #{version[0..-3]}.pkg"
   uninstall :pkgutil => 'com.github.osxfuse.pkg.Core|com.github.osxfuse.pkg.PrefPane',
             :kext => 'com.github.osxfuse.filesystems.osxfusefs'
 end

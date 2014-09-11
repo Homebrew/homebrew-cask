@@ -5,6 +5,6 @@ class Aquaterm < Cask
   url 'https://downloads.sourceforge.net/project/aquaterm/AquaTerm/v1.1.1/AquaTerm-1.1.1.dmg'
   homepage 'http://aquaterm.sourceforge.net/'
 
-  install 'AquaTermInstaller.pkg'
+  pkg 'AquaTermInstaller.pkg'
   uninstall :pkgutil => 'net.sourceforge.aquaterm.aquaterm.*'
 end
