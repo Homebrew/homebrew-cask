@@ -1,11 +1,11 @@
 class Netbeans < Cask
-  version '8.0'
-  sha256 'fcbac4765de78af05e5b4ac29f6d418ad82e29c1cce4f536d93e4bc4272f90d4'
+  version '8.0.1'
+  sha256 '701f057b9cb9d4f20054acbbe5298369c459827e86021de6a80738a1fc600f1f'
 
-  url 'http://download.netbeans.org/netbeans/8.0/final/bundles/netbeans-8.0-macosx.dmg'
+  url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-macosx.dmg"
   homepage 'https://netbeans.org/'
 
-  pkg 'NetBeans 8.0.mpkg'
+  pkg "NetBeans #{version}.mpkg"
   # Theoretically this uninstall could conflict with a separate GlassFish
   # installation.
   #
