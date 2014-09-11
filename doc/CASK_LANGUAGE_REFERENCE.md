@@ -341,7 +341,7 @@ The first argument to the `pkg` stanza should be a relative path to the `.pkg`
 file to be installed.  For example:
 
 ```ruby
-pkg 'Vagrant.pkg'
+pkg 'Unity.pkg'
 ```
 
 Subsequent arguments to `pkg` are key/value pairs which modify the install

@@ -45,18 +45,18 @@ class Alfred < Cask
 end
 ```
 
-Here is another Cask for `Vagrant.pkg`:
+Here is another Cask for `Unity.pkg`:
 
 ```ruby
-class Vagrant < Cask
-  version '1.4.3'
-  sha256 'e7ff13b01d3766829f3a0c325c1973d15b589fe1a892cf7f857da283a2cbaed1'
+class Unity < Cask
+  version '4.5.4'
+  sha256 '6fb72bfacf78df072559dd9a024a9d47e49b5717c8f17d53f05e2fc74a721876'
 
-  url 'https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg'
-  homepage 'http://www.vagrantup.com'
+  url 'http://netstorage.unity3d.com/unity/unity-4.5.4.dmg'
+  homepage 'http://unity3d.com/unity/'
 
-  pkg 'Vagrant.pkg'
-  uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] }
+  pkg 'Unity.pkg'
+  uninstall :pkgutil => 'com.unity3d.*'
 end
 ```
 
