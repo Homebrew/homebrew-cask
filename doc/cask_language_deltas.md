@@ -31,19 +31,27 @@ This notice will be removed for the final form.**
 
 ## Additions (1.0)
 
-**Stub!**
+ * `depends_on :cask`
+   * stub - not yet functional
+ * `depends_on :macos`
+   * stub - not yet functional
+ * `depends_on :arch`
+   * stub - not yet functional
+ * `depends_on :x11`
+   * stub - not yet functional
+ * `depends_on :java`
+   * stub - not yet functional
 
 
 ## Renames (1.0)
 
-| old stanza name    | new stanza name
-| -------------------|----------------
-| `before_install`   | `preflight`
-| `after_install`    | `postflight`
-| `before_uninstall` | `uninstall_preflight`
-| `after_uninstall`  | `uninstall_postflight`
-| `install`          | `pkg`
-
+| old form              | new form
+| --------------------- |----------------
+| `before_install`      | `preflight`
+| `after_install`       | `postflight`
+| `before_uninstall`    | `uninstall_preflight`
+| `after_uninstall`     | `uninstall_postflight`
+| `depends_on_formula`  | `depends_on :formula`
 
 ## All Supported Stanzas (1.0)
 
