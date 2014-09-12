@@ -94,7 +94,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `uninstall`            | yes                           | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](#uninstall-stanza-details))
 | `nested_container`     | yes                           | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `depends_on_formula`   | yes                           | a list of Homebrew Formulae upon which this Cask depends
-| `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Details](#caveats-details))
+| `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](#caveats-stanza-details))
 | `preflight`            | yes                           | a Ruby block containing preflight install operations (needed only in very rare cases)
 | `postflight`           | yes                           | a Ruby block containing postflight install operations
 | `uninstall_preflight`  | yes                           | a Ruby block containing preflight uninstall operations (needed only in very rare cases)
@@ -170,7 +170,9 @@ end
 When `caveats` is a string, it is evaluated at compile time. Use this only for a static
 message in which you don't need to interpolate any runtime variables.  Example:
 
-	caveats 'Using this software is hazardous to your health.'
+```ruby
+caveats 'Using this software is hazardous to your health.'
+```
 
 ### Caveats as a Block
 

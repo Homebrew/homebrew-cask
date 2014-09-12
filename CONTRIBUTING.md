@@ -154,7 +154,7 @@ Additional stanzas you might need for special use-cases:
 | `input_method`     | relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
 | `screen_saver`     | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
 | `nested_container` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
-| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Details](doc/CASK_LANGUAGE_REFERENCE.md#caveats-details))
+| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#caveats-stanza-details))
 
 Even more special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#optional-stanzas) and [Legacy Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#legacy-stanzas).
 
