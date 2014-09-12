@@ -364,6 +364,11 @@ IF YOU CANNOT DESIGN A WORKING `UNINSTALL` STANZA, PLEASE SUBMIT YOUR
 CASK ANYWAY.  The maintainers will help you write an `uninstall` stanza:
 just ask!
 
+### `uninstall :pkgutil` Is The Easiest and Most Useful
+
+`:pkgutil` is the easiest and most useful `uninstall` directive.  See
+[Uninstall Key :pkgutil](#uninstall-key-pkgutil).
+
 ### `uninstall` Is Required for Casks That Install a `pkg`
 
 For most Casks, uninstall actions are determined automatically, and an
@@ -378,10 +383,13 @@ The `uninstall` stanza is available for non-`pkg` Casks, and is useful for
 a few corner cases.  However, the documentation below concerns the typical
 case of using `uninstall` to define procedures for a `pkg`.
 
+### There Are Multiple Uninstall Techniques
+
 Since `pkg` installers can do arbitrary things, different techniques are
 needed to uninstall in each case.  You may need to specify one, or several,
-of the following key/value pairs as arguments to `uninstall`.  `:pkgutil`
-is the most useful.
+of the following key/value pairs as arguments to `uninstall`.
+
+### Summary of Keys
 
 * `:early_script` (string or hash) - like `:script`, but runs early (for special cases, best avoided)
 * `:launchctl` (string or array) - ids of `launchctl` jobs to remove
@@ -410,8 +418,8 @@ The easiest way to work out an `uninstall` stanza is on a system where the
 
 ### Uninstall Key :pkgutil
 
-This is the most important and useful uninstall key.  `:pkgutil` is
-often sufficient to completely uninstall a `pkg`.
+This is the most useful uninstall key.  `:pkgutil` is often sufficient
+to completely uninstall a `pkg`, and is strongly preferred over `:files`.
 
 IDs for the most recently-installed packages can be listed using the
 command
@@ -419,9 +427,10 @@ command
 $ ./developer/bin/list_recent_pkg_ids
 ```
 
-`:pkgutil` also accepts a regular expression to match multiple package
-IDs.  To test a regular expression against currently-installed packages,
-use the command
+`:pkgutil` also accepts a regular expression match against multiple package
+IDs.  The regular expressions are somewhat nonstandard.  To test a `:pkgutil`
+regular expression against currently-installed packages, use the command
+
 ```bash
 $ ./developer/bin/list_pkg_ids_by_regexp <regular-expression>
 ```
