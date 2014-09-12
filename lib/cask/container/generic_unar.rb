@@ -9,7 +9,7 @@ class Cask::Container::GenericUnar < Cask::Container::Base
   def extract
     unar = HOMEBREW_PREFIX.join('bin/unar')
     if ! Pathname.new(unar).exist?
-      raise CaskError.new "Expected to find unar executable. Cask #{@cask} must add: depends_on_formula 'unar'"
+      raise CaskError.new "Expected to find unar executable. Cask #{@cask} must add: depends_on :formula => 'unar'"
     end
     Dir.mktmpdir do |staging_dir|
       @command.run!(unar, :args => ['-q', '-D', '-o', staging_dir, '--', @path])

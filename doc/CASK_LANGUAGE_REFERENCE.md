@@ -15,6 +15,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [URL Stanza Details](#url-stanza-details)
  * [Link Stanza Details](#link-stanza-details)
  * [Pkg Stanza Details](#pkg-stanza-details)
+ * [Depends_on Stanza Details](#depends_on-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
  * [Arbitrary Ruby Methods](#arbitrary-ruby-methods)
  * [Revisions to the Cask DSL](#revisions-to-the-cask-dsl)
@@ -93,7 +94,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | ---------------------- |------------------------------ | ----------- |
 | `uninstall`            | yes                           | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](#uninstall-stanza-details))
 | `nested_container`     | yes                           | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
-| `depends_on_formula`   | yes                           | a list of Homebrew Formulae upon which this Cask depends
+| `depends_on`           | yes                           | a list of dependencies required by this Cask (see also [Depends_on Stanza Details](#depends_on-stanza-details))
 | `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](#caveats-stanza-details))
 | `preflight`            | yes                           | a Ruby block containing preflight install operations (needed only in very rare cases)
 | `postflight`           | yes                           | a Ruby block containing postflight install operations
@@ -106,14 +107,15 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 
 The following stanzas are no longer in use.
 
-| name                | multiple occurrences allowed? | meaning     |
-| ------------------- |------------------------------ | ----------- |
-| `no_checksum`       | no                            | an obsolete alternative to `sha256 :no_check`
-| `before_install`    | yes                           | an obsolete alternative to `preflight`
-| `after_install`     | yes                           | an obsolete alternative to `postflight`
-| `before_uninstall`  | yes                           | an obsolete alternative to `uninstall_preflight`
-| `after_uninstall`   | yes                           | an obsolete alternative to `uninstall_postflight`
-| `install`           | yes                           | an obsolete alternative to `pkg`
+| name                 | multiple occurrences allowed? | meaning     |
+| -------------------- |------------------------------ | ----------- |
+| `no_checksum`        | no                            | an obsolete alternative to `sha256 :no_check`
+| `before_install`     | yes                           | an obsolete alternative to `preflight`
+| `after_install`      | yes                           | an obsolete alternative to `postflight`
+| `before_uninstall`   | yes                           | an obsolete alternative to `uninstall_preflight`
+| `after_uninstall`    | yes                           | an obsolete alternative to `uninstall_postflight`
+| `install`            | yes                           | an obsolete alternative to `pkg`
+| `depends_on_formula` | yes                           | an obsolete alternative to `depends_on :formula`
 
 
 ## Conditional Statements
@@ -356,6 +358,32 @@ Example:
 ```ruby
 pkg 'Soundflower.pkg', :allow_untrusted => true
 ```
+
+## Depends_on Stanza Details
+
+`depends_on` is used to declare dependencies required to install a Cask
+or to execute its contents.
+
+For example, some distributions are contained in archive formats such as
+`7z` which are not supported by stock Apple tools.  For these cases, a more
+capable archive reader may be pulled in at install time by declaring a
+dependency on the Homebrew Formula `unar`:
+
+```ruby
+depends_on :formula => 'unar'
+```
+
+While several keys are accepted by `depends_on`, `:formula` is the only
+key with working functionality at the time of writing.
+
+| key        | description |
+| ---------- | ----------- |
+| `:formula` | A Homebrew Formula
+| `:cask`    | *stub - not yet functional*
+| `:macos`   | *stub - not yet functional*
+| `:arch`    | *stub - not yet functional*
+| `:x11`     | *stub - not yet functional*
+| `:java`    | *stub - not yet functional*
 
 
 ## Uninstall Stanza Details
