@@ -7,4 +7,8 @@ class Adium < Cask
   homepage 'https://www.adium.im/'
 
   app 'Adium.app'
+  zap :files => [
+                 '~/Library/Application Support/Adium 2.0',
+                 '~/Library/Preferences/com.adiumX.adiumX.plist',
+                ]
 end
