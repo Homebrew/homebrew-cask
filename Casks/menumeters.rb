@@ -6,4 +6,5 @@ class Menumeters < Cask
   homepage 'http://www.ragingmenace.com/software/menumeters/'
 
   prefpane 'MenuMeters Installer.app/Contents/Resources/MenuMeters.prefPane'
+  zap :files => '~/Library/Preferences/com.ragingmenace.MenuMeters.plist'
 end
