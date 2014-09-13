@@ -6,4 +6,5 @@ class Cloud < Cask
   homepage 'http://getcloudapp.com/'
 
   app 'Cloud.app'
+  zap :files => '~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist'
 end
