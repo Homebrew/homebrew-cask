@@ -11,4 +11,11 @@ class Karabiner < Cask
   uninstall :quit => 'org.pqrs.Karabiner',
             :pkgutil => 'org.pqrs.driver.Karabiner',
             :kext => 'org.pqrs.driver.Karabiner'
+  zap :files => [
+                 '~/Library/Preferences/org.pqrs.Karabiner.plist',
+                 '~/Library/Preferences/org.pqrs.Karabiner-AXNotifier.plist',
+                 '~/Library/Preferences/org.pqrs.Karabiner.multitouchextension.plist',
+                ]
+  # todo :rmdir not yet supported
+  #    :rmdir '~/Library/Application Support/Karabiner'
 end
