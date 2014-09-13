@@ -7,4 +7,5 @@ class Controlplane < Cask
   homepage 'http://www.controlplaneapp.com/'
 
   app 'ControlPlane.app'
+  zap :files => '~/Library/Preferences/com.dustinrue.ControlPlane.plist'
 end
