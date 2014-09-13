@@ -7,4 +7,9 @@ class Slate < Cask
   homepage 'https://github.com/jigish/slate'
 
   app 'Slate.app'
+  zap :files => [
+                 '~/.slate',
+                 '~/.slate.js',
+                 '~/Library/Application Support/com.slate.Slate',
+                ]
 end
