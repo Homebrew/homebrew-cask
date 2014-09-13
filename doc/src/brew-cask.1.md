@@ -89,6 +89,22 @@ names, and other aspects of this manual are still subject to change.
   * `uninstall` or `rm` or `remove` <Cask>:
     Uninstall <Cask>.
 
+  * `zap` <Cask>:
+    Unconditionally remove _all_ files associated with <Cask>.
+
+    Implicitly performs all actions associated with `uninstall`, even if
+    the Cask does not appear to be currently installed.
+
+    Removes all staged versions of the Cask distribution found under
+    `/opt/homebrew-cask/Caskroom/<Cask>`
+
+    If the Cask definition contains a `zap` stanza, performs additional
+    `zap` actions as defined there, such as removing local preference
+    files.  `zap` actions are variable, depending on the level of detail
+    defined by the Cask author.
+
+    **`zap` may remove resources which are shared between applications.**
+
   * `search` or `-S`:
     Display all Casks available for install.
 

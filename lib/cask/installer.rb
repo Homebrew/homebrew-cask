@@ -50,7 +50,7 @@ class Cask::Installer
       extract_primary_container
       install_artifacts
     rescue
-      purge_files
+      purge_versioned_files
       raise
     end
 
@@ -125,7 +125,7 @@ class Cask::Installer
   def uninstall
     odebug "Cask::Installer.uninstall"
     uninstall_artifacts
-    purge_files
+    purge_versioned_files
   end
 
   def uninstall_artifacts
@@ -138,26 +138,43 @@ class Cask::Installer
     end
   end
 
-  def purge_files
-    odebug "Purging files"
+  def zap
+    odebug "Zap: implied uninstall"
+    uninstall_artifacts
+    if Cask::Artifact::Zap.me?(@cask)
+      odebug "Dispatching zap directives"
+      Cask::Artifact::Zap.new(@cask, @command).zap_phase
+    end
+    purge_caskroom_path
+  end
 
-    # versioned staged distribution
-    if @cask.destination_path.respond_to?(:rmtree) and @cask.destination_path.exist?
+  # this feels like a class method, but uses @command
+  def permissions_rmtree(path)
+    if path.respond_to?(:rmtree) and path.exist?
       begin
-        @cask.destination_path.rmtree
+        path.rmtree
       rescue
         # in case of permissions problems
-        if @cask.destination_path.exist?
-          @command.run('/bin/chmod', :args => ['-R', '--', 'u+rwx', @cask.destination_path])
-          @command.run('/bin/chmod', :args => ['-R', '-N',          @cask.destination_path])
-          @cask.destination_path.rmtree
+        if path.exist?
+          @command.run('/bin/chmod', :args => ['-R', '--', 'u+rwx', path])
+          @command.run('/bin/chmod', :args => ['-R', '-N',          path])
+          path.rmtree
         end
       end
     end
+  end
 
-    if @cask.metadata_versioned_container_path.respond_to?(:children) and @cask.metadata_versioned_container_path.exist?
+  def purge_versioned_files
+    odebug "Purging files for version #{@cask.version} of Cask #{@cask}"
+
+    # versioned staged distribution
+    permissions_rmtree(@cask.destination_path)
+
+    # Homebrew-cask metadata
+    if @cask.metadata_versioned_container_path.respond_to?(:children) and
+        @cask.metadata_versioned_container_path.exist?
       @cask.metadata_versioned_container_path.children.each do |subdir|
-        subdir.rmtree unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
+        permissions_rmtree subdir unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
       end
     end
     if @cask.metadata_versioned_container_path.respond_to?(:rmdir_if_possible)
@@ -169,5 +186,10 @@ class Cask::Installer
 
     # toplevel staged distribution
     @cask.caskroom_path.rmdir_if_possible
+  end
+
+  def purge_caskroom_path
+    odebug "Purging all staged versions of Cask #{@cask}"
+    permissions_rmtree(@cask.caskroom_path)
   end
 end

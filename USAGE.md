@@ -76,6 +76,7 @@ This will both uninstall the Cask and remove symlinks which were created in
 * `home` -- opens the homepage of the given Cask; or with no arguments, the homebrew-cask project page
 * `alfred` -- modifies Alfred's scope to include the Caskroom
 * `update` -- a synonym for `brew update`
+* `zap` -- try to remove *all* files associated with a Cask (including resources which may be shared with other applications)
 
 The following commands are for Cask authors:
 

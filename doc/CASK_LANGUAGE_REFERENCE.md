@@ -17,6 +17,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Pkg Stanza Details](#pkg-stanza-details)
  * [Depends_on Stanza Details](#depends_on-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
+ * [Zap Stanza Details](#zap-stanza-details)
  * [Arbitrary Ruby Methods](#arbitrary-ruby-methods)
  * [Revisions to the Cask DSL](#revisions-to-the-cask-dsl)
 
@@ -93,6 +94,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | name                   | multiple occurrences allowed? | value       |
 | ---------------------- |------------------------------ | ----------- |
 | `uninstall`            | yes                           | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](#uninstall-stanza-details))
+| `zap`                  | yes                           | additional procedures for a more complete uninstall, including user files and shared resources. (see also [Zap Stanza Details](#zap-stanza-details))
 | `nested_container`     | yes                           | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `depends_on`           | yes                           | a list of dependencies required by this Cask (see also [Depends_on Stanza Details](#depends_on-stanza-details))
 | `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](#caveats-stanza-details))
@@ -430,7 +432,7 @@ of the following key/value pairs as arguments to `uninstall`.
   - `:args` - array of arguments to the uninstall script
   - `:input` - array of lines of input to be sent to `stdin` of the script
   - `:must_succeed` - set to `false` if the script is allowed to fail
-* `:files` (array) - absolute paths of files or directories to remove.  `:files` should only be used as a last resort. `:pkgutil` is strongly preferred
+* `:files` (array) - single-quoted, absolute paths of files or directories to remove.  `:files` should only be used as a last resort. `:pkgutil` is strongly preferred
 
 Each `uninstall` technique is applied according to the order above. The order
 in which `uninstall` keys appear in the Cask file is ignored.
@@ -551,6 +553,24 @@ IDs inside a kext bundle you have located on disk can be listed using the comman
 $ ./developer/bin/list_id_in_kext </path/to/name.kext>
 ```
 
+### Uninstall Key :files
+
+`:files` should only be used as a last resort, if other `uninstall` methods
+are insufficient.
+
+Arguments to `uninstall :files` should be static, single-quoted, absolute
+paths.
+
+ * Only single quotes should be used.
+ * Double-quotes should not be used.  `ENV['HOME']` and other variables
+   should not be interpolated in the value.
+ * Only absolute paths should be given.
+ * No tilde expansion is performed (`~` characters are literal).
+ * No glob expansion is performed (*eg* `*` characters are literal), though
+   glob expansion is a desired future feature.
+
+To remove user-specific files, use the `zap` stanza.
+
 ### Working With a pkg File Manually
 
 Advanced users may wish to work with a `pkg` file manually, without having the
@@ -585,6 +605,37 @@ A fully manual method for finding bundle ids in a package file follows:
      `find /tmp/expanded.unpkg -name PackageInfo -print0 | xargs -0 grep -i kext` should return a `<bundle id>` tag with a `path`
      attribute that contains a `.kext` extension, for example `<bundle id="com.wavtap.driver.WavTap" ... path="./WavTap.kext" ... />`.
   5. Once bundle ids have been identified, the unpacked package directory can be deleted.
+
+
+## Zap Stanza Details
+
+### Zap Stanza Purpose
+
+The `zap` stanza describes a more complete uninstallation of resources
+associated with a Cask.  The `zap` procedures will never be performed
+by default, but only if the user invokes the `zap` verb:
+
+```bash
+$ brew cask zap td-toolbelt             # also removes org.ruby-lang.installer
+```
+
+`zap` stanzas may remove:
+
+ * Preference files and caches stored within the user's `~/Library` directory.
+ * Shared resources such as application updaters.  Since shared resources
+   may be removed, other applications may be affected by `brew cask zap`.
+   Understanding that is the responsibility of the end user.
+
+### Zap Stanza Syntax
+
+The form of `zap` stanza follows the [`uninstall` stanza](#uninstall-stanza-details).
+All of the same directives are available.
+
+`zap` differs from `uninstall` in the interpretation of values paired with
+the `:files` key:
+
+ * Leading tilde characters (`~`) will be expanded to home directories, as
+   in the shell.
 
 
 ## Arbitrary Ruby Methods
