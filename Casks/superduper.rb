@@ -6,4 +6,5 @@ class Superduper < Cask
   homepage 'http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html'
 
   app 'SuperDuper!.app'
+  zap :files => '~/Library/Application Support/SuperDuper!'
 end
