@@ -15,4 +15,12 @@ class Cocoaspell < Cask
     Non-English dictionaries must be installed separately.  For more information,
     see http://people.ict.usc.edu/~leuski/cocoaspell/install_dict.php .
     EOS
+  zap :files => [
+                 '~/.aspell.conf',
+                 '~/.aspell.en.prepl',
+                 # Debatable. The Pws holds user-created content, though typically
+                 # created through the application, and the user is not likely aware
+                 # of this particular file.
+                 # '~/.aspell.en.pws',
+                ]
 end
