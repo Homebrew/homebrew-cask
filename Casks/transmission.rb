@@ -7,4 +7,8 @@ class Transmission < Cask
   homepage 'http://www.transmissionbt.com/'
 
   app 'Transmission.app'
+  zap :files => [
+                 '~/Library/Preferences/org.m0k.transmission.plist',
+                 '~/Library/Application Support/Transmission/blocklists',
+                ]
 end
