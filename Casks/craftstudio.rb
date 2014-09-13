@@ -9,7 +9,7 @@ class Craftstudio < Cask
 
   uninstall :quit => 'com.sparklinlabs.CraftStudioLauncher',
             :pkgutil => 'com.sparklinlabs.CraftStudioLauncher'
-            # zap :files => '~/Library/CraftStudio'
+  zap       :files => '~/Library/CraftStudio'
 
   caveats do
     "Requires mono-mre. You can install this by running brew cask install mono-mre."
