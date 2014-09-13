@@ -7,4 +7,5 @@ class Concentrate < Cask
   homepage 'http://www.getconcentrating.com/'
 
   app 'Concentrate.app'
+  zap :files => '~/Library/Application Support/Concentrate/Concentrate.sqlite3'
 end
