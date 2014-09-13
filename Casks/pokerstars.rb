@@ -6,4 +6,8 @@ class Pokerstars < Cask
   homepage 'http://www.pokerstars.com/'
 
   app 'PokerStars.app'
+  zap :files => [
+                 '~/Library/Preferences/com.pokerstars.user.ini',
+                 '~/Library/Preferences/com.pokerstars.PokerStars.plist',
+                ]
 end
