@@ -6,4 +6,5 @@ class Awareness < Cask
   homepage 'http://iamfutureproof.com/tools/awareness/'
 
   app 'Awareness.app'
+  zap :files => '~/Library/Preferences/com.futureproof.awareness.plist'
 end
