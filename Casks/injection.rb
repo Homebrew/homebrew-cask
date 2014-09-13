@@ -7,6 +7,6 @@ class Injection < Cask
 
   pkg 'InjectionPluginV5.1.pkg'
   uninstall :pkgutil => 'com.injectionforxcode.injectionPluginForXcode.InjectionPlugin.pkg',
-            :quit => 'com.johnholdsworth.InjectionPluginIII',
-            :files => '/Users/beng/Library/Application Support/Developer/Shared/Xcode/Plug-ins/InjectionPlugin.xcplugin'
+            :quit => 'com.johnholdsworth.InjectionPluginIII'
+  zap       :files => '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/InjectionPlugin.xcplugin'
 end
