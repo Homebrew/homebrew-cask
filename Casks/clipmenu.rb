@@ -7,4 +7,8 @@ class Clipmenu < Cask
   homepage 'http://www.clipmenu.com/'
 
   app 'ClipMenu.app'
+  zap :files => [
+                 '~/Library/Application Support/ClipMenu',
+                 '~/Library/Preferences/com.naotaka.ClipMenu.plist',
+                ]
 end
