@@ -6,4 +6,5 @@ class MagicLaunch < Cask
   homepage 'http://www.oneperiodic.com/products/magiclaunch/'
 
   prefpane 'Magic Launch.prefPane'
+  zap :files => '~/Library/Preferences/com.metakine.magic-launch.agent.plist'
 end
