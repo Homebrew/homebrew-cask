@@ -1,8 +1,8 @@
 class Latexit < Cask
-  version '2.7.1'
-  sha256 '8dc0f418ece333ea6b4933328306af7c25405a8eb34f6bf344d37e2c30200e7f'
+  version '2.7.2'
+  sha256 'e58b0d74e6560fb9d28aeff7e355ab7b2bcd433b474ec3dda0fb3bd3b05b2f2c'
 
-  url 'http://www.chachatelier.fr/latexit/downloads/LaTeXiT-2_7_1.dmg'
+  url "http://www.chachatelier.fr/latexit/downloads/LaTeXiT-#{version.tr('.', '_')}.dmg"
   appcast 'http://pierre.chachatelier.fr/latexit/downloads/latexit-sparkle-en.rss'
   homepage 'http://www.chachatelier.fr/latexit'
 
