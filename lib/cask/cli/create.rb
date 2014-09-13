@@ -26,7 +26,7 @@ class Cask::CLI::Create < Cask::CLI::Base
         url 'https://'
         homepage ''
 
-        link ''
+        app ''
       end
     EOS
   end

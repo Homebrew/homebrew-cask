@@ -13,7 +13,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Caveats Stanza Details](#caveats-stanza-details)
  * [Checksum Stanza Details](#checksum-stanza-details)
  * [URL Stanza Details](#url-stanza-details)
- * [Link Stanza Details](#link-stanza-details)
+ * [App Stanza Details](#app-stanza-details)
  * [Pkg Stanza Details](#pkg-stanza-details)
  * [Depends_on Stanza Details](#depends_on-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
@@ -35,8 +35,8 @@ class Alfred < Cask
   url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
   homepage 'http://www.alfredapp.com/'
 
-  link 'Alfred 2.app'
-  link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
+  app 'Alfred 2.app'
+  app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
 ```
 
@@ -75,19 +75,19 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 
 | name               | multiple occurrences allowed? | value       |
 | ------------------ |------------------------------ | ----------- |
-| `link`             | yes                           |  relative path to a file that should be linked into the `Applications` folder on installation (see also [Link Stanza Details](#link-stanza-details))
-| `pkg`              | yes                           |  relative path to a `.pkg` file containing the distribution (see also [Pkg Stanza Details](#pkg-stanza-details))
-| `binary`           | yes                           |  relative path to a binary that should be linked into the `/usr/local/bin` folder on installation
-| `colorpicker`      | yes                           |  relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
-| `font`             | yes                           |  relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
-| `input_method`     | yes                           |  relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
-| `internet_plugin`  | yes                           |  relative path to a service that should be linked into the `~/Library/Internet Plug-Ins` folder on installation
-| `prefpane`         | yes                           |  relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
-| `qlplugin`         | yes                           |  relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
-| `screen_saver`     | yes                           |  relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
-| `service`          | yes                           |  relative path to a service that should be linked into the `~/Library/Services` folder on installation
-| `widget`           | yes                           |  relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation (ALPHA: DOES NOT WORK YET)
-
+| `app`              | yes                           | relative path to an `.app` that should be linked into the `~/Applications` folder on installation (see also [App Stanza Details](#app-stanza-details))
+| `pkg`              | yes                           | relative path to a `.pkg` file containing the distribution (see also [Pkg Stanza Details](#pkg-stanza-details))
+| `binary`           | yes                           | relative path to a binary that should be linked into the `/usr/local/bin` folder on installation
+| `colorpicker`      | yes                           | relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
+| `font`             | yes                           | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
+| `input_method`     | yes                           | relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
+| `internet_plugin`  | yes                           | relative path to a service that should be linked into the `~/Library/Internet Plug-Ins` folder on installation
+| `prefpane`         | yes                           | relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
+| `qlplugin`         | yes                           | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
+| `screen_saver`     | yes                           | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
+| `service`          | yes                           | relative path to a service that should be linked into the `~/Library/Services` folder on installation
+| `widget`           | yes                           | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation (ALPHA: DOES NOT WORK YET)
+| `link`             | yes                           | relative path to an arbitrary path that should be symlinked on installation.  This is an older form which is preserved only for unusual cases.  The `app` stanza is strongly preferred for linking `.app` bundles.
 
 ## Optional Stanzas
 
@@ -292,14 +292,14 @@ following key/value pairs to `url`:
 | `:trust_cert`      | set to `true` to automatically trust the certificate presented by the server (avoiding an interactive prompt)
 
 
-## Link Stanza Details
+## App Stanza Details
 
-In the simple case of a string argument to `link`, a symlink is created in
+In the simple case of a string argument to `app`, a symlink is created in
 the target `~/Applications` directory using the same basename as the source
 file.  For example:
 
 ```ruby
-link 'Alfred 2.app'
+app 'Alfred 2.app'
 ```
 
 causes the creation of this symlink
@@ -317,10 +317,10 @@ which points to a source file such as
 ### Renaming the Target
 
 You can rename the target link which appears in your `~/Applications`
-directory by adding a `:target` key to `link`, like this:
+directory by adding a `:target` key to `app`, like this:
 
 ```ruby
-link 'Alfred 2.app', :target => 'Jeeves.app'
+app 'Alfred 2.app', :target => 'Jeeves.app'
 ```
 
 ### :target May Contain an Absolute Path

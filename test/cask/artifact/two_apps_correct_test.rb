@@ -1,15 +1,15 @@
 require 'test_helper'
 
 describe Cask::Artifact::App do
-  let(:local_two_links_caffeine) {
-    Cask.load('with-two-links-correct').tap do |cask|
+  let(:local_two_apps_caffeine) {
+    Cask.load('with-two-apps-correct').tap do |cask|
       TestHelper.install_without_artifacts(cask)
     end
   }
 
-  describe 'install multiple links' do
+  describe 'install multiple apps' do
     it "links both noted applications to the proper directory" do
-      cask = local_two_links_caffeine
+      cask = local_two_apps_caffeine
 
       shutup do
         Cask::Artifact::App.new(cask).install_phase
@@ -20,18 +20,18 @@ describe Cask::Artifact::App do
     end
 
     it "works with an application in a subdir" do
-      AltSubDirTwoLinksCask = Class.new(Cask)
-      AltSubDirTwoLinksCask.class_eval do
+      AltSubDirTwoAppsCask = Class.new(Cask)
+      AltSubDirTwoAppsCask.class_eval do
         url TestHelper.local_binary('caffeine.zip')
         homepage 'http://example.com/local-caffeine'
         version '1.2.3'
         sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
-        link 'subdir/Caffeine.app'
-        link 'subdir/Caffeine.app', :target => 'AnotherName.app'
+        app 'subdir/Caffeine.app'
+        app 'subdir/Caffeine.app', :target => 'AnotherName.app'
       end
 
       begin
-        subdir_cask = AltSubDirTwoLinksCask.new.tap do |cask|
+        subdir_cask = AltSubDirTwoAppsCask.new.tap do |cask|
           TestHelper.install_without_artifacts(cask)
         end
 
@@ -55,7 +55,7 @@ describe Cask::Artifact::App do
 
     # @@@ todo
     # it "only uses linkables when they are specified" do
-    #   cask = local_two_links_caffeine
+    #   cask = local_two_apps_caffeine
     #
     #   app_path = cask.destination_path.join('Caffeine.app')
     #   FileUtils.cp_r app_path, app_path.sub('Caffeine.app', 'CaffeineAgain.app')
@@ -69,7 +69,7 @@ describe Cask::Artifact::App do
     # end
 
     it "avoids clobbering an existing app by linking over it (link 1)" do
-      cask = local_two_links_caffeine
+      cask = local_two_apps_caffeine
 
       (Cask.appdir/'Caffeine.app').mkpath
 
@@ -84,7 +84,7 @@ describe Cask::Artifact::App do
     end
 
     it "avoids clobbering an existing app by linking over it (link 2)" do
-      cask = local_two_links_caffeine
+      cask = local_two_apps_caffeine
 
       (Cask.appdir/'AnotherName.app').mkpath
 
@@ -99,7 +99,7 @@ describe Cask::Artifact::App do
     end
 
     it "happily clobbers an existing symlink (link 1)" do
-      cask = local_two_links_caffeine
+      cask = local_two_apps_caffeine
 
       (Cask.appdir/'Caffeine.app').make_symlink('/tmp')
 
@@ -114,7 +114,7 @@ describe Cask::Artifact::App do
     end
 
     it "happily clobbers an existing symlink (link 2)" do
-      cask = local_two_links_caffeine
+      cask = local_two_apps_caffeine
 
       (Cask.appdir/'AnotherName.app').make_symlink('/tmp')
 

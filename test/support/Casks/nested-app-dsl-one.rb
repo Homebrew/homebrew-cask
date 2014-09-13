@@ -7,5 +7,5 @@ class NestedAppDslOne < TestCask
   version '1.2.3'
   sha256 '1866dfa833b123bb8fe7fa7185ebf24d28d300d0643d75798bc23730af734216'
   container :nested => 'NestedApp.dmg'
-  link 'MyNestedApp.app'
+  app 'MyNestedApp.app'
 end

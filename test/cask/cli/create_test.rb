@@ -43,7 +43,7 @@ describe Cask::CLI::Create do
         url 'https://'
         homepage ''
 
-        link ''
+        app ''
       end
     TEMPLATE
   end
