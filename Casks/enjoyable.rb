@@ -7,4 +7,5 @@ class Enjoyable < Cask
   homepage 'http://yukkurigames.com/enjoyable/'
 
   app 'Enjoyable.app'
+  zap :files => '~/Library/Preferences/com.yukkurigames.Enjoyable.plist'
 end
