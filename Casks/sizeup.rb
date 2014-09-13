@@ -7,4 +7,8 @@ class Sizeup < Cask
   homepage 'http://www.irradiatedsoftware.com/sizeup/index.html'
 
   app 'SizeUp.app'
+  zap :files => [
+                 '~/Library/Preferences/com.irradiatedsoftware.SizeUp.plist',
+                 '~/Library/Application Support/SizeUp',
+                ]
 end
