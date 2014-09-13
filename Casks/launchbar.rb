@@ -6,4 +6,12 @@ class Launchbar < Cask
   homepage 'http://www.obdev.at/products/launchbar/'
 
   app 'LaunchBar.app'
+  zap :files => [
+                 '~/Library/Preferences/at.obdev.LaunchBar.plist',
+                 '~/Library/Application Support/LaunchBar/Configuration.plist',
+                 '~/Library/Application Support/LaunchBar/CustomShortcuts.plist',
+                 # todo unsure if these contain user-created content
+                 # '~/Library/Application Support/LaunchBar/Actions',
+                 # '~/Library/Application Support/LaunchBar/Snippets',
+                ]
 end
