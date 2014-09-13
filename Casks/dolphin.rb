@@ -6,4 +6,8 @@ class Dolphin < Cask
   homepage 'http://www.dolphin-emu.org/'
 
   app 'Dolphin.app'
+  zap :files => [
+                 '~/Library/Application Support/Dolphin',
+                 '~/Library/Preferences/org.dolphin-emu.dolphin.plist',
+                ]
 end
