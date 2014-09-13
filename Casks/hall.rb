@@ -6,5 +6,6 @@ class Hall < Cask
   homepage 'https://hall.com/download-hall/hall-for-mac'
 
   pkg 'Hall.pkg'
-  uninstall :pkgutil => 'com.companyline.hall.desktop', :files => '/Applications/Hall.app'
+  uninstall :pkgutil => 'com.companyline.hall.desktop',
+            :files   => '/Applications/Hall.app'
 end

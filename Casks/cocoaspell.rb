@@ -6,10 +6,11 @@ class Cocoaspell < Cask
   homepage 'http://cocoaspell.leuski.net/'
 
   pkg 'cocoAspell.pkg'
-  uninstall :pkgutil => 'net.leuski.cocoaspell.*', :files => [
-    '/Application Support/cocoAspell/aspell6-en-6.0-0',
-    '/Library/PreferencePanes/Spelling.prefPane'
-  ]
+  uninstall :pkgutil => 'net.leuski.cocoaspell.*',
+            :files   => [
+                         '/Application Support/cocoAspell/aspell6-en-6.0-0',
+                         '/Library/PreferencePanes/Spelling.prefPane'
+                        ]
   caveats <<-EOS.undent
     Non-English dictionaries must be installed separately.  For more information,
     see http://people.ict.usc.edu/~leuski/cocoaspell/install_dict.php .

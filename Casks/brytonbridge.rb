@@ -8,8 +8,6 @@ class Brytonbridge < Cask
   pkg 'BrytonBridge2.pkg'
   uninstall :pkgutil => 'com.brytonsport.pkg.BrytonBridge2',
             :quit    => 'com.yourcompany.BrytonBridge',
-            :files   => [
-              '/Applications/BrytonBridge2',
-              "ENV['HOME']/Library/Saved Application State/com.yourcompany.BrytonBridge.savedState"
-            ]
+            :files   => '/Applications/BrytonBridge2'
+  zap       :files   => '~/Library/Saved Application State/com.yourcompany.BrytonBridge.savedState'
 end

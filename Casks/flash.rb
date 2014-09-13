@@ -7,5 +7,5 @@ class Flash < Cask
 
   pkg 'Install Adobe Flash Player.pkg'
   uninstall :pkgutil => 'com.adobe.pkg.FlashPlayer',
-            :files => '/Library/Internet Plug-Ins/Flash Player.plugin'
+            :files   => '/Library/Internet Plug-Ins/Flash Player.plugin'
 end

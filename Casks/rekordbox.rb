@@ -7,5 +7,5 @@ class Rekordbox < Cask
 
   pkg 'Install_rekordbox_3_0_1.pkg'
   uninstall :pkgutil => 'com.pioneer.rekordbox.3.*',
-    :files => '/Applications/rekordbox 3/'
+            :files   => '/Applications/rekordbox 3/'
 end

@@ -7,8 +7,9 @@ class Octave < Cask
 
   pkg 'Octave-3.8.0-6.mpkg'
   uninstall :pkgutil => [
-    'org.macports.octave-next',
-    'org.octave.cli-app',
-    'org.octave.gui-app',
-  ], :files => ['/usr/local/octave/3.8.0']
+                         'org.macports.octave-next',
+                         'org.octave.cli-app',
+                         'org.octave.gui-app',
+                        ],
+            :files => '/usr/local/octave/3.8.0'
 end

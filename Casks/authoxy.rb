@@ -7,8 +7,6 @@ class Authoxy < Cask
 
   pkg 'Authoxy (double click me).pkg'
   uninstall :pkgutil => 'net.hrsoftworks.authoxy.*',
-            :files => [
-                       "#{ENV['HOME']}/Library/Preferences/net.hrsoftworks.AuthoxyPref.plist",
-                       '/tmp/authoxyd.pid',
-                      ]
+            :files   => '/tmp/authoxyd.pid'
+  zap       :files   => '~/Library/Preferences/net.hrsoftworks.AuthoxyPref.plist'
 end

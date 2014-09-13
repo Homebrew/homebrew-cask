@@ -8,7 +8,5 @@ class Baiduinput < Cask
 
   pkg '安装百度输入法.pkg'
   uninstall :pkgutil  => 'com.baidu.inputmethod.*',
-            :files    => [
-                          '/Library/Input Methods/BaiduIM.app'
-                         ]
+            :files    => '/Library/Input Methods/BaiduIM.app'
 end
