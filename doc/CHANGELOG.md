@@ -1,5 +1,34 @@
 # CHANGELOG
 
+## 0.41.1
+
+* __Casks__
+ - 3 Casks added (12 updated) by 12 contributors since 0.41.0
+ - 1867 total Casks
+* __Features__
+ - none
+* __Breaking Changes__
+ - none
+* __Fixes__
+ - [#6066][] fix `brew cask alfred` for Yosemite/Alfred 2.4
+ - [#6166][] fix `depends_on :formula` backend
+* __Internal Changes__
+ - [#6138][] docs, error messages, tests for `depends_on :formula`
+ - [#6137][] convert last of test suite to new `pkg` stanza
+ - [#6117][] metadata directory support
+* __Documentation__
+ - 6 doc commits since 0.41.0 <3 [@treyharris][]
+* __Contributors__
+ - 1 new contributor since 0.41.0
+ - 1011 total contributors
+
+[@treyharris]: https://github.com/treyharris
+[#6066]: https://github.com/caskroom/homebrew-cask/issues/6066
+[#6117]: https://github.com/caskroom/homebrew-cask/issues/6117
+[#6137]: https://github.com/caskroom/homebrew-cask/issues/6137
+[#6138]: https://github.com/caskroom/homebrew-cask/issues/6138
+[#6166]: https://github.com/caskroom/homebrew-cask/issues/6166
+
 ## 0.41.0
 
 * __Casks__
