@@ -26,4 +26,9 @@ class R < Cask
                        # /Library/Frameworks/R.Framework/Versions/3.1/Resources/fontconfig/cache
                        '/Library/Frameworks/R.Framework/Versions/3.1',
                       ]
+  zap :files => [
+                 '~/.R',
+                 '~/.Rhistory',
+                 '~/.Rprofile',
+                ]
 end
