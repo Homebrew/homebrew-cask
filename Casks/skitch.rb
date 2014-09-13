@@ -6,4 +6,8 @@ class Skitch < Cask
   homepage 'http://evernote.com/skitch/'
 
   app 'Skitch.app'
+  zap :files => [
+                 '~/Library/Preferences/com.plasq.skitch.plist',
+                 '~/Library/Preferences/com.plasq.skitch.history',
+                ]
 end
