@@ -9,4 +9,9 @@ class DefaultFolderX < Cask
   caveats do
     manual_installer 'Default Folder X Installer.app'
   end
+  zap :files => [
+                 '~/Library/Preferences/com.stclairsoft.DefaultFolderX.favorites.plist',
+                 '~/Library/Preferences/com.stclairsoft.DefaultFolderX.plist',
+                 '~/Library/Preferences/com.stclairsoft.DefaultFolderX.settings.plist',
+                ]
 end
