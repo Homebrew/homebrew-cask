@@ -48,11 +48,13 @@ This notice will be removed for the final form.**
 
 | old form              | new form
 | --------------------- |----------------
+| `install`             | `pkg`
 | `before_install`      | `preflight`
 | `after_install`       | `postflight`
 | `before_uninstall`    | `uninstall_preflight`
 | `after_uninstall`     | `uninstall_postflight`
 | `depends_on_formula`  | `depends_on :formula`
+
 
 ## All Supported Stanzas (1.0)
 
