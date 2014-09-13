@@ -6,4 +6,7 @@ class Ngrok < Cask
   homepage 'https://ngrok.com/'
 
   binary 'ngrok'
+
+  # todo verify that this does not contain user-created content
+  # zap :files => '~/.ngrok'
 end
