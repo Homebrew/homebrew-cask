@@ -7,4 +7,5 @@ class SequelPro < Cask
   homepage 'http://www.sequelpro.com/'
 
   app 'Sequel Pro.app'
+  zap :files => '~/Library/Application Support/Sequel Pro/Data'
 end
