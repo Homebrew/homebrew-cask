@@ -6,8 +6,8 @@ class CarlsonMinot < Cask
   homepage 'http://www.carlson-minot.com'
 
   pkg 'arm-2013.05-24-arm-none-linux-gnueabi.osx.intelx86.bin.pkg'
-  uninstall :pkgutil => 'com.carlson-minot.arm-2013.05-24-arm-none-linux-gnueabi.pkg', :files => [
-    '/usr/local/carlson-minot' ]
+  uninstall :pkgutil => 'com.carlson-minot.arm-2013.05-24-arm-none-linux-gnueabi.pkg',
+            :files   => '/usr/local/carlson-minot'
   caveats do
     files_in_usr_local
   end
