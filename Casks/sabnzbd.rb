@@ -6,4 +6,8 @@ class Sabnzbd < Cask
   homepage 'http://sabnzbd.org/'
 
   app '10.8 (M-Lion) 10.9 (Mavericks)/SABnzbd.app'
+  zap :files => [
+                 '~/Library/Application Support/SABnzbd/sabnzbd.ini',
+                 '~/Library/Application Support/SABnzbd/admin/rss_data.sab',
+                ]
 end
