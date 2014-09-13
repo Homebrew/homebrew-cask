@@ -8,4 +8,10 @@ class LittleSnitch < Cask
   caveats do
     manual_installer 'Little Snitch Installer.app'
   end
+  zap :files => [
+                 '~/Library/Preferences/at.obdev.LittleSnitchNetworkMonitor.plist',
+                 '~/Library/Application Support/Little Snitch/rules.usr.xpl',
+                 '~/Library/Application Support/Little Snitch/configuration.xpl',
+                 '~/Library/Application Support/Little Snitch/configuration.user.xpl',
+                ]
 end
