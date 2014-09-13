@@ -9,4 +9,8 @@ class Seil < Cask
   uninstall :quit => 'org.pqrs.Seil',
             :kext => 'org.pqrs.driver.Seil',
             :pkgutil => 'org.pqrs.driver.Seil'
+  zap :files => [
+                 '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
+                 '~/Library/Preferences/org.pqrs.Seil.plist',
+                ]
 end
