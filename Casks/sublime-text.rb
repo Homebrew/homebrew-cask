@@ -11,4 +11,11 @@ class SublimeText < Cask
   caveats do
     files_in_usr_local
   end
+  zap :files => [
+                 '~/Library/Application Support/Sublime Text 2/Installed Packages',
+                 '~/Library/Application Support/Sublime Text 2/Packages',
+                 '~/Library/Application Support/Sublime Text 2/Pristine Packages',
+                ]
+  # todo :rmdir not yet supported
+  #   :rmdir     '~/Library/Application Support/Sublime Text 2',
 end
