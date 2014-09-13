@@ -29,17 +29,21 @@ class Gpgtools < Cask
             :files => [
                        '/Applications/GPG Keychain Access.app',
                        '/Library/Services/GPGServices.service',
-                       "ENV['HOME']/Library/Services/GPGServices.service",
                        '/Library/Mail/Bundles/GPGMail.mailbundle',
-                       "ENV['HOME']/Library/Mail/Bundles/GPGMail.mailbundle",
                        '/Library/PreferencePanes/GPGPreferences.prefPane',
-                       "ENV['HOME']/Library/PreferencePanes/GPGPreferences.prefPane",
                       ]
   uninstall_postflight do
     system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg2)"      =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg2'
     system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg)"       =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg'
     system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg-agent)" =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg-agent'
   end
+
+  zap       :files  => [
+                        '~/Library/Services/GPGServices.service',
+                        '~/Library/Mail/Bundles/GPGMail.mailbundle',
+                        '~/Library/PreferencePanes/GPGPreferences.prefPane',
+                       ]
+
   caveats do
     files_in_usr_local
   end
