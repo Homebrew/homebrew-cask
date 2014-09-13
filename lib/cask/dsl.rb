@@ -173,7 +173,7 @@ module Cask::DSL
       end
       # todo: remove this backwards compatibility section after removing depends_on_formula
       if @depends_on.formula
-        @depends_on_formula ||= @depends_on.formula
+        @depends_on_formula ||= [ @depends_on.formula ]
       end
       @depends_on
     end
