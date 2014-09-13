@@ -1,6 +1,6 @@
 class Packer < Cask
   version '0.7.1'
-  sha256 '1b490d4ef86b074c658681b550e98e40fcbdd407fa8f6eb5da8191e5808b8ec3'
+  sha256 '10b266d9020b72ff09a38cd7b6b42a3ec4bd78b1b13a83e9a5c433d504378322'
 
   url "https://dl.bintray.com/mitchellh/packer/packer_#{version}_darwin_amd64.zip"
   homepage 'http://www.packer.io/'
