@@ -5,5 +5,5 @@ class TransporterDesktop < Cask
   url 'https://secure.connecteddata.com/mac/2.5/software/Transporter_Desktop_2.6.10_14167.dmg'
   homepage 'http://www.filetransporter.com/'
 
-  link 'Transporter Desktop.app'
+  app 'Transporter Desktop.app'
 end
