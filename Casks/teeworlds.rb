@@ -5,6 +5,6 @@ class Teeworlds < Cask
   url 'https://teeworlds.com/files/teeworlds-0.6.2-osx.dmg'
   homepage 'https://www.teeworlds.com/'
 
-  link 'Teeworlds.app'
-  link 'Teeworlds Server.app'
+  app 'Teeworlds.app'
+  app 'Teeworlds Server.app'
 end
