@@ -5,5 +5,5 @@ class Xbench < Cask
   url 'http://xbench.com/Xbench_1.3.dmg'
   homepage 'http://xbench.com/'
 
-  link 'XBench.app'
+  app 'XBench.app'
 end
