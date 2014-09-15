@@ -5,5 +5,5 @@ class Colors < Cask
   url 'https://mattpatenaude.com/software/colors-1.9.zip'
   homepage 'http://mattpatenaude.com/'
 
-  link 'Colors.app'
+  app 'Colors.app'
 end
