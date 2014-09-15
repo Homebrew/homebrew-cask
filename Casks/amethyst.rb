@@ -6,5 +6,5 @@ class Amethyst < Cask
   appcast 'http://ianyh.github.io/Amethyst/appcast.xml'
   homepage 'http://ianyh.com/amethyst'
 
-  link 'Amethyst.app'
+  app 'Amethyst.app'
 end
