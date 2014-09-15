@@ -5,5 +5,5 @@ class Imagemin < Cask
   url "https://github.com/kevva/imagemin-app/releases/download/#{version}/imagemin-app-v#{version}-darwin.zip"
   homepage 'https://github.com/kevva/imagemin-app'
 
-  link "imagemin-app-v#{version}-darwin/Atom.app', :target => 'imagemin.app"
+  app "imagemin-app-v#{version}-darwin/Atom.app', :target => 'imagemin.app"
 end
