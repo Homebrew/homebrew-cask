@@ -6,5 +6,5 @@ class Sizeup < Cask
   appcast 'http://www.irradiatedsoftware.com/updates/profiles/sizeup.php'
   homepage 'http://www.irradiatedsoftware.com/sizeup/index.html'
 
-  link 'SizeUp.app'
+  app 'SizeUp.app'
 end
