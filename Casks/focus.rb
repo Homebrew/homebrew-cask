@@ -6,5 +6,5 @@ class Focus < Cask
   appcast 'http://www.heyfocus.com/appcast.xml'
   homepage 'http://www.heyfocus.com/'
 
-  link 'Focus.app'
+  app 'Focus.app'
 end
