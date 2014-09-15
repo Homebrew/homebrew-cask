@@ -5,5 +5,5 @@ class Texmaker < Cask
   url 'http://www.xm1math.net/texmaker/TexmakerMacosxLion.zip'
   homepage 'http://www.xm1math.net/texmaker'
 
-  link 'TexmakerMacosxLion/texmaker.app'
+  app 'TexmakerMacosxLion/texmaker.app'
 end
