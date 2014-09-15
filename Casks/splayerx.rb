@@ -5,5 +5,5 @@ class Splayerx < Cask
   url 'http://cdn.bitbucket.org/Tomasen/splayerx/downloads/SPlayerX_1.1.8.zip'
   homepage 'https://bitbucket.org/Tomasen/splayerx/wiki/Home'
 
-  link 'SPlayerX.app'
+  app 'SPlayerX.app'
 end
