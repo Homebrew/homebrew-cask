@@ -5,5 +5,5 @@ class Flow < Cask
   url 'http://www.getflow.com/mac/download'
   homepage 'http://www.getflow.com/'
 
-  link 'Flow.app'
+  app 'Flow.app'
 end
