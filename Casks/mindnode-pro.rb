@@ -6,5 +6,5 @@ class MindnodePro < Cask
   appcast 'https://www.mindnode.com/softwareupdate/mindnodepro.xml'
   homepage 'https://mindnode.com/'
 
-  link 'MindNode Pro.app'
+  app 'MindNode Pro.app'
 end
