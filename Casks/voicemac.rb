@@ -6,7 +6,7 @@ class Voicemac < Cask
   appcast 'https://mrgeckosmedia.com/applications/appcast/VoiceMac'
   homepage 'https://mrgeckosmedia.com/applications/info/VoiceMac'
 
-  link 'VoiceMac/VoiceMac.app'
+  app 'VoiceMac/VoiceMac.app'
   postflight do
     system '/bin/chmod', '--', 'a+r', "#{destination_path}/VoiceMac/VoiceMac.app/Contents/Info.plist"
   end
