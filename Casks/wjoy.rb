@@ -5,5 +5,5 @@ class Wjoy < Cask
   url 'https://wjoy.googlecode.com/files/wjoy%200.7.1.dmg'
   homepage 'https://code.google.com/p/wjoy/'
 
-  link 'Wjoy.app'
+  app 'Wjoy.app'
 end
