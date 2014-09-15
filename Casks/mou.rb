@@ -6,5 +6,5 @@ class Mou < Cask
   appcast 'http://mouapp.com/up/updates.xml'
   homepage 'http://mouapp.com/'
 
-  link 'Mou.app'
+  app 'Mou.app'
 end
