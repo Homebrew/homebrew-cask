@@ -5,5 +5,5 @@ class DropboxEncore < Cask
   url 'http://www.joyofmacs.com/downloads/DropboxEncore1.0.dmg'
   homepage 'http://www.joyofmacs.com/software/dropboxencore/'
 
-  link 'Dropbox Encore.app'
+  app 'Dropbox Encore.app'
 end
