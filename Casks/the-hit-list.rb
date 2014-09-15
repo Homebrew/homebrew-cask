@@ -6,5 +6,5 @@ class TheHitList < Cask
   appcast 'http://www.potionfactory.com/appcast/thehitlist.php'
   homepage 'http://www.potionfactory.com/thehitlist'
 
-  link 'The Hit List.app'
+  app 'The Hit List.app'
 end
