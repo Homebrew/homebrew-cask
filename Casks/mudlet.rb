@@ -5,5 +5,5 @@ class Mudlet < Cask
   url 'http://www.mudlet.org/download/Mudlet-2.1.zip'
   homepage 'http://www.mudlet.org'
 
-  link 'Mudlet-2.1.app'
+  app 'Mudlet-2.1.app'
 end
