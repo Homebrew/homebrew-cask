@@ -6,5 +6,5 @@ class Slack < Cask
   appcast 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1'
   homepage 'http://slack.com'
 
-  link "Slack #{version}.app"
+  app "Slack #{version}.app"
 end
