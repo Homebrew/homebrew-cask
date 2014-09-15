@@ -5,5 +5,5 @@ class LuminanceHdr < Cask
   url "http://downloads.sourceforge.net/sourceforge/qtpfsgui/Luminance%20HDR%20#{version}-MacOSX-10.8.dmg"
   homepage 'http://qtpfsgui.sourceforge.net/'
 
-  link "Luminance HDR #{version}.app"
+  app "Luminance HDR #{version}.app"
 end
