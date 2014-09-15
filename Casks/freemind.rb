@@ -5,5 +5,5 @@ class Freemind < Cask
   url 'https://downloads.sourceforge.net/project/freemind/freemind/1.0.1/FreeMind_1.0.1.dmg'
   homepage 'freemind.sourceforge.net'
 
-  link 'FreeMind.app'
+  app 'FreeMind.app'
 end
