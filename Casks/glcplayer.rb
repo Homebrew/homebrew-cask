@@ -5,5 +5,5 @@ class Glcplayer < Cask
   url "http://downloads.sourceforge.net/sourceforge/glc-player/glc_player_#{version}.dmg"
   homepage 'http://www.glc-player.net'
 
-  link 'glc_player.app'
+  app 'glc_player.app'
 end
