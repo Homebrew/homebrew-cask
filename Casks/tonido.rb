@@ -5,5 +5,5 @@ class Tonido < Cask
   url 'http://www.tonido.com/download.php?TonidoSetup.dmg'
   homepage 'http://www.tonido.com/'
 
-  link 'Tonido.app'
+  app 'Tonido.app'
 end
