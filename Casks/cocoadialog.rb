@@ -5,5 +5,5 @@ class Cocoadialog < Cask
   url 'https://github.com/downloads/mstratman/cocoadialog/CocoaDialog-2.1.1.dmg'
   homepage 'http://mstratman.github.io/cocoadialog/'
 
-  link 'CocoaDialog.app'
+  app 'CocoaDialog.app'
 end
