@@ -6,5 +6,5 @@ class SubtitleMaster < Cask
   appcast 'http://updates.subtitlemaster.com'
   homepage 'http://subtitlemaster.com/'
 
-  link 'Subtitle Master.app'
+  app 'Subtitle Master.app'
 end
