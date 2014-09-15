@@ -6,5 +6,5 @@ class Uncrustifyx < Cask
   appcast 'https://raw.github.com/ryanmaxwell/uncrustifyx/appcast/uncrustifyx-appcast.xml'
   homepage 'https://github.com/ryanmaxwell/UncrustifyX'
 
-  link 'UncrustifyX.app'
+  app 'UncrustifyX.app'
 end
