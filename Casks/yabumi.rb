@@ -5,5 +5,5 @@ class Yabumi < Cask
   url 'https://yabumi.cc/download/YabumiUploader.dmg'
   homepage 'https://yabumi.cc/'
 
-  link 'Yabumi.app'
+  app 'Yabumi.app'
 end
