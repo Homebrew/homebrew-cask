@@ -5,5 +5,5 @@ class Quiterss < Cask
   url "http://quiterss.org/files/#{version}/QuiteRSS-#{version}.dmg"
   homepage 'http://quiterss.org/'
 
-  link 'Quiterss.app'
+  app 'Quiterss.app'
 end
