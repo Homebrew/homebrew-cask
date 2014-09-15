@@ -5,5 +5,5 @@ class Antirsi < Cask
   url 'http://sabi.net/nriley/software/AntiRSI-1.4njr4.zip'
   homepage 'http://sabi.net/nriley/software/#antirsi'
 
-  link 'AntiRSI.app'
+  app 'AntiRSI.app'
 end
