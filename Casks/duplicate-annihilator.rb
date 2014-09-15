@@ -6,5 +6,5 @@ class DuplicateAnnihilator < Cask
   homepage 'http://brattoo.com/propaganda/'
 
   nested_container 'Duplicate Annihilator.dmg'
-  link 'Duplicate Annihilator.app'
+  app 'Duplicate Annihilator.app'
 end
