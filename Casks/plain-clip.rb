@@ -5,5 +5,5 @@ class PlainClip < Cask
   url 'https://www.bluem.net/files/Plain-Clip.dmg'
   homepage 'http://www.bluem.net/en/mac/plain-clip'
 
-  link 'Plain Clip.app'
+  app 'Plain Clip.app'
 end
