@@ -6,5 +6,5 @@ class Slate < Cask
   appcast 'https://www.ninjamonkeysoftware.com/slate/appcast.xml'
   homepage 'https://github.com/jigish/slate'
 
-  link 'Slate.app'
+  app 'Slate.app'
 end
