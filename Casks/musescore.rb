@@ -5,5 +5,5 @@ class Musescore < Cask
   url 'http://ftp.osuosl.org/pub/musescore/releases/MuseScore-1.3/MuseScore-1.3.dmg'
   homepage 'http://musescore.org/'
 
-  link 'MuseScore.app'
+  app 'MuseScore.app'
 end
