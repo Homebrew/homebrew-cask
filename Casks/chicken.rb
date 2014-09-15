@@ -6,5 +6,5 @@ class Chicken < Cask
   appcast 'http://chicken.sourceforge.net/chicken.xml'
   homepage 'http://sourceforge.net/projects/chicken/'
 
-  link 'Chicken.app'
+  app 'Chicken.app'
 end
