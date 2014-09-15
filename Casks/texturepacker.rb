@@ -5,5 +5,5 @@ class Texturepacker < Cask
   url 'https://www.codeandweb.com/download/texturepacker/3.3.1/TexturePacker-3.3.1-uni.dmg'
   homepage 'http://www.codeandweb.com/texturepacker'
 
-  link 'TexturePacker.app'
+  app 'TexturePacker.app'
 end
