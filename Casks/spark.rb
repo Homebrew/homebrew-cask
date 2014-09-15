@@ -5,5 +5,5 @@ class Spark < Cask
   url 'http://www.shadowlab.org/softwares/Spark/Spark.dmg'
   homepage 'http://www.shadowlab.org/softwares/spark.php'
 
-  link 'Spark.app'
+  app 'Spark.app'
 end
