@@ -6,5 +6,5 @@ class Coteditor < Cask
   appcast 'http://coteditor.github.io/appcast.xml'
   homepage 'http://coteditor.github.io/'
 
-  link 'CotEditor.app'
+  app 'CotEditor.app'
 end
