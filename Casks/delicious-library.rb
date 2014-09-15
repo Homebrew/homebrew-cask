@@ -5,5 +5,5 @@ class DeliciousLibrary < Cask
   url 'http://delicious-monster.com/downloads/DeliciousLibrary3.zip'
   homepage 'http://delicious-monster.com/'
 
-  link 'Delicious Library 3.app'
+  app 'Delicious Library 3.app'
 end
