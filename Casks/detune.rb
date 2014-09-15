@@ -5,5 +5,5 @@ class Detune < Cask
   url "http://headlightsoft.com/detune/detune-#{version}.dmg"
   homepage 'http://headlightsoft.com/detune/'
 
-  link 'DeTune.app'
+  app 'DeTune.app'
 end
