@@ -5,5 +5,5 @@ class Pingmenu < Cask
   url 'https://github.com/kalleboo/PingMenu/raw/master/PingMenu.app.zip'
   homepage 'https://github.com/kalleboo/PingMenu'
 
-  link 'PingMenu.app'
+  app 'PingMenu.app'
 end
