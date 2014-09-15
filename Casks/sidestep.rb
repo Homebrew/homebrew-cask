@@ -6,5 +6,5 @@ class Sidestep < Cask
   appcast 'http://chetansurpur.com/projects/sidestep/appcast.xml'
   homepage 'http://chetansurpur.com/projects/sidestep'
 
-  link 'Sidestep.app'
+  app 'Sidestep.app'
 end
