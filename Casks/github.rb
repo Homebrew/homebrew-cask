@@ -5,7 +5,7 @@ class Github < Cask
   url 'https://central.github.com/mac/latest'
   homepage 'http://mac.github.com'
 
-  link 'GitHub.app'
+  app 'GitHub.app'
   binary 'GitHub.app/Contents/MacOS/github_cli', :target => 'github'
   postflight do
     system '/usr/bin/defaults', 'write', 'com.github.GitHub', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
