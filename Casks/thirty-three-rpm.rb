@@ -5,5 +5,5 @@ class ThirtyThreeRpm < Cask
   url 'http://www.edenwaith.com/downloads/33rpm.dmg'
   homepage 'http://www.edenwaith.com/products/33rpm/'
 
-  link '33 RPM.app'
+  app '33 RPM.app'
 end
