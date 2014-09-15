@@ -5,5 +5,5 @@ class Kamakiri < Cask
   url 'https://mochidev.com/appresources/downloads/Kamakiri%20Latest.zip'
   homepage 'https://mochidev.com/apps/kamakiri'
 
-  link 'Kamakiri.app'
+  app 'Kamakiri.app'
 end
