@@ -5,5 +5,5 @@ class Librecad < Cask
   url 'https://downloads.sourceforge.net/project/librecad/OSX/2.0.4/LibreCAD-2.0.4.dmg'
   homepage 'http://librecad.org/'
 
-  link 'LibreCAD.app'
+  app 'LibreCAD.app'
 end
