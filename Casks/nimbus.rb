@@ -6,5 +6,5 @@ class Nimbus < Cask
   appcast 'https://github.com/jnordberg/irccloudapp/raw/master/appcast.xml'
   homepage 'https://github.com/jnordberg/irccloudapp'
 
-  link 'Nimbus.app'
+  app 'Nimbus.app'
 end
