@@ -5,5 +5,5 @@ class Fotowall < Cask
   url 'http://fotowall.googlecode.com/files/Fotowall-0.8.2-OSX.dmg'
   homepage 'http://www.enricoros.com/opensource/fotowall/'
 
-  link 'Fotowall.app'
+  app 'Fotowall.app'
 end
