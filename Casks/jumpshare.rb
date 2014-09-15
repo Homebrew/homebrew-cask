@@ -5,5 +5,5 @@ class Jumpshare < Cask
   url 'https://jumpshare.com/desktop/mac/Jumpshare_1.0.25-3.dmg'
   homepage 'https://jumpshare.com/'
 
-  link 'Jumpshare.app'
+  app 'Jumpshare.app'
 end
