@@ -5,5 +5,5 @@ class Dictunifier < Cask
   url 'https://mac-dictionary-kit.googlecode.com/files/DictUnifier-2.1.zip'
   homepage 'http://code.google.com/p/mac-dictionary-kit/'
 
-  link 'DictUnifier.app'
+  app 'DictUnifier.app'
 end
