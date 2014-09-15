@@ -5,5 +5,5 @@ class IstatMenus < Cask
   url "http://download.bjango.com/istatmenus/"
   homepage 'http://bjango.com/mac/istatmenus/'
 
-  link 'iStat Menus.app'
+  app 'iStat Menus.app'
 end
