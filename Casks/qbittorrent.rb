@@ -5,5 +5,5 @@ class Qbittorrent < Cask
   url 'https://downloads.sourceforge.net/sourceforge/qbittorrent/qbittorrent-3.1.3.dmg'
   homepage 'http://www.qbittorrent.org'
 
-  link 'qBittorrent.app'
+  app 'qBittorrent.app'
 end
