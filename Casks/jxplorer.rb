@@ -5,7 +5,7 @@ class Jxplorer < Cask
   url 'https://downloads.sourceforge.net/sourceforge/jxplorer/jxplorer/version%203.3.1/jxplorer-3.3.1-osx.zip'
   homepage 'http://jxplorer.org'
 
-  link 'jxplorer-3.3.1.app'
+  app 'jxplorer-3.3.1.app'
   postflight do
     system '/bin/chmod', '--', 'a+x', "#{destination_path}/jxplorer-3.3.1.app/Contents/MacOS/jxplorer"
   end
