@@ -3,5 +3,5 @@ class Tarball < TestCask
   homepage 'http://example.com/tarball'
   version '1.2.3'
   sha256 :no_check
-  link 'Tarball.app'
+  app 'Tarball.app'
 end

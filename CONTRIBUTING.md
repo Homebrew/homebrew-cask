@@ -30,7 +30,7 @@ Making a Cask is easy: a Cask is a small Ruby file.
 ### Examples
 
 Here's a Cask for `Alfred.app` as an example.  Note that you may repeat
-the `link` stanza as many times as you need, to create multiple links:
+the `app` stanza as many times as you need, to define multiple apps:
 
 ```ruby
 class Alfred < Cask
@@ -40,8 +40,8 @@ class Alfred < Cask
   url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
   homepage 'http://www.alfredapp.com/'
 
-  link 'Alfred 2.app'
-  link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
+  app 'Alfred 2.app'
+  app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
 ```
 
@@ -70,7 +70,7 @@ class Firefox < Cask
   url 'https://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US'
   homepage 'https://www.mozilla.org/en-US/firefox/'
 
-  link 'Firefox.app'
+  app 'Firefox.app'
 end
 ```
 
@@ -120,7 +120,7 @@ class MyNewCask < Cask
   url ''
   homepage ''
 
-  link ''
+  app ''
 end
 ```
 
@@ -136,7 +136,7 @@ Fill in the following stanzas for your Cask:
 | `version`          | application version; give the value `'latest'` if an unversioned download is available
 | `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
 | __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
-| `link`             | relative path to a file that should be linked into the `Applications` folder on installation (see also [Link Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#link-stanza-details))
+| `app`              | relative path to an `.app` bundle that should be linked into the `Applications` folder on installation (see also [App Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#app-stanza-details))
 | `pkg`              | relative path to a `.pkg` file containing the distribution (see also [Pkg Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#pkg-stanza-details))
 | `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details))
 
@@ -218,17 +218,17 @@ To name a Cask manually, or to learn about exceptions for unusual cases, see [CA
 ### Archives With Subfolders
 
 When a downloaded archive expands to a subfolder, the subfolder name must be
-included in the `link` value.
+included in the `app` value.
 
 Example:
 
  * Texmaker is downloaded to the file `TexmakerMacosxLion.zip`.
  * `TexmakerMacosxLion.zip` unzips to a folder called `TexmakerMacosxLion`.
  * The folder `TexmakerMacosxLion` contains the application `texmaker.app`.
- * So, the `link` stanza should include the subfolder as a relative path:
+ * So, the `app` stanza should include the subfolder as a relative path:
 
 	```ruby
-	link 'TexmakerMacosxLion/texmaker.app'
+	app 'TexmakerMacosxLion/texmaker.app'
 	```
 
 ### Indenting

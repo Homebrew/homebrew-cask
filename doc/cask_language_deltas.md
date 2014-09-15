@@ -49,6 +49,7 @@ This notice will be removed for the final form.**
 | old form              | new form
 | --------------------- |----------------
 | `install`             | `pkg`
+| `link`                | `app`  (note: `link` is still available, with different semantics)
 | `before_install`      | `preflight`
 | `after_install`       | `postflight`
 | `before_uninstall`    | `uninstall_preflight`

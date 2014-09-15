@@ -45,19 +45,19 @@ describe Cask::DSL do
     end
   end
 
-  describe "link stanza" do
-    it "allows you to specify linkables" do
+  describe "app stanza" do
+    it "allows you to specify app stanzas" do
       CaskWithLinkables = Class.new(Cask)
       CaskWithLinkables.class_eval do
-        link 'Foo.app'
-        link 'Bar.app'
+        app 'Foo.app'
+        app 'Bar.app'
       end
 
       instance = CaskWithLinkables.new
       Array(instance.artifacts[:link]).sort.must_equal [['Bar.app'], ['Foo.app']]
     end
 
-    it "allow linkables to be set to empty" do
+    it "allow app stanzas to be set to empty" do
       CaskWithNoLinkables = Class.new(Cask)
 
       instance = CaskWithNoLinkables.new
