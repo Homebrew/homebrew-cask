@@ -6,5 +6,5 @@ class Dupscanub < Cask
   homepage 'http://www5.wind.ne.jp/miko/mac_soft/dup_scan/index.html'
 
   nested_container 'DupScanUB_241.dmg'
-  link 'DupScan(UB).app'
+  app 'DupScan(UB).app'
 end
