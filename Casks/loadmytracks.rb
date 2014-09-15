@@ -6,5 +6,5 @@ class Loadmytracks < Cask
   appcast 'http://www.cluetrust.com/AppCasts/LoadMyTracks.xml'
   homepage 'http://www.cluetrust.com/loadmytracks.html'
 
-  link 'LoadMyTracks.app'
+  app 'LoadMyTracks.app'
 end
