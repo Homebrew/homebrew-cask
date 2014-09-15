@@ -6,5 +6,5 @@ class Pwnagetool < Cask
   appcast 'http://www.iphone-dev.org/appcast/PwnageTool2.xml'
   homepage 'http://blog.iphone-dev.org/tagged/PwnageTool'
 
-  link 'PwnageTool.app'
+  app 'PwnageTool.app'
 end
