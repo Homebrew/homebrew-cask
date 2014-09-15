@@ -5,5 +5,5 @@ class Wuala < Cask
   url 'https://cdn.wuala.com/files/WualaInstaller.dmg'
   homepage 'http://wuala.com'
 
-  link 'Wuala.app'
+  app 'Wuala.app'
 end
