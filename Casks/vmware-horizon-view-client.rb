@@ -5,5 +5,5 @@ class VmwareHorizonViewClient < Cask
   url 'https://download3.vmware.com/software/view/viewclients/VMware-Horizon-View-Client-3.0.0-1887158.dmg'
   homepage 'http://www.vmware.com/'
 
-  link 'VMware Horizon View Client.app'
+  app 'VMware Horizon View Client.app'
 end
