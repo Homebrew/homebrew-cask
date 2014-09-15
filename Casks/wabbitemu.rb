@@ -5,5 +5,5 @@ class Wabbitemu < Cask
   url 'https://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=wabbit&DownloadId=187234&FileTime=130242671530600000&Build=20907'
   homepage 'http://wabbit.codeplex.com'
 
-  link 'WabbitEmu.app'
+  app 'WabbitEmu.app'
 end
