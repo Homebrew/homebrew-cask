@@ -5,5 +5,5 @@ class Ubersicht < Cask
   url 'http://tracesof.net/uebersicht/releases/Uebersicht-0.2.7.app.zip'
   homepage 'http://tracesof.net/uebersicht'
 
-  link 'Übersicht.app'
+  app 'Übersicht.app'
 end
