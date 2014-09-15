@@ -6,5 +6,5 @@ class Ukelele < Cask
   appcast 'http://scripts.sil.org/cms/scripts/render_download.php?site_id=nrsi&format=file&media_id=ukelele_su_feed&filename=ukelele_su_feed.xml'
   homepage 'http://scripts.sil.org/ukelele'
 
-  link 'Ukelele.app'
+  app 'Ukelele.app'
 end
