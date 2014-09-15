@@ -5,5 +5,5 @@ class Gifrocket < Cask
   url 'http://www.gifrocket.com/Gifrocket.0.1.2.zip'
   homepage 'http://www.gifrocket.com/'
 
-  link 'Gifrocket.app'
+  app 'Gifrocket.app'
 end
