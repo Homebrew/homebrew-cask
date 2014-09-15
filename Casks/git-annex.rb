@@ -13,7 +13,7 @@ class GitAnnex < Cask
   homepage 'http://git-annex.branchable.com/'
   version 'latest'
   sha256 :no_check
-  link 'git-annex.app'
+  app 'git-annex.app'
   binary 'git-annex.app/Contents/MacOS/git-annex'
   binary 'git-annex.app/Contents/MacOS/git-annex-shell'
   caveats do
