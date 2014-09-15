@@ -5,5 +5,5 @@ class Bitmessage < Cask
   url 'https://bitmessage.org/download/osx/Archive/bitmessage-v0.4.2.dmg'
   homepage 'https://bitmessage.org/'
 
-  link 'Bitmessage.app'
+  app 'Bitmessage.app'
 end
