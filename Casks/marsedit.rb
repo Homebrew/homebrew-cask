@@ -6,5 +6,5 @@ class Marsedit < Cask
   appcast 'http://www.red-sweater.com/marsedit/appcast3.php'
   homepage 'http://www.red-sweater.com/marsedit/'
 
-  link 'MarsEdit.app'
+  app 'MarsEdit.app'
 end
