@@ -6,5 +6,5 @@ class Netshade < Cask
   appcast 'https://secure.raynersw.com/appcast.php'
   homepage 'http://raynersoftware.com/netshade/'
 
-  link 'NetShade.app'
+  app 'NetShade.app'
 end
