@@ -5,5 +5,5 @@ class Codebox < Cask
   url 'https://www.codebox.io/download/mac'
   homepage 'https://www.codebox.io'
 
-  link 'Codebox.app'
+  app 'Codebox.app'
 end
