@@ -5,5 +5,5 @@ class Scratch < Cask
   url 'http://cdn.scratch.mit.edu/scratchr2/static/sa/Scratch.air'
   homepage 'http://scratch.mit.edu/scratch2download/'
 
-  link 'Scratch 2.app'
+  app 'Scratch 2.app'
 end
