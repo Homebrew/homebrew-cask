@@ -5,5 +5,5 @@ class AmadeusPro < Cask
   url 'https://s3.amazonaws.com/AmadeusPro2/AmadeusPro.dmg'
   homepage 'http://www.hairersoft.com/pro.html'
 
-  link 'Amadeus Pro.app'
+  app 'Amadeus Pro.app'
 end
