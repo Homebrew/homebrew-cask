@@ -8,7 +8,7 @@ class JavafxSceneBuilder < Cask
                   }
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/javafxscenebuilder-info-2157684.html'
 
-  link 'JavaFX Scene Builder 2.0.app'
+  app 'JavaFX Scene Builder 2.0.app'
 
   caveats <<-EOS.undent
     Installing this Cask means you have AGREED to the Oracle BSD License
