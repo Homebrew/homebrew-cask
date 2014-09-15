@@ -5,5 +5,5 @@ class Xnviewmp < Cask
   url 'http://download.xnview.com/XnViewMP-mac.tgz'
   homepage 'http://www.xnview.com/'
 
-  link 'XnViewMP.app'
+  app 'XnViewMP.app'
 end
