@@ -5,5 +5,5 @@ class Acorn < Cask
   url 'http://flyingmeat.com/download/Acorn.zip'
   homepage 'http://flyingmeat.com/acorn/'
 
-  link 'Acorn.app'
+  app 'Acorn.app'
 end
