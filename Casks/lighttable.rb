@@ -5,6 +5,6 @@ class Lighttable < Cask
   url 'https://d35ac8ww5dfjyg.cloudfront.net/playground/bins/0.6.7/LightTableMac.zip'
   homepage 'http://www.lighttable.com/'
 
-  link 'LightTable/LightTable.app'
+  app 'LightTable/LightTable.app'
   binary 'LightTable/light'
 end
