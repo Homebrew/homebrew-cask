@@ -5,5 +5,5 @@ class Plainview < Cask
   url 'https://s3.amazonaws.com/plainviewapp/plainview_1.0.178.zip'
   homepage 'http://barbariangroup.com/'
 
-  link 'Plainview.app'
+  app 'Plainview.app'
 end
