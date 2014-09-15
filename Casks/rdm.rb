@@ -5,5 +5,5 @@ class Rdm < Cask
   url 'https://github.com/uglide/RedisDesktopManager/releases/download/0.7.6/redis-desktop-manager-0.7.6.8.dmg'
   homepage 'http://redisdesktop.com'
 
-  link 'rdm.app'
+  app 'rdm.app'
 end
