@@ -5,5 +5,5 @@ class Audioscrobbler < Cask
   url 'https://github.com/mxcl/Audioscrobbler.app/releases/download/0.9.14/Audioscrobbler-0.9.14.zip'
   homepage 'https://github.com/mxcl/Audioscrobbler.app'
 
-  link 'Audioscrobbler.app'
+  app 'Audioscrobbler.app'
 end
