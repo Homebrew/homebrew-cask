@@ -5,5 +5,5 @@ class Gqrx < Cask
   url 'https://downloads.sourceforge.net/project/gqrx/2.2.0/gqrx-2.2.0.dmg'
   homepage 'http://gqrx.dk/'
 
-  link 'Gqrx.app'
+  app 'Gqrx.app'
 end
