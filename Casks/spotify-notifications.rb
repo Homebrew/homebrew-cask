@@ -5,5 +5,5 @@ class SpotifyNotifications < Cask
   url 'https://github.com/citruspi/Spotify-Notifications/releases/download/0.4.8/Spotify.Notifications.-.0.4.8.zip'
   homepage 'http://spotify-notifications.citruspi.io/'
 
-  link 'Spotify Notifications.app'
+  app 'Spotify Notifications.app'
 end
