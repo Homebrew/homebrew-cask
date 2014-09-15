@@ -5,5 +5,5 @@ class Dragthing < Cask
   url 'https://s3.amazonaws.com/tlasystems/DragThing-5.9.12.dmg'
   homepage 'http://www.dragthing.com'
 
-  link 'DragThing.app'
+  app 'DragThing.app'
 end
