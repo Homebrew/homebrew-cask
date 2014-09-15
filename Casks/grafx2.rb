@@ -5,5 +5,5 @@ class Grafx2 < Cask
   url 'http://pulkomandy.tk/projects/GrafX2/downloads/24'
   homepage 'http://pulkomandy.tk/projects/GrafX2'
 
-  link 'Grafx2.app'
+  app 'Grafx2.app'
 end
