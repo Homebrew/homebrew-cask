@@ -6,5 +6,5 @@ class Appcleaner < Cask
   appcast 'http://www.freemacsoft.net/appcleaner/Updates.xml'
   homepage 'http://www.freemacsoft.net/appcleaner/'
 
-  link 'AppCleaner.app'
+  app 'AppCleaner.app'
 end
