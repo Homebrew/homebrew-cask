@@ -5,5 +5,5 @@ class Spyder < Cask
   url 'https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-2.3.0.dmg'
   homepage 'https://code.google.com/p/spyderlib/'
 
-  link 'Spyder.app'
+  app 'Spyder.app'
 end
