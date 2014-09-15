@@ -5,5 +5,5 @@ class Zeroad < Cask
   url 'http://releases.wildfiregames.com/0ad-0.0.16-alpha-osx64.dmg'
   homepage 'http://www.play0ad.com/'
 
-  link '0ad.app'
+  app '0ad.app'
 end
