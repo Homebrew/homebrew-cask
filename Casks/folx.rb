@@ -6,5 +6,5 @@ class Folx < Cask
   appcast 'http://mac.eltima.com/download/folx-update/folx3.xml'
   homepage 'http://mac.eltima.com/de/download-manager.html'
 
-  link 'Folx 3.app'
+  app 'Folx 3.app'
 end
