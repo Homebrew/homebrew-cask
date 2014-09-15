@@ -5,7 +5,7 @@ class QuickSearchBox < Cask
   url 'https://qsb-mac.googlecode.com/files/GoogleQuickSearchBox-2.0.0.1447.Release.dmg'
   homepage 'http://www.google.com/quicksearchbox/'
 
-  link 'Quick Search Box.app'
+  app 'Quick Search Box.app'
   postflight do
     system '/bin/chmod', '-R', '--', 'u+w', destination_path
   end
