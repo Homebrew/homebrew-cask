@@ -6,5 +6,5 @@ class Videomonkey < Cask
   appcast 'http://videomonkey.org/releases/videomonkeycast.xml'
   homepage 'http://videomonkey.org/'
 
-  link 'VideoMonkey.app'
+  app 'VideoMonkey.app'
 end
