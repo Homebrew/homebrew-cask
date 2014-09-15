@@ -5,5 +5,5 @@ class Tiddlywiki < Cask
   url "https://github.com/Jermolene/TiddlyDesktop/releases/download/v#{version}/tiddlydesktop-mac-#{version}.zip"
   homepage 'https://github.com/Jermolene/TiddlyDesktop'
 
-  link 'TiddlyWiki.app'
+  app 'TiddlyWiki.app'
 end
