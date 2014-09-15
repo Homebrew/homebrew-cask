@@ -6,5 +6,5 @@ class Unrarx < Cask
   appcast 'http://www.unrarx.com/update.xml'
   homepage 'http://www.unrarx.com'
 
-  link 'UnRarX.app'
+  app 'UnRarX.app'
 end
