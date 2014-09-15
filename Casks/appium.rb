@@ -5,5 +5,5 @@ class Appium < Cask
   url 'https://bitbucket.org/appium/appium.app/downloads/appium-1.2.0.dmg'
   homepage 'http://appium.io'
 
-  link 'Appium.app'
+  app 'Appium.app'
 end
