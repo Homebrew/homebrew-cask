@@ -5,5 +5,5 @@ class Qq < Cask
   url 'http://dldir1.qq.com/qqfile/QQforMac/QQ_V3.1.2.dmg'
   homepage 'http://im.qq.com/macqq/index.shtml'
 
-  link 'QQ.app'
+  app 'QQ.app'
 end
