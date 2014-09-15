@@ -6,5 +6,5 @@ class Contexts < Cask
   appcast 'http://www.contextsformac.com/releases/appcast.xml'
   homepage 'http://contextsformac.com/'
 
-  link 'Contexts.app'
+  app 'Contexts.app'
 end
