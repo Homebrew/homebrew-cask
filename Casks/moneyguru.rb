@@ -5,5 +5,5 @@ class Moneyguru < Cask
   url "http://download.hardcoded.net/moneyguru_osx_#{version.gsub('.', '_')}.dmg"
   homepage 'http://www.hardcoded.net/moneyguru/'
 
-  link 'moneyGuru.app'
+  app 'moneyGuru.app'
 end
