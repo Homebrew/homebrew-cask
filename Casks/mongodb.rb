@@ -5,5 +5,5 @@ class Mongodb < Cask
   url 'https://github.com/orelord/mongodbx-app/releases/download/v1.2/MongoDBX-1.2-2.4.9.zip'
   homepage 'http://mongodbx-app.orelord.com/'
 
-  link 'MongoDB.app'
+  app 'MongoDB.app'
 end
