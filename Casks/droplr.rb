@@ -6,5 +6,5 @@ class Droplr < Cask
   appcast 'https://droplr.com/appcast/appcast.xml'
   homepage 'https://www.droplr.com/'
 
-  link 'Droplr.app'
+  app 'Droplr.app'
 end
