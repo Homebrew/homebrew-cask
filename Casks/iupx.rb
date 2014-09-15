@@ -6,5 +6,5 @@ class Iupx < Cask
   appcast 'http://iupx.sourceforge.net/updates/appcast.xml'
   homepage 'http://iupx.sourceforge.net'
 
-  link 'iUPX.app'
+  app 'iUPX.app'
 end
