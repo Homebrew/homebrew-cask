@@ -5,5 +5,5 @@ class Blink1control < Cask
   homepage 'http://blink1.thingm.com/'
   url 'https://github.com/todbot/blink1/releases/download/v1.91/Blink1Control-mac.zip'
 
-  link 'Blink1Control.app'
+  app 'Blink1Control.app'
 end
