@@ -6,7 +6,7 @@ class Kaleidoscope < Cask
   appcast 'https://updates.blackpixel.com/updates?app=ks'
   homepage 'http://www.kaleidoscopeapp.com/'
 
-  link 'Kaleidoscope.app'
+  app 'Kaleidoscope.app'
   binary 'Kaleidoscope.app/Contents/Resources/bin/ksdiff'
 
   postflight do
