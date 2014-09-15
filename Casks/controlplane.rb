@@ -6,5 +6,5 @@ class Controlplane < Cask
   appcast 'http://www.controlplaneapp.com/appcast.xml'
   homepage 'http://www.controlplaneapp.com/'
 
-  link 'ControlPlane.app'
+  app 'ControlPlane.app'
 end
