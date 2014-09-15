@@ -5,5 +5,5 @@ class Sparkleshare < Cask
   url 'https://bitbucket.org/hbons/sparkleshare/downloads/sparkleshare-mac-1.4.zip'
   homepage 'http://sparkleshare.org/'
 
-  link 'SparkleShare.app'
+  app 'SparkleShare.app'
 end
