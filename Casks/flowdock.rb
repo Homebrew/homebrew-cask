@@ -6,5 +6,5 @@ class Flowdock < Cask
   appcast 'https://s3.amazonaws.com/flowdock-resources/mac/appcast.xml'
   homepage 'https://www.flowdock.com/'
 
-  link 'Flowdock.app'
+  app 'Flowdock.app'
 end
