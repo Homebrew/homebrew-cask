@@ -5,5 +5,5 @@ class Cloak < Cask
   url 'https://s3.amazonaws.com/static.getcloak.com/osx/updates/Release/Cloak-2.0.7.dmg'
   homepage 'https://www.getcloak.com'
 
-  link 'Cloak.app'
+  app 'Cloak.app'
 end
