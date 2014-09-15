@@ -6,5 +6,5 @@ class Picturesque < Cask
   appcast 'http://www.acqualia.com/picturesque/appcast/appcast3.xml'
   homepage 'http://www.acqualia.com/picturesque/'
 
-  link 'Picturesque.app'
+  app 'Picturesque.app'
 end
