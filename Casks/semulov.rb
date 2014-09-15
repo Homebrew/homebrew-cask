@@ -5,5 +5,5 @@ class Semulov < Cask
   url 'http://kainjow.com/downloads/Semulov_2.0.zip'
   homepage 'http://www.kainjow.com'
 
-  link 'Semulov.app'
+  app 'Semulov.app'
 end
