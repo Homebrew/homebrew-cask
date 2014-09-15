@@ -6,5 +6,5 @@ class Whatsize < Cask
   appcast 'http://www.id-design.com/software/whatsize/release/notes.xml'
   homepage 'http://whatsizemac.com/'
 
-  link 'WhatSize.app'
+  app 'WhatSize.app'
 end
