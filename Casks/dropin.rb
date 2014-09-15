@@ -6,5 +6,5 @@ class Dropin < Cask
   appcast 'http://excitedatom.com/dropin/updates.xml'
   homepage 'http://excitedatom.com/dropin/'
 
-  link 'DropIn.app'
+  app 'DropIn.app'
 end
