@@ -5,5 +5,5 @@ class Virustotaluploader < Cask
   url 'https://www.virustotal.com/static/bin/VirusTotalUploader_1.1.dmg'
   homepage 'https://www.virustotal.com/'
 
-  link 'VirusTotalUploader.app'
+  app 'VirusTotalUploader.app'
 end
