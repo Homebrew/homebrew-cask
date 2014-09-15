@@ -10,7 +10,7 @@ class P4v < Cask
 
   homepage 'http://www.perforce.com/product/components/perforce-visual-client'
 
-  link 'p4v.app'
+  app 'p4v.app'
   binary 'p4vc'
 
   caveats do
