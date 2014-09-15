@@ -6,5 +6,5 @@ class Paparazzi < Cask
   appcast 'https://derailer.org/paparazzi/appcast/'
   homepage 'http://derailer.org/paparazzi/'
 
-  link 'Paparazzi!.app'
+  app 'Paparazzi!.app'
 end
