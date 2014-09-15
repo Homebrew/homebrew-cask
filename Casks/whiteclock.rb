@@ -5,5 +5,5 @@ class Whiteclock < Cask
   url 'http://www.taimila.com/downloads/WhiteClock2.zip'
   homepage 'http://www.taimila.com/?p=1221'
 
-  link 'WhiteClock.app'
+  app 'WhiteClock.app'
 end
