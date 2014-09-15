@@ -5,5 +5,5 @@ class GoogleChrome < Cask
   url 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
   homepage 'https://www.google.com/chrome/'
 
-  link 'Google Chrome.app'
+  app 'Google Chrome.app'
 end
