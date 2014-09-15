@@ -11,5 +11,5 @@ class Onyx < Cask
   homepage 'http://www.titanium.free.fr/downloadonyx.php'
   version 'latest'
   sha256 :no_check
-  link 'OnyX.app'
+  app 'OnyX.app'
 end
