@@ -7,5 +7,5 @@ class EpubToPdf < Cask
   appcast 'https://code.google.com/feeds/p/epub-2-pdf/downloads/basic'
   homepage 'https://code.google.com/p/epub-2-pdf'
 
-  link 'epub-to-pdf.app'
+  app 'epub-to-pdf.app'
 end
