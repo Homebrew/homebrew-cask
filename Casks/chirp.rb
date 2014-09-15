@@ -5,5 +5,5 @@ class Chirp < Cask
   url "http://chirp.danplanet.com/download/#{version}/chirp-#{version}.app.zip"
   homepage 'http://chirp.danplanet.com/'
 
-  link "chirp-#{version}.app"
+  app "chirp-#{version}.app"
 end
