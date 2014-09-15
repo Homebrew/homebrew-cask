@@ -5,5 +5,5 @@ class Evasi0n < Cask
   url 'https://evad3rs.box.com/shared/static/gu7bfneoh85aajgic0xp.dmg'
   homepage 'http://evasi0n.com'
 
-  link 'evasi0n 7.app'
+  app 'evasi0n 7.app'
 end
