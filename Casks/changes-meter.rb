@@ -5,7 +5,7 @@ class ChangesMeter < Cask
   url 'http://intuiware.com/downloads/changes-meter'
   homepage 'http://intuiware.com/apps/changes-meter'
 
-  link 'Changes Meter.app'
+  app 'Changes Meter.app'
   postflight do
     # Don't ask to move the app bundle to /Applications
     system %Q{/usr/bin/defaults write com.intuiware.ChangesMeter moveToApplicationsFolderAlertSuppress -bool true}
