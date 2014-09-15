@@ -4,5 +4,5 @@ class Googleappenginelauncher < Cask
   url "https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-#{version}.dmg"
   homepage 'https://developers.google.com/appengine/'
 
-  link 'GoogleAppEngineLauncher.app'
+  app 'GoogleAppEngineLauncher.app'
 end
