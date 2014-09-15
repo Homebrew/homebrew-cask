@@ -5,5 +5,5 @@ class Jaikoz < Cask
   url 'http://jthink.net/jaikoz/jsp/manualdownload/jaikoz-osx.dmg'
   homepage 'http://jthink.net/jaikoz'
 
-  link 'Jaikoz.app'
+  app 'Jaikoz.app'
 end
