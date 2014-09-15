@@ -6,5 +6,5 @@ class Latexian < Cask
   appcast 'http://tacosw.com/latexian/update2.php'
   homepage 'http://tacosw.com/latexian/'
 
-  link 'Latexian/Latexian.app'
+  app 'Latexian/Latexian.app'
 end
