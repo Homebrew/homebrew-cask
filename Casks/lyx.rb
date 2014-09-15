@@ -5,5 +5,5 @@ class Lyx < Cask
   url 'ftp://ftp.lyx.org/pub/lyx/bin/2.1.1/LyX-2.1.1+qt4-x86_64-cocoa.dmg'
   homepage 'http://www.lyx.org'
 
-  link 'LyX.app'
+  app 'LyX.app'
 end
