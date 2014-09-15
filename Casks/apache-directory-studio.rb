@@ -5,5 +5,5 @@ class ApacheDirectoryStudio < Cask
   url 'http://mirrors.sonic.net/apache//directory/studio/dist/2.0.0.v20130628/ApacheDirectoryStudio-macosx-x86_64-2.0.0.v20130628.dmg'
   homepage 'http://directory.apache.org/studio/'
 
-  link 'Apache Directory Studio.app'
+  app 'Apache Directory Studio.app'
 end
