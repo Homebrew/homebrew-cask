@@ -6,5 +6,5 @@ class Vlcstreamer < Cask
   appcast 'http://hobbyistsoftware.com/Downloads/VLCStreamer/vlcStreamerVersions.xml'
   homepage 'http://hobbyistsoftware.com/vlcstreamer'
 
-  link 'VLCStreamer.app'
+  app 'VLCStreamer.app'
 end
