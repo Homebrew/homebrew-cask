@@ -5,5 +5,5 @@ class SqliteDatabaseBrowser < Cask
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version}/sqlitebrowser-#{version}v2.dmg"
   homepage 'http://sqlitebrowser.org'
 
-  link "sqlitebrowser.app"
+  app "sqlitebrowser.app"
 end
