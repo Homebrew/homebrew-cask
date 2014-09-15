@@ -5,5 +5,5 @@ class UnifiedRemote < Cask
   url 'http://www.unifiedremote.com/download/macosx-setup'
   homepage 'http://www.unifiedremote.com'
 
-  link 'Unified Remote.app'
+  app 'Unified Remote.app'
 end
