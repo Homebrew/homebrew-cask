@@ -6,5 +6,5 @@ class FivedetailsFlow < Cask
   appcast 'http://extendmac.com/flow/updates/update.php'
   homepage 'http://fivedetails.com'
 
-  link 'Flow.app'
+  app 'Flow.app'
 end
