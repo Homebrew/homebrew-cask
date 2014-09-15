@@ -5,5 +5,5 @@ class Omnigraffle < Cask
   url 'https://www.omnigroup.com/download/latest/omnigraffle'
   homepage 'http://www.omnigroup.com/products/omnigraffle'
 
-  link 'OmniGraffle.app'
+  app 'OmniGraffle.app'
 end
