@@ -6,5 +6,5 @@ class HopperDisassembler < Cask
   appcast 'http://www.hopperapp.com/HopperWeb/appcast.php'
   homepage 'http://www.hopperapp.com/'
 
-  link 'Hopper Disassembler v3.app'
+  app 'Hopper Disassembler v3.app'
 end
