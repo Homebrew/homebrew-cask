@@ -6,5 +6,5 @@ class SimulatorFolders < Cask
   appcast 'http://www.gettracktime.com/dbrd/appcast.php?id=8'
   homepage 'http://nimbleworks.co.uk/blog/simulator-folders/'
 
-  link 'Simulator Folders.app'
+  app 'Simulator Folders.app'
 end
