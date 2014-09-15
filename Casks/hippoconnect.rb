@@ -5,5 +5,5 @@ class Hippoconnect < Cask
   url 'http://hipporemote.com/HippoConnect/mac/HippoConnect.zip'
   homepage 'http://hipporemote.com/'
 
-  link 'HippoConnect.app'
+  app 'HippoConnect.app'
 end
