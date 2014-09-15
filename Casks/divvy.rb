@@ -6,5 +6,5 @@ class Divvy < Cask
   appcast 'http://mizage.com/updates/profiles/divvy.php'
   homepage 'http://mizage.com/divvy/'
 
-  link 'Divvy.app'
+  app 'Divvy.app'
 end
