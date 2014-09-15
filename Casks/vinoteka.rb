@@ -6,5 +6,5 @@ class Vinoteka < Cask
   appcast 'http://download.vinotekasoft.com/vinoteka_update.xml'
   homepage 'http://www.vinotekasoft.com/'
 
-  link 'Vinoteka.app'
+  app 'Vinoteka.app'
 end
