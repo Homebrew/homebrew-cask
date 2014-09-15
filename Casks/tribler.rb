@@ -5,5 +5,5 @@ class Tribler < Cask
   url "https://github.com/Tribler/tribler/releases/download/v#{version}/Tribler-#{version}.dmg"
   homepage 'http://www.tribler.org'
 
-  link 'Tribler.app'
+  app 'Tribler.app'
 end
