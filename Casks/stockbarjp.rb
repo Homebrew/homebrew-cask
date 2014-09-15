@@ -5,5 +5,5 @@ class Stockbarjp < Cask
   url 'http://midnightsuyama.org/download/StockBarJP.zip'
   homepage 'http://midnightsuyama.org'
 
-  link 'StockBarJP.app'
+  app 'StockBarJP.app'
 end
