@@ -1,6 +1,6 @@
 class JaspersoftStudio < Cask
-  version '5.5.1'
-  sha256 '05294e98a9c11e0e5ffb03c68da5fab4e738c6060fcc8bcca674848d67c5dd7c'
+  version '5.6.1'
+  sha256 '339222ba8c1d640f90d6339b9f5ce5292e620c2bc256a09f75b6f413acd061d2'
 
   url "https://downloads.sourceforge.net/project/jasperstudio/JaspersoftStudio-#{version}/jaspersoftstudio-#{version}.final-mac-x86_64.dmg"
   homepage 'http://community.jaspersoft.com/project/jaspersoft-studio'
