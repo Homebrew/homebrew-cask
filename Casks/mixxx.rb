@@ -5,5 +5,5 @@ class Mixxx < Cask
   url 'http://downloads.mixxx.org/mixxx-1.11.0/mixxx-1.11.0-macintel.dmg'
   homepage 'http://www.mixxx.org'
 
-  link 'Mixxx.app'
+  app 'Mixxx.app'
 end
