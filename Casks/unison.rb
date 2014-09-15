@@ -5,5 +5,5 @@ class Unison < Cask
   url 'http://alan.petitepomme.net/unison/assets/Unison-2.40.69_x64.dmg'
   homepage 'http://www.cis.upenn.edu/~bcpierce/unison/'
 
-  link 'Unison.app'
+  app 'Unison.app'
 end
