@@ -6,5 +6,5 @@ class Orbit < Cask
   appcast 'http://orbitapp.net/updates/appcast.xml'
   homepage 'http://orbitapp.net'
 
-  link      'Orbit.app'
+  app      'Orbit.app'
 end
