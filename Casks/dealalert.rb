@@ -6,5 +6,5 @@ class Dealalert < Cask
   appcast 'http://www.littlefin.com/downloads/dealalert.xml'
   homepage 'http://dealalertapp.com/'
 
-  link 'DealAlert.app'
+  app 'DealAlert.app'
 end
