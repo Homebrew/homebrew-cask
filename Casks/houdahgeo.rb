@@ -6,5 +6,5 @@ class Houdahgeo < Cask
   appcast 'http://www.houdah.com/houdahGeo/updates3/profileInfo.php'
   homepage 'http://houdah.com/houdahGeo/'
 
-  link 'HoudahGeo.app'
+  app 'HoudahGeo.app'
 end
