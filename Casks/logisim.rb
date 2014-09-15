@@ -5,5 +5,5 @@ class Logisim < Cask
   url "https://downloads.sourceforge.net/project/circuit/#{version.gsub(/\d$/, 'x')}/#{version}/logisim-macosx-#{version}.tar.gz"
   homepage 'http://ozark.hendrix.edu/~burch/logisim/'
 
-  link 'Logisim.app'
+  app 'Logisim.app'
 end
