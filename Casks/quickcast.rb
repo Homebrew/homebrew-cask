@@ -6,5 +6,5 @@ class Quickcast < Cask
   appcast 'https://s3.amazonaws.com/quickcast-app/mac/appcast.xml'
   homepage 'http://quickcast.io/'
 
-  link 'QuickCast.app'
+  app 'QuickCast.app'
 end
