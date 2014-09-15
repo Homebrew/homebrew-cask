@@ -5,5 +5,5 @@ class Displaperture < Cask
   url 'http://manytricks.com/download/displaperture'
   homepage 'http://manytricks.com/displaperture'
 
-  link 'Displaperture.app'
+  app 'Displaperture.app'
 end
