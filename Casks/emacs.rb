@@ -5,5 +5,5 @@ class Emacs < Cask
   url 'http://emacsformacosx.com/emacs-builds/Emacs-24.3-universal-10.6.8.dmg'
   homepage 'http://emacsformacosx.com/'
 
-  link 'Emacs.app'
+  app 'Emacs.app'
 end
