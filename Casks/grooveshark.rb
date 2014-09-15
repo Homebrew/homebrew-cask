@@ -5,7 +5,7 @@ class Grooveshark < Cask
   url 'http://adops-fio.grooveshark.com/desktop-app/downloads/grooveshark.zip'
   homepage 'http://www.grooveshark.com'
 
-  link 'Grooveshark.app'
+  app 'Grooveshark.app'
   caveats <<-EOS.undent
     Grooveshark requires Adobe Flash.  Flash can be installed via:
       brew cask install flash
