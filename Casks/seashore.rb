@@ -5,5 +5,5 @@ class Seashore < Cask
   url 'https://downloads.sourceforge.net/sourceforge/seashore/Seashore.zip'
   homepage 'http://seashore.sourceforge.net/'
 
-  link 'Seashore.app'
+  app 'Seashore.app'
 end
