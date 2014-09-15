@@ -5,5 +5,5 @@ class GoogleNotifier < Cask
   url 'https://dl.google.com/mac/download/GoogleNotifier_1.10.7.dmg'
   homepage 'http://toolbar.google.com/gmail-helper/notifier_mac.html'
 
-  link 'Google Notifier.app'
+  app 'Google Notifier.app'
 end
