@@ -5,5 +5,5 @@ class Docear < Cask
   url 'http://docear.org/download/docear.dmg'
   homepage 'http://docear.org'
 
-  link 'Docear.app'
+  app 'Docear.app'
 end
