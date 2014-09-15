@@ -6,5 +6,5 @@ class Sketch < Cask
   appcast 'http://www.bohemiancoding.com/sketch/appcast.xml'
   homepage 'http://www.bohemiancoding.com/sketch/'
 
-  link 'Sketch.app'
+  app 'Sketch.app'
 end
