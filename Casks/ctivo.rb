@@ -6,5 +6,5 @@ class Ctivo < Cask
   appcast 'https://github.com/dscottbuch/cTiVo/blob/master/update/sparklecast.xml'
   homepage 'https://github.com/dscottbuch/cTiVo'
 
-  link 'cTiVo.app'
+  app 'cTiVo.app'
 end
