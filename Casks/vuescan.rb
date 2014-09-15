@@ -8,5 +8,5 @@ class Vuescan < Cask
   end
   homepage 'http://www.hamrick.com'
   version '9.4.37'
-  link 'VueScan.app'
+  app 'VueScan.app'
 end
