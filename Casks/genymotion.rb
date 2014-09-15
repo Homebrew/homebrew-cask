@@ -5,6 +5,6 @@ class Genymotion < Cask
   url 'http://files2.genymotion.com/genymotion/genymotion-2.2.2/genymotion-2.2.2.dmg'
   homepage 'http://www.genymotion.com/'
 
-  link 'Genymotion.app'
-  link 'Genymotion Shell.app'
+  app 'Genymotion.app'
+  app 'Genymotion Shell.app'
 end
