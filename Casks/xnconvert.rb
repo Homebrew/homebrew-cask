@@ -5,5 +5,5 @@ class Xnconvert < Cask
   url 'http://download.xnview.com/XnConvert-mac-x64.tgz'
   homepage 'http://www.xnview.com/en/xnconvert/'
 
-  link 'XnConvert.app'
+  app 'XnConvert.app'
 end
