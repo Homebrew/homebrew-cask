@@ -5,5 +5,5 @@ class Zipeg < Cask
   url 'http://www.zipeg.net/downloads/zipeg_mac.dmg'
   homepage 'http://www.zipeg.net/'
 
-  link 'Zipeg.app'
+  app 'Zipeg.app'
 end
