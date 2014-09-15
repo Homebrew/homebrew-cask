@@ -6,5 +6,5 @@ class Pacifist < Cask
   appcast 'http://www.charlessoft.com/cgi-bin/pacifist_sparkle.cgi'
   homepage 'http://www.charlessoft.com/'
 
-  link 'Pacifist.app'
+  app 'Pacifist.app'
 end
