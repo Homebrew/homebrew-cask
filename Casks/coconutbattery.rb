@@ -14,5 +14,5 @@ class Coconutbattery < Cask
     sha256 'd95951e14b77a3deff5503fd8ff7098d1a38fabe5c38764f4c9f5bd20d9bea16'
   end
   homepage 'http://www.coconut-flavour.com/coconutbattery/'
-  link 'coconutBattery.app'
+  app 'coconutBattery.app'
 end
