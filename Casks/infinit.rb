@@ -5,5 +5,5 @@ class Infinit < Cask
   url 'http://download.infinit.io/macosx/10.8/Infinit-ia64.dmg'
   homepage 'https://infinit.io/'
 
-  link 'Infinit.app'
+  app 'Infinit.app'
 end
