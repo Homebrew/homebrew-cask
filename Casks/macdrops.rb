@@ -5,5 +5,5 @@ class Macdrops < Cask
   url 'http://interfacelift.com/apps/macdrops/v1/Macdrops_v1.1.dmg'
   homepage 'http://interfacelift.com/apps/macdrops/v1'
 
-  link 'Macdrops v1.1.app'
+  app 'Macdrops v1.1.app'
 end
