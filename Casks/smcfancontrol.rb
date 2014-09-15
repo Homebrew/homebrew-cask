@@ -5,5 +5,5 @@ class Smcfancontrol < Cask
   url 'http://www.eidac.de/smcfancontrol/smcfancontrol_2_4.zip'
   homepage 'http://www.eidac.de/?p=243'
 
-  link 'smcFanControl.app'
+  app 'smcFanControl.app'
 end
