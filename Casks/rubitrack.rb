@@ -6,5 +6,5 @@ class Rubitrack < Cask
   appcast 'http://www.rubitrack.com/autoupdate/sparkle3.xml'
   homepage 'http://www.rubitrack.com/'
 
-  link "rubiTrack #{version.to_i}.app"
+  app "rubiTrack #{version.to_i}.app"
 end
