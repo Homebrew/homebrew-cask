@@ -5,5 +5,5 @@ class NavicatForPostgresql < Cask
   url 'http://download.navicat.com/download/navicat110_pgsql_en.dmg'
   homepage 'http://www.navicat.com/products/navicat-for-postgresql'
 
-  link 'Navicat for PostgreSQL.app'
+  app 'Navicat for PostgreSQL.app'
 end
