@@ -5,5 +5,5 @@ class Readytalk < Cask
   url 'https://core.readytalk.com/ql/bins/QuickLauncherInstall.dmg'
   homepage 'https://www.readytalk.com/'
 
-  link 'ReadyTalk Quick Launcher.app'
+  app 'ReadyTalk Quick Launcher.app'
 end
