@@ -5,5 +5,5 @@ class Cooviewer < Cask
   url 'http://www.geocities.jp/coo_ona/cooviewer1.2b24.dmg'
   homepage 'http://www.geocities.jp/coo_ona/viewer.html'
 
-  link 'cooViewer/cooViewer.app'
+  app 'cooViewer/cooViewer.app'
 end
