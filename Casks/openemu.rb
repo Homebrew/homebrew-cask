@@ -6,5 +6,5 @@ class Openemu < Cask
   appcast 'https://raw.github.com/OpenEmu/OpenEmu-Update/master/appcast.xml'
   homepage 'http://openemu.org/'
 
-  link 'OpenEmu.app'
+  app 'OpenEmu.app'
 end
