@@ -6,5 +6,5 @@ class Cinch < Cask
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/cinch.php'
   homepage 'http://www.irradiatedsoftware.com/cinch/'
 
-  link 'Cinch.app'
+  app 'Cinch.app'
 end
