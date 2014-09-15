@@ -6,5 +6,5 @@ class MiroVideoConverter < Cask
   appcast 'http://miro-updates.participatoryculture.org/mvc-appcast-osx.xml'
   homepage 'http://www.mirovideoconverter.com/'
 
-  link 'Miro Video Converter.app'
+  app 'Miro Video Converter.app'
 end
