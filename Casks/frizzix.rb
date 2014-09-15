@@ -6,5 +6,5 @@ class Frizzix < Cask
   appcast 'http://frizzix.de/downloads/FrizzixUpdate.xml'
   homepage 'http://mac.frizzix.de/'
 
-  link 'Frizzix.app'
+  app 'Frizzix.app'
 end
