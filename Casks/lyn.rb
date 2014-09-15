@@ -6,5 +6,5 @@ class Lyn < Cask
   appcast 'http://www.lynapp.com/lyn/update.xml'
   homepage 'http://www.lynapp.com/'
 
-  link 'Lyn.app'
+  app 'Lyn.app'
 end
