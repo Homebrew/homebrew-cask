@@ -5,5 +5,5 @@ class SunloginRemote < Cask
   url 'http://download.oray.com/sunlogin/SunloginRemote_v1.1.dmg'
   homepage 'http://sunlogin.oray.com'
 
-  link 'Sunlogin Remote.app'
+  app 'Sunlogin Remote.app'
 end
