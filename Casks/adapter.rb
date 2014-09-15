@@ -6,5 +6,5 @@ class Adapter < Cask
   appcast 'http://www.macroplant.com/adapter/adapterAppcast.xml'
   homepage 'http://www.macroplant.com/adapter/'
 
-  link 'Adapter.app'
+  app 'Adapter.app'
 end
