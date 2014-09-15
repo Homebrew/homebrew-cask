@@ -5,5 +5,5 @@ class Airserver < Cask
   url 'http://dl.airserver.com/mac/AirServer-5.0.4.0.dmg'
   homepage 'http://www.airserver.com'
 
-  link 'AirServer.app'
+  app 'AirServer.app'
 end
