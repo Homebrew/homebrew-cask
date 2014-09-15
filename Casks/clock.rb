@@ -5,5 +5,5 @@ class Clock < Cask
   url 'https://github.com/downloads/zachwaugh/Clock.app/Clock-1.1.zip'
   homepage 'http://zachwaugh.me/clock/'
 
-  link 'Clock.app'
+  app 'Clock.app'
 end
