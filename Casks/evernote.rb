@@ -6,5 +6,5 @@ class Evernote < Cask
   appcast 'http://update.evernote.com/public/ENMac/EvernoteMacUpdate.xml'
   homepage 'https://evernote.com/'
 
-  link 'Evernote.app'
+  app 'Evernote.app'
 end
