@@ -6,5 +6,5 @@ class Iexplorer < Cask
   appcast 'http://www.macroplant.com/iexplorer/ie3-appcast.xml'
   url "http://cdn.macroplant.com/release/iExplorer-#{version}.dmg"
 
-  link 'iExplorer.app'
+  app 'iExplorer.app'
 end
