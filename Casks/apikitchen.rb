@@ -6,5 +6,5 @@ class Apikitchen < Cask
   appcast 'http://apikitchen.com/updates/appcast.xml'
   homepage 'http://apikitchen.com/'
 
-  link 'ApiKitchen.app'
+  app 'ApiKitchen.app'
 end
