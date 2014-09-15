@@ -6,5 +6,5 @@ class Porthole < Cask
   appcast 'http://update.getporthole.com/appcast.rss'
   homepage 'http://getporthole.com/'
 
-  link 'Porthole.app'
+  app 'Porthole.app'
 end
