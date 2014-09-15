@@ -5,5 +5,5 @@ class Livestation < Cask
   url 'http://updates.livestation.com/releases/Livestation-3.3.0.dmg'
   homepage 'http://www.livestation.com'
 
-  link 'Livestation.app'
+  app 'Livestation.app'
 end
