@@ -6,5 +6,5 @@ class Recordit < Cask
   appcast 'https://rink.hockeyapp.net/api/2/apps/5fcda0b48f1dcf0c938b289b9ab57790'
   homepage 'http://recordit.co/'
 
-  link 'RecordIt.app'
+  app 'RecordIt.app'
 end
