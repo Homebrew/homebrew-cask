@@ -6,5 +6,5 @@ class Flexiglass < Cask
   appcast 'http://downloads.nulana.com/flexiglass/appcast.xml'
   homepage 'http://nulana.com/flexiglass/'
 
-  link 'Flexiglass.app'
+  app 'Flexiglass.app'
 end
