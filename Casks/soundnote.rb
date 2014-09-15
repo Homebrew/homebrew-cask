@@ -6,5 +6,5 @@ class Soundnote < Cask
   appcast 'http://mrgeckosmedia.com/applications/appcast/SoundNote'
   homepage 'https://mrgeckosmedia.com/applications/info/SoundNote'
 
-  link 'SoundNote.app'
+  app 'SoundNote.app'
 end
