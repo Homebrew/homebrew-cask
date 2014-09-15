@@ -6,5 +6,5 @@ class Atext < Cask
   appcast 'http://www.trankynam.com/atext/aText-Appcast.xml'
   homepage 'http://www.trankynam.com/atext/'
 
-  link 'aText.app'
+  app 'aText.app'
 end
