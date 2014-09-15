@@ -5,5 +5,5 @@ class AriaMaestosa < Cask
   url "https://downloads.sourceforge.net/sourceforge/ariamaestosa/AriaMaestosa-osx-#{version}.zip"
   homepage 'http://ariamaestosa.sourceforge.net'
 
-  link "AriaMaestosa-#{version}/Aria Maestosa.app"
+  app "AriaMaestosa-#{version}/Aria Maestosa.app"
 end
