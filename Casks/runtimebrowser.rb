@@ -5,5 +5,5 @@ class Runtimebrowser < Cask
   url 'http://seriot.ch/temp/runtimebrowser.zip'
   homepage 'https://github.com/nst/RuntimeBrowser'
 
-  link 'RuntimeBrowser.app'
+  app 'RuntimeBrowser.app'
 end
