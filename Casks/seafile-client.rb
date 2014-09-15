@@ -5,5 +5,5 @@ class SeafileClient < Cask
   url 'https://bitbucket.org/haiwen/seafile/downloads/seafile-client-3.1.5.dmg'
   homepage 'http://seafile.com/'
 
-  link 'Seafile Client.app'
+  app 'Seafile Client.app'
 end
