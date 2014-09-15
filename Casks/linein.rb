@@ -5,5 +5,5 @@ class Linein < Cask
   url 'https://www.rogueamoeba.com/freebies/download/LineIn.zip'
   homepage 'http://www.rogueamoeba.com/freebies/'
 
-  link 'LineIn.app'
+  app 'LineIn.app'
 end
