@@ -6,5 +6,5 @@ class Screenhero < Cask
   appcast 'http://dl.screenhero.com/update/screenhero/sparkle.xml'
   homepage 'http://screenhero.com'
 
-  link 'Screenhero.app'
+  app 'Screenhero.app'
 end
