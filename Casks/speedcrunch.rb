@@ -5,5 +5,5 @@ class Speedcrunch < Cask
   url 'https://bitbucket.org/heldercorreia/speedcrunch/downloads/SpeedCrunch-0.11.dmg'
   homepage 'http://www.speedcrunch.org'
 
-  link 'SpeedCrunch.app'
+  app 'SpeedCrunch.app'
 end
