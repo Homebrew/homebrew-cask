@@ -5,5 +5,5 @@ class ReadefineDesktop < Cask
   url 'http://readefine.anirudhsasikumar.net/ReadefineDesktop.air'
   homepage 'http://readefine.anirudhsasikumar.net/'
 
-  link 'Readefine.app'
+  app 'Readefine.app'
 end
