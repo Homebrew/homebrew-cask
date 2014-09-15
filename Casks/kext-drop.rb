@@ -6,5 +6,5 @@ class KextDrop < Cask
   appcast 'http://groths.org/kextdrop/updates/update.xml'
   homepage 'http://www.groths.org/software/kextdrop/'
 
-  link 'Kext Drop.app'
+  app 'Kext Drop.app'
 end
