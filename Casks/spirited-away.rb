@@ -6,5 +6,5 @@ class SpiritedAway < Cask
   appcast 'http://files.getdropbox.com/u/1025/spiritedaway/spiritedaway.xml'
   homepage 'http://drikin.com/2010/11/spirited-away.html'
 
-  link 'Spirited Away.app'
+  app 'Spirited Away.app'
 end
