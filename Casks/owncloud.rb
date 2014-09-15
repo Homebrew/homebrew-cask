@@ -5,5 +5,5 @@ class Owncloud < Cask
   url "https://download.owncloud.com/desktop/stable/ownCloud-#{version}.dmg"
   homepage 'http://owncloud.com'
 
-  link 'owncloud.app'
+  app 'owncloud.app'
 end
