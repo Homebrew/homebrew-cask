@@ -5,5 +5,5 @@ class Actiontastic < Cask
   url 'https://s3.amazonaws.com/kaboomerang/actiontastic/ActiontasticBeta8.zip'
   homepage 'http://actiontastic.com'
 
-  link 'ActiontasticBeta8/Actiontastic.app'
+  app 'ActiontasticBeta8/Actiontastic.app'
 end
