@@ -5,5 +5,5 @@ class Launchbar < Cask
   url "http://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
   homepage 'http://www.obdev.at/products/launchbar/'
 
-  link 'LaunchBar.app'
+  app 'LaunchBar.app'
 end
