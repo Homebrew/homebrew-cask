@@ -6,7 +6,7 @@ class Dash < Cask
   appcast 'http://kapeli.com/Dash.xml'
   homepage 'http://kapeli.com/dash'
 
-  link 'Dash.app'
+  app 'Dash.app'
 
   postflight do
     # Don't ask to move the app bundle to /Applications
