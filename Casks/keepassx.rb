@@ -5,7 +5,7 @@ class Keepassx < Cask
   url 'https://www.keepassx.org/dev/attachments/download/72/KeePassX-2.0-alpha6.dmg'
   homepage 'http://www.keepassx.org'
 
-  link 'KeePassX.app'
+  app 'KeePassX.app'
   # This caveat added Mar 2014.  OK to delete it after 3-4 months.
   caveats <<-EOS.undent
     If you are upgrading from an older version of KeePassX, you must
