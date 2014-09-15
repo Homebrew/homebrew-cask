@@ -5,5 +5,5 @@ class RadiantPlayer < Cask
   url 'https://github.com/kbhomes/google-music-mac/releases/download/v1.2.1/Radiant.Player.zip'
   homepage 'http://kbhomes.github.io/google-music-mac/'
 
-  link 'Radiant Player.app'
+  app 'Radiant Player.app'
 end
