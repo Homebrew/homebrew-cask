@@ -5,5 +5,5 @@ class Aegisub < Cask
   url 'http://ftp.aegisub.org/pub/releases/Aegisub-3.0.4.dmg'
   homepage 'http://www.aegisub.org/'
 
-  link 'Aegisub.app'
+  app 'Aegisub.app'
 end
