@@ -5,5 +5,5 @@ class SqliteProfessional < Cask
   url 'https://www.sqlitepro.com/versions/SQLitePro1.0.39.zip'
   homepage 'https://www.sqlitepro.com'
 
-  link 'SQLite Professional.app'
+  app 'SQLite Professional.app'
 end
