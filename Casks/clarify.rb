@@ -5,5 +5,5 @@ class Clarify < Cask
   url 'http://www.clarify-it.com/download/mac/Clarify.dmg'
   homepage 'http://www.clarify-it.com/'
 
-  link 'Clarify.app'
+  app 'Clarify.app'
 end
