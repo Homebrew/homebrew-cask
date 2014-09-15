@@ -5,5 +5,5 @@ class Camino < Cask
   url 'http://download.cdn.mozilla.net/pub/mozilla.org/camino/releases/en-US/Camino-2.1.2.dmg'
   homepage 'http://caminobrowser.org/'
 
-  link 'Camino.app'
+  app 'Camino.app'
 end
