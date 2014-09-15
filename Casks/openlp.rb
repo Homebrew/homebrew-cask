@@ -5,5 +5,5 @@ class Openlp < Cask
   url 'http://builds.openlp.org/OpenLP-2.0.4.dmg'
   homepage 'http://openlp.org'
 
-  link 'OpenLP.app'
+  app 'OpenLP.app'
 end
