@@ -5,5 +5,5 @@ class Wyzo < Cask
   url 'http://download.wyzo.com/files/mac/WyzoSetup-3.5.6.dmg'
   homepage 'http://wyzo.com'
 
-  link 'Wyzo.app'
+  app 'Wyzo.app'
 end
