@@ -6,5 +6,5 @@ class Texpad < Cask
   appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml'
   homepage 'https://www.texpadapp.com/osx'
 
-  link 'Texpad.app'
+  app 'Texpad.app'
 end
