@@ -6,5 +6,5 @@ class ChameleonSsdOptimizer < Cask
   appcast 'http://chameleon.alessandroboschini.it/sparkle/profileInfo.php'
   homepage 'http://chameleon.alessandroboschini.it/'
 
-  link 'Chameleon SSD Optimizer.app'
+  app 'Chameleon SSD Optimizer.app'
 end
