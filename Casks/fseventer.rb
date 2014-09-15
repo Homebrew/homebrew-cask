@@ -6,6 +6,6 @@ class Fseventer < Cask
   appcast 'http://www.fernLightning.com/appcasts/fseventer.xml'
   homepage 'http://www.fernlightning.com/doku.php?id=software:fseventer:start'
 
-  link 'fseventer/fseventer.app'
+  app 'fseventer/fseventer.app'
   uninstall :script => 'fseventer/HelperToolUninstall.sh'
 end
