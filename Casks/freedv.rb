@@ -5,5 +5,5 @@ class Freedv < Cask
   url 'http://files.freedv.org/OSX/FreeDV-0.96.6.dmg'
   homepage 'http://freedv.org/tiki-index.php'
 
-  link 'FreeDV.app'
+  app 'FreeDV.app'
 end
