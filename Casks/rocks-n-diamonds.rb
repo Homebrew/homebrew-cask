@@ -5,5 +5,5 @@ class RocksNDiamonds < Cask
   url "http://www.artsoft.org/RELEASES/macosx/rocksndiamonds/rocksndiamonds-#{version}.dmg"
   homepage 'http://www.artsoft.org/rocksndiamonds/'
 
-  link "Rocks'n'Diamonds #{version}/Rocks''Diamonds.app"
+  app "Rocks'n'Diamonds #{version}/Rocks''Diamonds.app"
 end
