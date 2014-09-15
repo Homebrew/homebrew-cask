@@ -5,5 +5,5 @@ class Skreenics < Cask
   url 'https://skreenics.googlecode.com/files/Screeniks-1.0.1.zip'
   homepage 'https://code.google.com/p/skreenics/'
 
-  link 'Skreenics.app'
+  app 'Skreenics.app'
 end
