@@ -5,5 +5,5 @@ class WiztoolsorgRestclient < Cask
   url 'https://rest-client.googlecode.com/files/restclient-ui-3.2.2.dmg'
   homepage 'https://code.google.com/p/rest-client'
 
-  link 'WizTools.org RESTClient.app'
+  app 'WizTools.org RESTClient.app'
 end
