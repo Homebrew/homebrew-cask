@@ -9,5 +9,5 @@ class Juliastudio < Cask
     sha256 'ce165f2ff8b1fd76ad3d1f4cb822dbf23c4d87390e6b4089b0ea17ab18bfd3ed'
   end
   homepage 'http://forio.com/labs/julia-studio/'
-  link 'JuliaStudio.app'
+  app 'JuliaStudio.app'
 end
