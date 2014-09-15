@@ -5,5 +5,5 @@ class Playonmac < Cask
   url 'http://repository.playonmac.com/PlayOnMac/PlayOnMac_4.2.4.dmg'
   homepage 'http://www.playonmac.com/en'
 
-  link 'PlayOnMac.app'
+  app 'PlayOnMac.app'
 end
