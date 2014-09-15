@@ -5,5 +5,5 @@ class MusicManager < Cask
   url 'https://dl.google.com/dl/androidjumper/mac/1046528/musicmanager.dmg'
   homepage 'https://play.google.com/music/'
 
-  link 'MusicManager.app', :target => 'Music Manager.app'
+  app 'MusicManager.app', :target => 'Music Manager.app'
 end
