@@ -5,5 +5,5 @@ class Elyse < Cask
   url 'http://silkwoodsoftware.com/Elyse-310.dmg'
   homepage 'http://silkwoodsoftware.com/'
 
-  link 'Elyse.app'
+  app 'Elyse.app'
 end
