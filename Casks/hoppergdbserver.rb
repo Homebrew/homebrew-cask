@@ -6,5 +6,5 @@ class Hoppergdbserver < Cask
   appcast 'http://www.hopperapp.com/HopperGDBServer/appcast.xml'
   homepage 'http://www.hopperapp.com/HopperGDBServer/index.html'
 
-  link 'HopperGDBServer.app'
+  app 'HopperGDBServer.app'
 end
