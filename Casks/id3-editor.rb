@@ -5,5 +5,5 @@ class Id3Editor < Cask
   url 'http://www.pa-software.com/release/ID3Editor.ub.1.21.25.dmg'
   homepage 'http://www.pa-software.com/id3editor/'
 
-  link 'ID3 Editor.app'
+  app 'ID3 Editor.app'
 end
