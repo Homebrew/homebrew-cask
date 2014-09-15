@@ -5,5 +5,5 @@ class Fiji < Cask
   url 'http://jenkins.imagej.net/job/Stable-Fiji-MacOSX/lastSuccessfulBuild/artifact/fiji-macosx.dmg'
   homepage 'http://fiji.sc'
 
-  link 'Fiji.app'
+  app 'Fiji.app'
 end
