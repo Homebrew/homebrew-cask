@@ -5,5 +5,5 @@ class Proxifier < Cask
   url 'http://www.proxifier.com/distr/ProxifierMac.zip'
   homepage 'http://www.proxifier.com/mac/'
 
-  link 'Proxifier.app'
+  app 'Proxifier.app'
 end
