@@ -6,5 +6,5 @@ class Gitbox < Cask
   appcast 'http://gitboxapp.com/updates.xml'
   homepage 'http://gitboxapp.com/'
 
-  link 'Gitbox.app'
+  app 'Gitbox.app'
 end
