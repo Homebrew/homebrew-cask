@@ -5,5 +5,5 @@ class Orange < Cask
   url 'http://orange.biolab.si/download/Orange-2.7.6-11994.dmg'
   homepage 'http://orange.biolab.si/'
 
-  link 'Orange.app'
+  app 'Orange.app'
 end
