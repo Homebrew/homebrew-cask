@@ -6,5 +6,5 @@ class Keymo < Cask
   appcast 'http://manytricks.com/keymo/appcast.xml'
   homepage 'http://manytricks.com/keymo'
 
-  link 'Keymo.app'
+  app 'Keymo.app'
 end
