@@ -6,5 +6,5 @@ class Prizmo < Cask
   appcast 'http://www.creaceed.com/appcasts/prizmo2.xml'
   homepage 'http://www.creaceed.com/prizmo'
 
-  link 'Prizmo.app'
+  app 'Prizmo.app'
 end
