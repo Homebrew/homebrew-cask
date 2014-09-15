@@ -6,5 +6,5 @@ class Vlc < Cask
   appcast 'http://update.videolan.org/vlc/sparkle/vlc-intel64.xml'
   homepage 'http://www.videolan.org/vlc/'
 
-  link 'VLC.app'
+  app 'VLC.app'
 end
