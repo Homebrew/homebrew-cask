@@ -6,5 +6,5 @@ class Chatology < Cask
   appcast 'https://flexibits.com/chatology/appcast.php'
   homepage 'http://flexibits.com/chatology'
 
-  link 'Chatology.app'
+  app 'Chatology.app'
 end
