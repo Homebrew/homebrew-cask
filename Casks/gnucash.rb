@@ -5,6 +5,6 @@ class Gnucash < Cask
   url 'https://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.6.3-1.dmg'
   homepage 'http://www.gnucash.org'
 
-  link 'Gnucash.app'
-  link 'FinanceQuote Update.app'
+  app 'Gnucash.app'
+  app 'FinanceQuote Update.app'
 end
