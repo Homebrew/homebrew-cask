@@ -5,5 +5,5 @@ class GmailNotifier < Cask
   url 'https://github.com/jashephe/Gmail-Notifier/releases/download/v2.0.1/Gmail.Notifier.v2.0.1.zip'
   homepage 'https://github.com/jashephe/Gmail-Notifier'
 
-  link 'Gmail Notifier.app'
+  app 'Gmail Notifier.app'
 end
