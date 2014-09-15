@@ -6,7 +6,7 @@ class Flavours < Cask
   appcast 'http://flavours-updates.interacto.net/appcast.xml'
   homepage 'http://flavours.interacto.net/'
 
-  link 'Flavours.app'
+  app 'Flavours.app'
   caveats do
     files_in_usr_local
   end
