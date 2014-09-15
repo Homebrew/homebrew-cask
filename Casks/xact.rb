@@ -6,5 +6,5 @@ class Xact < Cask
   appcast 'http://xactupdate.scottcbrown.org/xACT.xml'
   homepage 'http://xact.scottcbrown.org'
 
-  link "xACT #{version}/xACT.app"
+  app "xACT #{version}/xACT.app"
 end
