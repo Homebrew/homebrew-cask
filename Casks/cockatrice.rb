@@ -5,6 +5,6 @@ class Cockatrice < Cask
   url 'http://www.woogerworks.com/files/cockatrice_weeklybuilds/Cockatrice-osx_git-59b8d70.dmg'
   homepage 'http://www.woogerworks.com/'
 
-  link 'cockatrice.app', :target => 'Cockatrice.app'
-  link 'oracle.app', :target => 'Oracle.app'
+  app 'cockatrice.app', :target => 'Cockatrice.app'
+  app 'oracle.app', :target => 'Oracle.app'
 end
