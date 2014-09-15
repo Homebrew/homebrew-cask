@@ -6,5 +6,5 @@ class SatelliteEyes < Cask
   appcast 'https://satellite-eyes.s3.amazonaws.com/appcast.xml'
   homepage 'http://satelliteeyes.tomtaylor.co.uk/'
 
-  link 'Satellite Eyes.app'
+  app 'Satellite Eyes.app'
 end
