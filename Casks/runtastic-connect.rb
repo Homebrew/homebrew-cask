@@ -6,5 +6,5 @@ class RuntasticConnect < Cask
   appcast 'http://download.runtastic.com/connect/mac/appcast.xml'
   homepage 'https://www.runtastic.com/connect'
 
-  link 'Runtastic Connect.app'
+  app 'Runtastic Connect.app'
 end
