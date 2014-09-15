@@ -6,5 +6,5 @@ class Audiobookbinder < Cask
   appcast 'http://bluezbox.com/audiobookbinder/appcast.xml'
   homepage 'http://bluezbox.com/audiobookbinder.html'
 
-  link 'AudioBookBinder.app'
+  app 'AudioBookBinder.app'
 end
