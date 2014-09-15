@@ -5,5 +5,5 @@ class SketchToolbox < Cask
   url 'http://sketchtoolbox.com/Sketch%20Toolbox.zip'
   homepage 'http://sketchtoolbox.com'
 
-  link 'Sketch Toolbox.app'
+  app 'Sketch Toolbox.app'
 end
