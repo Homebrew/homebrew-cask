@@ -6,5 +6,5 @@ class Evom < Cask
   appcast 'https://files.thelittleappfactory.com/evom/appcast.xml'
   homepage 'http://thelittleappfactory.com/evom/'
 
-  link 'Evom.app'
+  app 'Evom.app'
 end
