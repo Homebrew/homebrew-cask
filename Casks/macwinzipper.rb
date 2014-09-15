@@ -5,5 +5,5 @@ class Macwinzipper < Cask
   url 'http://tidajapan.com/files/MacWinZipper-2.5.dmg?download'
   homepage 'http://tidajapan.com/macwinzipper'
 
-  link 'MacWinZipper.app'
+  app 'MacWinZipper.app'
 end
