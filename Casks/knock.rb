@@ -5,5 +5,5 @@ class Knock < Cask
   url 'http://knocktounlock.com/download'
   homepage 'http://knocktounlock.com'
 
-  link 'Knock.app'
+  app 'Knock.app'
 end
