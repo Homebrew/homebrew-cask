@@ -5,5 +5,5 @@ class Ibank < Cask
   url 'https://www.iggsoft.com/ibank/iBank4_Web.dmg'
   homepage 'http://www.iggsoftware.com/ibank'
 
-  link 'iBank.app'
+  app 'iBank.app'
 end
