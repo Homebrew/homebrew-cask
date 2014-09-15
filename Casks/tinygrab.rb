@@ -6,5 +6,5 @@ class Tinygrab < Cask
   appcast 'http://tinygrab.com/appcast/tinygrab-appcast.xml'
   homepage 'http://www.tinygrab.com'
 
-  link 'TinyGrab.app'
+  app 'TinyGrab.app'
 end
