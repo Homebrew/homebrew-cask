@@ -5,5 +5,5 @@ class Mame < Cask
   url 'https://downloads.sourceforge.net/mameosx/MAMEOSX-0.135.dmg'
   homepage 'http://mameosx.sourceforge.net/'
 
-  link 'MAME OS X.app'
+  app 'MAME OS X.app'
 end
