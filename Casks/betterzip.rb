@@ -6,5 +6,5 @@ class Betterzip < Cask
   appcast 'http://macitbetter.com/BetterZip2.rss'
   homepage 'http://macitbetter.com'
 
-  link 'BetterZip.app'
+  app 'BetterZip.app'
 end
