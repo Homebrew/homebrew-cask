@@ -6,5 +6,5 @@ class BatteryReport < Cask
   appcast 'http://version.dssw.co.uk/batteryreport/standard'
   homepage 'https://www.dssw.co.uk/batteryreport'
 
-  link 'Battery Report.app'
+  app 'Battery Report.app'
 end
