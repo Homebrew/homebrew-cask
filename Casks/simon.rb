@@ -5,5 +5,5 @@ class Simon < Cask
   url 'http://www.dejal.com/download/simon-3.6.1.zip'
   homepage 'http://www.dejal.com/simon/'
 
-  link 'Simon.app'
+  app 'Simon.app'
 end
