@@ -6,5 +6,5 @@ class Netnewswire < Cask
   appcast 'https://updates.blackpixel.com/updates?app=nnw'
   homepage 'http://netnewswireapp.com/'
 
-  link 'NetNewsWire.app'
+  app 'NetNewsWire.app'
 end
