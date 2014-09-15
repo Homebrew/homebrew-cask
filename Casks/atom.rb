@@ -5,7 +5,7 @@ class Atom < Cask
   url 'https://atom.io/download/mac'
   homepage 'http://atom.io'
 
-  link 'Atom.app'
+  app 'Atom.app'
   binary 'Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm', :target => 'apm'
   binary 'Atom.app/Contents/Resources/app/atom.sh', :target => 'atom'
   postflight do
