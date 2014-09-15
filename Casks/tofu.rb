@@ -5,5 +5,5 @@ class Tofu < Cask
   url 'http://amarsagoo.info/tofu/Tofu.dmg'
   homepage 'http://amarsagoo.info/tofu/'
 
-  link 'Tofu.app'
+  app 'Tofu.app'
 end
