@@ -5,5 +5,5 @@ class Movist < Cask
   url 'https://github.com/downloads/samiamwork/Movist/Movist.app.zip'
   homepage 'https://github.com/samiamwork/Movist'
 
-  link 'Movist.app'
+  app 'Movist.app'
 end
