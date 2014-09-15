@@ -5,5 +5,5 @@ class Desmume < Cask
   url 'https://downloads.sourceforge.net/sourceforge/desmume/desmume-0.9.10-mac.dmg'
   homepage 'http://www.desmume.org'
 
-  link 'DeSmuME.app'
+  app 'DeSmuME.app'
 end
