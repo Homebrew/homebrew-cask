@@ -5,5 +5,5 @@ class SweetHome3d < Cask
   url "https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-#{version}/SweetHome3D-#{version}-macosx.dmg"
   homepage 'http://www.sweethome3d.com/'
 
-  link 'Sweet Home 3D.app'
+  app 'Sweet Home 3D.app'
 end
