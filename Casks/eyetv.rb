@@ -5,5 +5,5 @@ class Eyetv < Cask
   url 'http://files.elgato.com/eyetvdownloads/support/eyetv_365_7310.dmg'
   homepage 'http://www.elgato.com/'
 
-  link 'EyeTV.app'
+  app 'EyeTV.app'
 end
