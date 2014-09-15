@@ -7,5 +7,5 @@ class Anxiety < Cask
   homepage 'http://www.anxietyapp.com/'
 
   nested_container 'Anxiety.dmg'
-  link 'Anxiety.app'
+  app 'Anxiety.app'
 end
