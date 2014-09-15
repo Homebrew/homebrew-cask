@@ -5,5 +5,5 @@ class Tabula < Cask
   url 'https://github.com/jazzido/tabula/releases/download/v0.9.3/tabula-mac-0.9.3d.zip'
   homepage 'http://tabula.nerdpower.org'
 
-  link 'tabula/Tabula.app'
+  app 'tabula/Tabula.app'
 end
