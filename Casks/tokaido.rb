@@ -5,5 +5,5 @@ class Tokaido  < Cask
   url 'https://github.com/tokaido/tokaidoapp/releases/download/v1.0/Tokaido.zip'
   homepage 'https://github.com/tokaido/tokaidoapp/releases'
 
-  link 'Tokaido.app'
+  app 'Tokaido.app'
 end
