@@ -6,5 +6,5 @@ class Chronicle < Cask
   appcast 'http://www.littlefin.com/downloads/chronicle3.xml'
   homepage 'http://chronicleapp.com/'
 
-  link 'Chronicle.app'
+  app 'Chronicle.app'
 end
