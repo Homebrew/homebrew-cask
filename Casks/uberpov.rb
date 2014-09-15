@@ -5,7 +5,7 @@ class Uberpov < Cask
   url 'http://megapov.inetart.net/uberpov_mac/downloads/Uberpov_Mac_r3.zip'
   homepage 'http://megapov.inetart.net/uberpov_mac/index.html'
 
-  link 'Uberpov_Mac/UberPOV.app'
+  app 'Uberpov_Mac/UberPOV.app'
   caveats do <<-EOS.undent
     The standard UberPOV include path is:
 
