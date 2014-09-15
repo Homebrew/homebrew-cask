@@ -6,5 +6,5 @@ class Scapple < Cask
   appcast 'http://www.literatureandlatte.com/downloads/scapple/scapple.xml'
   homepage 'https://www.literatureandlatte.com/scapple.php'
 
-  link 'Scapple.app'
+  app 'Scapple.app'
 end
