@@ -5,5 +5,5 @@ class Integrity < Cask
   url 'http://peacockmedia.co.uk/integrity/integrity.dmg'
   homepage 'http://peacockmedia.co.uk/integrity/'
 
-  link 'Integrity.app'
+  app 'Integrity.app'
 end
