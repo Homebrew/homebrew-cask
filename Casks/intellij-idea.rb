@@ -5,7 +5,7 @@ class IntellijIdea < Cask
   url "http://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
   homepage 'https://www.jetbrains.com/idea/index.html'
 
-  link 'IntelliJ IDEA 13.app'
+  app 'IntelliJ IDEA 13.app'
 
   postflight do
     system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/IntelliJ IDEA 13.app/Contents/Info.plist"
