@@ -6,5 +6,5 @@ class WallpaperWizard < Cask
   appcast 'http://update.coppertino.com/wpw/appcast.xml'
   homepage 'http://wallwiz.com'
 
-  link 'Wallpaper Wizard.app'
+  app 'Wallpaper Wizard.app'
 end
