@@ -6,5 +6,5 @@ class Dropzone < Cask
   appcast 'https://aptonic.com/dropzone3/sparkle/updates.xml'
   homepage 'https://aptonic.com'
 
-  link 'Dropzone 3.app'
+  app 'Dropzone 3.app'
 end
