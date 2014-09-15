@@ -5,5 +5,5 @@ class AffinityDesigner < Cask
   url 'https://s3.amazonaws.com/affinity-beta/download/Affinity%20Designer%20Beta.dmg'
   homepage 'https://affinity.serif.com/'
 
-  link 'Affinity Designer.app'
+  app 'Affinity Designer.app'
 end
