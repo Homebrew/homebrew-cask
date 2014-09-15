@@ -6,5 +6,5 @@ class Money < Cask
   appcast 'http://www.jumsoft.com/downloads/updates/money4.rss'
   homepage 'http://www.jumsoft.com/money/'
 
-  link 'Money.app'
+  app 'Money.app'
 end
