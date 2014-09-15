@@ -6,5 +6,5 @@ class DaemonToolsLite < Cask
   appcast 'http://resources.web-search-home.com/xml/DAEMONToolsLite-appcast.xml'
   homepage 'http://www.daemon-tools.cc/products/dtMacLite'
 
-  link 'DAEMON Tools Lite.app'
+  app 'DAEMON Tools Lite.app'
 end
