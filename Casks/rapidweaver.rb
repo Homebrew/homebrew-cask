@@ -6,5 +6,5 @@ class Rapidweaver < Cask
   appcast 'http://www.realmacsoftware.com/stats/rapidweaver5.php'
   homepage 'http://realmacsoftware.com/rapidweaver'
 
-  link 'RapidWeaver.app'
+  app 'RapidWeaver.app'
 end
