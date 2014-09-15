@@ -5,5 +5,5 @@ class Proximity < Cask
   url 'https://reduxcomputing-proximity.googlecode.com/files/Proximity%201.5.zip'
   homepage 'https://code.google.com/p/reduxcomputing-proximity/'
 
-  link 'Proximity.app'
+  app 'Proximity.app'
 end
