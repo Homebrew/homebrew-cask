@@ -5,5 +5,5 @@ class PutioAdder < Cask
   url 'https://github.com/nicoSWD/put.io-adder/releases/download/v2.7/put.io-adder-v2.7.zip'
   homepage 'https://github.com/nicoSWD/put.io-adder'
 
-  link 'put.io adder.app'
+  app 'put.io adder.app'
 end
