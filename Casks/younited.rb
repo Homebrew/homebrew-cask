@@ -5,5 +5,5 @@ class Younited < Cask
   url 'https://download.sp.f-secure.com/younited/younited.dmg'
   homepage 'http://www.younited.com/index.html'
 
-  link 'younited.app'
+  app 'younited.app'
 end
