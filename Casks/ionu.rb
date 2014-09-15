@@ -6,5 +6,5 @@ class Ionu < Cask
   appcast 'https://isis.ionu.nu/release/OSX/appcast.xml'
   homepage 'https://ionu.com'
 
-  link 'IONU.app'
+  app 'IONU.app'
 end
