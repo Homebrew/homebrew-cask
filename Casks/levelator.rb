@@ -5,5 +5,5 @@ class Levelator < Cask
   url 'http://cdn.conversationsnetwork.org/Levelator-2.1.1.dmg'
   homepage 'http://www.conversationsnetwork.org/levelator/'
 
-  link 'Levelator.app'
+  app 'Levelator.app'
 end
