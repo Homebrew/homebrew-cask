@@ -5,5 +5,5 @@ class Hyro < Cask
   url 'https://jawerty.github.io/Hyro/apps/Hyro-0.0.3.dmg'
   homepage 'http://jawerty.github.io/Hyro/'
 
-  link 'Hyro.app'
+  app 'Hyro.app'
 end
