@@ -10,5 +10,5 @@ class Libreoffice < Cask
     sha256 '9a212ca4b77770c57f8b7ac375b5a98824c93dabd6e238dc019dc1139b6d3b7f'
   end
 
-  link 'LibreOffice.app'
+  app 'LibreOffice.app'
 end
