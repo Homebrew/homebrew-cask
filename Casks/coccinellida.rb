@@ -6,5 +6,5 @@ class Coccinellida < Cask
   appcast 'http://coccinellida.sourceforge.net/sparkle.xml'
   homepage 'http://coccinellida.sourceforge.net/'
 
-  link 'Coccinellida.app'
+  app 'Coccinellida.app'
 end
