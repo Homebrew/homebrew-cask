@@ -5,5 +5,5 @@ class SimpleComic < Cask
   url 'http://dancingtortoisedownload.s3.amazonaws.com/SimpleComic_1.7_252.zip'
   homepage 'http://dancingtortoise.com/simplecomic/'
 
-  link 'Simple Comic.app'
+  app 'Simple Comic.app'
 end
