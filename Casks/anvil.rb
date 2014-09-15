@@ -6,5 +6,5 @@ class Anvil < Cask
   appcast 'http://sparkler.herokuapp.com/apps/3/updates.xml'
   homepage 'http://anvilformac.com/'
 
-  link 'Anvil.app'
+  app 'Anvil.app'
 end
