@@ -6,5 +6,5 @@ class Mailbox < Cask
   appcast 'https://mb-dtop.s3.amazonaws.com/external-beta/external-beta-appcast.xml'
   homepage 'http://www.mailboxapp.com/'
 
-  link 'Mailbox (Beta).app'
+  app 'Mailbox (Beta).app'
 end
