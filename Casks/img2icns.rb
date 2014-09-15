@@ -6,5 +6,5 @@ class Img2icns < Cask
   appcast 'http://store.shinyfrog.net/appcast/img2icns.xml'
   homepage 'http://www.img2icnsapp.com/'
 
-  link 'Img2icns.app'
+  app 'Img2icns.app'
 end
