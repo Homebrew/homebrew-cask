@@ -6,5 +6,5 @@ class Clementine < Cask
   appcast 'https://clementine-data.appspot.com/sparkle'
   homepage 'http://www.clementine-player.org/'
 
-  link 'clementine.app'
+  app 'clementine.app'
 end
