@@ -6,5 +6,5 @@ class Virtualhostx < Cask
   appcast 'http://shine.clickontyler.com/appcast.php?id=23'
   homepage 'http://clickontyler.com/virtualhostx/'
 
-  link 'VirtualHostX.app'
+  app 'VirtualHostX.app'
 end
