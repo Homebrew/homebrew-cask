@@ -5,5 +5,5 @@ class Breakaway < Cask
   url 'https://downloads.sourceforge.net/project/breakaway/breakaway-2.0.1.zip'
   homepage 'http://mutablecode.com/apps/breakaway.html'
 
-  link 'Breakaway.app'
+  app 'Breakaway.app'
 end
