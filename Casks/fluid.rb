@@ -6,5 +6,5 @@ class Fluid < Cask
   appcast 'http://fluidapp.com/appcast/fluid1.rss'
   homepage 'http://fluidapp.com/'
 
-  link 'Fluid.app'
+  app 'Fluid.app'
 end
