@@ -6,5 +6,5 @@ class Screenmailer < Cask
   appcast 'http://www.screenmailer.com/releases/current/releases.xml'
   homepage 'http://www.screenmailer.com'
 
-  link 'Screenmailer.app'
+  app 'Screenmailer.app'
 end
