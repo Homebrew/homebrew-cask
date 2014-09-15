@@ -5,5 +5,5 @@ class Flightgear < Cask
   url 'http://ftp.snt.utwente.nl/pub/software/flightgear/ftp/MacOSX/FlightGear-3.0.0.dmg'
   homepage 'http://www.flightgear.org/'
 
-  link 'FlightGear.app'
+  app 'FlightGear.app'
 end
