@@ -6,5 +6,5 @@ class Ringtones < Cask
   appcast 'https://files.thelittleappfactory.com/ringtones/appcast.xml'
   homepage 'http://thelittleappfactory.com/ringtones/'
 
-  link 'Ringtones.app'
+  app 'Ringtones.app'
 end
