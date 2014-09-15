@@ -5,5 +5,5 @@ class Ember < Cask
   url 'http://realmacsoftware.com/redirects/ember/direct'
   homepage 'http://realmacsoftware.com/ember'
 
-  link 'Ember.app'
+  app 'Ember.app'
 end
