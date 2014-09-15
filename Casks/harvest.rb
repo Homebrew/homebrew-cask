@@ -6,5 +6,5 @@ class Harvest < Cask
   appcast 'https://www.getharvest.com/harvest/mac/appcast.xml'
   homepage 'http://www.getharvest.com/mac'
 
-  link 'Harvest.app'
+  app 'Harvest.app'
 end
