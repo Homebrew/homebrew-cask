@@ -6,7 +6,7 @@ class Daisydisk < Cask
   appcast 'http://www.daisydiskapp.com/downloads/appcastFeed.php'
   homepage 'http://www.daisydiskapp.com'
 
-  link 'DaisyDisk.app'
+  app 'DaisyDisk.app'
 
   postflight do
     # Don't ask to move the app bundle to /Applications
