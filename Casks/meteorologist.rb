@@ -5,5 +5,5 @@ class Meteorologist < Cask
   url 'https://downloads.sourceforge.net/heat-meteo/Meteorologist-1.6.1.dmg'
   homepage 'http://heat-meteo.sourceforge.net/'
 
-  link 'Meteorologist.app'
+  app 'Meteorologist.app'
 end
