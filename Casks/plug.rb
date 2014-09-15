@@ -6,5 +6,5 @@ class Plug < Cask
   appcast 'http://www.plugformac.com/files/sparklecast.xml'
   homepage 'http://www.plugformac.com/'
 
-  link 'Plug.app'
+  app 'Plug.app'
 end
