@@ -6,5 +6,5 @@ class Curb < Cask
   appcast 'http://www.mrrsoftware.com/Downloads/Curb/CurbSoftwareUpdates.xml'
   homepage 'http://mrrsoftware.com/curb'
 
-  link 'Curb.app'
+  app 'Curb.app'
 end
