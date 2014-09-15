@@ -5,7 +5,7 @@ class Smartgithg < Cask
   url "http://www.syntevo.com/download/smartgithg/smartgithg-macosx-#{version.gsub('.', '_')}.dmg"
   homepage 'http://www.syntevo.com'
 
-  link 'SmartGitHg 6.app'
+  app 'SmartGitHg 6.app'
   binary 'SmartGitHg 6.app/Contents/MacOS/SmartGit'
   caveats do
     files_in_usr_local
