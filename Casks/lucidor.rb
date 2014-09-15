@@ -5,5 +5,5 @@ class Lucidor < Cask
   url 'http://lucidor.org/lucidor/lucidor-0.9.8-1.dmg'
   homepage 'http://lucidor.org'
 
-  link 'Lucidor.app'
+  app 'Lucidor.app'
 end
