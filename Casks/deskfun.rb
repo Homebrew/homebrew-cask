@@ -6,5 +6,5 @@ class Deskfun < Cask
   appcast 'http://www.furrysoft.de/appcast/DeskFun.xml'
   homepage 'http://www.furrysoft.de/?page=deskfun'
 
-  link 'DeskFun.app'
+  app 'DeskFun.app'
 end
