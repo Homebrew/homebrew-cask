@@ -5,5 +5,5 @@ class Hexchat < Cask
   url 'http://dl.hexchat.net/hexchat/osx/HexChat-2.10.0.app.zip'
   homepage 'http://hexchat.github.io'
 
-  link 'HexChat.app'
+  app 'HexChat.app'
 end
