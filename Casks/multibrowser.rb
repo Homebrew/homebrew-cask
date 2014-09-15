@@ -5,5 +5,5 @@ class Multibrowser < Cask
   url 'https://www.macupdate.com/download/33861/MultiBrowser.dmg'
   homepage 'https://sites.google.com/site/tesseractsoftware/multibrowser'
 
-  link 'MultiBrowser.app'
+  app 'MultiBrowser.app'
 end
