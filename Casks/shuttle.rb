@@ -5,5 +5,5 @@ class Shuttle < Cask
   url 'https://github.com/fitztrev/shuttle/releases/download/v1.2.0/Shuttle.dmg'
   homepage 'http://fitztrev.github.io/shuttle/'
 
-  link 'Shuttle.app'
+  app 'Shuttle.app'
 end
