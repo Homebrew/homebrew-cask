@@ -6,5 +6,5 @@ class Icefloor < Cask
   homepage 'http://www.hanynet.com/icefloor/'
 
   nested_container 'IceFloor 2.0.2.dmg'
-  link 'IceFloor.app'
+  app 'IceFloor.app'
 end
