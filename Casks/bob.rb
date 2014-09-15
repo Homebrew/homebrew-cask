@@ -5,5 +5,5 @@ class Bob < Cask
   url "https://github.com/casperstorm/Bob/releases/download/#{version}/Bob.zip"
   homepage 'https://github.com/casperstorm/Bob'
 
-  link 'Bob.app'
+  app 'Bob.app'
 end
