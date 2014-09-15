@@ -6,5 +6,5 @@ class Pins < Cask
   appcast 'http://pinsapp.com/appcast.xml'
   homepage 'http://pinsapp.com/'
 
-  link 'Pins.app'
+  app 'Pins.app'
 end
