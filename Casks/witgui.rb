@@ -6,5 +6,5 @@ class Witgui < Cask
   appcast 'http://desairem.altervista.org/witgui/appcast.xml'
   homepage 'http://desairem.altervista.org/witgui/wordpress/'
 
-  link 'Witgui.app'
+  app 'Witgui.app'
 end
