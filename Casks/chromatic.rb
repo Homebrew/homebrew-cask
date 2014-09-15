@@ -6,5 +6,5 @@ class Chromatic < Cask
   appcast 'http://mrgeckosmedia.com/applications/appcast/Chromatic'
   homepage 'https://mrgeckosmedia.com/applications/info/Chromatic'
 
-  link 'Chromatic.app'
+  app 'Chromatic.app'
 end
