@@ -5,5 +5,5 @@ class Easyfind < Cask
   url 'https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/easyfind/4.9.2/EasyFind.app.zip'
   homepage 'http://www.devontechnologies.com/download/products.html'
 
-  link 'EasyFind.app'
+  app 'EasyFind.app'
 end
