@@ -6,5 +6,5 @@ class Paintcode < Cask
   appcast 'http://www.pixelcut.com/paintcode/appcast.xml'
   homepage 'http://www.paintcodeapp.com/'
 
-  link 'PaintCode.app'
+  app 'PaintCode.app'
 end
