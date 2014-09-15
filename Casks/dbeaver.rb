@@ -5,5 +5,5 @@ class Dbeaver < Cask
   url 'http://dbeaver.jkiss.org/files/dbeaver-2.4.2-macosx.cocoa.x86_64.zip'
   homepage 'http://dbeaver.jkiss.org/'
 
-  link 'dbeaver/dbeaver.app'
+  app 'dbeaver/dbeaver.app'
 end
