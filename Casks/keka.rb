@@ -6,5 +6,5 @@ class Keka < Cask
   appcast 'http://update.kekaosx.com'
   homepage 'http://kekaosx.com/'
 
-  link 'Keka.app'
+  app 'Keka.app'
 end
