@@ -5,5 +5,5 @@ class Pusher < Cask
   url 'https://github.com/noodlewerk/NWPusher/releases/download/0.4.3/pusher.app.zip'
   homepage 'https://github.com/noodlewerk/NWPusher'
 
-  link 'Pusher.app'
+  app 'Pusher.app'
 end
