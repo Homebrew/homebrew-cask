@@ -6,5 +6,5 @@ class Scrivener < Cask
   appcast 'http://www.literatureandlatte.com/downloads/scrivener-2.xml'
   homepage 'http://literatureandlatte.com/scrivener.php'
 
-  link 'Scrivener.app'
+  app 'Scrivener.app'
 end
