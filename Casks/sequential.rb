@@ -6,5 +6,5 @@ class Sequential < Cask
   appcast 'http://www.sequentialx.com/sequential.xml'
   homepage 'http://sequentialx.com'
 
-  link 'Sequential.app'
+  app 'Sequential.app'
 end
