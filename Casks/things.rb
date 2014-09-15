@@ -6,5 +6,5 @@ class Things < Cask
   appcast 'http://downloads.culturedcode.com/things/download/Things_Updates.php'
   homepage 'http://culturedcode.com/things/'
 
-  link 'Things.app'
+  app 'Things.app'
 end
