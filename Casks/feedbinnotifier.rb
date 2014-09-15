@@ -5,5 +5,5 @@ class Feedbinnotifier < Cask
   url 'https://github.com/kmikael/FeedbinNotifier/releases/download/v1.0.4/FeedbinNotifier.zip'
   homepage 'http://kmikael.github.io/FeedbinNotifier'
 
-  link 'FeedbinNotifier.app'
+  app 'FeedbinNotifier.app'
 end
