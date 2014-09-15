@@ -5,7 +5,7 @@ class TheArchiveBrowser < Cask
   url 'http://wakaba.c3.cx/releases/mac/TheArchiveBrowser1.9.1.zip'
   homepage 'http://archivebrowser.c3.cx'
 
-  link 'The Archive Browser.app'
+  app 'The Archive Browser.app'
   caveats <<-EOS.undent
     The Archive Browser is a commercial app. Only a trial version will be
     installed.  A full license may be purchased from the developer website.
