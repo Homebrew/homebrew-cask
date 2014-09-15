@@ -5,5 +5,5 @@ class MenubarCountdown < Cask
   url "https://s3.amazonaws.com/capablehands/downloads/MenubarCountdown-#{version}.zip"
   homepage 'http://capablehands.net/menubarcountdown'
 
-  link "MenubarCountdown-#{version}/Menubar Countdown.app"
+  app "MenubarCountdown-#{version}/Menubar Countdown.app"
 end
