@@ -6,5 +6,5 @@ class Chocolat < Cask
   appcast 'http://chocolatapp.com/userspace/appcast/appcast_alpha.php'
   homepage 'http://chocolatapp.com/'
 
-  link 'Chocolat.app'
+  app 'Chocolat.app'
 end
