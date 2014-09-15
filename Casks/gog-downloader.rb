@@ -6,5 +6,5 @@ class GogDownloader < Cask
   appcast 'https://api.gog.com/en/downloader2/status/mac-stable'
   homepage 'http://www.gog.com/downloader'
 
-  link 'GOG Downloader.app'
+  app 'GOG Downloader.app'
 end
