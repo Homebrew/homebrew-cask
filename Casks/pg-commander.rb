@@ -5,5 +5,5 @@ class PgCommander < Cask
   url 'https://eggerapps.at/pgcommander/download/pgcommander-1.4.2.zip'
   homepage 'http://eggerapps.at/pgcommander/'
 
-  link 'PG Commander.app'
+  app 'PG Commander.app'
 end
