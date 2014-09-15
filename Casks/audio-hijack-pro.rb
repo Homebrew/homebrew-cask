@@ -5,5 +5,5 @@ class AudioHijackPro < Cask
   url 'https://rogueamoeba.com/audiohijackpro/download/AudioHijackPro.zip'
   homepage 'http://www.rogueamoeba.com/audiohijackpro/'
 
-  link 'Audio Hijack Pro.app'
+  app 'Audio Hijack Pro.app'
 end
