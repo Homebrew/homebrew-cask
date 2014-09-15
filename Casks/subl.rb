@@ -5,5 +5,5 @@ class Subl < Cask
   url 'https://github.com/dhoulb/subl/releases/download/v1.2/Subl.app.zip'
   homepage 'https://github.com/dhoulb/subl'
 
-  link 'Subl.app'
+  app 'Subl.app'
 end
