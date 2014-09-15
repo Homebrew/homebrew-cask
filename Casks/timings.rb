@@ -6,5 +6,5 @@ class Timings < Cask
   appcast 'http://mediaatelier.com/Timings/feed.php'
   homepage 'http://mediaatelier.com/Timings'
 
-  link 'Timings.app'
+  app 'Timings.app'
 end
