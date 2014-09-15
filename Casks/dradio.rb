@@ -6,5 +6,5 @@ class Dradio < Cask
   appcast 'http://dradio.me/updates/appcast.xml'
   homepage 'http://dradio.me'
 
-  link 'dRadio.app'
+  app 'dRadio.app'
 end
