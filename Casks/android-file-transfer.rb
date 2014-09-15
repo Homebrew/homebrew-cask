@@ -5,5 +5,5 @@ class AndroidFileTransfer < Cask
   url 'https://dl.google.com/dl/androidjumper/mtp/current/androidfiletransfer.dmg'
   homepage 'http://www.android.com/filetransfer/'
 
-  link 'Android File Transfer.app'
+  app 'Android File Transfer.app'
 end
