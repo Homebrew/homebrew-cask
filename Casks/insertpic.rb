@@ -5,5 +5,5 @@ class Insertpic < Cask
   url "https://s3.amazonaws.com/insertPic/InsertPic_#{version}.zip"
   homepage 'http://www.getinsertpic.com/'
 
-  link 'InsertPic/InsertPic.app'
+  app 'InsertPic/InsertPic.app'
 end
