@@ -6,5 +6,5 @@ class Anonym < Cask
   homepage 'http://www.hanynet.com/anonym/index.html'
 
   nested_container 'Anonym 2.3.dmg'
-  link 'Anonym.app'
+  app 'Anonym.app'
 end
