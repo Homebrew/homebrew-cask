@@ -5,5 +5,5 @@ class Mapture < Cask
   url 'http://anatoo.jp/mapture/Mapture-0.0.16.app.zip'
   homepage 'http://anatoo.jp/mapture/'
 
-  link 'Mapture-0.0.16.app'
+  app 'Mapture-0.0.16.app'
 end
