@@ -5,5 +5,5 @@ class Jdiskreport < Cask
   url "http://www.jgoodies.com/download/jdiskreport/jdiskreport-#{version.gsub('.', '_')}-mac.zip"
   homepage 'http://www.jgoodies.com/freeware/jdiskreport/'
 
-  link "JDiskReport #{version}/JDiskReport.app"
+  app "JDiskReport #{version}/JDiskReport.app"
 end
