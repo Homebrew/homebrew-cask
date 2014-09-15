@@ -6,5 +6,5 @@ class Shiori < Cask
   appcast 'http://aki-null.net/shiori/appcast.xml'
   homepage 'http://aki-null.net/shiori/'
 
-  link 'Shiori.app'
+  app 'Shiori.app'
 end
