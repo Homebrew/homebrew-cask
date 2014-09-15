@@ -6,5 +6,5 @@ class Bodega < Cask
   appcast 'https://dev.appbodega.com/sparkle/appcast'
   homepage 'http://appbodega.com/'
 
-  link 'Bodega.app'
+  app 'Bodega.app'
 end
