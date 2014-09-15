@@ -6,5 +6,5 @@ class Viscosity < Cask
   appcast 'http://www.viscosityvpn.com/update/viscosity.xml'
   homepage 'http://www.sparklabs.com/viscosity/'
 
-  link 'Viscosity.app'
+  app 'Viscosity.app'
 end
