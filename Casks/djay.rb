@@ -6,5 +6,5 @@ class Djay < Cask
   appcast 'http://www.algoriddim.com/djay-mac/releasenotes/appcast'
   homepage 'http://algoriddim.com/djay-mac'
 
-  link 'djay.app'
+  app 'djay.app'
 end
