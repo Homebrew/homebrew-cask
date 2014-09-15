@@ -6,5 +6,5 @@ class Ccmenu < Cask
   appcast 'http://ccmenu.sourceforge.net/update-stable.xml'
   homepage 'http://ccmenu.sourceforge.net/'
 
-  link 'CCMenu.app'
+  app 'CCMenu.app'
 end
