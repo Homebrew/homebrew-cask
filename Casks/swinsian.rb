@@ -6,5 +6,5 @@ class Swinsian < Cask
   appcast 'http://www.swinsian.com/sparkle/sparklecast.xml'
   homepage 'http://swinsian.com'
 
-  link 'Swinsian.app'
+  app 'Swinsian.app'
 end
