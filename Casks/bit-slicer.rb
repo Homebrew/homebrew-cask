@@ -6,5 +6,5 @@ class BitSlicer < Cask
   appcast 'http://zorg.tejat.net/bitslicer/update.php'
   homepage 'https://github.com/zorgiepoo/bit-slicer/'
 
-  link 'Bit Slicer.app'
+  app 'Bit Slicer.app'
 end
