@@ -5,5 +5,5 @@ class Surplusmeter < Cask
   url 'http://www.skoobysoft.com/downloads/SurplusMeterv203.dmg'
   homepage 'http://www.skoobysoft.com/utilities/utilities.html#surplusmeter'
 
-  link 'SurplusMeter.app'
+  app 'SurplusMeter.app'
 end
