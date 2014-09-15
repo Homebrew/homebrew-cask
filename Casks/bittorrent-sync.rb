@@ -7,5 +7,5 @@ class BittorrentSync < Cask
   # appcast 'http://www.usyncapp.com/cfu.php'
   homepage 'http://www.bittorrent.com/sync'
 
-  link 'BitTorrent Sync.app'
+  app 'BitTorrent Sync.app'
 end
