@@ -5,5 +5,5 @@ class Ganttproject < Cask
   url 'https://ganttproject.googlecode.com/files/ganttproject-2.6.2-r1544.dmg'
   homepage 'http://www.ganttproject.biz'
 
-  link 'GanttProject 2.6.2.app'
+  app 'GanttProject 2.6.2.app'
 end
