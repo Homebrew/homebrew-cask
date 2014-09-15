@@ -6,5 +6,5 @@ class Spotdox < Cask
   appcast 'https://spotdox.herokuapp.com/downloads/appcast.xml'
   homepage 'http://spotdox.com/get-started/'
 
-  link 'Spotdox.app'
+  app 'Spotdox.app'
 end
