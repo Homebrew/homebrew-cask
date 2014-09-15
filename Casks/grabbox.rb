@@ -6,5 +6,5 @@ class Grabbox < Cask
   appcast 'http://grabbox.devsoft.no/appcastBeta.xml'
   homepage 'http://grabbox.devsoft.no/'
 
-  link 'GrabBox.app'
+  app 'GrabBox.app'
 end
