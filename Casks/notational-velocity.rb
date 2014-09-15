@@ -6,5 +6,5 @@ class NotationalVelocity < Cask
   appcast 'http://notational.net/nvupdates.xml'
   homepage 'http://notational.net'
 
-  link 'Notational Velocity.app'
+  app 'Notational Velocity.app'
 end
