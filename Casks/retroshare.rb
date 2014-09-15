@@ -5,5 +5,5 @@ class Retroshare < Cask
   url 'https://downloads.sourceforge.net/project/retroshare/RetroShare/0.5.5b/Retroshare-V0.5.5b-svn6877_OSX10.6u.dmg'
   homepage 'http://retroshare.sourceforge.net/'
 
-  link 'Retroshare.app'
+  app 'Retroshare.app'
 end
