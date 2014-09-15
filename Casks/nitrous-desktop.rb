@@ -5,5 +5,5 @@ class NitrousDesktop < Cask
   url 'https://www.nitrous.io/mac/NitrousDesktop-latest.zip'
   homepage 'https://www.nitrous.io/mac'
 
-  link 'Nitrous Desktop.app'
+  app 'Nitrous Desktop.app'
 end
