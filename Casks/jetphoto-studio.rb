@@ -6,5 +6,5 @@ class JetphotoStudio < Cask
   homepage 'http://www.jetphotosoft.com/web/home/'
 
   nested_container 'JetPhoto Studio 5.5.dmg'
-  link 'JetPhoto Studio.app'
+  app 'JetPhoto Studio.app'
 end
