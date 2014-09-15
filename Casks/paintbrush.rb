@@ -6,5 +6,5 @@ class Paintbrush < Cask
   appcast 'http://paintbrush.sourceforge.net/updates2x.xml'
   homepage 'http://paintbrush.sourceforge.net/'
 
-  link 'Paintbrush.app'
+  app 'Paintbrush.app'
 end
