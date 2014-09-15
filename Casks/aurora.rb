@@ -6,5 +6,5 @@ class Aurora < Cask
   appcast 'http://www.oneperiodic.com/aurora5.xml'
   homepage 'http://www.oneperiodic.com/products/aurora/'
 
-  link 'Aurora.app'
+  app 'Aurora.app'
 end
