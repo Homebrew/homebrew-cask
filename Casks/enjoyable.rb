@@ -6,5 +6,5 @@ class Enjoyable < Cask
   appcast 'http://yukkurigames.com/enjoyable/appcast.xml'
   homepage 'http://yukkurigames.com/enjoyable/'
 
-  link 'Enjoyable.app'
+  app 'Enjoyable.app'
 end
