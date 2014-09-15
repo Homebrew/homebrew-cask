@@ -5,5 +5,5 @@ class Synergy < Cask
   url "https://synergy-project.org/files/packages/synergy-#{version}-MacOSX109-x86_64.dmg"
   homepage 'http://synergy-foss.org/'
 
-  link 'Synergy.app'
+  app 'Synergy.app'
 end
