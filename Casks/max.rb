@@ -6,5 +6,5 @@ class Max < Cask
   appcast 'http://sbooth.org/Max/appcast.xml'
   homepage 'http://sbooth.org/Max/'
 
-  link "Max-#{version}/Max.app"
+  app "Max-#{version}/Max.app"
 end
