@@ -5,5 +5,5 @@ class Focuswriter < Cask
   url 'http://gottcode.org/focuswriter/download/?os=mac'
   homepage 'http://gottcode.org/focuswriter/'
 
-  link 'FocusWriter.app'
+  app 'FocusWriter.app'
 end
