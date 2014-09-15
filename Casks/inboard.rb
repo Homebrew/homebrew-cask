@@ -6,5 +6,5 @@ class Inboard < Cask
   appcast 'http://updates.devmate.com/com.ideabits.Inboard.xml'
   homepage 'http://inboardapp.com/beta'
 
-  link 'Inboard.app'
+  app 'Inboard.app'
 end
