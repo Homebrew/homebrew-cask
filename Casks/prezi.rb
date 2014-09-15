@@ -5,5 +5,5 @@ class Prezi < Cask
   url 'https://prezi-a.akamaihd.net/desktop/Prezi5.1.1.dmg'
   homepage 'http://www.prezi.com/'
 
-  link 'Prezi.app'
+  app 'Prezi.app'
 end
