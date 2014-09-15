@@ -6,5 +6,5 @@ class MacpawGemini < Cask
   appcast 'http://updates.devmate.com/com.macpaw.site.Gemini.xml'
   homepage 'http://macpaw.com/gemini'
 
-  link 'MacPaw Gemini.app'
+  app 'MacPaw Gemini.app'
 end
