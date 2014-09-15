@@ -8,5 +8,5 @@ class EclipseIde < Cask
   end
   version '4.4.0'
   homepage 'http://eclipse.org/'
-  link 'eclipse/Eclipse.app'
+  app 'eclipse/Eclipse.app'
 end
