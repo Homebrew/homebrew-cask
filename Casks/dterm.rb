@@ -6,5 +6,5 @@ class Dterm < Cask
   appcast 'http://decimus.net/appcasts/DTerm.xml'
   homepage 'http://decimus.net/DTerm'
 
-  link 'DTerm.app'
+  app 'DTerm.app'
 end
