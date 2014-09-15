@@ -6,5 +6,5 @@ class BatteryGuardian < Cask
   appcast 'http://version.dssw.co.uk/batteryguardian/standard'
   homepage 'https://www.dssw.co.uk/batteryguardian'
 
-  link 'Battery Guardian.app'
+  app 'Battery Guardian.app'
 end
