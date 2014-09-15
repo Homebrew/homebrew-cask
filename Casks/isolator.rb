@@ -6,5 +6,5 @@ class Isolator < Cask
   appcast 'http://willmore.eu/software/isolator/releases.xml'
   homepage 'http://willmore.eu/software/isolator'
 
-  link 'Isolator.app'
+  app 'Isolator.app'
 end
