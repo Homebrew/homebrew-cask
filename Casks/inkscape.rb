@@ -5,7 +5,7 @@ class Inkscape < Cask
   url "http://downloads.sourceforge.net/inkscape/Inkscape-#{version}+X11.dmg"
   homepage 'http://inkscape.org'
 
-  link 'Inkscape.app'
+  app 'Inkscape.app'
 
   caveats do
     x11_required
