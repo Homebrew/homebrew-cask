@@ -6,5 +6,5 @@ class Cocoapacketanalyzer < Cask
   appcast 'http://www.tastycocoabytes.com/cpa/updates/appcasting.php'
   homepage 'http://www.tastycocoabytes.com/cpa/'
 
-  link 'CocoaPacketAnalyzer.app'
+  app 'CocoaPacketAnalyzer.app'
 end
