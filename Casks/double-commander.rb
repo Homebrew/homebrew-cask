@@ -5,5 +5,5 @@ class DoubleCommander < Cask
   url 'https://downloads.sourceforge.net/sourceforge/doublecmd/doublecmd-0.5.8-5390.qt.x86_64.dmg'
   homepage 'http://doublecmd.sourceforge.net/'
 
-  link 'Double Commander.app'
+  app 'Double Commander.app'
 end
