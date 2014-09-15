@@ -6,5 +6,5 @@ class Feeder < Cask
   appcast 'http://reinventedsoftware.com/feeder/downloads/Feeder25.xml'
   homepage 'http://reinventedsoftware.com/feeder/'
 
-  link 'Feeder.app'
+  app 'Feeder.app'
 end
