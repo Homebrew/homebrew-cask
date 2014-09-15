@@ -6,5 +6,5 @@ class Musique < Cask
   appcast 'http://flavio.tordini.org/musique-ws/appcast.xml'
   homepage 'http://flavio.tordini.org/musique'
 
-  link 'Musique.app'
+  app 'Musique.app'
 end
