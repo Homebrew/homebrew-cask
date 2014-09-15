@@ -5,5 +5,5 @@ class Espionage < Cask
   url 'https://www.espionageapp.com/Espionage.dmg'
   homepage 'https://www.espionageapp.com/'
 
-  link 'Espionage.app'
+  app 'Espionage.app'
 end
