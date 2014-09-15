@@ -5,5 +5,5 @@ class Typewriter < Cask
   url 'http://llllll.li/typewriter/download/Typewriter.zip'
   homepage 'http://llllll.li/typewriter'
 
-  link 'Typewriter.app'
+  app 'Typewriter.app'
 end
