@@ -6,5 +6,5 @@ class Pngcommentator < Cask
   appcast 'http://www.echomist.co.uk/Sparkle/PNGCommentator.xml'
   homepage 'http://www.echomist.co.uk/software/PNGCommentator.html'
 
-  link 'PNGCommentator.app'
+  app 'PNGCommentator.app'
 end
