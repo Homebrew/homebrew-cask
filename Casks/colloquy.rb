@@ -6,5 +6,5 @@ class Colloquy < Cask
   appcast 'http://colloquy.info/update.php?rss'
   homepage 'http://colloquy.info/'
 
-  link 'Colloquy.app'
+  app 'Colloquy.app'
 end
