@@ -6,5 +6,5 @@ class Moneywell < Cask
   appcast 'http://nothirst.com/feeds/MoneyWell2Appcast.xml'
   homepage 'http://nothirst.com/moneywell/'
 
-  link 'MoneyWell.app'
+  app 'MoneyWell.app'
 end
