@@ -5,5 +5,5 @@ class Spillo < Cask
   url 'http://ddvl.me/3Q1U1J2N1W26/download/Spillo.zip'
   homepage 'http://bananafishsoftware.com/products/spillo/'
 
-  link 'Spillo.app'
+  app 'Spillo.app'
 end
