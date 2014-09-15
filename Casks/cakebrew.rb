@@ -6,5 +6,5 @@ class Cakebrew < Cask
   appcast 'http://www.cakebrew.com/appcast/profileInfo.php'
   homepage 'http://www.cakebrew.com'
 
-  link 'Cakebrew.app'
+  app 'Cakebrew.app'
 end
