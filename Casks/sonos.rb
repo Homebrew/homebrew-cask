@@ -5,5 +5,5 @@ class Sonos < Cask
   url 'http://update.sonos.com/software/mac/mdcr/SonosDesktopController51.dmg'
   homepage 'http://www.sonos.com/'
 
-  link 'Sonos.app'
+  app 'Sonos.app'
 end
