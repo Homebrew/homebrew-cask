@@ -6,5 +6,5 @@ class Poedit < Cask
   appcast 'http://releases.poedit.net/appcast-osx'
   homepage 'http://www.poedit.net'
 
-  link 'Poedit.app'
+  app 'Poedit.app'
 end
