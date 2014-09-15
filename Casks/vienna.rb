@@ -6,5 +6,5 @@ class Vienna < Cask
   appcast 'http://vienna-rss.org/changelog_beta.xml'
   homepage 'http://www.vienna-rss.org'
 
-  link 'Vienna.app'
+  app 'Vienna.app'
 end
