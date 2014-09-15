@@ -1,6 +1,6 @@
 class Instacast < Cask
-  version '1.2.5-2294'
-  sha256 'd3d00db282aedaaee03b24db8eb887d30d37f46998d27d33631d205cc80b98e2'
+  version '1.2.6-2380'
+  sha256 '560922bd0ccc7ebab002035d80ae4e630d6f30fde7eebacb7dff616e633a1a4d'
 
   url "http://assets.vemedio.com/software/instacast/Instacast-#{version}.dmg"
   homepage 'http://vemedio.com/products/instacast-mac'
