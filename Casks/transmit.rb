@@ -6,5 +6,5 @@ class Transmit < Cask
   appcast 'http://www.panic.com/updates/update.php'
   homepage 'http://panic.com/transmit'
 
-  link 'Transmit.app'
+  app 'Transmit.app'
 end
