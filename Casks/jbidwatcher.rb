@@ -5,5 +5,5 @@ class Jbidwatcher < Cask
   url 'https://www.jbidwatcher.com/download/JBidwatcher-2.5.6.dmg'
   homepage 'http://www.jbidwatcher.com'
 
-  link 'JBidwatcher.app'
+  app 'JBidwatcher.app'
 end
