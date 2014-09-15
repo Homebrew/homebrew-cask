@@ -5,5 +5,5 @@ class Fission < Cask
   url 'http://neutral.rogueamoeba.com/mirror/files/Fission.zip'
   homepage 'http://rogueamoeba.com/fission/'
 
-  link 'Fission.app'
+  app 'Fission.app'
 end
