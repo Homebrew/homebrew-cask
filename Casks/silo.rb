@@ -6,5 +6,5 @@ class Silo < Cask
   homepage 'http://nevercenter.com/silo/'
   nested_container 'Install_Silo_2_3_02_mac.dmg'
 
-  link 'Silo 2.3.app'
+  app 'Silo 2.3.app'
 end
