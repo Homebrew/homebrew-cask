@@ -6,5 +6,5 @@ class Macgdbp < Cask
   appcast 'https://www.bluestatic.org/versioncast.php/macgdbp'
   homepage 'https://www.bluestatic.org/software/macgdbp/'
 
-  link 'MacGDBp.app'
+  app 'MacGDBp.app'
 end
