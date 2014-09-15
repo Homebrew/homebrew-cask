@@ -5,5 +5,5 @@ class Namely < Cask
   url 'http://amarsagoo.info/namely/Namely.dmg'
   homepage 'http://amarsagoo.info/namely'
 
-  link 'Namely.app'
+  app 'Namely.app'
 end
