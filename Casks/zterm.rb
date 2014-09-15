@@ -5,5 +5,5 @@ class Zterm < Cask
   url 'http://www.dalverson.com/zterm/ZTerm1.2.dmg'
   homepage 'http://www.dalverson.com/zterm/'
 
-  link 'ZTerm.app'
+  app 'ZTerm.app'
 end
