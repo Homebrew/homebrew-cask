@@ -6,7 +6,7 @@ class Clamxav < Cask
   appcast 'http://www.clamxav.com/sparkle/profileInfo.php'
   homepage 'http://www.clamxav.com/'
 
-  link 'ClamXav.app'
+  app 'ClamXav.app'
   postflight do
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'uk.co.markallan.clamxav', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
