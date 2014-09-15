@@ -5,5 +5,5 @@ class XLite < Cask
   url 'https://counterpath.s3.amazonaws.com/downloads/X-Lite_4.6.1_t-xlite-20140514-all-4610f_73074.dmg'
   homepage 'http://www.counterpath.com/x-lite.html'
 
-  link 'X-Lite.app'
+  app 'X-Lite.app'
 end
