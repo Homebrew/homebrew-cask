@@ -6,5 +6,5 @@ class Proxpn < Cask
   appcast 'http://www.proxpn.org/updater/appcast.rss'
   homepage 'http://proxpn.com'
 
-  link 'ProXPN.app'
+  app 'ProXPN.app'
 end
