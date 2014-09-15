@@ -5,5 +5,5 @@ class ElectrumLtc < Cask
   url "https://electrum-ltc.org/download/Electrum-LTC-#{version}.dmg"
   homepage 'http://electrum-ltc.org'
 
-  link 'Electrum-LTC.app'
+  app 'Electrum-LTC.app'
 end
