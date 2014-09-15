@@ -5,5 +5,5 @@ class Torpedo < Cask
   url 'https://usetorpedo.com/app/mac/download'
   homepage 'https://usetorpedo.com'
 
-  link 'Torpedo.app'
+  app 'Torpedo.app'
 end
