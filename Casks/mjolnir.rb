@@ -5,5 +5,5 @@ class Mjolnir < Cask
   url 'https://github.com/mjolnir-io/mjolnir/releases/download/0.4.2/Mjolnir-0.4.2.tgz'
   homepage 'http://mjolnir.io'
 
-  link 'Mjolnir.app'
+  app 'Mjolnir.app'
 end
