@@ -5,5 +5,5 @@ class Xrg < Cask
   url 'http://download.gauchosoft.com/xrg/XRG-release-1.7.3.zip'
   homepage 'http://www.gauchosoft.com/Products/XRG/'
 
-  link 'XRG.app'
+  app 'XRG.app'
 end
