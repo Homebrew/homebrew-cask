@@ -5,7 +5,7 @@ class Yojimbo < Cask
   url 'https://s3.amazonaws.com/BBSW-download/Yojimbo_4.0.3.dmg'
   homepage 'http://www.barebones.com/products/yojimbo/'
 
-  link 'Yojimbo.app'
+  app 'Yojimbo.app'
   postflight do
     system '/usr/bin/defaults', 'write', 'com.barebones.yojimbo4', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
