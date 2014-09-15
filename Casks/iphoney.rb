@@ -6,5 +6,5 @@ class Iphoney < Cask
   appcast 'http://www.marketcircle.com/iphoney/iPhoneyAppcast.xml'
   homepage 'https://www.marketcircle.com/iphoney'
 
-  link 'iPhoney.app'
+  app 'iPhoney.app'
 end
