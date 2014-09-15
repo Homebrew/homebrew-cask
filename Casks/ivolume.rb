@@ -5,5 +5,5 @@ class Ivolume < Cask
   url 'http://www.mani.de/download/ivolume/iVolume3Mac.dmg'
   homepage 'http://www.mani.de/en/ivolume/'
 
-  link 'iVolume.app'
+  app 'iVolume.app'
 end
