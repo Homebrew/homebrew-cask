@@ -5,5 +5,5 @@ class Garagebuy < Cask
   url 'http://www.iwascoding.de/downloads/GarageBuy_3.1.1.dmg'
   homepage 'http://www.iwascoding.com/GarageBuy'
 
-  link 'GarageBuy.app'
+  app 'GarageBuy.app'
 end
