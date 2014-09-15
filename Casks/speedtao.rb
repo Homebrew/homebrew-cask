@@ -5,5 +5,5 @@ class Speedtao < Cask
   url 'http://www.speedtao.net/beta_latest'
   homepage 'http://www.speedtao.net/'
 
-  link 'SpeedTao.app'
+  app 'SpeedTao.app'
 end
