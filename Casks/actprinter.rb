@@ -5,5 +5,5 @@ class Actprinter < Cask
   url 'http://www.actprinter.com/mac/ACTPrinter%20for%20Mac%203.1.4.zip'
   homepage 'http://houdah.com/ACTPrinter/'
 
-  link 'ACTPrinter for Mac.app'
+  app 'ACTPrinter for Mac.app'
 end
