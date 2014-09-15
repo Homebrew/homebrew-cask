@@ -6,5 +6,5 @@ class Lastfm < Cask
   appcast 'http://cdn.last.fm/client/Mac/updates.xml'
   homepage 'http://www.lastfm.com'
 
-  link 'Last.fm.app'
+  app 'Last.fm.app'
 end
