@@ -6,5 +6,5 @@ class Minco < Cask
   appcast 'https://ssl.webpack.de/celmaro.com/updates/minco/minco.xml'
   homepage 'http://www.celmaro.com/minco/'
 
-  link 'Minco.app'
+  app 'Minco.app'
 end
