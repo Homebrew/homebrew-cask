@@ -5,5 +5,5 @@ class Doxygen < Cask
   url 'ftp://ftp.stack.nl/pub/users/dimitri/Doxygen-1.8.7.dmg'
   homepage 'http://www.stack.nl/~dimitri/doxygen/index.html'
 
-  link 'Doxygen.app'
+  app 'Doxygen.app'
 end
