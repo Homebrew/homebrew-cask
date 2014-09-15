@@ -6,5 +6,5 @@ class Eve < Cask
   appcast 'https://s3.amazonaws.com/hotkeyeve/hotkeyEVEappcast.xml'
   homepage 'http://www.hotkey-eve.com/'
 
-  link 'EVE.app'
+  app 'EVE.app'
 end
