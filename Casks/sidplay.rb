@@ -6,5 +6,5 @@ class Sidplay < Cask
   appcast 'http://www.sidmusic.org/sidplay/mac/sidplay_appcast.xml'
   homepage 'http://www.sidmusic.org/sidplay/mac/'
 
-  link 'SIDPLAY.app'
+  app 'SIDPLAY.app'
 end
