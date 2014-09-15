@@ -6,5 +6,5 @@ class Lingrradar < Cask
   appcast 'http://radar.lingr.com/mac_appcast.xml'
   homepage 'http://radar.lingr.com/'
 
-  link 'LingrRadar.app'
+  app 'LingrRadar.app'
 end
