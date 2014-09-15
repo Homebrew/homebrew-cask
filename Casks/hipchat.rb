@@ -6,7 +6,7 @@ class Hipchat < Cask
   appcast 'https://www.hipchat.com/release_notes/appcast/mac'
   homepage 'https://www.hipchat.com/'
 
-  link 'HipChat.app'
+  app 'HipChat.app'
 
   postflight do
     # Don't ask to move the app bundle to /Applications
