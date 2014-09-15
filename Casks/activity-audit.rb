@@ -6,5 +6,5 @@ class ActivityAudit < Cask
   appcast 'http://version.dssw.co.uk/activityaudit/standard'
   homepage 'https://www.dssw.co.uk/activityaudit'
 
-  link 'Activity Audit.app'
+  app 'Activity Audit.app'
 end
