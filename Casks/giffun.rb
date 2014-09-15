@@ -5,5 +5,5 @@ class Giffun < Cask
   url 'http://dl.dropbox.com/u/2000860/GIFfun-2008-03-13.dmg'
   homepage 'http://www.stone.com/GIFfun/'
 
-  link 'GIFfun.app'
+  app 'GIFfun.app'
 end
