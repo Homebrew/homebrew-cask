@@ -5,5 +5,5 @@ class Debookee < Cask
   url 'http://www.iwaxx.com/debookee/debookee.zip'
   homepage 'http://www.iwaxx.com/debookee/'
 
-  link 'Debookee.app'
+  app 'Debookee.app'
 end
