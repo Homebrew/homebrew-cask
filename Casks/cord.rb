@@ -6,5 +6,5 @@ class Cord < Cask
   appcast 'http://cord.sourceforge.net/sparkle.xml'
   homepage 'http://cord.sourceforge.net/'
 
-  link 'CoRD.app'
+  app 'CoRD.app'
 end
