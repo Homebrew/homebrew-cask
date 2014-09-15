@@ -5,5 +5,5 @@ class Xaos < Cask
   url 'https://downloads.sourceforge.net/xaos/xaos-3.6-macosx.dmg'
   homepage 'http://matek.hu/xaos'
 
-  link 'XaoS.app'
+  app 'XaoS.app'
 end
