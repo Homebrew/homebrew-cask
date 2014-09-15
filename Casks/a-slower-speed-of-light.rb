@@ -6,5 +6,5 @@ class ASlowerSpeedOfLight < Cask
   homepage 'http://gamelab.mit.edu/games/a-slower-speed-of-light/'
 
   nested_container 'A Slower Speed of Light.dmg'
-  link 'A Slower Speed of Light.app'
+  app 'A Slower Speed of Light.app'
 end
