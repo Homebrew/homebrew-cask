@@ -6,5 +6,5 @@ class Launchcontrol < Cask
   appcast 'http://www.soma-zone.com/LaunchControl/a/appcast.xml'
   homepage 'http://www.soma-zone.com/LaunchControl/'
 
-  link 'LaunchControl.app'
+  app 'LaunchControl.app'
 end
