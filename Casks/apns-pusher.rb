@@ -5,5 +5,5 @@ class ApnsPusher < Cask
   url 'https://github.com/blommegard/APNS-Pusher/releases/download/v2.3/APNS.Pusher.app.zip'
   homepage 'https://github.com/blommegard/APNS-Pusher'
 
-  link 'APNS Pusher.app'
+  app 'APNS Pusher.app'
 end
