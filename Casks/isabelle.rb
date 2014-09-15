@@ -5,5 +5,5 @@ class Isabelle < Cask
   url "http://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/Isabelle#{version}.dmg"
   homepage 'http://www.cl.cam.ac.uk/research/hvg/Isabelle/'
 
-  link "Isabelle#{version}.app"
+  app "Isabelle#{version}.app"
 end
