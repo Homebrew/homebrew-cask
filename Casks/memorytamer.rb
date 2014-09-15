@@ -5,5 +5,5 @@ class Memorytamer < Cask
   url "https://memorytamer.s3.amazonaws.com/MemoryTamer-#{version}.zip"
   homepage 'http://www.memorytamer.com/'
 
-  link 'MemoryTamer.app'
+  app 'MemoryTamer.app'
 end
