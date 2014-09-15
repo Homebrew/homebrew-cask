@@ -5,5 +5,5 @@ class Liquifile < Cask
   url 'http://www.liquifile.info/Liquifile.dmg'
   homepage 'http://www.liquifile.info/'
 
-  link 'Liquifile_1_8.app', :target => 'Liquifile.app'
+  app 'Liquifile_1_8.app', :target => 'Liquifile.app'
 end
