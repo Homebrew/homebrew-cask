@@ -6,5 +6,5 @@ class Tomahawk < Cask
   appcast 'http://download.tomahawk-player.org/sparkle/update.php'
   homepage 'http://www.tomahawk-player.org/'
 
-  link 'Tomahawk.app'
+  app 'Tomahawk.app'
 end
