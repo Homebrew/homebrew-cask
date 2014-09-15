@@ -6,5 +6,5 @@ class Sparkbox < Cask
   appcast 'http://matrix.icyblaze.com/index.php/checkupdate/p/8'
   homepage 'http://www.icyblaze.com/sparkbox'
 
-  link 'Sparkbox.app'
+  app 'Sparkbox.app'
 end
