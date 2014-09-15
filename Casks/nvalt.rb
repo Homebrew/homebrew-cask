@@ -5,5 +5,5 @@ class Nvalt < Cask
   url 'http://abyss.designheresy.com/nvaltb/nvalt2.2b111.zip'
   homepage 'http://brettterpstra.com/project/nvalt/'
 
-  link 'nvALT.app'
+  app 'nvALT.app'
 end
