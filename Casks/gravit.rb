@@ -5,5 +5,5 @@ class Gravit < Cask
   url "https://github.com/quasado/gravit-hub/releases/download/v#{version}/Mac-OSX.dmg"
   homepage 'http://gravit.io/'
 
-  link 'Gravit.app'
+  app 'Gravit.app'
 end
