@@ -6,5 +6,5 @@ class Twentytwo < Cask
   appcast 'https://raw.github.com/marcw/soundcleod/master/appcast.xml'
   homepage 'https://github.com/marcw/twentytwo'
 
-  link 'TwentyTwo.app'
+  app 'TwentyTwo.app'
 end
