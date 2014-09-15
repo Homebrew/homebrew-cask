@@ -6,5 +6,5 @@ class Codebug < Cask
   appcast 'http://codebugapp.com/update.xml'
   homepage 'http://www.codebugapp.com/'
 
-  link 'Codebug.app'
+  app 'Codebug.app'
 end
