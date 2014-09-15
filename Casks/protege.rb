@@ -5,5 +5,5 @@ class Protege < Cask
   url 'http://protege.stanford.edu/download/protege/4.3/osx/protege-4.3.0-304.zip'
   homepage 'http://protege.stanford.edu/'
 
-  link 'protege-4.3.app'
+  app 'protege-4.3.app'
 end
