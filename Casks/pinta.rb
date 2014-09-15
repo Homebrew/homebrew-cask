@@ -5,5 +5,5 @@ class Pinta < Cask
   url 'https://github.com/downloads/PintaProject/Pinta/pinta-1.4.app.zip'
   homepage 'http://pinta-project.com/'
 
-  link 'Pinta.app'
+  app 'Pinta.app'
 end
