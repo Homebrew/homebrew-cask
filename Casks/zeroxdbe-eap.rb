@@ -5,7 +5,7 @@ class ZeroxdbeEap < Cask
   url 'http://download.jetbrains.com/dbe/0xdbe-138.1400.3.dmg'
   homepage 'http://www.jetbrains.com/dbe/'
 
-  link '0xDBE EAP.app'
+  app '0xDBE EAP.app'
 
   postflight do
     system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/0xDBE\ EAP.app/Contents/Info.plist"
