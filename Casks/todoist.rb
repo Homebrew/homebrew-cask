@@ -6,5 +6,5 @@ class Todoist < Cask
   appcast 'http://todoist.com/static/native_apps/mac_app.xml'
   homepage 'https://todoist.com'
 
-  link 'Todoist.app'
+  app 'Todoist.app'
 end
