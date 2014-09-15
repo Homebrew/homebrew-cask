@@ -5,5 +5,5 @@ class Istumbler < Cask
   url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   homepage 'http://istumbler.net/'
 
-  link 'iStumbler.app'
+  app 'iStumbler.app'
 end
