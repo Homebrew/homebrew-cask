@@ -6,5 +6,5 @@ class Mactracker < Cask
   appcast 'http://update.mactracker.ca/appcast-b.xml'
   homepage 'http://mactracker.ca/'
 
-  link 'Mactracker.app'
+  app 'Mactracker.app'
 end

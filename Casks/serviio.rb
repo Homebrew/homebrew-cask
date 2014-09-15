@@ -5,6 +5,6 @@ class Serviio < Cask
   url 'http://download.serviio.org/releases/serviio-1.4.1.2-osx.tar.gz'
   homepage 'http://serviio.org/'
 
-  link 'Serviio.app'
-  link 'Serviio-Console.app'
+  app 'Serviio.app'
+  app 'Serviio-Console.app'
 end

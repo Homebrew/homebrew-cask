@@ -6,5 +6,5 @@ class CarbonCopyCloner < Cask
   appcast 'http://www.bombich.com/software/updates/ccc.php'
   homepage 'http://bombich.com/'
 
-  link 'Carbon Copy Cloner.app'
+  app 'Carbon Copy Cloner.app'
 end

@@ -5,5 +5,5 @@ class Scribbleton < Cask
   url 'http://scribbleton.com/download/mac'
   homepage 'http://scribbleton.com/'
 
-  link 'Scribbleton.app'
+  app 'Scribbleton.app'
 end

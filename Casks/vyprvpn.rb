@@ -5,5 +5,5 @@ class Vyprvpn < Cask
   url 'https://www.goldenfrog.com/downloads/vyprvpn/desktop/mac/production/2.3.3.1851/VyprVPN_v2.3.3.1851.dmg'
   homepage 'http://www.goldenfrog.com/vyprvpn'
 
-  link 'VyprVPN.app'
+  app 'VyprVPN.app'
 end

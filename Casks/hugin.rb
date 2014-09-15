@@ -5,5 +5,5 @@ class Hugin < Cask
   url 'https://downloads.sourceforge.net/sourceforge/hugin/Hugin-2013.0.0.dmg'
   homepage 'http://hugin.sourceforge.net/'
 
-  link 'Hugin.app'
+  app 'Hugin.app'
 end

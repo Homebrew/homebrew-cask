@@ -5,5 +5,5 @@ class Screenflow < Cask
   url "http://www.telestream.net/download-files/screenflow/4-5/ScreenFlow-#{version}.dmg"
   homepage 'http://www.telestream.net/screenflow/'
 
-  link 'ScreenFlow.app'
+  app 'ScreenFlow.app'
 end

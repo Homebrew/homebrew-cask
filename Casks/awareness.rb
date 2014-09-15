@@ -5,5 +5,5 @@ class Awareness < Cask
   url 'http://iamfutureproof.com/downloads/Awareness-1.1.dmg'
   homepage 'http://iamfutureproof.com/tools/awareness/'
 
-  link 'Awareness.app'
+  app 'Awareness.app'
 end

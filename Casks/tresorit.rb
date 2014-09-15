@@ -5,5 +5,5 @@ class Tresorit < Cask
   url 'https://installerstorage.blob.core.windows.net/install/Tresorit.dmg'
   homepage 'http://tresorit.com'
 
-  link 'Tresorit.app'
+  app 'Tresorit.app'
 end

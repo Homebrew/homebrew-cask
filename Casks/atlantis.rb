@@ -5,5 +5,5 @@ class Atlantis < Cask
   url "http://www.riverdark.net/atlantis/downloads/Atlantis-#{version}.dmg"
   homepage 'http://www.riverdark.net/atlantis/'
 
-  link 'Atlantis.app'
+  app 'Atlantis.app'
 end

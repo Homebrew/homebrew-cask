@@ -5,5 +5,5 @@ class SickbeardAnime < Cask
   url 'http://sickbeard.lad1337.de/download.php?f=SickBeard-OSX-anime-13.05.25.dmg'
   homepage 'http://sickbeard.lad1337.de/'
 
-  link 'SickBeard.app'
+  app 'SickBeard.app'
 end

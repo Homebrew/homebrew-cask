@@ -6,5 +6,5 @@ class Lightpaper < Cask
   appcast 'http://links.clockworkengine.com/lp-mac-update-feed'
   homepage 'http://clockworkengine.com/lightpaper-mac/'
 
-  link 'LightPaper.app'
+  app 'LightPaper.app'
 end

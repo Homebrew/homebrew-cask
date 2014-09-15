@@ -6,5 +6,5 @@ class Cocoarestclient < Cask
   appcast 'http://restlesscode.org/cocoa-rest-client/appcast.xml'
   homepage 'http://mmattozzi.github.io/cocoa-rest-client/'
 
-  link 'CocoaRestClient.app'
+  app 'CocoaRestClient.app'
 end

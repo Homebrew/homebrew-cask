@@ -6,5 +6,5 @@ class Invisiblix < Cask
   appcast 'http://www.read-write.fr/invisiblix/appcast.xml'
   homepage 'http://www.read-write.fr/invisiblix/'
 
-  link 'invisibliX.app'
+  app 'invisibliX.app'
 end

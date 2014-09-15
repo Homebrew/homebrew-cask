@@ -5,5 +5,5 @@ class CudaZ < Cask
   url 'https://downloads.sourceforge.net/sourceforge/cuda-z/CUDA-Z-0.8.207.dmg'
   homepage 'http://cuda-z.sourceforge.net'
 
-  link 'Cuda-Z.app'
+  app 'Cuda-Z.app'
 end

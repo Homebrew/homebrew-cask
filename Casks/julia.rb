@@ -5,5 +5,5 @@ class Julia < Cask
   url 'https://s3.amazonaws.com/julialang/bin/osx/x64/0.3/julia-0.3.0-osx10.7+.dmg'
   homepage 'http://julialang.org/'
 
-  link 'Julia-0.3.0.app'
+  app 'Julia-0.3.0.app'
 end

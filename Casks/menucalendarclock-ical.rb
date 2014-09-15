@@ -6,5 +6,5 @@ class MenucalendarclockIcal < Cask
   nested_container 'menucalendarclock-ical-4.5.2'
   homepage 'http://www.objectpark.net/en/mcc.html'
 
-  link 'MenuCalendarClock iCal.app'
+  app 'MenuCalendarClock iCal.app'
 end

@@ -5,5 +5,5 @@ class DspRadio < Cask
   url 'http://dl2sdr.homepage.t-online.de/files/DSP_Radio_141.zip'
   homepage 'http://dl2sdr.homepage.t-online.de/'
 
-  link 'DSP Radio 1.4.1.app'
+  app 'DSP Radio 1.4.1.app'
 end

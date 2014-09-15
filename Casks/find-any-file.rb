@@ -5,5 +5,5 @@ class FindAnyFile < Cask
   url 'http://files.tempel.org.s3.amazonaws.com/FindAnyFile_1.8.8.zip'
   homepage 'http://apps.tempel.org/FindAnyFile/'
 
-  link 'Find Any File.app'
+  app 'Find Any File.app'
 end

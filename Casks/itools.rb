@@ -5,5 +5,5 @@ class Itools < Cask
   url 'http://dl2.itools.hk/dl/iTools_2.4.0.dmg'
   homepage 'http://www.itools.cn/download.php?v=mac_en'
 
-  link 'iTools.app'
+  app 'iTools.app'
 end

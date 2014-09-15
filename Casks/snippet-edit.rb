@@ -6,5 +6,5 @@ class SnippetEdit < Cask
   appcast 'http://cocoaholic.com/sparkle/snippet_edit/sparkle.xml'
   homepage 'http://cocoaholic.com/snippet_edit/'
 
-  link 'Snippet Edit.app'
+  app 'Snippet Edit.app'
 end

@@ -5,5 +5,5 @@ class Zed < Cask
   url 'http://download.zedapp.org/zed-mac-v0.13.0.tar.gz'
   homepage 'http://zedapp.org'
 
-  link 'Zed.app'
+  app 'Zed.app'
 end

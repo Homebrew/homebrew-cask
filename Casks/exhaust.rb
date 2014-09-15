@@ -6,5 +6,5 @@ class Exhaust < Cask
   appcast 'http://mrgeckosmedia.com/applications/appcast/Exhaust'
   homepage 'https://mrgeckosmedia.com/applications/info/Exhaust'
 
-  link 'Exhaust/Exhaust.app'
+  app 'Exhaust/Exhaust.app'
 end

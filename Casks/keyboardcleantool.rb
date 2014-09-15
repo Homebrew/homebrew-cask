@@ -5,5 +5,5 @@ class Keyboardcleantool < Cask
   url 'http://bettertouchtool.net/KeyboardCleanTool.zip'
   homepage 'http://bettertouchtool.net'
 
-  link 'KeyboardCleanTool.app'
+  app 'KeyboardCleanTool.app'
 end

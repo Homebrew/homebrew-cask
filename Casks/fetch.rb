@@ -5,5 +5,5 @@ class Fetch < Cask
   url 'http://fetchsoftworks.com/fetch/download/Fetch_5.7.3.dmg?direct=1'
   homepage 'http://fetchsoftworks.com/'
 
-  link 'Fetch.app'
+  app 'Fetch.app'
 end

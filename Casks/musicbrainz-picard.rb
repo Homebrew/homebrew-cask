@@ -5,5 +5,5 @@ class MusicbrainzPicard < Cask
   url 'ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg'
   homepage 'http://musicbrainz.org/doc/MusicBrainz_Picard'
 
-  link 'MusicBrainz Picard.app'
+  app 'MusicBrainz Picard.app'
 end

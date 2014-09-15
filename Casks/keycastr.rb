@@ -5,7 +5,7 @@ class Keycastr < Cask
   url "https://github.com/downloads/RichardBronosky/keycastr/keycastr_#{version}.dmg"
   homepage 'https://github.com/sdeken/keycastr'
 
-  link 'KeyCastr.app'
+  app 'KeyCastr.app'
 
   caveats do
     puts "For OSX 10.9 or later, you need to setup in \"Enable access for assistive devices\", see https://github.com/sdeken/keycastr/issues/5"

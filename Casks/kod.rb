@@ -5,6 +5,6 @@ class Kod < Cask
   url 'http://data.hunch.se/kod/kod-0.0.3.zip'
   homepage 'https://github.com/rsms/kod/'
 
-  link 'Kod.app'
+  app 'Kod.app'
   binary 'Kod.app/Contents/SharedSupport/kod'
 end

@@ -7,5 +7,5 @@ class Atmonitor < Cask
   # appcast 'http://support.atPurpose.com/atMonitor/updates.xml'
   homepage 'http://www.atpurpose.com/atMonitor/'
 
-  link 'atMonitor.app'
+  app 'atMonitor.app'
 end

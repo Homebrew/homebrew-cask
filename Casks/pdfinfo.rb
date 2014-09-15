@@ -5,5 +5,5 @@ class Pdfinfo < Cask
   url 'http://www.sybrex.com/download/macgui/files/pdfinfo/PDFInfo.dmg'
   homepage 'http://www.sybrex.com/products/macgui/infomanager/'
 
-  link 'PDFInfo.app'
+  app 'PDFInfo.app'
 end

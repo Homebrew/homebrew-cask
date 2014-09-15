@@ -6,5 +6,5 @@ class Bowtie < Cask
   appcast 'http://updates.13bold.com/appcasts/bowtie'
   homepage 'http://bowtieapp.com/'
 
-  link "Bowtie #{version}/Bowtie.app"
+  app "Bowtie #{version}/Bowtie.app"
 end

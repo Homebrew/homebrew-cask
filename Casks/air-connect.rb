@@ -5,5 +5,5 @@ class AirConnect < Cask
   url 'http://downloads.avatron.com/AirConnectInstaller.zip'
   homepage 'http://www.avatron.com/get-air-connect/'
 
-  link 'Air Connect.app'
+  app 'Air Connect.app'
 end

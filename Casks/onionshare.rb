@@ -5,5 +5,5 @@ class Onionshare < Cask
   url 'https://onionshare.org/files/0.4/OnionShare-0.4.dmg'
   homepage 'https://onionshare.org/'
 
-  link 'OnionShare.app'
+  app 'OnionShare.app'
 end

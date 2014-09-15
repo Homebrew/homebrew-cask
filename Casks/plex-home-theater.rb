@@ -11,5 +11,5 @@ class PlexHomeTheater < Cask
 
   homepage 'https://plex.tv'
 
-  link 'Plex Home Theater.app'
+  app 'Plex Home Theater.app'
 end

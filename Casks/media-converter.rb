@@ -5,5 +5,5 @@ class MediaConverter < Cask
   url 'https://downloads.sourceforge.net/project/media-converter/media-converter/1.2/media-converter-1.2.zip'
   homepage 'http://media-converter.sourceforge.net/'
 
-  link 'Media Converter.localized/Media Converter.app'
+  app 'Media Converter.localized/Media Converter.app'
 end

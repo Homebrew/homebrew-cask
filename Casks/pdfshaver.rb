@@ -5,5 +5,5 @@ class Pdfshaver < Cask
   url 'https://github.com/tparry/PDFShaver.app/releases/download/v1.0/PDFShaver.zip'
   homepage 'https://github.com/tparry/PDFShaver.app'
 
-  link 'PDFShaver.app'
+  app 'PDFShaver.app'
 end

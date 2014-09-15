@@ -6,5 +6,5 @@ class MasterKey < Cask
   appcast 'http://macinmind.com/pads/MasterKeyappcast.xml'
   homepage 'http://macinmind.com/?area=app&app=masterkey&pg=info'
 
-  link 'Master Key.app'
+  app 'Master Key.app'
 end

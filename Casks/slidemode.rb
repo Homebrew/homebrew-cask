@@ -6,5 +6,5 @@ class Slidemode < Cask
   appcast 'http://teaksoftware.com/appcasts/smappcast.xml'
   homepage 'http://teaksoftware.com/app/slidemode'
 
-  link 'SlideMode.app'
+  app 'SlideMode.app'
 end

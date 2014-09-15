@@ -6,7 +6,7 @@ class Decitime < Cask
   homepage 'http://www.tinbert.com/DeciTimeMac/'
 
   nested_container 'DeciTime101.dmg'
-  link 'DeciTime.app'
+  app 'DeciTime.app'
 
   # fix wonky DMG by mounting it once read-write per discussion at
   # https://github.com/caskroom/homebrew-cask/pull/2654

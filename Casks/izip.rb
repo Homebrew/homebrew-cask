@@ -5,5 +5,5 @@ class Izip < Cask
   url 'http://www.izip.com/izip.dmg'
   homepage 'http://www.izip.com'
 
-  link 'iZip.app'
+  app 'iZip.app'
 end

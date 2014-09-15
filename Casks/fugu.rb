@@ -5,5 +5,5 @@ class Fugu < Cask
   url 'https://downloads.sourceforge.net/project/fugussh/Unstable/fugu-1.2.1pre1/Fugu-1.2.1pre1.zip'
   homepage 'http://rsug.itd.umich.edu/software/fugu/'
 
-  link 'Fugu.app'
+  app 'Fugu.app'
 end

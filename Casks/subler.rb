@@ -6,5 +6,5 @@ class Subler < Cask
   appcast 'http://subler.googlecode.com/svn/doc/appcast.xml'
   homepage 'https://code.google.com/p/subler/'
 
-  link 'Subler.app'
+  app 'Subler.app'
 end

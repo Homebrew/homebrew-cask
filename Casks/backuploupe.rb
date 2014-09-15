@@ -6,5 +6,5 @@ class Backuploupe < Cask
   appcast 'http://www.soma-zone.com/BackupLoupe/a/appcast.xml'
   homepage 'http://www.soma-zone.com/BackupLoupe/'
 
-  link 'BackupLoupe.app'
+  app 'BackupLoupe.app'
 end

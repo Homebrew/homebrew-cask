@@ -6,5 +6,5 @@ class Tickets < Cask
   appcast 'http://www.irradiatedsoftware.com/updates/profiles/tickets.php'
   homepage 'http://www.irradiatedsoftware.com/tickets/'
 
-  link 'Tickets.app'
+  app 'Tickets.app'
 end

@@ -5,5 +5,5 @@ class Preferencecleaner < Cask
   url 'http://www.echomist.co.uk/software/downloads/PreferenceCleaner.dmg'
   homepage 'http://www.echomist.co.uk/software/PreferenceCleaner.shtml'
 
-  link 'PreferenceCleaner.app'
+  app 'PreferenceCleaner.app'
 end

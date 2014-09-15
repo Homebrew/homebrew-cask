@@ -5,5 +5,5 @@ class Nally < Cask
   url 'https://yllan.github.com/nally/download/Nally-1.4.9.app.zip'
   homepage 'http://yllan.org/app/Nally/'
 
-  link 'Nally.app'
+  app 'Nally.app'
 end

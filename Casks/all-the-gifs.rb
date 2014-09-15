@@ -5,5 +5,5 @@ class AllTheGifs < Cask
   url 'https://raw.github.com/orta/GIFs/master/web/GIFs.app.zip'
   homepage 'https://github.com/orta/GIFs'
 
-  link 'All The GIFs.app'
+  app 'All The GIFs.app'
 end

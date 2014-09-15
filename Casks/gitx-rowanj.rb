@@ -6,6 +6,6 @@ class GitxRowanj < Cask
   appcast 'https://s3.amazonaws.com/builds.phere.net/GitX/development/GitX-dev.xml'
   homepage 'http://rowanj.github.io/gitx/'
 
-  link 'GitX.app'
+  app 'GitX.app'
   binary 'GitX.app/Contents/Resources/gitx'
 end

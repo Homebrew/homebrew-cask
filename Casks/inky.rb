@@ -5,5 +5,5 @@ class Inky < Cask
   url 'https://inky.com/mail/InkyInstall.dmg'
   homepage 'http://inky.com'
 
-  link 'Inky.app'
+  app 'Inky.app'
 end

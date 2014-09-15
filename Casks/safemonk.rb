@@ -6,5 +6,5 @@ class Safemonk < Cask
   appcast 'https://www.safemonk.com:/data/client/osx/appcast.xml'
   homepage 'https://www.safemonk.com/'
 
-  link 'SafeMonk.app'
+  app 'SafeMonk.app'
 end

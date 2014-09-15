@@ -6,5 +6,5 @@ class Blueharvest < Cask
   appcast 'https://cp37.ezyreg.com/~zeroonet/downloads/versioninfo/sparkle/blueharvest.xml'
   homepage 'http://zeroonetwenty.com/blueharvest/'
 
-  link 'BlueHarvest.app'
+  app 'BlueHarvest.app'
 end

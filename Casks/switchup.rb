@@ -6,5 +6,5 @@ class Switchup < Cask
   appcast 'http://www.irradiatedsoftware.com/updates/profiles/switchup.php'
   homepage 'http://www.irradiatedsoftware.com/switchup/'
 
-  link 'SwitchUp.app'
+  app 'SwitchUp.app'
 end

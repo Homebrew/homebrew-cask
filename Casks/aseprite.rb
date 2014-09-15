@@ -5,5 +5,5 @@ class Aseprite < Cask
   url 'https://aseprite.googlecode.com/files/ASEPRITE_0.9.5.dmg'
   homepage 'http://www.aseprite.org'
 
-  link 'aseprite.app'
+  app 'aseprite.app'
 end

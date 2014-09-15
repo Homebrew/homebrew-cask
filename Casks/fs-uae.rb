@@ -5,6 +5,6 @@ class FsUae < Cask
   url "http://fs-uae.net/fs-uae/stable/#{version}/fs-uae-plus-#{version}-macosx.tar.gz"
   homepage 'http://fs-uae.net/'
 
-  link "fs-uae-#{version}-macosx/FS-UAE.app"
-  link "fs-uae-#{version}-macosx/FS-UAE Launcher.app"
+  app "fs-uae-#{version}-macosx/FS-UAE.app"
+  app "fs-uae-#{version}-macosx/FS-UAE Launcher.app"
 end

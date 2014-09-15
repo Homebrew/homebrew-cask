@@ -5,5 +5,5 @@ class Yubiswitch < Cask
   url 'https://github.com/pallotron/yubiswitch/releases/download/v0.7/yubiswitch_0.7.dmg'
   homepage 'https://github.com/pallotron/yubiswitch'
 
-  link 'yubiswitch.app'
+  app 'yubiswitch.app'
 end

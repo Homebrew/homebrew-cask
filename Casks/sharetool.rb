@@ -6,5 +6,5 @@ class Sharetool < Cask
   homepage 'http://bainsware.com/'
 
   nested_container 'ShareTool 2.dmg'
-  link 'ShareTool.app'
+  app 'ShareTool.app'
 end

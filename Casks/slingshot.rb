@@ -6,5 +6,5 @@ class Slingshot < Cask
   appcast 'https://updates.airsquirrels.com/Slingshot/Mac/Slingshot.xml'
   homepage 'http://www.airsquirrels.com/slingshot/'
 
-  link 'Slingshot.app'
+  app 'Slingshot.app'
 end

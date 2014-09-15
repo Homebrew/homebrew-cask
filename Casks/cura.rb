@@ -5,5 +5,5 @@ class Cura < Cask
   url "http://software.ultimaker.com/current/Cura-#{version}-MacOS.dmg"
   homepage 'http://daid.github.com/Cura/'
 
-  link 'Cura.app'
+  app 'Cura.app'
 end

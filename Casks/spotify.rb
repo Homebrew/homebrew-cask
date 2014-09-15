@@ -5,5 +5,5 @@ class Spotify < Cask
   url 'http://download.spotify.com/Spotify.dmg'
   homepage 'https://www.spotify.com'
 
-  link 'Spotify.app'
+  app 'Spotify.app'
 end

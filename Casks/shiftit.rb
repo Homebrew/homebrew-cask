@@ -6,5 +6,5 @@ class Shiftit < Cask
   appcast 'https://raw.github.com/fikovnik/ShiftIt/develop/release/appcast.xml'
   homepage 'https://github.com/fikovnik/ShiftIt'
 
-  link 'ShiftIt.app'
+  app 'ShiftIt.app'
 end

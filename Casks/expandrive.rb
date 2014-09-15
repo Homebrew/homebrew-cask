@@ -6,5 +6,5 @@ class Expandrive < Cask
   appcast 'http://updates.expandrive.com/appcast/expandrive.xml?version=3'
   homepage 'http://www.expandrive.com/expandrive'
 
-  link 'ExpanDrive.app'
+  app 'ExpanDrive.app'
 end

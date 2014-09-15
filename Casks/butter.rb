@@ -5,5 +5,5 @@ class Butter < Cask
   url 'https://github.com/harukasan/butter/releases/download/v0.1.4/Butter_0.1.4.dmg'
   homepage 'http://harukasan.jp'
 
-  link 'Butter.app'
+  app 'Butter.app'
 end

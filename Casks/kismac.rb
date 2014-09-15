@@ -6,5 +6,5 @@ class Kismac < Cask
   appcast 'http://update.kismac-ng.org/sparkle/profileInfo.php'
   homepage 'http://kismac-ng.org/'
 
-  link 'KisMAC.app'
+  app 'KisMAC.app'
 end

@@ -5,5 +5,5 @@ class Slic3r < Cask
   url "http://dl.slic3r.org/mac/slic3r-osx-uni-#{version.gsub('.', '-')}-stable.dmg"
   homepage 'http://slic3r.org/'
 
-  link 'Slic3r.app'
+  app 'Slic3r.app'
 end

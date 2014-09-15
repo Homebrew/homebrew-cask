@@ -5,5 +5,5 @@ class Traktable < Cask
   url 'https://github.com/yo-han/Traktable/releases/download/0.5.2/Traktable.zip'
   homepage 'http://yo-han.github.io/Traktable/'
 
-  link 'Traktable.app'
+  app 'Traktable.app'
 end

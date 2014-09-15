@@ -5,5 +5,5 @@ class Mocksmtp < Cask
   url 'http://mocksmtpapp.com/MockSmtp.zip'
   homepage 'http://mocksmtpapp.com/'
 
-  link 'MockSmtp.app'
+  app 'MockSmtp.app'
 end

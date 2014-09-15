@@ -5,5 +5,5 @@ class Twine < Cask
   url 'http://twinery.org/downloads/twine_1.4.1_osx.zip'
   homepage 'http://twinery.org/'
 
-  link 'Twine.app'
+  app 'Twine.app'
 end

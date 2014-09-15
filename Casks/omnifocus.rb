@@ -5,5 +5,5 @@ class Omnifocus < Cask
   url 'http://www.omnigroup.com/download/latest/omnifocus'
   homepage 'http://www.omnigroup.com/products/omnifocus/'
 
-  link 'OmniFocus.app'
+  app 'OmniFocus.app'
 end

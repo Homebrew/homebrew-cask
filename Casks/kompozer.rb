@@ -5,5 +5,5 @@ class Kompozer < Cask
   url 'https://downloads.sourceforge.net/project/kompozer/current/0.8b3/macosx/kompozer-0.8b3.en-US.mac-universal.dmg'
   homepage 'http://www.kompozer.net/'
 
-  link 'KompoZer.app'
+  app 'KompoZer.app'
 end

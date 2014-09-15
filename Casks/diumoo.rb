@@ -5,5 +5,5 @@ class Diumoo < Cask
   url 'http://share.diumoo.net/static/diumoo.zip'
   homepage 'http://diumoo.net/'
 
-  link 'diumoo.app'
+  app 'diumoo.app'
 end

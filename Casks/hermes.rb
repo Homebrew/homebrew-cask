@@ -6,5 +6,5 @@ class Hermes < Cask
   appcast 'http://hermesapp.org/versions.xml'
   homepage 'http://hermesapp.org/'
 
-  link 'Hermes.app'
+  app 'Hermes.app'
 end

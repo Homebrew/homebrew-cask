@@ -9,7 +9,7 @@ class Macvim < Cask
   end
   homepage 'http://code.google.com/p/macvim/'
   version '7.4-73'
-  link 'MacVim-snapshot-73/MacVim.app'
+  app 'MacVim-snapshot-73/MacVim.app'
   binary 'MacVim-snapshot-73/mvim'
   caveats do
     puts <<-EOS.undent

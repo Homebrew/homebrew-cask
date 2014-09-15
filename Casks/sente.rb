@@ -6,5 +6,5 @@ class Sente < Cask
   appcast 'http://www.thirdstreetsoftware.com/rss/Sente65.xml?v=6.6.0'
   homepage 'http://www.thirdstreetsoftware.com'
 
-  link 'Sente 6.app'
+  app 'Sente 6.app'
 end

@@ -6,5 +6,5 @@ class Kiwi < Cask
   appcast 'http://yourhead.com/appcast/kiwi/appcast.xml'
   homepage 'http://kiwi-app.net/'
 
-  link 'Kiwi.app'
+  app 'Kiwi.app'
 end

@@ -6,5 +6,5 @@ class Cuppa < Cask
   appcast 'http://www.nathanatos.com/software/cuppa.xml'
   homepage 'http://www.nathanatos.com/software'
 
-  link 'Cuppa.app'
+  app 'Cuppa.app'
 end

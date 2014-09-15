@@ -5,7 +5,7 @@ class Diffmerge < Cask
   url 'http://download-us.sourcegear.com/DiffMerge/4.2.0/DiffMerge.4.2.0.697.intel.stable.dmg'
   homepage 'http://www.sourcegear.com/diffmerge'
 
-  link 'DiffMerge.app'
+  app 'DiffMerge.app'
   binary 'DiffMerge.app/Contents/MacOS/DiffMerge', :target => 'diffmerge'
   
   caveats <<-EOS.undent

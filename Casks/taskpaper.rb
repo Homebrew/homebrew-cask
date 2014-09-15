@@ -6,5 +6,5 @@ class Taskpaper < Cask
   appcast 'http://www.hogbaysoftware.com/products/taskpaper/releases.rss'
   homepage 'http://www.hogbaysoftware.com/products/taskpaper'
 
-  link 'TaskPaper.app'
+  app 'TaskPaper.app'
 end

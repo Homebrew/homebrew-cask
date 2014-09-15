@@ -6,5 +6,5 @@ class Quickradar < Cask
   appcast 'http://www.quickradar.com/appcast.xml'
   homepage 'http://www.quickradar.com/'
 
-  link 'QuickRadar.app'
+  app 'QuickRadar.app'
 end

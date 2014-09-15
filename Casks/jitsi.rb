@@ -6,5 +6,5 @@ class Jitsi < Cask
   appcast 'https://download.jitsi.org/jitsi/macosx/sparkle/updates.xml'
   homepage 'https://jitsi.org/'
 
-  link 'Jitsi.app'
+  app 'Jitsi.app'
 end

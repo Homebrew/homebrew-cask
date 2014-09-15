@@ -6,5 +6,5 @@ class Reflector < Cask
   appcast 'http://reflectorapp.com/updates/reflector.xml'
   homepage 'http://www.airsquirrels.com/reflector/'
 
-  link 'Reflector.app'
+  app 'Reflector.app'
 end

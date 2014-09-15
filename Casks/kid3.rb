@@ -6,5 +6,5 @@ class Kid3 < Cask
   url 'https://downloads.sourceforge.net/sourceforge/kid3/kid3-3.0.2-Darwin.dmg'
   homepage 'http://kid3.sourceforge.net/'
 
-  link 'Kid3.app'
+  app 'Kid3.app'
 end

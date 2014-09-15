@@ -5,5 +5,5 @@ class Wings3d < Cask
   url 'http://downloads.sourceforge.net/sourceforge/wings/wings-1.5.3-macosx.dmg'
   homepage 'http://www.wings3d.com/'
 
-  link 'Wings3D 1.5.3.app', :target => 'Wings3D.app'
+  app 'Wings3D 1.5.3.app', :target => 'Wings3D.app'
 end

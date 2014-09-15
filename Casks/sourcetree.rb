@@ -6,7 +6,7 @@ class Sourcetree < Cask
   appcast 'http://www.sourcetreeapp.com/update/SparkleAppcast.xml'
   homepage 'http://www.sourcetreeapp.com/'
 
-  link 'SourceTree.app'
+  app 'SourceTree.app'
   binary 'SourceTree.app/Contents/Resources/stree'
   caveats do
     files_in_usr_local

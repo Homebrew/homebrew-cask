@@ -6,5 +6,5 @@ class Epic < Cask
   appcast 'https://updates.epicbrowser.com/mac_updates/appcast.xml'
   homepage 'http://www.epicbrowser.com'
 
-  link 'Epic.app'
+  app 'Epic.app'
 end

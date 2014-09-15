@@ -6,5 +6,5 @@ class Asteroid < Cask
   appcast 'http://www.asteroidapp.com/appupdates.php'
   homepage 'http://www.asteroidapp.com/'
 
-  link 'Asteroid.app'
+  app 'Asteroid.app'
 end

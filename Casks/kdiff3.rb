@@ -6,6 +6,6 @@ class Kdiff3 < Cask
   url 'https://downloads.sourceforge.net/project/kdiff3/kdiff3/0.9.98/kdiff3-0.9.98-MacOSX-64Bit.dmg'
   homepage 'http://kdiff3.sourceforge.net/'
 
-  link 'kdiff3.app'
+  app 'kdiff3.app'
   binary 'kdiff3.app/Contents/MacOS/kdiff3'
 end

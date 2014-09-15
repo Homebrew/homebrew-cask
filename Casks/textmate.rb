@@ -5,5 +5,5 @@ class Textmate < Cask
   url 'https://api.textmate.org/downloads/release'
   homepage 'http://macromates.com/'
 
-  link 'TextMate.app'
+  app 'TextMate.app'
 end

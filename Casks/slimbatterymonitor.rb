@@ -6,5 +6,5 @@ class Slimbatterymonitor < Cask
   appcast 'http://www.orange-carb.org/SBM/updates/sbm.xml'
   homepage 'http://www.orange-carb.org/SBM/'
 
-  link 'SlimBatteryMonitor.app'
+  app 'SlimBatteryMonitor.app'
 end

@@ -6,5 +6,5 @@ class Mpfreaker < Cask
   appcast 'http://lwupdate.dyndns.org/mpfreaker.xml'
   homepage 'http://www.lairware.com/mpfreaker/'
 
-  link 'MPFreaker.app'
+  app 'MPFreaker.app'
 end

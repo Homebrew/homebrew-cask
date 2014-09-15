@@ -5,5 +5,5 @@ class Miditrail < Cask
   url 'http://dl.sourceforge.jp/miditrail/60194/MIDITrail-Ver.1.2.1-MacOSX.zip'
   homepage 'http://en.sourceforge.jp/projects/miditrail/'
 
-  link 'MIDITrail/MIDITrail.app'
+  app 'MIDITrail/MIDITrail.app'
 end

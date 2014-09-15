@@ -6,5 +6,5 @@ class Wraparound < Cask
   appcast 'http://www.digicowsoftware.com/appcast/'
   homepage 'http://www.digicowsoftware.com/detail?_app=Wraparound'
 
-  link 'Wraparound.app'
+  app 'Wraparound.app'
 end

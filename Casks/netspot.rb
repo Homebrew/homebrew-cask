@@ -6,5 +6,5 @@ class Netspot < Cask
   appcast 'http://www.netspotapp.com/updates/netspot2-appcast.xml'
   homepage 'http://www.netspotapp.com'
 
-  link 'NetSpot.app'
+  app 'NetSpot.app'
 end

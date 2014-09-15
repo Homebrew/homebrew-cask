@@ -6,5 +6,5 @@ class Propresenter < Cask
   appcast 'https://www.renewedvision.com/update/ProPresenter5.php'
   homepage 'http://www.renewedvision.com/propresenter.php'
 
-  link 'ProPresenter 5.app'
+  app 'ProPresenter 5.app'
 end

@@ -6,5 +6,5 @@ class Codekit < Cask
   appcast 'https://incident57.com/codekit/appcast/ck2appcast.xml'
   homepage 'http://incident57.com/codekit/'
 
-  link 'CodeKit.app'
+  app 'CodeKit.app'
 end

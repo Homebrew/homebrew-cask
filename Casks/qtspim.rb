@@ -5,5 +5,5 @@ class Qtspim < Cask
   url 'https://sourceforge.net/projects/spimsimulator/files/latest/download'
   homepage 'http://spimsimulator.sourceforge.net/'
 
-  link 'QtSpim.app'
+  app 'QtSpim.app'
 end

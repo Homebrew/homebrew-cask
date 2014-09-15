@@ -6,5 +6,5 @@ class Goagentx < Cask
   appcast 'https://goagentx.com/update/SUAppcast.xml'
   homepage 'http://goagentx.com/'
 
-  link 'GoAgentX.app'
+  app 'GoAgentX.app'
 end

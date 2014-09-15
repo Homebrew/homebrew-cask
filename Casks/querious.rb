@@ -6,5 +6,5 @@ class Querious < Cask
   appcast 'https://store.araelium.com/updates/querious'
   homepage 'http://www.araelium.com/querious/'
 
-  link 'Querious.app'
+  app 'Querious.app'
 end

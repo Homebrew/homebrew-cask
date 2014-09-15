@@ -5,5 +5,5 @@ class Openra < Cask
   url 'https://github.com/OpenRA/OpenRA/releases/download/release-20140722/OpenRA-release-20140722.zip'
   homepage 'http://www.openra.net/'
 
-  link 'OpenRA.app'
+  app 'OpenRA.app'
 end

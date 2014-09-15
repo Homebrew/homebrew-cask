@@ -5,5 +5,5 @@ class Cfxr < Cask
   url 'https://github.com/downloads/nevyn/cfxr/cfxr%200.2.1.zip'
   homepage 'http://thirdcog.eu/apps/cfxr'
 
-  link 'cfxr.app'
+  app 'cfxr.app'
 end

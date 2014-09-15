@@ -5,5 +5,5 @@ class Growlvoice < Cask
   url 'http://www.growlvoice.com/trials/growlvoice-2.0.3.zip'
   homepage 'http://www.growlvoice.com/'
 
-  link 'GrowlVoice.app'
+  app 'GrowlVoice.app'
 end

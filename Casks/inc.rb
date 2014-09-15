@@ -5,5 +5,5 @@ class Inc < Cask
   url 'http://inc-static.kippt.com.s3.amazonaws.com/apps/inc-osx.zip'
   homepage 'https://sendtoinc.com/apps/'
 
-  link 'Inc.app'
+  app 'Inc.app'
 end

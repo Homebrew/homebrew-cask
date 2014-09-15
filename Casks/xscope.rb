@@ -6,5 +6,5 @@ class Xscope < Cask
   appcast 'http://iconfactory.com/appcasts/xScope/appcast.xml'
   homepage 'http://iconfactory.com/software/xscope'
 
-  link 'xScope.app'
+  app 'xScope.app'
 end

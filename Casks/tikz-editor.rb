@@ -5,5 +5,5 @@ class TikzEditor < Cask
   url 'https://github.com/downloads/fredokun/TikZ-Editor/TikZ%20Editor-1.0.dmg'
   homepage 'https://github.com/fredokun/TikZ-Editor'
 
-  link 'TikZ Editor.app'
+  app 'TikZ Editor.app'
 end

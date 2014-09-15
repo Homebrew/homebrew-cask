@@ -6,5 +6,5 @@ class Capsee < Cask
   homepage 'http://www.threemagination.com/capsee/'
 
   nested_container 'CapSee12.dmg'
-  link 'CapSee.app'
+  app 'CapSee.app'
 end

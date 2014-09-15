@@ -5,5 +5,5 @@ class DupeguruPe < Cask
   url "http://download.hardcoded.net/dupeguru_pe_osx_#{version.gsub('.', '_')}.dmg"
   homepage 'http://www.hardcoded.net/dupeguru_pe/'
 
-  link 'dupeGuru PE.app'
+  app 'dupeGuru PE.app'
 end

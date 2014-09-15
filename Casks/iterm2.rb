@@ -6,5 +6,5 @@ class Iterm2 < Cask
   url 'http://www.iterm2.com/downloads/stable/iTerm2_v2_0.zip'
   homepage 'http://www.iterm2.com/'
 
-  link 'iTerm.app'
+  app 'iTerm.app'
 end

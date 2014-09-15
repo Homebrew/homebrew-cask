@@ -6,5 +6,5 @@ class Mongohub < Cask
   appcast 'https://mongohub.s3.amazonaws.com/mongohub_su_feed.xml'
   homepage 'https://github.com/fotonauts/MongoHub-Mac'
 
-  link 'MongoHub.app'
+  app 'MongoHub.app'
 end

@@ -6,5 +6,5 @@ class Sketchupviewer < Cask
   url 'https://dl.trimble.com/sketchup/SketchUpViewer-en.dmg'
   homepage 'http://www.sketchup.com/intl/en/'
 
-  link 'SketchUpViewer.app'
+  app 'SketchUpViewer.app'
 end

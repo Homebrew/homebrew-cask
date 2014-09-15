@@ -6,5 +6,5 @@ class Smaller < Cask
   appcast 'http://smallerapp.com/up/updates.xml'
   homepage 'http://smallerapp.com/'
 
-  link 'Smaller.app'
+  app 'Smaller.app'
 end

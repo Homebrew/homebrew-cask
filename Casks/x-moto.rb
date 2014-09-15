@@ -5,5 +5,5 @@ class XMoto < Cask
   url 'http://download.tuxfamily.org/xmoto/xmoto/0.5.10/xmoto-0.5.10-macosx.zip'
   homepage 'http://xmoto.tuxfamily.org'
 
-  link 'X-Moto.app'
+  app 'X-Moto.app'
 end

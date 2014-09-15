@@ -6,5 +6,5 @@ class BlackInk < Cask
   appcast 'http://www.red-sweater.com/blackink/appcast1.php'
   homepage 'http://www.red-sweater.com/blackink/'
 
-  link 'Black Ink.app'
+  app 'Black Ink.app'
 end

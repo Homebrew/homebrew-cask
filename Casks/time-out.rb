@@ -5,5 +5,5 @@ class TimeOut < Cask
   url 'http://www.dejal.com/download/timeout-1.7.1.zip'
   homepage 'http://www.dejal.com/timeout/'
 
-  link 'Time Out.app'
+  app 'Time Out.app'
 end

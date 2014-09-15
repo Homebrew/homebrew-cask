@@ -6,7 +6,7 @@ class Dewdrop < Cask
   appcast 'http://dewdrop.dangelov.com/mac-appcast/updates.xml'
   homepage 'http://dewdrop.dangelov.com/'
 
-  link 'Dewdrop.app'
+  app 'Dewdrop.app'
 
   caveats do
     <<-EOF.undent

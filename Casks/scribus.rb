@@ -5,5 +5,5 @@ class Scribus < Cask
   url 'https://downloads.sourceforge.net/project/scribus/scribus/1.4.4/scribus-1.4.4.dmg'
   homepage 'http://www.scribus.net/canvas/Scribus'
 
-  link 'Scribus.app'
+  app 'Scribus.app'
 end

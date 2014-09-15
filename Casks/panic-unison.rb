@@ -6,5 +6,5 @@ class PanicUnison < Cask
   appcast 'http://www.panic.com/updates/update.php'
   homepage 'http://panic.com/unison/'
 
-  link 'Unison.app'
+  app 'Unison.app'
 end

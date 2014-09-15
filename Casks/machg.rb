@@ -6,5 +6,5 @@ class Machg < Cask
   appcast 'http://jasonfharris.com/machg/machg_appcast.xml'
   homepage 'http://jasonfharris.com/machg/'
 
-  link 'MacHg.app'
+  app 'MacHg.app'
 end

@@ -6,5 +6,5 @@ class Airparrot < Cask
   appcast 'http://airparrot.com/updates/AirParrot.xml'
   homepage 'http://www.airsquirrels.com/airparrot/'
 
-  link 'AirParrot.app'
+  app 'AirParrot.app'
 end

@@ -5,5 +5,5 @@ class Shadowsocksx < Cask
   url 'https://downloads.sourceforge.net/project/shadowsocksgui/dist/ShadowsocksX-1.0.10.dmg'
   homepage 'https://github.com/shadowsocks/shadowsocks-iOS/wiki/Shadowsocks-for-OSX-Help'
 
-  link 'ShadowsocksX.app'
+  app 'ShadowsocksX.app'
 end

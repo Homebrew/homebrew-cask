@@ -5,6 +5,6 @@ class Maratis < Cask
   url 'https://maratis.googlecode.com/files/Maratis-3.21-beta-osx10.6.zip'
   homepage 'http://www.maratis3d.org/'
 
-  link 'Maratis.app'
-  link 'MaratisPlayer.app'
+  app 'Maratis.app'
+  app 'MaratisPlayer.app'
 end

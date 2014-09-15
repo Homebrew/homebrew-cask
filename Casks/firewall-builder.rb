@@ -5,5 +5,5 @@ class FirewallBuilder < Cask
   url 'http://downloads.sourceforge.net/sourceforge/fwbuilder/fwbuilder-5.1.0.3599.dmg'
   homepage 'http://www.fwbuilder.org'
 
-  link 'fwbuilder-5.1.0.3599.app', :target => 'Firewall Builder.app'
+  app 'fwbuilder-5.1.0.3599.app', :target => 'Firewall Builder.app'
 end

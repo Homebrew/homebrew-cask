@@ -5,5 +5,5 @@ class Cn3d < Cask
   url 'ftp://ftp.ncbi.nlm.nih.gov/cn3d/Cn3D-4.3.1-OSX.zip'
   homepage 'http://www.ncbi.nlm.nih.gov/Structure/CN3D/cn3d.shtml'
 
-  link 'Cn3D.app'
+  app 'Cn3D.app'
 end

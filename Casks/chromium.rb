@@ -6,5 +6,5 @@ class Chromium < Cask
   appcast 'http://osxportableapps.sourceforge.net/chromium/chrcast.xml'
   homepage 'http://www.freesmug.org/chromium'
 
-  link 'Chromium.app'
+  app 'Chromium.app'
 end

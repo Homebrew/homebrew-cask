@@ -6,5 +6,5 @@ class Garagesale < Cask
   appcast 'http://www.iwascoding.com/GarageSale/AppCast.php'
   homepage 'http://www.iwascoding.com/GarageSale/index.html'
 
-  link 'GarageSale.app'
+  app 'GarageSale.app'
 end

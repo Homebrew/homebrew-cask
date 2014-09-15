@@ -5,5 +5,5 @@ class Multidoge < Cask
   url 'https://github.com/langerhans/multidoge/releases/download/v0.1.2/multidoge-0.1.2.dmg'
   homepage 'http://multidoge.org/'
 
-  link 'MultiDoge.app'
+  app 'MultiDoge.app'
 end

@@ -5,5 +5,5 @@ class GooglePlusAutoBackup < Cask
   url 'https://dl.google.com/dl/edgedl/picasa/gpautobackup_setup.dmg'
   homepage 'http://picasa.google.com/'
 
-  link 'Google+ Auto Backup.app'
+  app 'Google+ Auto Backup.app'
 end

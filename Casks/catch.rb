@@ -6,5 +6,5 @@ class Catch < Cask
   appcast 'https://raw.github.com/mipstian/catch/master/update/appcast.xml'
   homepage 'http://www.giorgiocalderolla.com/index.html'
 
-  link 'Catch.app'
+  app 'Catch.app'
 end

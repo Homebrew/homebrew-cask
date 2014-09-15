@@ -5,5 +5,5 @@ class Oneswarm < Cask
   url 'http://www.oneswarm.org/builds/OneSwarm.dmg'
   homepage 'http://www.oneswarm.org/'
 
-  link 'OneSwarm.app'
+  app 'OneSwarm.app'
 end

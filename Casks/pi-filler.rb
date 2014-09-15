@@ -5,5 +5,5 @@ class PiFiller < Cask
   url 'http://ivanx.com/raspberrypi/files/PiFiller.zip'
   homepage 'http://ivanx.com/raspberrypi'
 
-  link 'Pi Filler.app'
+  app 'Pi Filler.app'
 end

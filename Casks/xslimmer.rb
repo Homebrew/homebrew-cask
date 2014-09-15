@@ -6,5 +6,5 @@ class Xslimmer < Cask
   appcast 'http://www.xslimmer.com/releases.xml'
   homepage 'http://latenitesoft.com/xslimmer/'
 
-  link 'Xslimmer.app'
+  app 'Xslimmer.app'
 end

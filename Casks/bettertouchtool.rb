@@ -6,5 +6,5 @@ class Bettertouchtool < Cask
   appcast 'http://appcast.boastr.net'
   homepage 'http://blog.boastr.net/'
 
-  link 'BetterTouchTool.app'
+  app 'BetterTouchTool.app'
 end

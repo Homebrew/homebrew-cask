@@ -5,5 +5,5 @@ class Keyfinder < Cask
   url 'http://www.ibrahimshaath.co.uk/keyfinder/KeyFinder-OSX.zip'
   homepage 'http://www.ibrahimshaath.co.uk/keyfinder/'
 
-  link 'KeyFinder-OSX/KeyFinder.app'
+  app 'KeyFinder-OSX/KeyFinder.app'
 end

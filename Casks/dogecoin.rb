@@ -5,5 +5,5 @@ class Dogecoin < Cask
   url 'https://github.com/dogecoin/dogecoin/releases/download/v1.8.0/dogecoin-1.8.0-mac.zip'
   homepage 'http://dogecoin.com/'
 
-  link 'Dogecoin-Qt.app'
+  app 'Dogecoin-Qt.app'
 end

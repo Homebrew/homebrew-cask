@@ -5,5 +5,5 @@ class Less < Cask
   url 'https://incident57.com/less/files/Less.zip'
   homepage 'http://incident57.com/less/'
 
-  link 'Less.app'
+  app 'Less.app'
 end

@@ -5,5 +5,5 @@ class Hex < Cask
   url 'http://dl.hex.gameforge.com/HexInstaller.dmg'
   homepage 'http://hextcg.com/'
 
-  link 'Hex.app'
+  app 'Hex.app'
 end

@@ -6,5 +6,5 @@ class Tagalicious < Cask
   appcast 'https://files.thelittleappfactory.com/tagalicious/appcast.xml'
   homepage 'http://thelittleappfactory.com/tagalicious/'
 
-  link 'Tagalicious.app'
+  app 'Tagalicious.app'
 end

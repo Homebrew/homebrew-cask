@@ -6,5 +6,5 @@ class BigMeanFolderMachine < Cask
   appcast 'http://www.publicspace.net/app/bmfm2.xml'
   homepage 'http://www.publicspace.net/BigMeanFolderMachine/'
 
-  link 'Big Mean Folder Machine 2.app'
+  app 'Big Mean Folder Machine 2.app'
 end

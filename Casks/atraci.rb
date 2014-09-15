@@ -5,5 +5,5 @@ class Atraci < Cask
   url "https://github.com/Atraci/Atraci/releases/download/#{version}/Atraci-mac.zip"
   homepage 'https://github.com/Atraci/Atraci'
 
-  link 'Atraci.app'
+  app 'Atraci.app'
 end

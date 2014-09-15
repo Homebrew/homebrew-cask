@@ -6,5 +6,5 @@ class Jewelrybox < Cask
   appcast 'http://jewelrybox.unfiniti.com/releases/releases.xml'
   homepage 'http://jewelrybox.unfiniti.com/'
 
-  link 'JewelryBox.app'
+  app 'JewelryBox.app'
 end

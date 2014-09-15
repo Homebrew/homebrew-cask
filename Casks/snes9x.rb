@@ -6,5 +6,5 @@ class Snes9x < Cask
   homepage 'http://www.snes9x.com/'
   nested_container 'snes9x-1.53'
 
-  link 'Snes9x.app'
+  app 'Snes9x.app'
 end

@@ -6,5 +6,5 @@ class Multifirefox < Cask
   appcast 'https://s3.amazonaws.com/mff_sparkle/MultiFirefoxAppcast2.xml'
   homepage 'http://davemartorana.com/multifirefox'
 
-  link 'MultiFirefox.app'
+  app 'MultiFirefox.app'
 end

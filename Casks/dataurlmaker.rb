@@ -5,5 +5,5 @@ class Dataurlmaker < Cask
   url 'https://github.com/sveinbjornt/Data-URL-Toolkit/raw/master/Releases/DataURLMaker-1.1.zip'
   homepage 'https://github.com/sveinbjornt/Data-URL-Toolkit'
 
-  link 'DataURLMaker.app'
+  app 'DataURLMaker.app'
 end

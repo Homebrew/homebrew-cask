@@ -5,5 +5,5 @@ class Subnetcalc < Cask
   url 'http://subnetcalc.free.fr/download/subnetcalc-1.1.dmg'
   homepage 'http://subnetcalc.free.fr/'
 
-  link 'SubnetCalc.app'
+  app 'SubnetCalc.app'
 end

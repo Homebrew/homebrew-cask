@@ -5,5 +5,5 @@ class Jubler < Cask
   url 'http://downloads.sourceforge.net/sourceforge/jubler/Jubler-5.0.1.dmg'
   homepage 'http://www.jubler.org/'
 
-  link 'Jubler.app'
+  app 'Jubler.app'
 end

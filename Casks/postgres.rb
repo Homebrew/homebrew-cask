@@ -5,5 +5,5 @@ class Postgres < Cask
   url "https://github.com/PostgresApp/PostgresApp/releases/download/#{version}/Postgres-#{version}.zip"
   homepage 'http://postgresapp.com/'
 
-  link 'Postgres.app'
+  app 'Postgres.app'
 end

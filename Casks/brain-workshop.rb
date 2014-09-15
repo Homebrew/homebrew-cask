@@ -5,5 +5,5 @@ class BrainWorkshop < Cask
   url 'https://downloads.sourceforge.net/project/brainworkshop/brainworkshop/Brain%20Workshop%204.8/brainworkshop-4.8.4-MacOSX.zip'
   homepage 'http://brainworkshop.sourceforge.net/'
 
-  link 'Brain Workshop.app'
+  app 'Brain Workshop.app'
 end

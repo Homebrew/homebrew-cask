@@ -5,5 +5,5 @@ class Prepros < Cask
   url 'http://download.alphapixels.com/Prepros-4.0.1.zip'
   homepage 'http://alphapixels.com/prepros/'
 
-  link 'Prepros.app'
+  app 'Prepros.app'
 end

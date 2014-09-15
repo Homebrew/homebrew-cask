@@ -5,5 +5,5 @@ class Pdfsam < Cask
   url 'https://downloads.sourceforge.net/project/pdfsam/pdfsam/2.2.2/pdfsam-2.2.2.dmg'
   homepage 'http://www.pdfsam.org/'
 
-  link 'pdfsam.app'
+  app 'pdfsam.app'
 end

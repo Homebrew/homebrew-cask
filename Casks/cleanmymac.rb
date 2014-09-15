@@ -6,5 +6,5 @@ class Cleanmymac < Cask
   appcast 'http://updates.devmate.com/com.macpaw.CleanMyMac2.xml'
   homepage 'http://macpaw.com/cleanmymac'
 
-  link 'CleanMyMac 2.app'
+  app 'CleanMyMac 2.app'
 end

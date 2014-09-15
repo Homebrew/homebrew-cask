@@ -5,5 +5,5 @@ class Tinyumbrella < Cask
   url 'http://cache.firmwareumbrella.com/downloads/TinyUmbrella-7.04.00.app.zip'
   homepage 'http://blog.firmwareumbrella.com/'
 
-  link 'TinyUmbrella.app'
+  app 'TinyUmbrella.app'
 end

@@ -5,5 +5,5 @@ class Djv < Cask
   url 'http://downloads.sourceforge.net/project/djv/djv-stable/0.9.0/djv-0.9.0_osx-x64.dmg'
   homepage 'http://djv.sourceforge.net'
 
-  link 'djv-0.9.0.app'
+  app 'djv-0.9.0.app'
 end

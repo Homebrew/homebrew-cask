@@ -5,5 +5,5 @@ class Commandq < Cask
   url 'https://clickontyler.com/commandq/download/'
   homepage 'http://clickontyler.com/commandq/'
 
-  link 'CommandQ.app'
+  app 'CommandQ.app'
 end

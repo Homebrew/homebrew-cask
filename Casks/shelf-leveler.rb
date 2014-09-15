@@ -5,5 +5,5 @@ class ShelfLeveler < Cask
   url 'http://download.mrgeckosmedia.com/ShelfLeveler.zip'
   homepage 'https://mrgeckosmedia.com/applications/info/Shelf-Leveler'
 
-  link 'Shelf Leveler.app'
+  app 'Shelf Leveler.app'
 end

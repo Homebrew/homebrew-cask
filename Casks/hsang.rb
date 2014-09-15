@@ -5,5 +5,5 @@ class Hsang < Cask
   url "http://nie.gdl.netease.com/lushi/HSAng_#{version}.dmg"
   homepage 'http://lushi.163.com/'
 
-  link 'HSAng.app'
+  app 'HSAng.app'
 end

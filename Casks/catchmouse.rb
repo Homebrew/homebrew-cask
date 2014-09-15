@@ -5,5 +5,5 @@ class Catchmouse < Cask
   url 'http://ftnew.com/files/CatchMouse.zip'
   homepage 'http://ftnew.com/catchmouse.html'
 
-  link 'CatchMouse.app'
+  app 'CatchMouse.app'
 end

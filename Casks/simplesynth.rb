@@ -5,5 +5,5 @@ class Simplesynth < Cask
   url 'https://s3.amazonaws.com/notahat/SimpleSynth-1.1.zip'
   homepage 'http://notahat.com/simplesynth/'
 
-  link 'SimpleSynth.app'
+  app 'SimpleSynth.app'
 end

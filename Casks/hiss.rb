@@ -6,5 +6,5 @@ class Hiss < Cask
   appcast 'http://collect3.com.au/hiss/appcast.xml'
   homepage 'http://collect3.com.au/hiss/'
 
-  link 'Hiss.app'
+  app 'Hiss.app'
 end

@@ -6,5 +6,5 @@ class Changes < Cask
   appcast 'https://bitbq_changes.s3.amazonaws.com/changes-production.xml'
   homepage 'http://bitbq.com/changes/'
 
-  link 'Changes.app'
+  app 'Changes.app'
 end

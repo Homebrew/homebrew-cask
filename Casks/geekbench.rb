@@ -6,5 +6,5 @@ class Geekbench < Cask
   appcast 'http://www.primatelabs.com/appcast/geekbench3.xml'
   homepage 'http://www.primatelabs.com/geekbench/'
 
-  link 'Geekbench 3.app'
+  app 'Geekbench 3.app'
 end

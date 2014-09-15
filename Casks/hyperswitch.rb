@@ -6,5 +6,5 @@ class Hyperswitch < Cask
   appcast 'http://hyperswitch.bahoom.com/appcast.xml'
   homepage 'http://bahoom.com/hyperswitch'
 
-  link 'HyperSwitch.app'
+  app 'HyperSwitch.app'
 end

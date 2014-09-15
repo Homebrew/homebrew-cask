@@ -6,5 +6,5 @@ class Xld < Cask
   appcast 'http://xld.googlecode.com/svn/appcast/xld-appcast_e.xml'
   homepage 'http://tmkk.undo.jp/xld/index_e.html'
 
-  link 'XLD.app'
+  app 'XLD.app'
 end

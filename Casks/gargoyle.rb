@@ -5,5 +5,5 @@ class Gargoyle < Cask
   url 'https://garglk.googlecode.com/files/gargoyle-2011.1-mac.dmg'
   homepage 'https://code.google.com/p/garglk/'
 
-  link 'Gargoyle.app'
+  app 'Gargoyle.app'
 end

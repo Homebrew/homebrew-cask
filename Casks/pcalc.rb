@@ -6,5 +6,5 @@ class Pcalc < Cask
   appcast 'http://www.pcalc.com/PCalcSUFeed.xml'
   homepage 'http://www.pcalc.com/index.html'
 
-  link 'PCalc.app'
+  app 'PCalc.app'
 end

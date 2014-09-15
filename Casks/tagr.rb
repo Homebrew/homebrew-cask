@@ -6,5 +6,5 @@ class Tagr < Cask
   appcast 'http://www.harald-schubert.net/data/tagr-appcast.xml'
   homepage 'http://www.entwicklungsfreu.de/tagr.html'
 
-  link 'Tagr.app'
+  app 'Tagr.app'
 end

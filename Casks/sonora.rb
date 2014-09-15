@@ -6,5 +6,5 @@ class Sonora < Cask
   appcast 'http://getsonora.com/updates/sonora2.xml'
   homepage 'http://getsonora.com/'
 
-  link 'Sonora.app'
+  app 'Sonora.app'
 end

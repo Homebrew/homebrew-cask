@@ -6,5 +6,5 @@ class Youview < Cask
   appcast 'http://mrgeckosmedia.com/applications/appcast/YouView'
   homepage 'https://mrgeckosmedia.com/applications/info/YouView'
 
-  link 'YouView/YouView.app'
+  app 'YouView/YouView.app'
 end

@@ -6,5 +6,5 @@ class RepetierHost < Cask
   appcast 'http://www.repetier.com/updates/rhm/rhm-appcast.xml'
   homepage 'http://www.repetier.com/'
 
-  link 'Repetier-Host Mac.app'
+  app 'Repetier-Host Mac.app'
 end

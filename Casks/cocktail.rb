@@ -6,7 +6,7 @@ class Cocktail < Cask
   appcast 'http://www.maintain.se/downloads/sparkle/mavericks/mavericks.xml'
   homepage 'http://maintain.se/cocktail'
 
-  link 'Cocktail.app'
+  app 'Cocktail.app'
   caveats <<-EOS.undent
     This version of Cocktail is for OS X Mavericks only. If you are using other versions of
     OS X, please run 'brew tap caskroom/versions' and install cocktail-mountainlion /

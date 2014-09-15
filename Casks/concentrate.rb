@@ -6,5 +6,5 @@ class Concentrate < Cask
   appcast 'http://getconcentrating.com/concentrate_appcast.xml'
   homepage 'http://www.getconcentrating.com/'
 
-  link 'Concentrate.app'
+  app 'Concentrate.app'
 end

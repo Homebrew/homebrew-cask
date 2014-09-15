@@ -5,5 +5,5 @@ class Foxmail < Cask
   url 'http://www.foxmail.com/mac/download'
   homepage 'http://www.foxmail.com'
 
-  link 'Foxmail.app'
+  app 'Foxmail.app'
 end

@@ -5,5 +5,5 @@ class Jedit < Cask
   url 'https://downloads.sourceforge.net/sourceforge/jedit/jedit5.1.0install.dmg'
   homepage 'http://www.jedit.org'
 
-  link 'jEdit.app'
+  app 'jEdit.app'
 end

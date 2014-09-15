@@ -5,5 +5,5 @@ class Stella < Cask
   url 'https://downloads.sourceforge.net/project/stella/stella/3.9.3/Stella-3.9.3_intel-macosx.dmg'
   homepage 'http://stella.sourceforge.net'
 
-  link 'Stella.app'
+  app 'Stella.app'
 end

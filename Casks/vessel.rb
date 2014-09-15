@@ -5,5 +5,5 @@ class Vessel < Cask
   url 'http://awvessel.github.io/binaries/vessel-0.3.0.tbz2'
   homepage 'http://awvessel.github.io'
 
-  link 'Vessel.app'
+  app 'Vessel.app'
 end

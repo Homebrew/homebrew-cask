@@ -5,5 +5,5 @@ class Datagraph < Cask
   url 'http://www.visualdatatools.com/DataGraph/DataGraph.dmg'
   homepage 'http://www.visualdatatools.com/DataGraph/'
 
-  link 'DataGraph.app'
+  app 'DataGraph.app'
 end

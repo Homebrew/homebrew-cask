@@ -6,5 +6,5 @@ class Easyvpn < Cask
   appcast 'http://www.squashedsoftware.com/appcasts/easyvpn.xml'
   homepage 'http://www.squashedsoftware.com/products-easyvpn.php'
 
-  link 'EasyVPN.app'
+  app 'EasyVPN.app'
 end

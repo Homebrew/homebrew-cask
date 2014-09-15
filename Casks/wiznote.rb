@@ -5,5 +5,5 @@ class Wiznote < Cask
   url 'http://release.wiz.cn/wiznote-macos-2014-08-19.dmg'
   homepage 'http://www.wiznote.com/'
 
-  link 'WizNote.app'
+  app 'WizNote.app'
 end

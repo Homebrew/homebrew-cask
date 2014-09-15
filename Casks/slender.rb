@@ -6,5 +6,5 @@ class Slender < Cask
   appcast 'http://dragonforged.com/slender/sparkle/?bundleId=com.dfsw.Slender'
   homepage 'http://dragonforged.com/slender/'
 
-  link 'Slender.app'
+  app 'Slender.app'
 end

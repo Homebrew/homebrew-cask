@@ -6,5 +6,5 @@ class TrimEnabler < Cask
   appcast 'http://cindori.org/trimenabler/updates/update.xml'
   homepage 'http://www.cindori.org/software/trimenabler/'
 
-  link 'Trim Enabler.app'
+  app 'Trim Enabler.app'
 end

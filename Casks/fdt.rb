@@ -5,5 +5,5 @@ class Fdt < Cask
   url 'http://fdt.powerflasher.com/update/fdt/installer/FDT_osx64.dmg'
   homepage 'http://fdt.powerflasher.com/'
 
-  link 'FDT.app'
+  app 'FDT.app'
 end

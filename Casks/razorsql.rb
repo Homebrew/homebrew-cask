@@ -5,5 +5,5 @@ class Razorsql < Cask
   url "http://downloads.razorsql.com/downloads/#{version.gsub('.', '_')}/razorsql#{version.gsub('.', '_')}_x64.dmg"
   homepage 'http://razorsql.com/download_mac.html'
 
-  link 'RazorSQL.app'
+  app 'RazorSQL.app'
 end

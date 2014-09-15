@@ -5,5 +5,5 @@ class Mumble < Cask
   url 'https://downloads.sourceforge.net/sourceforge/mumble/Mumble-1.2.8.dmg'
   homepage 'http://mumble.sourceforge.net'
 
-  link 'Mumble.app'
+  app 'Mumble.app'
 end

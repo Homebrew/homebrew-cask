@@ -5,5 +5,5 @@ class AirVideoServer < Cask
   url 'https://s3.amazonaws.com/AirVideo/Air+Video+Server+2.4.6-beta3u2.dmg'
   homepage 'http://www.inmethod.com/air-video/'
 
-  link 'Air Video Server.app'
+  app 'Air Video Server.app'
 end

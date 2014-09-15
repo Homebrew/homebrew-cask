@@ -5,5 +5,5 @@ class Phoenix < Cask
   url 'https://raw.github.com/sdegutis/phoenix/master/Builds/Phoenix-LATEST.app.tar.gz'
   homepage 'https://github.com/sdegutis/Phoenix'
 
-  link 'Phoenix.app'
+  app 'Phoenix.app'
 end

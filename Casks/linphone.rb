@@ -5,5 +5,5 @@ class Linphone < Cask
   url 'http://download-mirror.savannah.gnu.org/releases/linphone/3.7.x/macos/linphone-3.7.0.dmg'
   homepage 'http://www.linphone.org/'
 
-  link 'Linphone.app'
+  app 'Linphone.app'
 end

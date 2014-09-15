@@ -6,5 +6,5 @@ class Ideskcal < Cask
   appcast 'https://hashbangind.com/appcasts/iDeskCal-profileInfo.php'
   homepage 'http://www.hashbangind.com'
 
-  link 'iDeskCal.app'
+  app 'iDeskCal.app'
 end

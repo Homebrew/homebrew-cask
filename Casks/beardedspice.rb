@@ -5,5 +5,5 @@ class Beardedspice < Cask
   url "https://github.com/beardedspice/beardedspice/raw/releases/BeardedSpice-#{version}.tar.gz"
   homepage 'http://www.beardedspice.com'
 
-  link 'BeardedSpice.app'
+  app 'BeardedSpice.app'
 end

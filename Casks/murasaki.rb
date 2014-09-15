@@ -5,5 +5,5 @@ class Murasaki < Cask
   url 'http://genjiapp.com/mac/murasaki/downloads/murasaki_v1.0.2.zip'
   homepage 'http://genjiapp.com/mac/murasaki/index_en.html'
 
-  link 'Murasaki.app'
+  app 'Murasaki.app'
 end

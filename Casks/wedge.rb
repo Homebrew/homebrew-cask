@@ -6,5 +6,5 @@ class Wedge < Cask
   appcast 'http://wedge.natestedman.com/appcast.xml'
   homepage 'http://wedge.natestedman.com'
 
-  link 'Wedge.app'
+  app 'Wedge.app'
 end

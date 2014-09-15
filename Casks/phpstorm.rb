@@ -5,7 +5,7 @@ class Phpstorm < Cask
   url 'http://download.jetbrains.com/webide/PhpStorm-7.1.3.dmg'
   homepage 'http://www.jetbrains.com/phpstorm/'
 
-  link 'PhpStorm.app'
+  app 'PhpStorm.app'
 
   postflight do
     system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/PhpStorm.app/Contents/Info.plist"

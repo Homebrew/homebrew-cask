@@ -6,5 +6,5 @@ class Findings < Cask
   appcast 'http://downloads.findingsapp.com/appcast.xml'
   homepage 'http://findingsapp.com'
 
-  link 'Findings.app'
+  app 'Findings.app'
 end

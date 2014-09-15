@@ -6,5 +6,5 @@ class Ibettercharge < Cask
   appcast 'http://hook.softorino.com/ibc/appcast.xml'
   homepage 'http://softorino.com/ibettercharge/'
 
-  link 'iBetterCharge.app'
+  app 'iBetterCharge.app'
 end

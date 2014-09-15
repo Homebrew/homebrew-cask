@@ -5,5 +5,5 @@ class Itsycal < Cask
   url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
   homepage 'http://www.mowglii.com/itsycal/'
 
-  link "Itsycal #{version}/Itsycal.app"
+  app "Itsycal #{version}/Itsycal.app"
 end

@@ -5,5 +5,5 @@ class Xiami < Cask
   url 'http://www.xiami.com/software/download?app=music_mac'
   homepage 'http://www.xiami.com/'
 
-  link 'Xiami.app'
+  app 'Xiami.app'
 end

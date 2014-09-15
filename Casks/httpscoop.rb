@@ -6,5 +6,5 @@ class Httpscoop < Cask
   appcast 'http://www.tuffcode.com/releases/httpscoop-appcast.xml'
   homepage 'http://www.tuffcode.com'
 
-  link 'HTTPScoop.app'
+  app 'HTTPScoop.app'
 end

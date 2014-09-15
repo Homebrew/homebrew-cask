@@ -6,5 +6,5 @@ class Vocabulist < Cask
   appcast 'http://vocabulistapp.com/downloads/appcast.xml'
   homepage 'http://vocabulistapp.com/'
 
-  link 'Vocabulist.app'
+  app 'Vocabulist.app'
 end

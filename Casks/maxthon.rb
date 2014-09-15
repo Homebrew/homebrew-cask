@@ -5,5 +5,5 @@ class Maxthon < Cask
   url "https://dl.maxthon.com/mac/Maxthon-#{version}.dmg"
   homepage 'http://www.maxthon.com/'
 
-  link 'Maxthon.app'
+  app 'Maxthon.app'
 end

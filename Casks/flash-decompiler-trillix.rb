@@ -6,5 +6,5 @@ class FlashDecompilerTrillix < Cask
   appcast 'http://www.eltima.com/download/fd-mac-update/fd-mac.xml'
   homepage 'http://www.flash-decompiler.com/mac.html'
 
-  link 'Flash Decompiler Trillix.app'
+  app 'Flash Decompiler Trillix.app'
 end

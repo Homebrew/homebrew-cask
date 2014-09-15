@@ -5,5 +5,5 @@ class Mnemosyne < Cask
   url 'https://downloads.sourceforge.net/sourceforge/mnemosyne-proj/Mnemosyne-2.3-Mac.dmg'
   homepage 'http://mnemosyne-proj.org/'
 
-  link 'Mnemosyne.app'
+  app 'Mnemosyne.app'
 end

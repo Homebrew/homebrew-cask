@@ -5,5 +5,5 @@ class Osirix < Cask
   url 'http://www.osirix-viewer.com/OsiriX5.9.dmg'
   homepage 'http://www.osirix-viewer.com'
 
-  link 'osirix.app'
+  app 'osirix.app'
 end

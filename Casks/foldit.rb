@@ -5,5 +5,5 @@ class Foldit < Cask
   url 'https://fold.it/portal/download/osx'
   homepage 'http://fold.it'
 
-  link 'FoldIt.app'
+  app 'FoldIt.app'
 end

@@ -6,7 +6,7 @@ class Houdahspot < Cask
   appcast 'http://www.houdah.com/houdahSpot/updates/profileInfo3.php'
   homepage 'http://www.houdah.com/houdahSpot/'
 
-  link 'HoudahSpot.app'
+  app 'HoudahSpot.app'
 
   postflight do
     # Don't ask to move the app bundle to /Applications

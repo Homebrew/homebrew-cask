@@ -6,5 +6,5 @@ class CurseClient < Cask
   appcast 'http://www.curseforge.com/projects/curse-client-osx/sparkle.xml?type=b'
   homepage 'http://www.curse.com/client'
 
-  link 'Curse Client.app'
+  app 'Curse Client.app'
 end

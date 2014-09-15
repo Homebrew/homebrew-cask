@@ -5,5 +5,5 @@ class NoIpDuc < Cask
   url 'https://www.noip.com/client/mac/noip3.2.1.dmg'
   homepage 'http://www.noip.com/download?page=mac'
 
-  link 'No-IP DUC.app'
+  app 'No-IP DUC.app'
 end

@@ -5,5 +5,5 @@ class Sofortbild < Cask
   url 'http://www.sofortbildapp.com/download/Sofortbild.zip'
   homepage 'http://www.sofortbildapp.com/'
 
-  link 'Sofortbild.app'
+  app 'Sofortbild.app'
 end

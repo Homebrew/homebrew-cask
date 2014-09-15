@@ -5,7 +5,7 @@ class Webstorm < Cask
   url 'http://download-cf.jetbrains.com/webstorm/WebStorm-8.0.4.dmg'
   homepage 'http://www.jetbrains.com/webstorm/'
 
-  link 'WebStorm.app'
+  app 'WebStorm.app'
 
   postflight do
     system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/WebStorm.app/Contents/Info.plist"

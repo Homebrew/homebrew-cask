@@ -6,5 +6,5 @@ class Namechanger < Cask
   appcast 'http://mrrsoftware.com/Downloads/NameChanger/Updates/NameChangerSoftwareUpdates.xml'
   homepage 'http://www.mrrsoftware.com/MRRSoftware/NameChanger.html'
 
-  link 'NameChanger.app'
+  app 'NameChanger.app'
 end

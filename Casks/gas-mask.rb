@@ -6,5 +6,5 @@ class GasMask < Cask
   appcast 'http://gmask.clockwise.ee/check_update/'
   homepage 'http://www.clockwise.ee/gasmask/'
 
-  link 'Gas Mask.app'
+  app 'Gas Mask.app'
 end

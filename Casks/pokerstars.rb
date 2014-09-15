@@ -5,5 +5,5 @@ class Pokerstars < Cask
   url 'http://www.pokerstars.com/PokerStars.app.zip'
   homepage 'http://www.pokerstars.com/'
 
-  link 'PokerStars.app'
+  app 'PokerStars.app'
 end

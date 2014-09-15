@@ -5,5 +5,5 @@ class Robomongo < Cask
   url 'http://robomongo.org/files/mac/Robomongo-0.8.4-x86_64.dmg'
   homepage 'http://robomongo.org'
 
-  link 'Robomongo.app'
+  app 'Robomongo.app'
 end

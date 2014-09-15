@@ -5,5 +5,5 @@ class Kkbox < Cask
   url 'http://download.kkbox.com/files/KKBOX-5.0.10-ca460d0.dmg'
   homepage 'http://www.kkbox.com/'
 
-  link 'KKBOX.app'
+  app 'KKBOX.app'
 end

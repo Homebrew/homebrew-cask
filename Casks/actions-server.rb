@@ -5,5 +5,5 @@ class ActionsServer < Cask
   url 'http://getactionsapp.com/downloads/ActionsServer.dmg'
   homepage 'http://getactionsapp.com'
 
-  link 'Actions Server.app'
+  app 'Actions Server.app'
 end

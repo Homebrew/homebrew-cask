@@ -5,5 +5,5 @@ class Simplecap < Cask
   url 'http://xcatsan.com/simplecap/download/SimpleCap-1.2.1.zip'
   homepage 'http://xcatsan.com/simplecap-en/'
 
-  link 'SimpleCap.app'
+  app 'SimpleCap.app'
 end

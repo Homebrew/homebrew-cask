@@ -6,5 +6,5 @@ class Toau < Cask
   appcast 'http://toauapp.com/up/updates.xml'
   homepage 'http://toauapp.com'
 
-  link 'Toau.app'
+  app 'Toau.app'
 end

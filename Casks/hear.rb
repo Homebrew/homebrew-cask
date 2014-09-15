@@ -6,7 +6,7 @@ class Hear < Cask
   appcast 'http://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear'
   homepage 'http://www.prosofteng.com/products/hear.php'
 
-  link 'Hear.app'
+  app 'Hear.app'
   caveats <<-EOS.undent
     To uninstall open Hear.app and go to the menu Hear > Uninstall...
   EOS

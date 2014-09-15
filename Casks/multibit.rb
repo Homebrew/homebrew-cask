@@ -5,5 +5,5 @@ class Multibit < Cask
   url 'https://multibit.org/releases/multibit-0.5.18/multibit-0.5.18.dmg'
   homepage 'https://multibit.org/'
 
-  link 'MultiBit.app'
+  app 'MultiBit.app'
 end

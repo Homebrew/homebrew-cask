@@ -6,7 +6,7 @@ class Soulver < Cask
   appcast 'http://www.acqualia.com/soulver/appcast/soulver2.xml'
   homepage 'http://www.acqualia.com/soulver/'
 
-  link 'Soulver.app'
+  app 'Soulver.app'
 
   postflight do
     # Don't ask to move the app bundle to /Applications

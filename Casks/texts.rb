@@ -6,5 +6,5 @@ class Texts < Cask
   appcast 'http://www.texts.io/appcast-osx.xml'
   homepage 'http://www.texts.io'
 
-  link 'Texts.app'
+  app 'Texts.app'
 end

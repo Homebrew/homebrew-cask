@@ -6,5 +6,5 @@ class Base < Cask
   appcast 'http://update.menial.co.uk/software/base/'
   homepage 'http://menial.co.uk/base/'
 
-  link 'Base.app'
+  app 'Base.app'
 end

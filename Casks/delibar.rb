@@ -6,5 +6,5 @@ class Delibar < Cask
   appcast 'http://apps.shinynode.com/apps/delibar_appcast.xml'
   homepage 'http://www.delibarapp.com/'
 
-  link 'Delibar.app'
+  app 'Delibar.app'
 end

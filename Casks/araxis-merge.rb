@@ -5,5 +5,5 @@ class AraxisMerge < Cask
   url 'http://www.araxis.com/download/Merge2014.4459-OSX10.9.dmg'
   homepage 'http://www.araxis.com/merge'
 
-  link 'Araxis Merge.app'
+  app 'Araxis Merge.app'
 end

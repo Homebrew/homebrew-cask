@@ -6,5 +6,5 @@ class Weibox < Cask
   appcast 'http://weiboformac.sinaapp.com/appcast/wm2.xml'
   homepage 'http://weiboformac.sinaapp.com'
 
-  link 'WeiboX.app'
+  app 'WeiboX.app'
 end

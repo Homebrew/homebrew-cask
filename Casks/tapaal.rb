@@ -5,5 +5,5 @@ class Tapaal < Cask
   url 'http://www.tapaal.net/fileadmin/download/tapaal-3.1/tapaal-3.1.0-mac64.dmg'
   homepage 'http://www.tapaal.net'
 
-  link 'Tapaal.app'
+  app 'Tapaal.app'
 end

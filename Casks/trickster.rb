@@ -6,5 +6,5 @@ class Trickster < Cask
   appcast 'http://dl.apparentsoft.com/trickster.rss'
   homepage 'http://www.apparentsoft.com/trickster/'
 
-    link 'Trickster.app'
+    app 'Trickster.app'
 end

@@ -5,5 +5,5 @@ class FreeRuler < Cask
   url 'http://www.pascal.com/software/freeruler/FreeRuler1.7b5.zip'
   homepage 'http://www.pascal.com/software/freeruler/'
 
-  link 'Free Ruler 1.7b5.app'
+  app 'Free Ruler 1.7b5.app'
 end

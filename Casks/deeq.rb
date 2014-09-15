@@ -5,5 +5,5 @@ class Deeq < Cask
   url 'http://dl.bithavoc.io/deeq/releases/latest.dmg'
   homepage 'http://deeqapp.com'
 
-  link 'Deeq.app'
+  app 'Deeq.app'
 end

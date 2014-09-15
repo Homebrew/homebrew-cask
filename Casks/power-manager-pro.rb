@@ -6,5 +6,5 @@ class PowerManagerPro < Cask
   appcast 'http://version.dssw.co.uk/powermanager/professional'
   homepage 'https://www.dssw.co.uk/powermanager'
 
-  link 'Power Manager Pro.app'
+  app 'Power Manager Pro.app'
 end

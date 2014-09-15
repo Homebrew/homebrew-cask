@@ -6,5 +6,5 @@ class VagrantManager < Cask
   appcast 'http://api.lanayo.com/appcast/vagrant_manager.xml'
   homepage 'http://vagrantmanager.com/'
 
-  link 'Vagrant Manager.app'
+  app 'Vagrant Manager.app'
 end

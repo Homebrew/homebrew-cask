@@ -5,5 +5,5 @@ class Sabnzbd < Cask
   url 'https://downloads.sourceforge.net/project/sabnzbdplus/sabnzbdplus/0.7.18/SABnzbd-0.7.18-osx.dmg'
   homepage 'http://sabnzbd.org/'
 
-  link '10.8 (M-Lion) 10.9 (Mavericks)/SABnzbd.app'
+  app '10.8 (M-Lion) 10.9 (Mavericks)/SABnzbd.app'
 end

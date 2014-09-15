@@ -5,5 +5,5 @@ class Tomighty < Cask
   url 'https://tomighty.googlecode.com/files/Tomighty-1.0.1.dmg'
   homepage 'http://www.tomighty.org/'
 
-  link 'Tomighty.app'
+  app 'Tomighty.app'
 end

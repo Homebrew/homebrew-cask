@@ -6,5 +6,5 @@ class Clipmenu < Cask
   appcast 'http://feeds.feedburner.com/clipmenu-appcast'
   homepage 'http://www.clipmenu.com/'
 
-  link 'ClipMenu.app'
+  app 'ClipMenu.app'
 end

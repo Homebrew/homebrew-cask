@@ -5,5 +5,5 @@ class Dosbox < Cask
   url 'https://downloads.sourceforge.net/project/dosbox/dosbox/0.74/DOSBox-0.74-1_Universal.dmg'
   homepage 'http://www.dosbox.com'
 
-  link 'DOSBox.app'
+  app 'DOSBox.app'
 end

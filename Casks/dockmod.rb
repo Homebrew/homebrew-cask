@@ -6,5 +6,5 @@ class Dockmod < Cask
   appcast 'http://spyresoft.com/dockmod/updates.xml'
   homepage 'http://spyresoft.com/dockmod/'
 
-  link 'DockMod.app'
+  app 'DockMod.app'
 end

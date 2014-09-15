@@ -6,5 +6,5 @@ class Handbrake < Cask
   appcast 'http://handbrake.fr/appcast.x86_64.xml'
   homepage 'http://handbrake.fr/'
 
-  link 'HandBrake.app'
+  app 'HandBrake.app'
 end

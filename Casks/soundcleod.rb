@@ -6,5 +6,5 @@ class Soundcleod < Cask
   appcast 'https://raw.github.com/salomvary/soundcleod/master/appcast.xml'
   homepage 'http://salomvary.github.io/soundcleod/'
 
-  link 'SoundCleod.app'
+  app 'SoundCleod.app'
 end

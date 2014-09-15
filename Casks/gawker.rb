@@ -6,5 +6,5 @@ class Gawker < Cask
   appcast 'http://gawker.sourceforge.net/appcast.xml'
   homepage 'http://gawker.sourceforge.net/Gawker.html'
 
-  link 'Gawker.app'
+  app 'Gawker.app'
 end

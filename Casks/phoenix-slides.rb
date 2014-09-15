@@ -5,5 +5,5 @@ class PhoenixSlides < Cask
   url 'http://blyt.net/phxslides/phoenix-slides-131.zip'
   homepage 'http://blyt.net/phxslides'
 
-  link 'Phoenix Slides.app'
+  app 'Phoenix Slides.app'
 end

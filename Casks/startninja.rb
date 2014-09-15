@@ -5,5 +5,5 @@ class Startninja < Cask
   url 'http://www.allvu.com/downloads/StartNinjaInstaller.dmg'
   homepage 'http://www.allvu.com/index.php/products/startninja.html'
 
-  link 'StartNinja.app'
+  app 'StartNinja.app'
 end

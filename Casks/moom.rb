@@ -6,5 +6,5 @@ class Moom < Cask
   appcast 'http://manytricks.com/moom/appcast.xml'
   homepage 'http://manytricks.com/moom/'
 
-  link 'Moom.app'
+  app 'Moom.app'
 end

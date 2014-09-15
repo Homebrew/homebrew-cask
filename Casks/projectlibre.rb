@@ -5,5 +5,5 @@ class Projectlibre < Cask
   url 'https://downloads.sourceforge.net/project/projectlibre/ProjectLibre/1.5.8/projectlibre-1.5.8.dmg'
   homepage 'http://www.projectlibre.org/'
 
-  link 'ProjectLibre.app'
+  app 'ProjectLibre.app'
 end

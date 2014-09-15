@@ -6,5 +6,5 @@ class NarrativeUploader < Cask
   appcast 'http://dl.getnarrative.com/appcast/osx.xml'
   homepage 'http://getnarrative.com'
 
-  link 'Narrative Uploader.app'
+  app 'Narrative Uploader.app'
 end

@@ -6,5 +6,5 @@ class IdocumentPlus < Cask
   appcast 'http://t.icyblaze.com/idplusc4ud'
   homepage 'http://www.icyblaze.com/idocument/'
 
-  link 'iDocument Plus.app'
+  app 'iDocument Plus.app'
 end

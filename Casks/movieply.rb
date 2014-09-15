@@ -5,5 +5,5 @@ class Movieply < Cask
   url 'http://www.movieply.com/download/MoviePly-1.2.OSX.zip'
   homepage 'http://www.movieply.com/'
 
-  link 'MoviePly.app'
+  app 'MoviePly.app'
 end

@@ -6,5 +6,5 @@ class Welly < Cask
   appcast 'http://welly.googlecode.com/svn/wiki/WellyUpdate.xml'
   homepage 'https://code.google.com/p/welly/'
 
-  link 'Welly.app'
+  app 'Welly.app'
 end

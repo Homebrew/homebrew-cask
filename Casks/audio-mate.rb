@@ -5,5 +5,5 @@ class AudioMate < Cask
   url "https://s3.amazonaws.com/apps-leftbee/products/downloadables/000/000/005/original/AudioMate-v#{version}.dmg"
   homepage 'http://audiomateapp.com/'
 
-  link 'AudioMate.app'
+  app 'AudioMate.app'
 end

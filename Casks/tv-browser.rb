@@ -5,5 +5,5 @@ class TvBrowser < Cask
   url 'https://downloads.sourceforge.net/sourceforge/tvbrowser/tvbrowser_3.3.3_mac.dmg'
   homepage 'http://www.tvbrowser.org/index.php?setlang=en'
 
-  link 'TV-Browser.app'
+  app 'TV-Browser.app'
 end

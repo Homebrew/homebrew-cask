@@ -5,5 +5,5 @@ class Pencil < Cask
   url 'https://evoluspencil.googlecode.com/files/Pencil-2.0.6-mac.tar.bz2'
   homepage 'http://pencil.evolus.vn'
 
-  link 'Pencil.app'
+  app 'Pencil.app'
 end

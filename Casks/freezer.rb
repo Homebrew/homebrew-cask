@@ -6,5 +6,5 @@ class Freezer < Cask
   appcast 'https://mrgeckosmedia.com/applications/appcast/Freezer'
   homepage 'https://mrgeckosmedia.com/applications/info/Freezer'
 
-  link 'Freezer/Freezer.app'
+  app 'Freezer/Freezer.app'
 end

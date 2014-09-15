@@ -6,5 +6,5 @@ class Transmission < Cask
   appcast 'http://update.transmissionbt.com/appcast.xml'
   homepage 'http://www.transmissionbt.com/'
 
-  link 'Transmission.app'
+  app 'Transmission.app'
 end

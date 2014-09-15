@@ -5,5 +5,5 @@ class Pdfmasher < Cask
   url "http://download.hardcoded.net/pdfmasher_osx_#{version.gsub('.', '_')}.dmg"
   homepage 'http://www.hardcoded.net/pdfmasher/'
 
-  link 'PdfMasher.app'
+  app 'PdfMasher.app'
 end

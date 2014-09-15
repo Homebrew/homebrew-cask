@@ -5,5 +5,5 @@ class SimpleCss < Cask
   url 'http://www.hostm.com/downloads/simplecss/mac/SimpleCSS.zip'
   homepage 'http://www.hostm.com/css'
 
-  link 'Simple CSS.app'
+  app 'Simple CSS.app'
 end

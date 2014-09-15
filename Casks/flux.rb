@@ -6,7 +6,7 @@ class Flux < Cask
   appcast 'https://justgetflux.com/mac/macflux.xml'
   homepage 'http://justgetflux.com'
 
-  link 'Flux.app'
+  app 'Flux.app'
 
   postflight do
     # Don't ask to move the app bundle to /Applications

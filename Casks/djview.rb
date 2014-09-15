@@ -6,5 +6,5 @@ class Djview < Cask
   homepage 'http://djvu.sourceforge.net/'
 
   nested_container 'djvulibre-3.5.22+djview-4.5-intel.dmg'
-  link 'DjView.app'
+  app 'DjView.app'
 end

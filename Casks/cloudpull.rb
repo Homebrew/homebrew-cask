@@ -6,5 +6,5 @@ class Cloudpull < Cask
   appcast 'https://secure.goldenhillsoftware.com/updates/cloudpull/appcast.xml'
   homepage 'http://www.goldenhillsoftware.com/'
 
-  link 'CloudPull.app'
+  app 'CloudPull.app'
 end

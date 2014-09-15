@@ -6,5 +6,5 @@ class Cyberduck < Cask
   appcast 'https://version.cyberduck.io/changelog.rss'
   homepage 'http://cyberduck.io/'
 
-  link 'Cyberduck.app'
+  app 'Cyberduck.app'
 end

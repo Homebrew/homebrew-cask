@@ -6,5 +6,5 @@ class Bibdesk < Cask
   appcast 'http://bibdesk.sourceforge.net/bibdesk.xml'
   homepage 'http://bibdesk.sourceforge.net/'
 
-  link 'BibDesk.app'
+  app 'BibDesk.app'
 end

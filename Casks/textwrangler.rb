@@ -6,5 +6,5 @@ class Textwrangler < Cask
   appcast 'https://versioncheck.barebones.com/TextWrangler.xml'
   homepage 'http://www.barebones.com/products/textwrangler'
 
-  link 'TextWrangler.app'
+  app 'TextWrangler.app'
 end

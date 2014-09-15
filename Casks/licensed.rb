@@ -5,5 +5,5 @@ class Licensed < Cask
   url 'http://amarsagoo.info/licensed/Licensed.dmg'
   homepage 'http://amarsagoo.info/licensed'
 
-  link 'Licensed.app'
+  app 'Licensed.app'
 end

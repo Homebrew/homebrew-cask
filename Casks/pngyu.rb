@@ -5,5 +5,5 @@ class Pngyu < Cask
   url 'http://nukesaq88.github.io/Pngyu/download/Pngyu_mac_101.zip'
   homepage 'http://nukesaq88.github.io/Pngyu/'
 
-  link 'Pngyu.app'
+  app 'Pngyu.app'
 end

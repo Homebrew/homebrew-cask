@@ -5,7 +5,7 @@ class JabberVideo < Cask
   url 'http://collaboration.iu.edu/service-request/software/JabberVideo-4.8.dmg'
   homepage 'https://www.ciscojabbervideo.com/'
 
-  link 'Jabber Video.app'
+  app 'Jabber Video.app'
 
   postflight do
     system "/bin/rm", "#{destination_path}/Jabber Video.app/Contents/Resources/ForcedConfig.plist"

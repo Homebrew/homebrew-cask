@@ -6,5 +6,5 @@ class Jing < Cask
   appcast 'http://www.techsmith.com/redirect.asp?product=jing&ver=2.0.0&lang=enu&target=SparkleAppcast'
   homepage 'http://www.techsmith.com/jing.html'
 
-  link 'Jing.app'
+  app 'Jing.app'
 end

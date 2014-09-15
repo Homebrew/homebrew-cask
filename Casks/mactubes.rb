@@ -5,5 +5,5 @@ class Mactubes < Cask
   url "http://macapps.sakura.ne.jp/mactubes/archives/MacTubes_v#{version}.zip"
   homepage 'http://macapps.sakura.ne.jp/mactubes/index_en.html'
 
-  link "MacTubes_v#{version}/MacTubes.app"
+  app "MacTubes_v#{version}/MacTubes.app"
 end

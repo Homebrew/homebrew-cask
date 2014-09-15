@@ -5,5 +5,5 @@ class BonjourBrowser < Cask
   url 'http://www.tildesoft.com/files/BonjourBrowser.dmg'
   homepage 'http://www.tildesoft.com/'
 
-  link 'Bonjour Browser.app'
+  app 'Bonjour Browser.app'
 end

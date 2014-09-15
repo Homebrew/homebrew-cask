@@ -6,5 +6,5 @@ class Trailer < Cask
   appcast 'http://dev.housetrip.com/trailer/appcast.xml'
   homepage 'http://dev.housetrip.com/trailer/'
 
-  link 'Trailer.app'
+  app 'Trailer.app'
 end

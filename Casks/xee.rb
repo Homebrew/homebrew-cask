@@ -6,5 +6,5 @@ class Xee < Cask
   url 'http://wakaba.c3.cx/releases/mac/Xee3.3.dmg'
   homepage 'http://xee.c3.cx/'
 
-  link 'Xee³.app'
+  app 'Xee³.app'
 end

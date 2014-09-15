@@ -6,5 +6,5 @@ class Minitube < Cask
   appcast 'http://flavio.tordini.org/minitube-ws/appcast.xml'
   homepage 'http://flavio.tordini.org/minitube'
 
-  link 'Minitube.app'
+  app 'Minitube.app'
 end

@@ -5,5 +5,5 @@ class Quicksilver < Cask
   url 'http://cdn.qsapp.com/plugins/files/com.blacktree.Quicksilver__16391.dmg'
   homepage 'http://qsapp.com/'
 
-  link 'Quicksilver.app'
+  app 'Quicksilver.app'
 end

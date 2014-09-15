@@ -5,5 +5,5 @@ class Servus < Cask
   url 'https://servus.io/download'
   homepage 'https://servus.io/'
 
-  link 'Servus.app'
+  app 'Servus.app'
 end

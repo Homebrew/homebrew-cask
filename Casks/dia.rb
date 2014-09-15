@@ -5,5 +5,5 @@ class Dia < Cask
   url 'https://downloads.sourceforge.net/dia-installer/dia/0.97.2/Dia-0.97.2-7.dmg'
   homepage 'http://dia-installer.de/'
 
-  link 'Dia.app'
+  app 'Dia.app'
 end

@@ -5,7 +5,7 @@ class Rubymine < Cask
   url 'http://download-cf.jetbrains.com/ruby/RubyMine-6.3.3.dmg'
   homepage 'http://www.jetbrains.com/ruby/'
 
-  link 'RubyMine.app'
+  app 'RubyMine.app'
 
   postflight do
     system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/RubyMine.app/Contents/Info.plist"

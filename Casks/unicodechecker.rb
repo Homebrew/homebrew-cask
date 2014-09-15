@@ -5,5 +5,5 @@ class Unicodechecker < Cask
   url 'http://earthlingsoft.net/UnicodeChecker/UnicodeChecker.dmg'
   homepage 'http://earthlingsoft.net/UnicodeChecker/'
 
-  link 'UnicodeChecker.app'
+  app 'UnicodeChecker.app'
 end

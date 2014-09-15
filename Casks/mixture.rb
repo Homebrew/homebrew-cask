@@ -6,5 +6,5 @@ class Mixture < Cask
   appcast 'https://s3.amazonaws.com/mixture-mixed-app/mac/appcast.xml'
   homepage 'http://mixture.io/'
 
-  link 'Mixture.app'
+  app 'Mixture.app'
 end

@@ -5,5 +5,5 @@ class Bluegriffon < Cask
   url 'http://bluegriffon.org/freshmeat/1.7.2/bluegriffon-1.7.2.mac.dmg'
   homepage 'http://bluegriffon.org'
 
-  link 'BlueGriffon.app'
+  app 'BlueGriffon.app'
 end

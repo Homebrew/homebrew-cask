@@ -5,5 +5,5 @@ class Arduino < Cask
   url 'https://arduino.googlecode.com/files/arduino-1.0.5-macosx.zip'
   homepage 'http://arduino.cc/'
 
-  link 'Arduino.app'
+  app 'Arduino.app'
 end

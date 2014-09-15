@@ -5,7 +5,7 @@ class P4merge < Cask
   url 'http://filehost.perforce.com/perforce/r14.1/bin.macosx106x86_64/P4V.dmg'
   homepage 'http://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools'
 
-  link 'p4merge.app'
+  app 'p4merge.app'
   caveats <<-EOS.undent
     You can set up git to use p4merge as a merge tool by following the instructions available here:
       https://gist.github.com/henrik242/1510148

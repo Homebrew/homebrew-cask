@@ -5,5 +5,5 @@ class Backtobed < Cask
   url 'http://backtobed.dadiugames.dk/backtobed_osx.zip'
   homepage 'http://backtobed.dadiugames.dk/'
 
-  link 'BackToBed.app'
+  app 'BackToBed.app'
 end

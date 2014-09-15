@@ -5,5 +5,5 @@ class Xbmc < Cask
   url 'http://mirrors.xbmc.org/releases/osx/x86_64/xbmc-13.1-Gotham-x86_64.dmg'
   homepage 'http://xbmc.org/'
 
-  link 'XBMC.app'
+  app 'XBMC.app'
 end

@@ -6,5 +6,5 @@ class TheEscapersFlux < Cask
   appcast 'http://www.theescapers.com/flux/flux.xml'
   homepage 'http://www.theescapers.com/flux/'
 
-  link 'Flux.app'
+  app 'Flux.app'
 end

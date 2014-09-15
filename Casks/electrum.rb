@@ -5,5 +5,5 @@ class Electrum < Cask
   url 'https://download.electrum.org/electrum-1.9.8.dmg'
   homepage 'http://electrum.org/'
 
-  link 'Electrum.app'
+  app 'Electrum.app'
 end

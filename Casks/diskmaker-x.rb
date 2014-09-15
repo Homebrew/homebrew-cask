@@ -5,5 +5,5 @@ class DiskmakerX < Cask
   url 'http://liondiskmaker.com/downloads/DiskMakerX.dmg'
   homepage 'http://diskmakerx.com/'
 
-  link 'DiskMaker X.app'
+  app 'DiskMaker X.app'
 end

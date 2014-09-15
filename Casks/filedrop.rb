@@ -5,5 +5,5 @@ class Filedrop < Cask
   url 'https://commondatastorage.googleapis.com/filedropme/Filedrop.dmg'
   homepage 'http://www.filedropme.com/'
 
-  link 'Filedrop.app'
+  app 'Filedrop.app'
 end

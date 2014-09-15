@@ -5,5 +5,5 @@ class Midikeys < Cask
   url 'http://www.manyetas.com/creed/MidiKeys_1.8.zip'
   homepage 'http://www.manyetas.com/creed/midikeys.html'
 
-  link 'MidiKeys/MidiKeys.app'
+  app 'MidiKeys/MidiKeys.app'
 end

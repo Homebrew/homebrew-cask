@@ -6,5 +6,5 @@ class Pianopub < Cask
   appcast 'http://dev.kunugiken.com/appcasts/Pianopub.xml'
   homepage 'http://dev.kunugiken.com/Pianopub/'
 
-  link 'Pianopub.app'
+  app 'Pianopub.app'
 end

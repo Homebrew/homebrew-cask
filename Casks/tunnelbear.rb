@@ -6,5 +6,5 @@ class Tunnelbear < Cask
   appcast 'https://s3.amazonaws.com/tunnelbear/downloads/mac/appcast.xml'
   homepage 'https://www.tunnelbear.com/'
 
-  link 'TunnelBear.app'
+  app 'TunnelBear.app'
 end

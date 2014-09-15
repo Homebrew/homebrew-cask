@@ -6,5 +6,5 @@ class Dfontsplitter < Cask
   appcast 'http://apps.upfold.org.uk/appupdate/dfontsplitter.xml'
   homepage 'http://peter.upfold.org.uk/projects/dfontsplitter'
 
-  link 'DfontSplitter.app'
+  app 'DfontSplitter.app'
 end

@@ -6,5 +6,5 @@ class HandsOff < Cask
   appcast 'http://www.metakine.com/sparkle/handsoff2/checkupdate.php'
   homepage 'http://www.metakine.com/products/handsoff/'
 
-  link 'Hands Off!.app'
+  app 'Hands Off!.app'
 end

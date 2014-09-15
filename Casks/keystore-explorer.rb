@@ -5,5 +5,5 @@ class KeystoreExplorer < Cask
   url 'https://downloads.sourceforge.net/project/keystore-explorer/KSE%205.0.1/kse-501.dmg?r=&ts=1393234297&use_mirror=heanet'
   homepage 'http://keystore-explorer.sourceforge.net/index.php'
 
-  link 'KeyStore Explorer 5.0.1.app'
+  app 'KeyStore Explorer 5.0.1.app'
 end

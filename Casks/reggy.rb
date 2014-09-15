@@ -6,5 +6,5 @@ class Reggy < Cask
   appcast 'http://reggyapp.com/appcast.xml'
   homepage 'http://reggyapp.com/'
 
-  link 'Reggy.app'
+  app 'Reggy.app'
 end

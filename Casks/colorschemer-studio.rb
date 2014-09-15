@@ -6,5 +6,5 @@ class ColorschemerStudio < Cask
   appcast 'http://www.colorschemer.com/appcast/studio2_mac.xml'
   homepage 'http://www.colorschemer.com'
 
-  link 'ColorSchemer Studio 2.app'
+  app 'ColorSchemer Studio 2.app'
 end

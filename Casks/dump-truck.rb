@@ -5,5 +5,5 @@ class DumpTruck < Cask
   url 'https://www.goldenfrog.com/downloads/dumptruck/dumptruck.dmg'
   homepage 'http://www.goldenfrog.com/dumptruck'
 
-  link 'Dump Truck.app'
+  app 'Dump Truck.app'
 end

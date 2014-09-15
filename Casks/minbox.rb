@@ -6,5 +6,5 @@ class Minbox < Cask
   appcast 'https://minbox.com/updates.xml'
   homepage 'https://minbox.com'
 
-  link 'Minbox.app'
+  app 'Minbox.app'
 end

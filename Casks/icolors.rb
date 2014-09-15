@@ -5,5 +5,5 @@ class Icolors < Cask
   url 'https://www.fadingred.com/files/icolors/icolors_3.0.zip'
   homepage 'http://www.fadingred.com/icolors/'
 
-  link 'iColors.app'
+  app 'iColors.app'
 end

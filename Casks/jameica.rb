@@ -5,5 +5,5 @@ class Jameica < Cask
   url 'http://www.willuhn.de/products/jameica/releases/current/jameica/jameica-macos64.zip'
   homepage 'http://www.willuhn.de/products/jameica/'
 
-  link 'Jameica.app'
+  app 'Jameica.app'
 end

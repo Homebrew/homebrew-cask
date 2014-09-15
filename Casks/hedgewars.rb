@@ -6,5 +6,5 @@ class Hedgewars < Cask
   appcast 'http://www.hedgewars.org/download/appcast.xml'
   homepage 'http://hedgewars.org'
 
-  link 'Hedgewars.app'
+  app 'Hedgewars.app'
 end

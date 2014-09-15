@@ -6,5 +6,5 @@ class Beamer < Cask
   appcast 'http://beamer-app.com/sparkle-appcast.xml'
   homepage 'http://beamer-app.com'
 
-  link 'Beamer.app'
+  app 'Beamer.app'
 end

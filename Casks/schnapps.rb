@@ -5,5 +5,5 @@ class Schnapps < Cask
   url "http://d15xn61otjv90c.cloudfront.net/download/Schnapps_v#{version}.zip"
   homepage 'http://schnappsformac.com/'
 
-  link 'Schnapps.app'
+  app 'Schnapps.app'
 end

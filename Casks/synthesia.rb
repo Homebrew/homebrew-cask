@@ -5,6 +5,6 @@ class Synthesia < Cask
   url 'https://synthesia.s3.amazonaws.com/files/Synthesia-9.0.dmg'
   homepage 'http://www.synthesiagame.com'
 
-  link 'Synthesia.app'
-  link 'SynthesiaConfig.app'
+  app 'Synthesia.app'
+  app 'SynthesiaConfig.app'
 end

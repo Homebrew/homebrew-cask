@@ -6,6 +6,6 @@ class GitxL < Cask
   appcast 'http://gitx.laullon.com/appcast.xml'
   homepage 'http://gitx.laullon.com/'
 
-  link 'GitX.app'
+  app 'GitX.app'
   binary 'GitX.app/Contents/Resources/gitx'
 end

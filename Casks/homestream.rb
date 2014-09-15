@@ -5,6 +5,6 @@ class Homestream < Cask
   url 'http://homestreamdownload.sony-europe.com/homestream-1.1-osx.tar.gz'
   homepage 'http://www.sony.co.uk/hub/1237485339460'
 
-  link 'Homestream.app'
-  link 'Homestream-Console.app'
+  app 'Homestream.app'
+  app 'Homestream-Console.app'
 end

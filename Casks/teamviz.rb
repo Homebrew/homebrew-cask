@@ -5,5 +5,5 @@ class Teamviz < Cask
   url 'http://www.teamviz.com/d/TeamViz.3.2.dmg'
   homepage 'http://www.teamviz.com/'
 
-  link 'TeamViz.app'
+  app 'TeamViz.app'
 end

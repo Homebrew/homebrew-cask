@@ -6,5 +6,5 @@ class All2mp3 < Cask
   appcast 'http://www.tresrrr.com/All2MP3/Appcast.xml'
   homepage 'http://www.tresrrr.com/All2MP3/ENGLISH.html'
 
-  link 'All2MP3.app'
+  app 'All2MP3.app'
 end

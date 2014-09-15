@@ -5,5 +5,5 @@ class Mplayerx < Cask
   url 'https://downloads.sourceforge.net/project/mplayerx-osx/MPlayerX-1.0.22.1.zip'
   homepage 'http://mplayerx.org/'
 
-  link 'MPlayerX.app'
+  app 'MPlayerX.app'
 end

@@ -5,5 +5,5 @@ class Voodoopad < Cask
   url 'https://plausible.coop/static/download/VoodooPad.zip'
   homepage 'https://plausible.coop/voodoopad/'
 
-  link 'VoodooPad.app'
+  app 'VoodooPad.app'
 end

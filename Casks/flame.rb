@@ -5,5 +5,5 @@ class Flame < Cask
   url 'http://husk.org/apps/Flame-0.2.1-universal.zip'
   homepage 'http://husk.org/apps/flame/'
 
-  link 'Flame.app'
+  app 'Flame.app'
 end

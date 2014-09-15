@@ -5,5 +5,5 @@ class JdGui < Cask
   url 'http://jd.benow.ca/jd-gui/downloads/jd-gui-0.3.5.osx.i686.dmg'
   homepage 'http://jd.benow.ca/'
 
-  link 'JD-GUI.app'
+  app 'JD-GUI.app'
 end

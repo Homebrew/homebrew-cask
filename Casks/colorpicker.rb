@@ -6,5 +6,5 @@ class Colorpicker < Cask
   appcast 'http://www.northernspysoftware.com/feed/colorpicker.xml'
   homepage 'http://www.northernspysoftware.com/software/colorpicker'
 
-  link 'ColorPicker.app'
+  app 'ColorPicker.app'
 end

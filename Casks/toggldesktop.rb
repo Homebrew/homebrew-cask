@@ -5,5 +5,5 @@ class Toggldesktop < Cask
   url 'https://www.toggl.com/api/v8/installer?app=td&platform=darwin&channel=stable'
   homepage 'https://www.toggl.com'
 
-  link 'TogglDesktop.app'
+  app 'TogglDesktop.app'
 end

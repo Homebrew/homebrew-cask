@@ -6,5 +6,5 @@ class KeyCodes < Cask
   appcast 'http://manytricks.com/keycodes/appcast.xml'
   homepage 'http://manytricks.com/keycodes/'
 
-  link 'Key Codes.app'
+  app 'Key Codes.app'
 end

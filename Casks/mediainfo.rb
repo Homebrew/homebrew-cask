@@ -5,5 +5,5 @@ class Mediainfo < Cask
   url 'https://mediaarea.net/download/binary/mediainfo-gui/0.7.66/MediaInfo_GUI_0.7.66_Mac.dmg'
   homepage 'http://mediaarea.net/en/MediaInfo'
 
-  link 'MediaInfo.app'
+  app 'MediaInfo.app'
 end

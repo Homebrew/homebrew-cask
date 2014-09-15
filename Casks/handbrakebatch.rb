@@ -6,5 +6,5 @@ class Handbrakebatch < Cask
   appcast 'https://www.osomac.com/appcasts/handbrakebatch/HandBrakeBatch.xml'
   homepage 'http://www.osomac.com/apps/osx/handbrake-batch/'
 
-  link 'HandBrakeBatch.app'
+  app 'HandBrakeBatch.app'
 end

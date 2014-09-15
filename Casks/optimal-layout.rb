@@ -6,5 +6,5 @@ class OptimalLayout < Cask
   appcast 'http://most-advantageous.com/sparkle/OL-AppCast.cfm'
   homepage 'http://most-advantageous.com/optimal-layout/'
 
-  link 'Optimal Layout.app'
+  app 'Optimal Layout.app'
 end

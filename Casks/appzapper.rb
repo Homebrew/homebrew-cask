@@ -6,5 +6,5 @@ class Appzapper < Cask
   appcast 'http://www.appzapper.com/az2appcast.xml'
   homepage 'http://www.appzapper.com/'
 
-  link 'AppZapper.app'
+  app 'AppZapper.app'
 end

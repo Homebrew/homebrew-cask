@@ -5,5 +5,5 @@ class Utopia < Cask
   url 'http://utopiadocs.com/files/Utopia-2.4.2-Mac.dmg'
   homepage 'http://utopiadocs.com/'
 
-  link 'Utopia.app'
+  app 'Utopia.app'
 end

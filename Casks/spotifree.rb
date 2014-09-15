@@ -6,5 +6,5 @@ class Spotifree < Cask
   appcast 'http://spotifree.gordinskiy.com/appcast.xml'
   homepage 'http://spotifree.gordinskiy.com'
 
-  link 'Spotifree.app'
+  app 'Spotifree.app'
 end

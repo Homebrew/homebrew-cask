@@ -5,5 +5,5 @@ class BeaconScanner < Cask
   url 'https://github.com/mlwelles/BeaconScanner/releases/download/1.1.5/BeaconScanner.zip'
   homepage 'https://github.com/mlwelles/BeaconScanner/'
 
-  link 'Beacon Scanner.app'
+  app 'Beacon Scanner.app'
 end

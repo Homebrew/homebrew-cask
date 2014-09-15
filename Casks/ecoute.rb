@@ -6,5 +6,5 @@ class Ecoute < Cask
   appcast 'http://www.eagle-of-liberty.com/ecouteosx/builds/appcast.xml'
   homepage 'http://pixiapps.com/ecouteosx/'
 
-  link 'Ecoute.app'
+  app 'Ecoute.app'
 end

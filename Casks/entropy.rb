@@ -6,5 +6,5 @@ class Entropy < Cask
   appcast 'http://hyperion.eigenlogik.com/appcast/feed/entropy/'
   homepage 'http://www.eigenlogik.com/entropy/'
 
-  link 'Entropy.app'
+  app 'Entropy.app'
 end

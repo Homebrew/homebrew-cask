@@ -6,5 +6,5 @@ class SparkInspector < Cask
   appcast 'http://sparkinspector.com/sparkle/feed.xml'
   homepage 'http://sparkinspector.com/'
 
-  link 'Spark Inspector.app'
+  app 'Spark Inspector.app'
 end

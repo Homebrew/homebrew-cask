@@ -5,7 +5,7 @@ class Filebot < Cask
   homepage 'http://www.filebot.net/'
   url "https://downloads.sourceforge.net/project/filebot/filebot/FileBot_#{version}/FileBot_#{version}.app.tar.gz"
 
-  link 'FileBot.app'
+  app 'FileBot.app'
   binary 'FileBot.app/Contents/MacOS/filebot.sh', :target => 'filebot'
   caveats 'FileBot requires Java 8. Run `java -version` to verify.'
 end

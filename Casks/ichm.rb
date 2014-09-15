@@ -6,5 +6,5 @@ class Ichm < Cask
   appcast 'http://www.robinlu.com/ichm/release.xml'
   homepage 'https://code.google.com/p/ichm/'
 
-  link 'iChm.app'
+  app 'iChm.app'
 end

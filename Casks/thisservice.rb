@@ -6,5 +6,5 @@ class Thisservice < Cask
   appcast 'http://wafflesoftware.net/thisservice/sparkle/sparkle.xml'
   homepage 'http://wafflesoftware.net/thisservice/'
 
-  link 'ThisService.app'
+  app 'ThisService.app'
 end

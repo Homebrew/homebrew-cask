@@ -6,5 +6,5 @@ class Cloudytabs < Cask
   appcast 'http://joshparnham.com/projects/cloudytabs/appcast.xml'
   homepage 'https://github.com/josh-/CloudyTabs/'
 
-  link 'CloudyTabs.app'
+  app 'CloudyTabs.app'
 end

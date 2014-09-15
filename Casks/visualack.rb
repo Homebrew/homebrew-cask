@@ -6,5 +6,5 @@ class Visualack < Cask
   appcast 'https://kjkpub.s3.amazonaws.com/vack/appcast.xml'
   homepage 'http://blog.kowalczyk.info/software/vack/'
 
-  link 'VisualAck.app'
+  app 'VisualAck.app'
 end

@@ -5,5 +5,5 @@ class Dispcalgui < Cask
   url 'http://dispcalgui.hoech.net/download/dispcalGUI.dmg'
   homepage 'http://dispcalgui.hoech.net'
 
-  link 'dispcalGUI.app'
+  app 'dispcalGUI.app'
 end

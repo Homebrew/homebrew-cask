@@ -6,5 +6,5 @@ class Tower < Cask
   appcast 'https://updates.fournova.com/updates/tower2-mac/stable'
   homepage 'http://www.git-tower.com/'
 
-  link 'Tower.app'
+  app 'Tower.app'
 end

@@ -6,5 +6,5 @@ class DebtQuencher < Cask
   appcast 'http://nothirst.com/feeds/DebtQuencherAppcast.xml'
   homepage 'http://nothirst.com/debtquencher/'
 
-  link 'Debt Quencher.app'
+  app 'Debt Quencher.app'
 end

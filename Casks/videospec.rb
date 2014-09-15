@@ -6,5 +6,5 @@ class Videospec < Cask
   appcast 'http://videospec.free.fr/release/videospec.xml'
   homepage 'http://videospec.free.fr/english/'
 
-  link 'VideoSpec.app'
+  app 'VideoSpec.app'
 end

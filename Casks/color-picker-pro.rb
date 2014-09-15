@@ -6,5 +6,5 @@ class ColorPickerPro < Cask
   appcast 'http://fructivity.s3.amazonaws.com/ColorPickerPro/Appcast.xml'
   homepage 'https://github.com/oscardelben/Color-Picker-Pro'
 
-  link 'Color Picker Pro.app'
+  app 'Color Picker Pro.app'
 end

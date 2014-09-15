@@ -5,6 +5,6 @@ class Yacreader < Cask
   url 'https://bitbucket.org/luisangelsm/yacreader/downloads/YACReader-7.1.0-MacOSX-Intel.dmg'
   homepage 'http://www.yacreader.com'
 
-  link 'YACReader.app'
-  link 'YACReaderLibrary.app'
+  app 'YACReader.app'
+  app 'YACReaderLibrary.app'
 end

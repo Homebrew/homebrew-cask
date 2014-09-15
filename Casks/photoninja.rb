@@ -5,5 +5,5 @@ class Photoninja < Cask
   url 'https://picturecode.cachefly.net/photoninja/downloads/Install_PhotoNinja_1.2.1.dmg'
   homepage 'http://www.picturecode.com/index.php'
 
-  link 'PhotoNinja.app'
+  app 'PhotoNinja.app'
 end

@@ -5,5 +5,5 @@ class Visualvm < Cask
   url 'https://java.net/downloads/visualvm/release138/VisualVM_138.dmg'
   homepage 'http://visualvm.java.net'
 
-  link 'VisualVM.app'
+  app 'VisualVM.app'
 end

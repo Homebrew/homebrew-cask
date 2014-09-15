@@ -6,5 +6,5 @@ class VitaminR < Cask
   appcast 'http://www.publicspace.net/app/vitamin2.xml'
   homepage 'http://www.publicspace.net/Vitamin-R/'
 
-  link 'Vitamin-R 2.app'
+  app 'Vitamin-R 2.app'
 end

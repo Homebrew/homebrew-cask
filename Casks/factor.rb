@@ -5,5 +5,5 @@ class Factor < Cask
   url 'http://downloads.factorcode.org/releases/0.96/factor-macosx-x86-64-0.96.dmg'
   homepage 'http://factorcode.org/'
 
-  link 'factor/Factor.app'
+  app 'factor/Factor.app'
 end

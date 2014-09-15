@@ -6,7 +6,7 @@ class Fantastical < Cask
   appcast 'https://flexibits.com/fantastical/appcast.php'
   homepage 'http://flexibits.com/fantastical'
 
-  link 'Fantastical.app'
+  app 'Fantastical.app'
 
   postflight do
     # Don't ask to move the app bundle to /Applications

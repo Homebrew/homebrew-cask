@@ -5,5 +5,5 @@ class FramerStudio < Cask
   url 'http://studio.update.framerjs.com/static/downloads/Framer%20Studio-1.0.156.tar.gz'
   homepage 'http://framerjs.com/'
 
-  link 'Framer Studio.app'
+  app 'Framer Studio.app'
 end

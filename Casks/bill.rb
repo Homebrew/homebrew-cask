@@ -5,5 +5,5 @@ class Bill < Cask
   url 'http://myownapp.com/downloads/Bill.zip'
   homepage 'http://billtheapp.com/'
 
-  link 'Bill.app'
+  app 'Bill.app'
 end

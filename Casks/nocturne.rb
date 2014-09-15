@@ -5,5 +5,5 @@ class Nocturne < Cask
   url 'https://blacktree-nocturne.googlecode.com/files/Nocturne.2.0.0.zip'
   homepage 'http://code.google.com/p/blacktree-nocturne/'
 
-  link 'Nocturne.app'
+  app 'Nocturne.app'
 end

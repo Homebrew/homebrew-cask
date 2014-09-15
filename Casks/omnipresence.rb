@@ -5,5 +5,5 @@ class Omnipresence < Cask
   url 'http://downloads.omnigroup.com/software/MacOSX/10.8/OmniPresence-1.1.dmg'
   homepage 'http://www.omnigroup.com/omnipresence'
 
-  link 'OmniPresence.app'
+  app 'OmniPresence.app'
 end

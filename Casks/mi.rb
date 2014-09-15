@@ -5,5 +5,5 @@ class Mi < Cask
   url 'http://www.mimikaki.net/download/mi2.1.12r3.dmg'
   homepage 'http://www.mimikaki.net/'
 
-  link 'mi.app'
+  app 'mi.app'
 end

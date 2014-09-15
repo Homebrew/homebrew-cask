@@ -5,5 +5,5 @@ class Litecoin < Cask
   url "https://download.litecoin.org/litecoin-#{version}/macosx/Litecoin-Qt-#{version}.dmg"
   homepage 'https://litecoin.org/'
 
-  link 'Litecoin-Qt.app'
+  app 'Litecoin-Qt.app'
 end

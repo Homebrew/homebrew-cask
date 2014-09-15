@@ -5,5 +5,5 @@ class Nide < Cask
   url 'https://github.com/downloads/Coreh/nide/nide-v0.2.0.dmg'
   homepage 'http://coreh.github.io/nide/'
 
-  link 'Nide.app'
+  app 'Nide.app'
 end

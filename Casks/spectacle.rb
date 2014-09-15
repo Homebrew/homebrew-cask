@@ -6,5 +6,5 @@ class Spectacle < Cask
   appcast 'http://spectacleapp.com/updates/appcast.xml'
   homepage 'http://spectacleapp.com/'
 
-  link 'Spectacle.app'
+  app 'Spectacle.app'
 end

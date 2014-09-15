@@ -5,5 +5,5 @@ class Gitbook < Cask
   url 'https://www.gitbook.io/editor/download'
   homepage 'https://www.gitbook.io/'
 
-  link 'GitBook.app'
+  app 'GitBook.app'
 end

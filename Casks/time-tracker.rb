@@ -6,5 +6,5 @@ class TimeTracker < Cask
   appcast 'http://time-tracker-mac.googlecode.com/svn/appcast/timetracker-test.xml'
   homepage 'https://code.google.com/p/time-tracker-mac'
 
-  link 'Time Tracker.app'
+  app 'Time Tracker.app'
 end

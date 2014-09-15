@@ -6,5 +6,5 @@ class Texshop < Cask
   appcast 'http://pages.uoregon.edu/koch/texshop/texshop-64/texshopappcast.xml'
   homepage 'http://pages.uoregon.edu/koch/texshop'
 
-  link 'TexShop.app'
+  app 'TexShop.app'
 end

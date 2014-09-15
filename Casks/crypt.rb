@@ -5,5 +5,5 @@ class Crypt < Cask
   url 'http://voluntary.net.s3.amazonaws.com/Crypt3_20100429.zip'
   homepage 'http://voluntary.net/crypt/'
 
-  link 'Crypt3.app'
+  app 'Crypt3.app'
 end

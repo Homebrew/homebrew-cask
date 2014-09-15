@@ -5,5 +5,5 @@ class Noisy < Cask
   url 'https://github.com/downloads/jonshea/Noisy/Noisy.zip'
   homepage 'https://github.com/jonshea/Noisy'
 
-  link 'Noisy.app'
+  app 'Noisy.app'
 end

@@ -5,5 +5,5 @@ class Qqbrowser < Cask
   url 'http://dldir1.qq.com/invc/tt/QQBrowser_2160.dmg'
   homepage 'http://browser.qq.com/mac/'
 
-  link 'QQBrowser.app'
+  app 'QQBrowser.app'
 end

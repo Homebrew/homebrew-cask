@@ -6,5 +6,5 @@ class JenkinsMenu < Cask
   appcast 'http://qvacua.com/jenkinsmenu/appcast.xml'
   homepage 'http://qvacua.com'
 
-  link 'Jenkins Menu.app'
+  app 'Jenkins Menu.app'
 end

@@ -6,5 +6,5 @@ class Peepopen < Cask
   appcast 'https://peepcode.com/system/apps/PeepOpen/appcast.xml'
   homepage 'http://topfunky.github.io/PeepOpen/'
 
-  link 'PeepOpen.app'
+  app 'PeepOpen.app'
 end

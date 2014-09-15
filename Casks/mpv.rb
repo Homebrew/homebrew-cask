@@ -5,7 +5,7 @@ class Mpv < Cask
   url 'https://github.com/mpv-player/mpv/releases/download/v0.5.1/mpv_0.5.1_mac.tar.bz2'
   homepage 'http://mpv.io/'
 
-  link 'mpv.app'
+  app 'mpv.app'
   binary 'mpv.app/Contents/MacOS/mpv'
   caveats do
     files_in_usr_local

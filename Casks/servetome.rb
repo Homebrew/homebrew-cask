@@ -6,5 +6,5 @@ class Servetome < Cask
   appcast 'http://zqueue.com/servetome/stm3_mac_appcast.xml'
   homepage 'http://zqueue.com/servetome/'
 
-  link 'ServeToMe.app'
+  app 'ServeToMe.app'
 end

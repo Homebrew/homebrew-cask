@@ -5,5 +5,5 @@ class Svnx < Cask
   url 'https://svnx.googlecode.com/files/svnX%201.3.4.dmg'
   homepage 'https://code.google.com/p/svnx/'
 
-  link 'svnX.app'
+  app 'svnX.app'
 end

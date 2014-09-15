@@ -5,5 +5,5 @@ class KomodoEdit < Cask
   url 'http://downloads.activestate.com/Komodo/releases/8.5.4/Komodo-Edit-8.5.4-14424-macosx-x86_64.dmg'
   homepage 'http://komodoide.com/komodo-edit'
 
-  link 'Komodo Edit 8.app'
+  app 'Komodo Edit 8.app'
 end

@@ -5,5 +5,5 @@ class Cloud < Cask
   url 'https://s3.amazonaws.com/downloads.getcloudapp.com/mac/CloudApp-3.0.0.zip'
   homepage 'http://getcloudapp.com/'
 
-  link 'Cloud.app'
+  app 'Cloud.app'
 end

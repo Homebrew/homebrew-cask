@@ -5,5 +5,5 @@ class Hbuilder < Cask
   url 'http://download.dcloud.net.cn/HBuilder.macosx.zip'
   homepage 'http://dcloud.io/'
 
-  link 'HBuilder.app'
+  app 'HBuilder.app'
 end

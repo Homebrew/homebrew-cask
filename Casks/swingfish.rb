@@ -6,5 +6,5 @@ class Swingfish < Cask
   appcast 'http://cloakedcode.com/apps/swingfish/profileInfo.php'
   homepage 'http://cloakedcode.com/swingfish.html'
 
-  link 'SwingFish.app'
+  app 'SwingFish.app'
 end

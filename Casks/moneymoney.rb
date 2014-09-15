@@ -6,5 +6,5 @@ class Moneymoney < Cask
   appcast 'http://moneymoney-app.com/update/appcast.xml'
   homepage 'http://moneymoney-app.com/'
 
-  link 'MoneyMoney.app'
+  app 'MoneyMoney.app'
 end

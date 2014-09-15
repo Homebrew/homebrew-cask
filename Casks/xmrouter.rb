@@ -5,5 +5,5 @@ class Xmrouter < Cask
   url 'http://bigota.miwifi.com/xiaoqiang/client/xqmac_client.dmg'
   homepage 'http://www1.miwifi.com/'
 
-  link 'XMRouter.app'
+  app 'XMRouter.app'
 end

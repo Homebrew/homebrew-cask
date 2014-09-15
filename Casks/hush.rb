@@ -6,5 +6,5 @@ class Hush < Cask
   homepage 'http://coffitivity.com/hush/'
 
   nested_container 'Hush.dmg'
-  link 'Hush.app'
+  app 'Hush.app'
 end

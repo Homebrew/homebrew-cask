@@ -5,5 +5,5 @@ class BoxSync < Cask
   url 'https://box.com/sync4mac'
   homepage 'https://sites.box.com/sync4/'
 
-  link 'Box Sync.app'
+  app 'Box Sync.app'
 end

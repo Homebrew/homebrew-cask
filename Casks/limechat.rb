@@ -13,5 +13,5 @@ class Limechat < Cask
   appcast 'http://limechat.net/mac/appcast.xml'
   homepage 'http://limechat.net/mac/'
 
-  link 'LimeChat.app'
+  app 'LimeChat.app'
 end

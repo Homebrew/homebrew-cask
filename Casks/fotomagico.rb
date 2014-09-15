@@ -6,5 +6,5 @@ class Fotomagico < Cask
   appcast 'https://sparkle.boinx.com/appcast.lasso'
   homepage 'http://www.boinx.com/fotomagico/'
 
-  link 'FotoMagico.app'
+  app 'FotoMagico.app'
 end

@@ -5,5 +5,5 @@ class MendeleyDesktop < Cask
   url "http://desktop-download.mendeley.com/download/Mendeley-Desktop-#{version}-OSX-Universal.dmg"
   homepage 'http://www.mendeley.com/'
 
-  link 'Mendeley Desktop.app'
+  app 'Mendeley Desktop.app'
 end

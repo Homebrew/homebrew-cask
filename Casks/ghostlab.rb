@@ -6,5 +6,5 @@ class Ghostlab < Cask
   appcast 'http://awesome.vanamco.com/update/ghostlab-cast.xml'
   homepage 'http://vanamco.com/ghostlab/'
 
-  link 'Ghostlab.app'
+  app 'Ghostlab.app'
 end

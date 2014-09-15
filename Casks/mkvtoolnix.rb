@@ -6,5 +6,5 @@ class Mkvtoolnix < Cask
 	:referer => 'http://www.fosshub.com/MKVToolNix.html'
   homepage 'http://www.bunkus.org/videotools/mkvtoolnix/'
 
-  link 'Mkvtoolnix-7.1.0.app'
+  app 'Mkvtoolnix-7.1.0.app'
 end

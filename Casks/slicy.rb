@@ -6,5 +6,5 @@ class Slicy < Cask
   appcast 'http://update.macrabbit.com/slicy/1.1.3.xml'
   homepage 'http://macrabbit.com/slicy/'
 
-  link 'Slicy.app'
+  app 'Slicy.app'
 end

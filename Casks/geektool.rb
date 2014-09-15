@@ -6,5 +6,5 @@ class Geektool < Cask
   appcast 'http://dl.dropboxusercontent.com/u/1760713/appcast/appcast.xml'
   homepage 'http://projects.tynsoe.org/en/geektool/'
 
-    link 'GeekTool.app'
+    app 'GeekTool.app'
 end

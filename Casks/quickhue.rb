@@ -5,5 +5,5 @@ class Quickhue < Cask
   url 'https://github.com/danparsons/QuickHue/raw/master/QuickHue.zip'
   homepage 'https://github.com/danparsons/QuickHue'
 
-  link 'QuickHue.app'
+  app 'QuickHue.app'
 end

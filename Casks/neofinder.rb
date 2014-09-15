@@ -6,5 +6,5 @@ class Neofinder < Cask
   appcast 'http://www.wfs-apps.de/updates/neofinder-appcast-64.xml'
   homepage 'http://www.cdfinder.de'
 
-  link 'NeoFinder.app'
+  app 'NeoFinder.app'
 end

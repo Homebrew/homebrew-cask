@@ -6,5 +6,5 @@ class AmazonCloudDrive < Cask
   appcast 'https://d29x207vrinatv.cloudfront.net/Sync/Mac/20130517-2.1/CloudDriveInstallerAppcast.xml'
   homepage 'https://www.amazon.com/clouddrive'
 
-  link 'Amazon Cloud Drive.app'
+  app 'Amazon Cloud Drive.app'
 end

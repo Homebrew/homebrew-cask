@@ -5,5 +5,5 @@ class Obs < Cask
   url "https://github.com/jp9000/obs-studio/releases/download/#{version}/OBSMac-#{version}.zip"
   homepage 'http://obsproject.com/'
 
-  link 'OBS.app'
+  app 'OBS.app'
 end

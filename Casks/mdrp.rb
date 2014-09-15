@@ -5,5 +5,5 @@ class Mdrp < Cask
   url 'http://www.macdvdripperpro.com/download/'
   homepage 'http://www.macdvdripperpro.com/'
 
-  link 'MDRP.app'
+  app 'MDRP.app'
 end

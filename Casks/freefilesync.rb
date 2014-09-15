@@ -5,6 +5,6 @@ class Freefilesync < Cask
   url "http://www.fosshub.com/download/FreeFileSync_#{version}_Mac_OS_X_64-bit.zip", :referer => 'http://www.fosshub.com/FreeFileSync.html'
   homepage 'http://freefilesync.sourceforge.net/'
 
-  link 'FreeFileSync.app'
-  link 'RealtimeSync.app'
+  app 'FreeFileSync.app'
+  app 'RealtimeSync.app'
 end

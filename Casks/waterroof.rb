@@ -6,5 +6,5 @@ class Waterroof < Cask
   homepage 'http://www.hanynet.com/waterroof/index.html'
 
   nested_container 'WaterRoof 3.8.dmg'
-  link 'WaterRoof.app'
+  app 'WaterRoof.app'
 end

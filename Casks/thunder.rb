@@ -5,5 +5,5 @@ class Thunder < Cask
   url 'http://down.sandai.net/mac/thunder_dl2.6.5.1672_Beta.dmg'
   homepage 'http://mac.xunlei.com/'
 
-  link 'Thunder.app'
+  app 'Thunder.app'
 end

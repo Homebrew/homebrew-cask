@@ -5,5 +5,5 @@ class Archiver < Cask
   url 'https://commondatastorage.googleapis.com/incrediblebee/apps/Archiver/Archiver.zip'
   homepage 'http://archiverapp.com/'
 
-  link 'Archiver.app'
+  app 'Archiver.app'
 end

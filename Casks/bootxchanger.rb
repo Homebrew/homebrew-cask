@@ -6,5 +6,5 @@ class Bootxchanger < Cask
   appcast 'http://swupdate.namedfork.net/bootxchanger.xml'
   homepage 'http://namedfork.net/bootxchanger'
 
-  link 'BootXChanger.app'
+  app 'BootXChanger.app'
 end

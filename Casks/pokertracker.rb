@@ -5,5 +5,5 @@ class Pokertracker < Cask
   url 'http://s3-us1.ptrackupdate.com/releases/PT-Install-v4.10.6.dmg'
   homepage 'https://www.pokertracker.com'
 
-  link 'PokerTracker 4.app'
+  app 'PokerTracker 4.app'
 end

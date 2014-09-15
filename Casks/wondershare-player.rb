@@ -5,5 +5,5 @@ class WondersharePlayer < Cask
   url 'http://download.wondershare.com/mac-player_full1479.dmg'
   homepage 'http://www.wondershare.com/video-player/'
 
-  link 'Wondershare Player.app'
+  app 'Wondershare Player.app'
 end

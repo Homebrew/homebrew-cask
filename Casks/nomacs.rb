@@ -5,5 +5,5 @@ class Nomacs < Cask
   url 'https://downloads.sourceforge.net/nomacs/nomacs-1.0.0-x86_64.dmg'
   homepage 'http://www.nomacs.org/'
 
-  link 'nomacs.app'
+  app 'nomacs.app'
 end

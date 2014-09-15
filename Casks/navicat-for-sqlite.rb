@@ -5,5 +5,5 @@ class NavicatForSqlite < Cask
   url 'http://download.navicat.com/download/navicat110_sqlite_en.dmg'
   homepage 'http://www.navicat.com/products/navicat-for-sqlite'
 
-  link 'Navicat for SQLite.app'
+  app 'Navicat for SQLite.app'
 end

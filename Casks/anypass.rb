@@ -5,5 +5,5 @@ class Anypass < Cask
   url 'http://icyblaze.com/anypass/anypass_mac_1.0.zip'
   homepage 'http://icyblaze.com/anypass'
 
-  link 'Anypass.app'
+  app 'Anypass.app'
 end

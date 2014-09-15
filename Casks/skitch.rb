@@ -5,5 +5,5 @@ class Skitch < Cask
   url 'http://cdn1.evernote.com/skitch/mac/release/Skitch-2.7.2.zip'
   homepage 'http://evernote.com/skitch/'
 
-  link 'Skitch.app'
+  app 'Skitch.app'
 end

@@ -6,5 +6,5 @@ class PreferenceManager < Cask
   appcast 'http://www.digitalrebellion.com/rss/appcasts/pref_man_appcast.xml'
   homepage 'http://www.digitalrebellion.com/prefman'
 
-  link 'Preference Manager.app'
+  app 'Preference Manager.app'
 end

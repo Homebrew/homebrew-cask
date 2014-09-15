@@ -5,5 +5,5 @@ class Marble < Cask
   url 'https://files.kde.org/marble/downloads/MacOSX/Marble-1.5.0.dmg'
   homepage 'http://www.marble.kde.org'
 
-  link 'Marble.app'
+  app 'Marble.app'
 end

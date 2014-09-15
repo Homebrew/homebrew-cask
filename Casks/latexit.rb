@@ -6,5 +6,5 @@ class Latexit < Cask
   appcast 'http://pierre.chachatelier.fr/latexit/downloads/latexit-sparkle-en.rss'
   homepage 'http://www.chachatelier.fr/latexit'
 
-  link 'LaTeXiT.app'
+  app 'LaTeXiT.app'
 end

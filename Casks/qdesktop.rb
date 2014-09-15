@@ -6,5 +6,5 @@ class Qdesktop < Cask
   appcast 'http://qvacua.com/qdesktop/appcast.xml'
   homepage 'http://qvacua.com'
 
-  link 'Qdesktop.app'
+  app 'Qdesktop.app'
 end

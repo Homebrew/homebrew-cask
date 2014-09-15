@@ -5,5 +5,5 @@ class Qrq < Cask
   url 'http://fkurz.net/ham/qrq/qrq-0.3.1.dmg'
   homepage 'http://fkurz.net/ham/qrq.html'
 
-  link 'qrq.app'
+  app 'qrq.app'
 end

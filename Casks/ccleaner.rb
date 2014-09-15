@@ -5,5 +5,5 @@ class Ccleaner < Cask
   url 'http://download.piriform.com/mac/CCMacSetup108.dmg'
   homepage 'http://www.piriform.com/ccleaner'
 
-  link 'CCleaner.app'
+  app 'CCleaner.app'
 end

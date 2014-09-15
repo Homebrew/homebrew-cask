@@ -5,5 +5,5 @@ class Texstudio < Cask
   url 'https://downloads.sourceforge.net/sourceforge/texstudio/texstudio_2.7.0_osx_qt5.dmg'
   homepage 'http://texstudio.sourceforge.net/'
 
-  link 'texstudio.app'
+  app 'texstudio.app'
 end

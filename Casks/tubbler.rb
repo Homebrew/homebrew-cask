@@ -6,5 +6,5 @@ class Tubbler < Cask
   appcast 'https://ssl.webpack.de/celmaro.com/updates/tubbler/tubbler.xml'
   homepage 'http://www.celmaro.com/tubbler'
 
-  link 'Tubbler.app'
+  app 'Tubbler.app'
 end

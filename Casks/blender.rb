@@ -5,6 +5,6 @@ class Blender < Cask
   url 'http://download.blender.org/release/Blender2.71/blender-2.71-OSX_10.6-x86_64.zip'
   homepage 'http://www.blender.org/'
 
-  link 'Blender/blender.app'
-  link 'Blender/blenderplayer.app'
+  app 'Blender/blender.app'
+  app 'Blender/blenderplayer.app'
 end

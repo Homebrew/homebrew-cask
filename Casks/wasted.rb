@@ -6,5 +6,5 @@ class Wasted < Cask
   appcast 'http://wasted.werk01.de/appcast.xml'
   homepage 'http://wasted.werk01.de'
 
-  link 'Wasted.app'
+  app 'Wasted.app'
 end

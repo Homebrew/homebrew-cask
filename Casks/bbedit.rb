@@ -6,5 +6,5 @@ class Bbedit < Cask
   appcast 'https://versioncheck.barebones.com/BBEdit.xml'
   homepage 'http://www.barebones.com/products/bbedit/'
 
-  link 'BBEdit.app'
+  app 'BBEdit.app'
 end

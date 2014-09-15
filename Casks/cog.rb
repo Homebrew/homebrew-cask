@@ -6,5 +6,5 @@ class Cog < Cask
   appcast 'http://mamburu.net/cog/stable.xml'
   homepage 'http://cogx.org'
 
-  link 'Cog.app'
+  app 'Cog.app'
 end

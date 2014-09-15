@@ -6,5 +6,5 @@ class Selfcontrol < Cask
   appcast 'http://selfcontrolapp.com/SelfControlAppcast.xml'
   homepage 'http://selfcontrolapp.com/'
 
-  link 'SelfControl.app'
+  app 'SelfControl.app'
 end

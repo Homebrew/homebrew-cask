@@ -6,5 +6,5 @@ class Fake < Cask
   appcast 'http://fakeapp.com/appcast/fake.rss'
   homepage 'http://fakeapp.com/'
 
-  link 'Fake.app'
+  app 'Fake.app'
 end

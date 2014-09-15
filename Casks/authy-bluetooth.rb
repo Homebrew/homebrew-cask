@@ -5,5 +5,5 @@ class AuthyBluetooth < Cask
   url 'https://www.authy.com/authy-desktop/Authy_Bluetooth-1.3.app.zip'
   homepage 'https://www.authy.com'
 
-  link 'Authy Bluetooth.app'
+  app 'Authy Bluetooth.app'
 end

@@ -6,5 +6,5 @@ class Mavensmate < Cask
   appcast 'http://mavensconsulting.com/mavensmate/builds/appcast.xml'
   homepage 'http://mavensmate.com'
 
-  link 'MavensMate.app'
+  app 'MavensMate.app'
 end

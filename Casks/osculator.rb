@@ -5,5 +5,5 @@ class Osculator < Cask
   url 'http://dl.osculator.net/releases/osculator-2.13.1-20-g81f7dd4.dmg'
   homepage 'http://www.osculator.net'
 
-  link 'OSCulator ƒ/OSCulator.app'
+  app 'OSCulator ƒ/OSCulator.app'
 end

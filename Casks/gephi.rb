@@ -5,5 +5,5 @@ class Gephi < Cask
   url 'https://launchpad.net/gephi/0.8/0.8.2beta/+download/gephi-0.8.2-beta.dmg'
   homepage 'http://gephi.org/'
 
-  link 'Gephi.app'
+  app 'Gephi.app'
 end

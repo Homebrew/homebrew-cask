@@ -6,7 +6,7 @@ class Bartender < Cask
   appcast 'http://www.macbartender.com/updates/updates.php'
   homepage 'http://www.macbartender.com/'
 
-  link 'Bartender.app'
+  app 'Bartender.app'
 
   postflight do
     # Don't ask to move the app bundle to /Applications

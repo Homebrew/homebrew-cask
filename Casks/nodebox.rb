@@ -5,5 +5,5 @@ class Nodebox < Cask
   url 'https://secure.nodebox.net/downloads/NodeBox-3.0.39.zip'
   homepage 'http://nodebox.net/node/'
 
-  link 'NodeBox.app'
+  app 'NodeBox.app'
 end

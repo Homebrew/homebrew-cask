@@ -6,5 +6,5 @@ class GmailNotifr < Cask
   appcast 'https://s3.amazonaws.com/assets.ashchan.com/gmailnotifr/update.xml'
   homepage 'http://ashchan.com/projects/gmail-notifr'
 
-  link 'Gmail Notifr.app'
+  app 'Gmail Notifr.app'
 end

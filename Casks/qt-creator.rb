@@ -5,5 +5,5 @@ class QtCreator < Cask
   url 'https://download.qt-project.org/official_releases/qtcreator/3.1/3.1.2/qt-creator-opensource-mac-x86_64-3.1.2.dmg'
   homepage 'http://qt-project.org/'
 
-  link 'Qt Creator.app'
+  app 'Qt Creator.app'
 end

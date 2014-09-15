@@ -6,5 +6,5 @@ class Nzbvortex < Cask
   appcast 'http://www.nzbvortex.com/update/appcast.xml'
   homepage 'http://www.nzbvortex.com/'
 
-  link 'NZBVortex.app'
+  app 'NZBVortex.app'
 end

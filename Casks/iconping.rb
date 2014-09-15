@@ -5,5 +5,5 @@ class Iconping < Cask
   url 'http://antirez.com/iconping/iconping-1.02.app.dmg'
   homepage 'http://antirez.com/iconping/'
 
-  link 'iconping.app'
+  app 'iconping.app'
 end

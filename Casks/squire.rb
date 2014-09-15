@@ -6,5 +6,5 @@ class Squire < Cask
   appcast 'http://www.sylion.com/squireapp/sparkle/SquireMac/appcastMac.xml'
   homepage 'http://squireapp.com'
 
-  link 'Squire.app'
+  app 'Squire.app'
 end

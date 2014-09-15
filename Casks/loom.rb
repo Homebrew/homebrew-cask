@@ -6,5 +6,5 @@ class Loom < Cask
   appcast 'http://www.loom.com/download/macupdate_1.1.xml'
   homepage 'http://loom.com/'
 
-  link 'Loom.app'
+  app 'Loom.app'
 end

@@ -5,5 +5,5 @@ class Ibrowse < Cask
   url "http://cdn.macroplant.com/release/iBrowse-#{version}x.dmg"
   homepage 'http://www.ibrowseapp.com/'
 
-  link 'iBrowse.app'
+  app 'iBrowse.app'
 end

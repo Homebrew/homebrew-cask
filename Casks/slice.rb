@@ -5,5 +5,5 @@ class Slice < Cask
   url 'http://sliceeq.com/downloads/Slice.dmg'
   homepage 'http://sliceeq.com/'
 
-  link 'Slice.app'
+  app 'Slice.app'
 end

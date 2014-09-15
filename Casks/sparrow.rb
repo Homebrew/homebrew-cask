@@ -6,5 +6,5 @@ class Sparrow < Cask
   appcast 'http://download.sparrowmailapp.com/appcast/appcast.xml'
   homepage 'http://www.sparrowmailapp.com/'
 
-  link 'Sparrow.app'
+  app 'Sparrow.app'
 end

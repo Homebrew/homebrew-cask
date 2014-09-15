@@ -6,5 +6,5 @@ class Bootchamp < Cask
   appcast 'http://kainjow.com/updates/bootchamp.xml'
   homepage 'http://www.kainjow.com/'
 
-  link 'BootChamp.app'
+  app 'BootChamp.app'
 end

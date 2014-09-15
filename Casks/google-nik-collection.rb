@@ -5,7 +5,7 @@ class GoogleNikCollection < Cask
   url 'http://dl.google.com/dl/edgedl/photos/nikcollection-latest.dmg'
   homepage 'https://www.google.com/nikcollection/'
 
-  link 'Nik Collection.app', :target => 'Install Nik Collection.app'
+  app 'Nik Collection.app', :target => 'Install Nik Collection.app'
 
   caveats do
     manual_installer('Install Nik Collection.app')

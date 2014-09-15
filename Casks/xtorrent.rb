@@ -6,5 +6,5 @@ class Xtorrent < Cask
   appcast 'http://xtorrent.s3.amazonaws.com/appcast.xml'
   homepage 'http://www.xtorrent.com'
 
-  link 'Xtorrent.app'
+  app 'Xtorrent.app'
 end

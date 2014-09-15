@@ -5,5 +5,5 @@ class BlackLight < Cask
   url 'https://littoral.michelf.ca/apps/black-light/black-light-2.0.1.zip'
   homepage 'http://michelf.ca/projects/black-light'
 
-  link 'Black Light.app'
+  app 'Black Light.app'
 end

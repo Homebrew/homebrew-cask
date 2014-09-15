@@ -6,5 +6,5 @@ class Irip < Cask
   appcast 'https://files.thelittleappfactory.com/iRip2/appcast.xml'
   homepage 'http://thelittleappfactory.com/irip/'
 
-  link 'iRip.app'
+  app 'iRip.app'
 end

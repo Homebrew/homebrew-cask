@@ -5,5 +5,5 @@ class PokemonShowdown < Cask
   url 'http://pokemonshowdown.com/files/pokemonshowdown-mac.zip'
   homepage 'http://pokemonshowdown.com'
 
-  link 'Pokemon Showdown.app'
+  app 'Pokemon Showdown.app'
 end

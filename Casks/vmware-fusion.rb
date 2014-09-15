@@ -6,7 +6,7 @@ class VmwareFusion < Cask
   homepage 'http://www.vmware.com/products/fusion/'
 
   binary 'VMware Fusion.app/Contents/Library/vmrun'
-  link 'VMware Fusion.app'
+  app 'VMware Fusion.app'
   uninstall_preflight do
     system '/usr/bin/sudo', '-E', '--',
            '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", "#{destination_path}/VMware Fusion.app"

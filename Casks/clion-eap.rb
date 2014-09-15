@@ -5,5 +5,5 @@ class ClionEap < Cask
   url "http://download.jetbrains.com/cpp/CLion-#{version}.dmg"
   homepage 'http://www.jetbrains.com/clion/'
 
-  link 'CLion EAP.app'
+  app 'CLion EAP.app'
 end

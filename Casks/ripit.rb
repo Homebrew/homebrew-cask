@@ -6,5 +6,5 @@ class Ripit < Cask
   appcast 'https://files.thelittleappfactory.com/ripit/appcast.xml'
   homepage 'http://thelittleappfactory.com/ripit/'
 
-  link 'RipIt.app'
+  app 'RipIt.app'
 end

@@ -6,5 +6,5 @@ class Sparkle < Cask
   appcast 'http://sparkle-project.org/files/sparkletestcast.xml'
   homepage 'http://sparkle-project.org/'
 
-  link 'Sparkle Test App.app'
+  app 'Sparkle Test App.app'
 end

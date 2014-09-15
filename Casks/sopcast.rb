@@ -5,7 +5,7 @@ class Sopcast < Cask
   url 'http://download.easetuner.com/download/SopCast-1.3.5.dmg'
   homepage 'http://www.sopcast.org'
 
-  link 'SopCast.app'
+  app 'SopCast.app'
   binary 'SopCast.app/Contents/Resources/binaries/m32/sp-sc-auth'
   caveats do
     files_in_usr_local

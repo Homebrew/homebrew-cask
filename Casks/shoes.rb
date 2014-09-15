@@ -5,5 +5,5 @@ class Shoes < Cask
   url 'http://cloud.github.com/downloads/shoes/shoes/shoes-3.1.0.dmg'
   homepage 'http://shoesrb.com/'
 
-  link 'Shoes.app'
+  app 'Shoes.app'
 end

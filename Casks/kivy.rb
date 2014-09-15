@@ -5,5 +5,5 @@ class Kivy < Cask
   url 'http://kivy.org/downloads/1.8.0/Kivy-1.8.0-osx.dmg'
   homepage 'http://kivy.org'
 
-  link 'Kivy.app'
+  app 'Kivy.app'
 end

@@ -5,5 +5,5 @@ class Linkinus < Cask
   url 'http://conceited.net/downloads/Linkinus.zip'
   homepage 'http://conceited.net/products/linkinus'
 
-  link 'Linkinus.app'
+  app 'Linkinus.app'
 end

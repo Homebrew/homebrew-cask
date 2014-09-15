@@ -5,5 +5,5 @@ class Stackroom < Cask
   url 'http://www.geocities.jp/aromaticssoft/stackroom/download/stackroom_2.0b.zip'
   homepage 'http://www.geocities.jp/aromaticssoft/stackroom/index.html'
 
-  link 'Stackroom.app'
+  app 'Stackroom.app'
 end

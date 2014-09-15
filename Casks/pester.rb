@@ -6,5 +6,5 @@ class Pester < Cask
   appcast 'http://sabi.net/nriley/software/Pester/updates.xml'
   homepage 'http://sabi.net/nriley/software/index.html#pester'
 
-  link 'Pester.app'
+  app 'Pester.app'
 end

@@ -5,5 +5,5 @@ class Piezo < Cask
   url 'http://neutral.rogueamoeba.com/mirror/files/Piezo.zip'
   homepage 'http://rogueamoeba.com/piezo/'
 
-  link 'Piezo.app'
+  app 'Piezo.app'
 end

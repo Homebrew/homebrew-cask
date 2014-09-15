@@ -6,5 +6,5 @@ class Gity < Cask
   appcast 'http://gityapp.com/gity.xml'
   homepage 'http://gityapp.com/'
 
-  link 'Gity.app'
+  app 'Gity.app'
 end

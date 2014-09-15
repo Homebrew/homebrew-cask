@@ -7,5 +7,5 @@ class Menuola < Cask
   homepage 'http://www.geocom.co.nz'
 
   nested_container 'Menuola.dmg'
-  link 'Menuola.app'
+  app 'Menuola.app'
 end

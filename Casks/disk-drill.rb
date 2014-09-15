@@ -6,5 +6,5 @@ class DiskDrill < Cask
   appcast 'http://www.cleverfiles.com/releases/auto-update/dd2-newestr.xml'
   homepage 'http://www.cleverfiles.com/'
 
-  link 'Disk Drill.app'
+  app 'Disk Drill.app'
 end

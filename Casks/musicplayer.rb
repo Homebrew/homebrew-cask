@@ -5,5 +5,5 @@ class Musicplayer < Cask
   url 'http://ufd.dk/res/MusicPlayer.app.zip'
   homepage 'http://ufd.dk/musicplayer'
 
-  link 'MusicPlayer.app'
+  app 'MusicPlayer.app'
 end

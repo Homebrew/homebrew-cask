@@ -6,5 +6,5 @@ class Theremin < Cask
   appcast 'http://theremin.amd.co.at/appcastProfileInfo.php'
   homepage 'https://github.com/TheStalwart/Theremin'
 
-  link 'Theremin.app'
+  app 'Theremin.app'
 end

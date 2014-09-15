@@ -6,5 +6,5 @@ class Adium < Cask
   appcast 'http://www.adium.im/sparkle/update.php'
   homepage 'https://www.adium.im/'
 
-  link 'Adium.app'
+  app 'Adium.app'
 end

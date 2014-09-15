@@ -6,5 +6,5 @@ class Hostbuddy < Cask
   appcast 'http://shine.clickontyler.com/appcast.php?id=22'
   homepage 'http://clickontyler.com'
 
-  link 'Hostbuddy.app'
+  app 'Hostbuddy.app'
 end

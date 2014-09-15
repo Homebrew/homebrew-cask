@@ -6,5 +6,5 @@ class Mp4tools < Cask
       :referer => 'http://www.emmgunn.com/mp4tools/mp4toolsdownload.html'
   homepage 'http://www.emmgunn.com/mp4tools/mp4toolshome.html'
 
-  link "mp4tools#{version}/MP4Tools.app"
+  app "mp4tools#{version}/MP4Tools.app"
 end

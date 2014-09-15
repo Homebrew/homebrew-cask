@@ -6,5 +6,5 @@ class Rdio < Cask
   appcast 'http://www.rdio.com/media/static/desktop/mac/appcast.xml'
   homepage 'http://www.rdio.com'
 
-  link 'Rdio.app'
+  app 'Rdio.app'
 end

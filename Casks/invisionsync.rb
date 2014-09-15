@@ -5,5 +5,5 @@ class Invisionsync < Cask
   url 'http://www.invisionapp.com/app/InVisionSync.zip'
   homepage 'http://invisionapp.com/'
 
-  link 'InVisionSync.app'
+  app 'InVisionSync.app'
 end

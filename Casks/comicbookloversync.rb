@@ -5,5 +5,5 @@ class Comicbookloversync < Cask
   url 'https://www.bitcartel.com/downloads/comicbookloversync.zip'
   homepage 'http://www.bitcartel.com/comicbooklover'
 
-  link 'ComicBookLoverSync.app'
+  app 'ComicBookLoverSync.app'
 end

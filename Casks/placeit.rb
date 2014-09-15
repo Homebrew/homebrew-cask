@@ -5,5 +5,5 @@ class Placeit < Cask
   url 'http://placeit-apps.s3.amazonaws.com/Placeit-Mac.zip'
   homepage 'https://placeit.net/'
 
-  link 'Placeit.app'
+  app 'Placeit.app'
 end

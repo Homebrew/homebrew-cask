@@ -6,5 +6,5 @@ class Musictube < Cask
   appcast 'http://flavio.tordini.org/musictube-ws/appcast.xml'
   homepage 'http://flavio.tordini.org/musictube'
 
-  link 'Musictube.app'
+  app 'Musictube.app'
 end

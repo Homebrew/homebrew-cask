@@ -5,5 +5,5 @@ class Panini < Cask
   url 'https://downloads.sourceforge.net/sourceforge/pvqt/Panini-0.71.104B-mac.dmg'
   homepage 'http://sourceforge.net/projects/pvqt/'
 
-  link 'Panini.app'
+  app 'Panini.app'
 end

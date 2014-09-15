@@ -5,5 +5,5 @@ class Katana < Cask
   url 'http://download.witiz.com/Katana.zip'
   homepage 'http://katana.witiz.com/'
 
-  link 'Katana.app'
+  app 'Katana.app'
 end

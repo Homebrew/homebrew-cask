@@ -6,5 +6,5 @@ class Imageoptim < Cask
   appcast 'http://imageoptim.com/appcast.xml'
   homepage 'http://imageoptim.com/'
 
-  link 'ImageOptim.app'
+  app 'ImageOptim.app'
 end

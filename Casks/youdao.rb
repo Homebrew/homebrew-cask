@@ -7,5 +7,5 @@ class Youdao < Cask
   appcast 'http://cidian.youdao.com/apps/macupdate/update.xml'
   homepage 'http://cidian.youdao.com/mac/'
 
-  link '有道词典.app'
+  app '有道词典.app'
 end

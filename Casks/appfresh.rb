@@ -6,5 +6,5 @@ class Appfresh < Cask
   appcast 'http://backend.metaquark.de/appcast/appfresh.xml'
   homepage 'http://metaquark.de/appfresh/mac'
 
-  link 'appfresh.app'
+  app 'appfresh.app'
 end

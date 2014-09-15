@@ -8,7 +8,7 @@ class Paraview < Cask
   end
   homepage 'http://www.paraview.org/'
   version '4.1.0'
-  link 'paraview.app'
+  app 'paraview.app'
   caveats do
     arch_only 'intel-64'
   end

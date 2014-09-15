@@ -6,5 +6,5 @@ class Propane < Cask
   appcast 'http://propaneapp.com/appcast/release.xml'
   homepage 'http://propaneapp.com/'
 
-  link 'Propane.app'
+  app 'Propane.app'
 end

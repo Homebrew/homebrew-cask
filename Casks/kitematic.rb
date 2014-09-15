@@ -5,5 +5,5 @@ class Kitematic < Cask
   url 'https://s3.amazonaws.com/kite-installer/Kitematic.zip'
   homepage 'https://kitematic.com/'
 
-  link 'Kitematic.app'
+  app 'Kitematic.app'
 end

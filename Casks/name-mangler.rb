@@ -6,5 +6,5 @@ class NameMangler < Cask
   appcast 'http://manytricks.com/namemangler/appcast.xml'
   homepage 'http://manytricks.com/namemangler/'
 
-  link 'Name Mangler.app'
+  app 'Name Mangler.app'
 end

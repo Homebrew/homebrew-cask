@@ -5,5 +5,5 @@ class Viber < Cask
   url 'http://download.viber.com/desktop/mac/Viber.dmg'
   homepage 'http://viber.com'
 
-  link 'Viber.app'
+  app 'Viber.app'
 end

@@ -6,5 +6,5 @@ class FauxPas < Cask
   appcast 'http://api.fauxpasapp.com/appcast'
   homepage 'http://fauxpasapp.com'
 
-  link 'FauxPas.app'
+  app 'FauxPas.app'
 end

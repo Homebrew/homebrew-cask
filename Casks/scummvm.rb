@@ -6,5 +6,5 @@ class Scummvm < Cask
   appcast 'http://www.scummvm.org/appcasts/macosx/release.xml'
   homepage 'http://scummvm.org/'
 
-  link 'ScummVM.app'
+  app 'ScummVM.app'
 end

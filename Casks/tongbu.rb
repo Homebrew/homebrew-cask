@@ -5,5 +5,5 @@ class Tongbu < Cask
   url 'http://qd.leaderhero.com/qd/zsmac/Tongbu_mac_v1.1.1.dmg'
   homepage 'http://www.tongbu.com'
 
-  link 'Tongbu.app'
+  app 'Tongbu.app'
 end

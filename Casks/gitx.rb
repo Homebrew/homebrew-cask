@@ -6,6 +6,6 @@ class Gitx < Cask
   appcast 'http://gitx.frim.nl/Downloads/appcast.xml'
   homepage 'http://gitx.frim.nl/'
 
-  link 'GitX.app'
+  app 'GitX.app'
   binary 'GitX.app/Contents/Resources/gitx'
 end

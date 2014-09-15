@@ -6,5 +6,5 @@ class AudioEditor < Cask
   appcast 'http://www.macsome.com/audio-editor-mac/su_feed.xml'
   homepage 'http://www.macsome.com/audio-editor-mac/index.html'
 
-  link 'Audio Editor.app'
+  app 'Audio Editor.app'
 end

@@ -6,5 +6,5 @@ class LingonX < Cask
   appcast 'http://www.peterborgapps.com/updates/lingonx-appcast.xml'
   homepage 'http://www.peterborgapps.com/lingon/'
 
-  link 'Lingon X.app'
+  app 'Lingon X.app'
 end

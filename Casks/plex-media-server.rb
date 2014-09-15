@@ -5,5 +5,5 @@ class PlexMediaServer < Cask
   url 'http://downloads.plexapp.com/plex-media-server/0.9.9.14.531-7eef8c6/PlexMediaServer-0.9.9.14.531-7eef8c6-OSX.zip'
   homepage 'https://plex.tv/'
 
-  link 'Plex Media Server.app'
+  app 'Plex Media Server.app'
 end

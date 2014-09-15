@@ -6,5 +6,5 @@ class Macbreakz < Cask
   appcast 'http://www.publicspace.net/app/signed_mb5.xml'
   homepage 'http://www.publicspace.net/MacBreakZ/'
 
-  link 'MacBreakZ 5.app'
+  app 'MacBreakZ 5.app'
 end

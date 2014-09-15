@@ -6,5 +6,5 @@ class Majic < Cask
   appcast 'http://erikhinterbichler.com/blog/wp-content/uploads/updates/majic-update.xml'
   homepage 'http://erikhinterbichler.com/apps/majic/'
 
-  link 'Majic.app'
+  app 'Majic.app'
 end

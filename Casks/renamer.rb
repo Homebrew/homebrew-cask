@@ -5,5 +5,5 @@ class Renamer < Cask
   url 'http://creativebe.com/download/renamer'
   homepage 'http://renamer.com'
 
-  link 'Renamer.app'
+  app 'Renamer.app'
 end

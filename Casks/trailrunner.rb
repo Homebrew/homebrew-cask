@@ -6,5 +6,5 @@ class Trailrunner < Cask
   appcast 'https://rink.hockeyapp.net/api/2/apps/83c4086e3f968b874757ba689e71f610'
   homepage 'http://trailrunnerx.com/'
 
-  link 'TrailRunner.app'
+  app 'TrailRunner.app'
 end

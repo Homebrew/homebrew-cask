@@ -6,5 +6,5 @@ class Gitter < Cask
   appcast 'http://update.gitter.im/osx/appcast.xml'
   homepage 'https://gitter.im/'
 
-  link 'Gitter.app'
+  app 'Gitter.app'
 end

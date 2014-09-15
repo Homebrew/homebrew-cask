@@ -6,5 +6,5 @@ class Stay < Cask
   appcast 'http://cordlessdog.com/stay/appcast.xml'
   homepage 'http://cordlessdog.com/stay/'
 
-  link 'Stay.app'
+  app 'Stay.app'
 end

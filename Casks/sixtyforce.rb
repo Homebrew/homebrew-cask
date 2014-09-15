@@ -5,5 +5,5 @@ class Sixtyforce < Cask
   url 'http://sixtyforce.com/download/sixtyforce.zip'
   homepage 'http://sixtyforce.com/'
 
-  link 'sixtyforce.app'
+  app 'sixtyforce.app'
 end

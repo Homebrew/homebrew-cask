@@ -6,5 +6,5 @@ class Mirrordisplays < Cask
     :referer => 'http://www.fabiancanas.com/Projects/MirrorDisplays'
   homepage 'http://www.fabiancanas.com/Projects/MirrorDisplays'
 
-  link 'MirrorDisplays.app'
+  app 'MirrorDisplays.app'
 end

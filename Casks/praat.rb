@@ -9,5 +9,5 @@ class Praat < Cask
     sha256 'c02aa1ae0e896325cbc8a917e5cfef37a0f6e38e78d2b71757134158f7e563f3'
   end
   homepage 'http://www.fon.hum.uva.nl/praat/'
-  link 'Praat.app'
+  app 'Praat.app'
 end

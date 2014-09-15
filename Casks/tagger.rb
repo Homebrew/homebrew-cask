@@ -6,5 +6,5 @@ class Tagger < Cask
   appcast 'http://bilalh.github.com/sparkle/tagger/appcast.xml'
   homepage 'http://bilalh.github.io/projects/tagger/'
 
-  link 'Tagger.app'
+  app 'Tagger.app'
 end

@@ -5,5 +5,5 @@ class Sandbox < Cask
   url 'http://www.mikey-san.net/sandbox/Sandbox.dmg'
   homepage 'http://www.mikey-san.net/sandbox/'
 
-  link 'Sandbox.app'
+  app 'Sandbox.app'
 end

@@ -6,5 +6,5 @@ class Platypus < Cask
   appcast 'http://www.sveinbjorn.org/files/appcasts/PlatypusAppcast.xml'
   homepage 'http://sveinbjorn.org/platypus'
 
-  link "Platypus-#{version}/Platypus.app"
+  app "Platypus-#{version}/Platypus.app"
 end

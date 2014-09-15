@@ -5,5 +5,5 @@ class Powerkey < Cask
   url 'https://github.com/pkamb/PowerKey/releases/download/v1.2/PowerKey1.2.zip'
   homepage 'http://pkamb.github.io/PowerKey/'
 
-  link 'PowerKey.app'
+  app 'PowerKey.app'
 end

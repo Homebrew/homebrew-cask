@@ -5,5 +5,5 @@ class Zotero < Cask
   url "https://download.zotero.org/standalone/#{version}/Zotero-#{version}.dmg"
   homepage 'http://www.zotero.org/'
 
-  link 'Zotero.app'
+  app 'Zotero.app'
 end

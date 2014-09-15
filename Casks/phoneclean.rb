@@ -5,5 +5,5 @@ class Phoneclean < Cask
   url 'http://www.imobie.com/product/phoneclean-mac.dmg'
   homepage 'http://www.imobie.com/phoneclean/'
 
-  link 'PhoneClean.app'
+  app 'PhoneClean.app'
 end

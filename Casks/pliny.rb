@@ -5,5 +5,5 @@ class Pliny < Cask
   url 'http://pliny.cch.kcl.ac.uk/pliny-app-1.1.0.tar.gz'
   homepage 'http://pliny.cch.kcl.ac.uk'
 
-  link 'Pliny/pliny.app'
+  app 'Pliny/pliny.app'
 end

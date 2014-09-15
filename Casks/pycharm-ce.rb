@@ -5,7 +5,7 @@ class PycharmCe < Cask
   url 'http://download.jetbrains.com/python/pycharm-community-3.4.1.dmg'
   homepage 'http://www.jetbrains.com/pycharm'
 
-  link 'PyCharm CE.app'
+  app 'PyCharm CE.app'
 
   postflight do
     system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/PyCharm CE.app/Contents/Info.plist"

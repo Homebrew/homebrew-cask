@@ -6,5 +6,5 @@ class Pixelpeeper < Cask
   appcast 'http://www.irradiatedsoftware.com/updates/profiles/pixelpeeper.php'
   homepage 'http://www.irradiatedsoftware.com/labs'
 
-  link 'PixelPeeper.app'
+  app 'PixelPeeper.app'
 end

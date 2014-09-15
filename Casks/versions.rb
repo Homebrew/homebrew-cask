@@ -6,5 +6,5 @@ class Versions < Cask
   appcast 'https://updates.blackpixel.com/updates?app=vs'
   homepage 'http://versionsapp.com/'
 
-  link 'Versions.app'
+  app 'Versions.app'
 end

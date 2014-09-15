@@ -5,5 +5,5 @@ class Autodmg < Cask
   url 'https://github.com/MagerValp/AutoDMG/releases/download/v1.4.3/AutoDMG-1.4.3.dmg'
   homepage 'https://github.com/MagerValp/AutoDMG'
 
-  link 'AutoDMG.app'
+  app 'AutoDMG.app'
 end

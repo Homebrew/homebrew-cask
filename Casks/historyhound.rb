@@ -6,5 +6,5 @@ class Historyhound < Cask
   appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?HH'
   homepage 'http://www.stclairsoft.com/HistoryHound/'
 
-  link 'HistoryHound.app'
+  app 'HistoryHound.app'
 end

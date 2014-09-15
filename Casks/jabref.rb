@@ -5,5 +5,5 @@ class Jabref < Cask
   url 'https://downloads.sourceforge.net/project/jabref/jabref/2.10/JabRef-2.10-OSX.zip'
   homepage 'http://jabref.sourceforge.net/'
 
-  link 'JabRef.app'
+  app 'JabRef.app'
 end

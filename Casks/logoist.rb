@@ -5,5 +5,5 @@ class Logoist < Cask
   url 'http://www.syniumsoftware.com/download/logoist.dmg'
   homepage 'http://www.syniumsoftware.com/logoist/'
 
-  link 'Logoist.app'
+  app 'Logoist.app'
 end

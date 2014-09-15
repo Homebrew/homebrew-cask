@@ -6,5 +6,5 @@ class Shortcat < Cask
   appcast 'https://shortcatapp.com/updates/appcast.xml'
   homepage 'http://shortcatapp.com/'
 
-  link 'Shortcat.app'
+  app 'Shortcat.app'
 end

@@ -5,5 +5,5 @@ class Camed < Cask
   url "https://downloads.sourceforge.net/sourceforge/camprocessor/CAMEd-#{version}-macosx-cocoa-x86_64.tar.gz"
   homepage 'http://sourceforge.net/apps/mediawiki/camprocessor/index.php?title=Main_Page'
 
-  link "CAMEd-#{version}/CAMed.app"
+  app "CAMEd-#{version}/CAMed.app"
 end
