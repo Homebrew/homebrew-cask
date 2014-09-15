@@ -5,5 +5,5 @@ class Supersync < Cask
   url 'https://supersync.com/downloads/SuperSync.app.zip'
   homepage 'http://supersync.com/'
 
-  link 'SuperSync.app'
+  app 'SuperSync.app'
 end
