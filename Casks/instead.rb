@@ -5,5 +5,5 @@ class Instead < Cask
   url 'https://downloads.sourceforge.net/project/instead/instead/2.0.3/Instead-2.0.3.dmg'
   homepage 'http://instead.syscall.ru/'
 
-  link 'Instead.app'
+  app 'Instead.app'
 end
