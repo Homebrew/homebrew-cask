@@ -6,5 +6,5 @@ class Puush < Cask
   appcast 'https://puush.me/dl/puush.xml?hax=jax'
   homepage 'http://puush.me/'
 
-  link 'puush.app'
+  app 'puush.app'
 end
