@@ -9,5 +9,5 @@ class Middleclick < Cask
   homepage 'http://clement.beffa.org/labs/projects/middleclick'
   version 'latest'
   sha256 :no_check
-  link 'MiddleClick.app'
+  app 'MiddleClick.app'
 end
