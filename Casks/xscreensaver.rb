@@ -5,7 +5,7 @@ class Xscreensaver < Cask
   url 'http://www.jwz.org/xscreensaver/xscreensaver-5.29.dmg'
   homepage 'http://www.jwz.org/xscreensaver/'
 
-  link 'Screen Savers/XScreenSaverUpdater.app'
+  app 'Screen Savers/XScreenSaverUpdater.app'
   screen_saver 'Screen Savers/Abstractile.saver'
   screen_saver 'Screen Savers/Anemone.saver'
   screen_saver 'Screen Savers/Anemotaxis.saver'
