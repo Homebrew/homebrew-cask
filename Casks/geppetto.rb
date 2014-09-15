@@ -8,5 +8,5 @@ class Geppetto < Cask
   end
   homepage 'http://puppetlabs.github.io/geppetto/'
   version '4.2.0'
-  link 'geppetto/Geppetto.app'
+  app 'geppetto/Geppetto.app'
 end
