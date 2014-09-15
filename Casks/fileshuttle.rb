@@ -6,5 +6,5 @@ class Fileshuttle < Cask
   appcast 'http://updates.getfileshuttle.com/update.xml'
   homepage 'http://fileshuttle.io/'
 
-  link 'FileShuttle.app'
+  app 'FileShuttle.app'
 end
