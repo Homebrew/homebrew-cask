@@ -5,5 +5,5 @@ class Mailplane < Cask
   url 'http://update.mailplaneapp.com/mailplane_3.php'
   homepage 'http://mailplaneapp.com'
 
-  link 'Mailplane 3.app'
+  app 'Mailplane 3.app'
 end
