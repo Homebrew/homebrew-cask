@@ -5,5 +5,5 @@ class Mikogo < Cask
   url 'http://download.mikogo4.com/mikogo.dmg'
   homepage 'http://www.mikogo.com/'
 
-  link 'Mikogo.app'
+  app 'Mikogo.app'
 end
