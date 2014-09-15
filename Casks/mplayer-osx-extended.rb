@@ -6,5 +6,5 @@ class MplayerOsxExtended < Cask
   appcast 'http://mplayerosx.ch/updates.xml'
   homepage 'http://www.mplayerosx.ch/'
 
-  link 'MPlayer OSX Extended.app'
+  app 'MPlayer OSX Extended.app'
 end
