@@ -6,5 +6,5 @@ class ABetterFinderAttributes < Cask
   appcast 'http://www.publicspace.net/app/signed_abfa5.xml'
   homepage 'http://www.publicspace.net/ABetterFinderAttributes/'
 
-  link 'A Better Finder Attributes 5.app'
+  app 'A Better Finder Attributes 5.app'
 end
