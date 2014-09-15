@@ -5,5 +5,5 @@ class Codelite < Cask
   url 'http://downloads.codelite.org/downloads.php?osx'
   homepage 'http://codelite.org'
 
-  link 'codelite.app'
+  app 'codelite.app'
 end
