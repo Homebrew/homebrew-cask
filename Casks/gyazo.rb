@@ -5,6 +5,6 @@ class Gyazo < Cask
   url 'https://gyazo.s3.amazonaws.com/setup/Gyazo_2.0.dmg'
   homepage 'https://gyazo.com/'
 
-  link 'Gyazo.app'
-  link 'Gyazo GIF.app'
+  app 'Gyazo.app'
+  app 'Gyazo GIF.app'
 end
