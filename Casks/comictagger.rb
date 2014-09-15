@@ -5,5 +5,5 @@ class Comictagger < Cask
   url 'https://comictagger.googlecode.com/files/ComicTagger-1.1.10-beta.dmg'
   homepage 'http://code.google.com/p/comictagger/'
 
-  link 'ComicTagger.app'
+  app 'ComicTagger.app'
 end
