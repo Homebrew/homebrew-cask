@@ -5,5 +5,5 @@ class Liteicon < Cask
   url 'http://www.freemacsoft.net/downloads/LiteIcon_3.2.1.zip'
   homepage 'http://www.freemacsoft.net/liteicon/'
 
-  link 'LiteIcon.app'
+  app 'LiteIcon.app'
 end
