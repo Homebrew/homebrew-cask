@@ -6,5 +6,5 @@ class Mountain < Cask
   appcast 'http://appgineers.de/mountain/files/mountaincast.xml'
   homepage 'http://appgineers.de/mountain/'
 
-  link 'Mountain.app'
+  app 'Mountain.app'
 end
