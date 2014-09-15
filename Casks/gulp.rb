@@ -5,5 +5,5 @@ class Gulp < Cask
   url 'https://github.com/sindresorhus/gulp-app/releases/download/0.1.0/gulp.app.zip'
   homepage 'https://github.com/sindresorhus/gulp-app'
 
-  link 'gulp.app'
+  app 'gulp.app'
 end
