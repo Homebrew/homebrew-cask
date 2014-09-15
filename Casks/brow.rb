@@ -5,5 +5,5 @@ class Brow < Cask
   url 'http://www.timschroeder.net/brow/brow.zip'
   homepage 'http://www.timschroeder.net/brow/'
 
-  link 'Brow.app'
+  app 'Brow.app'
 end
