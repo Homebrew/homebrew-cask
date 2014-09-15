@@ -5,5 +5,5 @@ class Rftg < Cask
   url 'https://dl.dropbox.com/u/51639697/rftg-osx-081.zip'
   homepage 'http://keldon.net/rftg/'
 
-  link 'RFTG.app'
+  app 'RFTG.app'
 end
