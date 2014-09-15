@@ -5,5 +5,5 @@ class Hexels < Cask
   url 'http://hexraystudios.com/Hexels.dmg'
   homepage 'http://hexraystudios.com/hexels/'
 
-  link 'Hexels.app'
+  app 'Hexels.app'
 end
