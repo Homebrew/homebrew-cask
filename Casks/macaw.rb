@@ -6,5 +6,5 @@ class Macaw < Cask
   appcast 'http://download.macaw.co/appcast.xml'
   homepage 'http://macaw.co/'
 
-  link 'Macaw.app'
+  app 'Macaw.app'
 end
