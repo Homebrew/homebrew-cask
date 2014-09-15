@@ -6,5 +6,5 @@ class Appdelete < Cask
   appcast 'http://www.reggieashworth.com/AD4Appcast.xml'
   homepage 'http://www.reggieashworth.com/appdelete'
 
-  link 'AppDelete.app'
+  app 'AppDelete.app'
 end
