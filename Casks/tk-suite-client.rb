@@ -5,5 +5,5 @@ class TkSuiteClient < Cask
   url 'ftp://ftp.agfeo.de/pub/software/TK-Suite-Client_intel32_agfeo_4.4.13.dmg'
   homepage 'http://agfeo.de/agfeo_web/hp3.nsf/lu/2064'
 
-  link 'TK-Suite-Client.app'
+  app 'TK-Suite-Client.app'
 end
