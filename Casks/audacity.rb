@@ -5,5 +5,5 @@ class Audacity < Cask
   url 'https://audacity.googlecode.com/files/audacity-macosx-ub-2.0.5.dmg'
   homepage 'http://audacity.sourceforge.net/'
 
-  link 'Audacity/Audacity.app'
+  app 'Audacity/Audacity.app'
 end
