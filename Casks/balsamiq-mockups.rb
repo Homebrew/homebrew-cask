@@ -5,5 +5,5 @@ class BalsamiqMockups < Cask
   url 'http://builds.balsamiq.com/b/mockups-desktop/MockupsForDesktop.dmg'
   homepage 'http://balsamiq.com/'
 
-  link 'Balsamiq Mockups.app'
+  app 'Balsamiq Mockups.app'
 end
