@@ -5,5 +5,5 @@ class Aviator < Cask
   url 'https://updates.aviatorbrowser.com/Aviator.dmg'
   homepage 'https://www.whitehatsec.com/aviator/'
 
-  link 'Aviator.app'
+  app 'Aviator.app'
 end
