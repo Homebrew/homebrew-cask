@@ -6,5 +6,5 @@ class Papers < Cask
   appcast 'http://www.papersapp.com/papers/appcast_v3.xml'
   homepage 'http://www.papersapp.com/papers/'
 
-  link 'Papers.app'
+  app 'Papers.app'
 end
