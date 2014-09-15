@@ -5,7 +5,7 @@ class PasswordGorilla < Cask
   url 'http://zdia.de/downloads/gorilla/gorilla15372.zip'
   homepage 'https://github.com/zdia/gorilla'
 
-  link 'Password Gorilla.app'
+  app 'Password Gorilla.app'
   caveats <<-EOS.undent
     Password Gorilla must be run in 32-bit mode.
     Gatekeeper may need to be temporarily disabled for the first launch.
