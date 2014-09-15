@@ -6,7 +6,7 @@ class Cheatsheet < Cask
   appcast 'http://mediaatelier.com/CheatSheet/feed.php'
   homepage 'http://www.cheatsheetapp.com/CheatSheet/'
 
-  link 'CheatSheet.app'
+  app 'CheatSheet.app'
 
   postflight do
     # Don't ask to move the app bundle to /Applications
