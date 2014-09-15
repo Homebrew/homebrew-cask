@@ -6,5 +6,5 @@ class Comicbooklover < Cask
   appcast 'http://www.bitcartel.com/appcast/comicbooklover-1.7-dsa.xml'
   homepage 'http://www.bitcartel.com/comicbooklover/'
 
-  link 'ComicBookLover.app'
+  app 'ComicBookLover.app'
 end
