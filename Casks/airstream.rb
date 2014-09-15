@@ -4,7 +4,7 @@ class Airstream < Cask
 
   url 'http://airstream.io/download/mac/airstream-mac.dmg'
   homepage 'http://airstream.io/download/'
-  link 'AirStream.app'
+  app 'AirStream.app'
 
   caveats do
     puts <<-EOS.undent
