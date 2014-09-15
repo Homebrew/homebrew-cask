@@ -5,5 +5,5 @@ class Simpless < Cask
   url "http://wearekiss.com/files/SimpLESS-#{version}-mac.zip"
   homepage 'http://wearekiss.com/simpless'
 
-  link 'SimpLESS.app'
+  app 'SimpLESS.app'
 end
