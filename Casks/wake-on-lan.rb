@@ -5,5 +5,5 @@ class WakeOnLan < Cask
   url 'http://www.readpixel.com/downloads/files/WakeOnLan1.0.zip'
   homepage 'http://www.readpixel.com/wakeonlan/'
 
-  link 'WakeOnLan/WakeOnLan.app'
+  app 'WakeOnLan/WakeOnLan.app'
 end
