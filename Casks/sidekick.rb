@@ -6,5 +6,5 @@ class Sidekick < Cask
   appcast 'http://updates.oomphalot.com/?app=Sidekick'
   homepage 'http://oomphalot.com/sidekick/'
 
-  link 'Sidekick.app'
+  app 'Sidekick.app'
 end
