@@ -6,5 +6,5 @@ class RawTherapee < Cask
   homepage 'http://rawtherapee.com'
 
   nested_container "RawTherapee_OSX_10.7_64_#{version}.dmg"
-  link 'RawTherapee.app'
+  app 'RawTherapee.app'
 end
