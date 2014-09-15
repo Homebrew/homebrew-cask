@@ -5,5 +5,5 @@ class Chainsaw < Cask
   url 'http://people.apache.org/~sdeboy/apache-chainsaw-2.1.0-SNAPSHOT.dmg'
   homepage 'http://logging.apache.org/chainsaw/'
 
-  link 'Chainsaw.app'
+  app 'Chainsaw.app'
 end
