@@ -6,5 +6,5 @@ class Adventure < Cask
   appcast 'http://www.lobotomo.com/products/Adventure/profileInfo.php'
   homepage 'http://www.lobotomo.com/products/Adventure/index.html'
 
-  link 'Adventure.app'
+  app 'Adventure.app'
 end
