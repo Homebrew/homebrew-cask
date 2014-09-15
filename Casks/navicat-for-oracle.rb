@@ -5,5 +5,5 @@ class NavicatForOracle < Cask
   url 'http://download.navicat.com/download/navicat110_ora_en.dmg'
   homepage 'http://www.navicat.com/products/navicat-for-oracle'
 
-  link 'Navicat for Oracle.app'
+  app 'Navicat for Oracle.app'
 end
