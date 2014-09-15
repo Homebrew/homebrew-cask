@@ -5,5 +5,5 @@ class Puzzles < Cask
   url 'http://www.chiark.greenend.org.uk/~sgtatham/puzzles/Puzzles.dmg'
   homepage 'http://www.chiark.greenend.org.uk/~sgtatham/puzzles/'
 
-  link 'Puzzles.app'
+  app 'Puzzles.app'
 end
