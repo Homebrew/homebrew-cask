@@ -5,5 +5,5 @@ class MailPluginManager < Cask
   url 'http://www.chungwasoft.com/files/MPM_latest.zip'
   homepage 'http://www.chungwasoft.com/mailpluginmanager/'
 
-  link 'Mail Plugin Manager.app'
+  app 'Mail Plugin Manager.app'
 end
