@@ -5,5 +5,5 @@ class Postbox < Cask
   url 'http://www.postbox-inc.com/php/download.php?a=3011m'
   homepage 'http://www.postbox-inc.com/'
 
-  link 'Postbox.app'
+  app 'Postbox.app'
 end
