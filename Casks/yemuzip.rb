@@ -6,5 +6,5 @@ class Yemuzip < Cask
   appcast 'http://yellowmug.com/yemuzip/appcast.xml'
   homepage 'http://www.yellowmug.com/yemuzip'
 
-  link 'YemuZip.app'
+  app 'YemuZip.app'
 end
