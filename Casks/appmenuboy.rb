@@ -5,5 +5,5 @@ class Appmenuboy < Cask
   url 'https://appmenuboy.googlecode.com/svn/html/AppMenuBoy.zip'
   homepage 'https://code.google.com/p/appmenuboy/'
 
-  link 'AppMenuBoy.app'
+  app 'AppMenuBoy.app'
 end
