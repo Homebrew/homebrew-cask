@@ -6,5 +6,5 @@ class Textexpander < Cask
   appcast 'http://www.smilesoftware.com/appcast/update.php'
   homepage 'http://www.smilesoftware.com/TextExpander/index.html'
 
-  link 'TextExpander.app'
+  app 'TextExpander.app'
 end
