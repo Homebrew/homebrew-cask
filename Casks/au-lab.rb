@@ -6,5 +6,5 @@ class AuLab < Cask
   homepage 'http://www.apple.com/itunes/mastered-for-itunes/'
   
   nested_container 'AU Lab Image.dmg'
-  link 'AU Lab.app'
+  app 'AU Lab.app'
 end
