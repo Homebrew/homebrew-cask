@@ -5,5 +5,5 @@ class Seamonkey < Cask
   url 'https://download.mozilla.org/?product=seamonkey-2.25&os=osx&lang=en-US'
   homepage 'http://www.seamonkey-project.org/'
 
-  link 'SeaMonkey.app'
+  app 'SeaMonkey.app'
 end
