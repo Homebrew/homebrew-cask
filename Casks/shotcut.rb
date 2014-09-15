@@ -5,5 +5,5 @@ class Shotcut < Cask
   url "https://github.com/mltframework/shotcut/releases/download/v#{version.gsub(/\.\d{2}$/, '')}/shotcut-osx-x86_64-#{version.gsub('.', '')}.dmg"
   homepage 'http://www.shotcut.org/'
 
-  link 'Shotcut.app'
+  app 'Shotcut.app'
 end
