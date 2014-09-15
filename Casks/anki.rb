@@ -5,5 +5,5 @@ class Anki < Cask
   url "http://ankisrs.net/download/mirror/anki-#{version}.dmg"
   homepage 'http://ankisrs.net/'
 
-  link 'Anki.app'
+  app 'Anki.app'
 end
