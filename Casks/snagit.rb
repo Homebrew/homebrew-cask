@@ -6,5 +6,5 @@ class Snagit < Cask
   appcast 'http://techsmithredirect.appspot.com/'
   homepage 'http://www.techsmith.com/snagit.html'
 
-  link 'Snagit.app'
+  app 'Snagit.app'
 end
