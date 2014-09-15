@@ -6,7 +6,7 @@ class Hive < Cask
   appcast 'https://hivewallet.com/hive-osx-appcast.xml'
   homepage 'http://www.hivewallet.com'
 
-  link 'Hive.app'
+  app 'Hive.app'
 
   postflight do
     # Don't ask to move the app bundle to /Applications
