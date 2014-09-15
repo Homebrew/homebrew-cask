@@ -5,5 +5,5 @@ class Makemkv < Cask
   url 'http://www.makemkv.com/download/makemkv_v1.8.12_osx.dmg'
   homepage 'http://www.makemkv.com/'
 
-  link 'MakeMKV.app'
+  app 'MakeMKV.app'
 end
