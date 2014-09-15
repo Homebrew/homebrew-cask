@@ -6,5 +6,5 @@ class Sqleditor < Cask
   appcast 'https://www.malcolmhardie.com/sqleditor/appcast/sq2release.xml'
   homepage 'http://www.malcolmhardie.com/sqleditor/'
 
-  link 'SQLEditor.app'
+  app 'SQLEditor.app'
 end
