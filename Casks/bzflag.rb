@@ -5,5 +5,5 @@ class Bzflag < Cask
   url 'http://downloads.sourceforge.net/project/bzflag/bzflag%20Mac%20OS%20X/2.4.2/BZFlag-2.4.2.zip'
   homepage 'http://bzflag.org/'
 
-  link 'BZFlag-2.4.2.app'
+  app 'BZFlag-2.4.2.app'
 end
