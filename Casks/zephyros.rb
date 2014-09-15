@@ -6,5 +6,5 @@ class Zephyros < Cask
   appcast 'https://raw.github.com/sdegutis/zephyros/master/appcast.xml'
   homepage 'https://github.com/sdegutis/zephyros'
 
-  link 'Zephyros.app'
+  app 'Zephyros.app'
 end
