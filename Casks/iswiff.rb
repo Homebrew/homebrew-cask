@@ -5,5 +5,5 @@ class Iswiff < Cask
   url 'http://echoone.com/iswiff/iSwiff.dmg'
   homepage 'http://echoone.com/iswiff/'
 
-  link 'iSwiff.app'
+  app 'iSwiff.app'
 end
