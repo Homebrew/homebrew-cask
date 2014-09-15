@@ -10,5 +10,5 @@ class Skype < Cask
   end
   homepage 'http://www.skype.com'
 
-  link 'Skype.app'
+  app 'Skype.app'
 end
