@@ -6,5 +6,5 @@ class Silverback < Cask
   appcast 'http://silverback.s3.amazonaws.com/release/appcast.xml'
   homepage 'http://silverbackapp.com/'
 
-  link 'Silverback.app'
+  app 'Silverback.app'
 end
