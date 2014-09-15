@@ -5,5 +5,5 @@ class Pdfpen < Cask
   url 'http://dl.smilesoftware.com/com.smileonmymac.PDFpen/PDFpen.zip'
   homepage 'http://smilesoftware.com/PDFpen/index.html'
 
-  link 'PDFpen.app'
+  app 'PDFpen.app'
 end
