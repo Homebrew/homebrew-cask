@@ -5,5 +5,5 @@ class Zendstudio < Cask
   url 'http://downloads.zend.com/studio-eclipse/10.6.1/ZendStudio-10.6.1-macosx.cocoa.x86_64.dmg'
   homepage 'http://www.zend.com/en/products/studio/'
 
-  link 'ZendStudio.app'
+  app 'ZendStudio.app'
 end
