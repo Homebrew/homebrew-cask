@@ -5,5 +5,5 @@ class Ibackup < Cask
   url 'http://www.grapefruit.ch/iBackup/versions/iBackup%207.x/iBackup%207.5.dmg'
   homepage 'http://www.grapefruit.ch/iBackup'
 
-  link 'iBackup.app'
+  app 'iBackup.app'
 end
