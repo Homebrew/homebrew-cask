@@ -5,5 +5,5 @@ class GuitarTuner < Cask
   url 'http://www.gieson.com/downloads/utilities/guitar_tuner_mac.zip'
   homepage 'http://www.gieson.com/Library/projects/utilities/tuner/'
 
-  link 'Guitar Tuner.app'
+  app 'Guitar Tuner.app'
 end
