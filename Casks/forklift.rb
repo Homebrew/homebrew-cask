@@ -6,5 +6,5 @@ class Forklift < Cask
   appcast 'http://update.binarynights.com/ForkLift2/update.xml'
   homepage 'http://www.binarynights.com/'
 
-  link 'ForkLift.app'
+  app 'ForkLift.app'
 end
