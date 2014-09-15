@@ -1,5 +1,5 @@
 class InvalidGpgParameter < TestCask
-  url TestHelper.local_binary('caffeine.zip')
+  url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/invalid-gpg-type'
   gpg 'http://example.com/gpg-signature.asc',
       :no_such_parameter => :value

@@ -1,5 +1,5 @@
 class InvalidLicenseValue < TestCask
-  url TestHelper.local_binary('transmission-2.61.dmg')
+  url TestHelper.local_binary_url('transmission-2.61.dmg')
   homepage 'http://example.com/invalid-license-value'
   license :no_such_license
   version '2.61'

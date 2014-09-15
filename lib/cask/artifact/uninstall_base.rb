@@ -37,7 +37,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
     ohai "Running #{stanza} process for #{@cask}; your password may be necessary"
 
     directives_set.each do |directives|
-      unknown_keys = directives.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :files, :delete, :trash]
+      unknown_keys = directives.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :files, :delete, :trash, :rmdir]
       unless unknown_keys.empty?
         opoo %Q{Unknown arguments to #{stanza} -- #{unknown_keys.inspect}. Running "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" will likely fix it.}
       end
@@ -170,6 +170,24 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
         path_slice = self.class.expand_path_strings(path_slice) if expand_tilde
         path_slice = self.class.remove_relative_path_strings(:delete, path_slice) # :delete for messages
         @command.run!('/bin/rm', :args => path_slice.unshift('-rf', '--'), :sudo => true)
+      end
+    end
+
+    directives_set.select{ |h| h.key?(:rmdir) }.each do |directives|
+      Array(directives[:rmdir]).flatten.each do |directory|
+        directory = self.class.expand_path_strings([directory]).first if expand_tilde
+        directory = self.class.remove_relative_path_strings(:rmdir, [ directory ]).first
+        next unless directory.respond_to?(:length)
+        next unless directory.length > 0
+        ohai "Removing directory if empty: #{directory.utf8_inspect}"
+        directory = Pathname.new(directory)
+        next unless directory.exist?
+        @command.run!('/bin/rm', :args => [ '-f', '--', directory.join('.DS_Store') ],
+                                 :sudo => true,
+                                 :stderr => :silence)
+        @command.run('/bin/rmdir', :args => [ '--', directory ],
+                                   :sudo => true,
+                                   :stderr => :silence)
       end
     end
   end

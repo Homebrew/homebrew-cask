@@ -42,6 +42,7 @@ This notice will be removed for the final form.**
  * `depends_on :java`
    * stub - not yet functional
  * `zap`
+ * `uninstall :rmdir`
 
 
 ## Renames (1.0)

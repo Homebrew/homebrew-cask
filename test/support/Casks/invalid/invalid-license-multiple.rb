@@ -1,5 +1,5 @@
 class InvalidLicenseMultiple < TestCask
-  url TestHelper.local_binary('transmission-2.61.dmg')
+  url TestHelper.local_binary_url('transmission-2.61.dmg')
   homepage 'http://example.com/invalid-license-multiple'
   license :gpl
   license :gpl

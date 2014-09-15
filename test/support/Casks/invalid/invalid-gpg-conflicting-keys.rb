@@ -1,5 +1,5 @@
 class InvalidGpgConflictingKeys < TestCask
-  url TestHelper.local_binary('caffeine.zip')
+  url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/invalid-gpg-conflicting-keys'
   gpg 'http://example.com/gpg-signature.asc',
       :key_id => 'ID',

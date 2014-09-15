@@ -1,5 +1,5 @@
 class WithGpgKeyUrl < TestCask
-  url TestHelper.local_binary('caffeine.zip')
+  url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/with-gpg-key-url'
   gpg 'http://example.com/gpg-signature.asc',
       :key_url => 'http://example.com/gpg-key-url'

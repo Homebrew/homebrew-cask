@@ -432,7 +432,8 @@ of the following key/value pairs as arguments to `uninstall`.
   - `:args` - array of arguments to the uninstall script
   - `:input` - array of lines of input to be sent to `stdin` of the script
   - `:must_succeed` - set to `false` if the script is allowed to fail
-* `:files` (array) - single-quoted, absolute paths of files or directories to remove.  `:files` should only be used as a last resort. `:pkgutil` is strongly preferred
+* `:files` (string or array) - single-quoted, absolute paths of files or directory trees to remove.  `:files` should only be used as a last resort. `:pkgutil` is strongly preferred
+* `:rmdir` (string or array) - single-quoted, absolute paths of directories to remove if empty.
 
 Each `uninstall` technique is applied according to the order above. The order
 in which `uninstall` keys appear in the Cask file is ignored.
@@ -636,11 +637,12 @@ $ brew cask zap td-toolbelt             # also removes org.ruby-lang.installer
 The form of `zap` stanza follows the [`uninstall` stanza](#uninstall-stanza-details).
 All of the same directives are available.
 
-`zap` differs from `uninstall` in the interpretation of values paired with
-the `:files` key:
+`zap` differs from `uninstall` in the following ways:
+ * The use of `:files` is not discouraged.
+ * The target values for `:files` and `:rmdir` accept leading tilde characters
+   (`~`), which will be expanded to home directories.
 
- * Leading tilde characters (`~`) will be expanded to home directories, as
-   in the shell.
+Example: [injection.rb](../Casks/injection.rb)
 
 
 ## Arbitrary Ruby Methods
