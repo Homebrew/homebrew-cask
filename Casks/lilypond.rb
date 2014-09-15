@@ -5,5 +5,5 @@ class Lilypond < Cask
   url 'http://download.linuxaudio.org/lilypond/binaries/darwin-x86/lilypond-2.18.2-1.darwin-x86.tar.bz2'
   homepage 'http://lilypond.org'
 
-  link 'LilyPond.app'
+  app 'LilyPond.app'
 end
