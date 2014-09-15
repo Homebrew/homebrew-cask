@@ -5,7 +5,7 @@ class PathFinder < Cask
   url 'http://get.cocoatech.com/PF7.zip'
   homepage 'http://www.cocoatech.com/pathfinder/'
 
-  link 'Path Finder.app'
+  app 'Path Finder.app'
 
   postflight do
     # Don't ask to move the app bundle to /Applications
