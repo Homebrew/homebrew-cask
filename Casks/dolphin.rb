@@ -5,5 +5,5 @@ class Dolphin < Cask
   url 'https://dl-mirror.dolphin-emu.org/4.0/dolphin-4.0.dmg'
   homepage 'http://www.dolphin-emu.org/'
 
-  link 'Dolphin.app'
+  app 'Dolphin.app'
 end
