@@ -6,5 +6,5 @@ class Manico < Cask
   appcast 'http://manico.im/static/manico-appcast.xml'
   homepage 'http://manico.im/'
 
-  link 'Manico.app'
+  app 'Manico.app'
 end
