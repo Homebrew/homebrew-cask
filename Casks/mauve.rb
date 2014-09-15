@@ -5,5 +5,5 @@ class Mauve < Cask
   url 'http://gel.ahabs.wisc.edu/mauve/downloads/Mauve-2.3.1.dmg'
   homepage 'http://gel.ahabs.wisc.edu/mauve/'
 
-  link 'Mauve.app'
+  app 'Mauve.app'
 end
