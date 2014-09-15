@@ -5,5 +5,5 @@ class BeatportPro < Cask
   url "http://pro.beatport.com/mac/#{version}/beatportpro_#{version}.dmg"
   homepage 'http://pro.beatport.com/'
 
-  link 'Beatport Pro.app'
+  app 'Beatport Pro.app'
 end
