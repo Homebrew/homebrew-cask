@@ -5,5 +5,5 @@ class NavicatDataModeler < Cask
   url 'http://download.navicat.com/download/modeler010_en.dmg'
   homepage 'http://www.navicat.com/products/navicat-data-modeler'
 
-  link 'Navicat Data Modeler.app'
+  app 'Navicat Data Modeler.app'
 end
