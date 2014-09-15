@@ -7,5 +7,5 @@ class DevonthinkPro < Cask
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro.html'
 
   nested_container 'DEVONthink_Pro.dmg'
-  link 'DEVONthink Pro.app'
+  app 'DEVONthink Pro.app'
 end
