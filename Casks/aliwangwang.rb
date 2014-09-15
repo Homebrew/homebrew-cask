@@ -6,5 +6,5 @@ class Aliwangwang < Cask
   appcast 'http://update.labs.etao.com/macww/updates.xml'
   homepage 'http://wangwang.taobao.com'
 
-  link 'AliWangwang.app'
+  app 'AliWangwang.app'
 end
