@@ -6,5 +6,5 @@ class Pixelstick < Cask
   appcast 'https://plumamazing.com/appcastSSL.php?pid=100'
   homepage 'http://plumamazing.com/mac/pixelstick'
 
-  link 'PixelStick.app'
+  app 'PixelStick.app'
 end
