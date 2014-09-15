@@ -5,5 +5,5 @@ class Brogue < Cask
   url "https://sites.google.com/site/broguegame/Brogue%20OS%20X%2010.6%2B%20v#{version}.zip?attredirects=0&d=1"
   homepage 'https://sites.google.com/site/broguegame/'
 
-  link "Brogue v#{version}/Brogue.app"
+  app "Brogue v#{version}/Brogue.app"
 end
