@@ -6,5 +6,5 @@ class Boxer < Cask
   appcast 'http://boxerapp.com/appcast'
   homepage 'http://boxerapp.com/'
 
-  link 'Boxer.app'
+  app 'Boxer.app'
 end
