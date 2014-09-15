@@ -6,5 +6,5 @@ class Yorufukurou < Cask
   appcast 'http://sites.google.com/site/yorufukurou/distribution/appcast.xml'
   homepage 'https://sites.google.com/site/yorufukurou/home-en'
 
-  link 'YoruFukurou.app'
+  app 'YoruFukurou.app'
 end
