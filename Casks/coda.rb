@@ -6,5 +6,5 @@ class Coda < Cask
   appcast 'http://www.panic.com/updates/update.php'
   homepage 'https://panic.com/Coda/'
 
-  link 'Coda 2.app'
+  app 'Coda 2.app'
 end
