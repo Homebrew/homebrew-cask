@@ -5,5 +5,5 @@ class Kvirc < Cask
   url 'http://kvirc.tradebit.com/4.2.0/binary/osx/KVIrc-4.2.0-Equilibrium.dmg'
   homepage 'http://www.kvirc.net'
 
-  link 'KVIrc.app'
+  app 'KVIrc.app'
 end
