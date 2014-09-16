@@ -15,9 +15,9 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
   end
 
   def self.remove_relative_path_strings(action, path_strings)
-    relative = path_strings.reject do |path_string|
-      %r{\A/}.match(path_string)
-    end
+    relative = path_strings.map do |path_string|
+      path_string if %r{/\.\.(?:/|\Z)}.match(path_string) or ! %r{\A/}.match(path_string)
+    end.compact
     relative.each do |path_string|
       opoo %Q{Skipping #{action} for relative path #{path_string}}
     end

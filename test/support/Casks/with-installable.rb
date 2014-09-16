@@ -10,5 +10,6 @@ class WithInstallable < TestCask
                         '/permissible/absolute/path',
                         '~/impermissible/path/with/tilde',
                         'impermissible/relative/path',
+                        '/another/impermissible/../relative/path',
                        ]
 end
