@@ -626,6 +626,11 @@ $ brew cask zap td-toolbelt             # also removes org.ruby-lang.installer
    may be removed, other applications may be affected by `brew cask zap`.
    Understanding that is the responsibility of the end user.
 
+`zap` stanzas should not remove:
+
+ * Files created by the user directly.
+
+
 ### Zap Stanza Syntax
 
 The form of `zap` stanza follows the [`uninstall` stanza](#uninstall-stanza-details).
