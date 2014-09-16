@@ -7,5 +7,5 @@ class Zoomus < Cask
 
   pkg 'zoomusInstaller.pkg'
   uninstall :files => '/Applications/zoom.us.app'
-  zap       :files => '~//Desktop/Zoom'
+  zap       :files => '~/Desktop/Zoom'
 end
