@@ -14,6 +14,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Checksum Stanza Details](#checksum-stanza-details)
  * [URL Stanza Details](#url-stanza-details)
  * [App Stanza Details](#app-stanza-details)
+ * [Suite Stanza Details](#suite-stanza-details)
  * [Pkg Stanza Details](#pkg-stanza-details)
  * [Depends_on Stanza Details](#depends_on-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
@@ -87,6 +88,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `screen_saver`     | yes                           | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
 | `service`          | yes                           | relative path to a service that should be linked into the `~/Library/Services` folder on installation
 | `widget`           | yes                           | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation (ALPHA: DOES NOT WORK YET)
+| `suite`            | yes                           | relative path to a containing directory that should be linked into the `~/Applications` folder on installation (see also [Suite Stanza Details](#suite-stanza-details))
 | `link`             | yes                           | relative path to an arbitrary path that should be symlinked on installation.  This is an older form which is preserved only for unusual cases.  The `app` stanza is strongly preferred for linking `.app` bundles.
 
 ## Optional Stanzas
@@ -327,8 +329,7 @@ app 'Alfred 2.app', :target => 'Jeeves.app'
 
 If `:target` has a leading slash, it is interpreted as an absolute path.
 The containing directory for the absolute path will be created if it does
-not already exist.  Example (from [oclint.rb](../Casks/oclint.rb)).
-
+not already exist.  Example (from [oclint.rb](../Casks/oclint.rb)):
 
 ```ruby
 binary 'oclint-0.7-x86_64-apple-darwin-10/lib/oclint', :target => '/usr/local/lib/oclint'
@@ -338,7 +339,23 @@ binary 'oclint-0.7-x86_64-apple-darwin-10/lib/oclint', :target => '/usr/local/li
 
 The `:target` key works similarly for other Cask artifacts, such as
 `binary`, `colorpicker`, `font`, `input_method`, `prefpane`, `qlplugin`,
-`service`, and `widget`.
+`service`, `widget`, `suite`, and `link`.
+
+
+## Suite Stanza Details
+
+Some distributions provide a suite of multiple applications, or an
+application with required data, to be installed together in a
+subdirectory of `~/Applications`.
+
+For these Casks, use the `suite` stanza to define the directory
+containing the application suite.  Example (from [sketchup.rb](../Casks/sketchup.rb)):
+
+```ruby
+suite 'SketchUp 2014'
+```
+
+The value of `suite` is never an `.app` bundle, but a plain directory.
 
 
 ## Pkg Stanza Details
