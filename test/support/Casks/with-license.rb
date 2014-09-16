@@ -1,5 +1,5 @@
 class WithLicense < TestCask
-  url TestHelper.local_binary('transmission-2.61.dmg')
+  url TestHelper.local_binary_url('transmission-2.61.dmg')
   homepage 'http://example.com/with-license'
   license :gpl
   version '2.61'

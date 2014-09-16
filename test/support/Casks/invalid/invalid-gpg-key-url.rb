@@ -1,5 +1,5 @@
 class InvalidGpgKeyUrl < TestCask
-  url TestHelper.local_binary('caffeine.zip')
+  url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/invalid-gpg-key-url'
   gpg 'http://example.com/gpg-signature.asc',
       :key_url => 1
