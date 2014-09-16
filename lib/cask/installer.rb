@@ -139,12 +139,15 @@ class Cask::Installer
   end
 
   def zap
-    odebug "Zap: implied uninstall"
+    ohai %Q{Implied "brew cask uninstall #{@cask}"}
     uninstall_artifacts
     if Cask::Artifact::Zap.me?(@cask)
-      odebug "Dispatching zap directives"
+      ohai "Dispatching zap stanza"
       Cask::Artifact::Zap.new(@cask, @command).zap_phase
+    else
+      opoo "No zap stanza present for Cask '#{@cask}'"
     end
+    ohai %Q{Removing all staged versions of Cask '#{@cask}'}
     purge_caskroom_path
   end
 
