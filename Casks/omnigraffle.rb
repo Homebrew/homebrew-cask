@@ -6,4 +6,5 @@ class Omnigraffle < Cask
   homepage 'http://www.omnigroup.com/products/omnigraffle'
 
   app 'OmniGraffle.app'
+  zap :files => '~/Library/Application Support/The Omni Group/OmniGraffle'
 end

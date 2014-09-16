@@ -6,4 +6,8 @@ class Charles < Cask
   homepage 'http://www.charlesproxy.com/'
 
   app 'Charles.app'
+  zap :files => [
+                 '~/Library/Application Support/Charles',
+                 '~/Library/Preferences/com.xk72.charles.config',
+                ]
 end

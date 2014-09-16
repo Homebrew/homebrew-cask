@@ -12,4 +12,5 @@ class Flux < Cask
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'org.herf.Flux', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
+  zap :files => '~/Library/Preferences/org.herf.Flux.plist'
 end

@@ -7,4 +7,5 @@ class Twitterrific < Cask
   homepage 'http://twitterrific.com/mac'
 
   app 'Twitterrific.app'
+  zap :files => '~/Library/Application Support/Twitterrific'
 end

@@ -7,4 +7,9 @@ class Mou < Cask
   homepage 'http://mouapp.com/'
 
   app 'Mou.app'
+  zap :files => [
+                 '~/Library/Preferences/com.mouapp.Mou.plist',
+                 '~/Library/Preferences/com.mouapp.Mou.LSSharedFileList.plist',
+                 '~/Library/Application Support/Mou',
+                ]
 end

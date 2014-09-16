@@ -7,4 +7,8 @@ class Moom < Cask
   homepage 'http://manytricks.com/moom/'
 
   app 'Moom.app'
+  zap :files => [
+                 '~/Library/Preferences/com.manytricks.Moom.plist',
+                 '~/Library/Application Support/Many Tricks',
+                ]
 end

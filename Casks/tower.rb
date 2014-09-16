@@ -7,4 +7,8 @@ class Tower < Cask
   homepage 'http://www.git-tower.com/'
 
   app 'Tower.app'
+  zap :files => [
+                 '~/Library/Application Support/com.fournova.Tower2',
+                 '~/Library/Preferences/com.fournova.Tower2.plist',
+                ]
 end

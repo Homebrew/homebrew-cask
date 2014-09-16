@@ -7,4 +7,5 @@ class GmailNotifr < Cask
   homepage 'http://ashchan.com/projects/gmail-notifr'
 
   app 'Gmail Notifr.app'
+  zap :files => '~/Library/Preferences/com.ashchan.GmailNotifr.plist'
 end

@@ -11,4 +11,14 @@ class Atom < Cask
   postflight do
     system '/usr/bin/defaults', 'write', 'com.github.atom', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
+  zap :files => [
+                 '~/Library/Preferences/com.github.atom.plist',
+                 '~/.atom/config.cson',
+                 '~/.atom/init.coffee',
+                 '~/.atom/keymap.cson',
+                 '~/.atom/keymaps',
+                 '~/.atom/packages',
+                 '~/.atom/snippets.cson',
+                 '~/.atom/styles.less',
+                ]
 end

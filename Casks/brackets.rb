@@ -6,4 +6,8 @@ class Brackets < Cask
   homepage 'http://brackets.io'
 
   app 'Brackets.app'
+  zap :files => [
+                 '~/Library/Application Support/Brackets',
+                 '~/Library/Preferences/io.brackets.appshell.plist',
+                ]
 end

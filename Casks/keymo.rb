@@ -7,4 +7,5 @@ class Keymo < Cask
   homepage 'http://manytricks.com/keymo'
 
   app 'Keymo.app'
+  zap :files => '~/Library/Preferences/com.manytricks.Keymo.plist'
 end

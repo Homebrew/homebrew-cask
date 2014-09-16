@@ -6,4 +6,8 @@ class Quicksilver < Cask
   homepage 'http://qsapp.com/'
 
   app 'Quicksilver.app'
+  zap :files => [
+                 '~/Library/Preferences/com.blacktree.Quicksilver.plist',
+                 '~/Library/Application Support/Quicksilver',
+                ]
 end

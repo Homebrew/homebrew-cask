@@ -7,4 +7,8 @@ class Colloquy < Cask
   homepage 'http://colloquy.info/'
 
   app 'Colloquy.app'
+  zap :files => [
+                 '~/Library/Preferences/info.colloquy.plist',
+                 '~/Library/Application Support/Colloquy',
+                ]
 end

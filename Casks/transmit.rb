@@ -7,4 +7,8 @@ class Transmit < Cask
   homepage 'http://panic.com/transmit'
 
   app 'Transmit.app'
+  zap :files => [
+                 '~/Library/Preferences/com.panic.Transmit.plist',
+                 '~/Library/Application Support/Transmit',
+                ]
 end

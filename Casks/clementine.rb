@@ -7,4 +7,5 @@ class Clementine < Cask
   homepage 'http://www.clementine-player.org/'
 
   app 'clementine.app'
+  zap :files => '~/Library/Preferences/org.clementine-player.Clementine.plist'
 end

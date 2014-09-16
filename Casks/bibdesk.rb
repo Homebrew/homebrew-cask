@@ -7,4 +7,8 @@ class Bibdesk < Cask
   homepage 'http://bibdesk.sourceforge.net/'
 
   app 'BibDesk.app'
+  zap :files => [
+                 '~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist',
+                 '~/Library/Application Support/BibDesk',
+                ]
 end

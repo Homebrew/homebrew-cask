@@ -6,4 +6,6 @@ class Filezilla < Cask
   homepage 'https://filezilla-project.org/'
 
   app 'FileZilla.app'
+  # todo verify that this does not contain user-generate content
+  # zap :files => '~/.filezilla'
 end

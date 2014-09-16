@@ -7,4 +7,5 @@ class Chicken < Cask
   homepage 'http://sourceforge.net/projects/chicken/'
 
   app 'Chicken.app'
+  zap :files => '~/Library/Preferences/net.sourceforge.chicken.plist'
 end

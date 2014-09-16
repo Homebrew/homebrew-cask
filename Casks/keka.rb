@@ -7,4 +7,5 @@ class Keka < Cask
   homepage 'http://kekaosx.com/'
 
   app 'Keka.app'
+  zap :files => '~/Library/Preferences/com.aone.keka.plist'
 end

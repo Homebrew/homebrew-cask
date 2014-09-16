@@ -11,4 +11,5 @@ class Skype < Cask
   homepage 'http://www.skype.com'
 
   app 'Skype.app'
+  zap :files => '~/Library/Application Support/Skype'
 end

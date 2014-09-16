@@ -7,4 +7,5 @@ class Selfcontrol < Cask
   homepage 'http://selfcontrolapp.com/'
 
   app 'SelfControl.app'
+  zap :files => '~/Library/Preferences/org.eyebeam.SelfControl.plist'
 end

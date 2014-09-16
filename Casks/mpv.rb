@@ -10,4 +10,11 @@ class Mpv < Cask
   caveats do
     files_in_usr_local
   end
+  zap :files => [
+                 '~/.mpv/channels.conf',
+                 '~/.mpv/config',
+                 '~/.mpv/input.conf',
+                ]
+  # todo :rmdir is not yet supported
+  #   :rmdir     '~/.mpv'
 end

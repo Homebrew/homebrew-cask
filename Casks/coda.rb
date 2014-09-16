@@ -7,4 +7,8 @@ class Coda < Cask
   homepage 'https://panic.com/Coda/'
 
   app 'Coda 2.app'
+  zap :files => [
+                 '~/Library/Application Support/Coda 2',
+                 '~/Library/Preferences/com.panic.Coda2.plist',
+                ]
 end

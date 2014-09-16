@@ -6,4 +6,8 @@ class Hazel < Cask
   homepage 'http://www.noodlesoft.com/hazel.php'
 
   prefpane 'Hazel.prefPane'
+  zap :files => [
+                 '~/Library/Application Support/Hazel',
+                 '~/Library/Preferences/com.noodlesoft.Hazel.plist',
+                ]
 end

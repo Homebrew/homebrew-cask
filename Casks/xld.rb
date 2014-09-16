@@ -7,4 +7,8 @@ class Xld < Cask
   homepage 'http://tmkk.undo.jp/xld/index_e.html'
 
   app 'XLD.app'
+  zap :files => [
+                 '~/Library/Application Support/XLD',
+                 '~/Library/Preferences/jp.tmkk.XLD.plist',
+                ]
 end

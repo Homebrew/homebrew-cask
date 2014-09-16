@@ -6,4 +6,5 @@ class Spotify < Cask
   homepage 'https://www.spotify.com'
 
   app 'Spotify.app'
+  zap :files => '~/Library/Preferences/com.spotify.client.plist'
 end

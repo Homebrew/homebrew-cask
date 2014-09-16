@@ -7,4 +7,5 @@ class Skim < Cask
   homepage 'http://skim-app.sourceforge.net/'
 
   app 'Skim.app'
+  zap :files => '~/Library/Preferences/net.sourceforge.skim-app.skim.plist'
 end

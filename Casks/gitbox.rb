@@ -7,4 +7,5 @@ class Gitbox < Cask
   homepage 'http://gitboxapp.com/'
 
   app 'Gitbox.app'
+  zap :files => '~/Library/Preferences/com.oleganza.gitbox.plist'
 end

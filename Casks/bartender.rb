@@ -12,4 +12,5 @@ class Bartender < Cask
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'com.surteesstudios.Bartender', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
+  zap :files => '~/Library/Preferences/com.surteesstudios.Bartender.plist'
 end
