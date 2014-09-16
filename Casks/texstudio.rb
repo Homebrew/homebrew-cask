@@ -1,8 +1,8 @@
 class Texstudio < Cask
-  version '2.7.0'
-  sha256 '70a95e7602a790b71744ce84a649dfe5f7b597caa42007e3c34c3e631ffadb22'
+  version '2.8.4'
+  sha256 'a4257563d557fb66b35c562322852b969bb7768624bf02e7bf2cc2c31a5e1fbb'
 
-  url 'https://downloads.sourceforge.net/sourceforge/texstudio/texstudio_2.7.0_osx_qt5.dmg'
+  url "http://downloads.sourceforge.net/sourceforge/texstudio/texstudio_#{version}_osx_qt5.zip"
   homepage 'http://texstudio.sourceforge.net/'
 
   app 'texstudio.app'
