@@ -19,10 +19,10 @@ names, and other aspects of this manual are still subject to change.
 
 ## FREQUENTLY USED COMMANDS
 
-  * `install` <Cask>:
+  * `install [--force]` <Cask>:
     Install <Cask>.
 
-  * `uninstall` <Cask>:
+  * `uninstall [--force]` <Cask>:
     Uninstall <Cask>.
 
   * `search` <text> | /<regexp>/:
@@ -74,7 +74,8 @@ names, and other aspects of this manual are still subject to change.
     Display information about <Cask>.
 
   * `install [--force]` <Cask>:
-    Install <Cask>.
+    Install <Cask>.  With `--force`, re-install even if the Cask appears to
+    be already present.
 
     <Cask> is usually the name of a Cask as returned by `brew cask search`,
     but see [OTHER WAYS TO SPECIFY A CASK][] for variations.
@@ -86,8 +87,21 @@ names, and other aspects of this manual are still subject to change.
 
     If <Casks> are given, list the installed files for <Casks>.
 
-  * `uninstall` or `rm` or `remove` <Cask>:
-    Uninstall <Cask>.
+  * `uninstall [--force]` or `rm` or `remove` <Cask>:
+    Uninstall <Cask>.  With `--force`, uninstall even if the Cask does
+    not appear to be present.
+
+    Note that `uninstall --force` is currently imperfect.  It will follow
+    the `uninstall` instructions from *newest* Cask definition, even if
+    the given Cask has changed since you installed it.  The result is that
+    `uninstall --force` will always succeed in removing relevant files
+    under `/opt/homebrew-cask`, but will sometimes fail to remove relevant
+    installed files outside of `/opt/homebrew-cask`.  This issue is being
+    addressed.
+
+    `uninstall` without `--force` is also imperfect.  It may be unable to
+    perform an `uninstall` operation if the given Cask has changed since you
+    installed it.  This issue is being addressed.
 
   * `zap` <Cask>:
     Unconditionally remove _all_ files associated with <Cask>.

@@ -315,5 +315,29 @@ describe Cask::Installer do
       (Cask.caskroom/'local-caffeine'/caffeine.version).wont_be :directory?
       (Cask.caskroom/'local-caffeine').wont_be :directory?
     end
+
+    it "uninstalls all versions if force is set" do
+      caffeine = Cask.load('local-caffeine')
+      installer = Cask::Installer.new(caffeine)
+      mutated_version = caffeine.version + '.1'
+
+      shutup do
+        installer.install
+      end
+
+      (Cask.caskroom/'local-caffeine'/caffeine.version).must_be :directory?
+      (Cask.caskroom/'local-caffeine'/mutated_version).wont_be  :directory?
+      FileUtils.mv(Cask.caskroom/'local-caffeine'/caffeine.version, Cask.caskroom/'local-caffeine'/mutated_version)
+      (Cask.caskroom/'local-caffeine'/caffeine.version).wont_be :directory?
+      (Cask.caskroom/'local-caffeine'/mutated_version).must_be  :directory?
+
+      shutup do
+        installer.uninstall(true)
+      end
+
+      (Cask.caskroom/'local-caffeine'/caffeine.version).wont_be :directory?
+      (Cask.caskroom/'local-caffeine'/mutated_version).wont_be  :directory?
+      (Cask.caskroom/'local-caffeine').wont_be :directory?
+    end
   end
 end

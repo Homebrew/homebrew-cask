@@ -66,6 +66,15 @@ $ brew cask uninstall google-chrome
 This will both uninstall the Cask and remove symlinks which were created in
 `~/Applications`.
 
+To uninstall all versions of a Cask, use `--force`:
+
+```bash
+$ brew cask uninstall --force google-chrome
+```
+
+Note that `uninstall --force` is currently imperfect.  See the man page for
+more information.
+
 ## Other Commands
 
 * `info` -- displays information about the given Cask

@@ -122,10 +122,11 @@ class Cask::Installer
     self.class.print_caveats(@cask)
   end
 
-  def uninstall
+  def uninstall(force=false)
     odebug "Cask::Installer.uninstall"
     uninstall_artifacts
     purge_versioned_files
+    purge_caskroom_path if force
   end
 
   def uninstall_artifacts
