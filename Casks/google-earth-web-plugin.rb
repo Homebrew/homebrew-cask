@@ -1,5 +1,5 @@
 class GoogleEarthWebPlugin < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://r2---sn-po4vapo3-j3ae.c.pack.google.com/edgedl/earth/plugin/current/googleearth-mac-plugin-intel.dmg'
