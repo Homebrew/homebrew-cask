@@ -1,5 +1,5 @@
 class Expandrive < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://updates.expandrive.com/apps/expandrive/download_latest'
