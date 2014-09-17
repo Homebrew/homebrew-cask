@@ -1,5 +1,5 @@
 class LeagueOfLegends < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://l3cdn.riotgames.com/Installer/NA_Mac_Installer/League%20of%20Legends%20NA.dmg'
