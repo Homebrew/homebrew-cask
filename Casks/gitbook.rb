@@ -1,5 +1,5 @@
 class Gitbook < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.gitbook.io/editor/download'
