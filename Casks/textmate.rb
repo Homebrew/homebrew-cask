@@ -1,5 +1,5 @@
 class Textmate < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://api.textmate.org/downloads/release'
