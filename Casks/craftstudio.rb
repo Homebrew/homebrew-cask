@@ -1,5 +1,5 @@
 class Craftstudio < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://craftstud.io/files/OSX/CraftStudio.pkg'
