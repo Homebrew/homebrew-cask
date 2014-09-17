@@ -1,5 +1,5 @@
 class UnityWebPlayer < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://webplayer.unity3d.com/download_webplayer-3.x/webplayer-mini.dmg'
