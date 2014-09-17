@@ -1,5 +1,5 @@
 class Yemuzip < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.yellowmug.com/download/YemuZip.dmg'
