@@ -1,5 +1,5 @@
 class Focus < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.heyfocus.com/releases/Focus-latest.zip'
