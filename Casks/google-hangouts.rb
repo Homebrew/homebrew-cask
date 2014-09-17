@@ -1,5 +1,5 @@
 class GoogleHangouts < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://dl.google.com/googletalk/googletalkplugin/GoogleVoiceAndVideoSetup.dmg'
