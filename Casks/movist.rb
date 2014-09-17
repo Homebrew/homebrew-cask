@@ -1,5 +1,5 @@
 class Movist < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://github.com/downloads/samiamwork/Movist/Movist.app.zip'
