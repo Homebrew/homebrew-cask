@@ -1,5 +1,5 @@
 class Twentytwo < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://github.com/marcw/twentytwo/raw/master/dist/TwentyTwo.dmg'
