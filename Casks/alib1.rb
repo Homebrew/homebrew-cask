@@ -1,6 +1,6 @@
 class Alib1 < Cask
   # note: "1" is not a version number, but an intrinsic part of the product name
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://presstube.com/screensavers/Presstube-ALib1-mac.zip'
