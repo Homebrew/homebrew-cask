@@ -1,5 +1,5 @@
 class Soulver < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.acqualia.com/files/download.php?product=soulver'
