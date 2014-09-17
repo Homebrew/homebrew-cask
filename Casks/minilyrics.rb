@@ -1,5 +1,5 @@
 class Minilyrics < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.crintsoft.com/download/MiniLyrics.dmg'
