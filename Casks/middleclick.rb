@@ -7,7 +7,7 @@ class Middleclick < Cask
     url 'http://clement.beffa.org/labs/downloads/MiddleClick-maverick.zip'
   end
   homepage 'http://clement.beffa.org/labs/projects/middleclick'
-  version 'latest'
+  version :latest
   sha256 :no_check
   app 'MiddleClick.app'
 end
