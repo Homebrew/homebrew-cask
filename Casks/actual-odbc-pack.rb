@@ -1,5 +1,5 @@
 class ActualOdbcPack < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://actualtechnologies.cachefly.net/Actual_ODBC_Pack.dmg'
