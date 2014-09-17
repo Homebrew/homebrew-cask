@@ -1,7 +1,7 @@
 # encoding: UTF-8
 class Baiduinput < Cask
   version '3.3_1000e'
-  sha256 '57d50c7991e0d833ed5b34297168745590074d838f6948469dbaf8b92a84e082'
+  sha256 '7fbfd7270ce5c8d3a7e801ce67b4e858089299ef3ba96b3c0feb110d87da24e2'
 
   url "http://wuxian.baidu.com/download/1000e/baiduinput_mac_v#{version}.dmg"
   homepage 'http://wuxian.baidu.com/input/mac.html'
