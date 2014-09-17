@@ -57,6 +57,7 @@ This notice will be removed for the final form.**
 | `before_uninstall`    | `uninstall_preflight`
 | `after_uninstall`     | `uninstall_postflight`
 | `depends_on_formula`  | `depends_on :formula`
+| `version 'latest'`    | `version :latest`
 
 
 ## All Supported Stanzas (1.0)
