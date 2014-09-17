@@ -1,5 +1,5 @@
 class Flowdock < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://flowdock-resources.s3.amazonaws.com/mac/Flowdock.zip'
