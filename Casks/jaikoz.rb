@@ -1,5 +1,5 @@
 class Jaikoz < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://jthink.net/jaikoz/jsp/manualdownload/jaikoz-osx.dmg'
