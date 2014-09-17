@@ -1,5 +1,5 @@
 class GoogleJapaneseIme < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://dl.google.com/japanese-ime/latest/GoogleJapaneseInput.dmg'
