@@ -1,5 +1,5 @@
 class Toau < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://toauapp.com/download/Toau.zip'
