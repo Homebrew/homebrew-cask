@@ -1,5 +1,5 @@
 class Moneyplex < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.matrica.com/download/mac/moneyplex.dmg'
