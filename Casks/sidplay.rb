@@ -1,5 +1,5 @@
 class Sidplay < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.twinbirds.com/sidplay/SIDPLAY4.zip'
