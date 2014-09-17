@@ -1,5 +1,5 @@
 class Adventure < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.lobotomo.com/products/downloads/Adventure.dmg'
