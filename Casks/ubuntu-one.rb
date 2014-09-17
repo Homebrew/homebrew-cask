@@ -1,5 +1,5 @@
 class UbuntuOne < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://one.ubuntu.com/download/mac/client'
