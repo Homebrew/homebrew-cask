@@ -1,5 +1,5 @@
 class Pixelstick < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://plumamazing.com/bin/pixelstick/pixelstick.zip'
