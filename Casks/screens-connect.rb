@@ -1,5 +1,5 @@
 class ScreensConnect < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://screensconnect.com/downloads/screensconnect.dmg'
