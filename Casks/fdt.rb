@@ -1,5 +1,5 @@
 class Fdt < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://fdt.powerflasher.com/update/fdt/installer/FDT_osx64.dmg'
