@@ -1,5 +1,5 @@
 class AmazonCloudDrive < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://d29x207vrinatv.cloudfront.net/AmazonCloudDrive.dmg'
