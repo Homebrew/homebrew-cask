@@ -1,5 +1,5 @@
 class NikePlusConnect < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://nikeplus.nike.com/nikeplus/nikeconnect/installers/macosx/Nike+Connect_new.dmg'
