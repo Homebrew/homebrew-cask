@@ -1,5 +1,5 @@
 class Ibabel < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://macinchem.org/ibabel/ibabel3_files/iBabel.zip'
