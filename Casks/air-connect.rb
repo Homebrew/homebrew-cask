@@ -1,5 +1,5 @@
 class AirConnect < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://downloads.avatron.com/AirConnectInstaller.zip'
