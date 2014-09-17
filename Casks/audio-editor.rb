@@ -1,5 +1,5 @@
 class AudioEditor < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.macsome.com/AudioEditor.dmg'
