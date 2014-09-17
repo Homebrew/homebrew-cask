@@ -1,5 +1,5 @@
 class Darteditor < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://storage.googleapis.com/dart-archive/channels/stable/release/latest/editor/darteditor-macos-x64.zip'
