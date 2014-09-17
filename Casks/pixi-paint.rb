@@ -1,5 +1,5 @@
 class PixiPaint < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://0.pixiecdn.com/PixiePaint-osx.zip'
