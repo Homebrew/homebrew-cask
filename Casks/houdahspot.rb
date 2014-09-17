@@ -1,5 +1,5 @@
 class Houdahspot < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.houdah.com/houdahSpot/download_assets/HoudahSpot_latest.zip'
