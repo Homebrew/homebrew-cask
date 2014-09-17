@@ -1,5 +1,5 @@
 class Copy < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://copy.com/install/mac/Copy.dmg'
