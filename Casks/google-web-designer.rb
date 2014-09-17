@@ -1,5 +1,5 @@
 class GoogleWebDesigner < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://dl.google.com/webdesigner/mac/shell/googlewebdesigner_mac.dmg'
