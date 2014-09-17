@@ -1,5 +1,5 @@
 class Baygenie < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.baygenie.com/Download/BayGenie4Mac.dmg'
