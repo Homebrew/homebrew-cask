@@ -1,5 +1,5 @@
 class SketchToolbox < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://sketchtoolbox.com/Sketch%20Toolbox.zip'
