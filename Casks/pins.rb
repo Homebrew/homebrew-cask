@@ -1,5 +1,5 @@
 class Pins < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://pinsapp.com/download/Pins.dmg'
