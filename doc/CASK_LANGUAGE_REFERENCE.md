@@ -66,7 +66,7 @@ Each of the following stanzas is required for every Cask.
 | ------------------ |------------------------------ | ----------- |
 | `url`              | No                            | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](#url-stanza-details))
 | `homepage`         | No                            | application homepage; used for the `brew cask home` command
-| `version`          | No                            | application version; give value of `'latest'` if versioned downloads are not offered
+| `version`          | No                            | application version; give value of `:latest`  if versioned downloads are not offered
 | `sha256`           | No                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
 
 
