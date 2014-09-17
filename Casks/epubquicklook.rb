@@ -1,5 +1,5 @@
 class Epubquicklook < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://people.ict.usc.edu/~leuski/programming/EPUBQuickLookPlugin.dmg'
