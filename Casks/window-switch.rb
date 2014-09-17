@@ -1,5 +1,5 @@
 class WindowSwitch < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://xpra.org/dists/osx/x86/Window-Switch.dmg'
