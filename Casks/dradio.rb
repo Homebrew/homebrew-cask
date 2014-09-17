@@ -1,5 +1,5 @@
 class Dradio < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://dradio.me/download'
