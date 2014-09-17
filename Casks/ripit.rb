@@ -1,5 +1,5 @@
 class Ripit < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://files.thelittleappfactory.com/ripit/RipIt.zip'
