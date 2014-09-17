@@ -1,5 +1,5 @@
 class Voodoopad < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://plausible.coop/static/download/VoodooPad.zip'
