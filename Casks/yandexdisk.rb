@@ -1,5 +1,5 @@
 class Yandexdisk < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://disk.yandex.com/download/Yandex.Disk.Mac.dmg'
