@@ -1,5 +1,5 @@
 class Intermission < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://dm.rogueamoeba.com/mirror/files/Intermission.zip'
