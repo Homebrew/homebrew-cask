@@ -1,5 +1,5 @@
 class WhatsappPocket < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.fireebok.com/product/WhatsApp_Pocket_Mac.dmg'
