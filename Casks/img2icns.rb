@@ -1,5 +1,5 @@
 class Img2icns < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://static.shinyfrog.net/downloads/image2icon/Img2icns.zip'
