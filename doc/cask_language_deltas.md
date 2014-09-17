@@ -31,6 +31,7 @@ This notice will be removed for the final form.**
 
 ## Additions (1.0)
 
+ * `artifact`
  * `depends_on :cask`
    * stub - not yet functional
  * `depends_on :macos`
@@ -51,7 +52,7 @@ This notice will be removed for the final form.**
 | old form              | new form
 | --------------------- |----------------
 | `install`             | `pkg`
-| `link`                | `app`  (note: `link` is still available, with different semantics)
+| `link`                | `app` (or sometimes `suite` or `artifact`)
 | `before_install`      | `preflight`
 | `after_install`       | `postflight`
 | `before_uninstall`    | `uninstall_preflight`

@@ -89,7 +89,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `service`          | yes                           | relative path to a service that should be linked into the `~/Library/Services` folder on installation
 | `widget`           | yes                           | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation (ALPHA: DOES NOT WORK YET)
 | `suite`            | yes                           | relative path to a containing directory that should be linked into the `~/Applications` folder on installation (see also [Suite Stanza Details](#suite-stanza-details))
-| `link`             | yes                           | relative path to an arbitrary path that should be symlinked on installation.  This is an older form which is preserved only for unusual cases.  The `app` stanza is strongly preferred for linking `.app` bundles.
+| `artifact`         | yes                           | relative path to an arbitrary path that should be symlinked on installation.  This is only for unusual cases.  The `app` stanza is strongly preferred when linking `.app` bundles.
 
 ## Optional Stanzas
 
@@ -339,7 +339,7 @@ binary 'oclint-0.7-x86_64-apple-darwin-10/lib/oclint', :target => '/usr/local/li
 
 The `:target` key works similarly for other Cask artifacts, such as
 `binary`, `colorpicker`, `font`, `input_method`, `prefpane`, `qlplugin`,
-`service`, `widget`, `suite`, and `link`.
+`service`, `widget`, `suite`, and `artifact`.
 
 
 ## Suite Stanza Details
