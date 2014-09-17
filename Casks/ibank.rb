@@ -1,5 +1,5 @@
 class Ibank < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.iggsoft.com/ibank/iBank4_Web.dmg'
