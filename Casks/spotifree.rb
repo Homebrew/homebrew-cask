@@ -1,5 +1,5 @@
 class Spotifree < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://spotifree.gordinskiy.com/files/Spotifree.dmg'
