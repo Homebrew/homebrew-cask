@@ -1,5 +1,5 @@
 class Cinch < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.irradiatedsoftware.com/download/Cinch.zip'
