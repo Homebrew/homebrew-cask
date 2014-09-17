@@ -1,5 +1,5 @@
 class Sauce < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://saucelabs.com/downloads/Sauce-for-Mac.dmg'
