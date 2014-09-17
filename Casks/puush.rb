@@ -1,5 +1,5 @@
 class Puush < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://puush.me/dl/puush.zip'
