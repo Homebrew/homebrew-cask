@@ -1,5 +1,5 @@
 class PrefSetter < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.nightproductions.net/downloads/prefsetter.zip'
