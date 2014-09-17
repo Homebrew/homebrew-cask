@@ -1,5 +1,5 @@
 class Anvil < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://sparkler.herokuapp.com/apps/3/download'
