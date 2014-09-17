@@ -1,5 +1,5 @@
 class Loom < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://loom.com/download/loom-mac.dmg'
