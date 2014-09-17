@@ -1,5 +1,5 @@
 class SpiritedAway < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://dl.dropbox.com/u/1025/spiritedaway/Spirited%20Away.zip'
