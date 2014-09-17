@@ -1,5 +1,5 @@
 class Tunewiki < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.tunewiki.com/download/desktop/TuneWiki_Installer.dmg'
