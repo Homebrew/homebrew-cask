@@ -1,5 +1,5 @@
 class Odesk < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.odesk.com/downloads/mac/minor/oDeskTeam.dmg'
