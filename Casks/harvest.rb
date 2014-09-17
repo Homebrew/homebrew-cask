@@ -1,5 +1,5 @@
 class Harvest < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.getharvest.com/harvest/mac/Harvest.zip'
