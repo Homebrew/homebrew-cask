@@ -1,5 +1,5 @@
 class Gopanda < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://pandanet-igs.com/gopanda2/installer/stable/mac-32/gopanda2-mac-32.zip'
