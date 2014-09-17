@@ -1,5 +1,5 @@
 class Appzapper < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.appzapper.com/downloads/appzapper.dmg'
