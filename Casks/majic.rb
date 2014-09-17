@@ -1,5 +1,5 @@
 class Majic < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://erikhinterbichler.com/blog/wp-content/uploads/software/Majic.zip'
