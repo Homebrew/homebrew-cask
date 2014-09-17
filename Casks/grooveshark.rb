@@ -1,5 +1,5 @@
 class Grooveshark < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://adops-fio.grooveshark.com/desktop-app/downloads/grooveshark.zip'
