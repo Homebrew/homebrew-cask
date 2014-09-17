@@ -1,5 +1,5 @@
 class Rdio < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.rdio.com/media/static/desktop/mac/Rdio.dmg'
