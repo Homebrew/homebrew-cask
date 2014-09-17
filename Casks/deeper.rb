@@ -1,5 +1,5 @@
 class Deeper < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://joel.barriere.pagesperso-orange.fr/dl/109/Deeper.dmg'
