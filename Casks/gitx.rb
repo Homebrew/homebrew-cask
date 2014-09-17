@@ -1,5 +1,5 @@
 class Gitx < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://frim.frim.nl/GitXStable.app.zip'
