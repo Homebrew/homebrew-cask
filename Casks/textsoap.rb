@@ -1,5 +1,5 @@
 class Textsoap < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://unmarked.s3.amazonaws.com/textsoap7.zip'
