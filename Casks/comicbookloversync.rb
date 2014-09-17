@@ -1,5 +1,5 @@
 class Comicbookloversync < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.bitcartel.com/downloads/comicbookloversync.zip'
