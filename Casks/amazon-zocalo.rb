@@ -1,5 +1,5 @@
 class AmazonZocalo < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://dpfrknqwmbop6.cloudfront.net/mac/Amazon%20Zocalo.pkg'
