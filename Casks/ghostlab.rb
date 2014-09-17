@@ -1,5 +1,5 @@
 class Ghostlab < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://awesome.vanamco.com/downloads/ghostlab/Ghostlab.dmg'
