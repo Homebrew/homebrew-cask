@@ -1,5 +1,5 @@
 class Slate < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://slate.ninjamonkeysoftware.com/Slate.dmg'
