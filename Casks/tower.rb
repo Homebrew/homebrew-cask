@@ -1,5 +1,5 @@
 class Tower < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.git-tower.com/download'
