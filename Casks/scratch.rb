@@ -1,5 +1,5 @@
 class Scratch < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://cdn.scratch.mit.edu/scratchr2/static/sa/Scratch.air'
