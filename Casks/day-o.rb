@@ -1,5 +1,5 @@
 class DayO < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://shauninman.com/assets/downloads/Day-O.zip'
