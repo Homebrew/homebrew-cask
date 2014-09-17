@@ -1,5 +1,5 @@
 class Sonora < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://github.com/downloads/sonoramac/Sonora/Sonora.zip'
