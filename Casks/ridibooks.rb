@@ -1,5 +1,5 @@
 class Ridibooks < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://ridibooks.com/getapp?os=mac'
