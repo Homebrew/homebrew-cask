@@ -1,5 +1,5 @@
 class Dterm < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://files.decimus.net/DTerm/DTerm.zip'
