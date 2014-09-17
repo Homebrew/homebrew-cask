@@ -206,24 +206,26 @@ module Cask::DSL
       end
     end
 
-    # This hash is transitional.  Each of these stanzas will
-    # ultimately either be removed or upgraded with its own
-    # unique semantics.
+    # Todo: this hash is transitional.  Each of these stanzas will
+    # ultimately either be removed or upgraded with its own unique
+    # semantics.
     STANZA_ALIASES = {
-                       :pkg                   => :install,          # to remove
-                       :app                   => :link,             # to upgrade
-                       :suite                 => :link,             # to upgrade
-                       :preflight             => :before_install,   # to remove
-                       :postflight            => :after_install,    # to remove
-                       :uninstall_preflight   => :before_uninstall, # to remove
-                       :uninstall_postflight  => :after_uninstall,  # to remove
+                       :pkg                   => :install,          # todo remove
+                       :app                   => :link,             # todo upgrade
+                       :suite                 => :link,             # todo upgrade
+                       :artifact              => :link,             # todo upgrade
+                       :preflight             => :before_install,   # todo remove
+                       :postflight            => :after_install,    # todo remove
+                       :uninstall_preflight   => :before_uninstall, # todo remove
+                       :uninstall_postflight  => :after_uninstall,  # todo remove
                      }
 
     def self.ordinary_artifact_types
       @@ordinary_artifact_types ||= [
-                                     :link,
+                                     :link,                         # todo remove
                                      :app,
                                      :suite,
+                                     :artifact,
                                      :prefpane,
                                      :qlplugin,
                                      :font,
@@ -234,7 +236,7 @@ module Cask::DSL
                                      :input_method,
                                      :internet_plugin,
                                      :screen_saver,
-                                     :install,      # deprecated
+                                     :install,                     # todo remove
                                      :pkg,
                                     ]
     end
@@ -262,10 +264,10 @@ module Cask::DSL
     end
 
     ARTIFACT_BLOCK_TYPES = [
-      :after_install,           # deprecated
-      :after_uninstall,         # deprecated
-      :before_install,          # deprecated
-      :before_uninstall,        # deprecated
+      :after_install,           # todo remove
+      :after_uninstall,         # todo remove
+      :before_install,          # todo remove
+      :before_uninstall,        # todo remove
       :preflight,
       :postflight,
       :uninstall_preflight,

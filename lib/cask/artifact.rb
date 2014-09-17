@@ -6,6 +6,7 @@ require 'cask/artifact/symlinked'
 require 'cask/artifact/hardlinked'
 
 require 'cask/artifact/app'
+require 'cask/artifact/artifact'        # generic 'artifact' stanza
 require 'cask/artifact/binary'
 require 'cask/artifact/after_block'
 require 'cask/artifact/before_block'
@@ -36,6 +37,7 @@ module Cask::Artifact
       Cask::Artifact::NestedContainer,
       Cask::Artifact::InstallScript,
       Cask::Artifact::App,
+      Cask::Artifact::Artifact,         # generic 'artifact' stanza
       Cask::Artifact::Colorpicker,
       Cask::Artifact::Pkg,
       Cask::Artifact::Prefpane,
