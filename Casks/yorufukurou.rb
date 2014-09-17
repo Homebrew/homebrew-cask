@@ -1,5 +1,5 @@
 class Yorufukurou < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://aki-null.net/yf/YoruFukurou_SL.zip'
