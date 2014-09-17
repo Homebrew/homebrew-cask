@@ -1,5 +1,5 @@
 class EnolsoftChmView < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.enolsoft.com/download/enolsoft-chm-view.dmg'
