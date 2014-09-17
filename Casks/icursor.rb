@@ -1,5 +1,5 @@
 class Icursor < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.macupdate.com/download/17059/iCursor.zip'
