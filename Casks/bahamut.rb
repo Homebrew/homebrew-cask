@@ -1,5 +1,5 @@
 class Bahamut < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://raw.github.com/sdegutis/bahamut/master/Builds/Bahamut-LATEST.app.tar.gz'
