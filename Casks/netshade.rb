@@ -1,5 +1,5 @@
 class Netshade < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://raynersoftware.com/downloads/NetShade.app.zip'
