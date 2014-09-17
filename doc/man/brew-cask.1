@@ -18,11 +18,11 @@ Homebrew\-cask works robustly enough that we welcome new users, but the project 
 .SH "FREQUENTLY USED COMMANDS"
 .
 .TP
-\fBinstall\fR \fICask\fR
+\fBinstall [\-\-force]\fR \fICask\fR
 Install \fICask\fR\.
 .
 .TP
-\fBuninstall\fR \fICask\fR
+\fBuninstall [\-\-force]\fR \fICask\fR
 Uninstall \fICask\fR\.
 .
 .TP
@@ -80,7 +80,7 @@ Display information about \fICask\fR\.
 .
 .TP
 \fBinstall [\-\-force]\fR \fICask\fR
-Install \fICask\fR\.
+Install \fICask\fR\. With \fB\-\-force\fR, re\-install even if the Cask appears to be already present\.
 .
 .IP
 \fICask\fR is usually the name of a Cask as returned by \fBbrew cask search\fR, but see \fIOTHER WAYS TO SPECIFY A CASK\fR for variations\.
@@ -93,8 +93,30 @@ Without any arguments, list all installed Casks\. With \fB\-1\fR, always format 
 If \fICasks\fR are given, list the installed files for \fICasks\fR\.
 .
 .TP
-\fBuninstall\fR or \fBrm\fR or \fBremove\fR \fICask\fR
-Uninstall \fICask\fR\.
+\fBuninstall [\-\-force]\fR or \fBrm\fR or \fBremove\fR \fICask\fR
+Uninstall \fICask\fR\. With \fB\-\-force\fR, uninstall even if the Cask does not appear to be present\.
+.
+.IP
+Note that \fBuninstall \-\-force\fR is currently imperfect\. It will follow the \fBuninstall\fR instructions from \fInewest\fR Cask definition, even if the given Cask has changed since you installed it\. The result is that \fBuninstall \-\-force\fR will always succeed in removing relevant files under \fB/opt/homebrew\-cask\fR, but will sometimes fail to remove relevant installed files outside of \fB/opt/homebrew\-cask\fR\. This issue is being addressed\.
+.
+.IP
+\fBuninstall\fR without \fB\-\-force\fR is also imperfect\. It may be unable to perform an \fBuninstall\fR operation if the given Cask has changed since you installed it\. This issue is being addressed\.
+.
+.TP
+\fBzap\fR \fICask\fR
+Unconditionally remove \fIall\fR files associated with \fICask\fR\.
+.
+.IP
+Implicitly performs all actions associated with \fBuninstall\fR, even if the Cask does not appear to be currently installed\.
+.
+.IP
+Removes all staged versions of the Cask distribution found under \fB/opt/homebrew\-cask/Caskroom/<Cask>\fR
+.
+.IP
+If the Cask definition contains a \fBzap\fR stanza, performs additional \fBzap\fR actions as defined there, such as removing local preference files\. \fBzap\fR actions are variable, depending on the level of detail defined by the Cask author\.
+.
+.IP
+\fB\fBzap\fR may remove resources which are shared between applications\.\fR
 .
 .TP
 \fBsearch\fR or \fB\-S\fR

@@ -1,5 +1,42 @@
 # CHANGELOG
 
+## 0.42.0
+
+* __Casks__
+ - 8 Casks added (1662 updated) by 21 contributors since 0.41.1
+ - 1875 total Casks
+* __Features__
+ - [#6155][], [#6207][] new verb `brew cask zap`
+ - [#6208][] add `--force` option for `brew cask uninstall`
+ - [#6167][] transition to `app` stanza (replaces most uses of `link`)
+ - [#6223][] transition to new DSL form `version :latest`
+ - [#6225][] add `artifact` stanza
+ - [#6192][] add DSL form `uninstall :rmdir`
+* __Breaking Changes__
+ - none
+* __Fixes__
+ - [#6206][] support `brew cask --version` per `USAGE.md`
+ - [#6193][] protect against inner ".." in uninstall paths
+* __Internal Changes__
+ - [#6187][] Refactor `{develop,production}_brew_cask` <3 [@treyharris][]
+* __Documentation__
+ - 10 doc commits since 0.41.1
+* __Contributors__
+ - 7 new contributors since 0.41.1
+ - 1018 total contributors
+
+[@treyharris]: https://github.com/treyharris
+[#6155]: https://github.com/caskroom/homebrew-cask/issues/6155
+[#6167]: https://github.com/caskroom/homebrew-cask/issues/6167
+[#6187]: https://github.com/caskroom/homebrew-cask/issues/6187
+[#6192]: https://github.com/caskroom/homebrew-cask/issues/6192
+[#6193]: https://github.com/caskroom/homebrew-cask/issues/6193
+[#6206]: https://github.com/caskroom/homebrew-cask/issues/6206
+[#6207]: https://github.com/caskroom/homebrew-cask/issues/6207
+[#6208]: https://github.com/caskroom/homebrew-cask/issues/6208
+[#6223]: https://github.com/caskroom/homebrew-cask/issues/6223
+[#6225]: https://github.com/caskroom/homebrew-cask/issues/6225
+
 ## 0.41.1
 
 * __Casks__
