@@ -1,5 +1,5 @@
 class Zephyros < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://raw.github.com/sdegutis/zephyros/master/Builds/Zephyros-LATEST.app.tar.gz'
