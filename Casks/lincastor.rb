@@ -1,5 +1,5 @@
 class Lincastor < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://dl.dropboxusercontent.com/u/7614970/LinCastor.zip'
