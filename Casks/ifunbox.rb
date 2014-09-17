@@ -1,5 +1,5 @@
 class Ifunbox < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://dl.i-funbox.com/mac/ifunboxmac.dmg'
