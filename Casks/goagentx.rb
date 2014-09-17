@@ -1,5 +1,5 @@
 class Goagentx < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://goagentx.com/files/GoAgentX.dmg'
