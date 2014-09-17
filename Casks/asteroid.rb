@@ -1,5 +1,5 @@
 class Asteroid < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.asteroidapp.com/downloader.php?Ver=latest'
