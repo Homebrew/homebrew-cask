@@ -1,5 +1,5 @@
 class Foldit < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://fold.it/portal/download/osx'
