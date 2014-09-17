@@ -6,7 +6,7 @@ class WithInstallable < TestCask
   pkg 'MyFancyPkg/Fancy.pkg'
   uninstall :script => { :executable => 'MyFancyPkg/FancyUninstaller.tool', :args => %w[--please] },
             :quit   => 'my.fancy.package.app',
-            :files  => [
+            :delete => [
                         '/permissible/absolute/path',
                         '~/impermissible/path/with/tilde',
                         'impermissible/relative/path',
