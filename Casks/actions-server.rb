@@ -1,5 +1,5 @@
 class ActionsServer < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://getactionsapp.com/downloads/ActionsServer.dmg'
