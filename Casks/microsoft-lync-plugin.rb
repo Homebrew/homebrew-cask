@@ -1,5 +1,5 @@
 class MicrosoftLyncPlugin < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://lync12.lyncweb.microsoft.com/lwa/Plugins/LWAPluginInstaller.pkg'
