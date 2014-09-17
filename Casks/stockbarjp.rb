@@ -1,5 +1,5 @@
 class Stockbarjp < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://midnightsuyama.org/download/StockBarJP.zip'
