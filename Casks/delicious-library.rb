@@ -1,5 +1,5 @@
 class DeliciousLibrary < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://delicious-monster.com/downloads/DeliciousLibrary3.zip'
