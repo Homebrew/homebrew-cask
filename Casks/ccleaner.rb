@@ -1,8 +1,8 @@
 class Ccleaner < Cask
-  version '1.08.302'
-  sha256 'f43c546ca73873dd0d5abc4d2563aa6400402dcced2b000517eb19c1fbe353d0'
+  version '1.09.311'
+  sha256 'c0aca1010085ccfd282e9e2356604a2f7513e9c1fada27c217d71660151775aa'
 
-  url 'http://download.piriform.com/mac/CCMacSetup108.dmg'
+  url 'http://download.piriform.com/mac/CCMacSetup109.dmg'
   homepage 'http://www.piriform.com/ccleaner'
 
   app 'CCleaner.app'
