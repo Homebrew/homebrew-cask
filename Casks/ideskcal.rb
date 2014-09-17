@@ -1,5 +1,5 @@
 class Ideskcal < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.hashbangind.com/files/iDeskCal-Latest.zip'
