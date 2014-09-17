@@ -1,5 +1,5 @@
 class Nzbvortex < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.nzbvortex.com/downloads/NZBVortex.dmg'
