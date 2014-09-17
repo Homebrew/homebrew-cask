@@ -1,5 +1,5 @@
 class Peepopen < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://topfunky.github.io/PeepOpen/dl/PeepOpen.dmg'
