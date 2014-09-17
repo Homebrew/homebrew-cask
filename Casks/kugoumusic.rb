@@ -1,5 +1,5 @@
 class Kugoumusic < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://macservice.kugou.com/download/KugouMusicForMac.dmg'
