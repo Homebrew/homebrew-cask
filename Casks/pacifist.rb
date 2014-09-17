@@ -1,5 +1,5 @@
 class Pacifist < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.charlessoft.com/cgi-bin/pacifist_download.cgi?type=dmg'
