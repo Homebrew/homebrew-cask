@@ -1,5 +1,5 @@
 class Wechat < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://dldir1.qq.com/foxmail/Mac/WeChat-en_US.dmg'
