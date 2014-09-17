@@ -1,5 +1,5 @@
 class Gawker < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://sourceforge.net/projects/gawker/files/latest/download'
