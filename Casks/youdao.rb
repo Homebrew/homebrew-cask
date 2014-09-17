@@ -1,6 +1,6 @@
 # encoding: UTF-8
 class Youdao < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://cidian.youdao.com/download/YoudaoDictForMac.dmg'
