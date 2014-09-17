@@ -1,5 +1,5 @@
 class ActivityAudit < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.dssw.co.uk/activityaudit/dsswactivityaudit.dmg'

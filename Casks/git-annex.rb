@@ -11,7 +11,7 @@ class GitAnnex < Cask
     url 'http://downloads.kitenet.net/git-annex/OSX/current/10.9_Mavericks/git-annex.dmg'
   end
   homepage 'http://git-annex.branchable.com/'
-  version 'latest'
+  version :latest
   sha256 :no_check
   app 'git-annex.app'
   binary 'git-annex.app/Contents/MacOS/git-annex'

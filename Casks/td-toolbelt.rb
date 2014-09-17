@@ -1,5 +1,5 @@
 class TdToolbelt < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://toolbelt.treasuredata.com/mac'

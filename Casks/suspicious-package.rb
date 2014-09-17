@@ -1,5 +1,5 @@
 class SuspiciousPackage < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.mothersruin.com/software/downloads/SuspiciousPackage.pkg'

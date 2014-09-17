@@ -1,5 +1,5 @@
 class Mailpile < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg'

@@ -1,5 +1,5 @@
 class Swinsian < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://swinsian.com/sparkle/Swinsian.zip'

@@ -1,5 +1,5 @@
 class NitrousDesktop < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.nitrous.io/mac/NitrousDesktop-latest.zip'

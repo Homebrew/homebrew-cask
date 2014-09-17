@@ -1,5 +1,5 @@
 class Hiss < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://collect3.com.au/hiss/Hiss.zip'

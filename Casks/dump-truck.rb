@@ -1,5 +1,5 @@
 class DumpTruck < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.goldenfrog.com/downloads/dumptruck/dumptruck.dmg'

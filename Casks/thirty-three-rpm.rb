@@ -1,5 +1,5 @@
 class ThirtyThreeRpm < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.edenwaith.com/downloads/33rpm.dmg'

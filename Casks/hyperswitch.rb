@@ -1,5 +1,5 @@
 class Hyperswitch < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://bahoom.com/hyperswitch/download'

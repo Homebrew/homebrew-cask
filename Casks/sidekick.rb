@@ -1,5 +1,5 @@
 class Sidekick < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://oomphalot.com/sidekick/release/Sidekick.zip'

@@ -1,5 +1,5 @@
 class Twindocs < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.twindocs.com/plugins/es/tools_mac/Twindocs%20tools.pkg.zip'

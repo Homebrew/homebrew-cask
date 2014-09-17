@@ -1,5 +1,5 @@
 class ParagonNtfs < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://dl.paragon-software.com/demo/ntfsmac_trial_u.dmg'

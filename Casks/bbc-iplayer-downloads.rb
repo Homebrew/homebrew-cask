@@ -1,5 +1,5 @@
 class BbcIplayerDownloads < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.bbc.co.uk/iplayer/dm/downloads/mac/latest'

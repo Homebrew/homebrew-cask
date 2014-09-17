@@ -1,5 +1,5 @@
 class Viber < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://download.viber.com/desktop/mac/Viber.dmg'

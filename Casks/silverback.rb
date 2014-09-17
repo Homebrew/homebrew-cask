@@ -1,5 +1,5 @@
 class Silverback < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://silverback.s3.amazonaws.com/silverback2.zip'

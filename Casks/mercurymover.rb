@@ -1,5 +1,5 @@
 class Mercurymover < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.heliumfoot.com/files/release/mercurymover/MercuryMover.dmg'

@@ -1,5 +1,5 @@
 class HexFiend < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://ridiculousfish.com/hexfiend/files/HexFiend.zip'

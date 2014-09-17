@@ -1,5 +1,5 @@
 class Dash < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://kapeli.com/Dash.zip'

@@ -9,7 +9,7 @@ class Onyx < Cask
     url 'http://joel.barriere.pagesperso-orange.fr/dl/109/OnyX.dmg'
   end
   homepage 'http://www.titanium.free.fr/downloadonyx.php'
-  version 'latest'
+  version :latest
   sha256 :no_check
   app 'OnyX.app'
 end

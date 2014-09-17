@@ -1,5 +1,5 @@
 class LogmeinHamachi < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://secure.logmein.com/LogMeInHamachi.zip'

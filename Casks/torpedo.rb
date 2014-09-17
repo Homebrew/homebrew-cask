@@ -1,5 +1,5 @@
 class Torpedo < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://usetorpedo.com/app/mac/download'

@@ -1,5 +1,5 @@
 class Spillo < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://ddvl.me/3Q1U1J2N1W26/download/Spillo.zip'

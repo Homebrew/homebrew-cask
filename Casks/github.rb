@@ -1,5 +1,5 @@
 class Github < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://central.github.com/mac/latest'

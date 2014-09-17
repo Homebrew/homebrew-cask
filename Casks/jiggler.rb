@@ -1,5 +1,5 @@
 class Jiggler < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://downloads.sticksoftware.com/Jiggler.dmg'

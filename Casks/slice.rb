@@ -1,5 +1,5 @@
 class Slice < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://sliceeq.com/downloads/Slice.dmg'

@@ -1,5 +1,5 @@
 class AdobeCreativeCloud < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://ccmdls.adobe.com/AdobeProducts/KCCC/1/osx10/CreativeCloudInstaller.dmg'

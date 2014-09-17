@@ -1,5 +1,5 @@
 class Timemachineeditor < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://timesoftware.free.fr/timemachineeditor/TimeMachineEditor.zip'

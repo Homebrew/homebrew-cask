@@ -1,5 +1,5 @@
 class ChameleonSsdOptimizer < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://chameleon.alessandroboschini.it/download.php'

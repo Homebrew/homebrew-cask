@@ -1,5 +1,5 @@
 class Icompta < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.lyricapps.fr/iCompta/downloads/iCompta.dmg'

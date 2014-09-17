@@ -1,5 +1,5 @@
 class SpotifyMenubar < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://lifeupnorth.co.uk/files/Spotify_Menubar.zip'

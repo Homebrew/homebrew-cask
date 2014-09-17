@@ -1,5 +1,5 @@
 class FlashDecompilerTrillix < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.flash-decompiler.com/download/flash_decompiler.dmg'

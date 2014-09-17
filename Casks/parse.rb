@@ -1,5 +1,5 @@
 class Parse < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.parse.com/downloads/cloud_code/parse'

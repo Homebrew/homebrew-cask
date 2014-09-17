@@ -1,5 +1,5 @@
 class Backtobed < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://backtobed.dadiugames.dk/backtobed_osx.zip'

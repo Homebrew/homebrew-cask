@@ -1,5 +1,5 @@
 class KextDrop < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.groths.org/kextdrop/KextDrop.dmg'

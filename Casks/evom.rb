@@ -1,5 +1,5 @@
 class Evom < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://files.thelittleappfactory.com/evom/Evom.zip'

@@ -1,5 +1,5 @@
 class SimulatorFolders < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.gettracktime.com/dbrd/download.php?id=8'

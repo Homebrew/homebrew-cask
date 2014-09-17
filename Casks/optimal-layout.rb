@@ -1,5 +1,5 @@
 class OptimalLayout < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://files.windowflow.com/OptimalLayout2.zip'

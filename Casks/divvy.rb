@@ -1,5 +1,5 @@
 class Divvy < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://mizage.com/downloads/Divvy.zip'

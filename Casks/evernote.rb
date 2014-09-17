@@ -1,5 +1,5 @@
 class Evernote < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.evernote.com/about/download/get.php?file=EvernoteMac'

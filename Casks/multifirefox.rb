@@ -1,5 +1,5 @@
 class Multifirefox < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://mff.s3.amazonaws.com/MFF2_latest.dmg'

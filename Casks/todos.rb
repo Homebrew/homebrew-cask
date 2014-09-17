@@ -1,5 +1,5 @@
 class Todos < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://dbachrach.com/opensoft/downloads/apps/Todos.dmg'

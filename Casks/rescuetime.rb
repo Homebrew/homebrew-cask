@@ -1,5 +1,5 @@
 class Rescuetime < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.rescuetime.com/installers/RescueTimeInstaller.dmg'

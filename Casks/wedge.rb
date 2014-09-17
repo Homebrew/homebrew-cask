@@ -1,5 +1,5 @@
 class Wedge < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://wedge.natestedman.com/release/Wedge.app.zip'

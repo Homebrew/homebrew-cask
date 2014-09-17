@@ -1,5 +1,5 @@
 class Chronicle < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://chronicleapp.com/static/downloads/chronicle.zip'

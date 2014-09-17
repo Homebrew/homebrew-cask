@@ -1,5 +1,5 @@
 class Fourpeaks < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://nucleobytes.com/4peaks/download'

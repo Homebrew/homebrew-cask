@@ -1,5 +1,5 @@
 class HopperDisassembler < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.hopperapp.com/HopperWeb/download_last_v3.php'

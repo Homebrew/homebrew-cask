@@ -1,5 +1,5 @@
 class Cocoasplit < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://krylon.rsdio.com/zakk/cocoasplit/CocoaSplit-current.zip'

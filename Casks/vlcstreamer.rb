@@ -1,5 +1,5 @@
 class Vlcstreamer < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://hobbyistsoftware.com/Downloads/VLCStreamer/latest-mac.php?cdn'

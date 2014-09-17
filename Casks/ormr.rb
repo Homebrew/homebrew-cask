@@ -1,5 +1,5 @@
 class Ormr < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://getormr.com/dn/Ormr.pkg'

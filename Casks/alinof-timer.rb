@@ -1,5 +1,5 @@
 class AlinofTimer < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.alinofsoftware.ch/resources/AlinofTimer.pkg'

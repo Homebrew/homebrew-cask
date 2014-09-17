@@ -1,5 +1,5 @@
 class Minbox < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://minbox-public.s3.amazonaws.com/osx/Minbox.zip'

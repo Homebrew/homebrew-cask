@@ -1,5 +1,5 @@
 class Sketchup < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   # downloads can be found at http://www.sketchup.com/download/all

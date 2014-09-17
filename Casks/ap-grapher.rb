@@ -1,5 +1,5 @@
 class ApGrapher < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.macupdate.com/download/11859/APGrapher.dmg'

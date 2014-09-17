@@ -1,5 +1,5 @@
 class Hippoconnect < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://hipporemote.com/HippoConnect/mac/HippoConnect.zip'

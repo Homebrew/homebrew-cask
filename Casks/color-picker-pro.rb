@@ -1,5 +1,5 @@
 class ColorPickerPro < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://fructivity.s3.amazonaws.com/ColorPickerPro/Color%20Picker%20Pro.zip'

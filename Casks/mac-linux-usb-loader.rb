@@ -1,5 +1,5 @@
 class MacLinuxUsbLoader < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://sevenbits.github.io/downloads/Mac-Linux-USB-Loader.zip'

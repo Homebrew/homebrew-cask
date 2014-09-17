@@ -1,5 +1,5 @@
 class Startninja < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.allvu.com/downloads/StartNinjaInstaller.dmg'

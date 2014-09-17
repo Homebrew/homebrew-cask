@@ -1,5 +1,5 @@
 class OnliveClient < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://games.onlive.com/client/mac.pkg'

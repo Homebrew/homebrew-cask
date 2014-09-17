@@ -1,5 +1,5 @@
 class Ionu < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://isis.ionu.nu/release/OSX/IONU.dmg'

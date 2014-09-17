@@ -1,5 +1,5 @@
 class Hush < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://coffitivity.com/hush/files/Hush.dmg.zip'

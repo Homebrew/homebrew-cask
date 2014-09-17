@@ -1,5 +1,5 @@
 class BoxcryptorClassic < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.boxcryptor.com/download/Boxcryptor_Installer.dmg'

@@ -1,5 +1,5 @@
 class Typewriter < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://llllll.li/typewriter/download/Typewriter.zip'

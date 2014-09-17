@@ -1,5 +1,5 @@
 class Mixlr < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://cdn.mixlr.com/Mixlr_beta_latest.pkg'

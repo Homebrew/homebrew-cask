@@ -1,5 +1,5 @@
 class CitrixReceiver < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://downloadplugins.citrix.com.edgesuite.net/Mac/CitrixReceiverWeb.dmg'

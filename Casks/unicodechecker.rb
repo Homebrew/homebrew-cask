@@ -1,5 +1,5 @@
 class Unicodechecker < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://earthlingsoft.net/UnicodeChecker/UnicodeChecker.dmg'

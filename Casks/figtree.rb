@@ -1,5 +1,5 @@
 class Figtree < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://tree.bio.ed.ac.uk/download.php?id=86'

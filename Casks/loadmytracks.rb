@@ -1,5 +1,5 @@
 class Loadmytracks < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.cluetrust.com/Downloads/LoadMyTracks.dmg'

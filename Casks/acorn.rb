@@ -1,5 +1,5 @@
 class Acorn < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://flyingmeat.com/download/Acorn.zip'

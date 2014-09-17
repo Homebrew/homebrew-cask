@@ -1,5 +1,5 @@
 class Folx < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://mac.eltima.com/download/downloader_mac.dmg'

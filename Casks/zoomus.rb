@@ -1,5 +1,5 @@
 class Zoomus < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://zoom.us/client/latest/zoomusInstaller.pkg'

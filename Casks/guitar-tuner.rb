@@ -1,5 +1,5 @@
 class GuitarTuner < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.gieson.com/downloads/utilities/guitar_tuner_mac.zip'

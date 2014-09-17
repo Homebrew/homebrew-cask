@@ -1,5 +1,5 @@
 class Pleasesleep < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.dragonone.com/downloads/vault/macosx/PleaseSleep.dmg'

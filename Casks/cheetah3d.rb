@@ -1,5 +1,5 @@
 class Cheetah3d < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://cheetah3d.com/download/Cheetah3D.dmg'

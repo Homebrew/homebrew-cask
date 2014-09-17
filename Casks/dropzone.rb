@@ -1,5 +1,5 @@
 class Dropzone < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://aptonic.com/dropzone3/latest'

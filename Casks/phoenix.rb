@@ -1,5 +1,5 @@
 class Phoenix < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://raw.github.com/sdegutis/phoenix/master/Builds/Phoenix-LATEST.app.tar.gz'

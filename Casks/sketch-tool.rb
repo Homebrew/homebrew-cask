@@ -1,5 +1,5 @@
 class SketchTool < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://sketchtool.bohemiancoding.com/sketchtool-latest.zip'

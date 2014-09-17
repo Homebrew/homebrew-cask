@@ -1,5 +1,5 @@
 class Flexiglass < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://downloads.nulana.com/flexiglass/Flexiglass.dmg'

@@ -1,5 +1,5 @@
 class Glo < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://immersion.vo.llnwd.net/o42/pub/glo/mac/en-us/Glo.dmg'

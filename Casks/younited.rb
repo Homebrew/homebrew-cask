@@ -1,5 +1,5 @@
 class Younited < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://download.sp.f-secure.com/younited/younited.dmg'

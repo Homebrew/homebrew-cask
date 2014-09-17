@@ -1,5 +1,5 @@
 class Bankid < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://install.bankid.com/FileDownloader?fileId=Mac'

@@ -1,5 +1,5 @@
 class Fuze < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.fuzemeeting.com/extensions/FuzeMeetingMac.dmg'

@@ -1,5 +1,5 @@
 class Rapidweaver < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://realmacsoftware.com/redirects/rapidweaver/direct'

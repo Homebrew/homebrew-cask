@@ -1,5 +1,5 @@
 class Marked < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://marked2app.com/download/Marked.zip'
