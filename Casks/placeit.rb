@@ -1,5 +1,5 @@
 class Placeit < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://placeit-apps.s3.amazonaws.com/Placeit-Mac.zip'
