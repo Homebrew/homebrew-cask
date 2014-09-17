@@ -1,5 +1,5 @@
 class Poison < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://jenkins.tox.im/job/Poison_OS_X/lastSuccessfulBuild/artifact/arc/poison-with-extras.zip'
