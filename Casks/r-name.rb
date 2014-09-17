@@ -1,5 +1,5 @@
 class RName < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.jacek-dom.net/software/R-Name/R-Name.app.zip'
