@@ -1,5 +1,5 @@
 class Commandq < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://clickontyler.com/commandq/download/'
