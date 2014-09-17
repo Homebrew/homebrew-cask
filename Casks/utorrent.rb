@@ -4,7 +4,7 @@ class Utorrent < Cask
   appcast 'http://update.utorrent.com/checkupdate.php'
   homepage 'http://www.utorrent.com/'
 
-  version 'latest'
+  version :latest
   caskroom_only true
   sha256 :no_check
   caveats do
