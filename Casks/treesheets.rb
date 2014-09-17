@@ -1,5 +1,5 @@
 class Treesheets < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://strlen.com/treesheets/treesheets_osx.zip'
