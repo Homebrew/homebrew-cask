@@ -1,5 +1,5 @@
 class QuicklookCsv < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://quicklook-csv.googlecode.com/files/QuickLookCSV.dmg'
