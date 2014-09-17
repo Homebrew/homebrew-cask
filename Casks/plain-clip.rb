@@ -1,5 +1,5 @@
 class PlainClip < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.bluem.net/files/Plain-Clip.dmg'
