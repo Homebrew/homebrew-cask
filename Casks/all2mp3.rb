@@ -1,5 +1,5 @@
 class All2mp3 < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.tresrrr.com/Program/All2MP3.zip'
