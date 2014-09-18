@@ -6,5 +6,5 @@ class Spark < Cask
   homepage 'http://www.shadowlab.org/softwares/spark.php'
 
   app 'Spark.app'
-  zap :files => '~/Library/Application Support/Spark'
+  zap :delete => '~/Library/Application Support/Spark'
 end
