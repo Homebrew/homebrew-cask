@@ -6,4 +6,5 @@ class ApacheDirectoryStudio < Cask
   homepage 'http://directory.apache.org/studio/'
 
   app 'Apache Directory Studio.app'
+  zap :delete => '~/.ApacheDirectoryStudio'
 end
