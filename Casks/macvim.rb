@@ -20,8 +20,8 @@ class Macvim < Cask
     EOS
     files_in_usr_local
   end
-  zap :files => [
-                 '~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
-                 '~/Library/Preferences/org.vim.MacVim.plist',
-                ]
+  zap :delete => [
+                  '~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
+                  '~/Library/Preferences/org.vim.MacVim.plist',
+                 ]
 end
