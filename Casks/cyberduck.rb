@@ -7,8 +7,8 @@ class Cyberduck < Cask
   homepage 'http://cyberduck.io/'
 
   app 'Cyberduck.app'
-  zap :files => [
-                 '~/Library/Application Support/Cyberduck',
-                 '~/Library/Preferences/ch.sudo.cyberduck.plist',
-                ]
+  zap :delete => [
+                  '~/Library/Application Support/Cyberduck',
+                  '~/Library/Preferences/ch.sudo.cyberduck.plist',
+                 ]
 end
