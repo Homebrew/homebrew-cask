@@ -6,7 +6,7 @@ class Switchresx < Cask
   homepage 'http://www.madrau.com'
 
   prefpane 'SwitchResX.prefPane'
-  caskroom_only true # hack to activate uninstall stanza
+
   uninstall :quit   => [
                         'fr.madrau.switchresx.app',
                         'fr.madrau.switchresx.daemon',  # note, daemon does not :quit cleanly
