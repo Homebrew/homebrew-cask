@@ -9,6 +9,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [At Least One Artifact Stanza Is Also Required](#at-least-one-artifact-stanza-is-also-required)
  * [Optional Stanzas](#optional-stanzas)
  * [Legacy Stanzas](#legacy-stanzas)
+ * [Legacy Forms](#legacy-forms)
  * [Conditional Statements](#conditional-statements)
  * [Caveats Stanza Details](#caveats-stanza-details)
  * [Checksum Stanza Details](#checksum-stanza-details)
@@ -120,6 +121,15 @@ The following stanzas are no longer in use.
 | `after_uninstall`    | yes                           | an obsolete alternative to `uninstall_postflight`
 | `install`            | yes                           | an obsolete alternative to `pkg`
 | `depends_on_formula` | yes                           | an obsolete alternative to `depends_on :formula`
+
+
+## Legacy Forms
+
+The following forms are no longer in use.
+
+| name                 | meaning     |
+| -------------------- | ----------- |
+| `uninstall :files`   | an obsolete alternative to `uninstall :delete`
 
 
 ## Conditional Statements
@@ -449,7 +459,7 @@ of the following key/value pairs as arguments to `uninstall`.
   - `:args` - array of arguments to the uninstall script
   - `:input` - array of lines of input to be sent to `stdin` of the script
   - `:must_succeed` - set to `false` if the script is allowed to fail
-* `:files` (string or array) - single-quoted, absolute paths of files or directory trees to remove.  `:files` should only be used as a last resort. `:pkgutil` is strongly preferred
+* `:delete` (string or array) - single-quoted, absolute paths of files or directory trees to remove.  `:delete` should only be used as a last resort. `:pkgutil` is strongly preferred
 * `:rmdir` (string or array) - single-quoted, absolute paths of directories to remove if empty.
 
 Each `uninstall` technique is applied according to the order above. The order
@@ -467,7 +477,7 @@ The easiest way to work out an `uninstall` stanza is on a system where the
 ### Uninstall Key :pkgutil
 
 This is the most useful uninstall key.  `:pkgutil` is often sufficient
-to completely uninstall a `pkg`, and is strongly preferred over `:files`.
+to completely uninstall a `pkg`, and is strongly preferred over `:delete`.
 
 IDs for the most recently-installed packages can be listed using the
 command
@@ -571,12 +581,12 @@ IDs inside a kext bundle you have located on disk can be listed using the comman
 $ ./developer/bin/list_id_in_kext </path/to/name.kext>
 ```
 
-### Uninstall Key :files
+### Uninstall Key :delete
 
-`:files` should only be used as a last resort, if other `uninstall` methods
+`:delete` should only be used as a last resort, if other `uninstall` methods
 are insufficient.
 
-Arguments to `uninstall :files` should be static, single-quoted, absolute
+Arguments to `uninstall :delete` should be static, single-quoted, absolute
 paths.
 
  * Only single quotes should be used.
@@ -655,8 +665,8 @@ The form of `zap` stanza follows the [`uninstall` stanza](#uninstall-stanza-deta
 All of the same directives are available.
 
 `zap` differs from `uninstall` in the following ways:
- * The use of `:files` is not discouraged.
- * The target values for `:files` and `:rmdir` accept leading tilde characters
+ * The use of `:delete` is not discouraged.
+ * The target values for `:delete` and `:rmdir` accept leading tilde characters
    (`~`), which will be expanded to home directories.
 
 Example: [injection.rb](../Casks/injection.rb)

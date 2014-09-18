@@ -37,6 +37,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
     ohai "Running #{stanza} process for #{@cask}; your password may be necessary"
 
     directives_set.each do |directives|
+      # todo remove backward-compatible :files
       unknown_keys = directives.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :files, :delete, :trash, :rmdir]
       unless unknown_keys.empty?
         opoo %Q{Unknown arguments to #{stanza} -- #{unknown_keys.inspect}. Running "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" will likely fix it.}
@@ -123,7 +124,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
       end
     end
 
-    # :script must come before :pkgutil or :files so that the script file is not already deleted
+    # :script must come before :pkgutil, :delete, or :trash so that the script file is not already deleted
     directives_set.select{ |h| h.key?(:script) }.each do |directives|
       executable, script_arguments = self.class.read_script_arguments(directives,
                                                                       'uninstall',

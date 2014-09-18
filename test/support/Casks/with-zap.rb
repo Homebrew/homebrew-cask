@@ -10,5 +10,5 @@ class WithZap < TestCask
                   :args => %w[--please]
                   },
       :quit => 'my.fancy.package.app',
-      :files => '~/Library/Preferences/my.fancy.app.plist'
+      :delete => '~/Library/Preferences/my.fancy.app.plist'
 end
