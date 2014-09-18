@@ -7,8 +7,8 @@ class Bettertouchtool < Cask
   homepage 'http://blog.boastr.net/'
 
   app 'BetterTouchTool.app'
-  zap :files => [
-                 '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',
-                 '~/Library/Application Support/BetterTouchTool',
-                ]
+  zap :delete => [
+                  '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',
+                  '~/Library/Application Support/BetterTouchTool',
+                 ]
 end
