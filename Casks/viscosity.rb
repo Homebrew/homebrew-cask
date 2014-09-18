@@ -7,8 +7,8 @@ class Viscosity < Cask
   homepage 'http://www.sparklabs.com/viscosity/'
 
   app 'Viscosity.app'
-  zap :files => [
-                 '~/Library/Application Support/Viscosity',
-                 '~/Library/Preferences/com.viscosityvpn.Viscosity.plist',
-                ]
+  zap :delete => [
+                  '~/Library/Application Support/Viscosity',
+                  '~/Library/Preferences/com.viscosityvpn.Viscosity.plist',
+                 ]
 end
