@@ -11,7 +11,6 @@ class Flavours < Cask
     files_in_usr_local
   end
 
-  caskroom_only true     # hack to make uninstall fire
   uninstall :launchctl => 'net.interacto.flavours.helper',
             :quit  => 'net.interacto.Flavours',
             :delete => [
