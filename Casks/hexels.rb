@@ -6,5 +6,5 @@ class Hexels < Cask
   homepage 'http://hexraystudios.com/hexels/'
 
   app 'Hexels.app'
-  zap :files => '~/Library/Preferences/com.hex-ray.hexels.plist'
+  zap :delete => '~/Library/Preferences/com.hex-ray.hexels.plist'
 end

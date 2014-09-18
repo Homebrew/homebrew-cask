@@ -7,5 +7,5 @@ class Pagico < Cask
 
   pkg 'Install Pagico 6.pkg'
   uninstall :pkgutil => 'com.pagico.*',
-            :files => '/Applications/Pagico'
+            :delete => '/Applications/Pagico'
 end

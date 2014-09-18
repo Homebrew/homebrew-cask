@@ -7,5 +7,5 @@ class Cord < Cask
   homepage 'http://cord.sourceforge.net/'
 
   app 'CoRD.app'
-  zap :files => '~/Library/Application Support/CoRD'
+  zap :delete => '~/Library/Application Support/CoRD'
 end

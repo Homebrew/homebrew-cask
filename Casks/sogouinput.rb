@@ -10,5 +10,5 @@ class Sogouinput < Cask
   caveats do
     manual_installer '安装搜狗输入法.app/Contents/SogouInstallerHelper'
   end
-  uninstall :files => '/Library/Input Methods/SogouInput.app'
+  uninstall :delete => '/Library/Input Methods/SogouInput.app'
 end

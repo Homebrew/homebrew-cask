@@ -6,5 +6,5 @@ class GrowlFork < Cask
   homepage 'https://www.macupdate.com/app/mac/41038/growl-fork'
 
   pkg 'Growl.pkg'
-  uninstall :files => '/Library/PreferencePanes/Growl.prefPane'
+  uninstall :delete => '/Library/PreferencePanes/Growl.prefPane'
 end

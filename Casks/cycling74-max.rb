@@ -7,5 +7,5 @@ class Cycling74Max < Cask
 
   pkg 'Max 6.1 Installer.pkg'
   uninstall :pkgutil => 'com.cycling74.Max*',
-            :files   => '/Applications/Max 6.1'
+            :delete  => '/Applications/Max 6.1'
 end

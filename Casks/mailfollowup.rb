@@ -9,5 +9,5 @@ class Mailfollowup < Cask
   pkg 'Install MailFollowUp.pkg'
 
   uninstall :quit  => 'com.apple.mail'
-  zap       :files => '~/Library/Mail/Bundles/MailFollowUp.mailbundle/'
+  zap       :delete => '~/Library/Mail/Bundles/MailFollowUp.mailbundle/'
 end

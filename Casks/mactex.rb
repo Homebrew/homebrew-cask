@@ -11,9 +11,9 @@ class Mactex < Cask
                          'org.tug.mactex.gui2014',
                          'org.tug.mactex.texlive2014'
                         ],
-            :files   => [
+            :delete  => [
                          '/Applications/TeX',
-                         '/etc/paths.d/TeX'
+                         '/etc/paths.d/TeX',
                         ]
   caveats do
     zsh_path_helper '/usr/texbin'

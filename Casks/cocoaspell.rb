@@ -7,15 +7,15 @@ class Cocoaspell < Cask
 
   pkg 'cocoAspell.pkg'
   uninstall :pkgutil => 'net.leuski.cocoaspell.*',
-            :files   => [
+            :delete  => [
                          '/Application Support/cocoAspell/aspell6-en-6.0-0',
-                         '/Library/PreferencePanes/Spelling.prefPane'
+                         '/Library/PreferencePanes/Spelling.prefPane',
                         ]
   caveats <<-EOS.undent
     Non-English dictionaries must be installed separately.  For more information,
     see http://people.ict.usc.edu/~leuski/cocoaspell/install_dict.php .
     EOS
-  zap :files => [
+  zap :delete => [
                  '~/.aspell.conf',
                  '~/.aspell.en.prepl',
                  # Debatable. The Pws holds user-created content, though typically

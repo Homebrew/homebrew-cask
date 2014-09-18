@@ -7,5 +7,5 @@ class FenderFuse < Cask
 
   pkg 'Fender FUSE Installer.app/Contents/Resources/Fender FUSE.pkg'
   uninstall :pkgutil => 'com.Fender.pkg.FenderFUSE',
-            :files   => '/Applications/Fender FUSE.app'
+            :delete  => '/Applications/Fender FUSE.app'
 end

@@ -7,5 +7,5 @@ class Iterm2 < Cask
   homepage 'http://www.iterm2.com/'
 
   app 'iTerm.app'
-  zap :files => '~/Library/Preferences/com.googlecode.iterm2.plist'
+  zap :delete => '~/Library/Preferences/com.googlecode.iterm2.plist'
 end

@@ -11,7 +11,7 @@ class Sourcetree < Cask
   caveats do
     files_in_usr_local
   end
-  zap :files => [
-                 '~/Library/Application Support/SourceTree',
-                ]
+  zap :delete => [
+                  '~/Library/Application Support/SourceTree',
+                 ]
 end

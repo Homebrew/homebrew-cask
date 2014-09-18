@@ -7,5 +7,5 @@ class Spectacle < Cask
   homepage 'http://spectacleapp.com/'
 
   app 'Spectacle.app'
-  zap :files => '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist'
+  zap :delete => '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist'
 end

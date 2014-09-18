@@ -6,9 +6,9 @@ class Textmate < Cask
   homepage 'http://macromates.com/'
 
   app 'TextMate.app'
-  zap :files => [
-                 '~/Library/Application Support/TextMate',
-                 '~/Library/Preferences/com.macromates.textmate.plist',
-                 '~/Library/Preferences/com.macromates.textmate.latex_config.plist',
-                ]
+  zap :delete => [
+                  '~/Library/Application Support/TextMate',
+                  '~/Library/Preferences/com.macromates.textmate.plist',
+                  '~/Library/Preferences/com.macromates.textmate.latex_config.plist',
+                 ]
 end

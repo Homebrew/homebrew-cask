@@ -6,5 +6,5 @@ class Mercurymover < Cask
   homepage 'http://www.heliumfoot.com/mercurymover'
 
   prefpane 'MercuryMover.prefPane'
-  zap :files => '~/Library/Preferences/com.heliumfoot.MyWiAgent.plist'
+  zap :delete => '~/Library/Preferences/com.heliumfoot.MyWiAgent.plist'
 end

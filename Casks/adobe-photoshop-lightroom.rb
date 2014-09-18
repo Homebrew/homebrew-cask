@@ -8,5 +8,5 @@ class AdobePhotoshopLightroom < Cask
   pkg 'Adobe Photoshop Lightroom 5.pkg'
   uninstall :pkgutil => 'com.adobe.Lightroom5',
             :quit => 'com.adobe.Lightroom5',
-            :files => '/Applications/Adobe Photoshop Lightroom 5.app'
+            :delete => '/Applications/Adobe Photoshop Lightroom 5.app'
 end

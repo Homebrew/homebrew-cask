@@ -26,19 +26,19 @@ class Gpgtools < Cask
                            'org.gpgtools.macgpg2.fix',
                            'org.gpgtools.macgpg2.updater',
                           ],
-            :files => [
-                       '/Applications/GPG Keychain Access.app',
-                       '/Library/Services/GPGServices.service',
-                       '/Library/Mail/Bundles/GPGMail.mailbundle',
-                       '/Library/PreferencePanes/GPGPreferences.prefPane',
-                      ]
+            :delete => [
+                        '/Applications/GPG Keychain Access.app',
+                        '/Library/Services/GPGServices.service',
+                        '/Library/Mail/Bundles/GPGMail.mailbundle',
+                        '/Library/PreferencePanes/GPGPreferences.prefPane',
+                       ]
   uninstall_postflight do
     system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg2)"      =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg2'
     system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg)"       =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg'
     system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg-agent)" =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg-agent'
   end
 
-  zap       :files  => [
+  zap       :delete => [
                         '~/Library/Services/GPGServices.service',
                         '~/Library/Mail/Bundles/GPGMail.mailbundle',
                         '~/Library/PreferencePanes/GPGPreferences.prefPane',

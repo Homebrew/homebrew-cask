@@ -6,5 +6,5 @@ class NetbeansPhp < Cask
   homepage 'https://netbeans.org/'
 
   pkg "NetBeans #{version}.mpkg"
-  uninstall :files => '/Applications/NetBeans'
+  uninstall :delete => '/Applications/NetBeans'
 end

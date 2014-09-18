@@ -7,5 +7,5 @@ class HandsOff < Cask
   homepage 'http://www.metakine.com/products/handsoff/'
 
   app 'Hands Off!.app'
-  zap :files => '~/Library/Preferences/com.metakine.handsoff.plist'
+  zap :delete => '~/Library/Preferences/com.metakine.handsoff.plist'
 end

@@ -14,5 +14,5 @@ class Limechat < Cask
   homepage 'http://limechat.net/mac/'
 
   app 'LimeChat.app'
-  zap :files => '~/Library/Preferences/net.limechat.LimeChat-AppStore.plist'
+  zap :delete => '~/Library/Preferences/net.limechat.LimeChat-AppStore.plist'
 end

@@ -12,6 +12,6 @@ class PrivateInternetAccess < Cask
           '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", ENV['HOME'] + '/.pia_manager'
   end
 
-  uninstall :files => '/Applications/Private Internet Access.app'
-  zap       :files => '~/.pia_manager'
+  uninstall :delete => '/Applications/Private Internet Access.app'
+  zap       :delete => '~/.pia_manager'
 end

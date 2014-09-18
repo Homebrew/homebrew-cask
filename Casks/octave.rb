@@ -11,5 +11,5 @@ class Octave < Cask
                          'org.octave.cli-app',
                          'org.octave.gui-app',
                         ],
-            :files => '/usr/local/octave/3.8.0'
+            :delete => '/usr/local/octave/3.8.0'
 end

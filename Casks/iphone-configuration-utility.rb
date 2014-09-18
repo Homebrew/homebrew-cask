@@ -7,5 +7,5 @@ class IphoneConfigurationUtility < Cask
 
   pkg 'iPhoneConfigurationUtility.pkg'
   # note - do not uninstall via :pkgutil, as system files would be deleted
-  uninstall :files => '/Applications/Utilities/iPhone Configuration Utility.app'
+  uninstall :delete => '/Applications/Utilities/iPhone Configuration Utility.app'
 end

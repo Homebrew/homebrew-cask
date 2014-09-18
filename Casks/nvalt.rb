@@ -6,8 +6,8 @@ class Nvalt < Cask
   homepage 'http://brettterpstra.com/project/nvalt/'
 
   app 'nvALT.app'
-  zap :files => [
-                 '~/Library/Preferences/net.elasticthreads.nv.plist',
-                 '~/Library/Application Support/Notational Velocity',
-                ]
+  zap :delete => [
+                  '~/Library/Preferences/net.elasticthreads.nv.plist',
+                  '~/Library/Application Support/Notational Velocity',
+                 ]
 end

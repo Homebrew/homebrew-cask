@@ -7,5 +7,5 @@ class Hall < Cask
 
   pkg 'Hall.pkg'
   uninstall :pkgutil => 'com.companyline.hall.desktop',
-            :files   => '/Applications/Hall.app'
+            :delete  => '/Applications/Hall.app'
 end

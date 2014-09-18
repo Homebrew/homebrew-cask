@@ -16,5 +16,5 @@ class Smoothmouse < Cask
                            'com.cyberic.pkg.SmoothMousePrefPane',
                            'com.cyberic.pkg.SmoothMouseKext2',
                           ],
-            :files     => '/usr/bin/smoothmouse'
+            :delete    => '/usr/bin/smoothmouse'
 end

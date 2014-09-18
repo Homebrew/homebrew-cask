@@ -7,7 +7,7 @@ class Chefdk < Cask
 
   pkg "chefdk-#{version}.pkg"
   uninstall :pkgutil => 'com.getchef.pkg.chefdk',
-            :files   => [
+            :delete  => [
                          '/opt/chefdk/',
                          '/usr/bin/berks',
                          '/usr/bin/chef',
@@ -24,6 +24,6 @@ class Chefdk < Cask
                          '/usr/bin/rubocop',
                          '/usr/bin/shef',
                          '/usr/bin/strain',
-                         '/usr/bin/strainer'
+                         '/usr/bin/strainer',
                         ]
 end

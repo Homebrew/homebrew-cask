@@ -7,5 +7,5 @@ class Eagle < Cask
 
   pkg "eagle-#{version}.pkg"
   uninstall :pkgutil => 'com.CadSoftComputerGmbH.EAGLE',
-            :files => "/Applications/EAGLE-#{version}"
+            :delete => "/Applications/EAGLE-#{version}"
 end

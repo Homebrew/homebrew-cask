@@ -7,5 +7,5 @@ class UnityWebPlayer < Cask
 
   pkg 'Install Unity Web Player.pkg'
   uninstall :pkgutil => 'com.unity.UnityWebPlayer',
-            :files   => '/Library/Internet Plug-Ins/Unity Web Player.plugin'
+            :delete  => '/Library/Internet Plug-Ins/Unity Web Player.plugin'
 end

@@ -12,5 +12,5 @@ class Fantastical < Cask
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'com.flexibits.fantastical', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
-  zap :files => '~/Library/Preferences/com.flexibits.fantastical.plist'
+  zap :delete => '~/Library/Preferences/com.flexibits.fantastical.plist'
 end

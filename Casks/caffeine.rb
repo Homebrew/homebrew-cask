@@ -6,5 +6,5 @@ class Caffeine < Cask
   homepage 'http://lightheadsw.com/caffeine/'
 
   app 'Caffeine.app'
-  zap :files => '~/Library/Preferences/com.lightheadsw.Caffeine.plist'
+  zap :delete => '~/Library/Preferences/com.lightheadsw.Caffeine.plist'
 end
