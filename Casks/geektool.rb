@@ -7,11 +7,11 @@ class Geektool < Cask
   homepage 'http://projects.tynsoe.org/en/geektool/'
 
   app 'GeekTool.app'
-  zap :files => [
-                 '~/Library/Preferences/org.tynsoe.GeekTool.plist',
-                 '~/Library/Preferences/org.tynsoe.geeklet.file.plist',
-                 '~/Library/Preferences/org.tynsoe.geeklet.image.plist',
-                 '~/Library/Preferences/org.tynsoe.geeklet.shell.plist',
-                 '~/Library/Preferences/org.tynsoe.geektool3.plist',
-                ]
+  zap :delete => [
+                  '~/Library/Preferences/org.tynsoe.GeekTool.plist',
+                  '~/Library/Preferences/org.tynsoe.geeklet.file.plist',
+                  '~/Library/Preferences/org.tynsoe.geeklet.image.plist',
+                  '~/Library/Preferences/org.tynsoe.geeklet.shell.plist',
+                  '~/Library/Preferences/org.tynsoe.geektool3.plist',
+                 ]
 end
