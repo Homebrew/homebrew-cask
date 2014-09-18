@@ -7,9 +7,9 @@ class HerokuToolbelt < Cask
 
   pkg 'heroku-toolbelt.pkg'
   uninstall :pkgutil => 'com.heroku.toolbelt',
-            :files   => [
+            :delete  => [
                          '/usr/local/heroku',
-                         '/usr/bin/heroku'
+                         '/usr/bin/heroku',
                         ]
   caveats do
     files_in_usr_local
