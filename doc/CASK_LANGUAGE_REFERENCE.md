@@ -121,6 +121,7 @@ The following stanzas are no longer in use.
 | `after_uninstall`    | yes                           | an obsolete alternative to `uninstall_postflight`
 | `install`            | yes                           | an obsolete alternative to `pkg`
 | `depends_on_formula` | yes                           | an obsolete alternative to `depends_on :formula`
+| `link`               | yes                           | an obsolete alternative to `artifact`
 
 
 ## Legacy Forms
@@ -129,6 +130,7 @@ The following forms are no longer in use.
 
 | name                 | meaning     |
 | -------------------- | ----------- |
+| `version 'latest'`   | an obsolete alternative to `version :latest`
 | `uninstall :files`   | an obsolete alternative to `uninstall :delete`
 
 
