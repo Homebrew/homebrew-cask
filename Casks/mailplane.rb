@@ -6,5 +6,5 @@ class Mailplane < Cask
   homepage 'http://mailplaneapp.com'
 
   app 'Mailplane 3.app'
-  zap :files => '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
+  zap :delete => '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
 end
