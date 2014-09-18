@@ -7,5 +7,5 @@ class ToadMac < Cask
 
   pkg 'ToadMacEdition_108.pkg'
   uninstall :pkgutil => 'com.dell.Toad',
-            :files => '/Applications/Toad.app'
+            :delete => '/Applications/Toad.app'
 end
