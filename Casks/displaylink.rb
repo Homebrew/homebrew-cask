@@ -21,7 +21,7 @@ class Displaylink < Cask
             # :script => {
             #   :executable => 'DisplayLink Software Uninstaller.app/Contents/MacOS/DisplayLink Software Uninstaller'
             # },
-            # :files => ['/Applications/DisplayLink Software Uninstaller.app']
+            # :delete => '/Applications/DisplayLink Software Uninstaller.app'
   caveats <<-EOS.undent
     Installing this Cask means you have AGREED to the DisplayLink
     Software License Agreement at
