@@ -14,11 +14,11 @@ class Flavours < Cask
   caskroom_only true     # hack to make uninstall fire
   uninstall :launchctl => 'net.interacto.flavours.helper',
             :quit  => 'net.interacto.Flavours',
-            :files => [
-                       '/usr/local/bin/flavours.agent',
-                       '/usr/local/bin/flavours.ignitor',
-                       '/usr/local/bin/restoreui',
-                       '/usr/local/lib/libflavours.dylib',
-                       '/usr/local/lib/libflavoursui.dylib',
-                      ]
+            :delete => [
+                        '/usr/local/bin/flavours.agent',
+                        '/usr/local/bin/flavours.ignitor',
+                        '/usr/local/bin/restoreui',
+                        '/usr/local/lib/libflavours.dylib',
+                        '/usr/local/lib/libflavoursui.dylib',
+                       ]
 end
