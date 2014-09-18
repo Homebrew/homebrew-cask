@@ -8,5 +8,5 @@ class Ngrok < Cask
   binary 'ngrok'
 
   # todo verify that this does not contain user-created content
-  # zap :files => '~/.ngrok'
+  # zap :delete => '~/.ngrok'
 end
