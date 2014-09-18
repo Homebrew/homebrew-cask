@@ -12,6 +12,6 @@ class Xamarin < Cask
     manual_installer 'Install Xamarin.app'
   end
 
-  uninstall :files => '/Applications/Xamarin Studio.app'
-  zap       :files => '~/Library/Developer/Xamarin'
+  uninstall :delete => '/Applications/Xamarin Studio.app'
+  zap       :delete => '~/Library/Developer/Xamarin'
 end
