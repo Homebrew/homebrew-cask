@@ -7,7 +7,7 @@ class Nomachine < Cask
 
   pkg 'NoMachine.pkg'
   # a launchctl job ordinarily manages uninstall once the app bundle is removed
-  uninstall :files => '/Applications/NoMachine.app'
+  uninstall :delete => '/Applications/NoMachine.app'
   # however, we duplicate the uninstall process manually in the zap stanza just in case
   zap :early_script => {
                         :executable  => '/bin/rm',
