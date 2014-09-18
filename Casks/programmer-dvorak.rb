@@ -7,13 +7,13 @@ class ProgrammerDvorak < Cask
 
   pkg 'Programmer Dvorak v1.2.pkg'
   uninstall :pkgutil => 'com.apple.keyboardlayout.Programmer Dvorak',
-            :files => [
+            :delete => [
                         '/Library/Keyboard Layouts/Programmer Dvorak.bundle/',
                         # note: these will not work because the glob will not be expanded
                         '/Library/Caches/com.apple.IntlDataCache*',
                         '/System/Library/Caches/com.apple.IntlDataCache.le*',
-                        '/private/var/folders/*/*/-Caches-/com.apple.IntlDataCache.le*'
-                      ]
+                        '/private/var/folders/*/*/-Caches-/com.apple.IntlDataCache.le*',
+                       ]
   if MacOS.version >= :mavericks
     postflight do
       # clear the layout cache before new layouts are recognized
