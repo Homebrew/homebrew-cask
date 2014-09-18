@@ -7,5 +7,5 @@ class Latexit < Cask
   homepage 'http://www.chachatelier.fr/latexit'
 
   app 'LaTeXiT.app'
-  zap :files => '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist'
+  zap :delete => '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist'
 end
