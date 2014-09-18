@@ -7,5 +7,5 @@ class Feeds < Cask
   homepage 'http://www.feedsapp.com/'
 
   app 'Feeds.app'
-  zap :files => '~/Library/Preferences/com.feedsapp.Feeds.plist'
+  zap :delete => '~/Library/Preferences/com.feedsapp.Feeds.plist'
 end
