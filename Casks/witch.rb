@@ -6,5 +6,5 @@ class Witch < Cask
   homepage 'http://manytricks.com/witch/'
 
   prefpane 'Witch.prefPane'
-  zap :files => '~/Library/Preferences/com.manytricks.Witch.plist'
+  zap :delete => '~/Library/Preferences/com.manytricks.Witch.plist'
 end
