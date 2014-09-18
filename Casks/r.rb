@@ -17,18 +17,18 @@ class R < Cask
                          # eg org.r-project.x86_64.tcltk.x11
                          'org.r-project\..*\.tcltk.x11',
                         ],
-            :files => [
-                       # symlinks
-                       '/usr/bin/R',
-                       '/usr/bin/Rscript',
-                       '/Library/Frameworks/R.Framework/Versions/Current',
-                       # :pkgutil won't delete this dir if the fontconfig cache was written to at
-                       # /Library/Frameworks/R.Framework/Versions/3.1/Resources/fontconfig/cache
-                       '/Library/Frameworks/R.Framework/Versions/3.1',
-                      ]
-  zap :files => [
-                 '~/.R',
-                 '~/.Rhistory',
-                 '~/.Rprofile',
-                ]
+            :delete => [
+                        # symlinks
+                        '/usr/bin/R',
+                        '/usr/bin/Rscript',
+                        '/Library/Frameworks/R.Framework/Versions/Current',
+                        # :pkgutil won't delete this dir if the fontconfig cache was written to at
+                        # /Library/Frameworks/R.Framework/Versions/3.1/Resources/fontconfig/cache
+                        '/Library/Frameworks/R.Framework/Versions/3.1',
+                       ]
+  zap :delete => [
+                  '~/.R',
+                  '~/.Rhistory',
+                  '~/.Rprofile',
+                 ]
 end
