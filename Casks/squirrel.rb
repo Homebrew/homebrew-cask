@@ -6,5 +6,5 @@ class Squirrel < Cask
   homepage 'https://github.com/lotem/squirrel'
 
   pkg 'Squirrel.pkg'
-  uninstall :files => '/Library/Input Methods/Squirrel.app'
+  uninstall :delete => '/Library/Input Methods/Squirrel.app'
 end
