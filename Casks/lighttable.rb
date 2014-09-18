@@ -7,9 +7,9 @@ class Lighttable < Cask
 
   app 'LightTable/LightTable.app'
   binary 'LightTable/light'
-  zap :files => [
-                 '~/Library/Application Support/LightTable/plugins',
-                 '~/Library/Application Support/LightTable/settings',
-                 '~/Library/Preferences/com.kodowa.LightTable.plist',
-                ]
+  zap :delete => [
+                  '~/Library/Application Support/LightTable/plugins',
+                  '~/Library/Application Support/LightTable/settings',
+                  '~/Library/Preferences/com.kodowa.LightTable.plist',
+                 ]
 end
