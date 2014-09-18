@@ -6,5 +6,5 @@ class Processing < Cask
   homepage 'http://processing.org/'
 
   app 'Processing.app'
-  zap :files => '~/Library/Processing/preferences.txt'
+  zap :delete => '~/Library/Processing/preferences.txt'
 end
