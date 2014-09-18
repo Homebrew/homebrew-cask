@@ -7,5 +7,5 @@ class Droplr < Cask
   homepage 'https://www.droplr.com/'
 
   app 'Droplr.app'
-  zap :files => '~/Library/Preferences/com.droplr.droplr-mac.plist'
+  zap :delete => '~/Library/Preferences/com.droplr.droplr-mac.plist'
 end
