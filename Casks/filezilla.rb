@@ -7,5 +7,5 @@ class Filezilla < Cask
 
   app 'FileZilla.app'
   # todo verify that this does not contain user-generate content
-  # zap :files => '~/.filezilla'
+  # zap :delete => '~/.filezilla'
 end
