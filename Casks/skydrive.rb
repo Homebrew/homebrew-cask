@@ -7,5 +7,5 @@ class Skydrive < Cask
 
   pkg 'SkyDrive.pkg'
   uninstall :pkgutil => 'com.microsoft.SkyDriveInstaller',
-            :files   => '/Applications/SkyDrive.app'
+            :delete  => '/Applications/SkyDrive.app'
 end
