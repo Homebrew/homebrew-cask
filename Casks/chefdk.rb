@@ -5,7 +5,7 @@ class Chefdk < Cask
   url "https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-#{version}.dmg"
   homepage 'http://www.getchef.com/downloads/chef-dk/mac/'
 
-  pkg 'chefdk.pkg'
+  pkg "chefdk-#{version}.pkg"
   uninstall :pkgutil => 'com.getchef.pkg.chefdk',
             :files   => [
                          '/opt/chefdk/',
