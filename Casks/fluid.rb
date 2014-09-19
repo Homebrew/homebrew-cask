@@ -1,8 +1,8 @@
 class Fluid < Cask
-  version '1.8.2'
-  sha256 '9f5d58e4049a0bfcca9f291fc097e0cec1f5df34986e9f9c0c1b385dc2a3cec8'
+  version '1.8.3'
+  sha256 '56438a946b281b009626a06cb099a7198e948bc8bef18a19c1bceb28bbe4d619'
 
-  url 'http://www.fluidapp.com/dist/Fluid_1.8.2.zip'
+  url "http://fluidapp.com/dist/Fluid_#{version}.zip"
   appcast 'http://fluidapp.com/appcast/fluid1.rss'
   homepage 'http://fluidapp.com/'
 
