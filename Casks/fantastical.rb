@@ -1,6 +1,6 @@
 class Fantastical < Cask
-  version '1.3.16'
-  sha256 '9d71391c4841870fe8e863de5da86f7db032702c8e0c93a17608d5af8769219c'
+  version '1.3.17'
+  sha256 '4ca0d3b25e8ac1748a1ee126625fe779b0b17474e43775b2f91b806bdcd59bb9'
 
   url "http://cdn.flexibits.com/Fantastical_#{version}.zip"
   appcast 'https://flexibits.com/fantastical/appcast.php'
