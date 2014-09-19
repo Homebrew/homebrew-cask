@@ -1,8 +1,8 @@
 class QtCreator < Cask
-  version '3.1.2'
-  sha256 'ce2d6d43a057ed63a3851a27a7becf81294afeee355750067ef886fd004883ac'
+  version '3.2.1'
+  sha256 'cfe2c0b3f40306397637182f86d0d26d954569baeec556b76804da1bfe403f10'
 
-  url 'https://download.qt-project.org/official_releases/qtcreator/3.1/3.1.2/qt-creator-opensource-mac-x86_64-3.1.2.dmg'
+  url 'https://download.qt-project.org/official_releases/qtcreator/3.2/3.2.1/qt-creator-opensource-mac-x86_64-3.2.1.dmg'
   homepage 'http://qt-project.org/'
 
   app 'Qt Creator.app'
