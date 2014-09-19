@@ -1,8 +1,8 @@
 class Yacreader < Cask
-  version '7.1.0'
-  sha256 '70cc5b3abb8fd22369ed4a2e930479e841165e0b4adf688b1d970f7f4f8b42bb'
+  version '7.2.0'
+  sha256 'e671e2c7914c070bc5ed7144db147d9ab6d6f1bc8a8272673e6dc39cb52b3101'
 
-  url 'https://bitbucket.org/luisangelsm/yacreader/downloads/YACReader-7.1.0-MacOSX-Intel.dmg'
+  url "https://bitbucket.org/luisangelsm/yacreader/downloads/YACReader-#{version}-MacOSX-Intel.dmg"
   homepage 'http://www.yacreader.com'
 
   app 'YACReader.app'
