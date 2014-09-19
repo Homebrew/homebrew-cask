@@ -1,6 +1,6 @@
 class Phpstorm < Cask
-  version '8.0'
-  sha256 '2933769bf855be83decf6cc8cda79c8a9b6998fb4647761d18c81aadca1da06f'
+  version '8.0.1'
+  sha256 'ff8af437d96befd475744e08b1d663df778db8711e2671551fc797cd30b0cdc7'
 
   url "http://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
   homepage 'http://www.jetbrains.com/phpstorm/'
