@@ -1,19 +1,18 @@
-# Hacking on Homebrew-cask Code
+# Hacking on Homebrew-cask
 
 If you'd like to hack on the Ruby code that drives this project, please
 join us, we'd love to have you!
 
-## What Are the Project Goals?
+## Goals, Design, and Philosophy
 
 Homebrew-cask is an attempt to make a Linux-style package manager for
 precompiled OS X software. Homebrew-cask is not yet as featureful as
 `apt` or `yum`, but we are trying to be as close as we can get to those
 tools from the user's point of view.
 
-We manage installed files via the "symlink farm" method, like [GNU Stow](http://www.gnu.org/software/stow/)
-and [Homebrew](http://brew.sh/).
-
-## What Is the Design Philosophy?
+We manage installed files via the “symlink farm” method, like [GNU Stow](http://www.gnu.org/software/stow/)
+and [Homebrew](http://brew.sh/). Similarly, we try to avoid `sudo`
+where possible.
 
 Homebrew-cask is designed to work like a traditional Unix tool:
 
@@ -21,79 +20,64 @@ Homebrew-cask is designed to work like a traditional Unix tool:
   be freed (**freed!**) from interacting with a GUI.
 - homebrew-cask should itself be scriptable.
 
-Homebrew-cask is designed to work like Homebrew:
+## Project Status
 
-- Like Homebrew, we don't require the user to install with `sudo`.  In
-  fact, we recommend against it.
+Homebrew-cask is still young, and should be considered in alpha.
 
-## What Is the State of the Project?
+We have good support for a variety of artifacts: apps, pkgs, binaries,
+plugins, and [fonts](https://github.com/caskroom/homebrew-fonts/).
+Homebrew-cask can install and uninstall any of those. However, these
+commands don't work well with multiple versions, and most importantly,
+we currently can't `upgrade`.
 
-This is a young project. We are just getting off the ground. We are still
-revising our goals and adding new ones.
+Since upgrading is a core feature of every package manager, the
+implementation of an `upgrade` verb is our top priority. For
+`upgrade` to work reliably, we must:
+- maintain unequivocal version information from a variety of sources,
+- track version-specific uninstallation,
+- play nice with self-updating software.
 
-## What Needs to be Done?
+These and more requirements are tracked in our [`upgrade` roadmap](https://github.com/caskroom/homebrew-cask/issues/4678).
+If you'd like to contribute to `upgrade`, that's an excellent place to start.
 
-Plenty. Start with [open issues](https://github.com/caskroom/homebrew-cask/issues?state=open) !
+## Homebrew and Homebrew-cask
 
-## Are You Interested in New Features?
+Homebrew-cask is independent of Homebrew as a project.
 
-Yes, definitely! Bring your own expertise. Just remember that the user
-always comes first.
+The Homebrew-cask CLI is implemented as a Homebrew subcommand,
+so we try to match semantics wherever possible. That means that similar
+functionality should have similar flags and parameters.
 
-## Are You Interested in New Types of Packages?
+However, very little backend code is shared between the two projects.
+The Homebrew codebase is based on how Homebrew *formulae* work, and our
+*casks* are very much unlike that.
 
-Yes! (We call them "artifacts"). If something is useful (and precompiled)
-then we'd like to enable users to install it via homebrew-cask.
+Because our backend needs are so different, we are discussing whether
+we should completely separate our codebase from Homebrew's
+(see [#5080](https://github.com/caskroom/homebrew-cask/issues/5080)).
 
-## Could Homebrew-cask Also Be Used to Manage Settings?
+### Casks and Formulae
 
-It's a neat idea!  We have talked about it but nobody has worked
-on it:
+Homebrew *formulae* deal with many different build processes, and often
+include arbitrary Ruby code.
 
-- <https://gist.github.com/phinze/7cd361150816bd85304e>
-- <https://github.com/caskroom/homebrew-cask/issues/1135>
+*Casks*, by contrast, only need to support the few installation methods
+used by apps, pkg installers, and so on, making them suitable for a
+[declarative DSL](https://github.com/caskroom/homebrew-cask/blob/master/doc/CASK_LANGUAGE_REFERENCE.md).
 
-## What About Installing by Copying Instead of Linking?
+We encourage cask authors to use the DSL as much as possible, since
+that makes things easier for everyone: from maintainers who review
+pull requests, to first-time contributors, to people who are unfamiliar
+with Ruby but would like to help.
 
-It's a neat idea! We have talked about it but nobody has worked on it:
+For software with unusual needs that are not covered by the DSL, we
+generally accept casks containing small hacks or arbitrary code.
+If the hack becomes common enough, we extend the DSL with a simple
+shorthand that offers the same (or better) functionality.
 
-- <https://github.com/caskroom/homebrew-cask/pull/2312#issuecomment-31859263>
+## Contributing
 
-We would want to make sure that uninstall works equally well when copying.
-
-## What About a `brew cask upgrade` Command?
-
-Yes, definitely! We have talked about it, and worked on some aspects
-of it. But there is much left to do:
-
-- <https://github.com/caskroom/homebrew-cask/issues/309>
-- <https://github.com/caskroom/homebrew-cask/issues/4678>
-
-## What About Installing Multiple Versions of a Package?
-
-Yes, definitely! We have started working on it, so please contact us
-directly if you want to help.
-
-- <https://github.com/caskroom/homebrew-cask/issues/142>
-
-## What About Dependencies?
-
-Yes, definitely! We have started working on it, so please contact us
-directly if you want to help.
-
-## What Is Your Relationship to Homebrew?
-
-We are independent of Homebrew as a project.
-
-From the user's point of view, homebrew-cask is a subcommand of Homebrew,
-so we try to match Homebrew semantics and philosophy wherever possible.
-
-From the programmer's point of view, very little code is shared with Homebrew.
-It turns out that Homebrew's code is tightly linked with the Homebrew
-Formula definition.  Casks are defined differently than Formulae, which
-(unfortunately) is a barrier to re-using code.
-
-## How Should I Set Up a Development Environment?
+### Setup
 
 Cask authors often work directly within the Homebrew directory
 under `/usr/local`.  For coding, that is usually not sufficient.
@@ -134,7 +118,7 @@ We recommend the following:
 	/<path>/<to>/<private>/<repo>/developer/bin/production_brew_cask
 	```
 
-## How Can I Force a Specific Ruby Interpreter?
+#### Forcing a Ruby interpreter
 
 You can force a specific version of the Ruby interpreter, and/or an
 alternate version of the `brew-cask` subcommand, by invoking `brew cask`
@@ -144,7 +128,7 @@ with fully-qualified paths, like this:
 $ HOMEBREW_BREW_FILE=/usr/local/bin/brew /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/brew.rb /usr/local/bin/brew-cask.rb help
 ```
 
-## How Can I Force a Specific Homebrew-cask Subcommand?
+#### Forcing a Specific Homebrew-cask Subcommand
 
 If you are developing a subcommand, you can force `brew cask` to dispatch a
 specific file by giving a fully-qualified path to the file containing the
@@ -156,17 +140,7 @@ $ brew cask /usr/local/Cellar/brew-cask/0.37.0/rubylib/cask/cli/info.rb google-c
 
 This form can also be combined with a specific Ruby interpreter as above.
 
-## Hanging out on IRC
-
-We're on IRC at `#homebrew-cask` on Freenode. If you are going to develop for
-homebrew-cask, it's a great idea to hang out with us there. Here's why:
-
-- discuss your thoughts before coding and maybe get new ideas
-- get feedback from the Travis-CI bot on build failures
-- talk to [caskbot](https://github.com/passcod/caskbot) about checksums, version info, and releases
-- just to be social!
-
-## What Version of Ruby Should I Target?
+### Target Ruby Versions
 
 Homebrew-cask is `require`d from within the Ruby environment of the parent
 Homebrew command (`brew`).
@@ -180,25 +154,25 @@ So, our code must currently maintain compatibility across Ruby 1.8.7 and
 2.0.  The automated testing provided by Travis-CI will ensure that any pull
 request will be tested under both versions.
 
-## Mind the test suite!
-
-If you're making changes - please write some tests for them! Also be sure to
-run the whole test suite using `rake test` before submitting (if you forget,
-Travis-CI will do that for you and embarrass you in front of all your friends). :)
-
-## Submitting Your Changes
+### Submitting Your Changes
 
 See the relevant section in `CONTRIBUTING.md`:
 [Submitting Your Changes](../CONTRIBUTING.md#submitting-your-changes)
 
-### Commit Messages
+#### Commit Messages
 
 The first line of a commit message (the summary line) is like the subject
 line of an email. (See [CONTRIBUTING.md](../CONTRIBUTING.md#commit-messages)).
 A short but complete summary line helps the maintainers respond to your
 pull request more quickly.
 
-### External Commands
+#### Mind the test suite!
+
+If you're making changes - please write some tests for them! Also be sure to
+run the whole test suite using `rake test` before submitting (if you forget,
+Travis-CI will do that for you and embarrass you in front of all your friends). :)
+
+#### External Commands
 
 Advanced users may create their own external commands for homebrew-cask by
 following conventions similar to external commands for git or Homebrew.  An
@@ -211,5 +185,15 @@ which follows the form `brewcask-<command>.rb`.  The Ruby file will be
 `required` and will have full access to the Ruby environments of both
 homebrew-cask and Homebrew.  Example external commands may be found in
 `developer/examples`.
+
+## Hanging out on IRC
+
+We're on IRC at `#homebrew-cask` on Freenode. If you are going to develop for
+homebrew-cask, it's a great idea to hang out with us there. Here's why:
+
+- discuss your thoughts before coding and maybe get new ideas
+- get feedback from the Travis-CI bot on build failures
+- talk to [caskbot](https://github.com/passcod/caskbot) about checksums, version info, and releases
+- just to be social!
 
 # <3 THANK YOU! <3
