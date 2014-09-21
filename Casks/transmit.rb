@@ -1,6 +1,6 @@
 class Transmit < Cask
-  version '4.4.7'
-  sha256 '27cc53de5195ce54501cdc8acbb9bed34ac4ffc20dd9aa3744985e4d06e3ee87'
+  version '4.4.8'
+  sha256 '07cd9c7a3ff8eea21658889d6179ce8cf411ae4cd22a585db665c7984d9f227d'
 
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   appcast 'http://www.panic.com/updates/update.php'
