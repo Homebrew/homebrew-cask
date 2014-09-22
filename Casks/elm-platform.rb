@@ -1,13 +1,11 @@
 class ElmPlatform < Cask
-  version '0.12.3'
-  sha256 '155569928a868095b2b27e705f2904496918f28fcb59990ff4449ca4aace330f'
+  version '0.13'
+  sha256 '98ec14efd54b19c9a90c9b9103d1fed4583df927abf6d3a618ef38a80b9a3d41'
 
-  url 'https://dl.dropboxusercontent.com/s/qfz9n90jszcxa5q/Elm-Platform-0.12.3.pkg'
+  url "http://install.elm-lang.org/Elm-Platform-#{version}.pkg"
   homepage 'http://www.elm-lang.org'
 
-  pkg 'Elm-Platform-0.12.3.pkg'
-  uninstall :pkgutil => [
-                         'org.elm-lang.bin.pkg',
-                         'org.elm-lang.share.pkg'
-                        ]
+  pkg "Elm-Platform-#{version}.pkg"
+  uninstall :pkgutil => 'org.elm-lang.*',
+            :delete => '/usr/local/share/elm'
 end
