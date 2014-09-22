@@ -1,6 +1,6 @@
 class AdobeAir < Cask
-  version '14.0'
-  sha256 'af16b6ea395efb9f9f01e15f7378fba097322e0506d2f5d48412d28a6f71b039'
+  version '15.0'
+  sha256 '07f7ae83b9d9005c830ce7592d651c378e235a20f62da692410035a703af20c7'
 
   url "http://airdownload.adobe.com/air/mac/download/#{version}/AdobeAIR.dmg"
   homepage 'https://get.adobe.com/air/'
