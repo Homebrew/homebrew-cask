@@ -1,8 +1,8 @@
 class Insomniax < Cask
-  version '2.1.3'
-  sha256 '50f41f5f40bd7a8896139c838b48d07abc0ad28419650865187383d1b9165707'
+  version '2.1.4'
+  sha256 'c6594f663b90a1aab8187a8685bfe043f89f7a245c17b1fcfbb6978a83ed33c3'
 
-  url 'https://www.macupdate.com/download/22211/insomniax-2.1.3.tgz'
+  url "http://insomniax.semaja2.net/InsomniaX-#{version}.tgz"
   homepage 'http://semaja2.net/projects/insomniaxinfo/'
 
   app 'InsomniaX.app'
