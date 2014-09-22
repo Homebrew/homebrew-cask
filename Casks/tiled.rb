@@ -1,8 +1,8 @@
 class Tiled < Cask
-  version '0.9.1'
-  sha256 '17560ca54389c077e80636ac96ddb905d2f5a3a1932562a0be6d91c76bf395a1'
+  version '0.10.1'
+  sha256 'ace859c2f821aca117af9bb72d5cc4313816d25500666fe0a153c8667ead91a3'
 
-  url 'https://downloads.sourceforge.net/project/tiled/tiled-qt/0.9.1/tiled-qt-0.9.1.dmg'
+  url "https://github.com/bjorn/tiled/releases/download/v#{version}/tiled-#{version}.dmg"
   homepage 'http://www.mapeditor.org/'
 
   app 'Tiled.app'
