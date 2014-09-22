@@ -5,5 +5,5 @@ class Isteg < Cask
   url "http://www.hanynet.com/isteg-#{version}.zip"
   homepage 'http://www.hanynet.com/isteg/'
 
-  link 'iSteg.app'
+  app 'iSteg.app'
 end

@@ -5,5 +5,5 @@ class Texmacs < Cask
   url 'http://www.texmacs.org/Download/ftp/tmftp/macos/TeXmacs-1.99.1.dmg'
   homepage 'http://www.texmacs.org/'
 
-  link 'TeXmacs-1.99.1.app'
+  app 'TeXmacs-1.99.1.app'
 end

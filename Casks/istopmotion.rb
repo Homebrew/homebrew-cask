@@ -5,5 +5,5 @@ class Istopmotion < Cask
   url 'https://cdn.boinx.com/software/istopmotion/Boinx_iStopMotion_3.2.2-15432.app.zip'
   homepage 'http://www.boinx.com/istopmotion/mac/'
 
-  link 'iStopMotion 3.app'
+  app 'iStopMotion 3.app'
 end

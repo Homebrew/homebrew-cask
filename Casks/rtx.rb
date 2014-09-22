@@ -1,9 +1,9 @@
 class Rtx < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.rtxapp.com/download'
   homepage 'http://www.rtxapp.com/mac/'
 
-  link 'RTX.app'
+  app 'RTX.app'
 end

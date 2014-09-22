@@ -5,5 +5,5 @@ class Nightingale < Cask
   url 'https://downloads.sourceforge.net/ngale/Nightingale_1.12-2432_macosx-i686.dmg'
   homepage 'http://getnightingale.com/'
 
-  link 'Nightingale.app'
+  app 'Nightingale.app'
 end

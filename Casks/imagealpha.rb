@@ -6,5 +6,5 @@ class Imagealpha < Cask
   appcast 'http://pngmini.com/appcast.xml'
   homepage 'http://pngmini.com/'
 
-  link 'ImageAlpha.app'
+  app 'ImageAlpha.app'
 end

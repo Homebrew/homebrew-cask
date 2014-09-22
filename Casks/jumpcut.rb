@@ -6,5 +6,5 @@ class Jumpcut < Cask
   appcast 'http://jumpcut.sf.net/jumpcut.appcast.xml'
   homepage 'http://jumpcut.sourceforge.net/'
 
-  link 'Jumpcut.app'
+  app 'Jumpcut.app'
 end

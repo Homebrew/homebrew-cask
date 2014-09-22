@@ -5,7 +5,7 @@ class LogitechMyharmony < Cask
   url 'http://app.myharmony.com/prod/mac/1.0/MyHarmony-App.dmg'
   homepage 'https://setup.myharmony.com/'
 
-  install 'MyHarmonySetup.pkg'
+  pkg 'MyHarmonySetup.pkg'
   uninstall :quit => 'org.logitech.MyHarmony',
             :pkgutil => 'MyHarmony.pkg'
 end

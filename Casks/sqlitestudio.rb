@@ -5,5 +5,5 @@ class Sqlitestudio < Cask
   url 'http://sqlitestudio.pl/files/free/stable/macosx/sqlitestudio-2.1.5.zip'
   homepage 'http://sqlitestudio.pl'
 
-  link 'SQLiteStudio.app'
+  app 'SQLiteStudio.app'
 end

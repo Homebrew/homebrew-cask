@@ -5,5 +5,5 @@ class FourkVideoDownloader < Cask
   url 'http://downloads.4kdownload.com/app/4kvideodownloader_3.1.dmg'
   homepage 'http://www.4kdownload.com/products/product-videodownloader'
 
-  link '4K Video Downloader.app'
+  app '4K Video Downloader.app'
 end

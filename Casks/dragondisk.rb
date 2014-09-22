@@ -5,5 +5,5 @@ class Dragondisk < Cask
   url 'http://download.dragondisk.com/DragonDisk-1.05.dmg'
   homepage 'http://www.dragondisk.com/'
 
-  link 'dragondisk.app'
+  app 'dragondisk.app'
 end

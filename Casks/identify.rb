@@ -6,5 +6,5 @@ class Identify < Cask
   appcast 'http://dl.dropbox.com/u/1495067/iDentifySparkle/iDentifyAppcast.xml'
   homepage 'http://identify2.arrmihardies.com/'
 
-  link 'iDentify.app'
+  app 'iDentify.app'
 end

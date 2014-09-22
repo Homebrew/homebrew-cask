@@ -1,9 +1,9 @@
 class Knock < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://knocktounlock.com/download'
   homepage 'http://knocktounlock.com'
 
-  link 'Knock.app'
+  app 'Knock.app'
 end

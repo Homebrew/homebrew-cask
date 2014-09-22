@@ -6,5 +6,9 @@ class Coda < Cask
   appcast 'http://www.panic.com/updates/update.php'
   homepage 'https://panic.com/Coda/'
 
-  link 'Coda 2.app'
+  app 'Coda 2.app'
+  zap :delete => [
+                  '~/Library/Application Support/Coda 2',
+                  '~/Library/Preferences/com.panic.Coda2.plist',
+                 ]
 end

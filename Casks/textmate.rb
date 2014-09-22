@@ -1,9 +1,14 @@
 class Textmate < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://api.textmate.org/downloads/release'
   homepage 'http://macromates.com/'
 
-  link 'TextMate.app'
+  app 'TextMate.app'
+  zap :delete => [
+                  '~/Library/Application Support/TextMate',
+                  '~/Library/Preferences/com.macromates.textmate.plist',
+                  '~/Library/Preferences/com.macromates.textmate.latex_config.plist',
+                 ]
 end

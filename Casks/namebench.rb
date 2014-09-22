@@ -5,5 +5,5 @@ class Namebench < Cask
   url 'https://namebench.googlecode.com/files/namebench-1.3.1-Mac_OS_X.dmg'
   homepage 'https://code.google.com/p/namebench/'
 
-  link 'namebench.app'
+  app 'namebench.app'
 end

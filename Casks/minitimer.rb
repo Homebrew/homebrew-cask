@@ -5,5 +5,5 @@ class Minitimer < Cask
   url 'http://kevingessner.com/public/downloads/miniTimer/1.0/miniTimer.dmg'
   homepage 'http://kevingessner.com/software/minitimer/'
 
-  link 'miniTimer.app'
+  app 'miniTimer.app'
 end

@@ -6,5 +6,5 @@ class Simpholders < Cask
   appcast 'http://kfi-apps.com/appcasts/simpholders/'
   homepage 'http://simpholders.com/'
 
-  link 'SimPholders.app'
+  app 'SimPholders.app'
 end

@@ -6,10 +6,10 @@ class Kaleidoscope < Cask
   appcast 'https://updates.blackpixel.com/updates?app=ks'
   homepage 'http://www.kaleidoscopeapp.com/'
 
-  link 'Kaleidoscope.app'
+  app 'Kaleidoscope.app'
   binary 'Kaleidoscope.app/Contents/Resources/bin/ksdiff'
 
-  after_install do
+  postflight do
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'com.blackpixel.kaleidoscope', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end

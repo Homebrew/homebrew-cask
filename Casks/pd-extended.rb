@@ -5,9 +5,9 @@ class PdExtended < Cask
   url 'https://downloads.sourceforge.net/project/pure-data/pd-extended/0.43.4/Pd-0.43.4-extended-macosx105-i386.dmg'
   homepage 'http://puredata.info/downloads/pd-extended'
 
-  link 'Pd-extended.app'
+  app 'Pd-extended.app'
 
-  before_uninstall do
+  uninstall_preflight do
     system '/bin/chmod', '-R', '--', 'u+w', "#{destination_path}/Pd-extended.app"
   end
 end

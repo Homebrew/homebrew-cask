@@ -1,5 +1,5 @@
 class Atmonitor < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check  
 
   url 'http://download.atpurpose.com/atMonitor/atMonitor.zip'
@@ -7,5 +7,5 @@ class Atmonitor < Cask
   # appcast 'http://support.atPurpose.com/atMonitor/updates.xml'
   homepage 'http://www.atpurpose.com/atMonitor/'
 
-  link 'atMonitor.app'
+  app 'atMonitor.app'
 end

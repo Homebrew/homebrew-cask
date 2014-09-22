@@ -5,5 +5,5 @@ class Sensiolabsdesktop < Cask
   url 'http://mac.desktop.sensiolabs.org/SensioLabsDesktop-1.0.0.dmg'
   homepage 'http://desktop.sensiolabs.org'
 
-  link 'SensioLabsDesktop.app'
+  app 'SensioLabsDesktop.app'
 end

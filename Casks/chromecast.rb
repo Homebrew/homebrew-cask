@@ -5,5 +5,5 @@ class Chromecast < Cask
   url 'https://dl.google.com/chromecast/setup/mac/chromecast-setup.1.5.0.531.dmg'
   homepage 'http://www.google.ca/intl/en/chrome/devices/chromecast/'
 
-  link 'Chromecast.app'
+  app 'Chromecast.app'
 end

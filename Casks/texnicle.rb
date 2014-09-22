@@ -6,5 +6,5 @@ class Texnicle < Cask
   appcast 'http://www.bobsoft-mac.de/profileInfo.php'
   homepage 'http://www.bobsoft-mac.de/texnicle/texnicle.html'
 
-  link 'TeXnicle.app'
+  app 'TeXnicle.app'
 end

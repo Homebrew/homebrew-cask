@@ -2,13 +2,13 @@ require 'test_helper'
 
 describe Cask::Artifact::BeforeBlock do
   describe 'install_phase' do
-    it 'calls the specified block before installing' do
+    it 'calls the specified block before installing, passing a cask mini-dsl' do
       called      = false
       yielded_arg = nil
 
       CaskWithBeforeInstall = Class.new(Cask)
       CaskWithBeforeInstall.class_eval do
-        before_install do |c|
+        preflight do |c|
           called = true
           yielded_arg = c
         end
@@ -18,18 +18,18 @@ describe Cask::Artifact::BeforeBlock do
       Cask::Artifact::BeforeBlock.new(cask).install_phase
 
       called.must_equal true
-      yielded_arg.must_equal cask
+      yielded_arg.must_be_kind_of Cask::DSL::BeforeInstall
     end
   end
 
   describe 'uninstall_phase' do
-    it 'calls the specified block before uninstalling, passing the cask' do
+    it 'calls the specified block before uninstalling, passing a cask mini-dsl' do
       called      = false
       yielded_arg = nil
 
       CaskWithBeforeUninstall = Class.new(Cask)
       CaskWithBeforeUninstall.class_eval do
-        before_uninstall do |c|
+        uninstall_preflight do |c|
           called = true
           yielded_arg = c
         end
@@ -39,7 +39,7 @@ describe Cask::Artifact::BeforeBlock do
       Cask::Artifact::BeforeBlock.new(cask).uninstall_phase
 
       called.must_equal true
-      yielded_arg.must_equal cask
+      yielded_arg.must_be_kind_of Cask::DSL::BeforeUninstall
     end
   end
 end

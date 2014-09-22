@@ -5,5 +5,5 @@ class Enfusegui < Cask
   url 'http://software.bergmark.com/enfusegui/files/2.1/EnfuseGUI-2.1.3.dmg'
   homepage 'http://software.bergmark.com/enfusegui/Main.html'
 
-  link 'EnfuseGUI.app'
+  app 'EnfuseGUI.app'
 end

@@ -6,5 +6,5 @@ class Meocloud < Cask
   appcast 'https://services.sapo.pt/Application/Catalog/Update?appid=pt.sapo.mac.cloudpt'
   homepage 'https://meocloud.pt'
 
-  link 'MEOCloud.app'
+  app 'MEOCloud.app'
 end

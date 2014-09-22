@@ -1,9 +1,9 @@
 class Slice < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://sliceeq.com/downloads/Slice.dmg'
   homepage 'http://sliceeq.com/'
 
-  link 'Slice.app'
+  app 'Slice.app'
 end

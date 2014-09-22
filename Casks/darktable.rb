@@ -5,5 +5,5 @@ class Darktable < Cask
   url "https://downloads.sourceforge.net/sourceforge/darktable/darktable-#{version}.dmg"
   homepage 'http://www.darktable.org/'
 
-  link 'darktable.app'
+  app 'darktable.app'
 end

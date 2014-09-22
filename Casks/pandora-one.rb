@@ -5,5 +5,5 @@ class PandoraOne < Cask
   url 'https://www.pandora.com/static/desktop_app/pandora_2_0_8.air'
   homepage 'http://www.pandora.com/'
 
-  link 'Pandora.app'
+  app 'Pandora.app'
 end

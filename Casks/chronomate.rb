@@ -6,5 +6,5 @@ class Chronomate < Cask
   appcast 'http://chronomateapp.com/update'
   homepage 'http://chronomateapp.com/'
 
-  link 'ChronoMate.app'
+  app 'ChronoMate.app'
 end

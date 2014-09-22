@@ -6,5 +6,5 @@ class Monolingual < Cask
   appcast 'http://monolingual.sourceforge.net/appcast.xml'
   homepage 'http://monolingual.sourceforge.net/'
 
-  link 'Monolingual.app'
+  app 'Monolingual.app'
 end

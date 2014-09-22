@@ -5,6 +5,6 @@ class Flip4mac < Cask
   url 'http://dvd-mac.com/download/Flip4Mac_3.2.0.16.dmg'
   homepage 'http://www.telestream.net/flip4mac/'
 
-  install 'Flip4Mac.pkg'
+  pkg 'Flip4Mac.pkg'
   uninstall :pkgutil => 'net.telestream.Flip4Mac'
 end

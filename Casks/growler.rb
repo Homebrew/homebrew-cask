@@ -5,5 +5,5 @@ class Growler < Cask
   url 'http://wafflesoftware.net/growlergn/download/GNGrowler-31.zip'
   homepage 'http://wafflesoftware.net/growlergn/'
 
-  link 'GN Growler Utility.app'
+  app 'GN Growler Utility.app'
 end

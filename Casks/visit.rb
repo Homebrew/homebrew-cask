@@ -5,5 +5,5 @@ class Visit < Cask
   url 'https://portal.nersc.gov/svn/visit/trunk/releases/2.7.2/VisIt-2.7.2.dmg'
   homepage 'https://wci.llnl.gov/codes/visit/home.html'
 
-  link 'VisIt.app'
+  app 'VisIt.app'
 end

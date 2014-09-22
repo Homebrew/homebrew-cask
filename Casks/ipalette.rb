@@ -6,5 +6,5 @@ class Ipalette < Cask
   appcast 'http://ipalette.info/appcast.xml'
   homepage 'http://ipalette.info/'
 
-  link 'iPalette.app'
+  app 'iPalette.app'
 end

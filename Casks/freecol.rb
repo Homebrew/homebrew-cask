@@ -5,5 +5,5 @@ class Freecol < Cask
   url 'https://downloads.sourceforge.net/sourceforge/freecol/freecol-0.10.7-mac.tar.bz2'
   homepage 'http://freecol.org'
 
-  link 'FreeCol.app'
+  app 'FreeCol.app'
 end

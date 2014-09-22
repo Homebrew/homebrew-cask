@@ -28,13 +28,13 @@ class CaskSourceForgeCorrectURLFormat < Cask
 end
 
 class CaskSourceForgeOtherCorrectURLFormat < Cask
-  version 'latest'
+  version :latest
   homepage 'http://sourceforge.net/projects/something/'
   url 'http://sourceforge.net/projects/something/files/latest/download'
 end
 
 class CaskVersionLatestWithChecksum < Cask
-  version 'latest'
+  version :latest
   sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
 end
 
@@ -87,13 +87,13 @@ describe Cask::Audit do
       it "adds an error if version is latest and using sha256" do
         audit = Cask::Audit.new(CaskVersionLatestWithChecksum.new)
         audit.run!
-        expect(audit.errors).to include(%q{you should use sha256 :no_check when version is 'latest'})
+        expect(audit.errors).to include(%q{you should use sha256 :no_check when version is :latest})
       end
 
       it "adds an error if versioned and has no checksum" do
         audit = Cask::Audit.new(CaskWithVersionNoChecksum.new)
         audit.run!
-        expect(audit.errors).to include(%q{you must include a sha256 when version is not 'latest'})
+        expect(audit.errors).to include(%q{you must include a sha256 when version is not :latest})
       end
     end
 

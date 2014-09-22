@@ -7,5 +7,5 @@ class DevonthinkProOffice < Cask
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
 
   nested_container 'DEVONthink_Pro_Office.dmg'
-  link 'DEVONthink Pro.app', :target => 'DEVONthink Pro Office.app'
+  app 'DEVONthink Pro.app', :target => 'DEVONthink Pro Office.app'
 end

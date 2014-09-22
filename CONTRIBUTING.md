@@ -30,7 +30,7 @@ Making a Cask is easy: a Cask is a small Ruby file.
 ### Examples
 
 Here's a Cask for `Alfred.app` as an example.  Note that you may repeat
-the `link` stanza as many times as you need, to create multiple links:
+the `app` stanza as many times as you need, to define multiple apps:
 
 ```ruby
 class Alfred < Cask
@@ -40,23 +40,37 @@ class Alfred < Cask
   url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
   homepage 'http://www.alfredapp.com/'
 
-  link 'Alfred 2.app'
-  link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
+  app 'Alfred 2.app'
+  app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
 ```
 
-Here is another Cask for `Vagrant.pkg`:
+Here is another Cask for `Unity.pkg`:
 
 ```ruby
-class Vagrant < Cask
-  version '1.4.3'
-  sha256 'e7ff13b01d3766829f3a0c325c1973d15b589fe1a892cf7f857da283a2cbaed1'
+class Unity < Cask
+  version '4.5.4'
+  sha256 '6fb72bfacf78df072559dd9a024a9d47e49b5717c8f17d53f05e2fc74a721876'
 
-  url 'https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg'
-  homepage 'http://www.vagrantup.com'
+  url 'http://netstorage.unity3d.com/unity/unity-4.5.4.dmg'
+  homepage 'http://unity3d.com/unity/'
 
-  install 'Vagrant.pkg'
-  uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] }
+  pkg 'Unity.pkg'
+  uninstall :pkgutil => 'com.unity3d.*'
+end
+```
+
+And here is one for `Firefox.app`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new version is available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when an unversioned download link is available:
+
+```ruby
+class Firefox < Cask
+  version :latest
+  sha256 :no_check
+
+  url 'https://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US'
+  homepage 'https://www.mozilla.org/en-US/firefox/'
+
+  app 'Firefox.app'
 end
 ```
 
@@ -106,7 +120,7 @@ class MyNewCask < Cask
   url ''
   homepage ''
 
-  link ''
+  app ''
 end
 ```
 
@@ -119,12 +133,12 @@ Fill in the following stanzas for your Cask:
 | __cask metadata__  | information about the Cask (required)
 | `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
 | `homepage`         | application homepage; used for the `brew cask home` command
-| `version`          | application version; give value of `'latest'` if versioned downloads are not offered
+| `version`          | application version; give the value `:latest` if an unversioned download is available
 | `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
 | __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
-| `link`             | relative path to a file that should be linked into the `Applications` folder on installation (see also [Link Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#link-stanza-details))
-| `install`          | relative path to `pkg` that should be run to install the application (see also [Install Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#install-stanza-details))
-| `uninstall`        | indicates what commands/scripts must be run to uninstall a pkg-based application (see also [Uninstall Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details))
+| `app`              | relative path to an `.app` bundle that should be linked into the `~/Applications` folder on installation (see also [App Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#app-stanza-details))
+| `pkg`              | relative path to a `.pkg` file containing the distribution (see also [Pkg Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#pkg-stanza-details))
+| `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details))
 
 Additional stanzas you might need for special use-cases:
 
@@ -139,8 +153,9 @@ Additional stanzas you might need for special use-cases:
 | `binary`           | relative path to a binary that should be linked into the `/usr/local/bin` folder on installation
 | `input_method`     | relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
 | `screen_saver`     | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
+| `suite`            | relative path to a containing directory that should be linked into the `~/Applications` folder on installation
 | `nested_container` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
-| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Details](doc/CASK_LANGUAGE_REFERENCE.md#caveats-details))
+| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#caveats-stanza-details))
 
 Even more special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#optional-stanzas) and [Legacy Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#legacy-stanzas).
 
@@ -204,17 +219,17 @@ To name a Cask manually, or to learn about exceptions for unusual cases, see [CA
 ### Archives With Subfolders
 
 When a downloaded archive expands to a subfolder, the subfolder name must be
-included in the `link` value.
+included in the `app` value.
 
 Example:
 
  * Texmaker is downloaded to the file `TexmakerMacosxLion.zip`.
  * `TexmakerMacosxLion.zip` unzips to a folder called `TexmakerMacosxLion`.
  * The folder `TexmakerMacosxLion` contains the application `texmaker.app`.
- * So, the `link` stanza should include the subfolder as a relative path:
+ * So, the `app` stanza should include the subfolder as a relative path:
 
 	```ruby
-	link 'TexmakerMacosxLion/texmaker.app'
+	app 'TexmakerMacosxLion/texmaker.app'
 	```
 
 ### Indenting
@@ -323,14 +338,15 @@ the key info in the first line will help us respond faster to
 your pull.
 
 For Cask commits in the homebrew-cask project, we like to include
-the Application name, version number, and purpose of the commit
-in the first line.
+the Application name, version number (or `:latest`), and purpose of
+the commit in the first line.
 
 Examples of good, clear commit summaries:
 
 * `Add Transmission.app v1.0`
 * `Upgrade Transmission.app to v2.82`
 * `Fix checksum in Transmission.app Cask`
+* `Add CodeBox Latest`
 
 Examples of difficult, unclear commit summaries:
 
@@ -346,7 +362,10 @@ $ github_user='<my-github-username>'
 $ git push "$github_user" my-new-cask
 ```
 
-If you are using GitHub two factor authenication and set your remote reposity as https you will need to set up a personal access token and use that as your username with a blank password.
+If you are using [GitHub two-factor authentication](https://github.com/blog/1614-two-factor-authentication)
+and set your remote repository as HTTPS you will need to set up
+a personal access token and use that instead your password.
+See more on https://help.github.com/articles/https-cloning-errors#provide-access-token-if-2fa-enabled
 
 ### Filing a Pull Request on GitHub
 

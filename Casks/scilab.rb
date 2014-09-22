@@ -5,5 +5,5 @@ class Scilab < Cask
   url 'http://www.scilab.org/download/5.5.0/scilab-5.5.0-x86_64.dmg'
   homepage 'https://www.scilab.org'
 
-  link 'scilab-5.5.0.app'
+  app 'scilab-5.5.0.app'
 end

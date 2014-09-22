@@ -5,5 +5,5 @@ class Pivotalbooster < Cask
   url 'http://pivotalbooster.com/downloads/releases/1.1.4.beta/PivotalBooster_1.1.4.beta.dmg'
   homepage 'http://pivotalbooster.com/'
 
-  link 'PivotalBooster.app'
+  app 'PivotalBooster.app'
 end

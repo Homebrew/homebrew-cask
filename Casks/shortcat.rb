@@ -1,10 +1,10 @@
 class Shortcat < Cask
-  version '0.7.1'
-  sha256 '9d7c2b0f2ec6ce03d0ccdf5ad15db3136ae344d26c09d1e5a8753e7b5698dc1a'
+  version '0.7.3'
+  sha256 '0d7a48a862a1b1f9a1c26f51afbcc6aaf6b406469643ec84de426d336f227cef'
 
   url "https://files.shortcatapp.com/v#{version}/Shortcat.zip"
   appcast 'https://shortcatapp.com/updates/appcast.xml'
   homepage 'http://shortcatapp.com/'
 
-  link 'Shortcat.app'
+  app 'Shortcat.app'
 end

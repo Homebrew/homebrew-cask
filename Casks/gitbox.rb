@@ -6,5 +6,6 @@ class Gitbox < Cask
   appcast 'http://gitboxapp.com/updates.xml'
   homepage 'http://gitboxapp.com/'
 
-  link 'Gitbox.app'
+  app 'Gitbox.app'
+  zap :delete => '~/Library/Preferences/com.oleganza.gitbox.plist'
 end

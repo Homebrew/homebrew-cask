@@ -5,10 +5,10 @@ class Whatpulse < Cask
   url 'http://amcdn.whatpulse.org/files/whatpulse-mac-2.4.dmg'
   homepage 'http://www.whatpulse.org/'
 
-  install 'WhatPulse 2.4.mpkg'
-  uninstall :files => [
-                       '/Applications/WhatPulse.app',
-                       '/Library/StartupItems/ChmodBPF'
-                      ],
-            :quit  => 'com.whatpulse.mac'
+  pkg 'WhatPulse 2.4.mpkg'
+  uninstall :delete => [
+                        '/Applications/WhatPulse.app',
+                        '/Library/StartupItems/ChmodBPF',
+                       ],
+            :quit   => 'com.whatpulse.mac'
 end

@@ -6,6 +6,6 @@ class Riffworkst4 < Cask
   url 'https://www.sonomawireworks.com/accountManagerUI/files/RiffWorksT4.dmg'
   homepage 'http://www.sonomawireworks.com/T4/'
 
-  install 'RiffWorksT4V2_6.pkg'
+  pkg 'RiffWorksT4V2_6.pkg'
   uninstall :pkgutil => 'com.sonomawireworks.riffworkst4'
 end

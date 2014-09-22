@@ -5,6 +5,6 @@ class Zeroinstall < Cask
   url 'https://downloads.sourceforge.net/project/zero-install/0install/2.7/ZeroInstall.pkg'
   homepage 'http://0install.net'
 
-  install 'ZeroInstall.pkg'
+  pkg 'ZeroInstall.pkg'
   uninstall :pkgutil => 'net.0install.pkg'
 end

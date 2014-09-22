@@ -5,5 +5,5 @@ class DungeonCrawlStoneSoupTiles < Cask
   url 'https://crawl.develz.org/release/stone_soup-0.14.0-tiles-macosx.zip'
   homepage 'http://crawl.develz.org'
 
-  link 'Dungeon Crawl Stone Soup - Tiles.app'
+  app 'Dungeon Crawl Stone Soup - Tiles.app'
 end

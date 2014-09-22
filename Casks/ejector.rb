@@ -5,5 +5,5 @@ class Ejector < Cask
   url 'http://www.jeb.com.fr/soft/Ejector-v0.9.0.dmg'
   homepage 'http://www.jeb.com.fr/en/ejector.shtml'
 
-  link 'Ejector.app'
+  app 'Ejector.app'
 end

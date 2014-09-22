@@ -5,5 +5,5 @@ class Bitlord < Cask
   url 'http://www.bitlord.com/osx/BitLord-Lion-2.3.2.dmg'
   homepage 'http://www.bitlord.com'
 
-  link 'BitLord.app'
+  app 'BitLord.app'
 end

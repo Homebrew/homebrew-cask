@@ -6,5 +6,6 @@ class Chicken < Cask
   appcast 'http://chicken.sourceforge.net/chicken.xml'
   homepage 'http://sourceforge.net/projects/chicken/'
 
-  link 'Chicken.app'
+  app 'Chicken.app'
+  zap :delete => '~/Library/Preferences/net.sourceforge.chicken.plist'
 end

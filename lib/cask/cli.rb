@@ -20,6 +20,7 @@ require 'cask/cli/list'
 require 'cask/cli/search'
 require 'cask/cli/uninstall'
 require 'cask/cli/update'
+require 'cask/cli/zap'
 
 require 'cask/cli/internal_use_base'
 require 'cask/cli/internal_dump'
@@ -182,6 +183,9 @@ class Cask::CLI
       opts.on("--input_methoddir=MANDATORY") do |v|
         Cask.input_methoddir = Pathname(v).expand_path
       end
+      opts.on("--internet_plugindir=MANDATORY") do |v|
+        Cask.internet_plugindir = Pathname(v).expand_path
+      end
       opts.on("--screen_saverdir=MANDATORY") do |v|
        Cask.screen_saverdir = Pathname(v).expand_path
       end
@@ -219,13 +223,17 @@ class Cask::CLI
     end
 
     def run(*args)
-      purpose
-      if @attempted_name and @attempted_name != "help"
-        puts "!! "
-        puts "!! no command with name: #{@attempted_name}"
-        puts "!! \n\n"
+      if args.include?('--version') or @attempted_name == '--version'
+        puts HOMEBREW_CASK_VERSION
+      else
+        purpose
+        if @attempted_name and @attempted_name != "help"
+          puts "!! "
+          puts "!! no command with name: #{@attempted_name}"
+          puts "!! \n\n"
+        end
+        usage
       end
-      usage
     end
 
     def purpose

@@ -7,5 +7,5 @@ class XamarinStudio < Cask
   appcast 'http://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml'
   homepage 'http://xamarin.com/studio'
 
-  link 'Xamarin Studio.app'
+  app 'Xamarin Studio.app'
 end

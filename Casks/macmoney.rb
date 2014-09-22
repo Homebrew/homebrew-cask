@@ -6,5 +6,5 @@ class Macmoney < Cask
   homepage 'http://www.devon.riceball.net/display.php?file=m01'
 
   nested_container 'MacMoney_3.6.6.dmg'
-  link 'MacMoney.app'
+  app 'MacMoney.app'
 end

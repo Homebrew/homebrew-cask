@@ -5,5 +5,5 @@ class Sigil < Cask
   url 'https://sigil.googlecode.com/files/Sigil-0.7.4-Mac-Package.dmg'
   homepage 'http://code.google.com/p/sigil/'
 
-  link 'Sigil.app'
+  app 'Sigil.app'
 end

@@ -6,5 +6,5 @@ class Thumbsup < Cask
   homepage 'http://www.devontechnologies.com/products/freeware.html#c966'
 
   nested_container 'ThumbsUp.dmg'
-  link 'ThumbsUp.app'
+  app 'ThumbsUp.app'
 end

@@ -5,5 +5,5 @@ class ArduinoGalileo < Cask
   url 'http://downloadmirror.intel.com/23171/eng/Intel_Galileo_Arduino_SW_1.5.3_on_MacOSX%20_v1.0.0.zip'
   homepage 'https://communities.intel.com/docs/DOC-22226'
 
-  link 'Arduino.app'
+  app 'Arduino.app'
 end

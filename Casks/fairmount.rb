@@ -6,5 +6,5 @@ class Fairmount < Cask
   appcast 'http://www.example.com/sparkle/fairmount/checkupdate.php'
   homepage 'https://github.com/BoxOfSnoo/Fairmount'
 
-  link 'Fairmount.app'
+  app 'Fairmount.app'
 end

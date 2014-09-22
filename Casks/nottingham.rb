@@ -5,5 +5,5 @@ class Nottingham < Cask
   url 'http://dl.clickontyler.com/nottingham/nottingham20_2.1.3.zip'
   homepage 'https://clickontyler.com/nottingham/'
 
-  link 'Nottingham.app'
+  app 'Nottingham.app'
 end

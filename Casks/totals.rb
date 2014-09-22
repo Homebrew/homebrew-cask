@@ -5,5 +5,5 @@ class Totals < Cask
   url 'http://www.kedisoft.com/dl/totals/Totals-2.2.11.dmg'
   homepage 'http://www.kedisoft.com/totals/'
 
-  link 'Totals.app'
+  app 'Totals.app'
 end

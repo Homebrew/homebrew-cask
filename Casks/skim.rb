@@ -6,5 +6,6 @@ class Skim < Cask
   appcast 'http://skim-app.sourceforge.net/skim.xml'
   homepage 'http://skim-app.sourceforge.net/'
 
-  link 'Skim.app'
+  app 'Skim.app'
+  zap :delete => '~/Library/Preferences/net.sourceforge.skim-app.skim.plist'
 end

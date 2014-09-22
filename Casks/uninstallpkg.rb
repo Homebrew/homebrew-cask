@@ -6,5 +6,5 @@ class Uninstallpkg < Cask
   appcast 'http://www.corecode.at/uninstallpkg/uninstallpkg.xml'
   homepage 'http://www.corecode.at/uninstallpkg/'
 
-  link 'UninstallPKG.app'
+  app 'UninstallPKG.app'
 end

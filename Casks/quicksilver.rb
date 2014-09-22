@@ -5,5 +5,9 @@ class Quicksilver < Cask
   url 'http://cdn.qsapp.com/plugins/files/com.blacktree.Quicksilver__16391.dmg'
   homepage 'http://qsapp.com/'
 
-  link 'Quicksilver.app'
+  app 'Quicksilver.app'
+  zap :delete => [
+                  '~/Library/Preferences/com.blacktree.Quicksilver.plist',
+                  '~/Library/Application Support/Quicksilver',
+                 ]
 end

@@ -1,5 +1,5 @@
 class Anxiety < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.anxietyapp.com/Anxiety.zip'
@@ -7,5 +7,5 @@ class Anxiety < Cask
   homepage 'http://www.anxietyapp.com/'
 
   nested_container 'Anxiety.dmg'
-  link 'Anxiety.app'
+  app 'Anxiety.app'
 end

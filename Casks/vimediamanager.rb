@@ -5,5 +5,5 @@ class Vimediamanager < Cask
   url 'http://mariusth.channelwood.org/vimediamanager/files/vimediamanager_v0.7a11c.dmg'
   homepage 'http://mariusth.channelwood.org/vimediamanager/'
 
-  link 'ViMediaManager.app'
+  app 'ViMediaManager.app'
 end

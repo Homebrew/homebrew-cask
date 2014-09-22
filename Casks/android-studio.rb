@@ -1,9 +1,13 @@
 class AndroidStudio < Cask
-  version '0.8.1 build-135.1248636'
-  sha256 '1ed112d2d6230b88c57a29ceda59ff473e6c0005e5e371f4480c93e7187c3567'
+  version '0.8.6 build-135.1339820'
+  sha256 '3a9f65434a2381019f4487481331f539a69b09b8ea81a8b4dfff9c6a126423f0'
 
-  url 'https://dl.google.com/dl/android/studio/ide-zips/0.8.1/android-studio-ide-135.1248636-mac.zip'
+  url 'http://dl.google.com/android/studio/install/0.8.6/android-studio-bundle-135.1339820-mac.dmg'
   homepage 'https://developer.android.com/sdk/installing/studio.html'
 
-  link 'Android Studio.app'
+  app 'Android Studio.app'
+
+  postflight do
+    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/Android Studio.app/Contents/Info.plist"
+  end
 end

@@ -5,5 +5,5 @@ class Chemdoodle < Cask
   url 'http://www.chemdoodle.com/downloads/ChemDoodle-osx-6.0.1.dmg'
   homepage 'http://www.chemdoodle.com'
 
-  link 'ChemDoodle'
+  suite 'ChemDoodle'
 end

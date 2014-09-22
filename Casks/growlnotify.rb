@@ -5,6 +5,6 @@ class Growlnotify < Cask
   url 'https://growl.cachefly.net/GrowlNotify-2.1.zip'
   homepage 'http://growl.info/downloads'
 
-  install 'GrowlNotify.pkg'
+  pkg 'GrowlNotify.pkg'
   uninstall :pkgutil => 'info.growl.growlnotify.*pkg'
 end

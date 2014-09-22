@@ -5,5 +5,5 @@ class Bino < Cask
   url 'http://devernay.free.fr/hacks/bino/Bino-1.4.4-OSX-SnowLeopard-GPL.zip'
   homepage 'http://bino3d.org'
 
-  link 'Bino.app'
+  app 'Bino.app'
 end

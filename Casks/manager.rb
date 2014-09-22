@@ -5,5 +5,5 @@ class Manager < Cask
   url 'http://cdn.manager.io/downloads/v14.2.35/Manager.dmg'
   homepage 'http://manager.io'
 
-  link 'Manager.app'
+  app 'Manager.app'
 end

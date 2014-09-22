@@ -1,10 +1,10 @@
 class Boot2docker < Cask
-  version '1.1.0'
-  sha256 '6a98e0311557199a71b23d596a0547e3a7902a1a04f42905c6141a08f2a1bb7d'
+  version '1.2.0'
+  sha256 'd61095e20f9b0dc4c139e48d14fdba50dfc425cc4c2e73173936ae383f80f0fd'
 
-  url 'https://github.com/boot2docker/osx-installer/releases/download/v1.1.0/Boot2Docker-1.1.0.pkg'
+  url 'https://github.com/boot2docker/osx-installer/releases/download/v1.2.0/Boot2Docker-1.2.0.pkg'
   homepage 'https://github.com/boot2docker/osx-installer'
 
-  install 'Boot2Docker-1.1.0.pkg'
+  pkg 'Boot2Docker-1.2.0.pkg'
   uninstall :pkgutil => ['io.boot2docker.pkg.boot2docker', 'io.boot2docker.pkg.boot2dockerapp', 'io.boot2dockeriso.pkg.boot2dockeriso', 'io.docker.pkg.docker']
 end

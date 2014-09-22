@@ -1,10 +1,9 @@
 class Inky < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
-  url 'https://inky.com/mail/InkyInstall.pkg'
+  url 'https://inky.com/mail/InkyInstall.dmg'
   homepage 'http://inky.com'
 
-  install 'InkyInstall.pkg'
-  uninstall :pkgutil => 'com.arcode.inky.*pkg'
+  app 'Inky.app'
 end

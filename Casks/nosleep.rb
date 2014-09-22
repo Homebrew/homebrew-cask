@@ -5,6 +5,6 @@ class Nosleep < Cask
   url 'https://macosx-nosleep-extension.googlecode.com/files/NoSleep-1.3.3.dmg'
   homepage 'https://code.google.com/p/macosx-nosleep-extension/'
 
-  install 'NoSleep.mpkg'
+  pkg 'NoSleep.mpkg'
   uninstall :script => 'Uninstall.command'
 end

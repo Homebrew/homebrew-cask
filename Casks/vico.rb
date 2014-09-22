@@ -6,5 +6,5 @@ class Vico < Cask
   appcast 'http://www.vicoapp.com/appcast.xml'
   homepage 'http://www.vicoapp.com'
 
-  link 'Vico.app'
+  app 'Vico.app'
 end

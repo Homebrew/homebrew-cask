@@ -6,5 +6,5 @@ class Soqlxplorer < Cask
   appcast 'http://www.pocketsoap.com/osx/soqlx/appcast.xml'
   homepage 'http://www.pocketsoap.com/osx/soqlx/'
 
-  link 'SoqlXplorer.app'
+  app 'SoqlXplorer.app'
 end

@@ -13,6 +13,12 @@ describe Cask::CLI::Uninstall do
     }.must_raise CaskNotInstalledError
   end
 
+  it "tries anyway on a non-present Cask when --force is given" do
+    lambda {
+      Cask::CLI::Uninstall.run('anvil', '--force')
+    } # wont_raise
+  end
+
   it "can uninstall and unlink multiple casks at once" do
     caffeine = Cask.load('local-caffeine')
     transmission = Cask.load('local-transmission')

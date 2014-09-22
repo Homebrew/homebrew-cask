@@ -5,5 +5,5 @@ class Iograph < Cask
   url 'http://iographica.com/download/osx/IOGraph_v1_0_1.dmg'
   homepage 'http://iographica.com/'
 
-  link 'IOGraph.app'
+  app 'IOGraph.app'
 end

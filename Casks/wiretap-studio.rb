@@ -5,5 +5,5 @@ class WiretapStudio < Cask
   url 'http://www.ambrosiasw.com/dl/wiretap'
   homepage 'http://www.ambrosiasw.com/utilities/wiretap/'
 
-  link 'WireTap Studio.app'
+  app 'WireTap Studio.app'
 end

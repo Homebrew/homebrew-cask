@@ -6,5 +6,5 @@ class Gamesalad < Cask
   appcast 'http://gamesalad.com/download/studioUpdates'
   homepage 'http://gamesalad.com'
 
-  link 'GameSalad.app'
+  app 'GameSalad.app'
 end

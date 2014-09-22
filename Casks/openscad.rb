@@ -5,5 +5,5 @@ class Openscad < Cask
   url 'http://files.openscad.org/OpenSCAD-2014.03.dmg'
   homepage 'http://www.openscad.org/'
 
-  link 'OpenSCAD.app'
+  app 'OpenSCAD.app'
 end

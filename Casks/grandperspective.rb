@@ -5,5 +5,5 @@ class Grandperspective < Cask
   url 'https://downloads.sourceforge.net/project/grandperspectiv/grandperspective/1.5.1/GrandPerspective-1_5_1.dmg'
   homepage 'http://grandperspectiv.sourceforge.net/'
 
-  link 'GrandPerspective.app'
+  app 'GrandPerspective.app'
 end

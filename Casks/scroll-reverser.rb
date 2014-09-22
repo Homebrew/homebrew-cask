@@ -6,5 +6,5 @@ class ScrollReverser < Cask
   appcast 'http://softwareupdate.pilotmoon.com/update/scrollreverser/appcast.xml'
   homepage 'https://pilotmoon.com/scrollreverser/'
 
-  link 'Scroll Reverser.app'
+  app 'Scroll Reverser.app'
 end

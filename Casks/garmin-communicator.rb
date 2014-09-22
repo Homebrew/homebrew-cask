@@ -5,6 +5,6 @@ class GarminCommunicator < Cask
   url 'http://download.garmin.com/software/CommunicatorPluginforMac_420.dmg'
   homepage 'http://www8.garmin.com/support/download_details.jsp?id=3739'
 
-  install 'Install Communicator Plugin.pkg'
+  pkg 'Install Communicator Plugin.pkg'
   uninstall :pkgutil => 'com.garmin.garminGpsControl.pkg'
 end

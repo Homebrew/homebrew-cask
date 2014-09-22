@@ -5,5 +5,5 @@ class Tagspaces < Cask
   url 'https://github.com/uggrock/tagspaces/releases/download/v1.8.1/tagspaces-1.8.1-osx.zip'
   homepage 'http://www.tagspaces.org'
 
-  link 'TagSpaces.app'
+  app 'TagSpaces.app'
 end

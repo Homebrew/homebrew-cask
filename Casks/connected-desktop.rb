@@ -6,5 +6,5 @@ class ConnectedDesktop < Cask
   appcast 'http://appsoftware.connecteddata.com/mac/2.0/Appcast.xml'
   homepage 'http://www.filetransporter.com/'
 
-  link 'Connected Desktop.app'
+  app 'Connected Desktop.app'
 end

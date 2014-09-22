@@ -1,9 +1,9 @@
 class Stockbarjp < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://midnightsuyama.org/download/StockBarJP.zip'
   homepage 'http://midnightsuyama.org'
 
-  link 'StockBarJP.app'
+  app 'StockBarJP.app'
 end

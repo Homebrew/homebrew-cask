@@ -1,9 +1,9 @@
 class Cloudup < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://zip.cloudup.com/f41gmwzoDkioEVevEkBW'
   homepage 'https://cloudup.com/download'
 
-  link 'Cloudup.app'
+  app 'Cloudup.app'
 end

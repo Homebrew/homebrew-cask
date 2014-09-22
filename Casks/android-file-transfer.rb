@@ -1,9 +1,9 @@
 class AndroidFileTransfer < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://dl.google.com/dl/androidjumper/mtp/current/androidfiletransfer.dmg'
   homepage 'http://www.android.com/filetransfer/'
 
-  link 'Android File Transfer.app'
+  app 'Android File Transfer.app'
 end

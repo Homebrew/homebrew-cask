@@ -5,5 +5,5 @@ class C3 < Cask
   url 'https://d2xj26462na9l3.cloudfront.net/c3/C3-FNF-0.5.2.2143.dmg'
   homepage 'http://www.downloadc3.com/'
 
-  link 'c3.app'
+  app 'c3.app'
 end

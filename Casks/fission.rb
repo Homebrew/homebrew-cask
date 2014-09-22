@@ -1,9 +1,9 @@
 class Fission < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://neutral.rogueamoeba.com/mirror/files/Fission.zip'
   homepage 'http://rogueamoeba.com/fission/'
 
-  link 'Fission.app'
+  app 'Fission.app'
 end

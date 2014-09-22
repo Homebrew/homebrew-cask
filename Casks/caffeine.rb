@@ -5,5 +5,6 @@ class Caffeine < Cask
   url 'http://download.lightheadsw.com/download.php?software=caffeine'
   homepage 'http://lightheadsw.com/caffeine/'
 
-  link 'Caffeine.app'
+  app 'Caffeine.app'
+  zap :delete => '~/Library/Preferences/com.lightheadsw.Caffeine.plist'
 end

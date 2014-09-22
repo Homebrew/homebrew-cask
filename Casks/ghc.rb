@@ -1,10 +1,10 @@
 class Ghc < Cask
-  version '7.8.2-r7'
-  sha256 '88acffb04d7aae7c0649b8eb2cab2483c69886d577b984f91a356fd5715f29af'
+  version '7.8.3-r1'
+  sha256 '4f48e373f3fa682c8c29e2128038c040e69d7852a8529173f53105027199c21c'
 
   url "https://github.com/ghcformacosx/ghc-dot-app/releases/download/v#{version}/ghc-#{version}.zip"
   homepage 'http://ghcformacosx.github.io/'
 
-  link 'ghc-7.8.2.app'
+  app 'ghc-7.8.3.app'
   caveats 'To add GHC to your PATH, launch the app and follow the included instructions.'
 end

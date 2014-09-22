@@ -5,6 +5,6 @@ class Pgloader < Cask
   url 'http://pgloader.io/files/pgloader-3.0.99.pkg'
   homepage 'http://pgloader.io'
 
-  install 'pgloader-3.0.99.pkg'
+  pkg 'pgloader-3.0.99.pkg'
   uninstall :pkgutil => 'org.tapoueh.pgloader'
 end

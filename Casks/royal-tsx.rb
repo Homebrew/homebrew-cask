@@ -6,5 +6,5 @@ class RoyalTsx < Cask
   appcast 'http://app.royaltsx.com/updates_stable.php'
   homepage 'http://www.royaltsx.com'
 
-  link 'Royal TSX.app'
+  app 'Royal TSX.app'
 end

@@ -5,6 +5,6 @@ class Fpc < Cask
   url 'https://downloads.sourceforge.net/freepascal/fpc-2.6.2.intel-macosx.dmg'
   homepage 'http://www.freepascal.org/'
 
-  install 'fpc-2.6.2rc1.intel-macosx.pkg'
+  pkg 'fpc-2.6.2rc1.intel-macosx.pkg'
   uninstall :pkgutil => 'org.freepascal.freePascalCompiler262.fpcinst386.pkg'
 end

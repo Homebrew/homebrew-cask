@@ -5,5 +5,5 @@ class MiniMetro < Cask
   url 'http://static.dinopoloclub.com/minimetro/builds/alpha13/MiniMetro-alpha13b-osx.zip'
   homepage 'http://dinopoloclub.com/minimetro/'
 
-  link 'MiniMetro-alpha13b-osx.app', :target => 'Mini Metro.app'
+  app 'MiniMetro-alpha13b-osx.app', :target => 'Mini Metro.app'
 end

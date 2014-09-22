@@ -6,5 +6,5 @@ class MonotypeSkyfonts < Cask
   homepage 'http://www.fonts.com/web-fonts/google'
 
   nested_container 'Monotype_SkyFonts_Mac64_4.4.0.0.dmg'
-  link 'Monotype Skyfonts.app'
+  app 'Monotype Skyfonts.app'
 end

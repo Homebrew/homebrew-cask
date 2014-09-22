@@ -6,5 +6,5 @@ class Testflight < Cask
   appcast 'https://testflightapp.com/appcast.xml'
   homepage 'http://testflightapp.com'
 
-  link 'TestFlight.app'
+  app 'TestFlight.app'
 end

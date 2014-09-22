@@ -5,7 +5,7 @@ class PuntoSwitcher < Cask
   url 'http://download.cdn.yandex.net.cache-ams02.cdn.yandex.net/punto/mac/PuntoSwitcher.zip'
   homepage 'http://punto.yandex.ru'
 
-  install 'PuntoSwitcher Installer.pkg'
+  pkg 'PuntoSwitcher Installer.pkg'
   uninstall :quit => 'ru.yandex.desktop.PuntoSwitcher',
             :pkgutil => [ 'ru.yandex.puntoSwitcher*', 'ru.yandex.PuntoSwitcher*' ]
 end

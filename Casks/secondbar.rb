@@ -6,5 +6,5 @@ class Secondbar < Cask
   appcast 'http://blog.boastr.net/secondbar/appcast.xml'
   homepage 'http://blog.boastr.net/?page_id=79'
 
-  link 'SecondBar.app'
+  app 'SecondBar.app'
 end

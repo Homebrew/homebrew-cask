@@ -5,7 +5,7 @@ class SelflanguageSelfControl < Cask
   url "http://files.selflanguage.org/releases/#{version.gsub(/\.\d$/, '')}/Self-#{version}.dmg"
   homepage 'http://selflanguage.org/'
 
-  link 'Self Control.app'
+  app 'Self Control.app'
   binary 'Clean.snap', :target => '/Users/Shared/Self/Clean.snap'
   caveats 'A clean snapshot is available in /Users/Shared/Self/Clean.snap'
 end

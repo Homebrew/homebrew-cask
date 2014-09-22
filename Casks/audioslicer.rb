@@ -5,5 +5,5 @@ class Audioslicer < Cask
   url 'https://downloads.sourceforge.net/sourceforge/audioslicer/AudioSlicer-1.1.1.dmg'
   homepage 'http://audioslicer.sourceforge.net'
 
-  link 'AudioSlicer.app'
+  app 'AudioSlicer.app'
 end

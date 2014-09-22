@@ -5,5 +5,5 @@ class Textroom < Cask
   url 'https://textroom.googlecode.com/files/textroom-0.6.5.dmg'
   homepage 'https://code.google.com/p/textroom/'
 
-  link 'textroom.app'
+  app 'textroom.app'
 end

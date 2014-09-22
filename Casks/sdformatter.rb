@@ -5,6 +5,6 @@ class Sdformatter < Cask
   url 'https://www.sdcard.org/downloads/formatter_4/eula_mac/SDFormatter_4.00B.pkg'
   homepage 'https://www.sdcard.org'
 
-  install 'SDFormatter_4.00B.pkg'
+  pkg 'SDFormatter_4.00B.pkg'
   uninstall :pkgutil => 'jp.co.trendy.sdformatter.SDFormatter.pkg'
 end

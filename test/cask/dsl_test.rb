@@ -45,19 +45,19 @@ describe Cask::DSL do
     end
   end
 
-  describe "link stanza" do
-    it "allows you to specify linkables" do
+  describe "app stanza" do
+    it "allows you to specify app stanzas" do
       CaskWithLinkables = Class.new(Cask)
       CaskWithLinkables.class_eval do
-        link 'Foo.app'
-        link 'Bar.app'
+        app 'Foo.app'
+        app 'Bar.app'
       end
 
       instance = CaskWithLinkables.new
       Array(instance.artifacts[:link]).sort.must_equal [['Bar.app'], ['Foo.app']]
     end
 
-    it "allow linkables to be set to empty" do
+    it "allow app stanzas to be set to empty" do
       CaskWithNoLinkables = Class.new(Cask)
 
       instance = CaskWithNoLinkables.new
@@ -89,13 +89,13 @@ describe Cask::DSL do
 
   describe "pkg stanza" do
     it "allows installable pkgs to be specified" do
-      CaskWithInstallables = Class.new(Cask)
-      CaskWithInstallables.class_eval do
-        install 'Foo.pkg'
-        install 'Bar.pkg'
+      CaskWithPkgs = Class.new(Cask)
+      CaskWithPkgs.class_eval do
+        pkg 'Foo.pkg'
+        pkg 'Bar.pkg'
       end
 
-      instance = CaskWithInstallables.new
+      instance = CaskWithPkgs.new
       Array(instance.artifacts[:install]).sort.must_equal [['Bar.pkg'], ['Foo.pkg']]
     end
   end
@@ -159,11 +159,30 @@ describe Cask::DSL do
       cask.gpg.to_s.must_match %r{\S}
     end
 
-    it "prevents specifying gpg multiple times" do
+    it "allows gpg stanza to be specified with :key_url" do
+      cask = Cask.load('with-gpg-key-url')
+      cask.gpg.to_s.must_match %r{\S}
+    end
+
+    it "prevents specifying gpg stanza multiple times" do
       err = lambda {
-        invalid_cask = Cask.load('invalid/invalid-gpg-multiple')
+        invalid_cask = Cask.load('invalid/invalid-gpg-multiple-stanzas')
       }.must_raise(CaskInvalidError)
       err.message.must_include "'gpg' stanza may only appear once"
+    end
+
+    it "prevents missing gpg key parameters" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-missing-key')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'gpg' stanza must include exactly one"
+    end
+
+    it "prevents conflicting gpg key parameters" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-conflicting-keys')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'gpg' stanza must include exactly one"
     end
 
     it "refuses to load invalid gpg signature URLs" do
@@ -178,9 +197,9 @@ describe Cask::DSL do
       }.must_raise(CaskInvalidError)
     end
 
-    it "refuses to load if gpg :type is invalid" do
+    it "refuses to load if gpg parameter is unknown" do
       err = lambda {
-        invalid_cask = Cask.load('invalid/invalid-gpg-type')
+        invalid_cask = Cask.load('invalid/invalid-gpg-parameter')
       }.must_raise(CaskInvalidError)
     end
   end
@@ -194,6 +213,19 @@ describe Cask::DSL do
     it "refuses to load invalid depends_on key" do
       err = lambda {
         invalid_cask = Cask.load('invalid/invalid-depends-on-key')
+      }.must_raise(CaskInvalidError)
+    end
+  end
+
+  describe "conflicts_with stanza" do
+    it "allows conflicts_with stanza to be specified" do
+      cask = Cask.load('with-conflicts-with')
+      cask.conflicts_with.formula.wont_be_nil
+    end
+
+    it "refuses to load invalid conflicts_with key" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-conflicts-with-key')
       }.must_raise(CaskInvalidError)
     end
   end
@@ -227,6 +259,26 @@ describe Cask::DSL do
     it "allows install_script to be specified" do
       cask = Cask.load('with-install-script')
       cask.artifacts[:install_script].first[:executable].must_equal '/usr/bin/true'
+    end
+  end
+
+  describe "tags stanza" do
+    it "allows tags stanza to be specified" do
+      cask = Cask.load('with-tags')
+      cask.tags.to_s.must_match %r{\S}
+    end
+
+    it "prevents specifying tags multiple times" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-tags-multiple')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'tags' stanza may only appear once"
+    end
+
+    it "refuses to load if tags key is invalid" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-tags-key')
+      }.must_raise(CaskInvalidError)
     end
   end
 end

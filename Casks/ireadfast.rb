@@ -5,5 +5,5 @@ class Ireadfast < Cask
   url 'http://www.gengis.net/downloads/iReadFast%202.0.dmg'
   homepage 'http://www.gengis.net/prodotti/iReadFast_Mac/en/index.php'
 
-  link 'iReadFast.app'
+  app 'iReadFast.app'
 end

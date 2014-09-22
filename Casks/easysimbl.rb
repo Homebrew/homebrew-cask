@@ -5,5 +5,5 @@ class Easysimbl < Cask
   url 'https://github.com/norio-nomura/EasySIMBL/releases/download/EasySIMBL-1.6/EasySIMBL-1.6.zip'
   homepage 'https://github.com/norio-nomura/EasySIMBL/'
 
-  link 'EasySIMBL.app'
+  app 'EasySIMBL.app'
 end

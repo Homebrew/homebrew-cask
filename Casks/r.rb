@@ -1,20 +1,34 @@
 class R < Cask
-  if MacOS.version == :mavericks
-    url 'http://cran.rstudio.com/bin/macosx/R-3.1.0-mavericks.pkg'
-    sha256 '4139dbaf8c1c810c8a785d4b94e6c276f7a8466259108787e38e982c0b163c7d'
-    install 'R-3.1.0-mavericks.pkg'
+  if MacOS.version < :mavericks
+    url 'http://cran.rstudio.com/bin/macosx/R-3.1.1-snowleopard.pkg'
+    sha256 '4db95d2bffdaa342a89d01088f47cfe6575ed7e953c31ea4dea629a0942b56b6'
+    pkg 'R-3.1.1-snowleopard.pkg'
   else
-    url 'http://cran.rstudio.com/bin/macosx/R-3.1.0-snowleopard.pkg'
-    sha256 '5c1931ab86166afa3aed07a93fad6415fc80017be4b7777838969a2949d4692c'
-    install 'R-3.1.0-snowleopard.pkg'
+    url 'http://cran.rstudio.com/bin/macosx/R-3.1.1-mavericks.pkg'
+    sha256 'd2f4e4f68628d998f81146eacd929ef6fb9bc01ca93d968e6562a3a6372c4d93'
+    pkg 'R-3.1.1-mavericks.pkg'
   end
   homepage 'http://www.r-project.org/'
-  version '3.1.0'
-  # packages: 'org.r-project.R.x86_64.fw.pkg',
-  #           'org.r-project.R.x86_64.GUI.pkg',
-  #           'org.r-project.x86_64.tcltk.x11'
-  uninstall :pkgutil => '^org\.r-project\.(R\.)?x86_64\.(fw|GUI|tcltk).*',
-            :files => ['/usr/bin/R', '/usr/bin/Rscript',
-                       '/Library/Frameworks/R.Framework/Versions/3.1',
-                       '/Library/Frameworks/R.Framework/Versions/Current']
+  version '3.1.1'
+  uninstall :pkgutil => [
+                         # eg org.r-project.R.maverics.fw.pkg
+                         #   org.r-project.R.mavericks.GUI.pkg
+                         'org\.r-project\.R\..*(fw|GUI)\.pkg',
+                         # eg org.r-project.x86_64.tcltk.x11
+                         'org.r-project\..*\.tcltk.x11',
+                        ],
+            :delete => [
+                        # symlinks
+                        '/usr/bin/R',
+                        '/usr/bin/Rscript',
+                        '/Library/Frameworks/R.Framework/Versions/Current',
+                        # :pkgutil won't delete this dir if the fontconfig cache was written to at
+                        # /Library/Frameworks/R.Framework/Versions/3.1/Resources/fontconfig/cache
+                        '/Library/Frameworks/R.Framework/Versions/3.1',
+                       ]
+  zap :delete => [
+                  '~/.R',
+                  '~/.Rhistory',
+                  '~/.Rprofile',
+                 ]
 end

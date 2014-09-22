@@ -5,5 +5,5 @@ class Retinizer < Cask
   url 'https://sites.google.com/a/mikelpr.com/files/home/Retinizer050.zip'
   homepage 'http://retinizer.mikelpr.com/'
 
-  link 'Retinizer.app'
+  app 'Retinizer.app'
 end

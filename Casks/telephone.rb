@@ -5,5 +5,5 @@ class Telephone < Cask
   url "https://telephone.googlecode.com/files/Telephone-#{version}.dmg"
   homepage 'https://code.google.com/p/telephone/'
 
-  link 'Telephone.app'
+  app 'Telephone.app'
 end

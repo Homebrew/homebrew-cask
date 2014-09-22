@@ -5,7 +5,7 @@ class Soundflower < Cask
   url 'https://soundflower.googlecode.com/files/Soundflower-1.6.6b.dmg'
   homepage 'https://code.google.com/p/soundflower/'
 
-  install 'Soundflower.pkg', :allow_untrusted => true
+  pkg 'Soundflower.pkg', :allow_untrusted => true
   uninstall :pkgutil => 'com.cycling74.soundflower.*'
   caveats do
     reboot

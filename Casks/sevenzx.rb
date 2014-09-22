@@ -5,5 +5,5 @@ class Sevenzx < Cask
   url 'https://www.macupdate.com/download/20526/7zX_1.7.1.-5003b6dcbb4d8.dmg'
   homepage 'http://sixtyfive.xmghosting.com/products/7zx/'
 
-  link '7zX.app'
+  app '7zX.app'
 end

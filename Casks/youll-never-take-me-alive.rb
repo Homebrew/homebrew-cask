@@ -5,5 +5,5 @@ class YoullNeverTakeMeAlive < Cask
   url 'https://github.com/iSECPartners/yontma-mac/releases/download/0.9.9/yontma-0.9.9.dmg'
   homepage 'https://github.com/iSECPartners/yontma-mac'
 
-  link 'You\'ll Never Take Me Alive!.app'
+  app 'You\'ll Never Take Me Alive!.app'
 end

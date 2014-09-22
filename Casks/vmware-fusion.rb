@@ -1,13 +1,13 @@
 class VmwareFusion < Cask
-  version '6.0.4-1887983'
-  sha256 'fe392850cd3578b101b3601f19704485fbb66ce1c5fa1367e464a0cf91e41a68'
+  version '7.0.0-2103067'
+  sha256 'f5b4bd80a2b8f6538ff24780998f73876acee1b65c1e38df0323734fa86d9e80'
 
-  url 'https://download3.vmware.com/software/fusion/file/VMware-Fusion-6.0.4-1887983-light.dmg'
+  url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   homepage 'http://www.vmware.com/products/fusion/'
 
   binary 'VMware Fusion.app/Contents/Library/vmrun'
-  link 'VMware Fusion.app'
-  before_uninstall do
+  app 'VMware Fusion.app'
+  uninstall_preflight do
     system '/usr/bin/sudo', '-E', '--',
            '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", "#{destination_path}/VMware Fusion.app"
   end

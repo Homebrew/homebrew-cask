@@ -5,5 +5,5 @@ class Ultrastardeluxe < Cask
   url 'https://downloads.sourceforge.net/sourceforge/ultrastardx/UltraStarDeluxe-1.1.dmg'
   homepage 'http://ultrastardx.sourceforge.net/'
 
-  link 'UltraStarDeluxe.app'
+  app 'UltraStarDeluxe.app'
 end

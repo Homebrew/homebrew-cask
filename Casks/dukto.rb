@@ -5,5 +5,5 @@ class Dukto < Cask
   url 'https://dukto.googlecode.com/files/DuktoR6-OSX.dmg'
   homepage 'https://code.google.com/p/dukto/'
 
-  link 'Dukto.app'
+  app 'Dukto.app'
 end

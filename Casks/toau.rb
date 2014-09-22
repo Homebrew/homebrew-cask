@@ -1,10 +1,10 @@
 class Toau < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://toauapp.com/download/Toau.zip'
   appcast 'http://toauapp.com/up/updates.xml'
   homepage 'http://toauapp.com'
 
-  link 'Toau.app'
+  app 'Toau.app'
 end

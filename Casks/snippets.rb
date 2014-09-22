@@ -6,5 +6,5 @@ class Snippets < Cask
   appcast 'http://snippets.me/mac/appcast.xml'
   homepage 'http://snippets.me/'
 
-  link 'Snippets.app'
+  app 'Snippets.app'
 end

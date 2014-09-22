@@ -5,5 +5,5 @@ class ScalaIde < Cask
   url 'http://downloads.typesafe.com/scalaide-pack/3.0.3.vfinal-210-20140327/scala-SDK-3.0.3-2.10-macosx.cocoa.x86_64.zip'
   homepage 'http://scala-ide.org/'
 
-  link 'eclipse/Eclipse.app', :target => 'Scala IDE.app'
+  app 'eclipse/Eclipse.app', :target => 'Scala IDE.app'
 end

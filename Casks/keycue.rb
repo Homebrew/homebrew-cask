@@ -5,5 +5,5 @@ class Keycue < Cask
   url 'http://www.ergonis.com/downloads/products/keycue/KeyCue71-Install.dmg'
   homepage 'http://www.ergonis.com/products/keycue/'
 
-  link 'KeyCue.app'
+  app 'KeyCue.app'
 end

@@ -1,6 +1,22 @@
 require 'checksum'
 require 'set'
 
+module Cask::DSL; end
+
+require 'cask/dsl/base'
+require 'cask/dsl/installed'
+require 'cask/dsl/after_install'
+require 'cask/dsl/after_uninstall'
+require 'cask/dsl/before_install'
+require 'cask/dsl/before_uninstall'
+require 'cask/dsl/appcast'
+require 'cask/dsl/conflicts_with'
+require 'cask/dsl/container'
+require 'cask/dsl/depends_on'
+require 'cask/dsl/gpg'
+require 'cask/dsl/license'
+require 'cask/dsl/tags'
+
 module Cask::DSL
   def self.included(base)
     base.extend(ClassMethods)
@@ -22,7 +38,13 @@ module Cask::DSL
 
   def depends_on; self.class.depends_on; end
 
+  def conflicts_with; self.class.conflicts_with; end
+
   def container_type; self.class.container_type; end
+
+  def container; self.class.container; end
+
+  def tags; self.class.tags; end
 
   def sums; self.class.sums || []; end
 
@@ -52,7 +74,7 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'appcast' stanza may only appear once")
       end
       @appcast ||= begin
-        Cask::Appcast.new(*args) unless args.empty?
+        Cask::DSL::Appcast.new(*args) unless args.empty?
       rescue StandardError => e
         raise CaskInvalidError.new(self.title, e)
       end
@@ -63,7 +85,7 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'gpg' stanza may only appear once")
       end
       @gpg ||= begin
-        Cask::Gpg.new(*args) unless args.empty?
+        Cask::DSL::Gpg.new(*args) unless args.empty?
       rescue StandardError => e
         raise CaskInvalidError.new(self.title, e)
       end
@@ -74,6 +96,27 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'container_type' stanza may only appear once")
       end
       @container_type ||= type
+    end
+
+    def container(*args)
+      if @container and !args.empty?
+        # todo: remove this constraint, and instead merge multiple container stanzas
+        raise CaskInvalidError.new(self.title, "'container' stanza may only appear once")
+      end
+      @container ||= begin
+        Cask::DSL::Container.new(*args) unless args.empty?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
+      end
+      # todo: remove this backwards compatibility section after removing container_type
+      if @container.type
+        @container_type ||= @container.type
+      end
+      # todo: remove this backwards compatibility section after removing nested_container
+      if @container.nested
+        artifacts[:nested_container] << @container.nested
+      end
+      @container
     end
 
     SYMBOLIC_VERSIONS = Set.new [
@@ -91,12 +134,24 @@ module Cask::DSL
       @version ||= arg
     end
 
+    def tags(*args)
+      if @tags and !args.empty?
+        # consider removing this limitation
+        raise CaskInvalidError.new(self.title, "'tags' stanza may only appear once")
+      end
+      @tags ||= begin
+        Cask::DSL::Tags.new(*args) unless args.empty?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
+      end
+    end
+
     def license(arg=nil)
       if @license and !arg.nil?
         raise CaskInvalidError.new(self.title, "'license' stanza may only appear once")
       end
       @license ||= begin
-        Cask::License.new(arg) unless arg.nil?
+        Cask::DSL::License.new(arg) unless arg.nil?
       rescue StandardError => e
         raise CaskInvalidError.new(self.title, e)
       end
@@ -112,15 +167,27 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'depends_on' stanza may only appear once")
       end
       @depends_on ||= begin
-        Cask::DependsOn.new(*args) unless args.empty?
+        Cask::DSL::DependsOn.new(*args) unless args.empty?
       rescue StandardError => e
         raise CaskInvalidError.new(self.title, e)
       end
       # todo: remove this backwards compatibility section after removing depends_on_formula
       if @depends_on.formula
-        @depends_on_formula ||= @depends_on.formula
+        @depends_on_formula ||= [ @depends_on.formula ]
       end
       @depends_on
+    end
+
+    def conflicts_with(*args)
+      if @conflicts_with and !args.empty?
+        # todo: remove this constraint, and instead merge multiple conflicts_with stanzas
+        raise CaskInvalidError.new(self.title, "'conflicts_with' stanza may only appear once")
+      end
+      @conflicts_with ||= begin
+        Cask::DSL::ConflictsWith.new(*args) unless args.empty?
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
+      end
     end
 
     def artifacts
@@ -139,24 +206,26 @@ module Cask::DSL
       end
     end
 
-    # This hash is transitional.  Each of these stanzas will
-    # ultimately either be removed or upgraded with its own
-    # unique semantics.
+    # Todo: this hash is transitional.  Each of these stanzas will
+    # ultimately either be removed or upgraded with its own unique
+    # semantics.
     STANZA_ALIASES = {
-                       :pkg                   => :install,          # to remove
-                       :app                   => :link,             # to upgrade
-                       :suite                 => :link,             # to upgrade
-                       :preflight             => :before_install,   # to remove
-                       :postflight            => :after_install,    # to remove
-                       :uninstall_preflight   => :before_uninstall, # to remove
-                       :uninstall_postflight  => :after_uninstall,  # to remove
+                       :pkg                   => :install,          # todo remove
+                       :app                   => :link,             # todo upgrade
+                       :suite                 => :link,             # todo upgrade
+                       :artifact              => :link,             # todo upgrade
+                       :preflight             => :before_install,   # todo remove
+                       :postflight            => :after_install,    # todo remove
+                       :uninstall_preflight   => :before_uninstall, # todo remove
+                       :uninstall_postflight  => :after_uninstall,  # todo remove
                      }
 
     def self.ordinary_artifact_types
       @@ordinary_artifact_types ||= [
-                                     :link,
+                                     :link,                         # todo remove
                                      :app,
                                      :suite,
+                                     :artifact,
                                      :prefpane,
                                      :qlplugin,
                                      :font,
@@ -165,8 +234,9 @@ module Cask::DSL
                                      :colorpicker,
                                      :binary,
                                      :input_method,
+                                     :internet_plugin,
                                      :screen_saver,
-                                     :install,      # deprecated
+                                     :install,                     # todo remove
                                      :pkg,
                                     ]
     end
@@ -194,10 +264,10 @@ module Cask::DSL
     end
 
     ARTIFACT_BLOCK_TYPES = [
-      :after_install,           # deprecated
-      :after_uninstall,         # deprecated
-      :before_install,          # deprecated
-      :before_uninstall,        # deprecated
+      :after_install,           # todo remove
+      :after_uninstall,         # todo remove
+      :before_install,          # todo remove
+      :before_uninstall,        # todo remove
       :preflight,
       :postflight,
       :uninstall_preflight,

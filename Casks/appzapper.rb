@@ -1,10 +1,10 @@
 class Appzapper < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.appzapper.com/downloads/appzapper.dmg'
   appcast 'http://www.appzapper.com/az2appcast.xml'
   homepage 'http://www.appzapper.com/'
 
-  link 'AppZapper.app'
+  app 'AppZapper.app'
 end

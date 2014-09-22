@@ -6,5 +6,5 @@ class Macfusion < Cask
   appcast 'http://macfusionapp.org/appcast.xml'
   homepage 'http://macfusionapp.org/'
 
-  link 'Macfusion.app'
+  app 'Macfusion.app'
 end

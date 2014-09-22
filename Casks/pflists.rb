@@ -5,5 +5,5 @@ class Pflists < Cask
   url "http://www.hanynet.com/pflists-#{version}.zip"
   homepage 'http://www.hanynet.com/pflists/index.html'
 
-  link 'PFLists.app'
+  app 'PFLists.app'
 end

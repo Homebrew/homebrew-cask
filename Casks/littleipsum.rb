@@ -5,5 +5,5 @@ class Littleipsum < Cask
   url 'http://littleipsum.com/download/LittleIpsum%201.1.2.zip'
   homepage 'http://littleipsum.com'
 
-  link 'LittleIpsum.app'
+  app 'LittleIpsum.app'
 end

@@ -5,5 +5,5 @@ class Netlogo < Cask
   url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo%20#{version}.dmg"
   homepage 'http://ccl.northwestern.edu/netlogo/'
 
-  link "NetLogo #{version}/NetLogo #{version}.app"
+  app "NetLogo #{version}/NetLogo #{version}.app"
 end

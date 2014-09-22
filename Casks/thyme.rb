@@ -5,5 +5,5 @@ class Thyme < Cask
   url 'https://joaomoreno.github.io/thyme/dist/Thyme-0.4.2.dmg'
   homepage 'http://joaomoreno.github.io/thyme/'
 
-  link 'Thyme.app'
+  app 'Thyme.app'
 end

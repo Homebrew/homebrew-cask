@@ -5,5 +5,5 @@ class Frostwire < Cask
   url 'http://dl.frostwire.com/frostwire/5.7.2/frostwire-5.7.2.dmg'
   homepage 'http://www.frostwire.com'
 
-  link 'FrostWire.app'
+  app 'FrostWire.app'
 end

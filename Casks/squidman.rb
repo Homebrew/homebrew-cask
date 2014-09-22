@@ -5,5 +5,5 @@ class Squidman < Cask
   url 'http://squidman.net/resources/downloads/SquidMan3.51.dmg'
   homepage 'http://squidman.net/squidman/'
 
-  link 'SquidMan.app'
+  app 'SquidMan.app'
 end

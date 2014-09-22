@@ -6,10 +6,8 @@ class Mailfollowup < Cask
   homepage 'http://www.cs.unc.edu/~welch/MailFollowup/'
 
   nested_container 'MailFollowUp_1.6.2.dmg'
-  install 'Install MailFollowUp.pkg'
+  pkg 'Install MailFollowUp.pkg'
 
-  uninstall :quit  => 'com.apple.mail',
-            :files => [
-                       '~/Library/Mail/Bundles/MailFollowUp.mailbundle/'
-                      ]
+  uninstall :quit  => 'com.apple.mail'
+  zap       :delete => '~/Library/Mail/Bundles/MailFollowUp.mailbundle/'
 end

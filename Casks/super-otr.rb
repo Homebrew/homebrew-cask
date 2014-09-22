@@ -6,5 +6,5 @@ class SuperOtr < Cask
   appcast 'http://apfel-a.macbay.de/software/superotr/appcast-superotr.xml'
   homepage 'http://apfel-a.macbay.de/super-otr/'
 
-  link 'Super OTR.app'
+  app 'Super OTR.app'
 end

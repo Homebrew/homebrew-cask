@@ -5,5 +5,5 @@ class Spek < Cask
   url 'https://spek.googlecode.com/files/spek-0.8.3.dmg'
   homepage 'http://spek.cc'
 
-  link 'Spek.app'
+  app 'Spek.app'
 end

@@ -6,5 +6,5 @@ class Fastscripts < Cask
   appcast 'http://www.red-sweater.com/fastscripts/appcast2.php'
   homepage 'http://www.red-sweater.com/fastscripts/'
 
-  link 'FastScripts.app'
+  app 'FastScripts.app'
 end

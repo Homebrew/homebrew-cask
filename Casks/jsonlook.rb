@@ -1,5 +1,5 @@
 class Jsonlook < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://dl.dropbox.com/u/3878216/github/jsonlook.qlgenerator.zip'

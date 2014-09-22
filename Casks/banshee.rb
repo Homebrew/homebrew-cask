@@ -5,5 +5,5 @@ class Banshee < Cask
   url 'http://ftp.gnome.org/pub/GNOME/binaries/mac/banshee/banshee-2.6.1.macosx.intel.dmg'
   homepage 'http://banshee.fm'
 
-  link 'Banshee.app'
+  app 'Banshee.app'
 end

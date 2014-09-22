@@ -1,7 +1,28 @@
 class Cask::Artifact::UninstallBase < Cask::Artifact::Base
 
+  # todo: 500 is also hardcoded in cask/pkg.rb, but much of
+  #       that logic is probably in the wrong location
+
+  PATH_ARG_SLICE_SIZE = 500
+
   # todo: these methods were consolidated here from separate
-  #       sources and, should be refactored for consistency
+  #       sources and should be refactored for consistency
+
+  def self.expand_path_strings(path_strings)
+    path_strings.map do |path_string|
+      %r{\A~}.match(path_string) ? Pathname.new(path_string).expand_path : Pathname.new(path_string)
+    end
+  end
+
+  def self.remove_relative_path_strings(action, path_strings)
+    relative = path_strings.map do |path_string|
+      path_string if %r{/\.\.(?:/|\Z)}.match(path_string) or ! %r{\A/}.match(path_string)
+    end.compact
+    relative.each do |path_string|
+      opoo %Q{Skipping #{action} for relative path #{path_string}}
+    end
+    path_strings - relative
+  end
 
   def install_phase
     odebug "Nothing to do. The uninstall artifact has no install phase."
@@ -11,12 +32,13 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
     dispatch_uninstall_directives(self.class.artifact_dsl_key)
   end
 
-  def dispatch_uninstall_directives(stanza)
+  def dispatch_uninstall_directives(stanza, expand_tilde=false)
     directives_set = @cask.artifacts[stanza]
     ohai "Running #{stanza} process for #{@cask}; your password may be necessary"
 
     directives_set.each do |directives|
-      unknown_keys = directives.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :files, :delete, :trash]
+      # todo remove backward-compatible :files
+      unknown_keys = directives.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :files, :delete, :trash, :rmdir]
       unless unknown_keys.empty?
         opoo %Q{Unknown arguments to #{stanza} -- #{unknown_keys.inspect}. Running "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" will likely fix it.}
       end
@@ -102,7 +124,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
       end
     end
 
-    # :script must come before :pkgutil or :files so that the script file is not already deleted
+    # :script must come before :pkgutil, :delete, or :trash so that the script file is not already deleted
     directives_set.select{ |h| h.key?(:script) }.each do |directives|
       executable, script_arguments = self.class.read_script_arguments(directives,
                                                                       'uninstall',
@@ -123,26 +145,50 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
     end
 
     directives_set.select{ |h| h.key?(:delete) }.each do |directives|
-      Array(directives[:delete]).flatten.each_slice(500) do |file_slice|
-        ohai "Removing files: #{file_slice.utf8_inspect}"
-        @command.run!('/bin/rm', :args => file_slice.unshift('-rf', '--'), :sudo => true)
+      Array(directives[:delete]).flatten.each_slice(PATH_ARG_SLICE_SIZE) do |path_slice|
+        ohai "Removing files: #{path_slice.utf8_inspect}"
+        path_slice = self.class.expand_path_strings(path_slice) if expand_tilde
+        path_slice = self.class.remove_relative_path_strings(:delete, path_slice)
+        @command.run!('/bin/rm', :args => path_slice.unshift('-rf', '--'), :sudo => true)
       end
     end
 
     # :trash functionality is stubbed as a synonym for :delete
     # todo: make :trash work differently, moving files to the Trash
     directives_set.select{ |h| h.key?(:trash) }.each do |directives|
-      Array(directives[:trash]).flatten.each_slice(500) do |file_slice|
-        ohai "Removing files: #{file_slice.utf8_inspect}"
-        @command.run!('/bin/rm', :args => file_slice.unshift('-rf', '--'), :sudo => true)
+      Array(directives[:trash]).flatten.each_slice(PATH_ARG_SLICE_SIZE) do |path_slice|
+        ohai "Removing files: #{path_slice.utf8_inspect}"
+        path_slice = self.class.expand_path_strings(path_slice) if expand_tilde
+        path_slice = self.class.remove_relative_path_strings(:trash, path_slice)
+        @command.run!('/bin/rm', :args => path_slice.unshift('-rf', '--'), :sudo => true)
       end
     end
 
     # todo: remove support for deprecated :files both here and elsewhere
     directives_set.select{ |h| h.key?(:files) }.each do |directives|
-      Array(directives[:files]).flatten.each_slice(500) do |file_slice|
-        ohai "Removing files: #{file_slice.utf8_inspect}"
-        @command.run!('/bin/rm', :args => file_slice.unshift('-rf', '--'), :sudo => true)
+      Array(directives[:files]).flatten.each_slice(PATH_ARG_SLICE_SIZE) do |path_slice|
+        ohai "Removing files: #{path_slice.utf8_inspect}"
+        path_slice = self.class.expand_path_strings(path_slice) if expand_tilde
+        path_slice = self.class.remove_relative_path_strings(:delete, path_slice) # :delete for messages
+        @command.run!('/bin/rm', :args => path_slice.unshift('-rf', '--'), :sudo => true)
+      end
+    end
+
+    directives_set.select{ |h| h.key?(:rmdir) }.each do |directives|
+      Array(directives[:rmdir]).flatten.each do |directory|
+        directory = self.class.expand_path_strings([directory]).first if expand_tilde
+        directory = self.class.remove_relative_path_strings(:rmdir, [ directory ]).first
+        next unless directory.respond_to?(:length)
+        next unless directory.length > 0
+        ohai "Removing directory if empty: #{directory.utf8_inspect}"
+        directory = Pathname.new(directory)
+        next unless directory.exist?
+        @command.run!('/bin/rm', :args => [ '-f', '--', directory.join('.DS_Store') ],
+                                 :sudo => true,
+                                 :stderr => :silence)
+        @command.run('/bin/rmdir', :args => [ '--', directory ],
+                                   :sudo => true,
+                                   :stderr => :silence)
       end
     end
   end

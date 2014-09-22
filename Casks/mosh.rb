@@ -5,6 +5,6 @@ class Mosh < Cask
   url 'https://mosh.mit.edu/mosh-1.2.4-3.pkg'
   homepage 'http://mosh.mit.edu/'
 
-  install 'mosh-1.2.4-3.pkg'
+  pkg 'mosh-1.2.4-3.pkg'
   uninstall :pkgutil => 'edu.mit.mosh.mosh.pkg'
 end

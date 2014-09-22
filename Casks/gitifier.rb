@@ -6,5 +6,5 @@ class Gitifier < Cask
   appcast 'http://sparkle.psionides.eu/feed/gitifier'
   homepage 'http://psionides.github.io/Gitifier/'
 
-  link 'Gitifier.app'
+  app 'Gitifier.app'
 end

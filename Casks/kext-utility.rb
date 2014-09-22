@@ -5,5 +5,5 @@ class KextUtility < Cask
   url 'http://cvad-mac.narod.ru/files/Kext_Utility.app.v2.5.6.zip'
   homepage 'http://cvad-mac.narod.ru/index/0-4'
 
-  link 'Kext Utility.app'
+  app 'Kext Utility.app'
 end

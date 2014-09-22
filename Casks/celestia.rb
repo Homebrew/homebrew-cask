@@ -5,5 +5,5 @@ class Celestia < Cask
   url 'https://downloads.sourceforge.net/sourceforge/celestia/celestia-osx-1.6.1.dmg'
   homepage 'http://sourceforge.net/projects/celestia'
 
-  link 'Celestia.app'
+  app 'Celestia.app'
 end

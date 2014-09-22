@@ -1,9 +1,9 @@
 class Istumbler < Cask
-  version '100gmc5b'
-  sha256 '867a62f891c8fdc31883f45c1a9d0a3bfef6786acbf0a0eec947c4efd8661eb3'
+  version '100'
+  sha256 'bc260060dd2d2ccff122e523aa3b9d610bea2d158bb8b0a18eb14c304e49ff67'
 
-  url 'https://istumbler.net/beta/istumbler-100gmc5b.zip'
+  url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   homepage 'http://istumbler.net/'
 
-  link 'iStumbler.app'
+  app 'iStumbler.app'
 end

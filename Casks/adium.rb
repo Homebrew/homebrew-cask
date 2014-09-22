@@ -6,5 +6,9 @@ class Adium < Cask
   appcast 'http://www.adium.im/sparkle/update.php'
   homepage 'https://www.adium.im/'
 
-  link 'Adium.app'
+  app 'Adium.app'
+  zap :delete => [
+                  '~/Library/Application Support/Adium 2.0',
+                  '~/Library/Preferences/com.adiumX.adiumX.plist',
+                 ]
 end

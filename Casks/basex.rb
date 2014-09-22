@@ -5,5 +5,5 @@ class Basex < Cask
   url 'http://files.basex.org/releases/7.8.1/BaseX781.app.zip'
   homepage 'http://basex.org/home/'
 
-  link 'BaseX.app'
+  app 'BaseX.app'
 end

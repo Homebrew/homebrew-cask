@@ -6,5 +6,5 @@ class StrongvpnClient < Cask
   appcast 'https://colomovers.com/mac.xml'
   homepage 'http://strongvpn.com/vpnclient.shtml'
 
-  link 'StrongVPN Client.app'
+  app 'StrongVPN Client.app'
 end

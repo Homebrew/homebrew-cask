@@ -6,5 +6,9 @@ class Transmission < Cask
   appcast 'http://update.transmissionbt.com/appcast.xml'
   homepage 'http://www.transmissionbt.com/'
 
-  link 'Transmission.app'
+  app 'Transmission.app'
+  zap :delete => [
+                  '~/Library/Preferences/org.m0k.transmission.plist',
+                  '~/Library/Application Support/Transmission/blocklists',
+                 ]
 end

@@ -6,5 +6,5 @@ class Diskwave < Cask
   appcast 'http://diskwave.barthe.ph/sparkle/appcast_64bit.php'
   homepage 'http://diskwave.barthe.ph/'
 
-  link 'DiskWave.app'
+  app 'DiskWave.app'
 end

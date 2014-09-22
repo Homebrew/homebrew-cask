@@ -5,7 +5,7 @@ class EidMw < Cask
   url 'https://eid-mw.googlecode.com/files/beid-4.0.6-7422-signed.dmg'
   homepage 'https://code.google.com/p/eid-mw/'
 
-  install 'beid-7422-signed.pkg'
+  pkg 'beid-7422-signed.pkg'
 
   uninstall :pkgutil => 'be.eid.middleware'
 end

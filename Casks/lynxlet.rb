@@ -5,5 +5,5 @@ class Lynxlet < Cask
   url 'http://habilis.net/lynxlet/Lynxlet_0.8.1.dmg'
   homepage 'http://habilis.net/lynxlet/'
 
-  link 'Lynxlet.app'
+  app 'Lynxlet.app'
 end

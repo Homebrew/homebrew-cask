@@ -6,5 +6,5 @@ class Neu < Cask
   appcast 'http://sparkle.elegantchaos.com/neu/appcast.xml'
   homepage 'http://www.elegantchaos.com/neu/'
 
-  link "neu-v#{version}/Neu.app"
+  app "neu-v#{version}/Neu.app"
 end

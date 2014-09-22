@@ -6,5 +6,5 @@ class PortMap < Cask
   appcast 'http://www.codingmonkeys.de/portmap/appcast.rss'
   homepage 'http://www.codingmonkeys.de/portmap'
 
-  link 'Port Map.app'
+  app 'Port Map.app'
 end

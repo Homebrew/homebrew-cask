@@ -5,5 +5,5 @@ class Knox < Cask
   url 'https://d13itkw33a7sus.cloudfront.net/dist/K/Knox-2.2.0.zip'
   homepage 'https://agilebits.com/knox'
 
-  link 'Knox.app'
+  app 'Knox.app'
 end

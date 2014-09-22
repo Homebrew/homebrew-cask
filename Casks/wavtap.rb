@@ -5,6 +5,6 @@ class Wavtap < Cask
   url 'https://github.com/downloads/pje/WavTap/WavTap%200.2.0.pkg'
   homepage 'https://github.com/pje/wavtap'
 
-  install 'WavTap 0.2.0.pkg'
+  pkg 'WavTap 0.2.0.pkg'
   uninstall :pkgutil => 'com.wavtap.*', :kext => 'com.wavtap.driver.WavTap'
 end

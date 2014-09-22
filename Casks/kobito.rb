@@ -6,5 +6,5 @@ class Kobito < Cask
   appcast 'http://kobito.qiita.com/appcast.xml'
   homepage 'http://kobito.qiita.com/'
 
-  link 'Kobito.app'
+  app 'Kobito.app'
 end

@@ -5,5 +5,5 @@ class Imitone < Cask
   url "http://imitone.com/beta/imitone-#{version}.dmg"
   homepage 'http://imitone.com/'
 
-  link 'imitone.app'
+  app 'imitone.app'
 end

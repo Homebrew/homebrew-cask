@@ -5,5 +5,5 @@ class Licecap < Cask
   url 'http://www.cockos.com/licecap/licecap124.dmg'
   homepage 'http://www.cockos.com/licecap/'
 
-  link 'LICEcap.app'
+  app 'LICEcap.app'
 end

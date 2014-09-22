@@ -6,5 +6,5 @@ class Metanota < Cask
   appcast 'https://s3.amazonaws.com/sparkle.metanota.com/appcast.xml'
   homepage 'http://www.metanota.com/'
 
-  link 'Metanota.app'
+  app 'Metanota.app'
 end

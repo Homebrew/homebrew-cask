@@ -5,5 +5,5 @@ class MpegStreamclip < Cask
   url 'http://www.alfanet.it/squared5/MPEG_Streamclip_1.9.2.dmg'
   homepage 'http://www.squared5.com/'
 
-  link 'MPEG Streamclip.app'
+  app 'MPEG Streamclip.app'
 end

@@ -6,5 +6,5 @@ class Woodhouse < Cask
   appcast 'http://phinze.github.com/woodhouse/appcast.xml'
   homepage 'https://github.com/phinze/woodhouse/'
 
-  link 'Woodhouse.app'
+  app 'Woodhouse.app'
 end

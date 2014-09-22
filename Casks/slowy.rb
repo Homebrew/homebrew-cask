@@ -5,5 +5,5 @@ class Slowy < Cask
   url 'http://slowyapp.com/downloads/Slowyapp_v1.6.dmg'
   homepage 'http://slowyapp.com/'
 
-  link 'Slowy.app'
+  app 'Slowy.app'
 end

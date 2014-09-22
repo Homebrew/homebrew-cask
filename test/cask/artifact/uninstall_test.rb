@@ -17,8 +17,17 @@ describe Cask::Artifact::Uninstall do
     end
   end
 
+  describe 'zap_phase' do
+    it 'does nothing, because the zap_phase method is a no-op' do
+      uninstall_artifact = Cask::Artifact::Uninstall.new(@cask, Cask::FakeSystemCommand)
+      shutup do
+        uninstall_artifact.zap_phase
+      end
+    end
+  end
+
   describe 'uninstall_phase' do
-    # todo: uninstall tests for :signal (implementation does not use SystemComment)
+    # todo: uninstall tests for :signal (implementation does not use SystemCommand)
     it 'runs the specified uninstaller for the cask' do
       uninstall_artifact = Cask::Artifact::Uninstall.new(@cask, Cask::FakeSystemCommand)
 
@@ -26,6 +35,9 @@ describe Cask::Artifact::Uninstall do
       Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application id "my.fancy.package.app" to quit'])
 
       Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', @cask.destination_path/'MyFancyPkg'/'FancyUninstaller.tool', '--please'])
+      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-rf', '--', '/permissible/absolute/path'])
+      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-f', '--', Pathname.new(TestHelper.local_binary_path('empty_directory')).join('.DS_Store')])
+      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rmdir', '--', Pathname.new(TestHelper.local_binary_path('empty_directory'))])
 
       shutup do
         uninstall_artifact.uninstall_phase
@@ -57,6 +69,16 @@ describe Cask::Artifact::Uninstall do
           'fancy',
           'fancy/bin',
           'fancy/var',
+        ].join("\n")
+      )
+      Cask::FakeSystemCommand.stubs_command(
+        ['/usr/sbin/pkgutil', '--files', 'my.fancy.package.main'],
+        [
+          'fancy',
+          'fancy/bin',
+          'fancy/var',
+          'fancy/bin/fancy.exe',
+          'fancy/var/fancy.data',
         ].join("\n")
       )
       Cask::FakeSystemCommand.stubs_command(
@@ -125,6 +147,16 @@ describe Cask::Artifact::Uninstall do
         [
           'fancy',
           'fancy/agent',
+        ].join("\n")
+      )
+      Cask::FakeSystemCommand.stubs_command(
+        ['/usr/sbin/pkgutil', '--files', 'my.fancy.package.agent'],
+        [
+          'fancy',
+          'fancy/agent',
+          'fancy/agent/fancy-agent.exe',
+          'fancy/agent/fancy-agent.pid',
+          'fancy/agent/fancy-agent.log',
         ].join("\n")
       )
       Cask::FakeSystemCommand.stubs_command(

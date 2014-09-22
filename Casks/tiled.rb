@@ -5,5 +5,5 @@ class Tiled < Cask
   url 'https://downloads.sourceforge.net/project/tiled/tiled-qt/0.9.1/tiled-qt-0.9.1.dmg'
   homepage 'http://www.mapeditor.org/'
 
-  link 'Tiled.app'
+  app 'Tiled.app'
 end

@@ -6,5 +6,5 @@ class Subtitles < Cask
   appcast 'http://subtitlesapp.com/updates.xml'
   homepage 'http://subtitlesapp.com'
 
-  link 'Subtitles.app'
+  app 'Subtitles.app'
 end

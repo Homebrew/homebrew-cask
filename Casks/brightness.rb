@@ -5,5 +5,5 @@ class Brightness < Cask
   url 'http://www.bergdesign.com/resources/Brightness/Brightness_1.1.2.dmg'
   homepage 'http://www.bergdesign.com/brightness/'
 
-  link 'Brightness.app'
+  app 'Brightness.app'
 end

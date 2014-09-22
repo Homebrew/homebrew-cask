@@ -5,5 +5,5 @@ class Cx < Cask
   url 'https://www.cx.com/install/desktop/versions/cx-1-0-3-6.zip'
   homepage 'http://www.cx.com'
 
-  link 'CX.app'
+  app 'CX.app'
 end

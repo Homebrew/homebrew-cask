@@ -5,5 +5,5 @@ class Psi < Cask
   url 'https://downloads.sourceforge.net/sourceforge/psi/Psi-0.15.dmg'
   homepage 'http://psi-im.org/'
 
-  link 'Psi.app'
+  app 'Psi.app'
 end

@@ -5,7 +5,7 @@ class Hashcat < Cask
   url 'https://hashcat.net/files/hashcat-0.47.7z'
   homepage 'https://hashcat.net/hashcat/'
 
-  depends_on_formula 'unar'
+  depends_on :formula => 'unar'
 
   binary 'hashcat-0.47/hashcat-cli64.app', :target => 'hashcat'
 end

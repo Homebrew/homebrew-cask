@@ -5,5 +5,5 @@ class Reeddit < Cask
   url 'https://github.com/berbaquero/Reeddit-app/releases/download/v1.9/Reeddit.app.zip'
   homepage 'http://mac.reedditapp.com'
 
-  link 'Reeddit.app'
+  app 'Reeddit.app'
 end

@@ -1,6 +1,6 @@
 class Alib1 < Cask
   # note: "1" is not a version number, but an intrinsic part of the product name
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://presstube.com/screensavers/Presstube-ALib1-mac.zip'
@@ -8,7 +8,7 @@ class Alib1 < Cask
 
   screen_saver 'Presstube-ALib1.app/Contents/Resources/Presstube - ALib1.saver'
 
-  after_install do
+  postflight do
     system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName ALib1 (Presstube)', "#{destination_path}/presstube-alib1.app/Contents/Resources/Presstube - ALib1.saver/Contents/Info.plist"
   end
 

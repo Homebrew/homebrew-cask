@@ -65,10 +65,13 @@ Cask.default_tap = 'caskroom/homebrew-testcasks'
 Cask.caskroom = HOMEBREW_PREFIX.join('TestCaskroom')
 
 class TestHelper
-  # helper for test casks to reference local files easily
-  def self.local_binary(name)
-    path = File.expand_path(File.join(File.dirname(__FILE__), 'support', 'binaries', name))
-    "file://#{path}"
+  # helpers for test casks to reference local files easily
+  def self.local_binary_path(name)
+    File.expand_path(File.join(File.dirname(__FILE__), 'support', 'binaries', name))
+  end
+
+  def self.local_binary_url(name)
+    'file://' + local_binary_path(name)
   end
 
   def self.test_cask

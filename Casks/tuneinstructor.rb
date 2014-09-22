@@ -6,5 +6,5 @@ class Tuneinstructor < Cask
   url 'http://www.tune-instructor.de/_data/TuneInstructor3.4b.dmg'
   homepage 'http://www.tune-instructor.de/com/start.html'
 
-  link 'Tune•Instructor.app'
+  app 'Tune•Instructor.app'
 end

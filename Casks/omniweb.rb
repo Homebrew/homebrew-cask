@@ -5,5 +5,5 @@ class Omniweb < Cask
   url 'http://downloads.omnigroup.com/software/MacOSX/10.4/OmniWeb-5.11.2.dmg'
   homepage 'http://www.omnigroup.com/products/omniweb/'
 
-  link 'OmniWeb.app'
+  app 'OmniWeb.app'
 end

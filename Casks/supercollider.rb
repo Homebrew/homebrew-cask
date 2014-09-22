@@ -5,5 +5,5 @@ class Supercollider < Cask
   url 'https://downloads.sourceforge.net/project/supercollider/Mac%20OS%20X/3.6/SuperCollider-3.6.5-OSX-universal.dmg'
   homepage 'http://supercollider.sourceforge.net/'
 
-  link 'SuperCollider/SuperCollider.app'
+  app 'SuperCollider/SuperCollider.app'
 end

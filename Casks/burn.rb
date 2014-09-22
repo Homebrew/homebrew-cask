@@ -5,5 +5,5 @@ class Burn < Cask
   url 'https://downloads.sourceforge.net/project/burn-osx/Burn/2.5.1/burn251.zip'
   homepage 'http://burn-osx.sourceforge.net/'
 
-  link 'Burn.localized/Burn.app'
+  app 'Burn.localized/Burn.app'
 end

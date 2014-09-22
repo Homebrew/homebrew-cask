@@ -5,5 +5,5 @@ class Corsixth < Cask
   url 'https://github.com/CorsixTH/CorsixTH/releases/download/v0.30/CorsixTH-0.30-OSX.dmg'
   homepage 'http://th.corsix.org'
 
-  link 'CorsixTH.app'
+  app 'CorsixTH.app'
 end

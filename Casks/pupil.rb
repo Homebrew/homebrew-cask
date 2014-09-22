@@ -6,5 +6,5 @@ class Pupil < Cask
   appcast 'http://pupil.io/appcast.rss'
   homepage 'http://pupil.io/'
 
-  link 'Pupil.app'
+  app 'Pupil.app'
 end

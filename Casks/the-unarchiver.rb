@@ -5,5 +5,5 @@ class TheUnarchiver < Cask
   url 'https://theunarchiver.googlecode.com/files/TheUnarchiver3.9.1.zip'
   homepage 'http://unarchiver.c3.cx/'
 
-  link 'The Unarchiver.app'
+  app 'The Unarchiver.app'
 end

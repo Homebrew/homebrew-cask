@@ -6,5 +6,5 @@ class Meerkat < Cask
   appcast 'http://codesorcery.net/appcasts/Meerkat.xml'
   homepage 'http://codesorcery.net/meerkat'
 
-  link 'Meerkat.app'
+  app 'Meerkat.app'
 end

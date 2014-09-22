@@ -6,5 +6,5 @@ class Fakethunder < Cask
   appcast 'http://martianlaboratory.com/fakethunder/update.xml'
   homepage 'http://martianz.cn/fakethunder/'
 
-  link 'fakeThunder.app'
+  app 'fakeThunder.app'
 end

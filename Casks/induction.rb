@@ -6,5 +6,5 @@ class Induction < Cask
   appcast 'https://induction.mesmerizeapp.com/'
   homepage 'http://inductionapp.com/'
 
-  link 'Induction.app'
+  app 'Induction.app'
 end

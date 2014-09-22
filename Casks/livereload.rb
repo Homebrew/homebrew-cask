@@ -6,5 +6,5 @@ class Livereload < Cask
   appcast 'https://s3.amazonaws.com/download.livereload.com/LiveReload-Mac-appcast.xml'
   homepage 'http://www.livereload.com'
 
-  link 'LiveReload.app'
+  app 'LiveReload.app'
 end

@@ -1,9 +1,9 @@
 class Diumoo < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://share.diumoo.net/static/diumoo.zip'
   homepage 'http://diumoo.net/'
 
-  link 'diumoo.app'
+  app 'diumoo.app'
 end

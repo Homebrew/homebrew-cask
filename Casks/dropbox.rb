@@ -1,9 +1,9 @@
 class Dropbox < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.dropbox.com/download?plat=mac&full=1'
   homepage 'https://www.dropbox.com/'
 
-  link 'Dropbox.app'
+  app 'Dropbox.app'
 end

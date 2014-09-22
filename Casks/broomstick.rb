@@ -5,5 +5,5 @@ class Broomstick < Cask
   url 'http://downloads.zibity.com/Broomstick/Broomstick%200.91.zip'
   homepage 'http://www.zibity.com/broomstick'
 
-  link 'Broomstick.app'
+  app 'Broomstick.app'
 end

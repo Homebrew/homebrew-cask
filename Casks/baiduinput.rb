@@ -1,14 +1,14 @@
 # encoding: UTF-8
 class Baiduinput < Cask
-  version '3.2_1000e'
-  sha256 'a8599116bb9248a06b7a26f7be73061cb00263263fe685cb0b7c6c99fce6cf56'
+  version '3.3_1000e'
+  sha256 '7fbfd7270ce5c8d3a7e801ce67b4e858089299ef3ba96b3c0feb110d87da24e2'
 
-  url 'http://wuxian.baidu.com/download/1000e/baiduinput_mac_v3.2_1000e.dmg'
+  url "http://wuxian.baidu.com/download/1000e/baiduinput_mac_v#{version}.dmg"
   homepage 'http://wuxian.baidu.com/input/mac.html'
 
-  install '安装百度输入法.pkg'
+  caveats do
+  	manual_installer '安装百度输入法.app'
+  end
   uninstall :pkgutil  => 'com.baidu.inputmethod.*',
-            :files    => [
-                          '/Library/Input Methods/BaiduIM.app'
-                         ]
+            :delete   => '/Library/Input Methods/BaiduIM.app'
 end

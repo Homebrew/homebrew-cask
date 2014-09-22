@@ -6,5 +6,5 @@ class WowheadClient < Cask
   appcast 'http://client.wowhead.com/files/wowhead-client-appcast.xml'
   homepage 'http://wowhead.com'
 
-  link 'Wowhead Client.app'
+  app 'Wowhead Client.app'
 end

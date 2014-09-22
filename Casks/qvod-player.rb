@@ -5,6 +5,6 @@ class QvodPlayer < Cask
   url 'http://dl.kuaibo.com/mac/QvodPlayer_v1.1.26.dmg'
   homepage 'http://www.qvodcd.com/'
 
-  install '双击安装快播.pkg'
+  pkg '双击安装快播.pkg'
   uninstall :pkgutil => 'com.kuaibo.pkg.QvodPlayer'
 end

@@ -5,7 +5,7 @@ class Truecrypt < Cask
   url 'https://downloads.sourceforge.net/sourceforge/truecrypt/TrueCrypt-7.2-Mac-OS-X.dmg'
   homepage 'http://truecrypt.org/'
 
-  install 'TrueCrypt 7.2.mpkg'
+  pkg 'TrueCrypt 7.2.mpkg'
   caveats do
     files_in_usr_local
     <<-EOS.undent

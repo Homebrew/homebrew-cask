@@ -5,5 +5,5 @@ class Myphonedesktop < Cask
   url 'http://www.myphonedesktop.com/dwn/myPhoneDesktop_macos_2_0_3.dmg'
   homepage 'http://www.myphonedesktop.com/'
 
-  link 'myPhoneDesktop.app'
+  app 'myPhoneDesktop.app'
 end

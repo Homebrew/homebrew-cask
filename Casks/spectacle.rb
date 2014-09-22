@@ -6,5 +6,6 @@ class Spectacle < Cask
   appcast 'http://spectacleapp.com/updates/appcast.xml'
   homepage 'http://spectacleapp.com/'
 
-  link 'Spectacle.app'
+  app 'Spectacle.app'
+  zap :delete => '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist'
 end

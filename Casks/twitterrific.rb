@@ -6,5 +6,6 @@ class Twitterrific < Cask
   appcast 'http://iconfactory.com/appcasts/Twitterrific/appcast.xml'
   homepage 'http://twitterrific.com/mac'
 
-  link 'Twitterrific.app'
+  app 'Twitterrific.app'
+  zap :delete => '~/Library/Application Support/Twitterrific'
 end

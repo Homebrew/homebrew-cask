@@ -6,5 +6,6 @@ class SequelPro < Cask
   appcast 'http://www.sequelpro.com/appcast/app-releases.xml'
   homepage 'http://www.sequelpro.com/'
 
-  link 'Sequel Pro.app'
+  app 'Sequel Pro.app'
+  zap :delete => '~/Library/Application Support/Sequel Pro/Data'
 end

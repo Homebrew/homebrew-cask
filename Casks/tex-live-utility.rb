@@ -6,5 +6,5 @@ class TexLiveUtility < Cask
   appcast 'http://mactlmgr.googlecode.com/svn/trunk/appcast/tlu_appcast.xml'
   homepage 'https://code.google.com/p/mactlmgr/'
 
-  link 'TeX Live Utility.app'
+  app 'TeX Live Utility.app'
 end

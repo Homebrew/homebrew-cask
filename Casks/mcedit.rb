@@ -5,5 +5,5 @@ class Mcedit < Cask
   url 'https://bitbucket.org/codewarrior0/mcedit/downloads/MCEdit-0.1.7.1.macosx-10_6-x86_64.zip'
   homepage 'http://www.mcedit.net'
 
-  link 'MCEdit.app'
+  app 'MCEdit.app'
 end

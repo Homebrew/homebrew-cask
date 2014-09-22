@@ -5,7 +5,7 @@ class Klayout < Cask
   url 'http://178.77.72.242/downloads/klayout.0.23.2.pkg'
   homepage 'http://www.klayout.de/index.html'
 
-  install 'klayout.0.23.2.pkg'
+  pkg 'klayout.0.23.2.pkg'
   uninstall :pkgutil => 'klayout.de',
             :quit => 'klayout.de'
 end

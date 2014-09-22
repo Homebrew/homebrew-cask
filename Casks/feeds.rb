@@ -6,5 +6,6 @@ class Feeds < Cask
   appcast 'https://feedswww.appspot.com/appcast.xml'
   homepage 'http://www.feedsapp.com/'
 
-  link 'Feeds.app'
+  app 'Feeds.app'
+  zap :delete => '~/Library/Preferences/com.feedsapp.Feeds.plist'
 end

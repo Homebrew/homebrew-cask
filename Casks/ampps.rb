@@ -5,5 +5,5 @@ class Ampps < Cask
   url 'http://files.ampps.com/AMPPS-2.3.dmg'
   homepage 'http://www.ampps.com'
 
-  link 'AMPPS'
+  suite 'AMPPS'
 end

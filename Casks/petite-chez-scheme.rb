@@ -5,6 +5,6 @@ class PetiteChezScheme < Cask
   url 'http://www.scheme.com/download/pcsv8.4-ta6osx-1.pkg.tar.gz'
   homepage 'http://www.scheme.com/petitechezscheme.html'
 
-  install 'pcsv8.4-ta6osx-1.pkg'
+  pkg 'pcsv8.4-ta6osx-1.pkg'
   uninstall :pkgutil => 'com.scheme.chezscheme'
 end

@@ -5,6 +5,6 @@ class CartaoDeCidadao < Cask
   url "http://www.cartaodecidadao.pt/ccsoftware/Cartao_de_Cidadao_#{version}_LION_MOUNTAIN_LION_MAVERICKS.dmg"
   homepage 'http://www.cartaodecidadao.pt/'
 
-  install 'Cartao_de_Cidadao.pkg'
+  pkg 'Cartao_de_Cidadao.pkg'
   uninstall :script => '/usr/local/bin/pteid_uninstall.sh'
 end

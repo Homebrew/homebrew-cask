@@ -5,5 +5,5 @@ class Calibre2opds < Cask
   url 'https://calibre2opds.googlecode.com/files/calibre2opds-3.3-246.dmg'
   homepage 'http://calibre2opds.com/'
 
-  link 'Calibre2Opds.app'
+  app 'Calibre2Opds.app'
 end

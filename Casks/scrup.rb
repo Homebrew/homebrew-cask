@@ -6,5 +6,5 @@ class Scrup < Cask
   appcast 'https://s.rsms.me/scrup/appcast.xml'
   homepage 'https://github.com/rsms/scrup'
 
-  link 'Scrup.app'
+  app 'Scrup.app'
 end

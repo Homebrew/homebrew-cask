@@ -6,5 +6,5 @@ class Macpass < Cask
   appcast 'http://www.nomadsland.de/macpass_appcast.xml'
   homepage 'http://mstarke.github.io/MacPass/'
 
-  link 'MacPass.app'
+  app 'MacPass.app'
 end

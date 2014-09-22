@@ -5,5 +5,5 @@ class Accessmenubarapps < Cask
   url 'http://www.ortisoft.de/resources/AccessMenuBarApps2.4.dmg'
   homepage 'http://www.ortisoft.de/accessmenubarapps/'
 
-  link 'AccessMenuBarApps.app'
+  app 'AccessMenuBarApps.app'
 end

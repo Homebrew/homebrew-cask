@@ -5,5 +5,5 @@ class GoogleRefine < Cask
   url 'https://github.com/OpenRefine/OpenRefine/releases/download/2.5/google-refine-2.5-r2407.dmg'
   homepage 'http://openrefine.org/'
 
-  link 'Google Refine.app'
+  app 'Google Refine.app'
 end

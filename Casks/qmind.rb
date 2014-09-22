@@ -6,5 +6,5 @@ class Qmind < Cask
   appcast 'http://qvacua.com/qmind/appcast.xml'
   homepage 'http://qvacua.com'
 
-  link 'Qmind.app'
+  app 'Qmind.app'
 end

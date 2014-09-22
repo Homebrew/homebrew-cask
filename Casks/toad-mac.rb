@@ -5,6 +5,7 @@ class ToadMac < Cask
   url 'http://community-downloads.quest.com/toadsoft/toadmacedition/ToadMacEdition_108.pkg'
   homepage 'http://www.toadworld.com/products/toad-mac-edition/default.aspx'
 
-  install 'ToadMacEdition_108.pkg'
-  uninstall :pkgutil => 'com.dell.Toad', :files => '/Applications/Toad.app'
+  pkg 'ToadMacEdition_108.pkg'
+  uninstall :pkgutil => 'com.dell.Toad',
+            :delete => '/Applications/Toad.app'
 end

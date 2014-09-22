@@ -5,5 +5,5 @@ class Psychopy < Cask
   url 'https://downloads.sourceforge.net/sourceforge/psychpy/StandalonePsychoPy-1.79.01-OSX.dmg'
   homepage 'http://www.psychopy.org/'
 
-  link 'PsychoPy2.app'
+  app 'PsychoPy2.app'
 end

@@ -6,5 +6,5 @@ class Tilemill < Cask
   appcast 'http://mapbox.com/tilemill/platforms/osx/appcast2.xml'
   homepage 'http://www.mapbox.com/tilemill/'
 
-  link 'TileMill.app'
+  app 'TileMill.app'
 end

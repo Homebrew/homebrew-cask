@@ -5,5 +5,5 @@ class CouchbaseServerEnterprise < Cask
   url 'http://packages.couchbase.com/releases/2.5.1/couchbase-server-enterprise_2.5.1_x86_64.zip'
   homepage 'http://www.couchbase.com/'
 
-  link 'Couchbase Server.app'
+  app 'Couchbase Server.app'
 end

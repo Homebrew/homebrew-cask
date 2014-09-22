@@ -5,5 +5,5 @@ class Sloth < Cask
   url 'http://sveinbjorn.org/files/software/sloth.zip'
   homepage 'http://sveinbjorn.org/sloth'
 
-  link "Sloth-#{version}/Sloth.app"
+  app "Sloth-#{version}/Sloth.app"
 end

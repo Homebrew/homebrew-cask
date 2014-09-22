@@ -5,5 +5,5 @@ class Supertuxkart < Cask
   url 'https://downloads.sourceforge.net/sourceforge/supertuxkart/supertuxkart-0.8.1-osx.dmg'
   homepage 'http://supertuxkart.sourceforge.net'
 
-  link 'Supertuxkart.app'
+  app 'Supertuxkart.app'
 end

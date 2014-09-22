@@ -5,6 +5,6 @@ class Dmm < Cask
   url 'https://www.dmm.co.jp/transfer/-/dmmviewer/=/device=mac/'
   homepage 'http://www.dmm.com/dc/book/'
 
-  install 'DMMViewer.pkg'
+  pkg 'DMMViewer.pkg'
   uninstall :pkgutil => 'jp.co.cyphertec.installer.app.ImageViewer'
 end

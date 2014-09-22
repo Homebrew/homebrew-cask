@@ -6,5 +6,6 @@ class Selfcontrol < Cask
   appcast 'http://selfcontrolapp.com/SelfControlAppcast.xml'
   homepage 'http://selfcontrolapp.com/'
 
-  link 'SelfControl.app'
+  app 'SelfControl.app'
+  zap :delete => '~/Library/Preferences/org.eyebeam.SelfControl.plist'
 end

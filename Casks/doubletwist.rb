@@ -6,5 +6,5 @@ class Doubletwist < Cask
   appcast 'http://download.doubletwist.com/mac/appcast.xml'
   homepage 'http://www.doubletwist.com/'
 
-  link 'doubleTwist.app'
+  app 'doubleTwist.app'
 end

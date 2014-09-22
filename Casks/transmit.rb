@@ -1,10 +1,14 @@
 class Transmit < Cask
-  version '4.4.6'
-  sha256 '55b4a6f9c178f82a55a370745ed22cea4ba92a471b4be7a31105f67d04d0290c'
+  version '4.4.8'
+  sha256 '07cd9c7a3ff8eea21658889d6179ce8cf411ae4cd22a585db665c7984d9f227d'
 
-  url 'https://www.panic.com/transmit/d/Transmit%204.4.6.zip'
+  url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   appcast 'http://www.panic.com/updates/update.php'
   homepage 'http://panic.com/transmit'
 
-  link 'Transmit.app'
+  app 'Transmit.app'
+  zap :delete => [
+                  '~/Library/Preferences/com.panic.Transmit.plist',
+                  '~/Library/Application Support/Transmit',
+                 ]
 end

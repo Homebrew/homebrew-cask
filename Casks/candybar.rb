@@ -5,7 +5,7 @@ class Candybar < Cask
   url 'https://panic.com/candybar/d/CandyBar%203.3.4.zip'
   homepage 'http://www.panic.com/blog/candybar-mountain-lion-and-beyond'
 
-  link 'CandyBar.app'
+  app 'CandyBar.app'
   caveats <<-EOS.undent
     Candybar is free of charge.  Visit the following link for a license
     http://panic.com/bin/setup.php/cb3/PPQA-YAMA-E3KP-VHXG-B6AL-L

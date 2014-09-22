@@ -6,5 +6,5 @@ class Cornerstone < Cask
   appcast 'http://www.zennaware.com/cornerstone/appcast/feed2.php'
   homepage 'http://www.zennaware.com/cornerstone/index.php'
 
-  link 'Cornerstone.app'
+  app 'Cornerstone.app'
 end

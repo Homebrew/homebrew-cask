@@ -3,6 +3,7 @@
 
 require 'yaml'
 require 'open3'
+require 'stringio'
 
 # monkeypatch Object - not a great idea
 class Object
@@ -54,6 +55,17 @@ class Pathname
   end
 end
 
+class Buffer < StringIO
+  def initialize(tty = false)
+    super()
+    @tty = tty
+  end
+
+  def tty?
+    @tty
+  end
+end
+
 # global methods
 
 def odebug title, *sput
@@ -78,10 +90,12 @@ module Cask::Utils
        :appcast,
        :version,
        :license,
+       :tags,
        :sums,
        :artifacts,
        :caveats,
        :depends_on_formula,
+       :conflicts_with,
        :container_type,
        :gpg,
       ].each do |method|
@@ -100,7 +114,7 @@ module Cask::Utils
 
     if $stdout.tty?
       # determine the best width to display for different console sizes
-      console_width = `/bin/stty size`.chomp.split(" ").last.to_i
+      console_width = Cask::SystemCommand.run("/bin/stty", :args => ["size"]).chomp.split(" ").last.to_i
       console_width = 80 if console_width <= 0
     else
       console_width = 80

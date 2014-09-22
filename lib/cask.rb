@@ -8,7 +8,6 @@ require 'download_strategy'
 require 'cmd/update'
 require 'rubygems'
 
-require 'cask/appcast'
 require 'cask/artifact'
 require 'cask/audit'
 require 'cask/auditor'
@@ -17,15 +16,12 @@ require 'cask/checkable'
 require 'cask/cli'
 require 'cask/caveats'
 require 'cask/container'
-require 'cask/depends_on'
 require 'cask/download'
 require 'cask/download_strategy'
 require 'cask/dsl'
 require 'cask/exceptions'
 require 'cask/fetcher'
-require 'cask/gpg'
 require 'cask/installer'
-require 'cask/license'
 require 'cask/link_checker'
 require 'cask/locations'
 require 'cask/options'
@@ -59,7 +55,7 @@ class Cask
       ohai "We'll set permissions properly so we won't need sudo in the future"
       current_user = Etc.getpwuid(Process.euid).name
       if caskroom.parent.writable?
-        system '/bin/mkdir', caskroom
+        system '/bin/mkdir', '--', caskroom
       else
         toplevel_dir = caskroom
         toplevel_dir = toplevel_dir.parent until toplevel_dir.parent.root?
@@ -130,6 +126,17 @@ class Cask
     self.name.gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase
   end
 
+  def self.nowstamp_metadata_path(container_path)
+    @timenow ||= Time.now.gmtime
+    if container_path.respond_to?(:join)
+      precision = 3
+      timestamp = @timenow.strftime('%Y%m%d%H%M%S')
+      fraction = ("%.#{precision}f" % (@timenow.to_f - @timenow.to_i))[1..-1]
+      timestamp.concat(fraction)
+      container_path.join(timestamp)
+    end
+  end
+
   attr_reader :title
   def initialize(title=self.class.title)
     @title = title
@@ -140,7 +147,53 @@ class Cask
   end
 
   def destination_path
-    caskroom_path.join(version.to_s)
+    cask_version = version ? version : :unknown
+    caskroom_path.join(cask_version.to_s)
+  end
+
+  def metadata_master_container_path
+    caskroom_path.join(self.class.metadata_subdir)
+  end
+
+  def metadata_versioned_container_path
+    cask_version = version ? version : :unknown
+    metadata_master_container_path.join(cask_version.to_s)
+  end
+
+  def metadata_path(timestamp=:latest, create=false)
+    return nil unless metadata_versioned_container_path.respond_to?(:join)
+    if create and timestamp == :latest
+      raise CaskError.new('Cannot create metadata path when timestamp is :latest')
+    end
+    if timestamp == :latest
+      path = Pathname.glob(metadata_versioned_container_path.join('*')).sort.last
+    elsif timestamp == :now
+      path = self.class.nowstamp_metadata_path(metadata_versioned_container_path)
+    else
+      path = metadata_versioned_container_path.join(timestamp)
+    end
+    if create
+      odebug "Creating metadata directory #{path}"
+      FileUtils.mkdir_p path
+    end
+    path
+  end
+
+  def metadata_subdir(leaf, timestamp=:latest, create=false)
+    if create and timestamp == :latest
+      raise CaskError.new('Cannot create metadata subdir when timestamp is :latest')
+    end
+    unless leaf.respond_to?(:length) and leaf.length > 0
+      raise CaskError.new('Cannot create metadata subdir for empty leaf')
+    end
+    parent = metadata_path(timestamp, create)
+    return nil unless parent.respond_to?(:join)
+    subdir = parent.join(leaf)
+    if create
+      odebug "Creating metadata subdirectory #{subdir}"
+      FileUtils.mkdir_p subdir
+    end
+    subdir
   end
 
   def installed?

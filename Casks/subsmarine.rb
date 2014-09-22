@@ -6,5 +6,5 @@ class Subsmarine < Cask
   appcast 'http://www.cocoawithchurros.com/shine/appcast.php?id=7'
   homepage 'http://www.cocoawithchurros.com/subsmarine.php'
 
-  link 'SubsMarine.app'
+  app 'SubsMarine.app'
 end

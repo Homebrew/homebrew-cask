@@ -5,5 +5,5 @@ class GimpLisanet < Cask
   url 'https://downloads.sourceforge.net/gimponosx/Gimp-2.8.10p2-Mavericks.dmg'
   homepage 'http://gimp.lisanet.de'
 
-  link 'GIMP.app'
+  app 'GIMP.app'
 end

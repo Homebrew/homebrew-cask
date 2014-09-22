@@ -5,10 +5,8 @@ class Authoxy < Cask
   url 'http://www.hrsoftworks.net/downloads/Authoxy3.6.dmg'
   homepage 'http://www.hrsoftworks.net'
 
-  install 'Authoxy (double click me).pkg'
+  pkg 'Authoxy (double click me).pkg'
   uninstall :pkgutil => 'net.hrsoftworks.authoxy.*',
-            :files => [
-                       "#{ENV['HOME']}/Library/Preferences/net.hrsoftworks.AuthoxyPref.plist",
-                       '/tmp/authoxyd.pid',
-                      ]
+            :delete  => '/tmp/authoxyd.pid'
+  zap       :delete   => '~/Library/Preferences/net.hrsoftworks.AuthoxyPref.plist'
 end

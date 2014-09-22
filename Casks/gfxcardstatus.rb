@@ -6,5 +6,5 @@ class Gfxcardstatus < Cask
   appcast 'http://gfx.io/appcast.xml'
   homepage 'http://gfx.io/'
 
-  link 'gfxCardStatus.app'
+  app 'gfxCardStatus.app'
 end

@@ -19,10 +19,10 @@ names, and other aspects of this manual are still subject to change.
 
 ## FREQUENTLY USED COMMANDS
 
-  * `install` <Cask>:
+  * `install [--force]` <Cask>:
     Install <Cask>.
 
-  * `uninstall` <Cask>:
+  * `uninstall [--force]` <Cask>:
     Uninstall <Cask>.
 
   * `search` <text> | /<regexp>/:
@@ -74,18 +74,50 @@ names, and other aspects of this manual are still subject to change.
     Display information about <Cask>.
 
   * `install [--force]` <Cask>:
-    Install <Cask>.
+    Install <Cask>.  With `--force`, re-install even if the Cask appears to
+    be already present.
 
     <Cask> is usually the name of a Cask as returned by `brew cask search`,
     but see [OTHER WAYS TO SPECIFY A CASK][] for variations.
 
-  * `list` or `ls` [<Casks>]:
-    Without any arguments, list all installed Casks.
+  * `list` or `ls` [-1 | -l] [<Casks>]:
+    Without any arguments, list all installed Casks.  With `-1`, always
+    format the output in a single column.  With `-l`, give a more detailed
+    listing.
 
     If <Casks> are given, list the installed files for <Casks>.
 
-  * `uninstall` or `rm` or `remove` <Cask>:
-    Uninstall <Cask>.
+  * `uninstall [--force]` or `rm` or `remove` <Cask>:
+    Uninstall <Cask>.  With `--force`, uninstall even if the Cask does
+    not appear to be present.
+
+    Note that `uninstall --force` is currently imperfect.  It will follow
+    the `uninstall` instructions from *newest* Cask definition, even if
+    the given Cask has changed since you installed it.  The result is that
+    `uninstall --force` will always succeed in removing relevant files
+    under `/opt/homebrew-cask`, but will sometimes fail to remove relevant
+    installed files outside of `/opt/homebrew-cask`.  This issue is being
+    addressed.
+
+    `uninstall` without `--force` is also imperfect.  It may be unable to
+    perform an `uninstall` operation if the given Cask has changed since you
+    installed it.  This issue is being addressed.
+
+  * `zap` <Cask>:
+    Unconditionally remove _all_ files associated with <Cask>.
+
+    Implicitly performs all actions associated with `uninstall`, even if
+    the Cask does not appear to be currently installed.
+
+    Removes all staged versions of the Cask distribution found under
+    `/opt/homebrew-cask/Caskroom/<Cask>`
+
+    If the Cask definition contains a `zap` stanza, performs additional
+    `zap` actions as defined there, such as removing local preference
+    files.  `zap` actions are variable, depending on the level of detail
+    defined by the Cask author.
+
+    **`zap` may remove resources which are shared between applications.**
 
   * `search` or `-S`:
     Display all Casks available for install.
@@ -136,6 +168,9 @@ in a future version.
 
   * `--input_methoddir=<path>`:
     Target location for Input Method links.  The default value is `~/Library/Input Methods`.
+
+  * `--internet_plugindir=<path>`:
+    Target location for Internet Plugin links.  The default value is `~/Library/Internet Plug-Ins`.
 
   * `--screen_saverdir=<path>`:
     Target location for Screen Saver links.  The default value is `~/Library/Screen Savers`.

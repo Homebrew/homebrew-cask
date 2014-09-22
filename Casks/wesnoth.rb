@@ -5,5 +5,5 @@ class Wesnoth < Cask
   url 'https://downloads.sourceforge.net/sourceforge/wesnoth/Wesnoth_1.10.7.dmg'
   homepage 'http://wesnoth.org'
 
-  link 'Wesnoth.app'
+  app 'Wesnoth.app'
 end

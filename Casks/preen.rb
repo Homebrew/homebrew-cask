@@ -6,5 +6,5 @@ class Preen < Cask
   appcast 'http://www.anomiesoftware.com/PreenAppcast.xml'
   homepage 'http://anomiesoftware.com/Anomie_Software/Preen.html'
 
-  link 'Preen.app'
+  app 'Preen.app'
 end

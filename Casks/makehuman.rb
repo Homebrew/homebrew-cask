@@ -5,5 +5,5 @@ class Makehuman < Cask
   url 'http://download.tuxfamily.org/makehuman/releases/1.0.1/makehuman-1.0.1-osx.dmg'
   homepage 'http://www.makehuman.org/'
 
-  link 'MakeHuman.app'
+  app 'MakeHuman.app'
 end

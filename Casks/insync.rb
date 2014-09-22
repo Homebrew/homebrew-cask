@@ -5,5 +5,5 @@ class Insync < Cask
   url 'http://s.insynchq.com/builds/Insync-1.0.29.31750.dmg'
   homepage 'https://insynchq.com/'
 
-  link 'Insync.app'
+  app 'Insync.app'
 end

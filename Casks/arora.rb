@@ -5,5 +5,5 @@ class Arora < Cask
   url 'https://arora.googlecode.com/files/Arora%200.10.1%20Intel-Qt4.5.3.dmg'
   homepage 'https://code.google.com/p/arora/'
 
-  link 'Arora.app'
+  app 'Arora.app'
 end

@@ -6,5 +6,6 @@ class Concentrate < Cask
   appcast 'http://getconcentrating.com/concentrate_appcast.xml'
   homepage 'http://www.getconcentrating.com/'
 
-  link 'Concentrate.app'
+  app 'Concentrate.app'
+  zap :delete => '~/Library/Application Support/Concentrate/Concentrate.sqlite3'
 end

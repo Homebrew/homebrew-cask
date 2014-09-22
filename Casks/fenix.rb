@@ -6,5 +6,5 @@ class Fenix < Cask
   homepage 'http://fenixwebserver.com/'
   nested_container "Fenix_#{version}.dmg"
 
-  link 'Fenix.app'
+  app 'Fenix.app'
 end

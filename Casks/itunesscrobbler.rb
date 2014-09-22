@@ -5,5 +5,5 @@ class Itunesscrobbler < Cask
   url 'http://www.easyclasspage.de/lastfm/files/iTunesScrobbler_060.zip'
   homepage 'http://www.easyclasspage.de/lastfm/seite-19.html'
 
-  link 'iTunesScrobbler.app'
+  app 'iTunesScrobbler.app'
 end

@@ -1,5 +1,5 @@
 class Thinkorswim < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://mediaserver.thinkorswim.com/installer/InstFiles/thinkorswim_installer.dmg'

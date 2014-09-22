@@ -1,8 +1,7 @@
-require 'digest'
-require 'dependency_collector'
-require 'formula_installer'
-
 class Cask::Installer
+
+  PERSISTENT_METADATA_SUBDIRS = [ 'gpg' ]
+
   def initialize(cask, command=Cask::SystemCommand)
     @cask = cask
     @command = command
@@ -11,15 +10,30 @@ class Cask::Installer
   def self.print_caveats(cask)
     odebug "Printing caveats"
     unless cask.caveats.empty?
-      ohai "Caveats"
-      cask.caveats.each do |caveat|
-        if caveat.respond_to?(:eval_and_print)
-          caveat.eval_and_print(cask)
-        else
-          puts caveat
+      output = capture_output do
+        cask.caveats.each do |caveat|
+          if caveat.respond_to?(:eval_and_print)
+            caveat.eval_and_print(cask)
+          else
+            puts caveat
+          end
         end
       end
+
+      unless output.empty?
+        ohai "Caveats"
+        puts output
+      end
     end
+  end
+
+  def self.capture_output(&block)
+    old_stdout = $stdout
+    $stdout = Buffer.new($stdout.tty?)
+    block.call
+    output = $stdout.string
+    $stdout = old_stdout
+    output
   end
 
   def install(force=false)
@@ -36,7 +50,7 @@ class Cask::Installer
       extract_primary_container
       install_artifacts
     rescue
-      purge_files
+      purge_versioned_files
       raise
     end
 
@@ -89,20 +103,16 @@ class Cask::Installer
     unless @cask.depends_on_formula.empty?
       ohai 'Installing Formula dependencies from Homebrew'
       @cask.depends_on_formula.each do |dep_name|
-        dependency_collector = DependencyCollector.new
-        dep = dependency_collector.add(dep_name)
-        unless dep.installed?
-          dep_tab = Tab.for_formula(dep.to_formula)
-          dep_options = dep.options
-          dep = dep.to_formula
-          fi = FormulaInstaller.new(dep)
-          fi.tab = dep_tab
-          fi.options = dep_options
-          fi.ignore_deps = false
-          fi.show_header = true
-          fi.install
-          fi.caveats
-          fi.finish
+        print "#{dep_name} ... "
+        installed = @command.run(HOMEBREW_BREW_FILE,
+                                 :args => ['list', '--versions', dep_name],
+                                 :stderr => :silence).include?(dep_name)
+        if installed
+          puts "already installed"
+        else
+          @command.run!(HOMEBREW_BREW_FILE,
+                        :args => ['install', dep_name])
+          puts "done"
         end
       end
     end
@@ -112,10 +122,11 @@ class Cask::Installer
     self.class.print_caveats(@cask)
   end
 
-  def uninstall
+  def uninstall(force=false)
     odebug "Cask::Installer.uninstall"
     uninstall_artifacts
-    purge_files
+    purge_versioned_files
+    purge_caskroom_path if force
   end
 
   def uninstall_artifacts
@@ -128,11 +139,61 @@ class Cask::Installer
     end
   end
 
-  def purge_files
-    odebug "Purging files"
-    if @cask.destination_path.exist?
-      @cask.destination_path.rmtree
+  def zap
+    ohai %Q{Implied "brew cask uninstall #{@cask}"}
+    uninstall_artifacts
+    if Cask::Artifact::Zap.me?(@cask)
+      ohai "Dispatching zap stanza"
+      Cask::Artifact::Zap.new(@cask, @command).zap_phase
+    else
+      opoo "No zap stanza present for Cask '#{@cask}'"
     end
+    ohai %Q{Removing all staged versions of Cask '#{@cask}'}
+    purge_caskroom_path
+  end
+
+  # this feels like a class method, but uses @command
+  def permissions_rmtree(path)
+    if path.respond_to?(:rmtree) and path.exist?
+      begin
+        path.rmtree
+      rescue
+        # in case of permissions problems
+        if path.exist?
+          @command.run('/bin/chmod', :args => ['-R', '--', 'u+rwx', path])
+          @command.run('/bin/chmod', :args => ['-R', '-N',          path])
+          path.rmtree
+        end
+      end
+    end
+  end
+
+  def purge_versioned_files
+    odebug "Purging files for version #{@cask.version} of Cask #{@cask}"
+
+    # versioned staged distribution
+    permissions_rmtree(@cask.destination_path)
+
+    # Homebrew-cask metadata
+    if @cask.metadata_versioned_container_path.respond_to?(:children) and
+        @cask.metadata_versioned_container_path.exist?
+      @cask.metadata_versioned_container_path.children.each do |subdir|
+        permissions_rmtree subdir unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
+      end
+    end
+    if @cask.metadata_versioned_container_path.respond_to?(:rmdir_if_possible)
+      @cask.metadata_versioned_container_path.rmdir_if_possible
+    end
+    if @cask.metadata_master_container_path.respond_to?(:rmdir_if_possible)
+      @cask.metadata_master_container_path.rmdir_if_possible
+    end
+
+    # toplevel staged distribution
     @cask.caskroom_path.rmdir_if_possible
+  end
+
+  def purge_caskroom_path
+    odebug "Purging all staged versions of Cask #{@cask}"
+    permissions_rmtree(@cask.caskroom_path)
   end
 end

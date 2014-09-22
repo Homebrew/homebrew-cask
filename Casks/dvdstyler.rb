@@ -5,5 +5,5 @@ class Dvdstyler < Cask
   url 'https://downloads.sourceforge.net/sourceforge/dvdstyler/DVDStyler-2.6-MacOSX.zip'
   homepage 'http://dvdstyler.org'
 
-  link 'DVDStyler.app'
+  app 'DVDStyler.app'
 end

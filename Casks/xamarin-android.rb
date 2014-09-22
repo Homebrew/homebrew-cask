@@ -7,6 +7,6 @@ class XamarinAndroid < Cask
   appcast 'http://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml'
   homepage 'http://xamarin.com/android'
 
-  install 'mono-android-4.12.5-2.pkg'
+  pkg 'mono-android-4.12.5-2.pkg'
   uninstall :pkgutil => 'com.xamarin.android.pkg'
 end

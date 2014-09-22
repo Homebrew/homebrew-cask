@@ -5,5 +5,5 @@ class Honer < Cask
   url 'https://github.com/puffnfresh/Honer.app/releases/download/v1.0/Honer-6e3863f2.zip'
   homepage 'https://github.com/puffnfresh/Honer.app'
 
-  link 'Honer.app'
+  app 'Honer.app'
 end

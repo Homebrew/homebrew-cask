@@ -6,5 +6,5 @@ class DiskInventoryX < Cask
     :user_agent => :fake
   homepage 'http://www.derlien.com/'
 
-  link 'Disk Inventory X.app'
+  app 'Disk Inventory X.app'
 end

@@ -5,7 +5,7 @@ class Plover < Cask
   url 'https://github.com/openstenoproject/plover/releases/download/v2.5.8/Plover.dmg'
   homepage 'http://stenoknight.com/wiki/Main_Page'
 
-  link 'plover.app'
+  app 'plover.app'
 
   caveats do
     assistive_devices

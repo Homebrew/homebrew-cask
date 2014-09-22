@@ -5,10 +5,10 @@ class NtfsFree < Cask
   url 'https://downloads.sourceforge.net/sourceforge/ntfsfree/NTFS-free-10.8.2.pkg'
   homepage 'http://sourceforge.net/projects/ntfsfree/'
 
-  install 'NTFS-free-10.8.2.pkg'
-  uninstall :files => [
-    '/System/Library/Extensions/ntfs-free.kext',
-    '/sbin/mount_ntfs-free',
-    '/System/Library/Filesystems/ntfs-free.fs'
-  ]
+  pkg 'NTFS-free-10.8.2.pkg'
+  uninstall :delete => [
+                        '/System/Library/Extensions/ntfs-free.kext',
+                        '/sbin/mount_ntfs-free',
+                        '/System/Library/Filesystems/ntfs-free.fs',
+                       ]
 end

@@ -5,5 +5,5 @@ class Launchy < Cask
   url 'http://www.launchy.net/downloads/mac/Launchy2.5.dmg'
   homepage 'http://www.launchy.net'
 
-  link 'Launchy.app'
+  app 'Launchy.app'
 end

@@ -6,6 +6,6 @@ class Arranger < Cask
   appcast 'http://bucketomac.de/appcast/arrangercast.xml'
   homepage 'http://bucketomac.de/arranger/arranger/'
 
-  link 'Arranger.app'
+  app 'Arranger.app'
   caveats 'Note that Arranger also needs access for assistive devices (Accessibility)'
 end
