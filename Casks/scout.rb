@@ -5,7 +5,6 @@ class Scout < Cask
   url 'https://github.com/downloads/mhs/scout-app/ScoutAppInstaller-0.7.1.dmg'
   homepage 'http://mhs.github.io/scout-app/'
 
-  caskroom_only true
   caveats do
     manual_installer 'Install Scout.app'
   end

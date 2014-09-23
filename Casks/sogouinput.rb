@@ -6,7 +6,6 @@ class Sogouinput < Cask
   url 'http://download.ime.sogou.com/1409894725/sogou_mac_30.dmg?st=SEx0_y78FJKFl1c6-uEEnA&e=1410158966&fn=sogou_mac_30.dmg'
   homepage 'http://pinyin.sogou.com/mac/'
 
-  caskroom_only true
   caveats do
     manual_installer '安装搜狗输入法.app'
   end

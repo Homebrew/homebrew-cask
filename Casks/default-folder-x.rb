@@ -5,7 +5,6 @@ class DefaultFolderX < Cask
   url 'http://www.stclairsoft.com/download/DefaultFolderX-4.6.8.dmg'
   homepage 'http://www.stclairsoft.com/DefaultFolderX'
 
-  caskroom_only true
   caveats do
     manual_installer 'Default Folder X Installer.app'
   end
