@@ -6,7 +6,6 @@ class VlcRemote < Cask
   appcast 'http://hobbyistsoftware.com/Downloads/VLCRemote/vlcSetupHelperVersions.xml'
   homepage 'http://hobbyistsoftware.com/vlc'
 
-  caskroom_only true
   caveats do
     manual_installer 'VLC Setup.app'
   end
