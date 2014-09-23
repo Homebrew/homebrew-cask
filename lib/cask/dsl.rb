@@ -282,9 +282,16 @@ module Cask::DSL
     end
 
     def install_script(*args)
-      executable = args.shift
-      args = Hash.new(*args)
-      args.merge!({ :executable => executable })
+      unless args.length > 0
+        raise CaskInvalidError.new(self.title, "'install_script' stanza requires an argument")
+      end
+      executable = args.shift if args[0].kind_of? String
+      if args.length > 0
+        args = Hash.new().merge(*args)
+      else
+        args = Hash.new()
+      end
+      args.merge!({ :executable => executable }) if executable
       artifacts[:install_script] << args
     end
 
