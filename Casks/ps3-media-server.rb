@@ -5,7 +5,6 @@ class Ps3MediaServer < Cask
   url 'https://downloads.sourceforge.net/project/ps3mediaserver/pms-1.90.1-setup-macosx.tar.gz'
   homepage 'http://www.ps3mediaserver.org/'
 
-  caskroom_only true
   caveats do
     manual_installer 'PS3 Media Server Setup.app'
   end
