@@ -1,6 +1,6 @@
 class Iexplorer < Cask
-  version '3.5.0.0'
-  sha256 'b9423952473492b035518c80617b05b31045cb6eeeeac43417b1949c1f4ef510'
+  version '3.5.0.6'
+  sha256 'a189663121ba78d2927cb113e56bfb6235045ccd6e54e453f9aee389af61be43'
 
   homepage 'http://www.macroplant.com/'
   appcast 'http://www.macroplant.com/iexplorer/ie3-appcast.xml'
