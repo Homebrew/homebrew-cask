@@ -1,10 +1,10 @@
 class Macdown < Cask
-  version '0.2.4'
-  sha256 'd8bdec9c696a70ca88a885fad0d5f1804501921d48ea875ac08e3f5b0a9fe859'
+  version '0.2.5.1'
+  sha256 '4929637cf1997809dc3070037b5e52b039561751e47118ea3aa436fecf6d4a90'
 
   url "http://macdown.uranusjr.com/download/v#{version}/"
   appcast 'http://macdown.uranusjr.com/sparkle/macdown/appcast.xml'
   homepage 'http://macdown.uranusjr.com/'
 
-  app 'Build/MacDown.app'
+  app 'MacDown.app'
 end
