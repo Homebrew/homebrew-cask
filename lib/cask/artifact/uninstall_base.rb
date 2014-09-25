@@ -65,7 +65,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
       Array(directives[:launchctl]).each do |service|
         ohai "Removing launchctl service #{service}"
         [false, true].each do |with_sudo|
-          xml_status = @command.run('/bin/launchctl', :args => ['list', '-x', service], :sudo => with_sudo)
+          xml_status = @command.run('/bin/launchctl', :args => ['list', '-x', service], :sudo => with_sudo).stdout
           if %r{^<\?xml}.match(xml_status)
             @command.run('/bin/launchctl',  :args => ['unload', '-w', '--', service], :sudo => with_sudo)
             sleep 1
@@ -80,7 +80,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
     directives_set.select{ |h| h.key?(:quit) }.each do |directives|
       Array(directives[:quit]).each do |id|
         ohai "Quitting application ID #{id}"
-        num_running = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to count processes whose bundle identifier is "#{id}"}], :sudo => true).to_i
+        num_running = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to count processes whose bundle identifier is "#{id}"}], :sudo => true).stdout.to_i
         if num_running > 0
           @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application id "#{id}" to quit}], :sudo => true)
           sleep 3
@@ -94,7 +94,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
         raise CaskInvalidError.new(@cask, "Each #{stanza} :signal must have 2 elements.") unless pair.length == 2
         signal, id = pair
         ohai "Signalling '#{signal}' to application ID '#{id}'"
-        pid_string = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to get the unix id of every process whose bundle identifier is "#{id}"}], :sudo => true)
+        pid_string = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to get the unix id of every process whose bundle identifier is "#{id}"}], :sudo => true).stdout
         if pid_string.match(%r{\A\d+(?:\s*,\s*\d+)*\Z})    # sanity check
           pids = pid_string.split(%r{\s*,\s*}).map(&:strip).map(&:to_i)
           if pids.length > 0
@@ -116,7 +116,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
     directives_set.select{ |h| h.key?(:kext) }.each do |directives|
       Array(directives[:kext]).each do |kext|
         ohai "Unloading kernel extension #{kext}"
-        is_loaded = @command.run!('/usr/sbin/kextstat', :args => ['-l', '-b', kext], :sudo => true)
+        is_loaded = @command.run!('/usr/sbin/kextstat', :args => ['-l', '-b', kext], :sudo => true).stdout
         if is_loaded.length > 1
           @command.run!('/sbin/kextunload', :args => ['-b', '--', kext], :sudo => true)
           sleep 1

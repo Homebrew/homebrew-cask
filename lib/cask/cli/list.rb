@@ -54,7 +54,7 @@ class Cask::CLI::List < Cask::CLI::Base
     if @options[:one]
       puts columns
     elsif @options[:long]
-      puts Cask::SystemCommand.run!("/bin/ls", :args => ["-l", Cask.caskroom])
+      puts Cask::SystemCommand.run!("/bin/ls", :args => ["-l", Cask.caskroom]).stdout
     else
       puts_columns columns
     end

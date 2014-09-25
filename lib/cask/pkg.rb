@@ -227,7 +227,7 @@ class Cask::Pkg
                 ].map{|x| Pathname.new(x)}
 
   def self.all_matching(regexp, command)
-    command.run('/usr/sbin/pkgutil', :args => [%Q{--pkgs=#{regexp}}]).split("\n").map do |package_id|
+    command.run('/usr/sbin/pkgutil', :args => [%Q{--pkgs=#{regexp}}]).stdout.split("\n").map do |package_id|
       new(package_id.chomp, command)
     end
   end
@@ -269,19 +269,19 @@ class Cask::Pkg
   def pkgutil_bom_files
     @command.run!('/usr/sbin/pkgutil',
       :args => ['--only-files', '--files', package_id]
-    ).split("\n").map { |path| root.join(path) }
+    ).stdout.split("\n").map { |path| root.join(path) }
   end
 
   def pkgutil_bom_dirs
     @command.run!('/usr/sbin/pkgutil',
       :args => ['--only-dirs', '--files', package_id]
-    ).split("\n").map { |path| root.join(path) }
+    ).stdout.split("\n").map { |path| root.join(path) }
   end
 
   def pkgutil_bom_all
     @command.run!('/usr/sbin/pkgutil',
       :args => ['--files', package_id]
-    ).split("\n").map { |path| root.join(path) }
+    ).stdout.split("\n").map { |path| root.join(path) }
   end
 
   def pkgutil_bom_specials
@@ -294,9 +294,8 @@ class Cask::Pkg
 
   def info
     @command.run!('/usr/sbin/pkgutil',
-      :args => ['--pkg-info-plist', package_id],
-      :plist => true
-    )
+                  :args => ['--pkg-info-plist', package_id]
+                 ).plist
   end
 
   def _rmdir(path)

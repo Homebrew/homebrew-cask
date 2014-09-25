@@ -23,9 +23,8 @@ class Cask::Container::Dmg < Cask::Container::Base
     plist = @command.run('/usr/bin/hdiutil',
       # realpath is a failsafe against unusual filenames
       :args => %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp] + [Pathname.new(@path).realpath],
-      :input => %w[y],
-      :plist => true
-    )
+      :input => %w[y]
+    ).plist
     @mounts = mounts_from_plist(plist)
   end
 
@@ -48,12 +47,12 @@ class Cask::Container::Dmg < Cask::Container::Base
       mountpath = Pathname.new(mount).realpath
       next unless mountpath.exist?
       @command.run('/usr/sbin/diskutil',
-                     :args => ['eject', mountpath],
+                   :args => ['eject', mountpath],
                    :print_stderr => false)
       next unless mountpath.exist?
       sleep 1
       @command.run('/usr/sbin/diskutil',
-                     :args => ['eject', mountpath],
+                   :args => ['eject', mountpath],
                    :print_stderr => false)
       next unless mountpath.exist?
       raise CaskError.new "Failed to eject #{mountpath}"

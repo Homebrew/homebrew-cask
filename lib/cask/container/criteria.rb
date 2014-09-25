@@ -7,7 +7,7 @@ class Cask::Container::Criteria
   end
 
   def file
-    @file ||= @command.run('/usr/bin/file', :args => ['-Izb', '--', path])
+    @file ||= @command.run('/usr/bin/file', :args => ['-Izb', '--', path]).stdout
   end
 
   def imageinfo
@@ -16,7 +16,7 @@ class Cask::Container::Criteria
       # realpath is a failsafe against unusual filenames
       :args => ['imageinfo', Pathname.new(path).realpath],
       :print_stderr => false
-    )
+    ).stdout
   end
 
   def cabextract
@@ -25,7 +25,7 @@ class Cask::Container::Criteria
         HOMEBREW_PREFIX.join('bin/cabextract'),
         :args => ['-t', '--', path],
         :print_stderr => false
-      )
+      ).stdout
     end
   end
 
@@ -35,7 +35,7 @@ class Cask::Container::Criteria
         HOMEBREW_PREFIX.join('bin/lsar'),
         :args => ['-l', '-t', '--', path],
         :print_stderr => false
-      )
+      ).stdout
     end
   end
 
