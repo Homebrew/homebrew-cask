@@ -185,10 +185,10 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
         next unless directory.exist?
         @command.run!('/bin/rm', :args => [ '-f', '--', directory.join('.DS_Store') ],
                                  :sudo => true,
-                                 :stderr => :silence)
+                                 :print_stderr => false)
         @command.run('/bin/rmdir', :args => [ '--', directory ],
                                    :sudo => true,
-                                   :stderr => :silence)
+                                   :print_stderr => false)
       end
     end
   end

@@ -47,11 +47,11 @@ class Pathname
     out=''
     n = Cask::SystemCommand.run!('/usr/bin/find',
                                  :args => [self.realpath, *%w[-type f ! -name .DS_Store]],
-                                 :stderr => :silence).count("\n")
+                                 :print_stderr => false).count("\n")
     out << "#{n} files, " if n > 1
     out << Cask::SystemCommand.run!('/usr/bin/du',
                                     :args => ['-hs', '--', self.to_s],
-                                    :stderr => :silence).split("\t").first.strip
+                                    :print_stderr => false).split("\t").first.strip
   end
 end
 

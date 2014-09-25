@@ -15,7 +15,7 @@ class Cask::Container::Criteria
       '/usr/bin/hdiutil',
       # realpath is a failsafe against unusual filenames
       :args => ['imageinfo', Pathname.new(path).realpath],
-      :stderr => :silence,
+      :print_stderr => false,
       :print => false
     )
   end
@@ -25,7 +25,7 @@ class Cask::Container::Criteria
       @cabextract ||= @command.run(
         HOMEBREW_PREFIX.join('bin/cabextract'),
         :args => ['-t', '--', path],
-        :stderr => :silence,
+        :print_stderr => false,
         :print => false
       )
     end
@@ -36,7 +36,7 @@ class Cask::Container::Criteria
       @lsar ||= @command.run(
         HOMEBREW_PREFIX.join('bin/lsar'),
         :args => ['-l', '-t', '--', path],
-        :stderr => :silence,
+        :print_stderr => false,
         :print => false
       )
     end

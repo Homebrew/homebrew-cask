@@ -17,9 +17,9 @@ class Cask::SystemCommand
       ohai line.chomp if options[:print]
     end
     while line = ext_stderr.gets
-      next if options[:stderr] == :silence
+      next if ! options[:print_stderr]
       output << line
-      ohai line.chomp if options[:print]
+      ohai line.chomp if options[:print_stderr]
     end
     ext_stdout.close_read
     ext_stderr.close_read
@@ -40,10 +40,7 @@ class Cask::SystemCommand
   end
 
   def self._process_options(executable, options)
-    options.assert_valid_keys :input, :print, :stderr, :args, :must_succeed, :sudo, :plist
-    if options[:stderr] and options[:stderr] != :silence
-      raise CaskError.new "Unknown value #{options[:stderr]} for key :stderr"
-    end
+    options.assert_valid_keys :input, :print, :print_stderr, :args, :must_succeed, :sudo, :plist
     command = [executable]
     if options[:sudo]
       command.unshift('/usr/bin/sudo', '-E', '--')

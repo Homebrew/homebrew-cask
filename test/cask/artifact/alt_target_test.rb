@@ -29,7 +29,7 @@ describe Cask::Artifact::App do
                               :args => ['-p',
                                         'com.apple.metadata:kMDItemAlternateNames',
                                         Cask.appdir/'AnotherName.app'],
-                              :stderr => :silence).must_match(/AnotherName/)
+                              :print_stderr => false).must_match(/AnotherName/)
     end
 
     it "works with an application in a subdir" do

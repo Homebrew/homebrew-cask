@@ -106,7 +106,7 @@ class Cask::Installer
         print "#{dep_name} ... "
         installed = @command.run(HOMEBREW_BREW_FILE,
                                  :args => ['list', '--versions', dep_name],
-                                 :stderr => :silence).include?(dep_name)
+                                 :print_stderr => false).include?(dep_name)
         if installed
           puts "already installed"
         else

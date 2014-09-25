@@ -138,7 +138,7 @@ class Cask::SubversionDownloadStrategy < SubversionDownloadStrategy
     args << '--ignore-externals' if ignore_externals
     @command.run!('/usr/bin/svn',
                   :args => args,
-                  :stderr => :silence)
+                  :print_stderr => false)
   end
 
   def tarball_path
@@ -165,7 +165,7 @@ class Cask::SubversionDownloadStrategy < SubversionDownloadStrategy
   def compress
     Dir.chdir(cached_location) do
       @command.run!('/usr/bin/tar', :args => ['-s/^\.//', '--exclude', '.svn', '-cf', Pathname.new(tarball_path), '--', '.'],
-                                    :stderr => :silence)
+                                    :print_stderr => false)
     end
     clear_cache
   end

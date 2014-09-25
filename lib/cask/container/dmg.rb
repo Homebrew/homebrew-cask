@@ -49,12 +49,12 @@ class Cask::Container::Dmg < Cask::Container::Base
       next unless mountpath.exist?
       @command.run('/usr/sbin/diskutil',
                      :args => ['eject', mountpath],
-                     :stderr => :silence)
+                   :print_stderr => false)
       next unless mountpath.exist?
       sleep 1
       @command.run('/usr/sbin/diskutil',
                      :args => ['eject', mountpath],
-                     :stderr => :silence)
+                   :print_stderr => false)
       next unless mountpath.exist?
       raise CaskError.new "Failed to eject #{mountpath}"
     end

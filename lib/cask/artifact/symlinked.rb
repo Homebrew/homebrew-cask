@@ -22,14 +22,14 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
     odebug "Adding #{attribute} metadata"
     altnames = @command.run('/usr/bin/xattr',
                             :args => ['-p', attribute, target],
-                            :stderr => :silence).sub(/\A\((.*)\)\Z/, "#{$1}")
+                            :print_stderr => false).sub(/\A\((.*)\)\Z/, "#{$1}")
     odebug "Existing metadata is: '#{altnames}'"
     altnames.concat(', ') if altnames.length > 0
     altnames.concat(%Q{"#{target.basename}"})
     altnames = %Q{(#{altnames})}
     @command.run!('/usr/bin/xattr',
                   :args => ['-w', attribute, altnames, target],
-                  :stderr => :silence)
+                  :print_stderr => false)
   end
 
   def summary

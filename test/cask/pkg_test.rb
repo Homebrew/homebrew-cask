@@ -78,7 +78,9 @@ describe Cask::Pkg do
       pkg.stubs(:pkgutil_bom_dirs).returns([fake_dir])
       pkg.stubs(:forget)
 
-      pkg.uninstall
+      shutup do
+        pkg.uninstall
+      end
 
       fake_dir.must_be :directory?
       fake_file.wont_be :file?
