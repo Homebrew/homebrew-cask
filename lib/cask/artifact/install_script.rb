@@ -16,7 +16,7 @@ class Cask::Artifact::InstallScript < Cask::Artifact::Base
                                                                       artifact,
                                                                       "#{self.class.artifact_dsl_key}",
                                                                       {:must_succeed => true},
-                                                                      {:print => true}
+                                                                      {:print_stdout => true}
                                                                       )
       ohai "Running #{self.class.artifact_dsl_key} script #{executable}"
       raise CaskInvalidError.new(@cask, "#{self.class.artifact_dsl_key} missing executable") if executable.nil?

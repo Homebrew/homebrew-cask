@@ -51,7 +51,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
       executable, script_arguments = self.class.read_script_arguments(directives,
                                                                       'uninstall',
                                                                       {:must_succeed => true},
-                                                                      {:sudo => true, :print => true},
+                                                                      {:sudo => true, :print_stdout => true},
                                                                       :early_script)
 
       ohai "Running uninstall script #{executable}"
@@ -129,7 +129,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
       executable, script_arguments = self.class.read_script_arguments(directives,
                                                                       'uninstall',
                                                                       {:must_succeed => true},
-                                                                      {:sudo => true, :print => true},
+                                                                      {:sudo => true, :print_stdout => true},
                                                                       :script)
       raise CaskInvalidError.new(@cask, "#{stanza} :script without :executable.") if executable.nil?
       @command.run(@cask.destination_path.join(executable), script_arguments)

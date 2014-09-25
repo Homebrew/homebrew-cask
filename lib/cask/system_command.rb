@@ -14,7 +14,7 @@ class Cask::SystemCommand
     ext_stdin.close_write
     while line = ext_stdout.gets
       output << line
-      ohai line.chomp if options[:print]
+      ohai line.chomp if options[:print_stdout]
     end
     while line = ext_stderr.gets
       next if ! options[:print_stderr]
@@ -40,7 +40,7 @@ class Cask::SystemCommand
   end
 
   def self._process_options(executable, options)
-    options.assert_valid_keys :input, :print, :print_stderr, :args, :must_succeed, :sudo, :plist
+    options.assert_valid_keys :input, :print_stdout, :print_stderr, :args, :must_succeed, :sudo, :plist
     command = [executable]
     if options[:sudo]
       command.unshift('/usr/bin/sudo', '-E', '--')

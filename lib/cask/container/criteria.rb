@@ -16,7 +16,7 @@ class Cask::Container::Criteria
       # realpath is a failsafe against unusual filenames
       :args => ['imageinfo', Pathname.new(path).realpath],
       :print_stderr => false,
-      :print => false
+      :print_stdout => false
     )
   end
 
@@ -26,7 +26,7 @@ class Cask::Container::Criteria
         HOMEBREW_PREFIX.join('bin/cabextract'),
         :args => ['-t', '--', path],
         :print_stderr => false,
-        :print => false
+        :print_stdout => false
       )
     end
   end
@@ -37,7 +37,7 @@ class Cask::Container::Criteria
         HOMEBREW_PREFIX.join('bin/lsar'),
         :args => ['-l', '-t', '--', path],
         :print_stderr => false,
-        :print => false
+        :print_stdout => false
       )
     end
   end
