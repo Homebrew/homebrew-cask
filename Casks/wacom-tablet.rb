@@ -2,7 +2,7 @@ class WacomTablet < Cask
   version '6.3.8-2'
   sha256 'a1812ba11896841fd592de889753aaf50fd86bb6278c05270a1f8a0c80365969'
 
-  url 'http://cdn.wacom.com/u/drivers/mac/pro/WacomTablet_6.3.8-2.dmg'
+  url "http://cdn.wacom.com/u/drivers/mac/pro/WacomTablet_#{version}.dmg"
   homepage 'http://www.wacom.com/'
 
   pkg 'Install Wacom Tablet.pkg'
