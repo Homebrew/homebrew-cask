@@ -2,7 +2,7 @@ class TvShowTracker < Cask
   version '1.3.3'
   sha256 '7e489d50083acc217a7587d800d3f708f0ba586397656cce529e8f40a8a612f9'
 
-  url 'http://www.pixelperfectwidgets.com/tvshowtracker/download/tvshowtracker_1.3.3.zip'
+  url "http://www.pixelperfectwidgets.com/tvshowtracker/download/tvshowtracker_#{version}.zip"
   homepage 'http://www.pixelperfectwidgets.com/'
 
   widget 'TV Show Tracker.wdgt'
