@@ -2,9 +2,9 @@ class Sshfs < Cask
   version '2.5.0'
   sha256 'f8f4f71814273ea42dbe6cd92199f7cff418571ffd1b10c0608878d3472d2162'
 
-  url 'https://github.com/osxfuse/sshfs/releases/download/osxfuse-sshfs-2.5.0/sshfs-2.5.0.pkg'
+  url "https://github.com/osxfuse/sshfs/releases/download/osxfuse-sshfs-#{version}/sshfs-#{version}.pkg"
   homepage 'http://osxfuse.github.io/'
 
-  pkg 'sshfs-2.5.0.pkg'
+  pkg "sshfs-#{version}.pkg"
   uninstall :pkgutil => 'com.github.osxfuse.pkg.SSHFS'
 end

@@ -3,7 +3,7 @@ class IntelPowerGadget < Cask
   version '3.0.1'
   sha256 '538a792721604e2155b3a48caa4084db751a91b170e5fa62bf0331d3147f2239'
 
-  url 'https://software.intel.com/sites/default/files/managed/59/39/IntelPowerGadgetMac3.0.1.zip'
+  url "https://software.intel.com/sites/default/files/managed/59/39/IntelPowerGadgetMac#{version}.zip"
   homepage 'https://software.intel.com/en-us/articles/intel-power-gadget-20'
 
   # this bogus-looking character accurately reflects an upstream error

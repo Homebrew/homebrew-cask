@@ -2,7 +2,7 @@ class JavafxSceneBuilder < Cask
   version '2.0-b20'
   sha256 '9551326dd98f85204434d293da445eb5f2cf862c785f3dbe420cb4643221d96b'
 
-  url 'http://download.oracle.com/otn-pub/java/javafx_scenebuilder/2.0-b20/javafx_scenebuilder-2_0-macosx-universal.dmg',
+  url "http://download.oracle.com/otn-pub/java/javafx_scenebuilder/#{version}/javafx_scenebuilder-2_0-macosx-universal.dmg",
       :cookies => {
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }

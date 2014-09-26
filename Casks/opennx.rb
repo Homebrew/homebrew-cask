@@ -2,7 +2,7 @@ class Opennx < Cask
   version '0.16.0.729'
   sha256 '65dde1a3504a17ac58ed2a7178536347d829ee8c27cc90bebdae3e98c36fc6c6'
 
-  url 'http://downloads.sourceforge.net/sourceforge/opennx/OpenNX-0.16.0.729.dmg'
+  url "http://downloads.sourceforge.net/sourceforge/opennx/OpenNX-#{version}.dmg"
   homepage 'http://opennx.net/'
 
   pkg 'OpenNX.pkg'

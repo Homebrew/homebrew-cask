@@ -2,7 +2,7 @@ class Xscreensaver < Cask
   version '5.29'
   sha256 '5821584b18dc400da5b74b58e27b39a5c9b36d12e87378bfbe4e40e569fbc78e'
 
-  url 'http://www.jwz.org/xscreensaver/xscreensaver-5.29.dmg'
+  url "http://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
   homepage 'http://www.jwz.org/xscreensaver/'
 
   app 'Screen Savers/XScreenSaverUpdater.app'

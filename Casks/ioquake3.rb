@@ -2,7 +2,7 @@ class Ioquake3 < Cask
   version '1.36'
   sha256 'ff310471aa641cc27980055691b3e3cf5496ac262f10967c9d5052fd3815a3fc'
 
-  url 'http://ioquake3.org/files/1.36/ioquake3%201.36.dmg'
+  url "http://ioquake3.org/files/#{version}/ioquake3%20#{version}.dmg"
   homepage 'http://ioquake3.org/'
 
   suite 'ioquake3'
