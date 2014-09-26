@@ -1,6 +1,6 @@
 class Atmonitor < Cask
   version :latest
-  sha256 :no_check  
+  sha256 :no_check
 
   url 'http://download.atpurpose.com/atMonitor/atMonitor.zip'
   # todo: no response
