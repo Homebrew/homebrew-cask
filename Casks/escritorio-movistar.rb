@@ -13,7 +13,7 @@ class EscritorioMovistar < Cask
                           'com.movistar.tgcm.tme',
                           'com.novatelwireless.3G'
                         ]
-  
+
   caveats do
     reboot
   end
