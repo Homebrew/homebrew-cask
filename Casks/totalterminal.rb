@@ -2,7 +2,7 @@ class Totalterminal < Cask
   version '1.5.3'
   sha256 '1a2fc29a223e71475851e873dff9cc8631fd88748a7169cb784b68d9befdd9e2'
 
-  url 'http://downloads.binaryage.com/TotalTerminal-1.5.3.dmg'
+  url "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
   homepage 'http://totalterminal.binaryage.com'
 
   pkg 'TotalTerminal.pkg'
