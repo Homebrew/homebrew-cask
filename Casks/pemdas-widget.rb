@@ -2,7 +2,7 @@ class PemdasWidget < Cask
   version '3.0'
   sha256 '7a5566d8a45a82fd64ecedc7fa5c00d9ec82f530f7065e18768d7da76b6e55af'
 
-  url 'http://www.donkeyengineering.com/downloads/pemdaswidget/releases/PEMDAS_3.0.wdgt.zip'
+  url "http://www.donkeyengineering.com/downloads/pemdaswidget/releases/PEMDAS_#{version}.wdgt.zip"
   homepage 'http://www.donkeyengineering.com/pemdaswidget/'
 
   widget 'PEMDAS.wdgt'
