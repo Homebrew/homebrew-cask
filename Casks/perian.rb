@@ -2,7 +2,7 @@ class Perian < Cask
   version '1.2.3'
   sha256 '4d1738104613ab4a7322637584ce7b851e4ef85888895360ad827a5f27c62e08'
 
-  url 'https://perian.cachefly.net/Perian_1.2.3.dmg'
+  url "https://perian.cachefly.net/Perian_#{version}.dmg"
   homepage 'http://www.perian.org/'
 
   prefpane 'Perian.prefPane'
