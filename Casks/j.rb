@@ -8,7 +8,7 @@ class J < Cask
   %w<jbrk jcon jhs jqt>.each do |a|
     app "j64-#{version}/#{a}.app"
   end
-  
+
   %w<jconsole>.each do |b|
     binary "j64-#{version}/bin/#{b}"
   end
