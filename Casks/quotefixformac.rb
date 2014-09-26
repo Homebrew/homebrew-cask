@@ -2,7 +2,7 @@ class Quotefixformac < Cask
   version '2.5.2'
   sha256 '8d914ae553b84fe5f246ab1eb030d25792ca8d626b3bbac57acee857135e85a9'
 
-  url 'https://github.com/robertklep/quotefixformac/releases/download/v2.5.2/QuoteFix-v2.5.2.zip'
+  url "https://github.com/robertklep/quotefixformac/releases/download/v#{version}/QuoteFix-v#{version}.zip"
   homepage 'https://github.com/robertklep/quotefixformac'
 
   caveats do
