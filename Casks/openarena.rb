@@ -5,9 +5,9 @@ class Openarena < Cask
   url 'http://openarena.ws/request.php?4'
   homepage 'http://openarena.ws'
 
-  app 'openarena-0.8.8/OpenArena.app'
+  app "openarena-#{version}/OpenArena.app"
 
   postflight do
-    system '/bin/chmod', '--', '755', "#{destination_path}/openarena-0.8.8/OpenArena.app/Contents/MacOS/openarena.ub"
+    system '/bin/chmod', '--', '755', "#{destination_path}/openarena-#{version}/OpenArena.app/Contents/MacOS/openarena.ub"
   end
 end
