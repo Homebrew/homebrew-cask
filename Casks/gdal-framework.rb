@@ -1,8 +1,10 @@
 class GdalFramework < Cask
-  url 'http://www.kyngchaos.com/files/software/frameworks/GDAL_Complete-1.11.dmg'
-  homepage 'http://www.kyngchaos.com/software/frameworks'
   version '1.11'
   sha256 'd8aa6d59236a75519e94a764dfc71d3122c8e88fa4f99072046c3a8a0bfb4124'
+
+  url "http://www.kyngchaos.com/files/software/frameworks/GDAL_Complete-#{version}.dmg"
+  homepage 'http://www.kyngchaos.com/software/frameworks'
+
   pkg 'GDAL Complete.pkg'
   pkg 'Numpy.pkg'
   uninstall :pkgutil  => [
