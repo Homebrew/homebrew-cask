@@ -7,7 +7,7 @@ class Baiduinput < Cask
   homepage 'http://wuxian.baidu.com/input/mac.html'
 
   caveats do
-  	manual_installer '安装百度输入法.app'
+    manual_installer '安装百度输入法.app'
   end
   uninstall :pkgutil  => 'com.baidu.inputmethod.*',
             :delete   => '/Library/Input Methods/BaiduIM.app'

@@ -4,6 +4,6 @@ class Eloquent < Cask
 
   url "https://launchpad.net/eloquent/trunk/#{version}/+download/Eloquent-#{version}.app.zip"
   homepage 'https://launchpad.net/eloquent'
-  
+
   app 'Eloquent.app'
 end

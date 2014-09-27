@@ -17,12 +17,12 @@ class CrosspackAvr < Cask
 
   caveats do
     puts <<-EOS.undent
-         CrossPack-AVR can normally install multiple versions side-by-side.
-         Therefore, running install will typically install multiple versions
-         of the tools in /usr/local/ (e.g. /usr/local/CrossPack-AVR-20131216).
+      CrossPack-AVR can normally install multiple versions side-by-side.
+      Therefore, running install will typically install multiple versions
+      of the tools in /usr/local/ (e.g. /usr/local/CrossPack-AVR-20131216).
 
-         This cask will invoke the CrossPack-AVR uninstall script when it is
-         uninstalled, removing the most recent version of the tools.
+      This cask will invoke the CrossPack-AVR uninstall script when it is
+      uninstalled, removing the most recent version of the tools.
     EOS
     files_in_usr_local
   end
