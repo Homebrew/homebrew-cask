@@ -130,13 +130,16 @@ Fill in the following stanzas for your Cask:
 
 | name               | value       |
 | ------------------ | ----------- |
-| __cask metadata__  | information about the Cask (required)
-| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
-| `homepage`         | application homepage; used for the `brew cask home` command
 | `version`          | application version; give the value `:latest` if an unversioned download is available
 | `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
-| __artifact info__  | information about artifacts inside the Cask (can be specified multiple times)
+| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
+| `homepage`         | application homepage; used for the `brew cask home` command
 | `app`              | relative path to an `.app` bundle that should be linked into the `~/Applications` folder on installation (see also [App Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#app-stanza-details))
+
+Other commonly-used stanzas are:
+
+| name               | value       |
+| ------------------ | ----------- |
 | `pkg`              | relative path to a `.pkg` file containing the distribution (see also [Pkg Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#pkg-stanza-details))
 | `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details))
 
