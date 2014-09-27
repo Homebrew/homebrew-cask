@@ -6,6 +6,7 @@ class Textmate < Cask
   homepage 'http://macromates.com/'
 
   app 'TextMate.app'
+  binary 'TextMate.app/Contents/Resources/mate'
   zap :delete => [
                   '~/Library/Application Support/TextMate',
                   '~/Library/Preferences/com.macromates.textmate.plist',
