@@ -1,5 +1,32 @@
 # CHANGELOG
 
+## 0.43.0
+
+* __Casks__
+ - 26 Casks added (868 updated) by 54 contributors since 0.42.0
+ - 1901 total Casks
+* __Features__
+ - [#6227][] `uninstall :files` is now `uninstall :delete`
+* __Breaking Changes__
+ - none
+* __Fixes__
+ - [#6357][] update valid license values
+ - [#6306][] make `install_script` stanza more robust
+* __Internal Changes__
+ - [#6329][] refactor `Cask::SystemCommand`
+ - [#6283][] Update gem dependencies
+* __Documentation__
+ - 2 doc commits since 0.42.0
+* __Contributors__
+ - 21 new contributors since 0.42.0
+ - 1039 total contributors
+
+[#6227]: https://github.com/caskroom/homebrew-cask/issues/6227
+[#6283]: https://github.com/caskroom/homebrew-cask/issues/6283
+[#6306]: https://github.com/caskroom/homebrew-cask/issues/6306
+[#6329]: https://github.com/caskroom/homebrew-cask/issues/6329
+[#6357]: https://github.com/caskroom/homebrew-cask/issues/6357
+
 ## 0.42.0
 
 * __Casks__
