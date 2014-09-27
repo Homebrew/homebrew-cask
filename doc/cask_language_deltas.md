@@ -45,6 +45,7 @@ This notice will be removed for the final form.**
  * `suite`
  * `uninstall :rmdir`
  * `zap`
+ * `license`
 
 
 ## Renames (1.0)

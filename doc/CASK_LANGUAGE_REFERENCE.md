@@ -14,6 +14,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Caveats Stanza Details](#caveats-stanza-details)
  * [Checksum Stanza Details](#checksum-stanza-details)
  * [URL Stanza Details](#url-stanza-details)
+ * [License Stanza Details](#license-stanza-details)
  * [App Stanza Details](#app-stanza-details)
  * [Suite Stanza Details](#suite-stanza-details)
  * [Pkg Stanza Details](#pkg-stanza-details)
@@ -36,6 +37,7 @@ class Alfred < Cask
 
   url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
   homepage 'http://www.alfredapp.com/'
+  license :commercial
 
   app 'Alfred 2.app'
   app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
@@ -69,6 +71,7 @@ Each of the following stanzas is required for every Cask.
 | `sha256`           | No                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
 | `url`              | No                            | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](#url-stanza-details))
 | `homepage`         | No                            | application homepage; used for the `brew cask home` command
+| `license`          | No                            | a symbol identifying the license for the application. (see also [License Stanza Details](#license-stanza-details))
 
 
 ## At Least One Artifact Stanza Is Also Required
@@ -303,6 +306,54 @@ following key/value pairs to `url`:
 | `:using`           | the symbol `:svn` is the only legal value
 | `:revision`        | a string identifying the subversion revision to download
 | `:trust_cert`      | set to `true` to automatically trust the certificate presented by the server (avoiding an interactive prompt)
+
+
+## License Stanza Details
+
+The `license` stanza is not free-form.  The value must be chosen from a
+list of valid symbols.
+
+The distinctions between license types are not very detailed.  For example,
+we do not distinguish between versions of the GPL, or variants of the BSD
+license.  The `license` stanza is intended as an aid to search/filtering of
+Casks.  For detailed information, the user must rely on the vendor's
+homepage.
+
+### Valid Category Licenses
+
+If a Cask does not quite fit one of the specific license types, use one of
+the general categories.  `:unknown` is perfectly fine if you are unsure.
+
+| symbol      | meaning     |
+| ----------- | ----------- |
+| `:oss`      | Open-source software
+| `:closed`   | Closed-source software
+| `:unknown`  | License unknown
+| `:other`    | License is known, but fits no category
+
+### Valid Licenses
+
+| symbol           | category  | meaning                                         | URL         |
+| ---------------- | --------- | ----------------------------------------------- | ----------- |
+| `:gratis`        | `:closed` | Free-to-use, closed source                      | <none>
+| `:commercial`    | `:closed` | Not free to use                                 | <none>
+| `:affero`        | `:oss`    | Affero General Public License                   | <https://gnu.org/licenses/agpl.html>
+| `:apache`        | `:oss`    | Apache Public License                           | <http://www.apache.org/licenses/>
+| `:arphic`        | `:oss`    | Arphic Public License                           | <http://www.arphic.com/tw/download/public_license.rar>
+| `:artistic`      | `:oss`    | Artistic License                                | <http://dev.perl.org/licenses/artistic.html>
+| `:bsd`           | `:oss`    | BSD License                                     | <http://www.linfo.org/bsdlicense.html>
+| `:cc`            | `:oss`    | Creative Commons License                        | <http://creativecommons.org/licenses/>
+| `:eclipse`       | `:oss`    | Eclipse Public License                          | <https://www.eclipse.org/legal/eplfaq.php>
+| `:gpl`           | `:oss`    | GNU Public License                              | <http://www.gnu.org/copyleft/gpl.html>
+| `:isc`           | `:oss`    | Internet Systems Consortium License             | <http://www.isc.org/downloads/software-support-policy/isc-license/>
+| `:lppl`          | `:oss`    | LaTeX Project Public License                    | <http://latex-project.org/lppl/>
+| `:ncsa`          | `:oss`    | University of Illinois/NCSA Open Source License | <http://otm.illinois.edu/uiuc_openSource>
+| `:mit`           | `:oss`    | MIT License                                     | <http://opensource.org/licenses/MIT>
+| `:mpl`           | `:oss`    | Mozilla Public License                          | <https://www.mozilla.org/MPL/>
+| `:ofl`           | `:oss`    | SIL Open Font License                           | <http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL>
+| `:public_domain` | `:oss`    | Not copyrighted                                 | <http://creativecommons.org/publicdomain/zero/1.0/legalcode>
+| `:ubuntu_font`   | `:oss`    | Ubuntu Font License                             | <http://font.ubuntu.com/licence/>
+| `:x11`           | `:oss`    | X Consortium License                            | <http://www.xfree86.org/3.3.6/COPYRIGHT2.html>
 
 
 ## App Stanza Details
@@ -689,6 +740,7 @@ class Appname < Cask
 
   version '1.0'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
+  license :unknown
 
   url "https://#{Utils.arbitrary_method}"
   homepage 'http://www.example.com/'

@@ -42,6 +42,7 @@ describe Cask::CLI::Create do
 
         url 'https://'
         homepage ''
+        license :unknown
 
         app ''
       end

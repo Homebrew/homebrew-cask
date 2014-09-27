@@ -9,11 +9,11 @@ class Cask::DSL::License
                     :other         => :other,
 
                     :closed        => :closed,
-                    :abandoned     => :closed,
                     :commercial    => :closed,
-                    :freemium      => :closed,
                     :gratis        => :closed,
-                    :trial         => :closed,
+                    :abandoned     => :closed,  # undocumented, should not be used yet
+                    :freemium      => :closed,  # undocumented, should not be used yet
+                    :trial         => :closed,  # undocumented, should not be used yet
 
                     :oss           => :oss,
                     :affero        => :oss,
