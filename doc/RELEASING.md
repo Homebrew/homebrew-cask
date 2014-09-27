@@ -112,17 +112,19 @@ changelog.
 	```
     If you don't see a success message, that probably means someone updated
     master while you were working on the changelog.  You must pull and resolve.
-15. Open your browser to <https://github.com/caskroom/homebrew-cask/releases> .
-    Click the link for your newly-pushed tag.  On the following page, click the
-    `Edit tag` button in the top right corner.  This opens a page with a form
-    for the release information and changelog.
+15. Open your browser to the relevant release page on GitHub:
+
+	```bash
+	$ open "https://github.com/caskroom/homebrew-cask/releases/new?tag=$NEW_RELEASE_TAG"
+	```
+
 16. On the release page
     * If the `Tag version` field does not auto-fill, manually select the tag
       you just created (shell variable `$NEW_RELEASE_TAG`).
     * Paste the Markdown summary for the new release from `doc/CHANGELOG.md`
       into the main textarea.
-    * The `## <version number>` heading line from the changelog should not be
-      included in the pasted text.
+    * Do not include the `## <version number>` heading line from the changelog
+      in the pasted text.
     * The `Release title` field may be left blank.
 17. Click `Publish Release`.
 18. Unset the shell variable `$NEW_RELEASE_TAG`; you don't need it anymore:
