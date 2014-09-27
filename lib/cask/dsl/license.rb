@@ -11,7 +11,8 @@ class Cask::DSL::License
                     :closed        => :closed,
                     :abandoned     => :closed,
                     :commercial    => :closed,
-                    :free          => :closed,
+                    :freemium      => :closed,
+                    :gratis        => :closed,
                     :trial         => :closed,
 
                     :oss           => :oss,
@@ -24,12 +25,13 @@ class Cask::DSL::License
                     :eclipse       => :oss,
                     :gpl           => :oss,
                     :isc           => :oss,
+                    :lppl          => :oss,
                     :ncsa          => :oss,
                     :mit           => :oss,
                     :mpl           => :oss,
                     :ofl           => :oss,
                     :public_domain => :oss,
-                    :ubuntu        => :oss,
+                    :ubuntu_font   => :oss,
                     :x11           => :oss,
                    }
 
