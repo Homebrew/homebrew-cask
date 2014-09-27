@@ -5,7 +5,7 @@ class InvalidGpgSignatureUrl < TestCask
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/invalid-gpg-signature-url'
   gpg 1,
-      :key_id => 'ID'
+      :key_id => '01234567'
 
   app 'Caffeine.app'
 end

@@ -5,9 +5,9 @@ class InvalidGpgMultipleStanzas < TestCask
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/invalid-gpg-multiple-stanzas'
   gpg 'http://example.com/gpg-signature.asc',
-      :key_id => 'ID'
+      :key_id => '01234567'
   gpg 'http://example.com/gpg-signature.asc',
-      :key_id => 'ID'
+      :key_id => '01234567'
 
   app 'Caffeine.app'
 end
