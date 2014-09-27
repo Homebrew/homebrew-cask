@@ -197,6 +197,12 @@ describe Cask::DSL do
       }.must_raise(CaskInvalidError)
     end
 
+    it "refuses to load invalid gpg key IDs" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-key-id')
+      }.must_raise(CaskInvalidError)
+    end
+
     it "refuses to load if gpg parameter is unknown" do
       err = lambda {
         invalid_cask = Cask.load('invalid/invalid-gpg-parameter')
