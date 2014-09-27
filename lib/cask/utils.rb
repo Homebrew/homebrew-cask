@@ -47,11 +47,11 @@ class Pathname
     out=''
     n = Cask::SystemCommand.run!('/usr/bin/find',
                                  :args => [self.realpath, *%w[-type f ! -name .DS_Store]],
-                                 :stderr => :silence).count("\n")
+                                 :print_stderr => false).stdout.count("\n")
     out << "#{n} files, " if n > 1
     out << Cask::SystemCommand.run!('/usr/bin/du',
                                     :args => ['-hs', '--', self.to_s],
-                                    :stderr => :silence).split("\t").first.strip
+                                    :print_stderr => false).stdout.split("\t").first.strip
   end
 end
 
@@ -114,7 +114,7 @@ module Cask::Utils
 
     if $stdout.tty?
       # determine the best width to display for different console sizes
-      console_width = Cask::SystemCommand.run("/bin/stty", :args => ["size"]).chomp.split(" ").last.to_i
+      console_width = Cask::SystemCommand.run("/bin/stty", :args => ["size"]).stdout.chomp.split(" ").last.to_i
       console_width = 80 if console_width <= 0
     else
       console_width = 80

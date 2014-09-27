@@ -65,7 +65,7 @@ class Cask::CLI::Doctor < Cask::CLI::Base
       HOMEBREW_REPOSITORY.cd do
         homebrew_origin = Cask::SystemCommand.run('git',
                                                   :args => %w{config --get remote.origin.url},
-                                                  :stderr => :silence).strip
+                                                  :print_stderr => false).stdout.strip
       end
       if homebrew_origin !~ %r{\S}
         homebrew_origin = "#{none_string} #{error_string}"

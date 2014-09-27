@@ -4,35 +4,35 @@ class Cask::SystemCommand
   def self.run(executable, options={})
     command = _process_options(executable, options)
     odebug "Executing: #{command.utf8_inspect}"
-    output = ''
-    exit_status = nil
+    processed_stdout = ''
+    processed_stderr = ''
 
-    ext_stdin, ext_stdout, ext_stderr, wait_thr = Open3.popen3(*command.map(&:to_s))
+    raw_stdin, raw_stdout, raw_stderr, raw_wait_thr = Open3.popen3(*command.map(&:to_s))
+
     if options[:input]
-      options[:input].each { |line| ext_stdin.puts line }
+      options[:input].each { |line| raw_stdin.puts line }
     end
-    ext_stdin.close_write
-    while line = ext_stdout.gets
-      output << line
-      ohai line.chomp if options[:print]
-    end
-    while line = ext_stderr.gets
-      next if options[:stderr] == :silence
-      output << line
-      ohai line.chomp if options[:print]
-    end
-    ext_stdout.close_read
-    ext_stderr.close_read
+    raw_stdin.close_write
 
-    # Ruby 1.8 sets $?. Ruby 1.9+ has wait_thr, and does not set $?.
-    exit_status = wait_thr.nil? ? $? : wait_thr.value
-
-    _assert_success(exit_status, command, output) if options[:must_succeed]
-    if options[:plist]
-      _parse_plist(command, output)
-    else
-      output
+    while line = raw_stdout.gets
+      processed_stdout << line
+      ohai line.chomp if options[:print_stdout]
     end
+
+    while line = raw_stderr.gets
+      processed_stderr << line
+      ohai line.chomp if options[:print_stderr]
+    end
+
+    raw_stdout.close_read
+    raw_stderr.close_read
+
+    # Ruby 1.8 sets $?. Ruby 1.9+ has raw_wait_thr, and does not set $?.
+    processed_exit_status = raw_wait_thr.nil? ? $? : raw_wait_thr.value
+
+    _assert_success(processed_exit_status, command, processed_stdout) if options[:must_succeed]
+
+    Cask::SystemCommand::Result.new(command, processed_stdout, processed_stderr, processed_exit_status)
   end
 
   def self.run!(command, options={})
@@ -40,18 +40,12 @@ class Cask::SystemCommand
   end
 
   def self._process_options(executable, options)
-    options.assert_valid_keys :input, :print, :stderr, :args, :must_succeed, :sudo, :plist
-    if options[:stderr] and options[:stderr] != :silence
-      raise CaskError.new "Unknown value #{options[:stderr]} for key :stderr"
-    end
+    options.assert_valid_keys :input, :print_stdout, :print_stderr, :args, :must_succeed, :sudo
+    sudo_prefix = %w{/usr/bin/sudo -E --}
     command = [executable]
-    if options[:sudo]
-      command.unshift('/usr/bin/sudo', '-E', '--')
-    end
-    if options.key?(:args) and
-        ! options[:args].empty?
-      command.concat options[:args]
-    end
+    options[:print_stderr] = true  if !options.key?(:print_stderr)
+    command.unshift(*sudo_prefix)  if  options[:sudo]
+    command.concat(options[:args]) if  options.key?(:args) and !options[:args].empty?
     command
   end
 
@@ -60,12 +54,40 @@ class Cask::SystemCommand
       raise CaskCommandFailedError.new(command.utf8_inspect, output, status)
     end
   end
+end
+
+class Cask::SystemCommand::Result
+
+  attr_accessor :command, :stdout, :stderr, :exit_status
+
+  def initialize(command, stdout, stderr, exit_status)
+    @command     = command
+    @stdout      = stdout
+    @stderr      = stderr
+    @exit_status = exit_status
+  end
+
+  def plist
+    @plist ||= self.class._parse_plist(@command, @stdout)
+  end
+
+  def success?
+    @exit_status == 0
+  end
+
+  def merged_output
+    @merged_output ||= @stdout + @stderr
+  end
+
+  def to_s
+    @stdout
+  end
 
   def self._warn_plist_garbage(command, garbage)
     return true unless garbage =~ %r{\S}
     external = File.basename(command.first)
     lines = garbage.strip.split("\n")
-    opoo "Non-XML output from #{external}:"
+    opoo "Non-XML stdout from #{external}:"
     STDERR.puts lines.map {|l| "    #{l}"}
   end
 

@@ -105,8 +105,10 @@ class TestHelper
 
   def self.install_without_artifacts(cask)
     Cask::Installer.new(cask).tap do |i|
-      shutup { i.download }
-      i.extract_primary_container
+      shutup do
+        i.download
+        i.extract_primary_container
+      end
     end
   end
 end

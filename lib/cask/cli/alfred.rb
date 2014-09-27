@@ -154,7 +154,7 @@ class Cask::CLI::Alfred < Cask::CLI::Base
       @system_command.run('/usr/bin/defaults', :args => ['write', PRIMARY_DOMAIN, key, value.to_s])
     else
       odebug 'Reading Alfred primary preferences'
-      @system_command.run('/usr/bin/defaults', :args => ['read', PRIMARY_DOMAIN, key])
+      @system_command.run('/usr/bin/defaults', :args => ['read', PRIMARY_DOMAIN, key]).stdout
     end
   end
 
@@ -168,7 +168,7 @@ class Cask::CLI::Alfred < Cask::CLI::Base
         @system_command.run('/usr/bin/defaults', :args => ['write', file, key, value.to_s])
       else
         odebug 'Reading Alfred local preferences'
-        @system_command.run('/usr/bin/defaults', :args => ['read', file, key])
+        @system_command.run('/usr/bin/defaults', :args => ['read', file, key]).stdout
       end
     # hack/limitation: if there happen to be multiple local preference
     # files, we only return the value from the first one.

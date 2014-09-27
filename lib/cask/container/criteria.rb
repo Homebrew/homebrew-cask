@@ -7,7 +7,7 @@ class Cask::Container::Criteria
   end
 
   def file
-    @file ||= @command.run('/usr/bin/file', :args => ['-Izb', '--', path])
+    @file ||= @command.run('/usr/bin/file', :args => ['-Izb', '--', path]).stdout
   end
 
   def imageinfo
@@ -15,9 +15,8 @@ class Cask::Container::Criteria
       '/usr/bin/hdiutil',
       # realpath is a failsafe against unusual filenames
       :args => ['imageinfo', Pathname.new(path).realpath],
-      :stderr => :silence,
-      :print => false
-    )
+      :print_stderr => false
+    ).stdout
   end
 
   def cabextract
@@ -25,9 +24,8 @@ class Cask::Container::Criteria
       @cabextract ||= @command.run(
         HOMEBREW_PREFIX.join('bin/cabextract'),
         :args => ['-t', '--', path],
-        :stderr => :silence,
-        :print => false
-      )
+        :print_stderr => false
+      ).stdout
     end
   end
 
@@ -36,9 +34,8 @@ class Cask::Container::Criteria
       @lsar ||= @command.run(
         HOMEBREW_PREFIX.join('bin/lsar'),
         :args => ['-l', '-t', '--', path],
-        :stderr => :silence,
-        :print => false
-      )
+        :print_stderr => false
+      ).stdout
     end
   end
 
