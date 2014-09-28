@@ -6,5 +6,6 @@ class Camtwist < Cask
   homepage 'http://camtwiststudio.com/'
 
   pkg 'CamTwist.pkg'
-  uninstall :script => { :executable => 'Manual Install/CamTwist/uninstall.command' }
+  uninstall :script => { :executable => 'Manual Install/CamTwist/uninstall.command' },
+            :pkgutil => 'com.allocinit.camtwist.*'
 end
