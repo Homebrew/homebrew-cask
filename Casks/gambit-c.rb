@@ -13,7 +13,8 @@ class GambitC < Cask
 
   homepage 'http://gambitscheme.org/wiki/index.php/Main_Page'
 
-  uninstall :script => {
+  uninstall :pkgutil => 'marc.feeley.gambc',
+            :script => {
                         :executable => "/Library/Gambit-C/v#{version}/bin/uninstall-gambc",
                         :args => ["v#{version}"]
                        }
