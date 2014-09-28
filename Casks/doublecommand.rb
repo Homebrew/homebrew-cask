@@ -6,5 +6,6 @@ class Doublecommand < Cask
   homepage 'http://doublecommand.sourceforge.net'
 
   pkg "DoubleCommand-#{version}.pkg"
-  uninstall :script => '/Library/StartupItems/DoubleCommand/uninstall.command'
+  uninstall :script => '/Library/StartupItems/DoubleCommand/uninstall.command',
+            :pkgutil => 'com.baltaks.DoubleCommand'
 end
