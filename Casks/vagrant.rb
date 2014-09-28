@@ -6,5 +6,6 @@ class Vagrant < Cask
   homepage 'http://www.vagrantup.com'
 
   pkg 'Vagrant.pkg'
-  uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] }
+  uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] },
+            :pkgutil => 'com.vagrant.vagrant'
 end
