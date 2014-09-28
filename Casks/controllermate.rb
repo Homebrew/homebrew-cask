@@ -6,5 +6,6 @@ class Controllermate < Cask
   homepage 'http://www.orderedbytes.com/controllermate/'
 
   pkg 'ControllerMate.pkg'
-  uninstall :script => 'ControllerMate Uninstaller.app/Contents/MacOS/ControllerMate Uninstaller'
+  uninstall :script => 'ControllerMate Uninstaller.app/Contents/MacOS/ControllerMate Uninstaller',
+            :pkgutil => 'com.orderedbytes.controllermate.*'
 end
