@@ -4,9 +4,9 @@ class Xmplify < Cask
 
   url 'http://xmplifyapp.com/releases/Xmplify.dmg'
   homepage 'http://xmplifyapp.com/'
+
   app 'Xmplify.app'
   uninstall :quit => 'au.com.moso.Xmplify'
-
   zap :delete => [
                    '~/Library/Caches/au.com.moso.Xmplify',
                    '~/Library/Logs/Xmplify.log',
