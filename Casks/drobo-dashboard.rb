@@ -6,5 +6,6 @@ class DroboDashboard < Cask
   homepage 'http://www.drobo.com'
 
   pkg "Install.app/Contents/Drobo_Dashboard_Installer_#{version}.pkg"
-  uninstall :script => 'Uninstall.app/Contents/Resources/Scripts/Drobo_Dashboard_uninstall.sh'
+  uninstall :script => 'Uninstall.app/Contents/Resources/Scripts/Drobo_Dashboard_uninstall.sh',
+            :pkgutil => 'com.datarobotics.drobodashboard'
 end
