@@ -6,8 +6,9 @@ class Totalfinder < Cask
   homepage 'http://totalfinder.binaryage.com'
 
   pkg 'TotalFinder.pkg'
-  uninstall :script => {
-    :executable => 'TotalFinder Uninstaller.app/Contents/MacOS/TotalFinder Uninstaller',
-    :args => %w[--headless]
-  }
+  uninstall :pkgutil => 'com.binaryage.pkg.totalfinder.app',
+            :script => {
+                        :executable => 'TotalFinder Uninstaller.app/Contents/MacOS/TotalFinder Uninstaller',
+                        :args => %w[--headless],
+                       }
 end
