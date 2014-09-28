@@ -6,5 +6,6 @@ class HaskellPlatform < Cask
   homepage 'http://www.haskell.org/platform/'
 
   pkg "Haskell Platform #{version} 64bit.signed.pkg"
-  uninstall :script => { :executable => '/usr/bin/uninstall-hs', :args => %w[all --remove] }
+  uninstall :script => { :executable => '/usr/bin/uninstall-hs', :args => %w[all --remove] },
+            :pkgutil => 'org.haskell.HaskellPlatform.*'
 end
