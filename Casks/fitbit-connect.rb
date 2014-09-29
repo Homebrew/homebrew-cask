@@ -6,5 +6,6 @@ class FitbitConnect < Cask
   homepage 'http://www.fitbit.com/'
 
   pkg 'Install Fitbit Connect.pkg'
-  uninstall :script => { :executable => 'Uninstall Fitbit Connect.app/Contents/Resources/uninstall.sh' }
+  uninstall :script => { :executable => 'Uninstall Fitbit Connect.app/Contents/Resources/uninstall.sh' },
+            :pkgutil => 'com.fitbit.pkg.GalileoInstaller'
 end

@@ -6,5 +6,6 @@ class Nosleep < Cask
   homepage 'https://code.google.com/p/macosx-nosleep-extension/'
 
   pkg 'NoSleep.mpkg'
-  uninstall :script => 'Uninstall.command'
+  uninstall :script => 'Uninstall.command',
+            :pkgutil => 'com.protech.pkg.NoSleep'
 end

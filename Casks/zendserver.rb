@@ -6,7 +6,8 @@ class Zendserver < Cask
   homepage 'http://www.zend.com/en/products/server/'
 
   pkg 'Zend Server.pkg'
-  uninstall :script => { :executable => '/usr/local/zend/bin/uninstall.sh', :args => ['--automatic'] }
+  uninstall :script => { :executable => '/usr/local/zend/bin/uninstall.sh', :args => ['--automatic'] },
+            :pkgutil => 'zenith.pkg.ZendServer'
   caveats do
     files_in_usr_local
   end

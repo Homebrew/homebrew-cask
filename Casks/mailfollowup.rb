@@ -8,6 +8,10 @@ class Mailfollowup < Cask
   nested_container "MailFollowUp_#{version}.dmg"
   pkg 'Install MailFollowUp.pkg'
 
-  uninstall :quit  => 'com.apple.mail'
+  uninstall :quit  => 'com.apple.mail',
+            :pkgutil => [
+                        'net.welchwold.mailfollowup',
+                        'net.welchwold.mailfollowup.*',
+                        ]
   zap       :delete => '~/Library/Mail/Bundles/MailFollowUp.mailbundle/'
 end

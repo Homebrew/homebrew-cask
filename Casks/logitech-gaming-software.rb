@@ -6,7 +6,12 @@ class LogitechGamingSoftware < Cask
   homepage 'http://www.logitech.com/en-us/support/gaming-software?section=downloads&bit=&osid=36'
 
   pkg 'LogiGamingSetup.mpkg'
-  uninstall :script => '/Applications/Logitech/Uninstaller.app/Contents/Resources/UninstallScript.sh'
+  uninstall :script => '/Applications/Logitech/Uninstaller.app/Contents/Resources/UninstallScript.sh',
+            :pkgutil => [
+                        'com.logitech.gaming',
+                        'com.logitech.lcdmanager',
+                        ]
+
   caveats do
     reboot
   end

@@ -6,7 +6,7 @@ class Authbuddy < Cask
   homepage 'https://www.dssw.co.uk/authbuddy'
 
   pkg 'DssW authbuddy.pkg'
-  uninstall :delete => '/usr/local/bin/authbuddy'
+  uninstall :pkgutil => 'uk.co.dssw.authbuddy'
   caveats do
     files_in_usr_local
   end

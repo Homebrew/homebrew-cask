@@ -6,5 +6,6 @@ class Fluke < Cask
   homepage 'https://code.google.com/p/flukeformac/'
 
   pkg 'Fluke_0.2.5.pkg'
-  uninstall :script => { :executable => 'Uninstall Fluke.tool' }
+  uninstall :script => { :executable => 'Uninstall Fluke.tool' },
+            :pkgutil => 'com.kichenko.fluke.*'
 end

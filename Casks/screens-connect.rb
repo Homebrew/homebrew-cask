@@ -6,7 +6,8 @@ class ScreensConnect < Cask
   homepage 'https://screensconnect.com'
 
   pkg 'Screens Connect.pkg'
-  uninstall :script => 'Uninstall Screens Connect.app/Contents/Resources/sc-uninstaller.tool'
+  uninstall :script => 'Uninstall Screens Connect.app/Contents/Resources/sc-uninstaller.tool',
+            :pkgutil => 'com.edovia.pkg.screens.connect.*'
 
   uninstall_preflight do
     system '/bin/chmod', '+x', "#{destination_path}/Uninstall Screens Connect.app/Contents/Resources/sc-uninstaller.tool"

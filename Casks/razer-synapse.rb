@@ -6,5 +6,6 @@ class RazerSynapse < Cask
   homepage 'http://www.razerzone.com/synapse2'
 
   pkg 'Razer Synapse 2.0.pkg'
-  uninstall :script => '/Applications/Utilities/Uninstall Razer Synapse 2.0.app/Contents/MacOS/Uninstall Razer Synapse 2.0'
+  uninstall :script => '/Applications/Utilities/Uninstall Razer Synapse 2.0.app/Contents/MacOS/Uninstall Razer Synapse 2.0',
+            :pkgutil => 'com.razerzone.*'
 end
