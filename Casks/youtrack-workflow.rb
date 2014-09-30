@@ -1,4 +1,4 @@
-class YoutrackWorkflowEditor < Cask
+class YoutrackWorkflow < Cask
   version '5.2.1'
   sha256 'a0ecd6b54d8cb2726086aa4db2744446e75a42f02e99e975fee237200b244e91'
 
