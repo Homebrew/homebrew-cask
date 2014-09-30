@@ -5,5 +5,5 @@ class Gingr < Cask
   url "https://github.com/marbl/gingr/releases/download/v#{version}/gingr-OSX64-v#{version}.zip"
   homepage 'http://harvest.readthedocs.org/en/latest/content/gingr.html'
 
-  app 'gingr-OSX64.app', :target => 'Gingr.app'
+  app 'gingr-OSX64.app'
 end
