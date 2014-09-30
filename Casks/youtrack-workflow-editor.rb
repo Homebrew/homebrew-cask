@@ -6,5 +6,5 @@ class YoutrackWorkflowEditor < Cask
   homepage 'http://www.jetbrains.com/youtrack/download/get_youtrack.html'
   license :unknown
 
-  app 'youtrack-workflow.app', :target => 'Youtrack Workflow Editor.app'
+  app 'youtrack-workflow.app'
 end
