@@ -6,5 +6,5 @@ class Gingr < Cask
   homepage 'http://harvest.readthedocs.org/en/latest/content/gingr.html'
   license :oss
 
-  app 'gingr-OSX64.app', :target => 'Gingr.app'
+  app 'gingr-OSX64.app'
 end
