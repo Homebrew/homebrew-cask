@@ -1,6 +1,6 @@
 class Ynab < Cask
-  version '4.3.622'
-  sha256 '262f4bcf0285e2f52fb7a61f6fde0a5f4f23fb8ed1f80d9b9a3c6e6c7da31e5e'
+  version '4.3.655'
+  sha256 '0635c56582a1367c2ca3a8ab88805ec89625f2c5042497e7f13081726b2238a3'
 
   url "https://www.youneedabudget.com/CDNOrigin/download/ynab4/liveCaptive/Mac/YNAB4_LiveCaptive_#{version}.dmg"
   homepage 'http://www.youneedabudget.com/'
