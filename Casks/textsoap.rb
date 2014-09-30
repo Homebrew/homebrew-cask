@@ -6,5 +6,5 @@ class Textsoap < Cask
   homepage 'http://www.unmarked.com/textsoap/'
   license :unknown
 
-  app 'textsoap7.app', :target => 'TextSoap.app'
+  app 'textsoap7.app'
 end
