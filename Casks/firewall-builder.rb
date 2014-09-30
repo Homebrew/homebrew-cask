@@ -6,5 +6,5 @@ class FirewallBuilder < Cask
   homepage 'http://www.fwbuilder.org'
   license :oss
 
-  app "fwbuilder-#{version}.app", :target => 'Firewall Builder.app'
+  app "fwbuilder-#{version}.app"
 end
