@@ -5,7 +5,11 @@ class VmwareFusion < Cask
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   homepage 'http://www.vmware.com/products/fusion/'
 
+  binary 'VMware Fusion.app/Contents/Library/vmnet-cfgcli'
+  binary 'VMware Fusion.app/Contents/Library/vmnet-cli'
   binary 'VMware Fusion.app/Contents/Library/vmrun'
+  binary 'VMware Fusion.app/Contents/Library/vmware-vdiskmanager'
+  binary 'VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool'
   app 'VMware Fusion.app'
   uninstall_preflight do
     system '/usr/bin/sudo', '-E', '--',
