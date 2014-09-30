@@ -1,6 +1,6 @@
 class Osxfuse < Cask
-  version '2.7.0'
-  sha256 'fab4c8d16d0fc6995826d74f2c0ab04cd7264b00c566d5cc3b219bd589da8114'
+  version '2.7.1'
+  sha256 'fa7819c3d20c207ac51f25d3db2e0705dde52e8cf91e42e9aead83aa4fadf375'
 
   url "https://downloads.sourceforge.net/project/osxfuse/osxfuse-#{version}/osxfuse-#{version}.dmg"
   homepage 'https://osxfuse.github.io/'
