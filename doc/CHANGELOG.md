@@ -1,5 +1,26 @@
 # CHANGELOG
 
+## 0.43.1
+
+* __Casks__
+ - 17 Casks added (36 updated) by 18 contributors since 0.43.0
+ - 1918 total Casks
+* __Features__
+ - none
+* __Breaking Changes__
+ - none
+* __Fixes__
+ - [#6405][] fix `brew cask checklinks`, hide `ditto` warning messages
+* __Internal Changes__
+ - none
+* __Documentation__
+ - 5 doc commits since 0.43.0
+* __Contributors__
+ - 5 new contributors since 0.43.0
+ - 1044 total contributors
+
+[#6405]: https://github.com/caskroom/homebrew-cask/issues/6405
+
 ## 0.43.0
 
 * __Casks__
