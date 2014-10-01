@@ -4,6 +4,7 @@ class Torbrowser < Cask
 
   url "https://www.torproject.org/dist/torbrowser/#{version}/TorBrowser-#{version}-osx32_en-US.dmg"
   homepage 'https://www.torproject.org/projects/torbrowser.html'
+  license :unknown
 
   app 'TorBrowser.app'
 end
