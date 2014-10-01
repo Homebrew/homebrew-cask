@@ -5,6 +5,7 @@ class Sente < Cask
   url "https://www.thirdstreetsoftware.com/downloads/Sente-#{version}.11672.zip"
   appcast 'http://www.thirdstreetsoftware.com/rss/Sente65.xml?v=6.6.0'
   homepage 'http://www.thirdstreetsoftware.com'
+  license :unknown
 
   app 'Sente 6.app'
 end
