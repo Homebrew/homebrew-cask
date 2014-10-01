@@ -5,6 +5,7 @@ class Flavours < Cask
   url 'http://flavours-updates.interacto.net/Flavours.dmg'
   appcast 'http://flavours-updates.interacto.net/appcast.xml'
   homepage 'http://flavours.interacto.net/'
+  license :unknown
 
   app 'Flavours.app'
   caveats do
