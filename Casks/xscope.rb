@@ -5,6 +5,7 @@ class Xscope < Cask
   url 'http://iconfactory.com/assets/software/xscope/xScope-4.0.zip'
   appcast 'http://iconfactory.com/appcasts/xScope/appcast.xml'
   homepage 'http://iconfactory.com/software/xscope'
+  license :unknown
 
   app 'xScope.app'
 end
