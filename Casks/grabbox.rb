@@ -5,6 +5,7 @@ class Grabbox < Cask
   url "http://grabbox.devsoft.no/updates/GrabBox%20Beta%20v#{version}.zip"
   appcast 'http://grabbox.devsoft.no/appcastBeta.xml'
   homepage 'http://grabbox.devsoft.no/'
+  license :unknown
 
   app 'GrabBox.app'
 end
