@@ -5,6 +5,7 @@ class Fastscripts < Cask
   url "https://www.red-sweater.com/fastscripts/FastScripts#{version}.zip"
   appcast 'http://www.red-sweater.com/fastscripts/appcast2.php'
   homepage 'http://www.red-sweater.com/fastscripts/'
+  license :unknown
 
   app 'FastScripts.app'
 end
