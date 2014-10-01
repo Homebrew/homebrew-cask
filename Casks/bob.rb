@@ -4,6 +4,7 @@ class Bob < Cask
 
   url "https://github.com/casperstorm/Bob/releases/download/#{version}/Bob.zip"
   homepage 'https://github.com/casperstorm/Bob'
+  license :oss
 
   app 'Bob.app'
 end
