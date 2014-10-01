@@ -4,6 +4,7 @@ class Hugin < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/hugin/Hugin-#{version}.dmg"
   homepage 'http://hugin.sourceforge.net/'
+  license :oss
 
   app 'Hugin.app'
 end
