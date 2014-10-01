@@ -4,6 +4,7 @@ class WineskinWinery < Cask
 
   url "https://downloads.sourceforge.net/project/wineskin/Wineskin%20Winery.app%20Version%20#{version}.zip"
   homepage 'http://wineskin.urgesoftware.com/'
+  license :oss
 
   app 'Wineskin Winery.app'
 end
