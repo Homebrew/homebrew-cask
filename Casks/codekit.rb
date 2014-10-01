@@ -5,6 +5,7 @@ class Codekit < Cask
   url 'https://incident57.com/codekit/files/codekit-17018.zip'
   appcast 'https://incident57.com/codekit/appcast/ck2appcast.xml'
   homepage 'http://incident57.com/codekit/'
+  license :unknown
 
   app 'CodeKit.app'
 end
