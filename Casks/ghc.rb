@@ -4,6 +4,7 @@ class Ghc < Cask
 
   url "https://github.com/ghcformacosx/ghc-dot-app/releases/download/v#{version}/ghc-#{version}.zip"
   homepage 'http://ghcformacosx.github.io/'
+  license :oss
 
   app 'ghc-7.8.3.app'
   caveats 'To add GHC to your PATH, launch the app and follow the included instructions.'
