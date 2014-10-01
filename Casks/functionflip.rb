@@ -4,6 +4,7 @@ class Functionflip < Cask
 
   url "http://kevingessner.com/public/downloads/FunctionFlip/#{version}/FunctionFlip.prefPane.zip"
   homepage 'http://kevingessner.com/software/functionflip/'
+  license :unknown
 
   prefpane 'FunctionFlip.prefPane'
 end
