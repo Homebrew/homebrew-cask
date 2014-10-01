@@ -4,6 +4,7 @@ class Thumbsup < Cask
 
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/thumbsup/#{version}/ThumbsUp.dmg.zip"
   homepage 'http://www.devontechnologies.com/products/freeware.html#c966'
+  license :unknown
 
   nested_container 'ThumbsUp.dmg'
   app 'ThumbsUp.app'
