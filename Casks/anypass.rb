@@ -4,6 +4,7 @@ class Anypass < Cask
 
   url 'http://icyblaze.com/anypass/anypass_mac_1.0.zip'
   homepage 'http://icyblaze.com/anypass'
+  license :unknown
 
   app 'Anypass.app'
 end
