@@ -4,6 +4,7 @@ class Traktable < Cask
 
   url "https://github.com/yo-han/Traktable/releases/download/#{version}/Traktable.zip"
   homepage 'http://yo-han.github.io/Traktable/'
+  license :oss
 
   app 'Traktable.app'
 end
