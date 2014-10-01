@@ -4,6 +4,7 @@ class Betterzipql < Cask
 
   url 'http://macitbetter.com/BetterZipQL.zip'
   homepage 'http://macitbetter.com/BetterZip-Quick-Look-Generator/'
+  license :unknown
 
   qlplugin 'BetterZipQL.qlgenerator'
 end
