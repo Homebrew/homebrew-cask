@@ -4,6 +4,7 @@ class WebpQuicklook < Cask
 
   url "https://github.com/dchest/webp-quicklook/releases/download/v#{version}/WebP-#{version}.qlgenerator.zip"
   homepage 'https://github.com/dchest/webp-quicklook'
+  license :oss
 
   qlplugin 'WebP.qlgenerator'
 end
