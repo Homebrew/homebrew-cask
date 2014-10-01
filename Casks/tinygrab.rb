@@ -5,6 +5,7 @@ class Tinygrab < Cask
   url "http://tinygrab.com/downloads/app/TinyGrab#{version}.dmg"
   appcast 'http://tinygrab.com/appcast/tinygrab-appcast.xml'
   homepage 'http://www.tinygrab.com'
+  license :unknown
 
   app 'TinyGrab.app'
 end
