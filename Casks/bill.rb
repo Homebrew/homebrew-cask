@@ -4,6 +4,7 @@ class Bill < Cask
 
   url 'http://myownapp.com/downloads/Bill.zip'
   homepage 'http://billtheapp.com/'
+  license :unknown
 
   app 'Bill.app'
 end
