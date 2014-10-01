@@ -4,6 +4,7 @@ class ReadefineDesktop < Cask
 
   url 'http://readefine.anirudhsasikumar.net/ReadefineDesktop.air'
   homepage 'http://readefine.anirudhsasikumar.net/'
+  license :unknown
 
   app 'Readefine.app'
 end
