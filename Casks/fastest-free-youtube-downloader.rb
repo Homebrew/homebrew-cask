@@ -4,6 +4,7 @@ class FastestFreeYoutubeDownloader < Cask
 
   url "http://digitalocean.appengine-distro.com/YTD/Installers/#{version}/FastestFreeYouTubeDownloader-Setup.dmg"
   homepage 'https://www.fastestvideodownloader.com/'
+  license :unknown
 
   app 'Fastest Free YouTube Downloader.app'
 end
