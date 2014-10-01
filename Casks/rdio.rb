@@ -5,6 +5,7 @@ class Rdio < Cask
   url 'https://www.rdio.com/media/static/desktop/mac/Rdio.dmg'
   appcast 'http://www.rdio.com/media/static/desktop/mac/appcast.xml'
   homepage 'http://www.rdio.com'
+  license :unknown
 
   app 'Rdio.app'
 end
