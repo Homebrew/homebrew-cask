@@ -4,6 +4,7 @@ class Appium < Cask
 
   url "https://bitbucket.org/appium/appium.app/downloads/appium-#{version}.dmg"
   homepage 'http://appium.io'
+  license :oss
 
   app 'Appium.app'
 end
