@@ -4,6 +4,7 @@ class Osculator < Cask
 
   url "http://dl.osculator.net/releases/osculator-#{version}-20-g81f7dd4.dmg"
   homepage 'http://www.osculator.net'
+  license :unknown
 
   app 'OSCulator ƒ/OSCulator.app'
 end
