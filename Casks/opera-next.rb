@@ -4,6 +4,7 @@ class OperaNext < Cask
 
   url "http://get.geo.opera.com/pub/opera-next/#{version}/mac/Opera_Next_#{version}_Setup.dmg"
   homepage 'http://www.opera.com/computer/next'
+  license :unknown
 
   app 'Opera Next.app'
 end
