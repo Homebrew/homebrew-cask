@@ -4,6 +4,7 @@ class Diashapes < Cask
 
   url "http://downloads.sourceforge.net/project/dia-installer/diashapes/#{version}/diashapes-#{version}.dmg"
   homepage 'http://dia-installer.de/'
+  license :oss
 
   app 'Diashapes.app'
 end
