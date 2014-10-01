@@ -4,6 +4,7 @@ class Dragthing < Cask
 
   url "https://s3.amazonaws.com/tlasystems/DragThing-#{version}.dmg"
   homepage 'http://www.dragthing.com'
+  license :unknown
 
   app 'DragThing.app'
 end
