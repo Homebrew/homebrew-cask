@@ -4,6 +4,7 @@ class Iconping < Cask
 
   url "http://antirez.com/iconping/iconping-#{version}.app.dmg"
   homepage 'http://antirez.com/iconping/'
+  license :unknown
 
   app 'iconping.app'
 end
