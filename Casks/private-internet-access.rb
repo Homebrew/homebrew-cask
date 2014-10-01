@@ -4,6 +4,7 @@ class PrivateInternetAccess < Cask
 
   url 'https://www.privateinternetaccess.com/installer/installer_osx.dmg'
   homepage 'https://www.privateinternetaccess.com'
+  license :unknown
 
   postflight do
       system '/usr/bin/sudo', '-E', '--',
