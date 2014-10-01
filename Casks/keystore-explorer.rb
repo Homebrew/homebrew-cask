@@ -4,6 +4,7 @@ class KeystoreExplorer < Cask
 
   url "https://downloads.sourceforge.net/project/keystore-explorer/KSE%20#{version}/kse-501.dmg?r=&ts=1393234297&use_mirror=heanet"
   homepage 'http://keystore-explorer.sourceforge.net/index.php'
+  license :oss
 
   app "KeyStore Explorer #{version}.app"
 end
