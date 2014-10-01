@@ -4,6 +4,7 @@ class Twindocs < Cask
 
   url 'https://www.twindocs.com/plugins/es/tools_mac/Twindocs%20tools.pkg.zip'
   homepage 'https://www.twindocs.com'
+  license :unknown
 
   pkg 'Twindocs tools.pkg'
   uninstall :pkgutil => 'com.twindocs.ambassador'
