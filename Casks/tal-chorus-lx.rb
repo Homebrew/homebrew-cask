@@ -4,6 +4,7 @@ class TalChorusLx < Cask
 
   url 'http://kunz.corrupt.ch/downloads/plugins/TAL-Chorus-LX-installer.pkg'
   homepage 'http://kunz.corrupt.ch/products/tal-chorus-lx'
+  license :unknown
 
   pkg 'TAL-Chorus-LX-installer.pkg'
   uninstall :pkgutil => [
