@@ -4,6 +4,7 @@ class DeliciousLibrary < Cask
 
   url 'http://delicious-monster.com/downloads/DeliciousLibrary3.zip'
   homepage 'http://delicious-monster.com/'
+  license :unknown
 
   app 'Delicious Library 3.app'
 end
