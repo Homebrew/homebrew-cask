@@ -8,6 +8,7 @@ class Macvim < Cask
     sha256 '557c60f3487ab68426cf982c86270f2adfd15e8a4d535f762e6d55602754d224'
   end
   homepage 'http://code.google.com/p/macvim/'
+  license :oss
   version '7.4-73'
   app 'MacVim-snapshot-73/MacVim.app'
   binary 'MacVim-snapshot-73/mvim'
