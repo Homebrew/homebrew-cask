@@ -9,6 +9,7 @@ class P4v < Cask
   end
 
   homepage 'http://www.perforce.com/product/components/perforce-visual-client'
+  license :unknown
 
   app 'p4v.app'
   binary 'p4vc'
