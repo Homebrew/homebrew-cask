@@ -4,6 +4,7 @@ class Love < Cask
 
   url "https://bitbucket.org/rude/love/downloads/love-#{version}-macosx-x64.zip"
   homepage 'http://love2d.org'
+  license :oss
 
   app 'love.app'
 end
