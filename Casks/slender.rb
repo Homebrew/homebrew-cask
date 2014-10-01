@@ -5,6 +5,7 @@ class Slender < Cask
   url 'http://downloads.dragonforged.com/slender211.zip'
   appcast 'http://dragonforged.com/slender/sparkle/?bundleId=com.dfsw.Slender'
   homepage 'http://dragonforged.com/slender/'
+  license :unknown
 
   app 'Slender.app'
 end
