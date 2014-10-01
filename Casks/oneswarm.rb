@@ -4,6 +4,7 @@ class Oneswarm < Cask
 
   url 'http://www.oneswarm.org/builds/OneSwarm.dmg'
   homepage 'http://www.oneswarm.org/'
+  license :unknown
 
   app 'OneSwarm.app'
 end
