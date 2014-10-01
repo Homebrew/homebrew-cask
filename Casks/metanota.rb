@@ -5,6 +5,7 @@ class Metanota < Cask
   url 'https://j.mp/metanota-2-4-1'
   appcast 'https://s3.amazonaws.com/sparkle.metanota.com/appcast.xml'
   homepage 'http://www.metanota.com/'
+  license :unknown
 
   app 'Metanota.app'
 end
