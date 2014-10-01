@@ -4,6 +4,7 @@ class Gpgtools < Cask
 
   url "https://releases.gpgtools.org/GPG%20Suite%20-%20#{version}.dmg"
   homepage 'https://gpgtools.org/index.html'
+  license :unknown
 
   pkg 'Install.pkg'
   postflight do
