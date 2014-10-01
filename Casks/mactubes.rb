@@ -4,6 +4,7 @@ class Mactubes < Cask
 
   url "http://macapps.sakura.ne.jp/mactubes/archives/MacTubes_v#{version}.zip"
   homepage 'http://macapps.sakura.ne.jp/mactubes/index_en.html'
+  license :unknown
 
   app "MacTubes_v#{version}/MacTubes.app"
 end
