@@ -5,6 +5,7 @@ class Deskfun < Cask
   url "http://www.furrysoft.de/download/DeskFun#{version}.zip"
   appcast 'http://www.furrysoft.de/appcast/DeskFun.xml'
   homepage 'http://www.furrysoft.de/?page=deskfun'
+  license :unknown
 
   app 'DeskFun.app'
 end
