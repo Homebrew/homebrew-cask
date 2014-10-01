@@ -4,6 +4,7 @@ class Node < Cask
 
   url "http://nodejs.org/dist/v#{version}/node-v#{version}.pkg"
   homepage 'http://nodejs.org'
+  license :unknown
 
   pkg  "node-v#{version}.pkg"
   uninstall :pkgutil => 'org.nodejs'
