@@ -4,6 +4,7 @@ class Duplicati < Cask
 
   url "http://duplicati.googlecode.com/files/Duplicati%20#{version}.dmg"
   homepage 'http://www.duplicati.com/'
+  license :oss
 
   app 'Duplicati.app'
 end
