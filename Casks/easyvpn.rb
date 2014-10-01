@@ -5,6 +5,7 @@ class Easyvpn < Cask
   url "http://www.squashedsoftware.com/downloads/easyVPN_#{version}.zip"
   appcast 'http://www.squashedsoftware.com/appcasts/easyvpn.xml'
   homepage 'http://www.squashedsoftware.com/products-easyvpn.php'
+  license :unknown
 
   app 'EasyVPN.app'
 end
