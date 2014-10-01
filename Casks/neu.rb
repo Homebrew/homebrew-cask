@@ -5,6 +5,7 @@ class Neu < Cask
   url "http://downloads.elegantchaos.com/neu/neu-v#{version}.zip"
   appcast 'http://sparkle.elegantchaos.com/neu/appcast.xml'
   homepage 'http://www.elegantchaos.com/neu/'
+  license :unknown
 
   app "neu-v#{version}/Neu.app"
 end
