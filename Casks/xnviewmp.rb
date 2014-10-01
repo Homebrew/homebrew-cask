@@ -4,6 +4,7 @@ class Xnviewmp < Cask
 
   url 'http://download.xnview.com/XnViewMP-mac.tgz'
   homepage 'http://www.xnview.com/'
+  license :unknown
 
   app 'XnViewMP.app'
 end
