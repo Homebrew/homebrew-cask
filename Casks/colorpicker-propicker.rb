@@ -4,6 +4,7 @@ class ColorpickerPropicker < Cask
 
   url "http://www.irradiated.net/appcasts/pro-picker/releases/#{version}/ProPicker.zip"
   homepage 'http://www.irradiated.net/?page=pro-picker'
+  license :unknown
 
   colorpicker 'ProPicker.colorPicker'
 end
