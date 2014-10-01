@@ -4,6 +4,7 @@ class Nvalt < Cask
 
   url "http://abyss.designheresy.com/nvaltb/nvalt#{version}.zip"
   homepage 'http://brettterpstra.com/project/nvalt/'
+  license :unknown
 
   app 'nvALT.app'
   zap :delete => [
