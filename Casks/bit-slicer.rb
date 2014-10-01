@@ -5,6 +5,7 @@ class BitSlicer < Cask
   url "https://bitbucket.org/zorgiepoo/bit-slicer/downloads/Bit%20Slicer%20#{version}.zip"
   appcast 'http://zorg.tejat.net/bitslicer/update.php'
   homepage 'https://github.com/zorgiepoo/bit-slicer/'
+  license :oss
 
   app 'Bit Slicer.app'
 end
