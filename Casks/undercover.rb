@@ -4,6 +4,7 @@ class Undercover < Cask
 
   url "http://assets.undercoverhq.com/client/#{version}/undercover_mac.pkg"
   homepage 'http://www.orbicule.com/undercover/mac/'
+  license :unknown
 
   pkg 'undercover_mac.pkg'
 
