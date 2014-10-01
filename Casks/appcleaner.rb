@@ -5,6 +5,7 @@ class Appcleaner < Cask
   url "http://www.freemacsoft.net/downloads/AppCleaner_#{version}.zip"
   appcast 'http://www.freemacsoft.net/appcleaner/Updates.xml'
   homepage 'http://www.freemacsoft.net/appcleaner/'
+  license :unknown
 
   app 'AppCleaner.app'
 end
