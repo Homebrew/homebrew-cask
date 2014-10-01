@@ -5,6 +5,7 @@ class Preen < Cask
   url "http://anomiesoftware.com/downloads/preenImage#{version}.dmg"
   appcast 'http://www.anomiesoftware.com/PreenAppcast.xml'
   homepage 'http://anomiesoftware.com/Anomie_Software/Preen.html'
+  license :unknown
 
   app 'Preen.app'
 end
