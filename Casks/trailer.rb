@@ -5,6 +5,7 @@ class Trailer < Cask
   url 'http://dev.housetrip.com/trailer/trailer1026.zip'
   appcast 'http://dev.housetrip.com/trailer/appcast.xml'
   homepage 'http://dev.housetrip.com/trailer/'
+  license :unknown
 
   app 'Trailer.app'
 end
