@@ -4,6 +4,7 @@ class Reeddit < Cask
 
   url "https://github.com/berbaquero/Reeddit-app/releases/download/v#{version}/Reeddit.app.zip"
   homepage 'http://mac.reedditapp.com'
+  license :oss
 
   app 'Reeddit.app'
 end
