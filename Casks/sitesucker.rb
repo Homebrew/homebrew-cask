@@ -4,6 +4,7 @@ class Sitesucker < Cask
 
   url 'http://www.sitesucker.us/archive/latest/SiteSucker.zip'
   homepage 'http://www.sitesucker.us/mac/mac.html'
+  license :unknown
 
   app 'SiteSucker/SiteSucker.app'
 end
