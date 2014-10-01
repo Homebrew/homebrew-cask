@@ -4,6 +4,7 @@ class Vimr < Cask
 
   url "https://github.com/qvacua/vimr/releases/download/v#{version}/VimR-#{version.gsub(/-.*/, '')}.tar.bz2"
   homepage 'http://vimr.org/'
+  license :oss
 
   app 'VimR.app'
 end
