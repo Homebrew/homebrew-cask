@@ -5,6 +5,7 @@ class Concentrate < Cask
   url "http://www.getconcentrating.com/builds/concentrate.#{version}.zip"
   appcast 'http://getconcentrating.com/concentrate_appcast.xml'
   homepage 'http://www.getconcentrating.com/'
+  license :unknown
 
   app 'Concentrate.app'
   zap :delete => '~/Library/Application Support/Concentrate/Concentrate.sqlite3'
