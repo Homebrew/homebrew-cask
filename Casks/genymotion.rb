@@ -4,6 +4,7 @@ class Genymotion < Cask
 
   url "http://files2.genymotion.com/genymotion/genymotion-#{version}/genymotion-#{version}.dmg"
   homepage 'http://www.genymotion.com/'
+  license :unknown
 
   app 'Genymotion.app'
   app 'Genymotion Shell.app'
