@@ -4,6 +4,7 @@ class Breakaway < Cask
 
   url "https://downloads.sourceforge.net/project/breakaway/breakaway-#{version}.zip"
   homepage 'http://mutablecode.com/apps/breakaway.html'
+  license :oss
 
   app 'Breakaway.app'
 end
