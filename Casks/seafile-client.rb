@@ -4,6 +4,7 @@ class SeafileClient < Cask
 
   url "https://bitbucket.org/haiwen/seafile/downloads/seafile-client-#{version}.dmg"
   homepage 'http://seafile.com/'
+  license :oss
 
   app 'Seafile Client.app'
 end
