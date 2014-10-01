@@ -5,6 +5,7 @@ class Coccinellida < Cask
   url "https://downloads.sourceforge.net/project/coccinellida/Coccinellida-#{version}.zip"
   appcast 'http://coccinellida.sourceforge.net/sparkle.xml'
   homepage 'http://coccinellida.sourceforge.net/'
+  license :oss
 
   app 'Coccinellida.app'
 end
