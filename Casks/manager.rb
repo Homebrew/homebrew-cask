@@ -4,6 +4,7 @@ class Manager < Cask
 
   url "http://cdn.manager.io/downloads/v#{version}/Manager.dmg"
   homepage 'http://manager.io'
+  license :unknown
 
   app 'Manager.app'
 end
