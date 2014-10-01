@@ -4,6 +4,7 @@ class Provisioning < Cask
 
   url "https://github.com/chockenberry/Provisioning/releases/download/#{version}/Provisioning-#{version}.zip"
   homepage 'https://github.com/chockenberry/Provisioning'
+  license :oss
 
   qlplugin "Provisioning-#{version}/Provisioning.qlgenerator"
 end
