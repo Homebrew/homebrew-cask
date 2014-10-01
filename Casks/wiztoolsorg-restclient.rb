@@ -4,6 +4,7 @@ class WiztoolsorgRestclient < Cask
 
   url "https://rest-client.googlecode.com/files/restclient-ui-#{version}.dmg"
   homepage 'https://code.google.com/p/rest-client'
+  license :oss
 
   app 'WizTools.org RESTClient.app'
 end
