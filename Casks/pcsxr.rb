@@ -4,6 +4,7 @@ class Pcsxr < Cask
 
   url 'http://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=pcsxr&DownloadId=722115&Build=20919'
   homepage 'https://pcsxr.codeplex.com'
+  license :unknown
 
   app 'PCSXR.app'
 end
