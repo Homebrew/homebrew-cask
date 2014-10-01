@@ -4,6 +4,7 @@ class Burn < Cask
 
   url "https://downloads.sourceforge.net/project/burn-osx/Burn/#{version}/burn251.zip"
   homepage 'http://burn-osx.sourceforge.net/'
+  license :oss
 
   app 'Burn.localized/Burn.app'
 end
