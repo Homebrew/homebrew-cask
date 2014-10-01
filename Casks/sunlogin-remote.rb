@@ -4,6 +4,7 @@ class SunloginRemote < Cask
 
   url "http://download.oray.com/sunlogin/SunloginRemote_v#{version}.dmg"
   homepage 'http://sunlogin.oray.com'
+  license :unknown
 
   app 'Sunlogin Remote.app'
 end
