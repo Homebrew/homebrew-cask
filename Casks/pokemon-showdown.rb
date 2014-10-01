@@ -4,6 +4,7 @@ class PokemonShowdown < Cask
 
   url 'http://pokemonshowdown.com/files/pokemonshowdown-mac.zip'
   homepage 'http://pokemonshowdown.com'
+  license :unknown
 
   app 'Pokemon Showdown.app'
 end
