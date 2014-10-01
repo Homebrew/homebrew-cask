@@ -5,6 +5,7 @@ class Meerkat < Cask
   url "http://codesorcery.net/downloads/Meerkat_#{version}.dmg"
   appcast 'http://codesorcery.net/appcasts/Meerkat.xml'
   homepage 'http://codesorcery.net/meerkat'
+  license :unknown
 
   app 'Meerkat.app'
 end
