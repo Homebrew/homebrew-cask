@@ -5,6 +5,7 @@ class Keymo < Cask
   url 'http://manytricks.com/download/_do_not_hotlink_/keymo121.dmg'
   appcast 'http://manytricks.com/keymo/appcast.xml'
   homepage 'http://manytricks.com/keymo'
+  license :unknown
 
   app 'Keymo.app'
   zap :delete => '~/Library/Preferences/com.manytricks.Keymo.plist'
