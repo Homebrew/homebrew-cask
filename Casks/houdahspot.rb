@@ -5,6 +5,7 @@ class Houdahspot < Cask
   url 'http://www.houdah.com/houdahSpot/download_assets/HoudahSpot_latest.zip'
   appcast 'http://www.houdah.com/houdahSpot/updates/profileInfo3.php'
   homepage 'http://www.houdah.com/houdahSpot/'
+  license :unknown
 
   app 'HoudahSpot.app'
 
