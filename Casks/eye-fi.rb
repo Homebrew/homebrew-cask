@@ -4,6 +4,7 @@ class EyeFi < Cask
 
   url "http://download.eyefi.com/x2/#{version}/Eye-Fi.dmg"
   homepage 'http://support.eye.fi/downloads'
+  license :unknown
 
   pkg 'Eye-Fi.mpkg'
   uninstall :pkgutil => 'fi.eye.*'
