@@ -4,6 +4,7 @@ class GoAgent < Cask
 
   url "http://download.go.cd/gocd/go-agent-#{version}-osx.zip"
   homepage 'http://www.go.cd'
+  license :unknown
 
   app 'Go Agent.app'
 end
