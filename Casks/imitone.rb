@@ -4,6 +4,7 @@ class Imitone < Cask
 
   url "http://imitone.com/beta/imitone-#{version}.dmg"
   homepage 'http://imitone.com/'
+  license :unknown
 
   app 'imitone.app'
 end
