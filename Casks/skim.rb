@@ -5,6 +5,7 @@ class Skim < Cask
   url "https://downloads.sourceforge.net/project/skim-app/Skim/Skim-#{version}/Skim-#{version}.dmg"
   appcast 'http://skim-app.sourceforge.net/skim.xml'
   homepage 'http://skim-app.sourceforge.net/'
+  license :oss
 
   app 'Skim.app'
   zap :delete => '~/Library/Preferences/net.sourceforge.skim-app.skim.plist'
