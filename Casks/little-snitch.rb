@@ -4,6 +4,7 @@ class LittleSnitch < Cask
 
   url "http://www.obdev.at/downloads/LittleSnitch/LittleSnitch-#{version}.dmg"
   homepage 'http://www.obdev.at/products/littlesnitch/index.html'
+  license :unknown
 
   caveats do
     manual_installer 'Little Snitch Installer.app'
