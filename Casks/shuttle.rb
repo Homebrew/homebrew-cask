@@ -4,6 +4,7 @@ class Shuttle < Cask
 
   url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.dmg"
   homepage 'http://fitztrev.github.io/shuttle/'
+  license :oss
 
   app 'Shuttle.app'
 end
