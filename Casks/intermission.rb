@@ -4,6 +4,7 @@ class Intermission < Cask
 
   url 'http://dm.rogueamoeba.com/mirror/files/Intermission.zip'
   homepage 'http://rogueamoeba.com/intermission/'
+  license :unknown
 
   app 'Intermission.app'
 end
