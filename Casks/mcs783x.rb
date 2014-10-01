@@ -1,5 +1,6 @@
 class Mcs783x < Cask
   homepage 'http://www.asix.com.tw/products.php?op=ProductList&PLine=74&PSeries=109'
+  license :unknown
 
   version '1.1.0'
   basename = "MCS783x_Mac_OSX_10.5_to_10.7_driver_v#{version}_Binary"

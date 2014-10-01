@@ -4,6 +4,7 @@ class Ricochet < Cask
 
   url "https://ricochet.im/releases/#{version}/Ricochet-#{version}.dmg"
   homepage 'https://ricochet.im/'
+  license :unknown
 
   app 'Ricochet.app'
 end

@@ -5,6 +5,7 @@ class Virtualhostx < Cask
   url 'https://clickontyler.com/virtualhostx/download/v5/'
   appcast 'http://shine.clickontyler.com/appcast.php?id=23'
   homepage 'http://clickontyler.com/virtualhostx/'
+  license :unknown
 
   app 'VirtualHostX.app'
 end

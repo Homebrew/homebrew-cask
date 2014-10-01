@@ -5,6 +5,7 @@ class Macgdbp < Cask
   url "https://www.bluestatic.org/downloads/macgdbp/macgdbp-#{version}.zip"
   appcast 'https://www.bluestatic.org/versioncast.php/macgdbp'
   homepage 'https://www.bluestatic.org/software/macgdbp/'
+  license :unknown
 
   app 'MacGDBp.app'
 end

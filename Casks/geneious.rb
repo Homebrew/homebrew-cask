@@ -4,6 +4,7 @@ class Geneious < Cask
 
   url 'http://assets.geneious.com/installers/geneious/release/Geneious_mac64_7_1_7.dmg'
   homepage 'http://www.geneious.com/'
+  license :unknown
 
   app 'Geneious.app'
 end

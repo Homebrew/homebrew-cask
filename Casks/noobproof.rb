@@ -4,6 +4,7 @@ class Noobproof < Cask
 
   url "http://www.hanynet.com/noobproof-#{version}.zip"
   homepage 'http://www.hanynet.com/noobproof/index.html'
+  license :unknown
 
   app 'NoobProof.app'
 end

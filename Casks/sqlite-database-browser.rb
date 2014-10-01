@@ -4,6 +4,7 @@ class SqliteDatabaseBrowser < Cask
 
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version}/sqlitebrowser-#{version}v2.dmg"
   homepage 'http://sqlitebrowser.org'
+  license :oss
 
   app "sqlitebrowser.app"
 end

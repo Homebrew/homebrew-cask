@@ -4,6 +4,7 @@ class Camerabag < Cask
 
   url 'http://downloads.nevercenter.com.s3.amazonaws.com/CameraBag_Mac_2_5_06.dmg'
   homepage 'http://nevercenter.com/camerabag/desktop/'
+  license :unknown
 
   app 'CameraBag 2.app'
 end

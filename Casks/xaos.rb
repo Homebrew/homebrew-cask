@@ -4,6 +4,7 @@ class Xaos < Cask
 
   url "https://downloads.sourceforge.net/xaos/xaos-#{version}-macosx.dmg"
   homepage 'http://matek.hu/xaos'
+  license :oss
 
   app 'XaoS.app'
 end

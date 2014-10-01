@@ -4,6 +4,7 @@ class Mediaelch < Cask
 
   url "http://www.kvibes.de/releases/mediaelch/#{version}/MediaElch-#{version}.dmg"
   homepage 'http://www.mediaelch.de/'
+  license :unknown
 
   app 'MediaElch.app'
 end

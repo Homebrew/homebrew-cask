@@ -5,6 +5,7 @@ class Cheatsheet < Cask
   url 'http://www.cheatsheetapp.com/CheatSheet/download.php'
   appcast 'http://mediaatelier.com/CheatSheet/feed.php'
   homepage 'http://www.cheatsheetapp.com/CheatSheet/'
+  license :unknown
 
   app 'CheatSheet.app'
 

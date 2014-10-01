@@ -4,6 +4,7 @@ class Brushviewql < Cask
 
   url 'http://brushviewer.sourceforge.net/brushviewql.zip'
   homepage 'http://brushviewer.sourceforge.net/'
+  license :oss
 
   qlplugin 'BrushViewQL/BrushViewQL.qlgenerator'
 end

@@ -4,6 +4,7 @@ class UniversalMediaServer < Cask
 
   url "http://downloads.sourceforge.net/sourceforge/unimediaserver/Official%20Releases/OS%20X/UMS-#{version}-Java8.dmg"
   homepage 'www.universalmediaserver.com'
+  license :oss
 
   app 'Universal Media Server.app'
 end

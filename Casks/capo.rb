@@ -4,6 +4,7 @@ class Capo < Cask
 
   url "https://s3.amazonaws.com/capo/Capo-#{version}.zip"
   homepage 'http://supermegaultragroovy.com/products/Capo/'
+  license :unknown
 
   app 'Capo.app'
 end

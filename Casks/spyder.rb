@@ -4,6 +4,7 @@ class Spyder < Cask
 
   url "https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-#{version}.dmg"
   homepage 'https://code.google.com/p/spyderlib/'
+  license :oss
 
   app 'Spyder.app'
 end

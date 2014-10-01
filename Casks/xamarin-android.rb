@@ -6,6 +6,7 @@ class XamarinAndroid < Cask
   # non-Sparkle appcast
   appcast 'http://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml'
   homepage 'http://xamarin.com/android'
+  license :unknown
 
   pkg "mono-android-#{version}.pkg"
   uninstall :pkgutil => 'com.xamarin.android.pkg'

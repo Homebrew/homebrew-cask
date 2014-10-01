@@ -5,6 +5,7 @@ class Lightpaper < Cask
   url 'http://f.cl.ly/items/3q1Q3C472c3G2L2l2X0m/LightPaper_v0.0.9.dmg'
   appcast 'http://links.clockworkengine.com/lp-mac-update-feed'
   homepage 'http://clockworkengine.com/lightpaper-mac/'
+  license :unknown
 
   app 'LightPaper.app'
 end

@@ -5,6 +5,7 @@ class Hear < Cask
   url "https://s3.amazonaws.com/prosoft-engineering/hear/Hear_#{version}.dmg"
   appcast 'http://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear'
   homepage 'http://www.prosofteng.com/products/hear.php'
+  license :unknown
 
   app 'Hear.app'
   caveats <<-EOS.undent

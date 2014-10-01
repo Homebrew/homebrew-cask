@@ -5,6 +5,7 @@ class Crashlytics < Cask
   url 'https://crashlytics.com/download/mac'
   appcast 'https://ssl-download-crashlytics-com.s3.amazonaws.com/mac/version.xml'
   homepage 'http://crashlytics.com'
+  license :unknown
 
   app 'Crashlytics.app'
 end

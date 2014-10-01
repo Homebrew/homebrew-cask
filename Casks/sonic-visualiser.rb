@@ -4,6 +4,7 @@ class SonicVisualiser < Cask
 
   url "https://code.soundsoftware.ac.uk/attachments/download/907/Sonic%20Visualiser-#{version}.dmg"
   homepage 'http://www.sonicvisualiser.org/'
+  license :unknown
 
   app 'Sonic Visualiser.app'
 end

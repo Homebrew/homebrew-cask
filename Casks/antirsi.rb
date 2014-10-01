@@ -4,6 +4,7 @@ class Antirsi < Cask
 
   url "http://sabi.net/nriley/software/AntiRSI-#{version}.zip"
   homepage 'http://sabi.net/nriley/software/#antirsi'
+  license :unknown
 
   app 'AntiRSI.app'
 end

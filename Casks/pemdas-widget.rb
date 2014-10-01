@@ -4,6 +4,7 @@ class PemdasWidget < Cask
 
   url "http://www.donkeyengineering.com/downloads/pemdaswidget/releases/PEMDAS_#{version}.wdgt.zip"
   homepage 'http://www.donkeyengineering.com/pemdaswidget/'
+  license :oss
 
   widget 'PEMDAS.wdgt'
   caveats do

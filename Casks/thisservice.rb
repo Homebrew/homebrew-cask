@@ -5,6 +5,7 @@ class Thisservice < Cask
   url "http://wafflesoftware.net/thisservice/download/ThisService#{version}.zip"
   appcast 'http://wafflesoftware.net/thisservice/sparkle/sparkle.xml'
   homepage 'http://wafflesoftware.net/thisservice/'
+  license :unknown
 
   app 'ThisService.app'
 end

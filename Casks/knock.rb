@@ -4,6 +4,7 @@ class Knock < Cask
 
   url 'http://knocktounlock.com/download'
   homepage 'http://knocktounlock.com'
+  license :unknown
 
   app 'Knock.app'
 end

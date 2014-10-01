@@ -4,6 +4,7 @@ class Launchbar < Cask
 
   url "http://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
   homepage 'http://www.obdev.at/products/launchbar/'
+  license :unknown
 
   app 'LaunchBar.app'
   zap :delete => [

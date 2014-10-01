@@ -4,6 +4,7 @@ class Ampps < Cask
 
   url "http://files.ampps.com/AMPPS-#{version}.dmg"
   homepage 'http://www.ampps.com'
+  license :unknown
 
   suite 'AMPPS'
 end

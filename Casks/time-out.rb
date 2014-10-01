@@ -4,6 +4,7 @@ class TimeOut < Cask
 
   url "http://www.dejal.com/download/timeout-#{version}.zip"
   homepage 'http://www.dejal.com/timeout/'
+  license :unknown
 
   app 'Time Out.app'
 end

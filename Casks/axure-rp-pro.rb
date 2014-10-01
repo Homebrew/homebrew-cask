@@ -4,6 +4,7 @@ class AxureRpPro < Cask
 
   url 'https://axure.cachefly.net/AxureRP-Pro-Setup.dmg'
   homepage 'http://www.axure.com/'
+  license :unknown
 
   app 'Axure RP Pro 7.0.app'
 end

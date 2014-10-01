@@ -4,6 +4,7 @@ class Parallels < Cask
 
   url "http://download.parallels.com/desktop/v9/update2.hotfix2/ParallelsDesktop-#{version}.dmg"
   homepage 'http://www.parallels.com/products/desktop/'
+  license :unknown
 
   pkg 'Install.mpkg'
   uninstall :pkgutil => 'com.parallels.pkg.virtualization.bundle',

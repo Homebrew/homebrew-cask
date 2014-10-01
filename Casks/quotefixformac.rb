@@ -4,6 +4,7 @@ class Quotefixformac < Cask
 
   url "https://github.com/robertklep/quotefixformac/releases/download/v#{version}/QuoteFix-v#{version}.zip"
   homepage 'https://github.com/robertklep/quotefixformac'
+  license :oss
 
   caveats do
     <<-EOS.undent

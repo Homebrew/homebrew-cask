@@ -5,6 +5,7 @@ class Reggy < Cask
   url "https://github.com/downloads/samsouder/reggy/Reggy_v#{version}.tbz"
   appcast 'http://reggyapp.com/appcast.xml'
   homepage 'http://reggyapp.com/'
+  license :oss
 
   app 'Reggy.app'
 end

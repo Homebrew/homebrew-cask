@@ -4,6 +4,7 @@ class Baretorrent < Cask
 
   url "https://launchpad.net/baretorrent/trunk/#{version}/+download/baretorrent-#{version}-osx-x64.dmg"
   homepage 'http://baretorrent.org'
+  license :unknown
 
   app 'baretorrent.app'
 end

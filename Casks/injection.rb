@@ -4,6 +4,7 @@ class Injection < Cask
 
   url "http://injectionforxcode.johnholdsworth.com/InjectionPluginV#{version}.pkg"
   homepage 'http://injectionforxcode.com/'
+  license :unknown
 
   pkg "InjectionPluginV#{version}.pkg"
   uninstall :pkgutil => 'com.injectionforxcode.injectionPluginForXcode.InjectionPlugin.pkg',

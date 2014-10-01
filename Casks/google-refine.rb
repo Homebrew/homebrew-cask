@@ -4,6 +4,7 @@ class GoogleRefine < Cask
 
   url "https://github.com/OpenRefine/OpenRefine/releases/download/2.5/google-refine-#{version}.dmg"
   homepage 'http://openrefine.org/'
+  license :oss
 
   app 'Google Refine.app'
 end

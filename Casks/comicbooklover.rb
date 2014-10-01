@@ -5,6 +5,7 @@ class Comicbooklover < Cask
   url 'https://www.bitcartel.com/downloads/comicbooklover.zip'
   appcast 'http://www.bitcartel.com/appcast/comicbooklover-1.7-dsa.xml'
   homepage 'http://www.bitcartel.com/comicbooklover/'
+  license :unknown
 
   app 'ComicBookLover.app'
 end

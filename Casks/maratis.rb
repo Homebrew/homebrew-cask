@@ -4,6 +4,7 @@ class Maratis < Cask
 
   url "https://maratis.googlecode.com/files/Maratis-#{version}-beta-osx10.6.zip"
   homepage 'http://www.maratis3d.org/'
+  license :oss
 
   app 'Maratis.app'
   app 'MaratisPlayer.app'

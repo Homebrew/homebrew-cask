@@ -4,6 +4,7 @@ class Jumpshare < Cask
 
   url "https://jumpshare.com/desktop/mac/Jumpshare_#{version}.dmg"
   homepage 'https://jumpshare.com/'
+  license :unknown
 
   app 'Jumpshare.app'
 end

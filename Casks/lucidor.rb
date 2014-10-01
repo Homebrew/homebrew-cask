@@ -4,6 +4,7 @@ class Lucidor < Cask
 
   url "http://lucidor.org/lucidor/lucidor-#{version}.dmg"
   homepage 'http://lucidor.org'
+  license :unknown
 
   app 'Lucidor.app'
 end

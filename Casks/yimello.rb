@@ -4,6 +4,7 @@ class Yimello < Cask
 
   url 'http://yimello.adriencadet.com/assets/zip/yimello-mac.zip'
   homepage 'http://yimello.adriencadet.com/'
+  license :unknown
 
   app 'Yimello.app'
 end

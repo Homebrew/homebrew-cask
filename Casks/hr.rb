@@ -4,6 +4,7 @@ class Hr < Cask
 
   url "http://www.hrmacapp.com/releases/hr_#{version.gsub('.', '')}.zip"
   homepage 'http://www.hrmacapp.com/'
+  license :unknown
 
   app 'hr.app'
 end

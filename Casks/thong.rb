@@ -4,6 +4,7 @@ class Thong < Cask
 
   url "https://fousa-apps.s3.amazonaws.com/thong/thong-#{version}.dmg"
   homepage 'http://thong.fousa.be/'
+  license :unknown
 
   qlplugin 'Thong.qlgenerator'
 end

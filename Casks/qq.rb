@@ -4,6 +4,7 @@ class Qq < Cask
 
   url "http://dldir1.qq.com/qqfile/QQforMac/QQ_V#{version}.dmg"
   homepage 'http://im.qq.com/macqq/index.shtml'
+  license :unknown
 
   app 'QQ.app'
 end

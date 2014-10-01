@@ -4,6 +4,7 @@ class Inform < Cask
 
   url 'http://inform7.com/download/content/6L02/I7-6L02-OSX.dmg'
   homepage 'http://inform7.com/'
+  license :unknown
 
   app 'Inform.app'
 end

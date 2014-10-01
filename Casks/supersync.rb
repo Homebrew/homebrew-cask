@@ -4,6 +4,7 @@ class Supersync < Cask
 
   url 'https://supersync.com/downloads/SuperSync.app.zip'
   homepage 'http://supersync.com/'
+  license :unknown
 
   app 'SuperSync.app'
 end

@@ -4,6 +4,7 @@ class Aseprite < Cask
 
   url "https://aseprite.googlecode.com/files/ASEPRITE_#{version}.dmg"
   homepage 'http://www.aseprite.org'
+  license :oss
 
   app 'aseprite.app'
 end

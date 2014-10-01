@@ -4,6 +4,7 @@ class Pingmenu < Cask
 
   url 'https://github.com/kalleboo/PingMenu/raw/master/PingMenu.app.zip'
   homepage 'https://github.com/kalleboo/PingMenu'
+  license :oss
 
   app 'PingMenu.app'
 end

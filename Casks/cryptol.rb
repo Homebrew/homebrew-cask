@@ -4,6 +4,7 @@ class Cryptol < Cask
 
   url "https://github.com/GaloisInc/cryptol/releases/download/v#{version}/cryptol-#{version}-MacOSX-64.tar.gz"
   homepage 'http://cryptol.net/'
+  license :oss
 
   binary "cryptol-#{version}-MacOSX-64/bin/cryptol"
   binary "cryptol-#{version}-MacOSX-64/lib/Cryptol.cry", :target => '/usr/local/lib/Cryptol.cry'

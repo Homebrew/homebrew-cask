@@ -4,6 +4,7 @@ class Dictunifier < Cask
 
   url "https://mac-dictionary-kit.googlecode.com/files/DictUnifier-#{version}.zip"
   homepage 'http://code.google.com/p/mac-dictionary-kit/'
+  license :oss
 
   app 'DictUnifier.app'
 end

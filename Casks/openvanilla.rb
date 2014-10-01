@@ -4,6 +4,7 @@ class Openvanilla < Cask
 
   url "http://dl.openvanilla.org/file/openvanilla/OpenVanilla-Installer-Mac-#{version}.zip"
   homepage 'http://openvanilla.org/'
+  license :unknown
 
   input_method 'OpenVanillaInstaller.app/Contents/Resources/OpenVanilla.app'
   caveats do

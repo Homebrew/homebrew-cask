@@ -5,6 +5,7 @@ class Scummvm < Cask
   url "https://downloads.sourceforge.net/project/scummvm/scummvm/#{version}/scummvm-#{version}-macosx.dmg"
   appcast 'http://www.scummvm.org/appcasts/macosx/release.xml'
   homepage 'http://scummvm.org/'
+  license :oss
 
   app 'ScummVM.app'
 end

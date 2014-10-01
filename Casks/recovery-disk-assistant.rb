@@ -4,6 +4,7 @@ class RecoveryDiskAssistant < Cask
 
   url 'https://support.apple.com/downloads/DL1433/en_US/RecoveryDiskAssistant.dmg'
   homepage 'http://support.apple.com/kb/HT4848'
+  license :unknown
 
   app 'Recovery Disk Assistant.app'
 end

@@ -4,6 +4,7 @@ class Macwinzipper < Cask
 
   url "http://tidajapan.com/files/MacWinZipper-#{version}.dmg?download"
   homepage 'http://tidajapan.com/macwinzipper'
+  license :unknown
 
   app 'MacWinZipper.app'
 end

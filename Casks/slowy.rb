@@ -4,6 +4,7 @@ class Slowy < Cask
 
   url "http://slowyapp.com/downloads/Slowyapp_v#{version}.dmg"
   homepage 'http://slowyapp.com/'
+  license :unknown
 
   app 'Slowy.app'
 end

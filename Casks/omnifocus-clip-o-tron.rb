@@ -4,6 +4,7 @@ class OmnifocusClipOTron < Cask
 
   url "http://www.omnigroup.com/ftp/pub/software/MacOSX/10.9/OmniFocus-Clip-o-Tron-Installer-#{version}.dmg"
   homepage 'http://support.omnigroup.com/omnifocus-clip-o-tron'
+  license :unknown
 
   app 'OmniFocus Clip-o-Tron.app'
 

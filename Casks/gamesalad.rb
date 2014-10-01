@@ -5,6 +5,7 @@ class Gamesalad < Cask
   url 'http://gs.releases.s3.amazonaws.com/creator/0.10.4.1/GameSalad-Creator-0.10.4.1-beta.dmg'
   appcast 'http://gamesalad.com/download/studioUpdates'
   homepage 'http://gamesalad.com'
+  license :unknown
 
   app 'GameSalad.app'
 end

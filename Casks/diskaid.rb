@@ -4,6 +4,7 @@ class Diskaid < Cask
 
   url 'http://www.digidna.net/downloads/DiskAid_6_7_2.dmg'
   homepage 'http://www.digidna.net/diskaid'
+  license :unknown
 
   app 'DiskAid.app'
 end

@@ -5,6 +5,7 @@ class Theremin < Cask
   url 'http://f.nn.lv/ms/l5/29/Theremin.app.zip'
   appcast 'http://theremin.amd.co.at/appcastProfileInfo.php'
   homepage 'https://github.com/TheStalwart/Theremin'
+  license :oss
 
   app 'Theremin.app'
 end

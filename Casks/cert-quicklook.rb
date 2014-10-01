@@ -4,6 +4,7 @@ class CertQuicklook < Cask
 
   url "https://cert-quicklook.googlecode.com/files/CertQuickLook-v#{version}.qlgenerator.zip"
   homepage 'https://code.google.com/p/cert-quicklook/'
+  license :oss
 
   qlplugin 'CertQuickLook.qlgenerator'
 end

@@ -4,6 +4,7 @@ class Robomongo < Cask
 
   url "http://robomongo.org/files/mac/Robomongo-#{version}-x86_64.dmg"
   homepage 'http://robomongo.org'
+  license :unknown
 
   app 'Robomongo.app'
 end

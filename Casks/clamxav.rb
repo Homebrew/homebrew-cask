@@ -5,6 +5,7 @@ class Clamxav < Cask
   url "http://www.clamxav.com/downloads/ClamXav_#{version}.dmg"
   appcast 'http://www.clamxav.com/sparkle/profileInfo.php'
   homepage 'http://www.clamxav.com/'
+  license :unknown
 
   app 'ClamXav.app'
   postflight do

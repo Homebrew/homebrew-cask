@@ -4,6 +4,7 @@ class Sigil < Cask
 
   url "https://sigil.googlecode.com/files/Sigil-#{version}-Mac-Package.dmg"
   homepage 'http://code.google.com/p/sigil/'
+  license :oss
 
   app 'Sigil.app'
 end

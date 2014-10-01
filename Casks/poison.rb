@@ -4,6 +4,7 @@ class Poison < Cask
 
   url 'http://jenkins.tox.im/job/Poison_OS_X/lastSuccessfulBuild/artifact/arc/poison-with-extras.zip'
   homepage 'http://tox.im'
+  license :unknown
 
   app 'poison-with-extras/Poison.app'
   app 'poison-with-extras/Silica.app'

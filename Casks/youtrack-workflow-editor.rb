@@ -4,6 +4,7 @@ class YoutrackWorkflowEditor < Cask
 
   url 'http://download-cf.jetbrains.com/charisma/youtrack-workflow-editor-8452-macos.zip'
   homepage 'http://www.jetbrains.com/youtrack/download/get_youtrack.html'
+  license :unknown
 
   app 'youtrack-workflow.app', :target => 'Youtrack Workflow Editor.app'
 end

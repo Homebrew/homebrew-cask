@@ -4,6 +4,7 @@ class Tuneup < Cask
 
   url 'http://www.tuneupmedia.com/redirect/mac-download'
   homepage 'http://www.tuneupmedia.com/'
+  license :unknown
 
   app 'TuneUp.app'
 end

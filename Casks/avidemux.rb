@@ -4,6 +4,7 @@ class Avidemux < Cask
 
   url "https://downloads.sourceforge.net/avidemux/Avidemux_#{version}_ml_64bits.dmg"
   homepage 'http://www.avidemux.org/'
+  license :oss
 
   app 'Avidemux2.6.app'
 end

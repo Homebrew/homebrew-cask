@@ -5,6 +5,7 @@ class Tilemill < Cask
   url "https://tilemill.s3.amazonaws.com/latest/TileMill-#{version}.zip"
   appcast 'http://mapbox.com/tilemill/platforms/osx/appcast2.xml'
   homepage 'http://www.mapbox.com/tilemill/'
+  license :unknown
 
   app 'TileMill.app'
 end

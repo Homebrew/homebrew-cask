@@ -1,5 +1,6 @@
 class Libreoffice < Cask
   homepage 'https://www.libreoffice.org/'
+  license :unknown
   version '4.3.1'
 
   if Hardware::CPU.is_32_bit? or MacOS.version < :mountain_lion

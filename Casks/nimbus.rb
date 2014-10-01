@@ -5,6 +5,7 @@ class Nimbus < Cask
   url "https://github.com/jnordberg/irccloudapp/releases/download/#{version}/Nimbus-#{version}.zip"
   appcast 'https://github.com/jnordberg/irccloudapp/raw/master/appcast.xml'
   homepage 'https://github.com/jnordberg/irccloudapp'
+  license :oss
 
   app 'Nimbus.app'
 end

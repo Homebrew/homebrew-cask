@@ -4,6 +4,7 @@ class Cloud < Cask
 
   url "https://s3.amazonaws.com/downloads.getcloudapp.com/mac/CloudApp-#{version}.zip"
   homepage 'http://getcloudapp.com/'
+  license :unknown
 
   app 'Cloud.app'
   zap :delete => '~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist'

@@ -4,6 +4,7 @@ class Pliny < Cask
 
   url "http://pliny.cch.kcl.ac.uk/pliny-app-#{version}.tar.gz"
   homepage 'http://pliny.cch.kcl.ac.uk'
+  license :unknown
 
   app 'Pliny/pliny.app'
 end

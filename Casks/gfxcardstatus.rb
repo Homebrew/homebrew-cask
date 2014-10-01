@@ -5,6 +5,7 @@ class Gfxcardstatus < Cask
   url "http://codykrieger.com/downloads/gfxCardStatus-#{version}.zip"
   appcast 'http://gfx.io/appcast.xml'
   homepage 'http://gfx.io/'
+  license :unknown
 
   app 'gfxCardStatus.app'
 end

@@ -4,6 +4,7 @@ class GimpLisanet < Cask
 
   url "https://downloads.sourceforge.net/gimponosx/Gimp-#{version}-Mavericks.dmg"
   homepage 'http://gimp.lisanet.de'
+  license :oss
 
   app 'GIMP.app'
 end

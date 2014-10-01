@@ -4,6 +4,7 @@ class Deathtodsstore < Cask
 
   url 'http://www.aorensoftware.com/Downloads/Files/DeathToDSStore.zip'
   homepage 'http://www.aorensoftware.com/blog/2011/12/24/death-to-ds_store/'
+  license :unknown
 
   app 'DeathToDSStore.app'
 end

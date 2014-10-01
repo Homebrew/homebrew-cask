@@ -4,6 +4,7 @@ class Wjoy < Cask
 
   url "https://wjoy.googlecode.com/files/wjoy%20#{version}.dmg"
   homepage 'https://code.google.com/p/wjoy/'
+  license :oss
 
   app 'Wjoy.app'
 end

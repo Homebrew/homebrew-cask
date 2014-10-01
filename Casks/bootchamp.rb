@@ -5,6 +5,7 @@ class Bootchamp < Cask
   url 'http://www.kainjow.com/downloads/BootChamp.zip'
   appcast 'http://kainjow.com/updates/bootchamp.xml'
   homepage 'http://www.kainjow.com/'
+  license :unknown
 
   app 'BootChamp.app'
 end

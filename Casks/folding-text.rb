@@ -4,6 +4,7 @@ class FoldingText < Cask
 
   url 'https://s3.amazonaws.com/foldingtext/FoldingText.dmg'
   homepage 'http://www.foldingtext.com'
+  license :unknown
 
   app 'FoldingText.app'
 end

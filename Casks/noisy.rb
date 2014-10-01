@@ -4,6 +4,7 @@ class Noisy < Cask
 
   url 'https://github.com/downloads/jonshea/Noisy/Noisy.zip'
   homepage 'https://github.com/jonshea/Noisy'
+  license :oss
 
   app 'Noisy.app'
 end

@@ -5,6 +5,7 @@ class Gawker < Cask
   url 'https://sourceforge.net/projects/gawker/files/latest/download'
   appcast 'http://gawker.sourceforge.net/appcast.xml'
   homepage 'http://gawker.sourceforge.net/Gawker.html'
+  license :oss
 
   app 'Gawker.app'
 end

@@ -4,6 +4,7 @@ class Teeworlds < Cask
 
   url "https://teeworlds.com/files/teeworlds-#{version}-osx.dmg"
   homepage 'https://www.teeworlds.com/'
+  license :unknown
 
   app 'Teeworlds.app'
   app 'Teeworlds Server.app'

@@ -4,6 +4,7 @@ class Copy < Cask
 
   url 'https://copy.com/install/mac/Copy.dmg'
   homepage 'https://www.copy.com/'
+  license :unknown
 
   app 'Copy.app'
 end

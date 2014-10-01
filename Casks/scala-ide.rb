@@ -4,6 +4,7 @@ class ScalaIde < Cask
 
   url "http://downloads.typesafe.com/scalaide-pack/#{version}.vfinal-210-20140327/scala-SDK-#{version}-2.10-macosx.cocoa.x86_64.zip"
   homepage 'http://scala-ide.org/'
+  license :unknown
 
   app 'eclipse/Eclipse.app', :target => 'Scala IDE.app'
 end

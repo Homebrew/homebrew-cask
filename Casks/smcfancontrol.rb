@@ -4,6 +4,7 @@ class Smcfancontrol < Cask
 
   url 'http://www.eidac.de/smcfancontrol/smcfancontrol_2_4.zip'
   homepage 'http://www.eidac.de/?p=243'
+  license :unknown
 
   app 'smcFanControl.app'
 end

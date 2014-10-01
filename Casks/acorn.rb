@@ -4,6 +4,7 @@ class Acorn < Cask
 
   url 'http://flyingmeat.com/download/Acorn.zip'
   homepage 'http://flyingmeat.com/acorn/'
+  license :unknown
 
   app 'Acorn.app'
 end

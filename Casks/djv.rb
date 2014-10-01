@@ -4,6 +4,7 @@ class Djv < Cask
 
   url "http://downloads.sourceforge.net/project/djv/djv-stable/#{version}/djv-#{version}_osx-x64.dmg"
   homepage 'http://djv.sourceforge.net'
+  license :oss
 
   app "djv-#{version}.app"
 end

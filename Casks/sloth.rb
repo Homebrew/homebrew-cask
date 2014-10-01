@@ -4,6 +4,7 @@ class Sloth < Cask
 
   url 'http://sveinbjorn.org/files/software/sloth.zip'
   homepage 'http://sveinbjorn.org/sloth'
+  license :unknown
 
   app "Sloth-#{version}/Sloth.app"
 end

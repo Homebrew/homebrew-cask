@@ -4,6 +4,7 @@ class Rubymine < Cask
 
   url "http://download-cf.jetbrains.com/ruby/RubyMine-#{version}.dmg"
   homepage 'http://www.jetbrains.com/ruby/'
+  license :unknown
 
   app 'RubyMine.app'
 

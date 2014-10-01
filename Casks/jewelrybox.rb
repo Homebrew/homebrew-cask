@@ -5,6 +5,7 @@ class Jewelrybox < Cask
   url "https://github.com/remear/jewelrybox/releases/download/#{version}/JewelryBox_v#{version}.tar.bz2"
   appcast 'http://jewelrybox.unfiniti.com/releases/releases.xml'
   homepage 'http://jewelrybox.unfiniti.com/'
+  license :oss
 
   app 'JewelryBox.app'
 end

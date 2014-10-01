@@ -4,6 +4,7 @@ class Mixxx < Cask
 
   url "http://downloads.mixxx.org/mixxx-#{version}/mixxx-#{version}-macintel.dmg"
   homepage 'http://www.mixxx.org'
+  license :unknown
 
   app 'Mixxx.app'
 end

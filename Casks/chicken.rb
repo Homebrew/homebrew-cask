@@ -5,6 +5,7 @@ class Chicken < Cask
   url "https://downloads.sourceforge.net/project/chicken/Chicken-#{version}.dmg"
   appcast 'http://chicken.sourceforge.net/chicken.xml'
   homepage 'http://sourceforge.net/projects/chicken/'
+  license :oss
 
   app 'Chicken.app'
   zap :delete => '~/Library/Preferences/net.sourceforge.chicken.plist'

@@ -4,6 +4,7 @@ class AmazonMusic < Cask
 
   url 'https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/20140722/2032026e85/AmazonMusicInstaller.dmg'
   homepage 'https://www.amazon.com/gp/feature.html/ref=dm_mo_cpw_fb_lm?docId=1001067901'
+  license :unknown
 
   caskroom_only true
 

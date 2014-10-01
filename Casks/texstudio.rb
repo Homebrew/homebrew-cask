@@ -4,6 +4,7 @@ class Texstudio < Cask
 
   url "http://downloads.sourceforge.net/sourceforge/texstudio/texstudio_#{version}_osx_qt5.zip"
   homepage 'http://texstudio.sourceforge.net/'
+  license :oss
 
   app 'texstudio.app'
 end

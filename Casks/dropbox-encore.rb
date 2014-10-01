@@ -4,6 +4,7 @@ class DropboxEncore < Cask
 
   url "http://www.joyofmacs.com/downloads/DropboxEncore#{version}.dmg"
   homepage 'http://www.joyofmacs.com/software/dropboxencore/'
+  license :unknown
 
   app 'Dropbox Encore.app'
 end

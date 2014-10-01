@@ -4,6 +4,7 @@ class SqliteProfessional < Cask
 
   url "https://www.sqlitepro.com/versions/SQLitePro#{version}.zip"
   homepage 'https://www.sqlitepro.com'
+  license :unknown
 
   app 'SQLite Professional.app'
 end

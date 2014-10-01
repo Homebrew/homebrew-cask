@@ -4,6 +4,7 @@ class Easysimbl < Cask
 
   url "https://github.com/norio-nomura/EasySIMBL/releases/download/EasySIMBL-#{version}/EasySIMBL-#{version}.zip"
   homepage 'https://github.com/norio-nomura/EasySIMBL/'
+  license :oss
 
   app 'EasySIMBL.app'
 end

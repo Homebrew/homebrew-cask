@@ -4,6 +4,7 @@ class TheArchiveBrowser < Cask
 
   url "http://wakaba.c3.cx/releases/mac/TheArchiveBrowser#{version}.zip"
   homepage 'http://archivebrowser.c3.cx'
+  license :commercial
 
   app 'The Archive Browser.app'
   caveats <<-EOS.undent

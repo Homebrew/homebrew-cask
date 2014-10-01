@@ -4,6 +4,7 @@ class Pashua < Cask
 
   url 'https://www.bluem.net/files/Pashua.dmg'
   homepage 'http://www.bluem.net/en/mac/pashua/'
+  license :unknown
 
   app 'Pashua.app'
 end

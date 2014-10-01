@@ -4,6 +4,7 @@ class LogmeinHamachi < Cask
 
   url 'https://secure.logmein.com/LogMeInHamachi.zip'
   homepage 'http://vpn.net'
+  license :unknown
 
   caveats do
     manual_installer 'LogMeInHamachiInstaller.app'

@@ -4,6 +4,7 @@ class Opensong < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/opensong/OpenSongOSX-V#{version}.dmg"
   homepage 'http://www.opensong.org/'
+  license :oss
 
   app "OpenSong V#{version}/OpenSongOSX-Cocoa.app"
   app "Opensong V#{version}/OpenSongOSX.app"

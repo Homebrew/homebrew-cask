@@ -4,6 +4,7 @@ class Ubersicht < Cask
 
   url "http://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
   homepage 'http://tracesof.net/uebersicht'
+  license :unknown
 
   app 'Übersicht.app'
 end

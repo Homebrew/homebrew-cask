@@ -5,6 +5,7 @@ class Coteditor < Cask
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   appcast 'http://coteditor.github.io/appcast.xml'
   homepage 'http://coteditor.github.io/'
+  license :oss
 
   app 'CotEditor.app'
 end

@@ -5,6 +5,7 @@ class FivedetailsFlow < Cask
   url 'http://fivedetails.com/flow/download'
   appcast 'http://extendmac.com/flow/updates/update.php'
   homepage 'http://fivedetails.com'
+  license :unknown
 
   app 'Flow.app'
 end

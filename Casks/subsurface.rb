@@ -4,6 +4,7 @@ class Subsurface < Cask
 
   url "https://subsurface.hohndel.org/downloads/Subsurface-#{version}.dmg"
   homepage 'http://subsurface.hohndel.org/'
+  license :unknown
 
   app 'Subsurface.app'
 end

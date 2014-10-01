@@ -4,6 +4,7 @@ class Paw < Cask
 
   url 'https://luckymarmot.com/paw/download'
   homepage 'http://luckymarmot.com/paw'
+  license :unknown
 
   app 'Paw.app'
 end

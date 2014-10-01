@@ -4,6 +4,7 @@ class Bean < Cask
 
   url 'http://www.bean-osx.com/releases/Bean-Install.zip'
   homepage 'http://www.bean-osx.com'
+  license :unknown
 
   app 'Bean-Install/Bean.app'
 end

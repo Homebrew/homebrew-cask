@@ -4,6 +4,7 @@ class CouchbaseServerCommunity < Cask
 
   url "http://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}_x86_64.zip"
   homepage 'http://www.couchbase.com/'
+  license :unknown
 
   app 'Couchbase Server.app'
 end

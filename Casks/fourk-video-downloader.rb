@@ -4,6 +4,7 @@ class FourkVideoDownloader < Cask
 
   url "http://downloads.4kdownload.com/app/4kvideodownloader_#{version}.dmg"
   homepage 'http://www.4kdownload.com/products/product-videodownloader'
+  license :unknown
 
   app '4K Video Downloader.app'
 end

@@ -4,6 +4,7 @@ class Scout < Cask
 
   url "https://github.com/downloads/mhs/scout-app/ScoutAppInstaller-#{version}.dmg"
   homepage 'http://mhs.github.io/scout-app/'
+  license :oss
 
   caveats do
     manual_installer 'Install Scout.app'

@@ -5,6 +5,7 @@ class Moneywell < Cask
   url 'http://downloads.nothirst.com/MoneyWell_23.zip'
   appcast 'http://nothirst.com/feeds/MoneyWell2Appcast.xml'
   homepage 'http://nothirst.com/moneywell/'
+  license :unknown
 
   app 'MoneyWell.app'
 end

@@ -5,6 +5,7 @@ class Texshop < Cask
   url 'http://pages.uoregon.edu/koch/texshop/texshop-64/texshop342.zip'
   appcast 'http://pages.uoregon.edu/koch/texshop/texshop-64/texshopappcast.xml'
   homepage 'http://pages.uoregon.edu/koch/texshop'
+  license :unknown
 
   app 'TexShop.app'
 end

@@ -4,6 +4,7 @@ class Chainsaw < Cask
 
   url "http://people.apache.org/~sdeboy/apache-chainsaw-#{version}-SNAPSHOT.dmg"
   homepage 'http://logging.apache.org/chainsaw/'
+  license :unknown
 
   app 'Chainsaw.app'
 end

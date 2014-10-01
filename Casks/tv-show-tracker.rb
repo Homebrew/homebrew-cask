@@ -4,6 +4,7 @@ class TvShowTracker < Cask
 
   url "http://www.pixelperfectwidgets.com/tvshowtracker/download/tvshowtracker_#{version}.zip"
   homepage 'http://www.pixelperfectwidgets.com/'
+  license :oss
 
   widget 'TV Show Tracker.wdgt'
   caveats do

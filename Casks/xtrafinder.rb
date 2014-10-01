@@ -4,6 +4,7 @@ class Xtrafinder < Cask
 
   url 'http://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg'
   homepage 'http://www.trankynam.com/xtrafinder/'
+  license :unknown
 
   pkg 'XtraFinder.pkg'
   uninstall :pkgutil => 'com.trankynam.xtrafinder.*'

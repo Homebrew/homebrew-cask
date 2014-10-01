@@ -5,6 +5,7 @@ class Handbrake < Cask
   url "https://downloads.sourceforge.net/sourceforge/handbrake/HandBrake-#{version}-MacOSX.6_GUI_x86_64.dmg"
   appcast 'http://handbrake.fr/appcast.x86_64.xml'
   homepage 'http://handbrake.fr/'
+  license :oss
 
   app 'HandBrake.app'
 end

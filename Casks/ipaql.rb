@@ -4,6 +4,7 @@ class Ipaql < Cask
 
   url 'http://ipaql.com/site/assets/files/1006/ipaql_1-3-0.zip'
   homepage 'http://ipaql.com/'
+  license :unknown
 
   qlplugin 'ipaql.qlgenerator'
 end

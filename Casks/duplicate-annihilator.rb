@@ -4,6 +4,7 @@ class DuplicateAnnihilator < Cask
 
   url 'http://brattoo.com/propaganda/downloadDa.php'
   homepage 'http://brattoo.com/propaganda/'
+  license :unknown
 
   nested_container 'Duplicate Annihilator.dmg'
   app 'Duplicate Annihilator.app'

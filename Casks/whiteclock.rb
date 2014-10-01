@@ -4,6 +4,7 @@ class Whiteclock < Cask
 
   url 'http://www.taimila.com/downloads/WhiteClock2.zip'
   homepage 'http://www.taimila.com/?p=1221'
+  license :unknown
 
   app 'WhiteClock.app'
 end

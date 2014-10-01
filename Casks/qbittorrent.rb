@@ -4,6 +4,7 @@ class Qbittorrent < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/qbittorrent/qbittorrent-#{version}.dmg"
   homepage 'http://www.qbittorrent.org'
+  license :oss
 
   app 'qBittorrent.app'
 end

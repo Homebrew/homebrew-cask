@@ -4,6 +4,7 @@ class Macdrops < Cask
 
   url "http://interfacelift.com/apps/macdrops/v1/Macdrops_v#{version}.dmg"
   homepage 'http://interfacelift.com/apps/macdrops/v1'
+  license :unknown
 
   app "Macdrops v#{version}.app"
 end

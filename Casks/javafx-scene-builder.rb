@@ -7,6 +7,7 @@ class JavafxSceneBuilder < Cask
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/javafxscenebuilder-info-2157684.html'
+  license :unknown
 
   app 'JavaFX Scene Builder 2.0.app'
 

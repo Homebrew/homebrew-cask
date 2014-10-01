@@ -4,6 +4,7 @@ class Subl < Cask
 
   url "https://github.com/dhoulb/subl/releases/download/v#{version}/Subl.app.zip"
   homepage 'https://github.com/dhoulb/subl'
+  license :oss
 
   app 'Subl.app'
 end

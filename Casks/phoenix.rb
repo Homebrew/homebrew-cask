@@ -4,6 +4,7 @@ class Phoenix < Cask
 
   url 'https://raw.github.com/sdegutis/phoenix/master/Builds/Phoenix-LATEST.app.tar.gz'
   homepage 'https://github.com/sdegutis/Phoenix'
+  license :oss
 
   app 'Phoenix.app'
 end

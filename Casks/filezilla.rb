@@ -4,6 +4,7 @@ class Filezilla < Cask
 
   url "https://downloads.sourceforge.net/project/filezilla/FileZilla_Client/#{version}/FileZilla_#{version}_macosx-x86.app.tar.bz2"
   homepage 'https://filezilla-project.org/'
+  license :oss
 
   app 'FileZilla.app'
   # todo verify that this does not contain user-generate content

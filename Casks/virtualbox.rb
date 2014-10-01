@@ -4,6 +4,7 @@ class Virtualbox < Cask
 
   url "http://download.virtualbox.org/virtualbox/#{version.gsub(/-.*/, '')}/VirtualBox-#{version}-OSX.dmg"
   homepage 'http://www.virtualbox.org'
+  license :unknown
 
   pkg 'VirtualBox.pkg'
   uninstall :script => { :executable => 'VirtualBox_Uninstall.tool', :args => %w[--unattended] },

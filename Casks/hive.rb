@@ -5,6 +5,7 @@ class Hive < Cask
   url "https://github.com/hivewallet/hive-osx/releases/download/#{version}/Hive-#{version}.zip"
   appcast 'https://hivewallet.com/hive-osx-appcast.xml'
   homepage 'http://www.hivewallet.com'
+  license :oss
 
   app 'Hive.app'
 

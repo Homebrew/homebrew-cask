@@ -4,6 +4,7 @@ class Pharo < Cask
 
   url "http://files.pharo.org/platform/Pharo#{version}-mac.zip"
   homepage 'http://www.pharo-project.org/home'
+  license :unknown
 
   app "Pharo#{version}.app"
 end

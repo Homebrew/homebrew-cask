@@ -5,6 +5,7 @@ class Chromium < Cask
   url "https://downloads.sourceforge.net/sourceforge/osxportableapps/ChromiumOSX_#{version}.dmg"
   appcast 'http://osxportableapps.sourceforge.net/chromium/chrcast.xml'
   homepage 'http://www.freesmug.org/chromium'
+  license :oss
 
   app 'Chromium.app'
 end

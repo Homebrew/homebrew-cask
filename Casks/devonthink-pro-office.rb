@@ -5,6 +5,7 @@ class DevonthinkProOffice < Cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro_Office.dmg.zip"
   appcast 'http://www.devon-technologies.com/Sparkle/DEVONthinkProOffice2.xml'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
+  license :unknown
 
   nested_container 'DEVONthink_Pro_Office.dmg'
   app 'DEVONthink Pro.app', :target => 'DEVONthink Pro Office.app'

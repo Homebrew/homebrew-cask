@@ -5,6 +5,7 @@ class Anxiety < Cask
   url 'http://www.anxietyapp.com/Anxiety.zip'
   appcast 'http://www.anxietyapp.com/appcast/appcast.xml'
   homepage 'http://www.anxietyapp.com/'
+  license :unknown
 
   nested_container 'Anxiety.dmg'
   app 'Anxiety.app'

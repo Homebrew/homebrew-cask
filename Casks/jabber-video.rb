@@ -4,6 +4,7 @@ class JabberVideo < Cask
 
   url 'http://collaboration.iu.edu/service-request/software/JabberVideo-4.8.dmg'
   homepage 'https://www.ciscojabbervideo.com/'
+  license :unknown
 
   app 'Jabber Video.app'
 

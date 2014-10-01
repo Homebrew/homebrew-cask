@@ -4,6 +4,7 @@ class Horndis < Cask
 
   url "http://joshuawise.com/downloads/HoRNDIS-rel#{version}.pkg"
   homepage 'http://joshuawise.com/horndis'
+  license :unknown
 
   pkg "HoRNDIS-rel#{version}.pkg"
   uninstall :kext => 'com.joshuawise.kexts.HoRNDIS',

@@ -4,6 +4,7 @@ class Speedlimit < Cask
 
   url 'https://mschrag.github.io/speedlimit/SpeedLimit.prefPane.zip'
   homepage 'http://mschrag.github.io/'
+  license :oss
 
   prefpane 'SpeedLimit.prefPane'
 end

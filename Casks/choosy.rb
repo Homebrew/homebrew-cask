@@ -4,6 +4,7 @@ class Choosy < Cask
 
   url "http://downloads.choosyosx.com/choosy_#{version}.zip"
   homepage 'http://www.choosyosx.com/'
+  license :unknown
 
   prefpane 'Choosy.prefPane'
 end

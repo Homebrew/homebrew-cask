@@ -5,6 +5,7 @@ class Mkvtoolnix < Cask
   url "http://www.fosshub.com/download/Mkvtoolnix-#{version}.dmg",
       :referer => 'http://www.fosshub.com/MKVToolNix.html'
   homepage 'http://www.bunkus.org/videotools/mkvtoolnix/'
+  license :unknown
 
   app "Mkvtoolnix-#{version}.app"
 end

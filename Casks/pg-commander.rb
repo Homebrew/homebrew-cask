@@ -4,6 +4,7 @@ class PgCommander < Cask
 
   url "https://eggerapps.at/pgcommander/download/pgcommander-#{version}.zip"
   homepage 'http://eggerapps.at/pgcommander/'
+  license :unknown
 
   app 'PG Commander.app'
 end

@@ -4,6 +4,7 @@ class DungeonCrawlStoneSoupTiles < Cask
 
   url "https://crawl.develz.org/release/stone_soup-#{version}-tiles-macosx.zip"
   homepage 'http://crawl.develz.org'
+  license :unknown
 
   app 'Dungeon Crawl Stone Soup - Tiles.app'
 end

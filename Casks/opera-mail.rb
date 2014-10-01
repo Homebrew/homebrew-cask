@@ -4,6 +4,7 @@ class OperaMail < Cask
 
   url "https://get-ash-1.opera.com/pub/opera/mail/#{version}/mac/Opera-Mail-#{version}-1040.i386.dmg"
   homepage 'http://www.opera.com/computer/mail'
+  license :unknown
 
   app 'Opera Mail.app'
 end

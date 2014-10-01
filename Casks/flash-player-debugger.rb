@@ -4,6 +4,7 @@ class FlashPlayerDebugger < Cask
 
   url 'https://fpdownload.macromedia.com/pub/flashplayer/updaters/14/flashplayer_14_sa_debug.dmg'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
+  license :unknown
 
   app 'Flash Player.app', :target => 'Flash Player Debugger.app'
 end

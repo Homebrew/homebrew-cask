@@ -4,6 +4,7 @@ class Yojimbo < Cask
 
   url "https://s3.amazonaws.com/BBSW-download/Yojimbo_#{version}.dmg"
   homepage 'http://www.barebones.com/products/yojimbo/'
+  license :unknown
 
   app 'Yojimbo.app'
   postflight do

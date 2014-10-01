@@ -4,6 +4,7 @@ class ZeroxdbeEap < Cask
 
   url "http://download.jetbrains.com/dbe/0xdbe-#{version}.dmg"
   homepage 'http://www.jetbrains.com/dbe/'
+  license :unknown
 
   app '0xDBE EAP.app'
 

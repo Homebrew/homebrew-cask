@@ -4,6 +4,7 @@ class Rescuetime < Cask
 
   url 'https://www.rescuetime.com/installers/RescueTimeInstaller.dmg'
   homepage 'https://www.rescuetime.com'
+  license :unknown
 
   app 'RescueTime.app'
 end

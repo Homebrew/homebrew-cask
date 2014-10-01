@@ -5,6 +5,7 @@ class Kiwi < Cask
   url "https://s3.amazonaws.com/Kiwi/Kiwi_#{version}_1492.zip"
   appcast 'http://yourhead.com/appcast/kiwi/appcast.xml'
   homepage 'http://kiwi-app.net/'
+  license :unknown
 
   app 'Kiwi.app'
 end

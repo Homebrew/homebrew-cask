@@ -5,6 +5,7 @@ class Pcalc < Cask
   url "https://s3.amazonaws.com/tlasystems/PCalc-#{version}.dmg"
   appcast 'http://www.pcalc.com/PCalcSUFeed.xml'
   homepage 'http://www.pcalc.com/index.html'
+  license :unknown
 
   app 'PCalc.app'
 end

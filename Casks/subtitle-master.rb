@@ -5,6 +5,7 @@ class SubtitleMaster < Cask
   url "http://updates.subtitlemaster.com/app/Subtitle%20Master%20#{version}.zip"
   appcast 'http://updates.subtitlemaster.com'
   homepage 'http://subtitlemaster.com/'
+  license :unknown
 
   app 'Subtitle Master.app'
 end

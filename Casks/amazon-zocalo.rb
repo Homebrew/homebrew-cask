@@ -4,6 +4,7 @@ class AmazonZocalo < Cask
 
   url 'https://dpfrknqwmbop6.cloudfront.net/mac/Amazon%20Zocalo.pkg'
   homepage 'http://aws.amazon.com/zocalo/'
+  license :unknown
 
   pkg 'Amazon Zocalo.pkg'
   uninstall :pkgutil => 'com.amazon.aws.AmazonZocalo'

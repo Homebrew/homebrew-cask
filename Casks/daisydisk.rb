@@ -5,6 +5,7 @@ class Daisydisk < Cask
   url 'http://www.daisydiskapp.com/downloads/DaisyDisk.zip'
   appcast 'http://www.daisydiskapp.com/downloads/appcastFeed.php'
   homepage 'http://www.daisydiskapp.com'
+  license :unknown
 
   app 'DaisyDisk.app'
 

@@ -5,6 +5,7 @@ class DevonthinkPro < Cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro.dmg.zip"
   appcast 'http://www.devon-technologies.com/Sparkle/DEVONthinkPro2.xml'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro.html'
+  license :unknown
 
   nested_container 'DEVONthink_Pro.dmg'
   app 'DEVONthink Pro.app'

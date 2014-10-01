@@ -4,6 +4,7 @@ class FreeRuler < Cask
 
   url "http://www.pascal.com/software/freeruler/FreeRuler#{version}.zip"
   homepage 'http://www.pascal.com/software/freeruler/'
+  license :unknown
 
   app "Free Ruler #{version}.app"
 end

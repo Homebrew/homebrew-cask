@@ -4,6 +4,7 @@ class Musescore < Cask
 
   url "http://ftp.osuosl.org/pub/musescore/releases/MuseScore-#{version}/MuseScore-#{version}.dmg"
   homepage 'http://musescore.org/'
+  license :unknown
 
   app 'MuseScore.app'
 end

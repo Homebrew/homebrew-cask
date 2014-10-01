@@ -4,6 +4,7 @@ class SuspiciousPackage < Cask
 
   url 'http://www.mothersruin.com/software/downloads/SuspiciousPackage.pkg'
   homepage 'http://www.mothersruin.com/software/SuspiciousPackage/'
+  license :unknown
 
   pkg 'SuspiciousPackage.pkg'
   uninstall :pkgutil => 'com.mothersruin.pkg.SuspiciousPackagePlugin'

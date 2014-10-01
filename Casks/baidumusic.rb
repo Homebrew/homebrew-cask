@@ -4,6 +4,7 @@ class Baidumusic < Cask
 
   url 'http://music.baidu.com/player/mac/baidumusic_mac.dmg'
   homepage 'http://music.baidu.com/'
+  license :unknown
 
   app '百度音乐.app'
 end

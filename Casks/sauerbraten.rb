@@ -4,6 +4,7 @@ class Sauerbraten < Cask
 
   url 'http://downloads.sourceforge.net/sauerbraten/sauerbraten_2013_01_26_collect_edition_macosx.dmg'
   homepage 'http://sauerbraten.org'
+  license :oss
 
   app 'Sauerbraten.app'
 end

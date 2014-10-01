@@ -4,6 +4,7 @@ class Wesnoth < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/wesnoth/Wesnoth_#{version}.dmg"
   homepage 'http://wesnoth.org'
+  license :oss
 
   app 'Wesnoth.app'
 end

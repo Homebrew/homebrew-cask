@@ -5,6 +5,7 @@ class Xtorrent < Cask
   url 'http://acquisition.dreamhosters.com/xtorrent/Xtorrent2.1(v171).dmg'
   appcast 'http://xtorrent.s3.amazonaws.com/appcast.xml'
   homepage 'http://www.xtorrent.com'
+  license :unknown
 
   app 'Xtorrent.app'
 end

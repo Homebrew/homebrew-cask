@@ -4,6 +4,7 @@ class Instead < Cask
 
   url "https://downloads.sourceforge.net/project/instead/instead/#{version}/Instead-#{version}.dmg"
   homepage 'http://instead.syscall.ru/'
+  license :oss
 
   app 'Instead.app'
 end

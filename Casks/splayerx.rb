@@ -4,6 +4,7 @@ class Splayerx < Cask
 
   url "http://cdn.bitbucket.org/Tomasen/splayerx/downloads/SPlayerX_#{version}.zip"
   homepage 'https://bitbucket.org/Tomasen/splayerx/wiki/Home'
+  license :oss
 
   app 'SPlayerX.app'
 end

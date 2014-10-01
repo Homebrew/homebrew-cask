@@ -4,6 +4,7 @@ class SynologyAssistant < Cask
 
   url "https://global.download.synology.com/download/Tools/SynologyAssistant/4448/Mac/Synology-Assistant-#{version}.dmg"
   homepage 'http://www.synology.com/'
+  license :unknown
 
   app 'Synology Assistant.app'
 end

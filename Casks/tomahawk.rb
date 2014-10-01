@@ -5,6 +5,7 @@ class Tomahawk < Cask
   url "http://www.tomahawk-player.org/download.php?file=Tomahawk-#{version}.dmg"
   appcast 'http://download.tomahawk-player.org/sparkle/update.php'
   homepage 'http://www.tomahawk-player.org/'
+  license :unknown
 
   app 'Tomahawk.app'
 end

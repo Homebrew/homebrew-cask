@@ -4,6 +4,7 @@ class Totalterminal < Cask
 
   url "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
   homepage 'http://totalterminal.binaryage.com'
+  license :unknown
 
   pkg 'TotalTerminal.pkg'
   uninstall :pkgutil => 'com.binaryage.pkg.totalterminal.app',

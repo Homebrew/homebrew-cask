@@ -4,6 +4,7 @@ class PasswordPractice < Cask
 
   url 'https://mrgeckosmedia.com/applications/download/PasswordPractice'
   homepage 'https://mrgeckosmedia.com/applications/info/PasswordPractice'
+  license :unknown
 
   app 'Password Practice.app'
 end

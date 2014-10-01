@@ -5,6 +5,7 @@ class Historyhound < Cask
   url "https://www.stclairsoft.com/download/HistoryHound-#{version}.dmg"
   appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?HH'
   homepage 'http://www.stclairsoft.com/HistoryHound/'
+  license :unknown
 
   app 'HistoryHound.app'
 end

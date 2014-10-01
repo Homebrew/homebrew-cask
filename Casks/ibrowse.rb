@@ -4,6 +4,7 @@ class Ibrowse < Cask
 
   url "http://cdn.macroplant.com/release/iBrowse-#{version}x.dmg"
   homepage 'http://www.ibrowseapp.com/'
+  license :unknown
 
   app 'iBrowse.app'
 end

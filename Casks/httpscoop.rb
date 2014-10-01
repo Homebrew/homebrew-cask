@@ -5,6 +5,7 @@ class Httpscoop < Cask
   url "https://s3.amazonaws.com/Trueridge/HTTPScoop_#{version}.dmg"
   appcast 'http://www.tuffcode.com/releases/httpscoop-appcast.xml'
   homepage 'http://www.tuffcode.com'
+  license :unknown
 
   app 'HTTPScoop.app'
 end

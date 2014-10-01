@@ -4,6 +4,7 @@ class Serviio < Cask
 
   url "http://download.serviio.org/releases/serviio-#{version}-osx.tar.gz"
   homepage 'http://serviio.org/'
+  license :unknown
 
   app 'Serviio.app'
   app 'Serviio-Console.app'

@@ -4,6 +4,7 @@ class Emacs < Cask
 
   url "http://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal-10.6.8.dmg"
   homepage 'http://emacsformacosx.com/'
+  license :oss
 
   app 'Emacs.app'
 end

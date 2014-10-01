@@ -5,6 +5,7 @@ class Pgadmin3 < Cask
 
   url "http://ftp.postgresql.org/pub/pgadmin3/release/v#{version}/osx/pgadmin3-#{version}.dmg"
   homepage 'http://pgadmin.org'
+  license :unknown
 
   app 'pgAdmin3.app'
 end

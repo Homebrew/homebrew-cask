@@ -5,6 +5,7 @@ class Hoppergdbserver < Cask
   url "http://www.hopperapp.com/HopperGDBServer/HopperGDBServer-#{version}.zip"
   appcast 'http://www.hopperapp.com/HopperGDBServer/appcast.xml'
   homepage 'http://www.hopperapp.com/HopperGDBServer/index.html'
+  license :unknown
 
   app 'HopperGDBServer.app'
 end

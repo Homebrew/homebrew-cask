@@ -4,6 +4,7 @@ class J < Cask
 
   url "http://www.jsoftware.com/download/j#{version}/install/j#{version}_mac64.zip"
   homepage 'http://www.jsoftware.com'
+  license :unknown
 
   %w<jbrk jcon jhs jqt>.each do |a|
     app "j64-#{version}/#{a}.app"

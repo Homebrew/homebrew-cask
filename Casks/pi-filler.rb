@@ -4,6 +4,7 @@ class PiFiller < Cask
 
   url 'http://ivanx.com/raspberrypi/files/PiFiller.zip'
   homepage 'http://ivanx.com/raspberrypi'
+  license :unknown
 
   app 'Pi Filler.app'
 end

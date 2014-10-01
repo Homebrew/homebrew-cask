@@ -4,6 +4,7 @@ class Pgloader < Cask
 
   url "http://pgloader.io/files/pgloader-#{version}.pkg"
   homepage 'http://pgloader.io'
+  license :unknown
 
   pkg "pgloader-#{version}.pkg"
   uninstall :pkgutil => 'org.tapoueh.pgloader'

@@ -4,6 +4,7 @@ class Remonit < Cask
 
   url "http://874390f0461dc5bbf96b-8953e31051b5247f1143d89b1a42aa7d.r65.cf2.rackcdn.com/remonit-#{version}-mac.zip"
   homepage 'http://zef.io/remonit/'
+  license :unknown
 
   app 'Remonit.app'
 end

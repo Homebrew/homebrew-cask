@@ -5,6 +5,7 @@ class Fileshuttle < Cask
   url "http://fileshuttle.io/fileshuttle-#{version}.zip"
   appcast 'http://updates.getfileshuttle.com/update.xml'
   homepage 'http://fileshuttle.io/'
+  license :unknown
 
   app 'FileShuttle.app'
 end

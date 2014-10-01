@@ -5,6 +5,7 @@ class Latexit < Cask
   url "http://www.chachatelier.fr/latexit/downloads/LaTeXiT-#{version.gsub('.', '_')}.dmg"
   appcast 'http://pierre.chachatelier.fr/latexit/downloads/latexit-sparkle-en.rss'
   homepage 'http://www.chachatelier.fr/latexit'
+  license :unknown
 
   app 'LaTeXiT.app'
   zap :delete => '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist'

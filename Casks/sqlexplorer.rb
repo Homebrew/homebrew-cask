@@ -4,6 +4,7 @@ class Sqlexplorer < Cask
 
   url "https://downloads.sourceforge.net/project/eclipsesql/SQL%20Explorer%20RCP%20%28exc%20JRE%29/#{version}/sqlexplorer_rcp-#{version}.macosx.cocoa.x86.tgz"
   homepage 'http://eclipsesql.sourceforge.net/'
+  license :oss
 
   app 'SQLExplorer/sqlexplorer.app'
 end

@@ -5,6 +5,7 @@ class Imagealpha < Cask
   url "http://pngmini.com/ImageAlpha#{version}.tar.bz2"
   appcast 'http://pngmini.com/appcast.xml'
   homepage 'http://pngmini.com/'
+  license :unknown
 
   app 'ImageAlpha.app'
 end

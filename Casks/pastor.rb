@@ -4,6 +4,7 @@ class Pastor < Cask
 
   url 'https://mehlau.net/pastor/Pastor182-signed.dmg'
   homepage 'http://mehlau.net/pastor'
+  license :unknown
 
   app 'Pastor.app'
 end

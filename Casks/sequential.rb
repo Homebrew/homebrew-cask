@@ -5,6 +5,7 @@ class Sequential < Cask
   url "http://sequentialx.com/Sequential#{version}.zip"
   appcast 'http://www.sequentialx.com/sequential.xml'
   homepage 'http://sequentialx.com'
+  license :unknown
 
   app 'Sequential.app'
 end

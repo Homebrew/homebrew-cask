@@ -4,6 +4,7 @@ class Chemdoodle < Cask
 
   url "http://www.chemdoodle.com/downloads/ChemDoodle-osx-#{version}.dmg"
   homepage 'http://www.chemdoodle.com'
+  license :unknown
 
   suite 'ChemDoodle'
 end

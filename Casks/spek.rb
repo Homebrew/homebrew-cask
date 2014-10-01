@@ -4,6 +4,7 @@ class Spek < Cask
 
   url "https://spek.googlecode.com/files/spek-#{version}.dmg"
   homepage 'http://spek.cc'
+  license :oss
 
   app 'Spek.app'
 end

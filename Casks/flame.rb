@@ -4,6 +4,7 @@ class Flame < Cask
 
   url "http://husk.org/apps/Flame-#{version}-universal.zip"
   homepage 'http://husk.org/apps/flame/'
+  license :unknown
 
   app 'Flame.app'
 end

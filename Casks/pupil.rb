@@ -5,6 +5,7 @@ class Pupil < Cask
   url "http://pupil.io/downloads/#{version}/Pupil.app.zip"
   appcast 'http://pupil.io/appcast.rss'
   homepage 'http://pupil.io/'
+  license :unknown
 
   app 'Pupil.app'
 end

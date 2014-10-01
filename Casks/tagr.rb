@@ -5,6 +5,7 @@ class Tagr < Cask
   url 'http://www.harald-schubert.net/data/Tagr.zip'
   appcast 'http://www.harald-schubert.net/data/tagr-appcast.xml'
   homepage 'http://www.entwicklungsfreu.de/tagr.html'
+  license :unknown
 
   app 'Tagr.app'
 end

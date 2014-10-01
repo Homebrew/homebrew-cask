@@ -4,6 +4,7 @@ class Makehuman < Cask
 
   url "http://download.tuxfamily.org/makehuman/releases/#{version}/makehuman-#{version}-osx.dmg"
   homepage 'http://www.makehuman.org/'
+  license :unknown
 
   app 'MakeHuman.app'
 end

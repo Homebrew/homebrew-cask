@@ -4,6 +4,7 @@ class RemoteDesktopManager < Cask
 
   url "http://download.devolutions.net/Mac/Devolutions.RemoteDesktopManager.Mac.#{version}.dmg"
   homepage 'http://remotedesktopmanager.com/'
+  license :unknown
 
   app 'Remote Desktop Manager.app'
 end

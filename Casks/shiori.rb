@@ -5,6 +5,7 @@ class Shiori < Cask
   url "http://aki-null.net/shiori/release/Shiori_#{version}.zip"
   appcast 'http://aki-null.net/shiori/appcast.xml'
   homepage 'http://aki-null.net/shiori/'
+  license :unknown
 
   app 'Shiori.app'
 end

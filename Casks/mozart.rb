@@ -4,6 +4,7 @@ class Mozart < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/mozart-oz/Mozart-#{version}.zip"
   homepage 'http://www.mozart-oz.org'
+  license :oss
 
   app 'Mozart.app'
 end

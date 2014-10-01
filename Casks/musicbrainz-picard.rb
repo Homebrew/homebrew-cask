@@ -4,6 +4,7 @@ class MusicbrainzPicard < Cask
 
   url "ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}-x86_64.dmg"
   homepage 'http://musicbrainz.org/doc/MusicBrainz_Picard'
+  license :unknown
 
   app 'MusicBrainz Picard.app'
 end

@@ -5,6 +5,7 @@ class Apikitchen < Cask
   url "https://s3.amazonaws.com/envolto-static/ApiKitchen_#{version}.dmg"
   appcast 'http://apikitchen.com/updates/appcast.xml'
   homepage 'http://apikitchen.com/'
+  license :unknown
 
   app 'ApiKitchen.app'
 end

@@ -4,6 +4,7 @@ class Clix < Cask
 
   url 'ftp://rixstep.com/CLIX.tar.bz2'
   homepage 'http://rixstep.com/4/0/clix/index.shtml'
+  license :unknown
 
   app "CLIX#{version}/CLIX.app"
 end

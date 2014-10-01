@@ -4,6 +4,7 @@ class Nutstore < Cask
 
   url 'https://jianguoyun.com/static/exe/installer/NutstoreOSXInstaller.dmg'
   homepage 'https://jianguoyun.com'
+  license :unknown
 
   app 'Nutstore.app'
 end

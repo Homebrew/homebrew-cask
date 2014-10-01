@@ -5,6 +5,7 @@ class Tower < Cask
   url 'https://www.git-tower.com/download'
   appcast 'https://updates.fournova.com/updates/tower2-mac/stable'
   homepage 'http://www.git-tower.com/'
+  license :unknown
 
   app 'Tower.app'
   zap :delete => [

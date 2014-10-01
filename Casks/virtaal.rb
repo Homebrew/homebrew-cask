@@ -4,6 +4,7 @@ class Virtaal < Cask
 
   url 'https://downloads.sourceforge.net/project/translate/Virtaal/0.7.1/Virtaal-0.7.1-Mac-Beta-2.dmg'
   homepage 'http://virtaal.translatehouse.org/'
+  license :oss
 
   app 'Virtaal.app'
 end

@@ -5,6 +5,7 @@ class Induction < Cask
   url 'https://mesmerize.s3.amazonaws.com/Induction/Induction-28.zip'
   appcast 'https://induction.mesmerizeapp.com/'
   homepage 'http://inductionapp.com/'
+  license :unknown
 
   app 'Induction.app'
 end

@@ -5,6 +5,7 @@ class Dfontsplitter < Cask
   url "http://peter.upfold.org.uk/files/dfontsplitter/dfontsplitter-#{version}-mac.zip"
   appcast 'http://apps.upfold.org.uk/appupdate/dfontsplitter.xml'
   homepage 'http://peter.upfold.org.uk/projects/dfontsplitter'
+  license :unknown
 
   app 'DfontSplitter.app'
 end

@@ -5,6 +5,7 @@ class Lingrradar < Cask
   url "http://radar.lingr.com/mac/LingrRadar_#{version}.tbz"
   appcast 'http://radar.lingr.com/mac_appcast.xml'
   homepage 'http://radar.lingr.com/'
+  license :unknown
 
   app 'LingrRadar.app'
 end

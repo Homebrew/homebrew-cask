@@ -4,6 +4,7 @@ class Bleep < Cask
 
   url 'https://download-new.utorrent.com/endpoint/bleep/os/osx/track/stable/'
   homepage 'http://labs.bittorrent.com/bleep/'
+  license :unknown
 
   link 'Bleep.app'
 end

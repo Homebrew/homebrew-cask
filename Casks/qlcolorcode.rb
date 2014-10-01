@@ -4,6 +4,7 @@ class Qlcolorcode < Cask
 
   url "https://qlcolorcode.googlecode.com/files/QLColorCode-#{version}.tgz"
   homepage 'https://code.google.com/p/qlcolorcode/'
+  license :oss
 
   qlplugin "QLColorCode-#{version}/QLColorCode.qlgenerator"
 end

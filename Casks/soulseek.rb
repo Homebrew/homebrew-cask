@@ -4,6 +4,7 @@ class Soulseek < Cask
 
   url "http://www.soulseekqt.net/SoulseekQt/Mac/SoulseekQt-#{version}.pkg"
   homepage 'http://www.soulseekqt.net/'
+  license :unknown
 
   pkg "SoulseekQt-#{version}.pkg"
   uninstall :pkgutil => 'com.soulseek.SoulseekQt.pkg'

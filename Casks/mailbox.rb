@@ -5,6 +5,7 @@ class Mailbox < Cask
   url "https://mb-dtop.s3.amazonaws.com/external-beta/Mailbox_Ext_Beta_#{version}.zip"
   appcast 'https://mb-dtop.s3.amazonaws.com/external-beta/external-beta-appcast.xml'
   homepage 'http://www.mailboxapp.com/'
+  license :unknown
 
   app 'Mailbox (Beta).app'
 end

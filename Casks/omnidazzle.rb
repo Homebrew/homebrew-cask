@@ -4,6 +4,7 @@ class Omnidazzle < Cask
 
   url "http://downloads2.omnigroup.com/software/MacOSX/10.6/OmniDazzle-#{version}.dmg"
   homepage 'http://www.omnigroup.com/more'
+  license :unknown
 
   app 'OmniDazzle.app'
 end

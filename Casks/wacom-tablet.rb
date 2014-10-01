@@ -4,6 +4,7 @@ class WacomTablet < Cask
 
   url "http://cdn.wacom.com/u/drivers/mac/pro/WacomTablet_#{version}.dmg"
   homepage 'http://www.wacom.com/'
+  license :unknown
 
   pkg 'Install Wacom Tablet.pkg'
   uninstall :launchctl => 'com.wacom.wacomtablet',

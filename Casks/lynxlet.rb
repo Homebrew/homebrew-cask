@@ -4,6 +4,7 @@ class Lynxlet < Cask
 
   url "http://habilis.net/lynxlet/Lynxlet_#{version}.dmg"
   homepage 'http://habilis.net/lynxlet/'
+  license :unknown
 
   app 'Lynxlet.app'
 end

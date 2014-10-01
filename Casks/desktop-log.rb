@@ -4,6 +4,7 @@ class DesktopLog < Cask
 
   url 'http://www.nightproductions.net/downloads/desklog.dmg'
   homepage 'http://www.nightproductions.net/desklog.html'
+  license :unknown
 
   app 'Desktop Log.app'
 end

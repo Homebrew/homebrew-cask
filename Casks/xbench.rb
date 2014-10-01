@@ -4,6 +4,7 @@ class Xbench < Cask
 
   url "http://xbench.com/Xbench_#{version}.dmg"
   homepage 'http://xbench.com/'
+  license :unknown
 
   app 'XBench.app'
 end

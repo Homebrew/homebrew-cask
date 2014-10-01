@@ -4,6 +4,7 @@ class Shadowsweeper < Cask
 
   url 'https://www.irradiatedsoftware.com/download/ShadowSweeper.zip'
   homepage 'http://www.irradiatedsoftware.com/labs/'
+  license :unknown
 
   app 'ShadowSweeper.app'
 end

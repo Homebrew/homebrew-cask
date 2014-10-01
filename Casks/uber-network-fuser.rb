@@ -4,6 +4,7 @@ class UberNetworkFuser < Cask
 
   url "https://dl.dropbox.com/s/uytv8p2eljk6fez/ubernetfuser_#{version}.dmg"
   homepage 'http://nickapedia.com/2012/01/10/breaking-new-ground-an-uber-tool-for-the-mac/'
+  license :unknown
 
   app "UBER Network Fuser #{version}.app"
 end

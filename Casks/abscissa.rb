@@ -4,6 +4,7 @@ class Abscissa < Cask
 
   url "http://rbruehl.macbay.de/Abscissa/Downloads/Abscissa-#{version}.zip"
   homepage 'http://rbruehl.macbay.de/Abscissa'
+  license :unknown
 
   app 'Abscissa.app'
 end

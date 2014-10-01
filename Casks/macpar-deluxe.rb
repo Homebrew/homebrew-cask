@@ -4,6 +4,7 @@ class MacparDeluxe < Cask
 
   url 'http://www.xs4all.nl/~gp/MacPAR_deLuxe/MacPARdeLuxe.dmg'
   homepage 'http://gp.home.xs4all.nl/Site/MacPAR_deLuxe.html'
+  license :unknown
 
   app 'MacPAR deLuxe.app'
 end

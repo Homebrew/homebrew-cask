@@ -4,6 +4,7 @@ class Mocksmtp < Cask
 
   url 'http://mocksmtpapp.com/MockSmtp.zip'
   homepage 'http://mocksmtpapp.com/'
+  license :unknown
 
   app 'MockSmtp.app'
 end

@@ -4,6 +4,7 @@ class Stackroom < Cask
 
   url "http://www.geocities.jp/aromaticssoft/stackroom/download/stackroom_#{version}.zip"
   homepage 'http://www.geocities.jp/aromaticssoft/stackroom/index.html'
+  license :unknown
 
   app 'Stackroom.app'
 end

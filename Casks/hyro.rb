@@ -4,6 +4,7 @@ class Hyro < Cask
 
   url "https://jawerty.github.io/Hyro/apps/Hyro-#{version}.dmg"
   homepage 'http://jawerty.github.io/Hyro/'
+  license :oss
 
   app 'Hyro.app'
 end

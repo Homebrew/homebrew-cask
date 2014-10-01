@@ -5,6 +5,7 @@ class Ctivo < Cask
   url "https://github.com/dscottbuch/cTiVo/releases/download/v#{version}.468/cTiVo_#{version}_468.zip"
   appcast 'https://github.com/dscottbuch/cTiVo/blob/master/update/sparklecast.xml'
   homepage 'https://github.com/dscottbuch/cTiVo'
+  license :oss
 
   app 'cTiVo.app'
 end

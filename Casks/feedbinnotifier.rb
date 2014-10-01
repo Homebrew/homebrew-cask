@@ -4,6 +4,7 @@ class Feedbinnotifier < Cask
 
   url "https://github.com/kmikael/FeedbinNotifier/releases/download/v#{version}/FeedbinNotifier.zip"
   homepage 'http://kmikael.github.io/FeedbinNotifier'
+  license :oss
 
   app 'FeedbinNotifier.app'
 end

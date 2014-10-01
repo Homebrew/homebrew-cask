@@ -4,6 +4,7 @@ class Safaritabswitching < Cask
 
   url "https://github.com/rs/SafariTabSwitching/releases/download/#{version}/Safari.Tab.Switching-#{version}.pkg"
   homepage 'https://github.com/rs/SafariTabSwitching'
+  license :oss
 
   pkg "Safari.Tab.Switching-#{version}.pkg"
   uninstall :pkgutil => 'net.rhapsodyk.SafariTabSwitching.pkg'

@@ -4,6 +4,7 @@ class PasswordGorilla < Cask
 
   url 'http://zdia.de/downloads/gorilla/gorilla15372.zip'
   homepage 'https://github.com/zdia/gorilla'
+  license :oss
 
   app 'Password Gorilla.app'
   caveats <<-EOS.undent

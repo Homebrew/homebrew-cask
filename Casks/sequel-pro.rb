@@ -5,6 +5,7 @@ class SequelPro < Cask
   url "https://sequel-pro.googlecode.com/files/sequel-pro-#{version}.dmg"
   appcast 'http://www.sequelpro.com/appcast/app-releases.xml'
   homepage 'http://www.sequelpro.com/'
+  license :oss
 
   app 'Sequel Pro.app'
   zap :delete => '~/Library/Application Support/Sequel Pro/Data'

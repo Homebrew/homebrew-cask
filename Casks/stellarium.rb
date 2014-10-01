@@ -4,6 +4,7 @@ class Stellarium < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/stellarium/Stellarium-#{version}.dmg"
   homepage 'http://stellarium.org'
+  license :oss
 
   app 'Stellarium.app'
 end

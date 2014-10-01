@@ -4,6 +4,7 @@ class NetbeansPhp < Cask
 
   url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-php-macosx.dmg"
   homepage 'https://netbeans.org/'
+  license :unknown
 
   pkg "NetBeans #{version}.mpkg"
   uninstall :delete => '/Applications/NetBeans'

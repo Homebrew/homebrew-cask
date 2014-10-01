@@ -5,6 +5,7 @@ class TeamspeakClient < Cask
 
   url "http://dl.4players.de/ts/releases/#{version}/TeamSpeak3-Client-macosx-#{version}.dmg"
   homepage 'http://www.teamspeak.com/'
+  license :unknown
 
   app 'TeamSpeak 3 Client.app'
 end

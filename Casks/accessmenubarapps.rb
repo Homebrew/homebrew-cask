@@ -4,6 +4,7 @@ class Accessmenubarapps < Cask
 
   url "http://www.ortisoft.de/resources/AccessMenuBarApps#{version}.dmg"
   homepage 'http://www.ortisoft.de/accessmenubarapps/'
+  license :unknown
 
   app 'AccessMenuBarApps.app'
 end

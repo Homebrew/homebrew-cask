@@ -5,6 +5,7 @@ class Inboard < Cask
   url "http://dl.devmate.com/com.ideabits.Inboard/#{version}/1390822305/Inboard-#{version}.dmg"
   appcast 'http://updates.devmate.com/com.ideabits.Inboard.xml'
   homepage 'http://inboardapp.com/beta'
+  license :unknown
 
   app 'Inboard.app'
 end

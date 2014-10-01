@@ -4,6 +4,7 @@ class PayeTools < Cask
 
   url "https://www.gov.uk/government/uploads/uploaded/hmrc/payetools-rti-#{version}-osx.zip"
   homepage 'http://www.hmrc.gov.uk/payerti/payroll/bpt/paye-tools.htm'
+  license :unknown
 
   caveats do
     manual_installer "payetools-rti-#{version}-osx.app"

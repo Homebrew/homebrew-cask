@@ -5,6 +5,7 @@ class Cakebrew < Cask
   url "https://www.cakebrew.com/files/cakebrew-#{version}.dmg"
   appcast 'http://www.cakebrew.com/appcast/profileInfo.php'
   homepage 'http://www.cakebrew.com'
+  license :unknown
 
   app 'Cakebrew.app'
 end

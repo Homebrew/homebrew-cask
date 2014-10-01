@@ -4,6 +4,7 @@ class Semulov < Cask
 
   url "http://kainjow.com/downloads/Semulov_#{version}.zip"
   homepage 'http://www.kainjow.com'
+  license :unknown
 
   app 'Semulov.app'
 end

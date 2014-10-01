@@ -4,6 +4,7 @@ class Supertuxkart < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/supertuxkart/supertuxkart-#{version}-osx.dmg"
   homepage 'http://supertuxkart.sourceforge.net'
+  license :oss
 
   app 'Supertuxkart.app'
 end

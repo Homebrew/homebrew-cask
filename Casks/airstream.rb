@@ -4,6 +4,7 @@ class Airstream < Cask
 
   url 'http://airstream.io/download/mac/airstream-mac.dmg'
   homepage 'http://airstream.io/download/'
+  license :unknown
   app 'AirStream.app'
 
   caveats do

@@ -5,6 +5,7 @@ class Puush < Cask
   url 'https://puush.me/dl/puush.zip'
   appcast 'https://puush.me/dl/puush.xml?hax=jax'
   homepage 'http://puush.me/'
+  license :unknown
 
   app 'puush.app'
 end

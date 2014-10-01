@@ -4,6 +4,7 @@ class Ioquake3 < Cask
 
   url "http://ioquake3.org/files/#{version}/ioquake3%20#{version}.dmg"
   homepage 'http://ioquake3.org/'
+  license :unknown
 
   suite 'ioquake3'
   caveats <<-EOS.undent

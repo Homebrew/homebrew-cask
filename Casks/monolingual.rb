@@ -5,6 +5,7 @@ class Monolingual < Cask
   url "https://downloads.sourceforge.net/project/monolingual/monolingual/#{version}/Monolingual-#{version}.dmg"
   appcast 'http://monolingual.sourceforge.net/appcast.xml'
   homepage 'http://monolingual.sourceforge.net/'
+  license :oss
 
   app 'Monolingual.app'
 end

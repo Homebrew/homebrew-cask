@@ -4,6 +4,7 @@ class Multidoge < Cask
 
   url "https://github.com/langerhans/multidoge/releases/download/v#{version}/multidoge-#{version}.dmg"
   homepage 'http://multidoge.org/'
+  license :oss
 
   app 'MultiDoge.app'
 end

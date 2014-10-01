@@ -4,6 +4,7 @@ class Moreamp < Cask
 
   url "https://downloads.sourceforge.net/project/moreamp/moreamp/MoreAmp-#{version}/MoreAmp-#{version}-binOSXintel.dmg"
   homepage 'http://sourceforge.net/projects/moreamp/'
+  license :oss
 
   app 'MoreAmp.app'
 end

@@ -4,6 +4,7 @@ class Thyme < Cask
 
   url "https://joaomoreno.github.io/thyme/dist/Thyme-#{version}.dmg"
   homepage 'http://joaomoreno.github.io/thyme/'
+  license :oss
 
   app 'Thyme.app'
 end

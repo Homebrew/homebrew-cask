@@ -4,6 +4,7 @@ class Rcdefaultapp < Cask
 
   url "http://www.rubicode.com/Downloads/RCDefaultApp-#{version}.X.dmg"
   homepage 'http://www.rubicode.com/Software/RCDefaultApp/'
+  license :unknown
 
   prefpane 'RCDefaultApp.prefPane'
 end

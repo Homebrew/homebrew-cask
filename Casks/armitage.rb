@@ -4,6 +4,7 @@ class Armitage < Cask
 
   url 'http://www.fastandeasyhacking.com/download/armitage20131121.dmg'
   homepage 'http://www.fastandeasyhacking.com/'
+  license :unknown
 
   app 'Armitage.app'
 end

@@ -5,6 +5,7 @@ class SatelliteEyes < Cask
   url "https://satellite-eyes.s3.amazonaws.com/satellite-eyes-#{version}.zip"
   appcast 'https://satellite-eyes.s3.amazonaws.com/appcast.xml'
   homepage 'http://satelliteeyes.tomtaylor.co.uk/'
+  license :unknown
 
   app 'Satellite Eyes.app'
 end

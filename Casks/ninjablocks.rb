@@ -4,6 +4,7 @@ class Ninjablocks < Cask
 
   url "https://dl.dropboxusercontent.com/u/428557/NinjaBlocks-#{version}.dmg"
   homepage 'http://forums.ninjablocks.com/index.php?p=/discussion/1655/ninja-osx-client/p1'
+  license :unknown
 
   app 'NinjaBlocks.app'
 end

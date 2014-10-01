@@ -4,6 +4,7 @@ class Gqrx < Cask
 
   url "https://downloads.sourceforge.net/project/gqrx/#{version}/gqrx-#{version}.dmg"
   homepage 'http://gqrx.dk/'
+  license :oss
 
   app 'Gqrx.app'
 end

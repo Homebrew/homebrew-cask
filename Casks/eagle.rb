@@ -4,6 +4,7 @@ class Eagle < Cask
 
   url "ftp://ftp.cadsoft.de/eagle/program/#{version.gsub(/\.\d$/, '')}/eagle-mac-#{version}.zip"
   homepage 'http://www.cadsoftusa.com/'
+  license :unknown
 
   pkg "eagle-#{version}.pkg"
   uninstall :pkgutil => 'com.CadSoftComputerGmbH.EAGLE',

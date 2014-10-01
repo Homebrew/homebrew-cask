@@ -5,6 +5,7 @@ class RoyalTsx < Cask
   url "http://app.royaltsx.com/updates/royaltsx_#{version}.dmg"
   appcast 'http://app.royaltsx.com/updates_stable.php'
   homepage 'http://www.royaltsx.com'
+  license :unknown
 
   app 'Royal TSX.app'
 end

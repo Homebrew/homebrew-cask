@@ -4,6 +4,7 @@ class NavicatForMariadb < Cask
 
   url 'http://download.navicat.com/download/navicat110_mariadb_en.dmg'
   homepage 'http://www.navicat.com/products/navicat-for-mariadb'
+  license :unknown
 
   app 'Navicat for MariaDB.app'
 end

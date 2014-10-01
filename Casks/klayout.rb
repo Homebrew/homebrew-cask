@@ -4,6 +4,7 @@ class Klayout < Cask
 
   url "http://178.77.72.242/downloads/klayout.#{version}.pkg"
   homepage 'http://www.klayout.de/index.html'
+  license :unknown
 
   pkg "klayout.#{version}.pkg"
   uninstall :pkgutil => 'klayout.de',

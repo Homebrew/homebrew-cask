@@ -4,6 +4,7 @@ class Pencil < Cask
 
   url "https://evoluspencil.googlecode.com/files/Pencil-#{version}-mac.tar.bz2"
   homepage 'http://pencil.evolus.vn'
+  license :oss
 
   app 'Pencil.app'
 end

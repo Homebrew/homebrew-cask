@@ -5,6 +5,7 @@ class Cloudytabs < Cask
   url "https://github.com/josh-/CloudyTabs/releases/download/v#{version}/CloudyTabs.zip"
   appcast 'http://joshparnham.com/projects/cloudytabs/appcast.xml'
   homepage 'https://github.com/josh-/CloudyTabs/'
+  license :oss
 
   app 'CloudyTabs.app'
 end

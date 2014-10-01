@@ -5,6 +5,7 @@ class Texpad < Cask
   url 'https://cloud.texpadapp.com/bundles/Texpad_1_6_13.zip'
   appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml'
   homepage 'https://www.texpadapp.com/osx'
+  license :unknown
 
   app 'Texpad.app'
 end

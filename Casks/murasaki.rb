@@ -4,6 +4,7 @@ class Murasaki < Cask
 
   url "http://genjiapp.com/mac/murasaki/downloads/murasaki_v#{version}.zip"
   homepage 'http://genjiapp.com/mac/murasaki/index_en.html'
+  license :unknown
 
   app 'Murasaki.app'
 end

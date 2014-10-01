@@ -5,6 +5,7 @@ class Fotomagico < Cask
   url "https://cdn.boinx.com/software/fotomagico/Boinx_FotoMagico_#{version}.zip"
   appcast 'https://sparkle.boinx.com/appcast.lasso'
   homepage 'http://www.boinx.com/fotomagico/'
+  license :unknown
 
   app 'FotoMagico.app'
 end

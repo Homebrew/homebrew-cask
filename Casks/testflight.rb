@@ -5,6 +5,7 @@ class Testflight < Cask
   url 'https://d193ln56du8muy.cloudfront.net/desktop_app/1381509820/TestFlight-Desktop-1.0-Beta(313).zip'
   appcast 'https://testflightapp.com/appcast.xml'
   homepage 'http://testflightapp.com'
+  license :unknown
 
   app 'TestFlight.app'
 end

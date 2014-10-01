@@ -5,6 +5,7 @@ class Texnicle < Cask
   url "http://www.bobsoft-mac.de/resources/TeXnicle/2.2/TeXnicle.app.#{version}.zip"
   appcast 'http://www.bobsoft-mac.de/profileInfo.php'
   homepage 'http://www.bobsoft-mac.de/texnicle/texnicle.html'
+  license :unknown
 
   app 'TeXnicle.app'
 end

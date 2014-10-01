@@ -5,6 +5,7 @@ class Gity < Cask
   url 'http://gityapp.com/Gity.zip'
   appcast 'http://gityapp.com/gity.xml'
   homepage 'http://gityapp.com/'
+  license :unknown
 
   app 'Gity.app'
 end

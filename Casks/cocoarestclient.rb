@@ -5,6 +5,7 @@ class Cocoarestclient < Cask
   url "https://github.com/mmattozzi/cocoa-rest-client/releases/download/#{version}/CocoaRestClient-#{version}.dmg"
   appcast 'http://restlesscode.org/cocoa-rest-client/appcast.xml'
   homepage 'http://mmattozzi.github.io/cocoa-rest-client/'
+  license :oss
 
   app 'CocoaRestClient.app'
 end

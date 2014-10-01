@@ -4,6 +4,7 @@ class Thaiwitter < Cask
 
   url 'https://dl.dropbox.com/u/25097375/thaiWitter/Builds/thaiWitter3.app.zip'
   homepage 'https://tw3.herokuapp.com/'
+  license :unknown
 
   app 'thaiWitter3.app'
 end

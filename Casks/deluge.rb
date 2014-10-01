@@ -4,6 +4,7 @@ class Deluge < Cask
 
   url "http://download.deluge-torrent.org/mac_osx/Deluge.app.#{version}-3.x86.tbz2"
   homepage 'http://deluge-torrent.org/'
+  license :unknown
 
   app 'Deluge.app'
 end

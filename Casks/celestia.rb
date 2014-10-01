@@ -4,6 +4,7 @@ class Celestia < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/celestia/celestia-osx-#{version}.dmg"
   homepage 'http://sourceforge.net/projects/celestia'
+  license :oss
 
   app 'Celestia.app'
 end

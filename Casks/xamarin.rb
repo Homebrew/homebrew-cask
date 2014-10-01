@@ -4,6 +4,7 @@ class Xamarin < Cask
 
   url 'http://download.xamarin.com/Installer/Mac/XamarinInstaller.dmg'
   homepage 'http://xamarin.com/platform'
+  license :unknown
 
   caveats do
     puts 'This app requires the JRE (Java Runtime Environment) to be installed'

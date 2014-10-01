@@ -4,6 +4,7 @@ class Omnifocus < Cask
 
   url 'http://www.omnigroup.com/download/latest/omnifocus'
   homepage 'http://www.omnigroup.com/products/omnifocus/'
+  license :unknown
 
   app 'OmniFocus.app'
   zap :delete => [

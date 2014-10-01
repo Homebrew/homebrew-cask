@@ -5,6 +5,7 @@ class Tickets < Cask
   url 'https://www.irradiatedsoftware.com/download/Tickets.zip'
   appcast 'http://www.irradiatedsoftware.com/updates/profiles/tickets.php'
   homepage 'http://www.irradiatedsoftware.com/tickets/'
+  license :unknown
 
   app 'Tickets.app'
 end

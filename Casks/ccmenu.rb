@@ -5,6 +5,7 @@ class Ccmenu < Cask
   url "https://downloads.sourceforge.net/project/ccmenu/CCMenu/#{version}/ccmenu-#{version}-b.dmg"
   appcast 'http://ccmenu.sourceforge.net/update-stable.xml'
   homepage 'http://ccmenu.sourceforge.net/'
+  license :oss
 
   app 'CCMenu.app'
 end

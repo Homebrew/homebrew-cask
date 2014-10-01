@@ -4,6 +4,7 @@ class Quicknfo < Cask
 
   url "https://github.com/The-Master777/QuickNFO/releases/download/v#{version}/QuickNFO.qlgenerator.zip"
   homepage 'https://github.com/planbnet/QuickNFO'
+  license :oss
 
   qlplugin 'QuickNFO.qlgenerator'
 end

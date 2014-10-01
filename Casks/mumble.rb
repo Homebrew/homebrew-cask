@@ -4,6 +4,7 @@ class Mumble < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/mumble/Mumble-#{version}.dmg"
   homepage 'http://mumble.sourceforge.net'
+  license :oss
 
   app 'Mumble.app'
 end

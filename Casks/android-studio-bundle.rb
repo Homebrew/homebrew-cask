@@ -4,6 +4,7 @@ class AndroidStudioBundle < Cask
 
   url 'https://dl.google.com/android/studio/install/0.8.6/android-studio-bundle-135.1339820-mac.dmg'
   homepage 'http://developer.android.com/sdk/installing/studio.html'
+  license :unknown
 
   app 'Android Studio.app'
 

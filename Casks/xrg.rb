@@ -4,6 +4,7 @@ class Xrg < Cask
 
   url "http://download.gauchosoft.com/xrg/XRG-release-#{version}.zip"
   homepage 'http://www.gauchosoft.com/Products/XRG/'
+  license :unknown
 
   app 'XRG.app'
 end

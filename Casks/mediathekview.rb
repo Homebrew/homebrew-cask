@@ -4,6 +4,7 @@ class Mediathekview < Cask
 
   url "https://downloads.sourceforge.net/project/zdfmediathk/Mediathek/Mediathek%20#{version}/MediathekView_#{version}_OSX.dmg"
   homepage 'http://sourceforge.net/projects/zdfmediathk/'
+  license :oss
 
   app 'MediathekView.app'
 end

@@ -5,6 +5,7 @@ class Money < Cask
   url "http://download.jumsoft.com/Applications/Money/Money_#{version}.zip"
   appcast 'http://www.jumsoft.com/downloads/updates/money4.rss'
   homepage 'http://www.jumsoft.com/money/'
+  license :unknown
 
   app 'Money.app'
 end

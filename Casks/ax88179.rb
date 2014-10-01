@@ -1,5 +1,6 @@
 class Ax88179 < Cask
   homepage 'http://www.asix.com.tw/products.php?op=pItemdetail&PItemID=131;71;112&PLine=71'
+  license :unknown
 
   version '2.2.0_20140724'
   basename = "AX88179_178A_Macintosh_10.6_to_10.10_Driver_Installer_v#{version}"

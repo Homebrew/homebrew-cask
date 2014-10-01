@@ -4,6 +4,7 @@ class Clarify < Cask
 
   url 'http://www.clarify-it.com/download/mac/Clarify.dmg'
   homepage 'http://www.clarify-it.com/'
+  license :unknown
 
   app 'Clarify.app'
 end

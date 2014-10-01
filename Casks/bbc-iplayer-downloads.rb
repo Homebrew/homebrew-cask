@@ -4,6 +4,7 @@ class BbcIplayerDownloads < Cask
 
   url 'https://www.bbc.co.uk/iplayer/dm/downloads/mac/latest'
   homepage 'http://www.bbc.co.uk/iplayer/install'
+  license :unknown
 
   app 'BBC iPlayer Downloads.app'
 end

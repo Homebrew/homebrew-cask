@@ -4,6 +4,7 @@ class ProgrammerDvorak < Cask
 
   url 'http://www.kaufmann.no/downloads/macos/ProgrammerDvorak-1_2b9.pkg.zip'
   homepage 'http://kaufmann.no/roland/dvorak/'
+  license :unknown
 
   pkg 'Programmer Dvorak v1.2.pkg'
   uninstall :pkgutil => 'com.apple.keyboardlayout.Programmer Dvorak',

@@ -1,5 +1,6 @@
 class Reaper < Cask
   homepage 'http://www.reaper.fm/'
+  license :unknown
   version '4.71'
 
   if Hardware::CPU.is_32_bit?

@@ -4,6 +4,7 @@ class Kvirc < Cask
 
   url "http://kvirc.tradebit.com/#{version}/binary/osx/KVIrc-#{version}-Equilibrium.dmg"
   homepage 'http://www.kvirc.net'
+  license :unknown
 
   app 'KVIrc.app'
 end

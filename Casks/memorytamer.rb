@@ -4,6 +4,7 @@ class Memorytamer < Cask
 
   url "https://memorytamer.s3.amazonaws.com/MemoryTamer-#{version}.zip"
   homepage 'http://www.memorytamer.com/'
+  license :unknown
 
   app 'MemoryTamer.app'
 end

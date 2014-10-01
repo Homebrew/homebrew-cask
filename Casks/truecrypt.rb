@@ -4,6 +4,7 @@ class Truecrypt < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/truecrypt/TrueCrypt-#{version}-Mac-OS-X.dmg"
   homepage 'http://truecrypt.org/'
+  license :oss
 
   pkg "TrueCrypt #{version}.mpkg"
   caveats do

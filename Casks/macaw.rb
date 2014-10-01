@@ -5,6 +5,7 @@ class Macaw < Cask
   url "http://download.macaw.co/#{version}/Macaw#{version}.dmg"
   appcast 'http://download.macaw.co/appcast.xml'
   homepage 'http://macaw.co/'
+  license :unknown
 
   app 'Macaw.app'
 end

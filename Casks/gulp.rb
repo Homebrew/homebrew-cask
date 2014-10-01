@@ -4,6 +4,7 @@ class Gulp < Cask
 
   url "https://github.com/sindresorhus/gulp-app/releases/download/#{version}/gulp.app.zip"
   homepage 'https://github.com/sindresorhus/gulp-app'
+  license :oss
 
   app 'gulp.app'
 end

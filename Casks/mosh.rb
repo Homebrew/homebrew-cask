@@ -4,6 +4,7 @@ class Mosh < Cask
 
   url "https://mosh.mit.edu/mosh-#{version}-3.pkg"
   homepage 'http://mosh.mit.edu/'
+  license :unknown
 
   pkg "mosh-#{version}-3.pkg"
   uninstall :pkgutil => 'edu.mit.mosh.mosh.pkg'

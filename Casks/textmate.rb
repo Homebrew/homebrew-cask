@@ -4,6 +4,7 @@ class Textmate < Cask
 
   url 'https://api.textmate.org/downloads/release'
   homepage 'http://macromates.com/'
+  license :unknown
 
   app 'TextMate.app'
   binary 'TextMate.app/Contents/Resources/mate'

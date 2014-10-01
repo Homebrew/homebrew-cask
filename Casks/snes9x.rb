@@ -4,6 +4,7 @@ class Snes9x < Cask
 
   url "http://files.ipherswipsite.com/snes9x/snes9x-#{version}-macosx-113.dmg.gz"
   homepage 'http://www.snes9x.com/'
+  license :unknown
   nested_container "snes9x-#{version}"
 
   app 'Snes9x.app'

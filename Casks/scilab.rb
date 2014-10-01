@@ -4,6 +4,7 @@ class Scilab < Cask
 
   url "http://www.scilab.org/download/#{version}/scilab-#{version}-x86_64.dmg"
   homepage 'https://www.scilab.org'
+  license :unknown
 
   app "scilab-#{version}.app"
 end

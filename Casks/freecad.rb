@@ -4,6 +4,7 @@ class Freecad < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/free-cad/FreeCAD-#{version}_osx_x64.zip"
   homepage 'http://sourceforge.net/projects/free-cad/'
+  license :oss
 
   app "FreeCAD-#{version}_osx_x64/FreeCAD.app"
 end

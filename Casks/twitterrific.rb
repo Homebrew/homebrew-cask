@@ -5,6 +5,7 @@ class Twitterrific < Cask
   url "https://iconfactory.com/assets/software/twitterrific/Twitterrific-#{version}.zip"
   appcast 'http://iconfactory.com/appcasts/Twitterrific/appcast.xml'
   homepage 'http://twitterrific.com/mac'
+  license :unknown
 
   app 'Twitterrific.app'
   zap :delete => '~/Library/Application Support/Twitterrific'

@@ -4,6 +4,7 @@ class Orange < Cask
 
   url "http://orange.biolab.si/download/Orange-#{version}.dmg"
   homepage 'http://orange.biolab.si/'
+  license :unknown
 
   app 'Orange.app'
 end

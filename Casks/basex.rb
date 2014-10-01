@@ -4,6 +4,7 @@ class Basex < Cask
 
   url "http://files.basex.org/releases/#{version}/BaseX781.app.zip"
   homepage 'http://basex.org/home/'
+  license :unknown
 
   app 'BaseX.app'
 end

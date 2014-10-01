@@ -5,6 +5,7 @@ class Qqmusic < Cask
 
   url "http://dldir1.qq.com/music/clntupate/QQMusicForMacV#{version}.dmg"
   homepage 'http://y.qq.com'
+  license :unknown
 
   app 'QQ音乐.app'
 end

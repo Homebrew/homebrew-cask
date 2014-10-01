@@ -4,6 +4,7 @@ class DwarfFortress < Cask
 
   url 'http://www.bay12games.com/dwarves/df_40_12_osx.tar.bz2'
   homepage 'http://www.bay12games.com/dwarves/'
+  license :unknown
 
   # todo: should this be
   #

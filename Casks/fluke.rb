@@ -4,6 +4,7 @@ class Fluke < Cask
 
   url "https://flukeformac.googlecode.com/files/Fluke_#{version}.zip"
   homepage 'https://code.google.com/p/flukeformac/'
+  license :oss
 
   pkg 'Fluke_0.2.5.pkg'
   uninstall :script => { :executable => 'Uninstall Fluke.tool' },

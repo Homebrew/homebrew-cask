@@ -4,6 +4,7 @@ class Mi < Cask
 
   url "http://www.mimikaki.net/download/mi#{version}.dmg"
   homepage 'http://www.mimikaki.net/'
+  license :unknown
 
   app 'mi.app'
 end

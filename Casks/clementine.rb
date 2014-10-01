@@ -5,6 +5,7 @@ class Clementine < Cask
   url "https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg"
   appcast 'https://clementine-data.appspot.com/sparkle'
   homepage 'http://www.clementine-player.org/'
+  license :oss
 
   app 'clementine.app'
   zap :delete => '~/Library/Preferences/org.clementine-player.Clementine.plist'

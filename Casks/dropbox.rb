@@ -4,6 +4,7 @@ class Dropbox < Cask
 
   url 'https://www.dropbox.com/download?plat=mac&full=1'
   homepage 'https://www.dropbox.com/'
+  license :unknown
 
   app 'Dropbox.app'
 end

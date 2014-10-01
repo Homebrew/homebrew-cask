@@ -5,6 +5,7 @@ class Hedgewars < Cask
   url "http://download.gna.org/hedgewars/Hedgewars-#{version}-3.dmg"
   appcast 'http://www.hedgewars.org/download/appcast.xml'
   homepage 'http://hedgewars.org'
+  license :unknown
 
   app 'Hedgewars.app'
 end

@@ -4,6 +4,7 @@ class Wavtap < Cask
 
   url "https://github.com/downloads/pje/WavTap/WavTap%20#{version}.pkg"
   homepage 'https://github.com/pje/wavtap'
+  license :oss
 
   pkg "WavTap #{version}.pkg"
   uninstall :pkgutil => 'com.wavtap.*', :kext => 'com.wavtap.driver.WavTap'

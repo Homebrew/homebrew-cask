@@ -4,6 +4,7 @@ class Corsixth < Cask
 
   url "https://github.com/CorsixTH/CorsixTH/releases/download/v#{version}/CorsixTH-#{version}-OSX.dmg"
   homepage 'http://th.corsix.org'
+  license :oss
 
   app 'CorsixTH.app'
 end

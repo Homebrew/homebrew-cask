@@ -5,6 +5,7 @@ class Hermes < Cask
   url "https://s3.amazonaws.com/alexcrichton-hermes/Hermes-#{version}.zip"
   appcast 'http://hermesapp.org/versions.xml'
   homepage 'http://hermesapp.org/'
+  license :unknown
 
   app 'Hermes.app'
 end

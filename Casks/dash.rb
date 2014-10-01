@@ -5,6 +5,7 @@ class Dash < Cask
   url 'http://kapeli.com/Dash.zip'
   appcast 'http://kapeli.com/Dash.xml'
   homepage 'http://kapeli.com/dash'
+  license :unknown
 
   app 'Dash.app'
 

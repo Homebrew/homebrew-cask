@@ -4,6 +4,7 @@ class Kompozer < Cask
 
   url "https://downloads.sourceforge.net/project/kompozer/current/#{version}/macosx/kompozer-#{version}.en-US.mac-universal.dmg"
   homepage 'http://www.kompozer.net/'
+  license :oss
 
   app 'KompoZer.app'
 end

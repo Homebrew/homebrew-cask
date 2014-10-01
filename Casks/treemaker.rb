@@ -4,6 +4,7 @@ class Treemaker < Cask
 
   url 'http://www.langorigami.com/science/computational/treemaker/TreeMaker.dmg'
   homepage 'http://www.langorigami.com/science/computational/treemaker/treemaker.php'
+  license :unknown
 
   app 'TreeMaker 5.app'
 end

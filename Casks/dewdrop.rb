@@ -5,6 +5,7 @@ class Dewdrop < Cask
   url "http://dewdrop.dangelov.com/binaries/DewdropClient-#{version}-Mac.tar.gz"
   appcast 'http://dewdrop.dangelov.com/mac-appcast/updates.xml'
   homepage 'http://dewdrop.dangelov.com/'
+  license :oss
 
   app 'Dewdrop.app'
 

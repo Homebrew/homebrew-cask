@@ -5,6 +5,7 @@ class Visualack < Cask
   url "https://kjkpub.s3.amazonaws.com/vack/VisualAck-#{version}.zip"
   appcast 'https://kjkpub.s3.amazonaws.com/vack/appcast.xml'
   homepage 'http://blog.kowalczyk.info/software/vack/'
+  license :unknown
 
   app 'VisualAck.app'
 end

@@ -4,6 +4,7 @@ class Id3Editor < Cask
 
   url "http://www.pa-software.com/release/ID3Editor.ub.#{version}.dmg"
   homepage 'http://www.pa-software.com/id3editor/'
+  license :unknown
 
   app 'ID3 Editor.app'
 end

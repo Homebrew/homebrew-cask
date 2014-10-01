@@ -4,6 +4,7 @@ class Provisionql < Cask
 
   url "https://github.com/ealeksandrov/ProvisionQL/releases/download/#{version}/ProvisionQL.zip"
   homepage 'https://github.com/ealeksandrov/ProvisionQL'
+  license :oss
 
   qlplugin 'ProvisionQL.qlgenerator'
 end

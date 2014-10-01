@@ -4,6 +4,7 @@ class Mpv < Cask
 
   url "https://github.com/mpv-player/mpv/releases/download/v#{version}/mpv_#{version}_mac.tar.bz2"
   homepage 'http://mpv.io/'
+  license :oss
 
   app 'mpv.app'
   binary 'mpv.app/Contents/MacOS/mpv'

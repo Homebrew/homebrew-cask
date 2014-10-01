@@ -4,6 +4,7 @@ class MonotypeSkyfonts < Cask
 
   url "http://cdn1.skyfonts.com/client/Monotype_SkyFonts_Mac64_#{version}.dmg.zip"
   homepage 'http://www.fonts.com/web-fonts/google'
+  license :unknown
 
   nested_container "Monotype_SkyFonts_Mac64_#{version}.dmg"
   app 'Monotype Skyfonts.app'

@@ -3,6 +3,7 @@ class MacupdateDesktop < Cask
   sha256 '1aa04e0bec920f28af5417a2b875e40af832d5303a29dca27e527e30c4db42f5'
 
   homepage 'https://www.macupdate.com/desktop'
+  license :unknown
   url "http://dl.macupdate.com/MacUpdateDesktop#{version}.zip"
   appcast 'https://www.macupdate.com/desktop/updates.xml'
 

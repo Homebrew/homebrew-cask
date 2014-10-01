@@ -4,6 +4,7 @@ class Torustrooper < Cask
 
   url 'https://workram.com/downloads.php?f=TorusTrooper', :referer => 'https://workram.com/games'
   homepage 'http://workram.com/games/'
+  license :unknown
 
   app 'TorusTrooper.app'
 end

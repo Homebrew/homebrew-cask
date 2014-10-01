@@ -5,6 +5,7 @@ class Platypus < Cask
   url "http://sveinbjorn.org/files/software/platypus/platypus#{version}.zip"
   appcast 'http://www.sveinbjorn.org/files/appcasts/PlatypusAppcast.xml'
   homepage 'http://sveinbjorn.org/platypus'
+  license :unknown
 
   app "Platypus-#{version}/Platypus.app"
 end

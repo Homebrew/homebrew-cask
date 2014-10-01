@@ -4,6 +4,7 @@ class Teamviz < Cask
 
   url "http://www.teamviz.com/d/TeamViz.#{version}.dmg"
   homepage 'http://www.teamviz.com/'
+  license :unknown
 
   app 'TeamViz.app'
 end

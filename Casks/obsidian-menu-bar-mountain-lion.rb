@@ -4,6 +4,7 @@ class ObsidianMenuBarMountainLion < Cask
 
   url "http://www.obsidianmenubar.com/downloads/Obsidian%20Menu%20Bar%20#{version}.dmg"
   homepage 'http://www.obsidianmenubar.com'
+  license :unknown
 
   pkg 'Obsidian Menu Bar.pkg'
   # uninstall :script => 'Restore OS X Menu Bar.pkg'

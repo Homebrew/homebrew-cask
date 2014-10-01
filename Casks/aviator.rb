@@ -4,6 +4,7 @@ class Aviator < Cask
 
   url 'https://updates.aviatorbrowser.com/Aviator.dmg'
   homepage 'https://www.whitehatsec.com/aviator/'
+  license :unknown
 
   app 'Aviator.app'
 end

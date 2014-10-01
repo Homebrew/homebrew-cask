@@ -5,6 +5,7 @@ class Flux < Cask
   url 'https://justgetflux.com/mac/Flux.zip'
   appcast 'https://justgetflux.com/mac/macflux.xml'
   homepage 'http://justgetflux.com'
+  license :unknown
 
   app 'Flux.app'
 

@@ -4,6 +4,7 @@ class Hippoconnect < Cask
 
   url 'http://hipporemote.com/HippoConnect/mac/HippoConnect.zip'
   homepage 'http://hipporemote.com/'
+  license :unknown
 
   app 'HippoConnect.app'
 end

@@ -5,6 +5,7 @@ class Fairmount < Cask
   url "https://github.com/downloads/pmetzger/Fairmount/Fairmount-#{version}.dmg"
   appcast 'http://www.example.com/sparkle/fairmount/checkupdate.php'
   homepage 'https://github.com/BoxOfSnoo/Fairmount'
+  license :oss
 
   app 'Fairmount.app'
 end

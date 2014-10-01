@@ -4,6 +4,7 @@ class Gisto < Cask
 
   url "http://download.gistoapp.com/Gisto-#{version}-OSX_x86.dmg"
   homepage 'http://www.gistoapp.com/'
+  license :unknown
 
   app 'Gisto.app'
 end

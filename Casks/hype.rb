@@ -4,6 +4,7 @@ class Hype < Cask
 
   url 'http://tumult.com/hype/download/Hype.zip'
   homepage 'http://tumult.com/hype/'
+  license :unknown
 
   app 'Hype2.app'
 end

@@ -4,6 +4,7 @@ class Namely < Cask
 
   url 'http://amarsagoo.info/namely/Namely.dmg'
   homepage 'http://amarsagoo.info/namely'
+  license :unknown
 
   app 'Namely.app'
 end

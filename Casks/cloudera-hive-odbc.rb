@@ -4,6 +4,7 @@ class ClouderaHiveOdbc < Cask
 
   url "https://downloads.cloudera.com/connectors/hive-#{version}.1006/MacOSX/ClouderaHiveODBC.dmg"
   homepage 'http://www.cloudera.com'
+  license :unknown
 
   pkg 'ClouderaHiveODBC.pkg'
   uninstall :pkgutil => 'cloudera.hiveodbc'

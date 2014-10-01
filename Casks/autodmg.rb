@@ -4,6 +4,7 @@ class Autodmg < Cask
 
   url "https://github.com/MagerValp/AutoDMG/releases/download/v#{version}/AutoDMG-#{version}.dmg"
   homepage 'https://github.com/MagerValp/AutoDMG'
+  license :oss
 
   app 'AutoDMG.app'
 end

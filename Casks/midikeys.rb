@@ -4,6 +4,7 @@ class Midikeys < Cask
 
   url "http://www.manyetas.com/creed/MidiKeys_#{version}.zip"
   homepage 'http://www.manyetas.com/creed/midikeys.html'
+  license :unknown
 
   app 'MidiKeys/MidiKeys.app'
 end

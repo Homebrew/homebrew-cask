@@ -7,6 +7,7 @@ class Geppetto < Cask
     sha256 '7a09c823cea9900cb51d009f47fab69569e1d8115c6326f3e91db62714480d69'
   end
   homepage 'http://puppetlabs.github.io/geppetto/'
+  license :oss
   version '4.2.0'
   app 'geppetto/Geppetto.app'
 end

@@ -4,6 +4,7 @@ class Virustotaluploader < Cask
 
   url "https://www.virustotal.com/static/bin/VirusTotalUploader_#{version}.dmg"
   homepage 'https://www.virustotal.com/'
+  license :unknown
 
   app 'VirusTotalUploader.app'
 end

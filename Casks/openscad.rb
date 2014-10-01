@@ -4,6 +4,7 @@ class Openscad < Cask
 
   url "http://files.openscad.org/OpenSCAD-#{version}.dmg"
   homepage 'http://www.openscad.org/'
+  license :unknown
 
   app 'OpenSCAD.app'
 end

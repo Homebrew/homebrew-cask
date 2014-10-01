@@ -4,6 +4,7 @@ class SubclassedMnemosyne < Cask
 
   url 'http://www.subclassed.com/download/Mnemosyne.zip'
   homepage 'http://www.subclassed.com/apps/mnemosyne/details'
+  license :unknown
 
   app 'Mnemosyne.app'
 end

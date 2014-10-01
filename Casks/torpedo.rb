@@ -4,6 +4,7 @@ class Torpedo < Cask
 
   url 'https://usetorpedo.com/app/mac/download'
   homepage 'https://usetorpedo.com'
+  license :unknown
 
   app 'Torpedo.app'
 end

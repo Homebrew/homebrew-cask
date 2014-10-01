@@ -5,6 +5,7 @@ class LingonX < Cask
   url 'http://www.peterborgapps.com/downloads/LingonX.zip'
   appcast 'http://www.peterborgapps.com/updates/lingonx-appcast.xml'
   homepage 'http://www.peterborgapps.com/lingon/'
+  license :unknown
 
   app 'Lingon X.app'
 end

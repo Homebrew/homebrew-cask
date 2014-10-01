@@ -5,6 +5,7 @@ class JenkinsMenu < Cask
   url "https://bitbucket.org/qvacua/qvacua/downloads/JenkinsMenu-#{version}.zip"
   appcast 'http://qvacua.com/jenkinsmenu/appcast.xml'
   homepage 'http://qvacua.com'
+  license :oss
 
   app 'Jenkins Menu.app'
 end

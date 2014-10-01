@@ -4,6 +4,7 @@ class Dolphin < Cask
 
   url "https://dl-mirror.dolphin-emu.org/#{version}/dolphin-#{version}.dmg"
   homepage 'http://www.dolphin-emu.org/'
+  license :unknown
 
   app 'Dolphin.app'
   zap :delete => [

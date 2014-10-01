@@ -5,6 +5,7 @@ class Xslimmer < Cask
   url 'http://latenitesoft.com/xslimmer/download/Xslimmer_1.9.dmg'
   appcast 'http://www.xslimmer.com/releases.xml'
   homepage 'http://latenitesoft.com/xslimmer/'
+  license :unknown
 
   app 'Xslimmer.app'
 end

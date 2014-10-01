@@ -4,6 +4,7 @@ class Skreenics < Cask
 
   url "https://skreenics.googlecode.com/files/Screeniks-#{version}.zip"
   homepage 'https://code.google.com/p/skreenics/'
+  license :oss
 
   app 'Skreenics.app'
 end

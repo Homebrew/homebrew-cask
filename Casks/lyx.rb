@@ -4,6 +4,7 @@ class Lyx < Cask
 
   url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt4-x86_64-cocoa.dmg"
   homepage 'http://www.lyx.org'
+  license :unknown
 
   app 'LyX.app'
 end

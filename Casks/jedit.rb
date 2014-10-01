@@ -4,6 +4,7 @@ class Jedit < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/jedit/jedit#{version}install.dmg"
   homepage 'http://www.jedit.org'
+  license :oss
 
   app 'jEdit.app'
 end

@@ -4,6 +4,7 @@ class Ormr < Cask
 
   url 'http://getormr.com/dn/Ormr.pkg'
   homepage 'http://getormr.com/home/'
+  license :unknown
 
   pkg 'Ormr.pkg'
   uninstall :pkgutil => 'com.sadcatsoft.ormr.Ormr.pkg'

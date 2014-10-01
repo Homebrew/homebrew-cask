@@ -4,6 +4,7 @@ class WdSecurity < Cask
 
   url 'http://download.wdc.com/wdapp/WD_Security_For_Web_Mac_1_0_8_2.zip'
   homepage 'http://www.wdc.com/en/'
+  license :unknown
 
   app 'WD Security.app'
 end

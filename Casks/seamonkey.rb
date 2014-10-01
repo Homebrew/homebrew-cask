@@ -4,6 +4,7 @@ class Seamonkey < Cask
 
   url "https://download.mozilla.org/?product=seamonkey-#{version}&os=osx&lang=en-US"
   homepage 'http://www.seamonkey-project.org/'
+  license :unknown
 
   app 'SeaMonkey.app'
 end

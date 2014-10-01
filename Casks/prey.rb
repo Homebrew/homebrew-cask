@@ -4,6 +4,7 @@ class Prey < Cask
 
   url "https://preyproject.com/releases/current/prey-#{version}-mac-batch.mpkg.zip"
   homepage 'https://preyproject.com'
+  license :unknown
 
   pkg "prey-#{version}-mac-batch.mpkg"
   uninstall :pkgutil => 'com.forkhq.prey'

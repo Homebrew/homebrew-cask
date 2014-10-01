@@ -4,6 +4,7 @@ class Zeroad < Cask
 
   url "http://releases.wildfiregames.com/0ad-#{version}-osx64.dmg"
   homepage 'http://www.play0ad.com/'
+  license :unknown
 
   app '0ad.app'
 end

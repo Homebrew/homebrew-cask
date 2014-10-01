@@ -5,6 +5,7 @@ class Dockmod < Cask
   url "http://spyresoft.com/dockmod/download.php?version=#{version}"
   appcast 'http://spyresoft.com/dockmod/updates.xml'
   homepage 'http://spyresoft.com/dockmod/'
+  license :unknown
 
   app 'DockMod.app'
 end

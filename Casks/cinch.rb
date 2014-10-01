@@ -5,6 +5,7 @@ class Cinch < Cask
   url 'https://www.irradiatedsoftware.com/download/Cinch.zip'
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/cinch.php'
   homepage 'http://www.irradiatedsoftware.com/cinch/'
+  license :unknown
 
   app 'Cinch.app'
 end

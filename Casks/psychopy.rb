@@ -4,6 +4,7 @@ class Psychopy < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/psychpy/StandalonePsychoPy-#{version}-OSX.dmg"
   homepage 'http://www.psychopy.org/'
+  license :oss
 
   app 'PsychoPy2.app'
 end

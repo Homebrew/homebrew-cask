@@ -4,6 +4,7 @@ class Knox < Cask
 
   url "https://d13itkw33a7sus.cloudfront.net/dist/K/Knox-#{version}.zip"
   homepage 'https://agilebits.com/knox'
+  license :unknown
 
   app 'Knox.app'
 end

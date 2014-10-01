@@ -5,6 +5,7 @@ class Goagentx < Cask
   url 'https://goagentx.com/files/GoAgentX.dmg'
   appcast 'https://goagentx.com/update/SUAppcast.xml'
   homepage 'http://goagentx.com/'
+  license :unknown
 
   app 'GoAgentX.app'
 end

@@ -4,6 +4,7 @@ class VineServer < Cask
 
   url "http://www.testplant.com/downloads/Vine/VineServer#{version}.dmg"
   homepage 'http://www.testplant.com/products/vine/vine-server/'
+  license :unknown
 
   app 'Vine Server.app'
 end

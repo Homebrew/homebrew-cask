@@ -4,6 +4,7 @@ class Fuze < Cask
 
   url 'https://www.fuzemeeting.com/extensions/FuzeMeetingMac.dmg'
   homepage 'https://www.fuzemeeting.com'
+  license :unknown
 
   app 'Fuze.app'
 end

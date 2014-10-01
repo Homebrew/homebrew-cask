@@ -4,6 +4,7 @@ class Gephi < Cask
 
   url "https://launchpad.net/gephi/0.8/0.8.2beta/+download/gephi-#{version}.dmg"
   homepage 'http://gephi.org/'
+  license :unknown
 
   app 'Gephi.app'
 end

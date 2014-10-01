@@ -5,6 +5,7 @@ class Arranger < Cask
   url 'http://bucketomac.de/wp-content/plugins/download-monitor/download.php?id=5'
   appcast 'http://bucketomac.de/appcast/arrangercast.xml'
   homepage 'http://bucketomac.de/arranger/arranger/'
+  license :unknown
 
   app 'Arranger.app'
   caveats 'Note that Arranger also needs access for assistive devices (Accessibility)'

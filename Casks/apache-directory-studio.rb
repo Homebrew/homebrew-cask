@@ -4,6 +4,7 @@ class ApacheDirectoryStudio < Cask
 
   url "http://mirrors.sonic.net/apache/directory/studio/dist/#{version}/ApacheDirectoryStudio-macosx-x86_64-#{version}.dmg"
   homepage 'http://directory.apache.org/studio/'
+  license :unknown
 
   app 'Apache Directory Studio.app'
   zap :delete => '~/.ApacheDirectoryStudio'

@@ -4,6 +4,7 @@ class DefaultFolderX < Cask
 
   url "http://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
   homepage 'http://www.stclairsoft.com/DefaultFolderX'
+  license :unknown
 
   caveats do
     manual_installer 'Default Folder X Installer.app'

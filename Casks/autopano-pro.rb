@@ -4,6 +4,7 @@ class AutopanoPro < Cask
 
   url 'http://download.kolor.com/app/stable/macleopard'
   homepage 'http://www.kolor.com/panorama-software-autopano-pro.html'
+  license :unknown
 
   pkg "Autopano Pro #{version}.pkg"
   uninstall :pkgutil => [

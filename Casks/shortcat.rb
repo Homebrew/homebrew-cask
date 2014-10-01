@@ -5,6 +5,7 @@ class Shortcat < Cask
   url "https://files.shortcatapp.com/v#{version}/Shortcat.zip"
   appcast 'https://shortcatapp.com/updates/appcast.xml'
   homepage 'http://shortcatapp.com/'
+  license :unknown
 
   app 'Shortcat.app'
 end

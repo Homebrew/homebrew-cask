@@ -5,6 +5,7 @@ class Identify < Cask
   url "https://www.macupdate.com/download/33814/iDentifyLite#{version}.zip"
   appcast 'http://dl.dropbox.com/u/1495067/iDentifySparkle/iDentifyAppcast.xml'
   homepage 'http://identify2.arrmihardies.com/'
+  license :unknown
 
   app 'iDentify.app'
 end

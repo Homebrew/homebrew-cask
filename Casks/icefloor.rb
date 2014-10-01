@@ -4,6 +4,7 @@ class Icefloor < Cask
 
   url "http://www.hanynet.com/icefloor-#{version}.zip"
   homepage 'http://www.hanynet.com/icefloor/'
+  license :unknown
 
   nested_container "IceFloor #{version}.dmg"
   app 'IceFloor.app'

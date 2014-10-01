@@ -4,6 +4,7 @@ class IntelHaxm < Cask
 
   url 'https://software.intel.com/sites/default/files/managed/68/45/haxm-macosx_r04.zip'
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
+  license :unknown
 
   nested_container "haxm-macosx_r04/IntelHAXM_#{version}.dmg"
   pkg "IntelHAXM_#{version}.mpkg"

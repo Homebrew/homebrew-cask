@@ -4,6 +4,7 @@ class DiskmakerX < Cask
 
   url 'http://liondiskmaker.com/downloads/DiskMakerX.dmg'
   homepage 'http://diskmakerx.com/'
+  license :unknown
 
   app 'DiskMaker X.app'
 end

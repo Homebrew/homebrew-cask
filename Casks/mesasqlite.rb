@@ -4,6 +4,7 @@ class Mesasqlite < Cask
 
   url 'http://www.desertsandsoftware.com/DEMOS/MesaSQLite408.zip'
   homepage 'http://www.desertsandsoftware.com'
+  license :unknown
 
   app 'MesaSQLite.app'
 end

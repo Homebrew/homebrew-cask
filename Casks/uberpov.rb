@@ -4,6 +4,7 @@ class Uberpov < Cask
 
   url 'http://megapov.inetart.net/uberpov_mac/downloads/Uberpov_Mac_r3.zip'
   homepage 'http://megapov.inetart.net/uberpov_mac/index.html'
+  license :unknown
 
   app 'Uberpov_Mac/UberPOV.app'
   caveats do <<-EOS.undent

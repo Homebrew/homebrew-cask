@@ -4,6 +4,7 @@ class NavicatForMysql < Cask
 
   url 'http://download.navicat.com/download/navicat110_mysql_en.dmg'
   homepage 'http://www.navicat.com/products/navicat-for-mysql'
+  license :unknown
 
   app 'Navicat for MySQL.app'
 end

@@ -9,6 +9,7 @@ class EclipseJee < Cask
   end
 
   homepage 'http://eclipse.org/'
+  license :unknown
 
   app 'eclipse/Eclipse.app'
 end

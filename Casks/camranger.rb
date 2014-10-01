@@ -4,6 +4,7 @@ class Camranger < Cask
 
   url "http://www.camranger.com/downloadFiles/CamRanger_#{version.gsub('.', '_')}.zip"
   homepage 'http://www.camranger.com/downloads/#fbox_5594'
+  license :unknown
 
   app "#{version}/CamRanger.app"
 end

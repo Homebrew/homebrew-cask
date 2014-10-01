@@ -4,6 +4,7 @@ class Spideroak < Cask
 
   url 'https://spideroak.com/getbuild?platform=mac'
   homepage 'http://spideroak.com'
+  license :unknown
 
   app 'SpiderOak.app'
 end

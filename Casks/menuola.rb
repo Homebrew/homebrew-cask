@@ -5,6 +5,7 @@ class Menuola < Cask
   url 'http://geocom.co.nz/downloads/Menuolav2.dmg.zip'
   appcast 'http://www.geocom.co.nz/menuola.xml'
   homepage 'http://www.geocom.co.nz'
+  license :unknown
 
   nested_container 'Menuola.dmg'
   app 'Menuola.app'

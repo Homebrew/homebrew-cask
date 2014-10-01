@@ -4,6 +4,7 @@ class Comicbookloversync < Cask
 
   url 'https://www.bitcartel.com/downloads/comicbookloversync.zip'
   homepage 'http://www.bitcartel.com/comicbooklover'
+  license :unknown
 
   app 'ComicBookLoverSync.app'
 end

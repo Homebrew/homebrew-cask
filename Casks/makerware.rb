@@ -4,6 +4,7 @@ class Makerware < Cask
 
   url "https://s3.amazonaws.com/downloads.makerbot.com/makerware/MakerWare%20Bundle%20of%20Awesome%20#{version}.dmg"
   homepage 'http://www.makerbot.com/makerware/'
+  license :unknown
 
   pkg "MakerWare Bundle of Awesome #{version}.pkg"
   uninstall :pkgutil => 'com.makerbot.*'

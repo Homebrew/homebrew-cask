@@ -4,6 +4,7 @@ class Twine < Cask
 
   url "http://twinery.org/downloads/twine_#{version}_osx.zip"
   homepage 'http://twinery.org/'
+  license :unknown
 
   app 'Twine.app'
 end

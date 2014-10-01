@@ -5,6 +5,7 @@ class CurseClient < Cask
   url "http://addons.cursecdn.com/files/595/169/Curse_Client-#{version}.dmg"
   appcast 'http://www.curseforge.com/projects/curse-client-osx/sparkle.xml?type=b'
   homepage 'http://www.curse.com/client'
+  license :unknown
 
   app 'Curse Client.app'
 end

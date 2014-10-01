@@ -4,6 +4,7 @@ class Frostwire < Cask
 
   url "http://dl.frostwire.com/frostwire/#{version}/frostwire-#{version}.dmg"
   homepage 'http://www.frostwire.com'
+  license :unknown
 
   app 'FrostWire.app'
 end

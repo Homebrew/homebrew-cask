@@ -4,6 +4,7 @@ class Pivotalbooster < Cask
 
   url "http://pivotalbooster.com/downloads/releases/#{version}/PivotalBooster_#{version}.dmg"
   homepage 'http://pivotalbooster.com/'
+  license :unknown
 
   app 'PivotalBooster.app'
 end

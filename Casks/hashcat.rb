@@ -4,6 +4,7 @@ class Hashcat < Cask
 
   url "https://hashcat.net/files/hashcat-#{version}.7z"
   homepage 'https://hashcat.net/hashcat/'
+  license :unknown
 
   depends_on :formula => 'unar'
 

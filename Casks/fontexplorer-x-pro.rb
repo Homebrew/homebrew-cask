@@ -4,6 +4,7 @@ class FontexplorerXPro < Cask
 
   url 'http://fex.linotype.com/download/mac/FontExplorerXPro402.dmg'
   homepage 'http://www.fontexplorerx.com/'
+  license :unknown
 
   app 'FontExplorer X Pro.app'
 end

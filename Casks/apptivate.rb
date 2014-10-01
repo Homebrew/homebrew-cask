@@ -4,6 +4,7 @@ class Apptivate < Cask
 
   url 'http://www.apptivateapp.com/resources/Apptivate.app.zip'
   homepage 'http://www.apptivateapp.com'
+  license :unknown
 
   app 'Apptivate.app'
 end

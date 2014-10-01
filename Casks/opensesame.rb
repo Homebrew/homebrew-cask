@@ -9,5 +9,6 @@ class Opensesame < Cask
     sha256 '8814da8fe5e638cb7db18b4e8188fc97028bd98f1603ceae006aff13745fc739'
   end
   homepage 'http://osdoc.cogsci.nl/'
+  license :unknown
   app 'opensesame.app'
 end

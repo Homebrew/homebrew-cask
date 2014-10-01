@@ -4,6 +4,7 @@ class Phpstorm < Cask
 
   url "http://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
   homepage 'http://www.jetbrains.com/phpstorm/'
+  license :unknown
 
   app 'PhpStorm.app'
 

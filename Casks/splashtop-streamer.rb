@@ -4,6 +4,7 @@ class SplashtopStreamer < Cask
 
   url "https://d17kmd0va0f0mp.cloudfront.net/mac/Splashtop_Streamer_MAC_v#{version}.dmg"
   homepage 'http://www.splashtop.com/downloads'
+  license :unknown
 
   pkg 'Splashtop Streamer.pkg'
   uninstall :pkgutil => 'com.splashtop.splashtopStreamer.*'

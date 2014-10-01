@@ -4,6 +4,7 @@ class MicrosoftIntellitype < Cask
 
   url 'http://download.microsoft.com/download/B/1/0/B109F931-70E2-425F-8681-EAAB75845AB8/Microsoft-Desktop_d305.dmg'
   homepage 'http://www.microsoft.com/hardware/en-us/keyboards'
+  license :unknown
 
   pkg 'Microsoft Desktop Installer.app/Contents/Resources/Microsoft Desktop.mpkg/Contents/Packages/Microsoft Keyboard.pkg'
 

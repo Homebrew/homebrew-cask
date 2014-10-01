@@ -5,6 +5,7 @@ class Stay < Cask
   url "https://cordlessdog.com/stay/versions/Stay%20#{version}.zip"
   appcast 'http://cordlessdog.com/stay/appcast.xml'
   homepage 'http://cordlessdog.com/stay/'
+  license :unknown
 
   app 'Stay.app'
 end

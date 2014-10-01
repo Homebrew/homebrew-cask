@@ -4,6 +4,7 @@ class SendToKindle < Cask
 
   url "https://s3.amazonaws.com/sendtokindle/SendToKindleForMac-installer-v#{version}.pkg"
   homepage 'http://www.amazon.com/gp/sendtokindle/mac'
+  license :unknown
 
   pkg "SendToKindleForMac-installer-v#{version}.pkg"
   uninstall :launchctl => 'com.amazon.sendtokindle.launcher',

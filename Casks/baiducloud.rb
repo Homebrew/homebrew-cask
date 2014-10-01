@@ -5,6 +5,7 @@ class Baiducloud < Cask
 
   url "http://bcscdn.baidu.com/netdisk/BaiduYun_#{version}.dmg"
   homepage 'http://pan.baidu.com'
+  license :unknown
 
   app '百度云同步盘.app'
 end

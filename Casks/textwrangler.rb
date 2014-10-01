@@ -5,6 +5,7 @@ class Textwrangler < Cask
   url "http://ash.barebones.com/TextWrangler_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/TextWrangler.xml'
   homepage 'http://www.barebones.com/products/textwrangler'
+  license :unknown
 
   app 'TextWrangler.app'
 end

@@ -4,6 +4,7 @@ class Shoes < Cask
 
   url "http://cloud.github.com/downloads/shoes/shoes/shoes-#{version}.dmg"
   homepage 'http://shoesrb.com/'
+  license :oss
 
   app 'Shoes.app'
 end

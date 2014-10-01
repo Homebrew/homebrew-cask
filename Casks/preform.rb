@@ -4,6 +4,7 @@ class Preform < Cask
 
   url 'https://s3.amazonaws.com/FormlabsReleases/Release/1.6/PreForm_1.6_5.dmg'
   homepage 'http://formlabs.com/en/products/preform/'
+  license :unknown
 
   app 'PreForm.app'
 end

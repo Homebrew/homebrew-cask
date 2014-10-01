@@ -4,6 +4,7 @@ class Namebench < Cask
 
   url "https://namebench.googlecode.com/files/namebench-#{version}-Mac_OS_X.dmg"
   homepage 'https://code.google.com/p/namebench/'
+  license :oss
 
   app 'namebench.app'
 end

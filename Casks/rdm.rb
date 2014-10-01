@@ -4,6 +4,7 @@ class Rdm < Cask
 
   url "https://github.com/uglide/RedisDesktopManager/releases/download/0.7.6/redis-desktop-manager-#{version}.dmg"
   homepage 'http://redisdesktop.com'
+  license :oss
 
   app 'rdm.app'
 end

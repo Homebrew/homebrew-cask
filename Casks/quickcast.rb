@@ -5,6 +5,7 @@ class Quickcast < Cask
   url 'https://s3.amazonaws.com/quickcast-app/mac/QuickCast.dmg'
   appcast 'https://s3.amazonaws.com/quickcast-app/mac/appcast.xml'
   homepage 'http://quickcast.io/'
+  license :unknown
 
   app 'QuickCast.app'
 end

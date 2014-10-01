@@ -4,6 +4,7 @@ class Sevenzx < Cask
 
   url "https://www.macupdate.com/download/20526/7zX_#{version}.-5003b6dcbb4d8.dmg"
   homepage 'http://sixtyfive.xmghosting.com/products/7zx/'
+  license :unknown
 
   app '7zX.app'
 end

@@ -4,6 +4,7 @@ class PdExtended < Cask
 
   url "https://downloads.sourceforge.net/project/pure-data/pd-extended/#{version}/Pd-#{version}-extended-macosx105-i386.dmg"
   homepage 'http://puredata.info/downloads/pd-extended'
+  license :oss
 
   app 'Pd-extended.app'
 

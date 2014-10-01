@@ -4,6 +4,7 @@ class Tinkertool < Cask
 
   url 'http://dl.macupdate.com/prod/TinkerTool.dmg'
   homepage 'http://www.bresink.com/osx/TinkerTool.html'
+  license :unknown
 
   app 'TinkerTool.app'
 end

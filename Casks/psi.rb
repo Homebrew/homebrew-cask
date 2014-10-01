@@ -4,6 +4,7 @@ class Psi < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/psi/Psi-#{version}.dmg"
   homepage 'http://psi-im.org/'
+  license :oss
 
   app 'Psi.app'
 end

@@ -5,6 +5,7 @@ class MenucalendarclockIcal < Cask
   url "http://www.objectpark.net/download/MenuCalendarClock-#{version}.dmg.gz"
   nested_container "menucalendarclock-ical-#{version}"
   homepage 'http://www.objectpark.net/en/mcc.html'
+  license :unknown
 
   app 'MenuCalendarClock iCal.app'
 end

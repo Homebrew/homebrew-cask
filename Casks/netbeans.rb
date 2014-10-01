@@ -4,6 +4,7 @@ class Netbeans < Cask
 
   url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-macosx.dmg"
   homepage 'https://netbeans.org/'
+  license :unknown
 
   pkg "NetBeans #{version}.mpkg"
   # Theoretically this uninstall could conflict with a separate GlassFish

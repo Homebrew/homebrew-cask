@@ -4,6 +4,7 @@ class Fpc < Cask
 
   url "https://downloads.sourceforge.net/freepascal/fpc-#{version}.intel-macosx.dmg"
   homepage 'http://www.freepascal.org/'
+  license :oss
 
   pkg "fpc-#{version}rc1.intel-macosx.pkg"
   uninstall :pkgutil => 'org.freepascal.freePascalCompiler262.fpcinst386.pkg'

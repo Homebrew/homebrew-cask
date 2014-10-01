@@ -4,6 +4,7 @@ class DungeonCrawlStoneSoupConsole < Cask
 
   url "https://crawl.develz.org/release/stone_soup-#{version}-console-macosx.zip"
   homepage 'http://crawl.develz.org'
+  license :unknown
 
   app 'Dungeon Crawl Stone Soup - Console.app'
 end

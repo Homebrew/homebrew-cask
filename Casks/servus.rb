@@ -4,6 +4,7 @@ class Servus < Cask
 
   url 'https://servus.io/download'
   homepage 'https://servus.io/'
+  license :unknown
 
   app 'Servus.app'
 end

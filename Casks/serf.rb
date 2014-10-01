@@ -4,6 +4,7 @@ class Serf < Cask
 
   url "https://dl.bintray.com/mitchellh/serf/#{version}_darwin_amd64.zip"
   homepage 'http://www.serfdom.io/'
+  license :unknown
 
   binary 'serf'
 end

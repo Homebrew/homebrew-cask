@@ -4,6 +4,7 @@ class Kugoumusic < Cask
 
   url 'http://macservice.kugou.com/download/KugouMusicForMac.dmg'
   homepage 'http://www.kugou.com'
+  license :unknown
 
   app 'KugouMusic.app'
 end

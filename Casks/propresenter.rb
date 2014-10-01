@@ -5,6 +5,7 @@ class Propresenter < Cask
   url "https://www.renewedvision.com/downloads/ProPresenter5_#{version}_b11499.dmg"
   appcast 'https://www.renewedvision.com/update/ProPresenter5.php'
   homepage 'http://www.renewedvision.com/propresenter.php'
+  license :unknown
 
   app 'ProPresenter 5.app'
 end

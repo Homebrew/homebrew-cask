@@ -4,6 +4,7 @@ class Callnote < Cask
 
   url "http://callnote.kandasoft.com/callnote-premium-install-#{version}.pkg"
   homepage 'http://www.kandasoft.com/home/kanda-apps/skype-call-recorder.html'
+  license :unknown
 
   pkg "callnote-premium-install-#{version}.pkg"
   uninstall :pkgutil => 'callnote-pro'

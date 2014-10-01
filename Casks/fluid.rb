@@ -5,6 +5,7 @@ class Fluid < Cask
   url "http://fluidapp.com/dist/Fluid_#{version}.zip"
   appcast 'http://fluidapp.com/appcast/fluid1.rss'
   homepage 'http://fluidapp.com/'
+  license :unknown
 
   app 'Fluid.app'
 end

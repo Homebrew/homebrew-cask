@@ -4,6 +4,7 @@ class OnliveClient < Cask
 
   url 'https://games.onlive.com/client/mac.pkg'
   homepage 'http://games.onlive.com'
+  license :unknown
 
   pkg 'mac.pkg'
   uninstall :pkgutil => 'com.onlive.OnLiveClient.pkg'

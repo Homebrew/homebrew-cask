@@ -14,6 +14,7 @@ class Golly < Cask
   end
 
   homepage 'http://golly.sourceforge.net/'
+  license :oss
   caveats do
     files_in_usr_local
   end

@@ -4,6 +4,7 @@ class HuntX < Cask
 
   url 'http://huntx.mobilefirst.in/Apps/Hunt%20X.zip'
   homepage 'http://huntx.mobilefirst.in/'
+  license :unknown
 
   app 'Hunt X.app'
 end

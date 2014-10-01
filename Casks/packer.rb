@@ -4,6 +4,7 @@ class Packer < Cask
 
   url "https://dl.bintray.com/mitchellh/packer/packer_#{version}_darwin_amd64.zip"
   homepage 'http://www.packer.io/'
+  license :unknown
 
   binary 'packer'
   binary 'packer-builder-amazon-chroot'

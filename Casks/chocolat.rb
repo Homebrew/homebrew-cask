@@ -5,6 +5,7 @@ class Chocolat < Cask
   url 'https://chocolatapp.com/download'
   appcast 'http://chocolatapp.com/userspace/appcast/appcast_alpha.php'
   homepage 'http://chocolatapp.com/'
+  license :unknown
 
   app 'Chocolat.app'
 end

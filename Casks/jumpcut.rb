@@ -5,6 +5,7 @@ class Jumpcut < Cask
   url "https://downloads.sourceforge.net/project/jumpcut/jumpcut/#{version}/Jumpcut_#{version}.tgz"
   appcast 'http://jumpcut.sf.net/jumpcut.appcast.xml'
   homepage 'http://jumpcut.sourceforge.net/'
+  license :oss
 
   app 'Jumpcut.app'
 end

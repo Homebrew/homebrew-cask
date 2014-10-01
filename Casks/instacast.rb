@@ -4,6 +4,7 @@ class Instacast < Cask
 
   url "http://assets.vemedio.com/software/instacast/Instacast-#{version}.dmg"
   homepage 'http://vemedio.com/products/instacast-mac'
+  license :unknown
 
   app 'Instacast.app'
 end

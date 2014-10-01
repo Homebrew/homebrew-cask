@@ -5,6 +5,7 @@ class SuperOtr < Cask
   url 'http://apfel-a.macbay.de/wordpress/wp-content/plugins/download-monitor/download.php?id=Super-OTR-0.9.6.0b79.zip'
   appcast 'http://apfel-a.macbay.de/software/superotr/appcast-superotr.xml'
   homepage 'http://apfel-a.macbay.de/super-otr/'
+  license :unknown
 
   app 'Super OTR.app'
 end

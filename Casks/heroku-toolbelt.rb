@@ -4,6 +4,7 @@ class HerokuToolbelt < Cask
 
   url 'http://assets.heroku.com/heroku-toolbelt/heroku-toolbelt.pkg'
   homepage 'https://toolbelt.heroku.com/'
+  license :unknown
 
   pkg 'heroku-toolbelt.pkg'
   uninstall :pkgutil => 'com.heroku.toolbelt',

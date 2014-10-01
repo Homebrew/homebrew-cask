@@ -5,6 +5,7 @@ class Timings < Cask
   url "http://mediaatelier.com/Timings/Timings_#{version}.zip"
   appcast 'http://mediaatelier.com/Timings/feed.php'
   homepage 'http://mediaatelier.com/Timings'
+  license :unknown
 
   app 'Timings.app'
 end

@@ -4,6 +4,7 @@ class Baudline < Cask
 
   url "http://www.baudline.com/baudline_#{version}_macosx_universal.dmg"
   homepage 'http://www.baudline.com/'
+  license :unknown
 
   app 'baudline.app'
 end

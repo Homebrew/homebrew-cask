@@ -4,6 +4,7 @@ class AdobeDigitalEditions < Cask
 
   url "http://download.adobe.com/pub/adobe/digitaleditions/ADE_#{version}_Installer.dmg"
   homepage 'http://www.adobe.com/pt/products/digital-editions.html'
+  license :unknown
 
   pkg "Digital Editions #{version} Installer.pkg"
   uninstall :pkgutil => 'com.adobe.adobedigitaleditions.app'

@@ -23,4 +23,5 @@ class Totalspaces < Cask
                           ]
   end
   homepage 'http://totalspaces.binaryage.com/'
+  license :unknown
 end

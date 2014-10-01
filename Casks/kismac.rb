@@ -5,6 +5,7 @@ class Kismac < Cask
   url "http://update.kismacmirror.com/binaries/KisMAC-#{version}.dmg"
   appcast 'http://update.kismac-ng.org/sparkle/profileInfo.php'
   homepage 'http://kismac-ng.org/'
+  license :unknown
 
   app 'KisMAC.app'
 end

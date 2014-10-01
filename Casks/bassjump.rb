@@ -14,6 +14,7 @@ class Bassjump < Cask
   end
 
   homepage 'http://www.twelvesouth.com/product/bassjump-2-for-macbook'
+  license :unknown
 
   caveats do
     reboot

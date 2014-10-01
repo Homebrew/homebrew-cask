@@ -4,6 +4,7 @@ class Phantomjs < Cask
 
   url "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-#{version}-macosx.zip"
   homepage 'http://phantomjs.org/'
+  license :oss
 
   binary "phantomjs-#{version}-macosx/bin/phantomjs"
 end

@@ -4,6 +4,7 @@ class Docear < Cask
 
   url 'http://docear.org/download/docear.dmg'
   homepage 'http://docear.org'
+  license :unknown
 
   app 'Docear.app'
 end

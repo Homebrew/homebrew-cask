@@ -4,6 +4,7 @@ class Cn3d < Cask
 
   url "ftp://ftp.ncbi.nlm.nih.gov/cn3d/Cn3D-#{version}-OSX.zip"
   homepage 'http://www.ncbi.nlm.nih.gov/Structure/CN3D/cn3d.shtml'
+  license :unknown
 
   app 'Cn3D.app'
 end

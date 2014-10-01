@@ -4,6 +4,7 @@ class Winxound < Cask
 
   url 'https://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=winxound&DownloadId=206628&FileTime=129937664917570000&Build=20907'
   homepage 'https://winxound.codeplex.com/'
+  license :unknown
 
   app 'WinXound.app'
 end

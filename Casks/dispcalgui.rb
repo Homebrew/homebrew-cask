@@ -4,6 +4,7 @@ class Dispcalgui < Cask
 
   url 'http://dispcalgui.hoech.net/download/dispcalGUI.dmg'
   homepage 'http://dispcalgui.hoech.net'
+  license :unknown
 
   app 'dispcalGUI.app'
 end

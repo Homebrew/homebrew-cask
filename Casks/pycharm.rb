@@ -4,6 +4,7 @@ class Pycharm < Cask
 
   url "http://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
   homepage 'http://www.jetbrains.com/pycharm/'
+  license :unknown
 
   app 'PyCharm.app'
 

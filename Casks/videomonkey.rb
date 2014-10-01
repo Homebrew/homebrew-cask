@@ -5,6 +5,7 @@ class Videomonkey < Cask
   url "http://videomonkey.org/download/videomonkey-#{version}.zip"
   appcast 'http://videomonkey.org/releases/videomonkeycast.xml'
   homepage 'http://videomonkey.org/'
+  license :unknown
 
   app 'VideoMonkey.app'
 end

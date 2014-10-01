@@ -4,6 +4,7 @@ class Screensteps < Cask
 
   url 'http://www.bluemangolearning.com/download/screensteps/2_0/release/ScreenSteps.dmg'
   homepage 'http://www.bluemangolearning.com/'
+  license :unknown
 
   app 'ScreenSteps.app'
 end

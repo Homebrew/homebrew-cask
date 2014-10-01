@@ -5,6 +5,7 @@ class Gitter < Cask
   url "http://update.gitter.im/osx/Gitter-#{version}.dmg"
   appcast 'http://update.gitter.im/osx/appcast.xml'
   homepage 'https://gitter.im/'
+  license :unknown
 
   app 'Gitter.app'
 end

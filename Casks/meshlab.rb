@@ -4,6 +4,7 @@ class Meshlab < Cask
 
   url "https://downloads.sourceforge.net/project/meshlab/meshlab/MeshLab%20v#{version}/MeshLabMac_v132.dmg"
   homepage 'http://meshlab.sourceforge.net/'
+  license :oss
 
   app 'meshlab.app'
 end

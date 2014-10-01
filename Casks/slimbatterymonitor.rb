@@ -5,6 +5,7 @@ class Slimbatterymonitor < Cask
   url "http://quux.orange-carb.org/dist/SlimBatteryMonitor-#{version}.dmg"
   appcast 'http://www.orange-carb.org/SBM/updates/sbm.xml'
   homepage 'http://www.orange-carb.org/SBM/'
+  license :unknown
 
   app 'SlimBatteryMonitor.app'
 end

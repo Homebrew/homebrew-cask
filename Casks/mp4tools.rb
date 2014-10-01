@@ -5,6 +5,7 @@ class Mp4tools < Cask
   url "http://www.emmgunn.com/downloads/mp4tools#{version}.zip",
       :referer => 'http://www.emmgunn.com/mp4tools/mp4toolsdownload.html'
   homepage 'http://www.emmgunn.com/mp4tools/mp4toolshome.html'
+  license :unknown
 
   app "mp4tools#{version}/MP4Tools.app"
 end

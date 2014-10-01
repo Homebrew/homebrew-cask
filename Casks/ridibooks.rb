@@ -4,6 +4,7 @@ class Ridibooks < Cask
 
   url 'http://ridibooks.com/getapp?os=mac'
   homepage 'http://ridibooks.com/support/introduce_appdown'
+  license :unknown
 
   container_type :naked
   preflight do

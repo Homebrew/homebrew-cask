@@ -4,6 +4,7 @@ class SimpleComic < Cask
 
   url 'http://dancingtortoisedownload.s3.amazonaws.com/SimpleComic_1.7_252.zip'
   homepage 'http://dancingtortoise.com/simplecomic/'
+  license :unknown
 
   app 'Simple Comic.app'
 end

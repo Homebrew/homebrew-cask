@@ -4,6 +4,7 @@ class Prepros < Cask
 
   url "http://download.alphapixels.com/Prepros-#{version}.zip"
   homepage 'http://alphapixels.com/prepros/'
+  license :unknown
 
   app 'Prepros.app'
 end

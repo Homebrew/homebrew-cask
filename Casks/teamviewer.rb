@@ -4,6 +4,7 @@ class Teamviewer < Cask
 
   url 'https://download.teamviewer.com/download/TeamViewer.dmg'
   homepage 'http://www.teamviewer.com/'
+  license :unknown
 
   pkg 'Install TeamViewer.pkg'
   uninstall :pkgutil   => 'com.teamviewer.*',

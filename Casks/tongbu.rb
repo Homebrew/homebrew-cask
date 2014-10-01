@@ -4,6 +4,7 @@ class Tongbu < Cask
 
   url "http://qd.leaderhero.com/qd/zsmac/Tongbu_mac_v#{version}.dmg"
   homepage 'http://www.tongbu.com'
+  license :unknown
 
   app 'Tongbu.app'
 end

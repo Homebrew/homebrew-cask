@@ -4,6 +4,7 @@ class QuicklookPfm < Cask
 
   url "https://quicklook-pfm.googlecode.com/files/quicklook-pfm-#{version}.zip"
   homepage 'https://code.google.com/p/quicklook-pfm/'
+  license :oss
 
   qlplugin 'Quicklook-PFM.qlgenerator'
 end

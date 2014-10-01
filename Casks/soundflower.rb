@@ -4,6 +4,7 @@ class Soundflower < Cask
 
   url "https://soundflower.googlecode.com/files/Soundflower-#{version}.dmg"
   homepage 'https://code.google.com/p/soundflower/'
+  license :oss
 
   pkg 'Soundflower.pkg', :allow_untrusted => true
   uninstall :pkgutil => 'com.cycling74.soundflower.*'

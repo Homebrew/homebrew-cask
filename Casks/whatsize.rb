@@ -5,6 +5,7 @@ class Whatsize < Cask
   url 'http://whatsizemac.com/software/whatsize/whatsize.dmg'
   appcast 'http://www.id-design.com/software/whatsize/release/notes.xml'
   homepage 'http://whatsizemac.com/'
+  license :unknown
 
   app 'WhatSize.app'
 end

@@ -4,6 +4,7 @@ class Wings3d < Cask
 
   url "http://downloads.sourceforge.net/sourceforge/wings/wings-#{version}-macosx.dmg"
   homepage 'http://www.wings3d.com/'
+  license :oss
 
   app "Wings3D #{version}.app", :target => 'Wings3D.app'
 end

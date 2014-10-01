@@ -4,6 +4,7 @@ class Datagraph < Cask
 
   url 'http://www.visualdatatools.com/DataGraph/DataGraph.dmg'
   homepage 'http://www.visualdatatools.com/DataGraph/'
+  license :unknown
 
   app 'DataGraph.app'
 end

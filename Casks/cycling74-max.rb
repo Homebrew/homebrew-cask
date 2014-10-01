@@ -4,6 +4,7 @@ class Cycling74Max < Cask
 
   url 'https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max617_140421.dmg'
   homepage 'http://cycling74.com'
+  license :unknown
 
   pkg 'Max 6.1 Installer.pkg'
   uninstall :pkgutil => 'com.cycling74.Max*',

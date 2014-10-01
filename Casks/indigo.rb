@@ -4,6 +4,7 @@ class Indigo < Cask
 
   url 'http://cloud.goprism.com/download/Indigo.dmg'
   homepage 'http://www.perceptiveautomation.com/indigo/index.html'
+  license :unknown
 
   pkg 'Indigo Installer.pkg'
   uninstall :kext => 'com.perceptiveautomation.indigo_overrides.kext',

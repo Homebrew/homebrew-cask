@@ -5,6 +5,7 @@ class Bodega < Cask
   url 'http://downloads.appbodega.com.s3.amazonaws.com/bodega/latest/Bodega.zip'
   appcast 'https://dev.appbodega.com/sparkle/appcast'
   homepage 'http://appbodega.com/'
+  license :unknown
 
   app 'Bodega.app'
 end

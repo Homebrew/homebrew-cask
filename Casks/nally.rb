@@ -4,6 +4,7 @@ class Nally < Cask
 
   url "https://yllan.github.com/nally/download/Nally-#{version}.app.zip"
   homepage 'http://yllan.org/app/Nally/'
+  license :oss
 
   app 'Nally.app'
 end

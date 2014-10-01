@@ -4,6 +4,7 @@ class BitcoinCore < Cask
 
   url "https://bitcoin.org/bin/#{version}/bitcoin-#{version}-macosx.dmg"
   homepage 'https://bitcoin.org/'
+  license :unknown
 
   app 'Bitcoin-Qt.app', :target => 'Bitcoin Core.app'
 end

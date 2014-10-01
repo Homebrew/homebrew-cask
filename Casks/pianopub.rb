@@ -5,6 +5,7 @@ class Pianopub < Cask
   url "http://dev.kunugiken.com/Pianopub/release/Pianopub_#{version}.zip"
   appcast 'http://dev.kunugiken.com/appcasts/Pianopub.xml'
   homepage 'http://dev.kunugiken.com/Pianopub/'
+  license :unknown
 
   app 'Pianopub.app'
 end

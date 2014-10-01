@@ -4,6 +4,7 @@ class Textadept < Cask
 
   url "http://foicica.com/textadept/download/textadept_#{version}.osx.zip"
   homepage 'http://foicica.com/textadept/'
+  license :unknown
 
   app "textadept_#{version}.osx/Textadept.app"
 end

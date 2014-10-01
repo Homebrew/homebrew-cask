@@ -4,6 +4,7 @@ class Skitch < Cask
 
   url "http://cdn1.evernote.com/skitch/mac/release/Skitch-#{version}.zip"
   homepage 'http://evernote.com/skitch/'
+  license :unknown
 
   app 'Skitch.app'
   zap :delete => [

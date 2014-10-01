@@ -4,6 +4,7 @@ class LogitechControlCenter < Cask
 
   url "http://www.logitech.com/pub/techsupport/mouse/mac/lcc#{version}.zip"
   homepage 'http://www.logitech.com'
+  license :unknown
 
   pkg 'LCC Installer.app/Contents/Resources/Logitech Control Center.mpkg'
   uninstall :script => 'LCC Installer.app/Contents/Resources/LCC Uninstaller Tool',

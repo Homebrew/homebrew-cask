@@ -4,6 +4,7 @@ class Qrq < Cask
 
   url "http://fkurz.net/ham/qrq/qrq-#{version}.dmg"
   homepage 'http://fkurz.net/ham/qrq.html'
+  license :unknown
 
   app 'qrq.app'
 end

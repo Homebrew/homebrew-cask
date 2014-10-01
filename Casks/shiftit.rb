@@ -5,6 +5,7 @@ class Shiftit < Cask
   url "https://github.com/downloads/fikovnik/ShiftIt/ShiftIt-develop-#{version}.zip"
   appcast 'https://raw.github.com/fikovnik/ShiftIt/develop/release/appcast.xml'
   homepage 'https://github.com/fikovnik/ShiftIt'
+  license :oss
 
   app 'ShiftIt.app'
 end

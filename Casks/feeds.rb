@@ -5,6 +5,7 @@ class Feeds < Cask
   url "https://feedswww.appspot.com/releases/Feeds-#{version}.zip"
   appcast 'https://feedswww.appspot.com/appcast.xml'
   homepage 'http://www.feedsapp.com/'
+  license :unknown
 
   app 'Feeds.app'
   zap :delete => '~/Library/Preferences/com.feedsapp.Feeds.plist'

@@ -4,6 +4,7 @@ class Cocoadialog < Cask
 
   url "https://github.com/downloads/mstratman/cocoadialog/CocoaDialog-#{version}.dmg"
   homepage 'http://mstratman.github.io/cocoadialog/'
+  license :oss
 
   app 'CocoaDialog.app'
 end

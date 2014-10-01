@@ -5,6 +5,7 @@ class Kid3 < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/kid3/kid3-#{version}-Darwin.dmg"
   homepage 'http://kid3.sourceforge.net/'
+  license :oss
 
   app 'Kid3.app'
 end

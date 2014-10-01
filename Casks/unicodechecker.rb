@@ -4,6 +4,7 @@ class Unicodechecker < Cask
 
   url 'http://earthlingsoft.net/UnicodeChecker/UnicodeChecker.dmg'
   homepage 'http://earthlingsoft.net/UnicodeChecker/'
+  license :unknown
 
   app 'UnicodeChecker.app'
 end

@@ -4,6 +4,7 @@ class BluRayPlayer < Cask
 
   url 'http://www.macblurayplayer.com/user/download/Mac_Bluray_Player.dmg'
   homepage 'http://www.macblurayplayer.com/'
+  license :unknown
 
   app 'Blu-ray Player.app'
 end

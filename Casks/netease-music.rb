@@ -5,6 +5,7 @@ class NeteaseMusic < Cask
 
   url "http://music.163.com/api/osx/download/latest"
   homepage 'http://music.163.com/#/download'
+  license :unknown
 
   app 'Music.163.app'
 end

@@ -4,6 +4,7 @@ class Eaglefiler < Cask
 
   url "http://c-command.com/downloads/EagleFiler-#{version}.dmg"
   homepage 'http://c-command.com/eaglefiler/'
+  license :unknown
 
   app 'EagleFiler.app'
 end

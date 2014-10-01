@@ -4,6 +4,7 @@ class GurpsCharacterSheet < Cask
 
   url "https://downloads.sourceforge.net/project/gcs-java/gcs-#{version}-mac.zip"
   homepage 'http://gurpscharactersheet.com'
+  license :oss
 
   app "gcs-#{version}-mac/GURPS Character Sheet.app"
 end

@@ -4,6 +4,7 @@ class Jxplorer < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/jxplorer/jxplorer/version%20#{version}/jxplorer-#{version}-osx.zip"
   homepage 'http://jxplorer.org'
+  license :oss
 
   app "jxplorer-#{version}.app"
   postflight do

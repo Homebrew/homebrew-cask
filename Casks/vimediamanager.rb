@@ -4,6 +4,7 @@ class Vimediamanager < Cask
 
   url "http://mariusth.channelwood.org/vimediamanager/files/vimediamanager_v#{version}.dmg"
   homepage 'http://mariusth.channelwood.org/vimediamanager/'
+  license :unknown
 
   app 'ViMediaManager.app'
 end

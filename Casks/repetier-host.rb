@@ -5,6 +5,7 @@ class RepetierHost < Cask
   url 'http://www.repetier.com/?wpdmact=process&did=MzYuaG90bGluaw=='
   appcast 'http://www.repetier.com/updates/rhm/rhm-appcast.xml'
   homepage 'http://www.repetier.com/'
+  license :unknown
 
   app 'Repetier-Host Mac.app'
 end

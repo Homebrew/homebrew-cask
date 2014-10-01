@@ -5,6 +5,7 @@ class Pins < Cask
   url 'http://pinsapp.com/download/Pins.dmg'
   appcast 'http://pinsapp.com/appcast.xml'
   homepage 'http://pinsapp.com/'
+  license :unknown
 
   app 'Pins.app'
 end

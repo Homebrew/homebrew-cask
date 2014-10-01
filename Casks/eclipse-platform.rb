@@ -8,5 +8,6 @@ class EclipsePlatform < Cask
   end
   version '4.4.0'
   homepage 'http://eclipse.org'
+  license :unknown
   app 'eclipse/Eclipse.app'
 end

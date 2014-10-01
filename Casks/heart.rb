@@ -4,6 +4,7 @@ class Heart < Cask
 
   url 'http://presstube.com/screensavers/presstube-heart-mac.zip'
   homepage 'http://presstube.com/blog/2011/heart/'
+  license :unknown
 
   screen_saver 'presstube-heart.app/Contents/Resources/Presstube - Heart.saver'
 

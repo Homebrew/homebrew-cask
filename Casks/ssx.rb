@@ -4,6 +4,7 @@ class Ssx < Cask
 
   url "http://chris.schleifer.net/ssX/builds/ssX-#{version}.dmg"
   homepage 'http://chris.schleifer.net/ssX/index.cgi/index.html'
+  license :unknown
 
   app 'ssX.app'
 end

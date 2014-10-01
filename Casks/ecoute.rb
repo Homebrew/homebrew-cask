@@ -5,6 +5,7 @@ class Ecoute < Cask
   url "http://pixiapps.com/ecouteosx/builds/Ecoute_#{version}.zip"
   appcast 'http://www.eagle-of-liberty.com/ecouteosx/builds/appcast.xml'
   homepage 'http://pixiapps.com/ecouteosx/'
+  license :unknown
 
   app 'Ecoute.app'
 end

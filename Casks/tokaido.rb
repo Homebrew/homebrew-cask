@@ -4,6 +4,7 @@ class Tokaido  < Cask
 
   url "https://github.com/tokaido/tokaidoapp/releases/download/v#{version}/Tokaido.zip"
   homepage 'https://github.com/tokaido/tokaidoapp/releases'
+  license :oss
 
   app 'Tokaido.app'
 end

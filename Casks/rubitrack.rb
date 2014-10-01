@@ -5,6 +5,7 @@ class Rubitrack < Cask
   url "http://www.rubitrack.com/files/rubiTrack-#{version}.dmg"
   appcast 'http://www.rubitrack.com/autoupdate/sparkle3.xml'
   homepage 'http://www.rubitrack.com/'
+  license :unknown
 
   app "rubiTrack #{version.to_i}.app"
 end

@@ -4,6 +4,7 @@ class Insync < Cask
 
   url "http://s.insynchq.com/builds/Insync-#{version}.dmg"
   homepage 'https://insynchq.com/'
+  license :unknown
 
   app 'Insync.app'
 end

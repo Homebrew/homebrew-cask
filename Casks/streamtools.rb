@@ -9,5 +9,6 @@ class Streamtools < Cask
     binary 'st_darwin_amd64-0.2.8/st'
   end
   homepage 'https://github.com/nytlabs/streamtools'
+  license :oss
   version '0.2.8'
 end

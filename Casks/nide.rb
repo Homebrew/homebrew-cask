@@ -4,6 +4,7 @@ class Nide < Cask
 
   url "https://github.com/downloads/Coreh/nide/nide-v#{version}.dmg"
   homepage 'http://coreh.github.io/nide/'
+  license :oss
 
   app 'Nide.app'
 end

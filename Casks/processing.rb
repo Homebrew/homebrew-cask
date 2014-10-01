@@ -4,6 +4,7 @@ class Processing < Cask
 
   url "http://download.processing.org/processing-#{version}-macosx.zip"
   homepage 'http://processing.org/'
+  license :unknown
 
   app 'Processing.app'
   zap :delete => '~/Library/Processing/preferences.txt'

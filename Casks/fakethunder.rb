@@ -5,6 +5,7 @@ class Fakethunder < Cask
   url 'http://martianlaboratory.com/fakethunder/fakeThunder216.zip'
   appcast 'http://martianlaboratory.com/fakethunder/update.xml'
   homepage 'http://martianz.cn/fakethunder/'
+  license :unknown
 
   app 'fakeThunder.app'
 end

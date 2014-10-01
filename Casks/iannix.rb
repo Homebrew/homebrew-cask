@@ -4,6 +4,7 @@ class Iannix < Cask
 
   url 'http://www.iannix.org/download/iannix_mac_64__0_9_16.dmg'
   homepage 'http://www.iannix.org/'
+  license :unknown
 
   app 'IanniX/IanniX.app'
 end

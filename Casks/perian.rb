@@ -4,6 +4,7 @@ class Perian < Cask
 
   url "https://perian.cachefly.net/Perian_#{version}.dmg"
   homepage 'http://www.perian.org/'
+  license :unknown
 
   prefpane 'Perian.prefPane'
   caveats <<-EOS.undent

@@ -5,6 +5,7 @@ class Launchcontrol < Cask
   url "http://www.soma-zone.com/download/files/LaunchControl_#{version}.tar.bz2"
   appcast 'http://www.soma-zone.com/LaunchControl/a/appcast.xml'
   homepage 'http://www.soma-zone.com/LaunchControl/'
+  license :unknown
 
   app 'LaunchControl.app'
 end

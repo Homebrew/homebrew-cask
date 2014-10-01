@@ -4,6 +4,7 @@ class PrefsEditor < Cask
 
   url 'http://files.tempel.org/Various/OSX_Prefs_Editor/PrefsEditor.zip'
   homepage 'http://www.tempel.org/PrefsEditor'
+  license :unknown
 
   app 'Prefs Editor.app'
 end

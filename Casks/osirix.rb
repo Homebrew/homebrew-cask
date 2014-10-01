@@ -4,6 +4,7 @@ class Osirix < Cask
 
   url "http://www.osirix-viewer.com/OsiriX#{version}.dmg"
   homepage 'http://www.osirix-viewer.com'
+  license :unknown
 
   app 'osirix.app'
 end

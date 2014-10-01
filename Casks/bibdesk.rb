@@ -5,6 +5,7 @@ class Bibdesk < Cask
   url "https://downloads.sourceforge.net/project/bibdesk/BibDesk/BibDesk-#{version}/BibDesk-#{version}.dmg"
   appcast 'http://bibdesk.sourceforge.net/bibdesk.xml'
   homepage 'http://bibdesk.sourceforge.net/'
+  license :oss
 
   app 'BibDesk.app'
   zap :delete => [

@@ -4,6 +4,7 @@ class Mudlet < Cask
 
   url "http://www.mudlet.org/download/Mudlet-#{version}.zip"
   homepage 'http://www.mudlet.org'
+  license :unknown
 
   app "Mudlet-#{version}.app"
 end

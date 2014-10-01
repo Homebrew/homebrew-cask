@@ -5,6 +5,7 @@ class Manico < Cask
   url "http://manico.im/static/Manico_#{version}.dmg"
   appcast 'http://manico.im/static/manico-appcast.xml'
   homepage 'http://manico.im/'
+  license :unknown
 
   app 'Manico.app'
 end

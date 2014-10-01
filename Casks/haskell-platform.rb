@@ -4,6 +4,7 @@ class HaskellPlatform < Cask
 
   url "http://www.haskell.org/platform/download/#{version}/Haskell%20Platform%20#{version}%2064bit.signed.pkg"
   homepage 'http://www.haskell.org/platform/'
+  license :unknown
 
   pkg "Haskell Platform #{version} 64bit.signed.pkg"
   uninstall :script => { :executable => '/usr/bin/uninstall-hs', :args => %w[all --remove] },

@@ -4,6 +4,7 @@ class TdAgent < Cask
 
   url "http://packages.treasuredata.com/2/macosx/td-agent-#{version}-0.dmg"
   homepage 'http://www.fluentd.org/'
+  license :unknown
 
   pkg 'td-agent2.pkg'
   uninstall :pkgutil => 'test.treasuredatainc.pkg.tdagent2',

@@ -4,6 +4,7 @@ class Nottingham < Cask
 
   url "http://dl.clickontyler.com/nottingham/nottingham20_#{version}.zip"
   homepage 'https://clickontyler.com/nottingham/'
+  license :unknown
 
   app 'Nottingham.app'
 end

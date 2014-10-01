@@ -5,6 +5,7 @@ class Droplr < Cask
   url 'http://files.droplr.com.s3.amazonaws.com/apps/mac/Droplr+35.zip'
   appcast 'https://droplr.com/appcast/appcast.xml'
   homepage 'https://www.droplr.com/'
+  license :unknown
 
   app 'Droplr.app'
   zap :delete => '~/Library/Preferences/com.droplr.droplr-mac.plist'

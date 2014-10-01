@@ -4,6 +4,7 @@ class Hazel < Cask
 
   url 'http://www.noodlesoft.com/Products/Hazel/download'
   homepage 'http://www.noodlesoft.com/hazel.php'
+  license :unknown
 
   prefpane 'Hazel.prefPane'
   zap :delete => [

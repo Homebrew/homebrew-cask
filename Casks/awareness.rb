@@ -4,6 +4,7 @@ class Awareness < Cask
 
   url "http://iamfutureproof.com/downloads/Awareness-#{version}.dmg"
   homepage 'http://iamfutureproof.com/tools/awareness/'
+  license :unknown
 
   app 'Awareness.app'
   zap :delete => '~/Library/Preferences/com.futureproof.awareness.plist'

@@ -4,6 +4,7 @@ class Ocenaudio < Cask
 
   url 'http://www.ocenaudio.com.br/downloads/ocenaudio.dmg'
   homepage 'http://www.ocenaudio.com.br/en'
+  license :unknown
 
   app 'ocenaudio.app'
 end

@@ -4,6 +4,7 @@ class BarMagnet < Cask
 
   url "http://qata.cc/app/Bar%20Magnet%20#{version}.zip"
   homepage 'http://qata.cc/Site/Bar_Magnet.html'
+  license :unknown
 
   app 'Bar Magnet.app'
 end

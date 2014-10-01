@@ -4,6 +4,7 @@ class Yubiswitch < Cask
 
   url "https://github.com/pallotron/yubiswitch/releases/download/v#{version}/yubiswitch_#{version}.dmg"
   homepage 'https://github.com/pallotron/yubiswitch'
+  license :oss
 
   app 'yubiswitch.app'
 end

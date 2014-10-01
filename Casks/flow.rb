@@ -4,6 +4,7 @@ class Flow < Cask
 
   url 'http://www.getflow.com/mac/download'
   homepage 'http://www.getflow.com/'
+  license :unknown
 
   app 'Flow.app'
 end

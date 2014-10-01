@@ -5,6 +5,7 @@ class Garagesale < Cask
   url "http://www.iwascoding.de/downloads/GarageSale_#{version}.dmg"
   appcast 'http://www.iwascoding.com/GarageSale/AppCast.php'
   homepage 'http://www.iwascoding.com/GarageSale/index.html'
+  license :unknown
 
   app 'GarageSale.app'
 end

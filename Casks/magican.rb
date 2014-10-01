@@ -4,6 +4,7 @@ class Magican < Cask
 
   url 'http://www.magicansoft.com/download/Magican.pkg'
   homepage 'http://www.magicansoft.com/'
+  license :unknown
 
   pkg 'Magican.pkg'
   uninstall :pkgutil => 'com.magican.*'

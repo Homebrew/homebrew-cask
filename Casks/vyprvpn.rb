@@ -4,6 +4,7 @@ class Vyprvpn < Cask
 
   url "https://www.goldenfrog.com/downloads/vyprvpn/desktop/mac/production/#{version}/VyprVPN_v#{version}.dmg"
   homepage 'http://www.goldenfrog.com/vyprvpn'
+  license :unknown
 
   app 'VyprVPN.app'
 end

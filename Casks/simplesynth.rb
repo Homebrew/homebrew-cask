@@ -4,6 +4,7 @@ class Simplesynth < Cask
 
   url "https://s3.amazonaws.com/notahat/SimpleSynth-#{version}.zip"
   homepage 'http://notahat.com/simplesynth/'
+  license :unknown
 
   app 'SimpleSynth.app'
 end

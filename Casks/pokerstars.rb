@@ -4,6 +4,7 @@ class Pokerstars < Cask
 
   url 'http://www.pokerstars.com/PokerStars.app.zip'
   homepage 'http://www.pokerstars.com/'
+  license :unknown
 
   app 'PokerStars.app'
   zap :delete => [

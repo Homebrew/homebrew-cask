@@ -4,6 +4,7 @@ class Binreader < Cask
 
   url 'http://www.binreader.com/Binreader_v1_0_beta1.dmg'
   homepage 'http://www.binreader.com/'
+  license :unknown
 
   app 'Binreader.app'
 end

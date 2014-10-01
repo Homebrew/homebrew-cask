@@ -4,6 +4,7 @@ class Mame < Cask
 
   url "https://downloads.sourceforge.net/mameosx/MAMEOSX-#{version}.dmg"
   homepage 'http://mameosx.sourceforge.net/'
+  license :oss
 
   app 'MAME OS X.app'
 end

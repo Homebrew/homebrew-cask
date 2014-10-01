@@ -5,6 +5,7 @@ class Subler < Cask
   url "https://subler.googlecode.com/files/Subler-#{version}.zip"
   appcast 'http://subler.googlecode.com/svn/doc/appcast.xml'
   homepage 'https://code.google.com/p/subler/'
+  license :oss
 
   app 'Subler.app'
 end

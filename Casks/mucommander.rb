@@ -4,6 +4,7 @@ class Mucommander < Cask
 
   url 'http://www.mucommander.com/download/mucommander-0_9_0.dmg'
   homepage 'http://www.mucommander.com/index.php'
+  license :unknown
 
   app 'muCommander.app'
 end

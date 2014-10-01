@@ -4,6 +4,7 @@ class Cdock < Cask
 
   url "https://downloads.sourceforge.net/project/cdock/cDock/cDock_v#{version}.zip"
   homepage 'http://sourceforge.net/projects/cdock'
+  license :oss
 
   app 'cDock.app'
   caveats do

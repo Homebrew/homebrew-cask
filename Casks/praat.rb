@@ -10,6 +10,7 @@ class Praat < Cask
   end
 
   homepage 'http://www.fon.hum.uva.nl/praat/'
+  license :unknown
 
   app 'Praat.app'
 end

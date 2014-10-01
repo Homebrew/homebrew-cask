@@ -4,6 +4,7 @@ class Licecap < Cask
 
   url 'http://www.cockos.com/licecap/licecap124.dmg'
   homepage 'http://www.cockos.com/licecap/'
+  license :unknown
 
   app 'LICEcap.app'
 end

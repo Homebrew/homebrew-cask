@@ -4,6 +4,7 @@ class Growlvoice < Cask
 
   url "http://www.growlvoice.com/trials/growlvoice-#{version}.zip"
   homepage 'http://www.growlvoice.com/'
+  license :unknown
 
   app 'GrowlVoice.app'
 end

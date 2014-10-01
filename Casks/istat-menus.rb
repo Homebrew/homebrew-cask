@@ -4,6 +4,7 @@ class IstatMenus < Cask
 
   url "http://download.bjango.com/istatmenus/"
   homepage 'http://bjango.com/mac/istatmenus/'
+  license :unknown
 
   app 'iStat Menus.app'
 end

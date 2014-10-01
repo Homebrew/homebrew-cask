@@ -4,6 +4,7 @@ class Layervault < Cask
 
   url 'https://client.layervault.com/latest_version'
   homepage 'http://layervault.com/'
+  license :unknown
 
   app 'LayerVault.app'
 end

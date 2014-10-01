@@ -4,6 +4,7 @@ class Witch < Cask
 
   url 'http://manytricks.com/download/witch'
   homepage 'http://manytricks.com/witch/'
+  license :unknown
 
   prefpane 'Witch.prefPane'
   zap :delete => '~/Library/Preferences/com.manytricks.Witch.plist'

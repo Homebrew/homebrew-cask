@@ -4,6 +4,7 @@ class Kindle < Cask
 
   url 'http://kindleformac.amazon.com/40499/KindleForMac.dmg'
   homepage 'http://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000464931'
+  license :unknown
 
   app 'Kindle.app'
 end

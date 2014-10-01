@@ -4,6 +4,7 @@ class QuasselClient < Cask
 
   url "http://quassel-irc.org/pub/QuasselClient_MacOSX-x86_64_#{version}.dmg"
   homepage 'http://quassel-irc.org'
+  license :unknown
 
   app 'Quassel Client.app'
 end

@@ -4,6 +4,7 @@ class Utopia < Cask
 
   url "http://utopiadocs.com/files/Utopia-#{version}-Mac.dmg"
   homepage 'http://utopiadocs.com/'
+  license :unknown
 
   app 'Utopia.app'
 end

@@ -5,6 +5,7 @@ class Invisiblix < Cask
   url "https://downloads.sourceforge.net/project/invisiblix/invisibliX-#{version}.zip"
   appcast 'http://www.read-write.fr/invisiblix/appcast.xml'
   homepage 'http://www.read-write.fr/invisiblix/'
+  license :oss
 
   app 'invisibliX.app'
 end

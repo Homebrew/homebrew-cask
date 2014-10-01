@@ -5,6 +5,7 @@ class Cocoapacketanalyzer < Cask
   url 'http://tastycocoabytes.com/_downloads/CPA_131.dmg'
   appcast 'http://www.tastycocoabytes.com/cpa/updates/appcasting.php'
   homepage 'http://www.tastycocoabytes.com/cpa/'
+  license :unknown
 
   app 'CocoaPacketAnalyzer.app'
 end

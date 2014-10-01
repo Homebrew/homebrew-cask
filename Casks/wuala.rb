@@ -4,6 +4,7 @@ class Wuala < Cask
 
   url 'https://cdn.wuala.com/files/WualaInstaller.dmg'
   homepage 'http://wuala.com'
+  license :unknown
 
   app 'Wuala.app'
 end

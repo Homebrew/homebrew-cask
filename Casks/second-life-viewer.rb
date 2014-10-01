@@ -4,6 +4,7 @@ class SecondLifeViewer < Cask
 
   url 'http://download.cloud.secondlife.com/Viewer_3/Second_Life_3_6_13_284995_i386.dmg'
   homepage 'http://secondlife.com/'
+  license :unknown
 
   app 'Second Life Viewer.app'
 end

@@ -4,6 +4,7 @@ class Inkscape < Cask
 
   url "http://downloads.sourceforge.net/inkscape/Inkscape-#{version}+X11.dmg"
   homepage 'http://inkscape.org'
+  license :oss
 
   app 'Inkscape.app'
 

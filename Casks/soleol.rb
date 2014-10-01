@@ -4,6 +4,7 @@ class Soleol < Cask
 
   url 'http://eduo.info/soleol-support/releases/SolEol-Mac.zip'
   homepage 'http://eduo.info/apps/soleol'
+  license :unknown
 
   app 'SolEol/SolEol.app'
 end

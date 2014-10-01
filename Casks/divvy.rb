@@ -5,6 +5,7 @@ class Divvy < Cask
   url 'https://mizage.com/downloads/Divvy.zip'
   appcast 'http://mizage.com/updates/profiles/divvy.php'
   homepage 'http://mizage.com/divvy/'
+  license :unknown
 
   app 'Divvy.app'
   zap :delete => [

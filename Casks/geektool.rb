@@ -5,6 +5,7 @@ class Geektool < Cask
   url "http://download.tynsoe.org/GeekTool-#{version}.zip"
   appcast 'http://dl.dropboxusercontent.com/u/1760713/appcast/appcast.xml'
   homepage 'http://projects.tynsoe.org/en/geektool/'
+  license :unknown
 
   app 'GeekTool.app'
   zap :delete => [

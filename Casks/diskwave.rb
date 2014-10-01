@@ -5,6 +5,7 @@ class Diskwave < Cask
   url 'http://diskwave.barthe.ph/download/DiskWave_0.4.dmg'
   appcast 'http://diskwave.barthe.ph/sparkle/appcast_64bit.php'
   homepage 'http://diskwave.barthe.ph/'
+  license :unknown
 
   app 'DiskWave.app'
 end

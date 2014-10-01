@@ -4,6 +4,7 @@ class Omnipresence < Cask
 
   url "http://downloads.omnigroup.com/software/MacOSX/10.8/OmniPresence-#{version}.dmg"
   homepage 'http://www.omnigroup.com/omnipresence'
+  license :unknown
 
   app 'OmniPresence.app'
 end

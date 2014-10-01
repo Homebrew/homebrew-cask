@@ -4,6 +4,7 @@ class DeliveryStatus < Cask
 
   url "http://junecloud.com/get/delivery-status-widget?#{version}"
   homepage 'http://junecloud.com/software/mac/delivery-status.html'
+  license :oss
 
   widget 'Delivery Status.wdgt'
   caveats do

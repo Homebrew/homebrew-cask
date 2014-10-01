@@ -4,6 +4,7 @@ class Openoffice < Cask
 
   url "https://downloads.sourceforge.net/project/openofficeorg.mirror/#{version}/binaries/en-US/Apache_OpenOffice_#{version}_MacOS_x86-64_install_en-US.dmg"
   homepage 'http://www.openoffice.org/'
+  license :oss
 
   app 'OpenOffice.app'
 end

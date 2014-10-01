@@ -5,6 +5,7 @@ class X48 < Cask
 
   url "https://sites.google.com/a/sharkus.com/sharkus-com/Home/x48-#{version}%20osx.zip"
   homepage 'http://blog.sharkus.com/2012/08/osx-hp48-emulators.html'
+  license :unknown
 
   app "x48-#{version} osx/x48.app"
   caveats do

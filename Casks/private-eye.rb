@@ -4,6 +4,7 @@ class PrivateEye < Cask
 
   url 'http://radiosilenceapp.com/downloads/Private%20Eye.pkg'
   homepage 'http://radiosilenceapp.com/private-eye'
+  license :oss
 
   pkg 'Private Eye.pkg'
   # We intentionally unload the kext twice as a workaround

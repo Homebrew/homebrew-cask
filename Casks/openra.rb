@@ -4,6 +4,7 @@ class Openra < Cask
 
   url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.zip"
   homepage 'http://www.openra.net/'
+  license :oss
 
   app 'OpenRA.app'
 end

@@ -5,6 +5,7 @@ class Wraparound < Cask
   url "http://www.digicowsoftware.com/downloads/Wraparound#{version}-2010.zip"
   appcast 'http://www.digicowsoftware.com/appcast/'
   homepage 'http://www.digicowsoftware.com/detail?_app=Wraparound'
+  license :unknown
 
   app 'Wraparound.app'
 end

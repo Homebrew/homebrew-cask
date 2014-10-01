@@ -4,6 +4,7 @@ class Crypt < Cask
 
   url "http://voluntary.net.s3.amazonaws.com/Crypt#{version}_20100429.zip"
   homepage 'http://voluntary.net/crypt/'
+  license :unknown
 
   app "Crypt#{version}.app"
 end

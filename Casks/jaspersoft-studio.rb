@@ -4,6 +4,7 @@ class JaspersoftStudio < Cask
 
   url "https://downloads.sourceforge.net/project/jasperstudio/JaspersoftStudio-#{version}/jaspersoftstudio-#{version}.final-mac-x86_64.dmg"
   homepage 'http://community.jaspersoft.com/project/jaspersoft-studio'
+  license :oss
 
   app "Jaspersoft Studio #{version}.final/Jaspersoft Studio.app"
   caveats do

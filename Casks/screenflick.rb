@@ -4,6 +4,7 @@ class Screenflick < Cask
 
   url 'http://www.araelium.com/screenflick/downloads/Screenflick.dmg'
   homepage 'http://www.araelium.com/screenflick/'
+  license :unknown
 
   app 'Screenflick.app'
 end

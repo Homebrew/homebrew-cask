@@ -4,6 +4,7 @@ class Glimmerblocker < Cask
 
   url "http://glimmerblocker.org/downloads/GlimmerBlocker-#{version}.dmg"
   homepage 'http://glimmerblocker.org'
+  license :unknown
 
   pkg 'GlimmerBlocker.pkg'
   uninstall :pkgutil => 'org.glimmerblocker.pkg'

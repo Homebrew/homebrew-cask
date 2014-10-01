@@ -4,6 +4,7 @@ class Camtwist < Cask
 
   url "http://camtwiststudio.com/release/CamTwist_#{version}.dmg"
   homepage 'http://camtwiststudio.com/'
+  license :unknown
 
   pkg 'CamTwist.pkg'
   uninstall :script => { :executable => 'Manual Install/CamTwist/uninstall.command' },

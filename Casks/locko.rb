@@ -4,6 +4,7 @@ class Locko < Cask
 
   url 'http://download.binarynights.com/Locko.zip'
   homepage 'http://www.binarynights.com/'
+  license :unknown
 
   app 'Locko.app'
 end

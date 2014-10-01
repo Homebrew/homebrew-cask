@@ -4,6 +4,7 @@ class Tiled < Cask
 
   url "https://github.com/bjorn/tiled/releases/download/v#{version}/tiled-#{version}.dmg"
   homepage 'http://www.mapeditor.org/'
+  license :oss
 
   app 'Tiled.app'
 end

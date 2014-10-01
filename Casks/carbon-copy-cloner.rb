@@ -5,6 +5,7 @@ class CarbonCopyCloner < Cask
   url "http://bombich.com/software/files/ccc-#{version}.zip"
   appcast 'http://www.bombich.com/software/updates/ccc.php'
   homepage 'http://bombich.com/'
+  license :unknown
 
   app 'Carbon Copy Cloner.app'
 end

@@ -4,6 +4,7 @@ class Authbuddy < Cask
 
   url 'https://www.dssw.co.uk/authbuddy/dsswauthbuddy.dmg'
   homepage 'https://www.dssw.co.uk/authbuddy'
+  license :unknown
 
   pkg 'DssW authbuddy.pkg'
   uninstall :pkgutil => 'uk.co.dssw.authbuddy'

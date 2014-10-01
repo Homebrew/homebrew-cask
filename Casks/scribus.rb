@@ -4,6 +4,7 @@ class Scribus < Cask
 
   url "https://downloads.sourceforge.net/project/scribus/scribus/#{version}/scribus-#{version}.dmg"
   homepage 'http://www.scribus.net/canvas/Scribus'
+  license :oss
 
   app 'Scribus.app'
 end

@@ -4,6 +4,7 @@ class Qrfcview < Cask
 
   url "https://github.com/downloads/saghul/qrfcview-osx/qRFCView-#{version}-1.dmg"
   homepage 'https://saghul.github.io/qrfcview-osx'
+  license :oss
 
   app 'qRFCView.app'
 end

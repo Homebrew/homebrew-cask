@@ -6,6 +6,7 @@ class EpubToPdf < Cask
   # non-Sparkle appcast
   appcast 'https://code.google.com/feeds/p/epub-2-pdf/downloads/basic'
   homepage 'https://code.google.com/p/epub-2-pdf'
+  license :oss
 
   app 'epub-to-pdf.app'
 end

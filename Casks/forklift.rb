@@ -5,6 +5,7 @@ class Forklift < Cask
   url "http://download.binarynights.com/ForkLift#{version}.zip"
   appcast 'http://update.binarynights.com/ForkLift2/update.xml'
   homepage 'http://www.binarynights.com/'
+  license :unknown
 
   app 'ForkLift.app'
 end

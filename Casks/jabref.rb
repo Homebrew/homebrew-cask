@@ -4,6 +4,7 @@ class Jabref < Cask
 
   url "https://downloads.sourceforge.net/project/jabref/jabref/#{version}/JabRef-#{version}-OSX.zip"
   homepage 'http://jabref.sourceforge.net/'
+  license :oss
 
   app 'JabRef.app'
 end

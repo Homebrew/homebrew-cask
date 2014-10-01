@@ -5,6 +5,7 @@ class ConnectedDesktop < Cask
   url "https://secure.connecteddata.com/mac/2.4/software/Connected_Desktop_#{version}.dmg"
   appcast 'http://appsoftware.connecteddata.com/mac/2.0/Appcast.xml'
   homepage 'http://www.filetransporter.com/'
+  license :unknown
 
   app 'Connected Desktop.app'
 end

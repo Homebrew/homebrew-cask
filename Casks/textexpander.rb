@@ -5,6 +5,7 @@ class Textexpander < Cask
   url "http://cdn.smilesoftware.com/TextExpander_#{version}.zip"
   appcast 'http://updates.smilesoftware.com/com.smileonmymac.textexpander.xml'
   homepage 'http://www.smilesoftware.com/TextExpander/index.html'
+  license :unknown
 
   app 'TextExpander.app'
 end

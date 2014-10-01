@@ -4,6 +4,7 @@ class ColorOracle < Cask
 
   url 'http://colororacle.org/ColorOracleMac.zip'
   homepage 'http://colororacle.org/'
+  license :unknown
 
   app 'Color Oracle.app'
 end

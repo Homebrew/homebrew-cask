@@ -5,6 +5,7 @@ class Sidestep < Cask
   url "https://github.com/chetan51/sidestep/releases/download/#{version}/Sidestep.zip"
   appcast 'http://chetansurpur.com/projects/sidestep/appcast.xml'
   homepage 'http://chetansurpur.com/projects/sidestep'
+  license :oss
 
   app 'Sidestep.app'
 end

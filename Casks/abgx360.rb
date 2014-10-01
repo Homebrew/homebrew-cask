@@ -4,6 +4,7 @@ class Abgx360 < Cask
 
   url "http://dl.dropbox.com/u/59058148/abgx360-#{version}.pkg"
   homepage 'http://abgx360.net/'
+  license :unknown
 
   pkg "abgx360-#{version}.pkg"
   uninstall :quit => 'net.abgx360.abgx360gui',

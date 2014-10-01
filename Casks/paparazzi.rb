@@ -5,6 +5,7 @@ class Paparazzi < Cask
   url "https://derailer.org/paparazzi/Paparazzi!%20#{version}.dmg"
   appcast 'https://derailer.org/paparazzi/appcast/'
   homepage 'http://derailer.org/paparazzi/'
+  license :unknown
 
   app 'Paparazzi!.app'
 end

@@ -4,6 +4,7 @@ class Factor < Cask
 
   url "http://downloads.factorcode.org/releases/#{version}/factor-macosx-x86-64-#{version}.dmg"
   homepage 'http://factorcode.org/'
+  license :unknown
 
   app 'factor/Factor.app'
 end

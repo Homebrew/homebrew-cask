@@ -4,6 +4,7 @@ class Synthesia < Cask
 
   url "https://synthesia.s3.amazonaws.com/files/Synthesia-#{version}.dmg"
   homepage 'http://www.synthesiagame.com'
+  license :unknown
 
   app 'Synthesia.app'
   app 'SynthesiaConfig.app'

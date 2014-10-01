@@ -5,6 +5,7 @@ class Keka < Cask
   url "http://www.kekaosx.com/release/Keka-#{version}-intel.dmg"
   appcast 'http://update.kekaosx.com'
   homepage 'http://kekaosx.com/'
+  license :unknown
 
   app 'Keka.app'
   zap :delete => '~/Library/Preferences/com.aone.keka.plist'

@@ -4,6 +4,7 @@ class Apptrap < Cask
 
   url 'http://onnati.net/apptrap/download/AppTrap1-2-1.zip'
   homepage 'http://onnati.net/apptrap'
+  license :unknown
 
   prefpane 'AppTrap.prefPane'
 end

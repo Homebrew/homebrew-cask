@@ -4,6 +4,7 @@ class Scriptql < Cask
 
   url 'http://www.kainjow.com/downloads/ScriptQL_qlgenerator.zip'
   homepage 'http://www.kainjow.com/'
+  license :unknown
 
   qlplugin 'ScriptQL.qlgenerator'
 end

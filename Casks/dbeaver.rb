@@ -4,6 +4,7 @@ class Dbeaver < Cask
 
   url "http://dbeaver.jkiss.org/files/dbeaver-#{version}-macosx.cocoa.x86_64.zip"
   homepage 'http://dbeaver.jkiss.org/'
+  license :unknown
 
   app 'dbeaver/dbeaver.app'
 end

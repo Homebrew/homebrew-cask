@@ -10,6 +10,7 @@ class PlexHomeTheater < Cask
   end
 
   homepage 'https://plex.tv'
+  license :unknown
 
   app 'Plex Home Theater.app'
 end

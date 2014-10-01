@@ -4,6 +4,7 @@ class Powerkey < Cask
 
   url "https://github.com/pkamb/PowerKey/releases/download/v#{version}/PowerKey#{version}.zip"
   homepage 'http://pkamb.github.io/PowerKey/'
+  license :oss
 
   app 'PowerKey.app'
 end

@@ -4,6 +4,7 @@ class Nethackcocoa < Cask
 
   url "https://nethack-cocoa.googlecode.com/files/NetHackCocoa-#{version}.dmg"
   homepage 'https://code.google.com/p/nethack-cocoa/'
+  license :oss
 
   app 'NetHackCocoa.app'
 end

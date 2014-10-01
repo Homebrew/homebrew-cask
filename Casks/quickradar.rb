@@ -5,6 +5,7 @@ class Quickradar < Cask
   url "http://www.quickradar.com/#{version}.zip"
   appcast 'http://www.quickradar.com/appcast.xml'
   homepage 'http://www.quickradar.com/'
+  license :unknown
 
   app 'QuickRadar.app'
 end

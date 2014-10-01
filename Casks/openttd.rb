@@ -4,6 +4,7 @@ class Openttd < Cask
 
   url "http://binaries.openttd.org/releases/#{version}/openttd-#{version}-macosx-universal.zip"
   homepage 'http://openttd.org'
+  license :unknown
 
   app 'OpenTTD.app'
 end

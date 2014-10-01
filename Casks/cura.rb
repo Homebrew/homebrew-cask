@@ -4,6 +4,7 @@ class Cura < Cask
 
   url "http://software.ultimaker.com/current/Cura-#{version}-MacOS.dmg"
   homepage 'http://daid.github.com/Cura/'
+  license :oss
 
   app 'Cura.app'
 end

@@ -4,6 +4,7 @@ class DroboDashboard < Cask
 
   url "http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-#{version}.dmg"
   homepage 'http://www.drobo.com'
+  license :unknown
 
   pkg "Install.app/Contents/Drobo_Dashboard_Installer_#{version}.pkg"
   uninstall :script => 'Uninstall.app/Contents/Resources/Scripts/Drobo_Dashboard_uninstall.sh',

@@ -4,6 +4,7 @@ class Nitroshare < Cask
 
   url "https://launchpad.net/nitroshare/#{version}/#{version}/+download/nitroshare_#{version}.app.dmg"
   homepage 'https://quickmediasolutions.com/apps/14/nitroshare'
+  license :unknown
 
   app 'NitroShare.app'
 end

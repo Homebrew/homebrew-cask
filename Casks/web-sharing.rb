@@ -4,6 +4,7 @@ class WebSharing < Cask
 
   url 'https://clickontyler.com/web-sharing/download/'
   homepage 'http://clickontyler.com/web-sharing/'
+  license :unknown
 
   prefpane 'Web Sharing.prefPane'
 end

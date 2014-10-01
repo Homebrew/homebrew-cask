@@ -4,6 +4,7 @@ class Fugu < Cask
 
   url "https://downloads.sourceforge.net/project/fugussh/Unstable/fugu-#{version}/Fugu-#{version}.zip"
   homepage 'http://rsug.itd.umich.edu/software/fugu/'
+  license :oss
 
   app 'Fugu.app'
 end

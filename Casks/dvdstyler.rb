@@ -4,6 +4,7 @@ class Dvdstyler < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/dvdstyler/DVDStyler-#{version}-MacOSX.zip"
   homepage 'http://dvdstyler.org'
+  license :oss
 
   app 'DVDStyler.app'
 end

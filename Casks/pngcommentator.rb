@@ -5,6 +5,7 @@ class Pngcommentator < Cask
   url "http://www.echomist.co.uk/software/downloads/PNGCommentator_#{version}.dmg"
   appcast 'http://www.echomist.co.uk/Sparkle/PNGCommentator.xml'
   homepage 'http://www.echomist.co.uk/software/PNGCommentator.html'
+  license :unknown
 
   app 'PNGCommentator.app'
 end

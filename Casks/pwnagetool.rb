@@ -5,6 +5,7 @@ class Pwnagetool < Cask
   url "https://sites.google.com/a/ipad-dev.com/files/pwnagetool/PwnageTool_#{version}.dmg"
   appcast 'http://www.iphone-dev.org/appcast/PwnageTool2.xml'
   homepage 'http://blog.iphone-dev.org/tagged/PwnageTool'
+  license :unknown
 
   app 'PwnageTool.app'
 end

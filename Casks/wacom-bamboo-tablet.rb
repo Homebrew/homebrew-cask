@@ -4,6 +4,7 @@ class WacomBambooTablet < Cask
 
   url "http://cdn.wacom.com/U/Drivers/Mac/Consumer/533/PenTablet_#{version}.dmg"
   homepage 'http://us.wacom.com/en/support/drivers'
+  license :unknown
 
   pkg 'Install Wacom Tablet.pkg'
   uninstall :launchctl => 'com.wacom.pentablet',

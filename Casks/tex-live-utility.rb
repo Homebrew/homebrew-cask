@@ -5,6 +5,7 @@ class TexLiveUtility < Cask
   url "https://mactlmgr.googlecode.com/files/TeX%20Live%20Utility.app-#{version}.tar.gz"
   appcast 'http://mactlmgr.googlecode.com/svn/trunk/appcast/tlu_appcast.xml'
   homepage 'https://code.google.com/p/mactlmgr/'
+  license :oss
 
   app 'TeX Live Utility.app'
 end

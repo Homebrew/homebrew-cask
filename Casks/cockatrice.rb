@@ -4,6 +4,7 @@ class Cockatrice < Cask
 
   url 'http://www.woogerworks.com/files/cockatrice_weeklybuilds/Cockatrice-osx_git-59b8d70.dmg'
   homepage 'http://www.woogerworks.com/'
+  license :unknown
 
   app 'cockatrice.app', :target => 'Cockatrice.app'
   app 'oracle.app', :target => 'Oracle.app'

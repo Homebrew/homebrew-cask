@@ -4,6 +4,7 @@ class Telephone < Cask
 
   url "https://telephone.googlecode.com/files/Telephone-#{version}.dmg"
   homepage 'https://code.google.com/p/telephone/'
+  license :oss
 
   app 'Telephone.app'
 end

@@ -4,6 +4,7 @@ class Gitbook < Cask
 
   url 'https://www.gitbook.io/editor/download'
   homepage 'https://www.gitbook.io/'
+  license :unknown
 
   app 'GitBook.app'
 end

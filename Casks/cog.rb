@@ -5,6 +5,7 @@ class Cog < Cask
   url 'http://cogx.org/nightly_builds/cog-r2051.tbz'
   appcast 'http://mamburu.net/cog/stable.xml'
   homepage 'http://cogx.org'
+  license :unknown
 
   app 'Cog.app'
 end

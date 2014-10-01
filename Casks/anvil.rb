@@ -5,6 +5,7 @@ class Anvil < Cask
   url 'https://sparkler.herokuapp.com/apps/3/download'
   appcast 'http://sparkler.herokuapp.com/apps/3/updates.xml'
   homepage 'http://anvilformac.com/'
+  license :unknown
 
   app 'Anvil.app'
 end

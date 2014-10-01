@@ -4,6 +4,7 @@ class Qiyimedia < Cask
 
   url 'http://static.qiyi.com/ext/common/QIYImedia_Mac_5.dmg'
   homepage 'http://www.iqiyi.com'
+  license :unknown
 
   app '爱奇艺视频.app'
 end

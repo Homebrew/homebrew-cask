@@ -4,6 +4,7 @@ class PuntoSwitcher < Cask
 
   url 'http://download.cdn.yandex.net.cache-ams02.cdn.yandex.net/punto/mac/PuntoSwitcher.zip'
   homepage 'http://punto.yandex.ru'
+  license :unknown
 
   pkg 'PuntoSwitcher Installer.pkg'
   uninstall :quit => 'ru.yandex.desktop.PuntoSwitcher',

@@ -4,6 +4,7 @@ class Protege < Cask
 
   url "http://protege.stanford.edu/download/protege/4.3/osx/protege-#{version}-304.zip"
   homepage 'http://protege.stanford.edu/'
+  license :unknown
 
   app 'protege-4.3.app'
 end

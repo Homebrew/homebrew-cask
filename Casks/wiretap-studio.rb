@@ -4,6 +4,7 @@ class WiretapStudio < Cask
 
   url 'http://www.ambrosiasw.com/dl/wiretap'
   homepage 'http://www.ambrosiasw.com/utilities/wiretap/'
+  license :unknown
 
   app 'WireTap Studio.app'
 end

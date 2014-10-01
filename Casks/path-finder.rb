@@ -4,6 +4,7 @@ class PathFinder < Cask
 
   url 'http://get.cocoatech.com/PF7.zip'
   homepage 'http://www.cocoatech.com/pathfinder/'
+  license :unknown
 
   app 'Path Finder.app'
 

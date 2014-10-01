@@ -4,6 +4,7 @@ class Seashore < Cask
 
   url 'https://downloads.sourceforge.net/sourceforge/seashore/Seashore.zip'
   homepage 'http://seashore.sourceforge.net/'
+  license :oss
 
   app 'Seashore.app'
 end

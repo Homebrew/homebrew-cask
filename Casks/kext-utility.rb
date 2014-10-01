@@ -4,6 +4,7 @@ class KextUtility < Cask
 
   url "http://cvad-mac.narod.ru/files/Kext_Utility.app.v#{version}.zip"
   homepage 'http://cvad-mac.narod.ru/index/0-4'
+  license :unknown
 
   app 'Kext Utility.app'
 end

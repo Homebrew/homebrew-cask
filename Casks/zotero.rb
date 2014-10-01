@@ -4,6 +4,7 @@ class Zotero < Cask
 
   url "https://download.zotero.org/standalone/#{version}/Zotero-#{version}.dmg"
   homepage 'http://www.zotero.org/'
+  license :unknown
 
   app 'Zotero.app'
 end

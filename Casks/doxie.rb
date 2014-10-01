@@ -4,6 +4,7 @@ class Doxie < Cask
 
   url 'http://www.getdoxie.com/resources/files/download_current_mac.php'
   homepage 'http://www.getdoxie.com/'
+  license :unknown
 
   app 'Doxie.app'
 end

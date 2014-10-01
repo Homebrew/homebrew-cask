@@ -4,6 +4,7 @@ class ExistDb < Cask
 
   url "http://downloads.sourceforge.net/sourceforge/exist/eXist-db-#{version}.dmg"
   homepage 'http://exist-db.org/'
+  license :oss
 
   app 'eXist-db.app'
 end

@@ -4,6 +4,7 @@ class Xmplify < Cask
 
   url 'http://xmplifyapp.com/releases/Xmplify.dmg'
   homepage 'http://xmplifyapp.com/'
+  license :unknown
 
   app 'Xmplify.app'
   uninstall :quit => 'au.com.moso.Xmplify'

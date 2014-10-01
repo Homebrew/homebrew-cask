@@ -5,6 +5,7 @@ class Bbedit < Cask
   url "http://pine.barebones.com/files/BBEdit_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/BBEdit.xml'
   homepage 'http://www.barebones.com/products/bbedit/'
+  license :unknown
 
   app 'BBEdit.app'
 end

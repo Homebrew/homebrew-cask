@@ -4,6 +4,7 @@ class Mailfollowup < Cask
 
   url "https://www.cs.unc.edu/~welch/MailFollowup/media/MailFollowUp_#{version}.dmg.zip"
   homepage 'http://www.cs.unc.edu/~welch/MailFollowup/'
+  license :unknown
 
   nested_container "MailFollowUp_#{version}.dmg"
   pkg 'Install MailFollowUp.pkg'

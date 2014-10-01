@@ -4,6 +4,7 @@ class ColorpickerHex < Cask
 
   url "http://wafflesoftware.net/hexpicker/download/HexColorPicker-#{version}.zip"
   homepage 'http://wafflesoftware.net/hexpicker/'
+  license :unknown
 
   colorpicker 'Hex Color Picker/HexColorPicker.colorPicker'
 end

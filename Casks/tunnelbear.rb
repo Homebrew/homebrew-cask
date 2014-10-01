@@ -5,6 +5,7 @@ class Tunnelbear < Cask
   url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version}.zip"
   appcast 'https://s3.amazonaws.com/tunnelbear/downloads/mac/appcast.xml'
   homepage 'https://www.tunnelbear.com/'
+  license :unknown
 
   app 'TunnelBear.app'
 end

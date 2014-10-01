@@ -4,6 +4,7 @@ class Stackato < Cask
 
   url "http://downloads.activestate.com/stackato/client/v#{version}/stackato-#{version}-macosx10.5-i386-x86_64.zip"
   homepage 'http://docs.stackato.com/user/client/index.html'
+  license :unknown
 
   binary "stackato-#{version}-macosx10.5-i386-x86_64/stackato"
 end

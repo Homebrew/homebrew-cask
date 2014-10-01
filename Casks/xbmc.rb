@@ -4,6 +4,7 @@ class Xbmc < Cask
 
   url "http://mirrors.xbmc.org/releases/osx/x86_64/xbmc-#{version}-Gotham-x86_64.dmg"
   homepage 'http://xbmc.org/'
+  license :unknown
 
   app 'XBMC.app'
 end

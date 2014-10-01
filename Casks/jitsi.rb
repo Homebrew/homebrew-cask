@@ -5,6 +5,7 @@ class Jitsi < Cask
   url "https://download.jitsi.org/jitsi/macosx/jitsi-#{version}-latest.dmg"
   appcast 'https://download.jitsi.org/jitsi/macosx/sparkle/updates.xml'
   homepage 'https://jitsi.org/'
+  license :unknown
 
   app 'Jitsi.app'
 end

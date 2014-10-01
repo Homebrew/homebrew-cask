@@ -4,6 +4,7 @@ class Pusher < Cask
 
   url "https://github.com/noodlewerk/NWPusher/releases/download/#{version}/pusher.app.zip"
   homepage 'https://github.com/noodlewerk/NWPusher'
+  license :oss
 
   app 'Pusher.app'
 end

@@ -4,6 +4,7 @@ class Tomighty < Cask
 
   url "https://tomighty.googlecode.com/files/Tomighty-#{version}.dmg"
   homepage 'http://www.tomighty.org/'
+  license :oss
 
   app 'Tomighty.app'
 end
