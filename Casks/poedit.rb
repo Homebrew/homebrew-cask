@@ -5,6 +5,7 @@ class Poedit < Cask
   url "http://poedit.net/dl/Poedit-#{version}.zip"
   appcast 'http://releases.poedit.net/appcast-osx'
   homepage 'http://www.poedit.net'
+  license :unknown
 
   app 'Poedit.app'
 end
