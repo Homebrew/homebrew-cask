@@ -4,6 +4,7 @@ class Deeq < Cask
 
   url 'http://dl.bithavoc.io/deeq/releases/latest.dmg'
   homepage 'http://deeqapp.com'
+  license :unknown
 
   app 'Deeq.app'
 end
