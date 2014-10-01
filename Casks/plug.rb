@@ -5,6 +5,7 @@ class Plug < Cask
   url 'http://www.plugformac.com/files/Plug-latest.dmg'
   appcast 'http://www.plugformac.com/files/sparklecast.xml'
   homepage 'http://www.plugformac.com/'
+  license :unknown
 
   app 'Plug.app'
 end
