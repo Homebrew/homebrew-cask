@@ -4,6 +4,7 @@ class Secrets < Cask
 
   url "https://blacktree-secrets.googlecode.com/files/Secrets_#{version}.zip"
   homepage 'http://secrets.blacktree.com'
+  license :oss
 
   prefpane 'Secrets.prefpane'
 end
