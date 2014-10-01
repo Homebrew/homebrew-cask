@@ -4,6 +4,7 @@ class Dogecoin < Cask
 
   url "https://github.com/dogecoin/dogecoin/releases/download/v#{version}/dogecoin-#{version}-mac.zip"
   homepage 'http://dogecoin.com/'
+  license :oss
 
   app 'Dogecoin-Qt.app'
 end
