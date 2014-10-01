@@ -4,6 +4,7 @@ class SophosAntiVirusHomeEdition < Cask
 
   url 'http://downloads.sophos.com/home-edition/savosx_90_he.zip'
   homepage 'http://www.sophos.com/en-us/products/free-tools/sophos-antivirus-for-mac-home-edition.aspx/'
+  license :unknown
 
   app 'Sophos Anti-Virus Home Edition.app'
 end
