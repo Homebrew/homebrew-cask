@@ -4,6 +4,7 @@ class Coolterm < Cask
 
   url 'http://freeware.the-meiers.org/CoolTermMac.zip'
   homepage 'http://freeware.the-meiers.org/'
+  license :unknown
 
   app 'CoolTermMac/CoolTerm.app'
 end
