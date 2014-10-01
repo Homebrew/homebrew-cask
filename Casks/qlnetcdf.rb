@@ -4,6 +4,7 @@ class Qlnetcdf < Cask
 
   url "https://github.com/tobeycarman/QLNetcdf/releases/download/v#{version}/QLNetcdf.qlgenerator.zip"
   homepage 'https://github.com/tobeycarman/QLNetcdf/'
+  license :oss
 
   qlplugin 'QLNetcdf.qlgenerator'
 end
