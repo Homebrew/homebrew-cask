@@ -4,6 +4,7 @@ class Zendserver < Cask
 
   url "http://downloads.zend.com/zendserver/#{version}/ZendServer-#{version}-php-5.5.7.dmg"
   homepage 'http://www.zend.com/en/products/server/'
+  license :unknown
 
   pkg 'Zend Server.pkg'
   uninstall :script => { :executable => '/usr/local/zend/bin/uninstall.sh', :args => ['--automatic'] },
