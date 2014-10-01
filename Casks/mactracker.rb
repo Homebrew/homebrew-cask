@@ -5,6 +5,7 @@ class Mactracker < Cask
   url "http://www.mactracker.ca/downloads/Mactracker_#{version}.zip"
   appcast 'http://update.mactracker.ca/appcast-b.xml'
   homepage 'http://mactracker.ca/'
+  license :unknown
 
   app 'Mactracker.app'
 end
