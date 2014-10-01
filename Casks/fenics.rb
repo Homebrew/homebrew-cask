@@ -6,24 +6,24 @@ class Fenics < Cask
   homepage 'http://fenicsproject.org/'
 
   app 'FEniCS.app'
-  
+
   caveats do
   "  FEniCS is designed to work with the OS X system Python (v. 2.7.5 in OS X 10.9).
-  
-  If you are using a standard bash shell and system Python, you can make FEniCS 
-  available when you start your shell by adding the following to the .profile 
+
+  If you are using a standard bash shell and system Python, you can make FEniCS
+  available when you start your shell by adding the following to the .profile
   file in your home directory:
-  
+
     source #{@cask.destination_path}/FEniCS.app/Contents/Resources/share/fenics/fenics.conf
-  
-   
-  If you are using an alternate shell (e.g., zsh, csh) or a modified or brewed Python, 
-  be sure to launch FEniCS using a clean (bash) shell. 
-  Creating a new shell using the following command works well: 
-    
+
+
+  If you are using an alternate shell (e.g., zsh, csh) or a modified or brewed Python,
+  be sure to launch FEniCS using a clean (bash) shell.
+  Creating a new shell using the following command works well:
+
     /bin/bash --rcfile #{@cask.destination_path}/FEniCS.app/Contents/Resources/share/fenics/fenics.conf"
   end
-  
+
   caveats do
     os_version_only("10.9", "10.10")
   end
