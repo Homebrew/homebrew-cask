@@ -4,6 +4,7 @@ class Electrum < Cask
 
   url "https://download.electrum.org/electrum-#{version}.dmg"
   homepage 'http://electrum.org/'
+  license :unknown
 
   app 'Electrum.app'
 end
