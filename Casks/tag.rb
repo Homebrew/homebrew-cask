@@ -4,6 +4,7 @@ class Tag < Cask
 
   url "http://downloads.sourceforge.net/sourceforge/tagosx/Tag-#{version}.zip"
   homepage 'http://sbooth.org/Tag/'
+  license :oss
 
   app "Tag-#{version}/Tag.app"
 end
