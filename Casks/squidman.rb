@@ -4,6 +4,7 @@ class Squidman < Cask
 
   url "http://squidman.net/resources/downloads/SquidMan#{version}.dmg"
   homepage 'http://squidman.net/squidman/'
+  license :unknown
 
   app 'SquidMan.app'
 end
