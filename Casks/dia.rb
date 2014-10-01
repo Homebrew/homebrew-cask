@@ -4,6 +4,7 @@ class Dia < Cask
 
   url "https://downloads.sourceforge.net/dia-installer/dia/0.97.2/Dia-#{version}.dmg"
   homepage 'http://dia-installer.de/'
+  license :oss
 
   app 'Dia.app'
 end
