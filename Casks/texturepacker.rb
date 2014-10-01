@@ -4,6 +4,7 @@ class Texturepacker < Cask
 
   url "https://www.codeandweb.com/download/texturepacker/#{version}/TexturePacker-#{version}-uni.dmg"
   homepage 'http://www.codeandweb.com/texturepacker'
+  license :unknown
 
   app 'TexturePacker.app'
 end
