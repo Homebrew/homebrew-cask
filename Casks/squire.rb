@@ -5,6 +5,7 @@ class Squire < Cask
   url "https://s3.amazonaws.com/Squire_Mac_Builds/Squire_#{version}.zip"
   appcast 'http://www.sylion.com/squireapp/sparkle/SquireMac/appcastMac.xml'
   homepage 'http://squireapp.com'
+  license :unknown
 
   app 'Squire.app'
 end
