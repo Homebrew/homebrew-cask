@@ -5,6 +5,7 @@ class Uncrustifyx < Cask
   url "https://github.com/ryanmaxwell/UncrustifyX/releases/download/#{version}/UncrustifyX-#{version}.zip"
   appcast 'https://raw.github.com/ryanmaxwell/uncrustifyx/appcast/uncrustifyx-appcast.xml'
   homepage 'https://github.com/ryanmaxwell/UncrustifyX'
+  license :oss
 
   app 'UncrustifyX.app'
 end
