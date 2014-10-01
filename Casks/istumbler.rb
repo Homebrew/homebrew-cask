@@ -4,6 +4,7 @@ class Istumbler < Cask
 
   url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   homepage 'http://istumbler.net/'
+  license :unknown
 
   app 'iStumbler.app'
 end
