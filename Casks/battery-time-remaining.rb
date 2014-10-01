@@ -4,6 +4,7 @@ class BatteryTimeRemaining < Cask
 
   url "http://yap.nu/battery-time-remaining/download/Battery%20Time%20Remaining%202-#{version}.zip"
   homepage 'http://yap.nu/battery-time-remaining/'
+  license :unknown
 
   app 'Battery Time Remaining 2.app'
 end
