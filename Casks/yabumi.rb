@@ -4,6 +4,7 @@ class Yabumi < Cask
 
   url 'https://yabumi.cc/download/YabumiUploader.dmg'
   homepage 'https://yabumi.cc/'
+  license :unknown
 
   app 'Yabumi.app'
 end
