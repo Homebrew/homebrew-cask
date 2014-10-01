@@ -4,6 +4,7 @@ class Silo < Cask
 
   url 'https://nevercenter.com/download/Install_Silo_2_3_02_mac.zip'
   homepage 'http://nevercenter.com/silo/'
+  license :unknown
   nested_container 'Install_Silo_2_3_02_mac.dmg'
 
   app 'Silo 2.3.app'
