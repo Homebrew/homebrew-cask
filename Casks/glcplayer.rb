@@ -4,6 +4,7 @@ class Glcplayer < Cask
 
   url "http://downloads.sourceforge.net/sourceforge/glc-player/glc_player_#{version}.dmg"
   homepage 'http://www.glc-player.net'
+  license :oss
 
   app 'glc_player.app'
 end
