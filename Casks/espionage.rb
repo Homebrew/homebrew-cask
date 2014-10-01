@@ -4,6 +4,7 @@ class Espionage < Cask
 
   url 'https://www.espionageapp.com/Espionage.dmg'
   homepage 'https://www.espionageapp.com/'
+  license :unknown
 
   app 'Espionage.app'
 end
