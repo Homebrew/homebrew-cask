@@ -4,6 +4,7 @@ class Butter < Cask
 
   url "https://github.com/harukasan/butter/releases/download/v#{version}/Butter_#{version}.dmg"
   homepage 'http://harukasan.jp'
+  license :oss
 
   app 'Butter.app'
 end
