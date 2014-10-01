@@ -5,6 +5,7 @@ class ScrollReverser < Cask
   url "https://d20vhy8jiniubf.cloudfront.net/downloads/ScrollReverser-#{version}.zip"
   appcast 'http://softwareupdate.pilotmoon.com/update/scrollreverser/appcast.xml'
   homepage 'https://pilotmoon.com/scrollreverser/'
+  license :unknown
 
   app 'Scroll Reverser.app'
 end
