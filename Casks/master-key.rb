@@ -5,6 +5,7 @@ class MasterKey < Cask
   url 'http://macinmind.com/MasterKey.dmg'
   appcast 'http://macinmind.com/pads/MasterKeyappcast.xml'
   homepage 'http://macinmind.com/?area=app&app=masterkey&pg=info'
+  license :unknown
 
   app 'Master Key.app'
 end
