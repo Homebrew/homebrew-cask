@@ -4,6 +4,7 @@ class Bitmessage < Cask
 
   url "https://bitmessage.org/download/osx/Archive/bitmessage-v#{version}.dmg"
   homepage 'https://bitmessage.org/'
+  license :unknown
 
   app 'Bitmessage.app'
 end
