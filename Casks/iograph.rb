@@ -4,6 +4,7 @@ class Iograph < Cask
 
   url 'http://iographica.com/download/osx/IOGraph_v1_0_1.dmg'
   homepage 'http://iographica.com/'
+  license :unknown
 
   app 'IOGraph.app'
 end
