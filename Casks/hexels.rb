@@ -4,6 +4,7 @@ class Hexels < Cask
 
   url 'http://hexraystudios.com/Hexels.dmg'
   homepage 'http://hexraystudios.com/hexels/'
+  license :unknown
 
   app 'Hexels.app'
   zap :delete => '~/Library/Preferences/com.hex-ray.hexels.plist'
