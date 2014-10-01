@@ -5,6 +5,7 @@ class Spectacle < Cask
   url "https://s3.amazonaws.com/spectacle/downloads/Spectacle+#{version}.zip"
   appcast 'http://spectacleapp.com/updates/appcast.xml'
   homepage 'http://spectacleapp.com/'
+  license :unknown
 
   app 'Spectacle.app'
   zap :delete => '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist'
