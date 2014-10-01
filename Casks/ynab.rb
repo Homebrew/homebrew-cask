@@ -4,6 +4,7 @@ class Ynab < Cask
 
   url "https://www.youneedabudget.com/CDNOrigin/download/ynab4/liveCaptive/Mac/YNAB4_LiveCaptive_#{version}.dmg"
   homepage 'http://www.youneedabudget.com/'
+  license :unknown
 
   app 'YNAB 4.app'
 end
