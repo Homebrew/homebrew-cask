@@ -1,6 +1,6 @@
 class Sourcetree < Cask
-  version '2.0.0'
-  sha256 'a4f39a0d9e8ab3ec91f1d8399eb4ee6ddecdf0e5885debcf3d1c6aa893126fbc'
+  version '2.0.1'
+  sha256 'a548a48d451762a42601750037b7c7daad423d8dcc8ddf93f08462d7dace516a'
 
   url "https://downloads.atlassian.com/software/sourcetree/SourceTree_#{version}.dmg"
   appcast 'http://www.sourcetreeapp.com/update/SparkleAppcast.xml'
