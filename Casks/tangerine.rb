@@ -4,6 +4,7 @@ class Tangerine < Cask
 
   url "http://distrib.karelia.com/downloads/Tangerine!-4008.zip"
   homepage 'http://www.karelia.com/products/tangerine/'
+  license :unknown
 
   app 'Tangerine!.app'
 
