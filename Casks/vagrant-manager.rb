@@ -5,6 +5,7 @@ class VagrantManager < Cask
   url "https://github.com/lanayotech/vagrant-manager/releases/download/#{version}/vagrant-manager-#{version}.dmg"
   appcast 'http://api.lanayo.com/appcast/vagrant_manager.xml'
   homepage 'http://vagrantmanager.com/'
+  license :oss
 
   app 'Vagrant Manager.app'
 end
