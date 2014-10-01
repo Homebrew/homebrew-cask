@@ -4,6 +4,7 @@ class Jaksta < Cask
 
   url "http://downloads.jaksta.com/release/mac/Jaksta-#{version}.dmg"
   homepage 'http://www.jaksta.com/Products#JakstaMediaRecorderMac'
+  license :unknown
 
   app 'Jaksta.app'
 end
