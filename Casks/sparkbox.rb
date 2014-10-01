@@ -5,6 +5,7 @@ class Sparkbox < Cask
   url 'http://t.icyblaze.com/sblatest'
   appcast 'http://matrix.icyblaze.com/index.php/checkupdate/p/8'
   homepage 'http://www.icyblaze.com/sparkbox'
+  license :unknown
 
   app 'Sparkbox.app'
 end
