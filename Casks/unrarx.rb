@@ -5,6 +5,7 @@ class Unrarx < Cask
   url "http://www.unrarx.com/files/UnRarX_#{version}.zip"
   appcast 'http://www.unrarx.com/update.xml'
   homepage 'http://www.unrarx.com'
+  license :unknown
 
   app 'UnRarX.app'
 end
