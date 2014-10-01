@@ -1,5 +1,6 @@
 class Ax88772 < Cask
   homepage 'http://www.asix.com.tw/products.php?op=pItemdetail&PItemID=86;71;101&PLine=71'
+  license :unknown
 
   version '2.1.0_20140428'
   basename = "AX88772C_772B_772A_760_772_Macintosh_10.5_to_10.9_Driver_Installer_v#{version}"
