@@ -5,6 +5,7 @@ class Gitbox < Cask
   url "https://d1oa71y4zxyi0a.cloudfront.net/gitbox-#{version}-ml.zip"
   appcast 'http://gitboxapp.com/updates.xml'
   homepage 'http://gitboxapp.com/'
+  license :unknown
 
   app 'Gitbox.app'
   zap :delete => '~/Library/Preferences/com.oleganza.gitbox.plist'
