@@ -4,6 +4,7 @@ class GoogleEarth < Cask
 
   url 'https://dl.google.com/earth/client/advanced/current/GoogleEarthMac-Intel.dmg'
   homepage 'https://www.google.com/earth/'
+  license :unknown
 
   app 'Google Earth.app'
 end
