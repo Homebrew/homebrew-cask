@@ -4,6 +4,7 @@ class Calcservice < Cask
 
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/calcservice/#{version}/CalcService.zip"
   homepage 'http://www.devontechnologies.com/products/freeware.html#c1111'
+  license :unknown
 
   service 'CalcService/CalcService.service'
 end
