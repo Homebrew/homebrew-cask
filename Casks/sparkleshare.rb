@@ -4,6 +4,7 @@ class Sparkleshare < Cask
 
   url "https://bitbucket.org/hbons/sparkleshare/downloads/sparkleshare-mac-#{version}.zip"
   homepage 'http://sparkleshare.org/'
+  license :oss
 
   app 'SparkleShare.app'
 end
