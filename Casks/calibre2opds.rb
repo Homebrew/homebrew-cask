@@ -4,6 +4,7 @@ class Calibre2opds < Cask
 
   url "https://calibre2opds.googlecode.com/files/calibre2opds-#{version}.dmg"
   homepage 'http://calibre2opds.com/'
+  license :oss
 
   app 'Calibre2Opds.app'
 end
