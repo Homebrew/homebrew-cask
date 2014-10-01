@@ -4,6 +4,7 @@ class Inky < Cask
 
   url 'https://inky.com/mail/InkyInstall.dmg'
   homepage 'http://inky.com'
+  license :unknown
 
   app 'Inky.app'
 end
