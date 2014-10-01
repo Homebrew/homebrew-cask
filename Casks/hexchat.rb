@@ -4,6 +4,7 @@ class Hexchat < Cask
 
   url "http://dl.hexchat.net/hexchat/osx/HexChat-#{version}.app.zip"
   homepage 'http://hexchat.github.io'
+  license :oss
 
   app 'HexChat.app'
 end
