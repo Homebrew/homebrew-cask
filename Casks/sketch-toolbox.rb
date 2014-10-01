@@ -4,6 +4,7 @@ class SketchToolbox < Cask
 
   url 'http://sketchtoolbox.com/Sketch%20Toolbox.zip'
   homepage 'http://sketchtoolbox.com'
+  license :unknown
 
   app 'Sketch Toolbox.app'
 end
