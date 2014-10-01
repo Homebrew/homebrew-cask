@@ -4,6 +4,7 @@ class Darktable < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/darktable/darktable-#{version}.dmg"
   homepage 'http://www.darktable.org/'
+  license :oss
 
   app 'darktable.app'
 end
