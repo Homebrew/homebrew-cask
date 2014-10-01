@@ -7,6 +7,7 @@ class Vuescan < Cask
     sha256 'a6e82863f7d6fc34400f678fb4de3cf5af6cbde9a20693ff4bfb5d95ad59f398'
   end
   homepage 'http://www.hamrick.com'
+  license :unknown
   version '9.4.37'
   app 'VueScan.app'
 end
