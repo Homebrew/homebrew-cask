@@ -4,6 +4,7 @@ class Livestation < Cask
 
   url "http://updates.livestation.com/releases/Livestation-#{version}.dmg"
   homepage 'http://www.livestation.com'
+  license :unknown
 
   app 'Livestation.app'
 end
