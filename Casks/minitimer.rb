@@ -4,6 +4,7 @@ class Minitimer < Cask
 
   url "http://kevingessner.com/public/downloads/miniTimer/#{version}/miniTimer.dmg"
   homepage 'http://kevingessner.com/software/minitimer/'
+  license :unknown
 
   app 'miniTimer.app'
 end
