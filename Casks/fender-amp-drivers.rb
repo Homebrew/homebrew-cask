@@ -4,6 +4,7 @@ class FenderAmpDrivers < Cask
 
   url "http://support.fender.com/software/fender_software/fender_fuse/mac/FenderFUSE_FULL_#{version}.dmg"
   homepage 'https://fuse.fender.com/'
+  license :unknown
 
   pkg 'Fender FUSE Installer.app/Contents/Resources/FenderDrivers.pkg'
   uninstall :pkgutil => 'com.Fender.pkg.FenderAmpDrivers'
