@@ -5,6 +5,7 @@ class Mou < Cask
   url 'http://mouapp.com/download/Mou.zip'
   appcast 'http://mouapp.com/up/updates.xml'
   homepage 'http://mouapp.com/'
+  license :unknown
 
   app 'Mou.app'
   zap :delete => [
