@@ -4,6 +4,7 @@ class Rythem < Cask
 
   url 'https://github.com/AlloyTeam/Rythem/releases/download/filter/Rythem-2014-2-21.dmg'
   homepage 'https://github.com/AlloyTeam/Rythem'
+  license :oss
 
   app 'Rythem.app'
 end
