@@ -6,6 +6,7 @@ class XamarinIos < Cask
   # non-Sparkle appcast
   appcast 'http://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml'
   homepage 'http://xamarin.com/ios'
+  license :unknown
 
   pkg "monotouch-#{version}.pkg"
   uninstall :pkgutil => 'com.xamarin.monotouch.pkg'
