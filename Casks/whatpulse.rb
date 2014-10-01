@@ -4,6 +4,7 @@ class Whatpulse < Cask
 
   url "http://amcdn.whatpulse.org/files/whatpulse-mac-#{version}.dmg"
   homepage 'http://www.whatpulse.org/'
+  license :unknown
 
   pkg "WhatPulse #{version}.mpkg"
   uninstall :pkgutil => 'com.lostdomain.whatpulse',
