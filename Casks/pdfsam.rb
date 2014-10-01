@@ -4,6 +4,7 @@ class Pdfsam < Cask
 
   url "https://downloads.sourceforge.net/project/pdfsam/pdfsam/#{version}/pdfsam-#{version}.dmg"
   homepage 'http://www.pdfsam.org/'
+  license :oss
 
   app 'pdfsam.app'
 end
