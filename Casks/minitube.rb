@@ -5,6 +5,7 @@ class Minitube < Cask
   url 'http://flavio.tordini.org/files/minitube/minitube.dmg'
   appcast 'http://flavio.tordini.org/minitube-ws/appcast.xml'
   homepage 'http://flavio.tordini.org/minitube'
+  license :unknown
 
   app 'Minitube.app'
 end
