@@ -4,6 +4,7 @@ class Capsee < Cask
 
   url 'http://www.threemagination.com/CapSee12.zip'
   homepage 'http://www.threemagination.com/capsee/'
+  license :unknown
 
   nested_container 'CapSee12.dmg'
   app 'CapSee.app'
