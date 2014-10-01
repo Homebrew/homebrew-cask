@@ -5,6 +5,7 @@ class Enjoyable < Cask
   url "https://yukkurigames.com/enjoyable/Enjoyable-#{version}.zip"
   appcast 'http://yukkurigames.com/enjoyable/appcast.xml'
   homepage 'http://yukkurigames.com/enjoyable/'
+  license :unknown
 
   app 'Enjoyable.app'
   zap :delete => '~/Library/Preferences/com.yukkurigames.Enjoyable.plist'
