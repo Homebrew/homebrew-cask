@@ -4,6 +4,7 @@ class Cooviewer < Cask
 
   url "http://www.geocities.jp/coo_ona/cooviewer#{version}.dmg"
   homepage 'http://www.geocities.jp/coo_ona/viewer.html'
+  license :unknown
 
   app 'cooViewer/cooViewer.app'
 end
