@@ -4,6 +4,7 @@ class Hbuilder < Cask
 
   url 'http://download.dcloud.net.cn/HBuilder.macosx.zip'
   homepage 'http://dcloud.io/'
+  license :unknown
 
   app 'HBuilder.app'
 end
