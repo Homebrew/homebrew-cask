@@ -4,6 +4,7 @@ class Ultrastardeluxe < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/ultrastardx/UltraStarDeluxe-#{version}.dmg"
   homepage 'http://ultrastardx.sourceforge.net/'
+  license :oss
 
   app 'UltraStarDeluxe.app'
 end
