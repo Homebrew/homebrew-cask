@@ -4,6 +4,7 @@ class Mapture < Cask
 
   url "http://anatoo.jp/mapture/Mapture-#{version}.app.zip"
   homepage 'http://anatoo.jp/mapture/'
+  license :unknown
 
   app "Mapture-#{version}.app"
 end
