@@ -4,6 +4,7 @@ class Connector < Cask
 
   url "http://update.mediaware.sk/numpad/connector-#{version}.zip"
   homepage 'http://mediaware.sk/connector'
+  license :unknown
 
   app 'Connector.app'
 end
