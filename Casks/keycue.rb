@@ -4,6 +4,7 @@ class Keycue < Cask
 
   url 'http://www.ergonis.com/downloads/products/keycue/KeyCue71-Install.dmg'
   homepage 'http://www.ergonis.com/products/keycue/'
+  license :unknown
 
   app 'KeyCue.app'
 end
