@@ -4,6 +4,7 @@ class PutioAdder < Cask
 
   url "https://github.com/nicoSWD/put.io-adder/releases/download/v#{version}/put.io-adder-v#{version}.zip"
   homepage 'https://github.com/nicoSWD/put.io-adder'
+  license :oss
 
   app 'put.io adder.app'
 end
