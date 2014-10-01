@@ -4,6 +4,7 @@ class Honer < Cask
 
   url "https://github.com/puffnfresh/Honer.app/releases/download/v#{version}/Honer-6e3863f2.zip"
   homepage 'https://github.com/puffnfresh/Honer.app'
+  license :oss
 
   app 'Honer.app'
 end
