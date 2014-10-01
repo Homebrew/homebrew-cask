@@ -4,6 +4,7 @@ class Renamer < Cask
 
   url 'http://creativebe.com/download/renamer'
   homepage 'http://renamer.com'
+  license :unknown
 
   app 'Renamer.app'
 end
