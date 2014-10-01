@@ -4,6 +4,7 @@ class Brackets < Cask
 
   url "https://github.com/adobe/brackets/releases/download/release-#{version}/Brackets.Release.#{version}.dmg"
   homepage 'http://brackets.io'
+  license :oss
 
   app 'Brackets.app'
   zap :delete => [
