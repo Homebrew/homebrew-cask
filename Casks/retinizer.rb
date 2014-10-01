@@ -4,6 +4,7 @@ class Retinizer < Cask
 
   url 'https://sites.google.com/a/mikelpr.com/files/home/Retinizer050.zip'
   homepage 'http://retinizer.mikelpr.com/'
+  license :unknown
 
   app 'Retinizer.app'
 end
