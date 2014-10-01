@@ -4,6 +4,7 @@ class YubikeyPersonalizationGui < Cask
 
   url "https://www.yubico.com/wp-content/uploads/2012/09/yubikey-personalization-gui-#{version}.pkg"
   homepage 'http://www.yubico.com/products/services-software/personalization-tools/use/'
+  license :unknown
 
   pkg "yubikey-personalization-gui-#{version}.pkg"
   uninstall :pkgutil => 'com.yubico.YKPersonalization'
