@@ -4,6 +4,7 @@ class Printrun < Cask
 
   url 'http://koti.kapsi.fi/~kliment/printrun/Printrun-Mac-10Mar2014.zip'
   homepage 'https://github.com/kliment/Printrun'
+  license :oss
 
   app 'Printrun-Mac-10Mar2014.app'
 end
