@@ -12,6 +12,7 @@ class Limechat < Cask
 
   appcast 'http://limechat.net/mac/appcast.xml'
   homepage 'http://limechat.net/mac/'
+  license :oss
 
   app 'LimeChat.app'
   zap :delete => '~/Library/Preferences/net.limechat.LimeChat-AppStore.plist'
