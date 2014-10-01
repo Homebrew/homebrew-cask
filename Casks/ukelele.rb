@@ -5,6 +5,7 @@ class Ukelele < Cask
   url "https://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Ukelele_#{version}&filename=Ukelele_#{version}.dmg"
   appcast 'http://scripts.sil.org/cms/scripts/render_download.php?site_id=nrsi&format=file&media_id=ukelele_su_feed&filename=ukelele_su_feed.xml'
   homepage 'http://scripts.sil.org/ukelele'
+  license :unknown
 
   app 'Ukelele.app'
 end
