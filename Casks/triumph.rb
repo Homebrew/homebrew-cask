@@ -4,6 +4,7 @@ class Triumph < Cask
 
   url 'http://www.audiofile-engineering.com/triumph/download/Triumph.dmg'
   homepage 'http://www.audiofile-engineering.com/triumph/'
+  license :unknown
 
   app 'Triumph.app'
   app 'Triumph.app/Contents/Applications/DDP Player.app'
