@@ -5,6 +5,7 @@ class Chronomate < Cask
   url "https://studio-qb.com/sites/studio-qb.com/files/releases/chronomate_#{version}.dmg"
   appcast 'http://chronomateapp.com/update'
   homepage 'http://chronomateapp.com/'
+  license :unknown
 
   app 'ChronoMate.app'
 end
