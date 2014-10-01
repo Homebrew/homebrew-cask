@@ -5,6 +5,7 @@ class Porthole < Cask
   url 'http://getporthole.com/downloads/trial'
   appcast 'http://update.getporthole.com/appcast.rss'
   homepage 'http://getporthole.com/'
+  license :unknown
 
   app 'Porthole.app'
 end
