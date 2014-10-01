@@ -5,6 +5,7 @@ class Macdown < Cask
   url "http://macdown.uranusjr.com/download/v#{version}/"
   appcast 'http://macdown.uranusjr.com/sparkle/macdown/appcast.xml'
   homepage 'http://macdown.uranusjr.com/'
+  license :unknown
 
   app 'MacDown.app'
 end
