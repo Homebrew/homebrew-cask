@@ -4,6 +4,7 @@ class IntelXdk < Cask
 
   url "https://d2bnc8freht07j.cloudfront.net/xdk_web_mac_master_#{version}.dmg"
   homepage 'http://xdk-software.intel.com/'
+  license :unknown
 
   pkg "xdk_full_#{version}.pkg"
   uninstall :pkgutil => 'com.intel.pkg.xdk_new'
