@@ -4,6 +4,7 @@ class MagicLaunch < Cask
 
   url "https://www.oneperiodic.com/files/Magic%20Launch%20v#{version}.zip"
   homepage 'http://www.oneperiodic.com/products/magiclaunch/'
+  license :unknown
 
   prefpane 'Magic Launch.prefPane'
   zap :delete => '~/Library/Preferences/com.metakine.magic-launch.agent.plist'
