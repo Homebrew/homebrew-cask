@@ -5,6 +5,7 @@ class Fake < Cask
   url "http://fakeapp.com/dist/Fake_#{version}.zip"
   appcast 'http://fakeapp.com/appcast/fake.rss'
   homepage 'http://fakeapp.com/'
+  license :unknown
 
   app 'Fake.app'
 end
