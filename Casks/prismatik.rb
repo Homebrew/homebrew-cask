@@ -4,6 +4,7 @@ class Prismatik < Cask
 
   url "https://github.com/woodenshark/Lightpack/releases/download/#{version}/Prismatik.#{version}.dmg"
   homepage 'http://lightpack.tv/'
+  license :oss
 
   app 'Prismatik.app'
 end
