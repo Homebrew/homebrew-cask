@@ -4,6 +4,7 @@ class Graphsketcher < Cask
 
   url 'https://github.com/graphsketcher/GraphSketcher/releases/download/v2.0_test_46/GraphSketcher.zip'
   homepage 'https://github.com/graphsketcher/GraphSketcher'
+  license :oss
 
   app 'GraphSketcher/GraphSketcher.app'
 end
