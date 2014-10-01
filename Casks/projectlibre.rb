@@ -4,6 +4,7 @@ class Projectlibre < Cask
 
   url "https://downloads.sourceforge.net/project/projectlibre/ProjectLibre/#{version}/projectlibre-#{version}.dmg"
   homepage 'http://www.projectlibre.org/'
+  license :oss
 
   app 'ProjectLibre.app'
 end
