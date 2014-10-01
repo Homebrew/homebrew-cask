@@ -4,6 +4,7 @@ class FacebookIosSdk < Cask
 
   url "https://developers.facebook.com/resources/facebook-ios-sdk-#{version}.pkg"
   homepage 'https://developers.facebook.com/docs/ios'
+  license :unknown
 
   pkg "facebook-ios-sdk-#{version}.pkg"
   uninstall :pkgutil => 'com.facebook.sdk.pkg'
