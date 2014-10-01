@@ -4,6 +4,7 @@ class Gpower < Cask
 
   url "http://www.gpower.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPowerMac_#{version}.zip"
   homepage 'http://www.gpower.hhu.de/'
+  license :unknown
 
   app 'G*Power.app'
 end
