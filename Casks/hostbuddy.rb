@@ -5,6 +5,7 @@ class Hostbuddy < Cask
   url 'https://clickontyler.com/hostbuddy/download/'
   appcast 'http://shine.clickontyler.com/appcast.php?id=22'
   homepage 'http://clickontyler.com'
+  license :unknown
 
   app 'Hostbuddy.app'
 end
