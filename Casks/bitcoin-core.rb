@@ -5,5 +5,7 @@ class BitcoinCore < Cask
   url "https://bitcoin.org/bin/#{version}/bitcoin-#{version}-macosx.dmg"
   homepage 'https://bitcoin.org/'
 
+  # Renamed for clarity: app name is inconsistent with its branding.
+  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/3634
   app 'Bitcoin-Qt.app', :target => 'Bitcoin Core.app'
 end
