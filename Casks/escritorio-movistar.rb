@@ -4,6 +4,7 @@ class EscritorioMovistar < Cask
 
   url "http://www.movistar.es/estaticos/descargaaplicaciones/Escritorio%20Movistar_v#{version}.pkg"
   homepage 'http://www.movistar.es/particulares/servicios/descargaaplicaciones'
+  license :unknown
 
   pkg "Escritorio Movistar_v#{version}.pkg"
   uninstall :quit => 'com.movistar.tgcm.devel.tme',
