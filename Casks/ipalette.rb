@@ -5,6 +5,7 @@ class Ipalette < Cask
   url "http://ipalette.info/downloads/iPalette-#{version}.zip"
   appcast 'http://ipalette.info/appcast.xml'
   homepage 'http://ipalette.info/'
+  license :unknown
 
   app 'iPalette.app'
 end
