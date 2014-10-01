@@ -4,6 +4,7 @@ class Hsang < Cask
 
   url "http://nie.gdl.netease.com/lushi/HSAng_#{version}.dmg"
   homepage 'http://lushi.163.com/'
+  license :unknown
 
   app 'HSAng.app'
 end
