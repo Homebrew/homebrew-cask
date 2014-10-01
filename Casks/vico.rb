@@ -5,6 +5,7 @@ class Vico < Cask
   url 'http://www.vicoapp.com/download/vico-r3132.dmg'
   appcast 'http://www.vicoapp.com/appcast.xml'
   homepage 'http://www.vicoapp.com'
+  license :unknown
 
   app 'Vico.app'
 end
