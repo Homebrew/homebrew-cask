@@ -6,6 +6,7 @@ class XamarinStudio < Cask
   # non-Sparkle appcast
   appcast 'http://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml'
   homepage 'http://xamarin.com/studio'
+  license :unknown
 
   app 'Xamarin Studio.app'
 end
