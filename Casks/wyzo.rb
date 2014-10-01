@@ -4,6 +4,7 @@ class Wyzo < Cask
 
   url "http://download.wyzo.com/files/mac/WyzoSetup-#{version}.dmg"
   homepage 'http://wyzo.com'
+  license :unknown
 
   app 'Wyzo.app'
 end
