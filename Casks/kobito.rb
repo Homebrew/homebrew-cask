@@ -5,6 +5,7 @@ class Kobito < Cask
   url "http://kobito.qiita.com/download/Kobito_v#{version}.zip"
   appcast 'http://kobito.qiita.com/appcast.xml'
   homepage 'http://kobito.qiita.com/'
+  license :unknown
 
   app 'Kobito.app'
 end
