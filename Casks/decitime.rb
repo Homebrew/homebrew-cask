@@ -4,6 +4,7 @@ class Decitime < Cask
 
   url 'http://download.filewell.com/DeciTime101.dmg.zip'
   homepage 'http://www.tinbert.com/DeciTimeMac/'
+  license :oss
 
   nested_container 'DeciTime101.dmg'
   app 'DeciTime.app'
