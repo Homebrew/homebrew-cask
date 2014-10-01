@@ -7,7 +7,7 @@ class Tvrenamer < Cask
 
   app "TVRenamer-#{version}.app"
   caveats do
-    <<-EOS.undent 
+    <<-EOS.undent
       #{@cask} requires a Java JRE to be installed. Mac OS X should prompt you to install
       Java on the first run if you don't already have it installed.
     EOS

@@ -7,7 +7,7 @@ class Sidekick < Cask
   homepage 'http://oomphalot.com/sidekick/'
 
   app 'Sidekick.app'
-  
+
   postflight do
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'com.oomphalot.Sidekick', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'

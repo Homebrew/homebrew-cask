@@ -6,10 +6,10 @@ class Tangerine < Cask
   homepage 'http://www.karelia.com/products/tangerine/'
 
   app 'Tangerine!.app'
-  
+
   postflight do
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'com.potionfactory.Tangerine', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
-  
+
 end
