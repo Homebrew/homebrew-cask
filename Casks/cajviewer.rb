@@ -4,6 +4,7 @@ class Cajviewer < Cask
 
   url 'http://cajviewer.cnki.net/download/CAJViewerMac.dmg'
   homepage 'http://cajviewer.cnki.net/download.html'
+  license :unknown
 
   pkg 'CAJViewerMac.pkg'
   uninstall :pkgutil => 'com.TTKN.CAJViewerMac'
