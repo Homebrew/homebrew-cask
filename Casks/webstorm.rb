@@ -4,6 +4,7 @@ class Webstorm < Cask
 
   url "http://download-cf.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
   homepage 'http://www.jetbrains.com/webstorm/'
+  license :unknown
 
   app 'WebStorm.app'
 
