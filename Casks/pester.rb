@@ -5,6 +5,7 @@ class Pester < Cask
   url "http://sabi.net/nriley/software/Pester-#{version}.dmg"
   appcast 'http://sabi.net/nriley/software/Pester/updates.xml'
   homepage 'http://sabi.net/nriley/software/index.html#pester'
+  license :unknown
 
   app 'Pester.app'
 end
