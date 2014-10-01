@@ -5,6 +5,7 @@ class Xquartz < Cask
   url "https://xquartz.macosforge.org/downloads/SL/XQuartz-#{version}.dmg"
   appcast 'http://xquartz-dl.macosforge.org/sparkle/release.xml'
   homepage 'http://xquartz.macosforge.org/'
+  license :unknown
 
   pkg 'XQuartz.pkg'
 
