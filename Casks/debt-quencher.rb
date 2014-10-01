@@ -5,6 +5,7 @@ class DebtQuencher < Cask
   url 'http://downloads.nothirst.com/DebtQuencher_1.2.zip'
   appcast 'http://nothirst.com/feeds/DebtQuencherAppcast.xml'
   homepage 'http://nothirst.com/debtquencher/'
+  license :unknown
 
   app 'Debt Quencher.app'
 end
