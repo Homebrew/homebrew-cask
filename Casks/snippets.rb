@@ -5,6 +5,7 @@ class Snippets < Cask
   url 'https://snippets.me/download/mac/Snippets-468.zip'
   appcast 'http://snippets.me/mac/appcast.xml'
   homepage 'http://snippets.me/'
+  license :unknown
 
   app 'Snippets.app'
 end
