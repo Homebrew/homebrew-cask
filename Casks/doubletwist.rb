@@ -5,6 +5,7 @@ class Doubletwist < Cask
   url "http://download.doubletwist.com/releases/mac/dT-#{version}-kronos-patch1-r11040/doubleTwist.dmg"
   appcast 'http://download.doubletwist.com/mac/appcast.xml'
   homepage 'http://www.doubletwist.com/'
+  license :unknown
 
   app 'doubleTwist.app'
 end
