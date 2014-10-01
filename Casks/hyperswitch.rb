@@ -5,6 +5,7 @@ class Hyperswitch < Cask
   url 'https://bahoom.com/hyperswitch/download'
   appcast 'http://hyperswitch.bahoom.com/appcast.xml'
   homepage 'http://bahoom.com/hyperswitch'
+  license :unknown
 
   app 'HyperSwitch.app'
 end
