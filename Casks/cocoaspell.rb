@@ -4,6 +4,7 @@ class Cocoaspell < Cask
 
   url "http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg"
   homepage 'http://cocoaspell.leuski.net/'
+  license :unknown
 
   pkg 'cocoAspell.pkg'
   uninstall :pkgutil => 'net.leuski.cocoaspell.*',
