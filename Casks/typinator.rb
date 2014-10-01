@@ -4,6 +4,7 @@ class Typinator < Cask
 
   url 'http://www.ergonis.com/downloads/products/typinator/Typinator61-Install.dmg'
   homepage 'http://www.ergonis.com/'
+  license :unknown
 
   app 'Typinator.app'
   caveats { assistive_devices }
