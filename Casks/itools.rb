@@ -4,6 +4,7 @@ class Itools < Cask
 
   url "http://dl2.itools.hk/dl/iTools_#{version}.dmg"
   homepage 'http://pro.itools.cn/mac'
+  license :unknown
 
   app 'iTools.app'
 end
