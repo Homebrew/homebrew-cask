@@ -4,6 +4,7 @@ class Windownaut < Cask
 
   url 'http://www.binarybakery.com/products/Windownaut.dmg'
   homepage 'http://www.binarybakery.com/aprod/index.html'
+  license :unknown
 
   app 'Windownaut.app'
 end
