@@ -4,6 +4,7 @@ class Enfusegui < Cask
 
   url "http://software.bergmark.com/enfusegui/files/2.1/EnfuseGUI-#{version}.dmg"
   homepage 'http://software.bergmark.com/enfusegui/Main.html'
+  license :unknown
 
   app 'EnfuseGUI.app'
 end
