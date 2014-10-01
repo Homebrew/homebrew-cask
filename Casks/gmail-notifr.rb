@@ -5,6 +5,7 @@ class GmailNotifr < Cask
   url "https://s3.amazonaws.com/assets.ashchan.com/gmailnotifr/GmailNotifr-#{version}.zip"
   appcast 'https://s3.amazonaws.com/assets.ashchan.com/gmailnotifr/update.xml'
   homepage 'http://ashchan.com/projects/gmail-notifr'
+  license :unknown
 
   app 'Gmail Notifr.app'
   zap :delete => '~/Library/Preferences/com.ashchan.GmailNotifr.plist'
