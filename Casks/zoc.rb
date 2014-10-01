@@ -4,6 +4,7 @@ class Zoc < Cask
 
   url 'http://www.emtec.com/downloads/zoc/zoc659.dmg'
   homepage 'http://www.emtec.com/zoc/'
+  license :unknown
 
   app 'zoc6.app'
 end
