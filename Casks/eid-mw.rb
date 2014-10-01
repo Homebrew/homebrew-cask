@@ -4,6 +4,7 @@ class EidMw < Cask
 
   url "https://eid-mw.googlecode.com/files/beid-#{version}-7422-signed.dmg"
   homepage 'https://code.google.com/p/eid-mw/'
+  license :oss
 
   pkg 'beid-7422-signed.pkg'
 
