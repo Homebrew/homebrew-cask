@@ -4,6 +4,7 @@ class Freelancy < Cask
 
   url 'http://dl.getfreelancy.com/Freelancy.dmg'
   homepage 'http://getfreelancy.com'
+  license :unknown
 
   app 'Freelancy.app'
 
