@@ -4,6 +4,7 @@ class Haroopad < Cask
 
   url "https://bitbucket.org/rhiokim/haroopad-download/downloads/haroopad-v#{version}.dmg"
   homepage 'http://pad.haroopress.com/'
+  license :oss
 
   app 'haroopad.app'
 end
