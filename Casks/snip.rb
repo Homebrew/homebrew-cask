@@ -4,6 +4,7 @@ class Snip < Cask
 
   url 'http://snip.qq.com/resources/Snip_V2.0_5771.dmg'
   homepage 'http://snip.qq.com/'
+  license :unknown
 
   pkg 'Snip_V2.0.pkg'
   uninstall :pkgutil => 'com.tencent.snip.Snip.pkg'
