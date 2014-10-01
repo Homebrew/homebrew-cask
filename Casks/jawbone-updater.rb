@@ -4,6 +4,7 @@ class JawboneUpdater < Cask
 
   url "http://content.jawbone.com/store/dashboard/Jawbone_Updater-#{version}.pkg"
   homepage 'http://jawbone.com/'
+  license :unknown
 
   pkg "Jawbone_Updater-#{version}.pkg"
   uninstall :quit => 'com.aliph.Jawbone_Updater',
