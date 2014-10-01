@@ -5,6 +5,7 @@ class Sqleditor < Cask
   url "https://www.malcolmhardie.com/sqleditor/releases/#{version}/SQLEditor-2-7.zip"
   appcast 'https://www.malcolmhardie.com/sqleditor/appcast/sq2release.xml'
   homepage 'http://www.malcolmhardie.com/sqleditor/'
+  license :unknown
 
   app 'SQLEditor.app'
 end
