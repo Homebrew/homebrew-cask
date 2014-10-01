@@ -4,6 +4,7 @@ class Sqlitestudio < Cask
 
   url "http://sqlitestudio.pl/files/free/stable/macosx/sqlitestudio-#{version}.zip"
   homepage 'http://sqlitestudio.pl'
+  license :unknown
 
   app 'SQLiteStudio.app'
 end
