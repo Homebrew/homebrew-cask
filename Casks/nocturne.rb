@@ -4,6 +4,7 @@ class Nocturne < Cask
 
   url "https://blacktree-nocturne.googlecode.com/files/Nocturne.#{version}.zip"
   homepage 'http://code.google.com/p/blacktree-nocturne/'
+  license :oss
 
   app 'Nocturne.app'
 end
