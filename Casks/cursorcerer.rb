@@ -4,6 +4,7 @@ class Cursorcerer < Cask
 
   url 'http://www.doomlaser.com/downloads/Cursorcerer.zip'
   homepage 'http://doomlaser.com/cursorcerer-hide-your-cursor-at-will/'
+  license :unknown
 
   prefpane 'Cursorcerer.prefPane'
 end
