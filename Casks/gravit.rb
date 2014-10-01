@@ -4,6 +4,7 @@ class Gravit < Cask
 
   url "https://github.com/quasado/gravit-hub/releases/download/v#{version}/Mac-OSX.dmg"
   homepage 'http://gravit.io/'
+  license :oss
 
   app 'Gravit.app'
 end
