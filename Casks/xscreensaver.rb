@@ -4,6 +4,7 @@ class Xscreensaver < Cask
 
   url "http://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
   homepage 'http://www.jwz.org/xscreensaver/'
+  license :unknown
 
   app 'Screen Savers/XScreenSaverUpdater.app'
   screen_saver 'Screen Savers/Abstractile.saver'
