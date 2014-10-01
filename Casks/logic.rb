@@ -4,6 +4,7 @@ class Logic < Cask
 
   url "http://downloads.saleae.com/Logic%20#{version}%20(10.5%2B).pkg"
   homepage 'http://www.saleae.com/'
+  license :unknown
 
   pkg "Logic #{version} (10.5+).pkg"
   uninstall :pkgutil => 'com.saleae.saleae.Logic.pkg'
