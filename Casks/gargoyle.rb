@@ -4,6 +4,7 @@ class Gargoyle < Cask
 
   url "https://garglk.googlecode.com/files/gargoyle-#{version}-mac.dmg"
   homepage 'https://code.google.com/p/garglk/'
+  license :oss
 
   app 'Gargoyle.app'
 end
