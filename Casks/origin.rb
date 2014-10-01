@@ -4,6 +4,7 @@ class Origin < Cask
 
   url 'https://eaassets-a.akamaihd.net/Origin-Client-Download/origin/mac/Origin.dmg'
   homepage 'http://origin.com'
+  license :unknown
 
   app 'Origin.app'
 end
