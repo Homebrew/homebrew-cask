@@ -4,6 +4,7 @@ class P4merge < Cask
 
   url 'http://filehost.perforce.com/perforce/r14.1/bin.macosx106x86_64/P4V.dmg'
   homepage 'http://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools'
+  license :oss
 
   app 'p4merge.app'
   caveats <<-EOS.undent
