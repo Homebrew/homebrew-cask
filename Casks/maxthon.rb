@@ -4,6 +4,7 @@ class Maxthon < Cask
 
   url "https://dl.maxthon.com/mac/Maxthon-#{version}.dmg"
   homepage 'http://www.maxthon.com/'
+  license :unknown
 
   app 'Maxthon.app'
 end
