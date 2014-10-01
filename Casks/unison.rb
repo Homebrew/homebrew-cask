@@ -4,6 +4,7 @@ class Unison < Cask
 
   url "http://alan.petitepomme.net/unison/assets/Unison-#{version}_x64.dmg"
   homepage 'http://www.cis.upenn.edu/~bcpierce/unison/'
+  license :unknown
 
   app 'Unison.app'
 end
