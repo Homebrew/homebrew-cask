@@ -5,6 +5,7 @@ class Macfusion < Cask
   url "http://macfusionapp.org/releases/Macfusion_#{version}.zip"
   appcast 'http://macfusionapp.org/appcast.xml'
   homepage 'http://macfusionapp.org/'
+  license :unknown
 
   app 'Macfusion.app'
 end
