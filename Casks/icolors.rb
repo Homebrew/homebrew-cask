@@ -4,6 +4,7 @@ class Icolors < Cask
 
   url "https://www.fadingred.com/files/icolors/icolors_#{version}.zip"
   homepage 'http://www.fadingred.com/icolors/'
+  license :unknown
 
   app 'iColors.app'
 end
