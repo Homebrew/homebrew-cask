@@ -5,6 +5,7 @@ class Openemu < Cask
   url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}.zip"
   appcast 'https://raw.github.com/OpenEmu/OpenEmu-Update/master/appcast.xml'
   homepage 'http://openemu.org/'
+  license :oss
 
   app 'OpenEmu.app'
 end
