@@ -4,6 +4,7 @@ class Keycastr < Cask
 
   url "https://github.com/downloads/RichardBronosky/keycastr/keycastr_#{version}.dmg"
   homepage 'https://github.com/sdeken/keycastr'
+  license :oss
 
   app 'KeyCastr.app'
 
