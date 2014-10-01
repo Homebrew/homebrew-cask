@@ -4,6 +4,7 @@ class Openarena < Cask
 
   url 'http://openarena.ws/request.php?4'
   homepage 'http://openarena.ws'
+  license :unknown
 
   app "openarena-#{version}/OpenArena.app"
 
