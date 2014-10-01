@@ -4,6 +4,7 @@ class Infinit < Cask
 
   url 'http://download.infinit.io/macosx/10.8/Infinit-ia64.dmg'
   homepage 'https://infinit.io/'
+  license :unknown
 
   app 'Infinit.app'
 end
