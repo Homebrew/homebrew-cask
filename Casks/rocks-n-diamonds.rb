@@ -4,6 +4,7 @@ class RocksNDiamonds < Cask
 
   url "http://www.artsoft.org/RELEASES/macosx/rocksndiamonds/rocksndiamonds-#{version}.dmg"
   homepage 'http://www.artsoft.org/rocksndiamonds/'
+  license :unknown
 
   app "Rocks'n'Diamonds #{version}/Rocks''Diamonds.app"
 end
