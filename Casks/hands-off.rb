@@ -5,6 +5,7 @@ class HandsOff < Cask
   url "https://www.oneperiodic.com/files/Hands%20Off!%20v#{version}.dmg"
   appcast 'http://www.metakine.com/sparkle/handsoff2/checkupdate.php'
   homepage 'http://www.metakine.com/products/handsoff/'
+  license :unknown
 
   app 'Hands Off!.app'
   zap :delete => '~/Library/Preferences/com.metakine.handsoff.plist'
