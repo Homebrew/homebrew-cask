@@ -4,6 +4,7 @@ class Picasa < Cask
 
   url "https://dl.google.com/photos/picasamac#{version.gsub('.', '')}.dmg"
   homepage 'http://picasa.google.com/'
+  license :unknown
 
   app 'Picasa.app'
 end
