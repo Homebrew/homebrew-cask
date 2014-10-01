@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "HOMEBREW\-CASK" "1" "September 2014" "Homebrew-cask" "brew-cask"
+.TH "HOMEBREW\-CASK" "1" "October 2014" "Homebrew-cask" "brew-cask"
 .
 .SH "NAME"
 \fBhomebrew\-cask\fR \- A friendly binary installer for OS X
@@ -131,7 +131,10 @@ Perform a substring search of Cask names for \fItext\fR\. If the text is delimit
 For convenience, \fBbrew cask update\fR is a synonym for \fBbrew update\fR\.
 .
 .SH "OPTIONS"
-Some of these options (such as \fB\-\-prefpanedir\fR) may be subject to removal in a future version\.
+To make these options persistent, see the ENVIRONMENT section, below\.
+.
+.P
+Some of these (such as \fB\-\-prefpanedir\fR) may be subject to removal in a future version\.
 .
 .TP
 \fB\-\-force\fR
@@ -233,7 +236,7 @@ Environment variables specific to homebrew\-cask:
 .
 .TP
 HOMEBREW_CASK_OPTS
-This variable may contain any arguments normally used as options on the command\-line\. Example: \fB\-\-appdir=/some/path/bar\fR\.
+This variable may contain any arguments normally used as options on the command\-line\. This is partiularly useful to make options persistent\. For example, you might add to your \.bash_profile or \.zshenv something like: \fBexport HOMEBREW_CASK_OPTS=\'\-\-appdir=/Applications \-\-caskroom=/etc/Caskroom\'\fR\.
 .
 .SH "SEE ALSO"
 The homebrew\-cask home page: \fIhttp://caskroom\.io\fR\.

@@ -132,7 +132,9 @@ names, and other aspects of this manual are still subject to change.
 
 ## OPTIONS
 
-Some of these options (such as `--prefpanedir`) may be subject to removal
+To make these options persistent, see the ENVIRONMENT section, below.
+
+Some of these (such as `--prefpanedir`) may be subject to removal
 in a future version.
 
   * `--force`:
@@ -223,7 +225,9 @@ Environment variables specific to homebrew-cask:
 
   * HOMEBREW\_CASK\_OPTS:
     This variable may contain any arguments normally used as options on
-    the command-line.  Example: `--appdir=/some/path/bar`.
+    the command-line. This is partiularly useful to make options persistent.
+    For example, you might add to your .bash_profile or .zshenv something like:
+    `export HOMEBREW_CASK_OPTS='--appdir=/Applications --caskroom=/etc/Caskroom'`.
 
 ## SEE ALSO
 
