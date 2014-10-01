@@ -4,6 +4,7 @@ class Tinyumbrella < Cask
 
   url "http://cache.firmwareumbrella.com/downloads/TinyUmbrella-#{version}.00.app.zip"
   homepage 'http://blog.firmwareumbrella.com/'
+  license :unknown
 
   app 'TinyUmbrella.app'
 end
