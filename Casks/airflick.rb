@@ -4,6 +4,7 @@ class Airflick < Cask
 
   url "http://ericasadun.com/ftp/AirPlay/AirFlick-#{version}.zip"
   homepage 'http://ericasadun.com/ftp/AirPlay/'
+  license :unknown
 
   app 'AirFlick.app'
 end
