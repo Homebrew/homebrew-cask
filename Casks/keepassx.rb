@@ -4,6 +4,7 @@ class Keepassx < Cask
 
   url "https://www.keepassx.org/dev/attachments/download/72/KeePassX-#{version}.dmg"
   homepage 'http://www.keepassx.org'
+  license :unknown
 
   app 'KeePassX.app'
   # This caveat added Mar 2014.  OK to delete it after 3-4 months.
