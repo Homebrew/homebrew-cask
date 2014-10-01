@@ -5,6 +5,7 @@ class Cyberduck < Cask
   url "https://update.cyberduck.io/Cyberduck-#{version}.zip"
   appcast 'https://version.cyberduck.io/changelog.rss'
   homepage 'http://cyberduck.io/'
+  license :unknown
 
   app 'Cyberduck.app'
   zap :delete => [
