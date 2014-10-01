@@ -4,6 +4,7 @@ class Sumbolon < Cask
 
   url "http://www.rwe-uk.com/uploads/updates/Sumbolon%20#{version}.zip"
   homepage 'http://www.rwe-uk.com/app/sumbolon'
+  license :unknown
 
   app 'Sumbolon.app'
 end
