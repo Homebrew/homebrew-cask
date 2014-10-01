@@ -5,6 +5,7 @@ class Controlplane < Cask
   url "http://www.controlplaneapp.com/download/#{version}"
   appcast 'http://www.controlplaneapp.com/appcast.xml'
   homepage 'http://www.controlplaneapp.com/'
+  license :unknown
 
   app 'ControlPlane.app'
   zap :delete => '~/Library/Preferences/com.dustinrue.ControlPlane.plist'
