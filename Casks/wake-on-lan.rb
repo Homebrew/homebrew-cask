@@ -4,6 +4,7 @@ class WakeOnLan < Cask
 
   url "http://www.readpixel.com/downloads/files/WakeOnLan#{version}.zip"
   homepage 'http://www.readpixel.com/wakeonlan/'
+  license :unknown
 
   app 'WakeOnLan/WakeOnLan.app'
 end
