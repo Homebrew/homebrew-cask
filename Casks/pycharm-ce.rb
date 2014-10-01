@@ -4,6 +4,7 @@ class PycharmCe < Cask
 
   url "http://download.jetbrains.com/python/pycharm-community-#{version}.dmg"
   homepage 'http://www.jetbrains.com/pycharm'
+  license :unknown
 
   app 'PyCharm CE.app'
 
