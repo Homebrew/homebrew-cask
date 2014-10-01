@@ -4,6 +4,7 @@ class Dragondisk < Cask
 
   url "http://download.dragondisk.com/DragonDisk-#{version}.dmg"
   homepage 'http://www.dragondisk.com/'
+  license :unknown
 
   app 'dragondisk.app'
 end
