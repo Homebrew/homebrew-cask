@@ -4,6 +4,7 @@ class PandoraOne < Cask
 
   url 'https://www.pandora.com/static/desktop_app/pandora_2_0_8.air'
   homepage 'http://www.pandora.com/'
+  license :unknown
 
   app 'Pandora.app'
 end
