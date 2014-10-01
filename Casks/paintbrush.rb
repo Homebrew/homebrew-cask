@@ -5,6 +5,7 @@ class Paintbrush < Cask
   url "https://downloads.sourceforge.net/project/paintbrush/Paintbrush%202.x/Paintbrush%20#{version}/Paintbrush-#{version}.zip"
   appcast 'http://paintbrush.sourceforge.net/updates2x.xml'
   homepage 'http://paintbrush.sourceforge.net/'
+  license :oss
 
   app 'Paintbrush.app'
 end
