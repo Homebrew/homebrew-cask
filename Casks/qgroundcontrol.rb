@@ -4,6 +4,7 @@ class Qgroundcontrol < Cask
 
   url 'http://latestfiasco.com/ftp/qgroundcontrol-pixhawk.dmg'
   homepage 'http://qgroundcontrol.org'
+  license :unknown
 
   app 'qgroundcontrol.app'
 end
