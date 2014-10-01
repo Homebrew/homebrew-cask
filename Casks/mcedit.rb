@@ -4,6 +4,7 @@ class Mcedit < Cask
 
   url "https://bitbucket.org/codewarrior0/mcedit/downloads/MCEdit-#{version}.macosx-10_6-x86_64.zip"
   homepage 'http://www.mcedit.net'
+  license :oss
 
   app 'MCEdit.app'
 end
