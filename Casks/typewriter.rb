@@ -4,6 +4,7 @@ class Typewriter < Cask
 
   url 'http://llllll.li/typewriter/download/Typewriter.zip'
   homepage 'http://llllll.li/typewriter'
+  license :unknown
 
   app 'Typewriter.app'
 end
