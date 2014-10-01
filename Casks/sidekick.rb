@@ -5,6 +5,7 @@ class Sidekick < Cask
   url 'http://oomphalot.com/sidekick/release/Sidekick.zip'
   appcast 'http://updates.oomphalot.com/?app=Sidekick'
   homepage 'http://oomphalot.com/sidekick/'
+  license :unknown
 
   app 'Sidekick.app'
 
