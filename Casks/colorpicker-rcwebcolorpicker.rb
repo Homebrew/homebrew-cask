@@ -4,6 +4,7 @@ class ColorpickerRcwebcolorpicker < Cask
 
   url 'http://www.rubicode.com/Downloads/RCWebColorPicker-1.2.X.dmg'
   homepage 'http://www.rubicode.com/Software/RCWebColorPicker'
+  license :unknown
 
   colorpicker 'RCWebColorPicker.colorPicker'
 end
