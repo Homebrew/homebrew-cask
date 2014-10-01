@@ -4,6 +4,7 @@ class Josm < Cask
 
   url 'https://josm.openstreetmap.de/download/macosx/josm-macosx.zip'
   homepage 'http://josm.openstreetmap.de'
+  license :unknown
 
   app 'JOSM.app'
 end
