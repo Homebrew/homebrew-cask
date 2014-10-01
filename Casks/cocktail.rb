@@ -5,6 +5,7 @@ class Cocktail < Cask
   url 'http://usa.maintain.se/CocktailME.dmg'
   appcast 'http://www.maintain.se/downloads/sparkle/mavericks/mavericks.xml'
   homepage 'http://maintain.se/cocktail'
+  license :unknown
 
   app 'Cocktail.app'
   caveats <<-EOS.undent
