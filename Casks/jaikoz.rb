@@ -4,6 +4,7 @@ class Jaikoz < Cask
 
   url 'http://jthink.net/jaikoz/jsp/manualdownload/jaikoz-osx.dmg'
   homepage 'http://jthink.net/jaikoz'
+  license :unknown
 
   app 'Jaikoz.app'
 end
