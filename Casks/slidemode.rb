@@ -5,6 +5,7 @@ class Slidemode < Cask
   url 'http://www.teaksoftware.com/workspace/files/slidemode005.dmg'
   appcast 'http://teaksoftware.com/appcasts/smappcast.xml'
   homepage 'http://teaksoftware.com/app/slidemode'
+  license :unknown
 
   app 'SlideMode.app'
 end
