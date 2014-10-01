@@ -5,6 +5,7 @@ class Secondbar < Cask
   url 'http://boastr.de/SecondBar.zip'
   appcast 'http://blog.boastr.net/secondbar/appcast.xml'
   homepage 'http://blog.boastr.net/?page_id=79'
+  license :unknown
 
   app 'SecondBar.app'
 end
