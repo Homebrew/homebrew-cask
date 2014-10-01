@@ -4,6 +4,7 @@ class Opennx < Cask
 
   url "http://downloads.sourceforge.net/sourceforge/opennx/OpenNX-#{version}.dmg"
   homepage 'http://opennx.net/'
+  license :oss
 
   pkg 'OpenNX.pkg'
   uninstall :script => { :executable => '/Library/OpenNX/bin/macuninstall', :args => ['--batch'] },
