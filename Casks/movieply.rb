@@ -4,6 +4,7 @@ class Movieply < Cask
 
   url "http://www.movieply.com/download/MoviePly-#{version}.OSX.zip"
   homepage 'http://www.movieply.com/'
+  license :unknown
 
   app 'MoviePly.app'
 end
