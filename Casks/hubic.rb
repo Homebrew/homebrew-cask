@@ -4,6 +4,7 @@ class Hubic < Cask
 
   url "http://mir7.ovh.net/ovh-applications/hubic/hubiC-OSX/#{version}/hubiC-OSX-#{version}.224-osx.pkg"
   homepage 'https://hubic.com'
+  license :unknown
 
   pkg "hubiC-OSX-#{version}.224-osx.pkg"
   uninstall :pkgutil => 'com.ovh.hubicmac'
