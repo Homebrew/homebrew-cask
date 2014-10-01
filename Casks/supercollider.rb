@@ -4,6 +4,7 @@ class Supercollider < Cask
 
   url "https://downloads.sourceforge.net/project/supercollider/Mac%20OS%20X/3.6/SuperCollider-#{version}-OSX-universal.dmg"
   homepage 'http://supercollider.sourceforge.net/'
+  license :oss
 
   app 'SuperCollider/SuperCollider.app'
 end
