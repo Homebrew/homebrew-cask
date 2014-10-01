@@ -5,6 +5,7 @@ class Xee < Cask
 
   url "http://wakaba.c3.cx/releases/mac/Xee#{version}.dmg"
   homepage 'http://xee.c3.cx/'
+  license :unknown
 
   app 'Xee³.app'
 end
