@@ -5,6 +5,7 @@ class Servetome < Cask
   url "http://downloads.zqueue.com/ServeToMe-v#{version}.dmg"
   appcast 'http://zqueue.com/servetome/stm3_mac_appcast.xml'
   homepage 'http://zqueue.com/servetome/'
+  license :unknown
 
   app 'ServeToMe.app'
 end
