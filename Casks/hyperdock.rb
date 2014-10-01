@@ -4,6 +4,7 @@ class Hyperdock < Cask
 
   url 'http://hyperdock.bahoom.com/HyperDock.dmg'
   homepage 'http://hyperdock.bahoom.com/'
+  license :unknown
 
   prefpane 'HyperDock.prefpane'
 end
