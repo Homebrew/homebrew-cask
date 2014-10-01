@@ -4,6 +4,7 @@ class Scribbleton < Cask
 
   url 'http://scribbleton.com/download/mac'
   homepage 'http://scribbleton.com/'
+  license :unknown
 
   app 'Scribbleton.app'
 end
