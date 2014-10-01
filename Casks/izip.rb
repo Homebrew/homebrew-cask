@@ -4,6 +4,7 @@ class Izip < Cask
 
   url 'http://www.izip.com/izip.dmg'
   homepage 'http://www.izip.com'
+  license :unknown
 
   app 'iZip.app'
 end
