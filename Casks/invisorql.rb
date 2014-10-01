@@ -4,6 +4,7 @@ class Invisorql < Cask
 
   url 'http://www.pozdeev.com/invisor/InvisorQL.zip'
   homepage 'http://www.pozdeev.com/invisor/'
+  license :unknown
 
   qlplugin 'InvisorQL.qlgenerator'
 end
