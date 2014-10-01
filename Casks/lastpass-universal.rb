@@ -4,6 +4,7 @@ class LastpassUniversal < Cask
 
   url 'https://lastpass.com/lpmacosx.dmg'
   homepage 'https://lastpass.com/'
+  license :unknown
 
   pkg 'lpmacosx.pkg'
   uninstall :pkgutil => 'com.lastpass.lpmacosx'
