@@ -4,6 +4,7 @@ class Speedtao < Cask
 
   url 'http://www.speedtao.net/beta_latest'
   homepage 'http://www.speedtao.net/'
+  license :unknown
 
   app 'SpeedTao.app'
 end
