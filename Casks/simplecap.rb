@@ -4,6 +4,7 @@ class Simplecap < Cask
 
   url "http://xcatsan.com/simplecap/download/SimpleCap-#{version}.zip"
   homepage 'http://xcatsan.com/simplecap-en/'
+  license :unknown
 
   app 'SimpleCap.app'
 end
