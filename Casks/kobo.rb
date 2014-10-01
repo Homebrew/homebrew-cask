@@ -4,6 +4,7 @@ class Kobo < Cask
 
   url 'http://download.kobobooks.com/desktop/kobodesktop/kobosetup.dmg'
   homepage 'http://www.kobo.com/'
+  license :unknown
 
   app 'Kobo.app'
 end
