@@ -5,6 +5,7 @@ class SleepMonitor < Cask
   url 'https://www.dssw.co.uk/sleepmonitor/dsswsleepmonitor.dmg'
   appcast 'http://version.dssw.co.uk/sleepmonitor/standard'
   homepage 'https://www.dssw.co.uk/sleepmonitor'
+  license :unknown
 
   app 'Sleep Monitor.app'
 end
