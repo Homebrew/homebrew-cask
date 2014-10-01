@@ -4,6 +4,7 @@ class Sandvox < Cask
 
   url 'http://www.karelia.com/files/8/Sandvox.dmg'
   homepage 'http://www.karelia.com/products/sandvox/'
+  license :unknown
 
   app 'Sandvox.app'
 end
