@@ -4,6 +4,7 @@ class Displaperture < Cask
 
   url 'http://manytricks.com/download/displaperture'
   homepage 'http://manytricks.com/displaperture'
+  license :unknown
 
   app 'Displaperture.app'
 end
