@@ -4,6 +4,7 @@ class Tribler < Cask
 
   url "https://github.com/Tribler/tribler/releases/download/v#{version}/Tribler-#{version}.dmg"
   homepage 'http://www.tribler.org'
+  license :oss
 
   app 'Tribler.app'
 end
