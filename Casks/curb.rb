@@ -5,6 +5,7 @@ class Curb < Cask
   url 'http://mrrsoftware.com/Downloads/Curb/Curb-1_1_1.zip'
   appcast 'http://www.mrrsoftware.com/Downloads/Curb/CurbSoftwareUpdates.xml'
   homepage 'http://mrrsoftware.com/curb'
+  license :unknown
 
   app 'Curb.app'
 end
