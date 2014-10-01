@@ -4,6 +4,7 @@ class Sabnzbd < Cask
 
   url "https://downloads.sourceforge.net/project/sabnzbdplus/sabnzbdplus/#{version}/SABnzbd-#{version}-osx.dmg"
   homepage 'http://sabnzbd.org/'
+  license :oss
 
   app '10.8 (M-Lion) 10.9 (Mavericks)/SABnzbd.app'
   zap :delete => [
