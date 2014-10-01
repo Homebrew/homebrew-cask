@@ -4,6 +4,7 @@ class GoogleAdwordsEditor < Cask
 
   url "https://dl.google.com/adwords_editor/#{version}/mac/en-US/AdWords-Editor-#{version}-en-US.dmg"
   homepage 'http://www.google.com/intl/en_US/adwordseditor/'
+  license :unknown
 
   pkg "AdWords-Editor-#{version}-en-US.pkg"
   uninstall :pkgutil => 'com.google.adwordseditor.pkg'
