@@ -5,6 +5,7 @@ class Isolator < Cask
   url "http://willmore.eu/software/download/Isolator-#{version}.dmg"
   appcast 'http://willmore.eu/software/isolator/releases.xml'
   homepage 'http://willmore.eu/software/isolator'
+  license :unknown
 
   app 'Isolator.app'
 end
