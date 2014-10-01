@@ -4,6 +4,7 @@ class Texmacs < Cask
 
   url "http://www.texmacs.org/Download/ftp/tmftp/macos/TeXmacs-#{version}.dmg"
   homepage 'http://www.texmacs.org/'
+  license :unknown
 
   app "TeXmacs-#{version}.app"
 end
