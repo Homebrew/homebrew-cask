@@ -5,6 +5,7 @@ class Witgui < Cask
   url "http://desairem.altervista.org/witgui/download.php?version=#{version}"
   appcast 'http://desairem.altervista.org/witgui/appcast.xml'
   homepage 'http://desairem.altervista.org/witgui/wordpress/'
+  license :unknown
 
   app 'Witgui.app'
 end
