@@ -4,6 +4,7 @@ class Ganttproject < Cask
 
   url "https://ganttproject.googlecode.com/files/ganttproject-#{version}.dmg"
   homepage 'http://www.ganttproject.biz'
+  license :oss
 
   app 'GanttProject 2.6.2.app'
 end
