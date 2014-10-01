@@ -4,6 +4,7 @@ class Onionshare < Cask
 
   url "https://onionshare.org/files/#{version}/OnionShare-#{version}.dmg"
   homepage 'https://onionshare.org/'
+  license :unknown
 
   app 'OnionShare.app'
 end
