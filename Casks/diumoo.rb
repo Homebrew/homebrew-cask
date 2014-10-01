@@ -4,6 +4,7 @@ class Diumoo < Cask
 
   url 'http://share.diumoo.net/static/diumoo.zip'
   homepage 'http://diumoo.net/'
+  license :unknown
 
   app 'diumoo.app'
 end
