@@ -4,6 +4,7 @@ class Bathyscaphe < Cask
 
   url 'http://dl.sourceforge.jp/bathyscaphe/61374/BathyScaphe-242-v648.dmg'
   homepage 'http://bathyscaphe.sourceforge.jp/'
+  license :oss
 
   app 'BathyScaphe.app'
 end
