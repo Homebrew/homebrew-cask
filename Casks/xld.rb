@@ -5,6 +5,7 @@ class Xld < Cask
   url "https://downloads.sourceforge.net/project/xld/xld-#{version}.dmg"
   appcast 'http://xld.googlecode.com/svn/appcast/xld-appcast_e.xml'
   homepage 'http://tmkk.undo.jp/xld/index_e.html'
+  license :oss
 
   app 'XLD.app'
   zap :delete => [
