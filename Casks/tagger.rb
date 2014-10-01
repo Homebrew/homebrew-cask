@@ -5,6 +5,7 @@ class Tagger < Cask
   url "https://github.com/Bilalh/Tagger/releases/download/1.8.0/Tagger_#{version}.zip"
   appcast 'http://bilalh.github.com/sparkle/tagger/appcast.xml'
   homepage 'http://bilalh.github.io/projects/tagger/'
+  license :oss
 
   app 'Tagger.app'
 end
