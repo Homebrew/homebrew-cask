@@ -5,6 +5,7 @@ class Selfcontrol < Cask
   url "http://downloads.selfcontrolapp.com/SelfControl-#{version}.zip"
   appcast 'http://selfcontrolapp.com/SelfControlAppcast.xml'
   homepage 'http://selfcontrolapp.com/'
+  license :unknown
 
   app 'SelfControl.app'
   zap :delete => '~/Library/Preferences/org.eyebeam.SelfControl.plist'
