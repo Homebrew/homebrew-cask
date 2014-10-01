@@ -4,6 +4,7 @@ class CrosspackAvr < Cask
 
   url 'http://www.obdev.at/downloads/crosspack/CrossPack-AVR-20131216.dmg'
   homepage 'http://www.obdev.at/products/crosspack/'
+  license :unknown
 
   pkg 'CrossPack-AVR.pkg'
   uninstall_postflight do
