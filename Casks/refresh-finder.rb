@@ -4,6 +4,7 @@ class RefreshFinder < Cask
 
   url "http://soderhavet.com/refresh/Refresh_Finder_#{version}.dmg.zip"
   homepage 'http://soderhavet.com/refresh/refresh-finder/'
+  license :unknown
 
   nested_container "Refresh_Finder_#{version}.dmg"
   app 'Refresh Finder.app'
