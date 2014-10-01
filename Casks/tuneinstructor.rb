@@ -5,6 +5,7 @@ class Tuneinstructor < Cask
 
   url "http://www.tune-instructor.de/_data/TuneInstructor#{version}b.dmg"
   homepage 'http://www.tune-instructor.de/com/start.html'
+  license :unknown
 
   app 'Tune•Instructor.app'
 end
