@@ -4,6 +4,7 @@ class Opera < Cask
 
   url "http://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
   homepage 'http://www.opera.com/'
+  license :unknown
 
   app 'Opera.app'
 end
