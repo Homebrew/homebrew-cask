@@ -5,6 +5,7 @@ class Feeder < Cask
   url "http://reinventedsoftware.com/feeder/downloads/Feeder_#{version}.dmg"
   appcast 'http://reinventedsoftware.com/feeder/downloads/Feeder25.xml'
   homepage 'http://reinventedsoftware.com/feeder/'
+  license :unknown
 
   app 'Feeder.app'
 end
