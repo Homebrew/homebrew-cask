@@ -4,6 +4,7 @@ class Gifrocket < Cask
 
   url "http://www.gifrocket.com/Gifrocket.#{version}.zip"
   homepage 'http://www.gifrocket.com/'
+  license :unknown
 
   app 'Gifrocket.app'
 end
