@@ -5,6 +5,7 @@ class Cornerstone < Cask
   url "https://www.zennaware.com/cornerstone/downloads/Cornerstone-#{version}.zip"
   appcast 'http://www.zennaware.com/cornerstone/appcast/feed2.php'
   homepage 'http://www.zennaware.com/cornerstone/index.php'
+  license :unknown
 
   app 'Cornerstone.app'
 end
