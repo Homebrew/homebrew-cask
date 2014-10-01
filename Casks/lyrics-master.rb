@@ -4,6 +4,7 @@ class LyricsMaster < Cask
 
   url 'http://www.kenichimaehashi.com/lyricsmaster/download/LyricsMaster2420.dmg'
   homepage 'http://www.kenichimaehashi.com/lyricsmaster/'
+  license :unknown
 
   suite 'Lyrics Master'
 end
