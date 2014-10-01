@@ -4,6 +4,7 @@ class Timemachinescheduler < Cask
 
   url "http://www.klieme.com/Downloads/TimeMachineScheduler/TimeMachineScheduler_#{version}.zip"
   homepage 'http://www.klieme.com/TimeMachineScheduler.html'
+  license :unknown
 
   nested_container 'TimeMachineScheduler3_Installer.dmg'
   prefpane 'TimeMachineScheduler3_Installer.app/Contents/Resources/TimeMachineScheduler.prefPane'
