@@ -4,6 +4,7 @@ class Thunder < Cask
 
   url "http://down.sandai.net/mac/thunder_dl#{version}_Beta.dmg"
   homepage 'http://mac.xunlei.com/'
+  license :unknown
 
   app 'Thunder.app'
 end
