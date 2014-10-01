@@ -5,6 +5,7 @@ class Beamer < Cask
   url 'http://beamer-app.com/download'
   appcast 'http://beamer-app.com/sparkle-appcast.xml'
   homepage 'http://beamer-app.com'
+  license :unknown
 
   app 'Beamer.app'
 end
