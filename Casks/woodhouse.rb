@@ -5,6 +5,7 @@ class Woodhouse < Cask
   url "https://github.com/downloads/phinze/woodhouse/Woodhouse-#{version}.dmg"
   appcast 'http://phinze.github.com/woodhouse/appcast.xml'
   homepage 'https://github.com/phinze/woodhouse/'
+  license :oss
 
   app 'Woodhouse.app'
 end
