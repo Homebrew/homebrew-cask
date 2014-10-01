@@ -4,6 +4,7 @@ class Colors < Cask
 
   url "https://mattpatenaude.com/software/colors-#{version}.zip"
   homepage 'http://mattpatenaude.com/'
+  license :unknown
 
   app 'Colors.app'
 end
