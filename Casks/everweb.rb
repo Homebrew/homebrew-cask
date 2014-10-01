@@ -4,6 +4,7 @@ class Everweb < Cask
 
   url 'https://www.ragesw.com/downloads/everweb/everweb.zip'
   homepage 'http://www.everwebapp.com/'
+  license :unknown
 
   app 'EverWeb.app'
 end
