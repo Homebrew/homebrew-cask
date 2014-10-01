@@ -4,6 +4,7 @@ class MacintoshExplorer < Cask
 
   url 'http://www.ragesw.com/downloads/ragesw/mac_explorer_alt.dmg'
   homepage 'http://www.ragesw.com/products/explorer.html'
+  license :unknown
 
   app 'Macintosh Explorer.app'
 end
