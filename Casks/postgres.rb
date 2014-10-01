@@ -4,6 +4,7 @@ class Postgres < Cask
 
   url "https://github.com/PostgresApp/PostgresApp/releases/download/#{version}/Postgres-#{version}.zip"
   homepage 'http://postgresapp.com/'
+  license :oss
 
   app 'Postgres.app'
 end
