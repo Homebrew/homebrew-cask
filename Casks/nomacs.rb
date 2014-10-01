@@ -4,6 +4,7 @@ class Nomacs < Cask
 
   url "https://downloads.sourceforge.net/nomacs/nomacs-#{version}-x86_64.dmg"
   homepage 'http://www.nomacs.org/'
+  license :oss
 
   app 'nomacs.app'
 end
