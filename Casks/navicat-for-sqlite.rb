@@ -4,6 +4,7 @@ class NavicatForSqlite < Cask
 
   url 'http://download.navicat.com/download/navicat110_sqlite_en.dmg'
   homepage 'http://www.navicat.com/products/navicat-for-sqlite'
+  license :unknown
 
   app 'Navicat for SQLite.app'
 end
