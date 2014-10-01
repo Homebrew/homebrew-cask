@@ -4,6 +4,7 @@ class Zipcleaner < Cask
 
   url 'http://roger-jolly.nl/software/downloads/zipcleaner/ZipCleaner.zip'
   homepage 'http://roger-jolly.nl/software/#zipcleaner'
+  license :unknown
 
   app 'ZipCleaner.app'
 end
