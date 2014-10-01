@@ -4,6 +4,7 @@ class Authoxy < Cask
 
   url "http://www.hrsoftworks.net/downloads/Authoxy#{version}.dmg"
   homepage 'http://www.hrsoftworks.net'
+  license :unknown
 
   pkg 'Authoxy (double click me).pkg'
   uninstall :pkgutil => 'net.hrsoftworks.authoxy.*',
