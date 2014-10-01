@@ -4,6 +4,7 @@ class Bassshapes < Cask
 
   url "http://yellquietly.com/downloads/BassShapes_v#{version.gsub('.', '')}.zip"
   homepage 'http://yellquietly.com/bass-shapes/'
+  license :unknown
 
   app "BassShapes_v#{version.gsub('.', '')}/BassShapes.app"
 end
