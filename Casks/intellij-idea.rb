@@ -4,6 +4,7 @@ class IntellijIdea < Cask
 
   url "http://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
   homepage 'https://www.jetbrains.com/idea/index.html'
+  license :oss
 
   app 'IntelliJ IDEA 13.app'
 
