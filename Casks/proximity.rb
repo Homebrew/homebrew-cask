@@ -4,6 +4,7 @@ class Proximity < Cask
 
   url "https://reduxcomputing-proximity.googlecode.com/files/Proximity%20#{version}.zip"
   homepage 'https://code.google.com/p/reduxcomputing-proximity/'
+  license :oss
 
   app 'Proximity.app'
 end
