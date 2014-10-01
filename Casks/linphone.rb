@@ -4,6 +4,7 @@ class Linphone < Cask
 
   url "http://download-mirror.savannah.gnu.org/releases/linphone/3.7.x/macos/linphone-#{version}.dmg"
   homepage 'http://www.linphone.org/'
+  license :unknown
 
   app 'Linphone.app'
 end
