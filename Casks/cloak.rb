@@ -4,6 +4,7 @@ class Cloak < Cask
 
   url "https://s3.amazonaws.com/static.getcloak.com/osx/updates/Release/Cloak-#{version}.dmg"
   homepage 'https://www.getcloak.com'
+  license :unknown
 
   app 'Cloak.app'
 end
