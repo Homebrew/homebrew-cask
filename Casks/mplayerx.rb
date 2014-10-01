@@ -4,6 +4,7 @@ class Mplayerx < Cask
 
   url "https://downloads.sourceforge.net/project/mplayerx-osx/MPlayerX-#{version}.zip"
   homepage 'http://mplayerx.org/'
+  license :oss
 
   app 'MPlayerX.app'
 end
