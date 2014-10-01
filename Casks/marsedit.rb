@@ -5,6 +5,7 @@ class Marsedit < Cask
   url "http://www.red-sweater.com/marsedit/MarsEdit#{version}.zip"
   appcast 'http://www.red-sweater.com/marsedit/appcast3.php'
   homepage 'http://www.red-sweater.com/marsedit/'
+  license :unknown
 
   app 'MarsEdit.app'
 end
