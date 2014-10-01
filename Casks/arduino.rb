@@ -4,6 +4,7 @@ class Arduino < Cask
 
   url "https://arduino.googlecode.com/files/arduino-#{version}-macosx.zip"
   homepage 'http://arduino.cc/'
+  license :oss
 
   app 'Arduino.app'
 end
