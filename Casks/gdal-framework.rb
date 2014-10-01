@@ -4,6 +4,7 @@ class GdalFramework < Cask
 
   url "http://www.kyngchaos.com/files/software/frameworks/GDAL_Complete-#{version}.dmg"
   homepage 'http://www.kyngchaos.com/software/frameworks'
+  license :unknown
 
   pkg 'GDAL Complete.pkg'
   pkg 'Numpy.pkg'
