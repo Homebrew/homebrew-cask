@@ -5,6 +5,7 @@ class Xact < Cask
   url "http://xact.scottcbrown.org/xACT#{version}.zip"
   appcast 'http://xactupdate.scottcbrown.org/xACT.xml'
   homepage 'http://xact.scottcbrown.org'
+  license :unknown
 
   app "xACT #{version}/xACT.app"
 end
