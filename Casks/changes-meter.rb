@@ -4,6 +4,7 @@ class ChangesMeter < Cask
 
   url 'http://intuiware.com/downloads/changes-meter'
   homepage 'http://intuiware.com/apps/changes-meter'
+  license :unknown
 
   app 'Changes Meter.app'
   postflight do
