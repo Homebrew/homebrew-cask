@@ -4,6 +4,7 @@ class Mnemosyne < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/mnemosyne-proj/Mnemosyne-#{version}-Mac.dmg"
   homepage 'http://mnemosyne-proj.org/'
+  license :oss
 
   app 'Mnemosyne.app'
 end
