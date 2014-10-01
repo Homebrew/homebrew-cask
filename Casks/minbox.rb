@@ -5,6 +5,7 @@ class Minbox < Cask
   url 'https://minbox-public.s3.amazonaws.com/osx/Minbox.zip'
   appcast 'https://minbox.com/updates.xml'
   homepage 'https://minbox.com'
+  license :unknown
 
   app 'Minbox.app'
 end
