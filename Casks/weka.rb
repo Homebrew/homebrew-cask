@@ -4,6 +4,7 @@ class Weka < Cask
 
   url 'https://downloads.sourceforge.net/sourceforge/weka/weka-3-6-11-oracle-jvm.dmg'
   homepage 'http://www.cs.waikato.ac.nz/ml/weka/'
+  license :oss
 
   app 'weka-3-6-11-oracle-jvm.app'
 end
