@@ -4,6 +4,7 @@ class Vistrails < Cask
 
   url "https://downloads.sourceforge.net/project/vistrails/vistrails/v#{version}/vistrails-mac-10.6-intel-#{version}-90975fc00211.dmg"
   homepage 'http://www.vistrails.org/index.php/Main_Page'
+  license :oss
 
   suite 'VisTrails'
 end
