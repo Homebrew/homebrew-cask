@@ -4,6 +4,7 @@ class Fetch < Cask
 
   url "http://fetchsoftworks.com/fetch/download/Fetch_#{version}.dmg?direct=1"
   homepage 'http://fetchsoftworks.com/'
+  license :unknown
 
   app 'Fetch.app'
 end
