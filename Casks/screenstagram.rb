@@ -4,6 +4,7 @@ class Screenstagram < Cask
 
   url "https://screenstagram.s3.amazonaws.com/screenstagram_#{version}.dmg"
   homepage 'http://screenstagram.s3.amazonaws.com/download.html'
+  license :unknown
 
   screen_saver 'Screenstagram 2.saver'
 end
