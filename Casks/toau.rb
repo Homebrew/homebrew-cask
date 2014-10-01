@@ -5,6 +5,7 @@ class Toau < Cask
   url 'http://toauapp.com/download/Toau.zip'
   appcast 'http://toauapp.com/up/updates.xml'
   homepage 'http://toauapp.com'
+  license :unknown
 
   app 'Toau.app'
 end
