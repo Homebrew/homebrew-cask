@@ -4,6 +4,7 @@ class NothingToHide < Cask
 
   url 'https://nothingtohide.s3.amazonaws.com/pc/Nothing_To_Hide_MAC.zip'
   homepage 'https://back.nothingtohide.cc/'
+  license :unknown
 
   app 'Nothing To Hide.app'
 end
