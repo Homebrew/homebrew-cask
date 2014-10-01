@@ -4,6 +4,7 @@ class Squirrel < Cask
 
   url "https://dl.bintray.com/lotem/rime/Squirrel-#{version}.zip"
   homepage 'https://github.com/lotem/squirrel'
+  license :oss
 
   pkg 'Squirrel.pkg'
   uninstall :pkgutil => 'com.googlecode.rimeime.Squirrel.pkg',
