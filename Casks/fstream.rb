@@ -4,6 +4,7 @@ class Fstream < Cask
 
   url 'http://www.sourcemac.com/fstream_FStream.tgz'
   homepage 'http://www.sourcemac.com/?page=fstream'
+  license :unknown
 
   app 'FStream.app'
 end
