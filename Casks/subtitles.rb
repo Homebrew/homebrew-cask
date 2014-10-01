@@ -5,6 +5,7 @@ class Subtitles < Cask
   url "http://subtitlesapp.com/download/Subtitles-mac-#{version}.zip"
   appcast 'http://subtitlesapp.com/updates.xml'
   homepage 'http://subtitlesapp.com'
+  license :unknown
 
   app 'Subtitles.app'
 end
