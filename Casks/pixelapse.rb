@@ -4,6 +4,7 @@ class Pixelapse < Cask
 
   url "https://s3.amazonaws.com/download-pixelapse/Pixelapse%20#{version}.dmg"
   homepage 'https://www.pixelapse.com'
+  license :unknown
 
   app 'Pixelapse.app'
 end
