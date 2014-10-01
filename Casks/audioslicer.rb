@@ -4,6 +4,7 @@ class Audioslicer < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/audioslicer/AudioSlicer-#{version}.dmg"
   homepage 'http://audioslicer.sourceforge.net'
+  license :oss
 
   app 'AudioSlicer.app'
 end
