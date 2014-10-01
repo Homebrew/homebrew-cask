@@ -4,6 +4,7 @@ class Maczip4win < Cask
 
   url "http://ynomura.com/files/MacZip4win_#{version.gsub('.', '_')}.zip"
   homepage 'http://ynomura.com/home/?page_id=116'
+  license :unknown
 
   app "MacZip4win #{version}/MacZip4Win.app"
 end
