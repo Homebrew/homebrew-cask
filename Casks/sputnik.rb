@@ -4,6 +4,7 @@ class Sputnik < Cask
 
   url "http://sputnik.szwacz.com/downloads/Sputnik-v#{version}.dmg"
   homepage 'http://sputnik.szwacz.com/'
+  license :unknown
 
   app 'Sputnik.app'
 end
