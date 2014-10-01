@@ -4,6 +4,7 @@ class Tuxguitar < Cask
 
   url "https://downloads.sourceforge.net/project/tuxguitar/TuxGuitar/TuxGuitar-#{version}/tuxguitar-#{version}-macosx10.5-cocoa-64.dmg"
   homepage 'http://www.tuxguitar.com.ar/'
+  license :oss
 
   app 'Tuxguitar.app'
 end
