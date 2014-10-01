@@ -4,6 +4,7 @@ class PlexMediaServer < Cask
 
   url "http://downloads.plexapp.com/plex-media-server/#{version}-7eef8c6/PlexMediaServer-#{version}-7eef8c6-OSX.zip"
   homepage 'https://plex.tv/'
+  license :unknown
 
   app 'Plex Media Server.app'
 end
