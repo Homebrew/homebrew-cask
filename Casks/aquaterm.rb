@@ -4,6 +4,7 @@ class Aquaterm < Cask
 
   url "https://downloads.sourceforge.net/project/aquaterm/AquaTerm/v#{version}/AquaTerm-#{version}.dmg"
   homepage 'http://aquaterm.sourceforge.net/'
+  license :oss
 
   pkg 'AquaTermInstaller.pkg'
   uninstall :pkgutil => 'net.sourceforge.aquaterm.aquaterm.*'
