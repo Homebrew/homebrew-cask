@@ -4,6 +4,7 @@ class Rcenvironment < Cask
 
   url "http://www.rubicode.com/Downloads/RCEnvironment-#{version}.X.dmg"
   homepage 'http://www.rubicode.com/Software/RCEnvironment/'
+  license :unknown
 
   prefpane 'RCEnvironment.prefPane'
 end
