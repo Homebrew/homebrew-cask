@@ -4,6 +4,7 @@ class Launchy < Cask
 
   url "http://www.launchy.net/downloads/mac/Launchy#{version}.dmg"
   homepage 'http://www.launchy.net'
+  license :unknown
 
   app 'Launchy.app'
 end
