@@ -4,6 +4,7 @@ class Surplusmeter < Cask
 
   url 'http://www.skoobysoft.com/downloads/SurplusMeterv203.dmg'
   homepage 'http://www.skoobysoft.com/utilities/utilities.html#surplusmeter'
+  license :unknown
 
   app 'SurplusMeter.app'
 end
