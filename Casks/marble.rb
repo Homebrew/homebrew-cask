@@ -4,6 +4,7 @@ class Marble < Cask
 
   url "https://files.kde.org/marble/downloads/MacOSX/Marble-#{version}.dmg"
   homepage 'http://www.marble.kde.org'
+  license :unknown
 
   app 'Marble.app'
 end
