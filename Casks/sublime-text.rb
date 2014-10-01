@@ -5,6 +5,7 @@ class SublimeText < Cask
   url "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20#{version}.dmg"
   appcast 'http://www.sublimetext.com/updates/2/stable/appcast_osx.xml'
   homepage 'http://www.sublimetext.com/2'
+  license :unknown
 
   app 'Sublime Text 2.app'
   binary 'Sublime Text 2.app/Contents/SharedSupport/bin/subl'
