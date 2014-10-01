@@ -4,6 +4,7 @@ class Moneyplex < Cask
 
   url 'http://www.matrica.com/download/mac/moneyplex.dmg'
   homepage 'http://www.matrica.de/'
+  license :unknown
 
   pkg 'moneyplex.pkg', :allow_untrusted => true
   uninstall :pkgutil => 'de.matrica.moneyplex.Moneyplex.pkg'
