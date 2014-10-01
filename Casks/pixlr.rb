@@ -4,6 +4,7 @@ class Pixlr < Cask
 
   url "https://cdn2.pixlr.com/mac/Autodesk_Pixlr_ver#{version}_Mac_Installer.dmg"
   homepage 'https://pixlr.com'
+  license :unknown
 
   app 'Pixlr.app'
 end
