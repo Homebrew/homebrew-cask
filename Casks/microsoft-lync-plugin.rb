@@ -4,6 +4,7 @@ class MicrosoftLyncPlugin < Cask
 
   url 'https://lync12.lyncweb.microsoft.com/lwa/Plugins/LWAPluginInstaller.pkg'
   homepage 'http://office.microsoft.com/Lync'
+  license :unknown
 
   pkg 'LWAPluginInstaller.pkg'
   uninstall :pkgutil => 'Lync.Client.LwaPluginInstaller.*.LwaPlugin.pkg'
