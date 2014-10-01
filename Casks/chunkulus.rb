@@ -4,6 +4,7 @@ class Chunkulus < Cask
 
   url 'http://presstube.com/screensavers/presstube-chunkulus-mac.zip'
   homepage 'http://presstube.com/blog/2011/chunkulus/'
+  license :unknown
 
   screen_saver 'presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver'
 
