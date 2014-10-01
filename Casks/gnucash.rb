@@ -4,6 +4,7 @@ class Gnucash < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-#{version}.dmg"
   homepage 'http://www.gnucash.org'
+  license :oss
 
   app 'Gnucash.app'
   app 'FinanceQuote Update.app'
