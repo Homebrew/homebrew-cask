@@ -5,6 +5,7 @@ class GogDownloader < Cask
   url 'http://static.gog.com/download/d3/mac-stable/GOG_Downloader_1.2_512.zip'
   appcast 'https://api.gog.com/en/downloader2/status/mac-stable'
   homepage 'http://www.gog.com/downloader'
+  license :unknown
 
   app 'GOG Downloader.app'
 end
