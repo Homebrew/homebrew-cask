@@ -4,6 +4,7 @@ class Atraci < Cask
 
   url "https://github.com/Atraci/Atraci/releases/download/#{version}/Atraci-mac.zip"
   homepage 'https://github.com/Atraci/Atraci'
+  license :oss
 
   app 'Atraci.app'
 end
