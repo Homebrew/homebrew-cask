@@ -5,6 +5,7 @@ class Trickster < Cask
   url "http://dl.apparentsoft.com/Trickster_#{version}.zip"
   appcast 'http://dl.apparentsoft.com/trickster.rss'
   homepage 'http://www.apparentsoft.com/trickster/'
+  license :unknown
 
   app 'Trickster.app'
 end
