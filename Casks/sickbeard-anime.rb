@@ -4,6 +4,7 @@ class SickbeardAnime < Cask
 
   url "http://sickbeard.lad1337.de/download.php?f=SickBeard-OSX-anime-#{version}.dmg"
   homepage 'http://sickbeard.lad1337.de/'
+  license :unknown
 
   app 'SickBeard.app'
 end
