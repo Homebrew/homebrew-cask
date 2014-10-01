@@ -4,6 +4,7 @@ class Makemkv < Cask
 
   url "http://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
   homepage 'http://www.makemkv.com/'
+  license :unknown
 
   app 'MakeMKV.app'
 end
