@@ -4,6 +4,7 @@ class Freemind < Cask
 
   url "https://downloads.sourceforge.net/project/freemind/freemind/#{version}/FreeMind_#{version}.dmg"
   homepage 'freemind.sourceforge.net'
+  license :oss
 
   app 'FreeMind.app'
 end
