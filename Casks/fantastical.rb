@@ -5,6 +5,7 @@ class Fantastical < Cask
   url "http://cdn.flexibits.com/Fantastical_#{version}.zip"
   appcast 'https://flexibits.com/fantastical/appcast.php'
   homepage 'http://flexibits.com/fantastical'
+  license :unknown
 
   app 'Fantastical.app'
 
