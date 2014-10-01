@@ -6,5 +6,7 @@ class LogmeinClient < Cask
   homepage 'https://secure.logmein.com/products/pro/learnmore/desktopapp.aspx'
   license :unknown
 
+  # Renamed for clarity: app name is inconsistent with its branding.
+  # Original discussion: https://github.com/caskroom/homebrew-cask/issues/4818
   app 'LogMeInIgnition.app', :target => 'LogMeIn Client.app'
 end
