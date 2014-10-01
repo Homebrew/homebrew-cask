@@ -4,6 +4,7 @@ class Rtx < Cask
 
   url 'http://www.rtxapp.com/download'
   homepage 'http://www.rtxapp.com/mac/'
+  license :unknown
 
   app 'RTX.app'
 end
