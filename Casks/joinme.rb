@@ -4,6 +4,7 @@ class Joinme < Cask
 
   url 'https://secure.join.me/Download.aspx?installer=mac&webdownload=true'
   homepage 'https://join.me/'
+  license :unknown
 
   app 'join.me.app'
 end
