@@ -5,6 +5,7 @@ class Tunnelblick < Cask
   url "https://downloads.sourceforge.net/project/tunnelblick/All%20files/Tunnelblick_#{version}.dmg"
   appcast 'https://www.tunnelblick.net/appcast.rss'
   homepage 'https://code.google.com/p/tunnelblick/'
+  license :oss
 
   app 'Tunnelblick.app'
   caveats 'For security reasons, Tunnelblick must be installed to /Applications and will request to be moved at launch.'
