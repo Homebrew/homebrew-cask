@@ -4,6 +4,7 @@ class Tofu < Cask
 
   url 'http://amarsagoo.info/tofu/Tofu.dmg'
   homepage 'http://amarsagoo.info/tofu/'
+  license :unknown
 
   app 'Tofu.app'
 end
