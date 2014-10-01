@@ -4,6 +4,7 @@ class Detune < Cask
 
   url "http://headlightsoft.com/detune/detune-#{version}.dmg"
   homepage 'http://headlightsoft.com/detune/'
+  license :unknown
 
   app 'DeTune.app'
 end
