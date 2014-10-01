@@ -4,6 +4,7 @@ class Armory < Cask
 
   url "https://s3.amazonaws.com/bitcoinarmory-releases/armory_#{version}_osx.tar.gz"
   homepage 'https://bitcoinarmory.com/'
+  license :unknown
 
   app 'Armory.app'
 end
