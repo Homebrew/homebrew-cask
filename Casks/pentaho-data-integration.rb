@@ -4,6 +4,7 @@ class PentahoDataIntegration < Cask
 
   url 'https://sourceforge.net/projects/pentaho/files/latest/download'
   homepage 'http://community.pentaho.com'
+  license :oss
 
   app 'data-integration/Data Integration.app'
 end
