@@ -4,6 +4,7 @@ class TheUnarchiver < Cask
 
   url "https://theunarchiver.googlecode.com/files/TheUnarchiver#{version}.zip"
   homepage 'http://unarchiver.c3.cx/'
+  license :oss
 
   app 'The Unarchiver.app'
 end
