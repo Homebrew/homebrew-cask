@@ -4,6 +4,7 @@ class Multibit < Cask
 
   url "https://multibit.org/releases/multibit-#{version}/multibit-#{version}.dmg"
   homepage 'https://multibit.org/'
+  license :unknown
 
   app 'MultiBit.app'
 end
