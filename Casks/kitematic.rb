@@ -4,6 +4,7 @@ class Kitematic < Cask
 
   url "https://s3.amazonaws.com/kite-installer/Kitematic-#{version}.zip"
   homepage 'https://kitematic.com/'
+  license :unknown
 
   app 'Kitematic.app'
 end
