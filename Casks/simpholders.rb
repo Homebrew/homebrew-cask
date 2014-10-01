@@ -5,6 +5,7 @@ class Simpholders < Cask
   url 'http://simpholders.com/site/assets/files/1007/simpholders-1_5_0.dmg'
   appcast 'http://kfi-apps.com/appcasts/simpholders/'
   homepage 'http://simpholders.com/'
+  license :unknown
 
   app 'SimPholders.app'
 end
