@@ -4,6 +4,7 @@ class Itunesscrobbler < Cask
 
   url 'http://www.easyclasspage.de/lastfm/files/iTunesScrobbler_060.zip'
   homepage 'http://www.easyclasspage.de/lastfm/seite-19.html'
+  license :unknown
 
   app 'iTunesScrobbler.app'
 end
