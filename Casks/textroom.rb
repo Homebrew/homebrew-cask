@@ -4,6 +4,7 @@ class Textroom < Cask
 
   url "https://textroom.googlecode.com/files/textroom-#{version}.dmg"
   homepage 'https://code.google.com/p/textroom/'
+  license :oss
 
   app 'textroom.app'
 end
