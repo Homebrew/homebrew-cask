@@ -4,6 +4,7 @@ class Mikogo < Cask
 
   url 'http://download.mikogo4.com/mikogo.dmg'
   homepage 'http://www.mikogo.com/'
+  license :unknown
 
   app 'Mikogo.app'
 end
