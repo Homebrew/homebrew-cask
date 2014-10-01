@@ -4,6 +4,7 @@ class Mactex < Cask
 
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version}.pkg"
   homepage 'http://www.tug.org/mactex/'
+  license :unknown
 
   pkg "mactex-#{version}.pkg"
   uninstall :pkgutil => [
