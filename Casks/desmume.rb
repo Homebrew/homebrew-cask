@@ -4,6 +4,7 @@ class Desmume < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/desmume/desmume-#{version}-mac.dmg"
   homepage 'http://www.desmume.org'
+  license :oss
 
   app 'DeSmuME.app'
 end
