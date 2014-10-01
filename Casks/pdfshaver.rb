@@ -4,6 +4,7 @@ class Pdfshaver < Cask
 
   url "https://github.com/tparry/PDFShaver.app/releases/download/v#{version}/PDFShaver.zip"
   homepage 'https://github.com/tparry/PDFShaver.app'
+  license :oss
 
   app 'PDFShaver.app'
 end
