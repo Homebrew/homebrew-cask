@@ -4,6 +4,7 @@ class Kylo < Cask
 
   url 'https://kylo.s3.amazonaws.com/update/public/kylo-setup-1_0_1_76141.dmg'
   homepage 'http://kylo.tv'
+  license :unknown
 
   app 'Kylo.app'
 end
