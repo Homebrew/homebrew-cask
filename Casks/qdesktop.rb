@@ -5,6 +5,7 @@ class Qdesktop < Cask
   url "https://bitbucket.org/qvacua/qvacua/downloads/Qdesktop-#{version}.zip"
   appcast 'http://qvacua.com/qdesktop/appcast.xml'
   homepage 'http://qvacua.com'
+  license :oss
 
   app 'Qdesktop.app'
 end
