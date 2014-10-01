@@ -5,6 +5,7 @@ class Coda < Cask
   url "https://panic.com/coda/d/Coda%20#{version}.zip"
   appcast 'http://www.panic.com/updates/update.php'
   homepage 'https://panic.com/Coda/'
+  license :unknown
 
   app 'Coda 2.app'
   zap :delete => [
