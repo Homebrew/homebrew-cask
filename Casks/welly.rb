@@ -5,6 +5,7 @@ class Welly < Cask
   url 'https://welly.googlecode.com/files/Welly.v2.7.fix.zip'
   appcast 'http://welly.googlecode.com/svn/wiki/WellyUpdate.xml'
   homepage 'https://code.google.com/p/welly/'
+  license :oss
 
   app 'Welly.app'
 end
