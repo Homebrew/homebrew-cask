@@ -7,6 +7,7 @@ class Paraview < Cask
     sha256 '1eef4a2ee155049059967733e40010e86cc6cd05458de676217af5c276995817'
   end
   homepage 'http://www.paraview.org/'
+  license :unknown
   version '4.1.0'
   app 'paraview.app'
   caveats do
