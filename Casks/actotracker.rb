@@ -4,6 +4,7 @@ class Actotracker < Cask
 
   url 'https://dl.dropboxusercontent.com/u/7614970/ActoTracker.zip'
   homepage 'http://onflapp.wordpress.com/actotracker'
+  license :unknown
 
   app 'ActoTracker.app'
 end
