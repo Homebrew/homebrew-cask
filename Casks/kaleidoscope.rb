@@ -5,6 +5,7 @@ class Kaleidoscope < Cask
   url 'http://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-2.1.0-134.zip'
   appcast 'https://updates.blackpixel.com/updates?app=ks'
   homepage 'http://www.kaleidoscopeapp.com/'
+  license :unknown
 
   app 'Kaleidoscope.app'
   binary 'Kaleidoscope.app/Contents/Resources/bin/ksdiff'
