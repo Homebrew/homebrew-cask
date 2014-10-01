@@ -4,6 +4,7 @@ class Dropletmanager < Cask
 
   url "https://github.com/deivuh/DODropletManager-OSX/releases/download/v#{version}/DropletManager.v#{version}.zip"
   homepage 'https://github.com/deivuh/DODropletManager-OSX'
+  license :oss
 
   app 'DropletManager.app'
 end
