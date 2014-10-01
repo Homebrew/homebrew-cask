@@ -4,6 +4,7 @@ class Gyazo < Cask
 
   url "https://gyazo.s3.amazonaws.com/setup/Gyazo_#{version}.dmg"
   homepage 'https://gyazo.com/'
+  license :unknown
 
   app 'Gyazo.app'
   app 'Gyazo GIF.app'
