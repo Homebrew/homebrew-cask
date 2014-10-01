@@ -4,6 +4,7 @@ class GmailNotifier < Cask
 
   url "https://github.com/jashephe/Gmail-Notifier/releases/download/v#{version}/Gmail.Notifier.v#{version}.zip"
   homepage 'https://github.com/jashephe/Gmail-Notifier'
+  license :oss
 
   app 'Gmail Notifier.app'
 end
