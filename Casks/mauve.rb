@@ -4,6 +4,7 @@ class Mauve < Cask
 
   url "http://gel.ahabs.wisc.edu/mauve/downloads/Mauve-#{version}.dmg"
   homepage 'http://gel.ahabs.wisc.edu/mauve/'
+  license :unknown
 
   app 'Mauve.app'
 end
