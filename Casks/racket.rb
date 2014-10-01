@@ -4,6 +4,7 @@ class Racket < Cask
 
   url "http://mirror.racket-lang.org/installers/#{version}/racket-#{version}-x86_64-macosx.dmg"
   homepage 'http://racket-lang.org/'
+  license :unknown
 
   suite "Racket v#{version}"
 end
