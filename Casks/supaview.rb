@@ -4,6 +4,7 @@ class Supaview < Cask
 
   url "http://twinside.free.fr/supaview/SupaView.#{version}.zip"
   homepage 'http://twinside.free.fr/supaview/'
+  license :unknown
 
   app 'SupaView.app'
 end
