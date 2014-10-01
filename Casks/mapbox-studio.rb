@@ -4,6 +4,7 @@ class MapboxStudio < Cask
 
   url "https://mapbox.s3.amazonaws.com/mapbox-studio/mapbox-studio-darwin-x64-v#{version}.zip"
   homepage 'https://www.mapbox.com/mapbox-studio/'
+  license :unknown
 
   app "mapbox-studio-darwin-x64-v#{version}/Mapbox Studio.app"
 end
