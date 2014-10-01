@@ -4,6 +4,7 @@ class IstatServer < Cask
 
   url 'http://download.bjango.com/istatserver/'
   homepage 'http://bjango.com/mac/istatserver/'
+  license :unknown
 
   pkg 'iStat Server.pkg'
   uninstall :script => '/Applications/iStat Server.app/Contents/Resources/Uninstaller',
