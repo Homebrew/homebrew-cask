@@ -4,6 +4,7 @@ class XmarksSafari < Cask
 
   url "https://static.xmarks.com/clients/safari/xmarks_for_safari_#{version}.dmg"
   homepage 'http://www.xmarks.com/'
+  license :unknown
 
   pkg 'Xmarks for Safari Installer.pkg'
   uninstall :pkgutil => [
