@@ -4,6 +4,7 @@ class Plover < Cask
 
   url "https://github.com/openstenoproject/plover/releases/download/v#{version}/Plover.dmg"
   homepage 'http://stenoknight.com/wiki/Main_Page'
+  license :oss
 
   app 'plover.app'
 
