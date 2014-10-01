@@ -4,6 +4,7 @@ class Padre < Cask
 
   url 'http://wildperl.com/wp-content/uploads/Padre/padre-osx-uni-0-92-0.dmg'
   homepage 'http://padre.perlide.org'
+  license :unknown
 
   app 'Padre.app'
 end
