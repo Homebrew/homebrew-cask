@@ -4,6 +4,7 @@ class Cfxr < Cask
 
   url "https://github.com/downloads/nevyn/cfxr/cfxr%20#{version}.zip"
   homepage 'http://thirdcog.eu/apps/cfxr'
+  license :oss
 
   app 'cfxr.app'
 end
