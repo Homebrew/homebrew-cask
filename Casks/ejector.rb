@@ -4,6 +4,7 @@ class Ejector < Cask
 
   url "http://www.jeb.com.fr/soft/Ejector-v#{version}.dmg"
   homepage 'http://www.jeb.com.fr/en/ejector.shtml'
+  license :unknown
 
   app 'Ejector.app'
 end
