@@ -4,6 +4,7 @@ class ChromeRemoteDesktopHost < Cask
 
   url 'https://dl.google.com/chrome-remote-desktop/chromeremotedesktop.dmg'
   homepage 'https://chrome.google.com/remotedesktop'
+  license :unknown
 
   pkg 'Chrome Remote Desktop Host.pkg'
   uninstall :script => {
