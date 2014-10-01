@@ -4,6 +4,7 @@ class NavicatForSqlServer < Cask
 
   url 'http://download.navicat.com/download/navicat110_sqlserver_en.dmg'
   homepage 'http://www.navicat.com/products/navicat-for-sqlserver'
+  license :unknown
 
   app 'Navicat For SQL Server.app'
 end
