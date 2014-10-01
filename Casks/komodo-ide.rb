@@ -4,6 +4,7 @@ class KomodoIde < Cask
 
   url "http://downloads.activestate.com/Komodo/releases/#{version.gsub(/-.*/, '')}/Komodo-IDE-#{version}-macosx-x86_64.dmg"
   homepage 'http://komodoide.com/'
+  license :unknown
 
   app 'Komodo IDE 8.app'
 end
