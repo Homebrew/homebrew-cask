@@ -4,6 +4,7 @@ class Switchresx < Cask
 
   url 'http://www.madrau.com/data/switchresx/SwitchResX4.zip'
   homepage 'http://www.madrau.com'
+  license :unknown
 
   prefpane 'SwitchResX.prefPane'
 
