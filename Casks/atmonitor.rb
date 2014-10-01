@@ -6,6 +6,7 @@ class Atmonitor < Cask
   # todo: no response
   # appcast 'http://support.atPurpose.com/atMonitor/updates.xml'
   homepage 'http://www.atpurpose.com/atMonitor/'
+  license :unknown
 
   app 'atMonitor.app'
 end
