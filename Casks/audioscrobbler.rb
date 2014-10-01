@@ -4,6 +4,7 @@ class Audioscrobbler < Cask
 
   url "https://github.com/mxcl/Audioscrobbler.app/releases/download/#{version}/Audioscrobbler-#{version}.zip"
   homepage 'https://github.com/mxcl/Audioscrobbler.app'
+  license :oss
 
   app 'Audioscrobbler.app'
 end
