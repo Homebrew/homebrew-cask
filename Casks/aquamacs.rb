@@ -9,5 +9,6 @@ class Aquamacs < Cask
     sha256 '1d833cb2e40c1af96713badc4efa7c1c9259317b91edcfe17059c73e989f9e07'
   end
   homepage 'http://aquamacs.org/'
+  license :oss
   app 'Aquamacs.app'
 end
