@@ -5,6 +5,7 @@ class Texts < Cask
   url "http://www.texts.io/Texts-#{version}.dmg"
   appcast 'http://www.texts.io/appcast-osx.xml'
   homepage 'http://www.texts.io'
+  license :unknown
 
   app 'Texts.app'
 end
