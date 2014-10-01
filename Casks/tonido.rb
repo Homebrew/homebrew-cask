@@ -4,6 +4,7 @@ class Tonido < Cask
 
   url 'http://www.tonido.com/download.php?TonidoSetup.dmg'
   homepage 'http://www.tonido.com/'
+  license :unknown
 
   app 'Tonido.app'
 end
