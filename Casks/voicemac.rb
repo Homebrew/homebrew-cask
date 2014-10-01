@@ -5,6 +5,7 @@ class Voicemac < Cask
   url 'http://download.mrgeckosmedia.com/VoiceMac.zip'
   appcast 'https://mrgeckosmedia.com/applications/appcast/VoiceMac'
   homepage 'https://mrgeckosmedia.com/applications/info/VoiceMac'
+  license :unknown
 
   app 'VoiceMac/VoiceMac.app'
   postflight do
