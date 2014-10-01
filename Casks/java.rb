@@ -7,6 +7,7 @@ class Java < Cask
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html'
+  license :unknown
 
   pkg 'JDK 8 Update 20.pkg'
   postflight do
