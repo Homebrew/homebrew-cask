@@ -4,6 +4,7 @@ class Nmap < Cask
 
   url "http://nmap.org/dist/nmap-#{version}.dmg"
   homepage 'http://nmap.org/'
+  license :unknown
 
   pkg "nmap-#{version}.mpkg"
   uninstall :pkgutil => 'org.insecure.nmap*.pkg'
