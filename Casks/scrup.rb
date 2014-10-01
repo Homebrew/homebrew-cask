@@ -5,6 +5,7 @@ class Scrup < Cask
   url "http://data.hunch.se/scrup/Scrup-#{version}-bd23160.zip"
   appcast 'https://s.rsms.me/scrup/appcast.xml'
   homepage 'https://github.com/rsms/scrup'
+  license :oss
 
   app 'Scrup.app'
 end
