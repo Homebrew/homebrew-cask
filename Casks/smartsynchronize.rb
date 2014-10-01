@@ -4,6 +4,7 @@ class Smartsynchronize < Cask
 
   url 'http://www.syntevo.com/download/smartsynchronize/smartsynchronize-macosx-3_3_4.dmg'
   homepage 'http://www.syntevo.com'
+  license :unknown
 
   app 'SmartSynchronize 3.3.app'
   binary 'SmartSynchronize 3.3.app/Contents/MacOS/SmartSynchronize'
