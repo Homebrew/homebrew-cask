@@ -4,6 +4,7 @@ class SpotifyNotifications < Cask
 
   url "https://github.com/citruspi/Spotify-Notifications/releases/download/#{version}/Spotify.Notifications.-.#{version}.zip"
   homepage 'http://spotify-notifications.citruspi.io/'
+  license :oss
 
   app 'Spotify Notifications.app'
 end
