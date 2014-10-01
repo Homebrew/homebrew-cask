@@ -4,6 +4,7 @@ class Tagspaces < Cask
 
   url "https://github.com/uggrock/tagspaces/releases/download/v#{version}/tagspaces-#{version}-osx.zip"
   homepage 'http://www.tagspaces.org'
+  license :oss
 
   app 'TagSpaces.app'
 end
