@@ -4,6 +4,7 @@ class Icompta < Cask
 
   url 'https://www.lyricapps.fr/iCompta/downloads/iCompta.dmg'
   homepage 'http://www.icompta-app.com/'
+  license :unknown
 
   app 'iCompta.app'
 end
