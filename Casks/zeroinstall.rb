@@ -4,6 +4,7 @@ class Zeroinstall < Cask
 
   url "https://downloads.sourceforge.net/project/zero-install/0install/#{version}/ZeroInstall.pkg"
   homepage 'http://0install.net'
+  license :oss
 
   pkg 'ZeroInstall.pkg'
   uninstall :pkgutil => 'net.0install.pkg'
