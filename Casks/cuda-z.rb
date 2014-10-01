@@ -4,6 +4,7 @@ class CudaZ < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/cuda-z/CUDA-Z-#{version}.dmg"
   homepage 'http://cuda-z.sourceforge.net'
+  license :oss
 
   app 'Cuda-Z.app'
 end
