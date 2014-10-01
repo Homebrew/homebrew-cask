@@ -4,6 +4,7 @@ class Gimp < Cask
 
   url "http://ftp.gimp.org/pub/gimp/v2.8/osx/gimp-#{version}-dmg-1.dmg"
   homepage 'http://www.gimp.org'
+  license :unknown
 
   app 'GIMP.app'
 end
