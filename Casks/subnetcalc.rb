@@ -4,6 +4,7 @@ class Subnetcalc < Cask
 
   url "http://subnetcalc.free.fr/download/subnetcalc-#{version}.dmg"
   homepage 'http://subnetcalc.free.fr/'
+  license :unknown
 
   app 'SubnetCalc.app'
 end
