@@ -4,6 +4,7 @@ class LogitechMyharmony < Cask
 
   url "http://app.myharmony.com/prod/mac/#{version}/MyHarmony-App.dmg"
   homepage 'https://setup.myharmony.com/'
+  license :unknown
 
   pkg 'MyHarmonySetup.pkg'
   uninstall :quit => 'org.logitech.MyHarmony',
