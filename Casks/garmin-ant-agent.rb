@@ -4,6 +4,7 @@ class GarminAntAgent < Cask
 
   url 'http://download.garmin.com/software/ANTAgentforMac_222.dmg'
   homepage 'http://www8.garmin.com/support/download_details.jsp?id=4417'
+  license :unknown
 
   pkg 'Install Garmin ANT Agent.pkg'
   uninstall :quit => 'com.garmin.AntAgent',
