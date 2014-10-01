@@ -4,6 +4,7 @@ class Monochrome < Cask
 
   url "https://dl.dropboxusercontent.com/u/63362/monochrome_#{version.gsub('.', '_')}.zip"
   homepage 'http://lucianmarin.com/monochrome/'
+  license :unknown
 
   app 'Monochrome.app'
 end
