@@ -5,6 +5,7 @@ class Clipmenu < Cask
   url "https://dl.dropbox.com/u/1140644/clipmenu/ClipMenu_#{version}.dmg"
   appcast 'http://feeds.feedburner.com/clipmenu-appcast'
   homepage 'http://www.clipmenu.com/'
+  license :unknown
 
   app 'ClipMenu.app'
   zap :delete => [
