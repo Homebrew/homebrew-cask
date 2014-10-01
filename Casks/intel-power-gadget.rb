@@ -5,6 +5,7 @@ class IntelPowerGadget < Cask
 
   url "https://software.intel.com/sites/default/files/managed/59/39/IntelPowerGadgetMac#{version}.zip"
   homepage 'https://software.intel.com/en-us/articles/intel-power-gadget-20'
+  license :unknown
 
   # this bogus-looking character accurately reflects an upstream error
   nested_container 'IntelÆ Power Gadget.dmg'
