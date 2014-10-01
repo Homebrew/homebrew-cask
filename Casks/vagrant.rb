@@ -4,6 +4,7 @@ class Vagrant < Cask
 
   url "https://dl.bintray.com/mitchellh/vagrant/vagrant_#{version}.dmg"
   homepage 'http://www.vagrantup.com'
+  license :unknown
 
   pkg 'Vagrant.pkg'
   uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] },
