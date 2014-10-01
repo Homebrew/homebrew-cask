@@ -5,6 +5,7 @@ class Slicy < Cask
   url 'https://macrabbit.com/slicy/get/'
   appcast 'http://update.macrabbit.com/slicy/1.1.3.xml'
   homepage 'http://macrabbit.com/slicy/'
+  license :unknown
 
   app 'Slicy.app'
 end
