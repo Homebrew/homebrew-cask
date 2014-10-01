@@ -4,6 +4,7 @@ class Onepassword < Cask
 
   url "http://i.agilebits.com/dist/1P/mac4/1Password-#{version}.zip"
   homepage 'https://agilebits.com/onepassword'
+  license :unknown
 
   app '1Password 4.app'
 end
