@@ -4,6 +4,7 @@ class Madruby < Cask
 
   url "http://www.wingsforpigs.com/downloads/MadRuby_#{version}.dmg"
   homepage 'http://www.wingsforpigs.com/MadRuby/MadRuby.html'
+  license :unknown
 
   app 'MadRuby.app'
 end
