@@ -4,6 +4,7 @@ class Levelator < Cask
 
   url "http://cdn.conversationsnetwork.org/Levelator-#{version}.dmg"
   homepage 'http://www.conversationsnetwork.org/levelator/'
+  license :unknown
 
   app 'Levelator.app'
 end
