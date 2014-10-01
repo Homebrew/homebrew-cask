@@ -5,6 +5,7 @@ class Pixelstick < Cask
   url 'https://plumamazing.com/bin/pixelstick/pixelstick.zip'
   appcast 'https://plumamazing.com/appcastSSL.php?pid=100'
   homepage 'http://plumamazing.com/mac/pixelstick'
+  license :unknown
 
   app 'PixelStick.app'
 end
