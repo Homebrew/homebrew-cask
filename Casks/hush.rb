@@ -4,6 +4,7 @@ class Hush < Cask
 
   url 'https://coffitivity.com/hush/files/Hush.dmg.zip'
   homepage 'http://coffitivity.com/hush/'
+  license :unknown
 
   nested_container 'Hush.dmg'
   app 'Hush.app'
