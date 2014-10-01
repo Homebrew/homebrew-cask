@@ -4,6 +4,7 @@ class Freedv < Cask
 
   url "http://files.freedv.org/OSX/FreeDV-#{version}.dmg"
   homepage 'http://freedv.org/tiki-index.php'
+  license :unknown
 
   app 'FreeDV.app'
 end
