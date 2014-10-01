@@ -4,6 +4,7 @@ class Codelite < Cask
 
   url 'http://downloads.codelite.org/downloads.php?osx'
   homepage 'http://codelite.org'
+  license :unknown
 
   app 'codelite.app'
 end
