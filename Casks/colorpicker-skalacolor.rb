@@ -4,6 +4,7 @@ class ColorpickerSkalacolor < Cask
 
   url 'http://download.bjango.com/skalacolor/'
   homepage 'http://bjango.com/mac/skalacolor/'
+  license :unknown
 
   colorpicker 'Skala Color Installer.app/Contents/Resources/SkalaColor.colorPicker'
 end
