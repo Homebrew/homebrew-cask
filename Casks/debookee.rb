@@ -4,6 +4,7 @@ class Debookee < Cask
 
   url 'http://www.iwaxx.com/debookee/debookee.zip'
   homepage 'http://www.iwaxx.com/debookee/'
+  license :unknown
 
   app 'Debookee.app'
 end
