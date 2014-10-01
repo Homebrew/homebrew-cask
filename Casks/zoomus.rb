@@ -4,6 +4,7 @@ class Zoomus < Cask
 
   url 'https://zoom.us/client/latest/zoomusInstaller.pkg'
   homepage 'http://www.zoom.us'
+  license :unknown
 
   pkg 'zoomusInstaller.pkg'
   uninstall :delete => '/Applications/zoom.us.app'
