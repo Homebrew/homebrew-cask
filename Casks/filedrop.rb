@@ -4,6 +4,7 @@ class Filedrop < Cask
 
   url 'https://commondatastorage.googleapis.com/filedropme/Filedrop.dmg'
   homepage 'http://www.filedropme.com/'
+  license :unknown
 
   app 'Filedrop.app'
 end
