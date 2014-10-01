@@ -5,6 +5,7 @@ class Vocabulist < Cask
   url "http://vocabulistapp.com/downloads/Vocabulist-#{version}.dmg"
   appcast 'http://vocabulistapp.com/downloads/appcast.xml'
   homepage 'http://vocabulistapp.com/'
+  license :unknown
 
   app 'Vocabulist.app'
 end
