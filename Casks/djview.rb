@@ -4,6 +4,7 @@ class Djview < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/djvu/djvulibre-3.5.22%2Bdjview-#{version}-intel-3.zip"
   homepage 'http://djvu.sourceforge.net/'
+  license :oss
 
   nested_container "djvulibre-3.5.22+djview-#{version}-intel.dmg"
   app 'DjView.app'
