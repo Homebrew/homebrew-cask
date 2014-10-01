@@ -4,6 +4,7 @@ class Xmind < Cask
 
   url "http://dl2.xmind.net/xmind-downloads/xmind-macosx-#{version}.201401221918.dmg"
   homepage 'http://www.xmind.net'
+  license :unknown
 
   app 'XMind.app'
 end
