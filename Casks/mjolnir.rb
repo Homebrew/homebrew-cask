@@ -4,6 +4,7 @@ class Mjolnir < Cask
 
   url "https://github.com/mjolnir-io/mjolnir/releases/download/#{version}/Mjolnir-#{version}.tgz"
   homepage 'http://mjolnir.io'
+  license :oss
 
   app 'Mjolnir.app'
 end
