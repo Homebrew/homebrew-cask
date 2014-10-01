@@ -5,6 +5,7 @@ class Hipchat < Cask
   url 'https://www.hipchat.com/downloads/latest/mac'
   appcast 'https://www.hipchat.com/release_notes/appcast/mac'
   homepage 'https://www.hipchat.com/'
+  license :unknown
 
   app 'HipChat.app'
 
