@@ -4,6 +4,7 @@ class Kkbox < Cask
 
   url "http://download.kkbox.com/files/KKBOX-#{version}-ca460d0.dmg"
   homepage 'http://www.kkbox.com/'
+  license :unknown
 
   app 'KKBOX.app'
 end
