@@ -4,6 +4,7 @@ class Zooom < Cask
 
   url "http://software.coderage-software.com/zooom/Zooom_#{version}.dmg"
   homepage 'http://coderage-software.com/zooom'
+  license :unknown
 
   pkg 'Zooom2.pkg'
   caveats do
