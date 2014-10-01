@@ -4,6 +4,7 @@ class Myphonedesktop < Cask
 
   url 'http://www.myphonedesktop.com/dwn/myPhoneDesktop_macos_2_0_3.dmg'
   homepage 'http://www.myphonedesktop.com/'
+  license :unknown
 
   app 'myPhoneDesktop.app'
 end
