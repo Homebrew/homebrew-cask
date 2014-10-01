@@ -4,6 +4,7 @@ class Tortoisehg < Cask
 
   url "https://bitbucket.org/tortoisehg/files/downloads/tortoisehg-#{version}-mac-x64.zip"
   homepage 'http://tortoisehg.bitbucket.org/'
+  license :oss
 
   app 'TortoiseHg.app'
 end
