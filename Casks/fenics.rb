@@ -4,6 +4,7 @@ class Fenics < Cask
 
   url 'http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.9.dmg'
   homepage 'http://fenicsproject.org/'
+  license :unknown
 
   app 'FEniCS.app'
 
