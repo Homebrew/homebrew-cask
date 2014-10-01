@@ -5,6 +5,7 @@ class Meocloud < Cask
   url "https://meocloud.pt/binaries/osx/MEOCloud-#{version}.dmg"
   appcast 'https://services.sapo.pt/Application/Catalog/Update?appid=pt.sapo.mac.cloudpt'
   homepage 'https://meocloud.pt'
+  license :unknown
 
   app 'MEOCloud.app'
 end
