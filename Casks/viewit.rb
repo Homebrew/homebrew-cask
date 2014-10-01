@@ -4,6 +4,7 @@ class Viewit < Cask
 
   url "http://www.hexcat.com/downloads/ViewIt-#{version}.dmg"
   homepage 'http://www.hexcat.com/viewit/'
+  license :unknown
 
   app 'ViewIt.app'
 end
