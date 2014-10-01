@@ -4,6 +4,7 @@ class Eyetv < Cask
 
   url 'http://files.elgato.com/eyetvdownloads/support/eyetv_365_7310.dmg'
   homepage 'http://www.elgato.com/'
+  license :unknown
 
   app 'EyeTV.app'
 end
