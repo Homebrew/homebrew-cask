@@ -4,6 +4,7 @@ class Mongodb < Cask
 
   url "https://github.com/orelord/mongodbx-app/releases/download/v#{version}/MongoDBX-#{version}-2.4.9.zip"
   homepage 'http://mongodbx-app.orelord.com/'
+  license :oss
 
   app 'MongoDB.app'
 end
