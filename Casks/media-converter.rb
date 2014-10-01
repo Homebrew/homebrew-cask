@@ -4,6 +4,7 @@ class MediaConverter < Cask
 
   url "https://downloads.sourceforge.net/project/media-converter/media-converter/#{version}/media-converter-#{version}.zip"
   homepage 'http://media-converter.sourceforge.net/'
+  license :oss
 
   app 'Media Converter.localized/Media Converter.app'
 end
