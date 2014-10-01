@@ -4,6 +4,7 @@ class Manopen < Cask
 
   url "http://www.clindberg.org/projects/ManOpen-#{version}.dmg"
   homepage 'http://www.clindberg.org/projects/ManOpen.html'
+  license :unknown
 
   app 'ManOpen.app'
   binary 'openman'
