@@ -4,6 +4,7 @@ class Ibackup < Cask
 
   url "http://www.grapefruit.ch/iBackup/versions/iBackup%207.x/iBackup%20#{version}.dmg"
   homepage 'http://www.grapefruit.ch/iBackup'
+  license :unknown
 
   app 'iBackup.app'
 end
