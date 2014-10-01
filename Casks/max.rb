@@ -5,6 +5,7 @@ class Max < Cask
   url "http://files.sbooth.org/Max-#{version}.tar.bz2"
   appcast 'http://sbooth.org/Max/appcast.xml'
   homepage 'http://sbooth.org/Max/'
+  license :unknown
 
   app "Max-#{version}/Max.app"
 end
