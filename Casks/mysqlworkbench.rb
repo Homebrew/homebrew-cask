@@ -4,6 +4,7 @@ class Mysqlworkbench < Cask
 
   url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-osx-i686.dmg"
   homepage 'http://www.mysql.com/products/workbench'
+  license :unknown
 
   app 'MySQLWorkbench.app'
 end
