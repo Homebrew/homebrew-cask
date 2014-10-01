@@ -4,6 +4,7 @@ class MpegStreamclip < Cask
 
   url "http://www.alfanet.it/squared5/MPEG_Streamclip_#{version}.dmg"
   homepage 'http://www.squared5.com/'
+  license :unknown
 
   app 'MPEG Streamclip.app'
 end
