@@ -5,6 +5,7 @@ class Amethyst < Cask
   url "http://ianyh.com/amethyst/versions/Amethyst-#{version}.zip"
   appcast 'http://ianyh.github.io/Amethyst/appcast.xml'
   homepage 'http://ianyh.com/amethyst'
+  license :oss
 
   app 'Amethyst.app'
 end
