@@ -4,6 +4,7 @@ class TheBrain < Cask
 
   url "http://assets.thebrain.com/downloads/TheBrain_macos_J7_#{version.gsub('.', '_')}-a.dmg"
   homepage 'http://www.thebrain.com/'
+  license :unknown
 
   app 'TheBrain.app'
 end
