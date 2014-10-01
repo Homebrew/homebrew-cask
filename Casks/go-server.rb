@@ -4,6 +4,7 @@ class GoServer < Cask
 
   url "http://download.go.cd/gocd/go-server-#{version}-osx.zip"
   homepage 'http://www.go.cd/'
+  license :unknown
 
   app 'Go Server.app'
 end
