@@ -5,6 +5,7 @@ class Colorpicker < Cask
   url "http://www.northernspysoftware.com/download/ColorPicker_#{version}.dmg"
   appcast 'http://www.northernspysoftware.com/feed/colorpicker.xml'
   homepage 'http://www.northernspysoftware.com/software/colorpicker'
+  license :unknown
 
   app 'ColorPicker.app'
 end
