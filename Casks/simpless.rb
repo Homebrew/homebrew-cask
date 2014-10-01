@@ -4,6 +4,7 @@ class Simpless < Cask
 
   url "http://wearekiss.com/files/SimpLESS-#{version}-mac.zip"
   homepage 'http://wearekiss.com/simpless'
+  license :unknown
 
   app 'SimpLESS.app'
 end
