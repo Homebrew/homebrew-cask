@@ -4,6 +4,7 @@ class Machacha < Cask
 
   url 'http://www.julifos.com/soft/machacha/machacha.dmg'
   homepage 'http://www.julifos.com/soft/machacha/index.html'
+  license :unknown
 
   app 'MacHacha.app'
 end
