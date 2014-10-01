@@ -4,6 +4,7 @@ class Elyse < Cask
 
   url 'http://silkwoodsoftware.com/Elyse-310.dmg'
   homepage 'http://silkwoodsoftware.com/'
+  license :unknown
 
   app 'Elyse.app'
 end
