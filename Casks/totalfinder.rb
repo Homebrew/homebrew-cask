@@ -4,6 +4,7 @@ class Totalfinder < Cask
 
   url "http://downloads.binaryage.com/TotalFinder-#{version}.dmg"
   homepage 'http://totalfinder.binaryage.com'
+  license :unknown
 
   pkg 'TotalFinder.pkg'
   uninstall :pkgutil => 'com.binaryage.pkg.totalfinder.app',
