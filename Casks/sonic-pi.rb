@@ -4,6 +4,7 @@ class SonicPi < Cask
 
   url 'http://sonic-pi.net/files/sonic-pi-mac-latest.dmg'
   homepage 'http://sonic-pi.net/'
+  license :unknown
 
   app 'Sonic Pi.app'
 end
