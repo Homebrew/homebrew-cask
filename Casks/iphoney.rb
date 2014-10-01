@@ -5,6 +5,7 @@ class Iphoney < Cask
   url "https://download.marketcircle.com/s3/iPhoney_#{version}.zip"
   appcast 'http://www.marketcircle.com/iphoney/iPhoneyAppcast.xml'
   homepage 'https://www.marketcircle.com/iphoney'
+  license :unknown
 
   app 'iPhoney.app'
 end
