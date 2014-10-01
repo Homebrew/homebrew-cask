@@ -4,6 +4,7 @@ class WorksnapsClient < Cask
 
   url "https://www.worksnaps.net/download/WSClient-mac-#{version}.dmg"
   homepage 'http://www.worksnaps.net/'
+  license :unknown
 
   app 'Worksnaps Client.app'
 end
