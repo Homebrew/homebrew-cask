@@ -4,6 +4,7 @@ class ElectricSheep < Cask
 
   url "https://electricsheep.googlecode.com/files/electricsheep-#{version}.dmg"
   homepage 'http://www.electricsheep.org'
+  license :oss
 
   pkg 'Electric Sheep.mpkg'
   uninstall :pkgutil => 'org.electricsheep.electricSheep.*'
