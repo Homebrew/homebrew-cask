@@ -4,6 +4,7 @@ class Unity < Cask
 
   url "http://netstorage.unity3d.com/unity/unity-#{version}.dmg"
   homepage 'http://unity3d.com/unity/'
+  license :commercial
 
   pkg 'Unity.pkg'
   uninstall :pkgutil => 'com.unity3d.*'
