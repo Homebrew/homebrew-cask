@@ -4,6 +4,7 @@ class Appcode < Cask
 
   url "http://download.jetbrains.com/objc/AppCode-#{version}.dmg"
   homepage 'http://www.jetbrains.com/objc/'
+  license :unknown
 
   app 'AppCode.app'
 
