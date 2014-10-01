@@ -5,6 +5,7 @@ class Bowtie < Cask
   url "http://bowtieapp.com/bowtie-#{version}.zip"
   appcast 'http://updates.13bold.com/appcasts/bowtie'
   homepage 'http://bowtieapp.com/'
+  license :unknown
 
   app "Bowtie #{version}/Bowtie.app"
 end
