@@ -5,6 +5,7 @@ class Machg < Cask
   url "http://jasonfharris.com/machg/downloads/assets/MacHg#{version}.zip"
   appcast 'http://jasonfharris.com/machg/machg_appcast.xml'
   homepage 'http://jasonfharris.com/machg/'
+  license :unknown
 
   app 'MacHg.app'
 end
