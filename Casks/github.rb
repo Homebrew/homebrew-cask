@@ -4,6 +4,7 @@ class Github < Cask
 
   url 'https://central.github.com/mac/latest'
   homepage 'http://mac.github.com'
+  license :oss
 
   app 'GitHub.app'
   binary 'GitHub.app/Contents/MacOS/github_cli', :target => 'github'
