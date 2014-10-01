@@ -4,6 +4,7 @@ class Giffun < Cask
 
   url "http://dl.dropbox.com/u/2000860/GIFfun-#{version}.dmg"
   homepage 'http://www.stone.com/GIFfun/'
+  license :unknown
 
   app 'GIFfun.app'
 end
