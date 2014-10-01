@@ -4,6 +4,7 @@ class Katana < Cask
 
   url 'http://download.witiz.com/Katana.zip'
   homepage 'http://katana.witiz.com/'
+  license :unknown
 
   app 'Katana.app'
 end
