@@ -5,6 +5,7 @@ class WallpaperWizard < Cask
   url "http://cloud.coppertino.com/wallwiz/wallpaperwizard_#{version}.dmg"
   appcast 'http://update.coppertino.com/wpw/appcast.xml'
   homepage 'http://wallwiz.com'
+  license :unknown
 
   app 'Wallpaper Wizard.app'
 end
