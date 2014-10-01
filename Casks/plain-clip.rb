@@ -4,6 +4,7 @@ class PlainClip < Cask
 
   url 'https://www.bluem.net/files/Plain-Clip.dmg'
   homepage 'http://www.bluem.net/en/mac/plain-clip'
+  license :unknown
 
   app 'Plain Clip.app'
 end
