@@ -5,6 +5,7 @@ class Cuppa < Cask
   url 'http://www.nathanatos.com/software/downloads/Cuppa.zip'
   appcast 'http://www.nathanatos.com/software/cuppa.xml'
   homepage 'http://www.nathanatos.com/software'
+  license :unknown
 
   app 'Cuppa.app'
 end
