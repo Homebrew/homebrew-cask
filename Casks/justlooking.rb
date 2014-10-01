@@ -4,6 +4,7 @@ class Justlooking < Cask
 
   url "http://chipmunkninja.com/download/JustLooking-#{version}.dmg"
   homepage 'http://chipmunkninja.com/JustLooking'
+  license :unknown
 
   app 'JustLooking.app'
 end
