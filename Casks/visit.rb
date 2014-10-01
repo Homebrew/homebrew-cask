@@ -4,6 +4,7 @@ class Visit < Cask
 
   url "https://portal.nersc.gov/svn/visit/trunk/releases/#{version}/VisIt-#{version}.dmg"
   homepage 'https://wci.llnl.gov/codes/visit/home.html'
+  license :unknown
 
   app 'VisIt.app'
 end
