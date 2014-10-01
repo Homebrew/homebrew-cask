@@ -4,6 +4,7 @@ class Homestream < Cask
 
   url "http://homestreamdownload.sony-europe.com/homestream-#{version}-osx.tar.gz"
   homepage 'http://www.sony.co.uk/hub/1237485339460'
+  license :unknown
 
   app 'Homestream.app'
   app 'Homestream-Console.app'
