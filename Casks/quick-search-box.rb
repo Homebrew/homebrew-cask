@@ -4,6 +4,7 @@ class QuickSearchBox < Cask
 
   url "https://qsb-mac.googlecode.com/files/GoogleQuickSearchBox-#{version}.Release.dmg"
   homepage 'http://www.google.com/quicksearchbox/'
+  license :oss
 
   app 'Quick Search Box.app'
   postflight do
