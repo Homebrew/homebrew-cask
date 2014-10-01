@@ -4,6 +4,7 @@ class Openlp < Cask
 
   url "http://builds.openlp.org/OpenLP-#{version}.dmg"
   homepage 'http://openlp.org'
+  license :unknown
 
   app 'OpenLP.app'
 end
