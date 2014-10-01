@@ -4,6 +4,7 @@ class Mamp < Cask
 
   url "http://downloads9.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
   homepage 'http://www.mamp.info/en/index.html'
+  license :unknown
 
   pkg "MAMP_MAMP_PRO_#{version}.pkg"
   postflight do
