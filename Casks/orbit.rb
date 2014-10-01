@@ -5,6 +5,7 @@ class Orbit < Cask
   url 'http://orbitapp.net/updates/Orbit.zip'
   appcast 'http://orbitapp.net/updates/appcast.xml'
   homepage 'http://orbitapp.net'
+  license :unknown
 
   app      'Orbit.app'
 end
