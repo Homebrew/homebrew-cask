@@ -4,6 +4,7 @@ class Jbidwatcher < Cask
 
   url "https://www.jbidwatcher.com/download/JBidwatcher-#{version}.dmg"
   homepage 'http://www.jbidwatcher.com'
+  license :unknown
 
   app 'JBidwatcher.app'
 end
