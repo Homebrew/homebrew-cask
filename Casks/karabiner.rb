@@ -4,6 +4,7 @@ class Karabiner < Cask
 
   url "https://pqrs.org/osx/karabiner/files/Karabiner-#{version}.dmg"
   homepage 'https://pqrs.org/osx/karabiner/'
+  license :unknown
 
   pkg 'Karabiner.pkg'
   binary '/Applications/Karabiner.app/Contents/Library/vendor/bin/blueutil'
