@@ -4,6 +4,7 @@ class Iswiff < Cask
 
   url 'http://echoone.com/iswiff/iSwiff.dmg'
   homepage 'http://echoone.com/iswiff/'
+  license :unknown
 
   app 'iSwiff.app'
 end
