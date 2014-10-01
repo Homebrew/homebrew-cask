@@ -4,6 +4,7 @@ class Airserver < Cask
 
   url "http://dl.airserver.com/mac/AirServer-#{version}.dmg"
   homepage 'http://www.airserver.com'
+  license :unknown
 
   app 'AirServer.app'
 end
