@@ -9,6 +9,7 @@ class R < Cask
     pkg 'R-3.1.1-mavericks.pkg'
   end
   homepage 'http://www.r-project.org/'
+  license :unknown
   version '3.1.1'
   uninstall :pkgutil => [
                          # eg org.r-project.R.maverics.fw.pkg
