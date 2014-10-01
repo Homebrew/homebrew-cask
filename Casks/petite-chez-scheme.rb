@@ -4,6 +4,7 @@ class PetiteChezScheme < Cask
 
   url "http://www.scheme.com/download/pcsv#{version}-ta6osx-1.pkg.tar.gz"
   homepage 'http://www.scheme.com/petitechezscheme.html'
+  license :unknown
 
   pkg "pcsv#{version}-ta6osx-1.pkg"
   uninstall :pkgutil => 'com.scheme.chezscheme'
