@@ -4,6 +4,7 @@ class Speedcrunch < Cask
 
   url "https://bitbucket.org/heldercorreia/speedcrunch/downloads/SpeedCrunch-#{version}.dmg"
   homepage 'http://www.speedcrunch.org'
+  license :oss
 
   app 'SpeedCrunch.app'
 end
