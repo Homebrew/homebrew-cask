@@ -4,6 +4,7 @@ class SynologyCloudStation < Cask
 
   url "https://global.download.synology.com/download/Tools/CloudStation/#{version}/Mac/CloudStation-#{version}-Mac-Installer.dmg"
   homepage 'http://www.synology.com/'
+  license :unknown
 
   pkg "CloudStation-#{version}-Mac-Installer.pkg"
   uninstall :pkgutil => 'synology.cloudstation.installer',
