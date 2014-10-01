@@ -4,6 +4,7 @@ class TdToolbelt < Cask
 
   url 'http://toolbelt.treasuredata.com/mac'
   homepage 'http://toolbelt.treasuredata.com/'
+  license :unknown
 
   container_type :naked
   preflight do
