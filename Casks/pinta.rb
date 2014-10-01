@@ -4,6 +4,7 @@ class Pinta < Cask
 
   url "https://github.com/downloads/PintaProject/Pinta/pinta-#{version}.app.zip"
   homepage 'http://pinta-project.com/'
+  license :oss
 
   app 'Pinta.app'
 end
