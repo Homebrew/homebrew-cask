@@ -4,6 +4,7 @@ class Beardedspice < Cask
 
   url "https://github.com/beardedspice/beardedspice/raw/releases/BeardedSpice-#{version}.tar.gz"
   homepage 'http://www.beardedspice.com'
+  license :oss
 
   app 'BeardedSpice.app'
 end
