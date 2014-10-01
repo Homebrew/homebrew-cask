@@ -4,6 +4,7 @@ class Insomniax < Cask
 
   url "http://insomniax.semaja2.net/InsomniaX-#{version}.tgz"
   homepage 'http://semaja2.net/projects/insomniaxinfo/'
+  license :unknown
 
   app 'InsomniaX.app'
 end
