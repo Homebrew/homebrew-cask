@@ -4,6 +4,7 @@ class Kivy < Cask
 
   url "http://kivy.org/downloads/#{version}/Kivy-#{version}-osx.dmg"
   homepage 'http://kivy.org'
+  license :unknown
 
   app 'Kivy.app'
 end
