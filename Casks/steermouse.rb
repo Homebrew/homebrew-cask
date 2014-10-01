@@ -4,6 +4,7 @@ class Steermouse < Cask
 
   url "http://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
   homepage 'http://plentycom.jp/en/steermouse/'
+  license :unknown
 
   pkg 'SteerMouse Installer.app/Contents/Resources/SteerMouse.pkg'
   uninstall :pkgutil => 'jp.plentycom.SteerMouse.pkg.*',
