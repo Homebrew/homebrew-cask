@@ -5,6 +5,7 @@ class Macpass < Cask
   url "https://github.com/mstarke/MacPass/releases/download/#{version}/MacPass-#{version}.zip"
   appcast 'http://www.nomadsland.de/macpass_appcast.xml'
   homepage 'http://mstarke.github.io/MacPass/'
+  license :oss
 
   app 'MacPass.app'
 end
