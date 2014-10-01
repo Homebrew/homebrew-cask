@@ -4,6 +4,7 @@ class Chirp < Cask
 
   url "http://chirp.danplanet.com/download/#{version}/chirp-#{version}.app.zip"
   homepage 'http://chirp.danplanet.com/'
+  license :unknown
 
   app "chirp-#{version}.app"
 end
