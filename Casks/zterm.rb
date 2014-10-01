@@ -4,6 +4,7 @@ class Zterm < Cask
 
   url "http://www.dalverson.com/zterm/ZTerm#{version}.dmg"
   homepage 'http://www.dalverson.com/zterm/'
+  license :unknown
 
   app 'ZTerm.app'
 end
