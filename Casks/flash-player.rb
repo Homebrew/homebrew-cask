@@ -4,6 +4,7 @@ class FlashPlayer < Cask
 
   url 'https://fpdownload.macromedia.com/pub/flashplayer/updaters/15/flashplayer_15_sa.dmg'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
+  license :unknown
 
   app 'Flash Player.app'
 end
