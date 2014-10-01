@@ -4,6 +4,7 @@ class Freecol < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/freecol/freecol-#{version}-mac.tar.bz2"
   homepage 'http://freecol.org'
+  license :oss
 
   app 'FreeCol.app'
 end
