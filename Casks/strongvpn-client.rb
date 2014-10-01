@@ -5,6 +5,7 @@ class StrongvpnClient < Cask
   url "https://mirror2.reliablehosting.com/mac/StrongVPN_Mac_#{version}.dmg"
   appcast 'https://colomovers.com/mac.xml'
   homepage 'http://strongvpn.com/vpnclient.shtml'
+  license :unknown
 
   app 'StrongVPN Client.app'
 end
