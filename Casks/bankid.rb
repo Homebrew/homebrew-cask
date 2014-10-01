@@ -4,6 +4,7 @@ class Bankid < Cask
 
   url 'https://install.bankid.com/FileDownloader?fileId=Mac'
   homepage 'http://www.bankid.com/'
+  license :unknown
 
   container_type :naked
   preflight do
