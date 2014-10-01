@@ -5,6 +5,7 @@ class Cord < Cask
   url "https://downloads.sourceforge.net/sourceforge/cord/CoRD_#{version}.zip"
   appcast 'http://cord.sourceforge.net/sparkle.xml'
   homepage 'http://cord.sourceforge.net/'
+  license :oss
 
   app 'CoRD.app'
   zap :delete => '~/Library/Application Support/CoRD'
