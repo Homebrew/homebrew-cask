@@ -4,6 +4,7 @@ class Fritzing < Cask
 
   url "http://fritzing.org/download/#{version}/mac-os-x-105/fritzing.#{version}.cocoa.dmg"
   homepage 'http://fritzing.org/'
+  license :unknown
 
   app 'Fritzing.app'
 end
