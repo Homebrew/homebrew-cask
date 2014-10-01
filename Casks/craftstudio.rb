@@ -4,6 +4,7 @@ class Craftstudio < Cask
 
   url 'http://craftstud.io/files/OSX/CraftStudio.pkg'
   homepage 'http://craftstud.io'
+  license :unknown
 
   pkg 'CraftStudio.pkg'
 
