@@ -4,6 +4,7 @@ class Playonmac < Cask
 
   url "http://repository.playonmac.com/PlayOnMac/PlayOnMac_#{version}.dmg"
   homepage 'http://www.playonmac.com/en'
+  license :unknown
 
   app 'PlayOnMac.app'
 end
