@@ -4,6 +4,7 @@ class Cutesdr < Cask
 
   url 'https://downloads.sourceforge.net/project/cutesdr/CuteSdr114.dmg'
   homepage 'http://sourceforge.net/projects/cutesdr'
+  license :oss
 
   app 'cutesdr.app'
 end
