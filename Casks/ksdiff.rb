@@ -4,6 +4,7 @@ class Ksdiff < Cask
 
   url 'http://cdn.kaleidoscopeapp.com/releases/ksdiff-122.zip'
   homepage 'http://www.kaleidoscopeapp.com/ksdiff2'
+  license :unknown
 
   pkg 'Install ksdiff.pkg'
   uninstall :pkgutil => 'com.blackpixel.kaleidoscope.ksdiff.installer.pkg'
