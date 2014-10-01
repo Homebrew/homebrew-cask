@@ -4,6 +4,7 @@ class Smoothmouse < Cask
 
   url 'http://smoothmouse.com/download/latest'
   homepage 'http://smoothmouse.com'
+  license :unknown
 
   pkg 'SmoothMouse.pkg'
   uninstall :launchctl => [
