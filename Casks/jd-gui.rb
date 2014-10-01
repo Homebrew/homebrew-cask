@@ -4,6 +4,7 @@ class JdGui < Cask
 
   url "http://jd.benow.ca/jd-gui/downloads/jd-gui-#{version}.osx.i686.dmg"
   homepage 'http://jd.benow.ca/'
+  license :unknown
 
   app 'JD-GUI.app'
 end
