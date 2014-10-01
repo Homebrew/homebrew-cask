@@ -4,6 +4,7 @@ class Linkliar < Cask
 
   url 'https://github.com/halo/LinkLiar/blob/master/latest_build/LinkLiar.zip?raw=true'
   homepage 'https://github.com/halo/LinkLiar'
+  license :oss
 
   prefpane 'LinkLiar.prefPane'
 end
