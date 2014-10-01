@@ -4,6 +4,7 @@ class Prezi < Cask
 
   url "https://prezi-a.akamaihd.net/desktop/Prezi#{version}.dmg"
   homepage 'http://www.prezi.com/'
+  license :unknown
 
   app 'Prezi.app'
 end
