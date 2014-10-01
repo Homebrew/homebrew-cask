@@ -5,6 +5,7 @@ class Colloquy < Cask
   url "http://colloquy.info/downloads/colloquy-#{version}.zip"
   appcast 'http://colloquy.info/update.php?rss'
   homepage 'http://colloquy.info/'
+  license :unknown
 
   app 'Colloquy.app'
   zap :delete => [
