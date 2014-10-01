@@ -4,6 +4,7 @@ class JumpDesktop < Cask
 
   url 'http://jumpdesktop.com/downloads/jdmac'
   homepage 'http://jumpdesktop.com/#jdmac'
+  license :unknown
 
   app 'Jump Desktop.app'
 end
