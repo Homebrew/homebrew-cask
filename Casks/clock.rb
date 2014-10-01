@@ -4,6 +4,7 @@ class Clock < Cask
 
   url "https://github.com/downloads/zachwaugh/Clock.app/Clock-#{version}.zip"
   homepage 'http://zachwaugh.me/clock/'
+  license :oss
 
   app 'Clock.app'
 end
