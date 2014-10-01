@@ -5,6 +5,7 @@ class Videospec < Cask
   url "http://videospec.free.fr/VideoSpec_#{version}.dmg"
   appcast 'http://videospec.free.fr/release/videospec.xml'
   homepage 'http://videospec.free.fr/english/'
+  license :unknown
 
   app 'VideoSpec.app'
 end
