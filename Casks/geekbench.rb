@@ -5,6 +5,7 @@ class Geekbench < Cask
   url "https://d34wv75roto0rl.cloudfront.net/Geekbench-#{version}-Mac.zip"
   appcast 'http://www.primatelabs.com/appcast/geekbench3.xml'
   homepage 'http://www.primatelabs.com/geekbench/'
+  license :unknown
 
   app 'Geekbench 3.app'
 end
