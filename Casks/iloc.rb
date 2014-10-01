@@ -4,6 +4,7 @@ class Iloc < Cask
 
   url "http://derailer.org/iloc/iloc-#{version}.tgz"
   homepage 'http://derailer.org/iloc'
+  license :unknown
 
   binary "iloc-#{version}/iloc"
 end
