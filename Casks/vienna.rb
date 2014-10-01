@@ -5,6 +5,7 @@ class Vienna < Cask
   url "https://downloads.sourceforge.net/vienna-rss/Vienna#{version}.tgz"
   appcast 'http://vienna-rss.org/changelog_beta.xml'
   homepage 'http://www.vienna-rss.org'
+  license :oss
 
   app 'Vienna.app'
 end
