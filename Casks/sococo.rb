@@ -4,6 +4,7 @@ class Sococo < Cask
 
   url 'http://download.sococo.com/10069/Sococo_3_2_7_10069.dmg'
   homepage 'http://www.sococo.com'
+  license :unknown
 
   app 'Sococo.app'
 end
