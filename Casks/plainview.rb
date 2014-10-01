@@ -4,6 +4,7 @@ class Plainview < Cask
 
   url "https://s3.amazonaws.com/plainviewapp/plainview_#{version}.zip"
   homepage 'http://barbariangroup.com/'
+  license :unknown
 
   app 'Plainview.app'
 end
