@@ -5,6 +5,7 @@ class Transmit < Cask
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   appcast 'http://www.panic.com/updates/update.php'
   homepage 'http://panic.com/transmit'
+  license :unknown
 
   app 'Transmit.app'
   zap :delete => [
