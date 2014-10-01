@@ -5,6 +5,7 @@ class Vlc < Cask
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
   appcast 'http://update.videolan.org/vlc/sparkle/vlc-intel64.xml'
   homepage 'http://www.videolan.org/vlc/'
+  license :oss
 
   app 'VLC.app'
 end
