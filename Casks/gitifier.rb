@@ -5,6 +5,7 @@ class Gitifier < Cask
   url "https://github.com/downloads/jsuder/Gitifier/Gitifier-#{version}.zip"
   appcast 'http://sparkle.psionides.eu/feed/gitifier'
   homepage 'http://psionides.github.io/Gitifier/'
+  license :oss
 
   app 'Gitifier.app'
 end
