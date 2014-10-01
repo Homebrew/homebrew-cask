@@ -5,6 +5,7 @@ class Appfresh < Cask
   url 'http://backend.metaquark.de/download/appfresh'
   appcast 'http://backend.metaquark.de/appcast/appfresh.xml'
   homepage 'http://metaquark.de/appfresh/mac'
+  license :unknown
 
   app 'appfresh.app'
 end
