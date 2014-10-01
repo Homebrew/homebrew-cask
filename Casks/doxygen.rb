@@ -4,6 +4,7 @@ class Doxygen < Cask
 
   url "ftp://ftp.stack.nl/pub/users/dimitri/Doxygen-#{version}.dmg"
   homepage 'http://www.stack.nl/~dimitri/doxygen/index.html'
+  license :unknown
 
   app 'Doxygen.app'
 end
