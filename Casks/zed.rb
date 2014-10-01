@@ -4,6 +4,7 @@ class Zed < Cask
 
   url "http://download.zedapp.org/zed-mac-v#{version}.tar.gz"
   homepage 'http://zedapp.org'
+  license :unknown
 
   app 'Zed.app'
 end
