@@ -5,6 +5,7 @@ class TimeTracker < Cask
   url "https://time-tracker-mac.googlecode.com/files/Time%20Tracker-#{version}.zip"
   appcast 'http://time-tracker-mac.googlecode.com/svn/appcast/timetracker-test.xml'
   homepage 'https://code.google.com/p/time-tracker-mac'
+  license :oss
 
   app 'Time Tracker.app'
 end
