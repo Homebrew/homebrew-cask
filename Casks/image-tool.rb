@@ -4,6 +4,7 @@ class ImageTool < Cask
 
   url "http://www.jimmcgowan.net/diskimages/ImageTool#{version}.dmg"
   homepage 'http://www.jimmcgowan.net/Site/ImageTool.html'
+  license :unknown
 
   app 'Image Tool.app'
 end
