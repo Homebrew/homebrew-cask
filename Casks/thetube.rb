@@ -4,6 +4,7 @@ class Thetube < Cask
 
   url "http://download2.equinux.com/files/other/TheTube_#{version}_Web.zip"
   homepage 'http://www.equinux.com/us/products/thetube/index.html'
+  license :unknown
 
   app 'TheTube.app'
 end
