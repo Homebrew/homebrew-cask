@@ -4,6 +4,7 @@ class Arora < Cask
 
   url "https://arora.googlecode.com/files/Arora%20#{version}%20Intel-Qt4.5.3.dmg"
   homepage 'https://code.google.com/p/arora/'
+  license :oss
 
   app 'Arora.app'
 end
