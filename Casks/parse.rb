@@ -4,6 +4,7 @@ class Parse < Cask
 
   url 'https://www.parse.com/downloads/cloud_code/parse'
   homepage 'https://parse.com'
+  license :unknown
 
   binary 'parse'
   container_type :naked
