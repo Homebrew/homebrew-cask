@@ -5,6 +5,7 @@ class Sparkle < Cask
   url "https://github.com/sparkle-project/Sparkle/releases/download/#{version}/Sparkle-#{version}.tar.bz2"
   appcast 'http://sparkle-project.org/files/sparkletestcast.xml'
   homepage 'http://sparkle-project.org/'
+  license :oss
 
   app 'Sparkle Test App.app'
 end
