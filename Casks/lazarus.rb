@@ -4,6 +4,7 @@ class Lazarus < Cask
 
   url "https://downloads.sourceforge.net/lazarus/lazarus-#{version}-20131116-i386-macosx.dmg"
   homepage 'http://lazarus.freepascal.org/'
+  license :oss
 
   pkg 'lazarus.pkg'
   uninstall :pkgutil => 'org.freepascal.lazarus.www'
