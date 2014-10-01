@@ -9,6 +9,7 @@ class Macports < Cask
     pkg 'MacPorts-2.2.1-10.9-Mavericks.pkg'
   end
   homepage 'http://www.macports.org'
+  license :unknown
   version '2.2.1'
   uninstall :pkgutil => 'org.macports.MacPorts'
 end
