@@ -4,6 +4,7 @@ class Littleipsum < Cask
 
   url "http://littleipsum.com/download/LittleIpsum%20#{version}.zip"
   homepage 'http://littleipsum.com'
+  license :unknown
 
   app 'LittleIpsum.app'
 end
