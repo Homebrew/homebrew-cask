@@ -5,6 +5,7 @@ class SnippetEdit < Cask
   url "http://cocoaholic.com/downloads/snippet_edit/Snippet_Edit_#{version}.zip"
   appcast 'http://cocoaholic.com/sparkle/snippet_edit/sparkle.xml'
   homepage 'http://cocoaholic.com/snippet_edit/'
+  license :unknown
 
   app 'Snippet Edit.app'
 end
