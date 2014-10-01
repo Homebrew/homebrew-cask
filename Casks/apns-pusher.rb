@@ -4,6 +4,7 @@ class ApnsPusher < Cask
 
   url "https://github.com/blommegard/APNS-Pusher/releases/download/v#{version}/APNS.Pusher.app.zip"
   homepage 'https://github.com/blommegard/APNS-Pusher'
+  license :oss
 
   app 'APNS Pusher.app'
 end
