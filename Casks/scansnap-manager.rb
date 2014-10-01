@@ -4,6 +4,7 @@ class ScansnapManager < Cask
 
   url 'https://www.fujitsu.com/downloads/IMAGE/driver/ss/mgr/m-sv600/MacScanSnapV62L10WW.dmg'
   homepage 'http://www.fujitsu.com/global/support/computing/peripheral/scanners/software/'
+  license :unknown
 
   pkg 'ScanSnap Manager.pkg'
   uninstall :pkgutil => 'jp.co.pfu.ScanSnap.*'
