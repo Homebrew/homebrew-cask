@@ -5,6 +5,7 @@ class Lyn < Cask
   url "http://www.lynapp.com/downloads/Lyn-#{version}.dmg"
   appcast 'http://www.lynapp.com/lyn/update.xml'
   homepage 'http://www.lynapp.com/'
+  license :unknown
 
   app 'Lyn.app'
 end
