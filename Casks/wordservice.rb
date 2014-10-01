@@ -4,6 +4,7 @@ class Wordservice < Cask
 
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/wordservice/#{version}/WordService.zip"
   homepage 'http://www.devontechnologies.com/products/freeware.html#c1115'
+  license :unknown
 
   service 'WordService/WordService.service'
 end
