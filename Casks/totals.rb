@@ -4,6 +4,7 @@ class Totals < Cask
 
   url "http://www.kedisoft.com/dl/totals/Totals-#{version}.dmg"
   homepage 'http://www.kedisoft.com/totals/'
+  license :unknown
 
   app 'Totals.app'
 end
