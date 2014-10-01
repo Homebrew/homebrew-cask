@@ -4,6 +4,7 @@ class Retinacapture < Cask
 
   url 'http://www.retinacapture.com/files/RetinaCapture.zip'
   homepage 'http://www.retinacapture.com'
+  license :unknown
 
   app 'RetinaCapture.app'
 end
