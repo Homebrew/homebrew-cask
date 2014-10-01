@@ -4,6 +4,7 @@ class AirVideoServerHd < Cask
 
   url "https://s3.amazonaws.com/AirVideoHD/Download/Air+Video+Server+HD+#{version}.dmg"
   homepage 'http://www.inmethod.com/airvideohd'
+  license :unknown
 
   app 'Air Video Server HD.app'
 end
