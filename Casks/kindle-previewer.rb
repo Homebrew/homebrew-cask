@@ -4,6 +4,7 @@ class KindlePreviewer < Cask
 
   url 'https://kindlepreviewer.s3.amazonaws.com/KindlePreviewer.zip'
   homepage 'http://www.amazon.com/gp/feature.html/?docId=1000765261'
+  license :unknown
 
   app 'Kindle Previewer.app'
 end
