@@ -4,6 +4,7 @@ class Sensiolabsdesktop < Cask
 
   url "http://mac.desktop.sensiolabs.org/SensioLabsDesktop-#{version}.dmg"
   homepage 'http://desktop.sensiolabs.org'
+  license :unknown
 
   app 'SensioLabsDesktop.app'
 end
