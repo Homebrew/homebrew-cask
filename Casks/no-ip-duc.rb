@@ -4,6 +4,7 @@ class NoIpDuc < Cask
 
   url "https://www.noip.com/client/mac/noip#{version}.dmg"
   homepage 'http://www.noip.com/download?page=mac'
+  license :unknown
 
   app 'No-IP DUC.app'
 end
