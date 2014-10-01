@@ -4,6 +4,7 @@ class Codebox < Cask
 
   url 'https://www.codebox.io/download/mac'
   homepage 'https://www.codebox.io'
+  license :unknown
 
   app 'Codebox.app'
 end
