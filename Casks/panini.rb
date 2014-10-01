@@ -4,6 +4,7 @@ class Panini < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/pvqt/Panini-#{version}B-mac.dmg"
   homepage 'http://sourceforge.net/projects/pvqt/'
+  license :oss
 
   app 'Panini.app'
 end
