@@ -4,6 +4,7 @@ class TransmissionRemoteGui < Cask
 
   url "https://transmisson-remote-gui.googlecode.com/files/transgui-#{version}.dmg"
   homepage 'https://code.google.com/p/transmisson-remote-gui/'
+  license :oss
 
   pkg 'transgui.pkg'
   uninstall :pkgutil => 'com.transgui.*'
