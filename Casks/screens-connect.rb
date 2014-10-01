@@ -4,6 +4,7 @@ class ScreensConnect < Cask
 
   url 'https://screensconnect.com/downloads/screensconnect.dmg'
   homepage 'https://screensconnect.com'
+  license :unknown
 
   pkg 'Screens Connect.pkg'
   uninstall :script => 'Uninstall Screens Connect.app/Contents/Resources/sc-uninstaller.tool',
