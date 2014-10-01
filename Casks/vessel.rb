@@ -4,6 +4,7 @@ class Vessel < Cask
 
   url "http://awvessel.github.io/binaries/vessel-#{version}.tbz2"
   homepage 'http://awvessel.github.io'
+  license :oss
 
   app 'Vessel.app'
 end
