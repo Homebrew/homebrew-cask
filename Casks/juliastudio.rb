@@ -10,6 +10,7 @@ class Juliastudio < Cask
   end
 
   homepage 'http://forio.com/labs/julia-studio/'
+  license :unknown
 
   app 'JuliaStudio.app'
 end
