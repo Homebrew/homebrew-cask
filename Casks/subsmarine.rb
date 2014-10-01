@@ -5,6 +5,7 @@ class Subsmarine < Cask
   url "http://www.cocoawithchurros.com/downloads/subsmarine.app.#{version}.zip"
   appcast 'http://www.cocoawithchurros.com/shine/appcast.php?id=7'
   homepage 'http://www.cocoawithchurros.com/subsmarine.php'
+  license :unknown
 
   app 'SubsMarine.app'
 end
