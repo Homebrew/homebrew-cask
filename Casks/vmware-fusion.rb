@@ -4,6 +4,7 @@ class VmwareFusion < Cask
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   homepage 'http://www.vmware.com/products/fusion/'
+  license :unknown
 
   binary 'VMware Fusion.app/Contents/Library/vmnet-cfgcli'
   binary 'VMware Fusion.app/Contents/Library/vmnet-cli'
