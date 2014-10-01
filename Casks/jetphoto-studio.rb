@@ -4,6 +4,7 @@ class JetphotoStudio < Cask
 
   url "http://www.jetphotosoft.com/web/download/JetPhoto_Studio_mac#{version}.zip"
   homepage 'http://www.jetphotosoft.com/web/home/'
+  license :unknown
 
   nested_container "JetPhoto Studio #{version}.dmg"
   app 'JetPhoto Studio.app'
