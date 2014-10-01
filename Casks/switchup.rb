@@ -5,6 +5,7 @@ class Switchup < Cask
   url "http://www.irradiatedsoftware.com/downloads/SwitchUp_#{version}.zip"
   appcast 'http://www.irradiatedsoftware.com/updates/profiles/switchup.php'
   homepage 'http://www.irradiatedsoftware.com/switchup/'
+  license :unknown
 
   app 'SwitchUp.app'
 end
