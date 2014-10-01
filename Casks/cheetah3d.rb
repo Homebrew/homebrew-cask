@@ -4,6 +4,7 @@ class Cheetah3d < Cask
 
   url 'http://cheetah3d.com/download/Cheetah3D.dmg'
   homepage 'http://www.cheetah3d.com'
+  license :unknown
 
   app 'Cheetah3D.app'
 end
