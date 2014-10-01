@@ -4,6 +4,7 @@ class Stockbarjp < Cask
 
   url 'http://midnightsuyama.org/download/StockBarJP.zip'
   homepage 'http://midnightsuyama.org'
+  license :unknown
 
   app 'StockBarJP.app'
 end
