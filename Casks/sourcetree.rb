@@ -5,6 +5,7 @@ class Sourcetree < Cask
   url "https://downloads.atlassian.com/software/sourcetree/SourceTree_#{version}.dmg"
   appcast 'http://www.sourcetreeapp.com/update/SparkleAppcast.xml'
   homepage 'http://www.sourcetreeapp.com/'
+  license :unknown
 
   app 'SourceTree.app'
   binary 'SourceTree.app/Contents/Resources/stree'
