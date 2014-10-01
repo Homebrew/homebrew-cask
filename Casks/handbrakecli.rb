@@ -4,6 +4,7 @@ class Handbrakecli < Cask
 
   url "http://downloads.sourceforge.net/sourceforge/handbrake/#{version}/HandBrake-#{version}-MacOSX.6_CLI_x86_64.dmg"
   homepage 'http://handbrake.fr'
+  license :oss
 
   binary 'HandBrakeCLI'
 end
