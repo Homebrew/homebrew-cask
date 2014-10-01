@@ -5,6 +5,7 @@ class Powerword < Cask
 
   url 'http://mac.iciba.com/download/powerword_macosx_beta_1.0.0.dmg'
   homepage 'http://mac.iciba.com'
+  license :unknown
 
   app '金山词霸.app'
 end
