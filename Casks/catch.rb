@@ -5,6 +5,7 @@ class Catch < Cask
   url "https://github.com/mipstian/catch/releases/download/#{version}/Catch-#{version}.zip"
   appcast 'https://raw.github.com/mipstian/catch/master/update/appcast.xml'
   homepage 'http://www.giorgiocalderolla.com/index.html'
+  license :oss
 
   app 'Catch.app'
 end
