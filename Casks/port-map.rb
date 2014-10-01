@@ -5,6 +5,7 @@ class PortMap < Cask
   url "https://tcmportmapper.googlecode.com/files/PortMap-#{version}.zip"
   appcast 'http://www.codingmonkeys.de/portmap/appcast.rss'
   homepage 'http://www.codingmonkeys.de/portmap'
+  license :oss
 
   app 'Port Map.app'
 end
