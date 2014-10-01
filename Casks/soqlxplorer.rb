@@ -5,6 +5,7 @@ class Soqlxplorer < Cask
   url "http://www.pocketsoap.com/osx/soqlx/soqlXplorer_v#{version}.zip"
   appcast 'http://www.pocketsoap.com/osx/soqlx/appcast.xml'
   homepage 'http://www.pocketsoap.com/osx/soqlx/'
+  license :unknown
 
   app 'SoqlXplorer.app'
 end
