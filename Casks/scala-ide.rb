@@ -6,5 +6,8 @@ class ScalaIde < Cask
   homepage 'http://scala-ide.org/'
   license :unknown
 
+  # Renamed for clarity: app name is inconsistent with its branding.
+  # Also renamed to avoid conflict with other eclipse casks.
+  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/2731
   app 'eclipse/Eclipse.app', :target => 'Scala IDE.app'
 end
