@@ -5,6 +5,7 @@ class Ichm < Cask
   url "https://ichm.googlecode.com/files/iChm.#{version}.zip"
   appcast 'http://www.robinlu.com/ichm/release.xml'
   homepage 'https://code.google.com/p/ichm/'
+  license :oss
 
   app 'iChm.app'
 end
