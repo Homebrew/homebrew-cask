@@ -4,6 +4,7 @@ class Ubar < Cask
 
   url 'http://www.brawersoftware.com/downloads/ubar/ubar226.zip'
   homepage 'http://brawersoftware.com/products/ubar'
+  license :unknown
 
   app 'uBar.app'
   caveats do
