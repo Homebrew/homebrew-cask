@@ -4,6 +4,7 @@ class Keyboardcleantool < Cask
 
   url 'http://bettertouchtool.net/KeyboardCleanTool.zip'
   homepage 'http://bettertouchtool.net'
+  license :unknown
 
   app 'KeyboardCleanTool.app'
 end
