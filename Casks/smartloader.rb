@@ -4,6 +4,7 @@ class Smartloader < Cask
 
   url 'http://download.picturelife.com/mac/Picturelife.dmg'
   homepage 'http://picturelife.com'
+  license :unknown
 
   app 'Smartloader.app'
 end
