@@ -5,6 +5,7 @@ class Uninstallpkg < Cask
   url "http://www.corecode.at/downloads/uninstallpkg_#{version}.zip"
   appcast 'http://www.corecode.at/uninstallpkg/uninstallpkg.xml'
   homepage 'http://www.corecode.at/uninstallpkg/'
+  license :unknown
 
   app 'UninstallPKG.app'
 end
