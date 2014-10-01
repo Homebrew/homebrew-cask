@@ -4,6 +4,7 @@ class Simon < Cask
 
   url "http://www.dejal.com/download/simon-#{version}.zip"
   homepage 'http://www.dejal.com/simon/'
+  license :unknown
 
   app 'Simon.app'
 end
