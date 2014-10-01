@@ -4,6 +4,7 @@ class NtfsFree < Cask
 
   url "https://downloads.sourceforge.net/sourceforge/ntfsfree/NTFS-free-#{version}.pkg"
   homepage 'http://sourceforge.net/projects/ntfsfree/'
+  license :oss
 
   pkg "NTFS-free-#{version}.pkg"
   uninstall :delete => [
