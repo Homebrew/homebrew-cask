@@ -25,6 +25,7 @@ class Cask::CLI::Create < Cask::CLI::Base
 
         url 'https://'
         homepage ''
+        license :unknown
 
         app ''
       end
