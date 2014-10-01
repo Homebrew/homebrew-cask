@@ -4,6 +4,7 @@ class Alfred < Cask
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   homepage 'http://www.alfredapp.com/'
+  license :commercial
 
   app 'Alfred 2.app'
   app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
