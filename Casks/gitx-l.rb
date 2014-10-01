@@ -5,6 +5,7 @@ class GitxL < Cask
   url "https://github.com/downloads/laullon/gitx/GitX-L_v#{version}.zip"
   appcast 'http://gitx.laullon.com/appcast.xml'
   homepage 'http://gitx.laullon.com/'
+  license :oss
 
   app 'GitX.app'
   binary 'GitX.app/Contents/Resources/gitx'
