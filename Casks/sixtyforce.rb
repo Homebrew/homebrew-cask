@@ -4,6 +4,7 @@ class Sixtyforce < Cask
 
   url 'http://sixtyforce.com/download/sixtyforce.zip'
   homepage 'http://sixtyforce.com/'
+  license :unknown
 
   app 'sixtyforce.app'
 end
