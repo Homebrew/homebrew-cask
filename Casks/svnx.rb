@@ -4,6 +4,7 @@ class Svnx < Cask
 
   url "https://svnx.googlecode.com/files/svnX%20#{version}.dmg"
   homepage 'https://code.google.com/p/svnx/'
+  license :oss
 
   app 'svnX.app'
 end
