@@ -4,6 +4,7 @@ class FenderFuse < Cask
 
   url "https://www.fmicassets.com/fender/support/software/fender_software/fender_fuse/mac/FenderFUSE_FULL_#{version}.dmg"
   homepage 'https://fuse.fender.com/'
+  license :unknown
 
   pkg 'Fender FUSE Installer.app/Contents/Resources/Fender FUSE.pkg'
   uninstall :pkgutil => 'com.Fender.pkg.FenderFUSE',
