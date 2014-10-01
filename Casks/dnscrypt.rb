@@ -4,6 +4,7 @@ class Dnscrypt < Cask
 
   url "https://github.com/alterstep/dnscrypt-osxclient/releases/download/#{version}/dnscrypt-osxclient-#{version}.dmg"
   homepage 'http://opendns.github.io/dnscrypt-osx-client/'
+  license :oss
 
   pkg 'DNSCrypt.mpkg'
   uninstall :quit      => 'com.github.dnscrypt-osxclient.DNSCrypt-Menubar',
