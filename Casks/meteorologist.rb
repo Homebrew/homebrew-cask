@@ -4,6 +4,7 @@ class Meteorologist < Cask
 
   url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg"
   homepage 'http://heat-meteo.sourceforge.net/'
+  license :oss
 
   app 'Meteorologist.app'
 end
