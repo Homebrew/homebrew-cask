@@ -4,6 +4,7 @@ class Automatic < Cask
 
   url 'http://codingcurious.com/downloads/Automatic.2.zip'
   homepage 'http://codingcurious.com/automatic/'
+  license :unknown
 
   prefpane 'Automatic.prefPane'
 end
