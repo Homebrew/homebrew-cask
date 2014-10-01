@@ -5,6 +5,7 @@ class BigMeanFolderMachine < Cask
   url 'http://www.publicspace.net/download/BMFM.dmg'
   appcast 'http://www.publicspace.net/app/bmfm2.xml'
   homepage 'http://www.publicspace.net/BigMeanFolderMachine/'
+  license :unknown
 
   app 'Big Mean Folder Machine 2.app'
 end
