@@ -4,6 +4,7 @@ class Fliqlo < Cask
 
   url 'http://fliqlo.com/download/fliqlo_152.dmg', :referer => 'http://fliqlo.com/#about'
   homepage 'http://fliqlo.com/'
+  license :unknown
 
   screen_saver 'Fliqlo.saver'
 end
