@@ -4,6 +4,7 @@ class Doublecommand < Cask
 
   url "http://doublecommand.sourceforge.net/files/DoubleCommand-#{version}.dmg"
   homepage 'http://doublecommand.sourceforge.net'
+  license :oss
 
   pkg "DoubleCommand-#{version}.pkg"
   uninstall :script => '/Library/StartupItems/DoubleCommand/uninstall.command',
