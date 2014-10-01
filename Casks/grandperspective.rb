@@ -4,6 +4,7 @@ class Grandperspective < Cask
 
   url "https://downloads.sourceforge.net/project/grandperspectiv/grandperspective/#{version}/GrandPerspective-1_5_1.dmg"
   homepage 'http://grandperspectiv.sourceforge.net/'
+  license :oss
 
   app 'GrandPerspective.app'
 end
