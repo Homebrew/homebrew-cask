@@ -4,6 +4,7 @@ class Backtobed < Cask
 
   url 'http://backtobed.dadiugames.dk/backtobed_osx.zip'
   homepage 'http://backtobed.dadiugames.dk/'
+  license :unknown
 
   app 'BackToBed.app'
 end
