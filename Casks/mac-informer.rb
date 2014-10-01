@@ -4,6 +4,7 @@ class MacInformer < Cask
 
   url 'http://files.informer.com/simac.dmg'
   homepage 'http://macdownload.informer.com/landing/'
+  license :unknown
 
   app 'Mac Informer.app'
 end
