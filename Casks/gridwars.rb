@@ -4,6 +4,7 @@ class Gridwars < Cask
 
   url 'http://gridwars.marune.de/bin/gridwars_osx_x86.zip'
   homepage 'http://gridwars.marune.de/'
+  license :unknown
 
   app 'gridwars_osx_x86/gridwars.app'
 end
