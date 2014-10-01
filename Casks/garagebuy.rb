@@ -4,6 +4,7 @@ class Garagebuy < Cask
 
   url "http://www.iwascoding.de/downloads/GarageBuy_#{version}.dmg"
   homepage 'http://www.iwascoding.com/GarageBuy'
+  license :unknown
 
   app 'GarageBuy.app'
 end
