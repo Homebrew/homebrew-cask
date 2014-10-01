@@ -4,6 +4,7 @@ class Oclint < Cask
 
   url "http://archives.oclint.org/releases/#{version}/oclint-#{version}-x86_64-apple-darwin-10.tar.gz"
   homepage 'http://oclint.org'
+  license :unknown
 
   binary "oclint-#{version}-x86_64-apple-darwin-10/bin/oclint"
   binary "oclint-#{version}-x86_64-apple-darwin-10/bin/oclint-json-compilation-database"
