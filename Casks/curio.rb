@@ -4,6 +4,7 @@ class Curio < Cask
 
   url 'http://zengobi.com/downloads/Curio.zip'
   homepage 'http://zengobi.com/products/curio/'
+  license :unknown
 
   app 'Curio.app'
 end
