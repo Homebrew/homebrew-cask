@@ -5,6 +5,7 @@ class Gitx < Cask
   url 'http://frim.frim.nl/GitXStable.app.zip'
   appcast 'http://gitx.frim.nl/Downloads/appcast.xml'
   homepage 'http://gitx.frim.nl/'
+  license :unknown
 
   app 'GitX.app'
   binary 'GitX.app/Contents/Resources/gitx'
