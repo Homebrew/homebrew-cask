@@ -4,6 +4,7 @@ class Mailplane < Cask
 
   url 'http://update.mailplaneapp.com/mailplane_3.php'
   homepage 'http://mailplaneapp.com'
+  license :unknown
 
   app 'Mailplane 3.app'
   zap :delete => '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
