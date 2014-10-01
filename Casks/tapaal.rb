@@ -4,6 +4,7 @@ class Tapaal < Cask
 
   url "http://www.tapaal.net/fileadmin/download/tapaal-3.1/tapaal-#{version}-mac64.dmg"
   homepage 'http://www.tapaal.net'
+  license :unknown
 
   app 'Tapaal.app'
 end
