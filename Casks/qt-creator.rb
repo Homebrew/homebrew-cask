@@ -4,6 +4,7 @@ class QtCreator < Cask
 
   url "https://download.qt-project.org/official_releases/qtcreator/3.2/#{version}/qt-creator-opensource-mac-x86_64-#{version}.dmg"
   homepage 'http://qt-project.org/'
+  license :unknown
 
   app 'Qt Creator.app'
 end
