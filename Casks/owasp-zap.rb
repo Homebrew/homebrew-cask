@@ -4,6 +4,7 @@ class OwaspZap < Cask
 
   url "https://zaproxy.googlecode.com/files/ZAP_#{version}_Mac_OS_X.zip"
   homepage 'https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project'
+  license :oss
 
   app 'OWASP ZAP.app'
 end
