@@ -4,6 +4,7 @@ class Comictagger < Cask
 
   url "https://comictagger.googlecode.com/files/ComicTagger-#{version}.dmg"
   homepage 'http://code.google.com/p/comictagger/'
+  license :oss
 
   app 'ComicTagger.app'
 end
