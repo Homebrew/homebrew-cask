@@ -4,6 +4,7 @@ class NavicatPremium < Cask
 
   url 'http://download.navicat.com/download/navicat110_premium_en.dmg'
   homepage 'http://www.navicat.com/products/navicat-premium'
+  license :unknown
 
   app 'Navicat Premium.app'
 end
