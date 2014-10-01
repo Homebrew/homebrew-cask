@@ -4,6 +4,7 @@ class Simpletag < Cask
 
   url "http://downloads.sourceforge.net/sourceforge/simpletag/simpletag-gui-#{version}-osx.zip"
   homepage 'http://sourceforge.net/projects/simpletag/'
+  license :oss
 
   app "simpletag-gui-jface-#{version}/SimpleTAG-GUI.app"
 end
