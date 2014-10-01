@@ -4,6 +4,7 @@ class Liteide < Cask
 
   url "https://downloads.sourceforge.net/project/liteide/X#{version}/liteidex#{version}-1.macosx.zip"
   homepage 'https://github.com/visualfc/liteide'
+  license :oss
 
   app 'LiteIDE.app'
 end
