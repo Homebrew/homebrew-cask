@@ -131,7 +131,7 @@ describe Cask::Artifact::Uninstall do
       Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/launchctl', 'unload', '-w', '--', 'my.fancy.package.service'])
 
       Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/kextstat', '-l', '-b', 'my.fancy.package.kernelextension'], 'loaded')
-      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/sbin/kextunload', '-b', '--', 'my.fancy.package.kernelextension'])
+      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/sbin/kextunload', '-b', 'my.fancy.package.kernelextension'])
       Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/pkgutil', '--forget', 'my.fancy.package.main'])
 
       Cask::FakeSystemCommand.stubs_command(
