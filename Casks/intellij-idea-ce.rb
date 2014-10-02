@@ -1,6 +1,6 @@
 class IntellijIdeaCe < Cask
-  version '13.1.4b'
-  sha256 '08b1ccee390dd3470d433fed8a45fa3b814d3f315fca64bb3617b6b155b33dcc'
+  version '13.1.5'
+  sha256 '1db4938b41de9e340e196bd76f0482f9a329d0a660a9c583fb502c3208731c81'
 
   url "http://download.jetbrains.com/idea/ideaIC-#{version}.dmg"
   homepage 'https://www.jetbrains.com/idea/index.html'
