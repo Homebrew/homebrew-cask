@@ -1,4 +1,4 @@
-class YoutrackWorkflowEditor < Cask
+class YoutrackWorkflow < Cask
   version '5.2.1'
   sha256 'a0ecd6b54d8cb2726086aa4db2744446e75a42f02e99e975fee237200b244e91'
 
@@ -6,5 +6,5 @@ class YoutrackWorkflowEditor < Cask
   homepage 'http://www.jetbrains.com/youtrack/download/get_youtrack.html'
   license :unknown
 
-  app 'youtrack-workflow.app', :target => 'Youtrack Workflow Editor.app'
+  app 'youtrack-workflow.app'
 end

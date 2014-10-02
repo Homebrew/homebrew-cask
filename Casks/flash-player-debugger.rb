@@ -6,5 +6,6 @@ class FlashPlayerDebugger < Cask
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
   license :unknown
 
+  # Renamed to avoid conflict with flash-player.
   app 'Flash Player.app', :target => 'Flash Player Debugger.app'
 end

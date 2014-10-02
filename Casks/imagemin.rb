@@ -6,5 +6,7 @@ class Imagemin < Cask
   homepage 'https://github.com/kevva/imagemin-app'
   license :oss
 
-  app "imagemin-app-v#{version}-darwin/Atom.app', :target => 'imagemin.app"
+  # Renamed for clarity: app name is inconsistent with its branding.
+  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/4701
+  app "imagemin-app-v#{version}-darwin/Atom.app", :target => 'imagemin.app'
 end

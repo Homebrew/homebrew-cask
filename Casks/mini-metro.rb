@@ -6,5 +6,5 @@ class MiniMetro < Cask
   homepage 'http://dinopoloclub.com/minimetro/'
   license :unknown
 
-  app 'MiniMetro-alpha13b-osx.app', :target => 'Mini Metro.app'
+  app 'MiniMetro-alpha13b-osx.app'
 end

@@ -381,27 +381,37 @@ which points to a source file such as
 ### Renaming the Target
 
 You can rename the target link which appears in your `~/Applications`
-directory by adding a `:target` key to `app`, like this:
+directory by adding a `:target` key to `app`. Example (from [scala-ide.rb](../Casks/scala-ide.rb):
 
 ```ruby
-app 'Alfred 2.app', :target => 'Jeeves.app'
+app 'eclipse/Eclipse.app', :target => 'Scala IDE.app'
 ```
 
 ### :target May Contain an Absolute Path
 
 If `:target` has a leading slash, it is interpreted as an absolute path.
 The containing directory for the absolute path will be created if it does
-not already exist.  Example (from [oclint.rb](../Casks/oclint.rb)):
+not already exist.  Example (from [manopen.rb](../Casks/manopen.rb)):
 
 ```ruby
-binary 'oclint-0.7-x86_64-apple-darwin-10/lib/oclint', :target => '/usr/local/lib/oclint'
+artifact 'openman.1', :target => '/usr/local/share/man/man1/openman.1'
 ```
 
 ### :target Works on Most Artifact Types
 
-The `:target` key works similarly for other Cask artifacts, such as
-`binary`, `colorpicker`, `font`, `input_method`, `prefpane`, `qlplugin`,
+The `:target` key works similarly for most Cask artifacts, such as
+`app`, `binary`, `colorpicker`, `font`, `input_method`, `prefpane`, `qlplugin`,
 `service`, `widget`, `suite`, and `artifact`.
+
+### :target Should Only Be Used in Select Cases
+
+Don’t use `:target` for aesthetic reasons, like removing version numbers
+(`app "Slack #{version}.app", :target => 'Slack.app'`). With `app`, use it
+when it makes sense functionally and document your reason cleary in the cask:
+was it [for clarity](../Cask/imagemin.rb); [for consistency](devonthink-pro-office.rb);
+[to prevent conflicts](flash-player-debugger.rb)? With `binary` you can
+take some extra liberties to be consistent with other command-line tools,
+like [changing case](../Casks/diffmerge.rb) or [removing an extension](../Casks/filebot.rb).
 
 
 ## Suite Stanza Details

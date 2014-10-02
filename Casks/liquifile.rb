@@ -6,5 +6,5 @@ class Liquifile < Cask
   homepage 'http://www.liquifile.info/'
   license :unknown
 
-  app 'Liquifile_1_8.app', :target => 'Liquifile.app'
+  app 'Liquifile_1_8.app'
 end
