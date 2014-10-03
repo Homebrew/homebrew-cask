@@ -108,7 +108,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `postflight`           | yes                           | a Ruby block containing postflight install operations
 | `uninstall_preflight`  | yes                           | a Ruby block containing preflight uninstall operations (needed only in very rare cases)
 | `uninstall_postflight` | yes                           | a Ruby block containing postflight uninstall operations
-| `container_type`       | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`
+| `container :type =>`   | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`.  (example [parse.rb](../Casks/parse.rb))
 
 
 ## Legacy Stanzas
@@ -117,14 +117,15 @@ The following stanzas are no longer in use.
 
 | name                 | multiple occurrences allowed? | meaning     |
 | -------------------- |------------------------------ | ----------- |
-| `no_checksum`        | no                            | an obsolete alternative to `sha256 :no_check`
-| `before_install`     | yes                           | an obsolete alternative to `preflight`
 | `after_install`      | yes                           | an obsolete alternative to `postflight`
-| `before_uninstall`   | yes                           | an obsolete alternative to `uninstall_preflight`
 | `after_uninstall`    | yes                           | an obsolete alternative to `uninstall_postflight`
+| `before_install`     | yes                           | an obsolete alternative to `preflight`
+| `before_uninstall`   | yes                           | an obsolete alternative to `uninstall_preflight`
+| `container_type`     | yes                           | an obsolete alternative to `container :type =>`
+| `depends_on_formula` | yes                           | an obsolete alternative to `depends_on :formula =>`
 | `install`            | yes                           | an obsolete alternative to `pkg`
-| `depends_on_formula` | yes                           | an obsolete alternative to `depends_on :formula`
 | `link`               | yes                           | an obsolete alternative to `artifact`
+| `no_checksum`        | no                            | an obsolete alternative to `sha256 :no_check`
 
 
 ## Legacy Forms
@@ -133,8 +134,8 @@ The following forms are no longer in use.
 
 | name                 | meaning     |
 | -------------------- | ----------- |
-| `version 'latest'`   | an obsolete alternative to `version :latest`
 | `uninstall :files`   | an obsolete alternative to `uninstall :delete`
+| `version 'latest'`   | an obsolete alternative to `version :latest`
 
 
 ## Conditional Statements

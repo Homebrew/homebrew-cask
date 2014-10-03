@@ -42,23 +42,24 @@ This notice will be removed for the final form.**
    * stub - not yet functional
  * `depends_on :java`
    * stub - not yet functional
+ * `license`
  * `suite`
  * `uninstall :rmdir`
  * `zap`
- * `license`
 
 
 ## Renames (1.0)
 
 | old form              | new form
 | --------------------- |----------------
+| `after_install`       | `postflight`
+| `after_uninstall`     | `uninstall_postflight`
+| `before_install`      | `preflight`
+| `before_uninstall`    | `uninstall_preflight`
+| `container_type`      | `container :type`
+| `depends_on_formula`  | `depends_on :formula`
 | `install`             | `pkg`
 | `link`                | `app` (or sometimes `suite` or `artifact`)
-| `before_install`      | `preflight`
-| `after_install`       | `postflight`
-| `before_uninstall`    | `uninstall_preflight`
-| `after_uninstall`     | `uninstall_postflight`
-| `depends_on_formula`  | `depends_on :formula`
 | `uninstall :files`    | `uninstall :delete`
 | `version 'latest'`    | `version :latest`
 

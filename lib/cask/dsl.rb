@@ -91,6 +91,7 @@ module Cask::DSL
       end
     end
 
+    # todo: remove this backwards compatibility element after 0.50.0
     def container_type(type=nil)
       if @container_type and !type.nil?
         raise CaskInvalidError.new(self.title, "'container_type' stanza may only appear once")
