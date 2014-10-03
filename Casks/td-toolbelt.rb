@@ -6,7 +6,7 @@ class TdToolbelt < Cask
   homepage 'http://toolbelt.treasuredata.com/'
   license :unknown
 
-  container_type :naked
+  container :type => :naked
   preflight do
     system '/bin/mv', '--', "#{destination_path}/mac", "#{destination_path}/td-toolbelt.pkg"
   end
