@@ -6,8 +6,8 @@ class Parse < Cask
   homepage 'https://parse.com'
   license :unknown
 
+  container :type => :naked
   binary 'parse'
-  container_type :naked
 
   postflight do
     system "chmod", "755", "#{destination_path}/#{title}"
