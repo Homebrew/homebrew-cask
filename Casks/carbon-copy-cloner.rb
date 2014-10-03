@@ -1,6 +1,6 @@
 class CarbonCopyCloner < Cask
-  version '3.5.7'
-  sha256 '0b689c610b377f839bcf27239c5ff17824586e44808d5f6317084b1bd5220ddc'
+  version '4.0.3274'
+  sha256 '7d6479cd68ba9e8f9e0a74b2426d38c99ad3dea1c3a29dd7aaad8d8854d8a753'
 
   url "http://bombich.com/software/files/ccc-#{version}.zip"
   appcast 'http://www.bombich.com/software/updates/ccc.php'
