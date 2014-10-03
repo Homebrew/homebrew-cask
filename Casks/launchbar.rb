@@ -1,6 +1,6 @@
 class Launchbar < Cask
-  version '6.1.1'
-  sha256 '0b2afba286e8038fd7510e0e69b173984f547ddb8e3fa8bdd568115cf53cde98'
+  version '6.1.2'
+  sha256 'adbc69a93184597f5fe5b191d0b747a74d95d64cf67c20bfece4aa8917ecb098'
 
   url "http://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
   homepage 'http://www.obdev.at/products/launchbar/'
