@@ -1,8 +1,8 @@
 require 'cgi'
 
 # We abuse Homebrew's download strategies considerably here.
-# * Our downloader instances only invoke the fetch method,
-#   ignoring stage and clear_cache.
+# * Our downloader instances only invoke the fetch and
+#   clear_cache methods, ignoring stage
 # * Our overridden fetch methods are expected to return
 #   a value: the successfully downloaded file.
 
@@ -147,6 +147,10 @@ class Cask::SubversionDownloadStrategy < SubversionDownloadStrategy
 
   private
 
+  # TODO/UPDATE: the tar approach explained below is fragile
+  # against challenges such as case-sensitive filesystems,
+  # and must be re-implemented.
+  #
   # Seems nutty: we "download" the contents into a tape archive.
   # Why?
   # * A single file is tractable to the rest of the Cask toolchain,
