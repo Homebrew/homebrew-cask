@@ -1,8 +1,8 @@
 class Spyder < Cask
-  version '2.3.0'
-  sha256 '1a665fffc14c04647716da6a4108b152e983603ff7fd99680bafa915e361f27e'
+  version '2.3.1'
+  sha256 '4e5a755a98da444343d52d8ae3273eb3dd36c1114e12f0b77de6ade387477a81'
 
-  url "https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-#{version}.dmg"
+  url "https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-#{version}-py27.dmg"
   homepage 'https://code.google.com/p/spyderlib/'
   license :oss
 
