@@ -6,7 +6,7 @@ class Bankid < Cask
   homepage 'http://www.bankid.com/'
   license :unknown
 
-  container_type :naked
+  container :type => :naked
   preflight do
     system '/bin/mv', '--', destination_path.join('FileDownloader'), destination_path.join('bankid-latest.pkg')
   end

@@ -6,7 +6,7 @@ class Ridibooks < Cask
   homepage 'http://ridibooks.com/support/introduce_appdown'
   license :unknown
 
-  container_type :naked
+  container :type => :naked
   preflight do
     system '/bin/mv', '--', destination_path.join('getapp'), destination_path.join('ridibooks.pkg')
   end
