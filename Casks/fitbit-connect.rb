@@ -1,8 +1,8 @@
 class FitbitConnect < Cask
-  version '1.0.1.5104'
-  sha256 'ffbb2d5501240313682780e0b98dc41844080260f707cd003c759b38ce9bc658'
+  version '1.0.3.5510'
+  sha256 '14ffe8fdc6040cbcb17e551e04cdbe1dabcff99641eed6a2495631d2b83ffc0f'
 
-  url "http://cache.fitbit.com/FitbitConnect/FitbitConnect_Mac_2014110_#{version}.dmg"
+  url "http://cache.fitbit.com/FitbitConnect/FitbitConnect_Mac_20140519_#{version}.dmg"
   homepage 'http://www.fitbit.com/'
   license :unknown
 
