@@ -1,7 +1,7 @@
 class Cask::Container::Naked < Cask::Container::Base
   def self.me?(criteria)
     # Either inherit from this class and override self.me?,
-    # or use this class directly as "container_type :naked",
+    # or use this class directly as "container :type => :naked",
     # in which case self.me? is not called.
     false
   end
