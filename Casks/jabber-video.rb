@@ -8,7 +8,8 @@ class JabberVideo < Cask
 
   app 'Jabber Video.app'
 
+  # todo what is the reason for this?
   postflight do
-    system "/bin/rm", "#{destination_path}/Jabber Video.app/Contents/Resources/ForcedConfig.plist"
+    system '/bin/rm', '--', "#{destination_path}/Jabber Video.app/Contents/Resources/ForcedConfig.plist"
   end
 end
