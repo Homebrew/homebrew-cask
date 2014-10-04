@@ -9,20 +9,17 @@ class Dewdrop < Cask
 
   app 'Dewdrop.app'
 
-  caveats do
-    <<-EOF.undent
-    Available server implementations:
+  caveats <<-EOS.undent
+    Available server implementations
 
-      * https://github.com/dewdrop-org/Server-PHP
-      * https://github.com/dewdrop-org/Server-Node.js
+      https://github.com/dewdrop-org/Server-PHP
+      https://github.com/dewdrop-org/Server-Node.js
 
-    You may wish to script your preferences using `defaults` ... e.g.:
+    You may wish to script your preferences using "defaults", eg
 
       defaults write dangelov.Dewdrop ddUsername "$USER"
       defaults write dangelov.Dewdrop ddPassword "secret"
       defaults write dangelov.Dewdrop ddServer "https://dewdrop.example.org"
       defaults write dangelov.Dewdrop automaticallyUploadScreenshots 1
-
-    EOF
-  end
+  EOS
 end
