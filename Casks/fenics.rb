@@ -2,7 +2,7 @@ class Fenics < Cask
   version '1.4.0'
   sha256 'b0071fa25759fcef124e418c202cc81d297d12633b24385b70b9408af76c2bb5'
 
-  url 'http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.9.dmg'
+  url "http://www.fenicsproject.org/pub/software/fenics/fenics-#{version}-osx10.9.dmg"
   homepage 'http://fenicsproject.org/'
   license :unknown
 
