@@ -6,5 +6,5 @@ class SqliteDatabaseBrowser < Cask
   homepage 'http://sqlitebrowser.org'
   license :oss
 
-  app "sqlitebrowser.app"
+  app 'sqlitebrowser.app'
 end
