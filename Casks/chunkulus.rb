@@ -12,12 +12,9 @@ class Chunkulus < Cask
     system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName Chunkulus (Presstube)', "#{destination_path}/presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver/Contents/Info.plist"
   end
 
-  caveats do
-    <<-EOS.undent
-    If you have issue running #{@cask}, try installing Adobe Air with
+  caveats <<-EOS.undent
+    #{@cask} requires Adobe Air, available via
 
-        brew cask install adobe-air
-
-    EOS
-  end
+      brew cask install adobe-air
+  EOS
 end
