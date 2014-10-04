@@ -11,6 +11,7 @@ class Cask::CLI::Doctor < Cask::CLI::Base
     ohai 'Homebrew Origin:',                                 render_with_none_as_error( homebrew_origin )
     ohai 'Homebrew-cask Version:',                           render_with_none_as_error( HOMEBREW_CASK_VERSION )
     ohai 'Homebrew-cask Install Location:',                    render_install_location( HOMEBREW_CASK_VERSION )
+    ohai 'Homebrew-cask Staging Location:',                    render_staging_location( Cask.caskroom )
     ohai 'Homebrew-cask Cached Downloads:',                     render_cached_downloads
     ohai 'Homebrew-cask Default Tap Path:',                           render_tap_paths( fq_default_tap )
     ohai 'Homebrew-cask Alternate Cask Taps:',                        render_tap_paths( alt_taps )
@@ -147,6 +148,17 @@ class Cask::CLI::Doctor < Cask::CLI::Base
     locations.each do |l|
       basename = File.basename l
       l.concat %Q{ #{error_string %Q{error: old version. Run "brew cleanup".}}} unless basename == current_version
+    end
+  end
+
+  def self.render_staging_location(path)
+    path = Pathname.new(path)
+    if !path.exist?
+      %Q{#{path} #{error_string %Q{error: path does not exist}}}
+    elsif !path.writable?
+      %Q{#{path} #{error_string %Q{error: not writable by current user}}}
+    else
+      path
     end
   end
 
