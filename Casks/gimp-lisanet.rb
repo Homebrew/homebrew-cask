@@ -6,5 +6,5 @@ class GimpLisanet < Cask
   homepage 'http://gimp.lisanet.de'
   license :oss
 
-  app 'GIMP.app'
+  app 'Gimp.app'
 end
