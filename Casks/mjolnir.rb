@@ -1,6 +1,6 @@
 class Mjolnir < Cask
-  version '0.4.2'
-  sha256 '5a6aa3f5de79952a6d3680e51683ecc1ee795166ecd6448293e57376f3df3dbb'
+  version '0.4.3'
+  sha256 '7f7a9579427f258a34663abed46845c81c35f676f63b2ae1acef2a7729745572'
 
   url "https://github.com/mjolnir-io/mjolnir/releases/download/#{version}/Mjolnir-#{version}.tgz"
   homepage 'http://mjolnir.io'
