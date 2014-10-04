@@ -13,12 +13,9 @@ class Alib1 < Cask
     system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName ALib1 (Presstube)', "#{destination_path}/presstube-alib1.app/Contents/Resources/Presstube - ALib1.saver/Contents/Info.plist"
   end
 
-  caveats do
-    <<-EOS.undent
-    If you have issue running #{@cask}, try installing Adobe Air with
+  caveats <<-EOS.undent
+    #{@cask} requires Adobe Air, available via
 
-        brew cask install adobe-air
-
-    EOS
-  end
+      brew cask install adobe-air
+  EOS
 end
