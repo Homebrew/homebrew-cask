@@ -14,6 +14,8 @@ describe "Repo layout" do
                     ..
                     .DS_Store
                     .bundle
+                    .ruby-version
+                    coverage
                    }
 
   # the developer has hopefully gitignored these
