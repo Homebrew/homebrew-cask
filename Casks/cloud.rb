@@ -1,6 +1,6 @@
 class Cloud < Cask
-  version '3.0.0'
-  sha256 'b46f65037f38a6cc8c4291315682524dae9e9671a294fa96fc42d8e033fcfca9'
+  version '3.0.1'
+  sha256 'fcf0fb9256e02e0e8f3d71cc8466a6d0664cc70bb7a243370e8d790104b34db7'
 
   url "https://s3.amazonaws.com/downloads.getcloudapp.com/mac/CloudApp-#{version}.zip"
   homepage 'http://getcloudapp.com/'
