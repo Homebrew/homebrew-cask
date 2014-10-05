@@ -68,15 +68,15 @@ describe Cask::CLI::Install do
     end
 
     describe "without options" do
-      with_options.([])
+      with_options.call([])
     end
 
     describe "with --force" do
-      with_options.(['--force'])
+      with_options.call(['--force'])
     end
 
     describe "with an invalid option" do
-      with_options.(['--notavalidoption'])
+      with_options.call(['--notavalidoption'])
     end
   end
 end
