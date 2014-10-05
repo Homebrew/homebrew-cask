@@ -1,6 +1,6 @@
 class Filebot < Cask
-  version '4.2'
-  sha256 '92769237a926e13de515c6743d57c0b8b52e4c6ed50dfc5b46355690de1feb95'
+  version '4.5'
+  sha256 '389e663588f241c1aa97a2797f54d4e52e7c4fe47d394cd70cb5b2c7395a6761'
 
   homepage 'http://www.filebot.net/'
   license :oss
