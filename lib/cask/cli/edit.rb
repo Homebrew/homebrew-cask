@@ -1,7 +1,9 @@
 class Cask::CLI::Edit < Cask::CLI::Base
-  def self.run(*arguments)
-    raise CaskUnspecifiedError if arguments.empty?
-    cask_name = arguments.first.sub(/\.rb$/i,'')
+  def self.run(*args)
+    cask_names = cask_names_from(args)
+    raise CaskUnspecifiedError if cask_names.empty?
+    # only respects the first argument
+    cask_name = cask_names.first.sub(/\.rb$/i, '')
     cask_path = Cask.path(cask_name)
     odebug "Opening editor for Cask #{cask_name}"
     unless cask_path.exist?
