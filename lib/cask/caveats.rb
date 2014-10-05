@@ -143,7 +143,7 @@ class Cask::CaveatsDSL
   # be to spin out os-version-detection from caveats into a separate
   # Cask stanza, and that is probably a sensible design.
   def os_version_only(*supported_versions)
-    known_versions = %w{10.0 10.1 10.2 10.3 10.3 10.5 10.6 10.7 10.8 10.9 10.10}
+    known_versions = %w{10.0 10.1 10.2 10.3 10.4 10.5 10.6 10.7 10.8 10.9 10.10}
     supported_versions.each do |version|
       unless known_versions.include?(version)
         raise CaskInvalidError.new(@cask, "The only valid arguments to caveats os_version_only are: #{known_versions.utf8_inspect}")
