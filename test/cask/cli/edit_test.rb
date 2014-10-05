@@ -40,9 +40,19 @@ describe Cask::CLI::Edit do
     }.must_raise CaskUnavailableError
   end
 
-  it "raises an exception when no cask is specified" do
-    lambda {
-      Cask::CLI::Edit.run
-    }.must_raise CaskUnspecifiedError
+  describe "when no cask is specified" do
+    it "raises an exception" do
+      lambda {
+        Cask::CLI::Edit.run()
+      }.must_raise CaskUnspecifiedError
+    end
+  end
+
+  describe "when no cask is specified, but an invalid option" do
+    it "raises an exception" do
+      lambda {
+        Cask::CLI::Edit.run('--notavalidoption')
+      }.must_raise CaskUnspecifiedError
+    end
   end
 end

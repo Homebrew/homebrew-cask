@@ -19,7 +19,7 @@ describe Cask::CLI::Create do
   before { Cask::CLI::Create.reset! }
 
   after {
-    %w[ new-cask additional-cask another-cask feine ].each do |cask|
+    %w[ new-cask additional-cask another-cask yet-another-cask feine ].each do |cask|
       path = Cask.path(cask)
       path.delete if path.exist?
     end
@@ -49,10 +49,17 @@ describe Cask::CLI::Create do
     TEMPLATE
   end
 
-  it 'throws away additional arguments and uses the first' do
+  it 'throws away additional casks and uses the first' do
     Cask::CLI::Create.run('additional-cask', 'another-cask')
     Cask::CLI::Create.editor_commands.must_equal [
       [Cask.path('additional-cask')]
+    ]
+  end
+
+  it 'throws away stray options' do
+    Cask::CLI::Create.run('--notavalidoption', 'yet-another-cask')
+    Cask::CLI::Create.editor_commands.must_equal [
+      [Cask.path('yet-another-cask')]
     ]
   end
 
@@ -69,9 +76,19 @@ describe Cask::CLI::Create do
     ]
   end
 
-  it "raises an exception when no cask is specified" do
-    lambda {
-      Cask::CLI::Create.run
-    }.must_raise CaskUnspecifiedError
+  describe "when no cask is specified" do
+    it "raises an exception" do
+      lambda {
+        Cask::CLI::Create.run()
+      }.must_raise CaskUnspecifiedError
+    end
+  end
+
+  describe "when no cask is specified, but an invalid option" do
+    it "raises an exception" do
+      lambda {
+        Cask::CLI::Create.run('--notavalidoption')
+      }.must_raise CaskUnspecifiedError
+    end
   end
 end

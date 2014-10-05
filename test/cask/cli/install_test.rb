@@ -58,9 +58,25 @@ describe Cask::CLI::Install do
     err.must_match %r{No available cask for google\. Did you mean one of:\ngoogle}
   end
 
-  it "raises an exception when no cask is specified" do
-    lambda {
-      Cask::CLI::Install.run
-    }.must_raise CaskUnspecifiedError
+  describe "when no cask is specified" do
+    with_options = lambda do |options|
+      it "raises an exception" do
+        lambda {
+          Cask::CLI::Install.run(*options)
+        }.must_raise CaskUnspecifiedError
+      end
+    end
+
+    describe "without options" do
+      with_options.([])
+    end
+
+    describe "with --force" do
+      with_options.(['--force'])
+    end
+
+    describe "with an invalid option" do
+      with_options.(['--notavalidoption'])
+    end
   end
 end
