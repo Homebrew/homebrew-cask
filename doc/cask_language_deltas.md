@@ -33,15 +33,15 @@ This notice will be removed for the final form.**
 
  * `artifact`
  * `depends_on :cask`
-   * stub - not yet functional
+   * *stub* - not yet functional
  * `depends_on :macos`
-   * stub - not yet functional
+   * *stub* - not yet functional
  * `depends_on :arch`
-   * stub - not yet functional
+   * *stub* - not yet functional
  * `depends_on :x11`
-   * stub - not yet functional
+   * *stub* - not yet functional
  * `depends_on :java`
-   * stub - not yet functional
+   * *stub* - not yet functional
  * `license`
  * `suite`
  * `uninstall :rmdir`
