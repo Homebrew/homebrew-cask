@@ -18,11 +18,20 @@ class Cask::DSL::Gpg
       raise "invalid 'gpg' parameter: '#{hkey.inspect}'" unless VALID_PARAMETERS.include?(hkey)
       writer_method = "#{hkey}=".to_sym
       hvalue = Cask::UnderscoreSupportingURI.parse(hvalue) if hkey == :key_url
+      valid_id?(hvalue) if hkey == :key_id
       send(writer_method, hvalue)
     end
     unless KEY_PARAMETERS.intersection(parameters.keys).length == 1
       raise "'gpg' stanza must include exactly one of: '#{KEY_PARAMETERS.to_a}'"
     end
+  end
+
+  def valid_id?(id)
+    legal_lengths = Set.new [8, 16, 40]
+    is_valid = id.kind_of?(String) && legal_lengths.include?(id.length) && id[/^[0-9a-f]+$/i]
+    raise "invalid ':key_id' value: '#{id.inspect}'" unless is_valid
+
+    is_valid
   end
 
   def to_yaml
