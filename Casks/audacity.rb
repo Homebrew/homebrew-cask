@@ -1,8 +1,8 @@
 class Audacity < Cask
-  version '2.0.5'
-  sha256 'fb0e1c79159783e90403649c0c21fd067f709fd1d1c0f0f0b2a4b662617d8d90'
+  version '2.0.6'
+  sha256 'e51ff7c41b23e707bb8efac9965fe8ac27338792dc2b149138be30a3760c0067'
 
-  url "https://audacity.googlecode.com/files/audacity-macosx-ub-#{version}.dmg"
+  url "http://downloads.sourceforge.net/project/audacity/audacity/#{version}/audacity-macosx-ub-#{version}.dmg"
   homepage 'http://audacity.sourceforge.net/'
   license :oss
 
