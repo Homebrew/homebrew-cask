@@ -322,6 +322,9 @@ license.  The `license` stanza is intended as an aid to search/filtering of
 Casks.  For detailed information, the user must rely on the vendor's
 homepage.
 
+Note that `brew cask search` and `brew cask list` are not yet capable of
+using the information stored in the `license` stanza.
+
 ### Valid Category Licenses
 
 If a Cask does not quite fit one of the specific license types, use one of
