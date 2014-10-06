@@ -14,6 +14,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Caveats Stanza Details](#caveats-stanza-details)
  * [Checksum Stanza Details](#checksum-stanza-details)
  * [URL Stanza Details](#url-stanza-details)
+ * [Tags Stanza Details](#tags-stanza-details)
  * [License Stanza Details](#license-stanza-details)
  * [App Stanza Details](#app-stanza-details)
  * [Suite Stanza Details](#suite-stanza-details)
@@ -109,6 +110,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `uninstall_preflight`  | yes                           | a Ruby block containing preflight uninstall operations (needed only in very rare cases)
 | `uninstall_postflight` | yes                           | a Ruby block containing postflight uninstall operations
 | `container :type =>`   | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`.  (example [parse.rb](../Casks/parse.rb))
+| `tags`                 | no                            | a list of key-value pairs for Cask annotation.  Not free-form.  (see also [Tags Stanza Details](#tags-stanza-details))
 
 
 ## Legacy Stanzas
@@ -320,6 +322,9 @@ license.  The `license` stanza is intended as an aid to search/filtering of
 Casks.  For detailed information, the user must rely on the vendor's
 homepage.
 
+Note that `brew cask search` and `brew cask list` are not yet capable of
+using the information stored in the `license` stanza.
+
 ### Valid Category Licenses
 
 If a Cask does not quite fit one of the specific license types, use one of
@@ -355,6 +360,25 @@ the general categories.  `:unknown` is perfectly fine if you are unsure.
 | `:public_domain` | `:oss`    | Not copyrighted                                 | <http://creativecommons.org/publicdomain/zero/1.0/legalcode>
 | `:ubuntu_font`   | `:oss`    | Ubuntu Font License                             | <http://font.ubuntu.com/licence/>
 | `:x11`           | `:oss`    | X Consortium License                            | <http://www.xfree86.org/3.3.6/COPYRIGHT2.html>
+
+
+## Tags Stanza Details
+
+The `tags` stanza is not free-form.  The key-value pairs are limited to a list
+of valid keys.  All `tags` keys accept string values.
+
+The `tags` stanza is intended as an aid to search/filtering of Casks.  For
+detailed information, the user must rely on the vendor's homepage.
+
+Note that `brew cask search` and `brew cask list` are not yet capable of
+using the information stored in the `tags` stanza.
+
+### Valid Tag Keys
+
+| key           | meaning
+| ------------- | -----------------------------
+| `:name`       | Alternate name for the Cask. (example [smlnj.rb](../Casks/smlnj.rb))
+| `:vendor`     | The full-text official name of the producer of the software: an author or corporate name, as appropriate.  As the value is intended as a search target, commonly shared abbreviations such as `Dr.` or `Inc.` should be omitted. (example [google-chrome.rb](../Casks/google-chrome.rb))
 
 
 ## App Stanza Details

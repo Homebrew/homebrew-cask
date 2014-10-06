@@ -44,6 +44,7 @@ This notice will be removed for the final form.**
    * stub - not yet functional
  * `license`
  * `suite`
+ * `tags`
  * `uninstall :rmdir`
  * `zap`
 
