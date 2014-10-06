@@ -5,6 +5,7 @@ class Smlnj < Cask
   url "http://smlnj.cs.uchicago.edu/dist/working/#{version}/smlnj-x86-#{version}.pkg"
   homepage 'http://www.smlnj.org/'
   license :unknown
+  tags :name => 'Standard ML New Jersey'
 
   pkg "smlnj-x86-#{version}.pkg"
   uninstall :pkgutil => 'org.smlnj.x86.pkg'
