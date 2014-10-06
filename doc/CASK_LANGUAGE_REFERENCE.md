@@ -524,6 +524,7 @@ of the following key/value pairs as arguments to `uninstall`.
   - `:must_succeed` - set to `false` if the script is allowed to fail
 * `:delete` (string or array) - single-quoted, absolute paths of files or directory trees to remove.  `:delete` should only be used as a last resort. `:pkgutil` is strongly preferred
 * `:rmdir` (string or array) - single-quoted, absolute paths of directories to remove if empty.
+* `:trash` (string or array) - currently a synonym for `:delete`.  In the future this will cause files to be moved to the Trash.
 
 Each `uninstall` technique is applied according to the order above. The order
 in which `uninstall` keys appear in the Cask file is ignored.
@@ -661,6 +662,14 @@ paths.
    glob expansion is a desired future feature.
 
 To remove user-specific files, use the `zap` stanza.
+
+
+### Uninstall Key :trash
+
+*stub* - currently a synonym for `:delete`.  In the future this will cause
+files to be moved to the Trash.  It is best not to use this stub until it
+gains the proper functionality.
+
 
 ### Working With a pkg File Manually
 

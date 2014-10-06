@@ -45,6 +45,8 @@ This notice will be removed for the final form.**
  * `license`
  * `suite`
  * `uninstall :rmdir`
+ * `uninstall :trash`
+   * *stub* - currently just a synonym for `uninstall :delete`
  * `zap`
 
 
