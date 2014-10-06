@@ -1,6 +1,6 @@
 class Onepassword < Cask
-  version '4.4.1'
-  sha256 '007b554067cc0016bedfdcb75577f88b68daeabb5474a219960080e2e9159c90'
+  version '4.4.2'
+  sha256 '2eb28589cf5cd27870f100324c9168fcfaf092bf52a59a42ed2dccde320a80f8'
 
   url "http://i.agilebits.com/dist/1P/mac4/1Password-#{version}.zip"
   homepage 'https://agilebits.com/onepassword'
