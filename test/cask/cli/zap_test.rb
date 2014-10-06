@@ -20,7 +20,8 @@ describe Cask::CLI::Zap do
     transmission.must_be :installed?
 
     shutup do
-      Cask::CLI::Zap.run('local-caffeine', 'local-transmission')
+      Cask::CLI::Zap.run('--notavalidoption',
+        'local-caffeine', 'local-transmission')
     end
 
     caffeine.wont_be :installed?
@@ -57,9 +58,19 @@ describe Cask::CLI::Zap do
   #   with_zap.wont_be :installed?
   # end
 
-  it "raises an exception when no cask is specified" do
-    lambda {
-      Cask::CLI::Uninstall.run
-    }.must_raise CaskUnspecifiedError
+  describe "when no cask is specified" do
+    it "raises an exception" do
+      lambda {
+        Cask::CLI::Zap.run()
+      }.must_raise CaskUnspecifiedError
+    end
+  end
+
+  describe "when no cask is specified, but an invalid option" do
+    it "raises an exception" do
+      lambda {
+        Cask::CLI::Zap.run('--notavalidoption')
+      }.must_raise CaskUnspecifiedError
+    end
   end
 end

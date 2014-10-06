@@ -212,6 +212,11 @@ class Cask::CLI
       rescue OptionParser::InvalidOption
         remaining << head
         retry
+      rescue OptionParser::MissingArgument
+        raise CaskError.new("The option '#{head}' requires an argument")
+      rescue OptionParser::AmbiguousOption
+        raise CaskError.new(
+          "There is more than one possible option that starts with '#{head}'")
       end
     end
     remaining

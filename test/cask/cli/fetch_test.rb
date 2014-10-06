@@ -61,11 +61,19 @@ describe Cask::CLI::Fetch do
     }.must_raise CaskUnavailableError
   end
 
-  it "raises an exception when no cask is specified" do
-    lambda {
-      shutup do
-        Cask::CLI::Fetch.run
-      end
-    }.must_raise CaskUnspecifiedError
+  describe "when no cask is specified" do
+    it "raises an exception" do
+      lambda {
+        Cask::CLI::Fetch.run()
+      }.must_raise CaskUnspecifiedError
+    end
+  end
+
+  describe "when no cask is specified, but an invalid option" do
+    it "raises an exception" do
+      lambda {
+        Cask::CLI::Fetch.run('--notavalidoption')
+      }.must_raise CaskUnspecifiedError
+    end
   end
 end

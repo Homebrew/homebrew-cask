@@ -1,7 +1,7 @@
 class Cask::CLI::Install < Cask::CLI::Base
   def self.run(*args)
-    raise CaskUnspecifiedError if args.empty?
-    cask_names = args.reject { |a| a.chars.first == '-' }
+    cask_names = cask_names_from(args)
+    raise CaskUnspecifiedError if cask_names.empty?
     force = args.include? '--force'
     retval = install_casks cask_names, force
     # retval is ternary: true/false/nil

@@ -1,5 +1,6 @@
 class Cask::CLI::Info < Cask::CLI::Base
-  def self.run(*cask_names)
+  def self.run(*args)
+    cask_names = cask_names_from(args)
     raise CaskUnspecifiedError if cask_names.empty?
     cask_names.each do |cask_name|
       odebug "Getting info for Cask #{cask_name}"
