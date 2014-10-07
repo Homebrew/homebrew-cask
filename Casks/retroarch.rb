@@ -8,6 +8,7 @@ class Retroarch < Cask
     sha256 '8a528e6b954d614e86c5a3cfa8608008f60b593ef9a5bb12be3a834ebac9177a'
     url "http://www.libretro.com/wp-content/plugins/cip4-folder-download-widget/cip4-download.php?target=wp-content/releases/OSX/RetroArch-OSX10.7-x86_64-v#{version}.zip"
   end
+
   homepage 'http://www.libretro.com/'
 
   app 'RetroArch.app'

@@ -10,6 +10,6 @@ class Parse < Cask
   binary 'parse'
 
   postflight do
-    system "chmod", "755", "#{destination_path}/#{title}"
+    system '/bin/chmod', '--', '0755', "#{destination_path}/parse"
   end
 end

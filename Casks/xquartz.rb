@@ -12,10 +12,10 @@ class Xquartz < Cask
   postflight do
     Pathname.new(File.expand_path('~')).join('Library', 'Logs').mkpath
 
-    # Set default path to X11 = avoid the need of manual setup
+    # Set default path to X11 to avoid the need of manual setup
     system '/usr/bin/defaults', 'write', 'com.apple.applescript', 'ApplicationMap', '-dict-add', 'X11', 'file://localhost/Applications/Utilities/XQuartz.app/'
 
-    # Load & start XServer = avoid the need of relogin
+    # Load & start XServer to avoid the need of relogin
     system '/bin/launchctl', 'load', '/Library/LaunchAgents/org.macosforge.xquartz.startx.plist'
   end
 

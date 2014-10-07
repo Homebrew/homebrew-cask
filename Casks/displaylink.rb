@@ -1,15 +1,17 @@
 class Displaylink < Cask
+  version '2.2'
+  sha256 '5c9a97a476b5ff27811491eebb653a03c96f899562b67566c24100d8593b1daa'
+
   url 'http://www.displaylink.com/support/file.php',
       :data => {
-        'file' => 'DisplayLink_Mac_2.2.dmg',
+        'file' => "DisplayLink_Mac_#{version}.dmg",
         'folder' => 'publicsoftware',
         'id' => '330'
       },
       :using => :post
   homepage 'http://www.displaylink.com'
   license :unknown
-  version '2.2'
-  sha256 '5c9a97a476b5ff27811491eebb653a03c96f899562b67566c24100d8593b1daa'
+
   pkg 'DisplayLink Software Installer.pkg'
   uninstall :pkgutil => ['com.displaylink.displaylinkdriversigned',
                          'com.displaylink.displaylinkdriverunsigned']
@@ -27,6 +29,6 @@ class Displaylink < Cask
     Installing this Cask means you have AGREED to the DisplayLink
     Software License Agreement at
 
-        http://www.displaylink.com/support/sla.php?fileid=102
+      http://www.displaylink.com/support/sla.php?fileid=102
   EOS
 end

@@ -10,5 +10,5 @@ class TheArchiveBrowser < Cask
   caveats <<-EOS.undent
     The Archive Browser is a commercial app. Only a trial version will be
     installed.  A full license may be purchased from the developer website.
-    EOS
+  EOS
 end

@@ -14,13 +14,12 @@ class Wireshark < Cask
 
   postflight do
     if Process.euid == 0 then
-      ohai "Note:"
+      ohai 'Note:'
       puts <<-EOS.undent
-              You executed 'brew cask' as the superuser.
+        You executed 'brew cask' as the superuser.
 
-              You must manually add users to group 'access_bpf' in order to use Wireshark
-
-              EOS
+        You must manually add users to group 'access_bpf' in order to use Wireshark
+      EOS
     else
       system '/usr/bin/sudo', '-E', '--',
              '/usr/sbin/dseditgroup', '-o', 'edit', '-a', Etc.getpwuid(Process.euid).name, '-t', 'user', '--', 'access_bpf'

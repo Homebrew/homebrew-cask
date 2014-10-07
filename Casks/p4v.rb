@@ -1,5 +1,6 @@
 class P4v < Cask
   version '2014.1-888424'
+
   if Hardware::CPU.is_32_bit?
     sha256 '03b716dde2c39f4214c1b9b016e151225d8830e2e555b30234c5f9c1d2940a78'
     url 'http://filehost.perforce.com/perforce/r14.1/bin.macosx106x86/P4V.dmg'
@@ -14,7 +15,5 @@ class P4v < Cask
   app 'p4v.app'
   binary 'p4vc'
 
-  caveats do
-    puts "p4merge has its own cask. Run 'brew cask install p4merge.'"
-  end
+  caveats 'p4merge is in a separate Cask'
 end

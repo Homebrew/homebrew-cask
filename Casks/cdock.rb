@@ -7,10 +7,9 @@ class Cdock < Cask
   license :oss
 
   app 'cDock.app'
-  caveats do
-    puts <<-EOS.undent
-    Currently the cask '#{@cask}' depends on the cask easysimbl so
-    in order to use '#{@cask}' do 'brew cask install easysimbl'
-    EOS
-  end
+  caveats <<-EOS.undent
+    #{@cask} requires easysimbl, available via
+
+      brew cask install easysimbl
+  EOS
 end

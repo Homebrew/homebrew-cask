@@ -9,6 +9,7 @@ class Candybar < Cask
   app 'CandyBar.app'
   caveats <<-EOS.undent
     Candybar is free of charge.  Visit the following link for a license
-    http://panic.com/bin/setup.php/cb3/PPQA-YAMA-E3KP-VHXG-B6AL-L
+
+      http://panic.com/bin/setup.php/cb3/PPQA-YAMA-E3KP-VHXG-B6AL-L
   EOS
 end

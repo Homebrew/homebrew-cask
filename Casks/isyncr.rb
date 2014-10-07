@@ -7,6 +7,6 @@ class Isyncr < Cask
 
   pkg "iSyncr #{version}.pkg"
 
-  uninstall :pkgutil => "com.test.iSyncr.pkg",
-  			:quit => "com.JRTStudio.iSyncrWiFi"
+  uninstall :pkgutil => 'com.test.iSyncr.pkg',
+            :quit    => 'com.JRTStudio.iSyncrWiFi'
 end

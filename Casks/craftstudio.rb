@@ -12,7 +12,9 @@ class Craftstudio < Cask
             :pkgutil => 'com.sparklinlabs.CraftStudioLauncher'
   zap       :delete => '~/Library/CraftStudio'
 
-  caveats do
-    "Requires mono-mre. You can install this by running brew cask install mono-mre."
-  end
+  caveats <<-EOS.undent
+    #{@cask} requires mono-mre, available via
+
+      brew cask install mono-mre
+  EOS
 end

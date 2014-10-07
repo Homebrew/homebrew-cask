@@ -7,7 +7,6 @@ class EclipseJee < Cask
   else
     url 'http://download.eclipse.org/technology/epp/downloads/release/luna/R/eclipse-jee-luna-R-macosx-cocoa-x86_64.tar.gz'
   end
-
   homepage 'http://eclipse.org/'
   license :unknown
 

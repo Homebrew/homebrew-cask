@@ -6,6 +6,5 @@ class Jotta < Cask
   homepage 'https://www.jottacloud.com/'
   license :closed
 
-
   app 'Jotta.app'
 end

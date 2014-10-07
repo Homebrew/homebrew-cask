@@ -8,7 +8,9 @@ class Hear < Cask
   license :unknown
 
   app 'Hear.app'
+
+  # todo: an uninstall stanza should be provided, and this message removed
   caveats <<-EOS.undent
-    To uninstall open Hear.app and go to the menu Hear > Uninstall...
+    To uninstall, open Hear.app and choose the menu item "Hear > Uninstall"
   EOS
 end
