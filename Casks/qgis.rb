@@ -7,17 +7,15 @@ class Qgis < Cask
   license :unknown
   pkg 'Install QGIS.pkg'
   uninstall :pkgutil => 'org.qgis.qgis-*'
-  caveats do
-    <<-EOS.undent
+  caveats <<-EOS.undent
     #{@cask} requires the GDAL framework and Matplotlib to be installed first,
-    otherwise the installation will fail. In case of issues, try installing it
+    otherwise the installation will fail. In case of problems, try installing
+    them:
 
-        brew cask install gdal-framework matplotlib
+      brew cask install gdal-framework matplotlib
 
     and then reinstall QGIS
 
-        brew cask uninstall qgis
-        brew cask install qgis
-    EOS
-  end
+      brew cask uninstall qgis && brew cask install qgis
+  EOS
 end
