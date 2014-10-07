@@ -8,6 +8,8 @@ class Libreoffice < Cask
     sha256 '9a212ca4b77770c57f8b7ac375b5a98824c93dabd6e238dc019dc1139b6d3b7f'
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
   end
+  gpg "#{url}.asc",
+      :key_id => 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
   homepage 'https://www.libreoffice.org/'
   license :unknown

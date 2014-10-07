@@ -3,6 +3,8 @@ class Cryptol < Cask
   sha256 '19b3c24390ccb66584f42f34fed91cefc12f667879ab0228cdf806016bcd53c4'
 
   url "https://github.com/GaloisInc/cryptol/releases/download/v#{version}/cryptol-#{version}-MacOSX-64.tar.gz"
+  gpg "#{url}.sig",
+      :key_url => 'http://cryptol.net/files/Galois.asc'
   homepage 'http://cryptol.net/'
   license :oss
 

@@ -15,6 +15,8 @@ class GitAnnex < Cask
     url 'http://downloads.kitenet.net/git-annex/OSX/current/10.9_Mavericks/git-annex.dmg'
   end
 
+  gpg "#{url}.sig",
+      :key_url => 'https://downloads.kitenet.net/git-annex/gpg-pubkey.asc'
   homepage 'http://git-annex.branchable.com/'
   license :unknown
 
