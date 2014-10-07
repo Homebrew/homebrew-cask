@@ -1,6 +1,10 @@
 class GitAnnex < Cask
+  version :latest
+  sha256 :no_check
+
   if MacOS.version < :mavericks
     url 'http://downloads.kitenet.net/git-annex/OSX/current/10.8.2_Mountain_Lion/git-annex.dmg.bz2'
+
     # This is a horrible hack to force the file extension.  The
     # backend code should be fixed so that this is not needed.
     preflight do
@@ -10,10 +14,10 @@ class GitAnnex < Cask
   else
     url 'http://downloads.kitenet.net/git-annex/OSX/current/10.9_Mavericks/git-annex.dmg'
   end
+
   homepage 'http://git-annex.branchable.com/'
   license :unknown
-  version :latest
-  sha256 :no_check
+
   app 'git-annex.app'
   binary 'git-annex.app/Contents/MacOS/git-annex'
   binary 'git-annex.app/Contents/MacOS/git-annex-shell'
