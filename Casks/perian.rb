@@ -10,6 +10,6 @@ class Perian < Cask
   caveats <<-EOS.undent
     Perian development officially stopped as of 2012, and 1.2.3 was the final released version.
 
-    See the Perian homepage for the full message from the development team, which points to some alternatives.
-    EOS
+    See the Perian homepage for more information.
+  EOS
 end
