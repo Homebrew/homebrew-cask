@@ -8,6 +8,6 @@ class Ubar < Cask
 
   app 'uBar.app'
   caveats do
-    os_version_only("10.9", "10.10")
+    os_version_only '10.9', '10.10'
   end
 end
