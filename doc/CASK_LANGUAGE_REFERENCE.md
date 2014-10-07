@@ -771,8 +771,8 @@ Example: [injection.rb](../Casks/injection.rb)
 ## Arbitrary Ruby Methods
 
 In the exceptional case that the Cask DSL is insufficient, it is possible to
-define arbitrary Ruby methods inside the Cask by creating a `Utils` namespace.
-Example:
+define arbitrary Ruby variables and methods inside the Cask by creating a
+`Utils` namespace.  Example:
 
 ```ruby
 class Appname < Cask
@@ -795,6 +795,9 @@ end
 This should be used sparingly: any method which is needed by two or more
 Casks should instead be rolled into the core.  Care must also be taken
 that such methods be very efficient.
+
+Variables and methods should not be defined outside the `Utils` namespace,
+as they may collide with Homebrew-cask internals.
 
 
 ## Revisions to the Cask DSL
