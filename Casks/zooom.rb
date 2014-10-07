@@ -8,6 +8,6 @@ class Zooom < Cask
 
   pkg 'Zooom2.pkg'
   caveats do
-    os_version_only '10.10', '10.9'
+    os_version_only '10.9', '10.10'
   end
 end
