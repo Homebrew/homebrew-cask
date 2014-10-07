@@ -1,4 +1,7 @@
 class Onyx < Cask
+  version :latest
+  sha256 :no_check
+
   if MacOS.version == :snow_leopard
     url 'http://www.titanium.free.fr/download/106/OnyX.dmg'
   elsif MacOS.version == :lion
@@ -10,7 +13,6 @@ class Onyx < Cask
   end
   homepage 'http://www.titanium.free.fr/downloadonyx.php'
   license :unknown
-  version :latest
-  sha256 :no_check
+
   app 'OnyX.app'
 end
