@@ -1,5 +1,44 @@
 # CHANGELOG
 
+## 0.44.0
+
+* __Casks__
+ - 18 Casks added (1913 updated) by 48 contributors since 0.43.1
+ - 1936 total Casks
+* __Features__
+ - [#6463][] new DSL form `container :type` replaces `container_type`
+ - [#6426][] new DSL form `license`
+ - [#6478][] show staging directory (caskroom) in `brew cask doctor`
+* __Breaking Changes__
+ - none
+* __Fixes__
+ - [#6491][] User-friendly error messages for invalid options/arguments <3 [@claui][]
+ - [#6433][] fix params for `kextunload` in uninstall <3 [@jconley][]
+ - [#6487][] Fix `caveats` `os_version_only` Tiger support <3 [@alexcruice][]
+ - [#6360][] Test for invalid GPG key IDs
+* __Internal Changes__
+ - [#6493][] Bring the repo test back in sync with `.gitignore`. <3 [@claui][]
+ - [#6462][], [#6461][] test suite updates
+* __Documentation__
+ - 9 doc commits since 0.43.1
+* __Contributors__
+ - 17 new contributors since 0.43.1
+ - 1061 total contributors
+
+[#6360]: https://github.com/caskroom/homebrew-cask/issues/6360
+[#6426]: https://github.com/caskroom/homebrew-cask/issues/6426
+[#6433]: https://github.com/caskroom/homebrew-cask/issues/6433
+[#6461]: https://github.com/caskroom/homebrew-cask/issues/6461
+[#6462]: https://github.com/caskroom/homebrew-cask/issues/6462
+[#6463]: https://github.com/caskroom/homebrew-cask/issues/6463
+[#6478]: https://github.com/caskroom/homebrew-cask/issues/6478
+[#6487]: https://github.com/caskroom/homebrew-cask/issues/6487
+[#6491]: https://github.com/caskroom/homebrew-cask/issues/6491
+[#6493]: https://github.com/caskroom/homebrew-cask/issues/6493
+[@alexcruice]: https://github.com/alexcruice
+[@claui]: https://github.com/claui
+[@jconley]: https://github.com/jconley
+
 ## 0.43.1
 
 * __Casks__
