@@ -13,9 +13,10 @@ class Cocoaspell < Cask
                          '/Library/PreferencePanes/Spelling.prefPane',
                         ]
   caveats <<-EOS.undent
-    Non-English dictionaries must be installed separately.  For more information,
-    see http://people.ict.usc.edu/~leuski/cocoaspell/install_dict.php .
-    EOS
+    Non-English dictionaries must be installed separately.  For more information, see
+
+      http://people.ict.usc.edu/~leuski/cocoaspell/install_dict.php
+  EOS
   zap :delete => [
                  '~/.aspell.conf',
                  '~/.aspell.en.prepl',
