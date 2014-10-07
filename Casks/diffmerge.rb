@@ -10,7 +10,7 @@ class Diffmerge < Cask
   binary 'DiffMerge.app/Contents/MacOS/DiffMerge', :target => 'diffmerge'
 
   caveats <<-EOS.undent
-    Use `diffmerge --nosplash` when configuring external tools such
-    as git to use diffmerge. This will squlech the splash screen.
-    EOS
+    Use "diffmerge --nosplash" to hide the splash screen when using
+    diffmerge with external tools such as git.
+  EOS
 end
