@@ -54,7 +54,7 @@ class Java < Cask
     This Cask makes minor modifications to the JRE to prevent issues with
     packaged applications, as discussed here:
 
-        https://bugs.eclipse.org/bugs/show_bug.cgi?id=411361
+      https://bugs.eclipse.org/bugs/show_bug.cgi?id=411361
 
     If your Java application still asks for JRE installation, you might need
     to reboot or logout/login.
@@ -62,7 +62,6 @@ class Java < Cask
     Installing this Cask means you have AGREED to the Oracle Binary Code
     License Agreement for Java SE at
 
-        http://www.oracle.com/technetwork/java/javase/terms/license/index.html
-
-    EOS
+      http://www.oracle.com/technetwork/java/javase/terms/license/index.html
+  EOS
 end
