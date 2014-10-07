@@ -228,26 +228,29 @@ end
 ### report/analysis methods
 ###
 
+# todo: read the release date from the tag
 def header
   <<EOT
 ## #{next_release.sub(/^v/,'')}
 
 * __Casks__
- - N Casks added ...
- - N total Casks
+  - N Casks added ...
+  - N total Casks
 * __Features__
- - none
+  - none
 * __Breaking Changes__
- - none
+  - none
 * __Fixes__
- - none
+  - none
 * __Internal Changes__
- - none
+  - none
 * __Documentation__
- - N doc commits since ...
+  - N doc commits since ...
 * __Contributors__
- - N new contributors since ...
- - N total contributors
+  - N new contributors since ...
+  - N total contributors
+* __Release Date__
+  - YYYY-MM-DD HH:MM:SS UTC
 EOT
 end
 
