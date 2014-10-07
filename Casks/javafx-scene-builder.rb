@@ -15,6 +15,6 @@ class JavafxSceneBuilder < Cask
     Installing this Cask means you have AGREED to the Oracle BSD License
     Agreement for JavaFX Scene Builder at
 
-        http://www.oracle.com/technetwork/java/javase/terms/license/oraclebsd-1603217.txt
-    EOS
+      http://www.oracle.com/technetwork/java/javase/terms/license/oraclebsd-1603217.txt
+  EOS
 end
