@@ -8,9 +8,9 @@ class ClouderaHiveOdbc < Cask
 
   pkg 'ClouderaHiveODBC.pkg'
   uninstall :pkgutil => 'cloudera.hiveodbc'
-  caveats do
-    <<-EOS.undent
-    See /opt/cloudera/hiveodbc/Readme.txt for configuration instructions.
-    EOS
-  end
+  caveats <<-EOS.undent
+    For configuration instructions, see
+
+      /opt/cloudera/hiveodbc/Readme.txt
+  EOS
 end
