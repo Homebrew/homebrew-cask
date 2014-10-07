@@ -1,6 +1,6 @@
 class XamarinStudio < Cask
-  version '5.0.1.3-0'
-  sha256 '51e840a8b5e8679363290aee88af2cdadd9d99706ae346f787d07ecc27bdabe8'
+  version '5.4.0.240-0'
+  sha256 'bd5a3d28889a776190836c7cf3c19bbf749a01f2a45f74a118a535967ca3cc8a'
 
   url "http://download.xamarin.com/studio/Mac/XamarinStudio-#{version}.dmg"
   # non-Sparkle appcast

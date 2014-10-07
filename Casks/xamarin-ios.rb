@@ -1,6 +1,6 @@
 class XamarinIos < Cask
-  version '7.2.4.4'
-  sha256 'd6056e2ab4e529d7a04e9bcca915d780e3d9a76593c14791040b29651f6f2e5d'
+  version '8.2.0.193'
+  sha256 '6fd3ffd73937d937e0dac4bfdc6534fc948ceebf38d02b3eee94cd857fba4ee8'
 
   url "http://download.xamarin.com/MonoTouch/Mac/monotouch-#{version}.pkg"
   # non-Sparkle appcast
