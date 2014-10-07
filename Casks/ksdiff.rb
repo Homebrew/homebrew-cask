@@ -10,7 +10,7 @@ class Ksdiff < Cask
   uninstall :pkgutil => 'com.blackpixel.kaleidoscope.ksdiff.installer.pkg'
   # todo: conflicts_with_cask kaleidoscope
   caveats <<-EOS.undent
-    The #{title} Cask is not needed when installing Kaleidoscope via Cask. It
+    The #{@cask} Cask is not needed when installing Kaleidoscope via Cask. It
     is provided for users who have purchased Kaleidoscope via the App Store.
-    EOS
+  EOS
 end
