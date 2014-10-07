@@ -1,4 +1,5 @@
 class Skype < Cask
+
   if MacOS.version < :mavericks
     version '6.15.0.335'
     sha256 '592abdd157df12d718576a86c8f8e62fced55292fd7e6909d53aa5eaaa9218f4'
