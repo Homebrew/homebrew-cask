@@ -190,23 +190,17 @@ http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 
 ### Dropbox URLs
 
-Some projects **officially** (meaning the URL is linked from the official website)
-distribute binaries via Dropbox.
-Occasionally, instead of a direct download link, they send you to a preview page.
-In these cases, you need to manually change the URL.
+Dropbox URLs should be used only when given on the official project website.
 
-For example this preview link:
-```
-https://www.dropbox.com/s/xttkmuvu7hh72vu/MyFile.pdf
-```
-becomes
-```
-https://dl.dropboxusercontent.com/s/xttkmuvu7hh72vu/MyFile.pdf
-```
+Make sure to link to the binary download, rather than a Dropbox preview
+page, per https://www.dropbox.com/help/201/en .
 
-More: https://www.dropbox.com/help/201/en
+### Some Providers Block Command-line Downloads
 
-### Vendor URLs
+Some hosting providers actively block command-line HTTP clients (example:
+FossHub).  Such URLs cannot be used in Casks.
+
+### Vendor URLs Are Preferred
 
 When possible, it is best to use a download URL from the original developer
 or vendor, rather than an aggregator such as macupdate.com.
