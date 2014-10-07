@@ -8,15 +8,14 @@ class Quotefixformac < Cask
 
   caveats do
     <<-EOS.undent
-    Follow these instructions to enable mail plugins and link QuoteFix:
+      To enable mail plugins and link QuoteFix:
 
-      defaults write com.apple.mail EnableBundles -bool true
-      defaults write com.apple.mail BundleCompatibilityVersion -string 3
+        defaults write com.apple.mail EnableBundles -bool true
+        defaults write com.apple.mail BundleCompatibilityVersion -string 3
 
-      mkdir -p ~/Library/Mail/Bundles
-      cp -R #{destination_path}/QuoteFix.mailbundle ~/Library/Mail/Bundles/
-      killall Mail; open -a Mail
-
+        mkdir -p ~/Library/Mail/Bundles
+        cp -R #{destination_path}/QuoteFix.mailbundle ~/Library/Mail/Bundles/
+        killall Mail; open -a Mail
     EOS
   end
 end
