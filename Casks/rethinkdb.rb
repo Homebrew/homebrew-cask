@@ -1,6 +1,6 @@
 class Rethinkdb < Cask
-  version '1.15.0'
-  sha256 'aaa077a0380aced79ee60d3d34edceebe6307f445d0629925f790bc55fed696b'
+  version '1.15.1'
+  sha256 'f16ec6cd619d704913e93ac3800d1c7ce1fe7390dd9ae81fb7a964d3b58a04f2'
 
   url "http://download.rethinkdb.com/osx/rethinkdb-#{version}.dmg"
   homepage 'http://www.rethinkdb.com'
