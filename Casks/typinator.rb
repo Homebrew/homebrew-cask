@@ -7,5 +7,7 @@ class Typinator < Cask
   license :unknown
 
   app 'Typinator.app'
-  caveats { assistive_devices }
+  caveats do
+    assistive_devices
+  end
 end
