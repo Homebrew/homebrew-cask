@@ -9,12 +9,9 @@ class Prey < Cask
   pkg "prey-#{version}-mac-batch.mpkg"
   uninstall :pkgutil => 'com.forkhq.prey'
   caveats <<-EOS.undent
-    Prey requires an API key during installation. If none is found,
-    installation will fail.  To install using your API key, set it
-    as an environment variable during installation like this:
+    To complete installation, Prey requires an API key. It may be set
+    as an environment variable as follows:
 
-      brew cask uninstall prey
       API_KEY="abcdef123456" brew cask install prey
-
-    EOS
+  EOS
 end
