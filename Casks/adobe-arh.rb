@@ -13,5 +13,5 @@ class AdobeArh < Cask
     system '/bin/chmod', '--', '755', "#{destination_path}/arh"
   end
 
-  caveats "Please refer to the documention at #{homepage}"
+  caveats "Please refer to the documentation at #{homepage}"
 end
