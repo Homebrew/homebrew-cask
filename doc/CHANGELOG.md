@@ -24,6 +24,8 @@
 * __Contributors__
  - 17 new contributors since 0.43.1
  - 1061 total contributors
+* __Release Date__
+ - 2014-10-07 12:52:49 UTC
 
 [#6360]: https://github.com/caskroom/homebrew-cask/issues/6360
 [#6426]: https://github.com/caskroom/homebrew-cask/issues/6426
@@ -57,6 +59,8 @@
 * __Contributors__
  - 5 new contributors since 0.43.0
  - 1044 total contributors
+* __Release Date__
+ - 2014-09-30 14:53:46 UTC
 
 [#6405]: https://github.com/caskroom/homebrew-cask/issues/6405
 
@@ -80,6 +84,8 @@
 * __Contributors__
  - 21 new contributors since 0.42.0
  - 1039 total contributors
+* __Release Date__
+ - 2014-09-27 17:18:00 UTC
 
 [#6227]: https://github.com/caskroom/homebrew-cask/issues/6227
 [#6283]: https://github.com/caskroom/homebrew-cask/issues/6283
@@ -111,6 +117,8 @@
 * __Contributors__
  - 7 new contributors since 0.41.1
  - 1018 total contributors
+* __Release Date__
+ - 2014-09-17 13:45:32 UTC
 
 [@treyharris]: https://github.com/treyharris
 [#6155]: https://github.com/caskroom/homebrew-cask/issues/6155
@@ -145,6 +153,8 @@
 * __Contributors__
  - 1 new contributor since 0.41.0
  - 1011 total contributors
+* __Release Date__
+ - 2014-09-13 16:49:30 UTC
 
 [@treyharris]: https://github.com/treyharris
 [#6066]: https://github.com/caskroom/homebrew-cask/issues/6066
@@ -174,6 +184,8 @@
 * __Contributors__
  - 6 new contributors since 0.40.0
  - 1010 total contributors
+* __Release Date__
+ - 2014-09-11 14:08:43 UTC
 
 [#6073]: https://github.com/caskroom/homebrew-cask/issues/6073
 [#6115]: https://github.com/caskroom/homebrew-cask/issues/6115
@@ -207,6 +219,8 @@
  - 1 doc commit since 0.39.3
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-09-08 14:28:31 UTC
 
 [#5890]: https://github.com/caskroom/homebrew-cask/issues/5890
 [#4688]: https://github.com/caskroom/homebrew-cask/issues/4688
@@ -238,6 +252,8 @@
  - 1 doc commit since 0.39.2
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-08-13 11:47:41 UTC
 
 [#5749]: https://github.com/caskroom/homebrew-cask/issues/5749
 [#5750]: https://github.com/caskroom/homebrew-cask/issues/5750
@@ -258,6 +274,8 @@
  - none
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-08-12 12:17:12 UTC
 
 ## 0.39.1
 
@@ -281,6 +299,8 @@
  - 3 doc commits since 0.38.1
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-08-12 11:36:38 UTC
 
 [@federicobond]: https://github.com/federicobond
 [@rochefort]: https://github.com/rochefort
@@ -318,6 +338,8 @@
  - 3 doc commits since 0.38.0 <3 [@fapper][]
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-07-31 13:24:45 UTC
 
 [#5590]: https://github.com/caskroom/homebrew-cask/issues/5590
 [#5579]: https://github.com/caskroom/homebrew-cask/issues/5579
@@ -378,6 +400,8 @@
  - 7 doc commits since 0.37.1, <3 [@rstacruz][],[@alexbarclay][], [@hanjianwei][]
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-07-28 19:13:12 UTC
 
 [@rstacruz]: https://github.com/rstacruz
 [@ujovlado]: https://github.com/ujovlado
@@ -421,6 +445,8 @@
  - 4 doc commits since 0.37.0 <3 [@ujovlado][]
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-06-26 00:48:31 UTC
 
 [#5063]: https://github.com/caskroom/homebrew-cask/issues/5063
 [#5064]: https://github.com/caskroom/homebrew-cask/issues/5064
@@ -461,6 +487,8 @@
  - 11 doc commits since 0.36.2 <3 [@laurent22][]
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-06-19 19:38:38 UTC
 
 [#4868]: https://github.com/caskroom/homebrew-cask/issues/4868
 [#4913]: https://github.com/caskroom/homebrew-cask/issues/4913
@@ -501,6 +529,8 @@
  - none
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-06-14 12:19:00 UTC
 
 [#4881]: https://github.com/caskroom/homebrew-cask/issues/4881
 [#4830]: https://github.com/caskroom/homebrew-cask/issues/4830
@@ -527,6 +557,8 @@
  - 3 doc commits since 0.36.0
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-06-11 16:47:13 UTC
 
 [#4782]: https://github.com/caskroom/homebrew-cask/issues/4782
 [@Zearin]: https://github.com/Zearin
@@ -566,6 +598,8 @@
 * __Breaking Changes__
  - [#4264][] Retire support for `sha1` stanza.
  - [#4689][], [#4257][] retire support for `no_checksum` stanza, transitioning to `sha256 :no_check`
+* __Release Date__
+ - 2014-06-07 22:02:33 UTC
 
 [#4732]: https://github.com/caskroom/homebrew-cask/issues/4732
 [#4757]: https://github.com/caskroom/homebrew-cask/issues/4757
@@ -618,6 +652,8 @@
  - 4 doc commits since 0.34.0
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-05-08 11:48:34 UTC
 
 [#4244]: https://github.com/caskroom/homebrew-cask/issues/4244
 [#4242]: https://github.com/caskroom/homebrew-cask/issues/4242
@@ -646,6 +682,8 @@
 * __Breaking Changes__
  - The repository has moved under the Caskroom organization. We expect this to
    be a seamless transition for users.
+* __Release Date__
+ - 2014-05-05 11:33:44 UTC
 
 [#2427]: https://github.com/caskroom/homebrew-cask/issues/2427
 [#4169]: https://github.com/caskroom/homebrew-cask/issues/4169
@@ -666,6 +704,8 @@
  - 1 doc commit since 0.30.0 <3 [@jcgay][]
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-04-29 13:49:12 UTC
 
 [#4095]: https://github.com/caskroom/homebrew-cask/issues/4095
 [#4094]: https://github.com/caskroom/homebrew-cask/issues/4094
@@ -689,6 +729,8 @@
 * __Breaking Changes__
  - The default Tap directory was moved to accommodate a change
    in the Homebrew project.
+* __Release Date__
+ - 2014-04-26 13:59:40 UTC
 
 [#4042]: https://github.com/caskroom/homebrew-cask/issues/4042
 [#4039]: https://github.com/caskroom/homebrew-cask/issues/4039
@@ -715,6 +757,8 @@
  - 2 doc commits since 0.31.1
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-03-29 13:04:25 UTC
 
 [#3667]: https://github.com/caskroom/homebrew-cask/issues/3667
 [#3700]: https://github.com/caskroom/homebrew-cask/issues/3700
@@ -739,6 +783,8 @@
  - none
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-03-17 14:11:50 UTC
 
 [#3587]: https://github.com/caskroom/homebrew-cask/issues/3587
 [@bartoszj]: https://github.com/bartoszj
@@ -767,6 +813,8 @@
  - 8 doc commits since 0.30.1 <3 [@pedros][], [@cubranic][]
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-03-15 14:30:37 UTC
 
 [#3515]: https://github.com/caskroom/homebrew-cask/issues/3515
 [#3540]: https://github.com/caskroom/homebrew-cask/issues/3540
@@ -799,6 +847,8 @@
 * __Documentation__
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-03-02 15:30:23 UTC
 
 [#3335]: https://github.com/caskroom/homebrew-cask/issues/3335
 [#3327]: https://github.com/caskroom/homebrew-cask/issues/3327
@@ -831,6 +881,8 @@
 * __Breaking Changes__
  - [#2931][] remove md5 checksum support
  - [#3025][] temporarily suppress searching the font Tap to reduce false positives
+* __Release Date__
+ - 2014-03-01 17:30:17 UTC
 
 [#3323]: https://github.com/caskroom/homebrew-cask/issues/3323
 [#3011]: https://github.com/caskroom/homebrew-cask/issues/3011
@@ -884,6 +936,8 @@
  - 1 doc commit since 0.29.1
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-02-19 16:51:31 UTC
 
 [#3044]: https://github.com/caskroom/homebrew-cask/issues/3044
 [#3015]: https://github.com/caskroom/homebrew-cask/issues/3015
@@ -904,6 +958,8 @@
 * __Documentation__
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-02-15 17:31:59 UTC
 
 [#2957]: https://github.com/caskroom/homebrew-cask/issues/2957
 
@@ -938,6 +994,8 @@
  - 20 doc commits since 0.28.0 <3 [@lgarron][], [@phillipalexander][]
 * __Breaking Changes__
  - artifacts may no longer be specified as a list (since 0.28.0).  Instead the artifact should be repeated on multiple lines.
+* __Release Date__
+ - 2014-02-15 13:50:49 UTC
 
 [#2945]: https://github.com/caskroom/homebrew-cask/issues/2945
 [#2761]: https://github.com/caskroom/homebrew-cask/issues/2761
@@ -1023,6 +1081,8 @@
  - 19 commits to documentation <3 [@goxberry][], [@stylerw][]
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-01-30 16:56:34 UTC
 
 [#2532]: https://github.com/caskroom/homebrew-cask/issues/2532
 [@voanhduy1512]: https://github.com/voanhduy1512
@@ -1062,6 +1122,8 @@
  - [#2496][] restore functionality of `brew search` with no arguments
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-01-22 16:50:20 UTC
 
 [#2496]: https://github.com/caskroom/homebrew-cask/issues/2496
 
@@ -1088,6 +1150,8 @@
 * __Breaking Changes__
  - In rare cases, the new `caveats` form may not be backward-compatible with
    old Casks which used undocumented features.
+* __Release Date__
+ - 2014-01-20 18:54:52 UTC
 
 [#2416]: https://github.com/caskroom/homebrew-cask/issues/2416
 [@linc01n]: https://github.com/linc01n
@@ -1124,6 +1188,8 @@
   - [#2275][] - Force a require of Homebrew's `download_strategy`
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-01-10 17:07:31 UTC
 
 [#2275]: https://github.com/caskroom/homebrew-cask/issues/2275
 
@@ -1136,6 +1202,8 @@
   - [#2275][] - Prepend brew cask to Ruby's load path
 * __Breaking Changes__
  - none
+* __Release Date__
+ - 2014-01-10 16:12:28 UTC
 
 [#2275]: https://github.com/caskroom/homebrew-cask/issues/2275
 
@@ -1151,6 +1219,8 @@
   - [#2084][] - handle CaskAlreadyInstalledError gracefully; helps `Brewfile` integration <3 [@pstadler][]
 * __Breaking Changes__
   - [#2100][] - font Casks have been moved to their own tap at [caskroom/fonts][] so that we can be more disclaimery about font licenses
+* __Release Date__
+  - 2013-12-15 21:41:34 UTC
 
 [@leoj3n]: https://github.com/leoj3n
 [@jonahoffline]: https://github.com/jonahoffline
@@ -1171,6 +1241,8 @@
   - [#2019][] - validate keys given to uninstall
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-12-10 01:27:01 UTC
 
 [#2018]: https://github.com/caskroom/homebrew-cask/issues/2018
 [#2019]: https://github.com/caskroom/homebrew-cask/issues/2019
@@ -1183,6 +1255,8 @@
 * __Fixes__
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-12-09 02:27:08 UTC
 
 [#2012]: https://github.com/caskroom/homebrew-cask/issues/2012
 [#2013]: https://github.com/caskroom/homebrew-cask/issues/2013
@@ -1197,6 +1271,8 @@
 * __Breaking Changes__
   - the format of `brew cask list` has changed, we now include `(!)` after
     casks that don't have ruby files
+* __Release Date__
+  - 2013-12-06 19:20:46 UTC
 
 [@rolandwalker]: https://github.com/rolandwalker
 
@@ -1207,6 +1283,8 @@
   - [#1882][] - Ensure QuickLook directory exists <3 [@peeja][]
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-12-01 17:59:21 UTC
 
 [@peeja]: https://github.com/peeja
 [#1882]: https://github.com/caskroom/homebrew-cask/issues/1882
@@ -1218,6 +1296,8 @@
 * __Fixes__
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-11-26 17:58:44 UTC
 
 [#1733]: https://github.com/caskroom/homebrew-cask/issues/1733
 [@lgarron]: https://github.com/lgarron
@@ -1229,6 +1309,8 @@
   - [#1765][] - fix tapspath to work with non-standard homebrew location <3 [@njam][]
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-11-17 14:51:59 UTC
 
 [#1765]: https://github.com/caskroom/homebrew-cask/issues/1765
 [@njam]: https://github.com/njam
@@ -1246,6 +1328,8 @@
   - [#1461][] - remove empty app dirs from caskroom on uninstall
 * __Breaking Changes__
   - [#1436][] - new preferred sourceforge url style
+* __Release Date__
+  - 2013-11-10 22:01:25 UTC
 
 [#1417]: https://github.com/caskroom/homebrew-cask/issues/1417
 [@aah]: https://github.com/aah
@@ -1266,6 +1350,8 @@
   - [#1274][] - fix permissions problems on certain pkg uninstalls
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-11-01 00:52:04 UTC
 
 [#1274]: https://github.com/caskroom/homebrew-cask/issues/1374
 
@@ -1276,6 +1362,8 @@
   - [#1274][] - various fixes to prevent evil from happening during certain pkg uninstall processes
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-10-24 20:26:05 UTC
 
 [#1274]: https://github.com/caskroom/homebrew-cask/issues/1247
 
@@ -1286,6 +1374,8 @@
   - fix bug introduced in `0.19.1` where a double-install would result in a silent uninstall of a cask
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-10-24 00:37:17 UTC
 
 ## 0.19.1
 
@@ -1295,6 +1385,8 @@
   - [#1247][] - clean up on install failure; raise an explicit error when a command fail for better feedback
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-10-20 22:13:16 UTC
 
 [#954]: https://github.com/caskroom/homebrew-cask/issues/954
 [@kdeldycke]: https://github.com/caskroom/homebrew-cask/commit/f787afdc26cb5a5b81c2d6142d93c77b7aa5d28e
@@ -1307,6 +1399,8 @@
 * __Fixes__
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-10-19 22:56:13 UTC
 
 [#602]: https://github.com/caskroom/homebrew-cask/issues/602
 
@@ -1319,6 +1413,8 @@
   - [#1181][] - fix a small bug that could stop the check link process <3 [@andizzle][]
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-10-19 18:29:31 UTC
 
 [#1168]: https://github.com/caskroom/homebrew-cask/issues/1168
 [@wenbin1989]: https://github.com/wenbin1989
@@ -1332,6 +1428,8 @@
   - [#981][] - properly handle underscores in URLs <3 [@sheerun][]
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-10-08 01:21:33 UTC
 
 [#981]: https://github.com/caskroom/homebrew-cask/issues/981
 [@sheerun]: https://github.com/sheerun
@@ -1343,6 +1441,8 @@
 * __Fixes__
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-10-08 00:33:57 UTC
 
 ## 0.18.0 - Preference Pane Support
 
@@ -1354,6 +1454,8 @@
 * __Breaking Changes__
   - removes old `linkapps` / `unlinkapps` commands
   - `install` and `link` keywords now must reference the relative path to their artifact
+* __Release Date__
+  - 2013-10-08 00:18:11 UTC
 
 ## 0.17.{2,3}
 
@@ -1362,6 +1464,8 @@
   - Bugfixes addressing ([#1105](https://github.com/caskroom/homebrew-cask/issues/1105))
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-10-02 14:58:50 UTC
 
 ## 0.17.1
 
@@ -1370,6 +1474,8 @@
   - Fixes typo on `Tar` container, preventing tar-based Casks from being installed. ([#1083](https://github.com/caskroom/homebrew-cask/issues/1083))
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-09-25 19:41:28 UTC
 
 ## 0.17.0
 
@@ -1384,6 +1490,8 @@
   - when uninstalling pkgs; sudo chmod before examining
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-09-24 18:14:23 UTC
 
 ## 0.16.{1,2}
 
@@ -1392,6 +1500,8 @@
   - homebrew made some changes ([#1015](https://github.com/caskroom/homebrew-cask/issues/1015)) that broke our integration; this bugfix release brings us back into parity with the mothership.
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-09-15 03:49:53 UTC
 
 Thanks @billwanjohi for his work to fix this.
 
@@ -1404,6 +1514,8 @@ Thanks @billwanjohi for his work to fix this.
   - Fixes overzealous cask create name matching
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-09-09 16:35:48 UTC
 
 ## 0.15.0
 
@@ -1412,3 +1524,5 @@ Thanks @billwanjohi for his work to fix this.
 * __Fixes__
 * __Breaking Changes__
   - none
+* __Release Date__
+  - 2013-07-22 03:43:24 UTC
