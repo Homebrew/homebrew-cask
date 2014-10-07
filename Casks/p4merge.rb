@@ -8,7 +8,8 @@ class P4merge < Cask
 
   app 'p4merge.app'
   caveats <<-EOS.undent
-    You can set up git to use p4merge as a merge tool by following the instructions available here:
+    git can be configured to use p4merge as a merge tool via
+
       https://gist.github.com/henrik242/1510148
-    EOS
+  EOS
 end
