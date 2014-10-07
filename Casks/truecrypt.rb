@@ -10,7 +10,8 @@ class Truecrypt < Cask
   caveats do
     files_in_usr_local
     <<-EOS.undent
-    Warning: TrueCrypt IS NOT SECURE and the development was ended, see more:
+    Warning: TrueCrypt IS NOT SECURE.  Development has been halted, see
+
       http://truecrypt.sourceforge.net/
     EOS
   end
