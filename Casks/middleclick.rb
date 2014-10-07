@@ -1,4 +1,7 @@
 class Middleclick < Cask
+  version :latest
+  sha256 :no_check
+
   if MacOS.version < :mountain_lion
     url 'http://clement.beffa.org/labs/downloads/MiddleClick.zip'
   elsif MacOS.version == :mountain_lion
@@ -8,7 +11,6 @@ class Middleclick < Cask
   end
   homepage 'http://clement.beffa.org/labs/projects/middleclick'
   license :unknown
-  version :latest
-  sha256 :no_check
+
   app 'MiddleClick.app'
 end
