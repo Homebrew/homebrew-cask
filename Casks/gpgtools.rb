@@ -7,10 +7,11 @@ class Gpgtools < Cask
   license :unknown
 
   pkg 'Install.pkg'
+  # todo, remove all ENV variables
   postflight do
     system '/usr/bin/sudo', '-E', '--',
            '/usr/local/MacGPG2/libexec/fixGpgHome', Etc.getpwuid(Process.euid).name,
-                                                    ENV['GNUPGHOME'] ? ENV['GNUPGHOME'] : "#{ENV['HOME']}/.gnupg"
+                                                    ENV['GNUPGHOME'] ? ENV['GNUPGHOME'] : Pathname.new(File.expand_path('~')).join('.gnupg')
   end
   uninstall :pkgutil => 'org.gpgtools.*',
             :quit => [
