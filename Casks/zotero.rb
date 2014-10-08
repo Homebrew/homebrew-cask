@@ -1,10 +1,10 @@
 class Zotero < Cask
-  version '4.0.21.5'
-  sha256 '0c5b7fd612f44e6efdcec7d9dc050ddcb2586373e93c5fb40f846cc45df87a30'
+  version '4.0.22'
+  sha256 'add2d7541f610533f37f4a29fd999d0973c5587696359c864410ee3de60aa9b4'
 
   url "https://download.zotero.org/standalone/#{version}/Zotero-#{version}.dmg"
   homepage 'http://www.zotero.org/'
-  license :unknown
+  license :affero
 
   app 'Zotero.app'
 end
