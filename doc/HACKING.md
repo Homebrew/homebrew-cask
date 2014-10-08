@@ -65,13 +65,13 @@ include arbitrary Ruby code.
 used by apps, pkg installers, and so on, making them suitable for a
 [declarative DSL](https://github.com/caskroom/homebrew-cask/blob/master/doc/CASK_LANGUAGE_REFERENCE.md).
 
-We encourage cask authors to use the DSL as much as possible, since
+We encourage Cask authors to use the DSL as much as possible, since
 that makes things easier for everyone: from maintainers who review
 pull requests, to first-time contributors, to people who are unfamiliar
 with Ruby but would like to help.
 
 For software with unusual needs that are not covered by the DSL, we
-generally accept casks containing small hacks or arbitrary code.
+generally accept Casks containing small hacks or arbitrary code.
 If the hack becomes common enough, we extend the DSL with a simple
 shorthand that offers the same (or better) functionality.
 

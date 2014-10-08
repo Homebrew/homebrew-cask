@@ -44,6 +44,6 @@ class Cask::CLI::Install < Cask::CLI::Base
   end
 
   def self.help
-    "installs the cask of the given name"
+    "installs the Cask of the given name"
   end
 end

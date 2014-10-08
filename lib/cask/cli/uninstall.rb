@@ -12,6 +12,6 @@ class Cask::CLI::Uninstall < Cask::CLI::Base
   end
 
   def self.help
-    "uninstalls the cask of the given name"
+    "uninstalls the Cask of the given name"
   end
 end

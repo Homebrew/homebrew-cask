@@ -11,7 +11,7 @@ class Cask::CLI::Info < Cask::CLI::Base
   end
 
   def self.help
-    "displays information about the cask of the given name"
+    "displays information about the Cask of the given name"
   end
 
   def self.info(cask)

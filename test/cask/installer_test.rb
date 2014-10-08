@@ -15,7 +15,7 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
-    it "works with dmg-based casks" do
+    it "works with dmg-based Casks" do
       transmission = Cask.load('local-transmission')
 
       shutup do
@@ -28,7 +28,7 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
-    it "works with tar-based casks" do
+    it "works with tar-based Casks" do
       tarball = Cask.load('tarball')
 
       shutup do
@@ -41,7 +41,7 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
-    it "works with cab-based casks" do
+    it "works with cab-based Casks" do
       skip unless HOMEBREW_PREFIX.join('bin/cabextract').exist?
       cab_container = Cask.load('cab-container')
       cab_container.stubs(:depends_on_formula).returns([])
@@ -68,7 +68,7 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
-    it "works with 7z-based casks" do
+    it "works with 7z-based Casks" do
       skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
       sevenzip_container = Cask.load('sevenzip-container')
       sevenzip_container.stubs(:depends_on_formula).returns([])
@@ -83,7 +83,7 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
-    it "works with xar-based casks" do
+    it "works with xar-based Casks" do
       xar_container = Cask.load('xar-container')
 
       shutup do
@@ -111,7 +111,7 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
-    it "works with RAR-based casks" do
+    it "works with RAR-based Casks" do
       skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
       rar_container = Cask.load('rar-container')
       rar_container.stubs(:depends_on_formula).returns([])
@@ -126,7 +126,7 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
-    it "works with bz2-based casks" do
+    it "works with bz2-based Casks" do
       asset = Cask.load('bzipped-asset')
 
       shutup do
@@ -139,7 +139,7 @@ describe Cask::Installer do
       file.must_be :file?
     end
 
-    it "works with pure gz-based casks" do
+    it "works with pure gz-based Casks" do
       asset = Cask.load('gzipped-asset')
 
       shutup do
@@ -195,7 +195,7 @@ describe Cask::Installer do
     end
 
     # unlike the CLI, the internal interface throws exception on double-install
-    it "installer method raises an exception when already-installed casks are attempted" do
+    it "installer method raises an exception when already-installed Casks are attempted" do
       transmission = Cask.load('local-transmission')
       transmission.installed?.must_equal false
       installer = Cask::Installer.new(transmission)
@@ -206,7 +206,7 @@ describe Cask::Installer do
       }.must_raise(CaskAlreadyInstalledError)
     end
 
-    it "allows already-installed casks to be installed if force is provided" do
+    it "allows already-installed Casks to be installed if force is provided" do
       transmission = Cask.load('local-transmission')
       transmission.installed?.must_equal false
       installer = Cask::Installer.new(transmission)
@@ -290,7 +290,7 @@ describe Cask::Installer do
   end
 
   describe "uninstall" do
-    it "fully uninstalls a cask" do
+    it "fully uninstalls a Cask" do
       caffeine = Cask.load('local-caffeine')
       installer = Cask::Installer.new(caffeine)
 
