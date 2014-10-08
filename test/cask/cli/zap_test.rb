@@ -1,13 +1,13 @@
 require 'test_helper'
 
 describe Cask::CLI::Zap do
-  it "shows an error when a bad cask is provided" do
+  it "shows an error when a bad Cask is provided" do
     lambda {
       Cask::CLI::Zap.run('notacask')
     }.must_raise CaskUnavailableError
   end
 
-  it "can zap and unlink multiple casks at once" do
+  it "can zap and unlink multiple Casks at once" do
     caffeine = Cask.load('local-caffeine')
     transmission = Cask.load('local-transmission')
 
@@ -58,7 +58,7 @@ describe Cask::CLI::Zap do
   #   with_zap.wont_be :installed?
   # end
 
-  describe "when no cask is specified" do
+  describe "when no Cask is specified" do
     it "raises an exception" do
       lambda {
         Cask::CLI::Zap.run()
@@ -66,7 +66,7 @@ describe Cask::CLI::Zap do
     end
   end
 
-  describe "when no cask is specified, but an invalid option" do
+  describe "when no Cask is specified, but an invalid option" do
     it "raises an exception" do
       lambda {
         Cask::CLI::Zap.run('--notavalidoption')

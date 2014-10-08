@@ -1,7 +1,7 @@
 require 'test_helper'
 
 describe Cask::CLI::Info do
-  it 'displays some nice info about the specified cask' do
+  it 'displays some nice info about the specified Cask' do
     lambda {
       Cask::CLI::Info.run('local-caffeine')
     }.must_output <<-CLIOUTPUT.undent
@@ -14,7 +14,7 @@ describe Cask::CLI::Info do
     CLIOUTPUT
   end
 
-  describe 'given multiple casks' do
+  describe 'given multiple Casks' do
     before do
       @expected_output = <<-CLIOUTPUT.undent
         local-caffeine: 1.2.3
@@ -45,7 +45,7 @@ describe Cask::CLI::Info do
     end
   end
 
-  it 'should print caveats if the cask provided one' do
+  it 'should print caveats if the Cask provided one' do
     lambda {
       Cask::CLI::Info.run('with-caveats')
     }.must_output <<-CLIOUTPUT.undent
@@ -82,7 +82,7 @@ describe Cask::CLI::Info do
     CLIOUTPUT
   end
 
-  describe "when no cask is specified" do
+  describe "when no Cask is specified" do
     it "raises an exception" do
       lambda {
         Cask::CLI::Info.run()
@@ -90,7 +90,7 @@ describe Cask::CLI::Info do
     end
   end
 
-  describe "when no cask is specified, but an invalid option" do
+  describe "when no Cask is specified, but an invalid option" do
     it "raises an exception" do
       lambda {
         Cask::CLI::Info.run('--notavalidoption')

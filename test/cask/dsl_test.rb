@@ -8,7 +8,7 @@ describe Cask::DSL do
     test_cask.version.must_equal '1.2.3'
   end
 
-  it "prevents the entire world from crashing when a cask includes an unknown method" do
+  it "prevents the entire world from crashing when a Cask includes an unknown method" do
     UnexpectedMethodCask = Class.new(Cask)
     begin
       TestHelper.must_output(self, lambda {
@@ -76,14 +76,14 @@ describe Cask::DSL do
       CaskWithCaveats = Class.new(Cask)
       CaskWithCaveats.class_eval do
         def caveats; <<-EOS.undent
-          When you install this cask, you probably want to know this.
+          When you install this Cask, you probably want to know this.
           EOS
         end
       end
 
       instance = CaskWithCaveats.new
 
-      instance.caveats.must_equal "When you install this cask, you probably want to know this.\n"
+      instance.caveats.must_equal "When you install this Cask, you probably want to know this.\n"
     end
   end
 

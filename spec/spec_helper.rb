@@ -4,12 +4,12 @@ Dir["#{project_root}/spec/support/**/*.rb"].each { |f| require f }
 
 include HomebrewTestingEnvironment
 
-# add cask lib to load path
+# add homebrew-cask lib to load path
 $:.push(project_root.join('lib').to_s)
 
 require 'cask'
 
-# Look for casks in testcasks by default.  It is elsewhere required that
+# Look for Casks in testcasks by default.  It is elsewhere required that
 # the string "test" appear in the directory name.
 Cask.default_tap = 'caskroom/homebrew-testcasks'
 

@@ -7,7 +7,7 @@ under the organizational umbrella at https://github.com/caskroom/homebrew-cask .
 
 Web redirection happens automatically.
 
-The location of the Cask Tap on disk has also changed, which should be
+The location of the Homebrew-cask Tap on disk has also changed, which should be
 handled automatically upon upgrading.  If you have technical difficulties,
 please see [TAP_MIGRATION.md](TAP_MIGRATION.md).
 

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Cask::CLI do
-  it "lists the taps for casks that show up in two taps" do
+  it "lists the taps for Casks that show up in two taps" do
     listing = Cask::CLI.nice_listing(%w[
       caskroom/cask/adium
       caskroom/cask/google-chrome

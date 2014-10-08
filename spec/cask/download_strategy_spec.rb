@@ -18,14 +18,14 @@ describe 'download strategies' do
       allow(downloader.temporary_path).to receive(:rename)
     end
 
-    it 'properly assigns a name and Resource based on the cask' do
+    it 'properly assigns a name and Resource based on the Cask' do
       expect(downloader.name).to eq('some-cask')
       expect(downloader.resource.name).to eq('some-cask')
       expect(downloader.resource.url).to eq('http://example.com/cask.dmg')
       expect(downloader.resource.version.to_s).to eq('1.2.3.4')
     end
 
-    it 'calls curl with default arguments for a simple cask' do
+    it 'calls curl with default arguments for a simple Cask' do
       allow(downloader).to receive(:curl)
 
       shutup do

@@ -10,6 +10,6 @@ class Cask::CLI::Zap < Cask::CLI::Base
   end
 
   def self.help
-    "zaps all files associated with the cask of the given name"
+    "zaps all files associated with the Cask of the given name"
   end
 end

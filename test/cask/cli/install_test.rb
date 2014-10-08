@@ -1,7 +1,7 @@
 require 'test_helper'
 
 describe Cask::CLI::Install do
-  it "allows install and link of multiple casks at once" do
+  it "allows install and link of multiple Casks at once" do
     shutup do
       Cask::CLI::Install.run('local-transmission', 'local-caffeine')
     end
@@ -32,7 +32,7 @@ describe Cask::CLI::Install do
     }, %r{==> Success! local-transmission installed to '#{Cask.caskroom}/local-transmission/2.61' \(487 files, 11M\)})
   end
 
-  it "properly handles casks that are not present" do
+  it "properly handles Casks that are not present" do
     lambda {
       shutup do
         Cask::CLI::Install.run('notacask')
@@ -46,7 +46,7 @@ describe Cask::CLI::Install do
         Cask::CLI::Install.run('googlechrome')
       rescue CaskError; end
     end
-    err.must_match %r{No available cask for googlechrome\. Did you mean:\ngoogle-chrome}
+    err.must_match %r{No available Cask for googlechrome\. Did you mean:\ngoogle-chrome}
   end
 
   it "returns multiple suggestions for a Cask fragment" do
@@ -55,10 +55,10 @@ describe Cask::CLI::Install do
       Cask::CLI::Install.run('google')
       rescue CaskError; end
     end
-    err.must_match %r{No available cask for google\. Did you mean one of:\ngoogle}
+    err.must_match %r{No available Cask for google\. Did you mean one of:\ngoogle}
   end
 
-  describe "when no cask is specified" do
+  describe "when no Cask is specified" do
     with_options = lambda do |options|
       it "raises an exception" do
         lambda {

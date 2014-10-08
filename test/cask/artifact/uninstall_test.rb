@@ -28,7 +28,7 @@ describe Cask::Artifact::Uninstall do
 
   describe 'uninstall_phase' do
     # todo: uninstall tests for :signal (implementation does not use SystemCommand)
-    it 'runs the specified uninstaller for the cask' do
+    it 'runs the specified uninstaller for the Cask' do
       uninstall_artifact = Cask::Artifact::Uninstall.new(@cask, Cask::FakeSystemCommand)
 
       Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application "System Events" to count processes whose bundle identifier is "my.fancy.package.app"'], '1')

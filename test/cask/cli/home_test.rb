@@ -20,14 +20,14 @@ describe Cask::CLI::Home do
     Cask::CLI::Home.reset!
   end
 
-  it 'opens the homepage for the specified cask' do
+  it 'opens the homepage for the specified Cask' do
     Cask::CLI::Home.run('alfred')
     Cask::CLI::Home.system_commands.must_equal [
       ['/usr/bin/open', '--', 'http://www.alfredapp.com/']
     ]
   end
 
-  it 'works for multiple casks' do
+  it 'works for multiple Casks' do
     Cask::CLI::Home.run('alfred', 'adium')
     Cask::CLI::Home.system_commands.must_equal [
       ['/usr/bin/open', '--', 'http://www.alfredapp.com/'],
@@ -35,7 +35,7 @@ describe Cask::CLI::Home do
     ]
   end
 
-  it "opens the project page when no cask is specified" do
+  it "opens the project page when no Cask is specified" do
     Cask::CLI::Home.run
     Cask::CLI::Home.system_commands.must_equal [
       ['/usr/bin/open', '--', 'http://caskroom.io/'],

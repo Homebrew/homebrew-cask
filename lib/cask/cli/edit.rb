@@ -7,12 +7,12 @@ class Cask::CLI::Edit < Cask::CLI::Base
     cask_path = Cask.path(cask_name)
     odebug "Opening editor for Cask #{cask_name}"
     unless cask_path.exist?
-      raise CaskUnavailableError, %Q{#{cask_name}, run "brew cask create #{cask_name}" to create a new cask with this name}
+      raise CaskUnavailableError, %Q{#{cask_name}, run "brew cask create #{cask_name}" to create a new Cask with this name}
     end
     exec_editor cask_path
   end
 
   def self.help
-    "edits the cask of the given name"
+    "edits the Cask of the given name"
   end
 end
