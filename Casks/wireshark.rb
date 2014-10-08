@@ -1,6 +1,6 @@
 class Wireshark < Cask
-  version '1.12.0'
-  sha256 '2e4131fe32b72339cb8d8191e591711c16f4c5950657428810fdfce91b0dead2'
+  version '1.12.1'
+  sha256 '3ce749efbcf89dd72b4e1c2336f4edd7111e05ce9cad8da2df189ac4e56fa1b7'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   homepage 'http://www.wireshark.org'
