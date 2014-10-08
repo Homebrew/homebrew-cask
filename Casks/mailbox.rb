@@ -1,6 +1,6 @@
 class Mailbox < Cask
-  version '0.3.11_140925'
-  sha256 '6f234a2720441b76e2cff1c9f26abfcf839b61408e02e0cc0bd29b223d868c19'
+  version '0.3.12_141007'
+  sha256 'd5d388832ebf3590a24fea4ceb3312108e1c061250d4e6d8e83c02fd8d6cc8c6'
 
   url "https://mb-dtop.s3.amazonaws.com/external-beta/Mailbox_Ext_Beta_#{version}.zip"
   appcast 'https://mb-dtop.s3.amazonaws.com/external-beta/external-beta-appcast.xml'
