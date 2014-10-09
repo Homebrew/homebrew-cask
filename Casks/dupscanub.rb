@@ -6,6 +6,6 @@ class Dupscanub < Cask
   homepage 'http://www5.wind.ne.jp/miko/mac_soft/dup_scan/index.html'
   license :unknown
 
-  nested_container 'DupScanUB_241.dmg'
+  container :nested => 'DupScanUB_241.dmg'
   app 'DupScan(UB).app'
 end
