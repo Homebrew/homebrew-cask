@@ -6,6 +6,6 @@ class DuplicateAnnihilator < Cask
   homepage 'http://brattoo.com/propaganda/'
   license :unknown
 
-  nested_container 'Duplicate Annihilator.dmg'
+  container :nested => 'Duplicate Annihilator.dmg'
   app 'Duplicate Annihilator.app'
 end

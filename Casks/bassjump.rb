@@ -13,7 +13,7 @@ class Bassjump < Cask
 
     url "http://ffe82a399885f9f28605-66638985576304cbe11c530b9b932f18.r24.cf2.rackcdn.com/BassJumpInstaller_#{version}.dmg.zip"
 
-    nested_container "BassJumpInstaller_#{version}.dmg"
+    container :nested => "BassJumpInstaller_#{version}.dmg"
     pkg 'BassJumpInstaller.pkg'
   end
 

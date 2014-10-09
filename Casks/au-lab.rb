@@ -6,6 +6,6 @@ class AuLab < Cask
   homepage 'http://www.apple.com/itunes/mastered-for-itunes/'
   license :unknown
 
-  nested_container 'AU Lab Image.dmg'
+  container :nested => 'AU Lab Image.dmg'
   app 'AU Lab.app'
 end

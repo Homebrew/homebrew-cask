@@ -7,6 +7,6 @@ class RawPhotoProcessor < Cask
   homepage 'http://www.raw-photo-processor.com/RPP/Overview.html'
   license :unknown
 
-  nested_container 'RPP472_1672_64.dmg'
+  container :nested => 'RPP472_1672_64.dmg'
   app 'Raw Photo Processor 64.app'
 end

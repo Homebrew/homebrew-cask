@@ -6,6 +6,6 @@ class Timemachinescheduler < Cask
   homepage 'http://www.klieme.com/TimeMachineScheduler.html'
   license :unknown
 
-  nested_container 'TimeMachineScheduler3_Installer.dmg'
+  container :nested => 'TimeMachineScheduler3_Installer.dmg'
   prefpane 'TimeMachineScheduler3_Installer.app/Contents/Resources/TimeMachineScheduler.prefPane'
 end

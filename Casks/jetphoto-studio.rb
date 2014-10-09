@@ -6,6 +6,6 @@ class JetphotoStudio < Cask
   homepage 'http://www.jetphotosoft.com/web/home/'
   license :unknown
 
-  nested_container "JetPhoto Studio #{version}.dmg"
+  container :nested => "JetPhoto Studio #{version}.dmg"
   app 'JetPhoto Studio.app'
 end

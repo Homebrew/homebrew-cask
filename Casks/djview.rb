@@ -6,6 +6,6 @@ class Djview < Cask
   homepage 'http://djvu.sourceforge.net/'
   license :oss
 
-  nested_container "djvulibre-3.5.22+djview-#{version}-intel.dmg"
+  container :nested => "djvulibre-3.5.22+djview-#{version}-intel.dmg"
   app 'DjView.app'
 end

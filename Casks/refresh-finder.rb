@@ -6,6 +6,6 @@ class RefreshFinder < Cask
   homepage 'http://soderhavet.com/refresh/refresh-finder/'
   license :unknown
 
-  nested_container "Refresh_Finder_#{version}.dmg"
+  container :nested => "Refresh_Finder_#{version}.dmg"
   app 'Refresh Finder.app'
 end

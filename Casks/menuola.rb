@@ -7,6 +7,6 @@ class Menuola < Cask
   homepage 'http://www.geocom.co.nz'
   license :unknown
 
-  nested_container 'Menuola.dmg'
+  container :nested => 'Menuola.dmg'
   app 'Menuola.app'
 end

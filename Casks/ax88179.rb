@@ -12,7 +12,7 @@ class Ax88179 < Cask
   homepage 'http://www.asix.com.tw/products.php?op=pItemdetail&PItemID=131;71;112&PLine=71'
   license :unknown
 
-  nested_container "#{Utils.basename}/AX88179_178A.dmg"
+  container :nested => "#{Utils.basename}/AX88179_178A.dmg"
   pkg "AX88179_178A_v#{version[0..-10]}.pkg"
   uninstall :script => { :executable => 'AX88179_178A_Uninstall_v140' }
 end

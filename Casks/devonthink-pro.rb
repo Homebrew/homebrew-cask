@@ -7,6 +7,6 @@ class DevonthinkPro < Cask
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro.html'
   license :unknown
 
-  nested_container 'DEVONthink_Pro.dmg'
+  container :nested => 'DEVONthink_Pro.dmg'
   app 'DEVONthink Pro.app'
 end

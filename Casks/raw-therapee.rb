@@ -6,6 +6,6 @@ class RawTherapee < Cask
   homepage 'http://rawtherapee.com'
   license :unknown
 
-  nested_container "RawTherapee_OSX_10.7_64_#{version}.dmg"
+  container :nested => "RawTherapee_OSX_10.7_64_#{version}.dmg"
   app 'RawTherapee.app'
 end

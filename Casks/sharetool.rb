@@ -6,6 +6,6 @@ class Sharetool < Cask
   homepage 'http://bainsware.com/'
   license :unknown
 
-  nested_container 'ShareTool 2.dmg'
+  container :nested => 'ShareTool 2.dmg'
   app 'ShareTool.app'
 end
