@@ -6,6 +6,6 @@ class Icefloor < Cask
   homepage 'http://www.hanynet.com/icefloor/'
   license :oss
 
-  nested_container "IceFloor #{version}.dmg"
+  container :nested => "IceFloor #{version}.dmg"
   app 'IceFloor.app'
 end
