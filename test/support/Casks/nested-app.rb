@@ -5,6 +5,6 @@ class NestedApp < TestCask
   url TestHelper.local_binary_url('NestedApp.dmg.zip')
   homepage 'http://example.com/nested-app'
 
-  nested_container 'NestedApp.dmg'
+  container :nested => 'NestedApp.dmg'
   app 'MyNestedApp.app'
 end

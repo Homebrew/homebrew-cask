@@ -150,20 +150,20 @@ Other commonly-used stanzas are:
 
 Additional stanzas you might need for special use-cases:
 
-| name               | value       |
-| ------------------ | ----------- |
-| `prefpane`         | relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
-| `colorpicker`      | relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
-| `qlplugin`         | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
-| `font`             | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
-| `widget`           | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation (ALPHA: DOES NOT WORK YET)
-| `service`          | relative path to a service that should be linked into the `~/Library/Services` folder on installation
-| `binary`           | relative path to a binary that should be linked into the `/usr/local/bin` folder on installation
-| `input_method`     | relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
-| `screen_saver`     | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
-| `suite`            | relative path to a containing directory that should be linked into the `~/Applications` folder on installation
-| `nested_container` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
-| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#caveats-stanza-details))
+| name                   | value       |
+| ---------------------- | ----------- |
+| `prefpane`             | relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
+| `colorpicker`          | relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
+| `qlplugin`             | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
+| `font`                 | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
+| `widget`               | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation (ALPHA: DOES NOT WORK YET)
+| `service`              | relative path to a service that should be linked into the `~/Library/Services` folder on installation
+| `binary`               | relative path to a binary that should be linked into the `/usr/local/bin` folder on installation
+| `input_method`         | relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
+| `screen_saver`         | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
+| `suite`                | relative path to a containing directory that should be linked into the `~/Applications` folder on installation
+| `container :nested =>` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
+| `caveats`              | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#caveats-stanza-details))
 
 Even more special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#optional-stanzas) and [Legacy Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#legacy-stanzas).
 

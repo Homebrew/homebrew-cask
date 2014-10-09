@@ -63,6 +63,7 @@ This notice will be removed for the final form.**
 | `depends_on_formula`  | `depends_on :formula`
 | `install`             | `pkg`
 | `link`                | `app` (or sometimes `suite` or `artifact`)
+| `nested_container`    | `container :nested =>`
 | `uninstall :files`    | `uninstall :delete`
 | `version 'latest'`    | `version :latest`
 
