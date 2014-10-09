@@ -7,7 +7,7 @@ class DevonthinkProOffice < Cask
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
   license :unknown
 
-  nested_container 'DEVONthink_Pro_Office.dmg'
+  container :nested => 'DEVONthink_Pro_Office.dmg'
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/3838
   app 'DEVONthink Pro.app', :target => 'DEVONthink Pro Office.app'
