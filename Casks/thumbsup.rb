@@ -6,6 +6,6 @@ class Thumbsup < Cask
   homepage 'http://www.devontechnologies.com/products/freeware.html#c966'
   license :unknown
 
-  nested_container 'ThumbsUp.dmg'
+  container :nested => 'ThumbsUp.dmg'
   app 'ThumbsUp.app'
 end
