@@ -1,8 +1,8 @@
 class Typinator < Cask
-  version '6.1'
-  sha256 'd08ad4595a3d1668ad5542030149ff7f9a9188eb5400b2fcda909c3ed4b36997'
+  version '6.2'
+  sha256 '4b9b3acc26716dbf01951043f0102489ffd32436cdad6820e382dbb5b1fa0eb6'
 
-  url 'http://www.ergonis.com/downloads/products/typinator/Typinator61-Install.dmg'
+  url "http://www.ergonis.com/downloads/products/typinator/Typinator#{version.gsub('.', '')}-Install.dmg"
   homepage 'http://www.ergonis.com/'
   license :unknown
 
