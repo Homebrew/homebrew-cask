@@ -7,11 +7,4 @@ class Keepassx < Cask
   license :unknown
 
   app 'KeePassX.app'
-  # This caveat added Mar 2014.  todo OK to delete it after 3-4 months.
-  caveats <<-EOS.undent
-    If you are upgrading from an older version of KeePassX, you must
-    manually import the old-format database via menu item
-
-      Database -> Import KeePass 1 database
-  EOS
 end
