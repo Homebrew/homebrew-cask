@@ -7,6 +7,6 @@ class Anxiety < Cask
   homepage 'http://www.anxietyapp.com/'
   license :unknown
 
-  nested_container 'Anxiety.dmg'
+  container :nested => 'Anxiety.dmg'
   app 'Anxiety.app'
 end
