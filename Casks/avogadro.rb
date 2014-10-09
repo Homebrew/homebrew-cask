@@ -6,6 +6,6 @@ class Avogadro < Cask
   homepage 'http://avogadro.openmolecules.net/'
   license :oss
 
-  nested_container "Avogadro-#{version}.dmg"
+  container :nested => "Avogadro-#{version}.dmg"
   app 'Avogadro.app'
 end
