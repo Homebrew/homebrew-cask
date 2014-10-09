@@ -6,6 +6,6 @@ class Macmoney < Cask
   homepage 'http://www.devon.riceball.net/display.php?file=m01'
   license :unknown
 
-  nested_container "MacMoney_#{version}.dmg"
+  container :nested => "MacMoney_#{version}.dmg"
   app 'MacMoney.app'
 end
