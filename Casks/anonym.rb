@@ -6,6 +6,6 @@ class Anonym < Cask
   homepage 'http://www.hanynet.com/anonym/index.html'
   license :oss
 
-  nested_container "Anonym #{version}.dmg"
+  container :nested => "Anonym #{version}.dmg"
   app 'Anonym.app'
 end
