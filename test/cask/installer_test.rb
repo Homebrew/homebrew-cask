@@ -252,17 +252,6 @@ describe Cask::Installer do
       TestHelper.valid_alias?(dest_path).must_equal true
     end
 
-    it "supports new DSL form container :nested => <inner-container>" do
-      nested_app_dsl_one = Cask.load('nested-app-dsl-one')
-
-      shutup do
-        Cask::Installer.new(nested_app_dsl_one).install
-      end
-
-      dest_path = Cask.appdir/'MyNestedApp.app'
-      TestHelper.valid_alias?(dest_path).must_equal true
-    end
-
     it "generates and finds a timestamped metadata directory for an installed Cask" do
       caffeine = Cask.load('local-caffeine')
 
