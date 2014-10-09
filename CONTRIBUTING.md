@@ -188,12 +188,14 @@ fall back to this format:
 http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 ```
 
-### Dropbox URLs
+### Personal Hosting Such as Dropbox
 
-Dropbox URLs should be used only when given on the official project website.
+URLs from dropbox.com or cl.ly/cloudapp.com are not readily distinguishable
+as being controlled by the original software vendor.  These URLs should be
+used only when given as such on the official project website.
 
-Make sure to link to the binary download, rather than a Dropbox preview
-page, per https://www.dropbox.com/help/201/en .
+Also make sure to link to the binary download, rather than a preview page.
+(See <https://www.dropbox.com/help/201/en>.)
 
 ### Some Providers Block Command-line Downloads
 
