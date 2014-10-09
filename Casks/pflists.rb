@@ -4,7 +4,7 @@ class Pflists < Cask
 
   url "http://www.hanynet.com/pflists-#{version}.zip"
   homepage 'http://www.hanynet.com/pflists/index.html'
-  license :unknown
+  license :oss
 
   app 'PFLists.app'
 end
