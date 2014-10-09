@@ -6,6 +6,6 @@ class Waterroof < Cask
   homepage 'http://www.hanynet.com/waterroof/index.html'
   license :oss
 
-  nested_container "WaterRoof #{version}.dmg"
+  container :nested => "WaterRoof #{version}.dmg"
   app 'WaterRoof.app'
 end
