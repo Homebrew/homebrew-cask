@@ -12,7 +12,7 @@ class Mcs783x < Cask
   homepage 'http://www.asix.com.tw/products.php?op=ProductList&PLine=74&PSeries=109'
   license :unknown
 
-  nested_container "#{Utils.basename}/MCS7830_v#{version}.dmg"
+  container :nested => "#{Utils.basename}/MCS7830_v#{version}.dmg"
   pkg "MCS7830 v#{version}.pkg"
   # todo, is "uninstal" below (one "l") a typo, or is that really the
   # file in the package?
