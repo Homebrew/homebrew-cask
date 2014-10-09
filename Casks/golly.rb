@@ -4,7 +4,7 @@ class Golly < Cask
   if MacOS.version < :mavericks
     sha256 '6fee35e8e4f63ee2c1b0913b7e8009b2548c4e4469050f9c31791900e1e97f16'
 
-    url "http://downloads.sourceforge.net/project/golly/golly/golly-#{version}/golly-#{version}-mac106.zip/"
+    url "http://downloads.sourceforge.net/project/golly/golly/golly-#{version}/golly-#{version}-mac106.zip"
 
     app "golly-#{version}-mac106/Golly.app"
     binary "golly-#{version}-mac106/bgolly"

@@ -13,6 +13,6 @@ class Cask::CLI::Home < Cask::CLI::Base
   end
 
   def self.help
-    "opens the homepage of the cask of the given name"
+    "opens the homepage of the Cask of the given name"
   end
 end

@@ -34,6 +34,6 @@ class Cask::CLI::Create < Cask::CLI::Base
   end
 
   def self.help
-    "creates a cask of the given name and opens it in an editor"
+    "creates a Cask of the given name and opens it in an editor"
   end
 end

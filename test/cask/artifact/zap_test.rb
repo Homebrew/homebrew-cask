@@ -31,7 +31,7 @@ describe Cask::Artifact::Zap do
 
   describe 'zap_phase' do
     # todo: zap tests for :signal (implementation does not use SystemCommand)
-    it 'runs the specified zap procedures for the cask' do
+    it 'runs the specified zap procedures for the Cask' do
       zap_artifact = Cask::Artifact::Zap.new(@cask, Cask::FakeSystemCommand)
 
       Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application "System Events" to count processes whose bundle identifier is "my.fancy.package.app"'], '1')

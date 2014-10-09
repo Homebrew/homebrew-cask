@@ -177,9 +177,9 @@ class Cask::CLI::Alfred < Cask::CLI::Base
 
   def self.usage
     ohai 'brew cask alfred', <<-ALFREDHELP.undent
-      manages integration with Alfred; allows applications installed with
-      homebrew cask to be launched by Alfred by adding the Caskroom to Alfreds
-      search paths
+      manages integration with Alfred; allows applications installed via
+      homebrew-cask to be launched by Alfred, by adding the Caskroom
+      directory to Alfred's search paths
 
       subcommands:
         status - reports whether Alfred is linked

@@ -11,7 +11,7 @@ class Soundflower < Cask
     system '/usr/bin/sudo', '-E', '--',
       '/sbin/kextload', '-b', 'com.Cycling74.driver.Soundflower'
   end
-  # early_script is a workaround for a slowly unloading kext, see private-eye cask
+  # early_script is a workaround for a slowly unloading kext, see private-eye Cask
   uninstall :early_script => {
               :executable => '/sbin/kextunload',
               :args => ['-b', 'com.Cycling74.driver.Soundflower'],

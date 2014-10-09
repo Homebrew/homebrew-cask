@@ -1,6 +1,6 @@
 class PgCommander < Cask
-  version '1.5.1'
-  sha256 '082dc5b5c08e0df543424e86eef76d9aae121f7d64adf458d327542b30cd1185'
+  version '1.5.2'
+  sha256 'a7e848ad20f38cc6f9c9fd6ebccb62390fe7c050aaae5b3670c40f94019757ee'
 
   url "https://eggerapps.at/pgcommander/download/pgcommander-#{version}.zip"
   homepage 'http://eggerapps.at/pgcommander/'

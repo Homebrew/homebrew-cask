@@ -432,7 +432,7 @@ The `:target` key works similarly for most Cask artifacts, such as
 
 Don’t use `:target` for aesthetic reasons, like removing version numbers
 (`app "Slack #{version}.app", :target => 'Slack.app'`). With `app`, use it
-when it makes sense functionally and document your reason cleary in the cask:
+when it makes sense functionally and document your reason cleary in the Cask:
 was it [for clarity](../Cask/imagemin.rb); [for consistency](devonthink-pro-office.rb);
 [to prevent conflicts](flash-player-debugger.rb)? With `binary` you can
 take some extra liberties to be consistent with other command-line tools,

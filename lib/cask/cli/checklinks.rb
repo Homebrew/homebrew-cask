@@ -10,6 +10,6 @@ class Cask::CLI::Checklinks < Cask::CLI::Base
   end
 
   def self.help
-    "checks for bad cask links"
+    "checks for bad Cask links"
   end
 end

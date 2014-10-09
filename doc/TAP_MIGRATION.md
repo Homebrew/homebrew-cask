@@ -37,7 +37,7 @@ should happen for you automatically.
 
 ## Uncommitted Casks May Be Deleted
 
-If you have recently created a Cask using "brew cask create", and have not
+If you have recently created a Cask using `brew cask create`, and have not
 submitted that Cask to the main GitHub repository (meaning that your local
 repository is dirty), you should be aware that Homebrew may delete your
 uncommited Casks during the process of Tap migration.  See

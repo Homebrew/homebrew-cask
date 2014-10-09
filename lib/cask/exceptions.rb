@@ -18,7 +18,7 @@ class CaskUnavailableError < CaskError
   end
 
   def to_s
-    "No available cask for #{name}"
+    "No available Cask for #{name}"
   end
 end
 
@@ -29,7 +29,7 @@ class CaskAlreadyCreatedError < CaskError
   end
 
   def to_s
-    %Q{Cask for #{name} already exists. Run "brew cask cat #{name}" to see it.}
+    %Q{A Cask for #{name} already exists. Run "brew cask cat #{name}" to see it.}
   end
 end
 
@@ -40,7 +40,7 @@ class CaskAlreadyInstalledError < CaskError
   end
 
   def to_s
-    %Q{Cask for #{name} is already installed. Add the "--force" option to force re-install.}
+    %Q{A Cask for #{name} is already installed. Add the "--force" option to force re-install.}
   end
 end
 
@@ -69,7 +69,7 @@ end
 
 class CaskUnspecifiedError < CaskError
   def to_s
-    "This command requires a cask's name"
+    "This command requires a Cask name"
   end
 end
 
