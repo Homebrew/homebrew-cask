@@ -10,7 +10,7 @@ class GitAnnex < Cask
     preflight do
       system '/bin/mv', '--', destination_path.join('git-annex-latest'), destination_path.join('git-annex-latest.dmg')
     end
-    nested_container 'git-annex-latest.dmg'
+    container :nested => 'git-annex-latest.dmg'
   else
     url 'http://downloads.kitenet.net/git-annex/OSX/current/10.9_Mavericks/git-annex.dmg'
   end
