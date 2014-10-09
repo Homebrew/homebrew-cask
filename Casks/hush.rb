@@ -6,6 +6,6 @@ class Hush < Cask
   homepage 'http://coffitivity.com/hush/'
   license :unknown
 
-  nested_container 'Hush.dmg'
+  container :nested => 'Hush.dmg'
   app 'Hush.app'
 end
