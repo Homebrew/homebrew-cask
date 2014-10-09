@@ -1,4 +1,4 @@
-class Ipinmenubar < Cask
+class IpInMenuBar < Cask
   version '4.4'
   sha256 '12a74f26266ac6fe85481b5d6c85acd4a91f800563d905120b7fa274b37a76d7'
 
