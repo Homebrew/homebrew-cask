@@ -4,7 +4,7 @@ class Waterroof < Cask
 
   url "http://www.hanynet.com/waterroof-#{version}.zip"
   homepage 'http://www.hanynet.com/waterroof/index.html'
-  license :unknown
+  license :oss
 
   nested_container "WaterRoof #{version}.dmg"
   app 'WaterRoof.app'
