@@ -2,7 +2,7 @@ class Stattransfer < Cask
   version '12'
   sha256 '2559dffffd73f996604860e6fbdf2fd3ef4903bf8a37acc6016b6ea52affebd2'
 
-  url "http://www.stattransfer.com/downloads/stdemo.dmg"
+  url 'http://www.stattransfer.com/downloads/stdemo.dmg'
   homepage 'https://stattransfer.com/'
   license :commercial
 
