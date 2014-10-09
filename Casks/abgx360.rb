@@ -3,7 +3,7 @@ class Abgx360 < Cask
   sha256 'b2b066d1500e6c6a64d103b2c1a9e1760be0a4e16df314b4868024c19df8c741'
 
   url "http://dl.dropbox.com/u/59058148/abgx360-#{version}.pkg"
-  homepage 'http://abgx360.net/'
+  homepage 'http://abgx360.xecuter.com/'
   license :unknown
 
   pkg "abgx360-#{version}.pkg"
