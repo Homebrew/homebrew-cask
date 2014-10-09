@@ -6,6 +6,6 @@ class Capsee < Cask
   homepage 'http://www.threemagination.com/capsee/'
   license :unknown
 
-  nested_container 'CapSee12.dmg'
+  container :nested => 'CapSee12.dmg'
   app 'CapSee.app'
 end
