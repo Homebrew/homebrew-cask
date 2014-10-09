@@ -6,6 +6,6 @@ class ASlowerSpeedOfLight < Cask
   homepage 'http://gamelab.mit.edu/games/a-slower-speed-of-light/'
   license :unknown
 
-  nested_container 'A Slower Speed of Light.dmg'
+  container :nested => 'A Slower Speed of Light.dmg'
   app 'A Slower Speed of Light.app'
 end
