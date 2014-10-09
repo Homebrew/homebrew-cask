@@ -1,8 +1,8 @@
 class Rftg < Cask
-  version '0.8.1'
-  sha256 '0cc507f0713d33aa7fdc5d26f86a7384d5b55d94506b2a8cfec994ac6882fab1'
+  version '0.9.4'
+  sha256 'f60585e3f47cf09df77c578bb1c7dad31dfe4dbe223da35f190b2573a2803bd7'
 
-  url 'https://dl.dropbox.com/u/51639697/rftg-osx-081.zip'
+  url "http://keldon.net/rftg/rftg-osx-#{version}.zip"
   homepage 'http://keldon.net/rftg/'
   license :unknown
 
