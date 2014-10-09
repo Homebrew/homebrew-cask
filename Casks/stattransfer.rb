@@ -6,6 +6,6 @@ class Stattransfer < Cask
   homepage 'https://stattransfer.com/'
   license :commercial
 
-  pkg 'st_installer_v#{version}.pkg'
+  pkg "st_installer_v#{version}.pkg"
   uninstall :pkgutil => 'com.circlesys.pkg',
 end
