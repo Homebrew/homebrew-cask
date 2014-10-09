@@ -4,7 +4,7 @@ class Anonym < Cask
 
   url "http://www.hanynet.com/anonym-#{version}.zip"
   homepage 'http://www.hanynet.com/anonym/index.html'
-  license :unknown
+  license :oss
 
   nested_container "Anonym #{version}.dmg"
   app 'Anonym.app'
