@@ -10,7 +10,7 @@ class Cask::SystemCommand
     raw_stdin, raw_stdout, raw_stderr, raw_wait_thr = Open3.popen3(*command.map(&:to_s))
 
     if options[:input]
-      options[:input].each { |line| raw_stdin.puts line }
+      Array(options[:input]).each { |line| raw_stdin.puts line }
     end
     raw_stdin.close_write
 
