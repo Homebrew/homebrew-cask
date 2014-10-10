@@ -1,8 +1,8 @@
 class Dolphin < Cask
-  version '4.0'
-  sha256 'c5968f668225d76273c77ad4ddbcb1e9eb2fc5df59918395c04ebf53f80ca8a8'
+  version '4.0-3517'
+  sha256 '413adc0fc7ff4ffb2a1254939fbfe4cff2aa603ed955f37f48dcedb8483be1d4'
 
-  url "https://dl-mirror.dolphin-emu.org/#{version}/dolphin-#{version}.dmg"
+  url "http://dl.dolphin-emu.org/builds/dolphin-master-#{version}.dmg"
   homepage 'http://www.dolphin-emu.org/'
   license :unknown
 
