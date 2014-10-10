@@ -8,7 +8,7 @@ class Qgis < Cask
   pkg 'Install QGIS.pkg'
   uninstall :pkgutil => 'org.qgis.qgis-*'
   caveats <<-EOS.undent
-    #{@cask} requires the GDAL framework and Matplotlib to be installed first,
+    #{title} requires the GDAL framework and Matplotlib to be installed first,
     otherwise the installation will fail. In case of problems, try installing
     them:
 
