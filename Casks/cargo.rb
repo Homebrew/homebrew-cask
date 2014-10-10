@@ -2,7 +2,7 @@ class Cargo < Cask
   version :latest
   sha256 :no_check
 
- module Utils
+  module Utils
     def self.distname
       'cargo-nightly-x86_64-apple-darwin'
     end
