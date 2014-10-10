@@ -7,6 +7,8 @@ class Truecrypt < Cask
   license :oss
 
   pkg "TrueCrypt #{version}.mpkg"
+  uninstall :pkgutil => 'org.TrueCryptFoundation.TrueCrypt'
+
   caveats do
     files_in_usr_local
     <<-EOS.undent
@@ -15,5 +17,4 @@ class Truecrypt < Cask
       http://truecrypt.sourceforge.net/
     EOS
   end
-  uninstall :pkgutil => 'org.TrueCryptFoundation.TrueCrypt'
 end
