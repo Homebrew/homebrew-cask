@@ -8,5 +8,8 @@ class IntelHaxm < Cask
 
   container :nested => "haxm-macosx_r04/IntelHAXM_#{version}.dmg"
   pkg "IntelHAXM_#{version}.mpkg"
-  uninstall :script => { :executable => '/System/Library/Extensions/intelhaxm.kext/Contents/Resources/uninstall.sh', :input => 'y' }
+  uninstall :script => {
+                        :executable => '/System/Library/Extensions/intelhaxm.kext/Contents/Resources/uninstall.sh',
+                        :input      => ['y']
+                       }
 end
