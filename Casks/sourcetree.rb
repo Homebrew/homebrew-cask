@@ -9,10 +9,11 @@ class Sourcetree < Cask
 
   app 'SourceTree.app'
   binary 'SourceTree.app/Contents/Resources/stree'
-  caveats do
-    files_in_usr_local
-  end
   zap :delete => [
                   '~/Library/Application Support/SourceTree',
                  ]
+
+  caveats do
+    files_in_usr_local
+  end
 end
