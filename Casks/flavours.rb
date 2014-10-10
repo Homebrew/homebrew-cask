@@ -8,9 +8,6 @@ class Flavours < Cask
   license :unknown
 
   app 'Flavours.app'
-  caveats do
-    files_in_usr_local
-  end
 
   uninstall :launchctl => 'net.interacto.flavours.helper',
             :quit  => 'net.interacto.Flavours',
@@ -21,4 +18,8 @@ class Flavours < Cask
                         '/usr/local/lib/libflavours.dylib',
                         '/usr/local/lib/libflavoursui.dylib',
                        ]
+
+  caveats do
+    files_in_usr_local
+  end
 end
