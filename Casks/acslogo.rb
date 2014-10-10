@@ -5,5 +5,5 @@ class Acslogo < Cask
   url 'http://www.alancsmith.co.uk/logo/ACSLogo151.dmg'
   homepage 'http://www.alancsmith.co.uk/logo/index.html'
 
-  app 'ACSLogo.app'
+  app 'ACSLogo/ACSLogo.app'
 end
