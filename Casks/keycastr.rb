@@ -9,7 +9,7 @@ class Keycastr < Cask
   app 'KeyCastr.app'
 
   caveats <<-EOS.undent
-    For OSX 10.9 or later, #{@cask} requires that you "Enable access for assistive devices".
+    For OSX 10.9 or later, #{title} requires that you "Enable access for assistive devices".
     See https://github.com/sdeken/keycastr/issues/5
   EOS
 end
