@@ -8,7 +8,7 @@ class Tvrenamer < Cask
 
   app "TVRenamer-#{version}.app"
   caveats <<-EOS.undent
-    #{@cask} requires a Java JRE to be installed. You should be prompted to install
+    #{title} requires a Java JRE to be installed. You should be prompted to install
     Java on the first execution if it is not already present.
   EOS
 end

@@ -13,6 +13,6 @@ class Sts < Cask
   license :unknown
 
   caveats do
-    manual_installer "Installer - Spring Tool Suite #{@cask.version}.RELEASE.app"
+    manual_installer "Installer - Spring Tool Suite #{version}.RELEASE.app"
   end
 end

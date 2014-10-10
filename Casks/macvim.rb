@@ -15,6 +15,11 @@ class Macvim < Cask
 
   app 'MacVim-snapshot-73/MacVim.app'
   binary 'MacVim-snapshot-73/mvim'
+  zap :delete => [
+                  '~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
+                  '~/Library/Preferences/org.vim.MacVim.plist',
+                 ]
+
   caveats do
     files_in_usr_local
     <<-EOS.undent
@@ -23,8 +28,4 @@ class Macvim < Cask
       Cask and the Formula of MacVim.
     EOS
   end
-  zap :delete => [
-                  '~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
-                  '~/Library/Preferences/org.vim.MacVim.plist',
-                 ]
 end

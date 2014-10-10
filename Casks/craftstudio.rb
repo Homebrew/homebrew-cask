@@ -13,7 +13,7 @@ class Craftstudio < Cask
   zap       :delete => '~/Library/CraftStudio'
 
   caveats <<-EOS.undent
-    #{@cask} requires mono-mre, available via
+    #{title} requires mono-mre, available via
 
       brew cask install mono-mre
   EOS

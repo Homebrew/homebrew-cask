@@ -8,7 +8,7 @@ class Ioquake3 < Cask
 
   suite 'ioquake3'
   caveats <<-EOS.undent
-    To complete the installation of #{@cask}, you will have to copy the file
+    To complete the installation of #{title}, you will have to copy the file
     'pak0.pk3' from your Quake 3 Arena installation support directory into
     ~/Applications/ioquake3/baseq3/.
   EOS

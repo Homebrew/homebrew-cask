@@ -6,11 +6,11 @@ class Xamarin < Cask
   homepage 'http://xamarin.com/platform'
   license :unknown
 
+  uninstall :delete => '/Applications/Xamarin Studio.app'
+  zap       :delete => '~/Library/Developer/Xamarin'
+
   caveats do
     puts 'This app requires the JRE (Java Runtime Environment) to be installed'
     manual_installer 'Install Xamarin.app'
   end
-
-  uninstall :delete => '/Applications/Xamarin Studio.app'
-  zap       :delete => '~/Library/Developer/Xamarin'
 end

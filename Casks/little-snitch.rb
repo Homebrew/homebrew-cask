@@ -6,13 +6,14 @@ class LittleSnitch < Cask
   homepage 'http://www.obdev.at/products/littlesnitch/index.html'
   license :unknown
 
-  caveats do
-    manual_installer 'Little Snitch Installer.app'
-  end
   zap :delete => [
                   '~/Library/Preferences/at.obdev.LittleSnitchNetworkMonitor.plist',
                   '~/Library/Application Support/Little Snitch/rules.usr.xpl',
                   '~/Library/Application Support/Little Snitch/configuration.xpl',
                   '~/Library/Application Support/Little Snitch/configuration.user.xpl',
                  ]
+
+  caveats do
+    manual_installer 'Little Snitch Installer.app'
+  end
 end

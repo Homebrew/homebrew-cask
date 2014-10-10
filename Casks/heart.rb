@@ -13,7 +13,7 @@ class Heart < Cask
   end
 
   caveats <<-EOS.undent
-    #{@cask} requires Adobe Air, available via
+    #{title} requires Adobe Air, available via
 
       brew cask install adobe-air
   EOS

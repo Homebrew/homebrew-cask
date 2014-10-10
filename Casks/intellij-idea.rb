@@ -13,12 +13,12 @@ class IntellijIdea < Cask
   end
 
   caveats <<-EOS.undent
-    #{@cask} may require Java 7 (an older version) available from the
+    #{title} may require Java 7 (an older version) available from the
     caskroom-versions repository via
 
       brew cask install caskroom/versions/java7
 
-    Alternatively, #{@cask} can be modified to use Java 8 as described in
+    Alternatively, #{title} can be modified to use Java 8 as described in
 
       https://github.com/caskroom/homebrew-cask/issues/4500#issuecomment-43955932
   EOS

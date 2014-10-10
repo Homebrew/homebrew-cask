@@ -7,11 +7,6 @@ class Wireshark < Cask
   license :unknown
 
   pkg "Wireshark #{version} Intel 64.pkg"
-
-  caveats do
-    x11_required
-  end
-
   postflight do
     if Process.euid == 0 then
       ohai 'Note:'
@@ -43,4 +38,8 @@ class Wireshark < Cask
                          '/usr/local/bin/tshark',
                          '/usr/local/bin/wireshark',
                         ]
+
+  caveats do
+    x11_required
+  end
 end
