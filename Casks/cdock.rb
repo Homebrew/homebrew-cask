@@ -8,7 +8,7 @@ class Cdock < Cask
 
   app 'cDock.app'
   caveats <<-EOS.undent
-    #{@cask} requires easysimbl, available via
+    #{title} requires easysimbl, available via
 
       brew cask install easysimbl
   EOS
