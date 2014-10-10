@@ -8,7 +8,7 @@ class Grooveshark < Cask
 
   app 'Grooveshark.app'
   caveats <<-EOS.undent
-    #{@cask} requires Adobe Flash, available via
+    #{title} requires Adobe Flash, available via
 
       brew cask install flash
   EOS
