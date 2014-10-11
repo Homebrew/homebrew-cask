@@ -4,7 +4,7 @@ class Qlprettypatch < Cask
 
   url "https://github.com/atnan/QLPrettyPatch/releases/download/v#{version}/QLPrettyPatch.qlgenerator.zip"
   homepage 'https://github.com/atnan/QLPrettyPatch'
-  license :oss
+  license :bsd
 
   qlplugin 'QLPrettyPatch.qlgenerator'
 end
