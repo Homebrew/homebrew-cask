@@ -7,5 +7,8 @@ class Silverlight < Cask
   license :unknown
 
   pkg 'Silverlight.pkg'
+
   uninstall :pkgutil => 'com.microsoft.SilverlightInstaller'
+  zap       :delete  => '~/Library/Application Support/Microsoft/Silverlight',
+            :rmdir   => '~/Library/Application Support/Microsoft/'
 end
