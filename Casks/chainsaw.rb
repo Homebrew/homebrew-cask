@@ -7,4 +7,6 @@ class Chainsaw < Cask
   license :unknown
 
   app 'Chainsaw.app'
+
+  zap :delete => '~/.chainsaw'
 end

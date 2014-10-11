@@ -7,6 +7,11 @@ class Flash < Cask
   license :unknown
 
   pkg 'Install Adobe Flash Player.pkg'
+
   uninstall :pkgutil => 'com.adobe.pkg.FlashPlayer',
             :delete  => '/Library/Internet Plug-Ins/Flash Player.plugin'
+  zap       :delete => [
+                        '~/Library/Caches/Adobe/Flash Player',
+                        '~/Library/Logs/FlashPlayerInstallManager.log',
+                       ]
 end

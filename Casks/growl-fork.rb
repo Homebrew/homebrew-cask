@@ -7,5 +7,11 @@ class GrowlFork < Cask
   license :unknown
 
   pkg 'Growl.pkg'
+
   uninstall :delete => '/Library/PreferencePanes/Growl.prefPane'
+  zap       :delete => [
+                        '~/Library/Application Scripts/com.Growl.GrowlHelperApp',
+                        '~/Library/Containers/com.Growl.GrowlHelperApp',
+                        '~/Library/Containers/com.growl.GrowlLauncher',
+                       ]
 end

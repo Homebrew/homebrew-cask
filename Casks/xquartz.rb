@@ -23,4 +23,10 @@ class Xquartz < Cask
             :launchctl => 'org.macosforge.xquartz.startx',
             :pkgutil => 'org.macosforge.xquartz.pkg',
             :delete => '/opt/X11/'
+  zap       :delete => [
+                        '~/Library/Caches/org.macosforge.xquartz.X11',
+                        '~/Library/Logs/X11',
+                        '~/Library/Logs/X11.org.macosforge.xquartz.log',
+                        '~/Library/Logs/X11.org.macosforge.xquartz.log.old',
+                       ]
 end

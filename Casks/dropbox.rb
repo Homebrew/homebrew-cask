@@ -7,4 +7,6 @@ class Dropbox < Cask
   license :unknown
 
   app 'Dropbox.app'
+
+  zap :delete => '~/.dropbox'
 end

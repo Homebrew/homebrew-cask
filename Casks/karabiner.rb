@@ -9,14 +9,16 @@ class Karabiner < Cask
   pkg 'Karabiner.pkg'
   binary '/Applications/Karabiner.app/Contents/Library/vendor/bin/blueutil'
   binary '/Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position'
+
   uninstall :quit => 'org.pqrs.Karabiner',
             :pkgutil => 'org.pqrs.driver.Karabiner',
             :kext => 'org.pqrs.driver.Karabiner'
-  zap :delete => [
-                  '~/Library/Preferences/org.pqrs.Karabiner.plist',
-                  '~/Library/Preferences/org.pqrs.Karabiner-AXNotifier.plist',
-                  '~/Library/Preferences/org.pqrs.Karabiner.multitouchextension.plist',
-                 ]
-  # todo :rmdir not yet supported
-  #    :rmdir '~/Library/Application Support/Karabiner'
+  zap       :delete => [
+                        '~/Library/Application Support/Karabiner',
+                        '~/Library/Application Support/KeyRemap4MacBook',
+                        '~/Library/Caches/org.pqrs.KeyRemap4MacBook',
+                        '~/Library/Preferences/org.pqrs.Karabiner-AXNotifier.plist',
+                        '~/Library/Preferences/org.pqrs.Karabiner.multitouchextension.plist',
+                        '~/Library/Preferences/org.pqrs.Karabiner.plist',
+                       ]
 end

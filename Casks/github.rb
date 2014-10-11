@@ -11,4 +11,15 @@ class Github < Cask
   postflight do
     system '/usr/bin/defaults', 'write', 'com.github.GitHub', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
+
+  zap :delete => [
+                  '~/Library/Application Support/GitHub for Mac',
+                  '~/Library/Application Support/ShipIt_stderr.log',
+                  '~/Library/Application Support/ShipIt_stdout.log',
+                  '~/Library/Application Support/com.github.GitHub',
+                  '~/Library/Application Support/com.github.GitHub.ShipIt',
+                  '~/Library/Caches/GitHub for Mac',
+                  '~/Library/Caches/com.github.GitHub',
+                  '~/Library/Containers/com.github.GitHub.Conduit',
+                 ]
 end

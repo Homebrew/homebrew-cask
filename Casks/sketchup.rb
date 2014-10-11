@@ -8,4 +8,9 @@ class Sketchup < Cask
   license :unknown
 
   suite 'SketchUp 2014'
+
+  zap :delete => [
+                  '~/Library/Application Support/Google SketchUp 8',
+                  '~/Library/Caches/com.google.sketchupfree8',
+                 ]
 end

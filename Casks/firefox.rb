@@ -7,4 +7,9 @@ class Firefox < Cask
   license :oss
 
   app 'Firefox.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/Firefox',
+                  '~/Library/Caches/Firefox',
+                 ]
 end

@@ -8,4 +8,9 @@ class FlashPlayerDebugger < Cask
 
   # Renamed to avoid conflict with flash-player.
   app 'Flash Player.app', :target => 'Flash Player Debugger.app'
+
+  zap :delete => [
+                  '~/Library/Caches/Adobe/Flash Player',
+                  '~/Library/Logs/FlashPlayerInstallManager.log',
+                 ]
 end

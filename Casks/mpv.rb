@@ -8,13 +8,13 @@ class Mpv < Cask
 
   app 'mpv.app'
   binary 'mpv.app/Contents/MacOS/mpv'
+
   zap :delete => [
                   '~/.mpv/channels.conf',
                   '~/.mpv/config',
                   '~/.mpv/input.conf',
-                 ]
-  # todo :rmdir is not yet supported
-  #   :rmdir     '~/.mpv'
+                 ],
+      :rmdir  => '~/.mpv'
 
   caveats do
     files_in_usr_local

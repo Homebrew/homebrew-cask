@@ -7,4 +7,9 @@ class Inky < Cask
   license :unknown
 
   app 'Inky.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/Arcode',
+                  '~/Library/Caches/com.arcode.inky',
+                 ]
 end

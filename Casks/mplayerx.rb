@@ -7,4 +7,6 @@ class Mplayerx < Cask
   license :oss
 
   app 'MPlayerX.app'
+
+  zap :delete => '~/.mplayer'
 end

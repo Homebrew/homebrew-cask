@@ -7,4 +7,6 @@ class Cura < Cask
   license :oss
 
   app 'Cura/Cura.app'
+
+  zap :delete => '~/.cura'
 end

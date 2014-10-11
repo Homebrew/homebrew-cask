@@ -7,4 +7,6 @@ class Razorsql < Cask
   license :unknown
 
   app 'RazorSQL.app'
+
+  zap :delete => '~/.razorsql'
 end

@@ -7,4 +7,10 @@ class GoogleEarth < Cask
   license :unknown
 
   app 'Google Earth.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/Google Earth',
+                  '~/Library/Caches/Google Earth',
+                  '~/Library/Caches/com.Google.GoogleEarthPlus',
+                 ]
 end

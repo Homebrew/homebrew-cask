@@ -7,4 +7,7 @@ class GoogleRefine < Cask
   license :oss
 
   app 'Google Refine.app'
+
+  zap :delete => '~/Library/Application Support/Google/Refine',
+      :rmdir  => '~/Library/Application Support/Google/'
 end

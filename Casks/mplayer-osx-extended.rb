@@ -8,4 +8,6 @@ class MplayerOsxExtended < Cask
   license :oss
 
   app 'MPlayer OSX Extended.app'
+
+  zap :delete => '~/.mplayer'
 end

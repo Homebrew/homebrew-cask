@@ -7,4 +7,9 @@ class FlashPlayer < Cask
   license :unknown
 
   app 'Flash Player.app'
+
+  zap :delete => [
+                  '~/Library/Caches/Adobe/Flash Player',
+                  '~/Library/Logs/FlashPlayerInstallManager.log',
+                 ]
 end

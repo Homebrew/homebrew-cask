@@ -12,8 +12,8 @@ class Atom < Cask
   postflight do
     system '/usr/bin/defaults', 'write', 'com.github.atom', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
+
   zap :delete => [
-                  '~/Library/Preferences/com.github.atom.plist',
                   '~/.atom/config.cson',
                   '~/.atom/init.coffee',
                   '~/.atom/keymap.cson',
@@ -21,5 +21,11 @@ class Atom < Cask
                   '~/.atom/packages',
                   '~/.atom/snippets.cson',
                   '~/.atom/styles.less',
-                 ]
+                  '~/Library/Application Support/ShipIt_stderr.log',
+                  '~/Library/Application Support/ShipIt_stdout.log',
+                  '~/Library/Application Support/com.github.atom.ShipIt',
+                  '~/Library/Caches/com.github.atom',
+                  '~/Library/Preferences/com.github.atom.plist',
+                 ],
+      :rmdir  => '~/.atom/'
 end

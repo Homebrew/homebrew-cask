@@ -9,8 +9,10 @@ class Sourcetree < Cask
 
   app 'SourceTree.app'
   binary 'SourceTree.app/Contents/Resources/stree'
+
   zap :delete => [
                   '~/Library/Application Support/SourceTree',
+                  '~/Library/Caches/com.torusknot.SourceTreeNotMAS',
                  ]
 
   caveats do

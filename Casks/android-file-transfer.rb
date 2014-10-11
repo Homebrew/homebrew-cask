@@ -7,4 +7,7 @@ class AndroidFileTransfer < Cask
   license :unknown
 
   app 'Android File Transfer.app'
+
+  zap :delete => '~/Library/Application Support/Google/Android File Transfer',
+      :rmdir  => '~/Library/Application Support/Google/'
 end

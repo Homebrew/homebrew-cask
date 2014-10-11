@@ -13,9 +13,13 @@ class Soulver < Cask
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'com.acqualia.soulver', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
+
   zap :delete => [
                   # todo verify that this does not contain user-generated content
                   # '~/Library/Application Support/Soulver',
                   '~/Library/Preferences/com.acqualia.soulver.plist',
+                  '~/Library/Autosave Information/Unsaved Soulver Document.soulver',
+                  # todo glob/expand support
+                  # '~/Library/Autosave Information/Unsaved Soulver Document 2.soulver',
                  ]
 end

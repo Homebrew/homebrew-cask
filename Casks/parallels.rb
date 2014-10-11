@@ -7,6 +7,7 @@ class Parallels < Cask
   license :unknown
 
   pkg 'Install.mpkg'
+
   uninstall :pkgutil => 'com.parallels.pkg.virtualization.bundle',
             :kext    => [
                          'com.parallels.kext.usbconnect',
@@ -15,4 +16,5 @@ class Parallels < Cask
                          'com.parallels.kext.netbridge',
                          'com.parallels.kext.vnic',
                         ]
+  zap       :delete  => '~/.parallels_settings'
 end

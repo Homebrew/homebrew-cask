@@ -7,4 +7,6 @@ class Rstudio < Cask
   license :unknown
 
   app 'RStudio.app'
+
+  zap :delete => '~/.rstudio-desktop'
 end

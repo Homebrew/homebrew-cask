@@ -7,4 +7,6 @@ class Texmacs < Cask
   license :unknown
 
   app "TeXmacs-#{version}.app"
+
+  zap :delete => '~/.TeXmacs'
 end

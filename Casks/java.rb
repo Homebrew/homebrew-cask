@@ -50,6 +50,13 @@ class Java < Cask
                         '/Library/Java/Home',
                         '/usr/lib/java/libjdns_sd.jnilib',
                        ]
+  zap       :delete => [
+                        '~/Library/Application Support/Oracle/Java',
+                        '~/Library/Caches/com.oracle.java.Java-Updater',
+                        '~/Library/Caches/net.java.openjdk.cmd',
+                       ],
+            :rmdir  => '~/Library/Application Support/Oracle/'
+
   caveats <<-EOS.undent
     This Cask makes minor modifications to the JRE to prevent issues with
     packaged applications, as discussed here:
