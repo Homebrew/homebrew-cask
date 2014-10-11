@@ -4,7 +4,7 @@ class CdTo < Cask
 
   url "https://github.com/jbtule/cdto/releases/download/#{version.gsub('.', '_')}/cdto_#{version.gsub('.', '_').gsub(/_\d$/, '')}.zip"
   homepage 'https://github.com/jbtule/cdto'
-  license :oss
+  license :mit
 
   app "cdto_#{version.gsub('.', '_').gsub(/_\d$/, '')}/terminal/cd to.app"
 end
