@@ -5,7 +5,7 @@ class Twentytwo < Cask
   url 'https://github.com/marcw/twentytwo/raw/master/dist/TwentyTwo.dmg'
   appcast 'https://raw.github.com/marcw/soundcleod/master/appcast.xml'
   homepage 'https://github.com/marcw/twentytwo'
-  license :oss
+  license :mit
 
   app 'TwentyTwo.app'
 end
