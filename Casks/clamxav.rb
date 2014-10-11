@@ -12,6 +12,14 @@ class Clamxav < Cask
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'uk.co.markallan.clamxav', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
+
+  zap :delete => [
+                  '~/Library/Caches/uk.co.markallan.clamxav',
+                  '~/Library/Logs/clamXav-scan.log',
+                  # todo glob/expand needed here
+                  '~/Library/Logs/clamXav-scan.log.0.bz2',
+                 ]
+
   caveats do
     # this happens sometime after installation, but still worth warning about
     files_in_usr_local
