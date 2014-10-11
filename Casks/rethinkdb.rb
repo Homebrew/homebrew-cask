@@ -4,7 +4,7 @@ class Rethinkdb < Cask
 
   url "http://download.rethinkdb.com/osx/rethinkdb-#{version}.dmg"
   homepage 'http://www.rethinkdb.com'
-  license :unknown
+  license :affero
 
   pkg "rethinkdb-#{version}.pkg"
   uninstall :script  => { :executable => 'uninstall-rethinkdb.sh' },
