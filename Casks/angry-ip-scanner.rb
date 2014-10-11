@@ -4,7 +4,7 @@ class AngryIpScanner < Cask
 
   url "https://github.com/angryziber/ipscan/releases/download/#{version}/ipscan-mac-#{version}.zip"
   homepage 'http://angryip.org'
-  license :oss
+  license :gpl
 
   app 'Angry IP Scanner.app'
 end
