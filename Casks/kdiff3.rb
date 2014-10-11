@@ -9,4 +9,6 @@ class Kdiff3 < Cask
 
   app 'kdiff3.app'
   binary 'kdiff3.app/Contents/MacOS/kdiff3'
+
+  zap :delete => '~/.kdiff3rc'
 end
