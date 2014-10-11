@@ -4,7 +4,7 @@ class Pandoc < Cask
 
   url "https://github.com/jgm/pandoc/releases/download/#{version}/pandoc-#{version}-osx.pkg"
   homepage 'http://johnmacfarlane.net/pandoc'
-  license :oss
+  license :gpl
 
   pkg "pandoc-#{version}-osx.pkg"
   uninstall :pkgutil => 'net.johnmacfarlane.pandoc'
