@@ -7,6 +7,11 @@ class SendToKindle < Cask
   license :unknown
 
   pkg "SendToKindleForMac-installer-v#{version}.pkg"
+
   uninstall :launchctl => 'com.amazon.sendtokindle.launcher',
             :pkgutil   => 'com.amazon.SendToKindleMacInstaller.pkg'
+  zap       :delete    => [
+                           '~/Library/Application Support/Amazon/SendToKindle',
+                           '~/Library/Logs/SendToKindleInstall.log',
+                          ]
 end
