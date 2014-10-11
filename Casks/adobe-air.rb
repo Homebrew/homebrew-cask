@@ -17,4 +17,9 @@ class AdobeAir < Cask
     :executable => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
     :args => %w[-uninstall]
   }
+  zap :delete => [
+                  '~/Library/Application Support/Adobe/AIR',
+                  '~/Library/Caches/com.adobe.air.ApplicationInstaller',
+                 ],
+      :rmdir  => '~/Library/Application Support/Adobe/'
 end
