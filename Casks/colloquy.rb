@@ -8,8 +8,11 @@ class Colloquy < Cask
   license :unknown
 
   app 'Colloquy.app'
+
   zap :delete => [
-                  '~/Library/Preferences/info.colloquy.plist',
                   '~/Library/Application Support/Colloquy',
+                  '~/Library/Caches/info.colloquy',
+                  '~/Library/Preferences/info.colloquy.plist',
+                  '~/Library/Scripts/Applications/Colloquy',
                  ]
 end
