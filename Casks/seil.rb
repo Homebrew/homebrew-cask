@@ -7,11 +7,14 @@ class Seil < Cask
   license :unknown
 
   pkg 'Seil.pkg'
+
   uninstall :quit => 'org.pqrs.Seil',
             :kext => 'org.pqrs.driver.Seil',
             :pkgutil => 'org.pqrs.driver.Seil'
-  zap :delete => [
-                  '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
-                  '~/Library/Preferences/org.pqrs.Seil.plist',
-                 ]
+  zap       :delete => [
+                        '~/Library/Caches/org.pqrs.PCKeyboardHack',
+                        '~/Library/Caches/org.pqrs.Seil',
+                        '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
+                        '~/Library/Preferences/org.pqrs.Seil.plist',
+                       ]
 end
