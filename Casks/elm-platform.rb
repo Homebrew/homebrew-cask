@@ -4,7 +4,7 @@ class ElmPlatform < Cask
 
   url "http://install.elm-lang.org/Elm-Platform-#{version}.pkg"
   homepage 'http://www.elm-lang.org'
-  license :unknown
+  license :bsd
 
   pkg "Elm-Platform-#{version}.pkg"
   uninstall :pkgutil => 'org.elm-lang.*',
