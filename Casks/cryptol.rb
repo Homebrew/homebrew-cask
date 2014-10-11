@@ -6,7 +6,7 @@ class Cryptol < Cask
   gpg "#{url}.sig",
       :key_url => 'http://cryptol.net/files/Galois.asc'
   homepage 'http://cryptol.net/'
-  license :oss
+  license :bsd
 
   binary "cryptol-#{version}-MacOSX-64/bin/cryptol"
   binary "cryptol-#{version}-MacOSX-64/lib/Cryptol.cry", :target => '/usr/local/lib/Cryptol.cry'
