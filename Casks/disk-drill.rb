@@ -8,4 +8,10 @@ class DiskDrill < Cask
   license :unknown
 
   app 'Disk Drill.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/DiskDrill',
+                  '~/Library/Caches/com.cleverfiles.Disk_Drill',
+                  '~/Library/Logs/DiskDrill.log',
+                 ]
 end
