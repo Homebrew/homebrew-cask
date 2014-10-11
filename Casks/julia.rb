@@ -7,4 +7,6 @@ class Julia < Cask
   license :unknown
 
   app "Julia-#{version}.app"
+
+  zap :delete => '~/.julia'
 end
