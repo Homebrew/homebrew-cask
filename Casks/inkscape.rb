@@ -8,6 +8,8 @@ class Inkscape < Cask
 
   app 'Inkscape.app'
 
+  zap :delete => '~/.inkscape-etc'
+
   caveats do
     x11_required
   end
