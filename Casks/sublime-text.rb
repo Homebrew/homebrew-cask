@@ -9,13 +9,13 @@ class SublimeText < Cask
 
   app 'Sublime Text 2.app'
   binary 'Sublime Text 2.app/Contents/SharedSupport/bin/subl'
+
   zap :delete => [
                   '~/Library/Application Support/Sublime Text 2/Installed Packages',
                   '~/Library/Application Support/Sublime Text 2/Packages',
                   '~/Library/Application Support/Sublime Text 2/Pristine Packages',
-                 ]
-  # todo :rmdir not yet supported
-  #   :rmdir     '~/Library/Application Support/Sublime Text 2',
+                 ],
+      :rmdir  => '~/Library/Application Support/Sublime Text 2'
 
   caveats do
     files_in_usr_local
