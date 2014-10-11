@@ -30,9 +30,13 @@ class R < Cask
                         # /Library/Frameworks/R.Framework/Versions/3.1/Resources/fontconfig/cache
                         '/Library/Frameworks/R.Framework/Versions/3.1',
                        ]
-  zap :delete => [
-                  '~/.R',
-                  '~/.Rhistory',
-                  '~/.Rprofile',
-                 ]
+  zap       :delete => [
+                        '~/.R',
+                        '~/.RData',
+                        '~/.Rapp.history',
+                        '~/.Rhistory',
+                        '~/.Rprofile',
+                        '~/Library/R',
+                        '~/Library/Caches/org.R-project.R',
+                       ]
 end
