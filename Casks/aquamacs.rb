@@ -16,4 +16,6 @@ class Aquamacs < Cask
   license :oss
 
   app 'Aquamacs.app'
+
+  zap :delete => '~/Library/Caches/Aquamacs Emacs'
 end
