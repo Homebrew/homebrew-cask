@@ -4,7 +4,7 @@ class Launchrocket < Cask
 
   url "https://github.com/jimbojsb/launchrocket/releases/download/v#{version}/LaunchRocket.prefPane.zip"
   homepage 'https://github.com/jimbojsb/launchrocket'
-  license :oss
+  license :mit
 
   prefpane 'LaunchRocket.prefPane'
 end
