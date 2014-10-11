@@ -7,4 +7,6 @@ class Keepassx < Cask
   license :unknown
 
   app 'KeePassX.app'
+
+  zap :delete => '~/.keepassx'
 end
