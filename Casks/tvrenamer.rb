@@ -4,7 +4,7 @@ class Tvrenamer < Cask
 
   url "https://github.com/tvrenamer/tvrenamer/releases/download/v#{version}/TVRenamer-#{version}-osx64.zip"
   homepage 'http://tvrenamer.org'
-  license :oss
+  license :gpl
 
   app "TVRenamer-#{version}.app"
   caveats <<-EOS.undent
