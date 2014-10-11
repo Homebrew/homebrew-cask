@@ -17,4 +17,5 @@ class Macports < Cask
   license :unknown
 
   uninstall :pkgutil => 'org.macports.MacPorts'
+  zap       :delete  => '~/.macports'
 end
