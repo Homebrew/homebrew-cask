@@ -4,7 +4,7 @@ class Komanda < Cask
 
   url 'https://github.com/mephux/komanda/releases/download/1.0.0.beta/Komanda-macosx.zip'
   homepage 'https://github.com/mephux/komanda'
-  license :oss
+  license :mit
 
   app 'Komanda.app'
 end
