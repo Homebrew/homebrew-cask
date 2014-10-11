@@ -4,7 +4,7 @@ class Isabelle < Cask
 
   url "http://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/Isabelle#{version}.dmg"
   homepage 'http://www.cl.cam.ac.uk/research/hvg/Isabelle/'
-  license :unknown
+  license :bsd
 
   app "Isabelle#{version}.app"
 end

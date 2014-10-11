@@ -4,7 +4,7 @@ class Twelf < Cask
 
   url "http://twelf.plparty.org/releases/twelf-osx-#{version}.dmg"
   homepage 'http://www.twelf.org'
-  license :unknown
+  license :bsd
 
   app 'Twelf'
 end

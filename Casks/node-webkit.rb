@@ -4,7 +4,7 @@ class NodeWebkit < Cask
 
   url "http://dl.node-webkit.org/v#{version}/node-webkit-v#{version}-osx-x64.zip"
   homepage 'https://github.com/rogerwang/node-webkit'
-  license :oss
+  license :mit
 
   caskroom_only true
 end

@@ -4,7 +4,7 @@ class Alice < Cask
 
   url "http://www.ps.uni-saarland.de/alice/download/Alice-#{version}-4-i386.dmg"
   homepage 'http://www.ps.uni-saarland.de/alice/'
-  license :unknown
+  license :mit
 
   app 'Alice.app'
 

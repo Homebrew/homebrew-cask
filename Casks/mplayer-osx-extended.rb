@@ -5,7 +5,7 @@ class MplayerOsxExtended < Cask
   url "https://github.com/sttz/MPlayer-OSX-Extended/releases/download/#{version}/MPlayer-OSX-Extended_#{version}.zip"
   appcast 'http://mplayerosx.ch/updates.xml'
   homepage 'http://www.mplayerosx.ch/'
-  license :oss
+  license :gpl
 
   app 'MPlayer OSX Extended.app'
 

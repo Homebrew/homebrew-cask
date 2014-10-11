@@ -4,7 +4,7 @@ class Tabula < Cask
 
   url "https://github.com/jazzido/tabula/releases/download/v0.9.5/tabula-mac-#{version}.zip"
   homepage 'http://tabula.nerdpower.org'
-  license :oss
+  license :mit
 
   app 'tabula/Tabula.app'
 end

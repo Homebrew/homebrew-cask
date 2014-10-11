@@ -4,7 +4,7 @@ class Dataurlmaker < Cask
 
   url "https://github.com/sveinbjornt/Data-URL-Toolkit/raw/master/Releases/DataURLMaker-#{version}.zip"
   homepage 'https://github.com/sveinbjornt/Data-URL-Toolkit'
-  license :oss
+  license :gpl
 
   app 'DataURLMaker.app'
 end

@@ -12,7 +12,7 @@ class GambitC < Cask
   end
 
   homepage 'http://gambitscheme.org/'
-  license :oss
+  license :apache
 
   uninstall :pkgutil => 'marc.feeley.gambc',
             :script => {

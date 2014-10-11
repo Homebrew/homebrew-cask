@@ -4,7 +4,7 @@ class Beaker < Cask
 
   url "http://d299yghl10frh5.cloudfront.net/beaker-notebook-v#{version}-0-g5644b78-mac.dmg"
   homepage 'http://beakernotebook.com/'
-  license :unknown
+  license :apache
 
   app 'Beaker.app'
 end

@@ -4,7 +4,7 @@ class BeaconScanner < Cask
 
   url "https://github.com/mlwelles/BeaconScanner/releases/download/#{version}/BeaconScanner.zip"
   homepage 'https://github.com/mlwelles/BeaconScanner/'
-  license :oss
+  license :mit
 
   app 'Beacon Scanner.app'
 end

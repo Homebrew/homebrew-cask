@@ -5,7 +5,7 @@ class Qmind < Cask
   url "https://github.com/qvacua/qmind/releases/download/v#{version}-22/Qmind-#{version}.zip"
   appcast 'http://qvacua.com/qmind/appcast.xml'
   homepage 'http://qvacua.com'
-  license :oss
+  license :gpl
 
   app 'Qmind.app'
 end
