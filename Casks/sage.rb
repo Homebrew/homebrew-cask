@@ -8,6 +8,12 @@ class Sage < Cask
 
   app "Sage-#{version}.app"
   binary "Sage-#{version}.app/Contents/Resources/sage/sage"
+
+  zap :delete => [
+                  '~/.sage',
+                  '~/Library/Logs/sage.log',
+                 ]
+
   caveats do
     files_in_usr_local
   end
