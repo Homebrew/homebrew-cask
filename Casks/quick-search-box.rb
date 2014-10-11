@@ -10,4 +10,7 @@ class QuickSearchBox < Cask
   postflight do
     system '/bin/chmod', '-R', '--', 'u+w', destination_path
   end
+
+  zap :delete => '~/Library/Application Support/Google/Quick Search Box',
+      :rmdir  => '~/Library/Application Support/Google/'
 end
