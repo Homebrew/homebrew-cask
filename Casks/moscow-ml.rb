@@ -4,7 +4,7 @@ class MoscowMl < Cask
 
   url "https://github.com/kfl/mosml/releases/download/ver-#{version}/mosml-#{version}.pkg"
   homepage 'http://mosml.org/'
-  license :oss
+  license :gpl
 
   pkg "mosml-#{version}.pkg"
   uninstall :pkgutil => 'org.mosml'
