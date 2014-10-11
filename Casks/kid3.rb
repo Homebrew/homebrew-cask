@@ -1,7 +1,7 @@
 class Kid3 < Cask
   # note: "3" is not a version number, but an intrinsic part of the product name (ID3 tags)
-  version '3.0.2'
-  sha256 'a1b60a4eea11ca62001365dd28d418c595ce2d073dd4e0ba07bd28a94cb5c260'
+  version '3.1.1'
+  sha256 '1a27b9743a4029221601fb872a38aca235a23f8234c7a07fa0cb547eb58129c6'
 
   url "https://downloads.sourceforge.net/sourceforge/kid3/kid3-#{version}-Darwin.dmg"
   homepage 'http://kid3.sourceforge.net/'
