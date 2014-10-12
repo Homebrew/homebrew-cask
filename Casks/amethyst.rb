@@ -1,6 +1,6 @@
 class Amethyst < Cask
-  version '0.9.2'
-  sha256 '48f4a97b8227de22254fc49b4aaab9bed8bdb30710e46310e5f9ca731d413fa6'
+  version '0.9.3'
+  sha256 'e9820972bfc7e15e4dec6b96217f2e29014de9c23b2af063cc3af627f07263d2'
 
   url "http://ianyh.com/amethyst/versions/Amethyst-#{version}.zip"
   appcast 'http://ianyh.github.io/Amethyst/appcast.xml'
