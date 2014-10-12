@@ -7,5 +7,5 @@ class Nzbvortex < Cask
   homepage 'http://www.nzbvortex.com/'
   license :unknown
 
-  app 'NZBVortex.app'
+  app 'NZBVortex 3.app'
 end
