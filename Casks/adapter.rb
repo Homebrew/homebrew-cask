@@ -5,7 +5,7 @@ class Adapter < Cask
   url "http://downloads.macroplant.com/Adapter-#{version}.dmg"
   appcast 'http://www.macroplant.com/adapter/adapterAppcast.xml'
   homepage 'http://www.macroplant.com/adapter/'
-  license :unknown
+  license :gratis
 
   app 'Adapter.app'
 end
