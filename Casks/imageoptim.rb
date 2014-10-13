@@ -5,7 +5,7 @@ class Imageoptim < Cask
   url 'https://imageoptim.com/ImageOptim.tbz2'
   appcast 'http://imageoptim.com/appcast.xml'
   homepage 'http://imageoptim.com/'
-  license :unknown
+  license :gpl
 
   app 'ImageOptim.app'
 end
