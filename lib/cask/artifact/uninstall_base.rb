@@ -5,6 +5,138 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
 
   PATH_ARG_SLICE_SIZE = 500
 
+  # todo: There should be a way to specify a containing
+  #       directory under which nothing can be deleted.
+  #
+  #       This set should be merged with the SYSTEM_DIRS
+  #       set found in lib/cask/pkg.rb.
+  UNDELETABLE_PATHS = Set.new [
+                               '~/',
+                               '~/Applications',
+                               '~/Desktop',
+                               '~/Documents',
+                               '~/Downloads',
+                               '~/Mail',
+                               '~/Movies',
+                               '~/Music',
+                               '~/Music/iTunes',
+                               '~/Music/iTunes/iTunes Music',
+                               '~/Music/iTunes/Album Artwork',
+                               '~/News',
+                               '~/Pictures',
+                               '~/Pictures/Desktops',
+                               '~/Pictures/Photo Booth',
+                               '~/Pictures/iChat Icons',
+                               '~/Pictures/iPhoto Library',
+                               '~/Public',
+                               '~/Sites',
+                               '~/Library',
+                               '~/Library/.localized',
+                               '~/Library/Accessibility',
+                               '~/Library/Accounts',
+                               '~/Library/Address Book Plug-Ins',
+                               '~/Library/Application Scripts',
+                               '~/Library/Application Support',
+                               '~/Library/Application Support/Apple',
+                               '~/Library/Application Support/com.apple.AssistiveControl',
+                               '~/Library/Application Support/com.apple.QuickLook',
+                               '~/Library/Application Support/com.apple.TCC',
+                               '~/Library/Assistants',
+                               '~/Library/Audio',
+                               '~/Library/Automator',
+                               '~/Library/Autosave Information',
+                               '~/Library/Caches',
+                               '~/Library/Calendars',
+                               '~/Library/ColorPickers',
+                               '~/Library/ColorSync',
+                               '~/Library/Colors',
+                               '~/Library/Components',
+                               '~/Library/Compositions',
+                               '~/Library/Containers',
+                               '~/Library/Contextual Menu Items',
+                               '~/Library/Cookies',
+                               '~/Library/DTDs',
+                               '~/Library/Desktop Pictures',
+                               '~/Library/Developer',
+                               '~/Library/Dictionaries',
+                               '~/Library/DirectoryServices',
+                               '~/Library/Displays',
+                               '~/Library/Documentation',
+                               '~/Library/Extensions',
+                               '~/Library/Favorites',
+                               '~/Library/FileSync',
+                               '~/Library/Filesystems',
+                               '~/Library/Filters',
+                               '~/Library/FontCollections',
+                               '~/Library/Fonts',
+                               '~/Library/Frameworks',
+                               '~/Library/GameKit',
+                               '~/Library/Graphics',
+                               '~/Library/Group Containers',
+                               '~/Library/Icons',
+                               '~/Library/IdentityServices',
+                               '~/Library/Image Capture',
+                               '~/Library/Images',
+                               '~/Library/Input Methods',
+                               '~/Library/Internet Plug-Ins',
+                               '~/Library/InternetAccounts',
+                               '~/Library/iTunes',
+                               '~/Library/KeyBindings',
+                               '~/Library/Keyboard Layouts',
+                               '~/Library/Keychains',
+                               '~/Library/LaunchAgents',
+                               '~/Library/LaunchDaemons',
+                               '~/Library/LocationBundles',
+                               '~/Library/LoginPlugins',
+                               '~/Library/Logs',
+                               '~/Library/Mail',
+                               '~/Library/Mail Downloads',
+                               '~/Library/Messages',
+                               '~/Library/Metadata',
+                               '~/Library/Mobile Documents',
+                               '~/Library/MonitorPanels',
+                               '~/Library/OpenDirectory',
+                               '~/Library/PDF Services',
+                               '~/Library/PhonePlugins',
+                               '~/Library/Phones',
+                               '~/Library/PreferencePanes',
+                               '~/Library/Preferences',
+                               '~/Library/Printers',
+                               '~/Library/PrivateFrameworks',
+                               '~/Library/PubSub',
+                               '~/Library/QuickLook',
+                               '~/Library/QuickTime',
+                               '~/Library/Receipts',
+                               '~/Library/Recent Servers',
+                               '~/Library/Recents',
+                               '~/Library/Safari',
+                               '~/Library/Saved Application State',
+                               '~/Library/Screen Savers',
+                               '~/Library/ScreenReader',
+                               '~/Library/ScriptingAdditions',
+                               '~/Library/ScriptingDefinitions',
+                               '~/Library/Scripts',
+                               '~/Library/Security',
+                               '~/Library/Services',
+                               '~/Library/Sounds',
+                               '~/Library/Speech',
+                               '~/Library/Spelling',
+                               '~/Library/Spotlight',
+                               '~/Library/StartupItems',
+                               '~/Library/StickiesDatabase',
+                               '~/Library/Sync Services',
+                               '~/Library/SyncServices',
+                               '~/Library/SyncedPreferences',
+                               '~/Library/TextEncodings',
+                               '~/Library/User Pictures',
+                               '~/Library/Video',
+                               '~/Library/Voices',
+                               '~/Library/WebKit',
+                               '~/Library/WidgetResources',
+                               '~/Library/Widgets',
+                               '~/Library/Workflows',
+                              ].map{|x| %r{\A~}.match(x) ? Pathname.new(x).expand_path : Pathname.new(x)}
+
   # todo: these methods were consolidated here from separate
   #       sources and should be refactored for consistency
 
@@ -22,6 +154,16 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
       opoo %Q{Skipping #{action} for relative path #{path_string}}
     end
     path_strings - relative
+  end
+
+  def self.remove_undeletable_path_strings(action, path_strings)
+    undeletable = path_strings.map do |path_string|
+      path_string if UNDELETABLE_PATHS.include?(Pathname.new(path_string))
+    end.compact
+    undeletable.each do |path_string|
+      opoo %Q{Skipping #{action} for undeletable path #{path_string}}
+    end
+    path_strings - undeletable
   end
 
   def install_phase
@@ -149,6 +291,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
         ohai "Removing files: #{path_slice.utf8_inspect}"
         path_slice = self.class.expand_path_strings(path_slice) if expand_tilde
         path_slice = self.class.remove_relative_path_strings(:delete, path_slice)
+        path_slice = self.class.remove_undeletable_path_strings(:delete, path_slice)
         @command.run!('/bin/rm', :args => path_slice.unshift('-rf', '--'), :sudo => true)
       end
     end
@@ -160,6 +303,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
         ohai "Removing files: #{path_slice.utf8_inspect}"
         path_slice = self.class.expand_path_strings(path_slice) if expand_tilde
         path_slice = self.class.remove_relative_path_strings(:trash, path_slice)
+        path_slice = self.class.remove_undeletable_path_strings(:trash, path_slice)
         @command.run!('/bin/rm', :args => path_slice.unshift('-rf', '--'), :sudo => true)
       end
     end
@@ -170,6 +314,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
         ohai "Removing files: #{path_slice.utf8_inspect}"
         path_slice = self.class.expand_path_strings(path_slice) if expand_tilde
         path_slice = self.class.remove_relative_path_strings(:delete, path_slice) # :delete for messages
+        path_slice = self.class.remove_undeletable_path_strings(:delete, path_slice)
         @command.run!('/bin/rm', :args => path_slice.unshift('-rf', '--'), :sudo => true)
       end
     end
@@ -178,6 +323,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
       Array(directives[:rmdir]).flatten.each do |directory|
         directory = self.class.expand_path_strings([directory]).first if expand_tilde
         directory = self.class.remove_relative_path_strings(:rmdir, [ directory ]).first
+        directory = self.class.remove_undeletable_path_strings(:rmdir, [ directory ]).first
         next unless directory.respond_to?(:length)
         next unless directory.length > 0
         ohai "Removing directory if empty: #{directory.utf8_inspect}"
