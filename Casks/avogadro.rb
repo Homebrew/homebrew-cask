@@ -4,7 +4,7 @@ class Avogadro < Cask
 
   url "https://downloads.sourceforge.net/avogadro/Avogadro-#{version}.dmg.zip"
   homepage 'http://avogadro.openmolecules.net/'
-  license :oss
+  license :gpl
 
   container :nested => "Avogadro-#{version}.dmg"
   app 'Avogadro.app'
