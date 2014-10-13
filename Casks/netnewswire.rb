@@ -5,7 +5,7 @@ class Netnewswire < Cask
   url "http://cdn.netnewswireapp.com/releases/NetNewsWire-#{version}.zip"
   appcast 'https://updates.blackpixel.com/updates?app=nnw'
   homepage 'http://netnewswireapp.com/'
-  license :unknown
+  license :commercial
 
   app 'NetNewsWire.app'
 end
