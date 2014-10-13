@@ -5,7 +5,7 @@ class Transmission < Cask
   url "https://transmission.cachefly.net/Transmission-#{version}.dmg"
   appcast 'http://update.transmissionbt.com/appcast.xml'
   homepage 'http://www.transmissionbt.com/'
-  license :unknown
+  license :gpl
 
   app 'Transmission.app'
   zap :delete => [

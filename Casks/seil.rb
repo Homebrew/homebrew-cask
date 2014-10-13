@@ -4,7 +4,7 @@ class Seil < Cask
 
   url "https://pqrs.org/macosx/keyremap4macbook/files/Seil-#{version}.dmg"
   homepage 'https://pqrs.org/macosx/keyremap4macbook/seil.html.en'
-  license :unknown
+  license :public_domain
 
   pkg 'Seil.pkg'
 
