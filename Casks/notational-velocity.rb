@@ -5,7 +5,7 @@ class NotationalVelocity < Cask
   url 'http://notational.net/NotationalVelocity.zip'
   appcast 'http://notational.net/nvupdates.xml'
   homepage 'http://notational.net'
-  license :unknown
+  license :gpl
 
   app 'Notational Velocity.app'
 end
