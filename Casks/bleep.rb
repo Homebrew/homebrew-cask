@@ -6,5 +6,5 @@ class Bleep < Cask
   homepage 'http://labs.bittorrent.com/bleep/'
   license :unknown
 
-  link 'Bleep.app'
+  app 'Bleep.app'
 end
