@@ -4,7 +4,7 @@ class Asepsis < Cask
 
   url "http://downloads.binaryage.com/Asepsis-#{version}.dmg"
   homepage 'http://asepsis.binaryage.com/'
-  license :unknown
+  license :bsd
 
   pkg 'Asepsis.pkg'
   uninstall :pkgutil => 'com.binaryage.pkg.asepsis'

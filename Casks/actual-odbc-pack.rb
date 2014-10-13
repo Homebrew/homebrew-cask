@@ -4,7 +4,7 @@ class ActualOdbcPack < Cask
 
   url 'http://actualtechnologies.cachefly.net/Actual_ODBC_Pack.dmg'
   homepage 'http://www.actualtech.com/products.php'
-  license :unknown
+  license :commercial
 
   pkg 'Actual ODBC Pack.pkg'
 

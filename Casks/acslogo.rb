@@ -4,6 +4,7 @@ class Acslogo < Cask
 
   url "http://www.alancsmith.co.uk/logo/ACSLogo#{version.gsub('.', '')}.dmg"
   homepage 'http://www.alancsmith.co.uk/logo/'
+  license :unknown
 
   app 'ACSLogo/ACSLogo.app'
 end

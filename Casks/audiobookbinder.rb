@@ -5,7 +5,7 @@ class Audiobookbinder < Cask
   url "http://bluezbox.com/audiobookbinder/AudiobookBinder-#{version}.dmg"
   appcast 'http://bluezbox.com/audiobookbinder/appcast.xml'
   homepage 'http://bluezbox.com/audiobookbinder.html'
-  license :unknown
+  license :oss
 
   app 'AudioBookBinder.app'
 end

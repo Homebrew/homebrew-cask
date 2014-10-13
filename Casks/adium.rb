@@ -5,7 +5,7 @@ class Adium < Cask
   url "http://download.adium.im/Adium_#{version}.dmg"
   appcast 'http://www.adium.im/sparkle/update.php'
   homepage 'https://www.adium.im/'
-  license :oss
+  license :gpl
 
   app 'Adium.app'
 

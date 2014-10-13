@@ -5,7 +5,7 @@ class Abgx360 < Cask
   # dropbox is the official download host per the vendor homepage
   url "http://dl.dropbox.com/u/59058148/abgx360-#{version}.pkg"
   homepage 'http://abgx360.xecuter.com/'
-  license :unknown
+  license :oss
 
   pkg "abgx360-#{version}.pkg"
   uninstall :quit => 'net.abgx360.abgx360gui',

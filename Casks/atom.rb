@@ -4,7 +4,7 @@ class Atom < Cask
 
   url 'https://atom.io/download/mac'
   homepage 'http://atom.io'
-  license :oss
+  license :mit
 
   app 'Atom.app'
   binary 'Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm', :target => 'apm'

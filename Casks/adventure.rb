@@ -5,7 +5,7 @@ class Adventure < Cask
   url 'http://www.lobotomo.com/products/downloads/Adventure.dmg'
   appcast 'http://www.lobotomo.com/products/Adventure/profileInfo.php'
   homepage 'http://www.lobotomo.com/products/Adventure/index.html'
-  license :unknown
+  license :gratis
 
   app 'Adventure.app'
 end

@@ -4,7 +4,7 @@ class Actiontastic < Cask
 
   url 'https://s3.amazonaws.com/kaboomerang/actiontastic/ActiontasticBeta8.zip'
   homepage 'http://actiontastic.com'
-  license :unknown
+  license :gratis
 
   app 'ActiontasticBeta8/Actiontastic.app'
 end

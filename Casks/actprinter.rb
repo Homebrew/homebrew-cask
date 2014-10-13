@@ -4,7 +4,7 @@ class Actprinter < Cask
 
   url "http://www.actprinter.com/mac/ACTPrinter%20for%20Mac%20#{version}.zip"
   homepage 'http://houdah.com/ACTPrinter/'
-  license :unknown
+  license :gratis
 
   app 'ACTPrinter for Mac.app'
 end

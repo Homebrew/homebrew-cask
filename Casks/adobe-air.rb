@@ -4,7 +4,7 @@ class AdobeAir < Cask
 
   url "http://airdownload.adobe.com/air/mac/download/#{version}/AdobeAIR.dmg"
   homepage 'https://get.adobe.com/air/'
-  license :unknown
+  license :gratis
 
   caskroom_only true
 

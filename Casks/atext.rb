@@ -5,7 +5,7 @@ class Atext < Cask
   url 'http://www.trankynam.com/atext/downloads/aText.dmg'
   appcast 'http://www.trankynam.com/atext/aText-Appcast.xml'
   homepage 'http://www.trankynam.com/atext/'
-  license :unknown
+  license :commercial
 
   app 'aText.app'
 end

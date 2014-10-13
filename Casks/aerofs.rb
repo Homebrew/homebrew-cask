@@ -4,7 +4,7 @@ class Aerofs < Cask
 
   url "https://dsy5cjk52fz4a.cloudfront.net/AeroFSInstall-#{version}.dmg"
   homepage 'https://www.aerofs.com/'
-  license :unknown
+  license :gratis
 
   app 'AeroFS.app'
 end
