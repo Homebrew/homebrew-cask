@@ -11,5 +11,5 @@ class DwarfFortress < Cask
   #    suite 'df_osx', :target => 'Dwarf Fortress'
   #
   # ?
-  link 'df_osx/df', :target => 'Dwarf Fortress/df'
+  artifact 'df_osx/df', :target => 'Dwarf Fortress/df'
 end
