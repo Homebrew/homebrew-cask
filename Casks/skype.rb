@@ -11,7 +11,7 @@ class Skype < Cask
   end
 
   homepage 'http://www.skype.com'
-  license :unknown
+  license :gratis
 
   app 'Skype.app'
 
