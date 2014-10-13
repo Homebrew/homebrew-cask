@@ -4,7 +4,7 @@ class Aegisub < Cask
 
   url "http://ftp.aegisub.org/pub/releases/Aegisub-#{version}.dmg"
   homepage 'http://www.aegisub.org/'
-  license :unknown
+  license :oss
 
   app 'Aegisub.app'
 end
