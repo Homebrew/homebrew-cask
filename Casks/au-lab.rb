@@ -4,7 +4,7 @@ class AuLab < Cask
 
   url 'http://images.apple.com/itunes/mastered-for-itunes/docs/au_lab.zip'
   homepage 'http://www.apple.com/itunes/mastered-for-itunes/'
-  license :unknown
+  license :gratis
 
   container :nested => 'AU Lab Image.dmg'
   app 'AU Lab.app'
