@@ -4,7 +4,7 @@ class ActionsServer < Cask
 
   url 'http://getactionsapp.com/downloads/ActionsServer.dmg'
   homepage 'http://getactionsapp.com'
-  license :unknown
+  license :gratis
 
   app 'Actions Server.app'
 end
