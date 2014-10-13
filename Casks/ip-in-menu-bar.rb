@@ -5,5 +5,5 @@ class IpInMenuBar < Cask
   url 'http://www.monkeybreadsoftware.de/Software/IPinmenubar.dmg'
   homepage 'http://www.monkeybreadsoftware.de/Software/IPinmenubar.shtml'
 
-  link 'IP in menu bar.app'
+  app 'IP in menu bar.app'
 end
