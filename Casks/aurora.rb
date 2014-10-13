@@ -5,7 +5,7 @@ class Aurora < Cask
   url "https://www.oneperiodic.com/files/Aurora%20v#{version}.zip"
   appcast 'http://www.oneperiodic.com/aurora5.xml'
   homepage 'http://www.oneperiodic.com/products/aurora/'
-  license :unknown
+  license :commercial
 
   app 'Aurora.app'
 end
