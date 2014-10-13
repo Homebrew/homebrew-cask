@@ -1,8 +1,8 @@
 class Texshop < Cask
-  version '3.42'
-  sha256 'd37a8516751dbc97574d019243c0ff8d26e65bab71577f2f82a2d8af5d2dbc34'
+  version '3.43'
+  sha256 '81cc938d3d2c3b5ac91554127a398357b8844ec41f7a2ba3e5614cf19a4ca4a5'
 
-  url 'http://pages.uoregon.edu/koch/texshop/texshop-64/texshop342.zip'
+  url 'http://pages.uoregon.edu/koch/texshop/texshop-64/texshop343.zip'
   appcast 'http://pages.uoregon.edu/koch/texshop/texshop-64/texshopappcast.xml'
   homepage 'http://pages.uoregon.edu/koch/texshop'
   license :unknown
