@@ -5,7 +5,7 @@ class Appzapper < Cask
   url 'http://www.appzapper.com/downloads/appzapper.dmg'
   appcast 'http://www.appzapper.com/az2appcast.xml'
   homepage 'http://www.appzapper.com/'
-  license :unknown
+  license :commercial
 
   app 'AppZapper.app'
 end
