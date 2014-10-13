@@ -4,7 +4,7 @@ class Audacity < Cask
 
   url "http://downloads.sourceforge.net/project/audacity/audacity/#{version}/audacity-macosx-ub-#{version}.dmg"
   homepage 'http://audacity.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'Audacity/Audacity.app'
 end
