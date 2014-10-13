@@ -5,7 +5,7 @@ class Moom < Cask
   url 'http://manytricks.com/download/moom'
   appcast 'http://manytricks.com/moom/appcast.xml'
   homepage 'http://manytricks.com/moom/'
-  license :unknown
+  license :commercial
 
   app 'Moom.app'
   zap :delete => [
