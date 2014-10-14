@@ -4,7 +4,6 @@ require 'set'
 module Cask::DSL; end
 
 require 'cask/dsl/base'
-require 'cask/dsl/installed'
 require 'cask/dsl/after_install'
 require 'cask/dsl/after_uninstall'
 require 'cask/dsl/before_install'
