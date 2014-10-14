@@ -1,6 +1,6 @@
 class Terraform < Cask
-  version '0.2.2'
-  sha256 '1b4581e41e05145d2e9707cad5313636120a80b04cb796a503b3bfe59b6901d2'
+  version '0.3.0'
+  sha256 '6c8eb551381eb331c0ef3f5615a60529bc45de1c702b02ed4dfa523cffa26084'
 
   url "https://dl.bintray.com/mitchellh/terraform/terraform_#{version}_darwin_amd64.zip"
   homepage 'http://www.terraform.io/'
