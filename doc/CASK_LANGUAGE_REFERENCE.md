@@ -119,17 +119,17 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 
 The following stanzas are no longer in use.
 
-| name                 | multiple occurrences allowed? | meaning     |
-| -------------------- |------------------------------ | ----------- |
-| `after_install`      | yes                           | an obsolete alternative to `postflight`
-| `after_uninstall`    | yes                           | an obsolete alternative to `uninstall_postflight`
-| `before_install`     | yes                           | an obsolete alternative to `preflight`
-| `before_uninstall`   | yes                           | an obsolete alternative to `uninstall_preflight`
-| `container_type`     | yes                           | an obsolete alternative to `container :type =>`
-| `depends_on_formula` | yes                           | an obsolete alternative to `depends_on :formula =>`
-| `install`            | yes                           | an obsolete alternative to `pkg`
-| `link`               | yes                           | an obsolete alternative to `artifact`
-| `no_checksum`        | no                            | an obsolete alternative to `sha256 :no_check`
+| name                      | meaning     |
+| ------------------------- | ----------- |
+| `after_install`           | an obsolete alternative to `postflight`
+| `after_uninstall`         | an obsolete alternative to `uninstall_postflight`
+| `before_install`          | an obsolete alternative to `preflight`
+| `before_uninstall`        | an obsolete alternative to `uninstall_preflight`
+| `container_type`          | an obsolete alternative to `container :type =>`
+| `depends_on_formula`      | an obsolete alternative to `depends_on :formula =>`
+| `install`                 | an obsolete alternative to `pkg`
+| `link`                    | an obsolete alternative to `artifact`
+| `no_checksum`             | an obsolete alternative to `sha256 :no_check`
 
 
 ## Legacy Forms
