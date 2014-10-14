@@ -61,10 +61,10 @@ describe Cask::CLI::Info do
       Cask title: with-caveats
 
       Custom text via puts followed by DSL-generated text:
-      To complete the installation of Cask with-caveats, you must also
-      run the installer at
+      To use with-caveats, you may need to add the /custom/path/bin directory
+      to your PATH environment variable, eg (for bash shell):
 
-        '#{Cask.caskroom}/with-caveats/1.2.3/Installer.app'
+        export PATH=/custom/path/bin:"$PATH"
 
     CLIOUTPUT
   end
