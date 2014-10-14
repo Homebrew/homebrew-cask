@@ -1,6 +1,6 @@
 class Julia < Cask
   version '0.3.1'
-  sha256 'd12984305d5f0f18a3def724938396d5c040b25c81f29dbe9bd293f0097b2f0a'
+  sha256 '57e7bf9a54803256eed04c015d92865c8c8823d32caaffe4fff54e6cc89e2f93'
 
   url "https://s3.amazonaws.com/julialang/bin/osx/x64/0.3/julia-#{version}-osx10.7+.dmg"
   homepage 'http://julialang.org/'
