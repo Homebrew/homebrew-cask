@@ -1,8 +1,8 @@
 class FramerStudio < Cask
-  version '1.5.8'
-  sha256 '856fdc591a33b94fecb4a3013219f8d9e7ea171b0f83cbb8dd732860f48fff96'
+  version '1.9.0'
+  sha256 'b6101b7a69b9af39b15a977e66366c5b1eda2c1e66cac49604434ee8b5fb98ba'
 
-  url 'http://studio.update.framerjs.com/static/downloads/Framer%20Studio-1.0.156.tar.gz'
+  url "http://studio.update.framerjs.com/static/downloads/Framer%20Studio-#{version}.zip"
   homepage 'http://framerjs.com/'
   license :unknown
 
