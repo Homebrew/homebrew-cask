@@ -1,6 +1,8 @@
 class Cask::CLI::InternalDump < Cask::CLI::InternalUseBase
   def self.run(*arguments)
-    retval = dump_casks(*arguments)
+    cask_names = cask_names_from(arguments)
+    raise CaskUnspecifiedError if cask_names.empty?
+    retval = dump_casks(*cask_names)
     # retval is ternary: true/false/nil
     if retval.nil?
       raise CaskError.new("nothing to dump")
