@@ -270,6 +270,10 @@ describe Cask::DSL do
       cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.to_a[1].script[:executable].must_equal '/usr/bin/true'
       cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.to_a[1].script[:args].must_equal ['--flag']
     end
+    it "allows installer :manual to be specified" do
+      cask = Cask.load('with-installer-manual')
+      cask.artifacts[:installer].first.manual.must_equal 'Caffeine.app'
+    end
   end
 
   describe "tags stanza" do

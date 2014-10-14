@@ -136,10 +136,11 @@ The following stanzas are no longer in use.
 
 The following forms are no longer in use.
 
-| name                 | meaning     |
-| -------------------- | ----------- |
-| `uninstall :files`   | an obsolete alternative to `uninstall :delete`
-| `version 'latest'`   | an obsolete alternative to `version :latest`
+| name                      | meaning     |
+| ------------------------- | ----------- |
+| `uninstall :files`        | an obsolete alternative to `uninstall :delete`
+| `version 'latest'`        | an obsolete alternative to `version :latest`
+| `manual_installer(path)`  | when occurring within `caveats`, an obsolete alternative to `installer :script`
 
 
 ## Conditional Statements
@@ -225,7 +226,6 @@ The following methods may be called to generate standard warning messages:
 
 | method                            | description |
 | --------------------------------- | ----------- |
-| `manual_installer(path)`          | The user should execute an installer to complete the installation. `path` may be absolute, or relative to the Cask.
 | `path_environment_variable(path)` | The user should make sure `path` is in their `$PATH` environment variable
 | `zsh_path_helper(path)`           | Zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable
 | `logout`                          | The user should log out and log back in to complete installation
@@ -469,8 +469,17 @@ pkg 'Soundflower.pkg', :allow_untrusted => true
 ## Installer Stanza Details
 
 The `installer` stanza takes a series of key-value pairs, the first key of
-which must be `:script`.
+which must be `:manual` or `:script`.
 
+### Installer :manual
+
+`installer :manual` takes a single string value, describing a GUI installer
+which must be run by the user at a later time.  The path may be absolute,
+or relative to the Cask.  Example:
+
+```ruby
+installer :manual => 'Little Snitch Installer.app'
+```
 ### Installer :script
 
 `installer :script` introduces a series of key-value pairs describing

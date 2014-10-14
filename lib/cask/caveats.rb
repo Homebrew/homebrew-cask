@@ -43,6 +43,8 @@ class Cask::CaveatsDSL
   # ( The return value of the last method in the block is also sent
   #   to the output by the caller, but that feature is only for the
   #   convenience of Cask authors. )
+
+  # todo: remove this method after DSL 1.0 transition
   def manual_installer(path)
     puts <<-EOS.undent
     To complete the installation of Cask #{@cask}, you must also

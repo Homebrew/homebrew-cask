@@ -1,6 +1,7 @@
 class Cask::DSL::Installer
 
   VALID_KEYS = Set.new [
+                        :manual,
                         :script,
                        ]
 

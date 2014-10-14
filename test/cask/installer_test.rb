@@ -186,6 +186,14 @@ describe Cask::Installer do
       with_caveats.must_be :installed?
     end
 
+    it "prints installer :manual instructions when present" do
+      with_installer_manual = Cask.load('with-installer-manual')
+      TestHelper.must_output(self, lambda {
+        Cask::Installer.new(with_installer_manual).install
+      }, /To complete the installation of Cask with-installer-manual, you must also\nrun the installer at\n\n  '#{with_installer_manual.destination_path.join(%Q{Caffeine.app})}'/)
+      with_installer_manual.must_be :installed?
+    end
+
     it "does not extract __MACOSX directories from zips" do
       with_macosx_dir = Cask.load('with-macosx-dir')
       shutup do
