@@ -1,8 +1,8 @@
 class LeapMotion < Cask
-  version '1.2.1'
-  sha256 '70507658b029398f5839603ed0e5998db690608f17dc6d55386f12a41a70edee'
+  version '2.1.5'
+  sha256 '472d1e535bf21ffd847ff5a872ac23bbb042c955a5e1a9351f52dc7fbb2b85b0'
 
-  url 'https://warehouse.leapmotion.com/apps/3382/download'
+  url 'https://warehouse.leapmotion.com/apps/3720/download'
   homepage 'https://www.leapmotion.com/setup'
   license :unknown
 
