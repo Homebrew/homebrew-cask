@@ -19,6 +19,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [App Stanza Details](#app-stanza-details)
  * [Suite Stanza Details](#suite-stanza-details)
  * [Pkg Stanza Details](#pkg-stanza-details)
+ * [Installer Stanza Details](#installer-stanza-details)
  * [Depends_on Stanza Details](#depends_on-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
  * [Zap Stanza Details](#zap-stanza-details)
@@ -95,6 +96,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `widget`           | yes                           | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation (ALPHA: DOES NOT WORK YET)
 | `suite`            | yes                           | relative path to a containing directory that should be linked into the `~/Applications` folder on installation (see also [Suite Stanza Details](#suite-stanza-details))
 | `artifact`         | yes                           | relative path to an arbitrary path that should be symlinked on installation.  This is only for unusual cases.  The `app` stanza is strongly preferred when linking `.app` bundles.
+| `installer`        | yes                           | describes an executable which must be run to complete the installation.  (see [Installer Stanza Details](#installer-stanza-details))
 
 ## Optional Stanzas
 
@@ -461,6 +463,33 @@ Example:
 
 ```ruby
 pkg 'Soundflower.pkg', :allow_untrusted => true
+```
+
+
+## Installer Stanza Details
+
+The `installer` stanza takes a series of key-value pairs, the first key of
+which must be `:script`.
+
+### Installer :script
+
+`installer :script` introduces a series of key-value pairs describing
+a command which will automate completion of the install.  The form is
+similar to `uninstall :script`:
+
+| key             | value
+| ----------------|------------------------------
+| `:script`       | path to an install script to be run via `sudo`. (Required first key.)
+| `:args`         | array of arguments to the install script
+| `:input`        | array of lines of input to be sent to `stdin` of the script
+| `:must_succeed` | set to `false` if the script is allowed to fail
+| `:sudo`         | set to `false` if the script does not need `sudo`
+
+The path may be absolute, or relative to the Cask.  Example:
+
+```ruby
+installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
+          :args => %w[-silent]
 ```
 
 ## Depends_on Stanza Details

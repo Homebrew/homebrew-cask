@@ -4,6 +4,7 @@ require 'set'
 module Cask::DSL; end
 
 require 'cask/dsl/base'
+require 'cask/dsl/installer'
 require 'cask/dsl/after_install'
 require 'cask/dsl/after_uninstall'
 require 'cask/dsl/before_install'
@@ -281,18 +282,15 @@ module Cask::DSL
       end
     end
 
-    def install_script(*args)
-      unless args.length > 0
-        raise CaskInvalidError.new(self.title, "'install_script' stanza requires an argument")
+    def installer(*args)
+      if args.empty?
+        return artifacts[:installer]
       end
-      executable = args.shift if args[0].kind_of? String
-      if args.length > 0
-        args = Hash.new().merge(*args)
-      else
-        args = Hash.new()
+      begin
+        artifacts[:installer] << Cask::DSL::Installer.new(*args)
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
       end
-      args.merge!({ :executable => executable }) if executable
-      artifacts[:install_script] << args
     end
 
     attr_reader :sums

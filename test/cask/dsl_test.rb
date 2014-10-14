@@ -261,14 +261,14 @@ describe Cask::DSL do
     end
   end
 
-  describe "install_script stanza" do
-    it "allows install_script to be specified" do
-      cask = Cask.load('with-install-script')
+  describe "installer stanza" do
+    it "allows installer :script to be specified" do
+      cask = Cask.load('with-installer-script')
       # the sorts are needed to force the order for Ruby 1.8
-      cask.artifacts[:install_script].sort{ |a,b| a[:executable] <=> b[:executable] }.first[:executable].must_equal '/usr/bin/false'
-      cask.artifacts[:install_script].sort{ |a,b| a[:executable] <=> b[:executable] }.first[:args].must_equal ['--flag']
-      cask.artifacts[:install_script].sort{ |a,b| a[:executable] <=> b[:executable] }.to_a[1][:executable].must_equal '/usr/bin/true'
-      cask.artifacts[:install_script].sort{ |a,b| a[:executable] <=> b[:executable] }.to_a[1][:args].must_equal ['--flag']
+      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.first.script[:executable].must_equal '/usr/bin/false'
+      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.first.script[:args].must_equal ['--flag']
+      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.to_a[1].script[:executable].must_equal '/usr/bin/true'
+      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.to_a[1].script[:args].must_equal ['--flag']
     end
   end
 

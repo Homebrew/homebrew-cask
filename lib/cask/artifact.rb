@@ -12,7 +12,7 @@ require 'cask/artifact/after_block'
 require 'cask/artifact/before_block'
 require 'cask/artifact/colorpicker'
 require 'cask/artifact/font'
-require 'cask/artifact/install_script'
+require 'cask/artifact/installer'
 require 'cask/artifact/nested_container'
 require 'cask/artifact/pkg'
 require 'cask/artifact/prefpane'
@@ -35,7 +35,7 @@ module Cask::Artifact
     [
       Cask::Artifact::BeforeBlock,
       Cask::Artifact::NestedContainer,
-      Cask::Artifact::InstallScript,
+      Cask::Artifact::Installer,
       Cask::Artifact::App,
       Cask::Artifact::Artifact,         # generic 'artifact' stanza
       Cask::Artifact::Colorpicker,

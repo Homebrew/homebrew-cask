@@ -1,4 +1,4 @@
-class Cask::Artifact::InstallScript < Cask::Artifact::Base
+class Cask::Artifact::Installer < Cask::Artifact::Base
 
   # todo: for backward compatibility, removeme
   def install
@@ -13,9 +13,9 @@ class Cask::Artifact::InstallScript < Cask::Artifact::Base
   def install_phase
     @cask.artifacts[self.class.artifact_dsl_key].each do |artifact|
       executable, script_arguments = self.class.read_script_arguments(
-                                                                      artifact,
+                                                                      artifact.script,
                                                                       "#{self.class.artifact_dsl_key}",
-                                                                      {:must_succeed => true},
+                                                                      {:must_succeed => true, :sudo => true},
                                                                       {:print_stdout => true}
                                                                       )
       ohai "Running #{self.class.artifact_dsl_key} script #{executable}"
