@@ -1,6 +1,6 @@
 class Selfcontrol < Cask
-  version '1.5.1'
-  sha256 'd3823a1e9ba0b47dc2cb39c93cd51837c2dafc7d5a5a564825f4a440fd2ab9ad'
+  version '2.0'
+  sha256 '8148b29d5c5bca08149b15ae1841bac87619624f8fbdebb071daa71ccb5a8efa'
 
   url "http://downloads.selfcontrolapp.com/SelfControl-#{version}.zip"
   appcast 'http://selfcontrolapp.com/SelfControlAppcast.xml'
