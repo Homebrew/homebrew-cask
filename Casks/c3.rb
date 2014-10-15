@@ -4,7 +4,7 @@ class C3 < Cask
 
   url "https://d2xj26462na9l3.cloudfront.net/c3/C3-FNF-#{version}.dmg"
   homepage 'http://www.downloadc3.com/'
-  license :unknown
+  license :gratis
 
   app 'c3.app'
 end
