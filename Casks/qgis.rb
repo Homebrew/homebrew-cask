@@ -1,6 +1,6 @@
 class Qgis < Cask
-  version '2.2.0-10'
-  sha256 '00ddf8511c11664600b680d569153a040bfd7579b40ccab53659d23999d4ad43'
+  version '2.4.0-1'
+  sha256 '785c268997651b547dd1261a86aa3b805a3d66c9706c0afb42758e1a2bb9ae0a'
 
   url "http://www.kyngchaos.com/files/software/qgis/QGIS-#{version}.dmg"
   homepage 'http://www.kyngchaos.com/software/qgis'
