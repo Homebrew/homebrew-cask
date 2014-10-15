@@ -4,7 +4,7 @@ class Bzflag < Cask
 
   url "http://downloads.sourceforge.net/project/bzflag/bzflag%20Mac%20OS%20X/#{version}/BZFlag-#{version}.zip"
   homepage 'http://bzflag.org/'
-  license :oss
+  license :gpl
 
   app "BZFlag-#{version}.app"
 end
