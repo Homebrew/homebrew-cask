@@ -4,7 +4,7 @@ class BlackLight < Cask
 
   url "https://littoral.michelf.ca/apps/black-light/black-light-#{version}.zip"
   homepage 'http://michelf.ca/projects/black-light'
-  license :unknown
+  license :commercial
 
   app 'Black Light.app'
 end
