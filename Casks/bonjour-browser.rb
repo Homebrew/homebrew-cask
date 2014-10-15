@@ -4,7 +4,7 @@ class BonjourBrowser < Cask
 
   url 'http://www.tildesoft.com/files/BonjourBrowser.dmg'
   homepage 'http://www.tildesoft.com/'
-  license :unknown
+  license :gratis
 
   app 'Bonjour Browser.app'
 end
