@@ -5,7 +5,7 @@ class Bootxchanger < Cask
   url "http://namedfork.net/_media/bootxchanger_#{version}.dmg"
   appcast 'http://swupdate.namedfork.net/bootxchanger.xml'
   homepage 'http://namedfork.net/bootxchanger'
-  license :unknown
+  license :gpl
 
   app 'BootXChanger.app'
 end
