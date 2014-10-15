@@ -3,7 +3,8 @@ class Menuola < Cask
   sha256 'd97170adab805f1a52fef6c59287724783d80b5b23821dd97c0a85b4a72261dd'
 
   url 'http://geocom.co.nz/downloads/Menuolav2.dmg.zip'
-  appcast 'http://www.geocom.co.nz/menuola.xml'
+  appcast 'http://www.geocom.co.nz/menuola.xml',
+          :sha256 => 'e18b081046702171648c929872c692adc2d1b816f5e9aff93b0612a11a3ea362'
   homepage 'http://www.geocom.co.nz'
   license :unknown
 
