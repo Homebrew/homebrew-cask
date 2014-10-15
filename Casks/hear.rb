@@ -3,7 +3,8 @@ class Hear < Cask
   sha256 'e7b5e5782020be407f456e59167770b07afc97afb0f1f7e9d226c00c524b106b'
 
   url "https://s3.amazonaws.com/prosoft-engineering/hear/Hear_#{version}.dmg"
-  appcast 'http://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear'
+  appcast 'http://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear',
+          :sha256 => '48edc9b03ce5d9709b27fb5099dc3cce25cc8920656b9cdb9a066ae7999c8d9d'
   homepage 'http://www.prosofteng.com/products/hear.php'
   license :unknown
 
