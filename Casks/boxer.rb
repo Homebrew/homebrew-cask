@@ -5,7 +5,7 @@ class Boxer < Cask
   url 'http://boxerapp.com/download/latest'
   appcast 'http://boxerapp.com/appcast'
   homepage 'http://boxerapp.com/'
-  license :unknown
+  license :gpl
 
   app 'Boxer.app'
 end
