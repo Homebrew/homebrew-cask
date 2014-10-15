@@ -2,9 +2,9 @@ class Fuze < Cask
   version :latest
   sha256 :no_check
 
-  url 'https://www.fuzemeeting.com/extensions/FuzeMeetingMac.dmg'
+  url 'https://www.fuzemeeting.com/downloads/fuze/Fuze.dmg'
   homepage 'https://www.fuzemeeting.com'
-  license :unknown
+  license :commercial
 
   app 'Fuze.app'
 end
