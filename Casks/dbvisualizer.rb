@@ -6,5 +6,7 @@ class Dbvisualizer < Cask
   homepage 'http://www.dbvis.com/'
   license :commercial
 
-  app 'DbVisualizer Installer.app'
+  caveats do
+    manual_installer('DbVisualizer Installer.app')
+  end
 end
