@@ -18,7 +18,7 @@ class Bassjump < Cask
   end
 
   homepage 'http://www.twelvesouth.com/product/bassjump-2-for-macbook'
-  license :unknown
+  license :gratis
 
   uninstall :pkgutil => [
                          'com.twelvesouth.bassjump.installer.halplugin',
