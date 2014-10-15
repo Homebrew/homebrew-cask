@@ -1,6 +1,6 @@
 class J < Cask
-  version '803'
-  sha256 'a595ab134a72dd8948ba3930678be41d27796f257f67ceb2ee4df58cdf1a82fa'
+  version '802'
+  sha256 '294cc7a2b92afe43ad19ec7921de2d9a65351ba1c5cfd9836bc07fe9d9a0d159'
 
   url "http://www.jsoftware.com/download/j#{version}/install/j#{version}_mac64.zip"
   homepage 'http://www.jsoftware.com'
