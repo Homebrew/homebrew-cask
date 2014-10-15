@@ -4,7 +4,7 @@ class Breach < Cask
 
   url "https://raw.githubusercontent.com/breach/releases/master/v#{version}/breach-v#{version}-darwin-ia32.tar.gz"
   homepage 'http://breach.cc'
-  license :unknown
+  license :mit
 
   app "breach-v#{version}-darwin-ia32/Breach.app"
 end
