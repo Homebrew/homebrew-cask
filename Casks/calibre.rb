@@ -4,7 +4,7 @@ class Calibre < Cask
 
   url 'http://status.calibre-ebook.com/dist/osx32'
   homepage 'http://calibre-ebook.com/'
-  license :unknown
+  license :gpl
 
   app 'calibre.app'
 end

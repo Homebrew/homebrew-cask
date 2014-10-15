@@ -5,7 +5,7 @@ class BbcIplayerDownloads < Cask
   url 'https://www.bbc.co.uk/iplayer/dm/downloads/mac/latest'
   appcast 'http://ipd-hq.cloud.bbc.co.uk/downloads/update.xml'
   homepage 'http://www.bbc.co.uk/iplayer/install'
-  license :unknown
+  license :gratis
 
   app 'BBC iPlayer Downloads.app'
 end

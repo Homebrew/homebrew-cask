@@ -4,7 +4,7 @@ class Bitlord < Cask
 
   url "http://www.bitlord.com/osx/BitLord-Lion-#{version}.dmg"
   homepage 'http://www.bitlord.com'
-  license :unknown
+  license :gpl
 
   app 'BitLord.app'
 end

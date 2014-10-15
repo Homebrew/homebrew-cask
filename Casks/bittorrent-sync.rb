@@ -6,7 +6,7 @@ class BittorrentSync < Cask
   # todo: response was not XML
   # appcast 'http://www.usyncapp.com/cfu.php'
   homepage 'http://www.bittorrent.com/sync'
-  license :unknown
+  license :gratis
 
   app 'BitTorrent Sync.app'
 end

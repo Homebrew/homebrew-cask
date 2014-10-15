@@ -4,7 +4,7 @@ class BitwigStudio < Cask
 
   url 'http://packs.bitwig.com/downloads/Bitwig%20Studio%201.0.14.dmg'
   homepage 'https://www.bitwig.com'
-  license :unknown
+  license :commercial
 
   app 'Bitwig Studio.app'
 end

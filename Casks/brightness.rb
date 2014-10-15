@@ -4,7 +4,7 @@ class Brightness < Cask
 
   url "http://www.bergdesign.com/resources/Brightness/Brightness_#{version}.dmg"
   homepage 'http://www.bergdesign.com/brightness/'
-  license :unknown
+  license :gratis
 
   app 'Brightness.app'
 end

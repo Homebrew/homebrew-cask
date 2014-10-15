@@ -4,7 +4,7 @@ class BoxSync < Cask
 
   url 'https://box.com/sync4mac'
   homepage 'https://sites.box.com/sync4/'
-  license :unknown
+  license :gratis
 
   app 'Box Sync.app'
 end

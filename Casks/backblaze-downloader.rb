@@ -4,7 +4,7 @@ class BackblazeDownloader < Cask
 
   url 'https://secure.backblaze.com/mac_restore_downloader'
   homepage 'http://www.backblaze.com/'
-  license :unknown
+  license :commercial
 
   app 'Backblaze Downloader.app'
 end

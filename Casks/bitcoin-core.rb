@@ -4,7 +4,7 @@ class BitcoinCore < Cask
 
   url "https://bitcoin.org/bin/#{version}/bitcoin-#{version}-macosx.dmg"
   homepage 'https://bitcoin.org/'
-  license :unknown
+  license :mit
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/3634

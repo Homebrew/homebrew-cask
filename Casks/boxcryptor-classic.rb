@@ -4,7 +4,7 @@ class BoxcryptorClassic < Cask
 
   url 'https://www.boxcryptor.com/download/Boxcryptor_Installer.dmg'
   homepage 'https://www.boxcryptor.com/en/boxcryptor-classic'
-  license :unknown
+  license :commercial
 
   app 'Boxcryptor Classic.app'
 end

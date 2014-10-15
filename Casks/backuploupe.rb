@@ -5,7 +5,7 @@ class Backuploupe < Cask
   url "http://www.soma-zone.com/download/files/BackupLoupe_#{version}.tar.bz2"
   appcast 'http://www.soma-zone.com/BackupLoupe/a/appcast.xml'
   homepage 'http://www.soma-zone.com/BackupLoupe/'
-  license :unknown
+  license :commercial
 
   app 'BackupLoupe.app'
 end

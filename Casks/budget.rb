@@ -4,7 +4,7 @@ class Budget < Cask
 
   url 'http://www.snowmintcs.com/downloads/budget.dmg'
   homepage 'http://www.snowmintcs.com/products/budgetmac/'
-  license :unknown
+  license :commercial
 
   app 'Budget.app'
 end

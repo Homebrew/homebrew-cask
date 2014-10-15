@@ -4,7 +4,7 @@ class Brow < Cask
 
   url 'http://www.timschroeder.net/brow/brow.zip'
   homepage 'http://www.timschroeder.net/brow/'
-  license :unknown
+  license :gratis
 
   app 'Brow.app'
 end

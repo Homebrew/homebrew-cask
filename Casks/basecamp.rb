@@ -4,7 +4,7 @@ class Basecamp < Cask
 
   url "http://download.garmin.com/software/BaseCampforMac_#{version.gsub('.', '')}.dmg"
   homepage 'http://www.garmin.com/en-US/shop/downloads/basecamp'
-  license :unknown
+  license :gratis
 
   pkg 'Install BaseCamp.pkg'
   uninstall :pkgutil => 'com.garmin.BaseCamp'

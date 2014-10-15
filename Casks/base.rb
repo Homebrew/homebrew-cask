@@ -5,7 +5,7 @@ class Base < Cask
   url 'http://menial.co.uk/base/download/'
   appcast 'http://update.menial.co.uk/software/base/'
   homepage 'http://menial.co.uk/base/'
-  license :unknown
+  license :commercial
 
   app 'Base.app'
 end

@@ -5,7 +5,7 @@ class BlackInk < Cask
   url "http://www.red-sweater.com/blackink/BlackInk#{version}.zip"
   appcast 'http://www.red-sweater.com/blackink/appcast1.php'
   homepage 'http://www.red-sweater.com/blackink/'
-  license :unknown
+  license :commercial
 
   app 'Black Ink.app'
 end

@@ -4,7 +4,7 @@ class Bluegriffon < Cask
 
   url "http://bluegriffon.org/freshmeat/#{version}/bluegriffon-#{version}.mac.dmg"
   homepage 'http://bluegriffon.org'
-  license :unknown
+  license :oss
 
   app 'BlueGriffon.app'
 end

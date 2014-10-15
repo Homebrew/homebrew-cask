@@ -4,7 +4,7 @@ class Bitcasa < Cask
 
   url "https://d1kbf262vwnlmm.cloudfront.net/Bitcasa_#{version}.dmg"
   homepage 'https://www.bitcasa.com'
-  license :unknown
+  license :gratis
 
   pkg 'InstallBitcasa.pkg'
   uninstall :pkgutil => 'com.bitcasa.AutoLaunch|com.bitcasa.Bitcasa'

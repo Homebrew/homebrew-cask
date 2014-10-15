@@ -5,7 +5,7 @@ class Bartender < Cask
   url 'http://www.macbartender.com/Demo/Bartender.zip'
   appcast 'http://www.macbartender.com/updates/updates.php'
   homepage 'http://www.macbartender.com/'
-  license :unknown
+  license :commercial
 
   app 'Bartender.app'
 
