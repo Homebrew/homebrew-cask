@@ -5,7 +5,7 @@ class Blueharvest < Cask
   url 'http://zeroonetwenty.com/downloads/BlueHarvest559.dmg'
   appcast 'https://cp37.ezyreg.com/~zeroonet/downloads/versioninfo/sparkle/blueharvest.xml'
   homepage 'http://zeroonetwenty.com/blueharvest/'
-  license :unknown
+  license :commercial
 
   app 'BlueHarvest.app'
 end
