@@ -4,7 +4,7 @@ class Backblaze < Cask
 
   url 'https://secure.backblaze.com/mac/install_backblaze.dmg'
   homepage 'https://www.backblaze.com/'
-  license :unknown
+  license :commercial
 
   caveats do
     manual_installer 'Backblaze Installer.app'
