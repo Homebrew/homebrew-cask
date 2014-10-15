@@ -4,7 +4,7 @@ class BalsamiqMockups < Cask
 
   url 'http://builds.balsamiq.com/b/mockups-desktop/MockupsForDesktop.dmg'
   homepage 'http://balsamiq.com/'
-  license :unknown
+  license :commercial
 
   app 'Balsamiq Mockups.app'
 end
