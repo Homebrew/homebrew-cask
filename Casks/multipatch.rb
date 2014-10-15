@@ -6,5 +6,5 @@ class Multipatch < Cask
   homepage 'http://projects.sappharad.com/tools/multipatch.html'
   license :gpl
 
-  app 'MultiPatch.app'
+  app 'MultiPatch/MultiPatch.app'
 end
