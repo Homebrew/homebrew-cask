@@ -1,6 +1,6 @@
 class FlashPlayer < Cask
-  version '15.0.0.152'
-  sha256 '471dc1b5b1838afcc7f78a47c194081687c2c44a1fb59d4e51e25e4715c68d80'
+  version '15.0.0.189'
+  sha256 'd164d1eb7075c2b25124cbbc8078272a4e08b78c15126588a67aa033889de63b'
 
   url 'https://fpdownload.macromedia.com/pub/flashplayer/updaters/15/flashplayer_15_sa.dmg'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
