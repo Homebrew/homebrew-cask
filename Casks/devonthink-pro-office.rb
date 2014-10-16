@@ -1,6 +1,6 @@
 class DevonthinkProOffice < Cask
-  version '2.7.4'
-  sha256 'fab41794b3739d28ac936caef8d2c921105604f959a37c4e19a16b3ac9481e59'
+  version '2.8'
+  sha256 '592d2c5e8ce9839102afb7c15eb71147d94006c5710ff91a06c8783bee8ef91b'
 
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro_Office.dmg.zip"
   appcast 'http://www.devon-technologies.com/Sparkle/DEVONthinkProOffice2.xml',
