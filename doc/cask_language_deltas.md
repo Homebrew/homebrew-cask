@@ -31,6 +31,7 @@ This notice will be removed for the final form.**
 
 ## Additions (1.0)
 
+ * `appcast`
  * `artifact`
  * `depends_on :cask`
    * *stub* - not yet functional

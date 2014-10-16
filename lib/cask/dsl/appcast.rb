@@ -1,6 +1,6 @@
 class Cask::DSL::Appcast
 
-  # note  :latest_version is considered experimental
+  # todo  :latest_version is considered experimental
   #       and may be removed
 
   APPCAST_FORMATS = Set.new [
@@ -15,7 +15,7 @@ class Cask::DSL::Appcast
     @parameters     = parameters
     @uri            = Cask::UnderscoreSupportingURI.parse(uri)
     @sha256         = @parameters[:sha256]
-    @latest_version = @parameters[:latest_version]
+    @latest_version = @parameters[:latest_version]    # experimental
     @format         = @parameters[:format]
     @format         = APPCAST_FORMATS.first if @format.nil?
     unless APPCAST_FORMATS.include?(@format)

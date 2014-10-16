@@ -14,6 +14,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Caveats Stanza Details](#caveats-stanza-details)
  * [Checksum Stanza Details](#checksum-stanza-details)
  * [URL Stanza Details](#url-stanza-details)
+ * [Appcast Stanza Details](#appcast-stanza-details)
  * [Tags Stanza Details](#tags-stanza-details)
  * [License Stanza Details](#license-stanza-details)
  * [App Stanza Details](#app-stanza-details)
@@ -102,6 +103,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | ---------------------- |------------------------------ | ----------- |
 | `uninstall`            | yes                           | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](#uninstall-stanza-details))
 | `zap`                  | yes                           | additional procedures for a more complete uninstall, including user files and shared resources. (see also [Zap Stanza Details](#zap-stanza-details))
+| `appcast`              | no                            | a URL providing an appcast feed to find updates for this Cask.  (see also [Appcast Stanza Details](#appcast-stanza-details))
 | `depends_on`           | yes                           | a list of dependencies required by this Cask (see also [Depends_on Stanza Details](#depends_on-stanza-details))
 | `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](#caveats-stanza-details))
 | `preflight`            | yes                           | a Ruby block containing preflight install operations (needed only in very rare cases)
@@ -285,7 +287,6 @@ have to test each of them:
 $ ./developer/bin/list_url_attributes_on_file <file>
 ```
 
-
 ### Subversion URLs
 
 In rare cases, a distribution may not be available over ordinary HTTP/S.
@@ -297,6 +298,22 @@ following key/value pairs to `url`:
 | `:using`           | the symbol `:svn` is the only legal value
 | `:revision`        | a string identifying the subversion revision to download
 | `:trust_cert`      | set to `true` to automatically trust the certificate presented by the server (avoiding an interactive prompt)
+
+
+## Appcast Stanza Details
+
+The value of the `appcast` stanza is a string, holding the URL for an
+appcast which provides information on future updates.  Generally, the
+appcast URL returns Sparkle-compatible XML, though that is not required.
+
+Example: [adium.rb](../../d7f8eafa4fc01a6c383925d9962b5da33876a8b6/Casks/adium.rb#L6)
+
+### Additional Appcast Parameters
+
+| key                | value       |
+| ------------------ | ----------- |
+| `:sha256`          | a string holding the SHA-256 checksum of the most recent appcast which matches the current Cask versioning
+| `:format`          | a symbol describing the appcast format.  One of: `:sparkle`, `:plaintext`, `:unknown`, where `:sparkle` is the default.
 
 
 ## License Stanza Details
