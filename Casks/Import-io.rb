@@ -1,4 +1,4 @@
-class Import_io < Cask
+class ImportIo < Cask
   version :latest
   sha256 :no_check
 
@@ -6,6 +6,5 @@ class Import_io < Cask
   homepage 'https://import.io/'
   license :commercial
 
-  pkg 'install.pkg', :allow_untrusted => true
-  installer :manual => 'install.pkg'
+  pkg 'install.pkg'
 end
