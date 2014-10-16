@@ -1,6 +1,6 @@
 class ClionEap < Cask
-  version '138.1965.18'
-  sha256 'c5c57019141de3369aa62a44d94ee5a410956a9fa88e88d91dd898863da3042f'
+  version '138.2344.17'
+  sha256 '4d15bd684f23add653b3a4ddea13f1d26931769aefd65936b63b96839b089a1e'
 
   url "http://download.jetbrains.com/cpp/CLion-#{version}.dmg"
   homepage 'http://www.jetbrains.com/clion/'
