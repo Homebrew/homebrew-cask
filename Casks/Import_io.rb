@@ -6,5 +6,6 @@ class Import_io < Cask
   homepage 'https://import.io/'
   license :commercial
 
-  pkg 'install.pkg'
+  pkg 'install.pkg', :allow_untrusted => true
+  installer :manual => 'install.pkg'
 end
