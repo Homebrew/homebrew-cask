@@ -1,6 +1,6 @@
 class Thunderbird < Cask
-  version '31.1.2'
-  sha256 '491fc8c061055a9e1f52961c488ea84f7f2fcf633a41a983e4c8985859db75af'
+  version '31.2.0'
+  sha256 '4d6a9bedacda5e31ae40c2dfc6885fffa9283b052f25507313b25d87bb83daca'
 
   url "https://download.mozilla.org/?product=thunderbird-#{version}&os=osx&lang=en-US"
   homepage 'http://www.mozilla.org/en-US/thunderbird/'
