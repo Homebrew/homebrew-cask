@@ -1,6 +1,6 @@
 class Torbrowser < Cask
-  version '3.6.6'
-  sha256 '45843982df1c339f3aa165bf09b96b27306749c38aaf669a13cc9c508b679141'
+  version '4.0'
+  sha256 '1a6f153eb34ca43218ecd88a1ca8168c9e098a5a2fe10c3539e036f893e55bf2'
 
   url "https://www.torproject.org/dist/torbrowser/#{version}/TorBrowser-#{version}-osx32_en-US.dmg"
   gpg "#{url}.asc",
