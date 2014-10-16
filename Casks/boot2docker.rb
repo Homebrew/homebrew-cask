@@ -1,6 +1,6 @@
 class Boot2docker < Cask
-  version '1.2.0'
-  sha256 'd61095e20f9b0dc4c139e48d14fdba50dfc425cc4c2e73173936ae383f80f0fd'
+  version '1.3.0'
+  sha256 'db53c4a777ced0430fac728e9f28280e610ce0c67cdfa38105414506eae3959e'
 
   url "https://github.com/boot2docker/osx-installer/releases/download/v#{version}/Boot2Docker-#{version}.pkg"
   homepage 'https://github.com/boot2docker/osx-installer'
