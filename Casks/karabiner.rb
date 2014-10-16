@@ -1,6 +1,6 @@
 class Karabiner < Cask
-  version '10.3.0'
-  sha256 '56285549cbdf17cce97c0a8f85ef867b6b7ee848d503b51636c7d9c96a724728'
+  version '10.4.0'
+  sha256 'b1e3ffb7cd10ec8651c68b184c236589f182a273dad4b1c68ab2c15d36a34248'
 
   url "https://pqrs.org/osx/karabiner/files/Karabiner-#{version}.dmg"
   homepage 'https://pqrs.org/osx/karabiner/'
