@@ -10,17 +10,29 @@ class Parallels < Cask
 
   uninstall_preflight do
     # Need to change the ownership so that we can do the uninstall.  Running Parallels Desktop changes owner to root
+    # TODO: this should be moved to the core (see issue #6699)
     ohai "To uninstall Parallels Desktop 10, we need to change permissions, your password may be required."
-    system '/usr/bin/sudo', '-E', '--', 'chown', '-R', "#{ENV['USER']}", destination_path.join("Parallels Desktop.app")
+    system '/usr/bin/sudo', '-E', '--', 
+           '/usr/sbin/chown', '-R', Etc.getpwuid(Process.euid).name, destination_path.join("Parallels Desktop.app")
   end
-  uninstall_postflight do
-    # Need to remove these files that get symlinked into /usr/bin
-    system '/usr/bin/sudo', '-E', '--', 'rm', '-f', '/usr/bin/prl_convert'
-    system '/usr/bin/sudo', '-E', '--', 'rm', '-f', '/usr/bin/prl_disk_tool'
-    system '/usr/bin/sudo', '-E', '--', 'rm', '-f', '/usr/bin/prl_perf_ctl'
-    system '/usr/bin/sudo', '-E', '--', 'rm', '-f', '/usr/bin/prlctl'
-    system '/usr/bin/sudo', '-E', '--', 'rm', '-f', '/usr/bin/prlsrvctl'
-  end
+  
+  uninstall :delete => [ 
+                         '/usr/bin/prl_convert', 
+                         '/usr/bin/prl_disk_tool', 
+                         '/usr/bin/prl_perf_ctl',
+                         '/usr/bin/prlctl',
+                         '/usr/bin/prlsrvctl',
+                       ]
+  zap       :delete => [
+                         '~/.parallels_settings',
+                         '~/Library/Caches/com.parallels.desktop.console',
+                         '~/Library/Preferences/com.parallels.desktop.console.LSSharedFileList.plist',
+                         '~/Library/Preferences/com.parallels.desktop.console.plist',
+                         '~/Library/Preferences/com.parallels.Parallels Desktop Statistics.plist',
+                         '~/Library/Preferences/com.parallels.Parallels Desktop.plist',
+                         '~/Library/Preferences/com.parallels.Parallels.plist',
+                        ]
+  
   
   caveats <<-EOS.undent
     The first time you run Parallels Desktop, you will need to enter your
