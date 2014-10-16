@@ -20,6 +20,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [App Stanza Details](#app-stanza-details)
  * [Suite Stanza Details](#suite-stanza-details)
  * [Pkg Stanza Details](#pkg-stanza-details)
+ * [Installer Stanza Details](#installer-stanza-details)
  * [Depends_on Stanza Details](#depends_on-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
  * [Zap Stanza Details](#zap-stanza-details)
@@ -96,6 +97,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `widget`           | yes                           | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation (ALPHA: DOES NOT WORK YET)
 | `suite`            | yes                           | relative path to a containing directory that should be linked into the `~/Applications` folder on installation (see also [Suite Stanza Details](#suite-stanza-details))
 | `artifact`         | yes                           | relative path to an arbitrary path that should be symlinked on installation.  This is only for unusual cases.  The `app` stanza is strongly preferred when linking `.app` bundles.
+| `installer`        | yes                           | describes an executable which must be run to complete the installation.  (see [Installer Stanza Details](#installer-stanza-details))
 
 ## Optional Stanzas
 
@@ -119,27 +121,28 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 
 The following stanzas are no longer in use.
 
-| name                 | multiple occurrences allowed? | meaning     |
-| -------------------- |------------------------------ | ----------- |
-| `after_install`      | yes                           | an obsolete alternative to `postflight`
-| `after_uninstall`    | yes                           | an obsolete alternative to `uninstall_postflight`
-| `before_install`     | yes                           | an obsolete alternative to `preflight`
-| `before_uninstall`   | yes                           | an obsolete alternative to `uninstall_preflight`
-| `container_type`     | yes                           | an obsolete alternative to `container :type =>`
-| `depends_on_formula` | yes                           | an obsolete alternative to `depends_on :formula =>`
-| `install`            | yes                           | an obsolete alternative to `pkg`
-| `link`               | yes                           | an obsolete alternative to `artifact`
-| `no_checksum`        | no                            | an obsolete alternative to `sha256 :no_check`
+| name                      | meaning     |
+| ------------------------- | ----------- |
+| `after_install`           | an obsolete alternative to `postflight`
+| `after_uninstall`         | an obsolete alternative to `uninstall_postflight`
+| `before_install`          | an obsolete alternative to `preflight`
+| `before_uninstall`        | an obsolete alternative to `uninstall_preflight`
+| `container_type`          | an obsolete alternative to `container :type =>`
+| `depends_on_formula`      | an obsolete alternative to `depends_on :formula =>`
+| `install`                 | an obsolete alternative to `pkg`
+| `link`                    | an obsolete alternative to `artifact`
+| `no_checksum`             | an obsolete alternative to `sha256 :no_check`
 
 
 ## Legacy Forms
 
 The following forms are no longer in use.
 
-| name                 | meaning     |
-| -------------------- | ----------- |
-| `uninstall :files`   | an obsolete alternative to `uninstall :delete`
-| `version 'latest'`   | an obsolete alternative to `version :latest`
+| name                      | meaning     |
+| ------------------------- | ----------- |
+| `uninstall :files`        | an obsolete alternative to `uninstall :delete`
+| `version 'latest'`        | an obsolete alternative to `version :latest`
+| `manual_installer(path)`  | when occurring within `caveats`, an obsolete alternative to `installer :script`
 
 
 ## Conditional Statements
@@ -225,7 +228,6 @@ The following methods may be called to generate standard warning messages:
 
 | method                            | description |
 | --------------------------------- | ----------- |
-| `manual_installer(path)`          | The user should execute an installer to complete the installation. `path` may be absolute, or relative to the Cask.
 | `path_environment_variable(path)` | The user should make sure `path` is in their `$PATH` environment variable
 | `zsh_path_helper(path)`           | Zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable
 | `logout`                          | The user should log out and log back in to complete installation
@@ -478,6 +480,42 @@ Example:
 
 ```ruby
 pkg 'Soundflower.pkg', :allow_untrusted => true
+```
+
+
+## Installer Stanza Details
+
+The `installer` stanza takes a series of key-value pairs, the first key of
+which must be `:manual` or `:script`.
+
+### Installer :manual
+
+`installer :manual` takes a single string value, describing a GUI installer
+which must be run by the user at a later time.  The path may be absolute,
+or relative to the Cask.  Example:
+
+```ruby
+installer :manual => 'Little Snitch Installer.app'
+```
+### Installer :script
+
+`installer :script` introduces a series of key-value pairs describing
+a command which will automate completion of the install.  The form is
+similar to `uninstall :script`:
+
+| key             | value
+| ----------------|------------------------------
+| `:script`       | path to an install script to be run via `sudo`. (Required first key.)
+| `:args`         | array of arguments to the install script
+| `:input`        | array of lines of input to be sent to `stdin` of the script
+| `:must_succeed` | set to `false` if the script is allowed to fail
+| `:sudo`         | set to `false` if the script does not need `sudo`
+
+The path may be absolute, or relative to the Cask.  Example:
+
+```ruby
+installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
+          :args => %w[-silent]
 ```
 
 ## Depends_on Stanza Details

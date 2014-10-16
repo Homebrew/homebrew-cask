@@ -1,9 +1,10 @@
-module Cask::DSL::Installed
+module Cask::Staged
   def info_plist
     "#{destination_path}/#{@cask.artifacts[:link].first.first}/Contents/Info.plist"
   end
 
   def plist_exec(cmd)
+    # todo: don't use external interface system_command
     system_command("/usr/libexec/PlistBuddy", :args => ["-c", cmd, info_plist])
   end
 
