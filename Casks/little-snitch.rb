@@ -1,6 +1,6 @@
 class LittleSnitch < Cask
-  version '3.4.1'
-  sha256 '4af1bcb47e580c6aa692ce3635648d6679e48dec5ae683dc74dd968bef9cf27b'
+  version '3.4.2'
+  sha256 'ddb2e739334d759508bb356ae7b18a3228664fd5a6d5aff39d355f8c0d23e8b3'
 
   url "http://www.obdev.at/downloads/LittleSnitch/LittleSnitch-#{version}.dmg"
   homepage 'http://www.obdev.at/products/littlesnitch/index.html'
