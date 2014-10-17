@@ -1,6 +1,6 @@
 class Vyprvpn < Cask
-  version '2.6.0.2408'
-  sha256 'eafade7cd1ed880cefb412f67015d9bdc259670f83cae269913d5dfa97b502e4'
+  version '2.6.1.2422'
+  sha256 '6097c9660fcc496bbaa77bc870ff2483aa92c7ce4bea409fb98c8b635bac2710'
 
   url "https://www.goldenfrog.com/downloads/vyprvpn/desktop/mac/production/#{version}/VyprVPN_v#{version}.dmg"
   homepage 'http://www.goldenfrog.com/vyprvpn'
