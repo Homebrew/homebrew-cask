@@ -1,8 +1,8 @@
 class Gravit < Cask
-  version '0.0.3.1'
-  sha256 '6de4834ab074c9ee5ecdfdb89ecc881c56700c0be157b145048a021d7107c9ac'
-
-  url "https://github.com/quasado/gravit-hub/releases/download/v#{version}/Mac-OSX.dmg"
+  version 'v1.0-rc1'
+  sha256 'bb267504f87d39aaf2b654d33cc0b48ccb4c74a72f8b88dd9d78ced1a984f265'
+  
+  url "https://github.com/quasado/gravit-hub/releases/download/#{version}/gravit-osx.dmg"
   homepage 'http://gravit.io/'
   license :oss
 
