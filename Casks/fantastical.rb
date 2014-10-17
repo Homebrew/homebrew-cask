@@ -1,10 +1,10 @@
 class Fantastical < Cask
-  version '1.3.17'
-  sha256 '4ca0d3b25e8ac1748a1ee126625fe779b0b17474e43775b2f91b806bdcd59bb9'
+  version '1.3.18'
+  sha256 '435d4818b2911eed956322261ba083df2abe9c2b21c63eee46876c23f7925beb'
 
   url "http://cdn.flexibits.com/Fantastical_#{version}.zip"
   appcast 'https://flexibits.com/fantastical/appcast.php',
-          :sha256 => '67e6deaab0ae7dec7779214c8c92543193c992cb4bb5b9ba8a6f2be78898eaea'
+          :sha256 => '3d789ff8dd91c8ebc1b63d2811ec17e0a950433b03605d8c10eef010733cf79a'
   homepage 'http://flexibits.com/fantastical'
   license :unknown
 
