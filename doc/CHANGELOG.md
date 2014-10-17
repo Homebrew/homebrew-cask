@@ -1,5 +1,40 @@
 # CHANGELOG
 
+## 0.45.0
+
+* __Casks__
+  - 25 Casks added (628 updated) by 71 contributors since 0.44.0
+  - 1961 total Casks
+* __Features__
+ - [#6660][] add `installer :manual` and `installer :script`
+ - [#6680][] document new `appcast` stanza for public use
+ - [#6578][] document new form `container :nested` for public use
+* __Breaking Changes__
+  - none
+* __Fixes__
+ - [#6656][] require Cask argument to `brew cask _dump`
+ - [#6610][] sanity check against deleting user files
+ - [#6600][] coerce `uninstall :script :input` value to array
+* __Internal Changes__
+ - [#6660][] Recast Cask::DSL::Installed as Cask::Staged
+* __Documentation__
+  - 12 doc commits since 0.44.0
+* __Contributors__
+  - 35 new contributors since 0.44.0
+  - 1096 total contributors
+* __Release Date__
+  - 2014-10-17 13:09:00 UTC
+
+[#6532]: https://github.com/caskroom/homebrew-cask/issues/6532
+[#6557]: https://github.com/caskroom/homebrew-cask/issues/6557
+[#6578]: https://github.com/caskroom/homebrew-cask/issues/6578
+[#6600]: https://github.com/caskroom/homebrew-cask/issues/6600
+[#6610]: https://github.com/caskroom/homebrew-cask/issues/6610
+[#6611]: https://github.com/caskroom/homebrew-cask/issues/6611
+[#6656]: https://github.com/caskroom/homebrew-cask/issues/6656
+[#6660]: https://github.com/caskroom/homebrew-cask/issues/6660
+[#6680]: https://github.com/caskroom/homebrew-cask/issues/6680
+
 ## 0.44.0
 
 * __Casks__
