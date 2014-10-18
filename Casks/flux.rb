@@ -1,9 +1,9 @@
 class Flux < Cask
-  version :latest
-  sha256 :no_check
+  version '30.0' 
+  sha256 '7c201bfe37cc3e670a200a60a72caf298036a6335b237bf04e17efdd9ff879ab' 
 
-  url 'https://justgetflux.com/mac/Flux.zip'
-  appcast 'https://justgetflux.com/mac/macflux.xml'
+  url 'https://justgetflux.com/mac/Flux30.zip' 
+  appcast 'https://justgetflux.com/mac/macflux.xml' 
   homepage 'http://justgetflux.com'
   license :unknown
 
