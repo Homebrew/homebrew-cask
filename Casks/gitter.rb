@@ -1,6 +1,6 @@
 class Gitter < Cask
-  version '1.153'
-  sha256 '0f43013164d6c54d580d9bc2859d8325507a73f8db604b04cb42f04adefa6a8f'
+  version '1.159'
+  sha256 'd118559341385e8b0eba1c5c3ff578a3e03914aaf5c4f0c71d5db89e1444b1b6'
 
   url "http://update.gitter.im/osx/Gitter-#{version}.dmg"
   appcast 'http://update.gitter.im/osx/appcast.xml',
