@@ -1,6 +1,6 @@
 class Quickradar < Cask
-  version '0.8.1'
-  sha256 'c2a275634c9f07e9dbffe762256b8b7068562ce6ae92cfdb51fc23e5e43979e5'
+  version '1.0b1'
+  sha256 '4b40450a5710d9b6efc33051bc2f611b0c88e3d5f387a5fdd1a90773d28d90a8'
 
   url "http://www.quickradar.com/#{version}.zip"
   appcast 'http://www.quickradar.com/appcast.xml',
