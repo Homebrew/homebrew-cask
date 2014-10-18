@@ -819,7 +819,7 @@ define arbitrary Ruby variables and methods inside the Cask by creating a
 
 ```ruby
 class Appname < Cask
-  Module Utils
+  module Utils
     def self.arbitrary_method
       ...
     end
