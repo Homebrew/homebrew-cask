@@ -22,6 +22,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Pkg Stanza Details](#pkg-stanza-details)
  * [Installer Stanza Details](#installer-stanza-details)
  * [Depends_on Stanza Details](#depends_on-stanza-details)
+ * [Conflicts_with Stanza Details](#conflicts_with-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
  * [Zap Stanza Details](#zap-stanza-details)
  * [Arbitrary Ruby Methods](#arbitrary-ruby-methods)
@@ -107,6 +108,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `zap`                  | yes                           | additional procedures for a more complete uninstall, including user files and shared resources. (see also [Zap Stanza Details](#zap-stanza-details))
 | `appcast`              | no                            | a URL providing an appcast feed to find updates for this Cask.  (see also [Appcast Stanza Details](#appcast-stanza-details))
 | `depends_on`           | yes                           | a list of dependencies required by this Cask (see also [Depends_on Stanza Details](#depends_on-stanza-details))
+| `conflicts_with`       | yes                           | a list of conflicts with this Cask (*not yet functional* see also [Conflicts_with Stanza Details](#conflicts_with-stanza-details))
 | `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](#caveats-stanza-details))
 | `preflight`            | yes                           | a Ruby block containing preflight install operations (needed only in very rare cases)
 | `postflight`           | yes                           | a Ruby block containing postflight install operations
@@ -538,6 +540,26 @@ key with working functionality at the time of writing.
 | key        | description |
 | ---------- | ----------- |
 | `:formula` | A Homebrew Formula
+| `:cask`    | *stub - not yet functional*
+| `:macos`   | *stub - not yet functional*
+| `:arch`    | *stub - not yet functional*
+| `:x11`     | *stub - not yet functional*
+| `:java`    | *stub - not yet functional*
+
+
+## conflicts_with Stanza Details
+
+`conflicts_with` is used to declare conflicts that keep a Cask from
+installing or working correctly.
+
+Several keys are accepted by `conflicts_with`, but none of them are yet
+enforced by the backend implementation.  It is fine to proactively add
+`conflicts_with` stanzas to Casks in anticipation of future backend support;
+they are currently just a type of structured comment.
+
+| key        | description |
+| ---------- | ----------- |
+| `:formula` | *stub - not yet functional*
 | `:cask`    | *stub - not yet functional*
 | `:macos`   | *stub - not yet functional*
 | `:arch`    | *stub - not yet functional*
