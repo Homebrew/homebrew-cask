@@ -1,8 +1,8 @@
 class Testflight < Cask
-  version '1.0_beta313'
-  sha256 'a8f643b66682f7ec9d710b7452dd9fdc9332edc59bc2c92d10683635c80c861f'
+  version '320' 
+  sha256 '136e07ace22e132235816603a0907661786ed3dc74da4597e150ecacd3fe45a1' 
 
-  url 'https://d193ln56du8muy.cloudfront.net/desktop_app/1381509820/TestFlight-Desktop-1.0-Beta(313).zip'
+  url 'https://testflightapp.com/desktop/upgrade/46/' 
   appcast 'https://testflightapp.com/appcast.xml',
           :sha256 => 'a83cbdaafed7a635f71dfed9717e76f323a8f0c1f91deb3918e37d6d4dc88bdc'
   homepage 'http://testflightapp.com'
