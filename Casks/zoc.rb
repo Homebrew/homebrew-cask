@@ -1,8 +1,8 @@
 class Zoc < Cask
-  version '6.59'
-  sha256 'e5bab1efba9920129e7e829f255a73bf6abea443533c428ec797b787379b7827'
+  version '6.60'
+  sha256 '2a73ceaa1515d2d2321905dc667e62bbc8c99d87fbfc5d003156d59b2c2d7e7b'
 
-  url 'http://www.emtec.com/downloads/zoc/zoc659.dmg'
+  url "http://www.emtec.com/downloads/zoc/zoc#{version.gsub('.','')}.dmg"
   homepage 'http://www.emtec.com/zoc/'
   license :unknown
 
