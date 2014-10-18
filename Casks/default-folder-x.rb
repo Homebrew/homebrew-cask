@@ -1,6 +1,6 @@
 class DefaultFolderX < Cask
-  version '4.6.8'
-  sha256 'a83298fc5a6607744000d3795b933a92dff05d56f1b618082e53fda53ff3f7fa'
+  version '4.6.10'
+  sha256 '95752cf84ffd5f8090397ba85689ebaa409b205de9d15a4af4b0e5eae8626d59'
 
   url "http://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
   homepage 'http://www.stclairsoft.com/DefaultFolderX'
