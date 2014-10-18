@@ -47,7 +47,7 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
   def load_specification(artifact_spec)
     source_string, target_hash = artifact_spec
     raise CaskInvalidError if source_string.nil?
-    @source = @cask.destination_path.join(source_string)
+    @source = @cask.staged_path.join(source_string)
     if target_hash
       raise CaskInvalidError unless target_hash.respond_to?(:keys)
       target_hash.assert_valid_keys(:target)

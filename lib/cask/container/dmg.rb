@@ -24,7 +24,7 @@ class Cask::Container::Dmg < Cask::Container::Base
                    # - or support some type of text filter to be passed to
                    #   :print_stderr instead of true/false
                    :print_stderr => false,
-                   :args => ['--', mount, @cask.destination_path])
+                   :args => ['--', mount, @cask.staged_path])
     end
   ensure
     eject!

@@ -63,7 +63,7 @@ class Cask::Installer
     else
       "#{Tty.blue}==>#{Tty.white} Success!#{Tty.reset} "
     end
-    s << "#{@cask} installed to '#{@cask.destination_path}' (#{@cask.destination_path.cabv})"
+    s << "#{@cask} installed to '#{@cask.staged_path}' (#{@cask.staged_path.cabv})"
   end
 
   def download
@@ -76,7 +76,7 @@ class Cask::Installer
 
   def extract_primary_container
     odebug "Extracting primary container"
-    FileUtils.mkdir_p @cask.destination_path
+    FileUtils.mkdir_p @cask.staged_path
     container = if @cask.container_type
        Cask::Container.from_type(@cask.container_type)
     else
@@ -172,7 +172,7 @@ class Cask::Installer
     odebug "Purging files for version #{@cask.version} of Cask #{@cask}"
 
     # versioned staged distribution
-    permissions_rmtree(@cask.destination_path)
+    permissions_rmtree(@cask.staged_path)
 
     # Homebrew-cask metadata
     if @cask.metadata_versioned_container_path.respond_to?(:children) and

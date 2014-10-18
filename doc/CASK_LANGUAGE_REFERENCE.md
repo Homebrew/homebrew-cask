@@ -205,8 +205,8 @@ position at the end of the Cask:
 | `title`            | the Cask title
 | `version`          | the Cask version
 | `homepage`         | the Cask homepage
-| `caskroom_path`    | eg `/opt/homebrew-cask/Caskroom`
-| `destination_path` | the staging location for this Cask, including version number, *eg* `/opt/homebrew-cask/Caskroom/adium/1.5.10`
+| `caskroom_path`    | the containing directory for all staged Casks, typically `/opt/homebrew-cask/Caskroom`
+| `staged_path`      | the staged location for this Cask, including version number, *eg* `/opt/homebrew-cask/Caskroom/adium/1.5.10`
 
 Example:
 

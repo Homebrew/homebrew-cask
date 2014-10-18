@@ -47,8 +47,8 @@ describe Cask::Artifact::App do
           TestHelper.install_without_artifacts(cask)
         end
 
-        appsubdir = (subdir_cask.destination_path/'subdir').tap(&:mkpath)
-        FileUtils.mv((subdir_cask.destination_path/'Caffeine.app'), appsubdir)
+        appsubdir = (subdir_cask.staged_path/'subdir').tap(&:mkpath)
+        FileUtils.mv((subdir_cask.staged_path/'Caffeine.app'), appsubdir)
 
         shutup do
           Cask::Artifact::App.new(subdir_cask).install_phase
@@ -67,7 +67,7 @@ describe Cask::Artifact::App do
     it "only uses linkables when they are specified" do
       cask = local_alt_caffeine
 
-      app_path = cask.destination_path.join('Caffeine.app')
+      app_path = cask.staged_path.join('Caffeine.app')
       FileUtils.cp_r app_path, app_path.sub('Caffeine.app', 'CaffeineAgain.app')
 
       shutup do

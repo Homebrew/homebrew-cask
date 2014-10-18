@@ -48,7 +48,7 @@ describe Cask::CLI::Zap do
   #   Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application "System Events" to count processes whose bundle identifier is "my.fancy.package.app.from.uninstall"'], '1')
   #   Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application id "my.fancy.package.app.from.uninstall" to quit'])
   #
-  #   Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', with_zap.destination_path/'MyFancyPkg'/'FancyUninstaller.tool', '--please'])
+  #   Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', with_zap.staged_path/'MyFancyPkg'/'FancyUninstaller.tool', '--please'])
   #   Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-rf', '--',
   #                                             Pathname.new('~/Library/Preferences/my.fancy.app.plist').expand_path])
   #

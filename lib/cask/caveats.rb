@@ -32,8 +32,13 @@ class Cask::CaveatsDSL
     @cask.class.caskroom.join(title)
   end
 
-  def destination_path
+  def staged_path
     caskroom_path.join(@cask.version.to_s)
+  end
+
+  # todo transitional method, removeme after DSL 1.0
+  def destination_path
+    staged_path
   end
 
   # DSL. Each method should handle output, following the convention of
@@ -50,7 +55,7 @@ class Cask::CaveatsDSL
     To complete the installation of Cask #{@cask}, you must also
     run the installer at
 
-      '#{destination_path.join(path)}'
+      '#{staged_path.join(path)}'
 
     EOS
   end

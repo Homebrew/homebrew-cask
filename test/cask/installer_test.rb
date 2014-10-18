@@ -190,7 +190,7 @@ describe Cask::Installer do
       with_installer_manual = Cask.load('with-installer-manual')
       TestHelper.must_output(self, lambda {
         Cask::Installer.new(with_installer_manual).install
-      }, /To complete the installation of Cask with-installer-manual, you must also\nrun the installer at\n\n  '#{with_installer_manual.destination_path.join(%Q{Caffeine.app})}'/)
+      }, /To complete the installation of Cask with-installer-manual, you must also\nrun the installer at\n\n  '#{with_installer_manual.staged_path.join(%Q{Caffeine.app})}'/)
       with_installer_manual.must_be :installed?
     end
 
@@ -199,7 +199,7 @@ describe Cask::Installer do
       shutup do
         Cask::Installer.new(with_macosx_dir).install
       end
-      with_macosx_dir.destination_path.join('__MACOSX').wont_be :directory?
+      with_macosx_dir.staged_path.join('__MACOSX').wont_be :directory?
     end
 
     # unlike the CLI, the internal interface throws exception on double-install
