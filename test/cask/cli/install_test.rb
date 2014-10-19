@@ -22,6 +22,16 @@ describe Cask::CLI::Install do
     Cask.load('local-transmission').must_be :installed?
   end
 
+  it "prints a warning message on double install" do
+    shutup do
+      Cask::CLI::Install.run('local-transmission')
+    end
+
+    TestHelper.must_output(self, lambda {
+      Cask::CLI::Install.run('local-transmission', '')
+    }, %r{Warning: A Cask for local-transmission is already installed. Add the "--force" option to force re-install.})
+  end
+
   it "allows double install with --force" do
     shutup do
       Cask::CLI::Install.run('local-transmission')
