@@ -1,6 +1,6 @@
 class XmarksSafari < Cask
-  version '2.0.16'
-  sha256 '502038e06d4dcdded6ccc3b27da55dc62a0b52a099872e6d499045937ffba377'
+  version '2.0.18'
+  sha256 'f64018d51cdb24bb1e6861d04b8f49b6cd88c26c5369f1ad877e9c51b0abe04e'
 
   url "https://static.xmarks.com/clients/safari/xmarks_for_safari_#{version}.dmg"
   homepage 'http://www.xmarks.com/'
