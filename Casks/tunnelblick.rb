@@ -1,6 +1,6 @@
 class Tunnelblick < Cask
-  version '3.4.0_r3007'
-  sha256 '3296266375812c954e0f3ce91adca676d06767f9ac26e3ad78452e0de1425279'
+  version '3.4.1_r3054'
+  sha256 '44a9b1986c100698c82186c4ce404d5acf34f292d08c5f8528c33e22646f955a'
 
   url "https://downloads.sourceforge.net/project/tunnelblick/All%20files/Tunnelblick_#{version}.dmg"
   appcast 'https://www.tunnelblick.net/appcast.rss',
