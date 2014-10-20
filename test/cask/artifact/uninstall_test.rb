@@ -34,7 +34,7 @@ describe Cask::Artifact::Uninstall do
       Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application "System Events" to count processes whose bundle identifier is "my.fancy.package.app"'], '1')
       Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application id "my.fancy.package.app" to quit'])
 
-      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', @cask.destination_path/'MyFancyPkg'/'FancyUninstaller.tool', '--please'])
+      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', @cask.staged_path/'MyFancyPkg'/'FancyUninstaller.tool', '--please'])
       Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-rf', '--', '/permissible/absolute/path'])
       Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-f', '--', Pathname.new(TestHelper.local_binary_path('empty_directory')).join('.DS_Store')])
       Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rmdir', '--', Pathname.new(TestHelper.local_binary_path('empty_directory'))])

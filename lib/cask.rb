@@ -150,9 +150,14 @@ class Cask
     self.class.caskroom.join(title)
   end
 
-  def destination_path
+  def staged_path
     cask_version = version ? version : :unknown
     caskroom_path.join(cask_version.to_s)
+  end
+
+  # todo transitional method, removeme after DSL 1.0
+  def destination_path
+    staged_path
   end
 
   def metadata_master_container_path
@@ -201,7 +206,7 @@ class Cask
   end
 
   def installed?
-    destination_path.exist?
+    staged_path.exist?
   end
 
   def to_s

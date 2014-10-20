@@ -17,7 +17,7 @@ class Cask::Artifact::Installer < Cask::Artifact::Base
           To complete the installation of Cask #{@cask}, you must also
           run the installer at
 
-            '#{@cask.destination_path.join(artifact.manual)}'
+            '#{@cask.staged_path.join(artifact.manual)}'
 
         EOS
       else
@@ -29,7 +29,7 @@ class Cask::Artifact::Installer < Cask::Artifact::Base
                                                                         )
         ohai "Running #{self.class.artifact_dsl_key} script #{executable}"
         raise CaskInvalidError.new(@cask, "#{self.class.artifact_dsl_key} missing executable") if executable.nil?
-        @command.run(@cask.destination_path.join(executable), script_arguments)
+        @command.run(@cask.staged_path.join(executable), script_arguments)
       end
     end
   end
