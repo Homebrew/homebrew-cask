@@ -63,7 +63,7 @@ class Cask::Installer
     else
       "#{Tty.blue}==>#{Tty.white} Success!#{Tty.reset} "
     end
-    s << "#{@cask} installed to '#{@cask.staged_path}' (#{@cask.staged_path.cabv})"
+    s << "#{@cask} staged at '#{@cask.staged_path}' (#{@cask.staged_path.cabv})"
   end
 
   def download

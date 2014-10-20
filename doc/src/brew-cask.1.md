@@ -85,7 +85,7 @@ names, and other aspects of this manual are still subject to change.
     format the output in a single column.  With `-l`, give a more detailed
     listing.
 
-    If <Casks> are given, list the installed files for <Casks>.
+    If <Casks> are given, list the staged files for <Casks>.
 
   * `uninstall [--force]` or `rm` or `remove` <Cask>:
     Uninstall <Cask>.  With `--force`, uninstall even if the Cask does
