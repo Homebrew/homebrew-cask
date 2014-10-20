@@ -4,7 +4,7 @@ class Laplock < Cask
 
   url 'https://s3-eu-west-1.amazonaws.com/laplock/laplock.app.zip'
   homepage 'http://beta.vyte.in/laplock-www/'
-  license :unknown
+  license :gratis
 
   app 'laplock.app'
 end
