@@ -1,6 +1,6 @@
 class MapboxStudio < Cask
   version '0.1.5'
-  sha256 '5da396ebd7bde39d211d0edf2de1b27bfe974c33e7edd0c27966053df6055ab0'
+  sha256 '284741137e2d711107debe0a5d940cee3d3a3eece55f4e95beb8de98006f116f'
 
   url "https://mapbox.s3.amazonaws.com/mapbox-studio/mapbox-studio-darwin-x64-v#{version}.zip"
   homepage 'https://www.mapbox.com/mapbox-studio/'
