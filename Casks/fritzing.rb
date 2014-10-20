@@ -1,10 +1,10 @@
 class Fritzing < Cask
-  version '0.8.7b'
-  sha256 '40b9290320bd33fc96745c68c020bcd36a18f3ee4d525f3aecc0a946e6edcd8f'
+  version '0.9.0b'
+  sha256 '853194e16cc66aa4fd8235d651f649e25eabbaed7bd95b4ee0d438d2e4f8ab6b'
 
-  url "http://fritzing.org/download/#{version}/mac-os-x-105/fritzing.#{version}.cocoa.dmg"
+  url "http://fritzing.org/download/#{version}/mac-os-x-105/Fritzing#{version}.dmg"
   homepage 'http://fritzing.org/'
-  license :unknown
+  license :gpl
 
   app 'Fritzing.app'
 end
