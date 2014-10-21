@@ -6,7 +6,5 @@ class Ps3MediaServer < Cask
   homepage 'http://www.ps3mediaserver.org/'
   license :oss
 
-  caveats do
-    manual_installer 'PS3 Media Server Setup.app'
-  end
+  installer :manual => 'PS3 Media Server Setup.app'
 end
