@@ -6,7 +6,5 @@ class LogmeinHamachi < Cask
   homepage 'http://vpn.net'
   license :unknown
 
-  caveats do
-    manual_installer 'LogMeInHamachiInstaller.app'
-  end
+  installer :manual => 'LogMeInHamachiInstaller.app'
 end
