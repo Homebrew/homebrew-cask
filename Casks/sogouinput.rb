@@ -7,9 +7,7 @@ class Sogouinput < Cask
   homepage 'http://pinyin.sogou.com/mac/'
   license :unknown
 
-  uninstall :delete => '/Library/Input Methods/SogouInput.app'
+  installer :manual => '安装搜狗输入法.app'
 
-  caveats do
-    manual_installer '安装搜狗输入法.app'
-  end
+  uninstall :delete => '/Library/Input Methods/SogouInput.app'
 end
