@@ -6,9 +6,5 @@ class OmnifocusClipOTron < Cask
   homepage 'http://support.omnigroup.com/omnifocus-clip-o-tron'
   license :unknown
 
-  app 'OmniFocus Clip-o-Tron.app'
-
-  caveats do
-    manual_installer 'OmniFocus Clip-o-Tron.app'
-  end
+  installer :manual => 'OmniFocus Clip-o-Tron.app'
 end
