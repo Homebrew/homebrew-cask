@@ -6,10 +6,6 @@ class AmazonMusic < Cask
   homepage 'https://www.amazon.com/gp/feature.html/ref=dm_mo_cpw_fb_lm?docId=1001067901'
   license :unknown
 
-  caskroom_only true
-
-  postflight do
-    system '/usr/bin/sudo', '-E', '--',
-      "#{destination_path}/Amazon Music Installer.app/Contents/MacOS/osx-intel"
-  end
+  installer :script => 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
+            :sudo   => true
 end
