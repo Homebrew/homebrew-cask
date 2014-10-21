@@ -12,7 +12,5 @@ class Sts < Cask
   homepage 'http://spring.io/tools/sts'
   license :unknown
 
-  caveats do
-    manual_installer "Installer - Spring Tool Suite #{version}.RELEASE.app"
-  end
+  installer :manual => "Installer - Spring Tool Suite #{version}.RELEASE.app"
 end
