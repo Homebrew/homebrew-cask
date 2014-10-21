@@ -403,7 +403,8 @@ The form is
 gpg <signature>, <parameter> => <value>
 ```
 
-where `<parameter>` is one of `:key_id` or `:key_url`.  Commonly, the signature
+where `<parameter>` is one of `:key_id` or `:key_url`, and `<signature>` points
+to the detached signature of the distribution.  Commonly, the signature
 follows the `url` value.  Example: [libreoffice.rb](../Casks/libreoffice.rb).
 
 
