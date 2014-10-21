@@ -1,6 +1,6 @@
 class Spectacle < Cask
   version '0.8.6'
-  sha256 '0fa1eb4a5798d77ec1440ad96ad169af14dbb87fe73ca22268bf5b1e18024b29'
+  sha256 '3e367d2d7e6fe7d5f41d717d49cb087ba7432624b71ddd91c0cfa9d5a5459b7c'
 
   url "https://s3.amazonaws.com/spectacle/downloads/Spectacle+#{version}.zip"
   appcast 'http://spectacleapp.com/updates/appcast.xml',
