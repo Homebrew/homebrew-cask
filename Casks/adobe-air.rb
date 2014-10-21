@@ -6,17 +6,14 @@ class AdobeAir < Cask
   homepage 'https://get.adobe.com/air/'
   license :gratis
 
-  caskroom_only true
-
-  postflight do
-    system '/usr/bin/sudo', '-E', '--',
-      "#{destination_path}/Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer", '-silent'
-  end
+  installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
+            :args   => %w[-silent],
+            :sudo   => true
 
   uninstall :script => {
-    :executable => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
-    :args => %w[-uninstall]
-  }
+                        :executable => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
+                        :args       => %w[-uninstall]
+                       }
   zap :delete => [
                   '~/Library/Application Support/Adobe/AIR',
                   '~/Library/Caches/com.adobe.air.ApplicationInstaller',
