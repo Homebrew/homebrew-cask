@@ -1,6 +1,6 @@
 class Flightgear < Cask
-  version '3.0.0'
-  sha256 '545d4f281103a2ab2d3a0aeddbab056c5ed5e876188961abec8ece5f4ae91dc4'
+  version '3.2.0'
+  sha256 '1d2721c74e46869b3d13bc9c3d1f8e086f8771f23586c92ce156d0f3d076699b'
 
   url "http://ftp.snt.utwente.nl/pub/software/flightgear/ftp/MacOSX/FlightGear-#{version}.dmg"
   homepage 'http://www.flightgear.org/'
