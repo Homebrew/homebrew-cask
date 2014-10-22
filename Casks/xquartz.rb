@@ -29,5 +29,7 @@ class Xquartz < Cask
                         '~/Library/Logs/X11',
                         '~/Library/Logs/X11.org.macosforge.xquartz.log',
                         '~/Library/Logs/X11.org.macosforge.xquartz.log.old',
-                       ]
+                        '~/.Xauthority',
+                       ],
+            :rmdir => '~/.fonts'
 end
