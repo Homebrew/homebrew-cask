@@ -4,7 +4,7 @@ class Terraform < Cask
 
   url "https://dl.bintray.com/mitchellh/terraform/terraform_#{version}_darwin_amd64.zip"
   homepage 'http://www.terraform.io/'
-  license :unknown
+  license :mpl
 
   binary 'terraform'
   binary 'terraform-provider-aws'
