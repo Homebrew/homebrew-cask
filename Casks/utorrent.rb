@@ -7,7 +7,5 @@ class Utorrent < Cask
   homepage 'http://www.utorrent.com/'
   license :unknown
 
-  caveats do
-    manual_installer 'uTorrent-Installer.app'
-  end
+  installer :manual => 'uTorrent-Installer.app'
 end

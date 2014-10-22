@@ -6,7 +6,5 @@ class Dbvisualizer < Cask
   homepage 'http://www.dbvis.com/'
   license :commercial
 
-  caveats do
-    manual_installer('DbVisualizer Installer.app')
-  end
+  installer :manual => 'DbVisualizer Installer.app'
 end

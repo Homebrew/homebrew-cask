@@ -6,7 +6,5 @@ class Thinkorswim < Cask
   homepage 'http://mediaserver.thinkorswim.com/installer/install.html#macosx'
   license :unknown
 
-  caveats do
-    manual_installer 'thinkorswim Installer.app'
-  end
+  installer :manual => 'thinkorswim Installer.app'
 end

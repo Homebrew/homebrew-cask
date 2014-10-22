@@ -6,13 +6,11 @@ class DefaultFolderX < Cask
   homepage 'http://www.stclairsoft.com/DefaultFolderX'
   license :unknown
 
+  installer :manual => 'Default Folder X Installer.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.stclairsoft.DefaultFolderX.favorites.plist',
                   '~/Library/Preferences/com.stclairsoft.DefaultFolderX.plist',
                   '~/Library/Preferences/com.stclairsoft.DefaultFolderX.settings.plist',
                  ]
-
-  caveats do
-    manual_installer 'Default Folder X Installer.app'
-  end
 end

@@ -6,7 +6,5 @@ class TitaniumStudio < Cask
   homepage 'https://my.appcelerator.com/resources'
   license :unknown
 
-  caveats do
-    manual_installer 'Titanium Studio.app'
-  end
+  installer :manual => 'Titanium Studio.app'
 end
