@@ -6,5 +6,5 @@ class Rftg < Cask
   homepage 'http://keldon.net/rftg/'
   license :unknown
 
-  app 'RFTG.app'
+  app 'Race for the Galaxy.app'
 end
