@@ -7,4 +7,9 @@ class Magicprefs < Cask
   license :gratis
 
   app 'MagicPrefs.app'
+
+  zap :delete => [
+                  '~/Library/Preferences/com.vladalexa.MagicPrefs.MagicPrefsPlugins.plist',
+                  '~/Library/Preferences/com.vladalexa.MagicPrefs.plist',
+                 ]
 end
