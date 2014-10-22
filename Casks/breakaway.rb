@@ -6,5 +6,5 @@ class Breakaway < Cask
   homepage 'http://mutablecode.com/apps/breakaway.html'
   license :gpl
 
-  app 'Breakaway.app'
+  app "breakaway-#{version}/Breakaway.app"
 end
