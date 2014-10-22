@@ -1,6 +1,6 @@
 class Terraform < Cask
-  version '0.3.0'
-  sha256 '6c8eb551381eb331c0ef3f5615a60529bc45de1c702b02ed4dfa523cffa26084'
+  version '0.3.1'
+  sha256 'dda41425c7eb06c5e8b3f5ad4904e993aa8a9ab6b61f954ee2e259667cb6ff57'
 
   url "https://dl.bintray.com/mitchellh/terraform/terraform_#{version}_darwin_amd64.zip"
   homepage 'http://www.terraform.io/'
@@ -15,6 +15,7 @@ class Terraform < Cask
   binary 'terraform-provider-google'
   binary 'terraform-provider-heroku'
   binary 'terraform-provider-mailgun'
+  binary 'terraform-provider-null'
   binary 'terraform-provisioner-file'
   binary 'terraform-provisioner-local-exec'
   binary 'terraform-provisioner-remote-exec'
