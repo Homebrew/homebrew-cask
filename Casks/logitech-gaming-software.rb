@@ -1,12 +1,12 @@
 class LogitechGamingSoftware < Cask
-  version '8.50.133'
-  sha256 '1f1930563a6c254fc9ed65e5a6bcfb47c2f7b7395933486aedc5ab71da1a3c01'
+  version '8.53.10'
+  sha256 '60ce2aacf33ab523333328128ce96239e6e4bb90f6100d1d7d3d40fce28185a9'
 
-  url "http://logitech-viva.navisite.net/web/ftp/pub/techsupport/gaming/LogitechSetup_#{version}.dmg"
+  url "http://www.logitech.com/pub/techsupport/gaming/LogiGamingSetup_#{version}.mpkg"
   homepage 'http://www.logitech.com/en-us/support/gaming-software?section=downloads&bit=&osid=36'
   license :unknown
 
-  pkg 'LogiGamingSetup.mpkg'
+  pkg 'LogiGamingSetup_#{version}.mpkg'
   uninstall :script => '/Applications/Logitech/Uninstaller.app/Contents/Resources/UninstallScript.sh',
             :pkgutil => [
                         'com.logitech.gaming',
