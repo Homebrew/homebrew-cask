@@ -6,11 +6,11 @@ class PrivateInternetAccess < Cask
   homepage 'https://www.privateinternetaccess.com'
   license :unknown
 
+  installer :script => 'Private Internet Access Installer.app/Contents/MacOS/runner.sh'
+
   postflight do
-      system '/usr/bin/sudo', '-E', '--',
-          "#{destination_path}/Private Internet Access Installer.app/Contents/MacOS/runner.sh"
-      system '/usr/bin/sudo', '-E', '--',
-          '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", Pathname.new(File.expand_path('~')).join('.pia_manager')
+    system '/usr/bin/sudo', '-E', '--',
+           '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", Pathname.new(File.expand_path('~')).join('.pia_manager')
   end
 
   uninstall :delete => '/Applications/Private Internet Access.app'
