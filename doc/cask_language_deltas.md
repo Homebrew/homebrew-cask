@@ -45,6 +45,7 @@ This notice will be removed for the final form.**
    * *stub* - not yet functional
  * `conflicts_with`
    * *stub* - not yet functional
+ * `gpg`
  * `installer :script`
  * `license`
  * `suite`
