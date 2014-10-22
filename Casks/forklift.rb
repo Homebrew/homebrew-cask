@@ -9,4 +9,6 @@ class Forklift < Cask
   license :unknown
 
   app 'ForkLift.app'
+
+  zap :delete => '~/Library/Preferences/com.binarynights.ForkLift2.plist'
 end
