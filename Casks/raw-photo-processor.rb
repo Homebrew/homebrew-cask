@@ -1,6 +1,6 @@
 class RawPhotoProcessor < Cask
   version '4.7.2'
-  sha256 'ce003b7c78916baaf51b39e26633f9ac069e78b7e5bf8904b966c4c409c06f39'
+  sha256 'ef300adaaf3399f43741a51f06c062a34c4e809eecdbbffce2cd15af414fbd7f'
 
   url 'http://www.raw-photo-processor.com/RPP/RPP_64.zip'
   appcast 'http://www.raw-photo-processor.com/rpp_updates.xml',
