@@ -1,8 +1,8 @@
 class Sonos < Cask
-  version '5.1'
-  sha256 '8a54102eb13879bd361624fa013279aecd27888b9575e19d60985dd029635d8a'
+  version :latest
+  sha256 :no_check
 
-  url 'http://update.sonos.com/software/mac/mdcr/SonosDesktopController51.dmg'
+  url 'http://www.sonos.com/redir/controller_software_mac'
   homepage 'http://www.sonos.com/'
   license :unknown
 
