@@ -1,6 +1,6 @@
 class Rubitrack < Cask
-  version '3.4.4'
-  sha256 'f1ac426726b93ae144afd6809e2acc00b139cb64d4a89da7677795d7c11cffc4'
+  version '3.4.5'
+  sha256 '1069a99e1c5faa5565fa89fa6f886298ab6e695f2942a3fc91895c5792d20be6'
 
   url "http://www.rubitrack.com/files/rubiTrack-#{version}.dmg"
   appcast 'http://www.rubitrack.com/autoupdate/sparkle3.xml'
