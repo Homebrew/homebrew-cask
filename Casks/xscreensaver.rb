@@ -1,12 +1,11 @@
 class Xscreensaver < Cask
-  version '5.29'
-  sha256 '5821584b18dc400da5b74b58e27b39a5c9b36d12e87378bfbe4e40e569fbc78e'
+  version '5.30'
+  sha256 '3d82adb17e2713959c58b45e67ef352177c47eab938791d9147e81922718c861'
 
   url "http://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
   homepage 'http://www.jwz.org/xscreensaver/'
   license :unknown
 
-  app 'Screen Savers/XScreenSaverUpdater.app'
   screen_saver 'Screen Savers/Abstractile.saver'
   screen_saver 'Screen Savers/Anemone.saver'
   screen_saver 'Screen Savers/Anemotaxis.saver'
@@ -205,6 +204,7 @@ class Xscreensaver < Cask
   screen_saver 'Screen Savers/Wander.saver'
   screen_saver 'Screen Savers/WebCollage.saver'
   screen_saver 'Screen Savers/WhirlWindWarp.saver'
+  screen_saver 'Screen Savers/WindupRobot.saver'
   screen_saver 'Screen Savers/Wormhole.saver'
   screen_saver 'Screen Savers/XAnalogTV.saver'
   screen_saver 'Screen Savers/XFlame.saver'
