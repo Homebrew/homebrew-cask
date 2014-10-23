@@ -1,10 +1,11 @@
 class Obs < Cask
-  version '0.5.1'
-  sha256 'd1b6f787e169c33f7918962b50bf9e78c5afe49e47ffb8f7de9c1a1cb6ae9bf5'
+  version '0.6.2'
+  sha256 '871b73509008c3df1c3ba005ff290395d19e494266571fc0f7b14d73f813d605'
 
-  url "https://github.com/jp9000/obs-studio/releases/download/#{version}/OBSMac-#{version}.zip"
+  url "https://github.com/jp9000/obs-studio/releases/download/#{version}/obs-#{version}-installer.dmg"
   homepage 'http://obsproject.com/'
   license :oss
 
-  app 'OBS.app'
+  pkg "OBS Studio.mpkg"
+  uninstall :pkgutil => "org.obsproject.pkg.obs-studio"
 end
