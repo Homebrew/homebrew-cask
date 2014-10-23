@@ -49,9 +49,9 @@ class Cask::Installer
       download
       extract_primary_container
       install_artifacts
-    rescue
+    rescue StandardError => e
       purge_versioned_files
-      raise
+      raise e
     end
 
     puts summary
