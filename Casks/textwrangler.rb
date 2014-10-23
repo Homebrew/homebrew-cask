@@ -1,10 +1,10 @@
 class Textwrangler < Cask
-  version '4.5.10'
-  sha256 '52eb092165f86a7a6faddd9b97c75f9781ef13462fcdf9a16d919960db8613a8'
+  version '4.5.11'
+  sha256 'a4c5dbdaa8f9211372fb21cc4c7d54b44d89e70a8537bb02034de27ec5e95039'
 
-  url "http://ash.barebones.com/TextWrangler_#{version}.dmg"
+  url "http://ven.barebones.com/TextWrangler_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/TextWrangler.xml',
-          :sha256 => '8a7c9a77fe921fe87d1503b9d0f47596c0a32e029f4fd13fac25c4d8ff8ad31e'
+          :sha256 => '3cee097b60d3e2b61835886aa980b6987dd9dd08aee4e8f98b43d6a1f3065cad'
   homepage 'http://www.barebones.com/products/textwrangler'
   license :unknown
 
