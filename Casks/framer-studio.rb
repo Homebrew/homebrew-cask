@@ -1,6 +1,6 @@
 class FramerStudio < Cask
-  version '1.9.0'
-  sha256 'b6101b7a69b9af39b15a977e66366c5b1eda2c1e66cac49604434ee8b5fb98ba'
+  version '1.9.9'
+  sha256 '87ef1a7cf363e772a1c0cbc2dd6ca6dceb41d677b547b0cac28a8c982557650f'
 
   url "http://studio.update.framerjs.com/static/downloads/Framer%20Studio-#{version}.zip"
   homepage 'http://framerjs.com/'
