@@ -62,6 +62,6 @@ class Cask::CLI::List < Cask::CLI::Base
   end
 
   def self.help
-    "with no args, lists installed Casks; given installed Casks, lists installed files"
+    "with no args, lists installed Casks; given installed Casks, lists staged files"
   end
 end
