@@ -7,7 +7,15 @@ class AdobePhotoshopLightroom < Cask
   license :unknown
 
   pkg 'Adobe Photoshop Lightroom 5.pkg'
+
   uninstall :pkgutil => 'com.adobe.Lightroom5',
             :quit => 'com.adobe.Lightroom5',
             :delete => '/Applications/Adobe Photoshop Lightroom 5.app'
+  zap       :delete => [
+                        '~/Library/Application Support/Adobe/Lightroom',
+                        '~/Library/Preferences/com.adobe.Lightroom2.plist',
+                        '~/Library/Preferences/com.adobe.Lightroom3.plist',
+                        '~/Library/Preferences/com.adobe.Lightroom4.plist',
+                        '~/Library/Preferences/com.adobe.Lightroom5.plist',
+                       ]
 end

@@ -7,4 +7,6 @@ class Shuttle < Cask
   license :mit
 
   app 'Shuttle.app'
+
+  zap :delete => '~/.shuttle.json'
 end

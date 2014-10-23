@@ -11,4 +11,10 @@ class Phpstorm < Cask
   postflight do
     system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/PhpStorm.app/Contents/Info.plist"
   end
+
+  zap :delete => [
+                  '~/Library/Application Support/WebIde80',
+                  '~/Library/Preferences/WebIde80',
+                  '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
+                 ]
 end

@@ -12,6 +12,8 @@ class HerokuToolbelt < Cask
                          '/usr/local/heroku',
                          '/usr/bin/heroku',
                         ]
+  zap       :delete => '~/.heroku'
+
   caveats do
     files_in_usr_local
   end
