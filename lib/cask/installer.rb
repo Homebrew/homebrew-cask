@@ -155,14 +155,36 @@ class Cask::Installer
   # this feels like a class method, but uses @command
   def permissions_rmtree(path)
     if path.respond_to?(:rmtree) and path.exist?
+      tried_permissions = false
+      tried_ownership = false
       begin
         path.rmtree
-      rescue
+      rescue StandardError => e
         # in case of permissions problems
-        if path.exist?
-          @command.run('/bin/chmod', :args => ['-R', '--', 'u+rwx', path])
-          @command.run('/bin/chmod', :args => ['-R', '-N',          path])
-          path.rmtree
+        if path.exist? and !tried_permissions
+          begin
+            # todo Better handling for the case where path is a symlink.
+            #      The -h and -R flags cannot be combined, and behavior is
+            #      dependent on whether the file argument has a trailing
+            #      slash.  This should do the right thing, but is fragile.
+            @command.run!('/usr/bin/chflags', :args => ['-R', '--', '000',   path])
+            @command.run!('/bin/chmod',       :args => ['-R', '--', 'u+rwx', path])
+            @command.run!('/bin/chmod',       :args => ['-R', '-N',          path])
+          rescue StandardError => e
+            unless tried_ownership
+              # in case of ownership problems
+              # todo Further examine files to see if ownership is the problem
+              #      before using sudo+chown
+              ohai "Using sudo to gain ownership of path '#{path}'"
+              current_user = Etc.getpwuid(Process.euid).name
+              @command.run('/usr/sbin/chown', :args => ['-R', '--', current_user, path],
+                                              :sudo => true)
+              tried_ownership = true
+              retry # permissions
+            end
+          end
+          tried_permissions = true
+          retry # rmtree
         end
       end
     end
