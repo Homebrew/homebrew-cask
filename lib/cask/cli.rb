@@ -88,7 +88,7 @@ class Cask::CLI
       sym = Pathname.new(command.to_s).basename('.rb').to_s.capitalize
       klass = begin
                 Cask::CLI.const_get(sym)
-              rescue
+              rescue NameError => e
                 nil
               end
       if klass.respond_to?(:run)

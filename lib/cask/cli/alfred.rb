@@ -95,13 +95,13 @@ class Cask::CLI::Alfred < Cask::CLI::Base
       # todo: I don't know the right way to detect that; using const_get
       Cask.const_get(:FakeSystemCommand)
       @alfred_version = nil
-    rescue
+    rescue StandardError => e
     end
     return @alfred_version if @alfred_version
     v = alfred_primary_preference('version')
     @alfred_version = begin
       Gem::Version.new(v).to_s.to_f
-    rescue
+    rescue StandardError => e
       0
     end
   end
