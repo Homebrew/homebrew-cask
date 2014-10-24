@@ -65,7 +65,9 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'url' stanza may only appear once")
       end
       @url ||= begin
-        Cask::URL.new(*args) unless args.empty?
+        Cask::URL.new(*args)
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, "'url' stanza failed with: #{e}")
       end
     end
 
