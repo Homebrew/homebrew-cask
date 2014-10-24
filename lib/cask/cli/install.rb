@@ -19,12 +19,9 @@ class Cask::CLI::Install < Cask::CLI::Base
         cask = Cask.load(cask_name)
         Cask::Installer.new(cask).install(force)
         count += 1
-      rescue CaskAlreadyInstalledError => e
-        # todo: downgrade this message from Error to Warning
-        #       possibly get rid of the CaskAlreadyInstalledError exception
-        #       and simply test cask.installed? in this loop
-        onoe e.message
-        count += 1
+       rescue CaskAlreadyInstalledError => e
+         opoo e.message
+         count += 1
       rescue CaskUnavailableError => e
         warn_unavailable_with_suggestion cask_name, e
       end
