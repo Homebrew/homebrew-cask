@@ -30,6 +30,7 @@ require 'cask/pretty_listing'
 require 'cask/qualified_cask_name'
 require 'cask/scopes'
 require 'cask/source'
+require 'cask/staged'
 require 'cask/system_command'
 require 'cask/underscore_supporting_uri'
 require 'cask/url'
@@ -149,9 +150,14 @@ class Cask
     self.class.caskroom.join(title)
   end
 
-  def destination_path
+  def staged_path
     cask_version = version ? version : :unknown
     caskroom_path.join(cask_version.to_s)
+  end
+
+  # todo transitional method, removeme after DSL 1.0
+  def destination_path
+    staged_path
   end
 
   def metadata_master_container_path
@@ -200,7 +206,7 @@ class Cask
   end
 
   def installed?
-    destination_path.exist?
+    staged_path.exist?
   end
 
   def to_s

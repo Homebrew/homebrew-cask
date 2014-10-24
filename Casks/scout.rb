@@ -6,7 +6,5 @@ class Scout < Cask
   homepage 'http://mhs.github.io/scout-app/'
   license :oss
 
-  caveats do
-    manual_installer 'Install Scout.app'
-  end
+  installer :manual => 'Install Scout.app'
 end

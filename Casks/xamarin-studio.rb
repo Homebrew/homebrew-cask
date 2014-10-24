@@ -4,6 +4,7 @@ class XamarinStudio < Cask
 
   url "http://download.xamarin.com/studio/Mac/XamarinStudio-#{version}.dmg"
   appcast 'http://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
+          :sha256 => '713f272a1e36262f1b2c5a06f4ed1b1eb8987d240018347a51312dfedeeafcf3',
           :format => :unknown
   homepage 'http://xamarin.com/studio'
   license :unknown

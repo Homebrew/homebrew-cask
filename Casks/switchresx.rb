@@ -2,7 +2,7 @@ class Switchresx < Cask
   version '4.4.1'
   sha256 'a7fd24312ab65a1d3da00da4fc9fb1d15a463f5d93c922bffa4ecfbe87b8e3cf'
 
-  url 'http://www.madrau.com/data/switchresx/SwitchResX4.zip'
+  url "http://www.madrau.com/data/switchresx/SwitchResX#{version.to_i}.zip"
   homepage 'http://www.madrau.com'
   license :unknown
 

@@ -7,4 +7,10 @@ class FontexplorerXPro < Cask
   license :unknown
 
   app 'FontExplorer X Pro.app'
+
+  zap :delete => [
+                  # todo: is this user-created content?
+                  # '~/FontExplorer X',
+                  '~/Library/Application Support/Linotype/FontExplorer X',
+                 ]
 end

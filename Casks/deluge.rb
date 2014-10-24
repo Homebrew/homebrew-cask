@@ -1,6 +1,6 @@
 class Deluge < Cask
-  version '1.3.9'
-  sha256 '24d798045b9f1ab332d92dae846a83cca1cdcc4ad7035fdfdd3b4d1b52cdf64b'
+  version '1.3.10'
+  sha256 '4399467735fb6339a8f2f75887179dd673b52a032cc784ab976966dead361d6d'
 
   url "http://download.deluge-torrent.org/mac_osx/deluge-#{version}-osx-x86.tbz2"
   homepage 'http://deluge-torrent.org/'

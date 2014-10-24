@@ -9,7 +9,8 @@ class Limechat < Cask
   end
 
   url "https://downloads.sourceforge.net/project/limechat/limechat/LimeChat_#{version}.tbz"
-  appcast 'http://limechat.net/mac/appcast.xml'
+  appcast 'http://limechat.net/mac/appcast.xml',
+          :sha256 => '32dd2f6795c4f19940a8bb8a093b5b297167c28a4b6712cb94d6de14f1002e4f'
   homepage 'http://limechat.net/mac/'
   license :oss
 

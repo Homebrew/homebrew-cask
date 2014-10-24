@@ -29,7 +29,7 @@ describe Cask::CLI::Install do
 
     TestHelper.must_output(self, lambda {
       Cask::CLI::Install.run('local-transmission', '--force')
-    }, %r{==> Success! local-transmission installed to '#{Cask.caskroom}/local-transmission/2.61' \(487 files, 11M\)})
+    }, %r{==> Success! local-transmission staged at '#{Cask.caskroom}/local-transmission/2.61' \(487 files, 11M\)})
   end
 
   it "properly handles Casks that are not present" do

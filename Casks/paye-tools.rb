@@ -6,7 +6,5 @@ class PayeTools < Cask
   homepage 'http://www.hmrc.gov.uk/payerti/payroll/bpt/paye-tools.htm'
   license :unknown
 
-  caveats do
-    manual_installer "payetools-rti-#{version}-osx.app"
-  end
+  installer :manual => "payetools-rti-#{version}-osx.app"
 end

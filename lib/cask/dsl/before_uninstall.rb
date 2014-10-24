@@ -1,5 +1,7 @@
+require 'cask/staged'
+
 class Cask::DSL::BeforeUninstall < Cask::DSL::Base
-  include Cask::DSL::Installed
+  include Cask::Staged
 
   def remove_accessibility_access
     if MacOS.version >= :mavericks

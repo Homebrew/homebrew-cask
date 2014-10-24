@@ -1,6 +1,6 @@
 class Kitematic < Cask
-  version '0.2.3'
-  sha256 '22a0c8bed6b531de6349b44912e433d582b18573d365bb117dc05d4520f201f9'
+  version '0.3.0'
+  sha256 '1f7695c23024fc5661b8d8714c3a80e8fe50bcce093ce64b0f2c4c77b70700f0'
 
   url "https://s3.amazonaws.com/kite-installer/Kitematic-#{version}.zip"
   homepage 'https://kitematic.com/'

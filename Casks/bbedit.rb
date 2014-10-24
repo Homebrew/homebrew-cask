@@ -4,6 +4,7 @@ class Bbedit < Cask
 
   url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/BBEdit.xml'
+          :sha256 => '4ce2f9c44758a42b4c9bad5be5311861a23492ec41974fdb05f6e0ba5db33e65'
   homepage 'http://www.barebones.com/products/bbedit/'
   license :commercial
 

@@ -11,7 +11,7 @@ describe Cask::Artifact::NestedContainer do
         Cask::Artifact::NestedContainer.new(cask).install_phase
       end
 
-      cask.destination_path.join('MyNestedApp.app').must_be :directory?
+      cask.staged_path.join('MyNestedApp.app').must_be :directory?
     end
   end
 end

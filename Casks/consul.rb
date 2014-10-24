@@ -1,6 +1,6 @@
 class Consul < Cask
-  version '0.4.0'
-  sha256 '87a1b0f37e773d92c939ca7dd6a50985acc4fb4aaec31384756ef896aef4035b'
+  version '0.4.1'
+  sha256 '957fe9ba27bbaf99539cd534db8ac8ec4c9fa1c6b3b4675d0c0eb3a7fbfb646c'
 
   url "https://dl.bintray.com/mitchellh/consul/#{version}_darwin_amd64.zip"
   homepage 'http://www.consul.io/'

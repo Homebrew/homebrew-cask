@@ -6,7 +6,5 @@ class Xampp < Cask
   homepage 'http://www.apachefriends.org/index.html'
   license :oss
 
-  caveats do
-    manual_installer 'xampp-osx-1.8.3-3-installer.app'
-  end
+  installer :manual => 'xampp-osx-1.8.3-3-installer.app'
 end

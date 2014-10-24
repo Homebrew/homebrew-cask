@@ -5,6 +5,8 @@ class Iterm2 < Cask
 
   url 'http://www.iterm2.com/downloads/stable/iTerm2_v2_0.zip'
   homepage 'http://www.iterm2.com/'
+  appcast 'http://iterm2.com/appcasts/final.xml',
+          :sha256 => 'd8e8c6f4990676b33c81d7b577b96ef5eed9f8f872c104d02f25e0290b0a8ee5'
   license :oss
 
   app 'iTerm.app'

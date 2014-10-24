@@ -1,5 +1,7 @@
+require 'cask/staged'
+
 class Cask::DSL::AfterInstall < Cask::DSL::Base
-  include Cask::DSL::Installed
+  include Cask::Staged
 
   def suppress_move_to_applications
     system_command("/usr/bin/defaults", :args => ["write", bundle_identifier, "moveToApplicationsFolderAlertSuppress", "-bool", "true"])

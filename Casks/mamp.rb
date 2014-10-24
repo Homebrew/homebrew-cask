@@ -1,8 +1,8 @@
 class Mamp < Cask
-  version '3.0.6'
-  sha256 'c615d4107a8b1ffee204b93af3809f6d46e9ddc3dfe05d79dd65c41d2aeec050'
+  version '3.0.7.2'
+  sha256 'a6e72143efa73eb919efeb0e9dc0089e291204676da37e9508ac53c2f51f8878'
 
-  url "http://downloads9.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
+  url "http://downloads4.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
   homepage 'http://www.mamp.info/en/index.html'
   license :unknown
 

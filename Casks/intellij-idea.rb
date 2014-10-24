@@ -12,6 +12,11 @@ class IntellijIdea < Cask
     system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/IntelliJ IDEA 13.app/Contents/Info.plist"
   end
 
+  zap :delete => [
+                  '~/Library/Application Support/IntelliJIdea13',
+                  '~/Library/Preferences/IntelliJIdea13',
+                 ]
+
   caveats <<-EOS.undent
     #{title} may require Java 7 (an older version) available from the
     caskroom-versions repository via

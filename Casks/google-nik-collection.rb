@@ -6,7 +6,5 @@ class GoogleNikCollection < Cask
   homepage 'https://www.google.com/nikcollection/'
   license :unknown
 
-  caveats do
-    manual_installer 'Nik Collection.app'
-  end
+  installer :manual => 'Nik Collection.app'
 end

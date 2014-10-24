@@ -7,4 +7,6 @@ class Phoenix < Cask
   license :oss
 
   app 'Phoenix.app'
+
+  zap :delete => '~/.phoenix.js'
 end

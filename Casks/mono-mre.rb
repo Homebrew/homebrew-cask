@@ -1,6 +1,6 @@
 class MonoMre < Cask
-  version '3.8.0'
-  sha256 '85615c5bd6af84b6e3da263ef4571dc226c03177bc319f9909b86711163073e6'
+  version '3.10.0'
+  sha256 'e5f7f42d9ba778aca6774921a0803d5ee73bc01d0674d058e557dcf19f792dd1'
 
   url "http://download.mono-project.com/archive/#{version}/macos-10-x86/MonoFramework-MRE-#{version}.macos10.xamarin.x86.pkg"
   homepage 'http://mono-project.com'

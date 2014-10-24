@@ -7,4 +7,9 @@ class Cartographica < Cask
   license :commercial
 
   app 'Cartographica.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/Cartographica',
+                  '~/Library/Preferences/com.ClueTrust.Cartographica.plist',
+                 ]
 end

@@ -7,7 +7,4 @@ class LeagueOfLegends < Cask
   license :unknown
 
   app 'League of Legends.app'
-  caveats do
-    manual_installer 'League of Legends.app'
-  end
 end

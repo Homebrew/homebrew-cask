@@ -1,8 +1,9 @@
 class Gisto < Cask
-  version '0.2.5b'
-  sha256 '4f0b3e599f601483c232363867f3c62754631174c688fba143eadda8ddc9aaf4'
+  version '0.2.6b'
+  sha256 '7dffc22e5274e7ee88194f59a950e26d41fd1463d50785ffaf117ad5dd892840'
 
   url "http://download.gistoapp.com/Gisto-#{version}-OSX_x86.dmg"
+  appcast 'http://www.gistoapp.com/GistoAppCast.xml'
   homepage 'http://www.gistoapp.com/'
   license :unknown
 

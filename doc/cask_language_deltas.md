@@ -43,6 +43,10 @@ This notice will be removed for the final form.**
    * *stub* - not yet functional
  * `depends_on :java`
    * *stub* - not yet functional
+ * `conflicts_with`
+   * *stub* - not yet functional
+ * `gpg`
+ * `installer :script`
  * `license`
  * `suite`
  * `tags`
@@ -54,19 +58,20 @@ This notice will be removed for the final form.**
 
 ## Renames (1.0)
 
-| old form              | new form
-| --------------------- |----------------
-| `after_install`       | `postflight`
-| `after_uninstall`     | `uninstall_postflight`
-| `before_install`      | `preflight`
-| `before_uninstall`    | `uninstall_preflight`
-| `container_type`      | `container :type`
-| `depends_on_formula`  | `depends_on :formula`
-| `install`             | `pkg`
-| `link`                | `app` (or sometimes `suite` or `artifact`)
-| `nested_container`    | `container :nested =>`
-| `uninstall :files`    | `uninstall :delete`
-| `version 'latest'`    | `version :latest`
+| old form                                    | new form
+| ------------------------------------------- |----------------
+| `after_install`                             | `postflight`
+| `after_uninstall`                           | `uninstall_postflight`
+| `before_install`                            | `preflight`
+| `before_uninstall`                          | `uninstall_preflight`
+| `container_type`                            | `container :type`
+| `depends_on_formula`                        | `depends_on :formula`
+| `install`                                   | `pkg`
+| `link`                                      | `app` (or sometimes `suite` or `artifact`)
+| `nested_container`                          | `container :nested =>`
+| `uninstall :files`                          | `uninstall :delete`
+| `version 'latest'`                          | `version :latest`
+| `manual_installer(path)` (within `caveats`) | `installer :manual`
 
 
 ## All Supported Stanzas (1.0)

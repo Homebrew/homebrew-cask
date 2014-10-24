@@ -7,7 +7,8 @@ class Macvim < Cask
   else
     sha256 '557c60f3487ab68426cf982c86270f2adfd15e8a4d535f762e6d55602754d224'
     url 'https://github.com/b4winckler/macvim/releases/download/snapshot-73/MacVim-snapshot-73-Mavericks.tbz'
-    appcast 'http://b4winckler.github.com/macvim/appcast/stable.xml'
+    appcast 'http://b4winckler.github.com/macvim/appcast/stable.xml',
+            :sha256 => '1408f192fe672eb99d7032eff37bd93537d65499fa9b4502eb0ae1365a73d056'
   end
 
   homepage 'http://code.google.com/p/macvim/'

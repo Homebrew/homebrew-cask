@@ -6,10 +6,10 @@ class Aquamacs < Cask
 
     url "http://braeburn.aquamacs.org/releases/Aquamacs-Emacs-#{version}.dmg"
   else
-    version '3.0a'
-    sha256 '1d833cb2e40c1af96713badc4efa7c1c9259317b91edcfe17059c73e989f9e07'
+    version '3.1'
+    sha256 '0d918da021d70d5ece6e05234ef47425238fef84a1900ae07409f95b8b224066'
 
-    url "https://github.com/davidswelt/aquamacs-emacs/releases/download/Aquamacs-3.0a/Aquamacs-Emacs-#{version}.dmg"
+    url "https://github.com/davidswelt/aquamacs-emacs/releases/download/Aquamacs-#{version}/Aquamacs-Emacs-#{version}.dmg"
   end
 
   homepage 'http://aquamacs.org/'

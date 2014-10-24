@@ -1,10 +1,10 @@
 class MapboxStudio < Cask
-  version '0.1.0'
-  sha256 'c36455cfa938c957cb08acd04281a5104702ab3b6ba0c76ae38bb6a55910296d'
+  version '0.1.5'
+  sha256 '284741137e2d711107debe0a5d940cee3d3a3eece55f4e95beb8de98006f116f'
 
   url "https://mapbox.s3.amazonaws.com/mapbox-studio/mapbox-studio-darwin-x64-v#{version}.zip"
   homepage 'https://www.mapbox.com/mapbox-studio/'
-  license :unknown
+  license :bsd
 
   app "mapbox-studio-darwin-x64-v#{version}/Mapbox Studio.app"
 end

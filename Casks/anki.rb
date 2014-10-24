@@ -1,6 +1,6 @@
 class Anki < Cask
-  version '2.0.29'
-  sha256 '2eea38eca7e4f720c01a10ffdbfe0b73c9ac06648483103ed034f9db6660c07a'
+  version '2.0.31'
+  sha256 '7afccba7d7998c187156702afb943e0be2b9d14729c8147b9a6fd20e40530fe2'
 
   url "http://ankisrs.net/download/mirror/anki-#{version}.dmg"
   homepage 'http://ankisrs.net/'
