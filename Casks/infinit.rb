@@ -2,7 +2,7 @@ class Infinit < Cask
   version :latest
   sha256 :no_check
 
-  url 'http://download.infinit.io/macosx/10.8/Infinit-ia64.dmg'
+  url 'https://download.infinit.io/macosx/installer/Infinit.dmg'
   homepage 'https://infinit.io/'
   license :unknown
 
