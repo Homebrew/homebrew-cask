@@ -1,6 +1,6 @@
 class Hr < Cask
-  version '0.4'
-  sha256 '7d07901a88d449fcb352b17408d8bdbc98c849e12080f5dad5259a009dda5c4b'
+  version '0.43'
+  sha256 'd4bba32b712fa456165b13c1a934fbd4da4dbd7391546756c7f92deabcacbd04'
 
   url "http://www.hrmacapp.com/releases/hr_#{version.gsub('.', '')}.zip"
   homepage 'http://www.hrmacapp.com/'
