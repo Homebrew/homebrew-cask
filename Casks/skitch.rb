@@ -1,6 +1,6 @@
 class Skitch < Cask
-  version '2.7.3'
-  sha256 'f29755fb6083dc256988c40a55e3a8e76ad3a21015e2aa20af1fe8510e9f63f9'
+  version '2.7.4'
+  sha256 '66b01d9363b1954b449ad37d405e4f44ed56ca85172bfd2e4e26f43dd3fd3895'
 
   url "http://cdn1.evernote.com/skitch/mac/release/Skitch-#{version}.zip"
   homepage 'http://evernote.com/skitch/'
