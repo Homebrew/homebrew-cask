@@ -7,5 +7,5 @@ class Silo < Cask
   license :unknown
   container :nested => "Install_Silo_#{version.gsub('.','_')}_mac.dmg"
 
-  app "Silo #{version.gsub(%r{^(\d+\.\d+).*},'\1')}.app"
+  app "Silo #{version.sub(%r{^(\d+\.\d+).*},'\1')}.app"
 end
