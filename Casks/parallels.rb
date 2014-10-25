@@ -1,6 +1,6 @@
 class Parallels < Cask
-  version '10.0.2-27712'
-  sha256 'be7f850b1bbe813c16521ff784d85d46fc01ebbb40b8e02352e38e2add704591'
+  version '10.1.0-28600'
+  sha256 'd0dd3829eaf070912aeb508c775fc316e2bb895a31ea4096c6dbc8cd2ca0b0f8'
 
   url "http://download.parallels.com/desktop/v10/updates/#{version.gsub(/-.*$/, '')}/ParallelsDesktop-#{version}.dmg"
   homepage 'http://www.parallels.com/products/desktop/'
@@ -8,12 +8,9 @@ class Parallels < Cask
 
   app 'Parallels Desktop.app'
 
-  uninstall_preflight do
-    # Need to change the ownership so that we can do the uninstall.  Running Parallels Desktop changes owner to root
-    # TODO: this should be moved to the core (see issue #6699)
-    ohai "To uninstall Parallels Desktop 10, we need to change permissions, your password may be required."
-    system '/usr/bin/sudo', '-E', '--',
-           '/usr/sbin/chown', '-R', Etc.getpwuid(Process.euid).name, destination_path.join("Parallels Desktop.app")
+  postflight do
+    # Set the file to visible, since it was hidden in the dmg
+    system '/usr/bin/SetFile', '-a', 'v', destination_path.join("Parallels Desktop.app")
   end
 
   uninstall :delete => [
