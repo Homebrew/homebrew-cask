@@ -1,6 +1,6 @@
 class Texpad < Cask
-  version '1.6.13'
-  sha256 'e3fa71a11747d9698f72a8b9b6d5bcfca83f71ddec3dd69c3749362d47e85dcb'
+  version '1.6.14'
+  sha256 '18fcbe93e77e5b5bc848172546962fcde397a26fd543efcc1054004369192f7e'
 
   url "https://cloud.texpadapp.com/bundles/Texpad_#{version.gsub('.','_')}.zip"
   appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml',
