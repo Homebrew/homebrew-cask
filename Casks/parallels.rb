@@ -1,6 +1,6 @@
 class Parallels < Cask
-  version '10.1.0-28600'
-  sha256 'd0dd3829eaf070912aeb508c775fc316e2bb895a31ea4096c6dbc8cd2ca0b0f8'
+  version '10.1.1-28614'
+  sha256 'd39780b42640c5de6198fb7434e24ac1cc983cc13b131c73cdba775964ec4e0d'
 
   url "http://download.parallels.com/desktop/v10/updates/#{version.gsub(/-.*$/, '')}/ParallelsDesktop-#{version}.dmg"
   homepage 'http://www.parallels.com/products/desktop/'
