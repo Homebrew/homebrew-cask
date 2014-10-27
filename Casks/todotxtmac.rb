@@ -1,8 +1,8 @@
 class Todotxtmac < Cask
-  version '1.2.3'
-  sha256 'f396ae24031a11c7371dfb187e958313a85cfd03b45b4f7d05f312cb944c5072'
+  version '1.2.4'
+  sha256 '368010bec057387bdc6ee9cef4646f90d8eb1af8e1b4ec1666045e7e2166db4a'
 
-  url 'https://github.com/mjdescy/TodoTxtMac/releases/download/1.2.3/TodoTxtMac.app.zip'
+  url 'https://github.com/mjdescy/TodoTxtMac/releases/download/1.2.4/TodoTxtMac.app.zip'
   homepage 'https://mjdescy.github.io/TodoTxtMac/'
   license :mit
 
