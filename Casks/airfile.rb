@@ -5,5 +5,5 @@ class Airfile < Cask
   url "https://s3.amazonaws.com/airfile-static/__apps__/airfile/AirFile-#{version}.zip"
   homepage 'http://airfileapp.tumblr.com/'
 
-  link 'AirFile.app'
+  app 'AirFile.app'
 end
