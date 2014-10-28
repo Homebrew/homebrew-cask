@@ -1,6 +1,6 @@
 require 'cask/checkable'
 
-class Cask::LinkChecker
+class Cask::UrlChecker
   attr_accessor :cask, :response_status, :headers
 
   include Cask::Checkable
@@ -12,7 +12,7 @@ class Cask::LinkChecker
   end
 
   def summary_header
-    "link check result for #{cask}"
+    "url check result for #{cask}"
   end
 
   def run
