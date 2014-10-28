@@ -7,4 +7,5 @@ class Dropshare < Cask
   license :commercial
 
   app 'Dropshare.app'
+  app 'Dropshare.app'
 end
