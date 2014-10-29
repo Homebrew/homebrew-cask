@@ -1,12 +1,16 @@
 class Poedit < Cask
-  version '1.6.9'
-  sha256 '401a917bee98994d6455e8d56c53b4ac04b2cf8a5abc0be4466c12f3b2a2a0ab'
+  version '1.6.10'
+  sha256 'd6b6d07a10099c3a31ee21622764ed6d3d007a437dab33a00b0f15e42b2dfa76'
 
   url "http://poedit.net/dl/Poedit-#{version}.zip"
   appcast 'http://releases.poedit.net/appcast-osx',
-          :sha256 => '62ecfe8924895914af225d18c6b9ff199e4ecadbabd02301519070cf8382113e'
+          :sha256 => 'bbaf42f8a2e9754df8a60dfcef724cc6d326d6fd4cc05426c45e3a44e8f0d3dd'
   homepage 'http://www.poedit.net'
-  license :unknown
+  license :mit
 
   app 'Poedit.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
 end
