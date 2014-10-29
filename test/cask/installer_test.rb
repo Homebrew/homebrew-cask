@@ -225,7 +225,7 @@ describe Cask::Installer do
       } # wont_raise
     end
 
-    it "works properly with a direct link to a pkg" do
+    it "works properly with a direct URL to a pkg" do
       naked_pkg = Cask.load('naked-pkg')
 
       shutup do

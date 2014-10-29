@@ -22,7 +22,7 @@ require 'cask/cli/update'
 require 'cask/cli/zap'
 
 require 'cask/cli/internal_use_base'
-require 'cask/cli/internal_checklinks'
+require 'cask/cli/internal_checkurl'
 require 'cask/cli/internal_dump'
 require 'cask/cli/internal_help'
 require 'cask/cli/internal_stanza'
