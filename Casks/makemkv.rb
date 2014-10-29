@@ -1,6 +1,6 @@
 class Makemkv < Cask
-  version '1.8.13'
-  sha256 'bf35191ae9c0597b60e95cec43069a38ad500037558cdef11f0dec610495ebd3'
+  version '1.8.14'
+  sha256 '099acced826a05d1013c03705d07a344731b3f078d866437f54568f2e3065c53'
 
   url "http://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
   homepage 'http://www.makemkv.com/'
