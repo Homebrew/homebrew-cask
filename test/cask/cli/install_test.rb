@@ -1,7 +1,7 @@
 require 'test_helper'
 
 describe Cask::CLI::Install do
-  it "allows install and link of multiple Casks at once" do
+  it "allows install and activation of multiple Casks at once" do
     shutup do
       Cask::CLI::Install.run('local-transmission', 'local-caffeine')
     end
