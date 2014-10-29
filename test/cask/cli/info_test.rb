@@ -10,7 +10,7 @@ describe Cask::CLI::Info do
       Not installed
       https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-caffeine.rb
       ==> Contents
-        Caffeine.app (link)
+        Caffeine.app (app)
     CLIOUTPUT
   end
 
@@ -22,13 +22,13 @@ describe Cask::CLI::Info do
         Not installed
         https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-caffeine.rb
         ==> Contents
-          Caffeine.app (link)
+          Caffeine.app (app)
         local-transmission: 2.61
         http://example.com/local-transmission
         Not installed
         https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-transmission.rb
         ==> Contents
-          Transmission.app (link)
+          Transmission.app (app)
       CLIOUTPUT
     end
 
@@ -54,7 +54,7 @@ describe Cask::CLI::Info do
       Not installed
       https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/with-caveats.rb
       ==> Contents
-        Caffeine.app (link)
+        Caffeine.app (app)
       ==> Caveats
       Here are some things you might want to know.
 
@@ -78,7 +78,7 @@ describe Cask::CLI::Info do
       Not installed
       https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/with-conditional-caveats.rb
       ==> Contents
-        Caffeine.app (link)
+        Caffeine.app (app)
     CLIOUTPUT
   end
 

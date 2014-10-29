@@ -54,14 +54,14 @@ describe Cask::DSL do
       end
 
       instance = CaskWithApps.new
-      Array(instance.artifacts[:link]).sort.must_equal [['Bar.app'], ['Foo.app']]
+      Array(instance.artifacts[:app]).sort.must_equal [['Bar.app'], ['Foo.app']]
     end
 
     it "allow app stanzas to be empty" do
       CaskWithNoApps = Class.new(Cask)
 
       instance = CaskWithNoApps.new
-      Array(instance.artifacts[:link]).must_equal %w[]
+      Array(instance.artifacts[:app]).must_equal %w[]
     end
   end
 
