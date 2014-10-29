@@ -69,3 +69,9 @@ Web redirection happens automatically.
 The location of the Homebrew-cask Tap on disk has also changed, which should be
 handled automatically upon upgrading.  If you have technical difficulties,
 please see [TAP_MIGRATION.md](TAP_MIGRATION.md).
+
+## `brew cask list` shows that a package is installed, but when I try to do `brew cask uninstall`, it tells me that the package is not installed. Help!
+
+This is a problem with the bookkeeping in the current implementation of Cask, which gets confused if a cask is updated after installation. For now, use the `brew cask uninstall --force` to uninstall these packages.
+
+This issue is currently being addressed [here](https://github.com/caskroom/homebrew-cask/issues/4688) and [here](https://github.com/caskroom/homebrew-cask/issues/4678).
