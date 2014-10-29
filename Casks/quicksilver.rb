@@ -1,8 +1,8 @@
 class Quicksilver < Cask
-  version '1.1.3'
-  sha256 '7c2ebec0d478d711859991991a65e4deced9f9521ac555c07b6be42999504535'
+  version '1.2.0'
+  sha256 '08c5aeaa7fe89427bcec30a9700eb0b7484bd68b647776b2c82c95355d1679d4'
 
-  url 'http://cdn.qsapp.com/plugins/files/com.blacktree.Quicksilver__16391.dmg'
+  url 'http://cdn.qsapp.com/plugins/files/com.blacktree.Quicksilver__16399.dmg'
   homepage 'http://qsapp.com/'
   license :unknown
 
