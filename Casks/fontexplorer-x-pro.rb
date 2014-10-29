@@ -1,8 +1,8 @@
 class FontexplorerXPro < Cask
-  version '4.0.2'
-  sha256 '6e7d2bfb89e65e78a8551db705ffca86ec6a25371388ad2124b1cbf956f48472'
+  version '4.2.1'
+  sha256 '9fd225ff73804231d094f16bdb435355a3b7557d74ec1aeb9d89e925f0673350'
 
-  url "http://fex.linotype.com/download/mac/FontExplorerXPro#{version.gsub('.','')}.dmg"
+  url "http://fast.fontexplorerx.com/FontExplorerXPro#{version.gsub('.','')}.dmg"
   homepage 'http://www.fontexplorerx.com/'
   license :unknown
 
