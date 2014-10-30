@@ -1,6 +1,6 @@
 class FeistyDogTag < Cask
-  version '1.0.3'
-  sha256 '3e995c86469d2161c03c825b333d1280aea82684adbd613053430da2b38ab57d'
+  version :latest
+  sha256 :no_check
 
   url "https://s3.amazonaws.com/feisty-dog/Tag.zip"
   homepage 'http://www.feisty-dog.com/tag/'
@@ -8,4 +8,3 @@ class FeistyDogTag < Cask
 
   app "Tag.app"
 end
-
