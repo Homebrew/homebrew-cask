@@ -1,6 +1,6 @@
-class Cask::Artifact::Artifact < Cask::Artifact::Symlinked
+class Cask::Artifact::Suite < Cask::Artifact::Symlinked
   def self.artifact_english_name
-    'Generic artifact'
+    'App Suite'
   end
 
   def self.artifact_dirmethod
