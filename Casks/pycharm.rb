@@ -4,10 +4,11 @@ class Pycharm < Cask
 
   url "http://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
   homepage 'http://www.jetbrains.com/pycharm/'
+  license :unknown
 
-  link 'PyCharm.app'
+  app 'PyCharm.app'
 
-  after_install do
-    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/PyCharm.app/Contents/Info.plist"
+  postflight do
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/PyCharm.app/Contents/Info.plist"
   end
 end

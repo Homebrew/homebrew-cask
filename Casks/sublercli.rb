@@ -4,6 +4,7 @@ class Sublercli < Cask
 
   url "https://subler.googlecode.com/files/SublerCLI-#{version}.zip"
   homepage 'https://code.google.com/p/subler/'
+  license :oss
 
   binary 'SublerCLI'
 end

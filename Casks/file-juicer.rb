@@ -1,9 +1,10 @@
 class FileJuicer < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://echoone.com/filejuicer/FileJuicer.dmg'
   homepage 'http://echoone.com/filejuicer/'
+  license :unknown
 
-  link 'File Juicer.app'
+  app 'File Juicer.app'
 end

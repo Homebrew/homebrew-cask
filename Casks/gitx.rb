@@ -1,11 +1,12 @@
 class Gitx < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://frim.frim.nl/GitXStable.app.zip'
   appcast 'http://gitx.frim.nl/Downloads/appcast.xml'
   homepage 'http://gitx.frim.nl/'
+  license :unknown
 
-  link 'GitX.app'
+  app 'GitX.app'
   binary 'GitX.app/Contents/Resources/gitx'
 end

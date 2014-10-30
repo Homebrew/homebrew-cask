@@ -1,9 +1,10 @@
 class Tofu < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://amarsagoo.info/tofu/Tofu.dmg'
   homepage 'http://amarsagoo.info/tofu/'
+  license :unknown
 
-  link 'Tofu.app'
+  app 'Tofu.app'
 end

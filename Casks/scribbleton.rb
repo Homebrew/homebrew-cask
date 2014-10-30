@@ -1,9 +1,10 @@
 class Scribbleton < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://scribbleton.com/download/mac'
   homepage 'http://scribbleton.com/'
+  license :unknown
 
-  link 'Scribbleton.app'
+  app 'Scribbleton.app'
 end

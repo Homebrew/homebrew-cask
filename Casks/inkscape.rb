@@ -4,8 +4,11 @@ class Inkscape < Cask
 
   url "http://downloads.sourceforge.net/inkscape/Inkscape-#{version}+X11.dmg"
   homepage 'http://inkscape.org'
+  license :oss
 
-  link 'Inkscape.app'
+  app 'Inkscape.app'
+
+  zap :delete => '~/.inkscape-etc'
 
   caveats do
     x11_required

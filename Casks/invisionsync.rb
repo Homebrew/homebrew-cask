@@ -1,9 +1,10 @@
 class Invisionsync < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.invisionapp.com/app/InVisionSync.zip'
   homepage 'http://invisionapp.com/'
+  license :unknown
 
-  link 'InVisionSync.app'
+  app 'InVisionSync.app'
 end

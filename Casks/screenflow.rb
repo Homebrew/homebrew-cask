@@ -1,9 +1,10 @@
 class Screenflow < Cask
-  version '4.5'
-  sha256 '9ec0f4c1bb1b778ea37f3e37bf0ad494baffe08e567553027c13178f05c2fbcd'
+  version '4.5.3'
+  sha256 '48209b7fd5387e07c63bd4502ad073dde96460ee30e1a8b19fe2977e8b274914'
 
-  url 'http://www.telestream.net/download-files/screenflow/4-5/ScreenFlow-4.5.dmg'
+  url "http://www.telestream.net/download-files/screenflow/4-5/ScreenFlow-#{version}.dmg"
   homepage 'http://www.telestream.net/screenflow/'
+  license :unknown
 
-  link 'ScreenFlow.app'
+  app 'ScreenFlow.app'
 end

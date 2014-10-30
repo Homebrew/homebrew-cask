@@ -2,13 +2,13 @@ require 'test_helper'
 
 describe Cask::Artifact::AfterBlock do
   describe 'install_phase' do
-    it 'calls the specified block after installing, passing a cask mini-dsl' do
+    it 'calls the specified block after installing, passing a Cask mini-dsl' do
       called      = false
       yielded_arg = nil
 
       CaskWithAfterInstall = Class.new(Cask)
       CaskWithAfterInstall.class_eval do
-        after_install do |c|
+        postflight do |c|
           called = true
           yielded_arg = c
         end
@@ -23,13 +23,13 @@ describe Cask::Artifact::AfterBlock do
   end
 
   describe 'uninstall_phase' do
-    it 'calls the specified block after uninstalling, passing a cask mini-dsl' do
+    it 'calls the specified block after uninstalling, passing a Cask mini-dsl' do
       called      = false
       yielded_arg = nil
 
       CaskWithAfterUninstall = Class.new(Cask)
       CaskWithAfterUninstall.class_eval do
-        after_uninstall do |c|
+        uninstall_postflight do |c|
           called = true
           yielded_arg = c
         end

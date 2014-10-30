@@ -7,6 +7,10 @@ class Cask::CLI::Base
     true
   end
 
+  def self.cask_names_from(args)
+    args.reject { |a| a.chars.first == '-' }
+  end
+
   def self.help
     "No help available for the #{command_name} command"
   end

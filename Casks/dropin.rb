@@ -1,10 +1,11 @@
 class Dropin < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://excitedatom.com/downloads/dropin/?p=dropin'
   appcast 'http://excitedatom.com/dropin/updates.xml'
   homepage 'http://excitedatom.com/dropin/'
+  license :unknown
 
-  link 'DropIn.app'
+  app 'DropIn.app'
 end

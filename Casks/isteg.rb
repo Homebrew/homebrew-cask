@@ -4,6 +4,7 @@ class Isteg < Cask
 
   url "http://www.hanynet.com/isteg-#{version}.zip"
   homepage 'http://www.hanynet.com/isteg/'
+  license :oss
 
-  link 'iSteg.app'
+  app 'iSteg.app'
 end

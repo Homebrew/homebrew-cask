@@ -1,9 +1,10 @@
 class Textadept < Cask
-  version '7.1'
-  sha256 '728359279295d51a69cec920ee111ce6653189adda1274c4ff0cb7f606273df2'
+  version '7.7'
+  sha256 '4e684ffdca2e22d11ce8ea721a3510a2a4b0aef2ec905ecf566ee2f9c1346098'
 
-  url 'http://foicica.com/textadept/download/textadept_7.1.osx.zip'
+  url "http://foicica.com/textadept/download/textadept_#{version}.osx.zip"
   homepage 'http://foicica.com/textadept/'
+  license :unknown
 
-  link 'Textadept.app'
+  app "textadept_#{version}.osx/Textadept.app"
 end

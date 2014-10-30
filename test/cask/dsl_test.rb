@@ -8,7 +8,7 @@ describe Cask::DSL do
     test_cask.version.must_equal '1.2.3'
   end
 
-  it "prevents the entire world from crashing when a cask includes an unknown method" do
+  it "prevents the entire world from crashing when a Cask includes an unknown method" do
     UnexpectedMethodCask = Class.new(Cask)
     begin
       TestHelper.must_output(self, lambda {
@@ -45,23 +45,23 @@ describe Cask::DSL do
     end
   end
 
-  describe "link stanza" do
-    it "allows you to specify linkables" do
-      CaskWithLinkables = Class.new(Cask)
-      CaskWithLinkables.class_eval do
-        link 'Foo.app'
-        link 'Bar.app'
+  describe "app stanza" do
+    it "allows you to specify app stanzas" do
+      CaskWithApps = Class.new(Cask)
+      CaskWithApps.class_eval do
+        app 'Foo.app'
+        app 'Bar.app'
       end
 
-      instance = CaskWithLinkables.new
-      Array(instance.artifacts[:link]).sort.must_equal [['Bar.app'], ['Foo.app']]
+      instance = CaskWithApps.new
+      Array(instance.artifacts[:app]).sort.must_equal [['Bar.app'], ['Foo.app']]
     end
 
-    it "allow linkables to be set to empty" do
-      CaskWithNoLinkables = Class.new(Cask)
+    it "allow app stanzas to be empty" do
+      CaskWithNoApps = Class.new(Cask)
 
-      instance = CaskWithNoLinkables.new
-      Array(instance.artifacts[:link]).must_equal %w[]
+      instance = CaskWithNoApps.new
+      Array(instance.artifacts[:app]).must_equal %w[]
     end
   end
 
@@ -76,26 +76,26 @@ describe Cask::DSL do
       CaskWithCaveats = Class.new(Cask)
       CaskWithCaveats.class_eval do
         def caveats; <<-EOS.undent
-          When you install this cask, you probably want to know this.
+          When you install this Cask, you probably want to know this.
           EOS
         end
       end
 
       instance = CaskWithCaveats.new
 
-      instance.caveats.must_equal "When you install this cask, you probably want to know this.\n"
+      instance.caveats.must_equal "When you install this Cask, you probably want to know this.\n"
     end
   end
 
   describe "pkg stanza" do
     it "allows installable pkgs to be specified" do
-      CaskWithInstallables = Class.new(Cask)
-      CaskWithInstallables.class_eval do
-        install 'Foo.pkg'
-        install 'Bar.pkg'
+      CaskWithPkgs = Class.new(Cask)
+      CaskWithPkgs.class_eval do
+        pkg 'Foo.pkg'
+        pkg 'Bar.pkg'
       end
 
-      instance = CaskWithInstallables.new
+      instance = CaskWithPkgs.new
       Array(instance.artifacts[:install]).sort.must_equal [['Bar.pkg'], ['Foo.pkg']]
     end
   end
@@ -159,11 +159,30 @@ describe Cask::DSL do
       cask.gpg.to_s.must_match %r{\S}
     end
 
-    it "prevents specifying gpg multiple times" do
+    it "allows gpg stanza to be specified with :key_url" do
+      cask = Cask.load('with-gpg-key-url')
+      cask.gpg.to_s.must_match %r{\S}
+    end
+
+    it "prevents specifying gpg stanza multiple times" do
       err = lambda {
-        invalid_cask = Cask.load('invalid/invalid-gpg-multiple')
+        invalid_cask = Cask.load('invalid/invalid-gpg-multiple-stanzas')
       }.must_raise(CaskInvalidError)
       err.message.must_include "'gpg' stanza may only appear once"
+    end
+
+    it "prevents missing gpg key parameters" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-missing-key')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'gpg' stanza must include exactly one"
+    end
+
+    it "prevents conflicting gpg key parameters" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-conflicting-keys')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'gpg' stanza must include exactly one"
     end
 
     it "refuses to load invalid gpg signature URLs" do
@@ -178,9 +197,15 @@ describe Cask::DSL do
       }.must_raise(CaskInvalidError)
     end
 
-    it "refuses to load if gpg :type is invalid" do
+    it "refuses to load invalid gpg key IDs" do
       err = lambda {
-        invalid_cask = Cask.load('invalid/invalid-gpg-type')
+        invalid_cask = Cask.load('invalid/invalid-gpg-key-id')
+      }.must_raise(CaskInvalidError)
+    end
+
+    it "refuses to load if gpg parameter is unknown" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-parameter')
       }.must_raise(CaskInvalidError)
     end
   end
@@ -236,10 +261,18 @@ describe Cask::DSL do
     end
   end
 
-  describe "install_script stanza" do
-    it "allows install_script to be specified" do
-      cask = Cask.load('with-install-script')
-      cask.artifacts[:install_script].first[:executable].must_equal '/usr/bin/true'
+  describe "installer stanza" do
+    it "allows installer :script to be specified" do
+      cask = Cask.load('with-installer-script')
+      # the sorts are needed to force the order for Ruby 1.8
+      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.first.script[:executable].must_equal '/usr/bin/false'
+      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.first.script[:args].must_equal ['--flag']
+      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.to_a[1].script[:executable].must_equal '/usr/bin/true'
+      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.to_a[1].script[:args].must_equal ['--flag']
+    end
+    it "allows installer :manual to be specified" do
+      cask = Cask.load('with-installer-manual')
+      cask.artifacts[:installer].first.manual.must_equal 'Caffeine.app'
     end
   end
 

@@ -1,9 +1,11 @@
 class Spark < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.shadowlab.org/softwares/Spark/Spark.dmg'
   homepage 'http://www.shadowlab.org/softwares/spark.php'
+  license :unknown
 
-  link 'Spark.app'
+  app 'Spark.app'
+  zap :delete => '~/Library/Application Support/Spark'
 end

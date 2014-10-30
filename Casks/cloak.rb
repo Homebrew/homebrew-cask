@@ -1,9 +1,10 @@
 class Cloak < Cask
-  version '2.0.5'
-  sha256 'afaebc1aff58d5dbb9558c1c8bd35eab5bdcb084975404f68796b66381e1c990'
+  version '2.0.8'
+  sha256 '7c26d9d835b8d6d190581ac2fb3720d305e280cce916e0cbaba27c941ad66c01'
 
-  url 'https://s3.amazonaws.com/static.getcloak.com/osx/updates/Release/Cloak-2.0.5.dmg'
+  url "https://s3.amazonaws.com/static.getcloak.com/osx/updates/Release/Cloak-#{version}.dmg"
   homepage 'https://www.getcloak.com'
+  license :unknown
 
-  link 'Cloak.app'
+  app 'Cloak.app'
 end

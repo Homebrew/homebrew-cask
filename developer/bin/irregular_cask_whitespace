@@ -1,0 +1,117 @@
+#!/bin/bash
+#
+# irregular_cask_whitespace
+#
+# find irregular whitespace in Cask files
+#
+# notes
+#
+#     requires a recent-ish Perl with Unicode support, probably 5.14
+#     or better.
+#
+# bugs
+#
+# todo
+#
+
+###
+### settings
+###
+
+set -e
+set -o pipefail
+set +o histexpand
+set -o nounset
+shopt -s nocasematch
+shopt -s nullglob
+
+###
+### functions
+###
+
+warn () {
+    local message="$@"
+    message="${message//\\t/$'\011'}"
+    message="${message//\\n/$'\012'}"
+    message="${message%"${message##*[![:space:]]}"}"
+    printf "%s\n" "$message" 1>&2
+}
+
+die () {
+    warn "$@"
+    exit 1
+}
+
+###
+### main
+###
+
+_irregular_cask_whitespace () {
+    local directory="$1"
+    cd "$directory" || die "Could not cd to '$directory'"
+
+    printf "# No trailing newline at EOF\n"
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{[^\n]\z}s'   -- ./*.rb
+
+    printf "\n# Extra trailing newline at EOF\n"
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{\n{2}\z}s'   -- ./*.rb
+
+    printf "\n# Final 'end' indented\n"
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{ end\s+\z}s' -- ./*.rb
+
+    printf "\n# Extra interior newlines\n"
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{\n{3,}}s'    -- ./*.rb
+
+    printf "\n# Leading whitespace at BOF\n"
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{\A\s}s'      -- ./*.rb
+
+    printf "\n# Trailing whitespace at EOL (includes Tab/CR)\n"
+    perl -C32       -ne 'print "    $ARGV\n" if m{\s\n}s'      -- ./*.rb | sort | uniq
+
+    printf "\n# Tabs\n"
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{\t}s'        -- ./*.rb
+
+    printf "\n# Carriage Returns\n"
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{\r}s'        -- ./*.rb
+
+    printf "\n# Misc Control Characters\n"
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{[\x00-\x08\x0B-\x0C\x0E\x1F]}s'                -- ./*.rb
+
+    printf "\n# First indent not 2\n"
+    perl -C32 -0777 -ne 's{\A.*?<\s*Cask[ \t\r]*\n+}{}s; print "    $ARGV\n" unless m{\A  \S}s'  -- ./*.rb
+
+    printf "\n# Indents not multiple of 2\n"
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{\n(?:  ){0,} [a-z]}s'                          -- ./*.rb
+
+    printf "\n# Unicode Space Characters\n"
+    # \x{0085}\x{0088}\x{0089}
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{[\x{008a}\x{00a0}\x{1680}\x{180e}\x{2000}\x{2001}\x{2002}\x{2003}\x{2004}\x{2005}\x{2006}\x{2007}\x{2008}\x{2009}\x{200a}\x{200b}\x{2028}\x{2029}\x{202f}\x{205f}\x{2060}\x{3000}\x{feff}\x{e0020}]}s' -- ./*.rb
+
+}
+
+###
+### argument processing
+###
+
+if [[ "${1:-}" =~ ^-+h(elp)?$ ]]; then
+   printf "irregular_cask_whitespace <dir>
+
+   Find irregular whitespace in Cask files within <dir>
+
+"
+    exit
+fi
+
+if [ "$#" -ne 1 ]; then
+    die "Single directory argument required"
+elif ! [ -d "$1" ]; then
+    die "No directory found at '$1'"
+fi
+
+###
+### dispatch
+###
+
+_irregular_cask_whitespace "${@:-}"
+
+#

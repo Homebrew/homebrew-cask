@@ -1,9 +1,10 @@
 class Rss < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.rssapplication.com/RSS.zip'
   homepage 'http://www.rssapplication.com/'
+  license :unknown
 
-  link 'RSS.app'
+  app 'RSS.app'
 end

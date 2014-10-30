@@ -1,9 +1,10 @@
 class Spideroak < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://spideroak.com/getbuild?platform=mac'
   homepage 'http://spideroak.com'
+  license :unknown
 
-  link 'SpiderOak.app'
+  app 'SpiderOak.app'
 end

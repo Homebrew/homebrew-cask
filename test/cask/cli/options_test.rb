@@ -106,6 +106,22 @@ describe Cask::CLI do
     rest.must_equal %w{edit foo --create}
   end
 
+  describe "when a mandatory argument is missing" do
+    it "shows a user-friendly error message" do
+      lambda {
+        Cask::CLI.process_options %w{install -f}
+      }.must_raise CaskError
+    end
+  end
+
+  describe "given an ambiguous option" do
+    it "shows a user-friendly error message" do
+      lambda {
+        Cask::CLI.process_options %w{edit -c}
+      }.must_raise CaskError
+    end
+  end
+
   describe "--debug" do
     it "sets the Cask debug method to true" do
       Cask::CLI.process_options %w{help --debug}

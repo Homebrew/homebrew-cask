@@ -4,8 +4,9 @@ class KensingtonTrackballWorks < Cask
 
   url 'http://accoblobstorageus.blob.core.windows.net/software/38c5e777-b2ef-4434-8091-6290cb41fc16.dmg'
   homepage 'http://www.kensington.com/'
+  license :unknown
 
-  install 'Kensington TrackballWorks.pkg'
+  pkg 'Kensington TrackballWorks.pkg'
   uninstall :pkgutil   => 'com.kensington.trackballworks.driver.installer',
             :kext      => 'com.kensington.trackballworks.driver',
             :launchctl => [

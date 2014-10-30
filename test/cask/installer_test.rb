@@ -15,7 +15,7 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
-    it "works with dmg-based casks" do
+    it "works with dmg-based Casks" do
       transmission = Cask.load('local-transmission')
 
       shutup do
@@ -28,7 +28,7 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
-    it "works with tar-based casks" do
+    it "works with tar-based Casks" do
       tarball = Cask.load('tarball')
 
       shutup do
@@ -41,7 +41,7 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
-    it "works with cab-based casks" do
+    it "works with cab-based Casks" do
       skip unless HOMEBREW_PREFIX.join('bin/cabextract').exist?
       cab_container = Cask.load('cab-container')
       cab_container.stubs(:depends_on_formula).returns([])
@@ -68,7 +68,7 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
-    it "works with 7z-based casks" do
+    it "works with 7z-based Casks" do
       skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
       sevenzip_container = Cask.load('sevenzip-container')
       sevenzip_container.stubs(:depends_on_formula).returns([])
@@ -83,7 +83,7 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
-    it "works with xar-based casks" do
+    it "works with xar-based Casks" do
       xar_container = Cask.load('xar-container')
 
       shutup do
@@ -111,7 +111,7 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
-    it "works with RAR-based casks" do
+    it "works with RAR-based Casks" do
       skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
       rar_container = Cask.load('rar-container')
       rar_container.stubs(:depends_on_formula).returns([])
@@ -126,7 +126,7 @@ describe Cask::Installer do
       application.must_be :directory?
     end
 
-    it "works with bz2-based casks" do
+    it "works with bz2-based Casks" do
       asset = Cask.load('bzipped-asset')
 
       shutup do
@@ -139,7 +139,7 @@ describe Cask::Installer do
       file.must_be :file?
     end
 
-    it "works with pure gz-based casks" do
+    it "works with pure gz-based Casks" do
       asset = Cask.load('gzipped-asset')
 
       shutup do
@@ -186,16 +186,24 @@ describe Cask::Installer do
       with_caveats.must_be :installed?
     end
 
+    it "prints installer :manual instructions when present" do
+      with_installer_manual = Cask.load('with-installer-manual')
+      TestHelper.must_output(self, lambda {
+        Cask::Installer.new(with_installer_manual).install
+      }, /To complete the installation of Cask with-installer-manual, you must also\nrun the installer at\n\n  '#{with_installer_manual.staged_path.join(%Q{Caffeine.app})}'/)
+      with_installer_manual.must_be :installed?
+    end
+
     it "does not extract __MACOSX directories from zips" do
       with_macosx_dir = Cask.load('with-macosx-dir')
       shutup do
         Cask::Installer.new(with_macosx_dir).install
       end
-      with_macosx_dir.destination_path.join('__MACOSX').wont_be :directory?
+      with_macosx_dir.staged_path.join('__MACOSX').wont_be :directory?
     end
 
     # unlike the CLI, the internal interface throws exception on double-install
-    it "installer method raises an exception when already-installed casks are attempted" do
+    it "installer method raises an exception when already-installed Casks are attempted" do
       transmission = Cask.load('local-transmission')
       transmission.installed?.must_equal false
       installer = Cask::Installer.new(transmission)
@@ -206,7 +214,7 @@ describe Cask::Installer do
       }.must_raise(CaskAlreadyInstalledError)
     end
 
-    it "allows already-installed casks to be installed if force is provided" do
+    it "allows already-installed Casks to be installed if force is provided" do
       transmission = Cask.load('local-transmission')
       transmission.installed?.must_equal false
       installer = Cask::Installer.new(transmission)
@@ -217,7 +225,7 @@ describe Cask::Installer do
       } # wont_raise
     end
 
-    it "works properly with a direct link to a pkg" do
+    it "works properly with a direct URL to a pkg" do
       naked_pkg = Cask.load('naked-pkg')
 
       shutup do
@@ -229,7 +237,7 @@ describe Cask::Installer do
       pkg.must_be :file?
     end
 
-    it "works properly with an overridden container_type" do
+    it "works properly with an overridden container :type" do
       naked_executable = Cask.load('naked-executable')
 
       shutup do
@@ -251,10 +259,35 @@ describe Cask::Installer do
       dest_path = Cask.appdir/'MyNestedApp.app'
       TestHelper.valid_alias?(dest_path).must_equal true
     end
+
+    it "generates and finds a timestamped metadata directory for an installed Cask" do
+      caffeine = Cask.load('local-caffeine')
+
+      shutup do
+        Cask::Installer.new(caffeine).install
+      end
+
+      m_path = caffeine.metadata_path(:now, true)
+      caffeine.metadata_path(:now, false).must_equal(m_path)
+      caffeine.metadata_path(:latest).must_equal(m_path)
+    end
+
+    it "generates and finds a metadata subdirectory for an installed Cask" do
+      caffeine = Cask.load('local-caffeine')
+
+      shutup do
+        Cask::Installer.new(caffeine).install
+      end
+
+      subdir_name = 'Casks'
+      m_subdir = caffeine.metadata_subdir(subdir_name, :now, true)
+      caffeine.metadata_subdir(subdir_name, :now, false).must_equal(m_subdir)
+      caffeine.metadata_subdir(subdir_name, :latest).must_equal(m_subdir)
+    end
   end
 
   describe "uninstall" do
-    it "fully uninstalls a cask" do
+    it "fully uninstalls a Cask" do
       caffeine = Cask.load('local-caffeine')
       installer = Cask::Installer.new(caffeine)
 
@@ -265,6 +298,30 @@ describe Cask::Installer do
 
       (Cask.caskroom/'local-caffeine'/caffeine.version/'Caffeine.app').wont_be :directory?
       (Cask.caskroom/'local-caffeine'/caffeine.version).wont_be :directory?
+      (Cask.caskroom/'local-caffeine').wont_be :directory?
+    end
+
+    it "uninstalls all versions if force is set" do
+      caffeine = Cask.load('local-caffeine')
+      installer = Cask::Installer.new(caffeine)
+      mutated_version = caffeine.version + '.1'
+
+      shutup do
+        installer.install
+      end
+
+      (Cask.caskroom/'local-caffeine'/caffeine.version).must_be :directory?
+      (Cask.caskroom/'local-caffeine'/mutated_version).wont_be  :directory?
+      FileUtils.mv(Cask.caskroom/'local-caffeine'/caffeine.version, Cask.caskroom/'local-caffeine'/mutated_version)
+      (Cask.caskroom/'local-caffeine'/caffeine.version).wont_be :directory?
+      (Cask.caskroom/'local-caffeine'/mutated_version).must_be  :directory?
+
+      shutup do
+        installer.uninstall(true)
+      end
+
+      (Cask.caskroom/'local-caffeine'/caffeine.version).wont_be :directory?
+      (Cask.caskroom/'local-caffeine'/mutated_version).wont_be  :directory?
       (Cask.caskroom/'local-caffeine').wont_be :directory?
     end
   end

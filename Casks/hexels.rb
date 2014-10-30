@@ -1,9 +1,11 @@
 class Hexels < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://hexraystudios.com/Hexels.dmg'
   homepage 'http://hexraystudios.com/hexels/'
+  license :unknown
 
-  link 'Hexels.app'
+  app 'Hexels.app'
+  zap :delete => '~/Library/Preferences/com.hex-ray.hexels.plist'
 end

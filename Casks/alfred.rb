@@ -1,14 +1,15 @@
 class Alfred < Cask
-  version '2.4_279'
-  sha256 '5faaa5e7029adb6a884433c3c442440cee6398241bc8098f02186e5e1f010dea'
+  version '2.5.1_308'
+  sha256 '06e55eed65c3e09bffd385a11a695ebd7df79a5303690e9cb197a0b72782e2dc'
 
-  url 'http://cachefly.alfredapp.com/Alfred_2.4_279.zip'
+  url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   homepage 'http://www.alfredapp.com/'
+  license :commercial
 
-  link 'Alfred 2.app'
-  link 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
+  app 'Alfred 2.app'
+  app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 
-  after_install do
+  postflight do
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'com.runningwithcrayons.alfred-2', 'suppressMoveToApplications', '-bool', 'true'
   end

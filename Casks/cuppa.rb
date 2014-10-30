@@ -1,10 +1,11 @@
 class Cuppa < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.nathanatos.com/software/downloads/Cuppa.zip'
   appcast 'http://www.nathanatos.com/software/cuppa.xml'
   homepage 'http://www.nathanatos.com/software'
+  license :unknown
 
-  link 'Cuppa.app'
+  app 'Cuppa.app'
 end

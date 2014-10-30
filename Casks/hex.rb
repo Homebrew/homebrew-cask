@@ -1,9 +1,10 @@
 class Hex < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://dl.hex.gameforge.com/HexInstaller.dmg'
   homepage 'http://hextcg.com/'
+  license :unknown
 
-  link 'Hex.app'
+  app 'Hex.app'
 end

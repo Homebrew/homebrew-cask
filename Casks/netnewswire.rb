@@ -1,10 +1,12 @@
 class Netnewswire < Cask
-  version '4.0.0-143'
-  sha256 '68e8a4bd881d8bf7cc13ad859519400138b9e16bdb1d52af3a75511ebf4311c0'
+  version '4.0.0-152'
+  sha256 'f82539a4a53f6b3b05a6d63f459fee705bd28b83034bd0fc7e20be76e4592945'
 
-  url 'http://cdn.netnewswireapp.com/releases/NetNewsWire-4.0.0-143.zip'
-  appcast 'https://updates.blackpixel.com/updates?app=nnw'
+  url "http://cdn.netnewswireapp.com/releases/NetNewsWire-#{version}.zip"
+  appcast 'https://updates.blackpixel.com/updates?app=nnw',
+          :sha256 => '33564e80110c0e5bc562bf65f09046d95afcbab79d0e9c49617c2b8548a64cc2'
   homepage 'http://netnewswireapp.com/'
+  license :commercial
 
-  link 'NetNewsWire.app'
+  app 'NetNewsWire.app'
 end

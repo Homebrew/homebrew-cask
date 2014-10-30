@@ -1,9 +1,10 @@
 class Runtimebrowser < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://seriot.ch/temp/runtimebrowser.zip'
   homepage 'https://github.com/nst/RuntimeBrowser'
+  license :oss
 
-  link 'RuntimeBrowser.app'
+  app 'RuntimeBrowser.app'
 end

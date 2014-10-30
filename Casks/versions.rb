@@ -1,10 +1,11 @@
 class Versions < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://versionsapp.com/redirect/versionslatest'
   appcast 'https://updates.blackpixel.com/updates?app=vs'
   homepage 'http://versionsapp.com/'
+  license :unknown
 
-  link 'Versions.app'
+  app 'Versions.app'
 end

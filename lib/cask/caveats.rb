@@ -32,8 +32,13 @@ class Cask::CaveatsDSL
     @cask.class.caskroom.join(title)
   end
 
-  def destination_path
+  def staged_path
     caskroom_path.join(@cask.version.to_s)
+  end
+
+  # todo transitional method, removeme after DSL 1.0
+  def destination_path
+    staged_path
   end
 
   # DSL. Each method should handle output, following the convention of
@@ -43,12 +48,14 @@ class Cask::CaveatsDSL
   # ( The return value of the last method in the block is also sent
   #   to the output by the caller, but that feature is only for the
   #   convenience of Cask authors. )
+
+  # todo: remove this method after DSL 1.0 transition
   def manual_installer(path)
     puts <<-EOS.undent
     To complete the installation of Cask #{@cask}, you must also
     run the installer at
 
-      '#{destination_path.join(path)}'
+      '#{staged_path.join(path)}'
 
     EOS
   end
@@ -143,7 +150,7 @@ class Cask::CaveatsDSL
   # be to spin out os-version-detection from caveats into a separate
   # Cask stanza, and that is probably a sensible design.
   def os_version_only(*supported_versions)
-    known_versions = %w{10.0 10.1 10.2 10.3 10.3 10.5 10.6 10.7 10.8 10.9 10.10}
+    known_versions = %w{10.0 10.1 10.2 10.3 10.4 10.5 10.6 10.7 10.8 10.9 10.10}
     supported_versions.each do |version|
       unless known_versions.include?(version)
         raise CaskInvalidError.new(@cask, "The only valid arguments to caveats os_version_only are: #{known_versions.utf8_inspect}")

@@ -5,6 +5,7 @@ class KeyCodes < Cask
   url 'http://manytricks.com/download/keycodes'
   appcast 'http://manytricks.com/keycodes/appcast.xml'
   homepage 'http://manytricks.com/keycodes/'
+  license :unknown
 
-  link 'Key Codes.app'
+  app 'Key Codes.app'
 end

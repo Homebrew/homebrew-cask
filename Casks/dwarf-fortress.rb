@@ -1,9 +1,15 @@
 class DwarfFortress < Cask
-  version '0.40.01'
-  sha256 'c4f729f094790671b1fde995c02c5d547d652d87790785b13a6cdc9f35dec6be'
+  version '0.40.14'
+  sha256 'f5c2e841702327af73fbed1f32eeb6ade7c3789ae795e8fa2b6a1a777e927ceb'
 
-  url 'http://www.bay12games.com/dwarves/df_40_01_osx.tar.bz2'
+  url "http://www.bay12games.com/dwarves/df_#{version.sub(%r{^0+\.},'').gsub('.','_')}_osx.tar.bz2"
   homepage 'http://www.bay12games.com/dwarves/'
-  
-  link 'df_osx/df', :target => 'Dwarf Fortress/df'
+  license :unknown
+
+  # todo: should this be
+  #
+  #    suite 'df_osx', :target => 'Dwarf Fortress'
+  #
+  # ?
+  artifact 'df_osx/df', :target => 'Dwarf Fortress/df'
 end

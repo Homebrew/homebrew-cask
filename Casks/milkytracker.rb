@@ -4,6 +4,7 @@ class Milkytracker < Cask
 
   url "http://www.milkytracker.org/files/milkytracker-#{version}-osx_universal.zip"
   homepage 'http://www.milkytracker.org/'
+  license :unknown
 
-  link "milkytracker-#{version}-osx_universal/MilkyTracker.app"
+  app "milkytracker-#{version}-osx_universal/MilkyTracker.app"
 end

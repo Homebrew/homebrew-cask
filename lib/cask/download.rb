@@ -27,7 +27,7 @@ class Cask::Download
       # this symlink helps track which downloads are ours
       File.symlink downloaded_path,
                    HOMEBREW_CACHE_CASKS.join(downloaded_path.basename)
-    rescue
+    rescue StandardError => e
     end
     _check_sums(downloaded_path, cask.sums) unless cask.sums === :no_check
     downloaded_path

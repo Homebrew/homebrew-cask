@@ -4,6 +4,7 @@ class Pangu < Cask
 
   url "http://dl.pangu.25pp.com/jb/Pangu_v#{version}.dmg"
   homepage 'http://en.pangu.io/'
+  license :unknown
 
-  link 'pangu.app'
+  app 'pangu.app'
 end

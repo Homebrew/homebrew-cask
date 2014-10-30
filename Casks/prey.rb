@@ -1,19 +1,17 @@
 class Prey < Cask
-  version '0.6.3'
-  sha256 '7193cf76a776a015c7b533372506963c9ec2720966245dab1e0c02d149da1010'
+  version '0.6.4'
+  sha256 '361996d067539da7881aa3618b737ba4a0846df13ca8c9b8b07151d42f81fb86'
 
-  url 'https://preyproject.com/releases/current/prey-0.6.3-mac-batch.mpkg.zip'
+  url "https://preyproject.com/releases/current/prey-#{version}-mac-batch.mpkg.zip"
   homepage 'https://preyproject.com'
+  license :unknown
 
-  install 'prey-0.6.3-mac-batch.mpkg'
+  pkg "prey-#{version}-mac-batch.mpkg"
   uninstall :pkgutil => 'com.forkhq.prey'
   caveats <<-EOS.undent
-    Prey requires an API key during installation. If none is found,
-    installation will fail.  To install using your API key, set it
-    as an environment variable during installation like this:
+    To complete installation, Prey requires an API key. It may be set
+    as an environment variable as follows:
 
-      brew cask uninstall prey
       API_KEY="abcdef123456" brew cask install prey
-
-    EOS
+  EOS
 end

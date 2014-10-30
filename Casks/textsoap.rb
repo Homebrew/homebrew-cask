@@ -1,9 +1,10 @@
 class Textsoap < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://unmarked.s3.amazonaws.com/textsoap7.zip'
   homepage 'http://www.unmarked.com/textsoap/'
+  license :unknown
 
-  link 'textsoap7.app', :target => 'TextSoap.app'
+  app 'textsoap7.app'
 end

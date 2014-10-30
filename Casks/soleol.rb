@@ -1,9 +1,10 @@
 class Soleol < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://eduo.info/soleol-support/releases/SolEol-Mac.zip'
   homepage 'http://eduo.info/apps/soleol'
+  license :unknown
 
-  link 'SolEol/SolEol.app'
+  app 'SolEol/SolEol.app'
 end

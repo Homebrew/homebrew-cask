@@ -1,9 +1,10 @@
 class Pingmenu < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://github.com/kalleboo/PingMenu/raw/master/PingMenu.app.zip'
   homepage 'https://github.com/kalleboo/PingMenu'
+  license :oss
 
-  link 'PingMenu.app'
+  app 'PingMenu.app'
 end

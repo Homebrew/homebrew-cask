@@ -1,9 +1,10 @@
 class Ember < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://realmacsoftware.com/redirects/ember/direct'
   homepage 'http://realmacsoftware.com/ember'
+  license :unknown
 
-  link 'Ember.app'
+  app 'Ember.app'
 end

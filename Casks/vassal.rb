@@ -4,6 +4,7 @@ class Vassal < Cask
 
   url "https://downloads.sourceforge.net/project/vassalengine/VASSAL-current/VASSAL-#{version}/VASSAL-#{version}-macosx.dmg"
   homepage 'http://www.vassalengine.org'
+  license :oss
 
-  link 'VASSAL.app'
+  app 'VASSAL.app'
 end

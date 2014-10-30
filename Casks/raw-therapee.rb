@@ -4,7 +4,8 @@ class RawTherapee < Cask
 
   url "http://rawtherapee.com/releases_head/mac/RawTherapee_OSX_10.7_64_#{version}.zip"
   homepage 'http://rawtherapee.com'
+  license :unknown
 
-  nested_container "RawTherapee_OSX_10.7_64_#{version}.dmg"
-  link 'RawTherapee.app'
+  container :nested => "RawTherapee_OSX_10.7_64_#{version}.dmg"
+  app 'RawTherapee.app'
 end

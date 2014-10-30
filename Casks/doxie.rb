@@ -1,9 +1,10 @@
 class Doxie < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.getdoxie.com/resources/files/download_current_mac.php'
   homepage 'http://www.getdoxie.com/'
+  license :unknown
 
-  link 'Doxie.app'
+  app 'Doxie.app'
 end

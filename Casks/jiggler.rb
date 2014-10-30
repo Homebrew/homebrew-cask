@@ -1,9 +1,10 @@
 class Jiggler < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://downloads.sticksoftware.com/Jiggler.dmg'
   homepage 'http://www.sticksoftware.com/software/Jiggler.html'
+  license :unknown
 
-  link 'Jiggler.app'
+  app 'Jiggler.app'
 end

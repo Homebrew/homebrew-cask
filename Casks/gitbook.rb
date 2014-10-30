@@ -1,9 +1,10 @@
 class Gitbook < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.gitbook.io/editor/download'
   homepage 'https://www.gitbook.io/'
+  license :unknown
 
-  link 'GitBook.app'
+  app 'GitBook.app'
 end

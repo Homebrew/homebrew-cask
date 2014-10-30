@@ -4,6 +4,7 @@ class Instabridge < Cask
 
   url 'http://cdn.instabridge.com/mac/instabridge-osx.dmg'
   homepage 'http://instabridge.com/'
+  license :unknown
 
-  link 'Instabridge.app'
+  app 'Instabridge.app'
 end

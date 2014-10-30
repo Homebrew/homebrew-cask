@@ -4,6 +4,7 @@ class Coqide < Cask
 
   url "http://coq.inria.fr/distrib/V#{version}/files/coqide-#{version}.dmg"
   homepage 'http://coq.inria.fr/'
+  license :oss
 
-  link "CoqIde_#{version}.app"
+  app "CoqIde_#{version}.app"
 end

@@ -8,10 +8,10 @@ class Cask::Artifact::NestedContainer < Cask::Artifact::Base
   end
 
   def extract(container_relative_path)
-    source = @cask.destination_path.join(container_relative_path)
+    source = @cask.staged_path.join(container_relative_path)
     container = Cask::Container.for_path(source, @command)
     unless container
-      raise CaskError.new "Aw dang, could not identify nested_container at '#{source}'"
+      raise CaskError.new "Aw dang, could not identify nested container at '#{source}'"
     end
     ohai "Extracting nested container #{source.basename}"
     container.new(@cask, source, @command).extract

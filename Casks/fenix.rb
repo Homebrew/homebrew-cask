@@ -4,7 +4,9 @@ class Fenix < Cask
 
   url "https://github.com/coreybutler/fenix/releases/download/v#{version}/fenix-osx-#{version}.zip"
   homepage 'http://fenixwebserver.com/'
-  nested_container "Fenix_#{version}.dmg"
+  license :gpl
 
-  link 'Fenix.app'
+  container :nested => "Fenix_#{version}.dmg"
+
+  app 'Fenix.app'
 end

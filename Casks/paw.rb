@@ -1,9 +1,10 @@
 class Paw < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://luckymarmot.com/paw/download'
   homepage 'http://luckymarmot.com/paw'
+  license :unknown
 
-  link 'Paw.app'
+  app 'Paw.app'
 end

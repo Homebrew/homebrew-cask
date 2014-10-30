@@ -1,9 +1,10 @@
 class Windownaut < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.binarybakery.com/products/Windownaut.dmg'
   homepage 'http://www.binarybakery.com/aprod/index.html'
+  license :unknown
 
-  link 'Windownaut.app'
+  app 'Windownaut.app'
 end

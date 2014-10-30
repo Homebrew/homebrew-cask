@@ -1,9 +1,10 @@
 class Sofortbild < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.sofortbildapp.com/download/Sofortbild.zip'
   homepage 'http://www.sofortbildapp.com/'
+  license :unknown
 
-  link 'Sofortbild.app'
+  app 'Sofortbild.app'
 end

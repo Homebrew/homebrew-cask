@@ -1,9 +1,10 @@
 class Arq < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.haystacksoftware.com/arq/Arq.zip'
   homepage 'http://www.haystacksoftware.com/arq/'
+  license :unknown
 
-  link 'Arq.app'
+  app 'Arq.app'
 end

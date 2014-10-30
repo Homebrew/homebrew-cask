@@ -13,8 +13,8 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
         raise
       end
       raise if pkg_description.nil?
-    rescue
-      raise CaskInvalidError.new(@cask, 'Bad install stanza')
+    rescue StandardError => e
+      raise CaskInvalidError.new(@cask, 'Bad pkg stanza')
     end
   end
 
@@ -38,7 +38,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     load_pkg_description pkg_description
     ohai "Running installer for #{@cask}; your password may be necessary."
     ohai "Package installers may write to any location; options such as --appdir are ignored."
-    source = @cask.destination_path.join(pkg_relative_path)
+    source = @cask.staged_path.join(pkg_relative_path)
     unless source.exist?
       raise CaskError.new "pkg source file not found: '#{source}'"
     end
@@ -48,6 +48,6 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
     ]
     args << '-verboseR' if ARGV.verbose?
     args << '-allowUntrusted' if pkg_install_opts :allow_untrusted
-    @command.run!('/usr/sbin/installer', {:sudo => true, :args => args, :print => true})
+    @command.run!('/usr/sbin/installer', {:sudo => true, :args => args, :print_stdout => true})
   end
 end

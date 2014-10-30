@@ -4,10 +4,12 @@ class Keycastr < Cask
 
   url "https://github.com/downloads/RichardBronosky/keycastr/keycastr_#{version}.dmg"
   homepage 'https://github.com/sdeken/keycastr'
+  license :oss
 
-  link 'KeyCastr.app'
+  app 'KeyCastr.app'
 
-  caveats do
-    puts "For OSX 10.9 or later, you need to setup in \"Enable access for assistive devices\", see https://github.com/sdeken/keycastr/issues/5"
-  end
+  caveats <<-EOS.undent
+    For OSX 10.9 or later, #{title} requires that you "Enable access for assistive devices".
+    See https://github.com/sdeken/keycastr/issues/5
+  EOS
 end

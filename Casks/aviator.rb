@@ -1,9 +1,10 @@
 class Aviator < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://updates.aviatorbrowser.com/Aviator.dmg'
   homepage 'https://www.whitehatsec.com/aviator/'
+  license :oss
 
-  link 'Aviator.app'
+  app 'Aviator.app'
 end

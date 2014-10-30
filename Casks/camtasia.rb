@@ -1,10 +1,11 @@
 class Camtasia < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://download.techsmith.com/camtasiamac/enu/Camtasia.dmg'
   appcast 'http://techsmithredirect.appspot.com/cmac?target=sparkleappcast&product=camtasiamac&lang=enu&ver=2.7.1&os=mac&code=none'
   homepage 'http://www.techsmith.com/camtasia.html'
+  license :unknown
 
-  link 'Camtasia 2.app'
+  app 'Camtasia 2.app'
 end

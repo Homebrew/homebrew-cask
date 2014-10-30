@@ -1,9 +1,10 @@
 class SketchToolbox < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://sketchtoolbox.com/Sketch%20Toolbox.zip'
   homepage 'http://sketchtoolbox.com'
+  license :unknown
 
-  link 'Sketch Toolbox.app'
+  app 'Sketch Toolbox.app'
 end

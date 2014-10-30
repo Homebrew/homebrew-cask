@@ -1,10 +1,11 @@
 class Mixlr < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://cdn.mixlr.com/Mixlr_beta_latest.pkg'
   homepage 'http://mixlr.com'
+  license :unknown
 
-  install 'Mixlr_beta_latest.pkg'
+  pkg 'Mixlr_beta_latest.pkg'
   uninstall :pkgutil => 'com.mixlr.Mixlr'
 end

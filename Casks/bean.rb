@@ -1,9 +1,10 @@
 class Bean < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.bean-osx.com/releases/Bean-Install.zip'
   homepage 'http://www.bean-osx.com'
+  license :gratis
 
-  link 'Bean-Install/Bean.app'
+  app 'Bean-Install/Bean.app'
 end

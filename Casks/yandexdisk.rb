@@ -1,9 +1,10 @@
 class Yandexdisk < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://disk.yandex.com/download/Yandex.Disk.Mac.dmg'
   homepage 'https://disk.yandex.com/'
+  license :unknown
 
-  link 'Yandex.Disk.app'
+  app 'Yandex.Disk.app'
 end

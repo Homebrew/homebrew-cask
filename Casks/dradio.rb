@@ -1,10 +1,11 @@
 class Dradio < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://dradio.me/download'
   appcast 'http://dradio.me/updates/appcast.xml'
   homepage 'http://dradio.me'
+  license :unknown
 
-  link 'dRadio.app'
+  app 'dRadio.app'
 end

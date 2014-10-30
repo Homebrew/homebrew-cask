@@ -1,10 +1,11 @@
 class Papers < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://papersapp.com/papers/download'
   appcast 'http://www.papersapp.com/papers/appcast_v3.xml'
   homepage 'http://www.papersapp.com/papers/'
+  license :unknown
 
-  link 'Papers.app'
+  app 'Papers.app'
 end

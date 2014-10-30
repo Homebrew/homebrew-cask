@@ -1,9 +1,10 @@
 class Scilab < Cask
-  version '5.5.0'
-  sha256 '58ed168011296c680db12cd4f3a55359647318cd959a9e97b37881ff5e26d592'
+  version '5.5.1'
+  sha256 '5c9455c10be9fceab63ef65231ad01a0ba68c5985481ae260a8db0a71637a3c0'
 
-  url 'http://www.scilab.org/download/5.5.0/scilab-5.5.0-x86_64.dmg'
+  url "http://www.scilab.org/download/#{version}/scilab-#{version}-x86_64.dmg"
   homepage 'https://www.scilab.org'
+  license :unknown
 
-  link 'scilab-5.5.0.app'
+  app "scilab-#{version}.app"
 end

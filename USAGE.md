@@ -66,16 +66,26 @@ $ brew cask uninstall google-chrome
 This will both uninstall the Cask and remove symlinks which were created in
 `~/Applications`.
 
+To uninstall all versions of a Cask, use `--force`:
+
+```bash
+$ brew cask uninstall --force google-chrome
+```
+
+Note that `uninstall --force` is currently imperfect.  See the man page for
+more information.
+
 ## Other Commands
 
 * `info` -- displays information about the given Cask
-* `list` -- with no args, lists installed Casks; given installed Casks, lists installed files
+* `list` -- with no args, lists installed Casks; given installed Casks, lists staged files
 * `fetch` -- downloads Cask resources to local cache (with `--force`, re-download even if already cached)
 * `doctor` -- checks for configuration issues
 * `cleanup` -- cleans up cached downloads (with `--outdated`, only cleans old downloads)
 * `home` -- opens the homepage of the given Cask; or with no arguments, the homebrew-cask project page
 * `alfred` -- modifies Alfred's scope to include the Caskroom
 * `update` -- a synonym for `brew update`
+* `zap` -- try to remove *all* files associated with a Cask (including resources which may be shared with other applications)
 
 The following commands are for Cask authors:
 
@@ -83,7 +93,6 @@ The following commands are for Cask authors:
 * `cat` -- dumps the given Cask to the standard output
 * `create` -- creates a Cask and opens it in an editor
 * `edit` -- edits the given Cask
-* `checklinks` -- checks for bad Cask links
 
 The following aliases and abbreviations are provided for convenience:
 
@@ -139,8 +148,8 @@ of Casks.
 
 | Tap name | description |
 | -------- | ----------- |
-| [caskroom/versions](https://github.com/caskroom/homebrew-versions) | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
-| [caskroom/fonts](https://github.com/caskroom/homebrew-fonts) | contains Casks that install fonts, which are kept separate so we can educate users about the different licensing landscape around font installation/usage
+| [caskroom/versions](https://github.com/caskroom/homebrew-versions)     | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
+| [caskroom/fonts](https://github.com/caskroom/homebrew-fonts)           | contains Casks that install fonts, which are kept separate so we can educate users about the different licensing landscape around font installation/usage
 | [caskroom/unofficial](https://github.com/caskroom/homebrew-unofficial) | contains Casks that install unofficial builds or forks
 
 There are also [alternate Cask Taps](doc/ALTERNATE_CASK_TAPS.md#alternate-cask-taps-maintained-by-users) maintained by users.

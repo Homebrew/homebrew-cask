@@ -4,8 +4,9 @@ class IphoneConfigurationUtility < Cask
 
   url 'https://support.apple.com/downloads/DL1465/en_US/iPhoneConfigUtility.dmg'
   homepage 'http://support.apple.com/kb/DL1465'
+  license :unknown
 
-  install 'iPhoneConfigurationUtility.pkg'
+  pkg 'iPhoneConfigurationUtility.pkg'
   # note - do not uninstall via :pkgutil, as system files would be deleted
-  uninstall :files => '/Applications/Utilities/iPhone Configuration Utility.app'
+  uninstall :delete => '/Applications/Utilities/iPhone Configuration Utility.app'
 end

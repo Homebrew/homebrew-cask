@@ -1,10 +1,11 @@
 class Safemonk < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://www.safemonk.com/downloads/osx'
   appcast 'https://www.safemonk.com:/data/client/osx/appcast.xml'
   homepage 'https://www.safemonk.com/'
+  license :unknown
 
-  link 'SafeMonk.app'
+  app 'SafeMonk.app'
 end

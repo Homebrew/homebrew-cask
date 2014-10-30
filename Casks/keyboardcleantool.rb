@@ -1,9 +1,10 @@
 class Keyboardcleantool < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://bettertouchtool.net/KeyboardCleanTool.zip'
   homepage 'http://bettertouchtool.net'
+  license :unknown
 
-  link 'KeyboardCleanTool.app'
+  app 'KeyboardCleanTool.app'
 end

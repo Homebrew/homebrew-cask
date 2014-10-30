@@ -4,12 +4,13 @@ class Ksdiff < Cask
 
   url 'http://cdn.kaleidoscopeapp.com/releases/ksdiff-122.zip'
   homepage 'http://www.kaleidoscopeapp.com/ksdiff2'
+  license :unknown
 
-  install 'Install ksdiff.pkg'
+  pkg 'Install ksdiff.pkg'
   uninstall :pkgutil => 'com.blackpixel.kaleidoscope.ksdiff.installer.pkg'
   # todo: conflicts_with_cask kaleidoscope
   caveats <<-EOS.undent
     The #{title} Cask is not needed when installing Kaleidoscope via Cask. It
     is provided for users who have purchased Kaleidoscope via the App Store.
-    EOS
+  EOS
 end

@@ -1,9 +1,10 @@
 class UniversalMediaServer < Cask
-  version '4.0.3'
-  sha256 '3abec6ff17469108a8be33584583ce40d68eefac1f2d4252b4e23012047f5f96'
+  version '4.2.0'
+  sha256 '07f5aa01f9cc57db4501034495471c70151537356ad01a31daf30d0aabb69bdf'
 
-  url 'http://downloads.sourceforge.net/sourceforge/unimediaserver/Official%20Releases/OS%20X/UMS-4.0.3-Java8.dmg'
+  url "http://downloads.sourceforge.net/sourceforge/unimediaserver/Official%20Releases/OS%20X/UMS-#{version}-Java8.dmg"
   homepage 'www.universalmediaserver.com'
+  license :oss
 
-  link 'Universal Media Server.app'
+  app 'Universal Media Server.app'
 end

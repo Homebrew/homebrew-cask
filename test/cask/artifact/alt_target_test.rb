@@ -8,7 +8,7 @@ describe Cask::Artifact::App do
   }
 
   describe 'install to alternate target' do
-    it "links the noted applications to the proper directory" do
+    it "activates the given apps using the proper target directory" do
       cask = local_alt_caffeine
 
       shutup do
@@ -18,7 +18,7 @@ describe Cask::Artifact::App do
       TestHelper.valid_alias?(Cask.appdir/'AnotherName.app').must_equal true
     end
 
-    it "creates metadata containing the altername target name" do
+    it "creates metadata containing the alternate target name" do
       cask = local_alt_caffeine
 
       shutup do
@@ -29,17 +29,17 @@ describe Cask::Artifact::App do
                               :args => ['-p',
                                         'com.apple.metadata:kMDItemAlternateNames',
                                         Cask.appdir/'AnotherName.app'],
-                              :stderr => :silence).must_match(/AnotherName/)
+                              :print_stderr => false).stdout.must_match(/AnotherName/)
     end
 
     it "works with an application in a subdir" do
       AltSubDirCask = Class.new(Cask)
       AltSubDirCask.class_eval do
-        url TestHelper.local_binary('caffeine.zip')
+        url TestHelper.local_binary_url('caffeine.zip')
         homepage 'http://example.com/local-caffeine'
         version '1.2.3'
         sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
-        link 'subdir/Caffeine.app', :target => 'AnotherName.app'
+        app 'subdir/Caffeine.app', :target => 'AnotherName.app'
       end
 
       begin
@@ -47,8 +47,8 @@ describe Cask::Artifact::App do
           TestHelper.install_without_artifacts(cask)
         end
 
-        appsubdir = (subdir_cask.destination_path/'subdir').tap(&:mkpath)
-        FileUtils.mv((subdir_cask.destination_path/'Caffeine.app'), appsubdir)
+        appsubdir = (subdir_cask.staged_path/'subdir').tap(&:mkpath)
+        FileUtils.mv((subdir_cask.staged_path/'Caffeine.app'), appsubdir)
 
         shutup do
           Cask::Artifact::App.new(subdir_cask).install_phase
@@ -64,10 +64,10 @@ describe Cask::Artifact::App do
       end
     end
 
-    it "only uses linkables when they are specified" do
+    it "only uses apps when they are specified" do
       cask = local_alt_caffeine
 
-      app_path = cask.destination_path.join('Caffeine.app')
+      app_path = cask.staged_path.join('Caffeine.app')
       FileUtils.cp_r app_path, app_path.sub('Caffeine.app', 'CaffeineAgain.app')
 
       shutup do

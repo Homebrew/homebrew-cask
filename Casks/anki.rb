@@ -1,9 +1,10 @@
 class Anki < Cask
-  version '2.0.28'
-  sha256 '8071e6f1cdf661df6c8b9997e0618e8dc722ff8aeaf8b99390567204791f23cd'
+  version '2.0.31'
+  sha256 '7afccba7d7998c187156702afb943e0be2b9d14729c8147b9a6fd20e40530fe2'
 
   url "http://ankisrs.net/download/mirror/anki-#{version}.dmg"
   homepage 'http://ankisrs.net/'
+  license :unknown
 
-  link 'Anki.app'
+  app 'Anki.app'
 end

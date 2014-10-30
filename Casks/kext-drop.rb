@@ -1,10 +1,11 @@
 class KextDrop < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.groths.org/kextdrop/KextDrop.dmg'
   appcast 'http://groths.org/kextdrop/updates/update.xml'
   homepage 'http://www.groths.org/software/kextdrop/'
+  license :unknown
 
-  link 'Kext Drop.app'
+  app 'Kext Drop.app'
 end

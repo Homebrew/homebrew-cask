@@ -1,9 +1,10 @@
 class Tresorit < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://installerstorage.blob.core.windows.net/install/Tresorit.dmg'
   homepage 'http://tresorit.com'
+  license :unknown
 
-  link 'Tresorit.app'
+  app 'Tresorit.app'
 end

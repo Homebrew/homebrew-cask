@@ -2,8 +2,9 @@ class Robomongo < Cask
   version '0.8.4'
   sha256 '52976b139e9221c2d1bd888ca2e87e14c134d324523973921123c3fe59821108'
 
-  url 'http://robomongo.org/files/mac/Robomongo-0.8.4-x86_64.dmg'
+  url "http://robomongo.org/files/mac/Robomongo-#{version}-x86_64.dmg"
   homepage 'http://robomongo.org'
+  license :unknown
 
-  link 'Robomongo.app'
+  app 'Robomongo.app'
 end

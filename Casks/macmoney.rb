@@ -4,7 +4,8 @@ class Macmoney < Cask
 
   url 'http://www.devon.riceball.net/downloads/macmoney36.zip'
   homepage 'http://www.devon.riceball.net/display.php?file=m01'
+  license :unknown
 
-  nested_container 'MacMoney_3.6.6.dmg'
-  link 'MacMoney.app'
+  container :nested => "MacMoney_#{version}.dmg"
+  app 'MacMoney.app'
 end

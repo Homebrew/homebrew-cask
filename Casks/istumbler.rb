@@ -1,9 +1,10 @@
 class Istumbler < Cask
   version '100'
-  sha256 'bc260060dd2d2ccff122e523aa3b9d610bea2d158bb8b0a18eb14c304e49ff67'
+  sha256 'f8d9ff03fc2d9feeb05fafa1c9fc1133b6e2017b1ef5235bab4fa12ae4250773'
 
   url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   homepage 'http://istumbler.net/'
+  license :unknown
 
-  link 'iStumbler.app'
+  app 'iStumbler.app'
 end

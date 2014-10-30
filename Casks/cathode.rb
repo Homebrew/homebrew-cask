@@ -4,6 +4,7 @@ class Cathode < Cask
 
   url "http://s3.amazonaws.com/cjcaufield/products/cathode/cathode_#{version.gsub('.','')}.zip"
   homepage 'http://www.secretgeometry.com/apps/cathode'
+  license :unknown
 
-  link 'Cathode.app'
+  app 'Cathode.app'
 end

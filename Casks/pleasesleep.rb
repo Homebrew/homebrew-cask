@@ -1,9 +1,10 @@
 class Pleasesleep < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.dragonone.com/downloads/vault/macosx/PleaseSleep.dmg'
   homepage 'http://www.dragonone.com/products/macosx/pleasesleep/'
+  license :unknown
 
-  link 'PleaseSleep.app'
+  app 'PleaseSleep.app'
 end

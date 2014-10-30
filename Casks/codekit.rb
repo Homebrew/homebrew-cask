@@ -1,10 +1,12 @@
 class Codekit < Cask
-  version '2.0.6 (17018)'
-  sha256 '97070e0fd9949991186652e2b3655c26459c5d7c0ab852c2ea3241078894573e'
+  version '2.1.8 (18027)'
+  sha256 'b31769ae91834a06499d876c82f2f2b1ce8b379047aa5d89e7d4f50971328a83'
 
-  url 'https://incident57.com/codekit/files/codekit-17018.zip'
-  appcast 'https://incident57.com/codekit/appcast/ck2appcast.xml'
+  url 'https://incident57.com/codekit/files/codekit-18027.zip'
+  appcast 'https://incident57.com/codekit/appcast/ck2appcast.xml',
+          :sha256 => 'ff5efaf30dbd3190c9c06c8cbfcf1eb6c0f49a1ca803aac6d8e913685a35aacd'
   homepage 'http://incident57.com/codekit/'
+  license :unknown
 
-  link 'CodeKit.app'
+  app 'CodeKit.app'
 end

@@ -1,9 +1,12 @@
 class Filezilla < Cask
-  version '3.9.0.3'
-  sha256 'e7b642a6ebc5d785651c0c84477dd55e7e419d2094798205b814171c64fc7095'
+  version '3.9.0.6'
+  sha256 '9486be1f5dec41df8ef1b60893ca612e6791b8d98609c6b9e42ced977210d15b'
 
   url "https://downloads.sourceforge.net/project/filezilla/FileZilla_Client/#{version}/FileZilla_#{version}_macosx-x86.app.tar.bz2"
   homepage 'https://filezilla-project.org/'
+  license :oss
 
-  link 'FileZilla.app'
+  app 'FileZilla.app'
+  # todo verify that this does not contain user-generate content
+  # zap :delete => '~/.filezilla'
 end

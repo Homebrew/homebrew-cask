@@ -1,13 +1,20 @@
 class Phpstorm < Cask
-  version '7.1.3'
-  sha256 '37ab8cb0739388da77d226fbdbf956ef441a8d7cb59e316e22815d57d11f6a1d'
+  version '8.0.1'
+  sha256 'ff8af437d96befd475744e08b1d663df778db8711e2671551fc797cd30b0cdc7'
 
-  url 'http://download.jetbrains.com/webide/PhpStorm-7.1.3.dmg'
+  url "http://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
   homepage 'http://www.jetbrains.com/phpstorm/'
+  license :unknown
 
-  link 'PhpStorm.app'
+  app 'PhpStorm.app'
 
-  after_install do
-    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/PhpStorm.app/Contents/Info.plist"
+  postflight do
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/PhpStorm.app/Contents/Info.plist"
   end
+
+  zap :delete => [
+                  '~/Library/Application Support/WebIde80',
+                  '~/Library/Preferences/WebIde80',
+                  '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
+                 ]
 end

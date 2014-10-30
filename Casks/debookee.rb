@@ -1,9 +1,10 @@
 class Debookee < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.iwaxx.com/debookee/debookee.zip'
   homepage 'http://www.iwaxx.com/debookee/'
+  license :unknown
 
-  link 'Debookee.app'
+  app 'Debookee.app'
 end

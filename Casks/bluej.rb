@@ -4,6 +4,7 @@ class Bluej < Cask
 
   url "http://www.bluej.org/download/files/BlueJ-#{version.gsub('.', '')}.zip"
   homepage 'http://www.bluej.org'
+  license :gpl
 
-  link "BlueJ #{version}/BlueJ.app"
+  app "BlueJ #{version}/BlueJ.app"
 end

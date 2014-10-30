@@ -1,9 +1,10 @@
 class Catchmouse < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://ftnew.com/files/CatchMouse.zip'
   homepage 'http://ftnew.com/catchmouse.html'
+  license :unknown
 
-  link 'CatchMouse.app'
+  app 'CatchMouse.app'
 end

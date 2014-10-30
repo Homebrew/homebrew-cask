@@ -1,9 +1,10 @@
 class Copy < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://copy.com/install/mac/Copy.dmg'
   homepage 'https://www.copy.com/'
+  license :unknown
 
-  link 'Copy.app'
+  app 'Copy.app'
 end

@@ -1,4 +1,7 @@
 class Cask::Installer
+
+  PERSISTENT_METADATA_SUBDIRS = [ 'gpg' ]
+
   def initialize(cask, command=Cask::SystemCommand)
     @cask = cask
     @command = command
@@ -46,9 +49,9 @@ class Cask::Installer
       download
       extract_primary_container
       install_artifacts
-    rescue
-      purge_files
-      raise
+    rescue StandardError => e
+      purge_versioned_files
+      raise e
     end
 
     puts summary
@@ -60,7 +63,7 @@ class Cask::Installer
     else
       "#{Tty.blue}==>#{Tty.white} Success!#{Tty.reset} "
     end
-    s << "#{@cask} installed to '#{@cask.destination_path}' (#{@cask.destination_path.cabv})"
+    s << "#{@cask} staged at '#{@cask.staged_path}' (#{@cask.staged_path.cabv})"
   end
 
   def download
@@ -73,7 +76,7 @@ class Cask::Installer
 
   def extract_primary_container
     odebug "Extracting primary container"
-    FileUtils.mkdir_p @cask.destination_path
+    FileUtils.mkdir_p @cask.staged_path
     container = if @cask.container_type
        Cask::Container.from_type(@cask.container_type)
     else
@@ -103,7 +106,7 @@ class Cask::Installer
         print "#{dep_name} ... "
         installed = @command.run(HOMEBREW_BREW_FILE,
                                  :args => ['list', '--versions', dep_name],
-                                 :stderr => :silence).include?(dep_name)
+                                 :print_stderr => false).stdout.include?(dep_name)
         if installed
           puts "already installed"
         else
@@ -119,10 +122,11 @@ class Cask::Installer
     self.class.print_caveats(@cask)
   end
 
-  def uninstall
+  def uninstall(force=false)
     odebug "Cask::Installer.uninstall"
     uninstall_artifacts
-    purge_files
+    purge_versioned_files
+    purge_caskroom_path if force
   end
 
   def uninstall_artifacts
@@ -135,20 +139,83 @@ class Cask::Installer
     end
   end
 
-  def purge_files
-    odebug "Purging files"
-    if @cask.destination_path.exist?
+  def zap
+    ohai %Q{Implied "brew cask uninstall #{@cask}"}
+    uninstall_artifacts
+    if Cask::Artifact::Zap.me?(@cask)
+      ohai "Dispatching zap stanza"
+      Cask::Artifact::Zap.new(@cask, @command).zap_phase
+    else
+      opoo "No zap stanza present for Cask '#{@cask}'"
+    end
+    ohai %Q{Removing all staged versions of Cask '#{@cask}'}
+    purge_caskroom_path
+  end
+
+  # this feels like a class method, but uses @command
+  def permissions_rmtree(path)
+    if path.respond_to?(:rmtree) and path.exist?
+      tried_permissions = false
+      tried_ownership = false
       begin
-        @cask.destination_path.rmtree
-      rescue
+        path.rmtree
+      rescue StandardError => e
         # in case of permissions problems
-        if @cask.destination_path.exist?
-          @command.run('/bin/chmod', :args => ['-R', '--', 'u+rwx', @cask.destination_path])
-          @command.run('/bin/chmod', :args => ['-R', '-N',          @cask.destination_path])
-          @cask.destination_path.rmtree
+        if path.exist? and !tried_permissions
+          begin
+            # todo Better handling for the case where path is a symlink.
+            #      The -h and -R flags cannot be combined, and behavior is
+            #      dependent on whether the file argument has a trailing
+            #      slash.  This should do the right thing, but is fragile.
+            @command.run!('/usr/bin/chflags', :args => ['-R', '--', '000',   path])
+            @command.run!('/bin/chmod',       :args => ['-R', '--', 'u+rwx', path])
+            @command.run!('/bin/chmod',       :args => ['-R', '-N',          path])
+          rescue StandardError => e
+            unless tried_ownership
+              # in case of ownership problems
+              # todo Further examine files to see if ownership is the problem
+              #      before using sudo+chown
+              ohai "Using sudo to gain ownership of path '#{path}'"
+              current_user = Etc.getpwuid(Process.euid).name
+              @command.run('/usr/sbin/chown', :args => ['-R', '--', current_user, path],
+                                              :sudo => true)
+              tried_ownership = true
+              retry # permissions
+            end
+          end
+          tried_permissions = true
+          retry # rmtree
         end
       end
     end
+  end
+
+  def purge_versioned_files
+    odebug "Purging files for version #{@cask.version} of Cask #{@cask}"
+
+    # versioned staged distribution
+    permissions_rmtree(@cask.staged_path)
+
+    # Homebrew-cask metadata
+    if @cask.metadata_versioned_container_path.respond_to?(:children) and
+        @cask.metadata_versioned_container_path.exist?
+      @cask.metadata_versioned_container_path.children.each do |subdir|
+        permissions_rmtree subdir unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
+      end
+    end
+    if @cask.metadata_versioned_container_path.respond_to?(:rmdir_if_possible)
+      @cask.metadata_versioned_container_path.rmdir_if_possible
+    end
+    if @cask.metadata_master_container_path.respond_to?(:rmdir_if_possible)
+      @cask.metadata_master_container_path.rmdir_if_possible
+    end
+
+    # toplevel staged distribution
     @cask.caskroom_path.rmdir_if_possible
+  end
+
+  def purge_caskroom_path
+    odebug "Purging all staged versions of Cask #{@cask}"
+    permissions_rmtree(@cask.caskroom_path)
   end
 end

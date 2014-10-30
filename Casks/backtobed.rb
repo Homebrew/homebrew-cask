@@ -1,9 +1,10 @@
 class Backtobed < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
-  url 'http://backtobed.dadiugames.dk/backtobed_osx.zip'
+  url 'http://backtobed.dadiugames.dk/studentversion/backtobed_osx.zip'
   homepage 'http://backtobed.dadiugames.dk/'
+  license :gratis
 
-  link 'BackToBed.app'
+  app 'BackToBed.app'
 end

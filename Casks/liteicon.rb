@@ -1,9 +1,12 @@
 class Liteicon < Cask
-  version '3.2.1'
-  sha256 '94642d3d6ea84276bc9418daa865e35b306eb7ec0118d3934e9ba51bbb8ae96d'
+  version '3.5.3'
+  sha256 '73f1e5c6fe0bb9ad08004234d4a0b245fd6698f1623c7485080ae0a2ae7cf299'
 
-  url 'http://www.freemacsoft.net/downloads/LiteIcon_3.2.1.zip'
+  url "http://www.freemacsoft.net/downloads/LiteIcon_#{version}.zip"
+  appcast 'http://www.freemacsoft.net/liteicon/updates.xml',
+          :sha256 => '410b87eda513bf954ce3c4ae7258b3ca02d10557e92f8cbf04a8df37757dc560'
   homepage 'http://www.freemacsoft.net/liteicon/'
+  license :unknown
 
-  link 'LiteIcon.app'
+  app 'LiteIcon.app'
 end

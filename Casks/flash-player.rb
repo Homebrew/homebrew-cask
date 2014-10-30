@@ -1,9 +1,15 @@
 class FlashPlayer < Cask
-  version '14.0.0.176'
-  sha256 'a50947a6e2f2cef5812e4d6304f8c7ab209b99d989bb83fd09d9f88ab83959b4'
+  version '15.0.0.189'
+  sha256 'd164d1eb7075c2b25124cbbc8078272a4e08b78c15126588a67aa033889de63b'
 
-  url 'https://fpdownload.macromedia.com/pub/flashplayer/updaters/14/flashplayer_14_sa.dmg'
+  url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.to_i}/flashplayer_#{version.to_i}_sa.dmg"
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
+  license :unknown
 
-  link 'Flash Player.app'
+  app 'Flash Player.app'
+
+  zap :delete => [
+                  '~/Library/Caches/Adobe/Flash Player',
+                  '~/Library/Logs/FlashPlayerInstallManager.log',
+                 ]
 end

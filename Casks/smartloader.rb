@@ -1,9 +1,10 @@
 class Smartloader < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://download.picturelife.com/mac/Picturelife.dmg'
   homepage 'http://picturelife.com'
+  license :unknown
 
-  link 'Smartloader.app'
+  app 'Smartloader.app'
 end

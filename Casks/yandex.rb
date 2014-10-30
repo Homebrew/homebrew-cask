@@ -1,9 +1,10 @@
 class Yandex < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://download.cdn.yandex.net/browser/yandex/ru/Yandex.dmg'
   homepage 'http://browser.yandex.com/'
+  license :unknown
 
-  link 'Yandex.app'
+  app 'Yandex.app'
 end

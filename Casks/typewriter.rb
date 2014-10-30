@@ -1,9 +1,10 @@
 class Typewriter < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://llllll.li/typewriter/download/Typewriter.zip'
   homepage 'http://llllll.li/typewriter'
+  license :unknown
 
-  link 'Typewriter.app'
+  app 'Typewriter.app'
 end

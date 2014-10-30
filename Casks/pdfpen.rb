@@ -1,9 +1,10 @@
 class Pdfpen < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://dl.smilesoftware.com/com.smileonmymac.PDFpen/PDFpen.zip'
   homepage 'http://smilesoftware.com/PDFpen/index.html'
+  license :unknown
 
-  link 'PDFpen.app'
+  app 'PDFpen.app'
 end

@@ -1,9 +1,10 @@
 class Tinkertool < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://dl.macupdate.com/prod/TinkerTool.dmg'
   homepage 'http://www.bresink.com/osx/TinkerTool.html'
+  license :unknown
 
-  link 'TinkerTool.app'
+  app 'TinkerTool.app'
 end

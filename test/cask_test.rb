@@ -2,13 +2,13 @@ require 'test_helper'
 
 describe "Cask" do
   describe "load" do
-    it "returns an instance of the cask with the given name" do
+    it "returns an instance of the Cask with the given name" do
       c = Cask.load("adium")
       c.must_be_kind_of(Cask)
       c.must_be_instance_of(Adium)
     end
 
-    it "returns an instance of the cask from a specific file location" do
+    it "returns an instance of the Cask from a specific file location" do
       # defensive constant cleanup is required because Cask
       # classes may already be loaded due to audit test
       begin
@@ -22,7 +22,7 @@ describe "Cask" do
       Object.class_eval{remove_const :Dia}
     end
 
-    it "returns an instance of the cask from a url" do
+    it "returns an instance of the Cask from a url" do
       begin
         Object.class_eval{remove_const :Dia}
       rescue
@@ -36,7 +36,7 @@ describe "Cask" do
       Object.class_eval{remove_const :Dia}
     end
 
-    it "raises an error when failing to download a cask from a url" do
+    it "raises an error when failing to download a Cask from a url" do
       lambda {
         url = "file://" + File.expand_path('./Casks/notacask.rb')
         shutup do
@@ -45,7 +45,7 @@ describe "Cask" do
       }.must_raise(CaskUnavailableError)
     end
 
-    it "returns an instance of the cask from a relative file location" do
+    it "returns an instance of the Cask from a relative file location" do
       begin
         Object.class_eval{remove_const :Bbedit}
       rescue
@@ -61,7 +61,7 @@ describe "Cask" do
       Cask.load('test-opera-mail').must_be_instance_of(TestOperaMail)
     end
 
-    it "raises an error when attempting to load a cask that doesn't exist" do
+    it "raises an error when attempting to load a Cask that doesn't exist" do
       lambda {
         Cask.load("notacask")
       }.must_raise(CaskUnavailableError)
@@ -69,7 +69,7 @@ describe "Cask" do
   end
 
   describe "all_titles" do
-    it "returns every cask that there is as a string" do
+    it "returns every Cask that there is as a string" do
       all_casks = Cask.all_titles
       all_casks.count.must_be :>, 20
       all_casks.each { |cask| cask.must_be_kind_of String }
@@ -85,6 +85,15 @@ describe "Cask" do
     it "properly dasherizes constants with single letters in the middle" do
       GamesXChange = Class.new(Cask)
       GamesXChange.title.must_equal 'games-x-change'
+    end
+  end
+
+  describe "metadata" do
+    it "proposes a versioned metadata directory name for each instance" do
+      cask_name = "adium"
+      c = Cask.load(cask_name)
+      metadata_path = Cask.caskroom.join(cask_name, '.metadata', c.version)
+      c.metadata_versioned_container_path.to_s.must_equal(metadata_path.to_s)
     end
   end
 end

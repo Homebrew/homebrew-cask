@@ -1,10 +1,11 @@
 class AuLab < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://images.apple.com/itunes/mastered-for-itunes/docs/au_lab.zip'
   homepage 'http://www.apple.com/itunes/mastered-for-itunes/'
-  
-  nested_container 'AU Lab Image.dmg'
-  link 'AU Lab.app'
+  license :gratis
+
+  container :nested => 'AU Lab Image.dmg'
+  app 'AU Lab.app'
 end

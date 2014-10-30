@@ -1,10 +1,12 @@
 class DroboDashboard < Cask
-  version '2.5.3'
-  sha256 '3e17cc8d55c62ab3676628abb783c3f11d686f5bba064e64609294af449bc949'
+  version '2.6.3'
+  sha256 '8881b0713fed7bb9aeb2c1ca98db3e31ee304de0fad5d05778872e256a78ece1'
 
-  url 'http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-2.5.3.dmg'
+  url "http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-#{version}.dmg"
   homepage 'http://www.drobo.com'
+  license :unknown
 
-  install 'Install.app/Contents/Drobo_Dashboard_Installer_2.5.3.pkg'
-  uninstall :script => 'Uninstall.app/Contents/Resources/Scripts/Drobo_Dashboard_uninstall.sh'
+  pkg "Install.app/Contents/Drobo_Dashboard_Installer_#{version}.pkg"
+  uninstall :script => 'Uninstall.app/Contents/Resources/Scripts/Drobo_Dashboard_uninstall.sh',
+            :pkgutil => 'com.datarobotics.drobodashboard'
 end

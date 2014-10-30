@@ -1,9 +1,10 @@
 class Ocenaudio < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.ocenaudio.com.br/downloads/ocenaudio.dmg'
   homepage 'http://www.ocenaudio.com.br/en'
+  license :unknown
 
-  link 'ocenaudio.app'
+  app 'ocenaudio.app'
 end

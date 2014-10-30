@@ -17,15 +17,27 @@ describe Cask::Artifact::Uninstall do
     end
   end
 
+  describe 'zap_phase' do
+    it 'does nothing, because the zap_phase method is a no-op' do
+      uninstall_artifact = Cask::Artifact::Uninstall.new(@cask, Cask::FakeSystemCommand)
+      shutup do
+        uninstall_artifact.zap_phase
+      end
+    end
+  end
+
   describe 'uninstall_phase' do
-    # todo: uninstall tests for :signal (implementation does not use SystemComment)
-    it 'runs the specified uninstaller for the cask' do
+    # todo: uninstall tests for :signal (implementation does not use SystemCommand)
+    it 'runs the specified uninstaller for the Cask' do
       uninstall_artifact = Cask::Artifact::Uninstall.new(@cask, Cask::FakeSystemCommand)
 
       Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application "System Events" to count processes whose bundle identifier is "my.fancy.package.app"'], '1')
       Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application id "my.fancy.package.app" to quit'])
 
-      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', @cask.destination_path/'MyFancyPkg'/'FancyUninstaller.tool', '--please'])
+      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', @cask.staged_path/'MyFancyPkg'/'FancyUninstaller.tool', '--please'])
+      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-rf', '--', '/permissible/absolute/path'])
+      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-f', '--', Pathname.new(TestHelper.local_binary_path('empty_directory')).join('.DS_Store')])
+      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rmdir', '--', Pathname.new(TestHelper.local_binary_path('empty_directory'))])
 
       shutup do
         uninstall_artifact.uninstall_phase
@@ -119,7 +131,7 @@ describe Cask::Artifact::Uninstall do
       Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/launchctl', 'unload', '-w', '--', 'my.fancy.package.service'])
 
       Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/kextstat', '-l', '-b', 'my.fancy.package.kernelextension'], 'loaded')
-      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/sbin/kextunload', '-b', '--', 'my.fancy.package.kernelextension'])
+      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/sbin/kextunload', '-b', 'my.fancy.package.kernelextension'])
       Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/pkgutil', '--forget', 'my.fancy.package.main'])
 
       Cask::FakeSystemCommand.stubs_command(

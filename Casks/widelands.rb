@@ -4,6 +4,7 @@ class Widelands < Cask
 
   url 'https://launchpad.net/widelands/build18/build-18/+download/widelands-build18-mac.dmg'
   homepage 'https://wl.widelands.org/'
+  license :unknown
 
-  link 'Widelands.app'
+  app 'Widelands.app'
 end

@@ -8,6 +8,7 @@ class Cask::Artifact::Zap < Cask::Artifact::UninstallBase
   end
 
   def zap_phase
-    dispatch_uninstall_directives(self.class.artifact_dsl_key)
+    expand_tilde = true
+    dispatch_uninstall_directives(self.class.artifact_dsl_key, expand_tilde)
   end
 end

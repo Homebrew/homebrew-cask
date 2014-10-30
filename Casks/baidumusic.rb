@@ -1,9 +1,10 @@
 class Baidumusic < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://music.baidu.com/player/mac/baidumusic_mac.dmg'
   homepage 'http://music.baidu.com/'
+  license :gratis
 
-  link '百度音乐.app'
+  app '百度音乐.app'
 end

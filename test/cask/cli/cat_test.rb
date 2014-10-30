@@ -1,43 +1,59 @@
 require 'test_helper'
 
 describe Cask::CLI::Cat do
-  it 'displays the cask file content about the specified cask' do
-    lambda {
-      Cask::CLI::Cat.run('basic-cask')
-    }.must_output <<-CLIOUTPUT.undent
-      class BasicCask < TestCask
-        url 'http://example.com/TestCask.dmg'
-        homepage 'http://example.com/'
-        version '1.2.3'
-        sha256 '8c62a2b791cf5f0da6066a0a4b6e85f62949cd60975da062df44adf887f4370b'
-        link 'TestCask.app'
-      end
-    CLIOUTPUT
+  describe 'given a basic Cask' do
+    before do
+      @expected_output = <<-CLIOUTPUT.undent
+        class BasicCask < TestCask
+          version '1.2.3'
+          sha256 '8c62a2b791cf5f0da6066a0a4b6e85f62949cd60975da062df44adf887f4370b'
+
+          url 'http://example.com/TestCask.dmg'
+          homepage 'http://example.com/'
+
+          app 'TestCask.app'
+        end
+      CLIOUTPUT
+    end
+
+    it 'displays the Cask file content about the specified Cask' do
+      lambda {
+        Cask::CLI::Cat.run('basic-cask')
+      }.must_output(@expected_output)
+    end
+
+    it 'throws away additional Cask arguments and uses the first' do
+      lambda{
+        Cask::CLI::Cat.run('basic-cask', 'local-caffeine')
+      }.must_output(@expected_output)
+    end
+
+    it 'throws away stray options' do
+      lambda{
+        Cask::CLI::Cat.run('--notavalidoption', 'basic-cask')
+      }.must_output(@expected_output)
+    end
   end
 
-  it 'throws away additional arguments and uses the first' do
-    lambda{
-      Cask::CLI::Cat.run('basic-cask', 'local-caffeine')
-    }.must_output <<-CLIOUTPUT.undent
-      class BasicCask < TestCask
-        url 'http://example.com/TestCask.dmg'
-        homepage 'http://example.com/'
-        version '1.2.3'
-        sha256 '8c62a2b791cf5f0da6066a0a4b6e85f62949cd60975da062df44adf887f4370b'
-        link 'TestCask.app'
-      end
-    CLIOUTPUT
-  end
-
-  it %q{raises an exception when the cask doesn't exist} do
+  it %q{raises an exception when the Cask doesn't exist} do
     lambda {
       Cask::CLI::Cat.run('notacask')
     }.must_raise CaskUnavailableError
   end
 
-  it "raises an exception when no cask is specified" do
-    lambda {
-      Cask::CLI::Cat.run
-    }.must_raise CaskUnspecifiedError
+  describe "when no Cask is specified" do
+    it "raises an exception" do
+      lambda {
+        Cask::CLI::Cat.run()
+      }.must_raise CaskUnspecifiedError
+    end
+  end
+
+  describe "when no Cask is specified, but an invalid option" do
+    it "raises an exception" do
+      lambda {
+        Cask::CLI::Cat.run('--notavalidoption')
+      }.must_raise CaskUnspecifiedError
+    end
   end
 end

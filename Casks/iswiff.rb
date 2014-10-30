@@ -1,9 +1,10 @@
 class Iswiff < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://echoone.com/iswiff/iSwiff.dmg'
   homepage 'http://echoone.com/iswiff/'
+  license :unknown
 
-  link 'iSwiff.app'
+  app 'iSwiff.app'
 end

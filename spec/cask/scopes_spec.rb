@@ -9,7 +9,7 @@ describe Cask::Scopes do
     end
     after { fake_caskroom.rmtree }
 
-    it 'returns a list installed casks by loading casks for all the dirs that exist in the caskroom' do
+    it 'returns a list installed Casks by loading Casks for all the dirs that exist in the caskroom' do
       allow(Cask).to receive(:load) { |name| "loaded-#{name}" }
 
       fake_caskroom.join('cask-bar').mkdir

@@ -7,7 +7,6 @@ require 'cask/cli/base'
 require 'cask/cli/alfred'
 require 'cask/cli/audit'
 require 'cask/cli/cat'
-require 'cask/cli/checklinks'
 require 'cask/cli/cleanup'
 require 'cask/cli/create'
 require 'cask/cli/doctor'
@@ -20,8 +19,10 @@ require 'cask/cli/list'
 require 'cask/cli/search'
 require 'cask/cli/uninstall'
 require 'cask/cli/update'
+require 'cask/cli/zap'
 
 require 'cask/cli/internal_use_base'
+require 'cask/cli/internal_checkurl'
 require 'cask/cli/internal_dump'
 require 'cask/cli/internal_help'
 require 'cask/cli/internal_stanza'
@@ -87,7 +88,7 @@ class Cask::CLI
       sym = Pathname.new(command.to_s).basename('.rb').to_s.capitalize
       klass = begin
                 Cask::CLI.const_get(sym)
-              rescue
+              rescue NameError => e
                 nil
               end
       if klass.respond_to?(:run)
@@ -182,6 +183,9 @@ class Cask::CLI
       opts.on("--input_methoddir=MANDATORY") do |v|
         Cask.input_methoddir = Pathname(v).expand_path
       end
+      opts.on("--internet_plugindir=MANDATORY") do |v|
+        Cask.internet_plugindir = Pathname(v).expand_path
+      end
       opts.on("--screen_saverdir=MANDATORY") do |v|
        Cask.screen_saverdir = Pathname(v).expand_path
       end
@@ -208,6 +212,11 @@ class Cask::CLI
       rescue OptionParser::InvalidOption
         remaining << head
         retry
+      rescue OptionParser::MissingArgument
+        raise CaskError.new("The option '#{head}' requires an argument")
+      rescue OptionParser::AmbiguousOption
+        raise CaskError.new(
+          "There is more than one possible option that starts with '#{head}'")
       end
     end
     remaining
@@ -219,13 +228,17 @@ class Cask::CLI
     end
 
     def run(*args)
-      purpose
-      if @attempted_name and @attempted_name != "help"
-        puts "!! "
-        puts "!! no command with name: #{@attempted_name}"
-        puts "!! \n\n"
+      if args.include?('--version') or @attempted_name == '--version'
+        puts HOMEBREW_CASK_VERSION
+      else
+        purpose
+        if @attempted_name and @attempted_name != "help"
+          puts "!! "
+          puts "!! no command with name: #{@attempted_name}"
+          puts "!! \n\n"
+        end
+        usage
       end
-      usage
     end
 
     def purpose

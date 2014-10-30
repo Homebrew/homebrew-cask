@@ -1,9 +1,10 @@
 class Etrecheck < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.etresoft.com/download/EtreCheck.zip'
   homepage 'http://www.etresoft.com/etrecheck'
+  license :unknown
 
-  link 'EtreCheck.app'
+  app 'EtreCheck.app'
 end

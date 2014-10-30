@@ -1,9 +1,10 @@
 class UnifiedRemote < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.unifiedremote.com/download/macosx-setup'
   homepage 'http://www.unifiedremote.com'
+  license :unknown
 
-  link 'Unified Remote.app'
+  app 'Unified Remote.app'
 end

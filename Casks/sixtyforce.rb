@@ -1,9 +1,10 @@
 class Sixtyforce < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://sixtyforce.com/download/sixtyforce.zip'
   homepage 'http://sixtyforce.com/'
+  license :unknown
 
-  link 'sixtyforce.app'
+  app 'sixtyforce.app'
 end

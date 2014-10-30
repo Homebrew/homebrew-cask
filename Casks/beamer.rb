@@ -1,10 +1,11 @@
 class Beamer < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://beamer-app.com/download'
-  appcast 'http://beamer-app.com/sparkle-appcast.xml'
+  appcast 'http://beamer-app.com/beamer2-appcast.xml'
   homepage 'http://beamer-app.com'
+  license :commercial
 
-  link 'Beamer.app'
+  app 'Beamer.app'
 end

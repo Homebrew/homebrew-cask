@@ -1,9 +1,10 @@
 class Menubarfilter < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://github.com/downloads/wez/MenuBarFilter/MenuBarFilter.zip'
   homepage 'http://wez.github.com/MenuBarFilter/'
+  license :oss
 
-  link 'MenuBarFilter.app'
+  app 'MenuBarFilter.app'
 end

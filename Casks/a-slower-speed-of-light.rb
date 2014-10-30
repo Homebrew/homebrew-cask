@@ -4,7 +4,8 @@ class ASlowerSpeedOfLight < Cask
 
   url 'http://web.mit.edu/gambit/summer12/speedoflight/A_Slower_Speed_of_Light_OSX.zip'
   homepage 'http://gamelab.mit.edu/games/a-slower-speed-of-light/'
+  license :gratis
 
-  nested_container 'A Slower Speed of Light.dmg'
-  link 'A Slower Speed of Light.app'
+  container :nested => 'A Slower Speed of Light.dmg'
+  app 'A Slower Speed of Light.app'
 end

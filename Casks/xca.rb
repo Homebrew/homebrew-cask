@@ -4,6 +4,7 @@ class Xca < Cask
 
   url "http://downloads.sourceforge.net/sourceforge/xca/xca-#{version}_x86.dmg"
   homepage 'http://xca.sourceforge.net/'
+  license :oss
 
-  link 'xca.app'
+  app 'xca.app'
 end

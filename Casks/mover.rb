@@ -1,9 +1,10 @@
 class Mover < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.themaninhat.com/static/mover.dmg'
   homepage 'http://www.themaninhat.com/mover.html'
+  license :unknown
 
-  link 'Mover.app'
+  app 'Mover.app'
 end

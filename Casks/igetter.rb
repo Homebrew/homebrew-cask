@@ -4,6 +4,7 @@ class Igetter < Cask
 
   url "http://www.igetter.net/search/downloads/iGetter#{version}.dmg"
   homepage 'http://www.igetter.net/'
+  license :unknown
 
-  link "iGetter #{version}/iGetter.app"
+  app "iGetter #{version}/iGetter.app"
 end

@@ -3,7 +3,7 @@ module Cask::CleanupHooks
     super
     Cask.installed.each do |cask|
       Cask::Installer.new(cask).tap do |installer|
-        installer.purge_files
+        installer.purge_versioned_files
       end
     end
   end

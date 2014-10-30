@@ -1,7 +1,7 @@
 class Cask::CLI::Install < Cask::CLI::Base
   def self.run(*args)
-    raise CaskUnspecifiedError if args.empty?
-    cask_names = args.reject { |a| a.chars.first == '-' }
+    cask_names = cask_names_from(args)
+    raise CaskUnspecifiedError if cask_names.empty?
     force = args.include? '--force'
     retval = install_casks cask_names, force
     # retval is ternary: true/false/nil
@@ -19,12 +19,9 @@ class Cask::CLI::Install < Cask::CLI::Base
         cask = Cask.load(cask_name)
         Cask::Installer.new(cask).install(force)
         count += 1
-      rescue CaskAlreadyInstalledError => e
-        # todo: downgrade this message from Error to Warning
-        #       possibly get rid of the CaskAlreadyInstalledError exception
-        #       and simply test cask.installed? in this loop
-        onoe e.message
-        count += 1
+       rescue CaskAlreadyInstalledError => e
+         opoo e.message
+         count += 1
       rescue CaskUnavailableError => e
         warn_unavailable_with_suggestion cask_name, e
       end
@@ -44,6 +41,6 @@ class Cask::CLI::Install < Cask::CLI::Base
   end
 
   def self.help
-    "installs the cask of the given name"
+    "installs the Cask of the given name"
   end
 end

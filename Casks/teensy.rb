@@ -4,6 +4,7 @@ class Teensy < Cask
 
   url 'https://www.pjrc.com/teensy/teensy.dmg'
   homepage 'http://pjrc.com/teensy/loader_mac.html'
+  license :unknown
 
-  link 'teensy.app'
+  app 'teensy.app'
 end

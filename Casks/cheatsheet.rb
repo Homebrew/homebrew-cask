@@ -1,14 +1,15 @@
 class Cheatsheet < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.cheatsheetapp.com/CheatSheet/download.php'
   appcast 'http://mediaatelier.com/CheatSheet/feed.php'
   homepage 'http://www.cheatsheetapp.com/CheatSheet/'
+  license :unknown
 
-  link 'CheatSheet.app'
+  app 'CheatSheet.app'
 
-  after_install do
+  postflight do
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'com.mediaatelier.CheatSheet', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end

@@ -1,10 +1,11 @@
 class Hush < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://coffitivity.com/hush/files/Hush.dmg.zip'
   homepage 'http://coffitivity.com/hush/'
+  license :unknown
 
-  nested_container 'Hush.dmg'
-  link 'Hush.app'
+  container :nested => 'Hush.dmg'
+  app 'Hush.app'
 end

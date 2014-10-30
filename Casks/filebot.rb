@@ -1,11 +1,12 @@
 class Filebot < Cask
-  version '4.2'
-  sha256 '92769237a926e13de515c6743d57c0b8b52e4c6ed50dfc5b46355690de1feb95'
+  version '4.5'
+  sha256 '43f461ffdca299f5a329defb5360992b57930daaa14d46102cb859ec80a5366e'
 
-  homepage 'http://www.filebot.net/'
   url "https://downloads.sourceforge.net/project/filebot/filebot/FileBot_#{version}/FileBot_#{version}.app.tar.gz"
+  homepage 'http://www.filebot.net/'
+  license :oss
 
-  link 'FileBot.app'
+  app 'FileBot.app'
   binary 'FileBot.app/Contents/MacOS/filebot.sh', :target => 'filebot'
-  caveats 'FileBot requires Java 8. Run `java -version` to verify.'
+  caveats 'FileBot requires Java 8. Run "java -version" to verify.'
 end

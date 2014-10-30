@@ -1,9 +1,10 @@
 class Servus < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://servus.io/download'
   homepage 'https://servus.io/'
+  license :unknown
 
-  link 'Servus.app'
+  app 'Servus.app'
 end

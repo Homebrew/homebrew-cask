@@ -1,10 +1,11 @@
 class Scapple < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://scrivener.s3.amazonaws.com/Scapple.dmg'
   appcast 'http://www.literatureandlatte.com/downloads/scapple/scapple.xml'
   homepage 'https://www.literatureandlatte.com/scapple.php'
+  license :unknown
 
-  link 'Scapple.app'
+  app 'Scapple.app'
 end

@@ -1,5 +1,5 @@
 class EclipseJee < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   if Hardware::CPU.is_32_bit?
@@ -7,8 +7,8 @@ class EclipseJee < Cask
   else
     url 'http://download.eclipse.org/technology/epp/downloads/release/luna/R/eclipse-jee-luna-R-macosx-cocoa-x86_64.tar.gz'
   end
-
   homepage 'http://eclipse.org/'
+  license :unknown
 
-  link 'eclipse/Eclipse.app'
+  app 'eclipse/Eclipse.app'
 end

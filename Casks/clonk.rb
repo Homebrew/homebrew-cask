@@ -1,9 +1,10 @@
 class Clonk < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.clonkx.de/rage/cr_full_mac.zip'
   homepage 'http://www.clonk.de/cr.php'
+  license :unknown
 
-  link 'Clonk.app'
+  app 'Clonk.app'
 end

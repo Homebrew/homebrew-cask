@@ -1,9 +1,10 @@
 class Flow < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.getflow.com/mac/download'
   homepage 'http://www.getflow.com/'
+  license :unknown
 
-  link 'Flow.app'
+  app 'Flow.app'
 end

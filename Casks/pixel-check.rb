@@ -4,6 +4,7 @@ class PixelCheck < Cask
 
   url "http://macguitar.me/apps/pixelcheck/PXC#{version}.zip"
   homepage 'http://macguitar.me/apps/pixelcheck/'
+  license :unknown
 
-  link "PiXel Check #{version}/PiXel Check.app"
+  app "PiXel Check #{version}/PiXel Check.app"
 end

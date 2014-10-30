@@ -1,9 +1,10 @@
 class Clarify < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://www.clarify-it.com/download/mac/Clarify.dmg'
   homepage 'http://www.clarify-it.com/'
+  license :unknown
 
-  link 'Clarify.app'
+  app 'Clarify.app'
 end

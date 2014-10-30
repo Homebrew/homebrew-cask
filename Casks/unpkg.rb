@@ -4,6 +4,7 @@ class Unpkg < Cask
 
   url "https://github.com/downloads/timdoug/unpkg/unpkg-#{version}.zip"
   homepage 'http://www.timdoug.com/unpkg/'
+  license :oss
 
-  link "unpkg #{version}/unpkg.app"
+  app "unpkg #{version}/unpkg.app"
 end

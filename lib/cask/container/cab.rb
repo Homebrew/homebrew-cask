@@ -11,11 +11,11 @@ class Cask::Container::Cab < Cask::Container::Base
   def extract
     cabextract = HOMEBREW_PREFIX.join('bin/cabextract')
     if ! Pathname.new(cabextract).exist?
-      raise CaskError.new "Expected to find cabextract executable. Cask '#{@cask}' must add: depends_on_formula 'cabextract'"
+      raise CaskError.new "Expected to find cabextract executable. Cask '#{@cask}' must add: depends_on :formula => 'cabextract'"
     end
-    Dir.mktmpdir do |staging_dir|
-      @command.run!(cabextract, :args => ['-d', staging_dir, '--', @path])
-      @command.run!('/usr/bin/ditto', :args => ['--', staging_dir, @cask.destination_path])
+    Dir.mktmpdir do |unpack_dir|
+      @command.run!(cabextract, :args => ['-d', unpack_dir, '--', @path])
+      @command.run!('/usr/bin/ditto', :args => ['--', unpack_dir, @cask.staged_path])
     end
   end
 end

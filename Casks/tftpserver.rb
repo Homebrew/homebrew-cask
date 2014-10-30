@@ -1,9 +1,10 @@
 class Tftpserver < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://ww2.unime.it/flr/tftpserver/TftpServer.dmg'
   homepage 'http://ww2.unime.it/flr/tftpserver/'
+  license :unknown
 
-  link 'TftpServer.app'
+  app 'TftpServer.app'
 end

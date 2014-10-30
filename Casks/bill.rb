@@ -1,9 +1,10 @@
 class Bill < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://myownapp.com/downloads/Bill.zip'
   homepage 'http://billtheapp.com/'
+  license :unknown
 
-  link 'Bill.app'
+  app 'Bill.app'
 end

@@ -1,10 +1,11 @@
 class Twentytwo < Cask
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'https://github.com/marcw/twentytwo/raw/master/dist/TwentyTwo.dmg'
   appcast 'https://raw.github.com/marcw/soundcleod/master/appcast.xml'
   homepage 'https://github.com/marcw/twentytwo'
+  license :mit
 
-  link 'TwentyTwo.app'
+  app 'TwentyTwo.app'
 end

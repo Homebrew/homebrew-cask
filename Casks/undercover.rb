@@ -2,10 +2,11 @@ class Undercover < Cask
   version '6.0'
   sha256 '07d9b20eba2a873e538e4f2ae4c1dcafafd282fb8af01f3374b08e54069d9932'
 
-  url 'http://assets.undercoverhq.com/client/6.0/undercover_mac.pkg'
+  url "http://assets.undercoverhq.com/client/#{version}/undercover_mac.pkg"
   homepage 'http://www.orbicule.com/undercover/mac/'
+  license :unknown
 
-  install 'undercover_mac.pkg'
+  pkg 'undercover_mac.pkg'
 
   uninstall :pkgutil => 'com.orbicule.pkg.Undercover',
             :quit => [ 'com.orbicule.uc', 'com.orbicule.UCAgent' ],
