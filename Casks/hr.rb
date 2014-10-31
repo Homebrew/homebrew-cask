@@ -1,8 +1,8 @@
 class Hr < Cask
-  version '0.43'
-  sha256 'd4bba32b712fa456165b13c1a934fbd4da4dbd7391546756c7f92deabcacbd04'
+  version :latest
+  sha256 :no_check
 
-  url "http://www.hrmacapp.com/download/hr_#{version.gsub('.', '')}.zip"
+  url "http://www.hrmacapp.com/download"
   homepage 'http://www.hrmacapp.com/'
   license :unknown
 
