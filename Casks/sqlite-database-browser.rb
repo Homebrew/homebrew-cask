@@ -1,8 +1,8 @@
 class SqliteDatabaseBrowser < Cask
-  version '3.3.1'
-  sha256 '14fce5d0df8c06e355aba526f256fd69c7f32e277506add4406c66e4714325eb'
+  version '3.4.0'
+  sha256 '8347deff7680fba86fcc21abb442a05a1526896d2701ed27d8aa8c38284a41ff'
 
-  url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version}/sqlitebrowser-#{version}v2.dmg"
+  url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version}/sqlitebrowser-#{version}.dmg"
   homepage 'http://sqlitebrowser.org'
   license :mpl
 

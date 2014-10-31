@@ -45,9 +45,6 @@ names, and other aspects of this manual are still subject to change.
   * `cat` <Cask>:
     Dump the given Cask definition file to the standard output.
 
-  * `checklinks`:
-    Check for bad Cask links.
-
   * `cleanup` [--outdated]:
     Clean up cached downloads and tracker symlinks.  With `--outdated`, only
     clean up cached downloads older than 10 days old.

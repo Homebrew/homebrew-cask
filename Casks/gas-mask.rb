@@ -1,10 +1,10 @@
 class GasMask < Cask
-  version '0.8'
-  sha256 '16353247ea14da7675578fda340005645c4610a478a748c1ed410296c3dab52a'
+  version '0.8.1'
+  sha256 'f384e973603088ed5afbe841ef7d5698262988c65a0437a9d8011dcb667fcc2e'
 
   url "http://gmask.clockwise.ee/files/gas_mask_#{version}.zip"
   appcast 'http://gmask.clockwise.ee/check_update/',
-          :sha256 => '3a711b4c1d8014e2495a195f5e7557abf8fb905c3f0cfcea889a5820cba33080'
+          :sha256 => '2e4f5292999bddfc25245a9c10f98d7ac23d0717a1dd45436a00cf09be7f8d9b'
   homepage 'http://www.clockwise.ee/gasmask/'
   license :unknown
 

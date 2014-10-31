@@ -62,7 +62,7 @@ class Unity < Cask
 end
 ```
 
-And here is one for `Firefox.app`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new version is available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when an unversioned download link is available:
+And here is one for `Firefox.app`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new version is available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when an unversioned download URL is available:
 
 ```ruby
 class Firefox < Cask
@@ -194,8 +194,8 @@ URLs from dropbox.com or cl.ly/cloudapp.com are not readily distinguishable
 as being controlled by the original software vendor.  These URLs should be
 used only when given as such on the official project website.
 
-Also make sure to link to the binary download, rather than a preview page.
-(See <https://www.dropbox.com/help/201/en>.)
+Also make sure to give the URL for the binary download itself, rather than
+a preview page. (See <https://www.dropbox.com/help/201/en>.)
 
 ### Some Providers Block Command-line Downloads
 

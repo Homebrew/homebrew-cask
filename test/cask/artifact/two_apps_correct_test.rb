@@ -8,7 +8,7 @@ describe Cask::Artifact::App do
   }
 
   describe 'install multiple apps' do
-    it "links both noted applications to the proper directory" do
+    it "activates both apps using the proper target directory" do
       cask = local_two_apps_caffeine
 
       shutup do
@@ -54,7 +54,7 @@ describe Cask::Artifact::App do
     end
 
     # @@@ todo
-    # it "only uses linkables when they are specified" do
+    # it "only uses apps when they are specified" do
     #   cask = local_two_apps_caffeine
     #
     #   app_path = cask.staged_path.join('Caffeine.app')

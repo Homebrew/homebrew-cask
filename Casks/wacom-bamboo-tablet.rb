@@ -1,8 +1,8 @@
 class WacomBambooTablet < Cask
-  version '5.3.3-3'
-  sha256 '6ba4469ad70d779c4dc95e1ba71469325932601bffda74d6c1d7e6bb49d0fe70'
+  version '5.3.5-4'
+  sha256 '3368525540f01c6160839a6dee8618c887681d33ed61b15a1835def1cd2c70f2'
 
-  url "http://cdn.wacom.com/U/Drivers/Mac/Consumer/533/PenTablet_#{version}.dmg"
+  url "http://cdn.wacom.com/u/productsupport/drivers/mac/consumer/pentablet_#{version}.dmg"
   homepage 'http://us.wacom.com/en/support/drivers'
   license :unknown
 

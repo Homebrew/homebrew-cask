@@ -1,6 +1,6 @@
 class Phantomjs < Cask
-  version '1.9.7'
-  sha256 '72731f8ff68db17ecb5f6c78bf036adb429317b9bdbe69e2f5f60514fa7e4a6f'
+  version '1.9.8'
+  sha256 '8f15043ae3031815dc5f884ea6ffa053d365491b1bc0dc3a0862d5ff1ac20a48'
 
   url "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-#{version}-macosx.zip"
   homepage 'http://phantomjs.org/'

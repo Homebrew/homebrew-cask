@@ -13,7 +13,7 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
   # Examples
   #
   #     brew cask _stanza appcast   --table
-  #     brew cask _stanza link      --table alfred google-chrome adium voicemac logisim vagrant
+  #     brew cask _stanza app       --table alfred google-chrome adium voicemac logisim vagrant
   #     brew cask _stanza url       --table alfred google-chrome adium voicemac logisim vagrant
   #     brew cask _stanza version   --table alfred google-chrome adium voicemac logisim vagrant
   #     brew cask _stanza artifacts --table --inspect alfred google-chrome adium voicemac logisim vagrant
@@ -22,7 +22,9 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
 
   # todo: this should be retrievable from Cask::DSL
   ARTIFACTS = Set.new([
-                       :link,
+                       :app,
+                       :suite,
+                       :artifact,
                        :prefpane,
                        :qlplugin,
                        :font,

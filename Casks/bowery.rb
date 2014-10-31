@@ -1,6 +1,6 @@
 class Bowery < Cask
-  version '3.2.7'
-  sha256 'e473b9d3b056a23b79c5174e979f345ef1cb873bcadfd02360a46f7b015a394f'
+  version '3.2.11'
+  sha256 'dbdbad37b8d17e72c227858037b67aa531e3c8b8031c314166a275121fd73468'
 
   url "http://desktop.bowery.io/#{version}_darwin_amd64.zip"
   homepage 'http://bowery.io/'

@@ -1,6 +1,6 @@
 class Prey < Cask
   version '0.6.4'
-  sha256 'e46b24cb602f590f8a756d7995e8720cbfc96044a303ac163194e63ba4765a00'
+  sha256 '361996d067539da7881aa3618b737ba4a0846df13ca8c9b8b07151d42f81fb86'
 
   url "https://preyproject.com/releases/current/prey-#{version}-mac-batch.mpkg.zip"
   homepage 'https://preyproject.com'

@@ -8,7 +8,7 @@ describe Cask::Artifact::App do
   }
 
   describe 'install_phase' do
-    it "links the noted applications to the proper directory" do
+    it "activates the given apps using the proper target directory" do
       cask = local_caffeine
 
       shutup do
@@ -50,7 +50,7 @@ describe Cask::Artifact::App do
       end
     end
 
-    it "only uses linkables when they are specified" do
+    it "only uses apps when they are specified" do
       cask = local_caffeine
 
       app_path = cask.staged_path.join('Caffeine.app')

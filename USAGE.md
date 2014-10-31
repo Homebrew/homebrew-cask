@@ -93,7 +93,6 @@ The following commands are for Cask authors:
 * `cat` -- dumps the given Cask to the standard output
 * `create` -- creates a Cask and opens it in an editor
 * `edit` -- edits the given Cask
-* `checklinks` -- checks for bad Cask links
 
 The following aliases and abbreviations are provided for convenience:
 

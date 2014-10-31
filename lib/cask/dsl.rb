@@ -65,7 +65,9 @@ module Cask::DSL
         raise CaskInvalidError.new(self.title, "'url' stanza may only appear once")
       end
       @url ||= begin
-        Cask::URL.new(*args) unless args.empty?
+        Cask::URL.new(*args)
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, "'url' stanza failed with: #{e}")
       end
     end
 
@@ -212,9 +214,6 @@ module Cask::DSL
     # semantics.
     STANZA_ALIASES = {
                        :pkg                   => :install,          # todo remove
-                       :app                   => :link,             # todo upgrade
-                       :suite                 => :link,             # todo upgrade
-                       :artifact              => :link,             # todo upgrade
                        :preflight             => :before_install,   # todo remove
                        :postflight            => :after_install,    # todo remove
                        :uninstall_preflight   => :before_uninstall, # todo remove
@@ -223,7 +222,6 @@ module Cask::DSL
 
     def self.ordinary_artifact_types
       @@ordinary_artifact_types ||= [
-                                     :link,                         # todo remove
                                      :app,
                                      :suite,
                                      :artifact,
