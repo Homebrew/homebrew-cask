@@ -1,11 +1,11 @@
 class PlexHomeTheater < Cask
-  version '1.2.2.331-2d6426d7'
+  version '1.2.3.378-0c92ed32'
 
   if Hardware::CPU.is_32_bit?
-    sha256 'ac3a866d5227aa23b80acfef447c7a27366c11d77ecdd6d506afce013b6d986c'
+    sha256 '7c2fd9541104346478fd7fa1e34c609bc6494202e82dcb91533b1e3931add232'
     url "http://downloads.plexapp.com/plex-home-theater/#{version}/PlexHomeTheater-#{version}-macosx-i386.zip"
   else
-    sha256 '7a862680a04867db422c811c3afc1285c9b133e8a00f8fbe04a58a87b9e94cb5'
+    sha256 '329011165014f20110c258049ab5de6c84a2957065e7dd01dfa68599ae9d4810'
     url "http://downloads.plexapp.com/plex-home-theater/#{version}/PlexHomeTheater-#{version}-macosx-x86_64.zip"
   end
 
