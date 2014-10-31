@@ -1,10 +1,10 @@
 class Fontprep < Cask
-  version :latest
+  version 'v3.1.1'
   sha256 :no_check
 
-  url 'http://fontprep.com/download'
+  url 'https://github.com/briangonzalez/fontprep/releases/download/v3.1.1/FontPrep_3.1.1.zip'
   homepage 'http://fontprep.com'
-  license :unknown
+  license :gpl
 
   app 'FontPrep.app'
 end
