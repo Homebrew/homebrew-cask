@@ -8,7 +8,6 @@ class ChangesMeter < Cask
 
   app 'Changes Meter.app'
   postflight do
-    # Don't ask to move the app bundle to /Applications
-    system %Q{/usr/bin/defaults write com.intuiware.ChangesMeter moveToApplicationsFolderAlertSuppress -bool true}
+    suppress_move_to_applications
   end
 end
