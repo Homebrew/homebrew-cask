@@ -1,12 +1,12 @@
 class R < Cask
-  version '3.1.1'
+  version '3.1.2'
 
   if MacOS.version < :mavericks
-    sha256 '4db95d2bffdaa342a89d01088f47cfe6575ed7e953c31ea4dea629a0942b56b6'
+    sha256 'aec21b31b3a6c4e777690bd4e2f19fa71f2ae443dd645d4fa93a0399345e5aac'
     url "http://cran.rstudio.com/bin/macosx/R-#{version}-snowleopard.pkg"
     pkg "R-#{version}-snowleopard.pkg"
   else
-    sha256 'd2f4e4f68628d998f81146eacd929ef6fb9bc01ca93d968e6562a3a6372c4d93'
+    sha256 'ea1312d3d888861f33f5225a159fe39a5e90f382996eadc388808eb59bf6003f'
     url "http://cran.rstudio.com/bin/macosx/R-#{version}-mavericks.pkg"
     pkg "R-#{version}-mavericks.pkg"
   end
