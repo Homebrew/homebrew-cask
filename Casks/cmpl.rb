@@ -6,7 +6,7 @@ class Cmpl < Cask
   homepage 'https://www.coliop.org/'
   license :gpl
 
-  artifact 'Cmpl', target: "/Applications/Cmpl"
+  artifact 'Cmpl', :target => "/Applications/Cmpl"
 
   binary 'Cmpl/bin/cmpl'
   binary 'Cmpl/coliop'
