@@ -8,4 +8,9 @@ class Todoist < Cask
   license :unknown
 
   app 'Todoist.app'
+
+  postflight do
+    # Don't ask to move the app bundle to /Applications
+    system '/usr/bin/defaults', 'write', 'com.todoist.mac.Todoist', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+  end
 end
