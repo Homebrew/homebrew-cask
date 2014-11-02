@@ -9,7 +9,7 @@ cask :v1 => 'rubymine' do
   app 'RubyMine.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/RubyMine.app/Contents/Info.plist"
+    plist_set(':JVMOptions:JVMVersion', '1.6+')
   end
 
   zap :delete => [
