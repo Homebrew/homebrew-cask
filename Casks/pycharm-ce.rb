@@ -9,6 +9,6 @@ cask :v1 => 'pycharm-ce' do
   app 'PyCharm CE.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/PyCharm CE.app/Contents/Info.plist"
+    plist_set(':JVMOptions:JVMVersion', '1.6+')
   end
 end
