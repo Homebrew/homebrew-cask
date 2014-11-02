@@ -10,9 +10,9 @@ class Dash < Cask
   app 'Dash.app'
 
   postflight do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.kapeli.dash', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+    suppress_move_to_applications
   end
+
   zap :delete => [
                   '~/Library/Application Support/Dash/library.dash',
                   '~/Library/Preferences/com.kapeli.dash.plist',

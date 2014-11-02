@@ -8,8 +8,9 @@ class Github < Cask
 
   app 'GitHub.app'
   binary 'GitHub.app/Contents/MacOS/github_cli', :target => 'github'
+
   postflight do
-    system '/usr/bin/defaults', 'write', 'com.github.GitHub', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+    suppress_move_to_applications
   end
 
   zap :delete => [

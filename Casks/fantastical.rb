@@ -11,8 +11,8 @@ class Fantastical < Cask
   app 'Fantastical.app'
 
   postflight do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.flexibits.fantastical', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+    suppress_move_to_applications
   end
+
   zap :delete => '~/Library/Preferences/com.flexibits.fantastical.plist'
 end

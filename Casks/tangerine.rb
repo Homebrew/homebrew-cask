@@ -9,8 +9,6 @@ class Tangerine < Cask
   app 'Tangerine!.app'
 
   postflight do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.potionfactory.Tangerine', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+    suppress_move_to_applications
   end
-
 end

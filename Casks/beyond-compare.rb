@@ -9,7 +9,6 @@ class BeyondCompare < Cask
   app 'Beyond Compare.app'
 
   postflight do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.ScooterSoftware.BeyondCompare', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+    suppress_move_to_applications
   end
 end
