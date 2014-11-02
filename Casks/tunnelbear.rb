@@ -1,10 +1,10 @@
 class Tunnelbear < Cask
-  version '2.4.2'
-  sha256 'ad53bff32098e6871b3c3416b632c634672500b415a54d5afbbe7ea4f605d33d'
+  version '2.4.4'
+  sha256 '0b1e9798b6b395ce5ee9a7713ea2f57460226e76de131c76004d8e761e4eed92'
 
   url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version}.zip"
   appcast 'https://s3.amazonaws.com/tunnelbear/downloads/mac/appcast.xml',
-          :sha256 => 'f6d255572d045cfb43781edfdd68f4b1e48585ad0929d706c68300aca2ce7b2a'
+          :sha256 => '69e4bf8982ecc871fd701062b35c7de265ebd76b8676256923cf7c6e1b1249a0'
   homepage 'https://www.tunnelbear.com/'
   license :unknown
 
