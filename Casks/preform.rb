@@ -1,6 +1,6 @@
 class Preform < Cask
-  version '1.6.5'
-  sha256 '465bd7f85a44d66d0e0bf160ed744f9d014e1acf11478e1c884a72414b7053ab'
+  version '1.7.5'
+  sha256 '1cba63d07ac8d872d76e7df7a3a3c727cfbcdd42e77260ffc47b636d315a5b83'
 
   url "https://s3.amazonaws.com/FormlabsReleases/Release/#{version.sub(%r{\.(\d+)$},'')}/PreForm_#{version.sub(%r{\.(\d+)$},'_\1')}.dmg"
   homepage 'http://formlabs.com/en/products/preform/'
