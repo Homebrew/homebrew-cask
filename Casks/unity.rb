@@ -1,6 +1,6 @@
 class Unity < Cask
-  version '4.5.4'
-  sha256 '6fb72bfacf78df072559dd9a024a9d47e49b5717c8f17d53f05e2fc74a721876'
+  version '4.5.5'
+  sha256 'e42d3b8e3bc3fbc7448bb06b5210c1c0687ba3f784eb947b4586b9f129c6b0d4'
 
   url "http://netstorage.unity3d.com/unity/unity-#{version}.dmg"
   homepage 'http://unity3d.com/unity/'
