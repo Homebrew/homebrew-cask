@@ -10,7 +10,6 @@ class Houdahspot < Cask
   app 'HoudahSpot.app'
 
   postflight do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.houdah.HoudahSpot', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+    suppress_move_to_applications
   end
 end

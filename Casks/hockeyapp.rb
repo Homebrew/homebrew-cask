@@ -11,7 +11,6 @@ class Hockeyapp < Cask
   binary 'HockeyApp.app/Contents/Resources/puck'
 
   postflight do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.hockeyapp.mac', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+    suppress_move_to_applications
   end
 end

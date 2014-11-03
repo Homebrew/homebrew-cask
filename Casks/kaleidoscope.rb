@@ -12,9 +12,9 @@ class Kaleidoscope < Cask
   binary 'Kaleidoscope.app/Contents/Resources/bin/ksdiff'
 
   postflight do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.blackpixel.kaleidoscope', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+    suppress_move_to_applications
   end
+
   caveats do
     files_in_usr_local
   end

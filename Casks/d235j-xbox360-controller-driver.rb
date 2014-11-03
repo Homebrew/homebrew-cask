@@ -1,8 +1,8 @@
 class D235jXbox360ControllerDriver < Cask
-  version '0.13.1'
-  sha256 'f324341a11ba5588b71fd246e5b6d79189abb886cf641d96650133cadbc293f9'
+  version '0.14'
+  sha256 '520d78f43006202956a985c073bac901e85151361fdecb9af37f94b61e3effeb'
 
-  url "https://github.com/d235j/360Controller/releases/download/v#{version}-unofficial/360ControllerInstall_#{version}_unofficial.dmg"
+  url 'https://github.com/d235j/360Controller/releases/download/v0.14_beta_unofficial/Install360Controller_0.14_yosemite_beta_unofficial.pkg'
   homepage 'https://github.com/d235j/360Controller'
   license :gpl
 

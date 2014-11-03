@@ -9,9 +9,9 @@ class Clamxav < Cask
   license :unknown
 
   app 'ClamXav.app'
+
   postflight do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'uk.co.markallan.clamxav', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+    suppress_move_to_applications
   end
 
   zap :delete => [

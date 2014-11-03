@@ -1,11 +1,11 @@
 class Libreoffice < Cask
-  version '4.3.2'
+  version '4.3.3'
 
   if Hardware::CPU.is_32_bit? or MacOS.version < :mountain_lion
-    sha256 '5a41ebe0c09f663e2ba420e1ddd50601d0ba1c828b08eb8617e72bbeebe826a5'
+    sha256 '3e3e625d4b4bf69dcbe8c0a0b93aa1b8d5c318c74b43f51d3b895d9d43d2a642'
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86/LibreOffice_#{version}_MacOS_x86.dmg"
   else
-    sha256 'e5246aa91a62fcb85596ecaa16ca608e34eca79caddf529750a8126f554f97cb'
+    sha256 '3da0e892a746166ba3ae2288fd8d0cff4e5da8c5d0aa035da0bbc075e63bff8f'
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
   end
   gpg "#{url}.asc",
