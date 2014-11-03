@@ -1,6 +1,6 @@
 module Cask::Staged
   def info_plist
-    "#{staged_path}/#{@cask.artifacts[:link].first.first}/Contents/Info.plist"
+    "#{staged_path}/#{@cask.artifacts[:app].first.first}/Contents/Info.plist"
   end
 
   def plist_exec(cmd)

@@ -1,6 +1,6 @@
 class VmwareFusion < Cask
-  version '7.0.0-2103067'
-  sha256 'f5b4bd80a2b8f6538ff24780998f73876acee1b65c1e38df0323734fa86d9e80'
+  version '7.0.1-2235595'
+  sha256 '212e25cefe3a30f0ab0ffe5975566bcc63422d370f6b647b83b4084524f36970'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   homepage 'http://www.vmware.com/products/fusion/'

@@ -7,7 +7,5 @@ class VlcRemote < Cask
   homepage 'http://hobbyistsoftware.com/vlc'
   license :unknown
 
-  caveats do
-    manual_installer 'VLC Setup.app'
-  end
+  installer :manual => 'VLC Setup.app'
 end

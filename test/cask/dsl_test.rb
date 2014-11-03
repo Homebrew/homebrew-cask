@@ -47,21 +47,21 @@ describe Cask::DSL do
 
   describe "app stanza" do
     it "allows you to specify app stanzas" do
-      CaskWithLinkables = Class.new(Cask)
-      CaskWithLinkables.class_eval do
+      CaskWithApps = Class.new(Cask)
+      CaskWithApps.class_eval do
         app 'Foo.app'
         app 'Bar.app'
       end
 
-      instance = CaskWithLinkables.new
-      Array(instance.artifacts[:link]).sort.must_equal [['Bar.app'], ['Foo.app']]
+      instance = CaskWithApps.new
+      Array(instance.artifacts[:app]).sort.must_equal [['Bar.app'], ['Foo.app']]
     end
 
-    it "allow app stanzas to be set to empty" do
-      CaskWithNoLinkables = Class.new(Cask)
+    it "allow app stanzas to be empty" do
+      CaskWithNoApps = Class.new(Cask)
 
-      instance = CaskWithNoLinkables.new
-      Array(instance.artifacts[:link]).must_equal %w[]
+      instance = CaskWithNoApps.new
+      Array(instance.artifacts[:app]).must_equal %w[]
     end
   end
 

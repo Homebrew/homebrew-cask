@@ -1,9 +1,9 @@
 class Rapidweaver < Cask
-  version :latest
-  sha256 :no_check
+  version '6'
+  sha256 'e7b72daffa9c7809b713e05a1b518873a71a73afdd6a97f300b8bb9ab35a9361'
 
-  url 'https://realmacsoftware.com/redirects/rapidweaver/direct'
-  appcast 'http://www.realmacsoftware.com/stats/rapidweaver5.php'
+  url "http://realmacsoftware.com/redirects/rapidweaver#{version}/direct"
+  appcast "http://www.realmacsoftware.com/stats/rapidweaver#{version}.php"
   homepage 'http://realmacsoftware.com/rapidweaver'
   license :unknown
 

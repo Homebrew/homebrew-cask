@@ -48,6 +48,15 @@ describe Cask::DSL::AfterInstall do
     @dsl.suppress_move_to_applications
   end
 
+  it "can suppress move to applications folder alert with a different key" do
+    @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
+
+    Cask::FakeSystemCommand.expects_command(
+      ['/usr/bin/defaults', 'write', 'com.example.BasicCask', 'suppressMoveToApplications', '-bool', 'true']
+    )
+    @dsl.suppress_move_to_applications :key => 'suppressMoveToApplications'
+  end
+
   it "can enable accessibility access" do
     MacOS.stubs(:version => OS::Mac::Version.new('10.9'))
 

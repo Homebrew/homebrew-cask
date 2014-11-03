@@ -1,10 +1,10 @@
 class Bbedit < Cask
-  version '10.5.12'
-  sha256 '1f63ec3953580d33d0407522e29c0ad28fb281f84edf191fd0d54170c48c88ec'
+  version '11.0'
+  sha256 '3c15fef50245e93073e73136bb7097faf1f03a061559eed84a17cb8678fdf033'
 
   url "http://pine.barebones.com/files/BBEdit_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/BBEdit.xml',
-          :sha256 => '4ce2f9c44758a42b4c9bad5be5311861a23492ec41974fdb05f6e0ba5db33e65'
+          :sha256 => '56c7ab1c28592ff27d42cfe28c188b79c6fa81ae9a9639dcc82b1a83174f451e'
   homepage 'http://www.barebones.com/products/bbedit/'
   license :commercial
 

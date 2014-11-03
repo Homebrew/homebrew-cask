@@ -6,7 +6,5 @@ class AdobeCreativeCloud < Cask
   homepage 'https://creative.adobe.com/products/creative-cloud'
   license :commercial
 
-  caveats do
-    manual_installer 'Creative Cloud Installer.app'
-  end
+  installer :manual => 'Creative Cloud Installer.app'
 end

@@ -19,8 +19,8 @@ class Cask::CLI::InternalDump < Cask::CLI::InternalUseBase
         cask = Cask.load(cask_name)
         count += 1
         cask.dumpcask
-      rescue StandardError
-        opoo "#{cask} was not found"
+      rescue StandardError => e
+        opoo "#{cask_name} was not found or would not load: #{e}"
       end
     end
     count == 0 ? nil : count == cask_names.length

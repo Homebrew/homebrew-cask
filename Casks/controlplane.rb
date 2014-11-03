@@ -1,6 +1,6 @@
 class Controlplane < Cask
-  version '1.5.3'
-  sha256 '3a0b807da7fa6f45ab507e44ff01209e4beae633b6e7708d4c61907de8b78fbd'
+  version '1.5.4'
+  sha256 'd35f24b8559a0554b501bc6ff6a0b5b8b4f3ab3c123db1464d5720df9359152b'
 
   url "http://www.controlplaneapp.com/download/#{version}"
   appcast 'http://www.controlplaneapp.com/appcast.xml',

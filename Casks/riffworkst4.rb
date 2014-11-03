@@ -7,6 +7,6 @@ class Riffworkst4 < Cask
   homepage 'http://www.sonomawireworks.com/T4/'
   license :unknown
 
-  pkg 'RiffWorksT4V2_6.pkg'
+  pkg "RiffWorksT4V#{version.gsub('.','_')}.pkg"
   uninstall :pkgutil => 'com.sonomawireworks.riffworkst4'
 end

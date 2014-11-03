@@ -8,4 +8,8 @@ class Todoist < Cask
   license :unknown
 
   app 'Todoist.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
 end

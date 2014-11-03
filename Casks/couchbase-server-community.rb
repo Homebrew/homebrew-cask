@@ -1,6 +1,6 @@
 class CouchbaseServerCommunity < Cask
-  version '3.0.0'
-  sha256 'cf8f77cc3d5f164a8d49578af512f050afb515c7bd03b271f99110d31ac14ecd'
+  version '3.0.1'
+  sha256 '6693176f6799ce43f71b9fa1f09af8ff6857309382e0d115a9a2253474e5a31a'
 
   url "http://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.zip"
   homepage 'http://www.couchbase.com/'

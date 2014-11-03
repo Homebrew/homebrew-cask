@@ -78,7 +78,7 @@ more information.
 ## Other Commands
 
 * `info` -- displays information about the given Cask
-* `list` -- with no args, lists installed Casks; given installed Casks, lists installed files
+* `list` -- with no args, lists installed Casks; given installed Casks, lists staged files
 * `fetch` -- downloads Cask resources to local cache (with `--force`, re-download even if already cached)
 * `doctor` -- checks for configuration issues
 * `cleanup` -- cleans up cached downloads (with `--outdated`, only cleans old downloads)
@@ -93,7 +93,6 @@ The following commands are for Cask authors:
 * `cat` -- dumps the given Cask to the standard output
 * `create` -- creates a Cask and opens it in an editor
 * `edit` -- edits the given Cask
-* `checklinks` -- checks for bad Cask links
 
 The following aliases and abbreviations are provided for convenience:
 

@@ -7,7 +7,8 @@ class Yojimbo < Cask
   license :unknown
 
   app 'Yojimbo.app'
+
   postflight do
-    system '/usr/bin/defaults', 'write', 'com.barebones.yojimbo4', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+    suppress_move_to_applications
   end
 end

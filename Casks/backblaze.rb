@@ -6,7 +6,5 @@ class Backblaze < Cask
   homepage 'https://www.backblaze.com/'
   license :commercial
 
-  caveats do
-    manual_installer 'Backblaze Installer.app'
-  end
+  installer :manual => 'Backblaze Installer.app'
 end

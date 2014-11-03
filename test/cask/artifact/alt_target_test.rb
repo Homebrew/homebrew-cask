@@ -8,7 +8,7 @@ describe Cask::Artifact::App do
   }
 
   describe 'install to alternate target' do
-    it "links the noted applications to the proper directory" do
+    it "activates the given apps using the proper target directory" do
       cask = local_alt_caffeine
 
       shutup do
@@ -18,7 +18,7 @@ describe Cask::Artifact::App do
       TestHelper.valid_alias?(Cask.appdir/'AnotherName.app').must_equal true
     end
 
-    it "creates metadata containing the altername target name" do
+    it "creates metadata containing the alternate target name" do
       cask = local_alt_caffeine
 
       shutup do
@@ -64,7 +64,7 @@ describe Cask::Artifact::App do
       end
     end
 
-    it "only uses linkables when they are specified" do
+    it "only uses apps when they are specified" do
       cask = local_alt_caffeine
 
       app_path = cask.staged_path.join('Caffeine.app')

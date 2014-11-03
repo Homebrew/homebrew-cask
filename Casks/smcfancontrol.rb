@@ -1,9 +1,11 @@
 class Smcfancontrol < Cask
-  version '2.4'
-  sha256 'f72713be5c3d8bf4ecbf7999af8dc66d23d4f5e22c49b648a485351172cb1ac3'
+  version '2.5.1'
+  sha256 'ed6dcee1cff9cff3def1b9d98c7bb868b12b9e26205f81915a95187e0d4ed826'
 
-  url 'http://www.eidac.de/smcfancontrol/smcfancontrol_2_4.zip'
-  homepage 'http://www.eidac.de/?p=243'
+  url "http://www.eidac.de/smcfancontrol/smcfancontrol_#{version.gsub('.', '_')}.zip"
+  appcast 'http://www.eidac.de/smcfancontrol/smcfancontrol.xml',
+          :sha256 => 'ae81e4093d7aeeeb44ac589d99552d8740483d5f5a2efad57f45ab6ce94496fe'
+  homepage 'http://www.eidac.de/?cat=40'
   license :gpl
 
   app 'smcFanControl.app'

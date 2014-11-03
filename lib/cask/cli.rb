@@ -7,7 +7,6 @@ require 'cask/cli/base'
 require 'cask/cli/alfred'
 require 'cask/cli/audit'
 require 'cask/cli/cat'
-require 'cask/cli/checklinks'
 require 'cask/cli/cleanup'
 require 'cask/cli/create'
 require 'cask/cli/doctor'
@@ -23,6 +22,7 @@ require 'cask/cli/update'
 require 'cask/cli/zap'
 
 require 'cask/cli/internal_use_base'
+require 'cask/cli/internal_checkurl'
 require 'cask/cli/internal_dump'
 require 'cask/cli/internal_help'
 require 'cask/cli/internal_stanza'
@@ -88,7 +88,7 @@ class Cask::CLI
       sym = Pathname.new(command.to_s).basename('.rb').to_s.capitalize
       klass = begin
                 Cask::CLI.const_get(sym)
-              rescue
+              rescue NameError => e
                 nil
               end
       if klass.respond_to?(:run)

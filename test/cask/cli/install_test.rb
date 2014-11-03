@@ -1,7 +1,7 @@
 require 'test_helper'
 
 describe Cask::CLI::Install do
-  it "allows install and link of multiple Casks at once" do
+  it "allows install and activation of multiple Casks at once" do
     shutup do
       Cask::CLI::Install.run('local-transmission', 'local-caffeine')
     end
@@ -22,6 +22,16 @@ describe Cask::CLI::Install do
     Cask.load('local-transmission').must_be :installed?
   end
 
+  it "prints a warning message on double install" do
+    shutup do
+      Cask::CLI::Install.run('local-transmission')
+    end
+
+    TestHelper.must_output(self, lambda {
+      Cask::CLI::Install.run('local-transmission', '')
+    }, %r{Warning: A Cask for local-transmission is already installed. Add the "--force" option to force re-install.})
+  end
+
   it "allows double install with --force" do
     shutup do
       Cask::CLI::Install.run('local-transmission')
@@ -29,7 +39,7 @@ describe Cask::CLI::Install do
 
     TestHelper.must_output(self, lambda {
       Cask::CLI::Install.run('local-transmission', '--force')
-    }, %r{==> Success! local-transmission installed to '#{Cask.caskroom}/local-transmission/2.61' \(487 files, 11M\)})
+    }, %r{==> Success! local-transmission staged at '#{Cask.caskroom}/local-transmission/2.61' \(487 files, 11M\)})
   end
 
   it "properly handles Casks that are not present" do

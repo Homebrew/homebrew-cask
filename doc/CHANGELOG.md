@@ -1,5 +1,44 @@
 # CHANGELOG
 
+## 0.46.0
+
+* __Casks__
+  - 45 Casks added (214 updated) by 87 contributors since 0.45.0
+  - 2006 total Casks
+* __Features__
+ - [#6783][] recast method `destination_path` as `staged_path`
+ - [#6823][] Downgrade CaskAlreadyInstalledError to a warning <3 [@ffleming][]
+* __Breaking Changes__
+  - none
+* __Fixes__
+ - [#6947][] Handle permissions corner cases on `uninstall`
+ - [#6965][] Better handling for invalid `url` stanzas
+ - [#6967][] Improve error message in `brew cask _dump`
+ - [#6966][] Change `checklinks` to internal command `_checklinks`
+ - [#6864][] Hide error outputs from `plutil`
+* __Internal Changes__
+ - [#6840][] use "staged" instead of "installed" for Caskroom
+ - [#6948][] Be more explicit about which errors are rescued
+* __Documentation__
+  - 9 doc commits since 0.45.0 <3 [@micahbf][]
+* __Contributors__
+  - 41 new contributors since 0.45.0
+  - 1137 total contributors
+* __Release Date__
+  - 2015-10-25 16:13:00 UTC
+
+[#6783]: https://github.com/caskroom/homebrew-cask/issues/6783
+[#6823]: https://github.com/caskroom/homebrew-cask/issues/6823
+[#6840]: https://github.com/caskroom/homebrew-cask/issues/6840
+[#6864]: https://github.com/caskroom/homebrew-cask/issues/6864
+[#6947]: https://github.com/caskroom/homebrew-cask/issues/6947
+[#6948]: https://github.com/caskroom/homebrew-cask/issues/6948
+[#6965]: https://github.com/caskroom/homebrew-cask/issues/6965
+[#6966]: https://github.com/caskroom/homebrew-cask/issues/6966
+[#6967]: https://github.com/caskroom/homebrew-cask/issues/6967
+[@ffleming]: https://github.com/ffleming
+[@micahbf]: https://github.com/micahbf
+
 ## 0.45.0
 
 * __Casks__
