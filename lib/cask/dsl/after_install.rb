@@ -3,8 +3,9 @@ require 'cask/staged'
 class Cask::DSL::AfterInstall < Cask::DSL::Base
   include Cask::Staged
 
-  def suppress_move_to_applications
-    system_command("/usr/bin/defaults", :args => ["write", bundle_identifier, "moveToApplicationsFolderAlertSuppress", "-bool", "true"])
+  def suppress_move_to_applications(options = {})
+    key = options[:key] || "moveToApplicationsFolderAlertSuppress"
+    system_command("/usr/bin/defaults", :args => ["write", bundle_identifier, key, "-bool", "true"])
   end
 
   def enable_accessibility_access
