@@ -1,6 +1,6 @@
 class Brackets < Cask
   version '1.0'
-  sha256 '3619f01dddc55f47be87306909b7264cbdad9fb43be8c88661bec0a087b0f8a6'
+  sha256 '526ec76ca1f36539a7fa7ae499095ab4b3e910f2ca202872210227419d2d0341'
 
   url "https://github.com/adobe/brackets/releases/download/release-#{version}/Brackets.Release.#{version}.dmg"
   homepage 'http://brackets.io'
