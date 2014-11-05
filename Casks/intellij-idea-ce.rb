@@ -1,20 +1,20 @@
 class IntellijIdeaCe < Cask
-  version '13.1.5'
-  sha256 '1db4938b41de9e340e196bd76f0482f9a329d0a660a9c583fb502c3208731c81'
+  version '14'
+  sha256 'd742778574f244ef1f70277a65bbe73b9baf38ead3b6c15d555d5418357f07e1'
 
   url "http://download.jetbrains.com/idea/ideaIC-#{version}.dmg"
-  homepage 'https://www.jetbrains.com/idea/index.html'
+  homepage 'https://www.jetbrains.com/idea/'
   license :oss
 
-  app 'IntelliJ IDEA 13 CE.app'
+  app 'IntelliJ IDEA 14 CE.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/IntelliJ IDEA 13 CE.app/Contents/Info.plist"
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/IntelliJ IDEA 14 CE.app/Contents/Info.plist"
   end
 
   zap :delete => [
-                  '~/Library/Application Support/IntelliJIdea13',
-                  '~/Library/Preferences/IntelliJIdea13',
+                  '~/Library/Application Support/IntelliJIdea14',
+                  '~/Library/Preferences/IntelliJIdea14',
                  ]
 
   caveats <<-EOS.undent
