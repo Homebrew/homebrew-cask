@@ -1,6 +1,6 @@
 class Hashcat < Cask
-  version '0.47'
-  sha256 '239acb25b88d529314f2f98af0d6a66772e886c9efbb4ed2b94b7587c9a68455'
+  version '0.48'
+  sha256 '39fee1757b33b3e7232ce3797f0be024fa784dbbd0939b475b5b1ea7462cec5e'
 
   url "https://hashcat.net/files/hashcat-#{version}.7z"
   homepage 'https://hashcat.net/hashcat/'
