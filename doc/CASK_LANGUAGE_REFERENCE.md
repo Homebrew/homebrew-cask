@@ -279,7 +279,7 @@ of key/value pairs appended to `url`:
 
 Example of using `:cookies`: [java.rb](../Casks/java.rb)
 
-Example of using `:referer`: [freefilesync.rb](../Casks/freefilesync.rb)
+Example of using `:referer`: [rrootage.rb](../Casks/rrootage.rb)
 
 ### Difficulty Finding a URL
 

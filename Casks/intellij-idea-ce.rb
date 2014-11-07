@@ -13,8 +13,10 @@ class IntellijIdeaCe < Cask
   end
 
   zap :delete => [
-                  '~/Library/Application Support/IntelliJIdea14',
-                  '~/Library/Preferences/IntelliJIdea14',
+                  '~/Library/Application Support/IdeaIC14',
+                  '~/Library/Preferences/IdeaIC14',
+                  '~/Library/Caches/IdeaIC14',
+                  '~/Library/Logs/IdeaIC14',
                  ]
 
   caveats <<-EOS.undent

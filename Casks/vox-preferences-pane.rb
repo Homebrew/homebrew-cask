@@ -1,4 +1,4 @@
-class VoxPreferencePane < Cask
+class VoxPreferencesPane < Cask
   version :latest
   sha256 :no_check
 
