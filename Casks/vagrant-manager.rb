@@ -1,6 +1,6 @@
 class VagrantManager < Cask
-  version '2.1.0'
-  sha256 '641fc90960eb919cfaf7a70f90a6f9192cb56621454bbf5330ac312dace982cf'
+  version '2.1.1'
+  sha256 'bd4a44c82c4d2ffa2d9de3d9f924eb5eeb76ac133648de939668501a2deb021b'
 
   url "https://github.com/lanayotech/vagrant-manager/releases/download/#{version}/vagrant-manager-#{version}.dmg"
   appcast 'http://api.lanayo.com/appcast/vagrant_manager.xml',
