@@ -1,6 +1,6 @@
 class PanicUnison < Cask
-  version '2.1.10'
-  sha256 'd7b15d7726dc892caa72a7476219ed3d06e86df704757670bb3236a82bdde5dc'
+  version '2.2'
+  sha256 'b9d08af6ea52fbcf8fe0eebaec9b7b68c7a280d4455de030d99ca9731cca66d9'
 
   url "http://download.panic.com/Unison/Unison%20#{version}.zip"
   appcast 'http://www.panic.com/updates/update.php'
