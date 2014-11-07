@@ -21,7 +21,10 @@ class Totalspaces < Cask
 
     app 'TotalSpaces2.app'
 
-    uninstall :pkgutil => 'com.binaryage.TotalSpaces2',
+    uninstall :script  => {
+                           :executable => 'TotalSpaces2 Uninstaller.app/Contents/MacOS/TotalSpaces2 Uninstaller',
+                           :args       => %w[--headless],
+                          },
               :quit    => 'com.binaryage.TotalSpaces2',
               :signal  => [
                            ['INT', 'com.binaryage.totalspacescrashwatcher'],
