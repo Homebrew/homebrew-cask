@@ -4,7 +4,7 @@ class Macmoney < Cask
 
   url 'http://www.devon.riceball.net/downloads/macmoney37.zip'
   homepage 'http://www.devon.riceball.net/display.php?file=m01'
-  license :unknown
+  license :commercial
 
   container :nested => "MacMoney_#{version}.dmg"
   app 'MacMoney.app'
