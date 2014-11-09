@@ -1,10 +1,10 @@
 class Manico < Cask
-  version '1.4.1'
-  sha256 'e29c4b0ccba830f0296fbec27122b2016c6dae0f76d5635d5d080d2031fe2d88'
+  version '1.4.2'
+  sha256 '5244586f0b7568e654175940a2052a4b746a1122ecea3eba08e4470c5b4f3095'
 
   url "http://manico.im/static/Manico_#{version}.dmg"
   appcast 'http://manico.im/static/manico-appcast.xml',
-          :sha256 => 'c42b1494a355c603ad4eadbc229af7b12814989f6e760e2d67dbdebcbb121178'
+          :sha256 => 'cbdf604b5078b58c559ed17759f2db444a5ec417bc8e663e024df735bc9d96fb'
   homepage 'http://manico.im/'
   license :unknown
 
