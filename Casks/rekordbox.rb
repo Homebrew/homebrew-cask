@@ -1,6 +1,6 @@
 class Rekordbox < Cask
-  version '3.0.1'
-  sha256 '6a0b04fcf2a0fdb4893a3a6efc07e6988e385dce187f1c08803a2b8699f1d95e'
+  version '3.0.3'
+  sha256 '65e165e0c385142be825806c85e330d4636bab17e1a8a5c1f9bd5784d9ef721b'
 
   url "http://rekordbox.com/_app/files/Install_rekordbox_#{version.gsub('.','_')}.pkg.zip"
   homepage 'http://rekordbox.com/en/'
