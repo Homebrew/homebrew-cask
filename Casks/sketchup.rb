@@ -7,10 +7,10 @@ class Sketchup < Cask
   homepage 'http://www.sketchup.com/intl/en/'
   license :unknown
 
-  suite 'SketchUp 2014'
-
+  suite 'SketchUp 2015'
+  
   zap :delete => [
-                  '~/Library/Application Support/Google SketchUp 8',
-                  '~/Library/Caches/com.google.sketchupfree8',
+                  '~/Library/Application Support/SketchUp 2015',
+                  '~/Library/Caches/com.sketchup.SketchUp.2015',
                  ]
 end
