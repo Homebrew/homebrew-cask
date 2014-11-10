@@ -1,10 +1,10 @@
 class Djv < Cask
-  version '0.9.0'
-  sha256 '201a3220d6ddce30af49add669fc5e663edf4fdd458ff48b12ba24c2ad7a2a46'
+  version '1.0.4'
+  sha256 '9607814fe120eecd875ed73eb05f97df2b0869b5412b23bbc0f7c4ea6b86d200'
 
-  url "http://downloads.sourceforge.net/project/djv/djv-stable/#{version}/djv-#{version}_osx-x64.dmg"
+  url "http://downloads.sourceforge.net/project/djv/djv-stable/#{version}/djv-#{version}-OSX-64.dmg"
   homepage 'http://djv.sourceforge.net'
   license :oss
 
-  app "djv-#{version}.app"
+  app "djv-#{version}-OSX-64.app"
 end
