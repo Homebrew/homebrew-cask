@@ -7,7 +7,7 @@ describe Cask::Artifact::App do
     end
   }
 
-  describe 'install to alternate target' do
+  describe 'activate to alternate target' do
     it "activates the given apps using the proper target directory" do
       cask = local_alt_caffeine
 

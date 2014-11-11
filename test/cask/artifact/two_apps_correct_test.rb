@@ -7,7 +7,7 @@ describe Cask::Artifact::App do
     end
   }
 
-  describe 'install multiple apps' do
+  describe 'multiple apps' do
     it "activates both apps using the proper target directory" do
       cask = local_two_apps_caffeine
 

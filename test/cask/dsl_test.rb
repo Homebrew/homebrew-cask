@@ -96,7 +96,7 @@ describe Cask::DSL do
       end
 
       instance = CaskWithPkgs.new
-      Array(instance.artifacts[:install]).sort.must_equal [['Bar.pkg'], ['Foo.pkg']]
+      Array(instance.artifacts[:pkg]).sort.must_equal [['Bar.pkg'], ['Foo.pkg']]
     end
   end
 
