@@ -4,7 +4,7 @@ class Caffeine < Cask
 
   url 'http://download.lightheadsw.com/download.php?software=caffeine'
   homepage 'http://lightheadsw.com/caffeine/'
-  license :gratis
+  license :closed
 
   app 'Caffeine.app'
   zap :delete => '~/Library/Preferences/com.lightheadsw.Caffeine.plist'
