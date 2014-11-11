@@ -1,6 +1,6 @@
 class Genymotion < Cask
   version '2.3.1'
-  sha256 'a9af8f9ec2793daa1c53edc13af211367762960e3a3cffc444d7516d1df3c984'
+  sha256 'aa41be79a773ccf3a6b68971088c38ef34ff864128c57b09a8362b878f4534e0'
 
   url "http://files2.genymotion.com/genymotion/genymotion-#{version}/genymotion-#{version}.dmg"
   homepage 'http://www.genymotion.com/'
