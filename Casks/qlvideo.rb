@@ -1,6 +1,6 @@
 class Qlvideo < Cask
-  version '1.4.0'
-  sha256 '9950a037d26d5cb83eac1f31097dd996cfdfe63e6a42e59ccbf945f6d7b97565'
+  version '1.5.0'
+  sha256 '48edc2259fd554f536aa4a99ffac6389f7b17c5ce8a0c8e0075d934a074ca430'
 
   url "https://github.com/Marginal/QLVideo/releases/download/rel-#{version.gsub('.', '')}/QLVideo_#{version.gsub('.', '')}.pkg"
   homepage 'https://github.com/Marginal/QLVideo'
