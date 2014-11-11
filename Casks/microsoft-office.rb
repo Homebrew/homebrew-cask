@@ -7,7 +7,10 @@ class MicrosoftOffice < Cask
   license :commercial
 
   pkg 'Office Installer.pkg'
-  uninstall :pkgutil => 'com.microsoft.office.*'
-  uninstall :pkgutil => 'com.microsoft.QuitApps'
-  uninstall :launchctl => 'com.microsoft.office.licensing.helper'
+  uninstall :pkgutil => 'com.microsoft.office.*',
+            :launchctl => 'com.microsoft.office.licensing.helper'
+  zap :pkgutil => [
+                  'com.microsoft.mau.all.autoupdate.*',
+                  'com.microsoft.merp.all.errorreporting.*'
+                  ]
 end
