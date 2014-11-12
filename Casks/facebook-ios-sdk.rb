@@ -1,6 +1,6 @@
 class FacebookIosSdk < Cask
-  version '3.17'
-  sha256 '6c5ffc79d1bdfd7cc11558392c0ae546e8b72e6c1b9bb0349c55e6f027944be0'
+  version '3.20'
+  sha256 'a5ee15d4ce3e6ed0139fab3f5cfc26fed13496249a60e97765fd7c0adc634501'
 
   url "https://developers.facebook.com/resources/facebook-ios-sdk-#{version}.pkg"
   homepage 'https://developers.facebook.com/docs/ios'
