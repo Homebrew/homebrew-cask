@@ -1,6 +1,6 @@
 class Rubymine < Cask
-  version '6.3.3'
-  sha256 'c79216de02f2564ea60592420342ab9fb5014da7e7c96f92e2856dc49f2090dd'
+  version '7.0'
+  sha256 '60ceca89231a9756e682d754aaba409c9120266f20478e51f7b6004f82919478'
 
   url "http://download-cf.jetbrains.com/ruby/RubyMine-#{version}.dmg"
   homepage 'http://www.jetbrains.com/ruby/'
@@ -18,5 +18,7 @@ class Rubymine < Cask
                   '~/Library/Preferences/RubyMine50',
                   '~/Library/Application Support/RubyMine60',
                   '~/Library/Preferences/RubyMine60',
+                  '~/Library/Application Support/RubyMine70',
+                  '~/Library/Preferences/RubyMine70'
                  ]
 end
