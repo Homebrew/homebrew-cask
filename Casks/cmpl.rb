@@ -7,16 +7,13 @@ class Cmpl < Cask
   license :gpl
 
   artifact 'Cmpl', :target => "/Applications/Cmpl"
-
+  
   binary 'Cmpl/bin/cmpl'
   binary 'Cmpl/coliop'
   binary 'Cmpl/pyCmpl/scripts/Unix/cmplServer'
   binary 'Cmpl/pyCmpl/scripts/Unix/pyCmpl'
 
   postflight do
-    system "rm #{destination_path}/Cmpl/install"
-    system "rm #{destination_path}/Cmpl/deinstall"
+    system '/bin/rm', '-f', '--', "#{staged_path}/Cmpl/install", "#{staged_path}/Cmpl/deinstall"
   end
-
-  caveats { "pyCMPL and jCMPL are installed in #{destination_path}." }
 end
