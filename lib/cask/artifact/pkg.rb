@@ -1,6 +1,6 @@
 class Cask::Artifact::Pkg < Cask::Artifact::Base
   def self.artifact_dsl_key
-    :install
+    :pkg
   end
 
   def load_pkg_description(pkg_description)
@@ -27,7 +27,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
   end
 
   def install_phase
-    @cask.artifacts[:install].each { |pkg_description| run_installer(pkg_description) }
+    @cask.artifacts[:pkg].each { |pkg_description| run_installer(pkg_description) }
   end
 
   def uninstall_phase

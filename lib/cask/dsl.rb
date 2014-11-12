@@ -213,7 +213,6 @@ module Cask::DSL
     # ultimately either be removed or upgraded with its own unique
     # semantics.
     STANZA_ALIASES = {
-                       :pkg                   => :install,          # todo remove
                        :preflight             => :before_install,   # todo remove
                        :postflight            => :after_install,    # todo remove
                        :uninstall_preflight   => :before_uninstall, # todo remove
@@ -235,7 +234,6 @@ module Cask::DSL
                                      :input_method,
                                      :internet_plugin,
                                      :screen_saver,
-                                     :install,                     # todo remove
                                      :pkg,
                                     ]
     end
