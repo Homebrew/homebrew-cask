@@ -4,7 +4,7 @@ class Coteditor < Cask
 
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   appcast 'http://coteditor.com/appcast.xml',
-          :sha256 => 'd528282869a8a6c5c3b2cf5da6ad33eb6ad2d776f9a2aceaebbd11e62c2dd008'
+          :sha256 => '86c24c497701e51df3e0b35e72be5f1cc1d2e3b307a8deb0a188c3443ccd553f'
   homepage 'http://coteditor.com/'
   license :gpl
 
