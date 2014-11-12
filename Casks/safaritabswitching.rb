@@ -1,11 +1,11 @@
 class Safaritabswitching < Cask
-  version '1.2.6'
-  sha256 'd2823ec2327c5b5e2602876749f6c6ef352cfe7b5498158cc46c5610f6bf9b69'
+  version '1.2.7'
+  sha256 'cda2d24dd7f273d5e26bf3ee32c1e711ebf28c0c44c619fa9f4e7f8efea488ca'
 
-  url "https://github.com/rs/SafariTabSwitching/releases/download/#{version}/Safari.Tab.Switching-#{version}.pkg"
+  url "https://github.com/rs/SafariTabSwitching/releases/download/#{version}/Safari.Tab.Switching-#{version}.zip"
   homepage 'https://github.com/rs/SafariTabSwitching'
   license :oss
 
-  pkg "Safari.Tab.Switching-#{version}.pkg"
+  pkg "Safari Tab Switching-#{version}.pkg"
   uninstall :pkgutil => 'net.rhapsodyk.SafariTabSwitching.pkg'
 end

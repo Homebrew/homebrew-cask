@@ -1,10 +1,10 @@
 class Airserver < Cask
-  version '5.0.7'
-  sha256 '56ac7cdba5dddc349776feb1390e84e4ba1f61fa94c2f4f8fea34193b7327228'
+  version '5.1.0'
+  sha256 'b3b4749bef4978718b9bd915ac1e3a529813eafc8ea0f1ec99f06dffea7016fa'
 
   url "http://dl.airserver.com/mac/AirServer-#{version}.dmg"
   homepage 'http://www.airserver.com'
-  license :unknown
+  license :commercial
 
   app 'AirServer.app'
 end

@@ -10,7 +10,6 @@ class Todoist < Cask
   app 'Todoist.app'
 
   postflight do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.todoist.mac.Todoist', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+    suppress_move_to_applications
   end
 end

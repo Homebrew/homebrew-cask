@@ -13,4 +13,5 @@ class Praat < Cask
   license :gpl
 
   app 'Praat.app'
+  binary 'Praat.app/Contents/MacOS/Praat', :target => 'praat'
 end

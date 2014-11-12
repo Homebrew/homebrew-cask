@@ -207,8 +207,8 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
       Array(directives[:launchctl]).each do |service|
         ohai "Removing launchctl service #{service}"
         [false, true].each do |with_sudo|
-          xml_status = @command.run('/bin/launchctl', :args => ['list', '-x', service], :sudo => with_sudo).stdout
-          if %r{^<\?xml}.match(xml_status)
+          plist_status = @command.run('/bin/launchctl', :args => ['list', service], :sudo => with_sudo, :print_stderr => false).stdout
+          if %r{^\{}.match(plist_status)
             @command.run('/bin/launchctl',  :args => ['unload', '-w', '--', service], :sudo => with_sudo)
             sleep 1
             @command.run!('/bin/launchctl', :args => ['remove', service], :sudo => with_sudo)

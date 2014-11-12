@@ -8,7 +8,7 @@ class Colorport < Cask
 
   pkg 'ColorPort20Distribution.mpkg'
   uninstall :pkgutil => 'com.xrite.colorport'
-  
+
   caveats do
     reboot
   end
