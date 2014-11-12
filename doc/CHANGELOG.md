@@ -1,5 +1,34 @@
 # CHANGELOG
 
+## 0.47.0
+
+* __Casks__
+  - 56 Casks added (191 updated) by 122 contributors since 0.46.0
+  - 2062 total Casks
+* __Features__
+ - [#7123][] Add key option to `suppress_move_to_applications`
+* __Breaking Changes__
+ - [#7268][] DSL: remove support `install` stanza
+ - [#7065][] remove support for `link` artifact
+* __Fixes__
+ - [#7165][] Remove unsupported -x option in `launchctl` command
+* __Internal Changes__
+ - [#7133][] devscript: check Ruby version before execution
+* __Documentation__
+  - 5 doc commits since 0.46.0 <3 [@hanxue][], [@ddinh][]
+* __Contributors__
+  - 122 new contributors since 0.46.0
+  - 1204 total contributors
+* __Release Date__
+  - 2014-11-12 15:33:00 UTC
+
+[#7065]: https://github.com/caskroom/homebrew-cask/issues/7065
+[#7123]: https://github.com/caskroom/homebrew-cask/issues/7123
+[#7133]: https://github.com/caskroom/homebrew-cask/issues/7133
+[#7268]: https://github.com/caskroom/homebrew-cask/issues/7268
+[@hanxue]: https://github.com/hanxue
+[@ddinh]: https://github.com/ddinh
+
 ## 0.46.0
 
 * __Casks__
