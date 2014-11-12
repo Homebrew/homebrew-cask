@@ -26,6 +26,7 @@
 [#7123]: https://github.com/caskroom/homebrew-cask/issues/7123
 [#7133]: https://github.com/caskroom/homebrew-cask/issues/7133
 [#7268]: https://github.com/caskroom/homebrew-cask/issues/7268
+[#7165]: https://github.com/caskroom/homebrew-cask/issues/7165
 [@hanxue]: https://github.com/hanxue
 [@ddinh]: https://github.com/ddinh
 
