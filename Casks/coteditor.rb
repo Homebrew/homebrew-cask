@@ -1,11 +1,11 @@
 class Coteditor < Cask
-  version '1.5.4'
-  sha256 '444133083698c7c94c2b029644f39a0e36982ae34c24745789fa890626188347'
+  version '2.0.0'
+  sha256 '70377acae52d5599d5adf7e0a56d0b3c7d5b82697a7fe3469da41b3fea2ae85c'
 
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
-  appcast 'http://coteditor.github.io/appcast.xml',
-          :sha256 => '2a2df0599832911cc1596f23666303c6d7621b5e03cdbb3ecd602084b538ae47'
-  homepage 'http://coteditor.github.io/'
+  appcast 'http://coteditor.com/appcast.xml',
+          :sha256 => 'd528282869a8a6c5c3b2cf5da6ad33eb6ad2d776f9a2aceaebbd11e62c2dd008'
+  homepage 'http://coteditor.com/'
   license :gpl
 
   app 'CotEditor.app'
