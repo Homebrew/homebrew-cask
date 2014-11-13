@@ -1,4 +1,4 @@
-class Basecamp < Cask
+cask :v1 => 'basecamp' do
   version '4.3.4'
   sha256 'bccb1e3277ccf784a55ae56e2d21c46f6a15997a25820dfe7c79a5cab6d89f75'
 
