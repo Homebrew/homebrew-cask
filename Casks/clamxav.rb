@@ -1,4 +1,4 @@
-class Clamxav < Cask
+cask :v1 => 'clamxav' do
   version '2.6.4'
   sha256 'bbde8181307566bd592930f7318a7c43e253788bf44bab9bae1140b1e50e694f'
 
