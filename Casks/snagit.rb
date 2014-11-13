@@ -1,4 +1,4 @@
-class Snagit < Cask
+cask :v1 => 'snagit' do
   version :latest
   sha256 :no_check
 
