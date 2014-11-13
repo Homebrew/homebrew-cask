@@ -1,4 +1,4 @@
-class Porthole < Cask
+cask :v1 => 'porthole' do
   version :latest
   sha256 :no_check
 
