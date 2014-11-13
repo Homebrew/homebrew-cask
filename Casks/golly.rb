@@ -1,4 +1,4 @@
-class Golly < Cask
+cask :v1 => 'golly' do
   version '2.6'
 
   if MacOS.version < :mavericks
