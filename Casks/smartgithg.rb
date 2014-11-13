@@ -1,4 +1,4 @@
-class Smartgithg < Cask
+cask :v1 => 'smartgithg' do
   version '6.0.8'
   sha256 '6540fe06e4a23438afd5d397af48bb95b7bf8befbc0d6809b7fe16d418b0e03b'
 
