@@ -1,4 +1,4 @@
-class Screenflick < Cask
+cask :v1 => 'screenflick' do
   version :latest
   sha256 :no_check
 
