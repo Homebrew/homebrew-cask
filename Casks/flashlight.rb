@@ -1,4 +1,4 @@
-class Flashlight < Cask
+cask :v1 => 'flashlight' do
   version 'v0.42-alpha'
   sha256 '9a2f787ca691c49379510dcb89b699e2de33710d73bb9bf79459a12027d75a74'
 
