@@ -1,4 +1,4 @@
-class GitAnnex < Cask
+cask :v1 => 'git-annex' do
   version :latest
   sha256 :no_check
 
