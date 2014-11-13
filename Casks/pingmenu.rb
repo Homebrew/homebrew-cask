@@ -1,4 +1,4 @@
-class Pingmenu < Cask
+cask :v1 => 'pingmenu' do
   version :latest
   sha256 :no_check
 
