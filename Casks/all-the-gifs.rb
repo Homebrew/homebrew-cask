@@ -1,4 +1,4 @@
-class AllTheGifs < Cask
+cask :v1 => 'all-the-gifs' do
   version :latest
   sha256 :no_check
 
