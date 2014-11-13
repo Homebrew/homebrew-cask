@@ -1,4 +1,4 @@
-class Sharetool < Cask
+cask :v1 => 'sharetool' do
   version '2.4.1'
   sha256 'd6c19e082f9d96b1831692d308a4d5512608e6ca8d58c52d7e95bb2da0832a8c'
 
