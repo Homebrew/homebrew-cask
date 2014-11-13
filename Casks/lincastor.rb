@@ -1,4 +1,4 @@
-class Lincastor < Cask
+cask :v1 => 'lincastor' do
   version :latest
   sha256 :no_check
 
