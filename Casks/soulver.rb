@@ -1,4 +1,4 @@
-class Soulver < Cask
+cask :v1 => 'soulver' do
   version :latest
   sha256 :no_check
 
