@@ -1,4 +1,4 @@
-class LeapMotion < Cask
+cask :v1 => 'leap-motion' do
   version '2.1.5'
   sha256 '472d1e535bf21ffd847ff5a872ac23bbb042c955a5e1a9351f52dc7fbb2b85b0'
 
