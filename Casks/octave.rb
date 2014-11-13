@@ -1,4 +1,4 @@
-class Octave < Cask
+cask :v1 => 'octave' do
   version '3.8.0-6'
   sha256 'b51c20b109e15928350624011885e658b45009da0acb8872a1347688f8f62963'
 
