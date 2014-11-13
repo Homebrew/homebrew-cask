@@ -9,6 +9,6 @@ class Voicemac < Cask
 
   app 'VoiceMac/VoiceMac.app'
   postflight do
-    system '/bin/chmod', '--', 'a+r', "#{destination_path}/VoiceMac/VoiceMac.app/Contents/Info.plist"
+    system '/bin/chmod', '--', 'a+r', "#{staged_path}/VoiceMac/VoiceMac.app/Contents/Info.plist"
   end
 end
