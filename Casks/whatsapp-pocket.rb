@@ -1,4 +1,4 @@
-class WhatsappPocket < Cask
+cask :v1 => 'whatsapp-pocket' do
   version :latest
   sha256 :no_check
 
