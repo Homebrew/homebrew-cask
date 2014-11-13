@@ -1,4 +1,4 @@
-class Imodsign < Cask
+cask :v1 => 'imodsign' do
   version :latest
   sha256 :no_check
 
