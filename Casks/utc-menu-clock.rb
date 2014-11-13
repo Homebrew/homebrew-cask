@@ -1,4 +1,4 @@
-class UtcMenuClock < Cask
+cask :v1 => 'utc-menu-clock' do
   version '1.2'
   sha256 '8a6d26228495aa802b3f9f80e43ee58bff92097e7de41de86dae994a9350d9b2'
 
