@@ -1,4 +1,4 @@
-class MindnodePro < Cask
+cask :v1 => 'mindnode-pro' do
   version :latest
   sha256 :no_check
 
