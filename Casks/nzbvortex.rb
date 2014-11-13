@@ -1,4 +1,4 @@
-class Nzbvortex < Cask
+cask :v1 => 'nzbvortex' do
   version :latest
   sha256 :no_check
 
