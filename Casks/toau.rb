@@ -1,4 +1,4 @@
-class Toau < Cask
+cask :v1 => 'toau' do
   version :latest
   sha256 :no_check
 
