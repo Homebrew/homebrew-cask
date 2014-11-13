@@ -1,4 +1,4 @@
-class Synergy < Cask
+cask :v1 => 'synergy' do
   version '1.5.1-r2398'
   sha256 'd787031705b0123d36f07e7639fd8882d1969bc8f7ddad25a3326c873385dfe2'
 
