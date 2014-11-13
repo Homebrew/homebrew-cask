@@ -1,6 +1,6 @@
 class Xld < Cask
-  version '20140504'
-  sha256 '48183d866d9b62f5a71d885d6391040b76a736081ce52c7247e0ba6208e82918'
+  version '20141109'
+  sha256 '117f99b27d9396e468799129817e64e2fb04a87bb7bf9e11fa33ddac95cb3615'
 
   url "https://downloads.sourceforge.net/project/xld/xld-#{version}.dmg"
   appcast 'http://xld.googlecode.com/svn/appcast/xld-appcast_e.xml',
