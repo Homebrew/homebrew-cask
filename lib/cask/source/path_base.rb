@@ -30,7 +30,7 @@ class Cask::Source::PathBase
       #
       # limitation: does not support Ruby extended quoting such as %Q{}
       #
-      # in the future, this can be pared down to an "eval"
+      # todo: in the future, this can be pared down to an "eval"
 
       # read Cask
       cask_string = File.open(path, 'rb') do |handle|
