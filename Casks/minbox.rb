@@ -1,4 +1,4 @@
-class Minbox < Cask
+cask :v1 => 'minbox' do
   version :latest
   sha256 :no_check
 
