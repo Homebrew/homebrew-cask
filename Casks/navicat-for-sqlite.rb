@@ -1,4 +1,4 @@
-class NavicatForSqlite < Cask
+cask :v1 => 'navicat-for-sqlite' do
   version '11.1.5'
   sha256 'c6f8331d5353a8f6527397fb4ec754e012bba7d39aeeecfeeedd9cc42b643ad1'
 
