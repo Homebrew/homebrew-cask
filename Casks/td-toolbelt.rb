@@ -8,7 +8,7 @@ class TdToolbelt < Cask
 
   container :type => :naked
   preflight do
-    system '/bin/mv', '--', "#{destination_path}/mac", "#{destination_path}/td-toolbelt.pkg"
+    system '/bin/mv', '--', "#{staged_path}/mac", "#{destination_path}/td-toolbelt.pkg"
   end
 
   pkg 'td-toolbelt.pkg'
