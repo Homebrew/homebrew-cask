@@ -1,4 +1,4 @@
-class Yed < Cask
+cask :v1 => 'yed' do
   version '3.13'
   sha256 'b597d7468cef6981ed364a17c525a8b83d0818fd016c21f3efc6e3ea99922d1d'
 
