@@ -11,7 +11,7 @@ class Qlmarkdown < Cask
   # DSL to identify such containers and generate a target directory.
   container :type => :naked
   preflight do
-    system '/usr/bin/ditto', '-xk', '--', "#{destination_path}/QLMarkdown.qlgenerator.zip", "#{destination_path}/QLMarkdown.qlgenerator"
+    system '/usr/bin/ditto', '-xk', '--', "#{staged_path}/QLMarkdown.qlgenerator.zip", "#{destination_path}/QLMarkdown.qlgenerator"
   end
 
   qlplugin 'QLMarkdown.qlgenerator'
