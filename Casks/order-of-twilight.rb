@@ -1,4 +1,4 @@
-class OrderOfTwilight < Cask
+cask :v1 => 'order-of-twilight' do
   version :latest
   sha256 :no_check
 
