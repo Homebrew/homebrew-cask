@@ -1,4 +1,4 @@
-class IntelHaxm < Cask
+cask :v1 => 'intel-haxm' do
   version '1.0.8'
   sha256 'cee233cf1a0293d9e19b15c375f2c4cb7cf0c6948b7fd579bec28719e0b51d35'
 
