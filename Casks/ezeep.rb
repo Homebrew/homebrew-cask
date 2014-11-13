@@ -1,4 +1,4 @@
-class Ezeep < Cask
+cask :v1 => 'ezeep' do
   version :latest
   sha256 :no_check
 
