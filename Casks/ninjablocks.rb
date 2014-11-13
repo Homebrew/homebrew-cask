@@ -1,4 +1,4 @@
-class Ninjablocks < Cask
+cask :v1 => 'ninjablocks' do
   version '0.2'
   sha256 'f0ed94bc767a7f0059d08904f71c4266b6045ce4f7c194678e48b02a2d85eaeb'
 
