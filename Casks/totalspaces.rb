@@ -1,4 +1,4 @@
-class Totalspaces < Cask
+cask :v1 => 'totalspaces' do
 
   if MacOS.version < :mavericks
     version '1.2.11'
