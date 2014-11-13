@@ -1,4 +1,4 @@
-class Cuppa < Cask
+cask :v1 => 'cuppa' do
   version :latest
   sha256 :no_check
 
