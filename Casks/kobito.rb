@@ -1,4 +1,4 @@
-class Kobito < Cask
+cask :v1 => 'kobito' do
   version '1.9.2'
   sha256 '8129e70fda4595fe4e4be5406f2383f5900421da2bc9b7c53cd0e74762f42ba2'
 
