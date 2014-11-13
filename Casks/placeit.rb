@@ -1,4 +1,4 @@
-class Placeit < Cask
+cask :v1 => 'placeit' do
   version :latest
   sha256 :no_check
 
