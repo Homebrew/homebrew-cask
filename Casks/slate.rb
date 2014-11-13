@@ -1,4 +1,4 @@
-class Slate < Cask
+cask :v1 => 'slate' do
   version :latest
   sha256 :no_check
 
