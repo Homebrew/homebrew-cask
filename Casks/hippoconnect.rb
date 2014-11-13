@@ -1,4 +1,4 @@
-class Hippoconnect < Cask
+cask :v1 => 'hippoconnect' do
   version :latest
   sha256 :no_check
 
