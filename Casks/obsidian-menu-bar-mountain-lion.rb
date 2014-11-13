@@ -1,4 +1,4 @@
-class ObsidianMenuBarMountainLion < Cask
+cask :v1 => 'obsidian-menu-bar-mountain-lion' do
   version '10.8'
   sha256 '97c8545c623ec78a0a81c2b7bb6a7afa9d0dd517a64b74f5320e2e279a2786aa'
 
