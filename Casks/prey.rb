@@ -1,4 +1,4 @@
-class Prey < Cask
+cask :v1 => 'prey' do
   version '0.6.4'
   sha256 '361996d067539da7881aa3618b737ba4a0846df13ca8c9b8b07151d42f81fb86'
 
