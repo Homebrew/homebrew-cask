@@ -9,7 +9,7 @@ class IntellijIdeaCe < Cask
   app 'IntelliJ IDEA 14 CE.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/IntelliJ IDEA 14 CE.app/Contents/Info.plist"
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/IntelliJ IDEA 14 CE.app/Contents/Info.plist"
   end
 
   zap :delete => [
