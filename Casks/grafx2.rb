@@ -1,4 +1,4 @@
-class Grafx2 < Cask
+cask :v1 => 'grafx2' do
   version :latest
   sha256 :no_check
 
