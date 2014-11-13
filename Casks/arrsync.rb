@@ -1,4 +1,4 @@
-class Arrsync < Cask
+cask :v1 => 'arrsync' do
   version :latest
   sha256 :no_check
 
