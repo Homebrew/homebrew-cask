@@ -1,4 +1,4 @@
-class Spideroak < Cask
+cask :v1 => 'spideroak' do
   version :latest
   sha256 :no_check
 
