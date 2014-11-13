@@ -1,4 +1,4 @@
-class Clipmenu < Cask
+cask :v1 => 'clipmenu' do
   version '0.4.3'
   sha256 'd0d7ca6c23f51b2dfe78c7bb40bf2f212c21b3304b3eacde86112d8ef3e6bfb9'
 
