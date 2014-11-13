@@ -1,4 +1,4 @@
-class Delibar < Cask
+cask :v1 => 'delibar' do
   version :latest
   sha256 :no_check
 
