@@ -1,4 +1,4 @@
-class Doubanradio < Cask
+cask :v1 => 'doubanradio' do
   version :latest
   sha256 :no_check
 
