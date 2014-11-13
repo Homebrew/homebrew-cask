@@ -15,7 +15,7 @@ class VmwareFusion < Cask
 
   uninstall_preflight do
     system '/usr/bin/sudo', '-E', '--',
-           '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", "#{destination_path}/VMware Fusion.app"
+           '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", "#{staged_path}/VMware Fusion.app"
   end
   zap :delete => [
                   # note: '~/Library/Application Support/VMware Fusion' is not safe
