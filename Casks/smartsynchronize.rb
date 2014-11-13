@@ -1,4 +1,4 @@
-class Smartsynchronize < Cask
+cask :v1 => 'smartsynchronize' do
   version '3.4'
   sha256 'f7d30bae37c835ea208ff60b5b99c2668e3406c06f1321862495a425a9389322'
 
