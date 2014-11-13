@@ -1,4 +1,4 @@
-class MusicManager < Cask
+cask :v1 => 'music-manager' do
   version '1.0.104.6528'
   sha256 'a1e4e48e008958f9a725bfee1e2d8360dc8efad38ef2532fc1b3e4b9c3df8f0d'
 
