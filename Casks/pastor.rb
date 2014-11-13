@@ -1,4 +1,4 @@
-class Pastor < Cask
+cask :v1 => 'pastor' do
   version '1.8.2'
   sha256 'ac41e7f300d722fcd9733a4f13a984d211b20f95c94db4dc07ab537fd45f8370'
 
