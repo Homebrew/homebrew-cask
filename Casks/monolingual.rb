@@ -1,4 +1,4 @@
-class Monolingual < Cask
+cask :v1 => 'monolingual' do
   version '1.5.8'
   sha256 'bba2209c5047c69b1f8b3a692fa916c24a05b9bb098f9b6073b85f421d9be3b7'
 
