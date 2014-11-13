@@ -1,4 +1,4 @@
-class Seil < Cask
+cask :v1 => 'seil' do
   version '10.11.0'
   sha256 '4ee777bf0a7f023abadb1f6a836b08484cfc2db2a19dd0b28d8942a2b638f8e5'
 
