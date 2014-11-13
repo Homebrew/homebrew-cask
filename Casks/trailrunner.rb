@@ -1,4 +1,4 @@
-class Trailrunner < Cask
+cask :v1 => 'trailrunner' do
   version :latest
   sha256 :no_check
 
