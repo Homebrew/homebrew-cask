@@ -1,4 +1,4 @@
-class Devcenter < Cask
+cask :v1 => 'devcenter' do
   version '1.2.0'
   sha256 '39820d3a7ec66ae3011cf72bee029d4f9817490319648837cc72b59d01a870f2'
 
