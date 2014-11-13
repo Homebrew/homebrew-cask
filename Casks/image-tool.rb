@@ -1,4 +1,4 @@
-class ImageTool < Cask
+cask :v1 => 'image-tool' do
   version '1.4.1'
   sha256 '66ef0c6cdf2e90981bc8bd0d1131e6e0f141744406997712550b8b5a05022d39'
 
