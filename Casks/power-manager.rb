@@ -1,4 +1,4 @@
-class PowerManager < Cask
+cask :v1 => 'power-manager' do
   version :latest
   sha256 :no_check
 
