@@ -1,4 +1,4 @@
-class Cocoapacketanalyzer < Cask
+cask :v1 => 'cocoapacketanalyzer' do
   version '1.31'
   sha256 'fc3586868fcf90e3ca766c31dbf184de78e5c907210dfdabbd13a831712fc864'
 
