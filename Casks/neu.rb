@@ -1,4 +1,4 @@
-class Neu < Cask
+cask :v1 => 'neu' do
   version '1.2.1'
   sha256 '7d46be5ae865882553887f0942fe7d441b71b70a4ad593d3f72c897c47642552'
 
