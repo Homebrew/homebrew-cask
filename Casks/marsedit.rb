@@ -1,4 +1,4 @@
-class Marsedit < Cask
+cask :v1 => 'marsedit' do
   version '3.6.7'
   sha256 '5620407616b21bc2099be344402b93adc0832f90f4b8773d724b8e48a990da9b'
 
