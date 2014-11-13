@@ -1,4 +1,4 @@
-class Dterm < Cask
+cask :v1 => 'dterm' do
   version :latest
   sha256 :no_check
 
