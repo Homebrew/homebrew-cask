@@ -1,4 +1,4 @@
-class Remonit < Cask
+cask :v1 => 'remonit' do
   version '0.2.0'
   sha256 'fb8e51c7d68d83274b2acff107e7ef4857d28c9daf4d5ac2599c14cb3d6516fe'
 
