@@ -1,4 +1,4 @@
-class Airstream < Cask
+cask :v1 => 'airstream' do
   version :latest
   sha256 :no_check
 
