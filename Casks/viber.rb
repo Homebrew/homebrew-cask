@@ -1,4 +1,4 @@
-class Viber < Cask
+cask :v1 => 'viber' do
   version :latest
   sha256 :no_check
 
