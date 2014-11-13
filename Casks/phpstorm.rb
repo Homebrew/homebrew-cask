@@ -9,7 +9,7 @@ class Phpstorm < Cask
   app 'PhpStorm.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/PhpStorm.app/Contents/Info.plist"
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/PhpStorm.app/Contents/Info.plist"
   end
 
   zap :delete => [
