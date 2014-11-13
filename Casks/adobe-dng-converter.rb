@@ -1,4 +1,4 @@
-class AdobeDngConverter < Cask
+cask :v1 => 'adobe-dng-converter' do
   version '8.6'
   sha256 '3bb43ca608b7e62727512c813b395ea46aad545f68f9323cc78c9c5f47145650'
 
