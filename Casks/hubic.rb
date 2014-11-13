@@ -1,4 +1,4 @@
-class Hubic < Cask
+cask :v1 => 'hubic' do
   version '0.2.5'
   sha256 '14a354a3029361b9f0c6560a6d702ce34e685da08361869bead7f87ec09a51df'
 
