@@ -9,6 +9,6 @@ class Webstorm < Cask
   app 'WebStorm.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/WebStorm.app/Contents/Info.plist"
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/WebStorm.app/Contents/Info.plist"
   end
 end
