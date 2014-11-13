@@ -1,4 +1,4 @@
-class Twindocs < Cask
+cask :v1 => 'twindocs' do
   version :latest
   sha256 :no_check
 
