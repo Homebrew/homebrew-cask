@@ -1,4 +1,4 @@
-class R < Cask
+cask :v1 => 'r' do
   version '3.1.2'
 
   if MacOS.version < :mavericks
