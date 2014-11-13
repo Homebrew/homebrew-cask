@@ -1,4 +1,4 @@
-class NavicatPremium < Cask
+cask :v1 => 'navicat-premium' do
   version '11.1.5'
   sha256 '31229725466814d7882059d0504fa14a467229a1beba772b91e152cc403b130e'
 
