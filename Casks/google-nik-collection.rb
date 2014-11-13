@@ -1,4 +1,4 @@
-class GoogleNikCollection < Cask
+cask :v1 => 'google-nik-collection' do
   version :latest
   sha256 :no_check
 
