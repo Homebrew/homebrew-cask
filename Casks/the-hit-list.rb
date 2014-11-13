@@ -1,4 +1,4 @@
-class TheHitList < Cask
+cask :v1 => 'the-hit-list' do
   version :latest
   sha256 :no_check
 
