@@ -1,4 +1,4 @@
-class Betterzipql < Cask
+cask :v1 => 'betterzipql' do
   version :latest
   sha256 :no_check
 
