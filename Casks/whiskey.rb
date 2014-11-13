@@ -1,4 +1,4 @@
-class Whiskey < Cask
+cask :v1 => 'whiskey' do
   version :latest
   sha256 :no_check
 
