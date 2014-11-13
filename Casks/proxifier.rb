@@ -1,4 +1,4 @@
-class Proxifier < Cask
+cask :v1 => 'proxifier' do
   version :latest
   sha256 :no_check
 
