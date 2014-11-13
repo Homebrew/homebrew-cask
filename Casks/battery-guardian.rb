@@ -1,4 +1,4 @@
-class BatteryGuardian < Cask
+cask :v1 => 'battery-guardian' do
   version :latest
   sha256 :no_check
 
