@@ -1,4 +1,4 @@
-class Windownaut < Cask
+cask :v1 => 'windownaut' do
   version :latest
   sha256 :no_check
 
