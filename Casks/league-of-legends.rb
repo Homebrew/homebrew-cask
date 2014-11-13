@@ -1,4 +1,4 @@
-class LeagueOfLegends < Cask
+cask :v1 => 'league-of-legends' do
   version :latest
   sha256 :no_check
 
