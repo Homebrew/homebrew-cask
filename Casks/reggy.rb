@@ -1,4 +1,4 @@
-class Reggy < Cask
+cask :v1 => 'reggy' do
   version '1.3'
   sha256 '5a4d72158bc524ab2f21c6cfad7b703f413707d9d078ec1923c268b110ff8dda'
 

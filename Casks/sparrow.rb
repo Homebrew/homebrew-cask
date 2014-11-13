@@ -1,4 +1,4 @@
-class Sparrow < Cask
+cask :v1 => 'sparrow' do
   version :latest
   sha256 :no_check
 

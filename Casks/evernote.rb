@@ -1,4 +1,4 @@
-class Evernote < Cask
+cask :v1 => 'evernote' do
   version :latest
   sha256 :no_check
 

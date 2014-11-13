@@ -1,4 +1,4 @@
-class Hexels < Cask
+cask :v1 => 'hexels' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class TagainiJisho < Cask
+cask :v1 => 'tagaini-jisho' do
   version '1.0.1'
   sha256 'fda5a6da2f2854e5497329b81e6bd1eb210cd89aab50e373e120d687653edb27'
 

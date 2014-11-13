@@ -1,4 +1,4 @@
-class OnliveClient < Cask
+cask :v1 => 'onlive-client' do
   version :latest
   sha256 :no_check
 

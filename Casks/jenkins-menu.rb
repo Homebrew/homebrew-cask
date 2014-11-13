@@ -1,4 +1,4 @@
-class JenkinsMenu < Cask
+cask :v1 => 'jenkins-menu' do
   version '0.1.1'
   sha256 'c53e72473ff1d64b0b63b28ebd6297553cd6045c383b48e15887041487b588fb'
 

@@ -1,4 +1,4 @@
-class SparkInspector < Cask
+cask :v1 => 'spark-inspector' do
   version :latest
   sha256 :no_check
 

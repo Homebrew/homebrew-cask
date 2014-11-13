@@ -1,4 +1,4 @@
-class Mamp < Cask
+cask :v1 => 'mamp' do
   version '3.0.7.2'
   sha256 'a6e72143efa73eb919efeb0e9dc0089e291204676da37e9508ac53c2f51f8878'
 

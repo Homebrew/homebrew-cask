@@ -1,4 +1,4 @@
-class ReadefineDesktop < Cask
+cask :v1 => 'readefine-desktop' do
   version :latest
   sha256 :no_check
 

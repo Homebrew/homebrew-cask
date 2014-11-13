@@ -1,4 +1,4 @@
-class Trailer < Cask
+cask :v1 => 'trailer' do
   version '1.1.3'
   sha256 '5f59c927658ea1adfde83b5214438b485117f32024b8f73eaa4da7538d2bc95f'
 

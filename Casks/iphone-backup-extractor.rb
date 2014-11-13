@@ -1,4 +1,4 @@
-class IphoneBackupExtractor < Cask
+cask :v1 => 'iphone-backup-extractor' do
   version :latest
   sha256 :no_check
 

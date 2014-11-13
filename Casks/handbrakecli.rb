@@ -1,4 +1,4 @@
-class Handbrakecli < Cask
+cask :v1 => 'handbrakecli' do
   version '0.9.9'
   sha256 '120d7d0a9af5d15813d05781cbbf2599e454b4400f0266db4fa1acd4f62d244e'
 

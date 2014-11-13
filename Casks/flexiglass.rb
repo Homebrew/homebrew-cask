@@ -1,4 +1,4 @@
-class Flexiglass < Cask
+cask :v1 => 'flexiglass' do
   version :latest
   sha256 :no_check
 

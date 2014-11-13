@@ -1,4 +1,4 @@
-class Latexian < Cask
+cask :v1 => 'latexian' do
   version :latest
   sha256 :no_check
 

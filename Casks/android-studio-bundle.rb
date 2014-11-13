@@ -1,4 +1,4 @@
-class AndroidStudioBundle < Cask
+cask :v1 => 'android-studio-bundle' do
   version '0.8.6 build-135.1339820'
   sha256 '3a9f65434a2381019f4487481331f539a69b09b8ea81a8b4dfff9c6a126423f0'
 

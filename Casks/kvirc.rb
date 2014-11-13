@@ -1,4 +1,4 @@
-class Kvirc < Cask
+cask :v1 => 'kvirc' do
   version '4.2.0'
   sha256 'bb450b5abc2012cfc6c3f2cce3c8b13239acad4553cdd73d48f8d47dd8cf61c2'
 

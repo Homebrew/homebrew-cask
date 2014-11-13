@@ -1,4 +1,4 @@
-class Alice < Cask
+cask :v1 => 'alice' do
   version '1.4'
   sha256 '0d6259bdff7fd0309b532188445d0dd4f7ea4d50f5570e9b46d282fbade74ce1'
 

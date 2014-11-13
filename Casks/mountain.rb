@@ -1,4 +1,4 @@
-class Mountain < Cask
+cask :v1 => 'mountain' do
   version :latest
   sha256 :no_check
 

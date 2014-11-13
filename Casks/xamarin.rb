@@ -1,4 +1,4 @@
-class Xamarin < Cask
+cask :v1 => 'xamarin' do
   version :latest
   sha256 :no_check
 

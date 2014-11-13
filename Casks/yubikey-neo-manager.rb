@@ -1,4 +1,4 @@
-class YubikeyNeoManager < Cask
+cask :v1 => 'yubikey-neo-manager' do
   version '0.2.2'
   sha256 '4ea699743fd90586ef48b9d906bd4ad109eedeaa11b58028431197bd8396897a'
 

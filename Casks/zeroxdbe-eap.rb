@@ -1,4 +1,4 @@
-class ZeroxdbeEap < Cask
+cask :v1 => 'zeroxdbe-eap' do
   version '138.2221.3'
   sha256 'fc88c53d55fa13330421aebf77c0fb136eaa3e6ccff8e08ed577e51c53195fba'
 

@@ -1,4 +1,4 @@
-class Textwrangler < Cask
+cask :v1 => 'textwrangler' do
   version '4.5.11'
   sha256 'a4c5dbdaa8f9211372fb21cc4c7d54b44d89e70a8537bb02034de27ec5e95039'
 

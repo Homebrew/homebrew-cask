@@ -1,4 +1,4 @@
-class Debookee < Cask
+cask :v1 => 'debookee' do
   version :latest
   sha256 :no_check
 

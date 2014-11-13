@@ -1,4 +1,4 @@
-class Aliwangwang < Cask
+cask :v1 => 'aliwangwang' do
   version :latest
   sha256 :no_check
 

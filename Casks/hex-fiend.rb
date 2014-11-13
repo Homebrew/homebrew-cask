@@ -1,4 +1,4 @@
-class HexFiend < Cask
+cask :v1 => 'hex-fiend' do
   version :latest
   sha256 :no_check
 

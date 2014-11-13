@@ -1,4 +1,4 @@
-class BitcoinCore < Cask
+cask :v1 => 'bitcoin-core' do
   version '0.9.3'
   sha256 '251938650bd79681dd93dcce346589aa5d1217d012a6f8e749165ef2149662d2'
 

@@ -1,4 +1,4 @@
-class MicrosoftOffice < Cask
+cask :v1 => 'microsoft-office' do
   version :latest
   sha256 :no_check
 

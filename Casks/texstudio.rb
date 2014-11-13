@@ -1,4 +1,4 @@
-class Texstudio < Cask
+cask :v1 => 'texstudio' do
   version '2.8.4'
   sha256 'a4257563d557fb66b35c562322852b969bb7768624bf02e7bf2cc2c31a5e1fbb'
 

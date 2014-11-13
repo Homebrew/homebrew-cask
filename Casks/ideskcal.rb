@@ -1,4 +1,4 @@
-class Ideskcal < Cask
+cask :v1 => 'ideskcal' do
   version :latest
   sha256 :no_check
 

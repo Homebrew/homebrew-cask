@@ -1,4 +1,4 @@
-class Qtspim < Cask
+cask :v1 => 'qtspim' do
   version :latest
   sha256 :no_check
 

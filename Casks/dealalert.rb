@@ -1,4 +1,4 @@
-class Dealalert < Cask
+cask :v1 => 'dealalert' do
   version :latest
   sha256 :no_check
 

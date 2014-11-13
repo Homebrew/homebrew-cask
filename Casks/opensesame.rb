@@ -1,4 +1,4 @@
-class Opensesame < Cask
+cask :v1 => 'opensesame' do
 
   if MacOS.version < :lion
     version '0.26'

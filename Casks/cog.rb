@@ -1,4 +1,4 @@
-class Cog < Cask
+cask :v1 => 'cog' do
   version 'r2051'
   sha256 '1cc55f718a15810cccc5141312c01079e1da230a2412e4bc66c172de7aee36fe'
 

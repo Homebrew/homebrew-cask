@@ -1,4 +1,4 @@
-class FastestFreeYoutubeDownloader < Cask
+cask :v1 => 'fastest-free-youtube-downloader' do
   version '5.0'
   sha256 'd301a1e6243c9e79f3ccac85ab19d3d8dd6c1ef3ddd81ba7006e539f2c88b71c'
 

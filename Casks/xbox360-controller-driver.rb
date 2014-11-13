@@ -1,4 +1,4 @@
-class Xbox360ControllerDriver < Cask
+cask :v1 => 'xbox360-controller-driver' do
   version :latest
   sha256 :no_check
 

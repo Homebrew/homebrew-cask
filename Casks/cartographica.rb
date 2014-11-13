@@ -1,4 +1,4 @@
-class Cartographica < Cask
+cask :v1 => 'cartographica' do
   version :latest
   sha256 :no_check
 

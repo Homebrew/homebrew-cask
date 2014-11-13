@@ -1,4 +1,4 @@
-class Glo < Cask
+cask :v1 => 'glo' do
   version :latest
   sha256 :no_check
 

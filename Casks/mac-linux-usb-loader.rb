@@ -1,4 +1,4 @@
-class MacLinuxUsbLoader < Cask
+cask :v1 => 'mac-linux-usb-loader' do
   version :latest
   sha256 :no_check
 

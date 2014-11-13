@@ -1,4 +1,4 @@
-class Zoomus < Cask
+cask :v1 => 'zoomus' do
   version :latest
   sha256 :no_check
 

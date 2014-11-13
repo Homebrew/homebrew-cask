@@ -1,4 +1,4 @@
-class Camerabag < Cask
+cask :v1 => 'camerabag' do
   version '2.5.06'
   sha256 'cbc34e49c94dfe0e9434c4495e970808b8498bdd7a62251dadcdb192595aff58'
 

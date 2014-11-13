@@ -1,4 +1,4 @@
-class Thong < Cask
+cask :v1 => 'thong' do
   version '1.1'
   sha256 '87e5f3dc6fa85d039d761507aba13e5bc90578940412420d24fb621cfd4fc2b6'
 

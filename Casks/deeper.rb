@@ -1,4 +1,4 @@
-class Deeper < Cask
+cask :v1 => 'deeper' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Fluid < Cask
+cask :v1 => 'fluid' do
   version '1.8.3'
   sha256 '56438a946b281b009626a06cb099a7198e948bc8bef18a19c1bceb28bbe4d619'
 

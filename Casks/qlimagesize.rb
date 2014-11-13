@@ -1,4 +1,4 @@
-class Qlimagesize < Cask
+cask :v1 => 'qlimagesize' do
   version :latest
   sha256 :no_check
 

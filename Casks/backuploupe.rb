@@ -1,4 +1,4 @@
-class Backuploupe < Cask
+cask :v1 => 'backuploupe' do
   version '2.6'
   sha256 '48e758d7d28dbacfbdba9ae6800888d513917a2138593efc1d6db407b993208b'
 

@@ -1,4 +1,4 @@
-class Chromecast < Cask
+cask :v1 => 'chromecast' do
   version '1.5.0.531'
   sha256 '66a70feb3bacb3087fdf4a34300cbc6c54455a8b62a2b340123cc1a03cedcbe9'
 

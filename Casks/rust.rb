@@ -1,4 +1,4 @@
-class Rust < Cask
+cask :v1 => 'rust' do
   version :latest
   sha256 :no_check
 

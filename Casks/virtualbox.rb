@@ -1,4 +1,4 @@
-class Virtualbox < Cask
+cask :v1 => 'virtualbox' do
   version '4.3.18-96516'
   sha256 'a0c6a9a9455397a929150065b2883714a1dd630f63ef88b8d8cf527944becfc6'
 

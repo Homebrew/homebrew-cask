@@ -1,4 +1,4 @@
-class PgCommander < Cask
+cask :v1 => 'pg-commander' do
   version '1.5.2'
   sha256 'a7e848ad20f38cc6f9c9fd6ebccb62390fe7c050aaae5b3670c40f94019757ee'
 

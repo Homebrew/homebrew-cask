@@ -1,4 +1,4 @@
-class Figtree < Cask
+cask :v1 => 'figtree' do
   version :latest
   sha256 :no_check
 

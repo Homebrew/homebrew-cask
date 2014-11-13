@@ -1,4 +1,4 @@
-class Deeq < Cask
+cask :v1 => 'deeq' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Pdfinfo < Cask
+cask :v1 => 'pdfinfo' do
   version :latest
   sha256 :no_check
 

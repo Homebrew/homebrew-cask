@@ -1,4 +1,4 @@
-class Zeroinstall < Cask
+cask :v1 => 'zeroinstall' do
   version '2.7'
   sha256 '12246277e9d03fb1a083f6a0d7d088d7b90170dbd5fd8fb900b36d0470fb88e0'
 

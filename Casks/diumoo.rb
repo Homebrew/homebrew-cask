@@ -1,4 +1,4 @@
-class Diumoo < Cask
+cask :v1 => 'diumoo' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Simpholders < Cask
+cask :v1 => 'simpholders' do
   version '1.5.0'
   sha256 '2f4fb58a20d94a858c4d53648ee37fd082e23f50ef3f367fbaef4d6cea840cd6'
 

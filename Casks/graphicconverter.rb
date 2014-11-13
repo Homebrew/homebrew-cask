@@ -1,4 +1,4 @@
-class Graphicconverter < Cask
+cask :v1 => 'graphicconverter' do
   version '9.4'
   sha256 'bd3d837e4c3366131fa4c87ad186995ac40c48157c21df1c31aa94a4a57ee06c'
 

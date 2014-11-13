@@ -1,4 +1,4 @@
-class Sage < Cask
+cask :v1 => 'sage' do
   version '6.3'
   sha256 '024a326d51b6a5878d8e60512172199ee5d3db35d850d7a784f42935beeeb540'
 

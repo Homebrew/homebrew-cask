@@ -1,4 +1,4 @@
-class Yep < Cask
+cask :v1 => 'yep' do
   version :latest
   sha256 :no_check
 

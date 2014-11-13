@@ -1,4 +1,4 @@
-class Invisionsync < Cask
+cask :v1 => 'invisionsync' do
   version :latest
   sha256 :no_check
 

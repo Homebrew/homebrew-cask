@@ -1,4 +1,4 @@
-class Poedit < Cask
+cask :v1 => 'poedit' do
   version '1.6.10'
   sha256 'd6b6d07a10099c3a31ee21622764ed6d3d007a437dab33a00b0f15e42b2dfa76'
 

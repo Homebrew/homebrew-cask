@@ -1,4 +1,4 @@
-class Lightpaper < Cask
+cask :v1 => 'lightpaper' do
   version '0.9.0'
   sha256 'e90ad6d7052573a8048b65c590f9227f75a55690731ccf6986ded5982fc02afe'
 

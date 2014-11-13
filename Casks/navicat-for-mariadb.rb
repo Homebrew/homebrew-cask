@@ -1,4 +1,4 @@
-class NavicatForMariadb < Cask
+cask :v1 => 'navicat-for-mariadb' do
   version '11.1.5'
   sha256 '84f156288bfa92a83f3af70d615617d0c8e255825ad35368b05550366dc5d8e8'
 

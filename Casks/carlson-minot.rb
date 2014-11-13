@@ -1,4 +1,4 @@
-class CarlsonMinot < Cask
+cask :v1 => 'carlson-minot' do
   version '2013.05-24'
   sha256 '1c41265f1a61e8594e9bcd702de0a4e7ed786394c91764e4d7495a6220a95b51'
 

@@ -1,4 +1,4 @@
-class Idris < Cask
+cask :v1 => 'idris' do
   version :latest
   sha256 :no_check
 

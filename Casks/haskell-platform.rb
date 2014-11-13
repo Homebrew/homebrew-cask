@@ -1,4 +1,4 @@
-class HaskellPlatform < Cask
+cask :v1 => 'haskell-platform' do
   version '2014.2.0.0'
   sha256 '62f39246ad95dd2aed6ece5138f6297f945d2b450f215d074820294310e0c48a'
 

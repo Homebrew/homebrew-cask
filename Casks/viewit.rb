@@ -1,4 +1,4 @@
-class Viewit < Cask
+cask :v1 => 'viewit' do
   version '2.50'
   sha256 '188f82c1294a2b63f817c3cd1897ff2c43af71d29305a4db614a9378994e7014'
 

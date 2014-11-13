@@ -1,4 +1,4 @@
-class TrimEnabler < Cask
+cask :v1 => 'trim-enabler' do
   version :latest
   sha256 :no_check
 

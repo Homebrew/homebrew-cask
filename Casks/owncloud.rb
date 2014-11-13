@@ -1,4 +1,4 @@
-class Owncloud < Cask
+cask :v1 => 'owncloud' do
   version '1.7.0.1339'
   sha256 'baa848c46e0a1cc0e88cf78a2419bfdb7d55fd984100d9fe1babc4a97eb00d9a'
 

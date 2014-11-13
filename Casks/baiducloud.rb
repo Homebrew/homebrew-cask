@@ -1,5 +1,5 @@
 # encoding: UTF-8
-class Baiducloud < Cask
+cask :v1 => 'baiducloud' do
   version '2.4.3'
   sha256 'f8e1f5afa3e1cbdac4d3d859f2f8da41093e37afbb51959ab6ee6b2dc91fc069'
 

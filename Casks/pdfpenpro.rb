@@ -1,4 +1,4 @@
-class Pdfpenpro < Cask
+cask :v1 => 'pdfpenpro' do
   version :latest
   sha256 :no_check
 

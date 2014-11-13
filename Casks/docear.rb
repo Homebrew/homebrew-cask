@@ -1,4 +1,4 @@
-class Docear < Cask
+cask :v1 => 'docear' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Ormr < Cask
+cask :v1 => 'ormr' do
   version :latest
   sha256 :no_check
 

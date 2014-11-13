@@ -1,4 +1,4 @@
-class Actprinter < Cask
+cask :v1 => 'actprinter' do
   version '3.1.4'
   sha256 '7f92b093be3ddc08f5ce00cd19b3edb13c01a4c4626948b204c484123d3e25e8'
 

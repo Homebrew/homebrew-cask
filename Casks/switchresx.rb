@@ -1,4 +1,4 @@
-class Switchresx < Cask
+cask :v1 => 'switchresx' do
   version '4.4.1'
   sha256 'a7fd24312ab65a1d3da00da4fc9fb1d15a463f5d93c922bffa4ecfbe87b8e3cf'
 

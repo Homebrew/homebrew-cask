@@ -1,4 +1,4 @@
-class Datagraph < Cask
+cask :v1 => 'datagraph' do
   version :latest
   sha256 :no_check
 

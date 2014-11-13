@@ -1,4 +1,4 @@
-class Flavours < Cask
+cask :v1 => 'flavours' do
   version :latest
   sha256 :no_check
 

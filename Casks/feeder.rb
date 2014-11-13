@@ -1,4 +1,4 @@
-class Feeder < Cask
+cask :v1 => 'feeder' do
   version '2.5.1'
   sha256 '8c3334e7eccff45006707c44257eb5ab7946b6c4f51dae0fecf8a3552c6168ae'
 

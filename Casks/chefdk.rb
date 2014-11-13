@@ -1,4 +1,4 @@
-class Chefdk < Cask
+cask :v1 => 'chefdk' do
   version '0.3.2-1'
   sha256 'ffef287a9eba71eec8ee3f47044d351f6e679ed77b022f8be8bed3b76a912d44'
 

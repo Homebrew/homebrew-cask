@@ -1,4 +1,4 @@
-class Odesk < Cask
+cask :v1 => 'odesk' do
   version :latest
   sha256 :no_check
 

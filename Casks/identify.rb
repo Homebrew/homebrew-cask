@@ -1,4 +1,4 @@
-class Identify < Cask
+cask :v1 => 'identify' do
   version '545'
   sha256 'e850d12335befe8c092b8758f0ca1b26cb7f0c1decda98e5ef0525b3a37fb2d2'
 

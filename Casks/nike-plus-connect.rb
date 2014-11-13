@@ -1,4 +1,4 @@
-class NikePlusConnect < Cask
+cask :v1 => 'nike-plus-connect' do
   version :latest
   sha256 :no_check
 

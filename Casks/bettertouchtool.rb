@@ -1,4 +1,4 @@
-class Bettertouchtool < Cask
+cask :v1 => 'bettertouchtool' do
   version :latest
   sha256 :no_check
 

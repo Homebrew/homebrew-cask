@@ -1,4 +1,4 @@
-class Proxpn < Cask
+cask :v1 => 'proxpn' do
   version :latest
   sha256 :no_check
 

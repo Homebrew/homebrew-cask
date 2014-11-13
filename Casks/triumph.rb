@@ -1,4 +1,4 @@
-class Triumph < Cask
+cask :v1 => 'triumph' do
   version :latest
   sha256 :no_check
 

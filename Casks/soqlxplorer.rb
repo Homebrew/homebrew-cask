@@ -1,4 +1,4 @@
-class Soqlxplorer < Cask
+cask :v1 => 'soqlxplorer' do
   version '2.00'
   sha256 '72c5d9dc582bc30d757c5199cdebdc79ffee479a3435252906554d52b236217d'
 

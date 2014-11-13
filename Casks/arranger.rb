@@ -1,4 +1,4 @@
-class Arranger < Cask
+cask :v1 => 'arranger' do
   version '1.5'
   sha256 'dff93bacfa3f0a00ecde23c55abd7124efe7bcf7f5980bb347f87b9c9f6b62b6'
 

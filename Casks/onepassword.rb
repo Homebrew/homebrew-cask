@@ -1,4 +1,4 @@
-class Onepassword < Cask
+cask :v1 => 'onepassword' do
 
   if MacOS.version < :yosemite
     version '4.4.3'

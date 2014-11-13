@@ -1,4 +1,4 @@
-class GoogleDrive < Cask
+cask :v1 => 'google-drive' do
   version :latest
   sha256 :no_check
 

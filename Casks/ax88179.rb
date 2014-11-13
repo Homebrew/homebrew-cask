@@ -1,4 +1,4 @@
-class Ax88179 < Cask
+cask :v1 => 'ax88179' do
   version '2.2.0_20140724'
   sha256 '075cdf5cb5a6ed0e8a4d59ff470a32f5e869f3b2f2b08f268120cbae30c61329'
 

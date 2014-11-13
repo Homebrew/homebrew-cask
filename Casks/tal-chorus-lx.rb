@@ -1,4 +1,4 @@
-class TalChorusLx < Cask
+cask :v1 => 'tal-chorus-lx' do
   version :latest
   sha256 :no_check
 

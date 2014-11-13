@@ -1,4 +1,4 @@
-class IstatServer < Cask
+cask :v1 => 'istat-server' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Xtrafinder < Cask
+cask :v1 => 'xtrafinder' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Sofortbild < Cask
+cask :v1 => 'sofortbild' do
   version :latest
   sha256 :no_check
 

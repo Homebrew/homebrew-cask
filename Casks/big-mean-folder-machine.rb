@@ -1,4 +1,4 @@
-class BigMeanFolderMachine < Cask
+cask :v1 => 'big-mean-folder-machine' do
   version :latest
   sha256 :no_check
 

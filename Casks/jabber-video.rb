@@ -1,4 +1,4 @@
-class JabberVideo < Cask
+cask :v1 => 'jabber-video' do
   version '4.8.6'
   sha256 '9f0436cdfe65ebd3955a33eefac72af03def89075acd28280e27b0a6dd12738a'
 

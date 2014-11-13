@@ -1,4 +1,4 @@
-class ColorOracle < Cask
+cask :v1 => 'color-oracle' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class AirmailAmt < Cask
+cask :v1 => 'airmail-amt' do
   version :latest
   sha256 :no_check
 

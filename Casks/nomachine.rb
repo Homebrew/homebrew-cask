@@ -1,4 +1,4 @@
-class Nomachine < Cask
+cask :v1 => 'nomachine' do
   version '4.2.27_1'
   sha256 'b210543612f9f99e120b356ef38754bd9b8f20c54d5d657e88a1d73b644cf145'
 

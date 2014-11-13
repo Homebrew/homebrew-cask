@@ -1,4 +1,4 @@
-class Neofinder < Cask
+cask :v1 => 'neofinder' do
   version :latest
   sha256 :no_check
 

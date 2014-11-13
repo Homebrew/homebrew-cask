@@ -1,4 +1,4 @@
-class Ripit < Cask
+cask :v1 => 'ripit' do
   version :latest
   sha256 :no_check
 

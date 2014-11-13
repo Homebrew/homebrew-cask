@@ -1,4 +1,4 @@
-class AudioEditor < Cask
+cask :v1 => 'audio-editor' do
   version :latest
   sha256 :no_check
 

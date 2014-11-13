@@ -1,4 +1,4 @@
-class Droplr < Cask
+cask :v1 => 'droplr' do
   version '4.2.0'
   sha256 'e68b9c618fbbb2c4c27dab69acc088a441ab3a7571fa62e9108673751d04ab88'
 

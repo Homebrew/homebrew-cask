@@ -1,4 +1,4 @@
-class EclipsePlatform < Cask
+cask :v1 => 'eclipse-platform' do
   version '4.4.0'
 
   if Hardware::CPU.is_32_bit?

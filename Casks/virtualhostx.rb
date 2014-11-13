@@ -1,4 +1,4 @@
-class Virtualhostx < Cask
+cask :v1 => 'virtualhostx' do
   version :latest
   sha256 :no_check
 

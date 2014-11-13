@@ -1,4 +1,4 @@
-class Cockatrice < Cask
+cask :v1 => 'cockatrice' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Foldit < Cask
+cask :v1 => 'foldit' do
   version :latest
   sha256 :no_check
 

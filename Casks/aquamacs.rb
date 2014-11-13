@@ -1,4 +1,4 @@
-class Aquamacs < Cask
+cask :v1 => 'aquamacs' do
 
   if Hardware::CPU.is_32_bit?
     version '2.5'

@@ -1,4 +1,4 @@
-class LogitechGamingSoftware < Cask
+cask :v1 => 'logitech-gaming-software' do
   version '8.53.10'
   sha256 '60ce2aacf33ab523333328128ce96239e6e4bb90f6100d1d7d3d40fce28185a9'
 

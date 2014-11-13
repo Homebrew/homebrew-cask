@@ -1,5 +1,5 @@
 # encoding: UTF-8
-class Sogouinput < Cask
+cask :v1 => 'sogouinput' do
   version '3.0.0'
   sha256 'a11ef502efc364cce4191a0d2e6fb375fe9636438045b522431ac8829b40eae5'
 

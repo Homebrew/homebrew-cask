@@ -1,4 +1,4 @@
-class Coolterm < Cask
+cask :v1 => 'coolterm' do
   version :latest
   sha256 :no_check
 

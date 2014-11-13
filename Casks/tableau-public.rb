@@ -1,4 +1,4 @@
-class TableauPublic < Cask
+cask :v1 => 'tableau-public' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Praat < Cask
+cask :v1 => 'praat' do
   version '5.4.00'
 
   if Hardware::CPU.is_32_bit?

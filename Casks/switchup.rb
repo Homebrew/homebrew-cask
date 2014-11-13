@@ -1,4 +1,4 @@
-class Switchup < Cask
+cask :v1 => 'switchup' do
   version '1.6.3'
   sha256 'dd269749385090bec6bbf30e917b78f07cf0424c5e94c3602a41dbf7718597b3'
 

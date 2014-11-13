@@ -1,4 +1,4 @@
-class SplashtopStreamer < Cask
+cask :v1 => 'splashtop-streamer' do
   version '2.4.5.3'
   sha256 '07fd11f7c19ce0c7c29e65d5182532940f74e6e4512b696c19e58389d5e86357'
 

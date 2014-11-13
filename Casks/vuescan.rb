@@ -1,4 +1,4 @@
-class Vuescan < Cask
+cask :v1 => 'vuescan' do
   version '9.4.51'
 
   if Hardware::CPU.is_32_bit?

@@ -1,4 +1,4 @@
-class XamarinStudio < Cask
+cask :v1 => 'xamarin-studio' do
   version '5.5.0.227-0'
   sha256 '4c05b5174fd1d2eacef44f2f96557fc213f25381ad0ea3c139612217a20e8d46'
 

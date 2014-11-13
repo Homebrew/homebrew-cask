@@ -1,4 +1,4 @@
-class PrefSetter < Cask
+cask :v1 => 'pref-setter' do
   version :latest
   sha256 :no_check
 

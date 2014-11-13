@@ -1,4 +1,4 @@
-class Nutstore < Cask
+cask :v1 => 'nutstore' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Zephyros < Cask
+cask :v1 => 'zephyros' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class AmazonZocalo < Cask
+cask :v1 => 'amazon-zocalo' do
   version :latest
   sha256 :no_check
 

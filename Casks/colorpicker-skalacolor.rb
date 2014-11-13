@@ -1,4 +1,4 @@
-class ColorpickerSkalacolor < Cask
+cask :v1 => 'colorpicker-skalacolor' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Secondbar < Cask
+cask :v1 => 'secondbar' do
   version '1.1'
   sha256 '1f2a9d837bc66c93ed2f7a1d83ef95c44888cd266ffb7982ade14f91d996d6a6'
 

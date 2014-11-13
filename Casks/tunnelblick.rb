@@ -1,4 +1,4 @@
-class Tunnelblick < Cask
+cask :v1 => 'tunnelblick' do
   version '3.4.1_r3054'
   sha256 '44a9b1986c100698c82186c4ce404d5acf34f292d08c5f8528c33e22646f955a'
 

@@ -1,4 +1,4 @@
-class Etrecheck < Cask
+cask :v1 => 'etrecheck' do
   version :latest
   sha256 :no_check
 

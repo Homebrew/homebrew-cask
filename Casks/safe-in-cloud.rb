@@ -1,4 +1,4 @@
-class SafeInCloud < Cask
+cask :v1 => 'safe-in-cloud' do
   version :latest
   sha256 :no_check
 

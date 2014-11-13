@@ -1,4 +1,4 @@
-class Slender < Cask
+cask :v1 => 'slender' do
   version '2.1.1'
   sha256 '6235751e4510df2095ebae8e3588ed32d858d2f4612b5f020aea7efd4ff60cf0'
 

@@ -1,4 +1,4 @@
-class Fastscripts < Cask
+cask :v1 => 'fastscripts' do
   version '2.6.8'
   sha256 '7cc170ecacad63872fe3faddd8dbaaa8f0e232687dbd8365594221ff64999def'
 

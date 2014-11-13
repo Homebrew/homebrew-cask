@@ -1,4 +1,4 @@
-class Pacifist < Cask
+cask :v1 => 'pacifist' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class DroboDashboard < Cask
+cask :v1 => 'drobo-dashboard' do
   version '2.6.3'
   sha256 '8881b0713fed7bb9aeb2c1ca98db3e31ee304de0fad5d05778872e256a78ece1'
 

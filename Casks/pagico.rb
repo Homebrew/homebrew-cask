@@ -1,4 +1,4 @@
-class Pagico < Cask
+cask :v1 => 'pagico' do
   version '6.8.1637'
   sha256 '55df590853906fe6590f6526b2f8c2663f90f4b76c5baf2976f722d203383ddd'
 

@@ -1,4 +1,4 @@
-class Swinsian < Cask
+cask :v1 => 'swinsian' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Hyperdither < Cask
+cask :v1 => 'hyperdither' do
   version '1.3'
   sha256 'd91952bff7faf69255c03896a26c907fca256bbad4d1444a05b75b2ebdf10785'
 

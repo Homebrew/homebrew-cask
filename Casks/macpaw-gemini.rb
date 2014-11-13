@@ -1,4 +1,4 @@
-class MacpawGemini < Cask
+cask :v1 => 'macpaw-gemini' do
   version :latest
   sha256 :no_check
 

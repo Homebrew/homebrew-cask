@@ -1,4 +1,4 @@
-class Sixtyforce < Cask
+cask :v1 => 'sixtyforce' do
   version :latest
   sha256 :no_check
 

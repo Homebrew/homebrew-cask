@@ -1,4 +1,4 @@
-class Crashplan < Cask
+cask :v1 => 'crashplan' do
   version '3.6.3'
   sha256 'c3bb61fda36d777395748a6c6946085255e8ffa64c1538c453888e0de8ce2b73'
 

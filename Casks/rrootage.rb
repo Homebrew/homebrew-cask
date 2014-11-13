@@ -1,4 +1,4 @@
-class Rrootage < Cask
+cask :v1 => 'rrootage' do
   version :latest
   sha256 :no_check
 

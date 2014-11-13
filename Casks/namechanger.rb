@@ -1,4 +1,4 @@
-class Namechanger < Cask
+cask :v1 => 'namechanger' do
   version '2.3.3'
   sha256 '3731773e2be9af5c0cda15aa4368393ebe05084e6a29a03a38756b5f4049fc8d'
 

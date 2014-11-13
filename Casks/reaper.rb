@@ -1,4 +1,4 @@
-class Reaper < Cask
+cask :v1 => 'reaper' do
   version '4.71'
 
   if Hardware::CPU.is_32_bit?

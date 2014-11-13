@@ -1,4 +1,4 @@
-class Keymo < Cask
+cask :v1 => 'keymo' do
   version '1.2.1'
   sha256 '6ae33f5287e8be279c87f0bb5d22e77f806b9e2438f826935de5d6df34641d67'
 

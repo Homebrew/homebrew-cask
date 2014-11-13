@@ -1,4 +1,4 @@
-class Opennx < Cask
+cask :v1 => 'opennx' do
   version '0.16.0.729'
   sha256 '65dde1a3504a17ac58ed2a7178536347d829ee8c27cc90bebdae3e98c36fc6c6'
 

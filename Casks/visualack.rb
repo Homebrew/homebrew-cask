@@ -1,4 +1,4 @@
-class Visualack < Cask
+cask :v1 => 'visualack' do
   version '0.3.3'
   sha256 'bb9c9563003da7075deecc833546796a8da9abbadbde7600434c52c227da347b'
 

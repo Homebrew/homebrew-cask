@@ -1,4 +1,4 @@
-class XLite < Cask
+cask :v1 => 'x-lite' do
   version '4.6.1_73074'
   sha256 'a14f577a1af1d0c81428065d0b94f9a5ea0f7886c1c2c4442ae050a8c497b297'
 

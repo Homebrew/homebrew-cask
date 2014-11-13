@@ -1,4 +1,4 @@
-class Mailpile < Cask
+cask :v1 => 'mailpile' do
   version :latest
   sha256 :no_check
 

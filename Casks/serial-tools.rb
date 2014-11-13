@@ -1,4 +1,4 @@
-class SerialTools < Cask
+cask :v1 => 'serial-tools' do
   version :latest
   sha256 :no_check
 

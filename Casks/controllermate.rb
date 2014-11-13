@@ -1,4 +1,4 @@
-class Controllermate < Cask
+cask :v1 => 'controllermate' do
   version :latest
   sha256 :no_check
 

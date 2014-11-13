@@ -1,4 +1,4 @@
-class Menumeters < Cask
+cask :v1 => 'menumeters' do
   version :latest
   sha256 :no_check
 

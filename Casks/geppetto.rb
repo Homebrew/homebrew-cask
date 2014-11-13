@@ -1,4 +1,4 @@
-class Geppetto < Cask
+cask :v1 => 'geppetto' do
   version '4.2.0'
 
   if Hardware::CPU.is_32_bit?

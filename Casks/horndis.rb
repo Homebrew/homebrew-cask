@@ -1,4 +1,4 @@
-class Horndis < Cask
+cask :v1 => 'horndis' do
   version '7'
   sha256 '6e12e75a07ed729986cc0d7a25faa1aa1171c2e4a8ddf3ccf819a35a20c6e98d'
 

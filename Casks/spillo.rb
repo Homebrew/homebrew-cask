@@ -1,4 +1,4 @@
-class Spillo < Cask
+cask :v1 => 'spillo' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Boom < Cask
+cask :v1 => 'boom' do
   version :latest
   sha256 :no_check
 

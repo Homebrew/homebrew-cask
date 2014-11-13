@@ -1,4 +1,4 @@
-class Noisy < Cask
+cask :v1 => 'noisy' do
   version :latest
   sha256 :no_check
 

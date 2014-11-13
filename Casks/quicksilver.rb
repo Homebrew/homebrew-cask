@@ -1,4 +1,4 @@
-class Quicksilver < Cask
+cask :v1 => 'quicksilver' do
   version '1.2.0'
   sha256 '08c5aeaa7fe89427bcec30a9700eb0b7484bd68b647776b2c82c95355d1679d4'
 

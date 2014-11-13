@@ -1,4 +1,4 @@
-class Futuniuniu < Cask
+cask :v1 => 'futuniuniu' do
   version '2.14.316'
   sha256 'abe44dc80551e6cfaea7bc2265997766fd3fadd68a2f859193db732598516028'
 

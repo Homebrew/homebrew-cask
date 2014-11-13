@@ -1,4 +1,4 @@
-class Radbeacon < Cask
+cask :v1 => 'radbeacon' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Hr < Cask
+cask :v1 => 'hr' do
   version :latest
   sha256 :no_check
 

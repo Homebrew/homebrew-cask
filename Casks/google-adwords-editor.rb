@@ -1,4 +1,4 @@
-class GoogleAdwordsEditor < Cask
+cask :v1 => 'google-adwords-editor' do
   version '10.4.1'
   sha256 '570d606ac6593ac31a82ece928d7b04ad6f0355b0f58382e604be7f922c4c4ba'
 

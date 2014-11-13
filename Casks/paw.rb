@@ -1,4 +1,4 @@
-class Paw < Cask
+cask :v1 => 'paw' do
   version :latest
   sha256 :no_check
 

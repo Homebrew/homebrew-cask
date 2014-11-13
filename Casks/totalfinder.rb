@@ -1,4 +1,4 @@
-class Totalfinder < Cask
+cask :v1 => 'totalfinder' do
   version '1.6.17'
   sha256 'f2badde257b54c5dad8c3cce46afc5f4511f1d91ef6ad4a80e3522faa2331106'
 

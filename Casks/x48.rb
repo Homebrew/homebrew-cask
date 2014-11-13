@@ -1,4 +1,4 @@
-class X48 < Cask
+cask :v1 => 'x48' do
   # note: "48" is not a version number, but an intrinsic part of the product name
   version '0.6.4'
   sha256 '21184fceec8fd471d034932ac9b49f41c98cd5d730fa3fb02ccf0bcf02951f70'

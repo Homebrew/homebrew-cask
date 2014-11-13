@@ -1,4 +1,4 @@
-class OperaMobileEmulator < Cask
+cask :v1 => 'opera-mobile-emulator' do
   version '12.1'
   sha256 'de7e456dae31d140eefa25dae55e96b9dd773167d72c4e0ff407002922a05f1f'
 

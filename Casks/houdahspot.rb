@@ -1,4 +1,4 @@
-class Houdahspot < Cask
+cask :v1 => 'houdahspot' do
   version :latest
   sha256 :no_check
 

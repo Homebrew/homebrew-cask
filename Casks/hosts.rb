@@ -1,4 +1,4 @@
-class Hosts < Cask
+cask :v1 => 'hosts' do
   version '1.3'
   sha256 '70a73c0fb9f8d9f60f2bc24e549ae2bb6fefa27f59e81d3edf64daccfd6d0ab0'
 

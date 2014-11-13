@@ -1,4 +1,4 @@
-class Todoist < Cask
+cask :v1 => 'todoist' do
   version :latest
   sha256 :no_check
 

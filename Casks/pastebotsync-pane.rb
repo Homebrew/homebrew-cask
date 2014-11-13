@@ -1,4 +1,4 @@
-class PastebotsyncPane < Cask
+cask :v1 => 'pastebotsync-pane' do
   version :latest
   sha256 :no_check
 

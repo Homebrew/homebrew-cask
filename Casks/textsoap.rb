@@ -1,4 +1,4 @@
-class Textsoap < Cask
+cask :v1 => 'textsoap' do
   version :latest
   sha256 :no_check
 

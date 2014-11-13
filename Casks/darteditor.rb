@@ -1,4 +1,4 @@
-class Darteditor < Cask
+cask :v1 => 'darteditor' do
   version :latest
   sha256 :no_check
 

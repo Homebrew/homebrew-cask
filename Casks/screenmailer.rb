@@ -1,4 +1,4 @@
-class Screenmailer < Cask
+cask :v1 => 'screenmailer' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Scriptql < Cask
+cask :v1 => 'scriptql' do
   version :latest
   sha256 :no_check
 

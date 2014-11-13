@@ -1,4 +1,4 @@
-class WacomTablet < Cask
+cask :v1 => 'wacom-tablet' do
   version '6.3.8-2'
   sha256 'a1812ba11896841fd592de889753aaf50fd86bb6278c05270a1f8a0c80365969'
 

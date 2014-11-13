@@ -1,4 +1,4 @@
-class Omniplan < Cask
+cask :v1 => 'omniplan' do
   version :latest
   sha256 :no_check
 

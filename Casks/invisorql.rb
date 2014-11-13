@@ -1,4 +1,4 @@
-class Invisorql < Cask
+cask :v1 => 'invisorql' do
   version :latest
   sha256 :no_check
 

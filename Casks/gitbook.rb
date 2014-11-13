@@ -1,4 +1,4 @@
-class Gitbook < Cask
+cask :v1 => 'gitbook' do
   version :latest
   sha256 :no_check
 

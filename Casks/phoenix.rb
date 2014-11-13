@@ -1,4 +1,4 @@
-class Phoenix < Cask
+cask :v1 => 'phoenix' do
   version :latest
   sha256 :no_check
 

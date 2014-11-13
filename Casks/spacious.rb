@@ -1,4 +1,4 @@
-class Spacious < Cask
+cask :v1 => 'spacious' do
   version :latest
   sha256 :no_check
 

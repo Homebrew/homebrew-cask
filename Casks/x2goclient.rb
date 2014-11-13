@@ -1,4 +1,4 @@
-class X2goclient < Cask
+cask :v1 => 'x2goclient' do
   version :latest
   sha256 :no_check
 

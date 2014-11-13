@@ -1,4 +1,4 @@
-class Fakethunder < Cask
+cask :v1 => 'fakethunder' do
   version '2.0.17'
   sha256 'c4f2d26535279e84b4b82d1e203b0efcc3bfaaed796d9fa7b587b17282f57a10'
 

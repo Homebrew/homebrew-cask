@@ -1,4 +1,4 @@
-class Blueharvest < Cask
+cask :v1 => 'blueharvest' do
   version '6.1.2'
   sha256 '51ce55e1cadad80abf198088459e378c28ee7695c23f1ac7f6a48919c4f42c06'
 

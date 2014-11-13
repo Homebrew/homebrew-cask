@@ -1,4 +1,4 @@
-class RemoteDesktopConnection < Cask
+cask :v1 => 'remote-desktop-connection' do
   version '2.1.1'
   sha256 '4ebe551c9ee0e2da6b8f746be13c2df342c6f14cd3fbedbf2ab490f09b44616f'
 

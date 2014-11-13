@@ -1,4 +1,4 @@
-class BatteryReport < Cask
+cask :v1 => 'battery-report' do
   version :latest
   sha256 :no_check
 

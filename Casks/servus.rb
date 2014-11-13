@@ -1,4 +1,4 @@
-class Servus < Cask
+cask :v1 => 'servus' do
   version :latest
   sha256 :no_check
 

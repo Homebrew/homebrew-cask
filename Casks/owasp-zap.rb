@@ -1,4 +1,4 @@
-class OwaspZap < Cask
+cask :v1 => 'owasp-zap' do
   version '2.2.2'
   sha256 'b83f9808bbda4b9c34c7aba8d62e49c12337457b5ffed423c2ad08c8bcd048fb'
 

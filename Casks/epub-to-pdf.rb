@@ -1,4 +1,4 @@
-class EpubToPdf < Cask
+cask :v1 => 'epub-to-pdf' do
   version '3.1'
   sha256 'dcfc59d57f756802e844614b7dae43bca67284ec85fe6b909f244e41f20987b3'
 

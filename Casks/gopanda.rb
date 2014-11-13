@@ -1,4 +1,4 @@
-class Gopanda < Cask
+cask :v1 => 'gopanda' do
   version :latest
   sha256 :no_check
 

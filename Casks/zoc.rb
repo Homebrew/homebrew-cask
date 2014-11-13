@@ -1,4 +1,4 @@
-class Zoc < Cask
+cask :v1 => 'zoc' do
   version '6.60'
   sha256 '2a73ceaa1515d2d2321905dc667e62bbc8c99d87fbfc5d003156d59b2c2d7e7b'
 

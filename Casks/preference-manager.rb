@@ -1,4 +1,4 @@
-class PreferenceManager < Cask
+cask :v1 => 'preference-manager' do
   version :latest
   sha256 :no_check
 

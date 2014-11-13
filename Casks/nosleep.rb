@@ -1,4 +1,4 @@
-class Nosleep < Cask
+cask :v1 => 'nosleep' do
   version '1.3.3'
   sha256 '5fe90c54e975d3f1de9f7fdb66def0188c571eab083b18a7e94abaa5f0d41ba9'
 

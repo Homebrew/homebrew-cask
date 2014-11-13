@@ -1,4 +1,4 @@
-class Ifilex < Cask
+cask :v1 => 'ifilex' do
   version :latest
   sha256 :no_check
 

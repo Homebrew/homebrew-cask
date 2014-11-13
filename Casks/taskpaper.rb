@@ -1,4 +1,4 @@
-class Taskpaper < Cask
+cask :v1 => 'taskpaper' do
   version :latest
   sha256 :no_check
 

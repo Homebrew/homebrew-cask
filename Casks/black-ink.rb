@@ -1,4 +1,4 @@
-class BlackInk < Cask
+cask :v1 => 'black-ink' do
   version '1.6.1'
   sha256 'efef4a810b5708478341e92f911aadc4e8f75b285a0bd7b37087d5252d0f6175'
 

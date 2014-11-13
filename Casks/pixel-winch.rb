@@ -1,4 +1,4 @@
-class PixelWinch < Cask
+cask :v1 => 'pixel-winch' do
   version :latest
   sha256 :no_check
 

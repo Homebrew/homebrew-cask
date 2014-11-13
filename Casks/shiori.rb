@@ -1,4 +1,4 @@
-class Shiori < Cask
+cask :v1 => 'shiori' do
   version '1.0.2'
   sha256 'c832edc2762fdaadc80bfe042ee6f7bd128955e3d7b27bdc5baf5806a0c8a719'
 

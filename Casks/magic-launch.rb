@@ -1,4 +1,4 @@
-class MagicLaunch < Cask
+cask :v1 => 'magic-launch' do
   version '1.4.3'
   sha256 'f209f58e22c5881dc226b294181cc324a9e446425548b5de35c6f26bab1c7a4d'
 

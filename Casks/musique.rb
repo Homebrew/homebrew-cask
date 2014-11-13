@@ -1,4 +1,4 @@
-class Musique < Cask
+cask :v1 => 'musique' do
   version :latest
   sha256 :no_check
 

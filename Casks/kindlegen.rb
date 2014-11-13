@@ -1,4 +1,4 @@
-class Kindlegen < Cask
+cask :v1 => 'kindlegen' do
   version '2.9'
   sha256 '45e5feac97f0590038a911fffd7d332973d88a40ad52135dce89afed33e7236c'
 

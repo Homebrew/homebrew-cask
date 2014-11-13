@@ -1,4 +1,4 @@
-class WebpQuicklook < Cask
+cask :v1 => 'webp-quicklook' do
   version '2.1'
   sha256 '9efbdd2b3dcb44d41a53c1cb6ce64397fd00bd399189b1b742d2f4b2de28f437'
 

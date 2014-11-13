@@ -1,4 +1,4 @@
-class Fourpeaks < Cask
+cask :v1 => 'fourpeaks' do
   version :latest
   sha256 :no_check
 

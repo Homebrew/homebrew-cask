@@ -1,4 +1,4 @@
-class Fseventer < Cask
+cask :v1 => 'fseventer' do
   version :latest
   sha256 :no_check
 

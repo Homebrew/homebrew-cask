@@ -1,4 +1,4 @@
-class Retroarch < Cask
+cask :v1 => 'retroarch' do
   version '1.0.0.2'
 
   if MacOS.version < :lion

@@ -1,4 +1,4 @@
-class Quickradar < Cask
+cask :v1 => 'quickradar' do
   version '1.0b1'
   sha256 '4b40450a5710d9b6efc33051bc2f611b0c88e3d5f387a5fdd1a90773d28d90a8'
 

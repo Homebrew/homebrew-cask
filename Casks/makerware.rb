@@ -1,4 +1,4 @@
-class Makerware < Cask
+cask :v1 => 'makerware' do
   version '2.4.1.35'
   sha256 'bb01a6b2b2f46d8e1ec9522fe3f914646c39550f10d9fde8f0e830f670e933a8'
 

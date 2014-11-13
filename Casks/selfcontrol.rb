@@ -1,4 +1,4 @@
-class Selfcontrol < Cask
+cask :v1 => 'selfcontrol' do
   version '2.0.2'
   sha256 'cd1fb7bd5524d81e784ad67f8639cfb836261f07d7e6db75458a398b17f9a1f9'
 

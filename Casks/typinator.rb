@@ -1,4 +1,4 @@
-class Typinator < Cask
+cask :v1 => 'typinator' do
   version '6.2'
   sha256 '4b9b3acc26716dbf01951043f0102489ffd32436cdad6820e382dbb5b1fa0eb6'
 

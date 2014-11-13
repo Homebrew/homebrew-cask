@@ -1,4 +1,4 @@
-class ScalaIde < Cask
+cask :v1 => 'scala-ide' do
   version '3.0.3'
   sha256 '74c0ed0a2ca9d5b7cad39142d436bf88db55e75f85f885c74a4b8a164e814ee1'
 

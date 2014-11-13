@@ -1,4 +1,4 @@
-class Brytonbridge < Cask
+cask :v1 => 'brytonbridge' do
   version :latest
   sha256 :no_check
 

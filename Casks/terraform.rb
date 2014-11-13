@@ -1,4 +1,4 @@
-class Terraform < Cask
+cask :v1 => 'terraform' do
   version '0.3.1'
   sha256 'dda41425c7eb06c5e8b3f5ad4904e993aa8a9ab6b61f954ee2e259667cb6ff57'
 

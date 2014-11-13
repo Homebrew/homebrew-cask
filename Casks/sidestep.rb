@@ -1,4 +1,4 @@
-class Sidestep < Cask
+cask :v1 => 'sidestep' do
   version '1.4.1'
   sha256 'c25f7748d73b6f915aff268070ef85ca69f2902de98b044b77c49d1e1341d84e'
 

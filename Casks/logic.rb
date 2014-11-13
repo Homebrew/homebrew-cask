@@ -1,4 +1,4 @@
-class Logic < Cask
+cask :v1 => 'logic' do
   version '1.1.15'
   sha256 '1c37d6809bfb6daec88a7a34c6f056b93179c2471385f5e7be4d4271995995b1'
 

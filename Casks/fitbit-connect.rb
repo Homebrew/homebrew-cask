@@ -1,4 +1,4 @@
-class FitbitConnect < Cask
+cask :v1 => 'fitbit-connect' do
   version '1.0.3.5510'
   sha256 '14ffe8fdc6040cbcb17e551e04cdbe1dabcff99641eed6a2495631d2b83ffc0f'
 

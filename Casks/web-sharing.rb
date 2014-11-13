@@ -1,4 +1,4 @@
-class WebSharing < Cask
+cask :v1 => 'web-sharing' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Astrill < Cask
+cask :v1 => 'astrill' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Typewriter < Cask
+cask :v1 => 'typewriter' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class PentahoDataIntegration < Cask
+cask :v1 => 'pentaho-data-integration' do
   version :latest
   sha256 :no_check
 

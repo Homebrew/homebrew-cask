@@ -1,4 +1,4 @@
-class Shimo < Cask
+cask :v1 => 'shimo' do
   version :latest
   sha256 :no_check
 

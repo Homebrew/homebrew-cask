@@ -1,4 +1,4 @@
-class Gnucash < Cask
+cask :v1 => 'gnucash' do
   version '2.6.4-5'
   sha256 '8c9701cbc6acf191b682d80c5e2eedd5dc4099ccaacacef3f89cecd967ca8651'
 

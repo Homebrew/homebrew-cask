@@ -1,4 +1,4 @@
-class DeliveryStatus < Cask
+cask :v1 => 'delivery-status' do
   version '6.1.2'
   sha256 'f39afd137c99df16baf149c60f1a982edb9485f6211f4aefb9cad19af7a51514'
 

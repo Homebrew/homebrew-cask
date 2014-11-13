@@ -1,4 +1,4 @@
-class Fission < Cask
+cask :v1 => 'fission' do
   version :latest
   sha256 :no_check
 

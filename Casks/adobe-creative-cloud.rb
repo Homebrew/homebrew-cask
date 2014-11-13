@@ -1,4 +1,4 @@
-class AdobeCreativeCloud < Cask
+cask :v1 => 'adobe-creative-cloud' do
   version :latest
   sha256 :no_check
 

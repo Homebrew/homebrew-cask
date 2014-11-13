@@ -1,4 +1,4 @@
-class Linphone < Cask
+cask :v1 => 'linphone' do
   version '3.7.0'
   sha256 '4d4a01354a7b5cd011746d3477a93ffb6e531ff8e2afccd2b9bb031f06cc42cc'
 

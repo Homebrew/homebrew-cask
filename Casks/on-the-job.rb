@@ -1,4 +1,4 @@
-class OnTheJob < Cask
+cask :v1 => 'on-the-job' do
   version :latest
   sha256 :no_check
 

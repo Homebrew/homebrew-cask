@@ -1,4 +1,4 @@
-class Isolator < Cask
+cask :v1 => 'isolator' do
   version '4.9beta'
   sha256 '0f77f1165223196af77df9565f0573bce4d42ac6c327c73bb01c6eaa74081d6c'
 

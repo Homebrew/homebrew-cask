@@ -1,4 +1,4 @@
-class Itweax < Cask
+cask :v1 => 'itweax' do
   version :latest
   sha256 :no_check
 

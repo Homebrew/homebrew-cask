@@ -1,4 +1,4 @@
-class Sandbox < Cask
+cask :v1 => 'sandbox' do
   version :latest
   sha256 :no_check
 

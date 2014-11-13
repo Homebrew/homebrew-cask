@@ -1,4 +1,4 @@
-class Everweb < Cask
+cask :v1 => 'everweb' do
   version :latest
   sha256 :no_check
 

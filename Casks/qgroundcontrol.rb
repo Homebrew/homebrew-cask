@@ -1,4 +1,4 @@
-class Qgroundcontrol < Cask
+cask :v1 => 'qgroundcontrol' do
   version :latest
   sha256 :no_check
 

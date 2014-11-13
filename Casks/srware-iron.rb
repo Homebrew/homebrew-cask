@@ -1,4 +1,4 @@
-class SrwareIron < Cask
+cask :v1 => 'srware-iron' do
   version :latest
   sha256 :no_check
 

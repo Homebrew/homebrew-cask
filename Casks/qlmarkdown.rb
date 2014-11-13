@@ -1,4 +1,4 @@
-class Qlmarkdown < Cask
+cask :v1 => 'qlmarkdown' do
   version '1.3.3'
   sha256 '045712562665673924397bbbef1ee1157b44e23c9744feda6feda27e107802d3'
 

@@ -1,4 +1,4 @@
-class ScansnapManager < Cask
+cask :v1 => 'scansnap-manager' do
   version '6.2L10'
   sha256 '7273034398e9a57eb0fa89167c9e801ad2bf9fe56b52b3d9591628e978168afb'
 

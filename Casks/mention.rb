@@ -1,4 +1,4 @@
-class Mention < Cask
+cask :v1 => 'mention' do
   version :latest
   sha256 :no_check
 

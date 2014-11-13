@@ -1,4 +1,4 @@
-class PlexHomeTheater < Cask
+cask :v1 => 'plex-home-theater' do
   version '1.2.3.378-0c92ed32'
 
   if Hardware::CPU.is_32_bit?

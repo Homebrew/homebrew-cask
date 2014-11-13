@@ -1,4 +1,4 @@
-class Reveal < Cask
+cask :v1 => 'reveal' do
   version :latest
   sha256 :no_check
 

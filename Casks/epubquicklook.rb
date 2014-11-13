@@ -1,4 +1,4 @@
-class Epubquicklook < Cask
+cask :v1 => 'epubquicklook' do
   version :latest
   sha256 :no_check
 

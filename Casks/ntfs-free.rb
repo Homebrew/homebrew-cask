@@ -1,4 +1,4 @@
-class NtfsFree < Cask
+cask :v1 => 'ntfs-free' do
   version '10.8.2'
   sha256 '1bc7122a2d869b740a35e2dba1fe29c380f21ad07481fc0a46b2f55bf79c574e'
 

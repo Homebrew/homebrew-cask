@@ -1,4 +1,4 @@
-class ApacheDirectoryStudio < Cask
+cask :v1 => 'apache-directory-studio' do
   version '2.0.0.v20130628'
   sha256 '60914cc67f893afdc8bf537fa67a48cb7cd96357e7d28595a2c22a74a19f02e3'
 

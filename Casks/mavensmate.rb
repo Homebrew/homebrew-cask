@@ -1,4 +1,4 @@
-class Mavensmate < Cask
+cask :v1 => 'mavensmate' do
   version :latest
   sha256 :no_check
 

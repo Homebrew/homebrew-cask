@@ -1,4 +1,4 @@
-class Yorufukurou < Cask
+cask :v1 => 'yorufukurou' do
   version :latest
   sha256 :no_check
 

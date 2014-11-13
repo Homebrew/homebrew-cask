@@ -1,4 +1,4 @@
-class Istumbler < Cask
+cask :v1 => 'istumbler' do
   version '100'
   sha256 'f8d9ff03fc2d9feeb05fafa1c9fc1133b6e2017b1ef5235bab4fa12ae4250773'
 

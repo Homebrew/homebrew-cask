@@ -1,4 +1,4 @@
-class UbuntuOne < Cask
+cask :v1 => 'ubuntu-one' do
   version :latest
   sha256 :no_check
 

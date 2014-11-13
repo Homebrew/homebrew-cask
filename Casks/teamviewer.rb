@@ -1,4 +1,4 @@
-class Teamviewer < Cask
+cask :v1 => 'teamviewer' do
   version :latest
   sha256 :no_check
 

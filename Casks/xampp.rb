@@ -1,4 +1,4 @@
-class Xampp < Cask
+cask :v1 => 'xampp' do
   version '1.8.3.3'
   sha256 'b54cced0697caa418851a4bdb11ee1697b3f7f71130e1e6bce19582d60e41530'
 

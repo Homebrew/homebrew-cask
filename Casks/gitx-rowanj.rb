@@ -1,4 +1,4 @@
-class GitxRowanj < Cask
+cask :v1 => 'gitx-rowanj' do
   version :latest
   sha256 :no_check
 

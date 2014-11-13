@@ -1,4 +1,4 @@
-class Alib1 < Cask
+cask :v1 => 'alib1' do
   # note: "1" is not a version number, but an intrinsic part of the product name
   version :latest
   sha256 :no_check

@@ -1,4 +1,4 @@
-class Slic3r < Cask
+cask :v1 => 'slic3r' do
   version '1.1.7'
   sha256 '41ae1c3c5ee7ddeb2431698b63f6e4112c68b830de9f024730388a1eb062f80b'
 

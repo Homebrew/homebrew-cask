@@ -1,4 +1,4 @@
-class ApimacTimer < Cask
+cask :v1 => 'apimac-timer' do
   version :latest
   sha256 :no_check
 

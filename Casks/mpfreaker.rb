@@ -1,4 +1,4 @@
-class Mpfreaker < Cask
+cask :v1 => 'mpfreaker' do
   version :latest
   sha256 :no_check
 

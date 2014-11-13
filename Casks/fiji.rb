@@ -1,4 +1,4 @@
-class Fiji < Cask
+cask :v1 => 'fiji' do
   version :latest
   sha256 :no_check
 

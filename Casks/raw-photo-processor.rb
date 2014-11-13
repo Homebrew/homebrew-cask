@@ -1,4 +1,4 @@
-class RawPhotoProcessor < Cask
+cask :v1 => 'raw-photo-processor' do
   version '4.7.2'
   sha256 'ef300adaaf3399f43741a51f06c062a34c4e809eecdbbffce2cd15af414fbd7f'
 

@@ -1,4 +1,4 @@
-class Lyx < Cask
+cask :v1 => 'lyx' do
   version '2.1.2'
   sha256 '2230c29e1ac0334b2c58bf072c28bbd9a9e2c98eaab90adf04d25f9e12dd3730'
 

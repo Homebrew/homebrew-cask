@@ -1,4 +1,4 @@
-class Rubymine < Cask
+cask :v1 => 'rubymine' do
   version '7.0'
   sha256 '60ceca89231a9756e682d754aaba409c9120266f20478e51f7b6004f82919478'
 

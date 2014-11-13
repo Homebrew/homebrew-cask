@@ -1,5 +1,5 @@
 # encoding: UTF-8
-class Tuneinstructor < Cask
+cask :v1 => 'tuneinstructor' do
   version '3.4'
   sha256 '7909eeaf0b3cbe41c511f2c450a6249c9d8a311a482547cf8fc11537b11ecbd4'
 

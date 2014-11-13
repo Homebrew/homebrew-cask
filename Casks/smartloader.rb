@@ -1,4 +1,4 @@
-class Smartloader < Cask
+cask :v1 => 'smartloader' do
   version :latest
   sha256 :no_check
 

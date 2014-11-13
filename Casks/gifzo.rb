@@ -1,4 +1,4 @@
-class Gifzo < Cask
+cask :v1 => 'gifzo' do
   version :latest
   sha256 :no_check
 

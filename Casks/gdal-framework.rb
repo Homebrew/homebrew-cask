@@ -1,4 +1,4 @@
-class GdalFramework < Cask
+cask :v1 => 'gdal-framework' do
   version '1.11'
   sha256 'd8aa6d59236a75519e94a764dfc71d3122c8e88fa4f99072046c3a8a0bfb4124'
 

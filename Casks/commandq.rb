@@ -1,4 +1,4 @@
-class Commandq < Cask
+cask :v1 => 'commandq' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class FieryColorProfilerSuite < Cask
+cask :v1 => 'fiery-color-profiler-suite' do
   version '4.6.2.08'
   sha256 'cc9614227e7f3e24fbb8862fc16ae1e27d81e8e03f2c07ad30a0ed9823b1c92f'
 

@@ -1,4 +1,4 @@
-class Librecad < Cask
+cask :v1 => 'librecad' do
   version '2.0.5'
 
   if MacOS.version <= :mountain_lion

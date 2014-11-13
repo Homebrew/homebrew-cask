@@ -1,4 +1,4 @@
-class Reflector < Cask
+cask :v1 => 'reflector' do
   version :latest
   sha256 :no_check
 

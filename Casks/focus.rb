@@ -1,4 +1,4 @@
-class Focus < Cask
+cask :v1 => 'focus' do
   version :latest
   sha256 :no_check
 
