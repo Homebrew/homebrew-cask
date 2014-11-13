@@ -1,4 +1,4 @@
-class Tactor < Cask
+cask :v1 => 'tactor' do
   version :latest
   sha256 :no_check
 
