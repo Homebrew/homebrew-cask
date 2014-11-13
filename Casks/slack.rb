@@ -1,4 +1,4 @@
-class Slack < Cask
+cask :v1 => 'slack' do
   version '1.0'
   sha256 '3cb5c52077388042006104d18ec1b7c230ededcf9f9691df2a42687e86f3b40c'
 
