@@ -1,4 +1,4 @@
-class Onyx < Cask
+cask :v1 => 'onyx' do
   version :latest
   sha256 :no_check
 
