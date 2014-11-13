@@ -9,6 +9,6 @@ class PdExtended < Cask
   app 'Pd-extended.app'
 
   uninstall_preflight do
-    system '/bin/chmod', '-R', '--', 'u+w', "#{destination_path}/Pd-extended.app"
+    system '/bin/chmod', '-R', '--', 'u+w', "#{staged_path}/Pd-extended.app"
   end
 end
