@@ -1,4 +1,4 @@
-class LogitechHarmony < Cask
+cask :v1 => 'logitech-harmony' do
   version '7.8.1'
   sha256 '13a100211fb18569563c9d9bbe6c231cbfaa50989df0b471703ec942be2ecafb'
 
