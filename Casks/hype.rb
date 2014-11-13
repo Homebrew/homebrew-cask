@@ -1,4 +1,4 @@
-class Hype < Cask
+cask :v1 => 'hype' do
   version :latest
   sha256 :no_check
 
