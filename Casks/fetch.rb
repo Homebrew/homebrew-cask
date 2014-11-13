@@ -1,4 +1,4 @@
-class Fetch < Cask
+cask :v1 => 'fetch' do
   version '5.7.3'
   sha256 'fd75b4ab78211cc067906341576657e41e130080ce05a1f20947a6acbb816ea3'
 
