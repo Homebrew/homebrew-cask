@@ -1,4 +1,4 @@
-class Tcpblock < Cask
+cask :v1 => 'tcpblock' do
   version '4.2'
   sha256 '06e2d57c36c30581a856c98b288833d3f31c9626561dac9e0cbf76a760f38725'
 
