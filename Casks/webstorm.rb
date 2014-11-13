@@ -1,4 +1,4 @@
-class Webstorm < Cask
+cask :v1 => 'webstorm' do
   version '9.0'
   sha256 '278b1692c9aa17b44d15a801a50714624ab7dea9aedda364f08fa45b7ff66766'
 
