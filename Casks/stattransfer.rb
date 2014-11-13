@@ -1,4 +1,4 @@
-class Stattransfer < Cask
+cask :v1 => 'stattransfer' do
   version '12'
   sha256 '2559dffffd73f996604860e6fbdf2fd3ef4903bf8a37acc6016b6ea52affebd2'
 
