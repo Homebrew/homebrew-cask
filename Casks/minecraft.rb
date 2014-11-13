@@ -1,4 +1,4 @@
-class Minecraft < Cask
+cask :v1 => 'minecraft' do
   version :latest
   sha256 :no_check
 
