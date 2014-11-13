@@ -1,4 +1,4 @@
-class ThirtyThreeRpm < Cask
+cask :v1 => 'thirty-three-rpm' do
   version :latest
   sha256 :no_check
 
