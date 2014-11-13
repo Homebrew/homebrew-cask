@@ -1,4 +1,4 @@
-class Undercover < Cask
+cask :v1 => 'undercover' do
   version '6.0'
   sha256 '07d9b20eba2a873e538e4f2ae4c1dcafafd282fb8af01f3374b08e54069d9932'
 
