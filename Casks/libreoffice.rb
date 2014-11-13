@@ -1,4 +1,4 @@
-class Libreoffice < Cask
+cask :v1 => 'libreoffice' do
   version '4.3.3'
 
   if Hardware::CPU.is_32_bit? or MacOS.version < :mountain_lion
