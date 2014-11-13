@@ -1,4 +1,4 @@
-class Younited < Cask
+cask :v1 => 'younited' do
   version :latest
   sha256 :no_check
 
