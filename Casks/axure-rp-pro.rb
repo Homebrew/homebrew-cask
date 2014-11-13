@@ -1,4 +1,4 @@
-class AxureRpPro < Cask
+cask :v1 => 'axure-rp-pro' do
   version :latest
   sha256 :no_check
 
