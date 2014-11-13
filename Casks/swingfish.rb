@@ -1,4 +1,4 @@
-class Swingfish < Cask
+cask :v1 => 'swingfish' do
   version :latest
   sha256 :no_check
 
