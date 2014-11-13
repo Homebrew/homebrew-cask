@@ -1,4 +1,4 @@
-class PdExtended < Cask
+cask :v1 => 'pd-extended' do
   version '0.43.4'
   sha256 'abe7bd637b1495ad9d5a500f0a18550c1600e34ee17e60aa1a48e4dbdee59bb9'
 
