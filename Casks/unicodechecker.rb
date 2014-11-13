@@ -1,4 +1,4 @@
-class Unicodechecker < Cask
+cask :v1 => 'unicodechecker' do
   version :latest
   sha256 :no_check
 
