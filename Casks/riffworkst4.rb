@@ -1,4 +1,4 @@
-class Riffworkst4 < Cask
+cask :v1 => 'riffworkst4' do
   # note: "4" is not a version number, but an intrinsic part of product name "T4"
   version '2.6'
   sha256 '83c51fa4a08ad19f92418572e11b09ebb33f9a0341ff9e0173d0eb0c7709cddb'
