@@ -1,4 +1,4 @@
-class Weibox < Cask
+cask :v1 => 'weibox' do
   version '2.6.1'
   sha256 '60c023ba7cc9f93ac72a7b1a4e8a518595348f4f6d8c4fbef0af8822c318a908'
 
