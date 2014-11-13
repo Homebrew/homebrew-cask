@@ -1,4 +1,4 @@
-class Ukelele < Cask
+cask :v1 => 'ukelele' do
   version '2.2.8'
   sha256 'e6200f418dee4ad10fa126536218086273ef8e896b95ede8ba73ddb42ed02ec3'
 
