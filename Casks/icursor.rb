@@ -1,4 +1,4 @@
-class Icursor < Cask
+cask :v1 => 'icursor' do
   version :latest
   sha256 :no_check
 
