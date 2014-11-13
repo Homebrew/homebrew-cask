@@ -1,4 +1,4 @@
-class Flux < Cask
+cask :v1 => 'flux' do
   version :latest
   sha256 :no_check
 
