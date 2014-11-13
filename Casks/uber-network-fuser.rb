@@ -1,4 +1,4 @@
-class UberNetworkFuser < Cask
+cask :v1 => 'uber-network-fuser' do
   version '1.701'
   sha256 'd2f919a466d093da30e66a664d716a96ea0e1167c887ace8fb30d2e55c6c3c7d'
 
