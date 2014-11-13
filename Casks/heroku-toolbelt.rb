@@ -1,4 +1,4 @@
-class HerokuToolbelt < Cask
+cask :v1 => 'heroku-toolbelt' do
   version :latest
   sha256 :no_check
 
