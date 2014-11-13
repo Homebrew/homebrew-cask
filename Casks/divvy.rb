@@ -1,4 +1,4 @@
-class Divvy < Cask
+cask :v1 => 'divvy' do
   version :latest
   sha256 :no_check
 
