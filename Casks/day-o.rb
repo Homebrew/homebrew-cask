@@ -1,4 +1,4 @@
-class DayO < Cask
+cask :v1 => 'day-o' do
   version :latest
   sha256 :no_check
 
