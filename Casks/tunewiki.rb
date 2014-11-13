@@ -1,4 +1,4 @@
-class Tunewiki < Cask
+cask :v1 => 'tunewiki' do
   version :latest
   sha256 :no_check
 
