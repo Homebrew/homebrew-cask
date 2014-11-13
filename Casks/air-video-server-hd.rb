@@ -1,4 +1,4 @@
-class AirVideoServerHd < Cask
+cask :v1 => 'air-video-server-hd' do
   version '2.0.2'
   sha256 'b0a0ef30fcb19de24051fe32e5de0eb601d65664fe71a8cfb4e3243d49c1e1d5'
 
