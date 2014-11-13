@@ -1,4 +1,4 @@
-class Xmplify < Cask
+cask :v1 => 'xmplify' do
   version :latest
   sha256 :no_check
 
