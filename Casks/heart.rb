@@ -9,7 +9,7 @@ class Heart < Cask
   screen_saver 'presstube-heart.app/Contents/Resources/Presstube - Heart.saver'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName Heart (Presstube)', "#{destination_path}/presstube-heart.app/Contents/Resources/Presstube - Heart.saver/Contents/Info.plist"
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName Heart (Presstube)', "#{staged_path}/presstube-heart.app/Contents/Resources/Presstube - Heart.saver/Contents/Info.plist"
   end
 
   caveats <<-EOS.undent
