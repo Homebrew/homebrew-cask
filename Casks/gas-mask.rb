@@ -1,4 +1,4 @@
-class GasMask < Cask
+cask :v1 => 'gas-mask' do
   version '0.8.1'
   sha256 'f384e973603088ed5afbe841ef7d5698262988c65a0437a9d8011dcb667fcc2e'
 
