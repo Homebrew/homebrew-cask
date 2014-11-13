@@ -1,4 +1,4 @@
-class LittleSnitch < Cask
+cask :v1 => 'little-snitch' do
   version '3.4.2'
   sha256 'ddb2e739334d759508bb356ae7b18a3228664fd5a6d5aff39d355f8c0d23e8b3'
 
