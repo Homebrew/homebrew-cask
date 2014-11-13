@@ -1,4 +1,4 @@
-class Cloudup < Cask
+cask :v1 => 'cloudup' do
   version :latest
   sha256 :no_check
 
