@@ -1,4 +1,4 @@
-class D235jXbox360ControllerDriver < Cask
+cask :v1 => 'd235j-xbox360-controller-driver' do
   version '0.14'
   sha256 '520d78f43006202956a985c073bac901e85151361fdecb9af37f94b61e3effeb'
 
