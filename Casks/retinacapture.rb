@@ -1,4 +1,4 @@
-class Retinacapture < Cask
+cask :v1 => 'retinacapture' do
   version :latest
   sha256 :no_check
 
