@@ -1,4 +1,4 @@
-class HopperDisassembler < Cask
+cask :v1 => 'hopper-disassembler' do
   version :latest
   sha256 :no_check
 
