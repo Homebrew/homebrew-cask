@@ -1,4 +1,4 @@
-class Pngyu < Cask
+cask :v1 => 'pngyu' do
   version '1.0.1'
   sha256 'f853a3566236200391a40d12df9519b39f4d30053ab6ed6f60670b7eacca6217'
 
