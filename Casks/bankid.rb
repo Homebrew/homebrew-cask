@@ -8,7 +8,7 @@ class Bankid < Cask
 
   container :type => :naked
   preflight do
-    system '/bin/mv', '--', destination_path.join('FileDownloader'), destination_path.join('bankid-latest.pkg')
+    system '/bin/mv', '--', staged_path.join('FileDownloader'), destination_path.join('bankid-latest.pkg')
   end
 
   pkg 'bankid-latest.pkg'

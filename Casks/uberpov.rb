@@ -11,7 +11,7 @@ class Uberpov < Cask
     <<-EOS.undent
       The standard UberPOV include path is:
 
-        #{destination_path}/Uberpov_Mac/include/
+        #{staged_path}/Uberpov_Mac/include/
 
       Before starting any renders, you may want to set the include path in
       UberPOV's preferences under
@@ -20,7 +20,7 @@ class Uberpov < Cask
 
       Sample scenes will be installed at:
 
-        #{destination_path}/Uberpov_Mac/scenes/
+        #{staged_path}/Uberpov_Mac/scenes/
     EOS
   end
 end

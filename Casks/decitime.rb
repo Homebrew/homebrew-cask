@@ -13,6 +13,6 @@ class Decitime < Cask
   # https://github.com/caskroom/homebrew-cask/pull/2654
   preflight do
     # todo the nested_container hack must be revised when container :nested stops being an alias around 0.50.0
-    system %Q{/usr/bin/hdiutil eject "$(/usr/bin/hdiutil mount -readwrite -noidme -nobrowse -mountrandom /tmp #{destination_path.join(artifacts[:nested_container].first)} | /usr/bin/cut -f3 -- - | /usr/bin/grep -- '.' -)" >/dev/null 2>&1}
+    system %Q{/usr/bin/hdiutil eject "$(/usr/bin/hdiutil mount -readwrite -noidme -nobrowse -mountrandom /tmp #{staged_path.join(artifacts[:nested_container].first)} | /usr/bin/cut -f3 -- - | /usr/bin/grep -- '.' -)" >/dev/null 2>&1}
   end
 end

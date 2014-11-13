@@ -10,7 +10,7 @@ class Parallels < Cask
 
   postflight do
     # Set the file to visible, since it was hidden in the dmg
-    system '/usr/bin/SetFile', '-a', 'v', destination_path.join("Parallels Desktop.app")
+    system '/usr/bin/SetFile', '-a', 'v', staged_path.join("Parallels Desktop.app")
   end
 
   uninstall :delete => [

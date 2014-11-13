@@ -17,13 +17,13 @@ class Fenics < Cask
       available when you start your shell by adding the following to the .profile
       file in your home directory:
 
-        source #{destination_path}/FEniCS.app/Contents/Resources/share/fenics/fenics.conf
+        source #{staged_path}/FEniCS.app/Contents/Resources/share/fenics/fenics.conf
 
       If you are using an alternate shell (e.g., zsh, csh) or a modified or brewed Python,
       be sure to launch FEniCS using a clean (bash) shell.
       Creating a new shell using the following command works well:
 
-        /bin/bash --rcfile #{destination_path}/FEniCS.app/Contents/Resources/share/fenics/fenics.conf
+        /bin/bash --rcfile #{staged_path}/FEniCS.app/Contents/Resources/share/fenics/fenics.conf
     EOS
   end
 end

@@ -7,7 +7,7 @@ class Nodeclipse < Cask
   license :oss
 
   preflight do
-    system '/bin/mv', '--', destination_path.join('eclipse/Eclipse.app'), destination_path.join('eclipse/Nodeclipse.app')
+    system '/bin/mv', '--', staged_path.join('eclipse/Eclipse.app'), destination_path.join('eclipse/Nodeclipse.app')
   end
   app 'eclipse/Nodeclipse.app'
 end
