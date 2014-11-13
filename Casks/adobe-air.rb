@@ -1,4 +1,4 @@
-class AdobeAir < Cask
+cask :v1 => 'adobe-air' do
   version '15.0'
   sha256 '0fd04ae2ecb839a70b148a8194db1143fb3c2a8a2000d42e579c08aca65c0691'
 
