@@ -1,4 +1,4 @@
-class Vienna < Cask
+cask :v1 => 'vienna' do
   version '3.0.0_rc9'
   sha256 '5d6c85ab3e59d581efe37aa0e7a035ebeae1688a4d7e283bb9eed72c8c2bb606'
 
