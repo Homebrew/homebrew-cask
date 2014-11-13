@@ -1,4 +1,4 @@
-class Ireadfast < Cask
+cask :v1 => 'ireadfast' do
   version '2.0'
   sha256 '0bc213c6da72a7917ceba8a9de46e307933608cd6d2bf397770517401ab3d98c'
 
