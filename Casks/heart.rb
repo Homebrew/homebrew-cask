@@ -1,4 +1,4 @@
-class Heart < Cask
+cask :v1 => 'heart' do
   version :latest
   sha256 :no_check
 
