@@ -1,4 +1,4 @@
-class P5 < Cask
+cask :v1 => 'p5' do
   version '0.1.8'
   sha256 '3a46a98995b43e792d7e7f7407aba1503084cf37339064711abcfad54dd5c094'
 
