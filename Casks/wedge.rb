@@ -1,4 +1,4 @@
-class Wedge < Cask
+cask :v1 => 'wedge' do
   version :latest
   sha256 :no_check
 
