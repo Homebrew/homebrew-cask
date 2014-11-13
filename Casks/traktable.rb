@@ -1,4 +1,4 @@
-class Traktable < Cask
+cask :v1 => 'traktable' do
   version '0.5.2'
   sha256 '77d3800f02f2b5a2aef8a56e7986b731831738673e35c633d743df87bc556225'
 
