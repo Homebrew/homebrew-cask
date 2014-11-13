@@ -1,4 +1,4 @@
-class Itsycal < Cask
+cask :v1 => 'itsycal' do
   version '0.8.10'
   sha256 '2cfa08066722a13b994559f45b9d01bba1ff02e98c6797f2fc7c93344747093b'
 
