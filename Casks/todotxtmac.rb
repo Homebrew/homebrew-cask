@@ -1,4 +1,4 @@
-class Todotxtmac < Cask
+cask :v1 => 'todotxtmac' do
   version '1.2.4'
   sha256 '368010bec057387bdc6ee9cef4646f90d8eb1af8e1b4ec1666045e7e2166db4a'
 
