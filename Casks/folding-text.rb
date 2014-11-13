@@ -1,4 +1,4 @@
-class FoldingText < Cask
+cask :v1 => 'folding-text' do
   version :latest
   sha256 :no_check
 
