@@ -1,4 +1,4 @@
-class Shadowsocksx < Cask
+cask :v1 => 'shadowsocksx' do
   version '2.3'
   sha256 '6aab97a8f5801d20ec779bce6e86349655b27bc6acd8ad70c939b89007be92c5'
 
