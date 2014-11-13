@@ -1,4 +1,4 @@
-class Zero10Editor < Cask
+cask :v1 => 'zero10-editor' do
   version :latest
   sha256 :no_check
 
