@@ -1,4 +1,4 @@
-class Speedtao < Cask
+cask :v1 => 'speedtao' do
   version :latest
   sha256 :no_check
 
