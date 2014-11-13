@@ -1,4 +1,4 @@
-class Googleappenginelauncher < Cask
+cask :v1 => 'googleappenginelauncher' do
   version '1.9.15'
   sha256 '0f11d2411ee245e9bd99323672fc967c2eb796f8baa42d48554b59696b64c362'
 
