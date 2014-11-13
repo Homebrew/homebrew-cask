@@ -1,4 +1,4 @@
-class Jsonlook < Cask
+cask :v1 => 'jsonlook' do
   version :latest
   sha256 :no_check
 
