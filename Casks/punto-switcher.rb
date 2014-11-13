@@ -1,4 +1,4 @@
-class PuntoSwitcher < Cask
+cask :v1 => 'punto-switcher' do
   version :latest
   sha256 :no_check
 
