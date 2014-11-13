@@ -1,4 +1,4 @@
-class IpInMenuBar < Cask
+cask :v1 => 'ip-in-menu-bar' do
   version :latest
   sha256 :no_check
 
