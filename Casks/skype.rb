@@ -1,4 +1,4 @@
-class Skype < Cask
+cask :v1 => 'skype' do
 
   if MacOS.version < :mavericks
     version '6.15.0.335'
