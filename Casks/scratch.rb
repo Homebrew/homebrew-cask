@@ -1,4 +1,4 @@
-class Scratch < Cask
+cask :v1 => 'scratch' do
   version :latest
   sha256 :no_check
 
