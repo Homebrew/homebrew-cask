@@ -1,4 +1,4 @@
-class Codebox < Cask
+cask :v1 => 'codebox' do
   version :latest
   sha256 :no_check
 
