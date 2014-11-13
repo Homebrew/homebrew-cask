@@ -1,4 +1,4 @@
-class Diskwave < Cask
+cask :v1 => 'diskwave' do
   version '0.4.0'
   sha256 '976324e46e4ca4d54240de13cf2c6f0db9afdb703b0e6ef78e2b5b5d36d63e75'
 
