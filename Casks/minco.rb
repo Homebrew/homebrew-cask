@@ -1,4 +1,4 @@
-class Minco < Cask
+cask :v1 => 'minco' do
   version :latest
   sha256 :no_check
 
