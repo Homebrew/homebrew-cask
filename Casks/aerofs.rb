@@ -1,4 +1,4 @@
-class Aerofs < Cask
+cask :v1 => 'aerofs' do
   version '0.8.67'
   sha256 'abb05bfdea788520f02ec5f526d10ab336d183a96598007cc98e29c088b8b567'
 
