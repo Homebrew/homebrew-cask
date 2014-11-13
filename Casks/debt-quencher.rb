@@ -1,4 +1,4 @@
-class DebtQuencher < Cask
+cask :v1 => 'debt-quencher' do
   version '1.2.2'
   sha256 '2083fdb28d3138998a0d6b4b5c4405a18a2e8dd7b71554786386623313c166ad'
 
