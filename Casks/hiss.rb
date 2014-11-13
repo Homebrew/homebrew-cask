@@ -1,4 +1,4 @@
-class Hiss < Cask
+cask :v1 => 'hiss' do
   version :latest
   sha256 :no_check
 
