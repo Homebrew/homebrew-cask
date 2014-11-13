@@ -1,4 +1,4 @@
-class Sauce < Cask
+cask :v1 => 'sauce' do
   version :latest
   sha256 :no_check
 
