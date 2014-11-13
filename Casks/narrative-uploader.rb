@@ -1,4 +1,4 @@
-class NarrativeUploader < Cask
+cask :v1 => 'narrative-uploader' do
   version :latest
   sha256 :no_check
 
