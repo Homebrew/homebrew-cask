@@ -1,4 +1,4 @@
-class Ios7Screensaver < Cask
+cask :v1 => 'ios7-screensaver' do
   version '2.8'
   sha256 '5b71814a11a701fc074994eba0af7f35533aa35acc6eaa78c2e70ce923e9f19d'
 
