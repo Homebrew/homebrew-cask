@@ -8,6 +8,6 @@ class Jxplorer < Cask
 
   app "jxplorer-#{version}.app"
   postflight do
-    system '/bin/chmod', '--', 'a+x', "#{destination_path}/jxplorer-#{version}.app/Contents/MacOS/jxplorer"
+    system '/bin/chmod', '--', 'a+x', "#{staged_path}/jxplorer-#{version}.app/Contents/MacOS/jxplorer"
   end
 end
