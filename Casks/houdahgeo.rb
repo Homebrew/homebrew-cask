@@ -1,4 +1,4 @@
-class Houdahgeo < Cask
+cask :v1 => 'houdahgeo' do
   version :latest
   sha256 :no_check
 
