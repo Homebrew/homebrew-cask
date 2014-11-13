@@ -1,4 +1,4 @@
-class Espresso < Cask
+cask :v1 => 'espresso' do
   version :latest
   sha256 :no_check
 
