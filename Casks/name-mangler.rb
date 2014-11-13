@@ -1,4 +1,4 @@
-class NameMangler < Cask
+cask :v1 => 'name-mangler' do
   version :latest
   sha256 :no_check
 
