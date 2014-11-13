@@ -1,4 +1,4 @@
-class BluRayPlayer < Cask
+cask :v1 => 'blu-ray-player' do
   version :latest
   sha256 :no_check
 
