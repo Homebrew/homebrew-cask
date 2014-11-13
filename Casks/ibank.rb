@@ -1,4 +1,4 @@
-class Ibank < Cask
+cask :v1 => 'ibank' do
   version :latest
   sha256 :no_check
 
