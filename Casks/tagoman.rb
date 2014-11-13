@@ -1,4 +1,4 @@
-class Tagoman < Cask
+cask :v1 => 'tagoman' do
   version :latest
   sha256 :no_check
 
