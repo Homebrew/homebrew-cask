@@ -1,4 +1,4 @@
-class Minilyrics < Cask
+cask :v1 => 'minilyrics' do
   version :latest
   sha256 :no_check
 
