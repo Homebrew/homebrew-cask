@@ -1,4 +1,4 @@
-class IntellijIdeaCe < Cask
+cask :v1 => 'intellij-idea-ce' do
   version '14'
   sha256 'd742778574f244ef1f70277a65bbe73b9baf38ead3b6c15d555d5418357f07e1'
 
