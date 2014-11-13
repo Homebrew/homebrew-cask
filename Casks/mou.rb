@@ -1,4 +1,4 @@
-class Mou < Cask
+cask :v1 => 'mou' do
   version :latest
   sha256 :no_check
 
