@@ -1,4 +1,4 @@
-class Cheetah3d < Cask
+cask :v1 => 'cheetah3d' do
   version :latest
   sha256 :no_check
 
