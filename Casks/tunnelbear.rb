@@ -1,4 +1,4 @@
-class Tunnelbear < Cask
+cask :v1 => 'tunnelbear' do
   version '2.4.4'
   sha256 '0b1e9798b6b395ce5ee9a7713ea2f57460226e76de131c76004d8e761e4eed92'
 
