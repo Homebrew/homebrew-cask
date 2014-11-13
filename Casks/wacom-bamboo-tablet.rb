@@ -1,4 +1,4 @@
-class WacomBambooTablet < Cask
+cask :v1 => 'wacom-bamboo-tablet' do
   version '5.3.5-4'
   sha256 '3368525540f01c6160839a6dee8618c887681d33ed61b15a1835def1cd2c70f2'
 
