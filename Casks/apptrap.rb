@@ -1,4 +1,4 @@
-class Apptrap < Cask
+cask :v1 => 'apptrap' do
   version '1.2.2'
   sha256 'e7d36e24121d732a06d5dbb7fed27e18e470231544e8e0aec309eb2afb9d75be'
 
