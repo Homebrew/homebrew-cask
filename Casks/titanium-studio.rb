@@ -1,4 +1,4 @@
-class TitaniumStudio < Cask
+cask :v1 => 'titanium-studio' do
   version :latest
   sha256 :no_check
 
