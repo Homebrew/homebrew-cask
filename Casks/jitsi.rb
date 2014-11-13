@@ -1,4 +1,4 @@
-class Jitsi < Cask
+cask :v1 => 'jitsi' do
   version '2.4'
   sha256 'ceb6b2ab04206a51faf1dbffb704a7a60ae2b7c47834b50f87da5557f543ad13'
 
