@@ -1,4 +1,4 @@
-class Decitime < Cask
+cask :v1 => 'decitime' do
   version '1.0.1'
   sha256 '3fcd9d6af7cf4710abd42df4db418432ca1758ba8db7affecb1a466d1996f877'
 
