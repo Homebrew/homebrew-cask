@@ -1,4 +1,4 @@
-class Spotify < Cask
+cask :v1 => 'spotify' do
   version :latest
   sha256 :no_check
 
