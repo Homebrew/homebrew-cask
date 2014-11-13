@@ -36,7 +36,7 @@ describe Cask::CLI::Create do
     Cask::CLI::Create.run('new-cask')
     template = File.read(Cask.path('new-cask'))
     template.must_equal <<-TEMPLATE.undent
-      class NewCask < Cask
+      cask :v1 => 'new-cask' do
         version ''
         sha256 ''
 

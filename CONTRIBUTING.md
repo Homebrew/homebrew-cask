@@ -33,7 +33,7 @@ Here's a Cask for `Alfred.app` as an example.  Note that you may repeat
 the `app` stanza as many times as you need, to define multiple apps:
 
 ```ruby
-class Alfred < Cask
+cask :v1 => 'alfred' do
   version '2.3_264'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
 
@@ -49,7 +49,7 @@ end
 Here is another Cask for `Unity.pkg`:
 
 ```ruby
-class Unity < Cask
+cask :v1 => 'unity' do
   version '4.5.4'
   sha256 '6fb72bfacf78df072559dd9a024a9d47e49b5717c8f17d53f05e2fc74a721876'
 
@@ -65,7 +65,7 @@ end
 And here is one for `Firefox.app`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new version is available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when an unversioned download URL is available:
 
 ```ruby
-class Firefox < Cask
+cask :v1 => 'firefox' do
   version :latest
   sha256 :no_check
 
@@ -109,14 +109,12 @@ Once you know the name for your Cask, create it with the handy-dandy
 $ brew cask create my-new-cask
 ```
 
-This will open `$EDITOR` with a template for your new Cask. Hyphens in the
-Cask name indicate case-changes in the class name, so the Cask name
-'my-new-cask' becomes class `MyNewCask` stored in file `my-new-cask.rb`.
-Running the `create` command above will get you a template that looks like
-this:
+This will open `$EDITOR` with a template for your new Cask, to be stored in
+the file `my-new-cask.rb`.  Running the `create` command above will get you
+a template that looks like this:
 
 ```ruby
-class MyNewCask < Cask
+cask :v1 => 'my-new-cask' do
   version ''
   sha256 ''
 

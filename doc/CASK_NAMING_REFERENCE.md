@@ -6,7 +6,6 @@ most cases.
 
  * [Find the Canonical Name of the Developer's Distribution](#find-the-canonical-name-of-the-developers-distribution)
  * [Cask Name](#cask-name)
- * [Cask Class](#cask-class)
  * [Cask Naming Examples](#cask-naming-examples)
 
 ## Find the Canonical Name of the Developer's Distribution
@@ -80,30 +79,18 @@ Casks are stored in a Ruby file matching their name.  If possible, avoid creatin
 Cask files which differ only by the placement of hyphens.
 
 
-## Cask Class
-
-Casks are implemented as Ruby classes, so a Cask's "class" needs to be a
-valid Ruby class name.
-
-When converting a __Cask name__ to its corresponding __class name__:
-
-  * convert to UpperCamelCase
-  * wherever a hyphen occurs in the __Cask name__, remove the hyphen and
-    create a case change in the __class name__
-
-
 ## Cask Naming Examples
 
 These illustrate most of the naming rules:
 
-App Name on Disk       | Canonical App Name | Cask Name          | Cask File             | Cask Class
------------------------|--------------------|--------------------|-----------------------|------------------------
-`Audio Hijack Pro.app` | Audio Hijack Pro   | `audio-hijack-pro` | `audio-hijack-pro.rb` | `AudioHijackPro`
-`VLC.app`              | VLC                | `vlc`              | `vlc.rb`              | `Vlc`
-`BetterTouchTool.app`  | BetterTouchTool    | `bettertouchtool`  | `bettertouchtool.rb`  | `Bettertouchtool`
-`LPK25 Editor.app`     | LPK25 Editor       | `lpk25-editor`     | `lpk25-editor.rb`     | `Lpk25Editor`
-`Sublime Text 2.app`   | Sublime Text       | `sublime-text`     | `sublime-text.rb`     | `SublimeText`
-`1Password.app`        | 1Password          | `onepassword`      | `onepassword.rb`      | `Onepassword`
+App Name on Disk       | Canonical App Name | Cask Name          | Cask File
+-----------------------|--------------------|--------------------|----------------------
+`Audio Hijack Pro.app` | Audio Hijack Pro   | `audio-hijack-pro` | `audio-hijack-pro.rb`
+`VLC.app`              | VLC                | `vlc`              | `vlc.rb`
+`BetterTouchTool.app`  | BetterTouchTool    | `bettertouchtool`  | `bettertouchtool.rb`
+`LPK25 Editor.app`     | LPK25 Editor       | `lpk25-editor`     | `lpk25-editor.rb`
+`Sublime Text 2.app`   | Sublime Text       | `sublime-text`     | `sublime-text.rb`
+`1Password.app`        | 1Password          | `onepassword`      | `onepassword.rb`
 
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3
