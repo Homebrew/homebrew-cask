@@ -1,4 +1,4 @@
-class Calibre < Cask
+cask :v1 => 'calibre' do
   version :latest
   sha256 :no_check
 
