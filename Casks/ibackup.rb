@@ -1,4 +1,4 @@
-class Ibackup < Cask
+cask :v1 => 'ibackup' do
   version '7.5'
   sha256 'faa69e95f62dfeb04a6ede20e7b856d43645f1bd07aede743c5d364d2845aabf'
 
