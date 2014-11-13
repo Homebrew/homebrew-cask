@@ -1,4 +1,4 @@
-class Zooom < Cask
+cask :v1 => 'zooom' do
   version '2.6.0'
   sha256 'eda52f42d06a6cd32c2fc419358a4a589087a1592a38e717577e3ae9a656036f'
 
