@@ -1,4 +1,4 @@
-class Pleasesleep < Cask
+cask :v1 => 'pleasesleep' do
   version :latest
   sha256 :no_check
 
