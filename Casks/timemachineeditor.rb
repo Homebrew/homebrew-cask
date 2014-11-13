@@ -1,4 +1,4 @@
-class Timemachineeditor < Cask
+cask :v1 => 'timemachineeditor' do
   version :latest
   sha256 :no_check
 
