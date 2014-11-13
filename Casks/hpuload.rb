@@ -1,4 +1,4 @@
-class Hpuload < Cask
+cask :v1 => 'hpuload' do
   version :latest
   sha256 :no_check
 
