@@ -1,4 +1,4 @@
-class EclipseJava < Cask
+cask :v1 => 'eclipse-java' do
   version '4.4.0'
 
   if Hardware::CPU.is_32_bit?
