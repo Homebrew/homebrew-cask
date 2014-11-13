@@ -1,4 +1,4 @@
-class Moneyplex < Cask
+cask :v1 => 'moneyplex' do
   version :latest
   sha256 :no_check
 
