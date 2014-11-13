@@ -1,4 +1,4 @@
-class Atom < Cask
+cask :v1 => 'atom' do
   version :latest
   sha256 :no_check
 
