@@ -1,4 +1,4 @@
-class Witch < Cask
+cask :v1 => 'witch' do
   version :latest
   sha256 :no_check
 
