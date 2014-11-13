@@ -1,4 +1,4 @@
-class Manico < Cask
+cask :v1 => 'manico' do
   version '1.4.2'
   sha256 '5244586f0b7568e654175940a2052a4b746a1122ecea3eba08e4470c5b4f3095'
 
