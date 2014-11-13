@@ -1,4 +1,4 @@
-class Texpad < Cask
+cask :v1 => 'texpad' do
   version '1.6.14'
   sha256 '18fcbe93e77e5b5bc848172546962fcde397a26fd543efcc1054004369192f7e'
 
