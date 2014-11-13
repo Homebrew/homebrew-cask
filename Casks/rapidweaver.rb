@@ -1,4 +1,4 @@
-class Rapidweaver < Cask
+cask :v1 => 'rapidweaver' do
   version '6'
   sha256 'e7b72daffa9c7809b713e05a1b518873a71a73afdd6a97f300b8bb9ab35a9361'
 
