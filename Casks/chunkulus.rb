@@ -1,4 +1,4 @@
-class Chunkulus < Cask
+cask :v1 => 'chunkulus' do
   version :latest
   sha256 :no_check
 
