@@ -1,4 +1,4 @@
-class Mcs783x < Cask
+cask :v1 => 'mcs783x' do
   version '1.1.0'
   sha256 'ea1d6245b5accabf041060886f16cc00b43d3e6e7e032f4154b487e96ab05569'
 
