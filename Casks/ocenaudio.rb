@@ -1,4 +1,4 @@
-class Ocenaudio < Cask
+cask :v1 => 'ocenaudio' do
   version :latest
   sha256 :no_check
 
