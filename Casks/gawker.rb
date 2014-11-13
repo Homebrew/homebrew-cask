@@ -1,4 +1,4 @@
-class Gawker < Cask
+cask :v1 => 'gawker' do
   version :latest
   sha256 :no_check
 
