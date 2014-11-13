@@ -1,4 +1,4 @@
-class Layervault < Cask
+cask :v1 => 'layervault' do
   version :latest
   sha256 :no_check
 
