@@ -1,4 +1,4 @@
-class Mailfollowup < Cask
+cask :v1 => 'mailfollowup' do
   version '1.6.2'
   sha256 'f656c121e04fac6185b24a96888613729c366275151c891258b634c71372b2af'
 
