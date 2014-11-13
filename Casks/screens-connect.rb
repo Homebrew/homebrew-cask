@@ -1,4 +1,4 @@
-class ScreensConnect < Cask
+cask :v1 => 'screens-connect' do
   version :latest
   sha256 :no_check
 
