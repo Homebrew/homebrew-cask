@@ -1,4 +1,4 @@
-class TexLiveUtility < Cask
+cask :v1 => 'tex-live-utility' do
   version '1.17'
   sha256 '9a913cbf0e158258c513fc0905f65632b36d372d1b4b9afe6b6f08dd005ff232'
 
