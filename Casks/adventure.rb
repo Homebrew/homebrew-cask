@@ -1,4 +1,4 @@
-class Adventure < Cask
+cask :v1 => 'adventure' do
   version :latest
   sha256 :no_check
 
