@@ -1,4 +1,4 @@
-class Audiobookbinder < Cask
+cask :v1 => 'audiobookbinder' do
   version '2.0'
   sha256 '7f66fab2041666b2b4d2f4547035804ee9fa7cc5487d6a428f5354e0a793064b'
 
