@@ -1,4 +1,4 @@
-class ParagonNtfs < Cask
+cask :v1 => 'paragon-ntfs' do
   version :latest
   sha256 :no_check
 
