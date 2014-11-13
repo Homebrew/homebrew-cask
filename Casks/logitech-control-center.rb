@@ -1,4 +1,4 @@
-class LogitechControlCenter < Cask
+cask :v1 => 'logitech-control-center' do
   version '3.9.0.60'
   sha256 '1eab6118dc5ad0b3c790b9132b5968050dab0117b07d8f338c471aff00078df1'
 
