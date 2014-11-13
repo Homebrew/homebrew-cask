@@ -1,4 +1,4 @@
-class Phoneclean < Cask
+cask :v1 => 'phoneclean' do
   version :latest
   sha256 :no_check
 
