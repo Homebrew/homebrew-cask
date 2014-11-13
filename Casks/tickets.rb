@@ -1,4 +1,4 @@
-class Tickets < Cask
+cask :v1 => 'tickets' do
   version '2.5'
   sha256 '8f2d7879581fb2604158367fb6e7eda8bc9ebf15e97781b69b64355f2832af6e'
 
