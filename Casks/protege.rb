@@ -1,4 +1,4 @@
-class Protege < Cask
+cask :v1 => 'protege' do
   version '4.3.0'
   sha256 '45f5acb42b8bb78074af6e192a2dc12e5c2b8238ac20e6c96a4bca7b2acaf598'
 
