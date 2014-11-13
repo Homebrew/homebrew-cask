@@ -1,4 +1,4 @@
-class FenderAmpDrivers < Cask
+cask :v1 => 'fender-amp-drivers' do
   version '2.7.1'
   sha256 'f73c4c66c6d9bc6492d8f22126415f5a36eb555714adc147590fb3a5d25b8c34'
 
