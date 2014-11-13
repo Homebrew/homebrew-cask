@@ -3,7 +3,7 @@
 This document acts as a complete specification, and covers aspects of the
 Cask Domain-Specific Language (DSL) which are not needed in most cases.
 
- * [Casks Are Ruby Classes](#casks-are-ruby-classes)
+ * [Casks Are Ruby Blocks](#casks-are-ruby-blocks)
  * [The Cask Language Is Declarative](#the-cask-language-is-declarative)
  * [Required Stanzas](#required-stanzas)
  * [At Least One Artifact Stanza Is Also Required](#at-least-one-artifact-stanza-is-also-required)
@@ -11,6 +11,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Legacy Stanzas](#legacy-stanzas)
  * [Legacy Forms](#legacy-forms)
  * [Conditional Statements](#conditional-statements)
+ * [Header Line Details](#header-line-details)
  * [Caveats Stanza Details](#caveats-stanza-details)
  * [Checksum Stanza Details](#checksum-stanza-details)
  * [URL Stanza Details](#url-stanza-details)
@@ -30,13 +31,13 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Revisions to the Cask DSL](#revisions-to-the-cask-dsl)
 
 
-## Casks Are Ruby Classes
+## Casks Are Ruby Blocks
 
-Each Cask is a Ruby class, derived from class `Cask`.  The Cask definition
-is always enclosed in a `class ... end` block.  Example:
+Each Cask is a Ruby block, beginning with a special header line.  The Cask
+definition itself is always enclosed in a `do ... end` block.  Example:
 
 ```ruby
-class Alfred < Cask
+cask :v1 => 'alfred' do
   version '2.3_264'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
 
@@ -48,7 +49,6 @@ class Alfred < Cask
   app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
 ```
-
 
 ## The Cask Language Is Declarative
 
@@ -195,6 +195,27 @@ else
   # ...
 end
 ```
+
+## Header Line Details
+
+The first non-comment line in a Cask follows the form
+
+```ruby
+cask <dsl-version> => '<cask-name>' do
+```
+
+`<dsl-version>` identifies the version of the Cask DSL, currently `:v1`.
+
+`<cask-name>` should match the Cask filename, without the `.rb` extension,
+enclosed in single quotes.
+
+The header line is not entirely strict Ruby: no comma is required after
+the Cask name.
+
+There are currently some arbitrary limitations on Cask names which are
+in the process of being removed.  The Travis bot will catch any errors
+during the transition.
+
 
 ## Caveats Stanza Details
 
@@ -858,7 +879,7 @@ define arbitrary Ruby variables and methods inside the Cask by creating a
 `Utils` namespace.  Example:
 
 ```ruby
-class Appname < Cask
+cask :v1 => 'appname' do
   module Utils
     def self.arbitrary_method
       ...

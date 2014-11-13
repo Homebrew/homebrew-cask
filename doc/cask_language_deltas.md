@@ -15,6 +15,7 @@ Cask DSL 1.0 specification.
  * [Removals (1.0)](#removals-10)
  * [Additions (1.0)](#additions-10)
  * [Renames (1.0)](#renames-10)
+ * [Header Line (1.0)](#header-line-10)
  * [All Supported Stanzas (1.0)](#all-supported-stanzas-10)
 
 
@@ -77,6 +78,28 @@ This notice will be removed for the final form.**
 ## All Supported Stanzas (1.0)
 
 **Stub!**
+
+
+## Header Line (1.0)
+
+The header line was changed from the form
+
+```ruby
+class MyApp < Cask
+```
+
+to
+
+```ruby
+cask :v1 => 'my-app' do
+```
+
+Legacy rules for mapping Cask filenames to header class names are no longer
+needed.  The name `'my-app'` in the header corresponds directly to the
+filename `my-app.rb`.
+
+The term `:v1` identifies the DSL version (currently 1.0), and defines the
+features which are available for the current Cask.
 
 
 ## References
