@@ -1,4 +1,4 @@
-class Ridibooks < Cask
+cask :v1 => 'ridibooks' do
   version :latest
   sha256 :no_check
 
