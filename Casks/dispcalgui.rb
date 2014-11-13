@@ -1,4 +1,4 @@
-class Dispcalgui < Cask
+cask :v1 => 'dispcalgui' do
   version :latest
   sha256 :no_check
 
