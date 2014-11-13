@@ -1,4 +1,4 @@
-class AtomShell < Cask
+cask :v1 => 'atom-shell' do
   version '0.19.0'
   sha256 'e14ecea827ce78cedb1ed9f4f4aa7d42912a31f69cbbf72588b2d9307f583c41'
 
