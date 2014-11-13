@@ -1,4 +1,4 @@
-class ValentinaStudio < Cask
+cask :v1 => 'valentina-studio' do
   version :latest
   sha256 :no_check
 
