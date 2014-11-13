@@ -18,9 +18,8 @@ class Cask::CLI::Create < Cask::CLI::Base
   end
 
   def self.template(cask_name);
-    cask_class = cask_name.split('-').map(&:capitalize).join
     <<-EOS.undent
-      class #{cask_class} < Cask
+      cask :v1 => '#{cask_name}' do
         version ''
         sha256 ''
 
