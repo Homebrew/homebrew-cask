@@ -1,4 +1,4 @@
-class Zeroxed < Cask
+cask :v1 => 'zeroxed' do
   version :latest
   sha256 :no_check
 
