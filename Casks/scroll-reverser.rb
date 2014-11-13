@@ -1,4 +1,4 @@
-class ScrollReverser < Cask
+cask :v1 => 'scroll-reverser' do
   version '1.6.1'
   sha256 'babce7e360ec76a797ac8843e20d5b75a0475807c487df87c01bc29cd8050584'
 
