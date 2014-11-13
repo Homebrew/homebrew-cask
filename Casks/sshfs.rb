@@ -1,4 +1,4 @@
-class Sshfs < Cask
+cask :v1 => 'sshfs' do
   version '2.5.0'
   sha256 'f8f4f71814273ea42dbe6cd92199f7cff418571ffd1b10c0608878d3472d2162'
 
