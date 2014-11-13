@@ -1,4 +1,4 @@
-class FierySoftwareManager < Cask
+cask :v1 => 'fiery-software-manager' do
   version :latest
   sha256 :no_check
 
