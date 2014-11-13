@@ -1,4 +1,4 @@
-class Qsync < Cask
+cask :v1 => 'qsync' do
   version :latest
   sha256 :no_check
 
