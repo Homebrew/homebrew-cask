@@ -1,4 +1,4 @@
-class MicrosoftIntellipoint < Cask
+cask :v1 => 'microsoft-intellipoint' do
   version '8.2'
   sha256 '1a4612d3237084d0502d947793c097575febc95442130e2384c8fbf4b52cac9e'
 
