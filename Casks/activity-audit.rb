@@ -1,4 +1,4 @@
-class ActivityAudit < Cask
+cask :v1 => 'activity-audit' do
   version :latest
   sha256 :no_check
 
