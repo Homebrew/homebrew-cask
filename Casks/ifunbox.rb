@@ -1,4 +1,4 @@
-class Ifunbox < Cask
+cask :v1 => 'ifunbox' do
   version :latest
   sha256 :no_check
 
