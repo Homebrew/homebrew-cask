@@ -1,4 +1,4 @@
-class Nodeclipse < Cask
+cask :v1 => 'nodeclipse' do
   version '0.11-preview'
   sha256 '01f630446313cb981ce2ee9b934977cfdbf318e09761dee244a3256f9a559003'
 
