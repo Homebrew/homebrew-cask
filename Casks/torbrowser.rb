@@ -1,4 +1,4 @@
-class Torbrowser < Cask
+cask :v1 => 'torbrowser' do
   version '4.0.1'
   sha256 '2388eaabbe81bdc767ce3fbbbe0247853eb4b0f018b341fc9d5017791f00f02b'
 
