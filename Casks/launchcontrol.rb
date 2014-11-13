@@ -1,4 +1,4 @@
-class Launchcontrol < Cask
+cask :v1 => 'launchcontrol' do
   version '1.16.2'
   sha256 '207b90ff2342ad3eee66036c7e97057d1c73f5c81abd243a4804e715d371e015'
 
