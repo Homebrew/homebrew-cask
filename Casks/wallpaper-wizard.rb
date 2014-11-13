@@ -1,4 +1,4 @@
-class WallpaperWizard < Cask
+cask :v1 => 'wallpaper-wizard' do
   version '1.4'
   sha256 '73cd786b81db5eec9734277d8b74a34bb90494637bb5324f8a6a9df40ef89704'
 
