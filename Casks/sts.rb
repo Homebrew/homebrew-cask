@@ -1,4 +1,4 @@
-class Sts < Cask
+cask :v1 => 'sts' do
   version '3.5.1'
   sha256 'f71274c9f946d2af6bbd12e811d7c8d371d3031415839b9aa6ed35347d2980f8'
 
