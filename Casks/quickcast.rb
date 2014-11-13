@@ -1,4 +1,4 @@
-class Quickcast < Cask
+cask :v1 => 'quickcast' do
   version :latest
   sha256 :no_check
 
