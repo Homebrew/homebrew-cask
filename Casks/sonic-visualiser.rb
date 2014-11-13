@@ -1,4 +1,4 @@
-class SonicVisualiser < Cask
+cask :v1 => 'sonic-visualiser' do
   version '2.3'
   sha256 '8a8c6c5268f10dd6614afeabd40a4fa962a31d55db0aed1ddf369c5a5b8b4981'
 
