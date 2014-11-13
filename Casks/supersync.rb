@@ -1,4 +1,4 @@
-class Supersync < Cask
+cask :v1 => 'supersync' do
   version :latest
   sha256 :no_check
 
