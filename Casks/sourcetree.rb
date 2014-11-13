@@ -1,4 +1,4 @@
-class Sourcetree < Cask
+cask :v1 => 'sourcetree' do
   version '2.0.3'
   sha256 '66f7f8186ff8afa1e8d26fc26bd55ad73380de3d5d9aa5985dfa6b7d143dd0ec'
 
