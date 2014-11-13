@@ -1,4 +1,4 @@
-class Catch < Cask
+cask :v1 => 'catch' do
   version '1.8'
   sha256 '0fd58d79ba869583406b7aa9ed707e4c77480417da9f09805f1497098fbbb138'
 
