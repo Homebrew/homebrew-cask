@@ -1,4 +1,4 @@
-class Omnigraffle < Cask
+cask :v1 => 'omnigraffle' do
   version :latest
   sha256 :no_check
 
