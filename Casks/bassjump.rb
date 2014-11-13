@@ -1,4 +1,4 @@
-class Bassjump < Cask
+cask :v1 => 'bassjump' do
 
   if MacOS.version < :mavericks
     version '2.0.3'
