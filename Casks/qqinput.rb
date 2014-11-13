@@ -1,5 +1,5 @@
 # encoding: UTF-8
-class Qqinput < Cask
+cask :v1 => 'qqinput' do
   version '2.8.86.400'
   sha256 '5b90cf604230013d5afa974b5b4835c0d6faf55da932cebce4f72478b5665a4d'
 
