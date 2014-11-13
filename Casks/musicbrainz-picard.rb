@@ -1,4 +1,4 @@
-class MusicbrainzPicard < Cask
+cask :v1 => 'musicbrainz-picard' do
   version '1.3'
   sha256 'fa4785ae157b6fb269eec7bcb3c3c8a6f93faa563336364aa31946b51ae39ecb'
 
