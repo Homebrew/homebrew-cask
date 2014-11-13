@@ -1,4 +1,4 @@
-class Acorn < Cask
+cask :v1 => 'acorn' do
   version :latest
   sha256 :no_check
 
