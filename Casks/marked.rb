@@ -1,4 +1,4 @@
-class Marked < Cask
+cask :v1 => 'marked' do
   version :latest
   sha256 :no_check
 
