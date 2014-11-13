@@ -1,4 +1,4 @@
-class Grandtotal < Cask
+cask :v1 => 'grandtotal' do
   version :latest
   sha256 :no_check
 
