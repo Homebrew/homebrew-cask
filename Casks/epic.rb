@@ -1,4 +1,4 @@
-class Epic < Cask
+cask :v1 => 'epic' do
   version :latest
   sha256 :no_check
 
