@@ -1,4 +1,4 @@
-class Sabnzbd < Cask
+cask :v1 => 'sabnzbd' do
   version '0.7.19'
   sha256 '193ec185540c884e85106c608de2bb9e92e2daae8a3b4309072be927d70ae7ca'
 
