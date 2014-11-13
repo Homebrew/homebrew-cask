@@ -1,4 +1,4 @@
-class JavafxSceneBuilder < Cask
+cask :v1 => 'javafx-scene-builder' do
   version '2.0-b20'
   sha256 '9551326dd98f85204434d293da445eb5f2cf862c785f3dbe420cb4643221d96b'
 
