@@ -1,4 +1,4 @@
-class Cloudpull < Cask
+cask :v1 => 'cloudpull' do
   version :latest
   sha256 :no_check
 
