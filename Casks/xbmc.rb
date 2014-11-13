@@ -1,4 +1,4 @@
-class Xbmc < Cask
+cask :v1 => 'xbmc' do
   version '13.2'
   sha256 '5f76f75971aa27cc74dfeaca3633d5e079ab7731deabb0f8be909e5e871a9223'
 
