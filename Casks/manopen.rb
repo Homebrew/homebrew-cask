@@ -1,4 +1,4 @@
-class Manopen < Cask
+cask :v1 => 'manopen' do
   version '2.6'
   sha256 '7b383ca493b0b360bb58e65f7e7ce0a92383ff38c5221cc410eaf03f1117a958'
 
