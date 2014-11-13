@@ -10,7 +10,7 @@ class AdobeArh < Cask
   binary 'arh'
 
   postflight do
-    system '/bin/chmod', '--', '755', "#{destination_path}/arh"
+    system '/bin/chmod', '--', '755', "#{staged_path}/arh"
   end
 
   caveats "Please refer to the documentation at #{homepage}"
