@@ -1,4 +1,4 @@
-class TheArchiveBrowser < Cask
+cask :v1 => 'the-archive-browser' do
   version '1.9.1'
   sha256 'c658cc67fde3773b20731394c3ca2829285b3e02efa10c4efb360b2bf053f26e'
 
