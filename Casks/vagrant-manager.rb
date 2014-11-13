@@ -1,4 +1,4 @@
-class VagrantManager < Cask
+cask :v1 => 'vagrant-manager' do
   version '2.1.1'
   sha256 'bd4a44c82c4d2ffa2d9de3d9f924eb5eeb76ac133648de939668501a2deb021b'
 
