@@ -1,4 +1,4 @@
-class Startninja < Cask
+cask :v1 => 'startninja' do
   version :latest
   sha256 :no_check
 
