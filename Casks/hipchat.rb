@@ -1,4 +1,4 @@
-class Hipchat < Cask
+cask :v1 => 'hipchat' do
   version :latest
   sha256 :no_check
 
