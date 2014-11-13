@@ -1,4 +1,4 @@
-class Tvshows < Cask
+cask :v1 => 'tvshows' do
   version :latest
   sha256 :no_check
 
