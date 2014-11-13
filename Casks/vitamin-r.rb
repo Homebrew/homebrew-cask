@@ -1,4 +1,4 @@
-class VitaminR < Cask
+cask :v1 => 'vitamin-r' do
   version :latest
   sha256 :no_check
 
