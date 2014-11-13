@@ -1,4 +1,4 @@
-class Skydrive < Cask
+cask :v1 => 'skydrive' do
   version '17.0'
   sha256 '02fd7450e501228dc94108068636c3085a970d039198472fa8eb4bbbf3ee3722'
 
