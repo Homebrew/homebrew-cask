@@ -1,4 +1,4 @@
-class Middleclick < Cask
+cask :v1 => 'middleclick' do
   version :latest
   sha256 :no_check
 
