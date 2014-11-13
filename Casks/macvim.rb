@@ -1,4 +1,4 @@
-class Macvim < Cask
+cask :v1 => 'macvim' do
   version '7.4-73'
 
   if MacOS.version < :mavericks
