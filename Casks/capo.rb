@@ -1,4 +1,4 @@
-class Capo < Cask
+cask :v1 => 'capo' do
   version '3.0.3'
   sha256 'ab70d7ba4965cca146507ebbb3ad874b9f67efde11c2b84de58712d7e1c3391b'
 
