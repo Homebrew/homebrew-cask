@@ -1,4 +1,4 @@
-class AdobeDigitalEditions < Cask
+cask :v1 => 'adobe-digital-editions' do
   version '4.0'
   sha256 '359f62e8fc2d89d6aa411fc4ed69a5be9e19d433226640b3ddbaec35e66f646c'
 
