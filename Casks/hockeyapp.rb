@@ -1,4 +1,4 @@
-class Hockeyapp < Cask
+cask :v1 => 'hockeyapp' do
   version :latest
   sha256 :no_check
 
