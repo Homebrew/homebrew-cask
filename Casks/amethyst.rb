@@ -1,4 +1,4 @@
-class Amethyst < Cask
+cask :v1 => 'amethyst' do
   version '0.9.4'
   sha256 'c9fb397dffdc77422ee8da363a6f1dee25562d9c1186b10260255f6a7ad50a23'
 
