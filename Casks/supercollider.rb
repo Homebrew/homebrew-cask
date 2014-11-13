@@ -1,4 +1,4 @@
-class Supercollider < Cask
+cask :v1 => 'supercollider' do
   version '3.6.6'
   sha256 '4cc59a3ab70cbac60ce64b0fb7b6b86e070456e8f597229b05057ea6c4e1edb9'
 
