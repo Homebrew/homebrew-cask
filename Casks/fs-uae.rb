@@ -1,4 +1,4 @@
-class FsUae < Cask
+cask :v1 => 'fs-uae' do
   version '2.2.3'
   sha256 '3e949a673fb44abd8c788aa70361315fb7fb389575966dddee89f66fbda354ca'
 
