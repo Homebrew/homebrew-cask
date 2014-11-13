@@ -1,4 +1,4 @@
-class ParagonExtfs < Cask
+cask :v1 => 'paragon-extfs' do
   version :latest
   sha256 :no_check
 
