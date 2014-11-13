@@ -1,4 +1,4 @@
-class OmnifocusClipOTron < Cask
+cask :v1 => 'omnifocus-clip-o-tron' do
   version '1.0'
   sha256 '904e808ca65d1f2db4c1356255200ec73364ff7f23528fd4ff857edead39a312'
 
