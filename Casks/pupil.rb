@@ -1,4 +1,4 @@
-class Pupil < Cask
+cask :v1 => 'pupil' do
   version '1.1'
   sha256 'd30e0cf8b45ab0a7ccd4ae9e99a788bb810ccf18c856ab446fc6d230d1159a03'
 
