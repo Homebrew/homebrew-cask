@@ -1,4 +1,4 @@
-class Kuaipan < Cask
+cask :v1 => 'kuaipan' do
   version :latest
   sha256 :no_check
 
