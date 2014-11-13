@@ -1,4 +1,4 @@
-class Audioscrobbler < Cask
+cask :v1 => 'audioscrobbler' do
   version '0.9.14'
   sha256 'e7b37abcdb01f0e888a7135395b9369ed47edb37ab669f778dc96d674e83ed1c'
 
