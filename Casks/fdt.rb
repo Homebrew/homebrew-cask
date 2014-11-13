@@ -1,4 +1,4 @@
-class Fdt < Cask
+cask :v1 => 'fdt' do
   version :latest
   sha256 :no_check
 
