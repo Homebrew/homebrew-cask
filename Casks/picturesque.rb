@@ -1,4 +1,4 @@
-class Picturesque < Cask
+cask :v1 => 'picturesque' do
   version :latest
   sha256 :no_check
 
