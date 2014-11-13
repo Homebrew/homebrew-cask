@@ -1,4 +1,4 @@
-class PixelCheck < Cask
+cask :v1 => 'pixel-check' do
   version '1.3'
   sha256 '99da44c4538463c6476be2f7d6584a4e5a9bfa175895d72e5baf1f3271316b02'
 
