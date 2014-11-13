@@ -1,4 +1,4 @@
-class Pester < Cask
+cask :v1 => 'pester' do
   version '1.1b18'
   sha256 '50cddd6fa813e5e2935e0e66ea13ee0605ada711c0141498a4d19c93eb554c86'
 
