@@ -1,4 +1,4 @@
-class AudiobookBuilder < Cask
+cask :v1 => 'audiobook-builder' do
   version :latest
   sha256 :no_check
 
