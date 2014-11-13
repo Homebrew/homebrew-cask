@@ -1,4 +1,4 @@
-class Banshee < Cask
+cask :v1 => 'banshee' do
   version '2.6.1'
   sha256 '26fc3c77a72860fc2dfaee0741c88e9b8d7b8dac6ece2943e42917112e55c933'
 
