@@ -1,4 +1,4 @@
-class Pianopub < Cask
+cask :v1 => 'pianopub' do
   version '1.5.7'
   sha256 '62abcd753983b9241672a757a5d718c77e7f4dbdac1347dbeb190d0b831bee68'
 
