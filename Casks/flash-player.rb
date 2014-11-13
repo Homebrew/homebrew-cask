@@ -1,4 +1,4 @@
-class FlashPlayer < Cask
+cask :v1 => 'flash-player' do
   version '15.0.0.189'
   sha256 '91d21b45f3a5639b89029b1cf07bf9e3bc424255a62ed62d5180ea7e0ad107f0'
 
