@@ -1,4 +1,4 @@
-class Wordservice < Cask
+cask :v1 => 'wordservice' do
   version '2.8'
   sha256 '2d32be5f99a1fd6d01d2f2d1338ec101918edec6e9a79cbe960a82bd68383478'
 
