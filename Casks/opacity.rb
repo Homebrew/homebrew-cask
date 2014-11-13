@@ -1,4 +1,4 @@
-class Opacity < Cask
+cask :v1 => 'opacity' do
   version :latest
   sha256 :no_check
 
