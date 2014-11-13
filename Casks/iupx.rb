@@ -1,4 +1,4 @@
-class Iupx < Cask
+cask :v1 => 'iupx' do
   version :latest
   sha256 :no_check
 
