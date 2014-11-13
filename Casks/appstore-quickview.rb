@@ -1,4 +1,4 @@
-class AppstoreQuickview < Cask
+cask :v1 => 'appstore-quickview' do
   version :latest
   sha256 :no_check
 
