@@ -1,4 +1,4 @@
-class Soleol < Cask
+cask :v1 => 'soleol' do
   version :latest
   sha256 :no_check
 
