@@ -1,4 +1,4 @@
-class Focuswriter < Cask
+cask :v1 => 'focuswriter' do
   version :latest
   sha256 :no_check
 
