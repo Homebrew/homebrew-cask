@@ -1,4 +1,4 @@
-class Toodledo < Cask
+cask :v1 => 'toodledo' do
   version :latest
   sha256 :no_check
 
