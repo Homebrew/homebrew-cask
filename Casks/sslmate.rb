@@ -1,4 +1,4 @@
-class Sslmate < Cask
+cask :v1 => 'sslmate' do
   version :latest
   sha256 :no_check
 
