@@ -1,4 +1,4 @@
-class P4v < Cask
+cask :v1 => 'p4v' do
   version '2014.1-888424'
 
   if Hardware::CPU.is_32_bit?
