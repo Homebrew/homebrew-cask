@@ -1,4 +1,4 @@
-class Whatsize < Cask
+cask :v1 => 'whatsize' do
   version :latest
   sha256 :no_check
 
