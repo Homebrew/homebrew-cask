@@ -1,4 +1,4 @@
-class TimeSink < Cask
+cask :v1 => 'time-sink' do
   version :latest
   sha256 :no_check
 
