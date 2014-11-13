@@ -1,4 +1,4 @@
-class Boxer < Cask
+cask :v1 => 'boxer' do
   version :latest
   sha256 :no_check
 
