@@ -1,4 +1,4 @@
-class JawboneUpdater < Cask
+cask :v1 => 'jawbone-updater' do
   version '2.2.3'
   sha256 '3085edf935347e45573405ee7e51fbacce366847f5f06f783a4e1ea89d70aee6'
 
