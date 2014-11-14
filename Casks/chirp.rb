@@ -4,7 +4,13 @@ cask :v1 => 'chirp' do
 
   url "http://chirp.danplanet.com/download/#{version}/chirp-#{version}.app.zip"
   homepage 'http://chirp.danplanet.com/'
-  license :unknown
+  license :gpl
 
   app "chirp-#{version}.app"
+
+  caveats <<-EOS.undent
+    #{title} also requires the KK7DS Python Runtime as described at
+
+      http://chirp.danplanet.com/projects/chirp/wiki/Download#CHIRP-Downloads
+  EOS
 end
