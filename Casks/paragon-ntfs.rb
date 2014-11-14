@@ -10,7 +10,7 @@ cask :v1 => 'paragon-ntfs' do
   uninstall :pkgutil => 'com.paragon-software.filesystems.NTFS.pkg',
             :script => 'Uninstall.app/Contents/Resources/uninstall.sh',
             :launchctl => [
-                           'com.paragon.ntfs.trial',
+                           'com.paragon.ntfs*',
                            'com.paragon.updater'
                           ]
 end
