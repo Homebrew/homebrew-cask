@@ -39,10 +39,10 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
                        :caskroom_only,
                        :nested_container,
                        :uninstall,
-                       :after_install,
-                       :after_uninstall,
-                       :before_install,
-                       :before_uninstall,
+                       :postflight,
+                       :uninstall_postflight,
+                       :preflight,
+                       :uninstall_postflight,
                        ])
 
   def self.run(*arguments)

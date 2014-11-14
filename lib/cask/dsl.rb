@@ -209,16 +209,6 @@ module Cask::DSL
       end
     end
 
-    # Todo: this hash is transitional.  Each of these stanzas will
-    # ultimately either be removed or upgraded with its own unique
-    # semantics.
-    STANZA_ALIASES = {
-                       :preflight             => :before_install,   # todo remove
-                       :postflight            => :after_install,    # todo remove
-                       :uninstall_preflight   => :before_uninstall, # todo remove
-                       :uninstall_postflight  => :after_uninstall,  # todo remove
-                     }
-
     def self.ordinary_artifact_types
       @@ordinary_artifact_types ||= [
                                      :app,
@@ -242,9 +232,8 @@ module Cask::DSL
     installable_artifact_types.push :caskroom_only
 
     installable_artifact_types.each do |type|
-      resolved_type = STANZA_ALIASES.key?(type) ? STANZA_ALIASES[type] : type
       define_method(type) do |*args|
-        artifacts[resolved_type] << args
+        artifacts[type] << args
       end
     end
 
@@ -261,10 +250,6 @@ module Cask::DSL
     end
 
     ARTIFACT_BLOCK_TYPES = [
-      :after_install,           # todo remove
-      :after_uninstall,         # todo remove
-      :before_install,          # todo remove
-      :before_uninstall,        # todo remove
       :preflight,
       :postflight,
       :uninstall_preflight,
@@ -272,9 +257,8 @@ module Cask::DSL
     ]
 
     ARTIFACT_BLOCK_TYPES.each do |type|
-      resolved_type = STANZA_ALIASES.key?(type) ? STANZA_ALIASES[type] : type
       define_method(type) do |&block|
-        artifacts[resolved_type] << block
+        artifacts[type] << block
       end
     end
 
