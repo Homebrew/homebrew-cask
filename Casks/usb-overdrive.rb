@@ -1,6 +1,6 @@
 cask :v1 => 'usb-overdrive' do
-  version '3.0.2'
-  sha256 'd6bed831521a5ab2b82d7eede7be46953e1c010cc6e02ff11f3dd2532d7b0b13'
+  version '3.1'
+  sha256 '1a93082f1a2236bca088372c54b1933b3e491c3a986a1f13f78b59fda0c40fa2'
 
   url "http://www.senlick.com/macsw/USB-Overdrive-#{version.gsub('.','')}.dmg"
   homepage 'http://www.usboverdrive.com/'
