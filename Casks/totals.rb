@@ -1,6 +1,6 @@
 cask :v1 => 'totals' do
-  version '2.2.11'
-  sha256 '594c58ea110bef590b03aa03a495f7e086cdda9f7fa8a9e6fe4c5af1fb892d09'
+  version '3.0.6'
+  sha256 '64ce147800d408f006ff9a094cd4f849a7bf9391090a5b0a100a7888c077c44b'
 
   url "http://www.kedisoft.com/dl/totals/Totals-#{version}.dmg"
   homepage 'http://www.kedisoft.com/totals/'
