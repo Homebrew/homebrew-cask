@@ -1,4 +1,4 @@
-class Cask::CLI::Search
+class Cask::CLI::Search < Cask::CLI::Base
   def self.run(*arguments)
     render_results *search(*arguments)
   end
@@ -33,7 +33,7 @@ class Cask::CLI::Search
 
   def self.render_results(exact_match, partial_matches, search_term)
     if ! exact_match and partial_matches.empty?
-      puts "No cask found for \"#{search_term}\"."
+      puts "No Cask found for \"#{search_term}\"."
       return
     end
     if exact_match
@@ -51,6 +51,6 @@ class Cask::CLI::Search
   end
 
   def self.help
-    "searches all known casks"
+    "searches all known Casks"
   end
 end

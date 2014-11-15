@@ -1,7 +1,10 @@
-class Piezo < Cask
+cask :v1 => 'piezo' do
+  version :latest
+  sha256 :no_check
+
   url 'http://neutral.rogueamoeba.com/mirror/files/Piezo.zip'
   homepage 'http://rogueamoeba.com/piezo/'
-  version 'latest'
-  sha256 :no_check
-  link 'Piezo.app'
+  license :unknown
+
+  app 'Piezo.app'
 end

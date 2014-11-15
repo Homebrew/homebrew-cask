@@ -1,7 +1,11 @@
-class Goagentx < Cask
-  url 'https://github.com/ohdarling/GoAgentX/releases/download/rel-v2.3.3/GoAgentX-v2.3.3.dmg'
+cask :v1 => 'goagentx' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://goagentx.com/files/GoAgentX.dmg'
+  appcast 'https://goagentx.com/update/SUAppcast.xml'
   homepage 'http://goagentx.com/'
-  version '2.3.3'
-  sha256 'a711a894d1c44d3e32bda0321adcaab4acca6219dbff798eec29ce8b40402673'
-  link 'GoAgentX.app'
+  license :unknown
+
+  app 'GoAgentX.app'
 end

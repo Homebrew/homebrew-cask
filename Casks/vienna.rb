@@ -1,7 +1,12 @@
-class Vienna < Cask
-  url 'http://downloads.sourceforge.net/vienna-rss/Vienna3.0.0_beta20.tgz'
+cask :v1 => 'vienna' do
+  version '3.0.0'
+  sha256 'e61f44b7be0f1f49cf6c735d8e03071141ddaca1d5ff65db29f786ee3dfeded3'
+
+  url "https://downloads.sourceforge.net/vienna-rss/Vienna#{version}.tgz"
+  appcast 'http://vienna-rss.org/changelog_beta.xml',
+          :sha256 => '20ae887cd3d0f8b97cd133cd32454fdb8796e72f2de2a0e12fe288c7358f7e31'
   homepage 'http://www.vienna-rss.org'
-  version '3.0.0_beta20'
-  sha256 '9d79e6697866b8a9403ec8e42d702a9eb927cb9757d47167aa474788c7ee7ac1'
-  link 'Vienna.app'
+  license :oss
+
+  app 'Vienna.app'
 end

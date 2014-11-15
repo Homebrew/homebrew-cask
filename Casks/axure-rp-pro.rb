@@ -1,7 +1,10 @@
-class AxureRpPro < Cask
-  url 'http://axure.cachefly.net/AxureRP-Pro-Setup.dmg'
-  homepage 'http://www.axure.com/'
-  version 'latest'
+cask :v1 => 'axure-rp-pro' do
+  version :latest
   sha256 :no_check
-  link 'Axure RP Pro 7.0.app'
+
+  url 'https://axure.cachefly.net/AxureRP-Pro-Setup.dmg'
+  homepage 'http://www.axure.com/'
+  license :commercial
+
+  app 'Axure RP Pro 7.0.app'
 end

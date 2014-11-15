@@ -1,6 +1,6 @@
-class Cask::CLI::Audit
+class Cask::CLI::Audit < Cask::CLI::Base
   def self.help
-    'verifies installability of casks'
+    'verifies installability of Casks'
   end
 
   def self.run(*args)

@@ -1,7 +1,10 @@
-class Makemkv < Cask
-  url 'http://www.makemkv.com/download/makemkv_v1.8.9_osx.dmg'
+cask :v1 => 'makemkv' do
+  version '1.8.14'
+  sha256 '099acced826a05d1013c03705d07a344731b3f078d866437f54568f2e3065c53'
+
+  url "http://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
   homepage 'http://www.makemkv.com/'
-  version '1.8.9'
-  sha256 '143bec1c7a2e073450dd60b77fd927cb2c097af5ada47949fe14deb38e9a0421'
-  link 'MakeMKV.app'
+  license :unknown
+
+  app 'MakeMKV.app'
 end

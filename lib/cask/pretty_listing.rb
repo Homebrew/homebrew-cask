@@ -7,6 +7,6 @@ class Cask::PrettyListing
   end
 
   def print
-    ::PrettyListing.new(cask.destination_path)
+    ::PrettyListing.new(cask.staged_path)
   end
 end

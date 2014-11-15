@@ -1,9 +1,12 @@
-class ProlificUsbSerialDriver < Cask
-  url 'http://www.prolific.com.tw/UserFiles/files/md_PL2303_MacOSX-10_6up_v1_5_1.zip'
-  homepage 'http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=229&pcid=41'
+cask :v1 => 'prolific-usb-serial-driver' do
   version '1.5.1'
   sha256 'b6658605409e9aa63bca7a1ac94c989cc01cdf375f6881ade0ed5bb9694c22cc'
-  install 'md_PL2303_MacOSX-10_6up_v1_5_1/PL2303_MacOSX_v1.5.1.pkg'
-  uninstall :pkgutil => 'com.prolific.prolificUsbserialCableDriverV151.ProlificUsbSerial.pkg',
+
+  url "http://www.prolific.com.tw/UserFiles/files/md_PL2303_MacOSX-10_6up_v#{version.gsub('.', '_')}.zip"
+  homepage 'http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=229&pcid=41'
+  license :unknown
+
+  pkg "PL2303_MacOSX_v#{version}.pkg"
+  uninstall :pkgutil => 'com.prolific.prolificUsbserialCableDriverV*.ProlificUsbSerial.pkg',
             :kext => 'com.prolific.driver.PL2303'
 end

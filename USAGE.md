@@ -66,16 +66,26 @@ $ brew cask uninstall google-chrome
 This will both uninstall the Cask and remove symlinks which were created in
 `~/Applications`.
 
+To uninstall all versions of a Cask, use `--force`:
+
+```bash
+$ brew cask uninstall --force google-chrome
+```
+
+Note that `uninstall --force` is currently imperfect.  See the man page for
+more information.
+
 ## Other Commands
 
 * `info` -- displays information about the given Cask
-* `list` -- with no args, lists installed Casks; given installed Casks, lists installed files
+* `list` -- with no args, lists installed Casks; given installed Casks, lists staged files
 * `fetch` -- downloads Cask resources to local cache (with `--force`, re-download even if already cached)
 * `doctor` -- checks for configuration issues
 * `cleanup` -- cleans up cached downloads (with `--outdated`, only cleans old downloads)
 * `home` -- opens the homepage of the given Cask; or with no arguments, the homebrew-cask project page
 * `alfred` -- modifies Alfred's scope to include the Caskroom
 * `update` -- a synonym for `brew update`
+* `zap` -- try to remove *all* files associated with a Cask (including resources which may be shared with other applications)
 
 The following commands are for Cask authors:
 
@@ -83,7 +93,6 @@ The following commands are for Cask authors:
 * `cat` -- dumps the given Cask to the standard output
 * `create` -- creates a Cask and opens it in an editor
 * `edit` -- edits the given Cask
-* `checklinks` -- checks for bad Cask links
 
 The following aliases and abbreviations are provided for convenience:
 
@@ -109,7 +118,7 @@ $ brew cask info caffeine
 caffeine: 1.1.1
 http://lightheadsw.com/caffeine/
 Not installed
-https://github.com/caskroom/homebrew-cask/commits/master/Casks/caffeine.rb
+https://github.com/caskroom/homebrew-cask/blob/master/Casks/caffeine.rb
 ```
 
 ## Updating/Upgrading Casks
@@ -126,7 +135,10 @@ It is generally safe to run updates from within an Application.
 
 When a new version homebrew-cask is released, it will appear in the output of
 `brew outdated` after running `brew update`.  You can upgrade it via the normal
-Homebrew workflow: `brew upgrade brew-cask`.
+Homebrew `brew upgrade` workflow:
+```bash
+$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+```
 
 ## Additional Taps (optional)
 
@@ -136,8 +148,11 @@ of Casks.
 
 | Tap name | description |
 | -------- | ----------- |
-| [caskroom/versions](https://github.com/caskroom/homebrew-versions) | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
-| [caskroom/fonts](https://github.com/caskroom/homebrew-fonts) | contains Casks that install fonts, which are kept separate so we can educate users about the different licensing landscape around font installation/usage
+| [caskroom/versions](https://github.com/caskroom/homebrew-versions)     | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
+| [caskroom/fonts](https://github.com/caskroom/homebrew-fonts)           | contains Casks that install fonts, which are kept separate so we can educate users about the different licensing landscape around font installation/usage
+| [caskroom/unofficial](https://github.com/caskroom/homebrew-unofficial) | contains Casks that install unofficial builds or forks
+
+There are also [alternate Cask Taps](doc/ALTERNATE_CASK_TAPS.md#alternate-cask-taps-maintained-by-users) maintained by users.
 
 You can tap any of the above with a `brew tap` command:
 
@@ -221,12 +236,15 @@ above, a Cask name on the command line can take the form of:
 * a Cask name as returned by `brew cask search`, _eg_: `google-chrome`
 * a fully-qualified Cask name which includes the Tap, _eg_: `caskroom/fonts/font-symbola`
 
-`brew cask` also accepts two other forms for Cask names:
+`brew cask` also accepts three other forms for Cask names:
 
-* a fully-qualified pathname to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
+* a path to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
 * a `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
+* a file in the current working directory, _eg_: `my-modfied-google-chrome.rb`.  Note
+  that Tapped Casks names will be preferred over this form.  To force the use of a Cask
+  file in the current directory, specify a pathname with slashes, _eg_: `./google-chrome.rb`.
 
-The last two forms are intended for users who wish to maintain private Casks.
+The last three forms are intended for users who wish to maintain private Casks.
 
 ## Taps
 

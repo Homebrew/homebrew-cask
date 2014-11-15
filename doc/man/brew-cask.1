@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "HOMEBREW\-CASK" "1" "May 2014" "Homebrew-cask" "brew-cask"
+.TH "HOMEBREW\-CASK" "1" "October 2014" "Homebrew-cask" "brew-cask"
 .
 .SH "NAME"
 \fBhomebrew\-cask\fR \- A friendly binary installer for OS X
@@ -18,11 +18,11 @@ Homebrew\-cask works robustly enough that we welcome new users, but the project 
 .SH "FREQUENTLY USED COMMANDS"
 .
 .TP
-\fBinstall\fR \fICask\fR
+\fBinstall [\-\-force]\fR \fICask\fR
 Install \fICask\fR\.
 .
 .TP
-\fBuninstall\fR \fICask\fR
+\fBuninstall [\-\-force]\fR \fICask\fR
 Uninstall \fICask\fR\.
 .
 .TP
@@ -47,12 +47,8 @@ Modify Alfred\'s search scope to include the Caskroom directory where Applicatio
 Dump the given Cask definition file to the standard output\.
 .
 .TP
-\fBchecklinks\fR
-Check for bad Cask links\.
-.
-.TP
 \fBcleanup\fR [\-\-outdated]
-Clean up cached downloads\. With \fB\-\-outdated\fR, only clean up cached downloads older than 10 days old\.
+Clean up cached downloads and tracker symlinks\. With \fB\-\-outdated\fR, only clean up cached downloads older than 10 days old\.
 .
 .TP
 \fBcreate\fR \fICask\fR
@@ -80,21 +76,43 @@ Display information about \fICask\fR\.
 .
 .TP
 \fBinstall [\-\-force]\fR \fICask\fR
-Install \fICask\fR\.
+Install \fICask\fR\. With \fB\-\-force\fR, re\-install even if the Cask appears to be already present\.
 .
 .IP
 \fICask\fR is usually the name of a Cask as returned by \fBbrew cask search\fR, but see \fIOTHER WAYS TO SPECIFY A CASK\fR for variations\.
 .
 .TP
-\fBlist\fR or \fBls\fR [\fICasks\fR]
-Without any arguments, list all installed Casks\.
+\fBlist\fR or \fBls\fR [\-1 | \-l] [\fICasks\fR]
+Without any arguments, list all installed Casks\. With \fB\-1\fR, always format the output in a single column\. With \fB\-l\fR, give a more detailed listing\.
 .
 .IP
-If \fICasks\fR are given, list the installed files for \fICasks\fR\.
+If \fICasks\fR are given, list the staged files for \fICasks\fR\.
 .
 .TP
-\fBuninstall\fR or \fBrm\fR or \fBremove\fR \fICask\fR
-Uninstall \fICask\fR\.
+\fBuninstall [\-\-force]\fR or \fBrm\fR or \fBremove\fR \fICask\fR
+Uninstall \fICask\fR\. With \fB\-\-force\fR, uninstall even if the Cask does not appear to be present\.
+.
+.IP
+Note that \fBuninstall \-\-force\fR is currently imperfect\. It will follow the \fBuninstall\fR instructions from \fInewest\fR Cask definition, even if the given Cask has changed since you installed it\. The result is that \fBuninstall \-\-force\fR will always succeed in removing relevant files under \fB/opt/homebrew\-cask\fR, but will sometimes fail to remove relevant installed files outside of \fB/opt/homebrew\-cask\fR\. This issue is being addressed\.
+.
+.IP
+\fBuninstall\fR without \fB\-\-force\fR is also imperfect\. It may be unable to perform an \fBuninstall\fR operation if the given Cask has changed since you installed it\. This issue is being addressed\.
+.
+.TP
+\fBzap\fR \fICask\fR
+Unconditionally remove \fIall\fR files associated with \fICask\fR\.
+.
+.IP
+Implicitly performs all actions associated with \fBuninstall\fR, even if the Cask does not appear to be currently installed\.
+.
+.IP
+Removes all staged versions of the Cask distribution found under \fB/opt/homebrew\-cask/Caskroom/<Cask>\fR
+.
+.IP
+If the Cask definition contains a \fBzap\fR stanza, performs additional \fBzap\fR actions as defined there, such as removing local preference files\. \fBzap\fR actions are variable, depending on the level of detail defined by the Cask author\.
+.
+.IP
+\fB\fBzap\fR may remove resources which are shared between applications\.\fR
 .
 .TP
 \fBsearch\fR or \fB\-S\fR
@@ -109,7 +127,10 @@ Perform a substring search of Cask names for \fItext\fR\. If the text is delimit
 For convenience, \fBbrew cask update\fR is a synonym for \fBbrew update\fR\.
 .
 .SH "OPTIONS"
-Some of these options (such as \fB\-\-prefpanedir\fR) may be subject to removal in a future version\.
+To make these options persistent, see the ENVIRONMENT section, below\.
+.
+.P
+Some of these (such as \fB\-\-prefpanedir\fR) may be subject to removal in a future version\.
 .
 .TP
 \fB\-\-force\fR
@@ -156,6 +177,10 @@ Target location for Service links\. The default value is \fB~/Library/Services\f
 Target location for Input Method links\. The default value is \fB~/Library/Input Methods\fR\.
 .
 .TP
+\fB\-\-internet_plugindir=<path>\fR
+Target location for Internet Plugin links\. The default value is \fB~/Library/Internet Plug\-Ins\fR\.
+.
+.TP
 \fB\-\-screen_saverdir=<path>\fR
 Target location for Screen Saver links\. The default value is \fB~/Library/Screen Savers\fR\.
 .
@@ -172,7 +197,7 @@ Target location for "helper" executable links\. The default value is \fB/usr/loc
 Output debugging information of use to Cask authors and developers\.
 .
 .SH "INTERACTION WITH HOMEBREW"
-Homebrew\-cask is implemented as a external command for Homebrew\. That means this project is entirely built upon the Homebrew infrastructure\. For example, upgrades to the Homebrew\-cask tool are received through Homebrew: brew update && brew upgrade brew\-cask
+Homebrew\-cask is implemented as a external command for Homebrew\. That means this project is entirely built upon the Homebrew infrastructure\. For example, upgrades to the Homebrew\-cask tool are received through Homebrew: brew update && brew upgrade brew\-cask && brew cleanup && brew cask cleanup
 .
 .P
 And updates to individual Cask definitions are received whenever you issue the Homebrew command: brew update
@@ -207,7 +232,7 @@ Environment variables specific to homebrew\-cask:
 .
 .TP
 HOMEBREW_CASK_OPTS
-This variable may contain any arguments normally used as options on the command\-line\. Example: \fB\-\-appdir=/some/path/bar\fR\.
+This variable may contain any arguments normally used as options on the command\-line\. This is partiularly useful to make options persistent\. For example, you might add to your \.bash_profile or \.zshenv something like: \fBexport HOMEBREW_CASK_OPTS=\'\-\-appdir=/Applications \-\-caskroom=/etc/Caskroom\'\fR\.
 .
 .SH "SEE ALSO"
 The homebrew\-cask home page: \fIhttp://caskroom\.io\fR\.

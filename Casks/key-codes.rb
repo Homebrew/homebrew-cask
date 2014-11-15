@@ -1,7 +1,11 @@
-class KeyCodes < Cask
+cask :v1 => 'key-codes' do
+  version '2.0.1'
+  sha256 '47d61049953e8fcf881c0c6b9c7060fed2248750f23c26b71b51092384bd5a4a'
+
   url 'http://manytricks.com/download/keycodes'
+  appcast 'http://manytricks.com/keycodes/appcast.xml'
   homepage 'http://manytricks.com/keycodes/'
-  version '2.0'
-  sha256 '9c56d4e213e8779be45fe36d55a8684f9a414fd9b795bde7487f5765b8a9d694'
-  link 'Key Codes.app'
+  license :unknown
+
+  app 'Key Codes.app'
 end

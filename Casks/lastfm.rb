@@ -1,8 +1,11 @@
-class Lastfm < Cask
+cask :v1 => 'lastfm' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.lastfm.de/download/mac'
   appcast 'http://cdn.last.fm/client/Mac/updates.xml'
   homepage 'http://www.lastfm.com'
-  version 'latest'
-  sha256 :no_check
-  link 'Last.fm.app'
+  license :unknown
+
+  app 'Last.fm.app'
 end

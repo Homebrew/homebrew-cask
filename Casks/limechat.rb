@@ -1,7 +1,19 @@
-class Limechat < Cask
-  url 'https://downloads.sourceforge.net/project/limechat/limechat/LimeChat_2.41.tbz'
+cask :v1 => 'limechat' do
+
+  if MacOS.version < :mountain_lion
+    version '2.38'
+    sha256 '1d7bf505ce60f1bfeb809de67d9f07c996a19eaa6d43b3c5e9df3fcc76077e11'
+  else
+    version '2.42'
+    sha256 '708d10591784e5beb7ed80236d809d5cd4f992c133483bc2a82775acdc6f1f0f'
+  end
+
+  url "https://downloads.sourceforge.net/project/limechat/limechat/LimeChat_#{version}.tbz"
+  appcast 'http://limechat.net/mac/appcast.xml',
+          :sha256 => '32dd2f6795c4f19940a8bb8a093b5b297167c28a4b6712cb94d6de14f1002e4f'
   homepage 'http://limechat.net/mac/'
-  version '2.41'
-  sha256 'ef9b9f70c51c4e3e00d6bdece089965b9db4be6131e66cc7233b226564236401'
-  link 'LimeChat.app'
+  license :oss
+
+  app 'LimeChat.app'
+  zap :delete => '~/Library/Preferences/net.limechat.LimeChat-AppStore.plist'
 end

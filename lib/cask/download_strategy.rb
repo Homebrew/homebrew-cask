@@ -1,8 +1,8 @@
 require 'cgi'
 
 # We abuse Homebrew's download strategies considerably here.
-# * Our downloader instances only invoke the fetch method,
-#   ignoring stage and clear_cache.
+# * Our downloader instances only invoke the fetch and
+#   clear_cache methods, ignoring stage
 # * Our overridden fetch methods are expected to return
 #   a value: the successfully downloaded file.
 
@@ -17,7 +17,7 @@ module Cask::DownloadStrategy
       cask.title,
       ::Resource.new(cask.title) do |r|
         r.url     cask.url.to_s
-        r.version cask.version
+        r.version cask.version.to_s
       end
     )
   end
@@ -28,7 +28,7 @@ class Cask::CurlDownloadStrategy < CurlDownloadStrategy
   include Cask::DownloadStrategy
 
   def _fetch
-    odebug "Calling curl with args #{curl_args.inspect}"
+    odebug "Calling curl with args #{curl_args.utf8_inspect}"
     curl(*curl_args)
   end
 
@@ -138,7 +138,7 @@ class Cask::SubversionDownloadStrategy < SubversionDownloadStrategy
     args << '--ignore-externals' if ignore_externals
     @command.run!('/usr/bin/svn',
                   :args => args,
-                  :stderr => :silence)
+                  :print_stderr => false)
   end
 
   def tarball_path
@@ -147,6 +147,10 @@ class Cask::SubversionDownloadStrategy < SubversionDownloadStrategy
 
   private
 
+  # TODO/UPDATE: the tar approach explained below is fragile
+  # against challenges such as case-sensitive filesystems,
+  # and must be re-implemented.
+  #
   # Seems nutty: we "download" the contents into a tape archive.
   # Why?
   # * A single file is tractable to the rest of the Cask toolchain,
@@ -165,7 +169,7 @@ class Cask::SubversionDownloadStrategy < SubversionDownloadStrategy
   def compress
     Dir.chdir(cached_location) do
       @command.run!('/usr/bin/tar', :args => ['-s/^\.//', '--exclude', '.svn', '-cf', Pathname.new(tarball_path), '--', '.'],
-                                    :stderr => :silence)
+                                    :print_stderr => false)
     end
     clear_cache
   end

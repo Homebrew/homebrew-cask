@@ -1,7 +1,10 @@
-class Jitouch < Cask
+cask :v1 => 'jitouch' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.jitouch.com/jitouch_mavericks.zip'
   homepage 'http://www.jitouch.com'
-  version 'latest'
-  sha256 :no_check
+  license :unknown
+
   prefpane 'jitouch/Jitouch.prefPane'
 end

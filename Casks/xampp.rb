@@ -1,9 +1,12 @@
-class Xampp < Cask
-  url 'http://downloads.sourceforge.net/project/xampp/XAMPP%20Mac%20OS%20X/1.8.3/xampp-osx-1.8.3-3-installer.dmg'
-  homepage 'http://www.apachefriends.org/index.html'
+cask :v1 => 'xampp' do
   version '1.8.3.3'
   sha256 'b54cced0697caa418851a4bdb11ee1697b3f7f71130e1e6bce19582d60e41530'
-  caveats do
-    manual_installer 'xampp-osx-1.8.3-3-installer.app'
-  end
+
+  # sourceforge.net is the official download host per the vendor homepage
+  url "https://downloads.sourceforge.net/project/xampp/XAMPP%20Mac%20OS%20X/#{version.sub(%r{\.\d$},'')}/xampp-osx-#{version}-installer.dmg"
+  homepage 'http://www.apachefriends.org/index.html'
+  license :oss
+
+  installer :manual => "xampp-osx-#{version}-installer.app"
+  uninstall :delete => '/Applications/XAMPP'
 end

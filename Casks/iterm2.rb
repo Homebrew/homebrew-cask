@@ -1,8 +1,15 @@
-class Iterm2 < Cask
+cask :v1 => 'iterm2' do
   # note: "2" is not a version number, but indicates a different vendor
-  url 'http://www.iterm2.com/downloads/stable/iTerm2_v1_0_0.zip'
+  version '2.0.0'
+  sha256 '6a59e1b96d9037b6ff1b8aaaf7aed5cff572d74d6e58390db16028433769c058'
+
+  url "http://www.iterm2.com/downloads/stable/iTerm2_v#{version.sub(%r{^(\d+)\.(\d+).*},'\1_\2')}.zip"
   homepage 'http://www.iterm2.com/'
-  version '1.0.0'
-  sha256 '2afad022b1e1f08b3ed40f0c2bde7bf7cce003852c83f85948c7f57a5578d9c5'
-  link 'iTerm.app'
+  appcast 'http://iterm2.com/appcasts/final.xml',
+          :sha256 => 'd8e8c6f4990676b33c81d7b577b96ef5eed9f8f872c104d02f25e0290b0a8ee5'
+  license :oss
+
+  app 'iTerm.app'
+
+  zap :delete => '~/Library/Preferences/com.googlecode.iterm2.plist'
 end

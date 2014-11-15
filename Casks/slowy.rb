@@ -1,7 +1,10 @@
-class Slowy < Cask
-  url 'http://slowyapp.com/downloads/Slowyapp_v1.6.dmg'
+cask :v1 => 'slowy' do
+  version '1.7'
+  sha256 '0b2c6414c01d4e940e1df26034258a8401f0f302278a00ff13adeecada582c81'
+
+  url "http://slowyapp.com/downloads/Slowyapp_v#{version}.dmg"
   homepage 'http://slowyapp.com/'
-  version '1.6'
-  sha256 '0ecb2fbe06f3d7a050efab30d8ee6b370c83c2b44fec8b005fdc805cbc7728c7'
-  link 'Slowy.app'
+  license :unknown
+
+  app 'Slowy.app'
 end

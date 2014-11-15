@@ -7,7 +7,8 @@ class Cask::Fetcher
     if url.to_s =~ /googlecode/
       googlecode_fake_head(url)
     else
-      `curl --max-time #{TIMEOUT} --silent --location --head '#{url}'`
+      Cask::SystemCommand.run("curl",
+                              :args => ["--max-time", TIMEOUT, "--silent", "--location", "--head", url]).stdout
     end
   end
 

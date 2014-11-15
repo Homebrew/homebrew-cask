@@ -1,8 +1,11 @@
-class SketchTool < Cask
+cask :v1 => 'sketch-tool' do
+  version :latest
+  sha256 :no_check
+
   url 'http://sketchtool.bohemiancoding.com/sketchtool-latest.zip'
   homepage 'http://bohemiancoding.com/sketch/tool/'
-  version 'latest'
-  sha256 :no_check
+  license :unknown
+
   binary 'sketchtool/sketchtool'
   # Placing this bundle in the binary directory is contrary to Unix convention,
   # However the SketchTool README states:

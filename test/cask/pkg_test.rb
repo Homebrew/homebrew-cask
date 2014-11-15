@@ -6,10 +6,13 @@ describe Cask::Pkg do
       pkg = Cask::Pkg.new('my.fake.pkg', Cask::NeverSudoSystemCommand)
 
       some_files = Array.new(3) { Pathname(Tempfile.new('testfile').path) }
-      pkg.stubs(:list).with('files').returns some_files
+      pkg.stubs(:pkgutil_bom_files).returns some_files
+
+      some_specials = Array.new(3) { Pathname(Tempfile.new('testfile').path) }
+      pkg.stubs(:pkgutil_bom_specials).returns some_specials
 
       some_dirs = Array.new(3) { Pathname(Dir.mktmpdir) }
-      pkg.stubs(:list).with('dirs').returns some_dirs
+      pkg.stubs(:pkgutil_bom_dirs).returns some_dirs
 
       pkg.stubs(:forget)
 
@@ -27,6 +30,9 @@ describe Cask::Pkg do
       )
       Cask::FakeSystemCommand.stubs_command(
         ['/usr/sbin/pkgutil', '--only-dirs', '--files', 'my.fake.pkg']
+                                            )
+      Cask::FakeSystemCommand.stubs_command(
+        ['/usr/sbin/pkgutil',                '--files', 'my.fake.pkg']
       )
 
       Cask::FakeSystemCommand.expects_command(
@@ -45,8 +51,9 @@ describe Cask::Pkg do
       intact_symlink = fake_dir.join('intact_symlink').tap { |path| path.make_symlink(fake_file) }
       broken_symlink = fake_dir.join('broken_symlink').tap { |path| path.make_symlink('im_nota_file') }
 
-      pkg.stubs(:list).with('files').returns([])
-      pkg.stubs(:list).with('dirs').returns([fake_dir])
+      pkg.stubs(:pkgutil_bom_specials).returns([])
+      pkg.stubs(:pkgutil_bom_files).returns([])
+      pkg.stubs(:pkgutil_bom_dirs).returns([fake_dir])
       pkg.stubs(:forget)
 
       pkg.uninstall
@@ -66,11 +73,14 @@ describe Cask::Pkg do
 
       fake_dir.chmod(0000)
 
-      pkg.stubs(:list).with('files').returns([fake_file])
-      pkg.stubs(:list).with('dirs').returns([fake_dir])
+      pkg.stubs(:pkgutil_bom_specials).returns([])
+      pkg.stubs(:pkgutil_bom_files).returns([fake_file])
+      pkg.stubs(:pkgutil_bom_dirs).returns([fake_dir])
       pkg.stubs(:forget)
 
-      pkg.uninstall
+      shutup do
+        pkg.uninstall
+      end
 
       fake_dir.must_be :directory?
       fake_file.wont_be :file?

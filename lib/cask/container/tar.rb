@@ -6,9 +6,9 @@ class Cask::Container::Tar < Cask::Container::Base
   end
 
   def extract
-    Dir.mktmpdir do |staging_dir|
-      @command.run!('/usr/bin/tar', :args => ['xf', @path, '-C', staging_dir])
-      @command.run!('/usr/bin/ditto', :args => ['--', staging_dir, @cask.destination_path])
+    Dir.mktmpdir do |unpack_dir|
+      @command.run!('/usr/bin/tar', :args => ['xf', @path, '-C', unpack_dir])
+      @command.run!('/usr/bin/ditto', :args => ['--', unpack_dir, @cask.staged_path])
     end
   end
 end

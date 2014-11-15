@@ -1,7 +1,10 @@
-class TheBrain < Cask
-  url 'http://assets.thebrain.com/downloads/TheBrain_macos_8_0_0_7-a.dmg'
+cask :v1 => 'the-brain' do
+  version '8.0.1.2'
+  sha256 '2ac492c6defc6d1156de434e84272daf9deb26edf7581da737ac077b244ad7f7'
+
+  url "http://assets.thebrain.com/downloads/TheBrain_macos_J7_#{version.gsub('.', '_')}-a.dmg"
   homepage 'http://www.thebrain.com/'
-  version '8.0.0.7'
-  sha256 'a3a28e810961652e7b436f81cff4510e0a7c2beeca7936892f9194d11f957493'
-  link 'TheBrain.app'
+  license :unknown
+
+  app 'TheBrain.app'
 end

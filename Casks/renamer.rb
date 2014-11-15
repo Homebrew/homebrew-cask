@@ -1,7 +1,10 @@
-class Renamer < Cask
+cask :v1 => 'renamer' do
+  version :latest
+  sha256 :no_check
+
   url 'http://creativebe.com/download/renamer'
   homepage 'http://renamer.com'
-  version 'latest'
-  sha256 :no_check
-  link 'Renamer.app'
+  license :unknown
+
+  app 'Renamer.app'
 end

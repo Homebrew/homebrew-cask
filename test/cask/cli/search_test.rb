@@ -1,7 +1,7 @@
 require 'test_helper'
 
 describe Cask::CLI::Search do
-  it "lists the available casks that match the search term" do
+  it "lists the available Casks that match the search term" do
     lambda {
       Cask::CLI::Search.run('intellij')
     }.must_output <<-OUTPUT.gsub(/^ */, '')
@@ -11,10 +11,10 @@ describe Cask::CLI::Search do
     OUTPUT
   end
 
-  it "shows that there are no casks matching a search term that did not result in anything" do
+  it "shows that there are no Casks matching a search term that did not result in anything" do
     lambda {
       Cask::CLI::Search.run('foo-bar-baz')
-    }.must_output("No cask found for \"foo-bar-baz\".\n")
+    }.must_output("No Cask found for \"foo-bar-baz\".\n")
   end
 
   it "lists all available Casks with no search term" do
@@ -66,6 +66,6 @@ describe Cask::CLI::Search do
     out, err = capture_io do
       Cask::CLI::Search.run('caskroom')
     end
-    out.must_match(/^No cask found for "caskroom"\.\n/)
+    out.must_match(/^No Cask found for "caskroom"\.\n/)
   end
 end

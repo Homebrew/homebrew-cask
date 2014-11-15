@@ -1,7 +1,10 @@
-class Shadowsweeper < Cask
-  url 'http://www.irradiatedsoftware.com/download/ShadowSweeper.zip'
-  homepage 'http://www.irradiatedsoftware.com/labs/'
-  version 'latest'
+cask :v1 => 'shadowsweeper' do
+  version :latest
   sha256 :no_check
-  link 'ShadowSweeper.app'
+
+  url 'https://www.irradiatedsoftware.com/download/ShadowSweeper.zip'
+  homepage 'http://www.irradiatedsoftware.com/labs/'
+  license :unknown
+
+  app 'ShadowSweeper.app'
 end

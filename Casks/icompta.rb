@@ -1,7 +1,10 @@
-class Icompta < Cask
-  url 'http://www.lyricapps.fr/iCompta/downloads/iCompta.dmg'
-  homepage 'http://www.icompta-app.com/'
-  version 'latest'
+cask :v1 => 'icompta' do
+  version :latest
   sha256 :no_check
-  link 'iCompta.app'
+
+  url 'https://www.lyricapps.fr/iCompta/downloads/iCompta.dmg'
+  homepage 'http://www.icompta-app.com/'
+  license :unknown
+
+  app 'iCompta.app'
 end

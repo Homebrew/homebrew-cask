@@ -1,13 +1,15 @@
-class Houdahspot < Cask
+cask :v1 => 'houdahspot' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.houdah.com/houdahSpot/download_assets/HoudahSpot_latest.zip'
   appcast 'http://www.houdah.com/houdahSpot/updates/profileInfo3.php'
   homepage 'http://www.houdah.com/houdahSpot/'
-  version 'latest'
-  sha256 :no_check
-  link 'HoudahSpot.app'
+  license :unknown
 
-  after_install do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.houdah.HoudahSpot', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+  app 'HoudahSpot.app'
+
+  postflight do
+    suppress_move_to_applications
   end
 end

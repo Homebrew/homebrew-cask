@@ -1,7 +1,14 @@
-class Owncloud < Cask
-  url 'http://download.owncloud.com/desktop/stable/ownCloud-1.5.4.2580.dmg'
+cask :v1 => 'owncloud' do
+  version '1.7.0.1339'
+  sha256 'baa848c46e0a1cc0e88cf78a2419bfdb7d55fd984100d9fe1babc4a97eb00d9a'
+
+  url "https://download.owncloud.com/desktop/stable/ownCloud-#{version}.pkg"
   homepage 'http://owncloud.com'
-  version '1.5.4.2580'
-  sha256 '2dd1b7cb5263a7cb5d5363290ec02d76305f6599941c1cd2f35399b319972503'
-  link 'owncloud.app'
+  license :unknown
+
+  pkg "ownCloud-#{version}.pkg"
+  uninstall :pkgutil => [
+                         'com.ownCloud.client',
+                         'com.owncCloud.finderPlugin',
+                        ]
 end

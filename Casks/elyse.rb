@@ -1,7 +1,10 @@
-class Elyse < Cask
-  url 'http://silkwoodsoftware.com/Elyse-300.dmg'
+cask :v1 => 'elyse' do
+  version '3.1.0'
+  sha256 'b66bf959d30045e2f80193a6b4f9de88341c9c9e13a691afa74ddcf44eee02d7'
+
+  url "http://silkwoodsoftware.com/Elyse-#{version.gsub('.','')}.dmg"
   homepage 'http://silkwoodsoftware.com/'
-  version '2.0'
-  sha256 '080f3fb7a5893f405d565434130b9278d9e7a4a37528bb20fc4cb0f083db7db6'
-  link 'Elyse.app'
+  license :unknown
+
+  app 'Elyse.app'
 end

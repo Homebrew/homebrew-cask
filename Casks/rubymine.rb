@@ -1,7 +1,18 @@
-class Rubymine < Cask
-  url 'http://download-cf.jetbrains.com/ruby/RubyMine-6.3.2.dmg'
+cask :v1 => 'rubymine' do
+  version '7.0'
+  sha256 '60ceca89231a9756e682d754aaba409c9120266f20478e51f7b6004f82919478'
+
+  url "http://download-cf.jetbrains.com/ruby/RubyMine-#{version}.dmg"
   homepage 'http://www.jetbrains.com/ruby/'
-  version '6.3.2'
-  sha256 'a41cc410241b83f6f86a66f08635777bdb8e7fd7dfb8760ef1bb36f0e87d649d'
-  link 'RubyMine.app'
+  license :unknown
+
+  app 'RubyMine.app'
+
+  postflight do
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/RubyMine.app/Contents/Info.plist"
+  end
+  zap :delete => [
+                  "~/Library/Application Support/RubyMine#{version.gsub('.','')}",
+                  "~/Library/Preferences/RubyMine#{version.gsub('.','')}",
+                 ]
 end

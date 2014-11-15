@@ -1,12 +1,12 @@
-class Whatpulse < Cask
-  url 'http://amcdn.whatpulse.org/files/whatpulse-mac-2.4.dmg'
+cask :v1 => 'whatpulse' do
+  version '2.4.1'
+  sha256 '877a2feb8a916ee4de637cc0839399e9c240bdd3e6a96beb8dd66edb49ffec74'
+
+  url "http://amcdn.whatpulse.org/files/whatpulse-mac-#{version}.dmg"
   homepage 'http://www.whatpulse.org/'
-  version '2.4'
-  sha256 'baa7f17829cf70241845642891bceb4c4e4f276152a90e804eb271bdf1ffdbe8'
-  install 'WhatPulse 2.4.mpkg'
-  uninstall :files => [
-                       '/Applications/WhatPulse.app',
-                       '/Library/StartupItems/ChmodBPF'
-                      ],
-            :quit  => 'com.whatpulse.mac'
+  license :unknown
+
+  pkg "WhatPulse #{version}.mpkg"
+  uninstall :pkgutil => 'com.lostdomain.whatpulse',
+            :quit   => 'com.whatpulse.mac'
 end

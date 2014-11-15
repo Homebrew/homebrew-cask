@@ -1,7 +1,12 @@
-class Litecoin < Cask
-  url 'https://download.litecoin.org/litecoin-0.8.6.2/macosx/Litecoin-Qt-0.8.6.2.dmg'
+cask :v1 => 'litecoin' do
+  version '0.8.7.4'
+  sha256 'ab69c7b668cae4cff2025e3ea6845751277851e880a7f030e12ec525d088eeb9'
+
+  url "https://download.litecoin.org/litecoin-#{version}/macosx/Litecoin-Qt-#{version}.dmg"
+  gpg "#{url}.asc",
+      :key_id => 'c37e4723969276f5'
   homepage 'https://litecoin.org/'
-  version '0.8.6.2'
-  sha256 'dbe4a31306d7878ce913a4cfb5ba73f3acba9c4626847459dd4485738b2cd9c9'
-  link 'Litecoin-Qt.app'
+  license :x11
+
+  app 'Litecoin-Qt.app'
 end

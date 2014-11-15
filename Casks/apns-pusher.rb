@@ -1,7 +1,10 @@
-class ApnsPusher < Cask
-  url 'https://github.com/blommegard/APNS-Pusher/releases/download/2.2.1/APNS.Pusher.app.zip'
+cask :v1 => 'apns-pusher' do
+  version '2.3'
+  sha256 '6aa54050bea8603b45e6737bf2cc6997180b1a58f1d02095f5141176a1335205'
+
+  url "https://github.com/blommegard/APNS-Pusher/releases/download/v#{version}/APNS.Pusher.app.zip"
   homepage 'https://github.com/blommegard/APNS-Pusher'
-  version '2.2.1'
-  sha256 '7479f2c2bd405823043ef0a55da94d94ccbb91a69a0a2fff062c5baefc105ea6'
-  link 'APNS Pusher.app'
+  license :oss
+
+  app 'APNS Pusher.app'
 end

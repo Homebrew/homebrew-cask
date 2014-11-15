@@ -1,12 +1,16 @@
-class Hive < Cask
-  url 'https://github.com/hivewallet/hive-osx/releases/download/1.3/Hive-1.3.zip'
-  homepage 'http://www.hivewallet.com'
-  version '1.3'
-  sha256 '0f0889ec2553a717dac7b7f5ccf418ff55bfe8c15c853d09f69c7431989b192f'
-  link 'Hive.app'
+cask :v1 => 'hive' do
+  version '1.3.4'
+  sha256 'bbf99210f9d359d1f75482abebd24eb7cb3103d437c47a0dbf107f4bf9dcd97b'
 
-  after_install do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.hivewallet.Hive', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+  url "https://github.com/hivewallet/hive-osx/releases/download/#{version}/Hive-#{version}.zip"
+  appcast 'https://hivewallet.com/hive-osx-appcast.xml',
+          :sha256 => 'ab99fa8762d778ae379837c083214d70b3693b42cc8aa596d57a90b1d7e55c67'
+  homepage 'http://www.hivewallet.com'
+  license :oss
+
+  app 'Hive.app'
+
+  postflight do
+    suppress_move_to_applications
   end
 end

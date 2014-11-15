@@ -1,7 +1,11 @@
-class NarrativeUploader < Cask
-  url 'http://dl.getnarrative.com/appcast/installers/NarrativeUploader.dmg'
-  homepage 'http://getnarrative.com'
-  version 'latest'
+cask :v1 => 'narrative-uploader' do
+  version :latest
   sha256 :no_check
-  link 'Narrative Uploader.app'
+
+  url 'http://dl.getnarrative.com/appcast/installers/NarrativeUploader.dmg'
+  appcast 'http://dl.getnarrative.com/appcast/osx.xml'
+  homepage 'http://getnarrative.com'
+  license :unknown
+
+  app 'Narrative Uploader.app'
 end

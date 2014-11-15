@@ -1,7 +1,10 @@
-class PentahoDataIntegration < Cask
-  url 'http://sourceforge.net/projects/pentaho/files/latest/download'
-  homepage 'http://community.pentaho.com'
-  version 'latest'
+cask :v1 => 'pentaho-data-integration' do
+  version :latest
   sha256 :no_check
-  link 'data-integration/Data Integration.app'
+
+  url 'https://sourceforge.net/projects/pentaho/files/latest/download'
+  homepage 'http://community.pentaho.com'
+  license :oss
+
+  app 'data-integration/Data Integration.app'
 end

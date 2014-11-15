@@ -1,11 +1,15 @@
-class Totalterminal < Cask
-  url 'http://downloads.binaryage.com/TotalTerminal-1.4.11.dmg'
+cask :v1 => 'totalterminal' do
+  version '1.5.4'
+  sha256 '159475ff641a05cbce2ca4463eac4ae98006b62396b9f1f59d396d68d71d7d87'
+
+  url "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
   homepage 'http://totalterminal.binaryage.com'
-  version '1.4.11'
-  sha256 'c0689bc4912042441c5e056cae9a04a681d4dbe34c1fc157c890cc3febcd41f2'
-  install 'TotalTerminal.pkg'
-  uninstall :script => {
-    :executable => 'TotalTerminal Uninstaller.app/Contents/MacOS/TotalTerminal Uninstaller',
-    :args => %w[--headless]
-  }
+  license :unknown
+
+  pkg 'TotalTerminal.pkg'
+  uninstall :pkgutil => 'com.binaryage.pkg.totalterminal.app',
+            :script => {
+                        :executable => 'TotalTerminal Uninstaller.app/Contents/MacOS/TotalTerminal Uninstaller',
+                        :args => %w[--headless],
+                       }
 end

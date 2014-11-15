@@ -1,8 +1,11 @@
-class Dropzone < Cask
-  url 'http://aptonic.com/dropzone/latest'
-  appcast 'http://aptonic.com/dropzone/sparkle/updates2.xml'
-  homepage 'http://aptonic.com'
-  version 'latest'
+cask :v1 => 'dropzone' do
+  version :latest
   sha256 :no_check
-  link 'Dropzone.app'
+
+  url 'https://aptonic.com/dropzone3/latest'
+  appcast 'https://aptonic.com/dropzone3/sparkle/updates.xml'
+  homepage 'https://aptonic.com'
+  license :unknown
+
+  app 'Dropzone 3.app'
 end

@@ -32,6 +32,7 @@ OCCASIONAL_CUTOFF = 5
 
 CASK_PATH = 'Casks'
 
+# all maintainers, past and present
 MAINTAINERS = %w[
                   paul.t.hinze@gmail.com
                   fanquake@users.noreply.github.com
@@ -45,6 +46,10 @@ MAINTAINERS = %w[
                   info@vitorgalvao.com
                   calebcenter@live.com
                   ndr@qef.io
+                  josh@joshbutts.com
+                  goxberry@gmail.com
+                  radek.simko@gmail.com
+                  federicobond@gmail.com
                  ]
 
 ###

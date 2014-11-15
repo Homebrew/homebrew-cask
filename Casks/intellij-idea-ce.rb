@@ -1,20 +1,32 @@
-class IntellijIdeaCe < Cask
-  url 'http://download-cf.jetbrains.com/idea/ideaIC-13.1.3.dmg'
-  homepage 'https://www.jetbrains.com/idea/index.html'
-  version '13.1.3'
-  sha256 '4b0e3cb665aa2e3523d3c90b0075292f5ba3eaaff2bfc4872e4438193e561067'
-  link 'IntelliJ IDEA 13 CE.app'
-  caveats do
-    <<-EOS.undent
-    #{@cask} may require Java 7 (an older version) available from the
-    caskroom-versions repo via
+cask :v1 => 'intellij-idea-ce' do
+  version '14'
+  sha256 'd742778574f244ef1f70277a65bbe73b9baf38ead3b6c15d555d5418357f07e1'
 
-        brew cask install caskroom/versions/java7
+  url "http://download.jetbrains.com/idea/ideaIC-#{version}.dmg"
+  homepage 'https://www.jetbrains.com/idea/'
+  license :oss
 
-    Alternatively, #{@cask} can be modified to use Java 8 as described in
+  app 'IntelliJ IDEA 14 CE.app'
 
-        https://github.com/caskroom/homebrew-cask/issues/4500#issuecomment-43955932
-
-    EOS
+  postflight do
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/IntelliJ IDEA 14 CE.app/Contents/Info.plist"
   end
+
+  zap :delete => [
+                  '~/Library/Application Support/IdeaIC14',
+                  '~/Library/Preferences/IdeaIC14',
+                  '~/Library/Caches/IdeaIC14',
+                  '~/Library/Logs/IdeaIC14',
+                 ]
+
+  caveats <<-EOS.undent
+    #{title} may require Java 7 (an older version), available from the
+    caskroom-versions repository via
+
+      brew cask install caskroom/versions/java7
+
+    Alternatively, #{title} can be modified to use Java 8 as described in
+
+      https://github.com/caskroom/homebrew-cask/issues/4500#issuecomment-43955932
+  EOS
 end

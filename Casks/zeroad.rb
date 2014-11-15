@@ -1,7 +1,10 @@
-class Zeroad < Cask
-  url 'http://releases.wildfiregames.com/0ad-0.0.15-alpha-osx64.dmg'
+cask :v1 => 'zeroad' do
+  version '0.0.17-alpha'
+  sha256 '7493a8775946f56482939ee51d96ae41a7a8e114ccf050e1406ff4ebf5cb6a7f'
+
+  url "http://releases.wildfiregames.com/0ad-#{version}-osx64.dmg"
   homepage 'http://www.play0ad.com/'
-  version '0.0.15-alpha'
-  sha256 '7593c7d0620288c36bf4cebde946d6fd3bef17970f5fa1c66c1d6e92443f6f3e'
-  link '0ad.app'
+  license :unknown
+
+  app '0ad.app'
 end

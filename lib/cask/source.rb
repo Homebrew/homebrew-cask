@@ -1,7 +1,8 @@
 module Cask::Source; end
 
 require 'cask/source/gone'
-require 'cask/source/path'
+require 'cask/source/path_slash_required'
+require 'cask/source/path_slash_optional'
 require 'cask/source/tapped_qualified'
 require 'cask/source/untapped_qualified'
 require 'cask/source/tapped'
@@ -11,10 +12,11 @@ module Cask::Source
   def self.sources
     [
       Cask::Source::URI,
-      Cask::Source::Path,
+      Cask::Source::PathSlashRequired,
       Cask::Source::TappedQualified,
       Cask::Source::UntappedQualified,
       Cask::Source::Tapped,
+      Cask::Source::PathSlashOptional,
       Cask::Source::Gone,
     ]
   end
@@ -26,7 +28,9 @@ module Cask::Source
       s.me?(query)
     end
     raise CaskUnavailableError.new(query) unless source
-    odebug "Using source class #{source}"
-    source.new(query)
+    odebug "Success! Using source class #{source}"
+    resolved_cask_source = source.new(query)
+    odebug "Resolved Cask URI or file source to '#{resolved_cask_source}'"
+    resolved_cask_source
   end
 end

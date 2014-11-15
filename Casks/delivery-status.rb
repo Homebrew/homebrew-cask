@@ -1,19 +1,19 @@
-class DeliveryStatus < Cask
-  url 'http://junecloud.com/get/delivery-status-widget?6.1'
+cask :v1 => 'delivery-status' do
+  version '6.1.2'
+  sha256 'f39afd137c99df16baf149c60f1a982edb9485f6211f4aefb9cad19af7a51514'
+
+  url "http://junecloud.com/get/delivery-status-widget?#{version}"
   homepage 'http://junecloud.com/software/mac/delivery-status.html'
-  version '6.1'
-  sha256 '27cd6a9fcd03c28c8519a6e1e7a17c52433c2b5fc13d8c28c5256130f5045e3d'
+  license :oss
+
   widget 'Delivery Status.wdgt'
-  caveats do
-    puts <<-EOS.undent
-    Currently, Dashboard Widgets such as '#{@cask}' do NOT work correctly
+  caveats <<-EOS.undent
+    Currently, Dashboard Widgets such as '#{title}' do NOT work correctly
     when installed via brew-cask.  The bug is being tracked here:
 
-        https://github.com/caskroom/homebrew-cask/issues/2206
+      https://github.com/caskroom/homebrew-cask/issues/2206
 
     It is recommended that you do not install this Cask unless you are
     a developer working on the problem.
-
-    EOS
-    end
+  EOS
 end

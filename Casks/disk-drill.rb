@@ -1,7 +1,17 @@
-class DiskDrill < Cask
-  url 'http://dl.cleverfiles.com/diskdrill.dmg'
-  homepage 'http://www.cleverfiles.com/'
-  version 'latest'
+cask :v1 => 'disk-drill' do
+  version :latest
   sha256 :no_check
-  link 'Disk Drill.app'
+
+  url 'http://dl.cleverfiles.com/diskdrill.dmg'
+  appcast 'http://www.cleverfiles.com/releases/auto-update/dd2-newestr.xml'
+  homepage 'http://www.cleverfiles.com/'
+  license :unknown
+
+  app 'Disk Drill.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/DiskDrill',
+                  '~/Library/Caches/com.cleverfiles.Disk_Drill',
+                  '~/Library/Logs/DiskDrill.log',
+                 ]
 end

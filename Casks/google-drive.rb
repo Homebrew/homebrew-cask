@@ -1,7 +1,10 @@
-class GoogleDrive < Cask
+cask :v1 => 'google-drive' do
+  version :latest
+  sha256 :no_check
+
   url 'https://dl.google.com/drive/installgoogledrive.dmg'
   homepage 'https://drive.google.com/'
-  version 'latest'
-  sha256 :no_check
-  link 'Google Drive.app'
+  license :unknown
+
+  app 'Google Drive.app'
 end

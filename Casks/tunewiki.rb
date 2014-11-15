@@ -1,7 +1,10 @@
-class Tunewiki < Cask
-  url 'http://www.tunewiki.com/download/desktop/TuneWiki_Installer.dmg'
-  homepage 'http://www.tunewiki.com/'
-  version 'latest'
+cask :v1 => 'tunewiki' do
+  version :latest
   sha256 :no_check
-  link 'TuneWiki.app'
+
+  url 'https://www.tunewiki.com/download/desktop/TuneWiki_Installer.dmg'
+  homepage 'http://www.tunewiki.com/'
+  license :unknown
+
+  app 'TuneWiki.app'
 end

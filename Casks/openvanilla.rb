@@ -1,8 +1,11 @@
-class Openvanilla < Cask
-  url 'http://dl.openvanilla.org/file/openvanilla/OpenVanilla-Installer-Mac-1.0.10.zip'
+cask :v1 => 'openvanilla' do
+  version '1.0.11'
+  sha256 '15c10b53ad4919226b317ef347f726b53ade1423ae9491a6526bd160050061ac'
+
+  url "https://app.openvanilla.org/file/openvanilla/OpenVanilla-Installer-Mac-#{version}.zip"
   homepage 'http://openvanilla.org/'
-  version '1.0.10'
-  sha256 '7263f7518f79c766aae6f2029fe08858d4c8226bf83810f7b0c920b7e0989d91'
+  license :unknown
+
   input_method 'OpenVanillaInstaller.app/Contents/Resources/OpenVanilla.app'
   caveats do
     logout

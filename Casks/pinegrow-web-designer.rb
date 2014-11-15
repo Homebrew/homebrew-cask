@@ -1,7 +1,10 @@
-class PinegrowWebDesigner < Cask
-  url 'http://pinegrow.s3.amazonaws.com/PinegrowMac.zip'
-  homepage 'http://pinegrow.com/'
-  version 'latest'
+cask :v1 => 'pinegrow-web-designer' do
+  version :latest
   sha256 :no_check
-  link 'Pinegrow Web Designer.app'
+
+  url 'https://pinegrow.s3.amazonaws.com/PinegrowMac.zip'
+  homepage 'http://pinegrow.com/'
+  license :unknown
+
+  app 'Pinegrow Web Designer.app'
 end

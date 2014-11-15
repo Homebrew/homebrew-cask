@@ -1,7 +1,10 @@
-class FourkYoutubeToMp3 < Cask
-  url 'https://4kdownload.googlecode.com/files/4kyoutubetomp3_2.5.dmg'
-  homepage 'http://www.4kdownload.com/products/product-youtubetomp3'
+cask :v1 => 'fourk-youtube-to-mp3' do
   version '3.2.5'
   sha256 '6c60b0830964bf682d9140e79bd732baa01299fb5f27f4eb67cdbe94231c6094'
-  link '4K YouTube to MP3.app'
+
+  url "https://4kdownload.googlecode.com/files/4kyoutubetomp#{version.sub('.','_')}.dmg"
+  homepage 'http://www.4kdownload.com/products/product-youtubetomp3'
+  license :oss
+
+  app '4K YouTube to MP3.app'
 end

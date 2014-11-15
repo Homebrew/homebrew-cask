@@ -1,7 +1,10 @@
-class Cloudup < Cask
+cask :v1 => 'cloudup' do
+  version :latest
+  sha256 :no_check
+
   url 'https://zip.cloudup.com/f41gmwzoDkioEVevEkBW'
   homepage 'https://cloudup.com/download'
-  version 'latest'
-  sha256 :no_check
-  link 'Cloudup.app'
+  license :unknown
+
+  app 'Cloudup.app'
 end

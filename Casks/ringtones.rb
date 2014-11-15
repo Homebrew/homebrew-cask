@@ -1,8 +1,11 @@
-class Ringtones < Cask
+cask :v1 => 'ringtones' do
+  version :latest
+  sha256 :no_check
+
   url 'http://files.thelittleappfactory.com/ringtones/Ringtones.zip'
   appcast 'https://files.thelittleappfactory.com/ringtones/appcast.xml'
-  version 'latest'
   homepage 'http://thelittleappfactory.com/ringtones/'
-  sha256 :no_check
-  link 'Ringtones.app'
+  license :unknown
+
+  app 'Ringtones.app'
 end

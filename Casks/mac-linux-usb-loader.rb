@@ -1,7 +1,11 @@
-class MacLinuxUsbLoader < Cask
-  url 'http://sevenbits.github.io/downloads/Mac-Linux-USB-Loader.zip'
-  homepage 'http://sevenbits.github.io/Mac-Linux-USB-Loader/'
-  version 'latest'
+cask :v1 => 'mac-linux-usb-loader' do
+  version :latest
   sha256 :no_check
-  link 'Mac Linux USB Loader.app'
+
+  url 'https://sevenbits.github.io/downloads/Mac-Linux-USB-Loader.zip'
+  appcast 'http://sevenbits.github.io/appcasts/mlul.xml'
+  homepage 'http://sevenbits.github.io/Mac-Linux-USB-Loader/'
+  license :bsd
+
+  app 'Mac Linux USB Loader.app'
 end

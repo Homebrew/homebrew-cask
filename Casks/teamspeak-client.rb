@@ -1,7 +1,10 @@
-class TeamspeakClient < Cask
-  url 'http://dl.4players.de/ts/releases/3.0.14/TeamSpeak3-Client-macosx-3.0.14.dmg'
+cask :v1 => 'teamspeak-client' do
+  version '3.0.16'
+  sha256 'ff0bece49ca1d7b129775e7fb492a005e0a9d2ece78b9f117cbae991a8ca8910'
+
+  url "http://dl.4players.de/ts/releases/#{version}/TeamSpeak3-Client-macosx-#{version}.dmg"
   homepage 'http://www.teamspeak.com/'
-  version '3.0.14'
-  sha256 '305f1d33df4bff324c232811253dd65b0caca477fc9196a1e82cbc6c6796e680'
-  link 'TeamSpeak 3 Client.app'
+  license :unknown
+
+  app 'TeamSpeak 3 Client.app'
 end

@@ -1,5 +1,6 @@
-class Cask::CLI::Info
-  def self.run(*cask_names)
+class Cask::CLI::Info < Cask::CLI::Base
+  def self.run(*args)
+    cask_names = cask_names_from(args)
     raise CaskUnspecifiedError if cask_names.empty?
     cask_names.each do |cask_name|
       odebug "Getting info for Cask #{cask_name}"
@@ -10,12 +11,12 @@ class Cask::CLI::Info
   end
 
   def self.help
-    "displays information about the cask of the given name"
+    "displays information about the Cask of the given name"
   end
 
   def self.info(cask)
     installation = if cask.installed?
-                     "#{cask.destination_path} (#{cask.destination_path.cabv})"
+                     "#{cask.staged_path} (#{cask.staged_path.cabv})"
                    else
                      "Not installed"
                    end
@@ -31,7 +32,7 @@ PURPOSE
 
   def self.github_info(cask)
     title = cask.title
-    title = cask.class.all_titles.grep(/#{title}$/).first unless title =~ /\//
+    title = cask.class.all_titles.detect { |t| t.split("/").last == title } unless title =~ /\//
     return nil unless title.respond_to?(:length) and title.length > 0
     path_elements = title.split '/'
     if path_elements.count == 2
@@ -46,7 +47,7 @@ PURPOSE
       user, repo, name = path_elements
     end
     repo.sub!(/^homebrew-/i, '')
-    "https://github.com/#{user}/homebrew-#{repo}/commits/master/Casks/#{name}.rb"
+    "https://github.com/#{user}/homebrew-#{repo}/blob/master/Casks/#{name}.rb"
   end
 
   def self.artifact_info(cask)

@@ -1,8 +1,15 @@
-class DevonthinkProOffice < Cask
-  url 'https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/2.7.4/DEVONthink_Pro_Office.dmg.zip'
+cask :v1 => 'devonthink-pro-office' do
+  version '2.8'
+  sha256 '592d2c5e8ce9839102afb7c15eb71147d94006c5710ff91a06c8783bee8ef91b'
+
+  url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro_Office.dmg.zip"
+  appcast 'http://www.devon-technologies.com/Sparkle/DEVONthinkProOffice2.xml',
+          :sha256 => '6db814e6797e848696b2c92613cf6764649b7050337842ac57dc8437af1b428e'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
-  version '2.7.4'
-  sha256 'fab41794b3739d28ac936caef8d2c921105604f959a37c4e19a16b3ac9481e59'
-  nested_container 'DEVONthink_Pro_Office.dmg'
-  link 'DEVONthink Pro.app', :target => 'DEVONthink Pro Office.app'
+  license :unknown
+
+  container :nested => 'DEVONthink_Pro_Office.dmg'
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/3838
+  app 'DEVONthink Pro.app', :target => 'DEVONthink Pro Office.app'
 end

@@ -1,7 +1,10 @@
-class GimpLisanet < Cask
-  url 'http://downloads.sourceforge.net/gimponosx/Gimp-2.8.10p2-Mavericks.dmg'
+cask :v1 => 'gimp-lisanet' do
+  version '2.8.14p1'
+  sha256 '2a755c08e50290b494c26c416b6dda6ad4151610f752216d0db126d479ed787e'
+
+  url "https://downloads.sourceforge.net/gimponosx/Gimp-#{version}-Mavericks-Yosemite.dmg"
   homepage 'http://gimp.lisanet.de'
-  version '2.8.10p2'
-  sha256 'e44b78f67709bb9837236d80dc4d28ec5cb9f86dd0ab3d0d688f253f29546087'
-  link 'GIMP.app'
+  license :oss
+
+  app 'Gimp.app'
 end

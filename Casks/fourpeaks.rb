@@ -1,7 +1,10 @@
-class Fourpeaks < Cask
+cask :v1 => 'fourpeaks' do
+  version :latest
+  sha256 :no_check
+
   url 'http://nucleobytes.com/4peaks/download'
   homepage 'http://nucleobytes.com/index.php/4peaks'
-  version 'latest'
-  sha256 :no_check
-  link '4Peaks.app'
+  license :unknown
+
+  app '4Peaks.app'
 end

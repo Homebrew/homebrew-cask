@@ -1,7 +1,11 @@
-class Shimo < Cask
-  url 'http://www.chungwasoft.com/files/Shimo_3.2.3_2587.zip'
+cask :v1 => 'shimo' do
+  version :latest
+  sha256 :no_check
+
+  url 'http://www.chungwasoft.com/files/Shimo_latest.zip'
+  appcast 'http://www.chungwasoft.com/library/appcasts/Shimo3/shimocast.php'
   homepage 'http://www.chungwasoft.com/shimo/'
-  version '3.2.3_2587'
-  sha256 'ff8a5bc7254d6860ecae72a863e1da4faec5948c2b07e8b7da4c96dcb34ec5b4'
-  link 'Shimo.app'
+  license :unknown
+
+  app 'Shimo.app'
 end

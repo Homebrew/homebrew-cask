@@ -1,7 +1,11 @@
-class Yemuzip < Cask
-  url 'http://www.yellowmug.com/download/YemuZip.dmg'
-  homepage 'http://www.yellowmug.com/yemuzip'
-  version 'latest'
+cask :v1 => 'yemuzip' do
+  version :latest
   sha256 :no_check
-  link 'YemuZip.app'
+
+  url 'http://www.yellowmug.com/download/YemuZip.dmg'
+  appcast 'http://yellowmug.com/yemuzip/appcast.xml'
+  homepage 'http://www.yellowmug.com/yemuzip'
+  license :unknown
+
+  app 'YemuZip.app'
 end

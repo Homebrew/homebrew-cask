@@ -1,7 +1,12 @@
-class Shortcat < Cask
-  url 'https://files.shortcatapp.com/v0.6.5/Shortcat.zip'
+cask :v1 => 'shortcat' do
+  version '0.7.4'
+  sha256 '2f637b6ca13d7ea7f2635d617045695125a5a0ad6c20e913e9ea148ff9bed242'
+
+  url "https://files.shortcatapp.com/v#{version}/Shortcat.zip"
+  appcast 'https://shortcatapp.com/updates/appcast.xml',
+          :sha256 => '3cedb390a4cc871ccf6b279c711ba350bbc09cf4a710af65796bededa26530a7'
   homepage 'http://shortcatapp.com/'
-  version '0.6.5'
-  sha256 '58600af9912c3275eb2e85028d7a60f82c75a782cad5ebfe3a03fb3b80270864'
-  link 'Shortcat.app'
+  license :unknown
+
+  app 'Shortcat.app'
 end

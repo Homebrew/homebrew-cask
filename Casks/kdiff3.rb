@@ -1,9 +1,14 @@
-class Kdiff3 < Cask
+cask :v1 => 'kdiff3' do
   # note: "3" is not a version number, but an intrinsic part of the product name (3-way diff)
-  url 'http://downloads.sourceforge.net/sourceforge/kdiff3/kdiff3_0.9.97_MacOS_64bit.dmg'
+  version '0.9.98'
+  sha256 '3cbfb7f30989af2b28658a5f9f331c1a20275f16f42f3126119913b65cb06777'
+
+  url "https://downloads.sourceforge.net/project/kdiff3/kdiff3/#{version}/kdiff3-#{version}-MacOSX-64Bit.dmg"
   homepage 'http://kdiff3.sourceforge.net/'
-  version '0.9.97'
-  sha256 '9be995cced9d3365d2f7f47f01a28bfc47172da7d049014617976e596756d5ee'
-  link 'kdiff3.app'
+  license :oss
+
+  app 'kdiff3.app'
   binary 'kdiff3.app/Contents/MacOS/kdiff3'
+
+  zap :delete => '~/.kdiff3rc'
 end

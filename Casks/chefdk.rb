@@ -1,11 +1,15 @@
-class Chefdk < Cask
-  url 'https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.9/x86_64/chefdk-0.1.0-1.dmg'
-  homepage 'http://www.getchef.com/downloads/chef-dk/mac/'
-  version '0.1.0-1'
-  sha256 '6f40ebb86379cdc06987f760dce4c14a6315236f778ee1e752d16017ce5ce1ce'
-  install 'chefdk.pkg'
+cask :v1 => 'chefdk' do
+  version '0.3.5-1'
+  sha256 '43994187542a86b7865840ae71ac702c9f473e893b44f6552d5040a4c0202ad1'
+
+  # amazonaws is the official download host per the vendor homepage
+  url "https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-#{version}.dmg"
+  homepage 'https://downloads.getchef.com/chef-dk/'
+  license :apache
+
+  pkg "chefdk-#{version}.pkg"
   uninstall :pkgutil => 'com.getchef.pkg.chefdk',
-            :files   => [
+            :delete  => [
                          '/opt/chefdk/',
                          '/usr/bin/berks',
                          '/usr/bin/chef',
@@ -22,6 +26,6 @@ class Chefdk < Cask
                          '/usr/bin/rubocop',
                          '/usr/bin/shef',
                          '/usr/bin/strain',
-                         '/usr/bin/strainer'
+                         '/usr/bin/strainer',
                         ]
 end

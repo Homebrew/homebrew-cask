@@ -1,8 +1,15 @@
-class Tower < Cask
-  url 'http://www.git-tower.com/download'
-  appcast 'https://macapps.fournova.com/tower1-1060/updates.xml'
-  homepage 'http://www.git-tower.com/'
-  version 'latest'
+cask :v1 => 'tower' do
+  version :latest
   sha256 :no_check
-  link 'Tower.app'
+
+  url 'https://www.git-tower.com/download'
+  appcast 'https://updates.fournova.com/updates/tower2-mac/stable'
+  homepage 'http://www.git-tower.com/'
+  license :unknown
+
+  app 'Tower.app'
+  zap :delete => [
+                  '~/Library/Application Support/com.fournova.Tower2',
+                  '~/Library/Preferences/com.fournova.Tower2.plist',
+                 ]
 end

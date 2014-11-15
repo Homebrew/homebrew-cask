@@ -1,7 +1,11 @@
-class Screenmailer < Cask
-  url 'http://www.screenmailer.com/download'
-  homepage 'http://www.screenmailer.com'
-  version 'latest'
+cask :v1 => 'screenmailer' do
+  version :latest
   sha256 :no_check
-  link 'Screenmailer.app'
+
+  url 'http://www.screenmailer.com/download'
+  appcast 'http://www.screenmailer.com/releases/current/releases.xml'
+  homepage 'http://www.screenmailer.com'
+  license :unknown
+
+  app 'Screenmailer.app'
 end

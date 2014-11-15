@@ -1,7 +1,7 @@
 require 'test_helper'
 
 describe Cask::CLI::List do
-  it 'lists the installed casks in a pretty fashion' do
+  it 'lists the installed Casks in a pretty fashion' do
     casks = %w[local-caffeine local-transmission].map { |c| Cask.load(c) }
 
     casks.each { |c| TestHelper.install_without_artifacts(c) }
@@ -14,7 +14,7 @@ describe Cask::CLI::List do
     OUTPUT
   end
 
-  describe 'when casks have been renamed' do
+  describe 'when Casks have been renamed' do
     before do
       @renamed_path = Cask.caskroom.join('ive-been-renamed','latest','Renamed.app').tap(&:mkpath)
       @renamed_path.join('Info.plist').open('w') { |f| f.puts "Oh plist" }
@@ -24,7 +24,7 @@ describe Cask::CLI::List do
       @renamed_path.rmtree if @renamed_path.exist?
     end
 
-    it 'lists installed casks without backing ruby files (due to renames or otherwise)' do
+    it 'lists installed Casks without backing ruby files (due to renames or otherwise)' do
       lambda {
         Cask::CLI::List.run
       }.must_output <<-OUTPUT.gsub(/^ */, '')
@@ -34,7 +34,7 @@ describe Cask::CLI::List do
   end
 
 
-  it 'given a set of installed casks, lists the installed files for those casks' do
+  it 'given a set of installed Casks, lists the installed files for those Casks' do
     casks = %w[local-caffeine local-transmission].map { |c| Cask.load(c) }
 
     casks.each { |c| TestHelper.install_without_artifacts(c) }
@@ -49,10 +49,10 @@ describe Cask::CLI::List do
     }.must_output <<-OUTPUT.gsub(/^ */, '')
       ==> App Symlinks managed by brew-cask:
       ==> Raw contents of Cask directory:
-      #{transmission.destination_path}/Transmission.app/Contents/ (489 files)
+      #{transmission.staged_path}/Transmission.app/Contents/ (489 files)
       ==> App Symlinks managed by brew-cask:
       ==> Raw contents of Cask directory:
-      #{caffeine.destination_path}/Caffeine.app/Contents/ (13 files)
+      #{caffeine.staged_path}/Caffeine.app/Contents/ (13 files)
     OUTPUT
   end
 end

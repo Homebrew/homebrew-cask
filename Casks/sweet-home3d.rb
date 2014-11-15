@@ -1,7 +1,10 @@
-class SweetHome3d < Cask
-  url 'http://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-4.3/SweetHome3D-4.3-macosx.dmg'
+cask :v1 => 'sweet-home3d' do
+  version '4.5'
+  sha256 'f1d341046fbf066d92cc625b44bb201e905017c72e9755151587a01539f5242b'
+
+  url "https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-#{version}/SweetHome3D-#{version}-macosx.dmg"
   homepage 'http://www.sweethome3d.com/'
-  version '4.3'
-  sha256 'c8004cbcec8d587139751a7a39539903f0f555185ce41378056a4549d0f65962'
-  link 'Sweet Home 3D.app'
+  license :oss
+
+  app 'Sweet Home 3D.app'
 end

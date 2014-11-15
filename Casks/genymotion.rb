@@ -1,8 +1,11 @@
-class Genymotion < Cask
-  url 'http://files2.genymotion.com/genymotion/genymotion-2.2.0/genymotion-2.2.0.dmg'
+cask :v1 => 'genymotion' do
+  version '2.3.1'
+  sha256 'aa41be79a773ccf3a6b68971088c38ef34ff864128c57b09a8362b878f4534e0'
+
+  url "http://files2.genymotion.com/genymotion/genymotion-#{version}/genymotion-#{version}.dmg"
   homepage 'http://www.genymotion.com/'
-  version '2.2.0'
-  sha256 '40d128e61f02f610aa0ecabeaeea5a12bbac44873ef60a704fb3bc15df9068f6'
-  link 'Genymotion.app'
-  link 'Genymotion Shell.app'
+  license :unknown
+
+  app 'Genymotion.app'
+  app 'Genymotion Shell.app'
 end

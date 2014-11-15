@@ -1,7 +1,11 @@
-class Musictube < Cask
-  url 'http://flavio.tordini.org/files/musictube/musictube.dmg'
-  homepage 'http://flavio.tordini.org/musictube'
-  version 'latest'
+cask :v1 => 'musictube' do
+  version :latest
   sha256 :no_check
-  link 'Musictube.app'
+
+  url 'http://flavio.tordini.org/files/musictube/musictube.dmg'
+  appcast 'http://flavio.tordini.org/musictube-ws/appcast.xml'
+  homepage 'http://flavio.tordini.org/musictube'
+  license :unknown
+
+  app 'Musictube.app'
 end

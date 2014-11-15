@@ -1,7 +1,10 @@
-class Inc < Cask
+cask :v1 => 'inc' do
+  version :latest
+  sha256 :no_check
+
   url 'http://inc-static.kippt.com.s3.amazonaws.com/apps/inc-osx.zip'
   homepage 'https://sendtoinc.com/apps/'
-  version 'latest'
-  sha256 :no_check
-  link 'Inc.app'
+  license :unknown
+
+  app 'Inc.app'
 end

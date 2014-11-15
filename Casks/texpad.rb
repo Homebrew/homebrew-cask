@@ -1,7 +1,12 @@
-class Texpad < Cask
-  url 'http://cloud.texpadapp.com/bundles/Texpad_1_6_12.zip'
+cask :v1 => 'texpad' do
+  version '1.6.14'
+  sha256 '18fcbe93e77e5b5bc848172546962fcde397a26fd543efcc1054004369192f7e'
+
+  url "https://cloud.texpadapp.com/bundles/Texpad_#{version.gsub('.','_')}.zip"
+  appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml',
+          :sha256 => 'a8522a4533df93fbf9d50489aa5f1c91bb01916faebd81ee20f56ea96dad8d97'
   homepage 'https://www.texpadapp.com/osx'
-  version '1.6.12'
-  sha256 'bca8da9be6c2af599455eb9e936b50667f25b55a842af41e87f2e72e396c243e'
-  link 'Texpad.app'
+  license :unknown
+
+  app 'Texpad.app'
 end

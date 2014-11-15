@@ -227,7 +227,7 @@ class Cask::Pkg
                 ].map{|x| Pathname.new(x)}
 
   def self.all_matching(regexp, command)
-    command.run('/usr/sbin/pkgutil', :args => [%Q{--pkgs=#{regexp}}]).split("\n").map do |package_id|
+    command.run('/usr/sbin/pkgutil', :args => [%Q{--pkgs=#{regexp}}]).stdout.split("\n").map do |package_id|
       new(package_id.chomp, command)
     end
   end
@@ -241,11 +241,15 @@ class Cask::Pkg
 
   def uninstall
     odebug "Deleting pkg files"
-    list('files').each_slice(500) do |file_slice|
+    pkgutil_bom_files.each_slice(500) do |file_slice|
+      @command.run('/bin/rm', :args => file_slice.unshift('-f', '--'), :sudo => true)
+    end
+    odebug "Deleting pkg symlinks and special files"
+    pkgutil_bom_specials.each_slice(500) do |file_slice|
       @command.run('/bin/rm', :args => file_slice.unshift('-f', '--'), :sudo => true)
     end
     odebug "Deleting pkg directories"
-    _deepest_path_first(list('dirs')).each do |dir|
+    _deepest_path_first(pkgutil_bom_dirs).each do |dir|
       if dir.exist? and !SYSTEM_DIRS.include?(dir)
         _with_full_permissions(dir) do
           _clean_broken_symlinks(dir)
@@ -262,10 +266,26 @@ class Cask::Pkg
     @command.run!('/usr/sbin/pkgutil', :args => ['--forget', package_id], :sudo => true)
   end
 
-  def list(type)
+  def pkgutil_bom_files
     @command.run!('/usr/sbin/pkgutil',
-      :args => ["--only-#{type}", '--files', package_id]
-    ).split("\n").map { |path| root.join(path) }
+      :args => ['--only-files', '--files', package_id]
+    ).stdout.split("\n").map { |path| root.join(path) }
+  end
+
+  def pkgutil_bom_dirs
+    @command.run!('/usr/sbin/pkgutil',
+      :args => ['--only-dirs', '--files', package_id]
+    ).stdout.split("\n").map { |path| root.join(path) }
+  end
+
+  def pkgutil_bom_all
+    @command.run!('/usr/sbin/pkgutil',
+      :args => ['--files', package_id]
+    ).stdout.split("\n").map { |path| root.join(path) }
+  end
+
+  def pkgutil_bom_specials
+    pkgutil_bom_all - pkgutil_bom_files - pkgutil_bom_dirs
   end
 
   def root
@@ -274,9 +294,8 @@ class Cask::Pkg
 
   def info
     @command.run!('/usr/sbin/pkgutil',
-      :args => ['--pkg-info-plist', package_id],
-      :plist => true
-    )
+                  :args => ['--pkg-info-plist', package_id]
+                 ).plist
   end
 
   def _rmdir(path)
@@ -287,6 +306,7 @@ class Cask::Pkg
 
   def _with_full_permissions(path, &block)
     original_mode = (path.stat.mode % 01000).to_s(8)
+    # todo: similarly read and restore OS X flags (cf man chflags)
     @command.run!('/bin/chmod', :args => ['--', '777', path], :sudo => true)
     block.call
   ensure

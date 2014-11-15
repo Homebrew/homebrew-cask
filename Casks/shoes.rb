@@ -1,7 +1,11 @@
-class Shoes < Cask
-  url 'http://cloud.github.com/downloads/shoes/shoes/shoes-3.1.0.dmg'
+cask :v1 => 'shoes' do
+  version '3.2.16'
+  sha256 'dab8e717bc49e5c33654fde487cf1f0bef9dc6832df31dc54d084e8c5843532a'
+
+  # mvmanila is the official download host per the vendor homepage
+  url "http://shoes.mvmanila.com/public/shoes/shoes-#{version}-osx-10.9.tgz"
   homepage 'http://shoesrb.com/'
-  version '3.1.0'
-  sha256 '4d2489c302dce56c33389a170ab97ed5c9619a3d8bea3e0a958ab9dc7355e640'
-  link 'Shoes.app'
+  license :oss
+
+  app 'Shoes.app'
 end

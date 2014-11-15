@@ -1,8 +1,15 @@
-class Bettertouchtool < Cask
-  url 'http://www.boastr.de/BetterTouchTool.zip'
-  appcast 'http://appcast.boastr.net'
-  homepage 'http://blog.boastr.net/'
-  version 'latest'
+cask :v1 => 'bettertouchtool' do
+  version :latest
   sha256 :no_check
-  link 'BetterTouchTool.app'
+
+  url 'http://bettertouchtool.net/BetterTouchTool.zip'
+  appcast 'http://appcast.boastr.net'
+  homepage 'http://bettertouchtool.net/'
+  license :commercial
+
+  app 'BetterTouchTool.app'
+  zap :delete => [
+                  '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',
+                  '~/Library/Application Support/BetterTouchTool',
+                 ]
 end

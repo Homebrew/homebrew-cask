@@ -8,6 +8,10 @@ module Cask::Locations
       HOMEBREW_REPOSITORY.join "Library", "Taps"
     end
 
+    def metadata_subdir
+      '.metadata'
+    end
+
     def caskroom
       @@caskroom ||= Pathname('/opt/homebrew-cask/Caskroom')
     end
@@ -86,6 +90,14 @@ module Cask::Locations
 
     def input_methoddir=(_input_methoddir)
       @input_methoddir = _input_methoddir
+    end
+
+    def internet_plugindir
+      @internet_plugindir ||= Pathname.new('~/Library/Internet Plug-Ins').expand_path
+    end
+
+    def internet_plugindir=(_internet_plugindir)
+      @internet_plugindir = _internet_plugindir
     end
 
     def screen_saverdir

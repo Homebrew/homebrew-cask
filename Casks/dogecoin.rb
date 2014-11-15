@@ -1,7 +1,10 @@
-class Dogecoin < Cask
-  url 'https://github.com/dogecoin/dogecoin/releases/download/1.6/dogecoin-qt-1_6_0-mac.zip'
+cask :v1 => 'dogecoin' do
+  version '1.8.0'
+  sha256 '905ae1eba55294dfd32b6e3ffb357010d04b564455434d918c863fe55c2be968'
+
+  url "https://github.com/dogecoin/dogecoin/releases/download/v#{version}/dogecoin-#{version}-mac.zip"
   homepage 'http://dogecoin.com/'
-  version '1.6.0'
-  sha256 '087fc6c8d0ab0715144434b147659649417d21901d4dda3024d8712fcc23bf06'
-  link 'Dogecoin-Qt.app'
+  license :oss
+
+  app 'Dogecoin-Qt.app'
 end

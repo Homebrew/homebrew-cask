@@ -1,7 +1,10 @@
-class Zipeg < Cask
+cask :v1 => 'zipeg' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.zipeg.net/downloads/zipeg_mac.dmg'
   homepage 'http://www.zipeg.net/'
-  version 'latest'
-  sha256 :no_check
-  link 'Zipeg.app'
+  license :unknown
+
+  app 'Zipeg.app'
 end

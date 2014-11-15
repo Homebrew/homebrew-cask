@@ -19,20 +19,24 @@ PROJECT_URL = 'https://github.com/caskroom/homebrew-cask'
 MAINTAINERS = %w[
                   phinze
                   fanquake
-                  kevinSuttle
                   leoj3n
                   NanoXD
-                  passcod
                   rolandwalker
                   vitorgalvao
                   alebcay
                   ndr-qef
+                  goxberry
+                  jimbojsb
+                  radeksimko
+                  federicobond
+                  caskroom
                  ]
 
 CODE_PATHS = %w[
                 bin
                 developer
                 lib
+                spec
                 test
                 brew-cask.rb
                 Rakefile
@@ -224,21 +228,35 @@ end
 ### report/analysis methods
 ###
 
+# todo: read the release date from the tag
 def header
   <<EOT
 ## #{next_release.sub(/^v/,'')}
 
 * __Casks__
+  - N Casks added ...
+  - N total Casks
 * __Features__
-* __Fixes__
-* __Documentation__
+  - none
 * __Breaking Changes__
+  - none
+* __Fixes__
+  - none
+* __Internal Changes__
+  - none
+* __Documentation__
+  - N doc commits since ...
+* __Contributors__
+  - N new contributors since ...
+  - N total contributors
+* __Release Date__
+  - YYYY-MM-DD HH:MM:SS UTC
 EOT
 end
 
 def footer
   @footer ||= Set.new
-  @footer.to_a
+  @footer.to_a.sort
 end
 
 def add_to_footer(line)

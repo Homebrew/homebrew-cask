@@ -1,7 +1,10 @@
-class Haroopad < Cask
-  url 'https://dl.dropbox.com/s/yvjb90ywib551ex/haroopad-v0.12.0.dmg'
+cask :v1 => 'haroopad' do
+  version '0.12.2'
+  sha256 'f8fe84ec70090c7517b4ef9f8c2896a4dedb9774d0a87800fdd98f706a64929b'
+
+  url "https://bitbucket.org/rhiokim/haroopad-download/downloads/haroopad-v#{version}.dmg"
   homepage 'http://pad.haroopress.com/'
-  version '0.12.0'
-  sha256 '05297bdd532f23534fc3dab475d4b3262c18604d8a219a5e9188c34a84ad1472'
-  link 'haroopad.app'
+  license :oss
+
+  app 'haroopad.app'
 end

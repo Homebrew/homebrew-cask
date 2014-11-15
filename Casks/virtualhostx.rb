@@ -1,8 +1,11 @@
-class Virtualhostx < Cask
-  url 'http://clickontyler.com/virtualhostx/download/'
-  appcast 'http://shine.clickontyler.com/appcast.php?id=23'
-  homepage 'http://clickontyler.com/virtualhostx/'
-  version 'latest'
+cask :v1 => 'virtualhostx' do
+  version :latest
   sha256 :no_check
-  link 'VirtualHostX.app'
+
+  url 'https://clickontyler.com/virtualhostx/download/v6/'
+  appcast 'http://shine.clickontyler.com/appcast.php?id=30'
+  homepage 'http://clickontyler.com/virtualhostx/'
+  license :unknown
+
+  app 'VirtualHostX.app'
 end

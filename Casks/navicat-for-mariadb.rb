@@ -1,7 +1,10 @@
-class NavicatForMariadb < Cask
-  url 'http://download.navicat.com/download/navicat110_mariadb_en.dmg'
+cask :v1 => 'navicat-for-mariadb' do
+  version '11.1.5'
+  sha256 '84f156288bfa92a83f3af70d615617d0c8e255825ad35368b05550366dc5d8e8'
+
+  url "http://download.navicat.com/download/navicat#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_mariadb_en.dmg"
   homepage 'http://www.navicat.com/products/navicat-for-mariadb'
-  version '11.0.17'
-  sha256 'ab71f365329ac5672acf0667f159506c940885079a743a76760d3aa080a8a67b'
-  link 'Navicat for MariaDB.app'
+  license :commercial
+
+  app 'Navicat for MariaDB.app'
 end

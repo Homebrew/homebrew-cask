@@ -1,13 +1,18 @@
-class Libreoffice < Cask
-  if Hardware::CPU.is_64_bit? && OS::Mac.version >= '10.8'
-    url 'http://download.documentfoundation.org/libreoffice/stable/4.2.4/mac/x86_64/LibreOffice_4.2.4_MacOS_x86-64.dmg'
-    sha256 '727aef1ab9010e133ee46fc4ceb9ad7573f9c97d49c30ee169ad98100bb90fc8'
-  else
-    url 'http://download.documentfoundation.org/libreoffice/stable/4.2.4/mac/x86/LibreOffice_4.2.4_MacOS_x86.dmg'
-    sha256 '40a9dd187dfe5260d405f502a78ed2d46d309a85f64fe896f1e5e6db136e547c'
-  end
+cask :v1 => 'libreoffice' do
+  version '4.3.4'
 
-  homepage 'http://www.libreoffice.org/'
-  version '4.2.4'
-  link 'LibreOffice.app'
+  if Hardware::CPU.is_32_bit? or MacOS.version < :mountain_lion
+    sha256 '9e466cdd41ab29e0845267f6e46ed7c6edb79b36b4bcb121edd0df55aee4e53c'
+    url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86/LibreOffice_#{version}_MacOS_x86.dmg"
+  else
+    sha256 '5389a93a32c7f9c6a410bee1f7ee0fa4cf0802becb6f896b663799f275b05f2e'
+    url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
+  end
+  gpg "#{url}.asc",
+      :key_id => 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
+
+  homepage 'https://www.libreoffice.org/'
+  license :unknown
+
+  app 'LibreOffice.app'
 end

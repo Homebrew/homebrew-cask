@@ -1,7 +1,10 @@
-class Integrity < Cask
+cask :v1 => 'integrity' do
+  version :latest
+  sha256 :no_check
+
   url 'http://peacockmedia.co.uk/integrity/integrity.dmg'
   homepage 'http://peacockmedia.co.uk/integrity/'
-  version 'latest'
-  sha256 :no_check
-  link 'Integrity.app'
+  license :unknown
+
+  app 'Integrity.app'
 end

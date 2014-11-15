@@ -1,7 +1,10 @@
-class Launchrocket < Cask
-  url 'https://github.com/jimbojsb/launchrocket/releases/download/v0.6/LaunchRocket.prefPane.zip'
+cask :v1 => 'launchrocket' do
+  version '0.7'
+  sha256 '51dc78902fecfb7ec26ab5c6516b84d1c62692349864ef48aca2fde81bd2ef4a'
+
+  url "https://github.com/jimbojsb/launchrocket/releases/download/v#{version}/LaunchRocket.prefPane.zip"
   homepage 'https://github.com/jimbojsb/launchrocket'
-  version '0.6'
-  sha256 '195ac9edeb7dc7b266c2d3cb8fea0df9d91b6f995aa7953f2fc633d48bb92adb'
+  license :mit
+
   prefpane 'LaunchRocket.prefPane'
 end

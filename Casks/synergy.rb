@@ -1,7 +1,10 @@
-class Synergy < Cask
-  url 'http://synergy-project.org/files/packages/synergy-1.4.17-r2055-MacOSX109-x86_64.dmg'
+cask :v1 => 'synergy' do
+  version '1.5.1-r2398'
+  sha256 'd787031705b0123d36f07e7639fd8882d1969bc8f7ddad25a3326c873385dfe2'
+
+  url "https://synergy-project.org/files/packages/synergy-#{version}-MacOSX109-x86_64.dmg"
   homepage 'http://synergy-foss.org/'
-  version '1.4.17'
-  sha256 '492412f9ba7891ef09eed8d166bc3efea577a38931b796a0feab52730f7fc868'
-  link 'Synergy.app'
+  license :unknown
+
+  app 'Synergy.app'
 end

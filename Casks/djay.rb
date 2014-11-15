@@ -1,7 +1,11 @@
-class Djay < Cask
-  url 'http://www.algoriddim.com/files/djay.zip'
-  homepage 'http://algoriddim.com/djay-mac'
-  version 'latest'
+cask :v1 => 'djay' do
+  version :latest
   sha256 :no_check
-  link 'djay.app'
+
+  url 'https://www.algoriddim.com/files/djay.zip'
+  appcast 'http://www.algoriddim.com/djay-mac/releasenotes/appcast'
+  homepage 'http://algoriddim.com/djay-mac'
+  license :unknown
+
+  app 'djay.app'
 end

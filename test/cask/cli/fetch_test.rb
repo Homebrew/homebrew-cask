@@ -9,7 +9,7 @@ describe Cask::CLI::Fetch do
     Cask.load('local-caffeine')
   end
 
-  it "allows download the installer of a cask" do
+  it "allows download the installer of a Cask" do
     shutup do
       Cask::CLI::Fetch.run('local-transmission', 'local-caffeine')
     end
@@ -53,7 +53,7 @@ describe Cask::CLI::Fetch do
     new_ctime.to_i.must_be :>, old_ctime.to_i
   end
 
-  it "properly handles casks that are not present" do
+  it "properly handles Casks that are not present" do
     lambda {
       shutup do
         Cask::CLI::Fetch.run('notacask')
@@ -61,11 +61,19 @@ describe Cask::CLI::Fetch do
     }.must_raise CaskUnavailableError
   end
 
-  it "raises an exception when no cask is specified" do
-    lambda {
-      shutup do
-        Cask::CLI::Fetch.run
-      end
-    }.must_raise CaskUnspecifiedError
+  describe "when no Cask is specified" do
+    it "raises an exception" do
+      lambda {
+        Cask::CLI::Fetch.run()
+      }.must_raise CaskUnspecifiedError
+    end
+  end
+
+  describe "when no Cask is specified, but an invalid option" do
+    it "raises an exception" do
+      lambda {
+        Cask::CLI::Fetch.run('--notavalidoption')
+      }.must_raise CaskUnspecifiedError
+    end
   end
 end

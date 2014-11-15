@@ -1,8 +1,11 @@
-class Node < Cask
-  url 'http://nodejs.org/dist/v0.10.28/node-v0.10.28.pkg'
+cask :v1 => 'node' do
+  version '0.10.32'
+  sha256 '3ce16fa81f47da38bcf726ef384e1bc0658d52f880d17aa17fd5b613bea035cf'
+
+  url "http://nodejs.org/dist/v#{version}/node-v#{version}.pkg"
   homepage 'http://nodejs.org'
-  version '0.10.28'
-  sha256 '7785c80dcdaa948df58db62fb92deaac46bedfaa8bf7677b95614d151ea80c3d'
-  install  'node-v0.10.28.pkg'
+  license :unknown
+
+  pkg  "node-v#{version}.pkg"
   uninstall :pkgutil => 'org.nodejs'
 end

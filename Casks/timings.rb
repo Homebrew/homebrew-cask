@@ -1,7 +1,12 @@
-class Timings < Cask
-  url 'http://mediaatelier.com/Timings/Timings_1.0.4.zip'
-  homepage 'http://mediaatelier.com/Timings'
+cask :v1 => 'timings' do
   version '1.0.4'
   sha256 'e7601405312bd6142514aef98154b2ebe8e06a3154c7afa7bcc03edf0090ddff'
-  link 'Timings.app'
+
+  url "http://mediaatelier.com/Timings/Timings_#{version}.zip"
+  appcast 'http://mediaatelier.com/Timings/feed.php',
+          :sha256 => '8802005fc763ac92339326583c2c34d3513766758669d03a1861a886e61ed319'
+  homepage 'http://mediaatelier.com/Timings'
+  license :unknown
+
+  app 'Timings.app'
 end

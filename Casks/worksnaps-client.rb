@@ -1,7 +1,10 @@
-class WorksnapsClient < Cask
-  url 'http://www.worksnaps.net/download/WSClient-mac-1.1.20140328.dmg'
+cask :v1 => 'worksnaps-client' do
+  version '1.1.20141010-2'
+  sha256 'ca1949845c9f65ae3e0ae0302b89048d706622b07661c393af765af7a520a5e6'
+
+  url "https://www.worksnaps.net/download/WSClient-mac-#{version}.dmg"
   homepage 'http://www.worksnaps.net/'
-  version '1.1.20140328'
-  sha256 '73800f9f5bf2dfb5c19fdffc96fc1c869e21118ef7ec25edda5be2d91335c5c3'
-  link 'Worksnaps Client.app'
+  license :unknown
+
+  app 'Worksnaps Client.app'
 end

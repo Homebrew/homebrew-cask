@@ -3,10 +3,10 @@ class Cask::CLI; end
 require 'optparse'
 require 'shellwords'
 
+require 'cask/cli/base'
 require 'cask/cli/alfred'
 require 'cask/cli/audit'
 require 'cask/cli/cat'
-require 'cask/cli/checklinks'
 require 'cask/cli/cleanup'
 require 'cask/cli/create'
 require 'cask/cli/doctor'
@@ -19,47 +19,96 @@ require 'cask/cli/list'
 require 'cask/cli/search'
 require 'cask/cli/uninstall'
 require 'cask/cli/update'
+require 'cask/cli/zap'
+
+require 'cask/cli/internal_use_base'
+require 'cask/cli/internal_checkurl'
+require 'cask/cli/internal_dump'
+require 'cask/cli/internal_help'
+require 'cask/cli/internal_stanza'
 
 class Cask::CLI
+
   ISSUES_URL = "https://github.com/caskroom/homebrew-cask/issues"
+
+  ALIASES = {
+             'ls'             => 'list',
+             'homepage'       => 'home',
+             '-S'             => 'search',    # verb starting with "-" is questionable
+             'up'             => 'update',
+             'instal'         => 'install',   # gem does the same
+             'rm'             => 'uninstall',
+             'remove'         => 'uninstall',
+             'abv'            => 'info',
+             'dr'             => 'doctor',
+             # aliases from Homebrew that we don't (yet) support
+             # 'ln'           => 'link',
+             # 'configure'    => 'diy',
+             # '--repo'       => '--repository',
+             # 'environment'  => '--env',
+             # '-c1'          => '--config',
+            }
+
+  def self.command_classes
+    @@command_classes ||= Cask::CLI.constants.
+                          map    { |sym| Cask::CLI.const_get sym }.
+                          select { |sym| sym.respond_to?(:run)   }
+  end
+
   def self.commands
-    Cask::CLI.constants - ["NullCommand", "ISSUES_URL"]
+    @@commands ||= command_classes.map { |sym| sym.command_name }
   end
 
   def self.lookup_command(command_string)
-    aliases = {
-               'ls' => 'list',
-               'homepage' => 'home',
-               '-S' => 'search',
-               'up' => 'update',
-               'instal' => 'install', # gem does the same
-               'rm' => 'uninstall',
-               'remove' => 'uninstall',
-               'abv' => 'info',
-               'dr' => 'doctor',
-               # aliases from Homebrew that we don't (yet) support
-               # 'ln' => 'link',
-               # 'configure' => 'diy',
-               # '--repo' => '--repository',
-               # 'environment' => '--env',
-               # '-c1' => '--config',
-              }
-    command_string = aliases[command_string] if aliases.key?(command_string)
-    if command_string && Cask::CLI.const_defined?(command_string.capitalize)
-      Cask::CLI.const_get(command_string.capitalize)
-    else
-      command_string
-    end
+    @@lookup ||= Hash[commands.zip(command_classes)]
+    command_string = ALIASES.fetch(command_string, command_string)
+    @@lookup.fetch(command_string, command_string)
+  end
+
+  # modified from Homebrew
+  def self.require? path
+    require path
+    true    # OK if already loaded
+  rescue LoadError => e
+    # HACK :( because we should raise on syntax errors but
+    # not if the file doesn't exist. TODO make robust!
+    raise unless e.to_s.include? path
   end
 
   def self.run_command(command, *rest)
     if command.respond_to?(:run)
+      # usual case: built-in command verb
       command.run(*rest)
-    elsif which "brewcask-#{command}"
-      exec "brewcask-#{command}", *ARGV[1..-1]
     elsif require? which("brewcask-#{command}.rb").to_s
+      # external command as Ruby library on PATH, Homebrew-style
       exit 0
+    elsif command.to_s.include?('/') and require? command.to_s
+      # external command as Ruby library with literal path, useful
+      # for development and troubleshooting
+      sym = Pathname.new(command.to_s).basename('.rb').to_s.capitalize
+      klass = begin
+                Cask::CLI.const_get(sym)
+              rescue NameError => e
+                nil
+              end
+      if klass.respond_to?(:run)
+        # invoke "run" on a Ruby library which follows our coding conventions
+        klass.run(*rest)
+      else
+        # other Ruby libraries must do everything via "require"
+        exit 0
+      end
+    elsif which "brewcask-#{command}"
+      # arbitrary external executable on PATH, Homebrew-style
+      exec "brewcask-#{command}", *ARGV[1..-1]
+    elsif Pathname.new(command.to_s).executable? and
+          command.to_s.include?('/')             and
+          not command.to_s.match(%{\.rb$})
+      # arbitrary external executable with literal path, useful
+      # for development and troubleshooting
+      exec command, *ARGV[1..-1]
     else
+      # failure
       Cask::CLI::NullCommand.new(command).run
     end
   end
@@ -70,11 +119,7 @@ class Cask::CLI
     Cask.init
     command = lookup_command(command_string)
     run_command(command, *rest)
-  rescue CaskAlreadyInstalledError => e
-    opoo e
-    $stderr.puts e.backtrace if Cask.debug
-    exit 0
-  rescue CaskError => e
+  rescue CaskError, ChecksumMismatchError => e
     onoe e
     $stderr.puts e.backtrace if Cask.debug
     exit 1
@@ -138,6 +183,9 @@ class Cask::CLI
       opts.on("--input_methoddir=MANDATORY") do |v|
         Cask.input_methoddir = Pathname(v).expand_path
       end
+      opts.on("--internet_plugindir=MANDATORY") do |v|
+        Cask.internet_plugindir = Pathname(v).expand_path
+      end
       opts.on("--screen_saverdir=MANDATORY") do |v|
        Cask.screen_saverdir = Pathname(v).expand_path
       end
@@ -164,6 +212,11 @@ class Cask::CLI
       rescue OptionParser::InvalidOption
         remaining << head
         retry
+      rescue OptionParser::MissingArgument
+        raise CaskError.new("The option '#{head}' requires an argument")
+      rescue OptionParser::AmbiguousOption
+        raise CaskError.new(
+          "There is more than one possible option that starts with '#{head}'")
       end
     end
     remaining
@@ -175,37 +228,44 @@ class Cask::CLI
     end
 
     def run(*args)
-      purpose
-      if @attempted_name and @attempted_name != "help"
-        puts "!! "
-        puts "!! no command with name: #{@attempted_name}"
-        puts "!! "
+      if args.include?('--version') or @attempted_name == '--version'
+        puts HOMEBREW_CASK_VERSION
+      else
+        purpose
+        if @attempted_name and @attempted_name != "help"
+          puts "!! "
+          puts "!! no command with name: #{@attempted_name}"
+          puts "!! \n\n"
+        end
+        usage
       end
-      usage
     end
 
     def purpose
       puts <<-PURPOSE.undent
-      {{ brew-cask }}
         brew-cask provides a friendly homebrew-style CLI workflow for the
-        administration of Mac applications distributed as binaries
+        administration of Mac applications distributed as binaries.
+
       PURPOSE
     end
 
     def usage
-      puts "available commands: "
-      puts Cask::CLI.commands.map {|c| " - #{c.downcase}: #{_help_for(c)}"}.join("\n")
+      max_command_len = Cask::CLI.commands.map(&:length).max
+
+      puts "Commands:\n\n"
+      Cask::CLI.command_classes.each do |klass|
+        next unless klass.visible
+        puts "    #{klass.command_name.ljust(max_command_len)}  #{_help_for(klass)}"
+      end
+      puts %Q{\nSee also "man brew-cask"}
     end
 
     def help
       ''
     end
 
-    def _help_for(command_string)
-      command = Cask::CLI.lookup_command(command_string)
-      if command.respond_to?(:help)
-        command.help
-      end
+    def _help_for(klass)
+      klass.respond_to?(:help) ? klass.help : nil
     end
   end
 end

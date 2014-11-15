@@ -1,5 +1,9 @@
-class Cask::CLI::List
+class Cask::CLI::List < Cask::CLI::Base
   def self.run(*arguments)
+    @options = Hash.new
+    @options[:one] = true if arguments.delete('-1')
+    @options[:long] = true if arguments.delete('-l')
+
     if arguments.any?
       retval = list_casks(*arguments)
     else
@@ -47,11 +51,17 @@ class Cask::CLI::List
   def self.list_installed
     installed_casks = Cask.installed
     columns = installed_casks.map(&:to_s)
-    puts_columns columns
+    if @options[:one]
+      puts columns
+    elsif @options[:long]
+      puts Cask::SystemCommand.run!("/bin/ls", :args => ["-l", Cask.caskroom]).stdout
+    else
+      puts_columns columns
+    end
     columns.empty? ? nil : installed_casks.length == columns.length
   end
 
   def self.help
-    "with no args, lists installed casks; given installed casks, lists installed files"
+    "with no args, lists installed Casks; given installed Casks, lists staged files"
   end
 end

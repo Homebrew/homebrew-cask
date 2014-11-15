@@ -1,7 +1,10 @@
-class Ccleaner < Cask
-  url 'http://download.piriform.com/mac/CCMacSetup107.dmg'
+cask :v1 => 'ccleaner' do
+  version '1.09.313'
+  sha256 '464a75b9d038dec0334f70846d5ea68679ff907e57b9ec373331c5da18cb4865'
+
+  url "http://download.piriform.com/mac/CCMacSetup#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}.dmg"
   homepage 'http://www.piriform.com/ccleaner'
-  version '1.07.236'
-  sha256 'add42bb7d3fdf6bd3cda0d1ecf8bf7ddcb927a510997261ba5ba2d1bdfa98f6e'
-  link 'CCleaner.app'
+  license :unknown
+
+  app 'CCleaner.app'
 end

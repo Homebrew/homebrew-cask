@@ -1,10 +1,20 @@
-class Truecrypt < Cask
-  url 'http://www.truecrypt.org/download/TrueCrypt%207.1a%20Mac%20OS%20X.dmg'
+cask :v1 => 'truecrypt' do
+  version '7.2'
+  sha256 '01acf85be9b23a1c718193c40f3ecaaf6551695e0dc67c28345e560cca56c94e'
+
+  url "https://downloads.sourceforge.net/sourceforge/truecrypt/TrueCrypt-#{version}-Mac-OS-X.dmg"
   homepage 'http://truecrypt.org/'
-  version '7.1a'
-  sha256 '04db58b737c05bb6b0b83f1cb37a29edec844b59ff223b9e213ee1f4e287f586'
-  install 'TrueCrypt 7.1a.mpkg'
+  license :oss
+
+  pkg "TrueCrypt #{version}.mpkg"
+  uninstall :pkgutil => 'org.TrueCryptFoundation.TrueCrypt'
+
   caveats do
     files_in_usr_local
+    <<-EOS.undent
+    Warning: TrueCrypt IS NOT SECURE.  Development has been halted, see
+
+      http://truecrypt.sourceforge.net/
+    EOS
   end
 end

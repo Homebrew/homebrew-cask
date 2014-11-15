@@ -1,7 +1,10 @@
-class AudioHijackPro < Cask
-  url 'http://rogueamoeba.com/audiohijackpro/download/AudioHijackPro.zip'
-  homepage 'http://www.rogueamoeba.com/audiohijackpro/'
-  version 'latest'
+cask :v1 => 'audio-hijack-pro' do
+  version :latest
   sha256 :no_check
-  link 'Audio Hijack Pro.app'
+
+  url 'https://rogueamoeba.com/audiohijackpro/download/AudioHijackPro.zip'
+  homepage 'http://www.rogueamoeba.com/audiohijackpro/'
+  license :commercial
+
+  app 'Audio Hijack Pro.app'
 end

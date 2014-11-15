@@ -1,9 +1,12 @@
-class Smoothmouse < Cask
+cask :v1 => 'smoothmouse' do
+  version :latest
+  sha256 :no_check
+
   url 'http://smoothmouse.com/download/latest'
   homepage 'http://smoothmouse.com'
-  version 'latest'
-  sha256 :no_check
-  install 'SmoothMouse.pkg'
+  license :unknown
+
+  pkg 'SmoothMouse.pkg'
   uninstall :launchctl => [
                            'com.cyberic.smoothmouse',
                            'com.cyberic.smoothmouseupdater',
@@ -14,5 +17,5 @@ class Smoothmouse < Cask
                            'com.cyberic.pkg.SmoothMousePrefPane',
                            'com.cyberic.pkg.SmoothMouseKext2',
                           ],
-            :files     => '/usr/bin/smoothmouse'
+            :delete    => '/usr/bin/smoothmouse'
 end

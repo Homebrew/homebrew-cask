@@ -1,7 +1,10 @@
-class Cooviewer < Cask
-  url 'http://www.geocities.jp/coo_ona/cooviewer1.2b24.dmg'
-  homepage 'http://www.geocities.jp/coo_ona/viewer.html'
+cask :v1 => 'cooviewer' do
   version '1.2b24'
   sha256 '2bc2feaebc249beaad4f43c84aadcd5f08dda9deca452251924f0b2c89df1354'
-  link 'cooViewer/cooViewer.app'
+
+  url "http://www.geocities.jp/coo_ona/cooviewer#{version}.dmg"
+  homepage 'http://www.geocities.jp/coo_ona/viewer.html'
+  license :unknown
+
+  app 'cooViewer/cooViewer.app'
 end

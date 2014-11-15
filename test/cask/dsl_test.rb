@@ -8,18 +8,7 @@ describe Cask::DSL do
     test_cask.version.must_equal '1.2.3'
   end
 
-  it "lets you set checksum via sha256" do
-    ChecksumCask = Class.new(Cask)
-    ChecksumCask.class_eval do
-      sha256 'imasha2'
-    end
-    instance = ChecksumCask.new
-    instance.sums.must_equal [
-      Checksum.new(:sha2, 'imasha2')
-    ]
-  end
-
-  it "prevents the entire world from crashing when a cask includes an unknown method" do
+  it "prevents the entire world from crashing when a Cask includes an unknown method" do
     UnexpectedMethodCask = Class.new(Cask)
     begin
       TestHelper.must_output(self, lambda {
@@ -31,7 +20,10 @@ describe Cask::DSL do
         Warning:#{' '}
         Warning:   If you are working on UnexpectedMethodCask, this may point to a typo. Otherwise
         Warning:   it probably means this Cask is using a new feature. If that feature
-        Warning:   has been released, running `brew update; brew upgrade brew-cask`
+        Warning:   has been released, running
+        Warning:#{' '}
+        Warning:     brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+        Warning:#{' '}
         Warning:   should fix it. Otherwise you should wait to use UnexpectedMethodCask until the
         Warning:   new feature is released.
       WARNING
@@ -40,89 +32,267 @@ describe Cask::DSL do
     end
   end
 
-  it "allows you to specify linkables" do
-    CaskWithLinkables = Class.new(Cask)
-    CaskWithLinkables.class_eval do
-      link 'Foo.app'
-      link 'Bar.app'
-    end
-
-    instance = CaskWithLinkables.new
-    Array(instance.artifacts[:link]).sort.must_equal [['Bar.app'], ['Foo.app']]
-  end
-
-  it "allow linkables to be set to empty" do
-    CaskWithNoLinkables = Class.new(Cask)
-
-    instance = CaskWithNoLinkables.new
-    Array(instance.artifacts[:link]).must_equal %w[]
-  end
-
-  it "allows caveats to be specified via a method define" do
-    PlainCask = Class.new(Cask)
-
-    instance = PlainCask.new
-
-    instance.caveats.must_be :empty?
-
-    CaskWithCaveats = Class.new(Cask)
-    CaskWithCaveats.class_eval do
-      def caveats; <<-EOS.undent
-        When you install this cask, you probably want to know this.
-        EOS
+  describe "sha256 stanza" do
+    it "lets you set checksum via sha256" do
+      ChecksumCask = Class.new(Cask)
+      ChecksumCask.class_eval do
+        sha256 'imasha2'
       end
+      instance = ChecksumCask.new
+      instance.sums.must_equal [
+                                Checksum.new(:sha2, 'imasha2')
+                               ]
+    end
+  end
+
+  describe "app stanza" do
+    it "allows you to specify app stanzas" do
+      CaskWithApps = Class.new(Cask)
+      CaskWithApps.class_eval do
+        app 'Foo.app'
+        app 'Bar.app'
+      end
+
+      instance = CaskWithApps.new
+      Array(instance.artifacts[:app]).sort.must_equal [['Bar.app'], ['Foo.app']]
     end
 
-    instance = CaskWithCaveats.new
+    it "allow app stanzas to be empty" do
+      CaskWithNoApps = Class.new(Cask)
 
-    instance.caveats.must_equal "When you install this cask, you probably want to know this.\n"
+      instance = CaskWithNoApps.new
+      Array(instance.artifacts[:app]).must_equal %w[]
+    end
   end
 
-  it "allows installable pkgs to be specified" do
-    CaskWithInstallables = Class.new(Cask)
-    CaskWithInstallables.class_eval do
-      install 'Foo.pkg'
-      install 'Bar.pkg'
+  describe "caveats stanza" do
+    it "allows caveats to be specified via a method define" do
+      PlainCask = Class.new(Cask)
+
+      instance = PlainCask.new
+
+      instance.caveats.must_be :empty?
+
+      CaskWithCaveats = Class.new(Cask)
+      CaskWithCaveats.class_eval do
+        def caveats; <<-EOS.undent
+          When you install this Cask, you probably want to know this.
+          EOS
+        end
+      end
+
+      instance = CaskWithCaveats.new
+
+      instance.caveats.must_equal "When you install this Cask, you probably want to know this.\n"
+    end
+  end
+
+  describe "pkg stanza" do
+    it "allows installable pkgs to be specified" do
+      CaskWithPkgs = Class.new(Cask)
+      CaskWithPkgs.class_eval do
+        pkg 'Foo.pkg'
+        pkg 'Bar.pkg'
+      end
+
+      instance = CaskWithPkgs.new
+      Array(instance.artifacts[:pkg]).sort.must_equal [['Bar.pkg'], ['Foo.pkg']]
+    end
+  end
+
+  describe "url stanza" do
+    it "prevents defining multiple urls" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-two-url')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'url' stanza may only appear once"
+    end
+  end
+
+  describe "homepage stanza" do
+    it "prevents defining multiple homepages" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-two-homepage')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'homepage' stanza may only appear once"
+    end
+  end
+
+  describe "version stanza" do
+    it "prevents defining multiple versions" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-two-version')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'version' stanza may only appear once"
+    end
+  end
+
+  describe "appcast stanza" do
+    it "allows appcasts to be specified" do
+      cask = Cask.load('with-appcast')
+      cask.appcast.to_s.must_match %r{^http}
     end
 
-    instance = CaskWithInstallables.new
-    Array(instance.artifacts[:install]).sort.must_equal [['Bar.pkg'], ['Foo.pkg']]
+    it "prevents defining multiple appcasts" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-appcast-multiple')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'appcast' stanza may only appear once"
+    end
+
+    it "refuses to load invalid appcast URLs" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-appcast-url')
+      }.must_raise(CaskInvalidError)
+    end
+
+    it "refuses to load if appcast :format is invalid" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-appcast-format')
+      }.must_raise(CaskInvalidError)
+    end
   end
 
-  it "prevents defining multiple urls" do
-    err = lambda {
-      invalid_cask = Cask.load('invalid/invalid-two-url')
-    }.must_raise(CaskInvalidError)
-    err.message.must_include "'url' stanza may only appear once"
+  describe "gpg stanza" do
+    it "allows gpg stanza to be specified" do
+      cask = Cask.load('with-gpg')
+      cask.gpg.to_s.must_match %r{\S}
+    end
+
+    it "allows gpg stanza to be specified with :key_url" do
+      cask = Cask.load('with-gpg-key-url')
+      cask.gpg.to_s.must_match %r{\S}
+    end
+
+    it "prevents specifying gpg stanza multiple times" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-multiple-stanzas')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'gpg' stanza may only appear once"
+    end
+
+    it "prevents missing gpg key parameters" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-missing-key')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'gpg' stanza must include exactly one"
+    end
+
+    it "prevents conflicting gpg key parameters" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-conflicting-keys')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'gpg' stanza must include exactly one"
+    end
+
+    it "refuses to load invalid gpg signature URLs" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-signature-url')
+      }.must_raise(CaskInvalidError)
+    end
+
+    it "refuses to load invalid gpg key URLs" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-key-url')
+      }.must_raise(CaskInvalidError)
+    end
+
+    it "refuses to load invalid gpg key IDs" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-key-id')
+      }.must_raise(CaskInvalidError)
+    end
+
+    it "refuses to load if gpg parameter is unknown" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-gpg-parameter')
+      }.must_raise(CaskInvalidError)
+    end
   end
 
-  it "prevents defining multiple homepages" do
-    err = lambda {
-      invalid_cask = Cask.load('invalid/invalid-two-homepage')
-    }.must_raise(CaskInvalidError)
-    err.message.must_include "'homepage' stanza may only appear once"
+  describe "depends_on stanza" do
+    it "allows depends_on stanza to be specified" do
+      cask = Cask.load('with-depends-on')
+      cask.depends_on.formula.wont_be_nil
+    end
+
+    it "refuses to load invalid depends_on key" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-depends-on-key')
+      }.must_raise(CaskInvalidError)
+    end
   end
 
-  it "prevents defining multiple versions" do
-    err = lambda {
-      invalid_cask = Cask.load('invalid/invalid-two-version')
-    }.must_raise(CaskInvalidError)
-    err.message.must_include "'version' stanza may only appear once"
+  describe "conflicts_with stanza" do
+    it "allows conflicts_with stanza to be specified" do
+      cask = Cask.load('with-conflicts-with')
+      cask.conflicts_with.formula.wont_be_nil
+    end
+
+    it "refuses to load invalid conflicts_with key" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-conflicts-with-key')
+      }.must_raise(CaskInvalidError)
+    end
   end
 
-  # @@@ todo this test can be removed when support for no_checksum is dropped
-  it "prevents defining conflicting checksums (first order)" do
-    err = lambda {
-      invalid_cask = Cask.load('invalid/invalid-checksum-conflict1')
-    }.must_raise(CaskInvalidError)
-    err.message.must_include "'no_checksum' stanza conflicts with"
+  describe "license stanza" do
+    it "allows the license to be specified" do
+      cask = Cask.load('with-license')
+      cask.license.value.must_equal :gpl
+    end
+
+    it "the license has a category" do
+      cask = Cask.load('with-license')
+      cask.license.category.must_equal :oss
+    end
+
+    it "prevents defining multiple license stanzas" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-license-multiple')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'license' stanza may only appear once"
+    end
+
+    it "refuses to load on invalid license value" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-license-value')
+      }.must_raise(CaskInvalidError)
+    end
   end
 
-  # @@@ todo this test can be removed when support for no_checksum is dropped
-  it "prevents defining conflicting checksums (second order)" do
-    err = lambda {
-      invalid_cask = Cask.load('invalid/invalid-checksum-conflict2')
-    }.must_raise(CaskInvalidError)
-    err.message.must_include "'no_checksum' stanza conflicts with"
+  describe "installer stanza" do
+    it "allows installer :script to be specified" do
+      cask = Cask.load('with-installer-script')
+      # the sorts are needed to force the order for Ruby 1.8
+      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.first.script[:executable].must_equal '/usr/bin/false'
+      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.first.script[:args].must_equal ['--flag']
+      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.to_a[1].script[:executable].must_equal '/usr/bin/true'
+      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.to_a[1].script[:args].must_equal ['--flag']
+    end
+    it "allows installer :manual to be specified" do
+      cask = Cask.load('with-installer-manual')
+      cask.artifacts[:installer].first.manual.must_equal 'Caffeine.app'
+    end
+  end
+
+  describe "tags stanza" do
+    it "allows tags stanza to be specified" do
+      cask = Cask.load('with-tags')
+      cask.tags.to_s.must_match %r{\S}
+    end
+
+    it "prevents specifying tags multiple times" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-tags-multiple')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'tags' stanza may only appear once"
+    end
+
+    it "refuses to load if tags key is invalid" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-tags-key')
+      }.must_raise(CaskInvalidError)
+    end
   end
 end

@@ -1,7 +1,14 @@
-class Sabnzbd < Cask
-  url 'http://downloads.sourceforge.net/project/sabnzbdplus/sabnzbdplus/0.7.17/SABnzbd-0.7.17-osx.dmg'
+cask :v1 => 'sabnzbd' do
+  version '0.7.19'
+  sha256 '193ec185540c884e85106c608de2bb9e92e2daae8a3b4309072be927d70ae7ca'
+
+  url "https://downloads.sourceforge.net/project/sabnzbdplus/sabnzbdplus/#{version}/SABnzbd-#{version}-osx.dmg"
   homepage 'http://sabnzbd.org/'
-  version '0.7.17'
-  sha256 '31cf257d951afbd0527f13969ba673808594f2b883c1aa8f532296db7b26d5e1'
-  link '10.8(M-Lion) 10.9(Mavericks)/SABnzbd.app'
+  license :oss
+
+  app 'SABnzbd.app'
+  zap :delete => [
+                  '~/Library/Application Support/SABnzbd/sabnzbd.ini',
+                  '~/Library/Application Support/SABnzbd/admin/rss_data.sab',
+                 ]
 end

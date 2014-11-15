@@ -1,12 +1,15 @@
-class Geppetto < Cask
-  if Hardware::CPU.is_64_bit?
-    url 'https://downloads.puppetlabs.com/geppetto/4.x/geppetto-macosx.cocoa.x86_64-4.1.0-R201402150632.zip'
-    sha256 'a40feb885ceb901a9f59d1a75f7dc118f7e2d18c853c78ffb2f2d76d90e94ac8'
+cask :v1 => 'geppetto' do
+  version '4.2.0'
+
+  if Hardware::CPU.is_32_bit?
+    sha256 '78f578ff4cf0a9eadf85cc5a821e55125ee98ab4a8e1d4f0f5d1607487314804'
+    url "https://downloads.puppetlabs.com/geppetto/4.x/geppetto-macosx.cocoa.x86-#{version}-R201407250959.zip"
   else
-    url 'https://downloads.puppetlabs.com/geppetto/4.x/geppetto-macosx.cocoa.x86-4.1.0-R201402150632.zip'
-    sha256 'ca7c54e04b0cd872c062bd6d1c418b394888342b808447368924d7ecb5bb98fb'
+    sha256 '7a09c823cea9900cb51d009f47fab69569e1d8115c6326f3e91db62714480d69'
+    url "https://downloads.puppetlabs.com/geppetto/4.x/geppetto-macosx.cocoa.x86_64-#{version}-R201407250959.zip"
   end
   homepage 'http://puppetlabs.github.io/geppetto/'
-  version '4.1.0'
-  link 'geppetto/Geppetto.app'
+  license :oss
+
+  app 'geppetto/Geppetto.app'
 end

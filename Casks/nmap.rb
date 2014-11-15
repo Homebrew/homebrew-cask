@@ -1,8 +1,11 @@
-class Nmap < Cask
-  url 'http://nmap.org/dist/nmap-6.40-2.dmg'
+cask :v1 => 'nmap' do
+  version '6.47'
+  sha256 'eb277f24d4d77d323400c23c5e0b4296143524dc2e4ddbe844cc3c4c7fc878d2'
+
+  url "http://nmap.org/dist/nmap-#{version}.dmg"
   homepage 'http://nmap.org/'
-  version '6.40-2'
-  sha256 '3908c038bde3c6c5775021a3808835ea6297057747ff609d41fa89528d904582'
-  install 'nmap-6.40-2.mpkg'
-  uninstall :pkgutil => 'org.insecure.nmap6402.*.pkg'
+  license :unknown
+
+  pkg "nmap-#{version}.mpkg"
+  uninstall :pkgutil => 'org.insecure.nmap*.pkg'
 end

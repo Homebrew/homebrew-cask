@@ -1,7 +1,10 @@
-class Appium < Cask
-  url 'https://bitbucket.org/appium/appium.app/downloads/appium-1.0.0.dmg'
+cask :v1 => 'appium' do
+  version '1.2.2'
+  sha256 'fb7b96244e6dbcdf4d580eae0262b2dec38c008e39ddee4654bb488037f24971'
+
+  url "https://bitbucket.org/appium/appium.app/downloads/appium-#{version}.dmg"
   homepage 'http://appium.io'
-  version '1.0.0'
-  sha256 'c54a7af32870ec7046d9978ecd3545d8e10496a1599211debeb723b8deeeea68'
-  link 'Appium.app'
+  license :oss
+
+  app 'Appium.app'
 end

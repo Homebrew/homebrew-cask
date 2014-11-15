@@ -1,7 +1,10 @@
-class Diumoo < Cask
-  url 'http://diumoo.xiuxiu.de/static/app/diumoo.zip'
-  homepage 'http://diumoo.net/'
-  version 'latest'
+cask :v1 => 'diumoo' do
+  version :latest
   sha256 :no_check
-  link 'diumoo.app'
+
+  url 'http://share.diumoo.net/static/diumoo.zip'
+  homepage 'http://diumoo.net/'
+  license :unknown
+
+  app 'diumoo.app'
 end

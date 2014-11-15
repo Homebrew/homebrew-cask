@@ -1,7 +1,10 @@
-class Iannix < Cask
-  url 'http://www.iannix.org/download/iannix_mac_64__0_9_16.dmg'
-  homepage 'http://www.iannix.org/'
+cask :v1 => 'iannix' do
   version '0.9.16'
-  sha256 'db8cef8f1250cbd6aab6b87ed3a50aa6b3dc0e8f3246ca91c211a314149c86dd'
-  link 'IanniX/IanniX.app'
+  sha256 'b45d332fc450342ad9a5b73fedcd554c299d435f989f0fe099522554434d00de'
+
+  url "http://www.iannix.org/download/iannix_mac_64__#{version.gsub('.','_')}.dmg"
+  homepage 'http://www.iannix.org/'
+  license :unknown
+
+  app 'IanniX/IanniX.app'
 end

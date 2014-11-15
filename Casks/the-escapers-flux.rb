@@ -1,7 +1,11 @@
-class TheEscapersFlux < Cask
-  url 'http://instruktion.net/theescapers/downloads/FluxV4.zip'
-  homepage 'http://www.theescapers.com/flux/'
-  version 'latest'
+cask :v1 => 'the-escapers-flux' do
+  version :latest
   sha256 :no_check
-  link 'Flux.app'
+
+  url 'http://instruktion.net/theescapers/downloads/FluxV4.zip'
+  appcast 'http://www.theescapers.com/flux/flux.xml'
+  homepage 'http://www.theescapers.com/flux/'
+  license :unknown
+
+  app 'Flux.app'
 end

@@ -1,7 +1,11 @@
-class Minbox < Cask
-  url 'https://minbox-public.s3.amazonaws.com/osx/Minbox.zip'
-  homepage 'https://minbox.com'
-  version 'latest'
+cask :v1 => 'minbox' do
+  version :latest
   sha256 :no_check
-  link 'Minbox.app'
+
+  url 'https://minbox-public.s3.amazonaws.com/osx/Minbox.zip'
+  appcast 'https://minbox.com/updates.xml'
+  homepage 'https://minbox.com'
+  license :unknown
+
+  app 'Minbox.app'
 end

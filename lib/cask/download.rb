@@ -1,3 +1,5 @@
+require 'digest'
+
 class Cask::Download
   attr_reader :cask
 
@@ -18,14 +20,14 @@ class Cask::Download
     downloader.clear_cache if force
     begin
       downloaded_path = downloader.fetch
-    rescue StandardError
-      raise CaskError.new("Download failed on Cask '#{@cask}'")
+    rescue StandardError => e
+      raise CaskError.new("Download failed on Cask '#{@cask}' with message: #{e}")
     end
     begin
       # this symlink helps track which downloads are ours
       File.symlink downloaded_path,
                    HOMEBREW_CACHE_CASKS.join(downloaded_path.basename)
-    rescue
+    rescue StandardError => e
     end
     _check_sums(downloaded_path, cask.sums) unless cask.sums === :no_check
     downloaded_path

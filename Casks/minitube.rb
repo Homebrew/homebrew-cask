@@ -1,7 +1,11 @@
-class Minitube < Cask
-  url 'http://flavio.tordini.org/files/minitube/minitube.dmg'
-  homepage 'http://flavio.tordini.org/minitube'
-  version 'latest'
+cask :v1 => 'minitube' do
+  version :latest
   sha256 :no_check
-  link 'Minitube.app'
+
+  url 'http://flavio.tordini.org/files/minitube/minitube.dmg'
+  appcast 'http://flavio.tordini.org/minitube-ws/appcast.xml'
+  homepage 'http://flavio.tordini.org/minitube'
+  license :unknown
+
+  app 'Minitube.app'
 end

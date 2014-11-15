@@ -1,7 +1,10 @@
-class Tvshows < Cask
+cask :v1 => 'tvshows' do
+  version :latest
+  sha256 :no_check
+
   url 'http://tvshowsapp.com/TVShows.zip'
   homepage 'http://tvshowsapp.com/'
-  version 'latest'
-  sha256 :no_check
+  license :unknown
+
   prefpane 'TvShows.prefpane'
 end

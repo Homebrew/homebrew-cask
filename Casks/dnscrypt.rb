@@ -1,9 +1,18 @@
-class Dnscrypt < Cask
-  url 'https://github.com/alterstep/dnscrypt-osxclient/releases/download/1.0.1/dnscrypt-osxclient-1.0.1.zip'
+cask :v1 => 'dnscrypt' do
+  version '1.0.3'
+  sha256 '08fc0ee0a029a1a99ffc44a0cb5f7f844f41e7fb0a30e31fea714ac103d69557'
+
+  url "https://github.com/alterstep/dnscrypt-osxclient/releases/download/#{version}/dnscrypt-osxclient-#{version}.dmg"
   homepage 'http://opendns.github.io/dnscrypt-osx-client/'
-  version '1.0.1'
-  sha256 'ac10e1bdcf525208fe24bf773c72a27cd540e15229487dcd042a69e19717e8fe'
-  install 'DNSCrypt.mpkg'
-  uninstall :pkgutil => 'com.opendns.osx.dnscryptClient.*',
-            :launchctl => 'com.opendns.osx.*'
+  license :oss
+
+  pkg 'DNSCrypt.mpkg'
+  uninstall :quit      => 'com.github.dnscrypt-osxclient.DNSCrypt-Menubar',
+            :pkgutil   => 'com.github.dnscrypt-osxclient.dnscryptClient.*',
+            :launchctl => [
+                           'com.github.dnscrypt-osxclient.DNSCryptAfterboot',
+                           'com.github.dnscrypt-osxclient.DNSCryptConsoleChange',
+                           'com.github.dnscrypt-osxclient.DNSCryptControlChange',
+                           'com.github.dnscrypt-osxclient.DNSCryptNetworkChange',
+                          ]
 end

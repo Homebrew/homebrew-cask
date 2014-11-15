@@ -1,7 +1,10 @@
-class Automatic < Cask
+cask :v1 => 'automatic' do
+  version :latest
+  sha256 :no_check
+
   url 'http://codingcurious.com/downloads/Automatic.2.zip'
   homepage 'http://codingcurious.com/automatic/'
-  version 'latest'
-  sha256 :no_check
+  license :commercial
+
   prefpane 'Automatic.prefPane'
 end

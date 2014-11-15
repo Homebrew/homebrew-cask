@@ -1,7 +1,10 @@
-class Ffmpegx < Cask
+cask :v1 => 'ffmpegx' do
+  version :latest
+  sha256 :no_check
+
   url 'ftp://ftp2.ffmpegx.com/ffmpegx/ffmpegX.dmg'
   homepage 'http://www.ffmpegx.com/download.html'
-  version 'latest'
-  sha256 :no_check
-  link 'ffmpegX.app'
+  license :unknown
+
+  app 'ffmpegX.app'
 end

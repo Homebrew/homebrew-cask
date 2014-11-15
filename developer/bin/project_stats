@@ -19,7 +19,7 @@ shopt -s nocasematch # case-insensitive regular expressions
 
 # these paths relative to project root
 declare -a cask_paths=(Casks)
-declare -a code_paths=(bin developer lib test brew-cask.rb Rakefile Gemfile Gemfile.lock .travis.yml .gitignore)
+declare -a code_paths=(bin developer lib spec test brew-cask.rb Rakefile Gemfile Gemfile.lock .travis.yml .gitignore)
 declare -a doc_paths=(doc LICENSE "*.md")
 end_object="HEAD"
 
@@ -157,7 +157,7 @@ print_doc_stats () {
     fi
     printf "\n  "
     "${git_log_cmd[@]}" -- "${doc_paths[@]}" | /usr/bin/sort | /usr/bin/uniq | \
-      /usr/bin/egrep -v $'^\'(paul\\.t\\.hinze@gmail\\.com|fanquake@users\\.noreply\\.github\\.com|fanquake@gmail\\.com|kevin@suttle\\.io|leoj3n@gmail\\.com|nano@fdp\\.io|nanoid\\.xd@gmail\\.com|me@passcod\\.name|walker@pobox\\.com|info@vitorgalvao\\.com|calebcenter@live\\.com|ndr@qef\\.io)\'$' | \
+      /usr/bin/egrep -v $'^\'(paul\\.t\\.hinze@gmail\\.com|fanquake@users\\.noreply\\.github\\.com|fanquake@gmail\\.com|leoj3n@gmail\\.com|nano@fdp\\.io|nanoid\\.xd@gmail\\.com|walker@pobox\\.com|info@vitorgalvao\\.com|calebcenter@live\\.com|ndr@qef\\.io|josh@joshbutts\\.com|goxberry@gmail\\.com|radek\\.simko@gmail\\.com|federicobond@gmail\\.com)\'$' | \
       "$xargs" | /usr/bin/perl -pe 's{ }{, }g'           # '
     printf "\n"
 }

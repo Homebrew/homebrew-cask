@@ -1,13 +1,16 @@
-class EclipseIde < Cask
-  if Hardware::CPU.is_64_bit?
-    url 'http://download.eclipse.org/technology/epp/downloads/release/kepler/SR2/eclipse-standard-kepler-SR2-macosx-cocoa-x86_64.tar.gz'
-    version '4.3.2'
-    sha256 '7fd761853ae7f5b280963059fcf8da6cea14c93563a3dfe7cc3491a7a977966e'
+cask :v1 => 'eclipse-ide' do
+  version '4.4.0'
+
+  if Hardware::CPU.is_32_bit?
+    sha256 'c902ee4d9f753b2bc48f7194ea9f5bb98a264a984f6aaead710f8b601c574505'
+    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/R/eclipse-standard-luna-R-macosx-cocoa.tar.gz'
   else
-    url 'http://download.eclipse.org/technology/epp/downloads/release/kepler/SR2/eclipse-standard-kepler-SR2-macosx-cocoa.tar.gz'
-    version '4.3.2'
-    sha256 '0a1a5b6924daa1a3bd2482a537fac6f59c177da2265ed13f57cf0e5a5772b903'
+    sha256 'c902ee4d9f753b2bc48f7194ea9f5bb98a264a984f6aaead710f8b601c574505'
+    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/R/eclipse-standard-luna-R-macosx-cocoa-x86_64.tar.gz'
   end
+
   homepage 'http://eclipse.org/'
-  link 'eclipse/Eclipse.app'
+  license :unknown
+
+  app 'eclipse/Eclipse.app'
 end

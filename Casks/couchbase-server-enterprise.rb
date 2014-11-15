@@ -1,7 +1,10 @@
-class CouchbaseServerEnterprise < Cask
-  url 'http://packages.couchbase.com/releases/2.5.1/couchbase-server-enterprise_2.5.1_x86_64.zip'
+cask :v1 => 'couchbase-server-enterprise' do
+  version '3.0.1'
+  sha256 '1cbd844855102013b0b7afe129721900771f1069b550696a30fc639d78c4eca8'
+
+  url "http://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.zip"
   homepage 'http://www.couchbase.com/'
-  version '2.5.1'
-  sha256 'fce890b3c68893ad651da2103ae56d8be6a6310e607aa42b0376fea1a1ca1b41'
-  link 'Couchbase Server.app'
+  license :unknown
+
+  app 'Couchbase Server.app'
 end

@@ -1,25 +1,31 @@
 module Cask::Artifact; end
 
 require 'cask/artifact/base'
+require 'cask/artifact/uninstall_base'
 require 'cask/artifact/symlinked'
 require 'cask/artifact/hardlinked'
 
 require 'cask/artifact/app'
+require 'cask/artifact/artifact'        # generic 'artifact' stanza
 require 'cask/artifact/binary'
 require 'cask/artifact/after_block'
 require 'cask/artifact/before_block'
 require 'cask/artifact/colorpicker'
 require 'cask/artifact/font'
+require 'cask/artifact/installer'
 require 'cask/artifact/nested_container'
 require 'cask/artifact/pkg'
 require 'cask/artifact/prefpane'
 require 'cask/artifact/qlplugin'
 require 'cask/artifact/widget'
 require 'cask/artifact/service'
+require 'cask/artifact/suite'
 require 'cask/artifact/caskroom_only'
 require 'cask/artifact/input_method'
+require 'cask/artifact/internet_plugin'
 require 'cask/artifact/screen_saver'
-
+require 'cask/artifact/uninstall'
+require 'cask/artifact/zap'
 
 module Cask::Artifact
   #
@@ -30,7 +36,9 @@ module Cask::Artifact
     [
       Cask::Artifact::BeforeBlock,
       Cask::Artifact::NestedContainer,
+      Cask::Artifact::Installer,
       Cask::Artifact::App,
+      Cask::Artifact::Artifact,         # generic 'artifact' stanza
       Cask::Artifact::Colorpicker,
       Cask::Artifact::Pkg,
       Cask::Artifact::Prefpane,
@@ -41,8 +49,11 @@ module Cask::Artifact
       Cask::Artifact::CaskroomOnly,
       Cask::Artifact::Binary,
       Cask::Artifact::InputMethod,
+      Cask::Artifact::InternetPlugin,
       Cask::Artifact::ScreenSaver,
+      Cask::Artifact::Uninstall,
       Cask::Artifact::AfterBlock,
+      Cask::Artifact::Zap,
     ]
   end
 

@@ -1,7 +1,10 @@
-class Shades < Cask
+cask :v1 => 'shades' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.charcoaldesign.co.uk/shades/download/intel'
   homepage 'http://www.charcoaldesign.co.uk/shades'
-  version 'latest'
-  sha256 :no_check
+  license :unknown
+
   prefpane 'Shades Preferences.prefPane'
 end

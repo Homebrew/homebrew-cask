@@ -12,4 +12,8 @@ class Cask::Source::Gone
   def load
     Cask::WithoutSource.new(query)
   end
+
+  def to_s
+    ''
+  end
 end

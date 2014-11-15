@@ -1,7 +1,11 @@
-class Omnigraffle < Cask
-  url 'http://www.omnigroup.com/download/latest/omnigraffle'
-  homepage 'http://www.omnigroup.com/products/omnigraffle'
-  version 'latest'
+cask :v1 => 'omnigraffle' do
+  version :latest
   sha256 :no_check
-  link 'OmniGraffle.app'
+
+  url 'https://www.omnigroup.com/download/latest/omnigraffle'
+  homepage 'http://www.omnigroup.com/products/omnigraffle'
+  license :unknown
+
+  app 'OmniGraffle.app'
+  zap :delete => '~/Library/Application Support/The Omni Group/OmniGraffle'
 end

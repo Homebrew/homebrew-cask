@@ -1,7 +1,12 @@
-class Coteditor < Cask
-  url 'https://github.com/coteditor/CotEditor/releases/download/1.5.3/CotEditor_1.5.3.dmg'
-  sha256 'f70bcd376d2658127c5bd274a73e7bb92a0c1c9d4aa7a08376e8b9cc2b6630df'
-  homepage 'http://coteditor.github.io/'
-  version '1.5.3'
-  link 'CotEditor.app'
+cask :v1 => 'coteditor' do
+  version '2.0.0'
+  sha256 '70377acae52d5599d5adf7e0a56d0b3c7d5b82697a7fe3469da41b3fea2ae85c'
+
+  url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
+  appcast 'http://coteditor.com/appcast.xml',
+          :sha256 => '86c24c497701e51df3e0b35e72be5f1cc1d2e3b307a8deb0a188c3443ccd553f'
+  homepage 'http://coteditor.com/'
+  license :gpl
+
+  app 'CotEditor.app'
 end

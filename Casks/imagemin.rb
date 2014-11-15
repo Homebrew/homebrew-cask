@@ -1,7 +1,12 @@
-class Imagemin < Cask
-  url 'https://github.com/kevva/imagemin-app/releases/download/0.0.1/imagemin.app.zip'
+cask :v1 => 'imagemin' do
+  version '0.1.0'
+  sha256 '8a4304d37eaa8a71fbeb550aece6a80c98dbcdf7a9fb6eb09faae1ad93df40d6'
+
+  url "https://github.com/kevva/imagemin-app/releases/download/#{version}/imagemin-app-v#{version}-darwin.zip"
   homepage 'https://github.com/kevva/imagemin-app'
-  version '0.0.1'
-  sha256 '63f298564952b691567a1eeb36c0c472c194c2658e90ebca5feb30038d592ba4'
-  link 'imagemin.app'
+  license :mit
+
+  # Renamed for clarity: app name is inconsistent with its branding.
+  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/4701
+  app "imagemin-app-v#{version}-darwin/Atom.app", :target => 'imagemin.app'
 end

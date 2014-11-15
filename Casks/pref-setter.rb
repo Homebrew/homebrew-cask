@@ -1,7 +1,10 @@
-class PrefSetter < Cask
+cask :v1 => 'pref-setter' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.nightproductions.net/downloads/prefsetter.zip'
   homepage 'http://www.nightproductions.net/prefsetter.html'
-  version 'latest'
-  sha256 :no_check
-  link 'Pref Setter/Pref Setter.app'
+  license :unknown
+
+  app 'Pref Setter/Pref Setter.app'
 end

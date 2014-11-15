@@ -1,7 +1,10 @@
-class AngryIpScanner < Cask
-  url 'http://github.com/angryziber/ipscan/releases/download/3.2.3/ipscan-mac-3.2.3.zip'
+cask :v1 => 'angry-ip-scanner' do
+  version '3.3.1'
+  sha256 '5e3df2bbf690bb6e9c58ac2ca4a1ae825d5242159846e5b712c89afd839f6f0c'
+
+  url "https://github.com/angryziber/ipscan/releases/download/#{version}/ipscan-mac-#{version}.zip"
   homepage 'http://angryip.org'
-  version '3.2.3'
-  sha256 '3b9a9cc912b0817c09577835d094c74a61911213e0533f606f20a602ea3c1703'
-  link 'Angry IP Scanner.app'
+  license :gpl
+
+  app 'Angry IP Scanner.app'
 end

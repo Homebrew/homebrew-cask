@@ -1,7 +1,13 @@
-class Tunnelblick < Cask
-  url 'http://downloads.sourceforge.net/project/tunnelblick/All%20files/Tunnelblick_3.3.2.dmg'
+cask :v1 => 'tunnelblick' do
+  version '3.4.1_r3054'
+  sha256 '44a9b1986c100698c82186c4ce404d5acf34f292d08c5f8528c33e22646f955a'
+
+  url "https://downloads.sourceforge.net/project/tunnelblick/All%20files/Tunnelblick_#{version}.dmg"
+  appcast 'https://www.tunnelblick.net/appcast.rss',
+          :sha256 => '7fa119cda4d782dc61cb75895c70b3572652df737c908270c48a09d67a874592'
   homepage 'https://code.google.com/p/tunnelblick/'
-  version '3.3.2'
-  sha256 '1e17563771a9536313e68d5a7ff4bddfebcc97a19704ed2a504517b9c7796026'
-  link 'Tunnelblick.app'
+  license :oss
+
+  app 'Tunnelblick.app'
+  caveats 'For security reasons, Tunnelblick must be installed to /Applications and will request to be moved at launch.'
 end

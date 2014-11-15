@@ -8,7 +8,9 @@ describe Cask::CLI::Cleanup do
     end
     out.must_equal <<-OUTPUT.undent
     ==> Removing dead symlinks
+    Nothing to do
     ==> Removing cached downloads older than 10 days old
+    Nothing to do
     OUTPUT
   end
 
@@ -19,6 +21,6 @@ describe Cask::CLI::Cleanup do
     out, err = capture_io do
       Cask::CLI::Cleanup.run
     end
-    out.must_match(/^==> Removing dead symlinks\n==> Removing cached downloads\n\//)
+    out.must_match(/^==> Removing dead symlinks\nNothing to do\n==> Removing cached downloads\n/)
   end
 end

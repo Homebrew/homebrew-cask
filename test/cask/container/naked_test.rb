@@ -10,7 +10,7 @@ describe Cask::Container::Naked do
 
     cask                 = SpaceyCask.new
     path                 = '/tmp/downloads/kevin-spacey-1.2.pkg'
-    expected_destination = cask.destination_path.join('kevin spacey.pkg')
+    expected_destination = cask.staged_path.join('kevin spacey.pkg')
     expected_command     = ['/usr/bin/ditto', '--', path, expected_destination]
     Cask::FakeSystemCommand.stubs_command(expected_command)
 

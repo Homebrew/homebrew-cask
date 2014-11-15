@@ -1,7 +1,11 @@
-class Actotracker < Cask
+cask :v1 => 'actotracker' do
+  version :latest
+  sha256 :no_check
+
+  # dropbox is the official download host per the vendor homepage
   url 'https://dl.dropboxusercontent.com/u/7614970/ActoTracker.zip'
   homepage 'http://onflapp.wordpress.com/actotracker'
-  version '0.9-BETA'
-  sha256 '5ac8837e039444a46ae29d9920186e7ff14d52a4f80e7efa7eb6a5d887e3aff7'
-  link 'ActoTracker.app'
+  license :gratis
+
+  app 'ActoTracker.app'
 end

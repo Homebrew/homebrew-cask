@@ -22,7 +22,6 @@ require 'cask/dsl'
 require 'cask/exceptions'
 require 'cask/fetcher'
 require 'cask/installer'
-require 'cask/link_checker'
 require 'cask/locations'
 require 'cask/options'
 require 'cask/pkg'
@@ -30,9 +29,11 @@ require 'cask/pretty_listing'
 require 'cask/qualified_cask_name'
 require 'cask/scopes'
 require 'cask/source'
+require 'cask/staged'
 require 'cask/system_command'
 require 'cask/underscore_supporting_uri'
 require 'cask/url'
+require 'cask/url_checker'
 require 'cask/utils'
 require 'cask/version'
 
@@ -43,9 +44,13 @@ class Cask
   include Cask::Locations
   include Cask::Scopes
   include Cask::Options
+  include Cask::Utils
 
   def self.init
     set_up_taps
+    # todo: Creating directories should be deferred until needed.
+    #       Currently this fire and even asks for sudo password
+    #       if a first-time user simply runs "brew cask --help".
     odebug 'Creating directories'
     HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?
     HOMEBREW_CACHE_CASKS.mkpath unless HOMEBREW_CACHE_CASKS.exist?
@@ -54,7 +59,7 @@ class Cask
       ohai "We'll set permissions properly so we won't need sudo in the future"
       current_user = Etc.getpwuid(Process.euid).name
       if caskroom.parent.writable?
-        system '/bin/mkdir', caskroom
+        system '/bin/mkdir', '--', caskroom
       else
         toplevel_dir = caskroom
         toplevel_dir = toplevel_dir.parent until toplevel_dir.parent.root?
@@ -90,7 +95,7 @@ class Cask
     begin
       Homebrew.send(:rename_taps_dir_if_necessary)
     rescue StandardError
-      opoo %q{Trouble with automatic Tap migration. You may need to run "brew update && brew upgrade brew-cask"}
+      opoo %q{Trouble with automatic Tap migration. You may need to run "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup"}
     end
 
     # transitional: help with our own move to new GitHub project, May 2014
@@ -117,12 +122,23 @@ class Cask
   def self.load(query)
     odebug 'Loading Cask definitions'
     cask = Cask::Source.for_query(query).load
-    odumpcask cask
+    cask.dumpcask
     cask
   end
 
   def self.title
     self.name.gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase
+  end
+
+  def self.nowstamp_metadata_path(container_path)
+    @timenow ||= Time.now.gmtime
+    if container_path.respond_to?(:join)
+      precision = 3
+      timestamp = @timenow.strftime('%Y%m%d%H%M%S')
+      fraction = ("%.#{precision}f" % (@timenow.to_f - @timenow.to_i))[1..-1]
+      timestamp.concat(fraction)
+      container_path.join(timestamp)
+    end
   end
 
   attr_reader :title
@@ -134,12 +150,63 @@ class Cask
     self.class.caskroom.join(title)
   end
 
+  def staged_path
+    cask_version = version ? version : :unknown
+    caskroom_path.join(cask_version.to_s)
+  end
+
+  # todo transitional method, removeme after DSL 1.0
   def destination_path
-    caskroom_path.join(version)
+    staged_path
+  end
+
+  def metadata_master_container_path
+    caskroom_path.join(self.class.metadata_subdir)
+  end
+
+  def metadata_versioned_container_path
+    cask_version = version ? version : :unknown
+    metadata_master_container_path.join(cask_version.to_s)
+  end
+
+  def metadata_path(timestamp=:latest, create=false)
+    return nil unless metadata_versioned_container_path.respond_to?(:join)
+    if create and timestamp == :latest
+      raise CaskError.new('Cannot create metadata path when timestamp is :latest')
+    end
+    if timestamp == :latest
+      path = Pathname.glob(metadata_versioned_container_path.join('*')).sort.last
+    elsif timestamp == :now
+      path = self.class.nowstamp_metadata_path(metadata_versioned_container_path)
+    else
+      path = metadata_versioned_container_path.join(timestamp)
+    end
+    if create
+      odebug "Creating metadata directory #{path}"
+      FileUtils.mkdir_p path
+    end
+    path
+  end
+
+  def metadata_subdir(leaf, timestamp=:latest, create=false)
+    if create and timestamp == :latest
+      raise CaskError.new('Cannot create metadata subdir when timestamp is :latest')
+    end
+    unless leaf.respond_to?(:length) and leaf.length > 0
+      raise CaskError.new('Cannot create metadata subdir for empty leaf')
+    end
+    parent = metadata_path(timestamp, create)
+    return nil unless parent.respond_to?(:join)
+    subdir = parent.join(leaf)
+    if create
+      odebug "Creating metadata subdirectory #{subdir}"
+      FileUtils.mkdir_p subdir
+    end
+    subdir
   end
 
   def installed?
-    destination_path.exist?
+    staged_path.exist?
   end
 
   def to_s

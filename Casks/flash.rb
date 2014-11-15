@@ -1,10 +1,17 @@
-class Flash < Cask
-  url 'http://download.macromedia.com/pub/flashplayer/installers/archive/fp_13.0.0.214_archive.zip'
-  homepage 'http://get.adobe.com/flashplayer/'
-  version '13.0.0.214'
-  sha256 'a63f01f353565bbc39bc8591f6b6508ee4bda4e0139ded8e58f2a040bc1abc76'
-  nested_container 'fp_13.0.0.214_archive/13_0_r0_214/flashplayer13_0r0_214_mac.dmg'
-  install 'Install Adobe Flash Player.app/Contents/Resources/Adobe Flash Player.pkg'
+cask :v1 => 'flash' do
+  version '15.0.0.223'
+  sha256 'd5fd0973439a9250751930735508152cb8b9923fc4bf8c2501ca6750b9ca8623'
+
+  url "http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_#{version.to_i}_osx_pkg.dmg"
+  homepage 'https://www.adobe.com/products/flashplayer/distribution3.html'
+  license :unknown
+
+  pkg 'Install Adobe Flash Player.pkg'
+
   uninstall :pkgutil => 'com.adobe.pkg.FlashPlayer',
-            :files => '/Library/Internet Plug-Ins/Flash Player.plugin'
+            :delete  => '/Library/Internet Plug-Ins/Flash Player.plugin'
+  zap       :delete => [
+                        '~/Library/Caches/Adobe/Flash Player',
+                        '~/Library/Logs/FlashPlayerInstallManager.log',
+                       ]
 end

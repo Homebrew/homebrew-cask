@@ -1,7 +1,10 @@
-class LyricsMaster < Cask
-  url 'http://www.kenichimaehashi.com/lyricsmaster/download/LyricsMaster2400.dmg'
+cask :v1 => 'lyrics-master' do
+  version '2.4.2'
+  sha256 '1cd0f639ea1e557e0abef320ee8ea61877c24bab444cb573bfd41d0887605d7f'
+
+  url "http://www.kenichimaehashi.com/lyricsmaster/download/LyricsMaster#{version.gsub('.','')}0.dmg"
   homepage 'http://www.kenichimaehashi.com/lyricsmaster/'
-  version '2.4'
-  sha256 '0f196be99890d65da1fb0ddadea7547898d3b0babbd48eaec69becc3b7d3ef90'
-  link 'Lyrics Master'
+  license :unknown
+
+  suite 'Lyrics Master'
 end

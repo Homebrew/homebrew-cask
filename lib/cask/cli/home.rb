@@ -1,4 +1,4 @@
-module Cask::CLI::Home
+class Cask::CLI::Home < Cask::CLI::Base
   def self.run(*cask_names)
     if cask_names.empty?
       odebug "Opening project homepage"
@@ -13,6 +13,6 @@ module Cask::CLI::Home
   end
 
   def self.help
-    "opens the homepage of the cask of the given name"
+    "opens the homepage of the Cask of the given name"
   end
 end

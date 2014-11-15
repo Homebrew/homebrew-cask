@@ -1,13 +1,15 @@
-class Daisydisk < Cask
+cask :v1 => 'daisydisk' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.daisydiskapp.com/downloads/DaisyDisk.zip'
   appcast 'http://www.daisydiskapp.com/downloads/appcastFeed.php'
   homepage 'http://www.daisydiskapp.com'
-  version 'latest'
-  sha256 :no_check
-  link 'DaisyDisk.app'
+  license :unknown
 
-  after_install do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.daisydiskapp.DaisyDiskStandAlone', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true'
+  app 'DaisyDisk.app'
+
+  postflight do
+    suppress_move_to_applications
   end
 end

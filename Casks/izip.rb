@@ -1,7 +1,10 @@
-class Izip < Cask
+cask :v1 => 'izip' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.izip.com/izip.dmg'
   homepage 'http://www.izip.com'
-  version 'latest'
-  sha256 :no_check
-  link 'iZip.app'
+  license :unknown
+
+  app 'iZip.app'
 end

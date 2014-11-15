@@ -1,7 +1,10 @@
-class Darktable < Cask
-  url 'http://downloads.sourceforge.net/sourceforge/darktable/darktable-1.4.dmg'
+cask :v1 => 'darktable' do
+  version '1.4.2'
+  sha256 '27b03c2ef1bfe8a66665e252d55746abd9b8a29b7f5e00ec1f646a3f22e7551a'
+
+  url "https://downloads.sourceforge.net/sourceforge/darktable/darktable-#{version}.dmg"
   homepage 'http://www.darktable.org/'
-  version '1.4'
-  sha256 'c145772a7645da82a5bb8cabfb8fe44023b566135f60f3a93f9551312835234d'
-  link 'darktable.app'
+  license :oss
+
+  app 'darktable.app'
 end

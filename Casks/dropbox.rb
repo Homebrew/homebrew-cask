@@ -1,7 +1,12 @@
-class Dropbox < Cask
+cask :v1 => 'dropbox' do
+  version :latest
+  sha256 :no_check
+
   url 'https://www.dropbox.com/download?plat=mac&full=1'
   homepage 'https://www.dropbox.com/'
-  version 'latest'
-  sha256 :no_check
-  link 'Dropbox.app'
+  license :unknown
+
+  app 'Dropbox.app'
+
+  zap :delete => '~/.dropbox'
 end

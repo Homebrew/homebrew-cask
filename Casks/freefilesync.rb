@@ -1,8 +1,11 @@
-class Freefilesync < Cask
-  url 'http://www.fosshub.com/download/FreeFileSync_6.5_Mac_OS_X_64-bit.zip', :referer => 'http://www.fosshub.com/FreeFileSync.html'
+cask :v1 => 'freefilesync' do
+  version '6.10'
+  sha256 'f0a1a52ef8e1a011b522af98afe64e9474f68f98eb0ab7c3a3dafb3fb6d0a6bf'
+
+  url "http://downloads.sourceforge.net/project/freefilesync/FreeFileSync/#{version}/FreeFileSync_#{version}_Mac_OS_X_64-bit.zip"
   homepage 'http://freefilesync.sourceforge.net/'
-  version '6.5'
-  sha256 'df00b3b719618894d495ed20b7cc8452fceb0c464111374a4d300c2a7da02cf7'
-  link 'FreeFileSync.app'
-  link 'RealtimeSync.app'
+  license :oss
+
+  app 'FreeFileSync.app'
+  app 'RealtimeSync.app'
 end

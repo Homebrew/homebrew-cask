@@ -40,11 +40,7 @@ class Cask::FakeSystemCommand
       fail("no response faked for #{command.inspect}, faked responses are: #{responses.inspect}")
     end
     system_calls[command] += 1
-    if options[:plist]
-      Plist::parse_xml(responses[command])
-    else
-      responses[command]
-    end
+    Cask::SystemCommand::Result.new(command, responses[command], '', 0)
   end
 
   def self.run!(command, options={})

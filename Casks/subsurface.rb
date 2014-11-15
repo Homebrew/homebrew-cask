@@ -1,7 +1,10 @@
-class Subsurface < Cask
-  url 'http://subsurface.hohndel.org/downloads/Subsurface-4.0.3.dmg'
+cask :v1 => 'subsurface' do
+  version '4.1'
+  sha256 'b4eef933e507ffb5a56501a249c1dfcf389edd3cdfb82f5ac0448183c4b8113c'
+
+  url "https://subsurface.hohndel.org/downloads/Subsurface-#{version}.dmg"
   homepage 'http://subsurface.hohndel.org/'
-  version '4.0.3'
-  sha256 'bad56a7c6a1d99476b9361cd9de42adc458cc61eddcb519cefb049f2faf4a96d'
-  link 'Subsurface.app'
+  license :unknown
+
+  app 'Subsurface.app'
 end

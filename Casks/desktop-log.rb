@@ -1,7 +1,10 @@
-class DesktopLog < Cask
+cask :v1 => 'desktop-log' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.nightproductions.net/downloads/desklog.dmg'
   homepage 'http://www.nightproductions.net/desklog.html'
-  version 'latest'
-  sha256 :no_check
-  link 'Desktop Log.app'
+  license :unknown
+
+  app 'Desktop Log.app'
 end

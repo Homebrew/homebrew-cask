@@ -1,7 +1,10 @@
-class Postbox < Cask
-  url 'http://www.postbox-inc.com/php/download.php?a=3010m'
+cask :v1 => 'postbox' do
+  version :latest
+  sha256 :no_check
+
+  url 'http://www.postbox-inc.com/php/download.php?a=3011m'
   homepage 'http://www.postbox-inc.com/'
-  version '3.0.10'
-  sha256 '2c4ccb1fe34edc7b680516d6fb998b67a8e0d1c972d5d5d91a0ef86d5c0a2461'
-  link 'Postbox.app'
+  license :unknown
+
+  app 'Postbox.app'
 end

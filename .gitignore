@@ -1,2 +1,8 @@
+# toplevel
+/.bundle/
+
+# anywhere in the tree
+*~
+.DS_Store
 .ruby-version
 coverage

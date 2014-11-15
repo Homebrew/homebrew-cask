@@ -1,7 +1,10 @@
-class NoIpDuc < Cask
-  url 'http://www.noip.com/client/mac/noip3.1.5.dmg'
+cask :v1 => 'no-ip-duc' do
+  version '3.2.1'
+  sha256 'b59b159d1f9e2b64d6514577946b77f2c7f11767aa507a9c2bc2aa39ae9e4ffd'
+
+  url "https://www.noip.com/client/mac/noip#{version}.dmg"
   homepage 'http://www.noip.com/download?page=mac'
-  version '3.1.5'
-  sha256 'a5c68a13188fd88f00c0588baa1b54a0ac2529a02b09dc436770183c059bfaf5'
-  link 'No-IP DUC.app'
+  license :unknown
+
+  app 'No-IP DUC.app'
 end

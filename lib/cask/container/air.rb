@@ -26,6 +26,6 @@ class Cask::Container::Air < Cask::Container::Base
 
   def extract
     @command.run!(self.class.installer_cmd,
-                  :args => ['-silent', '-location', @cask.destination_path, Pathname.new(@path).realpath])
+                  :args => ['-silent', '-location', @cask.staged_path, Pathname.new(@path).realpath])
   end
 end
