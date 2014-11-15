@@ -1,6 +1,6 @@
 cask :v1 => 'vienna' do
-  version '3.0.0_rc9'
-  sha256 '5d6c85ab3e59d581efe37aa0e7a035ebeae1688a4d7e283bb9eed72c8c2bb606'
+  version '3.0.0'
+  sha256 'e61f44b7be0f1f49cf6c735d8e03071141ddaca1d5ff65db29f786ee3dfeded3'
 
   url "https://downloads.sourceforge.net/vienna-rss/Vienna#{version}.tgz"
   appcast 'http://vienna-rss.org/changelog_beta.xml',
