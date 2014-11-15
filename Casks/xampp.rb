@@ -7,4 +7,5 @@ cask :v1 => 'xampp' do
   license :oss
 
   installer :manual => 'xampp-osx-1.8.3-3-installer.app'
+  uninstall :delete => '/Applications/XAMPP'
 end
