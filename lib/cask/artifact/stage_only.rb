@@ -1,6 +1,6 @@
-class Cask::Artifact::CaskroomOnly < Cask::Artifact::Base
+class Cask::Artifact::StageOnly < Cask::Artifact::Base
   def self.artifact_dsl_key
-    :caskroom_only
+    :stage_only
   end
 
   def install_phase

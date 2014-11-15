@@ -225,15 +225,50 @@ module Cask::DSL
                                      :internet_plugin,
                                      :screen_saver,
                                      :pkg,
+                                     :stage_only,
                                     ]
     end
 
-    installable_artifact_types = ordinary_artifact_types
-    installable_artifact_types.push :caskroom_only
+    def self.activatable_artifact_types
+      @@activatable_artifact_types ||= [:installer, *ordinary_artifact_types] - [:stage_only]
+    end
 
-    installable_artifact_types.each do |type|
+    ordinary_artifact_types.each do |type|
       define_method(type) do |*args|
+        if type == :stage_only and args != [true]
+          raise CaskInvalidError.new(self.title, "'stage_only' takes a single argument: true")
+        end
         artifacts[type] << args
+        if artifacts.key?(:stage_only) and
+          artifacts.keys.count > 1 and
+          ! (artifacts.keys & Cask::DSL::ClassMethods.activatable_artifact_types).empty?
+          raise CaskInvalidError.new(self.title, "'stage_only' must be the only activatable artifact")
+        end
+      end
+    end
+
+    # todo transitional removeme
+    define_method(:caskroom_only) do |*args|
+      if args != [true]
+        raise CaskInvalidError.new(self.title, "'caskroom_only' takes a single argument: true")
+      end
+      artifacts[:stage_only] << args
+      if artifacts.key?(:stage_only) and
+        artifacts.keys.count > 1 and
+        ! (artifacts.keys & Cask::DSL::ClassMethods.activatable_artifact_types).empty?
+        raise CaskInvalidError.new(self.title, "'caskroom_only' must be the only activatable artifact")
+      end
+    end
+
+    def installer(*args)
+      if args.empty?
+        return artifacts[:installer]
+      end
+      begin
+        artifacts[:installer] << Cask::DSL::Installer.new(*args)
+        raise "'stage_only' must be the only activatable artifact" if artifacts.key?(:stage_only)
+      rescue StandardError => e
+        raise CaskInvalidError.new(self.title, e)
       end
     end
 
@@ -259,17 +294,6 @@ module Cask::DSL
     ARTIFACT_BLOCK_TYPES.each do |type|
       define_method(type) do |&block|
         artifacts[type] << block
-      end
-    end
-
-    def installer(*args)
-      if args.empty?
-        return artifacts[:installer]
-      end
-      begin
-        artifacts[:installer] << Cask::DSL::Installer.new(*args)
-      rescue StandardError => e
-        raise CaskInvalidError.new(self.title, e)
       end
     end
 

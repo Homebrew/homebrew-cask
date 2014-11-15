@@ -50,6 +50,7 @@ This notice will be removed for the final form.**
  * `installer :script`
  * `license`
  * `suite`
+ * `stage_only`
  * `tags`
  * `uninstall :rmdir`
  * `uninstall :trash`
