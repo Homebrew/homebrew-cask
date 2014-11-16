@@ -1,6 +1,6 @@
 cask :v1 => 'electrum-ltc' do
-  version '1.9.8.5'
-  sha256 'db5a36d7c4dca249fd6c4fee2dec04f88d9778e35b02a7e1df992327d0a66944'
+  version '1.9.8.6'
+  sha256 '6e6cee192fc4485d8ba0850fc07eab6d58b0abd55b92209a2076aa3d12c10801'
 
   url "https://electrum-ltc.org/download/Electrum-LTC-#{version}.dmg"
   gpg "#{url}.asc",
