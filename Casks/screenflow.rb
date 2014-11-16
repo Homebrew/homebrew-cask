@@ -1,8 +1,8 @@
 cask :v1 => 'screenflow' do
-  version '4.5.3'
-  sha256 '48209b7fd5387e07c63bd4502ad073dde96460ee30e1a8b19fe2977e8b274914'
+  version '5.0'
+  sha256 'ee08bbf672d449e8c304b0b44d722a32d674d367725b7c6c8937254c50306f09'
 
-  url "http://www.telestream.net/download-files/screenflow/4-5/ScreenFlow-#{version}.dmg"
+  url "http://www.telestream.net/download-files/screenflow/5-0/ScreenFlow-#{version}.dmg"
   homepage 'http://www.telestream.net/screenflow/'
   license :unknown
 
