@@ -3,6 +3,7 @@ cask :v1 => 'sketchup' do
   sha256 :no_check
 
   # downloads can be found at http://www.sketchup.com/download/all
+  # trimble.com is the official download host per the vendor homepage
   url 'https://dl.trimble.com/sketchup/SketchUpMake-en.dmg'
   homepage 'http://www.sketchup.com/intl/en/'
   license :unknown
