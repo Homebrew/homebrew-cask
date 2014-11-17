@@ -1,4 +1,4 @@
-class SparkDev < Cask
+cask :v1 => 'spark-dev' do
   version '0.0.16'
   sha256 '4c1aefe14ae9b1bff135e34884e6cd2ca882145730fbe80fc74172bb44e06a82'
 
