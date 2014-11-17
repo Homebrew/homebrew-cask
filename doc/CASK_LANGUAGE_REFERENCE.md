@@ -500,10 +500,10 @@ application with required data, to be installed together in a
 subdirectory of `~/Applications`.
 
 For these Casks, use the `suite` stanza to define the directory
-containing the application suite.  Example (from [sketchup.rb](../Casks/sketchup.rb)):
+containing the application suite.  Example (from [chemdoodle.rb](../Casks/chemdoodle.rb)):
 
 ```ruby
-suite 'SketchUp 2014'
+suite 'ChemDoodle'
 ```
 
 The value of `suite` is never an `.app` bundle, but a plain directory.
