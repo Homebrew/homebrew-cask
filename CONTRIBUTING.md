@@ -186,6 +186,12 @@ fall back to this format:
 http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 ```
 
+Or, if it’s from [SourceForge.JP](http://sourceforge.jp/):
+
+```
+http://dl.sourceforge.jp/$PROJECTNAME/$RELEASEID/$FILENAME.$EXT
+```
+
 ### Personal Hosting Such as Dropbox
 
 URLs from dropbox.com or cl.ly/cloudapp.com are not readily distinguishable
