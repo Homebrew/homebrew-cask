@@ -6,6 +6,5 @@ cask :v1 => 'amazon-music' do
   homepage 'https://www.amazon.com/gp/feature.html/ref=dm_mo_cpw_fb_lm?docId=1001067901'
   license :unknown
 
-  installer :script => 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
-            :sudo   => true
+  installer :manual => 'Amazon Music Installer.app'
 end
