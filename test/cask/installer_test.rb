@@ -44,7 +44,8 @@ describe Cask::Installer do
     it "works with cab-based Casks" do
       skip unless HOMEBREW_PREFIX.join('bin/cabextract').exist?
       cab_container = Cask.load('cab-container')
-      cab_container.stubs(:depends_on_formula).returns([])
+      empty = stub(:formula => [])
+      cab_container.stubs(:depends_on).returns(empty)
 
       shutup do
         Cask::Installer.new(cab_container).install
@@ -71,7 +72,8 @@ describe Cask::Installer do
     it "works with 7z-based Casks" do
       skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
       sevenzip_container = Cask.load('sevenzip-container')
-      sevenzip_container.stubs(:depends_on_formula).returns([])
+      empty = stub(:formula => [])
+      sevenzip_container.stubs(:depends_on).returns(empty)
 
       shutup do
         Cask::Installer.new(sevenzip_container).install
@@ -99,7 +101,8 @@ describe Cask::Installer do
     it "works with Stuffit-based Casks" do
       skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
       stuffit_container = Cask.load('stuffit-container')
-      stuffit_container.stubs(:depends_on_formula).returns([])
+      empty = stub(:formula => [])
+      stuffit_container.stubs(:depends_on).returns(empty)
 
       shutup do
         Cask::Installer.new(stuffit_container).install
@@ -114,7 +117,8 @@ describe Cask::Installer do
     it "works with RAR-based Casks" do
       skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
       rar_container = Cask.load('rar-container')
-      rar_container.stubs(:depends_on_formula).returns([])
+      empty = stub(:formula => [])
+      rar_container.stubs(:depends_on).returns(empty)
 
       shutup do
         Cask::Installer.new(rar_container).install
