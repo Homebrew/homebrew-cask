@@ -8,8 +8,10 @@ cask :v1 => 'sketchup' do
   homepage 'http://www.sketchup.com/intl/en/'
   license :unknown
 
-  suite 'SketchUp 2015'
-  
+  app 'Sketchup 2015/LayOut.app'
+  app 'Sketchup 2015/SketchUp.app'
+  app 'Sketchup 2015/Style Builder.app'
+
   zap :delete => [
                   '~/Library/Application Support/SketchUp 2015',
                   '~/Library/Caches/com.sketchup.SketchUp.2015',
