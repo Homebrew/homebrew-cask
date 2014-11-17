@@ -1,6 +1,6 @@
 cask :v1 => 'googleappenginelauncher' do
   version '1.9.15'
-  sha256 '0f11d2411ee245e9bd99323672fc967c2eb796f8baa42d48554b59696b64c362'
+  sha256 '403a1df731537de41307a6245e3265b921c058c0c3ccc6dcedf0dd93439eff47'
 
   url "https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-#{version}.dmg"
   appcast 'https://storage.googleapis.com/appengine-sdks',
