@@ -5,5 +5,5 @@ class NakedExecutable < TestCask
   url TestHelper.local_binary_url('naked_executable')
   homepage 'http://example.com/naked-executable'
 
-  container_type :naked
+  container :type => :naked
 end

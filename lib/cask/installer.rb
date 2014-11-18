@@ -77,8 +77,8 @@ class Cask::Installer
   def extract_primary_container
     odebug "Extracting primary container"
     FileUtils.mkdir_p @cask.staged_path
-    container = if @cask.container_type
-       Cask::Container.from_type(@cask.container_type)
+    container = if @cask.container and @cask.container.type
+       Cask::Container.from_type(@cask.container.type)
     else
        Cask::Container.for_path(@downloaded_path, @command)
     end
