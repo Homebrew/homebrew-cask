@@ -1,4 +1,4 @@
-cask :v1 => 'gitx-rowanj' do
+cask :v1 => 'rowanj-gitx' do
   version :latest
   sha256 :no_check
 
@@ -8,5 +8,5 @@ cask :v1 => 'gitx-rowanj' do
   license :oss
 
   app 'GitX.app'
-  binary 'GitX.app/Contents/Resources/gitx'
+  binary 'GitX.app/Contents/Resources/GitX', :target => 'gitx'
 end
