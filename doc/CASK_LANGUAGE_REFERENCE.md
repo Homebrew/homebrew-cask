@@ -267,7 +267,7 @@ Example:
 
 ```ruby
 caveats do
-  manual_installer 'Little Snitch Installer.app'
+  path_environment_variable '/usr/texbin'
 end
 ```
 

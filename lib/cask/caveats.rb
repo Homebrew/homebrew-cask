@@ -49,17 +49,6 @@ class Cask::CaveatsDSL
   #   to the output by the caller, but that feature is only for the
   #   convenience of Cask authors. )
 
-  # todo: remove this method after DSL 1.0 transition
-  def manual_installer(path)
-    puts <<-EOS.undent
-    To complete the installation of Cask #{@cask}, you must also
-    run the installer at
-
-      '#{staged_path.join(path)}'
-
-    EOS
-  end
-
   def path_environment_variable(path)
     puts <<-EOS.undent
     To use #{@cask}, you may need to add the #{path} directory
