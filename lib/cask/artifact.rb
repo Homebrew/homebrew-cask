@@ -38,6 +38,7 @@ module Cask::Artifact
       Cask::Artifact::NestedContainer,
       Cask::Artifact::Installer,
       Cask::Artifact::App,
+      Cask::Artifact::Suite,
       Cask::Artifact::Artifact,         # generic 'artifact' stanza
       Cask::Artifact::Colorpicker,
       Cask::Artifact::Pkg,
