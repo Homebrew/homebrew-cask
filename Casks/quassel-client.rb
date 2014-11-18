@@ -4,7 +4,7 @@ cask :v1 => 'quassel-client' do
 
   url "http://quassel-irc.org/pub/QuasselClient_MacOSX-x86_64_#{version}.dmg"
   homepage 'http://quassel-irc.org'
-  license :unknown
+  license :gpl
 
   app 'Quassel Client.app'
 end
