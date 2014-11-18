@@ -17,6 +17,7 @@ class Cask::DSL::DependsOn
     pairs.each do |key, value|
       raise "invalid depends_on key: '#{key.inspect}'" unless VALID_KEYS.include?(key)
       writer_method = "#{key}=".to_sym
+      value = Array(value) if [:formula, :cask].include?(key)
       send(writer_method, value)
     end
   end
