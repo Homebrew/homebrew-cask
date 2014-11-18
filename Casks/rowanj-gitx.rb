@@ -8,5 +8,5 @@ cask :v1 => 'rowanj-gitx' do
   license :oss
 
   app 'GitX.app'
-  binary 'GitX.app/Contents/Resources/GitX', :target => 'gitx'
+  binary 'GitX.app/Contents/Resources/gitx'
 end
