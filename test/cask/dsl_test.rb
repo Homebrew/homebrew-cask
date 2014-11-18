@@ -295,4 +295,18 @@ describe Cask::DSL do
       }.must_raise(CaskInvalidError)
     end
   end
+
+  describe "stage_only stanza" do
+    it "allows stage_only stanza to be specified" do
+      cask = Cask.load('stage-only')
+      cask.artifacts[:stage_only].first.must_equal [true]
+    end
+
+    it "prevents specifying stage_only with other activatables" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-stage-only-conflict')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include "'stage_only' must be the only activatable artifact"
+    end
+  end
 end

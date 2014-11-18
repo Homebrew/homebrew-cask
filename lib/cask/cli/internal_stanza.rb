@@ -36,7 +36,7 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
                        :internet_plugin,
                        :screen_saver,
                        :pkg,
-                       :caskroom_only,
+                       :stage_only,
                        :nested_container,
                        :uninstall,
                        :postflight,
