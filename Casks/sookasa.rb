@@ -7,5 +7,6 @@ cask :v1 => 'sookasa' do
   license :commercial
 
   pkg 'Sookasa_3.7.2.pkg'
+  uninstall :quit => 'com.sookasa.Sookasa'
   uninstall :pkgutil => 'com.sookasa.Sookasa'
 end
