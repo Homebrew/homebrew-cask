@@ -57,9 +57,9 @@ describe Cask::CLI::Search do
 
   it "Returns both exact and partial matches" do
     out, err = capture_io do
-      Cask::CLI::Search.run('gitx')
+      Cask::CLI::Search.run('mnemosyne')
     end
-    out.must_match(/^==> Exact match\ngitx\n==> Partial matches\ngitx/)
+    out.must_match(/^==> Exact match\nmnemosyne\n==> Partial matches\nsubclassed-mnemosyne/)
   end
 
   it "does not search the Tap name" do
