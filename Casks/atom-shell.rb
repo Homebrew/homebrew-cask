@@ -6,5 +6,5 @@ cask :v1 => 'atom-shell' do
   homepage 'https://github.com/atom/atom-shell'
   license :oss
 
-  caskroom_only true
+  stage_only true
 end
