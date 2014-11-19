@@ -44,8 +44,11 @@ class Cask::Source::PathBase
 
       # munge text
       cask_string.sub!(%r{\A(\s*\#[^\n]*\n)+}, '');
-      if %r{\A\s*cask\s+:v[\d_]+\s+=>\s+([\'\"])(\S+?)\1(?:\s*,\s*|\s+)do\s*\n}.match(cask_string)
-        cask_string.sub!(%r{\A[^\n]+\n}, "class #{cask_class_name} < Cask\n")
+      if %r{\A\s*cask\s+:v([\d_]+)(test)?\s+=>\s+([\'\"])(\S+?)\3(?:\s*,\s*|\s+)do\s*\n}.match(cask_string)
+        dsl_version = $1
+        test_cask = ! $2.nil?
+        superclass_name = test_cask ? 'TestCask' : 'Cask'
+        cask_string.sub!(%r{\A[^\n]+\n}, "class #{cask_class_name} < #{superclass_name}\n")
       end
 
       # simulate "require"
