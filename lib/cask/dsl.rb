@@ -38,8 +38,6 @@ module Cask::DSL
 
   def conflicts_with; self.class.conflicts_with; end
 
-  def container_type; self.class.container_type; end
-
   def container; self.class.container; end
 
   def tags; self.class.tags; end
@@ -91,14 +89,6 @@ module Cask::DSL
       end
     end
 
-    # todo: remove this backwards compatibility element after 0.50.0
-    def container_type(type=nil)
-      if @container_type and !type.nil?
-        raise CaskInvalidError.new(self.title, "'container_type' stanza may only appear once")
-      end
-      @container_type ||= type
-    end
-
     def container(*args)
       if @container and !args.empty?
         # todo: remove this constraint, and instead merge multiple container stanzas
@@ -109,12 +99,8 @@ module Cask::DSL
       rescue StandardError => e
         raise CaskInvalidError.new(self.title, e)
       end
-      # todo: remove this backwards compatibility section after removing container_type
-      if @container.type
-        @container_type ||= @container.type
-      end
       # todo: remove this backwards compatibility section after removing nested_container
-      if @container.nested
+      if @container and @container.nested
         artifacts[:nested_container] << @container.nested
       end
       @container
