@@ -1,6 +1,6 @@
 cask :v1 => 'adobe-digital-editions' do
   version '4.0'
-  sha256 '359f62e8fc2d89d6aa411fc4ed69a5be9e19d433226640b3ddbaec35e66f646c'
+  sha256 '00b846565da5962993bf3d9f4e629764d439da8269e4c84da49b441fa48d0e86'
 
   url "http://download.adobe.com/pub/adobe/digitaleditions/ADE_#{version}_Installer.dmg"
   homepage 'http://www.adobe.com/pt/products/digital-editions.html'
