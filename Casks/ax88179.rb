@@ -1,6 +1,6 @@
 cask :v1 => 'ax88179' do
-  version '2.2.0_20140724'
-  sha256 '075cdf5cb5a6ed0e8a4d59ff470a32f5e869f3b2f2b08f268120cbae30c61329'
+  version '2.3.0_20140929'
+  sha256 '269f233cd6fc70ba46dc11ae2bfac7aa4df019e193dededb1e1e56aba1aca699'
 
   module Utils
     def self.basename
