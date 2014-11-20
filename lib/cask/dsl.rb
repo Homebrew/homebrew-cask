@@ -249,7 +249,6 @@ module Cask::DSL
     end
 
     SPECIAL_ARTIFACT_TYPES = [
-      :nested_container,
       :uninstall,
       :zap,
     ]
