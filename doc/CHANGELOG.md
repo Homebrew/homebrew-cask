@@ -1,5 +1,49 @@
 # CHANGELOG
 
+## 0.48.0
+
+* __Casks__
+  - 32 Casks added (2058 updated) by 75 contributors since 0.47.0
+  - 2094 total Casks
+* __Features__
+ - [#7365][] add stanza `stage_only` (new spelling of `caskroom_only`)
+* __Breaking Changes__
+ - [#7450][], [#7430][], [#7311][] require new-style header lines
+ - [#7451][] remove support for `nested_container` stanza
+ - [#7428][] remove support for `manual_installer` in `caveats` stanza
+ - [#7429][] remove support for `container_type` stanza
+ - [#7401][] remove support for `depends_on_formula` stanza
+ - [#7367][] remove support for `uninstall :files` form
+ - [#7354][] remove support for `after_install` and friends
+* __Fixes__
+ - [#7426][], [#7432][] activate `suite` artifacts
+ - [#7453][] avoid gitx in partial-match search tests
+ - [#7399][] tighten sourceforge URL regular expressions, add special case for excalibur
+* __Internal Changes__
+  - none
+* __Documentation__
+  - 8 doc commits since 0.47.0
+* __Contributors__
+  - 32 new contributors since 0.47.0
+  - 1236 total contributors
+* __Release Date__
+  - 2014-11-20 12:54:00 UTC
+
+[#7311]: https://github.com/caskroom/homebrew-cask/issues/7311
+[#7354]: https://github.com/caskroom/homebrew-cask/issues/7354
+[#7365]: https://github.com/caskroom/homebrew-cask/issues/7365
+[#7367]: https://github.com/caskroom/homebrew-cask/issues/7367
+[#7399]: https://github.com/caskroom/homebrew-cask/issues/7399
+[#7401]: https://github.com/caskroom/homebrew-cask/issues/7401
+[#7426]: https://github.com/caskroom/homebrew-cask/issues/7426
+[#7428]: https://github.com/caskroom/homebrew-cask/issues/7428
+[#7429]: https://github.com/caskroom/homebrew-cask/issues/7429
+[#7430]: https://github.com/caskroom/homebrew-cask/issues/7430
+[#7432]: https://github.com/caskroom/homebrew-cask/issues/7432
+[#7450]: https://github.com/caskroom/homebrew-cask/issues/7450
+[#7451]: https://github.com/caskroom/homebrew-cask/issues/7451
+[#7453]: https://github.com/caskroom/homebrew-cask/issues/7453
+
 ## 0.47.0
 
 * __Casks__
