@@ -8,5 +8,8 @@ cask :v1 => 'deezer' do
 
   app 'Deezer.app'
 
-  zap :delete => '~/Library/Preferences/com.deezer.Deezer.plist'
+  zap :delete => [
+  								'~/Library/Application Support/Deezer',
+  								'~/Library/Preferences/com.deezer.Deezer.plist'
+  							 ]
 end
