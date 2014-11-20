@@ -7,4 +7,6 @@ cask :v1 => 'puppet' do
   license :unknown
 
   pkg "puppet-#{version}.pkg"
+
+  uninstall :pkgutil => 'com.puppetlabs.puppet'
 end
