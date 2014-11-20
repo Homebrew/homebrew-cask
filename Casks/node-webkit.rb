@@ -6,5 +6,5 @@ cask :v1 => 'node-webkit' do
   homepage 'https://github.com/rogerwang/node-webkit'
   license :mit
 
-  caskroom_only true
+  stage_only true
 end
