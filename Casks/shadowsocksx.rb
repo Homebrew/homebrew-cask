@@ -1,6 +1,6 @@
 cask :v1 => 'shadowsocksx' do
-  version '2.3'
-  sha256 '6aab97a8f5801d20ec779bce6e86349655b27bc6acd8ad70c939b89007be92c5'
+  version '2.4.1'
+  sha256 '9a9c9430420dcaf0fbf68a43c91776fe8f519ce18bccc52f79e3f34819eaa7ea'
 
   url "https://downloads.sourceforge.net/project/shadowsocksgui/dist/ShadowsocksX-#{version}.dmg"
   homepage 'https://github.com/shadowsocks/shadowsocks-iOS/wiki/Shadowsocks-for-OSX-Help'
