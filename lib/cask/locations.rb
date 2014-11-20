@@ -77,7 +77,7 @@ module Cask::Locations
     end
 
     def binarydir
-      @binarydir ||= Pathname.new('/usr/local/bin').expand_path
+      @binarydir ||= HOMEBREW_PREFIX.join 'bin'
     end
 
     def binarydir=(_binarydir)
