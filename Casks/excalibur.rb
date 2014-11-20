@@ -1,4 +1,4 @@
-cask :v1 => 'Excalibur' do
+cask :v1 => 'excalibur' do
   version '4.0.7'
   sha256 'e4bf9d459b1df49d80753c9ef32cc8fa4fe6df9cfaa7c21f912052ffb2061202'
 
