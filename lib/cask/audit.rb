@@ -12,8 +12,7 @@ class Cask::Audit
 
   def run!(download = false)
     _check_required_fields
-    # todo: enable this test before 0.50.0
-    # _check_no_string_version_latest
+    _check_no_string_version_latest
     _check_checksums
     _check_sha256_no_check_if_latest
     _check_sha256_if_versioned
@@ -49,16 +48,14 @@ class Cask::Audit
 
   def _check_sha256_no_check_if_latest
     odebug "Verifying sha256 :no_check with version :latest"
-    # todo: remove this string test before 0.50.0
-    if ((cask.version == 'latest' or cask.version == :latest) and cask.sums.is_a?(Array))
+    if cask.version == :latest and cask.sums.is_a?(Array)
       add_error "you should use sha256 :no_check when version is :latest"
     end
   end
 
   def _check_sha256_if_versioned
     odebug "Verifying a sha256 is present when versioned"
-    # todo: remove this string test before 0.50.0
-    if ((cask.version != 'latest' and cask.version != :latest) and cask.sums == :no_check)
+    if cask.version != :latest and cask.sums == :no_check
       add_error "you must include a sha256 when version is not :latest"
     end
   end
