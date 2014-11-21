@@ -6,5 +6,5 @@ cask :v1 => 'kindlegen' do
   homepage 'http://www.amazon.com/gp/feature.html?docId=1000765211'
   license :unknown
 
-  binary "KindleGen_Mac_i386_v#{version.gsub('.', '_')}/kindlegen"
+  binary "kindlegen"
 end
