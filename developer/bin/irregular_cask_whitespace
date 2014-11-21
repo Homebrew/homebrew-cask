@@ -78,7 +78,7 @@ _irregular_cask_whitespace () {
     perl -C32 -0777 -ne 'print "    $ARGV\n" if m{[\x00-\x08\x0B-\x0C\x0E\x1F]}s'                -- ./*.rb
 
     printf "\n# First indent not 2\n"
-    perl -C32 -0777 -ne 's{\A.*?<\s*Cask[ \t\r]*\n+}{}s; print "    $ARGV\n" unless m{\A  \S}s'  -- ./*.rb
+    perl -C32 -0777 -ne 's{\A(.*?\n)?cask\s+:v\d\S*\s+=>[^\n]+\n+}{}s; print "    $ARGV\n" unless m{\A  \S}s'  -- ./*.rb
 
     printf "\n# Indents not multiple of 2\n"
     perl -C32 -0777 -ne 'print "    $ARGV\n" if m{\n(?:  ){0,} [a-z]}s'                          -- ./*.rb
