@@ -7,5 +7,6 @@ cask :v1 => 'avidcodecsle' do
   license :commercial
 
   pkg 'AvidCodecsLE.pkg'
-  uninstall :pkgutil => 'com.avid.avidcodecsle' 
+
+  uninstall :pkgutil => 'com.avid.avidcodecsle'
 end
