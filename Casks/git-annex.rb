@@ -8,7 +8,7 @@ cask :v1 => 'git-annex' do
     # This is a horrible hack to force the file extension.  The
     # backend code should be fixed so that this is not needed.
     preflight do
-      system '/bin/mv', '--', staged_path.join('git-annex-latest'), destination_path.join('git-annex-latest.dmg')
+      system '/bin/mv', '--', staged_path.join('git-annex-latest'), staged_path.join('git-annex-latest.dmg')
     end
     container :nested => 'git-annex-latest.dmg'
   else
