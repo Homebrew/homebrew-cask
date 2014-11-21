@@ -155,11 +155,6 @@ class Cask
     caskroom_path.join(cask_version.to_s)
   end
 
-  # todo transitional method, removeme after DSL 1.0
-  def destination_path
-    staged_path
-  end
-
   def metadata_master_container_path
     caskroom_path.join(self.class.metadata_subdir)
   end

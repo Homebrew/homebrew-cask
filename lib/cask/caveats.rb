@@ -36,11 +36,6 @@ class Cask::CaveatsDSL
     caskroom_path.join(@cask.version.to_s)
   end
 
-  # todo transitional method, removeme after DSL 1.0
-  def destination_path
-    staged_path
-  end
-
   # DSL. Each method should handle output, following the convention of
   # at least one trailing blank line so that the user can distinguish
   # separate caveats.
