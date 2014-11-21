@@ -7,7 +7,7 @@ cask :v1 => 'nodeclipse' do
   license :oss
 
   preflight do
-    system '/bin/mv', '--', staged_path.join('eclipse/Eclipse.app'), destination_path.join('eclipse/Nodeclipse.app')
+    system '/bin/mv', '--', staged_path.join('eclipse/Eclipse.app'), staged_path.join('eclipse/Nodeclipse.app')
   end
   app 'eclipse/Nodeclipse.app'
 end
