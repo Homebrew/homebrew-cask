@@ -59,6 +59,18 @@ _irregular_cask_whitespace () {
     printf "\n# Final 'end' indented\n"
     perl -C32 -0777 -ne 'print "    $ARGV\n" if m{ end\s+\z}s' -- ./*.rb
 
+    printf "\n# Extra newline before final end\n"
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{\n\nend\s+\z}s' -- ./*.rb
+
+    printf "\n# Extra newline before header\n"
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{\n\ncask\s+:v\d\S*\s+=>}s' -- ./*.rb
+
+    printf "\n# Extra newline after header\n"
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{(?:\A|\n)cask\s+:v\d\S*\s+=>[^\n]+\n\n\s*(\S+)}s and $1 ne "if"' -- ./*.rb
+
+    printf "\n# No empty line before uninstall\n"
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{\n[^\n]+\n +uninstall }s'  -- ./*.rb
+
     printf "\n# Extra interior newlines\n"
     perl -C32 -0777 -ne 'print "    $ARGV\n" if m{\n{3,}}s'    -- ./*.rb
 
