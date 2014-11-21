@@ -1,6 +1,6 @@
 cask :v1 => 'mamp' do
-  version '3.0.7.2'
-  sha256 'a6e72143efa73eb919efeb0e9dc0089e291204676da37e9508ac53c2f51f8878'
+  version '3.0.7.3'
+  sha256 '840877041af7a06d50a3ddc67030ae4f193f70add473ebad0f7418daf80cd553'
 
   url "http://downloads4.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
   homepage 'http://www.mamp.info/en/index.html'
