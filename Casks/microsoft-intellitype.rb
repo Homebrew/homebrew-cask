@@ -14,5 +14,4 @@ cask :v1 => 'microsoft-intellitype' do
                       'com.microsoft.driver.MicrosoftKeyboardBluetooth',
                       'com.microsoft.driver.MicrosoftKeyboardUSB',
                      ]
-
 end
