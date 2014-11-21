@@ -99,7 +99,7 @@ module Cask::DSL
       rescue StandardError => e
         raise CaskInvalidError.new(self.title, e)
       end
-      # todo: remove this backwards compatibility section after removing nested_container
+      # todo: remove this backward-compatibility section after removing nested_container
       if @container and @container.nested
         artifacts[:nested_container] << @container.nested
       end
