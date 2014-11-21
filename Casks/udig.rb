@@ -6,5 +6,5 @@ cask :v1 => 'udig' do
   homepage 'http://udig.refractions.net/'
   license :oss
 
-  app 'udig'
+  suite 'udig'
 end
