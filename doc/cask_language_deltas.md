@@ -74,6 +74,7 @@ This notice will be removed for the final form.**
 | `uninstall :files`                          | `uninstall :delete`
 | `version 'latest'`                          | `version :latest`
 | `manual_installer(path)` (within `caveats`) | `installer :manual`
+| `destination_path`                          | `staged_path`
 
 
 ## All Supported Stanzas (1.0)
