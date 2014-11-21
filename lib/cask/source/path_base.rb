@@ -20,7 +20,7 @@ class Cask::Source::PathBase
     raise CaskError.new "File '#{path}' is not a plain file" unless path.file?
     begin
 
-      # forward compatibility hack: convert first lines of the new form
+      # transitional hack: convert first lines of the new form
       #
       #     cask :v1 => 'google-chrome' do
       #
