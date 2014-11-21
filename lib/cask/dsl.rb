@@ -223,19 +223,6 @@ module Cask::DSL
       end
     end
 
-    # todo transitional removeme
-    define_method(:caskroom_only) do |*args|
-      if args != [true]
-        raise CaskInvalidError.new(self.title, "'caskroom_only' takes a single argument: true")
-      end
-      artifacts[:stage_only] << args
-      if artifacts.key?(:stage_only) and
-        artifacts.keys.count > 1 and
-        ! (artifacts.keys & Cask::DSL::ClassMethods.activatable_artifact_types).empty?
-        raise CaskInvalidError.new(self.title, "'caskroom_only' must be the only activatable artifact")
-      end
-    end
-
     def installer(*args)
       if args.empty?
         return artifacts[:installer]
