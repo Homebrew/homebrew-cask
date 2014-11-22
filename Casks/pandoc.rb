@@ -7,6 +7,7 @@ cask :v1 => 'pandoc' do
   license :gpl
 
   pkg "pandoc-#{version}-osx.pkg"
+
   uninstall :pkgutil => 'net.johnmacfarlane.pandoc'
   caveats <<-EOS.undent
     Note that homebrew also provides a compiled pandoc Formula that links its
