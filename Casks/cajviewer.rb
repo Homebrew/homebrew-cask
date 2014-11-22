@@ -7,5 +7,6 @@ cask :v1 => 'cajviewer' do
   license :unknown
 
   pkg 'CAJViewerMac.pkg'
+
   uninstall :pkgutil => 'com.TTKN.CAJViewerMac'
 end
