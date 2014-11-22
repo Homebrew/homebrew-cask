@@ -58,6 +58,7 @@ cask :v1 => 'unity' do
   license :commercial
 
   pkg 'Unity.pkg'
+
   uninstall :pkgutil => 'com.unity3d.*'
 end
 ```
