@@ -9,5 +9,6 @@ cask :v1 => 'concentrate' do
   license :unknown
 
   app 'Concentrate.app'
+
   zap :delete => '~/Library/Application Support/Concentrate/Concentrate.sqlite3'
 end
