@@ -7,5 +7,6 @@ cask :v1 => 'splashtop-streamer' do
   license :unknown
 
   pkg 'Splashtop Streamer.pkg'
+
   uninstall :pkgutil => 'com.splashtop.splashtopStreamer.*'
 end
