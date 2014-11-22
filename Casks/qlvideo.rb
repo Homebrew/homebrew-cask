@@ -7,5 +7,6 @@ cask :v1 => 'qlvideo' do
   license :gpl
 
   pkg "QLVideo_#{version.gsub('.', '')}.pkg"
+
   uninstall :pkgutil => 'uk.org.marginal.qlvideo'
 end
