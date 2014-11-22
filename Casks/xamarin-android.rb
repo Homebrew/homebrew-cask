@@ -10,5 +10,6 @@ cask :v1 => 'xamarin-android' do
   license :unknown
 
   pkg "mono-android-#{version}.pkg"
+
   uninstall :pkgutil => 'com.xamarin.android.pkg'
 end
