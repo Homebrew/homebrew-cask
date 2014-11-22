@@ -8,6 +8,7 @@ cask :v1 => 'transmit' do
   license :unknown
 
   app 'Transmit.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.panic.Transmit.plist',
                   '~/Library/Application Support/Transmit',
