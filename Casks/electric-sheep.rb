@@ -7,5 +7,6 @@ cask :v1 => 'electric-sheep' do
   license :oss
 
   pkg 'Electric Sheep.mpkg'
+
   uninstall :pkgutil => 'org.electricsheep.electricSheep.*'
 end
