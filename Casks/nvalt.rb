@@ -7,6 +7,7 @@ cask :v1 => 'nvalt' do
   license :unknown
 
   app 'nvALT.app'
+
   zap :delete => [
                   '~/Library/Preferences/net.elasticthreads.nv.plist',
                   '~/Library/Application Support/Notational Velocity',
