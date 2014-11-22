@@ -7,5 +7,6 @@ cask :v1 => 'suspicious-package' do
   license :unknown
 
   pkg 'SuspiciousPackage.pkg'
+
   uninstall :pkgutil => 'com.mothersruin.pkg.SuspiciousPackagePlugin'
 end
