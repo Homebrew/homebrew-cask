@@ -7,5 +7,6 @@ cask :v1 => 'matplotlib' do
   license :unknown
 
   pkg 'matplotlib.pkg'
+
   uninstall :pkgutil => 'com.kyngchaos.matplotib-lion'
 end
