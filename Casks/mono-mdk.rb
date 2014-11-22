@@ -7,5 +7,6 @@ cask :v1 => 'mono-mdk' do
   license :oss
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.x86.pkg"
+
   uninstall :pkgutil => 'com.xamarin.mono-MDK.pkg'
 end
