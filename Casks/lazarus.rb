@@ -7,5 +7,6 @@ cask :v1 => 'lazarus' do
   license :oss
 
   pkg 'lazarus.pkg'
+
   uninstall :pkgutil => 'org.freepascal.lazarus.www'
 end
