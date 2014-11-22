@@ -7,5 +7,6 @@ cask :v1 => 'superduper' do
   license :unknown
 
   app 'SuperDuper!.app'
+
   zap :delete => '~/Library/Application Support/SuperDuper!'
 end
