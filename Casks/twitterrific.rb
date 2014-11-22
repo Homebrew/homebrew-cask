@@ -9,5 +9,6 @@ cask :v1 => 'twitterrific' do
   license :unknown
 
   app 'Twitterrific.app'
+
   zap :delete => '~/Library/Application Support/Twitterrific'
 end

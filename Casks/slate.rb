@@ -8,6 +8,7 @@ cask :v1 => 'slate' do
   license :oss
 
   app 'Slate.app'
+
   zap :delete => [
                   '~/.slate',
                   '~/.slate.js',

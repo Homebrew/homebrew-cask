@@ -7,6 +7,7 @@ cask :v1 => 'launchbar' do
   license :unknown
 
   app 'LaunchBar.app'
+
   zap :delete => [
                   '~/Library/Preferences/at.obdev.LaunchBar.plist',
                   '~/Library/Application Support/LaunchBar/Configuration.plist',

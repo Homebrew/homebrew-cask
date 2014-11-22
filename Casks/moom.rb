@@ -8,6 +8,7 @@ cask :v1 => 'moom' do
   license :commercial
 
   app 'Moom.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.manytricks.Moom.plist',
                   '~/Library/Application Support/Many Tricks',

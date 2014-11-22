@@ -7,5 +7,6 @@ cask :v1 => 'omnigraffle' do
   license :unknown
 
   app 'OmniGraffle.app'
+
   zap :delete => '~/Library/Application Support/The Omni Group/OmniGraffle'
 end

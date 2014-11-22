@@ -7,6 +7,7 @@ cask :v1 => 'pokerstars' do
   license :unknown
 
   app 'PokerStars.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.pokerstars.user.ini',
                   '~/Library/Preferences/com.pokerstars.PokerStars.plist',

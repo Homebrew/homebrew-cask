@@ -7,5 +7,6 @@ cask :v1 => 'apache-directory-studio' do
   license :unknown
 
   app 'Apache Directory Studio.app'
+
   zap :delete => '~/.ApacheDirectoryStudio'
 end

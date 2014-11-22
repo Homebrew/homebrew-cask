@@ -7,6 +7,7 @@ cask :v1 => 'charles' do
   license :unknown
 
   app 'Charles.app'
+
   zap :delete => [
                   '~/Library/Application Support/Charles',
                   '~/Library/Preferences/com.xk72.charles.config',

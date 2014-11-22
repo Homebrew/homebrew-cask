@@ -9,5 +9,6 @@ cask :v1 => 'gitbox' do
   license :unknown
 
   app 'Gitbox.app'
+
   zap :delete => '~/Library/Preferences/com.oleganza.gitbox.plist'
 end

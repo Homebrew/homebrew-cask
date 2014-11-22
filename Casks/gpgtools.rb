@@ -42,7 +42,6 @@ cask :v1 => 'gpgtools' do
     system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg)"       =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg'
     system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg-agent)" =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg-agent'
   end
-
   zap       :delete => [
                         '~/Library/Services/GPGServices.service',
                         '~/Library/Mail/Bundles/GPGMail.mailbundle',

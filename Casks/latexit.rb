@@ -9,5 +9,6 @@ cask :v1 => 'latexit' do
   license :unknown
 
   app 'LaTeXiT.app'
+
   zap :delete => '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist'
 end

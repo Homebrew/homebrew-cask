@@ -7,5 +7,6 @@ cask :v1 => 'spark' do
   license :unknown
 
   app 'Spark.app'
+
   zap :delete => '~/Library/Application Support/Spark'
 end

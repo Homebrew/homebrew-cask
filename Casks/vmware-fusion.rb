@@ -17,6 +17,7 @@ cask :v1 => 'vmware-fusion' do
     system '/usr/bin/sudo', '-E', '--',
            '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", "#{staged_path}/VMware Fusion.app"
   end
+
   zap :delete => [
                   # note: '~/Library/Application Support/VMware Fusion' is not safe
                   # to delete.  In older versions, VM images were located there.

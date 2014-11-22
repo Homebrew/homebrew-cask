@@ -8,5 +8,6 @@ cask :v1 => 'cloud' do
   tags :name => 'CloudApp'
 
   app 'CloudApp.app'
+
   zap :delete => '~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist'
 end

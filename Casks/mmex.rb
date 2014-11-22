@@ -7,6 +7,7 @@ cask :v1 => 'mmex' do
   license :gpl
 
   app 'mmex.app'
+
   zap :delete => [
                   '~/Library/Application Support/mmex',
                   '~/Library/Caches/com.yourcompany.MMEX',

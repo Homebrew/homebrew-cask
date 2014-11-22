@@ -9,6 +9,7 @@ cask :v1 => 'bibdesk' do
   license :oss
 
   app 'BibDesk.app'
+
   zap :delete => [
                   '~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist',
                   '~/Library/Application Support/BibDesk',

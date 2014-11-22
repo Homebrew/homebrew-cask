@@ -9,5 +9,6 @@ cask :v1 => 'keka' do
   license :unknown
 
   app 'Keka.app'
+
   zap :delete => '~/Library/Preferences/com.aone.keka.plist'
 end

@@ -7,5 +7,6 @@ cask :v1 => 'menumeters' do
   license :unknown
 
   prefpane 'MenuMeters Installer.app/Contents/Resources/MenuMeters.prefPane'
+
   zap :delete => '~/Library/Preferences/com.ragingmenace.MenuMeters.plist'
 end

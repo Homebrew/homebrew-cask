@@ -9,5 +9,6 @@ cask :v1 => 'cord' do
   license :oss
 
   app 'CoRD.app'
+
   zap :delete => '~/Library/Application Support/CoRD'
 end

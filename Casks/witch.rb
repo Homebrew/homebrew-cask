@@ -7,5 +7,6 @@ cask :v1 => 'witch' do
   license :unknown
 
   prefpane 'Witch.prefPane'
+
   zap :delete => '~/Library/Preferences/com.manytricks.Witch.plist'
 end

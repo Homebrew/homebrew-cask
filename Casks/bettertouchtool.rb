@@ -8,6 +8,7 @@ cask :v1 => 'bettertouchtool' do
   license :commercial
 
   app 'BetterTouchTool.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',
                   '~/Library/Application Support/BetterTouchTool',

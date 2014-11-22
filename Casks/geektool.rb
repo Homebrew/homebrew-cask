@@ -9,6 +9,7 @@ cask :v1 => 'geektool' do
   license :mit
 
   app 'GeekTool.app'
+
   zap :delete => [
                   '~/Library/Preferences/org.tynsoe.GeekTool.plist',
                   '~/Library/Preferences/org.tynsoe.geeklet.file.plist',

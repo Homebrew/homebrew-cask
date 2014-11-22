@@ -9,6 +9,7 @@ cask :v1 => 'cyberduck' do
   license :gpl
 
   app 'Cyberduck.app'
+
   zap :delete => [
                   '~/Library/Application Support/Cyberduck',
                   '~/Library/Preferences/ch.sudo.cyberduck.plist',

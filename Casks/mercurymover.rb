@@ -7,5 +7,6 @@ cask :v1 => 'mercurymover' do
   license :unknown
 
   prefpane 'MercuryMover.prefPane'
+
   zap :delete => '~/Library/Preferences/com.heliumfoot.MyWiAgent.plist'
 end

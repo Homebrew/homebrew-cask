@@ -9,5 +9,6 @@ cask :v1 => 'droplr' do
   license :unknown
 
   app 'Droplr.app'
+
   zap :delete => '~/Library/Preferences/com.droplr.droplr-mac.plist'
 end

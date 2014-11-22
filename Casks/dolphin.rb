@@ -7,6 +7,7 @@ cask :v1 => 'dolphin' do
   license :unknown
 
   app 'Dolphin.app'
+
   zap :delete => [
                   '~/Library/Application Support/Dolphin',
                   '~/Library/Preferences/org.dolphin-emu.dolphin.plist',

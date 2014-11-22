@@ -9,6 +9,7 @@ cask :v1 => 'xld' do
   license :oss
 
   app 'XLD.app'
+
   zap :delete => [
                   '~/Library/Application Support/XLD',
                   '~/Library/Preferences/jp.tmkk.XLD.plist',

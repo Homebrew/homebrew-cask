@@ -7,5 +7,6 @@ cask :v1 => 'mailplane' do
   license :unknown
 
   app 'Mailplane 3.app'
+
   zap :delete => '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
 end

@@ -9,5 +9,6 @@ cask :v1 => 'hands-off' do
   license :unknown
 
   app 'Hands Off!.app'
+
   zap :delete => '~/Library/Preferences/com.metakine.handsoff.plist'
 end

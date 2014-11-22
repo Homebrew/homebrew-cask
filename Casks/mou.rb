@@ -8,6 +8,7 @@ cask :v1 => 'mou' do
   license :unknown
 
   app 'Mou.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.mouapp.Mou.plist',
                   '~/Library/Preferences/com.mouapp.Mou.LSSharedFileList.plist',

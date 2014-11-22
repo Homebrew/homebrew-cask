@@ -9,6 +9,7 @@ cask :v1 => 'transmission' do
   license :gpl
 
   app 'Transmission.app'
+
   zap :delete => [
                   '~/Library/Preferences/org.m0k.transmission.plist',
                   '~/Library/Application Support/Transmission/blocklists',

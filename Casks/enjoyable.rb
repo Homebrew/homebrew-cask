@@ -9,5 +9,6 @@ cask :v1 => 'enjoyable' do
   license :unknown
 
   app 'Enjoyable.app'
+
   zap :delete => '~/Library/Preferences/com.yukkurigames.Enjoyable.plist'
 end

@@ -9,5 +9,6 @@ cask :v1 => 'controlplane' do
   license :unknown
 
   app 'ControlPlane.app'
+
   zap :delete => '~/Library/Preferences/com.dustinrue.ControlPlane.plist'
 end

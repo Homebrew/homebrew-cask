@@ -8,6 +8,7 @@ cask :v1 => 'expandrive' do
   license :unknown
 
   app 'ExpanDrive.app'
+
   zap :delete => [
                   '~/Library/Application Support/ExpanDrive',
                   '~/Preferences/com.expandrive.ExpanDrive2.plist',
