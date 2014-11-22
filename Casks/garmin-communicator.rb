@@ -7,5 +7,6 @@ cask :v1 => 'garmin-communicator' do
   license :unknown
 
   pkg 'Install Communicator Plugin.pkg'
+
   uninstall :pkgutil => 'com.garmin.garminGpsControl.pkg'
 end
