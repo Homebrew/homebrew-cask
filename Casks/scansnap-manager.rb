@@ -7,5 +7,6 @@ cask :v1 => 'scansnap-manager' do
   license :unknown
 
   pkg 'ScanSnap Manager.pkg'
+
   uninstall :pkgutil => 'jp.co.pfu.ScanSnap.*'
 end
