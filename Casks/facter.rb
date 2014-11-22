@@ -7,5 +7,6 @@ cask :v1 => 'facter' do
   license :unknown
 
   pkg "facter-#{version}.pkg"
+
   uninstall :pkgutil => 'com.puppetlabs.facter'
 end
