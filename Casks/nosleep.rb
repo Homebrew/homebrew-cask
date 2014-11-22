@@ -7,6 +7,7 @@ cask :v1 => 'nosleep' do
   license :oss
 
   pkg 'NoSleep.mpkg'
+
   uninstall :script => 'Uninstall.command',
             :pkgutil => 'com.protech.pkg.NoSleep'
 end
