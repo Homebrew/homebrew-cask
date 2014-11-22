@@ -7,6 +7,7 @@ cask :v1 => 'microsoft-intellipoint' do
   license :unknown
 
   pkg 'Microsoft Mouse Installer.app/Contents/Resources/Microsoft Mouse.pkg'
+
   uninstall :pkgutil => 'com.microsoft.mouse.installer',
             :kext => [
                       'com.microsoft.driver.MicrosoftMouse',
