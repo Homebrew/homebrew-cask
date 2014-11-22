@@ -7,5 +7,6 @@ cask :v1 => 'magic-launch' do
   license :unknown
 
   prefpane 'Magic Launch.prefPane'
+
   zap :delete => '~/Library/Preferences/com.metakine.magic-launch.agent.plist'
 end
