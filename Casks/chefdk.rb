@@ -8,6 +8,7 @@ cask :v1 => 'chefdk' do
   license :apache
 
   pkg "chefdk-#{version}.pkg"
+
   uninstall :pkgutil => 'com.getchef.pkg.chefdk',
             :delete  => [
                          '/opt/chefdk/',
