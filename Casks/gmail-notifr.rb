@@ -9,5 +9,6 @@ cask :v1 => 'gmail-notifr' do
   license :unknown
 
   app 'Gmail Notifr.app'
+
   zap :delete => '~/Library/Preferences/com.ashchan.GmailNotifr.plist'
 end
