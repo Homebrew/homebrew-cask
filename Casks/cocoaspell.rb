@@ -7,6 +7,7 @@ cask :v1 => 'cocoaspell' do
   license :unknown
 
   pkg 'cocoAspell.pkg'
+
   uninstall :pkgutil => 'net.leuski.cocoaspell.*',
             :delete  => [
                          '/Application Support/cocoAspell/aspell6-en-6.0-0',
