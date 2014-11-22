@@ -7,5 +7,6 @@ cask :v1 => 'pgloader' do
   license :unknown
 
   pkg "pgloader-#{version}.pkg"
+
   uninstall :pkgutil => 'org.tapoueh.pgloader'
 end
