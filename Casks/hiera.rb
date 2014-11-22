@@ -7,5 +7,6 @@ cask :v1 => 'hiera' do
   license :unknown
 
   pkg "hiera-#{version}.pkg"
+
   uninstall :pkgutil => 'com.puppetlabs.hiera'
 end
