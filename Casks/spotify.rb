@@ -7,5 +7,6 @@ cask :v1 => 'spotify' do
   license :gratis
 
   app 'Spotify.app'
+
   zap :delete => '~/Library/Preferences/com.spotify.client.plist'
 end
