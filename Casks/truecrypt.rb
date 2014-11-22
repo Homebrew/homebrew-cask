@@ -7,6 +7,7 @@ cask :v1 => 'truecrypt' do
   license :oss
 
   pkg "TrueCrypt #{version}.mpkg"
+
   uninstall :pkgutil => 'org.TrueCryptFoundation.TrueCrypt'
 
   caveats do
