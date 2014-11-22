@@ -4,12 +4,13 @@ cask :v1 => 'pl2303' do
 
   url "http://prolificusa.com/files/md_PL2303_MacOSX-10_6up_v#{version.gsub('.','_')}.zip"
   homepage 'http://www.prolificusa.com'
-  license :closed 
+  license :closed
 
- pkg "PL2303_MacOSX_v#{version.gsub('.','_')}.pkg"
- uninstall :delete => [
-                       '/System/Library/Extensions/ProlificUsbSerial.kext',
-                       '/var/db/receipts/*PL2303*.*',
-                       '/var/db/receipts/*ProlificUSbSerial*.*',
-                      ]
+  pkg "PL2303_MacOSX_v#{version.gsub('.','_')}.pkg"
+
+  uninstall :delete => [
+                        '/System/Library/Extensions/ProlificUsbSerial.kext',
+                        '/var/db/receipts/*PL2303*.*',
+                        '/var/db/receipts/*ProlificUSbSerial*.*',
+                       ]
 end

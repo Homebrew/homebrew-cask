@@ -9,7 +9,7 @@ cask :v1 => 'sketchup' do
   license :unknown
 
   suite 'SketchUp 2015'
-  
+
   zap :delete => [
                   '~/Library/Application Support/SketchUp 2015',
                   '~/Library/Caches/com.sketchup.SketchUp.2015',
