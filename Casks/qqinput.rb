@@ -8,5 +8,6 @@ cask :v1 => 'qqinput' do
   license :unknown
 
   pkg "安装QQ输入法#{version.sub(%r{^(\d+\.\d+).*},'\1')}.pkg"
+
   uninstall :pkgutil => 'com.tencent.inputmethod.QQInput.*'
 end
