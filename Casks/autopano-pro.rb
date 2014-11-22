@@ -7,6 +7,7 @@ cask :v1 => 'autopano-pro' do
   license :commercial
 
   pkg "Autopano Pro #{version}.pkg"
+
   uninstall :pkgutil => [
                          'com.kolor.pkg.AutopanoPro.*',
                          'com.kolor.pkg.Aperture_plugin',
