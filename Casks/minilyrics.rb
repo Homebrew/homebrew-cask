@@ -7,5 +7,6 @@ cask :v1 => 'minilyrics' do
   license :unknown
 
   pkg 'MiniLyrics.pkg'
+
   uninstall :pkgutil => 'com.crintsoft.MiniLyrics.pkg'
 end
