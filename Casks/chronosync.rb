@@ -7,5 +7,6 @@ cask :v1 => 'chronosync' do
   license :unknown
 
   pkg 'Install.pkg'
+
   uninstall :pkgutil => 'com.econtechnologies.pkg.ChronoSyncApplication'
 end
