@@ -7,6 +7,7 @@ cask :v1 => 'cloudera-hive-odbc' do
   license :unknown
 
   pkg 'ClouderaHiveODBC.pkg'
+
   uninstall :pkgutil => 'cloudera.hiveodbc'
   caveats <<-EOS.undent
     For configuration instructions, see
