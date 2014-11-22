@@ -7,6 +7,7 @@ cask :v1 => 'heroku-toolbelt' do
   license :unknown
 
   pkg 'heroku-toolbelt.pkg'
+
   uninstall :pkgutil => 'com.heroku.toolbelt',
             :delete  => [
                          '/usr/local/heroku',
