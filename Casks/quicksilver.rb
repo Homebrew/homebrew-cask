@@ -7,6 +7,7 @@ cask :v1 => 'quicksilver' do
   license :unknown
 
   app 'Quicksilver.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.blacktree.Quicksilver.plist',
                   '~/Library/Application Support/Quicksilver',
