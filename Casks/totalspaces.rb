@@ -7,6 +7,7 @@ cask :v1 => 'totalspaces' do
     url "http://downloads.binaryage.com/TotalSpaces-#{version}.zip"
 
     pkg 'TotalSpaces.pkg'
+
     uninstall :pkgutil => 'com.switchstep.totalspaces',
               :quit    => 'com.binaryage.TotalSpaces',
               :signal  => [
@@ -20,6 +21,7 @@ cask :v1 => 'totalspaces' do
     url "http://downloads.binaryage.com/TotalSpaces2-#{version}.dmg"
 
     installer :manual => 'TotalSpaces2.app'
+
     uninstall :pkgutil => 'com.binaryage.TotalSpaces2',
               :script  => {
                            :executable => 'TotalSpaces2 Uninstaller.app/Contents/MacOS/TotalSpaces2 Uninstaller',
