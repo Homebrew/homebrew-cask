@@ -7,5 +7,6 @@ cask :v1 => 'garmin-express' do
   license :unknown
 
   pkg 'Install Garmin Express.pkg'
+
   uninstall :pkgutil => 'com.garmin.renu.client'
 end
