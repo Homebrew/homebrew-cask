@@ -9,5 +9,6 @@ cask :v1 => 'feeds' do
   license :unknown
 
   app 'Feeds.app'
+
   zap :delete => '~/Library/Preferences/com.feedsapp.Feeds.plist'
 end
