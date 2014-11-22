@@ -7,6 +7,7 @@ cask :v1 => 'adobe-dng-converter' do
   license :unknown
 
   pkg 'Adobe DNG Converter.pkg'
+
   uninstall :pkgutil => 'com.adobe.adobeDngConverter*',
             :quit =>    'com.adobe.DNGConverter'
 end
