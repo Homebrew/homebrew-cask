@@ -8,6 +8,7 @@ cask :v1 => 'viscosity' do
   license :commercial
 
   app 'Viscosity.app'
+
   zap :delete => [
                   '~/Library/Application Support/Viscosity',
                   '~/Library/Preferences/com.viscosityvpn.Viscosity.plist',
