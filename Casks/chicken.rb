@@ -9,5 +9,6 @@ cask :v1 => 'chicken' do
   license :oss
 
   app 'Chicken.app'
+
   zap :delete => '~/Library/Preferences/net.sourceforge.chicken.plist'
 end
