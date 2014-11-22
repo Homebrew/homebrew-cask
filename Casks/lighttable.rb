@@ -8,6 +8,7 @@ cask :v1 => 'lighttable' do
 
   app 'LightTable/LightTable.app'
   binary 'LightTable/light'
+
   zap :delete => [
                   '~/Library/Application Support/LightTable/plugins',
                   '~/Library/Application Support/LightTable/settings',
