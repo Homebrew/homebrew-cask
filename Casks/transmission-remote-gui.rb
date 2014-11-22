@@ -7,5 +7,6 @@ cask :v1 => 'transmission-remote-gui' do
   license :oss
 
   pkg 'transgui.pkg'
+
   uninstall :pkgutil => 'com.transgui.*'
 end
