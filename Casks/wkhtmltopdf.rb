@@ -7,5 +7,6 @@ cask :v1 => 'wkhtmltopdf' do
   license :gpl
 
   pkg "wkhtmltox-#{version}_osx-cocoa-x86-64.pkg"
+
   uninstall :pkgutil => 'org.wkhtmltopdf.wkhtmltox'
 end
