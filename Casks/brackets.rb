@@ -7,6 +7,7 @@ cask :v1 => 'brackets' do
   license :mit
 
   app 'Brackets.app'
+
   zap :delete => [
                   '~/Library/Application Support/Brackets',
                   '~/Library/Preferences/io.brackets.appshell.plist',
