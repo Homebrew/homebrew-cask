@@ -7,6 +7,7 @@ cask :v1 => 'pagico' do
   license :unknown
 
   pkg 'Install Pagico.pkg'
+
   uninstall :pkgutil => 'com.pagico.*',
             :delete => '/Applications/Pagico'
 end
