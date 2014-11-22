@@ -7,5 +7,6 @@ cask :v1 => 'growlnotify' do
   license :unknown
 
   pkg 'GrowlNotify.pkg'
+
   uninstall :pkgutil => 'info.growl.growlnotify.*pkg'
 end
