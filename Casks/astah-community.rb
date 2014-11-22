@@ -8,5 +8,6 @@ cask :v1 => 'astah-community' do
   tags :vendor => 'Change Vision'
 
   pkg 'astah community ver 6_9_0.pkg'
+
   uninstall :pkgutil => 'com.change-vision.astahcommunity.astahcommunity.pkg'
 end
