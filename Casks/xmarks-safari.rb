@@ -7,6 +7,7 @@ cask :v1 => 'xmarks-safari' do
   license :unknown
 
   pkg 'Xmarks for Safari Installer.pkg'
+
   uninstall :pkgutil => [
                          'com.xmarks.XmarksForSafari.pkg',
                          'com.xmarks.XmarksPreferencePane.pkg',
