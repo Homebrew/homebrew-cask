@@ -11,6 +11,7 @@ cask :v1 => 'rubymine' do
   postflight do
     system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/RubyMine.app/Contents/Info.plist"
   end
+
   zap :delete => [
                   "~/Library/Application Support/RubyMine#{version.gsub('.','')}",
                   "~/Library/Preferences/RubyMine#{version.gsub('.','')}",
