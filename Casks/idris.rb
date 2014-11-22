@@ -7,5 +7,6 @@ cask :v1 => 'idris' do
   license :bsd
 
   pkg 'idris-current.pkg'
+
   uninstall :pkgutil => 'org.idris-lang'
 end
