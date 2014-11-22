@@ -8,5 +8,6 @@ cask :v1 => 'fseventer' do
   license :unknown
 
   app 'fseventer/fseventer.app'
+
   uninstall :script => 'fseventer/HelperToolUninstall.sh'
 end
