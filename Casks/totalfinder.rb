@@ -7,6 +7,7 @@ cask :v1 => 'totalfinder' do
   license :commercial
 
   pkg 'TotalFinder.pkg'
+
   uninstall :pkgutil => 'com.binaryage.pkg.totalfinder.app',
             :script => {
                         :executable => 'TotalFinder Uninstaller.app/Contents/MacOS/TotalFinder Uninstaller',
