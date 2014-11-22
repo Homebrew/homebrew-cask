@@ -7,6 +7,7 @@ cask :v1 => 'vagrant' do
   license :unknown
 
   pkg 'Vagrant.pkg'
+
   uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] },
             :pkgutil => 'com.vagrant.vagrant'
 end
