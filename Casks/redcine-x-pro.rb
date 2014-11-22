@@ -8,6 +8,7 @@ cask :v1 => 'redcine-x-pro' do
   license :commercial
 
   pkg "REDCINE-X_PRO_Build_#{version.to_i}.pkg"
+
   uninstall :pkgutil => [
                          'com.red.pkg.REDCINE-X PRO',
                          'com.red.pkg.SupportLibs',
