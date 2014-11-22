@@ -7,5 +7,6 @@ cask :v1 => 'processing' do
   license :unknown
 
   app 'Processing.app'
+
   zap :delete => '~/Library/Processing/preferences.txt'
 end
