@@ -15,5 +15,6 @@ cask :v1 => 'limechat' do
   license :oss
 
   app 'LimeChat.app'
+
   zap :delete => '~/Library/Preferences/net.limechat.LimeChat-AppStore.plist'
 end
