@@ -7,6 +7,7 @@ cask :v1 => 'xmplify' do
   license :unknown
 
   app 'Xmplify.app'
+
   uninstall :quit => 'au.com.moso.Xmplify'
   zap :delete => [
                    '~/Library/Caches/au.com.moso.Xmplify',
