@@ -9,5 +9,6 @@ cask :v1 => 'clementine' do
   license :oss
 
   app 'clementine.app'
+
   zap :delete => '~/Library/Preferences/org.clementine-player.Clementine.plist'
 end
