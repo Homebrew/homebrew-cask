@@ -10,6 +10,7 @@ cask :v1 => 'clipmenu' do
   license :unknown
 
   app 'ClipMenu.app'
+
   zap :delete => [
                   '~/Library/Application Support/ClipMenu',
                   '~/Library/Preferences/com.naotaka.ClipMenu.plist',
