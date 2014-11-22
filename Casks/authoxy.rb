@@ -7,6 +7,7 @@ cask :v1 => 'authoxy' do
   license :gratis
 
   pkg 'Authoxy (double click me).pkg'
+
   uninstall :pkgutil => 'net.hrsoftworks.authoxy.*',
             :delete  => '/tmp/authoxyd.pid'
   zap       :delete   => '~/Library/Preferences/net.hrsoftworks.AuthoxyPref.plist'
