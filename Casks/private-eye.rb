@@ -9,6 +9,7 @@ cask :v1 => 'private-eye' do
   pkg 'Private Eye.pkg'
   # We intentionally unload the kext twice as a workaround
   # See https://github.com/caskroom/homebrew-cask/pull/1802#issuecomment-34171151
+
   uninstall :early_script => {
               :executable => '/sbin/kextunload',
               :args => ['-b', 'com.radiosilenceapp.nke.PrivateEye'],
