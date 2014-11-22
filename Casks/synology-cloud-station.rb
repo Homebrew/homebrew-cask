@@ -7,6 +7,7 @@ cask :v1 => 'synology-cloud-station' do
   license :unknown
 
   pkg "synology-cloud-station-#{version}.pkg"
+
   uninstall :pkgutil => 'com.synology.CloudStation',
             :launchctl => 'com.synology.Synology Cloud Station'
 end
