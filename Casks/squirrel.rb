@@ -7,6 +7,7 @@ cask :v1 => 'squirrel' do
   license :oss
 
   pkg 'Squirrel.pkg'
+
   uninstall :pkgutil => 'com.googlecode.rimeime.Squirrel.pkg',
             :delete => '/Library/Input Methods/Squirrel.app'
 end
