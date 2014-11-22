@@ -7,5 +7,6 @@ cask :v1 => 'caffeine' do
   license :gratis
 
   app 'Caffeine.app'
+
   zap :delete => '~/Library/Preferences/com.lightheadsw.Caffeine.plist'
 end
