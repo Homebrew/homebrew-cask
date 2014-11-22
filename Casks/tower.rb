@@ -8,6 +8,7 @@ cask :v1 => 'tower' do
   license :unknown
 
   app 'Tower.app'
+
   zap :delete => [
                   '~/Library/Application Support/com.fournova.Tower2',
                   '~/Library/Preferences/com.fournova.Tower2.plist',
