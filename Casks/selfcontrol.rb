@@ -9,5 +9,6 @@ cask :v1 => 'selfcontrol' do
   license :unknown
 
   app 'SelfControl.app'
+
   zap :delete => '~/Library/Preferences/org.eyebeam.SelfControl.plist'
 end
