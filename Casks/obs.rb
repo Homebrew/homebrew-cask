@@ -7,5 +7,6 @@ cask :v1 => 'obs' do
   license :oss
 
   pkg "OBS Studio.mpkg"
+
   uninstall :pkgutil => 'org.obsproject.pkg.obs-studio'
 end
