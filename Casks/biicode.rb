@@ -8,5 +8,6 @@ cask :v1 => 'biicode' do
   license :closed
 
   pkg "bii-macos-64_#{version.gsub('.', '_')}.pkg"
+
   uninstall :pkgutil => 'biicode'
 end
