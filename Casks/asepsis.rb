@@ -7,5 +7,6 @@ cask :v1 => 'asepsis' do
   license :bsd
 
   pkg 'Asepsis.pkg'
+
   uninstall :pkgutil => 'com.binaryage.pkg.asepsis'
 end
