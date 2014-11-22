@@ -7,6 +7,7 @@ cask :v1 => 'ksdiff' do
   license :unknown
 
   pkg 'Install ksdiff.pkg'
+
   uninstall :pkgutil => 'com.blackpixel.kaleidoscope.ksdiff.installer.pkg'
   # todo: conflicts_with_cask kaleidoscope
   caveats <<-EOS.undent
