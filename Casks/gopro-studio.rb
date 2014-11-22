@@ -7,5 +7,6 @@ cask :v1 => 'gopro-studio' do
   license :commercial
 
   pkg 'GoPro Studio.pkg'
+
   uninstall :pkgutil => 'com.GoPro.pkg.GoProStudio'
 end
