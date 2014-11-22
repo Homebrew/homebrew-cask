@@ -7,6 +7,7 @@ cask :v1 => 'basictex' do
   license :oss
 
   pkg "basictex#{version}.pkg"
+
   uninstall :pkgutil => 'org.tug.mactex.basictex2014'
   caveats do
     path_environment_variable '/usr/texbin'
