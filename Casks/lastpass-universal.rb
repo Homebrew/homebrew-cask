@@ -7,5 +7,6 @@ cask :v1 => 'lastpass-universal' do
   license :unknown
 
   pkg 'lpmacosx.pkg'
+
   uninstall :pkgutil => 'com.lastpass.lpmacosx'
 end
