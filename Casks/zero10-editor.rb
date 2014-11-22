@@ -7,5 +7,6 @@ cask :v1 => 'zero10-editor' do
   license :unknown
 
   pkg '010 Editor.pkg'
+
   uninstall :pkgutil => 'com.SweetScape.010Editor.pkg'
 end
