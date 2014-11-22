@@ -7,5 +7,6 @@ cask :v1 => 'awareness' do
   license :gratis
 
   app 'Awareness.app'
+
   zap :delete => '~/Library/Preferences/com.futureproof.awareness.plist'
 end
