@@ -8,6 +8,7 @@ cask :v1 => 'coda' do
   license :unknown
 
   app 'Coda 2.app'
+
   zap :delete => [
                   '~/Library/Application Support/Coda 2',
                   '~/Library/Preferences/com.panic.Coda2.plist',
