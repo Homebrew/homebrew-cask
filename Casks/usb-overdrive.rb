@@ -7,5 +7,6 @@ cask :v1 => 'usb-overdrive' do
   license :unknown
 
   pkg 'Install USB Overdrive.pkg'
+
   uninstall :pkgutil => 'com.usboverdrive.installer'
 end
