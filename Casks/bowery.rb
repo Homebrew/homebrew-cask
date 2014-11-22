@@ -7,5 +7,6 @@ cask :v1 => 'bowery' do
   license :unknown
 
   pkg 'bowery.pkg'
+
   uninstall :pkgutil => 'com.bowery.desktop'
 end
