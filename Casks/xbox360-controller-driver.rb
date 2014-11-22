@@ -7,5 +7,6 @@ cask :v1 => 'xbox360-controller-driver' do
   license :unknown
 
   pkg 'Install360Controller.pkg'
+
   uninstall :pkgutil => 'com.mice.pkg.Xbox360controller'
 end
