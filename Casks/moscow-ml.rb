@@ -7,5 +7,6 @@ cask :v1 => 'moscow-ml' do
   license :gpl
 
   pkg "mosml-#{version}.pkg"
+
   uninstall :pkgutil => 'org.mosml'
 end
