@@ -8,6 +8,7 @@ cask :v1 => 'sizeup' do
   license :unknown
 
   app 'SizeUp.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.irradiatedsoftware.SizeUp.plist',
                   '~/Library/Application Support/SizeUp',
