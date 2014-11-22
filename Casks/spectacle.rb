@@ -15,5 +15,6 @@ cask :v1 => 'spectacle' do
   license :mit
 
   app 'Spectacle.app'
+
   zap :delete => '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist'
 end
