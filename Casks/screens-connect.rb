@@ -7,6 +7,7 @@ cask :v1 => 'screens-connect' do
   license :unknown
 
   pkg 'Screens Connect.pkg'
+
   uninstall :script => 'Uninstall Screens Connect.app/Contents/Resources/sc-uninstaller.tool',
             :pkgutil => 'com.edovia.pkg.screens.connect.*'
 
