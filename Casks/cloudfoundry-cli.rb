@@ -7,6 +7,7 @@ cask :v1 => 'cloudfoundry-cli' do
   license :oss
 
   pkg 'installer-osx-amd64.pkg'
+
   uninstall :pkgutil => 'com.pivotal.cloudfoundry.pkg'
   caveats do
     files_in_usr_local
