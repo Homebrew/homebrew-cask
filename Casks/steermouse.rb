@@ -7,6 +7,7 @@ cask :v1 => 'steermouse' do
   license :unknown
 
   pkg 'SteerMouse Installer.app/Contents/Resources/SteerMouse.pkg'
+
   uninstall :pkgutil => 'jp.plentycom.SteerMouse.pkg.*',
             :kext    => 'com.cyberic.SmoothMouse'
 end
