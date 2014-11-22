@@ -7,6 +7,7 @@ cask :v1 => 'ntfs-free' do
   license :oss
 
   pkg "NTFS-free-#{version}.pkg"
+
   uninstall :delete => [
                         '/System/Library/Extensions/ntfs-free.kext',
                         '/sbin/mount_ntfs-free',
