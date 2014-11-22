@@ -7,6 +7,7 @@ cask :v1 => 'zooom' do
   license :unknown
 
   pkg 'Zooom2.pkg'
+
   uninstall :pkgutil => 'com.coderage.pkg.Zooom2'
 
   caveats do
