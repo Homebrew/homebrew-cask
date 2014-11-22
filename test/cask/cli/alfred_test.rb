@@ -11,6 +11,8 @@ DEFAULT_WRITE_SCOPE = %Q{(#{scope.join(',')})}
 scope               = (Cask::CLI::Alfred::DEFAULT_SCOPES + [Cask.caskroom.to_s]).map { |s| %Q{'#{s}'} }
 ALTERED_WRITE_SCOPE = %Q{(#{scope.join(',')})}
 
+DEFAULT_SYNCDIR     = '~/Library/Application Support/Alfred 2'
+
 def fake_alfred_read_primary_preference(key, response)
   Cask::FakeSystemCommand.stubs_command(['/usr/bin/defaults', 'read', 'com.runningwithcrayons.Alfred-Preferences', key], response)
 end
@@ -20,14 +22,14 @@ def fake_alfred_write_primary_preference(key, value)
 end
 
 def fake_alfred_read_local_preference(key, response)
-  local_files = Pathname.glob(Pathname.new(Cask::CLI::Alfred::LOCALPREFS_SCOPES_FILEGLOB).expand_path)
+  local_files = Pathname.glob(Pathname.new(DEFAULT_SYNCDIR + Cask::CLI::Alfred::LOCALPREFS_SUBPATH).expand_path)
   local_files.each do |file|
     Cask::FakeSystemCommand.stubs_command(['/usr/bin/defaults', 'read', file, key], response)
   end
 end
 
 def fake_alfred_write_local_preference(key, value)
-  local_files = Pathname.glob(Pathname.new(Cask::CLI::Alfred::LOCALPREFS_SCOPES_FILEGLOB).expand_path)
+  local_files = Pathname.glob(Pathname.new(DEFAULT_SYNCDIR + Cask::CLI::Alfred::LOCALPREFS_SUBPATH).expand_path)
   local_files.each do |file|
     Cask::FakeSystemCommand.stubs_command(['/usr/bin/defaults', 'write', file, key, value])
   end
