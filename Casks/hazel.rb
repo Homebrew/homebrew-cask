@@ -7,6 +7,7 @@ cask :v1 => 'hazel' do
   license :unknown
 
   prefpane 'Hazel.prefPane'
+
   zap :delete => [
                   '~/Library/Application Support/Hazel',
                   '~/Library/Preferences/com.noodlesoft.Hazel.plist',
