@@ -7,6 +7,7 @@ cask :v1 => 'brytonbridge' do
   license :unknown
 
   pkg 'BrytonBridge2.pkg'
+
   uninstall :pkgutil => 'com.brytonsport.pkg.BrytonBridge2',
             :quit    => 'com.yourcompany.BrytonBridge',
             :delete  => '/Applications/BrytonBridge2'
