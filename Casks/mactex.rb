@@ -7,6 +7,7 @@ cask :v1 => 'mactex' do
   license :unknown
 
   pkg "mactex-#{version}.pkg"
+
   uninstall :pkgutil => [
                          'org.tug.mactex.ghostscript9.10',
                          'org.tug.mactex.gui2014',
