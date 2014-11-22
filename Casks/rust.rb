@@ -7,5 +7,6 @@ cask :v1 => 'rust' do
   license :unknown
 
   pkg 'rust-nightly-x86_64-apple-darwin.pkg'
+
   uninstall :pkgutil => 'org.rust-lang.rust'
 end
