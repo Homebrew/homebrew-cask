@@ -7,5 +7,6 @@ cask :v1 => 'flip4mac' do
   license :unknown
 
   pkg 'Flip4Mac.pkg'
+
   uninstall :pkgutil => 'net.telestream.Flip4Mac'
 end
