@@ -7,5 +7,6 @@ cask :v1 => 'callnote' do
   license :unknown
 
   pkg "callnote-premium-install-#{version}.pkg"
+
   uninstall :pkgutil => 'callnote-pro'
 end
