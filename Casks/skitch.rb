@@ -7,6 +7,7 @@ cask :v1 => 'skitch' do
   license :unknown
 
   app 'Skitch.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.plasq.skitch.plist',
                   '~/Library/Preferences/com.plasq.skitch.history',
