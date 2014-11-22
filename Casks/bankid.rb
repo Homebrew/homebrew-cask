@@ -12,5 +12,6 @@ cask :v1 => 'bankid' do
   end
 
   pkg 'bankid-latest.pkg'
+
   uninstall :pkgutil => 'com.bankid.bankid.BankID.pkg'
 end
