@@ -7,5 +7,6 @@ cask :v1 => 'magican' do
   license :unknown
 
   pkg 'Magican.pkg'
+
   uninstall :pkgutil => 'com.magican.*'
 end
