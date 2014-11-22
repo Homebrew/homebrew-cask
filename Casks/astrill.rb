@@ -7,5 +7,6 @@ cask :v1 => 'astrill' do
   license :unknown
 
   pkg 'Astrill Setup.mpkg'
+
   uninstall :pkgutil => 'com.Astrill.app'
 end
