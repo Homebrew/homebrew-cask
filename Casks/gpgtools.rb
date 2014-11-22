@@ -15,6 +15,7 @@ cask :v1 => 'gpgtools' do
            '/usr/local/MacGPG2/libexec/fixGpgHome', Etc.getpwuid(Process.euid).name,
                                                     ENV['GNUPGHOME'] ? ENV['GNUPGHOME'] : Pathname.new(File.expand_path('~')).join('.gnupg')
   end
+
   uninstall :pkgutil => 'org.gpgtools.*',
             :quit => [
                       'com.apple.mail',
