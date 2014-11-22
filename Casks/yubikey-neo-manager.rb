@@ -7,5 +7,6 @@ cask :v1 => 'yubikey-neo-manager' do
   license :bsd
 
   pkg "yubikey-neo-manager-#{version}-mac.pkg"
+
   uninstall :pkgutil => 'com.yubico.pkg.YubiKeyNEOManager'
 end
