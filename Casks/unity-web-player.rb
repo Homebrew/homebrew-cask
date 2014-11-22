@@ -7,6 +7,7 @@ cask :v1 => 'unity-web-player' do
   license :unknown
 
   pkg 'Install Unity Web Player.pkg'
+
   uninstall :pkgutil => 'com.unity.UnityWebPlayer',
             :delete  => '/Library/Internet Plug-Ins/Unity Web Player.plugin'
 end
