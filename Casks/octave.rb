@@ -7,6 +7,7 @@ cask :v1 => 'octave' do
   license :oss
 
   pkg "Octave-#{version}.mpkg"
+
   uninstall :pkgutil => [
                          'org.macports.octave-next',
                          'org.octave.cli-app',
