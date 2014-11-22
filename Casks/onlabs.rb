@@ -1,6 +1,6 @@
 cask :v1 => 'onlabs' do
-  version '0.1.6'
-  sha256 '978f8007880dc8f9bff34741785b7b0f8e0d7001fa995a7f2b1d887332142e00'
+  version '0.1.9'
+  sha256 '4fa575158f80d60f40826fab0b77217cc343ca0fc4af5e7840c606a4f4bd97c5'
 
   url "https://github.com/lalyos/onlabs/releases/download/v#{version}/onlabs_darwin_amd64"
   homepage 'https://github.com/lalyos/onlabs'
