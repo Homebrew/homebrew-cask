@@ -7,5 +7,6 @@ cask :v1 => 'munki' do
   license :oss
 
   pkg "munkitools-#{version}.2253.pkg"
+
   uninstall :pkgutil => 'com.googlecode.munki.*'
 end
