@@ -8,6 +8,7 @@ cask :v1 => 'gdal-framework' do
 
   pkg 'GDAL Complete.pkg'
   pkg 'Numpy.pkg'
+
   uninstall :pkgutil  => [
                             'org.maptools.proj-framework-snow',
                             'org.sqlite.sqlite3b-framework-snow',
