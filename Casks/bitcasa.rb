@@ -7,5 +7,6 @@ cask :v1 => 'bitcasa' do
   license :gratis
 
   pkg 'InstallBitcasa.pkg'
+
   uninstall :pkgutil => 'com.bitcasa.AutoLaunch|com.bitcasa.Bitcasa'
 end
