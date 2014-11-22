@@ -32,6 +32,16 @@ describe Cask::DSL do
     end
   end
 
+  describe "header line" do
+    it "requires a valid minimum DSL version in the header" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-header-version')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include 'Bad header line'
+      err.message.must_include 'is less than required minimum version'
+    end
+  end
+
   describe "sha256 stanza" do
     it "lets you set checksum via sha256" do
       ChecksumCask = Class.new(Cask)

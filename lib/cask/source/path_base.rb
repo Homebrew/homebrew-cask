@@ -45,12 +45,17 @@ class Cask::Source::PathBase
       # munge text
       cask_string.sub!(%r{\A(\s*\#[^\n]*\n)+}, '');
       if %r{\A\s*cask\s+:v([\d_]+)(test)?\s+=>\s+([\'\"])(\S+?)\3(?:\s*,\s*|\s+)do\s*\n}.match(cask_string)
-        dsl_version = $1
+        dsl_version_string = $1
         test_cask = ! $2.nil?
         header_name = $4
+        dsl_version = Gem::Version.new(dsl_version_string.gsub('_','.'))
         superclass_name = test_cask ? 'TestCask' : 'Cask'
         cask_string.sub!(%r{\A[^\n]+\n}, "class #{cask_class_name} < #{superclass_name}\n")
-        # todo enforce valid DSL version
+        # todo the minimum DSL version should be defined globally elsewhere
+        minimum_dsl_version = Gem::Version.new('1.0')
+        unless dsl_version >= minimum_dsl_version
+          raise CaskInvalidError.new(cask_name, "Bad header line: 'v#{dsl_version_string}' is less than required minimum version '#{minimum_dsl_version}'")
+        end
         if header_name != cask_name
           raise CaskInvalidError.new(cask_name, "Bad header line: '#{header_name}' does not match file name")
         end
