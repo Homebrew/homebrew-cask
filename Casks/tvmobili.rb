@@ -7,6 +7,7 @@ cask :v1 => 'tvmobili' do
   license :unknown
 
   pkg 'tvmobili-mountainlion-universal.2.1.4481.pkg'
+
   uninstall :pkgutil   => 'com.tvmobili.tvmobilisvcd',
             :launchctl => [
                            'com.tvmobili.artwork',
