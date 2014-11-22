@@ -7,6 +7,7 @@ cask :v1 => 'chrome-remote-desktop-host' do
   license :unknown
 
   pkg 'Chrome Remote Desktop Host.pkg'
+
   uninstall :script => {
     :executable => '/Applications/Chrome Remote Desktop Host Uninstaller.app/Contents/MacOS/remoting_host_uninstaller',
     :args => %w[--no-ui]
