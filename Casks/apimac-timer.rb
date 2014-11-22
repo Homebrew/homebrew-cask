@@ -7,6 +7,7 @@ cask :v1 => 'apimac-timer' do
   license :gratis
 
   app 'Apimac Timer.app'
+
   zap :delete => [
                   '~/Library/Preferences/Apimac',
                   '~/Library/Application Support/Apimac',
