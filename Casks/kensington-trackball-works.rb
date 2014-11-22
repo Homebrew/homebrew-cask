@@ -7,6 +7,7 @@ cask :v1 => 'kensington-trackball-works' do
   license :unknown
 
   pkg 'Kensington TrackballWorks.pkg'
+
   uninstall :pkgutil   => 'com.kensington.trackballworks.driver.installer',
             :kext      => 'com.kensington.trackballworks.driver',
             :launchctl => [
