@@ -7,6 +7,7 @@ cask :v1 => 'dnscrypt' do
   license :oss
 
   pkg 'DNSCrypt.mpkg'
+
   uninstall :quit      => 'com.github.dnscrypt-osxclient.DNSCrypt-Menubar',
             :pkgutil   => 'com.github.dnscrypt-osxclient.dnscryptClient.*',
             :launchctl => [
