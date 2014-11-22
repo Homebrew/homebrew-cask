@@ -7,5 +7,6 @@ cask :v1 => 'wavtap' do
   license :oss
 
   pkg "WavTap #{version}.pkg"
+
   uninstall :pkgutil => 'com.wavtap.*', :kext => 'com.wavtap.driver.WavTap'
 end
