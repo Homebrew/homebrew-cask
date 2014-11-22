@@ -7,6 +7,7 @@ cask :v1 => 'omnifocus' do
   license :commercial
 
   app 'OmniFocus.app'
+
   zap :delete => [
                   '~/Library/Application Support/OmniFocus/Plug-Ins',
                   '~/Library/Application Support/OmniFocus/Themes',
