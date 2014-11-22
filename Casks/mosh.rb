@@ -7,5 +7,6 @@ cask :v1 => 'mosh' do
   license :unknown
 
   pkg "mosh-#{version}-3.pkg"
+
   uninstall :pkgutil => 'edu.mit.mosh.mosh.pkg'
 end
