@@ -7,5 +7,6 @@ cask :v1 => 'kinsky' do
   license :bsd
 
   pkg "Kinsky_#{version}_osx.pkg"
+
   uninstall :pkgutil => 'uk.co.linn.Kinsky'
 end
