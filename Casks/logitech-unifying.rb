@@ -7,5 +7,6 @@ cask :v1 => 'logitech-unifying' do
   license :unknown
 
   pkg 'Logitech Unifying Software.mpkg'
+
   uninstall :pkgutil => 'com.Logitech.*pkg'
 end
