@@ -7,5 +7,6 @@ cask :v1 => 'amazon-zocalo' do
   license :unknown
 
   pkg 'Amazon Zocalo.pkg'
+
   uninstall :pkgutil => 'com.amazon.aws.AmazonZocalo'
 end
