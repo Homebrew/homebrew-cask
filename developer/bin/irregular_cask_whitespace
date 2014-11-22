@@ -51,13 +51,13 @@ _irregular_cask_whitespace () {
     cd "$directory" || die "Could not cd to '$directory'"
 
     printf "# No trailing newline at EOF\n"
-    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{[^\n]\z}s'   -- ./*.rb
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{[^\n]\z}s'      -- ./*.rb
 
     printf "\n# Extra trailing newline at EOF\n"
-    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{\n{2}\z}s'   -- ./*.rb
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{\n{2}\z}s'      -- ./*.rb
 
     printf "\n# Final 'end' indented\n"
-    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{ end\s+\z}s' -- ./*.rb
+    perl -C32 -0777 -ne 'print "    $ARGV\n" if m{ end\s+\z}s'    -- ./*.rb
 
     printf "\n# Extra newline before final end\n"
     perl -C32 -0777 -ne 'print "    $ARGV\n" if m{\n\nend\s+\z}s' -- ./*.rb
