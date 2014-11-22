@@ -7,6 +7,7 @@ cask :v1 => 'indigo' do
   license :unknown
 
   pkg 'Indigo Installer.pkg'
+
   uninstall :kext => 'com.perceptiveautomation.indigo_overrides.kext',
     :pkgutil => 'com.perceptiveautomation.pkg.*'
 end
