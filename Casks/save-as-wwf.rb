@@ -7,5 +7,6 @@ cask :v1 => 'save-as-wwf' do
   license :closed
 
   pkg 'SAVE_AS_WWF_1.0.pkg'
+
   uninstall :pkgutil => 'de.wwf.saveAsWwf.SAVEASWWF.pkg'
 end
