@@ -1,6 +1,6 @@
 cask :v1 => 'lighttable' do
-  version '0.7.1'
-  sha256 '6412ad9f4036379c42011cf7f97eb07d87471a1ece8db16c8dc26054539146e7'
+  version '0.7.2'
+  sha256 '236bb18d6715ce3095c975871b7c7f495f306a086dce8a50ff35f267a25c5163'
 
   url "https://d35ac8ww5dfjyg.cloudfront.net/playground/bins/#{version}/LightTableMac.zip"
   homepage 'http://www.lighttable.com/'
