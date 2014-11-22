@@ -7,6 +7,7 @@ cask :v1 => 'sabnzbd' do
   license :oss
 
   app 'SABnzbd.app'
+
   zap :delete => [
                   '~/Library/Application Support/SABnzbd/sabnzbd.ini',
                   '~/Library/Application Support/SABnzbd/admin/rss_data.sab',
