@@ -7,5 +7,6 @@ cask :v1 => 'qvod-player' do
   license :unknown
 
   pkg '双击安装快播.pkg'
+
   uninstall :pkgutil => 'com.kuaibo.pkg.QvodPlayer'
 end
