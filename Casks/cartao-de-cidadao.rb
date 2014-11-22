@@ -7,5 +7,6 @@ cask :v1 => 'cartao-de-cidadao' do
   license :unknown
 
   pkg 'Cartao_de_Cidadao.pkg'
+
   uninstall :script => '/usr/local/bin/pteid_uninstall.sh'
 end
