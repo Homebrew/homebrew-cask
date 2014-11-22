@@ -7,5 +7,6 @@ cask :v1 => 'yubikey-personalization-gui' do
   license :unknown
 
   pkg "yubikey-personalization-gui-#{version}.pkg"
+
   uninstall :pkgutil => 'com.yubico.YKPersonalization'
 end
