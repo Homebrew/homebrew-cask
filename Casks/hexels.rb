@@ -7,5 +7,6 @@ cask :v1 => 'hexels' do
   license :unknown
 
   app 'Hexels.app'
+
   zap :delete => '~/Library/Preferences/com.hex-ray.hexels.plist'
 end
