@@ -12,5 +12,6 @@ cask :v1 => 'skim' do
   binary 'Skim.app/Contents/SharedSupport/displayline'
   binary 'Skim.app/Contents/SharedSupport/skimnotes'
   binary 'Skim.app/Contents/SharedSupport/skimpdf'
+
   zap :delete => '~/Library/Preferences/net.sourceforge.skim-app.skim.plist'
 end
