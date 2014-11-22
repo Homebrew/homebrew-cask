@@ -7,6 +7,7 @@ cask :v1 => 'klayout' do
   license :unknown
 
   pkg "klayout.#{version}.pkg"
+
   uninstall :pkgutil => 'klayout.de',
             :quit => 'klayout.de'
 end
