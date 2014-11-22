@@ -7,5 +7,6 @@ cask :v1 => 'odrive' do
   license :unknown
 
   pkg "odrive.#{version}.pkg"
+
   uninstall :pkgutil => 'com.oxygencloud.odrive.*'
 end
