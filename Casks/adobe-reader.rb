@@ -7,6 +7,7 @@ cask :v1 => 'adobe-reader' do
   license :unknown
 
   pkg 'Adobe Reader XI Installer.pkg'
+
   uninstall :pkgutil => "com.adobe.acrobat.reader.#{version.gsub('.', '')}.*",
             :delete => '/Applications/Adobe Reader.app'
   zap       :delete => [
