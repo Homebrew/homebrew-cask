@@ -7,5 +7,6 @@ cask :v1 => 'graphviz' do
   license :unknown
 
   pkg "graphviz-#{version}.pkg"
+
   uninstall :pkgutil => 'com.att.graphviz.*'
 end
