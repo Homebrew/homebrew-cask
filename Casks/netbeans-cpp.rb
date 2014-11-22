@@ -7,5 +7,6 @@ cask :v1 => 'netbeans-cpp' do
   license :unknown
 
   pkg "NetBeans #{version}.mpkg"
+
   uninstall :delete => '/Applications/NetBeans'
 end
