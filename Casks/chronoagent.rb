@@ -7,5 +7,6 @@ cask :v1 => 'chronoagent' do
   license :unknown
 
   pkg 'Install.pkg'
+
   uninstall :pkgutil => 'com.econtechnologies.pkg.ChronoAgent'
 end
