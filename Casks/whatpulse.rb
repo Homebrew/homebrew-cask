@@ -7,6 +7,7 @@ cask :v1 => 'whatpulse' do
   license :unknown
 
   pkg "WhatPulse #{version}.mpkg"
+
   uninstall :pkgutil => 'com.lostdomain.whatpulse',
             :quit   => 'com.whatpulse.mac'
 end
