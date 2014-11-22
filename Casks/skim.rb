@@ -1,6 +1,6 @@
 cask :v1 => 'skim' do
-  version '1.4.9'
-  sha256 'b8964263e06b37b81443659d4c96385866d5b0af6e65ce393095b46e95591546'
+  version '1.4.10'
+  sha256 '344677ce81e565dbc4b9f6d5b001eba9e5e1dadb083d75bb6f5301100149f6bc'
 
   url "https://downloads.sourceforge.net/project/skim-app/Skim/Skim-#{version}/Skim-#{version}.dmg"
   appcast 'http://skim-app.sourceforge.net/skim.xml',
