@@ -7,6 +7,7 @@ cask :v1 => 'logitech-control-center' do
   license :unknown
 
   pkg 'LCC Installer.app/Contents/Resources/Logitech Control Center.mpkg'
+
   uninstall :script => 'LCC Installer.app/Contents/Resources/LCC Uninstaller Tool',
             :pkgutil => [
                         'com.Logitech.Control Center.pkg',
