@@ -7,5 +7,6 @@ cask :v1 => 'sshfs' do
   license :oss
 
   pkg "sshfs-#{version}.pkg"
+
   uninstall :pkgutil => 'com.github.osxfuse.pkg.SSHFS'
 end

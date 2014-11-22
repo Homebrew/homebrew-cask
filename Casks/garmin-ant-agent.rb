@@ -7,6 +7,7 @@ cask :v1 => 'garmin-ant-agent' do
   license :unknown
 
   pkg 'Install Garmin ANT Agent.pkg'
+
   uninstall :quit => 'com.garmin.AntAgent',
             :pkgutil => 'com.garmin.garminANTAgent.pkg'
 end

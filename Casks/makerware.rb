@@ -7,5 +7,6 @@ cask :v1 => 'makerware' do
   license :unknown
 
   pkg "MakerWare Bundle of Awesome #{version}.pkg"
+
   uninstall :pkgutil => 'com.makerbot.*'
 end

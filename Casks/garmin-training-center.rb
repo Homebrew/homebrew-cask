@@ -7,5 +7,6 @@ cask :v1 => 'garmin-training-center' do
   license :unknown
 
   pkg 'Garmin Training Center.pkg'
+
   uninstall :pkgutil => 'com.garmin.garminTrainingCenter.*pkg'
 end

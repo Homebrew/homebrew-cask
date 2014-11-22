@@ -7,5 +7,6 @@ cask :v1 => 'node' do
   license :unknown
 
   pkg  "node-v#{version}.pkg"
+
   uninstall :pkgutil => 'org.nodejs'
 end

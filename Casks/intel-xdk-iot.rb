@@ -7,5 +7,6 @@ cask :v1 => 'intel-xdk-iot' do
   license :unknown
 
   pkg "xdk_full_#{version}.pkg"
+
   uninstall :pkgutil => 'com.intel.pkg.xdk_new'
 end

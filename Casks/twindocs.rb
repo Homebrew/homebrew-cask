@@ -7,5 +7,6 @@ cask :v1 => 'twindocs' do
   license :unknown
 
   pkg 'Twindocs tools.pkg'
+
   uninstall :pkgutil => 'com.twindocs.ambassador'
 end

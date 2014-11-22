@@ -7,5 +7,6 @@ cask :v1 => 'microsoft-lync-plugin' do
   license :unknown
 
   pkg 'LWAPluginInstaller.pkg'
+
   uninstall :pkgutil => 'Lync.Client.LwaPluginInstaller.*.LwaPlugin.pkg'
 end

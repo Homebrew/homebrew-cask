@@ -7,5 +7,6 @@ cask :v1 => 'glimmerblocker' do
   license :unknown
 
   pkg 'GlimmerBlocker.pkg'
+
   uninstall :pkgutil => 'org.glimmerblocker.pkg'
 end

@@ -7,6 +7,7 @@ cask :v1 => 'noejectdelay' do
   license :unknown
 
   pkg 'NoEjectDelay.pkg'
+
   uninstall :kext => 'org.pqrs.driver.NoEjectDelay',
             :pkgutil => 'org.pqrs.driver.NoEjectDelay'
 end

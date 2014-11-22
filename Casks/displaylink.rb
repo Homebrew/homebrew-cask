@@ -13,6 +13,7 @@ cask :v1 => 'displaylink' do
   license :unknown
 
   pkg 'DisplayLink Software Installer.pkg'
+
   uninstall :pkgutil => ['com.displaylink.displaylinkdriversigned',
                          'com.displaylink.displaylinkdriverunsigned']
             # :kext => ['com.displaylink.driver.DisplayLinkDriver',

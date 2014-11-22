@@ -8,6 +8,7 @@ cask :v1 => 'abgx360' do
   license :oss
 
   pkg "abgx360-#{version}.pkg"
+
   uninstall :quit => 'net.abgx360.abgx360gui',
             :pkgutil => [
                          'net.abgx360.abgx360.pkg',

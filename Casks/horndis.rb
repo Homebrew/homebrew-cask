@@ -9,6 +9,7 @@ cask :v1 => 'horndis' do
   license :gpl
 
   pkg "HoRNDIS-rel#{version}.pkg"
+
   uninstall :kext => 'com.joshuawise.kexts.HoRNDIS',
             :pkgutil => 'com.joshuawise.*'
 end

@@ -7,5 +7,6 @@ cask :v1 => 'petite-chez-scheme' do
   license :unknown
 
   pkg "pcsv#{version}-ta6osx-1.pkg"
+
   uninstall :pkgutil => 'com.scheme.chezscheme'
 end

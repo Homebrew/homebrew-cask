@@ -7,6 +7,7 @@ cask :v1 => 'disconnect' do
   homepage 'https://disconnect.me'
 
   pkg 'Disconnect+Desktop.pkg'
+
   uninstall :pkgutil => [
                          'com.disconnect.pkg.DisconnectDependencies',
                          'com.disconnect.pkg.DisconnectDesktop',

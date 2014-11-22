@@ -7,6 +7,7 @@ cask :v1 => 'opennx' do
   license :oss
 
   pkg 'OpenNX.pkg'
+
   uninstall :script => { :executable => '/Library/OpenNX/bin/macuninstall', :args => ['--batch'] },
             :pkgutil => 'org.opennx.OpenNX'
 end

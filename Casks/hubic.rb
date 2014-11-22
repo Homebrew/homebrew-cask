@@ -7,5 +7,6 @@ cask :v1 => 'hubic' do
   license :unknown
 
   pkg "hubiC-OSX-#{version}.224-osx.pkg"
+
   uninstall :pkgutil => 'com.ovh.hubicmac'
 end

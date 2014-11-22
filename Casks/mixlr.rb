@@ -7,5 +7,6 @@ cask :v1 => 'mixlr' do
   license :unknown
 
   pkg 'Mixlr_beta_latest.pkg'
+
   uninstall :pkgutil => 'com.mixlr.Mixlr'
 end

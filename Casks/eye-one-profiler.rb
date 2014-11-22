@@ -7,6 +7,7 @@ cask :v1 => 'eye-one-profiler' do
   license :unknown
 
   pkg 'i1Profiler.pkg'
+
   uninstall :pkgutil => 'com.xrite.i1profiler.*'
 
   caveats do

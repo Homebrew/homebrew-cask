@@ -8,5 +8,6 @@ cask :v1 => 'iphone-configuration-utility' do
 
   pkg 'iPhoneConfigurationUtility.pkg'
   # note - do not uninstall via :pkgutil, as system files would be deleted
+
   uninstall :delete => '/Applications/Utilities/iPhone Configuration Utility.app'
 end

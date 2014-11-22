@@ -7,6 +7,7 @@ cask :v1 => 'logitech-gaming-software' do
   license :unknown
 
   pkg 'LogiGamingSetup_#{version}.mpkg'
+
   uninstall :script => '/Applications/Logitech/Uninstaller.app/Contents/Resources/UninstallScript.sh',
             :pkgutil => [
                         'com.logitech.gaming',

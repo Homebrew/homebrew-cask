@@ -7,5 +7,6 @@ cask :v1 => 'xtrafinder' do
   license :unknown
 
   pkg 'XtraFinder.pkg'
+
   uninstall :pkgutil => 'com.trankynam.xtrafinder.*'
 end

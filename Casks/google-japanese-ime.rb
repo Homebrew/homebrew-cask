@@ -7,6 +7,7 @@ cask :v1 => 'google-japanese-ime' do
   license :unknown
 
   pkg 'GoogleJapaneseInput.pkg'
+
   uninstall :pkgutil => 'com.google.pkg.GoogleJapaneseInput',
             :launchctl => [
                            'com.google.inputmethod.Japanese.Converter',

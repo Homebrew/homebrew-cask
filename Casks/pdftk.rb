@@ -7,6 +7,7 @@ cask :v1 => 'pdftk' do
   license :unknown
 
   pkg "pdftk_server-#{version}-mac_osx-10.6-setup.pkg"
+
   uninstall :script => '/opt/pdflabs/pdftk/bin/pdftk_uninstall.sh',
             :pkgutil => 'com.pdflabs.pdftkThePdfToolkit.pdftk.pkg'
 end

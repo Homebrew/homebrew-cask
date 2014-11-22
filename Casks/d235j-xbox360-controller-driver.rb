@@ -7,5 +7,6 @@ cask :v1 => 'd235j-xbox360-controller-driver' do
   license :gpl
 
   pkg 'Install360Controller.pkg'
+
   uninstall :pkgutil => 'com.mice.pkg.Xbox360controller'
 end

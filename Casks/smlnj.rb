@@ -8,5 +8,6 @@ cask :v1 => 'smlnj' do
   tags :name => 'Standard ML New Jersey'
 
   pkg "smlnj-x86-#{version}.pkg"
+
   uninstall :pkgutil => 'org.smlnj.x86.pkg'
 end

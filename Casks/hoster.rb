@@ -9,5 +9,6 @@ cask :v1 => 'hoster' do
   license :unknown
 
   pkg "Hoster#{version}08.mpkg", :allow_untrusted => true
+
   uninstall :pkgutil => 'com.redwinder.hoster.hoster.pkg'
 end

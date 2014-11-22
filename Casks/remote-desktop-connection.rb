@@ -7,5 +7,6 @@ cask :v1 => 'remote-desktop-connection' do
   license :unknown
 
   pkg 'RDC Installer.mpkg'
+
   uninstall :pkgutil => 'com.microsoft.rdc.all.*'
 end

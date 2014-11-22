@@ -7,5 +7,6 @@ cask :v1 => 'nmap' do
   license :unknown
 
   pkg "nmap-#{version}.mpkg"
+
   uninstall :pkgutil => 'org.insecure.nmap*.pkg'
 end

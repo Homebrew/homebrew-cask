@@ -7,6 +7,7 @@ cask :v1 => 'owncloud' do
   license :unknown
 
   pkg "ownCloud-#{version}.pkg"
+
   uninstall :pkgutil => [
                          'com.ownCloud.client',
                          'com.owncCloud.finderPlugin',

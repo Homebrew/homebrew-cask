@@ -11,6 +11,7 @@ cask :v1 => 'mamp' do
     system '/usr/bin/sudo', '-E', '--',
            '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", '/Applications/MAMP', '/Applications/MAMP PRO'
   end
+
   uninstall :pkgutil => 'de.appsolute.installer.(mamp|mampacticon|mampendinstall|mamppro).pkg',
             :delete  => [
                          '/Applications/MAMP',

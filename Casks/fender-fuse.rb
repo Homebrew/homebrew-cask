@@ -7,6 +7,7 @@ cask :v1 => 'fender-fuse' do
   license :unknown
 
   pkg 'Fender FUSE Installer.app/Contents/Resources/Fender FUSE.pkg'
+
   uninstall :pkgutil => 'com.Fender.pkg.FenderFUSE',
             :delete  => '/Applications/Fender FUSE.app'
 end

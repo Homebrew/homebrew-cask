@@ -7,6 +7,7 @@ cask :v1 => 'hall' do
   license :unknown
 
   pkg 'Hall.pkg'
+
   uninstall :pkgutil => 'com.companyline.hall.desktop',
             :delete  => '/Applications/Hall.app'
 end

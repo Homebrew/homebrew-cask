@@ -7,6 +7,7 @@ cask :v1 => 'citrix-receiver' do
   license :unknown
 
   pkg 'Install Citrix Receiver.pkg'
+
   uninstall :launchctl => [
                            'com.citrix.AuthManager_Mac',
                            'com.citrix.ReceiverHelper',

@@ -8,5 +8,6 @@ cask :v1 => 'fender-amp-drivers' do
   license :unknown
 
   pkg 'Fender FUSE Installer.app/Contents/Resources/FenderDrivers.pkg'
+
   uninstall :pkgutil => 'com.Fender.pkg.FenderAmpDrivers'
 end

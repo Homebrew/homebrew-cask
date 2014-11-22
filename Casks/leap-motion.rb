@@ -7,5 +7,6 @@ cask :v1 => 'leap-motion' do
   license :unknown
 
   pkg 'Leap Motion.pkg'
+
   uninstall :script => '/Applications/Leap Motion.app/Contents/MacOS/uninstall'
 end

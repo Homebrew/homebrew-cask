@@ -7,6 +7,7 @@ cask :v1 => 'td-agent' do
   license :unknown
 
   pkg 'td-agent2.pkg'
+
   uninstall :pkgutil => 'test.treasuredatainc.pkg.tdagent2',
             :launchctl => 'td-agent'
 end

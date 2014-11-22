@@ -7,6 +7,7 @@ cask :v1 => 'fitbit-connect' do
   license :unknown
 
   pkg 'Install Fitbit Connect.pkg'
+
   uninstall :script => { :executable => 'Uninstall Fitbit Connect.app/Contents/Resources/uninstall.sh' },
             :pkgutil => 'com.fitbit.pkg.GalileoInstaller'
 end

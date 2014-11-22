@@ -7,5 +7,6 @@ cask :v1 => 'adobe-digital-editions' do
   license :unknown
 
   pkg "Digital Editions #{version} Installer.pkg"
+
   uninstall :pkgutil => 'com.adobe.adobedigitaleditions.app'
 end

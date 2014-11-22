@@ -7,5 +7,6 @@ cask :v1 => 'eye-fi' do
   license :unknown
 
   pkg 'Eye-Fi.mpkg'
+
   uninstall :pkgutil => 'fi.eye.*'
 end

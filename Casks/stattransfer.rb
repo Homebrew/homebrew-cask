@@ -7,5 +7,6 @@ cask :v1 => 'stattransfer' do
   license :commercial
 
   pkg "st_installer_v#{version}.pkg"
+
   uninstall :pkgutil => 'com.circlesys.pkg'
 end

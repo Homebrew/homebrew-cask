@@ -7,5 +7,6 @@ cask :v1 => 'soulseek' do
   license :unknown
 
   pkg "SoulseekQt-#{version}.pkg"
+
   uninstall :pkgutil => 'com.soulseek.SoulseekQt.pkg'
 end

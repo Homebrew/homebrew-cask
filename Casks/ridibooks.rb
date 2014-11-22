@@ -11,5 +11,6 @@ cask :v1 => 'ridibooks' do
     system '/bin/mv', '--', staged_path.join('getapp'), staged_path.join('ridibooks.pkg')
   end
   pkg 'ridibooks.pkg'
+
   uninstall :pkgutil => 'com.ridibooks.Ridibooks'
 end

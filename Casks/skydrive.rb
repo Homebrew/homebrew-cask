@@ -7,6 +7,7 @@ cask :v1 => 'skydrive' do
   license :unknown
 
   pkg 'SkyDrive.pkg'
+
   uninstall :pkgutil => 'com.microsoft.SkyDriveInstaller',
             :delete  => '/Applications/SkyDrive.app'
 end

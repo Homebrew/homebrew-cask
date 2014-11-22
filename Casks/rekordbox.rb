@@ -7,6 +7,7 @@ cask :v1 => 'rekordbox' do
   license :unknown
 
   pkg "Install_rekordbox_#{version.gsub('.','_')}.pkg"
+
   uninstall :pkgutil => 'com.pioneer.rekordbox.*',
             :delete  => '/Applications/rekordbox 3/'
 end

@@ -7,6 +7,7 @@ cask :v1 => 'eagle' do
   license :unknown
 
   pkg "eagle-#{version}.pkg"
+
   uninstall :pkgutil => 'com.CadSoftComputerGmbH.EAGLE',
             :delete => "/Applications/EAGLE-#{version}"
 end

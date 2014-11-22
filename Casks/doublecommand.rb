@@ -7,6 +7,7 @@ cask :v1 => 'doublecommand' do
   license :oss
 
   pkg "DoubleCommand-#{version}.pkg"
+
   uninstall :script => '/Library/StartupItems/DoubleCommand/uninstall.command',
             :pkgutil => 'com.baltaks.DoubleCommand'
 end

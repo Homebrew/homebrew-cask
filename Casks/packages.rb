@@ -7,5 +7,6 @@ cask :v1 => 'packages' do
   license :bsd
 
   pkg 'packages/Packages.pkg'
+
   uninstall :script => 'Extras/uninstall.sh'
 end

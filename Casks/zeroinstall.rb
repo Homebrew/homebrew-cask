@@ -7,5 +7,6 @@ cask :v1 => 'zeroinstall' do
   license :oss
 
   pkg 'ZeroInstall.pkg'
+
   uninstall :pkgutil => 'net.0install.pkg'
 end

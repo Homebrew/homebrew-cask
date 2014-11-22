@@ -7,6 +7,7 @@ cask :v1 => 'elm-platform' do
   license :bsd
 
   pkg "Elm-Platform-#{version}.pkg"
+
   uninstall :pkgutil => 'org.elm-lang.*',
             :delete => '/usr/local/share/elm'
 end

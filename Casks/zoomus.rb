@@ -7,6 +7,7 @@ cask :v1 => 'zoomus' do
   license :unknown
 
   pkg 'zoomusInstaller.pkg'
+
   uninstall :delete => '/Applications/zoom.us.app'
   zap       :delete => '~/Desktop/Zoom'
 end

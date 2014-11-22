@@ -7,6 +7,7 @@ cask :v1 => 'escritorio-movistar' do
   license :unknown
 
   pkg "Escritorio Movistar_v#{version}.pkg"
+
   uninstall :quit => 'com.movistar.tgcm.devel.tme',
             :pkgutil => [
                           'com.ZTE.DatacardDriver.MacV1.3.41NDISICAEM1000.01.02',

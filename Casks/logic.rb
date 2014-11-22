@@ -7,5 +7,6 @@ cask :v1 => 'logic' do
   license :unknown
 
   pkg "Logic #{version} (10.5+).pkg"
+
   uninstall :pkgutil => 'com.saleae.saleae.Logic.pkg'
 end

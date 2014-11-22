@@ -7,6 +7,7 @@ cask :v1 => 'camtwist' do
   license :unknown
 
   pkg 'CamTwist.pkg'
+
   uninstall :script => { :executable => 'Manual Install/CamTwist/uninstall.command' },
             :pkgutil => 'com.allocinit.camtwist.*'
 end

@@ -8,5 +8,6 @@ cask :v1 => 'riffworkst4' do
   license :unknown
 
   pkg "RiffWorksT4V#{version.gsub('.','_')}.pkg"
+
   uninstall :pkgutil => 'com.sonomawireworks.riffworkst4'
 end

@@ -7,5 +7,6 @@ cask :v1 => 'tcpblock' do
   license :unknown
 
   pkg "TCPBlock_v#{version}.pkg"
+
   uninstall :pkgutil => 'com.delantis.tcpblock.*'
 end

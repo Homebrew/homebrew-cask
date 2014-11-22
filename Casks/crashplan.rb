@@ -7,6 +7,7 @@ cask :v1 => 'crashplan' do
   license :unknown
 
   pkg 'Install CrashPlan.pkg'
+
   uninstall :script  => 'Uninstall.app/Contents/Resources/uninstall.sh',
             :pkgutil => 'com.crashplan.app.pkg'
 end

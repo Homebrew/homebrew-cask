@@ -7,6 +7,7 @@ cask :v1 => 'istat-server' do
   license :unknown
 
   pkg 'iStat Server.pkg'
+
   uninstall :script => '/Applications/iStat Server.app/Contents/Resources/Uninstaller',
             :pkgutil => 'com.bjango.istatserver.*'
   caveats do

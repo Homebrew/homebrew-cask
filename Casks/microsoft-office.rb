@@ -7,6 +7,7 @@ cask :v1 => 'microsoft-office' do
   license :commercial
 
   pkg 'Office Installer.pkg'
+
   uninstall :pkgutil => 'com.microsoft.office.*',
             :launchctl => 'com.microsoft.office.licensing.helper'
   zap :pkgutil => [

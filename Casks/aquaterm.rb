@@ -7,5 +7,6 @@ cask :v1 => 'aquaterm' do
   license :oss
 
   pkg 'AquaTermInstaller.pkg'
+
   uninstall :pkgutil => 'net.sourceforge.aquaterm.aquaterm.*'
 end

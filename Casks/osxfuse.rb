@@ -7,6 +7,7 @@ cask :v1 => 'osxfuse' do
   license :oss
 
   pkg "Install OSXFUSE #{version[0..-3]}.pkg"
+
   uninstall :pkgutil => 'com.github.osxfuse.pkg.Core|com.github.osxfuse.pkg.PrefPane',
             :kext => 'com.github.osxfuse.filesystems.osxfusefs'
 end

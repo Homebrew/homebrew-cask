@@ -7,5 +7,6 @@ cask :v1 => 'google-hangouts' do
   license :unknown
 
   pkg 'Google Voice and Video.pkg'
+
   uninstall :pkgutil => 'com.google.pkg.GoogleVoiceAndVideo'
 end

@@ -7,5 +7,6 @@ cask :v1 => 'moneyplex' do
   license :unknown
 
   pkg 'moneyplex.pkg', :allow_untrusted => true
+
   uninstall :pkgutil => 'de.matrica.moneyplex.Moneyplex.pkg'
 end

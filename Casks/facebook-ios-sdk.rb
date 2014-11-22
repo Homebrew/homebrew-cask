@@ -7,5 +7,6 @@ cask :v1 => 'facebook-ios-sdk' do
   license :unknown
 
   pkg "facebook-ios-sdk-#{version}.pkg"
+
   uninstall :pkgutil => 'com.facebook.sdk.pkg'
 end

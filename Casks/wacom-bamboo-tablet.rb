@@ -7,6 +7,7 @@ cask :v1 => 'wacom-bamboo-tablet' do
   license :unknown
 
   pkg 'Install Wacom Tablet.pkg'
+
   uninstall :launchctl => 'com.wacom.pentablet',
     :quit => [
       'com.wacom.TabletDriver',

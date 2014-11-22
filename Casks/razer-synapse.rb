@@ -7,6 +7,7 @@ cask :v1 => 'razer-synapse' do
   license :unknown
 
   pkg 'Razer Synapse 2.0.pkg'
+
   uninstall :script => '/Applications/Utilities/Uninstall Razer Synapse 2.0.app/Contents/MacOS/Uninstall Razer Synapse 2.0',
             :pkgutil => 'com.razerzone.*'
 end

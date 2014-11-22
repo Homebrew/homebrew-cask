@@ -7,6 +7,7 @@ cask :v1 => 'fluke' do
   license :oss
 
   pkg 'Fluke_0.2.5.pkg'
+
   uninstall :script => { :executable => 'Uninstall Fluke.tool' },
             :pkgutil => 'com.kichenko.fluke.*'
 end

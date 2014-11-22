@@ -7,5 +7,6 @@ cask :v1 => 'safaritabswitching' do
   license :oss
 
   pkg "Safari Tab Switching-#{version}.pkg"
+
   uninstall :pkgutil => 'net.rhapsodyk.SafariTabSwitching.pkg'
 end

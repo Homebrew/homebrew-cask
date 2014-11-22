@@ -7,6 +7,7 @@ cask :v1 => 'logitech-harmony' do
   license :unknown
 
   pkg 'LogitechRemoteSoftware.pkg'
+
   uninstall :quit => 'com.logitech.harmony.cappuccino.client.logitech',
             :kext => [
                       'com.RemoteControl.USBLAN.usbpart',

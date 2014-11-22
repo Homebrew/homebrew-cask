@@ -7,6 +7,7 @@ cask :v1 => 'smoothmouse' do
   license :unknown
 
   pkg 'SmoothMouse.pkg'
+
   uninstall :launchctl => [
                            'com.cyberic.smoothmouse',
                            'com.cyberic.smoothmouseupdater',

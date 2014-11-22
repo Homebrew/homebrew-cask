@@ -7,6 +7,7 @@ cask :v1 => 'paragon-extfs' do
   license :unknown
 
   pkg 'FSInstaller.app/Contents/Resources/Paragon ExtFS for Mac OS X.pkg'
+
   uninstall :pkgutil => 'com.paragon-software.filesystems.ExtFS.pkg',
             :script  => 'Uninstall.app/Contents/Resources/uninstall.sh',
             :launchctl => [

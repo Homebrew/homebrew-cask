@@ -7,6 +7,7 @@ cask :v1 => 'programmer-dvorak' do
   license :unknown
 
   pkg 'Programmer Dvorak v1.2.pkg'
+
   uninstall :pkgutil => 'com.apple.keyboardlayout.Programmer Dvorak',
             :delete => [
                         '/Library/Keyboard Layouts/Programmer Dvorak.bundle/',

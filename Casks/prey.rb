@@ -7,6 +7,7 @@ cask :v1 => 'prey' do
   license :unknown
 
   pkg "prey-#{version}-mac-batch.mpkg"
+
   uninstall :pkgutil => 'com.forkhq.prey'
   caveats <<-EOS.undent
     To complete installation, Prey requires an API key. It may be set

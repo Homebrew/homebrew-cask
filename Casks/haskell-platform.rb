@@ -7,6 +7,7 @@ cask :v1 => 'haskell-platform' do
   license :unknown
 
   pkg "Haskell Platform #{version} 64bit.signed.pkg"
+
   uninstall :script => { :executable => '/usr/bin/uninstall-hs', :args => %w[all --remove] },
             :pkgutil => 'org.haskell.HaskellPlatform.*'
 end

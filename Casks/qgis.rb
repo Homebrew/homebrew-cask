@@ -6,6 +6,7 @@ cask :v1 => 'qgis' do
   homepage 'http://www.kyngchaos.com/software/qgis'
   license :unknown
   pkg 'Install QGIS.pkg'
+
   uninstall :pkgutil => 'org.qgis.qgis-*'
   caveats <<-EOS.undent
     #{title} requires the GDAL framework and Matplotlib to be installed first,

@@ -14,5 +14,6 @@ cask :v1 => 'ax88179' do
 
   container :nested => "#{Utils.basename}/AX88179_178A.dmg"
   pkg "AX88179_178A_v#{version[0..-10]}.pkg"
+
   uninstall :script => { :executable => 'AX88179_178A_Uninstall_v140' }
 end

@@ -7,5 +7,6 @@ cask :v1 => 'minimalclock' do
   license :unknown
 
   pkg ' .pkg'
+
   uninstall :pkgutil => 'com.ilovecolorz.minimalclockScreenSaver.*'
 end

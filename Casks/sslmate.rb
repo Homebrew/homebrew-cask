@@ -7,5 +7,6 @@ cask :v1 => 'sslmate' do
   license :commercial
 
   pkg 'SSLMate-latest.pkg'
+
   uninstall :pkgutil => 'com.sslmate.client'
 end

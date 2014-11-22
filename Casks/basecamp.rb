@@ -7,5 +7,6 @@ cask :v1 => 'basecamp' do
   license :gratis
 
   pkg 'Install BaseCamp.pkg'
+
   uninstall :pkgutil => 'com.garmin.BaseCamp'
 end

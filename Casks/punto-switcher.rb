@@ -7,6 +7,7 @@ cask :v1 => 'punto-switcher' do
   license :unknown
 
   pkg 'PuntoSwitcher Installer.pkg'
+
   uninstall :quit => 'ru.yandex.desktop.PuntoSwitcher',
             :pkgutil => [ 'ru.yandex.puntoSwitcher*', 'ru.yandex.PuntoSwitcher*' ]
 end

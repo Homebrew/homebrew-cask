@@ -10,5 +10,6 @@ cask :v1 => 'intel-power-gadget' do
   # this bogus-looking character accurately reflects an upstream error
   container :nested => 'IntelÆ Power Gadget.dmg'
   pkg 'Install Intel Power Gadget.pkg'
+
   uninstall :pkgutil => 'com.intel.pkg.PowerGadget.*'
 end

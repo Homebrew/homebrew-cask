@@ -7,5 +7,6 @@ cask :v1 => 'epubquicklook' do
   license :unknown
 
   pkg 'EpubQuickLook.pkg'
+
   uninstall :pkgutil => 'net.leuski.epubQuicklookPlugin.epub.pkg'
 end

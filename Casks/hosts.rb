@@ -7,5 +7,6 @@ cask :v1 => 'hosts' do
   license :oss
 
   pkg "Hosts-#{version}.pkg"
+
   uninstall :pkgutil => 'nl.permanentmarkers.hosts.Hosts.pkg'
 end

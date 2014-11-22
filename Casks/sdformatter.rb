@@ -7,5 +7,6 @@ cask :v1 => 'sdformatter' do
   license :unknown
 
   pkg "SDFormatter_#{version}0B.pkg"
+
   uninstall :pkgutil => 'jp.co.trendy.sdformatter.SDFormatter.pkg'
 end

@@ -7,5 +7,6 @@ cask :v1 => 'qsync' do
   license :commercial
 
   pkg 'Qsync.pkg'
+
   uninstall :pkgutil => 'com.qnap.qsync.*'
 end

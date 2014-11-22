@@ -7,6 +7,7 @@ cask :v1 => 'jawbone-updater' do
   license :unknown
 
   pkg "Jawbone_Updater-#{version}.pkg"
+
   uninstall :quit => 'com.aliph.Jawbone_Updater',
             :pkgutil => 'com.Aliph.[Jj]awbone(|Updater.*).pkg'
 end

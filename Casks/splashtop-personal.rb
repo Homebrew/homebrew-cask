@@ -7,5 +7,6 @@ cask :v1 => 'splashtop-personal' do
   license :unknown
 
   pkg 'Splashtop Personal.pkg'
+
   uninstall :pkgutil => 'com.splashtop.stp.*'
 end

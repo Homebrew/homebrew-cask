@@ -7,5 +7,6 @@ cask :v1 => 'e-tax2014' do
   license :unknown
 
   pkg 'etax2014_1.pkg'
+
   uninstall :pkgutil => 'au.gov.ato.etax2014'
 end

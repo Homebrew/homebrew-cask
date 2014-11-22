@@ -7,6 +7,7 @@ cask :v1 => 'logitech-myharmony' do
   license :unknown
 
   pkg 'MyHarmonySetup.pkg'
+
   uninstall :quit => 'org.logitech.MyHarmony',
             :pkgutil => 'MyHarmony.pkg'
 end

@@ -7,5 +7,6 @@ cask :v1 => 'synology-photo-station-uploader' do
   license :unknown
 
   pkg "PhotoStationUploader-#{version}-Mac-Installer.pkg"
+
   uninstall :pkgutil => 'com.synology.photostationuploader.installer'
 end

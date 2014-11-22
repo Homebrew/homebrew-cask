@@ -7,5 +7,6 @@ cask :v1 => 'ormr' do
   license :unknown
 
   pkg 'Ormr.pkg'
+
   uninstall :pkgutil => 'com.sadcatsoft.ormr.Ormr.pkg'
 end

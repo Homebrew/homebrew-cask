@@ -12,6 +12,7 @@ cask :v1 => 'td-toolbelt' do
   end
 
   pkg 'td-toolbelt.pkg'
+
   uninstall :pkgutil => 'com.td.toolbelt'
   # zap :pkgutil => 'org.ruby-lang.installer'
 end

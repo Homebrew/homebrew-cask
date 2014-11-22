@@ -7,5 +7,6 @@ cask :v1 => 'dmm' do
   license :unknown
 
   pkg 'DMMViewer.pkg'
+
   uninstall :pkgutil => 'jp.co.cyphertec.installer.app.ImageViewer'
 end

@@ -10,5 +10,6 @@ cask :v1 => 'xamarin-ios' do
   license :unknown
 
   pkg "monotouch-#{version}.pkg"
+
   uninstall :pkgutil => 'com.xamarin.monotouch.pkg'
 end

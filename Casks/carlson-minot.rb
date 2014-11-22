@@ -7,6 +7,7 @@ cask :v1 => 'carlson-minot' do
   license :unknown
 
   pkg "arm-#{version}-arm-none-linux-gnueabi.osx.intelx86.bin.pkg"
+
   uninstall :pkgutil => 'com.carlson-minot.arm-*',
             :delete  => '/usr/local/carlson-minot'
   caveats do

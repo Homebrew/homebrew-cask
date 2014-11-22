@@ -7,6 +7,7 @@ cask :v1 => 'rethinkdb' do
   license :affero
 
   pkg "rethinkdb-#{version}.pkg"
+
   uninstall :script  => { :executable => 'uninstall-rethinkdb.sh' },
             :pkgutil => 'rethinkdb'
 end

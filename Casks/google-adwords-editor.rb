@@ -7,5 +7,6 @@ cask :v1 => 'google-adwords-editor' do
   license :unknown
 
   pkg "AdWords-Editor-#{version}-en-US.pkg"
+
   uninstall :pkgutil => 'com.google.adwordseditor.pkg'
 end

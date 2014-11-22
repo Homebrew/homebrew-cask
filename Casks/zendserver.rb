@@ -7,6 +7,7 @@ cask :v1 => 'zendserver' do
   license :unknown
 
   pkg 'Zend Server.pkg'
+
   uninstall :script => { :executable => '/usr/local/zend/bin/uninstall.sh', :args => ['--automatic'] },
             :pkgutil => 'zenith.pkg.ZendServer'
   caveats do

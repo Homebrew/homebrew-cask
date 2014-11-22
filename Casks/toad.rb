@@ -7,6 +7,7 @@ cask :v1 => 'toad' do
   license :unknown
 
   pkg 'ToadMacEdition_108.pkg'
+
   uninstall :pkgutil => 'com.dell.Toad',
             :delete => '/Applications/Toad.app'
 end
