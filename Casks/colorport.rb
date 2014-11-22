@@ -7,6 +7,7 @@ cask :v1 => 'colorport' do
   license :unknown
 
   pkg 'ColorPort20Distribution.mpkg'
+
   uninstall :pkgutil => 'com.xrite.colorport'
 
   caveats do
