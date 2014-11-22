@@ -7,6 +7,7 @@ cask :v1 => 'virtualbox' do
   license :unknown
 
   pkg 'VirtualBox.pkg'
+
   uninstall :script => { :executable => 'VirtualBox_Uninstall.tool', :args => %w[--unattended] },
             :pkgutil => 'org.virtualbox.pkg.*'
 end
