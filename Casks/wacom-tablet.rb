@@ -7,6 +7,7 @@ cask :v1 => 'wacom-tablet' do
   license :unknown
 
   pkg 'Install Wacom Tablet.pkg'
+
   uninstall :launchctl => 'com.wacom.wacomtablet',
             :quit => [
                       'com.wacom.TabletDriver',
