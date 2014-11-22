@@ -12,6 +12,7 @@ cask :v1 => 'path-finder' do
     # Don't ask to move the app bundle to /Applications
     system '/usr/bin/defaults', 'write', 'com.cocoatech.PathFinder', 'kNTMoveToApplicationsFolderAlertSuppress', '-bool', 'true'
   end
+
   zap :delete => [
                   '~/Library/Preferences/com.cocoatech.PathFinder.plist',
                   '~/Library/Application Support/Path Finder',
