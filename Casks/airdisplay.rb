@@ -7,5 +7,6 @@ cask :v1 => 'airdisplay' do
   license :unknown
 
   pkg 'Air Display Installer.pkg'
+
   uninstall :pkgutil => 'com.avatron.pkg.AirDisplay'
 end
