@@ -8,8 +8,6 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Required Stanzas](#required-stanzas)
  * [At Least One Artifact Stanza Is Also Required](#at-least-one-artifact-stanza-is-also-required)
  * [Optional Stanzas](#optional-stanzas)
- * [Legacy Stanzas](#legacy-stanzas)
- * [Legacy Forms](#legacy-forms)
  * [Conditional Statements](#conditional-statements)
  * [Header Line Details](#header-line-details)
  * [Caveats Stanza Details](#caveats-stanza-details)
@@ -120,35 +118,6 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `tags`                 | no                            | a list of key-value pairs for Cask annotation.  Not free-form.  (see also [Tags Stanza Details](#tags-stanza-details))
 | `gpg`                  | no                            | *stub: not yet functional.*  (see also [GPG Stanza Details](#gpg-stanza-details))
 | `stage_only`           | no                            | `true`.  Assert that the Cask contains no activatable artifacts.
-
-
-## Legacy Stanzas
-
-The following stanzas are no longer in use.
-
-| name                      | meaning     |
-| ------------------------- | ----------- |
-| `after_install`           | an obsolete alternative to `postflight`
-| `after_uninstall`         | an obsolete alternative to `uninstall_postflight`
-| `before_install`          | an obsolete alternative to `preflight`
-| `before_uninstall`        | an obsolete alternative to `uninstall_preflight`
-| `container_type`          | an obsolete alternative to `container :type =>`
-| `depends_on_formula`      | an obsolete alternative to `depends_on :formula =>`
-| `install`                 | an obsolete alternative to `pkg`
-| `link`                    | an obsolete alternative to `artifact`
-| `no_checksum`             | an obsolete alternative to `sha256 :no_check`
-| `caskroom_only`           | an obsolete alternative to `stage_only`
-
-
-## Legacy Forms
-
-The following forms are no longer in use.
-
-| name                      | meaning     |
-| ------------------------- | ----------- |
-| `uninstall :files`        | an obsolete alternative to `uninstall :delete`
-| `version 'latest'`        | an obsolete alternative to `version :latest`
-| `manual_installer(path)`  | when occurring within `caveats`, an obsolete alternative to `installer :script`
 
 
 ## Conditional Statements
