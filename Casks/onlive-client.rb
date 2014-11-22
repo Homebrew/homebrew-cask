@@ -7,5 +7,6 @@ cask :v1 => 'onlive-client' do
   license :unknown
 
   pkg 'mac.pkg'
+
   uninstall :pkgutil => 'com.onlive.OnLiveClient.pkg'
 end
