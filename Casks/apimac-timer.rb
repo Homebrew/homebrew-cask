@@ -4,7 +4,7 @@ cask :v1 => 'apimac-timer' do
 
   url 'http://www.apimac.com/download/Timer.zip'
   homepage 'http://www.apimac.com/mac/timer/'
-  license :gratis
+  license :commercial
 
   app 'Apimac Timer.app'
 
