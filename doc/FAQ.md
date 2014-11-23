@@ -66,9 +66,12 @@ under the organizational umbrella at https://github.com/caskroom/homebrew-cask .
 
 Web redirection happens automatically.
 
-The location of the Homebrew-cask Tap on disk has also changed, which should be
-handled automatically upon upgrading.  If you have technical difficulties,
-please see [TAP_MIGRATION.md](TAP_MIGRATION.md).
+The location of the Homebrew-cask Tap on disk has also changed.  If you have
+a very old installation, you may need to run:
+
+```bash
+$ brew untap phinze/cask; brew tap caskroom/cask
+```
 
 ## `brew cask list` shows that a package is installed, but when I try to do `brew cask uninstall`, it tells me that the package is not installed. Help!
 
