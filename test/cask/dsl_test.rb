@@ -40,6 +40,14 @@ describe Cask::DSL do
       err.message.must_include 'Bad header line: parse failed'
     end
 
+    it "requires the header name to match the file name" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-header-name-mismatch')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include 'Bad header line:'
+      err.message.must_include 'does not match file name'
+    end
+
     it "requires a valid minimum DSL version in the header" do
       err = lambda {
         invalid_cask = Cask.load('invalid/invalid-header-version')
