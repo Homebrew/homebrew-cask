@@ -1,13 +1,14 @@
 cask :v1 => 'xampp' do
-  version '1.8.3.3'
-  sha256 'b54cced0697caa418851a4bdb11ee1697b3f7f71130e1e6bce19582d60e41530'
+  version '5.6.3-0'
+  sha256 '23cd1b990397958b31e5904a340f416aed98b767a868bbcad7be123f53878828'
 
   # sourceforge.net is the official download host per the vendor homepage
-  url "https://downloads.sourceforge.net/project/xampp/XAMPP%20Mac%20OS%20X/#{version.sub(%r{\.\d$},'')}/xampp-osx-#{version}-installer.dmg"
+  url "https://downloads.sourceforge.net/project/xampp/XAMPP%20Mac%20OS%20X/#{version.sub(%r{-\d+$},'')}/xampp-osx-#{version}-installer.dmg"
   homepage 'http://www.apachefriends.org/index.html'
   license :oss
 
-  installer :manual => "xampp-osx-#{version}-installer.app"
+  installer :manual => 'XAMPP.app'
 
-  uninstall :delete => '/Applications/XAMPP'
+  uninstall :quit => 'com.bitnami.manager',
+            :delete => '/Applications/XAMPP/'
 end
