@@ -4,7 +4,7 @@ cask :v1 => 'acorn' do
 
   url 'http://flyingmeat.com/download/Acorn.zip'
   homepage 'http://flyingmeat.com/acorn/'
-  license :gratis
+  license :commercial
 
   app 'Acorn.app'
 end
