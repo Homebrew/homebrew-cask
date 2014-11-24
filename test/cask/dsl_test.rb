@@ -33,6 +33,13 @@ describe Cask::DSL do
   end
 
   describe "header line" do
+    it "requires a valid header format" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-header-format')
+      }.must_raise(CaskInvalidError)
+      err.message.must_include 'Bad header line: parse failed'
+    end
+
     it "requires a valid minimum DSL version in the header" do
       err = lambda {
         invalid_cask = Cask.load('invalid/invalid-header-version')
