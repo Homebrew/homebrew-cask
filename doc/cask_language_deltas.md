@@ -67,7 +67,7 @@ features which are available for the current Cask.
  * [`gpg`](CASK_LANGUAGE_REFERENCE.md#gpg-stanza-details) *stub: not yet functional.*
  * [`installer :script`](CASK_LANGUAGE_REFERENCE.md#installer-stanza-details)
  * [`license`](CASK_LANGUAGE_REFERENCE.md#license-stanza-details)
- * [`stage_only`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+ * [`stage_only`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
    * replaced undocumented `caskroom_only`
  * [`suite`](CASK_LANGUAGE_REFERENCE.md#suite-stanza-details)
  * [`tags`](CASK_LANGUAGE_REFERENCE.md#tags-stanza-details)
