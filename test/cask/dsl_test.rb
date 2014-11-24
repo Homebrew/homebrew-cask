@@ -52,7 +52,7 @@ describe Cask::DSL do
       err = lambda {
         invalid_cask = Cask.load('invalid/invalid-header-version')
       }.must_raise(CaskInvalidError)
-      err.message.must_include 'Bad header line'
+      err.message.must_include 'Bad header line:'
       err.message.must_include 'is less than required minimum version'
     end
   end
