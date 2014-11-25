@@ -1,4 +1,4 @@
-cask :v1 => 'glo' do
+cask :v1 => 'glo-bible' do
   version :latest
   sha256 :no_check
 
