@@ -26,6 +26,7 @@ most cases.
     differentiator for a different product from a different vendor: [pgadmin3.rb](../Casks/pgadmin3.rb).
   * If the version number is arranged to occur in the middle of the App name,
     it should also be removed.  Example: [IntelliJ IDEA 13 CE.app](../Casks/intellij-idea-ce.rb).
+  * Remove from the end: "Launcher", "Quick Launcher".
   * Remove from the end: "mac", "for mac", "for OS X".  These terms are generally
     added to ports such as "MAME OS X.app".  Exception: when the software is not
     a port, but "Mac" is an inseparable part of the name or branding, as in
