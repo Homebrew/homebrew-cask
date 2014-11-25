@@ -1,4 +1,4 @@
-cask :v1 => 'mini-metro' do
+cask :v1 => 'minimetro' do
   version 'Alpha 13b'
   sha256 '77416668bc5c2a982642cb692b35b7f0b5854cb950750477aa6d362d2b68246b'
 
