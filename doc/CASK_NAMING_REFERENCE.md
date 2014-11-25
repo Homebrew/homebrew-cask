@@ -31,7 +31,7 @@ most cases.
     a port, but "Mac" is an inseparable part of the name or branding, as in
     'PlayForMac.app'
   * Remove from the end: hardware designations such as "for x86", "32-bit", "ppc".
-  * Remove from the end: software framework names such as "Qt", "Gtk", "Wx", "Java", "Oracle JVM", etc.
+  * Remove from the end: software framework names such as "Cocoa", "Qt", "Gtk", "Wx", "Java", "Oracle JVM", etc.
     Exception: the framework is the product being Casked: [java.rb](../Casks/java.rb).
   * Remove from the end: localization strings such as "en-US"
   * Pay attention to details, for example: `"Git Hub" != "git_hub" != "GitHub"`

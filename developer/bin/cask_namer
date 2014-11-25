@@ -96,6 +96,7 @@ REMOVE_TRAILING_PATS = [
                         %r{\bgtk}i,
                         %r{\bqt}i,
                         %r{\bwx}i,
+                        %r{\bcocoa}i,
 
                         # localizations
                         %r{en\s*-\s*us}i,
