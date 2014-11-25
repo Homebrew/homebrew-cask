@@ -79,8 +79,7 @@ REMOVE_TRAILING_PATS = [
 
                         # generic terms
                         %r{\bapp}i,
-                        # idea, but never discussed
-                        # %r{\blauncher}i,
+                        %r{\b(?:quick[\s-]*)?launcher}i,
 
                         # "mac", "for mac", "for OS X".
                         %r{\b(?:for)?[\s-]*mac(?:intosh)?}i,
