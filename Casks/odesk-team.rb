@@ -1,4 +1,4 @@
-cask :v1 => 'odesk' do
+cask :v1 => 'odesk-team' do
   version :latest
   sha256 :no_check
 
