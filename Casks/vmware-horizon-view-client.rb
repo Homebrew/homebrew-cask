@@ -1,10 +1,10 @@
 cask :v1 => 'vmware-horizon-view-client' do
-  version '3.0.0-1887158'
-  sha256 'c29568142e942b58bb9ab16882b80e7e19df975a07a613ed8abdcf43e2349ced'
+  version '3.1.0-2096621'
+  sha256 '2ef9b6a377e722f03c1b8c10ea9e7df5c56b5e3973e370905602b1ce5e4ed17b'
 
-  url "https://download3.vmware.com/software/view/viewclients/VMware-Horizon-View-Client-#{version}.dmg"
+  url "https://download3.vmware.com/software/view/viewclients/VMware-Horizon-Client-#{version}.dmg"
   homepage 'http://www.vmware.com/'
   license :unknown
 
-  app 'VMware Horizon View Client.app'
+  app 'VMware Horizon Client.app'
 end
