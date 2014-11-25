@@ -9,7 +9,7 @@ cask :v1 => 'golly' do
     app "golly-#{version}-mac106/Golly.app"
     binary "golly-#{version}-mac106/bgolly"
   else
-    sha256 '360c1e279d89fc3a19bed9c75dfe5b1085a67672490f17fe38941cab3680b983'
+    sha256 '8e2e7ffd22dd046a701b6db13a1c36939eced46078c85eeccf709072183fb71c'
 
     url "http://downloads.sourceforge.net/project/golly/golly/golly-#{version}/golly-#{version}-mac109.zip"
 
