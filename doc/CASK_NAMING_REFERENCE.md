@@ -27,9 +27,9 @@ most cases.
   * If the version number is arranged to occur in the middle of the App name,
     it should also be removed.  Example: [IntelliJ IDEA 13 CE.app](../Casks/intellij-idea-ce.rb).
   * Remove from the end: "mac", "for mac", "for OS X".  These terms are generally
-    added to ports such as "MAME OS X.app".  Exception: when the software is not
-    a port, but "Mac" is an inseparable part of the name or branding, as in
-    'PlayForMac.app'
+    added to ported software such as "MAME OS X.app".  Exception: when the software
+    is not a port, but "Mac" is an inseparable part of the name, without which the
+    name would not make sense, for example [PlayForMac.app](../Casks/playformac.rb).
   * Remove from the end: hardware designations such as "for x86", "32-bit", "ppc".
   * Remove from the end: software framework names such as "Qt", "Gtk", "Wx", "Java", "Oracle JVM", etc.
     Exception: the framework is the product being Casked: [java.rb](../Casks/java.rb).
