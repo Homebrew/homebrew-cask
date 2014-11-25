@@ -1,4 +1,4 @@
-cask :v1 => 'faux-pas' do
+cask :v1 => 'fauxpas' do
   version :latest
   sha256 :no_check
 
