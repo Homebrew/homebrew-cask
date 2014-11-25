@@ -1,4 +1,4 @@
-cask :v1 => 'raw-therapee' do
+cask :v1 => 'rawtherapee' do
   version '4.1.26'
   sha256 'b8afa0978050621bc10ddead6f4d0b7a79f54f4d06c608af63948c4e53122255'
 
