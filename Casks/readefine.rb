@@ -1,4 +1,4 @@
-cask :v1 => 'readefine-desktop' do
+cask :v1 => 'readefine' do
   version :latest
   sha256 :no_check
 
