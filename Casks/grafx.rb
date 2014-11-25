@@ -1,4 +1,4 @@
-cask :v1 => 'grafx2' do
+cask :v1 => 'grafx' do
   version :latest
   sha256 :no_check
 
