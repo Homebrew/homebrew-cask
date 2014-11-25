@@ -6,5 +6,5 @@ cask :v1 => 'rocks-n-diamonds' do
   homepage 'http://www.artsoft.org/rocksndiamonds/'
   license :unknown
 
-  app "Rocks'n'Diamonds #{version}/Rocks''Diamonds.app"
+  app "Rocks'n'Diamonds #{version}/Rocks'n'Diamonds.app"
 end
