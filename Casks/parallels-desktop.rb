@@ -1,4 +1,4 @@
-cask :v1 => 'parallels' do
+cask :v1 => 'parallels-desktop' do
   version '10.1.1-28614'
   sha256 'd39780b42640c5de6198fb7434e24ac1cc983cc13b131c73cdba775964ec4e0d'
 
