@@ -70,11 +70,11 @@ Each of the following stanzas is required for every Cask.
 
 | name               | multiple occurrences allowed? | value       |
 | ------------------ |------------------------------ | ----------- |
-| `version`          | No                            | application version; give value of `:latest`  if versioned downloads are not offered
-| `sha256`           | No                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
-| `url`              | No                            | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](#url-stanza-details))
-| `homepage`         | No                            | application homepage; used for the `brew cask home` command
-| `license`          | No                            | a symbol identifying the license category for the application. (see also [License Stanza Details](#license-stanza-details))
+| `version`          | no                            | application version; give value of `:latest`  if versioned downloads are not offered
+| `sha256`           | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
+| `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](#url-stanza-details))
+| `homepage`         | no                            | application homepage; used for the `brew cask home` command
+| `license`          | no                            | a symbol identifying the license category for the application. (see also [License Stanza Details](#license-stanza-details))
 
 
 ## At Least One Artifact Stanza Is Also Required
@@ -224,15 +224,15 @@ The following methods may be called to generate standard warning messages:
 
 | method                            | description |
 | --------------------------------- | ----------- |
-| `path_environment_variable(path)` | The user should make sure `path` is in their `$PATH` environment variable
-| `zsh_path_helper(path)`           | Zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable
-| `logout`                          | The user should log out and log back in to complete installation
-| `reboot`                          | The user should reboot to complete installation
-| `assistive_devices`               | The user should grant the application access to assistive devices
-| `files_in_usr_local`              | The Cask installs files to `/usr/local`, which may confuse Homebrew
-| `arch_only(list)`                 | The Cask only supports certain architectures.  Currently valid elements of `list` are `intel-32` and `intel-64`
-| `os_version_only(list)`           | The Cask only supports certain OS X Versions.  Currently valid elements of `list` are all major releases: `10.0`, `10.1`, … `10.10`
-| `x11_required`                    | The Cask requires X11 to run
+| `path_environment_variable(path)` | users should make sure `path` is in their `$PATH` environment variable
+| `zsh_path_helper(path)`           | zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable
+| `logout`                          | users should log out and log back in to complete installation
+| `reboot`                          | users should reboot to complete installation
+| `assistive_devices`               | users should grant the application access to assistive devices
+| `files_in_usr_local`              | the Cask installs files to `/usr/local`, which may confuse Homebrew
+| `arch_only(list)`                 | the Cask only supports certain architectures.  Currently valid elements of `list` are `intel-32` and `intel-64`
+| `os_version_only(list)`           | the Cask only supports certain OS X Versions.  Currently valid elements of `list` are all major releases: `10.0`, `10.1`, … `10.10`
+| `x11_required`                    | the Cask requires X11 to run
 
 Example:
 
@@ -341,17 +341,17 @@ open source.  Chromium licensing is described by the generic category [`:oss`](h
 
 | symbol      | meaning     |
 | ----------- | ----------- |
-| `:oss`      | Open-source software
-| `:closed`   | Closed-source software
-| `:unknown`  | License unknown
-| `:other`    | License is known, but fits no category
+| `:oss`      | open-source software
+| `:closed`   | closed-source software
+| `:unknown`  | license unknown
+| `:other`    | license is known, but fits no category
 
 ### Valid Licenses
 
 | symbol           | generic category | meaning                                         | URL         |
 | ---------------- | ---------------- | ----------------------------------------------- | ----------- |
-| `:gratis`        | `:closed`        | Free-to-use, closed source                      | <none>
-| `:commercial`    | `:closed`        | Not free to use                                 | <none>
+| `:gratis`        | `:closed`        | free-to-use, closed source                      | <none>
+| `:commercial`    | `:closed`        | not free to use                                 | <none>
 | `:affero`        | `:oss`           | Affero General Public License                   | <https://gnu.org/licenses/agpl.html>
 | `:apache`        | `:oss`           | Apache Public License                           | <http://www.apache.org/licenses/>
 | `:arphic`        | `:oss`           | Arphic Public License                           | <http://www.arphic.com/tw/download/public_license.rar>
@@ -366,7 +366,7 @@ open source.  Chromium licensing is described by the generic category [`:oss`](h
 | `:mit`           | `:oss`           | MIT License                                     | <http://opensource.org/licenses/MIT>
 | `:mpl`           | `:oss`           | Mozilla Public License                          | <https://www.mozilla.org/MPL/>
 | `:ofl`           | `:oss`           | SIL Open Font License                           | <http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL>
-| `:public_domain` | `:oss`           | Not copyrighted                                 | <http://creativecommons.org/publicdomain/zero/1.0/legalcode>
+| `:public_domain` | `:oss`           | not copyrighted                                 | <http://creativecommons.org/publicdomain/zero/1.0/legalcode>
 | `:ubuntu_font`   | `:oss`           | Ubuntu Font License                             | <http://font.ubuntu.com/licence/>
 | `:x11`           | `:oss`           | X Consortium License                            | <http://www.xfree86.org/3.3.6/COPYRIGHT2.html>
 
@@ -386,8 +386,8 @@ using the information stored in the `tags` stanza.
 
 | key           | meaning
 | ------------- | -----------------------------
-| `:name`       | Alternate name for the Cask. (example [smlnj.rb](../Casks/smlnj.rb))
-| `:vendor`     | The full-text official name of the producer of the software: an author or corporate name, as appropriate.  As the value is intended as a search target, commonly shared abbreviations such as `Dr.` or `Inc.` should be omitted. (example [google-chrome.rb](../Casks/google-chrome.rb))
+| `:name`       | alternate name for the Cask. (example [smlnj.rb](../Casks/smlnj.rb))
+| `:vendor`     | the full-text official name of the producer of the software: an author or corporate name, as appropriate.  As the value is intended as a search target, commonly shared abbreviations such as `Dr.` or `Inc.` should be omitted. (example [google-chrome.rb](../Casks/google-chrome.rb))
 
 
 ## GPG Stanza Details
@@ -555,7 +555,7 @@ key with working functionality at the time of writing.
 
 | key        | description |
 | ---------- | ----------- |
-| `:formula` | A Homebrew Formula
+| `:formula` | a Homebrew Formula
 | `:cask`    | *stub - not yet functional*
 | `:macos`   | *stub - not yet functional*
 | `:arch`    | *stub - not yet functional*
