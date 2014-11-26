@@ -7,6 +7,7 @@ cask :v1 => 'vico' do
           :sha256 => '7d2a33fb72c3c89b4e1f83c86e33fd5655651723e3b0de35a9e7cc90cca06445'
   homepage 'http://www.vicoapp.com'
   license :unknown
+  binary 'Vico.app/Contents/MacOS/vicotool', :target => 'vico'
 
   app 'Vico.app'
 end
