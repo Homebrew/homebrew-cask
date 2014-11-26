@@ -9,4 +9,5 @@ cask :v1 => 'vico' do
   license :unknown
 
   app 'Vico.app'
+  binary 'Vico.app/Contents/MacOS/vicotool', :target => 'vico'
 end
