@@ -1,4 +1,4 @@
-cask :v1 => 'apimac-timer' do
+cask :v1 => 'timer' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,7 @@ cask :v1 => 'apimac-timer' do
   homepage 'http://www.apimac.com/mac/timer/'
   license :commercial
 
-  app 'Apimac Timer.app'
+  app 'Timer.app'
 
   zap :delete => [
                   '~/Library/Preferences/Apimac',
