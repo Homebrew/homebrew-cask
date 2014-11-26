@@ -1,8 +1,8 @@
 cask :v1 => 'leap-motion' do
-  version '2.1.5'
-  sha256 '472d1e535bf21ffd847ff5a872ac23bbb042c955a5e1a9351f52dc7fbb2b85b0'
+  version '2.2.0'
+  sha256 '712ab56cc97c1ceef1b6802f51634a5ec07dcac5a78497870f5a0544685e751e'
 
-  url 'https://warehouse.leapmotion.com/apps/3720/download'
+  url 'https://warehouse.leapmotion.com/apps/3791/download'
   homepage 'https://www.leapmotion.com/setup'
   license :unknown
 
