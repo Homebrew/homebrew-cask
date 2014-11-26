@@ -2,7 +2,7 @@ cask :v1 => 'uberpov' do
   version '3.7-Beta3'
   sha256 '5e3e8ba5b257ad4e058c2f7735776e271f32c02e9cc02f71b1ece6b8c950c8d0'
 
-  url 'http://megapov.inetart.net/uberpov_mac/downloads/Uberpov_Mac_r3.zip'
+  url "http://megapov.inetart.net/uberpov_mac/downloads/Uberpov_Mac_r#{version.to_i}.zip"
   homepage 'http://megapov.inetart.net/uberpov_mac/index.html'
   license :unknown
 
