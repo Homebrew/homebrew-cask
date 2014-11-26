@@ -6,7 +6,7 @@ cask :v1 => 'fing' do
   homepage 'http://www.overlooksoft.com/'
   license :unknown
 
-  pkg 'overlook-fing-2.2.pkg'
+  pkg "overlook-fing-#{version}.pkg"
 
   uninstall :pkgutil => 'com.Overlook.Fing'
 end
