@@ -6,7 +6,7 @@ cask :v1 => 'colorport' do
   homepage 'http://www.xrite.com/colorport-utility-software/support/d1168'
   license :unknown
 
-  pkg 'ColorPort20Distribution.mpkg'
+  pkg "ColorPort#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}Distribution.mpkg"
 
   uninstall :pkgutil => 'com.xrite.colorport'
 
