@@ -3,19 +3,19 @@ require 'set'
 
 module Cask::DSL; end
 
-require 'cask/dsl/base'
-require 'cask/dsl/installer'
-require 'cask/dsl/after_install'
-require 'cask/dsl/after_uninstall'
-require 'cask/dsl/before_install'
-require 'cask/dsl/before_uninstall'
 require 'cask/dsl/appcast'
+require 'cask/dsl/base'
 require 'cask/dsl/conflicts_with'
 require 'cask/dsl/container'
 require 'cask/dsl/depends_on'
 require 'cask/dsl/gpg'
+require 'cask/dsl/installer'
 require 'cask/dsl/license'
+require 'cask/dsl/postflight'
+require 'cask/dsl/preflight'
 require 'cask/dsl/tags'
+require 'cask/dsl/uninstall_postflight'
+require 'cask/dsl/uninstall_preflight'
 
 module Cask::DSL
   def self.included(base)
@@ -275,19 +275,8 @@ module Cask::DSL
     end
 
     def method_missing(method, *args)
-      poo = <<-EOPOO.undent
-        Unexpected method '#{method}' called on #{self}.
-
-          If you are working on #{self}, this may point to a typo. Otherwise
-          it probably means this Cask is using a new feature. If that feature
-          has been released, running
-
-            brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
-
-          should fix it. Otherwise you should wait to use #{self} until the
-          new feature is released.
-      EOPOO
-      poo.split("\n").each { |line| opoo line }
+      Cask::Utils.method_missing_message(method, self.title)
+      return nil
     end
   end
 end

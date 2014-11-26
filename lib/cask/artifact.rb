@@ -8,23 +8,23 @@ require 'cask/artifact/hardlinked'
 require 'cask/artifact/app'
 require 'cask/artifact/artifact'        # generic 'artifact' stanza
 require 'cask/artifact/binary'
-require 'cask/artifact/after_block'
-require 'cask/artifact/before_block'
 require 'cask/artifact/colorpicker'
 require 'cask/artifact/font'
+require 'cask/artifact/input_method'
 require 'cask/artifact/installer'
+require 'cask/artifact/internet_plugin'
 require 'cask/artifact/nested_container'
 require 'cask/artifact/pkg'
+require 'cask/artifact/postflight_block'
+require 'cask/artifact/preflight_block'
 require 'cask/artifact/prefpane'
 require 'cask/artifact/qlplugin'
-require 'cask/artifact/widget'
-require 'cask/artifact/service'
-require 'cask/artifact/suite'
-require 'cask/artifact/stage_only'
-require 'cask/artifact/input_method'
-require 'cask/artifact/internet_plugin'
 require 'cask/artifact/screen_saver'
+require 'cask/artifact/service'
+require 'cask/artifact/stage_only'
+require 'cask/artifact/suite'
 require 'cask/artifact/uninstall'
+require 'cask/artifact/widget'
 require 'cask/artifact/zap'
 
 module Cask::Artifact
@@ -34,7 +34,7 @@ module Cask::Artifact
   #
   def self.artifacts
     [
-      Cask::Artifact::BeforeBlock,
+      Cask::Artifact::PreflightBlock,
       Cask::Artifact::NestedContainer,
       Cask::Artifact::Installer,
       Cask::Artifact::App,
@@ -53,7 +53,7 @@ module Cask::Artifact
       Cask::Artifact::InternetPlugin,
       Cask::Artifact::ScreenSaver,
       Cask::Artifact::Uninstall,
-      Cask::Artifact::AfterBlock,
+      Cask::Artifact::PostflightBlock,
       Cask::Artifact::Zap,
     ]
   end

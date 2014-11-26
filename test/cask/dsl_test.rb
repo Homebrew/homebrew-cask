@@ -16,15 +16,15 @@ describe Cask::DSL do
           future_feature :not_yet_on_your_machine
         end
       }, <<-WARNING.undent.chomp)
-        Warning: Unexpected method 'future_feature' called on UnexpectedMethodCask.
+        Warning: Unexpected method 'future_feature' called on Cask unexpected-method-cask.
         Warning:#{' '}
-        Warning:   If you are working on UnexpectedMethodCask, this may point to a typo. Otherwise
+        Warning:   If you are working on unexpected-method-cask, this may point to a typo. Otherwise
         Warning:   it probably means this Cask is using a new feature. If that feature
         Warning:   has been released, running
         Warning:#{' '}
         Warning:     brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
         Warning:#{' '}
-        Warning:   should fix it. Otherwise you should wait to use UnexpectedMethodCask until the
+        Warning:   should fix it. Otherwise you should wait to use unexpected-method-cask until the
         Warning:   new feature is released.
       WARNING
     rescue Exception => e

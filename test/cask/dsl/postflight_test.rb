@@ -1,9 +1,9 @@
 require "test_helper"
 
-describe Cask::DSL::AfterInstall do
+describe Cask::DSL::Postflight do
   before do
     cask = Cask.load('basic-cask')
-    @dsl = Cask::DSL::AfterInstall.new(cask, Cask::FakeSystemCommand)
+    @dsl = Cask::DSL::Postflight.new(cask, Cask::FakeSystemCommand)
   end
 
   it "can run system commands with list-form arguments" do

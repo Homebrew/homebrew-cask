@@ -1,24 +1,24 @@
 require 'test_helper'
 
-describe Cask::Artifact::AfterBlock do
+describe Cask::Artifact::PostflightBlock do
   describe 'install_phase' do
     it 'calls the specified block after installing, passing a Cask mini-dsl' do
       called      = false
       yielded_arg = nil
 
-      CaskWithAfterInstall = Class.new(Cask)
-      CaskWithAfterInstall.class_eval do
+      CaskWithPostflight = Class.new(Cask)
+      CaskWithPostflight.class_eval do
         postflight do |c|
           called = true
           yielded_arg = c
         end
       end
 
-      cask = CaskWithAfterInstall.new
-      Cask::Artifact::AfterBlock.new(cask).install_phase
+      cask = CaskWithPostflight.new
+      Cask::Artifact::PostflightBlock.new(cask).install_phase
 
       called.must_equal true
-      yielded_arg.must_be_kind_of Cask::DSL::AfterInstall
+      yielded_arg.must_be_kind_of Cask::DSL::Postflight
     end
   end
 
@@ -27,19 +27,19 @@ describe Cask::Artifact::AfterBlock do
       called      = false
       yielded_arg = nil
 
-      CaskWithAfterUninstall = Class.new(Cask)
-      CaskWithAfterUninstall.class_eval do
+      CaskWithUninstallPostflight = Class.new(Cask)
+      CaskWithUninstallPostflight.class_eval do
         uninstall_postflight do |c|
           called = true
           yielded_arg = c
         end
       end
 
-      cask = CaskWithAfterUninstall.new
-      Cask::Artifact::AfterBlock.new(cask).uninstall_phase
+      cask = CaskWithUninstallPostflight.new
+      Cask::Artifact::PostflightBlock.new(cask).uninstall_phase
 
       called.must_equal true
-      yielded_arg.must_be_kind_of Cask::DSL::AfterUninstall
+      yielded_arg.must_be_kind_of Cask::DSL::UninstallPostflight
     end
   end
 end
