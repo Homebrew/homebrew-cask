@@ -6,5 +6,5 @@ cask :v1 => 'gingr' do
   homepage 'http://harvest.readthedocs.org/en/latest/content/gingr.html'
   license :oss
 
-  app 'gingr-OSX64.app'
+  app 'gingr.app'
 end
