@@ -9,8 +9,7 @@ cask :v1 => 'path-finder' do
   app 'Path Finder.app'
 
   postflight do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.cocoatech.PathFinder', 'kNTMoveToApplicationsFolderAlertSuppress', '-bool', 'true'
+    suppress_move_to_applications :key => 'kNTMoveToApplicationsFolderAlertSuppress'
   end
 
   zap :delete => [
