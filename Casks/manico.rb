@@ -1,6 +1,6 @@
 cask :v1 => 'manico' do
-  version '1.4.2'
-  sha256 '5244586f0b7568e654175940a2052a4b746a1122ecea3eba08e4470c5b4f3095'
+  version '1.4.3'
+  sha256 '8116d5906d97d3725dd3b6ebcf19f992db093da4e236adee2b47b0ed6fc2d6ea'
 
   url "http://manico.im/static/Manico_#{version}.dmg"
   appcast 'http://manico.im/static/manico-appcast.xml',
