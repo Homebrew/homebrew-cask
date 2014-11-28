@@ -1,6 +1,6 @@
 cask :v1 => 'itools' do
-  version '2.4.2'
-  sha256 'd927a4e6d4f96b1641e48ce09c083d7cba92ba00694eb96a9907bd1c4a7b2a9e'
+  version '2.4.3'
+  sha256 '4d17f188c710649a952eb66b75989fe739e848fc98db1970bf98fca0ae3f8cf9'
 
   url "http://dl2.itools.hk/dl/iTools_#{version}.dmg"
   homepage 'http://pro.itools.cn/mac'
