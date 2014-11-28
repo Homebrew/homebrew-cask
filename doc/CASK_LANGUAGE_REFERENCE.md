@@ -172,18 +172,18 @@ end
 The first non-comment line in a Cask follows the form
 
 ```ruby
-cask <dsl-version> => '<cask-name>' do
+cask <dsl-version> => '<cask-token>' do
 ```
 
 `<dsl-version>` identifies the version of the Cask DSL, currently `:v1`.
 
-`<cask-name>` should match the Cask filename, without the `.rb` extension,
+`<cask-token>` should match the Cask filename, without the `.rb` extension,
 enclosed in single quotes.
 
 The header line is not entirely strict Ruby: no comma is required after
-the Cask name.
+the Cask token.
 
-There are currently some arbitrary limitations on Cask names which are
+There are currently some arbitrary limitations on Cask tokens which are
 in the process of being removed.  The Travis bot will catch any errors
 during the transition.
 
@@ -198,7 +198,7 @@ position at the end of the Cask:
 
 | method             | description |
 | ------------------ | ----------- |
-| `title`            | the Cask title
+| `token`            | the Cask token
 | `version`          | the Cask version
 | `homepage`         | the Cask homepage
 | `caskroom_path`    | the containing directory for all staged Casks, typically `/opt/homebrew-cask/Caskroom`
@@ -207,7 +207,7 @@ position at the end of the Cask:
 Example:
 
 ```ruby
-caveats "Using #{title} is hazardous to your health."
+caveats "Using #{token} is hazardous to your health."
 ```
 
 ### Caveats as a Block
@@ -386,7 +386,7 @@ using the information stored in the `tags` stanza.
 
 | key           | meaning
 | ------------- | -----------------------------
-| `:name`       | alternate name for the Cask. (example [smlnj.rb](../Casks/smlnj.rb))
+| `:name`       | the full name of the Cask. (example [smlnj.rb](../Casks/smlnj.rb))
 | `:vendor`     | the full-text official name of the producer of the software: an author or corporate name, as appropriate.  As the value is intended as a search target, commonly shared abbreviations such as `Dr.` or `Inc.` should be omitted. (example [google-chrome.rb](../Casks/google-chrome.rb))
 
 
@@ -856,7 +856,7 @@ define arbitrary Ruby variables and methods inside the Cask by creating a
 `Utils` namespace.  Example:
 
 ```ruby
-cask :v1 => 'appname' do
+cask :v1 => 'myapp' do
   module Utils
     def self.arbitrary_method
       ...

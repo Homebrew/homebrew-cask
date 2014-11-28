@@ -116,23 +116,23 @@ module Cask::Locations
       @default_tap = _tap
     end
 
-    def path(cask_title)
-      if cask_title.include?('/')
-        cask_with_tap = cask_title
+    def path(query)
+      if query.include?('/')
+        token_with_tap = query
       else
-        cask_with_tap = all_titles.detect { |tap_and_title|
-          user, repo, title = tap_and_title.split('/')
-          title == cask_title
-        }
+        token_with_tap = all_tokens.detect do |tap_and_token|
+          user, repo, token = tap_and_token.split('/')
+          token == query
+        end
       end
 
-      if cask_with_tap
-        user, repo, cask = cask_with_tap.split('/')
-        # bug/todo: handle old-style 1-slash form: phinze-cask/name
+      if token_with_tap
+        user, repo, token = token_with_tap.split('/')
+        # bug/todo: handle old-style 1-slash form: phinze-cask/token
         repo = 'homebrew-' + repo unless repo.match(/^homebrew-/)
-        tapspath.join(user, repo, 'Casks', "#{cask}.rb")
+        tapspath.join(user, repo, 'Casks', "#{token}.rb")
       else
-        tapspath.join(default_tap, 'Casks', "#{cask_title}.rb")
+        tapspath.join(default_tap, 'Casks', "#{query}.rb")
       end
     end
   end

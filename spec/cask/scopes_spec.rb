@@ -10,7 +10,7 @@ describe Cask::Scopes do
     after { fake_caskroom.rmtree }
 
     it 'returns a list installed Casks by loading Casks for all the dirs that exist in the caskroom' do
-      allow(Cask).to receive(:load) { |name| "loaded-#{name}" }
+      allow(Cask).to receive(:load) { |token| "loaded-#{token}" }
 
       fake_caskroom.join('cask-bar').mkdir
       fake_caskroom.join('cask-foo').mkdir

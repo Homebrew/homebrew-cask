@@ -20,8 +20,13 @@ class Cask::CaveatsDSL
   end
 
   # helpers
+  def token
+    @cask.token
+  end
+
+  # todo removeme transitional backward compatibility
   def title
-    @cask.title
+    @cask.token
   end
 
   def version
@@ -29,7 +34,7 @@ class Cask::CaveatsDSL
   end
 
   def caskroom_path
-    @cask.class.caskroom.join(title)
+    @cask.class.caskroom.join(token)
   end
 
   def staged_path

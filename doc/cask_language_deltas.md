@@ -41,7 +41,7 @@ cask :v1 => 'my-app' do
 ```
 
 Legacy rules for mapping Cask filenames to header class names are no longer
-needed.  The name `'my-app'` in the header corresponds directly to the
+needed.  The token `'my-app'` in the header corresponds directly to the
 filename `my-app.rb`.
 
 The term `:v1` identifies the DSL version (currently 1.0), and defines the
@@ -92,6 +92,7 @@ features which are available for the current Cask.
 | `link`                                      | [`app`](CASK_LANGUAGE_REFERENCE.md#app-stanza-details) (or sometimes `suite` or `artifact`)
 | `manual_installer(path)` (within `caveats`) | [`installer :manual`](CASK_LANGUAGE_REFERENCE.md#installer-stanza-details)
 | `nested_container`                          | [`container :nested =>`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+| `title` (in interpolations)                 | [`token`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
 | `uninstall :files`                          | [`uninstall :delete`](CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details)
 | `version 'latest'`                          | [`version :latest`](CASK_LANGUAGE_REFERENCE.md#required-stanzas)
 
@@ -140,7 +141,7 @@ For use in *eg* interpolation:
 
  * [`caskroom_path`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
  * [`staged_path`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
- * [`title`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
+ * [`token`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
 
 
 ## Caveats Mini-DSL (1.0)

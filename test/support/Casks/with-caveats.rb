@@ -12,7 +12,7 @@ cask :v1test => 'with-caveats' do
     EOS
   # do block is evaluated at install-time
   caveats do
-    "Cask title: #{title}"
+    "Cask token: #{token}"
   end
   # a do block may print and use a DSL
   caveats do

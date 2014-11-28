@@ -5,7 +5,7 @@ module Cask::Scopes
 
   module ClassMethods
     def all
-      all_titles.map { |c| self.load c }
+      all_tokens.map { |c| self.load c }
     end
 
     def all_tapped_cask_dirs
@@ -26,9 +26,9 @@ module Cask::Scopes
       @all_tapped_cask_dirs = nil
     end
 
-    def all_titles
-      cask_titles = all_tapped_cask_dirs.map { |d| Dir.glob d.join('*.rb') }.flatten
-      cask_titles.map { |c|
+    def all_tokens
+      cask_tokens = all_tapped_cask_dirs.map { |d| Dir.glob d.join('*.rb') }.flatten
+      cask_tokens.map { |c|
         # => "/usr/local/Library/Taps/caskroom/example-tap/Casks/example.rb"
         c.sub!(/\.rb$/, '')
         # => ".../example"
@@ -44,15 +44,18 @@ module Cask::Scopes
       installed_cask_dirs = Pathname.glob(caskroom.join("*"))
       # Cask.load has some DWIM which is slow.  Optimize here
       # by spoon-feeding Cask.load fully-qualified paths.
-      # todo: speed up Cask::Source::Tapped (main perf drag is calling Cask.all_titles repeatedly)
+      # todo: speed up Cask::Source::Tapped (main perf drag is calling Cask.all_tokens repeatedly)
       # todo: ability to specify expected source when calling Cask.load (minor perf benefit)
       installed_cask_dirs.map do |install_dir|
-        cask_name = install_dir.basename.to_s
+        cask_token = install_dir.basename.to_s
         path_to_cask = all_tapped_cask_dirs.find do |tap_dir|
-          tap_dir.join("#{cask_name}.rb").exist?
+          tap_dir.join("#{cask_token}.rb").exist?
         end
-        cask_name = path_to_cask.join("#{cask_name}.rb") if path_to_cask
-        Cask.load(cask_name)
+        if path_to_cask
+          Cask.load(path_to_cask.join("#{cask_token}.rb"))
+        else
+          Cask.load(cask_token)
+        end
       end
     end
   end

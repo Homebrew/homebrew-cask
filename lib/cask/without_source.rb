@@ -4,7 +4,7 @@ class Cask::WithoutSource < Cask
   end
 
   def to_s
-    "#{title} (!)"
+    "#{token} (!)"
   end
 
   def installed?

@@ -1,30 +1,37 @@
-# Cask Naming Reference
+# Cask Token Reference
 
-This document describes the algorithm implemented in the `cask_namer`
+This document describes the algorithm implemented in the `generate_cask_token`
 script, and covers detailed rules and exceptions which are not needed in
 most cases.
 
  * [Purpose](#purpose)
- * [Finding the Canonical Name of the Developer's Distribution](#finding-the-canonical-name-of-the-developers-distribution)
- * [Cask Name](#cask-name)
- * [Cask Naming Examples](#cask-naming-examples)
+ * [Finding the Simplified Name of the Vendor's Distribution](#finding-the-simplified-name-of-the-vendors-distribution)
+ * [Converting the Simplified Name To a Token](#converting-the-simplified-name-to-a-token)
+ * [Cask Filenames](#cask-filenames)
+ * [Cask Headers](#cask-headers)
+ * [Cask Token Examples](#cask-token-examples)
 
 ## Purpose
 
 The purpose of these stringent conventions is to
 
- * unambiguously boil down the name of the software into a unique token
-   suitable for use as a filename
+ * unambiguously boil down the name of the software into a unique identifier
  * minimize renaming events
  * prevent duplicate submissions
 
-Details of various names and brands will inevitably be lost in the
-conversion to a Cask name.  To capture the vendor's full name for a
+The token itself should be
+
+ * suitable for use as a filename
+ * mnemonic
+
+Details of software names and brands will inevitably be lost in the
+conversion to a minimal token.  To capture the vendor's full name for a
 distribution, use [`tags :name`](CASK_LANGUAGE_REFERENCE.md#tags-stanza-details) within a Cask.
+`tags :name` accepts an unrestricted UTF-8 string.
 
-## Finding the Canonical Name of the Developer's Distribution
+## Finding the Simplified Name of the Vendor's Distribution
 
-### Canonical Names of Apps
+### Simplified Names of Apps
 
   * Start with the exact name of the Application bundle as it appears on disk,
     such as `Google Chrome.app`.
@@ -34,7 +41,7 @@ distribution, use [`tags :name`](CASK_LANGUAGE_REFERENCE.md#tags-stanza-details)
 
   * Remove `.app` from the end.
 
-  * Remove from the end: the string "app", if the developer styles the name
+  * Remove from the end: the string "app", if the vendor styles the name
     like "Software App.app".  Exception: when "app" is an inseparable part of the
     name, without which the name would be inherently nonsensical, as in [rcdefaultapp.rb](../Casks/rcdefaultapp.rb).
 
@@ -66,7 +73,7 @@ distribution, use [`tags :name`](CASK_LANGUAGE_REFERENCE.md#tags-stanza-details)
   * If the result of that process is a generic term, such as "Macintosh Installer",
     try prepending the name of the vendor or developer, followed by a hyphen.
     If that doesn't work, then just create the best name you can, based on the
-    developer's web page.
+    vendor's web page.
 
   * If the result conflicts with the name of an existing Cask, make yours unique
     by prepending the name of the vendor or developer, followed by a hyphen.
@@ -101,30 +108,31 @@ distribution, use [`tags :name`](CASK_LANGUAGE_REFERENCE.md#tags-stanza-details)
   * When there is no vendor localization string, romanize the name by
     transliteration or decomposition.
 
-  * As a last resort, translate the name of the app bundle.
+  * As a last resort, translate the name of the app bundle into English.
 
-### Canonical Names of `pkg`-based Installers
+### Simplified Names of `pkg`-based Installers
 
-  * The Canonical Name of a `pkg` may be more tricky to determine than that
+  * The Simplified Name of a `pkg` may be more tricky to determine than that
     of an App.  If a `pkg` installs an App, then use that App name with the
     rules above.  If not, just create the best name you can, based on the
-    developer's web page.
+    vendor's web page.
 
-### Canonical Names of non-App Software
+### Simplified Names of non-App Software
 
-  * Currently, naming rules are not well-defined for Preference Panes,
-    QuickLook plugins, and other types of software installable by
-    homebrew-cask.  Just create the best name you can, based on the filename
-    on disk or the developer's web page.  Watch out for duplicates.
+  * Currently, rules for generating a token are not well-defined for
+    Preference Panes, QuickLook plugins, and several other types of software
+    installable by homebrew-cask.  Just create the best name you can, based
+    on the filename on disk or the vendor's web page.  Watch out for
+    duplicates.
 
-    Non-app Cask names should become more standardized in the future.
+    Non-app tokens should become more standardized in the future.
 
-## Cask Name
+## Converting the Simplified Name To a Token
 
-The "Cask name" is the primary identifier for a package in our project. It's
-the token users will refer to when operating on the Cask.
+The token is the primary identifier for a package in our project. It's
+the unique string users refer to when operating on the Cask.
 
-To convert the App's canonical name (above) to a Cask name:
+To convert the App's Simplified Name (above) to a token:
 
   * convert all letters to lower case
   * expand the `+` symbol into a separated English word: `-plus-`
@@ -136,22 +144,31 @@ To convert the App's canonical name (above) to a Cask name:
   * delete a leading hyphen
   * a leading number gets spelled out into English: `1password` becomes `onepassword`
 
-Casks are stored in a Ruby file matching their name.  If possible, avoid
-creating Cask files which differ only by the placement of hyphens.
+We avoid defining Cask tokens in the repository which differ only by the
+placement of hyphens.  Prepend the vendor name if needed to disambiguate
+the token.
 
+## Cask Filenames
 
-## Cask Naming Examples
+Casks are stored in a Ruby file named after the token, with the file
+extension `.rb`.
 
-These illustrate most of the naming rules:
+## Cask Headers
 
-App Name on Disk       | Canonical App Name | Cask Name        | Cask File
------------------------|--------------------|------------------|----------------------
-`Audio Hijack Pro.app` | Audio Hijack Pro   | audio-hijack-pro | `audio-hijack-pro.rb`
-`VLC.app`              | VLC                | vlc              | `vlc.rb`
-`BetterTouchTool.app`  | BetterTouchTool    | bettertouchtool  | `bettertouchtool.rb`
-`LPK25 Editor.app`     | LPK25 Editor       | lpk25-editor     | `lpk25-editor.rb`
-`Sublime Text 2.app`   | Sublime Text       | sublime-text     | `sublime-text.rb`
-`1Password.app`        | 1Password          | onepassword      | `onepassword.rb`
+The token is also given in the header line for each Cask.
+
+## Cask Token Examples
+
+These illustrate most of the rules for generating a token:
+
+App Name on Disk       | Simplified App Name | Cask Token       | Filename
+-----------------------|---------------------|------------------|----------------------
+`Audio Hijack Pro.app` | Audio Hijack Pro    | audio-hijack-pro | `audio-hijack-pro.rb`
+`VLC.app`              | VLC                 | vlc              | `vlc.rb`
+`BetterTouchTool.app`  | BetterTouchTool     | bettertouchtool  | `bettertouchtool.rb`
+`LPK25 Editor.app`     | LPK25 Editor        | lpk25-editor     | `lpk25-editor.rb`
+`Sublime Text 2.app`   | Sublime Text        | sublime-text     | `sublime-text.rb`
+`1Password.app`        | 1Password           | onepassword      | `onepassword.rb`
 
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3
