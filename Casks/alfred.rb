@@ -10,7 +10,6 @@ cask :v1 => 'alfred' do
   app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 
   postflight do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.runningwithcrayons.alfred-2', 'suppressMoveToApplications', '-bool', 'true'
+    suppress_move_to_applications :key => 'suppressMoveToApplications'
   end
 end
