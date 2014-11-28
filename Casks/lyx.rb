@@ -1,6 +1,6 @@
-class Lyx < Cask
-  version '2.1.2'
-  sha256 '2230c29e1ac0334b2c58bf072c28bbd9a9e2c98eaab90adf04d25f9e12dd3730'
+cask :v1 => 'lyx' do
+  version '2.1.2.2'
+  sha256 '82047ac2aec85f422d94e3f3ea88ffb911264499c09fe9eee341f10537495990'
 
   url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt4-x86_64-cocoa.dmg"
   gpg "#{url}.sig",

@@ -1,4 +1,4 @@
-class Coconutbattery < Cask
+cask :v1 => 'coconutbattery' do
 
   if MacOS.version < :leopard
     version '2.6.6'

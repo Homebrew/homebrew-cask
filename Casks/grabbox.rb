@@ -1,4 +1,4 @@
-class Grabbox < Cask
+cask :v1 => 'grabbox' do
   version '0.4.2'
   sha256 'e6f92efce8585b58d1b5d9afc4a2187e07bf76c14961aff1b83a8422fb342f2f'
 

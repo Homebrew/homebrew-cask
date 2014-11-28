@@ -1,4 +1,4 @@
-class CarlsonMinot < Cask
+cask :v1 => 'carlson-minot' do
   version '2013.05-24'
   sha256 '1c41265f1a61e8594e9bcd702de0a4e7ed786394c91764e4d7495a6220a95b51'
 
@@ -7,6 +7,7 @@ class CarlsonMinot < Cask
   license :unknown
 
   pkg "arm-#{version}-arm-none-linux-gnueabi.osx.intelx86.bin.pkg"
+
   uninstall :pkgutil => 'com.carlson-minot.arm-*',
             :delete  => '/usr/local/carlson-minot'
   caveats do

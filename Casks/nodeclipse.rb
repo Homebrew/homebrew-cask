@@ -1,4 +1,4 @@
-class Nodeclipse < Cask
+cask :v1 => 'nodeclipse' do
   version '0.11-preview'
   sha256 '01f630446313cb981ce2ee9b934977cfdbf318e09761dee244a3256f9a559003'
 
@@ -7,7 +7,7 @@ class Nodeclipse < Cask
   license :oss
 
   preflight do
-    system '/bin/mv', '--', destination_path.join('eclipse/Eclipse.app'), destination_path.join('eclipse/Nodeclipse.app')
+    system '/bin/mv', '--', staged_path.join('eclipse/Eclipse.app'), staged_path.join('eclipse/Nodeclipse.app')
   end
   app 'eclipse/Nodeclipse.app'
 end

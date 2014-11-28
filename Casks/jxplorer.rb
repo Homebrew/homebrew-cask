@@ -1,4 +1,4 @@
-class Jxplorer < Cask
+cask :v1 => 'jxplorer' do
   version '3.3.1'
   sha256 'b51995a93203590e6690d8ad54f73cd7af1c9f2bef6219adca79c58eda71d860'
 
@@ -8,6 +8,6 @@ class Jxplorer < Cask
 
   app "jxplorer-#{version}.app"
   postflight do
-    system '/bin/chmod', '--', 'a+x', "#{destination_path}/jxplorer-#{version}.app/Contents/MacOS/jxplorer"
+    system '/bin/chmod', '--', 'a+x', "#{staged_path}/jxplorer-#{version}.app/Contents/MacOS/jxplorer"
   end
 end

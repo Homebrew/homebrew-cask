@@ -1,15 +1,15 @@
-class IntellijIdea < Cask
-  version '14'
-  sha256 '9695bedfe145d70010b853cc67d7dc07bf2768e38b5b9034d1f6a00b0b9a15a7'
+cask :v1 => 'intellij-idea' do
+  version '14.0.1'
+  sha256 'd2883c183b0dec1466c7b2bb3b105af48884da88c580207402a4b1a0d0c0a2d2'
 
   url "http://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
   homepage 'https://www.jetbrains.com/idea/index.html'
-  license :oss
+  license :commercial
 
   app 'IntelliJ IDEA 14.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/IntelliJ IDEA 14.app/Contents/Info.plist"
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/IntelliJ IDEA 14.app/Contents/Info.plist"
   end
 
   zap :delete => [

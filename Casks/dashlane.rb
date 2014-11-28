@@ -1,4 +1,4 @@
-class Dashlane < Cask
+cask :v1 => 'dashlane' do
   version '2.4.1.62949'
   sha256 '97bca51c71ba32e5fa13160a77b9a12824e2e44990958d9831263936ed3f1f40'
 

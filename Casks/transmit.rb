@@ -1,4 +1,4 @@
-class Transmit < Cask
+cask :v1 => 'transmit' do
   version '4.4.8'
   sha256 '3547a5e8baabffd18c4e21c766362cd4295d878d391ce48bb8f8f4d6eabd9ef9'
 
@@ -8,6 +8,7 @@ class Transmit < Cask
   license :unknown
 
   app 'Transmit.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.panic.Transmit.plist',
                   '~/Library/Application Support/Transmit',

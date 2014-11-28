@@ -1,4 +1,4 @@
-class BlackvueViewer < Cask
+cask :v1 => 'blackvue-viewer' do
   version '1.25'
   sha256 '80135f4d537a5ce67ed465a58b29e4701c6f2672c7b012ab6f6bea2c4d884fcc'
 

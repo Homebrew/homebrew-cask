@@ -1,4 +1,4 @@
-class Chronosync < Cask
+cask :v1 => 'chronosync' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Chronosync < Cask
   license :unknown
 
   pkg 'Install.pkg'
+
   uninstall :pkgutil => 'com.econtechnologies.pkg.ChronoSyncApplication'
 end

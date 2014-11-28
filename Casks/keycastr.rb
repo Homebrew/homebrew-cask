@@ -1,15 +1,17 @@
-class Keycastr < Cask
-  version '0.8.0'
-  sha256 'ecf59a2e46a8ca450c12f426a4d41000de1c3010a5c46fe12f23fdc647f3f1e7'
+cask :v1 => 'keycastr' do
+  version '0.8.2-bezel'
+  sha256 '4b613caf54e474c3b5a6ad802252787ce0b3c3451b5777c7a66214bd0bb53905'
 
-  url "https://github.com/downloads/RichardBronosky/keycastr/keycastr_#{version}.dmg"
-  homepage 'https://github.com/sdeken/keycastr'
+  # github.com/lqez is the official download host per the vendor homepage
+  url "https://github.com/lqez/keycastr/releases/download/#{version}/KeyCastr.zip"
+  homepage 'https://github.com/keycastr/keycastr'
   license :oss
 
   app 'KeyCastr.app'
 
   caveats <<-EOS.undent
     For OSX 10.9 or later, #{title} requires that you "Enable access for assistive devices".
+    The app must be dragged into the Accessibility list in System Preferences.
     See https://github.com/sdeken/keycastr/issues/5
   EOS
 end

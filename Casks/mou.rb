@@ -1,13 +1,14 @@
-class Mou < Cask
+cask :v1 => 'mou' do
   version :latest
   sha256 :no_check
 
-  url 'http://mouapp.com/download/Mou.zip'
-  appcast 'http://mouapp.com/up/updates.xml'
-  homepage 'http://mouapp.com/'
+  url 'http://25.io/mou/download/Mou.zip'
+  appcast 'http://25.io/mou/up/updates.xml'
+  homepage 'http://25.io/mou/'
   license :unknown
 
   app 'Mou.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.mouapp.Mou.plist',
                   '~/Library/Preferences/com.mouapp.Mou.LSSharedFileList.plist',

@@ -1,4 +1,4 @@
-class MacsFanControl < Cask
+cask :v1 => 'macs-fan-control' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Inky < Cask
+cask :v1 => 'inky' do
   version :latest
   sha256 :no_check
 

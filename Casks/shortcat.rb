@@ -1,4 +1,4 @@
-class Shortcat < Cask
+cask :v1 => 'shortcat' do
   version '0.7.4'
   sha256 '2f637b6ca13d7ea7f2635d617045695125a5a0ad6c20e913e9ea148ff9bed242'
 

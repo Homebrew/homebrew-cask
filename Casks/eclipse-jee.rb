@@ -1,4 +1,4 @@
-class EclipseJee < Cask
+cask :v1 => 'eclipse-jee' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Divvy < Cask
+cask :v1 => 'divvy' do
   version :latest
   sha256 :no_check
 
@@ -8,6 +8,7 @@ class Divvy < Cask
   license :unknown
 
   app 'Divvy.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.mizage.direct.Divvy.plist',
                   '~/Library/Preferences/com.mizage.Divvy.plist',

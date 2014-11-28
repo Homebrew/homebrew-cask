@@ -1,4 +1,4 @@
-class Shades < Cask
+cask :v1 => 'shades' do
   version :latest
   sha256 :no_check
 

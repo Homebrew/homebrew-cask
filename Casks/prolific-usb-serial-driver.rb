@@ -1,4 +1,4 @@
-class ProlificUsbSerialDriver < Cask
+cask :v1 => 'prolific-usb-serial-driver' do
   version '1.5.1'
   sha256 'b6658605409e9aa63bca7a1ac94c989cc01cdf375f6881ade0ed5bb9694c22cc'
 
@@ -7,6 +7,7 @@ class ProlificUsbSerialDriver < Cask
   license :unknown
 
   pkg "PL2303_MacOSX_v#{version}.pkg"
+
   uninstall :pkgutil => 'com.prolific.prolificUsbserialCableDriverV*.ProlificUsbSerial.pkg',
             :kext => 'com.prolific.driver.PL2303'
 end

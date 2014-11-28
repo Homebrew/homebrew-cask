@@ -1,4 +1,4 @@
-class Gamesalad < Cask
+cask :v1 => 'gamesalad' do
   version '0.14.4.1-beta'
   sha256 '05f68db92cee37fedffe23a2950fa55c375fd53acd7d19ae8fd42884345814e7'
 

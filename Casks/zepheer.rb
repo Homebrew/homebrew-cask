@@ -1,4 +1,4 @@
-class Zepheer < Cask
+cask :v1 => 'zepheer' do
   version :latest
   sha256 :no_check
 

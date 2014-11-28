@@ -1,4 +1,4 @@
-class Rust < Cask
+cask :v1 => 'rust' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Rust < Cask
   license :unknown
 
   pkg 'rust-nightly-x86_64-apple-darwin.pkg'
+
   uninstall :pkgutil => 'org.rust-lang.rust'
 end

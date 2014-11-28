@@ -1,4 +1,4 @@
-class Img2icns < Cask
+cask :v1 => 'img2icns' do
   version :latest
   sha256 :no_check
 

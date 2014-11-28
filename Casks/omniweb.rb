@@ -1,4 +1,4 @@
-class Omniweb < Cask
+cask :v1 => 'omniweb' do
   version '5.11.2'
   sha256 'f1179f1dcf96ed7b2732a18049c79c4043131b267deabb06b5a10c19f1ce750f'
 

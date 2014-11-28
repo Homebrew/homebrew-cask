@@ -179,8 +179,7 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
     ohai "Running #{stanza} process for #{@cask}; your password may be necessary"
 
     directives_set.each do |directives|
-      # todo remove backward-compatible :files
-      unknown_keys = directives.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :files, :delete, :trash, :rmdir]
+      unknown_keys = directives.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :delete, :trash, :rmdir]
       unless unknown_keys.empty?
         opoo %Q{Unknown arguments to #{stanza} -- #{unknown_keys.inspect}. Running "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" will likely fix it.}
       end
@@ -207,8 +206,8 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
       Array(directives[:launchctl]).each do |service|
         ohai "Removing launchctl service #{service}"
         [false, true].each do |with_sudo|
-          xml_status = @command.run('/bin/launchctl', :args => ['list', '-x', service], :sudo => with_sudo).stdout
-          if %r{^<\?xml}.match(xml_status)
+          plist_status = @command.run('/bin/launchctl', :args => ['list', service], :sudo => with_sudo, :print_stderr => false).stdout
+          if %r{^\{}.match(plist_status)
             @command.run('/bin/launchctl',  :args => ['unload', '-w', '--', service], :sudo => with_sudo)
             sleep 1
             @command.run!('/bin/launchctl', :args => ['remove', service], :sudo => with_sudo)
@@ -304,17 +303,6 @@ class Cask::Artifact::UninstallBase < Cask::Artifact::Base
         path_slice = self.class.expand_path_strings(path_slice) if expand_tilde
         path_slice = self.class.remove_relative_path_strings(:trash, path_slice)
         path_slice = self.class.remove_undeletable_path_strings(:trash, path_slice)
-        @command.run!('/bin/rm', :args => path_slice.unshift('-rf', '--'), :sudo => true)
-      end
-    end
-
-    # todo: remove support for deprecated :files both here and elsewhere
-    directives_set.select{ |h| h.key?(:files) }.each do |directives|
-      Array(directives[:files]).flatten.each_slice(PATH_ARG_SLICE_SIZE) do |path_slice|
-        ohai "Removing files: #{path_slice.utf8_inspect}"
-        path_slice = self.class.expand_path_strings(path_slice) if expand_tilde
-        path_slice = self.class.remove_relative_path_strings(:delete, path_slice) # :delete for messages
-        path_slice = self.class.remove_undeletable_path_strings(:delete, path_slice)
         @command.run!('/bin/rm', :args => path_slice.unshift('-rf', '--'), :sudo => true)
       end
     end

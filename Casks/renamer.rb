@@ -1,4 +1,4 @@
-class Renamer < Cask
+cask :v1 => 'renamer' do
   version :latest
   sha256 :no_check
 

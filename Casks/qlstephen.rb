@@ -1,4 +1,4 @@
-class Qlstephen < Cask
+cask :v1 => 'qlstephen' do
   version :latest
   sha256 :no_check
 

@@ -1,10 +1,10 @@
-class Ubersicht < Cask
-  version '0.2.7'
-  sha256 '84a104490c06806205a30008472df92a983855f2bf8fba55ad4312d53518a362'
+cask :v1 => 'ubersicht' do
+  version '0.3.13'
+  sha256 'a5cf3d806392fcb275c4d6709799ddf8de5c19ef6ab1dfb0d5aeac150eed59d4'
 
   url "http://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
   homepage 'http://tracesof.net/uebersicht'
-  license :unknown
+  license :gpl
 
   app 'Übersicht.app'
 end

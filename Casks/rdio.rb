@@ -1,4 +1,4 @@
-class Rdio < Cask
+cask :v1 => 'rdio' do
   version :latest
   sha256 :no_check
 

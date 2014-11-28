@@ -1,4 +1,4 @@
-class Iphoney < Cask
+cask :v1 => 'iphoney' do
   version '1.2'
   sha256 'f5bffb663944eea228bb9acb315ac23e8f95b6562ae71d0cb031ecc046f72ff4'
 

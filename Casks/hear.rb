@@ -1,4 +1,4 @@
-class Hear < Cask
+cask :v1 => 'hear' do
   version '1.1.6'
   sha256 'e7b5e5782020be407f456e59167770b07afc97afb0f1f7e9d226c00c524b106b'
 

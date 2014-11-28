@@ -1,4 +1,4 @@
-class Filezilla < Cask
+cask :v1 => 'filezilla' do
   version '3.9.0.6'
   sha256 '9486be1f5dec41df8ef1b60893ca612e6791b8d98609c6b9e42ced977210d15b'
 

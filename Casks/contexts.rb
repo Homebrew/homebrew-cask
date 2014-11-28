@@ -1,4 +1,4 @@
-class Contexts < Cask
+cask :v1 => 'contexts' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Noiz2sa < Cask
+cask :v1 => 'noiz2sa' do
   version :latest
   sha256 :no_check
 

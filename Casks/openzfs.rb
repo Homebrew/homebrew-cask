@@ -1,4 +1,4 @@
-class Openzfs < Cask
+cask :v1 => 'openzfs' do
   version '1.3.0'
   sha256 'a0030181a91ecace2d31cfab26d10b2284602e2b442f71a344a9da11165cb6c7'
 
@@ -7,5 +7,6 @@ class Openzfs < Cask
   license :unknown
 
   pkg "OpenZFS on OS X #{version} Mavericks or higher.pkg"
+
   uninstall :pkgutil => 'net.lundman.openzfs.*'
 end

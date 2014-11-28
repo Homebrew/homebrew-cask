@@ -1,4 +1,4 @@
-class Kugoumusic < Cask
+cask :v1 => 'kugoumusic' do
   version :latest
   sha256 :no_check
 

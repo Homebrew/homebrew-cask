@@ -1,4 +1,4 @@
-class Mailplane < Cask
+cask :v1 => 'mailplane' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Mailplane < Cask
   license :unknown
 
   app 'Mailplane 3.app'
+
   zap :delete => '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
 end

@@ -1,4 +1,4 @@
-class Macterm < Cask
+cask :v1 => 'macterm' do
   version :latest
   sha256 :no_check
 

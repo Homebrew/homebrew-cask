@@ -1,4 +1,4 @@
-class NikePlusConnect < Cask
+cask :v1 => 'nike-plus-connect' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,9 @@ class NikePlusConnect < Cask
   license :unknown
 
   pkg 'Nike+Connect_new.pkg'
-  uninstall :pkgutil => 'com.nike.nikeplusconnect.*'
-  uninstall :pkgutil => 'com.nike.sportwatch'
+
+  uninstall :pkgutil => [
+                         'com.nike.nikeplusconnect.*',
+                         'com.nike.sportwatch',
+                        ]
 end

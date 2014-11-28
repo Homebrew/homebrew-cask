@@ -1,4 +1,4 @@
-class DeliciousLibrary < Cask
+cask :v1 => 'delicious-library' do
   version :latest
   sha256 :no_check
 

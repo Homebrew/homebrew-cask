@@ -1,4 +1,4 @@
-class Spark < Cask
+cask :v1 => 'spark' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Spark < Cask
   license :unknown
 
   app 'Spark.app'
+
   zap :delete => '~/Library/Application Support/Spark'
 end

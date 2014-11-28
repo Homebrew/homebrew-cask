@@ -1,4 +1,4 @@
-class Steam < Cask
+cask :v1 => 'steam' do
   version :latest
   sha256 :no_check
 

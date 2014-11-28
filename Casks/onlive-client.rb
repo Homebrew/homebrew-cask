@@ -1,4 +1,4 @@
-class OnliveClient < Cask
+cask :v1 => 'onlive-client' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class OnliveClient < Cask
   license :unknown
 
   pkg 'mac.pkg'
+
   uninstall :pkgutil => 'com.onlive.OnLiveClient.pkg'
 end

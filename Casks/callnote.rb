@@ -1,4 +1,4 @@
-class Callnote < Cask
+cask :v1 => 'callnote' do
   version '2.3.7'
   sha256 '968c61f2cd1e71f91ec45b9f69023765210010e3d28256eeb65942ee075e756b'
 
@@ -7,5 +7,6 @@ class Callnote < Cask
   license :unknown
 
   pkg "callnote-premium-install-#{version}.pkg"
+
   uninstall :pkgutil => 'callnote-pro'
 end

@@ -1,4 +1,4 @@
-class Slimboat < Cask
+cask :v1 => 'slimboat' do
   version :latest
   sha256 :no_check
 

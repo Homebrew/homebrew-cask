@@ -1,6 +1,6 @@
-class Bluej < Cask
-  version '3.1.1'
-  sha256 '63be0772de6d35d3627db9c8ea1b26efbee08ba3e105ca51fd3a9809f09f8c39'
+cask :v1 => 'bluej' do
+  version '3.1.4'
+  sha256 '507ce17037010e7a52684f97b32a07a391aca8fb1fa194748d35036242c87f80'
 
   url "http://www.bluej.org/download/files/BlueJ-#{version.gsub('.', '')}.zip"
   homepage 'http://www.bluej.org'

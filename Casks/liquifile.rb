@@ -1,4 +1,4 @@
-class Liquifile < Cask
+cask :v1 => 'liquifile' do
   version :latest
   sha256 :no_check
 

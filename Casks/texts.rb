@@ -1,4 +1,4 @@
-class Texts < Cask
+cask :v1 => 'texts' do
   version '0.21'
   sha256 '45bc3294716e7f8624495ee370e949ddc5f0d9bd11d01acf8e6b9c1435ebb989'
 

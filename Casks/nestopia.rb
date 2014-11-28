@@ -1,4 +1,4 @@
-class Nestopia < Cask
+cask :v1 => 'nestopia' do
   version :latest
   sha256 :no_check
 

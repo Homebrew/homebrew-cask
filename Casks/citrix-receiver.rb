@@ -1,4 +1,4 @@
-class CitrixReceiver < Cask
+cask :v1 => 'citrix-receiver' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,7 @@ class CitrixReceiver < Cask
   license :unknown
 
   pkg 'Install Citrix Receiver.pkg'
+
   uninstall :launchctl => [
                            'com.citrix.AuthManager_Mac',
                            'com.citrix.ReceiverHelper',

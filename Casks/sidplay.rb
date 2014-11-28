@@ -1,4 +1,4 @@
-class Sidplay < Cask
+cask :v1 => 'sidplay' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Groovesquid < Cask
+cask :v1 => 'groovesquid' do
   version :latest
   sha256 :no_check
 

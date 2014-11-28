@@ -1,4 +1,4 @@
-class NavicatForSqlServer < Cask
+cask :v1 => 'navicat-for-sql-server' do
   version '11.1.5'
   sha256 '6f7273798585129ba58a0d8f5eb8cb724f3f2dfd3f977ac408cd801c5be28bfc'
 

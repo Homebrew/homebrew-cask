@@ -1,4 +1,4 @@
-class YubikeyPersonalizationGui < Cask
+cask :v1 => 'yubikey-personalization-gui' do
   version '3.1.14'
   sha256 'f0c3d016b90f54e69525d2fec4dee89df499862e4a8a1ad3323e0fca57287408'
 
@@ -7,5 +7,6 @@ class YubikeyPersonalizationGui < Cask
   license :unknown
 
   pkg "yubikey-personalization-gui-#{version}.pkg"
+
   uninstall :pkgutil => 'com.yubico.YKPersonalization'
 end

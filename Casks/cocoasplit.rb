@@ -1,4 +1,4 @@
-class Cocoasplit < Cask
+cask :v1 => 'cocoasplit' do
   version :latest
   sha256 :no_check
 

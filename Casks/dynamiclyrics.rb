@@ -1,4 +1,4 @@
-class Dynamiclyrics < Cask
+cask :v1 => 'dynamiclyrics' do
   version '2.1.1320'
   sha256 'eb00070104a441561482144ab6cb9a7de60b7a82e58db1329c813087b61afad6'
 

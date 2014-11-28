@@ -1,4 +1,4 @@
-class Postbox < Cask
+cask :v1 => 'postbox' do
   version :latest
   sha256 :no_check
 

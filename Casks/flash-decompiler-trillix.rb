@@ -1,4 +1,4 @@
-class FlashDecompilerTrillix < Cask
+cask :v1 => 'flash-decompiler-trillix' do
   version :latest
   sha256 :no_check
 

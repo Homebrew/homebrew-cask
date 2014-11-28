@@ -1,4 +1,4 @@
-class PrivateInternetAccess < Cask
+cask :v1 => 'private-internet-access' do
   version :latest
   sha256 :no_check
 

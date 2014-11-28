@@ -1,4 +1,4 @@
-class Servetome < Cask
+cask :v1 => 'servetome' do
   version '3.9.0.3053'
   sha256 '87bf1184b7656a96088b25880e7e1c772f30d8dfa1e602f9b43ccbdd0608fdf2'
 

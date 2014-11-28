@@ -1,4 +1,4 @@
-class CrosspackAvr < Cask
+cask :v1 => 'crosspack-avr' do
   version '2013-12-16'
   sha256 '959f9bf00429a0e46e649a14d7891cb4086c9cf2d032d9f66899d6efbb628f6e'
 

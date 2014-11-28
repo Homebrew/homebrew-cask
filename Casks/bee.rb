@@ -1,4 +1,4 @@
-class Bee < Cask
+cask :v1 => 'bee' do
   version :latest
   sha256 :no_check
 

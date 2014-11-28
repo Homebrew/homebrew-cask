@@ -1,4 +1,4 @@
-class Appfresh < Cask
+cask :v1 => 'appfresh' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class VoxPreferencesPane < Cask
+cask :v1 => 'vox-preferences-pane' do
   version :latest
   sha256 :no_check
 

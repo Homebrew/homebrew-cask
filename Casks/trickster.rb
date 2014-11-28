@@ -1,4 +1,4 @@
-class Trickster < Cask
+cask :v1 => 'trickster' do
   version '2.2.1'
   sha256 '6a6531e8c8c7672bf422c496a478ee26f184f1c63036d7f1125913d69a067292'
 

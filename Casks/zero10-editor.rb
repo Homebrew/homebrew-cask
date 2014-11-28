@@ -1,4 +1,4 @@
-class Zero10Editor < Cask
+cask :v1 => 'zero10-editor' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Zero10Editor < Cask
   license :unknown
 
   pkg '010 Editor.pkg'
+
   uninstall :pkgutil => 'com.SweetScape.010Editor.pkg'
 end

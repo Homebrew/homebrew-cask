@@ -1,4 +1,4 @@
-class KeyboardCleaner < Cask
+cask :v1 => 'keyboard-cleaner' do
   version :latest
   sha256 :no_check
 

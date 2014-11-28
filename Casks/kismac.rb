@@ -1,4 +1,4 @@
-class Kismac < Cask
+cask :v1 => 'kismac' do
   version '0.3.3'
   sha256 'd48f307c1c46a1d1a6b4465d653cf417e583bc09b7ea76d21183068066bc49bb'
 

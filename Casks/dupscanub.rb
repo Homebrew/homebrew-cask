@@ -1,4 +1,4 @@
-class Dupscanub < Cask
+cask :v1 => 'dupscanub' do
   version '2.4.1'
   sha256 'd9c318d017012266461c8705bb9f9ebe23f052b4e794ace950f7edee8836f614'
 

@@ -1,4 +1,4 @@
-class DevonthinkPro < Cask
+cask :v1 => 'devonthink-pro' do
   version '2.8'
   sha256 'ac9521a0017643f1305d24f7d1b8cdd19ab6dde78319ae9a862aae1b1fde2521'
 

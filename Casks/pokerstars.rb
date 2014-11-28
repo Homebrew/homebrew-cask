@@ -1,4 +1,4 @@
-class Pokerstars < Cask
+cask :v1 => 'pokerstars' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,7 @@ class Pokerstars < Cask
   license :unknown
 
   app 'PokerStars.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.pokerstars.user.ini',
                   '~/Library/Preferences/com.pokerstars.PokerStars.plist',

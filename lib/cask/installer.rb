@@ -77,8 +77,8 @@ class Cask::Installer
   def extract_primary_container
     odebug "Extracting primary container"
     FileUtils.mkdir_p @cask.staged_path
-    container = if @cask.container_type
-       Cask::Container.from_type(@cask.container_type)
+    container = if @cask.container and @cask.container.type
+       Cask::Container.from_type(@cask.container.type)
     else
        Cask::Container.for_path(@downloaded_path, @command)
     end
@@ -100,9 +100,12 @@ class Cask::Installer
   end
 
   def formula_dependencies
-    unless @cask.depends_on_formula.empty?
+    # todo The Cask::DependsOn object needs to be more friendly.
+    #      Currently @cask.depends_on.formula raises an exception
+    #      if :formula was not set.
+    if @cask.depends_on and not @cask.depends_on.formula.empty?
       ohai 'Installing Formula dependencies from Homebrew'
-      @cask.depends_on_formula.each do |dep_name|
+      @cask.depends_on.formula.each do |dep_name|
         print "#{dep_name} ... "
         installed = @command.run(HOMEBREW_BREW_FILE,
                                  :args => ['list', '--versions', dep_name],

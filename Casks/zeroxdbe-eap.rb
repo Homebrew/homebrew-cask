@@ -1,4 +1,4 @@
-class ZeroxdbeEap < Cask
+cask :v1 => 'zeroxdbe-eap' do
   version '138.2221.3'
   sha256 'fc88c53d55fa13330421aebf77c0fb136eaa3e6ccff8e08ed577e51c53195fba'
 
@@ -9,6 +9,6 @@ class ZeroxdbeEap < Cask
   app '0xDBE EAP.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/0xDBE\ EAP.app/Contents/Info.plist"
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/0xDBE\ EAP.app/Contents/Info.plist"
   end
 end

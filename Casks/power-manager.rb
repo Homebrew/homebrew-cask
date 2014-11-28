@@ -1,4 +1,4 @@
-class PowerManager < Cask
+cask :v1 => 'power-manager' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class PowerManager < Cask
   license :unknown
 
   pkg 'DssW Power Manager.pkg'
+
   uninstall :script => '/Library/Application Support/Power Manager/Remove Power Manager.app/Contents/Resources/Remove Power Manager.sh'
 end

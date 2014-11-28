@@ -1,4 +1,4 @@
-class NetbeansCpp < Cask
+cask :v1 => 'netbeans-cpp' do
   version '8.0.1'
   sha256 '724e3471329ae507dcd2127528cddbbdec5f0e104ee9a510fc49131196d6ab33'
 
@@ -7,5 +7,6 @@ class NetbeansCpp < Cask
   license :unknown
 
   pkg "NetBeans #{version}.mpkg"
+
   uninstall :delete => '/Applications/NetBeans'
 end

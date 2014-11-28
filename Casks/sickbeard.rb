@@ -1,4 +1,4 @@
-class Sickbeard < Cask
+cask :v1 => 'sickbeard' do
   version '13.05.25'
   sha256 'c6ce8b987447d074622d5ee0c96ee6a6da121f5a43252a552e0fc6f5d1cc0550'
 

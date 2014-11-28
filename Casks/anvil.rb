@@ -1,4 +1,4 @@
-class Anvil < Cask
+cask :v1 => 'anvil' do
   version :latest
   sha256 :no_check
 

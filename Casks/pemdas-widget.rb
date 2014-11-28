@@ -1,4 +1,4 @@
-class PemdasWidget < Cask
+cask :v1 => 'pemdas-widget' do
   version '3.0'
   sha256 '7a5566d8a45a82fd64ecedc7fa5c00d9ec82f530f7065e18768d7da76b6e55af'
 

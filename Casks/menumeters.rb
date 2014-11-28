@@ -1,4 +1,4 @@
-class Menumeters < Cask
+cask :v1 => 'menumeters' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Menumeters < Cask
   license :unknown
 
   prefpane 'MenuMeters Installer.app/Contents/Resources/MenuMeters.prefPane'
+
   zap :delete => '~/Library/Preferences/com.ragingmenace.MenuMeters.plist'
 end

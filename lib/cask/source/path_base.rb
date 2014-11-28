@@ -20,7 +20,7 @@ class Cask::Source::PathBase
     raise CaskError.new "File '#{path}' is not a plain file" unless path.file?
     begin
 
-      # forward compatibility hack: convert first lines of the new form
+      # transitional hack: convert first lines of the new form
       #
       #     cask :v1 => 'google-chrome' do
       #
@@ -30,7 +30,7 @@ class Cask::Source::PathBase
       #
       # limitation: does not support Ruby extended quoting such as %Q{}
       #
-      # in the future, this can be pared down to an "eval"
+      # todo: in the future, this can be pared down to an "eval"
 
       # read Cask
       cask_string = File.open(path, 'rb') do |handle|
@@ -44,8 +44,23 @@ class Cask::Source::PathBase
 
       # munge text
       cask_string.sub!(%r{\A(\s*\#[^\n]*\n)+}, '');
-      if %r{\A\s*cask\s+:v[\d_]+\s+=>\s+([\'\"])(\S+?)\1(?:\s*,\s*|\s+)do\s*\n}.match(cask_string)
-        cask_string.sub!(%r{\A[^\n]+\n}, "class #{cask_class_name} < Cask\n")
+      if %r{\A\s*cask\s+:v([\d_]+)(test)?\s+=>\s+([\'\"])(\S+?)\3(?:\s*,\s*|\s+)do\s*\n}.match(cask_string)
+        dsl_version_string = $1
+        test_cask = ! $2.nil?
+        header_name = $4
+        dsl_version = Gem::Version.new(dsl_version_string.gsub('_','.'))
+        superclass_name = test_cask ? 'TestCask' : 'Cask'
+        cask_string.sub!(%r{\A[^\n]+\n}, "class #{cask_class_name} < #{superclass_name}\n")
+        # todo the minimum DSL version should be defined globally elsewhere
+        minimum_dsl_version = Gem::Version.new('1.0')
+        unless dsl_version >= minimum_dsl_version
+          raise CaskInvalidError.new(cask_name, "Bad header line: 'v#{dsl_version_string}' is less than required minimum version '#{minimum_dsl_version}'")
+        end
+        if header_name != cask_name
+          raise CaskInvalidError.new(cask_name, "Bad header line: '#{header_name}' does not match file name")
+        end
+      else
+        raise CaskInvalidError.new(cask_name, "Bad header line: parse failed")
       end
 
       # simulate "require"
@@ -69,8 +84,12 @@ class Cask::Source::PathBase
     end
   end
 
+  def cask_name
+    path.basename.to_s.sub(/\.rb/, '')
+  end
+
   def cask_class_name
-    path.basename.to_s.sub(/\.rb/, '').split('-').map(&:capitalize).join
+    cask_name.split('-').map(&:capitalize).join
   end
 
   def to_s

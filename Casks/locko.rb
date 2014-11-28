@@ -1,4 +1,4 @@
-class Locko < Cask
+cask :v1 => 'locko' do
   version :latest
   sha256 :no_check
 

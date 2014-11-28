@@ -1,4 +1,4 @@
-class Torpedo < Cask
+cask :v1 => 'torpedo' do
   version :latest
   sha256 :no_check
 

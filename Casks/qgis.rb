@@ -1,4 +1,4 @@
-class Qgis < Cask
+cask :v1 => 'qgis' do
   version '2.4.0-1'
   sha256 '785c268997651b547dd1261a86aa3b805a3d66c9706c0afb42758e1a2bb9ae0a'
 
@@ -6,6 +6,7 @@ class Qgis < Cask
   homepage 'http://www.kyngchaos.com/software/qgis'
   license :unknown
   pkg 'Install QGIS.pkg'
+
   uninstall :pkgutil => 'org.qgis.qgis-*'
   caveats <<-EOS.undent
     #{title} requires the GDAL framework and Matplotlib to be installed first,

@@ -1,4 +1,4 @@
-class Karabiner < Cask
+cask :v1 => 'karabiner' do
   version '10.4.0'
   sha256 'b1e3ffb7cd10ec8651c68b184c236589f182a273dad4b1c68ab2c15d36a34248'
 

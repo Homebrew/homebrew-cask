@@ -1,4 +1,4 @@
-class SnippetEdit < Cask
+cask :v1 => 'snippet-edit' do
   version '1.2.1'
   sha256 '2a6ee1b3ecd5d5d84743be9d81b36e969f05fe40209d8877008dc6f60d95d37c'
 

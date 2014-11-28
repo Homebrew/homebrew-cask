@@ -1,4 +1,4 @@
-class KextWizard < Cask
+cask :v1 => 'kext-wizard' do
   version :latest
   sha256 :no_check
 

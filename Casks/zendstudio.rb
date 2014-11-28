@@ -1,4 +1,4 @@
-class Zendstudio < Cask
+cask :v1 => 'zendstudio' do
   version '10.6.1'
   sha256 '98cafacf5e2f08ae22561b4f9c756400e3c28202f1e97c345357816d3b38b40d'
 

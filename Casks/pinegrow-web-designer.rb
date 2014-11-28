@@ -1,4 +1,4 @@
-class PinegrowWebDesigner < Cask
+cask :v1 => 'pinegrow-web-designer' do
   version :latest
   sha256 :no_check
 

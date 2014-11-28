@@ -1,4 +1,4 @@
-class Crashlytics < Cask
+cask :v1 => 'crashlytics' do
   version :latest
   sha256 :no_check
 

@@ -94,9 +94,9 @@ module Cask::Utils
        :sums,
        :artifacts,
        :caveats,
-       :depends_on_formula,
+       :depends_on,
        :conflicts_with,
-       :container_type,
+       :container,
        :gpg,
       ].each do |method|
         odebug "Cask instance method '#{method}':", self.send(method).to_yaml

@@ -1,12 +1,14 @@
-class Chefdk < Cask
-  version '0.3.2-1'
-  sha256 'ffef287a9eba71eec8ee3f47044d351f6e679ed77b022f8be8bed3b76a912d44'
+cask :v1 => 'chefdk' do
+  version '0.3.5-1'
+  sha256 '43994187542a86b7865840ae71ac702c9f473e893b44f6552d5040a4c0202ad1'
 
+  # amazonaws is the official download host per the vendor homepage
   url "https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-#{version}.dmg"
-  homepage 'http://downloads.getchef.com/chef-dk/mac/'
+  homepage 'https://downloads.getchef.com/chef-dk/'
   license :apache
 
   pkg "chefdk-#{version}.pkg"
+
   uninstall :pkgutil => 'com.getchef.pkg.chefdk',
             :delete  => [
                          '/opt/chefdk/',

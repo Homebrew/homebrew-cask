@@ -1,4 +1,4 @@
-class Pgadmin3 < Cask
+cask :v1 => 'pgadmin3' do
   # note: "3" is not a version number, but indicates a different vendor
   version '1.18.1'
   sha256 '6fe924168c7a8ee9224527fcafc3e612de60c011a27dc44b8293401ff346627d'

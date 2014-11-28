@@ -1,4 +1,4 @@
-class Mixlr < Cask
+cask :v1 => 'mixlr' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Mixlr < Cask
   license :unknown
 
   pkg 'Mixlr_beta_latest.pkg'
+
   uninstall :pkgutil => 'com.mixlr.Mixlr'
 end

@@ -1,4 +1,4 @@
-class PayeTools < Cask
+cask :v1 => 'paye-tools' do
   version '14.1.14168.197'
   sha256 'f8a7d7a4c2c7304b08bf342af1c093795a8717058471fe3da5ee8e43b7604719'
 

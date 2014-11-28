@@ -1,4 +1,4 @@
-class GoogleEarthWebPlugin < Cask
+cask :v1 => 'google-earth-web-plugin' do
   version :latest
   sha256 :no_check
 

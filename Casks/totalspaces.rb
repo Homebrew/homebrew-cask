@@ -1,4 +1,4 @@
-class Totalspaces < Cask
+cask :v1 => 'totalspaces' do
 
   if MacOS.version < :mavericks
     version '1.2.11'
@@ -7,6 +7,7 @@ class Totalspaces < Cask
     url "http://downloads.binaryage.com/TotalSpaces-#{version}.zip"
 
     pkg 'TotalSpaces.pkg'
+
     uninstall :pkgutil => 'com.switchstep.totalspaces',
               :quit    => 'com.binaryage.TotalSpaces',
               :signal  => [
@@ -14,13 +15,18 @@ class Totalspaces < Cask
                            ['KILL', 'com.binaryage.totalspacescrashwatcher'],
                           ]
   else
-    version '2.2.6'
-    sha256 '900ece3f5ceae479b4019f854e1875eb402edf3ef1b17f813a70fe42290a0a12'
+    version '2.2.9'
+    sha256 '66656dab328455906fd6e757bd966efac7d3a364b66155c847de55bfc57d8f14'
 
-    url "http://downloads.binaryage.com/TotalSpaces-#{version}.zip"
+    url "http://downloads.binaryage.com/TotalSpaces2-#{version}.dmg"
 
-    pkg 'TotalSpaces2.pkg'
+    installer :manual => 'TotalSpaces2.app'
+
     uninstall :pkgutil => 'com.binaryage.TotalSpaces2',
+              :script  => {
+                           :executable => 'TotalSpaces2 Uninstaller.app/Contents/MacOS/TotalSpaces2 Uninstaller',
+                           :args       => %w[--headless],
+                          },
               :quit    => 'com.binaryage.TotalSpaces2',
               :signal  => [
                            ['INT', 'com.binaryage.totalspacescrashwatcher'],
@@ -29,5 +35,5 @@ class Totalspaces < Cask
   end
 
   homepage 'http://totalspaces.binaryage.com/'
-  license :unknown
+  license :commercial
 end

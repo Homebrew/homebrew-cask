@@ -1,13 +1,14 @@
-class GdalFramework < Cask
-  version '1.11'
-  sha256 'd8aa6d59236a75519e94a764dfc71d3122c8e88fa4f99072046c3a8a0bfb4124'
+cask :v1 => 'gdal-framework' do
+  version '1.11.1-1'
+  sha256 'b5b3a62ead9e2bdff9b85eccf42dbc628f384f89eff33fe150933ddaa841d25b'
 
-  url "http://www.kyngchaos.com/files/software/frameworks/GDAL_Complete-#{version}.dmg"
+  url "http://www.kyngchaos.com/files/software/frameworks/GDAL_Complete-#{version.sub(%r{^(\d+\.\d+).*},'\1')}.dmg"
   homepage 'http://www.kyngchaos.com/software/frameworks'
   license :unknown
 
   pkg 'GDAL Complete.pkg'
   pkg 'Numpy.pkg'
+
   uninstall :pkgutil  => [
                             'org.maptools.proj-framework-snow',
                             'org.sqlite.sqlite3b-framework-snow',

@@ -1,4 +1,4 @@
-class VmwareFusion < Cask
+cask :v1 => 'vmware-fusion' do
   version '7.0.1-2235595'
   sha256 '212e25cefe3a30f0ab0ffe5975566bcc63422d370f6b647b83b4084524f36970'
 
@@ -15,8 +15,9 @@ class VmwareFusion < Cask
 
   uninstall_preflight do
     system '/usr/bin/sudo', '-E', '--',
-           '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", "#{destination_path}/VMware Fusion.app"
+           '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", "#{staged_path}/VMware Fusion.app"
   end
+
   zap :delete => [
                   # note: '~/Library/Application Support/VMware Fusion' is not safe
                   # to delete.  In older versions, VM images were located there.

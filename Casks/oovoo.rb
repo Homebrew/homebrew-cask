@@ -1,4 +1,4 @@
-class Oovoo < Cask
+cask :v1 => 'oovoo' do
   version :latest
   sha256 :no_check
 

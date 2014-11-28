@@ -1,4 +1,4 @@
-class ChangesMeter < Cask
+cask :v1 => 'changes-meter' do
   version :latest
   sha256 :no_check
 

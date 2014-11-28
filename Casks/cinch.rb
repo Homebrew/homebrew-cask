@@ -1,4 +1,4 @@
-class Cinch < Cask
+cask :v1 => 'cinch' do
   version :latest
   sha256 :no_check
 

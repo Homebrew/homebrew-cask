@@ -1,4 +1,4 @@
-class AlinofTimer < Cask
+cask :v1 => 'alinof-timer' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class AlinofTimer < Cask
   license :unknown
 
   pkg 'AlinofTimer.pkg', :allow_untrusted => true
+
   uninstall :pkgutil => 'com.alinofsoftware.alinoftimer'
 end

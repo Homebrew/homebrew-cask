@@ -1,4 +1,4 @@
-class Indigo < Cask
+cask :v1 => 'indigo' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,7 @@ class Indigo < Cask
   license :unknown
 
   pkg 'Indigo Installer.pkg'
+
   uninstall :kext => 'com.perceptiveautomation.indigo_overrides.kext',
     :pkgutil => 'com.perceptiveautomation.pkg.*'
 end

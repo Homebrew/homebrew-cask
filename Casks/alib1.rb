@@ -1,4 +1,4 @@
-class Alib1 < Cask
+cask :v1 => 'alib1' do
   # note: "1" is not a version number, but an intrinsic part of the product name
   version :latest
   sha256 :no_check
@@ -10,7 +10,7 @@ class Alib1 < Cask
   screen_saver 'Presstube-ALib1.app/Contents/Resources/Presstube - ALib1.saver'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName ALib1 (Presstube)', "#{destination_path}/presstube-alib1.app/Contents/Resources/Presstube - ALib1.saver/Contents/Info.plist"
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName ALib1 (Presstube)', "#{staged_path}/presstube-alib1.app/Contents/Resources/Presstube - ALib1.saver/Contents/Info.plist"
   end
 
   caveats <<-EOS.undent

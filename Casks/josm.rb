@@ -1,4 +1,4 @@
-class Josm < Cask
+cask :v1 => 'josm' do
   version :latest
   sha256 :no_check
 

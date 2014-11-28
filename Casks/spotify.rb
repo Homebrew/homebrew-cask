@@ -1,4 +1,4 @@
-class Spotify < Cask
+cask :v1 => 'spotify' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Spotify < Cask
   license :gratis
 
   app 'Spotify.app'
+
   zap :delete => '~/Library/Preferences/com.spotify.client.plist'
 end

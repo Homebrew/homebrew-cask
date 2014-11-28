@@ -1,4 +1,4 @@
-class Chatology < Cask
+cask :v1 => 'chatology' do
   version :latest
   sha256 :no_check
 

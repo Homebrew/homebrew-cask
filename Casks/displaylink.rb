@@ -1,4 +1,4 @@
-class Displaylink < Cask
+cask :v1 => 'displaylink' do
   version '2.2'
   sha256 '5c9a97a476b5ff27811491eebb653a03c96f899562b67566c24100d8593b1daa'
 
@@ -13,6 +13,7 @@ class Displaylink < Cask
   license :unknown
 
   pkg 'DisplayLink Software Installer.pkg'
+
   uninstall :pkgutil => ['com.displaylink.displaylinkdriversigned',
                          'com.displaylink.displaylinkdriverunsigned']
             # :kext => ['com.displaylink.driver.DisplayLinkDriver',

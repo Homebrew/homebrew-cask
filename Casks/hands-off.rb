@@ -1,4 +1,4 @@
-class HandsOff < Cask
+cask :v1 => 'hands-off' do
   version '2.2.0'
   sha256 'c64e24aaa347bc392f711840a77153d02f59876a5c1fb5969d1145de9760d154'
 
@@ -9,5 +9,6 @@ class HandsOff < Cask
   license :unknown
 
   app 'Hands Off!.app'
+
   zap :delete => '~/Library/Preferences/com.metakine.handsoff.plist'
 end

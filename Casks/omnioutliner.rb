@@ -1,4 +1,4 @@
-class Omnioutliner < Cask
+cask :v1 => 'omnioutliner' do
   version :latest
   sha256 :no_check
 

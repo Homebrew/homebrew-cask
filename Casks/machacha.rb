@@ -1,4 +1,4 @@
-class Machacha < Cask
+cask :v1 => 'machacha' do
   version :latest
   sha256 :no_check
 

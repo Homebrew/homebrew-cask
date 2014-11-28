@@ -1,4 +1,4 @@
-class Java < Cask
+cask :v1 => 'java' do
   version '1.8.0_25'
   sha256 '65b18e9a081435d06c18ba8d9b19e6eb23c902204f5ac3a9f029ec5b3fe2d2a6'
 
@@ -30,6 +30,7 @@ class Java < Cask
     system '/usr/bin/sudo', '-E', '--',
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Home/jre/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"
   end
+
   uninstall :pkgutil => [
                          'com.oracle.jdk8u25',         # manually update this for each version
                          'com.oracle.jre',

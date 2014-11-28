@@ -1,5 +1,79 @@
 # CHANGELOG
 
+## 0.48.0
+
+* __Casks__
+  - 32 Casks added (2058 updated) by 75 contributors since 0.47.0
+  - 2094 total Casks
+* __Features__
+ - [#7365][] add stanza `stage_only` (new spelling of `caskroom_only`)
+* __Breaking Changes__
+ - [#7450][], [#7430][], [#7311][] require new-style header lines
+ - [#7451][] remove support for `nested_container` stanza
+ - [#7428][] remove support for `manual_installer` in `caveats` stanza
+ - [#7429][] remove support for `container_type` stanza
+ - [#7401][] remove support for `depends_on_formula` stanza
+ - [#7367][] remove support for `uninstall :files` form
+ - [#7354][] remove support for `after_install` and friends
+* __Fixes__
+ - [#7426][], [#7432][] activate `suite` artifacts
+ - [#7453][] avoid gitx in partial-match search tests
+ - [#7399][] tighten sourceforge URL regular expressions, add special case for excalibur
+* __Internal Changes__
+  - none
+* __Documentation__
+  - 8 doc commits since 0.47.0
+* __Contributors__
+  - 32 new contributors since 0.47.0
+  - 1236 total contributors
+* __Release Date__
+  - 2014-11-20 12:54:00 UTC
+
+[#7311]: https://github.com/caskroom/homebrew-cask/issues/7311
+[#7354]: https://github.com/caskroom/homebrew-cask/issues/7354
+[#7365]: https://github.com/caskroom/homebrew-cask/issues/7365
+[#7367]: https://github.com/caskroom/homebrew-cask/issues/7367
+[#7399]: https://github.com/caskroom/homebrew-cask/issues/7399
+[#7401]: https://github.com/caskroom/homebrew-cask/issues/7401
+[#7426]: https://github.com/caskroom/homebrew-cask/issues/7426
+[#7428]: https://github.com/caskroom/homebrew-cask/issues/7428
+[#7429]: https://github.com/caskroom/homebrew-cask/issues/7429
+[#7430]: https://github.com/caskroom/homebrew-cask/issues/7430
+[#7432]: https://github.com/caskroom/homebrew-cask/issues/7432
+[#7450]: https://github.com/caskroom/homebrew-cask/issues/7450
+[#7451]: https://github.com/caskroom/homebrew-cask/issues/7451
+[#7453]: https://github.com/caskroom/homebrew-cask/issues/7453
+
+## 0.47.0
+
+* __Casks__
+  - 56 Casks added (191 updated) by 122 contributors since 0.46.0
+  - 2062 total Casks
+* __Features__
+ - [#7123][] Add key option to `suppress_move_to_applications`
+* __Breaking Changes__
+ - [#7268][] DSL: remove support `install` stanza
+ - [#7065][] remove support for `link` artifact
+* __Fixes__
+ - [#7165][] Remove unsupported -x option in `launchctl` command
+* __Internal Changes__
+ - [#7133][] devscript: check Ruby version before execution
+* __Documentation__
+  - 5 doc commits since 0.46.0 <3 [@hanxue][], [@ddinh][]
+* __Contributors__
+  - 122 new contributors since 0.46.0
+  - 1204 total contributors
+* __Release Date__
+  - 2014-11-12 15:33:00 UTC
+
+[#7065]: https://github.com/caskroom/homebrew-cask/issues/7065
+[#7123]: https://github.com/caskroom/homebrew-cask/issues/7123
+[#7133]: https://github.com/caskroom/homebrew-cask/issues/7133
+[#7268]: https://github.com/caskroom/homebrew-cask/issues/7268
+[#7165]: https://github.com/caskroom/homebrew-cask/issues/7165
+[@hanxue]: https://github.com/hanxue
+[@ddinh]: https://github.com/ddinh
+
 ## 0.46.0
 
 * __Casks__

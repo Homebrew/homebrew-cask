@@ -1,4 +1,4 @@
-class Notifyr < Cask
+cask :v1 => 'notifyr' do
   version :latest
   sha256 :no_check
 

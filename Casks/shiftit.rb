@@ -1,4 +1,4 @@
-class Shiftit < Cask
+cask :v1 => 'shiftit' do
   version '1.6'
   sha256 '538e0628d6fc99c3562694c0722cb41699d6a802f0032678ef05fa2b53711955'
 

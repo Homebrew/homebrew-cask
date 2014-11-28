@@ -1,4 +1,4 @@
-class Xtrafinder < Cask
+cask :v1 => 'xtrafinder' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Xtrafinder < Cask
   license :unknown
 
   pkg 'XtraFinder.pkg'
+
   uninstall :pkgutil => 'com.trankynam.xtrafinder.*'
 end

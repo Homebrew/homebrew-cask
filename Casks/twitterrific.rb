@@ -1,4 +1,4 @@
-class Twitterrific < Cask
+cask :v1 => 'twitterrific' do
   version '4.5.1'
   sha256 '1b43504307e8a541c97a93ecd4c56bc443f66cdd622d319db965e7e0eb760b46'
 
@@ -9,5 +9,6 @@ class Twitterrific < Cask
   license :unknown
 
   app 'Twitterrific.app'
+
   zap :delete => '~/Library/Application Support/Twitterrific'
 end

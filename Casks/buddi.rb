@@ -1,4 +1,4 @@
-class Buddi < Cask
+cask :v1 => 'buddi' do
   version :latest
   sha256 :no_check
 

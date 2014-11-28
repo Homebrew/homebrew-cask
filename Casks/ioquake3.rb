@@ -1,4 +1,5 @@
-class Ioquake3 < Cask
+cask :v1 => 'ioquake3' do
+  # note: "3" is not a version number, but an intrinsic part of the product name
   version '1.36'
   sha256 'ff310471aa641cc27980055691b3e3cf5496ac262f10967c9d5052fd3815a3fc'
 

@@ -1,4 +1,4 @@
-class Minilyrics < Cask
+cask :v1 => 'minilyrics' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Minilyrics < Cask
   license :unknown
 
   pkg 'MiniLyrics.pkg'
+
   uninstall :pkgutil => 'com.crintsoft.MiniLyrics.pkg'
 end

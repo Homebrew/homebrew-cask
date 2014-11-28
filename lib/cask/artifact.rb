@@ -20,7 +20,7 @@ require 'cask/artifact/qlplugin'
 require 'cask/artifact/widget'
 require 'cask/artifact/service'
 require 'cask/artifact/suite'
-require 'cask/artifact/caskroom_only'
+require 'cask/artifact/stage_only'
 require 'cask/artifact/input_method'
 require 'cask/artifact/internet_plugin'
 require 'cask/artifact/screen_saver'
@@ -38,6 +38,7 @@ module Cask::Artifact
       Cask::Artifact::NestedContainer,
       Cask::Artifact::Installer,
       Cask::Artifact::App,
+      Cask::Artifact::Suite,
       Cask::Artifact::Artifact,         # generic 'artifact' stanza
       Cask::Artifact::Colorpicker,
       Cask::Artifact::Pkg,
@@ -46,7 +47,7 @@ module Cask::Artifact
       Cask::Artifact::Font,
       Cask::Artifact::Widget,
       Cask::Artifact::Service,
-      Cask::Artifact::CaskroomOnly,
+      Cask::Artifact::StageOnly,
       Cask::Artifact::Binary,
       Cask::Artifact::InputMethod,
       Cask::Artifact::InternetPlugin,

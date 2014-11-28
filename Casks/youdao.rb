@@ -1,5 +1,5 @@
 # encoding: UTF-8
-class Youdao < Cask
+cask :v1 => 'youdao' do
   version :latest
   sha256 :no_check
 

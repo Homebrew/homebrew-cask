@@ -1,4 +1,4 @@
-class Chronoagent < Cask
+cask :v1 => 'chronoagent' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Chronoagent < Cask
   license :unknown
 
   pkg 'Install.pkg'
+
   uninstall :pkgutil => 'com.econtechnologies.pkg.ChronoAgent'
 end

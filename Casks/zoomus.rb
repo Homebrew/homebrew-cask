@@ -1,4 +1,4 @@
-class Zoomus < Cask
+cask :v1 => 'zoomus' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,7 @@ class Zoomus < Cask
   license :unknown
 
   pkg 'zoomusInstaller.pkg'
+
   uninstall :delete => '/Applications/zoom.us.app'
   zap       :delete => '~/Desktop/Zoom'
 end

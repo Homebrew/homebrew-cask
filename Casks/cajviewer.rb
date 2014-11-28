@@ -1,4 +1,4 @@
-class Cajviewer < Cask
+cask :v1 => 'cajviewer' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Cajviewer < Cask
   license :unknown
 
   pkg 'CAJViewerMac.pkg'
+
   uninstall :pkgutil => 'com.TTKN.CAJViewerMac'
 end

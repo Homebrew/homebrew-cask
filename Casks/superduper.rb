@@ -1,4 +1,4 @@
-class Superduper < Cask
+cask :v1 => 'superduper' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Superduper < Cask
   license :unknown
 
   app 'SuperDuper!.app'
+
   zap :delete => '~/Library/Application Support/SuperDuper!'
 end

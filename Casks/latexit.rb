@@ -1,4 +1,4 @@
-class Latexit < Cask
+cask :v1 => 'latexit' do
   version '2.7.3'
   sha256 '45efeeea0d7bde36ba08aa663d6dd10092ec66d7622bccccf73732257e1e82f0'
 
@@ -9,5 +9,6 @@ class Latexit < Cask
   license :unknown
 
   app 'LaTeXiT.app'
+
   zap :delete => '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist'
 end

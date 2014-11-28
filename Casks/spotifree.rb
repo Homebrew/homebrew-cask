@@ -1,4 +1,4 @@
-class Spotifree < Cask
+cask :v1 => 'spotifree' do
   version :latest
   sha256 :no_check
 

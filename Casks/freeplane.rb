@@ -1,4 +1,4 @@
-class Freeplane < Cask
+cask :v1 => 'freeplane' do
   version '1.3.12'
   sha256 '761cf0abb98c4678f8f40b7ea3810c7faf72e096ab8f3e2085628650028f68f1'
 

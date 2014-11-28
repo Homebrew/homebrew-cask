@@ -1,4 +1,4 @@
-class Gpower < Cask
+cask :v1 => 'gpower' do
   version '3.1.9.2'
   sha256 'ee4eb27493959fc6614b6061829c6b7d2aee9edf0fe0c1bf3d143ee2fa74c3e6'
 

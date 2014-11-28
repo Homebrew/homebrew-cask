@@ -1,4 +1,4 @@
-class Wings3d < Cask
+cask :v1 => 'wings3d' do
   version '1.5.3'
   sha256 'ec1bc0302fc7a12c0e5f06162673782943ac4394c2a942a6111b3f321e8be6d5'
 

@@ -1,4 +1,4 @@
-class Cryptol < Cask
+cask :v1 => 'cryptol' do
   version '2.0.0'
   sha256 '19b3c24390ccb66584f42f34fed91cefc12f667879ab0228cdf806016bcd53c4'
 

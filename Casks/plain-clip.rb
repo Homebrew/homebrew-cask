@@ -1,4 +1,4 @@
-class PlainClip < Cask
+cask :v1 => 'plain-clip' do
   version :latest
   sha256 :no_check
 

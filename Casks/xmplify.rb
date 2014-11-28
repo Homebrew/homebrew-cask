@@ -1,4 +1,4 @@
-class Xmplify < Cask
+cask :v1 => 'xmplify' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,7 @@ class Xmplify < Cask
   license :unknown
 
   app 'Xmplify.app'
+
   uninstall :quit => 'au.com.moso.Xmplify'
   zap :delete => [
                    '~/Library/Caches/au.com.moso.Xmplify',

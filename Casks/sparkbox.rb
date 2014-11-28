@@ -1,4 +1,4 @@
-class Sparkbox < Cask
+cask :v1 => 'sparkbox' do
   version :latest
   sha256 :no_check
 

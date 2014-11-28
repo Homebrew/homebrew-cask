@@ -1,4 +1,4 @@
-class Anxiety < Cask
+cask :v1 => 'anxiety' do
   version :latest
   sha256 :no_check
 

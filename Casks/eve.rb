@@ -1,4 +1,4 @@
-class Eve < Cask
+cask :v1 => 'eve' do
   version :latest
   sha256 :no_check
 

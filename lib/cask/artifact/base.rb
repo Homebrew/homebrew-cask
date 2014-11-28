@@ -39,7 +39,7 @@ class Cask::Artifact::Base
       description.concat(" #{key.inspect}")
     end
 
-    # backwards-compatible string value
+    # backward-compatible string value
     if arguments.kind_of?(String)
       arguments = { :executable => arguments }
     end

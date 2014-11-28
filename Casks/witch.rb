@@ -1,4 +1,4 @@
-class Witch < Cask
+cask :v1 => 'witch' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Witch < Cask
   license :unknown
 
   prefpane 'Witch.prefPane'
+
   zap :delete => '~/Library/Preferences/com.manytricks.Witch.plist'
 end

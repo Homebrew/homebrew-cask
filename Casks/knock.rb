@@ -1,4 +1,4 @@
-class Knock < Cask
+cask :v1 => 'knock' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Epubquicklook < Cask
+cask :v1 => 'epubquicklook' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Epubquicklook < Cask
   license :unknown
 
   pkg 'EpubQuickLook.pkg'
+
   uninstall :pkgutil => 'net.leuski.epubQuicklookPlugin.epub.pkg'
 end

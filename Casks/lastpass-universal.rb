@@ -1,4 +1,4 @@
-class LastpassUniversal < Cask
+cask :v1 => 'lastpass-universal' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class LastpassUniversal < Cask
   license :unknown
 
   pkg 'lpmacosx.pkg'
+
   uninstall :pkgutil => 'com.lastpass.lpmacosx'
 end

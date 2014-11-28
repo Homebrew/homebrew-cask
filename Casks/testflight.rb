@@ -1,4 +1,4 @@
-class Testflight < Cask
+cask :v1 => 'testflight' do
   version '1.0_beta313'
   sha256 'a8f643b66682f7ec9d710b7452dd9fdc9332edc59bc2c92d10683635c80c861f'
 

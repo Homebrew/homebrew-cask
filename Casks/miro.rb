@@ -1,4 +1,4 @@
-class Miro < Cask
+cask :v1 => 'miro' do
   version :latest
   sha256 :no_check
 

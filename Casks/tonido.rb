@@ -1,4 +1,4 @@
-class Tonido < Cask
+cask :v1 => 'tonido' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class ParagonNtfs < Cask
+cask :v1 => 'paragon-ntfs' do
   version :latest
   sha256 :no_check
 
@@ -7,4 +7,11 @@ class ParagonNtfs < Cask
   license :unknown
 
   pkg 'FSInstaller.app/Contents/Resources/Paragon NTFS for Mac OS X.pkg'
+
+  uninstall :pkgutil => 'com.paragon-software.filesystems.NTFS.pkg',
+            :script => 'Uninstall.app/Contents/Resources/uninstall.sh',
+            :launchctl => [
+                           'com.paragon.ntfs*',
+                           'com.paragon.updater'
+                          ]
 end

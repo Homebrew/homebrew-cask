@@ -1,4 +1,4 @@
-class Yandexdisk < Cask
+cask :v1 => 'yandexdisk' do
   version :latest
   sha256 :no_check
 

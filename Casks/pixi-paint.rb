@@ -1,4 +1,4 @@
-class PixiPaint < Cask
+cask :v1 => 'pixi-paint' do
   version :latest
   sha256 :no_check
 

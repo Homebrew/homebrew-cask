@@ -1,6 +1,6 @@
-class Openra < Cask
-  version '20140722'
-  sha256 '0f9bc52de1e4569371ae643d505c66d5196a73537f6810fad2a1c49baad37995'
+cask :v1 => 'openra' do
+  version '20141029'
+  sha256 '421f341d324e2e360cf17facc1379b19036f7459516b84685037a041d5020e64'
 
   url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.zip"
   homepage 'http://www.openra.net/'

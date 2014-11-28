@@ -1,4 +1,4 @@
-class AmazonZocalo < Cask
+cask :v1 => 'amazon-zocalo' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class AmazonZocalo < Cask
   license :unknown
 
   pkg 'Amazon Zocalo.pkg'
+
   uninstall :pkgutil => 'com.amazon.aws.AmazonZocalo'
 end

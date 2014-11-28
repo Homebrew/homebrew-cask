@@ -1,4 +1,4 @@
-class IntelXdk < Cask
+cask :v1 => 'intel-xdk' do
   version '0769'
   sha256 '365a1850ccbf52fb3f1946bb569c454ccd6ea1a72d43074a9e92d9a646881489'
 
@@ -7,5 +7,6 @@ class IntelXdk < Cask
   license :unknown
 
   pkg "xdk_full_#{version}.pkg"
+
   uninstall :pkgutil => 'com.intel.pkg.xdk_new'
 end

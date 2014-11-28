@@ -1,4 +1,4 @@
-class Icompta < Cask
+cask :v1 => 'icompta' do
   version :latest
   sha256 :no_check
 

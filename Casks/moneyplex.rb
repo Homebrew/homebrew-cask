@@ -1,4 +1,4 @@
-class Moneyplex < Cask
+cask :v1 => 'moneyplex' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Moneyplex < Cask
   license :unknown
 
   pkg 'moneyplex.pkg', :allow_untrusted => true
+
   uninstall :pkgutil => 'de.matrica.moneyplex.Moneyplex.pkg'
 end

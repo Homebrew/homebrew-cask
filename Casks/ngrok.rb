@@ -1,4 +1,4 @@
-class Ngrok < Cask
+cask :v1 => 'ngrok' do
   version :latest
   sha256 :no_check
 

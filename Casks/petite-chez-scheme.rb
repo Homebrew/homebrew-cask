@@ -1,4 +1,4 @@
-class PetiteChezScheme < Cask
+cask :v1 => 'petite-chez-scheme' do
   version '8.4'
   sha256 '3ed7200c3e265d36d03129569a78bfde8aedaea1ec7565d3c7a4daca26389701'
 
@@ -7,5 +7,6 @@ class PetiteChezScheme < Cask
   license :unknown
 
   pkg "pcsv#{version}-ta6osx-1.pkg"
+
   uninstall :pkgutil => 'com.scheme.chezscheme'
 end

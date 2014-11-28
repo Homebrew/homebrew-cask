@@ -1,4 +1,4 @@
-class Vico < Cask
+cask :v1 => 'vico' do
   version 'r3132'
   sha256 'f5c82f320a1e3929492ecb30ba6b50d48af413b33b8e14dac06c75cd06cb809f'
 
@@ -9,4 +9,5 @@ class Vico < Cask
   license :unknown
 
   app 'Vico.app'
+  binary 'Vico.app/Contents/MacOS/vicotool', :target => 'vico'
 end

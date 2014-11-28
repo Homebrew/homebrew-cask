@@ -1,4 +1,4 @@
-class Chunkulus < Cask
+cask :v1 => 'chunkulus' do
   version :latest
   sha256 :no_check
 
@@ -9,7 +9,7 @@ class Chunkulus < Cask
   screen_saver 'presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName Chunkulus (Presstube)', "#{destination_path}/presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver/Contents/Info.plist"
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName Chunkulus (Presstube)', "#{staged_path}/presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver/Contents/Info.plist"
   end
 
   caveats <<-EOS.undent

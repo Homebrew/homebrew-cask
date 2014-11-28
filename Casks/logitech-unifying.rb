@@ -1,4 +1,4 @@
-class LogitechUnifying < Cask
+cask :v1 => 'logitech-unifying' do
   version '1.10.421'
   sha256 'd9e196411cc4c0aec72fd01575eaffed228f95bc7d7ededc532d53f8602caa03'
 
@@ -7,5 +7,6 @@ class LogitechUnifying < Cask
   license :unknown
 
   pkg 'Logitech Unifying Software.mpkg'
+
   uninstall :pkgutil => 'com.Logitech.*pkg'
 end

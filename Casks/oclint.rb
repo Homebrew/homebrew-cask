@@ -1,4 +1,4 @@
-class Oclint < Cask
+cask :v1 => 'oclint' do
   version '0.7'
   sha256 '697ea08fc7cd8945a40ed95e6f3d40c18ed15968b7b0c0519dce9d14873633a9'
 

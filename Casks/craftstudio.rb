@@ -1,4 +1,4 @@
-class Craftstudio < Cask
+cask :v1 => 'craftstudio' do
   version :latest
   sha256 :no_check
 

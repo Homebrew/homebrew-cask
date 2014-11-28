@@ -1,4 +1,4 @@
-class Ghostlab < Cask
+cask :v1 => 'ghostlab' do
   version :latest
   sha256 :no_check
 

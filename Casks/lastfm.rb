@@ -1,4 +1,4 @@
-class Lastfm < Cask
+cask :v1 => 'lastfm' do
   version :latest
   sha256 :no_check
 

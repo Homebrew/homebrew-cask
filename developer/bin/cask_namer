@@ -96,6 +96,7 @@ REMOVE_TRAILING_PATS = [
                         %r{\bgtk}i,
                         %r{\bqt}i,
                         %r{\bwx}i,
+                        %r{\bcocoa}i,
 
                         # localizations
                         %r{en\s*-\s*us}i,
@@ -340,29 +341,6 @@ class CaskFileName < String
   end
 end
 
-class CaskClassName < String
-  def basename
-    if Pathname.new(self).exist?
-      CaskClassName.new(Pathname.new(self).basename.to_s)
-    else
-      self
-    end
-  end
-
-  def remove_extension
-    self.sub(/#{escaped_cask_file_extension}\Z/i, '')
-  end
-
-  def hyphens_to_camel_case
-    self.split('-').map(&:capitalize).join
-  end
-
-  def from_cask_name
-    # or from filename
-    self.basename.remove_extension.hyphens_to_camel_case
-  end
-end
-
 ###
 ### methods
 ###
@@ -398,10 +376,6 @@ def cask_name
   @cask_name ||= cask_file_name.remove_extension
 end
 
-def class_name
-  @class_name ||= CaskClassName.new(cask_name).from_cask_name
-end
-
 def warnings
   return @warnings if @warnings
   @warnings = []
@@ -421,7 +395,7 @@ def report
   puts "Proposed canonical App name: #{canonical_name}" if $debug
   puts "Proposed Cask name:          #{cask_name}"
   puts "Proposed file name:          #{cask_file_name}"
-  puts "First Line of Cask:          class #{class_name} < Cask"
+  puts "First Line of Cask:          cask :v1 => '#{cask_name}' do"
   if warnings.length > 0
     STDERR.puts "\n"
     STDERR.puts warnings

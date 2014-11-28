@@ -1,4 +1,4 @@
-class QuicklookJson < Cask
+cask :v1 => 'quicklook-json' do
   version :latest
   sha256 :no_check
 

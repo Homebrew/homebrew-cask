@@ -1,4 +1,4 @@
-class Kiwi < Cask
+cask :v1 => 'kiwi' do
   version '3.1.0'
   sha256 'd01a76d44246237995c85109df089449396d9d82f8b020a71fac5c779600d402'
 

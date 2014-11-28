@@ -1,4 +1,4 @@
-class FmFwInstaller < Cask
+cask :v1 => 'fm-fw-installer' do
   version '1.2'
   sha256 'b62dc5208dd079c93bd191578e7aa4a1905eee970589c45e01b99f65ccca2ec3'
 

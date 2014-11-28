@@ -1,4 +1,4 @@
-class BalsamiqMockups < Cask
+cask :v1 => 'balsamiq-mockups' do
   version :latest
   sha256 :no_check
 

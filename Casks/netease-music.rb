@@ -1,5 +1,5 @@
 # encoding: UTF-8
-class NeteaseMusic < Cask
+cask :v1 => 'netease-music' do
   version :latest
   sha256 :no_check
 

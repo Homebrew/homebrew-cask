@@ -1,4 +1,4 @@
-class Wifimasterkey < Cask
+cask :v1 => 'wifimasterkey' do
   version :latest
   sha256 :no_check
 

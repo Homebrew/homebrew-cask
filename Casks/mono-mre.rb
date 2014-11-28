@@ -1,4 +1,4 @@
-class MonoMre < Cask
+cask :v1 => 'mono-mre' do
   version '3.10.0'
   sha256 'e5f7f42d9ba778aca6774921a0803d5ee73bc01d0674d058e557dcf19f792dd1'
 
@@ -7,5 +7,6 @@ class MonoMre < Cask
   license :oss
 
   pkg "MonoFramework-MRE-#{version}.macos10.xamarin.x86.pkg"
+
   uninstall :pkgutil => 'com.xamarin.mono-MRE.pkg'
 end

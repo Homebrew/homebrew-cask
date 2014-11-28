@@ -1,4 +1,4 @@
-class Arq < Cask
+cask :v1 => 'arq' do
   version :latest
   sha256 :no_check
 

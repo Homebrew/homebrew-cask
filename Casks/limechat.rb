@@ -1,4 +1,4 @@
-class Limechat < Cask
+cask :v1 => 'limechat' do
 
   if MacOS.version < :mountain_lion
     version '2.38'
@@ -15,5 +15,6 @@ class Limechat < Cask
   license :oss
 
   app 'LimeChat.app'
+
   zap :delete => '~/Library/Preferences/net.limechat.LimeChat-AppStore.plist'
 end

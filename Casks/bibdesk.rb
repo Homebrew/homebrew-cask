@@ -1,4 +1,4 @@
-class Bibdesk < Cask
+cask :v1 => 'bibdesk' do
   version '1.6.3'
   sha256 '30dcf97dbf1256fbc49e98ff67b7e510ea8b90bcefb4f919d0b2ac8aa8f695a8'
 
@@ -9,6 +9,7 @@ class Bibdesk < Cask
   license :oss
 
   app 'BibDesk.app'
+
   zap :delete => [
                   '~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist',
                   '~/Library/Application Support/BibDesk',

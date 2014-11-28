@@ -1,4 +1,4 @@
-class XamarinAndroid < Cask
+cask :v1 => 'xamarin-android' do
   version '4.18.0-34'
   sha256 '012f7266b123a1cc8cc189db8c3aea24c5daa8912df684525336fabc86e279e7'
 
@@ -10,5 +10,6 @@ class XamarinAndroid < Cask
   license :unknown
 
   pkg "mono-android-#{version}.pkg"
+
   uninstall :pkgutil => 'com.xamarin.android.pkg'
 end

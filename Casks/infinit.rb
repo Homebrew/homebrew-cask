@@ -1,4 +1,4 @@
-class Infinit < Cask
+cask :v1 => 'infinit' do
   version :latest
   sha256 :no_check
 

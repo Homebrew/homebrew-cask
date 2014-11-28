@@ -1,4 +1,4 @@
-class Apptivate < Cask
+cask :v1 => 'apptivate' do
   version :latest
   sha256 :no_check
 

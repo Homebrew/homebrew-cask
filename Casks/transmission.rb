@@ -1,4 +1,4 @@
-class Transmission < Cask
+cask :v1 => 'transmission' do
   version '2.84'
   sha256 '53d08a55a5ca55010d409acb10f0285a649b8879085cad83f2cbcb7faa489ad5'
 
@@ -9,6 +9,7 @@ class Transmission < Cask
   license :gpl
 
   app 'Transmission.app'
+
   zap :delete => [
                   '~/Library/Preferences/org.m0k.transmission.plist',
                   '~/Library/Application Support/Transmission/blocklists',

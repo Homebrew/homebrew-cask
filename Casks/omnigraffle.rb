@@ -1,4 +1,4 @@
-class Omnigraffle < Cask
+cask :v1 => 'omnigraffle' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Omnigraffle < Cask
   license :unknown
 
   app 'OmniGraffle.app'
+
   zap :delete => '~/Library/Application Support/The Omni Group/OmniGraffle'
 end

@@ -1,4 +1,4 @@
-class JetphotoStudio < Cask
+cask :v1 => 'jetphoto-studio' do
   version '5.5'
   sha256 'c583a173d018696d613545acacba4c43f641d770de4e5d5bbb0964c1cb2e9f7f'
 

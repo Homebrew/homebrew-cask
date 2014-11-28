@@ -1,4 +1,4 @@
-class Kamakiri < Cask
+cask :v1 => 'kamakiri' do
   version :latest
   sha256 :no_check
 

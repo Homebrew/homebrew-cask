@@ -1,4 +1,4 @@
-class Nicecast < Cask
+cask :v1 => 'nicecast' do
   version :latest
   sha256 :no_check
 

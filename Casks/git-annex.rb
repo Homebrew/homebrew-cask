@@ -1,4 +1,4 @@
-class GitAnnex < Cask
+cask :v1 => 'git-annex' do
   version :latest
   sha256 :no_check
 
@@ -8,7 +8,7 @@ class GitAnnex < Cask
     # This is a horrible hack to force the file extension.  The
     # backend code should be fixed so that this is not needed.
     preflight do
-      system '/bin/mv', '--', destination_path.join('git-annex-latest'), destination_path.join('git-annex-latest.dmg')
+      system '/bin/mv', '--', staged_path.join('git-annex-latest'), staged_path.join('git-annex-latest.dmg')
     end
     container :nested => 'git-annex-latest.dmg'
   else

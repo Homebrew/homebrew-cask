@@ -1,4 +1,4 @@
-class Dradio < Cask
+cask :v1 => 'dradio' do
   version :latest
   sha256 :no_check
 

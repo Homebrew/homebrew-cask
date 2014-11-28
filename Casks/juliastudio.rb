@@ -1,4 +1,4 @@
-class Juliastudio < Cask
+cask :v1 => 'juliastudio' do
   version '0.4.4'
 
   if MacOS.version < '10.7'

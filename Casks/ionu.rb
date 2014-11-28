@@ -1,4 +1,4 @@
-class Ionu < Cask
+cask :v1 => 'ionu' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Fuze < Cask
+cask :v1 => 'fuze' do
   version :latest
   sha256 :no_check
 

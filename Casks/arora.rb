@@ -1,4 +1,4 @@
-class Arora < Cask
+cask :v1 => 'arora' do
   version '0.10.1'
   sha256 '7cd9d54beb326dbb1a3eebaee1f5252a2df611d738f90d1398e857812ffc49ac'
 

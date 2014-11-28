@@ -1,4 +1,4 @@
-class Silverlight < Cask
+cask :v1 => 'silverlight' do
   version '5.1.30514.0'
   sha256 '469a7b19cf4a87a1248caa850c7de61c88e67c0c5511fe77032817cd79df9dea'
 

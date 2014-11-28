@@ -1,4 +1,4 @@
-class Wechat < Cask
+cask :v1 => 'wechat' do
   version :latest
   sha256 :no_check
 

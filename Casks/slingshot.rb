@@ -1,4 +1,4 @@
-class Slingshot < Cask
+cask :v1 => 'slingshot' do
   version :latest
   sha256 :no_check
 

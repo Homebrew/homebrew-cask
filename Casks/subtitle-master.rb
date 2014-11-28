@@ -1,4 +1,4 @@
-class SubtitleMaster < Cask
+cask :v1 => 'subtitle-master' do
   version '0.6'
   sha256 'c2a4fe372f0840cdbb4fb8d6ae9d689b516d97a04ea082773308d6a65dc75f60'
 

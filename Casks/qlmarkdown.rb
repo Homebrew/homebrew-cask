@@ -1,4 +1,4 @@
-class Qlmarkdown < Cask
+cask :v1 => 'qlmarkdown' do
   version '1.3.3'
   sha256 '045712562665673924397bbbef1ee1157b44e23c9744feda6feda27e107802d3'
 
@@ -11,7 +11,7 @@ class Qlmarkdown < Cask
   # DSL to identify such containers and generate a target directory.
   container :type => :naked
   preflight do
-    system '/usr/bin/ditto', '-xk', '--', "#{destination_path}/QLMarkdown.qlgenerator.zip", "#{destination_path}/QLMarkdown.qlgenerator"
+    system '/usr/bin/ditto', '-xk', '--', "#{staged_path}/QLMarkdown.qlgenerator.zip", "#{staged_path}/QLMarkdown.qlgenerator"
   end
 
   qlplugin 'QLMarkdown.qlgenerator'

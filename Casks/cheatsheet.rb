@@ -1,4 +1,4 @@
-class Cheatsheet < Cask
+cask :v1 => 'cheatsheet' do
   version :latest
   sha256 :no_check
 

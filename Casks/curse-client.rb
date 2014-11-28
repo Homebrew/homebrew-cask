@@ -1,4 +1,4 @@
-class CurseClient < Cask
+cask :v1 => 'curse-client' do
   version '4.0.0.425'
   sha256 'f76eda5d21b85ee4db080c794a3e852ecadaa71fe2d32308d698d95286f36a1f'
 

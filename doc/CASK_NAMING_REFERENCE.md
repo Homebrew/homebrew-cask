@@ -6,7 +6,6 @@ most cases.
 
  * [Find the Canonical Name of the Developer's Distribution](#find-the-canonical-name-of-the-developers-distribution)
  * [Cask Name](#cask-name)
- * [Cask Class](#cask-class)
  * [Cask Naming Examples](#cask-naming-examples)
 
 ## Find the Canonical Name of the Developer's Distribution
@@ -28,11 +27,11 @@ most cases.
   * If the version number is arranged to occur in the middle of the App name,
     it should also be removed.  Example: [IntelliJ IDEA 13 CE.app](../Casks/intellij-idea-ce.rb).
   * Remove from the end: "mac", "for mac", "for OS X".  These terms are generally
-    added to ports such as "MAME OS X.app".  Exception: when the software is not
-    a port, but "Mac" is an inseparable part of the name or branding, as in
-    'PlayForMac.app'
+    added to ported software such as "MAME OS X.app".  Exception: when the software
+    is not a port, but "Mac" is an inseparable part of the name, without which the
+    name would not make sense, for example [PlayForMac.app](../Casks/playformac.rb).
   * Remove from the end: hardware designations such as "for x86", "32-bit", "ppc".
-  * Remove from the end: software framework names such as "Qt", "Gtk", "Wx", "Java", "Oracle JVM", etc.
+  * Remove from the end: software framework names such as "Cocoa", "Qt", "Gtk", "Wx", "Java", "Oracle JVM", etc.
     Exception: the framework is the product being Casked: [java.rb](../Casks/java.rb).
   * Remove from the end: localization strings such as "en-US"
   * Pay attention to details, for example: `"Git Hub" != "git_hub" != "GitHub"`
@@ -80,30 +79,18 @@ Casks are stored in a Ruby file matching their name.  If possible, avoid creatin
 Cask files which differ only by the placement of hyphens.
 
 
-## Cask Class
-
-Casks are implemented as Ruby classes, so a Cask's "class" needs to be a
-valid Ruby class name.
-
-When converting a __Cask name__ to its corresponding __class name__:
-
-  * convert to UpperCamelCase
-  * wherever a hyphen occurs in the __Cask name__, remove the hyphen and
-    create a case change in the __class name__
-
-
 ## Cask Naming Examples
 
 These illustrate most of the naming rules:
 
-App Name on Disk       | Canonical App Name | Cask Name          | Cask File             | Cask Class
------------------------|--------------------|--------------------|-----------------------|------------------------
-`Audio Hijack Pro.app` | Audio Hijack Pro   | `audio-hijack-pro` | `audio-hijack-pro.rb` | `AudioHijackPro`
-`VLC.app`              | VLC                | `vlc`              | `vlc.rb`              | `Vlc`
-`BetterTouchTool.app`  | BetterTouchTool    | `bettertouchtool`  | `bettertouchtool.rb`  | `Bettertouchtool`
-`LPK25 Editor.app`     | LPK25 Editor       | `lpk25-editor`     | `lpk25-editor.rb`     | `Lpk25Editor`
-`Sublime Text 2.app`   | Sublime Text       | `sublime-text`     | `sublime-text.rb`     | `SublimeText`
-`1Password.app`        | 1Password          | `onepassword`      | `onepassword.rb`      | `Onepassword`
+App Name on Disk       | Canonical App Name | Cask Name          | Cask File
+-----------------------|--------------------|--------------------|----------------------
+`Audio Hijack Pro.app` | Audio Hijack Pro   | `audio-hijack-pro` | `audio-hijack-pro.rb`
+`VLC.app`              | VLC                | `vlc`              | `vlc.rb`
+`BetterTouchTool.app`  | BetterTouchTool    | `bettertouchtool`  | `bettertouchtool.rb`
+`LPK25 Editor.app`     | LPK25 Editor       | `lpk25-editor`     | `lpk25-editor.rb`
+`Sublime Text 2.app`   | Sublime Text       | `sublime-text`     | `sublime-text.rb`
+`1Password.app`        | 1Password          | `onepassword`      | `onepassword.rb`
 
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3

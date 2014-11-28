@@ -1,4 +1,4 @@
-class EnolsoftChmView < Cask
+cask :v1 => 'enolsoft-chm-view' do
   version :latest
   sha256 :no_check
 

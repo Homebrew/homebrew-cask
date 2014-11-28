@@ -1,4 +1,4 @@
-class SketchToolbox < Cask
+cask :v1 => 'sketch-toolbox' do
   version :latest
   sha256 :no_check
 

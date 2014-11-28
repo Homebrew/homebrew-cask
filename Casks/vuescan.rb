@@ -1,11 +1,11 @@
-class Vuescan < Cask
-  version '9.4.51'
+cask :v1 => 'vuescan' do
+  version '9.4.53'
 
   if Hardware::CPU.is_32_bit?
-    sha256 'a5d371974e895cf37555d4616afd0d08949ab1e5ce57dc4cc6d00b5cef64e15b'
+    sha256 '26488ec2fbd0dbb841fba8f15e587faebc57bf7c9f599871e7e33cc3a985410a'
     url 'http://www.hamrick.com/files/vuex3294.dmg'
   else
-    sha256 'be0300ff6de7ea83a0453021237e643c80b21264ebc881992028942637bc4fab'
+    sha256 'bcc97275a7477f655622ccca9b717ac4afaffcfcb73affecc12507644eddb61c'
     url 'http://www.hamrick.com/files/vuex6494.dmg'
   end
 

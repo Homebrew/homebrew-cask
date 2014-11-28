@@ -1,4 +1,4 @@
-class Thisservice < Cask
+cask :v1 => 'thisservice' do
   version '3.0.1'
   sha256 'ddf9635421834f1d6bd9fb257ad164f7b59ec2d2b65590d691ec5d2699ec8da2'
 

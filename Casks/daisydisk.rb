@@ -1,4 +1,4 @@
-class Daisydisk < Cask
+cask :v1 => 'daisydisk' do
   version :latest
   sha256 :no_check
 

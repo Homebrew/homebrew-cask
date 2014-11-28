@@ -1,4 +1,4 @@
-class Enjoyable < Cask
+cask :v1 => 'enjoyable' do
   version '1.2'
   sha256 'f455b951ba8cf7c8426756ea6479e2232442508d8190d7ec2675266bf7ff14f6'
 
@@ -9,5 +9,6 @@ class Enjoyable < Cask
   license :unknown
 
   app 'Enjoyable.app'
+
   zap :delete => '~/Library/Preferences/com.yukkurigames.Enjoyable.plist'
 end

@@ -1,10 +1,10 @@
-class Iexplorer < Cask
-  version '3.5.1.2'
-  sha256 'd94d00f9eaad1f6b7c0ac1d9c6f426ba152ad0434ac8b41b55761121b37dcd31'
+cask :v1 => 'iexplorer' do
+  version '3.5.1.6'
+  sha256 'cf965c4b1f686333adf34b0d72e4f2736ceb6f79fc871ddcecf92f8769667fcf'
 
   url "http://cdn.macroplant.com/release/iExplorer-#{version}.dmg"
   appcast 'http://www.macroplant.com/iexplorer/ie3-appcast.xml',
-          :sha256 => '34181a610ff793f715f84afc24cc2de06efacdae62fa05fb031d812dc2e1f2b5'
+          :sha256 => '50a537b61eec96833d145abfe25affc972579f4e01cf3876aa6596ba5320db26'
   homepage 'http://www.macroplant.com/'
   license :unknown
 

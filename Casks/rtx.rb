@@ -1,4 +1,4 @@
-class Rtx < Cask
+cask :v1 => 'rtx' do
   version :latest
   sha256 :no_check
 

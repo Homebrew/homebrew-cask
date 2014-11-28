@@ -1,4 +1,4 @@
-class Dropshare < Cask
+cask :v1 => 'dropshare' do
   version :latest
   sha256 :no_check
 

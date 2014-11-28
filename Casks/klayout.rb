@@ -1,4 +1,4 @@
-class Klayout < Cask
+cask :v1 => 'klayout' do
   version '0.23.2'
   sha256 '96ce3fdead710248ed2ed4f25c9a94859949466d42eaa4f87881c17567dc1f15'
 
@@ -7,6 +7,7 @@ class Klayout < Cask
   license :unknown
 
   pkg "klayout.#{version}.pkg"
+
   uninstall :pkgutil => 'klayout.de',
             :quit => 'klayout.de'
 end

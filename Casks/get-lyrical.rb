@@ -1,4 +1,4 @@
-class GetLyrical < Cask
+cask :v1 => 'get-lyrical' do
   version :latest
   sha256 :no_check
 

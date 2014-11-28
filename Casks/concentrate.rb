@@ -1,4 +1,4 @@
-class Concentrate < Cask
+cask :v1 => 'concentrate' do
   version '1.2.2'
   sha256 '16e9ad16b915b98460a66553d1ec8eef20fece7d53ae50701b6e3ac048aba47e'
 
@@ -9,5 +9,6 @@ class Concentrate < Cask
   license :unknown
 
   app 'Concentrate.app'
+
   zap :delete => '~/Library/Application Support/Concentrate/Concentrate.sqlite3'
 end

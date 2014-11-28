@@ -1,4 +1,4 @@
-class GoogleJapaneseIme < Cask
+cask :v1 => 'google-japanese-ime' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,7 @@ class GoogleJapaneseIme < Cask
   license :unknown
 
   pkg 'GoogleJapaneseInput.pkg'
+
   uninstall :pkgutil => 'com.google.pkg.GoogleJapaneseInput',
             :launchctl => [
                            'com.google.inputmethod.Japanese.Converter',

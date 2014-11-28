@@ -1,4 +1,4 @@
-class Macports < Cask
+cask :v1 => 'macports' do
   version '2.3.2'
 
   if MacOS.version < :mavericks

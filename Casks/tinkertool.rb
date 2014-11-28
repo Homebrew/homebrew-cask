@@ -1,4 +1,4 @@
-class Tinkertool < Cask
+cask :v1 => 'tinkertool' do
   version :latest
   sha256 :no_check
 

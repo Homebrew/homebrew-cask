@@ -1,4 +1,4 @@
-class Authbuddy < Cask
+cask :v1 => 'authbuddy' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,7 @@ class Authbuddy < Cask
   license :unknown
 
   pkg 'DssW authbuddy.pkg'
+
   uninstall :pkgutil => 'uk.co.dssw.authbuddy'
   caveats do
     files_in_usr_local

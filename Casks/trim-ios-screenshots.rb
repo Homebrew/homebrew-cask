@@ -1,4 +1,4 @@
-class TrimIosScreenshots < Cask
+cask :v1 => 'trim-ios-screenshots' do
   version '1.0.1'
   sha256 '08be76899e40a99183cde27639ae44329096dd01f8c90619e4decc6243af6ed1'
 

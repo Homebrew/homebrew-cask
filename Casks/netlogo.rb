@@ -1,4 +1,4 @@
-class Netlogo < Cask
+cask :v1 => 'netlogo' do
   version '5.0.5'
   sha256 '317faad5fadff9bababce580d9c72d74a491ec81de5129529a5d2f4dd8241ebf'
 

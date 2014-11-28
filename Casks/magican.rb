@@ -1,4 +1,4 @@
-class Magican < Cask
+cask :v1 => 'magican' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Magican < Cask
   license :unknown
 
   pkg 'Magican.pkg'
+
   uninstall :pkgutil => 'com.magican.*'
 end

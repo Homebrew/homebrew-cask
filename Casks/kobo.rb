@@ -1,4 +1,4 @@
-class Kobo < Cask
+cask :v1 => 'kobo' do
   version :latest
   sha256 :no_check
 

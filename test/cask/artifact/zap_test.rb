@@ -100,32 +100,22 @@ describe Cask::Artifact::Zap do
       )
 
       Cask::FakeSystemCommand.stubs_command(
-        ['/bin/launchctl', 'list', '-x', 'my.fancy.package.service'],
+        ['/bin/launchctl', 'list', 'my.fancy.package.service'],
         "launchctl list returned unknown response\n"
       )
       Cask::FakeSystemCommand.stubs_command(
-        ['/usr/bin/sudo', '-E', '--', '/bin/launchctl', 'list', '-x', 'my.fancy.package.service'],
+        ['/usr/bin/sudo', '-E', '--', '/bin/launchctl', 'list', 'my.fancy.package.service'],
         <<-"PLIST"
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-\t<key>Label</key>
-\t<string>my.fancy.package.service</string>
-\t<key>LastExitStatus</key>
-\t<integer>0</integer>
-\t<key>LimitLoadToSessionType</key>
-\t<string>System</string>
-\t<key>OnDemand</key>
-\t<true/>
-\t<key>ProgramArguments</key>
-\t<array>
-\t\t<string>argument</string>
-\t</array>
-\t<key>TimeOut</key>
-\t<integer>30</integer>
-</dict>
-</plist>
+{
+	"LimitLoadToSessionType" = "Aqua";
+	"Label" = "my.fancy.package.service";
+	"TimeOut" = 30;
+	"OnDemand" = true;
+	"LastExitStatus" = 0;
+	"ProgramArguments" = (
+		"argument";
+	);
+};
         PLIST
       )
 

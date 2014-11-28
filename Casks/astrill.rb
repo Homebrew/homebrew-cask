@@ -1,4 +1,4 @@
-class Astrill < Cask
+cask :v1 => 'astrill' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Astrill < Cask
   license :unknown
 
   pkg 'Astrill Setup.mpkg'
+
   uninstall :pkgutil => 'com.Astrill.app'
 end

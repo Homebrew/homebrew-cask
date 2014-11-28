@@ -1,4 +1,4 @@
-class Globalsync < Cask
+cask :v1 => 'globalsync' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Ivolume < Cask
+cask :v1 => 'ivolume' do
   version :latest
   sha256 :no_check
 

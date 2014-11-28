@@ -1,4 +1,4 @@
-class Mysqlworkbench < Cask
+cask :v1 => 'mysqlworkbench' do
   version '6.2.3'
   sha256 '0a66707a03d83a70f1ced521ac0954ee56ff9a6e86f81e01d03df723755e9186'
 

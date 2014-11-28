@@ -1,4 +1,4 @@
-class Origin < Cask
+cask :v1 => 'origin' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Tower < Cask
+cask :v1 => 'tower' do
   version :latest
   sha256 :no_check
 
@@ -8,6 +8,7 @@ class Tower < Cask
   license :unknown
 
   app 'Tower.app'
+
   zap :delete => [
                   '~/Library/Application Support/com.fournova.Tower2',
                   '~/Library/Preferences/com.fournova.Tower2.plist',

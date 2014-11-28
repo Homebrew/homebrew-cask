@@ -1,4 +1,4 @@
-class Ormr < Cask
+cask :v1 => 'ormr' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Ormr < Cask
   license :unknown
 
   pkg 'Ormr.pkg'
+
   uninstall :pkgutil => 'com.sadcatsoft.ormr.Ormr.pkg'
 end

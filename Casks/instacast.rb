@@ -1,4 +1,4 @@
-class Instacast < Cask
+cask :v1 => 'instacast' do
   version '1.2.6-2380'
   sha256 '560922bd0ccc7ebab002035d80ae4e630d6f30fde7eebacb7dff616e633a1a4d'
 

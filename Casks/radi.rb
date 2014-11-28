@@ -1,4 +1,4 @@
-class Radi < Cask
+cask :v1 => 'radi' do
   version :latest
   sha256 :no_check
 

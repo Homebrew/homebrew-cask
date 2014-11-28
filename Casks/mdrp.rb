@@ -1,4 +1,4 @@
-class Mdrp < Cask
+cask :v1 => 'mdrp' do
   version :latest
   sha256 :no_check
 

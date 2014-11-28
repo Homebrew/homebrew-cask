@@ -1,4 +1,4 @@
-class Ghc < Cask
+cask :v1 => 'ghc' do
   version '7.8.3-r1'
   sha256 '4f48e373f3fa682c8c29e2128038c040e69d7852a8529173f53105027199c21c'
 

@@ -1,4 +1,4 @@
-class ShelfLeveler < Cask
+cask :v1 => 'shelf-leveler' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Brytonbridge < Cask
+cask :v1 => 'brytonbridge' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,7 @@ class Brytonbridge < Cask
   license :unknown
 
   pkg 'BrytonBridge2.pkg'
+
   uninstall :pkgutil => 'com.brytonsport.pkg.BrytonBridge2',
             :quit    => 'com.yourcompany.BrytonBridge',
             :delete  => '/Applications/BrytonBridge2'

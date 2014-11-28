@@ -1,4 +1,4 @@
-class PathFinder < Cask
+cask :v1 => 'path-finder' do
   version :latest
   sha256 :no_check
 
@@ -9,9 +9,9 @@ class PathFinder < Cask
   app 'Path Finder.app'
 
   postflight do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.cocoatech.PathFinder', 'kNTMoveToApplicationsFolderAlertSuppress', '-bool', 'true'
+    suppress_move_to_applications :key => 'kNTMoveToApplicationsFolderAlertSuppress'
   end
+
   zap :delete => [
                   '~/Library/Preferences/com.cocoatech.PathFinder.plist',
                   '~/Library/Application Support/Path Finder',

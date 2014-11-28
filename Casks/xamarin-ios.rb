@@ -1,4 +1,4 @@
-class XamarinIos < Cask
+cask :v1 => 'xamarin-ios' do
   version '8.2.0.193'
   sha256 '6fd3ffd73937d937e0dac4bfdc6534fc948ceebf38d02b3eee94cd857fba4ee8'
 
@@ -10,5 +10,6 @@ class XamarinIos < Cask
   license :unknown
 
   pkg "monotouch-#{version}.pkg"
+
   uninstall :pkgutil => 'com.xamarin.monotouch.pkg'
 end

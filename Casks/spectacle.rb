@@ -1,4 +1,4 @@
-class Spectacle < Cask
+cask :v1 => 'spectacle' do
   if MacOS.version < :mavericks
     version '0.8.6'
     sha256 '3e367d2d7e6fe7d5f41d717d49cb087ba7432624b71ddd91c0cfa9d5a5459b7c'
@@ -15,5 +15,6 @@ class Spectacle < Cask
   license :mit
 
   app 'Spectacle.app'
+
   zap :delete => '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist'
 end

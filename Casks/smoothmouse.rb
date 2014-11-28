@@ -1,4 +1,4 @@
-class Smoothmouse < Cask
+cask :v1 => 'smoothmouse' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,7 @@ class Smoothmouse < Cask
   license :unknown
 
   pkg 'SmoothMouse.pkg'
+
   uninstall :launchctl => [
                            'com.cyberic.smoothmouse',
                            'com.cyberic.smoothmouseupdater',

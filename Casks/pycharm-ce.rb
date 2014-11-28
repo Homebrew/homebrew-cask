@@ -1,6 +1,6 @@
-class PycharmCe < Cask
-  version '3.4.1'
-  sha256 '18b4d2d61badb81feaf22a51a7c76b85618e5a7a01f4f4c5e46079d134c64002'
+cask :v1 => 'pycharm-ce' do
+  version '4.0'
+  sha256 'a879358d671b91df2ca91aaa682d603da971afcd7c440c46ec3f4ea466c4add4'
 
   url "http://download.jetbrains.com/python/pycharm-community-#{version}.dmg"
   homepage 'http://www.jetbrains.com/pycharm'
@@ -9,6 +9,6 @@ class PycharmCe < Cask
   app 'PyCharm CE.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/PyCharm CE.app/Contents/Info.plist"
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/PyCharm CE.app/Contents/Info.plist"
   end
 end

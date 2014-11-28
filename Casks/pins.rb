@@ -1,4 +1,4 @@
-class Pins < Cask
+cask :v1 => 'pins' do
   version :latest
   sha256 :no_check
 

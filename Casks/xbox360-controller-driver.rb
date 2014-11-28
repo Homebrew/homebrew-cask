@@ -1,4 +1,4 @@
-class Xbox360ControllerDriver < Cask
+cask :v1 => 'xbox360-controller-driver' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Xbox360ControllerDriver < Cask
   license :unknown
 
   pkg 'Install360Controller.pkg'
+
   uninstall :pkgutil => 'com.mice.pkg.Xbox360controller'
 end

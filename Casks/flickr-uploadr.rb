@@ -1,4 +1,4 @@
-class FlickrUploadr < Cask
+cask :v1 => 'flickr-uploadr' do
   version '3.2.1'
   sha256 'c41a1e4a8b6f7e3c9cb5d1adfc1b3bdc4a835dfbc31f16c0dbd657b74523214a'
 

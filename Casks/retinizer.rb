@@ -1,4 +1,4 @@
-class Retinizer < Cask
+cask :v1 => 'retinizer' do
   version '0.5.0'
   sha256 '34d82f6beeb934ebd73ac231c364298456374d8e52f5e3826077999507832922'
 

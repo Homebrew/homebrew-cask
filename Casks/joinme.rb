@@ -1,4 +1,4 @@
-class Joinme < Cask
+cask :v1 => 'joinme' do
   version :latest
   sha256 :no_check
 

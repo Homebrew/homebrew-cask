@@ -1,4 +1,4 @@
-class Goagentx < Cask
+cask :v1 => 'goagentx' do
   version :latest
   sha256 :no_check
 

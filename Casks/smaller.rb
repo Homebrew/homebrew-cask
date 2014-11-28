@@ -1,4 +1,4 @@
-class Smaller < Cask
+cask :v1 => 'smaller' do
   version :latest
   sha256 :no_check
 

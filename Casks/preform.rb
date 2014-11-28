@@ -1,4 +1,4 @@
-class Preform < Cask
+cask :v1 => 'preform' do
   version '1.7.5'
   sha256 '1cba63d07ac8d872d76e7df7a3a3c727cfbcdd42e77260ffc47b636d315a5b83'
 

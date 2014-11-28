@@ -1,4 +1,4 @@
-class JaspersoftStudio < Cask
+cask :v1 => 'jaspersoft-studio' do
   version '5.6.1'
   sha256 '339222ba8c1d640f90d6339b9f5ce5292e620c2bc256a09f75b6f413acd061d2'
 

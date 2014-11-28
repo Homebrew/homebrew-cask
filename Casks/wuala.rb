@@ -1,4 +1,4 @@
-class Wuala < Cask
+cask :v1 => 'wuala' do
   version :latest
   sha256 :no_check
 

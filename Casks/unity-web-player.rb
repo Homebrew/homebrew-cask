@@ -1,4 +1,4 @@
-class UnityWebPlayer < Cask
+cask :v1 => 'unity-web-player' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,7 @@ class UnityWebPlayer < Cask
   license :unknown
 
   pkg 'Install Unity Web Player.pkg'
+
   uninstall :pkgutil => 'com.unity.UnityWebPlayer',
             :delete  => '/Library/Internet Plug-Ins/Unity Web Player.plugin'
 end

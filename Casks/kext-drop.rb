@@ -1,4 +1,4 @@
-class KextDrop < Cask
+cask :v1 => 'kext-drop' do
   version :latest
   sha256 :no_check
 

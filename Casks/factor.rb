@@ -1,4 +1,4 @@
-class Factor < Cask
+cask :v1 => 'factor' do
   version '0.96'
   sha256 'bd5dca1393c444a9491ef0c70f48b94ae7e39712ea0748a061cd721d26e83c40'
 

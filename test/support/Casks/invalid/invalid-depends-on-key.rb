@@ -1,4 +1,4 @@
-class InvalidDependsOnKey < TestCask
+cask :v1test => 'invalid-depends-on-key' do
   version '1.2.3'
   sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
 

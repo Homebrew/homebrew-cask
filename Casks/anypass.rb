@@ -1,4 +1,4 @@
-class Anypass < Cask
+cask :v1 => 'anypass' do
   version '1.0.0'
   sha256 '364d108736eddfdb6e7db56430806d790b79e9f8561aedc544fc78d7e41bac54'
 

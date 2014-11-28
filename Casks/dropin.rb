@@ -1,4 +1,4 @@
-class Dropin < Cask
+cask :v1 => 'dropin' do
   version :latest
   sha256 :no_check
 

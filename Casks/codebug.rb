@@ -1,4 +1,4 @@
-class Codebug < Cask
+cask :v1 => 'codebug' do
   version :latest
   sha256 :no_check
 

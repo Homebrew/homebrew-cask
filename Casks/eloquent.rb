@@ -1,4 +1,4 @@
-class Eloquent < Cask
+cask :v1 => 'eloquent' do
   version '2.4.8'
   sha256 '3116ce1e74a6305ad60bb60ba010ccd864f3dce71eaa1a64fee2791651119857'
 

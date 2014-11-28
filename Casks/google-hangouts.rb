@@ -1,4 +1,4 @@
-class GoogleHangouts < Cask
+cask :v1 => 'google-hangouts' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class GoogleHangouts < Cask
   license :unknown
 
   pkg 'Google Voice and Video.pkg'
+
   uninstall :pkgutil => 'com.google.pkg.GoogleVoiceAndVideo'
 end

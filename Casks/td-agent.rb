@@ -1,4 +1,4 @@
-class TdAgent < Cask
+cask :v1 => 'td-agent' do
   version '2.0.3'
   sha256 '7e730682879dc199cc712205f22ba93fb9bee20a5dad16b113c8f32d11109cb8'
 
@@ -7,6 +7,7 @@ class TdAgent < Cask
   license :unknown
 
   pkg 'td-agent2.pkg'
+
   uninstall :pkgutil => 'test.treasuredatainc.pkg.tdagent2',
             :launchctl => 'td-agent'
 end

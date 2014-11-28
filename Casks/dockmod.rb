@@ -1,4 +1,4 @@
-class Dockmod < Cask
+cask :v1 => 'dockmod' do
   version '2.04'
   sha256 '86c92aa446d436296a800ee832466afa845048316a09df15d0e793f5a4cad55d'
 

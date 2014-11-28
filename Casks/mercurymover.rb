@@ -1,4 +1,4 @@
-class Mercurymover < Cask
+cask :v1 => 'mercurymover' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Mercurymover < Cask
   license :unknown
 
   prefpane 'MercuryMover.prefPane'
+
   zap :delete => '~/Library/Preferences/com.heliumfoot.MyWiAgent.plist'
 end

@@ -1,4 +1,4 @@
-class LingonX < Cask
+cask :v1 => 'lingon-x' do
   version :latest
   sha256 :no_check
 

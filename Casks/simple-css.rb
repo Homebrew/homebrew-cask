@@ -1,4 +1,4 @@
-class SimpleCss < Cask
+cask :v1 => 'simple-css' do
   version :latest
   sha256 :no_check
 

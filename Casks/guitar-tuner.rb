@@ -1,4 +1,4 @@
-class GuitarTuner < Cask
+cask :v1 => 'guitar-tuner' do
   version :latest
   sha256 :no_check
 

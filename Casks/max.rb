@@ -1,4 +1,4 @@
-class Max < Cask
+cask :v1 => 'max' do
   version '0.9.1'
   sha256 '722bf714696d3d39329ba98ffddc9f117f8cc6863f71670507cd12f62a5e5f14'
 

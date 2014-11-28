@@ -1,4 +1,4 @@
-class Paraview < Cask
+cask :v1 => 'paraview' do
   version '4.1.0'
 
   if MacOS.version < :mavericks

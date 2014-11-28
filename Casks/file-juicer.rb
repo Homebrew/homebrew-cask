@@ -1,4 +1,4 @@
-class FileJuicer < Cask
+cask :v1 => 'file-juicer' do
   version :latest
   sha256 :no_check
 

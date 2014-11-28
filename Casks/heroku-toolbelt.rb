@@ -1,4 +1,4 @@
-class HerokuToolbelt < Cask
+cask :v1 => 'heroku-toolbelt' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,7 @@ class HerokuToolbelt < Cask
   license :unknown
 
   pkg 'heroku-toolbelt.pkg'
+
   uninstall :pkgutil => 'com.heroku.toolbelt',
             :delete  => [
                          '/usr/local/heroku',

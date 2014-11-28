@@ -1,4 +1,4 @@
-class Multifirefox < Cask
+cask :v1 => 'multifirefox' do
   version :latest
   sha256 :no_check
 

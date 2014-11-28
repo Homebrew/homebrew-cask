@@ -1,4 +1,4 @@
-class Expandrive < Cask
+cask :v1 => 'expandrive' do
   version :latest
   sha256 :no_check
 
@@ -8,6 +8,7 @@ class Expandrive < Cask
   license :unknown
 
   app 'ExpanDrive.app'
+
   zap :delete => [
                   '~/Library/Application Support/ExpanDrive',
                   '~/Preferences/com.expandrive.ExpanDrive2.plist',

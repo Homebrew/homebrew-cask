@@ -1,4 +1,4 @@
-class ABetterFinderAttributes < Cask
+cask :v1 => 'a-better-finder-attributes' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class FlashPlayerDebugger < Cask
+cask :v1 => 'flash-player-debugger' do
   version '14.0.0.176'
   sha256 '4ea23e909aa54c130de0d7a6453409207d303523cce15c4621ad4a55e0681fcf'
 

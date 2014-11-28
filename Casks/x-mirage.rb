@@ -1,4 +1,4 @@
-class XMirage < Cask
+cask :v1 => 'x-mirage' do
   version :latest
   sha256 :no_check
 

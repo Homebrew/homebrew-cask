@@ -1,6 +1,6 @@
-class Ax88179 < Cask
-  version '2.2.0_20140724'
-  sha256 '075cdf5cb5a6ed0e8a4d59ff470a32f5e869f3b2f2b08f268120cbae30c61329'
+cask :v1 => 'ax88179' do
+  version '2.3.0_20140929'
+  sha256 '269f233cd6fc70ba46dc11ae2bfac7aa4df019e193dededb1e1e56aba1aca699'
 
   module Utils
     def self.basename
@@ -14,5 +14,6 @@ class Ax88179 < Cask
 
   container :nested => "#{Utils.basename}/AX88179_178A.dmg"
   pkg "AX88179_178A_v#{version[0..-10]}.pkg"
+
   uninstall :script => { :executable => 'AX88179_178A_Uninstall_v140' }
 end

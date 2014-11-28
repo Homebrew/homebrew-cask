@@ -1,10 +1,10 @@
-class Mediathekview < Cask
-  version '4'
-  sha256 '41f53b86b6475fa0d8e347e9430597a975fb4f7c13eae70e82b723dace5b7c8a'
+cask :v1 => 'mediathekview' do
+  version '8'
+  sha256 'af2b9cb5202a528bebd832dcb5de5fe9b3937027ff65f5808cc1b08f0f85f195'
 
-  url "https://downloads.sourceforge.net/project/zdfmediathk/Mediathek/Mediathek%20#{version}/MediathekView_#{version}_OSX.dmg"
+  url "https://downloads.sourceforge.net/project/zdfmediathk/Mediathek/Mediathek%20#{version}/MediathekView_#{version}.dmg"
   homepage 'http://sourceforge.net/projects/zdfmediathk/'
-  license :oss
+  license :gpl
 
   app 'MediathekView.app'
 end

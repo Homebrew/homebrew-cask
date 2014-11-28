@@ -1,4 +1,4 @@
-class Mcs783x < Cask
+cask :v1 => 'mcs783x' do
   version '1.1.0'
   sha256 'ea1d6245b5accabf041060886f16cc00b43d3e6e7e032f4154b487e96ab05569'
 
@@ -16,6 +16,7 @@ class Mcs783x < Cask
   pkg "MCS7830 v#{version}.pkg"
   # todo, is "uninstal" below (one "l") a typo, or is that really the
   # file in the package?
+
   uninstall :script => { :executable => 'uninstal driver' },
             :pkgutil => 'asix.com.moschipUsbEthernet.pkg'
 end

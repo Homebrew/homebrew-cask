@@ -1,4 +1,4 @@
-class Slate < Cask
+cask :v1 => 'slate' do
   version :latest
   sha256 :no_check
 
@@ -8,6 +8,7 @@ class Slate < Cask
   license :oss
 
   app 'Slate.app'
+
   zap :delete => [
                   '~/.slate',
                   '~/.slate.js',

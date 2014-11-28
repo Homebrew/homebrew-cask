@@ -1,4 +1,4 @@
-class Lpk25Editor < Cask
+cask :v1 => 'lpk25-editor' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Plycounter < Cask
+cask :v1 => 'plycounter' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class SpotifyMenubar < Cask
+cask :v1 => 'spotify-menubar' do
   version :latest
   sha256 :no_check
 

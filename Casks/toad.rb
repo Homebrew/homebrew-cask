@@ -1,4 +1,4 @@
-class Toad < Cask
+cask :v1 => 'toad' do
   version '1.0.8'
   sha256 'd02861e2319197730b16d112134f46f75b263d79ba6be29f6d9e33837c031fb9'
 
@@ -7,6 +7,7 @@ class Toad < Cask
   license :unknown
 
   pkg 'ToadMacEdition_108.pkg'
+
   uninstall :pkgutil => 'com.dell.Toad',
             :delete => '/Applications/Toad.app'
 end

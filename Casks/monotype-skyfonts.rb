@@ -1,4 +1,4 @@
-class MonotypeSkyfonts < Cask
+cask :v1 => 'monotype-skyfonts' do
   version '4.6.0.0'
   sha256 '211f8f386c0ed84a19235a1cc64478c5f24d1cb0bbfb3947fa5cb5633f36484d'
 

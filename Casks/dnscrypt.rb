@@ -1,4 +1,4 @@
-class Dnscrypt < Cask
+cask :v1 => 'dnscrypt' do
   version '1.0.3'
   sha256 '08fc0ee0a029a1a99ffc44a0cb5f7f844f41e7fb0a30e31fea714ac103d69557'
 
@@ -7,6 +7,7 @@ class Dnscrypt < Cask
   license :oss
 
   pkg 'DNSCrypt.mpkg'
+
   uninstall :quit      => 'com.github.dnscrypt-osxclient.DNSCrypt-Menubar',
             :pkgutil   => 'com.github.dnscrypt-osxclient.dnscryptClient.*',
             :launchctl => [

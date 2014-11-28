@@ -1,4 +1,4 @@
-class Hostbuddy < Cask
+cask :v1 => 'hostbuddy' do
   version :latest
   sha256 :no_check
 

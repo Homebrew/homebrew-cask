@@ -1,4 +1,4 @@
-class Sdrdx < Cask
+cask :v1 => 'sdrdx' do
   version :latest
   sha256 :no_check
 

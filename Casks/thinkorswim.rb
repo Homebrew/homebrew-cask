@@ -1,4 +1,4 @@
-class Thinkorswim < Cask
+cask :v1 => 'thinkorswim' do
   version :latest
   sha256 :no_check
 

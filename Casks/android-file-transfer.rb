@@ -1,4 +1,4 @@
-class AndroidFileTransfer < Cask
+cask :v1 => 'android-file-transfer' do
   version :latest
   sha256 :no_check
 

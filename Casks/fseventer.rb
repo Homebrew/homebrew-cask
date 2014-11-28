@@ -1,4 +1,4 @@
-class Fseventer < Cask
+cask :v1 => 'fseventer' do
   version :latest
   sha256 :no_check
 
@@ -8,5 +8,6 @@ class Fseventer < Cask
   license :unknown
 
   app 'fseventer/fseventer.app'
+
   uninstall :script => 'fseventer/HelperToolUninstall.sh'
 end

@@ -1,4 +1,4 @@
-class Majic < Cask
+cask :v1 => 'majic' do
   version :latest
   sha256 :no_check
 

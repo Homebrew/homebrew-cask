@@ -1,8 +1,8 @@
-class Liteide < Cask
-  version '23.2'
-  sha256 '29cf71bfb324e5d648038fd3e5b4ddc9335b8ca6393281d14c40067e9cb01b8b'
+cask :v1 => 'liteide' do
+  version '24.2'
+  sha256 '2178ec58f1aa3fe64be6d4f9c516fe6f712667bfe1abfa85aed6718cc7f3ef9a'
 
-  url "https://downloads.sourceforge.net/project/liteide/X#{version}/liteidex#{version}-1.macosx.zip"
+  url "https://downloads.sourceforge.net/project/liteide/X#{version}/liteidex#{version}.macosx.zip"
   homepage 'https://github.com/visualfc/liteide'
   license :oss
 

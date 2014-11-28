@@ -1,4 +1,4 @@
-class Vinoteka < Cask
+cask :v1 => 'vinoteka' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Ridibooks < Cask
+cask :v1 => 'ridibooks' do
   version :latest
   sha256 :no_check
 
@@ -8,8 +8,9 @@ class Ridibooks < Cask
 
   container :type => :naked
   preflight do
-    system '/bin/mv', '--', destination_path.join('getapp'), destination_path.join('ridibooks.pkg')
+    system '/bin/mv', '--', staged_path.join('getapp'), staged_path.join('ridibooks.pkg')
   end
   pkg 'ridibooks.pkg'
+
   uninstall :pkgutil => 'com.ridibooks.Ridibooks'
 end

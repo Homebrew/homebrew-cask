@@ -1,4 +1,4 @@
-class ImportIo < Cask
+cask :v1 => 'import-io' do
   version :latest
   sha256 :no_check
 

@@ -1,11 +1,11 @@
-class Airparrot < Cask
+cask :v1 => 'airparrot' do
   version :latest
   sha256 :no_check
 
-  url 'http://download.airsquirrels.com/AirParrot/Mac/AirParrot.dmg'
-  appcast 'http://airparrot.com/updates/AirParrot.xml'
+  url 'http://download.airsquirrels.com/AirParrot2/Mac/AirParrot2.dmg'
+  appcast 'https://updates.airsquirrels.com/AirParrot2/Mac/AirParrot2.xml'
   homepage 'http://www.airsquirrels.com/airparrot/'
   license :unknown
 
-  app 'AirParrot.app'
+  app 'AirParrot 2.app'
 end

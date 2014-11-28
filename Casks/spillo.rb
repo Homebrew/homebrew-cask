@@ -1,8 +1,8 @@
-class Spillo < Cask
-  version :latest
-  sha256 :no_check
+cask :v1 => 'spillo' do
+  version '1.3'
+  sha256 '3be890efc0453c6759dadabfd13c6991b1a99d7211c0a0971b717c684a7ef5a0'
 
-  url 'http://ddvl.me/3Q1U1J2N1W26/download/Spillo.zip'
+  url "http://bananafishsoftware.com/software/spillo/app/spillo-#{version}.zip"
   homepage 'http://bananafishsoftware.com/products/spillo/'
   license :unknown
 
