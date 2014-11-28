@@ -9,6 +9,6 @@ cask :v1 => 'zeroxdbe-eap' do
   app '0xDBE EAP.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/0xDBE\ EAP.app/Contents/Info.plist"
+    plist_set(':JVMOptions:JVMVersion', '1.6+')
   end
 end
