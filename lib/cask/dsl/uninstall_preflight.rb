@@ -1,6 +1,6 @@
 require 'cask/staged'
 
-class Cask::DSL::BeforeUninstall < Cask::DSL::Base
+class Cask::DSL::UninstallPreflight < Cask::DSL::Base
   include Cask::Staged
 
   def remove_accessibility_access
@@ -10,5 +10,10 @@ class Cask::DSL::BeforeUninstall < Cask::DSL::Base
         "DELETE FROM access WHERE client='#{bundle_identifier}';"
       ], :sudo => true)
     end
+  end
+
+  def method_missing(method, *args)
+    Cask::Utils.method_missing_message(method, @cask.to_s, 'uninstall_preflight')
+    return nil
   end
 end

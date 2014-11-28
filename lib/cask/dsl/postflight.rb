@@ -1,6 +1,6 @@
 require 'cask/staged'
 
-class Cask::DSL::AfterInstall < Cask::DSL::Base
+class Cask::DSL::Postflight < Cask::DSL::Base
   include Cask::Staged
 
   def suppress_move_to_applications(options = {})
@@ -17,5 +17,10 @@ class Cask::DSL::AfterInstall < Cask::DSL::Base
         "INSERT INTO access VALUES('kTCCServiceAccessibility','#{bundle_identifier}',0,1,1,NULL);"
       ], :sudo => true)
     end
+  end
+
+  def method_missing(method, *args)
+    Cask::Utils.method_missing_message(method, @cask.to_s, 'postflight')
+    return nil
   end
 end

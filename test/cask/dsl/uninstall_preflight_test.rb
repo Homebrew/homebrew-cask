@@ -1,9 +1,9 @@
 require "test_helper"
 
-describe Cask::DSL::BeforeUninstall do
+describe Cask::DSL::UninstallPreflight do
   before do
     cask = Cask.load('basic-cask')
-    @dsl = Cask::DSL::BeforeUninstall.new(cask, Cask::FakeSystemCommand)
+    @dsl = Cask::DSL::UninstallPreflight.new(cask, Cask::FakeSystemCommand)
   end
 
   it "can remove accessibility access" do
