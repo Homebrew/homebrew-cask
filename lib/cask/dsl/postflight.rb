@@ -9,13 +9,17 @@ class Cask::DSL::Postflight < Cask::DSL::Base
   end
 
   def enable_accessibility_access
-    if MacOS.version < :mavericks
-      system_command("touch", :args => ["/private/var/db/.AccessibilityAPIEnabled"])
+    if MacOS.version >= :mavericks
+      @command.run!('/usr/bin/sqlite3',
+                    :args => [
+                              Cask.tcc_db,
+                              "INSERT INTO access VALUES('kTCCServiceAccessibility','#{bundle_identifier}',0,1,1,NULL);",
+                             ],
+                    :sudo => true)
     else
-      system_command("sqlite3", :args => [
-        "/Library/Application\ Support/com.apple.TCC/TCC.db",
-        "INSERT INTO access VALUES('kTCCServiceAccessibility','#{bundle_identifier}',0,1,1,NULL);"
-      ], :sudo => true)
+      @command.run!('/usr/bin/touch',
+                    :args => [Cask.pre_mavericks_accessibility_dotfile],
+                    :sudo => true)
     end
   end
 

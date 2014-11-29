@@ -135,5 +135,13 @@ module Cask::Locations
         tapspath.join(default_tap, 'Casks', "#{cask_title}.rb")
       end
     end
+
+    def tcc_db
+      @tcc_db ||= Pathname.new('/Library/Application Support/com.apple.TCC/TCC.db')
+    end
+
+    def pre_mavericks_accessibility_dotfile
+      @pre_mavericks_accessibility_dotfile ||= Pathname.new('/private/var/db/.AccessibilityAPIEnabled')
+    end
   end
 end

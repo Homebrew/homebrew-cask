@@ -3,12 +3,19 @@ require 'cask/staged'
 class Cask::DSL::UninstallPreflight < Cask::DSL::Base
   include Cask::Staged
 
-  def remove_accessibility_access
+  def disable_accessibility_access
     if MacOS.version >= :mavericks
-      system_command("sqlite3", :args => [
-        "/Library/Application\ Support/com.apple.TCC/TCC.db",
-        "DELETE FROM access WHERE client='#{bundle_identifier}';"
-      ], :sudo => true)
+      @command.run!('/usr/bin/sqlite3',
+                    :args => [
+                              Cask.tcc_db,
+                              "DELETE FROM access WHERE client='#{bundle_identifier}';",
+                             ],
+                    :sudo => true)
+    else
+      opoo <<-EOS.undent
+        Accessibility access was enabled for #{@cask}, but it is not safe to disable
+        automatically on this version of OS X.  See System Preferences.
+      EOS
     end
   end
 
