@@ -1,9 +1,9 @@
 # encoding: UTF-8
 cask :v1 => 'sogouinput' do
-  version '3.0.0'
-  sha256 'a11ef502efc364cce4191a0d2e6fb375fe9636438045b522431ac8829b40eae5'
+  version '3.0.2.59116'
+  sha256 '51df347ed60ea13bb39dd89ec5fc9eb6cd549f0080d9f94d97a7e0502b0edb0c'
 
-  url "http://download.ime.sogou.com/1409894725/sogou_mac_#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}.dmg?st=SEx0_y78FJKFl1c6-uEEnA&e=1410158966&fn=sogou_mac_#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}.dmg"
+  url "http://download.ime.sogou.com/1411725208/sogou_mac_30a.dmg"
   homepage 'http://pinyin.sogou.com/mac/'
   license :unknown
 
