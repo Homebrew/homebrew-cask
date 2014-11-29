@@ -6,5 +6,6 @@ cask :v1test => 'invalid-depends-on-key' do
   homepage 'http://example.com/invalid-depends-on-key'
 
   depends_on :no_such_key => 'unar'
+
   app 'Caffeine.app'
 end
