@@ -1,4 +1,4 @@
-cask :v1 => 'lastpass-universal' do
+cask :v1 => 'lastpass' do
   version :latest
   sha256 :no_check
 
