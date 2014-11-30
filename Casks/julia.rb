@@ -7,6 +7,7 @@ cask :v1 => 'julia' do
   license :mit
 
   app "Julia-#{version}.app"
+  binary "Julia-#{version}.app/Contents/Resources/julia/bin/julia"
 
   zap :delete => '~/.julia'
 end
