@@ -1,32 +1,3 @@
-# NOTICE: The Cask syntax is changing! (8 Sep 2014)
-
-There will be a period of transition while we update the Cask DSL to use
-new forms described in [#4688](https://github.com/caskroom/homebrew-cask/issues/4688).
-
-End users should not notice a difference — but see below about upgrading
-on errors.  Cask authors will need to adjust to the new DSL forms.
-
-The Cask DSL 1.0 will be documented in [CASK_LANGUAGE_REFERENCE.md](doc/CASK_LANGUAGE_REFERENCE.md)
-and [cask_language_deltas.md](doc/cask_language_deltas.md).
-
-Code to support most of the new DSL forms has been in release for several
-weeks; most users are already running forward compatible code<sup>1</sup>.
-
-The transition officially begins with version 0.40.0, released 8 Sep 2014.
-Cask definition files will also be changing.  If you experience an error
-when running Homebrew-cask, please run
-
-```bash
-$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
-```
-
-to get the latest code.
-
-<sup>1</sup> forward compatibility began with [v0.38.0](https://github.com/caskroom/homebrew-cask/releases/tag/v0.38.0), released 28 Jul 2014
-
----------------------------------------
-
-
 # "To install, drag this icon..." no more!
 
 [![Build Status](https://travis-ci.org/caskroom/homebrew-cask.png?branch=master)](https://travis-ci.org/caskroom/homebrew-cask)
