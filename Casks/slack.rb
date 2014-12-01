@@ -1,11 +1,11 @@
 cask :v1 => 'slack' do
-  version '1.0'
-  sha256 '3cb5c52077388042006104d18ec1b7c230ededcf9f9691df2a42687e86f3b40c'
+  version '1.0.2'
+  sha256 '09c92acb4cd79bd94418bf1aebcc3675a0cc4e4125d72d202be237bf06507235'
 
   # hockeyapp.net is the official download host per the appcast feed
-  url 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1/app_versions/4?format=zip&avtoken=826b2af93e6b167a3571c3823019254f0352efd3'
+  url 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1/app_versions/5?format=zip&avtoken=10c1da892a7c9afb1ef4d3543565c6ee3c9825fa'
   appcast 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1',
-          :sha256 => '0bfbef89c2b420d7485baf482cdd82d84f5e529c92cca653996e15ca5e6ba3c6'
+          :sha256 => 'e7af629495c52f3082dd4d7dca917a5a21921031b871461045e204bcc6d8fe03'
   homepage 'http://slack.com'
   license :unknown
 
