@@ -9,5 +9,8 @@ cask :v1 => 'tunnelblick' do
   license :oss
 
   app 'Tunnelblick.app'
+  uninstall :launchctl => 'net.tunnelblick.tunnelblick.LaunchAtLogin',
+            :quit      => 'net.tunnelblick.tunnelblick'
+
   caveats 'For security reasons, Tunnelblick must be installed to /Applications and will request to be moved at launch.'
 end
