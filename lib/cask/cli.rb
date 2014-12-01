@@ -132,21 +132,21 @@ class Cask::CLI
   end
 
   def self.nice_listing(cask_list)
-    casks = {}
-    cask_list.each { |c|
-      user, repo, name = c.split '/'
+    cask_taps = {}
+    cask_list.each do |c|
+      user, repo, token = c.split '/'
       repo.sub!(/^homebrew-/i, '')
-      casks[name] ||= []
-      casks[name].push "#{user}/#{repo}"
-    }
+      cask_taps[token] ||= []
+      cask_taps[token].push "#{user}/#{repo}"
+    end
     list = []
-    casks.each { |name,taps|
+    cask_taps.each do |token,taps|
       if taps.length == 1
-        list.push name
+        list.push token
       else
-        taps.each { |r| list.push [r,name].join '/' }
+        taps.each { |r| list.push [r,token].join '/' }
       end
-    }
+    end
     list.sort
   end
 
@@ -223,18 +223,18 @@ class Cask::CLI
   end
 
   class NullCommand
-    def initialize(attempted_name)
-      @attempted_name = attempted_name
+    def initialize(attempted_verb)
+      @attempted_verb = attempted_verb
     end
 
     def run(*args)
-      if args.include?('--version') or @attempted_name == '--version'
+      if args.include?('--version') or @attempted_verb == '--version'
         puts HOMEBREW_CASK_VERSION
       else
         purpose
-        if @attempted_name and @attempted_name != "help"
+        if @attempted_verb and @attempted_verb != "help"
           puts "!! "
-          puts "!! no command with name: #{@attempted_name}"
+          puts "!! no command verb: #{@attempted_verb}"
           puts "!! \n\n"
         end
         usage

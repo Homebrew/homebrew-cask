@@ -28,8 +28,9 @@ commands are:
 
 ## Searching for Casks
 
-The `brew cask search` command accepts a series of substring arguments.
-Let's see if there's a Cask for Google Chrome:
+The `brew cask search` command accepts a series of substring arguments,
+and returns tokens representing matching Casks.  Let's see if there's a
+Cask for Google Chrome:
 
 ```bash
 $ brew cask search chrome
@@ -45,7 +46,7 @@ $ brew cask search
 
 ## Installing Casks
 
-The command `brew cask install` accepts a Cask name as returned by `brew cask search`.
+The command `brew cask install` accepts a Cask token as returned by `brew cask search`.
 Let's try to install Google Chrome:
 
 ```bash
@@ -163,7 +164,7 @@ $ brew tap <tap_name>
 after which, Casks from the new Tap will be available to `search` or `install` just like Casks from the main Tap.
 `brew update` will automatically keep your new Tap up to date.
 
-You may also specify a fully-qualified Cask name (which includes the Tap) for any `brew cask` command.  This will implicitly add the Tap if you have not previously added it with `brew tap`:
+You may also specify a fully-qualified Cask token (which includes the Tap) for any `brew cask` command.  This will implicitly add the Tap if you have not previously added it with `brew tap`:
 
 ```bash
 $ brew cask install caskroom/fonts/font-symbola
@@ -230,19 +231,20 @@ google-chrome
 
 ## Other Ways to Specify a Cask
 
-Most `brew cask` commands can accept a Cask name as an argument. As described
-above, a Cask name on the command line can take the form of:
+Most `brew cask` commands can accept a Cask token as an argument. As described
+above, the token on the command line can take the form of:
 
-* a Cask name as returned by `brew cask search`, _eg_: `google-chrome`
-* a fully-qualified Cask name which includes the Tap, _eg_: `caskroom/fonts/font-symbola`
+ * a token as returned by `brew cask search`, _eg_: `google-chrome`
+ * a fully-qualified token which includes the Tap, _eg_: `caskroom/fonts/font-symbola`
 
-`brew cask` also accepts three other forms for Cask names:
+`brew cask` also accepts three other forms as arguments
 
-* a path to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
-* a `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
-* a file in the current working directory, _eg_: `my-modfied-google-chrome.rb`.  Note
-  that Tapped Casks names will be preferred over this form.  To force the use of a Cask
-  file in the current directory, specify a pathname with slashes, _eg_: `./google-chrome.rb`.
+ * a path to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
+ * a `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
+ * a file in the current working directory, _eg_: `my-modfied-google-chrome.rb`.  Note
+   that matching Tapped Cask tokens will be preferred over this form when there is a
+   conflict.  To force the use of a Cask file in the current directory, specify a
+   pathname with slashes, _eg_: `./google-chrome.rb`.
 
 The last three forms are intended for users who wish to maintain private Casks.
 

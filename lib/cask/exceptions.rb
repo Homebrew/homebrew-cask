@@ -1,51 +1,51 @@
 class CaskError < RuntimeError; end
 
 class CaskNotInstalledError < CaskError
-  attr_reader :cask
-  def initialize cask
-    @cask = cask
+  attr_reader :token
+  def initialize(token)
+    @token = token
   end
 
   def to_s
-    "#{cask} is not installed"
+    "#{token} is not installed"
   end
 end
 
 class CaskUnavailableError < CaskError
-  attr_reader :name
-  def initialize name
-    @name = name
+  attr_reader :token
+  def initialize(token)
+    @token = token
   end
 
   def to_s
-    "No available Cask for #{name}"
+    "No available Cask for #{token}"
   end
 end
 
 class CaskAlreadyCreatedError < CaskError
-  attr_reader :name
-  def initialize name
-    @name = name
+  attr_reader :token
+  def initialize(token)
+    @token = token
   end
 
   def to_s
-    %Q{A Cask for #{name} already exists. Run "brew cask cat #{name}" to see it.}
+    %Q{A Cask for #{token} already exists. Run "brew cask cat #{token}" to see it.}
   end
 end
 
 class CaskAlreadyInstalledError < CaskError
-  attr_reader :name
-  def initialize name
-    @name = name
+  attr_reader :token
+  def initialize(token)
+    @token = token
   end
 
   def to_s
-    %Q{A Cask for #{name} is already installed. Add the "--force" option to force re-install.}
+    %Q{A Cask for #{token} is already installed. Add the "--force" option to force re-install.}
   end
 end
 
 class CaskCommandFailedError < CaskError
-  def initialize cmd, output, status
+  def initialize(cmd, output, status)
     @cmd = cmd
     @output = output
     @status = status
@@ -69,18 +69,18 @@ end
 
 class CaskUnspecifiedError < CaskError
   def to_s
-    "This command requires a Cask name"
+    "This command requires a Cask token"
   end
 end
 
 class CaskInvalidError < CaskError
-  attr_reader :name, :submsg
-  def initialize(name, *submsg)
-    @name = name
+  attr_reader :token, :submsg
+  def initialize(token, *submsg)
+    @token = token
     @submsg = submsg.join(' ')
   end
 
   def to_s
-    "Cask '#{name}' definition is invalid" + (submsg.length > 0 ? ": #{submsg}" : '')
+    "Cask '#{token}' definition is invalid" + (submsg.length > 0 ? ": #{submsg}" : '')
   end
 end

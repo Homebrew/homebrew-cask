@@ -33,7 +33,7 @@ describe Cask::CLI::Search do
     out.length.must_be :<, 100
   end
 
-  it "ignores hyphens in Cask names" do
+  it "ignores hyphens in Cask tokens" do
     out, err = capture_io do
       Cask::CLI::Search.run('googlechrome')
     end

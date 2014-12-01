@@ -1,25 +1,25 @@
 class Cask::CLI::Create < Cask::CLI::Base
   def self.run(*args)
-    cask_names = cask_names_from(args)
-    raise CaskUnspecifiedError if cask_names.empty?
-    cask_name = cask_names.first.sub(/\.rb$/i,'')
-    cask_path = Cask.path(cask_name)
-    odebug "Creating Cask #{cask_name}"
+    cask_tokens = cask_tokens_from(args)
+    raise CaskUnspecifiedError if cask_tokens.empty?
+    cask_token = cask_tokens.first.sub(/\.rb$/i,'')
+    cask_path = Cask.path(cask_token)
+    odebug "Creating Cask #{cask_token}"
 
     if cask_path.exist?
-      raise CaskAlreadyCreatedError.new cask_name
+      raise CaskAlreadyCreatedError.new cask_token
     end
 
     File.open(cask_path, 'w') do |f|
-      f.write template(cask_name)
+      f.write template(cask_token)
     end
 
     exec_editor cask_path
   end
 
-  def self.template(cask_name);
+  def self.template(cask_token)
     <<-EOS.undent
-      cask :v1 => '#{cask_name}' do
+      cask :v1 => '#{cask_token}' do
         version ''
         sha256 ''
 
@@ -33,6 +33,6 @@ class Cask::CLI::Create < Cask::CLI::Base
   end
 
   def self.help
-    "creates a Cask of the given name and opens it in an editor"
+    "creates the given Cask and opens it in an editor"
   end
 end

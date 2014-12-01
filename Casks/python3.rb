@@ -1,6 +1,6 @@
 cask :v1 => 'python3' do
-  # note: "3" is a trailing version number on the Cask name, which
-  # breaks our own naming standards, for consistency with Homebrew
+  # note: "3" is a trailing version number on the Cask token, which
+  # breaks our own token conventions, for consistency with Homebrew
   version '3.4.2'
   sha256 '5a4edfac31efd4ecd2efb4cb7203c0c36e488f1d0a20755b674b04dcb3c21e1b'
 

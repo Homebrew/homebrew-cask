@@ -2,9 +2,9 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
 
   # Syntax
   #
-  #     brew cask _stanza <stanza_name> [ --table | --yaml | --inspect | --quiet ] [ <cask_names> ]
+  #     brew cask _stanza <stanza_name> [ --table | --yaml | --inspect | --quiet ] [ <cask_token> ... ]
   #
-  # If no Cask names are given, then all are returned.
+  # If no tokens are given, then data for all Casks is returned.
   #
   # The pseudo-stanzas "artifacts" and "sums" are available.
   #
@@ -51,11 +51,11 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
     quiet = arguments.include? '--quiet'
     format = :to_yaml if arguments.include? '--yaml'
     format = :inspect if arguments.include? '--inspect'
-    cask_names = arguments.reject { |arg| arg.chars.first == '-' }
-    stanza = cask_names.shift.to_sym
-    cask_names = Cask.all_titles if cask_names.empty?
+    cask_tokens = arguments.reject { |arg| arg.chars.first == '-' }
+    stanza = cask_tokens.shift.to_sym
+    cask_tokens = Cask.all_tokens if cask_tokens.empty?
 
-    retval = print_stanzas(stanza, format, table, quiet, *cask_names)
+    retval = print_stanzas(stanza, format, table, quiet, *cask_tokens)
 
     # retval is ternary: true/false/nil
     if retval.nil?
@@ -67,7 +67,7 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
     end
   end
 
-  def self.print_stanzas(stanza, format=nil, table=nil, quiet=nil, *cask_names)
+  def self.print_stanzas(stanza, format=nil, table=nil, quiet=nil, *cask_tokens)
     count = 0
     stanza = :sums if stanza == :sha256
     if ARTIFACTS.include?(stanza)
@@ -75,20 +75,20 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
       stanza = :artifacts
     end
 
-    cask_names.each do |cask_name|
+    cask_tokens.each do |cask_token|
 
-      print "#{cask_name}\t" if table
+      print "#{cask_token}\t" if table
 
       begin
-        cask = Cask.load(cask_name)
+        cask = Cask.load(cask_token)
       rescue StandardError
-        opoo "Cask '#{cask_name}' was not found" unless quiet
+        opoo "Cask '#{cask_token}' was not found" unless quiet
         puts ''
         next
       end
 
       unless cask.respond_to?(stanza)
-        opoo "no such stanza '#{stanza}' on Cask '#{cask_name}'" unless quiet
+        opoo "no such stanza '#{stanza}' on Cask '#{cask_token}'" unless quiet
         puts ''
         next
       end
@@ -96,13 +96,13 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
       begin
         value = cask.send(stanza)
       rescue StandardError
-        opoo "failure calling '#{stanza}' on Cask '#{cask_name}'" unless quiet
+        opoo "failure calling '#{stanza}' on Cask '#{cask_token}'" unless quiet
         puts ''
         next
       end
 
       if artifact_name and not value.key?(artifact_name)
-        opoo "no such stanza '#{artifact_name}' on Cask '#{cask_name}'" unless quiet
+        opoo "no such stanza '#{artifact_name}' on Cask '#{cask_token}'" unless quiet
         puts ''
         next
       end
@@ -127,7 +127,7 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
       count += 1
 
     end
-    count == 0 ? nil : count == cask_names.length
+    count == 0 ? nil : count == cask_tokens.length
   end
 
   def self.help

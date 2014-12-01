@@ -18,14 +18,14 @@ class Cask::CLI::Search < Cask::CLI::Base
     search_regexp = extract_regexp arguments.first
     if search_regexp
       search_term = arguments.first
-      partial_matches = Cask::CLI.nice_listing(Cask.all_titles).grep(/#{search_regexp}/i)
+      partial_matches = Cask::CLI.nice_listing(Cask.all_tokens).grep(/#{search_regexp}/i)
     else
       # suppressing search of the font Tap is a quick hack until behavior can be made configurable
-      all_titles = Cask::CLI.nice_listing Cask.all_titles.reject{ |t| %r{^caskroom/homebrew-fonts/}.match(t)}
-      simplified_titles = all_titles.map { |t| t.sub(/^.*\//, '').gsub(/[^a-z0-9]+/i, '') }
+      all_tokens = Cask::CLI.nice_listing Cask.all_tokens.reject{ |t| %r{^caskroom/homebrew-fonts/}.match(t)}
+      simplified_tokens = all_tokens.map { |t| t.sub(/^.*\//, '').gsub(/[^a-z0-9]+/i, '') }
       simplified_search_term = search_term.sub(/\.rb$/i, '').gsub(/[^a-z0-9]+/i, '')
-      exact_match = simplified_titles.grep(/^#{simplified_search_term}$/i) { |t| all_titles[simplified_titles.index(t)] }.first
-      partial_matches = simplified_titles.grep(/#{simplified_search_term}/i) { |t| all_titles[simplified_titles.index(t)] }
+      exact_match = simplified_tokens.grep(/^#{simplified_search_term}$/i) { |t| all_tokens[simplified_tokens.index(t)] }.first
+      partial_matches = simplified_tokens.grep(/#{simplified_search_term}/i) { |t| all_tokens[simplified_tokens.index(t)] }
       partial_matches.delete(exact_match)
     end
     return exact_match, partial_matches, search_term

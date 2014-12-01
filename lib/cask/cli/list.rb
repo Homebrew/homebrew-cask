@@ -19,11 +19,11 @@ class Cask::CLI::List < Cask::CLI::Base
     end
   end
 
-  def self.list_casks(*cask_names)
+  def self.list_casks(*cask_tokens)
     count = 0
-    cask_names.each do |cask_name|
-      odebug "Listing files for Cask #{cask_name}"
-      cask = Cask.load(cask_name)
+    cask_tokens.each do |cask_token|
+      odebug "Listing files for Cask #{cask_token}"
+      cask = Cask.load(cask_token)
       if cask.installed?
         count += 1
         list_artifacts(cask)
@@ -32,7 +32,7 @@ class Cask::CLI::List < Cask::CLI::Base
         opoo "#{cask} is not installed"
       end
     end
-    count == 0 ? nil : count == cask_names.length
+    count == 0 ? nil : count == cask_tokens.length
   end
 
   def self.list_artifacts(cask)

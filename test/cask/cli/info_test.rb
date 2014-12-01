@@ -58,7 +58,7 @@ describe Cask::CLI::Info do
       ==> Caveats
       Here are some things you might want to know.
 
-      Cask title: with-caveats
+      Cask token: with-caveats
 
       Custom text via puts followed by DSL-generated text:
       To use with-caveats, you may need to add the /custom/path/bin directory
@@ -69,7 +69,7 @@ describe Cask::CLI::Info do
     CLIOUTPUT
   end
 
-  it 'should not print caveats title if caveats block has no output' do
+  it 'should not print "Caveats" section divider if the caveats block has no output' do
     lambda {
       Cask::CLI::Info.run('with-conditional-caveats')
     }.must_output <<-CLIOUTPUT.undent
