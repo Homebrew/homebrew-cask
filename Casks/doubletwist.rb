@@ -9,4 +9,10 @@ cask :v1 => 'doubletwist' do
   license :unknown
 
   app 'doubleTwist.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/doubleTwist',
+                  '~/Library/Preferences/com.doubleTwist.desktop.plist',
+                  '~/Library/Caches/com.doubleTwist.desktop'
+                 ]
 end
