@@ -1,5 +1,64 @@
 # CHANGELOG
 
+## 0.49.0
+
+* __Casks__
+  - 26 Casks added (406 updated) by 85 contributors since 0.48.0
+  - 2120 total Casks
+* __Features__
+ - [#7696][] DSL: add working `depends_on :macos`
+* __Breaking Changes__
+ - [#7673][] unify and recast "Cask name" & "title" as "token" (de-document visible Cask method `title`)
+ - [#7696][] DSL: deprecate and de-document `require_os_version` caveats method
+ - [#7507][] DSL: remove support for `caskroom_only`
+ - [#7506][] remove support for legacy form `destination_path`
+* __Fixes__
+ - [#7738][] Make `CLI::Alfred` and `Source::PathBase` work with Ruby 1.8 <3 [@claui][]
+ - [#7532][] get Alfred 'syncfolder' from Preferences. resolves #7216 <3 [@fniephaus][]
+ - [#7740][] relax sourceforge.jp URL pattern
+ - [#7605][] "cocoa" is a framework to remove from Cask names
+* __Internal Changes__
+ - [#7684][] revise accessibility methods in postflight mini-DSL
+ - [#7685][] revise plist methods in postflight mini-DSL
+ - [#7686][] revise suppress_move_to_applications method in postflight mini-DSL
+ - [#6184][] Introduce GPG operations
+ - [#7642][] Refactor backend classes to match pre/postflight renaming
+ - [#7568][] enforce header line consistency
+ - [#7530][] enforce a valid minimum DSL version in Casks
+ - [#7529][] remove all transitional tap migration code
+ - [#7510][] formalize more Cask whitespace linting
+ - [#7504][] enforce version `:latest` as a symbol
+ - [#7503][] adjust devscripts for DSL 1.0
+* __Documentation__
+  - 13 doc commits since 0.48.0
+* __Contributors__
+  - 39 new contributors since 0.48.0
+  - 1275 total contributors
+* __Release Date__
+  - 2014-12-02 06:04:00 UTC
+
+[#6184]: https://github.com/caskroom/homebrew-cask/issues/6184
+[#7503]: https://github.com/caskroom/homebrew-cask/issues/7503
+[#7504]: https://github.com/caskroom/homebrew-cask/issues/7504
+[#7506]: https://github.com/caskroom/homebrew-cask/issues/7506
+[#7507]: https://github.com/caskroom/homebrew-cask/issues/7507
+[#7510]: https://github.com/caskroom/homebrew-cask/issues/7510
+[#7529]: https://github.com/caskroom/homebrew-cask/issues/7529
+[#7530]: https://github.com/caskroom/homebrew-cask/issues/7530
+[#7532]: https://github.com/caskroom/homebrew-cask/issues/7532
+[#7568]: https://github.com/caskroom/homebrew-cask/issues/7568
+[#7605]: https://github.com/caskroom/homebrew-cask/issues/7605
+[#7642]: https://github.com/caskroom/homebrew-cask/issues/7642
+[#7673]: https://github.com/caskroom/homebrew-cask/issues/7673
+[#7684]: https://github.com/caskroom/homebrew-cask/issues/7684
+[#7685]: https://github.com/caskroom/homebrew-cask/issues/7685
+[#7686]: https://github.com/caskroom/homebrew-cask/issues/7686
+[#7696]: https://github.com/caskroom/homebrew-cask/issues/7696
+[#7738]: https://github.com/caskroom/homebrew-cask/issues/7738
+[#7740]: https://github.com/caskroom/homebrew-cask/issues/7740
+[@claui]: https://github.com/claui
+[@fniephaus]: https://github.com/fniephaus
+
 ## 0.48.0
 
 * __Casks__
