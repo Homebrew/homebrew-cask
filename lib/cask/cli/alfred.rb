@@ -1,3 +1,5 @@
+require 'rubygems'
+
 class Cask::CLI::Alfred < Cask::CLI::Base
   DEFAULT_SCOPES = [
     '/Applications',
