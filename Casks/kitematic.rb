@@ -1,8 +1,8 @@
 cask :v1 => 'kitematic' do
-  version '0.3.0'
-  sha256 '1f7695c23024fc5661b8d8714c3a80e8fe50bcce093ce64b0f2c4c77b70700f0'
+  version '0.4.0'
+  sha256 'bacc15d30c92cd2592dc3b553b830098f7b87fd39c92f5580f20081a7eb499f2'
 
-  url "https://s3.amazonaws.com/kite-installer/Kitematic-#{version}.zip"
+  url "https://github.com/kitematic/kitematic/releases/download/v#{version}/Kitematic-#{version}.zip"
   homepage 'https://kitematic.com/'
   license :unknown
 
