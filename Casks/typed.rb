@@ -7,4 +7,6 @@ cask :v1 => 'typed' do
   license :commercial
 
   app 'Typed.app'
+
+  depends_on :macos => '>= :mavericks'
 end
