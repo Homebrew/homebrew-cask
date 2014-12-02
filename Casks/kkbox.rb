@@ -1,8 +1,8 @@
 cask :v1 => 'kkbox' do
-  version '5.0.18'
-  sha256 '7e0a888eafc67e5cf040fe3ff95a00f2aa966f7e66e44406cd636c5861c90286'
+  version '5.0.22-3a569cb'
+  sha256 '93714ce1801698dbd77aafbc8e7770261703b7f9840111ec7b496986959dd3f6'
 
-  url "http://download.kkbox.com/files/KKBOX-#{version}-bf8c56b.dmg"
+  url "http://download.kkbox.com/files/KKBOX-#{version}.dmg"
   homepage 'http://www.kkbox.com/'
   license :commercial
 
