@@ -1,3 +1,5 @@
+require 'rubygems'
+
 class Cask::DSL::DependsOn
 
   VALID_KEYS = Set.new [
