@@ -14,7 +14,7 @@ describe Cask::DSL::Postflight do
   end
 
   it "can get the Info.plist file for the primary app" do
-    @dsl.info_plist.must_include "basic-cask/1.2.3/TestCask.app/Contents/Info.plist"
+    @dsl.info_plist.to_s.must_include 'basic-cask/1.2.3/TestCask.app/Contents/Info.plist'
   end
 
   it "can execute commands on the Info.plist file" do
@@ -27,9 +27,9 @@ describe Cask::DSL::Postflight do
   it "can retrieve the bundle identifier for the primary app" do
     Cask::FakeSystemCommand.stubs_command(
       ['/usr/libexec/PlistBuddy', '-c', 'Print CFBundleIdentifier', @dsl.info_plist],
-      "com.example.BasicCask"
+      'com.example.BasicCask'
     )
-    @dsl.bundle_identifier.stdout.must_equal "com.example.BasicCask"
+    @dsl.bundle_identifier.stdout.must_equal 'com.example.BasicCask'
   end
 
   it "can set a key in the Info.plist file" do

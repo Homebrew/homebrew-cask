@@ -1,11 +1,13 @@
 module Cask::Staged
-  def info_plist
-    "#{staged_path}/#{@cask.artifacts[:app].first.first}/Contents/Info.plist"
+  def info_plist(index = 0)
+    index =  0 if index == :first
+    index =  1 if index == :second
+    index = -1 if index == :last
+    staged_path.join(@cask.artifacts[:app].to_a.at(index).first, 'Contents', 'Info.plist')
   end
 
   def plist_exec(cmd)
-    # todo: don't use external interface system_command
-    system_command("/usr/libexec/PlistBuddy", :args => ["-c", cmd, info_plist])
+    @command.run!('/usr/libexec/PlistBuddy', :args => ['-c', cmd, info_plist])
   end
 
   def plist_set(key, value)
@@ -13,6 +15,6 @@ module Cask::Staged
   end
 
   def bundle_identifier
-    plist_exec("Print CFBundleIdentifier")
+    plist_exec('Print CFBundleIdentifier')
   end
 end
