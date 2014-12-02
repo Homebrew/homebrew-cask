@@ -11,6 +11,8 @@ cask :v1 => 'zooom' do
   uninstall :pkgutil => 'com.coderage.pkg.Zooom2'
 
   caveats do
+    puts "There are known issues with installing this package, so if installation fails you may need to run the installer at #{staged_path}/Zooom2.pkg manually."
+
     os_version_only '10.9', '10.10'
   end
 end
