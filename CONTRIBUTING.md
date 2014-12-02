@@ -188,8 +188,10 @@ http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 Or, if it’s from [SourceForge.JP](http://sourceforge.jp/):
 
 ```
-http://dl.sourceforge.jp/$PROJECTNAME/$RELEASEID/$FILENAME.$EXT
+http://$STRING.sourceforge.jp/$PROJECTNAME/$RELEASEID/$FILENAME.$EXT
 ```
+
+`$STRING` is typically of the form `dl` or `$USER.dl`.
 
 ### Personal Hosting Such as Dropbox
 
