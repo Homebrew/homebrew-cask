@@ -63,7 +63,7 @@ describe Cask::DSL::Postflight do
     @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
 
     Cask::FakeSystemCommand.expects_command(
-      ["/usr/bin/sudo", "-E", "--", "sqlite3", "/Library/Application Support/com.apple.TCC/TCC.db", "INSERT INTO access VALUES('kTCCServiceAccessibility','com.example.BasicCask',0,1,1,NULL);"]
+      ['/usr/bin/sudo', '-E', '--', '/usr/bin/sqlite3', Cask.tcc_db, %q{INSERT INTO access VALUES('kTCCServiceAccessibility','com.example.BasicCask',0,1,1,NULL);}]
     )
     @dsl.enable_accessibility_access
   end
@@ -72,7 +72,7 @@ describe Cask::DSL::Postflight do
     MacOS.stubs(:version => OS::Mac::Version.new('10.8'))
 
     Cask::FakeSystemCommand.expects_command(
-      ['touch', '/private/var/db/.AccessibilityAPIEnabled']
+      ['/usr/bin/sudo', '-E', '--', '/usr/bin/touch', Cask.pre_mavericks_accessibility_dotfile]
     )
     @dsl.enable_accessibility_access
   end
