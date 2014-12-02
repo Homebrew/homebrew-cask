@@ -3,7 +3,7 @@ cask :v1 => 'logitech-control-center' do
   sha256 '1eab6118dc5ad0b3c790b9132b5968050dab0117b07d8f338c471aff00078df1'
 
   url "http://www.logitech.com/pub/techsupport/mouse/mac/lcc#{version}.zip"
-  homepage 'http://www.logitech.com'
+  homepage 'http://support.logitech.com/en_us/product/3129'
   license :unknown
 
   pkg 'LCC Installer.app/Contents/Resources/Logitech Control Center.mpkg'
