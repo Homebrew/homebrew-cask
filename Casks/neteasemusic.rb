@@ -1,5 +1,5 @@
 # encoding: UTF-8
-cask :v1 => 'netease-music' do
+cask :v1 => 'neteasemusic' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,5 @@ cask :v1 => 'netease-music' do
   homepage 'http://music.163.com/#/download'
   license :unknown
 
-  app 'Music.163.app'
+  app 'NeteaseMusic.app'
 end
