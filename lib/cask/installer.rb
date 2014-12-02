@@ -1,3 +1,5 @@
+require 'rubygems'
+
 class Cask::Installer
 
   PERSISTENT_METADATA_SUBDIRS = [ 'gpg' ]
@@ -45,7 +47,7 @@ class Cask::Installer
     print_caveats
 
     begin
-      formula_dependencies
+      satisfy_dependencies
       download
       extract_primary_container
       install_artifacts
@@ -99,11 +101,45 @@ class Cask::Installer
     end
   end
 
+  # todo move dependencies to a separate class
+  #      dependencies should also apply for "brew cask stage"
+  #      override dependencies with --force or perhaps --force-deps
+  def satisfy_dependencies
+    macos_dependencies
+    formula_dependencies
+  end
+
+  def macos_dependencies
+    # todo The Cask::DependsOn object needs to be more friendly.
+    #      Currently @cask.depends_on.macos raises an exception
+    #      if :macos was not set.
+    if @cask.depends_on and
+       @cask.depends_on.macos
+      if @cask.depends_on.macos.kind_of?(Array) and
+         @cask.depends_on.macos.first.is_a?(Symbol)
+        operator, version = @cask.depends_on.macos
+        unless MacOS.version.send(operator, version)
+          raise CaskError.new "Cask #{@cask} depends on OS X version #{operator} #{version}, but you are running version #{MacOS.version}."
+        end
+      elsif @cask.depends_on.macos.kind_of?(Array)
+        unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.version.to_s))
+          raise CaskError.new "Cask #{@cask} depends on OS X version being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running version #{MacOS.version}."
+        end
+      else
+        unless MacOS.version == @cask.depends_on.macos
+          raise CaskError.new "Cask #{@cask} depends on OS X version #{@cask.depends_on.macos}, but you are running version #{MacOS.version}."
+        end
+      end
+    end
+  end
+
   def formula_dependencies
     # todo The Cask::DependsOn object needs to be more friendly.
     #      Currently @cask.depends_on.formula raises an exception
     #      if :formula was not set.
-    if @cask.depends_on and not @cask.depends_on.formula.empty?
+    if @cask.depends_on and
+       @cask.depends_on.formula and
+       not @cask.depends_on.formula.empty?
       ohai 'Installing Formula dependencies from Homebrew'
       @cask.depends_on.formula.each do |dep_name|
         print "#{dep_name} ... "

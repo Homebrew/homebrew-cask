@@ -236,14 +236,28 @@ describe Cask::DSL do
   end
 
   describe "depends_on stanza" do
-    it "allows depends_on stanza to be specified" do
-      cask = Cask.load('with-depends-on')
-      cask.depends_on.formula.wont_be_nil
-    end
-
-    it "refuses to load invalid depends_on key" do
+    it "refuses to load with an invalid depends_on key" do
       err = lambda {
         invalid_cask = Cask.load('invalid/invalid-depends-on-key')
+      }.must_raise(CaskInvalidError)
+    end
+  end
+
+  describe "depends_on :formula" do
+    it "allows depends_on :formula to be specified" do
+      cask = Cask.load('with-depends-on-formula')
+      cask.depends_on.formula.wont_be_nil
+    end
+  end
+
+  describe "depends_on :macos" do
+    it "allows depends_on :macos to be specified" do
+      cask = Cask.load('with-depends-on-macos-string')
+      cask.depends_on.macos.wont_be_nil
+    end
+    it "refuses to load with an invalid depends_on :macos value" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-depends-on-macos-version')
       }.must_raise(CaskInvalidError)
     end
   end
