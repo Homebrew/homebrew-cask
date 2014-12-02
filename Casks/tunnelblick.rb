@@ -13,5 +13,9 @@ cask :v1 => 'tunnelblick' do
   uninstall :launchctl => 'net.tunnelblick.tunnelblick.LaunchAtLogin',
             :quit      => 'net.tunnelblick.tunnelblick'
 
-  caveats 'For security reasons, Tunnelblick must be installed to /Applications and will request to be moved at launch.'
+  caveats do
+    os_version_only *%w(10.4 10.5 10.6 10.7 10.8 10.9 10.10)
+    'For security reasons, Tunnelblick must be installed to /Applications '\
+      'and will request to be moved at launch.'
+  end
 end
