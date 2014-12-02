@@ -1,3 +1,5 @@
+require 'rubygems'
+
 class Cask::Source::PathBase
 
   # derived classes must define method self.me?
