@@ -4,8 +4,8 @@ class Cask::DSL::Postflight < Cask::DSL::Base
   include Cask::Staged
 
   def suppress_move_to_applications(options = {})
-    key = options[:key] || "moveToApplicationsFolderAlertSuppress"
-    system_command("/usr/bin/defaults", :args => ["write", bundle_identifier, key, "-bool", "true"])
+    key = options[:key] || 'moveToApplicationsFolderAlertSuppress'
+    @command.run!('/usr/bin/defaults', :args => ['write', bundle_identifier, key, '-bool', 'true'])
   end
 
   def enable_accessibility_access
