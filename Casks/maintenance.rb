@@ -11,11 +11,11 @@ cask :v1 => 'maintenance' do
   elsif MacOS.version == :lion
     url 'http://www.titanium.free.fr/download/107/Maintenance.dmg'
   elsif MacOS.version == :mountain_lion
-    url 'http://joel.barriere.pagesperso-orange.fr/dl/108/Maintenance.dmg'
+    url 'http://www.titanium.free.fr/download/108/Maintenance.dmg'
   elsif MacOS.version == :mavericks
-    url 'http://joel.barriere.pagesperso-orange.fr/dl/109/Maintenance.dmg'
+    url 'http://www.titanium.free.fr/download/109/Maintenance.dmg'
   else
-    url 'http://joel.barriere.pagesperso-orange.fr/download/1010/Maintenance.dmg'
+    url 'http://www.titanium.free.fr/download/1010/Maintenance.dmg'
   end
 
   homepage 'http://www.titanium.free.fr/downloadmaintenance.php'
