@@ -7,5 +7,4 @@ cask :v1 => 'factor' do
   license :unknown
 
   app 'factor/Factor.app'
-  binary 'factor/Factor.app/Contents/MacOS/factor'
 end
