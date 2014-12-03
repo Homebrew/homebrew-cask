@@ -10,7 +10,5 @@ cask :v1 => 'zooom' do
 
   uninstall :pkgutil => 'com.coderage.pkg.Zooom2'
 
-  caveats do
-    os_version_only '10.9', '10.10'
-  end
+  depends_on :macos => '>= :mavericks'
 end
