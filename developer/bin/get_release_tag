@@ -127,7 +127,7 @@ Arguments:
    -verbose  Output a table, possibly including both latest existing and
              proposed new tags.
 
-See RELEASING.md for more information.
+See doc/releasing.md for more information.
 
 "
             exit

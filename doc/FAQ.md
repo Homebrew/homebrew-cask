@@ -49,7 +49,7 @@ lot of the Homebrew stuff we lean on now.
 
 ## Can I set up my own Cask Tap?
 
-Yes! See [ALTERNATE_CASK_TAPS.md](ALTERNATE_CASK_TAPS.md).
+Yes! See [alternate_cask_taps.md](alternate_cask_taps.md).
 
 ## Can I install a version other than the English one?
 
