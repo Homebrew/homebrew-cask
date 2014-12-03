@@ -54,8 +54,6 @@ features which are available for the current Cask.
  * [`artifact`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
  * [`depends_on :cask`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
    * *stub* - not yet functional
- * [`depends_on :arch`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
-   * *stub* - not yet functional
  * [`depends_on :x11`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
    * *stub* - not yet functional
  * [`depends_on :java`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
@@ -94,6 +92,7 @@ features which are available for the current Cask.
 | `title` (in interpolations)           | [`token`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
 | `uninstall :files`                    | [`uninstall :delete`](CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details)
 | `version 'latest'`                    | [`version :latest`](CASK_LANGUAGE_REFERENCE.md#required-stanzas)
+| `arch_only` (within `caveats`)        | [`depends_on :arch`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
 
 
 ## All Supported Stanzas (1.0)
@@ -145,7 +144,6 @@ For use in *eg* interpolation:
 
 ## Caveats Mini-DSL (1.0)
 
- * [`arch_only(list)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`assistive_devices`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`files_in_usr_local`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`logout`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)

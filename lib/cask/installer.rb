@@ -106,6 +106,7 @@ class Cask::Installer
   #      override dependencies with --force or perhaps --force-deps
   def satisfy_dependencies
     macos_dependencies
+    arch_dependencies
     formula_dependencies
   end
 
@@ -129,6 +130,21 @@ class Cask::Installer
         unless MacOS.version == @cask.depends_on.macos
           raise CaskError.new "Cask #{@cask} depends on OS X version #{@cask.depends_on.macos}, but you are running version #{MacOS.version}."
         end
+      end
+    end
+  end
+
+  def arch_dependencies
+    if @cask.depends_on and
+       @cask.depends_on.arch
+      @current_arch ||= [
+                         Hardware::CPU.type,
+                         Hardware::CPU.is_32_bit? ?
+                           (Hardware::CPU.intel? ? :i386   : :ppc_7400) :
+                           (Hardware::CPU.intel? ? :x86_64 : :ppc_64)
+                        ]
+      if Array(@cask.depends_on.arch & @current_arch).count == 0
+        raise CaskError.new "Cask #{@cask} depends on hardware architecture being one of #{@cask.depends_on.arch.inspect}, but you are running #{@current_arch.inspect}"
       end
     end
   end

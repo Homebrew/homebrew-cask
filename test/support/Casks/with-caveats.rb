@@ -19,9 +19,4 @@ cask :v1test => 'with-caveats' do
     puts 'Custom text via puts followed by DSL-generated text:'
     path_environment_variable('/custom/path/bin')
   end
-  caveats do
-    # since both valid arches are specified, no output should be
-    # generated here during the test
-    arch_only('intel-32', 'intel-64')
-  end
 end
