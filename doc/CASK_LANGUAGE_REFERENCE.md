@@ -10,6 +10,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Optional Stanzas](#optional-stanzas)
  * [Conditional Statements](#conditional-statements)
  * [Header Line Details](#header-line-details)
+ * [Name Stanza Details](#name-stanza-details)
  * [Caveats Stanza Details](#caveats-stanza-details)
  * [Checksum Stanza Details](#checksum-stanza-details)
  * [URL Stanza Details](#url-stanza-details)
@@ -41,6 +42,7 @@ cask :v1 => 'alfred' do
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
 
   url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
+  name 'Alfred'
   homepage 'http://www.alfredapp.com/'
   license :commercial
 
@@ -105,6 +107,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 
 | name                   | multiple occurrences allowed? | value       |
 | ---------------------- |------------------------------ | ----------- |
+| `name`                 | yes                           | a string providing the full and proper name defined by the vendor (see also [Name Stanza Details](#name-stanza-details))
 | `uninstall`            | yes                           | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](#uninstall-stanza-details))
 | `zap`                  | yes                           | additional procedures for a more complete uninstall, including user files and shared resources. (see also [Zap Stanza Details](#zap-stanza-details))
 | `appcast`              | no                            | a URL providing an appcast feed to find updates for this Cask.  (see also [Appcast Stanza Details](#appcast-stanza-details))
@@ -190,6 +193,17 @@ the Cask token.
 There are currently some arbitrary limitations on Cask tokens which are
 in the process of being removed.  The Travis bot will catch any errors
 during the transition.
+
+
+## Name Stanza Details
+
+`name` stanza accepts a UTF-8 string defining the full name of the software.
+
+If there are useful alternate names, `name` can be repeated multiple times.
+(Or, equivalently, an array value may be given.)
+
+When multiple names are given, the first should follow the canonical
+branding as defined by the vendor.
 
 
 ## Caveats Stanza Details
@@ -386,7 +400,6 @@ using the information stored in the `tags` stanza.
 
 | key           | meaning
 | ------------- | -----------------------------
-| `:name`       | the full name of the Cask. (example [smlnj.rb](../Casks/smlnj.rb))
 | `:vendor`     | the full-text official name of the producer of the software: an author or corporate name, as appropriate.  As the value is intended as a search target, commonly shared abbreviations such as `Dr.` or `Inc.` should be omitted. (example [google-chrome.rb](../Casks/google-chrome.rb))
 
 
@@ -971,6 +984,7 @@ cask :v1 => 'myapp' do
     end
   end
 
+  name 'MyApp'
   version '1.0'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
   license :unknown
