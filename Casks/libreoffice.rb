@@ -12,7 +12,7 @@ cask :v1 => 'libreoffice' do
       :key_id => 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
   homepage 'https://www.libreoffice.org/'
-  license :unknown
+  license :oss
 
   app 'LibreOffice.app'
 end
