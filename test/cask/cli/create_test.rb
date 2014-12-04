@@ -41,6 +41,7 @@ describe Cask::CLI::Create do
         sha256 ''
 
         url 'https://'
+        name ''
         homepage ''
         license :unknown
 

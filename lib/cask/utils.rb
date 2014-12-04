@@ -85,6 +85,7 @@ module Cask::Utils
       odebug "Cask instance dumps in YAML:"
       odebug "Cask instance toplevel:", self.to_yaml
       [
+       :full_name,
        :homepage,
        :url,
        :appcast,
@@ -99,7 +100,9 @@ module Cask::Utils
        :container,
        :gpg,
       ].each do |method|
-        odebug "Cask instance method '#{method}':", self.send(method).to_yaml
+        printable_method = method.to_s
+        printable_method = "name" if printable_method == "full_name"
+        odebug "Cask instance method '#{printable_method}':", self.send(method).to_yaml
       end
     end
   end

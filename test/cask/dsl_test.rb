@@ -57,6 +57,45 @@ describe Cask::DSL do
     end
   end
 
+  describe "name stanza" do
+    it "lets you set the full name via a name stanza" do
+      NameCask = Class.new(Cask)
+      NameCask.class_eval do
+        name 'Proper Name'
+      end
+      instance = NameCask.new
+      instance.full_name.must_equal [
+                                     'Proper Name',
+                                    ]
+    end
+
+    it "Accepts an array value to the name stanza" do
+      ArrayNameCask = Class.new(Cask)
+      ArrayNameCask.class_eval do
+        name ['Proper Name', 'Alternate Name']
+      end
+      instance = ArrayNameCask.new
+      instance.full_name.must_equal [
+                                     'Proper Name',
+                                     'Alternate Name',
+                                    ]
+    end
+
+    it "Accepts multiple name stanzas" do
+      MultiNameCask = Class.new(Cask)
+      MultiNameCask.class_eval do
+        name 'Proper Name'
+        name 'Alternate Name'
+      end
+      instance = MultiNameCask.new
+      # the sort is a hack to deal with Ruby 1.8 oddities
+      instance.full_name.sort.must_equal [
+                                          'Proper Name',
+                                          'Alternate Name',
+                                         ].sort
+    end
+  end
+
   describe "sha256 stanza" do
     it "lets you set checksum via sha256" do
       ChecksumCask = Class.new(Cask)
