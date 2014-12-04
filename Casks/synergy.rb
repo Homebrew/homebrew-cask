@@ -1,8 +1,8 @@
 cask :v1 => 'synergy' do
-  version '1.5.1-r2398'
-  sha256 'd787031705b0123d36f07e7639fd8882d1969bc8f7ddad25a3326c873385dfe2'
+  version '1.6.2-master-ebba77f'
+  sha256 '259dd8367e0d9b6152e93d50854687d54714f649b6b018949621ba2194b3f987'
 
-  url "https://synergy-project.org/files/packages/synergy-#{version}-MacOSX109-x86_64.dmg"
+  url "http://synergy-project.org/files/packages/synergy-#{version}-MacOSX1010-x86_64.dmg"
   homepage 'http://synergy-foss.org/'
   license :unknown
 
