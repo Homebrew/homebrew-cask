@@ -21,4 +21,20 @@ cask :v1 => 'onyx' do
   license :unknown
 
   app 'OnyX.app'
+
+  depends_on :macos => %w{
+                          :tiger
+                          :leopard
+                          :snow_leopard
+                          :lion
+                          :mountain_lion
+                          :mavericks
+                          :yosemite
+                         }
+
+  caveats do
+    if [:leopard, :tiger].include?(MacOS.version.to_sym)
+      puts 'OnyX only runs from an Administrator account on this version of OS X.'
+    end
+  end
 end
