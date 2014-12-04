@@ -23,11 +23,19 @@ cask :v1 => 'maintenance' do
 
   app 'Maintenance.app'
 
-  caveats do
-    os_version_only('10.4', '10.5', '10.6', '10.7', '10.8', '10.9', '10.10')
+  depends_on :macos => %w{
+                          :tiger
+                          :leopard
+                          :snow_leopard
+                          :lion
+                          :mountain_lion
+                          :mavericks
+                          :yosemite
+                         }
 
-    if [:leopard, :tiger].include? MacOS.version
-      puts 'Maintenance only runs from an Administrator account.'
+  caveats do
+    if [:leopard, :tiger].include?(MacOS.version.to_sym)
+      puts 'Maintenance only runs from an Administrator account on this version of OS X.'
     end
   end
 end
