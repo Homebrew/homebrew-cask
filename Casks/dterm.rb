@@ -8,4 +8,6 @@ cask :v1 => 'dterm' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'DTerm.app'
+
+  accessibility_access true
 end
