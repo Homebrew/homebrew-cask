@@ -1,5 +1,6 @@
 require 'bundler'
 require 'bundler/setup'
+require 'simplecov'
 
 # force some environment variables
 ENV['HOMEBREW_NO_EMOJI']='1'

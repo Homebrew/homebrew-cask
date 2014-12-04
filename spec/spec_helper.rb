@@ -1,3 +1,5 @@
+require 'simplecov'
+
 project_root = Pathname(File.expand_path("../..", __FILE__))
 
 Dir["#{project_root}/spec/support/**/*.rb"].each { |f| require f }
