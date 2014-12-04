@@ -20,8 +20,13 @@ class Cask::CaveatsDSL
   end
 
   # helpers
+  def token
+    @cask.token
+  end
+
+  # todo removeme transitional backward compatibility
   def title
-    @cask.title
+    @cask.token
   end
 
   def version
@@ -29,7 +34,7 @@ class Cask::CaveatsDSL
   end
 
   def caskroom_path
-    @cask.class.caskroom.join(title)
+    @cask.class.caskroom.join(token)
   end
 
   def staged_path
@@ -165,19 +170,7 @@ class Cask::CaveatsDSL
   end
 
   def method_missing(method, *args)
-    poo = <<-EOPOO.undent
-      Unexpected method #{method} called on caveats in Cask #{@cask}.
-
-        If you are working on #{@cask}, this may point to a typo. Otherwise
-        it probably means this Cask is using a new feature. If that feature
-        has been released, running
-
-          brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
-
-        should fix it. Otherwise you should wait to use #{@cask} until the
-        new feature is released.
-    EOPOO
-    poo.split("\n").each { |line| opoo line }
+    Cask::Utils.method_missing_message(method, @cask.to_s, 'caveats')
     return nil
   end
 end

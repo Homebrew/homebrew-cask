@@ -41,7 +41,7 @@ cask :v1 => 'my-app' do
 ```
 
 Legacy rules for mapping Cask filenames to header class names are no longer
-needed.  The name `'my-app'` in the header corresponds directly to the
+needed.  The token `'my-app'` in the header corresponds directly to the
 filename `my-app.rb`.
 
 The term `:v1` identifies the DSL version (currently 1.0), and defines the
@@ -53,8 +53,6 @@ features which are available for the current Cask.
  * [`appcast`](CASK_LANGUAGE_REFERENCE.md#appcast-stanza-details)
  * [`artifact`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
  * [`depends_on :cask`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
-   * *stub* - not yet functional
- * [`depends_on :macos`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
    * *stub* - not yet functional
  * [`depends_on :arch`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
    * *stub* - not yet functional
@@ -79,21 +77,23 @@ features which are available for the current Cask.
 
 ## Renamed Forms (1.0)
 
-| old form                                    | new form
-| ------------------------------------------- |----------------
-| `after_install`                             | [`postflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
-| `after_uninstall`                           | [`uninstall_postflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
-| `before_install`                            | [`preflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
-| `before_uninstall`                          | [`uninstall_preflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
-| `container_type`                            | [`container :type`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
-| `depends_on_formula`                        | [`depends_on :formula`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
-| `destination_path`                          | [`staged_path`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
-| `install`                                   | [`pkg`](CASK_LANGUAGE_REFERENCE.md#pkg-stanza-details)
-| `link`                                      | [`app`](CASK_LANGUAGE_REFERENCE.md#app-stanza-details) (or sometimes `suite` or `artifact`)
-| `manual_installer(path)` (within `caveats`) | [`installer :manual`](CASK_LANGUAGE_REFERENCE.md#installer-stanza-details)
-| `nested_container`                          | [`container :nested =>`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
-| `uninstall :files`                          | [`uninstall :delete`](CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details)
-| `version 'latest'`                          | [`version :latest`](CASK_LANGUAGE_REFERENCE.md#required-stanzas)
+| old form                              | new form
+| ------------------------------------- |----------------
+| `after_install`                       | [`postflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+| `after_uninstall`                     | [`uninstall_postflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+| `before_install`                      | [`preflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+| `before_uninstall`                    | [`uninstall_preflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+| `container_type`                      | [`container :type`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+| `depends_on_formula`                  | [`depends_on :formula`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
+| `destination_path`                    | [`staged_path`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
+| `install`                             | [`pkg`](CASK_LANGUAGE_REFERENCE.md#pkg-stanza-details)
+| `link`                                | [`app`](CASK_LANGUAGE_REFERENCE.md#app-stanza-details) (or sometimes `suite` or `artifact`)
+| `manual_installer` (within `caveats`) | [`installer :manual`](CASK_LANGUAGE_REFERENCE.md#installer-stanza-details)
+| `os_version_only` (within `caveats`)  | [`depends_on :macos`](CASK_LANGUAGE_REFERENCE.md#depends_on-macos)
+| `nested_container`                    | [`container :nested =>`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+| `title` (in interpolations)           | [`token`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
+| `uninstall :files`                    | [`uninstall :delete`](CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details)
+| `version 'latest'`                    | [`version :latest`](CASK_LANGUAGE_REFERENCE.md#required-stanzas)
 
 
 ## All Supported Stanzas (1.0)
@@ -140,7 +140,7 @@ For use in *eg* interpolation:
 
  * [`caskroom_path`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
  * [`staged_path`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
- * [`title`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
+ * [`token`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
 
 
 ## Caveats Mini-DSL (1.0)

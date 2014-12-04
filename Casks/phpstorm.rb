@@ -9,7 +9,7 @@ cask :v1 => 'phpstorm' do
   app 'PhpStorm.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/PhpStorm.app/Contents/Info.plist"
+    plist_set(':JVMOptions:JVMVersion', '1.6+')
   end
 
   zap :delete => [

@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #
-# cask_namer
+# generate_cask_token
 #
 # todo:
 #
@@ -45,18 +45,23 @@ CASK_FILE_EXTENSION = '.rb'
 
 # Hardcode App names that cannot be transformed automatically.
 # Example: in "x48.app", "x48" is not a version number.
-# The value in the hash should be a valid Cask name.
+# The value in the hash should be a valid Cask token.
 APP_EXCEPTION_PATS = {
+                      # looks like a trailing version, but is not.
                       %r{\Aiterm\Z}i               => 'iterm2',
+                      %r{\Aiterm2\Z}i              => 'iterm2',
                       %r{\Apgadmin3\Z}i            => 'pgadmin3',
                       %r{\Ax48\Z}i                 => 'x48',
                       %r{\Avitamin-r[\s\d\.]*\Z}i  => 'vitamin-r',
                       %r{\Aimagealpha\Z}i          => 'imagealpha',
+                      # upstream is in the midst of changing branding
+                      %r{\Abitcoin-?qt\Z}i         => 'bitcoin-core',
+                      # "mac" cannot be separated from the name because it is in an English phrase
                       %r{\Aplayonmac\Z}i           => 'playonmac',
+                      %r{\Acleanmymac[\s\d\.]*\Z}i => 'cleanmymac',
+                      # arguably we should not have kept these two exceptions
                       %r{\Akismac\Z}i              => 'kismac',
                       %r{\Avoicemac\Z}i            => 'voicemac',
-                      %r{\Acleanmymac[\s\d\.]*\Z}i => 'cleanmymac',
-                      %r{\Abitcoin-?qt\Z}i         => 'bitcoin-core',
                      }
 
 # Preserve trailing patterns on App names that could be mistaken
@@ -265,14 +270,14 @@ class AppName < String
     app_name.clean_up_vertical_tabs
   end
 
-  def canonical
-    return @canonical if @canonical
-    @canonical = self.english_from_app_bundle
-                     .basename
-                     .decompose_to_ascii
-                     .remove_extension
-    name_exception = @canonical.hardcoded_exception
-    @canonical = name_exception ? name_exception : @canonical.remove_trailing_strings_and_versions
+  def simplified
+    return @simplified if @simplified
+    @simplified = self.english_from_app_bundle
+                      .basename
+                      .decompose_to_ascii
+                      .remove_extension
+    @simplified = @simplified.hardcoded_exception || @simplified.remove_trailing_strings_and_versions
+    @simplified
   end
 end
 
@@ -321,9 +326,9 @@ class CaskFileName < String
     self.sub(/#{escaped_cask_file_extension}\Z/i, '')
   end
 
-  def from_canonical_name
-    return @from_canonical_name if @from_canonical_name
-    @from_canonical_name = if APP_EXCEPTION_PATS.rassoc(self.remove_extension)
+  def from_simplified_app_name
+    return @from_simplified_app_name if @from_simplified_app_name
+    @from_simplified_app_name = if APP_EXCEPTION_PATS.rassoc(self.remove_extension)
       self.remove_extension
     else
       self.remove_extension
@@ -336,8 +341,8 @@ class CaskFileName < String
           .delete_hyphens_before_numbers
           .spell_out_leading_numbers
     end
-    raise "Could not determine Cask name" unless @from_canonical_name.length > 0
-    @from_canonical_name.add_extension
+    raise "Could not determine Simplified App name" unless @from_simplified_app_name.length > 0
+    @from_simplified_app_name.add_extension
   end
 end
 
@@ -364,24 +369,24 @@ def escaped_cask_file_extension
   @escaped_cask_file_extension ||= Regexp.escape(CASK_FILE_EXTENSION)
 end
 
-def canonical_name
-  @canonical_name ||= AppName.new("#{ARGV.first}".force_encoding("UTF-8")).canonical
+def simplified_app_name
+  @simplified_app_name ||= AppName.new("#{ARGV.first}".force_encoding("UTF-8")).simplified
 end
 
 def cask_file_name
-  @cask_file_name ||= CaskFileName.new(canonical_name).from_canonical_name
+  @cask_file_name ||= CaskFileName.new(simplified_app_name).from_simplified_app_name
 end
 
-def cask_name
-  @cask_name ||= cask_file_name.remove_extension
+def cask_token
+  @cask_token ||= cask_file_name.remove_extension
 end
 
 def warnings
   return @warnings if @warnings
   @warnings = []
-  unless APP_EXCEPTION_PATS.rassoc(cask_name)
-    if %r{\d}.match(cask_name)
-      @warnings.push "WARNING: '#{cask_name}' contains digits. Digits which are version numbers should be removed."
+  unless APP_EXCEPTION_PATS.rassoc(cask_token)
+    if %r{\d}.match(cask_token)
+      @warnings.push "WARNING: '#{cask_token}' contains digits. Digits which are version numbers should be removed."
     end
   end
   filename = project_root.join('Casks', cask_file_name)
@@ -392,10 +397,10 @@ def warnings
 end
 
 def report
-  puts "Proposed canonical App name: #{canonical_name}" if $debug
-  puts "Proposed Cask name:          #{cask_name}"
-  puts "Proposed file name:          #{cask_file_name}"
-  puts "First Line of Cask:          cask :v1 => '#{cask_name}' do"
+  puts "Proposed Simplified App name: #{simplified_app_name}" if $debug
+  puts "Proposed token:               #{cask_token}"
+  puts "Proposed file name:           #{cask_file_name}"
+  puts "Cask Header Line:             cask :v1 => '#{cask_token}' do"
   if warnings.length > 0
     STDERR.puts "\n"
     STDERR.puts warnings
@@ -409,12 +414,12 @@ end
 ###
 
 usage = <<-EOS
-Usage: cask_namer [ -debug ] <application.app>
+Usage: generate_cask_token [ -debug ] <application.app>
 
-Given an Application name or a path to an Application,
-propose a Cask name, filename and class name.
+Given an Application name or a path to an Application, propose a
+Cask token, filename, and header line.
 
-With -debug, provide the internal Canonical App Name.
+With -debug, also provide the internal "Simplified App Name".
 
 EOS
 

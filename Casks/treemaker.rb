@@ -6,5 +6,5 @@ cask :v1 => 'treemaker' do
   homepage 'http://www.langorigami.com/science/computational/treemaker/treemaker.php'
   license :unknown
 
-  app 'TreeMaker 5.app'
+  app "TreeMaker #{version.to_i}.app"
 end

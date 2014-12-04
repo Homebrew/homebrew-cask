@@ -1,9 +1,9 @@
 require "test_helper"
 
-describe Cask::DSL::AfterInstall do
+describe Cask::DSL::Postflight do
   before do
     cask = Cask.load('basic-cask')
-    @dsl = Cask::DSL::AfterInstall.new(cask, Cask::FakeSystemCommand)
+    @dsl = Cask::DSL::Postflight.new(cask, Cask::FakeSystemCommand)
   end
 
   it "can run system commands with list-form arguments" do
@@ -14,7 +14,7 @@ describe Cask::DSL::AfterInstall do
   end
 
   it "can get the Info.plist file for the primary app" do
-    @dsl.info_plist.must_include "basic-cask/1.2.3/TestCask.app/Contents/Info.plist"
+    @dsl.info_plist.to_s.must_include 'basic-cask/1.2.3/TestCask.app/Contents/Info.plist'
   end
 
   it "can execute commands on the Info.plist file" do
@@ -27,9 +27,9 @@ describe Cask::DSL::AfterInstall do
   it "can retrieve the bundle identifier for the primary app" do
     Cask::FakeSystemCommand.stubs_command(
       ['/usr/libexec/PlistBuddy', '-c', 'Print CFBundleIdentifier', @dsl.info_plist],
-      "com.example.BasicCask"
+      'com.example.BasicCask'
     )
-    @dsl.bundle_identifier.stdout.must_equal "com.example.BasicCask"
+    @dsl.bundle_identifier.stdout.must_equal 'com.example.BasicCask'
   end
 
   it "can set a key in the Info.plist file" do
@@ -63,7 +63,7 @@ describe Cask::DSL::AfterInstall do
     @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
 
     Cask::FakeSystemCommand.expects_command(
-      ["/usr/bin/sudo", "-E", "--", "sqlite3", "/Library/Application Support/com.apple.TCC/TCC.db", "INSERT INTO access VALUES('kTCCServiceAccessibility','com.example.BasicCask',0,1,1,NULL);"]
+      ['/usr/bin/sudo', '-E', '--', '/usr/bin/sqlite3', Cask.tcc_db, %q{INSERT INTO access VALUES('kTCCServiceAccessibility','com.example.BasicCask',0,1,1,NULL);}]
     )
     @dsl.enable_accessibility_access
   end
@@ -72,7 +72,7 @@ describe Cask::DSL::AfterInstall do
     MacOS.stubs(:version => OS::Mac::Version.new('10.8'))
 
     Cask::FakeSystemCommand.expects_command(
-      ['touch', '/private/var/db/.AccessibilityAPIEnabled']
+      ['/usr/bin/sudo', '-E', '--', '/usr/bin/touch', Cask.pre_mavericks_accessibility_dotfile]
     )
     @dsl.enable_accessibility_access
   end

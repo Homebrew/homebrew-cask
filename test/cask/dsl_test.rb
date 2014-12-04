@@ -16,15 +16,15 @@ describe Cask::DSL do
           future_feature :not_yet_on_your_machine
         end
       }, <<-WARNING.undent.chomp)
-        Warning: Unexpected method 'future_feature' called on UnexpectedMethodCask.
+        Warning: Unexpected method 'future_feature' called on Cask unexpected-method-cask.
         Warning:#{' '}
-        Warning:   If you are working on UnexpectedMethodCask, this may point to a typo. Otherwise
+        Warning:   If you are working on unexpected-method-cask, this may point to a typo. Otherwise
         Warning:   it probably means this Cask is using a new feature. If that feature
         Warning:   has been released, running
         Warning:#{' '}
         Warning:     brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
         Warning:#{' '}
-        Warning:   should fix it. Otherwise you should wait to use UnexpectedMethodCask until the
+        Warning:   should fix it. Otherwise you should wait to use unexpected-method-cask until the
         Warning:   new feature is released.
       WARNING
     rescue Exception => e
@@ -40,9 +40,9 @@ describe Cask::DSL do
       err.message.must_include 'Bad header line: parse failed'
     end
 
-    it "requires the header name to match the file name" do
+    it "requires the header token to match the file name" do
       err = lambda {
-        invalid_cask = Cask.load('invalid/invalid-header-name-mismatch')
+        invalid_cask = Cask.load('invalid/invalid-header-token-mismatch')
       }.must_raise(CaskInvalidError)
       err.message.must_include 'Bad header line:'
       err.message.must_include 'does not match file name'
@@ -236,14 +236,28 @@ describe Cask::DSL do
   end
 
   describe "depends_on stanza" do
-    it "allows depends_on stanza to be specified" do
-      cask = Cask.load('with-depends-on')
-      cask.depends_on.formula.wont_be_nil
-    end
-
-    it "refuses to load invalid depends_on key" do
+    it "refuses to load with an invalid depends_on key" do
       err = lambda {
         invalid_cask = Cask.load('invalid/invalid-depends-on-key')
+      }.must_raise(CaskInvalidError)
+    end
+  end
+
+  describe "depends_on :formula" do
+    it "allows depends_on :formula to be specified" do
+      cask = Cask.load('with-depends-on-formula')
+      cask.depends_on.formula.wont_be_nil
+    end
+  end
+
+  describe "depends_on :macos" do
+    it "allows depends_on :macos to be specified" do
+      cask = Cask.load('with-depends-on-macos-string')
+      cask.depends_on.macos.wont_be_nil
+    end
+    it "refuses to load with an invalid depends_on :macos value" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-depends-on-macos-version')
       }.must_raise(CaskInvalidError)
     end
   end

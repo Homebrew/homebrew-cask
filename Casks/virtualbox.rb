@@ -4,7 +4,7 @@ cask :v1 => 'virtualbox' do
 
   url "http://download.virtualbox.org/virtualbox/#{version.gsub(/-.*/, '')}/VirtualBox-#{version}-OSX.dmg"
   homepage 'http://www.virtualbox.org'
-  license :unknown
+  license :gpl
 
   pkg 'VirtualBox.pkg'
 

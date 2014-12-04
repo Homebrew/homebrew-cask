@@ -9,6 +9,6 @@ cask :v1 => 'android-studio' do
   app 'Android Studio.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/Android Studio.app/Contents/Info.plist"
+    plist_set(':JVMOptions:JVMVersion', '1.6+')
   end
 end

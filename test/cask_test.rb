@@ -2,7 +2,7 @@ require 'test_helper'
 
 describe "Cask" do
   describe "load" do
-    it "returns an instance of the Cask with the given name" do
+    it "returns an instance of the Cask for the given token" do
       c = Cask.load("adium")
       c.must_be_kind_of(Cask)
       c.must_be_instance_of(Adium)
@@ -56,7 +56,7 @@ describe "Cask" do
       Object.class_eval{remove_const :Bbedit}
     end
 
-    it "uses exact match when loading by name" do
+    it "uses exact match when loading by token" do
       Cask.load('test-opera').must_be_instance_of(TestOpera)
       Cask.load('test-opera-mail').must_be_instance_of(TestOperaMail)
     end
@@ -68,31 +68,31 @@ describe "Cask" do
     end
   end
 
-  describe "all_titles" do
-    it "returns every Cask that there is as a string" do
-      all_casks = Cask.all_titles
-      all_casks.count.must_be :>, 20
-      all_casks.each { |cask| cask.must_be_kind_of String }
+  describe "all_tokens" do
+    it "returns a token for every Cask" do
+      all_cask_tokens = Cask.all_tokens
+      all_cask_tokens.count.must_be :>, 20
+      all_cask_tokens.each { |cask| cask.must_be_kind_of String }
     end
   end
 
-  describe "title" do
-    it "converts class constant to dasherized string" do
+  describe "token" do
+    it "converts a class constant to a token-style dashed string" do
       PascalCasedConstant = Class.new(Cask)
-      PascalCasedConstant.title.must_equal 'pascal-cased-constant'
+      PascalCasedConstant.token.must_equal 'pascal-cased-constant'
     end
 
     it "properly dasherizes constants with single letters in the middle" do
       GamesXChange = Class.new(Cask)
-      GamesXChange.title.must_equal 'games-x-change'
+      GamesXChange.token.must_equal 'games-x-change'
     end
   end
 
   describe "metadata" do
     it "proposes a versioned metadata directory name for each instance" do
-      cask_name = "adium"
-      c = Cask.load(cask_name)
-      metadata_path = Cask.caskroom.join(cask_name, '.metadata', c.version)
+      cask_token = "adium"
+      c = Cask.load(cask_token)
+      metadata_path = Cask.caskroom.join(cask_token, '.metadata', c.version)
       c.metadata_versioned_container_path.to_s.must_equal(metadata_path.to_s)
     end
   end

@@ -79,7 +79,7 @@ class Cask::Audit
     valid_url_formats = [
       %r{\Ahttps?://sourceforge\.net/projects/[^/]+/files/latest/download\Z},
       %r{\Ahttps?://downloads\.sourceforge\.net/},
-      %r{\Ahttps?://dl\.sourceforge\.jp/},
+      %r{\Ahttps?://[^/]+\.sourceforge\.jp/},
       # special cases: cannot find canonical format URL
       %r{\Ahttps?://brushviewer\.sourceforge\.net/brushviewql\.zip\Z},
       %r{\Ahttps?://doublecommand\.sourceforge\.net/files/},

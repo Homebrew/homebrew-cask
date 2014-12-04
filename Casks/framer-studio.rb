@@ -1,6 +1,6 @@
 cask :v1 => 'framer-studio' do
-  version '1.9.9'
-  sha256 '87ef1a7cf363e772a1c0cbc2dd6ca6dceb41d677b547b0cac28a8c982557650f'
+  version '1.9.39'
+  sha256 '38fc750d8b1de5f86819c860a81624520af92d309faf9ddd1b784e2207bc0b0d'
 
   url "http://studio.update.framerjs.com/static/downloads/Framer%20Studio-#{version}.zip"
   homepage 'http://framerjs.com/'

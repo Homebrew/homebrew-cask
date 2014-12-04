@@ -7,7 +7,7 @@ class Cask::CLI::Base
     true
   end
 
-  def self.cask_names_from(args)
+  def self.cask_tokens_from(args)
     args.reject { |a| a.chars.first == '-' }
   end
 

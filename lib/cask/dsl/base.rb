@@ -8,8 +8,13 @@ class Cask::DSL::Base
     @command.run!(executable, options)
   end
 
+  def token
+    @cask.token
+  end
+
+  # todo removeme transitional backward compatibility
   def title
-    @cask.title
+    @cask.token
   end
 
   def version
@@ -17,7 +22,7 @@ class Cask::DSL::Base
   end
 
   def caskroom_path
-    @cask.class.caskroom.join(title)
+    @cask.class.caskroom.join(token)
   end
 
   def staged_path

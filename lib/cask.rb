@@ -22,7 +22,7 @@ require 'cask/locations'
 require 'cask/options'
 require 'cask/pkg'
 require 'cask/pretty_listing'
-require 'cask/qualified_cask_name'
+require 'cask/qualified_token'
 require 'cask/scopes'
 require 'cask/source'
 require 'cask/staged'
@@ -80,8 +80,13 @@ class Cask
     cask
   end
 
-  def self.title
+  def self.token
     self.name.gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase
+  end
+
+  # todo removeme transitional backward-compatibility
+  def self.title
+    self.token
   end
 
   def self.nowstamp_metadata_path(container_path)
@@ -95,13 +100,18 @@ class Cask
     end
   end
 
-  attr_reader :title
-  def initialize(title=self.class.title)
-    @title = title
+  attr_reader :token
+  def initialize(token=self.class.token)
+    @token = token
+  end
+
+  # todo removeme transitional backward-compatibility
+  def title
+    @token
   end
 
   def caskroom_path
-    self.class.caskroom.join(title)
+    self.class.caskroom.join(token)
   end
 
   def staged_path
@@ -159,6 +169,6 @@ class Cask
   end
 
   def to_s
-    @title
+    @token
   end
 end

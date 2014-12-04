@@ -146,8 +146,10 @@ if MacOS.version < :mavericks     # symbolic name
 if MacOS.version < '10.9'         # version string
 ```
 
-The available symbols for OS versions are: `:tiger`, `:leopard`,
+The available symbols for OS X versions are: `:tiger`, `:leopard`,
 `:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, and `:yosemite`.
+The corresponding numeric version strings should given as major releases
+containing a single dot.
 
 ### Always Fall Through to the Newest Case
 
@@ -172,18 +174,18 @@ end
 The first non-comment line in a Cask follows the form
 
 ```ruby
-cask <dsl-version> => '<cask-name>' do
+cask <dsl-version> => '<cask-token>' do
 ```
 
 `<dsl-version>` identifies the version of the Cask DSL, currently `:v1`.
 
-`<cask-name>` should match the Cask filename, without the `.rb` extension,
+`<cask-token>` should match the Cask filename, without the `.rb` extension,
 enclosed in single quotes.
 
 The header line is not entirely strict Ruby: no comma is required after
-the Cask name.
+the Cask token.
 
-There are currently some arbitrary limitations on Cask names which are
+There are currently some arbitrary limitations on Cask tokens which are
 in the process of being removed.  The Travis bot will catch any errors
 during the transition.
 
@@ -198,7 +200,7 @@ position at the end of the Cask:
 
 | method             | description |
 | ------------------ | ----------- |
-| `title`            | the Cask title
+| `token`            | the Cask token
 | `version`          | the Cask version
 | `homepage`         | the Cask homepage
 | `caskroom_path`    | the containing directory for all staged Casks, typically `/opt/homebrew-cask/Caskroom`
@@ -207,7 +209,7 @@ position at the end of the Cask:
 Example:
 
 ```ruby
-caveats "Using #{title} is hazardous to your health."
+caveats "Using #{token} is hazardous to your health."
 ```
 
 ### Caveats as a Block
@@ -231,7 +233,6 @@ The following methods may be called to generate standard warning messages:
 | `assistive_devices`               | users should grant the application access to assistive devices
 | `files_in_usr_local`              | the Cask installs files to `/usr/local`, which may confuse Homebrew
 | `arch_only(list)`                 | the Cask only supports certain architectures.  Currently valid elements of `list` are `intel-32` and `intel-64`
-| `os_version_only(list)`           | the Cask only supports certain OS X Versions.  Currently valid elements of `list` are all major releases: `10.0`, `10.1`, … `10.10`
 | `x11_required`                    | the Cask requires X11 to run
 
 Example:
@@ -386,7 +387,7 @@ using the information stored in the `tags` stanza.
 
 | key           | meaning
 | ------------- | -----------------------------
-| `:name`       | alternate name for the Cask. (example [smlnj.rb](../Casks/smlnj.rb))
+| `:name`       | the full name of the Cask. (example [smlnj.rb](../Casks/smlnj.rb))
 | `:vendor`     | the full-text official name of the producer of the software: an author or corporate name, as appropriate.  As the value is intended as a search target, commonly shared abbreviations such as `Dr.` or `Inc.` should be omitted. (example [google-chrome.rb](../Casks/google-chrome.rb))
 
 
@@ -541,7 +542,11 @@ installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer
 `depends_on` is used to declare dependencies required to install a Cask
 or to execute its contents.
 
-For example, some distributions are contained in archive formats such as
+### Depends_on :formula
+
+The value should name a Homebrew formula needed by the Cask.
+
+Example use: some distributions are contained in archive formats such as
 `7z` which are not supported by stock Apple tools.  For these cases, a more
 capable archive reader may be pulled in at install time by declaring a
 dependency on the Homebrew Formula `unar`:
@@ -550,14 +555,47 @@ dependency on the Homebrew Formula `unar`:
 depends_on :formula => 'unar'
 ```
 
-While several keys are accepted by `depends_on`, `:formula` is the only
-key with working functionality at the time of writing.
+### Depends_on :macos
+
+#### Requiring an Exact OS X Release
+
+The value for `depends_on :macos` may be a string, symbol or an array of
+strings or symbols, listing the exact compatible OS X releases.
+
+The available symbols for OS X releases are: `:tiger`, `:leopard`,
+`:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, and `:yosemite`.
+These correspond to strings `'10.4'`, `'10.5'`, … `'10.10'` (major releases
+containing a single dot.  The following are all valid ways to enumerate the
+exact OS X version requirements for a Cask:
+
+```ruby
+depends_on :macos => :yosemite
+depends_on :macos => [:mavericks, :yosemite]
+depends_on :macos => '10.9'
+depends_on :macos => ['10.9', '10.10']
+```
+
+#### Setting a Minimum OS X Release
+
+`depends_on :macos` can also accept a string starting with a comparison
+operator such as `>=`, followed by an OS X version in the form above.  The
+following are both valid expressions meaning "at least OS X 10.9":
+
+```ruby
+depends_on :macos => '>= :mavericks'
+depends_on :macos => '>= 10.9'
+```
+
+### All Depends_on Keys
+
+Several other keys are accepted by `depends_on`, in anticipation of future
+functionality:
 
 | key        | description |
 | ---------- | ----------- |
 | `:formula` | a Homebrew Formula
 | `:cask`    | *stub - not yet functional*
-| `:macos`   | *stub - not yet functional*
+| `:macos`   | a string, symbol, array, or expression defining OS X version requirements.
 | `:arch`    | *stub - not yet functional*
 | `:x11`     | *stub - not yet functional*
 | `:java`    | *stub - not yet functional*
@@ -856,7 +894,7 @@ define arbitrary Ruby variables and methods inside the Cask by creating a
 `Utils` namespace.  Example:
 
 ```ruby
-cask :v1 => 'appname' do
+cask :v1 => 'myapp' do
   module Utils
     def self.arbitrary_method
       ...

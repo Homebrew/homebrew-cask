@@ -3,19 +3,19 @@ require 'set'
 
 module Cask::DSL; end
 
-require 'cask/dsl/base'
-require 'cask/dsl/installer'
-require 'cask/dsl/after_install'
-require 'cask/dsl/after_uninstall'
-require 'cask/dsl/before_install'
-require 'cask/dsl/before_uninstall'
 require 'cask/dsl/appcast'
+require 'cask/dsl/base'
 require 'cask/dsl/conflicts_with'
 require 'cask/dsl/container'
 require 'cask/dsl/depends_on'
 require 'cask/dsl/gpg'
+require 'cask/dsl/installer'
 require 'cask/dsl/license'
+require 'cask/dsl/postflight'
+require 'cask/dsl/preflight'
 require 'cask/dsl/tags'
+require 'cask/dsl/uninstall_postflight'
+require 'cask/dsl/uninstall_preflight'
 
 module Cask::DSL
   def self.included(base)
@@ -51,53 +51,53 @@ module Cask::DSL
   module ClassMethods
     def homepage(homepage=nil)
       if @homepage and !homepage.nil?
-        raise CaskInvalidError.new(self.title, "'homepage' stanza may only appear once")
+        raise CaskInvalidError.new(self.token, "'homepage' stanza may only appear once")
       end
       @homepage ||= homepage
     end
 
     def url(*args)
       if @url and !args.empty?
-        raise CaskInvalidError.new(self.title, "'url' stanza may only appear once")
+        raise CaskInvalidError.new(self.token, "'url' stanza may only appear once")
       end
       @url ||= begin
         Cask::URL.new(*args)
       rescue StandardError => e
-        raise CaskInvalidError.new(self.title, "'url' stanza failed with: #{e}")
+        raise CaskInvalidError.new(self.token, "'url' stanza failed with: #{e}")
       end
     end
 
     def appcast(*args)
       if @appcast and !args.empty?
-        raise CaskInvalidError.new(self.title, "'appcast' stanza may only appear once")
+        raise CaskInvalidError.new(self.token, "'appcast' stanza may only appear once")
       end
       @appcast ||= begin
         Cask::DSL::Appcast.new(*args) unless args.empty?
       rescue StandardError => e
-        raise CaskInvalidError.new(self.title, e)
+        raise CaskInvalidError.new(self.token, e)
       end
     end
 
     def gpg(*args)
       if @gpg and !args.empty?
-        raise CaskInvalidError.new(self.title, "'gpg' stanza may only appear once")
+        raise CaskInvalidError.new(self.token, "'gpg' stanza may only appear once")
       end
       @gpg ||= begin
         Cask::DSL::Gpg.new(*args) unless args.empty?
       rescue StandardError => e
-        raise CaskInvalidError.new(self.title, e)
+        raise CaskInvalidError.new(self.token, e)
       end
     end
 
     def container(*args)
       if @container and !args.empty?
         # todo: remove this constraint, and instead merge multiple container stanzas
-        raise CaskInvalidError.new(self.title, "'container' stanza may only appear once")
+        raise CaskInvalidError.new(self.token, "'container' stanza may only appear once")
       end
       @container ||= begin
         Cask::DSL::Container.new(*args) unless args.empty?
       rescue StandardError => e
-        raise CaskInvalidError.new(self.title, e)
+        raise CaskInvalidError.new(self.token, e)
       end
       # todo: remove this backward-compatibility section after removing nested_container
       if @container and @container.nested
@@ -114,9 +114,9 @@ module Cask::DSL
       if arg.nil?
         @version
       elsif @version
-        raise CaskInvalidError.new(self.title, "'version' stanza may only appear once")
+        raise CaskInvalidError.new(self.token, "'version' stanza may only appear once")
       elsif !arg.is_a?(String) and !SYMBOLIC_VERSIONS.include?(arg)
-        raise CaskInvalidError.new(self.title, "invalid 'version' value: '#{arg.inspect}'")
+        raise CaskInvalidError.new(self.token, "invalid 'version' value: '#{arg.inspect}'")
       end
       @version ||= arg
     end
@@ -124,35 +124,35 @@ module Cask::DSL
     def tags(*args)
       if @tags and !args.empty?
         # consider removing this limitation
-        raise CaskInvalidError.new(self.title, "'tags' stanza may only appear once")
+        raise CaskInvalidError.new(self.token, "'tags' stanza may only appear once")
       end
       @tags ||= begin
         Cask::DSL::Tags.new(*args) unless args.empty?
       rescue StandardError => e
-        raise CaskInvalidError.new(self.title, e)
+        raise CaskInvalidError.new(self.token, e)
       end
     end
 
     def license(arg=nil)
       if @license and !arg.nil?
-        raise CaskInvalidError.new(self.title, "'license' stanza may only appear once")
+        raise CaskInvalidError.new(self.token, "'license' stanza may only appear once")
       end
       @license ||= begin
         Cask::DSL::License.new(arg) unless arg.nil?
       rescue StandardError => e
-        raise CaskInvalidError.new(self.title, e)
+        raise CaskInvalidError.new(self.token, e)
       end
     end
 
     def depends_on(*args)
       if @depends_on and !args.empty?
         # todo: remove this constraint, and instead merge multiple depends_on stanzas
-        raise CaskInvalidError.new(self.title, "'depends_on' stanza may only appear once")
+        raise CaskInvalidError.new(self.token, "'depends_on' stanza may only appear once")
       end
       @depends_on ||= begin
         Cask::DSL::DependsOn.new(*args) unless args.empty?
       rescue StandardError => e
-        raise CaskInvalidError.new(self.title, e)
+        raise CaskInvalidError.new(self.token, e)
       end
       @depends_on
     end
@@ -160,12 +160,12 @@ module Cask::DSL
     def conflicts_with(*args)
       if @conflicts_with and !args.empty?
         # todo: remove this constraint, and instead merge multiple conflicts_with stanzas
-        raise CaskInvalidError.new(self.title, "'conflicts_with' stanza may only appear once")
+        raise CaskInvalidError.new(self.token, "'conflicts_with' stanza may only appear once")
       end
       @conflicts_with ||= begin
         Cask::DSL::ConflictsWith.new(*args) unless args.empty?
       rescue StandardError => e
-        raise CaskInvalidError.new(self.title, e)
+        raise CaskInvalidError.new(self.token, e)
       end
     end
 
@@ -212,13 +212,13 @@ module Cask::DSL
     ordinary_artifact_types.each do |type|
       define_method(type) do |*args|
         if type == :stage_only and args != [true]
-          raise CaskInvalidError.new(self.title, "'stage_only' takes a single argument: true")
+          raise CaskInvalidError.new(self.token, "'stage_only' takes a single argument: true")
         end
         artifacts[type] << args
         if artifacts.key?(:stage_only) and
           artifacts.keys.count > 1 and
           ! (artifacts.keys & Cask::DSL::ClassMethods.activatable_artifact_types).empty?
-          raise CaskInvalidError.new(self.title, "'stage_only' must be the only activatable artifact")
+          raise CaskInvalidError.new(self.token, "'stage_only' must be the only activatable artifact")
         end
       end
     end
@@ -231,7 +231,7 @@ module Cask::DSL
         artifacts[:installer] << Cask::DSL::Installer.new(*args)
         raise "'stage_only' must be the only activatable artifact" if artifacts.key?(:stage_only)
       rescue StandardError => e
-        raise CaskInvalidError.new(self.title, e)
+        raise CaskInvalidError.new(self.token, e)
       end
     end
 
@@ -275,19 +275,8 @@ module Cask::DSL
     end
 
     def method_missing(method, *args)
-      poo = <<-EOPOO.undent
-        Unexpected method '#{method}' called on #{self}.
-
-          If you are working on #{self}, this may point to a typo. Otherwise
-          it probably means this Cask is using a new feature. If that feature
-          has been released, running
-
-            brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
-
-          should fix it. Otherwise you should wait to use #{self} until the
-          new feature is released.
-      EOPOO
-      poo.split("\n").each { |line| opoo line }
+      Cask::Utils.method_missing_message(method, self.title)
+      return nil
     end
   end
 end

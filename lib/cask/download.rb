@@ -9,7 +9,6 @@ class Cask::Download
 
   def perform(force=false)
     require 'software_spec'
-    cask = @cask
     if cask.url.using == :svn
       downloader = Cask::SubversionDownloadStrategy.new(cask)
     elsif cask.url.using == :post
@@ -21,7 +20,7 @@ class Cask::Download
     begin
       downloaded_path = downloader.fetch
     rescue StandardError => e
-      raise CaskError.new("Download failed on Cask '#{@cask}' with message: #{e}")
+      raise CaskError.new("Download failed on Cask '#{cask}' with message: #{e}")
     end
     begin
       # this symlink helps track which downloads are ours

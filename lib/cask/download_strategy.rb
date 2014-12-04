@@ -14,8 +14,8 @@ module Cask::DownloadStrategy
     @command  = command
     @cask_url = cask.url
     super(
-      cask.title,
-      ::Resource.new(cask.title) do |r|
+      cask.token,
+      ::Resource.new(cask.token) do |r|
         r.url     cask.url.to_s
         r.version cask.version.to_s
       end

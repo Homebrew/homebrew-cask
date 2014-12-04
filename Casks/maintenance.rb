@@ -11,9 +11,11 @@ cask :v1 => 'maintenance' do
   elsif MacOS.version == :lion
     url 'http://www.titanium.free.fr/download/107/Maintenance.dmg'
   elsif MacOS.version == :mountain_lion
-    url 'http://joel.barriere.pagesperso-orange.fr/dl/108/Maintenance.dmg'
+    url 'http://www.titanium.free.fr/download/108/Maintenance.dmg'
+  elsif MacOS.version == :mavericks
+    url 'http://www.titanium.free.fr/download/109/Maintenance.dmg'
   else
-    url 'http://joel.barriere.pagesperso-orange.fr/dl/109/Maintenance.dmg'
+    url 'http://www.titanium.free.fr/download/1010/Maintenance.dmg'
   end
 
   homepage 'http://www.titanium.free.fr/downloadmaintenance.php'
@@ -22,7 +24,7 @@ cask :v1 => 'maintenance' do
   app 'Maintenance.app'
 
   caveats do
-    os_version_only('10.4', '10.5', '10.6', '10.7', '10.8', '10.9')
+    os_version_only('10.4', '10.5', '10.6', '10.7', '10.8', '10.9', '10.10')
 
     if [:leopard, :tiger].include? MacOS.version
       puts 'Maintenance only runs from an Administrator account.'

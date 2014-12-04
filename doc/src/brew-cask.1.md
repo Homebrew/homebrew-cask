@@ -3,7 +3,7 @@ homebrew-cask(1) -- A friendly binary installer for OS X
 
 ## SYNOPSIS
 
-`brew cask` command [options] [<Cask> ...]
+`brew cask` command [options] [<token> ...]
 
 ## DESCRIPTION
 
@@ -19,74 +19,77 @@ names, and other aspects of this manual are still subject to change.
 
 ## FREQUENTLY USED COMMANDS
 
-  * `install [--force]` <Cask>:
-    Install <Cask>.
+  * `install [--force]` <token> [ <token> ... ]:
+    Install Cask identified by <token>.
 
-  * `uninstall [--force]` <Cask>:
-    Uninstall <Cask>.
+  * `uninstall [--force]` <token> [ <token> ... ]:
+    Uninstall Cask identified by <token>.
 
   * `search` <text> | /<regexp>/:
-    Perform a substring search of Cask names for <text>.  If the text is
-    delimited by slashes, it is interpreted as a Ruby regular expression.
+    Perform a substring search of known Cask tokens for <text>.  If the text
+    is delimited by slashes, it is interpreted as a Ruby regular expression.
 
-    The Cask names returned by `search` are suitable as arguments for most
-    other commands, such as `install` or `uninstall`.
+    The tokens returned by `search` are suitable as arguments for most other
+    commands, such as `install` or `uninstall`.
 
 ## COMMANDS
 
-  * `audit` [<Casks>]:
-   Check <Casks> for installability.
-   If no <Casks> are given on the command line, all Casks are audited.
+  * `audit` [ <token> ... ]:
+   Check the given Casks for installability.
+   If no tokens are given on the command line, all Casks are audited.
 
   * `alfred`:
     Modify Alfred's search scope to include the Caskroom directory where
     Applications are stored.
 
-  * `cat` <Cask>:
+  * `cat` <token> [ <token> ... ]:
     Dump the given Cask definition file to the standard output.
 
   * `cleanup` [--outdated]:
-    Clean up cached downloads and tracker symlinks.  With `--outdated`, only
-    clean up cached downloads older than 10 days old.
+    Clean up cached downloads and tracker symlinks.  With `--outdated`,
+    only clean up cached downloads older than 10 days old.
 
-  * `create` <Cask>:
-    Generate a Cask definition file for the Cask named <Cask> and open a
-    template for it in your favorite editor.
+  * `create` <token>:
+    Generate a Cask definition file for the Cask identified by <token>
+    and open a template for it in your favorite editor.
 
   * `doctor` or `dr`:
     Check for configuration issues.  Can be useful to upload as a gist for
     developers along with a bug report.
 
-  * `edit` <Cask>:
+  * `edit` <token>:
     Open the given Cask definition file for editing.
 
-  * `fetch` <Cask> [--force]:
+  * `fetch` [--force] <token> [ <token> ... ]:
     Fetch remote resources for the given Cask to the local cache.  With
     `--force`, force re-download even if the resources are already cached.
 
-  * `home` or `homepage`:
-    Open the project page <http://caskroom.io> in a browser.
+  * `home` or `homepage` [<token>]:
+    Display the homepage associated with a given Cask in a browser.
 
-  * `info` or `abv` <Cask>:
-    Display information about <Cask>.
+    With no arguments, display the project page <http://caskroom.io>.
 
-  * `install [--force]` <Cask>:
-    Install <Cask>.  With `--force`, re-install even if the Cask appears to
-    be already present.
+  * `info` or `abv` <token> [ <token> ... ]:
+    Display information about the given Cask.
 
-    <Cask> is usually the name of a Cask as returned by `brew cask search`,
+  * `install [--force]` <token> [ <token> ... ]:
+    Install the given Cask.  With `--force`, re-install even if the Cask
+    appears to be already present.
+
+    <token> is usually the ID of a Cask as returned by `brew cask search`,
     but see [OTHER WAYS TO SPECIFY A CASK][] for variations.
 
-  * `list` or `ls` [-1 | -l] [<Casks>]:
+  * `list` or `ls` [-1 | -l] [ <token> ... ]:
     Without any arguments, list all installed Casks.  With `-1`, always
     format the output in a single column.  With `-l`, give a more detailed
     listing.
 
-    If <Casks> are given, list the staged files for <Casks>.
+    If <token> is given, summarize the staged files associated with the
+    given Cask.
 
-  * `uninstall [--force]` or `rm` or `remove` <Cask>:
-    Uninstall <Cask>.  With `--force`, uninstall even if the Cask does
-    not appear to be present.
+  * `uninstall [--force]` or `rm` or `remove` <token> [ <token> ... ]:
+    Uninstall the given Cask.  With `--force`, uninstall even if the Cask
+    does not appear to be present.
 
     Note that `uninstall --force` is currently imperfect.  It will follow
     the `uninstall` instructions from *newest* Cask definition, even if
@@ -100,14 +103,14 @@ names, and other aspects of this manual are still subject to change.
     perform an `uninstall` operation if the given Cask has changed since you
     installed it.  This issue is being addressed.
 
-  * `zap` <Cask>:
-    Unconditionally remove _all_ files associated with <Cask>.
+  * `zap` <token> [ <token> ... ]:
+    Unconditionally remove _all_ files associated with the given Cask.
 
     Implicitly performs all actions associated with `uninstall`, even if
     the Cask does not appear to be currently installed.
 
     Removes all staged versions of the Cask distribution found under
-    `/opt/homebrew-cask/Caskroom/<Cask>`
+    `/opt/homebrew-cask/Caskroom/<token>`
 
     If the Cask definition contains a `zap` stanza, performs additional
     `zap` actions as defined there, such as removing local preference
@@ -120,9 +123,8 @@ names, and other aspects of this manual are still subject to change.
     Display all Casks available for install.
 
   * `search` or `-S` <text> | /<regexp>/:
-    Perform a substring search of Cask names for <text>.  If the text
-    is delimited by slashes, it is interpreted as a Ruby regular
-    expression.
+    Perform a substring search of known Cask tokens for <text>.  If the text
+    is delimited by slashes, it is interpreted as a Ruby regular expression.
 
   * `update`:
     For convenience, `brew cask update` is a synonym for `brew update`.
@@ -196,14 +198,14 @@ the Homebrew command:
 
 ## OTHER WAYS TO SPECIFY A CASK
 
-Most homebrew-cask commands can accept a Cask name as an argument.  As
-described above, a Cask name on the command line can take the form of:
+Most homebrew-cask commands can accept a Cask token as an argument.  As
+described above, the argument can take the form of:
 
-  * A Cask name as returned by `brew cask search`, _eg_ `google-chrome`
+  * A token as returned by `brew cask search`, _eg_ `google-chrome`
 
-Homebrew-cask also accepts three other forms for Cask names:
+Homebrew-cask also accepts three other forms in place of plain tokens:
 
-  * A fully-qualified Cask name which includes the Tap name, _eg_
+  * A fully-qualified token which includes the Tap name, _eg_
     `caskroom/fonts/font-symbola`
 
   * A fully-qualified pathname to a Cask file, _eg_

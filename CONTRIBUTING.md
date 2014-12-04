@@ -78,32 +78,30 @@ cask :v1 => 'firefox' do
 end
 ```
 
-### Naming the Cask
+### Generating a Token for the Cask
 
-We try to maintain consistent naming for the benefit of our users.
+The Cask **token** is the mnemonic string people will use to interact with
+the Cask via `brew cask install`, `brew cask search`, etc.  The name of the
+Cask **file** is simply the token with the extension `.rb` appended.
 
-The Cask **name** is the string people will use to interact with the Cask
-via `brew cask install`, `brew cask search`, etc.  The Cask **file**
-is simply the Cask name with the extension `.rb` appended.
-
-The easiest way to name a Cask is to run this command:
+The easiest way to generate a token for a Cask is to run this command:
 ```bash
-$ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/cask_namer" '/full/path/to/new/software.app'
+$ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/generate_cask_token" '/full/path/to/new/software.app'
 ```
 
 If the software you wish to Cask is not installed, or does not have an
 associated App bundle, just give the full proper name of the software
 instead of a pathname:
 ```bash
-$ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/cask_namer" 'Google Chrome'
+$ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/generate_cask_token" 'Google Chrome'
 ```
 
-If the `cask_namer` script does not work for you, see [Cask Naming Details](#cask-naming-details).
+If the `generate_cask_token` script does not work for you, see [Cask Token Details](#cask-token-details).
 
 
 ### The `brew cask create` Command
 
-Once you know the name for your Cask, create it with the handy-dandy
+Once you know the token, create your Cask with the handy-dandy
 `brew cask create` command.
 
 ```bash
@@ -190,8 +188,10 @@ http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 Or, if it’s from [SourceForge.JP](http://sourceforge.jp/):
 
 ```
-http://dl.sourceforge.jp/$PROJECTNAME/$RELEASEID/$FILENAME.$EXT
+http://$STRING.sourceforge.jp/$PROJECTNAME/$RELEASEID/$FILENAME.$EXT
 ```
+
+`$STRING` is typically of the form `dl` or `$USER.dl`.
 
 ### Personal Hosting Such as Dropbox
 
@@ -213,16 +213,17 @@ When possible, it is best to use a download URL from the original developer
 or vendor, rather than an aggregator such as macupdate.com.
 
 
-### Cask Naming Details
+### Cask Token Details
 
-If a Cask name conflicts with an already-existing Cask, authors should manually
-make the new Cask name unique by prepending the vendor name.  Example:
+If a token conflicts with an already-existing Cask, authors should manually
+make the new token unique by prepending the vendor name.  Example:
 [unison.rb](../Casks/unison.rb) and [panic-unison.rb](../Casks/panic-unison.rb).
 
-If possible, avoid creating Cask names which differ only by the placement of
+If possible, avoid creating tokens which differ only by the placement of
 hyphens.
 
-To name a Cask manually, or to learn about exceptions for unusual cases, see [CASK_NAMING_REFERENCE.md](doc/CASK_NAMING_REFERENCE.md).
+To generate a token manually, or to learn about exceptions for unusual cases,
+see [CASK_TOKEN_REFERENCE.md](doc/CASK_TOKEN_REFERENCE.md).
 
 
 ### Archives With Subfolders
@@ -411,6 +412,6 @@ Neat and tidy!
 ## Working On homebrew-cask Itself
 
 If you'd like to hack on the Ruby code in the project itself, please
-see [HACKING.md](doc/HACKING.md).
+see [hacking.md](doc/hacking.md).
 
 # <3 THANK YOU! <3
