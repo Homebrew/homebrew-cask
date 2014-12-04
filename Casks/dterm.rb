@@ -8,4 +8,8 @@ cask :v1 => 'dterm' do
   license :unknown
 
   app 'DTerm.app'
+  uninstall :quit => 'net.decimus.dterm'
+  caveats do
+    assistive_devices
+  end
 end
