@@ -84,7 +84,7 @@ more information.
 * `doctor` -- checks for configuration issues
 * `cleanup` -- cleans up cached downloads (with `--outdated`, only cleans old downloads)
 * `home` -- opens the homepage of the given Cask; or with no arguments, the homebrew-cask project page
-* `alfred` -- modifies Alfred's scope to include the Caskroom
+* `alfred` -- modifies Alfred's search scope to include installed Casks
 * `update` -- a synonym for `brew update`
 * `zap` -- try to remove *all* files associated with a Cask (including resources which may be shared with other applications)
 
@@ -255,10 +255,13 @@ You can add Casks to your existing (or new) Taps: just create a directory named
 
 ## Alfred Integration
 
-`/opt/homebrew-cask/Caskroom` as a Search Scope in Alfred's preferences or
-I've been using Casks along with Alfred 2 to great effect. Just add
-manage the scope addition via `brew cask alfred link`. Then applications become
-available in Alfred immediately after a `brew cask install`. Your fingertips
-will thank you.
+Many users combine Homebrew-cask with [Alfred 2](http://www.alfredapp.com/) to great effect. Just add
+the Cask staging area to Alfred's "search scope" by either
+
+ * running `brew cask alfred link`, or
+ * manually adding `/opt/homebrew-cask/Caskroom` via Alfred's preferences GUI
+
+Applications will then become available in Alfred immediately after a `brew
+cask install`. Your fingertips will thank you.
 
 Oh, and you can `brew cask install alfred` too! Not bad, eh?
