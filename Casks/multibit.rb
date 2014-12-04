@@ -6,7 +6,7 @@ cask :v1 => 'multibit' do
   gpg "#{url}.asc",
       :key_id => '23f7fb7b'
   homepage 'https://multibit.org/'
-  license :unknown
+  license :mit
 
   app 'MultiBit.app'
 end
