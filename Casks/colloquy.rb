@@ -6,7 +6,7 @@ cask :v1 => 'colloquy' do
   appcast 'http://colloquy.info/update.php?rss',
           :sha256 => 'd1eb727b05c5146585aa249354f016cc29a0ee1a71102c4c25fcdf56bc207f92'
   homepage 'http://colloquy.info/'
-  license :unknown
+  license :gpl
 
   app 'Colloquy.app'
 
