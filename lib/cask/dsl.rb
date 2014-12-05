@@ -275,7 +275,7 @@ module Cask::DSL
     end
 
     def method_missing(method, *args)
-      Cask::Utils.method_missing_message(method, self.title)
+      Cask::Utils.method_missing_message(method, self.token)
       return nil
     end
   end
