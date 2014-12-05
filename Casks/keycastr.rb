@@ -9,8 +9,9 @@ cask :v1 => 'keycastr' do
 
   app 'KeyCastr.app'
 
+  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    For OSX 10.9 or later, #{title} requires that you "Enable access for assistive devices".
+    For OSX 10.9 or later, #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} requires that you "Enable access for assistive devices".
     The app must be dragged into the Accessibility list in System Preferences.
     See https://github.com/sdeken/keycastr/issues/5
   EOS
