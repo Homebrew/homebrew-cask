@@ -5,26 +5,26 @@ describe "Cask" do
     it "returns an instance of the Cask for the given token" do
       c = Cask.load("adium")
       c.must_be_kind_of(Cask)
-      c.must_be_instance_of(Adium)
+      c.must_be_instance_of(KlassPrefixAdium)
     end
 
     it "returns an instance of the Cask from a specific file location" do
       # defensive constant cleanup is required because Cask
       # classes may already be loaded due to audit test
       begin
-        Object.class_eval{remove_const :Dia}
+        Object.class_eval{remove_const :KlassPrefixDia}
       rescue
       end
       location = File.expand_path('./Casks/dia.rb')
       c = Cask.load(location)
       c.must_be_kind_of(Cask)
-      c.must_be_instance_of(Dia)
-      Object.class_eval{remove_const :Dia}
+      c.must_be_instance_of(KlassPrefixDia)
+      Object.class_eval{remove_const :KlassPrefixDia}
     end
 
     it "returns an instance of the Cask from a url" do
       begin
-        Object.class_eval{remove_const :Dia}
+        Object.class_eval{remove_const :KlassPrefixDia}
       rescue
       end
       url = "file://" + File.expand_path('./Casks/dia.rb')
@@ -32,8 +32,8 @@ describe "Cask" do
         Cask.load(url)
       end
       c.must_be_kind_of(Cask)
-      c.must_be_instance_of(Dia)
-      Object.class_eval{remove_const :Dia}
+      c.must_be_instance_of(KlassPrefixDia)
+      Object.class_eval{remove_const :KlassPrefixDia}
     end
 
     it "raises an error when failing to download a Cask from a url" do
@@ -47,18 +47,18 @@ describe "Cask" do
 
     it "returns an instance of the Cask from a relative file location" do
       begin
-        Object.class_eval{remove_const :Bbedit}
+        Object.class_eval{remove_const :KlassPrefixBbedit}
       rescue
       end
       c = Cask.load("./Casks/bbedit.rb")
       c.must_be_kind_of(Cask)
-      c.must_be_instance_of(Bbedit)
-      Object.class_eval{remove_const :Bbedit}
+      c.must_be_instance_of(KlassPrefixBbedit)
+      Object.class_eval{remove_const :KlassPrefixBbedit}
     end
 
     it "uses exact match when loading by token" do
-      Cask.load('test-opera').must_be_instance_of(TestOpera)
-      Cask.load('test-opera-mail').must_be_instance_of(TestOperaMail)
+      Cask.load('test-opera').must_be_instance_of(KlassPrefixTestOpera)
+      Cask.load('test-opera-mail').must_be_instance_of(KlassPrefixTestOperaMail)
     end
 
     it "raises an error when attempting to load a Cask that doesn't exist" do
@@ -78,13 +78,13 @@ describe "Cask" do
 
   describe "token" do
     it "converts a class constant to a token-style dashed string" do
-      PascalCasedConstant = Class.new(Cask)
-      PascalCasedConstant.token.must_equal 'pascal-cased-constant'
+      KlassPrefixPascalCasedConstant = Class.new(Cask)
+      KlassPrefixPascalCasedConstant.token.must_equal 'pascal-cased-constant'
     end
 
     it "properly dasherizes constants with single letters in the middle" do
-      GamesXChange = Class.new(Cask)
-      GamesXChange.token.must_equal 'games-x-change'
+      KlassPrefixGamesXChange = Class.new(Cask)
+      KlassPrefixGamesXChange.token.must_equal 'games-x-change'
     end
   end
 
