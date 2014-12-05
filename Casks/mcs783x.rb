@@ -4,7 +4,7 @@ cask :v1 => 'mcs783x' do
 
   module Utils
     def self.basename
-      "MCS783x_Mac_OSX_10.5_to_10.7_driver_v#{Mcs783x.version}_Binary"
+      "MCS783x_Mac_OSX_10.5_to_10.7_driver_v#{Module.nesting.last.version}_Binary"
     end
   end
 
