@@ -12,8 +12,9 @@ cask :v1 => 'cacoo-ninja' do
 
   uninstall :script => { :executable => 'Install Cacoo Ninja.app/Contents/MacOS/Install Cacoo Ninja' }
 
+  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    #{title} requires Adobe Air, available via
+    #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} requires Adobe Air, available via
 
       brew cask install adobe-air
   EOS
