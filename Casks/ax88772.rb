@@ -4,7 +4,7 @@ cask :v1 => 'ax88772' do
 
   module Utils
     def self.basename
-      "AX88772C_772B_772A_760_772_Macintosh_10.5_to_10.10_Driver_Installer_v#{Ax88772.version}"
+      "AX88772C_772B_772A_760_772_Macintosh_10.5_to_10.10_Driver_Installer_v#{Module.nesting.last.version}"
     end
   end
 
