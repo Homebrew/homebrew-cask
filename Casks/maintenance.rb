@@ -14,8 +14,11 @@ cask :v1 => 'maintenance' do
     url 'http://www.titanium.free.fr/download/108/Maintenance.dmg'
   elsif MacOS.version == :mavericks
     url 'http://www.titanium.free.fr/download/109/Maintenance.dmg'
-  else
+  elsif MacOS.version == :yosemite
     url 'http://www.titanium.free.fr/download/1010/Maintenance.dmg'
+  else
+    # Unusual case: there is no fall-through.  Each version of the software is
+    # specific to an OS X release, so define nothing when the release is unknown.
   end
 
   homepage 'http://www.titanium.free.fr/downloadmaintenance.php'
