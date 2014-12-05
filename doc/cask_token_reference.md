@@ -136,12 +136,12 @@ To convert the App's Simplified Name (above) to a token:
 
   * convert all letters to lower case
   * expand the `+` symbol into a separated English word: `-plus-`
-  * hyphens stay hyphens
   * spaces become hyphens
+  * hyphens stay hyphens
   * digits stay digits
   * delete any character which is not alphanumeric or hyphen
   * collapse a series of multiple hyphens into one hyphen
-  * delete a leading hyphen
+  * delete a leading or trailing hyphen
   * a leading number gets spelled out into English: `1password` becomes `onepassword`
 
 We avoid defining Cask tokens in the repository which differ only by the
