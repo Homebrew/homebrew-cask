@@ -133,31 +133,6 @@ class Cask::CaveatsDSL
     end
   end
 
-  # minor bug: because output from os_version_only is conditional, the
-  # existence of this directive causes the "===> Caveats" header to
-  # appear even if no warning is output.  One workaround would
-  # be to spin out os-version-detection from caveats into a separate
-  # Cask stanza, and that is probably a sensible design.
-  def os_version_only(*supported_versions)
-    known_versions = %w{10.0 10.1 10.2 10.3 10.4 10.5 10.6 10.7 10.8 10.9 10.10}
-    supported_versions.each do |version|
-      unless known_versions.include?(version)
-        raise CaskInvalidError.new(@cask, "The only valid arguments to caveats os_version_only are: #{known_versions.utf8_inspect}")
-      end
-    end
-    unless supported_versions.include?(MACOS_VERSION)
-      puts <<-EOS.undent
-      Cask #{@cask} provides binaries for these OS versions: #{supported_versions.join(', ')}.
-      But you appear to be running on an unsupported version
-
-        #{MACOS_VERSION}
-
-      Therefore #{@cask} is not expected to work on your system.
-
-      EOS
-    end
-  end
-
   def x11_required
     unless File.exist?('/usr/X11/bin/X')
       puts <<-EOS.undent
