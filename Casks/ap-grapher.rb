@@ -10,8 +10,9 @@ cask :v1 => 'ap-grapher' do
 
   app 'AP Grapher.app'
 
+  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    Warning: #{title} has been abandoned by its author, and the
+    Warning: #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} has been abandoned by its author, and the
     vendor homepage is defunct.  This Cask downloads an untrusted
     copy from an alternative source.
   EOS
