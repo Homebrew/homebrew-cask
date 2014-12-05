@@ -7,8 +7,10 @@ cask :v1 => 'tvrenamer' do
   license :gpl
 
   app "TVRenamer-#{version}.app"
+
+  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    #{title} requires a Java JRE to be installed. You should be prompted to install
+    #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} requires a Java JRE to be installed. You should be prompted to install
     Java on the first execution if it is not already present.
   EOS
 end
