@@ -13,7 +13,7 @@ cask :v1 => 'paraview' do
   license :unknown
 
   app 'paraview.app'
-  caveats do
-    arch_only 'intel-64'
-  end
+
+  # todo
+  # depends_on :arch => :x86_64
 end
