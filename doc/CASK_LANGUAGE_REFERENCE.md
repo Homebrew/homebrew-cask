@@ -232,7 +232,6 @@ The following methods may be called to generate standard warning messages:
 | `reboot`                          | users should reboot to complete installation
 | `assistive_devices`               | users should grant the application access to assistive devices
 | `files_in_usr_local`              | the Cask installs files to `/usr/local`, which may confuse Homebrew
-| `arch_only(list)`                 | the Cask only supports certain architectures.  Currently valid elements of `list` are `intel-32` and `intel-64`
 | `x11_required`                    | the Cask requires X11 to run
 
 Example:
@@ -586,6 +585,40 @@ depends_on :macos => '>= :mavericks'
 depends_on :macos => '>= 10.9'
 ```
 
+### Depends_on :arch
+
+The value for `depends_on :arch` may be a symbol or an array of symbols,
+listing the hardware compatibility requirements for a Cask.  The requirement
+is satisfied at install time if any one of multiple `:arch` value matches
+the user's hardware.
+
+The available symbols for hardware are:
+
+| symbol     | meaning        |
+| ---------- | -------------- |
+| `:i386`    | 32-bit Intel   |
+| `:x86_64`  | 64-bit Intel   |
+| `:ppc_7400`| 32-bit PowerPC |
+| `:ppc_64`  | 64-bit PowerPC |
+| `:intel`   | Any Intel      |
+| `:ppc`     | Any PowerPC    |
+
+The following are all valid expressions:
+
+```ruby
+depends_on :arch => :x86_64
+depends_on :arch => [:x86_64]          # same meaning as above
+depends_on :arch => :intel
+depends_on :arch => [:i386, :x86_64]   # same meaning as above
+```
+
+Since PowerPC hardware is no longer common, the expression most
+frequently needed will be:
+
+```ruby
+depends_on :arch => :x86_64
+```
+
 ### All Depends_on Keys
 
 Several other keys are accepted by `depends_on`, in anticipation of future
@@ -596,7 +629,7 @@ functionality:
 | `:formula` | a Homebrew Formula
 | `:cask`    | *stub - not yet functional*
 | `:macos`   | a string, symbol, array, or expression defining OS X version requirements.
-| `:arch`    | *stub - not yet functional*
+| `:arch`    | a symbol or array defining hardware requirements.
 | `:x11`     | *stub - not yet functional*
 | `:java`    | *stub - not yet functional*
 

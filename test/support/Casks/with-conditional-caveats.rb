@@ -10,9 +10,4 @@ cask :v1test => 'with-conditional-caveats' do
   caveats do
     puts 'This caveat is conditional' if false
   end
-  caveats do
-    # since both valid arches are specified, no output should be
-    # generated here during the test
-    arch_only('intel-32', 'intel-64')
-  end
 end

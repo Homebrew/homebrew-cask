@@ -262,6 +262,18 @@ describe Cask::DSL do
     end
   end
 
+  describe "depends_on :arch" do
+    it "allows depends_on :arch to be specified" do
+      cask = Cask.load('with-depends-on-arch')
+      cask.depends_on.arch.wont_be_nil
+    end
+    it "refuses to load with an invalid depends_on :arch value" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-depends-on-arch-value')
+      }.must_raise(CaskInvalidError)
+    end
+  end
+
   describe "conflicts_with stanza" do
     it "allows conflicts_with stanza to be specified" do
       cask = Cask.load('with-conflicts-with')

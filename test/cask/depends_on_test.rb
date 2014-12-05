@@ -50,4 +50,22 @@ describe "Satisfy Dependencies and Requirements" do
       }.must_raise(CaskError)
     end
   end
+
+  describe "depends_on :arch" do
+    it "succeeds when depends_on :arch is satisfied" do
+      arch_cask = Cask.load('with-depends-on-arch')
+      shutup do
+        Cask::Installer.new(arch_cask).install
+      end
+    end
+
+    it "raises an exception when depends_on :arch is not satisfied" do
+      arch_cask = Cask.load('with-depends-on-arch-failure')
+      lambda {
+        shutup do
+          Cask::Installer.new(arch_cask).install
+        end
+      }.must_raise(CaskError)
+    end
+  end
 end

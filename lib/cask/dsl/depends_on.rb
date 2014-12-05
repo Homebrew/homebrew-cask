@@ -11,7 +11,35 @@ class Cask::DSL::DependsOn
                         :java,
                        ]
 
-  attr_accessor :formula, :cask, :arch, :x11, :java
+  VALID_ARCHES = Set.new [
+                          # category
+                          :intel,
+                          :ppc,
+                          # specific
+                          :i386,
+                          :x86_64,
+                          :ppc_7400,
+                          :ppc_64,
+                         ]
+
+  # Intentionally undocumented: catch variant spellings.
+  ARCH_SYNONYMS = {
+                   :x86_32     => :i386,
+                   :x8632      => :i386,
+                   :x8664      => :x86_64,
+                   :intel_32   => :i386,
+                   :intel32    => :i386,
+                   :intel_64   => :x86_64,
+                   :intel64    => :x86_64,
+                   :amd_64     => :x86_64,
+                   :amd64      => :x86_64,
+                   :ppc7400    => :ppc_7400,
+                   :ppc_32     => :ppc_7400,
+                   :ppc32      => :ppc_7400,
+                   :ppc64      => :ppc_64,
+                  }
+
+  attr_accessor :formula, :cask, :x11, :java
   attr_accessor :pairs
 
   def initialize(pairs={})
@@ -67,6 +95,23 @@ class Cask::DSL::DependsOn
       self.class.coerce_os_version(arg)
     end
     @pairs[:macos] = @macos
+  end
+
+  def arch
+    @arch
+  end
+
+  def arch=(arg)
+    @arch = Array(arg).map do |elt|
+      elt = elt.to_s.downcase.sub(%r{^:},'').gsub('-','_').to_sym
+      ARCH_SYNONYMS.key?(elt) ? ARCH_SYNONYMS[elt] : elt
+    end
+    @arch.each do |elt|
+      unless VALID_ARCHES.include?(elt)
+        raise "invalid 'depends_on :arch' value: #{arg.inspect}"
+      end
+    end
+    @pairs[:arch] = @arch
   end
 
   def to_yaml
