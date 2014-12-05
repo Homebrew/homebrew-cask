@@ -7,7 +7,7 @@ cask :v1 => 'jaspersoft-studio' do
   license :oss
 
   app "Jaspersoft Studio #{version}.final/Jaspersoft Studio.app"
-  caveats do
-    arch_only 'intel-64'
-  end
+
+  # todo
+  # depends_on :arch => :x86_64
 end
