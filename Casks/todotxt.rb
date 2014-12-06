@@ -8,5 +8,7 @@ cask :v1 => 'todotxt' do
   homepage 'https://mjdescy.github.io/TodoTxtMac/'
   license :mit
 
+  tags :name => 'TodoTxtMac'
+
   app 'TodoTxtMac.app'
 end
