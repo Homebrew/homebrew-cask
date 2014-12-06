@@ -84,11 +84,6 @@ class Cask
     self.name.gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase
   end
 
-  # todo removeme transitional backward-compatibility
-  def self.title
-    self.token
-  end
-
   def self.nowstamp_metadata_path(container_path)
     @timenow ||= Time.now.gmtime
     if container_path.respond_to?(:join)
@@ -103,11 +98,6 @@ class Cask
   attr_reader :token
   def initialize(token=self.class.token)
     @token = token
-  end
-
-  # todo removeme transitional backward-compatibility
-  def title
-    @token
   end
 
   def caskroom_path

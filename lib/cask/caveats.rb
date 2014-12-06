@@ -24,11 +24,6 @@ class Cask::CaveatsDSL
     @cask.token
   end
 
-  # todo removeme transitional backward compatibility
-  def title
-    @cask.token
-  end
-
   def version
     @cask.version
   end
