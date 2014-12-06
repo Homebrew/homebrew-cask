@@ -81,7 +81,8 @@ class Cask
   end
 
   def self.token
-    self.name.gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase
+    # todo removeme: prepending KlassPrefix is transitional as we move away from representing Casks as classes
+    self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase
   end
 
   def self.nowstamp_metadata_path(container_path)
@@ -104,6 +105,7 @@ class Cask
     self.class.caskroom.join(token)
   end
 
+  # todo: move to staged.rb ?
   def staged_path
     cask_version = version ? version : :unknown
     caskroom_path.join(cask_version.to_s)
