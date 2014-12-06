@@ -18,6 +18,8 @@ describe Cask::DSL::Postflight do
   end
 
   it "can execute commands on the Info.plist file" do
+    @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
+
     Cask::FakeSystemCommand.expects_command(
       ['/usr/libexec/PlistBuddy', '-c', 'Print CFBundleIdentifier', @dsl.info_plist]
     )
@@ -33,6 +35,8 @@ describe Cask::DSL::Postflight do
   end
 
   it "can set a key in the Info.plist file" do
+    @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
+
     Cask::FakeSystemCommand.expects_command(
       ['/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', @dsl.info_plist]
     )
