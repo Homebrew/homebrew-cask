@@ -22,6 +22,8 @@ module Cask::DSL
     base.extend(ClassMethods)
   end
 
+  def full_name; self.class.full_name; end
+
   def homepage; self.class.homepage; end
 
   def url; self.class.url; end
@@ -49,6 +51,27 @@ module Cask::DSL
   def caveats; self.class.caveats; end
 
   module ClassMethods
+
+    # A quite fragile shim to allow "full_name" be exposed as simply "name"
+    # in the DSL.  We detect the difference with the already-existing "name"
+    # method by arity, and use "full_name" exclusively in backend code.
+    def name(*args)
+      if args.empty?
+        super
+      else
+        self.full_name(args)
+      end
+    end
+
+    def full_name(_full_name=nil)
+      @full_name ||= []
+      if _full_name
+        # todo this idiom may be preferred to << if it behaves the same on Ruby 1.8 and 2.x
+        @full_name.concat(Array(*_full_name))
+      end
+      @full_name
+    end
+
     def homepage(homepage=nil)
       if @homepage and !homepage.nil?
         raise CaskInvalidError.new(self.token, "'homepage' stanza may only appear once")

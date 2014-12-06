@@ -69,7 +69,8 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
 
   def self.print_stanzas(stanza, format=nil, table=nil, quiet=nil, *cask_tokens)
     count = 0
-    stanza = :sums if stanza == :sha256
+    stanza = :sums      if stanza == :sha256
+    stanza = :full_name if stanza == :name
     if ARTIFACTS.include?(stanza)
       artifact_name = stanza
       stanza = :artifacts
