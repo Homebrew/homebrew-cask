@@ -73,25 +73,26 @@ features which are available for the current Cask.
 
 ## Renamed Forms (1.0)
 
-| old form                              | new form
-| ------------------------------------- |----------------
-| `after_install`                       | [`postflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
-| `after_uninstall`                     | [`uninstall_postflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
-| `arch_only` (within `caveats`)        | [`depends_on :arch`](CASK_LANGUAGE_REFERENCE.md#depends_on-arch)
-| `before_install`                      | [`preflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
-| `before_uninstall`                    | [`uninstall_preflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
-| `container_type`                      | [`container :type`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
-| `depends_on_formula`                  | [`depends_on :formula`](CASK_LANGUAGE_REFERENCE.md#depends_on-formula)
-| `destination_path`                    | [`staged_path`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
-| `install`                             | [`pkg`](CASK_LANGUAGE_REFERENCE.md#pkg-stanza-details)
-| `link`                                | [`app`](CASK_LANGUAGE_REFERENCE.md#app-stanza-details) (or sometimes `suite` or `artifact`)
-| `manual_installer` (within `caveats`) | [`installer :manual`](CASK_LANGUAGE_REFERENCE.md#installer-manual)
-| `nested_container`                    | [`container :nested =>`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
-| `os_version_only` (within `caveats`)  | [`depends_on :macos`](CASK_LANGUAGE_REFERENCE.md#depends_on-macos)
-| `title` (in interpolations)           | [`token`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
-| `uninstall :files`                    | [`uninstall :delete`](CASK_LANGUAGE_REFERENCE.md#uninstall-key-delete)
-| `version 'latest'`                    | [`version :latest`](CASK_LANGUAGE_REFERENCE.md#required-stanzas)
-| `x11_required` (within `caveats`)     | [`depends_on :x11`](CASK_LANGUAGE_REFERENCE.md#all-depends_on-keys)
+| old form                                | new form
+| --------------------------------------- |----------------
+| `after_install`                         | [`postflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+| `after_uninstall`                       | [`uninstall_postflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+| `arch_only` (within `caveats`)          | [`depends_on :arch`](CASK_LANGUAGE_REFERENCE.md#depends_on-arch)
+| `assistive_devices` (within `caveats`)  | [`accessibility_access`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+| `before_install`                        | [`preflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+| `before_uninstall`                      | [`uninstall_preflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+| `container_type`                        | [`container :type`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+| `depends_on_formula`                    | [`depends_on :formula`](CASK_LANGUAGE_REFERENCE.md#depends_on-formula)
+| `destination_path`                      | [`staged_path`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
+| `install`                               | [`pkg`](CASK_LANGUAGE_REFERENCE.md#pkg-stanza-details)
+| `link`                                  | [`app`](CASK_LANGUAGE_REFERENCE.md#app-stanza-details) (or sometimes `suite` or `artifact`)
+| `manual_installer` (within `caveats`)   | [`installer :manual`](CASK_LANGUAGE_REFERENCE.md#installer-manual)
+| `nested_container`                      | [`container :nested =>`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
+| `os_version_only` (within `caveats`)    | [`depends_on :macos`](CASK_LANGUAGE_REFERENCE.md#depends_on-macos)
+| `title` (in interpolations)             | [`token`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
+| `uninstall :files`                      | [`uninstall :delete`](CASK_LANGUAGE_REFERENCE.md#uninstall-key-delete)
+| `version 'latest'`                      | [`version :latest`](CASK_LANGUAGE_REFERENCE.md#required-stanzas)
+| `x11_required` (within `caveats`)       | [`depends_on :x11`](CASK_LANGUAGE_REFERENCE.md#all-depends_on-keys)
 
 
 ## All Supported Stanzas (1.0)
@@ -143,7 +144,6 @@ For use in *eg* interpolation:
 
 ## Caveats Mini-DSL (1.0)
 
- * [`assistive_devices`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`files_in_usr_local`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`logout`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`path_environment_variable(path)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)

@@ -99,6 +99,7 @@ module Cask::Utils
        :conflicts_with,
        :container,
        :gpg,
+       :accessibility_access,
       ].each do |method|
         printable_method = method.to_s
         printable_method = "name" if printable_method == "full_name"

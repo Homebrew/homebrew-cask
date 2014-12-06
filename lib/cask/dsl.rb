@@ -50,6 +50,8 @@ module Cask::DSL
 
   def caveats; self.class.caveats; end
 
+  def accessibility_access; self.class.accessibility_access; end
+
   module ClassMethods
 
     # A quite fragile shim to allow "full_name" be exposed as simply "name"
@@ -203,6 +205,13 @@ module Cask::DSL
         # accessor
         @caveats
       end
+    end
+
+    def accessibility_access(accessibility_access=nil)
+      if @accessibility_access and !accessibility_access.nil?
+        raise CaskInvalidError.new(self.token, "'accessibility_access' stanza may only appear once")
+      end
+      @accessibility_access ||= accessibility_access
     end
 
     def self.ordinary_artifact_types
