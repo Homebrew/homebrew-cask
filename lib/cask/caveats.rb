@@ -107,32 +107,6 @@ class Cask::CaveatsDSL
     EOS
   end
 
-  # minor bug: because output from arch_only is conditional, the
-  # existence of this directive causes "===> Caveats" header to
-  # appear even if no warning is output.  One workaround would
-  # be to spin out arch-detection from caveats into a separate
-  # Cask stanza, and that is probably a sensible design.
-  def arch_only(*supported_arches)
-    known_arches = %w{intel-64 intel-32}
-    supported_arches.each do |arch|
-      unless known_arches.include?(arch)
-        raise CaskInvalidError.new(@cask, "The only valid arguments to caveats arch_only are: #{known_arches.utf8_inspect}")
-      end
-    end
-    this_arch = "#{Hardware::CPU.type}-#{Hardware::CPU.bits}"
-    unless supported_arches.include?(this_arch)
-      puts <<-EOS.undent
-      Cask #{@cask} provides binaries for these architectures: #{supported_arches.utf8_inspect}.
-      But you appear to be running on an unsupported architecture:
-
-        #{this_arch}
-
-      Therefore #{@cask} is not expected to work on your system.
-
-      EOS
-    end
-  end
-
   def x11_required
     unless File.exist?('/usr/X11/bin/X')
       puts <<-EOS.undent
