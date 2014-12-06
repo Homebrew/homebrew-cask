@@ -287,6 +287,11 @@ describe Cask::DSL do
       cask = Cask.load('with-depends-on-formula')
       cask.depends_on.formula.wont_be_nil
     end
+
+    it "allows multiple depends_on :formula to be specified" do
+      cask = Cask.load('with-depends-on-formula')
+      cask.depends_on.formula.wont_be_nil
+    end
   end
 
   describe "depends_on :macos" do

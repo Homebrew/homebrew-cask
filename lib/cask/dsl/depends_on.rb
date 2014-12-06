@@ -11,16 +11,16 @@ class Cask::DSL::DependsOn
                         :java,
                        ]
 
-  VALID_ARCHES = Set.new [
-                          # category
-                          :intel,
-                          :ppc,
-                          # specific
-                          :i386,
-                          :x86_64,
-                          :ppc_7400,
-                          :ppc_64,
-                         ]
+  VALID_ARCHES = [
+                  # category
+                  :intel,
+                  :ppc,
+                  # specific
+                  :i386,
+                  :x86_64,
+                  :ppc_7400,
+                  :ppc_64,
+                 ]
 
   # Intentionally undocumented: catch variant spellings.
   ARCH_SYNONYMS = {
@@ -39,16 +39,18 @@ class Cask::DSL::DependsOn
                    :ppc64      => :ppc_64,
                   }
 
-  attr_accessor :formula, :cask, :x11, :java
+  attr_accessor :x11, :java
   attr_accessor :pairs
 
-  def initialize(pairs={})
-    @pairs = pairs
+  def initialize()
+    @pairs ||= {}
+  end
+
+  def load(pairs={})
     pairs.each do |key, value|
       raise "invalid depends_on key: '#{key.inspect}'" unless VALID_KEYS.include?(key)
       writer_method = "#{key}=".to_sym
-      value = Array(value) if [:formula, :cask].include?(key)
-      send(writer_method, value)
+      @pairs[key] = send(writer_method, value)
     end
   end
 
@@ -78,39 +80,58 @@ class Cask::DSL::DependsOn
     end
   end
 
+  def formula
+    @formula
+  end
+
+  def formula=(*arg)
+    @formula ||= []
+    @formula.concat(Array(*arg))
+  end
+
+  def cask
+    @cask
+  end
+
+  def cask=(*arg)
+    @cask ||= []
+    @cask.concat(Array(*arg))
+  end
+
   def macos
     @macos
   end
 
-  def macos=(arg)
-    @macos = if not arg.kind_of?(Array) and
-      arg =~ %r{^\s*(<|>|[=<>]=)\s*(\S+)\s*$}
+  def macos=(*arg)
+    @macos ||= []
+    macos = if arg.count == 1 and
+               arg.first =~ %r{^\s*(<|>|[=<>]=)\s*(\S+)\s*$}
+      raise "'depends_on :macos' comparison expressions cannot be combined" unless @macos.empty?
       operator = $1.to_sym
       release = self.class.coerce_os_release($2)
-      [ operator, release ]
+      [[ operator, release ]]
     else
-      Array(arg).map do |elt|
+      raise "'depends_on :macos' comparison expressions cannot be combined" if @macos.first.is_a?(Symbol)
+      Array(*arg).map do |elt|
         self.class.coerce_os_release(elt)
       end.sort
     end
-    @pairs[:macos] = @macos
+    @macos.concat(macos)
   end
 
   def arch
     @arch
   end
 
-  def arch=(arg)
-    @arch = Array(arg).map do |elt|
+  def arch=(*arg)
+    @arch ||= []
+    arches = Array(*arg).map do |elt|
       elt = elt.to_s.downcase.sub(%r{^:},'').gsub('-','_').to_sym
       ARCH_SYNONYMS.key?(elt) ? ARCH_SYNONYMS[elt] : elt
     end
-    @arch.each do |elt|
-      unless VALID_ARCHES.include?(elt)
-        raise "invalid 'depends_on :arch' value: #{arg.inspect}"
-      end
-    end
-    @pairs[:arch] = @arch
+    invalid_arches = arches - VALID_ARCHES
+    raise "invalid 'depends_on :arch' values: #{invalid_arches.inspect}" unless invalid_arches.empty?
+    @arch.concat(arches)
   end
 
   def to_yaml

@@ -595,6 +595,8 @@ depends_on :macos => '>= :mavericks'
 depends_on :macos => '>= 10.9'
 ```
 
+A comparison expression cannot be combined with any other form of `depends_on :macos`.
+
 ### Depends_on :arch
 
 The value for `depends_on :arch` may be a symbol or an array of symbols,
@@ -622,8 +624,8 @@ depends_on :arch => :intel
 depends_on :arch => [:i386, :x86_64]   # same meaning as above
 ```
 
-Since PowerPC hardware is no longer common, the expression most
-frequently needed will be:
+Since PowerPC hardware is no longer common, the expression most frequently
+needed will be:
 
 ```ruby
 depends_on :arch => :x86_64
