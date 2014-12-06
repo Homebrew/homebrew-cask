@@ -11,7 +11,7 @@ installation and management of GUI Mac applications such as Google Chrome and Ad
 Homebrew-cask provides a friendly homebrew-style CLI workflow for the
 administration of Mac applications distributed as binaries.
 
-It's implemented as a `homebrew` "[external command](https://github.com/mxcl/homebrew/wiki/External-Commands)"
+It's implemented as a `homebrew` "[external command](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/External-Commands.md)"
 called `cask`.
 
 ## Let's try it!
