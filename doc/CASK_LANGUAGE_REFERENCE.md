@@ -232,7 +232,6 @@ The following methods may be called to generate standard warning messages:
 | `reboot`                          | users should reboot to complete installation
 | `assistive_devices`               | users should grant the application access to assistive devices
 | `files_in_usr_local`              | the Cask installs files to `/usr/local`, which may confuse Homebrew
-| `x11_required`                    | the Cask requires X11 to run
 
 Example:
 
@@ -633,16 +632,13 @@ depends_on :arch => :x86_64
 
 ### All Depends_on Keys
 
-Several other keys are accepted by `depends_on`, in anticipation of future
-functionality:
-
 | key        | description |
 | ---------- | ----------- |
 | `:formula` | a Homebrew Formula
 | `:cask`    | *stub - not yet functional*
 | `:macos`   | a symbol, string, array, or comparison expression defining OS X release requirements.
 | `:arch`    | a symbol or array defining hardware requirements.
-| `:x11`     | *stub - not yet functional*
+| `:x11`     | a Boolean indicating a dependency on X11.
 | `:java`    | *stub - not yet functional*
 
 

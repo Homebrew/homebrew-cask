@@ -143,5 +143,9 @@ module Cask::Locations
     def pre_mavericks_accessibility_dotfile
       @pre_mavericks_accessibility_dotfile ||= Pathname.new('/private/var/db/.AccessibilityAPIEnabled')
     end
+
+    def x11_executable
+      @x11_executable ||= Pathname.new('/usr/X11/bin/X')
+    end
   end
 end

@@ -304,6 +304,11 @@ describe Cask::DSL do
         invalid_cask = Cask.load('invalid/invalid-depends-on-macos-bad-release')
       }.must_raise(CaskInvalidError)
     end
+    it "refuses to load with conflicting depends_on :macos forms" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-depends-on-macos-conflicting-forms')
+      }.must_raise(CaskInvalidError)
+    end
   end
 
   describe "depends_on :arch" do
@@ -314,6 +319,18 @@ describe Cask::DSL do
     it "refuses to load with an invalid depends_on :arch value" do
       err = lambda {
         invalid_cask = Cask.load('invalid/invalid-depends-on-arch-value')
+      }.must_raise(CaskInvalidError)
+    end
+  end
+
+  describe "depends_on :x11" do
+    it "allows depends_on :x11 to be specified" do
+      cask = Cask.load('with-depends-on-x11')
+      cask.depends_on.x11.wont_be_nil
+    end
+    it "refuses to load with an invalid depends_on :x11 value" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-depends-on-x11-value')
       }.must_raise(CaskInvalidError)
     end
   end

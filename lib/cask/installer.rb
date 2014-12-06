@@ -109,6 +109,7 @@ class Cask::Installer
       ohai 'Satisfying dependencies'
       macos_dependencies
       arch_dependencies
+      x11_dependencies
       formula_dependencies
       puts 'complete'
     end
@@ -142,6 +143,11 @@ class Cask::Installer
                       ]
     return unless Array(@cask.depends_on.arch & @current_arch).empty?
     raise CaskError.new "Cask #{@cask} depends on hardware architecture being one of #{@cask.depends_on.arch.inspect}, but you are running #{@current_arch.inspect}"
+  end
+
+  def x11_dependencies
+    return unless @cask.depends_on.x11
+    raise CaskX11DependencyError.new(@cask.token) unless Cask.x11_executable.exist?
   end
 
   def formula_dependencies

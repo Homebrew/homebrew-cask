@@ -39,7 +39,7 @@ class Cask::DSL::DependsOn
                    :ppc64      => :ppc_64,
                   }
 
-  attr_accessor :x11, :java
+  attr_accessor :java
   attr_accessor :pairs
 
   def initialize()
@@ -132,6 +132,15 @@ class Cask::DSL::DependsOn
     invalid_arches = arches - VALID_ARCHES
     raise "invalid 'depends_on :arch' values: #{invalid_arches.inspect}" unless invalid_arches.empty?
     @arch.concat(arches)
+  end
+
+  def x11
+    @x11
+  end
+
+  def x11=(arg)
+    raise "invalid depends_on :x11 value: #{arg.inspect}" unless [true, false].include?(arg)
+    @x11 = arg
   end
 
   def to_yaml

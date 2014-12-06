@@ -67,6 +67,25 @@ Command failed to execute!
   end
 end
 
+class CaskX11DependencyError < CaskError
+  attr_reader :token
+  def initialize(token)
+    @token = token
+  end
+
+  def to_s
+    <<-EOS.undent
+      #{token} requires XQuartz/X11, which can be installed via homebrew-cask by
+
+        brew cask install xquartz
+
+      or manually, by downloading the package from
+
+        http://xquartz.macosforge.org
+    EOS
+  end
+end
+
 class CaskUnspecifiedError < CaskError
   def to_s
     "This command requires a Cask token"
