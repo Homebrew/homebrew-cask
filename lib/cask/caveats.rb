@@ -102,17 +102,6 @@ class Cask::CaveatsDSL
     EOS
   end
 
-  def x11_required
-    unless File.exist?('/usr/X11/bin/X')
-      puts <<-EOS.undent
-      #{@cask} requires XQuartz/X11, which can be installed via homebrew-cask by
-          brew cask install xquartz
-      or manually, by downloading the package from
-          http://xquartz.macosforge.org
-      EOS
-    end
-  end
-
   def method_missing(method, *args)
     Cask::Utils.method_missing_message(method, @cask.to_s, 'caveats')
     return nil
