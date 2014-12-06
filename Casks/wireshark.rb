@@ -39,7 +39,5 @@ cask :v1 => 'wireshark' do
                          '/usr/local/bin/wireshark',
                         ]
 
-  caveats do
-    x11_required
-  end
+  depends_on :x11 => true
 end
