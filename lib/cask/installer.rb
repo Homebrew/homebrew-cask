@@ -111,32 +111,26 @@ class Cask::Installer
   end
 
   def macos_dependencies
-    # todo The Cask::DependsOn object needs to be more friendly.
-    #      Currently @cask.depends_on.macos raises an exception
-    #      if :macos was not set.
-    if @cask.depends_on and
-       @cask.depends_on.macos
-      if @cask.depends_on.macos.kind_of?(Array) and
-         @cask.depends_on.macos.first.is_a?(Symbol)
-        operator, version = @cask.depends_on.macos
-        unless MacOS.version.send(operator, version)
-          raise CaskError.new "Cask #{@cask} depends on OS X version #{operator} #{version}, but you are running version #{MacOS.version}."
+    if @cask.depends_on and @cask.depends_on.macos
+      if @cask.depends_on.macos.first.is_a?(Symbol)
+        operator, release = @cask.depends_on.macos
+        unless MacOS.version.send(operator, release)
+          raise CaskError.new "Cask #{@cask} depends on OS X release #{operator} #{release}, but you are running release #{MacOS.version}."
         end
-      elsif @cask.depends_on.macos.kind_of?(Array)
+      elsif @cask.depends_on.macos.length > 1
         unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.version.to_s))
-          raise CaskError.new "Cask #{@cask} depends on OS X version being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running version #{MacOS.version}."
+          raise CaskError.new "Cask #{@cask} depends on OS X release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.version}."
         end
       else
-        unless MacOS.version == @cask.depends_on.macos
-          raise CaskError.new "Cask #{@cask} depends on OS X version #{@cask.depends_on.macos}, but you are running version #{MacOS.version}."
+        unless MacOS.version == @cask.depends_on.macos.first
+          raise CaskError.new "Cask #{@cask} depends on OS X release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.version}."
         end
       end
     end
   end
 
   def arch_dependencies
-    if @cask.depends_on and
-       @cask.depends_on.arch
+    if @cask.depends_on and @cask.depends_on.arch
       @current_arch ||= [
                          Hardware::CPU.type,
                          Hardware::CPU.is_32_bit? ?

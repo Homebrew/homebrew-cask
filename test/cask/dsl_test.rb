@@ -296,7 +296,7 @@ describe Cask::DSL do
     end
     it "refuses to load with an invalid depends_on :macos value" do
       err = lambda {
-        invalid_cask = Cask.load('invalid/invalid-depends-on-macos-version')
+        invalid_cask = Cask.load('invalid/invalid-depends-on-macos-bad-release')
       }.must_raise(CaskInvalidError)
     end
   end

@@ -52,7 +52,7 @@ class Cask::DSL::DependsOn
     end
   end
 
-  def self.coerce_os_version(arg)
+  def self.coerce_os_release(arg)
 
     # supplement Homebrew's table
     @osx_symbols ||= OS::Mac::Version::SYMBOLS.merge!(
@@ -83,16 +83,15 @@ class Cask::DSL::DependsOn
   end
 
   def macos=(arg)
-    @macos = if arg.kind_of?(Array)
-      arg.map do |elt|
-        self.class.coerce_os_version(elt)
-      end.sort
-    elsif arg =~ %r{^\s*(<|>|[=<>]=)\s*(\S+)\s*$}
+    @macos = if not arg.kind_of?(Array) and
+      arg =~ %r{^\s*(<|>|[=<>]=)\s*(\S+)\s*$}
       operator = $1.to_sym
-      version = self.class.coerce_os_version($2)
-      [ operator, version ]
+      release = self.class.coerce_os_release($2)
+      [ operator, release ]
     else
-      self.class.coerce_os_version(arg)
+      Array(arg).map do |elt|
+        self.class.coerce_os_release(elt)
+      end.sort
     end
     @pairs[:macos] = @macos
   end

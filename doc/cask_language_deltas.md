@@ -61,14 +61,14 @@ features which are available for the current Cask.
  * [`conflicts_with`](CASK_LANGUAGE_REFERENCE.md#conflicts_with-stanza-details)
    * *stub* - not yet functional
  * [`gpg`](CASK_LANGUAGE_REFERENCE.md#gpg-stanza-details) *stub: not yet functional.*
- * [`installer :script`](CASK_LANGUAGE_REFERENCE.md#installer-stanza-details)
+ * [`installer :script`](CASK_LANGUAGE_REFERENCE.md#installer-script)
  * [`license`](CASK_LANGUAGE_REFERENCE.md#license-stanza-details)
  * [`stage_only`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
    * replaced undocumented `caskroom_only`
  * [`suite`](CASK_LANGUAGE_REFERENCE.md#suite-stanza-details)
  * [`tags`](CASK_LANGUAGE_REFERENCE.md#tags-stanza-details)
  * [`uninstall :rmdir`](CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details)
- * [`uninstall :trash`](CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details)
+ * [`uninstall :trash`](CASK_LANGUAGE_REFERENCE.md#uninstall-key-trash)
    * *stub* - currently just a synonym for `uninstall :delete`
  * [`zap`](CASK_LANGUAGE_REFERENCE.md#zap-stanza-details)
 
@@ -82,15 +82,15 @@ features which are available for the current Cask.
 | `before_install`                      | [`preflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
 | `before_uninstall`                    | [`uninstall_preflight`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
 | `container_type`                      | [`container :type`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
-| `depends_on_formula`                  | [`depends_on :formula`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
+| `depends_on_formula`                  | [`depends_on :formula`](CASK_LANGUAGE_REFERENCE.md#depends_on-formula)
 | `destination_path`                    | [`staged_path`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
 | `install`                             | [`pkg`](CASK_LANGUAGE_REFERENCE.md#pkg-stanza-details)
 | `link`                                | [`app`](CASK_LANGUAGE_REFERENCE.md#app-stanza-details) (or sometimes `suite` or `artifact`)
-| `manual_installer` (within `caveats`) | [`installer :manual`](CASK_LANGUAGE_REFERENCE.md#installer-stanza-details)
+| `manual_installer` (within `caveats`) | [`installer :manual`](CASK_LANGUAGE_REFERENCE.md#installer-manual)
 | `os_version_only` (within `caveats`)  | [`depends_on :macos`](CASK_LANGUAGE_REFERENCE.md#depends_on-macos)
 | `nested_container`                    | [`container :nested =>`](CASK_LANGUAGE_REFERENCE.md#optional-stanzas)
 | `title` (in interpolations)           | [`token`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
-| `uninstall :files`                    | [`uninstall :delete`](CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details)
+| `uninstall :files`                    | [`uninstall :delete`](CASK_LANGUAGE_REFERENCE.md#uninstall-key-delete)
 | `version 'latest'`                    | [`version :latest`](CASK_LANGUAGE_REFERENCE.md#required-stanzas)
 | `arch_only` (within `caveats`)        | [`depends_on :arch`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
 
@@ -147,7 +147,6 @@ For use in *eg* interpolation:
  * [`assistive_devices`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`files_in_usr_local`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`logout`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
- * [`os_version_only(list)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`path_environment_variable(path)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`reboot`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`x11_required`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
