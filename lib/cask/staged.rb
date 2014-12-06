@@ -15,6 +15,6 @@ module Cask::Staged
   end
 
   def bundle_identifier
-    plist_exec('Print CFBundleIdentifier')
+    plist_exec('Print CFBundleIdentifier').stdout.chomp
   end
 end

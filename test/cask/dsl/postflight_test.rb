@@ -29,7 +29,7 @@ describe Cask::DSL::Postflight do
       ['/usr/libexec/PlistBuddy', '-c', 'Print CFBundleIdentifier', @dsl.info_plist],
       'com.example.BasicCask'
     )
-    @dsl.bundle_identifier.stdout.must_equal 'com.example.BasicCask'
+    @dsl.bundle_identifier.must_equal 'com.example.BasicCask'
   end
 
   it "can set a key in the Info.plist file" do
