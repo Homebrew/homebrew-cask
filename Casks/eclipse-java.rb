@@ -1,12 +1,12 @@
 cask :v1 => 'eclipse-java' do
-  version '4.4.0'
+  version '4.4.1'
 
   if Hardware::CPU.is_32_bit?
-    sha256 '11ebf6c2deb9d0f656ddf0ced4b65e340a2ec80426786440f687f164bd973b1e'
-    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/R/eclipse-java-luna-R-macosx-cocoa.tar.gz'
+    sha256 'a4e80a5e4901027f74412786898456d8ce1b6b56d9689293b472f9509d1b65cf'
+    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR1/eclipse-java-luna-SR1-macosx-cocoa.tar.gz'
   else
-    sha256 '4902bdb5eb64dbcef86b10838a3734c1148d3d85ae8454f71a6929292de43784'
-    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/R/eclipse-java-luna-R-macosx-cocoa-x86_64.tar.gz'
+    sha256 'adbfcd2fa587eac82a34da76079747120031a778478b3197ad1c94e537312268'
+    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR1/eclipse-java-luna-SR1-macosx-cocoa-x86_64.tar.gz'
   end
 
   homepage 'http://eclipse.org/'

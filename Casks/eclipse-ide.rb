@@ -1,12 +1,12 @@
 cask :v1 => 'eclipse-ide' do
-  version '4.4.0'
+  version '4.4.1'
 
   if Hardware::CPU.is_32_bit?
-    sha256 'c3a0058aafa0cbd149eb2ab476a3afd54535db4aee2929f832565d0c612f604c'
-    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/R/eclipse-standard-luna-R-macosx-cocoa.tar.gz'
+    sha256 '49cc7ff7ac89a8598157de3262128f0240f8283ecdcc9a9ae006143913a4bee6'
+    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR1/eclipse-standard-luna-SR1-macosx-cocoa.tar.gz'
   else
-    sha256 'c902ee4d9f753b2bc48f7194ea9f5bb98a264a984f6aaead710f8b601c574505'
-    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/R/eclipse-standard-luna-R-macosx-cocoa-x86_64.tar.gz'
+    sha256 '787969d8816d502675cff5b6c9ab1ef4a3b7144d3216def9f90ab623ce71edc1'
+    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR1/eclipse-standard-luna-SR1-macosx-cocoa-x86_64.tar.gz'
   end
 
   homepage 'http://eclipse.org/'
