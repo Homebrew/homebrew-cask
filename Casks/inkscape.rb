@@ -10,7 +10,5 @@ cask :v1 => 'inkscape' do
 
   zap :delete => '~/.inkscape-etc'
 
-  caveats do
-    x11_required
-  end
+  depends_on :x11 => true
 end
