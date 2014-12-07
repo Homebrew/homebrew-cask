@@ -7,4 +7,6 @@ cask :v1 => 'fog-burner' do
   license :oss
 
   app 'Fog Burner.app'
+
+  depends_on :macos => '>= 10.9'
 end
