@@ -1,11 +1,22 @@
 cask :v1 => 'monolingual' do
-  version '1.5.8'
-  sha256 'bba2209c5047c69b1f8b3a692fa916c24a05b9bb098f9b6073b85f421d9be3b7'
+  if MacOS.version < :leopard
+    version '1.3.9'
+    sha256 '7bf1ec8642ec8674443945dec12cf9c991306912e1e27c305c6db4776e037b16'
+  elsif MacOS.version < :lion
+    version '1.4.5'
+    sha256 '7684b6b6d41b784d06e636f5e7993ca3730680ccbfa83e90e74b43be58ad3e21'
+  elsif MacOS.version < :yosemite
+    version '1.5.10'
+    sha256 '2dd4d1164ced9c6ff431eb99db12e46faa10747c7753ed3889d6df493ee096a5'
+  else
+    version '1.6.1'
+    sha256 '45110312eba0ffb0ea92f3ac36850b3e557c07d2cdc294b677769eccd5da5697'
+  end
 
-  url "https://downloads.sourceforge.net/project/monolingual/monolingual/#{version}/Monolingual-#{version}.dmg"
-  appcast 'http://monolingual.sourceforge.net/appcast.xml',
-          :sha256 => 'e758b13c93eb366479fac0f1a25e3d50bbf8bb8d44d891d363dd0d5349a9f126'
-  homepage 'http://monolingual.sourceforge.net/'
+  url "https://github.com/IngmarStein/Monolingual/releases/download/v#{version}/Monolingual-#{version}.dmg"
+  appcast 'https://ingmarstein.github.io/Monolingual/appcast.xml',
+    :sha256 => 'a536d84e8430d0ba64638e5696f67e96259cfdb81aacd8c2df0a078ff3ea4672'
+  homepage 'https://ingmarstein.github.io/Monolingual/'
   license :oss
 
   app 'Monolingual.app'
