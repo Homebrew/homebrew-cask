@@ -12,8 +12,9 @@ cask :v1 => 'tunnelblick' do
   uninstall :launchctl => 'net.tunnelblick.tunnelblick.LaunchAtLogin',
             :quit      => 'net.tunnelblick.tunnelblick'
 
+  depends_on :macos => '>= :tiger'
+
   caveats do
-    os_version_only *%w(10.4 10.5 10.6 10.7 10.8 10.9 10.10)
     <<-EOS.undent
     For security reasons, Tunnelblick must be installed to /Applications,
     and will request to be moved at launch.

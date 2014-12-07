@@ -19,13 +19,14 @@ cask :v1 => 'intellij-idea-ce' do
                   '~/Library/Logs/IdeaIC14',
                  ]
 
+  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    #{title} may require Java 7 (an older version), available from the
+    #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} may require Java 7 (an older version), available from the
     caskroom-versions repository via
 
       brew cask install caskroom/versions/java7
 
-    Alternatively, #{title} can be modified to use Java 8 as described in
+    Alternatively, #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} can be modified to use Java 8 as described in
 
       https://github.com/caskroom/homebrew-cask/issues/4500#issuecomment-43955932
   EOS

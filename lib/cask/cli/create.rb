@@ -24,6 +24,7 @@ class Cask::CLI::Create < Cask::CLI::Base
         sha256 ''
 
         url 'https://'
+        name ''
         homepage ''
         license :unknown
 

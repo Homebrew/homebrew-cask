@@ -85,6 +85,7 @@ module Cask::Utils
       odebug "Cask instance dumps in YAML:"
       odebug "Cask instance toplevel:", self.to_yaml
       [
+       :full_name,
        :homepage,
        :url,
        :appcast,
@@ -99,7 +100,9 @@ module Cask::Utils
        :container,
        :gpg,
       ].each do |method|
-        odebug "Cask instance method '#{method}':", self.send(method).to_yaml
+        printable_method = method.to_s
+        printable_method = "name" if printable_method == "full_name"
+        odebug "Cask instance method '#{printable_method}':", self.send(method).to_yaml
       end
     end
   end
@@ -150,18 +153,18 @@ module Cask::Utils
     return false
   end
 
-  def self.method_missing_message(method, cask_name, section=nil)
+  def self.method_missing_message(method, token, section=nil)
     during = section ? "during #{section} " : '';
     poo = <<-EOPOO.undent
-      Unexpected method '#{method}' called #{during}on Cask #{cask_name}.
+      Unexpected method '#{method}' called #{during}on Cask #{token}.
 
-        If you are working on #{cask_name}, this may point to a typo. Otherwise
+        If you are working on #{token}, this may point to a typo. Otherwise
         it probably means this Cask is using a new feature. If that feature
         has been released, running
 
           brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 
-        should fix it. Otherwise you should wait to use #{cask_name} until the
+        should fix it. Otherwise you should wait to use #{token} until the
         new feature is released.
     EOPOO
     poo.split("\n").each { |line| opoo line }

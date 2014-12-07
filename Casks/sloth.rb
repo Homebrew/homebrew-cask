@@ -4,7 +4,7 @@ cask :v1 => 'sloth' do
 
   url 'http://sveinbjorn.org/files/software/sloth.zip'
   homepage 'http://sveinbjorn.org/sloth'
-  license :unknown
+  license :gpl
 
   app "Sloth-#{version}/Sloth.app"
 end

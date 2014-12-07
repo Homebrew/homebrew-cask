@@ -57,6 +57,45 @@ describe Cask::DSL do
     end
   end
 
+  describe "name stanza" do
+    it "lets you set the full name via a name stanza" do
+      NameCask = Class.new(Cask)
+      NameCask.class_eval do
+        name 'Proper Name'
+      end
+      instance = NameCask.new
+      instance.full_name.must_equal [
+                                     'Proper Name',
+                                    ]
+    end
+
+    it "Accepts an array value to the name stanza" do
+      ArrayNameCask = Class.new(Cask)
+      ArrayNameCask.class_eval do
+        name ['Proper Name', 'Alternate Name']
+      end
+      instance = ArrayNameCask.new
+      instance.full_name.must_equal [
+                                     'Proper Name',
+                                     'Alternate Name',
+                                    ]
+    end
+
+    it "Accepts multiple name stanzas" do
+      MultiNameCask = Class.new(Cask)
+      MultiNameCask.class_eval do
+        name 'Proper Name'
+        name 'Alternate Name'
+      end
+      instance = MultiNameCask.new
+      # the sort is a hack to deal with Ruby 1.8 oddities
+      instance.full_name.sort.must_equal [
+                                          'Proper Name',
+                                          'Alternate Name',
+                                         ].sort
+    end
+  end
+
   describe "sha256 stanza" do
     it "lets you set checksum via sha256" do
       ChecksumCask = Class.new(Cask)
@@ -257,7 +296,19 @@ describe Cask::DSL do
     end
     it "refuses to load with an invalid depends_on :macos value" do
       err = lambda {
-        invalid_cask = Cask.load('invalid/invalid-depends-on-macos-version')
+        invalid_cask = Cask.load('invalid/invalid-depends-on-macos-bad-release')
+      }.must_raise(CaskInvalidError)
+    end
+  end
+
+  describe "depends_on :arch" do
+    it "allows depends_on :arch to be specified" do
+      cask = Cask.load('with-depends-on-arch')
+      cask.depends_on.arch.wont_be_nil
+    end
+    it "refuses to load with an invalid depends_on :arch value" do
+      err = lambda {
+        invalid_cask = Cask.load('invalid/invalid-depends-on-arch-value')
       }.must_raise(CaskInvalidError)
     end
   end

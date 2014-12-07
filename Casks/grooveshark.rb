@@ -7,8 +7,10 @@ cask :v1 => 'grooveshark' do
   license :unknown
 
   app 'Grooveshark.app'
+
+  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    #{title} requires Adobe Flash, available via
+    #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} requires Adobe Flash, available via
 
       brew cask install flash
   EOS

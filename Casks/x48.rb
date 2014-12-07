@@ -8,7 +8,6 @@ cask :v1 => 'x48' do
   license :unknown
 
   app "x48-#{version} osx/x48.app"
-  caveats do
-    x11_required
-  end
+
+  depends_on :x11 => true
 end

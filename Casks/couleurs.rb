@@ -8,7 +8,5 @@ cask :v1 => 'couleurs' do
 
   app 'Couleurs.app'
 
-  caveats do
-    os_version_only '10.10'
-  end
+  depends_on :macos => '>= :yosemite'
 end

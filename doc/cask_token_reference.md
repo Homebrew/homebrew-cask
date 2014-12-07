@@ -68,8 +68,6 @@ distribution, use [`tags :name`](CASK_LANGUAGE_REFERENCE.md#tags-stanza-details)
 
   * Remove from the end: localization strings such as "en-US"
 
-  * Pay attention to details, for example: `"Git Hub" != "git_hub" != "GitHub"`
-
   * If the result of that process is a generic term, such as "Macintosh Installer",
     try prepending the name of the vendor or developer, followed by a hyphen.
     If that doesn't work, then just create the best name you can, based on the
@@ -136,13 +134,12 @@ To convert the App's Simplified Name (above) to a token:
 
   * convert all letters to lower case
   * expand the `+` symbol into a separated English word: `-plus-`
-  * hyphens stay hyphens
   * spaces become hyphens
+  * hyphens stay hyphens
   * digits stay digits
   * delete any character which is not alphanumeric or hyphen
   * collapse a series of multiple hyphens into one hyphen
-  * delete a leading hyphen
-  * a leading number gets spelled out into English: `1password` becomes `onepassword`
+  * delete a leading or trailing hyphen
 
 We avoid defining Cask tokens in the repository which differ only by the
 placement of hyphens.  Prepend the vendor name if needed to disambiguate
@@ -168,7 +165,6 @@ App Name on Disk       | Simplified App Name | Cask Token       | Filename
 `BetterTouchTool.app`  | BetterTouchTool     | bettertouchtool  | `bettertouchtool.rb`
 `LPK25 Editor.app`     | LPK25 Editor        | lpk25-editor     | `lpk25-editor.rb`
 `Sublime Text 2.app`   | Sublime Text        | sublime-text     | `sublime-text.rb`
-`1Password.app`        | 1Password           | onepassword      | `onepassword.rb`
 
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3

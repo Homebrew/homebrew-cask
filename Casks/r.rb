@@ -12,7 +12,7 @@ cask :v1 => 'r' do
   end
 
   homepage 'http://www.r-project.org/'
-  license :unknown
+  license :gpl
 
   uninstall :pkgutil => [
                          # eg org.r-project.R.maverics.fw.pkg

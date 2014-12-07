@@ -91,7 +91,8 @@ class Cask::Source::PathBase
   end
 
   def cask_class_name
-    cask_token.split('-').map(&:capitalize).join
+    # todo removeme: prepending KlassPrefix is transitional as we move away from representing Casks as classes
+    'KlassPrefix'.concat cask_token.split('-').map(&:capitalize).join
   end
 
   def to_s

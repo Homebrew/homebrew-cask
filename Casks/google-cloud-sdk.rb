@@ -10,15 +10,16 @@ cask :v1 => 'google-cloud-sdk' do
             :args => %w{--usage-reporting false --bash-completion false --path-update false --rc-path false},
             :sudo => false
 
+  # todo: transitional, replace #{self.name...} with #{token}
   caveats do
-    "#{title} is installed at #{staged_path}/#{title}. Add your profile:
+    "#{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} is installed at #{staged_path}/#{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase}. Add your profile:
 
       for bash users
-        source '#{staged_path}/#{title}/path.bash.inc'
-        source '#{staged_path}/#{title}/completion.bash.inc'
+        source '#{staged_path}/#{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase}/path.bash.inc'
+        source '#{staged_path}/#{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase}/completion.bash.inc'
 
       for zsh users
-        source '#{staged_path}/#{title}/path.zsh.inc'
-        source '#{staged_path}/#{title}/completion.zsh.inc'"
+        source '#{staged_path}/#{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase}/path.zsh.inc'
+        source '#{staged_path}/#{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase}/completion.zsh.inc'"
   end
 end

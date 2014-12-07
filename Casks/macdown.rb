@@ -9,4 +9,7 @@ cask :v1 => 'macdown' do
   license :mit
 
   app 'MacDown.app'
+
+  zap :delete => ['~/Library/Preferences/com.uranusjr.macdown.plist',
+                  '~/Library/Application Support/MacDown']
 end

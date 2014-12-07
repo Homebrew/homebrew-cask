@@ -14,8 +14,11 @@ cask :v1 => 'maintenance' do
     url 'http://www.titanium.free.fr/download/108/Maintenance.dmg'
   elsif MacOS.version == :mavericks
     url 'http://www.titanium.free.fr/download/109/Maintenance.dmg'
-  else
+  elsif MacOS.version == :yosemite
     url 'http://www.titanium.free.fr/download/1010/Maintenance.dmg'
+  else
+    # Unusual case: there is no fall-through.  Each version of the software is
+    # specific to an OS X release, so define nothing when the release is unknown.
   end
 
   homepage 'http://www.titanium.free.fr/downloadmaintenance.php'
@@ -23,11 +26,19 @@ cask :v1 => 'maintenance' do
 
   app 'Maintenance.app'
 
-  caveats do
-    os_version_only('10.4', '10.5', '10.6', '10.7', '10.8', '10.9', '10.10')
+  depends_on :macos => %w{
+                          :tiger
+                          :leopard
+                          :snow_leopard
+                          :lion
+                          :mountain_lion
+                          :mavericks
+                          :yosemite
+                         }
 
-    if [:leopard, :tiger].include? MacOS.version
-      puts 'Maintenance only runs from an Administrator account.'
+  caveats do
+    if [:leopard, :tiger].include?(MacOS.version.to_sym)
+      puts 'Maintenance only runs from an Administrator account on this version of OS X.'
     end
   end
 end

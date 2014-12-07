@@ -9,9 +9,12 @@ cask :v1 => 'ksdiff' do
   pkg 'Install ksdiff.pkg'
 
   uninstall :pkgutil => 'com.blackpixel.kaleidoscope.ksdiff.installer.pkg'
-  # todo: conflicts_with_cask kaleidoscope
+  # todo
+  # conflicts_with :cask => 'kaleidoscope'
+
+  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    The #{title} Cask is not needed when installing Kaleidoscope via Cask. It
+    The #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} Cask is not needed when installing Kaleidoscope via Cask. It
     is provided for users who have purchased Kaleidoscope via the App Store.
   EOS
 end

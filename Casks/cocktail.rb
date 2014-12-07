@@ -20,7 +20,7 @@ cask :v1 => 'cocktail' do
   end
 
   homepage 'http://www.maintain.se/cocktail'
-  license :unknown
+  license :commercial
 
   app 'Cocktail.app'
 end

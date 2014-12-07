@@ -11,7 +11,35 @@ class Cask::DSL::DependsOn
                         :java,
                        ]
 
-  attr_accessor :formula, :cask, :arch, :x11, :java
+  VALID_ARCHES = Set.new [
+                          # category
+                          :intel,
+                          :ppc,
+                          # specific
+                          :i386,
+                          :x86_64,
+                          :ppc_7400,
+                          :ppc_64,
+                         ]
+
+  # Intentionally undocumented: catch variant spellings.
+  ARCH_SYNONYMS = {
+                   :x86_32     => :i386,
+                   :x8632      => :i386,
+                   :x8664      => :x86_64,
+                   :intel_32   => :i386,
+                   :intel32    => :i386,
+                   :intel_64   => :x86_64,
+                   :intel64    => :x86_64,
+                   :amd_64     => :x86_64,
+                   :amd64      => :x86_64,
+                   :ppc7400    => :ppc_7400,
+                   :ppc_32     => :ppc_7400,
+                   :ppc32      => :ppc_7400,
+                   :ppc64      => :ppc_64,
+                  }
+
+  attr_accessor :formula, :cask, :x11, :java
   attr_accessor :pairs
 
   def initialize(pairs={})
@@ -24,7 +52,7 @@ class Cask::DSL::DependsOn
     end
   end
 
-  def self.coerce_os_version(arg)
+  def self.coerce_os_release(arg)
 
     # supplement Homebrew's table
     @osx_symbols ||= OS::Mac::Version::SYMBOLS.merge!(
@@ -55,18 +83,34 @@ class Cask::DSL::DependsOn
   end
 
   def macos=(arg)
-    @macos = if arg.kind_of?(Array)
-      arg.map do |elt|
-        self.class.coerce_os_version(elt)
-      end.sort
-    elsif arg =~ %r{^\s*(<|>|[=<>]=)\s*(\S+)\s*$}
+    @macos = if not arg.kind_of?(Array) and
+      arg =~ %r{^\s*(<|>|[=<>]=)\s*(\S+)\s*$}
       operator = $1.to_sym
-      version = self.class.coerce_os_version($2)
-      [ operator, version ]
+      release = self.class.coerce_os_release($2)
+      [ operator, release ]
     else
-      self.class.coerce_os_version(arg)
+      Array(arg).map do |elt|
+        self.class.coerce_os_release(elt)
+      end.sort
     end
     @pairs[:macos] = @macos
+  end
+
+  def arch
+    @arch
+  end
+
+  def arch=(arg)
+    @arch = Array(arg).map do |elt|
+      elt = elt.to_s.downcase.sub(%r{^:},'').gsub('-','_').to_sym
+      ARCH_SYNONYMS.key?(elt) ? ARCH_SYNONYMS[elt] : elt
+    end
+    @arch.each do |elt|
+      unless VALID_ARCHES.include?(elt)
+        raise "invalid 'depends_on :arch' value: #{arg.inspect}"
+      end
+    end
+    @pairs[:arch] = @arch
   end
 
   def to_yaml

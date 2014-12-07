@@ -9,9 +9,13 @@ cask :v1 => 'keycastr' do
 
   app 'KeyCastr.app'
 
-  caveats <<-EOS.undent
-    For OSX 10.9 or later, #{title} requires that you "Enable access for assistive devices".
-    The app must be dragged into the Accessibility list in System Preferences.
-    See https://github.com/sdeken/keycastr/issues/5
-  EOS
+  # todo: replace with new assistive_devices stanza
+  caveats do
+    <<-EOS.undent
+      To use #{@cask}, you may need to give it access to assistive
+      devices (Accessibility).  For OS X Mavericks and Above:
+
+        System Preferences / Security & Privacy / Privacy / Accessibility
+    EOS
+  end
 end

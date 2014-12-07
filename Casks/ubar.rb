@@ -7,7 +7,6 @@ cask :v1 => 'ubar' do
   license :unknown
 
   app 'uBar.app'
-  caveats do
-    os_version_only '10.9', '10.10'
-  end
+
+  depends_on :macos => '>= :mavericks'
 end

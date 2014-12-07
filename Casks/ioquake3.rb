@@ -8,8 +8,10 @@ cask :v1 => 'ioquake3' do
   license :unknown
 
   suite 'ioquake3'
+
+  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    To complete the installation of #{title}, you will have to copy the file
+    To complete the installation of #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase}, you will have to copy the file
     'pak0.pk3' from your Quake 3 Arena installation support directory into
     ~/Applications/ioquake3/baseq3/.
   EOS

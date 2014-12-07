@@ -107,7 +107,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `uninstall`            | yes                           | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](#uninstall-stanza-details))
 | `zap`                  | yes                           | additional procedures for a more complete uninstall, including user files and shared resources. (see also [Zap Stanza Details](#zap-stanza-details))
 | `appcast`              | no                            | a URL providing an appcast feed to find updates for this Cask.  (see also [Appcast Stanza Details](#appcast-stanza-details))
-| `depends_on`           | yes                           | a list of dependencies required by this Cask (see also [Depends_on Stanza Details](#depends_on-stanza-details))
+| `depends_on`           | yes                           | a list of dependencies and requirements for this Cask (see also [Depends_on Stanza Details](#depends_on-stanza-details))
 | `conflicts_with`       | yes                           | a list of conflicts with this Cask (*not yet functional* see also [Conflicts_with Stanza Details](#conflicts_with-stanza-details))
 | `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](#caveats-stanza-details))
 | `preflight`            | yes                           | a Ruby block containing preflight install operations (needed only in very rare cases)
@@ -232,7 +232,6 @@ The following methods may be called to generate standard warning messages:
 | `reboot`                          | users should reboot to complete installation
 | `assistive_devices`               | users should grant the application access to assistive devices
 | `files_in_usr_local`              | the Cask installs files to `/usr/local`, which may confuse Homebrew
-| `arch_only(list)`                 | the Cask only supports certain architectures.  Currently valid elements of `list` are `intel-32` and `intel-64`
 | `x11_required`                    | the Cask requires X11 to run
 
 Example:
@@ -539,12 +538,12 @@ installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer
 
 ## Depends_on Stanza Details
 
-`depends_on` is used to declare dependencies required to install a Cask
-or to execute its contents.
+`depends_on` is used to declare dependencies and requirements for a Cask.
+`depends_on` is not consulted until `install` is attempted.
 
 ### Depends_on :formula
 
-The value should name a Homebrew formula needed by the Cask.
+The value should name a Homebrew Formula needed by the Cask.
 
 Example use: some distributions are contained in archive formats such as
 `7z` which are not supported by stock Apple tools.  For these cases, a more
@@ -559,14 +558,24 @@ depends_on :formula => 'unar'
 
 #### Requiring an Exact OS X Release
 
-The value for `depends_on :macos` may be a string, symbol or an array of
-strings or symbols, listing the exact compatible OS X releases.
+The value for `depends_on :macos` may be a symbol, string, or an array,
+listing the exact compatible OS X releases.
 
-The available symbols for OS X releases are: `:tiger`, `:leopard`,
-`:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, and `:yosemite`.
-These correspond to strings `'10.4'`, `'10.5'`, … `'10.10'` (major releases
-containing a single dot.  The following are all valid ways to enumerate the
-exact OS X version requirements for a Cask:
+The available values for OS X releases are:
+
+| symbol             | corresponding string
+| -------------------|----------------------
+| `:tiger`           | `'10.4'`
+| `:leopard`         | `'10.5'`
+| `:snow_leopard`    | `'10.6'`
+| `:lion`            | `'10.7'`
+| `:mountain_lion`   | `'10.8'`
+| `:mavericks`       | `'10.9'`
+| `:yosemite`        | `'10.10'`
+
+Only major releases are covered (version numbers containing a single dot).
+The symbol form is preferred for readability.  The following are all valid
+ways to enumerate the exact OS X release requirements for a Cask:
 
 ```ruby
 depends_on :macos => :yosemite
@@ -578,12 +587,46 @@ depends_on :macos => ['10.9', '10.10']
 #### Setting a Minimum OS X Release
 
 `depends_on :macos` can also accept a string starting with a comparison
-operator such as `>=`, followed by an OS X version in the form above.  The
+operator such as `>=`, followed by an OS X release in the form above.  The
 following are both valid expressions meaning "at least OS X 10.9":
 
 ```ruby
 depends_on :macos => '>= :mavericks'
 depends_on :macos => '>= 10.9'
+```
+
+### Depends_on :arch
+
+The value for `depends_on :arch` may be a symbol or an array of symbols,
+listing the hardware compatibility requirements for a Cask.  The requirement
+is satisfied at install time if any one of multiple `:arch` value matches
+the user's hardware.
+
+The available symbols for hardware are:
+
+| symbol     | meaning        |
+| ---------- | -------------- |
+| `:i386`    | 32-bit Intel   |
+| `:x86_64`  | 64-bit Intel   |
+| `:ppc_7400`| 32-bit PowerPC |
+| `:ppc_64`  | 64-bit PowerPC |
+| `:intel`   | Any Intel      |
+| `:ppc`     | Any PowerPC    |
+
+The following are all valid expressions:
+
+```ruby
+depends_on :arch => :x86_64
+depends_on :arch => [:x86_64]          # same meaning as above
+depends_on :arch => :intel
+depends_on :arch => [:i386, :x86_64]   # same meaning as above
+```
+
+Since PowerPC hardware is no longer common, the expression most
+frequently needed will be:
+
+```ruby
+depends_on :arch => :x86_64
 ```
 
 ### All Depends_on Keys
@@ -595,8 +638,8 @@ functionality:
 | ---------- | ----------- |
 | `:formula` | a Homebrew Formula
 | `:cask`    | *stub - not yet functional*
-| `:macos`   | a string, symbol, array, or expression defining OS X version requirements.
-| `:arch`    | *stub - not yet functional*
+| `:macos`   | a symbol, string, array, or comparison expression defining OS X release requirements.
+| `:arch`    | a symbol or array defining hardware requirements.
 | `:x11`     | *stub - not yet functional*
 | `:java`    | *stub - not yet functional*
 

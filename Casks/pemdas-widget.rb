@@ -7,8 +7,10 @@ cask :v1 => 'pemdas-widget' do
   license :oss
 
   widget 'PEMDAS.wdgt'
+
+  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    Currently, Dashboard Widgets such as '#{title}' do NOT work correctly
+    Currently, Dashboard Widgets such as '#{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase}' do NOT work correctly
     when installed via brew-cask.  The bug is being tracked here:
 
       https://github.com/caskroom/homebrew-cask/issues/2206
