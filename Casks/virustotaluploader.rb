@@ -1,6 +1,6 @@
 cask :v1 => 'virustotaluploader' do
-  version '1.1'
-  sha256 'e757f8eb49592dfe67169a5582bcc3cca01c8ecc6634853398813a2aa92f24a7'
+  version '1.3'
+  sha256 '6009c81e0d87b64f56e64ff3137f37fe61ae3b9b792b3700b37e4c55473da5d4'
 
   url "https://www.virustotal.com/static/bin/VirusTotalUploader_#{version}.dmg"
   homepage 'https://www.virustotal.com/'
