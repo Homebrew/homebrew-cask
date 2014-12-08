@@ -18,8 +18,7 @@ describe "Syntax check" do
 
           # Reason for this hack is unknown. Travis appears to freeze,
           # but only in one section of the build matrix.
-          skip if ENV.key?('TRAVIS_JOB_ID')     and
-                  RUBY_VERSION.match(%r{^1\.8})
+          skip if ENV.key?('TRAVIS_JOB_ID') and TestHelper.ruby18?
 
           args = flags + [ '--', file ]
           shutup do
