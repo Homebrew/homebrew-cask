@@ -14,6 +14,5 @@ cask :v1 => 'paraview' do
 
   app 'paraview.app'
 
-  # todo
-  # depends_on :arch => :x86_64
+  depends_on :arch => :x86_64
 end

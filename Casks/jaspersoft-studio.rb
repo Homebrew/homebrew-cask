@@ -8,6 +8,5 @@ cask :v1 => 'jaspersoft-studio' do
 
   app "Jaspersoft Studio #{version}.final/Jaspersoft Studio.app"
 
-  # todo
-  # depends_on :arch => :x86_64
+  depends_on :arch => :x86_64
 end
