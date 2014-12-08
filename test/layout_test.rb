@@ -26,9 +26,11 @@ describe "Repo layout" do
   TOPLEVEL_DIRS = %w{
                      .git
                      Casks
+                     cmd
                      bin
                      developer
                      doc
+                     Formula
                      lib
                      spec
                      test
@@ -46,7 +48,6 @@ describe "Repo layout" do
                       README.md
                       Rakefile
                       USAGE.md
-                      brew-cask.rb
                      }
 
   describe "toplevel dir" do
