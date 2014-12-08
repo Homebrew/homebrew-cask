@@ -14,11 +14,13 @@ describe "Syntax check" do
       flags.unshift '--disable-all' if major_version.to_f > 1.8   # perf
       backend_files.each do |file|
         it "#{file} is valid Ruby" do
-          skip unless interpreter.exist?
+          skip("Ruby #{ major_version } not found") unless interpreter.exist?
 
           # Reason for this hack is unknown. Travis appears to freeze,
           # but only in one section of the build matrix.
-          skip if ENV.key?('TRAVIS_JOB_ID') and TestHelper.ruby18?
+          if ENV.key?('TRAVIS_JOB_ID') and TestHelper.ruby18?
+            skip("This test might cause Travis to freeze under Ruby 1.8")
+          end
 
           args = flags + [ '--', file ]
           shutup do
