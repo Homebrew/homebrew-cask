@@ -111,6 +111,10 @@ class TestHelper
       end
     end
   end
+
+  def self.ruby18?
+    RUBY_VERSION.match(%r{^1\.8})
+  end
 end
 
 require 'support/fake_fetcher'
