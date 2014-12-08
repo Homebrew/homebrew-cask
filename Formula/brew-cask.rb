@@ -15,7 +15,7 @@ class BrewCask < Formula
 
       To make sure that you're up to date, it's recommended to run the below
       command:
-        brew update && brew uninstall brew-cask && brew tap --repair
+        brew update && brew uninstall --force brew-cask && brew tap --repair
     EOS
   end
 end
