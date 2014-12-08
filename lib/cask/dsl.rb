@@ -168,13 +168,10 @@ module Cask::DSL
     end
 
     def depends_on(*args)
-      if @depends_on and !args.empty?
-        # todo: remove this constraint, and instead merge multiple depends_on stanzas
-        raise CaskInvalidError.new(self.token, "'depends_on' stanza may only appear once")
-      end
-      @depends_on ||= begin
-        Cask::DSL::DependsOn.new(*args) unless args.empty?
-      rescue StandardError => e
+      @depends_on ||= Cask::DSL::DependsOn.new()
+      begin
+        @depends_on.load(*args) unless args.empty?
+      rescue RuntimeError => e
         raise CaskInvalidError.new(self.token, e)
       end
       @depends_on

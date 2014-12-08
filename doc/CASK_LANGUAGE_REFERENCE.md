@@ -232,7 +232,6 @@ The following methods may be called to generate standard warning messages:
 | `reboot`                          | users should reboot to complete installation
 | `assistive_devices`               | users should grant the application access to assistive devices
 | `files_in_usr_local`              | the Cask installs files to `/usr/local`, which may confuse Homebrew
-| `x11_required`                    | the Cask requires X11 to run
 
 Example:
 
@@ -595,6 +594,8 @@ depends_on :macos => '>= :mavericks'
 depends_on :macos => '>= 10.9'
 ```
 
+A comparison expression cannot be combined with any other form of `depends_on :macos`.
+
 ### Depends_on :arch
 
 The value for `depends_on :arch` may be a symbol or an array of symbols,
@@ -622,8 +623,8 @@ depends_on :arch => :intel
 depends_on :arch => [:i386, :x86_64]   # same meaning as above
 ```
 
-Since PowerPC hardware is no longer common, the expression most
-frequently needed will be:
+Since PowerPC hardware is no longer common, the expression most frequently
+needed will be:
 
 ```ruby
 depends_on :arch => :x86_64
@@ -631,16 +632,13 @@ depends_on :arch => :x86_64
 
 ### All Depends_on Keys
 
-Several other keys are accepted by `depends_on`, in anticipation of future
-functionality:
-
 | key        | description |
 | ---------- | ----------- |
 | `:formula` | a Homebrew Formula
 | `:cask`    | *stub - not yet functional*
 | `:macos`   | a symbol, string, array, or comparison expression defining OS X release requirements.
 | `:arch`    | a symbol or array defining hardware requirements.
-| `:x11`     | *stub - not yet functional*
+| `:x11`     | a Boolean indicating a dependency on X11.
 | `:java`    | *stub - not yet functional*
 
 

@@ -105,64 +105,65 @@ class Cask::Installer
   #      dependencies should also apply for "brew cask stage"
   #      override dependencies with --force or perhaps --force-deps
   def satisfy_dependencies
-    macos_dependencies
-    arch_dependencies
-    formula_dependencies
+    if @cask.depends_on
+      ohai 'Satisfying dependencies'
+      macos_dependencies
+      arch_dependencies
+      x11_dependencies
+      formula_dependencies
+      puts 'complete'
+    end
   end
 
   def macos_dependencies
-    if @cask.depends_on and @cask.depends_on.macos
-      if @cask.depends_on.macos.first.is_a?(Symbol)
-        operator, release = @cask.depends_on.macos
-        unless MacOS.version.send(operator, release)
-          raise CaskError.new "Cask #{@cask} depends on OS X release #{operator} #{release}, but you are running release #{MacOS.version}."
-        end
-      elsif @cask.depends_on.macos.length > 1
-        unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.version.to_s))
-          raise CaskError.new "Cask #{@cask} depends on OS X release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.version}."
-        end
-      else
-        unless MacOS.version == @cask.depends_on.macos.first
-          raise CaskError.new "Cask #{@cask} depends on OS X release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.version}."
-        end
+    return unless @cask.depends_on.macos
+    if @cask.depends_on.macos.first.is_a?(Array)
+      operator, release = @cask.depends_on.macos.first
+      unless MacOS.version.send(operator, release)
+        raise CaskError.new "Cask #{@cask} depends on OS X release #{operator} #{release}, but you are running release #{MacOS.version}."
+      end
+    elsif @cask.depends_on.macos.length > 1
+      unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.version.to_s))
+        raise CaskError.new "Cask #{@cask} depends on OS X release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.version}."
+      end
+    else
+      unless MacOS.version == @cask.depends_on.macos.first
+        raise CaskError.new "Cask #{@cask} depends on OS X release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.version}."
       end
     end
   end
 
   def arch_dependencies
-    if @cask.depends_on and @cask.depends_on.arch
-      @current_arch ||= [
-                         Hardware::CPU.type,
-                         Hardware::CPU.is_32_bit? ?
-                           (Hardware::CPU.intel? ? :i386   : :ppc_7400) :
-                           (Hardware::CPU.intel? ? :x86_64 : :ppc_64)
-                        ]
-      if Array(@cask.depends_on.arch & @current_arch).count == 0
-        raise CaskError.new "Cask #{@cask} depends on hardware architecture being one of #{@cask.depends_on.arch.inspect}, but you are running #{@current_arch.inspect}"
-      end
-    end
+    return unless @cask.depends_on.arch
+    @current_arch ||= [
+                       Hardware::CPU.type,
+                       Hardware::CPU.is_32_bit? ?
+                         (Hardware::CPU.intel? ? :i386   : :ppc_7400) :
+                         (Hardware::CPU.intel? ? :x86_64 : :ppc_64)
+                      ]
+    return unless Array(@cask.depends_on.arch & @current_arch).empty?
+    raise CaskError.new "Cask #{@cask} depends on hardware architecture being one of #{@cask.depends_on.arch.inspect}, but you are running #{@current_arch.inspect}"
+  end
+
+  def x11_dependencies
+    return unless @cask.depends_on.x11
+    raise CaskX11DependencyError.new(@cask.token) unless Cask.x11_executable.exist?
   end
 
   def formula_dependencies
-    # todo The Cask::DependsOn object needs to be more friendly.
-    #      Currently @cask.depends_on.formula raises an exception
-    #      if :formula was not set.
-    if @cask.depends_on and
-       @cask.depends_on.formula and
-       not @cask.depends_on.formula.empty?
-      ohai 'Installing Formula dependencies from Homebrew'
-      @cask.depends_on.formula.each do |dep_name|
-        print "#{dep_name} ... "
-        installed = @command.run(HOMEBREW_BREW_FILE,
-                                 :args => ['list', '--versions', dep_name],
-                                 :print_stderr => false).stdout.include?(dep_name)
-        if installed
-          puts "already installed"
-        else
-          @command.run!(HOMEBREW_BREW_FILE,
-                        :args => ['install', dep_name])
-          puts "done"
-        end
+    return unless @cask.depends_on.formula and not @cask.depends_on.formula.empty?
+    ohai 'Installing Formula dependencies from Homebrew'
+    @cask.depends_on.formula.each do |dep_name|
+      print "#{dep_name} ... "
+      installed = @command.run(HOMEBREW_BREW_FILE,
+                               :args => ['list', '--versions', dep_name],
+                               :print_stderr => false).stdout.include?(dep_name)
+      if installed
+        puts "already installed"
+      else
+        @command.run!(HOMEBREW_BREW_FILE,
+                      :args => ['install', dep_name])
+        puts "done"
       end
     end
   end
