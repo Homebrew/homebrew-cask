@@ -68,4 +68,28 @@ describe Cask::CLI::Search do
     end
     out.must_match(/^No Cask found for "caskroom"\.\n/)
   end
+
+  describe "multiple Casks with the same token in different taps" do
+    describe "when the search term exactly matches the token" do
+      it "finds multiple matches" do
+        out, err = capture_io do
+          Cask::CLI::Search.run('firefox')
+        end
+        out.must_match(/caskroom\/cask\/firefox/)
+        out.must_match(/caskroom\/testcasks\/firefox/)
+        out.length.must_be :<, 1000
+      end
+    end
+
+    describe "when the search term partially matches the token" do
+      it "finds multiple matches" do
+        out, err = capture_io do
+          Cask::CLI::Search.run('fire')
+        end
+        out.must_match(/caskroom\/cask\/firefox/)
+        out.must_match(/caskroom\/testcasks\/firefox/)
+        out.length.must_be :<, 1000
+      end
+    end
+  end
 end
