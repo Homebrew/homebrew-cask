@@ -1,6 +1,6 @@
 cask :v1 => 'imitone' do
-  version '0.6.0'
-  sha256 '20b262c59d770de364a6ebc4c6e8e38a25a9fcdd691345b4acb4041ce25e397f'
+  version '0.6.1a'
+  sha256 '5149fdd4bc4be96068ba5494b7ddcb47e07d84fd1c37c071baccbeb714c37b51'
 
   url "http://imitone.com/beta/imitone-#{version}.dmg"
   homepage 'http://imitone.com/'
