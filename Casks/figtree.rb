@@ -1,11 +1,11 @@
 cask :v1 => 'figtree' do
-  version :latest
-  sha256 :no_check
+  version '1.4.2'
+  sha256 '3b97cb9b57bbce2466d850faac699128b7b72310b094cf9260c1a172561674f1'
 
-  url 'http://tree.bio.ed.ac.uk/download.php?id=86'
+  url 'http://tree.bio.ed.ac.uk/download.php?id=90'
   homepage 'http://tree.bio.ed.ac.uk/software/figtree/'
   license :unknown
 
-  app 'FigTree v1.4.0.app'
+  app 'FigTree v1.4.2.app'
   qlplugin 'QuickLook Plugin/FigTreeQuickLookPlugin.qlgenerator'
 end
