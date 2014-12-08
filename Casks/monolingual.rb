@@ -1,4 +1,5 @@
 cask :v1 => 'monolingual' do
+
   if MacOS.version < :leopard
     version '1.3.9'
     sha256 '7bf1ec8642ec8674443945dec12cf9c991306912e1e27c305c6db4776e037b16'
@@ -15,7 +16,7 @@ cask :v1 => 'monolingual' do
 
   url "https://github.com/IngmarStein/Monolingual/releases/download/v#{version}/Monolingual-#{version}.dmg"
   appcast 'https://ingmarstein.github.io/Monolingual/appcast.xml',
-    :sha256 => 'a536d84e8430d0ba64638e5696f67e96259cfdb81aacd8c2df0a078ff3ea4672'
+          :sha256 => 'a536d84e8430d0ba64638e5696f67e96259cfdb81aacd8c2df0a078ff3ea4672'
   homepage 'https://ingmarstein.github.io/Monolingual/'
   license :oss
 
