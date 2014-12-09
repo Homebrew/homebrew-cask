@@ -131,21 +131,21 @@ Tests on the following values are known to be acceptable:
 
 | value                       | examples
 | ----------------------------|--------------------------------------
-| `MacOS.version`             | [macports.rb](../Casks/macports.rb), [coconutbattery.rb](../Casks/coconutbattery.rb)
+| `MacOS.release`             | [macports.rb](../Casks/macports.rb), [coconutbattery.rb](../Casks/coconutbattery.rb)
 | `Hardware::CPU.is_32_bit?`  | [vuescan.rb](../Casks/vuescan.rb)
 | `Hardware::CPU.is_64_bit?`  | none, see [Always Fall Through to the Newest Case](#always-fall-through-to-the-newest-case)
 
 ### Version Comparisons
 
-Tests against `MacOS.version` may use either symbolic names or version
+Tests against `MacOS.release` may use either symbolic names or version
 strings with numeric comparison operators:
 
 ```ruby
-if MacOS.version < :mavericks     # symbolic name
+if MacOS.release < :mavericks     # symbolic name
 ```
 
 ```ruby
-if MacOS.version < '10.9'         # version string
+if MacOS.release < '10.9'         # version string
 ```
 
 The available symbols for OS X versions are: `:tiger`, `:leopard`,
@@ -162,9 +162,9 @@ This makes it more likely that the Cask will work without alteration when
 a new OS is released.  Example (from [coconutbattery.rb](../Casks/coconutbattery.rb)):
 
 ```ruby
-if MacOS.version < :leopard
+if MacOS.release < :leopard
   # ...
-elsif MacOS.version < :lion
+elsif MacOS.release < :lion
   # ...
 else
   # ...
