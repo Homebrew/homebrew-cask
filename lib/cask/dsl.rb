@@ -82,6 +82,7 @@ module Cask::DSL
     end
 
     def url(*args)
+      return @url if args.empty?
       if @url and !args.empty?
         raise CaskInvalidError.new(self.token, "'url' stanza may only appear once")
       end
@@ -93,6 +94,7 @@ module Cask::DSL
     end
 
     def appcast(*args)
+      return @appcast if args.empty?
       if @appcast and !args.empty?
         raise CaskInvalidError.new(self.token, "'appcast' stanza may only appear once")
       end
@@ -104,6 +106,7 @@ module Cask::DSL
     end
 
     def gpg(*args)
+      return @gpg if args.empty?
       if @gpg and !args.empty?
         raise CaskInvalidError.new(self.token, "'gpg' stanza may only appear once")
       end
@@ -115,6 +118,7 @@ module Cask::DSL
     end
 
     def container(*args)
+      return @container if args.empty?
       if @container and !args.empty?
         # todo: remove this constraint, and instead merge multiple container stanzas
         raise CaskInvalidError.new(self.token, "'container' stanza may only appear once")
@@ -147,6 +151,7 @@ module Cask::DSL
     end
 
     def tags(*args)
+      return @tags if args.empty?
       if @tags and !args.empty?
         # consider removing this limitation
         raise CaskInvalidError.new(self.token, "'tags' stanza may only appear once")
@@ -159,6 +164,7 @@ module Cask::DSL
     end
 
     def license(arg=nil)
+      return @license if arg.nil?
       if @license and !arg.nil?
         raise CaskInvalidError.new(self.token, "'license' stanza may only appear once")
       end
@@ -169,7 +175,9 @@ module Cask::DSL
       end
     end
 
+    # depends_on uses a load method so that multiple stanzas can be merged
     def depends_on(*args)
+      return @depends_on if args.empty?
       @depends_on ||= Cask::DSL::DependsOn.new()
       begin
         @depends_on.load(*args) unless args.empty?
@@ -184,6 +192,7 @@ module Cask::DSL
         # todo: remove this constraint, and instead merge multiple conflicts_with stanzas
         raise CaskInvalidError.new(self.token, "'conflicts_with' stanza may only appear once")
       end
+      return @conflicts_with if args.empty?
       @conflicts_with ||= begin
         Cask::DSL::ConflictsWith.new(*args) unless args.empty?
       rescue StandardError => e
