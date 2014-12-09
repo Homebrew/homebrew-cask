@@ -4,7 +4,7 @@ cask :v1 => 'lmms' do
 
   url "https://github.com/LMMS/lmms/releases/download/v#{version}/lmms-#{version}.dmg"
   homepage 'https://lmms.io'
-  license :unknown
+  license :gpl
 
   app 'LMMS.app'
 end
