@@ -24,6 +24,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Depends_on Stanza Details](#depends_on-stanza-details)
  * [Conflicts_with Stanza Details](#conflicts_with-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
+ * [Postflight Stanza Details](#postflight-stanza-details)
  * [Zap Stanza Details](#zap-stanza-details)
  * [Arbitrary Ruby Methods](#arbitrary-ruby-methods)
  * [Revisions to the Cask DSL](#revisions-to-the-cask-dsl)
@@ -59,7 +60,7 @@ time.
 To make maintenance easier, the most-frequently-updated stanzas are usually
 placed at the top.  But that's a convention, not a rule.
 
-Exception: `do` blocks such as `preflight` may enclose a block of pure Ruby
+Exception: `do` blocks such as `postflight` may enclose a block of pure Ruby
 code.  Lines within that block follow a procedural (order-dependent)
 paradigm.
 
@@ -111,7 +112,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `conflicts_with`       | yes                           | a list of conflicts with this Cask (*not yet functional* see also [Conflicts_with Stanza Details](#conflicts_with-stanza-details))
 | `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](#caveats-stanza-details))
 | `preflight`            | yes                           | a Ruby block containing preflight install operations (needed only in very rare cases)
-| `postflight`           | yes                           | a Ruby block containing postflight install operations
+| `postflight`           | yes                           | a Ruby block containing postflight install operations (see also [Postflight Stanza Details](#postflight-stanza-details))
 | `uninstall_preflight`  | yes                           | a Ruby block containing preflight uninstall operations (needed only in very rare cases)
 | `uninstall_postflight` | yes                           | a Ruby block containing postflight uninstall operations
 | `accessibility_access` | no                            | `true` if the application should be granted accessibility access
@@ -890,6 +891,34 @@ A fully manual method for finding bundle ids in a package file follows:
      `find /tmp/expanded.unpkg -name PackageInfo -print0 | xargs -0 grep -i kext` should return a `<bundle id>` tag with a `path`
      attribute that contains a `.kext` extension, for example `<bundle id="com.wavtap.driver.WavTap" ... path="./WavTap.kext" ... />`.
   5. Once bundle ids have been identified, the unpacked package directory can be deleted.
+
+
+## Postflight Stanza Details
+
+### Evaluation of Blocks is Always Deferred
+
+The Ruby blocks defined by `preflight`, `postflight`, `uninstall_preflight`,
+and `uninstall_postflight` are not evaluated until install time or uninstall
+time.  Within a block, you may refer to the `@cask` instance variable, and
+invoke any method available on `@cask`.
+
+### Postflight Mini-DSL
+
+There is a mini-DSL available within `postflight` blocks.
+
+The following methods may be called to perform standard postflight tasks:
+
+| method                          | description |
+| ------------------------------- | ----------- |
+| `plist_set(key, value)`         | set a value in the `Info.plist` file for the app bundle.  Example: [`rubymine.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/rubymine.rb#L12)
+| `suppress_move_to_applications` | suppress a dialog asking the user to move the app to the `/Applications` folder.  Example: [`github.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/github.rb#L13).
+
+`plist_set` currently has the limitation that it only operates on the
+bundle indicated by the first `app` stanza (and the Cask must contain
+an `app` stanza).
+
+`suppress_move_to_applications` optionally accepts a `:key` parameter for
+apps which use a nonstandard `defaults` key.  Example: [`alfred.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/alfred.rb).
 
 
 ## Zap Stanza Details
