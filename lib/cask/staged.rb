@@ -11,10 +11,18 @@ module Cask::Staged
   end
 
   def plist_set(key, value)
-    plist_exec("Set #{key} #{value}")
+    begin
+      plist_exec("Set #{key} #{value}")
+    rescue StandardError => e
+      raise CaskError.new("#{@cask.token}: 'plist_set' failed with: #{e}")
+    end
   end
 
   def bundle_identifier
-    plist_exec('Print CFBundleIdentifier').stdout.chomp
+    begin
+      plist_exec('Print CFBundleIdentifier').stdout.chomp
+    rescue StandardError => e
+      raise CaskError.new("#{@cask.token}: 'bundle_identifier' failed with: #{e}")
+    end
   end
 end
