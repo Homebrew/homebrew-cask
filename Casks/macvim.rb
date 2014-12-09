@@ -1,7 +1,7 @@
 cask :v1 => 'macvim' do
   version '7.4-73'
 
-  if MacOS.version < :mavericks
+  if MacOS.version <= :mountain_lion
     sha256 '7f573fb9693052a86845c0a9cbb0b3c3c33ee23294f9d8111187377e4d89f72c'
     url "https://github.com/eee19/macvim/releases/download/snapshot-#{version.sub(%r{^.*-},'')}/MacVim-snapshot-#{version.sub(%r{^.*-},'')}-Mountain-Lion.tbz"
   else
