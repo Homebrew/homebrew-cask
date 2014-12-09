@@ -3,7 +3,7 @@ module Cask::Staged
     index =  0 if index == :first
     index =  1 if index == :second
     index = -1 if index == :last
-    staged_path.join(@cask.artifacts[:app].to_a.at(index).first, 'Contents', 'Info.plist')
+    @cask.staged_path.join(@cask.artifacts[:app].to_a.at(index).first, 'Contents', 'Info.plist')
   end
 
   def plist_exec(cmd)
@@ -15,6 +15,6 @@ module Cask::Staged
   end
 
   def bundle_identifier
-    plist_exec('Print CFBundleIdentifier')
+    plist_exec('Print CFBundleIdentifier').stdout.chomp
   end
 end

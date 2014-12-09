@@ -1,6 +1,14 @@
 require 'rubygems'
+require 'cask/staged'
 
 class Cask::Installer
+
+  # todo: it is unwise for Cask::Staged to be a module, when we are
+  # dealing with both staged and unstaged Casks here.  This should
+  # either be a class which is only sometimes instantiated, or there
+  # should be explicit checks on whether staged state is valid in
+  # every method.
+  include Cask::Staged
 
   PERSISTENT_METADATA_SUBDIRS = [ 'gpg' ]
 
@@ -51,6 +59,7 @@ class Cask::Installer
       download
       extract_primary_container
       install_artifacts
+      enable_accessibility_access
     rescue StandardError => e
       purge_versioned_files
       raise e
@@ -172,8 +181,45 @@ class Cask::Installer
     self.class.print_caveats(@cask)
   end
 
+  # todo: logically could be in a separate class
+  def enable_accessibility_access
+    return unless @cask.accessibility_access
+    ohai 'Enabling accessibility access'
+    if MacOS.version >= :mavericks
+      @command.run!('/usr/bin/sqlite3',
+                    :args => [
+                              Cask.tcc_db,
+                              "INSERT INTO access VALUES('kTCCServiceAccessibility','#{bundle_identifier}',0,1,1,NULL);",
+                             ],
+                    :sudo => true)
+    else
+      @command.run!('/usr/bin/touch',
+                    :args => [Cask.pre_mavericks_accessibility_dotfile],
+                    :sudo => true)
+    end
+  end
+
+  def disable_accessibility_access
+    return unless @cask.accessibility_access
+    if MacOS.version >= :mavericks
+      ohai 'Disabling accessibility access'
+      @command.run!('/usr/bin/sqlite3',
+                    :args => [
+                              Cask.tcc_db,
+                              "DELETE FROM access WHERE client='#{bundle_identifier}';",
+                             ],
+                    :sudo => true)
+    else
+      opoo <<-EOS.undent
+        Accessibility access was enabled for #{@cask}, but it is not safe to disable
+        automatically on this version of OS X.  See System Preferences.
+      EOS
+    end
+  end
+
   def uninstall(force=false)
     odebug "Cask::Installer.uninstall"
+    disable_accessibility_access
     uninstall_artifacts
     purge_versioned_files
     purge_caskroom_path if force
