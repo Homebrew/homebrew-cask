@@ -1,5 +1,6 @@
 cask :v1 => 'istumbler' do
-  if MacOS.version < :mavericks
+
+  if MacOS.version <= :mountain_lion
     version '99'
     sha256 'ac30e44fe86132c93a5b33699de00e86628e2f51a42015d2225b91521a198b63'
     url "http://istumbler.net/archive/release#{version}/downloads/iStumbler-#{version}.zip"
