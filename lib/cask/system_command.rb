@@ -40,12 +40,14 @@ class Cask::SystemCommand
   end
 
   def self._process_options(executable, options)
-    options.assert_valid_keys :input, :print_stdout, :print_stderr, :args, :must_succeed, :sudo
+    options.assert_valid_keys :input, :print_stdout, :print_stderr, :args, :must_succeed, :sudo, :bsexec
     sudo_prefix = %w{/usr/bin/sudo -E --}
+    bsexec_prefix = [ '/bin/launchctl', 'bsexec',  options[:bsexec]  == :startup ? '/' : options[:bsexec] ]
     command = [executable]
-    options[:print_stderr] = true  if !options.key?(:print_stderr)
-    command.unshift(*sudo_prefix)  if  options[:sudo]
-    command.concat(options[:args]) if  options.key?(:args) and !options[:args].empty?
+    options[:print_stderr] = true   if !options.key?(:print_stderr)
+    command.unshift(*bsexec_prefix) if  options[:bsexec]
+    command.unshift(*sudo_prefix)   if  options[:sudo]
+    command.concat(options[:args])  if  options.key?(:args) and !options[:args].empty?
     command
   end
 
