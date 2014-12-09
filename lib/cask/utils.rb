@@ -22,6 +22,13 @@ class Object
   end
 end
 
+# monkeypatch MacOS
+module MacOS
+  def release
+    version
+  end
+end
+
 # monkeypatch Tty
 class Tty
   class << self
