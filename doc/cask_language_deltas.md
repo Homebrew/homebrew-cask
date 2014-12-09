@@ -61,6 +61,8 @@ features which are available for the current Cask.
  * [`gpg`](CASK_LANGUAGE_REFERENCE.md#gpg-stanza-details) *stub: not yet functional.*
  * [`installer :script`](CASK_LANGUAGE_REFERENCE.md#installer-script)
  * [`license`](CASK_LANGUAGE_REFERENCE.md#license-stanza-details)
+ * [`postflight plist_set`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
+ * [`postflight suppress_move_to_applications`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
  * [`stage_only`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
    * replaced undocumented `caskroom_only`
  * [`suite`](CASK_LANGUAGE_REFERENCE.md#suite-stanza-details)
@@ -149,6 +151,12 @@ For use in *eg* interpolation:
  * [`path_environment_variable(path)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`reboot`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`zsh_path_helper(path)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
+
+
+## Postflight Mini-DSL (1.0)
+
+ * [`plist_set`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
+ * [`suppress_move_to_applications`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
 
 
 ## References
