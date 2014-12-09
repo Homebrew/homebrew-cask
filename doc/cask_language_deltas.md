@@ -2,15 +2,8 @@
 
 This document summarizes revisions to the Cask Domain-Specific Language (DSL).
 
- * [This Document Is Incomplete](#this-document-is-incomplete)
  * [Cask DSL 1.0](#cask-dsl-10)
  * [References](#references)
-
-
-## This Document Is Incomplete
-
-**This document is still being written.  It is not yet a complete reference.
-This notice will be removed for the final form.**
 
 
 ## Cask DSL 1.0
