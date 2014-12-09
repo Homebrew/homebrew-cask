@@ -1,5 +1,5 @@
 module Cask::Staged
-  def info_plist(index = 0)
+  def info_plist_file(index = 0)
     index =  0 if index == :first
     index =  1 if index == :second
     index = -1 if index == :last
@@ -7,7 +7,7 @@ module Cask::Staged
   end
 
   def plist_exec(cmd)
-    @command.run!('/usr/libexec/PlistBuddy', :args => ['-c', cmd, info_plist])
+    @command.run!('/usr/libexec/PlistBuddy', :args => ['-c', cmd, info_plist_file])
   end
 
   def plist_set(key, value)
