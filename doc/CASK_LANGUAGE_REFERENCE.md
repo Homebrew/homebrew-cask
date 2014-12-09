@@ -231,7 +231,6 @@ The following methods may be called to generate standard warning messages:
 | `zsh_path_helper(path)`           | zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable
 | `logout`                          | users should log out and log back in to complete installation
 | `reboot`                          | users should reboot to complete installation
-| `assistive_devices`               | users should grant the application access to assistive devices
 | `files_in_usr_local`              | the Cask installs files to `/usr/local`, which may confuse Homebrew
 
 Example:
