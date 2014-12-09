@@ -92,16 +92,6 @@ class Cask::CaveatsDSL
     EOS
   end
 
-  def assistive_devices
-    puts <<-EOS.undent
-    To use #{@cask}, you may need to give it access to assistive
-    devices (Accessibility).  For OS X Mavericks:
-
-      System Preferences / Security & Privacy / Privacy / Accessibility
-
-    EOS
-  end
-
   def method_missing(method, *args)
     Cask::Utils.method_missing_message(method, @cask.to_s, 'caveats')
     return nil
