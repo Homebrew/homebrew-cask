@@ -1,5 +1,5 @@
 module Cask::Staged
-  def info_plist(index = 0)
+  def info_plist_file(index = 0)
     index =  0 if index == :first
     index =  1 if index == :second
     index = -1 if index == :last
@@ -7,14 +7,22 @@ module Cask::Staged
   end
 
   def plist_exec(cmd)
-    @command.run!('/usr/libexec/PlistBuddy', :args => ['-c', cmd, info_plist])
+    @command.run!('/usr/libexec/PlistBuddy', :args => ['-c', cmd, info_plist_file])
   end
 
   def plist_set(key, value)
-    plist_exec("Set #{key} #{value}")
+    begin
+      plist_exec("Set #{key} #{value}")
+    rescue StandardError => e
+      raise CaskError.new("#{@cask.token}: 'plist_set' failed with: #{e}")
+    end
   end
 
   def bundle_identifier
-    plist_exec('Print CFBundleIdentifier').stdout.chomp
+    begin
+      plist_exec('Print CFBundleIdentifier').stdout.chomp
+    rescue StandardError => e
+      raise CaskError.new("#{@cask.token}: 'bundle_identifier' failed with: #{e}")
+    end
   end
 end

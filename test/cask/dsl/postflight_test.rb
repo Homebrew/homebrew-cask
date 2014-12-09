@@ -14,14 +14,14 @@ describe Cask::DSL::Postflight do
   end
 
   it "can get the Info.plist file for the primary app" do
-    @dsl.info_plist.to_s.must_include 'basic-cask/1.2.3/TestCask.app/Contents/Info.plist'
+    @dsl.info_plist_file.to_s.must_include 'basic-cask/1.2.3/TestCask.app/Contents/Info.plist'
   end
 
   it "can execute commands on the Info.plist file" do
     @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
 
     Cask::FakeSystemCommand.expects_command(
-      ['/usr/libexec/PlistBuddy', '-c', 'Print CFBundleIdentifier', @dsl.info_plist]
+      ['/usr/libexec/PlistBuddy', '-c', 'Print CFBundleIdentifier', @dsl.info_plist_file]
     )
     @dsl.plist_exec('Print CFBundleIdentifier')
   end
@@ -30,7 +30,7 @@ describe Cask::DSL::Postflight do
     @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
 
     Cask::FakeSystemCommand.expects_command(
-      ['/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', @dsl.info_plist]
+      ['/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', @dsl.info_plist_file]
     )
     @dsl.plist_set(':JVMOptions:JVMVersion', '1.6+')
   end
