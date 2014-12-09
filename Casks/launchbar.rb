@@ -1,5 +1,6 @@
 cask :v1 => 'launchbar' do
-  if MacOS.version < :mavericks
+
+  if MacOS.version <= :mountain_lion
     version '5.6.4'
     sha256 '22a1ec0c10de940e5efbcccd18b8b048d95fb7c63213a01c7976a76d6be69a4d'
     url "http://www.obdev.at/downloads/launchbar/legacy/LaunchBar-#{version}.dmg"
