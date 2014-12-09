@@ -26,7 +26,7 @@ class Cask::CLI::Create < Cask::CLI::Base
         url 'https://'
         name ''
         homepage ''
-        license :unknown
+        license :unknown    # todo: improve this machine-generated value
 
         app ''
       end

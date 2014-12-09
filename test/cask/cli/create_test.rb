@@ -43,7 +43,7 @@ describe Cask::CLI::Create do
         url 'https://'
         name ''
         homepage ''
-        license :unknown
+        license :unknown    # todo: improve this machine-generated value
 
         app ''
       end
