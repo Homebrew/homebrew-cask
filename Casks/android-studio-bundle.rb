@@ -9,6 +9,6 @@ cask :v1 => 'android-studio-bundle' do
   app 'Android Studio.app'
 
   postflight do
-    plist_set(':JVMOptions:JVMVersion', '1.6+')
+    plist_set(':JVMOptions:JVMVersion', '1.7+')
   end
 end
