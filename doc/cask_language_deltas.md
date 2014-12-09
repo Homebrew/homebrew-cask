@@ -54,6 +54,7 @@ features which are available for the current Cask.
  * [`gpg`](CASK_LANGUAGE_REFERENCE.md#gpg-stanza-details) *stub: not yet functional.*
  * [`installer :script`](CASK_LANGUAGE_REFERENCE.md#installer-script)
  * [`license`](CASK_LANGUAGE_REFERENCE.md#license-stanza-details)
+ * [`name`](CASK_LANGUAGE_REFERENCE.md#name-stanza-details)
  * [`postflight plist_set`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
  * [`postflight suppress_move_to_applications`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
  * [`stage_only`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)

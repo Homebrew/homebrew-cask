@@ -26,8 +26,8 @@ The token itself should be
 
 Details of software names and brands will inevitably be lost in the
 conversion to a minimal token.  To capture the vendor's full name for a
-distribution, use [`tags :name`](CASK_LANGUAGE_REFERENCE.md#tags-stanza-details) within a Cask.
-`tags :name` accepts an unrestricted UTF-8 string.
+distribution, use the [`name`](CASK_LANGUAGE_REFERENCE.md#name-stanza-details) within a Cask.
+`name` accepts an unrestricted UTF-8 string.
 
 ## Finding the Simplified Name of the Vendor's Distribution
 
