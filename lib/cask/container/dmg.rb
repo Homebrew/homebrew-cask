@@ -33,6 +33,7 @@ class Cask::Container::Dmg < Cask::Container::Base
   def mount!
     plist = @command.run('/usr/bin/hdiutil',
       # realpath is a failsafe against unusual filenames
+      :bsexec => '/',
       :args => %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp] + [Pathname.new(@path).realpath],
       :input => %w[y]
     ).plist
@@ -58,11 +59,13 @@ class Cask::Container::Dmg < Cask::Container::Base
       mountpath = Pathname.new(mount).realpath
       next unless mountpath.exist?
       @command.run('/usr/sbin/diskutil',
+                   :bsexec => '/',
                    :args => ['eject', mountpath],
                    :print_stderr => false)
       next unless mountpath.exist?
       sleep 1
       @command.run('/usr/sbin/diskutil',
+                   :bsexec => '/',
                    :args => ['eject', mountpath],
                    :print_stderr => false)
       next unless mountpath.exist?
