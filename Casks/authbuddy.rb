@@ -4,7 +4,7 @@ cask :v1 => 'authbuddy' do
 
   url 'https://www.dssw.co.uk/authbuddy/dsswauthbuddy.dmg'
   homepage 'https://www.dssw.co.uk/authbuddy'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'DssW authbuddy.pkg'
 
