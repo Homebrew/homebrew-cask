@@ -4,7 +4,7 @@ cask :v1 => 'locko' do
 
   url 'http://download.binarynights.com/Locko.zip'
   homepage 'http://www.binarynights.com/'
-  license :unknown
+  license :commercial
 
   app 'Locko.app'
 end
