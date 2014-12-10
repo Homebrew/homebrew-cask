@@ -5,7 +5,7 @@ cask :v1 => 'fauxpas' do
   url 'http://api.fauxpasapp.com/download_latest'
   appcast 'http://api.fauxpasapp.com/appcast'
   homepage 'http://fauxpasapp.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'FauxPas.app'
 end
