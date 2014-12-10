@@ -4,7 +4,7 @@ cask :v1 => 'fender-fuse' do
 
   url "https://www.fmicassets.com/fender/support/software/fender_software/fender_fuse/mac/FenderFUSE_FULL_#{version}.dmg"
   homepage 'https://fuse.fender.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Fender FUSE Installer.app/Contents/Resources/Fender FUSE.pkg'
 
