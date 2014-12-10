@@ -6,7 +6,7 @@ cask :v1 => 'liteicon' do
   appcast 'http://www.freemacsoft.net/liteicon/updates.xml',
           :sha256 => '410b87eda513bf954ce3c4ae7258b3ca02d10557e92f8cbf04a8df37757dc560'
   homepage 'http://www.freemacsoft.net/liteicon/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'LiteIcon.app'
 end
