@@ -6,7 +6,7 @@ cask :v1 => 'sublime-text' do
   appcast 'http://www.sublimetext.com/updates/2/stable/appcast_osx.xml',
           :sha256 => 'e11769f18c577d4cb189c6f6485119a66db5e5d3ba4df99326080f193c1f74b3'
   homepage 'http://www.sublimetext.com/2'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Sublime Text 2.app'
   binary 'Sublime Text 2.app/Contents/SharedSupport/bin/subl'
