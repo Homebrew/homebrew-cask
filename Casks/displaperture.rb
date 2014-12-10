@@ -4,7 +4,7 @@ cask :v1 => 'displaperture' do
 
   url 'http://manytricks.com/download/displaperture'
   homepage 'http://manytricks.com/displaperture'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Displaperture.app'
 end
