@@ -4,7 +4,7 @@ cask :v1 => 'texturepacker' do
 
   url "https://www.codeandweb.com/download/texturepacker/#{version}/TexturePacker-#{version}-uni.dmg"
   homepage 'http://www.codeandweb.com/texturepacker'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'TexturePacker.app'
 end
