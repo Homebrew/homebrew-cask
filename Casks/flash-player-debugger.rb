@@ -4,7 +4,7 @@ cask :v1 => 'flash-player-debugger' do
 
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.to_i}/flashplayer_#{version.to_i}_sa_debug.dmg"
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   # Renamed to avoid conflict with flash-player.
   app 'Flash Player.app', :target => 'Flash Player Debugger.app'
