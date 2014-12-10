@@ -7,7 +7,7 @@ cask :v1 => 'karabiner' do
   # name 'Karabiner'
   # name 'Keyremap4Macbook'
   homepage 'https://pqrs.org/osx/karabiner/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Karabiner.pkg'
   binary '/Applications/Karabiner.app/Contents/Library/vendor/bin/blueutil'
