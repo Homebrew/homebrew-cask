@@ -4,7 +4,7 @@ cask :v1 => 'ridibooks' do
 
   url 'http://ridibooks.com/getapp?os=mac'
   homepage 'http://ridibooks.com/support/introduce_appdown'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   container :type => :naked
   preflight do
