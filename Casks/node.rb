@@ -4,7 +4,7 @@ cask :v1 => 'node' do
 
   url "http://nodejs.org/dist/v#{version}/node-v#{version}.pkg"
   homepage 'http://nodejs.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg  "node-v#{version}.pkg"
 
