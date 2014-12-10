@@ -4,7 +4,7 @@ cask :v1 => 'paw' do
 
   url 'https://luckymarmot.com/paw/download'
   homepage 'http://luckymarmot.com/paw'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Paw.app'
 end
