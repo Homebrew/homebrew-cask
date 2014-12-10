@@ -4,7 +4,7 @@ cask :v1 => 'tinkertool' do
 
   url 'http://dl.macupdate.com/prod/TinkerTool.dmg'
   homepage 'http://www.bresink.com/osx/TinkerTool.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'TinkerTool.app'
 end
