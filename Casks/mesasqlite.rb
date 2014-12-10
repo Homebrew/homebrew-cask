@@ -4,7 +4,7 @@ cask :v1 => 'mesasqlite' do
 
   url "http://www.desertsandsoftware.com/DEMOS/MesaSQLite#{version.gsub('.','')}.zip"
   homepage 'http://www.desertsandsoftware.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MesaSQLite.app'
 end
