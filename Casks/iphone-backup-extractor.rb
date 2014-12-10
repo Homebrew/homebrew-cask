@@ -4,7 +4,7 @@ cask :v1 => 'iphone-backup-extractor' do
 
   url 'http://supercrazyawesome.com/downloads/iPhone%20Backup%20Extractor.app.zip'
   homepage 'http://supercrazyawesome.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iPhone Backup Extractor.app'
 end
