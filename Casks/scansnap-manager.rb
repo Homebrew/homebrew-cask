@@ -4,7 +4,7 @@ cask :v1 => 'scansnap-manager' do
 
   url "https://www.fujitsu.com/downloads/IMAGE/driver/ss/mgr/m-sv600/MacScanSnapV#{version.gsub('.','')}WW.dmg"
   homepage 'http://www.fujitsu.com/global/support/computing/peripheral/scanners/software/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'ScanSnap Manager.pkg'
 
