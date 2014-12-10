@@ -4,7 +4,7 @@ cask :v1 => 'xbench' do
 
   url "http://xbench.com/Xbench_#{version}.dmg"
   homepage 'http://xbench.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'XBench.app'
 end
