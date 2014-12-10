@@ -4,7 +4,7 @@ cask :v1 => 'mpeg-streamclip' do
 
   url "http://www.alfanet.it/squared5/MPEG_Streamclip_#{version}.dmg"
   homepage 'http://www.squared5.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MPEG Streamclip.app'
 end
