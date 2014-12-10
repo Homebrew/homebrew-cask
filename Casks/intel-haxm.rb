@@ -4,7 +4,7 @@ cask :v1 => 'intel-haxm' do
 
   url 'https://software.intel.com/sites/default/files/managed/21/5f/haxm-macosx_r05.zip'
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   if MacOS.version <= :mountain_lion
     container :nested => "haxm-macosx_r05/IntelHAXM_#{version}_for_below_10_9.dmg"
