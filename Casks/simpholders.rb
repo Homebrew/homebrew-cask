@@ -6,7 +6,7 @@ cask :v1 => 'simpholders' do
   appcast 'http://kfi-apps.com/appcasts/simpholders/',
           :sha256 => 'baa9148ebfb168d1c86480da0863b89a9eeb7b70e8d8e1e5806c7f7e1a0fdec2'
   homepage 'http://simpholders.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SimPholders.app'
 end
