@@ -4,7 +4,7 @@ cask :v1 => 'knock' do
 
   url 'http://knocktounlock.com/download'
   homepage 'http://knocktounlock.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Knock.app'
 end
