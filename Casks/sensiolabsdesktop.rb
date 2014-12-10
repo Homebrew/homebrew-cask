@@ -4,7 +4,7 @@ cask :v1 => 'sensiolabsdesktop' do
 
   url "http://mac.desktop.sensiolabs.org/SensioLabsDesktop-#{version}.dmg"
   homepage 'http://desktop.sensiolabs.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SensioLabsDesktop.app'
 end
