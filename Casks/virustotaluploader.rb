@@ -4,7 +4,7 @@ cask :v1 => 'virustotaluploader' do
 
   url "https://www.virustotal.com/static/bin/VirusTotalUploader_#{version}.dmg"
   homepage 'https://www.virustotal.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'VirusTotalUploader.app'
 end
