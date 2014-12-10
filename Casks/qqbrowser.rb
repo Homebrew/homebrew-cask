@@ -4,7 +4,7 @@ cask :v1 => 'qqbrowser' do
 
   url "http://dldir1.qq.com/invc/tt/QQBrowser_#{version.sub(%r{^.*\.},'')}.dmg"
   homepage 'http://browser.qq.com/mac/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'QQBrowser.app'
 end

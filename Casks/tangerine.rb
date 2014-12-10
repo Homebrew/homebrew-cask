@@ -4,7 +4,7 @@ cask :v1 => 'tangerine' do
 
   url "http://distrib.karelia.com/downloads/Tangerine!-4008.zip"
   homepage 'http://www.karelia.com/products/tangerine/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Tangerine!.app'
 

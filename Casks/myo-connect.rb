@@ -5,7 +5,7 @@ cask :v1 => 'myo-connect' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/thalmicdownloads/mac/#{version}/MyoConnect.dmg"
   homepage 'https://developer.thalmic.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
   tags :vendor => 'Thalmic Labs'
 
   app 'Myo Connect.app'

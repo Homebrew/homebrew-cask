@@ -4,7 +4,7 @@ cask :v1 => 'dsp-radio' do
 
   url 'http://dl2sdr.homepage.t-online.de/files/DSP_Radio_141.zip'
   homepage 'http://dl2sdr.homepage.t-online.de/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "DSP Radio #{version}.app"
 end

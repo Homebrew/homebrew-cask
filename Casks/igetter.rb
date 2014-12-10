@@ -4,7 +4,7 @@ cask :v1 => 'igetter' do
 
   url "http://www.igetter.net/search/downloads/iGetter#{version}.dmg"
   homepage 'http://www.igetter.net/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "iGetter #{version}/iGetter.app"
 end

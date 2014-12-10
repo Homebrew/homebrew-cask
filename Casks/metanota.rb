@@ -6,7 +6,7 @@ cask :v1 => 'metanota' do
   appcast 'https://s3.amazonaws.com/sparkle.metanota.com/appcast.xml',
           :sha256 => '72ce5639aae8d21dd40a68dc518382b49d29cc8518ff28cfadb662f21b9fdef6'
   homepage 'http://www.metanota.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Metanota.app'
 end

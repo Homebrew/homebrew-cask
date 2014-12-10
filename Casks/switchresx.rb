@@ -4,7 +4,7 @@ cask :v1 => 'switchresx' do
 
   url "http://www.madrau.com/data/switchresx/SwitchResX#{version.to_i}.zip"
   homepage 'http://www.madrau.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'SwitchResX.prefPane'
 

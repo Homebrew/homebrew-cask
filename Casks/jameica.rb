@@ -6,7 +6,7 @@ cask :v1 => 'jameica' do
   gpg "#{url}.asc",
       :key_id => '5a8ed9cfc0db6c70'
   homepage 'http://www.willuhn.de/products/jameica/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Jameica.app'
 end

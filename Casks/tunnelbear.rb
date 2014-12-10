@@ -6,7 +6,7 @@ cask :v1 => 'tunnelbear' do
   appcast 'https://s3.amazonaws.com/tunnelbear/downloads/mac/appcast.xml',
           :sha256 => '69e4bf8982ecc871fd701062b35c7de265ebd76b8676256923cf7c6e1b1249a0'
   homepage 'https://www.tunnelbear.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'TunnelBear.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'kobo' do
 
   url 'http://download.kobobooks.com/desktop/kobodesktop/kobosetup.dmg'
   homepage 'http://www.kobo.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Kobo.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'codebox' do
 
   url 'https://www.codebox.io/download/mac'
   homepage 'https://www.codebox.io'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Codebox.app'
 end

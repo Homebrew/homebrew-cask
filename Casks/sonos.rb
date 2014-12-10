@@ -4,7 +4,7 @@ cask :v1 => 'sonos' do
 
   url 'http://www.sonos.com/redir/controller_software_mac'
   homepage 'http://www.sonos.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Sonos.app'
 end

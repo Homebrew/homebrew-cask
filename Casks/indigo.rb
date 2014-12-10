@@ -4,7 +4,7 @@ cask :v1 => 'indigo' do
 
   url 'http://cloud.goprism.com/download/Indigo.dmg'
   homepage 'http://www.perceptiveautomation.com/indigo/index.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Indigo Installer.pkg'
 

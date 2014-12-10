@@ -4,7 +4,7 @@ cask :v1 => 'lynxlet' do
 
   url "http://habilis.net/lynxlet/Lynxlet_#{version}.dmg"
   homepage 'http://habilis.net/lynxlet/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Lynxlet.app'
 end

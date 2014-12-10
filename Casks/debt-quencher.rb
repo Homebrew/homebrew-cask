@@ -6,7 +6,7 @@ cask :v1 => 'debt-quencher' do
   appcast 'http://nothirst.com/feeds/DebtQuencherAppcast.xml',
           :sha256 => 'c4cf59373c8956515d82f9ede91e326a770154ec10d637772f48c6aab1149b73'
   homepage 'http://nothirst.com/debtquencher/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Debt Quencher.app'
 end

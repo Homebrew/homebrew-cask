@@ -21,7 +21,7 @@ cask :v1 => 'onyx' do
     # specific to an OS X release, so define nothing when the release is unknown.
   end
   homepage 'http://www.titanium.free.fr/downloadonyx.php'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'OnyX.app'
 

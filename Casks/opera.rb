@@ -4,7 +4,7 @@ cask :v1 => 'opera' do
 
   url "http://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
   homepage 'http://www.opera.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Opera.app'
 end

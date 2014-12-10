@@ -4,7 +4,7 @@ cask :v1 => 'maczip4win' do
 
   url "http://ynomura.com/files/MacZip4win_#{version.gsub('.', '_')}.zip"
   homepage 'http://ynomura.com/home/?page_id=116'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "MacZip4win #{version}/MacZip4Win.app"
 end

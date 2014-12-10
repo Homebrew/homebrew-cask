@@ -4,7 +4,7 @@ cask :v1 => 'instacast' do
 
   url "http://assets.vemedio.com/software/instacast/Instacast-#{version}.dmg"
   homepage 'http://vemedio.com/products/instacast-mac'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Instacast.app'
 end

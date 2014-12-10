@@ -4,7 +4,7 @@ cask :v1 => 'nike-plus-connect' do
 
   url 'http://nikeplus.nike.com/nikeplus/nikeconnect/installers/macosx/Nike+Connect_new.dmg'
   homepage 'http://nikeplus.nike.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Nike+Connect_new.pkg'
 

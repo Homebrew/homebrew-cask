@@ -10,7 +10,7 @@ cask :v1 => 'paraview' do
   end
 
   homepage 'http://www.paraview.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'paraview.app'
 

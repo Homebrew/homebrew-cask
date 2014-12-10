@@ -4,7 +4,7 @@ cask :v1 => 'menumeters' do
 
   url 'http://www.ragingmenace.com/software/download/MenuMeters.dmg'
   homepage 'http://www.ragingmenace.com/software/menumeters/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'MenuMeters Installer.app/Contents/Resources/MenuMeters.prefPane'
 

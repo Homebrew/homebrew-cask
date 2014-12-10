@@ -4,7 +4,7 @@ cask :v1 => 'fetch' do
 
   url "http://fetchsoftworks.com/fetch/download/Fetch_#{version}.dmg?direct=1"
   homepage 'http://fetchsoftworks.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Fetch.app'
 end

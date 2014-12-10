@@ -10,7 +10,7 @@ cask :v1 => 'eclipse-platform' do
   end
 
   homepage 'http://eclipse.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'eclipse/Eclipse.app'
 end

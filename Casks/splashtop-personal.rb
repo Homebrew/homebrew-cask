@@ -4,7 +4,7 @@ cask :v1 => 'splashtop-personal' do
 
   url "https://d17kmd0va0f0mp.cloudfront.net/macclient/STP/Splashtop_Personal_v#{version}.dmg"
   homepage 'http://www.splashtop.com/personal'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Splashtop Personal.pkg'
 

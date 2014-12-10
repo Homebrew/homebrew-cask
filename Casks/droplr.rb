@@ -6,7 +6,7 @@ cask :v1 => 'droplr' do
   appcast 'https://droplr.com/appcast/appcast.xml',
           :sha256 => 'a9de5e093038bb95e9334c21a6e4f9e91148535b559756a2824790522df278f8'
   homepage 'https://www.droplr.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Droplr.app'
 

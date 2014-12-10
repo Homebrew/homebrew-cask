@@ -6,7 +6,7 @@ cask :v1 => 'apikitchen' do
   appcast 'http://apikitchen.com/updates/appcast.xml',
           :sha256 => '12eb770758f5d5f36bd92e67e9d0a0da85343a62d2679934812a6c17521d7501'
   homepage 'http://apikitchen.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ApiKitchen.app'
 end

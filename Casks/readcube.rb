@@ -4,7 +4,7 @@ cask :v1 => 'readcube' do
 
   url "http://download.readcube.com/desktop/#{version}/ReadCubeSetup.zip"
   homepage 'https://www.readcube.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   installer :manual => 'Install ReadCube.app'
 

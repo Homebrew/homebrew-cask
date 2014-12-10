@@ -4,7 +4,7 @@ cask :v1 => 'yandex' do
 
   url 'https://download.cdn.yandex.net/browser/yandex/ru/Yandex.dmg'
   homepage 'http://browser.yandex.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Yandex.app'
 end

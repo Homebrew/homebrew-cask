@@ -6,7 +6,7 @@ cask :v1 => 'wallpaper-wizard' do
   appcast 'http://update.coppertino.com/wpw/appcast.xml',
           :sha256 => '7a10ac07828ce38b72b86bb6003de0430f5a545cdc61e25d865f7ef0db05d6c4'
   homepage 'http://wallwiz.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Wallpaper Wizard.app'
 end

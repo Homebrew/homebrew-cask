@@ -4,7 +4,7 @@ cask :v1 => 'smartgit' do
 
   url "http://www.syntevo.com/download/smartgit/smartgit-macosx-#{version.gsub('.', '_')}.dmg"
   homepage 'http://www.syntevo.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SmartGit.app'
   binary 'SmartGit.app/Contents/MacOS/SmartGit'

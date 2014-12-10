@@ -5,7 +5,7 @@ cask :v1 => 'shimo' do
   url 'http://www.chungwasoft.com/files/Shimo_latest.zip'
   appcast 'http://www.chungwasoft.com/library/appcasts/Shimo3/shimocast.php'
   homepage 'http://www.chungwasoft.com/shimo/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Shimo.app'
 end

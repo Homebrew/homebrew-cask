@@ -6,7 +6,7 @@ cask :v1 => 'money' do
   appcast 'http://www.jumsoft.com/downloads/updates/money4.rss',
           :sha256 => 'b96c8822636a881e3672876695bf9e7aa9c9e398bf48d1e7f59fc6a2c99264c9'
   homepage 'http://www.jumsoft.com/money/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Money.app'
 end

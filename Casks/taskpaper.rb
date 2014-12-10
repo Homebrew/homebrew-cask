@@ -5,7 +5,7 @@ cask :v1 => 'taskpaper' do
   url 'https://taskpaper.s3.amazonaws.com/TaskPaper.dmg'
   appcast 'http://www.hogbaysoftware.com/products/taskpaper/releases.rss'
   homepage 'http://www.hogbaysoftware.com/products/taskpaper'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'TaskPaper.app'
 end

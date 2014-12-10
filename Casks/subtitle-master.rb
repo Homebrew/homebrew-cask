@@ -6,7 +6,7 @@ cask :v1 => 'subtitle-master' do
   appcast 'http://updates.subtitlemaster.com',
           :sha256 => '07bc4aa2178fd8851caa8b4c78050c48a02358d5afc59c110d715faffc2e2479'
   homepage 'http://subtitlemaster.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Subtitle Master.app'
 end

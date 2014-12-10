@@ -6,7 +6,7 @@ cask :v1 => 'curb' do
   appcast 'http://www.mrrsoftware.com/Downloads/Curb/CurbSoftwareUpdates.xml',
           :sha256 => '2025c4fc40a80f7ca7fb4076deb357a133990ef0e9576ceb5a5dca5f03a7c500'
   homepage 'http://mrrsoftware.com/curb'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Curb.app'
 end

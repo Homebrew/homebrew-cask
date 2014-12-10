@@ -4,7 +4,7 @@ cask :v1 => 'visualvm' do
 
   url "https://java.net/downloads/visualvm/release138/VisualVM_#{version.gsub('.','')}.dmg"
   homepage 'http://visualvm.java.net'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'VisualVM.app'
 end

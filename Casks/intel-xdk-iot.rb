@@ -4,7 +4,7 @@ cask :v1 => 'intel-xdk-iot' do
 
   url "https://download.xdk.intel.com/iot-packages/iot_web_mac_master-iot_00#{version}.dmg"
   homepage 'https://software.intel.com/en-us/html5/xdk-iot'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "xdk_full_#{version}.pkg"
 

@@ -4,7 +4,7 @@ cask :v1 => 'pixate' do
 
   url 'http://www.pixate.com/downloads/Pixate.zip'
   homepage 'http://www.pixate.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Pixate.app'
 end

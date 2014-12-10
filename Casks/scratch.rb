@@ -4,7 +4,7 @@ cask :v1 => 'scratch' do
 
   url 'http://cdn.scratch.mit.edu/scratchr2/static/sa/Scratch.air'
   homepage 'http://scratch.mit.edu/scratch2download/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Scratch 2.app'
 end

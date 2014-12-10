@@ -4,7 +4,7 @@ cask :v1 => 'ksdiff' do
 
   url 'http://cdn.kaleidoscopeapp.com/releases/ksdiff-122.zip'
   homepage 'http://www.kaleidoscopeapp.com/ksdiff2'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Install ksdiff.pkg'
 

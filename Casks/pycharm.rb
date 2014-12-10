@@ -4,7 +4,7 @@ cask :v1 => 'pycharm' do
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
   homepage 'http://www.jetbrains.com/pycharm/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'PyCharm.app'
 

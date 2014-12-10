@@ -4,7 +4,7 @@ cask :v1 => 'zoc' do
 
   url "http://www.emtec.com/downloads/zoc/zoc#{version.gsub('.','')}.dmg"
   homepage 'http://www.emtec.com/zoc/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'zoc6.app'
 end

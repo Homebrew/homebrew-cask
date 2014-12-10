@@ -4,7 +4,7 @@ cask :v1 => 'curio' do
 
   url 'http://zengobi.com/downloads/Curio.zip'
   homepage 'http://zengobi.com/products/curio/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Curio.app'
 end

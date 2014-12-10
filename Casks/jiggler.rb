@@ -4,7 +4,7 @@ cask :v1 => 'jiggler' do
 
   url 'http://downloads.sticksoftware.com/Jiggler.dmg'
   homepage 'http://www.sticksoftware.com/software/Jiggler.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Jiggler.app'
 end

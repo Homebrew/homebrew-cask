@@ -4,7 +4,7 @@ cask :v1 => 'nottingham' do
 
   url "http://dl.clickontyler.com/nottingham/nottingham20_#{version}.zip"
   homepage 'https://clickontyler.com/nottingham/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Nottingham.app'
 end

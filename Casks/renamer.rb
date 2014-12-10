@@ -4,7 +4,7 @@ cask :v1 => 'renamer' do
 
   url 'http://creativebe.com/download/renamer'
   homepage 'http://renamer.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Renamer.app'
 end

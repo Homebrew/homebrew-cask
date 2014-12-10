@@ -6,7 +6,7 @@ cask :v1 => 'hands-off' do
   appcast 'http://www.metakine.com/sparkle/handsoff2/checkupdate.php',
           :sha256 => '1524e28fd5c28146adf04a00145623d716f4a0162f24d38f354dc49d7730af7d'
   homepage 'http://www.metakine.com/products/handsoff/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Hands Off!.app'
 

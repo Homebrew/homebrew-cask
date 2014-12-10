@@ -4,7 +4,7 @@ cask :v1 => 'dupscanub' do
 
   url "http://www5.wind.ne.jp/miko/mac_soft/dup_scan/hqx/DupScanUB_#{version.gsub('.','')}.dmg.zip"
   homepage 'http://www5.wind.ne.jp/miko/mac_soft/dup_scan/index.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   container :nested => 'DupScanUB_241.dmg'
   app 'DupScan(UB).app'

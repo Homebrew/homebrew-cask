@@ -4,7 +4,7 @@ cask :v1 => 'netbeans' do
 
   url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-macosx.dmg"
   homepage 'https://netbeans.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "NetBeans #{version}.mpkg"
   # Theoretically this uninstall could conflict with a separate GlassFish

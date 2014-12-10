@@ -4,7 +4,7 @@ cask :v1 => 'hubic' do
 
   url "http://mir7.ovh.net/ovh-applications/hubic/hubiC-OSX/#{version}/hubiC-OSX-#{version}.224-osx.pkg"
   homepage 'https://hubic.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "hubiC-OSX-#{version}.224-osx.pkg"
 

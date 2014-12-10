@@ -5,7 +5,7 @@ cask :v1 => 'grandtotal' do
   url 'http://www.mediaatelier.com/GrandTotal3/download.php'
   appcast 'http://mediaatelier.com/GrandTotal3/feed.php'
   homepage 'http://www.mediaatelier.com/GrandTotal3/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'GrandTotal.app'
 end

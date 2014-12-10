@@ -4,7 +4,7 @@ cask :v1 => 'send-to-kindle' do
 
   url "https://s3.amazonaws.com/sendtokindle/SendToKindleForMac-installer-v#{version}.pkg"
   homepage 'http://www.amazon.com/gp/sendtokindle/mac'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "SendToKindleForMac-installer-v#{version}.pkg"
 

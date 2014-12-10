@@ -4,7 +4,7 @@ cask :v1 => 'supersync' do
 
   url 'https://supersync.com/downloads/SuperSync.app.zip'
   homepage 'http://supersync.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SuperSync.app'
 end

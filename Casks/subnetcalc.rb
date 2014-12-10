@@ -4,7 +4,7 @@ cask :v1 => 'subnetcalc' do
 
   url "http://subnetcalc.free.fr/download/subnetcalc-#{version}.dmg"
   homepage 'http://subnetcalc.free.fr/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SubnetCalc.app'
 end

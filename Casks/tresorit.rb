@@ -4,7 +4,7 @@ cask :v1 => 'tresorit' do
 
   url 'https://installerstorage.blob.core.windows.net/install/Tresorit.dmg'
   homepage 'http://tresorit.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Tresorit.app'
 end

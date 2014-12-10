@@ -4,7 +4,7 @@ cask :v1 => 'tal-chorus-lx' do
 
   url 'http://kunz.corrupt.ch/downloads/plugins/TAL-Chorus-LX-installer.pkg'
   homepage 'http://kunz.corrupt.ch/products/tal-chorus-lx'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'TAL-Chorus-LX-installer.pkg'
 

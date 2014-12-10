@@ -6,7 +6,7 @@ cask :v1 => 'fake' do
   appcast 'http://fakeapp.com/appcast/fake.rss',
           :sha256 => '286ba147f304651cfbb44b03a1b5fd6b5f131cde3b04530a42cd4c5504e54b8a'
   homepage 'http://fakeapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Fake.app'
 end

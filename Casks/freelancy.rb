@@ -4,7 +4,7 @@ cask :v1 => 'freelancy' do
 
   url 'http://dl.getfreelancy.com/Freelancy.dmg'
   homepage 'http://getfreelancy.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Freelancy.app'
 

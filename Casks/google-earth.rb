@@ -4,7 +4,7 @@ cask :v1 => 'google-earth' do
 
   url 'https://dl.google.com/earth/client/advanced/current/GoogleEarthMac-Intel.dmg'
   homepage 'https://www.google.com/earth/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Google Earth.app'
 

@@ -6,7 +6,7 @@ cask :v1 => 'launchcontrol' do
   appcast 'http://www.soma-zone.com/LaunchControl/a/appcast.xml',
           :sha256 => 'a82b64b1b68b0fc013145825eee9b18930378caa24a664d93d5777848c6fcc15'
   homepage 'http://www.soma-zone.com/LaunchControl/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'LaunchControl.app'
 end

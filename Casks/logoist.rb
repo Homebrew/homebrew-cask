@@ -4,7 +4,7 @@ cask :v1 => 'logoist' do
 
   url 'http://www.syniumsoftware.com/download/logoist.dmg'
   homepage 'http://www.syniumsoftware.com/logoist/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Logoist.app'
 end

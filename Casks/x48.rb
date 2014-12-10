@@ -5,7 +5,7 @@ cask :v1 => 'x48' do
 
   url "https://sites.google.com/a/sharkus.com/sharkus-com/Home/x48-#{version}%20osx.zip"
   homepage 'http://blog.sharkus.com/2012/08/osx-hp48-emulators.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "x48-#{version} osx/x48.app"
 

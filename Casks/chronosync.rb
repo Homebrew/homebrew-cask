@@ -4,7 +4,7 @@ cask :v1 => 'chronosync' do
 
   url 'http://downloads.econtechnologies.com/CS4_Download.dmg'
   homepage 'http://www.econtechnologies.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Install.pkg'
 

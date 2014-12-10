@@ -4,7 +4,7 @@ cask :v1 => 'xmind' do
 
   url "http://dl3.xmind.net/xmind-macosx-#{version}.201411201906.dmg"
   homepage 'http://www.xmind.net'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'XMind.app'
 end

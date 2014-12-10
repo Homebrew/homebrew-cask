@@ -5,7 +5,7 @@ cask :v1 => 'the-escapers-flux' do
   url 'http://instruktion.net/theescapers/downloads/FluxV4.zip'
   appcast 'http://www.theescapers.com/flux/flux.xml'
   homepage 'http://www.theescapers.com/flux/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Flux.app'
 end

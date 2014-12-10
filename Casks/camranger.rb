@@ -4,7 +4,7 @@ cask :v1 => 'camranger' do
 
   url "http://www.camranger.com/downloadFiles/CamRanger_#{version.gsub('.', '_')}.zip"
   homepage 'http://www.camranger.com/downloads/#fbox_5594'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "#{version}/CamRanger.app"
 end

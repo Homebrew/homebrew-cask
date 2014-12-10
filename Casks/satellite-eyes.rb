@@ -6,7 +6,7 @@ cask :v1 => 'satellite-eyes' do
   appcast 'https://satellite-eyes.s3.amazonaws.com/appcast.xml',
           :sha256 => '5853ce38284dd959729ea64a423c359d6f2e383be3f062b38825762dfb97860b'
   homepage 'http://satelliteeyes.tomtaylor.co.uk/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Satellite Eyes.app'
 end

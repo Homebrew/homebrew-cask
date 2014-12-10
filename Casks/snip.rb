@@ -4,7 +4,7 @@ cask :v1 => 'snip' do
 
   url "http://snip.qq.com/resources/Snip_V#{version}.dmg"
   homepage 'http://snip.qq.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "Snip_V#{version.sub(%r{^(\d+\.\d+).*},'\1')}.pkg"
 

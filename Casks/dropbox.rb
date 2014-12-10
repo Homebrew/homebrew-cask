@@ -4,7 +4,7 @@ cask :v1 => 'dropbox' do
 
   url 'https://www.dropbox.com/download?plat=mac&full=1'
   homepage 'https://www.dropbox.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Dropbox.app'
 

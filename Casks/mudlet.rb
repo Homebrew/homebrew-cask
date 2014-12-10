@@ -4,7 +4,7 @@ cask :v1 => 'mudlet' do
 
   url "http://www.mudlet.org/download/Mudlet-#{version}.zip"
   homepage 'http://www.mudlet.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "Mudlet-#{version}.app"
 end

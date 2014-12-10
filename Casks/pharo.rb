@@ -4,7 +4,7 @@ cask :v1 => 'pharo' do
 
   url "http://files.pharo.org/platform/Pharo#{version}-mac.zip"
   homepage 'http://www.pharo-project.org/home'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "Pharo#{version}.app"
 end

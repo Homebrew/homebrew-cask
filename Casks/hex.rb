@@ -4,7 +4,7 @@ cask :v1 => 'hex' do
 
   url 'http://dl.hex.gameforge.com/HexInstaller.dmg'
   homepage 'http://hextcg.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Hex.app'
 end

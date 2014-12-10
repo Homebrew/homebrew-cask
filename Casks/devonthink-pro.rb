@@ -6,7 +6,7 @@ cask :v1 => 'devonthink-pro' do
   appcast 'http://www.devon-technologies.com/Sparkle/DEVONthinkPro2.xml',
           :sha256 => '038025b21f4e07e0dceb4b3e3b731f6d1482a3a339151cbac446e4cfb970a75e'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   container :nested => 'DEVONthink_Pro.dmg'
   app 'DEVONthink Pro.app'

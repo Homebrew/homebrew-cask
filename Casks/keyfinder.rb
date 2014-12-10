@@ -4,7 +4,7 @@ cask :v1 => 'keyfinder' do
 
   url 'http://www.ibrahimshaath.co.uk/keyfinder/KeyFinder-OSX.zip'
   homepage 'http://www.ibrahimshaath.co.uk/keyfinder/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'KeyFinder-OSX/KeyFinder.app'
 end

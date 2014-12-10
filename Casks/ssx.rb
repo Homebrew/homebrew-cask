@@ -4,7 +4,7 @@ cask :v1 => 'ssx' do
 
   url "http://chris.schleifer.net/ssX/builds/ssX-#{version}.dmg"
   homepage 'http://chris.schleifer.net/ssX/index.cgi/index.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ssX.app'
 end

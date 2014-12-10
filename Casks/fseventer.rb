@@ -5,7 +5,7 @@ cask :v1 => 'fseventer' do
   url 'http://www.fernlightning.com/lib/exe/fetch.php?id=software%3Afseventer%3Astart&cache=cache&media=software:fseventer:fseventer.zip'
   appcast 'http://www.fernLightning.com/appcasts/fseventer.xml'
   homepage 'http://www.fernlightning.com/doku.php?id=software:fseventer:start'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'fseventer/fseventer.app'
 

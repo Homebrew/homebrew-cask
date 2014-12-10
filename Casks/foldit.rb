@@ -4,7 +4,7 @@ cask :v1 => 'foldit' do
 
   url 'https://fold.it/portal/download/osx'
   homepage 'http://fold.it'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'FoldIt.app'
 end

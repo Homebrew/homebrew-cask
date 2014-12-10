@@ -6,7 +6,7 @@ cask :v1 => 'isolator' do
   appcast 'http://willmore.eu/software/isolator/releases.xml',
           :sha256 => '7bcafa48189e21cb571c04ce70e5f235baf354c3a7c6b891b9ace3507acbc0f8'
   homepage 'http://willmore.eu/software/isolator'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Isolator.app'
 end

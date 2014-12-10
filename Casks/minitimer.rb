@@ -4,7 +4,7 @@ cask :v1 => 'minitimer' do
 
   url "http://kevingessner.com/public/downloads/miniTimer/#{version}/miniTimer.dmg"
   homepage 'http://kevingessner.com/software/minitimer/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'miniTimer.app'
 end

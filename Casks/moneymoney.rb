@@ -5,7 +5,7 @@ cask :v1 => 'moneymoney' do
   url 'http://moneymoney-app.com/download/MoneyMoney.zip'
   appcast 'http://moneymoney-app.com/update/appcast.xml'
   homepage 'http://moneymoney-app.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MoneyMoney.app'
 end

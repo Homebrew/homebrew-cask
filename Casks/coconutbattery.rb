@@ -17,7 +17,7 @@ cask :v1 => 'coconutbattery' do
   end
 
   homepage 'http://www.coconut-flavour.com/coconutbattery/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'coconutBattery.app'
 end

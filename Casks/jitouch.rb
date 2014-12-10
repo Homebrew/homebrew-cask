@@ -4,7 +4,7 @@ cask :v1 => 'jitouch' do
 
   url 'http://www.jitouch.com/jitouch_yosemite.zip'
   homepage 'http://www.jitouch.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'jitouch/Jitouch.prefPane'
 

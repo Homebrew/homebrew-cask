@@ -4,7 +4,7 @@ cask :v1 => 'sage' do
 
   url "http://boxen.math.washington.edu/home/sagemath/sage-mirror/osx/intel/sage-#{version}-x86_64-Darwin-OSX_10.9_x86_64-app.dmg"
   homepage 'http://www.sagemath.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "Sage-#{version}.app"
   binary "Sage-#{version}.app/Contents/Resources/sage/sage"

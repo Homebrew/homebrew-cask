@@ -5,7 +5,7 @@ cask :v1 => 'mountain' do
   url 'http://appgineers.de/mountain/files/Mountain.zip'
   appcast 'http://appgineers.de/mountain/files/mountaincast.xml'
   homepage 'http://appgineers.de/mountain/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Mountain.app'
 end

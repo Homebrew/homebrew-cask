@@ -4,7 +4,7 @@ cask :v1 => 'qgis' do
 
   url "http://www.kyngchaos.com/files/software/qgis/QGIS-#{version}.dmg"
   homepage 'http://www.kyngchaos.com/software/qgis'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
   pkg 'Install QGIS.pkg'
 
   uninstall :pkgutil => 'org.qgis.qgis-*'

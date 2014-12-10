@@ -4,7 +4,7 @@ cask :v1 => 'slice' do
 
   url 'http://sliceeq.com/downloads/Slice.dmg'
   homepage 'http://sliceeq.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Slice.app'
 end

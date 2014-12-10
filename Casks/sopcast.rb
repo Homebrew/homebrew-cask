@@ -4,7 +4,7 @@ cask :v1 => 'sopcast' do
 
   url "http://download.easetuner.com/download/SopCast-#{version}.dmg"
   homepage 'http://www.sopcast.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SopCast.app'
   binary 'SopCast.app/Contents/Resources/binaries/m32/sp-sc-auth'

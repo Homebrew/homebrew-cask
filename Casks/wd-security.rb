@@ -4,7 +4,7 @@ cask :v1 => 'wd-security' do
 
   url "http://download.wdc.com/wdapp/WD_Security_#{version.gsub('.','_')}.zip"
   homepage 'http://www.wdc.com/en/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'WD Security.app'
 end

@@ -5,7 +5,7 @@ cask :v1 => 'dash' do
   url 'http://kapeli.com/Dash.zip'
   appcast 'http://kapeli.com/Dash.xml'
   homepage 'http://kapeli.com/dash'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Dash.app'
 

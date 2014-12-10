@@ -4,7 +4,7 @@ cask :v1 => 'cooviewer' do
 
   url "http://www.geocities.jp/coo_ona/cooviewer#{version}.dmg"
   homepage 'http://www.geocities.jp/coo_ona/viewer.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'cooViewer/cooViewer.app'
 end

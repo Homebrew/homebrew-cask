@@ -4,7 +4,7 @@ cask :v1 => 'garmin-express' do
 
   url 'http://download.garmin.com/omt/express/GarminExpress.dmg'
   homepage 'http://www.garmin.com/express'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Install Garmin Express.pkg'
 

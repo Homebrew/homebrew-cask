@@ -4,7 +4,7 @@ cask :v1 => 'mactubes' do
 
   url "http://macapps.sakura.ne.jp/mactubes/archives/MacTubes_v#{version}.zip"
   homepage 'http://macapps.sakura.ne.jp/mactubes/index_en.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "MacTubes_v#{version}/MacTubes.app"
 end

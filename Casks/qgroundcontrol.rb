@@ -4,7 +4,7 @@ cask :v1 => 'qgroundcontrol' do
 
   url 'http://latestfiasco.com/ftp/qgroundcontrol-pixhawk.dmg'
   homepage 'http://qgroundcontrol.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'qgroundcontrol.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'ap-grapher' do
   # (http://www.chimoosoft.com/products/apgrapher/)
   url 'https://www.macupdate.com/download/11859/APGrapher.dmg'
   homepage 'https://www.macupdate.com/app/mac/11859/ap-grapher'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'AP Grapher.app'
 

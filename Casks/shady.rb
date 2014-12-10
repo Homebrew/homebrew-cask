@@ -4,7 +4,7 @@ cask :v1 => 'shady' do
 
   url "http://instinctivecode.com/shady/shady_#{version}.zip"
   homepage 'http://instinctivecode.com/shady/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Shady.app'
 end

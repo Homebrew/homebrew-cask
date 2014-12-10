@@ -6,7 +6,7 @@ cask :v1 => 'dockmod' do
   appcast 'http://spyresoft.com/dockmod/updates.xml',
           :sha256 => 'dd16b1284504bd43dbe9581508966061002b931b57cd48f30c844dcaaa5f7bd7'
   homepage 'http://spyresoft.com/dockmod/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'DockMod.app'
 end

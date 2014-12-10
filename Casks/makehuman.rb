@@ -4,7 +4,7 @@ cask :v1 => 'makehuman' do
 
   url "http://download.tuxfamily.org/makehuman/releases/#{version}/makehuman-#{version}-osx.dmg"
   homepage 'http://www.makehuman.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MakeHuman.app'
 end

@@ -5,7 +5,7 @@ cask :v1 => 'trim-enabler' do
   url 'https://s3.amazonaws.com/cindori/TrimEnabler.dmg'
   appcast 'http://cindori.org/trimenabler/updates/update.xml'
   homepage 'http://www.cindori.org/software/trimenabler/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Trim Enabler.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'zeroad' do
 
   url "http://releases.wildfiregames.com/0ad-#{version}-osx64.dmg"
   homepage 'http://www.play0ad.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app '0ad.app'
 end

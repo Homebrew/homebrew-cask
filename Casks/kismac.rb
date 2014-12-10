@@ -6,7 +6,7 @@ cask :v1 => 'kismac' do
   appcast 'http://update.kismac-ng.org/sparkle/profileInfo.php',
           :sha256 => '18095f38358d65f5cbaa2a876745c7b1213d56893bc26c182138f51a2d3fa8df'
   homepage 'http://kismac-ng.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'KisMAC.app'
 end

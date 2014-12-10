@@ -4,7 +4,7 @@ cask :v1 => 'hazel' do
 
   url 'http://www.noodlesoft.com/Products/Hazel/download'
   homepage 'http://www.noodlesoft.com/hazel.php'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'Hazel.prefPane'
 

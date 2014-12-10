@@ -4,7 +4,7 @@ cask :v1 => 'komodo-ide' do
 
   url "http://downloads.activestate.com/Komodo/releases/#{version.gsub(/-.*/, '')}/Komodo-IDE-#{version}-macosx-x86_64.dmg"
   homepage 'http://komodoide.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Komodo IDE 8.app'
 end

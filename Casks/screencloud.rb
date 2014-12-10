@@ -4,7 +4,7 @@ cask :v1 => 'screencloud' do
 
   url "https://screencloud.net/files/mac/ScreenCloud-#{version}.dmg"
   homepage 'https://screencloud.net/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ScreenCloud.app'
 end

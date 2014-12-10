@@ -6,7 +6,7 @@ cask :v1 => 'sqleditor' do
   appcast 'https://www.malcolmhardie.com/sqleditor/appcast/sq2release.xml',
           :sha256 => '927ddc279f600c4716b68fe0fc568c879ba4fb10a4a9cc19b535767994d00f65'
   homepage 'http://www.malcolmhardie.com/sqleditor/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SQLEditor.app'
 end

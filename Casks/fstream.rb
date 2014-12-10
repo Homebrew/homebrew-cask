@@ -4,7 +4,7 @@ cask :v1 => 'fstream' do
 
   url 'http://www.sourcemac.com/fstream_FStream.tgz'
   homepage 'http://www.sourcemac.com/?page=fstream'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'FStream.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'smartloader' do
 
   url 'http://download.picturelife.com/mac/Picturelife.dmg'
   homepage 'http://picturelife.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Smartloader.app'
 end

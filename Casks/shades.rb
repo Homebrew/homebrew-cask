@@ -4,7 +4,7 @@ cask :v1 => 'shades' do
 
   url 'http://www.charcoaldesign.co.uk/shades/download/intel'
   homepage 'http://www.charcoaldesign.co.uk/shades'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'Shades Preferences.prefPane'
 end

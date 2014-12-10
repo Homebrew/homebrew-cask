@@ -4,7 +4,7 @@ cask :v1 => 'fenics' do
 
   url "http://www.fenicsproject.org/pub/software/fenics/fenics-#{version}-osx10.9.dmg"
   homepage 'http://fenicsproject.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'FEniCS.app'
 

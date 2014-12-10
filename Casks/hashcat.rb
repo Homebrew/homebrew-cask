@@ -4,7 +4,7 @@ cask :v1 => 'hashcat' do
 
   url "https://hashcat.net/files/hashcat-#{version}.7z"
   homepage 'https://hashcat.net/hashcat/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   depends_on :formula => 'unar'
 

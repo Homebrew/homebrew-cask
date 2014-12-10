@@ -4,7 +4,7 @@ cask :v1 => 'yubikey-personalization-gui' do
 
   url "https://www.yubico.com/wp-content/uploads/2012/09/yubikey-personalization-gui-#{version}.pkg"
   homepage 'http://www.yubico.com/products/services-software/personalization-tools/use/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "yubikey-personalization-gui-#{version}.pkg"
 

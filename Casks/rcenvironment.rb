@@ -4,7 +4,7 @@ cask :v1 => 'rcenvironment' do
 
   url "http://www.rubicode.com/Downloads/RCEnvironment-#{version}.X.dmg"
   homepage 'http://www.rubicode.com/Software/RCEnvironment/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'RCEnvironment.prefPane'
 end

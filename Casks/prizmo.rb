@@ -5,7 +5,7 @@ cask :v1 => 'prizmo' do
   url 'http://www.creaceed.com/downloads/prizmo2.zip'
   appcast 'http://www.creaceed.com/appcasts/prizmo2.xml'
   homepage 'http://www.creaceed.com/prizmo'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Prizmo.app'
 end

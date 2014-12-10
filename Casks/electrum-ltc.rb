@@ -6,7 +6,7 @@ cask :v1 => 'electrum-ltc' do
   gpg "#{url}.asc",
       :key_id => '9914864dfc33499c6ca2beea22453004695506fd'
   homepage 'http://electrum-ltc.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Electrum-LTC.app'
 end

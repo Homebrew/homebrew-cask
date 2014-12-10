@@ -6,7 +6,7 @@ cask :v1 => 'cocoapacketanalyzer' do
   appcast 'http://www.tastycocoabytes.com/cpa/updates/appcasting.php',
           :sha256 => 'e5471a829511ba4c4dd1cbf89bc2ea091fe5f27cc5eaae19fecffc94f8384f8a'
   homepage 'http://www.tastycocoabytes.com/cpa/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'CocoaPacketAnalyzer.app'
 end

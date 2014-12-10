@@ -4,7 +4,7 @@ cask :v1 => 'selflanguage-self-control' do
 
   url "http://files.selflanguage.org/releases/#{version.gsub(/\.\d$/, '')}/Self-#{version}.dmg"
   homepage 'http://selflanguage.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Self Control.app'
   binary 'Clean.snap', :target => '/Users/Shared/Self/Clean.snap'

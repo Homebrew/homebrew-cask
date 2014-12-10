@@ -4,7 +4,7 @@ cask :v1 => 'inky' do
 
   url 'https://inky.com/mail/InkyInstall.dmg'
   homepage 'http://inky.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Inky.app'
 

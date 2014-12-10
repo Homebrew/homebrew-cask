@@ -4,7 +4,7 @@ cask :v1 => 'teamspeak-client' do
 
   url "http://dl.4players.de/ts/releases/#{version}/TeamSpeak3-Client-macosx-#{version}.dmg"
   homepage 'http://www.teamspeak.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'TeamSpeak 3 Client.app'
 end

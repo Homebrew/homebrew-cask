@@ -4,7 +4,7 @@ cask :v1 => 'schnapps' do
 
   url "http://d15xn61otjv90c.cloudfront.net/download/Schnapps_v#{version}.zip"
   homepage 'http://schnappsformac.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Schnapps.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'tvshows' do
 
   url 'http://tvshowsapp.com/TVShows.zip'
   homepage 'http://tvshowsapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'TvShows.prefpane'
 end

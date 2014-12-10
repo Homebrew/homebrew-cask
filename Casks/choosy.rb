@@ -4,7 +4,7 @@ cask :v1 => 'choosy' do
 
   url "http://downloads.choosyosx.com/choosy_#{version}.zip"
   homepage 'http://www.choosyosx.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'Choosy.prefPane'
 end

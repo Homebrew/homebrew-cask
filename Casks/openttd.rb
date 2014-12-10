@@ -4,7 +4,7 @@ cask :v1 => 'openttd' do
 
   url "http://binaries.openttd.org/releases/#{version}/openttd-#{version}-macosx-universal.zip"
   homepage 'http://openttd.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'OpenTTD.app'
 end

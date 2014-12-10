@@ -5,7 +5,7 @@ cask :v1 => 'massreplaceit' do
 
   url 'http://www.hexmonkeysoftware.com/files/mri.dmg.zip'
   homepage 'http://www.hexmonkeysoftware.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MassReplaceIt.app'
 end

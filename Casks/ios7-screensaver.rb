@@ -4,7 +4,7 @@ cask :v1 => 'ios7-screensaver' do
 
   url 'https://www.weebly.com/uploads/2/5/7/9/25796706/ios_7_lockscreen_by_bodysoulspirit.dmg'
   homepage 'http://bodysoulspirit.weebly.com/ios-7-screensaver-for-mac-os-x-by-bodysoulspirit.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   screen_saver 'Install iOS 7 screensaver.app/Contents/Resources/iOS 7 lockscreen by bodysoulspirit.qtz'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'rescuetime' do
 
   url 'https://www.rescuetime.com/installers/RescueTimeInstaller.dmg'
   homepage 'https://www.rescuetime.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'RescueTime.app'
 end

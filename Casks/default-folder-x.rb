@@ -4,7 +4,7 @@ cask :v1 => 'default-folder-x' do
 
   url "http://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
   homepage 'http://www.stclairsoft.com/DefaultFolderX'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   installer :manual => 'Default Folder X Installer.app'
 

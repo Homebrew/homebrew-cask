@@ -4,7 +4,7 @@ cask :v1 => 'imitone' do
 
   url "http://imitone.com/beta/imitone-#{version}.dmg"
   homepage 'http://imitone.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'imitone.app'
 end

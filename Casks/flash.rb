@@ -4,7 +4,7 @@ cask :v1 => 'flash' do
 
   url "http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_#{version.to_i}_osx_pkg.dmg"
   homepage 'https://www.adobe.com/products/flashplayer/distribution3.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Install Adobe Flash Player.pkg'
 

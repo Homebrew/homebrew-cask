@@ -4,7 +4,7 @@ cask :v1 => 'homestream' do
 
   url "http://homestreamdownload.sony-europe.com/homestream-#{version}-osx.tar.gz"
   homepage 'http://www.sony.co.uk/hub/1237485339460'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Homestream.app'
   app 'Homestream-Console.app'

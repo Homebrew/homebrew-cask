@@ -4,7 +4,7 @@ cask :v1 => 'seamonkey' do
 
   url "https://download.mozilla.org/?product=seamonkey-#{version}&os=osx&lang=en-US"
   homepage 'http://www.seamonkey-project.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SeaMonkey.app'
 end

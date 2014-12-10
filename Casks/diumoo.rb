@@ -4,7 +4,7 @@ cask :v1 => 'diumoo' do
 
   url 'http://share.diumoo.net/static/diumoo.zip'
   homepage 'http://diumoo.net/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'diumoo.app'
 end

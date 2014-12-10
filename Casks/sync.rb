@@ -4,7 +4,7 @@ cask :v1 => 'sync' do
 
   url 'https://www.sync.com/download/apple/Sync.dmg'
   homepage 'https://www.sync.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Sync.app'
 end

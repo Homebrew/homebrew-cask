@@ -6,7 +6,7 @@ cask :v1 => 'concentrate' do
   appcast 'http://getconcentrating.com/concentrate_appcast.xml',
           :sha256 => '8f47c0fb41386b632a27d1e1a5528238be72339932e1035b6ad6a822f263411b'
   homepage 'http://www.getconcentrating.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Concentrate.app'
 

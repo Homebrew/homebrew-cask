@@ -4,7 +4,7 @@ cask :v1 => 'chainsaw' do
 
   url "http://people.apache.org/~sdeboy/apache-chainsaw-#{version}-SNAPSHOT.dmg"
   homepage 'http://logging.apache.org/chainsaw/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Chainsaw.app'
 

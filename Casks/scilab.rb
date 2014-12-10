@@ -4,7 +4,7 @@ cask :v1 => 'scilab' do
 
   url "http://www.scilab.org/download/#{version}/scilab-#{version}-x86_64.dmg"
   homepage 'https://www.scilab.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "scilab-#{version}.app"
 end

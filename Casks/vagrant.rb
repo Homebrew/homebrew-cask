@@ -4,7 +4,7 @@ cask :v1 => 'vagrant' do
 
   url "https://dl.bintray.com/mitchellh/vagrant/vagrant_#{version}.dmg"
   homepage 'http://www.vagrantup.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Vagrant.pkg'
 

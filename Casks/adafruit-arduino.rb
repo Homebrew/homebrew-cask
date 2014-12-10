@@ -4,7 +4,7 @@ cask :v1 => 'adafruit-arduino' do
 
   url "http://adafruit-download.s3.amazonaws.com/Adafruit%20Arduino%20#{version}%20-%20Mac%2011-8-13.zip"
   homepage 'http://adafruit.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "Adafruit Arduino #{version}.app"
 end

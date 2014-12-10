@@ -4,7 +4,7 @@ cask :v1 => 'pastor' do
 
   url "https://mehlau.net/pastor/Pastor#{version.gsub('.','')}-signed.dmg"
   homepage 'http://mehlau.net/pastor'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Pastor.app'
 end

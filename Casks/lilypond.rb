@@ -4,7 +4,7 @@ cask :v1 => 'lilypond' do
 
   url "http://download.linuxaudio.org/lilypond/binaries/darwin-x86/lilypond-#{version}.darwin-x86.tar.bz2"
   homepage 'http://lilypond.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'LilyPond.app'
 end

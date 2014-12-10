@@ -5,7 +5,7 @@ cask :v1 => 'sidplay' do
   url 'http://www.twinbirds.com/sidplay/SIDPLAY4.zip'
   appcast 'http://www.sidmusic.org/sidplay/mac/sidplay_appcast.xml'
   homepage 'http://www.sidmusic.org/sidplay/mac/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SIDPLAY.app'
 end

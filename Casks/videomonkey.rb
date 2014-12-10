@@ -5,7 +5,7 @@ cask :v1 => 'videomonkey' do
   url "http://videomonkey.org/download/videomonkey-#{version}.zip"
   appcast 'http://videomonkey.org/releases/videomonkeycast.xml'
   homepage 'http://videomonkey.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'VideoMonkey.app'
 end

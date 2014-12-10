@@ -4,7 +4,7 @@ cask :v1 => 'mailmate' do
 
   url 'http://dl.mailmate-app.com/MailMate.tbz'
   homepage 'http://freron.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MailMate.app'
   binary 'MailMate.app/Contents/Resources/emate'

@@ -4,7 +4,7 @@ cask :v1 => 'layervault' do
 
   url 'https://client.layervault.com/latest_version'
   homepage 'http://layervault.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'LayerVault.app'
 end

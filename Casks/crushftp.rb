@@ -4,7 +4,7 @@ cask :v1 => 'crushftp' do
 
   url 'https://www.crushftp.com/early7/CrushFTP7_OSX.zip'
   homepage 'https://www.crushftp.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'CrushFTP6_OSX/CrushFTP7.app'
 end

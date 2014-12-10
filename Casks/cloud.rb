@@ -6,7 +6,7 @@ cask :v1 => 'cloud' do
   # todo
   # name 'CloudApp'
   homepage 'http://getcloudapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'CloudApp.app'
 

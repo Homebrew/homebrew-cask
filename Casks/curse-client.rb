@@ -6,7 +6,7 @@ cask :v1 => 'curse-client' do
   appcast 'http://www.curseforge.com/projects/curse-client-osx/sparkle.xml?type=b',
           :sha256 => '380ae573d8a2b44f5148df8821f3cff258b930116f7be86a23f4a0b4259348ec'
   homepage 'http://www.curse.com/client'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Curse Client.app'
 end

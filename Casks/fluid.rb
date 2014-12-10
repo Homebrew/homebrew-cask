@@ -6,7 +6,7 @@ cask :v1 => 'fluid' do
   appcast 'http://fluidapp.com/appcast/fluid1.rss',
           :sha256 => '260c43831d82b9fa593d9f32cca7bc61b594f5993908b104601ed866ee7c518a'
   homepage 'http://fluidapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Fluid.app'
 end

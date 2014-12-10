@@ -4,7 +4,7 @@ cask :v1 => 'ibackup' do
 
   url "http://www.grapefruit.ch/iBackup/versions/iBackup%207.x/iBackup%20#{version}.dmg"
   homepage 'http://www.grapefruit.ch/iBackup'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iBackup.app'
 end

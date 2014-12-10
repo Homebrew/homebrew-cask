@@ -4,7 +4,7 @@ cask :v1 => 'itools' do
 
   url "http://dl2.itools.hk/dl/iTools_#{version}.dmg"
   homepage 'http://pro.itools.cn/mac'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iTools.app'
 end

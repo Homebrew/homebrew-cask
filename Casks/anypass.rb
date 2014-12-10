@@ -4,7 +4,7 @@ cask :v1 => 'anypass' do
 
   url "http://icyblaze.com/anypass/anypass_mac_#{version.sub(%r{^(\d+\.\d+).*},'\1')}.zip"
   homepage 'http://icyblaze.com/anypass'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Anypass.app'
 end

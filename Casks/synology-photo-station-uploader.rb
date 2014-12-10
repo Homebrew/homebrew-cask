@@ -4,7 +4,7 @@ cask :v1 => 'synology-photo-station-uploader' do
 
   url "https://global.download.synology.com/download/Tools/PhotoStationUploader/#{version}/Mac/PhotoStationUploader-#{version}-Mac-Installer.dmg"
   homepage 'http://www.synology.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "PhotoStationUploader-#{version}-Mac-Installer.pkg"
 

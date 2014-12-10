@@ -4,7 +4,7 @@ cask :v1 => 'skydrive' do
 
   url 'http://wl.dlservice.microsoft.com/download/5/6/E/56EAD987-4914-4E8D-A7AD-DF4ADA7E2C5F/SkyDrive.pkg'
   homepage 'http://windows.microsoft.com/en-us/skydrive/download'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'SkyDrive.pkg'
 

@@ -4,7 +4,7 @@ cask :v1 => 'smartsynchronize' do
 
   url "http://www.syntevo.com/download/smartsynchronize/smartsynchronize-macosx-#{version.gsub('.','_')}.dmg"
   homepage 'http://www.syntevo.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "SmartSynchronize.app"
   binary "SmartSynchronize.app/Contents/MacOS/SmartSynchronize"

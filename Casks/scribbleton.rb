@@ -4,7 +4,7 @@ cask :v1 => 'scribbleton' do
 
   url 'http://scribbleton.com/download/mac'
   homepage 'http://scribbleton.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Scribbleton.app'
 end

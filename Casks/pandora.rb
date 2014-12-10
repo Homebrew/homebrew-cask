@@ -4,7 +4,7 @@ cask :v1 => 'pandora' do
 
   url "https://www.pandora.com/static/desktop_app/pandora_#{version.gsub('.','_')}.air"
   homepage 'http://www.pandora.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Pandora.app'
 end

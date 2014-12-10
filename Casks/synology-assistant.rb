@@ -4,7 +4,7 @@ cask :v1 => 'synology-assistant' do
 
   url "https://global.download.synology.com/download/Tools/SynologyAssistant/4448/Mac/Synology-Assistant-#{version}.dmg"
   homepage 'http://www.synology.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Synology Assistant.app'
 end

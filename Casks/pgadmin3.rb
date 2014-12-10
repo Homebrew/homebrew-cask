@@ -7,7 +7,7 @@ cask :v1 => 'pgadmin3' do
   gpg "#{url}.sig",
       :key_id => '96020e041a19643b'
   homepage 'http://pgadmin.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'pgAdmin3.app'
 end

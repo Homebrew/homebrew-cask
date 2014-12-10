@@ -18,5 +18,5 @@ cask :v1 => 'ibank' do
   end
 
   homepage 'http://www.iggsoftware.com/ibank'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 end

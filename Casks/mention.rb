@@ -4,7 +4,7 @@ cask :v1 => 'mention' do
 
   url 'https://en.mention.com/downloads/mac/mention.dmg'
   homepage 'https://en.mention.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Mention.app'
 end

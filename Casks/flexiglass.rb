@@ -5,7 +5,7 @@ cask :v1 => 'flexiglass' do
   url 'http://downloads.nulana.com/flexiglass/Flexiglass.dmg'
   appcast 'http://downloads.nulana.com/flexiglass/appcast.xml'
   homepage 'http://nulana.com/flexiglass/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Flexiglass.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'etrecheck' do
 
   url 'http://www.etresoft.com/download/EtreCheck.zip'
   homepage 'http://www.etresoft.com/etrecheck'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'EtreCheck.app'
 end

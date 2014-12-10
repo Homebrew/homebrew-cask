@@ -4,7 +4,7 @@ cask :v1 => 'phoenix-slides' do
 
   url "http://blyt.net/phxslides/phoenix-slides-#{version.gsub('.','')}.zip"
   homepage 'http://blyt.net/phxslides'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Phoenix Slides.app'
 end

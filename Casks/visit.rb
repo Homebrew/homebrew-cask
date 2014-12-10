@@ -4,7 +4,7 @@ cask :v1 => 'visit' do
 
   url "https://portal.nersc.gov/svn/visit/trunk/releases/#{version}/VisIt-#{version}.dmg"
   homepage 'https://wci.llnl.gov/codes/visit/home.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'VisIt.app'
 end

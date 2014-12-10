@@ -4,7 +4,7 @@ cask :v1 => 'tofu' do
 
   url 'http://amarsagoo.info/tofu/Tofu.dmg'
   homepage 'http://amarsagoo.info/tofu/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Tofu.app'
 end

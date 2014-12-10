@@ -4,7 +4,7 @@ cask :v1 => 'sickbeard' do
 
   url "http://sickbeard.lad1337.de/download.php?f=SickBeard-OSX-master-#{version}.dmg"
   homepage 'http://sickbeard.lad1337.de/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SickBeard.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'rcdefaultapp' do
 
   url "http://www.rubicode.com/Downloads/RCDefaultApp-#{version}.X.dmg"
   homepage 'http://www.rubicode.com/Software/RCDefaultApp/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'RCDefaultApp.prefPane'
 end

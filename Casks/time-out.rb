@@ -10,7 +10,7 @@ cask :v1 => 'time-out' do
 
   url "http://www.dejal.com/download/timeout-#{version}.zip"
   homepage 'http://www.dejal.com/timeout/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Time Out.app'
 end

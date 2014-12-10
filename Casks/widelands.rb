@@ -4,7 +4,7 @@ cask :v1 => 'widelands' do
 
   url 'https://launchpad.net/widelands/build18/build-18/+download/widelands-build18-mac.dmg'
   homepage 'https://wl.widelands.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Widelands.app'
 end

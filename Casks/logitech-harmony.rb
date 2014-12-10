@@ -4,7 +4,7 @@ cask :v1 => 'logitech-harmony' do
 
   url "http://logitech-sjca.navisite.net/web/ftp/pub/techsupport/harmony/LogitechHarmonyRemoteSoftware#{version}-OSX.dmg"
   homepage 'http://www.logitech.com/en-us/support/universal-remotes'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'LogitechRemoteSoftware.pkg'
 

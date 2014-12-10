@@ -6,7 +6,7 @@ cask :v1 => 'texnicle' do
   appcast 'http://www.bobsoft-mac.de/profileInfo.php',
           :sha256 => '700cebec51784f2e6088d51c6ac79a8dbd9a6863415a7806ce7cfed57b2f6e43'
   homepage 'http://www.bobsoft-mac.de/texnicle/texnicle.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'TeXnicle.app'
 end

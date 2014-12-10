@@ -4,7 +4,7 @@ cask :v1 => 'windownaut' do
 
   url 'http://www.binarybakery.com/products/Windownaut.dmg'
   homepage 'http://www.binarybakery.com/aprod/index.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Windownaut.app'
 end

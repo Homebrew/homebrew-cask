@@ -4,7 +4,7 @@ cask :v1 => 'uberpov' do
 
   url "http://megapov.inetart.net/uberpov_mac/downloads/Uberpov_Mac_r#{version.to_i}.zip"
   homepage 'http://megapov.inetart.net/uberpov_mac/index.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Uberpov_Mac/UberPOV.app'
   caveats do

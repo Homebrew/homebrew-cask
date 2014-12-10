@@ -6,7 +6,7 @@ cask :v1 => 'uninstallpkg' do
   appcast 'http://www.corecode.at/uninstallpkg/uninstallpkg.xml',
           :sha256 => '5f5de8cb9ee55d7c96582f7359a41c9530170f589f45bdad5ee3f04dd22c829d'
   homepage 'http://www.corecode.at/uninstallpkg/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'UninstallPKG.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'wondershare-player' do
 
   url 'http://download.wondershare.com/mac-player_full1479.dmg'
   homepage 'http://www.wondershare.com/video-player/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Wondershare Player.app'
 end

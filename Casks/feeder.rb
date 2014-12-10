@@ -6,7 +6,7 @@ cask :v1 => 'feeder' do
   appcast 'http://reinventedsoftware.com/feeder/downloads/Feeder25.xml',
           :sha256 => '059bbc96d95b4d877978460f268730c8013640006696ead0af53221a7b596115'
   homepage 'http://reinventedsoftware.com/feeder/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Feeder.app'
 end

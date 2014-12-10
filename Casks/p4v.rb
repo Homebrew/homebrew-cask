@@ -10,7 +10,7 @@ cask :v1 => 'p4v' do
   end
 
   homepage 'http://www.perforce.com/product/components/perforce-visual-client'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'p4v.app'
   binary 'p4vc'

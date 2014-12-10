@@ -6,7 +6,7 @@ cask :v1 => 'soqlxplorer' do
   appcast 'http://www.pocketsoap.com/osx/soqlx/appcast.xml',
           :sha256 => '16b61d4f11f57698ffb54da8f25c1ca443f3f35606e1e794eca4c12ee6ebabae'
   homepage 'http://www.pocketsoap.com/osx/soqlx/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SoqlXplorer.app'
 end

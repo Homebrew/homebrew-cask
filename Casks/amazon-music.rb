@@ -4,7 +4,7 @@ cask :v1 => 'amazon-music' do
 
   url 'https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/20141015/224318ebff/AmazonMusicInstaller.dmg'
   homepage 'https://www.amazon.com/gp/feature.html/ref=dm_mo_cpw_fb_lm?docId=1001067901'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   installer :manual => 'Amazon Music Installer.app'
 end

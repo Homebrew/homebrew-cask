@@ -4,7 +4,7 @@ cask :v1 => 'evasi0n' do
 
   url 'https://evad3rs.box.com/shared/static/gu7bfneoh85aajgic0xp.dmg'
   homepage 'http://evasi0n.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'evasi0n 7.app'
 end

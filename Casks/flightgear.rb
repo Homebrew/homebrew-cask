@@ -4,7 +4,7 @@ cask :v1 => 'flightgear' do
 
   url "http://ftp.snt.utwente.nl/pub/software/flightgear/ftp/MacOSX/FlightGear-#{version}.dmg"
   homepage 'http://www.flightgear.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'FlightGear.app'
 end

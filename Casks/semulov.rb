@@ -4,7 +4,7 @@ cask :v1 => 'semulov' do
 
   url "http://kainjow.com/downloads/Semulov_#{version}.zip"
   homepage 'http://www.kainjow.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Semulov.app'
 end

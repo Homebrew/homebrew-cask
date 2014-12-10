@@ -4,7 +4,7 @@ cask :v1 => 'coolterm' do
 
   url 'http://freeware.the-meiers.org/CoolTermMac.zip'
   homepage 'http://freeware.the-meiers.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'CoolTermMac/CoolTerm.app'
 end
