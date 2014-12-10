@@ -4,7 +4,7 @@ cask :v1 => 'no-ip-duc' do
 
   url "https://www.noip.com/client/mac/noip#{version}.dmg"
   homepage 'http://www.noip.com/download?page=mac'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'No-IP DUC.app'
 end
