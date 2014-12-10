@@ -4,7 +4,7 @@ cask :v1 => 'nodebox' do
 
   url "https://secure.nodebox.net/downloads/NodeBox-#{version}.zip"
   homepage 'http://nodebox.net/node/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'NodeBox.app'
 end
