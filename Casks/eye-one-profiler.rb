@@ -4,7 +4,7 @@ cask :v1 => 'eye-one-profiler' do
 
   url 'http://www.xrite.com/downloader.aspx?FileID=1455&Type=M&returnurl=%2fi1profiler-i1publish%2fsupport%2fd1455'
   homepage 'http://www.xrite.com/i1profiler-i1publish/support/d1455'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'i1Profiler.pkg'
 
