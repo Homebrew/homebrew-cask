@@ -1,6 +1,6 @@
 cask :v1 => 'eagle' do
-  version '7.1.0'
-  sha256 '95a721bae751ea210fad390c9b414ec5e317332133072f08247b552e125ab2d5'
+  version '7.2.0'
+  sha256 '9cae311072d8be5a16631ce08d9e0653bdc21e336cc90df2463d7df35521ff2a'
 
   url "ftp://ftp.cadsoft.de/eagle/program/#{version.gsub(/\.\d$/, '')}/eagle-mac-#{version}.zip"
   homepage 'http://www.cadsoftusa.com/'
