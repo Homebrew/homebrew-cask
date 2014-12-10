@@ -4,7 +4,7 @@ cask :v1 => 'little-snitch' do
 
   url "http://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
   homepage 'http://www.obdev.at/products/littlesnitch/index.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   installer :manual => 'Little Snitch Installer.app'
 
