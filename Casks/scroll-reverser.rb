@@ -1,6 +1,6 @@
 cask :v1 => 'scroll-reverser' do
 
-  if MacOS.version <= :snow_leopard
+  if MacOS.release <= :snow_leopard
     version '1.5.1'
     sha256 '7d31ac1f2a2fbdc06db200da0aeb6ce7fea9ffff712b70ddffbfb769d4fd0f25'
   else
