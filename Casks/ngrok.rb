@@ -4,7 +4,7 @@ cask :v1 => 'ngrok' do
 
   url 'https://dl.ngrok.com/darwin_amd64/ngrok.zip'
   homepage 'https://ngrok.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   binary 'ngrok'
 
