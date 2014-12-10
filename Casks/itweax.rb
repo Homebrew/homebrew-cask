@@ -4,7 +4,7 @@ cask :v1 => 'itweax' do
 
   url 'http://www.itweax.net/itweax.dmg'
   homepage 'http://www.itweax.net/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iTweaX.app'
 end
