@@ -5,7 +5,7 @@ cask :v1 => 'wasted' do
   url 'http://wasted.werk01.de/Wasted.zip'
   appcast 'http://wasted.werk01.de/appcast.xml'
   homepage 'http://wasted.werk01.de'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Wasted.app'
 end
