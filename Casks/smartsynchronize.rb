@@ -3,7 +3,7 @@ cask :v1 => 'smartsynchronize' do
   sha256 'f7d30bae37c835ea208ff60b5b99c2668e3406c06f1321862495a425a9389322'
 
   url "http://www.syntevo.com/download/smartsynchronize/smartsynchronize-macosx-#{version.gsub('.','_')}.dmg"
-  homepage 'http://www.syntevo.com'
+  homepage 'http://www.syntevo.com/smartsynchronize/'
   license :unknown    # todo: improve this machine-generated value
 
   app "SmartSynchronize.app"
