@@ -4,7 +4,7 @@ cask :v1 => 'yummy-ftp' do
 
   url 'http://www.yummysoftware.com/downloads/YummyFTP.zip'
   homepage 'http://www.yummysoftware.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Yummy FTP.app'
 end
