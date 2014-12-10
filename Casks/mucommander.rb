@@ -4,7 +4,7 @@ cask :v1 => 'mucommander' do
 
   url "http://www.mucommander.com/download/mucommander-#{version.gsub('.','_')}.dmg"
   homepage 'http://www.mucommander.com/index.php'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'muCommander.app'
 end
