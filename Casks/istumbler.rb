@@ -11,7 +11,7 @@ cask :v1 => 'istumbler' do
   end
 
   homepage 'http://istumbler.net/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iStumbler.app'
 end
