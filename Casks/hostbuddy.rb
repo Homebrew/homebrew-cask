@@ -5,7 +5,7 @@ cask :v1 => 'hostbuddy' do
   url 'https://clickontyler.com/hostbuddy/download/'
   appcast 'http://shine.clickontyler.com/appcast.php?id=22'
   homepage 'http://clickontyler.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Hostbuddy.app'
 end
