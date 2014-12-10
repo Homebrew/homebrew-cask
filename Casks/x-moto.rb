@@ -4,7 +4,7 @@ cask :v1 => 'x-moto' do
 
   url "http://download.tuxfamily.org/xmoto/xmoto/#{version}/xmoto-#{version}-macosx.zip"
   homepage 'http://xmoto.tuxfamily.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'X-Moto.app'
 end
