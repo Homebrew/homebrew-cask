@@ -4,7 +4,7 @@ cask :v1 => 'pokertracker' do
 
   url "http://s3-us1.ptrackupdate.com/releases/PT-Install-v#{version}.dmg"
   homepage 'https://www.pokertracker.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'PokerTracker 4.app'
 end
