@@ -4,7 +4,7 @@ cask :v1 => 'logitech-unifying' do
 
   url "http://www.logitech.com/pub/controldevices/unifying/unifying#{version}.dmg"
   homepage 'http://www.logitech.com/en-us/promotions/6072'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Logitech Unifying Software.mpkg'
 
