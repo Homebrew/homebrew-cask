@@ -6,7 +6,7 @@ cask :v1 => 'kiwi' do
   appcast 'http://yourhead.com/appcast/kiwi/appcast.xml',
           :sha256 => '349fab8b17b13487dbe180cf09b3a621a3e1999a1551c105764d7502066490f4'
   homepage 'http://kiwi-app.net/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Kiwi.app'
 end
