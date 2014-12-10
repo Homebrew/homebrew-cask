@@ -4,7 +4,7 @@ cask :v1 => 'stockbarjp' do
 
   url 'http://midnightsuyama.org/download/StockBarJP.zip'
   homepage 'http://midnightsuyama.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'StockBarJP.app'
 end
