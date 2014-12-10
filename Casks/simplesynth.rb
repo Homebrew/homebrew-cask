@@ -4,7 +4,7 @@ cask :v1 => 'simplesynth' do
 
   url "https://s3.amazonaws.com/notahat/SimpleSynth-#{version}.zip"
   homepage 'http://notahat.com/simplesynth/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SimpleSynth.app'
 end
