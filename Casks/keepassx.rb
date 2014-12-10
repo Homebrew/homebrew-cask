@@ -4,7 +4,7 @@ cask :v1 => 'keepassx' do
 
   url "https://www.keepassx.org/dev/attachments/download/72/KeePassX-#{version}.dmg"
   homepage 'http://www.keepassx.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'KeePassX.app'
 
