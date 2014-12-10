@@ -4,7 +4,7 @@ cask :v1 => 'sqlite-professional' do
 
   url "https://www.sqlitepro.com/versions/SQLitePro#{version}.zip"
   homepage 'https://www.sqlitepro.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SQLite Professional.app'
 end
