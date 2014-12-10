@@ -6,7 +6,7 @@ cask :v1 => 'gamesalad' do
   appcast 'http://gamesalad.com/download/studioUpdates',
           :sha256 => '8e036d02694dfc8e84a00aec29ae6306ab0e469a66e29514d3599e874200b355'
   homepage 'http://gamesalad.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'GameSalad.app'
 end
