@@ -5,7 +5,7 @@ cask :v1 => 'punto-switcher' do
   # yandex.net is the official download host per the vendor homepage
   url 'http://cache-default02d.cdn.yandex.net/download.cdn.yandex.net/punto/mac/PuntoSwitcher.zip'
   homepage 'http://punto.yandex.ru'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'PuntoSwitcher Installer.pkg'
 
