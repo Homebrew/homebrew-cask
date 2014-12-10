@@ -1,6 +1,6 @@
 cask :v1 => 'instacast' do
-  version '1.2.6-2380'
-  sha256 '560922bd0ccc7ebab002035d80ae4e630d6f30fde7eebacb7dff616e633a1a4d'
+  version '2.0-2663'
+  sha256 '1e230737fa756cf216afa28793bb2b43fb4987ba08b1d30b106f610ea075052e'
 
   url "http://assets.vemedio.com/software/instacast/Instacast-#{version}.dmg"
   homepage 'http://vemedio.com/products/instacast-mac'
