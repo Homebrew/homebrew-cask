@@ -4,7 +4,7 @@ cask :v1 => 'triumph' do
 
   url 'http://www.audiofile-engineering.com/triumph/download/Triumph.dmg'
   homepage 'http://www.audiofile-engineering.com/triumph/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Triumph.app'
   app 'Triumph.app/Contents/Applications/DDP Player.app'
