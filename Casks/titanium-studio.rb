@@ -4,7 +4,7 @@ cask :v1 => 'titanium-studio' do
 
   url 'https://titanium-studio.s3.amazonaws.com/latest/Titanium_Studio.dmg'
   homepage 'https://my.appcelerator.com/resources'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   installer :manual => 'Titanium Studio.app'
 end
