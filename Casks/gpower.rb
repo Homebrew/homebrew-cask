@@ -4,7 +4,7 @@ cask :v1 => 'gpower' do
 
   url "http://www.gpower.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPowerMac_#{version}.zip"
   homepage 'http://www.gpower.hhu.de/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'G*Power.app'
 end
