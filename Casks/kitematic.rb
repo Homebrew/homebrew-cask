@@ -4,7 +4,7 @@ cask :v1 => 'kitematic' do
 
   url "https://github.com/kitematic/kitematic/releases/download/v#{version}/Kitematic-#{version}.zip"
   homepage 'https://kitematic.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Kitematic.app'
 end
