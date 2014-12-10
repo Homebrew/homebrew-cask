@@ -6,7 +6,7 @@ cask :v1 => 'fantastical' do
   appcast 'https://flexibits.com/fantastical/appcast.php',
           :sha256 => '3d789ff8dd91c8ebc1b63d2811ec17e0a950433b03605d8c10eef010733cf79a'
   homepage 'http://flexibits.com/fantastical'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Fantastical.app'
 
