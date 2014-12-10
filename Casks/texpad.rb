@@ -6,7 +6,7 @@ cask :v1 => 'texpad' do
   appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml',
           :sha256 => 'a8522a4533df93fbf9d50489aa5f1c91bb01916faebd81ee20f56ea96dad8d97'
   homepage 'https://www.texpadapp.com/osx'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Texpad.app'
 end
