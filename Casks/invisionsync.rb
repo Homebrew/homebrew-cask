@@ -4,7 +4,7 @@ cask :v1 => 'invisionsync' do
 
   url 'http://www.invisionapp.com/app/InVisionSync.zip'
   homepage 'http://invisionapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'InVisionSync.app'
 end
