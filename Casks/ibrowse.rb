@@ -4,7 +4,7 @@ cask :v1 => 'ibrowse' do
 
   url "http://cdn.macroplant.com/release/iBrowse-#{version}x.dmg"
   homepage 'http://www.ibrowseapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iBrowse.app'
 end
