@@ -4,7 +4,7 @@ cask :v1 => 'rtx' do
 
   url 'http://www.rtxapp.com/download'
   homepage 'http://www.rtxapp.com/mac/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'RTX.app'
 end
