@@ -4,7 +4,7 @@ cask :v1 => 'gimp' do
 
   url "http://download.gimp.org/pub/gimp/v2.8/osx/gimp-#{version}.dmg"
   homepage 'http://www.gimp.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'GIMP.app'
 end
