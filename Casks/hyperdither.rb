@@ -4,7 +4,7 @@ cask :v1 => 'hyperdither' do
 
   url 'http://www.tinrocket.com/wp-content/plugins/download-monitor/download.php?id=1'
   homepage 'http://www.tinrocket.com/hyperdither/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "HyperDither #{version}/HyperDither.app"
 end
