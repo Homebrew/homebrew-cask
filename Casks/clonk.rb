@@ -4,7 +4,7 @@ cask :v1 => 'clonk' do
 
   url 'http://www.clonkx.de/rage/cr_full_mac.zip'
   homepage 'http://www.clonk.de/cr.php'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Clonk.app'
 end
