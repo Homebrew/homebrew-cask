@@ -4,7 +4,7 @@ cask :v1 => 'textadept' do
 
   url "http://foicica.com/textadept/download/textadept_#{version}.osx.zip"
   homepage 'http://foicica.com/textadept/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "textadept_#{version}.osx/Textadept.app"
 end
