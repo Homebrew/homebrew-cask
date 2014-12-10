@@ -12,7 +12,7 @@ cask :v1 => 'daisydisk' do
 
   appcast 'http://www.daisydiskapp.com/downloads/appcastFeed.php'
   homepage 'http://www.daisydiskapp.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'DaisyDisk.app'
 
