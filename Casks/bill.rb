@@ -4,7 +4,7 @@ cask :v1 => 'bill' do
 
   url 'http://myownapp.com/downloads/Bill.zip'
   homepage 'http://billtheapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Bill.app'
 end
