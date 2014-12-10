@@ -4,7 +4,7 @@ cask :v1 => 'retinacapture' do
 
   url 'http://www.retinacapture.com/files/RetinaCapture.zip'
   homepage 'http://www.retinacapture.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'RetinaCapture.app'
 end
