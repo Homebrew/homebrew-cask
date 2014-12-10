@@ -4,7 +4,7 @@ cask :v1 => 'invisorql' do
 
   url 'http://www.pozdeev.com/invisor/InvisorQL.zip'
   homepage 'http://www.pozdeev.com/invisor/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   qlplugin 'InvisorQL.qlgenerator'
 end
