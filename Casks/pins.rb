@@ -5,7 +5,7 @@ cask :v1 => 'pins' do
   url 'http://pinsapp.com/download/Pins.dmg'
   appcast 'http://pinsapp.com/appcast.xml'
   homepage 'http://pinsapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Pins.app'
 end
