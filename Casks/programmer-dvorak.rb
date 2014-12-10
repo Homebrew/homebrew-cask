@@ -4,7 +4,7 @@ cask :v1 => 'programmer-dvorak' do
 
   url "http://www.kaufmann.no/downloads/macos/ProgrammerDvorak-#{version.gsub('.','_')}.pkg.zip"
   homepage 'http://kaufmann.no/roland/dvorak/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Programmer Dvorak v1.2.pkg'
 
