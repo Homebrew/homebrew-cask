@@ -4,7 +4,7 @@ cask :v1 => 'manager' do
 
   url "http://cdn.manager.io/downloads/v#{version}/Manager.dmg"
   homepage 'http://manager.io'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Manager.app'
 end
