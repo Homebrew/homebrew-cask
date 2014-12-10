@@ -4,7 +4,7 @@ cask :v1 => 'amazon-zocalo' do
 
   url 'https://dpfrknqwmbop6.cloudfront.net/mac/Amazon%20Zocalo.pkg'
   homepage 'http://aws.amazon.com/zocalo/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Amazon Zocalo.pkg'
 
