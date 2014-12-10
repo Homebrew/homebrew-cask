@@ -4,7 +4,7 @@ cask :v1 => 'gifzo' do
 
   url 'http://gifzo.net/Gifzo.zip'
   homepage 'http://gifzo.net'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Gifzo.app'
 end
