@@ -6,7 +6,7 @@ cask :v1 => 'paparazzi' do
   appcast 'https://derailer.org/paparazzi/appcast/',
           :sha256 => '05c4173db7a34788c01999a5c20d5d9dcede3d4cf981cc2268fc24c195b38efe'
   homepage 'http://derailer.org/paparazzi/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Paparazzi!.app'
 end
