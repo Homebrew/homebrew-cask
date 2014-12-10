@@ -4,7 +4,7 @@ cask :v1 => 'pixi-paint' do
 
   url 'http://0.pixiecdn.com/PixiePaint-osx.zip'
   homepage 'http://www.danielx.net/pixel-editor/docs/download'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Pixi Paint/Pixi Paint.app'
 end
