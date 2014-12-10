@@ -4,7 +4,7 @@ cask :v1 => 'insomniax' do
 
   url "http://insomniax.semaja2.net/InsomniaX-#{version}.tgz"
   homepage 'http://semaja2.net/projects/insomniaxinfo/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'InsomniaX.app'
 end
