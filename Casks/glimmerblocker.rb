@@ -4,7 +4,7 @@ cask :v1 => 'glimmerblocker' do
 
   url "http://glimmerblocker.org/downloads/GlimmerBlocker-#{version}.dmg"
   homepage 'http://glimmerblocker.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'GlimmerBlocker.pkg'
 
