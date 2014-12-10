@@ -4,7 +4,7 @@ cask :v1 => 'levelator' do
 
   url "http://cdn.conversationsnetwork.org/Levelator-#{version}.dmg"
   homepage 'http://www.conversationsnetwork.org/levelator/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Levelator.app'
 end
