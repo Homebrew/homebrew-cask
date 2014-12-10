@@ -4,7 +4,7 @@ cask :v1 => 'petite-chez-scheme' do
 
   url "http://www.scheme.com/download/pcsv#{version}-ta6osx-1.pkg.tar.gz"
   homepage 'http://www.scheme.com/petitechezscheme.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "pcsv#{version}-ta6osx-1.pkg"
 
