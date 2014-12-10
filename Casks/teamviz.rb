@@ -4,7 +4,7 @@ cask :v1 => 'teamviz' do
 
   url "http://www.teamviz.com/d/TeamViz.#{version}.dmg"
   homepage 'http://www.teamviz.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'TeamViz.app'
 end
