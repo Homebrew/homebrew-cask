@@ -5,7 +5,7 @@ cask :v1 => 'youview' do
   url 'http://download.mrgeckosmedia.com/YouView.zip'
   appcast 'http://mrgeckosmedia.com/applications/appcast/YouView'
   homepage 'https://mrgeckosmedia.com/applications/info/YouView'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'YouView/YouView.app'
 end
