@@ -4,7 +4,7 @@ cask :v1 => 'openvanilla' do
 
   url "https://app.openvanilla.org/file/openvanilla/OpenVanilla-Installer-Mac-#{version}.zip"
   homepage 'http://openvanilla.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   input_method 'OpenVanillaInstaller.app/Contents/Resources/OpenVanilla.app'
   caveats do
