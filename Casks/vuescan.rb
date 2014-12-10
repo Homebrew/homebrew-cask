@@ -10,7 +10,7 @@ cask :v1 => 'vuescan' do
   end
 
   homepage 'http://www.hamrick.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'VueScan.app'
 end
