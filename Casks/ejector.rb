@@ -4,7 +4,7 @@ cask :v1 => 'ejector' do
 
   url "http://www.jeb.com.fr/soft/Ejector-v#{version}.dmg"
   homepage 'http://www.jeb.com.fr/en/ejector.shtml'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Ejector.app'
 end
