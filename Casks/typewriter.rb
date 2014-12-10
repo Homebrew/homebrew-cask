@@ -4,7 +4,7 @@ cask :v1 => 'typewriter' do
 
   url 'http://llllll.li/typewriter/download/Typewriter.zip'
   homepage 'http://llllll.li/typewriter'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Typewriter.app'
 end
