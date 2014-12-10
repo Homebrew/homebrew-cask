@@ -4,7 +4,7 @@ cask :v1 => 'catchmouse' do
 
   url 'http://ftnew.com/files/CatchMouse.zip'
   homepage 'http://ftnew.com/catchmouse.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'CatchMouse.app'
 end
