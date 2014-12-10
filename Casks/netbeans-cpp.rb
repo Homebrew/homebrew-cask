@@ -4,7 +4,7 @@ cask :v1 => 'netbeans-cpp' do
 
   url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-cpp-macosx.dmg"
   homepage 'https://netbeans.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "NetBeans #{version}.mpkg"
 
