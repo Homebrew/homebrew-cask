@@ -6,7 +6,7 @@ cask :v1 => 'iphoney' do
   appcast 'http://www.marketcircle.com/iphoney/iPhoneyAppcast.xml',
           :sha256 => '6a02ab8aa71ab8c6dad67545d6f60c1e74c5a86688bdb5c3600b27f7c04c3edf'
   homepage 'https://www.marketcircle.com/iphoney'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iPhoney.app'
 end
