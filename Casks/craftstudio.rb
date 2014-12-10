@@ -4,7 +4,7 @@ cask :v1 => 'craftstudio' do
 
   url 'http://craftstud.io/files/OSX/CraftStudio.pkg'
   homepage 'http://craftstud.io'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'CraftStudio.pkg'
 
