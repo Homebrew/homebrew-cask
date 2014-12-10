@@ -4,7 +4,7 @@ cask :v1 => 'sixtyforce' do
 
   url 'http://sixtyforce.com/download/sixtyforce.zip'
   homepage 'http://sixtyforce.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'sixtyforce.app'
 end
