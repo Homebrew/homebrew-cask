@@ -4,7 +4,7 @@ cask :v1 => 'spillo' do
 
   url "http://bananafishsoftware.com/software/spillo/app/spillo-#{version}.zip"
   homepage 'http://bananafishsoftware.com/products/spillo/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Spillo.app'
 end
