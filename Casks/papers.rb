@@ -5,7 +5,7 @@ cask :v1 => 'papers' do
   url 'http://papersapp.com/papers/download'
   appcast 'http://www.papersapp.com/papers/appcast_v3.xml'
   homepage 'http://www.papersapp.com/papers/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Papers.app'
 end
