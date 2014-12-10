@@ -5,7 +5,7 @@ cask :v1 => 'swinsian' do
   url 'https://swinsian.com/sparkle/Swinsian.zip'
   appcast 'http://www.swinsian.com/sparkle/sparklecast.xml'
   homepage 'http://swinsian.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Swinsian.app'
 end
