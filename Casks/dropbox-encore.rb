@@ -4,7 +4,7 @@ cask :v1 => 'dropbox-encore' do
 
   url "http://www.joyofmacs.com/downloads/DropboxEncore#{version}.dmg"
   homepage 'http://www.joyofmacs.com/software/dropboxencore/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Dropbox Encore.app'
 end
