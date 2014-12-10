@@ -6,7 +6,7 @@ cask :v1 => 'propresenter' do
   appcast 'https://www.renewedvision.com/update/ProPresenter5.php',
           :sha256 => 'f70029136ad0273f64bdbe6eff1d838e18dba1a1e0c3fe6e85c88909fe4cbf64'
   homepage 'http://www.renewedvision.com/propresenter.php'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ProPresenter 5.app'
 end
