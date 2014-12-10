@@ -18,7 +18,7 @@ cask :v1 => 'git-annex' do
   gpg "#{url}.sig",
       :key_url => 'https://downloads.kitenet.net/git-annex/gpg-pubkey.asc'
   homepage 'http://git-annex.branchable.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'git-annex.app'
   binary 'git-annex.app/Contents/MacOS/git-annex'
