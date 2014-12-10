@@ -4,7 +4,7 @@ cask :v1 => 'web-sharing' do
 
   url 'https://clickontyler.com/web-sharing/download/'
   homepage 'http://clickontyler.com/web-sharing/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'Web Sharing.prefPane'
 end
