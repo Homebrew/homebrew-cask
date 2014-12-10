@@ -8,9 +8,8 @@ cask :v1 => 'cdock' do
 
   app 'cDock.app'
 
-  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} requires easysimbl, available via
+    #{token} requires easysimbl, available via
 
       brew cask install easysimbl
   EOS
