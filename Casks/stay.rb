@@ -6,7 +6,7 @@ cask :v1 => 'stay' do
   appcast 'http://cordlessdog.com/stay/appcast.xml',
           :sha256 => '43ace797403b9b44186e2f37c76912e3e18a45334ad4462577aa037e886ebd6c'
   homepage 'http://cordlessdog.com/stay/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Stay.app'
 end
