@@ -4,7 +4,7 @@ cask :v1 => 'webstorm' do
 
   url "http://download-cf.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
   homepage 'http://www.jetbrains.com/webstorm/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'WebStorm.app'
 
