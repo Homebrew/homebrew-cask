@@ -4,7 +4,7 @@ cask :v1 => 'sketch-toolbox' do
 
   url 'http://sketchtoolbox.com/Sketch%20Toolbox.zip'
   homepage 'http://sketchtoolbox.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Sketch Toolbox.app'
 end
