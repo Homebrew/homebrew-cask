@@ -5,7 +5,7 @@ cask :v1 => 'flavours' do
   url 'http://flavours-updates.interacto.net/Flavours.dmg'
   appcast 'http://flavours-updates.interacto.net/appcast.xml'
   homepage 'http://flavours.interacto.net/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Flavours.app'
 
