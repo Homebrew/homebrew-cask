@@ -4,7 +4,7 @@ cask :v1 => 'qrq' do
 
   url "http://fkurz.net/ham/qrq/qrq-#{version}.dmg"
   homepage 'http://fkurz.net/ham/qrq.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'qrq.app'
 end
