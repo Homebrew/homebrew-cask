@@ -4,7 +4,7 @@ cask :v1 => 'shadowsweeper' do
 
   url 'https://www.irradiatedsoftware.com/download/ShadowSweeper.zip'
   homepage 'http://www.irradiatedsoftware.com/labs/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ShadowSweeper.app'
 end
