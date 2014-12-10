@@ -4,7 +4,7 @@ cask :v1 => 'opacity' do
 
   url 'http://downloads.likethought.com/opacity.zip'
   homepage 'http://likethought.com/opacity/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Opacity.app'
 end
