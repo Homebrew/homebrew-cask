@@ -5,7 +5,7 @@ cask :v1 => 'managenameext' do
   # free.fr is the official download host per the vendor homepage
   url 'http://tom.25.free.fr/site/programmes/xojo/ManageNameExt_c.zip'
   homepage 'http://throb.pagesperso-orange.fr/site/ind_JS.html?Prg_S.html&Prg_AutresRB.html#ManageNameExt'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ManageNameExt.app'
 end
