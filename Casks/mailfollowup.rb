@@ -4,7 +4,7 @@ cask :v1 => 'mailfollowup' do
 
   url "https://www.cs.unc.edu/~welch/MailFollowup/media/MailFollowUp_#{version}.dmg.zip"
   homepage 'http://www.cs.unc.edu/~welch/MailFollowup/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   container :nested => "MailFollowUp_#{version}.dmg"
   pkg 'Install MailFollowUp.pkg'
