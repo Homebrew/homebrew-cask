@@ -4,7 +4,7 @@ cask :v1 => 'android-studio-bundle' do
 
   url 'https://dl.google.com/dl/android/studio/ide-zips/0.8.14/android-studio-ide-135.1538390-mac.zip'
   homepage 'http://developer.android.com/sdk/installing/studio.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Android Studio.app'
 
