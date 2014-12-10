@@ -6,7 +6,7 @@ cask :v1 => 'sequential' do
   appcast 'http://www.sequentialx.com/sequential.xml',
           :sha256 => '447db3c7237bdd750ad128556b1d3ff6f3f3c26f8c2bd0131b9993b5365f7d6b'
   homepage 'http://sequentialx.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Sequential.app'
 end
