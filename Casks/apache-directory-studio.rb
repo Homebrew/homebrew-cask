@@ -4,7 +4,7 @@ cask :v1 => 'apache-directory-studio' do
 
   url "http://mirrors.sonic.net/apache/directory/studio/dist/#{version}/ApacheDirectoryStudio-macosx-x86_64-#{version}.dmg"
   homepage 'http://directory.apache.org/studio/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Apache Directory Studio.app'
 
