@@ -4,7 +4,7 @@ cask :v1 => 'simpless' do
 
   url "http://wearekiss.com/files/SimpLESS-#{version}-mac.zip"
   homepage 'http://wearekiss.com/simpless'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SimpLESS.app'
 end
