@@ -6,7 +6,7 @@ cask :v1 => 'hermes' do
   appcast 'http://hermesapp.org/versions.xml',
           :sha256 => '2fddeaa4e839650ce49be65b8cac2b9fb5906f641a63b4ee7960ca0570efc79d'
   homepage 'http://hermesapp.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Hermes.app'
 end
