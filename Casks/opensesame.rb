@@ -11,7 +11,7 @@ cask :v1 => 'opensesame' do
   end
 
   homepage 'http://osdoc.cogsci.nl/'
-  license :unknown    # todo: improve this machine-generated value
+  license :gpl
 
   app 'opensesame.app'
 end
