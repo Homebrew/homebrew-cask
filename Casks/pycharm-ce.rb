@@ -4,7 +4,7 @@ cask :v1 => 'pycharm-ce' do
 
   url "https://download.jetbrains.com/python/pycharm-community-#{version}.dmg"
   homepage 'http://www.jetbrains.com/pycharm'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'PyCharm CE.app'
 
