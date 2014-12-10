@@ -4,7 +4,7 @@ cask :v1 => 'gridwars' do
 
   url 'http://gridwars.marune.de/bin/gridwars_osx_x86.zip'
   homepage 'http://gridwars.marune.de/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'gridwars_osx_x86/gridwars.app'
 end
