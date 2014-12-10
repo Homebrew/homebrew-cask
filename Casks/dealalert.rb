@@ -5,7 +5,7 @@ cask :v1 => 'dealalert' do
   url 'http://littlefin.com/downloads/dealalert.zip'
   appcast 'http://www.littlefin.com/downloads/dealalert.xml'
   homepage 'http://dealalertapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'DealAlert.app'
 end
