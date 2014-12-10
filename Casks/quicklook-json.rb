@@ -4,7 +4,7 @@ cask :v1 => 'quicklook-json' do
 
   url 'http://www.sagtau.com/media/QuickLookJSON.qlgenerator.zip'
   homepage 'http://www.sagtau.com/quicklookjson.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   qlplugin 'QuickLookJSON.qlgenerator'
 end
