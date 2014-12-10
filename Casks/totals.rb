@@ -4,7 +4,7 @@ cask :v1 => 'totals' do
 
   url "http://www.kedisoft.com/dl/totals/Totals-#{version}.dmg"
   homepage 'http://www.kedisoft.com/totals/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Totals.app'
 end
