@@ -4,7 +4,7 @@ cask :v1 => 'psequel' do
 
   url 'http://www.psequel.com/download'
   homepage 'http://www.psequel.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'PSequel.app'
 end
