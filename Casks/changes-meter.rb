@@ -4,7 +4,7 @@ cask :v1 => 'changes-meter' do
 
   url 'http://intuiware.com/downloads/changes-meter'
   homepage 'http://intuiware.com/apps/changes-meter'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Changes Meter.app'
   postflight do
