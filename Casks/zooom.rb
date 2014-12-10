@@ -4,7 +4,7 @@ cask :v1 => 'zooom' do
 
   url 'http://software.coderage-software.com/zooom/Zooom_Latest.dmg'
   homepage 'http://coderage-software.com/zooom'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Zooom2.pkg'
 
