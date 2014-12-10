@@ -4,7 +4,7 @@ cask :v1 => 'steermouse' do
 
   url "http://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
   homepage 'http://plentycom.jp/en/steermouse/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'SteerMouse Installer.app/Contents/Resources/SteerMouse.pkg'
 
