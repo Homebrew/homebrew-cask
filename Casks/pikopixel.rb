@@ -4,7 +4,7 @@ cask :v1 => 'pikopixel' do
 
   url "http://twilightedge.com/downloads/PikoPixel#{version}.dmg"
   homepage 'http://twilightedge.com/mac/pikopixel/index.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'PikoPixel.app'
 end
