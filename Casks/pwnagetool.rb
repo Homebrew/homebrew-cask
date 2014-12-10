@@ -6,7 +6,7 @@ cask :v1 => 'pwnagetool' do
   appcast 'http://www.iphone-dev.org/appcast/PwnageTool2.xml',
           :sha256 => '83d334e863f2a0ab58615cbc03805b9ed6a83daf496c0ce315285fbe635e35ce'
   homepage 'http://blog.iphone-dev.org/tagged/PwnageTool'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'PwnageTool.app'
 end
