@@ -5,7 +5,7 @@ cask :v1 => 'anxiety' do
   url 'http://www.anxietyapp.com/Anxiety.zip'
   appcast 'http://www.anxietyapp.com/appcast/appcast.xml'
   homepage 'http://www.anxietyapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   container :nested => 'Anxiety.dmg'
   app 'Anxiety.app'
