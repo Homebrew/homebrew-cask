@@ -4,7 +4,7 @@ cask :v1 => 'leap-motion' do
 
   url 'https://warehouse.leapmotion.com/apps/3791/download'
   homepage 'https://www.leapmotion.com/setup'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Leap Motion.pkg'
 
