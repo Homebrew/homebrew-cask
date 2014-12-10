@@ -4,7 +4,7 @@ cask :v1 => 'amadeus-pro' do
 
   url 'https://s3.amazonaws.com/AmadeusPro2/AmadeusPro.dmg'
   homepage 'http://www.hairersoft.com/pro.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Amadeus Pro.app'
 end
