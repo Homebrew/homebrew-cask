@@ -6,7 +6,7 @@ cask :v1 => 'testflight' do
   appcast 'https://testflightapp.com/appcast.xml',
           :sha256 => 'a83cbdaafed7a635f71dfed9717e76f323a8f0c1f91deb3918e37d6d4dc88bdc'
   homepage 'http://testflightapp.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'TestFlight.app'
 end
