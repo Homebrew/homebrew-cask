@@ -4,7 +4,7 @@ cask :v1 => 'clarify' do
 
   url 'http://www.clarify-it.com/download/mac/Clarify.dmg'
   homepage 'http://www.clarify-it.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :commercial
 
   app 'Clarify.app'
 end
