@@ -4,7 +4,7 @@ cask :v1 => 'race-for-the-galaxy' do
 
   url "http://keldon.net/rftg/rftg-osx-#{version}.zip"
   homepage 'http://keldon.net/rftg/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Race for the Galaxy.app'
 end
