@@ -4,7 +4,7 @@ cask :v1 => 'scala-ide' do
 
   url "http://downloads.typesafe.com/scalaide-pack/#{version}.vfinal-210-20140327/scala-SDK-#{version}-2.10-macosx.cocoa.x86_64.zip"
   homepage 'http://scala-ide.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Also renamed to avoid conflict with other eclipse Casks.
