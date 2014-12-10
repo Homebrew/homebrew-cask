@@ -4,7 +4,7 @@ cask :v1 => 'xamarin' do
 
   url 'http://download.xamarin.com/Installer/Mac/XamarinInstaller.dmg'
   homepage 'http://xamarin.com/platform'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   installer :manual => 'Install Xamarin.app'
 
