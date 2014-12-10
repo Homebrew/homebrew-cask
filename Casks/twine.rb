@@ -4,7 +4,7 @@ cask :v1 => 'twine' do
 
   url "http://twinery.org/downloads/twine_#{version}_osx.zip"
   homepage 'http://twinery.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Twine.app'
 end
