@@ -4,7 +4,7 @@ cask :v1 => 'eagle' do
 
   url "ftp://ftp.cadsoft.de/eagle/program/#{version.gsub(/\.\d$/, '')}/eagle-mac-#{version}.zip"
   homepage 'http://www.cadsoftusa.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "eagle-#{version}.pkg"
 
