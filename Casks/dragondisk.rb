@@ -4,7 +4,7 @@ cask :v1 => 'dragondisk' do
 
   url "http://download.dragondisk.com/DragonDisk-#{version}.dmg"
   homepage 'http://www.dragondisk.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'dragondisk.app'
 end
