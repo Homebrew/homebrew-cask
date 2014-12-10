@@ -6,7 +6,7 @@ cask :v1 => 'macgdbp' do
   appcast 'https://www.bluestatic.org/versioncast.php/macgdbp',
           :sha256 => '5c1c3548e8e993df1bd38d0d0c5149e8e4312566da858bbfdbbe83ca93793048'
   homepage 'https://www.bluestatic.org/software/macgdbp/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MacGDBp.app'
 end
