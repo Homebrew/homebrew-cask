@@ -5,7 +5,7 @@ cask :v1 => 'spotifree' do
   url 'http://spotifree.gordinskiy.com/files/Spotifree.dmg'
   appcast 'http://spotifree.gordinskiy.com/appcast.xml'
   homepage 'http://spotifree.gordinskiy.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Spotifree.app'
 end
