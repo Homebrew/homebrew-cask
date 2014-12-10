@@ -5,7 +5,7 @@ cask :v1 => 'name-mangler' do
   url 'http://manytricks.com/download/namemangler'
   appcast 'http://manytricks.com/namemangler/appcast.xml'
   homepage 'http://manytricks.com/namemangler/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Name Mangler.app'
 end
