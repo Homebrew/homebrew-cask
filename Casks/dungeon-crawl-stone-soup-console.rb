@@ -4,7 +4,7 @@ cask :v1 => 'dungeon-crawl-stone-soup-console' do
 
   url "https://crawl.develz.org/release/stone_soup-#{version}-console-macosx.zip"
   homepage 'http://crawl.develz.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Dungeon Crawl Stone Soup - Console.app'
 end
