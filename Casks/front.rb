@@ -4,7 +4,7 @@ cask :v1 => 'front' do
 
   url 'http://dl.frontapp.com/front-latest.zip'
   homepage 'https://frontapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Front.app'
 end
