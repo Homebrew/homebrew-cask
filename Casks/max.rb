@@ -6,7 +6,7 @@ cask :v1 => 'max' do
   appcast 'http://sbooth.org/Max/appcast.xml',
           :sha256 => 'd390d6c0b308d5957faf57a05b90960ab602101adb9b80bd61f5948663d6e892'
   homepage 'http://sbooth.org/Max/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "Max-#{version}/Max.app"
 end
