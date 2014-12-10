@@ -4,7 +4,7 @@ cask :v1 => 'sputnik' do
 
   url "http://sputnik.szwacz.com/downloads/Sputnik-v#{version}.dmg"
   homepage 'http://sputnik.szwacz.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Sputnik.app'
 end
