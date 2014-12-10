@@ -10,7 +10,7 @@ cask :v1 => 'juliastudio' do
   end
 
   homepage 'http://forio.com/labs/julia-studio/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'JuliaStudio.app'
 end
