@@ -5,7 +5,7 @@ cask :v1 => 'ionu' do
   url 'https://isis.ionu.nu/release/OSX/IONU.dmg'
   appcast 'https://isis.ionu.nu/release/OSX/appcast.xml'
   homepage 'https://ionu.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'IONU.app'
 end
