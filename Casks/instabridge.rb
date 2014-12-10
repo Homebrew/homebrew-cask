@@ -4,7 +4,7 @@ cask :v1 => 'instabridge' do
 
   url 'http://cdn.instabridge.com/mac/instabridge-osx.dmg'
   homepage 'http://instabridge.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Instabridge.app'
 end
