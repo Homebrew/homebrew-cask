@@ -6,7 +6,7 @@ cask :v1 => 'gmail-notifr' do
   appcast 'https://s3.amazonaws.com/assets.ashchan.com/gmailnotifr/update.xml',
           :sha256 => '20876c0cef8d54463a5189948259e7ad268a28424b96e7fa2fbad860b0ec9554'
   homepage 'http://ashchan.com/projects/gmail-notifr'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Gmail Notifr.app'
 
