@@ -4,7 +4,7 @@ cask :v1 => 'vine-server' do
 
   url "http://www.testplant.com/downloads/Vine/VineServer#{version}.dmg"
   homepage 'http://www.testplant.com/products/vine/vine-server/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Vine Server.app'
 end
