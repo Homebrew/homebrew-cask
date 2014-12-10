@@ -4,7 +4,7 @@ cask :v1 => 'sococo' do
 
   url "http://download.sococo.com/10069/Sococo_#{version.gsub('.','_')}_10069.dmg"
   homepage 'http://www.sococo.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Sococo.app'
 end
