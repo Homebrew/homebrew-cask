@@ -6,7 +6,7 @@ cask :v1 => 'fastscripts' do
   appcast 'http://www.red-sweater.com/fastscripts/appcast2.php',
           :sha256 => '500cd40fd4f6a40f76d8329d7246f79414f4d5aeba5bf605be18c16a6de657f5'
   homepage 'http://www.red-sweater.com/fastscripts/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'FastScripts.app'
 end
