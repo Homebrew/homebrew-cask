@@ -4,7 +4,7 @@ cask :v1 => 'glyphish-gallery' do
 
   url "https://github.com/glyphish/gallery/releases/download/v#{version}/v#{version}.zip"
   homepage 'https://github.com/glyphish/gallery'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Glyphish Gallery.app'
 end
