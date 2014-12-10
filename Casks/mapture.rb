@@ -4,7 +4,7 @@ cask :v1 => 'mapture' do
 
   url "http://anatoo.jp/mapture/Mapture-#{version}.app.zip"
   homepage 'http://anatoo.jp/mapture/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "Mapture-#{version}.app"
 end
