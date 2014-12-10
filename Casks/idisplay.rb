@@ -4,7 +4,7 @@ cask :v1 => 'idisplay' do
 
   url "http://www.shape.ag/freedownload/iDisplay/iDisplayFull_#{version.gsub('.', '_')}.dmg"
   homepage 'http://getidisplay.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iDisplay.app'
 end
