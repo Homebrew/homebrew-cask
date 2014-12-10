@@ -4,7 +4,7 @@ cask :v1 => 'nomachine' do
 
   url "http://download.nomachine.com/download/#{version.split('.')[0..1].join('.')}/MacOSX/nomachine_#{version}.dmg"
   homepage 'http://www.nomachine.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'NoMachine.pkg'
   # a launchctl job ordinarily manages uninstall once the app bundle is removed
