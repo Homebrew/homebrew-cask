@@ -4,7 +4,7 @@ cask :v1 => 'postbox' do
 
   url 'http://www.postbox-inc.com/php/download.php?a=3011m'
   homepage 'http://www.postbox-inc.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Postbox.app'
 end
