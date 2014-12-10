@@ -4,7 +4,7 @@ cask :v1 => 'appcode' do
 
   url "http://download.jetbrains.com/objc/AppCode-#{version}.dmg"
   homepage 'http://www.jetbrains.com/objc/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'AppCode.app'
 
