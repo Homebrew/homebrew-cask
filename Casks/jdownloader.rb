@@ -4,7 +4,7 @@ cask :v1 => 'jdownloader' do
 
   url 'http://installer.jdownloader.org/JDownloader09Setup_mac.dmg'
   homepage 'http://jdownloader.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   installer :manual => 'JDownloader Installer.app'
 end
