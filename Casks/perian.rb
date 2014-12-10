@@ -4,7 +4,7 @@ cask :v1 => 'perian' do
 
   url "https://perian.cachefly.net/Perian_#{version}.dmg"
   homepage 'http://www.perian.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'Perian.prefPane'
   caveats <<-EOS.undent
