@@ -4,7 +4,7 @@ cask :v1 => 'memorytamer' do
 
   url "https://memorytamer.s3.amazonaws.com/MemoryTamer-#{version}.zip"
   homepage 'http://www.memorytamer.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MemoryTamer.app'
 end
