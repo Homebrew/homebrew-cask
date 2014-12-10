@@ -5,7 +5,7 @@ cask :v1 => 'wraparound' do
   url "http://www.digicowsoftware.com/downloads/Wraparound#{version}-2010.zip"
   appcast 'http://www.digicowsoftware.com/appcast/'
   homepage 'http://www.digicowsoftware.com/detail?_app=Wraparound'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Wraparound.app'
 end
