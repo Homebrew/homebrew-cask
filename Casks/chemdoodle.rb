@@ -4,7 +4,7 @@ cask :v1 => 'chemdoodle' do
 
   url "http://www.chemdoodle.com/downloads/ChemDoodle-osx-#{version}.dmg"
   homepage 'http://www.chemdoodle.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   suite 'ChemDoodle'
 end
