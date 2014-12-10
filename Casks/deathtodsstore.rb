@@ -4,7 +4,7 @@ cask :v1 => 'deathtodsstore' do
 
   url 'http://www.aorensoftware.com/Downloads/Files/DeathToDSStore.zip'
   homepage 'http://www.aorensoftware.com/blog/2011/12/24/death-to-ds_store/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'DeathToDSStore.app'
 end
