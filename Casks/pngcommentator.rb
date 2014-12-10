@@ -6,7 +6,7 @@ cask :v1 => 'pngcommentator' do
   appcast 'http://www.echomist.co.uk/Sparkle/PNGCommentator.xml',
           :sha256 => 'db3af91a76bdb1ed47e62c7ab150e7dbb0917ba3c040c6dba6b891c0ac0bb0f6'
   homepage 'http://www.echomist.co.uk/software/PNGCommentator.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'PNGCommentator.app'
 end
