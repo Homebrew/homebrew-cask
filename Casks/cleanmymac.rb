@@ -1,6 +1,6 @@
 cask :v1 => 'cleanmymac' do
 
-  if MacOS.version <= :snow_leopard
+  if MacOS.release <= :snow_leopard
     version :latest
     sha256 :no_check
     url 'http://dl.devmate.com/com.macpaw.CleanMyMac/CleanMyMacClassic.dmg'
