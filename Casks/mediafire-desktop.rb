@@ -4,7 +4,7 @@ cask :v1 => 'mediafire-desktop' do
 
   url 'https://www.mediafire.com/?4xcr491804ncktz/'
   homepage 'https://www.mediafire.com/software/desktop/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MediaFire Desktop.app'
 end
