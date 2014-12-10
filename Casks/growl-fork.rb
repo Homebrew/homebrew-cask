@@ -4,7 +4,7 @@ cask :v1 => 'growl-fork' do
 
   url "https://bitbucket.org/pmetzger/growl/downloads/Growl-#{version}.dmg"
   homepage 'https://bitbucket.org/pmetzger/growl'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Growl.pkg'
 
