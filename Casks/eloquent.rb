@@ -4,7 +4,7 @@ cask :v1 => 'eloquent' do
 
   url "https://launchpad.net/eloquent/trunk/#{version}/+download/Eloquent-#{version}.app.zip"
   homepage 'https://launchpad.net/eloquent'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Eloquent.app'
 
