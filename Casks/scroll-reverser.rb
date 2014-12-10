@@ -12,7 +12,7 @@ cask :v1 => 'scroll-reverser' do
 
   url "https://d20vhy8jiniubf.cloudfront.net/downloads/ScrollReverser-#{version}.zip"
   homepage 'https://pilotmoon.com/scrollreverser/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Scroll Reverser.app'
 end
