@@ -16,7 +16,7 @@ cask :v1 => 'programmer-dvorak' do
                         '/System/Library/Caches/com.apple.IntlDataCache.le*',
                         '/private/var/folders/*/*/-Caches-/com.apple.IntlDataCache.le*',
                        ]
-  if MacOS.version >= :mavericks
+  if MacOS.release >= :mavericks
     postflight do
       # clear the layout cache before new layouts are recognized
       # todo this will not work because the glob will not be expanded
