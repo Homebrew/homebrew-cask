@@ -1,6 +1,6 @@
 cask :v1 => 'totalspaces' do
 
-  if MacOS.version <= :mountain_lion
+  if MacOS.release <= :mountain_lion
     version '1.2.11'
     sha256 'fd54c6ea092f6fae2035745959ff6e080953e77ec6c76715e532b4b0352235d4'
 
