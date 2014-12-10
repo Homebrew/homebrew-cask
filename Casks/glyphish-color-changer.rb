@@ -4,7 +4,7 @@ cask :v1 => 'glyphish-color-changer' do
 
   url "https://github.com/glyphish/color-changer/releases/download/v#{version}/#{version}.zip"
   homepage 'https://github.com/glyphish/color-changer'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Glyphish Color Changer.app'
 end
