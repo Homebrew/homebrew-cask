@@ -22,7 +22,7 @@ cask :v1 => 'deeper' do
   end
 
   homepage 'http://www.titanium.free.fr/downloaddeeper.php'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Deeper.app'
 
