@@ -5,7 +5,7 @@ cask :v1 => 'xee' do
 
   url "http://wakaba.c3.cx/releases/mac/Xee#{version}.dmg"
   homepage 'http://xee.c3.cx/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Xee³.app'
 end
