@@ -1,7 +1,7 @@
 cask :v1 => 'golly' do
   version '2.6'
 
-  if MacOS.version < :mavericks
+  if MacOS.version <= :mountain_lion
     sha256 '6fee35e8e4f63ee2c1b0913b7e8009b2548c4e4469050f9c31791900e1e97f16'
 
     url "http://downloads.sourceforge.net/project/golly/golly/golly-#{version}/golly-#{version}-mac106.zip"

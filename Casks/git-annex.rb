@@ -2,7 +2,7 @@ cask :v1 => 'git-annex' do
   version :latest
   sha256 :no_check
 
-  if MacOS.version < :mavericks
+  if MacOS.version <= :mountain_lion
     url 'http://downloads.kitenet.net/git-annex/OSX/current/10.8.2_Mountain_Lion/git-annex.dmg.bz2'
 
     # This is a horrible hack to force the file extension.  The

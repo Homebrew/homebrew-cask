@@ -1,7 +1,7 @@
 cask :v1 => 'r' do
   version '3.1.2'
 
-  if MacOS.version < :mavericks
+  if MacOS.version <= :snow_leopard
     sha256 'aec21b31b3a6c4e777690bd4e2f19fa71f2ae443dd645d4fa93a0399345e5aac'
     url "http://cran.rstudio.com/bin/macosx/R-#{version}-snowleopard.pkg"
     pkg "R-#{version}-snowleopard.pkg"
