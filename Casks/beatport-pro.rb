@@ -4,7 +4,7 @@ cask :v1 => 'beatport-pro' do
 
   url "http://pro.beatport.com/mac/#{version}/beatportpro_#{version}.dmg"
   homepage 'http://pro.beatport.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Beatport Pro.app'
 end
