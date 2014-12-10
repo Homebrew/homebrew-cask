@@ -1,5 +1,78 @@
 # CHANGELOG
 
+## 0.50.0
+
+* __Casks__
+  - 35 Casks added (111 updated) by 50 contributors since 0.49.0
+  - 2155 total Casks
+* __Features__
+ - [#7805][] add `name` stanza for proper name
+ - [#7854][] add `accessibility_access` stanza
+ - [#7845][] add `depends_on :x11`
+ - [#7793][] add `depends_on :arch`
+ - [#7936][] add `MacOS.release` replacement for `MacOS.version`
+ - [#7845][] allow multiple depends_on stanzas
+ - [#7822][] remove constraint that Cask tokens can't start with digits
+* __Breaking Changes__
+ - [#7855][] remove `assistive_devices` `caveats` method
+ - [#7848][] remove `x11_required` `caveats` method
+ - [#7810][] remove `arch_only` `caveats` method
+ - [#7794][] remove `os_version_only` `caveats` method
+ - [#7812][] remove support for `tags :name`
+ - [#7825][] remove support for `title` method in Casks
+* __Fixes__
+ - [#7958][] return tarball_path from fetch method <3 [@renard][]
+   - compensates for change in Homebrew
+   - fixes "no implicit conversion of nil into String" error
+   - fixes "undefined method extname for nil:NilClass" error
+ - [#7893][] fix `--debug` and `_dump` on Ruby 1.8.7
+* __Internal Changes__
+ - [#7900][] Add reason for skipping syntax tests
+ - [#7940][] sanity checks/error handling, postflight miniDSL
+   - recast `info_plist` as `info_plist_file`
+ - [#7935][] Be more consistent/liberal about stanza accessors.
+   - enables RSpec tests to pass again
+ - [#7898][] enable `installer` artifact in `_stanza` verb
+ - [#7854][] remove newlines from runtime bundle IDs
+ - [#7895][] In `SystemCommand`, fix `success?` and `exit_status`
+   - Add failing tests for `SystemCommand`
+ - [#7845][], [#7819][] refactor depends_on
+ - [#7807][] convert more backend code from cask_name to token
+ - [#7795][] add new maintainer claui
+* __Documentation__
+  - 16 doc commits since 0.49.0 <3 [@maschs][]
+* __Contributors__
+  - 22 new contributors since 0.49.0
+  - 1297 total contributors
+* __Release Date__
+  - 2014-12-10 12:54:00 UTC
+
+[#7741]: https://github.com/caskroom/homebrew-cask/issues/7741
+[#7793]: https://github.com/caskroom/homebrew-cask/issues/7793
+[#7794]: https://github.com/caskroom/homebrew-cask/issues/7794
+[#7795]: https://github.com/caskroom/homebrew-cask/issues/7795
+[#7805]: https://github.com/caskroom/homebrew-cask/issues/7805
+[#7807]: https://github.com/caskroom/homebrew-cask/issues/7807
+[#7810]: https://github.com/caskroom/homebrew-cask/issues/7810
+[#7812]: https://github.com/caskroom/homebrew-cask/issues/7812
+[#7819]: https://github.com/caskroom/homebrew-cask/issues/7819
+[#7822]: https://github.com/caskroom/homebrew-cask/issues/7822
+[#7825]: https://github.com/caskroom/homebrew-cask/issues/7825
+[#7845]: https://github.com/caskroom/homebrew-cask/issues/7845
+[#7848]: https://github.com/caskroom/homebrew-cask/issues/7848
+[#7854]: https://github.com/caskroom/homebrew-cask/issues/7854
+[#7855]: https://github.com/caskroom/homebrew-cask/issues/7855
+[#7893]: https://github.com/caskroom/homebrew-cask/issues/7893
+[#7895]: https://github.com/caskroom/homebrew-cask/issues/7895
+[#7898]: https://github.com/caskroom/homebrew-cask/issues/7898
+[#7900]: https://github.com/caskroom/homebrew-cask/issues/7900
+[#7935]: https://github.com/caskroom/homebrew-cask/issues/7935
+[#7936]: https://github.com/caskroom/homebrew-cask/issues/7936
+[#7940]: https://github.com/caskroom/homebrew-cask/issues/7940
+[#7958]: https://github.com/caskroom/homebrew-cask/issues/7958
+[@maschs]: https://github.com/maschs
+[@renard]: https://github.com/renard
+
 ## 0.49.0
 
 * __Casks__
