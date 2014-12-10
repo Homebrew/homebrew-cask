@@ -4,7 +4,7 @@ cask :v1 => 'miro' do
 
   url 'http://ftp.osuosl.org/pub/pculture.org/miro/osx/Miro.dmg'
   homepage 'http://www.getmiro.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Miro.app'
 end
