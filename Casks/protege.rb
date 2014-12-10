@@ -4,7 +4,7 @@ cask :v1 => 'protege' do
 
   url "http://protege.stanford.edu/download/protege/4.3/osx/protege-#{version}-304.zip"
   homepage 'http://protege.stanford.edu/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'protege-4.3.app'
 end
