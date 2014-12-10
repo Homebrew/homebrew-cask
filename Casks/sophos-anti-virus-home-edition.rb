@@ -4,7 +4,7 @@ cask :v1 => 'sophos-anti-virus-home-edition' do
 
   url "http://downloads.sophos.com/home-edition/savosx_#{version.gsub('.','')}_he.zip"
   homepage 'http://www.sophos.com/en-us/products/free-tools/sophos-antivirus-for-mac-home-edition.aspx/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Sophos Anti-Virus Home Edition.app'
 end
