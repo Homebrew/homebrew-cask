@@ -4,7 +4,7 @@ cask :v1 => 'iloc' do
 
   url "http://derailer.org/iloc/iloc-#{version}.tgz"
   homepage 'http://derailer.org/iloc'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   binary "iloc-#{version}/iloc"
 end
