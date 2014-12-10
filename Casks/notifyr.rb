@@ -4,7 +4,7 @@ cask :v1 => 'notifyr' do
 
   url 'http://getnotifyr.com/app/Notifyr.zip'
   homepage 'http://getnotifyr.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'Notifyr.prefPane'
 end
