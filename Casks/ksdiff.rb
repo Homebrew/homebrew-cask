@@ -12,9 +12,8 @@ cask :v1 => 'ksdiff' do
   # todo
   # conflicts_with :cask => 'kaleidoscope'
 
-  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    The #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} Cask is not needed when installing Kaleidoscope via Cask. It
+    The #{token} Cask is not needed when installing Kaleidoscope via Cask. It
     is provided for users who have purchased Kaleidoscope via the App Store.
   EOS
 end
