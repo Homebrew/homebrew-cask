@@ -4,7 +4,7 @@ cask :v1 => 'air-connect' do
 
   url 'http://downloads.avatron.com/AirConnectInstaller.zip'
   homepage 'http://www.avatron.com/get-air-connect/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Air Connect.app'
 end
