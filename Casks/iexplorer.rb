@@ -6,7 +6,7 @@ cask :v1 => 'iexplorer' do
   appcast 'http://www.macroplant.com/iexplorer/ie3-appcast.xml',
           :sha256 => '50a537b61eec96833d145abfe25affc972579f4e01cf3876aa6596ba5320db26'
   homepage 'http://www.macroplant.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iExplorer.app'
 end
