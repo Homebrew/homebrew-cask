@@ -4,7 +4,7 @@ cask :v1 => 'nicecast' do
 
   url 'https://rogueamoeba.com/nicecast/download/Nicecast.zip'
   homepage 'http://rogueamoeba.com/nicecast'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Nicecast.app'
 end
