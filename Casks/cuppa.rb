@@ -5,7 +5,7 @@ cask :v1 => 'cuppa' do
   url 'http://www.nathanatos.com/software/downloads/Cuppa.zip'
   appcast 'http://www.nathanatos.com/software/cuppa.xml'
   homepage 'http://www.nathanatos.com/software'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Cuppa.app'
 end
