@@ -4,7 +4,7 @@ cask :v1 => 'jbidwatcher' do
 
   url "https://www.jbidwatcher.com/download/JBidwatcher-#{version}.dmg"
   homepage 'http://www.jbidwatcher.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'JBidwatcher.app'
 end
