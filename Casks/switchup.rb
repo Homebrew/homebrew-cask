@@ -6,7 +6,7 @@ cask :v1 => 'switchup' do
   appcast 'http://www.irradiatedsoftware.com/updates/profiles/switchup.php',
           :sha256 => 'a9feeb5f7dcb832042ad2d8083844e6f26c0537628820870b27e1d8a8d5abb82'
   homepage 'http://www.irradiatedsoftware.com/switchup/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SwitchUp.app'
 end
