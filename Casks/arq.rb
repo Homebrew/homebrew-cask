@@ -4,7 +4,7 @@ cask :v1 => 'arq' do
 
   url 'http://www.haystacksoftware.com/arq/Arq.zip'
   homepage 'http://www.haystacksoftware.com/arq/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Arq.app'
 end
