@@ -1,4 +1,4 @@
-cask :v1 => 'thirty-three-rpm' do
+cask :v1 => '33-rpm' do
   version :latest
   sha256 :no_check
 
