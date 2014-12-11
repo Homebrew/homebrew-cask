@@ -4,7 +4,7 @@ cask :v1 => 'glueprint' do
 
   url "http://glueprintapp.com/static/download/GluePrint-#{version}.app.zip"
   homepage 'http://glueprintapp.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :gratis
 
   app 'GluePrint.app'
 end
