@@ -5,7 +5,7 @@ cask :v1 => 'snagit' do
   url 'http://download.techsmith.com/snagitmac/enu/Snagit.dmg'
   appcast 'http://techsmithredirect.appspot.com/'
   homepage 'http://www.techsmith.com/snagit.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :commercial
 
   app 'Snagit.app'
 end

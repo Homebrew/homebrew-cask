@@ -4,7 +4,7 @@ cask :v1 => 'facter' do
 
   url "https://downloads.puppetlabs.com/mac/facter-#{version}.dmg"
   homepage 'https://puppetlabs.com/facter'
-  license :unknown    # todo: improve this machine-generated value
+  license :apache
 
   pkg "facter-#{version}.pkg"
 

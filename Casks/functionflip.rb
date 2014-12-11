@@ -4,7 +4,7 @@ cask :v1 => 'functionflip' do
 
   url "http://kevingessner.com/public/downloads/FunctionFlip/#{version}/FunctionFlip.prefPane.zip"
   homepage 'http://kevingessner.com/software/functionflip/'
-  license :unknown    # todo: improve this machine-generated value
+  license :mit
 
   prefpane 'FunctionFlip.prefPane'
 end

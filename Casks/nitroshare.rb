@@ -4,7 +4,7 @@ cask :v1 => 'nitroshare' do
 
   url "https://launchpad.net/nitroshare/#{version}/#{version}/+download/nitroshare_#{version}.app.dmg"
   homepage 'https://launchpad.net/nitroshare'
-  license :unknown    # todo: improve this machine-generated value
+  license :gpl
 
   app 'NitroShare.app'
 end

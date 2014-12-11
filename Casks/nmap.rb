@@ -4,7 +4,7 @@ cask :v1 => 'nmap' do
 
   url "http://nmap.org/dist/nmap-#{version}.dmg"
   homepage 'http://nmap.org/'
-  license :unknown    # todo: improve this machine-generated value
+  license :gpl
 
   pkg "nmap-#{version}.mpkg"
 

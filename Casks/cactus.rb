@@ -4,7 +4,7 @@ cask :v1 => 'cactus' do
 
   url "http://update.cactusformac.com/static/downloads/Cactus-#{version}.zip"
   homepage 'http://cactusformac.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :bsd
 
   app 'Cactus.app'
 

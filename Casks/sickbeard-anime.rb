@@ -4,7 +4,7 @@ cask :v1 => 'sickbeard-anime' do
 
   url "http://sickbeard.lad1337.de/download.php?f=SickBeard-OSX-anime-#{version}.dmg"
   homepage 'http://sickbeard.lad1337.de/'
-  license :unknown    # todo: improve this machine-generated value
+  license :gpl
 
   app 'SickBeard.app'
 end

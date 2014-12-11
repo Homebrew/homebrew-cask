@@ -4,7 +4,7 @@ cask :v1 => 'noejectdelay' do
 
   url "https://pqrs.org/macosx/keyremap4macbook/files/NoEjectDelay-#{version}.dmg"
   homepage 'https://pqrs.org/macosx/keyremap4macbook/noejectdelay.html.en'
-  license :unknown    # todo: improve this machine-generated value
+  license :public_domain
 
   pkg 'NoEjectDelay.pkg'
 

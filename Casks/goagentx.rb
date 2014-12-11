@@ -5,7 +5,7 @@ cask :v1 => 'goagentx' do
   url 'https://goagentx.com/files/GoAgentX.dmg'
   appcast 'https://goagentx.com/update/SUAppcast.xml'
   homepage 'http://goagentx.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :bsd
 
   app 'GoAgentX.app'
 end
