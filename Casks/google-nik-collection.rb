@@ -4,7 +4,7 @@ cask :v1 => 'google-nik-collection' do
 
   url 'http://dl.google.com/dl/edgedl/photos/nikcollection-latest.dmg'
   homepage 'https://www.google.com/nikcollection/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   installer :manual => 'Nik Collection.app'
 end

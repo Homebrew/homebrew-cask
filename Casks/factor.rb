@@ -7,4 +7,8 @@ cask :v1 => 'factor' do
   license :bsd
 
   app 'factor/Factor.app'
+
+  caveats do
+    path_environment_variable "#{staged_path}/factor/"
+  end
 end

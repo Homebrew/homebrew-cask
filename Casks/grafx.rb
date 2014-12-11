@@ -4,7 +4,7 @@ cask :v1 => 'grafx' do
 
   url 'http://pulkomandy.tk/projects/GrafX2/downloads/24'
   homepage 'http://pulkomandy.tk/projects/GrafX2'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Grafx2.app'
 end

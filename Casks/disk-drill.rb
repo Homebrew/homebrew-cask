@@ -5,7 +5,7 @@ cask :v1 => 'disk-drill' do
   url 'http://dl.cleverfiles.com/diskdrill.dmg'
   appcast 'http://www.cleverfiles.com/releases/auto-update/dd2-newestr.xml'
   homepage 'http://www.cleverfiles.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Disk Drill.app'
 

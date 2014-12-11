@@ -4,7 +4,7 @@ cask :v1 => 'speedtao' do
 
   url 'http://www.speedtao.net/beta_latest'
   homepage 'http://www.speedtao.net/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SpeedTao.app'
 end

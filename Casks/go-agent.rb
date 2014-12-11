@@ -4,7 +4,7 @@ cask :v1 => 'go-agent' do
 
   url "http://download.go.cd/gocd/go-agent-#{version}-osx.zip"
   homepage 'http://www.go.cd'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Go Agent.app'
 end

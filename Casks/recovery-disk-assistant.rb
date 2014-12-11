@@ -4,7 +4,7 @@ cask :v1 => 'recovery-disk-assistant' do
 
   url 'https://support.apple.com/downloads/DL1433/en_US/RecoveryDiskAssistant.dmg'
   homepage 'http://support.apple.com/kb/HT4848'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Recovery Disk Assistant.app'
 end

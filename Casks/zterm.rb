@@ -4,7 +4,7 @@ cask :v1 => 'zterm' do
 
   url "http://www.dalverson.com/zterm/ZTerm#{version}.dmg"
   homepage 'http://www.dalverson.com/zterm/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ZTerm.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'istat-server' do
 
   url 'http://download.bjango.com/istatserver/'
   homepage 'http://bjango.com/mac/istatserver/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'iStat Server.pkg'
 

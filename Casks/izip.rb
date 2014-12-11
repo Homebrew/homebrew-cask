@@ -4,7 +4,7 @@ cask :v1 => 'izip' do
 
   url 'http://www.izip.com/izip.dmg'
   homepage 'http://www.izip.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iZip.app'
 end

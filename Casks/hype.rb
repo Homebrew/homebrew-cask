@@ -4,7 +4,7 @@ cask :v1 => 'hype' do
 
   url 'http://tumult.com/hype/download/Hype.zip'
   homepage 'http://tumult.com/hype/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Hype2.app'
 end

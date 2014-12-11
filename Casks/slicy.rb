@@ -5,7 +5,7 @@ cask :v1 => 'slicy' do
   url 'https://macrabbit.com/slicy/get/'
   appcast 'http://update.macrabbit.com/slicy/1.1.3.xml'
   homepage 'http://macrabbit.com/slicy/'
-  license :unknown
+  license :commercial
 
   app 'Slicy.app'
 end

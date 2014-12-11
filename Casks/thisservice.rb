@@ -6,7 +6,7 @@ cask :v1 => 'thisservice' do
   appcast 'http://wafflesoftware.net/thisservice/sparkle/sparkle.xml',
           :sha256 => '39a5e2f79f1560d4b405b183907da44326a34526b9160aedda9c4676ea75a13b'
   homepage 'http://wafflesoftware.net/thisservice/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ThisService.app'
 end

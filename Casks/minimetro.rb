@@ -4,7 +4,7 @@ cask :v1 => 'minimetro' do
 
   url "http://dinopoloclub.com/minimetro/builds/#{version.sub(%r{[a-z]$},'')}/MiniMetro-#{version}-osx.zip"
   homepage 'http://dinopoloclub.com/minimetro/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "MiniMetro-#{version}-osx.app"
 end

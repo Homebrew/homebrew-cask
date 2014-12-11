@@ -5,7 +5,7 @@ cask :v1 => 'ringtones' do
   url 'http://files.thelittleappfactory.com/ringtones/Ringtones.zip'
   appcast 'https://files.thelittleappfactory.com/ringtones/appcast.xml'
   homepage 'http://thelittleappfactory.com/ringtones/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Ringtones.app'
 end

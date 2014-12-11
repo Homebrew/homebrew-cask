@@ -4,7 +4,7 @@ cask :v1 => 'preform' do
 
   url "https://s3.amazonaws.com/FormlabsReleases/Release/#{version.sub(%r{\.(\d+)$},'')}/PreForm_#{version.sub(%r{\.(\d+)$},'_\1')}.dmg"
   homepage 'http://formlabs.com/en/products/preform/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'PreForm.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'odesk-team' do
 
   url 'https://www.odesk.com/downloads/mac/minor/oDeskTeam.dmg'
   homepage 'https://www.odesk.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'oDesk Team.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'neu' do
   appcast 'http://sparkle.elegantchaos.com/neu/appcast.xml',
           :sha256 => 'fcf80e031459b0c87d4ce0c66ea1b1616278666a9c9be71d014baa61b449c55d'
   homepage 'http://www.elegantchaos.com/neu/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "neu-v#{version}/Neu.app"
 end

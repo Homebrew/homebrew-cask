@@ -4,7 +4,7 @@ cask :v1 => 'voodoopad' do
 
   url 'https://plausible.coop/static/download/VoodooPad.zip'
   homepage 'https://plausible.coop/voodoopad/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'VoodooPad.app'
 end

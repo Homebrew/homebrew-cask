@@ -4,7 +4,7 @@ cask :v1 => 'eyetv' do
 
   url "http://files.elgato.com/eyetvdownloads/support/eyetv_#{version.gsub('.','')}_7310.dmg"
   homepage 'http://www.elgato.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'EyeTV.app'
 end

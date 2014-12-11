@@ -41,8 +41,9 @@ describe Cask::CLI::Create do
         sha256 ''
 
         url 'https://'
+        name ''
         homepage ''
-        license :unknown
+        license :unknown    # todo: improve this machine-generated value
 
         app ''
       end

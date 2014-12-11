@@ -4,7 +4,7 @@ cask :v1 => 'thinkorswim' do
 
   url 'https://mediaserver.thinkorswim.com/installer/InstFiles/thinkorswim_installer.dmg'
   homepage 'http://mediaserver.thinkorswim.com/installer/install.html#macosx'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   installer :manual => 'thinkorswim Installer.app'
 end

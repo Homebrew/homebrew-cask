@@ -7,8 +7,9 @@ cask :v1 => 'cdock' do
   license :oss
 
   app 'cDock.app'
+
   caveats <<-EOS.undent
-    #{title} requires easysimbl, available via
+    #{token} requires easysimbl, available via
 
       brew cask install easysimbl
   EOS

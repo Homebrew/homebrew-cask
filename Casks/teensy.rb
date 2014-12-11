@@ -4,7 +4,7 @@ cask :v1 => 'teensy' do
 
   url 'https://www.pjrc.com/teensy/teensy.dmg'
   homepage 'http://pjrc.com/teensy/loader_mac.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'teensy.app'
 end

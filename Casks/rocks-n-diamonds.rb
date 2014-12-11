@@ -4,7 +4,7 @@ cask :v1 => 'rocks-n-diamonds' do
 
   url "http://www.artsoft.org/RELEASES/macosx/rocksndiamonds/rocksndiamonds-#{version}.dmg"
   homepage 'http://www.artsoft.org/rocksndiamonds/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "Rocks'n'Diamonds #{version}/Rocks'n'Diamonds.app"
 end

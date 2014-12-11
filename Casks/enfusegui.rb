@@ -4,7 +4,7 @@ cask :v1 => 'enfusegui' do
 
   url "http://software.bergmark.com/enfusegui/files/2.1/EnfuseGUI-#{version}.dmg"
   homepage 'http://software.bergmark.com/enfusegui/Main.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'EnfuseGUI.app'
 end

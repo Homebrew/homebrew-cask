@@ -12,4 +12,6 @@ cask :v1 => 'boom' do
     # Delete the background image so that it will launch
     system '/bin/rm', '--', "#{staged_path}/.DMG_Background_new.png"
   end
+
+  depends_on :macos => '>= :yosemite'
 end

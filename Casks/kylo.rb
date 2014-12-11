@@ -4,7 +4,7 @@ cask :v1 => 'kylo' do
 
   url "https://kylo.s3.amazonaws.com/update/public/kylo-setup-#{version.gsub('.','_')}.dmg"
   homepage 'http://kylo.tv'
-  license :unknown
+  license :mpl
 
   app 'Kylo.app'
 end

@@ -7,8 +7,9 @@ cask :v1 => 'tvrenamer' do
   license :gpl
 
   app "TVRenamer-#{version}.app"
+
   caveats <<-EOS.undent
-    #{title} requires a Java JRE to be installed. You should be prompted to install
+    #{token} requires a Java JRE to be installed. You should be prompted to install
     Java on the first execution if it is not already present.
   EOS
 end

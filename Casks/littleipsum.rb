@@ -4,7 +4,7 @@ cask :v1 => 'littleipsum' do
 
   url "http://littleipsum.com/download/LittleIpsum%20#{version}.zip"
   homepage 'http://littleipsum.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'LittleIpsum.app'
 end

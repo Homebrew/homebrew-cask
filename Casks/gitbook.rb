@@ -4,7 +4,7 @@ cask :v1 => 'gitbook' do
 
   url 'https://www.gitbook.io/editor/download'
   homepage 'https://www.gitbook.io/'
-  license :unknown
+  license :apache
 
   app 'GitBook.app'
 end

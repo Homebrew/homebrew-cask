@@ -4,7 +4,7 @@ cask :v1 => 'intel-xdk' do
 
   url "https://d2bnc8freht07j.cloudfront.net/xdk_web_mac_master_#{version}.dmg"
   homepage 'http://xdk-software.intel.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "xdk_full_#{version}.pkg"
 

@@ -4,7 +4,7 @@ cask :v1 => 'pdfmasher' do
 
   url "http://download.hardcoded.net/pdfmasher_osx_#{version.gsub('.', '_')}.dmg"
   homepage 'http://www.hardcoded.net/pdfmasher/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'PdfMasher.app'
 end

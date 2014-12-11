@@ -4,7 +4,7 @@ cask :v1 => 'moneyplex' do
 
   url 'http://www.matrica.com/download/mac/moneyplex.dmg'
   homepage 'http://www.matrica.de/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'moneyplex.pkg', :allow_untrusted => true
 

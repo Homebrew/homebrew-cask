@@ -4,7 +4,7 @@ cask :v1 => 'oneswarm' do
 
   url 'http://www.oneswarm.org/builds/OneSwarm.dmg'
   homepage 'http://www.oneswarm.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'OneSwarm.app'
 end

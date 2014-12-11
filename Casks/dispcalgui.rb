@@ -4,7 +4,7 @@ cask :v1 => 'dispcalgui' do
 
   url 'http://dispcalgui.hoech.net/download/dispcalGUI.dmg'
   homepage 'http://dispcalgui.hoech.net'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'dispcalGUI.app'
 end

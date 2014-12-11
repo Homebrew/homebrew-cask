@@ -4,7 +4,7 @@ cask :v1 => 'openarena' do
 
   url 'http://openarena.ws/request.php?4'
   homepage 'http://openarena.ws'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "openarena-#{version}/OpenArena.app"
 

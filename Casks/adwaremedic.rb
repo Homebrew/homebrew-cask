@@ -4,7 +4,7 @@ cask :v1 => 'adwaremedic' do
 
   url 'http://www.adwaremedic.com/AdwareMedic.dmg'
   homepage 'http://www.adwaremedic.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'AdwareMedic.app'
 end

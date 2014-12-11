@@ -4,7 +4,7 @@ cask :v1 => 'midikeys' do
 
   url "http://www.manyetas.com/creed/MidiKeys_#{version}.zip"
   homepage 'http://www.manyetas.com/creed/midikeys.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MidiKeys/MidiKeys.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'pester' do
   appcast 'http://sabi.net/nriley/software/Pester/updates.xml',
           :sha256 => '05a547dabcb6df809f57695a38c88104b9d2df4ee290c7ba81b725af5bd1426f'
   homepage 'http://sabi.net/nriley/software/index.html#pester'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Pester.app'
 end

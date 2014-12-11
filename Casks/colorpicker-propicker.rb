@@ -5,7 +5,7 @@ cask :v1 => 'colorpicker-propicker' do
   # todo, the URL indicates there is an appcast
   url "http://www.irradiated.net/appcasts/pro-picker/releases/#{version}/ProPicker.zip"
   homepage 'http://www.irradiated.net/?page=pro-picker'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   colorpicker 'ProPicker.colorPicker'
 end

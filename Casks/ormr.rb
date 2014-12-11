@@ -4,7 +4,7 @@ cask :v1 => 'ormr' do
 
   url 'http://getormr.com/dn/Ormr.pkg'
   homepage 'http://getormr.com/home/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Ormr.pkg'
 

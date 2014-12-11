@@ -14,5 +14,5 @@ cask :v1 => 'reaper' do
   end
 
   homepage 'http://www.reaper.fm/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 end

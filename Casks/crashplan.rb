@@ -4,7 +4,7 @@ cask :v1 => 'crashplan' do
 
   url "http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_#{version}_Mac.dmg"
   homepage 'http://www.crashplan.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Install CrashPlan.pkg'
 

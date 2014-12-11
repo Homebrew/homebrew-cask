@@ -7,7 +7,7 @@ cask :v1 => 'xamarin-android' do
           :sha256 => '713f272a1e36262f1b2c5a06f4ed1b1eb8987d240018347a51312dfedeeafcf3',
           :format => :unknown
   homepage 'http://xamarin.com/android'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "mono-android-#{version}.pkg"
 

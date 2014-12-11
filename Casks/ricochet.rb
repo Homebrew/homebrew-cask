@@ -6,7 +6,7 @@ cask :v1 => 'ricochet' do
   gpg "#{url}.asc",
       :key_id => '9032cae4cbfa933a5a2145d5ff97c53f183c045d'
   homepage 'https://ricochet.im/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Ricochet.app'
 end

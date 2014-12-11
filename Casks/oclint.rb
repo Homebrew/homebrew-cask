@@ -4,7 +4,7 @@ cask :v1 => 'oclint' do
 
   url "http://archives.oclint.org/releases/#{version}/oclint-#{version}-x86_64-apple-darwin-10.tar.gz"
   homepage 'http://oclint.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   binary "oclint-#{version}-x86_64-apple-darwin-10/bin/oclint"
   binary "oclint-#{version}-x86_64-apple-darwin-10/bin/oclint-json-compilation-database"

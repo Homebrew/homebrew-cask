@@ -4,7 +4,7 @@ cask :v1 => 'yandexdisk' do
 
   url 'https://disk.yandex.com/download/Yandex.Disk.Mac.dmg'
   homepage 'https://disk.yandex.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Yandex.Disk.app'
 end

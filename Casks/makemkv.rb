@@ -4,7 +4,7 @@ cask :v1 => 'makemkv' do
 
   url "http://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
   homepage 'http://www.makemkv.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MakeMKV.app'
 end

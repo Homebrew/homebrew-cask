@@ -4,7 +4,7 @@ cask :v1 => 'milkytracker' do
 
   url "http://www.milkytracker.org/files/milkytracker-#{version}-osx_universal.zip"
   homepage 'http://www.milkytracker.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "milkytracker-#{version}-osx_universal/MilkyTracker.app"
 end

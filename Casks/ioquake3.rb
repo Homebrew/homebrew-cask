@@ -5,11 +5,12 @@ cask :v1 => 'ioquake3' do
 
   url "http://ioquake3.org/files/#{version}/ioquake3%20#{version}.dmg"
   homepage 'http://ioquake3.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   suite 'ioquake3'
+
   caveats <<-EOS.undent
-    To complete the installation of #{title}, you will have to copy the file
+    To complete the installation of #{token}, you will have to copy the file
     'pak0.pk3' from your Quake 3 Arena installation support directory into
     ~/Applications/ioquake3/baseq3/.
   EOS

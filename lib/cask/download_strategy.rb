@@ -32,6 +32,11 @@ class Cask::CurlDownloadStrategy < CurlDownloadStrategy
     curl(*curl_args)
   end
 
+  def fetch
+    super
+    tarball_path
+  end
+
   private
 
   def curl_args

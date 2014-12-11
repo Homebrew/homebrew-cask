@@ -4,7 +4,7 @@ cask :v1 => 'prott' do
 
   url "https://prottapp.com/app/gadgets/prott.dmg"
   homepage 'http://prottapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Prott.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'hush' do
 
   url 'https://coffitivity.com/hush/files/Hush.dmg.zip'
   homepage 'http://coffitivity.com/hush/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   container :nested => 'Hush.dmg'
   app 'Hush.app'

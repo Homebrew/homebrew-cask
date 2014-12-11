@@ -4,7 +4,7 @@ cask :v1 => 'focuswriter' do
 
   url 'http://gottcode.org/focuswriter/download/?os=mac'
   homepage 'http://gottcode.org/focuswriter/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'FocusWriter.app'
 end

@@ -5,7 +5,7 @@ cask :v1 => 'yemuzip' do
   url 'http://www.yellowmug.com/download/YemuZip.dmg'
   appcast 'http://yellowmug.com/yemuzip/appcast.xml'
   homepage 'http://www.yellowmug.com/yemuzip'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'YemuZip.app'
 end

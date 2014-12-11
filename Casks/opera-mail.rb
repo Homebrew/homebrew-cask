@@ -4,7 +4,7 @@ cask :v1 => 'opera-mail' do
 
   url "https://get-ash-1.opera.com/pub/opera/mail/#{version}/mac/Opera-Mail-#{version}-1040.i386.dmg"
   homepage 'http://www.opera.com/computer/mail'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Opera Mail.app'
 end

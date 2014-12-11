@@ -6,7 +6,7 @@ cask :v1 => 'gfxcardstatus' do
   appcast 'http://gfx.io/appcast.xml',
           :sha256 => 'cc01a7466eb53f425920046a5b7ea0a23b35bd431b7ccca9c77bd8fa407cd718'
   homepage 'http://gfx.io/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'gfxCardStatus.app'
 end

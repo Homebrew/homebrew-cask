@@ -4,7 +4,7 @@ cask :v1 => 'heart' do
 
   url 'http://presstube.com/screensavers/presstube-heart-mac.zip'
   homepage 'http://presstube.com/blog/2011/heart/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   screen_saver 'presstube-heart.app/Contents/Resources/Presstube - Heart.saver'
 
@@ -13,7 +13,7 @@ cask :v1 => 'heart' do
   end
 
   caveats <<-EOS.undent
-    #{title} requires Adobe Air, available via
+    #{token} requires Adobe Air, available via
 
       brew cask install adobe-air
   EOS

@@ -4,7 +4,7 @@ cask :v1 => 'microsoft-lync-plugin' do
 
   url 'https://lync12.lyncweb.microsoft.com/lwa/Plugins/LWAPluginInstaller.pkg'
   homepage 'http://office.microsoft.com/Lync'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'LWAPluginInstaller.pkg'
 

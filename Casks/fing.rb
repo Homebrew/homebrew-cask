@@ -4,7 +4,7 @@ cask :v1 => 'fing' do
 
   url 'http://www.overlooksoft.com/packages/download?plat=osx'
   homepage 'http://www.overlooksoft.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "overlook-fing-#{version}.pkg"
 

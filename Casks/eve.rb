@@ -5,7 +5,7 @@ cask :v1 => 'eve' do
   url 'https://s3.amazonaws.com/hotkeyeve/Downloads/EVE-latest.zip'
   appcast 'https://s3.amazonaws.com/hotkeyeve/hotkeyEVEappcast.xml'
   homepage 'http://www.hotkey-eve.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'EVE.app'
 end

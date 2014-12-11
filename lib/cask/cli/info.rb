@@ -20,14 +20,20 @@ class Cask::CLI::Info < Cask::CLI::Base
                    else
                      "Not installed"
                    end
-
+    # todo completely reformat the info report
     <<-PURPOSE
 #{cask}: #{cask.version}
+#{formatted_full_name(cask) }
 #{cask.homepage or 'No Homepage'}
 #{installation}
 #{github_info(cask) or 'No GitHub URL'}
 #{artifact_info(cask) or 'No Artifact Info'}
 PURPOSE
+  end
+
+  def self.formatted_full_name(cask)
+    # todo transitional: make name a required stanza, and then stop substituting cask.token here
+    cask.full_name.empty? ? cask.token : cask.full_name.join(', ')
   end
 
   def self.github_info(cask)

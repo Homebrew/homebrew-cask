@@ -4,7 +4,7 @@ cask :v1 => 'plex-media-server' do
 
   url "https://downloads.plex.tv/plex-media-server/#{version}/PlexMediaServer-#{version}-OSX.zip"
   homepage 'https://plex.tv/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Plex Media Server.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'quickradar' do
   appcast 'http://www.quickradar.com/appcast.xml',
           :sha256 => 'a619b28824bf188921dc93eb9d475111c0f5d68ea3ec865562d922a7c312d1f3'
   homepage 'http://www.quickradar.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'QuickRadar.app'
 end

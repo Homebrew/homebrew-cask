@@ -6,7 +6,7 @@ cask :v1 => 'clamxav' do
   appcast 'http://www.clamxav.com/sparkle/profileInfo.php',
           :sha256 => '1f7fa2a5dfa1e59e32982721d5cf3292d1d2568ee22d802904566275b9e680e0'
   homepage 'http://www.clamxav.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ClamXav.app'
 

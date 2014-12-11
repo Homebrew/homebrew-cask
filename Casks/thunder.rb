@@ -4,7 +4,7 @@ cask :v1 => 'thunder' do
 
   url "http://down.sandai.net/mac/thunder_dl#{version}_Beta.dmg"
   homepage 'http://mac.xunlei.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Thunder.app'
 end

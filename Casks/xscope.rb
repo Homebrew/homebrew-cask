@@ -6,7 +6,7 @@ cask :v1 => 'xscope' do
   appcast 'http://iconfactory.com/appcasts/xScope/appcast.xml',
           :sha256 => '419794f0698b7ddb0a433e712d68064ce5907253ff849f22de95354d3e7eaa2a'
   homepage 'http://iconfactory.com/software/xscope'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'xScope.app'
 end

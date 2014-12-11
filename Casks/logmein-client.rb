@@ -4,7 +4,7 @@ cask :v1 => 'logmein-client' do
 
   url 'https://secure.logmein.com/welcome/labs/LogMeInIgnition.dmg'
   homepage 'https://secure.logmein.com/products/pro/learnmore/desktopapp.aspx'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Original discussion: https://github.com/caskroom/homebrew-cask/issues/4818

@@ -4,7 +4,7 @@ cask :v1 => 'air-video-server' do
 
   url "https://s3.amazonaws.com/AirVideo/Air+Video+Server+#{version}.dmg"
   homepage 'http://www.inmethod.com/air-video/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Air Video Server.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'dupeguru-pe' do
 
   url "http://download.hardcoded.net/dupeguru_pe_osx_#{version.gsub('.', '_')}.dmg"
   homepage 'http://www.hardcoded.net/dupeguru_pe/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'dupeGuru PE.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'webhook' do
 
   url 'http://dump.webhook.com/application/Webhook.dmg'
   homepage 'http://www.webhook.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Webhook.app'
 end

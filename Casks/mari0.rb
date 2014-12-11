@@ -4,7 +4,7 @@ cask :v1 => 'mari0' do
 
   url 'http://stabyourself.net/dl.php?file=mari0-1006/mari0-osx.zip'
   homepage 'http://stabyourself.net/mari0/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Mari0.app'
 end

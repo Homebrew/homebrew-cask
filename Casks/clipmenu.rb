@@ -7,7 +7,7 @@ cask :v1 => 'clipmenu' do
   appcast 'http://feeds.feedburner.com/clipmenu-appcast',
           :sha256 => 'e9f9df0e48aad4e00b8df26fd622f42a0218f5be662b6d2ee496664c5f45b4a3'
   homepage 'http://www.clipmenu.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ClipMenu.app'
 

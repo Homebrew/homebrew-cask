@@ -4,7 +4,7 @@ cask :v1 => 'cloudup' do
 
   url 'https://zip.cloudup.com/f41gmwzoDkioEVevEkBW'
   homepage 'https://cloudup.com/download'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Cloudup.app'
 end

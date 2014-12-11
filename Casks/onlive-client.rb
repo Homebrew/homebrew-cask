@@ -4,7 +4,7 @@ cask :v1 => 'onlive-client' do
 
   url 'https://games.onlive.com/client/mac.pkg'
   homepage 'http://games.onlive.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'mac.pkg'
 

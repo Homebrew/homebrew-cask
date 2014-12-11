@@ -4,7 +4,7 @@ cask :v1 => 'pastebotsync-pane' do
 
   url 'http://tapbots.net/pastebot/PastebotSync.dmg'
   homepage 'http://tapbots.com/software/pastebot/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'PastebotSync.prefPane'
 end

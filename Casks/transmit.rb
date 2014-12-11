@@ -5,7 +5,7 @@ cask :v1 => 'transmit' do
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   appcast 'http://www.panic.com/updates/update.php'
   homepage 'http://panic.com/transmit'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Transmit.app'
 

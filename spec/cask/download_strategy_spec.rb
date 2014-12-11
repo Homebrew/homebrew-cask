@@ -5,7 +5,7 @@ describe 'download strategies' do
   let(:url_options) { Hash.new }
   let(:cask) {
     class_double(Cask,
-      :title => 'some-cask',
+      :token => 'some-cask',
       :url => Cask::URL.new(url, url_options),
       :version => '1.2.3.4'
     )

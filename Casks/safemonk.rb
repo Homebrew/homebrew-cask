@@ -5,7 +5,7 @@ cask :v1 => 'safemonk' do
   url 'https://www.safemonk.com/downloads/osx'
   appcast 'https://www.safemonk.com:/data/client/osx/appcast.xml'
   homepage 'https://www.safemonk.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SafeMonk.app'
 end

@@ -1,8 +1,8 @@
 cask :v1 => 'darktable' do
-  version '1.4.2'
-  sha256 '27b03c2ef1bfe8a66665e252d55746abd9b8a29b7f5e00ec1f646a3f22e7551a'
+  version '1.6.0'
+  sha256 'f45fda7a7ac9648f26687b1b51f258493c73da592248ab2f0fa4b9bc79f0f3b4'
 
-  url "https://downloads.sourceforge.net/sourceforge/darktable/darktable-#{version}.dmg"
+  url "https://github.com/darktable-org/darktable/releases/download/release-#{version}/darktable-#{version}.dmg"
   homepage 'http://www.darktable.org/'
   license :oss
 

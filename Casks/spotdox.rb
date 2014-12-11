@@ -5,7 +5,7 @@ cask :v1 => 'spotdox' do
   url 'https://spotdox.herokuapp.com/downloads/Spotdox.zip'
   appcast 'https://spotdox.herokuapp.com/downloads/appcast.xml'
   homepage 'http://spotdox.com/get-started/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Spotdox.app'
 end

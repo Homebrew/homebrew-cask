@@ -4,7 +4,7 @@ cask :v1 => 'antirsi' do
 
   url "http://sabi.net/nriley/software/AntiRSI-#{version}.zip"
   homepage 'http://sabi.net/nriley/software/#antirsi'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'AntiRSI.app'
 end

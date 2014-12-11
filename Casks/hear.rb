@@ -6,7 +6,7 @@ cask :v1 => 'hear' do
   appcast 'http://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear',
           :sha256 => '48edc9b03ce5d9709b27fb5099dc3cce25cc8920656b9cdb9a066ae7999c8d9d'
   homepage 'http://www.prosofteng.com/products/hear.php'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Hear.app'
 

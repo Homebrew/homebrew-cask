@@ -4,7 +4,7 @@ cask :v1 => 'comicbookloversync' do
 
   url 'https://www.bitcartel.com/downloads/comicbookloversync.zip'
   homepage 'http://www.bitcartel.com/comicbooklover'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ComicBookLoverSync.app'
 end

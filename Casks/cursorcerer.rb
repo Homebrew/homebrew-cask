@@ -4,7 +4,7 @@ cask :v1 => 'cursorcerer' do
 
   url 'http://www.doomlaser.com/downloads/Cursorcerer.zip'
   homepage 'http://doomlaser.com/cursorcerer-hide-your-cursor-at-will/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'Cursorcerer.prefPane'
 end

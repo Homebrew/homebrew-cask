@@ -4,7 +4,7 @@ cask :v1 => 'cx' do
 
   url "https://www.cx.com/install/desktop/versions/cx-#{version.gsub('.','-')}.zip"
   homepage 'http://www.cx.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'CX.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'ireadfast' do
 
   url "http://www.gengis.net/downloads/iReadFast%20#{version}.dmg"
   homepage 'http://www.gengis.net/prodotti/iReadFast_Mac/en/index.php'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iReadFast.app'
 end

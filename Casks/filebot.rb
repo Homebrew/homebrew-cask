@@ -1,6 +1,6 @@
 cask :v1 => 'filebot' do
-  version '4.5'
-  sha256 '43f461ffdca299f5a329defb5360992b57930daaa14d46102cb859ec80a5366e'
+  version '4.5.3'
+  sha256 'ef6fc006416e5b07a561ac35495c09928f4da6c9dcf38b9c5cf0eea5843f5199'
 
   url "https://downloads.sourceforge.net/project/filebot/filebot/FileBot_#{version}/FileBot_#{version}.app.tar.gz"
   homepage 'http://www.filebot.net/'

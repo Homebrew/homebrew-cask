@@ -4,7 +4,7 @@ cask :v1 => 'cloak' do
 
   url "https://s3.amazonaws.com/static.getcloak.com/osx/updates/Release/Cloak-#{version}.dmg"
   homepage 'https://www.getcloak.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Cloak.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'xtrafinder' do
 
   url 'http://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg'
   homepage 'http://www.trankynam.com/xtrafinder/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'XtraFinder.pkg'
 

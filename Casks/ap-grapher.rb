@@ -6,12 +6,12 @@ cask :v1 => 'ap-grapher' do
   # (http://www.chimoosoft.com/products/apgrapher/)
   url 'https://www.macupdate.com/download/11859/APGrapher.dmg'
   homepage 'https://www.macupdate.com/app/mac/11859/ap-grapher'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'AP Grapher.app'
 
   caveats <<-EOS.undent
-    Warning: #{title} has been abandoned by its author, and the
+    Warning: #{token} has been abandoned by its author, and the
     vendor homepage is defunct.  This Cask downloads an untrusted
     copy from an alternative source.
   EOS

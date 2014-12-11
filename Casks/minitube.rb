@@ -5,7 +5,7 @@ cask :v1 => 'minitube' do
   url 'http://flavio.tordini.org/files/minitube/minitube.dmg'
   appcast 'http://flavio.tordini.org/minitube-ws/appcast.xml'
   homepage 'http://flavio.tordini.org/minitube'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Minitube.app'
 end

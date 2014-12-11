@@ -6,7 +6,7 @@ cask :v1 => 'hoster' do
   appcast 'http://www.redwinder.com/macapp/hoster/hoster12.xml',
           :sha256 => 'e992ca66e708b04a0a6aaa1efaddfda8652790b83b555201581ca37fc9374fa7'
   homepage 'http://www.redwinder.com/macapp/hoster/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "Hoster#{version}08.mpkg", :allow_untrusted => true
 

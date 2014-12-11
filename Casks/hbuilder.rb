@@ -4,7 +4,7 @@ cask :v1 => 'hbuilder' do
 
   url 'http://download.dcloud.net.cn/HBuilder.macosx.zip'
   homepage 'http://dcloud.io/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'HBuilder.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'diskmaker-x' do
 
   url "http://diskmakerx.com/downloads/DiskMakerX#{version}.dmg"
   homepage 'http://diskmakerx.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "DiskMaker X #{version}.app"
 end

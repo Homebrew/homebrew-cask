@@ -4,7 +4,7 @@ cask :v1 => 'growlnotify' do
 
   url "https://growl.cachefly.net/GrowlNotify-#{version}.zip"
   homepage 'http://growl.info/downloads'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'GrowlNotify.pkg'
 

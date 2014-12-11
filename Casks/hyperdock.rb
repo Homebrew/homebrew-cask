@@ -4,7 +4,7 @@ cask :v1 => 'hyperdock' do
 
   url 'http://hyperdock.bahoom.com/HyperDock.dmg'
   homepage 'http://hyperdock.bahoom.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'HyperDock.prefpane'
 end

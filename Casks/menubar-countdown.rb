@@ -4,7 +4,7 @@ cask :v1 => 'menubar-countdown' do
 
   url "https://s3.amazonaws.com/capablehands/downloads/MenubarCountdown-#{version}.zip"
   homepage 'http://capablehands.net/menubarcountdown'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "MenubarCountdown-#{version}/Menubar Countdown.app"
 end

@@ -4,7 +4,7 @@ cask :v1 => 'textmate' do
 
   url 'https://api.textmate.org/downloads/release'
   homepage 'http://macromates.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'TextMate.app'
   binary 'TextMate.app/Contents/Resources/mate'

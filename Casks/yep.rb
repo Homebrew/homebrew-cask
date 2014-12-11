@@ -4,7 +4,7 @@ cask :v1 => 'yep' do
 
   url 'http://www.ironicsoftware.com/downloads/Yep.zip'
   homepage 'http://www.ironicsoftware.com/yep/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Yep.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'mamp' do
 
   url "http://downloads4.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
   homepage 'http://www.mamp.info/en/index.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "MAMP_MAMP_PRO_#{version}.pkg"
   postflight do

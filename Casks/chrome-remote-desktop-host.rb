@@ -4,7 +4,7 @@ cask :v1 => 'chrome-remote-desktop-host' do
 
   url 'https://dl.google.com/chrome-remote-desktop/chromeremotedesktop.dmg'
   homepage 'https://chrome.google.com/remotedesktop'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Chrome Remote Desktop Host.pkg'
 

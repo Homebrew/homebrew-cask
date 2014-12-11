@@ -4,7 +4,7 @@ cask :v1 => 'josm' do
 
   url 'https://josm.openstreetmap.de/download/macosx/josm-macosx.zip'
   homepage 'http://josm.openstreetmap.de'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'JOSM.app'
 end

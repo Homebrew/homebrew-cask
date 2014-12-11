@@ -4,7 +4,7 @@ cask :v1 => 'omnifocus-clip-o-tron' do
 
   url "http://www.omnigroup.com/ftp/pub/software/MacOSX/10.9/OmniFocus-Clip-o-Tron-Installer-#{version}.dmg"
   homepage 'http://support.omnigroup.com/omnifocus-clip-o-tron'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   installer :manual => 'OmniFocus Clip-o-Tron.app'
 end

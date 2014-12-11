@@ -4,7 +4,7 @@ cask :v1 => 'craftstudio' do
 
   url 'http://craftstud.io/files/OSX/CraftStudio.pkg'
   homepage 'http://craftstud.io'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'CraftStudio.pkg'
 
@@ -13,7 +13,7 @@ cask :v1 => 'craftstudio' do
   zap       :delete => '~/Library/CraftStudio'
 
   caveats <<-EOS.undent
-    #{title} requires mono-mre, available via
+    #{token} requires mono-mre, available via
 
       brew cask install mono-mre
   EOS

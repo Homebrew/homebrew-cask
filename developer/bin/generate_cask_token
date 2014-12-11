@@ -24,19 +24,6 @@ end
 ### configurable constants
 ###
 
-EXPANDED_NUMBERS = {
-                     '0' => 'zero',
-                     '1' => 'one',
-                     '2' => 'two',
-                     '3' => 'three',
-                     '4' => 'four',
-                     '5' => 'five',
-                     '6' => 'six',
-                     '7' => 'seven',
-                     '8' => 'eight',
-                     '9' => 'nine',
-                   }
-
 EXPANDED_SYMBOLS = {
                     '+' => 'plus',
                    }
@@ -302,14 +289,6 @@ class CaskFileName < String
     self.gsub(/-([0-9])/, '\1')
   end
 
-  def spell_out_leading_numbers
-    cask_file_name = self
-    EXPANDED_NUMBERS.each do |k, v|
-      cask_file_name.sub!(/^#{k}/, v)
-    end
-    cask_file_name
-  end
-
   def spell_out_symbols
     cask_file_name = self
     EXPANDED_SYMBOLS.each do |k, v|
@@ -339,7 +318,6 @@ class CaskFileName < String
           .collapse_multiple_hyphens
           .delete_leading_hyphens
           .delete_hyphens_before_numbers
-          .spell_out_leading_numbers
     end
     raise "Could not determine Simplified App name" unless @from_simplified_app_name.length > 0
     @from_simplified_app_name.add_extension

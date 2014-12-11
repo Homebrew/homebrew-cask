@@ -6,7 +6,7 @@ cask :v1 => 'geekbench' do
   appcast 'http://www.primatelabs.com/appcast/geekbench3.xml',
           :sha256 => 'e16473af8653e0c163f02ad054e9e6b7b3c5e99c4768da123d8e21c8f8ffeeaf'
   homepage 'http://www.primatelabs.com/geekbench/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Geekbench 3.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'nitrous-desktop' do
 
   url 'https://www.nitrous.io/mac/NitrousDesktop-latest.zip'
   homepage 'https://www.nitrous.io/mac'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Nitrous Desktop.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'murasaki' do
 
   url "http://genjiapp.com/mac/murasaki/downloads/murasaki_v#{version}.zip"
   homepage 'http://genjiapp.com/mac/murasaki/index_en.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Murasaki.app'
 end

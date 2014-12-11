@@ -4,7 +4,7 @@ cask :v1 => 'growlvoice' do
 
   url "http://www.growlvoice.com/trials/growlvoice-#{version}.zip"
   homepage 'http://www.growlvoice.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'GrowlVoice.app'
 end

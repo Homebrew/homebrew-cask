@@ -4,7 +4,7 @@ cask :v1 => 'fs-uae' do
 
   url "http://fs-uae.net/fs-uae/stable/#{version}/fs-uae-plus-#{version}-macosx.tar.gz"
   homepage 'http://fs-uae.net/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "fs-uae-#{version}-macosx/FS-UAE.app"
   app "fs-uae-#{version}-macosx/FS-UAE Launcher.app"

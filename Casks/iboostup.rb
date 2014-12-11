@@ -4,7 +4,7 @@ cask :v1 => 'iboostup' do
 
   url 'http://www.iboostup.com/iboostup.dmg'
   homepage 'http://www.iboostup.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iBoostUp.app'
 end

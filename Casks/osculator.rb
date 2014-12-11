@@ -4,7 +4,7 @@ cask :v1 => 'osculator' do
 
   url "http://dl.osculator.net/releases/osculator-#{version}-20-g81f7dd4.dmg"
   homepage 'http://www.osculator.net'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'OSCulator ƒ/OSCulator.app'
 end

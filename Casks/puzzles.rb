@@ -4,7 +4,7 @@ cask :v1 => 'puzzles' do
 
   url 'http://www.chiark.greenend.org.uk/~sgtatham/puzzles/Puzzles.dmg'
   homepage 'http://www.chiark.greenend.org.uk/~sgtatham/puzzles/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Puzzles.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'playonmac' do
 
   url "http://repository.playonmac.com/PlayOnMac/PlayOnMac_#{version}.dmg"
   homepage 'http://www.playonmac.com/en'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'PlayOnMac.app'
 end

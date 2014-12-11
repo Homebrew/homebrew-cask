@@ -4,7 +4,7 @@ cask :v1 => 'tableau-public' do
 
   url 'https://downloads.tableausoftware.com/public/TableauPublic.dmg'
   homepage 'http://www.tableausoftware.com/public'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Tableau Public.app'
 end

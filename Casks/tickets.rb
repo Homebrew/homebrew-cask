@@ -6,7 +6,7 @@ cask :v1 => 'tickets' do
   appcast 'http://www.irradiatedsoftware.com/updates/profiles/tickets.php',
           :sha256 => '24a551412959452baf56b0cba06fdd502057f76812d596136b7fda1c14895386'
   homepage 'http://www.irradiatedsoftware.com/tickets/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Tickets.app'
 end

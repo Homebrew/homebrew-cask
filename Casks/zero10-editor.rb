@@ -4,7 +4,7 @@ cask :v1 => 'zero10-editor' do
 
   url 'http://www.sweetscape.com/download/010EditorMacInstaller.dmg'
   homepage 'http://www.sweetscape.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg '010 Editor.pkg'
 

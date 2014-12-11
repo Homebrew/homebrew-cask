@@ -5,7 +5,7 @@ cask :v1 => 'plug' do
   url 'http://www.plugformac.com/files/Plug-latest.dmg'
   appcast 'http://www.plugformac.com/files/sparklecast.xml'
   homepage 'http://www.plugformac.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Plug.app'
 end

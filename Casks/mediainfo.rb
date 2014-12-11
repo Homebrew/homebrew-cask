@@ -4,7 +4,7 @@ cask :v1 => 'mediainfo' do
 
   url "https://mediaarea.net/download/binary/mediainfo-gui/#{version}/MediaInfo_GUI_#{version}_Mac.dmg"
   homepage 'http://mediaarea.net/en/MediaInfo'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MediaInfo.app'
 end

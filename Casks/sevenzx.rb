@@ -8,12 +8,12 @@ cask :v1 => 'sevenzx' do
   # http://www.werkema.com/2013/06/its-been-a-long-time/
   url "https://www.macupdate.com/download/20526/7zX_#{version}.-5003b6dcbb4d8.dmg"
   homepage 'http://www.macupdate.com/app/mac/20526/7zx'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app '7zX.app'
 
   caveats <<-EOS.undent
-    Warning: #{title} has been abandoned by its author, and the
+    Warning: #{token} has been abandoned by its author, and the
     vendor homepage is defunct.  This Cask downloads an untrusted
     copy from an alternative source.
   EOS

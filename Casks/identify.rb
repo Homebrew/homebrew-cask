@@ -6,7 +6,7 @@ cask :v1 => 'identify' do
   appcast 'http://dl.dropbox.com/u/1495067/iDentifySparkle/iDentifyAppcast.xml',
           :sha256 => 'f4136921951cb3bd6a0488d819a6283957adc94d7afcda7477d1bf618d307e85'
   homepage 'http://identify2.arrmihardies.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iDentify.app'
 end

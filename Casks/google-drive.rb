@@ -4,7 +4,7 @@ cask :v1 => 'google-drive' do
 
   url 'https://dl.google.com/drive/installgoogledrive.dmg'
   homepage 'https://drive.google.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Google Drive.app'
 end

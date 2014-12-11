@@ -5,7 +5,7 @@ cask :v1 => 'runtastic-connect' do
   url 'http://download.runtastic.com/connect/mac/runtasticConnect.dmg'
   appcast 'http://download.runtastic.com/connect/mac/appcast.xml'
   homepage 'https://www.runtastic.com/connect'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Runtastic Connect.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'googleappenginelauncher' do
   appcast 'https://storage.googleapis.com/appengine-sdks',
           :sha256 => '5d863bd317e9ee27e4268fb4413846ab15928757de0723a62fb8ad0c238a44af'
   homepage 'https://developers.google.com/appengine/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'GoogleAppEngineLauncher.app'
 end

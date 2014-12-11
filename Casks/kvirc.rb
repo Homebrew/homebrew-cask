@@ -4,7 +4,7 @@ cask :v1 => 'kvirc' do
 
   url "http://kvirc.tradebit.com/#{version}/binary/osx/KVIrc-#{version}-Equilibrium.dmg"
   homepage 'http://www.kvirc.net'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'KVIrc.app'
 end

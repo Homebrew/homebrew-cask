@@ -4,7 +4,7 @@ cask :v1 => 'choose-wisely' do
 
   url "https://tigion.de/projekte/software/choose-wisely_#{version.gsub('.','-')}.zip"
   homepage 'https://blog.tigion.de/2010/02/16/software-choose-wisely/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Choose Wisely.app'
 end

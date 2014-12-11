@@ -4,7 +4,7 @@ cask :v1 => 'td-agent' do
 
   url "http://packages.treasuredata.com/2/macosx/td-agent-#{version}-0.dmg"
   homepage 'http://www.fluentd.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "tdagent-#{version}-0.pkg"
 

@@ -6,7 +6,7 @@ cask :v1 => 'secondbar' do
   appcast 'http://blog.boastr.net/secondbar/appcast.xml',
           :sha256 => '1b991a6242ac7922bc4e76db810c6fea9ce63c1bc49e162b94e0ea2b250f2e4a'
   homepage 'http://blog.boastr.net/?page_id=79'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SecondBar.app'
 end

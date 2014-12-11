@@ -4,7 +4,7 @@ cask :v1 => 'mauve' do
 
   url "http://gel.ahabs.wisc.edu/mauve/downloads/Mauve-#{version}.dmg"
   homepage 'http://gel.ahabs.wisc.edu/mauve/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Mauve.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'yasu' do
 
   url 'http://yasuapp.net/files/Yasu.zip'
   homepage 'http://yasuapp.net'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Yasu.app'
 end

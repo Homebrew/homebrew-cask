@@ -5,7 +5,7 @@ cask :v1 => 'querious' do
   url 'http://www.araelium.com/querious/downloads/Querious.dmg'
   appcast 'https://store.araelium.com/updates/querious'
   homepage 'http://www.araelium.com/querious/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Querious.app'
 end

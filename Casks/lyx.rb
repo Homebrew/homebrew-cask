@@ -6,7 +6,7 @@ cask :v1 => 'lyx' do
   gpg "#{url}.sig",
       :key_id => 'de7a44fac7fb382d'
   homepage 'http://www.lyx.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'LyX.app'
 end

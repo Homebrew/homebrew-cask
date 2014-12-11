@@ -6,7 +6,7 @@ cask :v1 => 'twitterrific' do
   appcast 'http://iconfactory.com/appcasts/Twitterrific/appcast.xml',
           :sha256 => '0d8a09937e5ea81dc2f16ff23497077fecb6bc89c3266b47d0465a13776dd7ea'
   homepage 'http://twitterrific.com/mac'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Twitterrific.app'
 

@@ -4,7 +4,7 @@ cask :v1 => 'torpedo' do
 
   url 'https://usetorpedo.com/app/mac/download'
   homepage 'https://usetorpedo.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Torpedo.app'
 end

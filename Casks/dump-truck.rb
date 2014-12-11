@@ -4,7 +4,7 @@ cask :v1 => 'dump-truck' do
 
   url 'https://www.goldenfrog.com/downloads/dumptruck/dumptruck.dmg'
   homepage 'http://www.goldenfrog.com/dumptruck'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Dump Truck.app'
 end

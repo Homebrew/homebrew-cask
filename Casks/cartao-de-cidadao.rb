@@ -4,7 +4,7 @@ cask :v1 => 'cartao-de-cidadao' do
 
   url "http://www.cartaodecidadao.pt/ccsoftware/Cartao_de_Cidadao_#{version}_LION_MOUNTAIN_LION_MAVERICKS.dmg"
   homepage 'http://www.cartaodecidadao.pt/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Cartao_de_Cidadao.pkg'
 

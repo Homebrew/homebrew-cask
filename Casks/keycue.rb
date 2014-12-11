@@ -4,7 +4,7 @@ cask :v1 => 'keycue' do
 
   url "http://www.ergonis.com/downloads/products/keycue/KeyCue#{version.gsub('.','')}-Install.dmg"
   homepage 'http://www.ergonis.com/products/keycue/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'KeyCue.app'
 end

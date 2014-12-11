@@ -7,7 +7,7 @@ cask :v1 => 'daemon-tools-lite' do
   appcast 'http://resources.web-search-home.com/xml/DAEMONToolsLite-appcast.xml',
           :sha256 => 'b4b3096744ad084a0a016a248cafee02670f4773fe29131ae50ddacaaf601b3d'
   homepage 'http://www.daemon-tools.cc/products/dtMacLite'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'DAEMON Tools Lite.app'
 end

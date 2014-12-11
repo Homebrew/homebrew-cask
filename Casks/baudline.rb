@@ -4,7 +4,7 @@ cask :v1 => 'baudline' do
 
   url "http://www.baudline.com/baudline_#{version}_macosx_universal.dmg"
   homepage 'http://www.baudline.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'baudline.app'
 end

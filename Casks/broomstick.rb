@@ -4,7 +4,7 @@ cask :v1 => 'broomstick' do
 
   url "http://downloads.zibity.com/Broomstick/Broomstick%20#{version}.zip"
   homepage 'http://www.zibity.com/broomstick'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Broomstick.app'
 end

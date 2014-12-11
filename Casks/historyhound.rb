@@ -6,7 +6,7 @@ cask :v1 => 'historyhound' do
   appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?HH',
           :sha256 => '2cd20bfdf558b83ee35ef23c879d1b321350cbb999489eb4b5cf5fba9c00a7bd'
   homepage 'http://www.stclairsoft.com/HistoryHound/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'HistoryHound.app'
 end

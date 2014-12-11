@@ -4,7 +4,7 @@ cask :v1 => 'knox' do
 
   url "https://d13itkw33a7sus.cloudfront.net/dist/K/Knox-#{version}.zip"
   homepage 'https://agilebits.com/knox'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Knox.app'
 end

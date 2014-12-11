@@ -6,7 +6,7 @@ cask :v1 => 'tomahawk' do
   appcast 'http://download.tomahawk-player.org/sparkle/update.php',
           :sha256 => 'ef1c646c36717abdd5ffb12bd3a8f758fe12d575d975f6dca5353144679aca4f'
   homepage 'http://www.tomahawk-player.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Tomahawk.app'
 end

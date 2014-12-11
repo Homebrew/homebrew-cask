@@ -4,7 +4,7 @@ cask :v1 => 'vimediamanager' do
 
   url "http://mariusth.channelwood.org/vimediamanager/files/vimediamanager_v#{version}.dmg"
   homepage 'http://mariusth.channelwood.org/vimediamanager/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ViMediaManager.app'
 end

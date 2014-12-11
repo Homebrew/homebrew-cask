@@ -7,7 +7,7 @@ cask :v1 => 'cog' do
   appcast 'http://mamburu.net/cog/stable.xml',
           :sha256 => 'f5770d73ad0c4a19af24cf25195c01d1cc05b937a79416fe82ead0949beee62e'
   homepage 'http://cogx.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Cog.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'affinic-debugger-gui' do
 
   url 'http://www.affinic.com/download/adg_macosx.dmg'
   homepage 'http://www.affinic.com/?page_id=435'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Affinic Debugger GUI.app'
 end

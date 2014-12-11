@@ -4,7 +4,7 @@ cask :v1 => 'easyfind' do
 
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/easyfind/#{version}/EasyFind.app.zip"
   homepage 'http://www.devontechnologies.com/download/products.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'EasyFind.app'
 end

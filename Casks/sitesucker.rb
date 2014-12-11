@@ -4,7 +4,7 @@ cask :v1 => 'sitesucker' do
 
   url 'http://www.sitesucker.us/archive/latest/SiteSucker.zip'
   homepage 'http://www.sitesucker.us/mac/mac.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SiteSucker/SiteSucker.app'
 end

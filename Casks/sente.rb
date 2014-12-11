@@ -6,7 +6,7 @@ cask :v1 => 'sente' do
   appcast 'http://www.thirdstreetsoftware.com/rss/Sente65.xml?v=6.6.0',
           :sha256 => '2083ee7a01313014c7d600e13018709521fd3f53d767bd31cd8d2caec2120c7f'
   homepage 'http://www.thirdstreetsoftware.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Sente 6.app'
 end

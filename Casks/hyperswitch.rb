@@ -5,7 +5,7 @@ cask :v1 => 'hyperswitch' do
   url 'https://bahoom.com/hyperswitch/download'
   appcast 'http://hyperswitch.bahoom.com/appcast.xml'
   homepage 'http://bahoom.com/hyperswitch'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'HyperSwitch.app'
 end

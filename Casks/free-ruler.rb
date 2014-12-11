@@ -4,7 +4,7 @@ cask :v1 => 'free-ruler' do
 
   url "http://www.pascal.com/software/freeruler/FreeRuler#{version}.zip"
   homepage 'http://www.pascal.com/software/freeruler/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "Free Ruler #{version}.app"
 end

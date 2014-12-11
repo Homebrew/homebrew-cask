@@ -4,7 +4,7 @@ cask :v1 => 'scriptql' do
 
   url 'http://www.kainjow.com/downloads/ScriptQL_qlgenerator.zip'
   homepage 'http://www.kainjow.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   qlplugin 'ScriptQL.qlgenerator'
 end

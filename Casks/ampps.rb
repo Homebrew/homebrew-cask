@@ -4,7 +4,7 @@ cask :v1 => 'ampps' do
 
   url "http://files.ampps.com/AMPPS-#{version}.dmg"
   homepage 'http://www.ampps.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   suite 'AMPPS'
 end

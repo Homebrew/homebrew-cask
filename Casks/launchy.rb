@@ -4,7 +4,7 @@ cask :v1 => 'launchy' do
 
   url "http://www.launchy.net/downloads/mac/Launchy#{version}.dmg"
   homepage 'http://www.launchy.net'
-  license :unknown
+  license :gpl
 
   app 'Launchy.app'
 end

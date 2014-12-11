@@ -6,7 +6,7 @@ cask :v1 => 'pcalc' do
   appcast 'http://www.pcalc.com/PCalcSUFeed.xml',
           :sha256 => '5e84c3bd2c0cfa56ff20dffd5106d761d3073d9d1ea61062524cb4d0e6f369f5'
   homepage 'http://www.pcalc.com/index.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'PCalc.app'
 end

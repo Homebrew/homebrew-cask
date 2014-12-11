@@ -4,7 +4,7 @@ cask :v1 => 'soulseek' do
 
   url "http://www.soulseekqt.net/SoulseekQt/Mac/SoulseekQt-#{version}.pkg"
   homepage 'http://www.soulseekqt.net/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "SoulseekQt-#{version}.pkg"
 

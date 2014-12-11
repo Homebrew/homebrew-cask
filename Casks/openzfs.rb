@@ -4,7 +4,7 @@ cask :v1 => 'openzfs' do
 
   url "https://openzfsonosx.org/w/images/0/0d/OpenZFS_on_OS_X_#{version}.dmg"
   homepage 'https://openzfsonosx.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "OpenZFS on OS X #{version} Mavericks or higher.pkg"
 

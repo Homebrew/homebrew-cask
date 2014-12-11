@@ -4,7 +4,7 @@ cask :v1 => 'hunt-x' do
 
   url 'http://huntx.mobilefirst.in/Apps/Hunt%20X.zip'
   homepage 'http://huntx.mobilefirst.in/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Hunt X.app'
 end

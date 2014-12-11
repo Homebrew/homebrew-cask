@@ -6,7 +6,7 @@ cask :v1 => 'ukelele' do
   appcast 'http://scripts.sil.org/cms/scripts/render_download.php?site_id=nrsi&format=file&media_id=ukelele_su_feed&filename=ukelele_su_feed.xml',
           :sha256 => '5409cb8f49f6de2b0a4c2d638a637d2c460c79532914c57ae87adc4551ed8d16'
   homepage 'http://scripts.sil.org/ukelele'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Ukelele.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'duplicate-annihilator' do
 
   url 'http://brattoo.com/propaganda/downloadDa.php'
   homepage 'http://brattoo.com/propaganda/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   container :nested => 'Duplicate Annihilator.dmg'
   app 'Duplicate Annihilator.app'

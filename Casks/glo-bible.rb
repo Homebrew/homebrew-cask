@@ -4,7 +4,7 @@ cask :v1 => 'glo-bible' do
 
   url 'http://immersion.vo.llnwd.net/o42/pub/glo/mac/en-us/Glo.dmg'
   homepage 'http://globible.com/gloformac/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Glo Bible.app'
 end

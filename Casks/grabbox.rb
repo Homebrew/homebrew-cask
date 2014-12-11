@@ -6,7 +6,7 @@ cask :v1 => 'grabbox' do
   appcast 'http://grabbox.devsoft.no/appcastBeta.xml',
           :sha256 => '8333d48af84e69f3885f7de4cd553c46a6feceadb1e354bf19a9170c277fabfe'
   homepage 'http://grabbox.devsoft.no/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'GrabBox.app'
 end

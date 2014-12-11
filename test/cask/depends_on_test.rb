@@ -50,4 +50,51 @@ describe "Satisfy Dependencies and Requirements" do
       }.must_raise(CaskError)
     end
   end
+
+  describe "depends_on :arch" do
+    it "succeeds when depends_on :arch is satisfied" do
+      arch_cask = Cask.load('with-depends-on-arch')
+      shutup do
+        Cask::Installer.new(arch_cask).install
+      end
+    end
+
+    it "raises an exception when depends_on :arch is not satisfied" do
+      arch_cask = Cask.load('with-depends-on-arch-failure')
+      lambda {
+        shutup do
+          Cask::Installer.new(arch_cask).install
+        end
+      }.must_raise(CaskError)
+    end
+  end
+
+  describe "depends_on :x11" do
+    it "succeeds when depends_on :x11 is satisfied" do
+      x11_cask = Cask.load('with-depends-on-x11')
+      shutup do
+        Cask::Installer.new(x11_cask).install
+      end
+    end
+
+    it "raises an exception when depends_on :x11 is not satisfied" do
+      x11_cask = Cask.load('with-depends-on-x11')
+      Cask.stubs(:x11_executable).returns(Pathname.new('/usr/path/does/not/exist'))
+      lambda {
+        shutup do
+          Cask::Installer.new(x11_cask).install
+        end
+      }.must_raise(CaskX11DependencyError)
+    end
+
+    it "never raises when depends_on :x11 => false" do
+      x11_cask = Cask.load('with-depends-on-x11-false')
+      Cask.stubs(:x11_executable).returns(Pathname.new('/usr/path/does/not/exist'))
+      lambda {
+        shutup do
+          Cask::Installer.new(x11_cask).install
+        end
+      } # won't raise
+    end
+  end
 end

@@ -6,7 +6,7 @@ cask :v1 => 'meerkat' do
   appcast 'http://codesorcery.net/appcasts/Meerkat.xml',
           :sha256 => 'ef91167a375342e078f147e20477056552bef06ea9e306a93ffb8a17ad4e654c'
   homepage 'http://codesorcery.net/meerkat'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Meerkat.app'
 end

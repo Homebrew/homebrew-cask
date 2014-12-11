@@ -4,7 +4,7 @@ cask :v1 => 'second-life-viewer' do
 
   url "http://download.cloud.secondlife.com/Viewer_3/Second_Life_#{version.gsub('.','_')}_i386.dmg"
   homepage 'http://secondlife.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Second Life Viewer.app'
 end

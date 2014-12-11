@@ -5,7 +5,7 @@ cask :v1 => 'puush' do
   url 'https://puush.me/dl/puush.zip'
   appcast 'https://puush.me/dl/puush.xml?hax=jax'
   homepage 'http://puush.me/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'puush.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'xnconvert' do
 
   url 'http://download.xnview.com/XnConvert-mac-x64.tgz'
   homepage 'http://www.xnview.com/en/xnconvert/'
-  license :unknown
+  license :gratis
 
   app 'XnConvert.app'
 end

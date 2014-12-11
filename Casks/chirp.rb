@@ -9,7 +9,7 @@ cask :v1 => 'chirp' do
   app "chirp-#{version}.app"
 
   caveats <<-EOS.undent
-    #{title} also requires the KK7DS Python Runtime as described at
+    #{token} also requires the KK7DS Python Runtime as described at
 
       http://chirp.danplanet.com/projects/chirp/wiki/Download#CHIRP-Downloads
   EOS

@@ -4,7 +4,7 @@ cask :v1 => 'colors' do
 
   url "https://mattpatenaude.com/software/colors-#{version}.zip"
   homepage 'http://mattpatenaude.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Colors.app'
 end

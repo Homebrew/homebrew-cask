@@ -4,7 +4,7 @@ cask :v1 => 'makerware' do
 
   url "https://s3.amazonaws.com/downloads.makerbot.com/makerware/MakerWare%20Bundle%20of%20Awesome%20#{version}.dmg"
   homepage 'http://www.makerbot.com/makerware/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "MakerWare Bundle of Awesome #{version}.pkg"
 

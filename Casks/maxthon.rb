@@ -4,7 +4,7 @@ cask :v1 => 'maxthon' do
 
   url "https://dl.maxthon.com/mac/Maxthon-#{version}.dmg"
   homepage 'http://www.maxthon.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Maxthon.app'
 end

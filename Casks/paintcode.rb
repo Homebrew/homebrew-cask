@@ -5,7 +5,7 @@ cask :v1 => 'paintcode' do
   url 'http://www.pixelcut.com/paintcode/paintcode.zip'
   appcast 'http://www.pixelcut.com/paintcode/appcast.xml'
   homepage 'http://www.paintcodeapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'PaintCode.app'
 end

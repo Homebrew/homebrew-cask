@@ -4,7 +4,7 @@ cask :v1 => 'ltspice' do
 
   url 'http://ltspice.linear-tech.com/LTspiceIV.dmg'
   homepage 'http://www.linear.com/designtools/software/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'LTspice.app'
 end

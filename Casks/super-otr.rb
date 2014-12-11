@@ -6,7 +6,7 @@ cask :v1 => 'super-otr' do
   appcast 'http://apfel-a.macbay.de/software/superotr/appcast-superotr.xml',
           :sha256 => '191fa832fae581006bbc419d37acbb59121a3aefcdebefe0364a6f8e216bcca2'
   homepage 'http://apfel-a.macbay.de/super-otr/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Super OTR.app'
 end

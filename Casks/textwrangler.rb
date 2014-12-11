@@ -6,7 +6,7 @@ cask :v1 => 'textwrangler' do
   appcast 'https://versioncheck.barebones.com/TextWrangler.xml',
           :sha256 => '3cee097b60d3e2b61835886aa980b6987dd9dd08aee4e8f98b43d6a1f3065cad'
   homepage 'http://www.barebones.com/products/textwrangler'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'TextWrangler.app'
 end

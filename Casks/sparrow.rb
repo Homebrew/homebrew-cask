@@ -5,7 +5,7 @@ cask :v1 => 'sparrow' do
   url 'http://download.sparrowmailapp.com/appcast/Sparrow-latest.dmg'
   appcast 'http://download.sparrowmailapp.com/appcast/appcast.xml'
   homepage 'http://www.sparrowmailapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Sparrow.app'
 end

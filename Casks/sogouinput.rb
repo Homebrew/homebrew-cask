@@ -5,7 +5,7 @@ cask :v1 => 'sogouinput' do
 
   url 'http://download.ime.sogou.com/1411725208/sogou_mac_30a.dmg'
   homepage 'http://pinyin.sogou.com/mac/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   installer :manual => '安装搜狗输入法.app'
 

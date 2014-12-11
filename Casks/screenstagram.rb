@@ -4,7 +4,7 @@ cask :v1 => 'screenstagram' do
 
   url "https://screenstagram.s3.amazonaws.com/screenstagram_#{version}.dmg"
   homepage 'http://screenstagram.s3.amazonaws.com/download.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   screen_saver 'Screenstagram 2.saver'
 end

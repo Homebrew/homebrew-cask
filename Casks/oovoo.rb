@@ -4,7 +4,7 @@ cask :v1 => 'oovoo' do
 
   url 'http://download.cdn.oovoo.com/download/ooVoo.dmg'
   homepage 'http://www.oovoo.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Oovoo.app'
 end

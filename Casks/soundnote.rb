@@ -5,7 +5,7 @@ cask :v1 => 'soundnote' do
   url 'http://download.mrgeckosmedia.com/SoundNote.zip'
   appcast 'http://mrgeckosmedia.com/applications/appcast/SoundNote'
   homepage 'https://mrgeckosmedia.com/applications/info/SoundNote'
-  license :unknown
+  license :isc
 
   app 'SoundNote.app'
 end

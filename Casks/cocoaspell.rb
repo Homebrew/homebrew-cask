@@ -4,7 +4,7 @@ cask :v1 => 'cocoaspell' do
 
   url "http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg"
   homepage 'http://cocoaspell.leuski.net/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'cocoAspell.pkg'
 

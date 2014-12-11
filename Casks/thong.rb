@@ -4,7 +4,7 @@ cask :v1 => 'thong' do
 
   url "https://fousa-apps.s3.amazonaws.com/thong/thong-#{version}.dmg"
   homepage 'http://thong.fousa.be/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   qlplugin 'Thong.qlgenerator'
 end

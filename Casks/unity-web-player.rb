@@ -4,7 +4,7 @@ cask :v1 => 'unity-web-player' do
 
   url 'http://webplayer.unity3d.com/download_webplayer-3.x/webplayer-mini.dmg'
   homepage 'https://unity3d.com/webplayer'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Install Unity Web Player.pkg'
 

@@ -4,7 +4,7 @@ cask :v1 => 'find-any-file' do
 
   url "http://files.tempel.org.s3.amazonaws.com/FindAnyFile_#{version}.zip"
   homepage 'http://apps.tempel.org/FindAnyFile/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Find Any File.app'
 end

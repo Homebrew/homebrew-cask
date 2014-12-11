@@ -4,7 +4,7 @@ cask :v1 => 'wyzo' do
 
   url "http://download.wyzo.com/files/mac/WyzoSetup-#{version}.dmg"
   homepage 'http://wyzo.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Wyzo.app'
 end

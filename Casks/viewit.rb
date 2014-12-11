@@ -4,7 +4,7 @@ cask :v1 => 'viewit' do
 
   url "http://www.hexcat.com/downloads/ViewIt-#{version}.dmg"
   homepage 'http://www.hexcat.com/viewit/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ViewIt.app'
 end

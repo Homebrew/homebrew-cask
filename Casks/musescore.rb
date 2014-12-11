@@ -4,7 +4,7 @@ cask :v1 => 'musescore' do
 
   url "http://ftp.osuosl.org/pub/musescore/releases/MuseScore-#{version}/MuseScore-#{version}.dmg"
   homepage 'http://musescore.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MuseScore.app'
 end

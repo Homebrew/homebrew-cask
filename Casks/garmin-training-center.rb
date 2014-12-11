@@ -4,7 +4,7 @@ cask :v1 => 'garmin-training-center' do
 
   url "https://www8.garmin.com/software/TrainingCenterforMac_#{version.gsub('.','')}.dmg"
   homepage 'http://www.garmin.com/garmin/cms/intosports/training_center'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Garmin Training Center.pkg'
 

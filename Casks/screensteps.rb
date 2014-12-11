@@ -4,7 +4,7 @@ cask :v1 => 'screensteps' do
 
   url 'http://www.bluemangolearning.com/download/screensteps/2_0/release/ScreenSteps.dmg'
   homepage 'http://www.bluemangolearning.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ScreenSteps.app'
 end

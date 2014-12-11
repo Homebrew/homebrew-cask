@@ -7,8 +7,9 @@ cask :v1 => 'pemdas-widget' do
   license :oss
 
   widget 'PEMDAS.wdgt'
+
   caveats <<-EOS.undent
-    Currently, Dashboard Widgets such as '#{title}' do NOT work correctly
+    Currently, Dashboard Widgets such as '#{token}' do NOT work correctly
     when installed via brew-cask.  The bug is being tracked here:
 
       https://github.com/caskroom/homebrew-cask/issues/2206

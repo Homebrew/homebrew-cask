@@ -4,7 +4,7 @@ cask :v1 => 'sandvox' do
 
   url 'http://www.karelia.com/files/8/Sandvox.dmg'
   homepage 'http://www.karelia.com/products/sandvox/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Sandvox.app'
 end

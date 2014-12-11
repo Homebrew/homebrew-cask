@@ -4,7 +4,7 @@ cask :v1 => 'aptanastudio' do
 
   url "http://download.aptana.com/studio3/standalone/#{version}/mac/Aptana_Studio_3_Setup_#{version}.dmg"
   homepage 'http://www.aptana.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Aptana Studio 3/AptanaStudio3.app'
 end

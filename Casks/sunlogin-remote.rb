@@ -4,7 +4,7 @@ cask :v1 => 'sunlogin-remote' do
 
   url "http://download.oray.com/sunlogin/SunloginRemote_v#{version}.dmg"
   homepage 'http://sunlogin.oray.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Sunlogin Remote.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'wordservice' do
 
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/wordservice/#{version}/WordService.zip"
   homepage 'http://www.devontechnologies.com/products/freeware.html#c1115'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   service 'WordService/WordService.service'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'thumbsup' do
 
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/thumbsup/#{version}/ThumbsUp.dmg.zip"
   homepage 'http://www.devontechnologies.com/products/freeware.html#c966'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   container :nested => 'ThumbsUp.dmg'
   app 'ThumbsUp.app'

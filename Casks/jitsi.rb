@@ -6,7 +6,7 @@ cask :v1 => 'jitsi' do
   appcast 'https://download.jitsi.org/jitsi/macosx/sparkle/updates.xml',
           :sha256 => 'db2939816e8a38c7197160ab455626af9aadc2c5603f2212e372cffb85b31949'
   homepage 'https://jitsi.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Jitsi.app'
 end

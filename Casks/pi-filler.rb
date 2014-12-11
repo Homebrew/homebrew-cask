@@ -4,7 +4,7 @@ cask :v1 => 'pi-filler' do
 
   url 'http://ivanx.com/raspberrypi/files/PiFiller.zip'
   homepage 'http://ivanx.com/raspberrypi'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Pi Filler.app'
 end

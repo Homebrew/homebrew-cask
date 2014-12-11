@@ -4,7 +4,7 @@ cask :v1 => 'adobe-dng-converter' do
 
   url "http://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.gsub('.', '_')}.dmg"
   homepage 'http://www.adobe.com/support/downloads/product.jsp?product=106&platform=Macintosh'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Adobe DNG Converter.pkg'
 

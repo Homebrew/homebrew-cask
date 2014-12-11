@@ -4,7 +4,7 @@ cask :v1 => 'voxox' do
 
   url 'http://www.voxox.com/download/voxox-osx-latest.dmg'
   homepage 'http://www.voxox.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Voxox.app'
 end

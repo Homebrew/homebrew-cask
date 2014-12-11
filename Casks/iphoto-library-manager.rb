@@ -4,7 +4,7 @@ cask :v1 => 'iphoto-library-manager' do
 
   url "https://s3.amazonaws.com/fatcatsoftware/iplm/iPhotoLibraryManager_#{version.gsub('.', '')}.zip"
   homepage 'http://www.fatcatsoftware.com/iplm/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iPhoto Library Manager.app'
 end

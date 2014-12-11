@@ -4,7 +4,7 @@ cask :v1 => 'wacom-bamboo-tablet' do
 
   url "http://cdn.wacom.com/u/productsupport/drivers/mac/consumer/pentablet_#{version}.dmg"
   homepage 'http://us.wacom.com/en/support/drivers'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Install Wacom Tablet.pkg'
 

@@ -6,7 +6,7 @@ cask :v1 => 'slidemode' do
   appcast 'http://teaksoftware.com/appcasts/smappcast.xml',
           :sha256 => '859173e49589a62ff6923ed887e5377a4ea619865de38d28a79c3c9594613d12'
   homepage 'http://teaksoftware.com/app/slidemode'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'SlideMode.app'
 end

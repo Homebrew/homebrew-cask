@@ -4,7 +4,7 @@ cask :v1 => 'monotype-skyfonts' do
 
   url "http://cdn1.skyfonts.com/client/Monotype_SkyFonts_Mac64_#{version}.dmg"
   homepage 'http://www.fonts.com/web-fonts/google'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Monotype Skyfonts.app'
 end

@@ -1,6 +1,14 @@
 require 'rubygems'
+require 'cask/staged'
 
 class Cask::Installer
+
+  # todo: it is unwise for Cask::Staged to be a module, when we are
+  # dealing with both staged and unstaged Casks here.  This should
+  # either be a class which is only sometimes instantiated, or there
+  # should be explicit checks on whether staged state is valid in
+  # every method.
+  include Cask::Staged
 
   PERSISTENT_METADATA_SUBDIRS = [ 'gpg' ]
 
@@ -51,6 +59,8 @@ class Cask::Installer
       download
       extract_primary_container
       install_artifacts
+      save_caskfile force
+      enable_accessibility_access
     rescue StandardError => e
       purge_versioned_files
       raise e
@@ -105,54 +115,65 @@ class Cask::Installer
   #      dependencies should also apply for "brew cask stage"
   #      override dependencies with --force or perhaps --force-deps
   def satisfy_dependencies
-    macos_dependencies
-    formula_dependencies
+    if @cask.depends_on
+      ohai 'Satisfying dependencies'
+      macos_dependencies
+      arch_dependencies
+      x11_dependencies
+      formula_dependencies
+      puts 'complete'
+    end
   end
 
   def macos_dependencies
-    # todo The Cask::DependsOn object needs to be more friendly.
-    #      Currently @cask.depends_on.macos raises an exception
-    #      if :macos was not set.
-    if @cask.depends_on and
-       @cask.depends_on.macos
-      if @cask.depends_on.macos.kind_of?(Array) and
-         @cask.depends_on.macos.first.is_a?(Symbol)
-        operator, version = @cask.depends_on.macos
-        unless MacOS.version.send(operator, version)
-          raise CaskError.new "Cask #{@cask} depends on OS X version #{operator} #{version}, but you are running version #{MacOS.version}."
-        end
-      elsif @cask.depends_on.macos.kind_of?(Array)
-        unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.version.to_s))
-          raise CaskError.new "Cask #{@cask} depends on OS X version being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running version #{MacOS.version}."
-        end
-      else
-        unless MacOS.version == @cask.depends_on.macos
-          raise CaskError.new "Cask #{@cask} depends on OS X version #{@cask.depends_on.macos}, but you are running version #{MacOS.version}."
-        end
+    return unless @cask.depends_on.macos
+    if @cask.depends_on.macos.first.is_a?(Array)
+      operator, release = @cask.depends_on.macos.first
+      unless MacOS.version.send(operator, release)
+        raise CaskError.new "Cask #{@cask} depends on OS X release #{operator} #{release}, but you are running release #{MacOS.version}."
+      end
+    elsif @cask.depends_on.macos.length > 1
+      unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.version.to_s))
+        raise CaskError.new "Cask #{@cask} depends on OS X release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.version}."
+      end
+    else
+      unless MacOS.version == @cask.depends_on.macos.first
+        raise CaskError.new "Cask #{@cask} depends on OS X release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.version}."
       end
     end
   end
 
+  def arch_dependencies
+    return unless @cask.depends_on.arch
+    @current_arch ||= [
+                       Hardware::CPU.type,
+                       Hardware::CPU.is_32_bit? ?
+                         (Hardware::CPU.intel? ? :i386   : :ppc_7400) :
+                         (Hardware::CPU.intel? ? :x86_64 : :ppc_64)
+                      ]
+    return unless Array(@cask.depends_on.arch & @current_arch).empty?
+    raise CaskError.new "Cask #{@cask} depends on hardware architecture being one of #{@cask.depends_on.arch.inspect}, but you are running #{@current_arch.inspect}"
+  end
+
+  def x11_dependencies
+    return unless @cask.depends_on.x11
+    raise CaskX11DependencyError.new(@cask.token) unless Cask.x11_executable.exist?
+  end
+
   def formula_dependencies
-    # todo The Cask::DependsOn object needs to be more friendly.
-    #      Currently @cask.depends_on.formula raises an exception
-    #      if :formula was not set.
-    if @cask.depends_on and
-       @cask.depends_on.formula and
-       not @cask.depends_on.formula.empty?
-      ohai 'Installing Formula dependencies from Homebrew'
-      @cask.depends_on.formula.each do |dep_name|
-        print "#{dep_name} ... "
-        installed = @command.run(HOMEBREW_BREW_FILE,
-                                 :args => ['list', '--versions', dep_name],
-                                 :print_stderr => false).stdout.include?(dep_name)
-        if installed
-          puts "already installed"
-        else
-          @command.run!(HOMEBREW_BREW_FILE,
-                        :args => ['install', dep_name])
-          puts "done"
-        end
+    return unless @cask.depends_on.formula and not @cask.depends_on.formula.empty?
+    ohai 'Installing Formula dependencies from Homebrew'
+    @cask.depends_on.formula.each do |dep_name|
+      print "#{dep_name} ... "
+      installed = @command.run(HOMEBREW_BREW_FILE,
+                               :args => ['list', '--versions', dep_name],
+                               :print_stderr => false).stdout.include?(dep_name)
+      if installed
+        puts "already installed"
+      else
+        @command.run!(HOMEBREW_BREW_FILE,
+                      :args => ['install', dep_name])
+        puts "done"
       end
     end
   end
@@ -161,8 +182,61 @@ class Cask::Installer
     self.class.print_caveats(@cask)
   end
 
+  # todo: logically could be in a separate class
+  def enable_accessibility_access
+    return unless @cask.accessibility_access
+    ohai 'Enabling accessibility access'
+    if MacOS.version >= :mavericks
+      @command.run!('/usr/bin/sqlite3',
+                    :args => [
+                              Cask.tcc_db,
+                              "INSERT INTO access VALUES('kTCCServiceAccessibility','#{bundle_identifier}',0,1,1,NULL);",
+                             ],
+                    :sudo => true)
+    else
+      @command.run!('/usr/bin/touch',
+                    :args => [Cask.pre_mavericks_accessibility_dotfile],
+                    :sudo => true)
+    end
+  end
+
+  def disable_accessibility_access
+    return unless @cask.accessibility_access
+    if MacOS.version >= :mavericks
+      ohai 'Disabling accessibility access'
+      @command.run!('/usr/bin/sqlite3',
+                    :args => [
+                              Cask.tcc_db,
+                              "DELETE FROM access WHERE client='#{bundle_identifier}';",
+                             ],
+                    :sudo => true)
+    else
+      opoo <<-EOS.undent
+        Accessibility access was enabled for #{@cask}, but it is not safe to disable
+        automatically on this version of OS X.  See System Preferences.
+      EOS
+    end
+  end
+
+  def save_caskfile(force=false)
+    timestamp = :now
+    create    = true
+    savedir   = @cask.metadata_subdir('Casks', timestamp, create)
+    if Dir.entries(savedir).size > 2
+      # should not happen
+      if force
+        savedir.rmtree
+        FileUtils.mkdir_p savedir
+      else
+        raise CaskAlreadyInstalledError.new(@cask)
+      end
+    end
+    FileUtils.copy(@cask.sourcefile_path, savedir) if @cask.sourcefile_path
+  end
+
   def uninstall(force=false)
     odebug "Cask::Installer.uninstall"
+    disable_accessibility_access
     uninstall_artifacts
     purge_versioned_files
     purge_caskroom_path if force

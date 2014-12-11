@@ -5,7 +5,7 @@ cask :v1 => 'loom' do
   url 'https://loom.com/download/loom-mac.dmg'
   appcast 'http://www.loom.com/download/macupdate_1.1.xml'
   homepage 'http://loom.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Loom.app'
 end

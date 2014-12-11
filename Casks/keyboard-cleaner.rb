@@ -4,7 +4,7 @@ cask :v1 => 'keyboard-cleaner' do
 
   url 'http://jan.prima.de/Keyboard_Cleaner.zip'
   homepage 'http://jan.prima.de/~jan/plok/archives/48-Keyboard-Cleaner.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Keyboard Cleaner.app'
 end

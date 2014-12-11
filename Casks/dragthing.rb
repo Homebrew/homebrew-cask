@@ -4,7 +4,7 @@ cask :v1 => 'dragthing' do
 
   url "https://s3.amazonaws.com/tlasystems/DragThing-#{version}.dmg"
   homepage 'http://www.dragthing.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'DragThing.app'
 end

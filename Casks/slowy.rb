@@ -4,7 +4,7 @@ cask :v1 => 'slowy' do
 
   url "http://slowyapp.com/downloads/Slowyapp_v#{version}.dmg"
   homepage 'http://slowyapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Slowy.app'
 end

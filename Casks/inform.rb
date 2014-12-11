@@ -4,7 +4,7 @@ cask :v1 => 'inform' do
 
   url "http://inform7.com/download/content/6L02/I#{version.gsub('.','-')}-OSX.dmg"
   homepage 'http://inform7.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Inform.app'
 end

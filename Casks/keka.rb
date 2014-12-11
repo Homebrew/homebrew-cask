@@ -6,7 +6,7 @@ cask :v1 => 'keka' do
   appcast 'http://update.kekaosx.com',
           :sha256 => '7d5bf4d33a9c889b33bc5ba8e168deeb86abed84b1fd3deaebe4d85f34a80a32'
   homepage 'http://kekaosx.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Keka.app'
 

@@ -4,7 +4,7 @@ cask :v1 => 'tinyumbrella' do
 
   url "http://cache.firmwareumbrella.com/downloads/TinyUmbrella-#{version}.00.app.zip"
   homepage 'http://blog.firmwareumbrella.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'TinyUmbrella.app'
 end

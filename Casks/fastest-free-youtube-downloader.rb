@@ -4,7 +4,7 @@ cask :v1 => 'fastest-free-youtube-downloader' do
 
   url "http://digitalocean.appengine-distro.com/YTD/Installers/#{version}/FastestFreeYouTubeDownloader-Setup.dmg"
   homepage 'https://www.fastestvideodownloader.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Fastest Free YouTube Downloader.app'
 end

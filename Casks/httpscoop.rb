@@ -6,7 +6,7 @@ cask :v1 => 'httpscoop' do
   appcast 'http://www.tuffcode.com/releases/httpscoop-appcast.xml',
           :sha256 => 'f3d7449544aa64c7709cdb8c5ccd93f2a056550add5fc7493fc402b2c515c5cb'
   homepage 'http://www.tuffcode.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'HTTPScoop.app'
 end

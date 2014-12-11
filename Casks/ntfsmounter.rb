@@ -4,7 +4,7 @@ cask :v1 => 'ntfsmounter' do
 
   url "http://ntfsmounter.com/NTFS%20Mounter%20#{version}.dmg.zip"
   homepage 'http://ntfsmounter.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   container :nested => "NTFS Mounter #{version}.dmg"
   app 'ntfsMounter.app'

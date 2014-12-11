@@ -22,6 +22,8 @@ module Cask::DSL
     base.extend(ClassMethods)
   end
 
+  def full_name; self.class.full_name; end
+
   def homepage; self.class.homepage; end
 
   def url; self.class.url; end
@@ -48,7 +50,30 @@ module Cask::DSL
 
   def caveats; self.class.caveats; end
 
+  def accessibility_access; self.class.accessibility_access; end
+
   module ClassMethods
+
+    # A quite fragile shim to allow "full_name" be exposed as simply "name"
+    # in the DSL.  We detect the difference with the already-existing "name"
+    # method by arity, and use "full_name" exclusively in backend code.
+    def name(*args)
+      if args.empty?
+        super
+      else
+        self.full_name(args)
+      end
+    end
+
+    def full_name(_full_name=nil)
+      @full_name ||= []
+      if _full_name
+        # todo this idiom may be preferred to << if it behaves the same on Ruby 1.8 and 2.x
+        @full_name.concat(Array(*_full_name))
+      end
+      @full_name
+    end
+
     def homepage(homepage=nil)
       if @homepage and !homepage.nil?
         raise CaskInvalidError.new(self.token, "'homepage' stanza may only appear once")
@@ -57,6 +82,7 @@ module Cask::DSL
     end
 
     def url(*args)
+      return @url if args.empty?
       if @url and !args.empty?
         raise CaskInvalidError.new(self.token, "'url' stanza may only appear once")
       end
@@ -68,6 +94,7 @@ module Cask::DSL
     end
 
     def appcast(*args)
+      return @appcast if args.empty?
       if @appcast and !args.empty?
         raise CaskInvalidError.new(self.token, "'appcast' stanza may only appear once")
       end
@@ -79,6 +106,7 @@ module Cask::DSL
     end
 
     def gpg(*args)
+      return @gpg if args.empty?
       if @gpg and !args.empty?
         raise CaskInvalidError.new(self.token, "'gpg' stanza may only appear once")
       end
@@ -90,6 +118,7 @@ module Cask::DSL
     end
 
     def container(*args)
+      return @container if args.empty?
       if @container and !args.empty?
         # todo: remove this constraint, and instead merge multiple container stanzas
         raise CaskInvalidError.new(self.token, "'container' stanza may only appear once")
@@ -122,6 +151,7 @@ module Cask::DSL
     end
 
     def tags(*args)
+      return @tags if args.empty?
       if @tags and !args.empty?
         # consider removing this limitation
         raise CaskInvalidError.new(self.token, "'tags' stanza may only appear once")
@@ -134,6 +164,7 @@ module Cask::DSL
     end
 
     def license(arg=nil)
+      return @license if arg.nil?
       if @license and !arg.nil?
         raise CaskInvalidError.new(self.token, "'license' stanza may only appear once")
       end
@@ -144,14 +175,13 @@ module Cask::DSL
       end
     end
 
+    # depends_on uses a load method so that multiple stanzas can be merged
     def depends_on(*args)
-      if @depends_on and !args.empty?
-        # todo: remove this constraint, and instead merge multiple depends_on stanzas
-        raise CaskInvalidError.new(self.token, "'depends_on' stanza may only appear once")
-      end
-      @depends_on ||= begin
-        Cask::DSL::DependsOn.new(*args) unless args.empty?
-      rescue StandardError => e
+      return @depends_on if args.empty?
+      @depends_on ||= Cask::DSL::DependsOn.new()
+      begin
+        @depends_on.load(*args) unless args.empty?
+      rescue RuntimeError => e
         raise CaskInvalidError.new(self.token, e)
       end
       @depends_on
@@ -162,6 +192,7 @@ module Cask::DSL
         # todo: remove this constraint, and instead merge multiple conflicts_with stanzas
         raise CaskInvalidError.new(self.token, "'conflicts_with' stanza may only appear once")
       end
+      return @conflicts_with if args.empty?
       @conflicts_with ||= begin
         Cask::DSL::ConflictsWith.new(*args) unless args.empty?
       rescue StandardError => e
@@ -183,6 +214,13 @@ module Cask::DSL
         # accessor
         @caveats
       end
+    end
+
+    def accessibility_access(accessibility_access=nil)
+      if @accessibility_access and !accessibility_access.nil?
+        raise CaskInvalidError.new(self.token, "'accessibility_access' stanza may only appear once")
+      end
+      @accessibility_access ||= accessibility_access
     end
 
     def self.ordinary_artifact_types
@@ -275,7 +313,7 @@ module Cask::DSL
     end
 
     def method_missing(method, *args)
-      Cask::Utils.method_missing_message(method, self.title)
+      Cask::Utils.method_missing_message(method, self.token)
       return nil
     end
   end

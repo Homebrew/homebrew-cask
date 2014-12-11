@@ -6,7 +6,7 @@ cask :v1 => 'weibox' do
   appcast 'http://weiboformac.sinaapp.com/appcast/wm2.xml',
           :sha256 => '2aefd31728fb15674f7afd1bc2fd4b47f42b6720227f2ee81b8a6d80344815c3'
   homepage 'http://weiboformac.sinaapp.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'WeiboX.app'
 end

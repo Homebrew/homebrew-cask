@@ -4,7 +4,7 @@ cask :v1 => 'pagico' do
 
   url "http://pagico.com/downloads/Pagico_Desktop_r#{version.sub(%r{^.*\.},'')}.dmg"
   homepage 'http://pagico.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Install Pagico.pkg'
 

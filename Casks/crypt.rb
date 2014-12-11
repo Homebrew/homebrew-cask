@@ -4,7 +4,7 @@ cask :v1 => 'crypt' do
 
   url "http://voluntary.net.s3.amazonaws.com/Crypt#{version}_20100429.zip"
   homepage 'http://voluntary.net/crypt/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "Crypt#{version}.app"
 end

@@ -10,6 +10,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Optional Stanzas](#optional-stanzas)
  * [Conditional Statements](#conditional-statements)
  * [Header Line Details](#header-line-details)
+ * [Name Stanza Details](#name-stanza-details)
  * [Caveats Stanza Details](#caveats-stanza-details)
  * [Checksum Stanza Details](#checksum-stanza-details)
  * [URL Stanza Details](#url-stanza-details)
@@ -24,6 +25,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Depends_on Stanza Details](#depends_on-stanza-details)
  * [Conflicts_with Stanza Details](#conflicts_with-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
+ * [Postflight Stanza Details](#postflight-stanza-details)
  * [Zap Stanza Details](#zap-stanza-details)
  * [Arbitrary Ruby Methods](#arbitrary-ruby-methods)
  * [Revisions to the Cask DSL](#revisions-to-the-cask-dsl)
@@ -40,6 +42,7 @@ cask :v1 => 'alfred' do
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
 
   url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
+  name 'Alfred'
   homepage 'http://www.alfredapp.com/'
   license :commercial
 
@@ -59,7 +62,7 @@ time.
 To make maintenance easier, the most-frequently-updated stanzas are usually
 placed at the top.  But that's a convention, not a rule.
 
-Exception: `do` blocks such as `preflight` may enclose a block of pure Ruby
+Exception: `do` blocks such as `postflight` may enclose a block of pure Ruby
 code.  Lines within that block follow a procedural (order-dependent)
 paradigm.
 
@@ -104,16 +107,18 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 
 | name                   | multiple occurrences allowed? | value       |
 | ---------------------- |------------------------------ | ----------- |
+| `name`                 | yes                           | a string providing the full and proper name defined by the vendor (see also [Name Stanza Details](#name-stanza-details))
 | `uninstall`            | yes                           | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](#uninstall-stanza-details))
 | `zap`                  | yes                           | additional procedures for a more complete uninstall, including user files and shared resources. (see also [Zap Stanza Details](#zap-stanza-details))
 | `appcast`              | no                            | a URL providing an appcast feed to find updates for this Cask.  (see also [Appcast Stanza Details](#appcast-stanza-details))
-| `depends_on`           | yes                           | a list of dependencies required by this Cask (see also [Depends_on Stanza Details](#depends_on-stanza-details))
+| `depends_on`           | yes                           | a list of dependencies and requirements for this Cask (see also [Depends_on Stanza Details](#depends_on-stanza-details))
 | `conflicts_with`       | yes                           | a list of conflicts with this Cask (*not yet functional* see also [Conflicts_with Stanza Details](#conflicts_with-stanza-details))
 | `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](#caveats-stanza-details))
 | `preflight`            | yes                           | a Ruby block containing preflight install operations (needed only in very rare cases)
-| `postflight`           | yes                           | a Ruby block containing postflight install operations
+| `postflight`           | yes                           | a Ruby block containing postflight install operations (see also [Postflight Stanza Details](#postflight-stanza-details))
 | `uninstall_preflight`  | yes                           | a Ruby block containing preflight uninstall operations (needed only in very rare cases)
 | `uninstall_postflight` | yes                           | a Ruby block containing postflight uninstall operations
+| `accessibility_access` | no                            | `true` if the application should be granted accessibility access
 | `container :nested =>` | no                            | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `container :type =>`   | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`.  (example [parse.rb](../Casks/parse.rb))
 | `tags`                 | no                            | a list of key-value pairs for Cask annotation.  Not free-form.  (see also [Tags Stanza Details](#tags-stanza-details))
@@ -129,21 +134,21 @@ Tests on the following values are known to be acceptable:
 
 | value                       | examples
 | ----------------------------|--------------------------------------
-| `MacOS.version`             | [macports.rb](../Casks/macports.rb), [coconutbattery.rb](../Casks/coconutbattery.rb)
+| `MacOS.release`             | [macports.rb](../Casks/macports.rb), [coconutbattery.rb](../Casks/coconutbattery.rb)
 | `Hardware::CPU.is_32_bit?`  | [vuescan.rb](../Casks/vuescan.rb)
 | `Hardware::CPU.is_64_bit?`  | none, see [Always Fall Through to the Newest Case](#always-fall-through-to-the-newest-case)
 
 ### Version Comparisons
 
-Tests against `MacOS.version` may use either symbolic names or version
+Tests against `MacOS.release` may use either symbolic names or version
 strings with numeric comparison operators:
 
 ```ruby
-if MacOS.version < :mavericks     # symbolic name
+if MacOS.release < :mavericks     # symbolic name
 ```
 
 ```ruby
-if MacOS.version < '10.9'         # version string
+if MacOS.release < '10.9'         # version string
 ```
 
 The available symbols for OS X versions are: `:tiger`, `:leopard`,
@@ -160,9 +165,9 @@ This makes it more likely that the Cask will work without alteration when
 a new OS is released.  Example (from [coconutbattery.rb](../Casks/coconutbattery.rb)):
 
 ```ruby
-if MacOS.version < :leopard
+if MacOS.release < :leopard
   # ...
-elsif MacOS.version < :lion
+elsif MacOS.release < :lion
   # ...
 else
   # ...
@@ -188,6 +193,17 @@ the Cask token.
 There are currently some arbitrary limitations on Cask tokens which are
 in the process of being removed.  The Travis bot will catch any errors
 during the transition.
+
+
+## Name Stanza Details
+
+`name` stanza accepts a UTF-8 string defining the full name of the software.
+
+If there are useful alternate names, `name` can be repeated multiple times.
+(Or, equivalently, an array value may be given.)
+
+When multiple names are given, the first should follow the canonical
+branding as defined by the vendor.
 
 
 ## Caveats Stanza Details
@@ -230,10 +246,7 @@ The following methods may be called to generate standard warning messages:
 | `zsh_path_helper(path)`           | zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable
 | `logout`                          | users should log out and log back in to complete installation
 | `reboot`                          | users should reboot to complete installation
-| `assistive_devices`               | users should grant the application access to assistive devices
 | `files_in_usr_local`              | the Cask installs files to `/usr/local`, which may confuse Homebrew
-| `arch_only(list)`                 | the Cask only supports certain architectures.  Currently valid elements of `list` are `intel-32` and `intel-64`
-| `x11_required`                    | the Cask requires X11 to run
 
 Example:
 
@@ -387,7 +400,6 @@ using the information stored in the `tags` stanza.
 
 | key           | meaning
 | ------------- | -----------------------------
-| `:name`       | the full name of the Cask. (example [smlnj.rb](../Casks/smlnj.rb))
 | `:vendor`     | the full-text official name of the producer of the software: an author or corporate name, as appropriate.  As the value is intended as a search target, commonly shared abbreviations such as `Dr.` or `Inc.` should be omitted. (example [google-chrome.rb](../Casks/google-chrome.rb))
 
 
@@ -539,12 +551,12 @@ installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer
 
 ## Depends_on Stanza Details
 
-`depends_on` is used to declare dependencies required to install a Cask
-or to execute its contents.
+`depends_on` is used to declare dependencies and requirements for a Cask.
+`depends_on` is not consulted until `install` is attempted.
 
 ### Depends_on :formula
 
-The value should name a Homebrew formula needed by the Cask.
+The value should name a Homebrew Formula needed by the Cask.
 
 Example use: some distributions are contained in archive formats such as
 `7z` which are not supported by stock Apple tools.  For these cases, a more
@@ -559,14 +571,24 @@ depends_on :formula => 'unar'
 
 #### Requiring an Exact OS X Release
 
-The value for `depends_on :macos` may be a string, symbol or an array of
-strings or symbols, listing the exact compatible OS X releases.
+The value for `depends_on :macos` may be a symbol, string, or an array,
+listing the exact compatible OS X releases.
 
-The available symbols for OS X releases are: `:tiger`, `:leopard`,
-`:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, and `:yosemite`.
-These correspond to strings `'10.4'`, `'10.5'`, … `'10.10'` (major releases
-containing a single dot.  The following are all valid ways to enumerate the
-exact OS X version requirements for a Cask:
+The available values for OS X releases are:
+
+| symbol             | corresponding string
+| -------------------|----------------------
+| `:tiger`           | `'10.4'`
+| `:leopard`         | `'10.5'`
+| `:snow_leopard`    | `'10.6'`
+| `:lion`            | `'10.7'`
+| `:mountain_lion`   | `'10.8'`
+| `:mavericks`       | `'10.9'`
+| `:yosemite`        | `'10.10'`
+
+Only major releases are covered (version numbers containing a single dot).
+The symbol form is preferred for readability.  The following are all valid
+ways to enumerate the exact OS X release requirements for a Cask:
 
 ```ruby
 depends_on :macos => :yosemite
@@ -578,7 +600,7 @@ depends_on :macos => ['10.9', '10.10']
 #### Setting a Minimum OS X Release
 
 `depends_on :macos` can also accept a string starting with a comparison
-operator such as `>=`, followed by an OS X version in the form above.  The
+operator such as `>=`, followed by an OS X release in the form above.  The
 following are both valid expressions meaning "at least OS X 10.9":
 
 ```ruby
@@ -586,18 +608,51 @@ depends_on :macos => '>= :mavericks'
 depends_on :macos => '>= 10.9'
 ```
 
-### All Depends_on Keys
+A comparison expression cannot be combined with any other form of `depends_on :macos`.
 
-Several other keys are accepted by `depends_on`, in anticipation of future
-functionality:
+### Depends_on :arch
+
+The value for `depends_on :arch` may be a symbol or an array of symbols,
+listing the hardware compatibility requirements for a Cask.  The requirement
+is satisfied at install time if any one of multiple `:arch` value matches
+the user's hardware.
+
+The available symbols for hardware are:
+
+| symbol     | meaning        |
+| ---------- | -------------- |
+| `:i386`    | 32-bit Intel   |
+| `:x86_64`  | 64-bit Intel   |
+| `:ppc_7400`| 32-bit PowerPC |
+| `:ppc_64`  | 64-bit PowerPC |
+| `:intel`   | Any Intel      |
+| `:ppc`     | Any PowerPC    |
+
+The following are all valid expressions:
+
+```ruby
+depends_on :arch => :x86_64
+depends_on :arch => [:x86_64]          # same meaning as above
+depends_on :arch => :intel
+depends_on :arch => [:i386, :x86_64]   # same meaning as above
+```
+
+Since PowerPC hardware is no longer common, the expression most frequently
+needed will be:
+
+```ruby
+depends_on :arch => :x86_64
+```
+
+### All Depends_on Keys
 
 | key        | description |
 | ---------- | ----------- |
 | `:formula` | a Homebrew Formula
 | `:cask`    | *stub - not yet functional*
-| `:macos`   | a string, symbol, array, or expression defining OS X version requirements.
-| `:arch`    | *stub - not yet functional*
-| `:x11`     | *stub - not yet functional*
+| `:macos`   | a symbol, string, array, or comparison expression defining OS X release requirements.
+| `:arch`    | a symbol or array defining hardware requirements.
+| `:x11`     | a Boolean indicating a dependency on X11.
 | `:java`    | *stub - not yet functional*
 
 
@@ -850,6 +905,34 @@ A fully manual method for finding bundle ids in a package file follows:
   5. Once bundle ids have been identified, the unpacked package directory can be deleted.
 
 
+## Postflight Stanza Details
+
+### Evaluation of Blocks is Always Deferred
+
+The Ruby blocks defined by `preflight`, `postflight`, `uninstall_preflight`,
+and `uninstall_postflight` are not evaluated until install time or uninstall
+time.  Within a block, you may refer to the `@cask` instance variable, and
+invoke any method available on `@cask`.
+
+### Postflight Mini-DSL
+
+There is a mini-DSL available within `postflight` blocks.
+
+The following methods may be called to perform standard postflight tasks:
+
+| method                          | description |
+| ------------------------------- | ----------- |
+| `plist_set(key, value)`         | set a value in the `Info.plist` file for the app bundle.  Example: [`rubymine.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/rubymine.rb#L12)
+| `suppress_move_to_applications` | suppress a dialog asking the user to move the app to the `/Applications` folder.  Example: [`github.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/github.rb#L13).
+
+`plist_set` currently has the limitation that it only operates on the
+bundle indicated by the first `app` stanza (and the Cask must contain
+an `app` stanza).
+
+`suppress_move_to_applications` optionally accepts a `:key` parameter for
+apps which use a nonstandard `defaults` key.  Example: [`alfred.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/alfred.rb).
+
+
 ## Zap Stanza Details
 
 ### Zap Stanza Purpose
@@ -901,6 +984,7 @@ cask :v1 => 'myapp' do
     end
   end
 
+  name 'MyApp'
   version '1.0'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
   license :unknown

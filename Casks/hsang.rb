@@ -4,7 +4,7 @@ cask :v1 => 'hsang' do
 
   url "http://nie.gdl.netease.com/lushi/HSAng_#{version}.dmg"
   homepage 'http://lushi.163.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'HSAng.app'
 end

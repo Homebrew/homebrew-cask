@@ -4,7 +4,7 @@ cask :v1 => 'pixel-check' do
 
   url "http://macguitar.me/apps/pixelcheck/PXC#{version}.zip"
   homepage 'http://macguitar.me/apps/pixelcheck/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "PiXel Check #{version}/PiXel Check.app"
 end

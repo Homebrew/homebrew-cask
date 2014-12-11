@@ -4,7 +4,7 @@ cask :v1 => 'rawtherapee' do
 
   url "http://rawtherapee.com/releases_head/mac/RawTherapee_OSX_10.7_64_#{version}.zip"
   homepage 'http://rawtherapee.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   container :nested => "RawTherapee_OSX_10.7_64_#{version}.dmg"
   app 'RawTherapee.app'

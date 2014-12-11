@@ -4,7 +4,7 @@ cask :v1 => 'jetphoto-studio' do
 
   url "http://www.jetphotosoft.com/web/download/JetPhoto_Studio_mac#{version}.zip"
   homepage 'http://www.jetphotosoft.com/web/home/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   container :nested => "JetPhoto Studio #{version}.dmg"
   app 'JetPhoto Studio.app'

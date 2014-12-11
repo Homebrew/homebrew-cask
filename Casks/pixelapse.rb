@@ -4,7 +4,7 @@ cask :v1 => 'pixelapse' do
 
   url "https://s3.amazonaws.com/download-pixelapse/Pixelapse%20#{version}.dmg"
   homepage 'https://www.pixelapse.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Pixelapse.app'
 end

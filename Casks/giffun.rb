@@ -5,7 +5,7 @@ cask :v1 => 'giffun' do
   # dropbox.com is the official download host per the vendor homepage
   url "http://dl.dropbox.com/u/2000860/GIFfun-#{version}.dmg"
   homepage 'http://www.stone.com/GIFfun/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'GIFfun.app'
 end

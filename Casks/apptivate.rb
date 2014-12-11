@@ -4,7 +4,7 @@ cask :v1 => 'apptivate' do
 
   url 'http://www.apptivateapp.com/resources/Apptivate.app.zip'
   homepage 'http://www.apptivateapp.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Apptivate.app'
 end

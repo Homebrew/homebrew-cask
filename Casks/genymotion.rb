@@ -4,7 +4,7 @@ cask :v1 => 'genymotion' do
 
   url "http://files2.genymotion.com/genymotion/genymotion-#{version}/genymotion-#{version}.dmg"
   homepage 'http://www.genymotion.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Genymotion.app'
   app 'Genymotion Shell.app'

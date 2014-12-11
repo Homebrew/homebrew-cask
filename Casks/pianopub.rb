@@ -6,7 +6,7 @@ cask :v1 => 'pianopub' do
   appcast 'http://dev.kunugiken.com/appcasts/Pianopub.xml',
           :sha256 => '5a120e806605b8c170a543c1fb1ecb22c8a39a7b2ab8f06f7d3efb795017daa4'
   homepage 'http://dev.kunugiken.com/Pianopub/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Pianopub.app'
 end

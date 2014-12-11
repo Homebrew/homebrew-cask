@@ -4,7 +4,7 @@ cask :v1 => 'cocoasplit' do
 
   url 'http://krylon.rsdio.com/zakk/cocoasplit/CocoaSplit-current.zip'
   homepage 'http://krylon.rsdio.com/zakk/cocoasplit/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'CocoaSplit.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'insertpic' do
 
   url "https://s3.amazonaws.com/insertPic/InsertPic_#{version}.zip"
   homepage 'http://www.getinsertpic.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'InsertPic/InsertPic.app'
 end

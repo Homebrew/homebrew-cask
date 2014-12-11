@@ -5,7 +5,7 @@ cask :v1 => 'entropy' do
   url 'http://www.eigenlogik.com/entropy/download'
   appcast 'http://hyperion.eigenlogik.com/appcast/feed/entropy/'
   homepage 'http://www.eigenlogik.com/entropy/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Entropy.app'
 end

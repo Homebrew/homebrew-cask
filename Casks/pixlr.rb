@@ -4,7 +4,7 @@ cask :v1 => 'pixlr' do
 
   url "https://cdn2.pixlr.com/mac/Autodesk_Pixlr_ver#{version}_Mac_Installer.dmg"
   homepage 'https://pixlr.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Pixlr.app'
 end

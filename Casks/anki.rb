@@ -4,7 +4,7 @@ cask :v1 => 'anki' do
 
   url "http://ankisrs.net/download/mirror/anki-#{version}.dmg"
   homepage 'http://ankisrs.net/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Anki.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'serf' do
 
   url "https://dl.bintray.com/mitchellh/serf/#{version}_darwin_amd64.zip"
   homepage 'http://www.serfdom.io/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   binary 'serf'
 end

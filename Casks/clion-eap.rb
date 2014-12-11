@@ -4,7 +4,7 @@ cask :v1 => 'clion-eap' do
 
   url "http://download.jetbrains.com/cpp/CLion-#{version}.dmg"
   homepage 'http://www.jetbrains.com/clion/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'CLion EAP.app'
 end

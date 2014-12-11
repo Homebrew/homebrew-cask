@@ -4,7 +4,7 @@ cask :v1 => 'omniweb' do
 
   url "http://downloads.omnigroup.com/software/MacOSX/10.4/OmniWeb-#{version}.dmg"
   homepage 'http://www.omnigroup.com/products/omniweb/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'OmniWeb.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'kivy' do
 
   url "http://kivy.org/downloads/#{version}/Kivy-#{version}-osx.dmg"
   homepage 'http://kivy.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Kivy.app'
 end

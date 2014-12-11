@@ -4,7 +4,7 @@ cask :v1 => 'treesheets' do
 
   url 'http://strlen.com/treesheets/treesheets_osx.zip'
   homepage 'http://strlen.com/treesheets/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'TreeSheetsBeta/TreeSheets.app'
 end

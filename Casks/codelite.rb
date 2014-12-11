@@ -4,7 +4,7 @@ cask :v1 => 'codelite' do
 
   url 'http://downloads.codelite.org/downloads.php?osx'
   homepage 'http://codelite.org'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'codelite.app'
 end

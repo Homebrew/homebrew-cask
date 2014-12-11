@@ -4,7 +4,7 @@ cask :v1 => 'macpar-deluxe' do
 
   url 'http://www.xs4all.nl/~gp/MacPAR_deLuxe/MacPARdeLuxe.dmg'
   homepage 'http://gp.home.xs4all.nl/Site/MacPAR_deLuxe.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MacPAR deLuxe.app'
 end

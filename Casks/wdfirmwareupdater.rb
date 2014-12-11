@@ -4,7 +4,7 @@ cask :v1 => 'wdfirmwareupdater' do
 
   url 'http://download.wdc.com/fwupdater/Mac/WDFirmwareUpdater.zip'
   homepage 'http://www.wdc.com/en/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'WDFirmwareUpdater.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'refresh-finder' do
 
   url "http://soderhavet.com/refresh/Refresh_Finder_#{version}.dmg.zip"
   homepage 'http://soderhavet.com/refresh/refresh-finder/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   container :nested => "Refresh_Finder_#{version}.dmg"
   app 'Refresh Finder.app'

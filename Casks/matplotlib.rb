@@ -4,7 +4,7 @@ cask :v1 => 'matplotlib' do
 
   url "http://www.kyngchaos.com/files/software/python/matplotlib-#{version}.dmg"
   homepage 'http://www.kyngchaos.com/software/python'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'matplotlib.pkg'
 

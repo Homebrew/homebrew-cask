@@ -4,7 +4,7 @@ cask :v1 => 'fourk-video-downloader' do
 
   url "http://downloads.4kdownload.com/app/4kvideodownloader_#{version}.dmg"
   homepage 'http://www.4kdownload.com/products/product-videodownloader'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app '4K Video Downloader.app'
 end

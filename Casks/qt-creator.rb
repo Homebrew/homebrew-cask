@@ -4,7 +4,7 @@ cask :v1 => 'qt-creator' do
 
   url "https://download.qt-project.org/official_releases/qtcreator/3.2/#{version}/qt-creator-opensource-mac-x86_64-#{version}.dmg"
   homepage 'http://qt-project.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Qt Creator.app'
 end

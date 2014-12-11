@@ -4,7 +4,7 @@ cask :v1 => 'ezeep' do
 
   url 'https://packages.ezeep.com/osx/ezeep-latest.dmg'
   homepage 'http://www.ezeep.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ezeep.app'
 end

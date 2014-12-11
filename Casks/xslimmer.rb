@@ -6,7 +6,7 @@ cask :v1 => 'xslimmer' do
   appcast 'http://www.xslimmer.com/releases.xml',
           :sha256 => '7f27ccf84109291c59781abe74950f67d53cdb89365497c2925a5d1106f3a15a'
   homepage 'http://latenitesoft.com/xslimmer/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Xslimmer.app'
 end

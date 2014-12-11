@@ -4,7 +4,7 @@ cask :v1 => 'enolsoft-chm-view' do
 
   url 'http://www.enolsoft.com/download/enolsoft-chm-view.dmg'
   homepage 'http://www.enolsoft.com/chm-view-for-mac.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Enolsoft CHM View.app'
 end

@@ -8,7 +8,5 @@ cask :v1 => 'plover' do
 
   app 'plover.app'
 
-  caveats do
-    assistive_devices
-  end
+  accessibility_access true
 end

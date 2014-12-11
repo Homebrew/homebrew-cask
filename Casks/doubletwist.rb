@@ -6,7 +6,7 @@ cask :v1 => 'doubletwist' do
   appcast 'http://download.doubletwist.com/mac/appcast.xml',
           :sha256 => '63ad1487f6e129aa79b9724f9191a52aa1a31ec0c26de63a9d778c1dd709a815'
   homepage 'http://www.doubletwist.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'doubleTwist.app'
 

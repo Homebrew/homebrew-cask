@@ -4,7 +4,7 @@ cask :v1 => 'continuity-keypad' do
 
   url "http://download.continuitykeypad.co/Continuity%20Keypad%20#{version}.zip"
   homepage 'http://continuitykeypad.co/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Continuity Keypad.app'
 end

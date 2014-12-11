@@ -4,7 +4,7 @@ cask :v1 => 'texmacs' do
 
   url "http://www.texmacs.org/Download/ftp/tmftp/macos/TeXmacs-#{version}.dmg"
   homepage 'http://www.texmacs.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "TeXmacs-#{version}.app"
 

@@ -4,7 +4,7 @@ cask :v1 => 'unison' do
 
   url "http://alan.petitepomme.net/unison/assets/Unison-#{version}_x64.dmg"
   homepage 'http://www.cis.upenn.edu/~bcpierce/unison/'
-  license :unknown
+  license :gpl
 
   app 'Unison.app'
 end

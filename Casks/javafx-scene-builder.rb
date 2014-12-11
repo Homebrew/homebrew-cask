@@ -7,7 +7,7 @@ cask :v1 => 'javafx-scene-builder' do
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/javafxscenebuilder-info-2157684.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'JavaFX Scene Builder 2.0.app'
 

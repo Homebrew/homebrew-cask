@@ -4,10 +4,9 @@ cask :v1 => 'ubar' do
 
   url "http://www.brawersoftware.com/downloads/ubar/ubar#{version.gsub('.','')}.zip"
   homepage 'http://brawersoftware.com/products/ubar'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'uBar.app'
-  caveats do
-    os_version_only '10.9', '10.10'
-  end
+
+  depends_on :macos => '>= :mavericks'
 end

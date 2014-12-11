@@ -4,7 +4,7 @@ cask :v1 => 'hall' do
 
   url "https://hall.com/desktop/osx/installers/Hall_#{version.gsub('.','_')}.dmg"
   homepage 'https://hall.com/download-hall/hall-for-mac'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'Hall.pkg'
 

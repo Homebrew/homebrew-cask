@@ -49,8 +49,8 @@ so we try to match semantics wherever possible. That means that similar
 functionality should have similar flags and parameters.
 
 However, very little backend code is shared between the two projects.
-The Homebrew codebase is based on how Homebrew *formulae* work, and our
-*casks* are very much unlike that.
+The Homebrew codebase is based on how Homebrew Formulae work, and our
+Casks are very much unlike Formulae.
 
 Because our backend needs are so different, we are discussing whether
 we should completely separate our codebase from Homebrew's
@@ -58,10 +58,10 @@ we should completely separate our codebase from Homebrew's
 
 ### Casks and Formulae
 
-Homebrew *formulae* deal with many different build processes, and often
+Homebrew Formulae deal with many different build processes, and often
 include arbitrary Ruby code.
 
-*Casks*, by contrast, only need to support the few installation methods
+Casks, by contrast, only need to support the few installation methods
 used by apps, pkg installers, and so on, making them suitable for a
 [declarative DSL](https://github.com/caskroom/homebrew-cask/blob/master/doc/CASK_LANGUAGE_REFERENCE.md).
 

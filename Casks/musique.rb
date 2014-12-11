@@ -5,7 +5,7 @@ cask :v1 => 'musique' do
   url 'http://flavio.tordini.org/files/musique/musique.dmg'
   appcast 'http://flavio.tordini.org/musique-ws/appcast.xml'
   homepage 'http://flavio.tordini.org/musique'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Musique.app'
 end

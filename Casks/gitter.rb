@@ -6,7 +6,7 @@ cask :v1 => 'gitter' do
   appcast 'http://update.gitter.im/osx/appcast.xml',
           :sha256 => 'd7f4a27606703839676ad13c58c1d21c4ac9dae5d76ccff28f92e7d58b787912'
   homepage 'https://gitter.im/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Gitter.app'
 end

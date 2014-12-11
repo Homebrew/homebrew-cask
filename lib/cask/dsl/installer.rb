@@ -28,12 +28,4 @@ class Cask::DSL::Installer
     writer_method = "#{key}=".to_sym
     send(writer_method, parameters[key])
   end
-
-  def to_yaml
-    @pairs.to_yaml
-  end
-
-  def to_s
-    @pairs.inspect
-  end
 end

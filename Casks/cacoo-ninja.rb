@@ -13,7 +13,7 @@ cask :v1 => 'cacoo-ninja' do
   uninstall :script => { :executable => 'Install Cacoo Ninja.app/Contents/MacOS/Install Cacoo Ninja' }
 
   caveats <<-EOS.undent
-    #{title} requires Adobe Air, available via
+    #{token} requires Adobe Air, available via
 
       brew cask install adobe-air
   EOS

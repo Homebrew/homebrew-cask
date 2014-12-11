@@ -4,7 +4,7 @@ cask :v1 => 'rstudio' do
 
   url "http://download1.rstudio.org/RStudio-#{version}.dmg"
   homepage 'http://www.rstudio.com/'
-  license :unknown
+  license :affero
 
   app 'RStudio.app'
 

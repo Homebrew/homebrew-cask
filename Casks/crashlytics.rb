@@ -5,7 +5,7 @@ cask :v1 => 'crashlytics' do
   url 'https://crashlytics.com/download/mac'
   appcast 'https://ssl-download-crashlytics-com.s3.amazonaws.com/mac/version.xml'
   homepage 'http://crashlytics.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Crashlytics.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'pomotodo' do
 
   url 'http://pomotodo.avosapps.com/mac-latest.dmg'
   homepage 'https://pomotodo.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Pomotodo.app'
 end

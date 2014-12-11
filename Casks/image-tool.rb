@@ -4,7 +4,7 @@ cask :v1 => 'image-tool' do
 
   url "http://www.jimmcgowan.net/diskimages/ImageTool#{version}.dmg"
   homepage 'http://www.jimmcgowan.net/Site/ImageTool.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Image Tool.app'
 end

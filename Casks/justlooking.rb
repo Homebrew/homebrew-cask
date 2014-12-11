@@ -4,7 +4,7 @@ cask :v1 => 'justlooking' do
 
   url "http://chipmunkninja.com/download/JustLooking-#{version}.dmg"
   homepage 'http://chipmunkninja.com/JustLooking'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'JustLooking.app'
 end

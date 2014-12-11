@@ -4,7 +4,7 @@ cask :v1 => 'safe-in-cloud' do
 
   url 'http://www.safe-in-cloud.com/images/downloads/Safe%20In%20Cloud.dmg'
   homepage 'http://www.safe-in-cloud.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Safe In Cloud.app'
 end

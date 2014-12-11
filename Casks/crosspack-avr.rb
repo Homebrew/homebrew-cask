@@ -4,7 +4,7 @@ cask :v1 => 'crosspack-avr' do
 
   url "http://www.obdev.at/downloads/crosspack/CrossPack-AVR-#{version.gsub('-','')}.dmg"
   homepage 'http://www.obdev.at/products/crosspack/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'CrossPack-AVR.pkg'
   uninstall_postflight do

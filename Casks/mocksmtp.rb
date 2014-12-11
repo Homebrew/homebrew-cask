@@ -4,7 +4,7 @@ cask :v1 => 'mocksmtp' do
 
   url 'http://mocksmtpapp.com/MockSmtp.zip'
   homepage 'http://mocksmtpapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MockSmtp.app'
 end

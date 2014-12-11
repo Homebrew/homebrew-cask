@@ -6,7 +6,7 @@ cask :v1 => 'enjoyable' do
   appcast 'http://yukkurigames.com/enjoyable/appcast.xml',
           :sha256 => '881f8e727e3d9b3244fc9b9530d24301306ffb21afd98c970c4cc5e7bcb1489c'
   homepage 'http://yukkurigames.com/enjoyable/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Enjoyable.app'
 

@@ -4,7 +4,7 @@ cask :v1 => 'framer-studio' do
 
   url "http://studio.update.framerjs.com/static/downloads/Framer%20Studio-#{version}.zip"
   homepage 'http://framerjs.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Framer Studio.app'
 end

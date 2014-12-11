@@ -5,7 +5,7 @@ cask :v1 => 'qqmusic' do
 
   url "http://dldir1.qq.com/music/clntupate/QQMusicForMacV#{version}.dmg"
   homepage 'http://y.qq.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'QQ音乐.app'
 end

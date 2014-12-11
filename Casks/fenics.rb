@@ -4,12 +4,13 @@ cask :v1 => 'fenics' do
 
   url "http://www.fenicsproject.org/pub/software/fenics/fenics-#{version}-osx10.9.dmg"
   homepage 'http://fenicsproject.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'FEniCS.app'
 
+  depends_on :macos => '>= :mavericks'
+
   caveats do
-    os_version_only '10.9', '10.10'
     <<-EOS.undent
       FEniCS is designed to work with the OS X system Python (v. 2.7.5 in OS X 10.9).
 

@@ -4,7 +4,7 @@ cask :v1 => 'jabber-video' do
 
   url "http://collaboration.iu.edu/service-request/software/JabberVideo-#{version.sub(%r{\.(\d+)$},'')}.dmg"
   homepage 'https://www.ciscojabbervideo.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Jabber Video.app'
 

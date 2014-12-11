@@ -28,11 +28,11 @@ class Cask::SystemCommand
     raw_stderr.close_read
 
     # Ruby 1.8 sets $?. Ruby 1.9+ has raw_wait_thr, and does not set $?.
-    processed_exit_status = raw_wait_thr.nil? ? $? : raw_wait_thr.value
+    processed_status = raw_wait_thr.nil? ? $? : raw_wait_thr.value
 
-    _assert_success(processed_exit_status, command, processed_stdout) if options[:must_succeed]
+    _assert_success(processed_status, command, processed_stdout) if options[:must_succeed]
 
-    Cask::SystemCommand::Result.new(command, processed_stdout, processed_stderr, processed_exit_status)
+    Cask::SystemCommand::Result.new(command, processed_stdout, processed_stderr, processed_status.exitstatus)
   end
 
   def self.run!(command, options={})

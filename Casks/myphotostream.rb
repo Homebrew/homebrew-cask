@@ -4,7 +4,7 @@ cask :v1 => 'myphotostream' do
 
   url 'http://www.weareyeah.com/MyPhotostream/download'
   homepage 'http://www.weareyeah.com/MyPhotostream/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MyPhotostream.app'
 end

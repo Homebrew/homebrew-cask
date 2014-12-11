@@ -4,7 +4,7 @@ cask :v1 => 'chromecast' do
 
   url "https://dl.google.com/chromecast/setup/mac/chromecast-setup.#{version}.dmg"
   homepage 'http://chromecast.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Chromecast.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'namechanger' do
   appcast 'http://mrrsoftware.com/Downloads/NameChanger/Updates/NameChangerSoftwareUpdates.xml',
           :sha256 => 'f8e9f7e32a1402b6a1be71963ee33e79c86244ba2f6ca1fcf52e644b1c235192'
   homepage 'http://www.mrrsoftware.com/MRRSoftware/NameChanger.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'NameChanger.app'
 end

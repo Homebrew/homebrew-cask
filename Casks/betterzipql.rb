@@ -4,7 +4,7 @@ cask :v1 => 'betterzipql' do
 
   url 'http://macitbetter.com/BetterZipQL.zip'
   homepage 'http://macitbetter.com/BetterZip-Quick-Look-Generator/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   qlplugin 'BetterZipQL.qlgenerator'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'diskwave' do
   appcast 'http://diskwave.barthe.ph/sparkle/appcast_64bit.php',
           :sha256 => '95aadfc8afdacc59b3760957a2ddbb81cf60bbb54cc7bf935c4421d2b52818b6'
   homepage 'http://diskwave.barthe.ph/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'DiskWave.app'
 end

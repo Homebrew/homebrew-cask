@@ -4,7 +4,7 @@ cask :v1 => 'iswiff' do
 
   url 'http://echoone.com/iswiff/iSwiff.dmg'
   homepage 'http://echoone.com/iswiff/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iSwiff.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'witch' do
 
   url 'http://manytricks.com/download/witch'
   homepage 'http://manytricks.com/witch/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   prefpane 'Witch.prefPane'
 

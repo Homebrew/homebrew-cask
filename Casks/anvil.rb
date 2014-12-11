@@ -5,7 +5,7 @@ cask :v1 => 'anvil' do
   url 'https://sparkler.herokuapp.com/apps/3/download'
   appcast 'http://sparkler.herokuapp.com/apps/3/updates.xml'
   homepage 'http://anvilformac.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Anvil.app'
 end

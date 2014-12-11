@@ -23,11 +23,6 @@ class Cask::Source::Tapped
     @token = token
   end
 
-  # todo removeme transitional backward-compatibility
-  def title
-    @token
-  end
-
   def load
     path = self.class.path_for_query(token)
     Cask::Source::PathSlashOptional.new(path).load

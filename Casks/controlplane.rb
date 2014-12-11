@@ -6,7 +6,7 @@ cask :v1 => 'controlplane' do
   appcast 'http://www.controlplaneapp.com/appcast.xml',
           :sha256 => 'bc5bd3a27e1e12f09fc1d5089af79535992473d361030ae50993e7c0135ad287'
   homepage 'http://www.controlplaneapp.com/'
-  license :unknown
+  license :gpl
 
   app 'ControlPlane.app'
 

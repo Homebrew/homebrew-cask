@@ -6,7 +6,7 @@ cask :v1 => 'kobito' do
   appcast 'http://kobito.qiita.com/appcast.xml',
           :sha256 => 'd39ff5e2dbc54ed1d7d332e3c775107eabab2bc0f99a1b766f4a9fd7f9448e17'
   homepage 'http://kobito.qiita.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Kobito.app'
 end

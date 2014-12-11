@@ -4,7 +4,7 @@ cask :v1 => 'commandq' do
 
   url 'https://clickontyler.com/commandq/download/'
   homepage 'http://clickontyler.com/commandq/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'CommandQ.app'
 end

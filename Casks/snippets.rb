@@ -6,7 +6,7 @@ cask :v1 => 'snippets' do
   appcast 'http://snippets.me/mac/appcast.xml',
           :sha256 => '4158b1f63ea202992e9ffdcf231e7c21323cc1a0ed52305e69effc0858b902d3'
   homepage 'http://snippets.me/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Snippets.app'
 end

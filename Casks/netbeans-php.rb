@@ -4,7 +4,7 @@ cask :v1 => 'netbeans-php' do
 
   url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-php-macosx.dmg"
   homepage 'https://netbeans.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "NetBeans #{version}.mpkg"
 

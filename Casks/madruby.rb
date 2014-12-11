@@ -4,7 +4,7 @@ cask :v1 => 'madruby' do
 
   url "http://www.wingsforpigs.com/downloads/MadRuby_#{version}.dmg"
   homepage 'http://www.wingsforpigs.com/MadRuby/MadRuby.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MadRuby.app'
 end

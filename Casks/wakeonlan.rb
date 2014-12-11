@@ -4,7 +4,7 @@ cask :v1 => 'wakeonlan' do
 
   url "http://www.readpixel.com/downloads/files/WakeOnLan#{version}.zip"
   homepage 'http://www.readpixel.com/wakeonlan/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'WakeOnLan/WakeOnLan.app'
 end

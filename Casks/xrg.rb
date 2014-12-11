@@ -4,7 +4,7 @@ cask :v1 => 'xrg' do
 
   url "http://download.gauchosoft.com/xrg/XRG-release-#{version}.zip"
   homepage 'http://www.gauchosoft.com/Products/XRG/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'XRG.app'
 end

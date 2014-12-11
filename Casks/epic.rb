@@ -6,7 +6,7 @@ cask :v1 => 'epic' do
   url "https://ed5b681d56298a85550d-7d665255a6e48f36b11ee3cfeece77e0.ssl.cf1.rackcdn.com/epic_mac_#{version}_alternative/Epic.dmg"
   appcast 'https://updates.epicbrowser.com/mac_updates/appcast.xml'
   homepage 'http://www.epicbrowser.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Epic.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'menuola' do
   appcast 'http://www.geocom.co.nz/menuola.xml',
           :sha256 => 'e18b081046702171648c929872c692adc2d1b816f5e9aff93b0612a11a3ea362'
   homepage 'http://www.geocom.co.nz'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   container :nested => 'Menuola.dmg'
   app 'Menuola.app'

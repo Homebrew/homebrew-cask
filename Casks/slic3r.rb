@@ -4,7 +4,7 @@ cask :v1 => 'slic3r' do
 
   url "http://dl.slic3r.org/mac/slic3r-osx-uni-#{version.gsub('.', '-')}-stable.dmg"
   homepage 'http://slic3r.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Slic3r.app'
 end

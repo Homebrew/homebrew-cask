@@ -4,7 +4,7 @@ cask :v1 => 'icompta' do
 
   url 'https://www.lyricapps.fr/iCompta/downloads/iCompta.dmg'
   homepage 'http://www.icompta-app.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'iCompta.app'
 end

@@ -5,7 +5,7 @@ cask :v1 => 'gity' do
   url 'http://gityapp.com/Gity.zip'
   appcast 'http://gityapp.com/gity.xml'
   homepage 'http://gityapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Gity.app'
 end

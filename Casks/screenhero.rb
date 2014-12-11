@@ -5,7 +5,7 @@ cask :v1 => 'screenhero' do
   url 'http://dl.screenhero.com/update/screenhero/Screenhero.dmg'
   appcast 'http://dl.screenhero.com/update/screenhero/sparkle.xml'
   homepage 'http://screenhero.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Screenhero.app'
 end

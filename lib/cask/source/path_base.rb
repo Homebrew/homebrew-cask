@@ -78,7 +78,7 @@ class Cask::Source::PathBase
       raise e
     end
     begin
-      Object.const_get(cask_class_name).new
+      Object.const_get(cask_class_name).new(path)
     rescue CaskError, StandardError, ScriptError => e
       # bug: e.message.concat doesn't work with CaskError exceptions
       e.message.concat(" while instantiating '#{cask_class_name}' from '#{path}'")
@@ -91,7 +91,8 @@ class Cask::Source::PathBase
   end
 
   def cask_class_name
-    cask_token.split('-').map(&:capitalize).join
+    # todo removeme: prepending KlassPrefix is transitional as we move away from representing Casks as classes
+    'KlassPrefix'.concat cask_token.split('-').map(&:capitalize).join
   end
 
   def to_s

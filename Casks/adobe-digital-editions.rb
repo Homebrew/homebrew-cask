@@ -4,7 +4,7 @@ cask :v1 => 'adobe-digital-editions' do
 
   url "http://download.adobe.com/pub/adobe/digitaleditions/ADE_#{version}_Installer.dmg"
   homepage 'http://www.adobe.com/pt/products/digital-editions.html'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "Digital Editions #{version} Installer.pkg"
 

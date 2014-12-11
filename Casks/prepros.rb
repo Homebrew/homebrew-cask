@@ -4,7 +4,7 @@ cask :v1 => 'prepros' do
 
   url "http://download.alphapixels.com/Prepros-#{version}.zip"
   homepage 'http://alphapixels.com/prepros/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Prepros.app'
 end

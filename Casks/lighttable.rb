@@ -4,7 +4,7 @@ cask :v1 => 'lighttable' do
 
   url "https://d35ac8ww5dfjyg.cloudfront.net/playground/bins/#{version}/LightTableMac.zip"
   homepage 'http://www.lighttable.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'LightTable/LightTable.app'
   binary 'LightTable/light'

@@ -6,7 +6,7 @@ cask :v1 => 'videospec' do
   appcast 'http://videospec.free.fr/release/videospec.xml',
           :sha256 => '29d625e7584d4fe8417998a37c25204d4aaa949c316da35c0c2b5b3626e9bd5b'
   homepage 'http://videospec.free.fr/english/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'VideoSpec.app'
 end

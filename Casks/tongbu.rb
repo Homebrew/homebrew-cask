@@ -4,7 +4,7 @@ cask :v1 => 'tongbu' do
 
   url "http://qd.leaderhero.com/qd/zsmac/Tongbu_mac_v#{version}.dmg"
   homepage 'http://www.tongbu.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Tongbu.app'
 end

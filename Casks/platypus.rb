@@ -6,7 +6,7 @@ cask :v1 => 'platypus' do
   appcast 'http://www.sveinbjorn.org/files/appcasts/PlatypusAppcast.xml',
           :sha256 => '21e37d2b32951108d7d0a4a6cda34b96bd97c4e82338c42583b6498c482239ec'
   homepage 'http://sveinbjorn.org/platypus'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app "Platypus-#{version}/Platypus.app"
 end

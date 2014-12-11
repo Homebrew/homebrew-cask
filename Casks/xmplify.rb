@@ -4,7 +4,7 @@ cask :v1 => 'xmplify' do
 
   url 'http://xmplifyapp.com/releases/Xmplify.dmg'
   homepage 'http://xmplifyapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Xmplify.app'
 

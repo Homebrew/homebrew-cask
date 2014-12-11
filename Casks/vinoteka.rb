@@ -5,7 +5,7 @@ cask :v1 => 'vinoteka' do
   url 'http://download.vinotekasoft.com/Vinoteka.zip'
   appcast 'http://download.vinotekasoft.com/vinoteka_update.xml'
   homepage 'http://www.vinotekasoft.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Vinoteka.app'
 end

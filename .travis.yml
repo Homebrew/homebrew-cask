@@ -60,7 +60,7 @@ before_script:
 # path-quoting is different here due to YAML constraints
 # @@@ todo: setting the --seed here is an ugly temporary hack, to remain only until test-suite glitches are fixed.
 script:
-  - /System/Library/Frameworks/Ruby.framework/Versions/"${CASK_RUBY_TEST_VERSION}"/usr/bin/bundle exec "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/rake" test TESTOPTS="--seed=14828"
+  - /System/Library/Frameworks/Ruby.framework/Versions/"${CASK_RUBY_TEST_VERSION}"/usr/bin/bundle exec "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/rake" test TESTOPTS="--seed=14829"
 
 notifications:
   irc:

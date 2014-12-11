@@ -4,7 +4,7 @@ cask :v1 => 'epubquicklook' do
 
   url 'http://people.ict.usc.edu/~leuski/programming/EPUBQuickLookPlugin.dmg'
   homepage 'http://people.ict.usc.edu/~leuski/programming/epub-quickview.php'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg 'EpubQuickLook.pkg'
 

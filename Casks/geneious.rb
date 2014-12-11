@@ -4,7 +4,7 @@ cask :v1 => 'geneious' do
 
   url "http://assets.geneious.com/installers/geneious/release/Geneious_mac64_#{version.gsub('.','_')}.dmg"
   homepage 'http://www.geneious.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Geneious.app'
 end

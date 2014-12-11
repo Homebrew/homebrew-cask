@@ -4,7 +4,7 @@ cask :v1 => 'colorport' do
 
   url 'http://www.xrite.com/downloader.aspx?FileID=1168&Type=M&returnurl=%2fcolorport-utility-software%2fsupport%2fd1168'
   homepage 'http://www.xrite.com/colorport-utility-software/support/d1168'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "ColorPort#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}Distribution.mpkg"
 

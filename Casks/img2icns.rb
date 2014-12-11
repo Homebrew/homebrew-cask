@@ -5,7 +5,7 @@ cask :v1 => 'img2icns' do
   url 'http://static.shinyfrog.net/downloads/image2icon/Img2icns.zip'
   appcast 'http://store.shinyfrog.net/appcast/img2icns.xml'
   homepage 'http://www.img2icnsapp.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Img2icns.app'
 end

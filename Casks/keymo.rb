@@ -5,7 +5,7 @@ cask :v1 => 'keymo' do
   url "http://manytricks.com/download/_do_not_hotlink_/keymo#{version.gsub('.','')}.dmg"
   appcast 'http://manytricks.com/keymo/appcast.xml'
   homepage 'http://manytricks.com/keymo'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Keymo.app'
 

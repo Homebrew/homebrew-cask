@@ -4,7 +4,7 @@ cask :v1 => 'macwinzipper' do
 
   url "http://tidajapan.com/files/MacWinZipper-#{version}.dmg?download"
   homepage 'http://tidajapan.com/macwinzipper'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'MacWinZipper.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'sketch-tool' do
 
   url 'http://sketchtool.bohemiancoding.com/sketchtool-latest.zip'
   homepage 'http://bohemiancoding.com/sketch/tool/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   binary 'sketchtool/bin/sketchtool'
   binary 'sketchtool/bin/sketchmigrate'

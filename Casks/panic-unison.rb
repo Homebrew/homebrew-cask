@@ -5,7 +5,7 @@ cask :v1 => 'panic-unison' do
   url "http://download.panic.com/Unison/Unison%20#{version}.zip"
   appcast 'http://www.panic.com/updates/update.php'
   homepage 'http://panic.com/unison/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Unison.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'parse' do
 
   url 'https://www.parse.com/downloads/cloud_code/parse'
   homepage 'https://parse.com'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   container :type => :naked
   binary 'parse'

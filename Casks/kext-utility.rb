@@ -4,7 +4,7 @@ cask :v1 => 'kext-utility' do
 
   url "http://cvad-mac.narod.ru/files/Kext_Utility.app.v#{version}.zip"
   homepage 'http://cvad-mac.narod.ru/index/0-4'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Kext Utility.app'
 end

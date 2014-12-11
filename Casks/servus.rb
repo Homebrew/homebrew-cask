@@ -4,7 +4,7 @@ cask :v1 => 'servus' do
 
   url 'https://servus.io/download'
   homepage 'https://servus.io/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Servus.app'
 end

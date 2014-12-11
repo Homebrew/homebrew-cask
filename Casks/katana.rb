@@ -4,7 +4,7 @@ cask :v1 => 'katana' do
 
   url 'http://download.witiz.com/Katana.zip'
   homepage 'http://katana.witiz.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Katana.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'colorpicker' do
   appcast 'http://www.northernspysoftware.com/feed/colorpicker.xml',
           :sha256 => 'e534a4e8a24ff6f3b315ca01e2c3442a8c2ce689b428b0d5f62bab1f538b0c62'
   homepage 'http://www.northernspysoftware.com/software/colorpicker'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'ColorPicker.app'
 end

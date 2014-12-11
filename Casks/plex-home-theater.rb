@@ -10,7 +10,7 @@ cask :v1 => 'plex-home-theater' do
   end
 
   homepage 'https://plex.tv'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Plex Home Theater.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'frostwire' do
 
   url "http://dl.frostwire.com/frostwire/#{version}/frostwire-#{version}.dmg"
   homepage 'http://www.frostwire.com'
-  license :unknown
+  license :gpl
 
   app 'FrostWire.app'
 end

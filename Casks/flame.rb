@@ -4,7 +4,7 @@ cask :v1 => 'flame' do
 
   url "http://husk.org/apps/Flame-#{version}-universal.zip"
   homepage 'http://husk.org/apps/flame/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Flame.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'wireover' do
 
   url 'https://router.wireover.com/app/WireOver.dmg'
   homepage 'http://www.wireover.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'WireOver.app'
 end

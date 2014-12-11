@@ -4,7 +4,7 @@ cask :v1 => 'wiznote' do
 
   url 'http://release.wiz.cn/wiznote-macos-2014-09-25.dmg'
   homepage 'http://www.wiznote.com/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'WizNote.app'
 end

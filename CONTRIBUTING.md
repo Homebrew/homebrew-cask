@@ -38,6 +38,7 @@ cask :v1 => 'alfred' do
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
 
   url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
+  name 'Alfred'
   homepage 'http://www.alfredapp.com/'
   license :commercial
 
@@ -54,6 +55,8 @@ cask :v1 => 'unity' do
   sha256 '6fb72bfacf78df072559dd9a024a9d47e49b5717c8f17d53f05e2fc74a721876'
 
   url 'http://netstorage.unity3d.com/unity/unity-4.5.4.dmg'
+  name 'Unity'
+  name 'Unity3D'
   homepage 'http://unity3d.com/unity/'
   license :commercial
 
@@ -71,6 +74,7 @@ cask :v1 => 'firefox' do
   sha256 :no_check
 
   url 'https://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US'
+  name 'Firefox'
   homepage 'https://www.mozilla.org/en-US/firefox/'
   license :mpl
 
@@ -118,6 +122,7 @@ cask :v1 => 'my-new-cask' do
   sha256 ''
 
   url ''
+  name ''
   homepage ''
   license :unknown
 
@@ -134,6 +139,7 @@ Fill in the following stanzas for your Cask:
 | `version`          | application version; give the value `:latest` if an unversioned download is available
 | `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
 | `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
+| `name`             | the full and proper name defined by the vendor, and any useful alternate names (see also [Name Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#name-stanza-details))
 | `homepage`         | application homepage; used for the `brew cask home` command
 | `license`          | a symbol identifying the license for the application.  Valid category licenses include `:oss`, `:closed`, and `:unknown`.  It is OK to leave as `:unknown`.  (see also [License Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#license-stanza-details))
 | `app`              | relative path to an `.app` bundle that should be linked into the `~/Applications` folder on installation (see also [App Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#app-stanza-details))

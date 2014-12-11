@@ -4,7 +4,7 @@ cask :v1 => 'whatpulse' do
 
   url "http://amcdn.whatpulse.org/files/whatpulse-mac-#{version}.dmg"
   homepage 'http://www.whatpulse.org/'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   pkg "WhatPulse #{version}.mpkg"
 

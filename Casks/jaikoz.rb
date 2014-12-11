@@ -4,7 +4,7 @@ cask :v1 => 'jaikoz' do
 
   url 'http://jthink.net/jaikoz/jsp/manualdownload/jaikoz-osx.dmg'
   homepage 'http://jthink.net/jaikoz'
-  license :unknown
+  license :unknown    # todo: improve this machine-generated value
 
   app 'Jaikoz.app'
 end
