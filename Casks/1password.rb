@@ -1,4 +1,4 @@
-cask :v1 => 'onepassword' do
+cask :v1 => '1password' do
 
   if MacOS.release <= :lion
     version '3.8.22'
