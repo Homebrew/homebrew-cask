@@ -7,6 +7,7 @@ cask :v1 => 'terraform' do
   license :mpl
 
   binary 'terraform'
+  binary 'terraform-provider-atlas'
   binary 'terraform-provider-aws'
   binary 'terraform-provider-cloudflare'
   binary 'terraform-provider-consul'
