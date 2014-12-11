@@ -12,9 +12,8 @@ cask :v1 => 'craftstudio' do
             :pkgutil => 'com.sparklinlabs.CraftStudioLauncher'
   zap       :delete => '~/Library/CraftStudio'
 
-  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} requires mono-mre, available via
+    #{token} requires mono-mre, available via
 
       brew cask install mono-mre
   EOS

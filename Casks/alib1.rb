@@ -13,9 +13,8 @@ cask :v1 => 'alib1' do
     system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName ALib1 (Presstube)', "#{staged_path}/presstube-alib1.app/Contents/Resources/Presstube - ALib1.saver/Contents/Info.plist"
   end
 
-  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} requires Adobe Air, available via
+    #{token} requires Adobe Air, available via
 
       brew cask install adobe-air
   EOS

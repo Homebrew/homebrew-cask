@@ -12,9 +12,8 @@ cask :v1 => 'heart' do
     system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName Heart (Presstube)', "#{staged_path}/presstube-heart.app/Contents/Resources/Presstube - Heart.saver/Contents/Info.plist"
   end
 
-  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} requires Adobe Air, available via
+    #{token} requires Adobe Air, available via
 
       brew cask install adobe-air
   EOS

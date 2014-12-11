@@ -8,9 +8,8 @@ cask :v1 => 'chirp' do
 
   app "chirp-#{version}.app"
 
-  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} also requires the KK7DS Python Runtime as described at
+    #{token} also requires the KK7DS Python Runtime as described at
 
       http://chirp.danplanet.com/projects/chirp/wiki/Download#CHIRP-Downloads
   EOS

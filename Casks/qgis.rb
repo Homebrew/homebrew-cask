@@ -9,9 +9,8 @@ cask :v1 => 'qgis' do
 
   uninstall :pkgutil => 'org.qgis.qgis-*'
 
-  # todo: transitional, replace #{self.name...} with #{token}
   caveats <<-EOS.undent
-    #{self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase} requires the GDAL framework and Matplotlib to be installed first,
+    #{token} requires the GDAL framework and Matplotlib to be installed first,
     otherwise the installation will fail. In case of problems, try installing
     them:
 
