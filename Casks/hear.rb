@@ -1,6 +1,6 @@
 cask :v1 => 'hear' do
-  version '1.1.6'
-  sha256 'e7b5e5782020be407f456e59167770b07afc97afb0f1f7e9d226c00c524b106b'
+  version '1.2.1'
+  sha256 '6acd179b108283a51debac3c6a4f7cf20220d4129a702ce702f06cc7e2884649'
 
   url "https://s3.amazonaws.com/prosoft-engineering/hear/Hear_#{version}.dmg"
   appcast 'http://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear',
