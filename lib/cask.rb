@@ -96,9 +96,10 @@ class Cask
     end
   end
 
-  attr_reader :token
-  def initialize(token=self.class.token)
-    @token = token
+  attr_reader :token, :sourcefile_path
+  def initialize(sourcefile_path=nil)
+    @sourcefile_path = sourcefile_path
+    @token = self.class.token
   end
 
   def caskroom_path
