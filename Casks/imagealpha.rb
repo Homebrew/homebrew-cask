@@ -1,6 +1,6 @@
 cask :v1 => 'imagealpha' do
 
-  if MacOS.version <= :snow_leopard
+  if MacOS.release <= :snow_leopard
     version '1.2.3'
     sha256 '79388edcaf5cb29234f722a672b069c6d51fb812e89969ba8db8e957b9a32bf3'
   else

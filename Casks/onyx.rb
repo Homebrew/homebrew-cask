@@ -2,19 +2,19 @@ cask :v1 => 'onyx' do
   version :latest
   sha256 :no_check
 
-  if MacOS.version == :tiger
+  if MacOS.release == :tiger
     url 'http://www.titanium.free.fr/download/104/OnyX.dmg'
-  elsif MacOS.version == :leopard
+  elsif MacOS.release == :leopard
     url 'http://www.titanium.free.fr/download/105/OnyX.dmg'
-  elsif MacOS.version == :snow_leopard
+  elsif MacOS.release == :snow_leopard
     url 'http://www.titanium.free.fr/download/106/OnyX.dmg'
-  elsif MacOS.version == :lion
+  elsif MacOS.release == :lion
     url 'http://www.titanium.free.fr/download/107/OnyX.dmg'
-  elsif MacOS.version == :mountain_lion
+  elsif MacOS.release == :mountain_lion
     url 'http://www.titanium.free.fr/download/108/OnyX.dmg'
-  elsif MacOS.version == :mavericks
+  elsif MacOS.release == :mavericks
     url 'http://www.titanium.free.fr/download/109/OnyX.dmg'
-  elsif MacOS.version == :yosemite
+  elsif MacOS.release == :yosemite
     url 'http://www.titanium.free.fr/download/1010/OnyX.dmg'
   else
     # Unusual case: there is no fall-through.  Each version of the software is
@@ -36,7 +36,7 @@ cask :v1 => 'onyx' do
                          }
 
   caveats do
-    if [:leopard, :tiger].include?(MacOS.version.to_sym)
+    if [:leopard, :tiger].include?(MacOS.release.to_sym)
       puts 'OnyX only runs from an Administrator account on this version of OS X.'
     end
   end

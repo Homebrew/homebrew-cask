@@ -1,7 +1,7 @@
 cask :v1 => 'libreoffice' do
   version '4.3.4'
 
-  if Hardware::CPU.is_32_bit? or MacOS.version < :mountain_lion
+  if Hardware::CPU.is_32_bit? or MacOS.release < :mountain_lion
     sha256 '9e466cdd41ab29e0845267f6e46ed7c6edb79b36b4bcb121edd0df55aee4e53c'
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86/LibreOffice_#{version}_MacOS_x86.dmg"
   else
