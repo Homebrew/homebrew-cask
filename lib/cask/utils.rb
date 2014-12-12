@@ -1,9 +1,13 @@
+# encoding: UTF-8
 
 # see Homebrew Library/Homebrew/utils.rb
 
 require 'yaml'
 require 'open3'
 require 'stringio'
+
+UPDATE_CMD = "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup"
+ISSUES_URL = "https://github.com/caskroom/homebrew-cask/issues"
 
 # monkeypatch Object - not a great idea
 class Object
@@ -161,20 +165,27 @@ module Cask::Utils
     return false
   end
 
+  def self.error_message_with_suggestions
+    <<-EOS.undent
+    #{ Tty.reset }
+      #{ Tty.white }Most likely, this means you have #{
+      }an outdated version of homebrew-cask. Please run:
+
+          #{ Tty.reset }#{ Tty.green }#{ UPDATE_CMD }#{ Tty.reset }
+
+      #{ Tty.white }If this doesn’t fix the problem, please report this bug:
+
+          #{ Tty.em }#{ Tty.white }#{ ISSUES_URL }#{ Tty.reset }
+
+    EOS
+  end
+
   def self.method_missing_message(method, token, section=nil)
-    during = section ? "during #{section} " : '';
-    poo = <<-EOPOO.undent
-      Unexpected method '#{method}' called #{during}on Cask #{token}.
+    poo = []
+    poo << "Unexpected method '#{method}' called"
+    poo << "during #{section}" if section
+    poo << "on Cask #{token}."
 
-        If you are working on #{token}, this may point to a typo. Otherwise
-        it probably means this Cask is using a new feature. If that feature
-        has been released, running
-
-          brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
-
-        should fix it. Otherwise you should wait to use #{token} until the
-        new feature is released.
-    EOPOO
-    poo.split("\n").each { |line| opoo line }
+    opoo(poo.join(' ') + "\n" + error_message_with_suggestions)
   end
 end
