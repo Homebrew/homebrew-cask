@@ -29,8 +29,6 @@ require 'cask/cli/internal_stanza'
 
 class Cask::CLI
 
-  ISSUES_URL = "https://github.com/caskroom/homebrew-cask/issues"
-
   ALIASES = {
              'ls'             => 'list',
              'homepage'       => 'home',
@@ -125,8 +123,7 @@ class Cask::CLI
     exit 1
   rescue StandardError, ScriptError, NoMemoryError => e
     onoe e
-    puts "#{Tty.white}Please report this bug:"
-    puts "    #{Tty.em}#{ISSUES_URL}#{Tty.reset}"
+    puts Cask::Utils.error_message_with_suggestions
     puts e.backtrace
     exit 1
   end
