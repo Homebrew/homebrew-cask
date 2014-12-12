@@ -1,12 +1,12 @@
 cask :v1 => 'python' do
-  version '2.7.8'
-  sha256 '8411ce3ce0172c1f2a05e86eb10931e88900b58bf80b0c6adc64a520ce20b494'
+  version '2.7.9'
+  sha256 '6255db88811348cf5f950ad93bb301a913c20b118b1bedee4f2110f9e325e1fd'
 
-  url "https://www.python.org/ftp/python/#{version}/python-#{version}-macosx10.6.dmg"
+  url "https://www.python.org/ftp/python/#{version}/python-#{version}-macosx10.6.pkg"
   homepage 'http://www.python.org/'
   license :oss
 
-  pkg 'Python.mpkg'
+  pkg "python-#{version}-macosx10.6.pkg"
 
   uninstall :delete => [
                        "/Library/Receipts/Python*-#{version.slice(/\d+\.\d+/)}.pkg",
