@@ -4,7 +4,7 @@ cask :v1 => 'phpstorm' do
 
   url "http://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
   homepage 'http://www.jetbrains.com/phpstorm/'
-  license :commercial    # todo: improve this machine-generated value
+  license :commercial
 
   app 'PhpStorm.app'
 
