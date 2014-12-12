@@ -1,11 +1,11 @@
-cask :v1 => 'wizard101' do
+cask :v1 => 'Wizard101' do
   version :latest  
   sha256  :no_check
 
   url 'https://www.wizard101.com/downloadGameMac/otherdownload'
-  name 'wizard101'
+  name 'Wizard101'
   homepage 'wizard101.com'
   license :unknown
 
-  app 'wizard101'
+  app 'Wizard101'
 end
