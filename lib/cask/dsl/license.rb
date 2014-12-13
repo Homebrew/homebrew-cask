@@ -13,7 +13,7 @@ class Cask::DSL::License
                     :gratis        => :closed,
                     :abandoned     => :closed,  # undocumented, should not be used yet
                     :freemium      => :closed,
-                    :trial         => :closed,  # undocumented, should not be used yet
+                    :trial         => :closed,
 
                     :oss           => :oss,
                     :affero        => :oss,
