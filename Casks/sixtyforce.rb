@@ -4,7 +4,7 @@ cask :v1 => 'sixtyforce' do
 
   url 'http://sixtyforce.com/download/sixtyforce.zip'
   homepage 'http://sixtyforce.com/'
-  license :closed
+  license :freemium
 
   app 'sixtyforce.app'
 end
