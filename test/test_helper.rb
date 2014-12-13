@@ -11,13 +11,11 @@ HOMEBREW_BREW_FILE = '/usr/local/bin/brew'
 brew_cask_path = Pathname.new(File.expand_path(__FILE__+'/../../'))
 casks_path = brew_cask_path.join('Casks')
 lib_path = brew_cask_path.join('lib')
-
 $:.push(lib_path)
 
-# add homebrew to load path
-homebrew_path = Pathname(`brew --prefix`.chomp)
-homebrew_path = Pathname('/usr/local') unless homebrew_path.exist?
-$:.push(homebrew_path.join('Library', 'Homebrew'))
+# add our homebrew fork to load path
+# todo: removeme, this is transitional
+$:.push(lib_path.join('homebrew-fork', 'Library', 'Homebrew'))
 
 # require homebrew testing env
 require 'test/testing_env'
