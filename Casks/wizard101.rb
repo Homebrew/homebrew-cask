@@ -7,5 +7,5 @@ cask :v1 => 'wizard101' do
   homepage 'wizard101.com'
   license :unknown
 
-  app 'Wizard101'
+  app 'Wizard101.app'
 end
