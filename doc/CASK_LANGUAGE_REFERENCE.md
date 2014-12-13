@@ -44,7 +44,7 @@ cask :v1 => 'alfred' do
   url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
   name 'Alfred'
   homepage 'http://www.alfredapp.com/'
-  license :commercial
+  license :freemium
 
   app 'Alfred 2.app'
   app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
@@ -362,27 +362,28 @@ open source.  Chromium licensing is described by the generic category [`:oss`](h
 
 ### Valid Licenses
 
-| symbol           | generic category | meaning                                         | URL         |
-| ---------------- | ---------------- | ----------------------------------------------- | ----------- |
-| `:gratis`        | `:closed`        | free-to-use, closed source                      | <none>
-| `:commercial`    | `:closed`        | not free to use                                 | <none>
-| `:affero`        | `:oss`           | Affero General Public License                   | <https://gnu.org/licenses/agpl.html>
-| `:apache`        | `:oss`           | Apache Public License                           | <http://www.apache.org/licenses/>
-| `:arphic`        | `:oss`           | Arphic Public License                           | <http://www.arphic.com/tw/download/public_license.rar>
-| `:artistic`      | `:oss`           | Artistic License                                | <http://dev.perl.org/licenses/artistic.html>
-| `:bsd`           | `:oss`           | BSD License                                     | <http://www.linfo.org/bsdlicense.html>
-| `:cc`            | `:oss`           | Creative Commons License                        | <http://creativecommons.org/licenses/>
-| `:eclipse`       | `:oss`           | Eclipse Public License                          | <https://www.eclipse.org/legal/eplfaq.php>
-| `:gpl`           | `:oss`           | GNU Public License                              | <http://www.gnu.org/copyleft/gpl.html>
-| `:isc`           | `:oss`           | Internet Systems Consortium License             | <http://www.isc.org/downloads/software-support-policy/isc-license/>
-| `:lppl`          | `:oss`           | LaTeX Project Public License                    | <http://latex-project.org/lppl/>
-| `:ncsa`          | `:oss`           | University of Illinois/NCSA Open Source License | <http://otm.illinois.edu/uiuc_openSource>
-| `:mit`           | `:oss`           | MIT License                                     | <http://opensource.org/licenses/MIT>
-| `:mpl`           | `:oss`           | Mozilla Public License                          | <https://www.mozilla.org/MPL/>
-| `:ofl`           | `:oss`           | SIL Open Font License                           | <http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL>
-| `:public_domain` | `:oss`           | not copyrighted                                 | <http://creativecommons.org/publicdomain/zero/1.0/legalcode>
-| `:ubuntu_font`   | `:oss`           | Ubuntu Font License                             | <http://font.ubuntu.com/licence/>
-| `:x11`           | `:oss`           | X Consortium License                            | <http://www.xfree86.org/3.3.6/COPYRIGHT2.html>
+| symbol           | generic category | meaning                                                            | URL         |
+| ---------------- | ---------------- | ------------------------------------------------------------------ | ----------- |
+| `:gratis`        | `:closed`        | free-to-use, closed source                                         | <none>
+| `:commercial`    | `:closed`        | not free to use                                                    | <none>
+| `:freemium`      | `:closed`        | free-to-use, payment required for full or additional functionality | <http://en.wikipedia.org/wiki/Freemium>
+| `:affero`        | `:oss`           | Affero General Public License                                      | <https://gnu.org/licenses/agpl.html>
+| `:apache`        | `:oss`           | Apache Public License                                              | <http://www.apache.org/licenses/>
+| `:arphic`        | `:oss`           | Arphic Public License                                              | <http://www.arphic.com/tw/download/public_license.rar>
+| `:artistic`      | `:oss`           | Artistic License                                                   | <http://dev.perl.org/licenses/artistic.html>
+| `:bsd`           | `:oss`           | BSD License                                                        | <http://www.linfo.org/bsdlicense.html>
+| `:cc`            | `:oss`           | Creative Commons License                                           | <http://creativecommons.org/licenses/>
+| `:eclipse`       | `:oss`           | Eclipse Public License                                             | <https://www.eclipse.org/legal/eplfaq.php>
+| `:gpl`           | `:oss`           | GNU Public License                                                 | <http://www.gnu.org/copyleft/gpl.html>
+| `:isc`           | `:oss`           | Internet Systems Consortium License                                | <http://www.isc.org/downloads/software-support-policy/isc-license/>
+| `:lppl`          | `:oss`           | LaTeX Project Public License                                       | <http://latex-project.org/lppl/>
+| `:ncsa`          | `:oss`           | University of Illinois/NCSA Open Source License                    | <http://otm.illinois.edu/uiuc_openSource>
+| `:mit`           | `:oss`           | MIT License                                                        | <http://opensource.org/licenses/MIT>
+| `:mpl`           | `:oss`           | Mozilla Public License                                             | <https://www.mozilla.org/MPL/>
+| `:ofl`           | `:oss`           | SIL Open Font License                                              | <http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL>
+| `:public_domain` | `:oss`           | not copyrighted                                                    | <http://creativecommons.org/publicdomain/zero/1.0/legalcode>
+| `:ubuntu_font`   | `:oss`           | Ubuntu Font License                                                | <http://font.ubuntu.com/licence/>
+| `:x11`           | `:oss`           | X Consortium License                                               | <http://www.xfree86.org/3.3.6/COPYRIGHT2.html>
 
 
 ## Tags Stanza Details

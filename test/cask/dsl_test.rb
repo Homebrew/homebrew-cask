@@ -8,27 +8,39 @@ describe Cask::DSL do
     test_cask.version.must_equal '1.2.3'
   end
 
-  it "prevents the entire world from crashing when a Cask includes an unknown method" do
+  describe "when a Cask includes an unknown method" do
     UnexpectedMethodCask = Class.new(Cask)
-    begin
-      TestHelper.must_output(self, lambda {
+    attempt_unknown_method = nil
+
+    before do
+      attempt_unknown_method = lambda {
         UnexpectedMethodCask.class_eval do
           future_feature :not_yet_on_your_machine
         end
-      }, <<-WARNING.undent.chomp)
-        Warning: Unexpected method 'future_feature' called on Cask unexpected-method-cask.
-        Warning:#{' '}
-        Warning:   If you are working on unexpected-method-cask, this may point to a typo. Otherwise
-        Warning:   it probably means this Cask is using a new feature. If that feature
-        Warning:   has been released, running
-        Warning:#{' '}
-        Warning:     brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
-        Warning:#{' '}
-        Warning:   should fix it. Otherwise you should wait to use unexpected-method-cask until the
-        Warning:   new feature is released.
-      WARNING
-    rescue Exception => e
-      flunk("Wanted unexpected method to simply warn, but got exception #{e}")
+      }
+    end
+
+    it "prints a warning that it has encountered an unexpected method" do
+      expected = r = Regexp.compile(<<-EOREGEX.undent.lines.map(&:chomp).join(''))
+        (?m)
+        Warning:
+        .*
+        Unexpected method 'future_feature' called on Cask unexpected-method-cask\\.
+        .*
+        brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+        .*
+        https://github.com/caskroom/homebrew-cask/issues
+      EOREGEX
+
+      TestHelper.must_output(self, attempt_unknown_method, expected)
+    end
+
+    it "will simply warn, not throw an exception" do
+      begin
+        capture_subprocess_io { attempt_unknown_method.call }
+      rescue Exception => e
+        flunk("Wanted unexpected method to simply warn, but got exception #{e}")
+      end
     end
   end
 
