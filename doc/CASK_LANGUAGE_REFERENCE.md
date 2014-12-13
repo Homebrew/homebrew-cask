@@ -367,6 +367,7 @@ open source.  Chromium licensing is described by the generic category [`:oss`](h
 | `:gratis`        | `:closed`        | free-to-use, closed source                                         | <none>
 | `:commercial`    | `:closed`        | not free to use                                                    | <none>
 | `:freemium`      | `:closed`        | free-to-use, payment required for full or additional functionality | <http://en.wikipedia.org/wiki/Freemium>
+| `:trial`         | `:closed`        | free to use for a limited time                                     | <none>
 | `:affero`        | `:oss`           | Affero General Public License                                      | <https://gnu.org/licenses/agpl.html>
 | `:apache`        | `:oss`           | Apache Public License                                              | <http://www.apache.org/licenses/>
 | `:arphic`        | `:oss`           | Arphic Public License                                              | <http://www.arphic.com/tw/download/public_license.rar>
