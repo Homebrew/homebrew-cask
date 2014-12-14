@@ -1,6 +1,6 @@
 cask :v1 => 'cura' do
-  version '14.09'
-  sha256 '563674f1696c1faf21a5a79b8684811085c868dbb891c87a0ba45c46539f316b'
+  version '14.12'
+  sha256 '999db9265c6a6f96dfe015cdd4e87f42e4fa24b3f33549f6195fabe3bc9c1aa9'
 
   url "http://software.ultimaker.com/current/Cura-#{version}-MacOS.dmg"
   homepage 'http://daid.github.com/Cura/'
