@@ -1,10 +1,10 @@
 cask :v1 => 'macdown' do
-  version '0.3'
-  sha256 '3d0b49792525830b44dc912bc4a0d3801ce2d4f6453a1835c681d379b3c63128'
+  version '0.4.1'
+  sha256 'e5e5aad8726d6eff3267fb6286a86c67bd48e3c137baf6b203e6a505c60d7b34'
 
   url "http://macdown.uranusjr.com/download/v#{version}/"
   appcast 'http://macdown.uranusjr.com/sparkle/macdown/appcast.xml',
-          :sha256 => '08dc82cf014ff77c30b7f93aa7da9c7d46ea73eb32e4c92b626632cf1e621b0f'
+          :sha256 => '81345496a64ca0d0d7ff8936e43ff0e1041ab6ebd61d534bc67f3357291b7478'
   homepage 'http://macdown.uranusjr.com/'
   license :mit
 
