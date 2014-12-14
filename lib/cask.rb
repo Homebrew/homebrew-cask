@@ -67,7 +67,7 @@ class Cask
         # sudo in system is rude.
         system '/usr/bin/sudo', '--', '/bin/mkdir', '-p', '--', caskroom
         unless caskroom.parent == toplevel_dir
-          system '/usr/bin/sudo', '--', '/usr/sbin/chown', '-R', '--', "#{current_user}:staff", caskroom.parent
+          system '/usr/bin/sudo', '--', '/usr/sbin/chown', '-R', '--', "#{current_user}:staff", caskroom.parent.to_s
         end
       end
     end
