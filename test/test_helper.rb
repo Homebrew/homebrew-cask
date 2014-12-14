@@ -24,7 +24,7 @@ require 'test/testing_env'
 
 # todo temporary, copied from old Homebrew, this method is now moved inside a class
 def shutup
-  if ARGV.verbose?
+  if ENV.has_key?('VERBOSE_TESTS')
     yield
   else
     begin

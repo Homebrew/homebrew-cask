@@ -172,6 +172,18 @@ If you're making changes - please write some tests for them! Also be sure to
 run the whole test suite using `rake test` before submitting (if you forget,
 Travis-CI will do that for you and embarrass you in front of all your friends). :)
 
+You may also use a set of environment variables to increase verbosity:
+
+ - `TESTOPTS`, `TEST` etc. for the old [minitest suites](http://www.ruby-doc.org/stdlib-2.0.0/libdoc/rake/rdoc/Rake/TestTask.html)
+ - `SPEC_OPTS`, `SPEC` etc. for [rspec suites](http://apidock.com/rspec/Spec/Rake/SpecTask)
+ - `VERBOSE_TESTS` to see the standard output from the actual code = ignore the `shutup` helper
+
+Example of a very verbose output:
+
+```shell
+TESTOPTS='-v' SPEC_OPTS='-fd' VERBOSE_TESTS=1 rake test
+```
+
 #### External Commands
 
 Advanced users may create their own external commands for homebrew-cask by
