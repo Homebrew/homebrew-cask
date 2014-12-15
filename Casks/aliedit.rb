@@ -22,9 +22,9 @@ cask :v1 => 'aliedit' do
                         '/Library/Google/Chrome/NativeMessagingHosts/com.alipay.security.json',
                         '/Library/LaunchDaemons/com.alipay.DispatcherService.plist',
                         # the files under ~/Library are installed by the pkg, and logically should be removed by uninstall
-                        Pathname.new(File.expand_path('~')).join('Library/Alipay'),
-                        Pathname.new(File.expand_path('~')).join('Internet Plug-Ins/aliedit.plugin'),
-                        Pathname.new(File.expand_path('~')).join('Internet Plug-Ins/npalicdo.plugin'),
-                        Pathname.new(File.expand_path('~')).join('LaunchAgents/com.alipay.refresher.plist'),
+                        File.expand_path('~/Library/Alipay'),
+                        File.expand_path('~/Library/Internet Plug-Ins/aliedit.plugin'),
+                        File.expand_path('~/Library/Internet Plug-Ins/npalicdo.plugin'),
+                        File.expand_path('~/Library/LaunchAgents/com.alipay.refresher.plist'),
                        ]
 end
