@@ -1,10 +1,10 @@
 cask :v1 => 'spyder' do
-  version '2.3.1'
-  sha256 '4e5a755a98da444343d52d8ae3273eb3dd36c1114e12f0b77de6ade387477a81'
+  version '2.3.2'
+  sha256 '37f64cdc31381368458b9c33c90f7c3cd5baf866a9525d3c7e4f962e7c2e2810'
 
-  url "https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-#{version}-py27.dmg"
+  url "https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-#{version}-py2.7.dmg"
   homepage 'https://code.google.com/p/spyderlib/'
   license :oss
 
-  app 'Spyder.app'
+  app 'Spyder-Py2.app'
 end
