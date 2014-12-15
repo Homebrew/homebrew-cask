@@ -1,10 +1,10 @@
 cask :v1 => 'smartgit' do
-  version '6.5.1'
-  sha256 '7e0ea9807cc68880daae408789d1ed219fe8faa9acb13a7e5557356025d75be9'
+  version '6.5.2'
+  sha256 '3fc0fd89e1e2b7e5aec5f12b8da2ae1da1d2a84d96ce335a62d922db1640b965'
 
   url "http://www.syntevo.com/download/smartgit/smartgit-macosx-#{version.gsub('.', '_')}.dmg"
   homepage 'http://www.syntevo.com/smartgit/'
-  license :unknown    # todo: improve this machine-generated value
+  license :commercial
 
   app 'SmartGit.app'
   binary 'SmartGit.app/Contents/MacOS/SmartGit'
