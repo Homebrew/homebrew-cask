@@ -1,6 +1,6 @@
 cask :v1 => 'freefilesync' do
-  version '6.10'
-  sha256 'f0a1a52ef8e1a011b522af98afe64e9474f68f98eb0ab7c3a3dafb3fb6d0a6bf'
+  version '6.12'
+  sha256 '253c8bdedb827f4f8710ebc694192d0f8a59119fbf55222e387a5dee6b463570'
 
   url "http://downloads.sourceforge.net/project/freefilesync/FreeFileSync/#{version}/FreeFileSync_#{version}_Mac_OS_X_64-bit.zip"
   homepage 'http://freefilesync.sourceforge.net/'
