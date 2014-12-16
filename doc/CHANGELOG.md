@@ -1,5 +1,28 @@
 # CHANGELOG
 
+## 0.51.1
+
+* __Casks__
+  - 0 Casks added (0 updated) by 0 contributors since 0.51.0
+  - 2168 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#8155][] Fix `brew cask update` alias to avoid calling internal Homebrew method
+* __Internal Changes__
+  - none
+* __Documentation__
+  - N doc commits since 0.51.0
+* __Contributors__
+  - N new contributors since 0.51.0
+  - N total contributors
+* __Release Date__
+  - 2014-12-16 15:15:00 UTC
+
+[#8155]: https://github.com/caskroom/homebrew-cask/issues/8155
+
 ## 0.51.0
 
 * __Casks__
