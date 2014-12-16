@@ -1,4 +1,3 @@
-# encoding: UTF-8
 cask :v1 => 'tuneinstructor' do
   version '3.4'
 
