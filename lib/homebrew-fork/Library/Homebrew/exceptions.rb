@@ -37,18 +37,13 @@ class FormulaSpecificationError < StandardError; end
 
 class FormulaUnavailableError < RuntimeError
   attr_reader :name
-  attr_accessor :dependent
 
   def initialize name
     @name = name
   end
 
-  def dependent_s
-    "(dependency of #{dependent})" if dependent and dependent != name
-  end
-
   def to_s
-    "No available formula for #{name} #{dependent_s}"
+    "No available formula for #{name}"
   end
 end
 
@@ -61,7 +56,7 @@ class TapFormulaUnavailableError < FormulaUnavailableError
   end
 
   def to_s; <<-EOS.undent
-      No available formula for #{shortname} #{dependent_s}
+      No available formula for #{shortname}
       Please tap it and then try again: brew tap #{user}/#{repo}
     EOS
   end
@@ -86,16 +81,6 @@ class FormulaAlreadyInstalledError < RuntimeError; end
 class FormulaInstallationAlreadyAttemptedError < RuntimeError
   def initialize(formula)
     super "Formula installation already attempted: #{formula.name}"
-  end
-end
-
-class UnsatisfiedRequirements < RuntimeError
-  def initialize(reqs)
-    if reqs.length == 1
-      super "An unsatisfied requirement failed this build."
-    else
-      super "Unsatisified requirements failed this build."
-    end
   end
 end
 

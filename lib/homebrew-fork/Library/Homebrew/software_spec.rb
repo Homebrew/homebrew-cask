@@ -4,7 +4,6 @@ require 'checksum'
 require 'version'
 require 'options'
 require 'build_options'
-require 'dependency_collector'
 require 'bottles'
 require 'patch'
 require 'compilers'
@@ -20,7 +19,6 @@ class SoftwareSpec
 
   attr_reader :name, :owner
   attr_reader :build, :resources, :patches, :options
-  attr_reader :dependency_collector
   attr_reader :bottle_specification
   attr_reader :compiler_failures
 
@@ -32,7 +30,6 @@ class SoftwareSpec
   def initialize
     @resource = Resource.new
     @resources = {}
-    @dependency_collector = DependencyCollector.new
     @bottle_specification = BottleSpecification.new
     @patches = []
     @options = Options.new
@@ -54,7 +51,6 @@ class SoftwareSpec
   def url val=nil, specs={}
     return @resource.url if val.nil?
     @resource.url(val, specs)
-    dependency_collector.add(@resource)
   end
 
   def bottled?
@@ -74,7 +70,6 @@ class SoftwareSpec
       raise DuplicateResourceError.new(name) if resource_defined?(name)
       res = klass.new(name, &block)
       resources[name] = res
-      dependency_collector.add(res)
     else
       resources.fetch(name) { raise ResourceMissingError.new(owner, name) }
     end
@@ -97,19 +92,6 @@ class SoftwareSpec
       Option.new(name, description)
     end
     options << opt
-  end
-
-  def depends_on spec
-    dep = dependency_collector.add(spec)
-    add_dep_option(dep) if dep
-  end
-
-  def deps
-    dependency_collector.deps
-  end
-
-  def requirements
-    dependency_collector.requirements
   end
 
   def patch strip=:p1, src=nil, &block
