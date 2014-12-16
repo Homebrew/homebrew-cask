@@ -1,4 +1,3 @@
-# encoding: UTF-8
 cask :v1 => 'neteasemusic' do
   version :latest
   sha256 :no_check
