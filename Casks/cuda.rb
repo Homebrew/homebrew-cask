@@ -9,6 +9,8 @@ cask :v1 => 'cuda' do
   pkg "cuda_#{version}_mac_64.pkg"
   uninstall :pkgutil => 'com.nvidia.cuda.*',
             :kext => 'com.nvidia.CUDA',
-            :delete => ['/Developer/NVIDIA/CUDA-6.5',
-                        '/usr/local/cuda']
+            :delete => [
+                        '/Developer/NVIDIA/CUDA-6.5',
+                        '/usr/local/cuda'
+                       ]
 end
