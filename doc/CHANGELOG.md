@@ -1,5 +1,50 @@
 # CHANGELOG
 
+## 0.51.0
+
+* __Casks__
+  - 13 Casks added (1418 updated) by 58 contributors since 0.50.0
+  - 2168 total Casks
+* __Features__
+  - [#8072][] When handling errors or missing methods, always suggest updating
+  - [#8017][] Add `license :freemium`
+  - [#3066][] Store metadata with installed Casks
+  - [#7933][] mark `license :unknown` with explicit todo comment
+* __Breaking Changes__
+  - [#8089][] Require Ruby 2.0+
+* __Fixes__
+  - [#7957][] Better support for disk image mounting via `:bsexec` option to `command.run` <3 [@renard][]
+* __Internal Changes__
+  - [#8089][] Separate backend codebase from Homebrew
+  - [#7880][] Run new RSpec tests by default
+  - [#8129][], [#8090][] Remove undocumented `license` values
+  - [#8113][] Explicit `Pathname` -> `String` conversion for test suite
+  - [#8101][] Verbose test options + documentation
+  - [#8022][] disable test which writes outside test dir
+  - [#8023][] require Ruby 2.0 for `generate_cask_token` devscript
+* __Documentation__
+  - 6 doc commits since 0.50.0
+* __Contributors__
+  - 28 new contributors since 0.50.0
+  - 1326 total contributors
+* __Release Date__
+  - 2014-12-16 13:14:00 UTC
+
+[#3066]: https://github.com/caskroom/homebrew-cask/issues/3066
+[#7880]: https://github.com/caskroom/homebrew-cask/issues/7880
+[#7933]: https://github.com/caskroom/homebrew-cask/issues/7933
+[#7957]: https://github.com/caskroom/homebrew-cask/issues/7957
+[#8017]: https://github.com/caskroom/homebrew-cask/issues/8017
+[#8022]: https://github.com/caskroom/homebrew-cask/issues/8022
+[#8023]: https://github.com/caskroom/homebrew-cask/issues/8023
+[#8072]: https://github.com/caskroom/homebrew-cask/issues/8072
+[#8089]: https://github.com/caskroom/homebrew-cask/issues/8089
+[#8090]: https://github.com/caskroom/homebrew-cask/issues/8090
+[#8101]: https://github.com/caskroom/homebrew-cask/issues/8101
+[#8113]: https://github.com/caskroom/homebrew-cask/issues/8113
+[#8129]: https://github.com/caskroom/homebrew-cask/issues/8129
+[@renard]: https://github.com/renard
+
 ## 0.50.0
 
 * __Casks__
