@@ -22,11 +22,6 @@ describe Cask::SystemCommand do
   end
 
   describe "when the exit code is 1" do
-    before do
-      # See: https://bugs.ruby-lang.org/issues/1287
-      skip("Ruby 1.8.7 doesn't see exit statuses") if TestHelper.ruby18?
-    end
-
     describe "and the command must succeed" do
       it "throws an error" do
         lambda {

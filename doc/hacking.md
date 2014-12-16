@@ -142,17 +142,8 @@ This form can also be combined with a specific Ruby interpreter as above.
 
 ### Target Ruby Versions
 
-Homebrew-cask is `require`d from within the Ruby environment of the parent
-Homebrew command (`brew`).
-
-Therefore, Homebrew-cask uses whichever Ruby interpreter chosen by Homebrew.
-This is generally an Apple-supplied Ruby, though it may change according to
-OS version.  At the time of writing, Homebrew targets Ruby 2.0 on OS X
-Mavericks (10.9) and Yosemite (10.10), and Ruby 1.8.7 on older OS revisions.
-
-So, our code must currently maintain compatibility across Ruby 1.8.7 and
-2.0.  The automated testing provided by Travis-CI will ensure that any pull
-request will be tested under both versions.
+Homebrew-cask requires a Ruby interpreter version 2.0 or above.  This
+is the default system Ruby on Mavericks (10.9) and Yosemite (10.10).
 
 ### Submitting Your Changes
 

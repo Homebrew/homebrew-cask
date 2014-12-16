@@ -5,8 +5,8 @@ language: objective-c
 # test with Ruby 2.1, but allow failure
 #
 
-# "Current" is dependent on OS release.  At the time of writing, it is always
-# either 1.8 or 2.0
+# "Current" is dependent on OS X release.  At the time of writing, it
+# is always either 1.8 or 2.0
 env:
   matrix:
     - CASK_RUBY_TEST_VERSION="2.0"
