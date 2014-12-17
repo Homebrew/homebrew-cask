@@ -8,7 +8,7 @@ cask :v1 => 'limechat' do
     sha256 '708d10591784e5beb7ed80236d809d5cd4f992c133483bc2a82775acdc6f1f0f'
   end
 
-  url "https://downloads.sourceforge.net/project/limechat/limechat/LimeChat_#{version}.tbz"
+  url "http://downloads.sourceforge.net/project/limechat/limechat/LimeChat_#{version}.tbz"
   appcast 'http://limechat.net/mac/appcast.xml',
           :sha256 => '32dd2f6795c4f19940a8bb8a093b5b297167c28a4b6712cb94d6de14f1002e4f'
   homepage 'http://limechat.net/mac/'
