@@ -15,7 +15,6 @@ class Cask::Audit
     _check_no_string_version_latest
     _check_checksums
     _check_sha256_no_check_if_latest
-    _check_sha256_if_versioned
     _check_sourceforge_download_url_format
     _check_download(download) if download
     return !(errors? or warnings?)
@@ -50,13 +49,6 @@ class Cask::Audit
     odebug "Verifying sha256 :no_check with version :latest"
     if cask.version == :latest and cask.sums.is_a?(Array)
       add_error "you should use sha256 :no_check when version is :latest"
-    end
-  end
-
-  def _check_sha256_if_versioned
-    odebug "Verifying a sha256 is present when versioned"
-    if cask.version != :latest and cask.sums == :no_check
-      add_error "you must include a sha256 when version is not :latest"
     end
   end
 

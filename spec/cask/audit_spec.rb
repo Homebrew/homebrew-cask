@@ -38,11 +38,6 @@ class CaskVersionLatestWithChecksum < Cask
   sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
 end
 
-class CaskWithVersionNoChecksum < Cask
-  version '1.2.3'
-  sha256 :no_check
-end
-
 describe Cask::Audit do
   describe "result" do
     it "is 'failed' if there are have been any errors added" do
@@ -88,12 +83,6 @@ describe Cask::Audit do
         audit = Cask::Audit.new(CaskVersionLatestWithChecksum.new)
         audit.run!
         expect(audit.errors).to include(%q{you should use sha256 :no_check when version is :latest})
-      end
-
-      it "adds an error if versioned and has no checksum" do
-        audit = Cask::Audit.new(CaskWithVersionNoChecksum.new)
-        audit.run!
-        expect(audit.errors).to include(%q{you must include a sha256 when version is not :latest})
       end
     end
 

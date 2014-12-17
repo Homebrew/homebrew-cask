@@ -66,7 +66,7 @@ cask :v1 => 'unity' do
 end
 ```
 
-And here is one for `Firefox.app`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new version is available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when an unversioned download URL is available:
+And here is one for `Firefox.app`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when an unversioned download URL is available:
 
 ```ruby
 cask :v1 => 'firefox' do
@@ -137,7 +137,7 @@ Fill in the following stanzas for your Cask:
 | name               | value       |
 | ------------------ | ----------- |
 | `version`          | application version; give the value `:latest` if an unversioned download is available
-| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
+| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
 | `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
 | `name`             | the full and proper name defined by the vendor, and any useful alternate names (see also [Name Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#name-stanza-details))
 | `homepage`         | application homepage; used for the `brew cask home` command
