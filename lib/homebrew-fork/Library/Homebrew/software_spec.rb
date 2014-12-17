@@ -4,7 +4,6 @@ require 'checksum'
 require 'version'
 require 'options'
 require 'build_options'
-require 'patch'
 require 'compilers'
 
 class SoftwareSpec
@@ -17,7 +16,7 @@ class SoftwareSpec
   }
 
   attr_reader :name, :owner
-  attr_reader :build, :resources, :patches, :options
+  attr_reader :build, :resources, :options
   attr_reader :compiler_failures
 
   def_delegators :@resource, :stage, :fetch, :verify_download_integrity
@@ -29,7 +28,6 @@ class SoftwareSpec
     @resource = Resource.new
     @resources = {}
     @bottle_specification = nil
-    @patches = []
     @options = Options.new
     @build = BuildOptions.new(Options.create(ARGV.flags_only), options)
     @compiler_failures = []
@@ -43,7 +41,6 @@ class SoftwareSpec
       r.owner     = self
       r.version ||= version
     end
-    patches.each { |p| p.owner = self }
   end
 
   def url val=nil, specs={}
@@ -84,10 +81,6 @@ class SoftwareSpec
     options << opt
   end
 
-  def patch strip=:p1, src=nil, &block
-    patches << Patch.create(strip, src, &block)
-  end
-
   def fails_with compiler, &block
     compiler_failures << CompilerFailure.create(compiler, &block)
   end
@@ -96,12 +89,6 @@ class SoftwareSpec
     standards.each do |standard|
       compiler_failures.concat CompilerFailure.for_standard(standard)
     end
-  end
-
-  def add_legacy_patches(list)
-    list = Patch.normalize_legacy_patches(list)
-    list.each { |p| p.owner = self }
-    patches.concat(list)
   end
 
   def add_dep_option(dep)
