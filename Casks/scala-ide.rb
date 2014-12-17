@@ -1,14 +1,15 @@
 cask :v1 => 'scala-ide' do
-  version '3.0.4'
+  version '4.0.0'
 
   if Hardware::CPU.is_32_bit?
-    sha256 '01448e95f645955c0ab5e3461bc2a44104c01fcfb7f7355d317b1d6de11d2218'
-    url "http://downloads.typesafe.com/scalaide-pack/#{version}.vfinal-211-20140723/scala-SDK-#{version}-2.11-2.11-macosx.cocoa.x86.zip"
+    url "http://downloads.typesafe.com/scalaide-pack/#{version}.vfinal-luna-211-20141216/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86.zip"
+    sha256 '9739c851260211de15f8535988e7937cd4bf6e2dcb74188eb7261cff4a46deab'
   else
-    sha256 'a631e31a53bd7bda61ec579fe8013c7a7e22ab7e947e726cdc9efbe45a10bb3e'
-    url "http://downloads.typesafe.com/scalaide-pack/#{version}.vfinal-211-20140723/scala-SDK-#{version}-2.11-2.11-macosx.cocoa.x86_64.zip"
+    url "http://downloads.typesafe.com/scalaide-pack/#{version}.vfinal-luna-211-20141216/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86_64.zip"
+    sha256 '721a01bbbf682a2e32c34fb33f0240c08a2f81a9b8e181d7bca2039e98635453'
   end
 
+  name 'Scala IDE'
   homepage 'http://scala-ide.org/'
   license :bsd
 
