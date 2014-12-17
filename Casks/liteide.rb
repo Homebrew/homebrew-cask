@@ -1,6 +1,6 @@
 cask :v1 => 'liteide' do
-  version '25.1'
-  sha256 '09de733b069a37bc3ff575e7218a0e547af9d2b5a68fef7bcb3a2d362820f101'
+  version '25.2'
+  sha256 '92cb684a4832cf32d06ca0fa60f1155d64bd63fb9af708277bd57b70f5eb2cf8'
 
   url "http://downloads.sourceforge.net/project/liteide/X#{version}/liteidex#{version}.macosx.zip"
   homepage 'https://github.com/visualfc/liteide'
