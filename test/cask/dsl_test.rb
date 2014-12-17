@@ -100,11 +100,10 @@ describe Cask::DSL do
         name 'Alternate Name'
       end
       instance = MultiNameCask.new
-      # the sort is a hack to deal with Ruby 1.8 oddities
-      instance.full_name.sort.must_equal [
-                                          'Proper Name',
-                                          'Alternate Name',
-                                         ].sort
+      instance.full_name.must_equal [
+                                     'Proper Name',
+                                     'Alternate Name',
+                                    ]
     end
   end
 
@@ -130,7 +129,7 @@ describe Cask::DSL do
       end
 
       instance = CaskWithApps.new
-      Array(instance.artifacts[:app]).sort.must_equal [['Bar.app'], ['Foo.app']]
+      Array(instance.artifacts[:app]).must_equal [['Foo.app'], ['Bar.app']]
     end
 
     it "allow app stanzas to be empty" do
@@ -172,7 +171,7 @@ describe Cask::DSL do
       end
 
       instance = CaskWithPkgs.new
-      Array(instance.artifacts[:pkg]).sort.must_equal [['Bar.pkg'], ['Foo.pkg']]
+      Array(instance.artifacts[:pkg]).must_equal [['Foo.pkg'], ['Bar.pkg']]
     end
   end
 
@@ -388,11 +387,10 @@ describe Cask::DSL do
   describe "installer stanza" do
     it "allows installer :script to be specified" do
       cask = Cask.load('with-installer-script')
-      # the sorts are needed to force the order for Ruby 1.8
-      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.first.script[:executable].must_equal '/usr/bin/false'
-      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.first.script[:args].must_equal ['--flag']
-      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.to_a[1].script[:executable].must_equal '/usr/bin/true'
-      cask.artifacts[:installer].sort{ |a,b| a.script[:executable] <=> b.script[:executable] }.to_a[1].script[:args].must_equal ['--flag']
+      cask.artifacts[:installer].first.script[:executable].must_equal '/usr/bin/true'
+      cask.artifacts[:installer].first.script[:args].must_equal ['--flag']
+      cask.artifacts[:installer].to_a[1].script[:executable].must_equal '/usr/bin/false'
+      cask.artifacts[:installer].to_a[1].script[:args].must_equal ['--flag']
     end
     it "allows installer :manual to be specified" do
       cask = Cask.load('with-installer-manual')

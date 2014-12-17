@@ -68,7 +68,6 @@ module Cask::DSL
     def full_name(_full_name=nil)
       @full_name ||= []
       if _full_name
-        # todo this idiom may be preferred to << if it behaves the same on Ruby 1.8 and 2.x
         @full_name.concat(Array(*_full_name))
       end
       @full_name

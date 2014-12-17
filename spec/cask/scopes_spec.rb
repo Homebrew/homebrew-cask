@@ -19,7 +19,7 @@ describe Cask::Scopes do
 
       expect(Cask).to have_received(:load).with('cask-bar')
       expect(Cask).to have_received(:load).with('cask-foo')
-      expect(installed_casks.sort).to eq(%w[
+      expect(installed_casks).to eq(%w[
         loaded-cask-bar
         loaded-cask-foo
       ])

@@ -59,8 +59,7 @@ class Cask::CLI::Alfred < Cask::CLI::Base
       opoo "Alfred appears to be already linked. Updating defaults anyway."
     end
     odebug 'Linking Alfred scopes'
-    # this silly ternary operation is for precise compat with Ruby 1.8
-    save_alfred_scopes( alfred_scopes.include?(Cask.caskroom.to_s) ? alfred_scopes : alfred_scopes + [ Cask.caskroom.to_s ])
+    save_alfred_scopes(linked? ? alfred_scopes : alfred_scopes + [ Cask.caskroom.to_s ])
     ohai "Successfully linked Alfred to homebrew-cask."
   end
 
