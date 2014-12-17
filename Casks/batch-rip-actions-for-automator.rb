@@ -36,4 +36,20 @@ cask :v1 => 'batch-rip-actions-for-automator' do
     '~/Library/Services/Batch Rip • Rename TV Items.workflow',
     '~/Library/Services/Batch Rip • Tag Inspector.workflow'
   ]
+
+  caveats <<-EOS.undent
+    This Cask has some other requirements
+    For basic encode functionality you will need to run the following cask install
+
+    brew cask install handbrakecli
+
+    If you require dvd decription
+
+    brew install libdvdcss
+    brew cask install fairmount
+
+    If you require Blu-Ray ripping
+
+    brew cask install makemkv
+  EOS
 end
