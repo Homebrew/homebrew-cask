@@ -8,7 +8,6 @@ require "build_options"
 require "cxxstdlib"
 require "keg"
 require "extend/ENV"
-require "debrew"
 require "fcntl"
 
 class Build
@@ -36,11 +35,6 @@ class Build
       post_superenv_hacks
     else
       ENV.setup_build_environment(formula)
-    end
-
-    if ARGV.debug?
-      formula.extend(Debrew::Formula)
-      formula.resources.each { |r| r.extend(Debrew::Resource) }
     end
 
     formula.brew do
