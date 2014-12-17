@@ -44,7 +44,7 @@ class Cask::CLI::List < Cask::CLI::Base
   end
 
   def self.list_files(cask)
-    ohai "Raw contents of Cask directory:"
+    ohai "Staged content:"
     Cask::PrettyListing.new(cask).print
   end
 
