@@ -4,7 +4,7 @@ cask :v1 => 'picasa' do
 
   url "https://dl.google.com/photos/picasamac#{version.gsub('.', '')}.dmg"
   homepage 'http://picasa.google.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :gratis
 
   app 'Picasa.app'
 end
