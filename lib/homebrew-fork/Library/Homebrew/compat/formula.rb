@@ -20,9 +20,6 @@ class Formula
     self.class.cxxstdlib_check check_type
   end
 
-  def self.bottle_sha1(*)
-  end
-
   def self.all
     opoo "Formula.all is deprecated, use Formula.map instead"
     map

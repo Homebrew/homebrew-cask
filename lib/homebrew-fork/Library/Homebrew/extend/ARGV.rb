@@ -117,25 +117,12 @@ module HomebrewArgvExtension
     include? '--32-bit'
   end
 
-  def build_bottle?
-    include? '--build-bottle' or !ENV['HOMEBREW_BUILD_BOTTLE'].nil?
-  end
-
-  def bottle_arch
-    arch = value 'bottle-arch'
-    arch.to_sym if arch
-  end
-
   def build_from_source?
     switch?("s") || include?("--build-from-source") || !!ENV["HOMEBREW_BUILD_FROM_SOURCE"]
   end
 
   def flag? flag
     options_only.include?(flag) || switch?(flag[2, 1])
-  end
-
-  def force_bottle?
-    include? '--force-bottle'
   end
 
   # eg. `foo -ns -i --bar` has three switches, n, s and i

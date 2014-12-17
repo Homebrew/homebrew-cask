@@ -200,10 +200,7 @@ module Superenv
   end
 
   def determine_optflags
-    if ARGV.build_bottle?
-      arch = ARGV.bottle_arch || Hardware.oldest_cpu
-      Hardware::CPU.optimization_flags.fetch(arch)
-    elsif Hardware::CPU.intel? && !Hardware::CPU.sse4?
+    if Hardware::CPU.intel? && !Hardware::CPU.sse4?
       Hardware::CPU.optimization_flags.fetch(Hardware.oldest_cpu)
     elsif compiler == :clang
       "-march=native"

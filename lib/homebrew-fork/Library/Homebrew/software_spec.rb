@@ -4,7 +4,6 @@ require 'checksum'
 require 'version'
 require 'options'
 require 'build_options'
-require 'bottles'
 require 'patch'
 require 'compilers'
 
@@ -19,7 +18,6 @@ class SoftwareSpec
 
   attr_reader :name, :owner
   attr_reader :build, :resources, :patches, :options
-  attr_reader :bottle_specification
   attr_reader :compiler_failures
 
   def_delegators :@resource, :stage, :fetch, :verify_download_integrity
@@ -30,7 +28,7 @@ class SoftwareSpec
   def initialize
     @resource = Resource.new
     @resources = {}
-    @bottle_specification = BottleSpecification.new
+    @bottle_specification = nil
     @patches = []
     @options = Options.new
     @build = BuildOptions.new(Options.create(ARGV.flags_only), options)
@@ -51,14 +49,6 @@ class SoftwareSpec
   def url val=nil, specs={}
     return @resource.url if val.nil?
     @resource.url(val, specs)
-  end
-
-  def bottled?
-    bottle_specification.tag?(bottle_tag)
-  end
-
-  def bottle &block
-    bottle_specification.instance_eval(&block)
   end
 
   def resource_defined? name
@@ -133,121 +123,5 @@ class HeadSoftwareSpec < SoftwareSpec
 
   def verify_download_integrity fn
     return
-  end
-end
-
-class Bottle
-  class Filename
-    attr_reader :name, :version, :tag, :revision
-
-    def self.create(formula, tag, revision)
-      new(formula.name, formula.pkg_version, tag, revision)
-    end
-
-    def initialize(name, version, tag, revision)
-      @name = name
-      @version = version
-      @tag = tag
-      @revision = revision
-    end
-
-    def to_s
-      prefix + suffix
-    end
-    alias_method :to_str, :to_s
-
-    def prefix
-      "#{name}-#{version}.#{tag}"
-    end
-
-    def suffix
-      s = revision > 0 ? ".#{revision}" : ""
-      ".bottle#{s}.tar.gz"
-    end
-  end
-
-  extend Forwardable
-
-  attr_reader :name, :resource, :prefix, :cellar, :revision
-
-  def_delegators :resource, :url, :fetch, :verify_download_integrity
-  def_delegators :resource, :cached_download, :clear_cache
-
-  def initialize(formula, spec)
-    @name = formula.name
-    @resource = Resource.new
-    @resource.owner = formula
-
-    checksum, tag = spec.checksum_for(bottle_tag)
-
-    filename = Filename.create(formula, tag, spec.revision)
-    @resource.url = build_url(spec.root_url, filename)
-    @resource.download_strategy = CurlBottleDownloadStrategy
-    @resource.version = formula.pkg_version
-    @resource.checksum = checksum
-    @prefix = spec.prefix
-    @cellar = spec.cellar
-    @revision = spec.revision
-  end
-
-  def compatible_cellar?
-    cellar == :any || cellar == HOMEBREW_CELLAR.to_s
-  end
-
-  def stage
-    resource.downloader.stage
-  end
-
-  private
-
-  def build_url(root_url, filename)
-    "#{root_url}/#{filename}"
-  end
-end
-
-class BottleSpecification
-  DEFAULT_PREFIX = "/usr/local".freeze
-  DEFAULT_CELLAR = "/usr/local/Cellar".freeze
-  DEFAULT_ROOT_URL = "https://downloads.sf.net/project/machomebrew/Bottles".freeze
-
-  attr_rw :root_url, :prefix, :cellar, :revision
-  attr_reader :checksum, :collector
-
-  def initialize
-    @revision = 0
-    @prefix = DEFAULT_PREFIX
-    @cellar = DEFAULT_CELLAR
-    @root_url = DEFAULT_ROOT_URL
-    @collector = BottleCollector.new
-  end
-
-  def tag?(tag)
-    !!checksum_for(tag)
-  end
-
-  # Checksum methods in the DSL's bottle block optionally take
-  # a Hash, which indicates the platform the checksum applies on.
-  Checksum::TYPES.each do |cksum|
-    define_method(cksum) do |val|
-      digest, tag = val.shift
-      collector[tag] = Checksum.new(cksum, digest)
-    end
-  end
-
-  def checksum_for(tag)
-    collector.fetch_checksum_for(tag)
-  end
-
-  def checksums
-    checksums = {}
-    os_versions = collector.keys
-    os_versions.map! {|osx| MacOS::Version.from_symbol osx rescue nil }.compact!
-    os_versions.sort.reverse_each do |os_version|
-      osx = os_version.to_sym
-      checksum = collector[osx]
-      checksums[checksum.hash_type] ||= []
-      checksums[checksum.hash_type] << { checksum => osx }
-    end
-    checksums
   end
 end

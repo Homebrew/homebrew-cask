@@ -7,8 +7,6 @@ require 'metafiles'
 class Pathname
   include MachO
 
-  BOTTLE_EXTNAME_RX = /(\.[a-z_]+(32)?\.bottle\.(\d+\.)?tar\.gz)$/
-
   def install *sources
     sources.each do |src|
       case src
@@ -172,8 +170,6 @@ class Pathname
   # extended to support common double extensions
   alias extname_old extname
   def extname(path=to_s)
-    BOTTLE_EXTNAME_RX.match(path)
-    return $1 if $1
     /(\.(tar|cpio|pax)\.(gz|bz2|lz|xz|Z))$/.match(path)
     return $1 if $1
     return File.extname(path)

@@ -285,33 +285,6 @@ class CurlUnsafeDownloadStrategy < CurlDownloadStrategy
   end
 end
 
-# This strategy extracts our binary packages.
-class CurlBottleDownloadStrategy < CurlDownloadStrategy
-  def initialize name, resource
-    super
-    mirror = ENV['HOMEBREW_SOURCEFORGE_MIRROR']
-    @url = "#{@url}?use_mirror=#{mirror}" if mirror
-  end
-
-  def stage
-    ohai "Pouring #{tarball_path.basename}"
-    super
-  end
-end
-
-# This strategy extracts local binary packages.
-class LocalBottleDownloadStrategy < CurlDownloadStrategy
-  def initialize formula
-    super formula.name, formula.active_spec
-    @tarball_path = formula.local_bottle_path
-  end
-
-  def stage
-    ohai "Pouring #{tarball_path.basename}"
-    super
-  end
-end
-
 # S3DownloadStrategy downloads tarballs from AWS S3.
 # To use it, add ":using => S3DownloadStrategy" to the URL section of your
 # formula.  This download strategy uses AWS access tokens (in the
