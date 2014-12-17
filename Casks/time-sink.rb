@@ -6,6 +6,5 @@ cask :v1 => 'time-sink' do
   homepage 'http://manytricks.com/timesink/'
   license :unknown    # todo: improve this machine-generated value
 
-  # todo: mistaken capital A in .app name?
   app 'Time Sink.App'
 end
