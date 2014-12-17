@@ -3,15 +3,6 @@ require "compilers"
 class CxxStdlib
   include CompilerConstants
 
-  class CompatibilityError < StandardError
-    def initialize(formula, dep, stdlib)
-      super <<-EOS.undent
-        #{formula.name} dependency #{dep.name} was built with a different C++ standard
-        library (#{stdlib.type_string} from #{stdlib.compiler}). This may cause problems at runtime.
-        EOS
-    end
-  end
-
   def self.create(type, compiler)
     if type && ![:libstdcxx, :libcxx].include?(type)
       raise ArgumentError, "Invalid C++ stdlib type: #{type}"
@@ -20,16 +11,10 @@ class CxxStdlib
     klass.new(type, compiler)
   end
 
-  def self.check_compatibility(formula, deps, keg, compiler)
+  def self.check_compatibility(formula, keg, compiler)
     return if formula.skip_cxxstdlib_check?
 
     stdlib = create(keg.detect_cxx_stdlibs.first, compiler)
-
-    begin
-      stdlib.check_dependencies(formula, deps)
-    rescue CompatibilityError => e
-      opoo e.message
-    end
   end
 
   attr_reader :type, :compiler
@@ -50,19 +35,6 @@ class CxxStdlib
 
     apple_compiler? && other.apple_compiler? ||
       !other.apple_compiler? && compiler.to_s[4..6] == other.compiler.to_s[4..6]
-  end
-
-  def check_dependencies(formula, deps)
-    deps.each do |dep|
-      # Software is unlikely to link against libraries from build-time deps, so
-      # it doesn't matter if they link against different C++ stdlibs.
-      next if dep.build?
-
-      dep_stdlib = Tab.for_formula(dep.to_formula).cxxstdlib
-      if !compatible_with? dep_stdlib
-        raise CompatibilityError.new(formula, dep, dep_stdlib)
-      end
-    end
   end
 
   def type_string

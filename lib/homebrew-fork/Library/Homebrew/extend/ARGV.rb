@@ -90,14 +90,6 @@ module HomebrewArgvExtension
     include? '--homebrew-developer' or !ENV['HOMEBREW_DEVELOPER'].nil?
   end
 
-  def ignore_deps?
-    include? '--ignore-dependencies'
-  end
-
-  def only_deps?
-    include? '--only-dependencies'
-  end
-
   def json
     value 'json'
   end
