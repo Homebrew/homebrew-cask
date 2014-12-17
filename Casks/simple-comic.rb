@@ -4,7 +4,7 @@ cask :v1 => 'simple-comic' do
 
   url "http://dancingtortoisedownload.s3.amazonaws.com/SimpleComic_#{version}.zip"
   homepage 'http://dancingtortoise.com/simplecomic/'
-  license :unknown    # todo: improve this machine-generated value
+  license :mit
 
   app 'Simple Comic.app'
 end

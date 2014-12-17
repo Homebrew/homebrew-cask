@@ -4,7 +4,7 @@ cask :v1 => 'itsycal' do
 
   url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
   homepage 'http://www.mowglii.com/itsycal/'
-  license :unknown    # todo: improve this machine-generated value
+  license :gratis
 
   app "Itsycal.app"
 end

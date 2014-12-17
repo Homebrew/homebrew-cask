@@ -4,7 +4,7 @@ cask :v1 => 'snes9x' do
 
   url "http://files.ipherswipsite.com/snes9x/snes9x-#{version}-macosx-113.dmg.gz"
   homepage 'http://www.snes9x.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :other
   container :nested => "snes9x-#{version}"
 
   app 'Snes9x.app'

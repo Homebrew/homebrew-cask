@@ -4,7 +4,7 @@ cask :v1 => 'undercover' do
 
   url "http://assets.undercoverhq.com/client/#{version}/undercover_mac.pkg"
   homepage 'http://www.orbicule.com/undercover/mac/'
-  license :unknown    # todo: improve this machine-generated value
+  license :commercial
 
   pkg 'undercover_mac.pkg'
 
