@@ -4,7 +4,7 @@ cask :v1 => 'odrive' do
 
   url "http://cdn-mac.odrive.com/odrive.#{version}.dmg"
   homepage 'http://www.odrive.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :gratis
 
   pkg "odrive.#{version}.pkg"
 
