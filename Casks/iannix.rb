@@ -4,7 +4,7 @@ cask :v1 => 'iannix' do
 
   url "http://www.iannix.org/download/iannix_mac_64__#{version.gsub('.','_')}.dmg"
   homepage 'http://www.iannix.org/'
-  license :unknown    # todo: improve this machine-generated value
+  license :gpl
 
   app 'IanniX/IanniX.app'
 end
