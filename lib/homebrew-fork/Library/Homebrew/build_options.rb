@@ -28,10 +28,6 @@ class BuildOptions
     not with? name
   end
 
-  def bottle?
-    include? "build-bottle"
-  end
-
   def head?
     include? "HEAD"
   end

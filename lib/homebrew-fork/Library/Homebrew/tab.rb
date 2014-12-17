@@ -14,8 +14,6 @@ class Tab < OpenStruct
     Tab.new :used_options => build.used_options.as_flags,
             :unused_options => build.unused_options.as_flags,
             :tabfile => formula.prefix.join(FILENAME),
-            :built_as_bottle => !!ARGV.build_bottle?,
-            :poured_from_bottle => false,
             :tapped_from => formula.tap,
             :time => Time.now.to_i,
             :HEAD => Homebrew.git_head,
@@ -72,8 +70,6 @@ class Tab < OpenStruct
   def self.dummy_tab f=nil
     Tab.new :used_options => [],
             :unused_options => (f.options.as_flags rescue []),
-            :built_as_bottle => false,
-            :poured_from_bottle => false,
             :tapped_from => "",
             :time => nil,
             :HEAD => nil,
@@ -124,8 +120,6 @@ class Tab < OpenStruct
     Utils::JSON.dump({
       :used_options => used_options.as_flags,
       :unused_options => unused_options.as_flags,
-      :built_as_bottle => built_as_bottle,
-      :poured_from_bottle => poured_from_bottle,
       :tapped_from => tapped_from,
       :time => time,
       :HEAD => self.HEAD,
@@ -139,10 +133,6 @@ class Tab < OpenStruct
 
   def to_s
     s = []
-    case poured_from_bottle
-    when true  then s << "Poured from bottle"
-    when false then s << "Built from source"
-    end
     unless used_options.empty?
       s << "Installed" if s.empty?
       s << "with:"
