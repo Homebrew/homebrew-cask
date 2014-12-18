@@ -1,5 +1,3 @@
-# encoding: UTF-8
-
 # see Homebrew Library/Homebrew/utils.rb
 
 require 'yaml'
