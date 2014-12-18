@@ -12,7 +12,7 @@ cask :v1 => 'evernote' do
   end
 
   homepage 'https://evernote.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :gratis
 
   app 'Evernote.app'
 end
