@@ -11,6 +11,11 @@ cask :v1 => 'heimdall-suite' do
 
   uninstall :pkgutil => 'au.com.glassechidna.HeimdallSuite'
 
+  zap :delete => [
+    '~/Library/Preferences/com.yourcompany.heimdall-frontend.plist',
+    '~/Library/Saved Application State/com.yourcompany.heimdall-frontend.savedState'
+  ]
+
   caveats do
     reboot
   end
