@@ -351,6 +351,9 @@ list of valid symbols.
 The values for `license` are categories, rather than fully-specified
 licenses.  For example, `:gpl` is a category; we do not distinguish between
 versions of the GPL.  Similarly, `:cc` and `:bsd` comprise many variants.
+They must always pertain to the license of the software itself, not the
+vendor's business model (a free app to access a paid service is still
+`:gratis`, not `:freemium`).
 
 The `license` stanza is intended as an aid to search/filtering of Casks.
 For full and complete information, the user must always rely on the vendor's
