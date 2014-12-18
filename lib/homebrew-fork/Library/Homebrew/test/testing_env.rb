@@ -31,8 +31,6 @@ HOMEBREW_WWW           = 'http://example.com'
 HOMEBREW_CURL_ARGS     = '-fsLA'
 HOMEBREW_VERSION       = '0.9-test'
 
-require 'tap_constants'
-
 if RbConfig.respond_to?(:ruby)
   RUBY_PATH = Pathname.new(RbConfig.ruby)
 else
