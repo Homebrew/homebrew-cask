@@ -1,4 +1,3 @@
-require 'cxxstdlib'
 require 'ostruct'
 require 'options'
 require 'utils/json'
@@ -107,13 +106,6 @@ class Tab < OpenStruct
 
   def unused_options
     Options.create(super)
-  end
-
-  def cxxstdlib
-    # Older tabs won't have these values, so provide sensible defaults
-    lib = stdlib.to_sym if stdlib
-    cc = compiler || MacOS.default_compiler
-    CxxStdlib.create(lib, cc.to_sym)
   end
 
   def to_json

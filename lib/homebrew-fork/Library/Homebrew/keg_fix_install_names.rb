@@ -67,26 +67,6 @@ class Keg
     install_name_tool("-change", old, new, file)
   end
 
-  # Detects the C++ dynamic libraries in place, scanning the dynamic links
-  # of the files within the keg. This searches only libs contained within
-  # lib/, and ignores binaries and other mach-o objects
-  # Note that this doesn't attempt to distinguish between libstdc++ versions,
-  # for instance between Apple libstdc++ and GNU libstdc++
-  def detect_cxx_stdlibs(options={})
-    options = { :skip_executables => false }.merge(options)
-    skip_executables = options[:skip_executables]
-    results = Set.new
-
-    mach_o_files.each do |file|
-      next if file.mach_o_executable? && skip_executables
-      dylibs = file.dynamically_linked_libraries
-      results << :libcxx unless dylibs.grep(/libc\+\+.+\.dylib/).empty?
-      results << :libstdcxx unless dylibs.grep(/libstdc\+\+.+\.dylib/).empty?
-    end
-
-    results.to_a
-  end
-
   def each_unique_file_matching string
     Utils.popen_read("/usr/bin/fgrep", "-lr", string, to_s) do |io|
       hardlinks = Set.new

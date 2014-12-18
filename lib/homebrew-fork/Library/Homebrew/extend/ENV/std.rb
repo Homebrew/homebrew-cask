@@ -269,18 +269,6 @@ module Stdenv
     end
   end
 
-  def libcxx
-    if compiler == :clang
-      append 'CXX', '-stdlib=libc++'
-    end
-  end
-
-  def libstdcxx
-    if compiler == :clang
-      append 'CXX', '-stdlib=libstdc++'
-    end
-  end
-
   def replace_in_cflags before, after
     CC_FLAG_VARS.each do |key|
       self[key] = self[key].sub(before, after) if has_key?(key)
