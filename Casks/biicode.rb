@@ -1,6 +1,6 @@
 cask :v1 => 'biicode' do
-  version '1.11'
-  sha256 '1503ab2dd893434715795dce37abae2a8b305127be1fdd84ad142a396ff099fc'
+  version '2.0.1'
+  sha256 '2bfcb38d4aa97d510ecf26cbb96330b84ce6093f74792d662dcfee29466ea12d'
 
   # amazonaws is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/biibinaries/release/#{version}/bii-macos-64_#{version.gsub('.', '_')}.pkg"
