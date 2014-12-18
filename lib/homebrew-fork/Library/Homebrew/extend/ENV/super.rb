@@ -267,14 +267,6 @@ module Superenv
     end
   end
 
-  def libcxx
-    append "HOMEBREW_CCCFG", "g", "" if compiler == :clang
-  end
-
-  def libstdcxx
-    append "HOMEBREW_CCCFG", "h", "" if compiler == :clang
-  end
-
   def refurbish_args
     append 'HOMEBREW_CCCFG', "O", ''
   end

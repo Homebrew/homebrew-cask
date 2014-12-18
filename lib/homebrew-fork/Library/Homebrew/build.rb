@@ -5,7 +5,6 @@ old_trap = trap("INT") { exit! 130 }
 
 require "global"
 require "build_options"
-require "cxxstdlib"
 require "keg"
 require "extend/ENV"
 require "fcntl"
@@ -69,13 +68,7 @@ class Build
   end
 
   def detect_stdlibs
-    keg = Keg.new(formula.prefix)
-    CxxStdlib.check_compatibility(formula, keg, ENV.compiler)
-
-    # The stdlib recorded in the install receipt is used during dependency
-    # compatibility checks, so we only care about the stdlib that libraries
-    # link against.
-    keg.detect_cxx_stdlibs(:skip_executables => true)
+    [:libcxx]
   end
 
   def fixopt f

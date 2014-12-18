@@ -16,10 +16,6 @@ class Formula
     "-DCMAKE_INSTALL_PREFIX='#{prefix}' -DCMAKE_BUILD_TYPE=None -DCMAKE_FIND_FRAMEWORK=LAST -Wno-dev"
   end
 
-  def cxxstdlib_check check_type
-    self.class.cxxstdlib_check check_type
-  end
-
   def self.all
     opoo "Formula.all is deprecated, use Formula.map instead"
     map
