@@ -10,4 +10,8 @@ cask :v1 => 'blast2go' do
   installer :manual => 'Blast2GO Installer.app'
 
   uninstall :delete => '/Applications/Blast2GO'
+
+  caveats do
+    uninstall_depends_on_default_install_location
+  end
 end
