@@ -92,6 +92,12 @@ class Cask::CLI::Doctor < Cask::CLI::Base
     homebrew_constants('version')
   end
 
+  def self.homebrew_libdir
+    @homebrew_libdir ||= if homebrew_repository.respond_to?(:join)
+      homebrew_repository.join('Library', 'Homebrew')
+    end
+  end
+
   def self.homebrew_constants(name)
     @homebrew_constants ||= {}
     return @homebrew_constants[name] if @homebrew_constants.key?(name)
@@ -200,9 +206,13 @@ class Cask::CLI::Doctor < Cask::CLI::Base
     end
     copy = Array.new(paths)
     unless Cask::Utils.file_is_descendant(copy[0], homebrew_cellar)
-      copy[0] = "#{copy[0]} #{error_string %Q{error: should be descendant of homebrew_cellar}}"
+      copy[0] = "#{copy[0]} #{error_string %Q{error: should be descendant of Homebrew Cellar}}"
     end
-    copy
+    copy.map! do |elt|
+      elt = (homebrew_libdir and Cask::Utils.file_is_descendant(elt, homebrew_libdir)) ?
+              "#{elt} #{error_string %Q{error: should not be descendant of Homebrew Library dir}}" :
+              elt
+    end
   end
 
   def self.render_cached_downloads
