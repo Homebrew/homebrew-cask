@@ -6,7 +6,7 @@ cask :v1 => 'd235j-xbox360-controller-driver' do
   homepage 'https://github.com/d235j/360Controller'
   license :gpl
 
-  pkg 'Install360Controller.pkg'
+  pkg 'Install360Controller_0.14_yosemite_beta_unofficial.pkg'
 
   uninstall :pkgutil => 'com.mice.pkg.Xbox360controller'
 end
