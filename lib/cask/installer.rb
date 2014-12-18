@@ -57,6 +57,7 @@ class Cask::Installer
     begin
       satisfy_dependencies
       download
+      display_eula
       extract_primary_container
       install_artifacts
       save_caskfile force
@@ -86,8 +87,29 @@ class Cask::Installer
     @downloaded_path
   end
 
+  def display_eula
+    unless primary_container.eula?
+      odebug "No EULA found"
+      return
+    end
+    eula = primary_container.eulas.first
+    odebug "Selecting #{ eula }"
+    odebug "Mac system region code: #{ eula.mac_system_region_code }"
+    odebug "EULA source format: #{ eula.format }"
+
+    eula.show!(@cask.token)
+  end
+
   def extract_primary_container
     odebug "Extracting primary container"
+    primary_container.extract
+  end
+
+  def primary_container
+    @primary_container ||= load_primary_container
+  end
+
+  def load_primary_container
     FileUtils.mkdir_p @cask.staged_path
     container = if @cask.container and @cask.container.type
        Cask::Container.from_type(@cask.container.type)
@@ -98,7 +120,7 @@ class Cask::Installer
       raise CaskError.new "Uh oh, could not identify primary container for '#{@downloaded_path}'"
     end
     odebug "Using container class #{container} for #{@downloaded_path}"
-    container.new(@cask, @downloaded_path, @command).extract
+    container.new(@cask, @downloaded_path, @command)
   end
 
   def install_artifacts

@@ -9,6 +9,10 @@ class Cask::Container::Dmg < Cask::Container::Base
     @mounts = []
   end
 
+  def eulas
+    @eulas ||= Cask::Container::DmgEula.all(realpath)
+  end
+
   def extract
     mount!
     assert_mounts_found
@@ -34,8 +38,7 @@ class Cask::Container::Dmg < Cask::Container::Base
     plist = @command.run('/usr/bin/hdiutil',
       # :startup may not be the minimum necessary privileges
       :bsexec => :startup,
-      # realpath is a failsafe against unusual filenames
-      :args => %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp] + [Pathname.new(@path).realpath],
+      :args => %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp] + [realpath],
       :input => %w[y]
     ).plist
     @mounts = mounts_from_plist(plist)
@@ -74,5 +77,12 @@ class Cask::Container::Dmg < Cask::Container::Base
       next unless mountpath.exist?
       raise CaskError.new "Failed to eject #{mountpath}"
     end
+  end
+
+  private
+
+  def realpath
+    # realpath is a failsafe against unusual filenames
+    Pathname.new(@path).realpath
   end
 end

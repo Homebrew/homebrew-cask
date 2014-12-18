@@ -4,4 +4,12 @@ class Cask::Container::Base
     @path = path
     @command = command
   end
+
+  def eula?
+    !eulas.empty?
+  end
+
+  def eulas
+    []
+  end
 end
