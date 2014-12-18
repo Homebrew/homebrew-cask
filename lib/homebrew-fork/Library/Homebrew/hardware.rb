@@ -43,9 +43,6 @@ class Hardware
   if OS.mac?
     require 'os/mac/hardware'
     CPU.extend MacCPUs
-  elsif OS.linux?
-    require 'os/linux/hardware'
-    CPU.extend LinuxCPUs
   else
     raise "The system `#{`uname`.chomp}' is not supported."
   end
