@@ -77,6 +77,13 @@ class Cask::CaveatsDSL
     end
   end
 
+  def uninstall_depends_on_default_install_location(default_install_path = '/Applications')
+    puts <<-EOS.undent
+    If you pick an installation directory other than #{default_install_path} when installing this cask, you will need to uninstall it manually
+
+    EOS
+  end
+
   def logout
     puts <<-EOS.undent
     You must log out and log back in for the installation of #{@cask}

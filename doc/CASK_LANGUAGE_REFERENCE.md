@@ -240,13 +240,14 @@ There is a mini-DSL available within `caveats` blocks.
 
 The following methods may be called to generate standard warning messages:
 
-| method                            | description |
-| --------------------------------- | ----------- |
-| `path_environment_variable(path)` | users should make sure `path` is in their `$PATH` environment variable
-| `zsh_path_helper(path)`           | zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable
-| `logout`                          | users should log out and log back in to complete installation
-| `reboot`                          | users should reboot to complete installation
-| `files_in_usr_local`              | the Cask installs files to `/usr/local`, which may confuse Homebrew
+| method                                                         | description |
+| -------------------------------------------------------------- | ----------- |
+| `path_environment_variable(path)`                              | users should make sure `path` is in their `$PATH` environment variable
+| `zsh_path_helper(path)`                                        | zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable
+| `logout`                                                       | users should log out and log back in to complete installation
+| `reboot`                                                       | users should reboot to complete installation
+| `files_in_usr_local`                                           | the Cask installs files to `/usr/local`, which may confuse Homebrew
+| `uninstall_depends_on_default_install_location(optional_path)` | `uninstall` won't work if users picked an atypical location at install time
 
 Example:
 
