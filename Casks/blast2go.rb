@@ -8,4 +8,6 @@ cask :v1 => 'blast2go' do
   license :unknown
 
   installer :manual => 'Blast2GO Installer.app'
+
+  uninstall :delete => '/Applications/Blast2GO'
 end
