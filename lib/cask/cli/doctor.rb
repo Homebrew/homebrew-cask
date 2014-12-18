@@ -5,7 +5,7 @@ class Cask::CLI::Doctor < Cask::CLI::Base
     ohai 'Ruby Version:',                                    render_with_none_as_error( "#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}" )
     ohai 'Ruby Path:',                                       render_with_none_as_error( RUBY_PATH )
     # todo: consider removing most Homebrew constants from doctor output
-    ohai 'Homebrew Version:',                                render_with_none_as_error( HOMEBREW_VERSION )
+    ohai 'Homebrew Version:',                                render_with_none_as_error( homebrew_version )
     ohai 'Homebrew Executable Path:',                        render_with_none_as_error( HOMEBREW_BREW_FILE )
     ohai 'Homebrew Cellar Path:',                            render_with_none_as_error( homebrew_cellar )
     ohai 'Homebrew Repository Path:',                        render_with_none_as_error( homebrew_repository )
@@ -86,6 +86,10 @@ class Cask::CLI::Doctor < Cask::CLI::Base
 
   def self.homebrew_cellar
     homebrew_constants('cellar')
+  end
+
+  def self.homebrew_version
+    homebrew_constants('version')
   end
 
   def self.homebrew_constants(name)
