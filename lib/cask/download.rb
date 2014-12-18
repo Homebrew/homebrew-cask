@@ -8,7 +8,6 @@ class Cask::Download
   end
 
   def perform(force=false)
-    require 'software_spec'
     if cask.url.using == :svn
       downloader = Cask::SubversionDownloadStrategy.new(cask)
     elsif cask.url.using == :post
