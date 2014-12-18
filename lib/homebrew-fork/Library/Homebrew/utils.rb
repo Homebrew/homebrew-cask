@@ -2,7 +2,6 @@ require 'pathname'
 require 'exceptions'
 require 'os/mac'
 require 'utils/json'
-require 'utils/inreplace'
 require 'utils/popen'
 require 'open-uri'
 
