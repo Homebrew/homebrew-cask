@@ -7,7 +7,7 @@ class Cask::CLI::Doctor < Cask::CLI::Base
     # todo: consider removing most Homebrew constants from doctor output
     ohai 'Homebrew Version:',                                render_with_none_as_error( HOMEBREW_VERSION )
     ohai 'Homebrew Executable Path:',                        render_with_none_as_error( HOMEBREW_BREW_FILE )
-    ohai 'Homebrew Cellar Path:',                            render_with_none_as_error( HOMEBREW_CELLAR )
+    ohai 'Homebrew Cellar Path:',                            render_with_none_as_error( homebrew_cellar )
     ohai 'Homebrew Repository Path:',                        render_with_none_as_error( homebrew_repository )
     ohai 'Homebrew Origin:',                                 render_with_none_as_error( homebrew_origin )
     ohai 'Homebrew-cask Version:',                           render_with_none_as_error( HOMEBREW_CASK_VERSION )
@@ -82,6 +82,10 @@ class Cask::CLI::Doctor < Cask::CLI::Base
 
   def self.homebrew_repository
     homebrew_constants('repository')
+  end
+
+  def self.homebrew_cellar
+    homebrew_constants('cellar')
   end
 
   def self.homebrew_constants(name)
@@ -168,7 +172,7 @@ class Cask::CLI::Doctor < Cask::CLI::Base
   # where "doctor" is needed is precisely the situation where such
   # things are less dependable.
   def self.render_install_location(current_version)
-    locations = Dir.glob(HOMEBREW_CELLAR.join('brew-cask', '*')).reverse
+    locations = Dir.glob(homebrew_cellar.join('brew-cask', '*')).reverse
     locations.each do |l|
       basename = File.basename l
       l.concat %Q{ #{error_string %Q{error: old version. Run "brew cleanup".}}} unless basename == current_version
@@ -191,8 +195,8 @@ class Cask::CLI::Doctor < Cask::CLI::Base
       return "#{none_string} #{error_string}"
     end
     copy = Array.new(paths)
-    unless Cask::Utils.file_is_descendant(copy[0], HOMEBREW_CELLAR)
-      copy[0] = "#{copy[0]} #{error_string %Q{error: should be descendant of HOMEBREW_CELLAR}}"
+    unless Cask::Utils.file_is_descendant(copy[0], homebrew_cellar)
+      copy[0] = "#{copy[0]} #{error_string %Q{error: should be descendant of homebrew_cellar}}"
     end
     copy
   end
