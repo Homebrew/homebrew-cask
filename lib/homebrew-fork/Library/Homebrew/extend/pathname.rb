@@ -1,7 +1,6 @@
 require 'pathname'
 require 'mach'
 require 'resource'
-require 'metafiles'
 
 # we enhance pathname to make our code more readable
 class Pathname
@@ -388,20 +387,6 @@ class Pathname
       #!/bin/bash
       exec java #{java_opts} -jar #{target_jar} "$@"
     EOS
-  end
-
-  def install_metafiles from=Pathname.pwd
-    Pathname(from).children.each do |p|
-      next if p.directory?
-      next unless Metafiles.copy?(p.basename.to_s)
-      # Some software symlinks these files (see help2man.rb)
-      filename = p.resolved_path
-      # Some software links metafiles together, so by the time we iterate to one of them
-      # we may have already moved it. libxml2's COPYING and Copyright are affected by this.
-      next unless filename.exist?
-      filename.chmod 0644
-      install(filename)
-    end
   end
 
   def abv
