@@ -1,10 +1,50 @@
 cask :v1 => 'sophos-anti-virus-home-edition' do
-  version '9.0'
-  sha256 '86bcd0a10de1dc2455f3f1e9330c0b083e30ce435822daaa7ea10f04f63f5f10'
+  version :latest
+  sha256 :no_check
 
-  url "http://downloads.sophos.com/home-edition/savosx_#{version.gsub('.','')}_he.zip"
+  url 'http://downloads.sophos.com/home-edition/savosx_he_r.zip'
+  name 'Sophos Anti-Virus Home Edition'
   homepage 'http://www.sophos.com/en-us/products/free-tools/sophos-antivirus-for-mac-home-edition.aspx/'
-  license :unknown    # todo: improve this machine-generated value
+  license :gratis
+  tags :vendor => 'Sophos'
 
-  app 'Sophos Anti-Virus Home Edition.app'
+  installer :script => 'Sophos Anti-Virus Home Edition.app/Contents/MacOS/tools/InstallationDeployer', :args => %w[--install]
+
+  uninstall :script => {
+                        :executable => 'Sophos Anti-Virus Home Edition.app/Contents/MacOS/tools/InstallationDeployer',
+                        :args => %w[--remove]
+                       },
+            :launchctl => [
+                           'com.sophos.common.servicemanager',
+                           'com.sophos.uiserver',
+                          ],
+            :kext => [
+                      'com.sophos.kext.sav',
+                      'com.sophos.nke.swi',
+                     ],
+            :quit => 'com.sophos.ui',
+            :delete => [
+                        '/Applications/Remove Sophos Anti-Virus.app',
+                        '/Applications/Sophos Anti-Virus.app',
+                        '/Library/Extensions/SophosNetworkInterceptor.kext',
+                        '/Library/Extensions/SophosOnAccessInterceptor.kext',
+                        '/Library/Frameworks/SAVI.framework',
+                        '/Library/Frameworks/SUMScanKit.framework',
+                        '/Library/Frameworks/SophosGenericsCommon.framework',
+                        '/Library/Frameworks/SophosGenericsCore.framework',
+                        '/Library/LaunchAgents/com.sophos.uiserver.plist',
+                        '/Library/Sophos Anti-Virus',
+                        '/usr/bin/sweep',
+                        '/usr/share/man/man1/sweep.1',
+                       ]
+
+  zap :delete => [
+                  '/Library/Application Support/Sophos',
+                  '/Library/Preferences/com.sophos.ac.plist',
+                  '/Library/Preferences/com.sophos.dc.plist',
+                  '/Library/Preferences/com.sophos.mcs.plist',
+                  '/Library/Preferences/com.sophos.sau.plist',
+                  '/Library/Preferences/com.sophos.sav.plist',
+                  '/Library/Preferences/com.sophos.swc.plist',
+                 ]
 end
