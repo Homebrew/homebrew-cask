@@ -1,19 +1,10 @@
 require 'hardware'
 require 'extend/ENV/shared'
 require 'extend/ENV/std'
-require 'extend/ENV/super'
-
-def superenv?
-  Superenv.bin && ARGV.env != "std"
-end
 
 module EnvActivation
   def activate_extensions!
-    if superenv?
-      extend(Superenv)
-    else
-      extend(Stdenv)
-    end
+    extend(Stdenv)
   end
 
   def with_build_environment
