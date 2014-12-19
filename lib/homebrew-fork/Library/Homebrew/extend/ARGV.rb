@@ -24,7 +24,7 @@ module HomebrewArgvExtension
       rack = HOMEBREW_CELLAR/canonical_name
       dirs = rack.directory? ? rack.subdirs : []
 
-      raise NoSuchKegError.new(canonical_name) if dirs.empty?
+      raise RuntimeError.new(canonical_name) if dirs.empty?
 
       linked_keg_ref = HOMEBREW_LIBRARY.join("LinkedKegs", canonical_name)
       opt_prefix = HOMEBREW_PREFIX.join("opt", canonical_name)
@@ -39,9 +39,9 @@ module HomebrewArgvExtension
         elsif (prefix = Formulary.factory(canonical_name).prefix).directory?
           Keg.new(prefix)
         else
-          raise MultipleVersionsInstalledError.new(canonical_name)
+          raise RuntimeError.new(canonical_name)
         end
-      rescue FormulaUnavailableError
+      rescue RuntimeError
         raise <<-EOS.undent
           Multiple kegs installed to #{rack}
           However we don't know which one you refer to.
@@ -56,7 +56,7 @@ module HomebrewArgvExtension
     @n=index arg
   end
   def next
-    at @n+1 or raise UsageError
+    at @n+1 or raise RuntimeError
   end
 
   def value arg
