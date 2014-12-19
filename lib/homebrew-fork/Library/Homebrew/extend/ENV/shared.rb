@@ -158,7 +158,7 @@ module SharedEnvExtension
           brew install #{gcc_name}
         EOS
       end
-    rescue FormulaUnavailableError
+    rescue RuntimeError
       raise <<-EOS.undent
       Homebrew GCC requested, but formula #{gcc_name} not found!
       You may need to: brew tap homebrew/versions
