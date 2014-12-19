@@ -3,7 +3,7 @@ class Cask::CLI::Doctor < Cask::CLI::Base
     ohai 'OS X Version:',                                    render_with_none_as_error( MACOS_FULL_VERSION )
     ohai "Hardware Architecture:",                           render_with_none_as_error( "#{Hardware::CPU.type}-#{Hardware::CPU.bits}" )
     ohai 'Ruby Version:',                                    render_with_none_as_error( "#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}" )
-    ohai 'Ruby Path:',                                       render_with_none_as_error( RUBY_PATH )
+    ohai 'Ruby Path:',                                       render_with_none_as_error( RbConfig.ruby )
     # todo: consider removing most Homebrew constants from doctor output
     ohai 'Homebrew Version:',                                render_with_none_as_error( homebrew_version )
     ohai 'Homebrew Executable Path:',                        render_with_none_as_error( HOMEBREW_BREW_FILE )
