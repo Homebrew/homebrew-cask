@@ -54,13 +54,6 @@ module Stdenv
 
     append 'LDFLAGS', '-Wl,-headerpad_max_install_names'
 
-    send(compiler)
-
-    if cc =~ GNU_GCC_REGEXP
-      gcc_formula = gcc_version_formula($1)
-      append_path "PATH", gcc_formula.opt_bin.to_s
-    end
-
     # Add lib and include etc. from the current macosxsdk to compiler flags:
     macosxsdk MacOS.version
 
@@ -251,22 +244,11 @@ module Stdenv
   def universal_binary
     append_to_cflags Hardware::CPU.universal_archs.as_arch_flags
     append 'LDFLAGS', Hardware::CPU.universal_archs.as_arch_flags
-
-    if compiler != :clang && Hardware.is_32_bit?
-      # Can't mix "-march" for a 32-bit CPU  with "-arch x86_64"
-      replace_in_cflags(/-march=\S*/, "-Xarch_#{Hardware::CPU.arch_32_bit} \\0")
-    end
   end
 
   def cxx11
-    if compiler == :clang
-      append 'CXX', '-std=c++11'
-      append 'CXX', '-stdlib=libc++'
-    elsif compiler =~ /gcc-4\.(8|9)/
-      append 'CXX', '-std=c++11'
-    else
-      raise "The selected compiler doesn't support C++11: #{compiler}"
-    end
+    append 'CXX', '-std=c++11'
+    append 'CXX', '-stdlib=libc++'
   end
 
   def replace_in_cflags before, after

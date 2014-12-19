@@ -1,21 +1,9 @@
 require "formula"
-require "compilers"
 
 module SharedEnvExtension
-  include CompilerConstants
 
   CC_FLAG_VARS = %w{CFLAGS CXXFLAGS OBJCFLAGS OBJCXXFLAGS}
   FC_FLAG_VARS = %w{FCFLAGS FFLAGS}
-
-  COMPILER_SYMBOL_MAP = {
-    "gcc-4.0"  => :gcc_4_0,
-    "gcc-4.2"  => :gcc,
-    "llvm-gcc" => :llvm,
-    "clang"    => :clang,
-  }
-
-  COMPILERS = COMPILER_SYMBOL_MAP.values +
-    GNU_GCC_VERSIONS.map { |n| "gcc-4.#{n}" }
 
   SANITIZED_VARS = %w[
     CDPATH GREP_OPTIONS CLICOLOR_FORCE
@@ -105,39 +93,6 @@ module SharedEnvExtension
   def fflags;   self['FFLAGS'];       end
   def fcflags;  self['FCFLAGS'];      end
 
-  def compiler
-    @compiler ||= if (cc = ARGV.cc)
-      warn_about_non_apple_gcc($1) if cc =~ GNU_GCC_REGEXP
-      fetch_compiler(cc, "--cc")
-    elsif (cc = homebrew_cc)
-      warn_about_non_apple_gcc($1) if cc =~ GNU_GCC_REGEXP
-      compiler = fetch_compiler(cc, "HOMEBREW_CC")
-
-      if @formula
-        compilers = [compiler] + CompilerSelector.compilers
-        compiler = CompilerSelector.select_for(@formula, compilers)
-      end
-
-      compiler
-    elsif @formula
-      CompilerSelector.select_for(@formula)
-    else
-      MacOS.default_compiler
-    end
-  end
-
-  def determine_cc
-    COMPILER_SYMBOL_MAP.invert.fetch(compiler, compiler)
-  end
-
-  COMPILERS.each do |compiler|
-    define_method(compiler) do
-      @compiler = compiler
-      self.cc  = determine_cc
-      self.cxx = determine_cxx
-    end
-  end
-
   # Snow Leopard defines an NCURSES value the opposite of most distros
   # See: http://bugs.python.org/issue6848
   # Currently only used by aalib in core
@@ -150,44 +105,6 @@ module SharedEnvExtension
     self['PATH'] = paths.unshift(*self['PATH'].split(File::PATH_SEPARATOR)).uniq.join(File::PATH_SEPARATOR)
     # XXX hot fix to prefer brewed stuff (e.g. python) over /usr/bin.
     prepend_path 'PATH', HOMEBREW_PREFIX/'bin'
-  end
-
-  def fortran
-    flags = []
-
-    if fc
-      ohai "Building with an alternative Fortran compiler"
-      puts "This is unsupported."
-      self['F77'] ||= fc
-
-      if ARGV.include? '--default-fortran-flags'
-        flags = FC_FLAG_VARS.reject { |key| self[key] }
-      elsif values_at(*FC_FLAG_VARS).compact.empty?
-        opoo <<-EOS.undent
-          No Fortran optimization information was provided.  You may want to consider
-          setting FCFLAGS and FFLAGS or pass the `--default-fortran-flags` option to
-          `brew install` if your compiler is compatible with GCC.
-
-          If you like the default optimization level of your compiler, ignore this
-          warning.
-        EOS
-      end
-
-    else
-      if (gfortran = which('gfortran', (HOMEBREW_PREFIX/'bin').to_s))
-        ohai "Using Homebrew-provided fortran compiler."
-      elsif (gfortran = which('gfortran', ORIGINAL_PATHS.join(File::PATH_SEPARATOR)))
-        ohai "Using a fortran compiler found at #{gfortran}."
-      end
-      if gfortran
-        puts "This may be changed by setting the FC environment variable."
-        self['FC'] = self['F77'] = gfortran
-        flags = FC_FLAG_VARS
-      end
-    end
-
-    flags.each { |key| self[key] = cflags }
-    set_cpu_flags(flags)
   end
 
   # ld64 is a newer linker provided for Xcode 2.5
@@ -263,16 +180,5 @@ module SharedEnvExtension
 
   def homebrew_cc
     self["HOMEBREW_CC"]
-  end
-
-  def fetch_compiler(value, source)
-    COMPILER_SYMBOL_MAP.fetch(value) do |other|
-      case other
-      when GNU_GCC_REGEXP
-        other
-      else
-        raise "Invalid value for #{source}: #{other}"
-      end
-    end
   end
 end
