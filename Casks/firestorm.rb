@@ -7,7 +7,7 @@ cask :v1 => 'firestorm' do
   homepage 'http://www.firestormviewer.org'
   license :oss
 
-  app 'FirestormOS-Releasex64.app', :target => 'Firestorm.app'
+  app 'FirestormOS-Releasex64.app'
 
   caveats 'This version does not contain Havok engine (does not matter if you`re not a content creator). Most problems that crop up during updates can be resolved or fixed by performing a clean install — see http://wiki.phoenixviewer.com/doku.php?id=fs_clean_reinstall for instructions.'
 end
