@@ -10,8 +10,8 @@ cask :v1 => 'monolingual' do
     version '1.5.10'
     sha256 '2dd4d1164ced9c6ff431eb99db12e46faa10747c7753ed3889d6df493ee096a5'
   else
-    version '1.6.1'
-    sha256 '45110312eba0ffb0ea92f3ac36850b3e557c07d2cdc294b677769eccd5da5697'
+    version '1.6.2'
+    sha256 'e5e441061097d7bd300e0dd7616bdeaea32c3b9cafe230df2aebdeb5eb75569a'
     appcast 'https://ingmarstein.github.io/Monolingual/appcast.xml',
             :sha256 => 'a536d84e8430d0ba64638e5696f67e96259cfdb81aacd8c2df0a078ff3ea4672'
   end
