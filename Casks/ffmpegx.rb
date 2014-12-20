@@ -4,7 +4,7 @@ cask :v1 => 'ffmpegx' do
 
   url 'ftp://ftp2.ffmpegx.com/ffmpegx/ffmpegX.dmg'
   homepage 'http://www.ffmpegx.com/download.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'ffmpegX.app'
 end
