@@ -6,7 +6,7 @@ cask :v1 => 'hedgewars' do
   appcast 'http://www.hedgewars.org/download/appcast.xml',
           :sha256 => 'bb5344972d01c4007ab4d8193fc2aaaebe68c4048213a10ba6b4cbc61210747f'
   homepage 'http://hedgewars.org'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Hedgewars.app'
 end
