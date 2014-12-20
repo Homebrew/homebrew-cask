@@ -4,7 +4,7 @@ cask :v1 => 'xiami' do
 
   url 'http://www.xiami.com/software/download?app=music_mac'
   homepage 'http://www.xiami.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Xiami.app'
 end
