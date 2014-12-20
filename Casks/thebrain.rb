@@ -4,7 +4,7 @@ cask :v1 => 'thebrain' do
 
   url "http://assets.thebrain.com/downloads/TheBrain_macos_J7_#{version.gsub('.', '_')}-a.dmg"
   homepage 'http://www.thebrain.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TheBrain.app'
 end
