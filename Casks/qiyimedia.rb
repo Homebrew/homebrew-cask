@@ -5,7 +5,7 @@ cask :v1 => 'qiyimedia' do
 
   url 'http://static.qiyi.com/ext/common/QIYImedia_Mac_5.dmg'
   homepage 'http://www.iqiyi.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app '爱奇艺视频.app'
 end
