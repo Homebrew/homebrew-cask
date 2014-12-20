@@ -4,7 +4,7 @@ cask :v1 => 'remote-desktop-manager' do
 
   url "http://download.devolutions.net/Mac/Devolutions.RemoteDesktopManager.Mac.#{version}.dmg"
   homepage 'http://remotedesktopmanager.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Remote Desktop Manager.app'
 end
