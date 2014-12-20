@@ -4,7 +4,7 @@ cask :v1 => 'grooveshark' do
 
   url 'http://adops-fio.grooveshark.com/desktop-app/downloads/grooveshark.zip'
   homepage 'http://www.grooveshark.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Grooveshark.app'
 
