@@ -4,7 +4,7 @@ cask :v1 => 'joinme' do
 
   url 'https://secure.join.me/Download.aspx?installer=mac&webdownload=true'
   homepage 'https://join.me/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'join.me.app'
 end
