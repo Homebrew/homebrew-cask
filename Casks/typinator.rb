@@ -4,7 +4,7 @@ cask :v1 => 'typinator' do
 
   url "http://www.ergonis.com/downloads/products/typinator/Typinator#{version.gsub('.', '')}-Install.dmg"
   homepage 'http://www.ergonis.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Typinator.app'
 
