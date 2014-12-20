@@ -9,6 +9,7 @@ class Hbc::Verify::Gpg
     @command = command
     @cask = cask
     @downloaded_path = downloaded_path
+    @successful = nil
   end
 
   def available?
@@ -51,10 +52,10 @@ class Hbc::Verify::Gpg
     import_key
     sig = fetch_sig
 
-    ohai "Verifying GPG signature for #{cask}"
+    ohai "Verifying GPG signature for #{@cask}"
+    check = @command.run('gpg', :args => ['--verify', sig, downloaded_path],
+                                :print_stdout => true)
 
-    @command.run!('gpg',
-                  :args => ['--verify', sig, downloaded_path],
-                  :print_stdout => true)
+    @successful = check.success?
   end
 end
