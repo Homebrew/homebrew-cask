@@ -5,7 +5,7 @@ cask :v1 => 'asteroid' do
   url 'http://www.asteroidapp.com/downloader.php?Ver=latest'
   appcast 'http://www.asteroidapp.com/appupdates.php'
   homepage 'http://www.asteroidapp.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Asteroid.app'
 end
