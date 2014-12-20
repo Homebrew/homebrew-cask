@@ -4,7 +4,7 @@ cask :v1 => 'hexels' do
 
   url 'http://hexraystudios.com/Hexels.dmg'
   homepage 'http://hexraystudios.com/hexels/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Hexels.app'
 
