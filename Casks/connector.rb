@@ -4,7 +4,7 @@ cask :v1 => 'connector' do
 
   url "http://update.mediaware.sk/numpad/connector-#{version}.zip"
   homepage 'http://mediaware.sk/connector'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Connector.app'
 end
