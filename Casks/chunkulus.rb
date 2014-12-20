@@ -4,7 +4,7 @@ cask :v1 => 'chunkulus' do
 
   url 'http://presstube.com/screensavers/presstube-chunkulus-mac.zip'
   homepage 'http://presstube.com/blog/2011/chunkulus/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   screen_saver 'presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver'
 
