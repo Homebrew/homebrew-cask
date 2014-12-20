@@ -4,7 +4,7 @@ cask :v1 => 'private-internet-access' do
 
   url 'https://www.privateinternetaccess.com/installer/installer_osx.dmg'
   homepage 'https://www.privateinternetaccess.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer :script => 'Private Internet Access Installer.app/Contents/MacOS/runner.sh'
 
