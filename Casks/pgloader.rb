@@ -4,7 +4,7 @@ cask :v1 => 'pgloader' do
 
   url "http://pgloader.io/files/pgloader-#{version}.pkg"
   homepage 'http://pgloader.io'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "pgloader-#{version}.pkg"
 
