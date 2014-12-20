@@ -4,7 +4,7 @@ cask :v1 => 'plainview' do
 
   url "https://s3.amazonaws.com/plainviewapp/plainview_#{version}.zip"
   homepage 'http://barbariangroup.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Plainview.app'
 end
