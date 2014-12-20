@@ -70,27 +70,6 @@ class Resource
     downloader.clear_cache
   end
 
-  # Fetch, verify, and unpack the resource
-  def stage(target=nil, &block)
-    verify_download_integrity(fetch)
-    unpack(target, &block)
-  end
-
-  # If a target is given, unpack there; else unpack to a temp folder
-  # If block is given, yield to that block
-  # A target or a block must be given, but not both
-  def unpack(target=nil)
-    mktemp(download_name) do
-      downloader.stage
-      if block_given?
-        yield self
-      elsif target
-        target = Pathname.new(target) unless target.is_a? Pathname
-        target.install Dir['*']
-      end
-    end
-  end
-
   Partial = Struct.new(:resource, :files)
 
   def files(*files)
@@ -148,12 +127,6 @@ class Resource
     when Version then val
     else
       raise TypeError, "version '#{val.inspect}' should be a string"
-    end
-  end
-
-  class Go < Resource
-    def stage target
-      super(target/name)
     end
   end
 end
