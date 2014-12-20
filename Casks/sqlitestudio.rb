@@ -4,7 +4,7 @@ cask :v1 => 'sqlitestudio' do
 
   url "http://sqlitestudio.pl/files/free/stable/macosx/sqlitestudio-#{version}.zip"
   homepage 'http://sqlitestudio.pl'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SQLiteStudio.app'
 end
