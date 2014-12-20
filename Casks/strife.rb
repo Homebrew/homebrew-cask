@@ -4,6 +4,7 @@ cask :v1 => 'strife' do
 
   url "http://dl.strife.com/af1dfc2754268375727a3eec1749b27e/StrifeMac64-#{version}.zip"
   homepage 'https://strife.com'
+  license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Strife.app'
 end
