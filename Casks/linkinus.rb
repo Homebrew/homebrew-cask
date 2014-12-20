@@ -4,7 +4,7 @@ cask :v1 => 'linkinus' do
 
   url 'http://conceited.net/downloads/Linkinus.zip'
   homepage 'http://conceited.net/products/linkinus'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Linkinus.app'
 end
