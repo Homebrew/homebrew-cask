@@ -4,7 +4,7 @@ cask :v1 => 'colorpicker-developer' do
 
   url 'http://download.panic.com/picker/developercolorpicker.zip'
   homepage 'http://download.panic.com/picker/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   colorpicker 'Developer Color Picker/DeveloperColorPicker.colorPicker'
 end
