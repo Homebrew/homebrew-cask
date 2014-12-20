@@ -4,7 +4,7 @@ cask :v1 => 'capo' do
 
   url "https://s3.amazonaws.com/capo/Capo-#{version}.zip"
   homepage 'http://supermegaultragroovy.com/products/Capo/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Capo.app'
 end
