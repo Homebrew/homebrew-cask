@@ -4,6 +4,7 @@ cask :v1 => 'isyncr' do
 
   url "http://www.jrtstudio.com/files/iSyncr%20#{version}.pkg"
   homepage 'http://www.jrtstudio.com/iSyncr-iTunes-for-Android'
+  license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "iSyncr #{version}.pkg"
 
