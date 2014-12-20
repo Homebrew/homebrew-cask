@@ -22,7 +22,7 @@ cask :v1 => 'deeper' do
   end
 
   homepage 'http://www.titanium.free.fr/downloaddeeper.php'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Deeper.app'
 
