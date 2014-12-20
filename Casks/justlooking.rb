@@ -4,7 +4,7 @@ cask :v1 => 'justlooking' do
 
   url "http://chipmunkninja.com/download/JustLooking-#{version}.dmg"
   homepage 'http://chipmunkninja.com/JustLooking'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'JustLooking.app'
 end
