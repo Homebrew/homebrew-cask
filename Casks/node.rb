@@ -1,10 +1,10 @@
 cask :v1 => 'node' do
-  version '0.10.33'
-  sha256 '6f1ab706d6b5b960d7ce4a8a0edba2774b16757fe15dcc7ecb07c5464975d71f'
+  version '0.10.34'
+  sha256 '0b337976a7efefbff2b019fb8cd58d3cd3bb8417338037891c5118b2be41be6f'
 
   url "http://nodejs.org/dist/v#{version}/node-v#{version}.pkg"
   homepage 'http://nodejs.org'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :mit
 
   pkg  "node-v#{version}.pkg"
 
