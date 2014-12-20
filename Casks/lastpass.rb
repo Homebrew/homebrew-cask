@@ -4,7 +4,7 @@ cask :v1 => 'lastpass' do
 
   url 'https://lastpass.com/download/cdn/lpmacosx.zip'
   homepage 'https://lastpass.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer :manual => 'LastPass Installer.app'
 
