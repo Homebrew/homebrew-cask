@@ -4,7 +4,7 @@ cask :v1 => 'zoc' do
 
   url "http://www.emtec.com/downloads/zoc/zoc#{version.gsub('.','')}.dmg"
   homepage 'http://www.emtec.com/zoc/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'zoc6.app'
 end
