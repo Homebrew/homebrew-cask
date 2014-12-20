@@ -4,7 +4,7 @@ cask :v1 => 'callnote' do
 
   url "http://callnote.kandasoft.com/callnote-premium-install-#{version}.pkg"
   homepage 'http://www.kandasoft.com/home/kanda-apps/skype-call-recorder.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "callnote-premium-install-#{version}.pkg"
 
