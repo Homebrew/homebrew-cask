@@ -10,7 +10,7 @@ cask :v1 => 'eclipse-cpp' do
   end
 
   homepage 'http://eclipse.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :eclipse
 
   app 'eclipse/Eclipse.app'
 end
