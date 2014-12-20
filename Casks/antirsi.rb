@@ -4,7 +4,7 @@ cask :v1 => 'antirsi' do
 
   url "http://sabi.net/nriley/software/AntiRSI-#{version}.zip"
   homepage 'http://sabi.net/nriley/software/#antirsi'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'AntiRSI.app'
 end
