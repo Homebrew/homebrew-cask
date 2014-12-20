@@ -4,7 +4,7 @@ cask :v1 => 'rightzoom' do
 
   url 'http://www.blazingtools.com/mac/RightZoom.zip'
   homepage 'http://www.blazingtools.com/right_zoom_mac.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'RightZoom.app'
 end
