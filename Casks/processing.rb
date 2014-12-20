@@ -4,7 +4,7 @@ cask :v1 => 'processing' do
 
   url "http://download.processing.org/processing-#{version}-macosx.zip"
   homepage 'http://processing.org/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Processing.app'
 
