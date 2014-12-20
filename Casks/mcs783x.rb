@@ -10,7 +10,7 @@ cask :v1 => 'mcs783x' do
 
   url "http://www.asix.com.tw/FrootAttach/driver/#{Utils.basename}.zip"
   homepage 'http://www.asix.com.tw/products.php?op=ProductList&PLine=74&PSeries=109'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :nested => "#{Utils.basename}/MCS7830_v#{version}.dmg"
   pkg "MCS7830 v#{version}.pkg"
