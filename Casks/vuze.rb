@@ -4,7 +4,7 @@ cask :v1 => 'vuze' do
 
   url 'http://cf1.vuze.com/files/J7/VuzeBittorrentClientInstaller.dmg'
   homepage 'http://www.vuze.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer :manual => 'Vuze Installer.app'
 
