@@ -181,7 +181,6 @@ module OS
     end
 
     def mdfind(*ids)
-      return [] unless OS.mac?
       (@mdfind ||= {}).fetch(ids) do
         @mdfind[ids] = Utils.popen_read("/usr/bin/mdfind", mdfind_query(*ids)).split("\n")
       end

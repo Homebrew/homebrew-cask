@@ -1,5 +1,3 @@
-require 'os'
-
 class Hardware
   module CPU extend self
     INTEL_32BIT_ARCHS = [:i386].freeze
@@ -40,12 +38,8 @@ class Hardware
     end
   end
 
-  if OS.mac?
-    require 'os/mac/hardware'
-    CPU.extend MacCPUs
-  else
-    raise "The system `#{`uname`.chomp}' is not supported."
-  end
+  require 'os/mac/hardware'
+  CPU.extend MacCPUs
 
   def self.cores_as_words
     case Hardware::CPU.cores

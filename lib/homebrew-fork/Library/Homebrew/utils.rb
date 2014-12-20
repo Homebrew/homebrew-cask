@@ -208,7 +208,7 @@ def exec_editor *args
 end
 
 def exec_browser *args
-  browser = ENV['HOMEBREW_BROWSER'] || ENV['BROWSER'] || OS::PATH_OPEN
+  browser = ENV['HOMEBREW_BROWSER'] || ENV['BROWSER'] || '/usr/bin/open'
   safe_exec(browser, *args)
 end
 
