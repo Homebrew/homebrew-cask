@@ -4,7 +4,7 @@ cask :v1 => 'bowery' do
 
   url "http://desktop.bowery.io/#{version}_darwin_amd64.zip"
   homepage 'http://bowery.io/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'bowery.pkg'
 
