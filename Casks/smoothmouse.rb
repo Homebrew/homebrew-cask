@@ -4,7 +4,7 @@ cask :v1 => 'smoothmouse' do
 
   url 'http://smoothmouse.com/download/latest'
   homepage 'http://smoothmouse.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'SmoothMouse.pkg'
 
