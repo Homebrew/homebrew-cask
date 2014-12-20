@@ -1,4 +1,3 @@
-require 'extend/module'
 require 'extend/fileutils'
 require 'extend/pathname'
 require 'extend/ARGV'
