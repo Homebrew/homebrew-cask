@@ -33,7 +33,7 @@ require 'cask/url_checker'
 require 'cask/utils'
 require 'cask/version'
 
-require 'plist/parser'
+require 'vendor/plist'
 
 class Cask
   include Cask::DSL
