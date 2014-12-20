@@ -6,7 +6,7 @@ cask :v1 => 'servetome' do
   appcast 'http://zqueue.com/servetome/stm3_mac_appcast.xml',
           :sha256 => '48cc93d336da8f71ab2a804d609e54d2e81ce4cd17f626e57aa4b7a76624ea69'
   homepage 'http://zqueue.com/servetome/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'ServeToMe.app'
 end
