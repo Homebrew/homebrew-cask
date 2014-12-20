@@ -12,7 +12,7 @@ cask :v1 => 'sourcetree' do
   appcast 'http://www.sourcetreeapp.com/update/SparkleAppcast.xml',
           :sha256 => 'b43e0ea95de46d2c270cdbf9765e03ec3f13606cbf0bab5bcd3da0424ce2cff3'
   homepage 'http://www.sourcetreeapp.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SourceTree.app'
   binary 'SourceTree.app/Contents/Resources/stree'
