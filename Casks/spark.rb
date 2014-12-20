@@ -4,7 +4,7 @@ cask :v1 => 'spark' do
 
   url 'http://www.shadowlab.org/softwares/Spark/Spark.dmg'
   homepage 'http://www.shadowlab.org/softwares/spark.php'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Spark.app'
 
