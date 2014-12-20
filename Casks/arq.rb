@@ -4,7 +4,7 @@ cask :v1 => 'arq' do
 
   url 'http://www.haystacksoftware.com/arq/Arq.zip'
   homepage 'http://www.haystacksoftware.com/arq/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Arq.app'
 end
