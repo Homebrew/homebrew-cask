@@ -73,14 +73,6 @@ module Homebrew
   end
 end
 
-def with_system_path
-  old_path = ENV['PATH']
-  ENV['PATH'] = '/usr/bin:/bin'
-  yield
-ensure
-  ENV['PATH'] = old_path
-end
-
 # Kernel.system but with exceptions
 def safe_system cmd, *args
   Homebrew.system(cmd, *args) or raise ErrorDuringExecution.new(cmd, args)
@@ -169,7 +161,7 @@ end
 # GZips the given paths, and returns the gzipped paths
 def gzip *paths
   paths.collect do |path|
-    with_system_path { safe_system 'gzip', path }
+    safe_system '/usr/bin/gzip', path
     Pathname.new("#{path}.gz")
   end
 end

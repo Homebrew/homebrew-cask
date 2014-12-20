@@ -37,7 +37,7 @@ class Resource
     # /tmp volume to the other volume. So we let the user override the tmp
     # prefix if they need to.
 
-    tempd = with_system_path { `mktemp -d #{HOMEBREW_TEMP}/#{prefix}-XXXXXX` }.chomp
+    tempd = `/usr/bin/mktemp -d #{HOMEBREW_TEMP}/#{prefix}-XXXXXX`.chomp
     raise "Failed to create sandbox" if tempd.empty?
     prevd = pwd
     cd tempd
