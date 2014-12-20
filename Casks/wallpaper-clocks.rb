@@ -7,5 +7,6 @@ cask :v1 => 'wallpaper-clocks' do
   license :gratis
 
   app 'Wallpaper Clocks.app'
+
   uninstall :quit => 'com.vladstudio.Wallpaper Clocks'
 end
