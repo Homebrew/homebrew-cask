@@ -4,7 +4,7 @@ cask :v1 => 'clix' do
 
   url 'ftp://rixstep.com/CLIX.tar.bz2'
   homepage 'http://rixstep.com/4/0/clix/index.shtml'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "CLIX#{version}/CLIX.app"
 end
