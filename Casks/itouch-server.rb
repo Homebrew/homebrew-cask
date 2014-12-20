@@ -4,7 +4,7 @@ cask :v1 => 'itouch-server' do
 
   url "http://logitech.com/pub/techsupport/mouse/mac/touchmousev#{version}.dmg"
   homepage 'http://support.logitech.com/en_us/product/6367'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iTouch-Server.app'
 end

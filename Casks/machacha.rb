@@ -4,7 +4,7 @@ cask :v1 => 'machacha' do
 
   url 'http://www.julifos.com/soft/machacha/machacha.dmg'
   homepage 'http://www.julifos.com/soft/machacha/index.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'MacHacha.app'
 end

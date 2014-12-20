@@ -4,7 +4,7 @@ cask :v1 => 'timemachineeditor' do
 
   url 'http://timesoftware.free.fr/timemachineeditor/TimeMachineEditor.zip'
   homepage 'http://timesoftware.free.fr/timemachineeditor/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TimeMachineEditor.app'
 end

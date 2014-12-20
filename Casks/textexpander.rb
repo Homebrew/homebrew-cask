@@ -11,7 +11,7 @@ cask :v1 => 'textexpander' do
 
   url "http://cdn.smilesoftware.com/TextExpander_#{version}.zip"
   homepage 'http://www.smilesoftware.com/TextExpander/index.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TextExpander.app'
 end

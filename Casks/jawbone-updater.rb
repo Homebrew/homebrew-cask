@@ -4,7 +4,7 @@ cask :v1 => 'jawbone-updater' do
 
   url "http://content.jawbone.com/store/dashboard/Jawbone_Updater-#{version}.pkg"
   homepage 'http://jawbone.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "Jawbone_Updater-#{version}.pkg"
 

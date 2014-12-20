@@ -4,7 +4,7 @@ cask :v1 => '0ad' do
 
   url "http://releases.wildfiregames.com/0ad-#{version}-osx64.dmg"
   homepage 'http://www.play0ad.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app '0ad.app'
 end

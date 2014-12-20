@@ -4,7 +4,7 @@ cask :v1 => 'yojimbo' do
 
   url "https://s3.amazonaws.com/BBSW-download/Yojimbo_#{version}.dmg"
   homepage 'http://www.barebones.com/products/yojimbo/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Yojimbo.app'
 

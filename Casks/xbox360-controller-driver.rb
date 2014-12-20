@@ -4,7 +4,7 @@ cask :v1 => 'xbox360-controller-driver' do
 
   url 'http://files.tattiebogle.net/360/360ControllerInstall.dmg'
   homepage 'http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install360Controller.pkg'
 

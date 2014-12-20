@@ -5,7 +5,7 @@ cask :v1 => 'fotomagico' do
   url "https://cdn.boinx.com/software/fotomagico/Boinx_FotoMagico_#{version}.zip"
   appcast 'https://sparkle.boinx.com/appcast.lasso'
   homepage 'http://www.boinx.com/fotomagico/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'FotoMagico.app'
 end

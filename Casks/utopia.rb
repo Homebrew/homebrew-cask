@@ -4,7 +4,7 @@ cask :v1 => 'utopia' do
 
   url "http://utopiadocs.com/files/Utopia-#{version}-Mac.dmg"
   homepage 'http://utopiadocs.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Utopia.app'
 end

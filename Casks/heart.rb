@@ -4,7 +4,7 @@ cask :v1 => 'heart' do
 
   url 'http://presstube.com/screensavers/presstube-heart-mac.zip'
   homepage 'http://presstube.com/blog/2011/heart/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   screen_saver 'presstube-heart.app/Contents/Resources/Presstube - Heart.saver'
 

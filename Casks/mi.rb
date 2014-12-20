@@ -4,7 +4,7 @@ cask :v1 => 'mi' do
 
   url "http://www.mimikaki.net/download/mi#{version}.dmg"
   homepage 'http://www.mimikaki.net/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'mi.app'
 end

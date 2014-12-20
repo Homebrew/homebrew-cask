@@ -4,7 +4,7 @@ cask :v1 => 'viber' do
 
   url 'http://download.viber.com/desktop/mac/Viber.dmg'
   homepage 'http://viber.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Viber.app'
 end

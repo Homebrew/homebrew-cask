@@ -4,7 +4,7 @@ cask :v1 => 'accessmenubarapps' do
 
   url "http://www.ortisoft.de/resources/AccessMenuBarApps#{version}.dmg"
   homepage 'http://www.ortisoft.de/accessmenubarapps/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'AccessMenuBarApps.app'
 end

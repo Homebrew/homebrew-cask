@@ -4,7 +4,7 @@ cask :v1 => 'jd-gui' do
 
   url "http://jd.benow.ca/jd-gui/downloads/jd-gui-#{version}.osx.i686.dmg"
   homepage 'http://jd.benow.ca/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'JD-GUI.app'
 end

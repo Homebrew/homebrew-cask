@@ -5,7 +5,7 @@ cask :v1 => 'tuck' do
   url 'http://www.irradiatedsoftware.com/downloads/Tuck.zip'
   appcast 'http://www.irradiatedsoftware.com/updates/profiles/tuck.php'
   homepage 'http://www.irradiatedsoftware.com/labs/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Tuck.app'
 

@@ -6,7 +6,7 @@ cask :v1 => 'texts' do
   appcast 'http://www.texts.io/appcast-osx.xml',
           :sha256 => 'c769657a0b1d6470676cba2d73b32d77be5afc98e3e01d09a68d6482bc65e5fd'
   homepage 'http://www.texts.io'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Texts.app'
 end

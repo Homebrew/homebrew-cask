@@ -4,7 +4,7 @@ cask :v1 => 'tvmobili' do
 
   url 'http://www.tvmobili.com/binaries/stable/tvmobili-mountainlion-universal.dmg'
   homepage 'http://www.tvmobili.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'tvmobili-mountainlion-universal.2.1.4481.pkg'
 

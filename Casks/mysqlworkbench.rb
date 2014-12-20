@@ -6,7 +6,7 @@ cask :v1 => 'mysqlworkbench' do
   gpg "#{url}.asc",
       :key_id => '8c718d3b5072e1f5'
   homepage 'http://www.mysql.com/products/workbench'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'MySQLWorkbench.app'
 end

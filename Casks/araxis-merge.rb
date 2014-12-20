@@ -4,7 +4,7 @@ cask :v1 => 'araxis-merge' do
 
   url "http://www.araxis.com/download/Merge#{version}-OSX10.9.dmg"
   homepage 'http://www.araxis.com/merge'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Araxis Merge.app'
 end

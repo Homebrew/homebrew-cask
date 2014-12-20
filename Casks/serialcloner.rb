@@ -4,7 +4,7 @@ cask :v1 => 'serialcloner' do
 
   url "http://serialbasics.free.fr/Serial_Cloner-Download_files/SerialCloner#{version.sub(%r{^(\d+)\.(\d+).*},'\1-\2')}.dmg"
   homepage 'http://serialbasics.free.fr/Serial_Cloner.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "SerialCloner#{version.sub(%r{^(\d+)\.(\d+).*},'\1-\2')}/SerialCloner #{version.gsub('.','-')}.app"
 end

@@ -4,7 +4,7 @@ cask :v1 => 'readefine' do
 
   url 'http://readefine.anirudhsasikumar.net/ReadefineDesktop.air'
   homepage 'http://readefine.anirudhsasikumar.net/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Readefine.app'
 end

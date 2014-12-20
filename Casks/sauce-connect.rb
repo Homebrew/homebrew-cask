@@ -5,7 +5,7 @@ cask :v1 => 'sauce-connect' do
   url "https://saucelabs.com/downloads/sc-#{version}-osx.zip"
   name 'Sauce Connect'
   homepage 'https://docs.saucelabs.com/reference/sauce-connect/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   binary "sc-#{version}-osx/bin/sc"
 end

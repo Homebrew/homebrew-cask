@@ -6,7 +6,7 @@ cask :v1 => 'livereload' do
   appcast 'https://s3.amazonaws.com/download.livereload.com/LiveReload-Mac-appcast.xml',
           :sha256 => 'e68aa7af8891831b795c6c57a7056ad6244fad5bd31d9487d4d4bb58afe385f0'
   homepage 'http://www.livereload.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'LiveReload.app'
 end

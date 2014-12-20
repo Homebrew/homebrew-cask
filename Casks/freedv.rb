@@ -4,7 +4,7 @@ cask :v1 => 'freedv' do
 
   url "http://files.freedv.org/OSX/FreeDV-#{version}.dmg"
   homepage 'http://freedv.org/tiki-index.php'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'FreeDV.app'
 end

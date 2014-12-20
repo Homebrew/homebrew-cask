@@ -4,7 +4,7 @@ cask :v1 => 'stackroom' do
 
   url "http://www.geocities.jp/aromaticssoft/stackroom/download/stackroom_#{version}.zip"
   homepage 'http://www.geocities.jp/aromaticssoft/stackroom/index.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Stackroom.app'
 end

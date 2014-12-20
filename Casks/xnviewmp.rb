@@ -4,7 +4,7 @@ cask :v1 => 'xnviewmp' do
 
   url 'http://download.xnview.com/XnViewMP-mac.tgz'
   homepage 'http://www.xnview.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'XnViewMP.app'
 end

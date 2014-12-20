@@ -5,7 +5,7 @@ cask :v1 => 'powerword' do
 
   url "http://mac.iciba.com/download/powerword_macosx_beta_#{version}.dmg"
   homepage 'http://mac.iciba.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app '金山词霸.app'
 end

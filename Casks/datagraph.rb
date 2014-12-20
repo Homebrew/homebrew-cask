@@ -4,7 +4,7 @@ cask :v1 => 'datagraph' do
 
   url 'http://www.visualdatatools.com/DataGraph/DataGraph.dmg'
   homepage 'http://www.visualdatatools.com/DataGraph/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'DataGraph.app'
 end

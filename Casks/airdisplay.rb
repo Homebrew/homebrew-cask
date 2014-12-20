@@ -4,7 +4,7 @@ cask :v1 => 'airdisplay' do
 
   url 'http://downloads.avatron.com/AirDisplayInstaller.zip'
   homepage 'http://avatron.com/apps/air-display/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Air Display Installer.pkg'
 

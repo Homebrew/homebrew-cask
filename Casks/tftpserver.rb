@@ -4,7 +4,7 @@ cask :v1 => 'tftpserver' do
 
   url 'http://ww2.unime.it/flr/tftpserver/TftpServer.dmg'
   homepage 'http://ww2.unime.it/flr/tftpserver/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TftpServer.app'
 end

@@ -5,7 +5,7 @@ cask :v1 => 'key-codes' do
   url 'http://manytricks.com/download/keycodes'
   appcast 'http://manytricks.com/keycodes/appcast.xml'
   homepage 'http://manytricks.com/keycodes/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Key Codes.app'
 end

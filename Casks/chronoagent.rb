@@ -4,7 +4,7 @@ cask :v1 => 'chronoagent' do
 
   url 'http://downloads.econtechnologies.com/CA_Mac_Download.dmg'
   homepage 'http://www.econtechnologies.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install.pkg'
 

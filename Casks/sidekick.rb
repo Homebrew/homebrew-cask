@@ -6,7 +6,7 @@ cask :v1 => 'sidekick' do
   url 'http://releases.oomphalot.com.s3-website-us-east-1.amazonaws.com/Sidekick/Sidekick.zip'
   appcast 'http://updates.oomphalot.com/?app=Sidekick'
   homepage 'http://oomphalot.com/sidekick/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Sidekick.app'
 

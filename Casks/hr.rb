@@ -4,7 +4,7 @@ cask :v1 => 'hr' do
 
   url "http://www.hrmacapp.com/download"
   homepage 'http://www.hrmacapp.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'hr.app'
 end

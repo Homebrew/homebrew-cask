@@ -6,7 +6,7 @@ cask :v1 => 'gpgtools' do
   gpg "#{url}.sig",
       :key_url => 'https://gpgtools.org/GPGTools%2000D026C4.asc'
   homepage 'https://gpgtools.org/index.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install.pkg'
   # todo, remove all ENV variables

@@ -4,7 +4,7 @@ cask :v1 => 'putiosync' do
 
   url 'https://github.com/arrizer/PutIOSync-OSX/raw/master/App/PutIOSync.app.zip'
   homepage 'https://github.com/arrizer/PutIOSync-OSX'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'PutIOSync.app'
 end

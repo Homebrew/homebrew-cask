@@ -4,7 +4,7 @@ cask :v1 => 'flash-player' do
 
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.to_i}/flashplayer_#{version.to_i}_sa.dmg"
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Flash Player.app'
 

@@ -4,7 +4,7 @@ cask :v1 => 'dashlane' do
 
   url 'https://www.dashlane.com/directdownload?platform=mac'
   homepage 'https://www.dashlane.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Dashlane.app'
 end

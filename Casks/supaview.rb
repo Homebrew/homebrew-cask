@@ -4,7 +4,7 @@ cask :v1 => 'supaview' do
 
   url "http://twinside.free.fr/supaview/SupaView.#{version}.zip"
   homepage 'http://twinside.free.fr/supaview/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SupaView.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'vocabulist' do
   appcast 'http://vocabulistapp.com/downloads/appcast.xml',
           :sha256 => '37266968ad637a5ed6fdf28f851eac2545ce2f538300284697ba3a1a4c7843bd'
   homepage 'http://vocabulistapp.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Vocabulist.app'
 end

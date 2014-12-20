@@ -4,7 +4,7 @@ cask :v1 => 'escritorio-movistar' do
 
   url "http://www.movistar.es/estaticos/descargaaplicaciones/Escritorio%20Movistar_v#{version}.pkg"
   homepage 'http://www.movistar.es/particulares/servicios/descargaaplicaciones'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "Escritorio Movistar_v#{version}.pkg"
 

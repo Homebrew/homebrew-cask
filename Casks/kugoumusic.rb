@@ -4,7 +4,7 @@ cask :v1 => 'kugoumusic' do
 
   url 'http://macservice.kugou.com/download/KugouMusicForMac.dmg'
   homepage 'http://www.kugou.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'KugouMusic.app'
 end

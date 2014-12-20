@@ -4,7 +4,7 @@ cask :v1 => 'simple-css' do
 
   url 'http://www.hostm.com/downloads/simplecss/mac/SimpleCSS.zip'
   homepage 'http://www.hostm.com/css'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Simple CSS.app'
 end

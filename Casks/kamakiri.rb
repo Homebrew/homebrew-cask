@@ -4,7 +4,7 @@ cask :v1 => 'kamakiri' do
 
   url 'https://mochidev.com/appresources/downloads/Kamakiri%20Latest.zip'
   homepage 'https://mochidev.com/apps/kamakiri'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Kamakiri.app'
 end

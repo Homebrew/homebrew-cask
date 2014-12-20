@@ -4,7 +4,7 @@ cask :v1 => 'music-manager' do
 
   url "https://dl.google.com/dl/androidjumper/mac/#{version.sub(%r{^\d+\.\d+\.},'').gsub('.','')}/musicmanager.dmg"
   homepage 'https://play.google.com/music/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/4282

@@ -4,7 +4,7 @@ cask :v1 => 'prolific-usb-serial-driver' do
 
   url "http://www.prolific.com.tw/UserFiles/files/md_PL2303_MacOSX-10_6up_v#{version.gsub('.', '_')}.zip"
   homepage 'http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=229&pcid=41'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "PL2303_MacOSX_v#{version}.pkg"
 

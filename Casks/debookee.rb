@@ -4,7 +4,7 @@ cask :v1 => 'debookee' do
 
   url 'http://www.iwaxx.com/debookee/debookee.zip'
   homepage 'http://www.iwaxx.com/debookee/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Debookee.app'
 end

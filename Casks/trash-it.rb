@@ -12,5 +12,5 @@ cask :v1 => 'trash-it' do
   end
 
   homepage 'http://nonamescriptware.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 end

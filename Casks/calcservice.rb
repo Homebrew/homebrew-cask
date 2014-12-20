@@ -4,7 +4,7 @@ cask :v1 => 'calcservice' do
 
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/calcservice/#{version}/CalcService.zip"
   homepage 'http://www.devontechnologies.com/products/freeware.html#c1111'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   service 'CalcService/CalcService.service'
 end

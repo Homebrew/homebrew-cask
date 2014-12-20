@@ -4,7 +4,7 @@ cask :v1 => 'path-finder' do
 
   url 'http://get.cocoatech.com/PF7.zip'
   homepage 'http://www.cocoatech.com/pathfinder/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Path Finder.app'
 

@@ -4,7 +4,7 @@ cask :v1 => 'drobo-dashboard' do
 
   url "http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-#{version}.dmg"
   homepage 'http://www.drobo.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "Install.app/Contents/Drobo_Dashboard_Installer_#{version}.pkg"
 

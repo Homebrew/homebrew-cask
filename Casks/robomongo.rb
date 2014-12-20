@@ -4,7 +4,7 @@ cask :v1 => 'robomongo' do
 
   url "http://robomongo.org/files/mac/Robomongo-#{version}-x86_64.dmg"
   homepage 'http://robomongo.org'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Robomongo.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'splashtop-streamer' do
 
   url "https://d17kmd0va0f0mp.cloudfront.net/mac/Splashtop_Streamer_MAC_v#{version}.dmg"
   homepage 'http://www.splashtop.com/downloads'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Splashtop Streamer.pkg'
 

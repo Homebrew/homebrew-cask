@@ -5,7 +5,7 @@ cask :v1 => 'cinch' do
   url 'https://www.irradiatedsoftware.com/download/Cinch.zip'
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/cinch.php'
   homepage 'http://www.irradiatedsoftware.com/cinch/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Cinch.app'
 end

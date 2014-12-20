@@ -4,7 +4,7 @@ cask :v1 => 'google-notifier' do
 
   url "https://dl.google.com/mac/download/GoogleNotifier_#{version}.dmg"
   homepage 'http://toolbar.google.com/gmail-helper/notifier_mac.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Google Notifier.app'
 end

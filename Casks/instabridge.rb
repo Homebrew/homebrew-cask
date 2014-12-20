@@ -4,7 +4,7 @@ cask :v1 => 'instabridge' do
 
   url 'http://cdn.instabridge.com/mac/instabridge-osx.dmg'
   homepage 'http://instabridge.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Instabridge.app'
 end

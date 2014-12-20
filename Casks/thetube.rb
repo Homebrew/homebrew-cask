@@ -4,7 +4,7 @@ cask :v1 => 'thetube' do
 
   url "http://download2.equinux.com/files/other/TheTube_#{version}_Web.zip"
   homepage 'http://www.equinux.com/us/products/thetube/index.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TheTube.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'rubitrack' do
   appcast 'http://www.rubitrack.com/autoupdate/sparkle3.xml',
           :sha256 => 'c7aca0d98b52caa1e7d54cf7b44cdf06317fab2cf982f1e29f4034fe419175e7'
   homepage 'http://www.rubitrack.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "rubiTrack #{version.to_i}.app"
 end

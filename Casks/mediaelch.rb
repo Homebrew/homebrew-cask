@@ -4,7 +4,7 @@ cask :v1 => 'mediaelch' do
 
   url "http://www.kvibes.de/releases/mediaelch/#{version}/MediaElch-#{version}.dmg"
   homepage 'http://www.mediaelch.de/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'MediaElch.app'
 end

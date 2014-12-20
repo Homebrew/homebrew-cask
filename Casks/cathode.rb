@@ -4,7 +4,7 @@ cask :v1 => 'cathode' do
 
   url "http://s3.amazonaws.com/cjcaufield/products/cathode/cathode_#{version.gsub('.','')}.zip"
   homepage 'http://www.secretgeometry.com/apps/cathode'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Cathode.app'
 end

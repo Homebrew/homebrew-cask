@@ -4,7 +4,7 @@ cask :v1 => 'synthesia' do
 
   url "https://synthesia.s3.amazonaws.com/files/Synthesia-#{version}.dmg"
   homepage 'http://www.synthesiagame.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Synthesia.app'
   app 'SynthesiaConfig.app'

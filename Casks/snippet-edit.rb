@@ -6,7 +6,7 @@ cask :v1 => 'snippet-edit' do
   appcast 'http://cocoaholic.com/sparkle/snippet_edit/sparkle.xml',
           :sha256 => 'a32af024b5e43f5bd6fef837808d8130359000c2f7f975f38abc46aecf17e113'
   homepage 'http://cocoaholic.com/snippet_edit/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Snippet Edit.app'
 end

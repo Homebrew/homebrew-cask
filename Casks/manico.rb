@@ -6,7 +6,7 @@ cask :v1 => 'manico' do
   appcast 'http://manico.im/static/manico-appcast.xml',
           :sha256 => 'cbdf604b5078b58c559ed17759f2db444a5ec417bc8e663e024df735bc9d96fb'
   homepage 'http://manico.im/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Manico.app'
 end

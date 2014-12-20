@@ -4,7 +4,7 @@ cask :v1 => 'mosh' do
 
   url "https://mosh.mit.edu/mosh-#{version}-3.pkg"
   homepage 'http://mosh.mit.edu/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "mosh-#{version}-3.pkg"
 

@@ -5,7 +5,7 @@ cask :v1 => 'nzbvortex' do
   url 'http://www.nzbvortex.com/downloads/NZBVortex.dmg'
   appcast 'http://www.nzbvortex.com/update/appcast.xml'
   homepage 'http://www.nzbvortex.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'NZBVortex 3.app'
 end
