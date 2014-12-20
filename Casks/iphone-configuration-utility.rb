@@ -4,7 +4,7 @@ cask :v1 => 'iphone-configuration-utility' do
 
   url 'https://support.apple.com/downloads/DL1465/en_US/iPhoneConfigUtility.dmg'
   homepage 'http://support.apple.com/kb/DL1465'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'iPhoneConfigurationUtility.pkg'
   # note - do not uninstall via :pkgutil, as system files would be deleted
