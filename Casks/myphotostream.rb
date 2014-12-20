@@ -4,7 +4,7 @@ cask :v1 => 'myphotostream' do
 
   url 'http://www.weareyeah.com/MyPhotostream/download'
   homepage 'http://www.weareyeah.com/MyPhotostream/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'MyPhotostream.app'
 end
