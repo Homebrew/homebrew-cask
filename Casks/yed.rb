@@ -4,6 +4,7 @@ cask :v1 => 'yed' do
 
   url "http://www.yworks.com/products/yed/demo/yEd-#{version}.dmg"
   homepage 'http://www.yworks.com/en/products_yed_about.html'
+  license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'yEd.app'
 end

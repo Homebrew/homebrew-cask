@@ -4,6 +4,7 @@ cask :v1 => 'difffork' do
 
   url 'http://dotfork.s3.amazonaws.com/DiffFork.app.zip'
   homepage 'http://www.dotfork.com/difffork/'
+  license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'DiffFork.app'
 end
