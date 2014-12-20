@@ -4,7 +4,7 @@ cask :v1 => 'zed' do
 
   url "http://download.zedapp.org/zed-mac-v#{version}.tar.gz"
   homepage 'http://zedapp.org'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Zed.app'
 end
