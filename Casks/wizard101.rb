@@ -1,5 +1,5 @@
 cask :v1 => 'wizard101' do
-  version :latest  
+  version :latest
   sha256  :no_check
 
   url 'https://www.wizard101.com/downloadGameMac/otherdownload'

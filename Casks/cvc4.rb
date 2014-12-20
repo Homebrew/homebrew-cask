@@ -3,7 +3,7 @@ cask :v1 => 'cvc4' do
   if MacOS.release <= :mountain_lion
     version '1.4'
     sha256 '436ebe16872a08bb41270cb1302c4258a7ccd187bf8e68ad8301300e49fb7718'
-    
+
     # Mountain Lion package might work on older releases, per homepage
     url "http://cvc4.cs.nyu.edu/builds/macos/cvc4-#{version}.MacOs85.MountainLion.mpkg"
 

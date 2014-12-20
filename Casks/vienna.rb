@@ -9,7 +9,7 @@ cask :v1 => 'vienna' do
   license :apache
 
   app 'Vienna.app'
-  
+
   zap :delete => [
                   '~/Library/Application Support/Vienna',
                   '~/Library/Caches/uk.co.opencommunity.vienna2',
