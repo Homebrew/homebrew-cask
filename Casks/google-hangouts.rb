@@ -4,7 +4,7 @@ cask :v1 => 'google-hangouts' do
 
   url 'https://dl.google.com/googletalk/googletalkplugin/GoogleVoiceAndVideoSetup.dmg'
   homepage 'https://www.google.com/tools/dlpage/hangoutplugin'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Google Voice and Video.pkg'
 
