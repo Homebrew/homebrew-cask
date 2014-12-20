@@ -4,7 +4,7 @@ cask :v1 => 'zipeg' do
 
   url 'http://www.zipeg.net/downloads/zipeg_mac.dmg'
   homepage 'http://www.zipeg.net/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Zipeg.app'
 end
