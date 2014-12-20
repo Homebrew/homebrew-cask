@@ -4,7 +4,7 @@ cask :v1 => 'prezi' do
 
   url "https://prezi-a.akamaihd.net/desktop/Prezi#{version}.dmg"
   homepage 'http://www.prezi.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Prezi.app'
 end
