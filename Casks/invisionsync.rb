@@ -4,7 +4,7 @@ cask :v1 => 'invisionsync' do
 
   url 'http://www.invisionapp.com/app/InVisionSync.zip'
   homepage 'http://invisionapp.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'InVisionSync.app'
 end
