@@ -5,7 +5,7 @@ cask :v1 => 'alib1' do
 
   url 'http://presstube.com/screensavers/Presstube-ALib1-mac.zip'
   homepage 'http://presstube.com/blog/2011/alib1/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   screen_saver 'Presstube-ALib1.app/Contents/Resources/Presstube - ALib1.saver'
 
