@@ -4,7 +4,7 @@ cask :v1 => 'ubar' do
 
   url "http://www.brawersoftware.com/downloads/ubar/ubar#{version.gsub('.','')}.zip"
   homepage 'http://brawersoftware.com/products/ubar'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'uBar.app'
 
