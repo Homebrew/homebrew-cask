@@ -12,7 +12,7 @@ cask :v1 => 'imagealpha' do
 
   url "http://pngmini.com/ImageAlpha#{version}.tar.bz2"
   homepage 'http://pngmini.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'ImageAlpha.app'
 end
