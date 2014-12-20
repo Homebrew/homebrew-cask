@@ -4,7 +4,7 @@ cask :v1 => 'schnapps' do
 
   url "http://d15xn61otjv90c.cloudfront.net/download/Schnapps_v#{version}.zip"
   homepage 'http://schnappsformac.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Schnapps.app'
 end
