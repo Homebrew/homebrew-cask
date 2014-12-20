@@ -6,7 +6,7 @@ cask :v1 => 'slender' do
   appcast 'http://dragonforged.com/slender/sparkle/?bundleId=com.dfsw.Slender',
           :sha256 => '05b8cc1837ad290486bac9bb9c1bf194b2e2c208c968f1e55bae47ce33c56141'
   homepage 'http://dragonforged.com/slender/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Slender.app'
 end
