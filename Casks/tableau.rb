@@ -4,7 +4,7 @@ cask :v1 => 'tableau' do
 
   url 'https://downloads.tableausoftware.com/tssoftware/TableauDesktop.dmg'
   homepage 'http://www.tableausoftware.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Tableau.app'
 end
