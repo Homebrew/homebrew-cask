@@ -4,7 +4,7 @@ cask :v1 => 'vox-preferences-pane' do
 
   url 'http://dl.devmate.com/com.coppertino.VoxPrefs/VoxPrefs.dmg'
   homepage 'http://coppertino.com/vox/addon.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   prefpane 'Vox Preferences.prefPane'
 end
