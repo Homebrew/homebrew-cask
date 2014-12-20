@@ -4,7 +4,7 @@ cask :v1 => 'td-toolbelt' do
 
   url 'http://toolbelt.treasuredata.com/mac'
   homepage 'http://toolbelt.treasuredata.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :type => :naked
   preflight do
