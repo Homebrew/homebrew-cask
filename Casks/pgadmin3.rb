@@ -5,7 +5,7 @@ cask :v1 => 'pgadmin3' do
 
   url "http://ftp.postgresql.org/pub/pgadmin3/release/v#{version}/osx/pgadmin3-#{version}.dmg"
   gpg "#{url}.sig",
-      :key_id => '698F1519'
+      :key_id => 'e0c4ceeb826b1fda4fb468e024adfaaf698f1519'
   homepage 'http://pgadmin.org'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
