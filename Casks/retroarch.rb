@@ -10,6 +10,7 @@ cask :v1 => 'retroarch' do
   end
 
   homepage 'http://www.libretro.com/'
+  license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'RetroArch.app'
 end
