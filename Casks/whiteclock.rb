@@ -4,7 +4,7 @@ cask :v1 => 'whiteclock' do
 
   url "http://www.taimila.com/downloads/WhiteClock#{version.to_i}.zip"
   homepage 'http://www.taimila.com/?p=1221'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'WhiteClock.app'
 end
