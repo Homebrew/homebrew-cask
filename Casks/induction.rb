@@ -6,7 +6,7 @@ cask :v1 => 'induction' do
   # appcast URL is down
   # appcast 'https://induction.mesmerizeapp.com/'
   homepage 'http://inductionapp.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Induction.app'
 end
