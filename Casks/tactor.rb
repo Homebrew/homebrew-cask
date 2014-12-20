@@ -5,7 +5,7 @@ cask :v1 => 'tactor' do
   # dropbox is the official download host per the vendor homepage
   url 'https://dl.dropboxusercontent.com/u/7614970/Tactor.zip'
   homepage 'http://onflapp.wordpress.com/tactor/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Tactor.app'
 end
