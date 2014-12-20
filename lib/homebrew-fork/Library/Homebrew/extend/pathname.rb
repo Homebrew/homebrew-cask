@@ -4,164 +4,12 @@ require 'resource'
 # we enhance pathname to make our code more readable
 class Pathname
 
-  def install *sources
-    sources.each do |src|
-      case src
-      when Resource
-        src.stage(self)
-      when Resource::Partial
-        src.resource.stage { install(*src.files) }
-      when Array
-        if src.empty?
-          opoo "tried to install empty array to #{self}"
-          return
-        end
-        src.each {|s| install_p(s) }
-      when Hash
-        if src.empty?
-          opoo "tried to install empty hash to #{self}"
-          return
-        end
-        src.each {|s, new_basename| install_p(s, new_basename) }
-      else
-        install_p(src)
-      end
-    end
-  end
-
-  def install_p src, new_basename = nil
-    raise Errno::ENOENT, src.to_s unless File.symlink?(src) || File.exist?(src)
-
-    if new_basename
-      new_basename = File.basename(new_basename) # rationale: see Pathname.+
-      dst = self+new_basename
-    else
-      dst = self
-    end
-
-    src = src.to_s
-    dst = dst.to_s
-
-    dst = yield(src, dst) if block_given?
-    return unless dst
-
-    mkpath
-
-    # Use FileUtils.mv over File.rename to handle filesystem boundaries. If src
-    # is a symlink, and its target is moved first, FileUtils.mv will fail:
-    #   https://bugs.ruby-lang.org/issues/7707
-    # In that case, use the system "mv" command.
-    if File.symlink? src
-      raise unless Kernel.system 'mv', src, dst
-    else
-      FileUtils.mv src, dst
-    end
-  end
-  protected :install_p
-
-  # Creates symlinks to sources in this folder.
-  def install_symlink *sources
-    sources.each do |src|
-      case src
-      when Array
-        src.each {|s| install_symlink_p(s) }
-      when Hash
-        src.each {|s, new_basename| install_symlink_p(s, new_basename) }
-      else
-        install_symlink_p(src)
-      end
-    end
-  end
-
-  def install_symlink_p src, new_basename=src
-    src = Pathname(src).expand_path(self)
-    dst = join File.basename(new_basename)
-    mkpath
-    FileUtils.ln_sf src.relative_path_from(dst.parent), dst
-  end
-  protected :install_symlink_p
-
   # we assume this pathname object is a file obviously
   alias_method :old_write, :write if method_defined?(:write)
   def write(content, *open_args)
     raise "Will not overwrite #{to_s}" if exist?
     dirname.mkpath
     open("w", *open_args) { |f| f.write(content) }
-  end
-
-  def binwrite(contents, *open_args)
-    open("wb", *open_args) { |f| f.write(contents) }
-  end unless method_defined?(:binwrite)
-
-  def binread(*open_args)
-    open("rb", *open_args) { |f| f.read }
-  end unless method_defined?(:binread)
-
-  # NOTE always overwrites
-  def atomic_write content
-    require "tempfile"
-    tf = Tempfile.new(basename.to_s, dirname)
-    tf.binmode
-    tf.write(content)
-
-    begin
-      old_stat = stat
-    rescue Errno::ENOENT
-      old_stat = default_stat
-    end
-
-    uid = Process.uid
-    gid = Process.groups.delete(old_stat.gid) { Process.gid }
-
-    begin
-      tf.chown(uid, gid)
-      tf.chmod(old_stat.mode)
-    rescue Errno::EPERM
-    end
-
-    File.rename(tf.path, self)
-  ensure
-    tf.close!
-  end
-
-  def default_stat
-    sentinel = parent.join(".brew.#{Process.pid}.#{rand(Time.now.to_i)}")
-    sentinel.open("w") { }
-    sentinel.stat
-  ensure
-    sentinel.unlink
-  end
-  private :default_stat
-
-  def cp dst
-    opoo "Pathname#cp is deprecated, use FileUtils.cp"
-    if file?
-      FileUtils.cp to_s, dst
-    else
-      FileUtils.cp_r to_s, dst
-    end
-    return dst
-  end
-
-  def cp_path_sub pattern, replacement
-    raise "#{self} does not exist" unless self.exist?
-
-    src = self.to_s
-    dst = src.sub(pattern, replacement)
-    raise "#{src} is the same file as #{dst}" if src == dst
-
-    dst_path = Pathname.new dst
-
-    if self.directory?
-      dst_path.mkpath
-      return
-    end
-
-    dst_path.dirname.mkpath
-
-    dst = yield(src, dst) if block_given?
-
-    FileUtils.cp(src, dst)
   end
 
   # extended to support common double extensions
@@ -205,43 +53,6 @@ class Pathname
     Version.parse(self)
   end
 
-  def compression_type
-    case extname
-    when ".jar", ".war"
-      # Don't treat jars or wars as compressed
-      return
-    when ".gz"
-      # If the filename ends with .gz not preceded by .tar
-      # then we want to gunzip but not tar
-      return :gzip_only
-    when ".bz2"
-      return :bzip2_only
-    end
-
-    # Get enough of the file to detect common file types
-    # POSIX tar magic has a 257 byte offset
-    # magic numbers stolen from /usr/share/file/magic/
-    case open('rb') { |f| f.read(262) }
-    when /^PK\003\004/n         then :zip
-    when /^\037\213/n           then :gzip
-    when /^BZh/n                then :bzip2
-    when /^\037\235/n           then :compress
-    when /^.{257}ustar/n        then :tar
-    when /^\xFD7zXZ\x00/n       then :xz
-    when /^LZIP/n               then :lzip
-    when /^Rar!/n               then :rar
-    when /^7z\xBC\xAF\x27\x1C/n then :p7zip
-    when /^xar!/n               then :xar
-    else
-      # This code so that bad-tarballs and zips produce good error messages
-      # when they don't unarchive properly.
-      case extname
-      when ".tar.gz", ".tgz", ".tar.bz2", ".tbz" then :tar
-      when ".zip" then :zip
-      end
-    end
-  end
-
   def text_executable?
     %r[^#!\s*\S+] === open('r') { |f| f.read(1024) }
   end
@@ -255,11 +66,6 @@ class Pathname
       open("rb") { |f| digest << buf while f.read(1024, buf) }
     end
     digest.hexdigest
-  end
-
-  def sha1
-    require 'digest/sha1'
-    incremental_hash(Digest::SHA1)
   end
 
   def sha256
@@ -297,11 +103,6 @@ class Pathname
     (dirname+link).exist?
   end
 
-  def make_relative_symlink(src)
-    dirname.mkpath
-    File.symlink(src.relative_path_from(dirname), self)
-  end
-
   def /(other)
     unless other.respond_to?(:to_str) || other.respond_to?(:to_path)
       opoo "Pathname#/ called on #{inspect} with #{other.inspect} as an argument"
@@ -319,79 +120,6 @@ class Pathname
     yield
   ensure
     chmod saved_perms if saved_perms
-  end
-
-  def install_info
-    quiet_system "/usr/bin/install-info", "--quiet", to_s, "#{dirname}/dir"
-  end
-
-  def uninstall_info
-    quiet_system "/usr/bin/install-info", "--delete", "--quiet", to_s, "#{dirname}/dir"
-  end
-
-  def find_formula
-    [join("Formula"), join("HomebrewFormula"), self].each do |d|
-      if d.exist?
-        d.children.each do |pn|
-          yield pn if pn.extname == ".rb"
-        end
-        break
-      end
-    end
-  end
-
-  # Writes an exec script in this folder for each target pathname
-  def write_exec_script *targets
-    targets.flatten!
-    if targets.empty?
-      opoo "tried to write exec scripts to #{self} for an empty list of targets"
-      return
-    end
-    mkpath
-    targets.each do |target|
-      target = Pathname.new(target) # allow pathnames or strings
-      (self+target.basename()).write <<-EOS.undent
-        #!/bin/bash
-        exec "#{target}" "$@"
-      EOS
-    end
-  end
-
-  # Writes an exec script that sets environment variables
-  def write_env_script target, env
-    env_export = ''
-    env.each {|key, value| env_export += "#{key}=\"#{value}\" "}
-    dirname.mkpath
-    self.write <<-EOS.undent
-    #!/bin/bash
-    #{env_export}exec "#{target}" "$@"
-    EOS
-  end
-
-  # Writes a wrapper env script and moves all files to the dst
-  def env_script_all_files dst, env
-    dst.mkpath
-    Pathname.glob("#{self}/*") do |file|
-      dst.install_p file
-      new_file = dst+file.basename
-      file.write_env_script(new_file, env)
-    end
-  end
-
-  # Writes an exec script that invokes a java jar
-  def write_jar_script target_jar, script_name, java_opts=""
-    mkpath
-    (self+script_name).write <<-EOS.undent
-      #!/bin/bash
-      exec java #{java_opts} -jar #{target_jar} "$@"
-    EOS
-  end
-
-  def abv
-    out=''
-    n=`find #{to_s} -type f ! -name .DS_Store | wc -l`.to_i
-    out << "#{n} files, " if n > 1
-    out << `/usr/bin/du -hs #{to_s} | cut -d"\t" -f1`.strip
   end
 
  if RUBY_VERSION == "2.0.0"
