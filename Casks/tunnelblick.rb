@@ -9,6 +9,7 @@ cask :v1 => 'tunnelblick' do
   license :gpl
 
   app 'Tunnelblick.app'
+
   uninstall :launchctl => 'net.tunnelblick.tunnelblick.LaunchAtLogin',
             :quit      => 'net.tunnelblick.tunnelblick'
 
