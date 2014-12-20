@@ -40,26 +40,4 @@ class Hardware
 
   require 'os/mac/hardware'
   CPU.extend MacCPUs
-
-  def self.cores_as_words
-    case Hardware::CPU.cores
-    when 1 then 'single'
-    when 2 then 'dual'
-    when 4 then 'quad'
-    else
-      Hardware::CPU.cores
-    end
-  end
-
-  def self.oldest_cpu
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        :core2
-      else
-        :core
-      end
-    else
-      Hardware::CPU.family
-    end
-  end
 end

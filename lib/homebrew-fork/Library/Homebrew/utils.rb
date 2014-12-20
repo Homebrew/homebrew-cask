@@ -49,11 +49,6 @@ def ohai title, *sput
   puts sput
 end
 
-def oh1 title
-  title = Tty.truncate(title) if $stdout.tty? && !ARGV.verbose?
-  puts "#{Tty.green}==>#{Tty.white} #{title}#{Tty.reset}"
-end
-
 def opoo warning
   $stderr.puts "#{Tty.red}Warning#{Tty.reset}: #{warning}"
 end
@@ -62,45 +57,7 @@ def onoe error
   $stderr.puts "#{Tty.red}Error#{Tty.reset}: #{error}"
 end
 
-def ofail error
-  onoe error
-  Homebrew.failed = true
-end
-
-def odie error
-  onoe error
-  exit 1
-end
-
 # :stopdoc:
-
-def pretty_duration s
-  return "2 seconds" if s < 3 # avoids the plural problem ;)
-  return "#{s.to_i} seconds" if s < 120
-  return "%.1f minutes" % (s/60)
-end
-
-def plural n, s="s"
-  (n == 1) ? "" : s
-end
-
-def interactive_shell f=nil
-  unless f.nil?
-    ENV['HOMEBREW_DEBUG_PREFIX'] = f.prefix
-    ENV['HOMEBREW_DEBUG_INSTALL'] = f.name
-  end
-
-  Process.wait fork { exec ENV['SHELL'] }
-
-  if $?.success?
-    return
-  elsif $?.exited?
-    puts "Aborting due to non-zero exit status"
-    exit $?.exitstatus
-  else
-    raise $?.inspect
-  end
-end
 
 module Homebrew
   def self.system cmd, *args
@@ -113,10 +70,6 @@ module Homebrew
     end
     Process.wait(pid)
     $?.success?
-  end
-
-  def self.git_head
-    HOMEBREW_REPOSITORY.cd { `git rev-parse --verify -q HEAD 2>/dev/null`.chuzzle }
   end
 end
 
@@ -207,11 +160,6 @@ def exec_editor *args
   safe_exec(which_editor, *args)
 end
 
-def exec_browser *args
-  browser = ENV['HOMEBREW_BROWSER'] || ENV['BROWSER'] || '/usr/bin/open'
-  safe_exec(browser, *args)
-end
-
 def safe_exec cmd, *args
   # This buys us proper argument quoting and evaluation
   # of environment variables in the cmd parameter.
@@ -226,12 +174,6 @@ def gzip *paths
   end
 end
 
-# Returns array of architectures that the given command or library is built for.
-def archs_for_command cmd
-  cmd = which(cmd) unless Pathname.new(cmd).absolute?
-  Pathname.new(cmd).archs
-end
-
 def ignore_interrupts(opt = nil)
   std_trap = trap("INT") do
     puts "One sec, just cleaning up" unless opt == :quietly
@@ -239,21 +181,6 @@ def ignore_interrupts(opt = nil)
   yield
 ensure
   trap("INT", std_trap)
-end
-
-def nostdout
-  if ARGV.verbose?
-    yield
-  else
-    begin
-      out = $stdout.dup
-      $stdout.reopen("/dev/null")
-      yield
-    ensure
-      $stdout.reopen(out)
-      out.close
-    end
-  end
 end
 
 def paths
