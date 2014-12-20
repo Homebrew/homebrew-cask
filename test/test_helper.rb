@@ -1,6 +1,11 @@
 require 'bundler'
 require 'bundler/setup'
 
+# just in case
+if RUBY_VERSION.to_i < 2
+  raise 'brew-cask: Ruby 2.0 or greater is required.'
+end
+
 # force some environment variables
 ENV['HOMEBREW_NO_EMOJI']='1'
 
