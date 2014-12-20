@@ -22,5 +22,4 @@ cask :v1 => 'limechat' do
                   '~/Library/Preferences/net.limechat.LimeChat.plist',
                   '~/Library/Preferences/net.limechat.LimeChat-AppStore.plist'
                  ]
-
 end
