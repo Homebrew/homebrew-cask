@@ -100,11 +100,4 @@ module FileUtils
   def ruby *args
     system RUBY_PATH, *args
   end
-
-  def xcodebuild *args
-    removed = ENV.remove_cc_etc
-    system "xcodebuild", *args
-  ensure
-    ENV.update(removed)
-  end
 end
