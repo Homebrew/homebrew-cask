@@ -6,7 +6,7 @@ cask :v1 => 'lyn' do
   appcast 'http://www.lynapp.com/lyn/update.xml',
           :sha256 => '76e8a68df36fb35893e5ad0c5fd464ec0feb0b6a6f857d6b57792e3c7eb82fb5'
   homepage 'http://www.lynapp.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Lyn.app'
 end
