@@ -4,7 +4,7 @@ cask :v1 => 'pivotalbooster' do
 
   url "http://pivotalbooster.com/downloads/releases/#{version}/PivotalBooster_#{version}.dmg"
   homepage 'http://pivotalbooster.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'PivotalBooster.app'
 end
