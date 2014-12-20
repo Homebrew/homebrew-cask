@@ -7,7 +7,7 @@ cask :v1 => 'lightpaper' do
   appcast 'http://links.clockworkengine.com/lp-mac-update-feed',
           :sha256 => '88b4051a4255b9d82534f3fc502ecab5fa2d7df73a94ef563e02bec7848276c2'
   homepage 'http://clockworkengine.com/lightpaper-mac/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'LightPaper.app'
 end
