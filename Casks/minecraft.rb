@@ -4,7 +4,7 @@ cask :v1 => 'minecraft' do
 
   url 'https://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.dmg'
   homepage 'http://minecraft.net'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Minecraft.app'
 end
