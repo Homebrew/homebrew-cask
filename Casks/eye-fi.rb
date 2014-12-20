@@ -4,7 +4,7 @@ cask :v1 => 'eye-fi' do
 
   url "http://download.eyefi.com/x2/#{version}/Eye-Fi.dmg"
   homepage 'http://support.eye.fi/downloads'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Eye-Fi.mpkg'
 
