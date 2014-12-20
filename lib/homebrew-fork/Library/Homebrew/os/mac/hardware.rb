@@ -1,5 +1,3 @@
-require 'mach'
-
 module MacCPUs
   OPTIMIZATION_FLAGS = {
     :penryn => '-march=core2 -msse4.1',
