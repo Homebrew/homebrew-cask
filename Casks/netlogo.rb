@@ -4,7 +4,7 @@ cask :v1 => 'netlogo' do
 
   url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo%20#{version}.dmg"
   homepage 'http://ccl.northwestern.edu/netlogo/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "NetLogo #{version}/NetLogo #{version}.app"
 end
