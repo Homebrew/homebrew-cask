@@ -4,7 +4,7 @@ cask :v1 => 'shelf-leveler' do
 
   url 'http://download.mrgeckosmedia.com/ShelfLeveler.zip'
   homepage 'https://mrgeckosmedia.com/applications/info/Shelf-Leveler'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Shelf Leveler.app'
 end
