@@ -4,7 +4,7 @@ cask :v1 => 'markdown-service-tools' do
 
   url "http://cdn3.brettterpstra.com/downloads/MarkdownServiceTools#{version}.zip"
   homepage 'http://brettterpstra.com/projects/markdown-service-tools/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   service "MarkdownServiceTools#{version}/md - Code - Make Code Block.workflow"
   service "MarkdownServiceTools#{version}/md - Convert - HTML to Clipboard.workflow"
