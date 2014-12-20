@@ -4,7 +4,7 @@ cask :v1 => 'teeworlds' do
 
   url "https://teeworlds.com/files/teeworlds-#{version}-osx.dmg"
   homepage 'https://www.teeworlds.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Teeworlds.app'
   app 'Teeworlds Server.app'
