@@ -64,19 +64,19 @@ describe Cask::Audit do
       it "adds an error if url is missing" do
         audit = Cask::Audit.new(CaskMissingUrl.new)
         audit.run!
-        expect(audit.errors).to include('url is required')
+        expect(audit.errors).to include('a url stanza is required')
       end
 
       it "adds an error if version is missing" do
         audit = Cask::Audit.new(CaskMissingVersion.new)
         audit.run!
-        expect(audit.errors).to include('version is required')
+        expect(audit.errors).to include('a version stanza is required')
       end
 
       it "adds an error if homepage is missing" do
         audit = Cask::Audit.new(CaskMissingHomepage.new)
         audit.run!
-        expect(audit.errors).to include('homepage is required')
+        expect(audit.errors).to include('a homepage stanza is required')
       end
 
       it "adds an error if version is latest and using sha256" do
