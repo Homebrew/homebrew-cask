@@ -4,7 +4,7 @@ cask :v1 => 'doxygen' do
 
   url "ftp://ftp.stack.nl/pub/users/dimitri/Doxygen-#{version}.dmg"
   homepage 'http://www.stack.nl/~dimitri/doxygen/index.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Doxygen.app'
 end
