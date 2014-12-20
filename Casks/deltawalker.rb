@@ -4,7 +4,7 @@ cask :v1 => 'deltawalker' do
 
   url "https://s3.amazonaws.com/deltawalker/DeltaWalker-#{version}_64.dmg"
   homepage 'http://www.deltopia.com/compare-merge-sync/macosx/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'DeltaWalker.app'
 end
