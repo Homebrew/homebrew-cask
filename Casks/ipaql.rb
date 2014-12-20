@@ -4,7 +4,7 @@ cask :v1 => 'ipaql' do
 
   url "http://ipaql.com/site/assets/files/1006/ipaql_#{version.gsub('.','-')}.zip"
   homepage 'http://ipaql.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   qlplugin 'ipaql.qlgenerator'
 end
