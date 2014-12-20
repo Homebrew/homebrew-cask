@@ -4,7 +4,7 @@ cask :v1 => 'acslogo' do
 
   url "http://www.alancsmith.co.uk/logo/ACSLogo#{version.gsub('.', '')}.dmg"
   homepage 'http://www.alancsmith.co.uk/logo/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'ACSLogo/ACSLogo.app'
 end
