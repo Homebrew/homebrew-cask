@@ -1,10 +1,8 @@
 require 'pathname'
-require 'mach'
 require 'resource'
 
 # we enhance pathname to make our code more readable
 class Pathname
-  include MachO
 
   def install *sources
     sources.each do |src|
