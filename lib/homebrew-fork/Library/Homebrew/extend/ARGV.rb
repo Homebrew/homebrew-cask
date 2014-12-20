@@ -8,6 +8,6 @@ module HomebrewArgvExtension
   end
 
   def options_only
-    select { |arg| arg.start_with?("-") }
+    select { |arg| arg.match('^-') }
   end
 end
