@@ -4,7 +4,7 @@ cask :v1 => 'gn-growler-utility' do
 
   url "http://wafflesoftware.net/growlergn/download/GNGrowler-#{version.gsub('.','')}.zip"
   homepage 'http://wafflesoftware.net/growlergn/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'GN Growler Utility.app'
 end
