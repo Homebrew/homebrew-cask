@@ -7,5 +7,6 @@ cask :v1 => 'cmb-security-plugin' do
   license :closed
 
   pkg 'CMB Security Plugin.pkg'
+
   uninstall :pkgutil => 'com.cmbchina.CMBSecurityPlugin.pkg'
 end
