@@ -4,7 +4,7 @@ cask :v1 => 'controllermate' do
 
   url 'https://s3.amazonaws.com/orderedbytes/ControllerMate.dmg'
   homepage 'http://www.orderedbytes.com/controllermate/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'ControllerMate.pkg'
 
