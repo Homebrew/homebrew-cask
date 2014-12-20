@@ -104,29 +104,8 @@ module OS
         !version.nil? && !prefix.nil?
       end
 
-      # If XQuartz and/or the CLT are installed, headers will be found under
-      # /opt/X11/include or /usr/X11/include. For Xcode-only systems, they are
-      # found in the SDK, so we use sdk_path for both the headers and libraries.
-      # Confusingly, executables (e.g. config scripts) are only found under
-      # /opt/X11/bin or /usr/X11/bin in all cases.
-      def effective_prefix
-        if provided_by_apple? && Xcode.without_clt?
-          Pathname.new("#{OS::Mac.sdk_path}/usr/X11")
-        else
-          prefix
-        end
-      end
-
       def bin
         prefix/"bin"
-      end
-
-      def include
-        effective_prefix/"include"
-      end
-
-      def lib
-        effective_prefix/"lib"
       end
 
       def share

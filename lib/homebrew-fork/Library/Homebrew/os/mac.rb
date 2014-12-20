@@ -1,6 +1,5 @@
 require 'hardware'
 require 'os/mac/version'
-require 'os/mac/xcode'
 require 'os/mac/xquartz'
 
 module OS
@@ -40,40 +39,9 @@ module OS
       @active_developer_dir ||= `xcode-select -print-path 2>/dev/null`.strip
     end
 
-    def sdk_path(v = version)
-      (@sdk_path ||= {}).fetch(v.to_s) do |key|
-        opts = []
-        # First query Xcode itself
-        opts << `#{locate('xcodebuild')} -version -sdk macosx#{v} Path 2>/dev/null`.chomp
-        # Xcode.prefix is pretty smart, so lets look inside to find the sdk
-        opts << "#{Xcode.prefix}/Platforms/MacOSX.platform/Developer/SDKs/MacOSX#{v}.sdk"
-        # Xcode < 4.3 style
-        opts << "/Developer/SDKs/MacOSX#{v}.sdk"
-        @sdk_path[key] = opts.map { |a| Pathname.new(a) }.detect(&:directory?)
-      end
-    end
-
     def default_cc
       cc = locate 'cc'
       cc.realpath.basename.to_s rescue nil
-    end
-
-    def default_compiler
-      case default_cc
-        when /^gcc-4.0/ then :gcc_4_0
-        when /^gcc/ then :gcc
-        when /^llvm/ then :llvm
-        when "clang" then :clang
-        else
-          # guess :(
-          if Xcode.version >= "4.3"
-            :clang
-          elsif Xcode.version >= "4.2"
-            :llvm
-          else
-            :gcc
-          end
-      end
     end
 
     def gcc_40_build_version
@@ -206,23 +174,6 @@ module OS
       "6.0.1" => { :clang => "6.0", :clang_build => 600 },
       "6.1"   => { :clang => "6.0", :clang_build => 600 },
     }
-
-    def compilers_standard?
-      STANDARD_COMPILERS.fetch(Xcode.version.to_s).all? do |method, build|
-        send(:"#{method}_version") == build
-      end
-    rescue IndexError
-      onoe <<-EOS.undent
-        Homebrew doesn't know what compiler versions ship with your version
-        of Xcode (#{Xcode.version}). Please `brew update` and if that doesn't help, file
-        an issue with the output of `brew --config`:
-          https://github.com/Homebrew/homebrew/issues
-
-        Note that we only track stable, released versions of Xcode.
-
-        Thanks!
-      EOS
-    end
 
     def app_with_bundle_id(*ids)
       path = mdfind(*ids).first
