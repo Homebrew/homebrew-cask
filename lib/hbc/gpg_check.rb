@@ -5,6 +5,7 @@ class Hbc::GpgCheck
     @command = command
     @cask = cask
     @available = @cask.gpg ? installed? : false
+    @successful = nil
   end
 
   def installed?
@@ -42,9 +43,9 @@ class Hbc::GpgCheck
     sig = fetch_sig
 
     ohai "Verifying GPG signature for #{@cask}"
+    check = @command.run('gpg', :args => ['--verify', sig, file],
+                                :print_stdout => true)
 
-    @command.run!('gpg',
-                  :args => ['--verify', sig, file],
-                  :print_stdout => true)
+    @successful = check.success?
   end
 end
