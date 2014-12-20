@@ -4,7 +4,7 @@ cask :v1 => 'alinof-timer' do
 
   url 'http://www.alinofsoftware.ch/resources/AlinofTimer.pkg'
   homepage 'http://www.alinofsoftware.ch/en/products/products-timer/index.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'AlinofTimer.pkg', :allow_untrusted => true
 
