@@ -1,6 +1,6 @@
 cask :v1 => 'gdal-framework' do
   version '1.11.1-1'
-  sha256 'b5b3a62ead9e2bdff9b85eccf42dbc628f384f89eff33fe150933ddaa841d25b'
+  sha256 '5da0f059bdc6e93cc11165eaf66896879b63922c4c37e09eed642dd9c402b5fb'
 
   url "http://www.kyngchaos.com/files/software/frameworks/GDAL_Complete-#{version.sub(%r{^(\d+\.\d+).*},'\1')}.dmg"
   homepage 'http://www.kyngchaos.com/software/frameworks'
