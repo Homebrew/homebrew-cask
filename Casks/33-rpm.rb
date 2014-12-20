@@ -4,7 +4,7 @@ cask :v1 => '33-rpm' do
 
   url 'http://www.edenwaith.com/downloads/33rpm.dmg'
   homepage 'http://www.edenwaith.com/products/33rpm/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app '33 RPM.app'
 end
