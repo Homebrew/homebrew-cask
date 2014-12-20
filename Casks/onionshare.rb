@@ -6,7 +6,7 @@ cask :v1 => 'onionshare' do
   gpg "#{url}.sig",
       :key_url => 'https://onionshare.org/signing-key.asc'
   homepage 'https://onionshare.org/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'OnionShare.app'
 end
