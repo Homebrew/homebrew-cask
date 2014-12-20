@@ -4,7 +4,7 @@ cask :v1 => 'mendeley-desktop' do
 
   url "http://desktop-download.mendeley.com/download/Mendeley-Desktop-#{version}-OSX-Universal.dmg"
   homepage 'http://www.mendeley.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Mendeley Desktop.app'
 end
