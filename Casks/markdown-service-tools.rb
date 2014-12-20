@@ -39,5 +39,4 @@ cask :v1 => 'markdown-service-tools' do
   service "MarkdownServiceTools#{version}/md - Wrap - Angle Brackets.workflow"
   service "MarkdownServiceTools#{version}/md - Wrap - Parenthesis.workflow"
   service "MarkdownServiceTools#{version}/md - Wrap - Square Brackets.workflow"
-
 end
