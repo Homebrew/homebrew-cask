@@ -5,7 +5,7 @@ cask :v1 => 'gisto' do
   url "http://download.gistoapp.com/Gisto-#{version}-OSX_x86.dmg"
   appcast 'http://www.gistoapp.com/GistoAppCast.xml'
   homepage 'http://www.gistoapp.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Gisto.app'
 end
