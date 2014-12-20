@@ -4,6 +4,7 @@ cask :v1 => 'onlabs' do
 
   url "https://github.com/lalyos/onlabs/releases/download/v#{version}/onlabs_darwin_amd64"
   homepage 'https://github.com/lalyos/onlabs'
+  license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :type => :naked
 
