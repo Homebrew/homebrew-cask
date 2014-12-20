@@ -5,7 +5,7 @@ cask :v1 => 'soulver' do
   url 'http://www.acqualia.com/files/download.php?product=soulver'
   appcast 'http://www.acqualia.com/soulver/appcast/soulver2.xml'
   homepage 'http://www.acqualia.com/soulver/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Soulver.app'
 
