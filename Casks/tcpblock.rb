@@ -4,7 +4,7 @@ cask :v1 => 'tcpblock' do
 
   url "http://www.delantis.com/dist/TCPBlock_v#{version}.dmg"
   homepage 'http://tcpblock.wordpress.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "TCPBlock_v#{version}.pkg"
 
