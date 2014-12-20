@@ -4,7 +4,7 @@ cask :v1 => 'ridibooks' do
 
   url 'http://ridibooks.com/getapp?os=mac'
   homepage 'http://ridibooks.com/support/introduce_appdown'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :type => :naked
   preflight do
