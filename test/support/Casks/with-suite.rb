@@ -4,6 +4,7 @@ cask :v1 => 'with-suite' do
 
   url TestHelper.local_binary_url('caffeine_suite.zip')
   homepage 'http://example.com/with-suite'
+  license :unknown
 
   suite 'caffeine_suite'
 end
