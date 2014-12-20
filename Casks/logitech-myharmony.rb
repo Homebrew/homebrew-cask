@@ -4,7 +4,7 @@ cask :v1 => 'logitech-myharmony' do
 
   url "http://app.myharmony.com/prod/mac/#{version}/MyHarmony-App.dmg"
   homepage 'https://setup.myharmony.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'MyHarmonySetup.pkg'
 
