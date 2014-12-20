@@ -4,7 +4,7 @@ cask :v1 => 'myphonedesktop' do
 
   url "http://www.myphonedesktop.com/dwn/myPhoneDesktop_macos_#{version.gsub('.','_')}.dmg"
   homepage 'http://www.myphonedesktop.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'myPhoneDesktop.app'
 end
