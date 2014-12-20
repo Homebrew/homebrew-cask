@@ -4,7 +4,7 @@ cask :v1 => 'ireadfast' do
 
   url "http://www.gengis.net/downloads/iReadFast%20#{version}.dmg"
   homepage 'http://www.gengis.net/prodotti/iReadFast_Mac/en/index.php'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iReadFast.app'
 end
