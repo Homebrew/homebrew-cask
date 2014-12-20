@@ -4,7 +4,7 @@ cask :v1 => 'younited' do
 
   url 'https://download.sp.f-secure.com/younited/younited.dmg'
   homepage 'http://www.younited.com/index.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'younited.app'
 end
