@@ -4,7 +4,7 @@ cask :v1 => 'time-sink' do
 
   url 'http://manytricks.com/download/timesink'
   homepage 'http://manytricks.com/timesink/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Time Sink.app'
 end
