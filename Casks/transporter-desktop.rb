@@ -4,7 +4,7 @@ cask :v1 => 'transporter-desktop' do
 
   url "https://secure.connecteddata.com/mac/2.5/software/Transporter_Desktop_#{version}.dmg"
   homepage 'http://www.filetransporter.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Transporter Desktop.app'
 end
