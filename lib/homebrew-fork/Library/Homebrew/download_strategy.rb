@@ -30,7 +30,6 @@ class AbstractDownloadStrategy
 
   # All download strategies are expected to implement these methods
   def fetch; end
-  def stage; end
   def cached_location; end
   def clear_cache; end
 end
@@ -146,50 +145,11 @@ class CurlDownloadStrategy < AbstractDownloadStrategy
     end
   end
 
-  def stage
-    case tarball_path.compression_type
-    when :zip
-      with_system_path { quiet_safe_system 'unzip', {:quiet_flag => '-qq'}, tarball_path }
-      chdir
-    when :gzip_only
-      with_system_path { buffered_write("gunzip") }
-    when :bzip2_only
-      with_system_path { buffered_write("bunzip2") }
-    when :gzip, :bzip2, :compress, :tar
-      # Assume these are also tarred
-      # TODO check if it's really a tar archive
-      with_system_path { safe_system 'tar', 'xf', tarball_path }
-      chdir
-    when :xz
-      with_system_path { safe_system "#{xzpath} -dc \"#{tarball_path}\" | tar xf -" }
-      chdir
-    when :lzip
-      with_system_path { safe_system "#{lzippath} -dc \"#{tarball_path}\" | tar xf -" }
-      chdir
-    when :xar
-      safe_system "/usr/bin/xar", "-xf", tarball_path
-    when :rar
-      quiet_safe_system 'unrar', 'x', {:quiet_flag => '-inul'}, tarball_path
-    when :p7zip
-      safe_system '7zr', 'x', tarball_path
-    else
-      FileUtils.cp tarball_path, basename_without_params
-    end
-  end
-
   private
 
   def curl(*args)
     args << '--connect-timeout' << '5' unless mirrors.empty?
     super
-  end
-
-  def xzpath
-    "#{HOMEBREW_PREFIX}/opt/xz/bin/xz"
-  end
-
-  def lzippath
-    "#{HOMEBREW_PREFIX}/opt/lzip/bin/lzip"
   end
 
   def chdir
@@ -262,10 +222,6 @@ class SubversionDownloadStrategy < VCSDownloadStrategy
     else
       fetch_repo @clone, @url
     end
-  end
-
-  def stage
-    quiet_safe_system 'svn', 'export', '--force', @clone, Dir.pwd
   end
 
   def shell_quote str
