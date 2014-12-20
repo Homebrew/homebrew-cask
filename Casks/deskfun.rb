@@ -6,7 +6,7 @@ cask :v1 => 'deskfun' do
   appcast 'http://www.furrysoft.de/appcast/DeskFun.xml',
           :sha256 => '57ed0eb9f5e08f7879eb825012bfb2b8ad21387aad8b35adce4f6659eb1b7999'
   homepage 'http://www.furrysoft.de/?page=deskfun'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'DeskFun.app'
 end
