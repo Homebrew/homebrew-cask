@@ -4,7 +4,7 @@ cask :v1 => 'ocenaudio' do
 
   url 'http://www.ocenaudio.com.br/downloads/ocenaudio.dmg'
   homepage 'http://www.ocenaudio.com.br/en'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'ocenaudio.app'
 end
