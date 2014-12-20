@@ -6,7 +6,7 @@ cask :v1 => 'espionage' do
   gpg "#{url}.sig",
       :key_url => 'https://www.taoeffect.com/other/A884B988.asc'
   homepage 'https://www.espionageapp.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Espionage.app'
 end
