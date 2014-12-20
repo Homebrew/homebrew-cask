@@ -6,7 +6,7 @@ cask :v1 => 'easyvpn' do
   appcast 'http://www.squashedsoftware.com/appcasts/easyvpn.xml',
           :sha256 => '36947804161daa7040c9d8cb7d682f223f65577d3ad4a16129e9e53ccf66270e'
   homepage 'http://www.squashedsoftware.com/products-easyvpn.php'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'EasyVPN.app'
 end
