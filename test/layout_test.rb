@@ -37,6 +37,7 @@ describe "Repo layout" do
   TOPLEVEL_FILES = %w{
                       .gitignore
                       .rspec
+                      .simplecov
                       .travis.yml
                       CONDUCT.md
                       CONTRIBUTING.md
