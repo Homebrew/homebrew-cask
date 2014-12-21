@@ -1,6 +1,6 @@
 cask :v1 => 'synthesia' do
-  version '9.0'
-  sha256 '4b3ed729994c4a76ca0bb777516f0737f218eb033d9e02e8af2a5a1a531f6ce8'
+  version '10.0'
+  sha256 '741df1e7c4ae014e1c01a9d3d3b3c1e3b619154aac0fc26e809e442713075c6b'
 
   url "https://synthesia.s3.amazonaws.com/files/Synthesia-#{version}.dmg"
   homepage 'http://www.synthesiagame.com'
