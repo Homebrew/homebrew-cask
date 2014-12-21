@@ -1,11 +1,11 @@
 cask :v1 => 'libreoffice' do
-  version '4.3.4'
+  version '4.3.5'
 
   if Hardware::CPU.is_32_bit? or MacOS.release < :mountain_lion
-    sha256 '9e466cdd41ab29e0845267f6e46ed7c6edb79b36b4bcb121edd0df55aee4e53c'
+    sha256 '0121e87396a880884a6fac02e7799fe5bc4cbfe0e346a60aa21176acbd44602f'
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86/LibreOffice_#{version}_MacOS_x86.dmg"
   else
-    sha256 '5389a93a32c7f9c6a410bee1f7ee0fa4cf0802becb6f896b663799f275b05f2e'
+    sha256 '46d33f40207fcdc8737e44ee951432727ed19788721746ea44e59cc14da15553'
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
   end
   gpg "#{url}.asc",
