@@ -52,7 +52,6 @@ HOMEBREW_USER_AGENT = "Homebrew-cask v0.51+ (Ruby #{RUBY_VERSION}-#{RUBY_PATCHLE
 HOMEBREW_CURL_ARGS = '-f#LA'
 
 module Homebrew
-  include FileUtils
   extend self
 
   attr_accessor :failed
