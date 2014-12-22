@@ -13,6 +13,7 @@ cask :v1 => 'mpv' do
                   '~/.mpv/channels.conf',
                   '~/.mpv/config',
                   '~/.mpv/input.conf',
+                  '~/.config/mpv/mpv.conf',
                  ],
       :rmdir  => '~/.mpv'
 
