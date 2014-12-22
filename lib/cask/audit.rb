@@ -11,7 +11,7 @@ class Cask::Audit
   end
 
   def run!(download = false)
-    _check_required_fields
+    _check_required_stanzas
     _check_no_string_version_latest
     _check_checksums
     _check_sha256_no_check_if_latest
@@ -25,17 +25,22 @@ class Cask::Audit
   end
 
 
-  def _check_required_fields
-    odebug "Auditing required fields"
-    add_error "url is required" unless cask.url
-    add_error "version is required" unless cask.version
-    add_error "homepage is required" unless cask.homepage
+  def _check_required_stanzas
+    odebug "Auditing required stanzas"
+    %i{version url homepage}.each do |sym|
+      add_error "a #{sym} stanza is required" unless cask.send(sym)
+    end
+    add_error 'a license value is required (:unknown is OK)' unless cask.license
+    # todo: specific DSL knowledge should not be spread around in various files like this
+    # todo: nested_container should not still be a pseudo-artifact at this point
+    installable_artifacts = cask.artifacts.reject{ |k,v| [:uninstall, :zap, :nested_container].include?(k)}
+    add_error 'at least one activatable artifact stanza is required' unless installable_artifacts.size > 0
   end
 
   def _check_checksums
     odebug "Auditing checksums"
     return if cask.sums == :no_check
-    add_error "sha256 is required" unless cask.sums.is_a?(Array) && cask.sums.length > 0
+    add_error 'a sha256 stanza is required' unless cask.sums.is_a?(Array) && cask.sums.length > 0
   end
 
   def _check_no_string_version_latest
