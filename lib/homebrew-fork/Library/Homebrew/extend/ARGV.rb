@@ -1,4 +1,4 @@
-module HomebrewArgvExtension
+module HomebrewForkArgvExtension
   def verbose?
     flag? '--verbose' or !ENV['VERBOSE'].nil? or !ENV['HOMEBREW_VERBOSE'].nil?
   end

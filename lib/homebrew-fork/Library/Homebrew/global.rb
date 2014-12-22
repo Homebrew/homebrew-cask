@@ -1,12 +1,9 @@
 require 'extend/pathname'
 require 'extend/ARGV'
 require 'extend/string'
-require 'utils'
 require 'exceptions'
-require 'set'
-require 'rbconfig'
 
-ARGV.extend(HomebrewArgvExtension)
+ARGV.extend(HomebrewForkArgvExtension)
 
 def cache
   if ENV['HOMEBREW_CACHE']
@@ -50,10 +47,3 @@ HOMEBREW_GITHUB_API_TOKEN = ENV["HOMEBREW_GITHUB_API_TOKEN"]
 HOMEBREW_USER_AGENT = "Homebrew-cask v0.51+ (Ruby #{RUBY_VERSION}-#{RUBY_PATCHLEVEL}; #{MACOS_VERSION})"
 
 HOMEBREW_CURL_ARGS = '-f#LA'
-
-module Homebrew
-  extend self
-
-  attr_accessor :failed
-  alias_method :failed?, :failed
-end
