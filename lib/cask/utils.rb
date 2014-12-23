@@ -1,3 +1,4 @@
+# coding: utf-8
 # see Homebrew Library/Homebrew/utils.rb
 
 require 'yaml'
@@ -101,7 +102,7 @@ module Cask::Utils
        :version,
        :license,
        :tags,
-       :sums,
+       :sha256,
        :artifacts,
        :caveats,
        :depends_on,

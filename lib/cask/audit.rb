@@ -13,7 +13,6 @@ class Cask::Audit
   def run!(download = false)
     _check_required_stanzas
     _check_no_string_version_latest
-    _check_checksums
     _check_sha256_no_check_if_latest
     _check_sourceforge_download_url_format
     _check_download(download) if download
@@ -27,7 +26,7 @@ class Cask::Audit
 
   def _check_required_stanzas
     odebug "Auditing required stanzas"
-    %i{version url homepage}.each do |sym|
+    %i{version sha256 url homepage}.each do |sym|
       add_error "a #{sym} stanza is required" unless cask.send(sym)
     end
     add_error 'a license value is required (:unknown is OK)' unless cask.license
@@ -35,12 +34,6 @@ class Cask::Audit
     # todo: nested_container should not still be a pseudo-artifact at this point
     installable_artifacts = cask.artifacts.reject{ |k,v| [:uninstall, :zap, :nested_container].include?(k)}
     add_error 'at least one activatable artifact stanza is required' unless installable_artifacts.size > 0
-  end
-
-  def _check_checksums
-    odebug "Auditing checksums"
-    return if cask.sums == :no_check
-    add_error 'a sha256 stanza is required' unless cask.sums.is_a?(Array) && cask.sums.length > 0
   end
 
   def _check_no_string_version_latest
@@ -52,7 +45,7 @@ class Cask::Audit
 
   def _check_sha256_no_check_if_latest
     odebug "Verifying sha256 :no_check with version :latest"
-    if cask.version == :latest and cask.sums.is_a?(Array)
+    if cask.version == :latest and cask.sha256 != :no_check
       add_error "you should use sha256 :no_check when version is :latest"
     end
   end
