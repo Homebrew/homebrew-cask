@@ -2,6 +2,7 @@ require 'extend/pathname'
 require 'extend/ARGV'
 require 'extend/string'
 require 'exceptions'
+require 'utils'
 
 ARGV.extend(HomebrewForkArgvExtension)
 
