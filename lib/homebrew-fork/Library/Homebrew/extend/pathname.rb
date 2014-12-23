@@ -100,7 +100,7 @@ class Pathname
     chmod saved_perms if saved_perms
   end
 
- if RUBY_VERSION == "2.0.0"
+  if RUBY_VERSION == "2.0.0"
     # https://bugs.ruby-lang.org/issues/9915
     prepend Module.new {
       def inspect
