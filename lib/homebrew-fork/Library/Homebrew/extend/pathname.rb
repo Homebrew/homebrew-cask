@@ -42,12 +42,6 @@ class Pathname
     false
   end
 
-  def chmod_R perms
-    opoo "Pathname#chmod_R is deprecated, use FileUtils.chmod_R"
-    require 'fileutils'
-    FileUtils.chmod_R perms, to_s
-  end
-
   def version
     require 'version'
     Version.parse(self)
@@ -64,23 +58,6 @@ class Pathname
     Dir.chdir(self){ yield }
   end
 
-  def subdirs
-    children.select{ |child| child.directory? }
-  end
-
-  def resolved_path
-    self.symlink? ? dirname+readlink : self
-  end
-
-  def resolved_path_exists?
-    link = readlink
-  rescue ArgumentError
-    # The link target contains NUL bytes
-    false
-  else
-    (dirname+link).exist?
-  end
-
   def /(other)
     unless other.respond_to?(:to_str) || other.respond_to?(:to_path)
       opoo "Pathname#/ called on #{inspect} with #{other.inspect} as an argument"
@@ -88,17 +65,6 @@ class Pathname
     end
     self + other.to_s
   end unless method_defined?(:/)
-
-  def ensure_writable
-    saved_perms = nil
-    unless writable_real?
-      saved_perms = stat.mode
-      chmod 0644
-    end
-    yield
-  ensure
-    chmod saved_perms if saved_perms
-  end
 
   if RUBY_VERSION == "2.0.0"
     # https://bugs.ruby-lang.org/issues/9915
