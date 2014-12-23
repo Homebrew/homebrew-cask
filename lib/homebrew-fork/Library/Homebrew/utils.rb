@@ -59,28 +59,26 @@ end
 
 # :stopdoc:
 
-module Homebrew
-  def self.system cmd, *args
-    puts "#{cmd} #{args*' '}" if ARGV.verbose?
-    pid = fork do
-      yield if block_given?
-      args.collect!{|arg| arg.to_s}
-      exec(cmd, *args) rescue nil
-      exit! 1 # never gets here unless exec failed
-    end
-    Process.wait(pid)
-    $?.success?
+def homebrew_fork_system cmd, *args
+  puts "#{cmd} #{args*' '}" if ARGV.verbose?
+  pid = fork do
+    yield if block_given?
+    args.collect!{|arg| arg.to_s}
+    exec(cmd, *args) rescue nil
+    exit! 1 # never gets here unless exec failed
   end
+  Process.wait(pid)
+  $?.success?
 end
 
 # Kernel.system but with exceptions
 def safe_system cmd, *args
-  Homebrew.system(cmd, *args) or raise ErrorDuringExecution.new(cmd, args)
+  homebrew_fork_system(cmd, *args) or raise ErrorDuringExecution.new(cmd, args)
 end
 
 # prints no output
 def quiet_system cmd, *args
-  Homebrew.system(cmd, *args) do
+  homebrew_fork_system(cmd, *args) do
     # Redirect output streams to `/dev/null` instead of closing as some programs
     # will fail to execute if they can't write to an open stream.
     $stdout.reopen('/dev/null')

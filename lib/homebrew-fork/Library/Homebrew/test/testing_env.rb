@@ -28,4 +28,4 @@ MACOS_VERSION = ENV.fetch('MACOS_VERSION') { MACOS_FULL_VERSION[/10\.\d+/] }
 
 # required for many tests
 # eg: undefined method `verbose?' for []:Array
-ARGV.extend(HomebrewArgvExtension)
+ARGV.extend(HomebrewForkArgvExtension)
