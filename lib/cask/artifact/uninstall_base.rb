@@ -1,3 +1,5 @@
+require 'set'
+
 class Cask::Artifact::UninstallBase < Cask::Artifact::Base
 
   # todo: 500 is also hardcoded in cask/pkg.rb, but much of
