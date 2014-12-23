@@ -1,0 +1,1 @@
+require 'cask/extend/string'

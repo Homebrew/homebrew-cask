@@ -4,7 +4,6 @@ $:.push(File.expand_path(__FILE__+'/../..'))
 
 require 'extend/pathname'
 require 'extend/ARGV'
-require 'extend/string'
 require 'utils'
 require 'tmpdir'
 
