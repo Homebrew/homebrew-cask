@@ -38,13 +38,4 @@ class Pathname
     end
     self + other.to_s
   end unless method_defined?(:/)
-
-  if RUBY_VERSION == "2.0.0"
-    # https://bugs.ruby-lang.org/issues/9915
-    prepend Module.new {
-      def inspect
-        super.force_encoding(@path.encoding)
-      end
-    }
-  end
 end
