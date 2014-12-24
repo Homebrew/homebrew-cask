@@ -3,7 +3,7 @@ cask :v1 => 'indigo' do
   sha256 :no_check
 
   url 'http://cloud.goprism.com/download/Indigo.dmg'
-  homepage 'http://www.perceptiveautomation.com/indigo/index.html'
+  homepage 'http://www.perceptiveautomation.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Indigo Installer.pkg'
