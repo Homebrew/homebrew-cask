@@ -3,7 +3,7 @@ cask :v1 => 'vistrails' do
   sha256 '38ac9da9af7a557cee6eb703517e38ea1bcc430706a436a182eec6f976275b02'
 
   url "http://downloads.sourceforge.net/project/vistrails/vistrails/v#{version}/vistrails-mac-10.6-intel-#{version}-90975fc00211.dmg"
-  homepage 'http://www.vistrails.org/index.php/Main_Page'
+  homepage 'http://www.vistrails.org/'
   license :oss
 
   suite 'VisTrails'

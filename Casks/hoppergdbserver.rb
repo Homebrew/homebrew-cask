@@ -5,7 +5,7 @@ cask :v1 => 'hoppergdbserver' do
   url "http://www.hopperapp.com/HopperGDBServer/HopperGDBServer-#{version}.zip"
   appcast 'http://www.hopperapp.com/HopperGDBServer/appcast.xml',
           :sha256 => 'b554d3f681960d00d94bdce4db2efe1cc6addc69db9441e359839d6f2379924b'
-  homepage 'http://www.hopperapp.com/HopperGDBServer/index.html'
+  homepage 'http://www.hopperapp.com/HopperGDBServer/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'HopperGDBServer.app'

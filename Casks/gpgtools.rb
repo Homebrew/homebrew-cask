@@ -5,7 +5,7 @@ cask :v1 => 'gpgtools' do
   url "https://releases.gpgtools.org/GPG%20Suite%20-%20#{version}.dmg"
   gpg "#{url}.sig",
       :key_url => 'https://gpgtools.org/GPGTools%2000D026C4.asc'
-  homepage 'https://gpgtools.org/index.html'
+  homepage 'https://gpgtools.org/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install.pkg'

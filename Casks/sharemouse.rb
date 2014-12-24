@@ -3,7 +3,7 @@ cask :v1 => 'sharemouse' do
   sha256 :no_check
 
   url 'http://www.keyboard-and-mouse-sharing.com/ShareMouseSetup.dmg'
-  homepage 'http://www.keyboard-and-mouse-sharing.com/index.html'
+  homepage 'http://www.keyboard-and-mouse-sharing.com/'
   license :closed
 
   app 'ShareMouse.app'

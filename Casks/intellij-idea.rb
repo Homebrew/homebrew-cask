@@ -3,7 +3,7 @@ cask :v1 => 'intellij-idea' do
   sha256 'cfab01c2b5b7265f0cf7b365872180261154a5e3ff1fc710c545d36e1f936a7b'
 
   url "http://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
-  homepage 'https://www.jetbrains.com/idea/index.html'
+  homepage 'https://www.jetbrains.com/idea/'
   license :commercial
 
   app 'IntelliJ IDEA 14.app'
