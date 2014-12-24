@@ -4,6 +4,7 @@ class Cask; end
 
 require 'download_strategy'
 
+require 'cask/extend'
 require 'cask/artifact'
 require 'cask/audit'
 require 'cask/auditor'
