@@ -6,7 +6,7 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
   #
   # If no tokens are given, then data for all Casks is returned.
   #
-  # The pseudo-stanzas "artifacts" and "sums" are available.
+  # The pseudo-stanza "artifacts" is available.
   #
   # On failure, a blank line is returned on the standard output.
   #
@@ -70,7 +70,6 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
 
   def self.print_stanzas(stanza, format=nil, table=nil, quiet=nil, *cask_tokens)
     count = 0
-    stanza = :sums      if stanza == :sha256
     stanza = :full_name if stanza == :name
     if ARTIFACTS.include?(stanza)
       artifact_name = stanza
@@ -118,9 +117,6 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
       else
         if artifact_name or value.is_a?(Symbol)
           puts value.inspect
-        elsif stanza == :sums
-          # hack. why does "to_s" equal "inspect" for checksum objects?
-          puts value
         else
           puts value.to_s
         end

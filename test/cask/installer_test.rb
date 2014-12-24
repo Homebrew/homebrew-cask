@@ -162,7 +162,7 @@ describe Cask::Installer do
         shutup do
           Cask::Installer.new(bad_checksum).install
         end
-      }.must_raise(ChecksumMismatchError)
+      }.must_raise(CaskSha256MismatchError)
     end
 
     it "blows up on a missing checksum" do
@@ -171,7 +171,7 @@ describe Cask::Installer do
         shutup do
           Cask::Installer.new(missing_checksum).install
         end
-      }.must_raise(ChecksumMissingError)
+      }.must_raise(CaskSha256MissingError)
     end
 
     it "installs fine if sha256 :no_check is used" do

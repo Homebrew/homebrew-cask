@@ -57,28 +57,6 @@ class Pathname
     %r[^#!\s*\S+] === open('r') { |f| f.read(1024) }
   end
 
-  def incremental_hash(klass)
-    digest = klass.new
-    if digest.respond_to?(:file)
-      digest.file(self)
-    else
-      buf = ""
-      open("rb") { |f| digest << buf while f.read(1024, buf) }
-    end
-    digest.hexdigest
-  end
-
-  def sha256
-    require 'digest/sha2'
-    incremental_hash(Digest::SHA2)
-  end
-
-  def verify_checksum expected
-    raise ChecksumMissingError if expected.nil? or expected.empty?
-    actual = Checksum.new(expected.hash_type, send(expected.hash_type).downcase)
-    raise ChecksumMismatchError.new(self, expected, actual) unless expected == actual
-  end
-
   # FIXME eliminate the places where we rely on this method
   alias_method :to_str, :to_s unless method_defined?(:to_str)
 

@@ -1,5 +1,4 @@
 require 'download_strategy'
-require 'checksum'
 require 'version'
 
 # Resource is the fundamental representation of an external resource. The
@@ -7,8 +6,8 @@ require 'version'
 # of this class.
 class Resource
 
-  attr_reader :checksum, :mirrors, :specs, :using
-  attr_writer :url, :checksum, :version
+  attr_reader :mirrors, :specs, :using
+  attr_writer :url, :version
   attr_accessor :download_strategy
 
   # Formula name must be set after the DSL, as we have no access to the
@@ -21,7 +20,6 @@ class Resource
     @version = nil
     @mirrors = []
     @specs = {}
-    @checksum = nil
     @using = nil
     instance_eval(&block) if block_given?
   end
@@ -85,21 +83,6 @@ class Resource
     raise RuntimeError.new
   else
     cached_download
-  end
-
-  def verify_download_integrity fn
-    if fn.respond_to?(:file?) && fn.file?
-      ohai "Verifying #{fn.basename} checksum" if ARGV.verbose?
-      fn.verify_checksum(checksum)
-    end
-  rescue ChecksumMissingError
-    opoo "Cannot verify integrity of #{fn.basename}"
-    puts "A checksum was not provided for this resource"
-    puts "For your reference the SHA1 is: #{fn.sha1}"
-  end
-
-  Checksum::TYPES.each do |type|
-    define_method(type) { |val| @checksum = Checksum.new(type, val) }
   end
 
   def url val=nil, specs={}

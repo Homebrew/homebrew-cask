@@ -114,9 +114,7 @@ describe Cask::DSL do
         sha256 'imasha2'
       end
       instance = ChecksumCask.new
-      instance.sums.must_equal [
-                                Checksum.new(:sha2, 'imasha2')
-                               ]
+      instance.sha256.must_equal 'imasha2'
     end
   end
 

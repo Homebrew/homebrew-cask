@@ -103,3 +103,25 @@ class CaskInvalidError < CaskError
     "Cask '#{token}' definition is invalid" + (submsg.length > 0 ? ": #{submsg}" : '')
   end
 end
+
+class CaskSha256MissingError < ArgumentError
+end
+
+class CaskSha256MismatchError < RuntimeError
+  attr_reader :path, :expected, :actual
+  def initialize(path, expected, actual)
+    @path = path
+    @expected = expected
+    @actual = actual
+  end
+
+  def to_s
+    <<-EOS.undent
+      sha256 mismatch
+      Expected: #{expected}
+      Actual: #{actual}
+      File: #{path}
+      To retry an incomplete download, remove the file above.
+      EOS
+  end
+end
