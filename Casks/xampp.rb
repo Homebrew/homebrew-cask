@@ -4,7 +4,7 @@ cask :v1 => 'xampp' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/xampp/XAMPP%20Mac%20OS%20X/#{version.sub(%r{-\d+$},'')}/xampp-osx-#{version}-installer.dmg"
-  homepage 'http://www.apachefriends.org/index.html'
+  homepage 'http://www.apachefriends.org/'
   license :oss
 
   installer :manual => 'XAMPP.app'
