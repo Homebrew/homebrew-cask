@@ -1,17 +1,7 @@
 require 'pathname'
 require 'resource'
 
-# we enhance pathname to make our code more readable
 class Pathname
-
-  # we assume this pathname object is a file obviously
-  alias_method :old_write, :write if method_defined?(:write)
-  def write(content, *open_args)
-    raise "Will not overwrite #{to_s}" if exist?
-    dirname.mkpath
-    open("w", *open_args) { |f| f.write(content) }
-  end
-
   # extended to support common double extensions
   alias extname_old extname
   def extname(path=to_s)
