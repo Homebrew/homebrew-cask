@@ -27,10 +27,6 @@ class Pathname
   # FIXME eliminate the places where we rely on this method
   alias_method :to_str, :to_s unless method_defined?(:to_str)
 
-  def cd
-    Dir.chdir(self){ yield }
-  end
-
   def /(other)
     unless other.respond_to?(:to_str) || other.respond_to?(:to_path)
       opoo "Pathname#/ called on #{inspect} with #{other.inspect} as an argument"
