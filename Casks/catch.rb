@@ -5,7 +5,7 @@ cask :v1 => 'catch' do
   url "https://github.com/mipstian/catch/releases/download/#{version}/Catch-#{version}.zip"
   appcast 'https://raw.github.com/mipstian/catch/master/update/appcast.xml',
           :sha256 => 'd559363812ead3090bf597711821d4e47dd281e7695f4e377767fffd56637a2d'
-  homepage 'http://www.giorgiocalderolla.com/index.html'
+  homepage 'http://www.giorgiocalderolla.com/'
   license :oss
 
   app 'Catch.app'
