@@ -3,7 +3,7 @@ cask :v1 => 'keystore-explorer' do
   sha256 '64932fc5a26bd4de32d952b73431307c9a7c3100c1b11e76ab9f55e2a2cf7d49'
 
   url "http://downloads.sourceforge.net/project/keystore-explorer/KSE%20#{version}/kse-#{version.gsub('.','')}.dmg"
-  homepage 'http://keystore-explorer.sourceforge.net/index.php'
+  homepage 'http://keystore-explorer.sourceforge.net/'
   license :oss
 
   app "KeyStore Explorer #{version}.app"
