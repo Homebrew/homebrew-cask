@@ -75,7 +75,7 @@ def odebug title, *sput
     if $stdout.tty? and title.to_s.length > width
       title = title.to_s[0, width - 3] + '...'
     end
-    puts "#{Tty.magenta}==>#{Tty.white} #{title}#{Tty.reset}"
+    puts "#{Tty.magenta.bold}==>#{Tty.white} #{title}#{Tty.reset}"
     puts sput unless sput.empty?
   end
 end
@@ -157,15 +157,15 @@ module Cask::Utils
 
   def self.error_message_with_suggestions
     <<-EOS.undent
-    #{ Tty.reset }
-      #{ Tty.white }Most likely, this means you have #{
-      }an outdated version of homebrew-cask. Please run:
+    #{ Tty.reset.white.bold }
+      Most likely, this means you have an outdated version of homebrew-cask.#{
+      } Please run:
 
-          #{ Tty.reset }#{ Tty.green }#{ UPDATE_CMD }#{ Tty.reset }
+          #{ Tty.green.normal }#{ UPDATE_CMD }
 
-      #{ Tty.white }If this doesn’t fix the problem, please report this bug:
+      #{ Tty.white.bold }If this doesn’t fix the problem, please report this bug:
 
-          #{ Tty.em }#{ Tty.white }#{ ISSUES_URL }#{ Tty.reset }
+          #{ Tty.underline }#{ ISSUES_URL }#{ Tty.reset }
 
     EOS
   end

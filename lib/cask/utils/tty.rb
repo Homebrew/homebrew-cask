@@ -1,19 +1,53 @@
 # originally from Homebrew utils.rb
 
 class Tty
+  COLORS = {
+            :black      => 0,
+            :red        => 1,
+            :green      => 2,
+            :yellow     => 3,
+            :blue       => 4,
+            :magenta    => 5,
+            :cyan       => 6,
+            :white      => 7,
+            :default    => 9,
+           }
+  ATTRIBUTES = {
+                :reset         => 0,
+                :bold          => 1,
+                :dim           => 2,
+                :italic        => 3,
+                :underline     => 4,
+                :blink         => 5,
+                :inverse       => 7,
+                :invisible     => 8,
+                :strikethrough => 9,
+                :normal        => 22,
+               }
+
   class << self
-    def blue; bold 34; end
-    def white; bold 39; end
-    def red; underline 31; end
-    def yellow; underline 33; end
-    def reset; escape 0; end
-    def em; underline 39; end
-    def green; bold 32; end
-    def gray; bold 30; end
-    def magenta; color 35; end
+    @@sequence = []
+
+    COLORS.keys.each do |sym|
+      define_method(sym) do
+        foreground(COLORS[sym])
+      end
+      define_method("fg_#{sym}".to_sym) do
+        foreground(COLORS[sym])
+      end
+      define_method("bg_#{sym}".to_sym) do
+        background(COLORS[sym])
+      end
+    end
+
+    ATTRIBUTES.keys.each do |sym|
+      define_method(sym) do
+        deferred_emit(ATTRIBUTES[sym])
+      end
+    end
 
     def width
-      `/usr/bin/tput cols`.strip.to_i
+      `/usr/bin/tput cols 2>/dev/null`.strip.to_i
     end
 
     def truncate(str)
@@ -22,17 +56,74 @@ class Tty
 
     private
 
-    def color n
-      escape "0;#{n}"
+    def foreground(color)
+      deferred_emit(to_foreground_code color)
     end
-    def bold n
-      escape "1;#{n}"
+
+    def background(color)
+      deferred_emit(to_background_code color)
     end
-    def underline n
-      escape "4;#{n}"
+
+    def to_foreground_code(color)
+      space = 30
+      if (num = to_color_number(color))
+        num = space + num if num < space
+        num = space + 9   if num > space + 9
+        num
+      end
     end
-    def escape n
-      "\033[#{n}m" if $stdout.tty?
+
+    def to_background_code(color)
+      space = 40
+      if (num = to_color_number(color))
+        num = space + num if num < space
+        num = space + 9   if num > space + 9
+        num
+      end
+    end
+
+    def to_color_number(color)
+      COLORS[color] or
+        color.kind_of?(Integer) ? color : nil
+    end
+
+    def to_attribute_number(attribute)
+      ATTRIBUTES[attribute] or
+        attribute.kind_of?(Integer) ? attribute : nil
+    end
+
+    def sanitize_integer(arg)
+      return arg.to_i if arg.kind_of?(Integer)
+      return 0        if arg.to_s.match('^0+$')
+      if arg.respond_to?(:to_i) and (int = arg.to_i) > 0
+        return int
+      end
+      $stderr.puts "Warning: bad Tty code #{arg}"
+      ATTRIBUTES[:reset]
+    end
+
+    def deferred_emit(*codes)
+      @@sequence.concat Array(*codes).map{ |elt| sanitize_integer(elt) }
+      return Tty
+    end
+
+    def to_s
+      sequence = @@sequence
+      @@sequence = []
+      return '' unless $stdout.tty?
+      if sequence.empty?
+        $stderr.puts 'Warning: empty Tty sequence'
+        sequence = [ ATTRIBUTES[:reset] ]
+      end
+      "#{initiate}#{sequence.join(?;)}#{terminate}"
+    end
+
+    def initiate
+      "\033["
+    end
+
+    def terminate
+      'm'
     end
   end
 end

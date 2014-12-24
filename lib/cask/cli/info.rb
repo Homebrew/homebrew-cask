@@ -60,7 +60,7 @@ PURPOSE
     retval = ''
     Cask::DSL::ClassMethods.ordinary_artifact_types.each do |type|
       if cask.artifacts[type].length > 0
-        retval = "#{Tty.blue}==>#{Tty.white} Contents#{Tty.reset}\n" unless retval.length > 0
+        retval = "#{Tty.blue.bold}==>#{Tty.white} Contents#{Tty.reset}\n" unless retval.length > 0
         cask.artifacts[type].each do |artifact|
           activatable_item = type == :stage_only ? '<none>' : artifact.first
           retval.concat "  #{activatable_item} (#{type.to_s})\n"

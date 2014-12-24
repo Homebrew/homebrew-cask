@@ -73,7 +73,7 @@ class Cask::Installer
     s = if MacOS.version >= :lion and not ENV['HOMEBREW_NO_EMOJI']
       (ENV['HOMEBREW_INSTALL_BADGE'] || "\xf0\x9f\x8d\xba") + '  '
     else
-      "#{Tty.blue}==>#{Tty.white} Success!#{Tty.reset} "
+      "#{Tty.blue.bold}==>#{Tty.white} Success!#{Tty.reset} "
     end
     s << "#{@cask} staged at '#{@cask.staged_path}' (#{@cask.staged_path.cabv})"
   end
