@@ -3,7 +3,7 @@ cask :v1 => 'buddi' do
   sha256 :no_check
 
   url 'http://buddi.digitalcave.ca/buddi.dmg'
-  homepage 'http://buddi.digitalcave.ca/index.jsp'
+  homepage 'http://buddi.digitalcave.ca/'
   license :gpl
 
   app 'Buddi.app'
