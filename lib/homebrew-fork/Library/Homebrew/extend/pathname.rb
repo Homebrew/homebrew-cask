@@ -2,14 +2,6 @@ require 'pathname'
 require 'resource'
 
 class Pathname
-  # extended to support common double extensions
-  alias extname_old extname
-  def extname(path=to_s)
-    /(\.(tar|cpio|pax)\.(gz|bz2|lz|xz|Z))$/.match(path)
-    return $1 if $1
-    return File.extname(path)
-  end
-
   # for filetypes we support, basename without extension
   def stem
     File.basename((path = to_s), extname(path))
