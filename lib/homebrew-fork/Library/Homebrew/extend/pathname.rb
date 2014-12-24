@@ -2,11 +2,6 @@ require 'pathname'
 require 'resource'
 
 class Pathname
-  # for filetypes we support, basename without extension
-  def stem
-    File.basename((path = to_s), extname(path))
-  end
-
   # I don't trust the children.length == 0 check particularly, not to mention
   # it is slow to enumerate the whole directory just to see if it is empty,
   # instead rely on good ol' libc and the filesystem
@@ -27,10 +22,6 @@ class Pathname
   def version
     require 'version'
     Version.parse(self)
-  end
-
-  def text_executable?
-    %r[^#!\s*\S+] === open('r') { |f| f.read(1024) }
   end
 
   # FIXME eliminate the places where we rely on this method
