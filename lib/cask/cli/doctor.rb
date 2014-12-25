@@ -64,7 +64,7 @@ class Cask::CLI::Doctor < Cask::CLI::Base
   def self.homebrew_origin
     homebrew_origin = notfound_string
     begin
-      homebrew_repository.cd do
+      Dir.chdir(homebrew_repository) do
         homebrew_origin = Cask::SystemCommand.run('git',
                                                   :args => %w{config --get remote.origin.url},
                                                   :print_stderr => false).stdout.strip
