@@ -1,6 +1,6 @@
 cask :v1 => 'charlessoft-timetracker' do
-  version '0.4.5'
-  sha256 '6d1b4dd29b2866afa195d7fd18df7868e8c329781e15246f6b1e200451914c04'
+  version :latest
+  sha256 :no_check
 
   url 'http://charlessoft.com/TimeTracker.zip'
   name 'TimeTracker'
