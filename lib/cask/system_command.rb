@@ -69,7 +69,7 @@ class Cask::SystemCommand::Result
   end
 
   def plist
-    @plist ||= self.class._parse_plist(@command, @stdout)
+    @plist ||= self.class._parse_plist(@command, @stdout.dup)
   end
 
   def success?
