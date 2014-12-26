@@ -5,7 +5,7 @@ cask :v1 => 'flux' do
   url 'https://justgetflux.com/mac/Flux.zip'
   appcast 'https://justgetflux.com/mac/macflux.xml'
   homepage 'http://justgetflux.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :gratis
 
   app 'Flux.app'
 

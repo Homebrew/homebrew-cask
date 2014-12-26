@@ -6,7 +6,7 @@ cask :v1 => 'trickster' do
   appcast 'http://dl.apparentsoft.com/trickster.rss',
           :sha256 => '86fca660fb6674d67a5b5f3285e2fa463401c36c79bbaa65cc6f15091070a58d'
   homepage 'http://www.apparentsoft.com/trickster/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Trickster.app'
 end

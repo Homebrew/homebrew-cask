@@ -4,7 +4,7 @@ cask :v1 => '0xdbe-eap' do
 
   url "http://download.jetbrains.com/dbe/0xdbe-#{version}.dmg"
   homepage 'http://www.jetbrains.com/dbe/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app '0xDBE EAP.app'
 

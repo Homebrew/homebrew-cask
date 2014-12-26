@@ -4,7 +4,7 @@ cask :v1 => 'armitage' do
 
   url "http://www.fastandeasyhacking.com/download/armitage20#{version.sub(%r{^(\d+)\.(\d+)\.(\d+)$},'\3\1\2')}.dmg"
   homepage 'http://www.fastandeasyhacking.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Armitage.app'
 end

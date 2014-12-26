@@ -4,7 +4,7 @@ cask :v1 => 'xmarks-safari' do
 
   url "https://static.xmarks.com/clients/safari/xmarks_for_safari_#{version}.dmg"
   homepage 'http://www.xmarks.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Xmarks for Safari Installer.pkg'
 

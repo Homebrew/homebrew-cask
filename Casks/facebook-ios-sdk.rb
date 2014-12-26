@@ -4,7 +4,7 @@ cask :v1 => 'facebook-ios-sdk' do
 
   url "https://developers.facebook.com/resources/facebook-ios-sdk-#{version}.pkg"
   homepage 'https://developers.facebook.com/docs/ios'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "facebook-ios-sdk-#{version}.pkg"
 

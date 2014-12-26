@@ -14,9 +14,9 @@ class BrewCask < Formula
   def install
     man1.install 'doc/man/brew-cask.1'
     prefix.install 'lib' => 'rubylib'
-    inreplace 'bin/brew-cask.rb', '/lib', '/rubylib'
+    inreplace 'bin/brew-cask', '/lib', '/rubylib'
 
     prefix.install 'Casks', 'bin'
-    (bin+'brew-cask.rb').chmod 0755
+    (bin+'brew-cask').chmod 0755
   end
 end

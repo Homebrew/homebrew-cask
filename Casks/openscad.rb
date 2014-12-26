@@ -4,7 +4,7 @@ cask :v1 => 'openscad' do
 
   url "http://files.openscad.org/OpenSCAD-#{version}.dmg"
   homepage 'http://www.openscad.org/'
-  license :unknown    # todo: improve this machine-generated value
+  license :gpl
 
   app 'OpenSCAD.app'
 end

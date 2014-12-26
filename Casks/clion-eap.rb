@@ -1,10 +1,10 @@
 cask :v1 => 'clion-eap' do
-  version '140.569.17'
-  sha256 'f9f67ffdcc9f41216bc8e1b36def0d1c2128d4e55a364cae7b17df1b4eb092bf'
+  version '140.1221.2'
+  sha256 'e5a903cb713cd255224c681cd59e9ba07296b61c019420ea02aa47d4da596840'
 
   url "http://download.jetbrains.com/cpp/CLion-#{version}.dmg"
   homepage 'http://www.jetbrains.com/clion/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'CLion EAP.app'
 end

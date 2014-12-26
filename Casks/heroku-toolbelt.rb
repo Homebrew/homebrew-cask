@@ -4,7 +4,7 @@ cask :v1 => 'heroku-toolbelt' do
 
   url 'http://assets.heroku.com/heroku-toolbelt/heroku-toolbelt.pkg'
   homepage 'https://toolbelt.heroku.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'heroku-toolbelt.pkg'
 

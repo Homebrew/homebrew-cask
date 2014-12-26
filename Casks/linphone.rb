@@ -6,7 +6,7 @@ cask :v1 => 'linphone' do
   gpg "#{url}.sig",
       :key_id => '3ecd52dee2f56985'
   homepage 'http://www.linphone.org/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Linphone.app'
 end

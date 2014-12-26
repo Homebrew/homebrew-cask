@@ -4,7 +4,7 @@ cask :v1 => 'elyse' do
 
   url "http://silkwoodsoftware.com/Elyse-#{version.gsub('.','')}.dmg"
   homepage 'http://silkwoodsoftware.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :freemium
 
   app 'Elyse.app'
 end

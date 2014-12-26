@@ -4,7 +4,7 @@ cask :v1 => 'figtree' do
 
   url 'http://tree.bio.ed.ac.uk/download.php?id=90'
   homepage 'http://tree.bio.ed.ac.uk/software/figtree/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "FigTree v#{version}.app"
   qlplugin 'QuickLook Plugin/FigTreeQuickLookPlugin.qlgenerator'

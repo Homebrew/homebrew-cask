@@ -4,7 +4,7 @@ cask :v1 => 'filedrop' do
 
   url 'https://commondatastorage.googleapis.com/filedropme/Filedrop.dmg'
   homepage 'http://www.filedropme.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Filedrop.app'
 end

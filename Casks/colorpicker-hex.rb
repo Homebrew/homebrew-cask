@@ -4,7 +4,7 @@ cask :v1 => 'colorpicker-hex' do
 
   url "http://wafflesoftware.net/hexpicker/download/HexColorPicker-#{version}.zip"
   homepage 'http://wafflesoftware.net/hexpicker/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   colorpicker 'Hex Color Picker/HexColorPicker.colorPicker'
 end

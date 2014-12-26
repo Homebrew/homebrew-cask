@@ -4,7 +4,7 @@ cask :v1 => 'couchbase-server-community' do
 
   url "http://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.zip"
   homepage 'http://www.couchbase.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :apache
 
   app 'Couchbase Server.app'
 end

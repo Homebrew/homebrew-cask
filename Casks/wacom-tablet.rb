@@ -4,7 +4,7 @@ cask :v1 => 'wacom-tablet' do
 
   url "http://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_#{version}.dmg"
   homepage 'http://www.wacom.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install Wacom Tablet.pkg'
 

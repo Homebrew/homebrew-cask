@@ -4,7 +4,7 @@ cask :v1 => 'docear' do
 
   url 'http://docear.org/download/docear.dmg'
   homepage 'http://docear.org'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Docear.app'
 end

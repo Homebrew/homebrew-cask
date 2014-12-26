@@ -4,7 +4,7 @@ cask :v1 => 'nvalt' do
 
   url "http://abyss.designheresy.com/nvaltb/nvalt#{version}.zip"
   homepage 'http://brettterpstra.com/project/nvalt/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'nvALT.app'
 

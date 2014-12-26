@@ -5,7 +5,7 @@ cask :v1 => 'wedge' do
   url 'http://wedge.natestedman.com/release/Wedge.app.zip'
   appcast 'http://wedge.natestedman.com/appcast.xml'
   homepage 'http://wedge.natestedman.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Wedge.app'
 end

@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/caskroom/homebrew-cask.png?branch=master)](https://travis-ci.org/caskroom/homebrew-cask)
 [![Code Climate](https://codeclimate.com/github/caskroom/homebrew-cask.png)](https://codeclimate.com/github/caskroom/homebrew-cask)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/caskroom/homebrew-cask/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 
 Let's see if we can get the elegance, simplicity, and speed of Homebrew for the

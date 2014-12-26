@@ -4,7 +4,7 @@ cask :v1 => 'cloudera-hive-odbc' do
 
   url "https://downloads.cloudera.com/connectors/hive-#{version}.1006/MacOSX/ClouderaHiveODBC.dmg"
   homepage 'http://www.cloudera.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'ClouderaHiveODBC.pkg'
 

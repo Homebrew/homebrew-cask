@@ -1,10 +1,10 @@
 cask :v1 => 'switchresx' do
-  version '4.4.1'
-  sha256 'a7fd24312ab65a1d3da00da4fc9fb1d15a463f5d93c922bffa4ecfbe87b8e3cf'
+  version '4.5'
+  sha256 'a8d1bb95be0d2b1ddbae50f77231568bcd00f2030d337386d85d34f06ea6b065'
 
   url "http://www.madrau.com/data/switchresx/SwitchResX#{version.to_i}.zip"
   homepage 'http://www.madrau.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   prefpane 'SwitchResX.prefPane'
 

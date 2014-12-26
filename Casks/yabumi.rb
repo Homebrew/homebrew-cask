@@ -4,7 +4,7 @@ cask :v1 => 'yabumi' do
 
   url 'https://yabumi.cc/download/Yabumi.dmg'
   homepage 'https://yabumi.cc/'
-  license :unknown    # todo: improve this machine-generated value
+  license :gpl
 
   app 'Yabumi.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'istat-menus' do
 
   url 'http://download.bjango.com/istatmenus/'
   homepage 'http://bjango.com/mac/istatmenus/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iStat Menus.app'
 end

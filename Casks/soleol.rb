@@ -4,7 +4,7 @@ cask :v1 => 'soleol' do
 
   url 'http://eduo.info/soleol-support/releases/SolEol-Mac.zip'
   homepage 'http://eduo.info/apps/soleol'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SolEol/SolEol.app'
 end

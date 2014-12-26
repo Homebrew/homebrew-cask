@@ -6,7 +6,7 @@ cask :v1 => 'devonthink-pro-office' do
   appcast 'http://www.devon-technologies.com/Sparkle/DEVONthinkProOffice2.xml',
           :sha256 => '6db814e6797e848696b2c92613cf6764649b7050337842ac57dc8437af1b428e'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :nested => 'DEVONthink_Pro_Office.dmg'
   # Renamed for consistency: app name is different in the Finder and in a shell.

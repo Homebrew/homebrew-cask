@@ -6,7 +6,7 @@ cask :v1 => 'forklift' do
   appcast 'http://update.binarynights.com/ForkLift2/update.xml',
           :sha256 => '1641b37355845f454c6c6d9ecc8565d6bc14720b68a8665c0bdde0ff6616aec0'
   homepage 'http://www.binarynights.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'ForkLift.app'
 

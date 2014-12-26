@@ -4,6 +4,7 @@ class Cask; end
 
 require 'download_strategy'
 
+require 'cask/extend'
 require 'cask/artifact'
 require 'cask/audit'
 require 'cask/auditor'
@@ -33,7 +34,7 @@ require 'cask/url_checker'
 require 'cask/utils'
 require 'cask/version'
 
-require 'plist/parser'
+require 'vendor/plist'
 
 class Cask
   include Cask::DSL
@@ -67,7 +68,7 @@ class Cask
         # sudo in system is rude.
         system '/usr/bin/sudo', '--', '/bin/mkdir', '-p', '--', caskroom
         unless caskroom.parent == toplevel_dir
-          system '/usr/bin/sudo', '--', '/usr/sbin/chown', '-R', '--', "#{current_user}:staff", caskroom.parent
+          system '/usr/bin/sudo', '--', '/usr/sbin/chown', '-R', '--', "#{current_user}:staff", caskroom.parent.to_s
         end
       end
     end

@@ -4,7 +4,7 @@ cask :v1 => 'quicksilver' do
 
   url 'http://cdn.qsapp.com/plugins/files/com.blacktree.Quicksilver__16399.dmg'
   homepage 'http://qsapp.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Quicksilver.app'
 

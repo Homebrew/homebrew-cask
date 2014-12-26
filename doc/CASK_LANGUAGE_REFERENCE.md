@@ -74,7 +74,7 @@ Each of the following stanzas is required for every Cask.
 | name               | multiple occurrences allowed? | value       |
 | ------------------ |------------------------------ | ----------- |
 | `version`          | no                            | application version; give value of `:latest`  if versioned downloads are not offered
-| `sha256`           | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
+| `sha256`           | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
 | `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](#url-stanza-details))
 | `homepage`         | no                            | application homepage; used for the `brew cask home` command
 | `license`          | no                            | a symbol identifying the license category for the application. (see also [License Stanza Details](#license-stanza-details))
@@ -259,8 +259,23 @@ end
 
 ## Checksum Stanza Details
 
-Casks should no longer use `no_checksum` stanzas.  That form has
-been superseded by `sha256 :no_check`.
+### Calculating the SHA256
+
+The `sha256` value is usually calculated by the command
+
+```bash
+$ shasum -a 256 <file>
+```
+
+### Special Value `:no_check`
+
+The special value `sha256 :no_check` is used to turn off SHA checking
+whenever checksumming is impractical due to the upstream configuration.
+
+`version :latest` requires `sha256 :no_check`, and this pairing is common.
+However, `sha256 :no_check` does not require `version :latest`.
+
+We use a checksum whenever possible.
 
 
 ## URL Stanza Details
@@ -336,6 +351,9 @@ list of valid symbols.
 The values for `license` are categories, rather than fully-specified
 licenses.  For example, `:gpl` is a category; we do not distinguish between
 versions of the GPL.  Similarly, `:cc` and `:bsd` comprise many variants.
+They must always pertain to the license of the software itself, not the
+vendor's business model (a free app to access a paid service is still
+`:gratis`, not `:freemium`).
 
 The `license` stanza is intended as an aid to search/filtering of Casks.
 For full and complete information, the user must always rely on the vendor's

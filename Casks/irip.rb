@@ -5,7 +5,7 @@ cask :v1 => 'irip' do
   url 'http://files.thelittleappfactory.com/iRip2/iRip.zip'
   appcast 'https://files.thelittleappfactory.com/iRip2/appcast.xml'
   homepage 'http://thelittleappfactory.com/irip/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iRip.app'
 end

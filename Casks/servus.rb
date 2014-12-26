@@ -4,7 +4,7 @@ cask :v1 => 'servus' do
 
   url 'https://servus.io/download'
   homepage 'https://servus.io/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Servus.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'machg' do
   appcast 'http://jasonfharris.com/machg/machg_appcast.xml',
           :sha256 => 'f562cfb2d9a8c7a5cf603529dfbc79f3782614795d85d54a107961d96242203b'
   homepage 'http://jasonfharris.com/machg/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'MacHg.app'
 end

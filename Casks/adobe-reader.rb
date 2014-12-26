@@ -4,7 +4,7 @@ cask :v1 => 'adobe-reader' do
 
   url "http://ardownload.adobe.com/pub/adobe/reader/mac/#{version.to_i}.x/#{version}/en_US/AdbeRdr#{version.gsub('.', '')}_en_US.dmg"
   homepage 'http://www.adobe.com/products/reader.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Adobe Reader XI Installer.pkg'
 

@@ -1,6 +1,6 @@
 cask :v1 => 'mpv' do
-  version '0.7.1'
-  sha256 '965a4f74754e88186ad345e34b1f75e7e5fd1e99e1b13ee61a7cf61624e15564'
+  version '0.7.2'
+  sha256 'a73392d6c9cc998442a0dc3323caa90a1ef24258026c18da66fa21921d234f43'
 
   url "https://github.com/mpv-player/mpv/releases/download/v#{version}/mpv_#{version}_mac.tar.bz2"
   homepage 'http://mpv.io/'
@@ -13,6 +13,7 @@ cask :v1 => 'mpv' do
                   '~/.mpv/channels.conf',
                   '~/.mpv/config',
                   '~/.mpv/input.conf',
+                  '~/.config/mpv/mpv.conf',
                  ],
       :rmdir  => '~/.mpv'
 

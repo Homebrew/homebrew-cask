@@ -4,7 +4,7 @@ cask :v1 => 'file-juicer' do
 
   url 'http://echoone.com/filejuicer/FileJuicer.dmg'
   homepage 'http://echoone.com/filejuicer/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'File Juicer.app'
 end

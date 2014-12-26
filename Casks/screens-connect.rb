@@ -4,7 +4,7 @@ cask :v1 => 'screens-connect' do
 
   url 'https://screensconnect.com/downloads/screensconnect.dmg'
   homepage 'https://screensconnect.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Screens Connect.pkg'
 

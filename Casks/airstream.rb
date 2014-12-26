@@ -4,7 +4,7 @@ cask :v1 => 'airstream' do
 
   url 'http://airstream.io/download/mac/airstream-mac.dmg'
   homepage 'http://airstream.io/download/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
   app 'AirStream.app'
 
   caveats <<-EOS.undent

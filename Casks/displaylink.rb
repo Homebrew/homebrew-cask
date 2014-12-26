@@ -10,7 +10,7 @@ cask :v1 => 'displaylink' do
       },
       :using => :post
   homepage 'http://www.displaylink.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'DisplayLink Software Installer.pkg'
 

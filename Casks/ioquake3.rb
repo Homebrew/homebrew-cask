@@ -5,7 +5,7 @@ cask :v1 => 'ioquake3' do
 
   url "http://ioquake3.org/files/#{version}/ioquake3%20#{version}.dmg"
   homepage 'http://ioquake3.org/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   suite 'ioquake3'
 

@@ -4,7 +4,7 @@ cask :v1 => 'sonic-visualiser' do
 
   url "https://code.soundsoftware.ac.uk/attachments/download/1186/Sonic%20Visualiser-#{version}.dmg"
   homepage 'http://www.sonicvisualiser.org/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Sonic Visualiser.app'
 end

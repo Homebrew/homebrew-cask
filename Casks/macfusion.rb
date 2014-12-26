@@ -6,7 +6,7 @@ cask :v1 => 'macfusion' do
   appcast 'http://macfusionapp.org/appcast.xml',
           :sha256 => '70e41fcd7c77f7270da749ac762485f34d3dfb5dafe5cf27260866007ee4c20b'
   homepage 'http://macfusionapp.org/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Macfusion.app'
 end

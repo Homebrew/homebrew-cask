@@ -4,7 +4,7 @@ cask :v1 => 'dungeon-crawl-stone-soup-tiles' do
 
   url "https://crawl.develz.org/release/stone_soup-#{version}-tiles-macosx.zip"
   homepage 'http://crawl.develz.org'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Dungeon Crawl Stone Soup - Tiles.app'
 end

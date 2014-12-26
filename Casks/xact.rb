@@ -6,7 +6,7 @@ cask :v1 => 'xact' do
   appcast 'http://xactupdate.scottcbrown.org/xACT.xml',
           :sha256 => '34ffb3d8d71700bf3f497f809b0ef5c7b1ac8ba623c7e337d8e17050616dd367'
   homepage 'http://xact.scottcbrown.org'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "xACT #{version}/xACT.app"
 end

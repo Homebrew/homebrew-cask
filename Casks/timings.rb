@@ -6,7 +6,7 @@ cask :v1 => 'timings' do
   appcast 'http://mediaatelier.com/Timings/feed.php',
           :sha256 => '8802005fc763ac92339326583c2c34d3513766758669d03a1861a886e61ed319'
   homepage 'http://mediaatelier.com/Timings'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Timings.app'
 end

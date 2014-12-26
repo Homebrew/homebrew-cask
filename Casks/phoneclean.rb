@@ -4,7 +4,7 @@ cask :v1 => 'phoneclean' do
 
   url 'http://www.imobie.com/product/phoneclean-mac.dmg'
   homepage 'http://www.imobie.com/phoneclean/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'PhoneClean.app'
 end

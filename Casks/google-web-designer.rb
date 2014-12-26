@@ -4,7 +4,7 @@ cask :v1 => 'google-web-designer' do
 
   url 'https://dl.google.com/webdesigner/mac/shell/googlewebdesigner_mac.dmg'
   homepage 'https://www.google.com/webdesigner/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Google Web Designer.app'
 end

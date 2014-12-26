@@ -4,7 +4,7 @@ cask :v1 => 'opera-mobile-emulator' do
 
   url "http://get.geo.opera.com/pub/opera/sdlbream/1210/Opera_Mobile_Emulator_#{version}_Mac.dmg"
   homepage 'http://www.opera.com/developer/mobile-emulator'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Opera Mobile Emulator.app'
 end

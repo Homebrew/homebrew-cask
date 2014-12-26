@@ -1,6 +1,6 @@
 cask :v1 => 'coteditor' do
-  version '2.0.2'
-  sha256 '92a497d867eddab4fd9d8f23c57879f028c72771c60882f141760cea24aab674'
+  version '2.0.3'
+  sha256 'b656aa0b6526c89d7d52cf12b715cf529f8e5048c7e13720673c3e32318a26d8'
 
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   appcast 'http://coteditor.com/appcast.xml',

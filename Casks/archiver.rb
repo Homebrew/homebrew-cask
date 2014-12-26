@@ -4,7 +4,7 @@ cask :v1 => 'archiver' do
 
   url 'https://commondatastorage.googleapis.com/incrediblebee/apps/Archiver/Archiver.zip'
   homepage 'http://archiverapp.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Archiver.app'
 end

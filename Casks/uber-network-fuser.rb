@@ -5,7 +5,7 @@ cask :v1 => 'uber-network-fuser' do
   # dropbox.com is the official download host per the vendor homepage
   url "https://dl.dropbox.com/s/uytv8p2eljk6fez/ubernetfuser_#{version}.dmg"
   homepage 'http://nickapedia.com/2012/01/10/breaking-new-ground-an-uber-tool-for-the-mac/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "UBER Network Fuser #{version}.app"
 end

@@ -4,7 +4,7 @@ cask :v1 => 'camerabag' do
 
   url "http://downloads.nevercenter.com.s3.amazonaws.com/CameraBag_Mac_#{version.gsub('.','_')}.dmg"
   homepage 'http://nevercenter.com/camerabag/desktop/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'CameraBag 2.app'
 end

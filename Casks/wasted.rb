@@ -5,7 +5,7 @@ cask :v1 => 'wasted' do
   url 'http://wasted.werk01.de/Wasted.zip'
   appcast 'http://wasted.werk01.de/appcast.xml'
   homepage 'http://wasted.werk01.de'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Wasted.app'
 end

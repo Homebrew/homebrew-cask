@@ -4,7 +4,7 @@ cask :v1 => 'rekordbox' do
 
   url "http://rekordbox.com/_app/files/Install_rekordbox_#{version.gsub('.','_')}.pkg.zip"
   homepage 'http://rekordbox.com/en/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "Install_rekordbox_#{version.gsub('.','_')}.pkg"
 

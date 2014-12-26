@@ -4,7 +4,7 @@ cask :v1 => 'pref-setter' do
 
   url 'http://www.nightproductions.net/downloads/prefsetter.zip'
   homepage 'http://www.nightproductions.net/prefsetter.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Pref Setter/Pref Setter.app'
 end

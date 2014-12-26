@@ -1,10 +1,10 @@
 cask :v1 => 'appcode' do
-  version '3.1'
-  sha256 '88c07d17b450f4ee4adfbe8ab412467e6b3148b36163257c194b1a099c33e0ee'
+  version '3.1.1'
+  sha256 'f549e0fdfb7dcd2a1553ca452a75c1cbc135e3d66b926de0c58dde59865f3b6c'
 
   url "http://download.jetbrains.com/objc/AppCode-#{version}.dmg"
   homepage 'http://www.jetbrains.com/objc/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'AppCode.app'
 

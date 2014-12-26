@@ -1,4 +1,3 @@
-require 'checksum'
 require 'set'
 
 module Cask::DSL; end
@@ -44,7 +43,7 @@ module Cask::DSL
 
   def tags; self.class.tags; end
 
-  def sums; self.class.sums || []; end
+  def sha256; self.class.sha256; end
 
   def artifacts; self.class.artifacts; end
 
@@ -68,7 +67,6 @@ module Cask::DSL
     def full_name(_full_name=nil)
       @full_name ||= []
       if _full_name
-        # todo this idiom may be preferred to << if it behaves the same on Ruby 1.8 and 2.x
         @full_name.concat(Array(*_full_name))
       end
       @full_name
@@ -148,6 +146,21 @@ module Cask::DSL
         raise CaskInvalidError.new(self.token, "invalid 'version' value: '#{arg.inspect}'")
       end
       @version ||= arg
+    end
+
+    SYMBOLIC_SHA256S = Set.new [
+      :no_check,
+    ]
+
+    def sha256(arg=nil)
+      if arg.nil?
+        @sha256
+      elsif @sha256
+        raise CaskInvalidError.new(self.token, "'sha256' stanza may only appear once")
+      elsif !arg.is_a?(String) and !SYMBOLIC_SHA256S.include?(arg)
+        raise CaskInvalidError.new(self.token, "invalid 'sha256' value: '#{arg.inspect}'")
+      end
+      @sha256 ||= arg
     end
 
     def tags(*args)
@@ -294,21 +307,6 @@ module Cask::DSL
     ARTIFACT_BLOCK_TYPES.each do |type|
       define_method(type) do |&block|
         artifacts[type] << block
-      end
-    end
-
-    attr_reader :sums
-
-    def hash_name(hash_type)
-      hash_type.to_s == 'sha2' ? 'sha256' : hash_type.to_s
-    end
-
-    def sha256(sha2=nil)
-      if sha2 == :no_check
-        @sums = sha2
-      else
-        @sums ||= []
-        @sums << Checksum.new(:sha2, sha2) unless sha2.nil?
       end
     end
 

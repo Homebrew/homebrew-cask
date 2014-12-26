@@ -4,7 +4,7 @@ cask :v1 => 'wiretap-studio' do
 
   url 'http://www.ambrosiasw.com/dl/wiretap'
   homepage 'http://www.ambrosiasw.com/utilities/wiretap/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'WireTap Studio.app'
 end

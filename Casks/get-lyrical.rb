@@ -4,7 +4,7 @@ cask :v1 => 'get-lyrical' do
 
   url 'http://shullian.com/files/getlyrical.zip'
   homepage 'http://shullian.com/get_lyrical.php'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Get Lyrical/Get Lyrical.app'
 end

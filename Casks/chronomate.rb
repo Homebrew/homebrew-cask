@@ -6,7 +6,7 @@ cask :v1 => 'chronomate' do
   appcast 'http://chronomateapp.com/update',
           :sha256 => 'fc538460e350c638a7e1b87e91e0cc79bbf8e324dc28819a818deee090037feb'
   homepage 'http://chronomateapp.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'ChronoMate.app'
 end

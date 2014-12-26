@@ -5,7 +5,7 @@ cask :v1 => 'sketch' do
   url 'http://bohemiancoding.com/static/download/sketch.zip'
   appcast 'http://www.bohemiancoding.com/sketch/appcast.xml'
   homepage 'http://www.bohemiancoding.com/sketch/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Sketch.app'
 end

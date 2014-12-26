@@ -117,7 +117,7 @@ class Cask::CLI
     Cask.init
     command = lookup_command(command_string)
     run_command(command, *rest)
-  rescue CaskError, ChecksumMismatchError => e
+  rescue CaskError, CaskSha256MismatchError => e
     onoe e
     $stderr.puts e.backtrace if Cask.debug
     exit 1

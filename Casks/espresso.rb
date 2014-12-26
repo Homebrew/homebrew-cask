@@ -4,7 +4,7 @@ cask :v1 => 'espresso' do
 
   url 'https://macrabbit.com/espresso/get/'
   homepage 'http://macrabbit.com/espresso/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Espresso.app'
 end

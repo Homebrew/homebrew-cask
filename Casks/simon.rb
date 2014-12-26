@@ -4,7 +4,7 @@ cask :v1 => 'simon' do
 
   url "http://www.dejal.com/download/simon-#{version}.zip"
   homepage 'http://www.dejal.com/simon/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Simon.app'
 end

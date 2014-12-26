@@ -4,7 +4,7 @@ cask :v1 => 'pliny' do
 
   url "http://pliny.cch.kcl.ac.uk/pliny-app-#{version}.tar.gz"
   homepage 'http://pliny.cch.kcl.ac.uk'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Pliny/pliny.app'
 end

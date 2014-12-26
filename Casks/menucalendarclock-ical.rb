@@ -5,7 +5,7 @@ cask :v1 => 'menucalendarclock-ical' do
   url "http://www.objectpark.net/download/MenuCalendarClock-#{version}.dmg.gz"
   container :nested => "menucalendarclock-ical-#{version}"
   homepage 'http://www.objectpark.net/en/mcc.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'MenuCalendarClock iCal.app'
 end

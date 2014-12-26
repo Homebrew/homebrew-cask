@@ -4,7 +4,7 @@ cask :v1 => 'adobe-arh' do
 
   url 'http://airdownload.adobe.com/air/distribution/latest/mac/arh'
   homepage 'http://help.adobe.com/en_US/air/redist/WS485a42d56cd19641-70d979a8124ef20a34b-8000.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :type => :naked
   binary 'arh'

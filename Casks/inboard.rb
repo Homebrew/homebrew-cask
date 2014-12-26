@@ -6,7 +6,7 @@ cask :v1 => 'inboard' do
   appcast 'http://updates.devmate.com/com.ideabits.Inboard.xml',
           :sha256 => '3bde9bcd42058928757ce5b3edc9de1ef4f488b190b8efec40e6c7e4fd69a020'
   homepage 'http://inboardapp.com/beta'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Inboard.app'
 end

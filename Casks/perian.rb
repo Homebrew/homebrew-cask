@@ -4,7 +4,7 @@ cask :v1 => 'perian' do
 
   url "https://perian.cachefly.net/Perian_#{version}.dmg"
   homepage 'http://www.perian.org/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   prefpane 'Perian.prefPane'
   caveats <<-EOS.undent

@@ -4,7 +4,7 @@ cask :v1 => 'inky' do
 
   url 'https://inky.com/mail/InkyInstall.dmg'
   homepage 'http://inky.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Inky.app'
 

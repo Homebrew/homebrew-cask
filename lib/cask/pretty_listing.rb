@@ -1,5 +1,3 @@
-require 'cmd/list' # for homebrew's ::PrettyListing
-
 class Cask::PrettyListing
   attr_reader :cask
   def initialize(cask)
@@ -7,6 +5,7 @@ class Cask::PrettyListing
   end
 
   def print
-    ::PrettyListing.new(cask.staged_path)
+    files = cask.staged_path.find.reject(&:directory?)
+    puts "#{cask.staged_path} (#{files.length} files)"
   end
 end

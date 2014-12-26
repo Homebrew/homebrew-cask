@@ -4,7 +4,7 @@ cask :v1 => 'eaglefiler' do
 
   url "http://c-command.com/downloads/EagleFiler-#{version}.dmg"
   homepage 'http://c-command.com/eaglefiler/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'EagleFiler.app'
 end

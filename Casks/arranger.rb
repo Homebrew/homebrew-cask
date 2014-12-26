@@ -6,7 +6,7 @@ cask :v1 => 'arranger' do
   appcast 'http://bucketomac.de/appcast/arrangercast.xml',
           :sha256 => '07eedcf0ac71ee0102ff9061dce7146552c6667f7e6770bdaf0c2f502fe49319'
   homepage 'http://bucketomac.de/arranger/arranger/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Arranger.app'
 

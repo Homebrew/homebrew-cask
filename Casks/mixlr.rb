@@ -4,7 +4,7 @@ cask :v1 => 'mixlr' do
 
   url 'http://cdn.mixlr.com/Mixlr_beta_latest.pkg'
   homepage 'http://mixlr.com'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Mixlr_beta_latest.pkg'
 

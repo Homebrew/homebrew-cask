@@ -4,7 +4,7 @@ cask :v1 => 'subsurface' do
 
   url "https://subsurface.hohndel.org/downloads/Subsurface-#{version}.dmg"
   homepage 'http://subsurface.hohndel.org/'
-  license :unknown    # todo: improve this machine-generated value
+  license :gpl
 
   app 'Subsurface.app'
 end

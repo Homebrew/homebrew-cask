@@ -4,7 +4,7 @@ cask :v1 => 'gyazo' do
 
   url "https://gyazo.s3.amazonaws.com/setup/Gyazo_#{version}.dmg"
   homepage 'https://gyazo.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Gyazo.app'
   app 'Gyazo GIF.app'

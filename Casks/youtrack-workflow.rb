@@ -4,7 +4,7 @@ cask :v1 => 'youtrack-workflow' do
 
   url 'http://download-cf.jetbrains.com/charisma/youtrack-workflow-editor-8452-macos.zip'
   homepage 'http://www.jetbrains.com/youtrack/download/get_youtrack.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'youtrack-workflow.app'
 end

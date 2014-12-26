@@ -4,7 +4,7 @@ cask :v1 => 'nitrous-desktop' do
 
   url 'https://www.nitrous.io/mac/NitrousDesktop-latest.zip'
   homepage 'https://www.nitrous.io/mac'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Nitrous Desktop.app'
 end

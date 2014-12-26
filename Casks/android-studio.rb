@@ -1,9 +1,9 @@
 cask :v1 => 'android-studio' do
-  version '1.0.0'
-  sha256 '0b580495e13e638c90fe1708e6a5d7cdf75df3f7447a9542af9d87af875891de'
+  version '1.0.1'
+  sha256 '2bb8f2ed4f904c71a1d4a4b46eb76e492791f17bf6926a51d7c94ea0e22fc0f5'
 
-  url "https://dl.google.com/dl/android/studio/install/#{version}/android-studio-ide-135.1629389.dmg"
-  homepage 'https://developer.android.com/sdk/index.html'
+  url "https://dl.google.com/dl/android/studio/install/#{version}/android-studio-ide-1641136.dmg"
+  homepage 'https://developer.android.com/sdk/'
   license :apache
 
   app 'Android Studio.app'

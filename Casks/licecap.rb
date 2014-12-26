@@ -4,7 +4,7 @@ cask :v1 => 'licecap' do
 
   url "http://www.cockos.com/licecap/licecap#{version.gsub('.','')}.dmg"
   homepage 'http://www.cockos.com/licecap/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'LICEcap.app'
 end

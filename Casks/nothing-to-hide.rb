@@ -4,7 +4,7 @@ cask :v1 => 'nothing-to-hide' do
 
   url 'https://nothingtohide.s3.amazonaws.com/pc/Nothing_To_Hide_MAC.zip'
   homepage 'https://back.nothingtohide.cc/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Nothing To Hide.app'
 end

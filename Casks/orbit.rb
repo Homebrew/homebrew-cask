@@ -5,7 +5,7 @@ cask :v1 => 'orbit' do
   url 'http://orbitapp.net/updates/Orbit.zip'
   appcast 'http://orbitapp.net/updates/appcast.xml'
   homepage 'http://orbitapp.net'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app      'Orbit.app'
 end

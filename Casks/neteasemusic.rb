@@ -5,7 +5,7 @@ cask :v1 => 'neteasemusic' do
 
   url "http://music.163.com/api/osx/download/latest"
   homepage 'http://music.163.com/#/download'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'NeteaseMusic.app'
 end

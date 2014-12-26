@@ -5,7 +5,7 @@ cask :v1 => 'miro-video-converter' do
   url 'http://ftp.osuosl.org/pub/pculture.org/mirovideoconverter/mac/Miro%20Video%20Converter.dmg'
   appcast 'http://miro-updates.participatoryculture.org/mvc-appcast-osx.xml'
   homepage 'http://www.mirovideoconverter.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Miro Video Converter.app'
 end

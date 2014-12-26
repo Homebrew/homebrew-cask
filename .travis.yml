@@ -2,14 +2,13 @@ language: objective-c
 
 # todo
 #
-# test with Ruby 1.9, but allow failure
 # test with Ruby 2.1, but allow failure
 #
 
-# "Current" is currently a duplicate of either 1.8 or 2.0, depending on OS version
+# "Current" is dependent on OS X release.  At the time of writing, it
+# is always either 1.8 or 2.0
 env:
   matrix:
-    - CASK_RUBY_TEST_VERSION="1.8"
     - CASK_RUBY_TEST_VERSION="2.0"
     - CASK_RUBY_TEST_VERSION="Current"
 

@@ -5,7 +5,7 @@ cask :v1 => 'vlcstreamer' do
   url 'http://hobbyistsoftware.com/Downloads/VLCStreamer/latest-mac.php?cdn'
   appcast 'http://hobbyistsoftware.com/Downloads/VLCStreamer/vlcStreamerVersions.xml'
   homepage 'http://hobbyistsoftware.com/vlcstreamer'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'VLCStreamer.app'
 end

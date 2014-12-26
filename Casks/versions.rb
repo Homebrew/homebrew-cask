@@ -5,7 +5,7 @@ cask :v1 => 'versions' do
   url 'http://versionsapp.com/redirect/versionslatest'
   appcast 'https://updates.blackpixel.com/updates?app=vs'
   homepage 'http://versionsapp.com/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Versions.app'
 end

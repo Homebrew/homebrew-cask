@@ -5,7 +5,7 @@ cask :v1 => 'qqinput' do
 
   url "http://qqime.cdn.sogou.com/QQInput_Mac_Setup_#{version.gsub('.','_')}.dmg"
   homepage 'http://qq.pinyin.cn/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "安装QQ输入法#{version.sub(%r{^(\d+\.\d+).*},'\1')}.pkg"
 

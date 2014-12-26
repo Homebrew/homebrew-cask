@@ -5,7 +5,7 @@ cask :v1 => 'mp4tools' do
   url "http://www.emmgunn.com/downloads/mp4tools#{version}.zip",
       :referer => 'http://www.emmgunn.com/mp4tools/mp4toolsdownload.html'
   homepage 'http://www.emmgunn.com/mp4tools/mp4toolshome.html'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "mp4tools#{version}/MP4Tools.app"
 end

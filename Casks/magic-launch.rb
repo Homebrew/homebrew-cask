@@ -4,7 +4,7 @@ cask :v1 => 'magic-launch' do
 
   url "https://www.oneperiodic.com/files/Magic%20Launch%20v#{version}.zip"
   homepage 'http://www.oneperiodic.com/products/magiclaunch/'
-  license :unknown    # todo: improve this machine-generated value
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   prefpane 'Magic Launch.prefPane'
 
