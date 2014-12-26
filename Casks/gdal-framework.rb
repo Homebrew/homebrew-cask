@@ -1,6 +1,6 @@
 cask :v1 => 'gdal-framework' do
   version '1.11.1-1'
-  sha256 '5da0f059bdc6e93cc11165eaf66896879b63922c4c37e09eed642dd9c402b5fb'
+  sha256 :no_check    # upstream package is updated in-place
 
   url "http://www.kyngchaos.com/files/software/frameworks/GDAL_Complete-#{version.sub(%r{^(\d+\.\d+).*},'\1')}.dmg"
   homepage 'http://www.kyngchaos.com/software/frameworks'
