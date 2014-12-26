@@ -12,6 +12,28 @@ describe "Satisfy Dependencies and Requirements" do
   # end
   #
 
+  describe "depends_on :cask" do
+    it "raises an exception when depends_on :cask is cyclic" do
+      dep_cask = Cask.load('with-depends-on-cask-cyclic')
+      lambda {
+        shutup do
+          Cask::Installer.new(dep_cask).install
+        end
+      }.must_raise(CaskCyclicCaskDependencyError)
+    end
+
+    it "installs the dependency of a Cask and the Cask itself" do
+      csk = Cask.load('with-depends-on-cask')
+      dependency = Cask.load(csk.depends_on.cask.first)
+      shutup do
+        Cask::Installer.new(csk).install
+      end
+
+      csk.must_be :installed?
+      dependency.must_be :installed?
+    end
+  end
+
   describe "depends_on :macos" do
     it "understands depends_on :macos => <array>" do
       macos_cask = Cask.load('with-depends-on-macos-array')

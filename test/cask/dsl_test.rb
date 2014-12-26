@@ -303,6 +303,18 @@ describe Cask::DSL do
     end
   end
 
+  describe "depends_on :cask" do
+    it "allows depends_on :cask to be specified" do
+      cask = Cask.load('with-depends-on-cask')
+      cask.depends_on.cask.wont_be_nil
+    end
+
+    it "allows multiple depends_on :cask to be specified" do
+      cask = Cask.load('with-depends-on-cask-multiple')
+      cask.depends_on.cask.wont_be_nil
+    end
+  end
+
   describe "depends_on :macos" do
     it "allows depends_on :macos to be specified" do
       cask = Cask.load('with-depends-on-macos-string')
