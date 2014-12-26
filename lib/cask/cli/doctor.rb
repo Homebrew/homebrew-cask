@@ -138,11 +138,11 @@ class Cask::CLI::Doctor < Cask::CLI::Base
   end
 
   def self.notfound_string
-    "#{Tty.red}Not Found - Unknown Error#{Tty.reset}"
+    "#{Tty.red.underline}Not Found - Unknown Error#{Tty.reset}"
   end
 
   def self.error_string(string='Error')
-    "#{Tty.red}(#{string})#{Tty.reset}"
+    "#{Tty.red.underline}(#{string})#{Tty.reset}"
   end
 
   def self.render_with_none(string)
