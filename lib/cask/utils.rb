@@ -69,7 +69,21 @@ end
 
 # global methods
 
-def odebug title, *sput
+def ohai(title, *sput)
+  title = Tty.truncate(title) if $stdout.tty? && !ARGV.verbose?
+  puts "#{Tty.blue.bold}==>#{Tty.white} #{title}#{Tty.reset}"
+  puts sput unless sput.empty?
+end
+
+def opoo(warning)
+  $stderr.puts "#{Tty.red.underline}Warning#{Tty.reset}: #{warning}"
+end
+
+def onoe(error)
+  $stderr.puts "#{Tty.red.underline}Error#{Tty.reset}: #{error}"
+end
+
+def odebug(title, *sput)
   if Cask.respond_to?(:debug) and Cask.debug
     width = Tty.width * 4 - 6
     if $stdout.tty? and title.to_s.length > width
