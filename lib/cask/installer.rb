@@ -316,15 +316,11 @@ class Cask::Installer
         permissions_rmtree subdir unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
       end
     end
-    if @cask.metadata_versioned_container_path.respond_to?(:rmdir_if_possible)
-      @cask.metadata_versioned_container_path.rmdir_if_possible
-    end
-    if @cask.metadata_master_container_path.respond_to?(:rmdir_if_possible)
-      @cask.metadata_master_container_path.rmdir_if_possible
-    end
+    Cask::Utils.rmdir_if_possible(@cask.metadata_versioned_container_path)
+    Cask::Utils.rmdir_if_possible(@cask.metadata_master_container_path)
 
     # toplevel staged distribution
-    @cask.caskroom_path.rmdir_if_possible
+    Cask::Utils.rmdir_if_possible(@cask.caskroom_path)
   end
 
   def purge_caskroom_path

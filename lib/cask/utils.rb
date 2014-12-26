@@ -148,6 +148,27 @@ module Cask::Utils
     end
   end
 
+  # from Homebrew
+  # children.length == 0 is slow to enumerate the whole directory just
+  # to see if it is empty
+  def self.rmdir_if_possible(dir)
+    dirpath = Pathname(dir)
+    begin
+      dirpath.rmdir
+      true
+    rescue Errno::ENOTEMPTY
+      if (ds_store = dirpath.join('.DS_Store')).exist? and
+        dirpath.children.length == 1
+        ds_store.unlink
+        retry
+      else
+        false
+      end
+    rescue Errno::EACCES, Errno::ENOENT
+      false
+    end
+  end
+
   # paths that "look" descendant (textually) will still
   # return false unless both the given paths exist
   def self.file_is_descendant(file, dir)
