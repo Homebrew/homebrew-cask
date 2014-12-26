@@ -37,7 +37,7 @@ describe Cask::Artifact::Zap do
       Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application "System Events" to count processes whose bundle identifier is "my.fancy.package.app"'], '1')
       Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application id "my.fancy.package.app" to quit'])
 
-      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', @cask.staged_path/'MyFancyPkg'/'FancyUninstaller.tool', '--please'])
+      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', @cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool'), '--please'])
       Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-rf', '--',
                                                Pathname.new('~/Library/Preferences/my.fancy.app.plist').expand_path])
 
@@ -107,14 +107,14 @@ describe Cask::Artifact::Zap do
         ['/usr/bin/sudo', '-E', '--', '/bin/launchctl', 'list', 'my.fancy.package.service'],
         <<-"PLIST"
 {
-	"LimitLoadToSessionType" = "Aqua";
-	"Label" = "my.fancy.package.service";
-	"TimeOut" = 30;
-	"OnDemand" = true;
-	"LastExitStatus" = 0;
-	"ProgramArguments" = (
-		"argument";
-	);
+        "LimitLoadToSessionType" = "Aqua";
+        "Label" = "my.fancy.package.service";
+        "TimeOut" = 30;
+        "OnDemand" = true;
+        "LastExitStatus" = 0;
+        "ProgramArguments" = (
+                "argument";
+        );
 };
         PLIST
       )

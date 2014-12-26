@@ -7,7 +7,7 @@ describe Cask::Artifact::App do
     end
   }
   let(:expected_path) {
-    Cask.binarydir/'binary'
+    Cask.binarydir.join('binary')
   }
 
   it "links the binary to the proper directory" do

@@ -12,7 +12,7 @@ describe Cask::Artifact::Pkg do
     it 'runs the system installer on the specified pkgs' do
       pkg = Cask::Artifact::Pkg.new(@cask, Cask::FakeSystemCommand)
 
-      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/installer', '-pkg', @cask.staged_path/'MyFancyPkg'/'Fancy.pkg', '-target', '/'])
+      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/installer', '-pkg', @cask.staged_path.join('MyFancyPkg','Fancy.pkg'), '-target', '/'])
 
       shutup do
         pkg.install_phase
