@@ -133,20 +133,6 @@ class CurlDownloadStrategy < AbstractDownloadStrategy
     tarball_path
   end
 
-  # gunzip and bunzip2 write the output file in the same directory as the input
-  # file regardless of the current working directory, so we need to write it to
-  # the correct location ourselves.
-  def buffered_write(tool)
-    target = File.basename(basename_without_params, tarball_path.extname)
-
-    Utils.popen_read(tool, "-f", tarball_path.to_s, "-c") do |pipe|
-      File.open(target, "wb") do |f|
-        buf = ""
-        f.write(buf) while pipe.read(1024, buf)
-      end
-    end
-  end
-
   private
 
   def curl(*args)
@@ -154,25 +140,9 @@ class CurlDownloadStrategy < AbstractDownloadStrategy
     super
   end
 
-  def chdir
-    entries = Dir['*']
-    case entries.length
-    when 0 then raise "Empty archive"
-    when 1 then Dir.chdir entries.first rescue nil
-    end
-  end
-
-  def basename_without_params
-    # Strip any ?thing=wad out of .c?thing=wad style extensions
-    File.basename(@url)[/[^?]+/]
-  end
-
   def ext
     # We need a Pathname because we've monkeypatched extname to support double
-    # extensions (e.g. tar.gz).
-    # We can't use basename_without_params, because given a URL like
-    #   http://example.com/download.php?file=foo-1.0.tar.gz
-    # the extension we want is ".tar.gz", not ".php".
+    # extensions (e.g. tar.gz). -- todo actually that monkeypatch has been removed
     Pathname.new(@url).extname[/[^?]+/]
   end
 end
