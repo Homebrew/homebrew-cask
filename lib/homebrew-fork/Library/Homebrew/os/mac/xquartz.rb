@@ -105,11 +105,11 @@ module OS
       end
 
       def bin
-        prefix/"bin"
+        prefix.join("bin")
       end
 
       def share
-        prefix/"share"
+        prefix.join("share")
       end
     end
   end

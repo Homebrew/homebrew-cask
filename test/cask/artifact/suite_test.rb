@@ -7,7 +7,7 @@ describe Cask::Artifact::Suite do
     end
   }
   let(:expected_path) {
-    Cask.appdir/'caffeine_suite'
+    Cask.appdir.join('caffeine_suite')
   }
 
   it "links the suite to the proper directory" do
