@@ -4,7 +4,7 @@ cask :v1 => 'gdal-framework' do
 
   url "http://www.kyngchaos.com/files/software/frameworks/GDAL_Complete-#{version.sub(%r{^(\d+\.\d+).*},'\1')}.dmg"
   homepage 'http://www.kyngchaos.com/software/frameworks'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :oss
 
   pkg 'GDAL Complete.pkg'
   pkg 'Numpy.pkg'
