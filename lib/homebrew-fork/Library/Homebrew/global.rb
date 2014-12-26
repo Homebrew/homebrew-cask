@@ -1,9 +1,6 @@
 require 'extend/pathname'
-require 'extend/ARGV'
 require 'exceptions'
 require 'utils'
-
-ARGV.extend(HomebrewForkArgvExtension)
 
 def cache
   if ENV['HOMEBREW_CACHE']

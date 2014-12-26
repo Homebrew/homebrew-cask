@@ -13,7 +13,7 @@ class AbstractDownloadStrategy
     args = args.dup
     args.each_with_index do |arg, ii|
       if arg.is_a? Hash
-        unless ARGV.verbose?
+        unless Cask.verbose
           args[ii] = arg[:quiet_flag]
         else
           args.delete_at ii
@@ -22,7 +22,7 @@ class AbstractDownloadStrategy
       end
     end
     # 2 as default because commands are eg. svn up, git pull
-    args.insert(2, '-q') unless ARGV.verbose?
+    args.insert(2, '-q') unless Cask.verbose
     args
   end
 
