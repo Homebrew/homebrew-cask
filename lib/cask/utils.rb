@@ -70,7 +70,7 @@ end
 # global methods
 
 def ohai(title, *sput)
-  title = Tty.truncate(title) if $stdout.tty? && !ARGV.verbose?
+  title = Tty.truncate(title) if $stdout.tty? && !Cask.verbose
   puts "#{Tty.blue.bold}==>#{Tty.white} #{title}#{Tty.reset}"
   puts sput unless sput.empty?
 end

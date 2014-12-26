@@ -20,6 +20,14 @@ module Cask::Options
       @debug = _debug
     end
 
+    def verbose
+      @verbose ||= false
+    end
+
+    def verbose=(_verbose)
+      @verbose = _verbose
+    end
+
     def outdated
       @outdated ||= false
     end

@@ -193,6 +193,9 @@ class Cask::CLI
       opts.on("--debug") do |v|
         Cask.debug = true
       end
+      opts.on("--verbose") do |v|
+        Cask.verbose = true
+      end
       opts.on("--outdated") do |v|
         Cask.outdated = true
       end
@@ -216,6 +219,10 @@ class Cask::CLI
           "There is more than one possible option that starts with '#{head}'")
       end
     end
+
+    # for compat with Homebrew, not certain if this is desirable
+    Cask.verbose = true if !ENV['VERBOSE'].nil? or !ENV['HOMEBREW_VERBOSE'].nil?
+
     remaining
   end
 

@@ -4,7 +4,7 @@ require 'os/mac'
 require 'utils/popen'
 
 def homebrew_fork_system cmd, *args
-  puts "#{cmd} #{args*' '}" if ARGV.verbose?
+  puts "#{cmd} #{args*' '}" if Cask.verbose
   pid = fork do
     yield if block_given?
     args.collect!{|arg| arg.to_s}
@@ -35,7 +35,7 @@ def curl *args
   raise "#{curl} is not executable" unless curl.exist? and curl.executable?
 
   flags = HOMEBREW_CURL_ARGS
-  flags = flags.delete("#") if ARGV.verbose?
+  flags = flags.delete("#") if Cask.verbose
 
   args = [flags, HOMEBREW_USER_AGENT, *args]
   # See https://github.com/Homebrew/homebrew/issues/6103
