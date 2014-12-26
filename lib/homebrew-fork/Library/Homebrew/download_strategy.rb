@@ -1,3 +1,5 @@
+require 'resource'
+
 class AbstractDownloadStrategy
   attr_reader :name, :resource
 

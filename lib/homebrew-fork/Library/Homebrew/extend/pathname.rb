@@ -1,5 +1,4 @@
 require 'pathname'
-require 'resource'
 
 class Pathname
   # I don't trust the children.length == 0 check particularly, not to mention
