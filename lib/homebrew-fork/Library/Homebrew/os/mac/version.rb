@@ -1,8 +1,10 @@
-require 'version'
+require 'rubygems'
 
 module OS
   module Mac
-    class Version < ::Version
+    class Version
+      include Comparable
+
       SYMBOLS = {
         :yosemite      => '10.10',
         :mavericks     => '10.9',
@@ -13,31 +15,21 @@ module OS
         :tiger         => '10.4',
       }
 
-      def self.from_symbol(sym)
-        str = SYMBOLS.fetch(sym) do
-          raise ArgumentError, "unknown version #{sym.inspect}"
-        end
-        new(str)
-      end
-
-      def initialize(*args)
-        super
-        @comparison_cache = {}
+      def initialize(release)
+        @release = Gem::Version.new(release)
       end
 
       def <=>(other)
-        @comparison_cache.fetch(other) do
-          v = SYMBOLS.fetch(other) { other.to_s }
-          @comparison_cache[other] = super(Version.new(v))
-        end
+        v = Gem::Version.new(SYMBOLS.fetch(other, other.to_s))
+        @release <=> v
       end
 
       def to_sym
-        SYMBOLS.invert.fetch(@version) { :dunno }
+        SYMBOLS.invert.fetch(@release.to_s, nil)
       end
 
-      def pretty_name
-        to_sym.to_s.split('_').map(&:capitalize).join(' ')
+      def to_s
+        @release.to_s
       end
     end
   end

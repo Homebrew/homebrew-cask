@@ -158,7 +158,8 @@ end
 
 class SubversionDownloadStrategy < VCSDownloadStrategy
   def cache_tag
-    resource.version.head? ? "svn-HEAD" : "svn"
+    # todo: pass versions as symbols, support :head here
+    resource.version == 'head' ? "svn-HEAD" : "svn"
   end
 
   def repo_valid?

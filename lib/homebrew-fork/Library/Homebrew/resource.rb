@@ -1,5 +1,4 @@
 require 'download_strategy'
-require 'version'
 
 # Resource is the fundamental representation of an external resource. The
 # primary formula download, along with other declared resources, are instances
@@ -94,22 +93,10 @@ class Resource
   end
 
   def version val=nil
-    @version ||= detect_version(val)
+    @version ||= val
   end
 
   def mirror val
     mirrors << val
-  end
-
-  private
-
-  def detect_version(val)
-    case val
-    when nil     then Version.detect(url, specs)
-    when String  then Version.new(val)
-    when Version then val
-    else
-      raise TypeError, "version '#{val.inspect}' should be a string"
-    end
   end
 end
