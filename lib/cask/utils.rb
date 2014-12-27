@@ -40,22 +40,6 @@ class Hash
   end
 end
 
-# monkeypatch Pathname
-class Pathname
-  # our own version of Homebrew's abv, with better defenses
-  # against unusual filenames
-  def cabv
-    out=''
-    n = Cask::SystemCommand.run!('/usr/bin/find',
-                                 :args => [self.realpath, *%w[-type f ! -name .DS_Store]],
-                                 :print_stderr => false).stdout.count("\n")
-    out << "#{n} files, " if n > 1
-    out << Cask::SystemCommand.run!('/usr/bin/du',
-                                    :args => ['-hs', '--', self.to_s],
-                                    :print_stderr => false).stdout.split("\t").first.strip
-  end
-end
-
 class Buffer < StringIO
   def initialize(tty = false)
     super()
@@ -167,6 +151,20 @@ module Cask::Utils
     rescue Errno::EACCES, Errno::ENOENT
       false
     end
+  end
+
+  # our own version of Homebrew's abv, with better defenses
+  # against unusual filenames
+  def self.cabv(dir)
+    output = ''
+    count = Cask::SystemCommand.run!('/usr/bin/find',
+                                     :args => [dir, *%w[-type f -not -name .DS_Store -print0]],
+                                     :print_stderr => false).stdout.count("\000")
+    size = Cask::SystemCommand.run!('/usr/bin/du',
+                                    :args => ['-hs', '--', dir],
+                                    :print_stderr => false).stdout.split("\t").first.strip
+    output << "#{count} files, " if count > 1
+    output << size
   end
 
   # paths that "look" descendant (textually) will still

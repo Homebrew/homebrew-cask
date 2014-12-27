@@ -16,7 +16,7 @@ class Cask::CLI::Info < Cask::CLI::Base
 
   def self.info(cask)
     installation = if cask.installed?
-                     "#{cask.staged_path} (#{cask.staged_path.cabv})"
+                     "#{cask.staged_path} (#{Cask::Utils.cabv(cask.staged_path)})"
                    else
                      "Not installed"
                    end
