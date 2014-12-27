@@ -39,4 +39,8 @@ cask :v1 => 'r' do
                         '~/Library/R',
                         '~/Library/Caches/org.R-project.R',
                        ]
+
+  caveats do
+    files_in_usr_local
+  end
 end
