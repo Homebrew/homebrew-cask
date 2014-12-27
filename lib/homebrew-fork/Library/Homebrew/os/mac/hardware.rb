@@ -89,7 +89,7 @@ module MacCPUs
   def universal_archs
     # Building 64-bit is a no-go on Tiger, and pretty hit or miss on Leopard.
     # Don't even try unless Tigerbrew's experimental 64-bit Leopard support is enabled.
-    if MacOS.version <= :leopard and !MacOS.prefer_64_bit?
+    if MacOS.release <= :leopard and !MacOS.prefer_64_bit?
       [arch_32_bit].extend ArchitectureListExtension
     else
       [arch_32_bit, arch_64_bit].extend ArchitectureListExtension

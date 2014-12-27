@@ -23,13 +23,6 @@ class Object
   end
 end
 
-# monkeypatch MacOS
-module MacOS
-  def release
-    version
-  end
-end
-
 # monkeypatch Hash
 class Hash
   def assert_valid_keys(*valid_keys)

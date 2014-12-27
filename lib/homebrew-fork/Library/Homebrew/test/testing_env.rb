@@ -17,8 +17,8 @@ HOMEBREW_CACHE         = HOMEBREW_PREFIX.parent+'cache'
 HOMEBREW_USER_AGENT    = 'Homebrew'
 HOMEBREW_CURL_ARGS     = '-fsLA'
 
-MACOS_FULL_VERSION = `/usr/bin/sw_vers -productVersion`.chomp
-MACOS_VERSION = ENV.fetch('MACOS_VERSION') { MACOS_FULL_VERSION[/10\.\d+/] }
+MACOS_POINT_RELEASE = `/usr/bin/sw_vers -productVersion`.chomp
+MACOS_RELEASE = ENV.fetch('MACOS_RELEASE') { MACOS_POINT_RELEASE[/10\.\d+/] }
 
 # Test environment setup
 # needed to keep rspec from attempting to write outside test dir

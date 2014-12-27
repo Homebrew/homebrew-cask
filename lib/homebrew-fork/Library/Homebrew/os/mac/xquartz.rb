@@ -45,7 +45,7 @@ module OS
       # http://xquartz.macosforge.org/trac/wiki
       # http://xquartz.macosforge.org/trac/wiki/Releases
       def latest_version
-        case MacOS.version
+        case MacOS.release
         when "10.5"
           "2.6.3"
         else
@@ -68,7 +68,7 @@ module OS
       # pkg-util entry, so if Spotlight indexing is disabled we must make an
       # educated guess as to what version is installed.
       def guess_system_version
-        case MacOS.version
+        case MacOS.release
         when '10.5' then '2.1.6'
         when '10.6' then '2.3.6'
         when '10.7' then '2.6.3'

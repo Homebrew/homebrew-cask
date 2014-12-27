@@ -7,7 +7,7 @@ describe Cask::CLI::Doctor do
       Cask::CLI::Doctor.run
     end
     # no point in trying to match more of this environment-specific info
-    out.must_match /\A==> OS X Version:/
+    out.must_match /\A==> OS X Release:/
   end
 
   it "raises an exception when arguments are given" do

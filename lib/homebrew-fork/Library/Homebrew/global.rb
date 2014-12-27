@@ -37,9 +37,9 @@ HOMEBREW_LIBRARY = HOMEBREW_REPOSITORY.join('Library')
 
 HOMEBREW_TEMP = Pathname.new(ENV.fetch('HOMEBREW_TEMP', '/tmp'))
 
-MACOS_FULL_VERSION = `/usr/bin/sw_vers -productVersion`.chomp
-MACOS_VERSION = MACOS_FULL_VERSION[/10\.\d+/]
+MACOS_POINT_RELEASE = `/usr/bin/sw_vers -productVersion`.chomp
+MACOS_RELEASE = MACOS_POINT_RELEASE[/10\.\d+/]
 
-HOMEBREW_USER_AGENT = "Homebrew-cask v0.51+ (Ruby #{RUBY_VERSION}-#{RUBY_PATCHLEVEL}; #{MACOS_VERSION})"
+HOMEBREW_USER_AGENT = "Homebrew-cask v0.51+ (Ruby #{RUBY_VERSION}-#{RUBY_PATCHLEVEL}; #{MACOS_RELEASE})"
 
 HOMEBREW_CURL_ARGS = '-f#LA'
