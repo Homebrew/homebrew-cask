@@ -10,8 +10,8 @@ module OS
 
     # This can be compared to numerics, strings, or symbols
     # using the standard Ruby Comparable methods.
-    def version
-      @version ||= Version.new(MACOS_VERSION)
+    def release
+      @release ||= Version.new(MACOS_RELEASE)
     end
 
     def prefer_64_bit?

@@ -5,8 +5,8 @@ cask :v1test => 'with-depends-on-macos-failure' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/with-depends-on-macos-failure'
 
-  # guarantee a mismatched version
-  depends_on :macos => MacOS.version.to_s == '10.0' ? '10.1' : '10.0'
+  # guarantee a mismatched release
+  depends_on :macos => MacOS.release.to_s == '10.0' ? '10.1' : '10.0'
 
   app 'Caffeine.app'
 end

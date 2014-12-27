@@ -127,7 +127,7 @@ class Cask::SubversionDownloadStrategy < SubversionDownloadStrategy
     args = [svncommand]
 
     # SVN shipped with XCode 3.1.4 can't force a checkout.
-    args << '--force' unless MacOS.version == :leopard
+    args << '--force' unless MacOS.release == :leopard
 
     # make timestamps consistent for checksumming
     args.concat(%w[--config-option config:miscellany:use-commit-times=yes])
