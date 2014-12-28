@@ -8,7 +8,7 @@ class Cask::SystemCommand
     processed_stderr = ''
 
     raw_stdin, raw_stdout, raw_stderr, raw_wait_thr =
-      Open3.popen3(*command.map { |arg| arg.respond_to?(:to_path) ? File.absolute_path(arg) : arg.to_s })
+      Open3.popen3(*command.map { |arg| arg.respond_to?(:to_path) ? File.absolute_path(arg) : String(arg) })
 
     if options[:input]
       Array(options[:input]).each { |line| raw_stdin.puts line }
