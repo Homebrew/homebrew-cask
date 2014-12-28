@@ -37,38 +37,6 @@ module Hardware
       @bits ||= sysctl_bool("hw.cpu64bit_capable") ? 64 : 32
     end
 
-    def aes?
-      sysctl_bool('hw.optional.aes')
-    end
-
-    def altivec?
-      sysctl_bool('hw.optional.altivec')
-    end
-
-    def avx?
-      sysctl_bool('hw.optional.avx1_0')
-    end
-
-    def avx2?
-      sysctl_bool('hw.optional.avx2_0')
-    end
-
-    def sse3?
-      sysctl_bool('hw.optional.sse3')
-    end
-
-    def ssse3?
-      sysctl_bool('hw.optional.supplementalsse3')
-    end
-
-    def sse4?
-      sysctl_bool('hw.optional.sse4_1')
-    end
-
-    def sse4_2?
-      sysctl_bool('hw.optional.sse4_2')
-    end
-
     protected
 
     def sysctl_bool(property)
