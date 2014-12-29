@@ -1,3 +1,5 @@
+require 'resource'
+
 class AbstractDownloadStrategy
   attr_reader :name, :resource
 
@@ -11,7 +13,7 @@ class AbstractDownloadStrategy
     args = args.dup
     args.each_with_index do |arg, ii|
       if arg.is_a? Hash
-        unless ARGV.verbose?
+        unless Cask.verbose
           args[ii] = arg[:quiet_flag]
         else
           args.delete_at ii
@@ -20,7 +22,7 @@ class AbstractDownloadStrategy
       end
     end
     # 2 as default because commands are eg. svn up, git pull
-    args.insert(2, '-q') unless ARGV.verbose?
+    args.insert(2, '-q') unless Cask.verbose
     args
   end
 
@@ -131,20 +133,6 @@ class CurlDownloadStrategy < AbstractDownloadStrategy
     tarball_path
   end
 
-  # gunzip and bunzip2 write the output file in the same directory as the input
-  # file regardless of the current working directory, so we need to write it to
-  # the correct location ourselves.
-  def buffered_write(tool)
-    target = File.basename(basename_without_params, tarball_path.extname)
-
-    Utils.popen_read(tool, "-f", tarball_path.to_s, "-c") do |pipe|
-      File.open(target, "wb") do |f|
-        buf = ""
-        f.write(buf) while pipe.read(1024, buf)
-      end
-    end
-  end
-
   private
 
   def curl(*args)
@@ -152,25 +140,9 @@ class CurlDownloadStrategy < AbstractDownloadStrategy
     super
   end
 
-  def chdir
-    entries = Dir['*']
-    case entries.length
-    when 0 then raise "Empty archive"
-    when 1 then Dir.chdir entries.first rescue nil
-    end
-  end
-
-  def basename_without_params
-    # Strip any ?thing=wad out of .c?thing=wad style extensions
-    File.basename(@url)[/[^?]+/]
-  end
-
   def ext
     # We need a Pathname because we've monkeypatched extname to support double
-    # extensions (e.g. tar.gz).
-    # We can't use basename_without_params, because given a URL like
-    #   http://example.com/download.php?file=foo-1.0.tar.gz
-    # the extension we want is ".tar.gz", not ".php".
+    # extensions (e.g. tar.gz). -- todo actually that monkeypatch has been removed
     Pathname.new(@url).extname[/[^?]+/]
   end
 end
@@ -186,7 +158,8 @@ end
 
 class SubversionDownloadStrategy < VCSDownloadStrategy
   def cache_tag
-    resource.version.head? ? "svn-HEAD" : "svn"
+    # todo: pass versions as symbols, support :head here
+    resource.version == 'head' ? "svn-HEAD" : "svn"
   end
 
   def repo_valid?
@@ -244,7 +217,7 @@ class SubversionDownloadStrategy < VCSDownloadStrategy
     svncommand = target.directory? ? 'up' : 'checkout'
     args = ['svn', svncommand]
     # SVN shipped with XCode 3.1.4 can't force a checkout.
-    args << '--force' unless MacOS.version == :leopard
+    args << '--force' unless MacOS.release == :leopard
     args << url unless target.directory?
     args << target
     args << '-r' << revision if revision

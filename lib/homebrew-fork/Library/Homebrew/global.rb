@@ -1,9 +1,6 @@
 require 'extend/pathname'
-require 'extend/ARGV'
 require 'exceptions'
 require 'utils'
-
-ARGV.extend(HomebrewForkArgvExtension)
 
 def cache
   if ENV['HOMEBREW_CACHE']
@@ -36,14 +33,13 @@ end
 
 HOMEBREW_PREFIX = Pathname.new(HOMEBREW_BREW_FILE).dirname.parent # Where we link under
 HOMEBREW_REPOSITORY = Pathname.new(HOMEBREW_BREW_FILE).realpath.dirname.parent # Where .git is found
-HOMEBREW_LIBRARY = HOMEBREW_REPOSITORY/"Library"
+HOMEBREW_LIBRARY = HOMEBREW_REPOSITORY.join('Library')
 
 HOMEBREW_TEMP = Pathname.new(ENV.fetch('HOMEBREW_TEMP', '/tmp'))
 
-MACOS_FULL_VERSION = `/usr/bin/sw_vers -productVersion`.chomp
-MACOS_VERSION = MACOS_FULL_VERSION[/10\.\d+/]
+MACOS_POINT_RELEASE = `/usr/bin/sw_vers -productVersion`.chomp
+MACOS_RELEASE = MACOS_POINT_RELEASE[/10\.\d+/]
 
-HOMEBREW_GITHUB_API_TOKEN = ENV["HOMEBREW_GITHUB_API_TOKEN"]
-HOMEBREW_USER_AGENT = "Homebrew-cask v0.51+ (Ruby #{RUBY_VERSION}-#{RUBY_PATCHLEVEL}; #{MACOS_VERSION})"
+HOMEBREW_USER_AGENT = "Homebrew-cask v0.51+ (Ruby #{RUBY_VERSION}-#{RUBY_PATCHLEVEL}; #{MACOS_RELEASE})"
 
 HOMEBREW_CURL_ARGS = '-f#LA'

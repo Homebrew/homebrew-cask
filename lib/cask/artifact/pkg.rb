@@ -46,7 +46,7 @@ class Cask::Artifact::Pkg < Cask::Artifact::Base
       '-pkg',    source,
       '-target', '/'
     ]
-    args << '-verboseR' if ARGV.verbose?
+    args << '-verboseR' if Cask.verbose
     args << '-allowUntrusted' if pkg_install_opts :allow_untrusted
     @command.run!('/usr/sbin/installer', {:sudo => true, :args => args, :print_stdout => true})
   end

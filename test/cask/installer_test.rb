@@ -9,9 +9,9 @@ describe Cask::Installer do
         Cask::Installer.new(caffeine).install
       end
 
-      dest_path = Cask.caskroom/'local-caffeine'/caffeine.version
+      dest_path = Cask.caskroom.join('local-caffeine',caffeine.version)
       dest_path.must_be :directory?
-      application = dest_path/'Caffeine.app'
+      application = dest_path.join('Caffeine.app')
       application.must_be :directory?
     end
 
@@ -22,9 +22,9 @@ describe Cask::Installer do
         Cask::Installer.new(transmission).install
       end
 
-      dest_path = Cask.caskroom/'local-transmission'/transmission.version
+      dest_path = Cask.caskroom.join('local-transmission',transmission.version)
       dest_path.must_be :directory?
-      application = dest_path/'Transmission.app'
+      application = dest_path.join('Transmission.app')
       application.must_be :directory?
     end
 
@@ -35,9 +35,9 @@ describe Cask::Installer do
         Cask::Installer.new(tarball).install
       end
 
-      dest_path = Cask.caskroom/'tarball'/tarball.version
+      dest_path = Cask.caskroom.join('tarball',tarball.version)
       dest_path.must_be :directory?
-      application = dest_path/'Tarball.app'
+      application = dest_path.join('Tarball.app')
       application.must_be :directory?
     end
 
@@ -51,9 +51,9 @@ describe Cask::Installer do
         Cask::Installer.new(cab_container).install
       end
 
-      dest_path = Cask.caskroom/'cab-container'/cab_container.version
+      dest_path = Cask.caskroom.join('cab-container',cab_container.version)
       dest_path.must_be :directory?
-      application = dest_path/'cabcontainer/Application.app'
+      application = dest_path.join('cabcontainer','Application.app')
       application.must_be :directory?
     end
 
@@ -63,14 +63,14 @@ describe Cask::Installer do
       shutup do
         Cask::Installer.new(air_container).install
       end
-      dest_path = Cask.caskroom/'adobe-air-container'/air_container.version
+      dest_path = Cask.caskroom.join('adobe-air-container',air_container.version)
       dest_path.must_be :directory?
-      application = dest_path/'GMDesk.app'
+      application = dest_path.join('GMDesk.app')
       application.must_be :directory?
     end
 
     it "works with 7z-based Casks" do
-      skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
+      skip unless HOMEBREW_PREFIX.join('bin','unar').exist?
       sevenzip_container = Cask.load('sevenzip-container')
       empty = stub(:formula => [], :macos => nil, :arch => nil, :x11 => nil)
       sevenzip_container.stubs(:depends_on).returns(empty)
@@ -79,9 +79,9 @@ describe Cask::Installer do
         Cask::Installer.new(sevenzip_container).install
       end
 
-      dest_path = Cask.caskroom/'sevenzip-container'/sevenzip_container.version
+      dest_path = Cask.caskroom.join('sevenzip-container',sevenzip_container.version)
       dest_path.must_be :directory?
-      application = dest_path/'sevenzipcontainer/Application.app'
+      application = dest_path.join('sevenzipcontainer','Application.app')
       application.must_be :directory?
     end
 
@@ -92,14 +92,14 @@ describe Cask::Installer do
         Cask::Installer.new(xar_container).install
       end
 
-      dest_path = Cask.caskroom/'xar-container'/xar_container.version
+      dest_path = Cask.caskroom.join('xar-container',xar_container.version)
       dest_path.must_be :directory?
-      application = dest_path/'xarcontainer/Application.app'
+      application = dest_path.join('xarcontainer','Application.app')
       application.must_be :directory?
     end
 
     it "works with Stuffit-based Casks" do
-      skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
+      skip unless HOMEBREW_PREFIX.join('bin','unar').exist?
       stuffit_container = Cask.load('stuffit-container')
       empty = stub(:formula => [], :macos => nil, :arch => nil, :x11 => nil)
       stuffit_container.stubs(:depends_on).returns(empty)
@@ -108,14 +108,14 @@ describe Cask::Installer do
         Cask::Installer.new(stuffit_container).install
       end
 
-      dest_path = Cask.caskroom/'stuffit-container'/stuffit_container.version
+      dest_path = Cask.caskroom.join('stuffit-container',stuffit_container.version)
       dest_path.must_be :directory?
-      application = dest_path/'sheldonmac/v1.0'
+      application = dest_path.join('sheldonmac','v1.0')
       application.must_be :directory?
     end
 
     it "works with RAR-based Casks" do
-      skip unless HOMEBREW_PREFIX.join('bin/unar').exist?
+      skip unless HOMEBREW_PREFIX.join('bin','unar').exist?
       rar_container = Cask.load('rar-container')
       empty = stub(:formula => [], :macos => nil, :arch => nil, :x11 => nil)
       rar_container.stubs(:depends_on).returns(empty)
@@ -124,9 +124,9 @@ describe Cask::Installer do
         Cask::Installer.new(rar_container).install
       end
 
-      dest_path = Cask.caskroom/'rar-container'/rar_container.version
+      dest_path = Cask.caskroom.join('rar-container',rar_container.version)
       dest_path.must_be :directory?
-      application = dest_path/'rarcontainer/Application.app'
+      application = dest_path.join('rarcontainer','Application.app')
       application.must_be :directory?
     end
 
@@ -137,9 +137,9 @@ describe Cask::Installer do
         Cask::Installer.new(asset).install
       end
 
-      dest_path = Cask.caskroom/'bzipped-asset'/asset.version
+      dest_path = Cask.caskroom.join('bzipped-asset',asset.version)
       dest_path.must_be :directory?
-      file = dest_path/"bzipped-asset-#{asset.version}"
+      file = dest_path.join("bzipped-asset-#{asset.version}")
       file.must_be :file?
     end
 
@@ -150,9 +150,9 @@ describe Cask::Installer do
         Cask::Installer.new(asset).install
       end
 
-      dest_path = Cask.caskroom/'gzipped-asset'/asset.version
+      dest_path = Cask.caskroom.join('gzipped-asset',asset.version)
       dest_path.must_be :directory?
-      file = dest_path/"gzipped-asset-#{asset.version}"
+      file = dest_path.join("gzipped-asset-#{asset.version}")
       file.must_be :file?
     end
 
@@ -236,8 +236,8 @@ describe Cask::Installer do
         Cask::Installer.new(naked_pkg).install
       end
 
-      dest_path = Cask.caskroom/'naked-pkg'/naked_pkg.version
-      pkg = dest_path/'Naked.pkg'
+      dest_path = Cask.caskroom.join('naked-pkg',naked_pkg.version)
+      pkg = dest_path.join('Naked.pkg')
       pkg.must_be :file?
     end
 
@@ -248,8 +248,8 @@ describe Cask::Installer do
         Cask::Installer.new(naked_executable).install
       end
 
-      dest_path = Cask.caskroom/'naked-executable'/naked_executable.version
-      executable = dest_path/'naked_executable'
+      dest_path = Cask.caskroom.join('naked-executable',naked_executable.version)
+      executable = dest_path.join('naked_executable')
       executable.must_be :file?
     end
 
@@ -260,7 +260,7 @@ describe Cask::Installer do
         Cask::Installer.new(nested_app).install
       end
 
-      dest_path = Cask.appdir/'MyNestedApp.app'
+      dest_path = Cask.appdir.join('MyNestedApp.app')
       TestHelper.valid_alias?(dest_path).must_equal true
     end
 
@@ -300,9 +300,9 @@ describe Cask::Installer do
         installer.uninstall
       end
 
-      (Cask.caskroom/'local-caffeine'/caffeine.version/'Caffeine.app').wont_be :directory?
-      (Cask.caskroom/'local-caffeine'/caffeine.version).wont_be :directory?
-      (Cask.caskroom/'local-caffeine').wont_be :directory?
+      Cask.caskroom.join('local-caffeine',caffeine.version,'Caffeine.app').wont_be :directory?
+      Cask.caskroom.join('local-caffeine',caffeine.version).wont_be :directory?
+      Cask.caskroom.join('local-caffeine').wont_be :directory?
     end
 
     it "uninstalls all versions if force is set" do
@@ -314,19 +314,19 @@ describe Cask::Installer do
         installer.install
       end
 
-      (Cask.caskroom/'local-caffeine'/caffeine.version).must_be :directory?
-      (Cask.caskroom/'local-caffeine'/mutated_version).wont_be  :directory?
-      FileUtils.mv(Cask.caskroom/'local-caffeine'/caffeine.version, Cask.caskroom/'local-caffeine'/mutated_version)
-      (Cask.caskroom/'local-caffeine'/caffeine.version).wont_be :directory?
-      (Cask.caskroom/'local-caffeine'/mutated_version).must_be  :directory?
+      Cask.caskroom.join('local-caffeine',caffeine.version).must_be :directory?
+      Cask.caskroom.join('local-caffeine',mutated_version).wont_be  :directory?
+      FileUtils.mv(Cask.caskroom.join('local-caffeine',caffeine.version), Cask.caskroom.join('local-caffeine',mutated_version))
+      Cask.caskroom.join('local-caffeine',caffeine.version).wont_be :directory?
+      Cask.caskroom.join('local-caffeine',mutated_version).must_be  :directory?
 
       shutup do
         installer.uninstall(true)
       end
 
-      (Cask.caskroom/'local-caffeine'/caffeine.version).wont_be :directory?
-      (Cask.caskroom/'local-caffeine'/mutated_version).wont_be  :directory?
-      (Cask.caskroom/'local-caffeine').wont_be :directory?
+      Cask.caskroom.join('local-caffeine',caffeine.version).wont_be :directory?
+      Cask.caskroom.join('local-caffeine',mutated_version).wont_be  :directory?
+      Cask.caskroom.join('local-caffeine').wont_be :directory?
     end
   end
 end

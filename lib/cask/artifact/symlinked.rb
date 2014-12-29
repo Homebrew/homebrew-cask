@@ -67,7 +67,7 @@ class Cask::Artifact::Symlinked < Cask::Artifact::Base
   def summarize_one_link(artifact_spec)
     load_specification artifact_spec
     if self.class.islink?(target)
-      link_description = target.exist? ? '' : "#{Tty.red}Broken Link#{Tty.reset}: "
+      link_description = target.exist? ? '' : "#{Tty.red.underline}Broken Link#{Tty.reset}: "
       printable_target = "'#{target}'"
       printable_target.sub!(%r{^'#{ENV['HOME']}/*}, %q{~/'})
       "#{link_description}#{printable_target} -> '#{target.readlink}'"

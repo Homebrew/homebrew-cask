@@ -7,7 +7,8 @@ class Cask::SystemCommand
     processed_stdout = ''
     processed_stderr = ''
 
-    raw_stdin, raw_stdout, raw_stderr, raw_wait_thr = Open3.popen3(*command.map(&:to_s))
+    raw_stdin, raw_stdout, raw_stderr, raw_wait_thr =
+      Open3.popen3(*command.map { |arg| arg.respond_to?(:to_path) ? File.absolute_path(arg) : String(arg) })
 
     if options[:input]
       Array(options[:input]).each { |line| raw_stdin.puts line }
@@ -69,7 +70,7 @@ class Cask::SystemCommand::Result
   end
 
   def plist
-    @plist ||= self.class._parse_plist(@command, @stdout)
+    @plist ||= self.class._parse_plist(@command, @stdout.dup)
   end
 
   def success?

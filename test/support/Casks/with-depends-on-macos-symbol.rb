@@ -5,7 +5,7 @@ cask :v1test => 'with-depends-on-macos-symbol' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/with-depends-on-macos-symbol'
 
-  depends_on :macos => MacOS.version.to_sym
+  depends_on :macos => MacOS.release.to_sym
 
   app 'Caffeine.app'
 end

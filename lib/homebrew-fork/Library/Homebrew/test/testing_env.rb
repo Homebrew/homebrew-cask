@@ -3,7 +3,6 @@
 $:.push(File.expand_path(__FILE__+'/../..'))
 
 require 'extend/pathname'
-require 'extend/ARGV'
 require 'utils'
 require 'tmpdir'
 
@@ -18,13 +17,9 @@ HOMEBREW_CACHE         = HOMEBREW_PREFIX.parent+'cache'
 HOMEBREW_USER_AGENT    = 'Homebrew'
 HOMEBREW_CURL_ARGS     = '-fsLA'
 
-MACOS_FULL_VERSION = `/usr/bin/sw_vers -productVersion`.chomp
-MACOS_VERSION = ENV.fetch('MACOS_VERSION') { MACOS_FULL_VERSION[/10\.\d+/] }
+MACOS_POINT_RELEASE = `/usr/bin/sw_vers -productVersion`.chomp
+MACOS_RELEASE = ENV.fetch('MACOS_RELEASE') { MACOS_POINT_RELEASE[/10\.\d+/] }
 
 # Test environment setup
 # needed to keep rspec from attempting to write outside test dir
 %w{ENV Formula}.each { |d| HOMEBREW_LIBRARY.join(d).mkpath }
-
-# required for many tests
-# eg: undefined method `verbose?' for []:Array
-ARGV.extend(HomebrewForkArgvExtension)

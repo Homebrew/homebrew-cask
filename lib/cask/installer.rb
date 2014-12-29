@@ -70,12 +70,12 @@ class Cask::Installer
   end
 
   def summary
-    s = if MacOS.version >= :lion and not ENV['HOMEBREW_NO_EMOJI']
+    s = if MacOS.release >= :lion and not ENV['HOMEBREW_NO_EMOJI']
       (ENV['HOMEBREW_INSTALL_BADGE'] || "\xf0\x9f\x8d\xba") + '  '
     else
-      "#{Tty.blue}==>#{Tty.white} Success!#{Tty.reset} "
+      "#{Tty.blue.bold}==>#{Tty.white} Success!#{Tty.reset} "
     end
-    s << "#{@cask} staged at '#{@cask.staged_path}' (#{@cask.staged_path.cabv})"
+    s << "#{@cask} staged at '#{@cask.staged_path}' (#{Cask::Utils.cabv(@cask.staged_path)})"
   end
 
   def download
@@ -129,16 +129,16 @@ class Cask::Installer
     return unless @cask.depends_on.macos
     if @cask.depends_on.macos.first.is_a?(Array)
       operator, release = @cask.depends_on.macos.first
-      unless MacOS.version.send(operator, release)
-        raise CaskError.new "Cask #{@cask} depends on OS X release #{operator} #{release}, but you are running release #{MacOS.version}."
+      unless MacOS.release.send(operator, release)
+        raise CaskError.new "Cask #{@cask} depends on OS X release #{operator} #{release}, but you are running release #{MacOS.release}."
       end
     elsif @cask.depends_on.macos.length > 1
-      unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.version.to_s))
-        raise CaskError.new "Cask #{@cask} depends on OS X release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.version}."
+      unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.release.to_s))
+        raise CaskError.new "Cask #{@cask} depends on OS X release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.release}."
       end
     else
-      unless MacOS.version == @cask.depends_on.macos.first
-        raise CaskError.new "Cask #{@cask} depends on OS X release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.version}."
+      unless MacOS.release == @cask.depends_on.macos.first
+        raise CaskError.new "Cask #{@cask} depends on OS X release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.release}."
       end
     end
   end
@@ -186,7 +186,7 @@ class Cask::Installer
   def enable_accessibility_access
     return unless @cask.accessibility_access
     ohai 'Enabling accessibility access'
-    if MacOS.version >= :mavericks
+    if MacOS.release >= :mavericks
       @command.run!('/usr/bin/sqlite3',
                     :args => [
                               Cask.tcc_db,
@@ -202,7 +202,7 @@ class Cask::Installer
 
   def disable_accessibility_access
     return unless @cask.accessibility_access
-    if MacOS.version >= :mavericks
+    if MacOS.release >= :mavericks
       ohai 'Disabling accessibility access'
       @command.run!('/usr/bin/sqlite3',
                     :args => [
@@ -316,15 +316,11 @@ class Cask::Installer
         permissions_rmtree subdir unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
       end
     end
-    if @cask.metadata_versioned_container_path.respond_to?(:rmdir_if_possible)
-      @cask.metadata_versioned_container_path.rmdir_if_possible
-    end
-    if @cask.metadata_master_container_path.respond_to?(:rmdir_if_possible)
-      @cask.metadata_master_container_path.rmdir_if_possible
-    end
+    Cask::Utils.rmdir_if_possible(@cask.metadata_versioned_container_path)
+    Cask::Utils.rmdir_if_possible(@cask.metadata_master_container_path)
 
     # toplevel staged distribution
-    @cask.caskroom_path.rmdir_if_possible
+    Cask::Utils.rmdir_if_possible(@cask.caskroom_path)
   end
 
   def purge_caskroom_path

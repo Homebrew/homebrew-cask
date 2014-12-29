@@ -1,6 +1,7 @@
 class Cask::CLI::Doctor < Cask::CLI::Base
   def self.run
-    ohai 'OS X Version:',                                    render_with_none_as_error( MACOS_FULL_VERSION )
+    ohai 'OS X Release:',                                    render_with_none_as_error( MACOS_RELEASE )
+    ohai 'OS X Point Release:',                              render_with_none_as_error( MACOS_POINT_RELEASE )
     ohai "Hardware Architecture:",                           render_with_none_as_error( "#{Hardware::CPU.type}-#{Hardware::CPU.bits}" )
     ohai 'Ruby Version:',                                    render_with_none_as_error( "#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}" )
     ohai 'Ruby Path:',                                       render_with_none_as_error( RbConfig.ruby )
@@ -138,11 +139,11 @@ class Cask::CLI::Doctor < Cask::CLI::Base
   end
 
   def self.notfound_string
-    "#{Tty.red}Not Found - Unknown Error#{Tty.reset}"
+    "#{Tty.red.underline}Not Found - Unknown Error#{Tty.reset}"
   end
 
   def self.error_string(string='Error')
-    "#{Tty.red}(#{string})#{Tty.reset}"
+    "#{Tty.red.underline}(#{string})#{Tty.reset}"
   end
 
   def self.render_with_none(string)
