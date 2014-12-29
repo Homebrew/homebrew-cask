@@ -7,5 +7,5 @@ cask :v1 => 'djay' do
   homepage 'http://algoriddim.com/djay-mac'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  app 'djay.app'
+  app 'djay Pro.app'
 end
