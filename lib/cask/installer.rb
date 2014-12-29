@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'cask/cask_dependencies'
 require 'cask/staged'
 
 class Cask::Installer
@@ -46,7 +47,7 @@ class Cask::Installer
     output
   end
 
-  def install(force=false)
+  def install(force=false, skip_cask_deps=false)
     odebug "Cask::Installer.install"
     if @cask.installed? && !force
       raise CaskAlreadyInstalledError.new(@cask)
@@ -55,7 +56,7 @@ class Cask::Installer
     print_caveats
 
     begin
-      satisfy_dependencies
+      satisfy_dependencies(skip_cask_deps)
       download
       extract_primary_container
       install_artifacts
@@ -114,13 +115,14 @@ class Cask::Installer
   # todo move dependencies to a separate class
   #      dependencies should also apply for "brew cask stage"
   #      override dependencies with --force or perhaps --force-deps
-  def satisfy_dependencies
+  def satisfy_dependencies(skip_cask_deps=false)
     if @cask.depends_on
       ohai 'Satisfying dependencies'
       macos_dependencies
       arch_dependencies
       x11_dependencies
       formula_dependencies
+      cask_dependencies unless skip_cask_deps
       puts 'complete'
     end
   end
@@ -173,6 +175,22 @@ class Cask::Installer
       else
         @command.run!(HOMEBREW_BREW_FILE,
                       :args => ['install', dep_name])
+        puts "done"
+      end
+    end
+  end
+
+  def cask_dependencies
+    return unless @cask.depends_on.cask and not @cask.depends_on.cask.empty?
+    ohai "Installing Cask dependencies: #{@cask.depends_on.cask.join(', ')}"
+    deps = Cask::CaskDependencies.new(@cask)
+    deps.sorted.each do |dep_token|
+      puts "#{dep_token} ..."
+      dep = Cask.load(dep_token)
+      if dep.installed?
+        puts "already installed"
+      else
+        Cask::Installer.new(dep).install(false, true)
         puts "done"
       end
     end
