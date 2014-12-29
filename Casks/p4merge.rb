@@ -1,8 +1,8 @@
 cask :v1 => 'p4merge' do
-  version '2014.1'
-  sha256 'c5d05d78596fe9b4f83193a11805a027b2652fdf87365de1321e671286fdca3f'
+  version '2014.2'
+  sha256 'cb8f210435de8186af92e5d376a64e6b5f48c67d1b4e892628de88d54ce4918e'
 
-  url "http://filehost.perforce.com/perforce/r#{version.sub(%r{^20},'')}/bin.macosx106x86_64/P4V.dmg"
+  url "http://filehost.perforce.com/perforce/r#{version.sub(%r{^20},'')}/bin.macosx107x86_64/P4V.dmg"
   homepage 'http://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools'
   license :oss
 
