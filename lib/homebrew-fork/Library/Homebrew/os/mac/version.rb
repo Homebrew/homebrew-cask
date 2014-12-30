@@ -13,6 +13,10 @@ module OS
         :snow_leopard  => '10.6',
         :leopard       => '10.5',
         :tiger         => '10.4',
+        :panther       => '10.3',
+        :jaguar        => '10.2',
+        :puma          => '10.1',
+        :cheetah       => '10.0',
       }
 
       def initialize(release)

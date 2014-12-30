@@ -56,13 +56,7 @@ class Cask::DSL::DependsOn
 
   def self.coerce_os_release(arg)
 
-    # supplement Homebrew's table
-    @osx_symbols ||= OS::Mac::Version::SYMBOLS.merge!(
-                                                      :cheetah => '10.0',
-                                                      :puma    => '10.1',
-                                                      :jaguar  => '10.2',
-                                                      :panther => '10.3'
-                                                     )
+    @osx_symbols ||= OS::Mac::Version::SYMBOLS
     @inverted_osx_symbols ||= @osx_symbols.invert
 
     begin
