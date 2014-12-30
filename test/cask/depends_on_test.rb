@@ -101,7 +101,7 @@ describe "Satisfy Dependencies and Requirements" do
 
     it "raises an exception when depends_on :x11 is not satisfied" do
       x11_cask = Cask.load('with-depends-on-x11')
-      Cask.stubs(:x11_executable).returns(Pathname.new('/usr/path/does/not/exist'))
+      Cask.stubs(:x11_libpng).returns([Pathname.new('/usr/path/does/not/exist')])
       lambda {
         shutup do
           Cask::Installer.new(x11_cask).install
