@@ -29,6 +29,8 @@ cask :v1 => 'xquartz' do
                         '~/Library/Logs/X11',
                         '~/Library/Logs/X11.org.macosforge.xquartz.log',
                         '~/Library/Logs/X11.org.macosforge.xquartz.log.old',
+                        '~/Library/Preferences/org.macosforge.xquartz.X11.plist',
+                        '~/Library/Saved Application State/org.macosforge.xquartz.X11.savedState',
                         '~/.Xauthority',
                        ],
             :rmdir => '~/.fonts'
