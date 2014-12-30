@@ -3,6 +3,7 @@ cask :v1 => 'adobe-reader' do
   sha256 '259957f1434bcdf47dc6a7c12affc40dd3c17288009dc229aa51f20ec4e8b1c5'
 
   url "http://ardownload.adobe.com/pub/adobe/reader/mac/#{version.to_i}.x/#{version}/en_US/AdbeRdr#{version.gsub('.', '')}_en_US.dmg"
+  name 'Adobe Reader'
   homepage 'http://www.adobe.com/products/reader.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
@@ -13,5 +14,6 @@ cask :v1 => 'adobe-reader' do
   zap       :delete => [
                         "~/Library/Application Support/Adobe/Acrobat/#{version.sub(%r{(\d+)\.(\d+).*},'\1.\2')}",
                         '~/Library/Preferences/com.adobe.Reader.plist',
+                        '~/Library/Caches/com.adobe.Reader'
                        ]
 end
