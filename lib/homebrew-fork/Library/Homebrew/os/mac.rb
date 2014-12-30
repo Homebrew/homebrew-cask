@@ -1,4 +1,4 @@
-require 'os/mac/version'
+require 'os/mac/release'
 
 module OS
   module Mac
@@ -9,7 +9,7 @@ module OS
     # This can be compared to numerics, strings, or symbols
     # using the standard Ruby Comparable methods.
     def release
-      @release ||= Version.new(MACOS_RELEASE)
+      @release ||= Release.new(MACOS_RELEASE)
     end
   end
 end

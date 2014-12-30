@@ -2,7 +2,7 @@ require 'rubygems'
 
 module OS
   module Mac
-    class Version
+    class Release
       include Comparable
 
       SYMBOLS = {

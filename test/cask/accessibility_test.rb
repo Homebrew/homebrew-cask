@@ -10,7 +10,7 @@ describe "Accessibility Access" do
 
   describe "install" do
     it "can enable accessibility access" do
-      MacOS.stubs(:release => OS::Mac::Version.new('10.9'))
+      MacOS.stubs(:release => OS::Mac::Release.new('10.9'))
 
       @installer.stubs(:bundle_identifier => 'com.example.BasicCask')
 
@@ -23,7 +23,7 @@ describe "Accessibility Access" do
     end
 
     it "can enable accessibility access in OS X releases prior to Mavericks" do
-      MacOS.stubs(:release => OS::Mac::Version.new('10.8'))
+      MacOS.stubs(:release => OS::Mac::Release.new('10.8'))
 
       Cask::FakeSystemCommand.expects_command(
         ['/usr/bin/sudo', '-E', '--', '/usr/bin/touch', Cask.pre_mavericks_accessibility_dotfile]
@@ -36,7 +36,7 @@ describe "Accessibility Access" do
 
   describe "uninstall" do
     it "can disable accessibility access" do
-      MacOS.stubs(:release => OS::Mac::Version.new('10.9'))
+      MacOS.stubs(:release => OS::Mac::Release.new('10.9'))
 
       @installer.stubs(:bundle_identifier => 'com.example.BasicCask')
 
@@ -48,7 +48,7 @@ describe "Accessibility Access" do
       end
     end
     it "warns about disabling accessibility access on old OS X releases" do
-      MacOS.stubs(:release => OS::Mac::Version.new('10.8'))
+      MacOS.stubs(:release => OS::Mac::Release.new('10.8'))
 
       @installer.stubs(:bundle_identifier => 'com.example.BasicCask')
 
