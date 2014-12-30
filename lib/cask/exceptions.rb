@@ -86,6 +86,17 @@ class CaskX11DependencyError < CaskError
   end
 end
 
+class CaskCyclicCaskDependencyError < CaskError
+  attr_reader :token
+  def initialize(token)
+    @token = token
+  end
+
+  def to_s
+    "Cask '#{token}' includes cyclic dependencies on other Casks and could not be installed."
+  end
+end
+
 class CaskUnspecifiedError < CaskError
   def to_s
     "This command requires a Cask token"
