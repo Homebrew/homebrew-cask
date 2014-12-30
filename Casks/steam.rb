@@ -7,4 +7,6 @@ cask :v1 => 'steam' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Steam.app'
+
+  uninstall :launchctl => 'com.valvesoftware.steamclean'
 end
