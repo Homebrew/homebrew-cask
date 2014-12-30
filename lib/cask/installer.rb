@@ -159,7 +159,9 @@ class Cask::Installer
 
   def x11_dependencies
     return unless @cask.depends_on.x11
-    raise CaskX11DependencyError.new(@cask.token) unless Cask.x11_executable.exist?
+    if Cask.x11_libpng.select(&:exist?).empty?
+      raise CaskX11DependencyError.new(@cask.token)
+    end
   end
 
   def formula_dependencies
