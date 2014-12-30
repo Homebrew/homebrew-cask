@@ -17,6 +17,8 @@ cask :v1 => 'sourcetree' do
   app 'SourceTree.app'
   binary 'SourceTree.app/Contents/Resources/stree'
 
+  uninstall :launchctl => 'com.atlassian.SourceTreePrivilegedHelper2'
+
   zap :delete => [
                   '~/Library/Application Support/SourceTree',
                   '~/Library/Caches/com.torusknot.SourceTreeNotMAS',
