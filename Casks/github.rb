@@ -13,7 +13,10 @@ cask :v1 => 'github' do
     suppress_move_to_applications
   end
 
-  uninstall :launchctl => 'com.github.GitHub.GHInstallCLI'
+  uninstall :launchctl => [
+                           'com.github.GitHub.Conduit',
+                           'com.github.GitHub.GHInstallCLI'
+                          ]
 
   zap :delete => [
                   '~/Library/Application Support/GitHub for Mac',
