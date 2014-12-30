@@ -47,7 +47,7 @@ class Tty
     end
 
     def width
-      `/usr/bin/tput cols 2>/dev/null`.strip.to_i
+      `/usr/bin/tput cols`.strip.to_i
     end
 
     def truncate(str)
