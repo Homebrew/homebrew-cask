@@ -31,6 +31,8 @@ cask :v1 => 'git-annex' do
   binary 'git-annex.app/Contents/MacOS/git-annex'
   binary 'git-annex.app/Contents/MacOS/git-annex-shell'
 
+  uninstall :launchctl => 'com.branchable.git-annex.assistant'
+
   depends_on :macos => %w{
                           :lion
                           :mountain_lion
