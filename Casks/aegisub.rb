@@ -1,6 +1,6 @@
 cask :v1 => 'aegisub' do
   version '3.2.2'
-  sha256 '3bc2ffed465408e4e79d6b550d49c5adeee7f480430837bb8e14f88e72042e2f'
+  sha256 'd71fa46f074a2d5a252f30779e0b8d913d5157258f5d9fc333411f8c9493f42b'
 
   url "http://ftp.aegisub.org/pub/releases/Aegisub-#{version}.dmg"
   homepage 'http://www.aegisub.org/'
