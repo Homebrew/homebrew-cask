@@ -1,6 +1,7 @@
 require 'pathname'
 require 'exceptions'
 require 'os/mac'
+require 'hardware'
 require 'utils/popen'
 
 def homebrew_fork_system cmd, *args
