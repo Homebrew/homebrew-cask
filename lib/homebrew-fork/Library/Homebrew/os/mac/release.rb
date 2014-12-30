@@ -29,7 +29,8 @@ module OS
       end
 
       def to_sym
-        SYMBOLS.invert.fetch(@release.to_s, nil)
+        @inverted ||= SYMBOLS.invert
+        @inverted.fetch(@release.to_s, nil)
       end
 
       def to_s
