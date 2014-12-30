@@ -56,7 +56,7 @@ class Cask::DSL::DependsOn
 
   def self.coerce_os_release(arg)
 
-    @osx_symbols ||= OS::Mac::Release::SYMBOLS
+    @osx_symbols ||= MacOS::Release::SYMBOLS
     @inverted_osx_symbols ||= @osx_symbols.invert
 
     begin

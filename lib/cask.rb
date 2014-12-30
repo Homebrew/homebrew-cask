@@ -21,6 +21,7 @@ require 'cask/exceptions'
 require 'cask/fetcher'
 require 'cask/installer'
 require 'cask/locations'
+require 'cask/macos'
 require 'cask/options'
 require 'cask/pkg'
 require 'cask/pretty_listing'
@@ -44,6 +45,9 @@ class Cask
   include Cask::Scopes
   include Cask::Options
   include Cask::Utils
+
+  # todo: restrict visibility of this to the DSL
+  ::MacOS = Cask::MacOS
 
   def self.init
     # todo: Creating directories should be deferred until needed.
