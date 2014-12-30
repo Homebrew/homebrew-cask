@@ -1,10 +1,10 @@
 cask :v1 => 'cloak' do
-  version '2.0.8'
-  sha256 '7c26d9d835b8d6d190581ac2fb3720d305e280cce916e0cbaba27c941ad66c01'
+  version '2.0.9'
+  sha256 '18ebfe76aeee4da03546ed4969355202b7aec846b82bbea187dbc5891de35bb0'
 
   url "https://s3.amazonaws.com/static.getcloak.com/osx/updates/Release/Cloak-#{version}.dmg"
   homepage 'https://www.getcloak.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Cloak.app'
 end
