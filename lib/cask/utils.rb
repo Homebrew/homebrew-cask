@@ -36,16 +36,19 @@ end
 
 # global methods
 
+# originally from Homebrew
 def ohai(title, *sput)
   title = Tty.truncate(title) if $stdout.tty? && !Cask.verbose
   puts "#{Tty.blue.bold}==>#{Tty.white} #{title}#{Tty.reset}"
   puts sput unless sput.empty?
 end
 
+# originally from Homebrew
 def opoo(warning)
   $stderr.puts "#{Tty.red.underline}Warning#{Tty.reset}: #{warning}"
 end
 
+# originally from Homebrew
 def onoe(error)
   $stderr.puts "#{Tty.red.underline}Error#{Tty.reset}: #{error}"
 end
@@ -88,6 +91,34 @@ module Cask::Utils
         odebug "Cask instance method '#{printable_method}':", self.send(method).to_yaml
       end
     end
+  end
+
+  def self.which(cmd, path=ENV['PATH'])
+    unless File.basename(cmd) == cmd.to_s
+      # path contains a directory element
+      cmd_pn = Pathname(cmd)
+      return nil unless cmd_pn.absolute?
+      return resolve_executable(cmd_pn)
+    end
+    path.split(File::PATH_SEPARATOR).each do |elt|
+      fq_cmd = Pathname(elt).join(cmd)
+      resolved = resolve_executable fq_cmd
+      return resolved if resolved
+    end
+    return nil
+  end
+
+  def self.resolve_executable(cmd)
+    cmd_pn = Pathname(cmd)
+    return nil unless cmd_pn.exist?
+    return nil unless cmd_pn.executable?
+    begin
+      cmd_pn = Pathname(cmd_pn.realpath)
+    rescue RuntimeError => e
+      return nil
+    end
+    return nil unless cmd_pn.file?
+    return cmd_pn
   end
 
   # from Homebrew puts_columns

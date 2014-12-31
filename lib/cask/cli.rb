@@ -77,7 +77,7 @@ class Cask::CLI
     if command.respond_to?(:run)
       # usual case: built-in command verb
       command.run(*rest)
-    elsif require? which("brewcask-#{command}.rb").to_s
+    elsif require? Cask::Utils.which("brewcask-#{command}.rb").to_s
       # external command as Ruby library on PATH, Homebrew-style
       exit 0
     elsif command.to_s.include?('/') and require? command.to_s
@@ -96,7 +96,7 @@ class Cask::CLI
         # other Ruby libraries must do everything via "require"
         exit 0
       end
-    elsif which "brewcask-#{command}"
+    elsif Cask::Utils.which "brewcask-#{command}"
       # arbitrary external executable on PATH, Homebrew-style
       exec "brewcask-#{command}", *ARGV[1..-1]
     elsif Pathname.new(command.to_s).executable? and

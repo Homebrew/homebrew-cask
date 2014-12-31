@@ -67,25 +67,17 @@ def puts_columns items, star_items=[]
   end
 end
 
-def which cmd, path=ENV['PATH']
-  path.split(File::PATH_SEPARATOR).each do |p|
-    pcmd = File.expand_path(cmd, p)
-    return Pathname.new(pcmd) if File.file?(pcmd) && File.executable?(pcmd)
-  end
-  return nil
-end
-
 def which_editor
   editor = ENV.values_at('HOMEBREW_EDITOR', 'VISUAL', 'EDITOR').compact.first
   # If an editor wasn't set, try to pick a sane default
   return editor unless editor.nil?
 
   # Find Textmate
-  return 'mate' if which "mate"
+  return 'mate' if Cask::Utils.which "mate"
   # Find BBEdit / TextWrangler
-  return 'edit' if which "edit"
+  return 'edit' if Cask::Utils.which "edit"
   # Find vim
-  return 'vim' if which "vim"
+  return 'vim' if Cask::Utils.which "vim"
   # Default to standard vim
   return '/usr/bin/vim'
 end
