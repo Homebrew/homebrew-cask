@@ -1,10 +1,10 @@
 cask :v1 => 'qgis' do
-  version '2.4.0-1'
-  sha256 '785c268997651b547dd1261a86aa3b805a3d66c9706c0afb42758e1a2bb9ae0a'
+  version '2.6.1-2'
+  sha256 '683ef0c37c0ddbb375189d4fc3ee7713b064c361ce0c68bf29d36b2cd77c85fd'
 
   url "http://www.kyngchaos.com/files/software/qgis/QGIS-#{version}.dmg"
   homepage 'http://www.kyngchaos.com/software/qgis'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
   pkg 'Install QGIS.pkg'
 
   uninstall :pkgutil => 'org.qgis.qgis-*'
