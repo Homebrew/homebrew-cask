@@ -1,7 +1,7 @@
-class Juliastudio < Cask
+cask :v1 => 'juliastudio' do
   version '0.4.4'
 
-  if MacOS.version < '10.7'
+  if MacOS.release <= :snow_leopard
     sha256 '380006f00db5b19ab1a68b25b72dba669d7ff8f109c68d6ecf1fcc34dbfe485f'
     url "https://s3.amazonaws.com/cdn-common.forio.com/julia-studio/#{version}/julia-studio-mac10.6-installer-#{version}.dmg"
   else
@@ -10,7 +10,7 @@ class Juliastudio < Cask
   end
 
   homepage 'http://forio.com/labs/julia-studio/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'JuliaStudio.app'
 end

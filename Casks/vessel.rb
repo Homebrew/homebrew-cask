@@ -1,4 +1,4 @@
-class Vessel < Cask
+cask :v1 => 'vessel' do
   version '0.3.0'
   sha256 'd53717d6de3f9d216585af56fd7e61f7a89abcd0436017f5861a17389c7a169a'
 

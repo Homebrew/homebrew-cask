@@ -1,4 +1,4 @@
-class Openemu < Cask
+cask :v1 => 'openemu' do
   version '1.0.4'
   sha256 'c9c3abc2acea4ed4c1e2b62fd6868feae1719251428a79803d9aa8a0de4474ef'
 

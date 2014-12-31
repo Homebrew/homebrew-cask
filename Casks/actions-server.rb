@@ -1,4 +1,4 @@
-class ActionsServer < Cask
+cask :v1 => 'actions-server' do
   version :latest
   sha256 :no_check
 

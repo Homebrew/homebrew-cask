@@ -1,4 +1,4 @@
-class JavafxSceneBuilder < Cask
+cask :v1 => 'javafx-scene-builder' do
   version '2.0-b20'
   sha256 '9551326dd98f85204434d293da445eb5f2cf862c785f3dbe420cb4643221d96b'
 
@@ -7,7 +7,7 @@ class JavafxSceneBuilder < Cask
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/javafxscenebuilder-info-2157684.html'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'JavaFX Scene Builder 2.0.app'
 

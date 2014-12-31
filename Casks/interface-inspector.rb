@@ -1,4 +1,4 @@
-class InterfaceInspector < Cask
+cask :v1 => 'interface-inspector' do
   version :latest
   sha256 :no_check
 

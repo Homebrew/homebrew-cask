@@ -1,4 +1,4 @@
-class Runtimebrowser < Cask
+cask :v1 => 'runtimebrowser' do
   version :latest
   sha256 :no_check
 

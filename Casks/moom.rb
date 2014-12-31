@@ -1,4 +1,4 @@
-class Moom < Cask
+cask :v1 => 'moom' do
   version :latest
   sha256 :no_check
 
@@ -8,6 +8,7 @@ class Moom < Cask
   license :commercial
 
   app 'Moom.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.manytricks.Moom.plist',
                   '~/Library/Application Support/Many Tricks',

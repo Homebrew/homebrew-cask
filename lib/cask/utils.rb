@@ -1,9 +1,10 @@
-
-# see Homebrew Library/Homebrew/utils.rb
-
+require 'cask/utils/tty'
 require 'yaml'
 require 'open3'
 require 'stringio'
+
+UPDATE_CMD = "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup"
+ISSUES_URL = "https://github.com/caskroom/homebrew-cask/issues"
 
 # monkeypatch Object - not a great idea
 class Object
@@ -22,39 +23,6 @@ class Object
   end
 end
 
-# monkeypatch Tty
-class Tty
-  class << self
-    def magenta; color 35; end
-  end
-end
-
-# monkeypatch Hash
-class Hash
-  def assert_valid_keys(*valid_keys)
-    unknown_keys = self.keys - valid_keys
-    unless unknown_keys.empty?
-      raise CaskError.new %Q{Unknown keys: #{unknown_keys.inspect}. Running "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" will likely fix it.}
-    end
-  end
-end
-
-# monkeypatch Pathname
-class Pathname
-  # our own version of Homebrew's abv, with better defenses
-  # against unusual filenames
-  def cabv
-    out=''
-    n = Cask::SystemCommand.run!('/usr/bin/find',
-                                 :args => [self.realpath, *%w[-type f ! -name .DS_Store]],
-                                 :print_stderr => false).stdout.count("\n")
-    out << "#{n} files, " if n > 1
-    out << Cask::SystemCommand.run!('/usr/bin/du',
-                                    :args => ['-hs', '--', self.to_s],
-                                    :print_stderr => false).stdout.split("\t").first.strip
-  end
-end
-
 class Buffer < StringIO
   def initialize(tty = false)
     super()
@@ -68,13 +36,27 @@ end
 
 # global methods
 
-def odebug title, *sput
+def ohai(title, *sput)
+  title = Tty.truncate(title) if $stdout.tty? && !Cask.verbose
+  puts "#{Tty.blue.bold}==>#{Tty.white} #{title}#{Tty.reset}"
+  puts sput unless sput.empty?
+end
+
+def opoo(warning)
+  $stderr.puts "#{Tty.red.underline}Warning#{Tty.reset}: #{warning}"
+end
+
+def onoe(error)
+  $stderr.puts "#{Tty.red.underline}Error#{Tty.reset}: #{error}"
+end
+
+def odebug(title, *sput)
   if Cask.respond_to?(:debug) and Cask.debug
     width = Tty.width * 4 - 6
     if $stdout.tty? and title.to_s.length > width
       title = title.to_s[0, width - 3] + '...'
     end
-    puts "#{Tty.magenta}==>#{Tty.white} #{title}#{Tty.reset}"
+    puts "#{Tty.magenta.bold}==>#{Tty.white} #{title}#{Tty.reset}"
     puts sput unless sput.empty?
   end
 end
@@ -85,21 +67,25 @@ module Cask::Utils
       odebug "Cask instance dumps in YAML:"
       odebug "Cask instance toplevel:", self.to_yaml
       [
+       :full_name,
        :homepage,
        :url,
        :appcast,
        :version,
        :license,
        :tags,
-       :sums,
+       :sha256,
        :artifacts,
        :caveats,
-       :depends_on_formula,
+       :depends_on,
        :conflicts_with,
-       :container_type,
+       :container,
        :gpg,
+       :accessibility_access,
       ].each do |method|
-        odebug "Cask instance method '#{method}':", self.send(method).to_yaml
+        printable_method = method.to_s
+        printable_method = "name" if printable_method == "full_name"
+        odebug "Cask instance method '#{printable_method}':", self.send(method).to_yaml
       end
     end
   end
@@ -129,6 +115,41 @@ module Cask::Utils
     end
   end
 
+  # from Homebrew
+  # children.length == 0 is slow to enumerate the whole directory just
+  # to see if it is empty
+  def self.rmdir_if_possible(dir)
+    dirpath = Pathname(dir)
+    begin
+      dirpath.rmdir
+      true
+    rescue Errno::ENOTEMPTY
+      if (ds_store = dirpath.join('.DS_Store')).exist? and
+        dirpath.children.length == 1
+        ds_store.unlink
+        retry
+      else
+        false
+      end
+    rescue Errno::EACCES, Errno::ENOENT
+      false
+    end
+  end
+
+  # our own version of Homebrew's abv, with better defenses
+  # against unusual filenames
+  def self.cabv(dir)
+    output = ''
+    count = Cask::SystemCommand.run!('/usr/bin/find',
+                                     :args => [dir, *%w[-type f -not -name .DS_Store -print0]],
+                                     :print_stderr => false).stdout.count("\000")
+    size = Cask::SystemCommand.run!('/usr/bin/du',
+                                    :args => ['-hs', '--', dir],
+                                    :print_stderr => false).stdout.split("\t").first.strip
+    output << "#{count} files, " if count > 1
+    output << size
+  end
+
   # paths that "look" descendant (textually) will still
   # return false unless both the given paths exist
   def self.file_is_descendant(file, dir)
@@ -148,5 +169,29 @@ module Cask::Utils
       file = file.parent
     end
     return false
+  end
+
+  def self.error_message_with_suggestions
+    <<-EOS.undent
+    #{ Tty.reset.white.bold }
+      Most likely, this means you have an outdated version of homebrew-cask.#{
+      } Please run:
+
+          #{ Tty.green.normal }#{ UPDATE_CMD }
+
+      #{ Tty.white.bold }If this doesn’t fix the problem, please report this bug:
+
+          #{ Tty.underline }#{ ISSUES_URL }#{ Tty.reset }
+
+    EOS
+  end
+
+  def self.method_missing_message(method, token, section=nil)
+    poo = []
+    poo << "Unexpected method '#{method}' called"
+    poo << "during #{section}" if section
+    poo << "on Cask #{token}."
+
+    opoo(poo.join(' ') + "\n" + error_message_with_suggestions)
   end
 end

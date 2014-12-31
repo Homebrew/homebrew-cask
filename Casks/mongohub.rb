@@ -1,4 +1,4 @@
-class Mongohub < Cask
+cask :v1 => 'mongohub' do
   version :latest
   sha256 :no_check
 

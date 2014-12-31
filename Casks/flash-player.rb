@@ -1,10 +1,10 @@
-class FlashPlayer < Cask
-  version '15.0.0.189'
-  sha256 '91d21b45f3a5639b89029b1cf07bf9e3bc424255a62ed62d5180ea7e0ad107f0'
+cask :v1 => 'flash-player' do
+  version '16.0.0.235'
+  sha256 'f7bd90f9ee7520195cb02c0bf7803b4b30da48e64da040cd7d84d638aa000102'
 
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.to_i}/flashplayer_#{version.to_i}_sa.dmg"
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Flash Player.app'
 

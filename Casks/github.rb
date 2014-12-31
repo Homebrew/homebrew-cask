@@ -1,4 +1,4 @@
-class Github < Cask
+cask :v1 => 'github' do
   version :latest
   sha256 :no_check
 
@@ -12,6 +12,11 @@ class Github < Cask
   postflight do
     suppress_move_to_applications
   end
+
+  uninstall :launchctl => [
+                           'com.github.GitHub.Conduit',
+                           'com.github.GitHub.GHInstallCLI'
+                          ]
 
   zap :delete => [
                   '~/Library/Application Support/GitHub for Mac',

@@ -1,4 +1,4 @@
-class GoogleCloudSdk < Cask
+cask :v1 => 'google-cloud-sdk' do
   version :latest
   sha256 :no_check
 
@@ -11,14 +11,14 @@ class GoogleCloudSdk < Cask
             :sudo => false
 
   caveats do
-    "#{title} is installed at #{staged_path}/#{title}. Add your profile:
+    "#{token} is installed at #{staged_path}/#{token}. Add your profile:
 
       for bash users
-        source '#{staged_path}/#{title}/path.bash.inc'
-        source '#{staged_path}/#{title}/completion.bash.inc'
+        source '#{staged_path}/#{token}/path.bash.inc'
+        source '#{staged_path}/#{token}/completion.bash.inc'
 
       for zsh users
-        source '#{staged_path}/#{title}/path.zsh.inc'
-        source '#{staged_path}/#{title}/completion.zsh.inc'"
+        source '#{staged_path}/#{token}/path.zsh.inc'
+        source '#{staged_path}/#{token}/completion.zsh.inc'"
   end
 end

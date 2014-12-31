@@ -1,15 +1,15 @@
-class Phpstorm < Cask
-  version '8.0.1'
-  sha256 'ff8af437d96befd475744e08b1d663df778db8711e2671551fc797cd30b0cdc7'
+cask :v1 => 'phpstorm' do
+  version '8.0.2'
+  sha256 'd6c6ee8c84edcdbd7da7c8af33185ecb7a1d9ddb4e5d97b035c9a30d07c8d073'
 
   url "http://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
   homepage 'http://www.jetbrains.com/phpstorm/'
-  license :unknown
+  license :commercial
 
   app 'PhpStorm.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/PhpStorm.app/Contents/Info.plist"
+    plist_set(':JVMOptions:JVMVersion', '1.6+')
   end
 
   zap :delete => [

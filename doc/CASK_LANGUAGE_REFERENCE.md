@@ -3,14 +3,14 @@
 This document acts as a complete specification, and covers aspects of the
 Cask Domain-Specific Language (DSL) which are not needed in most cases.
 
- * [Casks Are Ruby Classes](#casks-are-ruby-classes)
+ * [Casks Are Ruby Blocks](#casks-are-ruby-blocks)
  * [The Cask Language Is Declarative](#the-cask-language-is-declarative)
  * [Required Stanzas](#required-stanzas)
  * [At Least One Artifact Stanza Is Also Required](#at-least-one-artifact-stanza-is-also-required)
  * [Optional Stanzas](#optional-stanzas)
- * [Legacy Stanzas](#legacy-stanzas)
- * [Legacy Forms](#legacy-forms)
  * [Conditional Statements](#conditional-statements)
+ * [Header Line Details](#header-line-details)
+ * [Name Stanza Details](#name-stanza-details)
  * [Caveats Stanza Details](#caveats-stanza-details)
  * [Checksum Stanza Details](#checksum-stanza-details)
  * [URL Stanza Details](#url-stanza-details)
@@ -25,30 +25,31 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Depends_on Stanza Details](#depends_on-stanza-details)
  * [Conflicts_with Stanza Details](#conflicts_with-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
+ * [Postflight Stanza Details](#postflight-stanza-details)
  * [Zap Stanza Details](#zap-stanza-details)
  * [Arbitrary Ruby Methods](#arbitrary-ruby-methods)
  * [Revisions to the Cask DSL](#revisions-to-the-cask-dsl)
 
 
-## Casks Are Ruby Classes
+## Casks Are Ruby Blocks
 
-Each Cask is a Ruby class, derived from class `Cask`.  The Cask definition
-is always enclosed in a `class ... end` block.  Example:
+Each Cask is a Ruby block, beginning with a special header line.  The Cask
+definition itself is always enclosed in a `do ... end` block.  Example:
 
 ```ruby
-class Alfred < Cask
+cask :v1 => 'alfred' do
   version '2.3_264'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
 
   url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
+  name 'Alfred'
   homepage 'http://www.alfredapp.com/'
-  license :commercial
+  license :freemium
 
   app 'Alfred 2.app'
   app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 end
 ```
-
 
 ## The Cask Language Is Declarative
 
@@ -61,7 +62,7 @@ time.
 To make maintenance easier, the most-frequently-updated stanzas are usually
 placed at the top.  But that's a convention, not a rule.
 
-Exception: `do` blocks such as `preflight` may enclose a block of pure Ruby
+Exception: `do` blocks such as `postflight` may enclose a block of pure Ruby
 code.  Lines within that block follow a procedural (order-dependent)
 paradigm.
 
@@ -72,11 +73,11 @@ Each of the following stanzas is required for every Cask.
 
 | name               | multiple occurrences allowed? | value       |
 | ------------------ |------------------------------ | ----------- |
-| `version`          | No                            | application version; give value of `:latest`  if versioned downloads are not offered
-| `sha256`           | No                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed for unversioned downloads by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
-| `url`              | No                            | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](#url-stanza-details))
-| `homepage`         | No                            | application homepage; used for the `brew cask home` command
-| `license`          | No                            | a symbol identifying the license for the application. (see also [License Stanza Details](#license-stanza-details))
+| `version`          | no                            | application version; give value of `:latest`  if versioned downloads are not offered
+| `sha256`           | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
+| `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](#url-stanza-details))
+| `homepage`         | no                            | application homepage; used for the `brew cask home` command
+| `license`          | no                            | a symbol identifying the license category for the application. (see also [License Stanza Details](#license-stanza-details))
 
 
 ## At Least One Artifact Stanza Is Also Required
@@ -100,53 +101,28 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `suite`            | yes                           | relative path to a containing directory that should be linked into the `~/Applications` folder on installation (see also [Suite Stanza Details](#suite-stanza-details))
 | `artifact`         | yes                           | relative path to an arbitrary path that should be symlinked on installation.  This is only for unusual cases.  The `app` stanza is strongly preferred when linking `.app` bundles.
 | `installer`        | yes                           | describes an executable which must be run to complete the installation.  (see [Installer Stanza Details](#installer-stanza-details))
+| `stage_only`       | no                            | `true`.  Assert that the Cask contains no activatable artifacts.
 
 ## Optional Stanzas
 
 | name                   | multiple occurrences allowed? | value       |
 | ---------------------- |------------------------------ | ----------- |
+| `name`                 | yes                           | a string providing the full and proper name defined by the vendor (see also [Name Stanza Details](#name-stanza-details))
 | `uninstall`            | yes                           | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](#uninstall-stanza-details))
 | `zap`                  | yes                           | additional procedures for a more complete uninstall, including user files and shared resources. (see also [Zap Stanza Details](#zap-stanza-details))
 | `appcast`              | no                            | a URL providing an appcast feed to find updates for this Cask.  (see also [Appcast Stanza Details](#appcast-stanza-details))
-| `depends_on`           | yes                           | a list of dependencies required by this Cask (see also [Depends_on Stanza Details](#depends_on-stanza-details))
+| `depends_on`           | yes                           | a list of dependencies and requirements for this Cask (see also [Depends_on Stanza Details](#depends_on-stanza-details))
 | `conflicts_with`       | yes                           | a list of conflicts with this Cask (*not yet functional* see also [Conflicts_with Stanza Details](#conflicts_with-stanza-details))
 | `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](#caveats-stanza-details))
 | `preflight`            | yes                           | a Ruby block containing preflight install operations (needed only in very rare cases)
-| `postflight`           | yes                           | a Ruby block containing postflight install operations
+| `postflight`           | yes                           | a Ruby block containing postflight install operations (see also [Postflight Stanza Details](#postflight-stanza-details))
 | `uninstall_preflight`  | yes                           | a Ruby block containing preflight uninstall operations (needed only in very rare cases)
 | `uninstall_postflight` | yes                           | a Ruby block containing postflight uninstall operations
+| `accessibility_access` | no                            | `true` if the application should be granted accessibility access
 | `container :nested =>` | no                            | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `container :type =>`   | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`.  (example [parse.rb](../Casks/parse.rb))
 | `tags`                 | no                            | a list of key-value pairs for Cask annotation.  Not free-form.  (see also [Tags Stanza Details](#tags-stanza-details))
 | `gpg`                  | no                            | *stub: not yet functional.*  (see also [GPG Stanza Details](#gpg-stanza-details))
-
-
-## Legacy Stanzas
-
-The following stanzas are no longer in use.
-
-| name                      | meaning     |
-| ------------------------- | ----------- |
-| `after_install`           | an obsolete alternative to `postflight`
-| `after_uninstall`         | an obsolete alternative to `uninstall_postflight`
-| `before_install`          | an obsolete alternative to `preflight`
-| `before_uninstall`        | an obsolete alternative to `uninstall_preflight`
-| `container_type`          | an obsolete alternative to `container :type =>`
-| `depends_on_formula`      | an obsolete alternative to `depends_on :formula =>`
-| `install`                 | an obsolete alternative to `pkg`
-| `link`                    | an obsolete alternative to `artifact`
-| `no_checksum`             | an obsolete alternative to `sha256 :no_check`
-
-
-## Legacy Forms
-
-The following forms are no longer in use.
-
-| name                      | meaning     |
-| ------------------------- | ----------- |
-| `uninstall :files`        | an obsolete alternative to `uninstall :delete`
-| `version 'latest'`        | an obsolete alternative to `version :latest`
-| `manual_installer(path)`  | when occurring within `caveats`, an obsolete alternative to `installer :script`
 
 
 ## Conditional Statements
@@ -158,25 +134,27 @@ Tests on the following values are known to be acceptable:
 
 | value                       | examples
 | ----------------------------|--------------------------------------
-| `MacOS.version`             | [macports.rb](../Casks/macports.rb), [coconutbattery.rb](../Casks/coconutbattery.rb)
+| `MacOS.release`             | [macports.rb](../Casks/macports.rb), [coconutbattery.rb](../Casks/coconutbattery.rb)
 | `Hardware::CPU.is_32_bit?`  | [vuescan.rb](../Casks/vuescan.rb)
 | `Hardware::CPU.is_64_bit?`  | none, see [Always Fall Through to the Newest Case](#always-fall-through-to-the-newest-case)
 
 ### Version Comparisons
 
-Tests against `MacOS.version` may use either symbolic names or version
+Tests against `MacOS.release` may use either symbolic names or version
 strings with numeric comparison operators:
 
 ```ruby
-if MacOS.version < :mavericks     # symbolic name
+if MacOS.release < :mavericks     # symbolic name
 ```
 
 ```ruby
-if MacOS.version < '10.9'         # version string
+if MacOS.release < '10.9'         # version string
 ```
 
-The available symbols for OS versions are: `:tiger`, `:leopard`,
+The available symbols for OS X versions are: `:tiger`, `:leopard`,
 `:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, and `:yosemite`.
+The corresponding numeric version strings should given as major releases
+containing a single dot.
 
 ### Always Fall Through to the Newest Case
 
@@ -187,14 +165,46 @@ This makes it more likely that the Cask will work without alteration when
 a new OS is released.  Example (from [coconutbattery.rb](../Casks/coconutbattery.rb)):
 
 ```ruby
-if MacOS.version < :leopard
+if MacOS.release < :leopard
   # ...
-elsif MacOS.version < :lion
+elsif MacOS.release < :lion
   # ...
 else
   # ...
 end
 ```
+
+## Header Line Details
+
+The first non-comment line in a Cask follows the form
+
+```ruby
+cask <dsl-version> => '<cask-token>' do
+```
+
+`<dsl-version>` identifies the version of the Cask DSL, currently `:v1`.
+
+`<cask-token>` should match the Cask filename, without the `.rb` extension,
+enclosed in single quotes.
+
+The header line is not entirely strict Ruby: no comma is required after
+the Cask token.
+
+There are currently some arbitrary limitations on Cask tokens which are
+in the process of being removed.  The Travis bot will catch any errors
+during the transition.
+
+
+## Name Stanza Details
+
+`name` stanza accepts a UTF-8 string defining the full name of the software.
+
+If there are useful alternate names, `name` can be repeated multiple times.
+(Or, equivalently, an array value may be given.)
+
+When multiple names are given, the first should follow the canonical
+branding as defined by the vendor.
+
 
 ## Caveats Stanza Details
 
@@ -206,7 +216,7 @@ position at the end of the Cask:
 
 | method             | description |
 | ------------------ | ----------- |
-| `title`            | the Cask title
+| `token`            | the Cask token
 | `version`          | the Cask version
 | `homepage`         | the Cask homepage
 | `caskroom_path`    | the containing directory for all staged Casks, typically `/opt/homebrew-cask/Caskroom`
@@ -215,7 +225,7 @@ position at the end of the Cask:
 Example:
 
 ```ruby
-caveats "Using #{title} is hazardous to your health."
+caveats "Using #{token} is hazardous to your health."
 ```
 
 ### Caveats as a Block
@@ -232,29 +242,40 @@ The following methods may be called to generate standard warning messages:
 
 | method                            | description |
 | --------------------------------- | ----------- |
-| `path_environment_variable(path)` | The user should make sure `path` is in their `$PATH` environment variable
-| `zsh_path_helper(path)`           | Zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable
-| `logout`                          | The user should log out and log back in to complete installation
-| `reboot`                          | The user should reboot to complete installation
-| `assistive_devices`               | The user should grant the application access to assistive devices
-| `files_in_usr_local`              | The Cask installs files to `/usr/local`, which may confuse Homebrew
-| `arch_only(list)`                 | The Cask only supports certain architectures.  Currently valid elements of `list` are `intel-32` and `intel-64`
-| `os_version_only(list)`           | The Cask only supports certain OS X Versions.  Currently valid elements of `list` are all major releases: `10.0`, `10.1`, … `10.10`
-| `x11_required`                    | The Cask requires X11 to run
+| `path_environment_variable(path)` | users should make sure `path` is in their `$PATH` environment variable
+| `zsh_path_helper(path)`           | zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable
+| `logout`                          | users should log out and log back in to complete installation
+| `reboot`                          | users should reboot to complete installation
+| `files_in_usr_local`              | the Cask installs files to `/usr/local`, which may confuse Homebrew
 
 Example:
 
 ```ruby
 caveats do
-  manual_installer 'Little Snitch Installer.app'
+  path_environment_variable '/usr/texbin'
 end
 ```
 
 
 ## Checksum Stanza Details
 
-Casks should no longer use `no_checksum` stanzas.  That form has
-been superseded by `sha256 :no_check`.
+### Calculating the SHA256
+
+The `sha256` value is usually calculated by the command
+
+```bash
+$ shasum -a 256 <file>
+```
+
+### Special Value `:no_check`
+
+The special value `sha256 :no_check` is used to turn off SHA checking
+whenever checksumming is impractical due to the upstream configuration.
+
+`version :latest` requires `sha256 :no_check`, and this pairing is common.
+However, `sha256 :no_check` does not require `version :latest`.
+
+We use a checksum whenever possible.
 
 
 ## URL Stanza Details
@@ -324,53 +345,63 @@ Example: [adium.rb](../../d7f8eafa4fc01a6c383925d9962b5da33876a8b6/Casks/adium.r
 
 ## License Stanza Details
 
-The `license` stanza is not free-form.  The value must be chosen from a
+The `license` stanza is not free-form.  A single value must be chosen from a
 list of valid symbols.
 
-The distinctions between license types are not very detailed.  For example,
-we do not distinguish between versions of the GPL, or variants of the BSD
-license.  The `license` stanza is intended as an aid to search/filtering of
-Casks.  For detailed information, the user must rely on the vendor's
+The values for `license` are categories, rather than fully-specified
+licenses.  For example, `:gpl` is a category; we do not distinguish between
+versions of the GPL.  Similarly, `:cc` and `:bsd` comprise many variants.
+They must always pertain to the license of the software itself, not the
+vendor's business model (a free app to access a paid service is still
+`:gratis`, not `:freemium`).
+
+The `license` stanza is intended as an aid to search/filtering of Casks.
+For full and complete information, the user must always rely on the vendor's
 homepage.
 
 Note that `brew cask search` and `brew cask list` are not yet capable of
 using the information stored in the `license` stanza.
 
-### Valid Category Licenses
+### Generic Category Licenses
 
-If a Cask does not quite fit one of the specific license types, use one of
-the general categories.  `:unknown` is perfectly fine if you are unsure.
+Cask authors should use the most specific license category which is also
+correct.  Generic categories are provided for difficult cases.  `:unknown`
+is also perfectly fine if you are unsure.
+
+Example: [Chromium](http://www.chromium.org/chromium-os/licenses) includes code with multiple licenses, all of which are
+open source.  Chromium licensing is described by the generic category [`:oss`](https://github.com/caskroom/homebrew-cask/blob/54a79f7dcceea9a922a5b608ac99466b9d10a191/Casks/chromium.rb#L7).
 
 | symbol      | meaning     |
 | ----------- | ----------- |
-| `:oss`      | Open-source software
-| `:closed`   | Closed-source software
-| `:unknown`  | License unknown
-| `:other`    | License is known, but fits no category
+| `:oss`      | open-source software
+| `:closed`   | closed-source software
+| `:unknown`  | license unknown
+| `:other`    | license is known, but fits no category
 
 ### Valid Licenses
 
-| symbol           | category  | meaning                                         | URL         |
-| ---------------- | --------- | ----------------------------------------------- | ----------- |
-| `:gratis`        | `:closed` | Free-to-use, closed source                      | <none>
-| `:commercial`    | `:closed` | Not free to use                                 | <none>
-| `:affero`        | `:oss`    | Affero General Public License                   | <https://gnu.org/licenses/agpl.html>
-| `:apache`        | `:oss`    | Apache Public License                           | <http://www.apache.org/licenses/>
-| `:arphic`        | `:oss`    | Arphic Public License                           | <http://www.arphic.com/tw/download/public_license.rar>
-| `:artistic`      | `:oss`    | Artistic License                                | <http://dev.perl.org/licenses/artistic.html>
-| `:bsd`           | `:oss`    | BSD License                                     | <http://www.linfo.org/bsdlicense.html>
-| `:cc`            | `:oss`    | Creative Commons License                        | <http://creativecommons.org/licenses/>
-| `:eclipse`       | `:oss`    | Eclipse Public License                          | <https://www.eclipse.org/legal/eplfaq.php>
-| `:gpl`           | `:oss`    | GNU Public License                              | <http://www.gnu.org/copyleft/gpl.html>
-| `:isc`           | `:oss`    | Internet Systems Consortium License             | <http://www.isc.org/downloads/software-support-policy/isc-license/>
-| `:lppl`          | `:oss`    | LaTeX Project Public License                    | <http://latex-project.org/lppl/>
-| `:ncsa`          | `:oss`    | University of Illinois/NCSA Open Source License | <http://otm.illinois.edu/uiuc_openSource>
-| `:mit`           | `:oss`    | MIT License                                     | <http://opensource.org/licenses/MIT>
-| `:mpl`           | `:oss`    | Mozilla Public License                          | <https://www.mozilla.org/MPL/>
-| `:ofl`           | `:oss`    | SIL Open Font License                           | <http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL>
-| `:public_domain` | `:oss`    | Not copyrighted                                 | <http://creativecommons.org/publicdomain/zero/1.0/legalcode>
-| `:ubuntu_font`   | `:oss`    | Ubuntu Font License                             | <http://font.ubuntu.com/licence/>
-| `:x11`           | `:oss`    | X Consortium License                            | <http://www.xfree86.org/3.3.6/COPYRIGHT2.html>
+| symbol           | generic category | meaning                                                            | URL         |
+| ---------------- | ---------------- | ------------------------------------------------------------------ | ----------- |
+| `:gratis`        | `:closed`        | free-to-use, closed source                                         | <none>
+| `:commercial`    | `:closed`        | not free to use                                                    | <none>
+| `:freemium`      | `:closed`        | free-to-use, payment required for full or additional functionality | <http://en.wikipedia.org/wiki/Freemium>
+| `:affero`        | `:oss`           | Affero General Public License                                      | <https://gnu.org/licenses/agpl.html>
+| `:apache`        | `:oss`           | Apache Public License                                              | <http://www.apache.org/licenses/>
+| `:arphic`        | `:oss`           | Arphic Public License                                              | <http://www.arphic.com/tw/download/public_license.rar>
+| `:artistic`      | `:oss`           | Artistic License                                                   | <http://dev.perl.org/licenses/artistic.html>
+| `:bsd`           | `:oss`           | BSD License                                                        | <http://www.linfo.org/bsdlicense.html>
+| `:cc`            | `:oss`           | Creative Commons License                                           | <http://creativecommons.org/licenses/>
+| `:eclipse`       | `:oss`           | Eclipse Public License                                             | <https://www.eclipse.org/legal/eplfaq.php>
+| `:gpl`           | `:oss`           | GNU Public License                                                 | <http://www.gnu.org/copyleft/gpl.html>
+| `:isc`           | `:oss`           | Internet Systems Consortium License                                | <http://www.isc.org/downloads/software-support-policy/isc-license/>
+| `:lppl`          | `:oss`           | LaTeX Project Public License                                       | <http://latex-project.org/lppl/>
+| `:ncsa`          | `:oss`           | University of Illinois/NCSA Open Source License                    | <http://otm.illinois.edu/uiuc_openSource>
+| `:mit`           | `:oss`           | MIT License                                                        | <http://opensource.org/licenses/MIT>
+| `:mpl`           | `:oss`           | Mozilla Public License                                             | <https://www.mozilla.org/MPL/>
+| `:ofl`           | `:oss`           | SIL Open Font License                                              | <http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL>
+| `:public_domain` | `:oss`           | not copyrighted                                                    | <http://creativecommons.org/publicdomain/zero/1.0/legalcode>
+| `:ubuntu_font`   | `:oss`           | Ubuntu Font License                                                | <http://font.ubuntu.com/licence/>
+| `:x11`           | `:oss`           | X Consortium License                                               | <http://www.xfree86.org/3.3.6/COPYRIGHT2.html>
 
 
 ## Tags Stanza Details
@@ -388,8 +419,7 @@ using the information stored in the `tags` stanza.
 
 | key           | meaning
 | ------------- | -----------------------------
-| `:name`       | Alternate name for the Cask. (example [smlnj.rb](../Casks/smlnj.rb))
-| `:vendor`     | The full-text official name of the producer of the software: an author or corporate name, as appropriate.  As the value is intended as a search target, commonly shared abbreviations such as `Dr.` or `Inc.` should be omitted. (example [google-chrome.rb](../Casks/google-chrome.rb))
+| `:vendor`     | the full-text official name of the producer of the software: an author or corporate name, as appropriate.  As the value is intended as a search target, commonly shared abbreviations such as `Dr.` or `Inc.` should be omitted. (example [google-chrome.rb](../Casks/google-chrome.rb))
 
 
 ## GPG Stanza Details
@@ -476,7 +506,7 @@ For these Casks, use the `suite` stanza to define the directory
 containing the application suite.  Example (from [sketchup.rb](../Casks/sketchup.rb)):
 
 ```ruby
-suite 'SketchUp 2014'
+suite 'SketchUp 2015'
 ```
 
 The value of `suite` is never an `.app` bundle, but a plain directory.
@@ -540,10 +570,14 @@ installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer
 
 ## Depends_on Stanza Details
 
-`depends_on` is used to declare dependencies required to install a Cask
-or to execute its contents.
+`depends_on` is used to declare dependencies and requirements for a Cask.
+`depends_on` is not consulted until `install` is attempted.
 
-For example, some distributions are contained in archive formats such as
+### Depends_on :formula
+
+The value should name a Homebrew Formula needed by the Cask.
+
+Example use: some distributions are contained in archive formats such as
 `7z` which are not supported by stock Apple tools.  For these cases, a more
 capable archive reader may be pulled in at install time by declaring a
 dependency on the Homebrew Formula `unar`:
@@ -552,16 +586,92 @@ dependency on the Homebrew Formula `unar`:
 depends_on :formula => 'unar'
 ```
 
-While several keys are accepted by `depends_on`, `:formula` is the only
-key with working functionality at the time of writing.
+### Depends_on :macos
+
+#### Requiring an Exact OS X Release
+
+The value for `depends_on :macos` may be a symbol, string, or an array,
+listing the exact compatible OS X releases.
+
+The available values for OS X releases are:
+
+| symbol             | corresponding string
+| -------------------|----------------------
+| `:tiger`           | `'10.4'`
+| `:leopard`         | `'10.5'`
+| `:snow_leopard`    | `'10.6'`
+| `:lion`            | `'10.7'`
+| `:mountain_lion`   | `'10.8'`
+| `:mavericks`       | `'10.9'`
+| `:yosemite`        | `'10.10'`
+
+Only major releases are covered (version numbers containing a single dot).
+The symbol form is preferred for readability.  The following are all valid
+ways to enumerate the exact OS X release requirements for a Cask:
+
+```ruby
+depends_on :macos => :yosemite
+depends_on :macos => [:mavericks, :yosemite]
+depends_on :macos => '10.9'
+depends_on :macos => ['10.9', '10.10']
+```
+
+#### Setting a Minimum OS X Release
+
+`depends_on :macos` can also accept a string starting with a comparison
+operator such as `>=`, followed by an OS X release in the form above.  The
+following are both valid expressions meaning "at least OS X 10.9":
+
+```ruby
+depends_on :macos => '>= :mavericks'
+depends_on :macos => '>= 10.9'
+```
+
+A comparison expression cannot be combined with any other form of `depends_on :macos`.
+
+### Depends_on :arch
+
+The value for `depends_on :arch` may be a symbol or an array of symbols,
+listing the hardware compatibility requirements for a Cask.  The requirement
+is satisfied at install time if any one of multiple `:arch` value matches
+the user's hardware.
+
+The available symbols for hardware are:
+
+| symbol     | meaning        |
+| ---------- | -------------- |
+| `:i386`    | 32-bit Intel   |
+| `:x86_64`  | 64-bit Intel   |
+| `:ppc_7400`| 32-bit PowerPC |
+| `:ppc_64`  | 64-bit PowerPC |
+| `:intel`   | Any Intel      |
+| `:ppc`     | Any PowerPC    |
+
+The following are all valid expressions:
+
+```ruby
+depends_on :arch => :x86_64
+depends_on :arch => [:x86_64]          # same meaning as above
+depends_on :arch => :intel
+depends_on :arch => [:i386, :x86_64]   # same meaning as above
+```
+
+Since PowerPC hardware is no longer common, the expression most frequently
+needed will be:
+
+```ruby
+depends_on :arch => :x86_64
+```
+
+### All Depends_on Keys
 
 | key        | description |
 | ---------- | ----------- |
-| `:formula` | A Homebrew Formula
+| `:formula` | a Homebrew Formula
 | `:cask`    | *stub - not yet functional*
-| `:macos`   | *stub - not yet functional*
-| `:arch`    | *stub - not yet functional*
-| `:x11`     | *stub - not yet functional*
+| `:macos`   | a symbol, string, array, or comparison expression defining OS X release requirements.
+| `:arch`    | a symbol or array defining hardware requirements.
+| `:x11`     | a Boolean indicating a dependency on X11.
 | `:java`    | *stub - not yet functional*
 
 
@@ -814,6 +924,34 @@ A fully manual method for finding bundle ids in a package file follows:
   5. Once bundle ids have been identified, the unpacked package directory can be deleted.
 
 
+## Postflight Stanza Details
+
+### Evaluation of Blocks is Always Deferred
+
+The Ruby blocks defined by `preflight`, `postflight`, `uninstall_preflight`,
+and `uninstall_postflight` are not evaluated until install time or uninstall
+time.  Within a block, you may refer to the `@cask` instance variable, and
+invoke any method available on `@cask`.
+
+### Postflight Mini-DSL
+
+There is a mini-DSL available within `postflight` blocks.
+
+The following methods may be called to perform standard postflight tasks:
+
+| method                          | description |
+| ------------------------------- | ----------- |
+| `plist_set(key, value)`         | set a value in the `Info.plist` file for the app bundle.  Example: [`rubymine.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/rubymine.rb#L12)
+| `suppress_move_to_applications` | suppress a dialog asking the user to move the app to the `/Applications` folder.  Example: [`github.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/github.rb#L13).
+
+`plist_set` currently has the limitation that it only operates on the
+bundle indicated by the first `app` stanza (and the Cask must contain
+an `app` stanza).
+
+`suppress_move_to_applications` optionally accepts a `:key` parameter for
+apps which use a nonstandard `defaults` key.  Example: [`alfred.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/alfred.rb).
+
+
 ## Zap Stanza Details
 
 ### Zap Stanza Purpose
@@ -858,13 +996,14 @@ define arbitrary Ruby variables and methods inside the Cask by creating a
 `Utils` namespace.  Example:
 
 ```ruby
-class Appname < Cask
+cask :v1 => 'myapp' do
   module Utils
     def self.arbitrary_method
       ...
     end
   end
 
+  name 'MyApp'
   version '1.0'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
   license :unknown

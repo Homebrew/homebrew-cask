@@ -1,4 +1,4 @@
-class Bookends < Cask
+cask :v1 => 'bookends' do
   version :latest
   sha256 :no_check
 

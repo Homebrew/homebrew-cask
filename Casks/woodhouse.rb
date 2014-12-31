@@ -1,4 +1,4 @@
-class Woodhouse < Cask
+cask :v1 => 'woodhouse' do
   version '0.5.0'
   sha256 '3ed1b6711eb9ec862e34addc141d681d9b0fed2950b9d9b7189734087eeb7541'
 

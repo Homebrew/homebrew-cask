@@ -1,4 +1,4 @@
-class Linphone < Cask
+cask :v1 => 'linphone' do
   version '3.7.0'
   sha256 '4d4a01354a7b5cd011746d3477a93ffb6e531ff8e2afccd2b9bb031f06cc42cc'
 
@@ -6,7 +6,7 @@ class Linphone < Cask
   gpg "#{url}.sig",
       :key_id => '3ecd52dee2f56985'
   homepage 'http://www.linphone.org/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Linphone.app'
 end

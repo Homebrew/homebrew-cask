@@ -1,9 +1,9 @@
 class Cask::CLI::Install < Cask::CLI::Base
   def self.run(*args)
-    cask_names = cask_names_from(args)
-    raise CaskUnspecifiedError if cask_names.empty?
+    cask_tokens = cask_tokens_from(args)
+    raise CaskUnspecifiedError if cask_tokens.empty?
     force = args.include? '--force'
-    retval = install_casks cask_names, force
+    retval = install_casks cask_tokens, force
     # retval is ternary: true/false/nil
     if retval.nil?
       raise CaskError.new("nothing to install")
@@ -12,25 +12,25 @@ class Cask::CLI::Install < Cask::CLI::Base
     end
   end
 
-  def self.install_casks(cask_names, force)
+  def self.install_casks(cask_tokens, force)
     count = 0
-    cask_names.each do |cask_name|
+    cask_tokens.each do |cask_token|
       begin
-        cask = Cask.load(cask_name)
+        cask = Cask.load(cask_token)
         Cask::Installer.new(cask).install(force)
         count += 1
        rescue CaskAlreadyInstalledError => e
          opoo e.message
          count += 1
       rescue CaskUnavailableError => e
-        warn_unavailable_with_suggestion cask_name, e
+        warn_unavailable_with_suggestion cask_token, e
       end
     end
-    count == 0 ? nil : count == cask_names.length
+    count == 0 ? nil : count == cask_tokens.length
   end
 
-  def self.warn_unavailable_with_suggestion(cask_name, e)
-    exact_match, partial_matches, search_term = Cask::CLI::Search.search(cask_name)
+  def self.warn_unavailable_with_suggestion(cask_token, e)
+    exact_match, partial_matches, search_term = Cask::CLI::Search.search(cask_token)
     errmsg = e.message
     if exact_match
       errmsg.concat(". Did you mean:\n#{exact_match}")
@@ -41,6 +41,6 @@ class Cask::CLI::Install < Cask::CLI::Base
   end
 
   def self.help
-    "installs the Cask of the given name"
+    "installs the given Cask"
   end
 end

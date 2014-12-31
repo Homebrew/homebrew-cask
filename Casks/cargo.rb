@@ -1,4 +1,4 @@
-class Cargo < Cask
+cask :v1 => 'cargo' do
   version :latest
   sha256 :no_check
 

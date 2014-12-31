@@ -28,8 +28,9 @@ commands are:
 
 ## Searching for Casks
 
-The `brew cask search` command accepts a series of substring arguments.
-Let's see if there's a Cask for Google Chrome:
+The `brew cask search` command accepts a series of substring arguments,
+and returns tokens representing matching Casks.  Let's see if there's a
+Cask for Google Chrome:
 
 ```bash
 $ brew cask search chrome
@@ -45,7 +46,7 @@ $ brew cask search
 
 ## Installing Casks
 
-The command `brew cask install` accepts a Cask name as returned by `brew cask search`.
+The command `brew cask install` accepts a Cask token as returned by `brew cask search`.
 Let's try to install Google Chrome:
 
 ```bash
@@ -83,7 +84,7 @@ more information.
 * `doctor` -- checks for configuration issues
 * `cleanup` -- cleans up cached downloads (with `--outdated`, only cleans old downloads)
 * `home` -- opens the homepage of the given Cask; or with no arguments, the homebrew-cask project page
-* `alfred` -- modifies Alfred's scope to include the Caskroom
+* `alfred` -- modifies Alfred's search scope to include installed Casks
 * `update` -- a synonym for `brew update`
 * `zap` -- try to remove *all* files associated with a Cask (including resources which may be shared with other applications)
 
@@ -152,7 +153,7 @@ of Casks.
 | [caskroom/fonts](https://github.com/caskroom/homebrew-fonts)           | contains Casks that install fonts, which are kept separate so we can educate users about the different licensing landscape around font installation/usage
 | [caskroom/unofficial](https://github.com/caskroom/homebrew-unofficial) | contains Casks that install unofficial builds or forks
 
-There are also [alternate Cask Taps](doc/ALTERNATE_CASK_TAPS.md#alternate-cask-taps-maintained-by-users) maintained by users.
+There are also [alternate Cask Taps](doc/alternate_cask_taps.md#alternate-cask-taps-maintained-by-users) maintained by users.
 
 You can tap any of the above with a `brew tap` command:
 
@@ -163,7 +164,7 @@ $ brew tap <tap_name>
 after which, Casks from the new Tap will be available to `search` or `install` just like Casks from the main Tap.
 `brew update` will automatically keep your new Tap up to date.
 
-You may also specify a fully-qualified Cask name (which includes the Tap) for any `brew cask` command.  This will implicitly add the Tap if you have not previously added it with `brew tap`:
+You may also specify a fully-qualified Cask token (which includes the Tap) for any `brew cask` command.  This will implicitly add the Tap if you have not previously added it with `brew tap`:
 
 ```bash
 $ brew cask install caskroom/fonts/font-symbola
@@ -230,19 +231,20 @@ google-chrome
 
 ## Other Ways to Specify a Cask
 
-Most `brew cask` commands can accept a Cask name as an argument. As described
-above, a Cask name on the command line can take the form of:
+Most `brew cask` commands can accept a Cask token as an argument. As described
+above, the token on the command line can take the form of:
 
-* a Cask name as returned by `brew cask search`, _eg_: `google-chrome`
-* a fully-qualified Cask name which includes the Tap, _eg_: `caskroom/fonts/font-symbola`
+ * a token as returned by `brew cask search`, _eg_: `google-chrome`
+ * a fully-qualified token which includes the Tap, _eg_: `caskroom/fonts/font-symbola`
 
-`brew cask` also accepts three other forms for Cask names:
+`brew cask` also accepts three other forms as arguments
 
-* a path to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
-* a `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
-* a file in the current working directory, _eg_: `my-modfied-google-chrome.rb`.  Note
-  that Tapped Casks names will be preferred over this form.  To force the use of a Cask
-  file in the current directory, specify a pathname with slashes, _eg_: `./google-chrome.rb`.
+ * a path to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
+ * a `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
+ * a file in the current working directory, _eg_: `my-modfied-google-chrome.rb`.  Note
+   that matching Tapped Cask tokens will be preferred over this form when there is a
+   conflict.  To force the use of a Cask file in the current directory, specify a
+   pathname with slashes, _eg_: `./google-chrome.rb`.
 
 The last three forms are intended for users who wish to maintain private Casks.
 
@@ -253,10 +255,13 @@ You can add Casks to your existing (or new) Taps: just create a directory named
 
 ## Alfred Integration
 
-`/opt/homebrew-cask/Caskroom` as a Search Scope in Alfred's preferences or
-I've been using Casks along with Alfred 2 to great effect. Just add
-manage the scope addition via `brew cask alfred link`. Then applications become
-available in Alfred immediately after a `brew cask install`. Your fingertips
-will thank you.
+Many users combine Homebrew-cask with [Alfred 2](http://www.alfredapp.com/) to great effect. Just add
+the Cask staging area to Alfred's "search scope" by either
+
+ * running `brew cask alfred link`, or
+ * manually adding `/opt/homebrew-cask/Caskroom` via Alfred's preferences GUI
+
+Applications will then become available in Alfred immediately after a `brew
+cask install`. Your fingertips will thank you.
 
 Oh, and you can `brew cask install alfred` too! Not bad, eh?

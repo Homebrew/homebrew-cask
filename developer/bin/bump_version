@@ -8,6 +8,7 @@
 ###
 
 require 'open3'
+require 'rubygems'
 
 ###
 ### configurable constants

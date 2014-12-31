@@ -8,8 +8,8 @@ class Cask::DSL::Base
     @command.run!(executable, options)
   end
 
-  def title
-    @cask.title
+  def token
+    @cask.token
   end
 
   def version
@@ -17,15 +17,10 @@ class Cask::DSL::Base
   end
 
   def caskroom_path
-    @cask.class.caskroom.join(title)
+    @cask.class.caskroom.join(token)
   end
 
   def staged_path
     caskroom_path.join(@cask.version.to_s)
-  end
-
-  # todo transitional method, removeme after DSL 1.0
-  def destination_path
-    staged_path
   end
 end

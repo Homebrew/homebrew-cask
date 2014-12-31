@@ -1,4 +1,4 @@
-class Gravit < Cask
+cask :v1 => 'gravit' do
   version 'v1.0-rc1'
   sha256 'bb267504f87d39aaf2b654d33cc0b48ccb4c74a72f8b88dd9d78ced1a984f265'
 

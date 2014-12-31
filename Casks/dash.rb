@@ -1,11 +1,11 @@
-class Dash < Cask
+cask :v1 => 'dash' do
   version :latest
   sha256 :no_check
 
   url 'http://kapeli.com/Dash.zip'
   appcast 'http://kapeli.com/Dash.xml'
   homepage 'http://kapeli.com/dash'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Dash.app'
 

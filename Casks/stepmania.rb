@@ -1,4 +1,4 @@
-class Stepmania < Cask
+cask :v1 => 'stepmania' do
   version '5beta4a'
   sha256 'a87148a15e8507080ae03e42b07b35bb601e622d63c142da8a08dcdb9f9e42cd'
 

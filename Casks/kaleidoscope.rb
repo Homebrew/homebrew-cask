@@ -1,4 +1,4 @@
-class Kaleidoscope < Cask
+cask :v1 => 'kaleidoscope' do
   version '2.1.0-134'
   sha256 'e16360273fb6d37560c7974b95728d82a0482268641753c49f903bf36445d35b'
 

@@ -1,4 +1,4 @@
-class Qsync < Cask
+cask :v1 => 'qsync' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Qsync < Cask
   license :commercial
 
   pkg 'Qsync.pkg'
+
   uninstall :pkgutil => 'com.qnap.qsync.*'
 end

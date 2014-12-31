@@ -1,3 +1,5 @@
+require 'rubygems'
+
 class Cask::CLI::Alfred < Cask::CLI::Base
   DEFAULT_SCOPES = [
     '/Applications',
@@ -14,7 +16,8 @@ class Cask::CLI::Alfred < Cask::CLI::Base
   PRIMARY_SCOPES_KEY = 'features.defaultresults.scope'
 
   # http://www.alfredforum.com/topic/4810-alfred%E2%80%99s-scope-can-no-longer-be-changed-programatically/?p=29434
-  LOCALPREFS_SCOPES_FILEGLOB = '~/Library/Application Support/Alfred 2/Alfred.alfredpreferences/preferences/local/*/features/defaultresults/prefs.plist'
+  LOCALPREFS_SUBPATH = '/Alfred.alfredpreferences/preferences/local/*/features/defaultresults/prefs.plist'
+  LOCALPREFS_SYNCDIR_KEY = 'syncfolder'
   LOCALPREFS_SCOPES_KEY = 'scope'
 
   def self.run(*args)
@@ -56,8 +59,7 @@ class Cask::CLI::Alfred < Cask::CLI::Base
       opoo "Alfred appears to be already linked. Updating defaults anyway."
     end
     odebug 'Linking Alfred scopes'
-    # this silly ternary operation is for precise compat with Ruby 1.8
-    save_alfred_scopes( alfred_scopes.include?(Cask.caskroom.to_s) ? alfred_scopes : alfred_scopes + [ Cask.caskroom.to_s ])
+    save_alfred_scopes(linked? ? alfred_scopes : alfred_scopes + [ Cask.caskroom.to_s ])
     ohai "Successfully linked Alfred to homebrew-cask."
   end
 
@@ -137,7 +139,8 @@ class Cask::CLI::Alfred < Cask::CLI::Base
 
   def self.localprefs_scopes_files
     # local prefs file is used in Alfred 2.4 and above for Yosemite compatibility
-    Pathname.glob(Pathname.new(LOCALPREFS_SCOPES_FILEGLOB).expand_path)
+    prefs_path = alfred_primary_preference(LOCALPREFS_SYNCDIR_KEY).strip
+    Pathname.glob(Pathname.new(prefs_path + LOCALPREFS_SUBPATH).expand_path)
   end
 
   def self.alfred_preference(key, value=nil)

@@ -1,4 +1,4 @@
-class Backtobed < Cask
+cask :v1 => 'backtobed' do
   version :latest
   sha256 :no_check
 

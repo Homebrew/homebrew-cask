@@ -1,11 +1,11 @@
-class TrimEnabler < Cask
+cask :v1 => 'trim-enabler' do
   version :latest
   sha256 :no_check
 
   url 'https://s3.amazonaws.com/cindori/TrimEnabler.dmg'
   appcast 'http://cindori.org/trimenabler/updates/update.xml'
   homepage 'http://www.cindori.org/software/trimenabler/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Trim Enabler.app'
 end

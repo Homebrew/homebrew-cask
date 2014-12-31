@@ -4,8 +4,7 @@ class Cask::DSL::Tags
   # here to store limitations/validations on tag values.
   # So far, we only check the keys.
   VALID_TAGS = Set.new [
-                        :vendor,
-                        :name,
+                        :vendor
                        ]
 
   attr_accessor *VALID_TAGS

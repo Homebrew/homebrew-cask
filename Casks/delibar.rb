@@ -1,11 +1,11 @@
-class Delibar < Cask
+cask :v1 => 'delibar' do
   version :latest
   sha256 :no_check
 
   url 'http://static.shinyfrog.net/downloads/delibar/Delibar.zip'
   appcast 'http://apps.shinynode.com/apps/delibar_appcast.xml'
   homepage 'http://www.delibarapp.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Delibar.app'
 end

@@ -1,4 +1,4 @@
-class Jameica < Cask
+cask :v1 => 'jameica' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,7 @@ class Jameica < Cask
   gpg "#{url}.asc",
       :key_id => '5a8ed9cfc0db6c70'
   homepage 'http://www.willuhn.de/products/jameica/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Jameica.app'
 end

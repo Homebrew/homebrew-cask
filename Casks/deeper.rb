@@ -1,15 +1,44 @@
-class Deeper < Cask
+cask :v1 => 'deeper' do
   version :latest
   sha256 :no_check
 
-  url 'http://joel.barriere.pagesperso-orange.fr/dl/109/Deeper.dmg'
+  if MacOS.release == :tiger
+    url 'http://www.titanium.free.fr/download/104/Deeper.dmg'
+  elsif MacOS.release == :leopard
+    url 'http://www.titanium.free.fr/download/105/Deeper.dmg'
+  elsif MacOS.release == :snow_leopard
+    url 'http://www.titanium.free.fr/download/106/Deeper.dmg'
+  elsif MacOS.release == :lion
+    url 'http://www.titanium.free.fr/download/107/Deeper.dmg'
+  elsif MacOS.release == :mountain_lion
+    url 'http://www.titanium.free.fr/download/108/Deeper.dmg'
+  elsif MacOS.release == :mavericks
+    url 'http://www.titanium.free.fr/download/109/Deeper.dmg'
+  elsif MacOS.release == :yosemite
+    url 'http://www.titanium.free.fr/download/1010/Deeper.dmg'
+  else
+    # Unusual case: there is no fall-through.  Each version of the software is
+    # specific to an OS X release, so define nothing when the release is unknown.
+  end
+
   homepage 'http://www.titanium.free.fr/downloaddeeper.php'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Deeper.app'
 
-  # todo replace this with a conditional
-  caveats <<-EOS.undent
-    This version of Deeper is for OS X Mavericks only. If you are using other versions of OS X, please run 'brew tap caskroom/versions' and install deeper-mountainlion / deeper-lion / deeper-snowleopard
-  EOS
+  depends_on :macos => %w{
+                          :tiger
+                          :leopard
+                          :snow_leopard
+                          :lion
+                          :mountain_lion
+                          :mavericks
+                          :yosemite
+                         }
+
+  caveats do
+    if [:leopard, :tiger].include?(MacOS.release.to_sym)
+      puts 'Deeper only runs from an Administrator account on this version of OS X.'
+    end
+  end
 end

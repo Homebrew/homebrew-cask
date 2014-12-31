@@ -1,4 +1,4 @@
-class Induction < Cask
+cask :v1 => 'induction' do
   version 'alpha-28'
   sha256 'b209e4ca234749435c8e014ec79b2bc0bdcfe626ff4cbbeb6b3ee51cd1f2e68c'
 
@@ -6,7 +6,7 @@ class Induction < Cask
   # appcast URL is down
   # appcast 'https://induction.mesmerizeapp.com/'
   homepage 'http://inductionapp.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Induction.app'
 end

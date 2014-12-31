@@ -1,4 +1,4 @@
-class CupsPdf < Cask
+cask :v1 => 'cups-pdf' do
   version '2.6.1'
   sha256 '24bf65884dda2d3fd60266f96bf76791a61ec9095f11073047d880de692784b9'
 

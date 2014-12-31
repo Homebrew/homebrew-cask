@@ -1,4 +1,4 @@
-class Multipatch < Cask
+cask :v1 => 'multipatch' do
   version '1.4'
   sha256 'ce95baacf8d4d323e144fa31e52c80519c0f81a59a8f3239c25c0da4b927fcf5'
 

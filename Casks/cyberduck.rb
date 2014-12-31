@@ -1,14 +1,15 @@
-class Cyberduck < Cask
-  version '4.5.2'
-  sha256 'cff337f880b6ebbcc7f2e246b677fa5346fd225ae83289dca71ab35cf4b6eb8f'
+cask :v1 => 'cyberduck' do
+  version '4.6.1'
+  sha256 'f6a18dd8e6422038ae0ccda7a8243c06824188b50dc6e1bfcd58bf345d6be4e9'
 
   url "https://update.cyberduck.io/Cyberduck-#{version}.zip"
   appcast 'https://version.cyberduck.io/changelog.rss',
-          :sha256 => '9c35b816cb54cd4b984c7e18e239360a840da871b4fea148ce896d305860385e'
+          :sha256 => '1eeb448a209f9ba84690c15ecde08906e4b199b0ef8e99b4272f228744cda821'
   homepage 'http://cyberduck.io/'
   license :gpl
 
   app 'Cyberduck.app'
+
   zap :delete => [
                   '~/Library/Application Support/Cyberduck',
                   '~/Library/Preferences/ch.sudo.cyberduck.plist',

@@ -1,4 +1,4 @@
-class P4v < Cask
+cask :v1 => 'p4v' do
   version '2014.1-888424'
 
   if Hardware::CPU.is_32_bit?
@@ -10,7 +10,7 @@ class P4v < Cask
   end
 
   homepage 'http://www.perforce.com/product/components/perforce-visual-client'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'p4v.app'
   binary 'p4vc'

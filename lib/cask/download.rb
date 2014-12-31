@@ -8,8 +8,6 @@ class Cask::Download
   end
 
   def perform(force=false)
-    require 'software_spec'
-    cask = @cask
     if cask.url.using == :svn
       downloader = Cask::SubversionDownloadStrategy.new(cask)
     elsif cask.url.using == :post
@@ -21,7 +19,7 @@ class Cask::Download
     begin
       downloaded_path = downloader.fetch
     rescue StandardError => e
-      raise CaskError.new("Download failed on Cask '#{@cask}' with message: #{e}")
+      raise CaskError.new("Download failed on Cask '#{cask}' with message: #{e}")
     end
     begin
       # this symlink helps track which downloads are ours
@@ -29,25 +27,31 @@ class Cask::Download
                    HOMEBREW_CACHE_CASKS.join(downloaded_path.basename)
     rescue StandardError => e
     end
-    _check_sums(downloaded_path, cask.sums) unless cask.sums === :no_check
+    _compare_sha256(downloaded_path, cask)
     downloaded_path
   end
 
   private
-  def _check_sums(path, sums)
-    has_sum = false
-    sums.each do |sum|
-      unless sum.empty?
-        computed = Checksum.new(sum.hash_type, Digest.const_get(sum.hash_type.to_s.upcase).file(path).hexdigest)
-        if sum == computed
-          odebug "Checksums match"
-        else
-          ohai 'Note: running "brew update" may fix checksum errors'
-          raise ChecksumMismatchError.new(path, sum, computed)
-        end
-        has_sum = true
-      end
+  def _calc_sha256(path)
+    require 'digest/sha2'
+    Digest::SHA2.file(path).hexdigest
+  end
+
+  def _compare_sha256(path, cask)
+    begin
+      expected = cask.sha256
+    rescue RuntimeError => e
     end
-    raise ChecksumMissingError.new("Checksum required: sha256 '#{Digest::SHA256.file(path).hexdigest}'") unless has_sum
+    return if expected == :no_check
+    computed = _calc_sha256(path)
+    if expected.nil? or expected.empty?
+      raise CaskSha256MissingError.new("sha256 required: sha256 '#{computed}'")
+    end
+    if expected == computed
+      odebug "SHA256 checksums match"
+    else
+      ohai 'Note: running "brew update" may fix sha256 checksum errors'
+      raise CaskSha256MismatchError.new(path, expected, computed)
+    end
   end
 end

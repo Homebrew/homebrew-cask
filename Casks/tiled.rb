@@ -1,6 +1,6 @@
-class Tiled < Cask
-  version '0.10.1'
-  sha256 'ace859c2f821aca117af9bb72d5cc4313816d25500666fe0a153c8667ead91a3'
+cask :v1 => 'tiled' do
+  version '0.10.2'
+  sha256 'e96636aa597375304729a9bb20f17b1b3a1bf4ffef6a0060ba65deb0bfc2aee0'
 
   url "https://github.com/bjorn/tiled/releases/download/v#{version}/tiled-#{version}.dmg"
   homepage 'http://www.mapeditor.org/'

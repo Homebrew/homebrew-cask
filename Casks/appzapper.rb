@@ -1,4 +1,4 @@
-class Appzapper < Cask
+cask :v1 => 'appzapper' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Nsregextester < Cask
+cask :v1 => 'nsregextester' do
   version :latest
   sha256 :no_check
 

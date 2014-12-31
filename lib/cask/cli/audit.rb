@@ -36,14 +36,14 @@ class Cask::CLI::Audit < Cask::CLI::Base
   end
 
   def casks_to_audit
-    if cask_list.empty?
+    if cask_tokens.empty?
       Cask.all
     else
-      cask_list.map { |arg| Cask.load(arg) }
+      cask_tokens.map { |token| Cask.load(token) }
     end
   end
 
-  def cask_list
-    @cask_list ||= @args.reject { |a| a == '--download' }
+  def cask_tokens
+    @cask_tokens ||= @args.reject { |a| a == '--download' }
   end
 end

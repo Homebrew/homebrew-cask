@@ -2,11 +2,11 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
 
   # Syntax
   #
-  #     brew cask _stanza <stanza_name> [ --table | --yaml | --inspect | --quiet ] [ <cask_names> ]
+  #     brew cask _stanza <stanza_name> [ --table | --yaml | --inspect | --quiet ] [ <cask_token> ... ]
   #
-  # If no Cask names are given, then all are returned.
+  # If no tokens are given, then data for all Casks is returned.
   #
-  # The pseudo-stanzas "artifacts" and "sums" are available.
+  # The pseudo-stanza "artifacts" is available.
   #
   # On failure, a blank line is returned on the standard output.
   #
@@ -36,13 +36,14 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
                        :internet_plugin,
                        :screen_saver,
                        :pkg,
-                       :caskroom_only,
+                       :installer,
+                       :stage_only,
                        :nested_container,
                        :uninstall,
-                       :after_install,
-                       :after_uninstall,
-                       :before_install,
-                       :before_uninstall,
+                       :postflight,
+                       :uninstall_postflight,
+                       :preflight,
+                       :uninstall_postflight,
                        ])
 
   def self.run(*arguments)
@@ -51,11 +52,11 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
     quiet = arguments.include? '--quiet'
     format = :to_yaml if arguments.include? '--yaml'
     format = :inspect if arguments.include? '--inspect'
-    cask_names = arguments.reject { |arg| arg.chars.first == '-' }
-    stanza = cask_names.shift.to_sym
-    cask_names = Cask.all_titles if cask_names.empty?
+    cask_tokens = arguments.reject { |arg| arg.chars.first == '-' }
+    stanza = cask_tokens.shift.to_sym
+    cask_tokens = Cask.all_tokens if cask_tokens.empty?
 
-    retval = print_stanzas(stanza, format, table, quiet, *cask_names)
+    retval = print_stanzas(stanza, format, table, quiet, *cask_tokens)
 
     # retval is ternary: true/false/nil
     if retval.nil?
@@ -67,28 +68,28 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
     end
   end
 
-  def self.print_stanzas(stanza, format=nil, table=nil, quiet=nil, *cask_names)
+  def self.print_stanzas(stanza, format=nil, table=nil, quiet=nil, *cask_tokens)
     count = 0
-    stanza = :sums if stanza == :sha256
+    stanza = :full_name if stanza == :name
     if ARTIFACTS.include?(stanza)
       artifact_name = stanza
       stanza = :artifacts
     end
 
-    cask_names.each do |cask_name|
+    cask_tokens.each do |cask_token|
 
-      print "#{cask_name}\t" if table
+      print "#{cask_token}\t" if table
 
       begin
-        cask = Cask.load(cask_name)
+        cask = Cask.load(cask_token)
       rescue StandardError
-        opoo "Cask '#{cask_name}' was not found" unless quiet
+        opoo "Cask '#{cask_token}' was not found" unless quiet
         puts ''
         next
       end
 
       unless cask.respond_to?(stanza)
-        opoo "no such stanza '#{stanza}' on Cask '#{cask_name}'" unless quiet
+        opoo "no such stanza '#{stanza}' on Cask '#{cask_token}'" unless quiet
         puts ''
         next
       end
@@ -96,13 +97,13 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
       begin
         value = cask.send(stanza)
       rescue StandardError
-        opoo "failure calling '#{stanza}' on Cask '#{cask_name}'" unless quiet
+        opoo "failure calling '#{stanza}' on Cask '#{cask_token}'" unless quiet
         puts ''
         next
       end
 
       if artifact_name and not value.key?(artifact_name)
-        opoo "no such stanza '#{artifact_name}' on Cask '#{cask_name}'" unless quiet
+        opoo "no such stanza '#{artifact_name}' on Cask '#{cask_token}'" unless quiet
         puts ''
         next
       end
@@ -116,9 +117,6 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
       else
         if artifact_name or value.is_a?(Symbol)
           puts value.inspect
-        elsif stanza == :sums
-          # hack. why does "to_s" equal "inspect" for checksum objects?
-          puts value
         else
           puts value.to_s
         end
@@ -127,7 +125,7 @@ class Cask::CLI::InternalStanza < Cask::CLI::InternalUseBase
       count += 1
 
     end
-    count == 0 ? nil : count == cask_names.length
+    count == 0 ? nil : count == cask_tokens.length
   end
 
   def self.help

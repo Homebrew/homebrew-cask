@@ -1,4 +1,4 @@
-class Dataurlmaker < Cask
+cask :v1 => 'dataurlmaker' do
   version '1.1'
   sha256 'dc297a57ea7180273a17fe8503f7ed7423afb66e210f67d32c4e566fa8e797e1'
 

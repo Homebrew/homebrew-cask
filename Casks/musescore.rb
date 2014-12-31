@@ -1,10 +1,10 @@
-class Musescore < Cask
+cask :v1 => 'musescore' do
   version '1.3'
   sha256 'fcd106ec700f14053c9b4f3fd411d2335915c040f9071ea6da8d109e6827c3a5'
 
   url "http://ftp.osuosl.org/pub/musescore/releases/MuseScore-#{version}/MuseScore-#{version}.dmg"
   homepage 'http://musescore.org/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'MuseScore.app'
 end

@@ -1,4 +1,4 @@
-class Notedup < Cask
+cask :v1 => 'notedup' do
   version '2014031401'
   sha256 '15080c58484a9f8c7a7a00a94eae777791ab75ecd0c257e73f76398fb5a8a96e'
 

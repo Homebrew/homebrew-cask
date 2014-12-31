@@ -1,10 +1,10 @@
-class AtomShell < Cask
-  version '0.19.0'
-  sha256 'e14ecea827ce78cedb1ed9f4f4aa7d42912a31f69cbbf72588b2d9307f583c41'
+cask :v1 => 'atom-shell' do
+  version '0.19.5'
+  sha256 '9cef09ebbb26f8137ea7548316f002d0ef6086fc3d14b76896ebd9a62f58acc5'
 
   url "https://github.com/atom/atom-shell/releases/download/v#{version}/atom-shell-v#{version}-darwin-x64.zip"
   homepage 'https://github.com/atom/atom-shell'
-  license :oss
+  license :mit
 
-  caskroom_only true
+  stage_only true
 end

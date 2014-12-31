@@ -48,11 +48,11 @@ describe Cask::CLI::List do
       Cask::CLI::List.run('local-transmission', 'local-caffeine')
     }.must_output <<-OUTPUT.gsub(/^ */, '')
       ==> App Symlinks managed by brew-cask:
-      ==> Raw contents of Cask directory:
-      #{transmission.staged_path}/Transmission.app/Contents/ (489 files)
+      ==> Staged content:
+      #{transmission.staged_path} (489 files)
       ==> App Symlinks managed by brew-cask:
-      ==> Raw contents of Cask directory:
-      #{caffeine.staged_path}/Caffeine.app/Contents/ (13 files)
+      ==> Staged content:
+      #{caffeine.staged_path} (13 files)
     OUTPUT
   end
 end

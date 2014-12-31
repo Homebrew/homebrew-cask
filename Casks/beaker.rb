@@ -1,4 +1,4 @@
-class Beaker < Cask
+cask :v1 => 'beaker' do
   version '1.0'
   sha256 '52218c170816587eb1264b80b4bbdd6a2eb5c5f074fba89afc7aa0e591fa838a'
 

@@ -1,6 +1,6 @@
-class Beardedspice < Cask
-  version '0.2.1'
-  sha256 '28233946d266a95c390f2393fd80fdd1a82c89499ebae7014d797c75cb28c110'
+cask :v1 => 'beardedspice' do
+  version '0.2.3'
+  sha256 '9597416c94756a6854ce6e594a2b144aa2fcd54db1c27f9ae0ebdd479661ec72'
 
   url "https://github.com/beardedspice/beardedspice/raw/releases/BeardedSpice-#{version}.tar.gz"
   homepage 'http://www.beardedspice.com'

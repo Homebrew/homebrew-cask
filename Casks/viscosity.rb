@@ -1,4 +1,4 @@
-class Viscosity < Cask
+cask :v1 => 'viscosity' do
   version :latest
   sha256 :no_check
 
@@ -8,6 +8,7 @@ class Viscosity < Cask
   license :commercial
 
   app 'Viscosity.app'
+
   zap :delete => [
                   '~/Library/Application Support/Viscosity',
                   '~/Library/Preferences/com.viscosityvpn.Viscosity.plist',

@@ -1,10 +1,10 @@
-class Craftstudio < Cask
+cask :v1 => 'craftstudio' do
   version :latest
   sha256 :no_check
 
   url 'http://craftstud.io/files/OSX/CraftStudio.pkg'
   homepage 'http://craftstud.io'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'CraftStudio.pkg'
 
@@ -13,7 +13,7 @@ class Craftstudio < Cask
   zap       :delete => '~/Library/CraftStudio'
 
   caveats <<-EOS.undent
-    #{title} requires mono-mre, available via
+    #{token} requires mono-mre, available via
 
       brew cask install mono-mre
   EOS

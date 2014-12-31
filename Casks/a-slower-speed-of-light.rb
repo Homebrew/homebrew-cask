@@ -1,4 +1,4 @@
-class ASlowerSpeedOfLight < Cask
+cask :v1 => 'a-slower-speed-of-light' do
   version 'summer-12'
   sha256 'ab5a66a9857b979211d0506a005d678f185705bb848bd42ac91d9628e0945a39'
 

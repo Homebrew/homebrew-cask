@@ -1,13 +1,13 @@
-class Ubar < Cask
-  version '2.2.6'
-  sha256 '3c44cbdcaa99658d2b12e50756668e3b60beea90667c35bccde3412f80cf65c9'
+cask :v1 => 'ubar' do
+  version '2.4.1'
+  sha256 '5741386eb86cc3ee347f983528bcb7b07dd4cc3b4a6bfa10d285162c2071db6f'
 
   url "http://www.brawersoftware.com/downloads/ubar/ubar#{version.gsub('.','')}.zip"
+  appcast "http://brawersoftware.com/appcasts/feeds/ubar/ubar2.xml"
   homepage 'http://brawersoftware.com/products/ubar'
-  license :unknown
+  license :commercial
 
   app 'uBar.app'
-  caveats do
-    os_version_only '10.9', '10.10'
-  end
+
+  depends_on :macos => '>= :mavericks'
 end

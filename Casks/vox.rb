@@ -1,4 +1,4 @@
-class Vox < Cask
+cask :v1 => 'vox' do
   version :latest
   sha256 :no_check
 

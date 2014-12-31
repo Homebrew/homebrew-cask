@@ -1,7 +1,7 @@
-class Retroarch < Cask
+cask :v1 => 'retroarch' do
   version '1.0.0.2'
 
-  if MacOS.version < :lion
+  if MacOS.release <= :snow_leopard
     sha256 'a3ebc3a46d674433a1bf40c1b948021e752919b4b43da853fd73fb508bf40982'
     url "http://www.libretro.com/wp-content/plugins/cip4-folder-download-widget/cip4-download.php?target=wp-content/releases/OSX/RetroArch-OSX10.6-x86-v#{version}.zip"
   else
@@ -10,6 +10,7 @@ class Retroarch < Cask
   end
 
   homepage 'http://www.libretro.com/'
+  license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'RetroArch.app'
 end

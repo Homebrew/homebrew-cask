@@ -1,10 +1,10 @@
-class Flash < Cask
-  version '15.0.0.189'
-  sha256 'd5fd0973439a9250751930735508152cb8b9923fc4bf8c2501ca6750b9ca8623'
+cask :v1 => 'flash' do
+  version '16.0.0.235'
+  sha256 'd47bdc510f35e35ecf5260e35f6c86a4750f95b8505841bc10e1b6a1af82d346'
 
   url "http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_#{version.to_i}_osx_pkg.dmg"
   homepage 'https://www.adobe.com/products/flashplayer/distribution3.html'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install Adobe Flash Player.pkg'
 

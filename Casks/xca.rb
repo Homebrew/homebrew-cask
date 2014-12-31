@@ -1,4 +1,4 @@
-class Xca < Cask
+cask :v1 => 'xca' do
   version '0.9.3'
   sha256 'f2daef9c1be16c9ff57613b13f32d015944187c6971467e13857fe3f50889222'
 

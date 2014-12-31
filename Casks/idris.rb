@@ -1,4 +1,4 @@
-class Idris < Cask
+cask :v1 => 'idris' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Idris < Cask
   license :bsd
 
   pkg 'idris-current.pkg'
+
   uninstall :pkgutil => 'org.idris-lang'
 end

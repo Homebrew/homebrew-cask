@@ -1,13 +1,14 @@
-class Pgadmin3 < Cask
+cask :v1 => 'pgadmin3' do
   # note: "3" is not a version number, but indicates a different vendor
-  version '1.18.1'
-  sha256 '6fe924168c7a8ee9224527fcafc3e612de60c011a27dc44b8293401ff346627d'
+  version '1.20.0'
+  sha256 '0712106cca16240db9962214384874c108fe8397d0c418a79dfb3639f8f140da'
 
   url "http://ftp.postgresql.org/pub/pgadmin3/release/v#{version}/osx/pgadmin3-#{version}.dmg"
   gpg "#{url}.sig",
-      :key_id => '96020e041a19643b'
+      :key_id => 'e0c4ceeb826b1fda4fb468e024adfaaf698f1519'
+  name 'pgAdmin'
   homepage 'http://pgadmin.org'
-  license :unknown
+  license :oss
 
   app 'pgAdmin3.app'
 end

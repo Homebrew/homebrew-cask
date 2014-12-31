@@ -1,10 +1,10 @@
-class Controllermate < Cask
+cask :v1 => 'controllermate' do
   version :latest
   sha256 :no_check
 
   url 'https://s3.amazonaws.com/orderedbytes/ControllerMate.dmg'
   homepage 'http://www.orderedbytes.com/controllermate/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'ControllerMate.pkg'
 

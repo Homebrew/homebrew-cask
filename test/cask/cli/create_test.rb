@@ -36,13 +36,14 @@ describe Cask::CLI::Create do
     Cask::CLI::Create.run('new-cask')
     template = File.read(Cask.path('new-cask'))
     template.must_equal <<-TEMPLATE.undent
-      class NewCask < Cask
+      cask :v1 => 'new-cask' do
         version ''
         sha256 ''
 
         url 'https://'
+        name ''
         homepage ''
-        license :unknown
+        license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
         app ''
       end

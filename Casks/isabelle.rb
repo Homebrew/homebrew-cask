@@ -1,4 +1,4 @@
-class Isabelle < Cask
+cask :v1 => 'isabelle' do
   version '2014'
   sha256 'e4a4b5f454d6cb24d5ef7271adc54e9fa7109addda8c6707bd7414b4d4061a23'
 

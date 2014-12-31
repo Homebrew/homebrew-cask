@@ -1,6 +1,11 @@
 require 'bundler'
 require 'bundler/setup'
 
+# just in case
+if RUBY_VERSION.to_i < 2
+  raise 'brew-cask: Ruby 2.0 or greater is required.'
+end
+
 # force some environment variables
 ENV['HOMEBREW_NO_EMOJI']='1'
 
@@ -11,20 +16,15 @@ HOMEBREW_BREW_FILE = '/usr/local/bin/brew'
 brew_cask_path = Pathname.new(File.expand_path(__FILE__+'/../../'))
 casks_path = brew_cask_path.join('Casks')
 lib_path = brew_cask_path.join('lib')
-
 $:.push(lib_path)
 
-# add homebrew to load path
-homebrew_path = Pathname(`brew --prefix`.chomp)
-homebrew_path = Pathname('/usr/local') unless homebrew_path.exist?
-$:.push(homebrew_path.join('Library', 'Homebrew'))
-
 # require homebrew testing env
-require 'test/testing_env'
+# todo: removeme, this is transitional
+require 'vendor/homebrew-fork/testing_env'
 
 # todo temporary, copied from old Homebrew, this method is now moved inside a class
 def shutup
-  if ARGV.verbose?
+  if ENV.has_key?('VERBOSE_TESTS')
     yield
   else
     begin
@@ -123,13 +123,13 @@ require 'tempfile'
 
 # pretend like we installed the homebrew-cask tap
 project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
-taps_dest = HOMEBREW_LIBRARY/"Taps/caskroom"
+taps_dest = HOMEBREW_LIBRARY.join('Taps/caskroom')
 
 # create directories
 FileUtils.mkdir_p taps_dest
 HOMEBREW_PREFIX.join('bin').mkdir
 
-FileUtils.ln_s project_root, taps_dest/"homebrew-cask"
+FileUtils.ln_s project_root, taps_dest.join('homebrew-cask')
 
 # Common superclass for test Casks for when we need to filter them out
 class TestCask < Cask; end
@@ -140,4 +140,4 @@ FileUtils.ln_s '/usr/local/bin/unar', HOMEBREW_PREFIX.join('bin/unar')
 FileUtils.ln_s '/usr/local/bin/lsar', HOMEBREW_PREFIX.join('bin/lsar')
 
 # also jack in some test Casks
-FileUtils.ln_s project_root/'test'/'support', taps_dest/"homebrew-testcasks"
+FileUtils.ln_s project_root.join('test', 'support'), taps_dest.join('homebrew-testcasks')

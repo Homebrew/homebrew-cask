@@ -1,19 +1,24 @@
-class Maintenance < Cask
+cask :v1 => 'maintenance' do
   version :latest
   sha256 :no_check
 
-  if MacOS.version == :tiger
+  if MacOS.release == :tiger
     url 'http://www.titanium.free.fr/download/104/Maintenance.dmg'
-  elsif MacOS.version == :leopard
+  elsif MacOS.release == :leopard
     url 'http://www.titanium.free.fr/download/105/Maintenance.dmg'
-  elsif MacOS.version == :snow_leopard
+  elsif MacOS.release == :snow_leopard
     url 'http://www.titanium.free.fr/download/106/Maintenance.dmg'
-  elsif MacOS.version == :lion
+  elsif MacOS.release == :lion
     url 'http://www.titanium.free.fr/download/107/Maintenance.dmg'
-  elsif MacOS.version == :mountain_lion
-    url 'http://joel.barriere.pagesperso-orange.fr/dl/108/Maintenance.dmg'
+  elsif MacOS.release == :mountain_lion
+    url 'http://www.titanium.free.fr/download/108/Maintenance.dmg'
+  elsif MacOS.release == :mavericks
+    url 'http://www.titanium.free.fr/download/109/Maintenance.dmg'
+  elsif MacOS.release == :yosemite
+    url 'http://www.titanium.free.fr/download/1010/Maintenance.dmg'
   else
-    url 'http://joel.barriere.pagesperso-orange.fr/dl/109/Maintenance.dmg'
+    # Unusual case: there is no fall-through.  Each version of the software is
+    # specific to an OS X release, so define nothing when the release is unknown.
   end
 
   homepage 'http://www.titanium.free.fr/downloadmaintenance.php'
@@ -21,11 +26,19 @@ class Maintenance < Cask
 
   app 'Maintenance.app'
 
-  caveats do
-    os_version_only('10.4', '10.5', '10.6', '10.7', '10.8', '10.9')
+  depends_on :macos => %w{
+                          :tiger
+                          :leopard
+                          :snow_leopard
+                          :lion
+                          :mountain_lion
+                          :mavericks
+                          :yosemite
+                         }
 
-    if [:leopard, :tiger].include? MacOS.version
-      puts 'Maintenance only runs from an Administrator account.'
+  caveats do
+    if [:leopard, :tiger].include?(MacOS.release.to_sym)
+      puts 'Maintenance only runs from an Administrator account on this version of OS X.'
     end
   end
 end

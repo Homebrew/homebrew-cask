@@ -1,4 +1,4 @@
-class Clementine < Cask
+cask :v1 => 'clementine' do
   version '1.2.2'
   sha256 '7e3dac7fb184058e69afbf9cf68850debbbacdfbbd3023fbcdce7c159a2eed75'
 
@@ -9,5 +9,6 @@ class Clementine < Cask
   license :oss
 
   app 'clementine.app'
+
   zap :delete => '~/Library/Preferences/org.clementine-player.Clementine.plist'
 end

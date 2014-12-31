@@ -1,4 +1,4 @@
-class Sonora < Cask
+cask :v1 => 'sonora' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class BackblazeDownloader < Cask
+cask :v1 => 'backblaze-downloader' do
   version :latest
   sha256 :no_check
 

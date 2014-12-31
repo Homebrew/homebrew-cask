@@ -1,13 +1,18 @@
-class Zooom < Cask
-  version '2.6.0'
-  sha256 'eda52f42d06a6cd32c2fc419358a4a589087a1592a38e717577e3ae9a656036f'
+cask :v1 => 'zooom' do
+  version :latest
+  sha256 :no_check
 
-  url "http://software.coderage-software.com/zooom/Zooom_#{version}.dmg"
+  url 'http://software.coderage-software.com/zooom/Zooom_Latest.dmg'
   homepage 'http://coderage-software.com/zooom'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Zooom2.pkg'
+
+  uninstall :pkgutil => 'com.coderage.pkg.Zooom2'
+
+  depends_on :macos => '>= :mavericks'
+
   caveats do
-    os_version_only '10.9', '10.10'
+    "There are known issues with installing this package, so if installation fails you may need to run the installer at #{staged_path}/Zooom2.pkg manually."
   end
 end

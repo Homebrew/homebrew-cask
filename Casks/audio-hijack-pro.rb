@@ -1,4 +1,4 @@
-class AudioHijackPro < Cask
+cask :v1 => 'audio-hijack-pro' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-class Vlc < Cask
+cask :v1 => 'vlc' do
   version '2.1.5'
   sha256 '923504e296829f4253af8276b992636f72e56232ecdbdcf6003647ee662257f2'
 

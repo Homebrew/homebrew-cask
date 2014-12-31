@@ -1,6 +1,6 @@
-class Seil < Cask
-  version '10.11.0'
-  sha256 '4ee777bf0a7f023abadb1f6a836b08484cfc2db2a19dd0b28d8942a2b638f8e5'
+cask :v1 => 'seil' do
+  version '11.0.0'
+  sha256 '4b2a5afe8c45a46af7b8a5ef291615627d795c90ba1614b5532eafa479e8f30b'
 
   url "https://pqrs.org/macosx/keyremap4macbook/files/Seil-#{version}.dmg"
   homepage 'https://pqrs.org/macosx/keyremap4macbook/seil.html.en'

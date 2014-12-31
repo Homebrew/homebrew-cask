@@ -1,12 +1,13 @@
-class Cocoaspell < Cask
+cask :v1 => 'cocoaspell' do
   version '2.1'
   sha256 '06d6cd7f2b04c47f553c5a3a33ebe6bc5651457521cbe7e3ead84a6cb218053c'
 
   url "http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg"
   homepage 'http://cocoaspell.leuski.net/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'cocoAspell.pkg'
+
   uninstall :pkgutil => 'net.leuski.cocoaspell.*',
             :delete  => [
                          '/Application Support/cocoAspell/aspell6-en-6.0-0',

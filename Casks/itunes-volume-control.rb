@@ -1,4 +1,4 @@
-class ItunesVolumeControl < Cask
+cask :v1 => 'itunes-volume-control' do
   version :latest
   sha256 :no_check
 

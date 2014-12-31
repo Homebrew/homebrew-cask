@@ -10,7 +10,7 @@ describe Cask::Scopes do
     after { fake_caskroom.rmtree }
 
     it 'returns a list installed Casks by loading Casks for all the dirs that exist in the caskroom' do
-      allow(Cask).to receive(:load) { |name| "loaded-#{name}" }
+      allow(Cask).to receive(:load) { |token| "loaded-#{token}" }
 
       fake_caskroom.join('cask-bar').mkdir
       fake_caskroom.join('cask-foo').mkdir
@@ -19,7 +19,7 @@ describe Cask::Scopes do
 
       expect(Cask).to have_received(:load).with('cask-bar')
       expect(Cask).to have_received(:load).with('cask-foo')
-      expect(installed_casks.sort).to eq(%w[
+      expect(installed_casks).to eq(%w[
         loaded-cask-bar
         loaded-cask-foo
       ])

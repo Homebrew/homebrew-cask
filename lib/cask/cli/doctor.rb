@@ -1,13 +1,15 @@
 class Cask::CLI::Doctor < Cask::CLI::Base
   def self.run
-    ohai 'OS X Version:',                                    render_with_none_as_error( MACOS_FULL_VERSION )
+    ohai 'OS X Release:',                                    render_with_none_as_error( MACOS_RELEASE )
+    ohai 'OS X Point Release:',                              render_with_none_as_error( MACOS_POINT_RELEASE )
     ohai "Hardware Architecture:",                           render_with_none_as_error( "#{Hardware::CPU.type}-#{Hardware::CPU.bits}" )
     ohai 'Ruby Version:',                                    render_with_none_as_error( "#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}" )
-    ohai 'Ruby Path:',                                       render_with_none_as_error( RUBY_PATH )
-    ohai 'Homebrew Version:',                                render_with_none_as_error( HOMEBREW_VERSION )
+    ohai 'Ruby Path:',                                       render_with_none_as_error( RbConfig.ruby )
+    # todo: consider removing most Homebrew constants from doctor output
+    ohai 'Homebrew Version:',                                render_with_none_as_error( homebrew_version )
     ohai 'Homebrew Executable Path:',                        render_with_none_as_error( HOMEBREW_BREW_FILE )
-    ohai 'Homebrew Cellar Path:',                            render_with_none_as_error( HOMEBREW_CELLAR )
-    ohai 'Homebrew Repository Path:',                        render_with_none_as_error( HOMEBREW_REPOSITORY )
+    ohai 'Homebrew Cellar Path:',                            render_with_none_as_error( homebrew_cellar )
+    ohai 'Homebrew Repository Path:',                        render_with_none_as_error( homebrew_repository )
     ohai 'Homebrew Origin:',                                 render_with_none_as_error( homebrew_origin )
     ohai 'Homebrew-cask Version:',                           render_with_none_as_error( HOMEBREW_CASK_VERSION )
     ohai 'Homebrew-cask Install Location:',                    render_install_location( HOMEBREW_CASK_VERSION )
@@ -35,7 +37,7 @@ class Cask::CLI::Doctor < Cask::CLI::Base
     return @fq_default_tap if @fq_default_tap
     @fq_default_tap = notfound_string
     begin
-      @fq_default_tap = HOMEBREW_REPOSITORY.join 'Library', 'Taps', Cask.default_tap
+      @fq_default_tap = homebrew_repository.join 'Library', 'Taps', Cask.default_tap
     rescue StandardError; end
     @fq_default_tap
   end
@@ -43,7 +45,7 @@ class Cask::CLI::Doctor < Cask::CLI::Base
   def self.alt_taps
     alt_taps = notfound_string
     begin
-      alt_taps = Pathname.glob(HOMEBREW_REPOSITORY.join 'Library', 'Taps', '*', '*', 'Casks').map(&:dirname) -
+      alt_taps = Pathname.glob(homebrew_repository.join 'Library', 'Taps', '*', '*', 'Casks').map(&:dirname) -
                  [fq_default_tap]
       alt_taps = nil unless alt_taps.length > 0
     rescue StandardError; end
@@ -53,7 +55,7 @@ class Cask::CLI::Doctor < Cask::CLI::Base
   def self.default_cask_count
     default_cask_count = notfound_string
     begin
-      default_cask_count = HOMEBREW_REPOSITORY.join(fq_default_tap, 'Casks').children.count(&:file?)
+      default_cask_count = homebrew_repository.join(fq_default_tap, 'Casks').children.count(&:file?)
     rescue StandardError
       default_cask_count = "0 #{error_string %Q{Error reading #{fq_default_tap}}}"
     end
@@ -63,7 +65,7 @@ class Cask::CLI::Doctor < Cask::CLI::Base
   def self.homebrew_origin
     homebrew_origin = notfound_string
     begin
-      HOMEBREW_REPOSITORY.cd do
+      Dir.chdir(homebrew_repository) do
         homebrew_origin = Cask::SystemCommand.run('git',
                                                   :args => %w{config --get remote.origin.url},
                                                   :print_stderr => false).stdout.strip
@@ -77,6 +79,43 @@ class Cask::CLI::Doctor < Cask::CLI::Base
       homebrew_origin = error_string 'Not Found - Error running git'
     end
     homebrew_origin
+  end
+
+  def self.homebrew_repository
+    homebrew_constants('repository')
+  end
+
+  def self.homebrew_cellar
+    homebrew_constants('cellar')
+  end
+
+  def self.homebrew_version
+    homebrew_constants('version')
+  end
+
+  def self.homebrew_libdir
+    @homebrew_libdir ||= if homebrew_repository.respond_to?(:join)
+      homebrew_repository.join('Library', 'Homebrew')
+    end
+  end
+
+  def self.homebrew_constants(name)
+    @homebrew_constants ||= {}
+    return @homebrew_constants[name] if @homebrew_constants.key?(name)
+    @homebrew_constants[name] = notfound_string
+    begin
+      @homebrew_constants[name] = Cask::SystemCommand.run!(HOMEBREW_BREW_FILE,
+                                                           :args => [ "--#{name}" ],
+                                                           :print_stderr => false).stdout.strip
+      if @homebrew_constants[name] !~ %r{\S}
+        @homebrew_constants[name] = "#{none_string} #{error_string}"
+      end
+      path = Pathname.new(@homebrew_constants[name])
+      @homebrew_constants[name] = path if path.exist?
+    rescue StandardError
+      @homebrew_constants[name] = error_string 'Not Found - Error running brew'
+    end
+    @homebrew_constants[name]
   end
 
   def self.locale_variables
@@ -100,11 +139,11 @@ class Cask::CLI::Doctor < Cask::CLI::Base
   end
 
   def self.notfound_string
-    "#{Tty.red}Not Found - Unknown Error#{Tty.reset}"
+    "#{Tty.red.underline}Not Found - Unknown Error#{Tty.reset}"
   end
 
   def self.error_string(string='Error')
-    "#{Tty.red}(#{string})#{Tty.reset}"
+    "#{Tty.red.underline}(#{string})#{Tty.reset}"
   end
 
   def self.render_with_none(string)
@@ -144,7 +183,7 @@ class Cask::CLI::Doctor < Cask::CLI::Base
   # where "doctor" is needed is precisely the situation where such
   # things are less dependable.
   def self.render_install_location(current_version)
-    locations = Dir.glob(HOMEBREW_CELLAR.join('brew-cask', '*')).reverse
+    locations = Dir.glob(homebrew_cellar.join('brew-cask', '*')).reverse
     locations.each do |l|
       basename = File.basename l
       l.concat %Q{ #{error_string %Q{error: old version. Run "brew cleanup".}}} unless basename == current_version
@@ -167,10 +206,14 @@ class Cask::CLI::Doctor < Cask::CLI::Base
       return "#{none_string} #{error_string}"
     end
     copy = Array.new(paths)
-    unless Cask::Utils.file_is_descendant(copy[0], HOMEBREW_CELLAR)
-      copy[0] = "#{copy[0]} #{error_string %Q{error: should be descendant of HOMEBREW_CELLAR}}"
+    unless Cask::Utils.file_is_descendant(copy[0], homebrew_cellar)
+      copy[0] = "#{copy[0]} #{error_string %Q{error: should be descendant of Homebrew Cellar}}"
     end
-    copy
+    copy.map! do |elt|
+      elt = (homebrew_libdir and Cask::Utils.file_is_descendant(elt, homebrew_libdir)) ?
+              "#{elt} #{error_string %Q{error: should not be descendant of Homebrew Library dir}}" :
+              elt
+    end
   end
 
   def self.render_cached_downloads

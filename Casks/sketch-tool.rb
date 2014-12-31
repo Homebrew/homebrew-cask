@@ -1,15 +1,12 @@
-class SketchTool < Cask
+cask :v1 => 'sketch-tool' do
   version :latest
   sha256 :no_check
 
   url 'http://sketchtool.bohemiancoding.com/sketchtool-latest.zip'
   homepage 'http://bohemiancoding.com/sketch/tool/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  binary 'sketchtool/sketchtool'
-  # Placing this bundle in the binary directory is contrary to Unix convention,
-  # However the SketchTool README states:
-  #   You can put the tool anywhere you like (eg /usr/local/bin), but the
-  #   "sketchtool resources.bundle" file currently has to be in the same directory.
-  binary 'sketchtool/sketchtool resources.bundle'
+  binary 'sketchtool/bin/sketchtool'
+  binary 'sketchtool/bin/sketchmigrate'
+  artifact 'sketchtool/share/sketchtool/resources.bundle', :target => '/usr/local/share/sketchtool/resources.bundle'
 end

@@ -1,4 +1,4 @@
-class Tagger < Cask
+cask :v1 => 'tagger' do
   version '1.8.0.7'
   sha256 'a4745dcf88f1691d2c681a87e6cfb6326200b6a2d9dfb53c2c62c67905a09e16'
 

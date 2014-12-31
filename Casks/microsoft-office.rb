@@ -1,4 +1,4 @@
-class MicrosoftOffice < Cask
+cask :v1 => 'microsoft-office' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,7 @@ class MicrosoftOffice < Cask
   license :commercial
 
   pkg 'Office Installer.pkg'
+
   uninstall :pkgutil => 'com.microsoft.office.*',
             :launchctl => 'com.microsoft.office.licensing.helper'
   zap :pkgutil => [

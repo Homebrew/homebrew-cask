@@ -1,10 +1,12 @@
-class Flashlight < Cask
-  version 'v0.42-alpha'
-  sha256 '9a2f787ca691c49379510dcb89b699e2de33710d73bb9bf79459a12027d75a74'
+cask :v1 => 'flashlight' do
+  version :latest
+  sha256 :no_check
 
-  url "https://github.com/nate-parrott/Flashlight/releases/download/#{version}/Flashlight.zip"
+  # appspot.com is the official download host for the latest version, per the developer
+  # Original discussion: https://github.com/nate-parrott/Flashlight/issues/104
+  url 'https://flashlightplugins.appspot.com/latest_download'
   homepage 'http://flashlight.nateparrott.com/'
-  license :unknown
+  license :gpl
 
   app 'Flashlight.app'
 end

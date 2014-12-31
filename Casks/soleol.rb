@@ -1,10 +1,10 @@
-class Soleol < Cask
+cask :v1 => 'soleol' do
   version :latest
   sha256 :no_check
 
   url 'http://eduo.info/soleol-support/releases/SolEol-Mac.zip'
   homepage 'http://eduo.info/apps/soleol'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SolEol/SolEol.app'
 end

@@ -1,4 +1,4 @@
-class Firefox < Cask
+cask :v1 => 'firefox' do
   version :latest
   sha256 :no_check
 

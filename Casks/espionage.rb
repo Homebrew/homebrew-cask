@@ -1,4 +1,4 @@
-class Espionage < Cask
+cask :v1 => 'espionage' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,7 @@ class Espionage < Cask
   gpg "#{url}.sig",
       :key_url => 'https://www.taoeffect.com/other/A884B988.asc'
   homepage 'https://www.espionageapp.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Espionage.app'
 end

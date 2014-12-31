@@ -1,10 +1,10 @@
-class GoogleEarth < Cask
+cask :v1 => 'google-earth' do
   version :latest
   sha256 :no_check
 
   url 'https://dl.google.com/earth/client/advanced/current/GoogleEarthMac-Intel.dmg'
   homepage 'https://www.google.com/earth/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Google Earth.app'
 

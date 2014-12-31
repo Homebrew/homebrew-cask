@@ -1,6 +1,6 @@
-class Texstudio < Cask
-  version '2.8.4'
-  sha256 'a4257563d557fb66b35c562322852b969bb7768624bf02e7bf2cc2c31a5e1fbb'
+cask :v1 => 'texstudio' do
+  version '2.8.8'
+  sha256 'bc0212fe6897128982cbd7227ec10562fdb421ba8e127e45d79e9c766896665a'
 
   url "http://downloads.sourceforge.net/sourceforge/texstudio/texstudio_#{version}_osx_qt5.zip"
   homepage 'http://texstudio.sourceforge.net/'

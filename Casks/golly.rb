@@ -1,7 +1,7 @@
-class Golly < Cask
+cask :v1 => 'golly' do
   version '2.6'
 
-  if MacOS.version < :mavericks
+  if MacOS.release <= :mountain_lion
     sha256 '6fee35e8e4f63ee2c1b0913b7e8009b2548c4e4469050f9c31791900e1e97f16'
 
     url "http://downloads.sourceforge.net/project/golly/golly/golly-#{version}/golly-#{version}-mac106.zip"
@@ -9,7 +9,7 @@ class Golly < Cask
     app "golly-#{version}-mac106/Golly.app"
     binary "golly-#{version}-mac106/bgolly"
   else
-    sha256 '360c1e279d89fc3a19bed9c75dfe5b1085a67672490f17fe38941cab3680b983'
+    sha256 '8e2e7ffd22dd046a701b6db13a1c36939eced46078c85eeccf709072183fb71c'
 
     url "http://downloads.sourceforge.net/project/golly/golly/golly-#{version}/golly-#{version}-mac109.zip"
 

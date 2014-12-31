@@ -1,10 +1,10 @@
-class Maxthon < Cask
+cask :v1 => 'maxthon' do
   version '4.1.3.5000'
   sha256 '326a0c7076ff1d06474b217691ba5597343325158ddecd7fa17da53d8903f65d'
 
   url "https://dl.maxthon.com/mac/Maxthon-#{version}.dmg"
   homepage 'http://www.maxthon.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Maxthon.app'
 end

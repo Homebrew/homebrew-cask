@@ -1,10 +1,10 @@
-class Sonos < Cask
+cask :v1 => 'sonos' do
   version :latest
   sha256 :no_check
 
   url 'http://www.sonos.com/redir/controller_software_mac'
   homepage 'http://www.sonos.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Sonos.app'
 end

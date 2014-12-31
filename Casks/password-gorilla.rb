@@ -1,4 +1,4 @@
-class PasswordGorilla < Cask
+cask :v1 => 'password-gorilla' do
   version '1.5.3.7.2'
   sha256 '4d026a5fa088fe9622cbe00c5811da2f360949c7cfb46ce6e4899a09645cb83a'
 

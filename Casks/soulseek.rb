@@ -1,11 +1,11 @@
-class Soulseek < Cask
-  version '2014-8-31'
-  sha256 'd62206bdd11a6ff9b63e648e6dafe3e52e100b26677b58b4a9c40ef9d73e4b8a'
+cask :v1 => 'soulseek' do
+  version '2014-11-30'
+  sha256 '64ddff73a6744a316f1159e7b6267a2837c82091d6045265dd6807eaae5e6124'
 
-  url "http://www.soulseekqt.net/SoulseekQt/Mac/SoulseekQt-#{version}.pkg"
+  url "http://www.soulseekqt.net/SoulseekQt/Mac/SoulseekQt-#{version}.dmg"
+  name 'Soulseek'
   homepage 'http://www.soulseekqt.net/'
-  license :unknown
+  license :gratis
 
-  pkg "SoulseekQt-#{version}.pkg"
-  uninstall :pkgutil => 'com.soulseek.SoulseekQt.pkg'
+  app "SoulseekQt.app"
 end

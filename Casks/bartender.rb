@@ -1,4 +1,4 @@
-class Bartender < Cask
+cask :v1 => 'bartender' do
   version :latest
   sha256 :no_check
 

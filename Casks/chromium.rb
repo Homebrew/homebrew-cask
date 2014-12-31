@@ -1,4 +1,4 @@
-class Chromium < Cask
+cask :v1 => 'chromium' do
   version :latest
   sha256 :no_check
 

@@ -1,10 +1,10 @@
-class PrivateInternetAccess < Cask
+cask :v1 => 'private-internet-access' do
   version :latest
   sha256 :no_check
 
   url 'https://www.privateinternetaccess.com/installer/installer_osx.dmg'
   homepage 'https://www.privateinternetaccess.com'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer :script => 'Private Internet Access Installer.app/Contents/MacOS/runner.sh'
 

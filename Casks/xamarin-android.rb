@@ -1,4 +1,4 @@
-class XamarinAndroid < Cask
+cask :v1 => 'xamarin-android' do
   version '4.18.0-34'
   sha256 '012f7266b123a1cc8cc189db8c3aea24c5daa8912df684525336fabc86e279e7'
 
@@ -7,8 +7,9 @@ class XamarinAndroid < Cask
           :sha256 => '713f272a1e36262f1b2c5a06f4ed1b1eb8987d240018347a51312dfedeeafcf3',
           :format => :unknown
   homepage 'http://xamarin.com/android'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "mono-android-#{version}.pkg"
+
   uninstall :pkgutil => 'com.xamarin.android.pkg'
 end

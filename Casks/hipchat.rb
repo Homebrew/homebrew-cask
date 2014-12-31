@@ -1,11 +1,11 @@
-class Hipchat < Cask
+cask :v1 => 'hipchat' do
   version :latest
   sha256 :no_check
 
   url 'https://www.hipchat.com/downloads/latest/mac'
   appcast 'https://www.hipchat.com/release_notes/appcast/mac'
   homepage 'https://www.hipchat.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'HipChat.app'
 

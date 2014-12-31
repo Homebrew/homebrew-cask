@@ -1,4 +1,4 @@
-class Tokens < Cask
+cask :v1 => 'tokens' do
   version :latest
   sha256 :no_check
 

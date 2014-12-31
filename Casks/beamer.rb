@@ -1,4 +1,4 @@
-class Beamer < Cask
+cask :v1 => 'beamer' do
   version :latest
   sha256 :no_check
 

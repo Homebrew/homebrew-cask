@@ -1,4 +1,4 @@
-class Linkliar < Cask
+cask :v1 => 'linkliar' do
   version :latest
   sha256 :no_check
 

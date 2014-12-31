@@ -1,6 +1,6 @@
-class Opensesame < Cask
+cask :v1 => 'opensesame' do
 
-  if MacOS.version < :lion
+  if MacOS.release <= :snow_leopard
     version '0.26'
     sha256 'b2a37cfd1c514b2ae8ddd0be09a274844420bfa432318ef87df308fdd3b6a770'
     url "http://files.cogsci.nl/software/opensesame/opensesame_#{version}-macos-2.zip"
@@ -11,7 +11,7 @@ class Opensesame < Cask
   end
 
   homepage 'http://osdoc.cogsci.nl/'
-  license :unknown
+  license :gpl
 
   app 'opensesame.app'
 end

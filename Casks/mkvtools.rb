@@ -1,4 +1,4 @@
-class Mkvtools < Cask
+cask :v1 => 'mkvtools' do
   version '3.4.4'
   sha256 '21fd96039cca22866fe9f75fc5275e2673e9fd2362cb8b54bd210fe8fd1f88d1'
 

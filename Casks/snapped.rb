@@ -1,4 +1,4 @@
-class Snapped < Cask
+cask :v1 => 'snapped' do
   version '0.1.5'
   sha256 '8cec22bd0c88b1fb0680e018a6706aeaf925688b84bdd2c7a2e5fdb99d20bd52'
 

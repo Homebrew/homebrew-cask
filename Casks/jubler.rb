@@ -1,4 +1,4 @@
-class Jubler < Cask
+cask :v1 => 'jubler' do
   version '5.0.1'
   sha256 '295d23433a88a26c113529e6eb15548b260525acc2d86fec1b90cbfbf9572b1e'
 

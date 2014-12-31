@@ -11,12 +11,9 @@ class Cask::Audit
   end
 
   def run!(download = false)
-    _check_required_fields
-    # todo: enable this test before 0.50.0
-    # _check_no_string_version_latest
-    _check_checksums
+    _check_required_stanzas
+    _check_no_string_version_latest
     _check_sha256_no_check_if_latest
-    _check_sha256_if_versioned
     _check_sourceforge_download_url_format
     _check_download(download) if download
     return !(errors? or warnings?)
@@ -27,17 +24,16 @@ class Cask::Audit
   end
 
 
-  def _check_required_fields
-    odebug "Auditing required fields"
-    add_error "url is required" unless cask.url
-    add_error "version is required" unless cask.version
-    add_error "homepage is required" unless cask.homepage
-  end
-
-  def _check_checksums
-    odebug "Auditing checksums"
-    return if cask.sums == :no_check
-    add_error "sha256 is required" unless cask.sums.is_a?(Array) && cask.sums.length > 0
+  def _check_required_stanzas
+    odebug "Auditing required stanzas"
+    %i{version sha256 url homepage}.each do |sym|
+      add_error "a #{sym} stanza is required" unless cask.send(sym)
+    end
+    add_error 'a license value is required (:unknown is OK)' unless cask.license
+    # todo: specific DSL knowledge should not be spread around in various files like this
+    # todo: nested_container should not still be a pseudo-artifact at this point
+    installable_artifacts = cask.artifacts.reject{ |k,v| [:uninstall, :zap, :nested_container].include?(k)}
+    add_error 'at least one activatable artifact stanza is required' unless installable_artifacts.size > 0
   end
 
   def _check_no_string_version_latest
@@ -49,17 +45,8 @@ class Cask::Audit
 
   def _check_sha256_no_check_if_latest
     odebug "Verifying sha256 :no_check with version :latest"
-    # todo: remove this string test before 0.50.0
-    if ((cask.version == 'latest' or cask.version == :latest) and cask.sums.is_a?(Array))
+    if cask.version == :latest and cask.sha256 != :no_check
       add_error "you should use sha256 :no_check when version is :latest"
-    end
-  end
-
-  def _check_sha256_if_versioned
-    odebug "Verifying a sha256 is present when versioned"
-    # todo: remove this string test before 0.50.0
-    if ((cask.version != 'latest' and cask.version != :latest) and cask.sums == :no_check)
-      add_error "you must include a sha256 when version is not :latest"
     end
   end
 
@@ -80,12 +67,13 @@ class Cask::Audit
   def _bad_sourceforge_url?
     return false unless cask.url.to_s =~ /sourceforge/
     valid_url_formats = [
-      %r{https?://sourceforge\.net/projects/.*/files/latest/download},
-      %r{https?://downloads\.sourceforge\.net/},
-      %r{https?://dl\.sourceforge\.jp/},
-      # special case: cannot find canonical format URL
-      %r{https?://brushviewer\.sourceforge\.net/brushviewql\.zip},
-      %r{https?://doublecommand\.sourceforge\.net/files/},
+      %r{\Ahttps?://sourceforge\.net/projects/[^/]+/files/latest/download\Z},
+      %r{\Ahttps?://downloads\.sourceforge\.net/},
+      %r{\Ahttps?://[^/]+\.sourceforge\.jp/},
+      # special cases: cannot find canonical format URL
+      %r{\Ahttps?://brushviewer\.sourceforge\.net/brushviewql\.zip\Z},
+      %r{\Ahttps?://doublecommand\.sourceforge\.net/files/},
+      %r{\Ahttps?://excalibur\.sourceforge\.net/get\.php\?id=},
     ]
     valid_url_formats.none? { |format| cask.url.to_s =~ format }
   end

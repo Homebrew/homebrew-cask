@@ -1,4 +1,4 @@
-class Icons < Cask
+cask :v1 => 'icons' do
   version '1.0'
   sha256 '1c9fc20d8b10677c11f70d43e511227209d83f260bfbef6fddf00a7469e8f8c1'
 

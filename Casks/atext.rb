@@ -1,4 +1,4 @@
-class Atext < Cask
+cask :v1 => 'atext' do
   version :latest
   sha256 :no_check
 

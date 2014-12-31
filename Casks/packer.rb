@@ -1,10 +1,10 @@
-class Packer < Cask
-  version '0.7.2'
-  sha256 'bed7ddc255b5b71b139de5e30d4221926cd314a87baf0b937ba7a97c196b1286'
+cask :v1 => 'packer' do
+  version '0.7.5'
+  sha256 'c0e149c4515fe548c1daeafabec3b4a091f2aa0c6936723382b3f6fe5a617880'
 
   url "https://dl.bintray.com/mitchellh/packer/packer_#{version}_darwin_amd64.zip"
   homepage 'http://www.packer.io/'
-  license :unknown
+  license :oss
 
   binary 'packer'
   binary 'packer-builder-amazon-chroot'
@@ -22,10 +22,7 @@ class Packer < Cask
   binary 'packer-builder-virtualbox-ovf'
   binary 'packer-builder-vmware-iso'
   binary 'packer-builder-vmware-vmx'
-  binary 'packer-command-build'
-  binary 'packer-command-fix'
-  binary 'packer-command-inspect'
-  binary 'packer-command-validate'
+  binary 'packer-post-processor-atlas'
   binary 'packer-post-processor-compress'
   binary 'packer-post-processor-docker-import'
   binary 'packer-post-processor-docker-push'

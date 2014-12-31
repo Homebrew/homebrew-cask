@@ -1,4 +1,4 @@
-class PlexHomeTheater < Cask
+cask :v1 => 'plex-home-theater' do
   version '1.2.3.378-0c92ed32'
 
   if Hardware::CPU.is_32_bit?
@@ -10,7 +10,7 @@ class PlexHomeTheater < Cask
   end
 
   homepage 'https://plex.tv'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Plex Home Theater.app'
 end

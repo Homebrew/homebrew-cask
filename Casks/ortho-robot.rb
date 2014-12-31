@@ -1,4 +1,4 @@
-class OrthoRobot < Cask
+cask :v1 => 'ortho-robot' do
   version :latest
   sha256 :no_check
 

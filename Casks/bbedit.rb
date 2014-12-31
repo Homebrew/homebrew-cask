@@ -1,6 +1,6 @@
-class Bbedit < Cask
-  version '11.0'
-  sha256 '3c15fef50245e93073e73136bb7097faf1f03a061559eed84a17cb8678fdf033'
+cask :v1 => 'bbedit' do
+  version '11.0.2'
+  sha256 '754066ded35248eaad217d458ca647365dbddf9c0073a1403183038c6f586fd2'
 
   url "http://pine.barebones.com/files/BBEdit_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/BBEdit.xml',

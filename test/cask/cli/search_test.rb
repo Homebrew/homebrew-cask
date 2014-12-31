@@ -33,7 +33,7 @@ describe Cask::CLI::Search do
     out.length.must_be :<, 100
   end
 
-  it "ignores hyphens in Cask names" do
+  it "ignores hyphens in Cask tokens" do
     out, err = capture_io do
       Cask::CLI::Search.run('googlechrome')
     end
@@ -57,9 +57,9 @@ describe Cask::CLI::Search do
 
   it "Returns both exact and partial matches" do
     out, err = capture_io do
-      Cask::CLI::Search.run('gitx')
+      Cask::CLI::Search.run('mnemosyne')
     end
-    out.must_match(/^==> Exact match\ngitx\n==> Partial matches\ngitx/)
+    out.must_match(/^==> Exact match\nmnemosyne\n==> Partial matches\nsubclassed-mnemosyne/)
   end
 
   it "does not search the Tap name" do

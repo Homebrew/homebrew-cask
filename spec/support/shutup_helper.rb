@@ -1,6 +1,6 @@
 module ShutupHelper
   def shutup
-    if ARGV.verbose?
+    if ENV.has_key?('VERBOSE_TESTS')
       yield
     else
       begin

@@ -6,6 +6,7 @@ describe Cask::CLI::Info do
       Cask::CLI::Info.run('local-caffeine')
     }.must_output <<-CLIOUTPUT.undent
       local-caffeine: 1.2.3
+      local-caffeine
       http://example.com/local-caffeine
       Not installed
       https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-caffeine.rb
@@ -18,12 +19,14 @@ describe Cask::CLI::Info do
     before do
       @expected_output = <<-CLIOUTPUT.undent
         local-caffeine: 1.2.3
+        local-caffeine
         http://example.com/local-caffeine
         Not installed
         https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-caffeine.rb
         ==> Contents
           Caffeine.app (app)
         local-transmission: 2.61
+        local-transmission
         http://example.com/local-transmission
         Not installed
         https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-transmission.rb
@@ -50,6 +53,7 @@ describe Cask::CLI::Info do
       Cask::CLI::Info.run('with-caveats')
     }.must_output <<-CLIOUTPUT.undent
       with-caveats: 1.2.3
+      with-caveats
       http://example.com/local-caffeine
       Not installed
       https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/with-caveats.rb
@@ -58,7 +62,7 @@ describe Cask::CLI::Info do
       ==> Caveats
       Here are some things you might want to know.
 
-      Cask title: with-caveats
+      Cask token: with-caveats
 
       Custom text via puts followed by DSL-generated text:
       To use with-caveats, you may need to add the /custom/path/bin directory
@@ -69,11 +73,12 @@ describe Cask::CLI::Info do
     CLIOUTPUT
   end
 
-  it 'should not print caveats title if caveats block has no output' do
+  it 'should not print "Caveats" section divider if the caveats block has no output' do
     lambda {
       Cask::CLI::Info.run('with-conditional-caveats')
     }.must_output <<-CLIOUTPUT.undent
       with-conditional-caveats: 1.2.3
+      with-conditional-caveats
       http://example.com/local-caffeine
       Not installed
       https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/with-conditional-caveats.rb

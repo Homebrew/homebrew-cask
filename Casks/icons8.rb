@@ -1,4 +1,5 @@
-class Icons8 < Cask
+cask :v1 => 'icons8' do
+  # note: "8" is not a version number, but an intrinsic part of the product name
   version :latest
   sha256 :no_check
 

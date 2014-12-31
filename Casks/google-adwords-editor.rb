@@ -1,11 +1,10 @@
-class GoogleAdwordsEditor < Cask
-  version '10.4.1'
-  sha256 '570d606ac6593ac31a82ece928d7b04ad6f0355b0f58382e604be7f922c4c4ba'
+cask :v1 => 'google-adwords-editor' do
+  version '11.0.0'
+  sha256 '112bd8ba1789208da8c3200875d8719ec832d2533c299d3221a190cb98b4f7e7'
 
-  url "https://dl.google.com/adwords_editor/#{version}/mac/en-US/AdWords-Editor-#{version}-en-US.dmg"
-  homepage 'http://www.google.com/intl/en_US/adwordseditor/'
-  license :unknown
+  url "https://dl.google.com/adwords_editor/#{version}/Google_AdWords_Editor.dmg"
+  homepage 'https://www.google.com/intl/en/adwordseditor/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  pkg "AdWords-Editor-#{version}-en-US.pkg"
-  uninstall :pkgutil => 'com.google.adwordseditor.pkg'
+  app 'Google AdWords Editor.app'
 end

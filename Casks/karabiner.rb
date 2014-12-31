@@ -1,10 +1,12 @@
-class Karabiner < Cask
-  version '10.4.0'
-  sha256 'b1e3ffb7cd10ec8651c68b184c236589f182a273dad4b1c68ab2c15d36a34248'
+cask :v1 => 'karabiner' do
+  version '10.5.0'
+  sha256 'c3ef92e6d7544eac90046bcff130b3fe2a74defa456af5971640ca62a77c81a9'
 
   url "https://pqrs.org/osx/karabiner/files/Karabiner-#{version}.dmg"
+  name 'Karabiner'
+  name 'KeyRemap4MacBook'
   homepage 'https://pqrs.org/osx/karabiner/'
-  license :unknown
+  license :public_domain
 
   pkg 'Karabiner.pkg'
   binary '/Applications/Karabiner.app/Contents/Library/vendor/bin/blueutil'

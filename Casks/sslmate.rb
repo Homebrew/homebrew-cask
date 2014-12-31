@@ -1,4 +1,4 @@
-class Sslmate < Cask
+cask :v1 => 'sslmate' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,6 @@ class Sslmate < Cask
   license :commercial
 
   pkg 'SSLMate-latest.pkg'
+
   uninstall :pkgutil => 'com.sslmate.client'
 end

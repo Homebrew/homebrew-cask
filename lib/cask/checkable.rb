@@ -27,9 +27,9 @@ module Cask::Checkable
 
   def result
     if errors?
-      "#{Tty.red}failed#{Tty.reset}"
+      "#{Tty.red.underline}failed#{Tty.reset}"
     elsif warnings?
-      "#{Tty.yellow}warning#{Tty.reset}"
+      "#{Tty.yellow.underline}warning#{Tty.reset}"
     else
       "#{Tty.green}passed#{Tty.reset}"
     end

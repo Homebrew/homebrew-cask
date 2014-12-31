@@ -1,4 +1,4 @@
-class Tabula < Cask
+cask :v1 => 'tabula' do
   version '0.9.5.2'
   sha256 'b6a2663cbf440d27cc94ac9ac05ac1875136e81f63980a25e1acaf6a3250e131'
 

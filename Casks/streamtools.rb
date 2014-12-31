@@ -1,4 +1,4 @@
-class Streamtools < Cask
+cask :v1 => 'streamtools' do
   version '0.2.8'
 
   if Hardware::CPU.is_32_bit?

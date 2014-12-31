@@ -1,4 +1,4 @@
-class Automatic < Cask
+cask :v1 => 'automatic' do
   version :latest
   sha256 :no_check
 

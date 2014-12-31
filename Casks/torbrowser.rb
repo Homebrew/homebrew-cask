@@ -1,12 +1,12 @@
-class Torbrowser < Cask
-  version '4.0.1'
-  sha256 '2388eaabbe81bdc767ce3fbbbe0247853eb4b0f018b341fc9d5017791f00f02b'
+cask :v1 => 'torbrowser' do
+  version '4.0.2'
+  sha256 'c68f523a587d5b240099ec526c43fe5ea400929a73f6f58fd5fec66bfef00936'
 
   url "https://www.torproject.org/dist/torbrowser/#{version}/TorBrowser-#{version}-osx32_en-US.dmg"
   gpg "#{url}.asc",
       :key_id => '416f061063fee659'
   homepage 'https://www.torproject.org/projects/torbrowser.html'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TorBrowser.app'
 end

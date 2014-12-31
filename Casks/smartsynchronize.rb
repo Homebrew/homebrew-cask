@@ -1,10 +1,10 @@
-class Smartsynchronize < Cask
-  version '3.4'
-  sha256 'f7d30bae37c835ea208ff60b5b99c2668e3406c06f1321862495a425a9389322'
+cask :v1 => 'smartsynchronize' do
+  version '3.4.1'
+  sha256 '85ebf581932f81f109e83b29c1f03bd3d63c8397bbd970a7da4ff1db22ea2bce'
 
   url "http://www.syntevo.com/download/smartsynchronize/smartsynchronize-macosx-#{version.gsub('.','_')}.dmg"
-  homepage 'http://www.syntevo.com'
-  license :unknown
+  homepage 'http://www.syntevo.com/smartsynchronize/'
+  license :commercial
 
   app "SmartSynchronize.app"
   binary "SmartSynchronize.app/Contents/MacOS/SmartSynchronize"

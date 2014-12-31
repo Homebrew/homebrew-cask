@@ -1,4 +1,4 @@
-class XamarinIos < Cask
+cask :v1 => 'xamarin-ios' do
   version '8.2.0.193'
   sha256 '6fd3ffd73937d937e0dac4bfdc6534fc948ceebf38d02b3eee94cd857fba4ee8'
 
@@ -7,8 +7,9 @@ class XamarinIos < Cask
           :sha256 => '713f272a1e36262f1b2c5a06f4ed1b1eb8987d240018347a51312dfedeeafcf3',
           :format => :unknown
   homepage 'http://xamarin.com/ios'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "monotouch-#{version}.pkg"
+
   uninstall :pkgutil => 'com.xamarin.monotouch.pkg'
 end

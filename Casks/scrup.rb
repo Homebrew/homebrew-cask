@@ -1,4 +1,4 @@
-class Scrup < Cask
+cask :v1 => 'scrup' do
   version '1.3.3'
   sha256 '5004222db9a6ddd4e6cb525d00e95f8a38e9fb623bc1397e5258b2ef2c4bd3b0'
 

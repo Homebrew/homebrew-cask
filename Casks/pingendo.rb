@@ -1,4 +1,4 @@
-class Pingendo < Cask
+cask :v1 => 'pingendo' do
   version '0.9.8'
   sha256 '225fff0bdcceba47f2a070f288e9cd050457b4c0fd6338ca6ae0ed39704652cf'
 

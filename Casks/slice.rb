@@ -1,10 +1,10 @@
-class Slice < Cask
+cask :v1 => 'slice' do
   version :latest
   sha256 :no_check
 
   url 'http://sliceeq.com/downloads/Slice.dmg'
   homepage 'http://sliceeq.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Slice.app'
 end

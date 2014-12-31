@@ -1,10 +1,17 @@
-class ScalaIde < Cask
-  version '3.0.3'
-  sha256 '74c0ed0a2ca9d5b7cad39142d436bf88db55e75f85f885c74a4b8a164e814ee1'
+cask :v1 => 'scala-ide' do
+  version '4.0.0'
 
-  url "http://downloads.typesafe.com/scalaide-pack/#{version}.vfinal-210-20140327/scala-SDK-#{version}-2.10-macosx.cocoa.x86_64.zip"
+  if Hardware::CPU.is_32_bit?
+    url "http://downloads.typesafe.com/scalaide-pack/#{version}.vfinal-luna-211-20141216/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86.zip"
+    sha256 '9739c851260211de15f8535988e7937cd4bf6e2dcb74188eb7261cff4a46deab'
+  else
+    url "http://downloads.typesafe.com/scalaide-pack/#{version}.vfinal-luna-211-20141216/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86_64.zip"
+    sha256 '721a01bbbf682a2e32c34fb33f0240c08a2f81a9b8e181d7bca2039e98635453'
+  end
+
+  name 'Scala IDE'
   homepage 'http://scala-ide.org/'
-  license :unknown
+  license :bsd
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Also renamed to avoid conflict with other eclipse Casks.

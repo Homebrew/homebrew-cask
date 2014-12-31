@@ -1,4 +1,4 @@
-class Laplock < Cask
+cask :v1 => 'laplock' do
   version :latest
   sha256 :no_check
 

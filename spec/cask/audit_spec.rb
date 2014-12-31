@@ -38,11 +38,6 @@ class CaskVersionLatestWithChecksum < Cask
   sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
 end
 
-class CaskWithVersionNoChecksum < Cask
-  version '1.2.3'
-  sha256 :no_check
-end
-
 describe Cask::Audit do
   describe "result" do
     it "is 'failed' if there are have been any errors added" do
@@ -69,31 +64,25 @@ describe Cask::Audit do
       it "adds an error if url is missing" do
         audit = Cask::Audit.new(CaskMissingUrl.new)
         audit.run!
-        expect(audit.errors).to include('url is required')
+        expect(audit.errors).to include('a url stanza is required')
       end
 
       it "adds an error if version is missing" do
         audit = Cask::Audit.new(CaskMissingVersion.new)
         audit.run!
-        expect(audit.errors).to include('version is required')
+        expect(audit.errors).to include('a version stanza is required')
       end
 
       it "adds an error if homepage is missing" do
         audit = Cask::Audit.new(CaskMissingHomepage.new)
         audit.run!
-        expect(audit.errors).to include('homepage is required')
+        expect(audit.errors).to include('a homepage stanza is required')
       end
 
       it "adds an error if version is latest and using sha256" do
         audit = Cask::Audit.new(CaskVersionLatestWithChecksum.new)
         audit.run!
         expect(audit.errors).to include(%q{you should use sha256 :no_check when version is :latest})
-      end
-
-      it "adds an error if versioned and has no checksum" do
-        audit = Cask::Audit.new(CaskWithVersionNoChecksum.new)
-        audit.run!
-        expect(audit.errors).to include(%q{you must include a sha256 when version is not :latest})
       end
     end
 

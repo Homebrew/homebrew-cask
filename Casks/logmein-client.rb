@@ -1,10 +1,10 @@
-class LogmeinClient < Cask
+cask :v1 => 'logmein-client' do
   version :latest
   sha256 :no_check
 
   url 'https://secure.logmein.com/welcome/labs/LogMeInIgnition.dmg'
   homepage 'https://secure.logmein.com/products/pro/learnmore/desktopapp.aspx'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Original discussion: https://github.com/caskroom/homebrew-cask/issues/4818

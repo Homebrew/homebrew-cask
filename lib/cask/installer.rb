@@ -1,4 +1,15 @@
+require 'rubygems'
+require 'cask/cask_dependencies'
+require 'cask/staged'
+
 class Cask::Installer
+
+  # todo: it is unwise for Cask::Staged to be a module, when we are
+  # dealing with both staged and unstaged Casks here.  This should
+  # either be a class which is only sometimes instantiated, or there
+  # should be explicit checks on whether staged state is valid in
+  # every method.
+  include Cask::Staged
 
   PERSISTENT_METADATA_SUBDIRS = [ 'gpg' ]
 
@@ -36,7 +47,7 @@ class Cask::Installer
     output
   end
 
-  def install(force=false)
+  def install(force=false, skip_cask_deps=false)
     odebug "Cask::Installer.install"
     if @cask.installed? && !force
       raise CaskAlreadyInstalledError.new(@cask)
@@ -45,10 +56,12 @@ class Cask::Installer
     print_caveats
 
     begin
-      formula_dependencies
+      satisfy_dependencies(skip_cask_deps)
       download
       extract_primary_container
       install_artifacts
+      save_caskfile force
+      enable_accessibility_access
     rescue StandardError => e
       purge_versioned_files
       raise e
@@ -58,12 +71,12 @@ class Cask::Installer
   end
 
   def summary
-    s = if MacOS.version >= :lion and not ENV['HOMEBREW_NO_EMOJI']
+    s = if MacOS.release >= :lion and not ENV['HOMEBREW_NO_EMOJI']
       (ENV['HOMEBREW_INSTALL_BADGE'] || "\xf0\x9f\x8d\xba") + '  '
     else
-      "#{Tty.blue}==>#{Tty.white} Success!#{Tty.reset} "
+      "#{Tty.blue.bold}==>#{Tty.white} Success!#{Tty.reset} "
     end
-    s << "#{@cask} staged at '#{@cask.staged_path}' (#{@cask.staged_path.cabv})"
+    s << "#{@cask} staged at '#{@cask.staged_path}' (#{Cask::Utils.cabv(@cask.staged_path)})"
   end
 
   def download
@@ -77,8 +90,8 @@ class Cask::Installer
   def extract_primary_container
     odebug "Extracting primary container"
     FileUtils.mkdir_p @cask.staged_path
-    container = if @cask.container_type
-       Cask::Container.from_type(@cask.container_type)
+    container = if @cask.container and @cask.container.type
+       Cask::Container.from_type(@cask.container.type)
     else
        Cask::Container.for_path(@downloaded_path, @command)
     end
@@ -99,21 +112,88 @@ class Cask::Installer
     end
   end
 
+  # todo move dependencies to a separate class
+  #      dependencies should also apply for "brew cask stage"
+  #      override dependencies with --force or perhaps --force-deps
+  def satisfy_dependencies(skip_cask_deps=false)
+    if @cask.depends_on
+      ohai 'Satisfying dependencies'
+      macos_dependencies
+      arch_dependencies
+      x11_dependencies
+      formula_dependencies
+      cask_dependencies unless skip_cask_deps
+      puts 'complete'
+    end
+  end
+
+  def macos_dependencies
+    return unless @cask.depends_on.macos
+    if @cask.depends_on.macos.first.is_a?(Array)
+      operator, release = @cask.depends_on.macos.first
+      unless MacOS.release.send(operator, release)
+        raise CaskError.new "Cask #{@cask} depends on OS X release #{operator} #{release}, but you are running release #{MacOS.release}."
+      end
+    elsif @cask.depends_on.macos.length > 1
+      unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.release.to_s))
+        raise CaskError.new "Cask #{@cask} depends on OS X release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.release}."
+      end
+    else
+      unless MacOS.release == @cask.depends_on.macos.first
+        raise CaskError.new "Cask #{@cask} depends on OS X release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.release}."
+      end
+    end
+  end
+
+  def arch_dependencies
+    return unless @cask.depends_on.arch
+    @current_arch ||= [
+                       Hardware::CPU.type,
+                       Hardware::CPU.is_32_bit? ?
+                         (Hardware::CPU.intel? ? :i386   : :ppc_7400) :
+                         (Hardware::CPU.intel? ? :x86_64 : :ppc_64)
+                      ]
+    return unless Array(@cask.depends_on.arch & @current_arch).empty?
+    raise CaskError.new "Cask #{@cask} depends on hardware architecture being one of #{@cask.depends_on.arch.inspect}, but you are running #{@current_arch.inspect}"
+  end
+
+  def x11_dependencies
+    return unless @cask.depends_on.x11
+    if Cask.x11_libpng.select(&:exist?).empty?
+      raise CaskX11DependencyError.new(@cask.token)
+    end
+  end
+
   def formula_dependencies
-    unless @cask.depends_on_formula.empty?
-      ohai 'Installing Formula dependencies from Homebrew'
-      @cask.depends_on_formula.each do |dep_name|
-        print "#{dep_name} ... "
-        installed = @command.run(HOMEBREW_BREW_FILE,
-                                 :args => ['list', '--versions', dep_name],
-                                 :print_stderr => false).stdout.include?(dep_name)
-        if installed
-          puts "already installed"
-        else
-          @command.run!(HOMEBREW_BREW_FILE,
-                        :args => ['install', dep_name])
-          puts "done"
-        end
+    return unless @cask.depends_on.formula and not @cask.depends_on.formula.empty?
+    ohai 'Installing Formula dependencies from Homebrew'
+    @cask.depends_on.formula.each do |dep_name|
+      print "#{dep_name} ... "
+      installed = @command.run(HOMEBREW_BREW_FILE,
+                               :args => ['list', '--versions', dep_name],
+                               :print_stderr => false).stdout.include?(dep_name)
+      if installed
+        puts "already installed"
+      else
+        @command.run!(HOMEBREW_BREW_FILE,
+                      :args => ['install', dep_name])
+        puts "done"
+      end
+    end
+  end
+
+  def cask_dependencies
+    return unless @cask.depends_on.cask and not @cask.depends_on.cask.empty?
+    ohai "Installing Cask dependencies: #{@cask.depends_on.cask.join(', ')}"
+    deps = Cask::CaskDependencies.new(@cask)
+    deps.sorted.each do |dep_token|
+      puts "#{dep_token} ..."
+      dep = Cask.load(dep_token)
+      if dep.installed?
+        puts "already installed"
+      else
+        Cask::Installer.new(dep).install(false, true)
+        puts "done"
       end
     end
   end
@@ -122,8 +202,61 @@ class Cask::Installer
     self.class.print_caveats(@cask)
   end
 
+  # todo: logically could be in a separate class
+  def enable_accessibility_access
+    return unless @cask.accessibility_access
+    ohai 'Enabling accessibility access'
+    if MacOS.release >= :mavericks
+      @command.run!('/usr/bin/sqlite3',
+                    :args => [
+                              Cask.tcc_db,
+                              "INSERT INTO access VALUES('kTCCServiceAccessibility','#{bundle_identifier}',0,1,1,NULL);",
+                             ],
+                    :sudo => true)
+    else
+      @command.run!('/usr/bin/touch',
+                    :args => [Cask.pre_mavericks_accessibility_dotfile],
+                    :sudo => true)
+    end
+  end
+
+  def disable_accessibility_access
+    return unless @cask.accessibility_access
+    if MacOS.release >= :mavericks
+      ohai 'Disabling accessibility access'
+      @command.run!('/usr/bin/sqlite3',
+                    :args => [
+                              Cask.tcc_db,
+                              "DELETE FROM access WHERE client='#{bundle_identifier}';",
+                             ],
+                    :sudo => true)
+    else
+      opoo <<-EOS.undent
+        Accessibility access was enabled for #{@cask}, but it is not safe to disable
+        automatically on this version of OS X.  See System Preferences.
+      EOS
+    end
+  end
+
+  def save_caskfile(force=false)
+    timestamp = :now
+    create    = true
+    savedir   = @cask.metadata_subdir('Casks', timestamp, create)
+    if Dir.entries(savedir).size > 2
+      # should not happen
+      if force
+        savedir.rmtree
+        FileUtils.mkdir_p savedir
+      else
+        raise CaskAlreadyInstalledError.new(@cask)
+      end
+    end
+    FileUtils.copy(@cask.sourcefile_path, savedir) if @cask.sourcefile_path
+  end
+
   def uninstall(force=false)
     odebug "Cask::Installer.uninstall"
+    disable_accessibility_access
     uninstall_artifacts
     purge_versioned_files
     purge_caskroom_path if force
@@ -203,15 +336,11 @@ class Cask::Installer
         permissions_rmtree subdir unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
       end
     end
-    if @cask.metadata_versioned_container_path.respond_to?(:rmdir_if_possible)
-      @cask.metadata_versioned_container_path.rmdir_if_possible
-    end
-    if @cask.metadata_master_container_path.respond_to?(:rmdir_if_possible)
-      @cask.metadata_master_container_path.rmdir_if_possible
-    end
+    Cask::Utils.rmdir_if_possible(@cask.metadata_versioned_container_path)
+    Cask::Utils.rmdir_if_possible(@cask.metadata_master_container_path)
 
     # toplevel staged distribution
-    @cask.caskroom_path.rmdir_if_possible
+    Cask::Utils.rmdir_if_possible(@cask.caskroom_path)
   end
 
   def purge_caskroom_path

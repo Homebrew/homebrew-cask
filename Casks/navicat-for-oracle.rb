@@ -1,6 +1,6 @@
-class NavicatForOracle < Cask
-  version '11.1.5'
-  sha256 'e4e004e3e7442917aadbb5b80f179998cbd65c94b31250f210847b52c2ba9ed1'
+cask :v1 => 'navicat-for-oracle' do
+  version '11.1.7'
+  sha256 '91c1fd2ab4af6d34dc669b351e37160a3a53626162576cde65a7a4598e226a50'
 
   url "http://download.navicat.com/download/navicat#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_ora_en.dmg"
   homepage 'http://www.navicat.com/products/navicat-for-oracle'
