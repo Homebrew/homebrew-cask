@@ -1,4 +1,4 @@
-require 'resource'
+require 'vendor/homebrew-fork/resource'
 
 class AbstractDownloadStrategy
   attr_reader :name, :resource

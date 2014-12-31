@@ -1,4 +1,4 @@
-require 'download_strategy'
+require 'vendor/homebrew-fork/download_strategy'
 
 # Resource is the fundamental representation of an external resource. The
 # primary formula download, along with other declared resources, are instances
