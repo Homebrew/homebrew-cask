@@ -2,7 +2,8 @@ HOMEBREW_CACHE_CASKS = HOMEBREW_CACHE.join('Casks')
 
 class Cask; end
 
-require 'download_strategy'
+# todo remove internal Homebrew dependencies and remove this line
+require 'vendor/homebrew-fork/download_strategy'
 
 require 'cask/extend'
 require 'cask/artifact'

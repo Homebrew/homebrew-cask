@@ -2,8 +2,8 @@
 
 $:.push(File.expand_path(__FILE__+'/../..'))
 
-require 'extend/pathname'
-require 'utils'
+require 'vendor/homebrew-fork/monkeypatch_pathname'
+require 'vendor/homebrew-fork/utils'
 require 'tmpdir'
 
 TEST_TMPDIR = Dir.mktmpdir("homebrew_tests")

@@ -18,12 +18,9 @@ casks_path = brew_cask_path.join('Casks')
 lib_path = brew_cask_path.join('lib')
 $:.push(lib_path)
 
-# add our homebrew fork to load path
-# todo: removeme, this is transitional
-$:.push(lib_path.join('homebrew-fork', 'Library', 'Homebrew'))
-
 # require homebrew testing env
-require 'test/testing_env'
+# todo: removeme, this is transitional
+require 'vendor/homebrew-fork/testing_env'
 
 # todo temporary, copied from old Homebrew, this method is now moved inside a class
 def shutup

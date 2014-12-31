@@ -1,7 +1,7 @@
 require 'pathname'
-require 'exceptions'
-require 'hardware'
-require 'utils/popen'
+require 'vendor/homebrew-fork/exceptions'
+require 'vendor/homebrew-fork/hardware'
+require 'vendor/homebrew-fork/popen'
 
 def homebrew_fork_system cmd, *args
   puts "#{cmd} #{args*' '}" if Cask.verbose
