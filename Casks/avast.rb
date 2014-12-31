@@ -2,7 +2,7 @@ cask :v1 => 'avast' do
   version :latest
   sha256 :no_check
 
-  url 'http://download.ff.avast.com/mac/avast_free_antivirus_mac_setup.dmg'
+  url 'http://download.ff.avast.com/mac/avast_free_mac_security.dmg'
   homepage 'http://www.avast.com/'
   license :commercial
 
