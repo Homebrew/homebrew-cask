@@ -20,6 +20,7 @@ require 'cask/download_strategy'
 require 'cask/dsl'
 require 'cask/exceptions'
 require 'cask/fetcher'
+require 'cask/hardware'
 require 'cask/installer'
 require 'cask/locations'
 require 'cask/macos'
@@ -49,6 +50,7 @@ class Cask
 
   # todo: restrict visibility of this to the DSL
   ::MacOS = Cask::MacOS
+  ::Hardware = Cask::Hardware
 
   def self.init
     # todo: Creating directories should be deferred until needed.
