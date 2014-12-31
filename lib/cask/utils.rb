@@ -64,6 +64,11 @@ def odebug(title, *sput)
   end
 end
 
+def puts_columns(items, star_items=[])
+  return if items.empty?
+  puts Cask::Utils.stringify_columns(items, star_items)
+end
+
 module Cask::Utils
   def dumpcask
     if Cask.respond_to?(:debug) and Cask.debug
@@ -121,7 +126,7 @@ module Cask::Utils
     return cmd_pn
   end
 
-  # from Homebrew puts_columns
+  # originally from Homebrew puts_columns
   def self.stringify_columns items, star_items=[]
     return if items.empty?
 
@@ -129,13 +134,13 @@ module Cask::Utils
       items = items.map{|item| star_items.include?(item) ? "#{item}*" : item}
     end
 
-    if $stdout.tty?
-      # determine the best width to display for different console sizes
-      console_width = Cask::SystemCommand.run("/bin/stty", :args => ["size"]).stdout.chomp.split(" ").last.to_i
-      console_width = 80 if console_width <= 0
-    else
-      console_width = 80
+    unless $stdout.tty?
+      return items.join("\n").concat("\n")
     end
+
+    # determine the best width to display for different console sizes
+    console_width = `/bin/stty size 2>/dev/null`.chomp.split(' ').last.to_i
+    console_width = 80 if console_width <= 0
     longest = items.sort_by { |item| item.length }.last
     optimal_col_width = (console_width.to_f / (longest.length + 2).to_f).floor
     cols = optimal_col_width > 1 ? optimal_col_width : 1
@@ -146,7 +151,7 @@ module Cask::Utils
     end
   end
 
-  # from Homebrew
+  # originally from Homebrew
   # children.length == 0 is slow to enumerate the whole directory just
   # to see if it is empty
   def self.rmdir_if_possible(dir)
@@ -167,8 +172,7 @@ module Cask::Utils
     end
   end
 
-  # our own version of Homebrew's abv, with better defenses
-  # against unusual filenames
+  # originally from Homebrew abv
   def self.cabv(dir)
     output = ''
     count = Cask::SystemCommand.run!('/usr/bin/find',
