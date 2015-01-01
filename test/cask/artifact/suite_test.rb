@@ -1,18 +1,18 @@
 require 'test_helper'
 
-describe Cask::Artifact::Suite do
+describe Hbc::Artifact::Suite do
   let(:cask) {
-    Cask.load('with-suite').tap do |cask|
+    Hbc.load('with-suite').tap do |cask|
       TestHelper.install_without_artifacts(cask)
     end
   }
   let(:expected_path) {
-    Cask.appdir.join('caffeine_suite')
+    Hbc.appdir.join('caffeine_suite')
   }
 
   it "links the suite to the proper directory" do
     shutup do
-      Cask::Artifact::Suite.new(cask).install_phase
+      Hbc::Artifact::Suite.new(cask).install_phase
     end
 
     TestHelper.valid_alias?(expected_path).must_equal true
@@ -20,7 +20,7 @@ describe Cask::Artifact::Suite do
 
   it "creates a suite containing the expected app" do
     shutup do
-      Cask::Artifact::Suite.new(cask).install_phase
+      Hbc::Artifact::Suite.new(cask).install_phase
     end
 
     expected_path.join('Caffeine.app').must_be :exist?
@@ -30,7 +30,7 @@ describe Cask::Artifact::Suite do
     FileUtils.touch expected_path
 
     shutup do
-      Cask::Artifact::Suite.new(cask).install_phase
+      Hbc::Artifact::Suite.new(cask).install_phase
     end
 
     expected_path.wont_be :symlink?
@@ -40,7 +40,7 @@ describe Cask::Artifact::Suite do
     expected_path.make_symlink('/tmp')
 
     shutup do
-      Cask::Artifact::Suite.new(cask).install_phase
+      Hbc::Artifact::Suite.new(cask).install_phase
     end
 
     File.readlink(expected_path).wont_equal '/tmp'

@@ -1,37 +1,37 @@
 require 'test_helper'
 
 # slightly different format for read/write
-scope               = (Cask::CLI::Alfred::DEFAULT_SCOPES).map { |s| %Q{"#{s}"} }
+scope               = (Hbc::CLI::Alfred::DEFAULT_SCOPES).map { |s| %Q{"#{s}"} }
 DEFAULT_READ_SCOPE  = %Q{(\n#{scope.join(",\n  ")}\n)}
-scope               = (Cask::CLI::Alfred::DEFAULT_SCOPES + [Cask.caskroom.to_s]).map { |s| %Q{"#{s}"} }
+scope               = (Hbc::CLI::Alfred::DEFAULT_SCOPES + [Hbc.caskroom.to_s]).map { |s| %Q{"#{s}"} }
 ALTERED_READ_SCOPE  = %Q{(\n#{scope.join(",\n  ")}\n)}
 
-scope               = (Cask::CLI::Alfred::DEFAULT_SCOPES).map { |s| %Q{'#{s}'} }
+scope               = (Hbc::CLI::Alfred::DEFAULT_SCOPES).map { |s| %Q{'#{s}'} }
 DEFAULT_WRITE_SCOPE = %Q{(#{scope.join(',')})}
-scope               = (Cask::CLI::Alfred::DEFAULT_SCOPES + [Cask.caskroom.to_s]).map { |s| %Q{'#{s}'} }
+scope               = (Hbc::CLI::Alfred::DEFAULT_SCOPES + [Hbc.caskroom.to_s]).map { |s| %Q{'#{s}'} }
 ALTERED_WRITE_SCOPE = %Q{(#{scope.join(',')})}
 
 DEFAULT_SYNCDIR     = '~/Library/Application Support/Alfred 2'
 
 def fake_alfred_read_primary_preference(key, response)
-  Cask::FakeSystemCommand.stubs_command(['/usr/bin/defaults', 'read', 'com.runningwithcrayons.Alfred-Preferences', key], response)
+  Hbc::FakeSystemCommand.stubs_command(['/usr/bin/defaults', 'read', 'com.runningwithcrayons.Alfred-Preferences', key], response)
 end
 
 def fake_alfred_write_primary_preference(key, value)
-  Cask::FakeSystemCommand.stubs_command(['/usr/bin/defaults', 'write', 'com.runningwithcrayons.Alfred-Preferences', key, value])
+  Hbc::FakeSystemCommand.stubs_command(['/usr/bin/defaults', 'write', 'com.runningwithcrayons.Alfred-Preferences', key, value])
 end
 
 def fake_alfred_read_local_preference(key, response)
-  local_files = Pathname.glob(Pathname.new(DEFAULT_SYNCDIR + Cask::CLI::Alfred::LOCALPREFS_SUBPATH).expand_path)
+  local_files = Pathname.glob(Pathname.new(DEFAULT_SYNCDIR + Hbc::CLI::Alfred::LOCALPREFS_SUBPATH).expand_path)
   local_files.each do |file|
-    Cask::FakeSystemCommand.stubs_command(['/usr/bin/defaults', 'read', file, key], response)
+    Hbc::FakeSystemCommand.stubs_command(['/usr/bin/defaults', 'read', file, key], response)
   end
 end
 
 def fake_alfred_write_local_preference(key, value)
-  local_files = Pathname.glob(Pathname.new(DEFAULT_SYNCDIR + Cask::CLI::Alfred::LOCALPREFS_SUBPATH).expand_path)
+  local_files = Pathname.glob(Pathname.new(DEFAULT_SYNCDIR + Hbc::CLI::Alfred::LOCALPREFS_SUBPATH).expand_path)
   local_files.each do |file|
-    Cask::FakeSystemCommand.stubs_command(['/usr/bin/defaults', 'write', file, key, value])
+    Hbc::FakeSystemCommand.stubs_command(['/usr/bin/defaults', 'write', file, key, value])
   end
 end
 
@@ -46,14 +46,14 @@ def fake_alfred_installed(installed=true)
   end
 end
 
-describe Cask::CLI::Alfred do
+describe Hbc::CLI::Alfred do
   describe "status" do
     it "properly reports when alfred is not installed" do
       fake_alfred_installed(false)
       fake_alfred_read_local_preference('scope', DEFAULT_READ_SCOPE)
 
       TestHelper.must_output(self, lambda {
-        Cask::CLI::Alfred.run('status', Cask::FakeSystemCommand)
+        Hbc::CLI::Alfred.run('status', Hbc::FakeSystemCommand)
       }, "Warning: Could not find Alfred 2 preferences. Alfred 2 is probably not installed.")
     end
 
@@ -63,7 +63,7 @@ describe Cask::CLI::Alfred do
       fake_alfred_read_primary_preference 'features.defaultresults.scope', DEFAULT_READ_SCOPE
 
       TestHelper.must_output(self, lambda {
-        Cask::CLI::Alfred.run('status', Cask::FakeSystemCommand)
+        Hbc::CLI::Alfred.run('status', Hbc::FakeSystemCommand)
       }, "==> Alfred is not linked to homebrew-cask.")
     end
   end
@@ -73,7 +73,7 @@ describe Cask::CLI::Alfred do
       fake_alfred_installed(false)
 
       TestHelper.must_output(self, lambda {
-        Cask::CLI::Alfred.run('link', Cask::FakeSystemCommand)
+        Hbc::CLI::Alfred.run('link', Hbc::FakeSystemCommand)
       }, "Warning: Could not find Alfred 2 preferences. Alfred 2 is probably not installed.")
     end
 
@@ -86,7 +86,7 @@ describe Cask::CLI::Alfred do
 
       # todo: the message text is out of expected order because of mixing STDERR/STDOUT
       TestHelper.must_output(self, lambda {
-        Cask::CLI::Alfred.run('link', Cask::FakeSystemCommand)
+        Hbc::CLI::Alfred.run('link', Hbc::FakeSystemCommand)
       }, "==> Successfully linked Alfred to homebrew-cask.\nWarning: Alfred appears to be already linked. Updating defaults anyway.")
     end
 
@@ -98,7 +98,7 @@ describe Cask::CLI::Alfred do
       fake_alfred_write_local_preference   'scope',                         ALTERED_WRITE_SCOPE
 
       TestHelper.must_output(self, lambda {
-        Cask::CLI::Alfred.run('link', Cask::FakeSystemCommand)
+        Hbc::CLI::Alfred.run('link', Hbc::FakeSystemCommand)
       }, "==> Successfully linked Alfred to homebrew-cask.")
     end
 
@@ -117,7 +117,7 @@ describe Cask::CLI::Alfred do
       fake_alfred_write_local_preference   'scope',                         ALTERED_WRITE_SCOPE
 
       TestHelper.must_output(self, lambda {
-        Cask::CLI::Alfred.run('link', Cask::FakeSystemCommand)
+        Hbc::CLI::Alfred.run('link', Hbc::FakeSystemCommand)
       }, "==> Successfully linked Alfred to homebrew-cask.")
     end
   end
@@ -127,7 +127,7 @@ describe Cask::CLI::Alfred do
       fake_alfred_installed(false)
 
       TestHelper.must_output(self, lambda {
-        Cask::CLI::Alfred.run('unlink', Cask::FakeSystemCommand)
+        Hbc::CLI::Alfred.run('unlink', Hbc::FakeSystemCommand)
       }, "Warning: Could not find Alfred 2 preferences. Alfred 2 is probably not installed.")
     end
 
@@ -140,7 +140,7 @@ describe Cask::CLI::Alfred do
 
       # todo: the message text is out of expected order because of mixing STDERR/STDOUT
       TestHelper.must_output(self, lambda {
-        Cask::CLI::Alfred.run('unlink', Cask::FakeSystemCommand)
+        Hbc::CLI::Alfred.run('unlink', Hbc::FakeSystemCommand)
       }, "==> Successfully unlinked Alfred from homebrew-cask.\nWarning: Alfred appears to be already unlinked. Updating defaults anyway.")
     end
 
@@ -152,7 +152,7 @@ describe Cask::CLI::Alfred do
       fake_alfred_write_local_preference   'scope',                         DEFAULT_WRITE_SCOPE
 
       TestHelper.must_output(self, lambda {
-        Cask::CLI::Alfred.run('unlink', Cask::FakeSystemCommand)
+        Hbc::CLI::Alfred.run('unlink', Hbc::FakeSystemCommand)
       }, "==> Successfully unlinked Alfred from homebrew-cask.")
     end
   end

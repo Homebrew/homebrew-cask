@@ -69,7 +69,7 @@ changelog.
 	$ export NEW_RELEASE_TAG="$(./developer/bin/get_release_tag -next -patch)"; echo "$NEW_RELEASE_TAG"
 	```
 7. Make sure the value in `$NEW_RELEASE_TAG` is what you want.
-8. Bump the `HOMEBREW_CASK_VERSION` string which is stored in the file
+8. Bump the `HBC_VERSION` string which is stored in the file
    `lib/cask/version.rb`:
 
 	```bash

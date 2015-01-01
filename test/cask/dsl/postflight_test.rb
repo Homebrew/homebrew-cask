@@ -1,13 +1,13 @@
 require "test_helper"
 
-describe Cask::DSL::Postflight do
+describe Hbc::DSL::Postflight do
   before do
-    cask = Cask.load('basic-cask')
-    @dsl = Cask::DSL::Postflight.new(cask, Cask::FakeSystemCommand)
+    cask = Hbc.load('basic-cask')
+    @dsl = Hbc::DSL::Postflight.new(cask, Hbc::FakeSystemCommand)
   end
 
   it "can run system commands with list-form arguments" do
-    Cask::FakeSystemCommand.expects_command(
+    Hbc::FakeSystemCommand.expects_command(
       ['echo', 'homebrew-cask', 'rocks!']
     )
     @dsl.system_command("echo", :args => ["homebrew-cask", "rocks!"])
@@ -20,7 +20,7 @@ describe Cask::DSL::Postflight do
   it "can execute commands on the Info.plist file" do
     @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
 
-    Cask::FakeSystemCommand.expects_command(
+    Hbc::FakeSystemCommand.expects_command(
       ['/usr/libexec/PlistBuddy', '-c', 'Print CFBundleIdentifier', @dsl.info_plist_file]
     )
     @dsl.plist_exec('Print CFBundleIdentifier')
@@ -29,7 +29,7 @@ describe Cask::DSL::Postflight do
   it "can set a key in the Info.plist file" do
     @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
 
-    Cask::FakeSystemCommand.expects_command(
+    Hbc::FakeSystemCommand.expects_command(
       ['/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', @dsl.info_plist_file]
     )
     @dsl.plist_set(':JVMOptions:JVMVersion', '1.6+')
@@ -38,7 +38,7 @@ describe Cask::DSL::Postflight do
   it "can suppress move to applications folder alert " do
     @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
 
-    Cask::FakeSystemCommand.expects_command(
+    Hbc::FakeSystemCommand.expects_command(
       ['/usr/bin/defaults', 'write', 'com.example.BasicCask', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true']
     )
     @dsl.suppress_move_to_applications
@@ -47,7 +47,7 @@ describe Cask::DSL::Postflight do
   it "can suppress move to applications folder alert with a different key" do
     @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
 
-    Cask::FakeSystemCommand.expects_command(
+    Hbc::FakeSystemCommand.expects_command(
       ['/usr/bin/defaults', 'write', 'com.example.BasicCask', 'suppressMoveToApplications', '-bool', 'true']
     )
     @dsl.suppress_move_to_applications :key => 'suppressMoveToApplications'

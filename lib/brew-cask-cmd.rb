@@ -13,7 +13,7 @@ $LOAD_PATH.unshift(File.expand_path('..', Pathname.new(__FILE__).realpath))
 # todo remove internal Homebrew dependencies and remove this line
 require 'vendor/homebrew-fork/global'
 
-require 'cask'
+require 'hbc'
 
-Cask::CLI.process(ARGV)
+Hbc::CLI.process(ARGV)
 exit 0

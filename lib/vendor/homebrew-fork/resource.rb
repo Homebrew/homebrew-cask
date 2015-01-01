@@ -3,7 +3,7 @@ require 'vendor/homebrew-fork/download_strategy'
 # Resource is the fundamental representation of an external resource. The
 # primary formula download, along with other declared resources, are instances
 # of this class.
-class Resource
+class Hbc::Resource
 
   attr_reader :mirrors, :specs, :using
   attr_writer :url, :version
@@ -78,7 +78,7 @@ class Resource
     # Ensure the cache exists
     HOMEBREW_CACHE.mkpath
     downloader.fetch
-  rescue ErrorDuringExecution, CurlDownloadStrategyError => e
+  rescue Hbc::ErrorDuringExecution, Hbc::CurlDownloadStrategyError => e
     raise RuntimeError.new
   else
     cached_download
@@ -89,7 +89,7 @@ class Resource
     @url = val
     @specs.merge!(specs)
     @using = @specs.delete(:using)
-    @download_strategy = DownloadStrategyDetector.detect(url, using)
+    @download_strategy = Hbc::HbDownloadStrategyDetector.detect(url, using)
   end
 
   def version val=nil
