@@ -41,7 +41,7 @@ cask :v1 => 'alfred' do
   version '2.3_264'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
 
-  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
+  url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
   homepage 'http://www.alfredapp.com/'
   license :freemium
