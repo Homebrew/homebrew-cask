@@ -19,5 +19,7 @@ cask :v1 => 'battle-net' do
                   '/Users/Shared/Battle.net'
                  ]
 
-  caveats 'If you pick an installation directory other than /Applications when installing this cask, you will need to uninstall it manually'
+  caveats do
+    uninstall_depends_on_default_install_location
+  end
 end

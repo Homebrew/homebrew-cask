@@ -143,6 +143,7 @@ For use in *eg* interpolation:
  * [`files_in_usr_local`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`logout`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`path_environment_variable(path)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
+ * [`uninstall_depends_on_default_install_location(optional_path)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`reboot`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`zsh_path_helper(path)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
 
