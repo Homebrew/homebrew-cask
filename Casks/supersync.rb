@@ -1,10 +1,10 @@
 cask :v1 => 'supersync' do
-  version :latest
-  sha256 :no_check
+  version '6.1'
+  sha256 'c97191ea844a581bbafc8382cac6449be577c1c8b5639c64033fb200fc3a79dc'
 
-  url 'https://supersync.com/downloads/SuperSync.app.zip'
+  url "http://supersync.com/downloads/SuperSync-#{version}.dmg"
   homepage 'http://supersync.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'SuperSync.app'
 end
