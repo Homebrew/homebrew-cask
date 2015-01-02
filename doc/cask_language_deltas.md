@@ -46,7 +46,6 @@ features which are available for the current Cask.
  * [`appcast`](CASK_LANGUAGE_REFERENCE.md#appcast-stanza-details)
  * [`artifact`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
  * [`depends_on :cask`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
-   * *stub* - not yet functional
  * [`depends_on :java`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
    * *stub* - not yet functional
  * [`conflicts_with`](CASK_LANGUAGE_REFERENCE.md#conflicts_with-stanza-details)

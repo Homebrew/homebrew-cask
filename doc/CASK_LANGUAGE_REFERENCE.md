@@ -573,6 +573,16 @@ installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer
 `depends_on` is used to declare dependencies and requirements for a Cask.
 `depends_on` is not consulted until `install` is attempted.
 
+### Depends_on :cask
+
+The value should be another Cask token, needed by the current Cask.
+
+Example use: [`SSHFS`](https://github.com/caskroom/homebrew-cask/blob/master/Casks/sshfs.rb) depends on OSXFUSE.
+
+```ruby
+depends_on :cask => 'osxfuse'
+```
+
 ### Depends_on :formula
 
 The value should name a Homebrew Formula needed by the Cask.
@@ -668,7 +678,7 @@ depends_on :arch => :x86_64
 | key        | description |
 | ---------- | ----------- |
 | `:formula` | a Homebrew Formula
-| `:cask`    | *stub - not yet functional*
+| `:cask`    | a Cask token
 | `:macos`   | a symbol, string, array, or comparison expression defining OS X release requirements.
 | `:arch`    | a symbol or array defining hardware requirements.
 | `:x11`     | a Boolean indicating a dependency on X11.
