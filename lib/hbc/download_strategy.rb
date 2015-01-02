@@ -13,13 +13,7 @@ module Hbc::DownloadStrategy
     @cask     = cask
     @command  = command
     @cask_url = cask.url
-    super(
-      cask.token,
-      Hbc::Resource.new(cask.token) do |r|
-        r.url     cask.url.to_s
-        r.version cask.version.to_s
-      end
-    )
+    super(cask)
   end
 end
 
