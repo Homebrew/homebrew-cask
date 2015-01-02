@@ -2,7 +2,7 @@ require 'pathname'
 require 'vendor/homebrew-fork/exceptions'
 
 def homebrew_fork_system cmd, *args
-  puts "#{cmd} #{args*' '}" if Cask.verbose
+  puts "#{cmd} #{args*' '}" if Hbc.verbose
   pid = fork do
     yield if block_given?
     args.collect!{|arg| arg.to_s}
@@ -15,7 +15,7 @@ end
 
 # Kernel.system but with exceptions
 def safe_system cmd, *args
-  homebrew_fork_system(cmd, *args) or raise ErrorDuringExecution.new(cmd, args)
+  homebrew_fork_system(cmd, *args) or raise Hbc::ErrorDuringExecution.new(cmd, args)
 end
 
 # prints no output
@@ -33,7 +33,7 @@ def curl *args
   raise "#{curl} is not executable" unless curl.exist? and curl.executable?
 
   flags = HOMEBREW_CURL_ARGS
-  flags = flags.delete("#") if Cask.verbose
+  flags = flags.delete("#") if Hbc.verbose
 
   args = [flags, HOMEBREW_USER_AGENT, *args]
   # See https://github.com/Homebrew/homebrew/issues/6103

@@ -1,11 +1,11 @@
 require 'test_helper'
 
-describe Cask::UrlChecker do
+describe Hbc::UrlChecker do
   describe "request processing" do
     it "adds an error if response is empty" do
       cask = TestHelper.test_cask
       TestHelper.fake_response_for(cask.url, "")
-      checker = Cask::UrlChecker.new(cask, TestHelper.fake_fetcher)
+      checker = Hbc::UrlChecker.new(cask, TestHelper.fake_fetcher)
       checker.run
       checker.errors.must_include "timeout while requesting #{cask.url}"
     end
@@ -19,7 +19,7 @@ describe Cask::UrlChecker do
         Last-Modified: Sun, 12 Aug 2012 21:17:21 GMT
       RESPONSE
 
-      checker = Cask::UrlChecker.new(TestHelper.test_cask, TestHelper.fake_fetcher)
+      checker = Hbc::UrlChecker.new(TestHelper.test_cask, TestHelper.fake_fetcher)
       checker.run
       checker.response_status.must_equal 'HTTP/1.1 200 OK'
       checker.headers.must_equal({

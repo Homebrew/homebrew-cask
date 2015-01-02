@@ -1,6 +1,6 @@
 require 'vendor/homebrew-fork/resource'
 
-class AbstractDownloadStrategy
+class Hbc::HbAbstractDownloadStrategy
   attr_reader :name, :resource
 
   def initialize name, resource
@@ -13,7 +13,7 @@ class AbstractDownloadStrategy
     args = args.dup
     args.each_with_index do |arg, ii|
       if arg.is_a? Hash
-        unless Cask.verbose
+        unless Hbc.verbose
           args[ii] = arg[:quiet_flag]
         else
           args.delete_at ii
@@ -22,7 +22,7 @@ class AbstractDownloadStrategy
       end
     end
     # 2 as default because commands are eg. svn up, git pull
-    args.insert(2, '-q') unless Cask.verbose
+    args.insert(2, '-q') unless Hbc.verbose
     args
   end
 
@@ -36,7 +36,7 @@ class AbstractDownloadStrategy
   def clear_cache; end
 end
 
-class VCSDownloadStrategy < AbstractDownloadStrategy
+class Hbc::HbVCSDownloadStrategy < Hbc::HbAbstractDownloadStrategy
   REF_TYPES = [:branch, :revision, :revisions, :tag].freeze
 
   def initialize name, resource
@@ -67,7 +67,7 @@ class VCSDownloadStrategy < AbstractDownloadStrategy
   end
 end
 
-class CurlDownloadStrategy < AbstractDownloadStrategy
+class Hbc::HbCurlDownloadStrategy < Hbc::HbAbstractDownloadStrategy
   def mirrors
     @mirrors ||= resource.mirrors.dup
   end
@@ -103,7 +103,7 @@ class CurlDownloadStrategy < AbstractDownloadStrategy
       had_incomplete_download = temporary_path.exist?
       begin
         _fetch
-      rescue ErrorDuringExecution
+      rescue Hbc::ErrorDuringExecution
         # 33 == range not supported
         # try wiping the incomplete download and retrying once
         if $?.exitstatus == 33 && had_incomplete_download
@@ -117,14 +117,14 @@ class CurlDownloadStrategy < AbstractDownloadStrategy
           else
             msg = "Download failed: #{@url}"
           end
-          raise CurlDownloadStrategyError, msg
+          raise Hbc::CurlDownloadStrategyError, msg
         end
       end
       ignore_interrupts { temporary_path.rename(tarball_path) }
     else
       puts "Already downloaded: #{tarball_path}"
     end
-  rescue CurlDownloadStrategyError
+  rescue Hbc::CurlDownloadStrategyError
     raise if mirrors.empty?
     puts "Trying a mirror..."
     @url = mirrors.shift
@@ -149,14 +149,14 @@ end
 
 # Download via an HTTP POST.
 # Query parameters on the URL are converted into POST parameters
-class CurlPostDownloadStrategy < CurlDownloadStrategy
+class Hbc::HbCurlPostDownloadStrategy < Hbc::HbCurlDownloadStrategy
   def _fetch
     base_url,data = @url.split('?')
     curl base_url, '-d', data, '-C', downloaded_size, '-o', temporary_path
   end
 end
 
-class SubversionDownloadStrategy < VCSDownloadStrategy
+class Hbc::HbSubversionDownloadStrategy < Hbc::HbVCSDownloadStrategy
   def cache_tag
     # todo: pass versions as symbols, support :head here
     resource.version == 'head' ? "svn-HEAD" : "svn"
@@ -227,7 +227,7 @@ class SubversionDownloadStrategy < VCSDownloadStrategy
 end
 
 # Require a newer version of Subversion than 1.4.x (Leopard-provided version)
-class StrictSubversionDownloadStrategy < SubversionDownloadStrategy
+class Hbc::HbStrictSubversionDownloadStrategy < Hbc::HbSubversionDownloadStrategy
   def find_svn
     exe = `svn -print-path`
     `#{exe} --version` =~ /version (\d+\.\d+(\.\d+)*)/
@@ -245,7 +245,7 @@ class StrictSubversionDownloadStrategy < SubversionDownloadStrategy
 end
 
 # Download from SVN servers with invalid or self-signed certs
-class UnsafeSubversionDownloadStrategy < SubversionDownloadStrategy
+class Hbc::HbUnsafeSubversionDownloadStrategy < Hbc::HbSubversionDownloadStrategy
   def fetch_repo target, url, revision=nil, ignore_externals=false
     # Use "svn up" when the repository already exists locally.
     # This saves on bandwidth and will have a similar effect to verifying the
@@ -260,11 +260,11 @@ class UnsafeSubversionDownloadStrategy < SubversionDownloadStrategy
   end
 end
 
-class DownloadStrategyDetector
+class Hbc::HbDownloadStrategyDetector
   def self.detect(url, strategy=nil)
     if strategy.nil?
       detect_from_url(url)
-    elsif Class === strategy && strategy < AbstractDownloadStrategy
+    elsif Class === strategy && strategy < Hbc::AbstractDownloadStrategy
         strategy
     elsif Symbol === strategy
       detect_from_symbol(strategy)
@@ -277,19 +277,19 @@ class DownloadStrategyDetector
   def self.detect_from_url(url)
     case url
     when %r[^https?://(.+?\.)?googlecode\.com/svn], %r[^https?://svn\.], %r[^svn://], %r[^https?://(.+?\.)?sourceforge\.net/svnroot/]
-      SubversionDownloadStrategy
+      Hbc::HbSubversionDownloadStrategy
     when %r[^http://svn\.apache\.org/repos/], %r[^svn\+http://]
-      SubversionDownloadStrategy
+      Hbc::HbSubversionDownloadStrategy
     else
-      CurlDownloadStrategy
+      Hbc::HbCurlDownloadStrategy
     end
   end
 
   def self.detect_from_symbol(symbol)
     case symbol
-    when :svn     then SubversionDownloadStrategy
-    when :curl    then CurlDownloadStrategy
-    when :post    then CurlPostDownloadStrategy
+    when :svn     then Hbc::HbSubversionDownloadStrategy
+    when :curl    then Hbc::HbCurlDownloadStrategy
+    when :post    then Hbc::HbCurlPostDownloadStrategy
     else
       raise "Unknown download strategy #{strategy} was requested."
     end
