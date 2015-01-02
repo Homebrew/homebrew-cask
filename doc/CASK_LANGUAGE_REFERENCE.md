@@ -144,11 +144,11 @@ Tests against `MacOS.release` may use either symbolic names or version
 strings with numeric comparison operators:
 
 ```ruby
-if MacOS.release < :mavericks     # symbolic name
+if MacOS.release <= :mavericks     # symbolic name
 ```
 
 ```ruby
-if MacOS.release < '10.9'         # version string
+if MacOS.release <= '10.9'         # version string
 ```
 
 The available symbols for OS X versions are: `:tiger`, `:leopard`,
@@ -165,9 +165,9 @@ This makes it more likely that the Cask will work without alteration when
 a new OS is released.  Example (from [coconutbattery.rb](../Casks/coconutbattery.rb)):
 
 ```ruby
-if MacOS.release < :leopard
+if MacOS.release <= :tiger
   # ...
-elsif MacOS.release < :lion
+elsif MacOS.release <= :snow_leopard
   # ...
 else
   # ...
