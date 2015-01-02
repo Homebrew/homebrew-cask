@@ -70,6 +70,8 @@ def puts_columns(items, star_items=[])
 end
 
 module Cask::Utils
+  require 'cask/utils/locale'
+
   def dumpcask
     if Cask.respond_to?(:debug) and Cask.debug
       odebug "Cask instance dumps in YAML:"
