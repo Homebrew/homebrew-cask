@@ -14,6 +14,7 @@ class Hbc::Audit
     _check_required_stanzas
     _check_no_string_version_latest
     _check_sha256_no_check_if_latest
+    _check_sha256_invalid
     _check_sourceforge_download_url_format
     _check_download(download) if download
     return !(errors? or warnings?)
@@ -47,6 +48,14 @@ class Hbc::Audit
     odebug "Verifying sha256 :no_check with version :latest"
     if cask.version == :latest and cask.sha256 != :no_check
       add_error "you should use sha256 :no_check when version is :latest"
+    end
+  end
+
+  def _check_sha256_invalid
+    odebug "Verifying sha256 is not a known invalid value"
+    empty_sha256 = 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+    if cask.sha256 == empty_sha256
+      add_error "cannot use the sha256 for an empty string: #{empty_sha256}"
     end
   end
 
