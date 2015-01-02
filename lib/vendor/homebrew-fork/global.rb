@@ -28,7 +28,7 @@ HOMEBREW_CACHE = cache
 undef cache
 
 if not defined? HOMEBREW_BREW_FILE
-  HOMEBREW_BREW_FILE = ENV['HOMEBREW_BREW_FILE'] || Cask::Utils.which('brew').to_s
+  HOMEBREW_BREW_FILE = ENV['HOMEBREW_BREW_FILE'] || Hbc::Utils.which('brew').to_s
 end
 
 HOMEBREW_PREFIX = Pathname.new(HOMEBREW_BREW_FILE).dirname.parent # Where we link under

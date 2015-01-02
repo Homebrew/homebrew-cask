@@ -50,11 +50,11 @@ def which_editor
   return editor unless editor.nil?
 
   # Find Textmate
-  return 'mate' if Cask::Utils.which "mate"
+  return 'mate' if Hbc::Utils.which "mate"
   # Find BBEdit / TextWrangler
-  return 'edit' if Cask::Utils.which "edit"
+  return 'edit' if Hbc::Utils.which "edit"
   # Find vim
-  return 'vim' if Cask::Utils.which "vim"
+  return 'vim' if Hbc::Utils.which "vim"
   # Default to standard vim
   return '/usr/bin/vim'
 end
