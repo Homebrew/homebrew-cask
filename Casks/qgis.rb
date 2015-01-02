@@ -9,8 +9,15 @@ cask :v1 => 'qgis' do
 
   uninstall :pkgutil => 'org.qgis.qgis-*'
 
-  depends_on :cask => [
-                       'gdal-framework',
-                       'matplotlib'
-                      ]
+  caveats <<-EOS.undent
+    #{token} requires the GDAL framework and Matplotlib to be installed first,
+    otherwise the installation will fail. In case of problems, try installing
+    them:
+
+      brew cask install gdal-framework matplotlib
+
+    and then reinstall QGIS
+
+      brew cask uninstall qgis && brew cask install qgis
+  EOS
 end
