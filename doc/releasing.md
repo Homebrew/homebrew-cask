@@ -70,7 +70,7 @@ changelog.
 	```
 7. Make sure the value in `$NEW_RELEASE_TAG` is what you want.
 8. Bump the `HBC_VERSION` string which is stored in the file
-   `lib/cask/version.rb`:
+   `lib/hbc/version.rb`:
 
 	```bash
 	$ ./developer/bin/bump_version "$NEW_RELEASE_TAG"
@@ -91,10 +91,10 @@ changelog.
 11. When complete, insert the new release changelog near the beginning of
     `doc/CHANGELOG.md`, just after the first line.
 12. Make a commit on `master` with the modifications to `doc/CHANGELOG.md`,
-   `lib/cask/version.rb`, and/or `doc/man/brew-cask.1`:
+   `lib/hbc/version.rb`, and/or `doc/man/brew-cask.1`:
 
 	```bash
-	$ git add doc/CHANGELOG.md lib/cask/version.rb doc/man/brew-cask.1
+	$ git add doc/CHANGELOG.md lib/hbc/version.rb doc/man/brew-cask.1
 	$ git commit -m "cut $NEW_RELEASE_TAG"
 	```
 

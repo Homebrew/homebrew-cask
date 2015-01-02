@@ -229,7 +229,7 @@ If possible, avoid creating tokens which differ only by the placement of
 hyphens.
 
 To generate a token manually, or to learn about exceptions for unusual cases,
-see [CASK_TOKEN_REFERENCE.md](doc/CASK_TOKEN_REFERENCE.md).
+see [cask_token_reference.md](doc/cask_token_reference.md).
 
 
 ### Archives With Subfolders
