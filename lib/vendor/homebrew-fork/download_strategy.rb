@@ -1,15 +1,14 @@
-require 'vendor/homebrew-fork/resource'
-
 class Hbc::HbAbstractDownloadStrategy
-  attr_reader :name, :resource
+  attr_reader :name, :url, :uri_object, :version
 
-  def initialize name, resource
-    @name = name
-    @resource = resource
-    @url  = resource.url
+  def initialize(cask)
+    @name       = cask.token
+    @url        = cask.url.to_s
+    @uri_object = cask.url
+    @version    = cask.version
   end
 
-  def expand_safe_system_args args
+  def expand_safe_system_args(args)
     args = args.dup
     args.each_with_index do |arg, ii|
       if arg.is_a? Hash
@@ -26,7 +25,7 @@ class Hbc::HbAbstractDownloadStrategy
     args
   end
 
-  def quiet_safe_system *args
+  def quiet_safe_system(*args)
     safe_system(*expand_safe_system_args(args))
   end
 
@@ -39,15 +38,17 @@ end
 class Hbc::HbVCSDownloadStrategy < Hbc::HbAbstractDownloadStrategy
   REF_TYPES = [:branch, :revision, :revisions, :tag].freeze
 
-  def initialize name, resource
+  def initialize(cask)
     super
-    @ref_type, @ref = extract_ref(resource.specs)
+    @ref_type, @ref = extract_ref
     @clone = HOMEBREW_CACHE.join(cache_filename)
   end
 
-  def extract_ref(specs)
-    key = REF_TYPES.find { |type| specs.key?(type) }
-    return key, specs[key]
+  def extract_ref
+    key = REF_TYPES.find do |type|
+      uri_object.respond_to?(type) and uri_object.send(type)
+    end
+    return key, key ? uri_object.send(key) : nil
   end
 
   def cache_filename
@@ -68,12 +69,13 @@ class Hbc::HbVCSDownloadStrategy < Hbc::HbAbstractDownloadStrategy
 end
 
 class Hbc::HbCurlDownloadStrategy < Hbc::HbAbstractDownloadStrategy
+  # todo should be part of url object
   def mirrors
-    @mirrors ||= resource.mirrors.dup
+    @mirrors ||= []
   end
 
   def tarball_path
-    @tarball_path ||= Pathname.new("#{HOMEBREW_CACHE}/#{name}-#{resource.version}#{ext}")
+    @tarball_path ||= Pathname.new("#{HOMEBREW_CACHE}/#{name}-#{version}#{ext}")
   end
 
   def temporary_path
@@ -159,7 +161,7 @@ end
 class Hbc::HbSubversionDownloadStrategy < Hbc::HbVCSDownloadStrategy
   def cache_tag
     # todo: pass versions as symbols, support :head here
-    resource.version == 'head' ? "svn-HEAD" : "svn"
+    version == 'head' ? "svn-HEAD" : "svn"
   end
 
   def repo_valid?
@@ -197,7 +199,7 @@ class Hbc::HbSubversionDownloadStrategy < Hbc::HbVCSDownloadStrategy
     end
   end
 
-  def shell_quote str
+  def shell_quote(str)
     # Oh god escaping shell args.
     # See http://notetoself.vrensk.com/2008/08/escaping-single-quotes-in-ruby-harder-than-expected/
     str.gsub(/\\|'/) { |c| "\\#{c}" }
@@ -210,7 +212,7 @@ class Hbc::HbSubversionDownloadStrategy < Hbc::HbVCSDownloadStrategy
     end
   end
 
-  def fetch_repo target, url, revision=nil, ignore_externals=false
+  def fetch_repo(target, url, revision=nil, ignore_externals=false)
     # Use "svn up" when the repository already exists locally.
     # This saves on bandwidth and will have a similar effect to verifying the
     # cache as it will make any changes to get the right revision.
@@ -246,7 +248,7 @@ end
 
 # Download from SVN servers with invalid or self-signed certs
 class Hbc::HbUnsafeSubversionDownloadStrategy < Hbc::HbSubversionDownloadStrategy
-  def fetch_repo target, url, revision=nil, ignore_externals=false
+  def fetch_repo(target, url, revision=nil, ignore_externals=false)
     # Use "svn up" when the repository already exists locally.
     # This saves on bandwidth and will have a similar effect to verifying the
     # cache as it will make any changes to get the right revision.
