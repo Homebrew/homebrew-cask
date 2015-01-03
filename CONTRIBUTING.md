@@ -9,6 +9,7 @@ all pretty happy about this.  Here's how to get started:
  * [Finding a Home For Your Cask](#finding-a-home-for-your-cask)
  * [Submitting Your Changes](#submitting-your-changes)
  * [Cleaning up](#cleaning-up)
+ * [Reporting Bugs](#reporting-bugs)
 
 
 ## Getting Set Up To Contribute
@@ -414,6 +415,22 @@ git checkout master
 
 Neat and tidy!
 
+
+## Reporting Bugs
+
+We still have bugs -- and we are busy fixing them!  If you have a problem, don't
+be shy about reporting it on our [GitHub issues page](https://github.com/caskroom/homebrew-cask/issues?state=open).
+
+When reporting bugs, remember that homebrew-cask is an independent project from
+Homebrew.  Do your best to direct bug reports to the appropriate project.  If
+your command-line started with `brew cask`, bring the bug to us first!
+
+Before reporting a bug, make sure you have the latest versions of Homebrew,
+homebrew-cask, and all Taps by running the following command:
+
+```bash
+$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+```
 
 ## Working On homebrew-cask Itself
 
