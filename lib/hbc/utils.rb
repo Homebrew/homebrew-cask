@@ -132,6 +132,12 @@ module Hbc::Utils
     return cmd_pn
   end
 
+  def self.exec_editor(*args)
+    editor = [ *ENV.values_at('HOMEBREW_EDITOR', 'VISUAL', 'EDITOR'),
+               *%w{mate edit vim /usr/bin/vim} ].compact.first
+    exec(editor, *args)
+  end
+
   # originally from Homebrew puts_columns
   def self.stringify_columns items, star_items=[]
     return if items.empty?

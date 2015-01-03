@@ -17,6 +17,12 @@ class Hbc::CLI::Create < Hbc::CLI::Base
     exec_editor cask_path
   end
 
+  # for mocking
+  # todo: add an :exec parameter to SystemCommand
+  def self.exec_editor(*args)
+    Hbc::Utils.exec_editor(*args)
+  end
+
   def self.template(cask_token)
     <<-EOS.undent
       cask :v1 => '#{cask_token}' do

@@ -44,31 +44,6 @@ def curl *args
   safe_system curl, *args
 end
 
-def which_editor
-  editor = ENV.values_at('HOMEBREW_EDITOR', 'VISUAL', 'EDITOR').compact.first
-  # If an editor wasn't set, try to pick a sane default
-  return editor unless editor.nil?
-
-  # Find Textmate
-  return 'mate' if Hbc::Utils.which "mate"
-  # Find BBEdit / TextWrangler
-  return 'edit' if Hbc::Utils.which "edit"
-  # Find vim
-  return 'vim' if Hbc::Utils.which "vim"
-  # Default to standard vim
-  return '/usr/bin/vim'
-end
-
-def exec_editor *args
-  safe_exec(which_editor, *args)
-end
-
-def safe_exec cmd, *args
-  # This buys us proper argument quoting and evaluation
-  # of environment variables in the cmd parameter.
-  exec "/bin/sh", "-c", "#{cmd} \"$@\"", "--", *args
-end
-
 def ignore_interrupts(opt = nil)
   std_trap = trap("INT") do
     puts "One sec, just cleaning up" unless opt == :quietly
