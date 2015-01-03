@@ -8,27 +8,6 @@ class Hbc::HbAbstractDownloadStrategy
     @version    = cask.version
   end
 
-  def expand_safe_system_args(args)
-    args = args.dup
-    args.each_with_index do |arg, ii|
-      if arg.is_a? Hash
-        unless Hbc.verbose
-          args[ii] = arg[:quiet_flag]
-        else
-          args.delete_at ii
-        end
-        return args
-      end
-    end
-    # 2 as default because commands are eg. svn up, git pull
-    args.insert(2, '-q') unless Hbc.verbose
-    args
-  end
-
-  def quiet_safe_system(*args)
-    safe_system(*expand_safe_system_args(args))
-  end
-
   # All download strategies are expected to implement these methods
   def fetch; end
   def cached_location; end
@@ -94,11 +73,6 @@ class Hbc::HbCurlDownloadStrategy < Hbc::HbAbstractDownloadStrategy
     temporary_path.size? or 0
   end
 
-  # Private method, can be overridden if needed.
-  def _fetch
-    curl @url, '-C', downloaded_size, '-o', temporary_path
-  end
-
   def fetch
     ohai "Downloading #{@url}"
     unless tarball_path.exist?
@@ -146,15 +120,6 @@ class Hbc::HbCurlDownloadStrategy < Hbc::HbAbstractDownloadStrategy
     # We need a Pathname because we've monkeypatched extname to support double
     # extensions (e.g. tar.gz). -- todo actually that monkeypatch has been removed
     Pathname.new(@url).extname[/[^?]+/]
-  end
-end
-
-# Download via an HTTP POST.
-# Query parameters on the URL are converted into POST parameters
-class Hbc::HbCurlPostDownloadStrategy < Hbc::HbCurlDownloadStrategy
-  def _fetch
-    base_url,data = @url.split('?')
-    curl base_url, '-d', data, '-C', downloaded_size, '-o', temporary_path
   end
 end
 
@@ -209,91 +174,6 @@ class Hbc::HbSubversionDownloadStrategy < Hbc::HbVCSDownloadStrategy
     `svn propget svn:externals '#{shell_quote(@url)}'`.chomp.each_line do |line|
       name, url = line.split(/\s+/)
       yield name, url
-    end
-  end
-
-  def fetch_repo(target, url, revision=nil, ignore_externals=false)
-    # Use "svn up" when the repository already exists locally.
-    # This saves on bandwidth and will have a similar effect to verifying the
-    # cache as it will make any changes to get the right revision.
-    svncommand = target.directory? ? 'up' : 'checkout'
-    args = ['svn', svncommand]
-    # SVN shipped with XCode 3.1.4 can't force a checkout.
-    args << '--force' unless MacOS.release == :leopard
-    args << url unless target.directory?
-    args << target
-    args << '-r' << revision if revision
-    args << '--ignore-externals' if ignore_externals
-    quiet_safe_system(*args)
-  end
-end
-
-# Require a newer version of Subversion than 1.4.x (Leopard-provided version)
-class Hbc::HbStrictSubversionDownloadStrategy < Hbc::HbSubversionDownloadStrategy
-  def find_svn
-    exe = `svn -print-path`
-    `#{exe} --version` =~ /version (\d+\.\d+(\.\d+)*)/
-    svn_version = $1
-    version_tuple=svn_version.split(".").collect {|v|Integer(v)}
-
-    if version_tuple[0] == 1 and version_tuple[1] <= 4
-      onoe "Detected Subversion (#{exe}, version #{svn_version}) is too old."
-      puts "Subversion 1.4.x will not export externals correctly for this formula."
-      puts "You must either `brew install subversion` or set HOMEBREW_SVN to the path"
-      puts "of a newer svn binary."
-    end
-    return exe
-  end
-end
-
-# Download from SVN servers with invalid or self-signed certs
-class Hbc::HbUnsafeSubversionDownloadStrategy < Hbc::HbSubversionDownloadStrategy
-  def fetch_repo(target, url, revision=nil, ignore_externals=false)
-    # Use "svn up" when the repository already exists locally.
-    # This saves on bandwidth and will have a similar effect to verifying the
-    # cache as it will make any changes to get the right revision.
-    svncommand = target.directory? ? 'up' : 'checkout'
-    args = ['svn', svncommand, '--non-interactive', '--trust-server-cert', '--force']
-    args << url unless target.directory?
-    args << target
-    args << '-r' << revision if revision
-    args << '--ignore-externals' if ignore_externals
-    quiet_safe_system(*args)
-  end
-end
-
-class Hbc::HbDownloadStrategyDetector
-  def self.detect(url, strategy=nil)
-    if strategy.nil?
-      detect_from_url(url)
-    elsif Class === strategy && strategy < Hbc::AbstractDownloadStrategy
-        strategy
-    elsif Symbol === strategy
-      detect_from_symbol(strategy)
-    else
-      raise TypeError,
-        "Unknown download strategy specification #{strategy.inspect}"
-    end
-  end
-
-  def self.detect_from_url(url)
-    case url
-    when %r[^https?://(.+?\.)?googlecode\.com/svn], %r[^https?://svn\.], %r[^svn://], %r[^https?://(.+?\.)?sourceforge\.net/svnroot/]
-      Hbc::HbSubversionDownloadStrategy
-    when %r[^http://svn\.apache\.org/repos/], %r[^svn\+http://]
-      Hbc::HbSubversionDownloadStrategy
-    else
-      Hbc::HbCurlDownloadStrategy
-    end
-  end
-
-  def self.detect_from_symbol(symbol)
-    case symbol
-    when :svn     then Hbc::HbSubversionDownloadStrategy
-    when :curl    then Hbc::HbCurlDownloadStrategy
-    when :post    then Hbc::HbCurlPostDownloadStrategy
-    else
-      raise "Unknown download strategy #{strategy} was requested."
     end
   end
 end
