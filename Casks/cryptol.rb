@@ -15,9 +15,5 @@ cask :v1 => 'cryptol' do
 
   caveats do
     files_in_usr_local
-    <<-EOS.undent
-      Cryptol depends on CVC4 (http://cvc4.cs.nyu.edu/).
-      The CVC4 binary must be in your PATH.
-    EOS
   end
 end
