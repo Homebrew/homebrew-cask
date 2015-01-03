@@ -11,6 +11,8 @@ cask :v1 => 'cryptol' do
   binary "cryptol-#{version}-MacOSX-64/bin/cryptol"
   binary "cryptol-#{version}-MacOSX-64/lib/Cryptol.cry", :target => '/usr/local/lib/Cryptol.cry'
 
+  depends_on :cask => 'cvc4'
+
   caveats do
     files_in_usr_local
     <<-EOS.undent
