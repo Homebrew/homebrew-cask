@@ -3,6 +3,7 @@ cask :v1 => 'feisty-dog-tag' do
   sha256 :no_check
 
   url 'https://s3.amazonaws.com/feisty-dog/Tag.zip'
+  name 'Tag'
   homepage 'http://www.feisty-dog.com/tag/'
   license :commercial
 
