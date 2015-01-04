@@ -23,6 +23,7 @@ cask :v1 => '1password' do
     app "1Password #{version.to_i}.app"
   end
 
+  name '1Password'
   homepage 'https://agilebits.com/onepassword'
   license :commercial
 
