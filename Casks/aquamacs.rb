@@ -12,6 +12,7 @@ cask :v1 => 'aquamacs' do
     url "https://github.com/davidswelt/aquamacs-emacs/releases/download/Aquamacs-#{version}/Aquamacs-Emacs-#{version}.dmg"
   end
 
+  name 'Aquamacs'
   homepage 'http://aquamacs.org/'
   license :gpl
 
