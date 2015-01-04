@@ -11,11 +11,8 @@ cask :v1 => 'craftstudio' do
 
   uninstall :quit => 'com.sparklinlabs.CraftStudioLauncher',
             :pkgutil => 'com.sparklinlabs.CraftStudioLauncher'
+
   zap       :delete => '~/Library/CraftStudio'
 
-  caveats <<-EOS.undent
-    #{token} requires mono-mre, available via
-
-      brew cask install mono-mre
-  EOS
+  depends_on :cask => 'mono-mre'
 end
