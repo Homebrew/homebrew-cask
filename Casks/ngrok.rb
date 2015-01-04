@@ -3,6 +3,7 @@ cask :v1 => 'ngrok' do
   sha256 :no_check
 
   url 'https://dl.ngrok.com/darwin_amd64/ngrok.zip'
+  name 'ngrok'
   homepage 'https://ngrok.com/'
   license :apache
 
