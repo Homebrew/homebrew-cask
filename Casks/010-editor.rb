@@ -4,7 +4,7 @@ cask :v1 => '010-editor' do
 
   url 'http://www.sweetscape.com/download/010EditorMacInstaller.dmg'
   homepage 'http://www.sweetscape.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   pkg '010 Editor.pkg'
 
