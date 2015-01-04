@@ -3,8 +3,8 @@ cask :v1 => 'aliedit' do
   version :latest
   sha256 :no_check
 
-  name '支付宝控件'
   url 'https://d.alipayobjects.com/sec/edit/wkaliedit.dmg'
+  name '支付宝控件'
   homepage 'https://110.alipay.com/sc/aliedit/intro.htm'
   license :closed
 
