@@ -3,6 +3,7 @@ cask :v1 => 'airfoil' do
   sha256 :no_check
 
   url 'http://neutral.rogueamoeba.com/mirror/files/Airfoil.zip'
+  name 'Airfoil'
   homepage 'http://www.rogueamoeba.com/airfoil/mac/'
   license :commercial
 
