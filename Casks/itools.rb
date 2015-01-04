@@ -3,6 +3,7 @@ cask :v1 => 'itools' do
   sha256 '4d17f188c710649a952eb66b75989fe739e848fc98db1970bf98fca0ae3f8cf9'
 
   url "http://dl2.itools.hk/dl/iTools_#{version}.dmg"
+  name 'iTools'
   homepage 'http://pro.itools.cn/mac'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
