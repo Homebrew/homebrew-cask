@@ -5,7 +5,7 @@ cask :v1 => 'craftstudio' do
   url 'http://craftstud.io/files/OSX/CraftStudio.pkg'
   name 'CraftStudio'
   homepage 'http://craftstud.io'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   pkg 'CraftStudio.pkg'
 
