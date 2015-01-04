@@ -3,6 +3,7 @@ cask :v1 => 'authoxy' do
   sha256 '921720e5bd1d7cd9f08e29bee928ea667662ba704f59340280194c8b4649b632'
 
   url "http://www.hrsoftworks.net/downloads/Authoxy#{version}.dmg"
+  name 'Authoxy'
   homepage 'http://www.hrsoftworks.net'
   license :gratis
 
