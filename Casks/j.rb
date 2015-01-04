@@ -3,6 +3,7 @@ cask :v1 => 'j' do
   sha256 '294cc7a2b92afe43ad19ec7921de2d9a65351ba1c5cfd9836bc07fe9d9a0d159'
 
   url "http://www.jsoftware.com/download/j#{version}/install/j#{version}_mac64.zip"
+  name 'J'
   homepage 'http://www.jsoftware.com'
   license :gpl
 
