@@ -4,6 +4,7 @@ cask :v1 => 'redcine-x-pro' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "http://s3.amazonaws.com/red_3/downloads/software/rcx/REDCINE-X_PRO_Build_#{version.to_i}_OSX.zip"
+  name 'REDCINE-X PRO'
   homepage 'https://www.red.com/'
   license :commercial
 
