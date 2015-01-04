@@ -3,6 +3,7 @@ cask :v1 => 'hammerspoon' do
   sha256 '671ef52625bfc885915d98523dee77a75fdfafa5194eedba5c78e07f0e7fe3b9'
 
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
+  name 'Hammerspoon'
   homepage 'http://www.hammerspoon.org/'
   license :mit
 
