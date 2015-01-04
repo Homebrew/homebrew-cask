@@ -25,7 +25,11 @@ class Hbc::Container::Air < Hbc::Container::Base
   end
 
   def extract
-    @command.run!(self.class.installer_cmd,
-                  :args => ['-silent', '-location', @cask.staged_path, Pathname.new(@path).realpath])
+    install = @command.run(self.class.installer_cmd,
+                           :args => ['-silent', '-location', @cask.staged_path, Pathname.new(@path).realpath])
+
+    if install.exit_status == 9 then
+      raise Hbc::CaskError.new "Adobe AIR application #{@cask} already exists on the system, and cannot be reinstalled."
+    end
   end
 end
