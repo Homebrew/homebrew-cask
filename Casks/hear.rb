@@ -3,6 +3,7 @@ cask :v1 => 'hear' do
   sha256 '6acd179b108283a51debac3c6a4f7cf20220d4129a702ce702f06cc7e2884649'
 
   url "https://s3.amazonaws.com/prosoft-engineering/hear/Hear_#{version}.dmg"
+  name 'Hear'
   appcast 'http://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear',
           :sha256 => '48edc9b03ce5d9709b27fb5099dc3cce25cc8920656b9cdb9a066ae7999c8d9d'
   homepage 'http://www.prosofteng.com/products/hear.php'

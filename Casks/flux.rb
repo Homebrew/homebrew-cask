@@ -3,6 +3,7 @@ cask :v1 => 'flux' do
   sha256 :no_check
 
   url 'https://justgetflux.com/mac/Flux.zip'
+  name 'f.lux'
   appcast 'https://justgetflux.com/mac/macflux.xml'
   homepage 'http://justgetflux.com'
   license :gratis
