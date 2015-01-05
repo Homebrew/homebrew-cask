@@ -14,9 +14,5 @@ cask :v1 => 'alib1' do
     system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName ALib1 (Presstube)', "#{staged_path}/presstube-alib1.app/Contents/Resources/Presstube - ALib1.saver/Contents/Info.plist"
   end
 
-  caveats <<-EOS.undent
-    #{token} requires Adobe Air, available via
-
-      brew cask install adobe-air
-  EOS
+  depends_on :cask => 'adobe-air'
 end
