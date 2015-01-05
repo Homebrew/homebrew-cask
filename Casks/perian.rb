@@ -4,9 +4,12 @@ cask :v1 => 'perian' do
 
   url "https://perian.cachefly.net/Perian_#{version}.dmg"
   homepage 'http://www.perian.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   prefpane 'Perian.prefPane'
+
+  depends_on :cask => 'caskroom/versions/quicktime-player7'
+
   caveats <<-EOS.undent
     Perian development officially stopped as of 2012, and 1.2.3 was the final released version.
 
