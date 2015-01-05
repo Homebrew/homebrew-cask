@@ -3,6 +3,7 @@ cask :v1 => 'mixlr' do
   sha256 :no_check
 
   url 'http://cdn.mixlr.com/Mixlr_beta_latest.pkg'
+  name 'Mixlr'
   homepage 'http://mixlr.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

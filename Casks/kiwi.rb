@@ -5,6 +5,7 @@ cask :v1 => 'kiwi' do
   url "https://s3.amazonaws.com/Kiwi/Kiwi_#{version}_1492.zip"
   appcast 'http://yourhead.com/appcast/kiwi/appcast.xml',
           :sha256 => '349fab8b17b13487dbe180cf09b3a621a3e1999a1551c105764d7502066490f4'
+  name 'Kiwi'
   homepage 'http://kiwi-app.net/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

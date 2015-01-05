@@ -3,6 +3,7 @@ cask :v1 => 'time-sink' do
   sha256 :no_check
 
   url 'http://manytricks.com/download/timesink'
+  name 'Time Sink'
   homepage 'http://manytricks.com/timesink/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

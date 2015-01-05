@@ -9,6 +9,7 @@ cask :v1 => 'retroarch' do
     url "http://www.libretro.com/wp-content/plugins/cip4-folder-download-widget/cip4-download.php?target=wp-content/releases/OSX/RetroArch-OSX10.7-x86_64-v#{version}.zip"
   end
 
+  name 'RetroArch'
   homepage 'http://www.libretro.com/'
   license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

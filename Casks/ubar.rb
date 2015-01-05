@@ -4,6 +4,7 @@ cask :v1 => 'ubar' do
 
   url "http://www.brawersoftware.com/downloads/ubar/ubar#{version.gsub('.','')}.zip"
   appcast "http://brawersoftware.com/appcasts/feeds/ubar/ubar2.xml"
+  name 'uBar'
   homepage 'http://brawersoftware.com/products/ubar'
   license :commercial
 

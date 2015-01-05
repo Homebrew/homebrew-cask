@@ -3,6 +3,7 @@ cask :v1 => 'tokens' do
   sha256 :no_check
 
   url 'http://usetokens.com/latest'
+  name 'Tokens'
   homepage 'http://usetokens.com/'
   license :closed
 

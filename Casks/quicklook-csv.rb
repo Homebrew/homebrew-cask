@@ -3,6 +3,7 @@ cask :v1 => 'quicklook-csv' do
   sha256 :no_check
 
   url 'https://quicklook-csv.googlecode.com/files/QuickLookCSV.dmg'
+  name 'QuickLookCSV'
   homepage 'https://github.com/p2/quicklook-csv'
   license :oss
 
