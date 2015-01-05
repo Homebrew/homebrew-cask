@@ -11,7 +11,7 @@ cask :v1 => 'anki' do
   url "http://ankisrs.net/download/mirror/anki-#{version}.dmg"
   name 'Anki'
   homepage 'http://ankisrs.net/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :affero
 
   app 'Anki.app'
 end
