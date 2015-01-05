@@ -3,6 +3,7 @@ cask :v1 => 'atom' do
   sha256 :no_check
 
   url 'https://atom.io/download/mac'
+  name 'Atom'
   homepage 'http://atom.io'
   license :mit
 

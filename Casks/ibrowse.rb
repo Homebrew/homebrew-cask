@@ -3,6 +3,7 @@ cask :v1 => 'ibrowse' do
   sha256 'c3cae297d676e64c3d21638c21583f7c30a8fdbe6a4e127adb0857bafcd8037d'
 
   url "http://cdn.macroplant.com/release/iBrowse-#{version}x.dmg"
+  name 'iBrowse'
   homepage 'http://www.ibrowseapp.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

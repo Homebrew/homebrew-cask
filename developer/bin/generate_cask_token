@@ -30,6 +30,7 @@ end
 
 EXPANDED_SYMBOLS = {
                     '+' => 'plus',
+                    '@' => 'at',
                    }
 
 CASK_FILE_EXTENSION = '.rb'

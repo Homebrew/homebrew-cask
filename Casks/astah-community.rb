@@ -3,6 +3,7 @@ cask :v1 => 'astah-community' do
   sha256 '6e3119f2a723a4a8975583d6693bae975e95fd3339666c07cfb16dd4138e7ceb'
 
   url "http://cdn.astah.net/downloads/astah-community-#{version.gsub('.','_')}-b4c6e9-MacOs.dmg"
+  name 'Astah Community'
   homepage 'http://astah.net/editions/community'
   license :gratis
   tags :vendor => 'Change Vision'

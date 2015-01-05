@@ -3,6 +3,8 @@ cask :v1 => '0xdbe-eap' do
   sha256 '5a388dd51cd41ce9f17cd3714edd14d91c0722db380c0949a739cc4e6b6696ac'
 
   url "http://download.jetbrains.com/dbe/0xdbe-#{version}.dmg"
+  name '0xDBE EAP'
+  name '0xDBE'
   homepage 'http://www.jetbrains.com/dbe/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

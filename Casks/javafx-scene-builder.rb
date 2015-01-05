@@ -6,6 +6,7 @@ cask :v1 => 'javafx-scene-builder' do
       :cookies => {
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
+  name 'JavaFX Scene Builder'
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/javafxscenebuilder-info-2157684.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

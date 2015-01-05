@@ -3,6 +3,7 @@ cask :v1 => 'airserver' do
   sha256 '5a34ba5034ce94b335c5fe1e7d0afad156ec7cf8133ecfc93c7ef0e37777b33e'
 
   url "http://dl.airserver.com/mac/AirServer-#{version}.dmg"
+  name 'AirServer'
   homepage 'http://www.airserver.com'
   license :commercial
 

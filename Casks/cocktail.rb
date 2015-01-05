@@ -19,7 +19,8 @@ cask :v1 => 'cocktail' do
     appcast 'http://www.maintain.se/downloads/sparkle/yosemite/yosemite.xml'
   end
 
-  homepage 'http://www.maintain.se/cocktail'
+  name 'Cocktail'
+  homepage 'http://www.maintain.se/cocktail/'
   license :commercial
 
   app 'Cocktail.app'

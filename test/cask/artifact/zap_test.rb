@@ -3,9 +3,9 @@ require 'test_helper'
 # todo
 # - test that zap removes an alternate version of the same Cask
 
-describe Cask::Artifact::Zap do
+describe Hbc::Artifact::Zap do
   before {
-    @cask = Cask.load('with-zap')
+    @cask = Hbc.load('with-zap')
     shutup do
       TestHelper.install_without_artifacts(@cask)
     end
@@ -13,7 +13,7 @@ describe Cask::Artifact::Zap do
 
   describe 'install_phase' do
     it 'does nothing, because the install_phase method is a no-op' do
-      zap_artifact = Cask::Artifact::Zap.new(@cask, Cask::FakeSystemCommand)
+      zap_artifact = Hbc::Artifact::Zap.new(@cask, Hbc::FakeSystemCommand)
       shutup do
         zap_artifact.install_phase
       end
@@ -22,7 +22,7 @@ describe Cask::Artifact::Zap do
 
   describe 'uninstall_phase' do
     it 'does nothing, because the uninstall_phase method is a no-op' do
-      zap_artifact = Cask::Artifact::Zap.new(@cask, Cask::FakeSystemCommand)
+      zap_artifact = Hbc::Artifact::Zap.new(@cask, Hbc::FakeSystemCommand)
       shutup do
         zap_artifact.uninstall_phase
       end
@@ -32,13 +32,13 @@ describe Cask::Artifact::Zap do
   describe 'zap_phase' do
     # todo: zap tests for :signal (implementation does not use SystemCommand)
     it 'runs the specified zap procedures for the Cask' do
-      zap_artifact = Cask::Artifact::Zap.new(@cask, Cask::FakeSystemCommand)
+      zap_artifact = Hbc::Artifact::Zap.new(@cask, Hbc::FakeSystemCommand)
 
-      Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application "System Events" to count processes whose bundle identifier is "my.fancy.package.app"'], '1')
-      Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application id "my.fancy.package.app" to quit'])
+      Hbc::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application "System Events" to count processes whose bundle identifier is "my.fancy.package.app"'], '1')
+      Hbc::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application id "my.fancy.package.app" to quit'])
 
-      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', @cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool'), '--please'])
-      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-rf', '--',
+      Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', @cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool'), '--please'])
+      Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-rf', '--',
                                                Pathname.new('~/Library/Preferences/my.fancy.app.plist').expand_path])
 
       shutup do
@@ -47,10 +47,10 @@ describe Cask::Artifact::Zap do
     end
 
     it 'can zap using pkgutil, launchctl, and file lists' do
-      cask = Cask.load('with-pkgutil-zap')
-      zap_artifact = Cask::Artifact::Zap.new(cask, Cask::FakeSystemCommand)
+      cask = Hbc.load('with-pkgutil-zap')
+      zap_artifact = Hbc::Artifact::Zap.new(cask, Hbc::FakeSystemCommand)
 
-      Cask::FakeSystemCommand.stubs_command(
+      Hbc::FakeSystemCommand.stubs_command(
         ['/usr/sbin/pkgutil', '--pkgs=my.fancy.package.*'],
         [
           'my.fancy.package.main',
@@ -58,14 +58,14 @@ describe Cask::Artifact::Zap do
         ].join("\n")
       )
 
-      Cask::FakeSystemCommand.stubs_command(
+      Hbc::FakeSystemCommand.stubs_command(
         ['/usr/sbin/pkgutil', '--only-files', '--files', 'my.fancy.package.main'],
         [
           'fancy/bin/fancy.exe',
           'fancy/var/fancy.data',
         ].join("\n")
       )
-      Cask::FakeSystemCommand.stubs_command(
+      Hbc::FakeSystemCommand.stubs_command(
         ['/usr/sbin/pkgutil', '--only-dirs', '--files', 'my.fancy.package.main'],
         [
           'fancy',
@@ -73,7 +73,7 @@ describe Cask::Artifact::Zap do
           'fancy/var',
         ].join("\n")
       )
-      Cask::FakeSystemCommand.stubs_command(
+      Hbc::FakeSystemCommand.stubs_command(
         ['/usr/sbin/pkgutil', '--files', 'my.fancy.package.main'],
         [
           'fancy',
@@ -83,7 +83,7 @@ describe Cask::Artifact::Zap do
           'fancy/var/fancy.data',
         ].join("\n")
       )
-      Cask::FakeSystemCommand.stubs_command(
+      Hbc::FakeSystemCommand.stubs_command(
         ['/usr/sbin/pkgutil', '--pkg-info-plist', 'my.fancy.package.main'],
         <<-PLIST
 <?xml version="1.0" encoding="UTF-8"?>
@@ -99,11 +99,11 @@ describe Cask::Artifact::Zap do
         PLIST
       )
 
-      Cask::FakeSystemCommand.stubs_command(
+      Hbc::FakeSystemCommand.stubs_command(
         ['/bin/launchctl', 'list', 'my.fancy.package.service'],
         "launchctl list returned unknown response\n"
       )
-      Cask::FakeSystemCommand.stubs_command(
+      Hbc::FakeSystemCommand.stubs_command(
         ['/usr/bin/sudo', '-E', '--', '/bin/launchctl', 'list', 'my.fancy.package.service'],
         <<-"PLIST"
 {
@@ -119,14 +119,14 @@ describe Cask::Artifact::Zap do
         PLIST
       )
 
-      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/launchctl', 'remove', 'my.fancy.package.service'])
-      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/launchctl', 'unload', '-w', '--', 'my.fancy.package.service'])
+      Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/launchctl', 'remove', 'my.fancy.package.service'])
+      Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/launchctl', 'unload', '-w', '--', 'my.fancy.package.service'])
 
-      Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/kextstat', '-l', '-b', 'my.fancy.package.kernelextension'], 'loaded')
-      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/sbin/kextunload', '-b', 'my.fancy.package.kernelextension'])
-      Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/pkgutil', '--forget', 'my.fancy.package.main'])
+      Hbc::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/kextstat', '-l', '-b', 'my.fancy.package.kernelextension'], 'loaded')
+      Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/sbin/kextunload', '-b', 'my.fancy.package.kernelextension'])
+      Hbc::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/pkgutil', '--forget', 'my.fancy.package.main'])
 
-      Cask::FakeSystemCommand.stubs_command(
+      Hbc::FakeSystemCommand.stubs_command(
         ['/usr/sbin/pkgutil', '--only-files', '--files', 'my.fancy.package.agent'],
         [
           'fancy/agent/fancy-agent.exe',
@@ -134,14 +134,14 @@ describe Cask::Artifact::Zap do
           'fancy/agent/fancy-agent.log',
         ].join("\n")
       )
-      Cask::FakeSystemCommand.stubs_command(
+      Hbc::FakeSystemCommand.stubs_command(
         ['/usr/sbin/pkgutil', '--only-dirs', '--files', 'my.fancy.package.agent'],
         [
           'fancy',
           'fancy/agent',
         ].join("\n")
       )
-      Cask::FakeSystemCommand.stubs_command(
+      Hbc::FakeSystemCommand.stubs_command(
         ['/usr/sbin/pkgutil', '--files', 'my.fancy.package.agent'],
         [
           'fancy',
@@ -151,7 +151,7 @@ describe Cask::Artifact::Zap do
           'fancy/agent/fancy-agent.log',
         ].join("\n")
       )
-      Cask::FakeSystemCommand.stubs_command(
+      Hbc::FakeSystemCommand.stubs_command(
         ['/usr/sbin/pkgutil', '--pkg-info-plist', 'my.fancy.package.agent'],
         <<-PLIST
 <?xml version="1.0" encoding="UTF-8"?>
@@ -173,15 +173,15 @@ describe Cask::Artifact::Zap do
         /tmp/fancy/bin
         /tmp/fancy/var
       ].each do |dir|
-        Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/bin/chmod', '--', '777', '#{dir}'])
+        Hbc::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/bin/chmod', '--', '777', '#{dir}'])
       end
 
-      Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/pkgutil', '--forget', 'my.fancy.package.agent'])
+      Hbc::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/pkgutil', '--forget', 'my.fancy.package.agent'])
 
-      Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-f', '--',
+      Hbc::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-f', '--',
                                              Pathname.new('/tmp/fancy/bin/fancy.exe'),
                                              Pathname.new('/tmp/fancy/var/fancy.data')])
-      Cask::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-f', '--',
+      Hbc::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-f', '--',
                                              Pathname.new('/tmp/fancy/agent/fancy-agent.exe'),
                                              Pathname.new('/tmp/fancy/agent/fancy-agent.pid'),
                                              Pathname.new('/tmp/fancy/agent/fancy-agent.log')])

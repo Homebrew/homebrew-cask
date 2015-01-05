@@ -18,12 +18,9 @@ casks_path = brew_cask_path.join('Casks')
 lib_path = brew_cask_path.join('lib')
 $:.push(lib_path)
 
-# add our homebrew fork to load path
-# todo: removeme, this is transitional
-$:.push(lib_path.join('homebrew-fork', 'Library', 'Homebrew'))
-
 # require homebrew testing env
-require 'test/testing_env'
+# todo: removeme, this is transitional
+require 'vendor/homebrew-fork/testing_env'
 
 # todo temporary, copied from old Homebrew, this method is now moved inside a class
 def shutup
@@ -58,14 +55,14 @@ require 'mocha/integration/mini_test'
 Mocha::Integration::MiniTest.activate
 
 # our baby
-require 'cask'
+require 'hbc'
 
 # Look for Casks in testcasks by default.  It is elsewhere required that
 # the string "test" appear in the directory name.
-Cask.default_tap = 'caskroom/homebrew-testcasks'
+Hbc.default_tap = 'caskroom/homebrew-testcasks'
 
 # our own testy caskroom
-Cask.caskroom = HOMEBREW_PREFIX.join('TestCaskroom')
+Hbc.caskroom = HOMEBREW_PREFIX.join('TestCaskroom')
 
 class TestHelper
   # helpers for test Casks to reference local files easily
@@ -78,15 +75,15 @@ class TestHelper
   end
 
   def self.test_cask
-    Cask.load('basic-cask')
+    Hbc.load('basic-cask')
   end
 
   def self.fake_fetcher
-    Cask::FakeFetcher
+    Hbc::FakeFetcher
   end
 
   def self.fake_response_for(*args)
-    Cask::FakeFetcher.fake_response_for(*args)
+    Hbc::FakeFetcher.fake_response_for(*args)
   end
 
   def self.must_output(test, lambda, expected)
@@ -107,7 +104,7 @@ class TestHelper
   end
 
   def self.install_without_artifacts(cask)
-    Cask::Installer.new(cask).tap do |i|
+    Hbc::Installer.new(cask).tap do |i|
       shutup do
         i.download
         i.extract_primary_container
@@ -135,7 +132,7 @@ HOMEBREW_PREFIX.join('bin').mkdir
 FileUtils.ln_s project_root, taps_dest.join('homebrew-cask')
 
 # Common superclass for test Casks for when we need to filter them out
-class TestCask < Cask; end
+class TestHbc < Hbc; end
 
 # jack in some optional utilities
 FileUtils.ln_s '/usr/local/bin/cabextract', HOMEBREW_PREFIX.join('bin/cabextract')

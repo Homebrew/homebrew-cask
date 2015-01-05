@@ -69,8 +69,8 @@ changelog.
 	$ export NEW_RELEASE_TAG="$(./developer/bin/get_release_tag -next -patch)"; echo "$NEW_RELEASE_TAG"
 	```
 7. Make sure the value in `$NEW_RELEASE_TAG` is what you want.
-8. Bump the `HOMEBREW_CASK_VERSION` string which is stored in the file
-   `lib/cask/version.rb`:
+8. Bump the `HBC_VERSION` string which is stored in the file
+   `lib/hbc/version.rb`:
 
 	```bash
 	$ ./developer/bin/bump_version "$NEW_RELEASE_TAG"
@@ -91,34 +91,40 @@ changelog.
 11. When complete, insert the new release changelog near the beginning of
     `doc/CHANGELOG.md`, just after the first line.
 12. Make a commit on `master` with the modifications to `doc/CHANGELOG.md`,
-   `lib/cask/version.rb`, and/or `doc/man/brew-cask.1`:
+   `lib/hbc/version.rb`, and/or `doc/man/brew-cask.1`:
 
 	```bash
-	$ git add doc/CHANGELOG.md lib/cask/version.rb doc/man/brew-cask.1
+	$ git add doc/CHANGELOG.md lib/hbc/version.rb doc/man/brew-cask.1
 	$ git commit -m "cut $NEW_RELEASE_TAG"
 	```
 
-13. Tag that commit.  Make certain to provide a `-m` message so that we get
-    an annotated tag in the git history:
+13. Pull to get changes since you started working on the changelog:
+
+	```bash
+	$ git pull https://github.com/caskroom/homebrew-cask master
+	```
+
+14. Tag the tip commit.  Make certain to provide a `-m` message so that we
+    get an annotated tag in the git history:
 
 	```bash
 	$ git tag -m "$NEW_RELEASE_TAG" "$NEW_RELEASE_TAG"
 	```
 
-14. Push that commit and the tag
+15. Push that commit and the tag
 
 	```bash
-	$ git push https://github.com/caskroom/homebrew-cask master && git push https://github.com/caskroom/homebrew-cask tag "$NEW_RELEASE_TAG" && echo "new release $NEW_RELEASE was successfully pushed"
+	$ git push https://github.com/caskroom/homebrew-cask master && git push https://github.com/caskroom/homebrew-cask tag "$NEW_RELEASE_TAG" && echo "new release $NEW_RELEASE_TAG was successfully pushed"
 	```
     If you don't see a success message, that probably means someone updated
     master while you were working on the changelog.  You must pull and resolve.
-15. Open your browser to the relevant release page on GitHub:
+16. Open your browser to the relevant release page on GitHub:
 
 	```bash
 	$ open "https://github.com/caskroom/homebrew-cask/releases/new?tag=$NEW_RELEASE_TAG"
 	```
 
-16. On the release page
+17. On the release page
     * If the `Tag version` field does not auto-fill, manually select the tag
       you just created (shell variable `$NEW_RELEASE_TAG`).
     * Paste the Markdown summary for the new release from `doc/CHANGELOG.md`
@@ -126,17 +132,17 @@ changelog.
     * Do not include the `## <version number>` heading line from the changelog
       in the pasted text.
     * The `Release title` field may be left blank.
-17. Click `Publish Release`.
-18. Unset the shell variable `$NEW_RELEASE_TAG`; you don't need it anymore:
+18. Click `Publish Release`.
+19. Unset the shell variable `$NEW_RELEASE_TAG`; you don't need it anymore:
 
 	```bash
 	$ unset NEW_RELEASE_TAG
 	```
 
-19. Announce the release on IRC.
-20. Respond to any pending GitHub issues which may be resolved after users
+20. Announce the release on IRC.
+21. Respond to any pending GitHub issues which may be resolved after users
     upgrade.
-21. Rejoice! Have a :cookie:.
+22. Rejoice! Have a :cookie:.
 
 ## Things to Consider
 

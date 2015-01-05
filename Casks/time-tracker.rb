@@ -5,6 +5,7 @@ cask :v1 => 'time-tracker' do
   url "https://time-tracker-mac.googlecode.com/files/Time%20Tracker-#{version}.zip"
   appcast 'http://time-tracker-mac.googlecode.com/svn/appcast/timetracker-test.xml',
           :sha256 => '8737634f2e43e4eaf63d2ab603b47e46c13f3c322e2484b407f45776905777aa'
+  name 'TimeTracker'
   homepage 'https://code.google.com/p/time-tracker-mac'
   license :oss
 

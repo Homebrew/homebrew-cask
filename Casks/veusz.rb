@@ -3,6 +3,7 @@ cask :v1 => 'veusz' do
   sha256 'bfcd3a93a4177deeee10089378123039afb0a9114a996e5b9b3b93388a23f3c2'
 
   url "http://download.gna.org/veusz/Binaries-AppleOSX/veusz-#{version}-AppleOSX.dmg"
+  name 'Veusz'
   homepage 'http://home.gna.org/veusz/'
   license :gpl
 

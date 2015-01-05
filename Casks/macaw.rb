@@ -1,12 +1,12 @@
 cask :v1 => 'macaw' do
-  version '1.5.9'
-  sha256 '390a052022e92289a9c8ef2973e91d7f6928ff88eb3702f0feebe52c8036a717'
+  version '1.5.10'
+  sha256 'e9a038afe2ad28e9110afd1aedd442f2e3cbf3daf0edcba6d08841fdbc9bfd4b'
 
   url "http://download.macaw.co/#{version}/Macaw#{version}.dmg"
   appcast 'http://download.macaw.co/appcast.xml',
-          :sha256 => '33dff9f8acedaf8d8213e5d88b18219fc2686f38d32b42dae6a55ace3dc917ad'
+          :sha256 => '6db73e26f6d1d9a891762e9622e594c79fc0d2bb57ff14a98951e7d8ade37d92'
   homepage 'http://macaw.co/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Macaw.app'
 end

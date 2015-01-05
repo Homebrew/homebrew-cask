@@ -144,11 +144,11 @@ Tests against `MacOS.release` may use either symbolic names or version
 strings with numeric comparison operators:
 
 ```ruby
-if MacOS.release < :mavericks     # symbolic name
+if MacOS.release <= :mavericks     # symbolic name
 ```
 
 ```ruby
-if MacOS.release < '10.9'         # version string
+if MacOS.release <= '10.9'         # version string
 ```
 
 The available symbols for OS X versions are: `:tiger`, `:leopard`,
@@ -165,9 +165,9 @@ This makes it more likely that the Cask will work without alteration when
 a new OS is released.  Example (from [coconutbattery.rb](../Casks/coconutbattery.rb)):
 
 ```ruby
-if MacOS.release < :leopard
+if MacOS.release <= :tiger
   # ...
-elsif MacOS.release < :lion
+elsif MacOS.release <= :snow_leopard
   # ...
 else
   # ...
@@ -573,6 +573,16 @@ installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer
 `depends_on` is used to declare dependencies and requirements for a Cask.
 `depends_on` is not consulted until `install` is attempted.
 
+### Depends_on :cask
+
+The value should be another Cask token, needed by the current Cask.
+
+Example use: [`SSHFS`](https://github.com/caskroom/homebrew-cask/blob/master/Casks/sshfs.rb) depends on OSXFUSE.
+
+```ruby
+depends_on :cask => 'osxfuse'
+```
+
 ### Depends_on :formula
 
 The value should name a Homebrew Formula needed by the Cask.
@@ -668,7 +678,7 @@ depends_on :arch => :x86_64
 | key        | description |
 | ---------- | ----------- |
 | `:formula` | a Homebrew Formula
-| `:cask`    | *stub - not yet functional*
+| `:cask`    | a Cask token
 | `:macos`   | a symbol, string, array, or comparison expression defining OS X release requirements.
 | `:arch`    | a symbol or array defining hardware requirements.
 | `:x11`     | a Boolean indicating a dependency on X11.

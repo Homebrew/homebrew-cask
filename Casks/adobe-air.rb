@@ -3,6 +3,7 @@ cask :v1 => 'adobe-air' do
   sha256 :no_check # required as upstream package is updated in-place
 
   url "http://airdownload.adobe.com/air/mac/download/#{version}/AdobeAIR.dmg"
+  name 'Adobe AIR'
   homepage 'https://get.adobe.com/air/'
   license :gratis
 

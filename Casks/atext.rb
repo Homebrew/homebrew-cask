@@ -3,6 +3,7 @@ cask :v1 => 'atext' do
   sha256 :no_check
 
   url 'http://www.trankynam.com/atext/downloads/aText.dmg'
+  name 'aText'
   appcast 'http://www.trankynam.com/atext/aText-Appcast.xml'
   homepage 'http://www.trankynam.com/atext/'
   license :commercial

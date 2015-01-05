@@ -3,9 +3,10 @@ cask :v1 => 'anvil' do
   sha256 :no_check
 
   url 'https://sparkler.herokuapp.com/apps/3/download'
+  name 'Anvil'
   appcast 'http://sparkler.herokuapp.com/apps/3/updates.xml'
   homepage 'http://anvilformac.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :mit
 
   app 'Anvil.app'
 end

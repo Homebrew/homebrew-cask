@@ -8,9 +8,5 @@ cask :v1 => 'grooveshark' do
 
   app 'Grooveshark.app'
 
-  caveats <<-EOS.undent
-    #{token} requires Adobe Flash, available via
-
-      brew cask install flash
-  EOS
+  depends_on :cask => 'flash'
 end

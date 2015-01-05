@@ -15,14 +15,14 @@ require 'mocha/api'
 # add homebrew-cask lib to load path
 $:.push(project_root.join('lib').to_s)
 
-require 'cask'
+require 'hbc'
 
 # Look for Casks in testcasks by default.  It is elsewhere required that
 # the string "test" appear in the directory name.
-Cask.default_tap = 'caskroom/homebrew-testcasks'
+Hbc.default_tap = 'caskroom/homebrew-testcasks'
 
 # our own testy caskroom
-Cask.caskroom = HOMEBREW_PREFIX.join('TestCaskroom')
+Hbc.caskroom = HOMEBREW_PREFIX.join('TestCaskroom')
 
 RSpec.configure do |config|
   config.include ShutupHelper

@@ -3,6 +3,7 @@ cask :v1 => 'au-lab' do
   sha256 :no_check
 
   url 'http://images.apple.com/itunes/mastered-for-itunes/docs/au_lab.zip'
+  name 'AU Lab'
   homepage 'http://www.apple.com/itunes/mastered-for-itunes/'
   license :gratis
 

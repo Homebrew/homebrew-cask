@@ -134,6 +134,7 @@ To convert the App's Simplified Name (above) to a token:
 
   * convert all letters to lower case
   * expand the `+` symbol into a separated English word: `-plus-`
+  * expand the `@` symbol into a separated English word: `-at-`
   * spaces become hyphens
   * hyphens stay hyphens
   * digits stay digits

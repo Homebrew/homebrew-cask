@@ -3,8 +3,10 @@ cask :v1 => 'virtualbox' do
   sha256 '744e77119a640a5974160213c9912568a3d88dbd06a2fc6b6970070941732705'
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(/-.*$/, '')}/VirtualBox-#{version}-OSX.dmg"
+  name 'VirtualBox'
   homepage 'http://www.virtualbox.org'
   license :gpl
+  tags :vendor => 'Oracle'
 
   pkg 'VirtualBox.pkg'
 

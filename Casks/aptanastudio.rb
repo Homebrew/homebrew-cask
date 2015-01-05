@@ -3,6 +3,7 @@ cask :v1 => 'aptanastudio' do
   sha256 'd2207934d485cca10d6ad624a67d9f21c1bef46e0a9d58a9db334cec7fb55948'
 
   url "http://download.aptana.com/studio3/standalone/#{version}/mac/Aptana_Studio_3_Setup_#{version}.dmg"
+  name 'Aptana Studio'
   homepage 'http://www.aptana.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
