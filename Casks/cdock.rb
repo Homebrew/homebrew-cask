@@ -8,9 +8,5 @@ cask :v1 => 'cdock' do
 
   app 'cDock.app'
 
-  caveats <<-EOS.undent
-    #{token} requires easysimbl, available via
-
-      brew cask install easysimbl
-  EOS
+  depends_on :cask => 'easysimbl'
 end
