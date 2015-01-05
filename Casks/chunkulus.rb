@@ -12,9 +12,5 @@ cask :v1 => 'chunkulus' do
     system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName Chunkulus (Presstube)', "#{staged_path}/presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver/Contents/Info.plist"
   end
 
-  caveats <<-EOS.undent
-    #{token} requires Adobe Air, available via
-
-      brew cask install adobe-air
-  EOS
+  depends_on :cask => 'adobe-air'
 end
