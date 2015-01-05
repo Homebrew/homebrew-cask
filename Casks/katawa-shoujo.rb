@@ -4,6 +4,7 @@ cask :v1 => 'katawa-shoujo' do
 
   url 'http://dl.katawa-shoujo.com/gold_1.2/%5b4ls%5d_katawa_shoujo_1.2.1-%5bmac%5d%5b1FDB1D61%5d.dmg'
   name 'Katawa Shoujo'
+  name 'かたわ少女'
   homepage 'http://katawa-shoujo.com/'
   license :cc
 
