@@ -10,6 +10,7 @@ cask :v1 => 'textexpander' do
   end
 
   url "http://cdn.smilesoftware.com/TextExpander_#{version}.zip"
+  name 'TextExpander'
   homepage 'http://www.smilesoftware.com/TextExpander/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
