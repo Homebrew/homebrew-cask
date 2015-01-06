@@ -4,6 +4,8 @@ cask :v1 => 'chefdk' do
 
   # amazonaws is the official download host per the vendor homepage
   url "https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-#{version}.dmg"
+  name 'Chef Development Kit'
+  name 'ChefDK'
   homepage 'https://downloads.getchef.com/chef-dk/'
   license :apache
 
