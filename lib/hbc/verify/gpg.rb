@@ -18,11 +18,10 @@ class Hbc::Verify::Gpg
   end
 
   def installed?
-    cmd = @command.run('/usr/bin/type',
-                       :args => ['-p', 'gpg'])
+    gpg_bin_path = @command.run('/usr/bin/type',
+                                :args => ['-p', 'gpg'])
 
-    # if `gpg` is found, return its absolute path
-    cmd.success? ? cmd.stdout : false
+    gpg_bin_path.success? ? gpg_bin_path.stdout : false
   end
 
 
@@ -31,7 +30,7 @@ class Hbc::Verify::Gpg
     cached = cask.metadata_subdir('gpg') unless unversioned_cask
 
     meta_dir = cached || cask.metadata_subdir('gpg', :now, true)
-    sig_path = meta_dir.join("signature.asc")
+    sig_path = meta_dir.join('signature.asc')
 
     curl(cask.gpg.signature, '-o', sig_path.to_s) unless cached || force
 
