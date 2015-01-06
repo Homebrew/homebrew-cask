@@ -5,8 +5,9 @@ cask :v1 => 'feeds' do
   url "https://feedswww.appspot.com/releases/Feeds-#{version}.zip"
   appcast 'https://feedswww.appspot.com/appcast.xml',
           :sha256 => 'cb54169bafd37e7d482ef39ed2f8ee555c35009c36922a03914d87d1e751a2da'
+  name 'Feeds'
   homepage 'http://www.feedsapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :mit
 
   app 'Feeds.app'
 
