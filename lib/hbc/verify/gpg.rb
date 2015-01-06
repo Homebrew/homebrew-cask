@@ -3,12 +3,13 @@ class Hbc::Verify::Gpg
     cask.gpg
   end
 
-  attr_reader :cask, :downloaded_path
+  attr_reader :cask, :downloaded_path, :signature, :successful
 
-  def initialize(cask, downloaded_path, command=Hbc::SystemCommand)
+  def initialize(cask, downloaded_path, force_fetch=false, command=Hbc::SystemCommand)
     @command = command
     @cask = cask
     @downloaded_path = downloaded_path
+    @signature = retrieve_signature(force_fetch)
     @successful = nil
   end
 
@@ -24,8 +25,7 @@ class Hbc::Verify::Gpg
     gpg_bin_path.success? ? gpg_bin_path.stdout : false
   end
 
-
-  def fetch_sig(force=false)
+  def retrieve_signature(force=false)
     unversioned_cask = cask.version.is_a?(Symbol)
     cached = cask.metadata_subdir('gpg') unless unversioned_cask
 
@@ -49,10 +49,9 @@ class Hbc::Verify::Gpg
   def verify
     return unless available?
     import_key
-    sig = fetch_sig
 
     ohai "Verifying GPG signature for #{@cask}"
-    check = @command.run('gpg', :args => ['--verify', sig, downloaded_path],
+    check = @command.run('gpg', :args => ['--verify', @signature, downloaded_path],
                                 :print_stdout => true)
 
     @successful = check.success?
