@@ -5,6 +5,7 @@ cask :v1 => 'launchcontrol' do
   url "http://www.soma-zone.com/download/files/LaunchControl_#{version}.tar.bz2"
   appcast 'http://www.soma-zone.com/LaunchControl/a/appcast.xml',
           :sha256 => 'a82b64b1b68b0fc013145825eee9b18930378caa24a664d93d5777848c6fcc15'
+  name 'LaunchControl'
   homepage 'http://www.soma-zone.com/LaunchControl/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

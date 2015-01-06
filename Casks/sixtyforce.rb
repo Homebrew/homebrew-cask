@@ -3,6 +3,7 @@ cask :v1 => 'sixtyforce' do
   sha256 :no_check
 
   url 'http://sixtyforce.com/download/sixtyforce.zip'
+  name 'sixtyforce'
   homepage 'http://sixtyforce.com/'
   license :freemium
 

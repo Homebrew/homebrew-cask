@@ -16,6 +16,7 @@ cask :v1 => 'coconutbattery' do
             :sha256 => '37968aee16f6fb0a705d68bfa2418083dd9768a4b5477ce8ec6e6b74ef26704c'
   end
 
+  name 'coconutBattery'
   homepage 'http://www.coconut-flavour.com/coconutbattery/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

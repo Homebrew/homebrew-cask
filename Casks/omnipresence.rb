@@ -3,6 +3,7 @@ cask :v1 => 'omnipresence' do
   sha256 '4b6304fffdeed85054379bde7b43776957b5061f0bd089f29fe3005ed19ca49f'
 
   url "http://downloads.omnigroup.com/software/MacOSX/10.8/OmniPresence-#{version}.dmg"
+  name 'OmniPresence'
   homepage 'http://www.omnigroup.com/omnipresence'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

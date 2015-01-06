@@ -5,6 +5,7 @@ cask :v1 => 'tinygrab' do
   url "http://tinygrab.com/downloads/app/TinyGrab#{version}.dmg"
   appcast 'http://tinygrab.com/appcast/tinygrab-appcast.xml',
           :sha256 => '918a398a34b634076c71660304495a85e1555529f9f3e5432fa961107a481bb3'
+  name 'TinyGrab'
   homepage 'http://www.tinygrab.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

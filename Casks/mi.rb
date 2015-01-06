@@ -3,6 +3,7 @@ cask :v1 => 'mi' do
   sha256 'e70fa0ee864d78848633acc332e96c20310f87ee50ee541a4b07eaa87cb2165b'
 
   url "http://www.mimikaki.net/download/mi#{version}.dmg"
+  name 'Mi'
   homepage 'http://www.mimikaki.net/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

@@ -5,6 +5,7 @@ cask :v1 => 'fairmount' do
   url "https://github.com/downloads/pmetzger/Fairmount/Fairmount-#{version}.dmg"
   appcast 'http://www.example.com/sparkle/fairmount/checkupdate.php',
           :sha256 => '3587cb776ce0e4e8237f215800b7dffba0f25865cb84550e87ea8bbac838c423'
+  name 'Fairmount'
   homepage 'https://github.com/BoxOfSnoo/Fairmount'
   license :oss
 

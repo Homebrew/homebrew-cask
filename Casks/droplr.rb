@@ -6,6 +6,7 @@ cask :v1 => 'droplr' do
   url 'http://files.droplr.com.s3.amazonaws.com/apps/mac/Droplr+41.zip'
   appcast 'https://droplr.com/appcast/appcast.xml',
           :sha256 => 'a9de5e093038bb95e9334c21a6e4f9e91148535b559756a2824790522df278f8'
+  name 'Droplr'
   homepage 'https://www.droplr.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

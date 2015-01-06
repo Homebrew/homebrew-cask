@@ -5,6 +5,7 @@ cask :v1 => 'concentrate' do
   url "http://www.getconcentrating.com/builds/concentrate.#{version}.zip"
   appcast 'http://getconcentrating.com/concentrate_appcast.xml',
           :sha256 => '8f47c0fb41386b632a27d1e1a5528238be72339932e1035b6ad6a822f263411b'
+  name 'Concentrate'
   homepage 'http://www.getconcentrating.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
