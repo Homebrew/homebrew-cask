@@ -14,6 +14,4 @@ cask :v1 => 'p4v' do
 
   app 'p4v.app'
   binary 'p4vc'
-
-  caveats 'p4merge is in a separate Cask'
 end
