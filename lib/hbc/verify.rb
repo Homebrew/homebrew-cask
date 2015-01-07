@@ -3,6 +3,7 @@ require 'digest'
 module Hbc::Verify
   def self.all(path, cask)
     checksum(path, cask)
+    gpg_signature(path, cask)
   end
 
   def self.checksum(path, cask)
@@ -20,6 +21,16 @@ module Hbc::Verify
     else
       ohai 'Note: running "brew update" may fix sha256 checksum errors'
       raise Hbc::CaskSha256MismatchError.new(path, expected, computed)
+    end
+  end
+
+  def self.gpg_signature(path, cask)
+    return unless cask.gpg
+    gpg = Hbc::GpgCheck.new(cask)
+
+    if gpg.available
+      gpg.verify(path)
+      raise Hbc::CaskGpgVerificationFailedError.new(cask.token, path, gpg.signature) unless gpg.successful
     end
   end
 end
