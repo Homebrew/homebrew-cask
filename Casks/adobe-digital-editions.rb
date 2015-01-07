@@ -1,13 +1,13 @@
 cask :v1 => 'adobe-digital-editions' do
-  version '4.0'
-  sha256 '00b846565da5962993bf3d9f4e629764d439da8269e4c84da49b441fa48d0e86'
+  version '4.0.2'
+  sha256 'd91535d8ca1cb4d7cdbb96c2820cf9c79524369acffa3d4e97f53e30812ae98a'
 
-  url "http://download.adobe.com/pub/adobe/digitaleditions/ADE_#{version}_Installer.dmg"
+  url "http://download.adobe.com/pub/adobe/digitaleditions/ADE_4.0_Installer.dmg"
   name 'Adobe Digital Editions'
-  homepage 'http://www.adobe.com/pt/products/digital-editions.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.adobe.com/solutions/ebook/digital-editions.html'
+  license :gratis
 
-  pkg "Digital Editions #{version} Installer.pkg"
+  pkg "Digital Editions 4.0 Installer.pkg"
 
   uninstall :pkgutil => 'com.adobe.adobedigitaleditions.app'
 end
