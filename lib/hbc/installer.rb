@@ -2,6 +2,7 @@ require 'rubygems'
 
 require 'hbc/cask_dependencies'
 require 'hbc/staged'
+require 'hbc/verify'
 
 class Hbc::Installer
 
@@ -11,6 +12,7 @@ class Hbc::Installer
   # should be explicit checks on whether staged state is valid in
   # every method.
   include Hbc::Staged
+  include Hbc::Verify
 
   PERSISTENT_METADATA_SUBDIRS = [ 'gpg' ]
 
@@ -59,6 +61,7 @@ class Hbc::Installer
     begin
       satisfy_dependencies(skip_cask_deps)
       download
+      verify
       extract_primary_container
       install_artifacts
       save_caskfile force
@@ -86,6 +89,10 @@ class Hbc::Installer
     @downloaded_path = download.perform
     odebug "Downloaded to -> #{@downloaded_path}"
     @downloaded_path
+  end
+
+  def verify
+    Hbc::Verify.all(@downloaded_path, @cask)
   end
 
   def extract_primary_container
