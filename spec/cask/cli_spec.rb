@@ -45,8 +45,10 @@ describe Hbc::CLI do
     it "exits with a status of 1 when something goes wrong" do
       Hbc::CLI.expects(:exit).with(1)
       Hbc::CLI.expects(:lookup_command).raises(Hbc::CaskError)
-      shutup {
-        Hbc::CLI.process('noop')
+      allow(Hbc).to receive(:init) {
+        shutup {
+          Hbc::CLI.process('noop')
+        }
       }
     end
   end
