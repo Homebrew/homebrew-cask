@@ -2,9 +2,6 @@ HOMEBREW_CACHE_CASKS = HOMEBREW_CACHE.join('Casks')
 
 class Hbc; end
 
-# todo remove internal Homebrew dependencies and remove this line
-require 'vendor/homebrew-fork/download_strategy'
-
 require 'hbc/extend'
 require 'hbc/artifact'
 require 'hbc/audit'
