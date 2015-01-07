@@ -1,6 +1,6 @@
 cask :v1 => 'vagrant' do
   version '1.7.2'
-  sha256 'b05c13675118a7c57ef78f932047f3db44456fff3edb408615fea0ba2cf7afe9'
+  sha256 '78d02afada2f066368bd0ce1883f900f89b6dc20f860463ce125e7cb295e347c'
 
   url "https://dl.bintray.com/mitchellh/vagrant/vagrant_#{version}.dmg"
   homepage 'http://www.vagrantup.com'
