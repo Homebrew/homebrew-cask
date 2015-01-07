@@ -9,7 +9,7 @@ class Hbc::Container::Cab < Hbc::Container::Base
   end
 
   def extract
-    cabextract = HOMEBREW_PREFIX.join('bin/cabextract')
+    cabextract = Hbc.homebrew_prefix.join('bin/cabextract')
     if ! Pathname.new(cabextract).exist?
       raise Hbc::CaskError.new "Expected to find cabextract executable. Cask '#{@cask}' must add: depends_on :formula => 'cabextract'"
     end

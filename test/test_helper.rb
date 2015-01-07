@@ -9,9 +9,6 @@ end
 # force some environment variables
 ENV['HOMEBREW_NO_EMOJI']='1'
 
-# set some Homebrew constants used in our code
-HOMEBREW_BREW_FILE = '/usr/local/bin/brew'
-
 # add homebrew-cask lib to load path
 brew_cask_path = Pathname.new(File.expand_path(__FILE__+'/../../'))
 casks_path = brew_cask_path.join('Casks')
@@ -57,12 +54,17 @@ Mocha::Integration::MiniTest.activate
 # our baby
 require 'hbc'
 
+# override Homebrew locations
+Hbc.homebrew_prefix = Pathname.new(TEST_TMPDIR).join('prefix')
+Hbc.homebrew_repository = Hbc.homebrew_prefix
+Hbc.homebrew_tapspath = nil
+
 # Look for Casks in testcasks by default.  It is elsewhere required that
 # the string "test" appear in the directory name.
 Hbc.default_tap = 'caskroom/homebrew-testcasks'
 
 # our own testy caskroom
-Hbc.caskroom = HOMEBREW_PREFIX.join('TestCaskroom')
+Hbc.caskroom = Hbc.homebrew_prefix.join('TestCaskroom')
 
 class TestHelper
   # helpers for test Casks to reference local files easily
@@ -123,11 +125,11 @@ require 'tempfile'
 
 # pretend like we installed the homebrew-cask tap
 project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
-taps_dest = HOMEBREW_LIBRARY.join('Taps/caskroom')
+taps_dest = Hbc.homebrew_prefix.join(*%w{Library Taps caskroom})
 
 # create directories
 FileUtils.mkdir_p taps_dest
-HOMEBREW_PREFIX.join('bin').mkdir
+FileUtils.mkdir_p Hbc.homebrew_prefix.join('bin')
 
 FileUtils.ln_s project_root, taps_dest.join('homebrew-cask')
 
@@ -135,9 +137,9 @@ FileUtils.ln_s project_root, taps_dest.join('homebrew-cask')
 class TestHbc < Hbc; end
 
 # jack in some optional utilities
-FileUtils.ln_s '/usr/local/bin/cabextract', HOMEBREW_PREFIX.join('bin/cabextract')
-FileUtils.ln_s '/usr/local/bin/unar', HOMEBREW_PREFIX.join('bin/unar')
-FileUtils.ln_s '/usr/local/bin/lsar', HOMEBREW_PREFIX.join('bin/lsar')
+FileUtils.ln_s '/usr/local/bin/cabextract', Hbc.homebrew_prefix.join('bin/cabextract')
+FileUtils.ln_s '/usr/local/bin/unar', Hbc.homebrew_prefix.join('bin/unar')
+FileUtils.ln_s '/usr/local/bin/lsar', Hbc.homebrew_prefix.join('bin/lsar')
 
 # also jack in some test Casks
 FileUtils.ln_s project_root.join('test', 'support'), taps_dest.join('homebrew-testcasks')
