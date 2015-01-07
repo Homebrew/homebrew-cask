@@ -1,5 +1,35 @@
 # CHANGELOG
 
+## 0.52.1
+
+* __Casks__
+  - 8 Casks added (525 updated) by 35 contributors since 0.52.0
+  - 2224 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#8618][] Mmore robust cask dependency calculation
+  - [#8622][] Improve error message for AIR app reinstallation
+* __Internal Changes__
+  - [#8721][], [#8724][], [#8612][], [#8611][] integrate Homebrew code into our own backend
+* __Documentation__
+  - 4 doc commits since 0.52.0 <3 [@nZac][]
+* __Contributors__
+  - 13 new contributors since 0.52.0
+  - 1398 total contributors
+* __Release Date__
+  - 2015-01-07 23:30:00 UTC
+
+[#8611]: https://github.com/caskroom/homebrew-cask/issues/8611
+[#8612]: https://github.com/caskroom/homebrew-cask/issues/8612
+[#8618]: https://github.com/caskroom/homebrew-cask/issues/8618
+[#8622]: https://github.com/caskroom/homebrew-cask/issues/8622
+[#8721]: https://github.com/caskroom/homebrew-cask/issues/8721
+[#8724]: https://github.com/caskroom/homebrew-cask/issues/8724
+[@nZac]: https://github.com/nZac
+
 ## 0.52.0
 
 * __Casks__
