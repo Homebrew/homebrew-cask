@@ -96,7 +96,7 @@ class Hbc::HbCurlDownloadStrategy < Hbc::HbAbstractDownloadStrategy
           raise Hbc::CurlDownloadStrategyError, msg
         end
       end
-      ignore_interrupts { temporary_path.rename(tarball_path) }
+      Hbc::Utils.ignore_interrupts { temporary_path.rename(tarball_path) }
     else
       puts "Already downloaded: #{tarball_path}"
     end
