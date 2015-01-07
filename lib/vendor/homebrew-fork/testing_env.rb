@@ -1,7 +1,5 @@
 # Require this file to build a testing environment.
 
-$:.push(File.expand_path(__FILE__+'/../..'))
-
 require 'vendor/homebrew-fork/monkeypatch_pathname'
 require 'vendor/homebrew-fork/utils'
 require 'tmpdir'
