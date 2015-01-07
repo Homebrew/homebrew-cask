@@ -1,6 +1,10 @@
 require 'digest'
 
 module Hbc::Verify
+  def self.all(path, cask)
+    checksum(path, cask)
+  end
+
   def self.checksum(path, cask)
     begin
       expected = cask.sha256
