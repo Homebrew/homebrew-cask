@@ -241,4 +241,14 @@ module Hbc::Utils
 
     opoo(poo.join(' ') + "\n" + error_message_with_suggestions)
   end
+
+  # originally from Homebrew
+  def self.ignore_interrupts(opt = nil)
+    std_trap = trap('INT') do
+      puts 'One sec, just cleaning up' unless opt == :quietly
+    end
+    yield
+  ensure
+    trap('INT', std_trap)
+  end
 end

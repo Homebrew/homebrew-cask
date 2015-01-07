@@ -43,12 +43,3 @@ def curl *args
 
   safe_system curl, *args
 end
-
-def ignore_interrupts(opt = nil)
-  std_trap = trap("INT") do
-    puts "One sec, just cleaning up" unless opt == :quietly
-  end
-  yield
-ensure
-  trap("INT", std_trap)
-end
