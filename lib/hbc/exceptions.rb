@@ -153,3 +153,20 @@ class Hbc::CaskSha256MismatchError < RuntimeError
       EOS
   end
 end
+
+class Hbc::CaskGpgVerificationFailedError < RuntimeError
+  attr_reader :path, :token, :signature
+  def initialize(token, path, signature)
+    @token = token
+    @path = path
+    @signature = signature
+  end
+
+  def to_s
+    <<-EOS.undent
+      GPG failed to verify the authenticity of #{token}.
+      Signature: #{signature}
+      File: #{path}
+      EOS
+  end
+end
