@@ -7,5 +7,5 @@ cask :v1 => 'query-handbrake-log' do
   homepage 'https://github.com/donmelton/video-transcoding-scripts/'
   license :mit
 
-  binary 'video-transcoding-scripts-master/query-handbrake-log.sh', :target => 'query-handbrake-log'
+  binary 'video-transcoding-scripts-master/query-handbrake-log.sh'
 end

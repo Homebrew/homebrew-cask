@@ -7,9 +7,9 @@ cask :v1 => 'transcode-video' do
   homepage 'https://github.com/donmelton/video-transcoding-scripts/'
   license :mit
 
-  binary 'video-transcoding-scripts-master/transcode-video.sh', :target => 'transcode-video'
+  binary 'video-transcoding-scripts-master/transcode-video.sh'
 
-  depends_on :cask => 'caskroom/versions/handbrakecli-nightly',
+  depends_on :cask => 'handbrakecli',
              :formula => %w{
                             mkvtoolnix
                             mp4v2

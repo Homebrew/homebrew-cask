@@ -7,7 +7,7 @@ cask :v1 => 'convert-video' do
   homepage 'https://github.com/donmelton/video-transcoding-scripts/'
   license :mit
 
-  binary 'video-transcoding-scripts-master/convert-video.sh', :target => 'convert-video'
+  binary 'video-transcoding-scripts-master/convert-video.sh'
 
   depends_on :formula => %w{
                             ffmpeg

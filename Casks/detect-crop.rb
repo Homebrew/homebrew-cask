@@ -7,8 +7,8 @@ cask :v1 => 'detect-crop' do
   homepage 'https://github.com/donmelton/video-transcoding-scripts/'
   license :mit
 
-  binary 'video-transcoding-scripts-master/detect-crop.sh', :target => 'detect-crop'
+  binary 'video-transcoding-scripts-master/detect-crop.sh'
 
-  depends_on :cask => 'caskroom/versions/handbrakecli-nightly',
+  depends_on :cask => 'handbrakecli',
              :formula => 'mplayer'
 end
