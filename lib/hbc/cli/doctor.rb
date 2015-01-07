@@ -7,7 +7,7 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
     ohai 'Ruby Path:',                                       render_with_none_as_error( RbConfig.ruby )
     # todo: consider removing most Homebrew constants from doctor output
     ohai 'Homebrew Version:',                                render_with_none_as_error( homebrew_version )
-    ohai 'Homebrew Executable Path:',                        render_with_none_as_error( HOMEBREW_BREW_FILE )
+    ohai 'Homebrew Executable Path:',                        render_with_none_as_error( Hbc.homebrew_executable )
     ohai 'Homebrew Cellar Path:',                            render_with_none_as_error( homebrew_cellar )
     ohai 'Homebrew Repository Path:',                        render_with_none_as_error( homebrew_repository )
     ohai 'Homebrew Origin:',                                 render_with_none_as_error( homebrew_origin )
@@ -104,9 +104,9 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
     return @homebrew_constants[name] if @homebrew_constants.key?(name)
     @homebrew_constants[name] = notfound_string
     begin
-      @homebrew_constants[name] = Hbc::SystemCommand.run!(HOMEBREW_BREW_FILE,
-                                                           :args => [ "--#{name}" ],
-                                                           :print_stderr => false).stdout.strip
+      @homebrew_constants[name] = Hbc::SystemCommand.run!(Hbc.homebrew_executable,
+                                                          :args => [ "--#{name}" ],
+                                                          :print_stderr => false).stdout.strip
       if @homebrew_constants[name] !~ %r{\S}
         @homebrew_constants[name] = "#{none_string} #{error_string}"
       end
