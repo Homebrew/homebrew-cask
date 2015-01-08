@@ -182,6 +182,25 @@ describe Hbc::Installer do
       no_checksum.must_be :installed?
     end
 
+    it "blows up on a bad gpg signature" do
+      skip unless Hbc.homebrew_prefix.join('bin/gpg').exist?
+      tampered = Hbc.load('bad-gpg-signature')
+      lambda {
+        shutup do
+          Hbc::Installer.new(tampered).install
+        end
+      }.must_raise(Hbc::CaskGpgVerificationFailedError)
+    end
+
+    it "works fine with a good gpg signature" do
+      skip unless Hbc.homebrew_prefix.join('bin/gpg').exist?
+      signed = Hbc.load('good-gpg-signature')
+      shutup do
+        Hbc::Installer.new(signed).install
+      end
+      signed.must_be :installed?
+    end
+
     it "prints caveats if they're present" do
       with_caveats = Hbc.load('with-caveats')
       TestHelper.must_output(self, lambda {

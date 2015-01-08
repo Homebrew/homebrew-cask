@@ -164,6 +164,7 @@ end
 FileUtils.ln_s '/usr/local/bin/cabextract', Hbc.homebrew_prefix.join('bin/cabextract')
 FileUtils.ln_s '/usr/local/bin/unar', Hbc.homebrew_prefix.join('bin/unar')
 FileUtils.ln_s '/usr/local/bin/lsar', Hbc.homebrew_prefix.join('bin/lsar')
+FileUtils.ln_s '/usr/local/bin/gpg', Hbc.homebrew_prefix.join('bin/gpg')
 
 # also jack in some test Casks
 FileUtils.ln_s project_root.join('test', 'support'), taps_dest.join('homebrew-testcasks')
