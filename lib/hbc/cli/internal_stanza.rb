@@ -28,7 +28,6 @@ class Hbc::CLI::InternalStanza < Hbc::CLI::InternalUseBase
                        :prefpane,
                        :qlplugin,
                        :font,
-                       :widget,
                        :service,
                        :colorpicker,
                        :binary,

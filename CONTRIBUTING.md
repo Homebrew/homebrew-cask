@@ -160,7 +160,6 @@ Additional stanzas you might need for special use-cases:
 | `colorpicker`          | relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
 | `qlplugin`             | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `font`                 | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
-| `widget`               | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation (ALPHA: DOES NOT WORK YET)
 | `service`              | relative path to a service that should be linked into the `~/Library/Services` folder on installation
 | `binary`               | relative path to a binary that should be linked into the `/usr/local/bin` folder on installation
 | `input_method`         | relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
