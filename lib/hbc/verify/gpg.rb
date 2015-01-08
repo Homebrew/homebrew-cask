@@ -26,13 +26,21 @@ class Hbc::Verify::Gpg
   end
 
   def retrieve_signature(force=false)
-    unversioned_cask = cask.version.is_a?(Symbol)
-    cached = cask.metadata_subdir('gpg') unless unversioned_cask
+    maybe_dir = @cask.metadata_subdir('gpg')
+    versioned_cask = @cask.version.is_a?(String)
 
-    meta_dir = cached || cask.metadata_subdir('gpg', :now, true)
+    # maybe_dir may be:
+    # - nil, in the absence of a parent metadata directory;
+    # - the path to a non-existent /gpg subdir of the metadata directory,
+    #   if the most recent metadata directory was not created by GpgCheck;
+    # - the path to an existing /gpg subdir, where a signature was previously
+    #   saved.
+    cached = maybe_dir if versioned_cask && maybe_dir && maybe_dir.exist?
+
+    meta_dir = cached || @cask.metadata_subdir('gpg', :now, true)
     sig_path = meta_dir.join('signature.asc')
 
-    curl(cask.gpg.signature, '-o', sig_path.to_s) unless cached || force
+    curl(@cask.gpg.signature, '-o', sig_path) if !cached || !sig_path.exist? || force
 
     sig_path
   end
