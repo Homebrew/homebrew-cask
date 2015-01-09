@@ -3,14 +3,7 @@ cask :v1 => 'davinci-resolve' do
     def self.blackmagick_url(url, data)
       info = {
         'country'   => 'us',
-        'platform'  => 'Mac OS X',
-        'firstname' => 'Homebrew',
-        'lastname'  => 'Cask',
-        'company'   => 'Hombrew Cask',
-        'email'     => 'N/A',
-        'phone'     => 'N/A',
-        'city'      => 'N/A',
-        'state'     => 'N/A'
+        'platform'  => 'Mac OS X'
       }
 
       require 'net/http'
