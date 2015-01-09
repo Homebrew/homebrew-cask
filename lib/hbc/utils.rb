@@ -135,7 +135,7 @@ module Hbc::Utils
   def self.exec_editor(*args)
     editor = [ *ENV.values_at('HOMEBREW_EDITOR', 'VISUAL', 'EDITOR'),
                *%w{mate edit vim /usr/bin/vim} ].compact.first
-    exec(editor, *args)
+    exec(*editor.split.concat(args))
   end
 
   # originally from Homebrew puts_columns
