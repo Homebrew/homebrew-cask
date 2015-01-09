@@ -4,6 +4,7 @@ cask :v1 => 'snagit' do
 
   url 'http://download.techsmith.com/snagitmac/enu/Snagit.dmg'
   appcast 'http://techsmithredirect.appspot.com/'
+  name 'Snagit'
   homepage 'http://www.techsmith.com/snagit.html'
   license :commercial
 
