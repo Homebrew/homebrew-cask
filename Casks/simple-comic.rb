@@ -4,6 +4,7 @@ cask :v1 => 'simple-comic' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "http://dancingtortoisedownload.s3.amazonaws.com/SimpleComic_#{version}.zip"
+  name 'Simple Comic'
   homepage 'http://dancingtortoise.com/simplecomic/'
   license :mit
 
