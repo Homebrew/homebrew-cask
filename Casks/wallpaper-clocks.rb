@@ -3,6 +3,7 @@ cask :v1 => 'wallpaper-clocks' do
   sha256 :no_check
 
   url 'http://files.vladstudio.com/wallpaperclock/WallpaperClocksOSX.zip'
+  name 'Wallpaper clocks'
   homepage 'http://www.vladstudio.com/wallpaperclocks/'
   license :gratis
 
