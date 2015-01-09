@@ -10,6 +10,7 @@ cask :v1 => 'logitech-control-center' do
     url "http://www.logitech.com/pub/techsupport/mouse/mac/lcc#{version}.zip"
   end
 
+  name 'Logitech Control Center'
   homepage 'http://support.logitech.com/en_us/product/3129'
   license :closed
 
