@@ -11,7 +11,7 @@ cask :v1 => 'virtual-ii' do
 
   name 'Virtual ]['
   homepage 'http://virtualii.com/'
-  license :gratis
+  license :freemium
 
   app 'Virtual ][.app'
 
