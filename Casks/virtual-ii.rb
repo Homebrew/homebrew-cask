@@ -15,9 +15,9 @@ cask :v1 => 'virtual-ii' do
 
   # There is no sub-folder in the DMG, so we must do some contortions
   preflight do
-    system '/bin/mkdir', '--', staged_path.join('Virtual ][')
+    FileUtils.mkdir staged_path.join('Virtual ][')
     ['Virtual ][.app', 'Readme.rtf', 'Welcome tape.cass', 'ADT'].each do |file|
-      system '/bin/mv', '--', staged_path.join(file), staged_path.join('Virtual ][')
+      FileUtils.mv staged_path.join(file), staged_path.join('Virtual ][')
     end
   end
 
