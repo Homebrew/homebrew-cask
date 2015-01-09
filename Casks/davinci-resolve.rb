@@ -23,5 +23,5 @@ cask :v1 => 'davinci-resolve' do
   container :nested => "DaVinci_Resolve_#{version}_Mac.dmg"
   pkg "Install Resolve #{version}.pkg"
 
-  uninstall :script => { :executable => '/usr/bin/open', :args => ['/Applications/DaVinci Resolve/Uninstall Resolve.app'] }
+  uninstall :script => '/Applications/DaVinci Resolve/Uninstall Resolve.app/Contents/MacOS/Uninstall Resolve'
 end
