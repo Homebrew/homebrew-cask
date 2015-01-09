@@ -11,6 +11,7 @@ cask :v1 => 'evernote' do
     appcast 'http://update.evernote.com/public/ENMac/EvernoteMacUpdate.xml'
   end
 
+  name 'Evernote'
   homepage 'https://evernote.com/'
   license :gratis
 
