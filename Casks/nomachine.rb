@@ -3,6 +3,7 @@ cask :v1 => 'nomachine' do
   sha256 'd2a84877f3e3ebd4ea935b3de52ebffc3e4fcb6e2f3e9ff3d2bfca441915784b'
 
   url "http://download.nomachine.com/download/#{version.split('.')[0..1].join('.')}/MacOSX/nomachine_#{version}.dmg"
+  name 'NoMachine'
   homepage 'http://www.nomachine.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

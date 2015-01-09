@@ -3,6 +3,7 @@ cask :v1 => 'wireshark' do
   sha256 '79ad20e948c7da73663eaab7f9e9c03e098dd5d92aa439e82d76fc1a0e843085'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
+  name 'Wireshark'
   homepage 'http://www.wireshark.org'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

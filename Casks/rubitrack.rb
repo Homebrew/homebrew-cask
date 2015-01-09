@@ -5,6 +5,7 @@ cask :v1 => 'rubitrack' do
   url "http://www.rubitrack.com/files/rubiTrack-#{version}.dmg"
   appcast 'http://www.rubitrack.com/autoupdate/sparkle3.xml',
           :sha256 => 'c7aca0d98b52caa1e7d54cf7b44cdf06317fab2cf982f1e29f4034fe419175e7'
+  name 'rubiTrack'
   homepage 'http://www.rubitrack.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
