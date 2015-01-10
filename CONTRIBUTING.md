@@ -298,10 +298,11 @@ Before submitting a trial, please make sure it can be made into a full working v
 without the need to be redownloaded. If an App provides a trial but the only way to buy the full version
 is via the Mac App Store, it does not currently belong in any of the official repos.
 
-### Unofficial Builds
+### Unofficial, Vendorless, or Walled Builds
 
-When an App developer does not offer a binary download, please submit the
-Cask to [caskroom/homebrew-unofficial](http://github.com/caskroom/homebrew-unofficial).
+When an App developer does not offer a binary download, the binary doesn't have an official vendor,
+or the download URL is both behind a registration wall and served from an unofficial host,
+please submit the Cask to [caskroom/homebrew-unofficial](http://github.com/caskroom/homebrew-unofficial).
 For a location to host unofficial builds, contact our sister project [alehouse](https://github.com/alehouse).
 
 ### Fonts
