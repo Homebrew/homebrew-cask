@@ -48,7 +48,7 @@ When reporting bugs, remember that homebrew-cask is an independent project from
 Homebrew.  Do your best to direct bug reports to the appropriate project.  If
 your command-line started with `brew cask`, bring the bug to us first!
 
-Before reporting a bug, make sure you have the latest versions of Homebrew,
+Before reporting a bug, make sure you have the latest versions of homebrew,
 homebrew-cask, and all Taps by running the following command:
 
 ```bash
