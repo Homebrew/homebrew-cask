@@ -3,6 +3,7 @@ cask :v1 => 'volatility' do
   sha256 '528f06cfd9f0562f7a437c7f1db0d1f54650c3fe9969974718794fd737fbff6d'
 
   url "http://downloads.volatilityfoundation.org/releases/#{version}/volatility_#{version}.mac.standalone.zip"
+  name 'Volatility'
   homepage 'http://www.volatilityfoundation.org/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
