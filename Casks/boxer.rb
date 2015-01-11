@@ -4,6 +4,7 @@ cask :v1 => 'boxer' do
 
   url 'http://boxerapp.com/download/latest'
   appcast 'http://boxerapp.com/appcast'
+  name 'Boxer'
   homepage 'http://boxerapp.com/'
   license :gpl
 
