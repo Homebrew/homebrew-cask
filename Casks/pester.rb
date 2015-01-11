@@ -5,6 +5,7 @@ cask :v1 => 'pester' do
   url "http://sabi.net/nriley/software/Pester-#{version}.dmg"
   appcast 'http://sabi.net/nriley/software/Pester/updates.xml',
           :sha256 => '05a547dabcb6df809f57695a38c88104b9d2df4ee290c7ba81b725af5bd1426f'
+  name 'Pester'
   homepage 'http://sabi.net/nriley/software/index.html#pester'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
