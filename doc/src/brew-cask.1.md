@@ -161,9 +161,6 @@ in a future version.
   * `--fontdir=<path>`:
     Target location for Font links.  The default value is `~/Library/Fonts`.
 
-  * `--widgetdir=<path>`:
-    Target location for Dashboard Widget links.  The default value is `~/Library/Widgets`.
-
   * `--servicedir=<path>`:
     Target location for Service links.  The default value is `~/Library/Services`.
 

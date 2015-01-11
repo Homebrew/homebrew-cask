@@ -124,7 +124,6 @@ features which are available for the current Cask.
  * [`uninstall`](CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details)
  * [`url`](CASK_LANGUAGE_REFERENCE.md#url-stanza-details)
  * [`version`](CASK_LANGUAGE_REFERENCE.md#required-stanzas)
- * [`widget`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
  * [`zap`](CASK_LANGUAGE_REFERENCE.md#zap-stanza-details)
 
 
