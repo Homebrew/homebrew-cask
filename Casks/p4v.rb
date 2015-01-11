@@ -9,8 +9,11 @@ cask :v1 => 'p4v' do
     url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*},'\1')}/bin.macosx106x86_64/P4V.dmg"
   end
 
+  name 'P4V'
+  name 'Perforce Visual Client'
   homepage 'http://www.perforce.com/product/components/perforce-visual-client'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  tags :vendor => 'Perforce'
 
   app 'p4v.app'
   binary 'p4vc'
