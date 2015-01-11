@@ -11,6 +11,7 @@ cask :v1 => 'daisydisk' do
   end
 
   appcast 'http://www.daisydiskapp.com/downloads/appcastFeed.php'
+  name 'DaisyDisk'
   homepage 'http://www.daisydiskapp.com'
   license :freemium
 

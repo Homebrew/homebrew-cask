@@ -3,6 +3,7 @@ cask :v1 => 'google-earth-web-plugin' do
   sha256 :no_check
 
   url 'http://r2---sn-po4vapo3-j3ae.c.pack.google.com/edgedl/earth/plugin/current/googleearth-mac-plugin-intel.dmg'
+  name 'Google Earth plug-in'
   homepage 'http://www.google.com/intl/en/earth/explore/products/plugin.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

@@ -3,6 +3,7 @@ cask :v1 => 'hazel' do
   sha256 :no_check
 
   url 'http://www.noodlesoft.com/Products/Hazel/download'
+  name 'Hazel'
   homepage 'http://www.noodlesoft.com/hazel.php'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

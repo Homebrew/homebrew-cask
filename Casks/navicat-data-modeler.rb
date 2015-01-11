@@ -4,8 +4,10 @@ cask :v1 => 'navicat-data-modeler' do
 
   url "http://download.navicat.com/download/modeler0#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_en.dmg"
   name 'Navicat Data Modeler'
+  name 'Navicat Data Modeler'
   homepage 'http://www.navicat.com/products/navicat-data-modeler'
   license :commercial
+  tags :vendor => 'Navicat'
 
   app 'Navicat Data Modeler.app'
 end

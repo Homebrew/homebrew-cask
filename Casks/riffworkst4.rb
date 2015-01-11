@@ -4,6 +4,7 @@ cask :v1 => 'riffworkst4' do
   sha256 '83c51fa4a08ad19f92418572e11b09ebb33f9a0341ff9e0173d0eb0c7709cddb'
 
   url 'https://www.sonomawireworks.com/accountManagerUI/files/RiffWorksT4.dmg'
+  name 'RiffWorks T4'
   homepage 'http://www.sonomawireworks.com/T4/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

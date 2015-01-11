@@ -3,6 +3,7 @@ cask :v1 => 'mauve' do
   sha256 '586fe214eb6c430f2a98fd865856111b79502ff526ab2f6268dab1d99b337907'
 
   url "http://asap.genetics.wisc.edu/software/mauve/downloads/Mauve-#{version}.dmg"
+  name 'Mauve'
   homepage 'http://asap.genetics.wisc.edu/software/mauve/'
   license :gpl
 

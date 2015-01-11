@@ -11,6 +11,7 @@ cask :v1 => 'juliastudio' do
     url "https://s3.amazonaws.com/cdn-common.forio.com/julia-studio/#{version}/julia-studio-macx-installer-#{version}.dmg"
   end
 
+  name 'Julia Studio'
   homepage 'http://forio.com/labs/julia-studio/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

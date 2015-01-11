@@ -4,6 +4,7 @@ cask :v1 => 'minecraft' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.dmg'
+  name 'Minecraft'
   homepage 'http://minecraft.net'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
