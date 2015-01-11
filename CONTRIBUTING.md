@@ -20,7 +20,7 @@ all pretty happy about this.  Here's how to get started:
 ```bash
 $ github_user='<my-github-username>'
 $ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
-$ git remote add "$github_user" "https://github.com/$github_user/homebrew-cask"
+$ git remote add "$github_user" "git@github.com:$github_user/homebrew-cask.git"
 ```
 
 
