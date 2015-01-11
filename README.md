@@ -55,5 +55,8 @@ homebrew-cask, and all Taps by running the following command:
 $ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 ```
 
+If the issue persists, please post it together with the output of `brew cask doctor`
+in distinct [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
+
 ## License:
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
