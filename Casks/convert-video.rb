@@ -1,6 +1,6 @@
 cask :v1 => 'convert-video' do
-  version '5.3'
-  sha256 '077a789a9198f56bb7cb15017c418032f255b00a239ada71562927b9893908bb'
+  version '5.4'
+  sha256 '92f8a458c6c7f8981ced3d0da9bb9962787c8534690e208b36b2114c8a73a5ea'
 
   url 'https://github.com/donmelton/video-transcoding-scripts/archive/master.zip'
   name 'Video Transcoding Scripts'
