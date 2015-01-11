@@ -3,6 +3,7 @@ cask :v1 => 'pandoc' do
   sha256 '02455fba5353568b19d8b0bebbda9b99ba2c943b3f01b11b185f25c7db111b50'
 
   url "https://github.com/jgm/pandoc/releases/download/#{version}/pandoc-#{version}-osx.pkg"
+  name 'Pandoc'
   homepage 'http://johnmacfarlane.net/pandoc'
   license :gpl
 
