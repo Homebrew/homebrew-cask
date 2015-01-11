@@ -168,6 +168,10 @@ class Hbc
     staged_path.exist?
   end
 
+  def requires_sudo?
+    artifacts[:pkg].any?
+  end
+
   def to_s
     @token
   end

@@ -96,4 +96,18 @@ describe "Cask" do
       c.metadata_versioned_container_path.to_s.must_equal(metadata_path.to_s)
     end
   end
+
+  describe "requires_sudo?" do
+    it "is true with a cask that has pkg artifacts" do
+      cask = Hbc.load('with-installable')
+
+      cask.requires_sudo?.must_equal true
+    end
+
+    it "is false when there are no pkg artifacts" do
+      cask = Hbc.load('tarball')
+
+      cask.requires_sudo?.must_equal false
+    end
+  end
 end
