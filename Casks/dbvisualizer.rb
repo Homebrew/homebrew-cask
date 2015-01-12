@@ -7,4 +7,11 @@ cask :v1 => 'dbvisualizer' do
   license :commercial
 
   installer :manual => 'DbVisualizer Installer.app'
+
+  caveats <<-EOS.undent
+    #{token} may require Java 7 (an older version) available from the
+    caskroom-versions repository via
+
+      brew cask install caskroom/versions/java7
+  EOS
 end
