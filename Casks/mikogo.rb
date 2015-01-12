@@ -4,7 +4,7 @@ cask :v1 => 'mikogo' do
 
   url 'http://download.mikogo4.com/mikogo.dmg'
   homepage 'http://www.mikogo.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Mikogo.app'
 end
