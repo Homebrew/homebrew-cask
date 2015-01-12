@@ -1,8 +1,9 @@
 cask :v1 => 'wkhtmltopdf' do
-  version '0.12.1'
-  sha256 'ef203403b78dd4dc50ec9a3adb6e956d0267e59f7346cc749a6f86378a4bf791'
+  version '0.12.2'
+  sha256 'f53fc73dde8eee05a3a3c05e9666123e5e71fef77b8b658f78801a9a8223b6a9'
 
   url "http://downloads.sourceforge.net/project/wkhtmltopdf/#{version}/wkhtmltox-#{version}_osx-cocoa-x86-64.pkg"
+  name 'wkhtmltopdf'
   homepage 'http://wkhtmltopdf.org/'
   license :gpl
 

@@ -9,9 +9,5 @@ cask :v1 => 'workamajig' do
 
   app 'Workamajig.app'
 
-  caveats <<-EOS.undent
-    #{token} requires Adobe Air, available via
-
-      brew cask install adobe-air
-  EOS
+  depends_on :cask => 'adobe-air'
 end

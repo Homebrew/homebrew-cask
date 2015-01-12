@@ -3,6 +3,7 @@ cask :v1 => 'alfred' do
   sha256 '06e55eed65c3e09bffd385a11a695ebd7df79a5303690e9cb197a0b72782e2dc'
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
+  name 'Alfred'
   homepage 'http://www.alfredapp.com/'
   license :commercial
 

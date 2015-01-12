@@ -3,6 +3,7 @@ cask :v1 => 'protege' do
   sha256 '45f5acb42b8bb78074af6e192a2dc12e5c2b8238ac20e6c96a4bca7b2acaf598'
 
   url "http://protege.stanford.edu/download/protege/4.3/osx/protege-#{version}-304.zip"
+  name 'Protégé'
   homepage 'http://protege.stanford.edu/'
   license :bsd
 

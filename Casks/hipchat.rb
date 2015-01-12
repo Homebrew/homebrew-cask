@@ -5,7 +5,7 @@ cask :v1 => 'hipchat' do
   url 'https://www.hipchat.com/downloads/latest/mac'
   appcast 'https://www.hipchat.com/release_notes/appcast/mac'
   homepage 'https://www.hipchat.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'HipChat.app'
 
@@ -14,10 +14,13 @@ cask :v1 => 'hipchat' do
   end
 
   zap :delete => [
-                  # todo expand/glob for '~/Library/<userid>/HipChat/',
+                  # todo expand/glob for '~/Library/<userid>/HipChat/'
+                  '~/Library/Application Support/HipChat',
                   '~/Library/Caches/com.hipchat.HipChat',
                   '~/Library/HipChat',
                   '~/Library/Logs/HipChat',
+                  '~/Library/Preferences/com.hipchat.HipChat.plist',
+                  '~/Library/Saved Application State/com.hipchat.HipChat.savedState',
                   '~/Library/chat.hipchat.com',
                  ]
 end

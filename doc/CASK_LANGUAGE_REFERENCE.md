@@ -97,7 +97,6 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `qlplugin`         | yes                           | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `screen_saver`     | yes                           | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
 | `service`          | yes                           | relative path to a service that should be linked into the `~/Library/Services` folder on installation
-| `widget`           | yes                           | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation (ALPHA: DOES NOT WORK YET)
 | `suite`            | yes                           | relative path to a containing directory that should be linked into the `~/Applications` folder on installation (see also [Suite Stanza Details](#suite-stanza-details))
 | `artifact`         | yes                           | relative path to an arbitrary path that should be symlinked on installation.  This is only for unusual cases.  The `app` stanza is strongly preferred when linking `.app` bundles.
 | `installer`        | yes                           | describes an executable which must be run to complete the installation.  (see [Installer Stanza Details](#installer-stanza-details))
@@ -144,11 +143,11 @@ Tests against `MacOS.release` may use either symbolic names or version
 strings with numeric comparison operators:
 
 ```ruby
-if MacOS.release < :mavericks     # symbolic name
+if MacOS.release <= :mavericks     # symbolic name
 ```
 
 ```ruby
-if MacOS.release < '10.9'         # version string
+if MacOS.release <= '10.9'         # version string
 ```
 
 The available symbols for OS X versions are: `:tiger`, `:leopard`,
@@ -165,9 +164,9 @@ This makes it more likely that the Cask will work without alteration when
 a new OS is released.  Example (from [coconutbattery.rb](../Casks/coconutbattery.rb)):
 
 ```ruby
-if MacOS.release < :leopard
+if MacOS.release <= :tiger
   # ...
-elsif MacOS.release < :lion
+elsif MacOS.release <= :snow_leopard
   # ...
 else
   # ...
@@ -483,7 +482,7 @@ artifact 'openman.1', :target => '/usr/local/share/man/man1/openman.1'
 
 The `:target` key works similarly for most Cask artifacts, such as
 `app`, `binary`, `colorpicker`, `font`, `input_method`, `prefpane`, `qlplugin`,
-`service`, `widget`, `suite`, and `artifact`.
+`service`, `suite`, and `artifact`.
 
 ### :target Should Only Be Used in Select Cases
 
@@ -572,6 +571,16 @@ installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer
 
 `depends_on` is used to declare dependencies and requirements for a Cask.
 `depends_on` is not consulted until `install` is attempted.
+
+### Depends_on :cask
+
+The value should be another Cask token, needed by the current Cask.
+
+Example use: [`SSHFS`](https://github.com/caskroom/homebrew-cask/blob/master/Casks/sshfs.rb) depends on OSXFUSE.
+
+```ruby
+depends_on :cask => 'osxfuse'
+```
 
 ### Depends_on :formula
 
@@ -668,7 +677,7 @@ depends_on :arch => :x86_64
 | key        | description |
 | ---------- | ----------- |
 | `:formula` | a Homebrew Formula
-| `:cask`    | *stub - not yet functional*
+| `:cask`    | a Cask token
 | `:macos`   | a symbol, string, array, or comparison expression defining OS X release requirements.
 | `:arch`    | a symbol or array defining hardware requirements.
 | `:x11`     | a Boolean indicating a dependency on X11.

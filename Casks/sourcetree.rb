@@ -11,11 +11,15 @@ cask :v1 => 'sourcetree' do
   url "https://downloads.atlassian.com/software/sourcetree/SourceTree_#{version}.dmg"
   appcast 'http://www.sourcetreeapp.com/update/SparkleAppcast.xml',
           :sha256 => 'b43e0ea95de46d2c270cdbf9765e03ec3f13606cbf0bab5bcd3da0424ce2cff3'
+  name 'SourceTree'
   homepage 'http://www.sourcetreeapp.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  tags :vendor => 'Atlassian'
 
   app 'SourceTree.app'
   binary 'SourceTree.app/Contents/Resources/stree'
+
+  uninstall :launchctl => 'com.atlassian.SourceTreePrivilegedHelper2'
 
   zap :delete => [
                   '~/Library/Application Support/SourceTree',

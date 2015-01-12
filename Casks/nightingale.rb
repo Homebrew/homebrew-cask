@@ -3,6 +3,7 @@ cask :v1 => 'nightingale' do
   sha256 '854b02a22f2846284618dc8d3a64a766e8e7a34e65cf35934f6b357f4bc1000e'
 
   url "http://downloads.sourceforge.net/ngale/Nightingale_#{version}_macosx-i686.dmg"
+  name 'Nightingale'
   homepage 'http://getnightingale.com/'
   license :oss
 

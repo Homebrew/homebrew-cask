@@ -1,12 +1,12 @@
 require 'test_helper'
 
-describe Cask::Artifact::PreflightBlock do
+describe Hbc::Artifact::PreflightBlock do
   describe 'install_phase' do
     it 'calls the specified block before installing, passing a Cask mini-dsl' do
       called      = false
       yielded_arg = nil
 
-      CaskWithPreflight = Class.new(Cask)
+      CaskWithPreflight = Class.new(Hbc)
       CaskWithPreflight.class_eval do
         preflight do |c|
           called = true
@@ -15,10 +15,10 @@ describe Cask::Artifact::PreflightBlock do
       end
 
       cask = CaskWithPreflight.new
-      Cask::Artifact::PreflightBlock.new(cask).install_phase
+      Hbc::Artifact::PreflightBlock.new(cask).install_phase
 
       called.must_equal true
-      yielded_arg.must_be_kind_of Cask::DSL::Preflight
+      yielded_arg.must_be_kind_of Hbc::DSL::Preflight
     end
   end
 
@@ -27,7 +27,7 @@ describe Cask::Artifact::PreflightBlock do
       called      = false
       yielded_arg = nil
 
-      CaskWithUninstallPreflight = Class.new(Cask)
+      CaskWithUninstallPreflight = Class.new(Hbc)
       CaskWithUninstallPreflight.class_eval do
         uninstall_preflight do |c|
           called = true
@@ -36,10 +36,10 @@ describe Cask::Artifact::PreflightBlock do
       end
 
       cask = CaskWithUninstallPreflight.new
-      Cask::Artifact::PreflightBlock.new(cask).uninstall_phase
+      Hbc::Artifact::PreflightBlock.new(cask).uninstall_phase
 
       called.must_equal true
-      yielded_arg.must_be_kind_of Cask::DSL::UninstallPreflight
+      yielded_arg.must_be_kind_of Hbc::DSL::UninstallPreflight
     end
   end
 end

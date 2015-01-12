@@ -4,6 +4,7 @@ cask :v1 => 'big-mean-folder-machine' do
 
   url 'http://www.publicspace.net/download/BMFM.dmg'
   appcast 'http://www.publicspace.net/app/bmfm2.xml'
+  name 'Big Mean Folder Machine'
   homepage 'http://www.publicspace.net/BigMeanFolderMachine/'
   license :commercial
 

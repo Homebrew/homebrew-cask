@@ -1,14 +1,14 @@
 require 'test_helper'
 
-describe Cask::Container::Dmg do
+describe Hbc::Container::Dmg do
   describe "mount!" do
     it "does not store nil mounts for dmgs with extra data" do
-      transmission = Cask.load('local-transmission')
+      transmission = Hbc.load('local-transmission')
 
-      dmg = Cask::Container::Dmg.new(
+      dmg = Hbc::Container::Dmg.new(
         transmission,
         Pathname(transmission.url.path),
-        Cask::SystemCommand
+        Hbc::SystemCommand
       )
 
       begin

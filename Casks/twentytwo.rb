@@ -4,6 +4,7 @@ cask :v1 => 'twentytwo' do
 
   url 'https://github.com/marcw/twentytwo/raw/master/dist/TwentyTwo.dmg'
   appcast 'https://raw.github.com/marcw/soundcleod/master/appcast.xml'
+  name 'TwentyTwo'
   homepage 'https://github.com/marcw/twentytwo'
   license :mit
 

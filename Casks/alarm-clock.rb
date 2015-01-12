@@ -3,6 +3,7 @@ cask :v1 => 'alarm-clock' do
   sha256 '285d277572be83c632c696d565a8413c2d5149a460392177e9e1b601ffce8778'
 
   url "http://wayback.archive.org/web/20130123192255/http://www.robbiehanson.com/alarmclock/downloads/Alarm%20Clock%20(#{version}).dmg"
+  name 'Alarm Clock'
   homepage 'http://wayback.archive.org/web/20130123192255/http://www.robbiehanson.com/alarmclock/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

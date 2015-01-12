@@ -4,6 +4,7 @@ cask :v1 => 'moom' do
 
   url 'http://manytricks.com/download/moom'
   appcast 'http://manytricks.com/moom/appcast.xml'
+  name 'Moom'
   homepage 'http://manytricks.com/moom/'
   license :commercial
 

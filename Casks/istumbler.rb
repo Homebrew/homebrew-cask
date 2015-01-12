@@ -10,6 +10,7 @@ cask :v1 => 'istumbler' do
     url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   end
 
+  name 'iStumbler'
   homepage 'http://istumbler.net/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

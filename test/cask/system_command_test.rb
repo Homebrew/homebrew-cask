@@ -1,6 +1,6 @@
 require 'test_helper'
 
-describe Cask::SystemCommand do
+describe Hbc::SystemCommand do
   describe "when the exit code is 0" do
     result = nil
 
@@ -9,7 +9,7 @@ describe Cask::SystemCommand do
       options = {
         :must_succeed => false
       }
-      result = Cask::SystemCommand.run(command, options)
+      result = Hbc::SystemCommand.run(command, options)
     end
 
     it "says the command was successful" do
@@ -29,8 +29,8 @@ describe Cask::SystemCommand do
           options = {
             :must_succeed => true
           }
-          result = Cask::SystemCommand.run(command, options)
-        }.must_raise(CaskCommandFailedError)
+          result = Hbc::SystemCommand.run(command, options)
+        }.must_raise(Hbc::CaskCommandFailedError)
       end
     end
 
@@ -42,7 +42,7 @@ describe Cask::SystemCommand do
         options = {
           :must_succeed => false
         }
-        result = Cask::SystemCommand.run(command, options)
+        result = Hbc::SystemCommand.run(command, options)
       end
 
       it "says the command failed" do

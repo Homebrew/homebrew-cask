@@ -3,6 +3,7 @@ cask :v1 => 'acorn' do
   sha256 :no_check
 
   url 'http://flyingmeat.com/download/Acorn.zip'
+  name 'Acorn'
   homepage 'http://flyingmeat.com/acorn/'
   license :commercial
 

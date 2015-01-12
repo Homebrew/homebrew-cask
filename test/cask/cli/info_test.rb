@@ -1,9 +1,9 @@
 require 'test_helper'
 
-describe Cask::CLI::Info do
+describe Hbc::CLI::Info do
   it 'displays some nice info about the specified Cask' do
     lambda {
-      Cask::CLI::Info.run('local-caffeine')
+      Hbc::CLI::Info.run('local-caffeine')
     }.must_output <<-CLIOUTPUT.undent
       local-caffeine: 1.2.3
       local-caffeine
@@ -37,20 +37,20 @@ describe Cask::CLI::Info do
 
     it 'displays the info' do
       lambda {
-        Cask::CLI::Info.run('local-caffeine', 'local-transmission')
+        Hbc::CLI::Info.run('local-caffeine', 'local-transmission')
       }.must_output(@expected_output)
     end
 
     it 'throws away stray options' do
       lambda {
-        Cask::CLI::Info.run('--notavalidoption', 'local-caffeine', 'local-transmission')
+        Hbc::CLI::Info.run('--notavalidoption', 'local-caffeine', 'local-transmission')
       }.must_output(@expected_output)
     end
   end
 
   it 'should print caveats if the Cask provided one' do
     lambda {
-      Cask::CLI::Info.run('with-caveats')
+      Hbc::CLI::Info.run('with-caveats')
     }.must_output <<-CLIOUTPUT.undent
       with-caveats: 1.2.3
       with-caveats
@@ -75,7 +75,7 @@ describe Cask::CLI::Info do
 
   it 'should not print "Caveats" section divider if the caveats block has no output' do
     lambda {
-      Cask::CLI::Info.run('with-conditional-caveats')
+      Hbc::CLI::Info.run('with-conditional-caveats')
     }.must_output <<-CLIOUTPUT.undent
       with-conditional-caveats: 1.2.3
       with-conditional-caveats
@@ -90,16 +90,16 @@ describe Cask::CLI::Info do
   describe "when no Cask is specified" do
     it "raises an exception" do
       lambda {
-        Cask::CLI::Info.run()
-      }.must_raise CaskUnspecifiedError
+        Hbc::CLI::Info.run()
+      }.must_raise Hbc::CaskUnspecifiedError
     end
   end
 
   describe "when no Cask is specified, but an invalid option" do
     it "raises an exception" do
       lambda {
-        Cask::CLI::Info.run('--notavalidoption')
-      }.must_raise CaskUnspecifiedError
+        Hbc::CLI::Info.run('--notavalidoption')
+      }.must_raise Hbc::CaskUnspecifiedError
     end
   end
 end

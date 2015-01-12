@@ -22,4 +22,8 @@ cask :v1 => 'cvc4' do
   license :oss
 
   uninstall :pkgutil => 'org.macports.cvc4'
+
+  caveats do
+    path_environment_variable('/opt/local/bin')
+  end
 end

@@ -6,8 +6,8 @@ require 'test_helper'
 describe "Operations on staged Casks" do
   describe "bundle ID" do
     it "fetches the bundle ID from a staged cask" do
-      transmission_cask  = Cask.load('local-transmission')
-      tr_installer = Cask::Installer.new(transmission_cask)
+      transmission_cask  = Hbc.load('local-transmission')
+      tr_installer = Hbc::Installer.new(transmission_cask)
 
       shutup do
         tr_installer.install

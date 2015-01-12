@@ -3,6 +3,7 @@ cask :v1 => 'mactex' do
   sha256 '4e7fc21dbddae436f604dbeb3db2dc13c44aa9e2dd827a669a170418e84fc7e6'
 
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version}.pkg"
+  name 'MacTeX'
   homepage 'http://www.tug.org/mactex/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

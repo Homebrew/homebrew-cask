@@ -5,6 +5,7 @@ cask :v1 => 'onionshare' do
   url "https://onionshare.org/files/#{version}/OnionShare-#{version}.dmg"
   gpg "#{url}.sig",
       :key_url => 'https://onionshare.org/signing-key.asc'
+  name 'OnionShare'
   homepage 'https://onionshare.org/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

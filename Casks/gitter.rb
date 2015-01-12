@@ -1,10 +1,10 @@
 cask :v1 => 'gitter' do
-  version '1.159'
-  sha256 'd118559341385e8b0eba1c5c3ff578a3e03914aaf5c4f0c71d5db89e1444b1b6'
+  version '1.162'
+  sha256 'bb1374419f4166954b0472999bb14c808bbd1b1e169c058fea365972f3562068'
 
   url "http://update.gitter.im/osx/Gitter-#{version}.dmg"
   appcast 'http://update.gitter.im/osx/appcast.xml',
-          :sha256 => 'd7f4a27606703839676ad13c58c1d21c4ac9dae5d76ccff28f92e7d58b787912'
+          :sha256 => 'd9bda3654a9aed873e798fd1e514db93247f1ab534056306d421a5a7de2ac2d3'
   homepage 'https://gitter.im/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

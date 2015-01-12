@@ -3,6 +3,7 @@ cask :v1 => 'astrill' do
   sha256 :no_check
 
   url 'http://download.astrill.com/astrill-setup-mac.dmg'
+  name 'Astrill'
   homepage 'https://www.astrill.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

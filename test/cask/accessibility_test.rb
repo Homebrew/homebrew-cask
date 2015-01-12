@@ -4,18 +4,18 @@ require 'test_helper'
 # that class is abstracted from installer.rb.
 describe "Accessibility Access" do
   before do
-    cask = Cask.load('with-accessibility-access')
-    @installer = Cask::Installer.new(cask, Cask::FakeSystemCommand)
+    cask = Hbc.load('with-accessibility-access')
+    @installer = Hbc::Installer.new(cask, Hbc::FakeSystemCommand)
   end
 
   describe "install" do
     it "can enable accessibility access" do
-      MacOS.stubs(:release => OS::Mac::Version.new('10.9'))
+      MacOS.stubs(:release => MacOS::Release.new('10.9'))
 
       @installer.stubs(:bundle_identifier => 'com.example.BasicCask')
 
-      Cask::FakeSystemCommand.expects_command(
-        ['/usr/bin/sudo', '-E', '--', '/usr/bin/sqlite3', Cask.tcc_db, %q{INSERT INTO access VALUES('kTCCServiceAccessibility','com.example.BasicCask',0,1,1,NULL);}]
+      Hbc::FakeSystemCommand.expects_command(
+        ['/usr/bin/sudo', '-E', '--', '/usr/bin/sqlite3', Hbc.tcc_db, %q{INSERT INTO access VALUES('kTCCServiceAccessibility','com.example.BasicCask',0,1,1,NULL);}]
       )
       shutup do
         @installer.enable_accessibility_access
@@ -23,10 +23,10 @@ describe "Accessibility Access" do
     end
 
     it "can enable accessibility access in OS X releases prior to Mavericks" do
-      MacOS.stubs(:release => OS::Mac::Version.new('10.8'))
+      MacOS.stubs(:release => MacOS::Release.new('10.8'))
 
-      Cask::FakeSystemCommand.expects_command(
-        ['/usr/bin/sudo', '-E', '--', '/usr/bin/touch', Cask.pre_mavericks_accessibility_dotfile]
+      Hbc::FakeSystemCommand.expects_command(
+        ['/usr/bin/sudo', '-E', '--', '/usr/bin/touch', Hbc.pre_mavericks_accessibility_dotfile]
       )
       shutup do
         @installer.enable_accessibility_access
@@ -36,19 +36,19 @@ describe "Accessibility Access" do
 
   describe "uninstall" do
     it "can disable accessibility access" do
-      MacOS.stubs(:release => OS::Mac::Version.new('10.9'))
+      MacOS.stubs(:release => MacOS::Release.new('10.9'))
 
       @installer.stubs(:bundle_identifier => 'com.example.BasicCask')
 
-      Cask::FakeSystemCommand.expects_command(
-        ['/usr/bin/sudo', '-E', '--', '/usr/bin/sqlite3', Cask.tcc_db, %q{DELETE FROM access WHERE client='com.example.BasicCask';}]
+      Hbc::FakeSystemCommand.expects_command(
+        ['/usr/bin/sudo', '-E', '--', '/usr/bin/sqlite3', Hbc.tcc_db, %q{DELETE FROM access WHERE client='com.example.BasicCask';}]
       )
       shutup do
         @installer.disable_accessibility_access
       end
     end
     it "warns about disabling accessibility access on old OS X releases" do
-      MacOS.stubs(:release => OS::Mac::Version.new('10.8'))
+      MacOS.stubs(:release => MacOS::Release.new('10.8'))
 
       @installer.stubs(:bundle_identifier => 'com.example.BasicCask')
 

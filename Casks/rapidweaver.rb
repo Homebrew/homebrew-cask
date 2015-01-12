@@ -4,6 +4,7 @@ cask :v1 => 'rapidweaver' do
 
   url "http://realmacsoftware.com/redirects/rapidweaver#{version.to_i}/direct"
   appcast "http://www.realmacsoftware.com/stats/rapidweaver#{version.to_i}.php"
+  name 'RapidWeaver'
   homepage 'http://realmacsoftware.com/rapidweaver'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

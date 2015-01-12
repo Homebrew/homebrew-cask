@@ -125,7 +125,7 @@ alternate version of the `brew-cask` subcommand, by invoking `brew cask`
 with fully-qualified paths, like this:
 
 ```bash
-$ HOMEBREW_BREW_FILE=/usr/local/bin/brew /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/brew.rb /usr/local/Library/Taps/caskroom/homebrew-cask/bin/brew-cask-cmd.rb help
+$ /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/Taps/caskroom/homebrew-cask/lib/brew-cask-cmd.rb help
 ```
 
 #### Forcing a Specific Homebrew-cask Subcommand
@@ -135,7 +135,7 @@ specific file by giving a fully-qualified path to the file containing the
 subcommand, like this:
 
 ```bash
-$ brew cask /usr/local/Cellar/brew-cask/0.37.0/rubylib/cask/cli/info.rb google-chrome
+$ brew cask /usr/local/Cellar/brew-cask/0.37.0/rubylib/hbc/cli/info.rb google-chrome
 ```
 
 This form can also be combined with a specific Ruby interpreter as above.

@@ -9,6 +9,8 @@ cask :v1 => 'spotify' do
 
   app 'Spotify.app'
 
+  uninstall :launchctl => 'com.spotify.webhelper'
+
   zap :delete => [
                   '~/Library/Application Support/Spotify',
                   '~/Library/Preferences/com.spotify.client.plist',

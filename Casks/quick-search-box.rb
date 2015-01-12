@@ -3,8 +3,10 @@ cask :v1 => 'quick-search-box' do
   sha256 '3fec80343c50a5b492e140fef13bd1bc4cce835beb3952591e8b4638e5940470'
 
   url "https://qsb-mac.googlecode.com/files/GoogleQuickSearchBox-#{version}.Release.dmg"
+  name 'Quick Search Box'
   homepage 'http://www.google.com/quicksearchbox/'
   license :oss
+  tags :vendor => 'Google'
 
   app 'Quick Search Box.app'
   postflight do

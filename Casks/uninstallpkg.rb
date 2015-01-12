@@ -5,6 +5,7 @@ cask :v1 => 'uninstallpkg' do
   url "http://www.corecode.at/downloads/uninstallpkg_#{version}.zip"
   appcast 'http://www.corecode.at/uninstallpkg/uninstallpkg.xml',
           :sha256 => '5f5de8cb9ee55d7c96582f7359a41c9530170f589f45bdad5ee3f04dd22c829d'
+  name 'UninstallPKG'
   homepage 'http://www.corecode.at/uninstallpkg/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

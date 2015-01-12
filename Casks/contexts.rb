@@ -4,6 +4,7 @@ cask :v1 => 'contexts' do
 
   url 'http://contextsformac.com/releases/Contexts.zip'
   appcast 'http://www.contextsformac.com/releases/appcast.xml'
+  name 'Contexts'
   homepage 'http://contextsformac.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

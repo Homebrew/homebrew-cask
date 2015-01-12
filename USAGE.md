@@ -189,8 +189,6 @@ instead of the _home_ Applications directory by specifying `--appdir=/Applicatio
 Default is `~/Library/PreferencePanes`
 * `--qlplugindir=/my/path` changes the path for Quicklook Plugin symlinks.
 Default is `~/Library/QuickLook`
-* `--widgetdir=/my/path` changes the path for Dashboard Widget symlinks.
-Default is `~/Library/Widgets`
 * `--fontdir=/my/path` changes the path for Fonts symlinks.
 Default is `~/Library/Fonts`
 * `--binarydir=/my/path` changes the path for binary symlinks.
