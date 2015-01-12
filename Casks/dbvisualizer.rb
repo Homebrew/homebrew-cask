@@ -7,4 +7,9 @@ cask :v1 => 'dbvisualizer' do
   license :commercial
 
   installer :manual => 'DbVisualizer Installer.app'
+
+  caveats <<-EOS.undent
+    #{token} requires Java. You can install the latest version with
+      brew cask install java
+  EOS
 end
