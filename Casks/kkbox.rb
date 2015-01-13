@@ -1,6 +1,6 @@
 cask :v1 => 'kkbox' do
-  version '5.0.22-3a569cb'
-  sha256 '93714ce1801698dbd77aafbc8e7770261703b7f9840111ec7b496986959dd3f6'
+  version '5.2.10-bb7c025'
+  sha256 '8fc8bb44806861b8321daedc8895ec0616dd2481628e23f6408c9168bec8c39b'
 
   url "http://download.kkbox.com/files/KKBOX-#{version}.dmg"
   homepage 'http://www.kkbox.com/'
