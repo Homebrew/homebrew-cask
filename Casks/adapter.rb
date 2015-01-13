@@ -1,6 +1,6 @@
 cask :v1 => 'adapter' do
-  version '2.1.3'
-  sha256 '215987042772e1a55fb3a4592895286644344dddef478b3cccfd64235b20f6b7'
+  version '2.1.4'
+  sha256 '7f4db4e89fcf1d7be692c5b74b02f4c22206396a0febd51f42a46262ff9d4927'
 
   url "http://downloads.macroplant.com/Adapter-#{version}.dmg"
   name 'Adapter'
