@@ -118,7 +118,7 @@ We recommend the following:
 	/<path>/<to>/<private>/<repo>/developer/bin/production_brew_cask
 	```
 
-#### Forcing a Ruby interpreter
+### Forcing a Ruby interpreter
 
 You can force a specific version of the Ruby interpreter, and/or an
 alternate version of the `brew-cask` subcommand, by invoking `brew cask`
@@ -128,7 +128,7 @@ with fully-qualified paths, like this:
 $ /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/Taps/caskroom/homebrew-cask/lib/brew-cask-cmd.rb help
 ```
 
-#### Forcing a Specific Homebrew-cask Subcommand
+### Forcing a Specific Homebrew-cask Subcommand
 
 If you are developing a subcommand, you can force `brew cask` to dispatch a
 specific file by giving a fully-qualified path to the file containing the
@@ -139,6 +139,18 @@ $ brew cask /usr/local/Cellar/brew-cask/0.37.0/rubylib/hbc/cli/info.rb google-ch
 ```
 
 This form can also be combined with a specific Ruby interpreter as above.
+
+### Forcing a Specific OS X Release
+
+The environment variable `$MACOS_RELEASE` can be overridden at the command
+line for test purposes:
+
+```bash
+$ MACOS_RELEASE=10.9 brew cask info <cask>
+```
+
+The environment variable `$MACOS_RELEASE_WITH_PATCHLEVEL` is also available,
+though not consulted directly.  Use `$MACOS_RELEASE` for testing.
 
 ### Target Ruby Versions
 
