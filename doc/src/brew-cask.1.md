@@ -38,10 +38,6 @@ names, and other aspects of this manual are still subject to change.
    Check the given Casks for installability.
    If no tokens are given on the command line, all Casks are audited.
 
-  * `alfred`:
-    Modify Alfred's search scope to include the Caskroom directory where
-    Applications are stored.
-
   * `cat` <token> [ <token> ... ]:
     Dump the given Cask definition file to the standard output.
 
@@ -230,8 +226,6 @@ Environment variables specific to homebrew-cask:
 The homebrew-cask home page: <http://caskroom.io>.
 
 The homebrew-cask GitHub page: <https://github.com/caskroom/homebrew-cask>.
-
-Alfred.app: <http://www.alfredapp.com>
 
 `brew`(1), `curl`(1)
 
