@@ -133,8 +133,10 @@ module Hbc::Utils
   end
 
   def self.exec_editor(*args)
-    editor = [ *ENV.values_at('HOMEBREW_EDITOR', 'VISUAL', 'EDITOR'),
-               *%w{mate edit vim /usr/bin/vim} ].compact.first
+    editor = [
+              *ENV.values_at('HOMEBREW_EDITOR', 'VISUAL', 'EDITOR'),
+              *%w{mate edit vim /usr/bin/vim}.map{ |x| which(x) }
+             ].compact.first.to_s
     exec(*editor.split.concat(args))
   end
 
