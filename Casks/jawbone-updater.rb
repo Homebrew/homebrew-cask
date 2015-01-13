@@ -4,7 +4,7 @@ cask :v1 => 'jawbone-updater' do
 
   url "http://content.jawbone.com/store/dashboard/Jawbone_Updater-#{version}.pkg"
   homepage 'http://jawbone.com/'
-  license :gpl #In actuality LGPL
+  license :gpl
 
   pkg "Jawbone_Updater-#{version}.pkg"
 
