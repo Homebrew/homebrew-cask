@@ -4,10 +4,13 @@ cask :v1 => 'avast' do
 
   url 'http://download.ff.avast.com/mac/avast_free_mac_security.dmg'
   name 'Avast'
+  name 'Avast Mac Security'
   homepage 'http://www.avast.com/'
   license :commercial
 
   pkg 'Avast Mac Security.pkg'
 
   uninstall :script => '/Library/Application Support/Avast/hub/uninstall.sh'
+
+  zap :delete => '~/Library/Preferences/com.avast.avast!.plist'
 end
