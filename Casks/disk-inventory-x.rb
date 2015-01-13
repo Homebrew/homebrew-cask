@@ -5,7 +5,7 @@ cask :v1 => 'disk-inventory-x' do
   url "http://www.derlien.com/diskinventoryx/downloads/dev/DIX#{version}Universal.dmg",
     :user_agent => :fake
   homepage 'http://www.derlien.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Disk Inventory X.app'
 end
