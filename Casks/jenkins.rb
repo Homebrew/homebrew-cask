@@ -25,5 +25,15 @@ cask :v1 => 'jenkins' do
   caveats <<-EOS.undent
     #{token} requires Java. You can install the latest version with
       brew cask install java
+
+    You can change the launch parameters for #{token} using "defaults",
+    as described in
+      https://wiki.jenkins-ci.org/display/JENKINS/Thanks+for+using+OSX+Installer
+
+    Alternatively, you can directly run #{token} with custom parameters, eg
+      java -jar /Applications/Jenkins/jenkins.war -XX:PermSize=$MIN_PERM_GEN --httpPort=$HTTP_PORT
+
+    For more options, see
+      https://wiki.jenkins-ci.org/display/JENKINS/Starting+and+Accessing+Jenkins
   EOS
 end
