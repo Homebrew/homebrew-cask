@@ -11,6 +11,3 @@ at_exit { FileUtils.remove_entry(TEST_TMPDIR) }
 HOMEBREW_CACHE         = Pathname.new(TEST_TMPDIR).join('cache')
 HOMEBREW_USER_AGENT    = 'Homebrew'
 HOMEBREW_CURL_ARGS     = '-fsLA'
-
-MACOS_POINT_RELEASE = `/usr/bin/sw_vers -productVersion`.chomp
-MACOS_RELEASE = ENV.fetch('MACOS_RELEASE') { MACOS_POINT_RELEASE[/10\.\d+/] }

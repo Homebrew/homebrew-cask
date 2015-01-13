@@ -27,9 +27,5 @@ end
 HOMEBREW_CACHE = cache
 undef cache
 
-MACOS_POINT_RELEASE = `/usr/bin/sw_vers -productVersion`.chomp
-MACOS_RELEASE = MACOS_POINT_RELEASE[/10\.\d+/]
-
-HOMEBREW_USER_AGENT = "Homebrew-cask v0.51+ (Ruby #{RUBY_VERSION}-#{RUBY_PATCHLEVEL}; #{MACOS_RELEASE})"
-
+HOMEBREW_USER_AGENT = "Homebrew-cask v0.51+ (Ruby #{RUBY_VERSION}-#{RUBY_PATCHLEVEL})"
 HOMEBREW_CURL_ARGS = '-f#LA'
