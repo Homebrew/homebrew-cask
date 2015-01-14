@@ -1,13 +1,8 @@
 cask :v1 => 'p4v' do
-  version '2014.1-978848'
+  version '2014.2-951414'
 
-  if Hardware::CPU.is_32_bit?
-    sha256 'a5af42fbab551e948de9dedf27f4605f5270e17ad4b9e2a42d252ea60e264f54'
-    url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*},'\1')}/bin.macosx106x86/P4V.dmg"
-  else
-    sha256 'a87fbc6d4eeaffa9547931a6c25a97c29efdbcc49728f38322a8ff532838ac5e'
-    url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*},'\1')}/bin.macosx106x86_64/P4V.dmg"
-  end
+  sha256 'cb8f210435de8186af92e5d376a64e6b5f48c67d1b4e892628de88d54ce4918e'
+  url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*},'\1')}/bin.macosx107x86_64/P4V.dmg"
 
   name 'P4V'
   name 'Perforce Visual Client'
