@@ -10,4 +10,7 @@ cask :v1 => 'vagrant' do
 
   uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] },
             :pkgutil => 'com.vagrant.vagrant'
+
+  caveats "To install bash completion for vagrant run: brew install homebrew/completions/vagrant-completion"
+
 end
