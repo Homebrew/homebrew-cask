@@ -5,7 +5,7 @@ cask :v1 => 'ghostlab' do
   url 'http://awesome.vanamco.com/downloads/ghostlab/Ghostlab.dmg'
   appcast 'http://awesome.vanamco.com/update/ghostlab-cast.xml'
   homepage 'http://vanamco.com/ghostlab/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Ghostlab.app'
 end

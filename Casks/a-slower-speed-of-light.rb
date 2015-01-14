@@ -3,6 +3,7 @@ cask :v1 => 'a-slower-speed-of-light' do
   sha256 'ab5a66a9857b979211d0506a005d678f185705bb848bd42ac91d9628e0945a39'
 
   url 'http://web.mit.edu/gambit/summer12/speedoflight/A_Slower_Speed_of_Light_OSX.zip'
+  name 'A Slower Speed of Light'
   homepage 'http://gamelab.mit.edu/games/a-slower-speed-of-light/'
   license :gratis
 

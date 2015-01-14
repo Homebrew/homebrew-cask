@@ -1,10 +1,10 @@
 cask :v1 => 'qq' do
-  version '3.1.2'
-  sha256 'e74ec441a95d36e22e5e78a7ecc5a3d0d02cf749b413f88198ff74bc3bb85da0'
+  version '4.0.1'
+  sha256 '9005c3c1019fa1217240cbae46de17fbd29ea03ef25603729638903ad13c331f'
 
   url "http://dldir1.qq.com/qqfile/QQforMac/QQ_V#{version}.dmg"
-  homepage 'http://im.qq.com/macqq/index.shtml'
-  license :unknown
+  homepage 'http://im.qq.com/macqq/'
+  license :commercial
 
   app 'QQ.app'
 end

@@ -3,8 +3,9 @@ cask :v1 => 'growlnotify' do
   sha256 'eec601488b19c9e9b9cb7f0081638436518bce782d079f6e43ddc195727c04ca'
 
   url "https://growl.cachefly.net/GrowlNotify-#{version}.zip"
+  name 'GrowlNotify'
   homepage 'http://growl.info/downloads'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'GrowlNotify.pkg'
 

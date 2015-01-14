@@ -1,15 +1,16 @@
 cask :v1 => 'rubymine' do
-  version '7.0'
-  sha256 '60ceca89231a9756e682d754aaba409c9120266f20478e51f7b6004f82919478'
+  version '7.0.2'
+  sha256 '70f891b21cd99573c83d5242d46bc70fb241987d2b06d5a19a19f2ac62499bab'
 
   url "http://download-cf.jetbrains.com/ruby/RubyMine-#{version}.dmg"
+  name 'RubyMine'
   homepage 'http://www.jetbrains.com/ruby/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'RubyMine.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/RubyMine.app/Contents/Info.plist"
+    plist_set(':JVMOptions:JVMVersion', '1.6+')
   end
 
   zap :delete => [

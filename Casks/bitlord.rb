@@ -3,6 +3,7 @@ cask :v1 => 'bitlord' do
   sha256 'd9af26b1626fd471550fbc3374158b09ae7c129bd3ab17ffbdf559d813e42af1'
 
   url "http://www.bitlord.com/osx/BitLord-Lion-#{version}.dmg"
+  name 'BitLord'
   homepage 'http://www.bitlord.com'
   license :gpl
 

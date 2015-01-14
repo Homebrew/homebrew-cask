@@ -4,7 +4,7 @@ cask :v1 => 'fliqlo' do
 
   url "http://fliqlo.com/download/fliqlo_#{version.gsub('.','')}.dmg", :referer => 'http://fliqlo.com/#about'
   homepage 'http://fliqlo.com/'
-  license :unknown
+  license :gratis
 
   screen_saver 'Fliqlo.saver'
 end

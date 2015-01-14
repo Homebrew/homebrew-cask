@@ -4,6 +4,7 @@ cask :v1 => 'abgx360' do
 
   # dropbox.com is the official download host per the vendor homepage
   url "http://dl.dropbox.com/u/59058148/abgx360-#{version}.pkg"
+  name 'abgx360'
   homepage 'http://abgx360.xecuter.com/'
   license :oss
 

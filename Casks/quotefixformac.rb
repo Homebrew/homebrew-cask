@@ -6,6 +6,8 @@ cask :v1 => 'quotefixformac' do
   homepage 'https://github.com/robertklep/quotefixformac'
   license :oss
 
+  stage_only true
+
   caveats do
     <<-EOS.undent
       To enable mail plugins and link QuoteFix:

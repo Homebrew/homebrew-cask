@@ -1,8 +1,8 @@
 cask :v1 => 'osxfuse' do
-  version '2.7.2'
-  sha256 '40ebab0919c6ae34221c51815830bc5eefe5f286619eeee85e2b7cb8df266d55'
+  version '2.7.4'
+  sha256 'e5f43f673062725d76b6c10d379d576f6148f32fab42f6d18455b11f41e92969'
 
-  url "https://downloads.sourceforge.net/project/osxfuse/osxfuse-#{version}/osxfuse-#{version}.dmg"
+  url "http://downloads.sourceforge.net/project/osxfuse/osxfuse-#{version}/osxfuse-#{version}.dmg"
   homepage 'https://osxfuse.github.io/'
   license :oss
 

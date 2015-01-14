@@ -4,7 +4,7 @@ cask :v1 => 'squidman' do
 
   url "http://squidman.net/resources/downloads/SquidMan#{version}.dmg"
   homepage 'http://squidman.net/squidman/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SquidMan.app'
 end

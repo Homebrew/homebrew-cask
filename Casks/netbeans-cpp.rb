@@ -1,10 +1,10 @@
 cask :v1 => 'netbeans-cpp' do
-  version '8.0.1'
-  sha256 '724e3471329ae507dcd2127528cddbbdec5f0e104ee9a510fc49131196d6ab33'
+  version '8.0.2'
+  sha256 'af81462adbe046b2c46afe2137f090b857cbe54f3ffacf7f4b90702cafda420b '
 
   url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-cpp-macosx.dmg"
   homepage 'https://netbeans.org/'
-  license :unknown
+  license :oss
 
   pkg "NetBeans #{version}.mpkg"
 

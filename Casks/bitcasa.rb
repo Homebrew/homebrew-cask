@@ -3,6 +3,7 @@ cask :v1 => 'bitcasa' do
   sha256 'c7aa7af89285d986da8bec38decb25f4c94acc5eb446aa5b74684232805757b2'
 
   url "https://d1kbf262vwnlmm.cloudfront.net/Bitcasa_#{version}.dmg"
+  name 'Bitcasa CloudFS'
   homepage 'https://www.bitcasa.com'
   license :gratis
 

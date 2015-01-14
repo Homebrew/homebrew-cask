@@ -4,7 +4,7 @@ cask :v1 => 'knock' do
 
   url 'http://knocktounlock.com/download'
   homepage 'http://knocktounlock.com'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Knock.app'
 end

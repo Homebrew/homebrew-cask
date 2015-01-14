@@ -3,8 +3,9 @@ cask :v1 => 'darteditor' do
   sha256 :no_check
 
   url 'https://storage.googleapis.com/dart-archive/channels/stable/release/latest/editor/darteditor-macos-x64.zip'
+  name 'Dart Editor'
   homepage 'https://www.dartlang.org/tools/editor/'
-  license :unknown
+  license :bsd
 
   app 'dart/DartEditor.app'
 end

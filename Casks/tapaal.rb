@@ -4,7 +4,7 @@ cask :v1 => 'tapaal' do
 
   url "http://www.tapaal.net/fileadmin/download/tapaal-3.1/tapaal-#{version}-mac64.dmg"
   homepage 'http://www.tapaal.net'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Tapaal.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'google-chrome' do
 
   url 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
   homepage 'https://www.google.com/chrome/'
-  license :unknown
+  license :gratis
   tags :vendor => 'Google'
 
   app 'Google Chrome.app'

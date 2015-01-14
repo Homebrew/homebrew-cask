@@ -6,5 +6,6 @@ cask :v1test => 'invalid-conflicts-with-key' do
   homepage 'http://example.com/invalid-conflicts-with-key'
 
   conflicts_with :no_such_key => 'unar'
+
   app 'Caffeine.app'
 end

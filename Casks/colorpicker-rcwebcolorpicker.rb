@@ -4,7 +4,7 @@ cask :v1 => 'colorpicker-rcwebcolorpicker' do
 
   url "http://www.rubicode.com/Downloads/RCWebColorPicker-#{version}.dmg"
   homepage 'http://www.rubicode.com/Software/RCWebColorPicker'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   colorpicker 'RCWebColorPicker.colorPicker'
 end

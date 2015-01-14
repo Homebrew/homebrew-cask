@@ -1,10 +1,10 @@
 cask :v1 => 'node' do
-  version '0.10.32'
-  sha256 '3ce16fa81f47da38bcf726ef384e1bc0658d52f880d17aa17fd5b613bea035cf'
+  version '0.10.35'
+  sha256 '5fc8d4f7137d0ee6e23cb6368dd2d219f389153b7a9898f26f7e35aee19c1dcf'
 
   url "http://nodejs.org/dist/v#{version}/node-v#{version}.pkg"
   homepage 'http://nodejs.org'
-  license :unknown
+  license :mit
 
   pkg  "node-v#{version}.pkg"
 

@@ -1,14 +1,15 @@
 cask :v1 => 'pycharm' do
-  version '4.0'
-  sha256 '8657c887809c88f6a8d678122adc92cb78c2c160faa7162bf501a1a79cec6a51'
+  version '4.0.3'
+  sha256 '67e3c30781c62c34b744c8eef3688c48dccd98ac23afe965811f62f50907ad42'
 
-  url "http://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
+  url "https://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
+  name 'PyCharm'
   homepage 'http://www.jetbrains.com/pycharm/'
-  license :unknown
+  license :commercial
 
   app 'PyCharm.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/PyCharm.app/Contents/Info.plist"
+    plist_set(':JVMOptions:JVMVersion', '1.6+')
   end
 end

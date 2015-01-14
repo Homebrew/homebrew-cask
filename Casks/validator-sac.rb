@@ -4,7 +4,7 @@ cask :v1 => 'validator-sac' do
 
   url "http://habilis.net/download/Validator-SAC_#{version}.zip"
   homepage 'http://habilis.net/validator-sac/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Validator-SAC.app'
 end

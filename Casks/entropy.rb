@@ -5,7 +5,7 @@ cask :v1 => 'entropy' do
   url 'http://www.eigenlogik.com/entropy/download'
   appcast 'http://hyperion.eigenlogik.com/appcast/feed/entropy/'
   homepage 'http://www.eigenlogik.com/entropy/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Entropy.app'
 end

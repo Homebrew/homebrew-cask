@@ -4,7 +4,7 @@ cask :v1 => 'yimello' do
 
   url 'http://yimello.adriencadet.com/assets/zip/yimello-mac.zip'
   homepage 'http://yimello.adriencadet.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Yimello.app'
 end

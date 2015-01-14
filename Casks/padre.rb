@@ -4,7 +4,7 @@ cask :v1 => 'padre' do
 
   url "http://wildperl.com/wp-content/uploads/Padre/padre-osx-uni-#{version.gsub('.','-')}.dmg"
   homepage 'http://padre.perlide.org'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Padre.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'haskell-platform' do
 
   url "http://www.haskell.org/platform/download/#{version}/Haskell%20Platform%20#{version}%2064bit.signed.pkg"
   homepage 'http://www.haskell.org/platform/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "Haskell Platform #{version} 64bit.signed.pkg"
 

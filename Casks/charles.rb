@@ -4,7 +4,7 @@ cask :v1 => 'charles' do
 
   url "http://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}-applejava.dmg"
   homepage 'http://www.charlesproxy.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Charles.app'
 

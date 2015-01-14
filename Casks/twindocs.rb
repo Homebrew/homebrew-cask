@@ -4,7 +4,7 @@ cask :v1 => 'twindocs' do
 
   url 'https://www.twindocs.com/plugins/es/tools_mac/Twindocs%20tools.pkg.zip'
   homepage 'https://www.twindocs.com'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Twindocs tools.pkg'
 

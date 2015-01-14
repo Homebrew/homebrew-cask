@@ -4,13 +4,12 @@ cask :v1 => 'path-finder' do
 
   url 'http://get.cocoatech.com/PF7.zip'
   homepage 'http://www.cocoatech.com/pathfinder/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Path Finder.app'
 
   postflight do
-    # Don't ask to move the app bundle to /Applications
-    system '/usr/bin/defaults', 'write', 'com.cocoatech.PathFinder', 'kNTMoveToApplicationsFolderAlertSuppress', '-bool', 'true'
+    suppress_move_to_applications :key => 'kNTMoveToApplicationsFolderAlertSuppress'
   end
 
   zap :delete => [

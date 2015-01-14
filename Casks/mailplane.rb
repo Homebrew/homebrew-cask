@@ -4,7 +4,7 @@ cask :v1 => 'mailplane' do
 
   url 'http://update.mailplaneapp.com/mailplane_3.php'
   homepage 'http://mailplaneapp.com'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Mailplane 3.app'
 

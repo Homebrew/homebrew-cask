@@ -4,7 +4,7 @@ cask :v1 => 'jaksta' do
 
   url "http://downloads.jaksta.com/release/mac/Jaksta-#{version}.dmg"
   homepage 'http://www.jaksta.com/Products#JakstaMediaRecorderMac'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Jaksta.app'
 end

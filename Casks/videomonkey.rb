@@ -4,8 +4,9 @@ cask :v1 => 'videomonkey' do
 
   url "http://videomonkey.org/download/videomonkey-#{version}.zip"
   appcast 'http://videomonkey.org/releases/videomonkeycast.xml'
+  name 'Video Monkey'
   homepage 'http://videomonkey.org/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'VideoMonkey.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'wiznote' do
 
   url 'http://release.wiz.cn/wiznote-macos-2014-09-25.dmg'
   homepage 'http://www.wiznote.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'WizNote.app'
 end

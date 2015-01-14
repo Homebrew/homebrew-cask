@@ -1,14 +1,16 @@
 cask :v1 => 'terraform' do
-  version '0.3.1'
-  sha256 'dda41425c7eb06c5e8b3f5ad4904e993aa8a9ab6b61f954ee2e259667cb6ff57'
+  version '0.3.6'
+  sha256 '65b4c5bfc34bb0464b691b31ac554132c87ac0c5d7acef936c039777a27dccad'
 
   url "https://dl.bintray.com/mitchellh/terraform/terraform_#{version}_darwin_amd64.zip"
   homepage 'http://www.terraform.io/'
   license :mpl
 
   binary 'terraform'
+  binary 'terraform-provider-atlas'
   binary 'terraform-provider-aws'
   binary 'terraform-provider-cloudflare'
+  binary 'terraform-provider-cloudstack'
   binary 'terraform-provider-consul'
   binary 'terraform-provider-digitalocean'
   binary 'terraform-provider-dnsimple'

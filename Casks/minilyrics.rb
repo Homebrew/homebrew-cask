@@ -4,7 +4,7 @@ cask :v1 => 'minilyrics' do
 
   url 'http://www.crintsoft.com/download/MiniLyrics.dmg'
   homepage 'http://www.crintsoft.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'MiniLyrics.pkg'
 

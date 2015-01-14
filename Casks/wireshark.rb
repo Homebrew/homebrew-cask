@@ -1,10 +1,11 @@
 cask :v1 => 'wireshark' do
-  version '1.12.1'
-  sha256 '3ce749efbcf89dd72b4e1c2336f4edd7111e05ce9cad8da2df189ac4e56fa1b7'
+  version '1.12.3'
+  sha256 '79ad20e948c7da73663eaab7f9e9c03e098dd5d92aa439e82d76fc1a0e843085'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
+  name 'Wireshark'
   homepage 'http://www.wireshark.org'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "Wireshark #{version} Intel 64.pkg"
   postflight do
@@ -39,7 +40,5 @@ cask :v1 => 'wireshark' do
                          '/usr/local/bin/wireshark',
                         ]
 
-  caveats do
-    x11_required
-  end
+  depends_on :x11 => true
 end

@@ -4,9 +4,9 @@ cask :v1 => 'logitech-gaming-software' do
 
   url "http://www.logitech.com/pub/techsupport/gaming/LogiGamingSetup_#{version}.mpkg"
   homepage 'http://www.logitech.com/en-us/support/gaming-software?section=downloads&bit=&osid=36'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  pkg 'LogiGamingSetup_#{version}.mpkg'
+  pkg "LogiGamingSetup_#{version}.mpkg"
 
   uninstall :script => '/Applications/Logitech/Uninstaller.app/Contents/Resources/UninstallScript.sh',
             :pkgutil => [

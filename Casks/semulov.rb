@@ -4,7 +4,7 @@ cask :v1 => 'semulov' do
 
   url "http://kainjow.com/downloads/Semulov_#{version}.zip"
   homepage 'http://www.kainjow.com'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Semulov.app'
 end

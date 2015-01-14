@@ -4,7 +4,7 @@ cask :v1 => 'cajviewer' do
 
   url 'http://cajviewer.cnki.net/download/CAJViewerMac.dmg'
   homepage 'http://cajviewer.cnki.net/download.html'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'CAJViewerMac.pkg'
 

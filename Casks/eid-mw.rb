@@ -1,12 +1,17 @@
 cask :v1 => 'eid-mw' do
-  version '4.0.6'
-  sha256 'd88dad806fd4a8e01e636a22f9322a14f8bfdec596ce61f194c47a69d64668bb'
+  version '4.0.7'
+  sha256 '12ef509d3e535714e7c81353979d7637da594293be81411adfc6f6ea4511374b'
 
-  url "https://eid-mw.googlecode.com/files/beid-#{version}-7422-signed.dmg"
-  homepage 'https://code.google.com/p/eid-mw/'
+  url "http://eid.belgium.be/nl/binaries/beid-#{version}-7780-signed_tcm227-259517.dmg"
+  homepage 'http://eid.belgium.be/'
   license :oss
 
-  pkg 'beid-7422-signed.pkg'
+  pkg 'beid-7780-signed.pkg'
 
   uninstall :pkgutil => 'be.eid.middleware'
+
+  caveats <<-EOS.undent
+    #{token} requires Java. You can install the latest version with
+      brew cask install java
+  EOS
 end

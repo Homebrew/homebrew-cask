@@ -4,7 +4,7 @@ cask :v1 => 'plain-clip' do
 
   url 'https://www.bluem.net/files/Plain-Clip.dmg'
   homepage 'http://www.bluem.net/en/mac/plain-clip'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Plain Clip.app'
 end

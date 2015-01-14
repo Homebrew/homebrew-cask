@@ -4,7 +4,7 @@ cask :v1 => 'cn3d' do
 
   url "ftp://ftp.ncbi.nlm.nih.gov/cn3d/Cn3D-#{version}-OSX.zip"
   homepage 'http://www.ncbi.nlm.nih.gov/Structure/CN3D/cn3d.shtml'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Cn3D.app'
 end

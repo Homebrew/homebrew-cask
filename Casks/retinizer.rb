@@ -4,7 +4,7 @@ cask :v1 => 'retinizer' do
 
   url "https://sites.google.com/a/mikelpr.com/files/home/Retinizer#{version.gsub('.','')}.zip"
   homepage 'http://retinizer.mikelpr.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Retinizer.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'garmin-ant-agent' do
 
   url "http://download.garmin.com/software/ANTAgentforMac_#{version.gsub('.','')}.dmg"
   homepage 'http://www8.garmin.com/support/download_details.jsp?id=4417'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install Garmin ANT Agent.pkg'
 

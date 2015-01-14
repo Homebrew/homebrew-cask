@@ -4,8 +4,9 @@ cask :v1 => 'chocolat' do
 
   url 'https://chocolatapp.com/download'
   appcast 'http://chocolatapp.com/userspace/appcast/appcast_alpha.php'
+  name 'Chocolat'
   homepage 'http://chocolatapp.com/'
-  license :unknown
+  license :commercial
 
   app 'Chocolat.app'
 end

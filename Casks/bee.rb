@@ -4,6 +4,7 @@ cask :v1 => 'bee' do
 
   url 'http://neat.io/bee/download.html'
   appcast 'http://neat.io/appcasts/bee-appcast.xml'
+  name 'Bee'
   homepage 'http://neat.io/bee/'
   license :commercial
 

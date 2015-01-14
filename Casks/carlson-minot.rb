@@ -4,7 +4,7 @@ cask :v1 => 'carlson-minot' do
 
   url "https://www.carlson-minot.com/downloads/arm-#{version}-arm-none-linux-gnueabi.osx.intelx86.bin.pkg"
   homepage 'http://www.carlson-minot.com'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "arm-#{version}-arm-none-linux-gnueabi.osx.intelx86.bin.pkg"
 

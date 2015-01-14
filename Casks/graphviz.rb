@@ -4,7 +4,7 @@ cask :v1 => 'graphviz' do
 
   url "http://www.graphviz.org/pub/graphviz/stable/macos/mountainlion/graphviz-#{version}.pkg"
   homepage 'http://www.graphviz.org/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "graphviz-#{version}.pkg"
 

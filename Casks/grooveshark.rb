@@ -4,12 +4,9 @@ cask :v1 => 'grooveshark' do
 
   url 'http://adops-fio.grooveshark.com/desktop-app/downloads/grooveshark.zip'
   homepage 'http://www.grooveshark.com'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Grooveshark.app'
-  caveats <<-EOS.undent
-    #{title} requires Adobe Flash, available via
 
-      brew cask install flash
-  EOS
+  depends_on :cask => 'flash'
 end

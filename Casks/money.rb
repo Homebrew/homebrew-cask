@@ -5,8 +5,9 @@ cask :v1 => 'money' do
   url "http://download.jumsoft.com/Applications/Money/Money_#{version}.zip"
   appcast 'http://www.jumsoft.com/downloads/updates/money4.rss',
           :sha256 => 'b96c8822636a881e3672876695bf9e7aa9c9e398bf48d1e7f59fc6a2c99264c9'
+  name 'Money'
   homepage 'http://www.jumsoft.com/money/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Money.app'
 end

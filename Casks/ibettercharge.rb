@@ -4,8 +4,9 @@ cask :v1 => 'ibettercharge' do
 
   url 'http://download.softorino.com/ibc/last/'
   appcast 'http://hook.softorino.com/ibc/appcast.xml'
+  name 'iBetterCharge'
   homepage 'http://softorino.com/ibettercharge/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iBetterCharge.app'
 end

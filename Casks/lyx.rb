@@ -6,7 +6,7 @@ cask :v1 => 'lyx' do
   gpg "#{url}.sig",
       :key_id => 'de7a44fac7fb382d'
   homepage 'http://www.lyx.org'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'LyX.app'
 end

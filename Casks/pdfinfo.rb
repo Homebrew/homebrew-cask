@@ -4,7 +4,7 @@ cask :v1 => 'pdfinfo' do
 
   url 'http://www.sybrex.com/download/macgui/files/pdfinfo/PDFInfo.dmg'
   homepage 'http://www.sybrex.com/products/macgui/infomanager/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'PDFInfo.app'
 end

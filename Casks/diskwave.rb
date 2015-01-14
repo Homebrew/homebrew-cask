@@ -5,8 +5,9 @@ cask :v1 => 'diskwave' do
   url "http://diskwave.barthe.ph/download/DiskWave_#{version.sub(%r{^(\d+\.\d+).*},'\1')}.dmg"
   appcast 'http://diskwave.barthe.ph/sparkle/appcast_64bit.php',
           :sha256 => '95aadfc8afdacc59b3760957a2ddbb81cf60bbb54cc7bf935c4421d2b52818b6'
+  name 'DiskWave'
   homepage 'http://diskwave.barthe.ph/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'DiskWave.app'
 end

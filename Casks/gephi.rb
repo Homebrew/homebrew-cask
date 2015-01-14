@@ -4,7 +4,7 @@ cask :v1 => 'gephi' do
 
   url "https://launchpad.net/gephi/0.8/0.8.2beta/+download/gephi-#{version}.dmg"
   homepage 'http://gephi.org/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Gephi.app'
 end

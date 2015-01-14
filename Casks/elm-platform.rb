@@ -1,8 +1,9 @@
 cask :v1 => 'elm-platform' do
-  version '0.13'
-  sha256 '9f2a6446fdb1fad1536ec2ddce36a678265fe5b1112ca3edc992c07eebac1e62'
+  version '0.14.1'
+  sha256 'f7fcc1d86c01498073d614508931f8bd3684d87530a5e65af4fbcf2b9bf4249d'
 
   url "http://install.elm-lang.org/Elm-Platform-#{version}.pkg"
+  name 'Elm'
   homepage 'http://www.elm-lang.org'
   license :bsd
 

@@ -1,4 +1,4 @@
-class Cask::FakeSystemCommand
+class Hbc::FakeSystemCommand
   def self.responses
     @responses ||= {}
   end
@@ -35,12 +35,12 @@ class Cask::FakeSystemCommand
   end
 
   def self.run(command, options={})
-    command = Cask::SystemCommand._process_options(command, options)
+    command = Hbc::SystemCommand._process_options(command, options)
     unless responses.key?(command)
       fail("no response faked for #{command.inspect}, faked responses are: #{responses.inspect}")
     end
     system_calls[command] += 1
-    Cask::SystemCommand::Result.new(command, responses[command], '', 0)
+    Hbc::SystemCommand::Result.new(command, responses[command], '', 0)
   end
 
   def self.run!(command, options={})
@@ -51,9 +51,9 @@ end
 module FakeSystemCommandHooks
   def after_teardown
     super
-    Cask::FakeSystemCommand.verify_expectations!
+    Hbc::FakeSystemCommand.verify_expectations!
   ensure
-    Cask::FakeSystemCommand.clear
+    Hbc::FakeSystemCommand.clear
   end
 end
 

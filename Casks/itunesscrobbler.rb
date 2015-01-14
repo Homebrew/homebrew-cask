@@ -4,7 +4,7 @@ cask :v1 => 'itunesscrobbler' do
 
   url "http://www.easyclasspage.de/lastfm/files/iTunesScrobbler_#{version.gsub('.','')}.zip"
   homepage 'http://www.easyclasspage.de/lastfm/seite-19.html'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iTunesScrobbler.app'
 end

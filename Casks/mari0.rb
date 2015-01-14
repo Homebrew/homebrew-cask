@@ -4,7 +4,7 @@ cask :v1 => 'mari0' do
 
   url 'http://stabyourself.net/dl.php?file=mari0-1006/mari0-osx.zip'
   homepage 'http://stabyourself.net/mari0/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Mari0.app'
 end

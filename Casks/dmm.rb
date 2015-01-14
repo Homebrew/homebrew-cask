@@ -4,7 +4,7 @@ cask :v1 => 'dmm' do
 
   url 'https://www.dmm.co.jp/transfer/-/dmmviewer/=/device=mac/'
   homepage 'http://www.dmm.com/dc/book/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'DMMViewer.pkg'
 

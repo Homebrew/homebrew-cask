@@ -4,13 +4,13 @@ cask :v1 => 'mcs783x' do
 
   module Utils
     def self.basename
-      "MCS783x_Mac_OSX_10.5_to_10.7_driver_v#{Mcs783x.version}_Binary"
+      "MCS783x_Mac_OSX_10.5_to_10.7_driver_v#{Module.nesting.last.version}_Binary"
     end
   end
 
   url "http://www.asix.com.tw/FrootAttach/driver/#{Utils.basename}.zip"
   homepage 'http://www.asix.com.tw/products.php?op=ProductList&PLine=74&PSeries=109'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :nested => "#{Utils.basename}/MCS7830_v#{version}.dmg"
   pkg "MCS7830 v#{version}.pkg"

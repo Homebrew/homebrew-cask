@@ -3,6 +3,7 @@ cask :v1 => 'fluke' do
   sha256 '3a68f42674aeb3a1089df5581bae5bbf8f28525d2d6588a03e257fc3b688f18a'
 
   url "https://flukeformac.googlecode.com/files/Fluke_#{version}.zip"
+  name 'Fluke'
   homepage 'https://code.google.com/p/flukeformac/'
   license :oss
 

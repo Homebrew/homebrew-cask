@@ -3,8 +3,9 @@ cask :v1 => 'hexels' do
   sha256 :no_check
 
   url 'http://hexraystudios.com/Hexels.dmg'
+  name 'Hexels'
   homepage 'http://hexraystudios.com/hexels/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Hexels.app'
 

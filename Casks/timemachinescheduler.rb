@@ -4,7 +4,7 @@ cask :v1 => 'timemachinescheduler' do
 
   url "http://www.klieme.com/Downloads/TimeMachineScheduler/TimeMachineScheduler_#{version}.zip"
   homepage 'http://www.klieme.com/TimeMachineScheduler.html'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :nested => 'TimeMachineScheduler3_Installer.dmg'
   prefpane 'TimeMachineScheduler3_Installer.app/Contents/Resources/TimeMachineScheduler.prefPane'

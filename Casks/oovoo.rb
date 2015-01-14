@@ -4,7 +4,7 @@ cask :v1 => 'oovoo' do
 
   url 'http://download.cdn.oovoo.com/download/ooVoo.dmg'
   homepage 'http://www.oovoo.com'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Oovoo.app'
 end

@@ -5,6 +5,7 @@ cask :v1 => 'bowtie' do
   url "http://bowtieapp.com/bowtie-#{version}.zip"
   appcast 'http://updates.13bold.com/appcasts/bowtie',
           :sha256 => '006ab04ddddeb487b3b16807d58508549e067baf601656f1f95740791d1cca66'
+  name 'Bowtie'
   homepage 'http://bowtieapp.com/'
   license :gratis
 

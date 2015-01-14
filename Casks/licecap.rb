@@ -4,7 +4,7 @@ cask :v1 => 'licecap' do
 
   url "http://www.cockos.com/licecap/licecap#{version.gsub('.','')}.dmg"
   homepage 'http://www.cockos.com/licecap/'
-  license :unknown
+  license :gpl
 
   app 'LICEcap.app'
 end

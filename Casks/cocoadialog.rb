@@ -3,6 +3,7 @@ cask :v1 => 'cocoadialog' do
   sha256 '7f721d221697381a51df6091153b0470ce09f4083d86bbb93446db88eac58827'
 
   url "https://github.com/downloads/mstratman/cocoadialog/CocoaDialog-#{version}.dmg"
+  name 'cocoaDialog'
   homepage 'http://mstratman.github.io/cocoadialog/'
   license :oss
 

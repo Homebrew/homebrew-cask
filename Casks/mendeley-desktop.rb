@@ -1,10 +1,10 @@
 cask :v1 => 'mendeley-desktop' do
-  version '1.12.3'
-  sha256 '8803967a356b15c40e01aa7e869c849bf41f4f8d323d870ad1526b31a5142559'
+  version '1.12.4'
+  sha256 'cfa7e2a1658ca5157e2d678b1b046b18bc59422ab8b24940074fb3c4c77afbf5'
 
   url "http://desktop-download.mendeley.com/download/Mendeley-Desktop-#{version}-OSX-Universal.dmg"
   homepage 'http://www.mendeley.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Mendeley Desktop.app'
 end

@@ -9,4 +9,6 @@ cask :v1 => 'sshfs' do
   pkg "sshfs-#{version}.pkg"
 
   uninstall :pkgutil => 'com.github.osxfuse.pkg.SSHFS'
+
+  depends_on :cask => 'osxfuse'
 end

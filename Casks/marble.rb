@@ -4,7 +4,7 @@ cask :v1 => 'marble' do
 
   url "https://files.kde.org/marble/downloads/MacOSX/Marble-#{version}.dmg"
   homepage 'http://www.marble.kde.org'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Marble.app'
 end

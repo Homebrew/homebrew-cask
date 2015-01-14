@@ -5,8 +5,9 @@ cask :v1 => 'electrum' do
   url "https://download.electrum.org/electrum-#{version}.dmg"
   gpg "#{url}.asc",
       :key_id => '9914864dfc33499c6ca2beea22453004695506fd'
+  name 'Electrum'
   homepage 'http://electrum.org/'
-  license :unknown
+  license :gpl
 
   app 'Electrum.app'
 end

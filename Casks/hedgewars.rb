@@ -5,8 +5,9 @@ cask :v1 => 'hedgewars' do
   url "http://download.gna.org/hedgewars/Hedgewars-#{version}-3.dmg"
   appcast 'http://www.hedgewars.org/download/appcast.xml',
           :sha256 => 'bb5344972d01c4007ab4d8193fc2aaaebe68c4048213a10ba6b4cbc61210747f'
+  name 'Hedgewars'
   homepage 'http://hedgewars.org'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Hedgewars.app'
 end

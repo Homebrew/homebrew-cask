@@ -3,8 +3,9 @@ cask :v1 => 'namely' do
   sha256 :no_check
 
   url 'http://amarsagoo.info/namely/Namely.dmg'
+  name 'Namely'
   homepage 'http://amarsagoo.info/namely'
-  license :unknown
+  license :gratis
 
   app 'Namely.app'
 end

@@ -1,12 +1,19 @@
 cask :v1 => 'vienna' do
-  version '3.0.0'
-  sha256 'e61f44b7be0f1f49cf6c735d8e03071141ddaca1d5ff65db29f786ee3dfeded3'
+  version '3.0.2'
+  sha256 'a52a8de9591483d4c440ab1390ab7f66bbafee0e27e23517b7300b0df4e461e0'
 
-  url "https://downloads.sourceforge.net/vienna-rss/Vienna#{version}.tgz"
-  appcast 'http://vienna-rss.org/changelog_beta.xml',
-          :sha256 => '20ae887cd3d0f8b97cd133cd32454fdb8796e72f2de2a0e12fe288c7358f7e31'
+  url "http://downloads.sourceforge.net/vienna-rss/Vienna#{version}.tgz"
+  appcast 'http://vienna-rss.org/changelog.xml',
+          :sha256 => 'fcfbae9fe2ccae3bd3531436daa2060c16fab7d72de2a8eea1d13ccbcb66814d'
+  name 'Vienna'
   homepage 'http://www.vienna-rss.org'
-  license :oss
+  license :apache
 
   app 'Vienna.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/Vienna',
+                  '~/Library/Caches/uk.co.opencommunity.vienna2',
+                  '~/Library/Preferences/uk.co.opencommunity.vienna2.plist',
+                  ]
 end

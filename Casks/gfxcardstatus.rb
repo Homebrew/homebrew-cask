@@ -5,8 +5,9 @@ cask :v1 => 'gfxcardstatus' do
   url "http://codykrieger.com/downloads/gfxCardStatus-#{version}.zip"
   appcast 'http://gfx.io/appcast.xml',
           :sha256 => 'cc01a7466eb53f425920046a5b7ea0a23b35bd431b7ccca9c77bd8fa407cd718'
+  name 'gfxCardStatus'
   homepage 'http://gfx.io/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'gfxCardStatus.app'
 end

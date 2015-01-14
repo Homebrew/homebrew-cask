@@ -1,6 +1,6 @@
 cask :v1 => 'deezer' do
-  version '0.9.9_4104'
-  sha256 '2b9e8acb66a01a7b6e77da75a007b68648e07c66fd413bf57c2c29e029ee43ba'
+  version '0.9.13_4123'
+  sha256 '06088c364793ef6ccd549a23eebfe73af03720b10ecf714f952e2a4da1bd9a26'
 
   url "http://cdn-content.deezer.com/builds/mac/Deezer#{version.sub(%r{^[^_]*(_\d+)},'\1')}.dmg"
   homepage 'https://www.deezer.com/beta/formac'

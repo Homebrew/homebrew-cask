@@ -3,8 +3,8 @@ cask :v1 => 'mamp' do
   sha256 '840877041af7a06d50a3ddc67030ae4f193f70add473ebad0f7418daf80cd553'
 
   url "http://downloads4.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
-  homepage 'http://www.mamp.info/en/index.html'
-  license :unknown
+  homepage 'http://www.mamp.info/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "MAMP_MAMP_PRO_#{version}.pkg"
   postflight do

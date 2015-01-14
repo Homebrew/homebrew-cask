@@ -3,8 +3,9 @@ cask :v1 => 'openarena' do
   sha256 '5a8faf7f5b51f351b0a1618c06b6b98a5f1a6758f1d39818de2c87df2a0bac4a'
 
   url 'http://openarena.ws/request.php?4'
+  name 'OpenArena'
   homepage 'http://openarena.ws'
-  license :unknown
+  license :gpl
 
   app "openarena-#{version}/OpenArena.app"
 

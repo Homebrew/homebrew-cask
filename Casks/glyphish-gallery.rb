@@ -4,7 +4,7 @@ cask :v1 => 'glyphish-gallery' do
 
   url "https://github.com/glyphish/gallery/releases/download/v#{version}/v#{version}.zip"
   homepage 'https://github.com/glyphish/gallery'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Glyphish Gallery.app'
 end

@@ -5,8 +5,9 @@ cask :v1 => 'dfontsplitter' do
   url "http://peter.upfold.org.uk/files/dfontsplitter/dfontsplitter-#{version}-mac.zip"
   appcast 'http://apps.upfold.org.uk/appupdate/dfontsplitter.xml',
           :sha256 => 'b7a3ed81f5e160a4888afdb5810d97f5b2ed828ecec4569dc1d1a6bd825bcc59'
+  name 'DfontSplitter'
   homepage 'http://peter.upfold.org.uk/projects/dfontsplitter'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'DfontSplitter.app'
 end

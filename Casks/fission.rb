@@ -4,7 +4,7 @@ cask :v1 => 'fission' do
 
   url 'http://neutral.rogueamoeba.com/mirror/files/Fission.zip'
   homepage 'http://rogueamoeba.com/fission/'
-  license :unknown
+  license :commercial
 
   app 'Fission.app'
 end

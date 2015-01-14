@@ -3,8 +3,9 @@ cask :v1 => 'bankid' do
   sha256 :no_check
 
   url 'https://install.bankid.com/FileDownloader?fileId=Mac'
+  name 'BankID'
   homepage 'http://www.bankid.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :type => :naked
   preflight do

@@ -4,7 +4,7 @@ cask :v1 => 'teleport' do
 
   url 'http://www.abyssoft.com/software/teleport/downloads/teleport.zip'
   homepage 'http://www.abyssoft.com/software/teleport/'
-  license :unknown
+  license :gratis
 
   prefpane 'teleport/teleport.prefPane'
 end

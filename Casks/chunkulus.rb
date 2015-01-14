@@ -3,8 +3,9 @@ cask :v1 => 'chunkulus' do
   sha256 :no_check
 
   url 'http://presstube.com/screensavers/presstube-chunkulus-mac.zip'
+  name 'Chunkulus'
   homepage 'http://presstube.com/blog/2011/chunkulus/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   screen_saver 'presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver'
 
@@ -12,9 +13,5 @@ cask :v1 => 'chunkulus' do
     system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName Chunkulus (Presstube)', "#{staged_path}/presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver/Contents/Info.plist"
   end
 
-  caveats <<-EOS.undent
-    #{title} requires Adobe Air, available via
-
-      brew cask install adobe-air
-  EOS
+  depends_on :cask => 'adobe-air'
 end

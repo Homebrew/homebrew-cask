@@ -4,7 +4,7 @@ cask :v1 => 'hippoconnect' do
 
   url 'http://hipporemote.com/HippoConnect/mac/HippoConnect.zip'
   homepage 'http://hipporemote.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'HippoConnect.app'
 end

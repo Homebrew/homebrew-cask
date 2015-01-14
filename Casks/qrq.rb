@@ -4,7 +4,7 @@ cask :v1 => 'qrq' do
 
   url "http://fkurz.net/ham/qrq/qrq-#{version}.dmg"
   homepage 'http://fkurz.net/ham/qrq.html'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'qrq.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'manopen' do
 
   url "http://www.clindberg.org/projects/ManOpen-#{version}.dmg"
   homepage 'http://www.clindberg.org/projects/ManOpen.html'
-  license :unknown
+  license :bsd
 
   app 'ManOpen.app'
   binary 'openman'

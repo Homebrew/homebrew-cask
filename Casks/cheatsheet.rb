@@ -5,7 +5,7 @@ cask :v1 => 'cheatsheet' do
   url 'http://www.cheatsheetapp.com/CheatSheet/download.php'
   appcast 'http://mediaatelier.com/CheatSheet/feed.php'
   homepage 'http://www.cheatsheetapp.com/CheatSheet/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'CheatSheet.app'
 

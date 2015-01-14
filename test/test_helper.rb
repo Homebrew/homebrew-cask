@@ -1,30 +1,27 @@
 require 'bundler'
 require 'bundler/setup'
 
+# just in case
+if RUBY_VERSION.to_i < 2
+  raise 'brew-cask: Ruby 2.0 or greater is required.'
+end
+
 # force some environment variables
 ENV['HOMEBREW_NO_EMOJI']='1'
-
-# set some Homebrew constants used in our code
-HOMEBREW_BREW_FILE = '/usr/local/bin/brew'
 
 # add homebrew-cask lib to load path
 brew_cask_path = Pathname.new(File.expand_path(__FILE__+'/../../'))
 casks_path = brew_cask_path.join('Casks')
 lib_path = brew_cask_path.join('lib')
-
 $:.push(lib_path)
 
-# add homebrew to load path
-homebrew_path = Pathname(`brew --prefix`.chomp)
-homebrew_path = Pathname('/usr/local') unless homebrew_path.exist?
-$:.push(homebrew_path.join('Library', 'Homebrew'))
-
 # require homebrew testing env
-require 'test/testing_env'
+# todo: removeme, this is transitional
+require 'vendor/homebrew-fork/testing_env'
 
 # todo temporary, copied from old Homebrew, this method is now moved inside a class
 def shutup
-  if ARGV.verbose?
+  if ENV.has_key?('VERBOSE_TESTS')
     yield
   else
     begin
@@ -55,14 +52,19 @@ require 'mocha/integration/mini_test'
 Mocha::Integration::MiniTest.activate
 
 # our baby
-require 'cask'
+require 'hbc'
+
+# override Homebrew locations
+Hbc.homebrew_prefix = Pathname.new(TEST_TMPDIR).join('prefix')
+Hbc.homebrew_repository = Hbc.homebrew_prefix
+Hbc.homebrew_tapspath = nil
 
 # Look for Casks in testcasks by default.  It is elsewhere required that
 # the string "test" appear in the directory name.
-Cask.default_tap = 'caskroom/homebrew-testcasks'
+Hbc.default_tap = 'caskroom/homebrew-testcasks'
 
 # our own testy caskroom
-Cask.caskroom = HOMEBREW_PREFIX.join('TestCaskroom')
+Hbc.caskroom = Hbc.homebrew_prefix.join('TestCaskroom')
 
 class TestHelper
   # helpers for test Casks to reference local files easily
@@ -75,15 +77,15 @@ class TestHelper
   end
 
   def self.test_cask
-    Cask.load('basic-cask')
+    Hbc.load('basic-cask')
   end
 
   def self.fake_fetcher
-    Cask::FakeFetcher
+    Hbc::FakeFetcher
   end
 
   def self.fake_response_for(*args)
-    Cask::FakeFetcher.fake_response_for(*args)
+    Hbc::FakeFetcher.fake_response_for(*args)
   end
 
   def self.must_output(test, lambda, expected)
@@ -104,7 +106,7 @@ class TestHelper
   end
 
   def self.install_without_artifacts(cask)
-    Cask::Installer.new(cask).tap do |i|
+    Hbc::Installer.new(cask).tap do |i|
       shutup do
         i.download
         i.extract_primary_container
@@ -123,21 +125,21 @@ require 'tempfile'
 
 # pretend like we installed the homebrew-cask tap
 project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
-taps_dest = HOMEBREW_LIBRARY/"Taps/caskroom"
+taps_dest = Hbc.homebrew_prefix.join(*%w{Library Taps caskroom})
 
 # create directories
 FileUtils.mkdir_p taps_dest
-HOMEBREW_PREFIX.join('bin').mkdir
+FileUtils.mkdir_p Hbc.homebrew_prefix.join('bin')
 
-FileUtils.ln_s project_root, taps_dest/"homebrew-cask"
+FileUtils.ln_s project_root, taps_dest.join('homebrew-cask')
 
 # Common superclass for test Casks for when we need to filter them out
-class TestCask < Cask; end
+class TestHbc < Hbc; end
 
 # jack in some optional utilities
-FileUtils.ln_s '/usr/local/bin/cabextract', HOMEBREW_PREFIX.join('bin/cabextract')
-FileUtils.ln_s '/usr/local/bin/unar', HOMEBREW_PREFIX.join('bin/unar')
-FileUtils.ln_s '/usr/local/bin/lsar', HOMEBREW_PREFIX.join('bin/lsar')
+FileUtils.ln_s '/usr/local/bin/cabextract', Hbc.homebrew_prefix.join('bin/cabextract')
+FileUtils.ln_s '/usr/local/bin/unar', Hbc.homebrew_prefix.join('bin/unar')
+FileUtils.ln_s '/usr/local/bin/lsar', Hbc.homebrew_prefix.join('bin/lsar')
 
 # also jack in some test Casks
-FileUtils.ln_s project_root/'test'/'support', taps_dest/"homebrew-testcasks"
+FileUtils.ln_s project_root.join('test', 'support'), taps_dest.join('homebrew-testcasks')

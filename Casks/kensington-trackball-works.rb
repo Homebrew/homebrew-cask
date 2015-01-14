@@ -4,7 +4,7 @@ cask :v1 => 'kensington-trackball-works' do
 
   url 'http://accoblobstorageus.blob.core.windows.net/software/38c5e777-b2ef-4434-8091-6290cb41fc16.dmg'
   homepage 'http://www.kensington.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Kensington TrackballWorks.pkg'
 

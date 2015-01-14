@@ -3,8 +3,9 @@ cask :v1 => 'android-file-transfer' do
   sha256 :no_check
 
   url 'https://dl.google.com/dl/androidjumper/mtp/current/androidfiletransfer.dmg'
+  name 'Android File Transfer'
   homepage 'http://www.android.com/filetransfer/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Android File Transfer.app'
 

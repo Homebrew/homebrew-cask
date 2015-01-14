@@ -1,10 +1,10 @@
 cask :v1 => 'hive' do
-  version '1.3.4'
-  sha256 'bbf99210f9d359d1f75482abebd24eb7cb3103d437c47a0dbf107f4bf9dcd97b'
+  version '1.4.1'
+  sha256 '380f056ee5f88c86e69f1f08723db341aa482f36eb048972664d661f44efa58b'
 
   url "https://github.com/hivewallet/hive-osx/releases/download/#{version}/Hive-#{version}.zip"
   appcast 'https://hivewallet.com/hive-osx-appcast.xml',
-          :sha256 => 'ab99fa8762d778ae379837c083214d70b3693b42cc8aa596d57a90b1d7e55c67'
+          :sha256 => '53a58f4b4bc888cde3e036ee3b09b44f0ba19b321492c82a93acc01891d310e1'
   homepage 'http://www.hivewallet.com'
   license :oss
 

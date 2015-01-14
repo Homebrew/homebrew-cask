@@ -1,10 +1,10 @@
 cask :v1 => 'gdal-framework' do
   version '1.11.1-1'
-  sha256 'b5b3a62ead9e2bdff9b85eccf42dbc628f384f89eff33fe150933ddaa841d25b'
+  sha256 :no_check    # upstream package is updated in-place
 
   url "http://www.kyngchaos.com/files/software/frameworks/GDAL_Complete-#{version.sub(%r{^(\d+\.\d+).*},'\1')}.dmg"
   homepage 'http://www.kyngchaos.com/software/frameworks'
-  license :unknown
+  license :oss
 
   pkg 'GDAL Complete.pkg'
   pkg 'Numpy.pkg'

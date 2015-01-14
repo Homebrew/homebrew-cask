@@ -4,8 +4,9 @@ cask :v1 => 'reflector' do
 
   url 'http://download.airsquirrels.com/Reflector/Mac/Reflector.dmg'
   appcast 'http://reflectorapp.com/updates/reflector.xml'
+  name 'Reflector'
   homepage 'http://www.airsquirrels.com/reflector/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Reflector.app'
 end

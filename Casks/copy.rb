@@ -4,7 +4,7 @@ cask :v1 => 'copy' do
 
   url 'https://copy.com/install/mac/Copy.dmg'
   homepage 'https://www.copy.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Copy.app'
 end

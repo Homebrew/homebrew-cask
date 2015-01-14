@@ -3,8 +3,9 @@ cask :v1 => 'unity-web-player' do
   sha256 :no_check
 
   url 'http://webplayer.unity3d.com/download_webplayer-3.x/webplayer-mini.dmg'
+  name 'Unity Web Player'
   homepage 'https://unity3d.com/webplayer'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install Unity Web Player.pkg'
 

@@ -1,5 +1,376 @@
 # CHANGELOG
 
+## 0.52.1
+
+* __Casks__
+  - 8 Casks added (525 updated) by 35 contributors since 0.52.0
+  - 2224 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#8618][] Mmore robust cask dependency calculation
+  - [#8622][] Improve error message for AIR app reinstallation
+* __Internal Changes__
+  - [#8721][], [#8724][], [#8612][], [#8611][] integrate Homebrew code into our own backend
+* __Documentation__
+  - 4 doc commits since 0.52.0 <3 [@nZac][]
+* __Contributors__
+  - 13 new contributors since 0.52.0
+  - 1398 total contributors
+* __Release Date__
+  - 2015-01-07 23:30:00 UTC
+
+[#8611]: https://github.com/caskroom/homebrew-cask/issues/8611
+[#8612]: https://github.com/caskroom/homebrew-cask/issues/8612
+[#8618]: https://github.com/caskroom/homebrew-cask/issues/8618
+[#8622]: https://github.com/caskroom/homebrew-cask/issues/8622
+[#8721]: https://github.com/caskroom/homebrew-cask/issues/8721
+[#8724]: https://github.com/caskroom/homebrew-cask/issues/8724
+[@nZac]: https://github.com/nZac
+
+## 0.52.0
+
+* __Casks__
+  - 48 Casks added (1469 updated) by 114 contributors since 0.51.1
+  - 2216 total Casks
+* __Features__
+ - [#8491][] Cask dependencies (`depends_on :cask`)
+ - [#8324][] actually require all required stanzas
+ - [#8190][] `sha256 :no_check` overrides `version <string>`
+ - [#8490][] expand `@` symbols in tokens
+* __Breaking Changes__
+  - none
+* __Fixes__
+ - [#8519][] check for libpng to assure X11 detection
+ - [#8463][] make brew-cask.rb Formula pass `brew audit --strict brew-cask`. <3 [@mikemcquaid][]
+ - [#8596][] audit check for sha256 of the empty string
+ - [#8465][] improve `String` coercion in system_command.rb
+ - [#8442][] fix path typo in `list_apps_in_pkg` script <3 [@jawshooah][]
+ - [#8444][] actually test for multiple `depends_on :formula`
+ - [#8429][] leave stdout intact when parsing plists
+ - [#8430][] make relative `Pathname`s absolute in system_command
+ - [#8318][], [#8152][] followups on Ruby 2.0 requirement
+ - [#8193][] don't invoke method `Homebrew.install_tap`; invoke `brew` instead
+* __Internal Changes__
+ - [#8575][] major namespace reorg under `Hbc::`
+ - [#8595][], [#8559][], [#8557][], [#8561][], [#8556][], [#8552][], [#8539][], [#8522][], [#8466][], [#8464][], [#8461][], [#8448][], [#8447][], [#8446][], [#8427][], [#8428][], [#8433][], [#8434][], [#8435][], [#8436][], [#8437][], [#8425][], [#8426][], [#8403][], [#8391][], [#8393][], [#8390][], [#8388][], [#8392][], [#8389][], [#8369][], [#8361][], [#8342][], [#8341][], [#8340][], [#8339][], [#8338][], [#8337][], [#8336][], [#8334][], [#8335][], [#8330][], [#8329][], [#8331][], [#8332][], [#8333][], [#8314][], [#8310][], [#8312][], [#8308][], [#8298][], [#8296][], [#8297][], [#8295][], [#8268][], [#8264][], [#8261][], [#8263][], [#8265][], [#8266][], [#8247][], [#8228][], [#8218][], [#8227][], [#8229][], [#8230][], [#8221][], [#8225][], [#8226][], [#8197][], [#8196][], [#8195][], [#8194][], [#8189][], [#8188][], [#8158][] integrate Homebrew code into our own backend
+ - [#8458][] refactor: move`Hash` monkeypatch to separate file
+ - [#8460][] refactor: move `cabv` method out of `Pathname` monkeypatch
+ - [#8402][] refactor: Homebrew's `Tty` class
+ - [#8328][] refactor: adopt `lib/vendor` structure
+ - [#8156][] refactor: rename `gpg.rb` to `gpg_check.rb` to match class name
+ - [#8321][] update license comment in `brew cask create` template
+* __Documentation__
+  - 11 doc commits since 0.51.1
+* __Contributors__
+  - 59 new contributors since 0.51.1
+  - 1385 total contributors
+* __Release Date__
+  - 2015-01-03 12:08:00 UTC
+
+[#8152]: https://github.com/caskroom/homebrew-cask/issues/8152
+[#8156]: https://github.com/caskroom/homebrew-cask/issues/8156
+[#8158]: https://github.com/caskroom/homebrew-cask/issues/8158
+[#8188]: https://github.com/caskroom/homebrew-cask/issues/8188
+[#8189]: https://github.com/caskroom/homebrew-cask/issues/8189
+[#8190]: https://github.com/caskroom/homebrew-cask/issues/8190
+[#8193]: https://github.com/caskroom/homebrew-cask/issues/8193
+[#8194]: https://github.com/caskroom/homebrew-cask/issues/8194
+[#8195]: https://github.com/caskroom/homebrew-cask/issues/8195
+[#8196]: https://github.com/caskroom/homebrew-cask/issues/8196
+[#8197]: https://github.com/caskroom/homebrew-cask/issues/8197
+[#8218]: https://github.com/caskroom/homebrew-cask/issues/8218
+[#8221]: https://github.com/caskroom/homebrew-cask/issues/8221
+[#8225]: https://github.com/caskroom/homebrew-cask/issues/8225
+[#8226]: https://github.com/caskroom/homebrew-cask/issues/8226
+[#8227]: https://github.com/caskroom/homebrew-cask/issues/8227
+[#8228]: https://github.com/caskroom/homebrew-cask/issues/8228
+[#8229]: https://github.com/caskroom/homebrew-cask/issues/8229
+[#8230]: https://github.com/caskroom/homebrew-cask/issues/8230
+[#8247]: https://github.com/caskroom/homebrew-cask/issues/8247
+[#8261]: https://github.com/caskroom/homebrew-cask/issues/8261
+[#8263]: https://github.com/caskroom/homebrew-cask/issues/8263
+[#8264]: https://github.com/caskroom/homebrew-cask/issues/8264
+[#8265]: https://github.com/caskroom/homebrew-cask/issues/8265
+[#8266]: https://github.com/caskroom/homebrew-cask/issues/8266
+[#8268]: https://github.com/caskroom/homebrew-cask/issues/8268
+[#8295]: https://github.com/caskroom/homebrew-cask/issues/8295
+[#8296]: https://github.com/caskroom/homebrew-cask/issues/8296
+[#8297]: https://github.com/caskroom/homebrew-cask/issues/8297
+[#8298]: https://github.com/caskroom/homebrew-cask/issues/8298
+[#8308]: https://github.com/caskroom/homebrew-cask/issues/8308
+[#8310]: https://github.com/caskroom/homebrew-cask/issues/8310
+[#8312]: https://github.com/caskroom/homebrew-cask/issues/8312
+[#8314]: https://github.com/caskroom/homebrew-cask/issues/8314
+[#8318]: https://github.com/caskroom/homebrew-cask/issues/8318
+[#8321]: https://github.com/caskroom/homebrew-cask/issues/8321
+[#8324]: https://github.com/caskroom/homebrew-cask/issues/8324
+[#8328]: https://github.com/caskroom/homebrew-cask/issues/8328
+[#8329]: https://github.com/caskroom/homebrew-cask/issues/8329
+[#8330]: https://github.com/caskroom/homebrew-cask/issues/8330
+[#8331]: https://github.com/caskroom/homebrew-cask/issues/8331
+[#8332]: https://github.com/caskroom/homebrew-cask/issues/8332
+[#8333]: https://github.com/caskroom/homebrew-cask/issues/8333
+[#8334]: https://github.com/caskroom/homebrew-cask/issues/8334
+[#8335]: https://github.com/caskroom/homebrew-cask/issues/8335
+[#8336]: https://github.com/caskroom/homebrew-cask/issues/8336
+[#8337]: https://github.com/caskroom/homebrew-cask/issues/8337
+[#8338]: https://github.com/caskroom/homebrew-cask/issues/8338
+[#8339]: https://github.com/caskroom/homebrew-cask/issues/8339
+[#8340]: https://github.com/caskroom/homebrew-cask/issues/8340
+[#8341]: https://github.com/caskroom/homebrew-cask/issues/8341
+[#8342]: https://github.com/caskroom/homebrew-cask/issues/8342
+[#8361]: https://github.com/caskroom/homebrew-cask/issues/8361
+[#8369]: https://github.com/caskroom/homebrew-cask/issues/8369
+[#8388]: https://github.com/caskroom/homebrew-cask/issues/8388
+[#8389]: https://github.com/caskroom/homebrew-cask/issues/8389
+[#8390]: https://github.com/caskroom/homebrew-cask/issues/8390
+[#8391]: https://github.com/caskroom/homebrew-cask/issues/8391
+[#8392]: https://github.com/caskroom/homebrew-cask/issues/8392
+[#8393]: https://github.com/caskroom/homebrew-cask/issues/8393
+[#8402]: https://github.com/caskroom/homebrew-cask/issues/8402
+[#8403]: https://github.com/caskroom/homebrew-cask/issues/8403
+[#8425]: https://github.com/caskroom/homebrew-cask/issues/8425
+[#8426]: https://github.com/caskroom/homebrew-cask/issues/8426
+[#8427]: https://github.com/caskroom/homebrew-cask/issues/8427
+[#8428]: https://github.com/caskroom/homebrew-cask/issues/8428
+[#8429]: https://github.com/caskroom/homebrew-cask/issues/8429
+[#8430]: https://github.com/caskroom/homebrew-cask/issues/8430
+[#8433]: https://github.com/caskroom/homebrew-cask/issues/8433
+[#8434]: https://github.com/caskroom/homebrew-cask/issues/8434
+[#8435]: https://github.com/caskroom/homebrew-cask/issues/8435
+[#8436]: https://github.com/caskroom/homebrew-cask/issues/8436
+[#8437]: https://github.com/caskroom/homebrew-cask/issues/8437
+[#8442]: https://github.com/caskroom/homebrew-cask/issues/8442
+[#8444]: https://github.com/caskroom/homebrew-cask/issues/8444
+[#8446]: https://github.com/caskroom/homebrew-cask/issues/8446
+[#8447]: https://github.com/caskroom/homebrew-cask/issues/8447
+[#8448]: https://github.com/caskroom/homebrew-cask/issues/8448
+[#8458]: https://github.com/caskroom/homebrew-cask/issues/8458
+[#8460]: https://github.com/caskroom/homebrew-cask/issues/8460
+[#8461]: https://github.com/caskroom/homebrew-cask/issues/8461
+[#8463]: https://github.com/caskroom/homebrew-cask/issues/8463
+[#8464]: https://github.com/caskroom/homebrew-cask/issues/8464
+[#8465]: https://github.com/caskroom/homebrew-cask/issues/8465
+[#8466]: https://github.com/caskroom/homebrew-cask/issues/8466
+[#8490]: https://github.com/caskroom/homebrew-cask/issues/8490
+[#8491]: https://github.com/caskroom/homebrew-cask/issues/8491
+[#8519]: https://github.com/caskroom/homebrew-cask/issues/8519
+[#8522]: https://github.com/caskroom/homebrew-cask/issues/8522
+[#8539]: https://github.com/caskroom/homebrew-cask/issues/8539
+[#8552]: https://github.com/caskroom/homebrew-cask/issues/8552
+[#8556]: https://github.com/caskroom/homebrew-cask/issues/8556
+[#8557]: https://github.com/caskroom/homebrew-cask/issues/8557
+[#8559]: https://github.com/caskroom/homebrew-cask/issues/8559
+[#8561]: https://github.com/caskroom/homebrew-cask/issues/8561
+[#8575]: https://github.com/caskroom/homebrew-cask/issues/8575
+[#8595]: https://github.com/caskroom/homebrew-cask/issues/8595
+[#8596]: https://github.com/caskroom/homebrew-cask/issues/8596
+[@mikemcquaid]: https://github.com/mikemcquaid
+[@jawshooah]: https://github.com/jawshooah
+
+## 0.51.1
+
+* __Casks__
+  - 0 Casks added (0 updated) by 0 contributors since 0.51.0
+  - 2168 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#8155][] Fix `brew cask update` alias to avoid calling internal Homebrew method
+* __Internal Changes__
+  - none
+* __Documentation__
+  - N doc commits since 0.51.0
+* __Contributors__
+  - N new contributors since 0.51.0
+  - N total contributors
+* __Release Date__
+  - 2014-12-16 15:15:00 UTC
+
+[#8155]: https://github.com/caskroom/homebrew-cask/issues/8155
+
+## 0.51.0
+
+* __Casks__
+  - 13 Casks added (1418 updated) by 58 contributors since 0.50.0
+  - 2168 total Casks
+* __Features__
+  - [#8072][] When handling errors or missing methods, always suggest updating
+  - [#8017][] Add `license :freemium`
+  - [#3066][] Store metadata with installed Casks
+  - [#7933][] mark `license :unknown` with explicit todo comment
+* __Breaking Changes__
+  - [#8089][] Require Ruby 2.0+
+* __Fixes__
+  - [#7957][] Better support for disk image mounting via `:bsexec` option to `command.run` <3 [@renard][]
+* __Internal Changes__
+  - [#8089][] Separate backend codebase from Homebrew
+  - [#7880][] Run new RSpec tests by default
+  - [#8129][], [#8090][] Remove undocumented `license` values
+  - [#8113][] Explicit `Pathname` -> `String` conversion for test suite
+  - [#8101][] Verbose test options + documentation
+  - [#8022][] disable test which writes outside test dir
+  - [#8023][] require Ruby 2.0 for `generate_cask_token` devscript
+* __Documentation__
+  - 6 doc commits since 0.50.0
+* __Contributors__
+  - 28 new contributors since 0.50.0
+  - 1326 total contributors
+* __Release Date__
+  - 2014-12-16 13:14:00 UTC
+
+[#3066]: https://github.com/caskroom/homebrew-cask/issues/3066
+[#7880]: https://github.com/caskroom/homebrew-cask/issues/7880
+[#7933]: https://github.com/caskroom/homebrew-cask/issues/7933
+[#7957]: https://github.com/caskroom/homebrew-cask/issues/7957
+[#8017]: https://github.com/caskroom/homebrew-cask/issues/8017
+[#8022]: https://github.com/caskroom/homebrew-cask/issues/8022
+[#8023]: https://github.com/caskroom/homebrew-cask/issues/8023
+[#8072]: https://github.com/caskroom/homebrew-cask/issues/8072
+[#8089]: https://github.com/caskroom/homebrew-cask/issues/8089
+[#8090]: https://github.com/caskroom/homebrew-cask/issues/8090
+[#8101]: https://github.com/caskroom/homebrew-cask/issues/8101
+[#8113]: https://github.com/caskroom/homebrew-cask/issues/8113
+[#8129]: https://github.com/caskroom/homebrew-cask/issues/8129
+[@renard]: https://github.com/renard
+
+## 0.50.0
+
+* __Casks__
+  - 35 Casks added (111 updated) by 50 contributors since 0.49.0
+  - 2155 total Casks
+* __Features__
+ - [#7805][] add `name` stanza for proper name
+ - [#7854][] add `accessibility_access` stanza
+ - [#7845][] add `depends_on :x11`
+ - [#7793][] add `depends_on :arch`
+ - [#7936][] add `MacOS.release` replacement for `MacOS.version`
+ - [#7845][] allow multiple depends_on stanzas
+ - [#7822][] remove constraint that Cask tokens can't start with digits
+* __Breaking Changes__
+ - [#7855][] remove `assistive_devices` `caveats` method
+ - [#7848][] remove `x11_required` `caveats` method
+ - [#7810][] remove `arch_only` `caveats` method
+ - [#7794][] remove `os_version_only` `caveats` method
+ - [#7812][] remove support for `tags :name`
+ - [#7825][] remove support for `title` method in Casks
+* __Fixes__
+ - [#7958][] return tarball_path from fetch method <3 [@renard][]
+   - compensates for change in Homebrew
+   - fixes "no implicit conversion of nil into String" error
+   - fixes "undefined method extname for nil:NilClass" error
+ - [#7893][] fix `--debug` and `_dump` on Ruby 1.8.7
+* __Internal Changes__
+ - [#7900][] Add reason for skipping syntax tests
+ - [#7940][] sanity checks/error handling, postflight miniDSL
+   - recast `info_plist` as `info_plist_file`
+ - [#7935][] Be more consistent/liberal about stanza accessors.
+   - enables RSpec tests to pass again
+ - [#7898][] enable `installer` artifact in `_stanza` verb
+ - [#7854][] remove newlines from runtime bundle IDs
+ - [#7895][] In `SystemCommand`, fix `success?` and `exit_status`
+   - Add failing tests for `SystemCommand`
+ - [#7845][], [#7819][] refactor depends_on
+ - [#7807][] convert more backend code from cask_name to token
+ - [#7795][] add new maintainer claui
+* __Documentation__
+  - 16 doc commits since 0.49.0 <3 [@maschs][]
+* __Contributors__
+  - 22 new contributors since 0.49.0
+  - 1297 total contributors
+* __Release Date__
+  - 2014-12-10 12:54:00 UTC
+
+[#7741]: https://github.com/caskroom/homebrew-cask/issues/7741
+[#7793]: https://github.com/caskroom/homebrew-cask/issues/7793
+[#7794]: https://github.com/caskroom/homebrew-cask/issues/7794
+[#7795]: https://github.com/caskroom/homebrew-cask/issues/7795
+[#7805]: https://github.com/caskroom/homebrew-cask/issues/7805
+[#7807]: https://github.com/caskroom/homebrew-cask/issues/7807
+[#7810]: https://github.com/caskroom/homebrew-cask/issues/7810
+[#7812]: https://github.com/caskroom/homebrew-cask/issues/7812
+[#7819]: https://github.com/caskroom/homebrew-cask/issues/7819
+[#7822]: https://github.com/caskroom/homebrew-cask/issues/7822
+[#7825]: https://github.com/caskroom/homebrew-cask/issues/7825
+[#7845]: https://github.com/caskroom/homebrew-cask/issues/7845
+[#7848]: https://github.com/caskroom/homebrew-cask/issues/7848
+[#7854]: https://github.com/caskroom/homebrew-cask/issues/7854
+[#7855]: https://github.com/caskroom/homebrew-cask/issues/7855
+[#7893]: https://github.com/caskroom/homebrew-cask/issues/7893
+[#7895]: https://github.com/caskroom/homebrew-cask/issues/7895
+[#7898]: https://github.com/caskroom/homebrew-cask/issues/7898
+[#7900]: https://github.com/caskroom/homebrew-cask/issues/7900
+[#7935]: https://github.com/caskroom/homebrew-cask/issues/7935
+[#7936]: https://github.com/caskroom/homebrew-cask/issues/7936
+[#7940]: https://github.com/caskroom/homebrew-cask/issues/7940
+[#7958]: https://github.com/caskroom/homebrew-cask/issues/7958
+[@maschs]: https://github.com/maschs
+[@renard]: https://github.com/renard
+
+## 0.49.0
+
+* __Casks__
+  - 26 Casks added (406 updated) by 85 contributors since 0.48.0
+  - 2120 total Casks
+* __Features__
+ - [#7696][] DSL: add working `depends_on :macos`
+* __Breaking Changes__
+ - [#7673][] unify and recast "Cask name" & "title" as "token" (de-document visible Cask method `title`)
+ - [#7696][] DSL: deprecate and de-document `require_os_version` caveats method
+ - [#7507][] DSL: remove support for `caskroom_only`
+ - [#7506][] remove support for legacy form `destination_path`
+* __Fixes__
+ - [#7738][] Make `CLI::Alfred` and `Source::PathBase` work with Ruby 1.8 <3 [@claui][]
+ - [#7532][] get Alfred 'syncfolder' from Preferences. resolves #7216 <3 [@fniephaus][]
+ - [#7740][] relax sourceforge.jp URL pattern
+ - [#7605][] "cocoa" is a framework to remove from Cask names
+* __Internal Changes__
+ - [#7684][] revise accessibility methods in postflight mini-DSL
+ - [#7685][] revise plist methods in postflight mini-DSL
+ - [#7686][] revise suppress_move_to_applications method in postflight mini-DSL
+ - [#6184][] Introduce GPG operations
+ - [#7642][] Refactor backend classes to match pre/postflight renaming
+ - [#7568][] enforce header line consistency
+ - [#7530][] enforce a valid minimum DSL version in Casks
+ - [#7529][] remove all transitional tap migration code
+ - [#7510][] formalize more Cask whitespace linting
+ - [#7504][] enforce version `:latest` as a symbol
+ - [#7503][] adjust devscripts for DSL 1.0
+* __Documentation__
+  - 13 doc commits since 0.48.0
+* __Contributors__
+  - 39 new contributors since 0.48.0
+  - 1275 total contributors
+* __Release Date__
+  - 2014-12-02 06:04:00 UTC
+
+[#6184]: https://github.com/caskroom/homebrew-cask/issues/6184
+[#7503]: https://github.com/caskroom/homebrew-cask/issues/7503
+[#7504]: https://github.com/caskroom/homebrew-cask/issues/7504
+[#7506]: https://github.com/caskroom/homebrew-cask/issues/7506
+[#7507]: https://github.com/caskroom/homebrew-cask/issues/7507
+[#7510]: https://github.com/caskroom/homebrew-cask/issues/7510
+[#7529]: https://github.com/caskroom/homebrew-cask/issues/7529
+[#7530]: https://github.com/caskroom/homebrew-cask/issues/7530
+[#7532]: https://github.com/caskroom/homebrew-cask/issues/7532
+[#7568]: https://github.com/caskroom/homebrew-cask/issues/7568
+[#7605]: https://github.com/caskroom/homebrew-cask/issues/7605
+[#7642]: https://github.com/caskroom/homebrew-cask/issues/7642
+[#7673]: https://github.com/caskroom/homebrew-cask/issues/7673
+[#7684]: https://github.com/caskroom/homebrew-cask/issues/7684
+[#7685]: https://github.com/caskroom/homebrew-cask/issues/7685
+[#7686]: https://github.com/caskroom/homebrew-cask/issues/7686
+[#7696]: https://github.com/caskroom/homebrew-cask/issues/7696
+[#7738]: https://github.com/caskroom/homebrew-cask/issues/7738
+[#7740]: https://github.com/caskroom/homebrew-cask/issues/7740
+[@claui]: https://github.com/claui
+[@fniephaus]: https://github.com/fniephaus
+
 ## 0.48.0
 
 * __Casks__

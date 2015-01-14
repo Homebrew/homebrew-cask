@@ -3,6 +3,7 @@ cask :v1 => 'qlcolorcode' do
   sha256 '317eda251ea5af8412401562395d2fbedb2dd915a7d927479cf09ac7251c4074'
 
   url "https://qlcolorcode.googlecode.com/files/QLColorCode-#{version}.tgz"
+  name 'QLColorCode'
   homepage 'https://code.google.com/p/qlcolorcode/'
   license :oss
 

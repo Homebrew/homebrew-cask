@@ -4,7 +4,7 @@ cask :v1 => 'xmplify' do
 
   url 'http://xmplifyapp.com/releases/Xmplify.dmg'
   homepage 'http://xmplifyapp.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Xmplify.app'
 

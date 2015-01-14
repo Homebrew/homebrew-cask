@@ -4,11 +4,15 @@ cask :v1 => 'silverlight' do
 
   url 'http://silverlight.dlservice.microsoft.com/download/F/8/C/F8C0EACB-92D0-4722-9B18-965DD2A681E9/30514.00/Silverlight.dmg'
   homepage 'http://www.microsoft.com/silverlight/'
-  license :unknown
+  license :gratis
 
   pkg 'Silverlight.pkg'
 
   uninstall :pkgutil => 'com.microsoft.SilverlightInstaller'
-  zap       :delete  => '~/Library/Application Support/Microsoft/Silverlight',
+  zap       :delete => [
+                        '~/Library/Application Support/Microsoft/Silverlight',
+                        '~/Library/Preferences/com.microsoft.silverlight.plist',
+                        '~/Library/Saved Application State/com.microsoft.silverlight.savedState'
+                       ],
             :rmdir   => '~/Library/Application Support/Microsoft/'
 end

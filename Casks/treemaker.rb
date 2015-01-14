@@ -3,8 +3,9 @@ cask :v1 => 'treemaker' do
   sha256 '2377c8c4277890de9f746eaa9d021f89fdd52cabfe9ab82fdfa741a47ed1f554'
 
   url 'http://www.langorigami.com/science/computational/treemaker/TreeMaker.dmg'
+  name 'TreeMaker'
   homepage 'http://www.langorigami.com/science/computational/treemaker/treemaker.php'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  app 'TreeMaker 5.app'
+  app "TreeMaker #{version.to_i}.app"
 end

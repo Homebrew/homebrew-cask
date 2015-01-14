@@ -6,14 +6,19 @@ cask :v1 => 'colloquy' do
   appcast 'http://colloquy.info/update.php?rss',
           :sha256 => 'd1eb727b05c5146585aa249354f016cc29a0ee1a71102c4c25fcdf56bc207f92'
   homepage 'http://colloquy.info/'
-  license :unknown
+  license :gpl
 
   app 'Colloquy.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
 
   zap :delete => [
                   '~/Library/Application Support/Colloquy',
                   '~/Library/Caches/info.colloquy',
                   '~/Library/Preferences/info.colloquy.plist',
-                  '~/Library/Scripts/Applications/Colloquy',
+                  '~/Library/Saved Application State/info.colloquy.savedState',
+                  '~/Library/Scripts/Applications/Colloquy'
                  ]
 end

@@ -4,7 +4,7 @@ cask :v1 => 'tau' do
 
   url 'http://tau.uoregon.edu/tau.dmg'
   homepage 'http://tau.uoregon.edu/'
-  license :unknown
+  license :oss
 
   suite 'TAU'
 end

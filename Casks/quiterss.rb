@@ -4,7 +4,7 @@ cask :v1 => 'quiterss' do
 
   url "http://quiterss.org/files/#{version}/QuiteRSS-#{version}.dmg"
   homepage 'http://quiterss.org/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Quiterss.app'
 end

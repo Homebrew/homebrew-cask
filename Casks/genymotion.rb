@@ -4,7 +4,7 @@ cask :v1 => 'genymotion' do
 
   url "http://files2.genymotion.com/genymotion/genymotion-#{version}/genymotion-#{version}.dmg"
   homepage 'http://www.genymotion.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Genymotion.app'
   app 'Genymotion Shell.app'

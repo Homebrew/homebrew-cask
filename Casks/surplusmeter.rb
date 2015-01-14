@@ -4,7 +4,7 @@ cask :v1 => 'surplusmeter' do
 
   url "http://www.skoobysoft.com/downloads/SurplusMeterv#{version.gsub('.','')}.dmg"
   homepage 'http://www.skoobysoft.com/utilities/utilities.html#surplusmeter'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SurplusMeter.app'
 end

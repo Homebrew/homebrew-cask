@@ -4,7 +4,7 @@ cask :v1 => 'consul' do
 
   url "https://dl.bintray.com/mitchellh/consul/#{version}_darwin_amd64.zip"
   homepage 'http://www.consul.io/'
-  license :unknown
+  license :mpl
 
   binary 'consul'
 end

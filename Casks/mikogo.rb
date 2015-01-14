@@ -4,7 +4,8 @@ cask :v1 => 'mikogo' do
 
   url 'http://download.mikogo4.com/mikogo.dmg'
   homepage 'http://www.mikogo.com/'
-  license :unknown
+  license :gratis
 
-  app 'Mikogo.app'
+  # Renamed for clarity: app name is inconsistent with its branding
+  app 'Mikogo-host.app', :target => 'Mikogo.app'
 end

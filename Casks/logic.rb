@@ -4,7 +4,7 @@ cask :v1 => 'logic' do
 
   url "http://downloads.saleae.com/Logic%20#{version}%20(10.5%2B).pkg"
   homepage 'http://www.saleae.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "Logic #{version} (10.5+).pkg"
 

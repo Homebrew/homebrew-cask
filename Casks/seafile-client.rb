@@ -1,6 +1,6 @@
 cask :v1 => 'seafile-client' do
-  version '3.1.11'
-  sha256 'abe35aae05b1716c51bedcf60963b9bc90fff7bfe27e5a60eb75d5afc9838c52'
+  version '4.0.4'
+  sha256 'b3858be3dbb6df80e6bf66b8db2aa783301b5af2107f8ac67ce830814e366a17'
 
   url "https://bitbucket.org/haiwen/seafile/downloads/seafile-client-#{version}.dmg"
   homepage 'http://seafile.com/'

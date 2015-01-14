@@ -3,8 +3,9 @@ cask :v1 => 'piezo' do
   sha256 :no_check
 
   url 'http://neutral.rogueamoeba.com/mirror/files/Piezo.zip'
+  name 'Piezo'
   homepage 'http://rogueamoeba.com/piezo/'
-  license :unknown
+  license :commercial
 
   app 'Piezo.app'
 end

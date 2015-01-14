@@ -1,14 +1,15 @@
 cask :v1 => 'appcode' do
-  version '3.0.6'
-  sha256 'cd706fc97572f2d0784aca3504e286a1cd5a14e9c39abf1e3beaaa10610ea089'
+  version '3.1.1'
+  sha256 'f549e0fdfb7dcd2a1553ca452a75c1cbc135e3d66b926de0c58dde59865f3b6c'
 
   url "http://download.jetbrains.com/objc/AppCode-#{version}.dmg"
+  name 'AppCode'
   homepage 'http://www.jetbrains.com/objc/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'AppCode.app'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{staged_path}/AppCode.app/Contents/Info.plist"
+    plist_set(':JVMOptions:JVMVersion', '1.6+')
   end
 end

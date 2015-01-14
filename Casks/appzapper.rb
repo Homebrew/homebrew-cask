@@ -3,6 +3,7 @@ cask :v1 => 'appzapper' do
   sha256 :no_check
 
   url 'http://www.appzapper.com/downloads/appzapper.dmg'
+  name 'AppZapper'
   appcast 'http://www.appzapper.com/az2appcast.xml'
   homepage 'http://www.appzapper.com/'
   license :commercial

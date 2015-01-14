@@ -4,7 +4,7 @@ cask :v1 => 'r-name' do
 
   url 'http://www.jacek-dom.net/software/R-Name/R-Name.app.zip'
   homepage 'http://www.jacek-dom.net/software/R-Name/'
-  license :unknown
+  license :gpl
 
   app 'R-Name.app'
 end

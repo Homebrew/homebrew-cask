@@ -4,7 +4,7 @@ cask :v1 => 'power-manager' do
 
   url 'https://www.dssw.co.uk/powermanager/dsswpowermanager.dmg'
   homepage 'https://www.dssw.co.uk/powermanager'
-  license :unknown
+  license :commercial
 
   pkg 'DssW Power Manager.pkg'
 

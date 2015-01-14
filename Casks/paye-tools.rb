@@ -4,7 +4,7 @@ cask :v1 => 'paye-tools' do
 
   url "https://www.gov.uk/government/uploads/uploaded/hmrc/payetools-rti-#{version}-osx.zip"
   homepage 'http://www.hmrc.gov.uk/payerti/payroll/bpt/paye-tools.htm'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer :manual => "payetools-rti-#{version}-osx.app"
 end

@@ -4,7 +4,7 @@ cask :v1 => 'insync' do
 
   url "http://s.insynchq.com/builds/Insync-#{version}.dmg"
   homepage 'https://insynchq.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Insync.app'
 end

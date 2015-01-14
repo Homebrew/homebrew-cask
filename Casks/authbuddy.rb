@@ -3,8 +3,9 @@ cask :v1 => 'authbuddy' do
   sha256 :no_check
 
   url 'https://www.dssw.co.uk/authbuddy/dsswauthbuddy.dmg'
+  name 'authbuddy'
   homepage 'https://www.dssw.co.uk/authbuddy'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'DssW authbuddy.pkg'
 

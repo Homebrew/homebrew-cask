@@ -3,8 +3,9 @@ cask :v1 => 'mailpile' do
   sha256 :no_check
 
   url 'https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg'
+  name 'Mailpile'
   homepage 'https://www.mailpile.is/'
-  license :unknown
+  license :oss
 
   app 'Mailpile.app'
 end

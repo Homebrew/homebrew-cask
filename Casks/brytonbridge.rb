@@ -4,7 +4,7 @@ cask :v1 => 'brytonbridge' do
 
   url 'http://static.brytonsport.com/uploads/www/Software/version/14/BrytonBridge2.pkg'
   homepage 'http://www.brytonsport.com/help/start'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'BrytonBridge2.pkg'
 

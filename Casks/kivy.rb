@@ -3,8 +3,9 @@ cask :v1 => 'kivy' do
   sha256 'e6db3a157e67d09bacbe2e423feec33dedaca8e10d170362ddf59a70a59e2590'
 
   url "http://kivy.org/downloads/#{version}/Kivy-#{version}-osx.dmg"
+  name 'Kivy'
   homepage 'http://kivy.org'
-  license :unknown
+  license :mit
 
   app 'Kivy.app'
 end

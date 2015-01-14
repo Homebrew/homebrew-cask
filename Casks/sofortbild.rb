@@ -3,8 +3,9 @@ cask :v1 => 'sofortbild' do
   sha256 :no_check
 
   url 'http://www.sofortbildapp.com/download/Sofortbild.zip'
+  name 'Sofortbild'
   homepage 'http://www.sofortbildapp.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Sofortbild.app'
 end

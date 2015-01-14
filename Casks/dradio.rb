@@ -5,7 +5,7 @@ cask :v1 => 'dradio' do
   url 'http://dradio.me/download'
   appcast 'http://dradio.me/updates/appcast.xml'
   homepage 'http://dradio.me'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'dRadio.app'
 end

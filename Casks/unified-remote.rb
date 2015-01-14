@@ -4,7 +4,7 @@ cask :v1 => 'unified-remote' do
 
   url 'http://www.unifiedremote.com/download/macosx-setup'
   homepage 'http://www.unifiedremote.com'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Unified Remote.app'
 end

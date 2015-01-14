@@ -1,8 +1,8 @@
 cask :v1 => 'gnucash' do
-  version '2.6.4-5'
-  sha256 '8c9701cbc6acf191b682d80c5e2eedd5dc4099ccaacacef3f89cecd967ca8651'
+  version '2.6.5-6'
+  sha256 '84a55674ef9a78b0aebf530017cca31204d1270110675c916bee0fb8d838030a'
 
-  url "https://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-#{version}.dmg"
+  url "http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-#{version}.dmg"
   homepage 'http://www.gnucash.org'
   license :oss
 

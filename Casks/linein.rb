@@ -4,7 +4,7 @@ cask :v1 => 'linein' do
 
   url 'https://www.rogueamoeba.com/freebies/download/LineIn.zip'
   homepage 'http://www.rogueamoeba.com/freebies/'
-  license :unknown
+  license :gratis
 
   app 'LineIn.app'
 end

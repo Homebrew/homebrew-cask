@@ -4,7 +4,7 @@ cask :v1 => 'icolors' do
 
   url "https://www.fadingred.com/files/icolors/icolors_#{version}.zip"
   homepage 'http://www.fadingred.com/icolors/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iColors.app'
 end

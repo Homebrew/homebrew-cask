@@ -4,7 +4,7 @@ cask :v1 => 'flip4mac' do
 
   url "http://dvd-mac.com/download/Flip4Mac_#{version}.dmg"
   homepage 'http://www.telestream.net/flip4mac/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Flip4Mac.pkg'
 

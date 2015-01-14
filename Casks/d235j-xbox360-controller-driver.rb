@@ -1,12 +1,26 @@
 cask :v1 => 'd235j-xbox360-controller-driver' do
   version '0.14'
-  sha256 '520d78f43006202956a985c073bac901e85151361fdecb9af37f94b61e3effeb'
+  sha256 'a7efe48fae89aa592e904d1dc3ba9a73b2d644362eac88feb5e73a774e3fcf88'
 
-  url 'https://github.com/d235j/360Controller/releases/download/v0.14_beta_unofficial/Install360Controller_0.14_yosemite_beta_unofficial.pkg'
+  url "https://github.com/d235j/360Controller/releases/download/v#{version}-unofficial/360ControllerInstall_#{version}_unofficial.dmg"
   homepage 'https://github.com/d235j/360Controller'
   license :gpl
 
-  pkg 'Install360Controller.pkg'
+  pkg "Install 360 Controller.pkg"
 
-  uninstall :pkgutil => 'com.mice.pkg.Xbox360controller'
+  uninstall :pkgutil   => 'com.mice.pkg.Xbox360controller',
+            :launchctl => 'com.mice.360Daemon',
+            :kext      => [
+                           'com.mice.Xbox360ControllerForceFeedback',
+                           'com.mice.driver.Xbox360Controller',
+                           'com.mice.driver.Wireless360Controller',
+                           'com.mice.driver.WirelessGamingReceiver'
+                          ],
+            # Symlink to kext in /Library/Extensions is not removed
+            # during :pkgutil phase of uninstall, so we delete it here.
+            :delete    => '/System/Library/Extensions/360Controller.kext'
+
+  caveats do
+    reboot
+  end
 end

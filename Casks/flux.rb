@@ -4,8 +4,9 @@ cask :v1 => 'flux' do
 
   url 'https://justgetflux.com/mac/Flux.zip'
   appcast 'https://justgetflux.com/mac/macflux.xml'
+  name 'f.lux'
   homepage 'http://justgetflux.com'
-  license :unknown
+  license :gratis
 
   app 'Flux.app'
 

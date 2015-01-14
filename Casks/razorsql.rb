@@ -1,10 +1,11 @@
 cask :v1 => 'razorsql' do
-  version '6.3.9'
-  sha256 'ff77e7c8d3b0e1ecb626a69d6f03a6c4e46edae64f6b130199639e8de33652ff'
+  version '6.3.16'
+  sha256 'e4e2838be5860648332358ad76725c521e537f156925210ce4ae3793e0c0f96b'
 
   url "http://downloads.razorsql.com/downloads/#{version.gsub('.', '_')}/razorsql#{version.gsub('.', '_')}_x64.dmg"
+  name 'RazorSQL'
   homepage 'http://razorsql.com/download_mac.html'
-  license :unknown
+  license :commercial
 
   app 'RazorSQL.app'
 

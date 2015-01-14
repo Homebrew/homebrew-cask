@@ -4,7 +4,7 @@ cask :v1 => 'citrix-receiver' do
 
   url 'http://downloadplugins.citrix.com.edgesuite.net/Mac/CitrixReceiverWeb.dmg'
   homepage 'http://www.citrix.com/receiver'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install Citrix Receiver.pkg'
 

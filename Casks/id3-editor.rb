@@ -4,7 +4,7 @@ cask :v1 => 'id3-editor' do
 
   url "http://www.pa-software.com/release/ID3Editor.ub.#{version}.dmg"
   homepage 'http://www.pa-software.com/id3editor/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'ID3 Editor.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'royal-tsx' do
   appcast 'http://app.royaltsx.com/updates_stable.php',
           :sha256 => 'bb602755a8168a181b849f8d35c543207780d42c6b68ac69715bcdc713e5fd8e'
   homepage 'http://www.royaltsx.com'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Royal TSX.app'
 end

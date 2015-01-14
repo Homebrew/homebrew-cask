@@ -5,7 +5,7 @@ cask :v1 => 'mpfreaker' do
   url 'http://www.lairware.com/download/MPFreaker.dmg'
   appcast 'http://lwupdate.dyndns.org/mpfreaker.xml'
   homepage 'http://www.lairware.com/mpfreaker/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'MPFreaker.app'
 end

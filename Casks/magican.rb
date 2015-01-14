@@ -3,8 +3,9 @@ cask :v1 => 'magican' do
   sha256 :no_check
 
   url 'http://www.magicansoft.com/download/Magican.pkg'
+  name 'Magican'
   homepage 'http://www.magicansoft.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Magican.pkg'
 

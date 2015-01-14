@@ -4,7 +4,7 @@ cask :v1 => 'colorpicker-antetype' do
 
   url "http://www.antetype.com/blog/downloads/AntetypeColorPickerOSX-#{version.gsub('.','-')}.zip"
   homepage 'http://www.antetype.com/blog/2014/03/updated-antetype-color-picker-1-4-1/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   colorpicker 'AntetypeColorPicker.colorPicker'
 end

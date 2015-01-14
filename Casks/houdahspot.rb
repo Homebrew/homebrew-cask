@@ -5,7 +5,7 @@ cask :v1 => 'houdahspot' do
   url 'http://www.houdah.com/houdahSpot/download_assets/HoudahSpot_latest.zip'
   appcast 'http://www.houdah.com/houdahSpot/updates/profileInfo3.php'
   homepage 'http://www.houdah.com/houdahSpot/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'HoudahSpot.app'
 

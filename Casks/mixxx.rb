@@ -3,8 +3,9 @@ cask :v1 => 'mixxx' do
   sha256 '21fa06153a1a019c001f96024caa940ea6307a29f4cebd334fb2b7f071013314'
 
   url "http://downloads.mixxx.org/mixxx-#{version}/mixxx-#{version}-macintel.dmg"
+  name 'Mixxx'
   homepage 'http://www.mixxx.org'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Mixxx.app'
 end

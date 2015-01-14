@@ -4,7 +4,7 @@ cask :v1 => 'opacity' do
 
   url 'http://downloads.likethought.com/opacity.zip'
   homepage 'http://likethought.com/opacity/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Opacity.app'
 end

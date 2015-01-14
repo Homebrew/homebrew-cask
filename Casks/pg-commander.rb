@@ -4,7 +4,7 @@ cask :v1 => 'pg-commander' do
 
   url "https://eggerapps.at/pgcommander/download/pgcommander-#{version}.zip"
   homepage 'http://eggerapps.at/pgcommander/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'PG Commander.app'
 end

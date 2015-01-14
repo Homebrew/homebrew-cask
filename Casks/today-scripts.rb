@@ -4,7 +4,7 @@ cask :v1 => 'today-scripts' do
 
   url 'https://github.com/SamRothCA/Today-Scripts/releases/download/v1.1/Today-Scripts.tar.gz'
   homepage 'https://github.com/SamRothCA/Today-Scripts'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Today Scripts.app'
 end
