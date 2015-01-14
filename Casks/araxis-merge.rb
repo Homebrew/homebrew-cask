@@ -1,8 +1,14 @@
 cask :v1 => 'araxis-merge' do
-  version '2014.4459'
-  sha256 '281b2df877b5808efff7f1df6ba4a4d036d04ccdaa3a19ca87e61838dcb118fc'
+  version '2014.4581'
+  depends_on :macos => '>= :mavericks'
+  if MacOS.release <= :mavericks
+    sha256 '4029be850bbffd8a46b30b7701434474c33e07e678848ae47e094ddba04668d2'
+    url "http://www.araxis.com/download/Merge#{version}-OSX10.9.dmg"
+    else
+    sha256 '483314bfe464f8954aeb0ddc839dfcab061d7d070bdbbe63b28934a54436663d'
+    url "http://www.araxis.com/download/Merge#{version}-OSX10.10.dmg"
+  end
 
-  url "http://www.araxis.com/download/Merge#{version}-OSX10.9.dmg"
   name 'Araxis Merge'
   homepage 'http://www.araxis.com/merge'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
