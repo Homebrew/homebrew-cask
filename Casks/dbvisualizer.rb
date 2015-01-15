@@ -12,4 +12,7 @@ cask :v1 => 'dbvisualizer' do
     #{token} requires Java. You can install the latest version with
       brew cask install java
   EOS
+
+  uninstall :signal => [[ 'TERM', 'com.dbvis.DbVisualizer' ]]
+  zap :delete => '~/.dbvis'
 end
