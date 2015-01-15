@@ -11,4 +11,12 @@ cask :v1 => 'beyond-compare' do
   postflight do
     suppress_move_to_applications
   end
+  
+  zap :delete => [
+                  '~/Library/Application Support/Beyond Compare',
+                  '~/Library//Caches/com.apple.helpd/Generated/com.ScooterSoftware.BeyondCompare.help',
+                  '~/Library//Caches/com.ScooterSoftware.BeyondCompare',
+                  '~/Library//Saved Application State/com.ScooterSoftware.BeyondCompare.savedState',
+                 ]  
+
 end
