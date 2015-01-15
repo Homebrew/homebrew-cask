@@ -9,6 +9,8 @@ cask :v1 => 'virtualbox' do
   tags :vendor => 'Oracle'
 
   pkg 'VirtualBox.pkg'
+  binary '/Applications/VirtualBox.app/Contents/MacOS/VBoxManage'
+  binary '/Applications/VirtualBox.app/Contents/MacOS/VBoxHeadless'
 
   uninstall :script => { :executable => 'VirtualBox_Uninstall.tool', :args => %w[--unattended] },
             :pkgutil => 'org.virtualbox.pkg.*'
