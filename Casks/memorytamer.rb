@@ -7,5 +7,6 @@ cask :v1 => 'memorytamer' do
   homepage 'http://www.memorytamer.com/'
   license :commercial
 
+  container :nested => 'MemoryTamer.dmg'
   app 'MemoryTamer.app'
 end
