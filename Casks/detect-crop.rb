@@ -1,6 +1,6 @@
 cask :v1 => 'detect-crop' do
   version '5.4'
-  sha256 '92f8a458c6c7f8981ced3d0da9bb9962787c8534690e208b36b2114c8a73a5ea'
+  sha256 'a135d904bac2ace2a89d4c123ac4939ab7241e8e3adcd82201f04275909a2eb9'
 
   url 'https://github.com/donmelton/video-transcoding-scripts/archive/master.zip'
   name 'Video Transcoding Scripts'
