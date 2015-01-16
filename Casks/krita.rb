@@ -9,4 +9,3 @@ cask :v1 => 'krita' do
 
   app 'Krita.app'
 end
-
