@@ -1,6 +1,6 @@
 cask :v1 => 'coda' do
   version '2.5.2'
-  sha256 '9393ef340e04b8dc201d735a3885d14f13e82a6544b47c1ff21c4ad6eacd32ad'
+  sha256 'd81764e9e54625663f2b043ee117f555515462046dfdf7b03a14740c4b78113f'
 
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
   appcast 'http://www.panic.com/updates/update.php'
