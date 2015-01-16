@@ -1,6 +1,6 @@
 cask :v1 => 'nomachine' do
-  version '4.3.30_4'
-  sha256 'd2a84877f3e3ebd4ea935b3de52ebffc3e4fcb6e2f3e9ff3d2bfca441915784b'
+  version '4.4.6_9'
+  sha256 'd18527101654022d1a4c71f6d998279f657f805e6ec84e0b75354ee28b50c455'
 
   url "http://download.nomachine.com/download/#{version.split('.')[0..1].join('.')}/MacOSX/nomachine_#{version}.dmg"
   name 'NoMachine'
