@@ -5,11 +5,11 @@ cask :v1 => 'poedit' do
     sha256 '2017538011239f07924b709e4c13aa3fd7f83a96f76208b8b746fcee29251caf'
     url "http://heanet.dl.sourceforge.net/project/poedit/poedit/#{version.sub(/.\d+$/,'')}/poedit-#{version}.dmg"
   else
-    version '1.7.1'
-    sha256 '3524a0a1ab135215b21b26b87bb8fcd93167ff2eb2bfcd7c2873b1eb4f4276eb'
+    version '1.7.3'
+    sha256 'b0dceeaee4e0085a0d17663cf224f24ada6773f704babf1dcf9b9d193f0db3a9'
     url "http://poedit.net/dl/Poedit-#{version}.zip"
     appcast 'https://poedit.net/updates/osx/appcast',
-            :sha256 => '2adf2168b23ee56ee1d237a511a2cb13e116f44c567948fbf265fcffa1b4e667'
+            :sha256 => '820f8d55035f0c57f2c57d7441abd7fdf96db1c1818697a188daecd53a98796e'
   end
 
   homepage 'http://www.poedit.net'
