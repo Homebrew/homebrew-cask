@@ -14,6 +14,6 @@ cask :v1 => 'perian' do
   caveats <<-EOS.undent
     Perian development officially stopped as of 2012, and 1.2.3 was the final released version.
 
-    See the Perian homepage for more information.
+    See the Perian homepage for more information (http://www.perian.org/).
   EOS
 end
