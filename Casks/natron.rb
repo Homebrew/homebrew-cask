@@ -9,6 +9,3 @@ cask :v1 => 'natron' do
 
   app 'Natron.app'
 end
-
-
-
