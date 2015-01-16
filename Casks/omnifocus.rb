@@ -11,7 +11,7 @@ cask :v1 => 'omnifocus' do
                    ]
   else
     version '2.0.4'
-    sha256 'c5667f950147cbc33387ab45267b15666eef558391aeaf8d6df543a65edaa799'
+    sha256 '3282eb7e41ec2638f68a92a6509eddd96a96c39b65b954dcedcc4e62289f22a9'
     url "http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.9/OmniFocus-#{version}.dmg"
 
     zap :delete => [
