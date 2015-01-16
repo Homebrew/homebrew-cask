@@ -7,4 +7,6 @@ cask :v1 => 'grandperspective' do
   license :oss
 
   app 'GrandPerspective.app'
+
+  zap :delete => ['~/Library/Preferences/net.sourceforge.grandperspectiv.plist']
 end

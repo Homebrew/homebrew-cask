@@ -8,4 +8,6 @@ cask :v1 => 'betterzip' do
   license :commercial
 
   app 'BetterZip.app'
+
+  zap :delete => ['~/Library/Preferences/com.macitbetter.betterzip.plist']
 end
