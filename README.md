@@ -10,7 +10,7 @@ installation and management of GUI Mac applications such as Google Chrome and Ad
 Homebrew-cask provides a friendly homebrew-style CLI workflow for the
 administration of Mac applications distributed as binaries.
 
-It's implemented as a `homebrew` "[external command](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/External-Commands.md)"
+It's implemented as a `homebrew` [external command](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/External-Commands.md)
 called `cask`.
 
 ## Let's try it!
@@ -48,12 +48,15 @@ When reporting bugs, remember that homebrew-cask is an independent project from
 Homebrew.  Do your best to direct bug reports to the appropriate project.  If
 your command-line started with `brew cask`, bring the bug to us first!
 
-Before reporting a bug, make sure you have the latest versions of Homebrew,
+Before reporting a bug, make sure you have the latest versions of homebrew,
 homebrew-cask, and all Taps by running the following command:
 
 ```bash
 $ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 ```
+
+If the issue persists, please run the problematic command with the `--verbose` flag
+and post its and `brew cask doctor`'s outputs in distinct [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
 
 ## License:
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)

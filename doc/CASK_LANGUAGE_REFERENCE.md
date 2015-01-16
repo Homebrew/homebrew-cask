@@ -97,7 +97,6 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `qlplugin`         | yes                           | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `screen_saver`     | yes                           | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
 | `service`          | yes                           | relative path to a service that should be linked into the `~/Library/Services` folder on installation
-| `widget`           | yes                           | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation (ALPHA: DOES NOT WORK YET)
 | `suite`            | yes                           | relative path to a containing directory that should be linked into the `~/Applications` folder on installation (see also [Suite Stanza Details](#suite-stanza-details))
 | `artifact`         | yes                           | relative path to an arbitrary path that should be symlinked on installation.  This is only for unusual cases.  The `app` stanza is strongly preferred when linking `.app` bundles.
 | `installer`        | yes                           | describes an executable which must be run to complete the installation.  (see [Installer Stanza Details](#installer-stanza-details))
@@ -219,8 +218,8 @@ position at the end of the Cask:
 | `token`            | the Cask token
 | `version`          | the Cask version
 | `homepage`         | the Cask homepage
-| `caskroom_path`    | the containing directory for all staged Casks, typically `/opt/homebrew-cask/Caskroom`
-| `staged_path`      | the staged location for this Cask, including version number, *eg* `/opt/homebrew-cask/Caskroom/adium/1.5.10`
+| `caskroom_path`    | the containing directory for all staged Casks, typically `/opt/homebrew-cask/Caskroom` (only available with block form)
+| `staged_path`      | the staged location for this Cask, including version number, *eg* `/opt/homebrew-cask/Caskroom/adium/1.5.10` (only available with block form)
 
 Example:
 
@@ -483,7 +482,7 @@ artifact 'openman.1', :target => '/usr/local/share/man/man1/openman.1'
 
 The `:target` key works similarly for most Cask artifacts, such as
 `app`, `binary`, `colorpicker`, `font`, `input_method`, `prefpane`, `qlplugin`,
-`service`, `widget`, `suite`, and `artifact`.
+`service`, `suite`, and `artifact`.
 
 ### :target Should Only Be Used in Select Cases
 

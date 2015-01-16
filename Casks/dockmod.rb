@@ -5,6 +5,7 @@ cask :v1 => 'dockmod' do
   url "http://spyresoft.com/dockmod/download.php?version=#{version}"
   appcast 'http://spyresoft.com/dockmod/updates.xml',
           :sha256 => 'dd16b1284504bd43dbe9581508966061002b931b57cd48f30c844dcaaa5f7bd7'
+  name 'DockMod'
   homepage 'http://spyresoft.com/dockmod/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

@@ -3,6 +3,7 @@ cask :v1 => 'electric-sheep' do
   sha256 '767062403cc93aa75192def84b509b4530caca3e271ba23267ffe79cb50da44f'
 
   url "https://electricsheep.googlecode.com/files/electricsheep-#{version}.dmg"
+  name 'Electric Sheep'
   homepage 'http://www.electricsheep.org'
   license :oss
 

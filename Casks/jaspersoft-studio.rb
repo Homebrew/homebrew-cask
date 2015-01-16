@@ -3,6 +3,7 @@ cask :v1 => 'jaspersoft-studio' do
   sha256 '339222ba8c1d640f90d6339b9f5ce5292e620c2bc256a09f75b6f413acd061d2'
 
   url "http://downloads.sourceforge.net/project/jasperstudio/JaspersoftStudio-#{version}/jaspersoftstudio-#{version}.final-mac-x86_64.dmg"
+  name 'Jaspersoft Studio'
   homepage 'http://community.jaspersoft.com/project/jaspersoft-studio'
   license :oss
 

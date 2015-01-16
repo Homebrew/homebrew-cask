@@ -1,12 +1,28 @@
 cask :v1 => 'gitter' do
   version '1.162'
-  sha256 'bb1374419f4166954b0472999bb14c808bbd1b1e169c058fea365972f3562068'
+  sha256 'faeeba7c607a0faff20c613ffbaf3f98bde88de0e1c73a638dc20e6e915ba81c'
 
   url "http://update.gitter.im/osx/Gitter-#{version}.dmg"
   appcast 'http://update.gitter.im/osx/appcast.xml',
-          :sha256 => 'd9bda3654a9aed873e798fd1e514db93247f1ab534056306d421a5a7de2ac2d3'
+          :sha256 => 'dfee81f1a8d4bafa8e412145a58b6db603ec3f37604f7818ba7a3af7ef88004c'
   homepage 'https://gitter.im/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   app 'Gitter.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
+
+  uninstall :quit => [
+                      'com.troupe.gitter.mac.Gitter',
+                      'com.troupe.gitter.mac.GitterHelperApp'
+                     ]
+
+  zap :delete => [
+                  '~/Library/Application Support/Gitter',
+                  '~/Library/Caches/com.troupe.gitter.mac.Gitter',
+                  '~/Library/Preferences/com.troupe.gitter.mac.Gitter.plist',
+                  '~/Library/Saved Application State/com.troupe.gitter.mac.Gitter.savedState'
+                 ]
 end

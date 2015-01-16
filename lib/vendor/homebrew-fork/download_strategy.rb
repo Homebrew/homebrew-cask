@@ -1,23 +1,7 @@
-class Hbc::HbAbstractDownloadStrategy
-  attr_reader :name, :url, :uri_object, :version
-
-  def initialize(cask)
-    @name       = cask.token
-    @url        = cask.url.to_s
-    @uri_object = cask.url
-    @version    = cask.version
-  end
-
-  # All download strategies are expected to implement these methods
-  def fetch; end
-  def cached_location; end
-  def clear_cache; end
-end
-
-class Hbc::HbVCSDownloadStrategy < Hbc::HbAbstractDownloadStrategy
+class Hbc::HbVCSDownloadStrategy < Hbc::AbstractDownloadStrategy
   REF_TYPES = [:branch, :revision, :revisions, :tag].freeze
 
-  def initialize(cask)
+  def initialize(cask,command=Hbc::SystemCommand)
     super
     @ref_type, @ref = extract_ref
     @clone = HOMEBREW_CACHE.join(cache_filename)
@@ -47,7 +31,7 @@ class Hbc::HbVCSDownloadStrategy < Hbc::HbAbstractDownloadStrategy
   end
 end
 
-class Hbc::HbCurlDownloadStrategy < Hbc::HbAbstractDownloadStrategy
+class Hbc::HbCurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   # todo should be part of url object
   def mirrors
     @mirrors ||= []
@@ -96,7 +80,7 @@ class Hbc::HbCurlDownloadStrategy < Hbc::HbAbstractDownloadStrategy
           raise Hbc::CurlDownloadStrategyError, msg
         end
       end
-      ignore_interrupts { temporary_path.rename(tarball_path) }
+      Hbc::Utils.ignore_interrupts { temporary_path.rename(tarball_path) }
     else
       puts "Already downloaded: #{tarball_path}"
     end

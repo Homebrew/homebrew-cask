@@ -9,7 +9,7 @@ all pretty happy about this.  Here's how to get started:
  * [Finding a Home For Your Cask](#finding-a-home-for-your-cask)
  * [Submitting Your Changes](#submitting-your-changes)
  * [Cleaning up](#cleaning-up)
- * [Reporting Bugs](#reporting-bugs)
+ * [Reporting Bugs](README.md#reporting-bugs)
 
 
 ## Getting Set Up To Contribute
@@ -160,7 +160,6 @@ Additional stanzas you might need for special use-cases:
 | `colorpicker`          | relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
 | `qlplugin`             | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `font`                 | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
-| `widget`               | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation (ALPHA: DOES NOT WORK YET)
 | `service`              | relative path to a service that should be linked into the `~/Library/Services` folder on installation
 | `binary`               | relative path to a binary that should be linked into the `/usr/local/bin` folder on installation
 | `input_method`         | relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
@@ -298,10 +297,11 @@ Before submitting a trial, please make sure it can be made into a full working v
 without the need to be redownloaded. If an App provides a trial but the only way to buy the full version
 is via the Mac App Store, it does not currently belong in any of the official repos.
 
-### Unofficial Builds
+### Unofficial, Vendorless, or Walled Builds
 
-When an App developer does not offer a binary download, please submit the
-Cask to [caskroom/homebrew-unofficial](http://github.com/caskroom/homebrew-unofficial).
+When an App developer does not offer a binary download, the binary doesn't have an official vendor,
+or the download URL is both behind a registration wall and served from an unofficial host,
+please submit the Cask to [caskroom/homebrew-unofficial](http://github.com/caskroom/homebrew-unofficial).
 For a location to host unofficial builds, contact our sister project [alehouse](https://github.com/alehouse).
 
 ### Fonts
@@ -415,26 +415,5 @@ git checkout master
 
 Neat and tidy!
 
-
-## Reporting Bugs
-
-We still have bugs -- and we are busy fixing them!  If you have a problem, don't
-be shy about reporting it on our [GitHub issues page](https://github.com/caskroom/homebrew-cask/issues?state=open).
-
-When reporting bugs, remember that homebrew-cask is an independent project from
-Homebrew.  Do your best to direct bug reports to the appropriate project.  If
-your command-line started with `brew cask`, bring the bug to us first!
-
-Before reporting a bug, make sure you have the latest versions of Homebrew,
-homebrew-cask, and all Taps by running the following command:
-
-```bash
-$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
-```
-
-## Working On homebrew-cask Itself
-
-If you'd like to hack on the Ruby code in the project itself, please
-see [hacking.md](doc/hacking.md).
 
 # <3 THANK YOU! <3

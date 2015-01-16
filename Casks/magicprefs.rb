@@ -3,6 +3,7 @@ cask :v1 => 'magicprefs' do
   sha256 :no_check
 
   url 'http://magicprefs.com/MagicPrefs.app.zip'
+  name 'MagicPrefs'
   homepage 'http://magicprefs.com/'
   license :gratis
 

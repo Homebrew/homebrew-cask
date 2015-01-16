@@ -11,4 +11,9 @@ cask :v1 => 'pgadmin3' do
   license :oss
 
   app 'pgAdmin3.app'
+
+  zap :delete => [
+                  '~/Library/Preferences/pgadmin3 Preferences',
+                  '~/Library/Saved Application State/org.postgresql.pgadmin.savedState'
+                 ]
 end

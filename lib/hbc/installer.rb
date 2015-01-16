@@ -170,13 +170,13 @@ class Hbc::Installer
     ohai 'Installing Formula dependencies from Homebrew'
     @cask.depends_on.formula.each do |dep_name|
       print "#{dep_name} ... "
-      installed = @command.run(HOMEBREW_BREW_FILE,
+      installed = @command.run(Hbc.homebrew_executable,
                                :args => ['list', '--versions', dep_name],
                                :print_stderr => false).stdout.include?(dep_name)
       if installed
         puts "already installed"
       else
-        @command.run!(HOMEBREW_BREW_FILE,
+        @command.run!(Hbc.homebrew_executable,
                       :args => ['install', dep_name])
         puts "done"
       end

@@ -1,4 +1,4 @@
-cask :v1 => 'mongohub' do
+cask :v1 => 'jeromelebel-mongohub' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,7 @@ cask :v1 => 'mongohub' do
   url 'https://mongohub.s3.amazonaws.com/MongoHub.zip'
   appcast 'https://mongohub.s3.amazonaws.com/mongohub_su_feed.xml'
   name 'MongoHub'
-  homepage 'https://github.com/fotonauts/MongoHub-Mac'
+  homepage 'https://github.com/jeromelebel/MongoHub-Mac'
   license :oss
 
   app 'MongoHub.app'

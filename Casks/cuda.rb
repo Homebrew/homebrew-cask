@@ -3,8 +3,10 @@ cask :v1 => 'cuda' do
   sha256 '6cdde2417bedbd889143c5d3f0152fce4088102ecf4ccfa83e9f14a08968fcb7'
 
   url "http://developer.download.nvidia.com/compute/cuda/6_5/rel/installers/cuda_#{version}_mac_64.pkg"
+  name 'CUDA'
   homepage 'https://developer.nvidia.com/cuda-zone'
   license :other
+  tags :vendor => 'Nvidia'
 
   pkg "cuda_#{version}_mac_64.pkg"
 

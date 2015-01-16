@@ -3,6 +3,7 @@ cask :v1 => 'bleep' do
   sha256 :no_check
 
   url 'https://download-new.utorrent.com/endpoint/bleep/os/osx/track/stable/'
+  name 'Bleep'
   homepage 'http://labs.bittorrent.com/bleep/'
   license :gratis
 

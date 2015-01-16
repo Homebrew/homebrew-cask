@@ -5,6 +5,7 @@ cask :v1 => 'flashlight' do
   # appspot.com is the official download host for the latest version, per the developer
   # Original discussion: https://github.com/nate-parrott/Flashlight/issues/104
   url 'https://flashlightplugins.appspot.com/latest_download'
+  name 'Flashlight'
   homepage 'http://flashlight.nateparrott.com/'
   license :gpl
 

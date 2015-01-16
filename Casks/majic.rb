@@ -4,6 +4,7 @@ cask :v1 => 'majic' do
 
   url 'http://erikhinterbichler.com/blog/wp-content/uploads/software/Majic.zip'
   appcast 'http://erikhinterbichler.com/blog/wp-content/uploads/updates/majic-update.xml'
+  name 'Majic'
   homepage 'http://erikhinterbichler.com/apps/majic/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

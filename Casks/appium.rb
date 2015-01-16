@@ -1,6 +1,6 @@
 cask :v1 => 'appium' do
-  version '1.2.2'
-  sha256 'fb7b96244e6dbcdf4d580eae0262b2dec38c008e39ddee4654bb488037f24971'
+  version '1.3.4'
+  sha256 '6e35270bf93db653556a6be0132f1720d5642e817f927b2db394d106b2a37252'
 
   url "https://bitbucket.org/appium/appium.app/downloads/appium-#{version}.dmg"
   name 'Appium'

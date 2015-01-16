@@ -4,6 +4,7 @@ cask :v1 => 'flexiglass' do
 
   url 'http://downloads.nulana.com/flexiglass/Flexiglass.dmg'
   appcast 'http://downloads.nulana.com/flexiglass/appcast.xml'
+  name 'Flexiglass'
   homepage 'http://nulana.com/flexiglass/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
