@@ -13,6 +13,8 @@ cask :v1 => 'heroku-toolbelt' do
             :delete  => [
                          '/usr/local/heroku',
                          '/usr/bin/heroku',
+                         '/usr/local/foreman',
+                         '/usr/bin/foreman'
                         ]
   zap       :delete => '~/.heroku'
 
