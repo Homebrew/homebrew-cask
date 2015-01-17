@@ -1,6 +1,6 @@
 cask :v1 => 'catch' do
-  version '1.8'
-  sha256 '0fd58d79ba869583406b7aa9ed707e4c77480417da9f09805f1497098fbbb138'
+  version '1.9.1'
+  sha256 'f9aded779d56f679fc638a6a31b2cf1a1f1e00c9aeaca931c3eca656feb53d41'
 
   url "https://github.com/mipstian/catch/releases/download/#{version}/Catch-#{version}.zip"
   appcast 'https://raw.github.com/mipstian/catch/master/update/appcast.xml',
