@@ -6,9 +6,15 @@ cask :v1 => 'p4v' do
   name 'P4V'
   name 'Perforce Visual Client'
   homepage 'http://www.perforce.com/product/components/perforce-visual-client'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
   tags :vendor => 'Perforce'
 
   app 'p4v.app'
   binary 'p4vc'
+
+  zap :delete => [
+                  '~/Library/Preferences/com.perforce.p4v',
+                  '~/Library/Preferences/com.perforce.p4v.plist',
+                  '~/Library/Saved Application State/com.perforce.p4v.savedState'
+                 ]
 end
