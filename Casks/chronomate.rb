@@ -1,6 +1,6 @@
 cask :v1 => 'chronomate' do
-  version '0.9.2'
-  sha256 '76b2f87b088c57aac7dfd18215b07e078d453ed351af056db25bb78d67e4862b'
+  version '0.9.8'
+  sha256 '4002fe0924ba57cb70c77f729d60fdf2182586dcbc8b871d6dcc8051280f83f7'
 
   url "https://studio-qb.com/sites/studio-qb.com/files/releases/chronomate_#{version}.dmg"
   appcast 'http://chronomateapp.com/update',
