@@ -1,8 +1,8 @@
 cask :v1 => 'password-gorilla' do
-  version '1.5.3.7.2'
-  sha256 '4d026a5fa088fe9622cbe00c5811da2f360949c7cfb46ce6e4899a09645cb83a'
+  version '1.5.3.7.3'
+  sha256 '877854465c7264198f40ab7a13e06a7bd1cf36431242dd3888ed6643b30c496e'
 
-  url "http://zdia.de/downloads/gorilla/gorilla#{version.gsub('.','')}.zip"
+  url "http://gorilla.dp100.com/downloads/gorilla.mac.#{version.gsub('.','')}.zip"
   name 'Password Gorilla'
   homepage 'https://github.com/zdia/gorilla'
   license :oss
