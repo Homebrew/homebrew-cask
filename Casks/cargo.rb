@@ -8,8 +8,8 @@ cask :v1 => 'cargo' do
     end
   end
 
-  url "http://static.rust-lang.org/cargo-dist/#{Utils.distname}.tar.gz"
-  homepage 'http://www.crates.io/'
+  url "https://static.rust-lang.org/cargo-dist/#{Utils.distname}.tar.gz"
+  homepage 'https://crates.io/'
   license :oss
 
   binary "#{Utils.distname}/bin/cargo"
