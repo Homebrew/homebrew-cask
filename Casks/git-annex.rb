@@ -3,8 +3,10 @@ cask :v1 => 'git-annex' do
   sha256 :no_check
 
   if MacOS.release <= :lion
+    # kitenet.net is the official download host per the vendor homepage
     url 'https://downloads.kitenet.net/git-annex/OSX/current/10.7.5_Lion/git-annex.dmg'
   elsif MacOS.release == :mountain_lion
+    # kitenet.net is the official download host per the vendor homepage
     url 'https://downloads.kitenet.net/git-annex/OSX/current/10.8.2_Mountain_Lion/git-annex.dmg.bz2'
 
     # This is a horrible hack to force the file extension.  The
@@ -14,8 +16,10 @@ cask :v1 => 'git-annex' do
     end
     container :nested => 'git-annex-latest.dmg'
   elsif MacOS.release == :mavericks
+    # kitenet.net is the official download host per the vendor homepage
     url 'https://downloads.kitenet.net/git-annex/OSX/current/10.9_Mavericks/git-annex.dmg'
   else
+    # kitenet.net is the official download host per the vendor homepage
     url 'https://downloads.kitenet.net/git-annex/OSX/current/10.10_Yosemite/git-annex.dmg'
   end
 
