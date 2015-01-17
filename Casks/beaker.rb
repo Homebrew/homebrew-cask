@@ -1,8 +1,8 @@
 cask :v1 => 'beaker' do
-  version '1.0'
-  sha256 '52218c170816587eb1264b80b4bbdd6a2eb5c5f074fba89afc7aa0e591fa838a'
+  version '1.1.2-1-g9161b57'
+  sha256 '0dbaff9141b5cc8022fe0a1d129dcb8c3a6e37ca906f86e62304732962c446ec'
 
-  url "http://d299yghl10frh5.cloudfront.net/beaker-notebook-v#{version}-0-g5644b78-mac.dmg"
+  url "http://d299yghl10frh5.cloudfront.net/beaker-notebook-v#{version}-mac.dmg"
   homepage 'http://beakernotebook.com/'
   license :apache
 
