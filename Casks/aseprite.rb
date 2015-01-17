@@ -5,7 +5,7 @@ cask :v1 => 'aseprite' do
   url "http://www.aseprite.org/downloads/Aseprite-v#{version}-trial-MacOSX.dmg"
   name 'Aseprite'
   homepage 'http://www.aseprite.org'
-  license :oss
+  license :gpl
 
   app 'aseprite.app'
 end
