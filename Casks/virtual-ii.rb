@@ -13,15 +13,8 @@ cask :v1 => 'virtual-ii' do
   homepage 'http://virtualii.com/'
   license :freemium
 
-  # There is no sub-folder in the DMG, so we must do some contortions
-  preflight do
-    FileUtils.mkdir staged_path.join('Virtual ][')
-    ['Virtual ][.app', 'Readme.rtf', 'Welcome tape.cass', 'ADT'].each do |file|
-      FileUtils.mv staged_path.join(file), staged_path.join('Virtual ][')
-    end
-  end
-
-  suite 'Virtual ]['
+  # There is no sub-folder in the DMG; the root *is* the folder
+  suite '.', :target => 'Virtual ]['
 
   caveats <<-EOS.undent
     This app requires a ROM image, which must be downloaded and installed
