@@ -2,9 +2,11 @@ cask :v1 => 'scala-ide' do
   version '4.0.0'
 
   if Hardware::CPU.is_32_bit?
+    # typesafe.com is the official download host per the vendor homepage
     url "http://downloads.typesafe.com/scalaide-pack/#{version}.vfinal-luna-211-20141216/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86.zip"
     sha256 '9739c851260211de15f8535988e7937cd4bf6e2dcb74188eb7261cff4a46deab'
   else
+    # typesafe.com is the official download host per the vendor homepage
     url "http://downloads.typesafe.com/scalaide-pack/#{version}.vfinal-luna-211-20141216/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86_64.zip"
     sha256 '721a01bbbf682a2e32c34fb33f0240c08a2f81a9b8e181d7bca2039e98635453'
   end
