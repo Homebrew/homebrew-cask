@@ -1,8 +1,9 @@
 cask :v1 => 'pdfsam' do
-  version '2.2.2'
-  sha256 '235635231c0e2428e9da1b126075d4cafe6b43625645350ff1491033dfc461a8'
+  version '2.2.4'
+  sha256 'fa8686d2be68ee67be40324723f316e8d5b708924e25b58af5296f7f302ede46'
 
-  url "http://downloads.sourceforge.net/project/pdfsam/pdfsam/#{version}/pdfsam-#{version}.dmg"
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/torakiki/pdfsam-v2/releases/download/v#{version}/pdfsam-#{version}.dmg"
   homepage 'http://www.pdfsam.org/'
   license :oss
 
