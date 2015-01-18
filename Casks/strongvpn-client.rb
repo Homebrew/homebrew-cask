@@ -6,6 +6,7 @@ cask :v1 => 'strongvpn-client' do
   url "https://mirror2.reliablehosting.com/mac/StrongVPN_Mac_#{version}.zip"
   appcast 'https://colomovers.com/mac.xml',
           :sha256 => 'd3d2168154069fbcd2ca42eb7167cf9b411230d3c58ac4367b46139011c0415f'
+  name 'StrongVPN Client'
   homepage 'http://strongvpn.com/vpnclient.shtml'
   license :closed
 

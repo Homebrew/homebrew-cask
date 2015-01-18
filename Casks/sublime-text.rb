@@ -5,6 +5,7 @@ cask :v1 => 'sublime-text' do
   url "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20#{version}.dmg"
   appcast 'http://www.sublimetext.com/updates/2/stable/appcast_osx.xml',
           :sha256 => 'e11769f18c577d4cb189c6f6485119a66db5e5d3ba4df99326080f193c1f74b3'
+  name 'Sublime Text'
   homepage 'http://www.sublimetext.com/2'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

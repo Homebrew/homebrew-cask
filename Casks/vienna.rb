@@ -5,6 +5,7 @@ cask :v1 => 'vienna' do
   url "http://downloads.sourceforge.net/vienna-rss/Vienna#{version}.tgz"
   appcast 'http://vienna-rss.org/changelog.xml',
           :sha256 => 'fcfbae9fe2ccae3bd3531436daa2060c16fab7d72de2a8eea1d13ccbcb66814d'
+  name 'Vienna'
   homepage 'http://www.vienna-rss.org'
   license :apache
 

@@ -17,6 +17,7 @@ cask :v1 => 'itrash' do
     url 'http://www.osxbytes.com/iTrash.dmg'
   end
 
+  name 'iTrash'
   homepage 'http://www.osxbytes.com/page10/'
   license :commercial
 

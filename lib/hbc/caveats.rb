@@ -67,7 +67,7 @@ class Hbc::CaveatsDSL
 
   def files_in_usr_local
     localpath = '/usr/local'
-    if HOMEBREW_PREFIX.to_s.downcase.index(localpath) == 0
+    if Hbc.homebrew_prefix.to_s.downcase.index(localpath) == 0
       puts <<-EOS.undent
       Cask #{@cask} installs files under "#{localpath}".  The presence of such
       files can cause warnings when running "brew doctor", which is considered

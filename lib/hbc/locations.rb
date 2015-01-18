@@ -4,10 +4,6 @@ module Hbc::Locations
   end
 
   module ClassMethods
-    def tapspath
-      HOMEBREW_REPOSITORY.join "Library", "Taps"
-    end
-
     def metadata_subdir
       '.metadata'
     end
@@ -42,14 +38,6 @@ module Hbc::Locations
 
     def qlplugindir=(_qlplugindir)
       @qlplugindir = _qlplugindir
-    end
-
-    def widgetdir
-      @widgetdir ||= Pathname.new('~/Library/Widgets').expand_path
-    end
-
-    def widgetdir=(_widgetdir)
-      @widgetdir = _widgetdir
     end
 
     def fontdir
@@ -130,9 +118,9 @@ module Hbc::Locations
         user, repo, token = token_with_tap.split('/')
         # bug/todo: handle old-style 1-slash form: phinze-cask/token
         repo = 'homebrew-' + repo unless repo.match(/^homebrew-/)
-        tapspath.join(user, repo, 'Casks', "#{token}.rb")
+        homebrew_tapspath.join(user, repo, 'Casks', "#{token}.rb")
       else
-        tapspath.join(default_tap, 'Casks', "#{query}.rb")
+        homebrew_tapspath.join(default_tap, 'Casks', "#{query}.rb")
       end
     end
 
@@ -150,6 +138,36 @@ module Hbc::Locations
 
     def x11_libpng
       @x11_libpng ||= [ Pathname.new('/opt/X11/lib/libpng.dylib'), Pathname.new('/usr/X11/lib/libpng.dylib') ]
+    end
+
+    def homebrew_executable
+      @homebrew_executable ||= Pathname(ENV['HOMEBREW_BREW_FILE'] || Hbc::Utils.which('brew') || '/usr/local/bin/brew')
+    end
+
+    def homebrew_prefix
+      # where Homebrew links
+      @homebrew_prefix ||= homebrew_executable.dirname.parent
+    end
+
+    def homebrew_prefix=(arg)
+      @homebrew_prefix = arg ? Pathname(arg) : arg
+    end
+
+    def homebrew_repository
+      # where Homebrew's .git dir is found
+      @homebrew_repository ||= homebrew_executable.realpath.dirname.parent
+    end
+
+    def homebrew_repository=(arg)
+      @homebrew_repository = arg ? Pathname(arg) : arg
+    end
+
+    def homebrew_tapspath
+      @homebrew_tapspath ||= homebrew_repository.join *%w{Library Taps}
+    end
+
+    def homebrew_tapspath=(arg)
+      @homebrew_tapspath = arg ? Pathname(arg) : arg
     end
   end
 end

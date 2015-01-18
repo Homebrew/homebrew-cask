@@ -7,7 +7,7 @@ class Hbc::Container::GenericUnar < Hbc::Container::Base
   end
 
   def extract
-    unar = HOMEBREW_PREFIX.join('bin/unar')
+    unar = Hbc.homebrew_prefix.join('bin/unar')
     if ! Pathname.new(unar).exist?
       raise Hbc::CaskError.new "Expected to find unar executable. Cask #{@cask} must add: depends_on :formula => 'unar'"
     end

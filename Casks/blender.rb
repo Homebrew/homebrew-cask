@@ -1,8 +1,8 @@
 cask :v1 => 'blender' do
-  version '2.72b'
-  sha256 'b015f030c416d4aa09617f33e93bba3429624dbbb203fb4b6e728257e61b3d5c'
+  version '2.73'
+  sha256 'b95fc8caaf988a355242bd73bab44f7a95933826e49268c48bf46b9a672fa911'
 
-  url "http://download.blender.org/release/Blender2.72/blender-#{version}-OSX_10.6-x86_64.zip"
+  url "http://download.blender.org/release/Blender#{version}/blender-#{version}-OSX_10.6-x86_64.zip"
   homepage 'http://www.blender.org/'
   license :gpl
 

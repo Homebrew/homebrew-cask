@@ -3,6 +3,7 @@ cask :v1 => 'sleipnir' do
   sha256 :no_check
 
   url 'http://www.fenrir-inc.com/services/download.php?file=Sleipnir.dmg'
+  name 'Sleipnir'
   homepage 'http://www.fenrir-inc.com/sleipnir/'
   license :closed
 

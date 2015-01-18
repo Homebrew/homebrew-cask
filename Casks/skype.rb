@@ -10,6 +10,7 @@ cask :v1 => 'skype' do
     url 'https://www.skype.com/go/getskype-macosx.dmg'
   end
 
+  name 'Skype'
   homepage 'http://www.skype.com'
   license :gratis
 

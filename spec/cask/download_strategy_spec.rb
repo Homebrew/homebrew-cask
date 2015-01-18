@@ -32,7 +32,7 @@ describe 'download strategies' do
       end
 
       expect(downloader).to have_received(:curl).with(
-        cask.url,
+        cask.url.to_s,
         '-C', 0,
         '-o', kind_of(Pathname)
       )

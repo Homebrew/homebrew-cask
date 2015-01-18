@@ -3,8 +3,8 @@ cask :v1 => 'base' do
   sha256 :no_check
 
   url 'http://menial.co.uk/base/download/'
-  name 'Base'
   appcast 'http://update.menial.co.uk/software/base/'
+  name 'Base'
   homepage 'http://menial.co.uk/base/'
   license :commercial
   tags :vendor => 'Menial'

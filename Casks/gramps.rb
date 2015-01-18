@@ -4,6 +4,7 @@ cask :v1 => 'gramps' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/gramps/Stable/#{version.sub(%r{-\d},'')}/Gramps-Intel-#{version}.dmg"
+  name 'Gramps'
   homepage 'https://gramps-project.org/'
   license :oss
 

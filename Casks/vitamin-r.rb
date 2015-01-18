@@ -4,6 +4,7 @@ cask :v1 => 'vitamin-r' do
 
   url 'http://www.publicspace.net/download/Vitamin.dmg'
   appcast 'http://www.publicspace.net/app/vitamin2.xml'
+  name 'Vitamin-R'
   homepage 'http://www.publicspace.net/Vitamin-R/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

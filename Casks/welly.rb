@@ -5,6 +5,7 @@ cask :v1 => 'welly' do
   url "https://welly.googlecode.com/files/Welly.v#{version}.fix.zip"
   appcast 'http://welly.googlecode.com/svn/wiki/WellyUpdate.xml',
           :sha256 => '0f7d24defff0753fd85883c94111714eded290bae284a2244aba5bfa63224a8c'
+  name 'Welly'
   homepage 'https://code.google.com/p/welly/'
   license :oss
 

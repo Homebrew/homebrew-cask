@@ -1,10 +1,11 @@
 cask :v1 => 'money' do
-  version '4.5.5'
-  sha256 '6676fcc086b7972a1a13c76b3b27898a1170d808cc570d262fe0bfb902c00582'
+  version '4.6'
+  sha256 'd012fd407a083f01cae851bdc43caf311e85b6cedaf0c05b44a0539711a4a47c'
 
   url "http://download.jumsoft.com/Applications/Money/Money_#{version}.zip"
   appcast 'http://www.jumsoft.com/downloads/updates/money4.rss',
-          :sha256 => 'b96c8822636a881e3672876695bf9e7aa9c9e398bf48d1e7f59fc6a2c99264c9'
+          :sha256 => '92fb9af194903f4f4336c54957feed8537060181eb8c5b4f5b97ccb3c32187e0'
+  name 'Money'
   homepage 'http://www.jumsoft.com/money/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

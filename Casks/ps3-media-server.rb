@@ -3,6 +3,7 @@ cask :v1 => 'ps3-media-server' do
   sha256 '3ebe75ce0dbdc1313c10fb901f845564cc343dc3b7487f07e15db9d757850df5'
 
   url "http://downloads.sourceforge.net/project/ps3mediaserver/pms-#{version}-setup-macosx.tar.gz"
+  name 'PS3 Media Server'
   homepage 'http://www.ps3mediaserver.org/'
   license :oss
 

@@ -8,6 +8,8 @@ cask :v1 => 'librecad' do
     url "http://downloads.sourceforge.net/project/librecad/OSX/#{version}/LibreCAD-#{version}-Mavericks.dmg"
     sha256 'ab8ccd20cb1f80b038e2aa471981d4e3e63a38ff632eba6382ef5904c4d3f2dd'
   end
+
+  name 'LibreCAD'
   homepage 'http://librecad.org/'
   license :gpl
 

@@ -11,6 +11,7 @@ cask :v1 => 'spectacle' do
             :sha256 => '5d75e2e07886ca135916e224b4b5c1468d9af1ea8ef355db33b28bff511fa6b2'
   end
 
+  # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/spectacle/downloads/Spectacle+#{version}.zip"
   homepage 'http://spectacleapp.com/'
   license :mit

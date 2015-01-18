@@ -1,11 +1,11 @@
 cask :v1 => 'ampps' do
-  version '2.3'
-  sha256 'ce7a1a7e71f0314edbc994e10fe4f6a80303c1999904ca1fb14d98c7477ae8e0'
+  version '2.8'
+  sha256 '9014b7ceb885972142172ea171d21d57c5f9a406ca04266e7357c3ca9c030a7e'
 
   url "http://files.ampps.com/AMPPS-#{version}.dmg"
   name 'AMPPS'
   homepage 'http://www.ampps.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   suite 'AMPPS'
 end

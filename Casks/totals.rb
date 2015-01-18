@@ -3,6 +3,7 @@ cask :v1 => 'totals' do
   sha256 '64ce147800d408f006ff9a094cd4f849a7bf9391090a5b0a100a7888c077c44b'
 
   url "http://www.kedisoft.com/dl/totals/Totals-#{version}.dmg"
+  name 'Totals'
   homepage 'http://www.kedisoft.com/totals/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

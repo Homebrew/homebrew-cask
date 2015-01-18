@@ -3,6 +3,7 @@ cask :v1 => 'github' do
   sha256 :no_check
 
   url 'https://central.github.com/mac/latest'
+  name 'GitHub'
   homepage 'http://mac.github.com'
   license :oss
 

@@ -4,6 +4,7 @@ cask :v1 => 'battery-guardian' do
 
   url 'https://www.dssw.co.uk/batteryguardian/dsswbatteryguardian.dmg'
   appcast 'http://version.dssw.co.uk/batteryguardian/standard'
+  name 'Battery Guardian'
   homepage 'https://www.dssw.co.uk/batteryguardian'
   license :gratis
 

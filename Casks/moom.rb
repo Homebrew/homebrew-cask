@@ -3,8 +3,8 @@ cask :v1 => 'moom' do
   sha256 :no_check
 
   url 'http://manytricks.com/download/moom'
-  name 'Moom'
   appcast 'http://manytricks.com/moom/appcast.xml'
+  name 'Moom'
   homepage 'http://manytricks.com/moom/'
   license :commercial
 

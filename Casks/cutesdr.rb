@@ -3,6 +3,7 @@ cask :v1 => 'cutesdr' do
   sha256 'acac69ffe1fd36231d7c1948019fed4ff1eda59e8bfc88bd75797b875238a8ae'
 
   url "http://downloads.sourceforge.net/project/cutesdr/CuteSdr#{version.gsub('.','')}.dmg"
+  name 'CuteSDR'
   homepage 'http://sourceforge.net/projects/cutesdr'
   license :oss
 
