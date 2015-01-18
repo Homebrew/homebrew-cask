@@ -10,7 +10,7 @@ cask :v1 => 'scroll-reverser' do
             :sha256 => 'ed8e2d6748eb8b79897ca1b84a1597e86afb7845b469a278c83c07e08e6eb886'
   end
 
-  # cloudfront.net is the official download host per the vendor appcast
+  # cloudfront.net is the official download host per the vendor homepage
   url "https://d20vhy8jiniubf.cloudfront.net/downloads/ScrollReverser-#{version}.zip"
   homepage 'https://pilotmoon.com/scrollreverser/'
   license :gratis
