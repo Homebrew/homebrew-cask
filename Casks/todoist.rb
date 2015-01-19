@@ -1,8 +1,9 @@
 cask :v1 => 'todoist' do
-  version :latest
-  sha256 :no_check
+  version '6.0.3'
+  sha256 '5457917cbc22092e12f736dfd7b1d22a2cb62ad0cda82d7b1c053fe287d9112e'
 
-  url 'https://d2dq6e731uoz0t.cloudfront.net/3334959e6780bf9ff7dbe8fc936e0700/as/Todoist.app.zip'
+  # cloudfront.net is the official download host per the appcast feed
+  url 'https://d2dq6e731uoz0t.cloudfront.net/f34bc666b8a2458496a5c00a115f7cbd/as/Todoist.zip'
   appcast 'http://todoist.com/static/native_apps/mac_app.xml'
   homepage 'https://todoist.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
