@@ -2,6 +2,7 @@ cask :v1 => 'textmate' do
   version :latest
   sha256 :no_check
 
+  # textmate.org is the official download host per the vendor homepage
   url 'https://api.textmate.org/downloads/release'
   homepage 'http://macromates.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
