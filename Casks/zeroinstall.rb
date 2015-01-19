@@ -1,7 +1,8 @@
 cask :v1 => 'zeroinstall' do
-  version '2.7'
-  sha256 '12246277e9d03fb1a083f6a0d7d088d7b90170dbd5fd8fb900b36d0470fb88e0'
+  version '2.8'
+  sha256 'ab0fbf7fc43c5ff6429d5686bde3ecef01c78894c46c8bd554c2f4a1f0e10e66'
 
+  # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/zero-install/0install/#{version}/ZeroInstall.pkg"
   homepage 'http://0install.net'
   license :oss
