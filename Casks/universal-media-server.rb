@@ -1,9 +1,10 @@
 cask :v1 => 'universal-media-server' do
-  version '4.2.1'
-  sha256 '9219b5d041b374e8d297536c06e0afa4ea3216ff1484493a849a8fa32e2b57b0'
+  version '4.4.0'
+  sha256 'ad73091e9ef5c6d7d884df35d3c2b55534765e56629932790989f6e4e0d78b06'
 
+  # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/unimediaserver/Official%20Releases/OS%20X/UMS-#{version}-Java8.dmg"
-  homepage 'www.universalmediaserver.com'
+  homepage 'http://universalmediaserver.com'
   license :oss
 
   app 'Universal Media Server.app'
