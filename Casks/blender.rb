@@ -8,4 +8,16 @@ cask :v1 => 'blender' do
 
   app 'Blender/blender.app'
   app 'Blender/blenderplayer.app'
+
+  preflight do
+    wrapper = "#{staged_path}/Blender/blender.sh"
+    pythonversion = "3.4"
+    File.open(wrapper, "w") do |f|
+      f.puts "#!/bin/sh"
+      f.puts "export PYTHONHOME=#{staged_path}/Blender/blender.app/Contents/Resources/#{version}/python/lib/python#{pythonversion}"
+      f.puts "#{staged_path}/Blender/blender.app/Contents/MacOS/blender $*"
+      FileUtils.chmod "+x", f
+    end
+  end
+  binary 'Blender/blender.sh', :target => 'blender'
 end
