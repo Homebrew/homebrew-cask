@@ -1,10 +1,10 @@
 cask :v1 => 'tuntap' do
-  version '20141104'
-  sha256 '149dbfdfea3264249536cd39240e613f685c4c524635cf116dbcc09ec252b920'
+  version '20150118'
+  sha256 '2f31ffece5ad349aaae0516c08e2f6bd569d61ba2ec54b27909ba71537e7b4ff'
 
   url "http://downloads.sourceforge.net/project/tuntaposx/tuntap/#{version}/tuntap_#{version}.tar.gz"
   homepage 'http://tuntaposx.sourceforge.net/'
-  license :oss
+  license :bsd
 
   pkg "tuntap_#{version}.pkg"
 
