@@ -2,6 +2,7 @@ cask :v1 => 'mikogo' do
   version :latest
   sha256 :no_check
 
+  # mikogo4.com is the official download host per the vendor homepage
   url 'http://download.mikogo4.com/mikogo.dmg'
   homepage 'http://www.mikogo.com/'
   license :gratis
