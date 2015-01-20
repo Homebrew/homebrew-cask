@@ -1,6 +1,6 @@
 cask :v1 => 'query-handbrake-log' do
   version '5.4'
-  sha256 'a135d904bac2ace2a89d4c123ac4939ab7241e8e3adcd82201f04275909a2eb9'
+  sha256 'cfcf3d492b13d22c15ea9566364592a6b1e193a798bd7eca7e348681318f0dbb'
 
   url 'https://github.com/donmelton/video-transcoding-scripts/archive/master.zip'
   name 'Video Transcoding Scripts'
