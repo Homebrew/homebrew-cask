@@ -1,17 +1,17 @@
 cask :v1 => 'dbvisualizer' do
   version '9.2'
-  sha256 '00a9b9898b543af727683ecb8b79d9ecb45e138b44681d3bb522a207de62fd0a'
+  sha256 'caddfc43f3550487b4f4b0e6a671dde52eb402b348ce091b30aaf341c96a0630'
 
-  url "http://www.dbvis.com/product_download/dbvis-#{version}/media/dbvis_macos_#{version.gsub('.', '_')}_java7.dmg"
+  url "http://www.dbvis.com/product_download/dbvis-#{version}/media/dbvis_macos_#{version.gsub('.', '_')}.tgz"
   homepage 'http://www.dbvis.com/'
   license :commercial
-
-  installer :manual => 'DbVisualizer Installer.app'
 
   caveats <<-EOS.undent
     #{token} requires Java. You can install the latest version with
       brew cask install java
   EOS
+
+  app 'DbVisualizer.app'
 
   uninstall :signal => [[ 'TERM', 'com.dbvis.DbVisualizer' ]]
   zap :delete => '~/.dbvis'
