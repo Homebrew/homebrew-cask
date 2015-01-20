@@ -1,7 +1,8 @@
 cask :v1 => 'psychopy' do
-  version '1.79.01'
-  sha256 'a2b174aee30ca4a8858238404adfd9271da9ec14243aa30be0b7f9a6abb047b8'
+  version '1.81.00'
+  sha256 '121a3ee098ea6a978e7888da8de6dc3a096205455518aabf9e31edf21bbe0183'
 
+  # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/psychpy/StandalonePsychoPy-#{version}-OSX.dmg"
   homepage 'http://www.psychopy.org/'
   license :oss

@@ -8,6 +8,7 @@ cask :v1 => 'filezilla' do
     sha256 'c3317b8052736ce042a5d27279c888e321065b87fe3cbc5c43c3600c3e52f40c'
   end
 
+  # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/filezilla/FileZilla_Client/#{version}/FileZilla_#{version}_macosx-x86.app.tar.bz2"
   homepage 'https://filezilla-project.org/'
   license :oss

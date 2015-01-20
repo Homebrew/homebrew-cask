@@ -4,7 +4,7 @@ cask :v1 => 'fontprep' do
 
   url "https://github.com/briangonzalez/fontprep/releases/download/v3.1.1/FontPrep_#{version}.zip"
   name 'FontPrep'
-  homepage 'http://fontprep.com'
+  homepage 'https://github.com/briangonzalez/fontprep'
   license :gpl
 
   app 'FontPrep.app'

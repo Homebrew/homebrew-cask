@@ -2,6 +2,7 @@ cask :v1 => 'smlnj' do
   version '110.77'
   sha256 '77265ce1bdbca3e9c9b3053195503bf2bffafbba196596679fb64d9ceb4e25ee'
 
+  # uchicago.edu is the official download host per the vendor homepage
   url "http://smlnj.cs.uchicago.edu/dist/working/#{version}/smlnj-x86-#{version}.pkg"
   name 'Standard ML of New Jersey'
   homepage 'http://www.smlnj.org/'

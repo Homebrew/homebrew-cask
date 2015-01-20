@@ -10,6 +10,11 @@ cask :v1 => 'diffmerge' do
   app 'DiffMerge.app'
   binary 'DiffMerge.app/Contents/MacOS/DiffMerge', :target => 'diffmerge'
 
+  zap :delete => [
+                  '~/Library/Preferences/com.sourcegear.DiffMerge.plist',
+                  '~/Library/Preferences/SourceGear DiffMerge Preferences'
+                 ]
+
   caveats <<-EOS.undent
     Use "diffmerge --nosplash" to hide the splash screen when using
     diffmerge with external tools such as git.

@@ -3,7 +3,8 @@ cask :v1 => 'poedit' do
   if MacOS.release <= :snow_leopard
     version '1.5.7'
     sha256 '2017538011239f07924b709e4c13aa3fd7f83a96f76208b8b746fcee29251caf'
-    url "http://heanet.dl.sourceforge.net/project/poedit/poedit/#{version.sub(/.\d+$/,'')}/poedit-#{version}.dmg"
+    # sourceforge.net is the official download host per the vendor homepage
+    url "http://downloads.sourceforge.net/sourceforge/poedit/poedit-#{version}.dmg"
   else
     version '1.7.3'
     sha256 'b0dceeaee4e0085a0d17663cf224f24ada6773f704babf1dcf9b9d193f0db3a9'

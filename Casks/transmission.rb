@@ -2,6 +2,7 @@ cask :v1 => 'transmission' do
   version '2.84'
   sha256 '53d08a55a5ca55010d409acb10f0285a649b8879085cad83f2cbcb7faa489ad5'
 
+  # cachefly.net is the official download host per the vendor homepage
   url "https://transmission.cachefly.net/Transmission-#{version}.dmg"
   name 'Transmission'
   appcast 'http://update.transmissionbt.com/appcast.xml',

@@ -1,8 +1,9 @@
 cask :v1 => 'graphicconverter' do
-  version '9.4'
-  sha256 'bd3d837e4c3366131fa4c87ad186995ac40c48157c21df1c31aa94a4a57ee06c'
+  version '9_build1780'
+  sha256 '034918633b8cac8dd2cbc0613c8ff5be29e6f5dbba909b46d29d61ee0ba1d943'
 
-  url "http://www.lemkesoft.org/files/graphicconverter/gc#{version.to_i}_build1727.dmg"
+  # lemkesoft.org is the official download host per the vendor homepage
+  url "http://www.lemkesoft.org/files/graphicconverter/gc#{version}.dmg"
   name 'GraphicConverter'
   homepage 'http://www.lemkesoft.de/en/products/graphicconverter/'
   license :commercial

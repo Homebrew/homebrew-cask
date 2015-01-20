@@ -1,7 +1,8 @@
 cask :v1 => 'postgres' do
-  version '9.4.0.0'
-  sha256 '770f4b11d254a05962be639e72e1dbf9a5ac5544fc3d6f785cceaa5fb1c82c7c'
+  version '9.4.0.1'
+  sha256 '38120bbeceb60d761c7fefb18d4cadee36049585238881f12e08f984d2674c8a'
 
+  # github.com is the official download host per the vendor homepage
   url "https://github.com/PostgresApp/PostgresApp/releases/download/#{version}/Postgres-#{version}.zip"
   homepage 'http://postgresapp.com/'
   license :oss

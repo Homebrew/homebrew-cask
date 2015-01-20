@@ -1,10 +1,10 @@
 cask :v1 => 'lastfm' do
-  version :latest
-  sha256 :no_check
+  version '2.1.36'
+  sha256 'd61d4947117080998937c0d63148caf693f1bed5ec768d86feeb3a86f84d1ff9'
 
-  url 'http://www.lastfm.de/download/mac'
+  url "http://cdn.last.fm/client/Mac/Last.fm-#{version}.zip"
   appcast 'http://cdn.last.fm/client/Mac/updates.xml'
-  homepage 'http://www.lastfm.com'
+  homepage 'http://www.last.fm/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Last.fm.app'

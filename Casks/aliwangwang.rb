@@ -2,6 +2,7 @@ cask :v1 => 'aliwangwang' do
   version :latest
   sha256 :no_check
 
+  # etao.com is the official download host per the vendor homepage
   url 'http://update.labs.etao.com/macww-nosandbox/versions/lastest'
   appcast 'http://update.labs.etao.com/macww/updates.xml'
   homepage 'http://wangwang.taobao.com'
