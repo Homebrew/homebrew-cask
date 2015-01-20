@@ -1,6 +1,6 @@
 cask :v1 => 'vienna' do
   version '3.0.3'
-  sha256 '106c25c623866b5c2fe14fb38ffb19918fb15e753d7a05c5e15121ac546b3e05'
+  sha256 'c575b069ba0fa504891c104a9652b427c559d798ceff83109eb2b86e14015c76'
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/vienna-rss/Vienna#{version}.tgz"
