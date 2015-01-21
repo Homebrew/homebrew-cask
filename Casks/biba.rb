@@ -4,7 +4,7 @@ cask :v1 => 'biba' do
 
   url 'https://www.biba.com/osx_downloads/dmg'
   name 'Biba'
-  homepage 'http://www.biba.com'
+  homepage 'https://www.biba.com'
   license :closed
 
   app 'Biba.app'
