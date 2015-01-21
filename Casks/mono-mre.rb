@@ -1,6 +1,6 @@
 cask :v1 => 'mono-mre' do
-  version '3.10.0'
-  sha256 'c9973d1206a36b71964a8b173d452780c19200cac2955723e0d48f969a3f6d28'
+  version '3.12.0'
+  sha256 'af104354a7445f5565aa438bd172824bd00088b6a737b371cce09a15b9ca0491'
 
   url "http://download.mono-project.com/archive/#{version}/macos-10-x86/MonoFramework-MRE-#{version}.macos10.xamarin.x86.pkg"
   homepage 'http://mono-project.com'
