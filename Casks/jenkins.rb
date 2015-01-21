@@ -8,7 +8,7 @@ cask :v1 => 'jenkins' do
   license :cc
 
   pkg "jenkins-#{version}.pkg"
-  binary '/Library/Application Support/Jenkins/jenkins-runner.sh', :target => 'jenkins'
+  binary '/Library/Application Support/Jenkins/jenkins-runner.sh', :target => 'jenkins-runner'
 
   uninstall :script    => '/Library/Application Support/Jenkins/Uninstall.command',
             :pkgutil   => 'org.jenkins-ci.*pkg',
