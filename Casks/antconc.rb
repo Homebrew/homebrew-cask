@@ -5,7 +5,7 @@ cask :v1 => 'antconc' do
   url 'http://www.laurenceanthony.net/software/antconc/releases/AntConc343/AntConc.zip'
   name 'AntConc'
   homepage 'http://www.laurenceanthony.net/software/antconc'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis 
 
   app 'AntConc.app'
 end
