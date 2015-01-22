@@ -5,6 +5,7 @@ cask :v1 => 'garagesale' do
   url "http://downloads.iwascoding.com/downloads/GarageSale_#{version}.dmg"
   appcast 'http://www.iwascoding.com/GarageSale/AppCast.php',
           :sha256 => '3bc0ac9ead57616b1261263671045ca70cedc5061047da72e536c266cc6a2f4d'
+  name 'GarageSale'
   homepage 'http://www.iwascoding.com/GarageSale/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
