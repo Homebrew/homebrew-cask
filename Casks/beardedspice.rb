@@ -4,6 +4,7 @@ cask :v1 => 'beardedspice' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/beardedspice/beardedspice/raw/releases/BeardedSpice-#{version}.tar.gz"
+  name 'BeardedSpice'
   homepage 'http://www.beardedspice.com'
   license :oss
 
