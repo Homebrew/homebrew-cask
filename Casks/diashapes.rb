@@ -4,6 +4,7 @@ cask :v1 => 'diashapes' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/dia-installer/diashapes/#{version}/diashapes-#{version}.dmg"
+  name 'Dia'
   homepage 'http://dia-installer.de/'
   license :oss
 
