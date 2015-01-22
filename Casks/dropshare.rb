@@ -3,6 +3,7 @@ cask :v1 => 'dropshare' do
   sha256 :no_check
 
   url 'https://getdropsha.re/sparkle/Dropshare-latest.zip'
+  name 'Dropshare'
   homepage 'http://getdropsha.re/'
   license :commercial
 
