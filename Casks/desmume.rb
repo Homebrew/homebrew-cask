@@ -4,6 +4,7 @@ cask :v1 => 'desmume' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/desmume/desmume-#{version}-mac.dmg"
+  name 'DeSmuME'
   homepage 'http://www.desmume.org'
   license :oss
 
