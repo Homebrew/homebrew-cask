@@ -4,6 +4,7 @@ cask :v1 => 'decitime' do
 
   # filewell.com is the official download host per the vendor homepage
   url "http://download.filewell.com/DeciTime#{version.gsub('.','')}.dmg.zip"
+  name 'DeciTime'
   homepage 'http://www.tinbert.com/DeciTimeMac/'
   license :oss
 
