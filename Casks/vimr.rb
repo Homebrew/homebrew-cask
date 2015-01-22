@@ -4,6 +4,7 @@ cask :v1 => 'vimr' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/qvacua/vimr/releases/download/v#{version}/VimR-#{version.sub(%r{-.*},'')}.tar.bz2"
+  name 'VimR'
   homepage 'http://vimr.org/'
   license :gpl
 
