@@ -1,6 +1,6 @@
 cask :v1 => 'xamarin-studio' do
-  version '5.7.0.660-0'
-  sha256 'efb4b5817ff1e21d9aaac13c76607ee198d3dc71b57968faf075f01a7069133c'
+  version '5.7.0.661-0'
+  sha256 '6a126005fafaa19cd8a9c6153c2a7c4b502cf8293e8c977bfbac38f03e0f2e2e'
 
   url "http://download.xamarin.com/studio/Mac/XamarinStudio-#{version}.dmg"
   appcast 'http://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
