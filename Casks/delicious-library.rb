@@ -3,6 +3,7 @@ cask :v1 => 'delicious-library' do
   sha256 :no_check
 
   url 'http://delicious-monster.com/downloads/DeliciousLibrary3.zip'
+  name 'Delicious Library'
   homepage 'http://delicious-monster.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
