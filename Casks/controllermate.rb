@@ -4,6 +4,7 @@ cask :v1 => 'controllermate' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://s3.amazonaws.com/orderedbytes/ControllerMate.dmg'
+  name 'ControllerMate'
   homepage 'http://www.orderedbytes.com/controllermate/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
