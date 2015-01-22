@@ -4,6 +4,7 @@ cask :v1 => 'beaker' do
 
   # cloudfront.net is the official download host per the vendor homepage
   url "http://d299yghl10frh5.cloudfront.net/beaker-notebook-v#{version}-mac.dmg"
+  name 'Beaker'
   homepage 'http://beakernotebook.com/'
   license :apache
 
