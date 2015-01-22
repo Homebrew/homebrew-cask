@@ -4,6 +4,7 @@ cask :v1 => 'gawker' do
 
   url 'http://sourceforge.net/projects/gawker/files/latest/download'
   appcast 'http://gawker.sourceforge.net/appcast.xml'
+  name 'Gawker'
   homepage 'http://gawker.sourceforge.net/Gawker.html'
   license :oss
 
