@@ -1,6 +1,6 @@
 cask :v1 => 'transcode-video' do
-  version '5.4'
-  sha256 'cfcf3d492b13d22c15ea9566364592a6b1e193a798bd7eca7e348681318f0dbb'
+  version '5.8'
+  sha256 '31e068d4c8589473d6a3c13afc7062cafa6e8a80ea1821e2974590d9aaed8de5'
 
   url 'https://github.com/donmelton/video-transcoding-scripts/archive/master.zip'
   name 'Video Transcoding Scripts'
