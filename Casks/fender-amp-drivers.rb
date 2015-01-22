@@ -4,6 +4,7 @@ cask :v1 => 'fender-amp-drivers' do
 
   # fmicassets.com is the official download host per the vendor homepage
   url "http://www.fmicassets.com/fender/support/software/fender_software/fender_fuse/mac/FenderFUSE_FULL_#{version}.dmg"
+  name 'Fender FUSE'
   homepage 'https://fuse.fender.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
