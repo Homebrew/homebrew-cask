@@ -4,6 +4,7 @@ cask :v1 => 'divvy' do
 
   url 'https://mizage.com/downloads/Divvy.zip'
   appcast 'http://mizage.com/updates/profiles/divvy.php'
+  name 'Divvy'
   homepage 'http://mizage.com/divvy/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
