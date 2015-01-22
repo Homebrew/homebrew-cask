@@ -4,6 +4,7 @@ cask :v1 => 'baretorrent' do
 
   # launchpad.net is the official download host per the vendor homepage
   url "https://launchpad.net/baretorrent/trunk/#{version}/+download/baretorrent-#{version}-osx-x64.dmg"
+  name 'baretorrent'
   homepage 'http://baretorrent.org'
   license :public_domain
 
