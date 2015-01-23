@@ -10,4 +10,9 @@ cask :v1 => 'rowanj-gitx' do
 
   app 'GitX.app'
   binary 'GitX.app/Contents/Resources/gitx'
+
+  conflicts_with :cask => %w{
+                             gitx
+                             laullon-gitx
+                            }
 end
