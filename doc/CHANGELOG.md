@@ -1,5 +1,37 @@
 # CHANGELOG
 
+## 0.53.0
+
+* __Casks__
+  - 15 Casks added (720 updated) by 100 contributors since 0.52.1
+  - 2239 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - [#8840][] Removed Alfred support
+  - [#8751][] Removed widget support
+* __Fixes__
+  - [#8790][],[#8869][],[#8936][] Correctly launch editor in the absence of related ENV variables
+* __Internal Changes__
+  - [#8870][] remove homebrew-fork MACOS_RELEASE constants
+  - [#8871][] increment seed for Travis tests
+* __Documentation__
+  - 12 doc commits since 0.52.1 <3 [@bronson][]
+* __Contributors__
+  - 48 new contributors since 0.52.1
+  - 1446 total contributors
+* __Release Date__
+  - 2015-01-23 11:00:00 UTC
+
+[#8751]: https://github.com/caskroom/homebrew-cask/issues/8751
+[#8790]: https://github.com/caskroom/homebrew-cask/issues/8790
+[#8840]: https://github.com/caskroom/homebrew-cask/issues/8840
+[#8869]: https://github.com/caskroom/homebrew-cask/issues/8869
+[#8870]: https://github.com/caskroom/homebrew-cask/issues/8870
+[#8871]: https://github.com/caskroom/homebrew-cask/issues/8871
+[#8936]: https://github.com/caskroom/homebrew-cask/issues/8936
+[@bronson]: https://github.com/bronson
+
 ## 0.52.1
 
 * __Casks__

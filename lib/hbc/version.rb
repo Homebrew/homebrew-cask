@@ -1,1 +1,1 @@
-HBC_VERSION = '0.52.1'
+HBC_VERSION = '0.53.0'
