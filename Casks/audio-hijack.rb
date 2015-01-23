@@ -7,7 +7,7 @@ cask :v1 => 'audio-hijack' do
   homepage 'http://www.rogueamoeba.com/audiohijack/'
   license :commercial
 
-  depends_on :macos => '>= :mavericks'
-
   app 'Audio Hijack.app'
+
+  depends_on :macos => '>= :mavericks'
 end
