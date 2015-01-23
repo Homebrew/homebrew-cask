@@ -7,4 +7,12 @@ cask :v1 => 'cmake' do
   license :bsd
 
   app 'CMake.app'
+  binary 'CMake.app/Contents/bin/cmake'
+  binary 'CMake.app/Contents/bin/ccmake'
+  binary 'CMake.app/Contents/bin/cmakexbuild'
+  binary 'CMake.app/Contents/bin/cpack'
+  binary 'CMake.app/Contents/bin/ctest'
+  binary 'CMake.app/Contents/bin/cmake-gui'
+
+  conflicts_with :formula => 'cmake'
 end
