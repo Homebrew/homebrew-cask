@@ -16,11 +16,9 @@ cask :v1 => 'jenkins' do
 
   zap :delete => '/Library/Preferences/org.jenkins-ci.plist'
 
-  conflicts_with :formula => %w{
-                                jenkins
-                                homebrew/versions/jenkins-lts
-                               },
-                 :cask    => 'caskroom/versions/jenkins-lts'
+  conflicts_with :formula => 'jenkins'
+  conflicts_with :formula => 'homebrew/versions/jenkins-lts'
+  conflicts_with :cask    => 'caskroom/versions/jenkins-lts'
 
   caveats <<-EOS.undent
     #{token} requires Java. You can install the latest version with
