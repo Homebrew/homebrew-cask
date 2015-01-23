@@ -86,7 +86,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 
 | name               | multiple occurrences allowed? | value       |
 | ------------------ |------------------------------ | ----------- |
-| `app`              | yes                           | relative path to an `.app` that should be linked into the `~/Applications` folder on installation (see also [App Stanza Details](#app-stanza-details))
+| `app`              | yes                           | relative path to an `.app` that should be linked into the `/Applications` folder on installation (see also [App Stanza Details](#app-stanza-details))
 | `pkg`              | yes                           | relative path to a `.pkg` file containing the distribution (see also [Pkg Stanza Details](#pkg-stanza-details))
 | `binary`           | yes                           | relative path to a binary that should be linked into the `/usr/local/bin` folder on installation
 | `colorpicker`      | yes                           | relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
@@ -97,7 +97,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `qlplugin`         | yes                           | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `screen_saver`     | yes                           | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
 | `service`          | yes                           | relative path to a service that should be linked into the `~/Library/Services` folder on installation
-| `suite`            | yes                           | relative path to a containing directory that should be linked into the `~/Applications` folder on installation (see also [Suite Stanza Details](#suite-stanza-details))
+| `suite`            | yes                           | relative path to a containing directory that should be linked into the `/Applications` folder on installation (see also [Suite Stanza Details](#suite-stanza-details))
 | `artifact`         | yes                           | relative path to an arbitrary path that should be symlinked on installation.  This is only for unusual cases.  The `app` stanza is strongly preferred when linking `.app` bundles.
 | `installer`        | yes                           | describes an executable which must be run to complete the installation.  (see [Installer Stanza Details](#installer-stanza-details))
 | `stage_only`       | no                            | `true`.  Assert that the Cask contains no activatable artifacts.
@@ -440,7 +440,7 @@ follows the `url` value.  Example: [libreoffice.rb](../Casks/libreoffice.rb).
 ## App Stanza Details
 
 In the simple case of a string argument to `app`, a symlink is created in
-the target `~/Applications` directory using the same basename as the source
+the target `/Applications` directory using the same basename as the source
 file.  For example:
 
 ```ruby
@@ -450,7 +450,7 @@ app 'Alfred 2.app'
 causes the creation of this symlink
 
 ```bash
-~/Applications/Alfred 2.app
+/Applications/Alfred 2.app
 ```
 
 which points to a source file such as
@@ -461,7 +461,7 @@ which points to a source file such as
 
 ### Renaming the Target
 
-You can rename the target link which appears in your `~/Applications`
+You can rename the target link which appears in your `/Applications`
 directory by adding a `:target` key to `app`. Example (from [scala-ide.rb](../Casks/scala-ide.rb):
 
 ```ruby
@@ -499,7 +499,7 @@ like [changing case](../Casks/diffmerge.rb) or [removing an extension](../Casks/
 
 Some distributions provide a suite of multiple applications, or an
 application with required data, to be installed together in a
-subdirectory of `~/Applications`.
+subdirectory of `/Applications`.
 
 For these Casks, use the `suite` stanza to define the directory
 containing the application suite.  Example (from [sketchup.rb](../Casks/sketchup.rb)):
