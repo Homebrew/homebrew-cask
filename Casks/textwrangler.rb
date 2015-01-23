@@ -10,4 +10,7 @@ cask :v1 => 'textwrangler' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TextWrangler.app'
+  binary 'TextWrangler.app/Contents/Helpers/edit'
+  binary 'TextWrangler.app/Contents/Helpers/twdiff'
+  binary 'TextWrangler.app/Contents/Helpers/twfind'
 end
