@@ -3,6 +3,7 @@ cask :v1 => 'skitch' do
   sha256 '9734154ad202152f24de7730a43cf463a93606623a6e992508724542c9de8178'
 
   url "http://cdn1.evernote.com/skitch/mac/release/Skitch-#{version}.zip"
+  name 'Skitch'
   homepage 'http://evernote.com/skitch/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

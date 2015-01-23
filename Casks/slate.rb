@@ -5,6 +5,7 @@ cask :v1 => 'slate' do
   # ninjamonkeysoftware.com is the official download host per the vendor homepage
   url 'http://slate.ninjamonkeysoftware.com/Slate.dmg'
   appcast 'https://www.ninjamonkeysoftware.com/slate/appcast.xml'
+  name 'Slate'
   homepage 'https://github.com/jigish/slate'
   license :oss
 

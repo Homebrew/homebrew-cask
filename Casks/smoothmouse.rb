@@ -3,6 +3,7 @@ cask :v1 => 'smoothmouse' do
   sha256 :no_check
 
   url 'http://smoothmouse.com/download/latest'
+  name 'SmoothMouse'
   homepage 'http://smoothmouse.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

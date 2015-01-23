@@ -3,6 +3,7 @@ cask :v1 => 'playlist-assist' do
   sha256 '70ef4c3cf78d39f8b1750ca44b6db42c3e72e24968ebd203fc146b2c189d5346'
 
   url "http://dougscripts.com/itunes/scrx/playlistassistv#{version.to_i}.zip"
+  name 'Playlist Assist'
   homepage 'http://dougscripts.com/apps/playlistassistapp.php'
   license :commercial
 

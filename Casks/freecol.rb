@@ -4,6 +4,7 @@ cask :v1 => 'freecol' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/freecol/freecol-#{version}-mac.tar.bz2"
+  name 'FreeCol'
   homepage 'http://freecol.org'
   license :oss
 

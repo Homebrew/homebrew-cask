@@ -5,6 +5,7 @@ cask :v1 => 'lyx' do
   url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt4-x86_64-cocoa.dmg"
   gpg "#{url}.sig",
       :key_id => 'de7a44fac7fb382d'
+  name 'LyX'
   homepage 'http://www.lyx.org'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

@@ -4,6 +4,7 @@ cask :v1 => 'duet' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://s3-us-west-1.amazonaws.com/duetmac/DuetDisplay.zip'
+  name 'Duet'
   homepage 'http://www.duetdisplay.com/'
   license :unknown
 

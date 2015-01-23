@@ -9,6 +9,7 @@ cask :v1 => 'vuescan' do
     url "http://www.hamrick.com/files/vuex64#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}.dmg"
   end
 
+  name 'VueScan'
   homepage 'http://www.hamrick.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

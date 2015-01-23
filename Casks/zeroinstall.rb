@@ -4,6 +4,7 @@ cask :v1 => 'zeroinstall' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/zero-install/0install/#{version}/ZeroInstall.pkg"
+  name 'Zero Install'
   homepage 'http://0install.net'
   license :oss
 

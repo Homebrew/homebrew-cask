@@ -3,6 +3,7 @@ cask :v1 => 'fog-burner' do
   sha256 :no_check
 
   url 'http://fogburner.tofumatt.com/FogBurner.zip'
+  name 'Fog Burner'
   homepage 'http://fogburner.tofumatt.com/'
   license :oss
 
