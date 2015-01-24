@@ -4,7 +4,7 @@ cask :v1 => 'camtwist' do
 
   url "http://camtwiststudio.com/release/CamTwist_#{version}.dmg"
   homepage 'http://camtwiststudio.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   pkg 'CamTwist.pkg'
 

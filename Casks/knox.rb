@@ -6,7 +6,7 @@ cask :v1 => 'knox' do
   url "https://d13itkw33a7sus.cloudfront.net/dist/K/Knox-#{version}.zip"
   name 'Knox'
   homepage 'https://agilebits.com/knox'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Knox.app'
 end

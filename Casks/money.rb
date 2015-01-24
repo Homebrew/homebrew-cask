@@ -7,7 +7,7 @@ cask :v1 => 'money' do
           :sha256 => '92fb9af194903f4f4336c54957feed8537060181eb8c5b4f5b97ccb3c32187e0'
   name 'Money'
   homepage 'http://www.jumsoft.com/money/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Money.app'
 end

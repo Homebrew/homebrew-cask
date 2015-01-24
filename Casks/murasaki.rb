@@ -4,7 +4,7 @@ cask :v1 => 'murasaki' do
 
   url "http://genjiapp.com/mac/murasaki/downloads/murasaki_v#{version}.zip"
   homepage 'http://genjiapp.com/mac/murasaki/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Murasaki.app'
 end
