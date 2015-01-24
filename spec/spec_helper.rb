@@ -38,5 +38,4 @@ Hbc.caskroom = Hbc.homebrew_prefix.join('TestCaskroom')
 
 RSpec.configure do |config|
   config.include ShutupHelper
-  config.include TempEnvVarHelper
 end
