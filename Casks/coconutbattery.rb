@@ -18,7 +18,7 @@ cask :v1 => 'coconutbattery' do
 
   name 'coconutBattery'
   homepage 'http://www.coconut-flavour.com/coconutbattery/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   app 'coconutBattery.app'
 end
