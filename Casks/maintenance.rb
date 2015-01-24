@@ -22,7 +22,7 @@ cask :v1 => 'maintenance' do
   end
 
   homepage 'http://www.titanium.free.fr/downloadmaintenance.php'
-  license :closed
+  license :gratis
 
   app 'Maintenance.app'
 
