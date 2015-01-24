@@ -7,7 +7,7 @@ cask :v1 => 'meerkat' do
           :sha256 => 'ef91167a375342e078f147e20477056552bef06ea9e306a93ffb8a17ad4e654c'
   name 'Meerkat'
   homepage 'http://codesorcery.net/meerkat'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Meerkat.app'
 end
