@@ -21,7 +21,7 @@ cask :v1 => 'onyx' do
     # working, or is dangerous to run, on the next OS X release.
   end
   homepage 'http://www.titanium.free.fr/downloadonyx.php'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'OnyX.app'
 
