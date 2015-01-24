@@ -6,7 +6,7 @@ cask :v1 => 'serf' do
   url "https://dl.bintray.com/mitchellh/serf/#{version}_darwin_amd64.zip"
   name 'Serf'
   homepage 'http://www.serfdom.io/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :mpl
 
   binary 'serf'
 end
