@@ -4,7 +4,7 @@ cask :v1 => 'unicodechecker' do
 
   url 'http://earthlingsoft.net/UnicodeChecker/UnicodeChecker.dmg'
   homepage 'http://earthlingsoft.net/UnicodeChecker/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'UnicodeChecker.app'
 end
