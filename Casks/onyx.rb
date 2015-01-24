@@ -20,7 +20,7 @@ cask :v1 => 'onyx' do
     # Unusual case: there is no fall-through.  The software will stop
     # working, or is dangerous to run, on the next OS X release.
   end
-  homepage 'http://www.titanium.free.fr/downloadonyx.php'
+  homepage 'http://www.titanium.free.fr/onyx.html'
   license :gratis
 
   app 'OnyX.app'
