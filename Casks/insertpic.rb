@@ -5,7 +5,7 @@ cask :v1 => 'insertpic' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/insertPic/InsertPic_#{version}.zip"
   homepage 'http://www.getinsertpic.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'InsertPic/InsertPic.app'
 end
