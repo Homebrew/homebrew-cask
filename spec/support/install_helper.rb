@@ -1,7 +1,7 @@
 module InstallHelper
-  def install_without_artifacts(cask)
-    Hbc::Installer.new(cask).tap do |i|
-      shutup do
+  class << self
+    def install_without_artifacts(cask)
+      Hbc::Installer.new(cask).tap do |i|
         i.download
         i.extract_primary_container
       end

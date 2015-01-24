@@ -1,21 +1,27 @@
-require 'test_helper'
+require 'spec_helper'
 
-describe Hbc::Artifact::App do
+describe Hbc::Artifact::Binary do
   let(:cask) {
     Hbc.load('with-binary').tap do |cask|
-      TestHelper.install_without_artifacts(cask)
+      shutup do
+        InstallHelper::install_without_artifacts(cask)
+      end
     end
   }
   let(:expected_path) {
     Hbc.binarydir.join('binary')
+  }
+  after(:each) {
+    if expected_path.exist?
+      FileUtils.rm expected_path
+    end
   }
 
   it "links the binary to the proper directory" do
     shutup do
       Hbc::Artifact::Binary.new(cask).install_phase
     end
-
-    TestHelper.valid_alias?(expected_path).must_equal true
+    expect(FileHelper.valid_alias?(expected_path)).to be true
   end
 
   it "avoids clobbering an existing binary by linking over it" do
@@ -25,7 +31,7 @@ describe Hbc::Artifact::App do
       Hbc::Artifact::Binary.new(cask).install_phase
     end
 
-    expected_path.wont_be :symlink?
+    expect(expected_path).to_not be :symlink?
   end
 
   it "clobbers an existing symlink" do
@@ -35,7 +41,7 @@ describe Hbc::Artifact::App do
       Hbc::Artifact::Binary.new(cask).install_phase
     end
 
-    File.readlink(expected_path).wont_equal '/tmp'
+    expect(File.readlink(expected_path)).not_to eq('/tmp')
   end
 
   it "respects --no-binaries flag" do
@@ -45,7 +51,7 @@ describe Hbc::Artifact::App do
       Hbc::Artifact::Binary.new(cask).install_phase
     end
 
-    expected_path.exist?.must_equal false
+    expect(expected_path.exist?).to be false
 
     Hbc.no_binaries = false
   end
