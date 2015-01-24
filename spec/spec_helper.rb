@@ -8,6 +8,7 @@ project_root = Pathname(File.expand_path("../..", __FILE__))
 
 Dir["#{project_root}/spec/support/**/*.rb"].each { |f| require f }
 
+include FileHelper
 include HomebrewTestingEnvironment
 # from Homebrew. Provides expects method.
 require 'mocha/api'
@@ -34,6 +35,8 @@ Hbc.default_tap = 'caskroom/homebrew-testcasks'
 Hbc.caskroom = Hbc.homebrew_prefix.join('TestCaskroom')
 
 RSpec.configure do |config|
+  config.include FileHelper
+  config.include InstallHelper
   config.include ShutupHelper
   config.include TempEnvVarHelper
 end
