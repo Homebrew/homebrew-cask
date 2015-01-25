@@ -1,6 +1,6 @@
 cask :v1 => 'hashcat' do
-  version '0.48'
-  sha256 '39fee1757b33b3e7232ce3797f0be024fa784dbbd0939b475b5b1ea7462cec5e'
+  version '0.49'
+  sha256 '02ca88393ecf33aaa0905592ca71e90671338c9540f212b3ad0f4666a93b406d'
 
   url "https://hashcat.net/files/hashcat-#{version}.7z"
   name 'hashcat'
