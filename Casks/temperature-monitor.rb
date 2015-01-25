@@ -7,6 +7,7 @@ cask :v1 => 'temperature-monitor' do
   homepage 'http://www.bresink.com/osx/LegacyProducts.html'
   license :commercial
 
-  app 'Temperature Monitor.app'
-  app 'Temperature Monitor Lite.app'
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  app 'TemperatureMonitor.app', :target => 'TemperatureMonitor.app'
+  app 'TemperaturMonitorLite.app', :target => 'Temperature Monitor Lite.app'
 end
