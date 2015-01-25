@@ -4,7 +4,7 @@ cask :v1 => 'mediaelch' do
 
   url "http://www.kvibes.de/releases/mediaelch/#{version}/MediaElch-#{version}.dmg"
   name 'MediaElch'
-  homepage 'http://www.kvibes.de/mediaelch/'
+  homepage 'http://www.kvibes.de/en/mediaelch/'
   license :gpl
 
   app 'MediaElch.app'
