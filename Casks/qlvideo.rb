@@ -1,6 +1,6 @@
 cask :v1 => 'qlvideo' do
-  version '1.73'
-  sha256 '616e298c74a7d64b2c5af273c376ec98dafa317ebdd7b52c928d39dde2405756'
+  version '1.81'
+  sha256 'e901bf38a02c630dfddb34eb31a897155d7e16e503dd44ec9e6c8fed09ee62bb'
 
   url "https://github.com/Marginal/QLVideo/releases/download/rel-#{version.gsub('.', '')}/QLVideo_#{version.gsub('.', '')}.pkg"
   name 'QuickLook Video'
