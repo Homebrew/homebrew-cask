@@ -1,7 +1,7 @@
 cask :v1 => '4k-youtube-to-mp3' do
   # note: "3" is not a version number, but an intrinsic part of the product name
   version '2.9'
-  sha256 '07a558e3dddc957386d12f1a13880e6d02e86ccdabc64e3ac66c78eccde8fe09'
+  sha256 '8f62dead99131f7cb6936f07d95020f81fca6472d2a4d6bdd3ea37aefb5749ce'
 
   url "http://downloads.4kdownload.com/app/4kyoutubetomp3_#{version}.dmg"
   name '4K Youtube to MP3'
