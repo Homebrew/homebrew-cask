@@ -34,6 +34,7 @@ require 'hbc/underscore_supporting_uri'
 require 'hbc/url'
 require 'hbc/url_checker'
 require 'hbc/utils'
+require 'hbc/verify'
 require 'hbc/version'
 
 require 'vendor/plist'
