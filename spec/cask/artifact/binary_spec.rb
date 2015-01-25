@@ -55,4 +55,14 @@ describe Hbc::Artifact::Binary do
 
     Hbc.no_binaries = false
   end
+
+  it "creates parent directory if it doesn't exist" do
+    FileUtils.rmdir Hbc.binarydir
+
+    shutup do
+      Hbc::Artifact::Binary.new(cask).install_phase
+    end
+
+    expect(expected_path.exist?).to be true
+  end
 end
