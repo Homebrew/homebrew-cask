@@ -12,6 +12,6 @@ cask :v1 => 'feed-the-beast' do
 
   caveats <<-EOS.undent
     #{token} requires Java. You can install the latest version with
-    brew cask install java
+      brew cask install java
   EOS
 end
