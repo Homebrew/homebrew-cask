@@ -16,6 +16,7 @@ cask :v1 => 'springy' do
                  ]
 
   caveats do
+    discontinued
     free_license 'http://www.springyarchiver.com/license.php'
   end
 end
