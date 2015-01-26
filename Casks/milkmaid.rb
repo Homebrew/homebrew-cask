@@ -10,4 +10,8 @@ cask :v1 => 'milkmaid' do
   app 'MilkMaid.app'
 
   zap :delete => '~/Library/Preferences/com.jga.MilkMaid.plist'
+
+  caveats do
+    discontinued
+  end
 end
