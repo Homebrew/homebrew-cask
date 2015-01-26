@@ -12,7 +12,7 @@ cask :v1 => 'eclipse-modeling' do
   name 'Eclipse'
   name 'Eclipse Modeling Tools'
   homepage 'http://eclipse.org/'
-  license :oss
+  license :eclipse
 
-  app 'eclipse/eclipse.app'
+  app 'eclipse/Eclipse.app'
 end
