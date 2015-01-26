@@ -9,4 +9,8 @@ cask :v1 => 'google-notifier' do
   tags :vendor => 'Google'
 
   app 'Google Notifier.app'
+
+  caveats do
+    discontinued
+  end
 end
