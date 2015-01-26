@@ -15,9 +15,7 @@ cask :v1 => 'springy' do
                   '~/Library/Caches/com.milke.Springy',
                  ]
 
-  caveats <<-EOS.undent
-    An unlimited license is available for #{token} at
-
-      http://www.springyarchiver.com/license.php
-  EOS
+  caveats do
+    free_license 'http://www.springyarchiver.com/license.php'
+  end
 end
