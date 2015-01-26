@@ -12,9 +12,7 @@ cask :v1 => 'perian' do
 
   depends_on :cask => 'caskroom/versions/quicktime-player7'
 
-  caveats <<-EOS.undent
-    Perian development officially stopped as of 2012, and 1.2.3 was the final released version.
-
-    See the Perian homepage for more information (http://www.perian.org/).
-  EOS
+  caveats do
+    discontinued
+  end
 end
