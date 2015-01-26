@@ -9,6 +9,8 @@ cask :v1 => 'eclipse-cpp' do
     url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR1a/eclipse-cpp-luna-SR1a-macosx-cocoa-x86_64.tar.gz'
   end
 
+  name 'Eclipse'
+  name 'Eclipse IDE for C/C++ Developers'
   homepage 'http://eclipse.org/'
   license :eclipse
 

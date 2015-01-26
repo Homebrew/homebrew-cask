@@ -9,6 +9,8 @@ cask :v1 => 'eclipse-java' do
     url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR1a/eclipse-java-luna-SR1a-macosx-cocoa-x86_64.tar.gz'
   end
 
+  name 'Eclipse'
+  name 'Eclipse IDE for Java Developers'
   homepage 'http://eclipse.org/'
   license :eclipse
 
