@@ -6,18 +6,12 @@ cask :v1 => 'quotefixformac' do
   homepage 'https://github.com/robertklep/quotefixformac'
   license :oss
 
-  stage_only true
-
-  caveats do
-    <<-EOS.undent
-      To enable mail plugins and link QuoteFix:
-
-        defaults write com.apple.mail EnableBundles -bool true
-        defaults write com.apple.mail BundleCompatibilityVersion -string 3
-
-        mkdir -p ~/Library/Mail/Bundles
-        cp -R #{staged_path}/QuoteFix.mailbundle ~/Library/Mail/Bundles/
-        killall Mail; open -a Mail
-    EOS
+  artifact 'QuoteFix.mailbundle', :target => Pathname.new(File.expand_path('~')).join('/Library/Mail/Bundles/QuoteFix.mailbundle')
+  
+  postflight do
+    system 'defaults', 'write', 'com.apple.mail', 'EnableBundles', '-bool', 'true'
+    system 'defaults', 'write', 'com.apple.mail', 'BundleCompatibilityVersion', '-string', '3'
   end
+
+  caveats 'You may need to restart Mail.app before you can use QuoteFix'
 end
