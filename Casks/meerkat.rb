@@ -10,4 +10,8 @@ cask :v1 => 'meerkat' do
   license :gratis
 
   app 'Meerkat.app'
+
+  caveats do
+    discontinued
+  end
 end
