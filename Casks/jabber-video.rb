@@ -22,5 +22,5 @@ cask :v1 => 'jabber-video' do
                   '~/Library/Application Support/Jabber Video',
                   '~/Library/Logs/Jabber Video',
                   ],
-      :script => "Jabber Video.app/Contents/SharedSupport/remove_user_data.sh"
+      :script => 'Jabber Video.app/Contents/SharedSupport/remove_user_data.sh'
 end
