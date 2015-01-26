@@ -24,10 +24,7 @@ cask :v1 => 'yasu' do
                   '~/Library/Preferences/org.jimmitchell.yasu.plist',
                  ]
 
-  caveats <<-EOS.undent
-    Yasu is no longer maintained and updated. There is no support for any Yasu downloads. Yasu may not work with OS X beyond Yosemite.
-    Use at your own risk.
-
-    Official announcement can be found on the Yasu homepage.
-  EOS
+  caveats do
+    discontinued
+  end
 end
