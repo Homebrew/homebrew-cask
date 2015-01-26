@@ -144,6 +144,7 @@ For use in *eg* interpolation:
  * [`reboot`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`zsh_path_helper(path)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`discontinued`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
+ * [`free_license(web_page)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
 
 
 ## Postflight Mini-DSL (1.0)
