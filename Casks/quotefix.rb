@@ -1,4 +1,4 @@
-cask :v1 => 'quotefixformac' do
+cask :v1 => 'quotefix' do
   version '2.5.2'
   sha256 '8d914ae553b84fe5f246ab1eb030d25792ca8d626b3bbac57acee857135e85a9'
 
