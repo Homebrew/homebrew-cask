@@ -11,4 +11,8 @@ cask :v1 => 'scrup' do
   license :mit
 
   app 'Scrup.app'
+
+  caveats do
+    discontinued
+  end
 end
