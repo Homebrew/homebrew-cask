@@ -7,5 +7,4 @@ cask :v1 => 'ghc' do
   license :oss
 
   app 'ghc-7.8.3.app'
-  caveats 'To add GHC to your PATH, launch the app and follow the included instructions.'
 end
