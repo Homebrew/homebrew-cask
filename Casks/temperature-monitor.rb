@@ -10,4 +10,8 @@ cask :v1 => 'temperature-monitor' do
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'TemperatureMonitor.app', :target => 'TemperatureMonitor.app'
   app 'TemperaturMonitorLite.app', :target => 'Temperature Monitor Lite.app'
+
+  caveats do
+    discontinued
+  end
 end
