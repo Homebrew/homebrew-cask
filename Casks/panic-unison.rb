@@ -10,4 +10,8 @@ cask :v1 => 'panic-unison' do
   tags :vendor => 'Panic'
 
   app 'Unison.app'
+
+  caveats do
+    discontinued
+  end
 end
