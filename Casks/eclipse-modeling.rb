@@ -9,6 +9,8 @@ cask :v1 => 'eclipse-modeling' do
     url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR1a/eclipse-modeling-luna-SR1a-macosx-cocoa-x86_64.tar.gz'
   end
 
+  name 'Eclipse'
+  name 'Eclipse Modeling Tools'
   homepage 'http://eclipse.org/'
   license :oss
 
