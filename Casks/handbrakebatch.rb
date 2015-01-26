@@ -9,4 +9,8 @@ cask :v1 => 'handbrakebatch' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'HandBrakeBatch.app'
+
+  caveats do
+    discontinued
+  end
 end
