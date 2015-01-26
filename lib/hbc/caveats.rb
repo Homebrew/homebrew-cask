@@ -92,6 +92,14 @@ class Hbc::CaveatsDSL
     EOS
   end
 
+  def discontinued
+    puts <<-EOS.undent
+    #{@cask} has been officially discontinued upstream.
+    It may stop working correctly (or at all) in recent versions of OS X.
+
+    EOS
+  end
+
   def method_missing(method, *args)
     Hbc::Utils.method_missing_message(method, @cask.to_s, 'caveats')
     return nil

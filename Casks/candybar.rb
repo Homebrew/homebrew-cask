@@ -8,9 +8,11 @@ cask :v1 => 'candybar' do
   license :gratis
 
   app 'CandyBar.app'
-  caveats <<-EOS.undent
-    Candybar is free of charge.  Visit the following link for a license
+  caveats do
+    discontinued
 
-      http://panic.com/bin/setup.php/cb3/PPQA-YAMA-E3KP-VHXG-B6AL-L
-  EOS
+    'Candybar is free of charge.  Visit the following link for a license
+
+      http://panic.com/bin/setup.php/cb3/PPQA-YAMA-E3KP-VHXG-B6AL-L'
+  end
 end

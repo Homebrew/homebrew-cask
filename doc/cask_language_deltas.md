@@ -143,6 +143,7 @@ For use in *eg* interpolation:
  * [`path_environment_variable(path)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`reboot`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`zsh_path_helper(path)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
+ * [`discontinued`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
 
 
 ## Postflight Mini-DSL (1.0)
