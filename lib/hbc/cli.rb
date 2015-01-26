@@ -15,6 +15,7 @@ require 'hbc/cli/home'
 require 'hbc/cli/info'
 require 'hbc/cli/install'
 require 'hbc/cli/list'
+require 'hbc/cli/repository'
 require 'hbc/cli/search'
 require 'hbc/cli/uninstall'
 require 'hbc/cli/update'
@@ -38,10 +39,10 @@ class Hbc::CLI
              'remove'         => 'uninstall',
              'abv'            => 'info',
              'dr'             => 'doctor',
+             '--repo'         => '--repository'
              # aliases from Homebrew that we don't (yet) support
              # 'ln'           => 'link',
              # 'configure'    => 'diy',
-             # '--repo'       => '--repository',
              # 'environment'  => '--env',
              # '-c1'          => '--config',
             }
