@@ -9,7 +9,9 @@ cask :v1 => 'microsoft-lync' do
 
   pkg 'Lync Installer.pkg'
 
-  uninstall :pkgutil => [ 'com.microsoft.lync.all..*',
-                          'com.microsoft.merp.all.errorreporting.pkg.2.2.9',
-			  'com.microsoft.mau.all.autoupdate.pkg.2.3.6' ]
+  uninstall :pkgutil => [
+                         'com.microsoft.lync.all..*',
+                         'com.microsoft.merp.all.errorreporting.pkg.2.2.9',
+                         'com.microsoft.mau.all.autoupdate.pkg.2.3.6'
+                        ]
 end
