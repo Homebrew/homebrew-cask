@@ -6,13 +6,13 @@ cask :v1 => 'dbvisualizer' do
   homepage 'http://www.dbvis.com/'
   license :commercial
 
-  caveats <<-EOS.undent
-    #{token} requires Java. You can install the latest version with
-      brew cask install java
-  EOS
-
   app 'DbVisualizer.app'
 
   uninstall :signal => [[ 'TERM', 'com.dbvis.DbVisualizer' ]]
   zap :delete => '~/.dbvis'
+  
+  caveats <<-EOS.undent
+    #{token} requires Java. You can install the latest version with
+      brew cask install java
+  EOS
 end
