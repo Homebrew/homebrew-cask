@@ -13,5 +13,6 @@ cask :v1 => 'meerkat' do
 
   caveats do
     discontinued
+    free_license 'http://codesorcery.net/meerkat'
   end
 end
