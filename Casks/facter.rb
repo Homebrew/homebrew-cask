@@ -1,6 +1,6 @@
 cask :v1 => 'facter' do
-  version '2.3.0'
-  sha256 '35c88c2af26e2c59364604788cd5ff4a1b3d8171e2690e65e38156278e32d6d1'
+  version '2.4.0'
+  sha256 'd41ac4e51890ac5106e9d57829319d517a8e61fcd7101aaaf820f613fcd7c9dd'
 
   url "https://downloads.puppetlabs.com/mac/facter-#{version}.dmg"
   homepage 'https://puppetlabs.com/facter'
