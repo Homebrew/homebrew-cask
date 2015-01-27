@@ -1,4 +1,4 @@
-cask :v1 => 'yorufukurou' do
+cask :v1 => 'night-owl' do
   version :latest
   sha256 :no_check
 
@@ -8,5 +8,5 @@ cask :v1 => 'yorufukurou' do
   homepage 'https://sites.google.com/site/yorufukurou/home-en'
   license :gratis
 
-  app 'YoruFukurou.app'
+  app 'Night Owl.app'
 end
