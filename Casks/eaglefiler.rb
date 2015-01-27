@@ -1,10 +1,10 @@
 cask :v1 => 'eaglefiler' do
-  version '1.6.3'
-  sha256 '7ef8a5e1982734fdbbf751de2cf6167c74d3e76fbef841c64b75f430b1d8d7ce'
+  version '1.6.4'
+  sha256 'e1ff3a18c9f9f140f6943dc567877261f5f87c9e46f67a62ab539af0ededf389'
 
   url "http://c-command.com/downloads/EagleFiler-#{version}.dmg"
   homepage 'http://c-command.com/eaglefiler/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'EagleFiler.app'
 end
