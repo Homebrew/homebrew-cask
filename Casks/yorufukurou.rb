@@ -8,5 +8,5 @@ cask :v1 => 'yorufukurou' do
   homepage 'https://sites.google.com/site/yorufukurou/home-en'
   license :gratis
 
-  app 'YoruFukurou.app'
+  app 'Night Owl.app'
 end
