@@ -1,6 +1,6 @@
 cask :v1 => 'carthage' do
-  version '0.3'
-  sha256 '91a836694d9bd6ff374c76bc3b3c5ddaecb5fdcf25f56e4fad5ae847f5a60916'
+  version '0.5.2'
+  sha256 '5a7a5fe8bbf3a0964989dbeb0a1bab989d83dd1d9074204fb2f6030b61a13ee7'
 
   url "https://github.com/Carthage/Carthage/releases/download/#{version}/Carthage.pkg"
   homepage 'https://github.com/Carthage/Carthage'
