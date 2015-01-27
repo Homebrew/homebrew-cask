@@ -14,6 +14,4 @@ cask :v1 => 'adobe-arh' do
   postflight do
     system '/bin/chmod', '--', '755', "#{staged_path}/arh"
   end
-
-  caveats "Please refer to the documentation at #{homepage}"
 end
