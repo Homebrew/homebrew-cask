@@ -9,9 +9,16 @@ cask :v1 => 'microsoft-lync' do
 
   pkg 'Lync Installer.pkg'
 
-  uninstall :pkgutil => [
-                         'com.microsoft.lync.all..*',
-                         'com.microsoft.merp.all.errorreporting.pkg.2.2.9',
-                         'com.microsoft.mau.all.autoupdate.pkg.2.3.6'
-                        ]
+  uninstall :pkgutil => 'com.microsoft.lync.all.*'
+  zap       :pkgutil => [
+                         'com.microsoft.mau.all.autoupdate.*',
+                         'com.microsoft.merp.all.errorreporting.*'
+                        ],
+            :delete  => [
+                         '~/Library/Preferences/com.microsoft.Lync.plist',
+                         '~/Library/Logs/Microsoft-Lync-0.log',
+                         '~/Documents/Microsoft User Data/Microsoft Lync Data'
+                        ],
+            :rmdir   => '~/Documents/Microsoft User Data'
+
 end
