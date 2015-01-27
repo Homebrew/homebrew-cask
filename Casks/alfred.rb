@@ -1,6 +1,6 @@
 cask :v1 => 'alfred' do
-  version '2.5.1_308'
-  sha256 '06e55eed65c3e09bffd385a11a695ebd7df79a5303690e9cb197a0b72782e2dc'
+  version '2.6_374'
+  sha256 'cc9f8791454056bcd0cd9ac94ae3604aa2bda4014a453c3e0cf5818a18a85eee'
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
