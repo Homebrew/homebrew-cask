@@ -5,7 +5,7 @@ cask :v1 => 'go2shell' do
   url 'http://zipzapmac.com/DMGs/Go2Shell.dmg'
   name 'Go2Shell'
   homepage 'http://zipzapmac.com/Go2Shell'
-  license :closed
+  license :gratis
 
   app 'Go2Shell.app'
 end
