@@ -1,10 +1,10 @@
 cask :v1 => 'intellij-idea-ce' do
-  version '14.0.2'
-  sha256 'e03e2a60b4bc067575cd75d27cc3b59209dcbd68c0567a8f24ab19d83ac1c986'
+  version '14.0.3'
+  sha256 '31ae30c4cd4813a71c8d180204646bd8fe4a98f9c1e2f19772d1af1b3e977303'
 
   url "http://download.jetbrains.com/idea/ideaIC-#{version}.dmg"
   homepage 'https://www.jetbrains.com/idea/'
-  license :oss
+  license :apache
 
   app 'IntelliJ IDEA 14 CE.app'
 
