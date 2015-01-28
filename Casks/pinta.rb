@@ -9,4 +9,5 @@ cask :v1 => 'pinta' do
   license :oss
 
   app 'Pinta.app'
+  depends_on :cask => 'mono-mdk'
 end
