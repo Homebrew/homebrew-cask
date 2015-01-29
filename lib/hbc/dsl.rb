@@ -4,6 +4,7 @@ module Hbc::DSL; end
 
 require 'hbc/dsl/appcast'
 require 'hbc/dsl/base'
+require 'hbc/dsl/dependency'
 require 'hbc/dsl/conflicts_with'
 require 'hbc/dsl/container'
 require 'hbc/dsl/depends_on'

@@ -36,7 +36,7 @@ describe "Satisfy Conflicts" do
 
     it "raises an exception when conflicts_with :cask is not satisfied" do
       csk = Hbc.load('with-conflicts-with-cask')
-      conflict = Hbc.load(csk.conflicts_with.cask.args.first)
+      conflict = Hbc.load(csk.conflicts_with.cask.deps.first)
       shutup do
         Hbc::Installer.new(conflict).install
       end
@@ -120,7 +120,7 @@ describe "Satisfy Conflicts" do
         shutup do
           Hbc::Installer.new(x11_cask).install
         end
-      }.must_raise(Hbc::CaskError)
+      }.must_raise(Hbc::CaskX11DependencyError)
     end
 
     it "never raises when conflicts_with :x11 => false" do
