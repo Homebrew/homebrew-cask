@@ -5,7 +5,9 @@ cask :v1 => 'mountain' do
   url 'http://appgineers.de/mountain/files/Mountain.zip'
   appcast 'http://appgineers.de/mountain/files/mountaincast.xml'
   homepage 'http://appgineers.de/mountain/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
+
+  depends_on :macos => '>= :snow_leopard'
 
   app 'Mountain.app'
 end
