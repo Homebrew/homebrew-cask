@@ -200,6 +200,7 @@ module Hbc::DSL
       @depends_on
     end
 
+    # conflicts_with uses a load method so that multiple stanzas can be merged
     def conflicts_with(*args)
       return @conflicts_with if args.empty?
       @conflicts_with ||= Hbc::DSL::ConflictsWith.new
