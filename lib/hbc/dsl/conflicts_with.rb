@@ -37,7 +37,7 @@ class Hbc::DSL::ConflictsWith
                    :ppc64      => :ppc_64,
                   }
 
-  attr_accessor *VALID_KEYS
+  attr_reader *VALID_KEYS
   attr_accessor :java
   attr_accessor :pairs
 
@@ -73,26 +73,14 @@ class Hbc::DSL::ConflictsWith
     end
   end
 
-  def formula
-    @formula
-  end
-
   def formula=(*arg)
     @formula ||= []
     @formula.concat(Array(*arg))
   end
 
-  def cask
-    @cask
-  end
-
   def cask=(*arg)
     @cask ||= []
     @cask.concat(Array(*arg))
-  end
-
-  def macos
-    @macos
   end
 
   def macos=(*arg)
@@ -112,10 +100,6 @@ class Hbc::DSL::ConflictsWith
     @macos.concat(macos)
   end
 
-  def arch
-    @arch
-  end
-
   def arch=(*arg)
     @arch ||= []
     arches = Array(*arg).map do |elt|
@@ -125,10 +109,6 @@ class Hbc::DSL::ConflictsWith
     invalid_arches = arches - VALID_ARCHES
     raise "invalid 'conflicts_with :arch' values: #{invalid_arches.inspect}" unless invalid_arches.empty?
     @arch.concat(arches)
-  end
-
-  def x11
-    @x11
   end
 
   def x11=(arg)
