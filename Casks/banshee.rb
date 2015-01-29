@@ -4,6 +4,7 @@ cask :v1 => 'banshee' do
 
   # gnome.org is the official download host per the vendor homepage
   url "http://ftp.gnome.org/pub/GNOME/binaries/mac/banshee/banshee-#{version}.macosx.intel.dmg"
+  name 'Banshee'
   homepage 'http://banshee.fm'
   license :mit
 
