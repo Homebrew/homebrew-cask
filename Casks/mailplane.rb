@@ -3,6 +3,7 @@ cask :v1 => 'mailplane' do
   sha256 :no_check
 
   url 'http://update.mailplaneapp.com/mailplane_3.php'
+  name 'Mailplane'
   homepage 'http://mailplaneapp.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
