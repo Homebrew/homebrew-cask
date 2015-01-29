@@ -9,6 +9,7 @@ cask :v1 => 'cargo' do
   end
 
   url "https://static.rust-lang.org/cargo-dist/#{Utils.distname}.tar.gz"
+  name 'Cargo'
   homepage 'https://crates.io/'
   license :oss
 
