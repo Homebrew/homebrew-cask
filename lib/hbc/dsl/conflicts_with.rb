@@ -1,5 +1,7 @@
 class Hbc::DSL::ConflictsWith
 
+  require 'hbc/conflicts'
+
   VALID_KEYS = Set.new [
                         :formula,
                         :cask,
@@ -74,46 +76,46 @@ class Hbc::DSL::ConflictsWith
   end
 
   def formula=(*arg)
-    @formula ||= []
-    @formula.concat(Array(*arg))
+    @formula ||= Hbc::Conflicts::FormulaConflicts.new
+    @formula.load(Array(*arg))
   end
 
   def cask=(*arg)
-    @cask ||= []
-    @cask.concat(Array(*arg))
+    @cask ||= Hbc::Conflicts::CaskConflicts.new
+    @cask.load(Array(*arg))
   end
 
   def macos=(*arg)
-    @macos ||= []
+    @macos ||= Hbc::Conflicts::MacOSConflicts.new
     macos = if arg.count == 1 and
                arg.first =~ %r{^\s*(<|>|[=<>]=)\s*(\S+)\s*$}
-      raise "'conflicts_with :macos' comparison expressions cannot be combined" unless @macos.empty?
+      raise "'conflicts_with :macos' comparison expressions cannot be combined" unless @macos.args.empty?
       operator = $1.to_sym
       release = self.class.coerce_os_release($2)
       [[ operator, release ]]
     else
-      raise "'conflicts_with :macos' comparison expressions cannot be combined" if @macos.first.is_a?(Symbol)
+      raise "'conflicts_with :macos' comparison expressions cannot be combined" if @macos.args.first.is_a?(Symbol)
       Array(*arg).map do |elt|
         self.class.coerce_os_release(elt)
       end.sort
     end
-    @macos.concat(macos)
+    @macos.load(macos)
   end
 
   def arch=(*arg)
-    @arch ||= []
+    @arch ||= Hbc::Conflicts::ArchConflicts.new
     arches = Array(*arg).map do |elt|
       elt = elt.to_s.downcase.sub(%r{^:},'').gsub('-','_').to_sym
       ARCH_SYNONYMS.key?(elt) ? ARCH_SYNONYMS[elt] : elt
     end
     invalid_arches = arches - VALID_ARCHES
     raise "invalid 'conflicts_with :arch' values: #{invalid_arches.inspect}" unless invalid_arches.empty?
-    @arch.concat(arches)
+    @arch.load(arches)
   end
 
   def x11=(arg)
     raise "invalid conflicts_with :x11 value: #{arg.inspect}" unless [true, false].include?(arg)
-    @x11 = arg
+    @x11 = Hbc::Conflicts::X11Conflicts.new
   end
 
   def to_yaml

@@ -36,7 +36,7 @@ describe "Satisfy Conflicts" do
 
     it "raises an exception when conflicts_with :cask is not satisfied" do
       csk = Hbc.load('with-conflicts-with-cask')
-      conflict = Hbc.load(csk.conflicts_with.cask.first)
+      conflict = Hbc.load(csk.conflicts_with.cask.args.first)
       shutup do
         Hbc::Installer.new(conflict).install
       end
