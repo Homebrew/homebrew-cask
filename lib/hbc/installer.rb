@@ -257,8 +257,7 @@ class Hbc::Installer
   end
 
   def formula_conflicts
-    return unless @cask.conflicts_with.formula and not @cask.conflicts_with.formula.empty?
-    @cask.conflicts_with.formula.each do |dep_name|
+    Array(@cask.conflicts_with.formula).each do |dep_name|
       installed = @command.run(Hbc.homebrew_executable,
                                :args => ['list', '--versions', dep_name],
                                :print_stderr => false).stdout.include?(dep_name)
@@ -269,8 +268,7 @@ class Hbc::Installer
   end
 
   def cask_conflicts
-    return unless @cask.conflicts_with.cask and not @cask.conflicts_with.cask.empty?
-    @cask.conflicts_with.cask.each do |dep_name|
+    Array(@cask.conflicts_with.cask).each do |dep_name|
       dep = Hbc.load(dep_name)
       if dep.installed?
         raise Hbc::CaskError.new "Cask #{@cask} conflicts with cask #{dep_name}, and you have it installed."
