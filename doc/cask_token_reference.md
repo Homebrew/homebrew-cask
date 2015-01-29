@@ -54,6 +54,8 @@ distribution, use the [`name`](CASK_LANGUAGE_REFERENCE.md#name-stanza-details) w
   * If the version number is arranged to occur in the middle of the App name,
     it should also be removed.  Example: [IntelliJ IDEA 13 CE.app](../Casks/intellij-idea-ce.rb).
 
+  * Remove from the end: "Launcher", "Quick Launcher".
+
   * Remove from the end: strings such as "Mac", "for Mac", "for OS X".
     These terms are generally added to ported software such as "MAME OS X.app".
     Exception: when the software is not a port, and "Mac" is an inseparable
