@@ -4,6 +4,7 @@ cask :v1 => 'memorytamer' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://paddle.s3.amazonaws.com/fulfillment_downloads/1657/492767/MemoryTamer.zip"
+  name 'MemoryTamer'
   homepage 'http://www.memorytamer.com/'
   license :commercial
 
