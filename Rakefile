@@ -11,3 +11,7 @@ RSpec::Core::RakeTask.new(:spec)
 
 task :test => [:minitest, :spec]
 task :default => :test
+
+task :console do
+    sh 'irb -Ilib -rvendor/homebrew-fork/global -rhbc'
+end
