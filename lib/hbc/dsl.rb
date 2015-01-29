@@ -201,16 +201,14 @@ module Hbc::DSL
     end
 
     def conflicts_with(*args)
-      if @conflicts_with and !args.empty?
-        # todo: remove this constraint, and instead merge multiple conflicts_with stanzas
-        raise Hbc::CaskInvalidError.new(self.token, "'conflicts_with' stanza may only appear once")
-      end
       return @conflicts_with if args.empty?
-      @conflicts_with ||= begin
-        Hbc::DSL::ConflictsWith.new(*args) unless args.empty?
+      @conflicts_with ||= Hbc::DSL::ConflictsWith.new()
+      begin
+        @conflicts_with.load(*args) unless args.empty?
       rescue StandardError => e
         raise Hbc::CaskInvalidError.new(self.token, e)
       end
+      @conflicts_with
     end
 
     def artifacts
