@@ -60,6 +60,7 @@ class Hbc::Installer
 
     begin
       satisfy_dependencies(skip_cask_deps)
+      satisfy_conflicts
       download
       verify
       extract_primary_container
@@ -202,6 +203,77 @@ class Hbc::Installer
       else
         Hbc::Installer.new(dep).install(false, true)
         puts "done"
+      end
+    end
+  end
+
+  def satisfy_conflicts
+    if @cask.conflicts_with
+      ohai 'Satisfying conflicts'
+      macos_conflicts
+      arch_conflicts
+      x11_conflicts
+      formula_conflicts
+      cask_conflicts
+      puts 'complete'
+    end
+  end
+
+  def macos_conflicts
+    return unless @cask.conflicts_with.macos
+    if @cask.conflicts_with.macos.first.is_a?(Array)
+      operator, release = @cask.conflicts_with.macos.first
+      if MacOS.release.send(operator, release)
+        raise Hbc::CaskError.new "Cask #{@cask} conflicts with OS X release #{operator} #{release}, and you are running release #{MacOS.release}."
+      end
+    elsif @cask.conflicts_with.macos.length > 1
+      if @cask.conflicts_with.macos.include?(Gem::Version.new(MacOS.release.to_s))
+        raise Hbc::CaskError.new "Cask #{@cask} conflicts with OS X release being one of: #{@cask.conflicts_with.macos(&:to_s).inspect}, and you are running release #{MacOS.release}."
+      end
+    else
+      if MacOS.release == @cask.conflicts_with.macos.first
+        raise Hbc::CaskError.new "Cask #{@cask} conflicts with OS X release #{@cask.conflicts_with.macos.first}, and you are running release #{MacOS.release}."
+      end
+    end
+  end
+
+  def arch_conflicts
+    return unless @cask.conflicts_with.arch
+    @current_arch ||= [
+                       Hardware::CPU.type,
+                       Hardware::CPU.is_32_bit? ?
+                         (Hardware::CPU.intel? ? :i386   : :ppc_7400) :
+                         (Hardware::CPU.intel? ? :x86_64 : :ppc_64)
+                      ]
+    return if Array(@cask.conflicts_with.arch & @current_arch).empty?
+    raise Hbc::CaskError.new "Cask #{@cask} conflicts with hardware architecture being one of #{@cask.conflicts_with.arch.inspect}, and you are running #{@current_arch.inspect}"
+  end
+
+  def x11_conflicts
+    return unless @cask.conflicts_with.x11
+    unless Hbc.x11_libpng.select(&:exist?).empty?
+      raise Hbc::CaskError.new "Cask #{@cask} conflicts with XQuartz/X11, and you have it installed."
+    end
+  end
+
+  def formula_conflicts
+    return unless @cask.conflicts_with.formula and not @cask.conflicts_with.formula.empty?
+    @cask.conflicts_with.formula.each do |dep_name|
+      installed = @command.run(Hbc.homebrew_executable,
+                               :args => ['list', '--versions', dep_name],
+                               :print_stderr => false).stdout.include?(dep_name)
+      if installed
+        raise Hbc::CaskError.new "Cask #{@cask} conflicts with Homebrew formula #{dep_name}, and you have it installed."
+      end
+    end
+  end
+
+  def cask_conflicts
+    return unless @cask.conflicts_with.cask and not @cask.conflicts_with.cask.empty?
+    @cask.conflicts_with.cask.each do |dep_name|
+      dep = Hbc.load(dep_name)
+      if dep.installed?
+        raise Hbc::CaskError.new "Cask #{@cask} conflicts with cask #{dep_name}, and you have it installed."
       end
     end
   end
