@@ -7,5 +7,5 @@ cask :v1 => 'folx' do
   homepage 'http://mac.eltima.com/download-manager.html'
   license :freemium
 
-  app 'Folx 3.app'
+  app 'Folx.app'
 end
