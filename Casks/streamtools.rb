@@ -11,6 +11,7 @@ cask :v1 => 'streamtools' do
     binary "st_darwin_amd64-#{version}/st"
   end
 
-  homepage 'https://github.com/nytlabs/streamtools'
+  name 'streamtools'
+  homepage 'http://nytlabs.github.io/streamtools/'
   license :oss
 end
