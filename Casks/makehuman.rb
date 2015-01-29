@@ -4,6 +4,7 @@ cask :v1 => 'makehuman' do
 
   # tuxfamily.org is the official download host per the vendor homepage
   url "http://download.tuxfamily.org/makehuman/releases/#{version}/makehuman-#{version}-osx.dmg"
+  name 'MakeHuman'
   homepage 'http://www.makehuman.org/'
   license :affero
 
