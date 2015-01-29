@@ -4,6 +4,7 @@ cask :v1 => 'lisanet-gimp' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/gimponosx/Gimp-#{version}-Mavericks-Yosemite.dmg"
+  name 'GIMP'
   homepage 'http://gimp.lisanet.de'
   license :oss
 
