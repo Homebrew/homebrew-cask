@@ -191,7 +191,7 @@ module Hbc::DSL
     # depends_on uses a load method so that multiple stanzas can be merged
     def depends_on(*args)
       return @depends_on if args.empty?
-      @depends_on ||= Hbc::DSL::DependsOn.new()
+      @depends_on ||= Hbc::DSL::DependsOn.new
       begin
         @depends_on.load(*args) unless args.empty?
       rescue RuntimeError => e
@@ -202,7 +202,7 @@ module Hbc::DSL
 
     def conflicts_with(*args)
       return @conflicts_with if args.empty?
-      @conflicts_with ||= Hbc::DSL::ConflictsWith.new()
+      @conflicts_with ||= Hbc::DSL::ConflictsWith.new
       begin
         @conflicts_with.load(*args) unless args.empty?
       rescue StandardError => e
