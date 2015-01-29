@@ -8,4 +8,6 @@ cask :v1 => 'jahshaka' do
   license :gpl
 
   pkg 'jahshaka-2.0.mpkg'
+
+  uninstall script: '/usr/bin/jahshaka-uninstall'
 end
