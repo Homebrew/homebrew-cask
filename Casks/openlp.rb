@@ -4,6 +4,7 @@ cask :v1 => 'openlp' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/openlp/openlp/#{version}/OpenLP-#{version}.dmg"
+  name 'OpenLP'
   homepage 'http://openlp.org'
   license :gpl
 

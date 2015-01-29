@@ -4,8 +4,9 @@ cask :v1 => 'itsycal' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
+  name 'Itsycal'
   homepage 'http://www.mowglii.com/itsycal/'
   license :gratis
 
-  app "Itsycal.app"
+  app 'Itsycal.app'
 end

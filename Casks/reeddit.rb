@@ -4,6 +4,7 @@ cask :v1 => 'reeddit' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/berbaquero/Reeddit-app/releases/download/v#{version}/Reeddit.app.zip"
+  name 'Reeddit'
   homepage 'http://mac.reedditapp.com'
   license :oss
 

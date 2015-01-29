@@ -10,6 +10,7 @@ cask :v1 => 'witch' do
     url 'http://manytricks.com/download/witch'
   end
 
+  name 'Witch'
   homepage 'http://manytricks.com/witch/'
   license :commercial
 

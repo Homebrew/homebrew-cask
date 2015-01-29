@@ -4,8 +4,9 @@ cask :v1 => 'tower' do
 
   url 'https://www.git-tower.com/download'
   appcast 'https://updates.fournova.com/updates/tower2-mac/stable'
+  name 'Tower'
   homepage 'http://www.git-tower.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Tower.app'
 

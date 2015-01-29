@@ -4,6 +4,7 @@ cask :v1 => 'postgres' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/PostgresApp/PostgresApp/releases/download/#{version}/Postgres-#{version}.zip"
+  name 'Postgres'
   homepage 'http://postgresapp.com/'
   license :oss
 

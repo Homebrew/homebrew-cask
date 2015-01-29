@@ -6,6 +6,7 @@ cask :v1 => 'sparkle' do
   url "https://github.com/sparkle-project/Sparkle/releases/download/#{version}/Sparkle-#{version}.tar.bz2"
   appcast 'http://sparkle-project.org/files/sparkletestcast.xml',
           :sha256 => '238db88f72b33bde99bbd1cc5c54956357a249346030af67311ba10f156cb48b'
+  name 'Sparkle'
   homepage 'http://sparkle-project.org/'
   license :mit
 

@@ -4,6 +4,7 @@ cask :v1 => 'yacreader' do
 
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/luisangelsm/yacreader/downloads/YACReader-#{version}-MacOSX-Intel.dmg"
+  name 'YACReader'
   homepage 'http://www.yacreader.com'
   license :oss
 

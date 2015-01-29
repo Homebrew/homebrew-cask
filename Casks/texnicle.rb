@@ -5,6 +5,7 @@ cask :v1 => 'texnicle' do
   url "http://www.bobsoft-mac.de/resources/TeXnicle/2.2/TeXnicle.app.#{version}.zip"
   appcast 'http://www.bobsoft-mac.de/profileInfo.php',
           :sha256 => '700cebec51784f2e6088d51c6ac79a8dbd9a6863415a7806ce7cfed57b2f6e43'
+  name 'TeXnicle'
   homepage 'http://www.bobsoft-mac.de/texnicle/texnicle.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

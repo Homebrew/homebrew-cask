@@ -4,6 +4,7 @@ cask :v1 => 'paintcode' do
 
   url "http://www.paintcodeapp.com/content/versions/#{version}/paintcode-trial.zip"
   appcast 'http://www.pixelcut.com/paintcode/appcast.xml'
+  name 'PaintCode'
   homepage 'http://www.paintcodeapp.com/'
   license :commercial
 

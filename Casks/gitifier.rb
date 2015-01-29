@@ -5,6 +5,7 @@ cask :v1 => 'gitifier' do
   url "https://github.com/downloads/jsuder/Gitifier/Gitifier-#{version}.zip"
   appcast 'http://sparkle.psionides.eu/feed/gitifier',
           :sha256 => '5bf8682d28e0a59966f8107efbca6be05b60a32252da7288952b35c3fb4e269b'
+  name 'Gitifier'
   homepage 'http://psionides.github.io/Gitifier/'
   license :oss
 
