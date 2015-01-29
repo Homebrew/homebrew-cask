@@ -9,6 +9,7 @@ cask :v1 => 'tuneinstructor' do
   url "http://www.tune-instructor.de/_data/TuneInstructor#{version}b.dmg"
   end
 
+  name 'Tune•Instructor'
   homepage 'http://www.tune-instructor.de/com/start.html'
   license :commercial
 
