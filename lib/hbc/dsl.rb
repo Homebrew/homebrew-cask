@@ -2,20 +2,22 @@ require 'set'
 
 module Hbc::DSL; end
 
-require 'hbc/dsl/appcast'
 require 'hbc/dsl/base'
+require 'hbc/dsl/postflight'
+require 'hbc/dsl/preflight'
+require 'hbc/dsl/uninstall_postflight'
+require 'hbc/dsl/uninstall_preflight'
+
 require 'hbc/dsl/dependency'
 require 'hbc/dsl/conflicts_with'
-require 'hbc/dsl/container'
 require 'hbc/dsl/depends_on'
+
+require 'hbc/dsl/appcast'
+require 'hbc/dsl/container'
 require 'hbc/dsl/gpg'
 require 'hbc/dsl/installer'
 require 'hbc/dsl/license'
-require 'hbc/dsl/postflight'
-require 'hbc/dsl/preflight'
 require 'hbc/dsl/tags'
-require 'hbc/dsl/uninstall_postflight'
-require 'hbc/dsl/uninstall_preflight'
 
 module Hbc::DSL
   def self.included(base)

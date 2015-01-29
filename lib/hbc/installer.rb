@@ -127,83 +127,12 @@ class Hbc::Installer
   def satisfy_dependencies(skip_cask_deps=false)
     if @cask.depends_on
       ohai 'Satisfying dependencies'
-      macos_dependencies
-      arch_dependencies
-      x11_dependencies
-      formula_dependencies
-      cask_dependencies unless skip_cask_deps
+      @cask.depends_on.pairs.each do |type, dependencies|
+        unless type == :cask && skip_cask_deps
+          dependencies.check!(@cask)
+        end
+      end
       puts 'complete'
-    end
-  end
-
-  def macos_dependencies
-    return unless @cask.depends_on.macos
-    if @cask.depends_on.macos.first.is_a?(Array)
-      operator, release = @cask.depends_on.macos.first
-      unless MacOS.release.send(operator, release)
-        raise Hbc::CaskError.new "Cask #{@cask} depends on OS X release #{operator} #{release}, but you are running release #{MacOS.release}."
-      end
-    elsif @cask.depends_on.macos.length > 1
-      unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.release.to_s))
-        raise Hbc::CaskError.new "Cask #{@cask} depends on OS X release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.release}."
-      end
-    else
-      unless MacOS.release == @cask.depends_on.macos.first
-        raise Hbc::CaskError.new "Cask #{@cask} depends on OS X release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.release}."
-      end
-    end
-  end
-
-  def arch_dependencies
-    return unless @cask.depends_on.arch
-    @current_arch ||= [
-                       Hardware::CPU.type,
-                       Hardware::CPU.is_32_bit? ?
-                         (Hardware::CPU.intel? ? :i386   : :ppc_7400) :
-                         (Hardware::CPU.intel? ? :x86_64 : :ppc_64)
-                      ]
-    return unless Array(@cask.depends_on.arch & @current_arch).empty?
-    raise Hbc::CaskError.new "Cask #{@cask} depends on hardware architecture being one of #{@cask.depends_on.arch.inspect}, but you are running #{@current_arch.inspect}"
-  end
-
-  def x11_dependencies
-    return unless @cask.depends_on.x11
-    if Hbc.x11_libpng.select(&:exist?).empty?
-      raise Hbc::CaskX11DependencyError.new(@cask.token)
-    end
-  end
-
-  def formula_dependencies
-    return unless @cask.depends_on.formula and not @cask.depends_on.formula.empty?
-    ohai 'Installing Formula dependencies from Homebrew'
-    @cask.depends_on.formula.each do |dep_name|
-      print "#{dep_name} ... "
-      installed = @command.run(Hbc.homebrew_executable,
-                               :args => ['list', '--versions', dep_name],
-                               :print_stderr => false).stdout.include?(dep_name)
-      if installed
-        puts "already installed"
-      else
-        @command.run!(Hbc.homebrew_executable,
-                      :args => ['install', dep_name])
-        puts "done"
-      end
-    end
-  end
-
-  def cask_dependencies
-    return unless @cask.depends_on.cask and not @cask.depends_on.cask.empty?
-    ohai "Installing Cask dependencies: #{@cask.depends_on.cask.join(', ')}"
-    deps = Hbc::CaskDependencies.new(@cask)
-    deps.sorted.each do |dep_token|
-      puts "#{dep_token} ..."
-      dep = Hbc.load(dep_token)
-      if dep.installed?
-        puts "already installed"
-      else
-        Hbc::Installer.new(dep).install(false, true)
-        puts "done"
-      end
     end
   end
 
