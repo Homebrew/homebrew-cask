@@ -44,7 +44,7 @@ describe Hbc::Installer do
     it "works with cab-based Casks" do
       skip unless Hbc.homebrew_prefix.join('bin/cabextract').exist?
       cab_container = Hbc.load('cab-container')
-      empty = stub(:formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
+      empty = stub(:pairs => {}, :formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
       cab_container.stubs(:depends_on).returns(empty)
 
       shutup do
@@ -72,7 +72,7 @@ describe Hbc::Installer do
     it "works with 7z-based Casks" do
       skip unless Hbc.homebrew_prefix.join('bin','unar').exist?
       sevenzip_container = Hbc.load('sevenzip-container')
-      empty = stub(:formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
+      empty = stub(:pairs => {}, :formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
       sevenzip_container.stubs(:depends_on).returns(empty)
 
       shutup do
@@ -101,7 +101,7 @@ describe Hbc::Installer do
     it "works with Stuffit-based Casks" do
       skip unless Hbc.homebrew_prefix.join('bin','unar').exist?
       stuffit_container = Hbc.load('stuffit-container')
-      empty = stub(:formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
+      empty = stub(:pairs => {}, :formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
       stuffit_container.stubs(:depends_on).returns(empty)
 
       shutup do
@@ -117,7 +117,7 @@ describe Hbc::Installer do
     it "works with RAR-based Casks" do
       skip unless Hbc.homebrew_prefix.join('bin','unar').exist?
       rar_container = Hbc.load('rar-container')
-      empty = stub(:formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
+      empty = stub(:pairs => {}, :formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
       rar_container.stubs(:depends_on).returns(empty)
 
       shutup do
