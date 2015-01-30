@@ -69,20 +69,25 @@ end
 
 class Hbc::CaskX11DependencyError < Hbc::CaskError
   attr_reader :token
-  def initialize(token)
+  def initialize(token, conflict: false)
     @token = token
+    @conflict = conflict
   end
 
   def to_s
-    <<-EOS.undent
-      #{token} requires XQuartz/X11, which can be installed via homebrew-cask by
+    if @conflict
+      "Cask #{token} conflicts with XQuartz/X11, and you have it installed."
+    else
+      <<-EOS.undent
+        #{token} requires XQuartz/X11, which can be installed via homebrew-cask by
 
-        brew cask install xquartz
+          brew cask install xquartz
 
-      or manually, by downloading the package from
+        or manually, by downloading the package from
 
-        http://xquartz.macosforge.org
-    EOS
+          http://xquartz.macosforge.org
+      EOS
+    end
   end
 end
 

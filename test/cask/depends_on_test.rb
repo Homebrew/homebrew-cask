@@ -24,7 +24,7 @@ describe "Satisfy Dependencies and Requirements" do
 
     it "installs the dependency of a Cask and the Cask itself" do
       csk = Hbc.load('with-depends-on-cask')
-      dependency = Hbc.load(csk.depends_on.cask.first)
+      dependency = Hbc.load(csk.depends_on.cask.deps.first)
       shutup do
         Hbc::Installer.new(csk).install
       end

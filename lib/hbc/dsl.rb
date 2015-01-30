@@ -2,19 +2,22 @@ require 'set'
 
 module Hbc::DSL; end
 
-require 'hbc/dsl/appcast'
 require 'hbc/dsl/base'
+require 'hbc/dsl/postflight'
+require 'hbc/dsl/preflight'
+require 'hbc/dsl/uninstall_postflight'
+require 'hbc/dsl/uninstall_preflight'
+
+require 'hbc/dsl/dependency'
 require 'hbc/dsl/conflicts_with'
-require 'hbc/dsl/container'
 require 'hbc/dsl/depends_on'
+
+require 'hbc/dsl/appcast'
+require 'hbc/dsl/container'
 require 'hbc/dsl/gpg'
 require 'hbc/dsl/installer'
 require 'hbc/dsl/license'
-require 'hbc/dsl/postflight'
-require 'hbc/dsl/preflight'
 require 'hbc/dsl/tags'
-require 'hbc/dsl/uninstall_postflight'
-require 'hbc/dsl/uninstall_preflight'
 
 module Hbc::DSL
   def self.included(base)
@@ -191,7 +194,7 @@ module Hbc::DSL
     # depends_on uses a load method so that multiple stanzas can be merged
     def depends_on(*args)
       return @depends_on if args.empty?
-      @depends_on ||= Hbc::DSL::DependsOn.new()
+      @depends_on ||= Hbc::DSL::DependsOn.new
       begin
         @depends_on.load(*args) unless args.empty?
       rescue RuntimeError => e
@@ -200,17 +203,16 @@ module Hbc::DSL
       @depends_on
     end
 
+    # conflicts_with uses a load method so that multiple stanzas can be merged
     def conflicts_with(*args)
-      if @conflicts_with and !args.empty?
-        # todo: remove this constraint, and instead merge multiple conflicts_with stanzas
-        raise Hbc::CaskInvalidError.new(self.token, "'conflicts_with' stanza may only appear once")
-      end
       return @conflicts_with if args.empty?
-      @conflicts_with ||= begin
-        Hbc::DSL::ConflictsWith.new(*args) unless args.empty?
+      @conflicts_with ||= Hbc::DSL::ConflictsWith.new
+      begin
+        @conflicts_with.load(*args) unless args.empty?
       rescue StandardError => e
         raise Hbc::CaskInvalidError.new(self.token, e)
       end
+      @conflicts_with
     end
 
     def artifacts

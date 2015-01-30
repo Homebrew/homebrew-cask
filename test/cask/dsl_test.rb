@@ -369,6 +369,71 @@ describe Hbc::DSL do
     end
   end
 
+  describe "conflicts_with :formula" do
+    it "allows conflicts_with :formula to be specified" do
+      cask = Hbc.load('with-conflicts-with-formula')
+      cask.conflicts_with.formula.wont_be_nil
+    end
+
+    it "allows multiple conflicts_with :formula to be specified" do
+      cask = Hbc.load('with-conflicts-with-formula-multiple')
+      cask.conflicts_with.formula.wont_be_nil
+    end
+  end
+
+  describe "conflicts_with :cask" do
+    it "allows conflicts_with :cask to be specified" do
+      cask = Hbc.load('with-conflicts-with-cask')
+      cask.conflicts_with.cask.wont_be_nil
+    end
+
+    it "allows multiple conflicts_with :cask to be specified" do
+      cask = Hbc.load('with-conflicts-with-cask-multiple')
+      cask.conflicts_with.cask.wont_be_nil
+    end
+  end
+
+  describe "conflicts_with :macos" do
+    it "allows conflicts_with :macos to be specified" do
+      cask = Hbc.load('with-conflicts-with-macos-string')
+      cask.conflicts_with.macos.wont_be_nil
+    end
+    it "refuses to load with an invalid conflicts_with :macos value" do
+      err = lambda {
+        invalid_cask = Hbc.load('invalid/invalid-conflicts-with-macos-bad-release')
+      }.must_raise(Hbc::CaskInvalidError)
+    end
+    it "refuses to load with conflicting conflicts_with :macos forms" do
+      err = lambda {
+        invalid_cask = Hbc.load('invalid/invalid-conflicts-with-macos-conflicting-forms')
+      }.must_raise(Hbc::CaskInvalidError)
+    end
+  end
+
+  describe "conflicts_with :arch" do
+    it "allows conflicts_with :arch to be specified" do
+      cask = Hbc.load('with-conflicts-with-arch')
+      cask.conflicts_with.arch.wont_be_nil
+    end
+    it "refuses to load with an invalid conflicts_with :arch value" do
+      err = lambda {
+        invalid_cask = Hbc.load('invalid/invalid-conflicts-with-arch-value')
+      }.must_raise(Hbc::CaskInvalidError)
+    end
+  end
+
+  describe "conflicts_with :x11" do
+    it "allows conflicts_with :x11 to be specified" do
+      cask = Hbc.load('with-conflicts-with-x11')
+      cask.conflicts_with.x11.wont_be_nil
+    end
+    it "refuses to load with an invalid conflicts_with :x11 value" do
+      err = lambda {
+        invalid_cask = Hbc.load('invalid/invalid-conflicts-with-x11-value')
+      }.must_raise(Hbc::CaskInvalidError)
+    end
+  end
+
   describe "license stanza" do
     it "allows the license to be specified" do
       cask = Hbc.load('with-license')
