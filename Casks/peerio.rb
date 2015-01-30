@@ -5,7 +5,7 @@ cask :v1 => 'peerio' do
   url "https://peerio.com/download/peerio-mac.zip"
   name 'Peerio'
   homepage 'https://peerio.com/'
-  license :oss
+  license :gpl
 
   app 'Peerio.app'
 end
