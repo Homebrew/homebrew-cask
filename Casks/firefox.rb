@@ -7,7 +7,7 @@ cask :v1 => 'firefox' do
   name 'Mozilla Firefox'
   homepage 'https://www.mozilla.org/en-US/firefox/'
   license :oss
-  tags :vendor => 'Firefox'
+  tags :vendor => 'Mozilla'
 
   app 'Firefox.app'
 
