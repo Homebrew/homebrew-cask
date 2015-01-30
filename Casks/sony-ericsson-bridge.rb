@@ -6,6 +6,7 @@ cask :v1 => 'sony-ericsson-bridge' do
   name 'Sony Ericsson Bridge for Mac'
   homepage 'http://support.sonymobile.com/au/tools/bridge-for-mac/'
   license :gratis
+  tags :vendor => 'Sony'
 
   app 'Sony Ericsson Bridge for Mac.app'
 end
