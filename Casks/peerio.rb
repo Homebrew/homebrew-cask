@@ -9,4 +9,3 @@ cask :v1 => 'peerio' do
 
   app 'Peerio.app'
 end
-
