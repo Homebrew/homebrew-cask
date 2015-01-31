@@ -4,7 +4,7 @@ cask :v1 => 'universalmailer' do
 
   url "http://universalmailer.github.io/UniversalMailer/zips/UniversalMailer-v#{version.gsub('.','_')}.zip"
   homepage 'http://universalmailer.github.io/UniversalMailer/'
-  license :oss
+  license :mit
 
   pkg 'UniversalMailer.pkg'
 
