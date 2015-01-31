@@ -4,7 +4,7 @@ cask :v1 => 'miditrail' do
 
   url "http://dl.sourceforge.jp/miditrail/60194/MIDITrail-Ver.#{version}-MacOSX.zip"
   homepage 'http://en.sourceforge.jp/projects/miditrail/'
-  license :oss
+  license :bsd
 
   app 'MIDITrail/MIDITrail.app'
 end
