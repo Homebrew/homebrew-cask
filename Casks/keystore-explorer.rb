@@ -5,7 +5,7 @@ cask :v1 => 'keystore-explorer' do
   url "http://downloads.sourceforge.net/project/keystore-explorer/KSE%20#{version}/kse-#{version.gsub('.','')}.dmg"
   name 'KeyStore Explorer'
   homepage 'http://keystore-explorer.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app "KeyStore Explorer #{version}.app"
 end
