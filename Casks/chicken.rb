@@ -7,7 +7,7 @@ cask :v1 => 'chicken' do
           :sha256 => 'a649ec458aa8ea0bd34ed395a85d35d7ca333f2442d1c209c8f159226ba92088'
   name 'Chicken'
   homepage 'http://sourceforge.net/projects/chicken/'
-  license :oss
+  license :gpl
 
   app 'Chicken.app'
 
