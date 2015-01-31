@@ -5,7 +5,7 @@ cask :v1 => 'tokaido' do
   url "https://github.com/tokaido/tokaidoapp/releases/download/v#{version}/Tokaido.zip"
   name 'Tokaido'
   homepage 'https://github.com/tokaido/tokaidoapp'
-  license :oss
+  license :mit
 
   app 'Tokaido.app'
 end
