@@ -4,7 +4,7 @@ cask :v1 => 'brain-workshop' do
 
   url "http://downloads.sourceforge.net/project/brainworkshop/brainworkshop/Brain%20Workshop%204.8/brainworkshop-#{version}-MacOSX.zip"
   homepage 'http://brainworkshop.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'Brain Workshop.app'
 end
