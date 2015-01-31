@@ -6,7 +6,7 @@ cask :v1 => 'kdiff3' do
   url "http://downloads.sourceforge.net/project/kdiff3/kdiff3/#{version}/kdiff3-#{version}-MacOSX-64Bit.dmg"
   name 'KDiff3'
   homepage 'http://kdiff3.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'kdiff3.app'
   binary 'kdiff3.app/Contents/MacOS/kdiff3'
