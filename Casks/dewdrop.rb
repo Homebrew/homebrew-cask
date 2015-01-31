@@ -6,7 +6,7 @@ cask :v1 => 'dewdrop' do
   appcast 'http://dewdrop.dangelov.com/mac-appcast/updates.xml',
           :sha256 => 'cc5d4548c5de855094a44f026c78cf7a3dfccd9b29a79c29eeb7caaa4bd7acb3'
   homepage 'http://dewdrop.dangelov.com/'
-  license :oss
+  license :gpl
 
   app 'Dewdrop.app'
 
