@@ -9,5 +9,6 @@ cask :v1 => 'qsync' do
   tags :vendor => 'Qnap'
 
   pkg 'Qsync.pkg'
+
   uninstall :pkgutil => 'com.qnap.qsync.*'
 end
