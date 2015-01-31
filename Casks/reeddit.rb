@@ -6,7 +6,7 @@ cask :v1 => 'reeddit' do
   url "https://github.com/berbaquero/Reeddit-app/releases/download/v#{version}/Reeddit.app.zip"
   name 'Reeddit'
   homepage 'http://mac.reedditapp.com'
-  license :oss
+  license :mit
 
   app 'Reeddit.app'
 end
