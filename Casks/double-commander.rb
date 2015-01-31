@@ -5,7 +5,7 @@ cask :v1 => 'double-commander' do
   url "http://downloads.sourceforge.net/sourceforge/doublecmd/doublecmd-#{version}-5390.qt.x86_64.dmg"
   name 'Double Commander'
   homepage 'http://doublecmd.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'Double Commander.app'
 end
