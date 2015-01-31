@@ -7,7 +7,7 @@ cask :v1 => 'cord' do
           :sha256 => '891e1675b678f03d7f050ecb426c28362dab3c92da1592fce8a36afcb7606b69'
   name 'CoRD'
   homepage 'http://cord.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'CoRD.app'
 
