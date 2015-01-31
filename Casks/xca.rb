@@ -4,7 +4,7 @@ cask :v1 => 'xca' do
 
   url "http://downloads.sourceforge.net/sourceforge/xca/xca-#{version}_x86.dmg"
   homepage 'http://xca.sourceforge.net/'
-  license :oss
+  license :bsd
 
   app 'xca.app'
 end
