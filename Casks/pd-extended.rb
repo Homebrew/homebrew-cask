@@ -6,7 +6,7 @@ cask :v1 => 'pd-extended' do
   url "http://downloads.sourceforge.net/project/pure-data/pd-extended/#{version}/Pd-#{version}-extended-macosx105-i386.dmg"
   name 'Pd-extended'
   homepage 'http://puredata.info/downloads/pd-extended'
-  license :oss
+  license :gpl
 
   app 'Pd-extended.app'
 
