@@ -6,7 +6,7 @@ cask :v1 => 'spotify-notifications' do
   url "https://github.com/citruspi/Spotify-Notifications/releases/download/#{version}/Spotify.Notifications.-.#{version}.zip"
   name 'Spotify Notifications'
   homepage 'http://spotify-notifications.citruspi.io/'
-  license :oss
+  license :public_domain
 
   app 'Spotify Notifications.app'
 end
