@@ -6,7 +6,7 @@ cask :v1 => 'pusher' do
   name 'Pusher'
   name 'NWPusher'
   homepage 'https://github.com/noodlewerk/NWPusher'
-  license :oss
+  license :bsd
 
   app 'Pusher.app'
 end
