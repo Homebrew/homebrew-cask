@@ -4,7 +4,7 @@ cask :v1 => 'brushviewql' do
 
   url 'http://brushviewer.sourceforge.net/brushviewql.zip'
   homepage 'http://brushviewer.sourceforge.net/'
-  license :oss
+  license :gpl
 
   qlplugin 'BrushViewQL/BrushViewQL.qlgenerator'
 end
