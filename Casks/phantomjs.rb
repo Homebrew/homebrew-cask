@@ -5,7 +5,7 @@ cask :v1 => 'phantomjs' do
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-#{version}-macosx.zip"
   homepage 'http://phantomjs.org/'
-  license :oss
+  license :bsd
 
   binary "phantomjs-#{version}-macosx/bin/phantomjs"
 end
