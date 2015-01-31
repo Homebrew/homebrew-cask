@@ -6,7 +6,7 @@ cask :v1 => 'woodhouse' do
   appcast 'http://phinze.github.com/woodhouse/appcast.xml',
           :sha256 => '60e19f2463f90a57417229593f456df23d1ba55781d305db7ac5d47d0ecbcf79'
   homepage 'https://github.com/phinze/woodhouse/'
-  license :oss
+  license :mit
 
   app 'Woodhouse.app'
 end
