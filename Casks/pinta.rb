@@ -6,7 +6,7 @@ cask :v1 => 'pinta' do
   url "https://github.com/PintaProject/Pinta/releases/download/#{version}/Pinta.app.zip"
   name 'Pinta'
   homepage 'http://pinta-project.com/'
-  license :oss
+  license :mit
 
   app 'Pinta.app'
 
