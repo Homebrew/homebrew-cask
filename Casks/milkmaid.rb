@@ -5,7 +5,7 @@ cask :v1 => 'milkmaid' do
   url "https://github.com/downloads/jgallen23/MilkMaid/MilkMaid-#{version}.tar.gz"
   name 'MilkMaid'
   homepage 'https://github.com/jgallen23/MilkMaid'
-  license :oss
+  license :mit
 
   app 'MilkMaid.app'
 
