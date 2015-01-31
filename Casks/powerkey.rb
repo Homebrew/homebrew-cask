@@ -4,7 +4,7 @@ cask :v1 => 'powerkey' do
 
   url "https://github.com/pkamb/PowerKey/releases/download/v#{version}/PowerKey#{version}.zip"
   homepage 'http://pkamb.github.io/PowerKey/'
-  license :oss
+  license :mit
 
   app 'PowerKey.app'
 end
