@@ -5,7 +5,7 @@ cask :v1 => 'printrun' do
   # kapsi.fi is the official download host per the vendor homepage
   url 'http://koti.kapsi.fi/~kliment/printrun/Printrun-Mac-10Mar2014.zip'
   homepage 'https://github.com/kliment/Printrun'
-  license :oss
+  license :gpl
 
   app 'Printrun-Mac-10Mar2014.app'
 end
