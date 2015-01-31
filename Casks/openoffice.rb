@@ -6,7 +6,7 @@ cask :v1 => 'openoffice' do
   url "http://downloads.sourceforge.net/sourceforge/openofficeorg.mirror/Apache_OpenOffice_#{version}_MacOS_x86-64_install_en-US.dmg"
   name 'OpenOffice'
   homepage 'http://www.openoffice.org/'
-  license :oss
+  license :apache
   tags :vendor => 'Apache'
 
   app 'OpenOffice.app'
