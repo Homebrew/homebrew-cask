@@ -5,7 +5,7 @@ cask :v1 => 'gnucash' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-#{version}.dmg"
   homepage 'http://www.gnucash.org'
-  license :oss
+  license :gpl
 
   app 'Gnucash.app'
   app 'FinanceQuote Update.app'
