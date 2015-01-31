@@ -4,7 +4,7 @@ cask :v1 => 'movist' do
 
   url 'https://github.com/downloads/samiamwork/Movist/Movist.app.zip'
   homepage 'https://github.com/samiamwork/Movist'
-  license :oss
+  license :gpl
 
   app 'Movist.app'
 end
