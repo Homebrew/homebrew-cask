@@ -6,7 +6,7 @@ cask :v1 => 'password-gorilla' do
   url "http://gorilla.dp100.com/downloads/gorilla.mac.#{version.gsub('.','')}.zip"
   name 'Password Gorilla'
   homepage 'https://github.com/zdia/gorilla'
-  license :oss
+  license :gpl
 
   app 'Password Gorilla.app'
   caveats <<-EOS.undent
