@@ -6,7 +6,7 @@ cask :v1 => 'haroopad' do
   url "https://bitbucket.org/rhiokim/haroopad-download/downloads/Haroopad-v#{version}-x64.dmg"
   name 'Haroopad'
   homepage 'http://pad.haroopress.com/'
-  license :oss
+  license :gpl
 
   app 'haroopad.app'
 end
