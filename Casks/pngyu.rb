@@ -4,7 +4,7 @@ cask :v1 => 'pngyu' do
 
   url "http://nukesaq88.github.io/Pngyu/download/Pngyu_mac_#{version.gsub('.','')}.zip"
   homepage 'http://nukesaq88.github.io/Pngyu/'
-  license :oss
+  license :bsd
 
   app 'Pngyu.app'
 end
