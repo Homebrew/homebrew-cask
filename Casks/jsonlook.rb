@@ -6,7 +6,7 @@ cask :v1 => 'jsonlook' do
   url 'https://dl.dropbox.com/u/3878216/github/jsonlook.qlgenerator.zip'
   name 'jsonlook'
   homepage 'https://github.com/rjregenold/jsonlook'
-  license :oss
+  license :mit
 
   qlplugin 'jsonlook.qlgenerator'
 end
