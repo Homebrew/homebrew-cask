@@ -6,7 +6,7 @@ cask :v1 => 'vassal' do
   url "http://downloads.sourceforge.net/project/vassalengine/VASSAL-current/VASSAL-#{version}/VASSAL-#{version}-macosx.dmg"
   name 'VASSAL'
   homepage 'http://www.vassalengine.org'
-  license :oss
+  license :gpl
 
   app 'VASSAL.app'
 end
