@@ -8,7 +8,7 @@ cask :v1 => 'owasp-zap' do
   name 'OWASP ZAP'
   name 'ZAP'
   homepage 'https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project'
-  license :oss
+  license :apache
   tags :vendor => 'OWASP'
 
   app 'OWASP ZAP.app'
