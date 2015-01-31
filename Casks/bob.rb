@@ -4,7 +4,7 @@ cask :v1 => 'bob' do
 
   url "https://github.com/casperstorm/Bob/releases/download/#{version}/Bob.zip"
   homepage 'https://github.com/casperstorm/Bob'
-  license :oss
+  license :mit
 
   app 'Bob.app'
 end
