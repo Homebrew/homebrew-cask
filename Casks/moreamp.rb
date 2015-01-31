@@ -5,7 +5,7 @@ cask :v1 => 'moreamp' do
   url "http://downloads.sourceforge.net/project/moreamp/moreamp/MoreAmp-#{version}/MoreAmp-#{version}-binOSX104intel.dmg"
   name 'MoreAmp'
   homepage 'http://sourceforge.net/projects/moreamp/'
-  license :oss
+  license :gpl
 
   app 'MoreAmp.app'
 end
