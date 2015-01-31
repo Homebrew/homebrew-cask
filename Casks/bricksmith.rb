@@ -5,7 +5,7 @@ cask :v1 => 'bricksmith' do
   url "http://downloads.sourceforge.net/sourceforge/bricksmith/bricksmith/Bricksmith%20#{version}/BricksmithComplete#{version}.zip"
   name 'Bricksmith'
   homepage 'http://bricksmith.sourceforge.net/'
-  license :oss
+  license :bsd
 
   app 'Bricksmith/Bricksmith.app'
 end
