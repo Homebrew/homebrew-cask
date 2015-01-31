@@ -4,7 +4,7 @@ cask :v1 => 'graphsketcher' do
 
   url "https://github.com/graphsketcher/GraphSketcher/releases/download/#{version}/GraphSketcher.zip"
   homepage 'https://github.com/graphsketcher/GraphSketcher'
-  license :oss
+  license :mit
 
   app 'GraphSketcher/GraphSketcher.app'
 end
