@@ -6,7 +6,7 @@ cask :v1 => 'dvdstyler' do
   url "http://downloads.sourceforge.net/sourceforge/dvdstyler/DVDStyler-#{version}-MacOSX.dmg"
   name 'DVDStyler'
   homepage 'http://dvdstyler.org'
-  license :oss
+  license :gpl
 
   app 'DVDStyler.app'
 end
