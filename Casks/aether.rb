@@ -6,7 +6,7 @@ cask :v1 => 'aether' do
   url "https://github.com/nehbit/aether-public/releases/download/v#{version}-OSX/Aether.#{version}.dmg"
   name 'Aether'
   homepage 'http://getaether.net/'
-  license :oss
+  license :affero
 
   app 'Aether.app'
 end
