@@ -4,7 +4,7 @@ cask :v1 => 'boot2docker' do
 
   url "https://github.com/boot2docker/osx-installer/releases/download/v#{version}/Boot2Docker-#{version}.pkg"
   homepage 'https://github.com/boot2docker/osx-installer'
-  license :oss
+  license :apache
 
   pkg "Boot2Docker-#{version}.pkg"
 
