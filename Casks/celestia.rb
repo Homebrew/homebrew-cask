@@ -5,7 +5,7 @@ cask :v1 => 'celestia' do
   url "http://downloads.sourceforge.net/sourceforge/celestia/celestia-osx-#{version}.dmg"
   name 'Celestia'
   homepage 'http://sourceforge.net/projects/celestia'
-  license :oss
+  license :gpl
 
   app 'Celestia.app'
 end
