@@ -4,7 +4,7 @@ cask :v1 => 'happygrep' do
 
   url "https://github.com/happypeter/happygrep/releases/download/v#{version}/happygrep.zip"
   homepage 'https://github.com/happypeter/happygrep'
-  license :oss
+  license :mit
 
   binary 'happygrep'
 end
