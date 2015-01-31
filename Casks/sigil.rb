@@ -5,7 +5,7 @@ cask :v1 => 'sigil' do
   url "https://github.com/user-none/Sigil/releases/download/#{version}/Sigil-#{version}-Mac-Package.dmg"
   name 'Sigil'
   homepage 'http://code.google.com/p/sigil/'
-  license :oss
+  license :gpl
 
   app 'Sigil.app'
 end
