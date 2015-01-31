@@ -7,7 +7,7 @@ cask :v1 => 'hive' do
   appcast 'https://hivewallet.com/hive-osx-appcast.xml',
           :sha256 => '53a58f4b4bc888cde3e036ee3b09b44f0ba19b321492c82a93acc01891d310e1'
   homepage 'http://www.hivewallet.com'
-  license :oss
+  license :gpl
 
   app 'Hive.app'
 
