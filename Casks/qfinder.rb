@@ -9,5 +9,6 @@ cask :v1 => 'qfinder' do
   tags :vendor => 'Qnap'
 
   pkg 'Qfinder.pkg'
+  
   uninstall :pkgutil => 'qnap.com.qfinder.*'
 end
