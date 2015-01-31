@@ -7,7 +7,7 @@ cask :v1 => 'bit-slicer' do
   appcast 'http://zorg.tejat.net/bitslicer/update.php',
           :sha256 => '11d0afe33a4cbf65a8df4c4d323b150853a62b0cbfe77d36dc70b5113aeca631'
   homepage 'https://github.com/zorgiepoo/bit-slicer/'
-  license :oss
+  license :bsd
 
   app 'Bit Slicer.app'
 end
