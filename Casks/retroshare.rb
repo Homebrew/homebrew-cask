@@ -4,7 +4,7 @@ cask :v1 => 'retroshare' do
 
   url "http://downloads.sourceforge.net/project/retroshare/RetroShare/#{version}/Retroshare-V#{version}-svn6877_OSX10.6u.dmg"
   homepage 'http://retroshare.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'Retroshare.app'
 end
