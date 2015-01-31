@@ -9,5 +9,6 @@ cask :v1 => 'qget' do
   tags :vendor => 'Qnap'
 
   pkg 'Qget.pkg'
+  
   uninstall :pkgutil => 'qnap.com.qget'
 end
