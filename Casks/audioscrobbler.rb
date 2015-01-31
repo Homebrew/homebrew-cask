@@ -5,7 +5,7 @@ cask :v1 => 'audioscrobbler' do
   url "https://github.com/mxcl/Audioscrobbler.app/releases/download/#{version}/Audioscrobbler-#{version}.zip"
   name 'Audioscrobbler'
   homepage 'https://github.com/mxcl/Audioscrobbler.app'
-  license :oss
+  license :gpl
 
   app 'Audioscrobbler.app'
 end
