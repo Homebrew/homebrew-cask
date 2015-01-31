@@ -5,7 +5,7 @@ cask :v1 => 'icons' do
   url "https://github.com/exherb/icons/releases/download/#{version}/icons-v#{version}-macos-x64.zip"
   name 'Icons'
   homepage 'https://github.com/exherb/icons'
-  license :oss
+  license :mit
 
   app 'Icons.app'
 end
