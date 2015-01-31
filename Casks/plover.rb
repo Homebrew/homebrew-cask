@@ -6,7 +6,7 @@ cask :v1 => 'plover' do
   url "https://github.com/openstenoproject/plover/releases/download/v#{version}/Plover.dmg"
   name 'Plover'
   homepage 'http://stenoknight.com/wiki/Main_Page'
-  license :oss
+  license :gpl
 
   app 'plover.app'
 
