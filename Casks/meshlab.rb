@@ -4,7 +4,7 @@ cask :v1 => 'meshlab' do
 
   url "http://downloads.sourceforge.net/project/meshlab/meshlab/MeshLab%20v#{version}/MeshLabMac_v132.dmg"
   homepage 'http://meshlab.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'meshlab.app'
 end
