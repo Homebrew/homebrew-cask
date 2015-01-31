@@ -4,7 +4,7 @@ cask :v1 => 'honer' do
 
   url "https://github.com/puffnfresh/Honer.app/releases/download/v#{version}/Honer-6e3863f2.zip"
   homepage 'https://github.com/puffnfresh/Honer.app'
-  license :oss
+  license :mit
 
   app 'Honer.app'
 end
