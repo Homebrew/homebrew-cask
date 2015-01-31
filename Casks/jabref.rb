@@ -5,7 +5,7 @@ cask :v1 => 'jabref' do
   url "http://downloads.sourceforge.net/project/jabref/jabref/#{version}/JabRef-#{version}-OSX.zip"
   name 'JabRef'
   homepage 'http://jabref.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'JabRef.app'
 end
