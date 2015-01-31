@@ -5,7 +5,7 @@ cask :v1 => 'hexchat' do
   # hexchat.net is the official download host per the vendor homepage
   url "http://dl.hexchat.net/hexchat/osx/HexChat-#{version}.app.zip"
   homepage 'http://hexchat.github.io'
-  license :oss
+  license :gpl
 
   app 'HexChat.app'
 end
