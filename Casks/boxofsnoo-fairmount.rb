@@ -7,7 +7,7 @@ cask :v1 => 'boxofsnoo-fairmount' do
           :sha256 => '3587cb776ce0e4e8237f215800b7dffba0f25865cb84550e87ea8bbac838c423'
   name 'Fairmount'
   homepage 'https://github.com/BoxOfSnoo/Fairmount'
-  license :oss
+  license :gpl
 
   app 'Fairmount.app'
 end
