@@ -5,7 +5,7 @@ cask :v1 => 'jxplorer' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/jxplorer/jxplorer/version%20#{version}/jxplorer-#{version}-osx.zip"
   homepage 'http://jxplorer.org'
-  license :oss
+  license :apache
 
   app "jxplorer-#{version}.app"
   postflight do
