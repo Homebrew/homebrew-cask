@@ -5,7 +5,7 @@ cask :v1 => 'apns-pusher' do
   url "https://github.com/blommegard/APNS-Pusher/releases/download/v#{version}/APNS.Pusher.app.zip"
   name 'APNS Pusher'
   homepage 'https://github.com/blommegard/APNS-Pusher'
-  license :oss
+  license :mit
 
   app 'APNS Pusher.app'
 end
