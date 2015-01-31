@@ -5,7 +5,7 @@ cask :v1 => 'octave' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/octave/Octave%20MacOSX%20Binary/2013-12-30%20binary%20installer%20of%20Octave%203.8.0%20for%20OSX%2010.9.1%20%28beta%29/GNU_Octave_#{version}.dmg"
   homepage 'https://gnu.org/software/octave/'
-  license :oss
+  license :gpl
 
   pkg "Octave-#{version}.mpkg"
 
