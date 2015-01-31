@@ -6,7 +6,7 @@ cask :v1 => 'psi' do
   url "http://downloads.sourceforge.net/sourceforge/psi/Psi-#{version}.dmg"
   name 'Psi'
   homepage 'http://psi-im.org/'
-  license :oss
+  license :gpl
 
   app 'Psi.app'
 end
