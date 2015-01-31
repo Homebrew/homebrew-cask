@@ -5,7 +5,7 @@ cask :v1 => 'dosbox' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/dosbox/dosbox/#{version}/DOSBox-#{version}-1_Universal.dmg"
   homepage 'http://www.dosbox.com'
-  license :oss
+  license :gpl
 
   app 'DOSBox.app'
 end
