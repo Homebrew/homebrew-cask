@@ -4,7 +4,7 @@ cask :v1 => 'supertuxkart' do
 
   url "http://downloads.sourceforge.net/sourceforge/supertuxkart/supertuxkart-#{version}-osx.dmg"
   homepage 'http://supertuxkart.sourceforge.net'
-  license :oss
+  license :gpl
 
   app 'Supertuxkart.app'
 end
