@@ -5,7 +5,7 @@ cask :v1 => 'stellarium' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/stellarium/Stellarium-#{version}.dmg"
   homepage 'http://stellarium.org'
-  license :oss
+  license :gpl
 
   app 'Stellarium.app'
 end
