@@ -4,7 +4,7 @@ cask :v1 => 'squirrel' do
 
   url "https://dl.bintray.com/lotem/rime/Squirrel-#{version}.zip"
   homepage 'https://github.com/lotem/squirrel'
-  license :oss
+  license :gpl
 
   pkg 'Squirrel.pkg'
 
