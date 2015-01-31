@@ -18,7 +18,7 @@ cask :v1 => 'golly' do
   end
 
   homepage 'http://golly.sourceforge.net/'
-  license :oss
+  license :gpl
 
   caveats do
     files_in_usr_local
