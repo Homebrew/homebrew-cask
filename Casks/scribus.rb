@@ -6,7 +6,7 @@ cask :v1 => 'scribus' do
   url "http://downloads.sourceforge.net/project/scribus/scribus/#{version}/scribus-#{version}.dmg"
   name 'Scribus'
   homepage 'http://www.scribus.net/canvas/Scribus'
-  license :oss
+  license :gpl
 
   app 'Scribus.app'
 end
