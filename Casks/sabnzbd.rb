@@ -5,7 +5,7 @@ cask :v1 => 'sabnzbd' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/sabnzbdplus/sabnzbdplus/#{version}/SABnzbd-#{version}-osx.dmg"
   homepage 'http://sabnzbd.org/'
-  license :oss
+  license :gpl
 
   app 'SABnzbd.app'
 
