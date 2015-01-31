@@ -7,7 +7,7 @@ cask :v1 => 'skim' do
           :sha256 => '92ff99e126c3daf99d680dd23f16ab84e26430e96478bbaeb71180756dd12ce1'
   name 'Skim'
   homepage 'http://skim-app.sourceforge.net/'
-  license :oss
+  license :bsd
 
   app 'Skim.app'
   binary 'Skim.app/Contents/SharedSupport/displayline'
