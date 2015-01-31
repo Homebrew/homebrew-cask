@@ -5,7 +5,7 @@ cask :v1 => 'djview' do
   url "http://downloads.sourceforge.net/sourceforge/djvu/djvulibre-3.5.22%2Bdjview-#{version}-intel-3.zip"
   name 'DjView'
   homepage 'http://djvu.sourceforge.net/'
-  license :oss
+  license :gpl
 
   container :nested => "djvulibre-3.5.22+djview-#{version}-intel.dmg"
   app 'DjView.app'
