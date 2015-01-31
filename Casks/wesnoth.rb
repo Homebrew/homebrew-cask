@@ -5,7 +5,7 @@ cask :v1 => 'wesnoth' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/wesnoth/Wesnoth_#{version}.dmg"
   homepage 'http://wesnoth.org'
-  license :oss
+  license :gpl
 
   app 'Wesnoth.app'
 end
