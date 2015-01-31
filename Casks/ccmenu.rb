@@ -7,7 +7,7 @@ cask :v1 => 'ccmenu' do
           :sha256 => 'a72951f416906d309cb7ec8d233bf5546540641efa99332e0f1bdde119b51cac'
   name 'CCMenu'
   homepage 'http://ccmenu.sourceforge.net/'
-  license :oss
+  license :bsd
 
   app 'CCMenu.app'
 end
