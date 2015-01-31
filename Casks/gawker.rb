@@ -6,7 +6,7 @@ cask :v1 => 'gawker' do
   appcast 'http://gawker.sourceforge.net/appcast.xml'
   name 'Gawker'
   homepage 'http://gawker.sourceforge.net/Gawker.html'
-  license :oss
+  license :gpl
 
   app 'Gawker.app'
 end
