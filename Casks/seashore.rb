@@ -4,7 +4,7 @@ cask :v1 => 'seashore' do
 
   url 'http://downloads.sourceforge.net/sourceforge/seashore/Seashore.zip'
   homepage 'http://seashore.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'Seashore.app'
 end
