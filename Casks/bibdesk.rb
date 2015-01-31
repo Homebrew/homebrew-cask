@@ -6,7 +6,7 @@ cask :v1 => 'bibdesk' do
   appcast 'http://bibdesk.sourceforge.net/bibdesk.xml',
           :sha256 => '1e2b0f0c5e7de9f352ffa2f5b894ec5c4c3c0bb22c4a2018fa5b054df1ebfaa5'
   homepage 'http://bibdesk.sourceforge.net/'
-  license :oss
+  license :bsd
 
   app 'BibDesk.app'
 
