@@ -3,8 +3,14 @@ cask :v1 => 'clion-eap' do
   sha256 '906cddde3fa6cba3afd9b66e1dd303ab7bf77ab4dc061e2d692932f30c818679'
 
   url "http://download.jetbrains.com/cpp/CLion-#{version}.dmg"
+  name 'CLion EAP'
+  name 'CLion'
   homepage 'http://www.jetbrains.com/clion/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'CLion EAP.app'
+  
+  postflight do
+    plist_set(':JVMOptions:JVMVersion', '1.6+')
+  end
 end
