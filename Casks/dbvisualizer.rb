@@ -1,10 +1,14 @@
 cask :v1 => 'dbvisualizer' do
-  version '9.2'
-  sha256 'caddfc43f3550487b4f4b0e6a671dde52eb402b348ce091b30aaf341c96a0630'
+  version '9.2.1'
+  sha256 '6c09f7685dd8369a5f5bbfc98be296788ef52ac71e001d9a2925603d571d789d'
 
-  url "http://www.dbvis.com/product_download/dbvis-#{version}/media/dbvis_macos_#{version.gsub('.', '_')}.tgz"
+  url "http://www.dbvis.com/product_download/dbvis-#{version}/media/dbvis_macos_#{version.gsub('.', '_')}_java7.dmg"
   homepage 'http://www.dbvis.com/'
   license :commercial
+
+  preflight do
+    system "#{staged_path}/DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub", '-q', '-dir', "#{staged_path}"
+  end
 
   app 'DbVisualizer.app'
 
