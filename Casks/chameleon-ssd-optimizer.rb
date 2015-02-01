@@ -9,4 +9,9 @@ cask :v1 => 'chameleon-ssd-optimizer' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Chameleon SSD Optimizer.app'
+
+  zap :delete => [
+                  '~/Library/Preferences/aletest.Chameleon-SSD-Optimizer.plist',
+                  '~/Library/Caches/aletest.Chameleon-SSD-Optimizer/',
+                 ]
 end
