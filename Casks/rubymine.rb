@@ -5,7 +5,7 @@ cask :v1 => 'rubymine' do
   url "http://download-cf.jetbrains.com/ruby/RubyMine-#{version}.dmg"
   name 'RubyMine'
   homepage 'http://www.jetbrains.com/ruby/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'RubyMine.app'
 
