@@ -6,7 +6,7 @@ cask :v1 => 'multidoge' do
   url "https://github.com/langerhans/multidoge/releases/download/v#{version}/multidoge-#{version}.dmg"
   name 'MultiDoge'
   homepage 'http://multidoge.org/'
-  license :oss
+  license :mit
 
   app 'MultiDoge.app'
 end

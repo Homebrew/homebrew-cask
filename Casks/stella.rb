@@ -4,7 +4,7 @@ cask :v1 => 'stella' do
 
   url "http://downloads.sourceforge.net/project/stella/stella/#{version}/Stella-#{version}_intel-macosx.dmg"
   homepage 'http://stella.sourceforge.net'
-  license :oss
+  license :gpl
 
   app 'Stella.app'
 end

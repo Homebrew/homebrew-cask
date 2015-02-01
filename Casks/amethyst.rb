@@ -7,7 +7,7 @@ cask :v1 => 'amethyst' do
   appcast 'http://ianyh.github.io/Amethyst/appcast.xml',
           :sha256 => '483c803029845953a1d93aa93f7ba2856d0cf1ca5a246d7d98b61508f7b09ff8'
   homepage 'http://ianyh.com/amethyst'
-  license :oss
+  license :mit
 
   app 'Amethyst.app'
 end

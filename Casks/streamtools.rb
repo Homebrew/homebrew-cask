@@ -13,5 +13,5 @@ cask :v1 => 'streamtools' do
 
   name 'streamtools'
   homepage 'http://nytlabs.github.io/streamtools/'
-  license :oss
+  license :apache
 end

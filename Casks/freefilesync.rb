@@ -4,7 +4,7 @@ cask :v1 => 'freefilesync' do
 
   url "http://downloads.sourceforge.net/project/freefilesync/FreeFileSync/#{version}/FreeFileSync_#{version}_Mac_OS_X_64-bit.zip"
   homepage 'http://freefilesync.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'FreeFileSync.app'
   app 'RealtimeSync.app'

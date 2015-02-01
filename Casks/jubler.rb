@@ -5,7 +5,7 @@ cask :v1 => 'jubler' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/jubler/Jubler-#{version}.dmg"
   homepage 'http://www.jubler.org/'
-  license :oss
+  license :gpl
 
   app 'Jubler.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'imgur' do
 
   url 'https://github.com/zbuc/imgurBar/raw/master/imgur.dmg'
   homepage 'https://github.com/zbuc/imgurBar'
-  license :oss
+  license :bsd
 
   app 'imgur.app'
 end

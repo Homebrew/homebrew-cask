@@ -7,7 +7,7 @@ cask :v1 => 'xaos' do
   name 'XaoS'
   name 'GNU XaoS'
   homepage 'http://matek.hu/xaos'
-  license :oss
+  license :gpl
 
   app 'XaoS.app'
 end

@@ -5,7 +5,7 @@ cask :v1 => 'thyme' do
   url "https://joaomoreno.github.io/thyme/dist/Thyme-#{version}.dmg"
   name 'Thyme'
   homepage 'http://joaomoreno.github.io/thyme/'
-  license :oss
+  license :mit
 
   app 'Thyme.app'
 end

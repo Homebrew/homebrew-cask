@@ -4,7 +4,7 @@ cask :v1 => 'sqlexplorer' do
 
   url "http://downloads.sourceforge.net/project/eclipsesql/SQL%20Explorer%20RCP%20%28exc%20JRE%29/#{version}/sqlexplorer_rcp-#{version}.macosx.cocoa.x86.tgz"
   homepage 'http://eclipsesql.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'SQLExplorer/sqlexplorer.app'
 end

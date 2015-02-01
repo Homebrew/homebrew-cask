@@ -6,7 +6,7 @@ cask :v1 => 'iupx' do
   appcast 'http://iupx.sourceforge.net/updates/appcast.xml'
   name 'iUPX'
   homepage 'http://iupx.sourceforge.net'
-  license :oss
+  license :gpl
 
   app 'iUPX.app'
 end

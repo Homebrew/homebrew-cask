@@ -8,7 +8,7 @@ cask :v1 => 'laullon-gitx' do
   appcast 'http://gitx.laullon.com/appcast.xml',
           :sha256 => '7ce5197de931145d75c57c2171fba559481e79e23bedd58ec107b476731f693b'
   homepage 'http://gitx.laullon.com/'
-  license :oss
+  license :gpl
 
   app 'GitX.app'
   binary 'GitX.app/Contents/Resources/gitx'

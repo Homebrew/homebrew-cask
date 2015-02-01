@@ -5,7 +5,7 @@ cask :v1 => 'mame' do
   url "http://downloads.sourceforge.net/mameosx/MAMEOSX-#{version}.dmg"
   name 'MAME'
   homepage 'http://mameosx.sourceforge.net/'
-  license :oss
+  license :gratis
 
   app 'MAME OS X.app'
 end

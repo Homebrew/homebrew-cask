@@ -4,7 +4,7 @@ cask :v1 => 'qtspim' do
 
   url 'http://sourceforge.net/projects/spimsimulator/files/latest/download'
   homepage 'http://spimsimulator.sourceforge.net/'
-  license :oss
+  license :bsd
 
   app 'QtSpim.app'
 end

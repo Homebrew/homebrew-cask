@@ -5,7 +5,7 @@ cask :v1 => 'nomacs' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/nomacs/nomacs-#{version}-x86_64.dmg"
   homepage 'http://www.nomacs.org/'
-  license :oss
+  license :gpl
 
   app 'nomacs.app'
 end

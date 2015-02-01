@@ -7,7 +7,7 @@ cask :v1 => 'qdesktop' do
   appcast 'http://qvacua.com/qdesktop/appcast.xml',
           :sha256 => '9714a19fae1e50cfdc06a1f300dae791d400b4c64a0f679b29d633ea8a59b46b'
   homepage 'http://qvacua.com'
-  license :oss
+  license :gpl
 
   app 'Qdesktop.app'
 end

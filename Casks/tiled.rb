@@ -6,7 +6,7 @@ cask :v1 => 'tiled' do
   url "https://github.com/bjorn/tiled/releases/download/v#{version}/tiled-#{version}.dmg"
   name 'Tiled'
   homepage 'http://www.mapeditor.org/'
-  license :oss
+  license :gpl
 
   app 'Tiled.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'mumble' do
   gpg "#{url}.sig",
       :key_url => 'http://mumble.info/gpg/mumble-auto-build-2014.asc'
   homepage 'http://mumble.sourceforge.net'
-  license :oss
+  license :bsd
 
   app 'Mumble.app'
 end

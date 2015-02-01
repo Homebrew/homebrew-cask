@@ -5,7 +5,7 @@ cask :v1 => 'aria-maestosa' do
   url "http://downloads.sourceforge.net/sourceforge/ariamaestosa/AriaMaestosa-osx-#{version}.zip"
   name 'Aria Maestosa'
   homepage 'http://ariamaestosa.sourceforge.net'
-  license :oss
+  license :gpl
 
   app "AriaMaestosa-#{version}/Aria Maestosa.app"
 end

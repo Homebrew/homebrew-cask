@@ -6,7 +6,7 @@ cask :v1 => 'sourcedrop' do
   url "https://github.com/hohl/sourcedrop-osx/releases/download/r#{version}/SourceDrop-r#{version}.zip"
   name 'SourceDrop'
   homepage 'http://sourcedrop.net/'
-  license :oss
+  license :bsd
 
   app "SourceDrop.app"
 end

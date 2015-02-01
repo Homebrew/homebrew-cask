@@ -4,7 +4,7 @@ cask :v1 => 'grandperspective' do
 
   url "http://downloads.sourceforge.net/project/grandperspectiv/grandperspective/#{version}/GrandPerspective-#{version.gsub('.','_')}.dmg"
   homepage 'http://grandperspectiv.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'GrandPerspective.app'
 

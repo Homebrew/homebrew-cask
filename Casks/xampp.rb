@@ -6,7 +6,7 @@ cask :v1 => 'xampp' do
   url "http://downloads.sourceforge.net/project/xampp/XAMPP%20Mac%20OS%20X/#{version.sub(%r{-\d+$},'')}/xampp-osx-#{version}-installer.dmg"
   name 'XAMPP'
   homepage 'http://www.apachefriends.org/'
-  license :oss
+  license :gpl
 
   installer :manual => 'XAMPP.app'
 

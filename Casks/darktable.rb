@@ -6,7 +6,7 @@ cask :v1 => 'darktable' do
   url "https://github.com/darktable-org/darktable/releases/download/release-#{version}/darktable-#{version}.dmg"
   name 'darktable'
   homepage 'http://www.darktable.org/'
-  license :oss
+  license :gpl
 
   app 'darktable.app'
 end

@@ -5,7 +5,7 @@ cask :v1 => 'instead' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/instead/instead/#{version}/Instead-#{version}.dmg"
   homepage 'http://instead.syscall.ru/'
-  license :oss
+  license :mit
 
   app 'Instead.app'
 end

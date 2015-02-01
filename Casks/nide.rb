@@ -4,7 +4,7 @@ cask :v1 => 'nide' do
 
   url "https://github.com/downloads/Coreh/nide/nide-v#{version}.dmg"
   homepage 'http://coreh.github.io/nide/'
-  license :oss
+  license :mit
 
   app 'Nide.app'
 end

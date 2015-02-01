@@ -6,7 +6,7 @@ cask :v1 => 'cocoarestclient' do
   appcast 'http://restlesscode.org/cocoa-rest-client/appcast.xml',
           :sha256 => '32d1b71d2ade6fc17554d1e7bcbc900c9ace68c34046ea7c2d785142e0d60520'
   homepage 'http://mmattozzi.github.io/cocoa-rest-client/'
-  license :oss
+  license :bsd
 
   app 'CocoaRestClient.app'
 end

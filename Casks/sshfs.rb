@@ -4,7 +4,7 @@ cask :v1 => 'sshfs' do
 
   url "https://github.com/osxfuse/sshfs/releases/download/osxfuse-sshfs-#{version}/sshfs-#{version}.pkg"
   homepage 'http://osxfuse.github.io/'
-  license :oss
+  license :gpl
 
   pkg "sshfs-#{version}.pkg"
 

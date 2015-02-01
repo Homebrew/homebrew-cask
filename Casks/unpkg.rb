@@ -6,7 +6,7 @@ cask :v1 => 'unpkg' do
   url "https://github.com/downloads/timdoug/unpkg/unpkg-#{version}.zip"
   name 'unpkg'
   homepage 'http://www.timdoug.com/unpkg/'
-  license :oss
+  license :gpl
 
   app "unpkg #{version}/unpkg.app"
 end

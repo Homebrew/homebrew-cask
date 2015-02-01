@@ -4,7 +4,7 @@ cask :v1 => 'utc-menu-clock' do
 
   url "https://github.com/downloads/netik/UTCMenuClock/UTCMenuClock_#{version}_installer.pkg"
   homepage 'https://github.com/netik/UTCMenuClock'
-  license :oss
+  license :apache
 
   pkg "UTCMenuClock_#{version}_installer.pkg"
 

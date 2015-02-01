@@ -4,7 +4,7 @@ cask :v1 => 'doublecommand' do
 
   url "http://doublecommand.sourceforge.net/files/DoubleCommand-#{version}.dmg"
   homepage 'http://doublecommand.sourceforge.net'
-  license :oss
+  license :gpl
 
   pkg "DoubleCommand-#{version}.pkg"
 

@@ -10,7 +10,7 @@ cask :v1 => 'tiddlywiki' do
   end
 
   homepage 'https://github.com/Jermolene/TiddlyDesktop'
-  license :oss
+  license :bsd
 
   app 'TiddlyWiki.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'phoenix' do
 
   url 'https://raw.github.com/sdegutis/phoenix/master/Builds/Phoenix-LATEST.app.tar.gz'
   homepage 'https://github.com/sdegutis/Phoenix'
-  license :oss
+  license :mit
 
   app 'Phoenix.app'
 

@@ -4,7 +4,7 @@ cask :v1 => 'freemind' do
 
   url "http://downloads.sourceforge.net/project/freemind/freemind/#{version}/FreeMind_#{version}.dmg"
   homepage 'freemind.sourceforge.net'
-  license :oss
+  license :gpl
 
   app 'FreeMind.app'
 end

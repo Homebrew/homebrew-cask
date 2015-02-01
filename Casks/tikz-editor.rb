@@ -4,7 +4,7 @@ cask :v1 => 'tikz-editor' do
 
   url "https://github.com/downloads/fredokun/TikZ-Editor/TikZ%20Editor-#{version}.dmg"
   homepage 'https://github.com/fredokun/TikZ-Editor'
-  license :oss
+  license :gpl
 
   app 'TikZ Editor.app'
 end

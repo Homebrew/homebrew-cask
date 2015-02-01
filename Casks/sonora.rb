@@ -7,7 +7,7 @@ cask :v1 => 'sonora' do
   appcast 'http://getsonora.com/updates/sonora2.xml'
   name 'Sonora'
   homepage 'http://getsonora.com/'
-  license :oss
+  license :gratis
 
   app 'Sonora.app'
 end

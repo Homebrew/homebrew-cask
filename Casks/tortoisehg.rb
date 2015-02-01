@@ -4,7 +4,7 @@ cask :v1 => 'tortoisehg' do
 
   url "https://bitbucket.org/tortoisehg/files/downloads/TortoiseHg-#{version}-mac-x64.zip"
   homepage 'http://tortoisehg.bitbucket.org/'
-  license :oss
+  license :gpl
 
   app 'TortoiseHg.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'cloudytabs' do
   appcast 'http://joshparnham.com/projects/cloudytabs/appcast.xml',
           :sha256 => '70140cb26a2a25589d739d6dac6f2e04118a938814909fe08c720b0174adf2b4'
   homepage 'https://github.com/josh-/CloudyTabs/'
-  license :oss
+  license :mit
 
   app 'CloudyTabs.app'
 end

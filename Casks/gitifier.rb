@@ -7,7 +7,7 @@ cask :v1 => 'gitifier' do
           :sha256 => '5bf8682d28e0a59966f8107efbca6be05b60a32252da7288952b35c3fb4e269b'
   name 'Gitifier'
   homepage 'http://psionides.github.io/Gitifier/'
-  license :oss
+  license :eclipse
 
   app 'Gitifier.app'
 end

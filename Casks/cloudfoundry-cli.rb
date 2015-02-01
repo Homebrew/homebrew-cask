@@ -6,7 +6,7 @@ cask :v1 => 'cloudfoundry-cli' do
   url "http://go-cli.s3-website-us-east-1.amazonaws.com/releases/v#{version}/installer-osx-amd64.pkg"
   name 'Cloud Foundry CLI'
   homepage 'https://github.com/cloudfoundry/cli'
-  license :oss
+  license :apache
 
   pkg 'installer-osx-amd64.pkg'
 

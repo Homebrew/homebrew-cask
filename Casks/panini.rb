@@ -4,7 +4,7 @@ cask :v1 => 'panini' do
 
   url "http://downloads.sourceforge.net/sourceforge/pvqt/Panini-#{version}B-mac.dmg"
   homepage 'http://sourceforge.net/projects/pvqt/'
-  license :oss
+  license :gpl
 
   app 'Panini.app'
 end

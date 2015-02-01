@@ -5,7 +5,7 @@ cask :v1 => 'rythem' do
   url "https://github.com/AlloyTeam/Rythem/releases/download/filter/Rythem-#{version}.dmg"
   name 'Rythem'
   homepage 'https://github.com/AlloyTeam/Rythem'
-  license :oss
+  license :mit
 
   app 'Rythem.app'
 end

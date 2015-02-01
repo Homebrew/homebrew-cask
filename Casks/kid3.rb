@@ -5,7 +5,7 @@ cask :v1 => 'kid3' do
 
   url "http://downloads.sourceforge.net/sourceforge/kid3/kid3-#{version}-Darwin.dmg"
   homepage 'http://kid3.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'Kid3.app'
 end

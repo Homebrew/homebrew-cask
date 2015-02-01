@@ -6,7 +6,7 @@ cask :v1 => 'ps3-media-server' do
   url "http://downloads.sourceforge.net/project/ps3mediaserver/pms-#{version}-setup-macosx.tar.gz"
   name 'PS3 Media Server'
   homepage 'http://www.ps3mediaserver.org/'
-  license :oss
+  license :gpl
 
   installer :manual => 'PS3 Media Server Setup.app'
 end

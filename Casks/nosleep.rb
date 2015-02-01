@@ -6,7 +6,7 @@ cask :v1 => 'nosleep' do
   url "https://github.com/integralpro/nosleep/releases/download/v#{version}/NoSleep-#{version}.dmg"
   name 'NoSleep'
   homepage 'https://code.google.com/p/macosx-nosleep-extension/'
-  license :oss
+  license :gpl
 
   pkg 'NoSleep.pkg'
 

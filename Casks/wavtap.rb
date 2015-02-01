@@ -4,7 +4,7 @@ cask :v1 => 'wavtap' do
 
   url "https://github.com/downloads/pje/WavTap/WavTap%20#{version}.pkg"
   homepage 'https://github.com/pje/wavtap'
-  license :oss
+  license :mit
 
   pkg "WavTap #{version}.pkg"
 

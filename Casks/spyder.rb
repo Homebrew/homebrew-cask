@@ -6,7 +6,7 @@ cask :v1 => 'spyder' do
   url "https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-#{version}-py3.4.dmg"
   name 'Spyder'
   homepage 'https://code.google.com/p/spyderlib/'
-  license :oss
+  license :mit
 
   app 'Spyder.app'
 end

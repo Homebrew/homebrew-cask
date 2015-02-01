@@ -4,7 +4,7 @@ cask :v1 => 'vessel' do
 
   url "https://github.com/awvessel/vessel/releases/download/#{version}/Vessel.app.zip"
   homepage 'http://awvessel.github.io'
-  license :oss
+  license :bsd
 
   app 'Vessel.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'opennx' do
   url "http://downloads.sourceforge.net/sourceforge/opennx/OpenNX-#{version}.dmg"
   name 'OpenNX'
   homepage 'http://opennx.net/'
-  license :oss
+  license :gpl
 
   pkg 'OpenNX.pkg'
 

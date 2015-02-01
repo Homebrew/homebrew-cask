@@ -6,7 +6,7 @@ cask :v1 => 'desmume' do
   url "http://downloads.sourceforge.net/sourceforge/desmume/desmume-#{version}-mac.dmg"
   name 'DeSmuME'
   homepage 'http://www.desmume.org'
-  license :oss
+  license :gpl
 
   app 'DeSmuME.app'
 end

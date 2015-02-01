@@ -6,7 +6,7 @@ cask :v1 => 'lisanet-gimp' do
   url "http://downloads.sourceforge.net/gimponosx/Gimp-#{version}-Mavericks-Yosemite.dmg"
   name 'GIMP'
   homepage 'http://gimp.lisanet.de'
-  license :oss
+  license :gpl
 
   app 'Gimp.app'
 end

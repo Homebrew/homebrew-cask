@@ -4,7 +4,7 @@ cask :v1 => 'cuda-z' do
 
   url "http://downloads.sourceforge.net/sourceforge/cuda-z/CUDA-Z-#{version}.dmg"
   homepage 'http://cuda-z.sourceforge.net'
-  license :oss
+  license :gpl
 
   app 'Cuda-Z.app'
 end

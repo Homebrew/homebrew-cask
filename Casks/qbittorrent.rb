@@ -5,7 +5,7 @@ cask :v1 => 'qbittorrent' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/qbittorrent/qbittorrent-#{version}.dmg"
   homepage 'http://www.qbittorrent.org'
-  license :oss
+  license :gpl
 
   app 'qBittorrent.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'tagger' do
   appcast 'http://bilalh.github.com/sparkle/tagger/appcast.xml',
           :sha256 => 'df4ef5a84c4900943529c0a45e7bf47a0823985fd558462899b5029fb32ce25e'
   homepage 'http://bilalh.github.io/projects/tagger/'
-  license :oss
+  license :cc
 
   app 'Tagger.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'tribler' do
   url "https://github.com/Tribler/tribler/releases/download/v#{version}/Tribler-#{version}.dmg"
   name 'Tribler'
   homepage 'http://www.tribler.org'
-  license :oss
+  license :gpl
 
   app 'Tribler.app'
 end

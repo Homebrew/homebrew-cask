@@ -5,7 +5,7 @@ cask :v1 => 'cocoadialog' do
   url "https://github.com/downloads/mstratman/cocoadialog/CocoaDialog-#{version}.dmg"
   name 'cocoaDialog'
   homepage 'http://mstratman.github.io/cocoadialog/'
-  license :oss
+  license :gpl
 
   app 'CocoaDialog.app'
 end

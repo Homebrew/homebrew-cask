@@ -6,7 +6,7 @@ cask :v1 => 'freecol' do
   url "http://downloads.sourceforge.net/sourceforge/freecol/freecol-#{version}-mac.tar.bz2"
   name 'FreeCol'
   homepage 'http://freecol.org'
-  license :oss
+  license :gpl
 
   app 'FreeCol.app'
 end

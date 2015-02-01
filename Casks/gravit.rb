@@ -5,7 +5,7 @@ cask :v1 => 'gravit' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/quasado/gravit-hub/releases/download/#{version}/Gravit-Mac-OSX.dmg"
   homepage 'http://gravit.io/'
-  license :oss
+  license :cc
 
   app 'Gravit.app'
 end

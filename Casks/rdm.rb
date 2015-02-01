@@ -5,7 +5,7 @@ cask :v1 => 'rdm' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/uglide/RedisDesktopManager/releases/download/0.7.6/redis-desktop-manager-#{version}.dmg"
   homepage 'http://redisdesktop.com'
-  license :oss
+  license :gpl
 
   app 'rdm.app'
 end

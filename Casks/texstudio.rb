@@ -4,7 +4,7 @@ cask :v1 => 'texstudio' do
 
   url "http://downloads.sourceforge.net/sourceforge/texstudio/texstudio_#{version}_osx_qt5.zip"
   homepage 'http://texstudio.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'texstudio.app'
 end

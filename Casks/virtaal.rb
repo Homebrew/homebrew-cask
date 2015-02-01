@@ -5,7 +5,7 @@ cask :v1 => 'virtaal' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/translate/Virtaal/#{version.sub(%r{^(\d+\.\d+\.\d+).*},'\1')}/Virtaal-#{version.sub(%r{^(\d+\.\d+\.\d+).*},'\1')}-Mac-Beta-2.dmg"
   homepage 'http://virtaal.translatehouse.org/'
-  license :oss
+  license :gpl
 
   app 'Virtaal.app'
 end

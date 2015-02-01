@@ -12,7 +12,7 @@ cask :v1 => 'filezilla' do
   url "http://downloads.sourceforge.net/project/filezilla/FileZilla_Client/#{version}/FileZilla_#{version}_macosx-x86.app.tar.bz2"
   name 'FileZilla'
   homepage 'https://filezilla-project.org/'
-  license :oss
+  license :gpl
 
   app 'FileZilla.app'
   # todo verify that this does not contain user-generate content

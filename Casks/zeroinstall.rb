@@ -6,7 +6,7 @@ cask :v1 => 'zeroinstall' do
   url "http://downloads.sourceforge.net/project/zero-install/0install/#{version}/ZeroInstall.pkg"
   name 'Zero Install'
   homepage 'http://0install.net'
-  license :oss
+  license :gpl
 
   pkg 'ZeroInstall.pkg'
 

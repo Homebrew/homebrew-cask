@@ -7,7 +7,7 @@ cask :v1 => 'jenkins-menu' do
   appcast 'http://qvacua.com/jenkinsmenu/appcast.xml',
           :sha256 => '420aaafc9de36c174ba1b43d1dfd4719603808f1754da8b7bb2a4ef1e934429d'
   homepage 'http://qvacua.com'
-  license :oss
+  license :gpl
 
   app 'Jenkins Menu.app'
 end

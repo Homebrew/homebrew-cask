@@ -4,7 +4,7 @@ cask :v1 => 'mjolnir' do
 
   url "https://github.com/sdegutis/mjolnir/releases/download/#{version}/Mjolnir-#{version}.tgz"
   homepage 'http://mjolnir.io'
-  license :oss
+  license :mit
 
   app 'Mjolnir.app'
 end

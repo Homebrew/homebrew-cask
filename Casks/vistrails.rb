@@ -6,7 +6,7 @@ cask :v1 => 'vistrails' do
   url "http://downloads.sourceforge.net/project/vistrails/vistrails/v#{version.sub(%r{-.*},'')}/vistrails-mac-10.6-intel-#{version}.dmg"
   name 'VisTrails'
   homepage 'http://www.vistrails.org/'
-  license :oss
+  license :bsd
 
   suite 'VisTrails'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'gulp' do
 
   url "https://github.com/sindresorhus/gulp-app/releases/download/#{version}/gulp.app.zip"
   homepage 'https://github.com/sindresorhus/gulp-app'
-  license :oss
+  license :mit
 
   app 'gulp.app'
 end

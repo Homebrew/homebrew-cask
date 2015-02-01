@@ -5,7 +5,7 @@ cask :v1 => 'osxfuse' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/osxfuse/osxfuse-#{version}/osxfuse-#{version}.dmg"
   homepage 'https://osxfuse.github.io/'
-  license :oss
+  license :bsd
 
   pkg "Install OSXFUSE #{version[0..-3]}.pkg"
 

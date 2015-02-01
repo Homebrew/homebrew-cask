@@ -5,7 +5,7 @@ cask :v1 => 'filebot' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/filebot/filebot/FileBot_#{version}/FileBot_#{version}.app.tar.gz"
   homepage 'http://www.filebot.net/'
-  license :oss
+  license :gpl
 
   app 'FileBot.app'
   binary 'FileBot.app/Contents/MacOS/filebot.sh', :target => 'filebot'

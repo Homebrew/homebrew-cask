@@ -5,7 +5,7 @@ cask :v1 => 'all-the-gifs' do
   url 'https://raw.github.com/orta/GIFs/master/web/GIFs.app.zip'
   name 'All The GIFs'
   homepage 'https://github.com/orta/GIFs'
-  license :oss
+  license :bsd
 
   app 'All The GIFs.app'
 end

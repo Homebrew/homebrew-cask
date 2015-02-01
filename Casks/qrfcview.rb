@@ -4,7 +4,7 @@ cask :v1 => 'qrfcview' do
 
   url "https://github.com/downloads/saghul/qrfcview-osx/qRFCView-#{version}-1.dmg"
   homepage 'https://saghul.github.io/qrfcview-osx'
-  license :oss
+  license :gpl
 
   app 'qRFCView.app'
 end

@@ -4,7 +4,7 @@ cask :v1 => 'openmsx' do
 
   url 'http://sourceforge.net/projects/openmsx/files/latest/download'
   homepage 'http://openmsx.sourceforge.net'
-  license :oss
+  license :gpl
 
   app 'openMSX.app'
 end

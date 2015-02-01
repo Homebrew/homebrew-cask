@@ -7,7 +7,7 @@ cask :v1 => 'slate' do
   appcast 'https://www.ninjamonkeysoftware.com/slate/appcast.xml'
   name 'Slate'
   homepage 'https://github.com/jigish/slate'
-  license :oss
+  license :gpl
 
   app 'Slate.app'
 

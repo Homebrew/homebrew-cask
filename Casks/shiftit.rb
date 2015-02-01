@@ -6,7 +6,7 @@ cask :v1 => 'shiftit' do
   appcast 'https://raw.github.com/fikovnik/ShiftIt/develop/release/appcast.xml',
           :sha256 => '16b9da1fa91aa964ad0fda907147d55e50da844d39a5fe5abcd0224abb954be3'
   homepage 'https://github.com/fikovnik/ShiftIt'
-  license :oss
+  license :gpl
 
   app 'ShiftIt.app'
 end

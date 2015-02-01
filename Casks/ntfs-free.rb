@@ -5,7 +5,7 @@ cask :v1 => 'ntfs-free' do
   url "http://downloads.sourceforge.net/sourceforge/ntfsfree/NTFS-free-#{version}.pkg"
   name 'NTFS-FREE'
   homepage 'http://sourceforge.net/projects/ntfsfree/'
-  license :oss
+  license :apache
 
   pkg "NTFS-free-#{version}.pkg"
 

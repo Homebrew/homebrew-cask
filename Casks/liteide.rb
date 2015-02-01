@@ -5,7 +5,7 @@ cask :v1 => 'liteide' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/liteide/X#{version}/liteidex#{version}.macosx.zip"
   homepage 'https://github.com/visualfc/liteide'
-  license :oss
+  license :gpl
 
   app 'LiteIDE.app'
 end

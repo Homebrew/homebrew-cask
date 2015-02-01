@@ -6,7 +6,7 @@ cask :v1 => 'tag' do
   url "http://downloads.sourceforge.net/sourceforge/tagosx/Tag-#{version}.zip"
   name 'Tag'
   homepage 'http://sbooth.org/Tag/'
-  license :oss
+  license :gpl
 
   app "Tag-#{version}/Tag.app"
 end

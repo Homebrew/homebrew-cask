@@ -5,7 +5,7 @@ cask :v1 => 'corsixth' do
   url "https://github.com/CorsixTH/CorsixTH/releases/download/v#{version}/CorsixTH-#{version}-OSX.dmg"
   name 'CorsixTH'
   homepage 'https://github.com/CorsixTH/CorsixTH'
-  license :oss
+  license :mit
 
   app 'CorsixTH.app'
 end

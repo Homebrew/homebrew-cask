@@ -4,7 +4,7 @@ cask :v1 => 'qlstephen' do
 
   url 'https://github.com/downloads/whomwah/qlstephen/QLStephen.qlgenerator.zip'
   homepage 'http://whomwah.github.io/qlstephen/'
-  license :oss
+  license :mit
 
   qlplugin 'QLStephen.qlgenerator'
 end

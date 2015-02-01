@@ -4,7 +4,7 @@ cask :v1 => 'ultrastardeluxe' do
 
   url "http://downloads.sourceforge.net/sourceforge/ultrastardx/UltraStarDeluxe-#{version}.dmg"
   homepage 'http://ultrastardx.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'UltraStarDeluxe.app'
 end
