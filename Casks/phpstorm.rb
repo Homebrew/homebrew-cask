@@ -3,6 +3,7 @@ cask :v1 => 'phpstorm' do
   sha256 'd6c6ee8c84edcdbd7da7c8af33185ecb7a1d9ddb4e5d97b035c9a30d07c8d073'
 
   url "http://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
+  name 'PhpStorm'
   homepage 'http://www.jetbrains.com/phpstorm/'
   license :commercial
 
