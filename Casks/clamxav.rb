@@ -1,10 +1,10 @@
 cask :v1 => 'clamxav' do
-  version '2.7.3'
-  sha256 'dc1197a5ec6ba935eeeeac20ed6e2196796ab6c9526efb72d3e8e2bd7939a34e'
+  version '2.7.4'
+  sha256 '06ea186034d5eb70c1fb4b2861024d473816f8ceed8e3ec00ce3597c6859a418'
 
   url "http://www.clamxav.com/downloads/ClamXav_#{version}.dmg"
   appcast 'http://www.clamxav.com/sparkle/profileInfo.php',
-          :sha256 => '3c17bec76fb79888947597a5b3a92f0319ca21455349701e0d78d4f24489e6ac'
+          :sha256 => '18846ac6439c582e5468840820a278199c06746ce0078a339964bd65d9942035'
   homepage 'http://www.clamxav.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
