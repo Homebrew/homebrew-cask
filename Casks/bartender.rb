@@ -3,6 +3,7 @@ cask :v1 => 'bartender' do
   sha256 :no_check
 
   url 'http://www.macbartender.com/Demo/Bartender.zip', :referer => 'http://www.macbartender.com'
+  name 'Bartender'
   appcast 'http://www.macbartender.com/updates/updates.php'
   homepage 'http://www.macbartender.com/'
   license :commercial
