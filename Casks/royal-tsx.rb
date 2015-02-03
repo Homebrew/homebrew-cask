@@ -1,12 +1,12 @@
 cask :v1 => 'royal-tsx' do
-  version '1.4.6.0'
-  sha256 'e67580fcf344302d81df00a6c43559a9d27dc1cc90428663059a6675d5d09355'
+  version '2.0.0.1000'
+  sha256 '1896d8a12c615ccf6c3b432b425a1ee9ee7c3d74439fc9a87ce2f253ccb775b4'
 
-  url "http://app.royaltsx.com/updates/royaltsx_#{version}.dmg"
-  appcast 'http://app.royaltsx.com/updates_stable.php',
-          :sha256 => 'bb602755a8168a181b849f8d35c543207780d42c6b68ac69715bcdc713e5fd8e'
+  url "http://v2.royaltsx.com/updates/royaltsx_#{version}.dmg"
+  appcast 'http://v2.royaltsx.com/updates_beta.php',
+          :sha256 => '322a251ba213a4ea9873ce4d5a1386cd9f17234ff683c88bcd939c6d9a458310'
   homepage 'http://www.royaltsx.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   app 'Royal TSX.app'
 end
