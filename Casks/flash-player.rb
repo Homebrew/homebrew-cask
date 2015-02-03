@@ -6,7 +6,7 @@ cask :v1 => 'flash-player' do
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.to_i}/flashplayer_#{version.to_i}_sa.dmg"
   name 'Adobe Flash Player'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
   tags :vendor => 'Adobe'
 
   app 'Flash Player.app'

@@ -6,7 +6,7 @@ cask :v1 => 'flash' do
   url "http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_#{version.to_i}_osx_pkg.dmg"
   name 'Adobe Flash Player'
   homepage 'https://www.adobe.com/products/flashplayer/distribution3.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
   tags :vendor => 'Adobe'
 
   pkg 'Install Adobe Flash Player.pkg'
