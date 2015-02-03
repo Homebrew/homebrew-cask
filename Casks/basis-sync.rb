@@ -4,6 +4,7 @@ cask :v1 => 'basis-sync' do
 
   # amazonaws is the official download host per the vendor homepage
   url "http://mybasis-duck.s3.amazonaws.com/client/BasisSync-#{version}.dmg"
+  name 'Basis Sync'
   homepage 'http://www.mybasis.com/'
   license :closed
 
