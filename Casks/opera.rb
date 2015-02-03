@@ -1,6 +1,6 @@
 cask :v1 => 'opera' do
-  version '26.0.1656.60'
-  sha256 'c2158afb3f874ced1558f28fa24ee49bd4444023e263ec0776bc1a3c511143d3'
+  version '27.0.1689.66'
+  sha256 '17dacdb1bb98d79475f231e6d34530b8405ebb772e9808f637232cb89bf964aa'
 
   url "http://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
   homepage 'http://www.opera.com/'
