@@ -10,6 +10,8 @@ describe Hbc::CLI::Info do
       http://example.com/local-caffeine
       Not installed
       https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-caffeine.rb
+      ==> Needs sudo to install?
+      false
       ==> Contents
         Caffeine.app (app)
     CLIOUTPUT
@@ -23,6 +25,8 @@ describe Hbc::CLI::Info do
         http://example.com/local-caffeine
         Not installed
         https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-caffeine.rb
+        ==> Needs sudo to install?
+        false
         ==> Contents
           Caffeine.app (app)
         local-transmission: 2.61
@@ -30,6 +34,8 @@ describe Hbc::CLI::Info do
         http://example.com/local-transmission
         Not installed
         https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-transmission.rb
+        ==> Needs sudo to install?
+        false
         ==> Contents
           Transmission.app (app)
       CLIOUTPUT
@@ -57,6 +63,8 @@ describe Hbc::CLI::Info do
       http://example.com/local-caffeine
       Not installed
       https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/with-caveats.rb
+      ==> Needs sudo to install?
+      false
       ==> Contents
         Caffeine.app (app)
       ==> Caveats
@@ -82,6 +90,8 @@ describe Hbc::CLI::Info do
       http://example.com/local-caffeine
       Not installed
       https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/with-conditional-caveats.rb
+      ==> Needs sudo to install?
+      false
       ==> Contents
         Caffeine.app (app)
     CLIOUTPUT
@@ -100,6 +110,22 @@ describe Hbc::CLI::Info do
       lambda {
         Hbc::CLI::Info.run('--notavalidoption')
       }.must_raise Hbc::CaskUnspecifiedError
+    end
+  end
+
+  describe 'with --machine-readable' do
+    it 'outputs JSON' do
+      out, err = capture_io do
+        Hbc::CLI::Info.run('local-caffeine', '--machine-readable')
+      end
+
+      parsed_info = JSON.parse(out)
+      parsed_info['name'].must_equal 'local-caffeine'
+      parsed_info['full_name'].must_equal 'local-caffeine'
+      parsed_info['installed'].must_equal false
+      parsed_info['homepage'].must_equal 'http://example.com/local-caffeine'
+      parsed_info['github_url'].must_equal 'https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-caffeine.rb'
+      parsed_info['requires_sudo'].must_equal false
     end
   end
 end
