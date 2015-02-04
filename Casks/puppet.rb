@@ -9,4 +9,5 @@ cask :v1 => 'puppet' do
   pkg "puppet-#{version}.pkg"
 
   uninstall :pkgutil => 'com.puppetlabs.puppet'
+  depends_on :cask => 'facter'
 end
