@@ -9,7 +9,7 @@ cask :v1 => 'pycharm-ee' do
   homepage 'https://www.jetbrains.com/pycharm-educational'
   license :apache
 
-  app 'PyCharm EE.app'
+  app 'PyCharm Educational.app'
 
   postflight do
     plist_set(':JVMOptions:JVMVersion', '1.6+')
