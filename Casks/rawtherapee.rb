@@ -13,7 +13,11 @@ cask :v1 => 'rawtherapee' do
   homepage 'http://rawtherapee.com'
   license :gpl
 
-  container :nested => "RawTherapee_OSX_10.6_64_#{version}.dmg"
+  if MacOS.release <= :mavericks
+    container :nested => "RawTherapee_OSX_10.6_64_#{version}.dmg"
+  else
+    container :nested => "RawTherapee_OSX_10.10_64_#{version}.dmg"
+  end
   app 'RawTherapee.app'
 
   depends_on :macos => '>= :snow_leopard',
