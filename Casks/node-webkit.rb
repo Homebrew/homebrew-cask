@@ -1,6 +1,6 @@
 cask :v1 => 'node-webkit' do
-  version '0.11.5'
-  sha256 '94af5cd1a77ef72ab04c5af3c132e6402289aad602587202a3d08f014e863943'
+  version '0.11.6'
+  sha256 '7e5ace3470f9f8a68232e2e12542408a2f0f1bc33edb7daddb452230cc223daa'
 
   # webkit.org is the official download host per the vendor homepage
   url "http://dl.node-webkit.org/v#{version}/node-webkit-v#{version}-osx-x64.zip"
