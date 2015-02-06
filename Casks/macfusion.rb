@@ -8,7 +8,7 @@ cask :v1 => 'macfusion' do
   homepage 'http://macfusionapp.org/'
   license :apache
 
-  depends_on :formula => 'sshfs'
+  depends_on :cask => 'sshfs'
 
   app 'Macfusion.app'
   # fix broken bundled sshfs, see https://github.com/osxfuse/osxfuse/wiki/SSHFS#macfusion
