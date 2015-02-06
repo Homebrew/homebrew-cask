@@ -4,6 +4,7 @@ require 'optparse'
 require 'shellwords'
 
 require 'hbc/cli/base'
+require 'hbc/cli/alfred'
 require 'hbc/cli/audit'
 require 'hbc/cli/cat'
 require 'hbc/cli/cleanup'
