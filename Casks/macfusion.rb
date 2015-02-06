@@ -8,5 +8,13 @@ cask :v1 => 'macfusion' do
   homepage 'http://macfusionapp.org/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
+  depends_on :formula => 'sshfs'
+
   app 'Macfusion.app'
+  # fix broken bundled sshfs, see https://github.com/osxfuse/osxfuse/wiki/SSHFS#macfusion
+  postflight do
+    Dir.chdir("#{staged_path}/Macfusion.app/Contents/PlugIns/sshfs.mfplugin/Contents/Resources")
+    File.rename("sshfs-static", "sshfs-static.orig")
+    File.symlink("/usr/local/bin/sshfs", "sshfs-static")
+  end
 end
