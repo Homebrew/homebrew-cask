@@ -1,18 +1,16 @@
-require 'test_helper'
+require 'spec_helper'
 require 'hbc/version'
 
 describe Hbc::CLI::Doctor do
   it 'displays some nice info about the environment' do
-    out, err = capture_io do
+    expect {
       Hbc::CLI::Doctor.run
-    end
-    # no point in trying to match more of this environment-specific info
-    out.must_match /\A==> OS X Release:/
+    }.to output(/\A==> OS X Release:/).to_stdout
   end
 
   it "raises an exception when arguments are given" do
-    lambda {
+    expect {
       Hbc::CLI::Doctor.run('argument')
-    }.must_raise ArgumentError
+    }.to raise_error(ArgumentError)
   end
 end
