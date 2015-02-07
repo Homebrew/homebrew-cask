@@ -314,9 +314,8 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
         directory = self.class.expand_path_strings([directory]).first if expand_tilde
         directory = self.class.remove_relative_path_strings(:rmdir, [ directory ]).first
         directory = self.class.remove_undeletable_path_strings(:rmdir, [ directory ]).first
-        next unless directory.respond_to?(:length)
-        next unless directory.length > 0
-        ohai "Removing directory if empty: #{directory.utf8_inspect}"
+        next unless directory.to_s.length > 0
+        ohai "Removing directory if empty: #{directory.to_s.utf8_inspect}"
         directory = Pathname.new(directory)
         next unless directory.exist?
         @command.run!('/bin/rm', :args => [ '-f', '--', directory.join('.DS_Store') ],
