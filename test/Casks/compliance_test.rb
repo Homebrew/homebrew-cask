@@ -1,7 +1,7 @@
 require 'test_helper'
 
 describe "Casks" do
-  Hbc.all.reject {|c| c.is_a?(TestHbc) }.each do |cask|
+  Hbc.all.reject {|c| c.is_a?(Hbc::TestCask) }.each do |cask|
     describe "#{cask}" do
       it "passes audit" do
         audit = Hbc::Audit.new(cask)

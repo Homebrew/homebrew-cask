@@ -1,4 +1,4 @@
-class Hbc; end
+module Hbc; end
 
 # raised by safe_system in utils.rb
 class Hbc::ErrorDuringExecution < RuntimeError

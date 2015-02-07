@@ -9,7 +9,7 @@ describe Hbc::DSL do
   end
 
   describe "when a Cask includes an unknown method" do
-    UnexpectedMethodCask = Class.new(Hbc)
+    UnexpectedMethodCask = Class.new(Hbc::Cask)
     attempt_unknown_method = nil
 
     before do
@@ -71,7 +71,7 @@ describe Hbc::DSL do
 
   describe "name stanza" do
     it "lets you set the full name via a name stanza" do
-      NameCask = Class.new(Hbc)
+      NameCask = Class.new(Hbc::Cask)
       NameCask.class_eval do
         name 'Proper Name'
       end
@@ -82,7 +82,7 @@ describe Hbc::DSL do
     end
 
     it "Accepts an array value to the name stanza" do
-      ArrayNameCask = Class.new(Hbc)
+      ArrayNameCask = Class.new(Hbc::Cask)
       ArrayNameCask.class_eval do
         name ['Proper Name', 'Alternate Name']
       end
@@ -94,7 +94,7 @@ describe Hbc::DSL do
     end
 
     it "Accepts multiple name stanzas" do
-      MultiNameCask = Class.new(Hbc)
+      MultiNameCask = Class.new(Hbc::Cask)
       MultiNameCask.class_eval do
         name 'Proper Name'
         name 'Alternate Name'
@@ -109,7 +109,7 @@ describe Hbc::DSL do
 
   describe "sha256 stanza" do
     it "lets you set checksum via sha256" do
-      ChecksumCask = Class.new(Hbc)
+      ChecksumCask = Class.new(Hbc::Cask)
       ChecksumCask.class_eval do
         sha256 'imasha2'
       end
@@ -120,7 +120,7 @@ describe Hbc::DSL do
 
   describe "app stanza" do
     it "allows you to specify app stanzas" do
-      CaskWithApps = Class.new(Hbc)
+      CaskWithApps = Class.new(Hbc::Cask)
       CaskWithApps.class_eval do
         app 'Foo.app'
         app 'Bar.app'
@@ -131,7 +131,7 @@ describe Hbc::DSL do
     end
 
     it "allow app stanzas to be empty" do
-      CaskWithNoApps = Class.new(Hbc)
+      CaskWithNoApps = Class.new(Hbc::Cask)
 
       instance = CaskWithNoApps.new
       Array(instance.artifacts[:app]).must_equal %w[]
@@ -140,13 +140,13 @@ describe Hbc::DSL do
 
   describe "caveats stanza" do
     it "allows caveats to be specified via a method define" do
-      PlainCask = Class.new(Hbc)
+      PlainCask = Class.new(Hbc::Cask)
 
       instance = PlainCask.new
 
       instance.caveats.must_be :empty?
 
-      CaskWithCaveats = Class.new(Hbc)
+      CaskWithCaveats = Class.new(Hbc::Cask)
       CaskWithCaveats.class_eval do
         def caveats; <<-EOS.undent
           When you install this Cask, you probably want to know this.
@@ -162,7 +162,7 @@ describe Hbc::DSL do
 
   describe "pkg stanza" do
     it "allows installable pkgs to be specified" do
-      CaskWithPkgs = Class.new(Hbc)
+      CaskWithPkgs = Class.new(Hbc::Cask)
       CaskWithPkgs.class_eval do
         pkg 'Foo.pkg'
         pkg 'Bar.pkg'

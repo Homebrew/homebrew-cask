@@ -134,7 +134,9 @@ FileUtils.mkdir_p Hbc.homebrew_prefix.join('bin')
 FileUtils.ln_s project_root, taps_dest.join('homebrew-cask')
 
 # Common superclass for test Casks for when we need to filter them out
-class TestHbc < Hbc; end
+module Hbc
+  class TestCask < Cask; end
+end
 
 # jack in some optional utilities
 FileUtils.ln_s '/usr/local/bin/cabextract', Hbc.homebrew_prefix.join('bin/cabextract')

@@ -19,7 +19,7 @@ describe Hbc::Artifact::App do
     end
 
     it "works with an application in a subdir" do
-      SubDirCask = Class.new(Hbc)
+      SubDirCask = Class.new(Hbc::Cask)
       SubDirCask.class_eval do
         url TestHelper.local_binary_url('caffeine.zip')
         homepage 'http://example.com/local-caffeine'

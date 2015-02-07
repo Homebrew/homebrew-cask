@@ -4,7 +4,7 @@ describe "Cask" do
   describe "load" do
     it "returns an instance of the Cask for the given token" do
       c = Hbc.load("adium")
-      c.must_be_kind_of(Hbc)
+      c.must_be_kind_of(Hbc::Cask)
       c.must_be_instance_of(KlassPrefixAdium)
     end
 
@@ -17,7 +17,7 @@ describe "Cask" do
       end
       location = File.expand_path('./Casks/dia.rb')
       c = Hbc.load(location)
-      c.must_be_kind_of(Hbc)
+      c.must_be_kind_of(Hbc::Cask)
       c.must_be_instance_of(KlassPrefixDia)
       Object.class_eval{remove_const :KlassPrefixDia}
     end
@@ -31,7 +31,7 @@ describe "Cask" do
       c = shutup do
         Hbc.load(url)
       end
-      c.must_be_kind_of(Hbc)
+      c.must_be_kind_of(Hbc::Cask)
       c.must_be_instance_of(KlassPrefixDia)
       Object.class_eval{remove_const :KlassPrefixDia}
     end
@@ -51,7 +51,7 @@ describe "Cask" do
       rescue
       end
       c = Hbc.load("./Casks/bbedit.rb")
-      c.must_be_kind_of(Hbc)
+      c.must_be_kind_of(Hbc::Cask)
       c.must_be_instance_of(KlassPrefixBbedit)
       Object.class_eval{remove_const :KlassPrefixBbedit}
     end
@@ -78,12 +78,12 @@ describe "Cask" do
 
   describe "token" do
     it "converts a class constant to a token-style dashed string" do
-      KlassPrefixPascalCasedConstant = Class.new(Hbc)
+      KlassPrefixPascalCasedConstant = Class.new(Hbc::Cask)
       KlassPrefixPascalCasedConstant.token.must_equal 'pascal-cased-constant'
     end
 
     it "properly dasherizes constants with single letters in the middle" do
-      KlassPrefixGamesXChange = Class.new(Hbc)
+      KlassPrefixGamesXChange = Class.new(Hbc::Cask)
       KlassPrefixGamesXChange.token.must_equal 'games-x-change'
     end
   end

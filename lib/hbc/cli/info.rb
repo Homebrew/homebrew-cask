@@ -38,7 +38,7 @@ PURPOSE
 
   def self.github_info(cask)
     cask_token = cask.token
-    cask_token = cask.class.all_tokens.detect { |t| t.split("/").last == cask_token } unless cask_token =~ /\//
+    cask_token = Hbc.all_tokens.detect { |t| t.split("/").last == cask_token } unless cask_token =~ /\//
     return nil unless cask_token.respond_to?(:length) and cask_token.length > 0
     path_elements = cask_token.split '/'
     if path_elements.count == 2
