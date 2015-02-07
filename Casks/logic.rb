@@ -7,5 +7,5 @@ cask :v1 => 'logic' do
   homepage 'http://www.saleae.com/'
   license :commercial
 
-  app "Logic.app"
+  app 'Logic.app'
 end
