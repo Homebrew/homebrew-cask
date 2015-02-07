@@ -45,7 +45,7 @@ end
 # originally from Homebrew
 def ohai(title, *sput)
   title = Tty.truncate(title) if $stdout.tty? && !Hbc.verbose
-  puts "#{Tty.blue.bold}==>#{Tty.white} #{title}#{Tty.reset}"
+  puts "#{Tty.blue.bold}==>#{Tty.reset.bold} #{title}#{Tty.reset}"
   puts sput unless sput.empty?
 end
 
@@ -65,7 +65,7 @@ def odebug(title, *sput)
     if $stdout.tty? and title.to_s.length > width
       title = title.to_s[0, width - 3] + '...'
     end
-    puts "#{Tty.magenta.bold}==>#{Tty.white} #{title}#{Tty.reset}"
+    puts "#{Tty.magenta.bold}==>#{Tty.reset.bold} #{title}#{Tty.reset}"
     puts sput unless sput.empty?
   end
 end
@@ -222,13 +222,13 @@ module Hbc::Utils
 
   def self.error_message_with_suggestions
     <<-EOS.undent
-    #{ Tty.reset.white.bold }
+    #{ Tty.reset.bold }
       Most likely, this means you have an outdated version of homebrew-cask.#{
       } Please run:
 
           #{ Tty.green.normal }#{ UPDATE_CMD }
 
-      #{ Tty.white.bold }If this doesn’t fix the problem, please report this bug:
+      #{ Tty.reset.bold }If this doesn’t fix the problem, please report this bug:
 
           #{ Tty.underline }#{ ISSUES_URL }#{ Tty.reset }
 

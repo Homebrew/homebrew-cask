@@ -78,7 +78,7 @@ class Hbc::Installer
     s = if MacOS.release >= :lion and not ENV['HOMEBREW_NO_EMOJI']
       (ENV['HOMEBREW_INSTALL_BADGE'] || "\xf0\x9f\x8d\xba") + '  '
     else
-      "#{Tty.blue.bold}==>#{Tty.white} Success!#{Tty.reset} "
+      "#{Tty.blue.bold}==>#{Tty.reset.bold} Success!#{Tty.reset} "
     end
     s << "#{@cask} staged at '#{@cask.staged_path}' (#{Hbc::Utils.cabv(@cask.staged_path)})"
   end
