@@ -3,6 +3,7 @@ cask :v1 => 'brackets' do
   sha256 'f958a50fe0d656b29b4629e159fcf584e03e8616a6349a55b19e39338bef8cda'
 
   url "https://github.com/adobe/brackets/releases/download/release-#{version}/Brackets.Release.#{version}.dmg"
+  name 'Brackets'
   homepage 'http://brackets.io'
   license :mit
 
