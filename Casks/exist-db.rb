@@ -4,6 +4,7 @@ cask :v1 => 'exist-db' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/exist/eXist-db-#{version}.dmg"
+  name 'eXist-db'
   homepage 'http://exist-db.org/'
   license :gpl
 
