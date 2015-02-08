@@ -3,6 +3,7 @@ cask :v1 => 'boinxtv' do
   sha256 'aeb95fc09c80975e25bd2a584807b408bb219bf39c099d6730bc8983cfedf7b6'
 
   url "https://cdn.boinx.com/software/boinxtv/Boinx_BoinxTV_#{version}.app.zip"
+  name 'BoinxTV'
   homepage 'http://boinx.com/boinxtv/'
   license :commercial
 
