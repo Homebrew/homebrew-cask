@@ -194,7 +194,7 @@ class Hbc::CLI
         Hbc.verbose = true
       end
       opts.on("--outdated") do |v|
-        Hbc.outdated = true
+        Hbc.cleanup_outdated = true
       end
     end
   end
