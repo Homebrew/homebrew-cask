@@ -4,6 +4,7 @@ cask :v1 => 'bino' do
 
   # free.fr is the official download host per the vendor homepage
   url "http://devernay.free.fr/hacks/bino/Bino-#{version}-OSX-SnowLeopard-GPL.zip"
+  name 'Bino'
   homepage 'http://bino3d.org'
   license :gpl
 
