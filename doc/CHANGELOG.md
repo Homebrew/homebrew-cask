@@ -21,10 +21,10 @@
  - [#9223][] Test casks decoupled
  - [#9218][] binary_test (minitest) -> binary_spec (rspec)
 * __Documentation__
-  - N doc commits since ...
+  - 4 doc commits since 0.53.0
 * __Contributors__
-  - N new contributors since ...
-  - N total contributors
+  - 49 new contributors since 0.53.0
+  - 1495 total contributors
 * __Release Date__
   - 2015-02-08 14:00:00 UTC
 
