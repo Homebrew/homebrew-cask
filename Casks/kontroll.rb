@@ -9,5 +9,7 @@ cask :v1 => 'kontroll' do
 
   app 'Kontroll.app'
 
+  depends_on :macos => '>= 10.10'
+
   zap :delete => '~/Library/Preferences/com.vinkla.Kontroll.plist'
 end
