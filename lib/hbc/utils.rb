@@ -76,33 +76,6 @@ def puts_columns(items, star_items=[])
 end
 
 module Hbc::Utils
-  def dumpcask
-    if Hbc.respond_to?(:debug) and Hbc.debug
-      odebug "Cask instance dumps in YAML:"
-      odebug "Cask instance toplevel:", self.to_yaml
-      [
-       :full_name,
-       :homepage,
-       :url,
-       :appcast,
-       :version,
-       :license,
-       :tags,
-       :sha256,
-       :artifacts,
-       :caveats,
-       :depends_on,
-       :conflicts_with,
-       :container,
-       :gpg,
-       :accessibility_access,
-      ].each do |method|
-        printable_method = method.to_s
-        printable_method = "name" if printable_method == "full_name"
-        odebug "Cask instance method '#{printable_method}':", self.send(method).to_yaml
-      end
-    end
-  end
 
   def self.which(cmd, path=ENV['PATH'])
     unless File.basename(cmd) == cmd.to_s
@@ -252,5 +225,16 @@ module Hbc::Utils
     yield
   ensure
     trap('INT', std_trap)
+  end
+
+  def self.nowstamp_metadata_path(container_path)
+    @timenow ||= Time.now.gmtime
+    if container_path.respond_to?(:join)
+      precision = 3
+      timestamp = @timenow.strftime('%Y%m%d%H%M%S')
+      fraction = ("%.#{precision}f" % (@timenow.to_f - @timenow.to_i))[1..-1]
+      timestamp.concat(fraction)
+      container_path.join(timestamp)
+    end
   end
 end

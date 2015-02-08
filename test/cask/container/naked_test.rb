@@ -2,7 +2,7 @@ require 'test_helper'
 
 describe Hbc::Container::Naked do
   it "saves files with spaces in them from uris with encoded spaces" do
-    SpaceyCask = Class.new(Hbc)
+    SpaceyCask = Class.new(Hbc::Cask)
     SpaceyCask.class_eval do
       url 'http://example.com/kevin%20spacey.pkg'
       version '1.2'

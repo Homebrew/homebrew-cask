@@ -6,7 +6,7 @@ describe Hbc::Artifact::PostflightBlock do
       called      = false
       yielded_arg = nil
 
-      CaskWithPostflight = Class.new(Hbc)
+      CaskWithPostflight = Class.new(Hbc::Cask)
       CaskWithPostflight.class_eval do
         postflight do |c|
           called = true
@@ -27,7 +27,7 @@ describe Hbc::Artifact::PostflightBlock do
       called      = false
       yielded_arg = nil
 
-      CaskWithUninstallPostflight = Class.new(Hbc)
+      CaskWithUninstallPostflight = Class.new(Hbc::Cask)
       CaskWithUninstallPostflight.class_eval do
         uninstall_postflight do |c|
           called = true

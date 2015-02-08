@@ -17,7 +17,9 @@ $:.push(project_root.join('lib').to_s)
 
 require 'hbc'
 
-class TestHbc < Hbc; end
+module Hbc
+  class TestCask < Cask; end
+end
 
 # override Homebrew locations
 Hbc.homebrew_prefix = Pathname.new(TEST_TMPDIR).join('prefix')
