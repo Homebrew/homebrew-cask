@@ -3,6 +3,7 @@ cask :v1 => 'eid-mw' do
   sha256 '12ef509d3e535714e7c81353979d7637da594293be81411adfc6f6ea4511374b'
 
   url "http://eid.belgium.be/nl/binaries/beid-#{version}-7780-signed_tcm227-259517.dmg"
+  name 'eID'
   homepage 'http://eid.belgium.be/'
   license :oss
 

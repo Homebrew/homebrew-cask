@@ -3,6 +3,7 @@ cask :v1 => 'eaglefiler' do
   sha256 'e1ff3a18c9f9f140f6943dc567877261f5f87c9e46f67a62ab539af0ededf389'
 
   url "http://c-command.com/downloads/EagleFiler-#{version}.dmg"
+  name 'EagleFiler'
   homepage 'http://c-command.com/eaglefiler/'
   license :commercial
 

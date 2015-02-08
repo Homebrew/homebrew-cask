@@ -4,6 +4,7 @@ cask :v1 => 'earthcoin' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://earthcoin.s3.amazonaws.com/releases/#{version}/macosx/EarthCoin-Qt-#{version}.dmg"
+  name 'Earthcoin'
   homepage 'http://getearthcoin.com/'
   license :oss
 

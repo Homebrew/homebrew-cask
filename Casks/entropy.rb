@@ -3,9 +3,10 @@ cask :v1 => 'entropy' do
   sha256 :no_check
 
   url 'http://www.eigenlogik.com/entropy/download'
+  name 'Entropy'
   appcast 'http://hyperion.eigenlogik.com/appcast/feed/entropy/'
   homepage 'http://www.eigenlogik.com/entropy/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Entropy.app'
 end
