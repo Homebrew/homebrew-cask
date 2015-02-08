@@ -12,5 +12,5 @@ cask :v1 => 'dbeaver-community' do
   homepage 'http://dbeaver.jkiss.org/'
   license :oss
 
-  app 'dbeaver/dbeaver.app'
+  app 'dbeaver/dbeaver.app', :target => 'DBeaver.app'
 end
