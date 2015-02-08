@@ -4,6 +4,7 @@ cask :v1 => 'blink1control' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/todbot/blink1/releases/download/v#{version}/Blink1Control-mac.zip"
+  name 'Blink1Control'
   homepage 'http://blink1.thingm.com/'
   license :cc
 
