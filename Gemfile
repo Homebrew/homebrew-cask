@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+group :release do
+  gem 'ronn', '0.7.3'
+end
+
 group :test do
   gem 'minitest', '5.4.1'
   gem 'minitest-colorize'

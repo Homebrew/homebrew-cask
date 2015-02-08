@@ -2,13 +2,20 @@ GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.2.5)
+    hpricot (0.8.6)
     metaclass (0.0.4)
     minitest (5.4.1)
     minitest-colorize (0.0.5)
       minitest (>= 2.0)
     mocha (1.1.0)
       metaclass (~> 0.0.1)
+    mustache (1.0.0)
     rake (10.0.4)
+    rdiscount (2.1.8)
+    ronn (0.7.3)
+      hpricot (>= 0.8.2)
+      mustache (>= 0.7.0)
+      rdiscount (>= 1.5.8)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
       rspec-expectations (~> 3.0.0)
@@ -30,4 +37,5 @@ DEPENDENCIES
   minitest-colorize
   mocha (= 1.1.0)
   rake
+  ronn (= 0.7.3)
   rspec (~> 3.0.0)

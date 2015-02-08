@@ -1,5 +1,44 @@
 # CHANGELOG
 
+## 0.53.1
+
+* __Casks__
+  - 34 Casks added (576 updated) by 109 contributors since 0.53.0
+  - 2273 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#9473][] Use bold terminal escapes instead of white
+  - [#9455][] alfred: bring back cli command as stub
+* __Internal Changes__
+ - [#9478][] cli: [refactor] rename outdated option internally
+ - [#9480][] core: [refactor] separate Hbc::Cask from Hbc
+ - [#9152][] add a task `console` on rake. <3 [@WitzHsiao][]
+ - [#9216][] Use Hbc::Verify in Hbc::Installer
+ - [#9225][] Add test for creating binarydir if it doesn't exist
+ - [#9223][] Test casks decoupled
+ - [#9218][] binary_test (minitest) -> binary_spec (rspec)
+* __Documentation__
+  - N doc commits since ...
+* __Contributors__
+  - N new contributors since ...
+  - N total contributors
+* __Release Date__
+  - 2015-02-08 14:00:00 UTC
+
+[#9152]: https://github.com/caskroom/homebrew-cask/issues/9152
+[#9216]: https://github.com/caskroom/homebrew-cask/issues/9216
+[#9218]: https://github.com/caskroom/homebrew-cask/issues/9218
+[#9223]: https://github.com/caskroom/homebrew-cask/issues/9223
+[#9225]: https://github.com/caskroom/homebrew-cask/issues/9225
+[#9455]: https://github.com/caskroom/homebrew-cask/issues/9455
+[#9473]: https://github.com/caskroom/homebrew-cask/issues/9473
+[#9478]: https://github.com/caskroom/homebrew-cask/issues/9478
+[#9480]: https://github.com/caskroom/homebrew-cask/issues/9480
+[@WitzHsiao]: https://github.com/WitzHsiao
+
 ## 0.53.0
 
 * __Casks__
