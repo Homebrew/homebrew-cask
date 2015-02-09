@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 0.53.3
+
+* __Fixes__
+  - [#9516][] fix lingering problem in caveats methods
+
+[#9516]: https://github.com/caskroom/homebrew-cask/issues/9516
+
+
 ## 0.53.2
 
 * __Fixes__
