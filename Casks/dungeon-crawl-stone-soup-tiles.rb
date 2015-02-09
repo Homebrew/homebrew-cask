@@ -1,6 +1,6 @@
 cask :v1 => 'dungeon-crawl-stone-soup-tiles' do
-  version '0.14.0'
-  sha256 '0cd2b2a7cf8675a208889ae406e6992c2a4c056ff05a974edfb99fd7a9e77e79'
+  version '0.15.0'
+  sha256 'b2a8abaebe84b3f25163a91a1905597e7de0dd1bf50de568b5d3d4d226b31e54'
 
   url "https://crawl.develz.org/release/stone_soup-#{version}-tiles-macosx.zip"
   homepage 'http://crawl.develz.org'
