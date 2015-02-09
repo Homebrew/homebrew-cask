@@ -29,11 +29,11 @@ class Hbc::CaveatsDSL
   end
 
   def caskroom_path
-    @cask.class.caskroom.join(token)
+    @cask.caskroom_path
   end
 
   def staged_path
-    caskroom_path.join(@cask.version.to_s)
+    @cask.staged_path
   end
 
   # DSL. Each method should handle output, following the convention of
