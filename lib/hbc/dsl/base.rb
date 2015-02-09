@@ -17,7 +17,7 @@ class Hbc::DSL::Base
   end
 
   def caskroom_path
-    @cask.class.caskroom.join(token)
+    @cask.caskroom_path
   end
 
   def staged_path
