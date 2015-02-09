@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.53.2
+
+* __Fixes__
+  - [#9509][] fix preflight/postflight/caveats methods
+
+[#9509]: https://github.com/caskroom/homebrew-cask/issues/9509
+
 ## 0.53.1
 
 * __Casks__
