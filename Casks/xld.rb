@@ -8,7 +8,7 @@ cask :v1 => 'xld' do
           :sha256 => '16420b367df9b64870bd2a38ee20e688d17b065783b93371065ac7094ab93cb0'
   name 'X Lossless Decoder'
   name 'XLD'
-  homepage 'http://tmkk.undo.jp/xld/'
+  homepage 'http://tmkk.undo.jp/xld/index_e.html'
   license :oss
 
   app 'XLD.app'
