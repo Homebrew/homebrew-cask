@@ -7,4 +7,8 @@ cask :v1 => 'copy' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Copy.app'
+  
+  zap :delete => [
+    '~/Library/Preferences/com.barracuda-networks-inc.Copy.plist',
+  ]
 end
