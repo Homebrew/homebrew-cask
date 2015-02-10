@@ -17,6 +17,7 @@ cask :v1 => 'filezilla' do
   app 'FileZilla.app'
   
   zap :delete => [
+    '~/.config/filezilla',
     '~/Library/Saved Application State/de.filezilla.savedState',
     '~/Library/Preference/de.filezilla.plist',
   ]
