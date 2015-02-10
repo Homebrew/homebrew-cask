@@ -15,6 +15,10 @@ cask :v1 => 'filezilla' do
   license :gpl
 
   app 'FileZilla.app'
-  # todo verify that this does not contain user-generate content
-  # zap :delete => '~/.filezilla'
+  
+  zap :delete => [
+    '~/Library/Saved Application State/de.filezilla.savedState',
+    '~/Library/Preference/de.filezilla.plist',
+  ]
+  
 end
