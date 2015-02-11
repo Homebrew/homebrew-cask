@@ -6,5 +6,5 @@ cask :v1 => 'audio-hijack-pro' do
   homepage 'http://www.rogueamoeba.com/audiohijackpro/'
   license :commercial
 
-  app 'Audio Hijack Pro.app'
+  app 'Audio Hijack.app'
 end
