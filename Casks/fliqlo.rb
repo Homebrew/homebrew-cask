@@ -1,6 +1,6 @@
 cask :v1 => 'fliqlo' do
-  version '1.5.2'
-  sha256 '132f760525e2b1956e708c99676b1f1a6d30c10d64eda912a669c0a25c38ad46'
+  version '1.6.0'
+  sha256 '4a6957eb4664f2fd04c2e8c8da02e6daa68f2c55b7b7afe446cd98a44ba5472d'
 
   url "http://fliqlo.com/download/fliqlo_#{version.gsub('.','')}.dmg", :referer => 'http://fliqlo.com/#about'
   homepage 'http://fliqlo.com/'
