@@ -1,13 +1,13 @@
 cask :v1 => 'obs' do
-  version '0.6.2'
-  sha256 '871b73509008c3df1c3ba005ff290395d19e494266571fc0f7b14d73f813d605'
+  version '0.8.1'
+  sha256 '42ca5408e01243797574a9538db200558094989e210b6538fae13ea029c9a51f'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/jp9000/obs-studio/releases/download/#{version}/obs-#{version}-installer.dmg"
   homepage 'http://obsproject.com/'
   license :gpl
 
-  pkg "OBS Studio.mpkg"
+  pkg "OBS.mpkg"
 
   uninstall :pkgutil => 'org.obsproject.pkg.obs-studio'
 end
