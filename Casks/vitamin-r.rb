@@ -27,7 +27,7 @@ cask :v1 => 'vitamin-r' do
     app 'Vitamin-R 2.app'
   end
 
-    name 'Vitamin-R'
-    homepage 'http://www.publicspace.net/Vitamin-R/'
-    license :commercial
+  name 'Vitamin-R'
+  homepage 'http://www.publicspace.net/Vitamin-R/'
+  license :commercial
 end
