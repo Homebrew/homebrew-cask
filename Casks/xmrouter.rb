@@ -7,7 +7,7 @@ cask :v1 => 'xmrouter' do
   name 'miwifi'
   name 'xmrouter'
   homepage 'http://www1.miwifi.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'XMRouter.app'
 end
