@@ -1,6 +1,6 @@
 cask :v1 => 'macaw' do
-  version '1.5.10'
-  sha256 'e9a038afe2ad28e9110afd1aedd442f2e3cbf3daf0edcba6d08841fdbc9bfd4b'
+  version '1.5.13'
+  sha256 'f50ac27257a1d93a4f346c3ce47ecad73aee71b0168dc9cf586c8c73f3652cb6'
 
   url "http://download.macaw.co/#{version}/Macaw#{version}.dmg"
   appcast 'http://download.macaw.co/appcast.xml',
