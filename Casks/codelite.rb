@@ -8,4 +8,11 @@ cask :v1 => 'codelite' do
   license :gpl
 
   app 'codelite.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/codelite',
+                  '~/Library/Preferences/codelite.plist'
+                 ]
+
+  depends_on :macos => '>= :mountain_lion'
 end
