@@ -1,6 +1,6 @@
 cask :v1 => 'universal-media-server' do
-  version '5.0.0'
-  sha256 '415d44f453db2c6d0a253ced2ef1897606a0004852c68443c117da1b7bfd5b32'
+  version '5.0.1'
+  sha256 'c89e298d592fe59fc1906c2cdcf4b26dfbac020e65314c9021ef031e4d8ce453'
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/unimediaserver/Official%20Releases/OS%20X/UMS-#{version}-Java8.dmg"
