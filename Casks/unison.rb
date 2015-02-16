@@ -1,11 +1,11 @@
 cask :v1 => 'unison' do
-  version '2.40.69'
-  sha256 '2bcc460511f2b43fa1613cc5f9ba4dd59bb12d40b5b9fb2e9f21adaf854bcf3b'
+  version '2.48.3'
+  sha256 '04a59ccc1164fa274082911125b5871cb21019d22b284ec98a4dede23f746d88'
 
   # petitepomme.net is the official download host per the vendor homepage
-  url "http://alan.petitepomme.net/unison/assets/Unison-#{version}_x64.dmg"
+  url "https://strank.info/prof/software/Unison-#{version}.app.zip"
   homepage 'http://www.cis.upenn.edu/~bcpierce/unison/'
   license :gpl
 
-  app 'Unison.app'
+  app 'Unison-2.48.3.app'
 end
