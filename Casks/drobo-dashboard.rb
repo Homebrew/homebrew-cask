@@ -1,10 +1,10 @@
 cask :v1 => 'drobo-dashboard' do
-  version '2.6.3'
-  sha256 '8881b0713fed7bb9aeb2c1ca98db3e31ee304de0fad5d05778872e256a78ece1'
+  version '2.6.4'
+  sha256 '36a2ce104ea86b25db40098677144f3342a9fa7f910d48a59c136a3ca41214c8'
 
   url "http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-#{version}.dmg"
   homepage 'http://www.drobo.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   pkg "Install.app/Contents/Drobo_Dashboard_Installer_#{version}.pkg"
 
