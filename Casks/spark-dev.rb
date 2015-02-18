@@ -1,8 +1,8 @@
 cask :v1 => 'spark-dev' do
-  version '0.0.16'
-  sha256 '4c1aefe14ae9b1bff135e34884e6cd2ca882145730fbe80fc74172bb44e06a82'
+  version '0.0.20'
+  sha256 'f2fa70e23590c6b57f1415dabee56f60671637526fd0348fdd019d1304b341ff'
 
-  url "https://github.com/spark/spark-dev/releases/download/#{version}/Spark.Dev.app.zip"
+  url "https://github.com/spark/spark-dev/releases/download/v#{version}/spark-dev-mac.zip"
   homepage 'https://github.com/spark/spark-dev'
   license :apache
 
