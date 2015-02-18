@@ -10,7 +10,8 @@ cask :v1 => 'heimdall-suite' do
 
   pkg "Heimdall Suite #{version}.pkg"
 
-  uninstall :pkgutil => 'au.com.glassechidna.HeimdallSuite'
+  uninstall :pkgutil => 'au.com.glassechidna.HeimdallSuite',
+            :kext    => 'au.com.glassechidna.heimdall_usb_shield'
 
   zap :delete => [
     '~/Library/Preferences/com.yourcompany.heimdall-frontend.plist',
