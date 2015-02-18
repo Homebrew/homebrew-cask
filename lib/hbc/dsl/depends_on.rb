@@ -54,26 +54,6 @@ class Hbc::DSL::DependsOn
     end
   end
 
-  def self.coerce_os_release(arg)
-
-    @osx_symbols ||= MacOS::Release::SYMBOLS
-    @inverted_osx_symbols ||= @osx_symbols.invert
-
-    begin
-      if arg.is_a?(Symbol)
-        Gem::Version.new(@osx_symbols.fetch(arg))
-      elsif arg =~ %r{^\s*:?([a-z]\S+)\s*$}i
-        Gem::Version.new(@osx_symbols.fetch($1.downcase.to_sym))
-      elsif @inverted_osx_symbols.has_key?(arg)
-        Gem::Version.new(arg)
-      else
-        raise
-      end
-    rescue StandardError => e
-      raise "invalid 'depends_on :macos' value: #{arg.inspect}"
-    end
-  end
-
   def formula
     @formula
   end
@@ -102,12 +82,12 @@ class Hbc::DSL::DependsOn
                arg.first =~ %r{^\s*(<|>|[=<>]=)\s*(\S+)\s*$}
       raise "'depends_on :macos' comparison expressions cannot be combined" unless @macos.empty?
       operator = $1.to_sym
-      release = self.class.coerce_os_release($2)
+      release = MacOS.coerce_os_release($2)
       [[ operator, release ]]
     else
       raise "'depends_on :macos' comparison expressions cannot be combined" if @macos.first.is_a?(Symbol)
       Array(*arg).map do |elt|
-        self.class.coerce_os_release(elt)
+        MacOS.coerce_os_release(elt)
       end.sort
     end
     @macos.concat(macos)
