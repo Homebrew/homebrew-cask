@@ -5,7 +5,7 @@ cask :v1 => 'brewtarget' do
   url 'https://launchpad.net/brewtarget/trunk/2.1.0/+download/Brewtarget-2.1.0-installer.dmg'
   name 'brewtarget'
   homepage 'http://www.brewtarget.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :oss
 
   app 'brewtarget.app'
 end
