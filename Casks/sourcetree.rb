@@ -3,8 +3,8 @@ cask :v1 => 'sourcetree' do
     version '1.8.1'
     sha256 '37a42f2d83940cc7e1fbd573a70c3c74a44134c956ac3305f6b153935dc01b80'
   else
-    version '2.0.4'
-    sha256 'fe1477ad902c2965a25560331778ec0b99eeed8e6871b88cb552910abe9e067e'
+    version '2.0.5.2'
+    sha256 '106531ed0087403020a2ba07efaaf1ce297734eb62e2a0eaea8cd5f88e18e7cb'
   end
 
   # atlassian.com is the official download host per the vendor homepage
