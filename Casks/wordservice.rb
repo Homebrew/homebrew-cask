@@ -7,5 +7,5 @@ cask :v1 => 'wordservice' do
   homepage 'http://www.devontechnologies.com/products/freeware.html#c1115'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  service 'WordService/WordService.service'
+  app 'WordService.app'
 end
