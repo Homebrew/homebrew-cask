@@ -5,7 +5,7 @@ cask :v1 => 'hazel' do
   url 'http://www.noodlesoft.com/Products/Hazel/download'
   name 'Hazel'
   homepage 'http://www.noodlesoft.com/hazel.php'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   prefpane 'Hazel.prefPane'
 
