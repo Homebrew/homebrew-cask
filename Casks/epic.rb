@@ -1,9 +1,9 @@
 cask :v1 => 'epic' do
-  version :latest
-  sha256 :no_check
+  version '2461'
+  sha256 '9f4fa39514c179a62daab892bddf5b7512fcec49c7fda9fe4be9d8c11c3016c5'
 
   # kxcdn.com is the official download host per the vendor homepage
-  url 'https://macepic-cbe.kxcdn.com/Alt/Epic.dmg'
+  url "https://macepic-cbe.kxcdn.com/release_#{version}/Epic.dmg"
   name 'Epic'
   name 'Epic Privacy Browser'
   appcast 'https://updates.epicbrowser.com/mac_updates/appcast.xml',
