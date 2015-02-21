@@ -7,5 +7,5 @@ cask :v1 => 'smart-scroll' do
   homepage 'http://www.marcmoini.com/sx_en.html'
   license :commercial
 
-  prefpane 'Smart Scroll 4.prefPane'
+  prefpane 'Smart Scroll 4.0.prefPane'
 end
