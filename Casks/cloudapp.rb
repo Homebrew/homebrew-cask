@@ -4,7 +4,7 @@ cask :v1 => 'cloudapp' do
 
   url "https://s3.amazonaws.com/downloads.getcloudapp.com/mac/CloudApp-#{version}.dmg"
   name 'CloudApp'
-  homepage 'http://mameosx.sourceforge.net/'
+  homepage 'https://www.getcloudapp.com'
   license :gratis
 
   app 'CloudApp.app'
