@@ -6,7 +6,7 @@ cask :v1 => 'cloud' do
   url "https://s3.amazonaws.com/downloads.getcloudapp.com/mac/CloudApp-#{version}.zip"
   name 'CloudApp'
   homepage 'http://getcloudapp.com/'
-  license: gratis
+  license :gratis
 
   app 'CloudApp.app'
 
