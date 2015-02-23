@@ -7,7 +7,7 @@ cask :v1 => 'lyx' do
       :key_id => 'de7a44fac7fb382d'
   name 'LyX'
   homepage 'http://www.lyx.org'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'LyX.app'
 end
