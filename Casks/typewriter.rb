@@ -5,7 +5,7 @@ cask :v1 => 'typewriter' do
   url 'http://llllll.li/typewriter/download/Typewriter.zip'
   name 'Typewriter'
   homepage 'http://llllll.li/typewriter'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :mit
 
   app 'Typewriter.app'
 end
