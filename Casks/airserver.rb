@@ -1,6 +1,6 @@
 cask :v1 => 'airserver' do
-  version '5.1.1'
-  sha256 '5a34ba5034ce94b335c5fe1e7d0afad156ec7cf8133ecfc93c7ef0e37777b33e'
+  version '5.2'
+  sha256 '021cf849f121df9f6b91d181b917240a76b6f129ef4676d0b491d0bc54e4b06b'
 
   url "http://dl.airserver.com/mac/AirServer-#{version}.dmg"
   name 'AirServer'
