@@ -1,12 +1,12 @@
 cask :v1 => 'cloud' do
-  version '3.1.0'
-  sha256 'f412e020c8307ef5872c0c5236f8bc1f1548c47d10b19315aba24ebd391cf293'
+  version '3.2.0'
+  sha256 '713c8eeb91506661af97cf31f07ea4a31e65a773579fe51ef5194f775df748a7'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/downloads.getcloudapp.com/mac/CloudApp-#{version}.zip"
   name 'CloudApp'
   homepage 'http://getcloudapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'CloudApp.app'
 
