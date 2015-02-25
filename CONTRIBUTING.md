@@ -38,7 +38,7 @@ cask :v1 => 'alfred' do
   version '2.3_264'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
 
-  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
+  url "https://cachefly.alfredapp.com/Alfred_2.3_264.zip"
   name 'Alfred'
   homepage 'http://www.alfredapp.com/'
   license :freemium
@@ -55,7 +55,7 @@ cask :v1 => 'unity' do
   version '4.5.4'
   sha256 '6fb72bfacf78df072559dd9a024a9d47e49b5717c8f17d53f05e2fc74a721876'
 
-  url 'http://netstorage.unity3d.com/unity/unity-4.5.4.dmg'
+  url "http://netstorage.unity3d.com/unity/unity-4.5.4.dmg"
   name 'Unity'
   name 'Unity3D'
   homepage 'http://unity3d.com/unity/'
@@ -74,7 +74,7 @@ cask :v1 => 'firefox' do
   version :latest
   sha256 :no_check
 
-  url 'https://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US'
+  url "https://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US"
   name 'Firefox'
   homepage 'https://www.mozilla.org/en-US/firefox/'
   license :mpl
@@ -122,7 +122,7 @@ cask :v1 => 'my-new-cask' do
   version ''
   sha256 ''
 
-  url ''
+  url ""
   name ''
   homepage ''
   license :unknown
