@@ -8,7 +8,7 @@ cask :v1 => 'slack' do
           :sha256 => 'e7af629495c52f3082dd4d7dca917a5a21921031b871461045e204bcc6d8fe03'
   name 'Slack'
   homepage 'http://slack.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Slack.app'
 end
