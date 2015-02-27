@@ -1,0 +1,11 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - '**/Gemfile'
+    - '**/Rakefile'
+    - '**/brew-cask.rb'
+    - 'developer/**/*'
+    - 'lib/**/*'
+    - 'spec/**/*'
+    - 'test/**/*'
