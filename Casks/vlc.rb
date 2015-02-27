@@ -1,6 +1,6 @@
 cask :v1 => 'vlc' do
-  version '2.1.5'
-  sha256 '923504e296829f4253af8276b992636f72e56232ecdbdcf6003647ee662257f2'
+  version '2.2.0'
+  sha256 'ad9a322f04a657e25db615bb9eef656dced4ac33180358fd7d4508cdacfc598b'
 
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
   gpg "#{url}.asc",
