@@ -1,6 +1,6 @@
 cask :v1 => 'love' do
-  version '0.9.1'
-  sha256 '82bdd5c40440af8f26f622b8772a877c8aa201fd0115a0f57563790d17a96b68'
+  version '0.9.2'
+  sha256 'a1c76e0bdafbfc596c0001dae9009a683a7e4a0a042c25cb29d95c11e051c4e4'
 
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/rude/love/downloads/love-#{version}-macosx-x64.zip"
