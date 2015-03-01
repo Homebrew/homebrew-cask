@@ -16,7 +16,7 @@ cask :v1 => 'r' do
   homepage 'http://www.r-project.org/'
   license :gpl
 
-  depends_on :macos '>= :snow_leopard'
+  depends_on :macos => '>= :snow_leopard'
 
   uninstall :pkgutil => [
                          # eg org.r-project.R.maverics.fw.pkg
