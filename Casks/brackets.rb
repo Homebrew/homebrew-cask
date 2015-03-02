@@ -1,6 +1,6 @@
 cask :v1 => 'brackets' do
-  version '1.1'
-  sha256 'f958a50fe0d656b29b4629e159fcf584e03e8616a6349a55b19e39338bef8cda'
+  version '1.2'
+  sha256 '405ed2a85ea95cb1a2d240c7cbf4a1bb6ff916f85fd6667c936b69f933bb1cbe'
 
   url "https://github.com/adobe/brackets/releases/download/release-#{version}/Brackets.Release.#{version}.dmg"
   name 'Brackets'
