@@ -1,6 +1,6 @@
 cask :v1 => 'mediathekview' do
-  version '8'
-  sha256 'af2b9cb5202a528bebd832dcb5de5fe9b3937027ff65f5808cc1b08f0f85f195'
+  version '9'
+  sha256 '3d10f65527bddeff4e2665234fdf52b79e952b32344e980cff8e54b9045aff7b'
 
   url "http://downloads.sourceforge.net/project/zdfmediathk/Mediathek/Mediathek%20#{version}/MediathekView_#{version}.dmg"
   name 'MediathekView'
