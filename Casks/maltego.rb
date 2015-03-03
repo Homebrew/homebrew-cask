@@ -1,12 +1,12 @@
-cask :v1 => 'maltego-carbon' do
-  version '3.5.0.5520'
-  sha256 '2d688442c58b7d18702dbbc6dbe3ff9dc5c1a10dd6ee3347735f760f65ffe380'
+cask :v1 => 'maltego' do
+  version '3.6.0.6526'
+  sha256 'cda838e27afd3c73dd33705f0448f7e63918a3e65df0274928a9c87fe3340d00'
 
   url "https://www.paterva.com/malv#{version.sub(%r{^(\d+)\.(\d+)\..*},'\1\2')}/commercial/Maltego.v#{version}.dmg"
-  name 'Maltego Carbon'
+  name 'Maltego'
   homepage 'https://www.paterva.com/web6/products/maltego.php'
   license :closed
   tags :vendor => 'Paterva'
 
-  app "Maltego Carbon v#{version.sub(%r{\.\d+$},'')}.app"
+  app "Maltego Chlorine v#{version.sub(%r{\.\d+$},'')}.app"
 end
