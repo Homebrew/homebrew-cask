@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+group :development do
+  gem 'rubocop'
+end
+
 group :release do
   gem 'ronn', '0.7.3'
 end
