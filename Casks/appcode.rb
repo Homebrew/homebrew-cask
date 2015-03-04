@@ -1,6 +1,6 @@
 cask :v1 => 'appcode' do
-  version '3.1.3'
-  sha256 '36a7429ae57d7855a83b2d7d461c3ccf2d61b125249c532a254e6625746561c6'
+  version '3.1.4'
+  sha256 'ca623c106337dd355732200d25f2e0a4776629dd4185a01f972e9ad34b417eb4'
 
   url "http://download.jetbrains.com/objc/AppCode-#{version}.dmg"
   name 'AppCode'
