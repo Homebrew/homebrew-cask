@@ -4,7 +4,7 @@ cask :v1 => 'thunderbird' do
 
   url "https://download.mozilla.org/?product=thunderbird-#{version}&os=osx&lang=en-US"
   homepage 'http://www.mozilla.org/en-US/thunderbird/'
-  license :oss
+  license :mpl
 
   app 'Thunderbird.app'
 end
