@@ -10,4 +10,8 @@ cask :v1 => 'pdftotext' do
   pkg 'Installer.pkg'
 
   uninstall :pkgutil => 'net.bluem.pdftotext.pkg'
+
+  caveats do
+    discontinued
+  end
 end
