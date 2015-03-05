@@ -1,4 +1,4 @@
-cask :v1 => 'handbrakebatch' do
+cask :v1_1 => 'handbrakebatch' do
   version :latest
   sha256 :no_check
 
