@@ -11,4 +11,8 @@ cask :v1 => 'timeedition' do
   container :nested => "timeEdition#{version}-macosx.dmg"
 
   app "timeEdition #{version}/timeEdition.app"
+
+  caveats do
+    discontinued
+  end
 end
