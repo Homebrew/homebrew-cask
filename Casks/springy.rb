@@ -1,4 +1,4 @@
-cask :v1 => 'springy' do
+cask :v1_1 => 'springy' do
   version '1.6.1'
   sha256 '7b84ee8834bbcd1a7b17895a6bc3fa6adc127dbd09146821eb125730ae68882e'
 
