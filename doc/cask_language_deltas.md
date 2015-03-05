@@ -136,13 +136,16 @@ For use in *eg* interpolation:
  * [`token`](CASK_LANGUAGE_REFERENCE.md#caveats-as-a-string)
 
 
-## Caveats Mini-DSL (1.0)
+## Caveats Mini-DSL
+### (1.0)
 
  * [`files_in_usr_local`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`logout`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`path_environment_variable(path)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`reboot`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`zsh_path_helper(path)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
+
+### (1.1)
  * [`discontinued`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`free_license(web_page)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
 
