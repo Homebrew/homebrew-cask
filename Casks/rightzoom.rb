@@ -1,4 +1,4 @@
-cask :v1 => 'rightzoom' do
+cask :v1_1 => 'rightzoom' do
   version :latest
   sha256 :no_check
 
