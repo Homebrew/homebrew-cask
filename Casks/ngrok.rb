@@ -1,0 +1,14 @@
+cask :v1 => 'ngrok' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://dl.ngrok.com/darwin_amd64/ngrok.zip'
+  name 'ngrok'
+  homepage 'https://ngrok.com/'
+  license :apache
+
+  binary 'ngrok'
+
+  # todo verify that this does not contain user-created content
+  # zap :delete => '~/.ngrok'
+end
