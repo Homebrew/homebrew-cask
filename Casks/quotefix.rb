@@ -6,7 +6,7 @@ cask :v1 => 'quotefix' do
   homepage 'https://github.com/robertklep/quotefixformac'
   license :oss
 
-  artifact 'QuoteFix.mailbundle', :target => Pathname.new(File.expand_path('~')).join('/Library/Mail/Bundles/QuoteFix.mailbundle')
+  artifact 'QuoteFix.mailbundle', :target => Pathname.new(File.expand_path('~')).join('Library/Mail/Bundles/QuoteFix.mailbundle')
   
   postflight do
     system 'defaults', 'write', 'com.apple.mail', 'EnableBundles', '-bool', 'true'
