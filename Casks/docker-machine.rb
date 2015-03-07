@@ -6,8 +6,6 @@ cask :v1 => 'docker-machine' do
   name 'Docker Machine'
   homepage 'https://docs.docker.com/machine'
   license :apache
-  depends_on :cask => 'boot2docker'
-  depends_on :arch => :x86_64
 
   container :type => :naked
   binary 'docker-machine_darwin-amd64', :target => 'docker-machine'
@@ -15,4 +13,7 @@ cask :v1 => 'docker-machine' do
   postflight do
     system '/bin/chmod', '--', '0755', "#{staged_path}/docker-machine_darwin-amd64"
   end
+
+  depends_on :cask => 'boot2docker'
+  depends_on :arch => :x86_64
 end
