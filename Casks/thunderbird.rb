@@ -3,8 +3,10 @@ cask :v1 => 'thunderbird' do
   sha256 '5cec9186419853d902e0e61a52c20d679b27812b5a5e631d31ecbe5917b47ea1'
 
   url "https://download.mozilla.org/?product=thunderbird-#{version}&os=osx&lang=en-US"
+  name 'Mozilla Thunderbird'
   homepage 'http://www.mozilla.org/en-US/thunderbird/'
   license :mpl
+  tags :vendor => 'Mozilla'
 
   app 'Thunderbird.app'
 end
