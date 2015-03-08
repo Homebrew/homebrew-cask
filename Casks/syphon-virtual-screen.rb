@@ -8,7 +8,7 @@ cask :v1 => 'syphon-virtual-screen' do
   license :unknown
   pkg 'Syphon Virtual Screen.mpkg'
   uninstall :kext => 'EWProxyFrameBuffer',
-  			:delete => '/System/Library/Caches/com.apple.kext.caches'
+            :delete => '/System/Library/Caches/com.apple.kext.caches'
 
   caveats 'To use different resolutions modify EWProxyFramebuffer.kext/Contents/Info.plist'
 end

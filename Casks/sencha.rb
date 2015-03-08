@@ -8,7 +8,7 @@ cask :v1 => 'sencha' do
   license :freemium
 
   installer :script => "SenchaCmd-#{version}-osx.app/Contents/MacOS/installbuilder.sh",
-            :args   => ['--mode', 'unattended', '--prefix' , '/opt']
+            :args   => ['--mode', 'unattended', '--prefix', '/opt']
 
   uninstall :script => {
                          :executable => "/opt/Sencha/Cmd/#{version}/uninstall.app/Contents/MacOS/installbuilder.sh",

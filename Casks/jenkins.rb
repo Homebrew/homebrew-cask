@@ -5,7 +5,7 @@ cask :v1 => 'jenkins' do
   url "http://mirrors.jenkins-ci.org/osx/jenkins-#{version}.pkg"
   name 'Jenkins'
   homepage 'http://jenkins-ci.org/'
-  license :mit 
+  license :mit
 
   pkg "jenkins-#{version}.pkg"
   binary '/Library/Application Support/Jenkins/jenkins-runner.sh', :target => 'jenkins-runner'

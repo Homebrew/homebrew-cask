@@ -5,7 +5,7 @@ cask :v1 => 'qlgradle' do
   url "https://github.com/Urucas/QLGradle/releases/download/#{version}/QLGradle.qlgenerator.zip"
   name 'qlgradle'
   homepage 'https://github.com/Urucas/QLGradle'
-  license :mit 
+  license :mit
 
   qlplugin 'QLGradle.qlgenerator'
 end

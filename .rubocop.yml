@@ -9,3 +9,10 @@ AllCops:
     - 'lib/**/*'
     - 'spec/**/*'
     - 'test/**/*'
+
+Style/BarePercentLiterals:
+  EnforcedStyle: percent_q
+
+Style/FileName:
+  Exclude:
+    - Casks/**/*

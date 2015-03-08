@@ -10,9 +10,7 @@ cask :v1 => 'crosspack-avr' do
   uninstall_postflight do
     IO.popen('/usr/bin/yes | /usr/bin/sudo -E -- /usr/local/CrossPack-AVR/uninstall && /usr/bin/sudo -- /usr/sbin/pkgutil --forget at.obdev.CrossPack-AVR', 'r+') do |pipe|
       pipe.close_write
-      while line = pipe.gets
-        puts line
-      end
+      pipe.each { |line| puts line }
     end
   end
 

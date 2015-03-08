@@ -9,7 +9,7 @@ cask :v1 => 'wireshark' do
 
   pkg "Wireshark #{version} Intel 64.pkg"
   postflight do
-    if Process.euid == 0 then
+    if Process.euid == 0
       ohai 'Note:'
       puts <<-EOS.undent
         You executed 'brew cask' as the superuser.
