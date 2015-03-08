@@ -1,5 +1,5 @@
 cask :v1 => 'libreoffice' do
-  if Hardware::CPU.is_32_bit? or MacOS.release < :mountain_lion
+  if Hardware::CPU.is_32_bit? || MacOS.release < :mountain_lion
     version '4.3.5'
     sha256 '0121e87396a880884a6fac02e7799fe5bc4cbfe0e346a60aa21176acbd44602f'
     # documentfoundation.org is the official download host per the vendor homepage
