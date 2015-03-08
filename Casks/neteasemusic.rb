@@ -2,7 +2,7 @@ cask :v1 => 'neteasemusic' do
   version :latest
   sha256 :no_check
 
-  url "http://music.163.com/api/osx/download/latest"
+  url 'http://music.163.com/api/osx/download/latest'
   name '网易云音乐'
   name 'NetEase cloud music'
   homepage 'http://music.163.com/#/download'

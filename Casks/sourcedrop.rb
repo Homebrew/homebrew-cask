@@ -8,5 +8,5 @@ cask :v1 => 'sourcedrop' do
   homepage 'http://sourcedrop.net/'
   license :bsd
 
-  app "SourceDrop.app"
+  app 'SourceDrop.app'
 end

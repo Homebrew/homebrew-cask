@@ -7,7 +7,7 @@ cask :v1 => 'obs' do
   homepage 'http://obsproject.com/'
   license :gpl
 
-  pkg "OBS.mpkg"
+  pkg 'OBS.mpkg'
 
   uninstall :pkgutil => 'org.obsproject.pkg.obs-studio'
 end
