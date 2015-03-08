@@ -16,7 +16,7 @@ cask :v1 => 'google-earth-pro' do
                  ]
 
   caveats <<-EOS.undent
-    Using #{token} requires a license key. If you do not have a key, use your 
+    Using #{token} requires a license key. If you do not have a key, use your
     email address and the key GEPFREE to sign in.
   EOS
 end

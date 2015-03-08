@@ -9,7 +9,7 @@ cask :v1 => 'clion-eap' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'CLion EAP.app'
-  
+
   postflight do
     plist_set(':JVMOptions:JVMVersion', '1.6+')
   end

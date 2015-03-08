@@ -10,5 +10,5 @@ cask :v1 => 'srware-iron' do
   tags :vendor => 'SRWare'
 
   # Renamed for clarity: app name is inconsistent with its branding.
-  app 'Chromium.app' , :target => 'SRWare Iron.app'
+  app 'Chromium.app', :target => 'SRWare Iron.app'
 end

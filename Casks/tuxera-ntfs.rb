@@ -6,7 +6,7 @@ cask :v1 => 'tuxera-ntfs' do
   name 'Tuxera NTFS'
   homepage 'http://www.tuxera.com/products/tuxera-ntfs-for-mac/'
   license :closed
-  
+
   pkg '.packages/Flat/Install Tuxera NTFS.mpkg'
   uninstall :script => '/System/Library/Filesystems/fusefs_txantfs.fs/Support/uninstall-package.sh'
 end
