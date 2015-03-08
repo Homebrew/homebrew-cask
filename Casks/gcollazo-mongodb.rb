@@ -1,6 +1,6 @@
 cask :v1 => 'gcollazo-mongodb' do
-  version '1.2.0'
-  sha256 '6ad02eb126d2e78d8147b092b160e2cba99bd67cf0c95b6246ec23958e94dfc7'
+  version '3.0.0'
+  sha256 'bd42852055e0c16facf66b5a22bfa8cd4e6f7f1b7fedd708a56dd9463a856e7f'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/gcollazo/mongodbapp/releases/download/#{version}/MongoDB.zip"
