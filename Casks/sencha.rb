@@ -12,7 +12,7 @@ cask :v1 => 'sencha' do
 
   uninstall :script => {
                          :executable => "/opt/Sencha/Cmd/#{version}/uninstall.app/Contents/MacOS/installbuilder.sh",
-                         :args => ["--mode", "unattended"]
+                         :args => ['--mode', 'unattended']
                        }
 
   caveats do

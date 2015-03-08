@@ -6,8 +6,8 @@ cask :v1 => 'smartsynchronize' do
   homepage 'http://www.syntevo.com/smartsynchronize/'
   license :commercial
 
-  app "SmartSynchronize.app"
-  binary "SmartSynchronize.app/Contents/MacOS/SmartSynchronize"
+  app 'SmartSynchronize.app'
+  binary 'SmartSynchronize.app/Contents/MacOS/SmartSynchronize'
   caveats do
     files_in_usr_local
   end
