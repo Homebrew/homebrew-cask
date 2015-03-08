@@ -12,3 +12,7 @@ AllCops:
 
 Style/BarePercentLiterals:
   EnforcedStyle: percent_q
+
+Style/FileName:
+  Exclude:
+    - Casks/**/*
