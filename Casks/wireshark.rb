@@ -1,6 +1,6 @@
 cask :v1 => 'wireshark' do
-  version '1.12.3'
-  sha256 '79ad20e948c7da73663eaab7f9e9c03e098dd5d92aa439e82d76fc1a0e843085'
+  version '1.12.4'
+  sha256 '2e6bb0b3bd9d6fe3413d8aa6df59c1f03878384abbe2333c14f3f80ac18fb823'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   name 'Wireshark'
