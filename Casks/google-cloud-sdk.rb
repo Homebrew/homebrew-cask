@@ -21,6 +21,13 @@ cask :v1 => 'google-cloud-sdk' do
 
       for zsh users
         source '#{staged_path}/#{token}/path.zsh.inc'
-        source '#{staged_path}/#{token}/completion.zsh.inc'"
+        source '#{staged_path}/#{token}/completion.zsh.inc'
+
+      for fish users
+        set fish_user_paths #{staged_path}/#{token}/bin
+        set -x MANPATH #{staged_path}/#{token}/help/man /usr/local/share/man /usr/share/man /opt/x11/share/man
+
+        Run fish_update_completions to generate completions for fish based on the man pages"
+
   end
 end
