@@ -8,5 +8,5 @@ cask :v1 => 'balsamiq-mockups' do
   homepage 'http://balsamiq.com/'
   license :commercial
 
-  app 'Balsamiq Mockups.app'
+  app "Balsamiq Mockups #{version.to_i}.app"
 end
