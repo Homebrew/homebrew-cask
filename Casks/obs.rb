@@ -9,5 +9,11 @@ cask :v1 => 'obs' do
 
   pkg 'OBS.mpkg'
 
-  uninstall :pkgutil => 'org.obsproject.pkg.obs-studio'
+  uninstall :pkgutil => 'org.obsproject.pkg.obs-studio',
+            :delete => '/Applications/SyphonInject.app'
+
+  zap :delete => [
+                  '/private/var/db/receipts/zakk.lol.SyphonInject.bom',
+                  '/private/var/db/receipts/zakk.lol.SyphonInject.plist'
+                 ]
 end
