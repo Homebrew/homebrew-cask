@@ -5,8 +5,17 @@ cask :v1 => 'macpaw-gemini' do
   # devmate.com is the official download host per the vendor homepage
   url 'http://dl.devmate.com/com.macpaw.site.Gemini/MacPawGemini.dmg'
   appcast 'http://updates.devmate.com/com.macpaw.site.Gemini.xml'
+  name 'MacPaw Gemini'
   homepage 'http://macpaw.com/gemini'
   license :commercial
+  tags :vendor => 'MacPaw'
+
+  zap :delete => [
+    '~/Library/Application Support/MacPaw Gemini',
+    '~/Library/Caches/com.macpaw.site.Gemini',
+    '~/Library/Preferences/com.macpaw.site.Gemini.plist',
+    '~/Library/Saved Application State/com.macpaw.site.Gemini.savedState'
+  ]
 
   app 'MacPaw Gemini.app'
 end
