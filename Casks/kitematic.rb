@@ -8,5 +8,5 @@ cask :v1 => 'kitematic' do
   homepage 'https://kitematic.com/'
   license :affero
 
-  app 'Kitematic.app'
+  app 'Kitematic (Beta).app'
 end
