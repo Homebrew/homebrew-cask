@@ -6,6 +6,6 @@ cask :v1 => 'shiny-groove' do
   name 'Shiny Groove'
   homepage 'http://www.shinygroove.com/'
   license :commercial
-  
+
   app 'Shiny Groove.app'
 end
