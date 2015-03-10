@@ -3,10 +3,10 @@ cask :v1 => 'macpaw-gemini' do
   sha256 :no_check
 
   # devmate.com is the official download host per the vendor homepage
-  url 'http://dl.devmate.com/download/com.macpaw.site.Gemini/macpaw%20gemini.dmg'
+  url 'http://dl.devmate.com/com.macpaw.site.Gemini/MacPawGemini.dmg'
   appcast 'http://updates.devmate.com/com.macpaw.site.Gemini.xml'
   homepage 'http://macpaw.com/gemini'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'MacPaw Gemini.app'
 end
