@@ -1,6 +1,6 @@
 cask :v1 => 'kitematic' do
-  version '0.5.9'
-  sha256 'dfd623e7b152c05ed3e5ba4dfaded9904a17776641ced020229d94df3b8ae5c7'
+  version '0.5.10'
+  sha256 '2257974c9bdb582f8886435ee8d0a2d5db81e45c6dc5a17b7e73bbf3362cc23b'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/kitematic/kitematic/releases/download/v#{version}/Kitematic-#{version}.zip"
@@ -9,4 +9,9 @@ cask :v1 => 'kitematic' do
   license :affero
 
   app 'Kitematic (Beta).app'
+
+  zap :delete =>[
+    '~/Library/Application\ Support/Kitematic',
+    '~/Kitematic'
+	]
 end
