@@ -3,6 +3,7 @@ class Hbc::CLI::List < Hbc::CLI::Base
     @options = Hash.new
     @options[:one] = true if arguments.delete('-1')
     @options[:long] = true if arguments.delete('-l')
+    @options[:versions] = true if arguments.delete('--versions')
 
     if arguments.any?
       retval = list_casks(*arguments)
@@ -53,6 +54,8 @@ class Hbc::CLI::List < Hbc::CLI::Base
     columns = installed_casks.map(&:to_s)
     if @options[:one]
       puts columns
+    elsif @options[:versions]
+      installed_casks.each { |cask| puts "#{cask} #{cask.version}" }
     elsif @options[:long]
       puts Hbc::SystemCommand.run!("/bin/ls", :args => ["-l", Hbc.caskroom]).stdout
     else
