@@ -1,11 +1,11 @@
 cask :v1 => 'coteditor' do
-  version '2.1.0'
-  sha256 '4d2f31697d8bb621cec3284d0a40601433deaff9733aa0010d93e9eb122660d3'
+  version '2.1.2'
+  sha256 'b23c90224d53f5b599888d289778a66098b56779d0c789eeca3f1e0f95183dc9'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   appcast 'http://coteditor.com/appcast.xml',
-          :sha256 => '4abe532801c9944267d5e6f6279604d0c202cc93b10065f4ad714f9c4cb47cef'
+          :sha256 => '6707d7d9110e85cd98346efd2ad3507477707136ef5d8df0c309fb042be568f9'
   name 'CotEditor'
   homepage 'http://coteditor.com/'
   license :gpl
