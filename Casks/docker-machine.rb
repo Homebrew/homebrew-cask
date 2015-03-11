@@ -15,6 +15,6 @@ cask :v1 => 'docker-machine' do
     system '/bin/chmod', '--', '0755', "#{staged_path}/docker-machine_darwin-amd64"
   end
 
-  depends_on :cask => 'boot2docker'
+  depends_on :formula => 'docker'
   depends_on :arch => :x86_64
 end
