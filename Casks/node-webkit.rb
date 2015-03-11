@@ -5,6 +5,7 @@ cask :v1 => 'node-webkit' do
 
   # set new homepage, leave github address as a reference
   # homepage 'https://github.com/rogerwang/node-webkit', 'https://github.com/nwjs/nw.js'
+  name 'NW.js'
   url "http://dl.nwjs.io/v#{version}/nwjs-v#{version}-osx-x64.zip"
   homepage 'http://nwjs.io'
   license :mit
