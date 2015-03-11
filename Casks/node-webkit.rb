@@ -1,10 +1,13 @@
 cask :v1 => 'node-webkit' do
-  version '0.11.6'
-  sha256 '7e5ace3470f9f8a68232e2e12542408a2f0f1bc33edb7daddb452230cc223daa'
+  # node-webkit is renamed NW.js
+  version '0.12.0'
+  sha256 '3ad40bbb1c45c97274343266be017c0f54a1fb95c56adc32e246a43781801b72'
 
-  # webkit.org is the official download host per the vendor homepage
-  url "http://dl.node-webkit.org/v#{version}/node-webkit-v#{version}-osx-x64.zip"
-  homepage 'https://github.com/rogerwang/node-webkit'
+  # set new homepage, leave github address as a reference
+  # homepage 'https://github.com/rogerwang/node-webkit', 'https://github.com/nwjs/nw.js'
+  name 'NW.js'
+  url "http://dl.nwjs.io/v#{version}/nwjs-v#{version}-osx-x64.zip"
+  homepage 'http://nwjs.io'
   license :mit
 
   stage_only true
