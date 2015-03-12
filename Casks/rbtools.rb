@@ -1,6 +1,6 @@
 cask :v1 => 'rbtools' do
-  version '0.7.1'
-  sha256 '6e2ffc0ea6d095f45662a51d03a9cf8e088c4dbca25e8ca261de2a1388fe53b0'
+  version '0.7.2'
+  sha256 '78a0ee38431e07d16adce9ba06481295eb4d789bbb0975ec439fba59ee42b063'
 
   url "https://downloads.reviewboard.org/releases/RBTools/#{version.sub(%r{\.\d+$},'')}/RBTools-#{version}.pkg"
   name 'RBTools'
