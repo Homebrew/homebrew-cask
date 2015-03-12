@@ -11,4 +11,3 @@ cask :v1 => 'postico' do
 
   depends_on :macos => '>= :mountain_lion'
 end
-
