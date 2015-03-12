@@ -1,8 +1,8 @@
 cask :v1 => 'boom' do
-  version '1.1.1'
-  sha256 '21e789d4ec2a35a74b2fea649926ffa63fac5313040e7393f9e01c727c6d6ed4'
+  version :latest
+  sha256 :no_check
 
-  url "http://www.globaldelight.com/boom/download/2x/web/boom2.dmg"
+  url 'http://www.globaldelight.com/boom/download/2x/web/boom2.dmg'
   name 'Boom'
   homepage 'http://www.globaldelight.com/boom/'
   license :commercial
