@@ -1,9 +1,9 @@
 cask :v1 => 'cloudfoundry-cli' do
-  version '6.8.0'
-  sha256 'ae21984e6658a094940cbc898235e2285da3f53437aa07c6607aa9c288197162'
+  version '6.10.0'
+  sha256 '35e8552119b989ab6f3acac10f8dfdf49c3efe20d6f96c141c2129a519342222'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "http://go-cli.s3-website-us-east-1.amazonaws.com/releases/v#{version}/installer-osx-amd64.pkg"
+  # pivotal.io is the official download host per the vendor homepage
+  url "https://cli.run.pivotal.io/stable?release=macosx64&version=#{version}&source=github-rel"
   name 'Cloud Foundry CLI'
   homepage 'https://github.com/cloudfoundry/cli'
   license :apache
@@ -11,6 +11,7 @@ cask :v1 => 'cloudfoundry-cli' do
   pkg 'installer-osx-amd64.pkg'
 
   uninstall :pkgutil => 'com.pivotal.cloudfoundry.pkg'
+
   caveats do
     files_in_usr_local
   end
