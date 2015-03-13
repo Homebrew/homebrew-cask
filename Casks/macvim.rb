@@ -10,8 +10,6 @@ cask :v1 => 'macvim' do
     sha256 '557c60f3487ab68426cf982c86270f2adfd15e8a4d535f762e6d55602754d224'
     # github.com is the official download host per the vendor homepage
     url "https://github.com/b4winckler/macvim/releases/download/snapshot-#{version.sub(%r{^.*-},'')}/MacVim-snapshot-#{version.sub(%r{^.*-},'')}-Mavericks.tbz"
-    appcast 'http://b4winckler.github.io/macvim/appcast/stable.xml',
-            :sha256 => '1408f192fe672eb99d7032eff37bd93537d65499fa9b4502eb0ae1365a73d056'
   else
     version '7.4-74'
     sha256 '35ad0fbd18b144254f852b8f2822d0923e30f43a838dc8de72ebb902f7f55949'
