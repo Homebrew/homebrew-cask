@@ -1,4 +1,6 @@
-# "To install, drag this icon..." no more!
+# Homebrew Cask
+
+> "To install, drag this icon..." no more!
 
 [![Build Status](https://img.shields.io/travis/caskroom/homebrew-cask/master.svg)](https://travis-ci.org/caskroom/homebrew-cask)
 [![Code Climate](https://img.shields.io/codeclimate/github/caskroom/homebrew-cask.svg)](https://codeclimate.com/github/caskroom/homebrew-cask)
