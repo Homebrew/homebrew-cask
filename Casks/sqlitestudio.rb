@@ -4,7 +4,7 @@ cask :v1 => 'sqlitestudio' do
 
   url "http://sqlitestudio.pl/files/sqlitestudio3/complete/macosx/sqlitestudio-#{version}.dmg"
   homepage 'http://sqlitestudio.pl'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'SQLiteStudio.app'
 end
