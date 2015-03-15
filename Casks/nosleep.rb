@@ -4,6 +4,7 @@ cask :v1 => 'nosleep' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/integralpro/nosleep/releases/download/v#{version}/NoSleep-#{version}.dmg"
+  appcast 'https://github.com/integralpro/nosleep/releases.atom'
   name 'NoSleep'
   homepage 'https://code.google.com/p/macosx-nosleep-extension/'
   license :gpl
