@@ -3,6 +3,7 @@ cask :v1 => 'management-tools' do
   sha256 '439ccc0a690d2c995bfb7d1b91d30732cabbd8e00163b3c84b43a2b19c547d8f'
 
   url "https://github.com/univ-of-utah-marriott-library-apple/management_tools/releases/download/v#{version}/Management_Tools_#{version}.dmg"
+  appcast 'https://github.com/univ-of-utah-marriott-library-apple/management_tools/releases.atom'
   name 'Management Tools'
   homepage 'https://github.com/univ-of-utah-marriott-library-apple/management_tools'
   license :mit
