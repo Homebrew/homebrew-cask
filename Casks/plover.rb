@@ -4,6 +4,7 @@ cask :v1 => 'plover' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/openstenoproject/plover/releases/download/v#{version}/Plover.dmg"
+  appcast 'https://github.com/openstenoproject/plover/releases.atom'
   name 'Plover'
   homepage 'http://stenoknight.com/wiki/Main_Page'
   license :gpl
