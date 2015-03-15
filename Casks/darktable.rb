@@ -4,6 +4,7 @@ cask :v1 => 'darktable' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/darktable-org/darktable/releases/download/release-#{version}/darktable-#{version}.dmg"
+  appcast 'https://github.com/darktable-org/darktable/releases.atom'
   name 'darktable'
   homepage 'http://www.darktable.org/'
   license :gpl
