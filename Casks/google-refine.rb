@@ -4,6 +4,7 @@ cask :v1 => 'google-refine' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/OpenRefine/OpenRefine/releases/download/2.5/google-refine-#{version}.dmg"
+  appcast 'https://github.com/OpenRefine/OpenRefine/releases.atom'
   homepage 'http://openrefine.org/'
   license :bsd
 
