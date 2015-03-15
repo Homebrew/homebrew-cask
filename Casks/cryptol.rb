@@ -4,6 +4,7 @@ cask :v1 => 'cryptol' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/GaloisInc/cryptol/releases/download/v#{version}/cryptol-#{version}-MacOSX-64.tar.gz"
+  appcast 'https://github.com/GaloisInc/cryptol/releases.atom'
   gpg "#{url}.sig",
       :key_url => 'http://cryptol.net/files/Galois.asc'
   homepage 'http://cryptol.net/'
