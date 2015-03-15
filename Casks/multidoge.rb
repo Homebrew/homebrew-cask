@@ -4,6 +4,7 @@ cask :v1 => 'multidoge' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/langerhans/multidoge/releases/download/v#{version}/multidoge-#{version}.dmg"
+  appcast 'https://github.com/langerhans/multidoge/releases.atom'
   name 'MultiDoge'
   homepage 'http://multidoge.org/'
   license :mit
