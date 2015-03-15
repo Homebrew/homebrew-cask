@@ -3,6 +3,7 @@ cask :v1 => 'munki' do
   sha256 'd2287454a1b3aa66ef49e41a34dfa55cfffd45d3e00de5d2288b3fd7ced2e42c'
 
   url "https://github.com/munki/munki/releases/download/v#{version}/munkitools-#{version}.pkg"
+  appcast 'https://github.com/munki/munki/releases.atom'
   name 'Munki'
   homepage 'http://munki.github.io/munki/'
   license :apache
