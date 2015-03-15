@@ -4,6 +4,7 @@ cask :v1 => 'dogecoin' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/dogecoin/dogecoin/releases/download/v#{version}/dogecoin-#{version}-mac.zip"
+  appcast 'https://github.com/dogecoin/dogecoin/releases.atom'
   homepage 'http://dogecoin.com/'
   license :mit
 
