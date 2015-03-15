@@ -4,8 +4,7 @@ cask :v1 => 'coteditor' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
-  appcast 'http://coteditor.com/appcast.xml',
-          :sha256 => '6707d7d9110e85cd98346efd2ad3507477707136ef5d8df0c309fb042be568f9'
+  appcast 'https://github.com/coteditor/CotEditor/releases.atom'
   name 'CotEditor'
   homepage 'http://coteditor.com/'
   license :gpl
