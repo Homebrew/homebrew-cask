@@ -8,5 +8,5 @@ cask :v1 => 'haroopad' do
   homepage 'http://pad.haroopress.com/'
   license :gpl
 
-  app 'haroopad.app'
+  app 'Haroopad.app'
 end

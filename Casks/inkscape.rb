@@ -8,6 +8,8 @@ cask :v1 => 'inkscape' do
   license :gpl
 
   app 'Inkscape.app'
+  # NOTE: running inkscape on the command line requires absolute paths to files
+  binary 'Inkscape.app/Contents/Resources/bin/inkscape'
 
   zap :delete => '~/.inkscape-etc'
 

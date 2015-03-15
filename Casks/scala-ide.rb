@@ -8,7 +8,7 @@ cask :v1 => 'scala-ide' do
   else
     # typesafe.com is the official download host per the vendor homepage
     url "http://downloads.typesafe.com/scalaide-pack/#{version}-vfinal-luna-211-20150119/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86_64.zip"
-    sha256 'c7276860b7e2615001e4d2e10329c2b45b41a95bb4a40c11363586de1ad6db83'
+    sha256 '79151623c1b5fd53b10a9361d872939937737dfa9708c60687098beef4f42159'
   end
 
   name 'Scala IDE'

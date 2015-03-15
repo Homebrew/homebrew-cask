@@ -1,8 +1,8 @@
 cask :v1 => 'mailpile' do
-  version '0.4.2'
-  sha256 '82cb79e2602de183a10303a9f38ca69ed2b84e72f17339c275bae79b3ebd5cfd'
+  version '0.4.3'
+  sha256 '4863de4fd4b852e026aff2deae08e6cfcc533f95f090156a32c7893ee8bda29f'
 
-  url 'https://www.mailpile.is/files/releases/Mailpile-Installer-Beta-II.dmg'
+  url 'https://www.mailpile.is/files/releases/Mailpile-Installer-Beta-II-0.4.3.dmg'
   name 'Mailpile'
   homepage 'https://www.mailpile.is/'
   license :oss

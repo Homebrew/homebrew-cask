@@ -5,7 +5,7 @@ cask :v1 => 'macid' do
   url "http://macid.co/app/#{version}/6/MacID-for-OS-X.zip"
   name 'MacID'
   homepage 'http://macid.co/'
-  license :gratis 
+  license :gratis
 
   app 'MacID.app'
 end

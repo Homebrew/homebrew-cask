@@ -6,7 +6,7 @@ cask :v1 => 'mixlr' do
   name 'Mixlr'
   homepage 'http://mixlr.com'
   license :gratis
-  
+
   app 'Mixlr.app'
 
 end

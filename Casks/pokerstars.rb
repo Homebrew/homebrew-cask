@@ -4,7 +4,7 @@ cask :v1 => 'pokerstars' do
 
   url 'http://www.pokerstars.com/PokerStars.app.zip'
   homepage 'http://www.pokerstars.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   app 'PokerStars.app'
 

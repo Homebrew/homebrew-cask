@@ -1,6 +1,6 @@
 cask :v1 => 'picasa' do
   version '3.9'
-  sha256 '189f57b3dd13fb40fc473c2569400744e82c51221de0d360be513ba0fdeb911e'
+  sha256 '59a2549913f523dac5a51859de135d92e434c1801ca571eb2d74664d19d6b627'
 
   url "https://dl.google.com/photos/picasamac#{version.gsub('.', '')}.dmg"
   name 'Picasa'

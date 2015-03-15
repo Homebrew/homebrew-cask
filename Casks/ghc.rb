@@ -1,10 +1,10 @@
 cask :v1 => 'ghc' do
-  version '7.8.3-r1'
-  sha256 '4f48e373f3fa682c8c29e2128038c040e69d7852a8529173f53105027199c21c'
+  version '7.8.4-r0'
+  sha256 '084f0eaf2807e67185ce44dd1a7a91c539df833b36fce307f3156c95b94afb9e'
 
   url "https://github.com/ghcformacosx/ghc-dot-app/releases/download/v#{version}/ghc-#{version}.zip"
   homepage 'http://ghcformacosx.github.io/'
   license :oss
 
-  app 'ghc-7.8.3.app'
+  app "ghc-#{version.sub(/-.+/,'')}.app"
 end

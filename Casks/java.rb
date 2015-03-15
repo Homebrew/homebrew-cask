@@ -1,8 +1,8 @@
 cask :v1 => 'java' do
-  version '1.8.0_31'
-  sha256 '6cc28f5b203bc7fe7ad2854613c626bd9fe0123d5c98c7a69e7d8d645f7d5b2d'
+  version '1.8.0_40'
+  sha256 'df4f43bfd0ead97af6fa72109fd4fdbc8224ec82f50fd86bcbcee97ca00ecf9d'
 
-  url 'http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31-macosx-x64.dmg',
+  url 'http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40-macosx-x64.dmg',
       :cookies => {
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
@@ -11,7 +11,7 @@ cask :v1 => 'java' do
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html'
   license :gratis
 
-  pkg 'JDK 8 Update 31.pkg'
+  pkg 'JDK 8 Update 40.pkg'
   postflight do
     system '/usr/bin/sudo', '-E', '--',
       '/usr/libexec/PlistBuddy', '-c', 'Add :JavaVM:JVMCapabilities: string BundledApp', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Info.plist"
@@ -34,7 +34,7 @@ cask :v1 => 'java' do
   end
 
   uninstall :pkgutil => [
-                         'com.oracle.jdk8u31',         # manually update this for each version
+                         'com.oracle.jdk8u40',         # manually update this for each version
                          'com.oracle.jre',
                         ],
             :launchctl => [

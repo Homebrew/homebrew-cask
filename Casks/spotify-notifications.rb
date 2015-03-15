@@ -1,6 +1,6 @@
 cask :v1 => 'spotify-notifications' do
-  version '0.4.8'
-  sha256 '953028e9a1aad445005869598050cb8612980821a796563936f557e03b319f50'
+  version '0.5.1'
+  sha256 '4402ae1d466f0129051ed9b052bc228183c1ed6c6dbf23716eff5eae1d9ff310'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/citruspi/Spotify-Notifications/releases/download/#{version}/Spotify.Notifications.-.#{version}.zip"

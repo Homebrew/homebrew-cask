@@ -1,12 +1,12 @@
 cask :v1 => 'firefox' do
-  version :latest
-  sha256 :no_check
+  version '36.0.1'
+  sha256 '42ff5be90f031640b8125fcf61c85584244fb7bb4bdeb43ba0438807cdf46c01'
 
-  url 'https://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US'
+  url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/en-US/Firefox%20#{version}.dmg"
   name 'Firefox'
   name 'Mozilla Firefox'
   homepage 'https://www.mozilla.org/en-US/firefox/'
-  license :oss
+  license :mpl
   tags :vendor => 'Mozilla'
 
   app 'Firefox.app'

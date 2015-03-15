@@ -1,10 +1,10 @@
 cask :v1 => 'default-folder-x' do
-  version '4.6.13'
-  sha256 'bc33783b31ff0f6f38f489be03470ac1566eb8161dbf57f1670c5a0842fcf38d'
+  version '4.6.14'
+  sha256 '621fe0042ed44da7eab369471ae345e19432cf3a5c70cf0290e567ce805f6b99'
 
   url "http://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
   homepage 'http://www.stclairsoft.com/DefaultFolderX'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   installer :manual => 'Default Folder X Installer.app'
 

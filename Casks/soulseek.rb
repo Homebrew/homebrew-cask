@@ -7,5 +7,5 @@ cask :v1 => 'soulseek' do
   homepage 'http://www.soulseekqt.net/'
   license :gratis
 
-  app "SoulseekQt.app"
+  app 'SoulseekQt.app'
 end
