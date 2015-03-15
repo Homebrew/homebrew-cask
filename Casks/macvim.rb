@@ -15,6 +15,7 @@ cask :v1 => 'macvim' do
     sha256 '35ad0fbd18b144254f852b8f2822d0923e30f43a838dc8de72ebb902f7f55949'
     # github.com is the official download host per the vendor homepage
     url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version.sub(%r{^.*-},'')}/MacVim-snapshot-#{version.sub(%r{^.*-},'')}-Yosemite.tbz"
+    appcast 'https://github.com/macvim-dev/macvim/releases.atom'
   end
 
   homepage 'http://code.google.com/p/macvim/'
