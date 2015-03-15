@@ -4,6 +4,7 @@ cask :v1 => 'mpv' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/mpv-player/mpv/releases/download/v#{version}/mpv_#{version}_mac.tar.bz2"
+  appcast 'https://github.com/mpv-player/mpv/releases.atom'
   name 'mpv'
   homepage 'http://mpv.io/'
   license :gpl
