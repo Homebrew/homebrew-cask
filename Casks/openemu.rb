@@ -4,8 +4,7 @@ cask :v1 => 'openemu' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}.zip"
-  appcast 'https://raw.github.com/OpenEmu/OpenEmu-Update/master/appcast.xml',
-          :sha256 => '0bc7baf23728b6c53a7d3c502fff9ccb0df150446a1164dc9e8ebcefc1c5a619'
+  appcast 'https://github.com/OpenEmu/OpenEmu/releases.atom'
   homepage 'http://openemu.org/'
   license :oss
 
