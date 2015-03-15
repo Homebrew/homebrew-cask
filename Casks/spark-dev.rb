@@ -3,6 +3,7 @@ cask :v1 => 'spark-dev' do
   sha256 'f2fa70e23590c6b57f1415dabee56f60671637526fd0348fdd019d1304b341ff'
 
   url "https://github.com/spark/spark-dev/releases/download/v#{version}/spark-dev-mac.zip"
+  appcast 'https://github.com/spark/spark-dev/releases.atom'
   homepage 'https://github.com/spark/spark-dev'
   license :apache
 
