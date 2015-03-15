@@ -4,6 +4,7 @@ cask :v1 => 'tribler' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/Tribler/tribler/releases/download/v#{version}/Tribler-#{version}.dmg"
+  appcast 'https://github.com/Tribler/tribler/releases.atom'
   name 'Tribler'
   homepage 'http://www.tribler.org'
   license :gpl
