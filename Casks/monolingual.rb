@@ -12,11 +12,10 @@ cask :v1 => 'monolingual' do
   else
     version '1.6.3'
     sha256 '7b6d0dd47952e3c864901f05be3a1cc7f47c86c8addc104b60d0d832722235d0'
-    appcast 'https://ingmarstein.github.io/Monolingual/appcast.xml',
-            :sha256 => 'a536d84e8430d0ba64638e5696f67e96259cfdb81aacd8c2df0a078ff3ea4672'
   end
 
   url "https://github.com/IngmarStein/Monolingual/releases/download/v#{version}/Monolingual-#{version}.dmg"
+  appcast 'https://github.com/IngmarStein/Monolingual/releases.atom'
   homepage 'https://ingmarstein.github.io/Monolingual/'
   license :gpl
 
