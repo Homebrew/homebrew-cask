@@ -4,6 +4,7 @@ cask :v1 => 'jedit' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/jedit/jedit#{version}install.dmg"
+  name 'jEdit'
   homepage 'http://www.jedit.org'
   license :gpl
 
