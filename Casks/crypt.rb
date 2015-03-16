@@ -6,7 +6,7 @@ cask :v1 => 'crypt' do
   url "http://voluntary.net.s3.amazonaws.com/Crypt#{version}_20100429.zip"
   name 'Crypt'
   homepage 'http://voluntary.net/crypt/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :mit
 
   app "Crypt#{version}.app"
 end
