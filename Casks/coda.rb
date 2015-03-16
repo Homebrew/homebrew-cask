@@ -4,6 +4,7 @@ cask :v1 => 'coda' do
 
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
   appcast 'http://www.panic.com/updates/update.php'
+  name 'Coda'
   homepage 'https://panic.com/Coda/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
