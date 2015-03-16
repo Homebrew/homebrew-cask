@@ -6,7 +6,7 @@ cask :v1 => 'comictagger' do
   url "https://googledrive.com/host/0Bw4IursaqWhhOHF6Wk9ab3FkejQ/#{version}/ComicTagger-#{version}.dmg"
   name 'ComicTagger'
   homepage 'http://code.google.com/p/comictagger/'
-  license :oss
+  license :apache
 
   app 'ComicTagger.app'
 end
