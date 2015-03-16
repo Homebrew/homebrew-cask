@@ -6,6 +6,7 @@ cask :v1 => 'keepingyouawake' do
   appcast 'https://newmarcel.github.io/KeepingYouAwake/appcast.xml',
     :sha256 => '738fcec2775620870b759319b9c49fabb71cfff9eaf330048c9725816c52254d',
     :format => :sparkle
+  name 'KeepingYouAwake'
   homepage 'https://github.com/newmarcel/KeepingYouAwake'
   license :mit
 

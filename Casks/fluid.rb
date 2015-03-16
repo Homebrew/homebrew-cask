@@ -5,6 +5,7 @@ cask :v1 => 'fluid' do
   url "http://fluidapp.com/dist/Fluid_#{version}.zip"
   appcast 'http://fluidapp.com/appcast/fluid1.rss',
           :sha256 => '260c43831d82b9fa593d9f32cca7bc61b594f5993908b104601ed866ee7c518a'
+  name 'Fluid'
   homepage 'http://fluidapp.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

@@ -3,6 +3,7 @@ cask :v1 => 'superduper' do
   sha256 :no_check
 
   url 'http://www.shirt-pocket.com/downloads/SuperDuper!.dmg'
+  name 'SuperDuper!'
   homepage 'http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

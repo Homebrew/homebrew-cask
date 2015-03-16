@@ -5,6 +5,7 @@ cask :v1 => 'taskpaper' do
   # amazonaws.com is the official download host per the vendor homepage
   url "http://taskpaper.s3.amazonaws.com/TaskPaper-#{version}.dmg"
   appcast 'http://www.hogbaysoftware.com/products/taskpaper/releases.rss'
+  name 'TaskPaper'
   homepage 'http://www.hogbaysoftware.com/products/taskpaper'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

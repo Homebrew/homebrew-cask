@@ -6,6 +6,7 @@ cask :v1 => 'devonthink-pro-office' do
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro_Office.dmg.zip"
   appcast 'http://www.devon-technologies.com/Sparkle/DEVONthinkProOffice2.xml',
           :sha256 => '6db814e6797e848696b2c92613cf6764649b7050337842ac57dc8437af1b428e'
+  name 'DEVONthink Pro Office'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
