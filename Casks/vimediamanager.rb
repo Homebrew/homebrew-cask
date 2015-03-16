@@ -1,6 +1,6 @@
 cask :v1 => 'vimediamanager' do
-  version '0.7a11c'
-  sha256 '3642a38fdc4d995943e42bad538eb117ab225fb564c05701850fe01d9c99a035'
+  version '0.7a13c'
+  sha256 'da5a1f76d556bbdb4cff76295cd0e60a47d05f6073b35dae20a88387f4eb10ce'
 
   url "http://mariusth.channelwood.org/vimediamanager/files/vimediamanager_v#{version}.dmg"
   name 'ViMediaManager'
