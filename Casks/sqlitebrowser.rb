@@ -7,7 +7,7 @@ cask :v1 => 'sqlitebrowser' do
   name 'DB Browser for SQLite'
   name 'SQLite Database Browser'
   homepage 'http://sqlitebrowser.org'
-  license :mpl
+  license :oss
 
   app 'sqlitebrowser.app'
 end
