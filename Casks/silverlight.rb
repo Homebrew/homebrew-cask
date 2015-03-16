@@ -3,6 +3,7 @@ cask :v1 => 'silverlight' do
   sha256 :no_check    # required as upstream package is updated in-place
 
   url 'http://silverlight.dlservice.microsoft.com/download/F/8/C/F8C0EACB-92D0-4722-9B18-965DD2A681E9/30514.00/Silverlight.dmg'
+  name 'Silverlight'
   homepage 'http://www.microsoft.com/silverlight/'
   license :gratis
 
