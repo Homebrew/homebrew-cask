@@ -3,6 +3,7 @@ cask :v1 => 'x-mirage' do
   sha256 :no_check
 
   url 'http://dl.x-mirage.com/x-mirage.dmg'
+  name 'X-Mirage'
   homepage 'http://www.x-mirage.com/x-mirage/'
   license :commercial
 
