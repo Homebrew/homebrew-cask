@@ -12,6 +12,7 @@ cask :v1 => 'paraview' do
     url "http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v4.2&type=binary&os=osx&downloadFile=ParaView-#{version}-Darwin-64bit.dmg"
   end
 
+  name 'ParaView'
   homepage 'http://www.paraview.org/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
