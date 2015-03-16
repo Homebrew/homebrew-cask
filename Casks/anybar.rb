@@ -1,8 +1,8 @@
 cask :v1 => 'anybar' do
-  version '0.1.2'
-  sha256 '33816aace0d6bb26b9f2e3b0fea6ca30eb95f4fb650493f998accd0970f1d220'
+  version '0.1.3'
+  sha256 'aaf23b72b682fe4db6ea19908a2e0ffceb54c33aa1c551c5de833c56bca74ef6'
 
-  url "https://github.com/tonsky/AnyBar/releases/download/#{version}/AnyBar.app.zip"
+  url "https://github.com/tonsky/AnyBar/releases/download/#{version}/AnyBar-#{version}.zip"
   name 'AnyBar'
   homepage 'https://github.com/tonsky/AnyBar'
   license :eclipse
