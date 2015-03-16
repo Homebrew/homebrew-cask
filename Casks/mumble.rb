@@ -5,6 +5,7 @@ cask :v1 => 'mumble' do
   url "http://downloads.sourceforge.net/sourceforge/mumble/Mumble-#{version}.dmg"
   gpg "#{url}.sig",
       :key_url => 'http://mumble.info/gpg/mumble-auto-build-2014.asc'
+  name 'Mumble'
   homepage 'http://mumble.sourceforge.net'
   license :bsd
 
