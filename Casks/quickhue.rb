@@ -3,6 +3,7 @@ cask :v1 => 'quickhue' do
   sha256 :no_check
 
   url 'https://github.com/danparsons/QuickHue/raw/master/QuickHue.zip'
+  name 'QuickHue'
   homepage 'https://github.com/danparsons/QuickHue'
   license :mit
 
