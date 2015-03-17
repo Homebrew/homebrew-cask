@@ -4,7 +4,7 @@ cask :v1 => 'lucidor' do
 
   url "http://lucidor.org/lucidor/lucidor-#{version}.dmg"
   name 'Lucidor'
-  homepage 'http://lucidor.org'
+  homepage 'http://lucidor.org/lucidor/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Lucidor.app'
