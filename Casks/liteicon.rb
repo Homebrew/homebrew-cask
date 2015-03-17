@@ -6,7 +6,7 @@ cask :v1 => 'liteicon' do
   appcast 'http://www.freemacsoft.net/liteicon/updates.xml',
           :sha256 => '3815e06647bbecb0adab6364a2c2808460d1330226744fa01474366ca63eadb1'
   homepage 'http://www.freemacsoft.net/liteicon/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'LiteIcon.app'
 end

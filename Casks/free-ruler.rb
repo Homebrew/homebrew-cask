@@ -5,7 +5,7 @@ cask :v1 => 'free-ruler' do
   url "http://www.pascal.com/software/freeruler/FreeRuler#{version}.zip"
   name 'Free Ruler'
   homepage 'http://www.pascal.com/software/freeruler/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app "Free Ruler #{version}.app"
 end

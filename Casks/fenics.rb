@@ -4,7 +4,7 @@ cask :v1 => 'fenics' do
 
   url "http://www.fenicsproject.org/pub/software/fenics/fenics-#{version}-osx10.9.dmg"
   homepage 'http://fenicsproject.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'FEniCS.app'
 
