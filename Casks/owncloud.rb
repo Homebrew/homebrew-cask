@@ -1,6 +1,6 @@
 cask :v1 => 'owncloud' do
-  version '1.7.1.1655'
-  sha256 '31cff973611823b5306544fe394539c4bb167645fb14622125443967f20014d4'
+  version '1.8.0.2139'
+  sha256 'd0c68f3c29e9f9c05629e6eef87b826b6e64f10360964ede081257f4be0a4892'
 
   url "https://download.owncloud.com/desktop/stable/ownCloud-#{version}.pkg"
   name 'ownCloud'
