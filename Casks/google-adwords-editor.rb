@@ -1,6 +1,6 @@
 cask :v1 => 'google-adwords-editor' do
-  version '11.0.0'
-  sha256 '112bd8ba1789208da8c3200875d8719ec832d2533c299d3221a190cb98b4f7e7'
+  version '11.0.3'
+  sha256 '0294ef3fceff0cad0bc954c24afb20af36c01f8cbd4cc15e9aee43565dbb44bf'
 
   url "https://dl.google.com/adwords_editor/#{version}/Google_AdWords_Editor.dmg"
   name 'Google AdWords Editor'
