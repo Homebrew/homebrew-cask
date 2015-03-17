@@ -1,5 +1,8 @@
 require 'bundler'
 require 'bundler/setup'
+require 'coveralls'
+
+Coveralls.wear_merged!
 
 # just in case
 if RUBY_VERSION.to_i < 2
