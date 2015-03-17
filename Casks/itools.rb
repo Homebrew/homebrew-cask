@@ -5,7 +5,7 @@ cask :v1 => 'itools' do
   # itools.hk is the official download host per the vendor homepage
   url "http://dl2.itools.hk/dl/iTools_#{version}.dmg"
   name 'iTools'
-  homepage 'http://pro.itools.cn/mac'
+  homepage 'http://pro.itools.cn/mac/english'
   license :gratis
 
   app 'iTools.app'
