@@ -7,5 +7,5 @@ cask :v1 => 'tether' do
   homepage 'http://hellotether.com/'
   license :gratis
 
-  app "Tether.app"
+  app 'Tether.app'
 end
