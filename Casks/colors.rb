@@ -5,7 +5,7 @@ cask :v1 => 'colors' do
   # googlecode.com is the official download host per the vendor homepage
   url "http://tmitter.googlecode.com/files/Colors-#{version}.zip"
   homepage 'https://github.com/13bold/Colors/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :mit
 
   app 'Colors.app'
 end
