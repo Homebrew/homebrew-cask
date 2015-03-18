@@ -1,6 +1,6 @@
 cask :v1 => 'appium' do
-  version '1.3.5'
-  sha256 '88fb3d798e3a28452d8477f78d182b035116dcd1569e444bdf08603c927b73d7'
+  version '1.3.6'
+  sha256 '76bc810e07aa629f4dbf07c37d46e7a94b61fa7ab128f8c9e763ad0d8e19e62b'
 
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/appium/appium.app/downloads/appium-#{version}.dmg"
