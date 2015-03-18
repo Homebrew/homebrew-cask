@@ -5,7 +5,7 @@ cask :v1 => 'name-mangler' do
   url 'http://manytricks.com/download/namemangler'
   appcast 'http://manytricks.com/namemangler/appcast.xml'
   homepage 'http://manytricks.com/namemangler/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   app 'Name Mangler.app'
 end

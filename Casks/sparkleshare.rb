@@ -4,6 +4,7 @@ cask :v1 => 'sparkleshare' do
 
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/hbons/sparkleshare/downloads/sparkleshare-mac-#{version}.zip"
+  name 'SparkleShare'
   homepage 'http://sparkleshare.org/'
   license :gpl
 

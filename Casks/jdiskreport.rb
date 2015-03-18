@@ -5,7 +5,7 @@ cask :v1 => 'jdiskreport' do
   url "http://www.jgoodies.com/download/jdiskreport/jdiskreport-#{version.gsub('.', '_')}-mac.zip"
   name 'JDiskReport'
   homepage 'http://www.jgoodies.com/freeware/jdiskreport/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app "JDiskReport #{version}/JDiskReport.app"
 end

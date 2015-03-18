@@ -4,6 +4,7 @@ cask :v1 => 'peepopen' do
 
   url 'https://topfunky.github.io/PeepOpen/dl/PeepOpen.dmg'
   appcast 'https://peepcode.com/system/apps/PeepOpen/appcast.xml'
+  name 'PeepOpen'
   homepage 'http://topfunky.github.io/PeepOpen/'
   license :mit
 

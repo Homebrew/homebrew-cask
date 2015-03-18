@@ -1,11 +1,11 @@
 cask :v1 => 'tether' do
-  version '1.2.0'
-  sha256 '2ac0acbe47a2d348730bb132e202f2ad7eebf6d1be3f597e6ddc8cab0db597d2'
+  version '1.3.0'
+  sha256 '33346da2daaa12678540a1b99a24da77ea008022b04137ecf2f4166998606c6f'
 
-  url 'http://hellotether.com/downloads/tether.zip'
+  url "http://hellotether.com/downloads/Tether_v#{version}.zip"
   name 'Tether'
   homepage 'http://hellotether.com/'
   license :gratis
 
-  app "Tether_v#{version}.app"
+  app 'Tether.app'
 end

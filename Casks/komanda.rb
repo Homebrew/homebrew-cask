@@ -3,6 +3,7 @@ cask :v1 => 'komanda' do
   sha256 'e54f195185d92b0b4a9e9be3b1db4b2cbd99723c93e9b6e57feb0df90b27a5d1'
 
   url "https://github.com/mephux/komanda/releases/download/#{version}/Komanda-macosx.zip"
+  name 'Komanda'
   homepage 'https://github.com/mephux/komanda'
   license :mit
 

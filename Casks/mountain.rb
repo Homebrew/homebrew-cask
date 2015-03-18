@@ -4,6 +4,7 @@ cask :v1 => 'mountain' do
 
   url 'http://appgineers.de/mountain/files/Mountain.zip'
   appcast 'http://appgineers.de/mountain/files/mountaincast.xml'
+  name 'Mountain'
   homepage 'http://appgineers.de/mountain/'
   license :commercial
 
