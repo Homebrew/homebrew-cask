@@ -1,8 +1,8 @@
 cask :v1 => 'leap-motion' do
-  version '2.2.1'
-  sha256 'eba23267927e4032f51f8633cf4a4b0d47b923099f633a11438c9e0fd4f20f86'
+  version '2.2.3'
+  sha256 '1c369abb37bbf264b94819e78c4f3b050e80c3e79a542bd9b2d9974f7b112cf3'
 
-  url 'https://warehouse.leapmotion.com/apps/3833/download'
+  url 'https://warehouse.leapmotion.com/apps/3994/download'
   homepage 'https://www.leapmotion.com/setup'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
