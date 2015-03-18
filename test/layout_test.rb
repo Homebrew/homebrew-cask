@@ -39,6 +39,7 @@ describe "Repo layout" do
                       .gitignore
                       .rspec
                       .rubocop.yml
+                      .simplecov
                       .travis.yml
                       CONDUCT.md
                       CONTRIBUTING.md
