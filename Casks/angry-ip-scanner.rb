@@ -4,6 +4,7 @@ cask :v1 => 'angry-ip-scanner' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/angryziber/ipscan/releases/download/#{version}/ipscan-mac-#{version}.zip"
+  appcast 'https://github.com/angryziber/ipscan/releases.atom'
   name 'Angry IP Scanner'
   homepage 'http://angryip.org'
   license :gpl

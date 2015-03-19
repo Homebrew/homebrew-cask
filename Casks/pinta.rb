@@ -4,6 +4,7 @@ cask :v1 => 'pinta' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/PintaProject/Pinta/releases/download/#{version}/Pinta.app.zip"
+  appcast 'https://github.com/PintaProject/Pinta/releases.atom'
   name 'Pinta'
   homepage 'http://pinta-project.com/'
   license :mit

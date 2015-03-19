@@ -4,6 +4,7 @@ cask :v1 => 'shotcut' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/mltframework/shotcut/releases/download/v#{version.sub(/\.\d+$/, '')}/shotcut-osx-x86_64-#{version.gsub('.', '')}.dmg"
+  appcast 'https://github.com/mltframework/shotcut/releases.atom'
   homepage 'http://www.shotcut.org/'
   license :gpl
 

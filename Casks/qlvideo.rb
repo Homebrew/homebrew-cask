@@ -3,6 +3,7 @@ cask :v1 => 'qlvideo' do
   sha256 'df4db7b2f43a365ee528a7cb5cc921a59b46950060708d2c97551be606aa58d5'
 
   url "https://github.com/Marginal/QLVideo/releases/download/rel-#{version.gsub('.', '')}/QLVideo_#{version.gsub('.', '')}.pkg"
+  appcast 'https://github.com/Marginal/QLVideo/releases.atom'
   name 'QuickLook Video'
   homepage 'https://github.com/Marginal/QLVideo'
   license :gpl

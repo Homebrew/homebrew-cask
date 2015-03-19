@@ -4,6 +4,7 @@ cask :v1 => 'raven' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/robotlolita/raven/releases/download/v#{version}/Raven-osx.zip"
+  appcast 'https://github.com/robotlolita/raven/releases.atom'
   name 'Raven'
   homepage 'http://robotlolita.me/raven/'
   license :mit

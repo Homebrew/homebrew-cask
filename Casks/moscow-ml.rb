@@ -4,6 +4,7 @@ cask :v1 => 'moscow-ml' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/kfl/mosml/releases/download/ver-#{version}/mosml-#{version}.pkg"
+  appcast 'https://github.com/kfl/mosml/releases.atom'
   name 'Moscow ML'
   homepage 'http://mosml.org/'
   license :gpl

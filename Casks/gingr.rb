@@ -4,6 +4,7 @@ cask :v1 => 'gingr' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/marbl/gingr/releases/download/v#{version}/gingr-OSX64-v#{version}.zip"
+  appcast 'https://github.com/marbl/gingr/releases.atom'
   homepage 'http://harvest.readthedocs.org/en/latest/content/gingr.html'
   license :bsd
 

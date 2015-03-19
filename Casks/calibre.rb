@@ -4,6 +4,7 @@ cask :v1 => 'calibre' do
 
   # github.com is an official download host per the vendor homepage, and a faster mirror than the main one
   url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg"
+  appcast 'https://github.com/kovidgoyal/calibre/releases.atom'
   name 'calibre'
   homepage 'http://calibre-ebook.com/'
   license :gpl

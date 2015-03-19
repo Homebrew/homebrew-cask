@@ -4,6 +4,7 @@ cask :v1 => 'spotify-notifications' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/citruspi/Spotify-Notifications/releases/download/#{version}/Spotify.Notifications.-.#{version}.zip"
+  appcast 'https://github.com/citruspi/Spotify-Notifications/releases.atom'
   name 'Spotify Notifications'
   homepage 'http://spotify-notifications.citruspi.io/'
   license :public_domain

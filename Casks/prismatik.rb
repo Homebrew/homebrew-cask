@@ -4,6 +4,7 @@ cask :v1 => 'prismatik' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/woodenshark/Lightpack/releases/download/#{version}/Prismatik.#{version}.dmg"
+  appcast 'https://github.com/woodenshark/Lightpack/releases.atom'
   name 'Prismatik'
   homepage 'http://lightpack.tv/'
   license :gpl

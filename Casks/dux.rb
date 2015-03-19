@@ -4,6 +4,7 @@ cask :v1 => 'dux' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/abhibeckert/Dux/releases/download/#{version}/Dux-#{version}.zip"
+  appcast 'https://github.com/abhibeckert/Dux/releases.atom'
   name 'Dux'
   homepage 'http://duxapp.com/'
   license :public_domain

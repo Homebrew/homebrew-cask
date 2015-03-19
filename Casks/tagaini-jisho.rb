@@ -4,6 +4,7 @@ cask :v1 => 'tagaini-jisho' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/Gnurou/tagainijisho/releases/download/#{version}/Tagaini.Jisho-#{version}.dmg"
+  appcast 'https://github.com/Gnurou/tagainijisho/releases.atom'
   homepage 'http://www.tagaini.net/'
   license :gpl
 

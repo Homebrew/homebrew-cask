@@ -4,6 +4,7 @@ cask :v1 => 'docker-machine' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/docker/machine/releases/download/#{version}/docker-machine_darwin-amd64"
+  appcast 'https://github.com/docker/machine/releases.atom'
   name 'Docker Machine'
   homepage 'https://docs.docker.com/machine'
   license :apache
