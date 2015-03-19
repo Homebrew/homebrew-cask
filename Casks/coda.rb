@@ -6,12 +6,19 @@ cask :v1 => 'coda' do
   appcast 'http://www.panic.com/updates/update.php'
   name 'Coda'
   homepage 'https://panic.com/Coda/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-
-  app 'Coda 2.app'
+  license :commercial
+  tags :vendor => 'Panic'
 
   zap :delete => [
-                  '~/Library/Application Support/Coda 2',
-                  '~/Library/Preferences/com.panic.Coda2.plist',
-                 ]
+    '~/Library/Application Support/Coda 2',
+    '~/Library/Application Support/Growl/Tickets/Coda 2.growlTicket',
+    '~/Library/Caches/com.panic.Coda2',
+    '~/Library/Caches/com.apple.helpd/Generated/com.panic.Coda2.help',
+    '~/Library/Preferences/com.panic.Coda2.plist',
+    '~/Library/Preferences/com.panic.Coda2.LSSharedFileList.plist',
+    '~/Library/Preferences/com.panic.Coda2.LSSharedFileList.plist.lockfile',
+    '~/Library/Saved Application State/com.panic.Coda2.savedState'
+  ]
+
+  app 'Coda 2.app'
 end
