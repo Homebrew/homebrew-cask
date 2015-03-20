@@ -9,6 +9,8 @@ cask :v1 => 'appfresh' do
   license :commercial
   tags :vendor => 'metaquark'
 
+  uninstall :launchctl => 'de.metaquark.appfresh'
+
   zap :delete => [
     '~/Library/Application Support/AppFresh',
     '~/Library/Application Support/Growl/Tickets/AppFresh.growlTicket',
