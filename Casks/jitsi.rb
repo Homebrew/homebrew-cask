@@ -1,6 +1,6 @@
 cask :v1 => 'jitsi' do
-  version '2.6.5390'
-  sha256 '574bae43116792ce1f2ab5e61486388eee07cdfab618f8a251f66ed7ed01d27d'
+  version '2.8.5426'
+  sha256 '91980b803ba5c165c5ec109b784a7338bf5d1af2f866c513baf114bbda2953a4'
 
   url "https://download.jitsi.org/jitsi/macosx/jitsi-#{version}.dmg"
   appcast 'https://download.jitsi.org/jitsi/macosx/sparkle/updates.xml',
