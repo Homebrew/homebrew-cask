@@ -29,5 +29,4 @@ cask :v1 => 'sencha' do
       If you are a zshell user, copy at the end of your .zshrc file both lines.
     EOS
   end
-
 end
