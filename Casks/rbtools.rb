@@ -8,5 +8,6 @@ cask :v1 => 'rbtools' do
   license :mit
 
   pkg "RBTools-#{version}.pkg"
+
   uninstall :pkgutil => 'org.reviewboard.rbtools'
 end
