@@ -10,5 +10,6 @@ cask :v1 => 'dn-3023-driver' do
   container :type => :zip,
             :nested => 'DN-3023_Driver_MAC/AX88179_178A.dmg'
   pkg 'AX88179_178A_v2.2.0.pkg'
+
   uninstall :script => 'AX88179_178A_Uninstall_v140'
 end
