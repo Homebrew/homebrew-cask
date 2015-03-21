@@ -29,5 +29,4 @@ cask :v1 => 'yasu' do
 
     Official announcement can be found on the Yasu homepage.
   EOS
-
 end
