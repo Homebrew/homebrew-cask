@@ -9,5 +9,6 @@ cask :v1 => 'fish' do
   license :gpl
 
   pkg 'fish.pkg'
+
   uninstall :pkgutil => 'com.ridiculousfish.fish-shell-pkg'
 end
