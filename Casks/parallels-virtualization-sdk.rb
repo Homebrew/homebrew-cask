@@ -9,5 +9,4 @@ cask :v1 => 'parallels-virtualization-sdk' do
 
   pkg 'Parallels Virtualization SDK.pkg'
   uninstall :pkgutil => 'com.parallels.pkg.sdk'
-
 end
