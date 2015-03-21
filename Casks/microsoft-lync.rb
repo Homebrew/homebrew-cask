@@ -20,5 +20,4 @@ cask :v1 => 'microsoft-lync' do
                          '~/Documents/Microsoft User Data/Microsoft Lync Data'
                         ],
             :rmdir   => '~/Documents/Microsoft User Data'
-
 end
