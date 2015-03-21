@@ -8,5 +8,6 @@ cask :v1 => 'osirix-quicklook' do
   license :gratis
 
   pkg 'OsiriXQuickLookInstaller.pkg'
+
   uninstall :pkgutil => 'com.pixmeo.osirix.osirixQuicklookPlugin.OsiriXQuickLookPlugin.pkg'
 end
