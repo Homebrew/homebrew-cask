@@ -8,5 +8,4 @@ cask :v1 => 'mixlr' do
   license :gratis
 
   app 'Mixlr.app'
-
 end
