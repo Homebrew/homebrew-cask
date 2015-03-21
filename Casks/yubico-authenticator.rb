@@ -8,5 +8,6 @@ cask :v1 => 'yubico-authenticator' do
   license :gpl
 
   pkg "yubioath-desktop-#{version}.pkg"
+
   uninstall :pkgutil => 'com.yubico.pkg.YubicoAuthenticatoOSX'
 end

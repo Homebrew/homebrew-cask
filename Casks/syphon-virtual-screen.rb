@@ -6,7 +6,9 @@ cask :v1 => 'syphon-virtual-screen' do
   name 'Syphon Virtual Screen'
   homepage 'http://andreacremaschi.github.io/Syphon-virtual-screen/'
   license :unknown
+
   pkg 'Syphon Virtual Screen.mpkg'
+
   uninstall :kext => 'EWProxyFrameBuffer',
             :delete => '/System/Library/Caches/com.apple.kext.caches'
 

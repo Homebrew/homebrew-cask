@@ -8,6 +8,6 @@ cask :v1 => 'parallels-virtualization-sdk' do
   license :gratis
 
   pkg 'Parallels Virtualization SDK.pkg'
-  uninstall :pkgutil => 'com.parallels.pkg.sdk'
 
+  uninstall :pkgutil => 'com.parallels.pkg.sdk'
 end

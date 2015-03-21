@@ -21,5 +21,4 @@ cask :v1 => 'filezilla' do
                   '~/Library/Preference/de.filezilla.plist',
                  ],
       :rmdir => '~/.config/filezilla'
-
 end
