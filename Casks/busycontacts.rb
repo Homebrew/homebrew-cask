@@ -8,5 +8,6 @@ cask :v1 => 'busycontacts' do
   license :commercial
 
   pkg 'BusyContacts Installer.pkg'
+
   uninstall :pkgutil => 'com.busymac.busycontacts.pkg'
 end
