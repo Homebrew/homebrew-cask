@@ -1,6 +1,6 @@
 cask :v1 => 'firefox' do
-  version '36.0.3'
-  sha256 '5e8c2683b30a03e364d866c4c64fd0ffc7b789246174da14f99abca78828c12d'
+  version '36.0.4'
+  sha256 '9ef320c4a1b62e7ad4b7a623f3e4f75792e94197a710eacc39644813896e7556'
 
   url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/en-US/Firefox%20#{version}.dmg"
   name 'Firefox'
