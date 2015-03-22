@@ -1,10 +1,6 @@
 # Homebrew Cask
-"To install, drag this icon..." no more!
 
-[![Build Status](https://img.shields.io/travis/caskroom/homebrew-cask/master.svg)](https://travis-ci.org/caskroom/homebrew-cask)
-[![Code Climate](https://img.shields.io/codeclimate/github/caskroom/homebrew-cask.svg)](https://codeclimate.com/github/caskroom/homebrew-cask)
-[![Coverage Status](https://img.shields.io/coveralls/caskroom/homebrew-cask.svg)](https://coveralls.io/r/caskroom/homebrew-cask)
-
+_"To install, drag this icon..." no more!_
 
 Let's see if we can get the elegance, simplicity, and speed of Homebrew for the
 installation and management of GUI Mac applications such as Google Chrome and Adium.
@@ -14,6 +10,10 @@ administration of Mac applications distributed as binaries.
 
 It's implemented as a `homebrew` [external command](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/External-Commands.md)
 called `cask`.
+
+[![Build Status](https://img.shields.io/travis/caskroom/homebrew-cask/master.svg)](https://travis-ci.org/caskroom/homebrew-cask)
+[![Code Climate](https://img.shields.io/codeclimate/github/caskroom/homebrew-cask.svg)](https://codeclimate.com/github/caskroom/homebrew-cask)
+[![Coverage Status](https://img.shields.io/coveralls/caskroom/homebrew-cask.svg)](https://coveralls.io/r/caskroom/homebrew-cask)
 
 ## Let's try it!
 ```sh
