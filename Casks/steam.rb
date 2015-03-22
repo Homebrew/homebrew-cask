@@ -4,7 +4,7 @@ cask :v1 => 'steam' do
 
   url 'http://media.steampowered.com/client/installer/steam.dmg'
   homepage 'http://store.steampowered.com/about/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Steam.app'
 
