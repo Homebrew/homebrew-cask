@@ -1,6 +1,6 @@
 cask :v1 => 'charles' do
-  version '3.9.3'
-  sha256 '84de5c3f233ec6af24f5bab04631daf9ef4af0c549efca8675f9d3946e5aceb8'
+  version '3.10'
+  sha256 'ee0a07d6b303a778f98dd37293aa13bce2adf0ad15648e144c1676c21cec3c31'
 
   url "http://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}-applejava.dmg"
   homepage 'http://www.charlesproxy.com/'
