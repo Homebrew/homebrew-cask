@@ -1,6 +1,6 @@
-# Homebrew Cask
+# Homebrew-Cask
 
-_"To install, drag this icon..." no more!_
+_“To install, drag this icon…” no more!_
 
 Let's see if we can get the elegance, simplicity, and speed of Homebrew for the
 installation and management of GUI Mac applications such as Google Chrome and Adium.
