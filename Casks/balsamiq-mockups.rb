@@ -1,5 +1,5 @@
 cask :v1 => 'balsamiq-mockups' do
-  version '3.0.2'
+  version '3.0.3'
   sha256 '9fc0de506e7275a4468f238f38ff11304877330a2fa5c082fbbf8ce90e07c994'
 
   # amazonaws is the official download host per the vendor homepage
