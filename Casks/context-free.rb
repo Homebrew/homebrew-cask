@@ -5,7 +5,7 @@ cask :v1 => 'context-free' do
   url 'http://www.contextfreeart.org/download/ContextFree3.0.8.dmg'
   name 'Context Free'
   homepage 'http://www.contextfreeart.org/'
-  license :gpl    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Context Free.app'
 end
