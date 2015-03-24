@@ -1,10 +1,10 @@
 cask :v1 => 'torbrowser' do
-  version '4.0.4'
-  sha256 'c47bcb38f75f31e780b45472517b8e30632793ca969244fdc54d01dade3ac512'
+  version '4.0.5'
+  sha256 '8afa20cc70fe9bae8b0f09a96df001fee091ff89eda47bcdbc9a9370d57ea29e'
 
   url "https://www.torproject.org/dist/torbrowser/#{version}/TorBrowser-#{version}-osx32_en-US.dmg"
   gpg "#{url}.asc",
-      :key_id => '416f061063fee659'
+      :key_id => '4e2c6e8793298290'
   homepage 'https://www.torproject.org/projects/torbrowser.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
