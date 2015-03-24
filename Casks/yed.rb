@@ -6,7 +6,8 @@ cask :v1 => 'yed' do
   homepage 'http://www.yworks.com/en/products/yfiles/yed/'
   license :gratis
   tags :vendor => 'yWorks'
-  depends_on :macos => '>= 10.8'
 
   app 'yEd.app'
+
+  depends_on :macos => '>= 10.8'
 end
