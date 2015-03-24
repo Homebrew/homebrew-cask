@@ -9,4 +9,12 @@ cask :v1 => 'contexts' do
   license :commercial
 
   app 'Contexts.app'
+
+  uninstall :quit => 'com.contextsformac.Contexts'
+
+  zap :delete => [
+                  '~/Library/Application Support/.com.contextsformac.Contexts.plist',
+                  '~/Library/Caches/com.contextsformac.Contexts',
+                  '~/Library/Preferences/com.contextsformac.Contexts.plist'
+                 ]
 end
