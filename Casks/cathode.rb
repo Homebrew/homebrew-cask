@@ -4,6 +4,7 @@ cask :v1 => 'cathode' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "http://s3.amazonaws.com/cjcaufield/products/cathode/cathode_#{version.gsub('.','')}.zip"
+  name 'Cathode'
   homepage 'http://www.secretgeometry.com/apps/cathode'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
