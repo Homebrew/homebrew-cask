@@ -3,6 +3,7 @@ cask :v1 => 'charles' do
   sha256 'ee0a07d6b303a778f98dd37293aa13bce2adf0ad15648e144c1676c21cec3c31'
 
   url "http://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}-applejava.dmg"
+  name 'Charles'
   homepage 'http://www.charlesproxy.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
