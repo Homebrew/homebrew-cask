@@ -3,6 +3,7 @@ cask :v1 => 'chainsaw' do
   sha256 '3449c1d0fca70f78b656a151dabaf5c8149e1dbec2854b7a662b7f242ce299d2'
 
   url "http://people.apache.org/~sdeboy/apache-chainsaw-#{version}-SNAPSHOT.dmg"
+  name 'Chainsaw'
   homepage 'http://logging.apache.org/chainsaw/'
   license :apache
 

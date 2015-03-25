@@ -4,6 +4,7 @@ cask :v1 => 'cartographica' do
 
   # cluetrust.com is the official download host per the vendor homepage
   url 'http://www.cluetrust.com/Downloads/Cartographica.dmg'
+  name 'Cartographica'
   homepage 'https://www.macgis.com/'
   license :commercial
 

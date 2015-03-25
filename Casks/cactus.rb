@@ -3,6 +3,7 @@ cask :v1 => 'cactus' do
   sha256 'afde5be210ca70a4488fa5d6086a7c25a1fc74208b88a56096c4e355de4b4c37'
 
   url "http://update.cactusformac.com/static/downloads/Cactus-#{version}.zip"
+  name 'Cactus'
   homepage 'http://cactusformac.com/'
   license :bsd
 

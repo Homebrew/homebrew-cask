@@ -5,6 +5,7 @@ cask :v1 => 'clamxav' do
   url "http://www.clamxav.com/downloads/ClamXav_#{version}.dmg"
   appcast 'http://www.clamxav.com/sparkle/profileInfo.php',
           :sha256 => '02c70a63eb2b650523d6fdbba82ffb102b19676d576c4a2baa8332194828feb3'
+  name 'ClamXav'
   homepage 'http://www.clamxav.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
