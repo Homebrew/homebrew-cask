@@ -4,6 +4,7 @@ cask :v1 => 'changes' do
 
   url 'http://bitbq.com/changes/download.php'
   appcast 'https://bitbq_changes.s3.amazonaws.com/changes-production.xml'
+  name 'Changes'
   homepage 'http://bitbq.com/changes/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
