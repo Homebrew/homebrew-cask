@@ -1,6 +1,6 @@
 cask :v1 => 'cryptol' do
-  version '2.1.0'
-  sha256 '3d2ee4a8c7c4284458bbd5f07da52d9c3fae8ddd46faeafb7779dfa07f5cdd63'
+  version '2.2.0'
+  sha256 'c6f942461de96daf2d4c4ea2e46de0f5f2b603e24a7bcaeda345f4ac9afc48d1'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/GaloisInc/cryptol/releases/download/v#{version}/cryptol-#{version}-MacOSX-64.tar.gz"
@@ -11,7 +11,6 @@ cask :v1 => 'cryptol' do
   license :bsd
 
   binary "cryptol-#{version}-MacOSX-64/bin/cryptol"
-  binary "cryptol-#{version}-MacOSX-64/lib/Cryptol.cry", :target => '/usr/local/lib/Cryptol.cry'
 
   zap :delete => '~/.cryptol'
 
