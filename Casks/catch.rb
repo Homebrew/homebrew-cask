@@ -5,6 +5,7 @@ cask :v1 => 'catch' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/mipstian/catch/releases/download/#{version}/Catch-#{version}.zip"
   appcast 'https://github.com/mipstian/catch/releases.atom'
+  name 'Catch'
   homepage 'http://www.giorgiocalderolla.com/index.html#catch'
   license :oss
 
