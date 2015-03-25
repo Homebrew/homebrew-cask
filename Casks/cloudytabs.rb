@@ -4,6 +4,7 @@ cask :v1 => 'cloudytabs' do
 
   url "https://github.com/josh-/CloudyTabs/releases/download/v#{version}/CloudyTabs.zip"
   appcast 'https://github.com/josh-/CloudyTabs/releases.atom'
+  name 'CloudyTabs'
   homepage 'https://github.com/josh-/CloudyTabs/'
   license :mit
 
