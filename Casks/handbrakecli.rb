@@ -1,6 +1,6 @@
 cask :v1 => 'handbrakecli' do
-  version '0.10.0'
-  sha256 '84dcc20cffd2cbbe1d7804dbb8dfdb4ce7ce78b2f44ae25a998f18771a9c05f9'
+  version '0.10.1'
+  sha256 '457eecaa9758b91772c29874be1bac549d1d6645f7cac09c23886b734fe0151f'
 
   url "http://download.handbrake.fr/releases/#{version}/HandBrake-#{version}-MacOSX.6_CLI_x86_64.dmg"
   homepage 'https://handbrake.fr'
