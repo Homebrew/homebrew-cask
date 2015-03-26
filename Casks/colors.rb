@@ -4,6 +4,7 @@ cask :v1 => 'colors' do
 
   # googlecode.com is the official download host per the vendor homepage
   url "http://tmitter.googlecode.com/files/Colors-#{version}.zip"
+  name 'Colors'
   homepage 'https://github.com/13bold/Colors/'
   license :mit
 

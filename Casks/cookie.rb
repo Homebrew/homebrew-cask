@@ -3,6 +3,7 @@ cask :v1 => 'cookie' do
   sha256 :no_check
 
   url 'http://sweetpproductions.com/products/cookie/Cookie.dmg'
+  name 'Cookie'
   homepage 'http://sweetpproductions.com/'
   license :commercial
 
