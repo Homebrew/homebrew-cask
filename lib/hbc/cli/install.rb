@@ -15,6 +15,7 @@ class Hbc::CLI::Install < Hbc::CLI::Base
   def self.install_casks(cask_tokens, force)
     count = 0
     cask_tokens.each do |cask_token|
+      retried = false
       begin
         cask = Hbc.load(cask_token)
         Hbc::Installer.new(cask).install(force)
@@ -23,21 +24,23 @@ class Hbc::CLI::Install < Hbc::CLI::Base
          opoo e.message
          count += 1
       rescue Hbc::CaskUnavailableError => e
-        warn_unavailable_with_suggestion cask_token, e
+        exact_match, partial_matches, search_term = Hbc::CLI::Search.search(cask_token)
+        errmsg = e.message
+        if exact_match && !retried
+          ohai "Installing #{exact_match} for #{cask_token.inspect}"
+          retried = true
+          cask_token = exact_match
+          retry
+        elsif !partial_matches.empty?
+          errmsg.concat(". Did you mean one of:\n#{Hbc::Utils.stringify_columns(partial_matches.take(20))}\n")
+        end
+        onoe errmsg
       end
     end
     count == 0 ? nil : count == cask_tokens.length
   end
 
   def self.warn_unavailable_with_suggestion(cask_token, e)
-    exact_match, partial_matches, search_term = Hbc::CLI::Search.search(cask_token)
-    errmsg = e.message
-    if exact_match
-      errmsg.concat(". Did you mean:\n#{exact_match}")
-    elsif !partial_matches.empty?
-      errmsg.concat(". Did you mean one of:\n#{Hbc::Utils.stringify_columns(partial_matches.take(20))}\n")
-    end
-    onoe errmsg
   end
 
   def self.help
