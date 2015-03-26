@@ -18,4 +18,9 @@ cask :v1 => 'wkhtmltopdf' do
   license :gpl
 
   uninstall :pkgutil => 'org.wkhtmltopdf.wkhtmltox'
+  zap       :delete  => [
+                          '/usr/local/include/wkhtmltox/*',
+                          '/usr/local/lib/libwkhtmltox.*'
+                        ]
+
 end
