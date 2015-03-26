@@ -5,6 +5,7 @@ cask :v1 => 'curb' do
   url "http://mrrsoftware.com/Downloads/Curb/Curb-#{version.gsub('.','_')}.zip"
   appcast 'http://www.mrrsoftware.com/Downloads/Curb/CurbSoftwareUpdates.xml',
           :sha256 => '2025c4fc40a80f7ca7fb4076deb357a133990ef0e9576ceb5a5dca5f03a7c500'
+  name 'Curb'
   homepage 'http://mrrsoftware.com/curb'
   license :gratis
 
