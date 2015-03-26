@@ -10,7 +10,7 @@ cask :v1 => 'controllermate' do
 
   pkg 'ControllerMate.pkg'
 
-  uninstall :script => 'ControllerMate Uninstaller.app/Contents/MacOS/ControllerMate Uninstaller',
+  uninstall :script => 'ControllerMate Uninstaller.app/Contents/MacOS/CMUninstaller',
             :pkgutil => 'com.orderedbytes.controllermate.*'
   zap       :delete => [
                         '~/Library/Application Support/ControllerMate',
