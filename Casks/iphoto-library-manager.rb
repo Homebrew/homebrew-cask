@@ -1,6 +1,6 @@
 cask :v1 => 'iphoto-library-manager' do
-  version '4.1.10'
-  sha256 '2ab9ec177b2c6ee94847ea6c2164a51f86e2c9e288433f9f7a4f20ab175be519'
+  version '4.1.11'
+  sha256 '901741ef76ba58458821f83f37ca02b6d55b3dacdf4c8ad26899f0ea3f77c5d5'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/fatcatsoftware/iplm/iPhotoLibraryManager_#{version.gsub('.', '')}.zip"
