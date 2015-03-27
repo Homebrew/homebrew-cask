@@ -21,6 +21,7 @@ cask :v1 => 'deeper' do
     # working, or is dangerous to run, on the next OS X release.
   end
 
+  name 'Deeper'
   homepage 'http://www.titanium.free.fr/deeper.html'
   license :gratis
 
