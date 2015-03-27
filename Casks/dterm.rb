@@ -4,6 +4,7 @@ cask :v1 => 'dterm' do
 
   url 'http://files.decimus.net/DTerm/DTerm.zip'
   appcast 'http://decimus.net/appcasts/DTerm.xml'
+  name 'DTerm'
   homepage 'http://decimus.net/DTerm'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
