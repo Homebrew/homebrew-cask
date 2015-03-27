@@ -9,6 +9,9 @@ cask :v1 => 'little-snitch' do
 
   installer :manual => 'Little Snitch Installer.app'
 
+  #TODO: Check if we need some more comprehensive uninstaller
+  uninstall :script => 'Little Snitch Uninstaller.app/Contents/MacOS/Little Snitch Uninstaller'
+
   zap :delete => [
                   '~/Library/Preferences/at.obdev.LittleSnitchNetworkMonitor.plist',
                   '~/Library/Application Support/Little Snitch/rules.usr.xpl',
