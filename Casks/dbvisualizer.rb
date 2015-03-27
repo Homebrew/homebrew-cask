@@ -3,6 +3,7 @@ cask :v1 => 'dbvisualizer' do
   sha256 '624d8877f02f4c49526f94f0ab205642a141cf0157224fb2265e6d337f5afe0d'
 
   url "http://www.dbvis.com/product_download/dbvis-#{version}/media/dbvis_macos_#{version.gsub('.', '_')}_java7.dmg"
+  name 'DbVisualizer'
   homepage 'http://www.dbvis.com/'
   license :commercial
 
