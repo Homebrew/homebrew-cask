@@ -6,5 +6,8 @@ cask :v1 => 'paye-tools' do
   homepage 'http://www.hmrc.gov.uk/payerti/payroll/bpt/paye-tools.htm'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  installer :manual => "payetools-rti-#{version}-osx.app"
+  installer :script => "payetools-rti-#{version}-osx.app/Contents/MacOS/osx-intel",
+            :args => [ '--mode', 'unattended' ]
+
+  uninstall :quit => 'uk.gov.hmrc.bptrti'
 end
