@@ -1,8 +1,8 @@
 cask :v1 => 'xscope' do
-  version '4.1'
-  sha256 '7323455710792157878a4c3eb5b1d2884061557fff6739c3a82a8dca122f5f83'
+  version '4.1.2'
+  sha256 '75d6dce70dcaeb3561f9d4b99f3fef75e2886433d1c459b9efcc56280e45c4dc'
 
-  url "http://iconfactory.com/assets/software/xscope/xScope-#{version.sub(%r{^(\d+\.\d+).*},'\1')}.zip"
+  url "http://iconfactory.com/assets/software/xscope/xScope-#{version}.zip"
   appcast 'http://iconfactory.com/appcasts/xScope/appcast.xml',
           :sha256 => '419794f0698b7ddb0a433e712d68064ce5907253ff849f22de95354d3e7eaa2a'
   name 'xScope'
