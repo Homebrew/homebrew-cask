@@ -8,4 +8,6 @@ cask :v1 => 'omnipresence' do
   license :commercial
 
   app 'OmniPresence.app'
+
+  depends_on :macos => '>= :yosemite'
 end
