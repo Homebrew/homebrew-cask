@@ -1,6 +1,6 @@
 cask :v1 => 'moneydance' do
   version '2015 build 1145'
-  sha256 'e740d4214b43c16dc30c48da854576a2b4e6359ce4ea8bb40ae726539ebcd68e'
+  sha256 'a9186922d52dc27aa746689e234333c67bf53d79e9ed6e0e7c2fc790d94febaa'
 
   url 'http://infinitekind.com/stabledl/2015/Moneydance.zip'
   name 'Moneydance'
