@@ -3,6 +3,7 @@ cask :v1 => 'dupeguru-me' do
   sha256 '65720a2cdd17242c30ce848133a6c53e018ea0088f1990fee8d45114c921a118'
 
   url "http://download.hardcoded.net/dupeguru_me_osx_#{version.gsub('.', '_')}.dmg"
+  name 'dupeGuru Music Edition'
   homepage 'http://www.hardcoded.net/dupeguru_me/'
   license :bsd
 

@@ -4,6 +4,7 @@ cask :v1 => 'duplicati' do
 
   # googlecode.com is the official download host per the vendor homepage
   url "http://duplicati.googlecode.com/files/Duplicati%20#{version}.dmg"
+  name 'Duplicati'
   homepage 'http://www.duplicati.com/'
   license :oss
 
