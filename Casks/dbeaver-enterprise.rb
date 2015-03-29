@@ -9,6 +9,7 @@ cask :v1 => 'dbeaver-enterprise' do
     url "http://dbeaver.jkiss.org/files/dbeaver-#{version}-ee-macosx.cocoa.x86_64.zip"
   end
 
+  name 'DBeaver Enterprise Edition'
   homepage 'http://dbeaver.jkiss.org/'
   license :oss
 
