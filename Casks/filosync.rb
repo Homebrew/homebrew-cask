@@ -3,6 +3,7 @@ cask :v1 => 'filosync' do
   sha256 :no_check
 
   url 'http://www.filosync.com/mac/Filosync.zip'
+  name 'Filosync'
   homepage 'http://www.filosync.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
