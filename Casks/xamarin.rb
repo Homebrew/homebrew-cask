@@ -11,7 +11,10 @@ cask :v1 => 'xamarin' do
   uninstall :delete => '/Applications/Xamarin Studio.app'
   zap       :delete => '~/Library/Developer/Xamarin'
 
-  caveats do
-    puts 'This app requires the JRE (Java Runtime Environment) to be installed'
-  end
+  caveats <<-EOS.undent
+    If you choose to install Xamarin.Android, you'll need Java 6+,
+    you can install the latest Java using
+
+      brew cask install java
+  EOS
 end
