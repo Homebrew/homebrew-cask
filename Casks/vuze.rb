@@ -4,7 +4,7 @@ cask :v1 => 'vuze' do
 
   url 'http://cf1.vuze.com/files/J7/VuzeBittorrentClientInstaller.dmg'
   homepage 'http://www.vuze.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   installer :script => 'Vuze Installer.app/Contents/MacOS/JavaApplicationStub',
             :args => [ '-q' ]
