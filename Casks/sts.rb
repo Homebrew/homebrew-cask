@@ -12,5 +12,14 @@ cask :v1 => 'sts' do
   homepage 'http://spring.io/tools/sts'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  installer :manual => "Installer - Spring Tool Suite #{version}.RELEASE.app"
+  installer :script => "Installer - Spring Tool Suite #{version}.RELEASE.app/Contents/MacOS/JavaApplicationStub",
+            :args => [ '-q' ]
+
+  caveats <<-EOS.undent
+    #{token} requires Java 6+, you can install the latest Java using
+
+      brew cask install java
+  EOS
+
+  uninstall :delete => '~/springsource'
 end
