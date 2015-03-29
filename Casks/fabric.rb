@@ -3,6 +3,7 @@ cask :v1 => 'fabric' do
   sha256 :no_check
 
   url 'https://ssl-download-crashlytics-com.s3.amazonaws.com/fabric/builds/Fabric-latest.zip'
+  name 'Fabric'
   homepage 'https://get.fabric.io/'
   license :unknown
 

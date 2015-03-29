@@ -9,6 +9,7 @@ cask :v1 => 'dbeaver-community' do
     url "http://dbeaver.jkiss.org/files/dbeaver-#{version}-macosx.cocoa.x86_64.zip"
   end
 
+  name 'DBeaver Community Edition'
   homepage 'http://dbeaver.jkiss.org/'
   license :oss
 
