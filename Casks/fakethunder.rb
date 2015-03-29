@@ -6,6 +6,7 @@ cask :v1 => 'fakethunder' do
   url 'http://martianlaboratory.com/fakethunder/fakeThunder217.zip'
   appcast 'http://martianlaboratory.com/fakethunder/update.xml',
           :sha256 => '71c38833d0f6e1fb929d6914e2cbaa3978a5155cde21353eae7a73d046b10731'
+  name 'fakeThunder'
   homepage 'http://martianz.cn/fakethunder/'
   license :gpl
 
