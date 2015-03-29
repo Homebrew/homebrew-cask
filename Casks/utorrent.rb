@@ -8,7 +8,7 @@ cask :v1 => 'utorrent' do
   else
     url 'http://download-new.utorrent.com/endpoint/utmac/os/osx/track/stable/'
     appcast 'http://update.utorrent.com/checkupdate.php'
-    installer :manual => 'uTorrent-Installer.app'
+    installer :manual => 'uTorrent.app'
   end
 
   name 'µTorrent'
