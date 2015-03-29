@@ -3,6 +3,7 @@ cask :v1 => 'deathtodsstore' do
   sha256 'ea5f92d902b99be9f385df47e9cbb15bf9d4dcda3bb9534be3aed71e26b18ffb'
 
   url 'http://www.aorensoftware.com/Downloads/Files/DeathToDSStore.zip'
+  name 'DeathToDSStore'
   homepage 'http://www.aorensoftware.com/blog/2011/12/24/death-to-ds_store/'
   license :mit
 
