@@ -5,7 +5,7 @@ cask :v1 => 'blast2go' do
   url 'http://download.blast2go.com/html/software/blast2go/latest/3_0/Blast2GO_macos_3_0.dmg'
   name 'Blast2GO'
   homepage 'https://www.blast2go.com/'
-  license :unknown
+  license :freemium
 
   installer :script => 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
             :args => [ '-q' ]
