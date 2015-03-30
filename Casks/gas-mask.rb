@@ -6,7 +6,7 @@ cask :v1 => 'gas-mask' do
   appcast 'http://gmask.clockwise.ee/check_update/',
           :sha256 => '2e4f5292999bddfc25245a9c10f98d7ac23d0717a1dd45436a00cf09be7f8d9b'
   name 'Gas Mask'
-  homepage 'http://www.clockwise.ee/gasmask/'
+  homepage 'http://www.clockwise.ee/'
   license :gpl
 
   app 'Gas Mask.app'
