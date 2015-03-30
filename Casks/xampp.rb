@@ -8,7 +8,8 @@ cask :v1 => 'xampp' do
   homepage 'http://www.apachefriends.org/'
   license :gpl
 
-  installer :manual => 'XAMPP.app'
+  installer :script => 'XAMPP.app/Contents/MacOS/osx-intel',
+            :args => [ '--mode', 'unattended' ]
 
   uninstall :quit => 'com.bitnami.manager',
             :delete => '/Applications/XAMPP/'
