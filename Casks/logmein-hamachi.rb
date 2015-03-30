@@ -6,8 +6,11 @@ cask :v1 => 'logmein-hamachi' do
   url 'https://secure.logmein.com/LogMeInHamachi.zip'
   name 'Hamachi'
   homepage 'http://vpn.net'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
   tags :vendor => 'LogMeIn'
 
-  installer :manual => 'LogMeInHamachiInstaller.app'
+  installer :script => 'LogMeInHamachiInstaller.app/Contents/MacOS/Lili',
+            :args => [ '-s' ]
+
+  uninstall :script => '/Applications/LogMeIn Hamachi/HamachiUninstaller.app/Contents/Resources/uninstaller.sh'
 end
