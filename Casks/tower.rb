@@ -9,9 +9,14 @@ cask :v1 => 'tower' do
   license :commercial
 
   app 'Tower.app'
+  binary 'Tower.app/Contents/MacOS/gittower'
 
   zap :delete => [
                   '~/Library/Application Support/com.fournova.Tower2',
                   '~/Library/Preferences/com.fournova.Tower2.plist',
                  ]
+  
+  caveats do
+    files_in_usr_local
+  end
 end
