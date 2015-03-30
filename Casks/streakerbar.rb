@@ -8,5 +8,5 @@ cask :v1 => 'streakerbar' do
   homepage 'https://github.com/chaserx/streakerbar'
   license :mit
 
-  app 'streakerbar/streakerbar.app'
+  app 'streakerbar.app'
 end
