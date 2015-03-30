@@ -4,6 +4,7 @@ cask :v1 => 'fotowall' do
 
   # googlecode.com is the official download host per the vendor homepage
   url "http://fotowall.googlecode.com/files/Fotowall-#{version}-OSX.dmg"
+  name 'Fotowall'
   homepage 'http://www.enricoros.com/opensource/fotowall/'
   license :oss
 
