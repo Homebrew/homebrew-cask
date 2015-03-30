@@ -5,6 +5,7 @@ cask :v1 => 'geektool' do
   url "http://download.tynsoe.org/GeekTool-#{version}.zip"
   appcast 'http://dl.dropboxusercontent.com/u/1760713/appcast/appcast.xml',
           :sha256 => 'd6c25d30d5289824a9b1526f56c5bdacbfd6ffda9cb9d6a8ac42e88fe2dbebc3'
+  name 'GeekTool'
   homepage 'http://projects.tynsoe.org/en/geektool/'
   license :mit
 
