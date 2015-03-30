@@ -4,6 +4,7 @@ cask :v1 => 'ganttproject' do
 
   # googlecode.com is the official download host per the vendor homepage
   url "https://ganttproject.googlecode.com/files/ganttproject-#{version}.dmg"
+  name 'GanttProject'
   homepage 'http://www.ganttproject.biz'
   license :oss
 
