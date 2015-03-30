@@ -1,6 +1,6 @@
 cask :v1 => 'mendeley-desktop' do
-  version '1.13.5'
-  sha256 '99cc040095b198c984f8193eb7b5da4c39bbf77ac1b715161b4036ca7d55db35'
+  version '1.13.6'
+  sha256 '77eef115c488662494b2fcdcbbddcdde63bfe7d81800e5445a02228a0630160e'
 
   url "http://desktop-download.mendeley.com/download/Mendeley-Desktop-#{version}-OSX-Universal.dmg"
   name 'Mendeley'
