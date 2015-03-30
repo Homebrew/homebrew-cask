@@ -11,6 +11,7 @@ cask :v1 => 'geppetto' do
     url "https://downloads.puppetlabs.com/geppetto/4.x/geppetto-macosx.cocoa.x86_64-#{version}.zip"
   end
 
+  name 'Geppetto'
   homepage 'http://puppetlabs.github.io/geppetto/'
   license :oss
 
