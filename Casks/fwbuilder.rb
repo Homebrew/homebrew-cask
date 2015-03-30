@@ -4,6 +4,7 @@ cask :v1 => 'fwbuilder' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/fwbuilder/fwbuilder-#{version}.dmg"
+  name 'Firewall Builder'
   homepage 'http://www.fwbuilder.org'
   license :gpl
 
