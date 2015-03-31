@@ -3,6 +3,7 @@ cask :v1 => 'go-server' do
   sha256 '19fd85946f838a647dba5de75aff4a63eb0c03f6b0c2f619e42705936053d493'
 
   url "http://download.go.cd/gocd/go-server-#{version}-osx.zip"
+  name 'Go Server'
   homepage 'http://www.go.cd/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

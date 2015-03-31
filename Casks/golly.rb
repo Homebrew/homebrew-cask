@@ -17,6 +17,7 @@ cask :v1 => 'golly' do
     binary "golly-#{version}-mac109/bgolly"
   end
 
+  name 'Golly'
   homepage 'http://golly.sourceforge.net/'
   license :gpl
 

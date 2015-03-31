@@ -6,6 +6,7 @@ cask :v1 => 'googleappengine' do
   url "https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-#{version}.dmg"
   appcast 'https://storage.googleapis.com/appengine-sdks',
           :sha256 => '3c9e6c91de527d13c27d869ec27eab40fac2127726f93000777330de1c2ca442'
+  name 'Google App Engine'
   homepage 'https://developers.google.com/appengine/'
   license :apache
 
