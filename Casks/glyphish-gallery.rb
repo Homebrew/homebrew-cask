@@ -4,6 +4,7 @@ cask :v1 => 'glyphish-gallery' do
 
   url "https://github.com/glyphish/gallery/releases/download/v#{version}/v#{version}.zip"
   appcast 'https://github.com/glyphish/gallery/releases.atom'
+  name 'Glyphish Gallery'
   homepage 'https://github.com/glyphish/gallery'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
