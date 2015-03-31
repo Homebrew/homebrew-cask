@@ -6,7 +6,7 @@ cask :v1 => 'torbrowser' do
   gpg "#{url}.asc",
       :key_id => '4e2c6e8793298290'
   homepage 'https://www.torproject.org/projects/torbrowser.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :oss
 
   app 'TorBrowser.app'
 end
