@@ -3,6 +3,7 @@ cask :v1 => 'google-earth' do
   sha256 :no_check
 
   url 'https://dl.google.com/earth/client/advanced/current/GoogleEarthMac-Intel.dmg'
+  name 'Google Earth'
   homepage 'https://www.google.com/earth/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
