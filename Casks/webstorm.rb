@@ -1,6 +1,6 @@
 cask :v1 => 'webstorm' do
-  version '9.0.3'
-  sha256 'adc04ee25e7d3821659d2c4dbe1cdd8d0c15622ebcdaa3db2b6e02f79abb34b8'
+  version '10.0.0'
+  sha256 '2cc611536f4c40708844341727bc64a347a2631f7b7713bf41df98fa245fd452'
 
   url "http://download-cf.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
   name 'WebStorm'
