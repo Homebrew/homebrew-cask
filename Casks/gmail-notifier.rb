@@ -4,6 +4,7 @@ cask :v1 => 'gmail-notifier' do
 
   url "https://github.com/jashephe/Gmail-Notifier/releases/download/v#{version}/Gmail.Notifier.v#{version}.zip"
   appcast 'https://github.com/jashephe/Gmail-Notifier/releases.atom'
+  name 'Gmail Notifier'
   homepage 'https://github.com/jashephe/Gmail-Notifier'
   license :bsd
 
