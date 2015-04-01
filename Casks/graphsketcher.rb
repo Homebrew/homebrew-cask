@@ -4,6 +4,7 @@ cask :v1 => 'graphsketcher' do
 
   url "https://github.com/graphsketcher/GraphSketcher/releases/download/#{version}/GraphSketcher.zip"
   appcast 'https://github.com/graphsketcher/GraphSketcher/releases.atom'
+  name 'GraphSketcher'
   homepage 'https://github.com/graphsketcher/GraphSketcher'
   license :mit
 
