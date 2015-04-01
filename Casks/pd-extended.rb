@@ -10,7 +10,7 @@ cask :v1 => 'pd-extended' do
 
   app 'Pd-extended.app'
 
-  uninstall_preflight do
+  postflight do
     system '/bin/chmod', '-R', '--', 'u+w', "#{staged_path}/Pd-extended.app"
   end
 end
