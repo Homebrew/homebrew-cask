@@ -4,6 +4,7 @@ cask :v1 => 'houdahspot' do
 
   url 'http://www.houdah.com/houdahSpot/download_assets/HoudahSpot_latest.zip'
   appcast 'http://www.houdah.com/houdahSpot/updates/cast4.xml'
+  name 'HoudahSpot'
   homepage 'http://www.houdah.com/houdahSpot/'
   license :commercial
 
