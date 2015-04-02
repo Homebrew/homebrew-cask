@@ -3,7 +3,7 @@ cask :v1 => 'filebot' do
   sha256 '94ebf2233b771cc1641abc9899069f6a37834df998e6081c1ab617676f6fea7d'
 
   # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/project/filebot/filebot/FileBot_#{version}/FileBot_#{version}.app.tar.gz"
+  url "https://downloads.sourceforge.net/project/filebot/filebot/FileBot_#{version}/FileBot_#{version}.app.tar.gz"
   name 'FileBot'
   homepage 'http://www.filebot.net/'
   license :gpl
