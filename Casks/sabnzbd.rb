@@ -3,7 +3,7 @@ cask :v1 => 'sabnzbd' do
   sha256 'f7c13afe87ad91ab2f12fb6384feef79ae07bf2417395304b3d8961513d23611'
 
   # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/project/sabnzbdplus/sabnzbdplus/#{version}/SABnzbd-#{version}-osx.dmg"
+  url "https://downloads.sourceforge.net/project/sabnzbdplus/sabnzbdplus/#{version}/SABnzbd-#{version}-osx.dmg"
   homepage 'http://sabnzbd.org/'
   license :gpl
 

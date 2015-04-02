@@ -9,7 +9,7 @@ cask :v1 => 'filezilla' do
   end
 
   # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/project/filezilla/FileZilla_Client/#{version}/FileZilla_#{version}_macosx-x86.app.tar.bz2"
+  url "https://downloads.sourceforge.net/project/filezilla/FileZilla_Client/#{version}/FileZilla_#{version}_macosx-x86.app.tar.bz2"
   name 'FileZilla'
   homepage 'https://filezilla-project.org/'
   license :gpl
