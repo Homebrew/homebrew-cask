@@ -3,6 +3,7 @@ cask :v1 => 'yate' do
   sha256 :no_check
 
   url 'http://2manyrobots.com/Builds/Yate/Yate.dmg'
+  name 'Yate'
   homepage 'http://2manyrobots.com/yate/'
   license :commercial
 
