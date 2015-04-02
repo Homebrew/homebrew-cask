@@ -3,6 +3,7 @@ cask :v1 => 'xrg' do
   sha256 '972ee45e202dee87aa5a696d2393f5eece21c8e6a54368ab6fefb6a371187063'
 
   url "http://download.gauchosoft.com/xrg/XRG-release-#{version}.zip"
+  name 'XRG'
   homepage 'http://www.gauchosoft.com/Products/XRG/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
