@@ -3,6 +3,7 @@ cask :v1 => 'xamarin-android' do
   sha256 '3f38009ee76b54c7aca174ee0046c0e2aa5729c844739e863b7319f460dd428d'
 
   url "http://download.xamarin.com/MonoforAndroid/Mac/mono-android-#{version}.pkg"
+  name 'Xamarin.Android'
   appcast 'http://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
           :sha256 => '79c309d6dbe6f08f1d022c9376a4678cc94f57be084007df90c5a12839b35cdd',
           :format => :unknown
