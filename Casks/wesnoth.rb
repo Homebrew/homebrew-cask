@@ -4,6 +4,7 @@ cask :v1 => 'wesnoth' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/wesnoth/Wesnoth_#{version}.dmg"
+  name 'The Battle for Wesnoth'
   homepage 'http://wesnoth.org'
   license :gpl
 
