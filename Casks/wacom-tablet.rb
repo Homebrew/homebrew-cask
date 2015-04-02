@@ -3,6 +3,7 @@ cask :v1 => 'wacom-tablet' do
   sha256 'e96949fe4bd09e2edc9e47029f35e101276a21b493cc63d5e9b03a749f350062'
 
   url "http://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_#{version}.dmg"
+  name 'Wacom Tablet'
   homepage 'http://www.wacom.com/'
   license :gratis
 

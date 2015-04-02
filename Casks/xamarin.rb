@@ -3,6 +3,7 @@ cask :v1 => 'xamarin' do
   sha256 :no_check
 
   url 'http://download.xamarin.com/Installer/Mac/XamarinInstaller.dmg'
+  name 'Xamarin Platform'
   homepage 'http://xamarin.com/platform'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

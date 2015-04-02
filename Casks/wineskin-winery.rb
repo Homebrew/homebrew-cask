@@ -4,6 +4,7 @@ cask :v1 => 'wineskin-winery' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/wineskin/Wineskin%20Winery.app%20Version%20#{version}.zip"
+  name 'Wineskin Winery'
   homepage 'http://wineskin.urgesoftware.com/'
   license :gpl
 

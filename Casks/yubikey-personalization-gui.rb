@@ -3,6 +3,7 @@ cask :v1 => 'yubikey-personalization-gui' do
   sha256 'b6acac4b25cc0758e3333ee11ef9fdd966766e063cb051a9f9092bb5bf8e0dc0'
 
   url "https://developers.yubico.com/yubikey-personalization-gui/Releases/yubikey-personalization-gui-#{version}.pkg"
+  name 'YubiKey Personalization GUI'
   homepage 'http://www.yubico.com/products/services-software/personalization-tools/use/'
   license :bsd
 

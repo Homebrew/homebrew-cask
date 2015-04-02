@@ -4,6 +4,7 @@ cask :v1 => 'weka' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/weka/weka-#{version.gsub('.','-')}-oracle-jvm.dmg"
+  name 'Weka'
   homepage 'http://www.cs.waikato.ac.nz/ml/weka/'
   license :gpl
 

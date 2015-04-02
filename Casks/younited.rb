@@ -4,6 +4,7 @@ cask :v1 => 'younited' do
 
   # secure.com is the official download host per the vendor homepage
   url 'https://download.sp.f-secure.com/younited/younited.dmg'
+  name 'younited'
   homepage 'http://www.younited.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
