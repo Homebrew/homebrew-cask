@@ -1,6 +1,6 @@
 cask :v1 => 'postico' do
-  version '0.19'
-  sha256 'd312e2c64872f8c45b1cd1ed1bff88f944c007f9e634c21aac0bee5f0b185503'
+  version '0.20'
+  sha256 '31064dfa92e23c8377d0ddc2f93b871b208231dc48725eb59257177df787a76e'
 
   url "https://eggerapps.at/postico/download/postico-#{version}.zip"
   name 'Postico'
