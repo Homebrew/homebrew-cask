@@ -3,6 +3,7 @@ cask :v1 => 'xscreensaver' do
   sha256 'f76f6e3af04cb12541f04a31ef4f7e567703ccb5df78f0bdb5a78fb231f7cb66'
 
   url "http://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
+  name 'XScreenSaver'
   homepage 'http://www.jwz.org/xscreensaver/'
   license :bsd
 
