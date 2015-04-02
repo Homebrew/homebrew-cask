@@ -5,6 +5,7 @@ cask :v1 => 'x48' do
 
   # google.com is the official download host per the vendor homepage
   url "https://sites.google.com/a/sharkus.com/sharkus-com/Home/x48-#{version}%20osx.zip"
+  name 'x48'
   homepage 'http://blog.sharkus.com/2012/08/osx-hp48-emulators.html'
   license :gpl
 
