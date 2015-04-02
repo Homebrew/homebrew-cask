@@ -3,6 +3,7 @@ cask :v1 => 'inform' do
   sha256 '182134881d44b1c096af979d9cff195d33ec51d7c1f81f59a7c25d5a917d8987'
 
   url "http://inform7.com/download/content/6L02/I#{version.gsub('.','-')}-OSX.dmg"
+  name 'Inform'
   homepage 'http://inform7.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
