@@ -4,6 +4,7 @@ cask :v1 => 'wings3d' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/wings/wings-#{version}-macosx.dmg"
+  name 'Wings 3D'
   homepage 'http://www.wings3d.com/'
   license :oss
 
