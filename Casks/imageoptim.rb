@@ -4,6 +4,7 @@ cask :v1 => 'imageoptim' do
 
   url 'https://imageoptim.com/ImageOptim.tbz2'
   appcast 'http://imageoptim.com/appcast.xml'
+  name 'ImageOptim'
   homepage 'http://imageoptim.com/'
   license :gpl
 
