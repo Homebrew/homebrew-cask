@@ -5,6 +5,7 @@ cask :v1 => 'httpscoop' do
   url "http://www.tuffcode.com/releases/HTTPScoop_#{version}.dmg"
   appcast 'http://www.tuffcode.com/releases/httpscoop-appcast.xml',
           :sha256 => 'f3d7449544aa64c7709cdb8c5ccd93f2a056550add5fc7493fc402b2c515c5cb'
+  name 'HTTP Scoop'
   homepage 'http://www.tuffcode.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

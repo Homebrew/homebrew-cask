@@ -4,6 +4,7 @@ cask :v1 => 'insertpic' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/insertPic/InsertPic_#{version}.zip"
+  name 'InsertPic'
   homepage 'http://www.getinsertpic.com/'
   license :gratis
 
