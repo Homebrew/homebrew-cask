@@ -5,7 +5,7 @@ cask :v1 => 'xtabulator' do
   url 'http://www.bartastechnologies.com/products/xtabulator/XTabulator2.zip'
   name 'XTabulator 2'
   homepage 'http://www.bartastechnologies.com/products/xtabulator/'
-  license :unknown
+  license :commercial
 
   app 'XTabulator 2/XTabulator.app'
 end
