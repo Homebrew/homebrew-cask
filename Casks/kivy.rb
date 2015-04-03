@@ -1,6 +1,6 @@
 cask :v1 => 'kivy' do
-  version '1.8.0'
-  sha256 'e6db3a157e67d09bacbe2e423feec33dedaca8e10d170362ddf59a70a59e2590'
+  version '1.9.0'
+  sha256 '1efeb880e13c4bed97bd96bcaac6e57f18ea6dde21ea1ae3ab1eddf713430ab5'
 
   url "http://kivy.org/downloads/#{version}/Kivy-#{version}-osx.dmg"
   name 'Kivy'
