@@ -7,7 +7,11 @@ class Hbc::Container::Naked < Hbc::Container::Base
   end
 
   def extract
-    @command.run!('/usr/bin/ditto', :args => ['--', @path, @cask.staged_path.join(target_file)])
+    debug_args = []
+    debug_args << '--debug' if Hbc.verbose
+
+    @command.run!('/usr/bin/ditto',
+      :args => debug_args + ['--', @path, @cask.staged_path.join(target_file)])
   end
 
   def target_file

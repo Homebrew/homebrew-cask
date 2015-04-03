@@ -12,6 +12,10 @@ class Hbc::Container::Dmg < Hbc::Container::Base
   def extract
     mount!
     assert_mounts_found
+
+    debug_args = []
+    debug_args << '--debug' if Hbc.verbose
+
     @mounts.each do |mount|
       @command.run('/usr/bin/ditto',
                    # todo
@@ -24,16 +28,19 @@ class Hbc::Container::Dmg < Hbc::Container::Base
                    # - or support some type of text filter to be passed to
                    #   :print_stderr instead of true/false
                    :print_stderr => false,
-                   :args => ['--', mount, @cask.staged_path])
+                   :args => debug_args + ['--', mount, @cask.staged_path])
     end
   ensure
     eject!
   end
 
   def mount!
+    args = %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp]
+    args << %w[-debug '-verbose'] if Hbc.verbose
+
     plist = @command.run('/usr/bin/hdiutil',
       # realpath is a failsafe against unusual filenames
-      :args => %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp] + [Pathname.new(@path).realpath],
+      :args => args + [Pathname.new(@path).realpath],
       :input => %w[y]
     ).plist
     @mounts = mounts_from_plist(plist)

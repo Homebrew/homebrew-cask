@@ -6,10 +6,20 @@ class Hbc::Container::Bzip2 < Hbc::Container::Base
   end
 
   def extract
+    ditto_debug_args = []
+    bzip_verbose_args = []
+    if Hbc.verbose
+      ditto_debug_args << '--debug'
+      bzip_verbose_args << '-vv'
+    end
+
     Dir.mktmpdir do |unpack_dir|
-      @command.run!('/usr/bin/ditto',   :args => ['--', @path, unpack_dir])
-      @command.run!('/usr/bin/bunzip2', :args => ['-q', '--', Pathname(unpack_dir).join(@path.basename)])
-      @command.run!('/usr/bin/ditto',   :args => ['--', unpack_dir, @cask.staged_path])
+      @command.run!('/usr/bin/ditto',
+        :args => ditto_debug_args + ['--', @path, unpack_dir])
+      @command.run!('/usr/bin/bunzip2',
+        :args => bzip_verbose_args + ['-q', '--', Pathname(unpack_dir).join(@path.basename)])
+      @command.run!('/usr/bin/ditto',
+        :args => ditto_debug_args + ['--', unpack_dir, @cask.staged_path])
     end
   end
 end

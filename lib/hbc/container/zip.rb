@@ -4,6 +4,10 @@ class Hbc::Container::Zip < Hbc::Container::Base
   end
 
   def extract
-    @command.run!('/usr/bin/ditto', :args => ['-xk', '--', @path, @cask.staged_path])
+    debug_args = []
+    debug_args << '--debug' if Hbc.verbose
+
+    @command.run!('/usr/bin/ditto',
+      :args => debug_args + ['-xk', '--', @path, @cask.staged_path])
   end
 end
