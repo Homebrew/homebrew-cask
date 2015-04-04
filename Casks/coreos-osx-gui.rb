@@ -4,6 +4,8 @@ cask :v1 => 'coreos-osx-gui' do
 
   url "https://github.com/rimusz/coreos-osx-gui/releases/download/v0.8.4/CoreOS_GUI_v#{version}.dmg"
   appcast 'https://github.com/rimusz/coreos-osx-gui/releases.atom'
+  name 'CoreOS GUI'
+  name 'CoreOS-Vagrant GUI'
   homepage 'https://github.com/rimusz/coreos-osx-gui'
   license :oss
 
