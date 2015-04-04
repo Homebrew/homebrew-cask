@@ -6,6 +6,7 @@ cask :v1 => 'invisiblix' do
   url "http://downloads.sourceforge.net/project/invisiblix/invisibliX-#{version}.zip"
   appcast 'http://www.read-write.fr/invisiblix/appcast.xml',
           :sha256 => '35040c896c24cd6299de79f3a977584af0bdc29de72f1c4f4023ae41e17b0d6c'
+  name 'invisibliX'
   homepage 'http://www.read-write.fr/invisiblix/'
   license :oss
 
