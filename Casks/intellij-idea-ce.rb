@@ -3,6 +3,7 @@ cask :v1 => 'intellij-idea-ce' do
   sha256 'a7060871e1371163dfad44183836b3bb78e688d7c1ce94dcb61987e1697fe414'
 
   url "http://download.jetbrains.com/idea/ideaIC-#{version}.dmg"
+  name 'IntelliJ IDEA Community Edition'
   homepage 'https://www.jetbrains.com/idea/'
   license :apache
 
