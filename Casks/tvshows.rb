@@ -6,5 +6,5 @@ cask :v1 => 'tvshows' do
   homepage 'http://tvshowsapp.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  prefpane 'TvShows.prefpane'
+  prefpane 'TVShows.prefPane'
 end
