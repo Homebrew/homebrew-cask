@@ -4,6 +4,7 @@ cask :v1 => 'dataurlmaker' do
 
   url "https://github.com/sveinbjornt/Data-URL-Toolkit/raw/master/Releases/DataURLMaker-#{version}.zip"
   appcast 'https://github.com/sveinbjornt/Data-URL-Toolkit/raw.atom'
+  name 'DataURLMaker'
   homepage 'https://github.com/sveinbjornt/Data-URL-Toolkit'
   license :gpl
 

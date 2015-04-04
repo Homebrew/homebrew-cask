@@ -3,6 +3,7 @@ cask :v1 => 'interface-inspector' do
   sha256 :no_check
 
   url 'http://www.interface-inspector.com/download/Interface-Inspector-Latest.zip'
+  name 'Interface Inspector'
   homepage 'http://www.interface-inspector.com/'
   license :closed
 

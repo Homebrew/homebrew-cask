@@ -4,6 +4,7 @@ cask :v1 => 'dwihn0r-keepassx' do
 
   url "https://github.com/dwihn0r/keepassx/releases/download/v#{version}/KeePassX-#{version}-OSX.zip"
   appcast 'https://github.com/dwihn0r/keepassx/releases.atom'
+  name 'KeePassX'
   homepage 'https://github.com/dwihn0r/keepassx/'
   license :gpl
 

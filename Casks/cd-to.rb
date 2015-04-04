@@ -4,6 +4,7 @@ cask :v1 => 'cd-to' do
 
   url "https://github.com/jbtule/cdto/releases/download/#{version.gsub('.', '_')}/cdto_#{version.gsub('.', '_').gsub(/_\d$/, '')}.zip"
   appcast 'https://github.com/jbtule/cdto/releases.atom'
+  name 'cd to'
   homepage 'https://github.com/jbtule/cdto'
   license :mit
 
