@@ -3,6 +3,7 @@ cask :v1 => 'default-folder-x' do
   sha256 '621fe0042ed44da7eab369471ae345e19432cf3a5c70cf0290e567ce805f6b99'
 
   url "http://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
+  name 'Default Folder X'
   homepage 'http://www.stclairsoft.com/DefaultFolderX'
   license :commercial
 

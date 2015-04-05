@@ -3,6 +3,7 @@ cask :v1 => 'fitbit-connect' do
   sha256 '383a2bfbcd6455ef100846b49c25fedca0730310114bf03286e00403b86aeb4a'
 
   url "http://cache.fitbit.com/FitbitConnect/FitbitConnect_Mac_20141029_#{version}.dmg"
+  name 'Fitbit Connect'
   homepage 'http://www.fitbit.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

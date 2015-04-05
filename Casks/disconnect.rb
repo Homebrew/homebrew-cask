@@ -4,6 +4,7 @@ cask :v1 => 'disconnect' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://s3.amazonaws.com/disconnect-desktop/Disconnect+Desktop.pkg'
+  name 'Disconnect'
   homepage 'https://disconnect.me'
   license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

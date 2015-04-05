@@ -7,6 +7,7 @@ cask :v1 => 'cryptol' do
   appcast 'https://github.com/GaloisInc/cryptol/releases.atom'
   gpg "#{url}.sig",
       :key_url => 'http://cryptol.net/files/Galois.asc'
+  name 'Cryptol'
   homepage 'http://cryptol.net/'
   license :bsd
 
