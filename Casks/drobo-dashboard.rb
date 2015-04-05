@@ -3,6 +3,7 @@ cask :v1 => 'drobo-dashboard' do
   sha256 '60c5b932f14a0f3f16eb408251453eb3d32d232263ced9b05ebe5e456878dbbc'
 
   url "http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-#{version.sub(%r{_.*},'')}.dmg"
+  name 'Drobo Dashboard'
   homepage 'http://www.drobo.com'
   license :gratis
 
