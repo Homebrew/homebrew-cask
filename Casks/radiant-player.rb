@@ -1,6 +1,6 @@
 cask :v1 => 'radiant-player' do
-  version '1.3.1'
-  sha256 'eed8d2c0d5457938b65ad41fd01ff9ea3745518e7951e62f68974b2884016dbf'
+  version '1.3.2'
+  sha256 '652cd6772bb1f568952497175722422b623c2845ae7854aaff9197bfa73770f4'
 
   url "https://github.com/kbhomes/radiant-player-mac/releases/download/v#{version}/Radiant.Player.zip"
   appcast 'https://github.com/kbhomes/radiant-player-mac/releases.atom'
