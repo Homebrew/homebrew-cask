@@ -16,4 +16,3 @@ cask :v1 => 'eclipse-ptp' do
 
   app 'eclipse/Eclipse.app'
 end
-
