@@ -18,6 +18,7 @@ cask :v1 => 'cvc4' do
     pkg "cvc4-#{version}.MacOs9.Mavericks.mpkg"
   end
 
+  name 'CVC4'
   homepage 'http://cvc4.cs.nyu.edu/'
   license :oss
 
