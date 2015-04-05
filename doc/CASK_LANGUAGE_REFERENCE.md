@@ -489,10 +489,10 @@ The `:target` key works similarly for most Cask artifacts, such as
 Don’t use `:target` for aesthetic reasons, like removing version numbers
 (`app "Slack #{version}.app", :target => 'Slack.app'`). With `app`, use it
 when it makes sense functionally and document your reason cleary in the Cask:
-was it [for clarity](../Casks/imagemin.rb); [for consistency](../Casks/devonthink-pro-office.rb);
-[to prevent conflicts](../Casks/flash-player-debugger.rb)? With `binary` you can
+was it [for clarity](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/imagemin.rb#L11); [for consistency](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/devonthink-pro-office.rb#L14);
+[to prevent conflicts](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/flash-player-debugger.rb#L13)? With `binary` you can
 take some extra liberties to be consistent with other command-line tools,
-like [changing case](../Casks/diffmerge.rb) or [removing an extension](../Casks/filebot.rb).
+like [changing case](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/diffmerge.rb#L11) or [removing an extension](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/filebot.rb#L12).
 
 
 ## Suite Stanza Details
