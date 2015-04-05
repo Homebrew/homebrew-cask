@@ -1,6 +1,6 @@
 cask :v1 => 'zoc' do
-  version '6.63'
-  sha256 '45975bc7a11a7cc16652b0ca13e9f1007f09055e2c021176b0b08390921211e6'
+  version '6.65'
+  sha256 'd099dd3772990ca18bf2f22b4638a14aabff00e6a593e61fb45004468e4cfbd4'
 
   url "http://www.emtec.com/downloads/zoc/zoc#{version.gsub('.','')}.dmg"
   name 'ZOC'
