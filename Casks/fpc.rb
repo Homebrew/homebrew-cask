@@ -4,6 +4,7 @@ cask :v1 => 'fpc' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/freepascal/fpc-#{version}.intel-macosx.dmg"
+  name 'Free Pascal'
   homepage 'http://www.freepascal.org/'
   license :gpl
 

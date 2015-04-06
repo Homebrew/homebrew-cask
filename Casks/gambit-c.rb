@@ -13,6 +13,7 @@ cask :v1 => 'gambit-c' do
     pkg "gambc-v#{version.gsub('.', '_')}-macosx-intel64.pkg"
   end
 
+  name 'Gambit-C'
   homepage 'http://gambitscheme.org/'
   license :apache
 

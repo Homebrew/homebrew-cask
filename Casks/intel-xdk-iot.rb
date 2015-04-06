@@ -3,6 +3,7 @@ cask :v1 => 'intel-xdk-iot' do
   sha256 'f8b378b36848245503127fc079a4dccf483aa949eb0b05ea0b7c50f0153b3db1'
 
   url "https://download.xdk.intel.com/iot-packages/iot_web_mac_master-iot_00#{version}.dmg"
+  name 'Intel XDK IoT Edition'
   homepage 'https://software.intel.com/en-us/html5/xdk-iot'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

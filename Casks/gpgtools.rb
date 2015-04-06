@@ -5,6 +5,7 @@ cask :v1 => 'gpgtools' do
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   gpg "#{url}.sig",
       :key_url => 'https://gpgtools.org/GPGTools%2000D026C4.asc'
+  name 'GPG Suite'
   homepage 'https://gpgtools.org/'
   license :gpl
 
