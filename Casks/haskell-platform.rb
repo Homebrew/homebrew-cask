@@ -3,6 +3,7 @@ cask :v1 => 'haskell-platform' do
   sha256 '62f39246ad95dd2aed6ece5138f6297f945d2b450f215d074820294310e0c48a'
 
   url "http://www.haskell.org/platform/download/#{version}/Haskell%20Platform%20#{version}%2064bit.signed.pkg"
+  name 'Haskell Platform'
   homepage 'http://www.haskell.org/platform/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
