@@ -4,6 +4,7 @@ cask :v1 => 'happygrep' do
 
   url "https://github.com/happypeter/happygrep/releases/download/v#{version}/happygrep.zip"
   appcast 'https://github.com/happypeter/happygrep/releases.atom'
+  name 'happygrep'
   homepage 'https://github.com/happypeter/happygrep'
   license :mit
 
