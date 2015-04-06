@@ -1,0 +1,21 @@
+cask :v1 => 'overdrive-media-console' do
+  version '1.2'
+  sha256 '6e04ac61337647aa86c67d04d62552a0c0a31a3104bf4856aa726e8317272be9'
+
+  url 'http://app.overdrive.com/downloads/ODMediaConsoleSetup.dmg'
+  name 'OverDrive Media Console'
+  homepage 'https://www.overdrive.com/'
+  license :commercial
+
+  pkg "OverDrive-Mac-Installer-Version-#{version}.pkg", :allow_untrusted => true 
+
+  uninstall :delete => [
+                  '/Applications/OverDrive Media Console.app',
+                 ]
+
+  zap :delete => [
+                  '/Applications/OverDrive Media Console.app',
+                  '~/Library/Preferences/com.overdrive.overdrivemediaconsole.plist',
+                  '~/Library/Caches/com.overdrive.overdrivemediaconsole',
+                 ]
+end
