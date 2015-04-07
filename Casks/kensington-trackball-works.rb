@@ -4,6 +4,7 @@ cask :v1 => 'kensington-trackball-works' do
 
   # windows.net is the official download host per the vendor homepage
   url 'http://accoblobstorageus.blob.core.windows.net/software/b54b0855-21e0-4cfa-a084-2b62e6f4aa93.dmg'
+  name 'Kensington TrackballWorks'
   homepage 'http://www.kensington.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
