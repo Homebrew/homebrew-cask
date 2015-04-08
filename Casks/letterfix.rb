@@ -3,6 +3,7 @@ cask :v1 => 'letterfix' do
   sha256 '0830e868adc90e71ddfb42ce3f4a2cd5592b0bb5e9df0caf3d45213e083cc9c0'
 
   url 'http://dl.sourceforge.jp/letter-fix/62451/LetterFix-2.3.2a.dmg'
+  name 'LetterFix'
   homepage 'http://sourceforge.jp/projects/letter-fix/'
   license :mit
 
