@@ -4,6 +4,7 @@ cask :v1 => 'komodo-edit' do
 
   # activestate.com is the official download host per the vendor homepage
   url "http://downloads.activestate.com/Komodo/releases/#{version.sub(%r{-.*},'')}/Komodo-Edit-#{version}-macosx-x86_64.dmg"
+  name 'Komodo Edit'
   homepage 'http://komodoide.com/komodo-edit'
   license :mpl
 
