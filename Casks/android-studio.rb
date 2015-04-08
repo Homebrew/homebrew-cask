@@ -11,7 +11,15 @@ cask :v1 => 'android-studio' do
   app 'Android Studio.app'
 
   caveats <<-EOS.undent
-    #{token} requires Java. You can install the latest version with
-      brew cask install java
+  #{token} requires Java. You can install the latest version with
+  brew cask install java
   EOS
+  zap :delete => [
+    '~/Library/Preferences/AndroidStudio*',
+    '~/Library/Preferences/com.google.android.studio.plist',
+    '~/Library/Application\ Support/AndroidStudio*',
+    '~/Library/Logs/AndroidStudio*',
+    '~/Library/Caches/AndroidStudio*',
+  ],
+  :rmdir => '~/AndroidStudioProjects'
 end
