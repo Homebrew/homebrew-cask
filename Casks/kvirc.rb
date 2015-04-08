@@ -4,6 +4,7 @@ cask :v1 => 'kvirc' do
 
   # tradebit.com is the official download host per the vendor homepage
   url "http://kvirc.tradebit.com/#{version}/binary/osx/KVIrc-#{version}-Equilibrium.dmg"
+  name 'KVIrc'
   homepage 'http://www.kvirc.net'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
