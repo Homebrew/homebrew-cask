@@ -4,6 +4,7 @@ cask :v1 => 'kod' do
 
   # hunch.se is the official download host per the vendor homepage
   url "http://data.hunch.se/kod/kod-#{version}.zip"
+  name 'Kod'
   homepage 'https://github.com/rsms/kod/'
   license :oss
 
