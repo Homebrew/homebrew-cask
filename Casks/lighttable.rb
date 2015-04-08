@@ -4,6 +4,7 @@ cask :v1 => 'lighttable' do
 
   # cloudfront.net is the official download host per the vendor homepage
   url "https://d35ac8ww5dfjyg.cloudfront.net/playground/bins/#{version}/LightTableMac.zip"
+  name 'Light Table'
   homepage 'http://www.lighttable.com/'
   license :mit
 
