@@ -4,6 +4,7 @@ cask :v1 => 'jxplorer' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/jxplorer/jxplorer/version%20#{version}/jxplorer-#{version}-osx.zip"
+  name 'JXplorer'
   homepage 'http://jxplorer.org'
   license :apache
 

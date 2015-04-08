@@ -5,6 +5,7 @@ cask :v1 => 'keycastr' do
   # github.com/lqez is the official download host per the vendor homepage
   url "https://github.com/lqez/keycastr/releases/download/#{version}/KeyCastr.zip"
   appcast 'https://github.com/lqez/keycastr/releases.atom'
+  name 'KeyCastr'
   homepage 'https://github.com/keycastr/keycastr'
   license :bsd
 

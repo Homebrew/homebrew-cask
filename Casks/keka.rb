@@ -5,6 +5,7 @@ cask :v1 => 'keka' do
   url "http://www.kekaosx.com/release/Keka-#{version}-intel.dmg"
   appcast 'http://update.kekaosx.com',
           :sha256 => '7d5bf4d33a9c889b33bc5ba8e168deeb86abed84b1fd3deaebe4d85f34a80a32'
+  name 'Keka'
   homepage 'http://kekaosx.com/'
   license :gratis
 
