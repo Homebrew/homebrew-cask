@@ -1,6 +1,6 @@
 cask :v1 => 'intensify-pro' do
-  version '1.0.3_610'
-  sha256 'd02fc658bc422bd3b60d9c69d7bb2868dd2abc9585ab1ae4832f620f2e49979f'
+  version '1.0.4_703'
+  sha256 '9234595b20dc5c4053ba9f34a26d026e3915964f1b25c31ad3100cbac426babc'
 
   url "http://cdn.macphun.com/updates/IntensifyPro/IntensifyPro_Distribution_v#{version.gsub('.','_')}.zip"
   name 'Intensify Pro'
