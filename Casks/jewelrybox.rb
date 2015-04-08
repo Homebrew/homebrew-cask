@@ -4,6 +4,7 @@ cask :v1 => 'jewelrybox' do
 
   url "https://github.com/remear/jewelrybox/releases/download/#{version}/JewelryBox_v#{version}.tar.bz2"
   appcast 'https://github.com/remear/jewelrybox/releases.atom'
+  name 'JewelryBox'
   homepage 'https://github.com/remear/jewelrybox'
   license :oss
 
