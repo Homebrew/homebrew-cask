@@ -1,6 +1,6 @@
 cask :v1 => 'balsamiq-mockups' do
-  version '3.0.5'
-  sha256 'd0f733a5e971182857397e21de335fd24f326c7c622a4810edf7abc8fc730133'
+  version '3.0.7'
+  sha256 'db96ef5316039b44a9d5cebea17ac285e39d7293440240cb649c3daa004023e8'
 
   # amazonaws is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/build_production/mockups-desktop/Balsamiq_Mockups_#{version}.dmg"
