@@ -1,6 +1,6 @@
 cask :v1 => 'bilibili' do
-  version '1.2'
-  sha256 '58bb0c1bbb9c6cad945b077aaead9409941fdf13ad6d73dc61248e8697107e11'
+  version '1.3'
+  sha256 '8c7c6be8913dc707150e7a76c5b8fd7bcf23108aa3e0889f56c8a0054558cb37'
 
   url "https://github.com/typcn/bilibili-mac-client/releases/download/#{version}/Bilibili.dmg.zip"
   name 'Bilibili'
