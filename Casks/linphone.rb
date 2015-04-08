@@ -6,6 +6,7 @@ cask :v1 => 'linphone' do
   url "http://download-mirror.savannah.gnu.org/releases/linphone/3.7.x/macos/linphone-#{version}.dmg"
   gpg "#{url}.sig",
       :key_id => '3ecd52dee2f56985'
+  name 'Linphone'
   homepage 'http://www.linphone.org/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
