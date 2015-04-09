@@ -1,6 +1,6 @@
 cask :v1 => 'telegram' do
-  version '0.7.17'
-  sha256 '8c724f209947f224b7fea4a88f56e8c54c593fd50b28455cebf6a3462f47d395'
+  version '0.8.3'
+  sha256 'e1ece44ceba78952f113759ad425cf9ebddae357fd6ca6eebd559195fadbc704'
 
   # tdesktop.com is the official download host per the vendor homepage
   url "https://updates.tdesktop.com/tmac/tsetup.#{version}.dmg"
