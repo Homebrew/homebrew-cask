@@ -4,6 +4,7 @@ cask :v1 => 'kompozer' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/kompozer/current/#{version}/macosx/kompozer-#{version}.en-US.mac-universal.dmg"
+  name 'KompoZer'
   homepage 'http://www.kompozer.net/'
   license :oss
 

@@ -5,6 +5,7 @@ cask :v1 => 'lingrradar' do
   url "http://radar.lingr.com/mac/LingrRadar_#{version}.tbz"
   appcast 'http://radar.lingr.com/mac_appcast.xml',
           :sha256 => '20a15fbbc8fdc131a97407cd38cd80fc0f7cbef9895c62353f5111b0fbc44948'
+  name 'Lingr Radar'
   homepage 'http://radar.lingr.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

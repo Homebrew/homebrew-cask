@@ -4,6 +4,7 @@ cask :v1 => 'lingon-x' do
 
   url 'http://www.peterborgapps.com/downloads/LingonX2.zip'
   appcast 'http://www.peterborgapps.com/updates/lingonx2-appcast.xml'
+  name 'Lingon X'
   homepage 'http://www.peterborgapps.com/lingon/'
   license :commercial
 

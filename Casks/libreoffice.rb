@@ -13,6 +13,7 @@ cask :v1 => 'libreoffice' do
   gpg "#{url}.asc",
       :key_id => 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
+  name 'LibreOffice'
   homepage 'https://www.libreoffice.org/'
   license :mpl
 

@@ -4,6 +4,7 @@ cask :v1 => 'launchrocket' do
 
   url "https://github.com/jimbojsb/launchrocket/releases/download/v#{version}/LaunchRocket.prefPane.zip"
   appcast 'https://github.com/jimbojsb/launchrocket/releases.atom'
+  name 'LaunchRocket'
   homepage 'https://github.com/jimbojsb/launchrocket'
   license :mit
 
