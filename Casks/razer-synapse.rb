@@ -1,13 +1,13 @@
 cask :v1 => 'razer-synapse' do
-  version '1.29'
-  sha256 'c37266bb55df1f0344d797419ff10e498bbbb90cdf15b769487e245728f2eb43'
+  version '1.35'
+  sha256 '02cc7b873f9a4cdc681f38c87ee54600835ec1d765bff9c49aef866d7e52db08'
 
   url "http://dl.razerzone.com/drivers/Synapse2/mac/Razer_Synapse_2.0_Mac_Driver_v#{version}.dmg"
   homepage 'http://www.razerzone.com/synapse/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  pkg 'Razer Synapse 2.0.pkg'
+  pkg 'Razer Synapse.pkg'
 
-  uninstall :script => '/Applications/Utilities/Uninstall Razer Synapse 2.0.app/Contents/MacOS/Uninstall Razer Synapse 2.0',
+  uninstall :script => '/Applications/Utilities/Uninstall Razer Synapse.app/Contents/MacOS/Uninstall Razer Synapse',
             :pkgutil => 'com.razerzone.*'
 end
