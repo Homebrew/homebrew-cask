@@ -6,4 +6,6 @@ cask :v1 => 'retas-studio' do
   name 'RETAS STUDIO'
   homepage 'http://www.retasstudio.net/'
   license :commercial
+
+  app 'RETAS STUDIO.app'
 end
