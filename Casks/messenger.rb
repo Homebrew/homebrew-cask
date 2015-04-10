@@ -1,6 +1,6 @@
 cask :v1 => 'messenger' do
-  version '0.0.3.1428564817-e5d7ed3698917650'
-  sha256 '9a4dbdc57655512cbc357e516b5b781443698937fb5e358b319f1ace8b8ce1d7'
+  version '0.0.4.1428634580-a80cddf5538e66d6'
+  sha256 '87fefab0e0a30dfafe2fe1754cbdf014ad66fa5a6cf33ea3848b635bbe13ec61'
 
   url "http://fbmacmessenger.rsms.me/dist/Messenger-#{version}.zip"
   name 'Messenger'
