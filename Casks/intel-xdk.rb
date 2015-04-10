@@ -1,6 +1,6 @@
 cask :v1 => 'intel-xdk' do
-  version '1621'
-  sha256 '1206d823b00ecd172883b12b6a47df0f44bbb445172d5ce72a058f41669f1f6a'
+  version '1878'
+  sha256 '679d5fc0d155035680917a460b13d9f9c8a82312b90778e51a4a33311f665079'
 
   url "https://download.xdk.intel.com/xdk/xdk_web_mac_master_#{version}.dmg"
   name 'Intel XDK'
