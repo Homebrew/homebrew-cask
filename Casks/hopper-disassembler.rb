@@ -9,5 +9,5 @@ cask :v1 => 'hopper-disassembler' do
   homepage 'http://www.hopperapp.com/'
   license :commercial
 
-  app 'Hopper Disassembler v3.app'
+  app 'Hopper Disassembler.app'
 end
