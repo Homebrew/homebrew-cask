@@ -5,7 +5,7 @@ cask :v1 => 'messenger' do
   url "http://fbmacmessenger.rsms.me/dist/Messenger-#{version}.zip"
   name 'Messenger'
   homepage 'http://fbmacmessenger.rsms.me/'
-  license :oss
+  license :mit
 
   app 'Messenger.app'
 end
