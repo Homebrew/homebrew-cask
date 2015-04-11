@@ -1,6 +1,6 @@
 cask :v1 => 'emacs' do
-  version '24.4'
-  sha256 '2d13ff9edff16d4e8f4bc9cf37961cf91a3f308fad5e9c214c4a546e86719312'
+  version '24.5'
+  sha256 '60b8c7d51659b6ccd86108a0f14866ab96a098797e350cb03c24040bb69d8ce2'
 
   url "http://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
   name 'Emacs'
