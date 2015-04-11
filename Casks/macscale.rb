@@ -4,6 +4,7 @@ cask :v1 => 'macscale' do
 
   # brinscall.com is the official download host per the vendor homepage
   url 'http://www.brinscall.com/MacScale.zip'
+  name 'MacScale'
   homepage 'http://www.macscale.com'
   license :closed
 

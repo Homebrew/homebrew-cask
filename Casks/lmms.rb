@@ -5,6 +5,7 @@ cask :v1 => 'lmms' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/LMMS/lmms/releases/download/v#{version}/lmms-#{version}.dmg"
   appcast 'https://github.com/LMMS/lmms/releases.atom'
+  name 'LMMS'
   homepage 'https://lmms.io'
   license :gpl
 

@@ -4,6 +4,7 @@ cask :v1 => 'lunchy' do
 
   url "https://github.com/sosedoff/lunchy-go/releases/download/v#{version}/#{version}_darwin_amd64.zip"
   appcast 'https://github.com/sosedoff/lunchy-go/releases.atom'
+  name 'Lunchy'
   homepage 'https://github.com/sosedoff/lunchy-go'
   license :mit
 
