@@ -5,6 +5,7 @@ cask :v1 => 'litecoin' do
   url "https://download.litecoin.org/litecoin-#{version}/osx/Litecoin-Qt-#{version}.dmg"
   gpg "#{url}.asc",
       :key_id => 'dc380da43082f16378c97414c37e4723969276f5'
+  name 'Litecoin'
   homepage 'https://litecoin.org/'
   license :x11
 
