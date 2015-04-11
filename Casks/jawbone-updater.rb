@@ -3,6 +3,7 @@ cask :v1 => 'jawbone-updater' do
   sha256 '2e9184cde74779f75c6827e0fcf021230da3f6aad48fd1f3d293e5e355264f7d'
 
   url "http://content.jawbone.com/store/dashboard/Jawbone_Updater-#{version}.pkg"
+  name 'Jawbone Updater'
   homepage 'http://jawbone.com/'
   license :gpl
 
