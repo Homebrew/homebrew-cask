@@ -217,7 +217,7 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
   end
 
   def self.render_cached_downloads
-    files = Hbc::CLI::Cleanup.default.all_cache_files
+    files = Hbc::CLI::Cleanup.default.deletable_cache_files
     count = files.count
     space = Hbc::CLI::Cleanup.default.space_in_megs files
     [

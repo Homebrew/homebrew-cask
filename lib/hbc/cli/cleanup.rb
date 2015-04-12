@@ -6,31 +6,46 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
     "cleans up cached downloads and tracker symlinks"
   end
 
-  def self.run(*_ignored)
-    default.cleanup!
+  def self.run(*args)
+    default(cask_tokens_from(args)).cleanup!()
   end
 
-  def self.default
-    new(HOMEBREW_CACHE_CASKS, Hbc.cleanup_outdated)
+  def self.default(cask_tokens="")
+    new(HOMEBREW_CACHE_CASKS, Hbc.cleanup_outdated, cask_tokens)
   end
 
-  attr_reader :cache_location, :cleanup_outdated
-  def initialize(cache_location, cleanup_outdated)
+  attr_reader :cache_location, :cleanup_outdated, :cask_tokens
+  def initialize(cache_location, cleanup_outdated, cask_tokens="")
     @cache_location = Pathname(cache_location)
     @cleanup_outdated = cleanup_outdated
+    @cask_tokens = cask_tokens
   end
 
-  def cleanup!
-    remove_dead_symlinks
-    remove_all_cache_files
+  def cleanup!()
+    remove_deletable_symlinks()
+    remove_cache_files()
   end
 
   def cache_symlinks
     cache_location.children.select(&:symlink?)
   end
 
-  def dead_symlinks
-    cache_symlinks.reject(&:exist?)
+  def filter_out_deletable(to_filter)
+    if !(cask_tokens.empty?)
+      deletable = Array.new
+      to_filter.each do |item| 
+        cask_tokens.each do |cask_token|
+          deletable.push(item) if File.basename(item).include? cask_token
+        end
+      end
+      deletable
+    else
+      to_filter
+    end
+  end
+
+  def deletable_symlinks
+    filter_out_deletable(cache_symlinks.reject(&:exist?))
   end
 
   def cache_incompletes(outdated=nil)
@@ -62,8 +77,9 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
   end
 
   # will include dead symlinks if they aren't handled separately
-  def all_cache_files(outdated=nil)
-    cache_incompletes(outdated) + cache_completes(outdated)
+  def deletable_cache_files(outdated=nil)
+    all_cache_files = cache_incompletes(outdated) + cache_completes(outdated)
+    filter_out_deletable(all_cache_files)
   end
 
   def space_in_megs(files)
@@ -71,9 +87,9 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
     sprintf '%0.2f', bytes / (1024.0 * 1024.0)
   end
 
-  def remove_dead_symlinks
+  def remove_deletable_symlinks()
     ohai "Removing dead symlinks"
-    to_delete = dead_symlinks
+    to_delete = deletable_symlinks
     puts "Nothing to do" unless to_delete.count > 0
     to_delete.each do |item|
       puts item
@@ -81,11 +97,11 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
     end
   end
 
-  def remove_all_cache_files
+  def remove_cache_files()
     message = "Removing cached downloads"
     message.concat " older than #{OUTDATED_DAYS} days old" if cleanup_outdated
     ohai message
-    to_delete = all_cache_files(cleanup_outdated)
+    to_delete = deletable_cache_files(cleanup_outdated)
     puts "Nothing to do" unless to_delete.count > 0
     to_delete.each do |item|
       puts item

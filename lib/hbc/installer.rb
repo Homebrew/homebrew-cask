@@ -267,7 +267,10 @@ class Hbc::Installer
     disable_accessibility_access
     uninstall_artifacts
     purge_versioned_files
-    purge_caskroom_path if force
+    if force
+      purge_caskroom_path
+      Hbc::CLI::Cleanup.run(@cask.to_s)
+    end
   end
 
   def uninstall_artifacts
