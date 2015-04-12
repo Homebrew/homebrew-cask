@@ -18,6 +18,7 @@ cask :v1 => 'macvim' do
     appcast 'https://github.com/macvim-dev/macvim/releases.atom'
   end
 
+  name 'MacVim'
   homepage 'http://code.google.com/p/macvim/'
   license :oss
 
