@@ -3,6 +3,7 @@ cask :v1 => 'mamp' do
   sha256 '62d09243465007335deba5fc5a3979f0bf44695f07494216fc8fa786cdfcaf8a'
 
   url "http://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
+  name 'MAMP'
   homepage 'http://www.mamp.info/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
