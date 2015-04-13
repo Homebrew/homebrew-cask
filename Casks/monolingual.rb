@@ -16,6 +16,7 @@ cask :v1 => 'monolingual' do
 
   url "https://github.com/IngmarStein/Monolingual/releases/download/v#{version}/Monolingual-#{version}.dmg"
   appcast 'https://github.com/IngmarStein/Monolingual/releases.atom'
+  name 'Monolingual'
   homepage 'https://ingmarstein.github.io/Monolingual/'
   license :gpl
 
