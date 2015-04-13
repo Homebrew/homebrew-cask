@@ -5,6 +5,7 @@ cask :v1 => 'moneywell' do
   url "http://downloads.nothirst.com/MoneyWell_#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}.zip"
   appcast 'http://nothirst.com/feeds/MoneyWell2Appcast.xml',
           :sha256 => '8de9519f9ff874d9baf67feefbe3f258ca89e6c07fbdf35fef6f1a6c55af9ea2'
+  name 'MoneyWell'
   homepage 'http://nothirst.com/moneywell/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
