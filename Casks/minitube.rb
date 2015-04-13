@@ -4,6 +4,7 @@ cask :v1 => 'minitube' do
 
   url 'http://flavio.tordini.org/files/minitube/minitube.dmg'
   appcast 'http://flavio.tordini.org/minitube-ws/appcast.xml'
+  name 'Minitube'
   homepage 'http://flavio.tordini.org/minitube'
   license :gpl
 
