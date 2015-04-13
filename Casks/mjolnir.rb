@@ -4,6 +4,7 @@ cask :v1 => 'mjolnir' do
 
   url "https://github.com/sdegutis/mjolnir/releases/download/#{version}/Mjolnir-#{version}.tgz"
   appcast 'https://github.com/sdegutis/mjolnir/releases.atom'
+  name 'Mjolnir'
   homepage 'http://mjolnir.io'
   license :mit
 
