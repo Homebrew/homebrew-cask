@@ -9,8 +9,8 @@ cask :v1 => 'fiddler' do
   homepage 'http://www.telerik.com/fiddler'
   license :commercial
   tags :vendor => 'Telerik'
-  
+
   depends_on :cask => 'mono-mdk'
-  
+
   app 'Fiddler.app'
 end
