@@ -1,7 +1,14 @@
-class Cloud < Cask
-  url 'https://s3.amazonaws.com/f.cl.ly/builds/CloudApp2.0.1.zip'
+cask :v1 => 'cloud' do
+  version '3.3.0'
+  sha256 'd2a0dc3a2ecff33b18e1d98d2e51db2f9a63ee6ec795ba862346a718dd8bc41d'
+
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://s3.amazonaws.com/downloads.getcloudapp.com/mac/CloudApp-#{version}.dmg"
+  name 'CloudApp'
   homepage 'http://getcloudapp.com/'
-  version '2.0.1'
-  sha256 'f4fd440742eba367ab7bf75cf0b190a442177e75fdede510b7b272710f93a7b2'
-  link 'Cloud.app'
+  license :gratis
+
+  app 'CloudApp.app'
+
+  zap :delete => '~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist'
 end

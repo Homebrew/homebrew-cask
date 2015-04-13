@@ -1,10 +1,15 @@
-class Voicemac < Cask
+cask :v1 => 'voicemac' do
+  version :latest
+  sha256 :no_check
+
   url 'http://download.mrgeckosmedia.com/VoiceMac.zip'
+  appcast 'https://mrgeckosmedia.com/applications/appcast/VoiceMac'
+  name 'VoiceMac'
   homepage 'https://mrgeckosmedia.com/applications/info/VoiceMac'
-  version 'latest'
-  no_checksum
-  link 'VoiceMac/VoiceMac.app'
-  after_install do
-    system '/bin/chmod', 'a+r', "#{destination_path}/VoiceMac/VoiceMac.app/Contents/Info.plist"
+  license :isc
+
+  app 'VoiceMac/VoiceMac.app'
+  postflight do
+    system '/bin/chmod', '--', 'a+r', "#{staged_path}/VoiceMac/VoiceMac.app/Contents/Info.plist"
   end
 end

@@ -1,7 +1,11 @@
-class Nicecast < Cask
-  url 'http://rogueamoeba.com/nicecast/download/Nicecast.zip'
+cask :v1 => 'nicecast' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://rogueamoeba.com/nicecast/download/Nicecast.zip'
+  name 'Nicecast'
   homepage 'http://rogueamoeba.com/nicecast'
-  version 'latest'
-  no_checksum
-  link 'Nicecast.app'
+  license :commercial
+
+  app 'Nicecast.app'
 end

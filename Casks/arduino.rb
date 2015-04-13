@@ -1,7 +1,11 @@
-class Arduino < Cask
-  url 'http://arduino.googlecode.com/files/arduino-1.0.5-macosx.zip'
+cask :v1 => 'arduino' do
+  version '1.6.3'
+  sha256 '4cdb3332ff9a80218e6923db61ca18e346e753e137f111de9fe81b380af88897'
+
+  url "http://arduino.cc/download.php?f=/arduino-#{version}-macosx.zip"
+  name 'Arduino'
   homepage 'http://arduino.cc/'
-  version '1.0.5'
-  sha256 '12f2d649b2cfd537317f63d9cb102dc052647c32a5b07c76d344ed959319c05e'
-  link 'Arduino.app'
+  license :oss
+
+  app 'Arduino.app'
 end

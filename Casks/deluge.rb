@@ -1,7 +1,11 @@
-class Deluge < Cask
-  url 'http://download.deluge-torrent.org/mac_osx/Deluge.app.1.3.6-3.x86.tbz2'
+cask :v1 => 'deluge' do
+  version '1.3.11'
+  sha256 '503b3ac13bd437bfa2c055aa1ddf26290db0c5d4fb04e130c94dc42490ce6131'
+
+  url "http://download.deluge-torrent.org/mac_osx/deluge-#{version}-osx-x86.tbz2"
+  name 'Deluge'
   homepage 'http://deluge-torrent.org/'
-  version '1.3.6'
-  sha256 'd7959f6560d424b756b81a19a2932b2e31de0338eac09eb9885853a19a977822'
-  link 'Deluge.app'
+  license :gpl
+
+  app 'Deluge.app'
 end

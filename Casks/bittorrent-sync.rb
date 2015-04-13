@@ -1,7 +1,14 @@
-class BittorrentSync < Cask
-  url 'http://download-lb.utorrent.com/endpoint/btsync/os/osx/track/stable'
+cask :v1 => 'bittorrent-sync' do
+  version :latest
+  sha256 :no_check
+
+  # getsyncapp.com is the official download host per the vendor homepage
+  url 'https://download-cdn.getsyncapp.com/stable/osx/BitTorrent-Sync.dmg'
+  name 'BitTorrent Sync'
+  # todo: response was not XML
+  # appcast 'http://www.usyncapp.com/cfu.php'
   homepage 'http://www.bittorrent.com/sync'
-  version 'latest'
-  no_checksum
-  link 'BitTorrent Sync.app'
+  license :gratis
+
+  app 'BitTorrent Sync.app'
 end

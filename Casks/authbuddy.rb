@@ -1,10 +1,15 @@
-class Authbuddy < Cask
+cask :v1 => 'authbuddy' do
+  version :latest
+  sha256 :no_check
+
   url 'https://www.dssw.co.uk/authbuddy/dsswauthbuddy.dmg'
+  name 'authbuddy'
   homepage 'https://www.dssw.co.uk/authbuddy'
-  version 'latest'
-  no_checksum
-  install 'DssW authbuddy.pkg'
-  uninstall :files => Array['/usr/local/bin/authbuddy']
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  pkg 'DssW authbuddy.pkg'
+
+  uninstall :pkgutil => 'uk.co.dssw.authbuddy'
   caveats do
     files_in_usr_local
   end

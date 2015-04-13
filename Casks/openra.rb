@@ -1,7 +1,12 @@
-class Openra < Cask
-  url 'https://github.com/OpenRA/OpenRA/releases/download/release-20131223/OpenRA-release-20131223.zip'
-  homepage 'http://openra.res0l.net'
-  version '20131223'
-  sha256 '519cabb3a1de7780479ca9ff247af61aca508cf17eb3129db2b788f314a381ce'
-  link 'OpenRA.app'
+cask :v1 => 'openra' do
+  version '20141029'
+  sha256 '421f341d324e2e360cf17facc1379b19036f7459516b84685037a041d5020e64'
+
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.zip"
+  appcast 'https://github.com/OpenRA/OpenRA/releases.atom'
+  homepage 'http://www.openra.net/'
+  license :gpl
+
+  app 'OpenRA.app'
 end

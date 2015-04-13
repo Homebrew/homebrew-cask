@@ -1,8 +1,12 @@
-class Logisim < Cask
-  VERSION = '2.7.1'
-  url "http://downloads.sourceforge.net/project/circuit/2.7.x/#{VERSION}/logisim-macosx-#{VERSION}.tar.gz"
-  homepage 'http://ozark.hendrix.edu/~burch/logisim/'
-  version VERSION
+cask :v1 => 'logisim' do
+  version '2.7.1'
   sha256 '41c5555b8021794e268a3fc2c9c51301d919680ae780b000b99380fc492bae7c'
-  link 'Logisim.app'
+
+  # sourceforge.net is the official download host per the vendor homepage
+  url "http://downloads.sourceforge.net/project/circuit/#{version.sub(%r{\d+$},'x')}/#{version}/logisim-macosx-#{version}.tar.gz"
+  name 'Logisim'
+  homepage 'http://www.cburch.com/logisim/'
+  license :gpl
+
+  app 'Logisim.app'
 end

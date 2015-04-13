@@ -1,7 +1,13 @@
-class Xact < Cask
-  url 'http://xact.scottcbrown.org/xACT2.25.zip'
+cask :v1 => 'xact' do
+  version '2.35'
+  sha256 'f1c587262b19e171845911ad1231e9295825d3ab592b75a6a571a5e76da8097a'
+
+  url "http://xact.scottcbrown.org/xACT#{version}.zip"
+  name 'xACT'
+  appcast 'http://xactupdate.scottcbrown.org/xACT.xml',
+          :sha256 => 'fc41532e1aff82fbfd45fd7d9a65c5a5d661d536b535d36f3b0c3658b44f8d73'
   homepage 'http://xact.scottcbrown.org'
-  version '2.25'
-  sha256 '16425a50bdf9c8af8b436f88f4918145b553135a93887ae1ccddaad8edc79b51'
-  link 'xACT 2.25/xACT.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app "xACT #{version}/xACT.app"
 end

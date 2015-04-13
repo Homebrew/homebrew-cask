@@ -1,7 +1,12 @@
-class Proxpn < Cask
-  url 'http://proxpn.com/mac.dmg'
+cask :v1 => 'proxpn' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://proxpn.com/mac.dmg'
+  appcast 'http://www.proxpn.org/updater/appcast.rss'
+  name 'proXPN'
   homepage 'http://proxpn.com'
-  version 'latest'
-  no_checksum
-  link 'ProXPN.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'ProXPN.app'
 end

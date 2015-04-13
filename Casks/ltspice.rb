@@ -1,7 +1,12 @@
-class Ltspice < Cask
+cask :v1 => 'ltspice' do
+  version :latest
+  sha256 :no_check
+
+  # tech.com is the official download host per the vendor homepage
   url 'http://ltspice.linear-tech.com/LTspiceIV.dmg'
+  name 'LTspice'
   homepage 'http://www.linear.com/designtools/software/'
-  version '4'
-  sha256 '4722b3dcf28e2d1c2ef08119bbced6cb0ac5053d6bab7b46b52c2a0c352894c5'
-  link 'LTspice.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'LTspice.app'
 end

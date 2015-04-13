@@ -1,7 +1,14 @@
-class XamarinStudio < Cask
-  url 'http://download.xamarin.com/studio/Mac/XamarinStudio-4.2.4.35-0.dmg'
+cask :v1 => 'xamarin-studio' do
+  version '5.7.0.661-0'
+  sha256 '6a126005fafaa19cd8a9c6153c2a7c4b502cf8293e8c977bfbac38f03e0f2e2e'
+
+  url "http://download.xamarin.com/studio/Mac/XamarinStudio-#{version}.dmg"
+  name 'Xamarin Studio'
+  appcast 'http://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
+          :sha256 => '79c309d6dbe6f08f1d022c9376a4678cc94f57be084007df90c5a12839b35cdd',
+          :format => :unknown
   homepage 'http://xamarin.com/studio'
-  version '4.2.4'
-  sha256 'd5c2519822b134034d9d7ef6aad0c3311ca9fabc9d97b1069223125dca5ce1f1'
-  link 'Xamarin Studio.app'
+  license :gpl
+
+  app 'Xamarin Studio.app'
 end

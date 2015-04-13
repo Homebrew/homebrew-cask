@@ -1,7 +1,14 @@
-class PinegrowWebDesigner < Cask
-  url 'http://pinegrow.s3.amazonaws.com/PinegrowMac.zip'
+cask :v1 => 'pinegrow-web-designer' do
+  version :latest
+  sha256 :no_check
+
+  # amazonaws.com is the official download host per the vendor homepage
+  url 'https://pinegrow.s3.amazonaws.com/PinegrowMac.zip'
+  name 'Pinegrow'
+  name 'Pinegrow Web Editor'
+  name 'Pinegrow Web Designer'
   homepage 'http://pinegrow.com/'
-  version 'latest'
-  no_checksum
-  link 'Pinegrow Web Designer.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Pinegrow Web Designer.app'
 end

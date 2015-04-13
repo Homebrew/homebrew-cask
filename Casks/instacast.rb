@@ -1,7 +1,11 @@
-class Instacast < Cask
-  url 'http://assets.vemedio.com/software/instacast/Instacast-1.2.2-2185.dmg'
+cask :v1 => 'instacast' do
+  version '2.0-2663'
+  sha256 '643b36ea009e05e3881dc80899c7378a3fdcb23efc9c7fcdf98e5dc22b039776'
+
+  url "http://assets.vemedio.com/software/instacast/Instacast-#{version}.dmg"
+  name 'Instacast'
   homepage 'http://vemedio.com/products/instacast-mac'
-  version '1.2.2 (2185)'
-  sha256 '0990ca48ae6fa45f9911204b6e434a2e0010747b76bfc29b9345e1fda482d145'
-  link 'Instacast.app'
+  license :commercial
+
+  app 'Instacast.app'
 end

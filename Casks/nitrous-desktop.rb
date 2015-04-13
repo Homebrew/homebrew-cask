@@ -1,7 +1,10 @@
-class NitrousDesktop < Cask
+cask :v1 => 'nitrous-desktop' do
+  version :latest
+  sha256 :no_check
+
   url 'https://www.nitrous.io/mac/NitrousDesktop-latest.zip'
   homepage 'https://www.nitrous.io/mac'
-  version 'latest'
-  no_checksum
-  link 'Nitrous Desktop.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Nitrous Desktop.app'
 end

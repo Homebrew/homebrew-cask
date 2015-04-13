@@ -1,7 +1,13 @@
-class Catch < Cask
-  url 'https://github.com/mipstian/catch/releases/download/1.6/Catch-1.6.zip'
-  homepage 'http://www.giorgiocalderolla.com/index.html'
-  version '1.6'
-  sha256 '72e6606cddde97ef3c26a46d7178489560c45f11b136ec87844129101889fa6c'
-  link 'Catch.app'
+cask :v1 => 'catch' do
+  version '1.9.1'
+  sha256 'f9aded779d56f679fc638a6a31b2cf1a1f1e00c9aeaca931c3eca656feb53d41'
+
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/mipstian/catch/releases/download/#{version}/Catch-#{version}.zip"
+  appcast 'https://github.com/mipstian/catch/releases.atom'
+  name 'Catch'
+  homepage 'http://www.giorgiocalderolla.com/index.html#catch'
+  license :oss
+
+  app 'Catch.app'
 end

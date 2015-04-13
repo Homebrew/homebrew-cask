@@ -1,7 +1,11 @@
-class Flow < Cask
-  url 'http://fivedetails.com/flow/download'
-  homepage 'http://fivedetails.com'
-  version 'latest'
-  no_checksum
-  link 'Flow.app'
+cask :v1 => 'flow' do
+  version :latest
+  sha256 :no_check
+
+  url 'http://www.getflow.com/mac/download'
+  name 'Flow'
+  homepage 'http://www.getflow.com/'
+  license :commercial
+
+  app 'Flow.app'
 end

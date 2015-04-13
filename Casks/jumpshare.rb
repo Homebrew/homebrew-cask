@@ -1,7 +1,11 @@
-class Jumpshare < Cask
-  url 'https://jumpshare.com/desktop/mac/Jumpshare_1.0.19.dmg'
+cask :v1 => 'jumpshare' do
+  version '1.0.25-3'
+  sha256 'a2a2d44d858616965c8271dcfc177ec299e9592fed3abb795ddb81b533f6d818'
+
+  url "https://jumpshare.com/desktop/mac/Jumpshare_#{version}.dmg"
+  name 'Jumpshare'
   homepage 'https://jumpshare.com/'
-  version '1.0.19'
-  sha256 'fe0b05bb795410403342f6f147e23be685207e11f2a1c49c3ce4f603f089479e'
-  link 'Jumpshare.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Jumpshare.app'
 end

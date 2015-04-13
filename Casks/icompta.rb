@@ -1,7 +1,11 @@
-class Icompta < Cask
-  url 'http://www.lyricapps.fr/iCompta/downloads/iCompta.dmg'
+cask :v1 => 'icompta' do
+  version :latest
+  sha256 :no_check
+
+  url 'http://www.icompta-app.com/files/iCompta_Demo.zip'
+  name 'iCompta'
   homepage 'http://www.icompta-app.com/'
-  version 'latest'
-  no_checksum
-  link 'iCompta.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'iCompta.app'
 end

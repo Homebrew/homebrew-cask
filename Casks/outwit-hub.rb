@@ -1,7 +1,10 @@
-class OutwitHub < Cask
-  url 'http://www.outwit.com/downloads/release/outwit-hub.en-US.mac64.dmg'
+cask :v1 => 'outwit-hub' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://www.outwit.com/downloads/release/outwit-hub.en-US.mac64.dmg'
   homepage 'http://www.outwit.com'
-  version 'latest'
-  no_checksum
-  link 'Outwit Hub.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Outwit Hub.app'
 end

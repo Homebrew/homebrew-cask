@@ -1,7 +1,10 @@
-class PlainClip < Cask
-  url 'http://www.bluem.net/files/Plain-Clip.dmg'
+cask :v1 => 'plain-clip' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://www.bluem.net/files/Plain-Clip.dmg'
   homepage 'http://www.bluem.net/en/mac/plain-clip'
-  version 'latest'
-  no_checksum
-  link 'Plain Clip.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Plain Clip.app'
 end

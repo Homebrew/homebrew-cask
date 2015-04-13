@@ -1,7 +1,11 @@
-class Gamesalad < Cask
-  url 'http://gs.releases.s3.amazonaws.com/creator/0.10.4.1/GameSalad-Creator-0.10.4.1-beta.dmg'
-  homepage 'http://gamesalad.com'
-  version '0.14.4.1-beta'
-  sha256 '05f68db92cee37fedffe23a2950fa55c375fd53acd7d19ae8fd42884345814e7'
-  link 'GameSalad.app'
+cask :v1 => 'gamesalad' do
+  version '0.13.7'
+  sha256 '2cd494d163f8b1e97b670caca6a85f3b1d574f1786ee69afa3cd83361ee3b2db'
+
+  url "http://gs.releases.x.s3.amazonaws.com/creator/#{version}/GameSalad-Creator-#{version}-beta.dmg"
+  name 'GameSalad'
+  homepage 'http://gamesalad.com/'
+  license :commercial
+
+  app 'GameSalad.app'
 end

@@ -1,8 +1,12 @@
-class Blender < Cask
-  url 'http://download.blender.org/release/Blender2.70/blender-2.70a-OSX_10.6-x86_64.zip'
+cask :v1 => 'blender' do
+  version '2.74'
+  sha256 '5648c679ac40fe34560426aa6e533b94e832882c79abc06c442dc21e78e1cbc9'
+
+  url "http://download.blender.org/release/Blender#{version.to_f}/blender-#{version}-OSX_10.6-x86_64.zip"
+  name 'Blender'
   homepage 'http://www.blender.org/'
-  version '2.70a'
-  sha256 '590461502fe257883c78be3d6cf0eb329bced07c9aeea499bb812e2d55c3e8ba'
-  link 'Blender/blender.app'
-  link 'Blender/blenderplayer.app'
+  license :gpl
+
+  app 'Blender/blender.app'
+  app 'Blender/blenderplayer.app'
 end

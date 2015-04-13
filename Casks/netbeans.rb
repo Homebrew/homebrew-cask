@@ -1,9 +1,12 @@
-class Netbeans < Cask
-  url 'http://download.netbeans.org/netbeans/8.0/final/bundles/netbeans-8.0-macosx.dmg'
+cask :v1 => 'netbeans' do
+  version '8.0.2'
+  sha256 'a256360136918001b17a6f5ad9fedc0b7ea8a094701cba37718568bc2cbb4c01'
+
+  url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-macosx.dmg"
   homepage 'https://netbeans.org/'
-  version '8.0'
-  sha256 'fcbac4765de78af05e5b4ac29f6d418ad82e29c1cce4f536d93e4bc4272f90d4'
-  install 'NetBeans 8.0.mpkg'
+  license :oss
+
+  pkg "NetBeans #{version}.pkg"
   # Theoretically this uninstall could conflict with a separate GlassFish
   # installation.
   #
@@ -17,11 +20,13 @@ class Netbeans < Cask
   # receipts database that would be a bug upstream with NetBeans not prefixing
   # its GlassFish package with "org.netbeans."
   #
+  # If this ever becomes an issue, :pkgutil => 'glassfish-.*' could be moved
+  # to a separate "zap" stanza.
+  #
   # The NetBeans installer does some postflight unpacking of paths installed by
   # the OS X installer, so it's insufficient to just delete the paths exposed
-  # by pkgutil, hence the additional `:files` option below.
+  # by pkgutil, hence the additional ":delete" option below.
+
   uninstall :pkgutil => 'org.netbeans.ide.*|glassfish-.*',
-              :files => [
-                         '/Applications/NetBeans'
-                        ]
+            :delete => '/Applications/NetBeans'
 end

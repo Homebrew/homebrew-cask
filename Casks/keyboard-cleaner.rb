@@ -1,7 +1,11 @@
-class KeyboardCleaner < Cask
+cask :v1 => 'keyboard-cleaner' do
+  version :latest
+  sha256 :no_check
+
   url 'http://jan.prima.de/Keyboard_Cleaner.zip'
+  name 'Keyboard Cleaner'
   homepage 'http://jan.prima.de/~jan/plok/archives/48-Keyboard-Cleaner.html'
-  version 'latest'
-  no_checksum
-  link 'Keyboard Cleaner.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Keyboard Cleaner.app'
 end

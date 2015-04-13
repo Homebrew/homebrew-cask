@@ -1,7 +1,10 @@
-class Omnioutliner < Cask
-  url 'http://www.omnigroup.com/download/latest/omnioutliner'
+cask :v1 => 'omnioutliner' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://www.omnigroup.com/download/latest/omnioutliner'
   homepage 'http://www.omnigroup.com/omnioutliner/'
-  version 'latest'
-  no_checksum
-  link 'OmniOutliner.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'OmniOutliner.app'
 end

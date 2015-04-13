@@ -1,7 +1,11 @@
-class Soundnote < Cask
+cask :v1 => 'soundnote' do
+  version :latest
+  sha256 :no_check
+
   url 'http://download.mrgeckosmedia.com/SoundNote.zip'
+  appcast 'http://mrgeckosmedia.com/applications/appcast/SoundNote'
   homepage 'https://mrgeckosmedia.com/applications/info/SoundNote'
-  version 'latest'
-  no_checksum
-  link 'SoundNote.app'
+  license :isc
+
+  app 'SoundNote.app'
 end

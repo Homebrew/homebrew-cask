@@ -1,7 +1,12 @@
-class Peepopen < Cask
-  url 'http://topfunky.github.io/PeepOpen/dl/PeepOpen.dmg'
+cask :v1 => 'peepopen' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://topfunky.github.io/PeepOpen/dl/PeepOpen.dmg'
+  appcast 'https://peepcode.com/system/apps/PeepOpen/appcast.xml'
+  name 'PeepOpen'
   homepage 'http://topfunky.github.io/PeepOpen/'
-  version 'latest'
-  no_checksum
-  link 'PeepOpen.app'
+  license :mit
+
+  app 'PeepOpen.app'
 end

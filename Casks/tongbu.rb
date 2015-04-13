@@ -1,7 +1,11 @@
-class Tongbu < Cask
-  url 'http://qd.leaderhero.com/qd/zsmac/Tongbu_mac_v1.0.9.dmg'
+cask :v1 => 'tongbu' do
+  version '1.1.7'
+  sha256 'e9ff364db18915318367bc8ba359f963ce9c274bb9e27be10f2ce87192ac8a68'
+
+  # leaderhero.com is the official download host per the vendor homepage
+  url "http://qd.appdown.info/qd/zsmacqd/Tongbu_mac_v#{version}_baidupinzhuan.dmg"
   homepage 'http://www.tongbu.com'
-  version '1.0.9'
-  sha256 'be4f09e2d45c8e2b813c171882ad02e7cdc84fd5359d97ef9b2d1476f97112a2'
-  link 'Tongbu.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Tongbu.app'
 end

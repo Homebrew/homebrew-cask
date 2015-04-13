@@ -1,7 +1,11 @@
-class Moreamp < Cask
-  url 'http://downloads.sourceforge.net/project/moreamp/moreamp/MoreAmp-0.1.28/MoreAmp-0.1.28-binOSXintel.dmg'
+cask :v1 => 'moreamp' do
+  version '0.1.29'
+  sha256 '770dad0b69979f51807dee3f873e0ebbb755f9f2f2f60c734ac55094e6a6f707'
+
+  url "http://downloads.sourceforge.net/project/moreamp/moreamp/MoreAmp-#{version}/MoreAmp-#{version}-binOSX104intel.dmg"
+  name 'MoreAmp'
   homepage 'http://sourceforge.net/projects/moreamp/'
-  version '0.1.28'
-  sha256 '2f07c82bb5b29e12185cd35c3f3cd9c472e8cc837fe426af1c82af9428c89695'
-  link 'MoreAmp.app'
+  license :gpl
+
+  app 'MoreAmp.app'
 end

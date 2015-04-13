@@ -1,7 +1,12 @@
-class Imageoptim < Cask
-  url 'http://imageoptim.com/ImageOptim.tbz2'
+cask :v1 => 'imageoptim' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://imageoptim.com/ImageOptim.tbz2'
+  appcast 'http://imageoptim.com/appcast.xml'
+  name 'ImageOptim'
   homepage 'http://imageoptim.com/'
-  version 'latest'
-  no_checksum
-  link 'ImageOptim.app'
+  license :gpl
+
+  app 'ImageOptim.app'
 end

@@ -1,7 +1,12 @@
-class Mcedit < Cask
-  url 'https://bitbucket.org/codewarrior0/mcedit/downloads/MCEdit-0.1.7.1.macosx-10_6-x86_64.zip'
-  homepage 'http://www.mcedit.net'
-  version '0.1.7.1'
-  sha256 '9ab4e66a3d4d898921cd38725da36567931fe4b8d0285c3a73dba6bef35fbea4'
-  link 'MCEdit.app'
+cask :v1 => 'mcedit' do
+  version '1.2.5.0'
+  sha256 '2932e5c96c2d3d9ec77b3b71a2e4596f5f96edd820e316921dfedcfe72bafc5c'
+
+  url "https://github.com/Khroki/MCEdit-Unified/releases/download/#{version}/MCEdit.v#{version}.OSX.64bit.zip"
+  appcast 'https://github.com/Khroki/MCEdit-Unified/releases.atom'
+  name 'MCEdit-Unified'
+  homepage 'http://khroki.github.io/MCEdit-Unified/'
+  license :mit
+
+  app 'mcedit.app'
 end

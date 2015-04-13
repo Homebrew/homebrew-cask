@@ -1,7 +1,10 @@
-class Tinyumbrella < Cask
-  url 'http://cache.firmwareumbrella.com/downloads/TinyUmbrella-7.04.00.app.zip'
+cask :v1 => 'tinyumbrella' do
+  version '7.12'
+  sha256 'f9cf39967e68ff9730a8fc6365ded9168fd370595e778d7fd38e4cbccd61ad27'
+
+  url "http://cache.firmwareumbrella.com/downloads/TinyUmbrella-#{version}.00.app.zip"
   homepage 'http://blog.firmwareumbrella.com/'
-  version '7.04'
-  sha256 '2ce5ea70bbdf216aaff9fc30c1a33a58a6fc19a5ad5e4f0029aafae61c622db1'
-  link 'TinyUmbrella.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'TinyUmbrella.app'
 end

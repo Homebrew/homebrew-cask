@@ -1,10 +1,17 @@
-class DefaultFolderX < Cask
-  url 'https://stclairsoft.s3.amazonaws.com/DefaultFolderX-4.6.2.dmg'
+cask :v1 => 'default-folder-x' do
+  version '4.6.14'
+  sha256 '621fe0042ed44da7eab369471ae345e19432cf3a5c70cf0290e567ce805f6b99'
+
+  url "http://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
+  name 'Default Folder X'
   homepage 'http://www.stclairsoft.com/DefaultFolderX'
-  version '4.6.2'
-  sha256 '57ef08bfeab36375fb5d9b0b1c77b12e0e4ac56f8f5896d6926e52d82732cbe0'
-  caskroom_only true
-  caveats do
-    manual_installer 'Default Folder X Installer.app'
-  end
+  license :commercial
+
+  installer :manual => 'Default Folder X Installer.app'
+
+  zap :delete => [
+                  '~/Library/Preferences/com.stclairsoft.DefaultFolderX.favorites.plist',
+                  '~/Library/Preferences/com.stclairsoft.DefaultFolderX.plist',
+                  '~/Library/Preferences/com.stclairsoft.DefaultFolderX.settings.plist',
+                 ]
 end

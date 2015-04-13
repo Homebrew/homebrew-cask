@@ -1,8 +1,12 @@
-class Genymotion < Cask
-  url 'http://files2.genymotion.com/genymotion/genymotion-2.2.0/genymotion-2.2.0.dmg'
+cask :v1 => 'genymotion' do
+  version '2.4.0'
+  sha256 'e0ad68b084474da3d8fa5ffdc828149fcf6b2c6d021c3acc7b3ad3a55831a38a'
+
+  url "http://files2.genymotion.com/genymotion/genymotion-#{version}/genymotion-#{version}.dmg"
+  name 'Genymotion'
   homepage 'http://www.genymotion.com/'
-  version '2.2.0'
-  sha256 '40d128e61f02f610aa0ecabeaeea5a12bbac44873ef60a704fb3bc15df9068f6'
-  link 'Genymotion.app'
-  link 'Genymotion Shell.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Genymotion.app'
+  app 'Genymotion Shell.app'
 end

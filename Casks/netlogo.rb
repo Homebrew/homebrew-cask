@@ -1,7 +1,16 @@
-class Netlogo < Cask
-  url 'http://ccl.northwestern.edu/netlogo/5.0.5/NetLogo%205.0.5.dmg'
+cask :v1 => 'netlogo' do
+  version '5.1.0'
+  sha256 'e2c56ba16fedba36b9868321c774fa1a5e4f4a2ec0a5268381488f376a4f4d3e'
+
+  url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo%20#{version}.dmg"
+  name 'NetLogo'
   homepage 'http://ccl.northwestern.edu/netlogo/'
-  version '5.0.5'
-  sha256 '317faad5fadff9bababce580d9c72d74a491ec81de5129529a5d2f4dd8241ebf'
-  link 'NetLogo 5.0.5/NetLogo 5.0.5.app'
+  license :gpl
+
+  zap :delete => [
+    '~/Library/Preferences/org.nlogo.netlogo.plist',
+    '~/Library/Saved Application State/org.nlogo.NetLogo.savedState'
+  ]
+
+  app "NetLogo #{version}/NetLogo #{version}.app"
 end

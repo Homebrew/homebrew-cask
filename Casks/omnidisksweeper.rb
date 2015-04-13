@@ -1,7 +1,10 @@
-class Omnidisksweeper < Cask
-  url 'http://www.omnigroup.com/download/latest/OmniDiskSweeper'
+cask :v1 => 'omnidisksweeper' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://www.omnigroup.com/download/latest/OmniDiskSweeper'
   homepage 'http://www.omnigroup.com/products/omnidisksweeper/'
-  version 'latest'
-  no_checksum
-  link 'OmniDiskSweeper.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'OmniDiskSweeper.app'
 end

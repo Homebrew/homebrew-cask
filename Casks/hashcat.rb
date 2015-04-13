@@ -1,9 +1,13 @@
-class Hashcat < Cask
-  url 'https://hashcat.net/files/hashcat-0.47.7z'
-  homepage 'https://hashcat.net/hashcat/'
-  version '0.47'
-  sha256 '239acb25b88d529314f2f98af0d6a66772e886c9efbb4ed2b94b7587c9a68455'
-  depends_on_formula 'unar'
+cask :v1 => 'hashcat' do
+  version '0.49'
+  sha256 '02ca88393ecf33aaa0905592ca71e90671338c9540f212b3ad0f4666a93b406d'
 
-  binary 'hashcat-0.47/hashcat-cli64.app', :target => 'hashcat'
+  url "https://hashcat.net/files/hashcat-#{version}.7z"
+  name 'hashcat'
+  homepage 'https://hashcat.net/hashcat/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  depends_on :formula => 'unar'
+
+  binary "hashcat-#{version}/hashcat-cli64.app", :target => 'hashcat'
 end

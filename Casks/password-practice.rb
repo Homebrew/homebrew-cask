@@ -1,7 +1,11 @@
-class PasswordPractice < Cask
+cask :v1 => 'password-practice' do
+  version :latest
+  sha256 :no_check
+
   url 'https://mrgeckosmedia.com/applications/download/PasswordPractice'
+  name 'Password Practice'
   homepage 'https://mrgeckosmedia.com/applications/info/PasswordPractice'
-  version 'latest'
-  no_checksum
-  link 'Password Practice.app'
+  license :public_domain
+
+  app 'Password Practice.app'
 end

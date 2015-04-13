@@ -1,8 +1,13 @@
-class LeapMotion < Cask
-  url 'https://warehouse.leapmotion.com/apps/3250/download'
+cask :v1 => 'leap-motion' do
+  version '2.2.4'
+  sha256 'd8843b3b26d1b4fd8c7edfb3450851fc3626b74d34a2ff4dfd18606d5d868b74'
+
+  url 'https://warehouse.leapmotion.com/apps/4029/download'
+  name 'Leap Motion'
   homepage 'https://www.leapmotion.com/setup'
-  version '1.2.0'
-  sha256 '5a9b38764367d91e3a5ebf5bfabc960051605a8532b271a98c95dc5341cbb99d'
-  install 'Leap Motion.pkg'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  pkg 'Leap Motion.pkg'
+
   uninstall :script => '/Applications/Leap Motion.app/Contents/MacOS/uninstall'
 end

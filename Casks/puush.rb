@@ -1,7 +1,11 @@
-class Puush < Cask
-  url 'http://puush.me/dl/puush.zip'
+cask :v1 => 'puush' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://puush.me/dl/puush.zip'
+  appcast 'https://puush.me/dl/puush.xml?hax=jax'
   homepage 'http://puush.me/'
-  version 'latest'
-  no_checksum
-  link 'puush.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'puush.app'
 end

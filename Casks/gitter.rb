@@ -1,7 +1,29 @@
-class Gitter < Cask
-  url 'http://update.gitter.im/osx/Gitter-1.141.dmg'
+cask :v1 => 'gitter' do
+  version '1.162'
+  sha256 'faeeba7c607a0faff20c613ffbaf3f98bde88de0e1c73a638dc20e6e915ba81c'
+
+  url "http://update.gitter.im/osx/Gitter-#{version}.dmg"
+  appcast 'http://update.gitter.im/osx/appcast.xml',
+          :sha256 => 'dfee81f1a8d4bafa8e412145a58b6db603ec3f37604f7818ba7a3af7ef88004c'
+  name 'Gitter'
   homepage 'https://gitter.im/'
-  version '1.141'
-  sha256 '6254727d8e7efe48cac27d6194a11a303fc5b61f4b93b9fc49061b11ea47dfac'
-  link 'Gitter.app'
+  license :freemium
+
+  app 'Gitter.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
+
+  uninstall :quit => [
+                      'com.troupe.gitter.mac.Gitter',
+                      'com.troupe.gitter.mac.GitterHelperApp'
+                     ]
+
+  zap :delete => [
+                  '~/Library/Application Support/Gitter',
+                  '~/Library/Caches/com.troupe.gitter.mac.Gitter',
+                  '~/Library/Preferences/com.troupe.gitter.mac.Gitter.plist',
+                  '~/Library/Saved Application State/com.troupe.gitter.mac.Gitter.savedState'
+                 ]
 end

@@ -1,7 +1,12 @@
-class Camerabag < Cask
-  url 'http://downloads.nevercenter.com.s3.amazonaws.com/CameraBag_Mac_2_5_06.dmg'
-  homepage 'http://nevercenter.com/camerabag/desktop/'
+cask :v1 => 'camerabag' do
   version '2.5.06'
   sha256 'cbc34e49c94dfe0e9434c4495e970808b8498bdd7a62251dadcdb192595aff58'
-  link 'CameraBag 2.app'
+
+  # amazonaws.com is the official download host per the vendor homepage
+  url "http://downloads.nevercenter.com.s3.amazonaws.com/CameraBag_Mac_#{version.gsub('.','_')}.dmg"
+  name 'CameraBag'
+  homepage 'http://nevercenter.com/camerabag/desktop/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'CameraBag 2.app'
 end

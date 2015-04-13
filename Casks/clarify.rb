@@ -1,7 +1,11 @@
-class Clarify < Cask
-  url 'http://www.bluemangolearning.com/download/clarify/1_0/release/clarify.dmg'
+cask :v1 => 'clarify' do
+  version :latest
+  sha256 :no_check
+
+  url 'http://www.clarify-it.com/download/mac/Clarify.dmg'
+  name 'Clarify'
   homepage 'http://www.clarify-it.com/'
-  version 'latest'
-  no_checksum
-  link 'Clarify.app'
+  license :commercial
+
+  app 'Clarify.app'
 end

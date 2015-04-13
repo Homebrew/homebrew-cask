@@ -1,7 +1,13 @@
-class Cocoapacketanalyzer < Cask
-  url 'http://tastycocoabytes.com/_downloads/CPA_121.dmg'
+cask :v1 => 'cocoapacketanalyzer' do
+  version '1.31'
+  sha256 'fc3586868fcf90e3ca766c31dbf184de78e5c907210dfdabbd13a831712fc864'
+
+  url "http://tastycocoabytes.com/_downloads/CPA_#{version.gsub('.','')}.dmg"
+  appcast 'http://www.tastycocoabytes.com/cpa/updates/appcasting.php',
+          :sha256 => 'e5471a829511ba4c4dd1cbf89bc2ea091fe5f27cc5eaae19fecffc94f8384f8a'
+  name 'Cocoa Packet Analyzer'
   homepage 'http://www.tastycocoabytes.com/cpa/'
-  version '1.21'
-  sha256 '70bc100cb37a5fc783e1a435f20602b4bbce7b6c1b6e95eb88256f51998c9c5a'
-  link 'CocoaPacketAnalyzer.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'CocoaPacketAnalyzer.app'
 end

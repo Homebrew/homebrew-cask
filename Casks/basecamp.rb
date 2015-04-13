@@ -1,8 +1,13 @@
-class Basecamp < Cask
-  url 'http://download.garmin.com/software/BaseCampforMac_424.dmg'
+cask :v1 => 'basecamp' do
+  version '4.4.6'
+  sha256 'd114af2d4f68132cee1739eae67a5704bf09612bae032a97535b2befcc44ab40'
+
+  url "http://download.garmin.com/software/BaseCampforMac_#{version.gsub('.', '')}.dmg"
+  name 'BaseCamp'
   homepage 'http://www.garmin.com/en-US/shop/downloads/basecamp'
-  version '4.2.4'
-  sha256 '674e75cc54d4e87925f3b6d095bd09efd9551c2a622c790178cf70a28deb85d3'
-  install 'Install BaseCamp.pkg'
+  license :gratis
+
+  pkg 'Install BaseCamp.pkg'
+
   uninstall :pkgutil => 'com.garmin.BaseCamp'
 end

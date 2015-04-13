@@ -1,7 +1,12 @@
-class Darteditor < Cask
-  url 'http://storage.googleapis.com/dart-archive/channels/stable/release/latest/editor/darteditor-macos-x64.zip'
+cask :v1 => 'darteditor' do
+  version :latest
+  sha256 :no_check
+
+  # googleapis.com is the official download host per the vendor homepage
+  url 'https://storage.googleapis.com/dart-archive/channels/stable/release/latest/editor/darteditor-macos-x64.zip'
+  name 'Dart Editor'
   homepage 'https://www.dartlang.org/tools/editor/'
-  version 'latest'
-  no_checksum
-  link 'dart/DartEditor.app'
+  license :bsd
+
+  app 'dart/DartEditor.app'
 end

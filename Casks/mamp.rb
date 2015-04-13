@@ -1,15 +1,20 @@
-class Mamp < Cask
-  url 'http://downloads2.mamp.info/MAMP-PRO/releases/3.0.5/MAMP_MAMP_PRO_3.0.5.pkg'
-  homepage 'http://www.mamp.info/en/index.html'
-  version '3.0.5'
-  sha256 '773c5c2b4f55b8f30e0cbbba080432b07f3424229c26ff52d65790bfc6f5b270'
-  install 'MAMP_MAMP_PRO_3.0.5.pkg'
-  after_install do
+cask :v1 => 'mamp' do
+  version '3.2.1'
+  sha256 '370b9b70f7b3ad7155fe84a6635366e28f277948fd15f7721b9c4aad09203a9b'
+
+  url "http://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
+  name 'MAMP'
+  homepage 'http://www.mamp.info/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  pkg "MAMP_MAMP_PRO_#{version}.pkg"
+  postflight do
     system '/usr/bin/sudo', '-E', '--',
-           '/usr/sbin/chown', '-R', "#{Etc.getpwuid(Process.euid).name}:staff", '/Applications/MAMP', '/Applications/MAMP PRO'
+           '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", '/Applications/MAMP', '/Applications/MAMP PRO'
   end
+
   uninstall :pkgutil => 'de.appsolute.installer.(mamp|mampacticon|mampendinstall|mamppro).pkg',
-            :files   => [
+            :delete  => [
                          '/Applications/MAMP',
                          '/Applications/MAMP PRO',
                         ]

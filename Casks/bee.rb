@@ -1,7 +1,12 @@
-class Bee < Cask
+cask :v1 => 'bee' do
+  version :latest
+  sha256 :no_check
+
   url 'http://neat.io/bee/download.html'
+  appcast 'http://neat.io/appcasts/bee-appcast.xml'
+  name 'Bee'
   homepage 'http://neat.io/bee/'
-  version 'latest'
-  no_checksum
-  link 'Bee.app'
+  license :commercial
+
+  app 'Bee.app'
 end

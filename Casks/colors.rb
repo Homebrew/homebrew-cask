@@ -1,7 +1,12 @@
-class Colors < Cask
-  url 'http://mattpatenaude.com/software/colors-1.9.zip'
-  homepage 'http://mattpatenaude.com/'
-  version '1.9'
-  sha256 '60c8b53d0030624677dc500fd235e5ef41ba3b8a50d4d3ab68a8fba34de84e2c'
-  link 'Colors.app'
+cask :v1 => 'colors' do
+  version '1.10'
+  sha256 '073f3055613b4f57e4f6a1acc8540ad8eca316e61a5202fa72f055928d83d600'
+
+  # googlecode.com is the official download host per the vendor homepage
+  url "http://tmitter.googlecode.com/files/Colors-#{version}.zip"
+  name 'Colors'
+  homepage 'https://github.com/13bold/Colors/'
+  license :mit
+
+  app 'Colors.app'
 end

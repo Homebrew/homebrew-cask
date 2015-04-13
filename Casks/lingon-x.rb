@@ -1,7 +1,14 @@
-class LingonX < Cask
-  url 'http://www.peterborgapps.com/downloads/LingonX.zip'
+cask :v1 => 'lingon-x' do
+  version :latest
+  sha256 :no_check
+
+  url 'http://www.peterborgapps.com/downloads/LingonX2.zip'
+  appcast 'http://www.peterborgapps.com/updates/lingonx2-appcast.xml'
+  name 'Lingon X'
   homepage 'http://www.peterborgapps.com/lingon/'
-  version 'latest'
-  no_checksum
-  link 'Lingon X.app'
+  license :commercial
+
+  app 'Lingon X.app'
+
+  depends_on :macos => '>= :yosemite'
 end

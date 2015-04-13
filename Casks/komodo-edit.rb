@@ -1,7 +1,12 @@
-class KomodoEdit < Cask
-  url 'http://downloads.activestate.com/Komodo/releases/8.5.3/Komodo-Edit-8.5.3-14067-macosx-x86_64.dmg'
-  homepage 'http://www.activestate.com/komodo-edit'
-  version '8.5.3'
-  sha256 'baa1bea5942a762a749ce48bc1320f3fda3169655b7ed98b3b9dffe16c360146'
-  link 'Komodo Edit 8.app'
+cask :v1 => 'komodo-edit' do
+  version '9.0.0-15707'
+  sha256 '1937614d15bfe81e1488e9e67a26fb12e86870c1edafc77d1cb72df151febf85'
+
+  # activestate.com is the official download host per the vendor homepage
+  url "http://downloads.activestate.com/Komodo/releases/#{version.sub(%r{-.*},'')}/Komodo-Edit-#{version}-macosx-x86_64.dmg"
+  name 'Komodo Edit'
+  homepage 'http://komodoide.com/komodo-edit'
+  license :mpl
+
+  app 'Komodo Edit 9.app'
 end

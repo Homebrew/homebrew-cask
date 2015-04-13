@@ -1,7 +1,11 @@
-class Iboostup < Cask
+cask :v1 => 'iboostup' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.iboostup.com/iboostup.dmg'
+  name 'iBoostUp'
   homepage 'http://www.iboostup.com'
-  version 'latest'
-  no_checksum
-  link 'iBoostUp.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'iBoostUp.app'
 end

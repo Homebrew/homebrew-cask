@@ -1,7 +1,12 @@
-class Kindlegen < Cask
-  url 'http://kindlegen.s3.amazonaws.com/KindleGen_Mac_i386_v2_9.zip'
-  homepage 'http://www.amazon.com/gp/feature.html?docId=1000765211'
+cask :v1 => 'kindlegen' do
   version '2.9'
-  sha256 'e09ad8f985c7096556f978df15903b71f9cf44d2e1f501139a420ff16931f980'
+  sha256 '7aad3b01c8f0d61096f86d7ba34e4deeef22355b9dbf2555c6dd05a281f5d17e'
+
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://kindlegen.s3.amazonaws.com/KindleGen_Mac_i386_v#{version.gsub('.', '_')}.zip"
+  name 'KindleGen'
+  homepage 'http://www.amazon.com/gp/feature.html?docId=1000765211'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
   binary 'kindlegen'
 end

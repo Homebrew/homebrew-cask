@@ -1,7 +1,13 @@
-class Manico < Cask
-  url 'http://manico.im/static/Manico_1.2.1.dmg'
+cask :v1 => 'manico' do
+  version '1.4.3'
+  sha256 '8116d5906d97d3725dd3b6ebcf19f992db093da4e236adee2b47b0ed6fc2d6ea'
+
+  url "http://manico.im/static/Manico_#{version}.dmg"
+  appcast 'http://manico.im/static/manico-appcast.xml',
+          :sha256 => 'cbdf604b5078b58c559ed17759f2db444a5ec417bc8e663e024df735bc9d96fb'
+  name 'Manico'
   homepage 'http://manico.im/'
-  version '1.2.1'
-  sha256 'e671efbc13693f51bc55606b9e0f44370dad306dbd5a197abfda8c62961d0008'
-  link 'Manico.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Manico.app'
 end

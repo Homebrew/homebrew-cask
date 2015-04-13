@@ -1,7 +1,10 @@
-class Shadowsweeper < Cask
-  url 'http://www.irradiatedsoftware.com/download/ShadowSweeper.zip'
+cask :v1 => 'shadowsweeper' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://www.irradiatedsoftware.com/download/ShadowSweeper.zip'
   homepage 'http://www.irradiatedsoftware.com/labs/'
-  version 'latest'
-  no_checksum
-  link 'ShadowSweeper.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'ShadowSweeper.app'
 end

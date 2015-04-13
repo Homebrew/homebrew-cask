@@ -1,7 +1,10 @@
-class Pashua < Cask
-  url 'http://www.bluem.net/files/Pashua.dmg'
+cask :v1 => 'pashua' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://www.bluem.net/files/Pashua.dmg'
   homepage 'http://www.bluem.net/en/mac/pashua/'
-  version 'latest'
-  no_checksum
-  link 'Pashua.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Pashua.app'
 end

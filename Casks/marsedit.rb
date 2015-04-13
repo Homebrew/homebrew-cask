@@ -1,7 +1,13 @@
-class Marsedit < Cask
-  url 'http://www.red-sweater.com/marsedit/MarsEdit3.6.2.zip'
+cask :v1 => 'marsedit' do
+  version '3.6.8'
+  sha256 'c3c2e98558dcba466497b5318fd73f4f9c5ba53db336958321e799d72a90d7b8'
+
+  url "http://www.red-sweater.com/marsedit/MarsEdit#{version}.zip"
+  appcast 'http://www.red-sweater.com/marsedit/appcast3.php',
+          :sha256 => '3f45ba546de497b40ef88b7e6bea2b057a3935e71b4768ba626ea282edcef744'
+  name 'MarsEdit'
   homepage 'http://www.red-sweater.com/marsedit/'
-  version '3.6.2'
-  sha256 '0c972dd6312934455803de901bcf09ca8d8db87813757180507cae6a6d4b935a'
-  link 'MarsEdit.app'
+  license :commercial
+
+  app 'MarsEdit.app'
 end

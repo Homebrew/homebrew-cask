@@ -1,7 +1,10 @@
-class PgCommander < Cask
-  url 'https://eggerapps.at/pgcommander/download/pgcommander-1.2.3.zip'
+cask :v1 => 'pg-commander' do
+  version '1.5.3'
+  sha256 '1c67c3ad969c11f503b0b082c1f0380869f40257b4f2141bcc2bb8212f6c24db'
+
+  url "https://eggerapps.at/pgcommander/download/pgcommander-#{version}.zip"
   homepage 'http://eggerapps.at/pgcommander/'
-  version '1.2.3'
-  sha256 '925010ef0939d2f5cb97b4f3104ae106191b84b0073f5cf8f1dc88cd9a1577c5'
-  link 'PG Commander.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'PG Commander.app'
 end

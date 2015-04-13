@@ -1,7 +1,12 @@
-class Gisto < Cask
-  url 'http://download.gistoapp.com/Gisto-0.2.4b-OSX_x86.dmg'
+cask :v1 => 'gisto' do
+  version '0.3.0'
+  sha256 '803a15125b69486012f72a42dd20f7a63b51dc2d445082303cb3b96cdb622667'
+
+  url "http://download.gistoapp.com/Gisto-#{version}-OSX_x86_64.dmg"
+  appcast 'http://www.gistoapp.com/GistoAppCast.xml'
+  name 'Gisto'
   homepage 'http://www.gistoapp.com/'
-  version '0.2.4b'
-  sha256 '6b5420e42f1e3067fb541a76c201fdaa5619aac6daa1cd833f71f5baac7ad5fb'
-  link 'Gisto.app'
+  license :mit
+
+  app 'Gisto.app'
 end

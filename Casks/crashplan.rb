@@ -1,9 +1,14 @@
-class Crashplan < Cask
-  url 'http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_3.6.3_Mac.dmg'
+cask :v1 => 'crashplan' do
+  version '3.7.0'
+  sha256 '1ecce968c0b198941d98392422fb9ea7f15e6cb0334d670b3f97f796f2a54b1c'
+
+  url "http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_#{version}_Mac.dmg"
+  name 'CrashPlan'
   homepage 'http://www.crashplan.com/'
-  version '3.6.3'
-  sha256 'af6959a5a2e8584195fa7381014ba462ced114763995b50266d6353a95b84a7d'
-  install 'Install CrashPlan.pkg'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  pkg 'Install CrashPlan.pkg'
+
   uninstall :script  => 'Uninstall.app/Contents/Resources/uninstall.sh',
             :pkgutil => 'com.crashplan.app.pkg'
 end

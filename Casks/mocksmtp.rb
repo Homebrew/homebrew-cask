@@ -1,7 +1,10 @@
-class Mocksmtp < Cask
+cask :v1 => 'mocksmtp' do
+  version :latest
+  sha256 :no_check
+
   url 'http://mocksmtpapp.com/MockSmtp.zip'
   homepage 'http://mocksmtpapp.com/'
-  version 'latest'
-  no_checksum
-  link 'MockSmtp.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'MockSmtp.app'
 end

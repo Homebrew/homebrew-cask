@@ -1,7 +1,12 @@
-class Archiver < Cask
-  url 'http://commondatastorage.googleapis.com/incrediblebee/apps/Archiver/Archiver.zip'
+cask :v1 => 'archiver' do
+  version :latest
+  sha256 :no_check
+
+  # googleapis.com is the official download host per the vendor homepage
+  url 'https://commondatastorage.googleapis.com/incrediblebee/apps/Archiver/Archiver.zip'
+  name 'Archiver'
   homepage 'http://archiverapp.com/'
-  version 'latest'
-  no_checksum
-  link 'Archiver.app'
+  license :commercial
+
+  app 'Archiver.app'
 end

@@ -27,7 +27,7 @@ xargs="$(/usr/bin/which gxargs || printf '/usr/bin/xargs')"
 
 bundle_id_source_1 () {
     /usr/bin/find "$appdir" -name Info.plist -print0 |                                 \
-    "$xargs" -0 /usr/bin/plutil -convert xml1 -o - -- |                                \
+    "$xargs" -0 /usr/bin/plutil -convert xml1 -o - -- 2> /dev/null |                   \
     /usr/bin/perl -0777 -ne                                                            \
       'while (m{<key>\s*CFBundleIdentifier\s*</key>\s*<string>([^<]+?)</string>}sg) { print "$1\n" }'
 }

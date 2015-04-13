@@ -1,7 +1,11 @@
-class Ringtones < Cask
+cask :v1 => 'ringtones' do
+  version :latest
+  sha256 :no_check
+
   url 'http://files.thelittleappfactory.com/ringtones/Ringtones.zip'
-  version 'latest'
+  appcast 'https://files.thelittleappfactory.com/ringtones/appcast.xml'
   homepage 'http://thelittleappfactory.com/ringtones/'
-  no_checksum
-  link 'Ringtones.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Ringtones.app'
 end

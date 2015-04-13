@@ -1,7 +1,12 @@
-class Ideskcal < Cask
-  url 'http://www.hashbangind.com/files/iDeskCal-Latest.zip'
+cask :v1 => 'ideskcal' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://www.hashbangind.com/files/iDeskCal-Latest.zip'
+  appcast 'https://hashbangind.com/appcasts/iDeskCal-profileInfo.php'
+  name 'iDeskCal'
   homepage 'http://www.hashbangind.com'
-  version 'latest'
-  no_checksum
-  link 'iDeskCal.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'iDeskCal.app'
 end

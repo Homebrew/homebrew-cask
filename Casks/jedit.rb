@@ -1,7 +1,12 @@
-class Jedit < Cask
-  url 'http://downloads.sourceforge.net/sourceforge/jedit/jedit5.1.0install.dmg'
+cask :v1 => 'jedit' do
+  version '5.2pre1'
+  sha256 '433dcddaec51c85b809ab0749b4043988a75915f427516a41304a5f1c791ca56'
+
+  # sourceforge.net is the official download host per the vendor homepage
+  url "http://downloads.sourceforge.net/sourceforge/jedit/jedit#{version}install.dmg"
+  name 'jEdit'
   homepage 'http://www.jedit.org'
-  version '5.1.0'
-  sha256 '29922afea1411631436f5f1154e45ddf8d3f6db53c9e41b832cefe86f8b81446'
-  link 'jEdit.app'
+  license :gpl
+
+  app 'jEdit.app'
 end

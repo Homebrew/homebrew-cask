@@ -1,8 +1,12 @@
-class MonoMre < Cask
-  url 'http://download.mono-project.com/archive/3.2.4/macos-10-x86/MonoFramework-MRE-3.2.4.macos10.xamarin.x86.pkg'
+cask :v1 => 'mono-mre' do
+  version '3.12.0'
+  sha256 'af104354a7445f5565aa438bd172824bd00088b6a737b371cce09a15b9ca0491'
+
+  url "http://download.mono-project.com/archive/#{version}/macos-10-x86/MonoFramework-MRE-#{version}.macos10.xamarin.x86.pkg"
   homepage 'http://mono-project.com'
-  version '3.2.4'
-  sha256 'e817be83621ae16e8ccf2a68fbfc437d682f3ff07540f81513608652ee40070e'
-  install 'MonoFramework-MRE-3.2.4.macos10.xamarin.x86.pkg'
+  license :oss
+
+  pkg "MonoFramework-MRE-#{version}.macos10.xamarin.x86.pkg"
+
   uninstall :pkgutil => 'com.xamarin.mono-MRE.pkg'
 end

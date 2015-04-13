@@ -1,7 +1,12 @@
-class Liteide < Cask
-  url 'http://downloads.sourceforge.net/project/liteide/X22/liteidex22.macosx.zip'
-  homepage 'https://code.google.com/p/golangide/'
-  version 'x22'
-  sha256 '994b2bf68bb7f99ef7ac8001546f437644e9751109e5bf207adee7fb6180c689'
-  link 'liteidex22.macosx/LiteIDE.app'
+cask :v1 => 'liteide' do
+  version '27.1'
+  sha256 'ed757c9983a52b2e61bd8cecad0f386d0060244ce3169e7be14fe2cdbd213369'
+
+  # sourceforge.net is the official download host per the vendor homepage
+  url "http://downloads.sourceforge.net/project/liteide/X#{version}/liteidex#{version}.macosx.zip"
+  name 'LiteIDE'
+  homepage 'https://github.com/visualfc/liteide'
+  license :gpl
+
+  app 'LiteIDE.app'
 end

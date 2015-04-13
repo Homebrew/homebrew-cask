@@ -1,7 +1,27 @@
-class Hipchat < Cask
+cask :v1 => 'hipchat' do
+  version :latest
+  sha256 :no_check
+
   url 'https://www.hipchat.com/downloads/latest/mac'
+  appcast 'https://www.hipchat.com/release_notes/appcast/mac'
+  name 'HipChat'
   homepage 'https://www.hipchat.com/'
-  version 'latest'
-  no_checksum
-  link 'HipChat.app'
+  license :freemium
+
+  app 'HipChat.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
+
+  zap :delete => [
+                  # todo expand/glob for '~/Library/<userid>/HipChat/'
+                  '~/Library/Application Support/HipChat',
+                  '~/Library/Caches/com.hipchat.HipChat',
+                  '~/Library/HipChat',
+                  '~/Library/Logs/HipChat',
+                  '~/Library/Preferences/com.hipchat.HipChat.plist',
+                  '~/Library/Saved Application State/com.hipchat.HipChat.savedState',
+                  '~/Library/chat.hipchat.com',
+                 ]
 end

@@ -1,7 +1,11 @@
-class DeliciousLibrary < Cask
+cask :v1 => 'delicious-library' do
+  version :latest
+  sha256 :no_check
+
   url 'http://delicious-monster.com/downloads/DeliciousLibrary3.zip'
+  name 'Delicious Library'
   homepage 'http://delicious-monster.com/'
-  version 'latest'
-  no_checksum
-  link 'Delicious Library 3.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Delicious Library 3.app'
 end

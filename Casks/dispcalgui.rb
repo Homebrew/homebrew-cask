@@ -1,7 +1,11 @@
-class Dispcalgui < Cask
+cask :v1 => 'dispcalgui' do
+  version :latest
+  sha256 :no_check
+
   url 'http://dispcalgui.hoech.net/download/dispcalGUI.dmg'
+  name 'dispcalGUI'
   homepage 'http://dispcalgui.hoech.net'
-  version 'latest'
-  no_checksum
-  link 'dispcalGUI.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'dispcalGUI.app'
 end

@@ -1,14 +1,23 @@
-class Cryptol < Cask
-  url 'https://github.com/GaloisInc/cryptol/releases/download/v2.0.0/cryptol-2.0.0-MacOSX-64.tar.gz'
+cask :v1 => 'cryptol' do
+  version '2.2.2'
+  sha256 '133954094a2f00e2679a640810febfea25c2826588eeb301a68b9a80def4ec20'
+
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/GaloisInc/cryptol/releases/download/v#{version}/cryptol-#{version}-MacOSX-64.tar.gz"
+  appcast 'https://github.com/GaloisInc/cryptol/releases.atom'
+  gpg "#{url}.sig",
+      :key_url => 'http://cryptol.net/files/Galois.asc'
+  name 'Cryptol'
   homepage 'http://cryptol.net/'
-  version '2.0.0'
-  sha256 '19b3c24390ccb66584f42f34fed91cefc12f667879ab0228cdf806016bcd53c4'
-  binary 'cryptol-2.0.0-MacOSX-64/bin/cryptol'
-  binary 'cryptol-2.0.0-MacOSX-64/lib/Cryptol.cry', :target => '/usr/local/lib/Cryptol.cry'
+  license :bsd
+
+  binary "cryptol-#{version}-MacOSX-64/bin/cryptol"
+
+  zap :delete => '~/.cryptol'
+
+  depends_on :cask => 'cvc4'
 
   caveats do
     files_in_usr_local
-    puts "Cryptol depends on CVC4 (http://cvc4.cs.nyu.edu/)."
-         "The CVC4 binary must be in your PATH."
   end
 end

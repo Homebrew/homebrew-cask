@@ -1,7 +1,13 @@
-class Thunder < Cask
-  url 'http://down.sandai.net/mac/thunder_dl2.6.1.1484_Beta.dmg'
+cask :v1 => 'thunder' do
+  version '2.6.7.1706'
+  sha256 '0eb7fa7e1448eebb3b60c4fa849888fff8697d20474771d0ad3001f4f5b3274d'
+
+  # sandai.net is the official download host per the vendor homepage
+  url "http://down.sandai.net/mac/thunder_dl#{version}_Beta.dmg"
+  name '迅雷'
+  name 'Thunder'
   homepage 'http://mac.xunlei.com/'
-  version '2.6.1.1484'
-  sha256 'c7ce82eb589b332e6448241f1ba81c8390c988e03121915cbf80eb37658b6474'
-  link 'Thunder.app'
+  license :commercial
+
+  app 'Thunder.app'
 end

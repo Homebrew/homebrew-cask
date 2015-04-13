@@ -1,7 +1,13 @@
-class Geekbench < Cask
-  url 'http://geekbench.s3.amazonaws.com/Geekbench-3.1.5-Mac.zip'
+cask :v1 => 'geekbench' do
+  version '3.3.0'
+  sha256 '5e511bddd2dcee9e85c25fd21063e9682c06c3d44995b7d83d601d6360ee77c0'
+
+  url "http://cdn.primatelabs.com/Geekbench-#{version}-Mac.zip"
+  appcast 'http://www.primatelabs.com/appcast/geekbench3.xml',
+          :sha256 => 'e16473af8653e0c163f02ad054e9e6b7b3c5e99c4768da123d8e21c8f8ffeeaf'
+  name 'Geekbench'
   homepage 'http://www.primatelabs.com/geekbench/'
-  version '3.1.5'
-  sha256 '720eb6afbed35a21e218df50e02fbda098f1d52c7627b2f22347c525e1d3cef7'
-  link 'Geekbench 3.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Geekbench 3.app'
 end

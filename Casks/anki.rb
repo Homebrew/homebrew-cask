@@ -1,7 +1,17 @@
-class Anki < Cask
-  url 'http://ankisrs.net/download/mirror/anki-2.0.24.dmg'
+cask :v1 => 'anki' do
+
+  if MacOS.release <= :snow_leopard
+    version '2.0.32.qt47'
+    sha256 '6e1f8ef67c9180b11779931f73770bb0e8fd3907c1aad7cdfde5b57d27309505'
+  else
+    version '2.0.32'
+    sha256 'fe0bdbb675f7c5fda9abdf48f24b0bb8f58c2d33b5b32eb9953faedb9e4d5235'
+  end
+
+  url "http://ankisrs.net/download/mirror/anki-#{version}.dmg"
+  name 'Anki'
   homepage 'http://ankisrs.net/'
-  version '2.0.24'
-  sha256 'e193c1882322b11139e273500fab55c00da3f8100c5fcf8a04121d05d14e50df'
-  link 'Anki.app'
+  license :affero
+
+  app 'Anki.app'
 end

@@ -1,7 +1,16 @@
-class Dolphin < Cask
-  url 'https://dl-mirror.dolphin-emu.org/4.0/dolphin-4.0.dmg'
+cask :v1 => 'dolphin' do
+  version '4.0-5416'
+  sha256 '7d7ddb2bbd2e3255079fee707fe0723b5c5679cf9f21b70dc83feeeb10aa4b4b'
+
+  url "http://dl.dolphin-emu.org/builds/dolphin-master-#{version}.dmg"
+  name 'Dolphin'
   homepage 'http://www.dolphin-emu.org/'
-  version '4.0'
-  sha256 'c5968f668225d76273c77ad4ddbcb1e9eb2fc5df59918395c04ebf53f80ca8a8'
-  link 'Dolphin.app'
+  license :gpl
+
+  app 'Dolphin.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/Dolphin',
+                  '~/Library/Preferences/org.dolphin-emu.dolphin.plist',
+                 ]
 end

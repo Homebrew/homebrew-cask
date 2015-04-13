@@ -1,9 +1,14 @@
-class UnityWebPlayer < Cask
+cask :v1 => 'unity-web-player' do
+  version :latest
+  sha256 :no_check
+
   url 'http://webplayer.unity3d.com/download_webplayer-3.x/webplayer-mini.dmg'
+  name 'Unity Web Player'
   homepage 'https://unity3d.com/webplayer'
-  version '4.3.5f1'
-  install 'Install Unity Web Player.pkg'
-  sha256 'bfdd087df94addaf045d7f5a446c3423b714c1553ff0fd50fc1d9406ea318051'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  pkg 'Install Unity Web Player.pkg'
+
   uninstall :pkgutil => 'com.unity.UnityWebPlayer',
-            :files   => '/Library/Internet Plug-Ins/Unity Web Player.plugin'
+            :delete  => '/Library/Internet Plug-Ins/Unity Web Player.plugin'
 end

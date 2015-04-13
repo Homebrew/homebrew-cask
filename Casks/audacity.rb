@@ -1,7 +1,11 @@
-class Audacity < Cask
-  url 'http://audacity.googlecode.com/files/audacity-macosx-ub-2.0.5.dmg'
+cask :v1 => 'audacity' do
+  version '2.1.0'
+  sha256 '0485ab70a86ab6d500b9365b24d279f10971b9260f0b537142b48832f8f84389'
+
+  url "http://downloads.sourceforge.net/project/audacity/audacity/#{version}/audacity-macosx-ub-#{version}.dmg"
+  name 'Audacity'
   homepage 'http://audacity.sourceforge.net/'
-  version '2.0.5'
-  sha256 'fb0e1c79159783e90403649c0c21fd067f709fd1d1c0f0f0b2a4b662617d8d90'
-  link 'Audacity/Audacity.app'
+  license :gpl
+
+  app 'Audacity/Audacity.app'
 end

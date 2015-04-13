@@ -1,8 +1,13 @@
-class Squirrel < Cask
-  url 'http://dl.bintray.com/lotem/rime/Squirrel-0.9.24.2.zip'
+cask :v1 => 'squirrel' do
+  version '0.9.26.2'
+  sha256 '7ba8f934f8d4fe1d42c944ea0771f1a54ed558dd65ea558c4ba4d203505bc130'
+
+  url "https://dl.bintray.com/lotem/rime/Squirrel-#{version}.zip"
   homepage 'https://github.com/lotem/squirrel'
-  version '0.9.24.2'
-  sha256 'fbc25cf328cc7d7d73465e191cd050838c258bacbc96d7f47b6ef1713c809a16'
-  install 'Squirrel.pkg'
-  uninstall :files => '/Library/Input Methods/Squirrel.app'
+  license :gpl
+
+  pkg 'Squirrel.pkg'
+
+  uninstall :pkgutil => 'com.googlecode.rimeime.Squirrel.pkg',
+            :delete => '/Library/Input Methods/Squirrel.app'
 end

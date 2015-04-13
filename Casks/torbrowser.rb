@@ -1,7 +1,12 @@
-class Torbrowser < Cask
-  url 'https://www.torproject.org/dist/torbrowser/3.6/TorBrowser-3.6-osx32_en-US.dmg'
+cask :v1 => 'torbrowser' do
+  version '4.0.8'
+  sha256 '7f7e5358da6e065a4061d5335e0d54c5e8e7b741bbf114e17fe7150ae40f2025'
+
+  url "https://dist.torproject.org/torbrowser/#{version}/TorBrowser-#{version}-osx32_en-US.dmg"
+  gpg "#{url}.asc",
+      :key_id => '4e2c6e8793298290'
   homepage 'https://www.torproject.org/projects/torbrowser.html'
-  version '3.6'
-  sha256 '54f98f22d95663144d7c31fa3f1b2690574abbed9be6ca1718be99c9a9c74623'
-  link 'TorBrowser.app'
+  license :oss
+
+  app 'TorBrowser.app'
 end

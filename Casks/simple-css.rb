@@ -1,7 +1,10 @@
-class SimpleCss < Cask
+cask :v1 => 'simple-css' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.hostm.com/downloads/simplecss/mac/SimpleCSS.zip'
   homepage 'http://www.hostm.com/css'
-  version 'latest'
-  no_checksum
-  link 'Simple CSS.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Simple CSS.app'
 end

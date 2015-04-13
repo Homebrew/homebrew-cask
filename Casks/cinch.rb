@@ -1,7 +1,12 @@
-class Cinch < Cask
-  url 'http://www.irradiatedsoftware.com/download/Cinch.zip'
+cask :v1 => 'cinch' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://www.irradiatedsoftware.com/download/Cinch.zip'
+  appcast 'https://www.irradiatedsoftware.com/updates/profiles/cinch.php'
+  name 'Cinch'
   homepage 'http://www.irradiatedsoftware.com/cinch/'
-  version 'latest'
-  no_checksum
-  link 'Cinch.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Cinch.app'
 end

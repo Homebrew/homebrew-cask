@@ -1,7 +1,11 @@
-class Copy < Cask
+cask :v1 => 'copy' do
+  version :latest
+  sha256 :no_check
+
   url 'https://copy.com/install/mac/Copy.dmg'
+  name 'Copy'
   homepage 'https://www.copy.com/'
-  version 'latest'
-  no_checksum
-  link 'Copy.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'Copy.app'
 end

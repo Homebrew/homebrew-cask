@@ -1,8 +1,14 @@
-class Hubic < Cask
-  url 'http://mir7.ovh.net/ovh-applications/hubic/hubiC-OSX/0.2.5/hubiC-OSX-0.2.5.224-osx.pkg'
+cask :v1 => 'hubic' do
+  version '2.1.0.256'
+  sha256 'd6987dcb1ff767a96cf0790724b945e9ede22029e56b2d58179dcbfefb660a99'
+
+  # ovh.net is the official download host per the vendor homepage
+  url "http://mir7.ovh.net/ovh-applications/hubic/hubiC-OSX/#{version.sub(%r{\.\d+$},'')}/hubiC-OSX-#{version}-osx.pkg"
+  name 'hubiC'
   homepage 'https://hubic.com'
-  version '0.2.5'
-  sha256 '14a354a3029361b9f0c6560a6d702ce34e685da08361869bead7f87ec09a51df'
-  install 'hubiC-OSX-0.2.5.224-osx.pkg'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  pkg "hubiC-OSX-#{version}-osx.pkg"
+
   uninstall :pkgutil => 'com.ovh.hubicmac'
 end

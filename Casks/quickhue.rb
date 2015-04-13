@@ -1,7 +1,11 @@
-class Quickhue < Cask
+cask :v1 => 'quickhue' do
+  version :latest
+  sha256 :no_check
+
   url 'https://github.com/danparsons/QuickHue/raw/master/QuickHue.zip'
+  name 'QuickHue'
   homepage 'https://github.com/danparsons/QuickHue'
-  version 'latest'
-  no_checksum
-  link 'QuickHue.app'
+  license :mit
+
+  app 'QuickHue.app'
 end

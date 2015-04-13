@@ -1,7 +1,12 @@
-class BbcIplayerDownloads < Cask
-  url 'http://www.bbc.co.uk/iplayer/dm/downloads/mac/latest'
+cask :v1 => 'bbc-iplayer-downloads' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://www.bbc.co.uk/iplayer/dm/downloads/mac/latest'
+  name 'BBC iPlayer Downloads'
+  appcast 'http://ipd-hq.cloud.bbc.co.uk/downloads/update.xml'
   homepage 'http://www.bbc.co.uk/iplayer/install'
-  version 'latest'
-  no_checksum
-  link 'BBC iPlayer Downloads.app'
+  license :gratis
+
+  app 'BBC iPlayer Downloads.app'
 end

@@ -1,0 +1,84 @@
+#!/bin/bash
+#
+# list_url_attributes_on_file
+#
+
+###
+### settings
+###
+
+set -e                # exit on any uncaught error
+set +o histexpand     # don't expand history expressions
+shopt -s nocasematch  # case-insensitive regular expressions
+
+###
+### global variables
+###
+
+file_arg=''
+attribute_1='com.apple.metadata:kMDItemWhereFroms'
+
+###
+### functions
+###
+
+warn () {
+    local message="$@"
+    message="${message//\\t/$'\011'}"
+    message="${message//\\n/$'\012'}"
+    message="${message%"${message##*[![:space:]]}"}"
+    printf "%s\n" "$message" 1>&2
+}
+
+die () {
+    warn "$@"
+    exit 1
+}
+
+xml_source_1 () {
+    if /usr/bin/xattr -p "$attribute_1" "$file_arg" > /dev/null 2>&1; then
+        /usr/bin/xattr -p "$attribute_1" "$file_arg" | /usr/bin/xxd -r -p | /usr/bin/plutil -convert xml1 -o - - 2> /dev/null
+    fi
+}
+
+extract_string_elements () {
+    /usr/bin/perl -ne 'print "$1\n" if m{\A\s*<\s*string\s*>(.+?)<\s*/\s*string\s*>\Z}'
+}
+
+###
+### main
+###
+
+_list_url_attributes_on_file () {
+    file_arg="$1"
+    {
+      xml_source_1;
+    } |                \
+    extract_string_elements
+}
+
+# process_args
+if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
+    printf "list_url_attributes_on_file <file>
+
+Given a downloaded file, extract possible sources from OS X extended
+attributes, which may be useful in a Cask url stanza.
+
+Currently the only attribute examined is
+
+    com.apple.metadata:kMDItemWhereFroms
+
+This attribute will typically be set if the file was downloaded via a
+browser, but not if the file was downloaded by a CLI utility such as
+curl.
+
+See CONTRIBUTING.md for more information.
+
+"
+    exit
+fi
+
+# dispatch main
+_list_url_attributes_on_file "${@}"
+
+#
