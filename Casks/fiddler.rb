@@ -10,7 +10,7 @@ cask :v1 => 'fiddler' do
   license :commercial
   tags :vendor => 'Telerik'
   
-  depends_on :formula => 'mono'
+  depends_on :cask => 'mono-mdk'
   
   app 'Fiddler.app'
 end
