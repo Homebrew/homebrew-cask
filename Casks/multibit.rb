@@ -5,6 +5,7 @@ cask :v1 => 'multibit' do
   url "https://multibit.org/releases/multibit-#{version}/multibit-#{version}.dmg"
   gpg "#{url}.asc",
       :key_id => '23f7fb7b'
+  name 'MultiBit'
   homepage 'https://multibit.org/'
   license :mit
 

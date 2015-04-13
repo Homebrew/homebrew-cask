@@ -4,6 +4,7 @@ cask :v1 => 'mpeg-streamclip' do
 
   # alfanet.it is the official download host per the vendor homepage
   url "http://www.alfanet.it/squared5/MPEG_Streamclip_#{version}.dmg"
+  name 'MPEG Streamclip'
   homepage 'http://www.squared5.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

@@ -5,6 +5,7 @@ cask :v1 => 'mirador' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/mirador/mirador/releases/download/#{version}/mirador-macosx-#{version}.zip"
   appcast 'https://github.com/mirador/mirador/releases.atom'
+  name 'Mirador'
   homepage 'http://fathom.info/mirador/'
   license :gpl
 

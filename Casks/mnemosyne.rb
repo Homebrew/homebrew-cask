@@ -4,6 +4,7 @@ cask :v1 => 'mnemosyne' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/mnemosyne-proj/Mnemosyne-#{version}-Mac.dmg"
+  name 'Mnemosyne'
   homepage 'http://mnemosyne-proj.org/'
   license :gpl
 

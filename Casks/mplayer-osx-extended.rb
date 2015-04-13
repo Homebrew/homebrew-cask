@@ -5,6 +5,7 @@ cask :v1 => 'mplayer-osx-extended' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/sttz/MPlayer-OSX-Extended/releases/download/#{version}/MPlayer-OSX-Extended_#{version}.zip"
   appcast 'https://github.com/sttz/MPlayer-OSX-Extended/releases.atom'
+  name 'MPlayer OSX Extended'
   homepage 'http://www.mplayerosx.ch/'
   license :gpl
 

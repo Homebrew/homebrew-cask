@@ -3,6 +3,7 @@ cask :v1 => 'movist' do
   sha256 :no_check
 
   url 'https://github.com/downloads/samiamwork/Movist/Movist.app.zip'
+  name 'Movist'
   homepage 'https://github.com/samiamwork/Movist'
   license :gpl
 

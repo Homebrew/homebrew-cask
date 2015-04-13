@@ -4,6 +4,7 @@ cask :v1 => 'minco' do
 
   url 'http://www.celmaro.com/files/minco/Minco.zip'
   appcast 'https://ssl.webpack.de/celmaro.com/updates/minco/minco.xml'
+  name 'Minco'
   homepage 'http://www.celmaro.com/minco/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
