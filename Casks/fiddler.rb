@@ -7,8 +7,10 @@ cask :v1 => 'fiddler' do
   name 'Fiddler Proxy'
   name 'Fiddler'
   homepage 'http://www.telerik.com/fiddler'
-  license :apache
+  license :commercial
   tags :vendor => 'Telerik'
-  depends_on :formula => 'Mono'
+  
+  depends_on :formula => 'mono'
+  
   app 'Fiddler.app'
 end
