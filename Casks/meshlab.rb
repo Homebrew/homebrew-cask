@@ -3,6 +3,7 @@ cask :v1 => 'meshlab' do
   sha256 '7a19583ecd8282e9dc84e827e9e667f2139edd371b5f83a5c3fcbb88cb33923d'
 
   url "http://downloads.sourceforge.net/project/meshlab/meshlab/MeshLab%20v#{version}/MeshLabMac_v#{version.gsub('.','')}.dmg"
+  name 'MeshLab'
   homepage 'http://meshlab.sourceforge.net/'
   license :gpl
 
