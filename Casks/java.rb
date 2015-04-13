@@ -1,8 +1,8 @@
 cask :v1 => 'java' do
   version '1.8.0_40'
-  sha256 'df4f43bfd0ead97af6fa72109fd4fdbc8224ec82f50fd86bcbcee97ca00ecf9d'
+  sha256 '1960617eb2fce4b503687d84d791dad72904de680c9bae006172dd9e2b5e0cd0'
 
-  url 'http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40-macosx-x64.dmg',
+  url 'http://download.oracle.com/otn-pub/java/jdk/8u40-b27/jdk-8u40-macosx-x64.dmg',
       :cookies => {
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
