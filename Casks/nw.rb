@@ -7,5 +7,6 @@ cask :v1 => 'nw' do
   homepage 'http://nwjs.io'
   license :mit
 
-  stage_only true
+  binary "nwjs-v#{version}-osx-x64/nwjc"
+  app "nwjs-v#{version}-osx-x64/nwjs.app"
 end
