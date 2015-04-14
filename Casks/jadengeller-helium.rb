@@ -1,4 +1,4 @@
-cask :v1 => 'jadengeller-hellium' do
+cask :v1 => 'jadengeller-helium' do
   version '1.5.1'
   sha256 '3be70bd4a20b252ecd1e633374145cfab36cc16c20088670a8801cd7e8e004b6'
 
