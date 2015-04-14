@@ -7,7 +7,7 @@ cask :v1 => 'openzfs' do
   homepage 'https://openzfsonosx.org'
   license :oss
 
-  pkg "OpenZFS on OS X #{version} Mavericks or higher.pkg"
+  pkg "OpenZFS on OS X #{version.sub(%r{-.*},'')} Mavericks or higher.pkg"
 
   uninstall :pkgutil => 'net.lundman.openzfs.*'
 end
