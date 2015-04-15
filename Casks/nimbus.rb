@@ -4,6 +4,7 @@ cask :v1 => 'nimbus' do
 
   url "https://github.com/jnordberg/irccloudapp/releases/download/#{version}/Nimbus-#{version}.zip"
   appcast 'https://github.com/jnordberg/irccloudapp/releases.atom'
+  name 'Nimbus'
   homepage 'https://github.com/jnordberg/irccloudapp'
   license :mit
 
