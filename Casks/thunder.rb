@@ -1,6 +1,6 @@
 cask :v1 => 'thunder' do
   version '2.6.7.1706'
-  sha256 '0eb7fa7e1448eebb3b60c4fa849888fff8697d20474771d0ad3001f4f5b3274d'
+  sha256 '974de57f80e110f1a2001b7bf0b2e60edc28fd6a2234f8f2574ea49c8c6598ff'
 
   # sandai.net is the official download host per the vendor homepage
   url "http://down.sandai.net/mac/thunder_dl#{version}_Beta.dmg"
