@@ -7,7 +7,7 @@ rescue
   HBC_VERSION = HOMEBREW_CASK_VERSION
 end
 
-class Ruby20Dependency < Requirement
+class Ruby20Requirement < Requirement
   fatal true
   default_formula "ruby"
 
@@ -35,7 +35,7 @@ class BrewCask < Formula
 
   skip_clean "bin"
 
-  depends_on Ruby20Dependency
+  depends_on Ruby20Requirement
 
   def install
     man1.install "doc/man/brew-cask.1"
