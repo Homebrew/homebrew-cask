@@ -3,6 +3,7 @@ cask :v1 => 'nide' do
   sha256 '95a83ded032c26f0235924035efd1b345997b8fbb578d315099a918d03427b2b'
 
   url "https://github.com/downloads/Coreh/nide/nide-v#{version}.dmg"
+  name 'Nide'
   homepage 'http://coreh.github.io/nide/'
   license :mit
 
