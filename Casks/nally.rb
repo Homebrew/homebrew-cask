@@ -4,6 +4,7 @@ cask :v1 => 'nally' do
 
   # github.com is the official download host per the vendor homepage
   url "https://yllan.github.com/nally/download/Nally-#{version}.app.zip"
+  name 'Nally'
   homepage 'http://yllan.org/app/Nally/'
   license :gpl
 
