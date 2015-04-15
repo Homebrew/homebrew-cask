@@ -8,5 +8,5 @@ cask :v1 => 'consul-web-ui' do
   homepage 'http://www.consul.io/'
   license :mpl
 
-  artifact "dist/index.html"
+  artifact 'dist/index.html'
 end
