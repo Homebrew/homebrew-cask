@@ -1,6 +1,6 @@
 cask :v1 => 'atom-shell' do
-  version '0.21.2'
-  sha256 '57071e7ac13fa9f8c6a533fab42f82dc1e51ce357aef64c26c7300ed73c7851b'
+  version '0.23.0'
+  sha256 'fb85718ce22ec9a219e267e0f4d9ca640aba21a440a59c819f7b81977ab5376b'
 
   url "https://github.com/atom/atom-shell/releases/download/v#{version}/atom-shell-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/atom/atom-shell/releases.atom'
