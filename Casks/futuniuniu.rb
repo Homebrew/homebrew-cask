@@ -1,8 +1,8 @@
 cask :v1 => 'futuniuniu' do
-  version '3.1.0'
-  sha256 'afb319d434646de5f3b55cf53233a704c5a17a1235c72966ebbf05d404dba0d9'
+  version '3.1.0_0416'
+  sha256 '9e18b41ec55732af06c04e5fad8d1e1e49bdc4846738120b44ad82003787b1dc'
 
-  url 'https://www.futu5.com/client/nn/mac/FUTUNNForMac_3.1.0_0409.dmg'
+  url "https://www.futu5.com/client/nn/mac/FTNNForMac_#{version}.dmg"
   homepage 'http://www.futu5.com'
   license :commercial
 
