@@ -3,6 +3,7 @@ cask :v1 => 'postbox' do
   sha256 :no_check
 
   url 'http://www.postbox-inc.com/php/download.php?a=3011m'
+  name 'Postbox'
   homepage 'http://www.postbox-inc.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
