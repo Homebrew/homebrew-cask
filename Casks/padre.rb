@@ -4,6 +4,7 @@ cask :v1 => 'padre' do
 
   # wildperl.com is the official download host per the vendor homepage
   url "http://wildperl.com/wp-content/uploads/Padre/padre-osx-uni-#{version.gsub('.','-')}.dmg"
+  name 'Padre'
   homepage 'http://padre.perlide.org'
   license :oss
 
