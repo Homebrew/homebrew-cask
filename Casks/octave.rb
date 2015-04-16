@@ -4,6 +4,7 @@ cask :v1 => 'octave' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "https://downloads.sourceforge.net/sourceforge/octave/GNU_Octave_#{version}.dmg"
+  name 'Octave'
   homepage 'https://gnu.org/software/octave/'
   license :gpl
 
