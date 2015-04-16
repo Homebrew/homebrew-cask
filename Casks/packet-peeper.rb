@@ -4,6 +4,7 @@ cask :v1 => 'packet-peeper' do
 
   # bitbucket is the official download host per the vendor homepage
   url "https://bitbucket.org/choll/packetpeeper/downloads/PacketPeeper_#{version}.dmg"
+  name 'Packet Peeper'
   homepage 'http://packetpeeper.org/'
   license :gpl
 

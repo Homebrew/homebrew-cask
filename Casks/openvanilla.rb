@@ -3,6 +3,7 @@ cask :v1 => 'openvanilla' do
   sha256 '35745a0767e4131efbdcb34459c5a7b44126aa11e73af80310b813bf6efe1bc5'
 
   url "https://app.openvanilla.org/file/openvanilla/OpenVanilla-Installer-Mac-#{version}.zip"
+  name 'OpenVanilla'
   homepage 'http://openvanilla.org/'
   license :mit
 
