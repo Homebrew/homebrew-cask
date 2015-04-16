@@ -13,6 +13,7 @@ cask :v1 => 'omnigraffle' do
     url 'https://www.omnigroup.com/download/latest/omnigraffle'
   end
 
+  name 'OmniGraffle'
   homepage 'http://www.omnigroup.com/products/omnigraffle'
   license :commercial
 
