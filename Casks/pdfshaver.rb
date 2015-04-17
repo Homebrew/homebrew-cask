@@ -4,6 +4,7 @@ cask :v1 => 'pdfshaver' do
 
   url "https://github.com/tparry/PDFShaver.app/releases/download/v#{version}/PDFShaver.zip"
   appcast 'https://github.com/tparry/PDFShaver.app/releases.atom'
+  name 'PDFShaver'
   homepage 'https://github.com/tparry/PDFShaver.app'
   license :public_domain
 

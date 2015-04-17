@@ -5,6 +5,7 @@ cask :v1 => 'meocloud' do
   url "https://meocloud.pt/binaries/osx/MEOCloud-#{version}.dmg"
   appcast 'https://services.sapo.pt/Application/Catalog/Update?appid=pt.sapo.mac.cloudpt',
           :sha256 => '0b3224464231b94ad2b2fb81a19beee7a6655e2efa09f8de04f0ba659fd933eb'
+  name 'MEO Cloud'
   homepage 'https://meocloud.pt'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

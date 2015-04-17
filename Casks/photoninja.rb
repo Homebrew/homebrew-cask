@@ -4,6 +4,7 @@ cask :v1 => 'photoninja' do
 
   # cachefly.net is the official download host per the vendor homepage
   url "https://picturecode.cachefly.net/photoninja/downloads/Install_PhotoNinja_#{version}.dmg"
+  name 'Photo Ninja'
   homepage 'http://www.picturecode.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
