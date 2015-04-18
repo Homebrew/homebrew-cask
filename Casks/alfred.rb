@@ -5,7 +5,7 @@ cask :v1 => 'alfred' do
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
   homepage 'http://www.alfredapp.com/'
-  license :commercial
+  license :freemium
 
   app 'Alfred 2.app'
   app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
