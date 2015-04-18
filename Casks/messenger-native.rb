@@ -4,6 +4,7 @@ cask :v1 => 'messenger-native' do
 
   url "https://github.com/imton/MessengerNative/releases/download/#{version}/Mac64_MessengerNative#{version}.zip"
   appcast 'https://github.com/imton/MessengerNative/releases.atom'
+  name 'Messenger Native'
   homepage 'https://github.com/imton/MessengerNative'
   license :mit
 

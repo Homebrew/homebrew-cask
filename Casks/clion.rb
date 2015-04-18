@@ -1,14 +1,15 @@
-cask :v1 => 'webstorm' do
-  version '10.0.2'
-  sha256 '33232ea4ec1007a93d835b18419b20becdf700c7fcec8742a2bfc251b8da533f'
+cask :v1 => 'clion' do
+  version '1.0'
+  sha256 '0ff584ea63a2aff1843ba228d7185c8b6af9efac1d4a6a690a24565ee53aec35'
 
-  url "http://download-cf.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
-  name 'WebStorm'
-  homepage 'http://www.jetbrains.com/webstorm/'
+  url "https://download.jetbrains.com/cpp/CLion-#{version}.dmg"
+  name 'CLion'
+  homepage 'http://www.jetbrains.com/clion'
   license :commercial
 
-  app 'WebStorm.app'
+  app 'CLion.app'
 
+  conflicts_with :cask => 'clion-bundled'
   caveats <<-EOS.undent
     #{token} requires Java 6 like any other IntelliJ-based IDE.
     You can install it with
