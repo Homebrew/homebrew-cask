@@ -5,13 +5,17 @@ cask :v1 => 'textmate' do
   # textmate.org is the official download host per the vendor homepage
   url 'https://api.textmate.org/downloads/release'
   homepage 'http://macromates.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'TextMate.app'
   binary 'TextMate.app/Contents/Resources/mate'
 
   zap :delete => [
+                  '~/Library/Application Support/Avian',
                   '~/Library/Application Support/TextMate',
+                  '~/Library/Preferences/com.macromates.TextMate.preview.LSSharedFileList.plist',
+                  '~/Library/Preferences/com.macromates.TextMate.preview.plist',
+                  '~/Library/Preferences/com.macromates.textmate.webpreview.plist',
                   '~/Library/Preferences/com.macromates.textmate.plist',
                   '~/Library/Preferences/com.macromates.textmate.latex_config.plist',
                  ]
