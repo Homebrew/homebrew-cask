@@ -5,7 +5,7 @@ cask :v1 => 'google-adwords-editor' do
   url "https://dl.google.com/adwords_editor/#{version}/Google_AdWords_Editor.dmg"
   name 'Google AdWords Editor'
   homepage 'https://www.google.com/intl/en/adwordseditor/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
   tags :vendor => 'Google'
 
   app 'Google AdWords Editor.app'
