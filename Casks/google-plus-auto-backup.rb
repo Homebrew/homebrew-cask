@@ -5,7 +5,8 @@ cask :v1 => 'google-plus-auto-backup' do
   url 'https://dl.google.com/dl/edgedl/picasa/gpautobackup_setup.dmg'
   name 'Google+ Auto Backup'
   homepage 'http://picasa.google.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
+  tags :vendor => 'Google'
 
   app 'Google+ Auto Backup.app'
 end
