@@ -6,7 +6,7 @@ cask :v1 => 'presenter' do
   name 'IPEVO Presenter'
   homepage 'http://support.ipevo.com/support/qa/IPEVO-Presenter'
   license :commercial
-  tags :vendor =>'IPEVO'
+  tags :vendor => 'IPEVO'
 
   app 'Presenter.app'
 end
