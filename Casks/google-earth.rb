@@ -5,7 +5,8 @@ cask :v1 => 'google-earth' do
   url 'https://dl.google.com/earth/client/advanced/current/GoogleEarthMac-Intel.dmg'
   name 'Google Earth'
   homepage 'https://www.google.com/earth/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
+  tags :vendor => 'Google'
 
   app 'Google Earth.app'
 
