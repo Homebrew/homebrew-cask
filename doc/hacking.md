@@ -171,9 +171,15 @@ pull request more quickly.
 
 #### Mind the test suite!
 
-If you're making changes - please write some tests for them! Also be sure to
-run the whole test suite using `rake test` before submitting (if you forget,
-Travis-CI will do that for you and embarrass you in front of all your friends). :)
+If you're making changes - please write some tests for them! Install
+dependencies and run the whole test suite with:
+
+```bash
+bundle
+rake test
+```
+
+Be sure to run the test suite before submitting. If you forget, Travis-CI will do that for you and embarrass you in front of all your friends. :)
 
 You may also use a set of environment variables to increase verbosity:
 
