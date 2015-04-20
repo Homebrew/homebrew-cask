@@ -3,6 +3,7 @@ cask :v1 => 'cmb-security-plugin' do
   sha256 :no_check
 
   url 'https://site.cmbchina.com/download/CMBSecurityPlugin.dmg'
+  name 'CMB Security Plugin'
   homepage 'https://www.cmbchina.com/'
   license :closed
 
