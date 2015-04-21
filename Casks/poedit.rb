@@ -13,6 +13,7 @@ cask :v1 => 'poedit' do
             :sha256 => '21334ec300dff8fd749f1351f1a96880091bb58bc41d2a9de9179f8d42f5602d'
   end
 
+  name 'Poedit'
   homepage 'http://www.poedit.net'
   license :mit
 
