@@ -1,6 +1,6 @@
 cask :v1 => 'chessx' do
-  version '1.2.2'
-  sha256 '2a2064eed320867b6e054ddfee1e0f4ea0c307e3648c28835f0909568ce7b74f'
+  version '1.3.0'
+  sha256 'eff40b86e6ee0eb00954820caa1938b39e85da8fa27e53f5d359de5f0b58a451'
   url "http://downloads.sourceforge.net/project/chessx/chessx/#{version}/chessx-#{version}.dmg"
 
   name 'ChessX'
