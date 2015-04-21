@@ -4,6 +4,7 @@ cask :v1 => 'prey' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/prey-releases/node-client/#{version}/prey-mac-#{version}-x64.pkg"
+  name 'Prey'
   homepage 'https://preyproject.com'
   license :gpl
 

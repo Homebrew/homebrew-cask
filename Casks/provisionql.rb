@@ -4,6 +4,7 @@ cask :v1 => 'provisionql' do
 
   url "https://github.com/ealeksandrov/ProvisionQL/releases/download/#{version}/ProvisionQL.zip"
   appcast 'https://github.com/ealeksandrov/ProvisionQL/releases.atom'
+  name 'ProvisionQL'
   homepage 'https://github.com/ealeksandrov/ProvisionQL'
   license :mit
 

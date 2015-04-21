@@ -4,6 +4,7 @@ cask :v1 => 'projectlibre' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/projectlibre/ProjectLibre/#{version}/projectlibre-#{version}.dmg"
+  name 'ProjectLibre'
   homepage 'http://www.projectlibre.org/'
   license :oss
 
