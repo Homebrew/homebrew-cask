@@ -6,7 +6,7 @@ cask :v1 => 'findings' do
   appcast 'http://downloads.findingsapp.com/appcast.xml'
   name 'Findings'
   homepage 'http://findingsapp.com'
-  licence :commercial
+  license :commercial
 
   app 'Findings.app'
 end
