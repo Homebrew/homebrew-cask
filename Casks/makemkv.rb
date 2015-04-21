@@ -13,4 +13,6 @@ cask :v1 => 'makemkv' do
                  '~/Library/Preferences/com.makemkv.MakeMKV.plist',
                  '~/Library/Saved Application State/com.makemkv.MakeMKV.savedState',
                  ]
+
+  depends_on :macos => '>= :snow_leopard'
 end
