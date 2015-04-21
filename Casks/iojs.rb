@@ -1,6 +1,6 @@
 cask :v1 => 'iojs' do
-  version '1.7.1'
-  sha256 'd4245734b7cc46924d5f3d6c21e273474e29420daa9afb9fd3a0e64375c56cc3'
+  version '1.8.1'
+  sha256 '9729b4a78c683767cbffd75efcf85e92393414911c599c82d75473a13d048618'
 
   url "https://iojs.org/dist/v#{version}/iojs-v#{version}.pkg"
   name 'io.js'
