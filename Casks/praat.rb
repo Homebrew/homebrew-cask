@@ -9,6 +9,7 @@ cask :v1 => 'praat' do
     url "http://www.fon.hum.uva.nl/praat/praat#{version.gsub('.','')}_mac64.dmg"
   end
 
+  name 'Praat'
   homepage 'http://www.fon.hum.uva.nl/praat/'
   license :gpl
 

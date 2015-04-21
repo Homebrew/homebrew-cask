@@ -3,6 +3,7 @@ cask :v1 => 'on-the-job' do
   sha256 :no_check
 
   url 'http://stuntsoftware.com/downloads/OnTheJob.zip'
+  name 'On The Job'
   homepage 'http://stuntsoftware.com/onthejob/'
   license :commercial
 

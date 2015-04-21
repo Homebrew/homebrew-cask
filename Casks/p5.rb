@@ -6,6 +6,7 @@ cask :v1 => 'p5' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/processing/p5.js-editor/releases/download/v#{version}/p5.zip"
   appcast 'https://github.com/processing/p5.js-editor/releases.atom'
+  name 'p5.js Editor'
   homepage 'http://p5js.org/download/#editor'
   license :mit
 

@@ -4,6 +4,7 @@ cask :v1 => 'lovewallpaper' do
 
   # qdcdn.com is the official download host per the vendor homepage
   url 'http://s.qdcdn.com/lovebizhi/LoveWallpaper4Mac.dmg'
+  name '爱壁纸HD'
   homepage 'http://www.lovebizhi.com/'
   license :gratis
 

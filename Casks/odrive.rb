@@ -3,6 +3,7 @@ cask :v1 => 'odrive' do
   sha256 'd7782b822b057cdb8b7ff7883296c7c546601cfdf6647ce66bddd3ace89bbcc6'
 
   url "http://cdn-mac.odrive.com/odrive.#{version}.dmg"
+  name 'odrive'
   homepage 'http://www.odrive.com'
   license :gratis
 

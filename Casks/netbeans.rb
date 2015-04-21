@@ -3,6 +3,7 @@ cask :v1 => 'netbeans' do
   sha256 'a256360136918001b17a6f5ad9fedc0b7ea8a094701cba37718568bc2cbb4c01'
 
   url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-macosx.dmg"
+  name 'NetBeans IDE'
   homepage 'https://netbeans.org/'
   license :oss
 

@@ -1,15 +1,15 @@
-cask :v1 => 'clion-rc' do
-  version '141.352.13'
-  sha256 'e91cb72119470197a4f442e230c361ddcd92d6e66b28c8b3ab5e3a234e07262e'
+cask :v1 => 'clion' do
+  version '1.0'
+  sha256 '0ff584ea63a2aff1843ba228d7185c8b6af9efac1d4a6a690a24565ee53aec35'
 
-  url "http://download-cf.jetbrains.com/cpp/CLion-#{version}.dmg"
-  name 'CLion RC'
+  url "https://download.jetbrains.com/cpp/CLion-#{version}.dmg"
   name 'CLion'
-  homepage 'http://www.jetbrains.com/clion/'
+  homepage 'http://www.jetbrains.com/clion'
   license :commercial
 
   app 'CLion.app'
 
+  conflicts_with :cask => 'clion-bundled'
   caveats <<-EOS.undent
     #{token} requires Java 6 like any other IntelliJ-based IDE.
     You can install it with

@@ -1,6 +1,6 @@
 cask :v1 => 'waterfox' do
-  version '35.0'
-  sha256 '67a6b583a8c3e5a1b7019dd1dc8402e95d0848b674b3a45e0b764234417ac063'
+  version '36.0.1'
+  sha256 '5fa1c8c402aab32e0cfc98b1c46e81265055cda51956f29ddd03c8fb7f1e33ae'
 
   # cloudfront.net is the official download host per the vendor homepage
   url "https://d1th2p59px32bw.cloudfront.net/releases/osx64/installer/Waterfox%20#{version}%20Setup.dmg"

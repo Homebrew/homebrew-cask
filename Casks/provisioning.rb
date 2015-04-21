@@ -4,6 +4,7 @@ cask :v1 => 'provisioning' do
 
   url "https://github.com/chockenberry/Provisioning/releases/download/#{version}/Provisioning-#{version}.zip"
   appcast 'https://github.com/chockenberry/Provisioning/releases.atom'
+  name 'Provisioning'
   homepage 'https://github.com/chockenberry/Provisioning'
   license :oss
 

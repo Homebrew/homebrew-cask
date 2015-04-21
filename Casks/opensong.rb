@@ -4,6 +4,7 @@ cask :v1 => 'opensong' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/opensong/OpenSongOSX-V#{version}.dmg"
+  name 'OpenSong'
   homepage 'http://www.opensong.org/'
   license :gpl
 

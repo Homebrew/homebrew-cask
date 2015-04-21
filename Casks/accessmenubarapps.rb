@@ -5,7 +5,7 @@ cask :v1 => 'accessmenubarapps' do
   url "http://www.ortisoft.de/resources/AccessMenuBarApps#{version}.dmg"
   name 'AccessMenuBarApps'
   homepage 'http://www.ortisoft.de/accessmenubarapps/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'AccessMenuBarApps.app'
 end

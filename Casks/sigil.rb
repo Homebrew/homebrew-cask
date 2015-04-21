@@ -1,6 +1,6 @@
 cask :v1 => 'sigil' do
   version '0.8.6'
-  sha256 '5d33736d527a7c519c00562880584c22392bcaa5d8883ab76d2d346de2f342ab'
+  sha256 'b69d642d7f1126b7f7d1c542773267c1dbaa764e2ec473258ff93d3a8f385c71'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/user-none/Sigil/releases/download/#{version}/Sigil-#{version}-Mac-Package.dmg"

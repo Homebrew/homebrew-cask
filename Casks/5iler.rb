@@ -5,7 +5,7 @@ cask :v1 => '5iler' do
   url 'https://5iler.com/download/5iler-1.4.dmg'
   name '5iler'
   homepage 'https://5iler.com/'
-  license :unknown
+  license :gratis
 
   app '5iler.app'
 end

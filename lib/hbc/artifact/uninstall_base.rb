@@ -193,8 +193,8 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
     directives_set.select{ |h| h.key?(:early_script) }.each do |directives|
       executable, script_arguments = self.class.read_script_arguments(directives,
                                                                       'uninstall',
-                                                                      {:must_succeed => true},
-                                                                      {:sudo => true, :print_stdout => true},
+                                                                      {:must_succeed => true, :sudo => true},
+                                                                      {:print_stdout => true},
                                                                       :early_script)
 
       ohai "Running uninstall script #{executable}"
@@ -271,8 +271,8 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
     directives_set.select{ |h| h.key?(:script) }.each do |directives|
       executable, script_arguments = self.class.read_script_arguments(directives,
                                                                       'uninstall',
-                                                                      {:must_succeed => true},
-                                                                      {:sudo => true, :print_stdout => true},
+                                                                      {:must_succeed => true, :sudo => true},
+                                                                      {:print_stdout => true},
                                                                       :script)
       raise Hbc::CaskInvalidError.new(@cask, "#{stanza} :script without :executable.") if executable.nil?
       @command.run(@cask.staged_path.join(executable), script_arguments)

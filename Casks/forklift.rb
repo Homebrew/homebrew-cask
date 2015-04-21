@@ -1,6 +1,6 @@
 cask :v1 => 'forklift' do
-  version '2.6.3'
-  sha256 '66650107412136ceeb985059f5400708a4ac42eed865a653539ad1d36b5cde44'
+  version '2.6.4'
+  sha256 'b32b831214943033f3322c37113b4e9b65efb51136280ce6a279b608f72342b7'
 
   url "http://download.binarynights.com/ForkLift#{version}.zip"
   appcast 'http://update.binarynights.com/ForkLift2/update.xml',

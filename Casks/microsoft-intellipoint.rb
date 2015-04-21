@@ -3,6 +3,7 @@ cask :v1 => 'microsoft-intellipoint' do
   sha256 '1a4612d3237084d0502d947793c097575febc95442130e2384c8fbf4b52cac9e'
 
   url 'http://download.microsoft.com/download/B/1/0/B109F931-70E2-425F-8681-EAAB75845AB8/Microsoft-Mouse_d305.dmg'
+  name 'Microsoft IntelliPoint'
   homepage 'http://www.microsoft.com/hardware/en-us/mice'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

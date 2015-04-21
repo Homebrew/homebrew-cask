@@ -3,6 +3,7 @@ cask :v1 => 'pingendo' do
   sha256 :no_check
 
   url 'http://pingendo.com/Pingendo.dmg'
+  name 'Pingendo'
   homepage 'http://www.pingendo.com/'
   license :closed
 
