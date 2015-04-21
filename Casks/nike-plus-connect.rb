@@ -3,6 +3,7 @@ cask :v1 => 'nike-plus-connect' do
   sha256 :no_check
 
   url 'http://nikeplus.nike.com/nikeplus/nikeconnect/installers/macosx/Nike+Connect_new.dmg'
+  name 'Nike+ Connect'
   homepage 'http://nikeplus.nike.com'
   license :gratis
 

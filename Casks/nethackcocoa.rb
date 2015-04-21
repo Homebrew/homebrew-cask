@@ -3,6 +3,7 @@ cask :v1 => 'nethackcocoa' do
   sha256 '83a9db8f633996a563fbe939141404625f9cf66180612215484f391df0475e94'
 
   url "https://nethack-cocoa.googlecode.com/files/NetHackCocoa-#{version}.dmg"
+  name 'NetHackCocoa'
   homepage 'https://code.google.com/p/nethack-cocoa/'
   license :oss
 

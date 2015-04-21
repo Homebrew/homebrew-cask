@@ -9,6 +9,7 @@ cask :v1 => 'plex-home-theater' do
     url "https://downloads.plex.tv/plex-home-theater/#{version}/PlexHomeTheater-#{version}-macosx-x86_64.zip"
   end
 
+  name 'Plex Home Theater'
   homepage 'https://plex.tv'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

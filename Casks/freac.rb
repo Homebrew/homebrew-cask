@@ -4,6 +4,7 @@ cask :v1 => 'freac' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "https://downloads.sourceforge.net/bonkenc/freac-#{version}-macosx.dmg"
+  name 'fre:ac'
   homepage 'http://www.freac.org'
   license :gpl
 

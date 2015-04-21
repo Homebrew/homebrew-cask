@@ -4,6 +4,7 @@ cask :v1 => 'gulp' do
 
   url "https://github.com/sindresorhus/gulp-app/releases/download/#{version}/gulp.app.zip"
   appcast 'https://github.com/sindresorhus/gulp-app/releases.atom'
+  name 'gulp-app'
   homepage 'https://github.com/sindresorhus/gulp-app'
   license :mit
 
