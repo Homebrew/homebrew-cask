@@ -4,8 +4,8 @@ cask :v1 => 'spectacle' do
     version '0.8.6'
     sha256 '3e367d2d7e6fe7d5f41d717d49cb087ba7432624b71ddd91c0cfa9d5a5459b7c'
   else
-    version '0.8.9'
-    sha256 '11058388f4f3a2f91c7f888d8bf11017e12dea07808895d899c5b8407f679993'
+    version '0.8.10'
+    sha256 '26e4ccc906a82c5df9d1d462f1b691fce746aea43405b178d3d230fb23551d44'
 
     appcast 'http://spectacleapp.com/updates/appcast.xml',
             :sha256 => '5d75e2e07886ca135916e224b4b5c1468d9af1ea8ef355db33b28bff511fa6b2'
