@@ -4,6 +4,7 @@ cask :v1 => 'qlnetcdf' do
 
   url "https://github.com/tobeycarman/QLNetcdf/releases/download/v#{version}/QLNetcdf.qlgenerator.zip"
   appcast 'https://github.com/tobeycarman/QLNetcdf/releases.atom'
+  name 'QLNetcdf'
   homepage 'https://github.com/tobeycarman/QLNetcdf/'
   license :mit
 
