@@ -4,6 +4,7 @@ cask :v1 => 'quicknfo' do
 
   url "https://github.com/The-Master777/QuickNFO/releases/download/v#{version}/QuickNFO.qlgenerator.zip"
   appcast 'https://github.com/The-Master777/QuickNFO/releases.atom'
+  name 'QuickNFO'
   homepage 'https://github.com/planbnet/QuickNFO'
   license :oss
 
