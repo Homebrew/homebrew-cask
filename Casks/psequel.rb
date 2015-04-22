@@ -3,6 +3,7 @@ cask :v1 => 'psequel' do
   sha256 :no_check
 
   url 'http://www.psequel.com/download'
+  name 'PSequel'
   homepage 'http://www.psequel.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
