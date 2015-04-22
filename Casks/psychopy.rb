@@ -4,6 +4,7 @@ cask :v1 => 'psychopy' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/psychpy/StandalonePsychoPy-#{version}-OSX.dmg"
+  name 'PsychoPy'
   homepage 'http://www.psychopy.org/'
   license :oss
 

@@ -4,6 +4,7 @@ cask :v1 => 'qlprettypatch' do
 
   url "https://github.com/atnan/QLPrettyPatch/releases/download/v#{version}/QLPrettyPatch.qlgenerator.zip"
   appcast 'https://github.com/atnan/QLPrettyPatch/releases.atom'
+  name 'QLPrettyPatch'
   homepage 'https://github.com/atnan/QLPrettyPatch'
   license :bsd
 

@@ -4,6 +4,7 @@ cask :v1 => 'qgroundcontrol' do
 
   # latestfiasco.com is the official download host per the vendor homepage
   url "http://latestfiasco.com/ftp/QGroundControl-Stable-V#{version}.dmg"
+  name 'QGroundControl'
   homepage 'http://qgroundcontrol.org'
   license :gpl
 

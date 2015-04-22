@@ -4,6 +4,7 @@ cask :v1 => 'quicklookei' do
 
   # exactcode.de is the official download host per the vendor homepage
   url "http://people.exactcode.de/~rene/mac/QuickLookEI-#{version}.zip"
+  name 'QuickLookEI'
   homepage 'http://rene.rebe.de/2013-08-11/exactimage-quicklook-w-camera-raw-support/'
   license :oss
 
