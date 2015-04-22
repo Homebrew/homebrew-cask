@@ -4,6 +4,7 @@ cask :v1 => 'qqinput' do
 
   # sogou.com is the official download host per the vendor homepage
   url "http://qqime.cdn.sogou.com/QQInput_Mac_Setup_#{version.gsub('.','_')}.dmg"
+  name 'QQ输入法'
   homepage 'http://qq.pinyin.cn/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
