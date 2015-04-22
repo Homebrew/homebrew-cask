@@ -5,6 +5,7 @@ cask :v1 => 'qmind' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/qvacua/qmind/releases/download/v#{version}-22/Qmind-#{version}.zip"
   appcast 'https://github.com/qvacua/qmind/releases.atom'
+  name 'Qmind'
   homepage 'http://qvacua.com'
   license :gpl
 
