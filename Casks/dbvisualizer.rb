@@ -17,7 +17,7 @@ cask :v1 => 'dbvisualizer' do
   zap :delete => '~/.dbvis'
 
   caveats <<-EOS.undent
-    #{token} requires Java. You can install the latest version with
-      brew cask install java
+    #{token} requires Java 7. You can install the latest version with
+      brew cask install caskroom/versions/java7
   EOS
 end
