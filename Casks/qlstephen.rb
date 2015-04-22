@@ -3,6 +3,7 @@ cask :v1 => 'qlstephen' do
   sha256 :no_check
 
   url 'https://github.com/downloads/whomwah/qlstephen/QLStephen.qlgenerator.zip'
+  name 'QLStephen'
   homepage 'http://whomwah.github.io/qlstephen/'
   license :mit
 
