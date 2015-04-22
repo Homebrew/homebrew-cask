@@ -13,6 +13,7 @@ cask :v1 => 'r' do
     pkg "R-#{version}-mavericks.pkg"
   end
 
+  name 'R'
   homepage 'http://www.r-project.org/'
   license :gpl
 
