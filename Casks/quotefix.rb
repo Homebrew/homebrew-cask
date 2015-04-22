@@ -4,6 +4,7 @@ cask :v1 => 'quotefix' do
 
   url "https://github.com/robertklep/quotefixformac/releases/download/v#{version}/QuoteFix-v#{version}.zip"
   appcast 'https://github.com/robertklep/quotefixformac/releases.atom'
+  name 'QuoteFix'
   homepage 'https://github.com/robertklep/quotefixformac'
   license :oss
 
