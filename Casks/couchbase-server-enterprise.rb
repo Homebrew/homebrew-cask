@@ -7,5 +7,5 @@ cask :v1 => 'couchbase-server-enterprise' do
   homepage 'http://www.couchbase.com/'
   license :apache
 
-  app 'Couchbase Server.app'
+  app 'couchbase-server-enterprise_x86_64_3/Couchbase Server.app'
 end
