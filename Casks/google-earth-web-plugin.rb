@@ -8,5 +8,6 @@ cask :v1 => 'google-earth-web-plugin' do
   license :gratis
   tags :vendor => 'Google'
 
-  internet_plugin 'Google Earth Web Plug-in.plugin'
+  pkg 'Install Google Earth.pkg'
+  uninstall :pkgutil => 'com.Google.GoogleEarthPlugin.plugin'
 end
