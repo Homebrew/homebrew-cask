@@ -1,6 +1,6 @@
 cask :v1 => 'navicat-data-modeler' do
-  version '1.0.6'
-  sha256 '1e94285c57e2d851b713fc9adff0dee8e424c4e445f819cef986402592e5f488'
+  version '1.0.7'
+  sha256 '72cd4c79d81af9c36b7e6caf484c1b265d8080d5a4f882061f8d2942b63b83d8'
 
   url "http://download.navicat.com/download/modeler0#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_en.dmg"
   name 'Navicat Data Modeler'
