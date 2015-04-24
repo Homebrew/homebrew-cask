@@ -1,12 +1,12 @@
 cask :v1 => 'goofy' do
-  version :latest
-  sha256 :no_check
+  version '2.0.3'
+  sha256 '637d5df454d8c000f90082b726274ef29592801e7b1eca38873aa8f99de3857f'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url 'https://goofyapp.s3.amazonaws.com/Goofy.app.zip'
+  url "https://github.com/danielbuechele/goofy/releases/download/v#{version}/Goofy.app.zip"
+  appcast 'https://dani.taurus.uberspace.de/goofyapp/update.xml'
   name 'Goofy'
   homepage 'http://www.goofyapp.com/'
-  license :gratis
+  license :mit
 
   app 'Goofy.app'
 end
