@@ -1,6 +1,6 @@
 cask :v1 => 'intellij-idea-ce' do
-  version '14.1.1'
-  sha256 'a7060871e1371163dfad44183836b3bb78e688d7c1ce94dcb61987e1697fe414'
+  version '14.1.2'
+  sha256 'b64046ccad04a45c6f8c1df7677930aa710f5c6c32d9fe521554cb1e2a9f340b'
 
   url "http://download.jetbrains.com/idea/ideaIC-#{version}.dmg"
   name 'IntelliJ IDEA Community Edition'
