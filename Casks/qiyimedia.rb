@@ -3,6 +3,7 @@ cask :v1 => 'qiyimedia' do
   sha256 'bab6c18060eabb2ae3326c562de6e33041ab6a0476817ae7fc1f39d2265734b5'
 
   url 'http://static.qiyi.com/ext/common/QIYImedia_Mac_5.dmg'
+  name '爱奇艺视频'
   homepage 'http://www.iqiyi.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

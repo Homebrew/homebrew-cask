@@ -4,6 +4,7 @@ cask :v1 => 'rdio' do
 
   url 'https://www.rdio.com/media/static/desktop/mac/Rdio.dmg'
   appcast 'http://www.rdio.com/media/static/desktop/mac/appcast.xml'
+  name 'Rdio'
   homepage 'http://www.rdio.com'
   license :gratis
 
