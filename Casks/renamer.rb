@@ -4,6 +4,7 @@ cask :v1 => 'renamer' do
 
   # creativebe.com is the official download host per the vendor homepage
   url 'http://creativebe.com/download/renamer'
+  name 'Renamer'
   homepage 'http://renamer.com'
   license :commercial
 
