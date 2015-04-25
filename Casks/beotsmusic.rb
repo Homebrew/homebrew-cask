@@ -6,7 +6,7 @@ cask :v1 => 'beotsmusic' do
   url "https://github.com/kiding/beotsmusic/releases/download/#{version}/BeotsMusic.dmg"
   name 'BeotsMusic'
   homepage 'http://beotsmusic.kiding.net/'
-  license :unknown
+  license :mit
 
   app 'BeotsMusic.app'
 end
