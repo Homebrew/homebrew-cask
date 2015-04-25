@@ -4,7 +4,7 @@ cask :v1 => 'qcad' do
 
   url "http://www.qcad.org/archives/qcad/qcad-#{version}-osx-10.6-10.10.dmg"
   name 'QCAD'
-  homepage 'http://http://www.qcad.org/'
+  homepage 'http://www.qcad.org/'
   license :gpl
 
   app 'QCAD.app'
