@@ -3,6 +3,7 @@ cask :v1 => 'rekordbox' do
   sha256 '1fadb6590be4ab7eb9d746c578e81a2558d176df643cd85593c5fdc0bfbd3c50'
 
   url "http://rekordbox.com/_app/files/Install_rekordbox_#{version.gsub('.','_')}.pkg.zip"
+  name 'rekordbox'
   homepage 'http://rekordbox.com/en/'
   license :closed
 
