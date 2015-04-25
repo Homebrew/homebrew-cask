@@ -4,6 +4,7 @@ cask :v1 => 'retinizer' do
 
   # google.com is the official download host per the vendor homepage
   url "https://sites.google.com/a/mikelpr.com/files/home/Retinizer#{version.gsub('.','')}.zip"
+  name 'Retinizer'
   homepage 'http://retinizer.mikelpr.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
