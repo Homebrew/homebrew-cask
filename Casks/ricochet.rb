@@ -5,6 +5,7 @@ cask :v1 => 'ricochet' do
   url "https://ricochet.im/releases/#{version}/Ricochet-#{version}.dmg"
   gpg "#{url}.asc",
       :key_id => '9032cae4cbfa933a5a2145d5ff97c53f183c045d'
+  name 'Ricochet'
   homepage 'https://ricochet.im/'
   license :bsd
 
