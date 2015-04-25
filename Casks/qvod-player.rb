@@ -3,6 +3,8 @@ cask :v1 => 'qvod-player' do
   sha256 '6a52cf7e297f8976e3b3c8ce954a4c77ac1c99c7bd89ad3ba5b31938c8df6ad4'
 
   url "http://dl.kuaibo.com/mac/QvodPlayer_v#{version}.dmg"
+  name '快播'
+  name 'QvodPlayer'
   homepage 'http://www.kuaibo.com/download.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
