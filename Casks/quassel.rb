@@ -3,6 +3,7 @@ cask :v1 => 'quassel' do
   sha256 'ba5ec89795afb3f4e8067798f9c9069d0cf31b0ccaa629dbcda28410267fefb1'
 
   url "http://quassel-irc.org/pub/QuasselMono_MacOSX-x86_64_#{version}.dmg"
+  name 'Quassel IRC'
   homepage 'http://quassel-irc.org'
   license :gpl
 
