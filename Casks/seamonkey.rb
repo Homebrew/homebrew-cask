@@ -4,6 +4,7 @@ cask :v1 => 'seamonkey' do
 
   # mozilla.org is the official download host per the vendor homepage
   url "https://download.mozilla.org/?product=seamonkey-#{version}&os=osx&lang=en-US"
+  name 'SeaMonkey'
   homepage 'http://www.seamonkey-project.org/'
   license :oss
 

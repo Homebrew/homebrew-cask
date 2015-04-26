@@ -3,6 +3,7 @@ cask :v1 => 'seil' do
   sha256 '4b2a5afe8c45a46af7b8a5ef291615627d795c90ba1614b5532eafa479e8f30b'
 
   url "https://pqrs.org/macosx/keyremap4macbook/files/Seil-#{version}.dmg"
+  name 'Seil'
   homepage 'https://pqrs.org/macosx/keyremap4macbook/seil.html.en'
   license :public_domain
 

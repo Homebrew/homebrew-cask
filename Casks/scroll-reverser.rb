@@ -12,6 +12,7 @@ cask :v1 => 'scroll-reverser' do
 
   # cloudfront.net is the official download host per the vendor homepage
   url "https://d20vhy8jiniubf.cloudfront.net/downloads/ScrollReverser-#{version}.zip"
+  name 'Scroll Reverser'
   homepage 'https://pilotmoon.com/scrollreverser/'
   license :gratis
 

@@ -4,6 +4,7 @@ cask :v1 => 'screenstagram' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://screenstagram.s3.amazonaws.com/screenstagram_#{version}.dmg"
+  name 'Screenstagram'
   homepage 'http://screenstagram.s3.amazonaws.com/download.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

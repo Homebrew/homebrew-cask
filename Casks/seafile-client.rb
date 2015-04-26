@@ -4,6 +4,7 @@ cask :v1 => 'seafile-client' do
 
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/haiwen/seafile/downloads/seafile-client-#{version}.dmg"
+  name 'Seafile Client'
   homepage 'http://seafile.com/'
   license :gpl
 

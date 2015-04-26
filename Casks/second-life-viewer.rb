@@ -3,6 +3,7 @@ cask :v1 => 'second-life-viewer' do
   sha256 '8aa1bc39077452c3006390d4a888ca4113c087e8cdc78f5008dc85091015627d'
 
   url "http://download.cloud.secondlife.com/Viewer_3/Second_Life_#{version.gsub('.','_')}_i386.dmg"
+  name 'Second Life Viewer'
   homepage 'http://secondlife.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

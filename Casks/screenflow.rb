@@ -4,6 +4,7 @@ cask :v1 => 'screenflow' do
 
   url "http://www.telestream.net/download-files/screenflow/5-0/ScreenFlow-#{version}.dmg"
   appcast 'http://www.telestream.net/updater/screenflow/appcast.xml'
+  name 'ScreenFlow'
   homepage 'http://www.telestream.net/screenflow/'
   license :commercial
 
