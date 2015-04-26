@@ -4,6 +4,7 @@ cask :v1 => 'sauerbraten' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sauerbraten/sauerbraten_#{version.gsub('.','_')}_collect_edition_macosx.dmg"
+  name 'Cube 2: Sauerbraten'
   homepage 'http://sauerbraten.org'
   license :oss
 
