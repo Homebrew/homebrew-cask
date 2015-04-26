@@ -4,6 +4,7 @@ cask :v1 => 'runtimebrowser' do
 
   # seriot.ch is the official download host per the vendor homepage
   url 'http://seriot.ch/temp/runtimebrowser.zip'
+  name 'RuntimeBrowser'
   homepage 'https://github.com/nst/RuntimeBrowser'
   license :oss
 
