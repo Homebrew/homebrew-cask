@@ -3,6 +3,7 @@ cask :v1 => 'sharetool' do
   sha256 '2990ecc1dd5f359fa25bd6c787f0efdd6b509919d00ef78c0d76fa83eef5c18e'
 
   url "http://files.bainsware.com/sharetool_#{version.gsub('.','')}.dmg"
+  name 'ShareTool'
   homepage 'http://bainsware.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
