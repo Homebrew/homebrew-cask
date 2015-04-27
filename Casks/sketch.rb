@@ -4,6 +4,7 @@ cask :v1 => 'sketch' do
 
   url 'http://bohemiancoding.com/static/download/sketch.zip'
   appcast 'http://www.bohemiancoding.com/sketch/appcast.xml'
+  name 'Sketch'
   homepage 'http://www.bohemiancoding.com/sketch/'
   license :commercial
 

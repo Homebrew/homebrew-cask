@@ -4,6 +4,7 @@ cask :v1 => 'simplesynth' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/notahat/SimpleSynth-#{version}.zip"
+  name 'SimpleSynth'
   homepage 'http://notahat.com/simplesynth/'
   license :mit
 

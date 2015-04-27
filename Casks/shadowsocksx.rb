@@ -4,6 +4,7 @@ cask :v1 => 'shadowsocksx' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/shadowsocksgui/ShadowsocksX-#{version}.dmg"
+  name 'ShadowsocksX'
   homepage 'https://github.com/shadowsocks/shadowsocks-iOS/wiki/Shadowsocks-for-OSX-Help'
   license :gpl
 

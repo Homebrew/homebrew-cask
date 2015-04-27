@@ -4,6 +4,7 @@ cask :v1 => 'shoes' do
 
   # mvmanila.com is the official download host per the vendor homepage
   url "http://shoes.mvmanila.com/public/shoes/shoes-#{version}-osx-10.9.tgz"
+  name 'Shoes'
   homepage 'http://shoesrb.com/'
   license :oss
 
