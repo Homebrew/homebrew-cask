@@ -13,4 +13,9 @@ cask :v1 => 'todoist' do
   postflight do
     suppress_move_to_applications
   end
+
+  zap :delete => [
+                  '~/Library/Application Support/Todoist',
+                  '~/Library/Preferences/com.todoist.mac.Todoist.plist',
+                 ]
 end
