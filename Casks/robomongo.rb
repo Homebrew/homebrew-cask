@@ -8,4 +8,11 @@ cask :v1 => 'robomongo' do
   license :gpl
 
   app 'Robomongo.app'
+
+  uninstall :quit => 'Robomongo'
+
+  zap :delete => [
+    '~/.config/robomongo',
+    '~/Library/Saved Application State/Robomongo.savedState'
+  ]
 end
