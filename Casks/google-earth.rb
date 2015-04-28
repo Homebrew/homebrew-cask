@@ -8,7 +8,12 @@ cask :v1 => 'google-earth' do
   license :gratis
   tags :vendor => 'Google'
 
-  app 'Google Earth.app'
+  pkg 'Install Google Earth.pkg'
+
+  uninstall :pkgutil => [
+              'com.Google.GoogleEarthPlus',
+              'com.Google.GoogleEarthPlugin.plugin',
+            ]
 
   zap :delete => [
                   '~/Library/Application Support/Google Earth',
