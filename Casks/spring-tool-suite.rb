@@ -1,4 +1,4 @@
-cask :v1 => 'sts' do
+cask :v1 => 'spring-tool-suite' do
   version '3.5.1'
   sha256 'f71274c9f946d2af6bbd12e811d7c8d371d3031415839b9aa6ed35347d2980f8'
 
@@ -10,7 +10,16 @@ cask :v1 => 'sts' do
 
   url "http://download.springsource.com/release/STS/#{version}/dist/e#{Utils.based_on_eclipse.gsub(/\.\d$/, '')}/spring-tool-suite-#{version}.RELEASE-e#{Utils.based_on_eclipse}-macosx-cocoa-x86_64-installer.dmg"
   homepage 'http://spring.io/tools/sts'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :eclipse
 
-  installer :manual => "Installer - Spring Tool Suite #{version}.RELEASE.app"
+  installer :script => "Installer - Spring Tool Suite #{version}.RELEASE.app/Contents/MacOS/JavaApplicationStub",
+            :args => [ '-q' ]
+
+  caveats <<-EOS.undent
+    #{token} requires Java 6+, you can install the latest Java using
+
+      brew cask install java
+  EOS
+
+  uninstall :delete => '~/springsource'
 end
