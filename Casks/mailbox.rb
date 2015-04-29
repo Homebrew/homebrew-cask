@@ -1,8 +1,8 @@
 cask :v1 => 'mailbox' do
-  version '0.3.14'
-  sha256 'c7ddd88dfa81200fac95be6c9318a9a1539874a3e03457d67ff48009ed126fb1'
+  version '0.4.2_150316'
+  sha256 '5431ef92b83f5752193cbdaf2ae82a0798537c8b84426bc09c5367a7345875c7'
 
-  url "https://download.mailboxapp.com/Mailbox-Beta-#{version}.dmg"
+  url "https://mb-dtop.s3.amazonaws.com/external-beta/Mailbox_EXT_Beta_#{version}.zip"
   appcast 'https://mb-dtop.s3.amazonaws.com/external-beta/external-beta-appcast.xml',
           :sha256 => '28d87eb6a36077e16b8c52ede51d81316eea6bb0636608616173e0edbaa5be11'
   name 'Mailbox'
