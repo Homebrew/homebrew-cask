@@ -7,6 +7,6 @@ cask :v1 => 'oolite' do
   name 'oolite'
   homepage 'http://www.oolite.org/'
   license :gpl
-  
+
   app "Oolite #{version}/Oolite.app"
 end
