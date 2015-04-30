@@ -13,7 +13,7 @@ cask :v1 => 'bettertouchtool' do
   appcast 'http://appcast.boastr.net'
   name 'BetterTouchTool'
   homepage 'http://bettertouchtool.net/'
-  license :commercial
+  license :gratis
 
   app 'BetterTouchTool.app'
 
