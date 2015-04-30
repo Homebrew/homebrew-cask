@@ -4,6 +4,7 @@ cask :v1 => 'sonic-visualiser' do
 
   # ac.uk is the official download host per the vendor homepage
   url "https://code.soundsoftware.ac.uk/attachments/download/1186/Sonic%20Visualiser-#{version}.dmg"
+  name 'Sonic Visualiser'
   homepage 'http://www.sonicvisualiser.org/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
