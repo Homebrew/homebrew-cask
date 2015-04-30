@@ -4,6 +4,7 @@ cask :v1 => 'snes9x' do
 
   # ipherswipsite.com is the official download host per the vendor homepage
   url "http://files.ipherswipsite.com/snes9x/snes9x-#{version}-macosx-113.dmg.gz"
+  name 'Snes9x'
   homepage 'http://www.snes9x.com/'
   license :other
   container :nested => "snes9x-#{version}"
