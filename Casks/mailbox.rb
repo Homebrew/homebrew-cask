@@ -5,7 +5,7 @@ cask :v1 => 'mailbox' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://mb-dtop.s3.amazonaws.com/external-beta/Mailbox_EXT_Beta_#{version}.zip"
   appcast 'https://mb-dtop.s3.amazonaws.com/external-beta/external-beta-appcast.xml',
-          :sha256 => '28d87eb6a36077e16b8c52ede51d81316eea6bb0636608616173e0edbaa5be11'
+          :sha256 => '7f1958d4be2af3ea5283bc586f97d73df07cb559ae954f4914815529d99e62dc'
   name 'Mailbox'
   homepage 'http://www.mailboxapp.com/'
   license :gratis
