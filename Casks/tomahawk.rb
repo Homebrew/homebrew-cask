@@ -1,6 +1,6 @@
 cask :v1 => 'tomahawk' do
-  version '0.8.2'
-  sha256 'b9b121643a04ca3c6590c02ff538daa4b91593f7bfa6a0e7ae5fb1b3768d2563'
+  version '0.8.3'
+  sha256 'a5b4d2994544797ac461dc0a91b3d5836d117a17c6b2d7f92862c229e4532f5f'
 
   url "http://download.tomahawk-player.org/Tomahawk-#{version}.dmg"
   appcast 'http://download.tomahawk-player.org/sparkle/update.php',
