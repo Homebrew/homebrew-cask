@@ -5,6 +5,7 @@ cask :v1 => 'slidemode' do
   url "http://www.teaksoftware.com/workspace/files/slidemode#{version.gsub('.','')}.dmg"
   appcast 'http://teaksoftware.com/appcasts/smappcast.xml',
           :sha256 => '859173e49589a62ff6923ed887e5377a4ea619865de38d28a79c3c9594613d12'
+  name 'SlideMode'
   homepage 'http://teaksoftware.com/app/slidemode'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

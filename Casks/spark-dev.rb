@@ -4,6 +4,7 @@ cask :v1 => 'spark-dev' do
 
   url "https://github.com/spark/spark-dev/releases/download/v#{version}/spark-dev-mac.zip"
   appcast 'https://github.com/spark/spark-dev/releases.atom'
+  name 'Spark Dev'
   homepage 'https://github.com/spark/spark-dev'
   license :apache
 

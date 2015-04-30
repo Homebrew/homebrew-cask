@@ -5,6 +5,7 @@ cask :v1 => 'sketchup' do
   # downloads can be found at http://www.sketchup.com/download/all
   # trimble.com is the official download host per the vendor homepage
   url 'https://dl.trimble.com/sketchup/SketchUpMake-en.dmg'
+  name 'SketchUp'
   homepage 'http://www.sketchup.com/intl/en/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

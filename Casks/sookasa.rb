@@ -4,6 +4,7 @@ cask :v1 => 'sookasa' do
 
   # cloudfront.net is the official download host per the vendor homepage
   url "https://d2rs8uj3cnos4.cloudfront.net/mac-apps/releases/Sookasa_#{version}.pkg"
+  name 'Sookasa'
   homepage 'https://www.sookasa.com'
   license :commercial
 
