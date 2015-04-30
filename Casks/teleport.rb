@@ -7,5 +7,5 @@ cask :v1 => 'teleport' do
   homepage 'http://www.abyssoft.com/software/teleport/'
   license :gratis
 
-  app 'teleport.app'
+  app 'teleport/teleport.app'
 end
