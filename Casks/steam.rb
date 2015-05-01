@@ -3,6 +3,7 @@ cask :v1 => 'steam' do
   sha256 :no_check
 
   url 'http://media.steampowered.com/client/installer/steam.dmg'
+  name 'Steam'
   homepage 'http://store.steampowered.com/about/'
   license :gratis
 
