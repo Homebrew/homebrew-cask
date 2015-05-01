@@ -1,6 +1,6 @@
 cask :v1 => 'protonet' do
-  version '1.5'
-  sha256 '057cc7a5e26738fc360a959b664de20208f6c45795968dd6c039ee7c895444be'
+  version :latest
+  sha256 :no_check
 
   url 'http://clients.protonet.info/osx/Protonet.dmg'
   name 'Protonet'
