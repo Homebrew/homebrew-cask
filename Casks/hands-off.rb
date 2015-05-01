@@ -1,6 +1,6 @@
 cask :v1 => 'hands-off' do
-  version '2.3.3'
-  sha256 '5df3de6b11df0e48ecbe333e475af1e196aa2fc7652e59fa74f9a09c1d199bee'
+  version '2.3.4'
+  sha256 '225ad29b34a7014dfd0f334f269d38ff4d820aa0248248dba76356eaa2495c7e'
 
   url "https://www.oneperiodic.com/files/Hands%20Off!%20v#{version}.dmg"
   appcast 'http://www.metakine.com/sparkle/handsoff2/checkupdate.php',
