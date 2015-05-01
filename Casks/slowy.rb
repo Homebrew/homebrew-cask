@@ -5,7 +5,7 @@ cask :v1 => 'slowy' do
   url "http://slowyapp.com/downloads/Slowyapp_v#{version}.dmg"
   name 'Slowy'
   homepage 'http://slowyapp.com/'
-  license :commerical
+  license :commercial
 
   app 'Slowy.app'
 end
