@@ -3,6 +3,7 @@ cask :v1 => 'speedtao' do
   sha256 :no_check
 
   url 'http://www.speedtao.net/beta_latest'
+  name 'SpeedTao'
   homepage 'http://www.speedtao.net/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
