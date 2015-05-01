@@ -3,6 +3,7 @@ cask :v1 => 'squirrel' do
   sha256 '7ba8f934f8d4fe1d42c944ea0771f1a54ed558dd65ea558c4ba4d203505bc130'
 
   url "https://dl.bintray.com/lotem/rime/Squirrel-#{version}.zip"
+  name 'Squirrel'
   homepage 'https://github.com/lotem/squirrel'
   license :gpl
 

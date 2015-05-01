@@ -4,6 +4,7 @@ cask :v1 => 'speedcrunch' do
 
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/heldercorreia/speedcrunch/downloads/SpeedCrunch-#{version}.dmg"
+  name 'SpeedCrunch'
   homepage 'http://www.speedcrunch.org'
   license :gpl
 
