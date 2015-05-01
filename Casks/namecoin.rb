@@ -8,4 +8,9 @@ cask :v1 => 'namecoin' do
   license :mit
 
   app 'Namecoin-Qt.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/Namecoin',
+                  '~/Library/Preferences/Namecoin-Qt.plist'
+                 ]
 end
