@@ -9,6 +9,7 @@ cask :v1 => 'sts' do
   end
 
   url "http://download.springsource.com/release/STS/#{version}/dist/e#{Utils.based_on_eclipse.gsub(/\.\d$/, '')}/spring-tool-suite-#{version}.RELEASE-e#{Utils.based_on_eclipse}-macosx-cocoa-x86_64-installer.dmg"
+  name 'Spring Tool Suite'
   homepage 'http://spring.io/tools/sts'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
