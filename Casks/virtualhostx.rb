@@ -1,12 +1,12 @@
 cask :v1 => 'virtualhostx' do
-  version :latest
-  sha256 :no_check
+  version '6.0.4'
+  sha256 'd0ab4ef0049639e94887dc011dbe36a46fbe963494a39af7ad190417c08620a3'
 
-  url 'https://clickontyler.com/virtualhostx/download/v6/'
-  appcast 'http://shine.clickontyler.com/appcast.php?id=30'
+  url "https://downloads-clickonideas.netdna-ssl.com/virtualhostx/virtualhostx60_#{version}.zip"
+  appcast 'https://shine.clickontyler.com/appcast.php?id=30'
   name 'VirtualHostX'
-  homepage 'http://clickontyler.com/virtualhostx/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://clickontyler.com/virtualhostx/'
+  license :commercial
 
   app 'VirtualHostX.app'
 end
