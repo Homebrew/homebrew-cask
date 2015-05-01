@@ -13,6 +13,7 @@ cask :v1 => 'spectacle' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/spectacle/downloads/Spectacle+#{version}.zip"
+  name 'Spectacle'
   homepage 'http://spectacleapp.com/'
   license :mit
 
