@@ -18,5 +18,9 @@ cask :v1 => 'spectacle' do
 
   app 'Spectacle.app'
 
-  zap :delete => '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist'
+  zap :delete => [
+                  '~/Library/Caches/com.divisiblebyzero.Spectacle',
+                  '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.divisiblebyzero.Spectacle',
+                  '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist',
+                 ]
 end
