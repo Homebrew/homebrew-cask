@@ -10,4 +10,9 @@ cask :v1 => 'appcleaner' do
   license :gratis
 
   app 'AppCleaner.app'
+
+  zap :delete => [
+                  '~/Library/Caches/com.freemacsoft.AppCleaner',
+                  '~/Library/Preferences/com.freemacsoft.AppCleaner.plist',
+                 ]
 end
