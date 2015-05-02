@@ -1,6 +1,6 @@
 cask :v1 => 'cryptol' do
-  version '2.2.2'
-  sha256 '133954094a2f00e2679a640810febfea25c2826588eeb301a68b9a80def4ec20'
+  version '2.2.3'
+  sha256 '1971121942379c782e05fdbc58b912a617461477290c6803cd037fbaef20fef7'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/GaloisInc/cryptol/releases/download/v#{version}/cryptol-#{version}-MacOSX-64.tar.gz"
