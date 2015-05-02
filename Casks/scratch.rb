@@ -8,4 +8,6 @@ cask :v1 => 'scratch' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer :script => 'Install Scratch 2.app/Contents/MacOS/Install Scratch 2'
+
+  uninstall :script => 'Install Scratch 2.app/Contents/MacOS/Install Scratch 2'
 end
