@@ -7,5 +7,5 @@ cask :v1 => 'scratch' do
   homepage 'https://scratch.mit.edu/scratch2download/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  installer :manual => 'Install Scratch 2.app'
+  installer :script => 'Install Scratch 2.app/Contents/MacOS/Install Scratch 2'
 end
