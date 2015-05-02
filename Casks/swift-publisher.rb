@@ -4,6 +4,7 @@ cask :v1 => 'swift-publisher' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url 'http://s3.amazonaws.com/belightsoft/SwiftPublisher.dmg'
+  name 'Swift Publisher'
   homepage 'http://www.belightsoft.com/products/swiftpublisher/overview.php'
   license :closed
 

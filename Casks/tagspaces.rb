@@ -10,6 +10,7 @@ cask :v1 => 'tagspaces' do
     appcast 'https://github.com/uggrock/tagspaces/releases.atom'
   end
 
+  name 'TagSpaces'
   homepage 'http://www.tagspaces.org'
   license :affero
 

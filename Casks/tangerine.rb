@@ -3,6 +3,7 @@ cask :v1 => 'tangerine' do
   sha256 'dea00674331b1aa663cf00f64b0ce208638a136575987e1a7f50bd135117f2d9'
 
   url 'http://distrib.karelia.com/downloads/Tangerine!-4008.zip'
+  name 'Tangerine!'
   homepage 'http://www.karelia.com/products/tangerine/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

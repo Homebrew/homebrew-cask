@@ -3,6 +3,7 @@ cask :v1 => 'switchresx' do
   sha256 'a8d1bb95be0d2b1ddbae50f77231568bcd00f2030d337386d85d34f06ea6b065'
 
   url "http://www.madrau.com/data/switchresx/SwitchResX#{version.to_i}.zip"
+  name 'SwitchResX'
   homepage 'http://www.madrau.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

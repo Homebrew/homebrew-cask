@@ -3,6 +3,7 @@ cask :v1 => 'svnx' do
   sha256 'b687a0bc62de9f21b4c34dd94dbcfd282fd38184764e05e03e59dd5a19d1a3e8'
 
   url "https://svnx.googlecode.com/files/svnX%20#{version}.dmg"
+  name 'SvnX'
   homepage 'https://code.google.com/p/svnx/'
   license :oss
 
