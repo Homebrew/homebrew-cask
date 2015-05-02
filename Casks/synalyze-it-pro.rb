@@ -4,6 +4,7 @@ cask :v1 => 'synalyze-it-pro' do
 
   # it.com is the official download host per the vendor homepage
   url "http://www.synalyze-it.com/Downloads/SynalyzeItProTA_#{version}.zip"
+  name 'Synalyze It! Pro'
   homepage 'http://www.synalysis.net/'
   license :commercial
 
