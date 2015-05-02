@@ -2,10 +2,10 @@ cask :v1 => 'scratch' do
   version :latest
   sha256 :no_check
 
-  url 'http://cdn.scratch.mit.edu/scratchr2/static/sa/Scratch.air'
+  url 'https://scratch.mit.edu/scratchr2/static/sa/Scratch-435.dmg'
   name 'Scratch'
-  homepage 'http://scratch.mit.edu/scratch2download/'
+  homepage 'https://scratch.mit.edu/scratch2download/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  app 'Scratch 2.app'
+  installer :manual => 'Install Scratch 2.app'
 end
