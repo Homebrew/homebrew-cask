@@ -4,6 +4,7 @@ cask :v1 => 'textsoap' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url 'http://unmarked.s3.amazonaws.com/textsoap7.zip'
+  name 'TextSoap'
   homepage 'http://www.unmarked.com/textsoap/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
