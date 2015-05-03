@@ -4,6 +4,7 @@ cask :v1 => 'textmate' do
 
   # textmate.org is the official download host per the vendor homepage
   url 'https://api.textmate.org/downloads/release'
+  name 'TextMate'
   homepage 'http://macromates.com/'
   license :gpl
 
