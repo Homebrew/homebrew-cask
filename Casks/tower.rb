@@ -13,6 +13,7 @@ cask :v1 => 'tower' do
 
   zap :delete => [
                   '~/Library/Application Support/com.fournova.Tower2',
+                  '~/Library/Caches/com.fournova.Tower2',
                   '~/Library/Preferences/com.fournova.Tower2.plist',
                  ]
 
