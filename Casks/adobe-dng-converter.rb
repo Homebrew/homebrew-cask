@@ -5,7 +5,7 @@ cask :v1 => 'adobe-dng-converter' do
   url "http://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.gsub('.', '_')}.dmg"
   name 'Adobe Camera Raw and DNG Converter'
   homepage 'http://www.adobe.com/support/downloads/product.jsp?product=106&platform=Macintosh'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   pkg 'Adobe DNG Converter.pkg'
 
