@@ -6,7 +6,7 @@ cask :v1 => 'air-video-server-hd' do
   url "https://s3.amazonaws.com/AirVideoHD/Download/Air+Video+Server+HD+#{version}.dmg"
   name 'Air Video Server HD'
   homepage 'http://www.inmethod.com/airvideohd'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Air Video Server HD.app'
 end
