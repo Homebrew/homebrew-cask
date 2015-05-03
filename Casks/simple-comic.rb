@@ -3,7 +3,7 @@ cask :v1 => 'simple-comic' do
   sha256 '4ddd18a02a79fc8201824e6ab99291c6d4c8680f79f94bc372bf71f0535def35'
 
   # amazonaws.com is the official download host per the vendor homepage
-  url "http://dancingtortoisedownload.s3.amazonaws.com/SimpleComic_#{version}.zip"
+  url "https://andychase.github.io/Simple-Comic/SimpleComic_1.7_252.zip"
   name 'Simple Comic'
   homepage 'http://dancingtortoise.com/simplecomic/'
   license :mit
