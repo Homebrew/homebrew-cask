@@ -5,6 +5,7 @@ cask :v1 => 'teitoku' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/geta6/teitoku/releases/download/#{version}/teitoku-#{version}-osx.zip"
   appcast 'https://github.com/geta6/teitoku/releases.atom'
+  name 'Teitoku'
   homepage 'http://makebooth.com/i/1xkN1'
   license :mit
 
