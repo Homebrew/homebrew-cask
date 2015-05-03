@@ -4,6 +4,7 @@ cask :v1 => 'tidal' do
 
   # wimp.no is the official download host per the vendor homepage
   url "https://wimp.no/wweb/resources/wimp_files/release/TIDAL-#{version}-WW.dmg"
+  name 'TIDAL'
   homepage 'https://tidalhifi.com/us/download'
   license :closed
 
