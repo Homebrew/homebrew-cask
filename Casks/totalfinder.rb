@@ -3,6 +3,7 @@ cask :v1 => 'totalfinder' do
   sha256 'f2badde257b54c5dad8c3cce46afc5f4511f1d91ef6ad4a80e3522faa2331106'
 
   url "http://downloads.binaryage.com/TotalFinder-#{version}.dmg"
+  name 'TotalFinder'
   homepage 'http://totalfinder.binaryage.com'
   license :commercial
 
