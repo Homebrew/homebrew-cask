@@ -4,6 +4,7 @@ cask :v1 => 'tuxguitar' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/tuxguitar/TuxGuitar/TuxGuitar-#{version}/tuxguitar-#{version}-macosx10.5-cocoa-64.dmg"
+  name 'TuxGuitar'
   homepage 'http://www.tuxguitar.com.ar/'
   license :gpl
 
