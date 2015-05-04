@@ -3,6 +3,7 @@ cask :v1 => 'transmission-remote-gui' do
   sha256 'b961aeb244b2519563837745f3475d21379e3da32bae2b3cbb20ca91d1a90d75'
 
   url "https://transmisson-remote-gui.googlecode.com/files/transgui-#{version}.dmg"
+  name 'Transmission Remote GUI'
   homepage 'https://code.google.com/p/transmisson-remote-gui/'
   license :oss
 
