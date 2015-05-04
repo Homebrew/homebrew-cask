@@ -8,5 +8,5 @@ cask :v1 => 'spyder' do
   homepage 'https://github.com/spyder-ide/spyder'
   license :mit
 
-  app 'Spyder.app'
+  app 'Spyder-Py2.app'
 end
