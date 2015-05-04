@@ -11,7 +11,7 @@ cask :v1 => 'scratch' do
             :args   => %w[-silent],
             :sudo   => true
 
-  uninstall :script => { :executable => 'Install Scratch 2.app/Contents/MacOS/Install Scratch 2' }
+  uninstall :delete => '/Applications/Scratch 2.app'
 
   depends_on :cask => 'adobe-air'
 end
