@@ -3,6 +3,7 @@ cask :v1 => 'thinkorswim' do
   sha256 :no_check
 
   url 'https://mediaserver.thinkorswim.com/installer/InstFiles/thinkorswim_installer.dmg'
+  name 'thinkDesktop'
   homepage 'http://mediaserver.thinkorswim.com/installer/install.html#macosx'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
