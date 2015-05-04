@@ -1,11 +1,12 @@
 cask :v1 => 'groovesquid' do
-  version :latest
-  sha256 :no_check
+  version '0.8.2'
+  sha256 '3ad28d5945b8c5f5d7a1cdc540436e77dfbcfb895ecc417cf12d1a6789521928'
 
-  url 'http://groovesquid.com/download.php?file=Groovesquid.dmg'
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/groovesquid/groovesquid/releases/download/v#{version}/Groovesquid.dmg"
   name 'Groovesquid'
   homepage 'http://groovesquid.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Groovesquid.app'
 end
