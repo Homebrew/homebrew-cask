@@ -26,6 +26,7 @@ cask :v1 => 'totalspaces' do
               :quit    => 'com.binaryage.TotalSpaces2'
   end
 
+  name 'TotalSpaces'
   homepage 'http://totalspaces.binaryage.com/'
   license :commercial
 
