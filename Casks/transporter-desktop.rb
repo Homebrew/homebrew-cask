@@ -4,6 +4,7 @@ cask :v1 => 'transporter-desktop' do
 
   # connecteddata.com is the official download host per the vendor homepage
   url "https://secure.connecteddata.com/mac/2.5/software/Transporter_Desktop_#{version}.dmg"
+  name 'Transporter Desktop'
   homepage 'http://www.filetransporter.com/'
   license :commercial
 

@@ -4,6 +4,7 @@ cask :v1 => 'tomighty' do
 
   # googlecode.com is the official download host per the vendor homepage
   url "https://tomighty.googlecode.com/files/Tomighty-#{version}.dmg"
+  name 'Tomighty'
   homepage 'http://www.tomighty.org/'
   license :apache
 

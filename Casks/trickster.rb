@@ -5,6 +5,7 @@ cask :v1 => 'trickster' do
   url "http://dl.apparentsoft.com/Trickster_#{version}.zip"
   appcast 'http://dl.apparentsoft.com/trickster.rss',
           :sha256 => '467b90ac0b291399ed7da5ba091fa18a29089f8a6108c14942c6482f3d40e75d'
+  name 'Trickster'
   homepage 'http://www.apparentsoft.com/trickster/'
   license :commercial
 

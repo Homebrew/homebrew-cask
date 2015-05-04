@@ -10,6 +10,7 @@ cask :v1 => 'tiddlywiki' do
     appcast 'https://github.com/Jermolene/TiddlyDesktop/releases.atom'
   end
 
+  name 'TiddlyWiki'
   homepage 'https://github.com/Jermolene/TiddlyDesktop'
   license :bsd
 

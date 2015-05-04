@@ -4,6 +4,7 @@ cask :v1 => 'tongbu' do
 
   # leaderhero.com is the official download host per the vendor homepage
   url "http://qd.appdown.info/qd/zsmacqd/Tongbu_mac_v#{version}_baidupinzhuan.dmg"
+  name 'Tongbu'
   homepage 'http://www.tongbu.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
