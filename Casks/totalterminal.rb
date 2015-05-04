@@ -3,6 +3,7 @@ cask :v1 => 'totalterminal' do
   sha256 '159475ff641a05cbce2ca4463eac4ae98006b62396b9f1f59d396d68d71d7d87'
 
   url "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
+  name 'TotalTerminal'
   homepage 'http://totalterminal.binaryage.com'
   license :gratis
 
