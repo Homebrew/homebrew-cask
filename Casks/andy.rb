@@ -6,7 +6,7 @@ cask :v1 => 'andy' do
   url "http://andyroid.vonetize.com.edgesuite.net/Mac/v#{version}/Andy_OSX_v43.dmg"
   name 'Andy'
   homepage 'http://www.andyroid.net/'
-  license :gpl
+  license :commercial
 
   app 'Andy.app'
 end
