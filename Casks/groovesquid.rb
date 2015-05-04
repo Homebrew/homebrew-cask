@@ -4,6 +4,7 @@ cask :v1 => 'groovesquid' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/groovesquid/groovesquid/releases/download/v#{version}/Groovesquid.dmg"
+  appcast 'https://github.com/groovesquid/groovesquid/releases.atom'
   name 'Groovesquid'
   homepage 'http://groovesquid.com/'
   license :gpl
