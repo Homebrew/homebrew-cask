@@ -5,7 +5,7 @@ cask :v1 => 'josm' do
   url 'https://josm.openstreetmap.de/download/macosx/josm-macosx.zip'
   name 'JOSM'
   homepage 'http://josm.openstreetmap.de'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'JOSM.app'
 end
