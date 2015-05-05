@@ -1,6 +1,6 @@
 cask :v1 => 'netlogo' do
-  version '5.1.0'
-  sha256 'e2c56ba16fedba36b9868321c774fa1a5e4f4a2ec0a5268381488f376a4f4d3e'
+  version '5.2.0'
+  sha256 '72ea2f242e3f580ad19250361d792628f4e95e6996be9007d8b21ffd134d6252'
 
   url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo%20#{version}.dmg"
   name 'NetLogo'
