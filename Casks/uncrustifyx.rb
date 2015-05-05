@@ -4,6 +4,7 @@ cask :v1 => 'uncrustifyx' do
 
   url "https://github.com/ryanmaxwell/UncrustifyX/releases/download/#{version}/UncrustifyX-#{version}.zip"
   appcast 'https://github.com/ryanmaxwell/UncrustifyX/releases.atom'
+  name 'UncrustifyX'
   homepage 'https://github.com/ryanmaxwell/UncrustifyX'
   license :mit
 

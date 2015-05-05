@@ -3,6 +3,7 @@ cask :v1 => 'tvmobili' do
   sha256 :no_check
 
   url 'http://www.tvmobili.com/binaries/stable/tvmobili-mountainlion-universal.dmg'
+  name 'TVMOBiLi'
   homepage 'http://www.tvmobili.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

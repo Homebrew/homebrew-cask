@@ -4,6 +4,7 @@ cask :v1 => 'universal-media-server' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/unimediaserver/Official%20Releases/OS%20X/UMS-#{version}-Java8.dmg"
+  name 'Universal Media Server'
   homepage 'http://universalmediaserver.com'
   license :gpl
 
