@@ -1,13 +1,13 @@
 cask :v1 => 'odrive' do
-  version '2712'
-  sha256 'd7782b822b057cdb8b7ff7883296c7c546601cfdf6647ce66bddd3ace89bbcc6'
+  version '3274'
+  sha256 '4c68307c2fb8c03cb018825ad4e96daeba22c33017ee3783d7a6410fb2fb02ab'
 
-  url "http://cdn-mac.odrive.com/odrive.#{version}.dmg"
+  url "http://cdn-mac.odrive.com/odrivesync.#{version}.dmg"
   name 'odrive'
   homepage 'http://www.odrive.com'
   license :gratis
 
-  pkg "odrive.#{version}.pkg"
+  pkg "odrivesync.#{version}.pkg"
 
-  uninstall :pkgutil => 'com.oxygencloud.odrive.*'
+  uninstall :pkgutil => 'com.oxygencloud.odrive*'
 end
