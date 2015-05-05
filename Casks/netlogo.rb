@@ -12,5 +12,5 @@ cask :v1 => 'netlogo' do
     '~/Library/Saved Application State/org.nlogo.NetLogo.savedState'
   ]
 
-  app "NetLogo #{version}/NetLogo #{version}.app"
+  app "NetLogo #{version.sub(%r{\.\d+$},'')}/NetLogo #{version.sub(%r{\.\d+$},'')}.app"
 end
