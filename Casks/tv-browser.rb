@@ -4,6 +4,7 @@ cask :v1 => 'tv-browser' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/tvbrowser/tvbrowser_#{version}_mac.dmg"
+  name 'TV-Browser'
   homepage 'http://www.tvbrowser.org/'
   license :gpl
 
