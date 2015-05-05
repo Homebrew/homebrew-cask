@@ -8,7 +8,7 @@ cask :v1 => 'cdock' do
   license :oss
 
   app 'cDock.app'
-  
+
   caveats <<-EOS.undent
     #{token} will only run from within /Applications,
     and will request to be moved at launch.
