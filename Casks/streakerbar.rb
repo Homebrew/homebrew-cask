@@ -1,6 +1,6 @@
 cask :v1 => 'streakerbar' do
-  version '1.0'
-  sha256 '70c4e5863d1eaaf4c8ed96e1e110ca9f48de811bdffb92beb024827e08947e72'
+  version '1.1'
+  sha256 '61735052d8e7613dc4d898c4236ed8b277ad742456c2067e4a750c7a937529f5'
 
   url "http://github.com/chaserx/streakerbar/releases/download/v#{version}/streakerbar.zip"
   appcast 'http://github.com/chaserx/streakerbar/releases.atom'
