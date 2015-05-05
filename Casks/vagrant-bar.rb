@@ -4,6 +4,7 @@ cask :v1 => 'vagrant-bar' do
 
   url "https://github.com/BipSync/VagrantBar/releases/download/#{version}/Vagrant.Bar.zip"
   appcast 'https://github.com/BipSync/VagrantBar/releases.atom'
+  name 'Vagrant Bar'
   homepage 'https://github.com/BipSync/VagrantBar'
   license :oss
 
