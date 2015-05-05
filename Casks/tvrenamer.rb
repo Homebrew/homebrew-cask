@@ -5,6 +5,7 @@ cask :v1 => 'tvrenamer' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/tvrenamer/tvrenamer/releases/download/v#{version}/TVRenamer-#{version}-osx64.zip"
   appcast 'https://github.com/tvrenamer/tvrenamer/releases.atom'
+  name 'TVRenamer'
   homepage 'http://tvrenamer.org'
   license :gpl
 
