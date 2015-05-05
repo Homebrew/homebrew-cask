@@ -4,6 +4,7 @@ cask :v1 => 'twelf' do
 
   # plparty.org is the official download host per the vendor homepage
   url "http://twelf.plparty.org/releases/twelf-osx-#{version}.dmg"
+  name 'Twelf'
   homepage 'http://www.twelf.org'
   license :bsd
 
