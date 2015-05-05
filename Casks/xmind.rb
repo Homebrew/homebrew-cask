@@ -1,8 +1,8 @@
 cask :v1 => 'xmind' do
-  version '3.5.1'
-  sha256 '9b57dcfd1a2c0a80ff9faf296560594cd25e65e50916c0dbb96b165ecc690801'
+  version '3.5.2.201504270119'
+  sha256 '602dd1d90a41bfa30377881e37f6c5d95de84619cbe8d15755026e07ec1cb1bb'
 
-  url "http://dl3.xmind.net/xmind-macosx-#{version}.201411201906.dmg"
+  url "http://dl3.xmind.net/xmind-macosx-#{version}.dmg"
   name 'XMind'
   homepage 'http://www.xmind.net'
   license :freemium
