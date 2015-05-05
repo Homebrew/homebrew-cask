@@ -6,7 +6,7 @@ cask :v1 => 'androidtool' do
   appcast 'https://github.com/mortenjust/androidtool-mac/releases.atom'
   name 'AndroidTool'
   homepage 'https://github.com/mortenjust/androidtool-mac'
-  license :unknown
+  license :apache
 
   app 'AndroidTool.app'
 end
