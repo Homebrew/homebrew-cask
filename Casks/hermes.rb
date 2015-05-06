@@ -1,6 +1,6 @@
 cask :v1 => 'hermes' do
-  version '1.2.5'
-  sha256 '786e20040bdd6e943b646f74d7cc9a460b37444272c4a7af8d1f5ef77a7d2f2f'
+  version '1.2.6'
+  sha256 'aeecd452dc9b920abd467a6e8223db9e6c84771a'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/hermesmacapp/Hermes-#{version}.zip"
