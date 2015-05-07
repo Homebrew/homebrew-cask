@@ -19,6 +19,6 @@ cask :v1 => 'p4merge' do
   caveats <<-EOS.undent
     git can be configured to use p4merge as a merge tool via
 
-      https://gist.github.com/henrik242/1510148
+      http://pempek.net/articles/2014/04/18/git-p4merge/
   EOS
 end
