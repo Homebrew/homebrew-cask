@@ -1,6 +1,6 @@
 cask :v1 => 'rubymine' do
-  version '7.1'
-  sha256 '8a727f3e8fcc6352dfdb34b10f65b3bf9c80f43b69763c0d8559725ecc25b5e6'
+  version '7.1.1'
+  sha256 '99d7cd14147c5503d17ca1634d95cdcec99c30686b60a492a8bb29eea3a4bba3'
 
   url "http://download-cf.jetbrains.com/ruby/RubyMine-#{version}.dmg"
   name 'RubyMine'
