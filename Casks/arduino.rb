@@ -1,6 +1,6 @@
 cask :v1 => 'arduino' do
-  version '1.6.3'
-  sha256 '4cdb3332ff9a80218e6923db61ca18e346e753e137f111de9fe81b380af88897'
+  version '1.6.4'
+  sha256 '852f12a53f2902fa1bcc64a5027f522a7e7676c0c868b697b122a4c29faa40aa'
 
   url "http://arduino.cc/download.php?f=/arduino-#{version}-macosx.zip"
   name 'Arduino'
