@@ -2,9 +2,9 @@ cask :v1 => 'arq' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.haystacksoftware.com/arq/Arq.zip'
+  url 'https://www.arqbackup.com/download/Arq_OSX.zip'
   name 'Arq'
-  homepage 'http://www.haystacksoftware.com/arq/'
+  homepage 'https://www.arqbackup.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Arq.app'
