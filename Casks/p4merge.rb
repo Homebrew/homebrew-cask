@@ -5,9 +5,16 @@ cask :v1 => 'p4merge' do
   url "http://filehost.perforce.com/perforce/r#{version.sub(%r{^20},'')}/bin.macosx107x86_64/P4V.dmg"
   name 'P4Merge'
   homepage 'http://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools'
-  license :oss
+  license :gratis
+  tags :vendor => 'Perforce'
 
   app 'p4merge.app'
+
+  zap :delete => [
+                  '~/Library/Preferences/com.perforce.p4merge',
+                  '~/Library/Preferences/com.perforce.p4merge.plist',
+                  '~/Library/Saved Application State/com.perforce.p4merge.savedState'
+                 ]
 
   caveats <<-EOS.undent
     git can be configured to use p4merge as a merge tool via
