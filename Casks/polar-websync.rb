@@ -7,8 +7,6 @@ cask :v1 => 'polar-websync' do
   homepage 'http://www.polar.com/us-en/support/downloads/Polar_WebSync_Software'
   license :closed
 
-  caveats "Installation of this application requires user input."
-
   pkg 'Polar WebSync.pkg'
 
   uninstall :pkgutil => 'fi.polar.websync.pkg',
