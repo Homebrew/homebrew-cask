@@ -1,6 +1,6 @@
 cask :v1 => 'electron' do
-  version '0.25.2'
-  sha256 '1175c6c581460b01f8fc6a0a1dd5805f8c53d309658a0f093d73a5c87492e5b5'
+  version '0.25.3'
+  sha256 '2dac585477611e819446901e0d3b45fe4fa44b3606fb7470149b6e5efac4b175'
 
   url "https://github.com/atom/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/atom/electron/releases.atom'
