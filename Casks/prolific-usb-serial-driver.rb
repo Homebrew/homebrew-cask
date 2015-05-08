@@ -3,6 +3,7 @@ cask :v1 => 'prolific-usb-serial-driver' do
   sha256 'b6658605409e9aa63bca7a1ac94c989cc01cdf375f6881ade0ed5bb9694c22cc'
 
   url "http://www.prolific.com.tw/UserFiles/files/md_PL2303_MacOSX-10_6up_v#{version.gsub('.', '_')}.zip"
+  name 'Prolific USB-Serial Cable driver'
   homepage 'http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=229&pcid=41'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
