@@ -4,6 +4,7 @@ cask :v1 => 'tcl' do
 
   # activestate.com is the official download host per the vendor homepage
   url "http://downloads.activestate.com/ActiveTcl/releases/#{version.sub(%r{\.\d+$},'')}/ActiveTcl#{version}-macosx10.5-i386-x86_64-threaded.dmg"
+  name 'ActiveTcl'
   homepage 'http://tcl.tk/'
   license :oss
 
