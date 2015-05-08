@@ -3,6 +3,7 @@ cask :v1 => 'dmm' do
   sha256 :no_check
 
   url 'https://www.dmm.com/transfer/-/dmmviewer/=/device=mac/'
+  name 'DMMViewer'
   homepage 'http://www.dmm.com/dc/book/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

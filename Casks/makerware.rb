@@ -4,6 +4,7 @@ cask :v1 => 'makerware' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/downloads.makerbot.com/makerware/MakerWare%20Bundle%20of%20Awesome%20#{version}.dmg"
+  name 'MakerBot MakerWare'
   homepage 'http://www.makerbot.com/makerware/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

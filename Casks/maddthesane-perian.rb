@@ -4,6 +4,7 @@ cask :v1 => 'maddthesane-perian' do
 
   url "https://github.com/MaddTheSane/perian/releases/download/#{version}/Perian.prefPane.zip"
   appcast 'https://github.com/MaddTheSane/perian/releases.atom'
+  name 'Perian'
   homepage 'https://github.com/MaddTheSane/perian'
   license :gpl
 
