@@ -3,7 +3,7 @@ cask :v1 => 'mac2imgur' do
   sha256 :no_check
 
   # mileswd.com is the official download host per the vendor homepage
-  url 'https://mac2imgur.mileswd.com/static/mac2imgur.zip'
+  url 'https://mileswd.com/mac2imgur/latest'
   name 'mac2imgur'
   homepage 'https://github.com/mileswd/mac2imgur'
   license :gpl
