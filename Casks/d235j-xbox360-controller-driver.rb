@@ -4,6 +4,7 @@ cask :v1 => 'd235j-xbox360-controller-driver' do
 
   url "https://github.com/d235j/360Controller/releases/download/v#{version}-unofficial/360ControllerInstall_#{version}_unofficial.dmg"
   appcast 'https://github.com/d235j/360Controller/releases.atom'
+  name 'TattieBogle Xbox 360 Driver (d235j)'
   homepage 'https://github.com/d235j/360Controller'
   license :gpl
 
