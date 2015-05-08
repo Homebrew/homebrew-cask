@@ -1,6 +1,6 @@
 cask :v1 => 'seil' do
-  version '11.0.0'
-  sha256 '4b2a5afe8c45a46af7b8a5ef291615627d795c90ba1614b5532eafa479e8f30b'
+  version '11.1.0'
+  sha256 'eb87ad8b903ba14de69ce7e64913a85d53cc59ee8af5fa916211c3a00d29bf7d'
 
   url "https://pqrs.org/macosx/keyremap4macbook/files/Seil-#{version}.dmg"
   name 'Seil'
