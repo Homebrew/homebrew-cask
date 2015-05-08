@@ -4,6 +4,7 @@ cask :v1 => 'hsang' do
 
   # netease.com is the official download host per the vendor homepage
   url "http://nie.gdl.netease.com/lushi/HSAng_#{version}.dmg"
+  name 'HSAng'
   homepage 'http://lushi.163.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
