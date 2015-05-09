@@ -3,6 +3,7 @@ cask :v1 => 'heart' do
   sha256 :no_check
 
   url 'http://presstube.com/screensavers/presstube-heart-mac.zip'
+  name 'Presstube Heart'
   homepage 'http://presstube.com/blog/2011/heart/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
