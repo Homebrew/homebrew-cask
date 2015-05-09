@@ -4,6 +4,7 @@ cask :v1_1 => 'temperature-monitor' do
 
   # bresink.eu is the official download host per the vendor homepage
   url 'http://www.bresink.eu/Downloads/TemperatureMonitor.dmg'
+  name 'Temperature Monitor'
   homepage 'http://www.bresink.com/osx/LegacyProducts.html'
   license :commercial
 
