@@ -4,6 +4,7 @@ cask :v1 => 'vox-preferences-pane' do
 
   # devmate.com is the official download host per the vendor homepage
   url 'http://dl.devmate.com/com.coppertino.VoxPrefs/VoxPrefs.dmg'
+  name 'VOX Preferences'
   homepage 'http://coppertino.com/vox/addon.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

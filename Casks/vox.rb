@@ -4,6 +4,7 @@ cask :v1 => 'vox' do
 
   # devmate.com is the official download host per the vendor homepage
   url 'http://dl.devmate.com/com.coppertino.Vox/Vox.dmg'
+  name 'VOX'
   homepage 'http://coppertino.com/vox/osx/'
   license :freemium
 
