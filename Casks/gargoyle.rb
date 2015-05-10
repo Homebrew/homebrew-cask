@@ -2,9 +2,10 @@ cask :v1 => 'gargoyle' do
   version '2011.1'
   sha256 '4e830ad3feec78d623ce5c13ce14f440f9769d302ac46604afc4b9785baa038c'
 
-  url "https://garglk.googlecode.com/files/gargoyle-#{version}-mac.dmg"
+  url "https://github.com/garglk/garglk/releases/download/stable-#{version}/gargoyle-#{version}-mac.dmg"
+  appcast 'https://github.com/garglk/garglk/releases.atom'
   name 'Gargoyle'
-  homepage 'https://code.google.com/p/garglk/'
+  homepage 'https://github.com/garglk/garglk'
   license :oss
 
   app 'Gargoyle.app'
