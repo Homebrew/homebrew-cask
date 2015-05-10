@@ -83,13 +83,11 @@ class Hbc::Artifact::Symlinked < Hbc::Artifact::Base
   end
 
   def install_phase
-    # the sort is for predictability between Ruby versions
-    @cask.artifacts[self.class.artifact_dsl_key].sort.each { |artifact| link(artifact) }
+    @cask.artifacts[self.class.artifact_dsl_key].each { |artifact| link(artifact) }
   end
 
   def uninstall_phase
-    # the sort is for predictability between Ruby versions
-    @cask.artifacts[self.class.artifact_dsl_key].sort.each { |artifact| unlink(artifact) }
+    @cask.artifacts[self.class.artifact_dsl_key].each { |artifact| unlink(artifact) }
   end
 
   def preflight_checks(source, target)
