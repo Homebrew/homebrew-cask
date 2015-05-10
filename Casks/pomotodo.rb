@@ -3,7 +3,7 @@ cask :v1 => 'pomotodo' do
   sha256 :no_check
 
   # hackplan.com is the official download host per the vendor homepage
-  url 'http://cdn.hackplan.com/theair/1419250299/Pomotodo.dmg'
+  url 'http://air.hackplan.com/v1/p/com.pomotodo.PomotodoMac/download'
   name 'Pomodoro'
   homepage 'https://pomotodo.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
