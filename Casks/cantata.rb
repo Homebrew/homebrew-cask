@@ -4,7 +4,7 @@ cask :v1 => 'cantata' do
 
   url 'https://drive.google.com/uc?export=download&id=0Bzghs6gQWi60WmNlSDh6dTVzYTg'
   name 'cantata'
-  homepage 'https://code.google.com/p/cantata/'
+  homepage 'https://github.com/cdrummond/cantata'
   license :gpl
 
   app 'Cantata.app'

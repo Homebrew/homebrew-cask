@@ -7,7 +7,7 @@ cask :v1 => 'tunnelblick' do
   appcast 'https://www.tunnelblick.net/appcast.rss',
           :sha256 => '7fa119cda4d782dc61cb75895c70b3572652df737c908270c48a09d67a874592'
   name 'Tunnelblick'
-  homepage 'https://code.google.com/p/tunnelblick/'
+  homepage 'https://www.tunnelblick.net'
   license :gpl
 
   app 'Tunnelblick.app'
