@@ -7,5 +7,5 @@ cask :v1 => 'ganttproject' do
   homepage 'http://www.ganttproject.biz'
   license :oss
 
-  app "GanttProject.app"
+  app 'GanttProject.app'
 end
