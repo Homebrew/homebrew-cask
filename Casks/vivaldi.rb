@@ -1,5 +1,5 @@
 cask :v1 => 'vivaldi' do
-  version '1.0.162.4'
+  version '1.0.162.9'
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://vivaldi.com/download/Vivaldi_TP3.#{version}.dmg"
