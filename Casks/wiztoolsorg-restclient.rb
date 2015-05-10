@@ -1,8 +1,9 @@
 cask :v1 => 'wiztoolsorg-restclient' do
-  version '3.2.2'
-  sha256 'd920279ef6406acb02a12485e1e8adaf1942cf196f0628c8e6b40744f6120aac'
+  version '3.5'
+  sha256 'fddd89b694548b06adc4ab65adbbef81eb47c6f206818f95f953aca577aff263'
 
-  url "http://download.wiztools.org/rest-client/archive/restclient-ui-#{version}.dmg"
+  # fosshub.com is the official download host per the vendor homepage
+  url "http://code.fosshub.com/WizToolsorg-RESTClient/download/RESTClient-#{version}.dmg"
   name 'RESTClient'
   homepage 'https://github.com/wiztools/rest-client'
   license :oss
