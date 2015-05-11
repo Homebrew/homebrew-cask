@@ -9,5 +9,5 @@ cask :v1 => 'electron' do
   license :mit
 
   app 'Electron.app'
-  binary 'Electron.app/Contents/MacOS/Electron'
+  binary 'Electron.app/Contents/MacOS/Electron', :target => 'electron'
 end
