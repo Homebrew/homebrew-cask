@@ -1,5 +1,40 @@
 # CHANGELOG
 
+## 0.54.0
+
+* __Casks__
+  - 213 Casks added (1441 updated) by 495 contributors since 0.53.3
+  - Total current Casks in HEAD	    2491
+* __Features__
+  - [#10291][] Allow :sudo in uninstall stanza (:script + :early_script)
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#10549][] brew-cask: depend on Ruby 2.0. <3 [@mikemcquaid][]
+  - [#10622][] fix dependency name conflict <3 [@xu-cheng][]
+* __Internal Changes__
+  - [#9922][] Add rubocop rake task to travis config <3 [@jawshooah][]
+  - [#9776][] Audit for illegal SHA-256 digests
+  - [#10628][] brew-cask.rb: name requirement subclass better <3 [@mikemcquaid][]
+* __Documentation__
+  - 15 doc commits since 0.53.3
+* __Contributors__
+  - New contributors since 0.53.3	321
+  - All-time contributors	1818
+* __Release Date__
+  - 2015-05-11 03:00:00 UTC
+
+[#10291]: https://github.com/caskroom/homebrew-cask/issues/10291
+[#10549]: https://github.com/caskroom/homebrew-cask/issues/10549
+[#10622]: https://github.com/caskroom/homebrew-cask/issues/10622
+[#10628]: https://github.com/caskroom/homebrew-cask/issues/10628
+[#9776]: https://github.com/caskroom/homebrew-cask/issues/9776
+[#9922]: https://github.com/caskroom/homebrew-cask/issues/9922
+[@jawshooah]: https://github.com/jawshooah
+[@mikemcquaid]: https://github.com/mikemcquaid
+[@xu-cheng]: https://github.com/xu-cheng
+
+
 ## 0.53.3
 
 * __Fixes__
