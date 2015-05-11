@@ -5,8 +5,11 @@ cask :v1 => 'electron' do
   url "https://github.com/atom/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/atom/electron/releases.atom'
   name 'Electron'
+  app 'Electron.app'
   homepage 'http://electron.atom.io/'
   license :mit
 
-  stage_only true
+  postflight do
+    system '/bin/ln', '-s', "#{staged_path}/Electron.app/Contents/MacOS/Electron", '/usr/local/bin/electron'
+  end
 end
