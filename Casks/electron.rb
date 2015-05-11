@@ -8,5 +8,6 @@ cask :v1 => 'electron' do
   homepage 'http://electron.atom.io/'
   license :mit
 
-  stage_only true
+  app 'Electron.app'
+  binary 'Electron.app/Contents/MacOS/Electron'
 end
