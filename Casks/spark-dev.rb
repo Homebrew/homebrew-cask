@@ -1,6 +1,6 @@
 cask :v1 => 'spark-dev' do
-  version '0.0.20'
-  sha256 'f2fa70e23590c6b57f1415dabee56f60671637526fd0348fdd019d1304b341ff'
+  version '0.0.22'
+  sha256 '38fc0e9ad89fc04d07d0de460d9977830af62391aa637e9e7a29bae64ba6f007'
 
   url "https://github.com/spark/spark-dev/releases/download/v#{version}/spark-dev-mac.zip"
   appcast 'https://github.com/spark/spark-dev/releases.atom'
