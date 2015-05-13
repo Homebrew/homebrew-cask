@@ -8,7 +8,7 @@ cask :v1 => 'filebot' do
   homepage 'http://www.filebot.net/'
   license :gpl
 
-  app 'FileBot.app'
+  app 'FileBot.app', :target => 'FileBot (console).app'
   binary 'FileBot.app/Contents/MacOS/filebot.sh', :target => 'filebot'
   caveats 'FileBot requires Java 8. Run "java -version" to verify.'
 end
