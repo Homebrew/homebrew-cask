@@ -11,4 +11,10 @@ cask :v1 => 'remote-desktop-connection' do
   pkg 'RDC Installer.mpkg'
 
   uninstall :pkgutil => 'com.microsoft.rdc.all.*'
+
+  caveats <<-EOS.undent
+    Remote Desktop Connection might not work with all versions of 
+    Microsoft Windows including Windows 2012. There is a separate
+    "Microsoft Remote Desktop" application in the Mac App Store.
+  EOS
 end
