@@ -1,9 +1,9 @@
 cask :v1 => 'duet' do
-  version '1.2.5'
-  sha256 'd3c178b6b07347fcacc62396706f4f6b9efbbc8d8eb7b0b5f003df0406d59143'
+  version '1.2.9'
+  sha256 'de45914dd00923e372a1d2aa205f4d14e27dd005c228af093a8e9a95d7516951'
 
   # devmate.com is the official download host per the vendor homepage
-  url "http://dl.devmate.com/com.kairos.duet/#{version}/1422514272/duet-#{version}.zip"
+  url 'http://dl.devmate.com/com.kairos.duet/1.2.9/1430518908/duet-1.2.9.zip'
   name 'Duet'
   homepage 'http://www.duetdisplay.com/'
   license :unknown
