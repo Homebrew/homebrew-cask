@@ -1,6 +1,6 @@
 cask :v1 => 'calibre' do
-  version '2.27.0'
-  sha256 '564a3298715e7f5a2be66ac3a863121ba82b18b881f8f06746027ae101e00e58'
+  version '2.28.0'
+  sha256 'd4804d7e380ebb35a8f7856f62cab29a5c309f5fe4fb406ed30c6ff33d66ce5c'
 
   # github.com is an official download host per the vendor homepage, and a faster mirror than the main one
   url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg"
