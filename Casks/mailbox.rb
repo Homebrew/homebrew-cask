@@ -11,4 +11,6 @@ cask :v1 => 'mailbox' do
   license :gratis
 
   app 'Mailbox (Beta).app'
+
+  zap :delete => '~/Library/Caches/com.dropbox.mbd.external-beta/'
 end
