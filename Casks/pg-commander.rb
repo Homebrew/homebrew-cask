@@ -1,6 +1,6 @@
 cask :v1 => 'pg-commander' do
-  version '1.5.3'
-  sha256 '1c67c3ad969c11f503b0b082c1f0380869f40257b4f2141bcc2bb8212f6c24db'
+  version '1.5.5'
+  sha256 '802a605757dcfff8ea5227ecd74c10ef2f3ca8f63a0b4aadc7c2052f37270c82'
 
   url "https://eggerapps.at/pgcommander/download/pgcommander-#{version}.zip"
   name 'PG Commander'
