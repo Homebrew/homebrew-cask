@@ -21,12 +21,16 @@ cask :v1 => 'sencha' do
 
         http://www.sencha.com/legal/sencha-cmd-license
 
-      Sencha Cmd adds two changes to your ~/.bashrc file:
+      Sencha Cmd adds two changes to your ~/.bashrc or ~/.profile file:
 
         export PATH=/opt/Sencha/Cmd/#{version}:$PATH
         export SENCHA_CMD_3_0_0="/opt/Sencha/Cmd/#{version}"
 
-      If you are a zshell user, copy at the end of your .zshrc file both lines.
+      If you are a zshell user, append both lines to your .zshrc file.
+
+      Sencha Cmd requires read/write permissions to it's application folder:
+
+        sudo chown -R `id -un`:`id -gn` /opt/Sencha
     EOS
   end
 end
