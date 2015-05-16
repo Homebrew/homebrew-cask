@@ -13,6 +13,12 @@ cask :v1 => 'omnifocus' do
     url "http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniFocus-#{version}.dmg"
   end
 
+  name 'OmniFocus'
+  homepage 'https://www.omnigroup.com/omnifocus/'
+  license :commercial
+
+  app 'OmniFocus.app'
+
   if MacOS.release <= :mountain_lion
     zap :delete => [
                     '~/Library/Application Support/OmniFocus/Plug-Ins',
@@ -27,10 +33,4 @@ cask :v1 => 'omnifocus' do
                     '~/Library/Caches/Metadata/com.omnigroup.OmniFocus2'
                    ]
   end
-
-  name 'OmniFocus'
-  homepage 'https://www.omnigroup.com/omnifocus/'
-  license :commercial
-
-  app 'OmniFocus.app'
 end
