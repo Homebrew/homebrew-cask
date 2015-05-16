@@ -15,6 +15,11 @@ cask :v1 => 'sencha' do
                          :args => ['--mode', 'unattended']
                        }
 
+  postflight do
+    system  '/usr/bin/sudo', '-E', '--',
+            '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", '/opt/Sencha'
+  end
+
   caveats do
     <<-EOS.undent
       Installing this Cask means you have AGREED to the Sencha Cmd License
