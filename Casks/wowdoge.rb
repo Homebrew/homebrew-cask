@@ -5,7 +5,7 @@ cask :v1 => 'wowdoge' do
   url 'http://www.wowdoge.org/download/WowDoge.dmg'
   name 'WowDoge'
   homepage 'http://www.wowdoge.org'
-  license :mit    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :mit
 
   app 'WowDoge.app'
 end
