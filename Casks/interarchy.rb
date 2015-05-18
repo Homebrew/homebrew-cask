@@ -7,7 +7,7 @@ cask :v1 => 'interarchy' do
     sha256 '58ba32e52413f15b75203f2aada8bb3bd366819907b221f9f717b78c6eb7f0a5'
   end
 
-  url "https://s3.amazonaws.com/nolobe/Interarchy-#{version}.zip"
+  url "https://nolobe.com/interarchy/download?v=#{version}"
   name 'Interarchy'
   homepage 'https://nolobe.com/interarchy/'
   license :commercial
