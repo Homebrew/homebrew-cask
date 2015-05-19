@@ -10,6 +10,5 @@ cask :v1 => 'duet' do
 
   app 'duet.app'
 
-  uninstall :kext => 'com.karios.driver.DuetDisplay',
-            :delete => '/usr/libexec/coreduetd'
+  uninstall :kext => 'com.karios.driver.DuetDisplay'
 end
