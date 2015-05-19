@@ -1,6 +1,6 @@
 cask :v1 => 'groovesquid' do
-  version '0.8.2'
-  sha256 '3ad28d5945b8c5f5d7a1cdc540436e77dfbcfb895ecc417cf12d1a6789521928'
+  version '0.9.1'
+  sha256 'ca6e7278619d8a21906faec6f58cbcc6b5fa6eae30537bf076ff656b102bf9f8'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/groovesquid/groovesquid/releases/download/v#{version}/Groovesquid.dmg"
