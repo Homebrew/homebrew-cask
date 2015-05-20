@@ -1,6 +1,6 @@
 cask :v1 => 'subtitles' do
   version '2.3'
-  sha256 '2b4d3fb2ab4399b021752762e7a9394e49a77c6e9a0c28c0412e799942887e43'
+  sha256 'ee32064038b1911f1788e08c15dc52ab762748fef9aa16fabde9206da251ab10'
 
   url "http://subtitlesapp.com/download/Subtitles-mac-#{version}.zip"
   appcast 'http://subtitlesapp.com/updates.xml',
