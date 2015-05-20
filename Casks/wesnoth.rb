@@ -1,6 +1,6 @@
 cask :v1 => 'wesnoth' do
-  version '1.12'
-  sha256 '603877e2acc7b867907a2f06a71d62fb7cbd0c0e39c5b29de207b78b2121e7e2'
+  version '1.12.2'
+  sha256 '731bbe172b14b92e72c415193595de698614ddc282444755e8204d203366b5f7'
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/wesnoth/Wesnoth_#{version}.dmg"
