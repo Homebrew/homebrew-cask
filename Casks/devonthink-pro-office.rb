@@ -1,5 +1,5 @@
 cask :v1 => 'devonthink-pro-office' do
-  version '2.8'
+  version '2.8.5'
   sha256 '592d2c5e8ce9839102afb7c15eb71147d94006c5710ff91a06c8783bee8ef91b'
 
   # amazonaws.com is the official download host per the vendor homepage
