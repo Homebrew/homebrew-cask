@@ -7,7 +7,7 @@ cask :v1 => 'sts' do
       '4.4.2'   # find eclipse version at http://spring.io/tools/sts/all
     end
   end
-  
+
   url "http://dist.springsource.com/release/STS/#{version}.RELEASE/dist/e#{Utils.based_on_eclipse.gsub(/\.\d$/, '')}/spring-tool-suite-#{version}.RELEASE-e#{Utils.based_on_eclipse}-macosx-cocoa-x86_64.tar.gz"
   name 'Spring Tool Suite'
   homepage 'http://spring.io/tools/sts'
