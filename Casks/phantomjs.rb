@@ -1,6 +1,6 @@
 cask :v1 => 'phantomjs' do
-  version '1.9.8'
-  sha256 '8f15043ae3031815dc5f884ea6ffa053d365491b1bc0dc3a0862d5ff1ac20a48'
+  version '2.0.0'
+  sha256 '9ae74da20e8831c4d48105004993fecee3e7e66f5d3381f879de366d82f9215c'
 
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-#{version}-macosx.zip"
