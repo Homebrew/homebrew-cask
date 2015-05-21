@@ -9,4 +9,4 @@ cask :v1 => 'gmvault' do
   license :gpl
 
   binary "gmvault-v#{version}/bin/gmvault"
-+end
+end
