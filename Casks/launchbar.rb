@@ -5,8 +5,8 @@ cask :v1 => 'launchbar' do
     sha256 '22a1ec0c10de940e5efbcccd18b8b048d95fb7c63213a01c7976a76d6be69a4d'
     url "http://www.obdev.at/downloads/launchbar/legacy/LaunchBar-#{version}.dmg"
   else
-    version '6.3'
-    sha256 '0ee5bacc02dc5213fc80934fed66124a718fd72d654ce3a4365cc694d76c1578'
+    version '6.4'
+    sha256 '320c177839bad91f3dda90bd2fb4476bb31c5a6d723437505d776456dd8688cc'
     url "http://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
   end
 
