@@ -4,6 +4,8 @@ cask :v1 => 'cactus' do
 
   url "http://update.cactusformac.com/static/downloads/Cactus-#{version}.zip"
   name 'Cactus'
+  appcast 'http://update.cactusformac.com.s3-website-us-east-1.amazonaws.com/appcast.xml',
+          :sha256 => 'a8ebf23005cc09a8471aa253f2e45359ab337cf2e0f2c1db2fc8d304e78348df'
   homepage 'http://cactusformac.com/'
   license :bsd
 
