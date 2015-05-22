@@ -8,4 +8,12 @@ cask :v1 => 'qq' do
   license :commercial
 
   app 'QQ.app'
+
+  uninstall :quit => 'com.tencent.qq'
+
+  zap :delete => [
+                  '~/Library/Containers/com.tencent.qq',
+                  '~/Library/Containers/com.tencent.localserver',
+                  '~/Library/Containers/com.tencent.ScreenCapture'
+                 ]
 end
