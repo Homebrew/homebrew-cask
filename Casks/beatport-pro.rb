@@ -5,6 +5,8 @@ cask :v1 => 'beatport-pro' do
   url "http://pro.beatport.com/mac/#{version}/beatportpro_#{version}.dmg"
   name 'Beatport'
   name 'Beatport Pro'
+  appcast 'http://pro.beatport.com/mac/appcast.xml',
+          :sha256 => '7723c49b5bfa4452c6322be95fb64763312e3c776c1775211fa042240b675317'
   homepage 'http://pro.beatport.com/'
   license :closed
 
