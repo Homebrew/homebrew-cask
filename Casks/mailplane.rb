@@ -5,9 +5,13 @@ cask :v1 => 'mailplane' do
   url 'http://update.mailplaneapp.com/mailplane_3.php'
   name 'Mailplane'
   homepage 'http://mailplaneapp.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Mailplane 3.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
 
   zap :delete => '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
 end
