@@ -4,6 +4,8 @@ cask :v1 => 'cashculator' do
 
   url "http://dl.apparentsoft.com/Cashculator_#{version}.dmg"
   name 'Cashculator'
+  appcast 'http://dl.apparentsoft.com/cashculator.rss',
+          :sha256 => 'cb4c7addc61d011a397e6d73443f99e81b9bc9b435c79426f10f7dc219891d07'
   homepage 'http://www.apparentsoft.com/cashculator'
   license :freemium
 
