@@ -5,7 +5,20 @@ cask :v1 => 'qqbrowser' do
   url "http://dldir1.qq.com/invc/tt/QQBrowser_#{version.sub(%r{^.*\.},'')}.dmg"
   name 'QQ浏览器'
   homepage 'http://browser.qq.com/mac/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'QQBrowser.app'
+
+  uninstall :quit => 'com.tencent.QQBrowser'
+
+  zap :delete => [
+                  '~/Library/Application Support/QQBrowser2',
+                  '~/Library/Caches/com.tencent.QQBrowser',
+                  '~/Library/Caches/com.tencent.QQBrowser.helper',
+                  '~/Library/Caches/QQBrowser2',
+                  '~/Library/Preferences/com.tencent.QQBrowser.helper.EH.plist',
+                  '~/Library/Preferences/com.tencent.QQBrowser.helper.plist',
+                  '~/Library/Preferences/com.tencent.QQBrowser.plist',
+                  '~/Library/Saved Application State/com.tencent.QQBrowser.savedState'
+                 ]
 end
