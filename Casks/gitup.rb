@@ -6,7 +6,7 @@ cask :v1 => 'gitup' do
   url 'https://s3-us-west-2.amazonaws.com/gitup-builds/stable/GitUp.zip'
   name 'GitUp'
   homepage 'http://gitup.co'
-  license :gratis
+  license :commercial
 
   app 'GitUp.app'
 end
