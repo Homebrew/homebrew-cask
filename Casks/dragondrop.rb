@@ -4,6 +4,8 @@ cask :v1 => 'dragondrop' do
 
   url 'http://shinyplasticbag.com/dragondrop/dragondrop.dmg'
   name 'DragonDrop'
+  appcast 'https://shinyplasticbag.com/dragondrop/updates.xml',
+          :sha256 => '5d68912968cd59c8e98393dd5d4781f951d90837efbba42c1ba6fe17135860f0'
   homepage 'http://shinyplasticbag.com/dragondrop/'
   license :commercial
 

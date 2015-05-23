@@ -5,7 +5,7 @@ cask :v1 => 'airflick' do
   url "http://ericasadun.com/ftp/AirPlay/AirFlick-#{version}.zip"
   name 'AirFlick'
   homepage 'http://ericasadun.com/ftp/AirPlay/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'AirFlick.app'
 end

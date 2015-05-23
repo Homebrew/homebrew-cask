@@ -6,7 +6,7 @@ cask :v1 => '0xdbe-eap' do
   name '0xDBE EAP'
   name '0xDBE'
   homepage 'http://www.jetbrains.com/dbe/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app '0xDBE EAP.app'
 

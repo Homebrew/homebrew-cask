@@ -5,6 +5,8 @@ cask :v1 => 'duet' do
   # devmate.com is the official download host per the vendor homepage
   url 'http://dl.devmate.com/com.kairos.duet/1.2.9/1430518908/duet-1.2.9.zip'
   name 'Duet'
+  appcast 'http://updates.duetdisplay.com/checkMacUpdates',
+          :sha256 => 'df779f7d35f7327a12bec484865311b869e6d09ccc6b43e11599d1dd47d1bc9d'
   homepage 'http://www.duetdisplay.com/'
   license :unknown
 
