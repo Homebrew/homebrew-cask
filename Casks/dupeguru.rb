@@ -4,6 +4,8 @@ cask :v1 => 'dupeguru' do
 
   url "http://download.hardcoded.net/dupeguru_osx_#{version.gsub('.', '_')}.dmg"
   name 'dupeGuru'
+  appcast 'http://www.hardcoded.net/updates/dupeguru.appcast',
+          :sha256 => '3abf01d99fb21c356cb439132cab9c734f6d514b4a19e7fcc1b4c408fcd08dbb'
   homepage 'http://www.hardcoded.net/dupeguru/'
   license :bsd
 
