@@ -4,6 +4,8 @@ cask :v1 => 'gamesalad' do
 
   url "http://gs.releases.x.s3.amazonaws.com/creator/#{version}/GameSalad-Creator-#{version}-beta.dmg"
   name 'GameSalad'
+  appcast 'http://gamesalad.com/download/studioUpdates',
+          :sha256 => '51e52b11461c2ee5df1205581d9084fd2da583b93366d4608797c513ff2f13eb'
   homepage 'http://gamesalad.com/'
   license :commercial
 
