@@ -4,8 +4,8 @@ cask :v1 => 'filezilla' do
     version '3.8.1'
     sha256 '86c725246e2190b04193ce8e7e5ea89d5b9318e9f20f5b6f9cdd45b6f5c2d283'
   else
-    version '3.10.3'
-    sha256 '63541098c881dd698aa648506cf922b857d33a12fa31ad39d6faa851f5d5d49b'
+    version '3.11.0'¬
+    sha256 '552fa74acc7fb39a909173ecb907abaa9f970a807b9fe5be40607eaa6d3021e1'¬
   end
 
   # sourceforge.net is the official download host per the vendor homepage
