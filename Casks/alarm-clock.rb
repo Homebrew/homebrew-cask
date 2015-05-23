@@ -5,7 +5,7 @@ cask :v1 => 'alarm-clock' do
   url "http://wayback.archive.org/web/20130123192255/http://www.robbiehanson.com/alarmclock/downloads/Alarm%20Clock%20(#{version}).dmg"
   name 'Alarm Clock'
   homepage 'http://wayback.archive.org/web/20130123192255/http://www.robbiehanson.com/alarmclock/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Alarm Clock.app'
 end
