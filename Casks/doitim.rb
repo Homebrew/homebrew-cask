@@ -4,6 +4,8 @@ cask :v1 => 'doitim' do
 
   url "http://version.doit.im/dl/Doit.im.#{version}.zip"
   name 'Doit.im'
+  appcast 'http://version.doit.im/mac/update.xml',
+          :sha256 => '3ab0939dc09ccabb0beb97bf9da3c88aef5f8813bda743ebdb881640c9e0bab9'
   homepage 'http://doit.im/'
   license :commercial
 
