@@ -4,6 +4,8 @@ cask :v1 => 'jbidwatcher' do
 
   url "https://www.jbidwatcher.com/download/JBidwatcher-#{version}.dmg"
   name 'JBidwatcher'
+  appcast 'https://www.jbidwatcher.com/sparkle/updates.xml',
+          :sha256 => 'aa8cc693e2f0047a2214f990d5f418f026acf473dcb1f0f76204f7fee730077b'
   homepage 'http://www.jbidwatcher.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
