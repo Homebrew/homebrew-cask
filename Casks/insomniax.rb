@@ -4,6 +4,8 @@ cask :v1 => 'insomniax' do
 
   url "http://insomniax.semaja2.net/InsomniaX-#{version}.tgz"
   name 'InsomniaX'
+  appcast 'http://insomniax.semaja2.net/profile/profileInfo.php',
+          :sha256 => '834f8bedbd0037f7e65a47c62939f2073f6b1efc5014ddd3f3d6e37650c246cb'
   homepage 'http://semaja2.net/projects/insomniaxinfo/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

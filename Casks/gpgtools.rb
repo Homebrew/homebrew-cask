@@ -6,6 +6,8 @@ cask :v1 => 'gpgtools' do
   gpg "#{url}.sig",
       :key_url => 'https://gpgtools.org/GPGTools%2000D026C4.asc'
   name 'GPG Suite'
+  appcast 'https://gpgtools.org/releases/gka/appcast.xml',
+          :sha256 => '23d1d5dea53c4c380bed5f7b6331060539e3acd62cd844bda834388d0a26da81'
   homepage 'https://gpgtools.org/'
   license :gpl
 
