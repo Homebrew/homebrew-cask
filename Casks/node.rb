@@ -1,6 +1,6 @@
 cask :v1 => 'node' do
-  version '0.12.3'
-  sha256 '215366375df44bb77998f34eeedae256416ca91049c1551a6b25164842cdb8b3'
+  version '0.12.4'
+  sha256 'ca483deb4cf71bb308e2c140c4773d7521a42e27d0f17a07f183169bb416aea0'
 
   url "http://nodejs.org/dist/v#{version}/node-v#{version}.pkg"
   name 'Node.js'
