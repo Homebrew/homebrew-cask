@@ -4,6 +4,8 @@ cask :v1 => 'inboard' do
 
   url "http://inboardapp.com/trial/Inboard-#{version}.zip"
   name 'Inboard'
+  appcast 'http://inboardapp.com/appcast.xml',
+          :sha256 => '326af38da9022b159f30356465725bab198645bd4e5e124a13687db7cb3a139f'
   homepage 'http://inboardapp.com'
   license :commercial
 
