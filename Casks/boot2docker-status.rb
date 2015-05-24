@@ -1,8 +1,9 @@
 cask :v1 => 'boot2docker-status' do
-  version '1.1.0'
-  sha256 'ce16ce45def874edacc719ff5ef6b79655011adbb3284da13bc3fef7e09dbcd2'
+  version '1.0.0'
+  sha256 '95b05b0a9b2047c7e2df6f649f322da70b59b1054ae586e82f1d6c741ede40de'
 
-  url "http://boot2docker-status.nickgartmann.com/Boot2Docker%20Status-v#{version}.zip"
+  url "https://github.com/nickgartmann/boot2docker-status/releases/download/#{version}/Boot2Docker.Status-v#{version}.zip"
+  appcast 'https://github.com/nickgartmann/boot2docker-status/releases.atom'
   name 'Boot2Docker Status'
   homepage 'http://boot2docker-status.nickgartmann.com'
   license :apache
