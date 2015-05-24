@@ -1,14 +1,14 @@
-cask :v1 => 'amazon-zocalo' do
+cask :v1 => 'amazon-workdocs' do
   version :latest
   sha256 :no_check
 
   # cloudfront.net is the official download host per the vendor homepage
-  url 'https://dpfrknqwmbop6.cloudfront.net/mac/Amazon%20Zocalo.pkg'
-  name 'Amazon Zocalo'
-  homepage 'http://aws.amazon.com/zocalo/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  url 'https://d28gdqadgmua23.cloudfront.net/mac/Amazon%20WorkDocs.pkg'
+  name 'Amazon WorkDocs'
+  homepage 'http://aws.amazon.com/workdocs/'
+  license :gratis
 
-  pkg 'Amazon Zocalo.pkg'
+  pkg 'Amazon WorkDocs.pkg'
 
-  uninstall :pkgutil => 'com.amazon.aws.AmazonZocalo'
+  uninstall :pkgutil => 'com.amazon.aws.AmazonWorkDocs'
 end
