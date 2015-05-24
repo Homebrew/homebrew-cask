@@ -4,7 +4,6 @@ cask :v1 => 'deploymate' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/deploymate/download/Deploymate#{version.gsub('.', '')}.zip"
-
   name 'Deploymate'
   homepage 'http://www.deploymateapp.com'
   license :commercial
