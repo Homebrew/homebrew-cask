@@ -11,6 +11,12 @@ cask :v1 => 'flashlight' do
   homepage 'http://flashlight.nateparrott.com/'
   license :gpl
 
+  app 'Flashlight.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
+
   uninstall :quit => 'com.nateparrott.Flashlight.FlashlightSIMBLAgent'
 
   zap :delete => [
@@ -21,6 +27,4 @@ cask :v1 => 'flashlight' do
     '~/Library/Saved Application State/com.nateparrott.Flashlight.savedState',
     '~/Library/ScriptingAdditions/Flashlight.osax'
   ]
-
-  app 'Flashlight.app'
 end
