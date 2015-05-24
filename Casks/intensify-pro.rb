@@ -4,6 +4,8 @@ cask :v1 => 'intensify-pro' do
 
   url "http://cdn.macphun.com/updates/IntensifyPro/IntensifyPro_Distribution_v#{version.gsub('.','_')}.zip"
   name 'Intensify Pro'
+  appcast 'http://cdn.macphun.com/updates/IntensifyPro/appcast.xml',
+          :sha256 => '2e8537a93ce1f48b5dcb3746488f9e87c82db7f6abc586b27b50fda1645bd2cf'
   homepage 'http://macphun.com/intensify'
   license :commercial
 
