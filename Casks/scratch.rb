@@ -12,9 +12,9 @@ cask :v1 => 'scratch' do
             :sudo   => true
 
   uninstall :script => {
-    :executable => '/Applications/Utilities/Adobe AIR Application Installer.app/Contents/MacOS/Adobe AIR Application Installer',
-    :args => %w[-uninstall -silent /Applications/Scratch\ 2.app]
-  }
+              :executable => '/Applications/Utilities/Adobe AIR Application Installer.app/Contents/MacOS/Adobe AIR Application Installer',
+              :args => %w[-uninstall -silent /Applications/Scratch\ 2.app]
+            }
 
   depends_on :cask => 'adobe-air'
 end
