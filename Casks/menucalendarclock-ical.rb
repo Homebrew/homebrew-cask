@@ -5,6 +5,8 @@ cask :v1 => 'menucalendarclock-ical' do
   url "http://www.objectpark.net/download/MenuCalendarClock-#{version}.dmg.gz"
   container :nested => "menucalendarclock-ical-#{version}"
   name 'MenuCalendarClock'
+  appcast 'http://www.objectpark.net/appcasts/MCC3.xml',
+          :sha256 => 'd257aeaf7c2b2e59f845dedd8fa65e2fb715b7750211b66a5c471582ab9dcf67'
   homepage 'http://www.objectpark.net/en/mcc.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

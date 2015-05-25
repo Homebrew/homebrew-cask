@@ -4,6 +4,8 @@ cask :v1 => 'osculator' do
 
   url "http://dl.osculator.net/releases/osculator-#{version}.dmg"
   name 'OSCulator'
+  appcast 'http://www.osculator.net/app/profileInfo.php',
+          :sha256 => '6a7b1bf7159f8bc547febab28a24f4800b3bc61ca9d4f9477282dbb172d63fdc'
   homepage 'http://www.osculator.net'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

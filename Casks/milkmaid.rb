@@ -4,6 +4,8 @@ cask :v1_1 => 'milkmaid' do
 
   url "https://github.com/downloads/jgallen23/MilkMaid/MilkMaid-#{version}.tar.gz"
   name 'MilkMaid'
+  appcast 'https://raw.githubusercontent.com/jgallen23/MilkMaid/master/appcast.xml',
+          :sha256 => '6572d842384814eaa54ec88ba2467221aa4bd8e01ca22a00ec2b610526ee0e97'
   homepage 'https://github.com/jgallen23/MilkMaid'
   license :mit
 
