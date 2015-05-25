@@ -4,6 +4,8 @@ cask :v1 => 'pdfmasher' do
 
   url "http://download.hardcoded.net/pdfmasher_osx_#{version.gsub('.', '_')}.dmg"
   name 'PdfMasher'
+  appcast 'http://www.hardcoded.net/updates/pdfmasher.appcast',
+          :sha256 => '2007b9ce4044a444b80a80ec40016ae267a910f37880f0bed4dc881f2c3b18af'
   homepage 'http://www.hardcoded.net/pdfmasher/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
