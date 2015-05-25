@@ -1,8 +1,8 @@
 cask :v1 => 'scratch' do
-  version '435'
-  sha256 'f1e35c40b0a97e6e88a5e5b9185643d19099a9245d6a3dd724ab3ff2040077b9'
+  version '436'
+  sha256 '9cfad2ccbf24ef085de21130894107c284637321d5415ae68f7327736b533c49'
 
-  url 'https://scratch.mit.edu/scratchr2/static/sa/Scratch-435.dmg'
+  url 'https://scratch.mit.edu/scratchr2/static/sa/Scratch-436.dmg'
   name 'Scratch'
   homepage 'https://scratch.mit.edu/scratch2download/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
