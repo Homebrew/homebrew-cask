@@ -4,6 +4,8 @@ cask :v1 => 'midikeys' do
 
   url "http://www.manyetas.com/creed/MidiKeys_#{version}.zip"
   name 'MidiKeys'
+  appcast 'http://immosw.com/versions/midikeys/appcast.xml',
+          :sha256 => '87a8ce2e45af98924bfa75dcd851579a1096a0e7d5b5d92498ec77df2d4cf283'
   homepage 'http://www.manyetas.com/creed/midikeys.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
