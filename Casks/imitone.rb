@@ -1,10 +1,11 @@
-class Imitone < Cask
-  version '0.6.0'
-  sha256 '20b262c59d770de364a6ebc4c6e8e38a25a9fcdd691345b4acb4041ce25e397f'
+cask :v1 => 'imitone' do
+  version '0.7.0'
+  sha256 '86179bdc32364bb85cdeb04d0ec1d8cb8bee4cfc1dd0f15a0656412a1f9c74dc'
 
   url "http://imitone.com/beta/imitone-#{version}.dmg"
+  name 'imitone'
   homepage 'http://imitone.com/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'imitone.app'
 end

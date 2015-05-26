@@ -1,14 +1,22 @@
-class Webstorm < Cask
-  version '9.0'
-  sha256 '278b1692c9aa17b44d15a801a50714624ab7dea9aedda364f08fa45b7ff66766'
+cask :v1 => 'webstorm' do
+  version '10.0.3'
+  sha256 'a4b9ec6519ac8e2f2f13c3db17bc9ac5183b231eb943089f14bf6d899537638d'
 
   url "http://download-cf.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
+  name 'WebStorm'
   homepage 'http://www.jetbrains.com/webstorm/'
-  license :unknown
+  license :commercial
 
   app 'WebStorm.app'
 
-  postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/WebStorm.app/Contents/Info.plist"
-  end
+  caveats <<-EOS.undent
+    #{token} requires Java 6 like any other IntelliJ-based IDE.
+    You can install it with
+
+      brew cask install caskroom/homebrew-versions/java6
+
+    The vendor (JetBrains) doesn't support newer versions of Java (yet)
+    due to several critical issues, see details at
+    https://intellij-support.jetbrains.com/entries/27854363
+  EOS
 end

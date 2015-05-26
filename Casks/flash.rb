@@ -1,10 +1,13 @@
-class Flash < Cask
-  version '15.0.0.189'
-  sha256 'e9fba4902df0abaa6054c7e4572841abf25564de6ffdf6d30416fb7e3f30ab27'
+cask :v1 => 'flash' do
+  version '17.0.0.188'
+  sha256 'bf03faffb92f3941d9cf671bbbca59189830c6022a8596e0e6fd529b736cf2bc'
 
+  # macromedia.com is the official download host per the vendor homepage
   url "http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_#{version.to_i}_osx_pkg.dmg"
+  name 'Adobe Flash Player'
   homepage 'https://www.adobe.com/products/flashplayer/distribution3.html'
-  license :unknown
+  license :gratis
+  tags :vendor => 'Adobe'
 
   pkg 'Install Adobe Flash Player.pkg'
 

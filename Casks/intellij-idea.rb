@@ -1,16 +1,13 @@
-class IntellijIdea < Cask
-  version '14'
-  sha256 '9695bedfe145d70010b853cc67d7dc07bf2768e38b5b9034d1f6a00b0b9a15a7'
+cask :v1 => 'intellij-idea' do
+  version '14.1.3'
+  sha256 'a7045dd58a6d632724a0444b46b71de55ee237a8f8fa31aa9a82b685d8d8bef2'
 
   url "http://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
-  homepage 'https://www.jetbrains.com/idea/index.html'
-  license :oss
+  name 'IntelliJ IDEA'
+  homepage 'https://www.jetbrains.com/idea/'
+  license :commercial
 
   app 'IntelliJ IDEA 14.app'
-
-  postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/IntelliJ IDEA 14.app/Contents/Info.plist"
-  end
 
   zap :delete => [
                   '~/Library/Application Support/IntelliJIdea14',
@@ -18,13 +15,16 @@ class IntellijIdea < Cask
                  ]
 
   caveats <<-EOS.undent
-    #{title} may require Java 7 (an older version) available from the
-    caskroom-versions repository via
+    #{token} requires Java 6 like any other IntelliJ-based IDE.
+    You can install it with
 
-      brew cask install caskroom/versions/java7
+      brew cask install caskroom/homebrew-versions/java6
 
-    Alternatively, #{title} can be modified to use Java 8 as described in
+    The vendor (JetBrains) doesn't support newer versions of Java (yet)
+    due to several critical issues, see details at
+    https://intellij-support.jetbrains.com/entries/27854363
 
-      https://github.com/caskroom/homebrew-cask/issues/4500#issuecomment-43955932
+    To use existing newer Java at your own risk,
+    add JVMVersion=1.6+ to ~/Library/Preferences/IntelliJIdea14/idea.properties
   EOS
 end

@@ -1,12 +1,15 @@
-class Fluid < Cask
-  version '1.8.3'
-  sha256 '56438a946b281b009626a06cb099a7198e948bc8bef18a19c1bceb28bbe4d619'
+cask :v1 => 'fluid' do
+  version '1.8.4'
+  sha256 'abf5c99d45b23be3df1b62da798beab7a4fed176d28d508c2629d2d089a491ce'
 
   url "http://fluidapp.com/dist/Fluid_#{version}.zip"
   appcast 'http://fluidapp.com/appcast/fluid1.rss',
-          :sha256 => '260c43831d82b9fa593d9f32cca7bc61b594f5993908b104601ed866ee7c518a'
+          :sha256 => 'da98adbb75cb35c7ae8973c4721cba47f5d9cc06ceaef58d6b00d95bcdb7b549'
+  name 'Fluid'
   homepage 'http://fluidapp.com/'
-  license :unknown
+  license :freemium
+
+  depends_on :macos => '>= :snow_leopard'
 
   app 'Fluid.app'
 end

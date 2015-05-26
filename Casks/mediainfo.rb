@@ -1,10 +1,11 @@
-class Mediainfo < Cask
-  version '0.7.66'
-  sha256 'c96dc8998fa323d04d82ee146a7aeee63b32a6e67c5750ba099f79900788a442'
+cask :v1 => 'mediainfo' do
+  version '0.7.72'
+  sha256 'd7b283ec737a1e1e967b6ba4ab89c74ff3777e4b2ab53fecbc4381fd662dc723'
 
   url "https://mediaarea.net/download/binary/mediainfo-gui/#{version}/MediaInfo_GUI_#{version}_Mac.dmg"
+  name 'MediaInfo'
   homepage 'http://mediaarea.net/en/MediaInfo'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'MediaInfo.app'
 end

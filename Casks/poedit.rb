@@ -1,10 +1,19 @@
-class Poedit < Cask
-  version '1.6.10'
-  sha256 'd6b6d07a10099c3a31ee21622764ed6d3d007a437dab33a00b0f15e42b2dfa76'
+cask :v1 => 'poedit' do
 
-  url "http://poedit.net/dl/Poedit-#{version}.zip"
-  appcast 'http://releases.poedit.net/appcast-osx',
-          :sha256 => 'bbaf42f8a2e9754df8a60dfcef724cc6d326d6fd4cc05426c45e3a44e8f0d3dd'
+  if MacOS.release <= :snow_leopard
+    version '1.5.7'
+    sha256 '2017538011239f07924b709e4c13aa3fd7f83a96f76208b8b746fcee29251caf'
+    # sourceforge.net is the official download host per the vendor homepage
+    url "http://downloads.sourceforge.net/sourceforge/poedit/poedit-#{version}.dmg"
+  else
+    version '1.7.4'
+    sha256 'e08b1a3ffc791b78ca849bf3fdbbd9dd7cbb8944032a5bdec642560ee6118c34'
+    url "http://poedit.net/dl/Poedit-#{version}.zip"
+    appcast 'https://poedit.net/updates/osx/appcast',
+            :sha256 => '21334ec300dff8fd749f1351f1a96880091bb58bc41d2a9de9179f8d42f5602d'
+  end
+
+  name 'Poedit'
   homepage 'http://www.poedit.net'
   license :mit
 

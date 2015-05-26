@@ -1,12 +1,22 @@
-class Mysqlworkbench < Cask
-  version '6.2.3'
-  sha256 '0a66707a03d83a70f1ced521ac0954ee56ff9a6e86f81e01d03df723755e9186'
+cask :v1 => 'mysqlworkbench' do
+  version '6.3.3'
+  sha256 '2ba28b163f88bd6d3a43df8236f351bc43d8fe3d21936424fcb395bb9d56e1a6'
 
-  url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-osx-i686.dmg"
+  url "https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-osx-x86_64.dmg"
+  name 'MySQL Workbench'
   gpg "#{url}.asc",
       :key_id => '8c718d3b5072e1f5'
   homepage 'http://www.mysql.com/products/workbench'
-  license :unknown
+  license :gpl
 
   app 'MySQLWorkbench.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/MySQL/Workbench',
+                  '~/Library/Preferences/com.oracle.mysql.workbench.plist',
+                  '~/Library/Preferences/com.oracle.MySQLWorkbench.plist',
+                  '~/Library/Saved Application State/com.oracle.mysql.workbench.savedState',
+                  '~/Library/Saved Application State/com.oracle.MySQLWorkbench.savedState',
+                  '~/Library/Caches/com.oracle.mysql.workbench'
+                 ]
 end

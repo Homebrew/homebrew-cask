@@ -1,11 +1,12 @@
-class AmazonCloudDrive < Cask
+cask :v1 => 'amazon-cloud-drive' do
   version :latest
   sha256 :no_check
 
-  url 'https://d29x207vrinatv.cloudfront.net/AmazonCloudDrive.dmg'
-  appcast 'https://d29x207vrinatv.cloudfront.net/Sync/Mac/20130517-2.1/CloudDriveInstallerAppcast.xml'
-  homepage 'https://www.amazon.com/clouddrive'
-  license :unknown
+  # cloudfront.net is the official download host per the vendor homepage
+  url 'https://d29x207vrinatv.cloudfront.net/mac/AmazonCloudDriveInstaller.dmg'
+  name 'Amazon Cloud Drive App'
+  homepage 'https://www.amazon.com/clouddrive/home/'
+  license :gratis
 
-  app 'Amazon Cloud Drive.app'
+  app 'Amazon Cloud Drive App.app'
 end

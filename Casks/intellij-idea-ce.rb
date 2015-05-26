@@ -1,16 +1,13 @@
-class IntellijIdeaCe < Cask
-  version '14'
-  sha256 'd742778574f244ef1f70277a65bbe73b9baf38ead3b6c15d555d5418357f07e1'
+cask :v1 => 'intellij-idea-ce' do
+  version '14.1.3'
+  sha256 'e0e21b9ee9ac881c10b62507eaae4c2dc651bee631fbb9a0fbac9a289d405616'
 
   url "http://download.jetbrains.com/idea/ideaIC-#{version}.dmg"
+  name 'IntelliJ IDEA Community Edition'
   homepage 'https://www.jetbrains.com/idea/'
-  license :oss
+  license :apache
 
   app 'IntelliJ IDEA 14 CE.app'
-
-  postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/IntelliJ IDEA 14 CE.app/Contents/Info.plist"
-  end
 
   zap :delete => [
                   '~/Library/Application Support/IdeaIC14',
@@ -20,13 +17,13 @@ class IntellijIdeaCe < Cask
                  ]
 
   caveats <<-EOS.undent
-    #{title} may require Java 7 (an older version), available from the
-    caskroom-versions repository via
+    #{token} requires Java 6 like any other IntelliJ-based IDE.
+    You can install it with
 
-      brew cask install caskroom/versions/java7
+      brew cask install caskroom/homebrew-versions/java6
 
-    Alternatively, #{title} can be modified to use Java 8 as described in
-
-      https://github.com/caskroom/homebrew-cask/issues/4500#issuecomment-43955932
+    The vendor (JetBrains) doesn't support newer versions of Java (yet)
+    due to several critical issues, see details at
+    https://intellij-support.jetbrains.com/entries/27854363
   EOS
 end

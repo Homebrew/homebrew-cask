@@ -1,10 +1,11 @@
-class Teamviewer < Cask
+cask :v1 => 'teamviewer' do
   version :latest
   sha256 :no_check
 
   url 'https://download.teamviewer.com/download/TeamViewer.dmg'
+  name 'TeamViewer'
   homepage 'http://www.teamviewer.com/'
-  license :unknown
+  license :freemium
 
   pkg 'Install TeamViewer.pkg'
 

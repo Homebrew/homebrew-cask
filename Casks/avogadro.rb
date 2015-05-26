@@ -1,8 +1,10 @@
-class Avogadro < Cask
+cask :v1 => 'avogadro' do
   version '1.1.1'
   sha256 '8e63b7ec07555fd30ea2c22ed7f070e1b692fd2c9fbb60a3c8e0ddd411bb6477'
 
-  url "https://downloads.sourceforge.net/avogadro/Avogadro-#{version}.dmg.zip"
+  # sourceforge.net is the official download host per the vendor homepage
+  url "http://downloads.sourceforge.net/avogadro/Avogadro-#{version}.dmg.zip"
+  name 'Avogadro'
   homepage 'http://avogadro.openmolecules.net/'
   license :gpl
 

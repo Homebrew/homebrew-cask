@@ -1,10 +1,11 @@
-class Textadept < Cask
-  version '7.7'
-  sha256 '4e684ffdca2e22d11ce8ea721a3510a2a4b0aef2ec905ecf566ee2f9c1346098'
+cask :v1 => 'textadept' do
+  version '7.9'
+  sha256 'd9c294bd25cdf40c1a7fc0316be694d9481a3a439e194c7420923a51d2277f42'
 
   url "http://foicica.com/textadept/download/textadept_#{version}.osx.zip"
+  name 'Textadept'
   homepage 'http://foicica.com/textadept/'
-  license :unknown
+  license :mit
 
   app "textadept_#{version}.osx/Textadept.app"
 end

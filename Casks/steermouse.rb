@@ -1,12 +1,14 @@
-class Steermouse < Cask
-  version '4.1.9'
-  sha256 '4704aa8b01842c2e619db546fa045e515ee7e3a94d9d339f4650f2f8684b1280'
+cask :v1 => 'steermouse' do
+  version '4.2.3'
+  sha256 'a31773ca4a3f137e63900388a267140af6d92a9260c42f9e026a3b75a38afa04'
 
   url "http://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
+  name 'SteerMouse'
   homepage 'http://plentycom.jp/en/steermouse/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'SteerMouse Installer.app/Contents/Resources/SteerMouse.pkg'
+
   uninstall :pkgutil => 'jp.plentycom.SteerMouse.pkg.*',
             :kext    => 'com.cyberic.SmoothMouse'
 end

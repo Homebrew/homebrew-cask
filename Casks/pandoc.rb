@@ -1,12 +1,16 @@
-class Pandoc < Cask
-  version '1.13.1'
-  sha256 'd82547f5a6838074381a8e97f0f27984bbdb527e211320fc78791d9a64479b2f'
+cask :v1 => 'pandoc' do
+  version '1.13.2'
+  sha256 '02455fba5353568b19d8b0bebbda9b99ba2c943b3f01b11b185f25c7db111b50'
 
+  # github.com is the official download host per the vendor homepage
   url "https://github.com/jgm/pandoc/releases/download/#{version}/pandoc-#{version}-osx.pkg"
+  appcast 'https://github.com/jgm/pandoc/releases.atom'
+  name 'Pandoc'
   homepage 'http://johnmacfarlane.net/pandoc'
   license :gpl
 
   pkg "pandoc-#{version}-osx.pkg"
+
   uninstall :pkgutil => 'net.johnmacfarlane.pandoc'
   caveats <<-EOS.undent
     Note that homebrew also provides a compiled pandoc Formula that links its

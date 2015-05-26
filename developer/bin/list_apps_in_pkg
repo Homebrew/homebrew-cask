@@ -138,7 +138,7 @@ _list_apps_in_pkg () {
     if [[ -d "$opt_pkg" ]]; then
         pkgdir="$opt_pkg"
     else
-        local tmpdir="$(usr/bin/mktemp -d -t list_ids_in_pkg)"
+        local tmpdir="$(/usr/bin/mktemp -d -t list_ids_in_pkg)"
         trap "/bin/rm -rf -- '$tmpdir'" EXIT
         pkgdir="$tmpdir/unpack"
         /usr/sbin/pkgutil --expand "$opt_pkg" "$tmpdir/unpack" "$pkgdir"

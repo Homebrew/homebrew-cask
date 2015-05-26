@@ -1,8 +1,8 @@
 require 'test_helper'
 
-describe Cask::Artifact::Pkg do
+describe Hbc::Artifact::Pkg do
   before {
-    @cask = Cask.load('with-installable')
+    @cask = Hbc.load('with-installable')
     shutup do
       TestHelper.install_without_artifacts(@cask)
     end
@@ -10,9 +10,9 @@ describe Cask::Artifact::Pkg do
 
   describe 'install_phase' do
     it 'runs the system installer on the specified pkgs' do
-      pkg = Cask::Artifact::Pkg.new(@cask, Cask::FakeSystemCommand)
+      pkg = Hbc::Artifact::Pkg.new(@cask, Hbc::FakeSystemCommand)
 
-      Cask::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/installer', '-pkg', @cask.staged_path/'MyFancyPkg'/'Fancy.pkg', '-target', '/'])
+      Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/installer', '-pkg', @cask.staged_path.join('MyFancyPkg','Fancy.pkg'), '-target', '/'])
 
       shutup do
         pkg.install_phase
@@ -22,7 +22,7 @@ describe Cask::Artifact::Pkg do
 
   describe 'uninstall_phase' do
     it 'does nothing, because the uninstall_phase method is a no-op' do
-      pkg = Cask::Artifact::Pkg.new(@cask, Cask::FakeSystemCommand)
+      pkg = Hbc::Artifact::Pkg.new(@cask, Hbc::FakeSystemCommand)
       shutup do
         pkg.uninstall_phase
       end

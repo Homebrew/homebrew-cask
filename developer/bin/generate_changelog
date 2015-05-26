@@ -29,6 +29,7 @@ MAINTAINERS = %w[
                   jimbojsb
                   radeksimko
                   federicobond
+                  claui
                   caskroom
                  ]
 

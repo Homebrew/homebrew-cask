@@ -1,10 +1,18 @@
-class Kitematic < Cask
-  version '0.3.0'
-  sha256 '1f7695c23024fc5661b8d8714c3a80e8fe50bcce093ce64b0f2c4c77b70700f0'
+cask :v1 => 'kitematic' do
+  version '0.5.27'
+  sha256 'd655e569a97444c4a68b7c75a8c264179363f908a50221841e86f14b898c39e2'
 
-  url "https://s3.amazonaws.com/kite-installer/Kitematic-#{version}.zip"
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/kitematic/kitematic/releases/download/v#{version}/Kitematic-#{version}.zip"
+  appcast 'https://github.com/kitematic/kitematic/releases.atom'
+  name 'Kitematic'
   homepage 'https://kitematic.com/'
-  license :unknown
+  license :apache
 
-  app 'Kitematic.app'
+  app 'Kitematic (Beta).app'
+
+  zap :delete => [
+    '~/Library/Application Support/Kitematic',
+    '~/Kitematic'
+  ]
 end

@@ -1,15 +1,17 @@
-class Java < Cask
-  version '1.8.0_25'
-  sha256 '65b18e9a081435d06c18ba8d9b19e6eb23c902204f5ac3a9f029ec5b3fe2d2a6'
+cask :v1 => 'java' do
+  version '1.8.0_45'
+  sha256 '1a87665a5d1055ad2d804615446ab4877a4eb2c993b1acddd6c80d0d7028a5b2'
 
-  url 'http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25-macosx-x64.dmg',
+  url 'http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45-macosx-x64.dmg',
       :cookies => {
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
+  name 'Java'
+  name 'Java Standard Edition Development Kit'
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html'
   license :gratis
 
-  pkg 'JDK 8 Update 25.pkg'
+  pkg 'JDK 8 Update 45.pkg'
   postflight do
     system '/usr/bin/sudo', '-E', '--',
       '/usr/libexec/PlistBuddy', '-c', 'Add :JavaVM:JVMCapabilities: string BundledApp', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Info.plist"
@@ -30,8 +32,9 @@ class Java < Cask
     system '/usr/bin/sudo', '-E', '--',
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Home/jre/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"
   end
+
   uninstall :pkgutil => [
-                         'com.oracle.jdk8u25',         # manually update this for each version
+                         'com.oracle.jdk8u45',         # manually update this for each version
                          'com.oracle.jre',
                         ],
             :launchctl => [

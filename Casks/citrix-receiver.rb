@@ -1,12 +1,15 @@
-class CitrixReceiver < Cask
+cask :v1 => 'citrix-receiver' do
   version :latest
   sha256 :no_check
 
+  # edgesuite.net is the official download host per the vendor homepage
   url 'http://downloadplugins.citrix.com.edgesuite.net/Mac/CitrixReceiverWeb.dmg'
+  name 'Citrix Receiver'
   homepage 'http://www.citrix.com/receiver'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install Citrix Receiver.pkg'
+
   uninstall :launchctl => [
                            'com.citrix.AuthManager_Mac',
                            'com.citrix.ReceiverHelper',

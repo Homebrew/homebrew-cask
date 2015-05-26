@@ -1,4 +1,4 @@
-class NoChecksum < TestCask
+cask :v1test => 'no-checksum' do
   version '1.2.3'
   sha256 :no_check
 

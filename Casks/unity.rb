@@ -1,11 +1,13 @@
-class Unity < Cask
-  version '4.5.5'
-  sha256 'e42d3b8e3bc3fbc7448bb06b5210c1c0687ba3f784eb947b4586b9f129c6b0d4'
+cask :v1 => 'unity' do
+  version '4.6.4'
+  sha256 'd5d840f30d0987b3aef29dc3b651141cb5fb77fc3c28405b5ff667e03b01360a'
 
   url "http://netstorage.unity3d.com/unity/unity-#{version}.dmg"
+  name 'Unity'
   homepage 'http://unity3d.com/unity/'
   license :commercial
 
   pkg 'Unity.pkg'
+
   uninstall :pkgutil => 'com.unity3d.*'
 end

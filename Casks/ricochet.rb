@@ -1,12 +1,13 @@
-class Ricochet < Cask
-  version '1.0.4'
-  sha256 '089e8b8d177ee2b5aeb50b62447a27994a432ffd8fe1893e071c4df4bc5e1993'
+cask :v1 => 'ricochet' do
+  version '1.1.0'
+  sha256 '80da185c8b2827ac8d953b9e58b8b517dc6f72d69dc8878c0d65131145cfa5e6'
 
   url "https://ricochet.im/releases/#{version}/Ricochet-#{version}.dmg"
   gpg "#{url}.asc",
       :key_id => '9032cae4cbfa933a5a2145d5ff97c53f183c045d'
+  name 'Ricochet'
   homepage 'https://ricochet.im/'
-  license :unknown
+  license :bsd
 
   app 'Ricochet.app'
 end

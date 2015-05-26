@@ -1,14 +1,15 @@
-class Wireshark < Cask
-  version '1.12.1'
-  sha256 '3ce749efbcf89dd72b4e1c2336f4edd7111e05ce9cad8da2df189ac4e56fa1b7'
+cask :v1 => 'wireshark' do
+  version '1.12.5'
+  sha256 '7125c94bb9eeed3d09930613feb64b6ec794164fb5ff8c027a03c020cc6f6606'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
+  name 'Wireshark'
   homepage 'http://www.wireshark.org'
-  license :unknown
+  license :gpl
 
   pkg "Wireshark #{version} Intel 64.pkg"
   postflight do
-    if Process.euid == 0 then
+    if Process.euid == 0
       ohai 'Note:'
       puts <<-EOS.undent
         You executed 'brew cask' as the superuser.
@@ -39,7 +40,5 @@ class Wireshark < Cask
                          '/usr/local/bin/wireshark',
                         ]
 
-  caveats do
-    x11_required
-  end
+  depends_on :x11 => true
 end

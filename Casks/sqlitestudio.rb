@@ -1,10 +1,11 @@
-class Sqlitestudio < Cask
-  version '2.1.5'
-  sha256 '7df2d3bc8a4aafac738b7b412f2bde82f2b1114dc30f173363ec28ae5514f882'
+cask :v1 => 'sqlitestudio' do
+  version '3.0.6'
+  sha256 '15a2687efc657ecf27766c6153a952aab17adaaefaf94636567032d0d6df2f5a'
 
-  url "http://sqlitestudio.pl/files/free/stable/macosx/sqlitestudio-#{version}.zip"
+  url "http://sqlitestudio.pl/files/sqlitestudio3/complete/macosx/sqlitestudio-#{version}.dmg"
+  name 'SQLiteStudio'
   homepage 'http://sqlitestudio.pl'
-  license :unknown
+  license :gpl
 
   app 'SQLiteStudio.app'
 end

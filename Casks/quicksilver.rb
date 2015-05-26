@@ -1,12 +1,14 @@
-class Quicksilver < Cask
-  version '1.2.0'
-  sha256 '08c5aeaa7fe89427bcec30a9700eb0b7484bd68b647776b2c82c95355d1679d4'
+cask :v1 => 'quicksilver' do
+  version '1.2.2'
+  sha256 'bd11b3671ddc104e80ceefd017aae137f9f09e021f8f0af0c8c905130e329d85'
 
-  url 'http://cdn.qsapp.com/plugins/files/com.blacktree.Quicksilver__16399.dmg'
+  url 'http://cdn.qsapp.com/plugins/files/com.blacktree.Quicksilver__16401.dmg'
+  name 'Quicksilver'
   homepage 'http://qsapp.com/'
-  license :unknown
+  license :apache
 
   app 'Quicksilver.app'
+
   zap :delete => [
                   '~/Library/Preferences/com.blacktree.Quicksilver.plist',
                   '~/Library/Application Support/Quicksilver',

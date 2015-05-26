@@ -1,12 +1,18 @@
-class Textexpander < Cask
-  version '4.3.4'
-  sha256 'f5862333a3c9da5292c9c91bff55a3c7a1358481aa6871237b9661a22694eda1'
+cask :v1 => 'textexpander' do
+  if MacOS.release == :snow_leopard
+    version '3.4.2'
+    sha256 '87859d7efcbfe479e7b78686d4d3f9be9983b2c7d68a6122acea10d4efbb1bfa'
+  elsif MacOS.release >= :lion
+    version '4.3.6'
+    sha256 'ec90d6bd2e76bd14c0ca706d255c9673288f406b772e5ae6022e2dbe27848ee9'
+    appcast 'http://updates.smilesoftware.com/com.smileonmymac.textexpander.xml',
+            :sha256 => 'bad991e25d6cb73352b462a1b503bd64c616bd751057f677944af5f96c1353cf'
+  end
 
   url "http://cdn.smilesoftware.com/TextExpander_#{version}.zip"
-  appcast 'http://updates.smilesoftware.com/com.smileonmymac.textexpander.xml',
-          :sha256 => 'ef5c8e0eed832ed1ffb43f2e324ca5d1857db5bd9d6f7e1e36ecce476cb59e0a'
-  homepage 'http://www.smilesoftware.com/TextExpander/index.html'
-  license :unknown
+  name 'TextExpander'
+  homepage 'http://www.smilesoftware.com/TextExpander/'
+  license :commercial
 
   app 'TextExpander.app'
 end

@@ -1,10 +1,11 @@
-class DefaultFolderX < Cask
-  version '4.6.10'
-  sha256 '95752cf84ffd5f8090397ba85689ebaa409b205de9d15a4af4b0e5eae8626d59'
+cask :v1 => 'default-folder-x' do
+  version '4.6.14'
+  sha256 '621fe0042ed44da7eab369471ae345e19432cf3a5c70cf0290e567ce805f6b99'
 
   url "http://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
+  name 'Default Folder X'
   homepage 'http://www.stclairsoft.com/DefaultFolderX'
-  license :unknown
+  license :commercial
 
   installer :manual => 'Default Folder X Installer.app'
 

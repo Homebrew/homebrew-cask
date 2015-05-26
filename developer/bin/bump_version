@@ -8,14 +8,15 @@
 ###
 
 require 'open3'
+require 'rubygems'
 
 ###
 ### configurable constants
 ###
 
-VERSION_FILE          = 'lib/cask/version.rb'
+VERSION_FILE          = 'lib/hbc/version.rb'
 VERSION_PAT           = %r[\d+\.\d+\.\d+]i
-VERSION_CONSTANT_NAME = 'HOMEBREW_CASK_VERSION'
+VERSION_CONSTANT_NAME = 'HBC_VERSION'
 
 ###
 ### methods

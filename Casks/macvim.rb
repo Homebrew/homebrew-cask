@@ -1,16 +1,24 @@
-class Macvim < Cask
-  version '7.4-73'
+cask :v1 => 'macvim' do
 
-  if MacOS.version < :mavericks
+  if MacOS.release <= :mountain_lion
+    version '7.4-73'
     sha256 '7f573fb9693052a86845c0a9cbb0b3c3c33ee23294f9d8111187377e4d89f72c'
-    url "https://github.com/eee19/macvim/releases/download/snapshot-#{version.sub(%r{^.*-},'')}/MacVim-snapshot-#{version.sub(%r{^.*-},'')}-Mountain-Lion.tbz"
-  else
+    # github.com is the official download host per the vendor homepage
+    url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version.sub(%r{^.*-},'')}/MacVim-snapshot-#{version.sub(%r{^.*-},'')}-Mountain-Lion.tbz"
+  elsif MacOS.release == :mavericks
+    version '7.4-73'
     sha256 '557c60f3487ab68426cf982c86270f2adfd15e8a4d535f762e6d55602754d224'
+    # github.com is the official download host per the vendor homepage
     url "https://github.com/b4winckler/macvim/releases/download/snapshot-#{version.sub(%r{^.*-},'')}/MacVim-snapshot-#{version.sub(%r{^.*-},'')}-Mavericks.tbz"
-    appcast 'http://b4winckler.github.com/macvim/appcast/stable.xml',
-            :sha256 => '1408f192fe672eb99d7032eff37bd93537d65499fa9b4502eb0ae1365a73d056'
+  else
+    version '7.4-75'
+    sha256 'e1093097fcd9f2338132aabc42d8dbbdd4049512b91c34e31bc5dca713f4aa32'
+    # github.com is the official download host per the vendor homepage
+    url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version.sub(%r{^.*-},'')}/MacVim-snapshot-#{version.sub(%r{^.*-},'')}-Yosemite.tbz"
+    appcast 'https://github.com/macvim-dev/macvim/releases.atom'
   end
 
+  name 'MacVim'
   homepage 'http://code.google.com/p/macvim/'
   license :oss
 

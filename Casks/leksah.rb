@@ -1,8 +1,9 @@
-class Leksah < Cask
-  version '0.14.1.0-ghc-7.8.3'
-  sha256 '52e0441a6cdb00f6bb96bd79444fe5ceb07812488e9797698278a93f833bae58'
+cask :v1 => 'leksah' do
+  version '0.15.0.1-ghc-7.10.1'
+  sha256 '453132da22508660bbc87c334e2716cc564a6da16c8398415cae897a6e6448ed'
 
   url "http://www.leksah.org/packages/leksah-#{version}.dmg"
+  name 'Leksah'
   homepage 'http://leksah.org/'
   license :oss
 

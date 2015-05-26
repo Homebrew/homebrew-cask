@@ -1,12 +1,19 @@
-class GoogleEarth < Cask
+cask :v1 => 'google-earth' do
   version :latest
   sha256 :no_check
 
   url 'https://dl.google.com/earth/client/advanced/current/GoogleEarthMac-Intel.dmg'
+  name 'Google Earth'
   homepage 'https://www.google.com/earth/'
-  license :unknown
+  license :gratis
+  tags :vendor => 'Google'
 
-  app 'Google Earth.app'
+  pkg 'Install Google Earth.pkg'
+
+  uninstall :pkgutil => [
+              'com.Google.GoogleEarthPlus',
+              'com.Google.GoogleEarthPlugin.plugin',
+            ]
 
   zap :delete => [
                   '~/Library/Application Support/Google Earth',

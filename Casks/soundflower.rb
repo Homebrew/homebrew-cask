@@ -1,8 +1,9 @@
-class Soundflower < Cask
+cask :v1 => 'soundflower' do
   version '1.6.6b'
   sha256 '61ca31d7478d057e32caaeac3c739f965ba9eb2a27570b3cc715e706d4740dfb'
 
   url "https://soundflower.googlecode.com/files/Soundflower-#{version}.dmg"
+  name 'Soundflower'
   homepage 'https://code.google.com/p/soundflower/'
   license :oss
 
@@ -12,6 +13,7 @@ class Soundflower < Cask
       '/sbin/kextload', '-b', 'com.Cycling74.driver.Soundflower'
   end
   # early_script is a workaround for a slowly unloading kext, see private-eye Cask
+
   uninstall :early_script => {
               :executable => '/sbin/kextunload',
               :args => ['-b', 'com.Cycling74.driver.Soundflower'],

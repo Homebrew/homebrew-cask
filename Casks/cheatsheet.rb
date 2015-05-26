@@ -1,11 +1,12 @@
-class Cheatsheet < Cask
+cask :v1 => 'cheatsheet' do
   version :latest
   sha256 :no_check
 
   url 'http://www.cheatsheetapp.com/CheatSheet/download.php'
   appcast 'http://mediaatelier.com/CheatSheet/feed.php'
+  name 'CheatSheet'
   homepage 'http://www.cheatsheetapp.com/CheatSheet/'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'CheatSheet.app'
 

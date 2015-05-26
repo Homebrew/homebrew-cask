@@ -1,9 +1,10 @@
-class BeyondCompare < Cask
-  version '4.0.0.18847'
-  sha256 'cb9987b62ac68a2493b7bc5678125fbf1b8919796bc82718ddd23958768fd457'
+cask :v1 => 'beyond-compare' do
+  version '4.0.7.19761'
+  sha256 'c778d8d70439cb161b49f0883f2824da1c7ecaff485bbfa0a09d82452fee3aef'
 
   url "http://www.scootersoftware.com/BCompareOSX-#{version}.zip"
-  homepage 'http://www.scootersoftware.com/index.php'
+  name 'Beyond Compare'
+  homepage 'http://www.scootersoftware.com/'
   license :commercial
 
   app 'Beyond Compare.app'
@@ -11,4 +12,11 @@ class BeyondCompare < Cask
   postflight do
     suppress_move_to_applications
   end
+
+  zap :delete => [
+                  '~/Library/Application Support/Beyond Compare',
+                  '~/Library/Caches/com.apple.helpd/Generated/com.ScooterSoftware.BeyondCompare.help',
+                  '~/Library/Caches/com.ScooterSoftware.BeyondCompare',
+                  '~/Library/Saved Application State/com.ScooterSoftware.BeyondCompare.savedState',
+                 ]
 end

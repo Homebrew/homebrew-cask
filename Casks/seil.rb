@@ -1,9 +1,10 @@
-class Seil < Cask
-  version '10.11.0'
-  sha256 '4ee777bf0a7f023abadb1f6a836b08484cfc2db2a19dd0b28d8942a2b638f8e5'
+cask :v1 => 'seil' do
+  version '11.1.0'
+  sha256 'eb87ad8b903ba14de69ce7e64913a85d53cc59ee8af5fa916211c3a00d29bf7d'
 
-  url "https://pqrs.org/macosx/keyremap4macbook/files/Seil-#{version}.dmg"
-  homepage 'https://pqrs.org/macosx/keyremap4macbook/seil.html.en'
+  url "https://pqrs.org/osx/karabiner/files/Seil-#{version}.dmg"
+  name 'Seil'
+  homepage 'https://pqrs.org/osx/karabiner/seil.html'
   license :public_domain
 
   pkg 'Seil.pkg'

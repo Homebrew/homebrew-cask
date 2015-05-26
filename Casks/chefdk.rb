@@ -1,12 +1,16 @@
-class Chefdk < Cask
-  version '0.3.2-1'
-  sha256 'ffef287a9eba71eec8ee3f47044d351f6e679ed77b022f8be8bed3b76a912d44'
+cask :v1 => 'chefdk' do
+  version '0.6.0-1'
+  sha256 '53a8d532160eee2af4904ccf9bad901de0aa4f7e88d28908f41c10e78260b4db'
 
+  # amazonaws is the official download host per the vendor homepage
   url "https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-#{version}.dmg"
-  homepage 'http://downloads.getchef.com/chef-dk/mac/'
+  name 'Chef Development Kit'
+  name 'ChefDK'
+  homepage 'https://downloads.getchef.com/chef-dk/'
   license :apache
 
   pkg "chefdk-#{version}.pkg"
+
   uninstall :pkgutil => 'com.getchef.pkg.chefdk',
             :delete  => [
                          '/opt/chefdk/',
@@ -14,17 +18,16 @@ class Chefdk < Cask
                          '/usr/bin/chef',
                          '/usr/bin/chef-apply',
                          '/usr/bin/chef-client',
+                         '/usr/bin/chef-service-manager',
                          '/usr/bin/chef-shell',
                          '/usr/bin/chef-solo',
-                         '/usr/bin/chef-zero',
+                         '/usr/bin/chef-vault',
+                         '/usr/bin/chef-windows-service',
                          '/usr/bin/fauxhai',
                          '/usr/bin/foodcritic',
                          '/usr/bin/kitchen',
                          '/usr/bin/knife',
                          '/usr/bin/ohai',
                          '/usr/bin/rubocop',
-                         '/usr/bin/shef',
-                         '/usr/bin/strain',
-                         '/usr/bin/strainer',
                         ]
 end

@@ -1,10 +1,11 @@
-class GoogleChrome < Cask
+cask :v1 => 'google-chrome' do
   version :latest
   sha256 :no_check
 
   url 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
+  name 'Google Chrome'
   homepage 'https://www.google.com/chrome/'
-  license :unknown
+  license :gratis
   tags :vendor => 'Google'
 
   app 'Google Chrome.app'
@@ -23,4 +24,11 @@ class GoogleChrome < Cask
                   '~/Library/Caches/Google',
                   '~/Library/Google',
                  ]
+
+  caveats <<-EOS.undent
+    The Mac App Store version of 1Password won't work with a Homebrew-Cask-linked Google Chrome. To bypass this limitation, you need to either:
+
+      + Move Google Chrome to your /Applications directory (the app itself, not a symlink).
+      + Install 1Password from outside the Mac App Store (licenses should transfer automatically, but you should contact AgileBits about it).
+  EOS
 end

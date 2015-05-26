@@ -1,10 +1,11 @@
-class LittleSnitch < Cask
-  version '3.4.2'
-  sha256 'ddb2e739334d759508bb356ae7b18a3228664fd5a6d5aff39d355f8c0d23e8b3'
+cask :v1 => 'little-snitch' do
+  version '3.5.2'
+  sha256 'bf88a0fe00550367e86acc7d02d508a45c3c5623eb75daadce32ddf74e14bec8'
 
-  url "http://www.obdev.at/downloads/LittleSnitch/LittleSnitch-#{version}.dmg"
-  homepage 'http://www.obdev.at/products/littlesnitch/index.html'
-  license :unknown
+  url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
+  name 'Little Snitch'
+  homepage 'http://www.obdev.at/products/littlesnitch/'
+  license :commercial
 
   installer :manual => 'Little Snitch Installer.app'
 

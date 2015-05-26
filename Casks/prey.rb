@@ -1,13 +1,18 @@
-class Prey < Cask
-  version '0.6.4'
-  sha256 '361996d067539da7881aa3618b737ba4a0846df13ca8c9b8b07151d42f81fb86'
+cask :v1 => 'prey' do
+  version '1.3.9'
+  sha256 'e01f342c4a6d57b495eaf182fc859f268fdf4f531d82560a97beb3310ec80587'
 
-  url "https://preyproject.com/releases/current/prey-#{version}-mac-batch.mpkg.zip"
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://s3.amazonaws.com/prey-releases/node-client/#{version}/prey-mac-#{version}-x64.pkg"
+  name 'Prey'
   homepage 'https://preyproject.com'
-  license :unknown
+  license :gpl
 
-  pkg "prey-#{version}-mac-batch.mpkg"
-  uninstall :pkgutil => 'com.forkhq.prey'
+  pkg "prey-mac-#{version}-x64.pkg"
+
+  uninstall :pkgutil => 'com.prey.agent',
+            :launchctl => 'com.prey.agent'
+
   caveats <<-EOS.undent
     To complete installation, Prey requires an API key. It may be set
     as an environment variable as follows:

@@ -1,14 +1,25 @@
-class AndroidStudio < Cask
-  version '0.8.14'
-  sha256 '05eb79f0c4025f510ff02d7205157eb94d42074a2d89c8a5ba4cbead1187948f'
+cask :v1 => 'android-studio' do
+  version '1.2.1.1'
+  sha256 '217dc31340a6068bbc32e448595332e4289346e558bfc513e8ae7d50cb1f21c2'
 
-  url "http://dl.google.com/dl/android/studio/ide-zips/#{version}/android-studio-ide-135.1538390-mac.zip"
-  homepage 'http://tools.android.com/download/studio'
-  license :unknown
+  # google.com is the official download host per the vendor homepage
+  url "https://dl.google.com/dl/android/studio/ide-zips/#{version}/android-studio-ide-141.1903250-mac.zip"
+  name 'Android Studio'
+  homepage 'https://developer.android.com/sdk/'
+  license :apache
 
   app 'Android Studio.app'
 
-  postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/Android Studio.app/Contents/Info.plist"
-  end
+  caveats <<-EOS.undent
+    #{token} requires Java. You can install the latest version with
+    brew cask install java
+  EOS
+  zap :delete => [
+    '~/Library/Preferences/AndroidStudio*',
+    '~/Library/Preferences/com.google.android.studio.plist',
+    '~/Library/Application\ Support/AndroidStudio*',
+    '~/Library/Logs/AndroidStudio*',
+    '~/Library/Caches/AndroidStudio*',
+  ],
+  :rmdir => '~/AndroidStudioProjects'
 end

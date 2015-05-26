@@ -1,10 +1,11 @@
-class Ampps < Cask
-  version '2.3'
-  sha256 'ce7a1a7e71f0314edbc994e10fe4f6a80303c1999904ca1fb14d98c7477ae8e0'
+cask :v1 => 'ampps' do
+  version '3.0'
+  sha256 '290f2df59bf657d8a43d809bae55bb81cf392cdc3e58fe0f90cdff47f99ede51'
 
   url "http://files.ampps.com/AMPPS-#{version}.dmg"
+  name 'AMPPS'
   homepage 'http://www.ampps.com'
-  license :unknown
+  license :gratis
 
   suite 'AMPPS'
 end

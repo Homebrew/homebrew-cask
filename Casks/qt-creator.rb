@@ -1,10 +1,11 @@
-class QtCreator < Cask
-  version '3.2.2'
-  sha256 'ca3cca6ed88bdec0eac48e0fa0005702e9924498b0fbb9ad2250978384f24f7a'
+cask :v1 => 'qt-creator' do
+  version '3.4.0'
+  sha256 '13a232534adf50f928ebf1ad1fde912a423cd7524d86d0c3d6a8efd321d3f858'
 
-  url "https://download.qt-project.org/official_releases/qtcreator/3.2/#{version}/qt-creator-opensource-mac-x86_64-#{version}.dmg"
+  url "http://download.qt-project.org/official_releases/qtcreator/#{version.sub(%r{^(\d+\.\d+).*},'\1')}/#{version}/qt-creator-opensource-mac-x86_64-#{version}.dmg"
+  name 'Qt Creator'
   homepage 'http://qt-project.org/'
-  license :unknown
+  license :oss
 
   app 'Qt Creator.app'
 end

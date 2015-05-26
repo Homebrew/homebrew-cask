@@ -1,12 +1,16 @@
-class Mailbox < Cask
-  version '0.3.14_141017'
-  sha256 '93a0ebd06399b899a8742148c1df6876f82716790dd394009fd8edc59078e902'
+cask :v1 => 'mailbox' do
+  version '0.4.2_150316'
+  sha256 '5431ef92b83f5752193cbdaf2ae82a0798537c8b84426bc09c5367a7345875c7'
 
-  url "https://mb-dtop.s3.amazonaws.com/external-beta/Mailbox_Ext_Beta_#{version}.zip"
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://mb-dtop.s3.amazonaws.com/external-beta/Mailbox_EXT_Beta_#{version}.zip"
   appcast 'https://mb-dtop.s3.amazonaws.com/external-beta/external-beta-appcast.xml',
-          :sha256 => '28d87eb6a36077e16b8c52ede51d81316eea6bb0636608616173e0edbaa5be11'
+          :sha256 => '7f1958d4be2af3ea5283bc586f97d73df07cb559ae954f4914815529d99e62dc'
+  name 'Mailbox'
   homepage 'http://www.mailboxapp.com/'
-  license :unknown
+  license :gratis
 
   app 'Mailbox (Beta).app'
+
+  zap :delete => '~/Library/Caches/com.dropbox.mbd.external-beta/'
 end

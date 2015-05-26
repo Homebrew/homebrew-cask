@@ -1,10 +1,12 @@
-class Wesnoth < Cask
-  version '1.10.7'
-  sha256 'cdd7788e55e26c9d619b7c98b87db1b99c6a0fc9f525ddb63a6bd33923d94a6f'
+cask :v1 => 'wesnoth' do
+  version '1.12.2'
+  sha256 '731bbe172b14b92e72c415193595de698614ddc282444755e8204d203366b5f7'
 
-  url "https://downloads.sourceforge.net/sourceforge/wesnoth/Wesnoth_#{version}.dmg"
+  # sourceforge.net is the official download host per the vendor homepage
+  url "http://downloads.sourceforge.net/sourceforge/wesnoth/Wesnoth_#{version}.dmg"
+  name 'The Battle for Wesnoth'
   homepage 'http://wesnoth.org'
-  license :oss
+  license :gpl
 
   app 'Wesnoth.app'
 end

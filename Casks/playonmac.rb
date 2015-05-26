@@ -1,10 +1,11 @@
-class Playonmac < Cask
-  version '4.2.5'
-  sha256 '641733ccaf45d3fafcddf4e1f4e7a4f94c3b34b941936460d277ced1d7a27548'
+cask :v1 => 'playonmac' do
+  version '4.2.8'
+  sha256 '11f0c6a24486c45bbc4d0d01afa27fcaea361278289e9db8277a9fe54ffbe4f0'
 
   url "http://repository.playonmac.com/PlayOnMac/PlayOnMac_#{version}.dmg"
+  name 'PlayOnMac'
   homepage 'http://www.playonmac.com/en'
-  license :unknown
+  license :gpl
 
   app 'PlayOnMac.app'
 end

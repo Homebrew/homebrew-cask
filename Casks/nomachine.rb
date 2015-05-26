@@ -1,13 +1,15 @@
-class Nomachine < Cask
-  version '4.2.27_1'
-  sha256 'b210543612f9f99e120b356ef38754bd9b8f20c54d5d657e88a1d73b644cf145'
+cask :v1 => 'nomachine' do
+  version '4.5.0_1'
+  sha256 '95cea2de7eae19350547ac77ee1e3eb8c5160426ae50a3097c4fa9cb685624f9'
 
   url "http://download.nomachine.com/download/#{version.split('.')[0..1].join('.')}/MacOSX/nomachine_#{version}.dmg"
+  name 'NoMachine'
   homepage 'http://www.nomachine.com'
-  license :unknown
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'NoMachine.pkg'
   # a launchctl job ordinarily manages uninstall once the app bundle is removed
+
   uninstall :delete => '/Applications/NoMachine.app'
   # however, we duplicate the uninstall process manually in the zap stanza just in case
   zap :early_script => {
