@@ -15,8 +15,8 @@ cask :v1 => '1password' do
 
     app "1Password #{version.to_i}.app"
   else
-    version '5.3.1'
-    sha256 'edd3448b3e4317bd1f232645d3fbcda84e67a7c5428549380a7bc711044be4ac'
+    version '5.3.2'
+    sha256 '6051434c77ad48af7b11f2259a91b12ded21ce3357c8db4780718ce83f44b668'
 
     url "http://i.agilebits.com/dist/1P/mac4/1Password-#{version}.zip"
 
