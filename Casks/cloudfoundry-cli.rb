@@ -1,6 +1,6 @@
 cask :v1 => 'cloudfoundry-cli' do
-  version '6.10.0'
-  sha256 '35e8552119b989ab6f3acac10f8dfdf49c3efe20d6f96c141c2129a519342222'
+  version '6.11.3'
+  sha256 'a8534a3e4dcc285f127d7d32d62ebcf8dd03ed9003c80bf0c4633d0b72faec07'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "http://go-cli.s3-website-us-east-1.amazonaws.com/releases/v#{version}/installer-osx-amd64.pkg"
