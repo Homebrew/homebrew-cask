@@ -4,6 +4,8 @@ cask :v1 => 'semulov' do
 
   url "http://kainjow.com/downloads/Semulov_#{version}.zip"
   name 'Semulov'
+  appcast 'http://kainjow.com/updates/semulov.xml',
+          :sha256 => '289af052d4533d353fb8a5d21c4e6349b57a30849adb80c13ea27287addfc0cf'
   homepage 'http://www.kainjow.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
