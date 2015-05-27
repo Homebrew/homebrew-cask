@@ -11,5 +11,5 @@ cask :v1 => 'chainsaw' do
 
   zap :delete => '~/.chainsaw'
   
-  depends_on => :ppc
+  depends_on :arch => :ppc
 end
