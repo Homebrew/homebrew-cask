@@ -5,6 +5,8 @@ cask :v1 => 'tikzit' do
   url "http://downloads.sourceforge.net/sourceforge/tikzit/TikZiT-#{version}.dmg"
 
   name 'TikZiT'
+  appcast 'http://tikzit.sourceforge.net/appcast/tikzit.xml',
+          :sha256 => '68a09aa0e3f82a9cd88092ee5a76535fe1928967f03ea5212ec05e63fffb65d3'
   homepage 'http://tikzit.sourceforge.net/'
   license :gpl
 

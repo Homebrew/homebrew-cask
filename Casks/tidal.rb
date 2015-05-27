@@ -5,6 +5,8 @@ cask :v1 => 'tidal' do
   # wimp.no is the official download host per the vendor homepage
   url "https://wimp.no/wweb/resources/wimp_files/release/TIDAL-#{version}-WW.dmg"
   name 'TIDAL'
+  appcast 'http://client.wimpmusic.com/wimpsetup/desktop/update/tidal.update.osx.WW.xml?version=3.2.3.16',
+          :sha256 => '8f3fff452fee6817ed1fafb09782d9548aaf987cdc6304170686d65963d94e4f'
   homepage 'https://tidalhifi.com/us/download'
   license :closed
 
