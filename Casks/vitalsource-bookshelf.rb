@@ -11,6 +11,8 @@ cask :v1 => 'vitalsource-bookshelf' do
   end
 
   name 'VitalSource Bookshelf'
+  appcast 'https://services.vitalbook.com/version/check',
+          :sha256 => 'a310b400eadb9aabc7bcf12e5e56ee2dd80d595288a380d8d2a572b242016bb8'
   homepage 'http://www.vitalsource.com/bookshelf-features'
   license :freemium
 
