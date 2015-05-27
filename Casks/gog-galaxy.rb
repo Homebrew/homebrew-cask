@@ -12,4 +12,6 @@ cask :v1 => 'gog-galaxy' do
 
   uninstall :pkgutil => "com.gog.galaxy.galaxy_client_#{version}.pkg",
             :delete => '/Applications/GalaxyClient.app'
+
+  depends_on :macos => '>= :mountain_lion'
 end
