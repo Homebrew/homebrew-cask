@@ -10,4 +10,6 @@ cask :v1 => 'chainsaw' do
   app 'Chainsaw.app'
 
   zap :delete => '~/.chainsaw'
+  
+  depends_on => :ppc
 end
