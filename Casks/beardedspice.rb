@@ -1,6 +1,6 @@
 cask :v1 => 'beardedspice' do
-  version '1.0.6'
-  sha256 '8d7f5af100c76d04ded04b918a2db3037ffa9d0eacbe7902fd114fc17dfe35c3'
+  version '1.0.8'
+  sha256 '38078bc6c7e1a744643041f70a3380e43ef606ec614bd38f9cfa4a1895177b8a'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/beardedspice/beardedspice/releases/download/v#{version}/BeardedSpice-#{version}.zip"
