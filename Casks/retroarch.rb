@@ -2,7 +2,7 @@ cask :v1 => 'retroarch' do
   version '1.0.0.2'
 
   if MacOS.release <= :snow_leopard
-    sha256 'a3ebc3a46d674433a1bf40c1b948021e752919b4b43da853fd73fb508bf40982'
+    sha256 '9d2232663f5dade1b4f648cc0cf0bb605c630b1c6bcbfe5ddce265ddab0d9d2a'
     url "http://buildbot.libretro.com/stable/osx-x86_64/RetroArch-OSX10.7-x86_64-v#{version}.zip"
   else
     sha256 '9d2232663f5dade1b4f648cc0cf0bb605c630b1c6bcbfe5ddce265ddab0d9d2a'
