@@ -5,6 +5,8 @@ cask :v1 => 'iphoto-library-manager' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/fatcatsoftware/iplm/iPhotoLibraryManager_#{version.gsub('.', '')}.zip"
   name 'iPhoto Library Manager'
+  appcast 'http://www.fatcatsoftware.com/iplm/iplm4_appcast.xml',
+          :sha256 => 'bdb187324ac7a3eb0ac3a261c68672a17b12b8e9fa675b2426fc943875c4cf1a'
   homepage 'http://www.fatcatsoftware.com/iplm/'
   license :commercial
 
