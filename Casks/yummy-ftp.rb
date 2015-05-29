@@ -4,6 +4,8 @@ cask :v1 => 'yummy-ftp' do
 
   url 'http://www.yummysoftware.com/downloads/YummyFTP.zip'
   name 'Yummy FTP'
+  appcast 'http://www.yummysoftware.com/su/yummyftp/feed.xml',
+          :sha256 => 'fac71ab836dffdc1ae5b0b4acb03d63d2d93fb2639dd38d57b32d691a08d1ea7'
   homepage 'http://www.yummysoftware.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
   tags :vendor => 'Yummy Software'
