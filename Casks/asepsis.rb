@@ -1,6 +1,6 @@
 cask :v1 => 'asepsis' do
-  version '1.5'
-  sha256 'b7bf18dfe58612de89f744e11e25f6eb6bb708a48941fc975d55a614716e1436'
+  version '1.5.1'
+  sha256 '3bf6c1bd9c2a4bb81d05c8142595e552681e45ee44abd96994168a7001f46807'
 
   url "http://downloads.binaryage.com/Asepsis-#{version}.dmg"
   name 'Asepsis'
