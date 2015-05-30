@@ -1,6 +1,6 @@
 cask :v1 => 'texturepacker' do
-  version '3.7.1'
-  sha256 '2a87c76e85f2d8fe48837e531ad92512faa8e1ce4ae7d03a7a99b2d98fc6db9d'
+  version '3.8.0'
+  sha256 '3353c8c3d80f1d33e6b98f021464421babd659fc7b331307d75801957212b83f'
 
   url "https://www.codeandweb.com/download/texturepacker/#{version}/TexturePacker-#{version}-uni.dmg"
   name 'TexturePacker'
