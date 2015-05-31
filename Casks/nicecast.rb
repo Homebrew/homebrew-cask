@@ -4,6 +4,8 @@ cask :v1 => 'nicecast' do
 
   url 'https://rogueamoeba.com/nicecast/download/Nicecast.zip'
   name 'Nicecast'
+  appcast 'http://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.Nicecast',
+          :sha256 => '8f6d50cbc369b27a014c2393eaf9f9c7fb35e5467adba4233f5aead1b8dfaeca'
   homepage 'http://rogueamoeba.com/nicecast'
   license :commercial
 
