@@ -4,6 +4,8 @@ cask :v1 => 'openscad' do
 
   url "http://files.openscad.org/OpenSCAD-#{version}.dmg"
   name 'OpenSCAD'
+  appcast 'http://files.openscad.org/appcast.xml',
+          :sha256 => '8d29f24c07f1223560f12efa163b43348c135398e2b43617bfd9b11028debc01'
   homepage 'http://www.openscad.org/'
   license :gpl
 

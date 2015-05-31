@@ -4,6 +4,8 @@ cask :v1 => 'littleipsum' do
 
   url "http://littleipsum.com/download/LittleIpsum%20#{version}.zip"
   name 'LittleIpsum'
+  appcast 'http://littleipsum.com/appCast',
+          :sha256 => '2cd220fc152efa2491145231a3c142775987e6ab97348349ba9f0003183213c9'
   homepage 'http://littleipsum.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
