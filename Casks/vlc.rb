@@ -9,7 +9,7 @@ cask :v1 => 'vlc' do
           :sha256 => '358ea9032ef0df1658c062bfb11ca4336ebf662b64bffec8e059b1e2faa4f788'
   name 'VLC'
   name 'VLC media player'
-  homepage 'http://www.videolan.org/vlc/'
+  homepage 'https://www.videolan.org/vlc/'
   license :oss
 
   app 'VLC.app'
