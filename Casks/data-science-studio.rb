@@ -1,6 +1,6 @@
 cask :v1 => 'data-science-studio' do
-  version '1.4.4'
-  sha256 'bea67d377bc4df2ac109bda21b3e15dd0ca84b7c56a57836a73502476b5df5fb'
+  version '2.0.0'
+  sha256 '97a2e10d14a26d337ba71170ddc5e4ad6e2b3eafe36adcd02048c7da2d402774'
 
   url "http://downloads.dataiku.com/public/studio/Data%20Science%20Studio%20#{version}.dmg"
   name 'Data Science Studio'
