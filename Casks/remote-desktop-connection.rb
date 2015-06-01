@@ -11,10 +11,10 @@ cask :v1 => 'remote-desktop-connection' do
   pkg 'RDC Installer.mpkg'
 
   uninstall :pkgutil => 'com.microsoft.rdc.all.*'
-  
+
   caveats do
     discontinued
   end
-  
+
   depends_on :macos => '<= :snow_leopard'
 end
