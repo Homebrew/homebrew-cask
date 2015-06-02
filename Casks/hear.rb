@@ -7,7 +7,7 @@ cask :v1 => 'hear' do
   appcast 'http://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear',
           :sha256 => '48edc9b03ce5d9709b27fb5099dc3cce25cc8920656b9cdb9a066ae7999c8d9d'
   name 'Hear'
-  homepage 'http://www.prosofteng.com/products/hear.php'
+  homepage 'https://www.prosofteng.com/hear/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Hear.app'
