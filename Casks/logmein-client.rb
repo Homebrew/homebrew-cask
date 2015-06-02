@@ -7,7 +7,5 @@ cask :v1 => 'logmein-client' do
   homepage 'https://secure.logmein.com/products/pro/learnmore/desktopapp.aspx'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  # Renamed for clarity: app name is inconsistent with its branding.
-  # Original discussion: https://github.com/caskroom/homebrew-cask/issues/4818
-  app 'LogMeInIgnition.app', :target => 'LogMeIn Client.app'
+  app 'LogMeIn Client.app'
 end
