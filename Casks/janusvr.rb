@@ -8,5 +8,5 @@ cask :v1 => 'janusvr' do
   homepage 'http://janusvr.com/'
   license :gratis
 
-  app 'janusvr.app', :target => 'Janus VR.app'
+  app 'janusvr.app'
 end
