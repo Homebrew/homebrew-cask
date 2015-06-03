@@ -1,11 +1,12 @@
 cask :v1 => 'qtspim' do
-  version :latest
-  sha256 :no_check
+  version '9.1.15'
+  sha256 'd637a6ac90ff5ef8c372219768a97dc55f1bde2d919fce97c371b18011d0f52a'
 
   url 'http://sourceforge.net/projects/spimsimulator/files/latest/download'
   name 'QtSpim'
   homepage 'http://spimsimulator.sourceforge.net/'
   license :bsd
 
-  app 'QtSpim.app'
+  pkg 'QtSpim.mpkg'
+  uninstall :pkgutil => 'org.larusstone.pkg.QtSpim'
 end
