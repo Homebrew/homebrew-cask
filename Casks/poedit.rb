@@ -6,9 +6,10 @@ cask :v1 => 'poedit' do
     # sourceforge.net is the official download host per the vendor homepage
     url "http://downloads.sourceforge.net/sourceforge/poedit/poedit-#{version}.dmg"
   else
-    version '1.7.4'
-    sha256 'e08b1a3ffc791b78ca849bf3fdbbd9dd7cbb8944032a5bdec642560ee6118c34'
-    url "http://poedit.net/dl/Poedit-#{version}.zip"
+    version '1.8.1'
+    sha256 '92febbe0240c883872039413df9727fbcce5b25bac0142c482c97e5be67b0831'
+    # worldssl.net is the official download host per the vendor homepage
+    url "https://poedit.r.worldssl.net/Poedit-#{version}.zip"
     appcast 'https://poedit.net/updates/osx/appcast',
             :sha256 => '21334ec300dff8fd749f1351f1a96880091bb58bc41d2a9de9179f8d42f5602d'
   end
