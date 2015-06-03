@@ -4,7 +4,7 @@ cask :v1 => 'flickr-uploadr' do
 
   url 'https://downloads.flickr.com/uploadr/FlickrUploadr.dmg'
   name 'Flickr Uploadr'
-  homepage 'http://www.flickr.com/tools/'
+  homepage 'https://www.flickr.com/tools/'
   license :gratis
 
   app 'Flickr Uploadr.app'
