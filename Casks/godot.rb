@@ -1,8 +1,8 @@
 cask :v1 => 'godot' do
-  version '1.0'
-  sha256 '3ea4f8cee78e3a60415f64d6c62ad721c11c15d1fccfe79519f3b182f0a75897'
+  version '1.1'
+  sha256 'b09dc985b08fa979a8ee830806e2fae2cf0b8a1c3b0da80f6881c3451f670f3d'
 
-  url 'https://godot.blob.core.windows.net/release/2014-12-15/GodotOSX32-1.0stable.zip'
+  url 'https://godot.blob.core.windows.net/release/2015-05-21/GodotOSX32-1.1stable.zip'
   name 'Godot Engine'
   homepage 'http://www.godotengine.org/'
   license :mit
