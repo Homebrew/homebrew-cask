@@ -14,7 +14,7 @@ cask :v1 => 'omnigraffle' do
   end
 
   name 'OmniGraffle'
-  homepage 'http://www.omnigroup.com/products/omnigraffle'
+  homepage 'https://www.omnigroup.com/omnigraffle/'
   license :commercial
 
   app 'OmniGraffle.app'
