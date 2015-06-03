@@ -10,9 +10,9 @@ cask :v1 => 'scrutiny' do
 
   app 'Scrutiny5.app'
 
-  zap delete: => [
-    '~/Library/Application Support/Scrutiny5',
-    '~/Library/Caches/com.peacockmedia.Scrutiny5'
-    '~/Library/Preferences/com.peacockmedia.Scrutiny5.plist',
-  ]
+  zap :delete => [
+                  '~/Library/Application Support/Scrutiny5',
+                  '~/Library/Caches/com.peacockmedia.Scrutiny5',
+                  '~/Library/Preferences/com.peacockmedia.Scrutiny5.plist',
+                 ]
 end
