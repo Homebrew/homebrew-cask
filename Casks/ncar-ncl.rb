@@ -6,7 +6,6 @@ cask :v1 => 'ncar-ncl' do
   homepage 'http://www.ncl.ucar.edu/'
   license :oss
 
-
   if MacOS.release == :mountain_lion
     sha256 '154914834df0eeb69b778698062900175a5dcc88dcd76545cc2c504551cd756a'
     url 'https://www.earthsystemgrid.org/download/fileDownload.htm?logicalFileId=e0852fc5-cd9a-11e4-bb80-00c0f03d5b7c'
