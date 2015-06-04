@@ -4,7 +4,7 @@ cask :v1 => 'omnioutliner' do
 
   url "http://downloads2.omnigroup.com/software/MacOSX/10.10/OmniOutliner-#{version}.dmg"
   name 'OmniOutliner'
-  homepage 'http://www.omnigroup.com/omnioutliner/'
+  homepage 'https://www.omnigroup.com/omnioutliner/'
   license :commercial
 
   app 'OmniOutliner.app'
