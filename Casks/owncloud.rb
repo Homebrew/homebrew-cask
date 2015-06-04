@@ -4,7 +4,7 @@ cask :v1 => 'owncloud' do
 
   url "https://download.owncloud.com/desktop/stable/ownCloud-#{version}.pkg"
   name 'ownCloud'
-  homepage 'http://owncloud.com'
+  homepage 'https://owncloud.com/'
   license :gpl
 
   pkg "ownCloud-#{version}.pkg"
