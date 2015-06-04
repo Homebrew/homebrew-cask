@@ -1,6 +1,6 @@
 cask :v1 => 'cornerstone' do
-  version '2.7.16'
-  sha256 '4898f5c4a5d1e1ab30c6e6eef55f3854ce5cd31292c554ef51b3f8470969caf3'
+  version '2.7.17'
+  sha256 '792882881b5e1f7642433f720e1673f7711d5dfca3d333e7a0fe5c7783092f09'
 
   url "https://www.zennaware.com/cornerstone/downloads/Cornerstone-#{version}.zip"
   appcast 'http://www.zennaware.com/cornerstone/appcast/feed2.php',
