@@ -1,9 +1,9 @@
 cask :v1 => 'sage' do
-  version '6.5'
-  sha256 'f369e4e8f4d94990b318fc3d58bdf87ff0e7f10e3f26fef3b4b1fbf6e7f684d2'
+  version '6.7'
+  sha256 'd5887741c1f3b85030ade9f623f55e308947a35c9c620e7ccb84bf23a6ec939f'
 
-  # washington.edu is the official download host per the vendor homepage
-  url "http://boxen.math.washington.edu/home/sagemath/sage-mirror/osx/intel/sage-#{version}-x86_64-Darwin-OSX_10.10_x86_64-app.dmg"
+  # mit.edu is an official download host per the vendor download page
+  url "http://mirrors.mit.edu/sage/osx/sage-#{version}-x86_64-Darwin-OSX_10.10_x86_64-app.dmg"
   name 'Sage'
   homepage 'http://www.sagemath.org/'
   license :gpl
