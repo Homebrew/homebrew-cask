@@ -4,7 +4,7 @@ cask :v1 => 'github' do
 
   url 'https://central.github.com/mac/latest'
   name 'GitHub'
-  homepage 'http://mac.github.com'
+  homepage 'https://mac.github.com/'
   license :oss
 
   app 'GitHub.app'
