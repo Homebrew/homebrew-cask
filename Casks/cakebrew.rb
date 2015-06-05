@@ -6,7 +6,7 @@ cask :v1 => 'cakebrew' do
   appcast 'https://www.cakebrew.com/appcast/profileInfo.php',
           :sha256 => 'cc9fc7cddf957d7d78d4e52247a943b4f114f0968f90a5608190225fcb25b33e'
   name 'Cakebrew'
-  homepage 'http://www.cakebrew.com'
+  homepage 'https://www.cakebrew.com/'
   license :gpl
 
   app 'Cakebrew.app'
