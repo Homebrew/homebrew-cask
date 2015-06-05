@@ -1,6 +1,6 @@
 cask :v1 => 'sqlprosqlite' do
-  version '1.0.46b'
-  sha256 '9078913e28eab8b6de1804cff6a6d86e737daa3e7c20912e669bc38192162060'
+  version '1.0.48'
+  sha256 '3913c64b75af1d9526258f354a8ec2c7db5f458914b055c82f6d6aa54c848c63'
 
   url "https://www.sqlitepro.com/downloads/SQLProSQLite.#{version}.app.zip"
   name 'SQLPro for SQLite'
