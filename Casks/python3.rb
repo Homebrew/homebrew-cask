@@ -6,7 +6,7 @@ cask :v1 => 'python3' do
 
   url "https://www.python.org/ftp/python/#{version}/python-#{version}-macosx10.6.pkg"
   name 'Python'
-  homepage 'http://www.python.org/'
+  homepage 'https://www.python.org/'
   license :oss
 
   pkg "python-#{version}-macosx10.6.pkg"
