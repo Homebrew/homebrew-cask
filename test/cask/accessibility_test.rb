@@ -15,7 +15,7 @@ describe "Accessibility Access" do
       @installer.stubs(:bundle_identifier => 'com.example.BasicCask')
 
       Hbc::FakeSystemCommand.expects_command(
-        ['/usr/bin/sudo', '-E', '--', '/usr/bin/sqlite3', Hbc.tcc_db, %q{INSERT INTO access VALUES('kTCCServiceAccessibility','com.example.BasicCask',0,1,1,NULL);}]
+        ['/usr/bin/sudo', '-E', '--', '/usr/bin/sqlite3', Hbc.tcc_db, %q{INSERT OR REPLACE INTO access VALUES('kTCCServiceAccessibility','com.example.BasicCask',0,1,1,NULL);}]
       )
       shutup do
         @installer.enable_accessibility_access
