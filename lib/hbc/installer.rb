@@ -218,7 +218,7 @@ class Hbc::Installer
       @command.run!('/usr/bin/sqlite3',
                     :args => [
                               Hbc.tcc_db,
-                              "INSERT INTO access VALUES('kTCCServiceAccessibility','#{bundle_identifier}',0,1,1,NULL);",
+                              "INSERT OR REPLACE INTO access VALUES('kTCCServiceAccessibility','#{bundle_identifier}',0,1,1,NULL);",
                              ],
                     :sudo => true)
     else
