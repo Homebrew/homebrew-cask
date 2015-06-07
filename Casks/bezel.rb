@@ -1,6 +1,6 @@
 cask :v1 => 'bezel' do
-  version '1.0'
-  sha256 '525a977085d567910305742d832470b6628ca82f8c959f772e55f5f1e1dcfa58'
+  version '1.1'
+  sha256 '782cde52b0dfab0fd62d784ea5bccc1338cb33588bce70b8453c76919e60b053'
 
   url "http://infinitapps.com/files/Bezel-#{version}.zip"
   name 'bezel'
