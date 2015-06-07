@@ -1,6 +1,6 @@
 cask :v1 => 'black-ink' do
-  version '1.6.1'
-  sha256 'efef4a810b5708478341e92f911aadc4e8f75b285a0bd7b37087d5252d0f6175'
+  version '1.6.2'
+  sha256 '4bce28eaa25f980c0e13147594c503b97276f4be1738a823a3eb909ea4fec002'
 
   url "http://www.red-sweater.com/blackink/BlackInk#{version}.zip"
   appcast 'http://www.red-sweater.com/blackink/appcast1.php',
