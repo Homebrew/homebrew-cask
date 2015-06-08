@@ -8,5 +8,7 @@ cask :v1 => 'panoply' do
   homepage 'http://www.giss.nasa.gov/tools/panoply/'
   license :closed
 
+  depends_on :cask => 'java'
+
   app 'Panoply.app'
 end
