@@ -9,4 +9,9 @@ cask :v1 => 'panoply' do
   license :closed
 
   app 'Panoply.app'
+
+  caveats <<-EOS.undent
+    #{token} requires Java 7+, you can install the latest Java using
+      brew cask install java
+  EOS
 end
