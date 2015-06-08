@@ -1,6 +1,6 @@
 cask :v1 => 'devonthink-pro' do
-  version '2.8'
-  sha256 'ac9521a0017643f1305d24f7d1b8cdd19ab6dde78319ae9a862aae1b1fde2521'
+  version '2.8.5'
+  sha256 '161632818b26eb6f2ee2e9818e7c3506d1b54d5ceb934d546403bbc6f62674a6'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro.dmg.zip"
