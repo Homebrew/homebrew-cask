@@ -1,6 +1,6 @@
 cask :v1 => 'cathode' do
-  version '2.1.3'
-  sha256 'b6074daf33e6947786fff1fe6f5df729721427aa827ef21d93db5640bd0162d0'
+  version '2.3.0'
+  sha256 'dd176890c8e8d6d37334440b13402d04b5344d009804f8624985cef3c081ac8b'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "http://s3.amazonaws.com/cjcaufield/products/cathode/cathode_#{version.gsub('.','')}.zip"
