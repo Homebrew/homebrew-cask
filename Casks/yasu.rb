@@ -11,6 +11,8 @@ cask :v1_1 => 'yasu' do
   end
 
   name 'Yasu'
+  appcast 'http://yasuapp.net/appcasts/yasu.xml',
+          :sha256 => 'e79812a2ecb9a4df2b1484f5e544d43d997ad539e5d8c1a3e058cd12d11b646e'
   homepage 'http://yasuapp.net'
   license :gratis
 

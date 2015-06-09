@@ -19,7 +19,7 @@ cask :v1 => 'macvim' do
   end
 
   name 'MacVim'
-  homepage 'http://code.google.com/p/macvim/'
+  homepage 'https://github.com/macvim-dev/macvim'
   license :oss
 
   app "MacVim-snapshot-#{version.sub(%r{^.*-},'')}/MacVim.app"

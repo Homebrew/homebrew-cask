@@ -4,6 +4,8 @@ cask :v1 => 'totals' do
 
   url "http://www.kedisoft.com/dl/totals/Totals-#{version}.dmg"
   name 'Totals'
+  appcast 'http://kedisoft.com/appcasts/appcast.php?app=totals3',
+          :sha256 => 'cecc91e66eb70d4847e71a26e95d46090448e60a2e49d9902f4f02850048a6ea'
   homepage 'http://www.kedisoft.com/totals/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

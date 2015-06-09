@@ -1,6 +1,6 @@
 cask :v1 => 'hopper-debugger-server' do
-  version '2.3'
-  sha256 '291bcabcd84f395d9aba08532c1fff54101ec8d02aeb46e32c82a8a9b621c098'
+  version '2.4'
+  sha256 '32879ffedbe88d172aa59c1cdb32cdba024d842c20d705458ea4279f5bc18dab'
 
   url "http://www.hopperapp.com/HopperGDBServer/HopperDebuggerServer-#{version}.zip"
   name 'Hopper Debugger Server'

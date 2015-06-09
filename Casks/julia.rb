@@ -1,6 +1,6 @@
 cask :v1 => 'julia' do
-  version '0.3.8'
-  sha256 '078afe227d5f429869494376f130b344ff149175dd4656f5abc736af802dfb7d'
+  version '0.3.9'
+  sha256 '03a93edeca50411c799033d1475afdaa13411e129ccc56b4dcb36519757e7739'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/julialang/bin/osx/x64/#{version.sub(/\.\d+$/, '')}/julia-#{version}-osx10.7+.dmg"

@@ -5,7 +5,7 @@ cask :v1 => 'crypt' do
   # amazonaws.com is the official download host per the vendor homepage
   url "http://voluntary.net.s3.amazonaws.com/Crypt#{version}_20100429.zip"
   name 'Crypt'
-  homepage 'http://voluntary.net/crypt/'
+  homepage 'https://voluntary.net/crypt/'
   license :mit
 
   app "Crypt#{version}.app"

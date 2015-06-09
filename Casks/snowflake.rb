@@ -4,6 +4,8 @@ cask :v1 => 'snowflake' do
 
   url "http://assets.vemedio.com/software/snowflake/Snowflake-#{version}.zip"
   name 'Snowflake'
+  appcast 'http://vemedio.com/appcast/snowflake',
+          :sha256 => '216d072a399a7467562d2eb6d491027ed4bab71ca5ad6204f040dda686f3a5c6'
   homepage 'http://vemedio.com/products/snowflake'
   license :commercial
 

@@ -1,6 +1,6 @@
 cask :v1 => 'jedit' do
-  version '5.2pre1'
-  sha256 '433dcddaec51c85b809ab0749b4043988a75915f427516a41304a5f1c791ca56'
+  version '5.2.0'
+  sha256 '0d5e6b38228b87a023dfb6944e54f2651cca7e75d237c6bc7f93fd95ca662270'
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/jedit/jedit#{version}install.dmg"

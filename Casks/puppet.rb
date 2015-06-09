@@ -4,7 +4,7 @@ cask :v1 => 'puppet' do
 
   url "http://downloads.puppetlabs.com/mac/puppet-#{version}.dmg"
   name 'Puppet'
-  homepage 'http://puppetlabs.com/'
+  homepage 'https://puppetlabs.com/'
   license :apache
 
   pkg "puppet-#{version}.pkg"

@@ -1,8 +1,8 @@
 cask :v1 => 'airparrot' do
-  version '2.1.0'
-  sha256 '155874eaa61a5807b656b7c6d41545d046fad74b09414429824a3361e57e8a18'
+  version '2.1.2'
+  sha256 'ee77f17e3ad6cf2872999deeb1742e6d79bada6ee31863788d7cc1185e589e5d'
 
-  url 'http://download.airsquirrels.com/AirParrot2/Mac/AirParrot-2.1.dmg'
+  url "http://download.airsquirrels.com/AirParrot2/Mac/AirParrot-#{version}.dmg"
   name 'AirParrot'
   appcast 'https://updates.airsquirrels.com/AirParrot2/Mac/AirParrot2.xml'
   homepage 'http://www.airsquirrels.com/airparrot/'

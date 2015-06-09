@@ -5,7 +5,7 @@ cask :v1 => 'processing' do
   url "http://download.processing.org/processing-#{version}-macosx.zip"
   name 'Processing'
   homepage 'http://processing.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Processing.app'
 

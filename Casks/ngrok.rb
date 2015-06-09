@@ -1,6 +1,6 @@
 cask :v1 => 'ngrok' do
-  version '2.0.17'
-  sha256 '65494d1824fb77b7b3480ebfd65bd251c0ef6bf3eb8b91ee842e846be0676928'
+  version '2.0.19'
+  sha256 'ec307920b86778db4c632434cb9fff01ead9edd7438618aab87f5e891791f799'
 
   url "https://dl.ngrok.com/ngrok_#{version}_darwin_amd64.zip"
   name 'ngrok'

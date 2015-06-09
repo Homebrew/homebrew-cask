@@ -1,6 +1,6 @@
 cask :v1 => 'kitematic' do
-  version '0.5.27'
-  sha256 'd655e569a97444c4a68b7c75a8c264179363f908a50221841e86f14b898c39e2'
+  version '0.6.3'
+  sha256 'ffd009293b661f7847086abf42a0d750cd16d966145307565ab501730a60f407'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/kitematic/kitematic/releases/download/v#{version}/Kitematic-#{version}.zip"

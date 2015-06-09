@@ -4,7 +4,7 @@ cask :v1 => 'mosh' do
 
   url "https://mosh.mit.edu/mosh-#{version}-3.pkg"
   name 'Mosh'
-  homepage 'http://mosh.mit.edu/'
+  homepage 'https://mosh.mit.edu/'
   license :gpl
 
   pkg "mosh-#{version}-3.pkg"

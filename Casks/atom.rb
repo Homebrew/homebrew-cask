@@ -4,7 +4,7 @@ cask :v1 => 'atom' do
 
   url 'https://atom.io/download/mac'
   name 'Atom'
-  homepage 'http://atom.io'
+  homepage 'https://atom.io/'
   license :mit
 
   app 'Atom.app'
