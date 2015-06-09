@@ -8,6 +8,4 @@ cask :v1 => 'technic-launcher' do
   license :gpl
 
   container :type => :naked
-
-  app 'TechnicLauncher.jar'
 end
