@@ -7,6 +7,6 @@ cask :v1 => 'tales-of-majeyal' do
   homepage 'http://te4.org/'
   license :gpl
 
-  # Use of target to prevent conflicts with other T-Engine games
+  # Renames for clarity: app name is inconsistent with its branding.
   app 'T-Engine.app', :target => 'Tales-of-Maj\'Eyal.app'
 end
