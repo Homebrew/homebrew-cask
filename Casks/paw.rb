@@ -4,7 +4,7 @@ cask :v1 => 'paw' do
 
   url 'https://luckymarmot.com/paw/download'
   name 'Paw'
-  homepage 'http://luckymarmot.com/paw'
+  homepage 'https://luckymarmot.com/paw'
   license :commercial
 
   app 'Paw.app'
