@@ -5,7 +5,7 @@ cask :v1 => 'screenhero' do
   url 'https://secure.screenhero.com/update/screenhero/Screenhero.dmg'
   appcast 'http://dl.screenhero.com/update/screenhero/sparkle.xml'
   name 'Screenhero'
-  homepage 'http://screenhero.com'
+  homepage 'https://screenhero.com/'
   license :commercial
 
   app 'Screenhero.app'
