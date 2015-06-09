@@ -4,7 +4,7 @@ cask :v1 => 'airdroid' do
 
   url "http://dl.airdroid.com/AirDroid_Desktop_Client_#{version}.dmg"
   name 'AirDroid'
-  homepage 'http://airdroid.com'
+  homepage 'https://www.airdroid.com/'
   license :closed
 
   app 'AirDroid.app'
