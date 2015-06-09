@@ -10,4 +10,8 @@ cask :v1 => 'acorn' do
   license :commercial
 
   app 'Acorn.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
 end
