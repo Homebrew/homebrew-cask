@@ -4,7 +4,7 @@ cask :v1 => 'wireshark' do
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   name 'Wireshark'
-  homepage 'http://www.wireshark.org'
+  homepage 'https://www.wireshark.org/'
   license :gpl
 
   pkg "Wireshark #{version} Intel 64.pkg"
