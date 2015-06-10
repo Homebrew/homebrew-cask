@@ -4,7 +4,7 @@ cask :v1 => 'spideroak' do
 
   url 'https://spideroak.com/getbuild?platform=mac'
   name 'SpiderOak'
-  homepage 'http://spideroak.com'
+  homepage 'https://spideroak.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SpiderOak.app'
