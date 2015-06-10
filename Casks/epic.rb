@@ -7,7 +7,7 @@ cask :v1 => 'epic' do
   name 'Epic Privacy Browser'
   appcast 'https://updates.epicbrowser.com/mac_updates/appcast.xml',
           :sha256 => '4249b7347d6edd78f8b421c8838c006731ab03477a6d17bd459cadb9519f4dc5'
-  homepage 'http://www.epicbrowser.com'
+  homepage 'https://www.epicbrowser.com/'
   license :gratis
 
   app 'Epic.app'
