@@ -5,7 +5,7 @@ cask :v1 => 'splice' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://spliceosx.s3.amazonaws.com/Splice.dmg'
   name 'Splice'
-  homepage 'http://splice.com'
+  homepage 'https://splice.com/'
   license :gratis
 
   installer :script => 'Splice Installer.app/Contents/MacOS/Splice Installer',
