@@ -5,7 +5,7 @@ cask :v1 => 'packer' do
   # bintray.com is the official download host per the vendor homepage
   url "https://dl.bintray.com/mitchellh/packer/packer_#{version}_darwin_amd64.zip"
   name 'Packer'
-  homepage 'http://www.packer.io/'
+  homepage 'https://www.packer.io/'
   license :oss
 
   binary 'packer'
