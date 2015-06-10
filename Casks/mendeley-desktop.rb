@@ -4,7 +4,7 @@ cask :v1 => 'mendeley-desktop' do
 
   url "http://desktop-download.mendeley.com/download/Mendeley-Desktop-#{version}-OSX-Universal.dmg"
   name 'Mendeley'
-  homepage 'http://www.mendeley.com/'
+  homepage 'https://www.mendeley.com/'
   license :gratis
 
   app 'Mendeley Desktop.app'
