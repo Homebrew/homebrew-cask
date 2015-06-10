@@ -4,7 +4,7 @@ cask :v1 => 'thunderbird' do
 
   url "https://download.mozilla.org/?product=thunderbird-#{version}&os=osx&lang=en-US"
   name 'Mozilla Thunderbird'
-  homepage 'http://www.mozilla.org/en-US/thunderbird/'
+  homepage 'https://www.mozilla.org/en-US/thunderbird/'
   license :mpl
   tags :vendor => 'Mozilla'
 
