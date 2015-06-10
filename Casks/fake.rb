@@ -1,6 +1,6 @@
 cask :v1 => 'fake' do
-  version '1.8.9.1'
-  sha256 'a350b00e17e690077feb05c3b26a6ca173a21bfbe39d51d8db1cd5689a4574c5'
+  version '1.8.10'
+  sha256 '3659dfd62a5d34f9c78b0ff08d33ee58ebcdc3d3fd4bc45739193524991d95ed'
 
   url "http://fakeapp.com/dist/Fake_#{version}.zip"
   appcast 'http://fakeapp.com/appcast/fake.rss',
