@@ -1,8 +1,9 @@
 cask :v1 => 'prepros' do
-  version '4.0.1'
-  sha256 '84510d1252274898b0fc4f95828b60e29a2c946a158bbf7d3188611c62dcd3b1'
+  version '5.8.0'
+  sha256 '42d0d7744ec5667a7ab0bc96e2bdb53551ea294cd0f5be30e16a14a8b2c02c5c'
 
-  url "http://download.alphapixels.com/Prepros-#{version}.zip"
+  # amazonaws.com is the official download host per the vendor homepage
+  url "http://prepros.io.s3.amazonaws.com/installers/Prepros-Mac-#{version}.zip"
   name 'Prepros'
   homepage 'https://prepros.io/'
   license :commercial
