@@ -4,7 +4,7 @@ cask :v1 => 'picturelife' do
 
   url 'https://www.streamnation.com/uploader/osx/picturelife/Picturelife.dmg'
   name 'Picturelife Smartloader'
-  homepage 'http://picturelife.com'
+  homepage 'https://picturelife.com/home'
   license :gratis
 
   app 'Picturelife.app'
