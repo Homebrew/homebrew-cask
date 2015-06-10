@@ -6,7 +6,7 @@ cask :v1 => 'obs' do
   url "https://github.com/jp9000/obs-studio/releases/download/#{version}/obs-#{version}-installer.dmg"
   appcast 'https://github.com/jp9000/obs-studio/releases.atom'
   name 'OBS'
-  homepage 'http://obsproject.com/'
+  homepage 'https://obsproject.com/'
   license :gpl
 
   pkg 'OBS.mpkg'
