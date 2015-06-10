@@ -4,7 +4,7 @@ cask :v1 => 'sharetool' do
 
   url "http://files.bainsware.com/sharetool_#{version.gsub('.','')}.dmg"
   name 'ShareTool'
-  homepage 'http://bainsware.com/'
+  homepage 'https://www.bainsware.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :nested => "ShareTool #{version.to_i}.dmg"
