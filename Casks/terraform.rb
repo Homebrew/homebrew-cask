@@ -5,7 +5,7 @@ cask :v1 => 'terraform' do
   # bintray.com is the official download host per the vendor homepage
   url "https://dl.bintray.com/mitchellh/terraform/terraform_#{version}_darwin_amd64.zip"
   name 'Terraform'
-  homepage 'http://www.terraform.io/'
+  homepage 'https://www.terraform.io/'
   license :mpl
 
   binary 'terraform'
