@@ -1,6 +1,6 @@
 cask :v1 => 'marsedit' do
-  version '3.6.8'
-  sha256 'c3c2e98558dcba466497b5318fd73f4f9c5ba53db336958321e799d72a90d7b8'
+  version '3.7'
+  sha256 'cb8010e27ee3d6708b3512884c67ca1422514c20413f06413a88b37189fa5ef0'
 
   url "http://www.red-sweater.com/marsedit/MarsEdit#{version}.zip"
   appcast 'http://www.red-sweater.com/marsedit/appcast3.php',
