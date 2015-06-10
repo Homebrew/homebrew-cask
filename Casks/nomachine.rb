@@ -4,7 +4,7 @@ cask :v1 => 'nomachine' do
 
   url "http://download.nomachine.com/download/#{version.split('.')[0..1].join('.')}/MacOSX/nomachine_#{version}.dmg"
   name 'NoMachine'
-  homepage 'http://www.nomachine.com'
+  homepage 'https://www.nomachine.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'NoMachine.pkg'
