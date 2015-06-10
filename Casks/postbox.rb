@@ -1,9 +1,9 @@
 cask :v1 => 'postbox' do
-  version '4.0.0'
-  sha256 '50502ad03e12366d5fbc7c9624a53dc7dfb9b1b3c23d72cd05a694a2b79f48ec'
+  version '4.0.1'
+  sha256 'bf2a11201513667779f3f7f946eb008e0ada4d62acf6b015831b02df3a00c0d5'
 
   # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3.amazonaws.com/download.getpostbox.com/installers/#{version}/2_08c63331d92b59d2d99abea0a6eae8c0/postbox-#{version}-mac64.dmg"
+  url "https://s3.amazonaws.com/download.getpostbox.com/installers/#{version}/1_0f1324f879a065bee88bd91618de3de0/postbox-#{version}-mac64.dmg"
   name 'Postbox'
   homepage 'https://www.postbox-inc.com/'
   license :commercial
