@@ -1,6 +1,6 @@
 cask :v1 => 'geekbench' do
-  version '3.3.0'
-  sha256 '5e511bddd2dcee9e85c25fd21063e9682c06c3d44995b7d83d601d6360ee77c0'
+  version '3.3.2'
+  sha256 '17ccf365001cb25dd39d49c3b6a5fbaa3db056336819e6eeab75da96fed64f9a'
 
   url "http://cdn.primatelabs.com/Geekbench-#{version}-Mac.zip"
   appcast 'http://www.primatelabs.com/appcast/geekbench3.xml',
