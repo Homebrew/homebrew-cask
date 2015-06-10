@@ -7,6 +7,6 @@ cask :v1 => 'tales-of-majeyal' do
   homepage 'http://te4.org/'
   license :gpl
 
-  # Renames for clarity: app name is inconsistent with its branding.
+  # Renamed for clarity: app name is inconsistent with its branding.
   app 'T-Engine.app', :target => 'Tales-of-Maj\'Eyal.app'
 end
