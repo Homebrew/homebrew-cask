@@ -5,7 +5,7 @@ cask :v1 => 'postbox' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/download.getpostbox.com/installers/#{version}/2_08c63331d92b59d2d99abea0a6eae8c0/postbox-#{version}-mac64.dmg"
   name 'Postbox'
-  homepage 'http://www.postbox-inc.com/'
+  homepage 'https://www.postbox-inc.com/'
   license :commercial
   tags :vendor => 'Postbox'
   depends_on :macos => '>= :mavericks'
