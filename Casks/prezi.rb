@@ -5,7 +5,7 @@ cask :v1 => 'prezi' do
   # akamaihd.net is the official download host per the vendor homepage
   url "https://prezi-a.akamaihd.net/desktop/Prezi#{version}.dmg"
   name 'Prezi'
-  homepage 'http://www.prezi.com/'
+  homepage 'https://prezi.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Prezi.app'
