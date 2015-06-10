@@ -4,7 +4,7 @@ cask :v1 => 'zotero' do
 
   url "https://download.zotero.org/standalone/#{version}/Zotero-#{version}.dmg"
   name 'Zotero'
-  homepage 'http://www.zotero.org/'
+  homepage 'https://www.zotero.org/'
   license :affero
 
   app 'Zotero.app'
