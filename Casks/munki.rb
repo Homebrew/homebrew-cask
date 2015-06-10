@@ -5,7 +5,7 @@ cask :v1 => 'munki' do
   url "https://github.com/munki/munki/releases/download/v#{version}/munkitools-#{version}.pkg"
   appcast 'https://github.com/munki/munki/releases.atom'
   name 'Munki'
-  homepage 'http://munki.github.io/munki/'
+  homepage 'https://www.munki.org/munki/'
   license :apache
 
   pkg "munkitools-#{version}.pkg"
