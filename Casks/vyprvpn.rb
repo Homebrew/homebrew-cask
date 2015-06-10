@@ -4,7 +4,7 @@ cask :v1 => 'vyprvpn' do
 
   url "https://www.goldenfrog.com/downloads/vyprvpn/desktop/mac/production/#{version}/VyprVPN_v#{version}.dmg"
   name 'VyprVPN'
-  homepage 'http://www.goldenfrog.com/vyprvpn'
+  homepage 'https://www.goldenfrog.com/vyprvpn'
   license :commercial
 
   app 'VyprVPN.app'
