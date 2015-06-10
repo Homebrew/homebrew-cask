@@ -4,7 +4,7 @@ cask :v1 => 'openvanilla' do
 
   url "https://app.openvanilla.org/file/openvanilla/OpenVanilla-Installer-Mac-#{version}.zip"
   name 'OpenVanilla'
-  homepage 'http://openvanilla.org/'
+  homepage 'https://openvanilla.org/'
   license :mit
 
   input_method 'OpenVanillaInstaller.app/Contents/Resources/OpenVanilla.app'
