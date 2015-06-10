@@ -5,7 +5,7 @@ cask :v1 => 'prepros' do
   url "http://download.alphapixels.com/Prepros-#{version}.zip"
   name 'Prepros'
   homepage 'https://prepros.io/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Prepros.app'
 end
