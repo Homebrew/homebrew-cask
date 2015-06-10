@@ -7,7 +7,7 @@ cask :v1 => 'bittorrent-sync' do
   name 'BitTorrent Sync'
   # todo: response was not XML
   # appcast 'http://www.usyncapp.com/cfu.php'
-  homepage 'http://www.bittorrent.com/sync'
+  homepage 'https://www.getsync.com/'
   license :gratis
 
   app 'BitTorrent Sync.app'
