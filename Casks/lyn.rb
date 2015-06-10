@@ -1,6 +1,6 @@
 cask :v1 => 'lyn' do
-  version '1.5.2'
-  sha256 'a4200b35eb4e51c3932a9e7cd40e1be3291a26921da350d396d337fa667798f6'
+  version '1.5.11'
+  sha256 'cca124e8e6e2785cb9c0743029b531a4c5012493273f01afddfe16d5062b61e3'
 
   url "http://www.lynapp.com/downloads/Lyn-#{version}.dmg"
   appcast 'http://www.lynapp.com/lyn/update.xml',
