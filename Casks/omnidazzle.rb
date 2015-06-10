@@ -4,8 +4,12 @@ cask :v1 => 'omnidazzle' do
 
   url "http://downloads2.omnigroup.com/software/MacOSX/10.6/OmniDazzle-#{version}.dmg"
   name 'OmniDazzle'
-  homepage 'http://www.omnigroup.com/more'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://support.omnigroup.com/omnidazzle-troubleshooting'
+  license :gratis
 
   app 'OmniDazzle.app'
+
+  caveats do
+    discontinued
+  end
 end
