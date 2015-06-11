@@ -4,7 +4,7 @@ cask :v1 => 'dolphin' do
 
   url "http://dl.dolphin-emu.org/builds/dolphin-master-#{version}.dmg"
   name 'Dolphin'
-  homepage 'http://www.dolphin-emu.org/'
+  homepage 'https://dolphin-emu.org/'
   license :gpl
 
   app 'Dolphin.app'
