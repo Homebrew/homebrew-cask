@@ -1,6 +1,6 @@
 cask :v1 => 'transporter-desktop' do
-  version '3.1.28_18973'
-  sha256 '48dfd52e287073e277711160dc3f4eab16d521994717aecb36539fdb6ff8befe'
+  version '3.1.31_19160'
+  sha256 '5cf2da62934c8837e8c94e3574a63f7d30ccea935235902cac344bf26cdb8977'
 
   # connecteddata.com is the official download host per the vendor homepage
   url "https://secure.connecteddata.com/mac/2.5/software/Transporter_Desktop_#{version}.dmg"
