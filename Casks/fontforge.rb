@@ -9,7 +9,4 @@ cask :v1 => 'fontforge' do
   license :bsd
 
   app 'FontForge.app'
-  binary 'FontForge.app/Contents/MacOS/FontForge'
-
-  conflicts_with :formula => 'fontforge'
 end
