@@ -11,7 +11,7 @@ name 'MacTeX'
   pkg "mactex-#{version}.pkg"
 
   uninstall :pkgutil => [
-                         'org.tug.mactex.ghostscript9.10',
+                         'org.tug.mactex.ghostscript9.16',
                          'org.tug.mactex.gui2015',
                          'org.tug.mactex.texlive2015'
                         ],
