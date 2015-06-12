@@ -1,6 +1,6 @@
 cask :v1 => 'mactex' do
-  version '20140525'
-  sha256 '4e7fc21dbddae436f604dbeb3db2dc13c44aa9e2dd827a669a170418e84fc7e6'
+  version '20150609'
+  sha256 'e5e3c3f0c753878dd7bd55660cef87a37816179c9b323b75f36daf11a6824b62'
 
   # ctan.org is the official download host per the vendor homepage
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version}.pkg"
@@ -12,8 +12,8 @@ cask :v1 => 'mactex' do
 
   uninstall :pkgutil => [
                          'org.tug.mactex.ghostscript9.10',
-                         'org.tug.mactex.gui2014',
-                         'org.tug.mactex.texlive2014'
+                         'org.tug.mactex.gui2015',
+                         'org.tug.mactex.texlive2015'
                         ],
             :delete  => [
                          '/Applications/TeX',
