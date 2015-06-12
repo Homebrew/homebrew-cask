@@ -4,7 +4,7 @@ cask :v1 => 'mactex' do
 
   # ctan.org is the official download host per the vendor homepage
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version}.pkg"
-name 'MacTeX'
+  name 'MacTeX'
   homepage 'http://www.tug.org/mactex/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
