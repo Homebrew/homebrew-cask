@@ -1,6 +1,6 @@
 cask :v1 => 'spillo' do
-  version '1.5.2'
-  sha256 '52e962ddd574d66a3607555001f07b2370016d7f2fb2ebeefa4118acf51a319f'
+  version '1.5.5'
+  sha256 '3f0c440b0b04c5750fe2bee710f225025119798ca1754bae50ecff0fae0c78f8'
 
   url "http://bananafishsoftware.com/software/spillo/app/spillo-#{version}.zip"
   name 'Spillo'
