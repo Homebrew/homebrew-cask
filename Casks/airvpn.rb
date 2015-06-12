@@ -1,6 +1,6 @@
 cask :v1 => 'airvpn' do
-  version '2.8'
-  sha256 '311babbdecef814a8c6168ee625990338489dde973bef83b3fe157db493a1cef'
+  version '2.9'
+  sha256 'd7bc9fc8d2f944a3e63f0ec0a86900952ee96bf28a6cd0293d6f53a510024f4a'
 
   url "https://airvpn.org/repository/#{version}/airvpn_osx_x64_installer.pkg"
   name 'Air VPN'
