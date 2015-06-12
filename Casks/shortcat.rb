@@ -1,6 +1,6 @@
 cask :v1 => 'shortcat' do
-  version '0.7.5'
-  sha256 '344bfee21417481189600c09a282b9ed4a76b674b4789d3232a29d8f640446fc'
+  version '0.7.6'
+  sha256 'b78f20a94e0270ea1b0376677c07559db0e91c4ac53227b588adee46f971be1b'
 
   url "https://files.shortcatapp.com/v#{version}/Shortcat.zip"
   appcast 'https://shortcatapp.com/updates/appcast.xml',
