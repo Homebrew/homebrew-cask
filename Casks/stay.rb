@@ -1,6 +1,6 @@
 cask :v1 => 'stay' do
-  version '1.2.3'
-  sha256 'afe5abc2757bcee547a0d9ad8ebae55744ac197bc28c9fa28fc7987b9b512464'
+  version '1.2.4'
+  sha256 'b7b3062fdec9b8b7a5be57d0a03dfec3aefe20fa8fd19e64da8ebbd0078f24b0'
 
   url "https://cordlessdog.com/stay/versions/Stay%20#{version}.zip"
   appcast 'http://cordlessdog.com/stay/appcast.xml',
