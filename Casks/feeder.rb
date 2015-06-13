@@ -1,6 +1,6 @@
 cask :v1 => 'feeder' do
   version '2.5.11'
-  sha256 'a96ab6ac338dda2d8d5ad3995e99d6610eabfa724fed086bb9a593d712425e53'
+  sha256 '9e59b1c4a891a6d65636b32983f49ffb7e75ad5bc59a63c2b10206efed8fcdfe'
 
   url "http://reinventedsoftware.com/feeder/downloads/Feeder_#{version}.dmg"
   appcast 'http://reinventedsoftware.com/feeder/downloads/Feeder25.xml',
