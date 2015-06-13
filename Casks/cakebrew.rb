@@ -1,6 +1,6 @@
 cask :v1 => 'cakebrew' do
-  version '1.1'
-  sha256 'def78a58ec2aebb0af887713d9554d16ba41f6ce8350df684c8783c9190fbc73'
+  version '1.1.1'
+  sha256 '48c560cfbec435e5b57aaf3a2d9c8696547b3b9c1d46a862abcc4b67f1906d87'
 
   url "https://www.cakebrew.com/files/cakebrew-#{version}.dmg"
   appcast 'https://www.cakebrew.com/appcast/profileInfo.php',
