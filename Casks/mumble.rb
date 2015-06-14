@@ -1,6 +1,6 @@
 cask :v1 => 'mumble' do
-  version '1.2.8'
-  sha256 '19ea209ed4a589ad0959f4c8b4af47f479efbf63d5efb0b170c3b31f98979e2f'
+  version '1.2.9'
+  sha256 'd0c630a4fb65be50407080e2f97a47cd3aeeb67ddc52e9e02dd454421404e449'
 
   url "http://downloads.sourceforge.net/sourceforge/mumble/Mumble-#{version}.dmg"
   gpg "#{url}.sig",
