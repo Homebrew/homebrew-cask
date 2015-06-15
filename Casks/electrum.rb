@@ -1,6 +1,6 @@
 cask :v1 => 'electrum' do
-  version '2.3.1'
-  sha256 'd074b5ba71aa634e52293e7f98fb31d71a2d242f70d6bef8de6ddddbd1d45f6c'
+  version '2.3.2'
+  sha256 '56c5a5fa3283de0b6d0af1e0700405be65bd081edaa11406a6e267ab48ed6df4'
 
   url "https://download.electrum.org/electrum-#{version}.dmg"
   gpg "#{url}.asc",
