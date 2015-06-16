@@ -5,7 +5,7 @@ cask :v1 => 'quickcal' do
   url 'http://quickcalapp.com/app/quickcal-latest.zip'
   name 'QuickCal'
   homepage 'http://quickcalapp.com/'
-  license :commercial 
+  license :commercial
 
   app 'QuickCal.app'
 end
