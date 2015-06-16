@@ -1,6 +1,6 @@
 cask :v1 => 'mactex' do
-  version '20150609'
-  sha256 'e5e3c3f0c753878dd7bd55660cef87a37816179c9b323b75f36daf11a6824b62'
+  version '20150613'
+  sha256 '42122a9fa665655369139a109af7a60bbcc26bc58889d2a8b96dd2d8d7aefd32'
 
   # ctan.org is the official download host per the vendor homepage
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version}.pkg"
