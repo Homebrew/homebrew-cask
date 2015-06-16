@@ -1,5 +1,5 @@
 cask :v1 => 'mactex' do
-  version '20150609'
+  version '20150613'
   sha256 'e5e3c3f0c753878dd7bd55660cef87a37816179c9b323b75f36daf11a6824b62'
 
   # ctan.org is the official download host per the vendor homepage
