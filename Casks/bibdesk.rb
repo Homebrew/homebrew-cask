@@ -5,7 +5,7 @@ cask :v1 => 'bibdesk' do
   url "http://downloads.sourceforge.net/project/bibdesk/BibDesk/BibDesk-#{version}/BibDesk-#{version}.dmg"
   name 'BibDesk'
   appcast 'http://bibdesk.sourceforge.net/bibdesk.xml',
-          :sha256 => '1e2b0f0c5e7de9f352ffa2f5b894ec5c4c3c0bb22c4a2018fa5b054df1ebfaa5'
+          :sha256 => '794c84ee3ef4f695a22ce2801d12cc6457a3705fc97fc7d64c14adb5eaa31b8b'
   homepage 'http://bibdesk.sourceforge.net/'
   license :bsd
 

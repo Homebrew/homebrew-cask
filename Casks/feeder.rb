@@ -4,7 +4,7 @@ cask :v1 => 'feeder' do
 
   url "http://reinventedsoftware.com/feeder/downloads/Feeder_#{version}.dmg"
   appcast 'http://reinventedsoftware.com/feeder/downloads/Feeder25.xml',
-          :sha256 => '4cdf660c101c75d174934e26726e4d7555f1cc1ffd0dcce757acfe0fce30c5eb'
+          :sha256 => '4d454364411c22a093e63e780e4026bb45a54bf1e7ab329a45a77b4c73020dc4'
   name 'Feeder'
   homepage 'http://reinventedsoftware.com/feeder/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
