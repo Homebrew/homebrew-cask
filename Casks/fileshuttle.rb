@@ -4,7 +4,7 @@ cask :v1 => 'fileshuttle' do
 
   url "http://fileshuttle.io/fileshuttle-#{version}.zip"
   appcast 'http://updates.getfileshuttle.com/update.xml',
-          :sha256 => 'ebb32260fb12727694a0f888cb264285ae219fa98ef6458d725b647f47a2c9e5'
+          :sha256 => '9c8640556eedc9f07894e1c3d140f86ccdf27c95714aead2937ae562143079e0'
   name 'FileShuttle'
   homepage 'http://fileshuttle.io/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
