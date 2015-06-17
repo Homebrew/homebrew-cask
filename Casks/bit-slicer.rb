@@ -6,7 +6,7 @@ cask :v1 => 'bit-slicer' do
   url "https://bitbucket.org/zorgiepoo/bit-slicer/downloads/Bit%20Slicer%20#{version}.zip"
   name 'Bit Slicer'
   appcast 'http://zorg.tejat.net/bitslicer/update.php',
-          :sha256 => 'ad8cdd11fb138f98a29bf24a31d3f82f086e6abf813787f91679ce5ec015239c'
+          :sha256 => '273bf66e66a244e694d8144ee66d71859283679d5d862dd46e3752c1cb340fb7'
   homepage 'https://github.com/zorgiepoo/bit-slicer/'
   license :bsd
 
