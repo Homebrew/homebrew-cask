@@ -4,7 +4,7 @@ cask :v1 => 'colorpicker' do
 
   url "http://www.northernspysoftware.com/download/ColorPicker_#{version}.dmg"
   appcast 'http://www.northernspysoftware.com/feed/colorpicker.xml',
-          :sha256 => 'e534a4e8a24ff6f3b315ca01e2c3442a8c2ce689b428b0d5f62bab1f538b0c62'
+          :sha256 => '52d78504cf610c23eb719c689cc997d5836d85b0a7e5d8cc5c5998af8190d5bd'
   name 'ColorPicker'
   homepage 'http://www.northernspysoftware.com/software/colorpicker'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
