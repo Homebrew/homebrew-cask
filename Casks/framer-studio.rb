@@ -5,7 +5,7 @@ cask :v1 => 'framer-studio' do
   url "http://studio.update.framerjs.com/static/downloads/Framer%20Studio-#{version}.zip"
   name 'Framer Studio'
   appcast 'http://studio.update.framerjs.com/appcast.xml',
-          :sha256 => '12f44dad224ade9de17cd52a5f12719e2d6512eafda790287a3a252c9e7ed6cc'
+          :sha256 => '2d6e82bb3d57ecf9d7dcb339efea422f6feaed924b73a15b550b69f07b8b9172'
   homepage 'http://framerjs.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
