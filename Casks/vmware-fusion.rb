@@ -1,6 +1,6 @@
 cask :v1 => 'vmware-fusion' do
-  version '7.1.1-2498930'
-  sha256 '5dc70b0598c3c89003acc18029eaf56fd0129ceeef958805d5f3b41f0624a253'
+  version '7.1.2-2779224'
+  sha256 '93e809ece4f915fcb462affabfce2d7c85eb08314b548e2cde44cb2a67ad7d76'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   name 'VMware Fusion'
