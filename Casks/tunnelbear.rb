@@ -1,11 +1,11 @@
 cask :v1 => 'tunnelbear' do
-  version '2.4.7'
-  sha256 '0aa7ff4d4af45b4863db9784bafb490bdb2c55cfa399d4cdc74d8aa42bf6d8ac'
+  version '2.5'
+  sha256 'b363fd36a9c8c13bd42e1372a0c4403fd7eef3d27d3e876c52fcf07e955e29aa'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version}.zip"
   appcast 'https://s3.amazonaws.com/tunnelbear/downloads/mac/appcast.xml',
-          :sha256 => '69e4bf8982ecc871fd701062b35c7de265ebd76b8676256923cf7c6e1b1249a0'
+          :sha256 => '9ab024197af9828ad9e986a040b094eb856c23fa277129206f54021469454cf1'
   name 'TunnelBear'
   homepage 'https://www.tunnelbear.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
