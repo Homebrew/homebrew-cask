@@ -1,9 +1,11 @@
-class Wuala < Cask
-  version 'latest'
+cask :v1 => 'wuala' do
+  version :latest
   sha256 :no_check
 
   url 'https://cdn.wuala.com/files/WualaInstaller.dmg'
-  homepage 'http://wuala.com'
+  name 'Wuala'
+  homepage 'https://www.wuala.com/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'Wuala.app'
+  app 'Wuala.app'
 end

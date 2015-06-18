@@ -1,13 +1,11 @@
-class Webstorm < Cask
-  version '8.0.4'
-  sha256 '33abeb4712e8515a7eae6c076edef0922bf96bf46538ff45bf627787e5e2eb9e'
+cask :v1 => 'webstorm' do
+  version '10.0.4'
+  sha256 '0e444910001fc74b401c3b12738abedb823cc8064af53a304ce8e8c4d9d0ca6a'
 
-  url 'http://download-cf.jetbrains.com/webstorm/WebStorm-8.0.4.dmg'
+  url "http://download-cf.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
+  name 'WebStorm'
   homepage 'http://www.jetbrains.com/webstorm/'
+  license :commercial
 
-  link 'WebStorm.app'
-
-  after_install do
-    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/WebStorm.app/Contents/Info.plist"
-  end
+  app 'WebStorm.app'
 end

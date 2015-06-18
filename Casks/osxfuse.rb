@@ -1,11 +1,15 @@
-class Osxfuse < Cask
-  version '2.7.0'
-  sha256 'fab4c8d16d0fc6995826d74f2c0ab04cd7264b00c566d5cc3b219bd589da8114'
+cask :v1 => 'osxfuse' do
+  version '2.7.5'
+  sha256 '9be5cc9c44c2211aacea6a35aea5d47fea82599e981f051f318201a637b43f72'
 
-  url "https://downloads.sourceforge.net/project/osxfuse/osxfuse-#{version}/osxfuse-#{version}.dmg"
+  # sourceforge.net is the official download host per the vendor homepage
+  url "http://downloads.sourceforge.net/project/osxfuse/osxfuse-#{version}/osxfuse-#{version}.dmg"
+  name 'OSXFUSE'
   homepage 'https://osxfuse.github.io/'
+  license :bsd
 
-  install "Install OSXFUSE #{version[0..-3]}.pkg"
+  pkg "Install OSXFUSE #{version[0..-3]}.pkg"
+
   uninstall :pkgutil => 'com.github.osxfuse.pkg.Core|com.github.osxfuse.pkg.PrefPane',
             :kext => 'com.github.osxfuse.filesystems.osxfusefs'
 end

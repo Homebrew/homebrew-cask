@@ -1,22 +1,15 @@
-class Qgis < Cask
-  version '2.2.0-10'
-  sha256 '00ddf8511c11664600b680d569153a040bfd7579b40ccab53659d23999d4ad43'
+cask :v1 => 'qgis' do
+  version '2.8.2-1'
+  sha256 '6a02d2dde377e66d0a05c6bfcff74ab16faec0bd5c2033bbf8cb64bad0b38189'
 
   url "http://www.kyngchaos.com/files/software/qgis/QGIS-#{version}.dmg"
+  name 'QGIS'
   homepage 'http://www.kyngchaos.com/software/qgis'
-  install 'Install QGIS.pkg'
+  license :gpl
+  pkg 'Install QGIS.pkg'
+
   uninstall :pkgutil => 'org.qgis.qgis-*'
-  caveats do
-    <<-EOS.undent
-    #{@cask} requires the GDAL framework and Matplotlib to be installed first,
-    otherwise the installation will fail. In case of issues, try installing it
 
-        brew cask install gdal-framework matplotlib
-
-    and then reinstall QGIS
-
-        brew cask uninstall qgis
-        brew cask install qgis
-    EOS
-  end
+  depends_on :cask => 'gdal-framework'
+  depends_on :cask => 'matplotlib'
 end

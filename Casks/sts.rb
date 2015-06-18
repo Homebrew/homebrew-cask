@@ -1,14 +1,17 @@
-class Sts < Cask
-  version '3.5.1'
-  sha256 'f71274c9f946d2af6bbd12e811d7c8d371d3031415839b9aa6ed35347d2980f8'
-  # find eclise version at http://spring.io/tools/sts/all
-  based_on_eclipse = '4.3.2'
+cask :v1 => 'sts' do
+  version '3.6.4'
+  sha256 '9627e702f83efa19d25f6041bd86a58395ba1cc769c6e76b3f628d6c23900633'
 
-  url "http://download.springsource.com/release/STS/#{version}/dist/e#{based_on_eclipse.gsub(/\.\d$/, '')}/spring-tool-suite-#{version}.RELEASE-e#{based_on_eclipse}-macosx-cocoa-x86_64-installer.dmg"
-  homepage 'http://spring.io/tools/sts'
-
-  caskroom_only true
-  caveats do
-    manual_installer "Installer - Spring Tool Suite #{@cask.version}.RELEASE.app"
+  module Utils
+    def self.based_on_eclipse
+      '4.4.2'   # find eclipse version at http://spring.io/tools/sts/all
+    end
   end
+
+  url "http://dist.springsource.com/release/STS/#{version}.RELEASE/dist/e#{Utils.based_on_eclipse.gsub(/\.\d$/, '')}/spring-tool-suite-#{version}.RELEASE-e#{Utils.based_on_eclipse}-macosx-cocoa-x86_64.tar.gz"
+  name 'Spring Tool Suite'
+  homepage 'http://spring.io/tools/sts'
+  license :eclipse
+
+  app "sts-bundle/sts-#{version}.RELEASE/STS.app"
 end

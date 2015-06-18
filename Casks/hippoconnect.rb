@@ -1,9 +1,11 @@
-class Hippoconnect < Cask
-  version 'latest'
+cask :v1 => 'hippoconnect' do
+  version :latest
   sha256 :no_check
 
   url 'http://hipporemote.com/HippoConnect/mac/HippoConnect.zip'
+  name 'HippoConnect'
   homepage 'http://hipporemote.com/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'HippoConnect.app'
+  app 'HippoConnect.app'
 end

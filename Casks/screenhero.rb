@@ -1,10 +1,12 @@
-class Screenhero < Cask
-  version 'latest'
+cask :v1 => 'screenhero' do
+  version :latest
   sha256 :no_check
 
-  url 'http://dl.screenhero.com/update/screenhero/Screenhero.dmg'
+  url 'https://secure.screenhero.com/update/screenhero/Screenhero.dmg'
   appcast 'http://dl.screenhero.com/update/screenhero/sparkle.xml'
-  homepage 'http://screenhero.com'
+  name 'Screenhero'
+  homepage 'https://screenhero.com/'
+  license :commercial
 
-  link 'Screenhero.app'
+  app 'Screenhero.app'
 end

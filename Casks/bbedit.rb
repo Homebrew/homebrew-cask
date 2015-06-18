@@ -1,10 +1,13 @@
-class Bbedit < Cask
-  version '10.5.12'
-  sha256 '1f63ec3953580d33d0407522e29c0ad28fb281f84edf191fd0d54170c48c88ec'
+cask :v1 => 'bbedit' do
+  version '11.1'
+  sha256 '38e239252e90b787d257b6257dcce13f14f346fb860bf6fb38a20f2698f86855'
 
   url "http://pine.barebones.com/files/BBEdit_#{version}.dmg"
-  appcast 'https://versioncheck.barebones.com/BBEdit.xml'
+  appcast 'https://versioncheck.barebones.com/BBEdit.xml',
+          :sha256 => 'd1daa1c906105189b0ef3a7cccd4bbabd6d7f6b48341f95fdb711491555679d8'
+  name 'BBEdit'
   homepage 'http://www.barebones.com/products/bbedit/'
+  license :commercial
 
-  link 'BBEdit.app'
+  app 'BBEdit.app'
 end

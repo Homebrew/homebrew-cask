@@ -1,10 +1,14 @@
-class Cog < Cask
-  version 'nightly_builds_2051'
+cask :v1 => 'cog' do
+  version 'r2051'
   sha256 '1cc55f718a15810cccc5141312c01079e1da230a2412e4bc66c172de7aee36fe'
 
-  url 'http://cogx.org/nightly_builds/cog-r2051.tbz'
-  appcast 'http://mamburu.net/cog/stable.xml'
+  # the stable package on sourceforge is a bzip-inside-bzip that we can't handle
+  url "http://cogx.org/nightly_builds/cog-#{version}.tbz"
+  appcast 'http://mamburu.net/cog/stable.xml',
+          :sha256 => 'f5770d73ad0c4a19af24cf25195c01d1cc05b937a79416fe82ead0949beee62e'
+  name 'Cog'
   homepage 'http://cogx.org'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'Cog.app'
+  app 'Cog.app'
 end

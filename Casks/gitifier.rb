@@ -1,10 +1,12 @@
-class Gitifier < Cask
-  version '1.3'
-  sha256 'b199743bdae2305db99d9d3a247f9c8846031d1fbb19201ea81262b25e629d2f'
+cask :v1 => 'gitifier' do
+  version '1.3.1'
+  sha256 '59068f250654d0d1588c544f34148bd81a8855b78f868fca8ae49dd3d24d1ee4'
 
-  url 'https://github.com/downloads/jsuder/Gitifier/Gitifier-1.3.zip'
-  appcast 'http://sparkle.psionides.eu/feed/gitifier'
+  url "https://github.com/jsuder/Gitifier/releases/download/#{version}/Gitifier-#{version}.zip"
+  appcast 'https://github.com/jsuder/Gitifier/releases.atom'
+  name 'Gitifier'
   homepage 'http://psionides.github.io/Gitifier/'
+  license :eclipse
 
-  link 'Gitifier.app'
+  app 'Gitifier.app'
 end

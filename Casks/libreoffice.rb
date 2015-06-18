@@ -1,14 +1,21 @@
-class Libreoffice < Cask
-  homepage 'https://www.libreoffice.org/'
-  version '4.3.1'
-
-  if Hardware::CPU.is_32_bit? or MacOS.version < :mountain_lion
+cask :v1 => 'libreoffice' do
+  if Hardware::CPU.is_32_bit? || MacOS.release < :mountain_lion
+    version '4.3.7'
+    sha256 '2964a952ab633426df402de2f128cf788354ac622b7c30b25209d185d17617ec'
+    # documentfoundation.org is the official download host per the vendor homepage
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86/LibreOffice_#{version}_MacOS_x86.dmg"
-    sha256 'a2d507f643b952282ff5ce90ac227bea9bd412748ffcb93050db75256b2f803c'
   else
+    version '4.4.3'
+    sha256 '854601546f035fc9f130dd7f3c5f1dbcc37ac4fcac548aebaad219a7f030c160'
+    # documentfoundation.org is the official download host per the vendor homepage
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
-    sha256 '9a212ca4b77770c57f8b7ac375b5a98824c93dabd6e238dc019dc1139b6d3b7f'
   end
+  gpg "#{url}.asc",
+      :key_id => 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
-  link 'LibreOffice.app'
+  name 'LibreOffice'
+  homepage 'https://www.libreoffice.org/'
+  license :mpl
+
+  app 'LibreOffice.app'
 end

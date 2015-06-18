@@ -1,9 +1,12 @@
-class Emacs < Cask
-  version '24.3'
-  sha256 '92b3a6dd0a32b432f45ea925cfa34834c9ac9f7f0384c38775f6760f1e89365a'
+cask :v1 => 'emacs' do
+  version '24.5-1'
+  sha256 'c99c3def07886c0897c7c4bfc4a19338ea3d5bbcc2986d48be98aae1401f5830'
 
-  url 'http://emacsformacosx.com/emacs-builds/Emacs-24.3-universal-10.6.8.dmg'
+  url "http://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
+  name 'Emacs for Mac OS X'
+  name 'Emacs'
   homepage 'http://emacsformacosx.com/'
+  license :oss
 
-  link 'Emacs.app'
+  app 'Emacs.app'
 end

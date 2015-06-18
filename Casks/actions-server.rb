@@ -1,9 +1,11 @@
-class ActionsServer < Cask
-  version 'latest'
+cask :v1 => 'actions-server' do
+  version :latest
   sha256 :no_check
 
   url 'http://getactionsapp.com/downloads/ActionsServer.dmg'
+  name 'Actions Server'
   homepage 'http://getactionsapp.com'
+  license :gratis
 
-  link 'Actions Server.app'
+  app 'Actions Server.app'
 end

@@ -1,12 +1,16 @@
-class XamarinIos < Cask
-  version '7.2.4.4'
-  sha256 'd6056e2ab4e529d7a04e9bcca915d780e3d9a76593c14791040b29651f6f2e5d'
+cask :v1 => 'xamarin-ios' do
+  version '8.6.0.51'
+  sha256 'af65207d86529fff3ede3e6bc1d394fe7bc1abca67cc502e05c3d725710125c6'
 
-  url 'http://download.xamarin.com/MonoTouch/Mac/monotouch-7.2.4.4.pkg'
-  # non-Sparkle appcast
-  appcast 'http://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml'
+  url "http://download.xamarin.com/MonoTouch/Mac/monotouch-#{version}.pkg"
+  name 'Xamarin.iOS'
+  appcast 'http://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
+          :sha256 => '79c309d6dbe6f08f1d022c9376a4678cc94f57be084007df90c5a12839b35cdd',
+          :format => :unknown
   homepage 'http://xamarin.com/ios'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  install 'monotouch-7.2.4.4.pkg'
+  pkg "monotouch-#{version}.pkg"
+
   uninstall :pkgutil => 'com.xamarin.monotouch.pkg'
 end

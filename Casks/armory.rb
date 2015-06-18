@@ -1,9 +1,12 @@
-class Armory < Cask
-  version '0.92.1'
-  sha256 '75d6b7566d6c40a93f7dcf995dfb778b577d0b4698cc52d1ecea8f6fadfdf460'
+cask :v1 => 'armory' do
+  version '0.93.2'
+  sha256 '1b8c36433802087e772594335c55f1a08acfc9a0571157d874c13268eb4362f6'
 
-  url 'https://s3.amazonaws.com/bitcoinarmory-releases/armory_0.92.1_osx.tar.gz'
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://s3.amazonaws.com/bitcoinarmory-releases/armory_#{version}_osx.tar.gz"
+  name 'Armory'
   homepage 'https://bitcoinarmory.com/'
+  license :affero
 
-  link 'Armory.app'
+  app 'Armory.app'
 end

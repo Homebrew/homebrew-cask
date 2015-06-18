@@ -1,22 +1,17 @@
-class Heart < Cask
-  version 'latest'
+cask :v1 => 'heart' do
+  version :latest
   sha256 :no_check
 
   url 'http://presstube.com/screensavers/presstube-heart-mac.zip'
+  name 'Presstube Heart'
   homepage 'http://presstube.com/blog/2011/heart/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   screen_saver 'presstube-heart.app/Contents/Resources/Presstube - Heart.saver'
 
-  after_install do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName Heart (Presstube)', "#{destination_path}/presstube-heart.app/Contents/Resources/Presstube - Heart.saver/Contents/Info.plist"
+  postflight do
+    system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName Heart (Presstube)', "#{staged_path}/presstube-heart.app/Contents/Resources/Presstube - Heart.saver/Contents/Info.plist"
   end
 
-  caveats do
-    <<-EOS.undent
-    If you have issue running #{@cask}, try installing Adobe Air with
-
-        brew cask install adobe-air
-
-    EOS
-  end
+  depends_on :cask => 'adobe-air'
 end

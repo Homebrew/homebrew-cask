@@ -1,19 +1,21 @@
-class Xamarin < Cask
-  version 'latest'
+cask :v1 => 'xamarin' do
+  version :latest
   sha256 :no_check
 
   url 'http://download.xamarin.com/Installer/Mac/XamarinInstaller.dmg'
+  name 'Xamarin Platform'
   homepage 'http://xamarin.com/platform'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  caskroom_only true
+  installer :manual => 'Install Xamarin.app'
 
-  caveats do
-    puts 'This app requires the JRE (Java Runtime Environment) to be installed'
-    manual_installer 'Install Xamarin.app'
-  end
+  uninstall :delete => '/Applications/Xamarin Studio.app'
+  zap       :delete => '~/Library/Developer/Xamarin'
 
-  uninstall :files => [
-    '/Applications/Xamarin Studio.app',
-    '~/Library/Developer/Xamarin'
-  ]
+  caveats <<-EOS.undent
+    If you choose to install Xamarin.Android, you'll need Java 6+,
+    you can install the latest Java using
+
+      brew cask install java
+  EOS
 end

@@ -1,9 +1,12 @@
-class Consul < Cask
-  version '0.4.0'
-  sha256 '87a1b0f37e773d92c939ca7dd6a50985acc4fb4aaec31384756ef896aef4035b'
+cask :v1 => 'consul' do
+  version '0.5.2'
+  sha256 '87be515d7dbab760a61a359626a734f738d46ece367f68422b7dec9197d9eeea'
 
+  # bintray.com is the official download host per the vendor homepage
   url "https://dl.bintray.com/mitchellh/consul/#{version}_darwin_amd64.zip"
-  homepage 'http://www.consul.io/'
+  name 'Consul'
+  homepage 'https://www.consul.io/'
+  license :mpl
 
   binary 'consul'
 end

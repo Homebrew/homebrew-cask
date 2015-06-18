@@ -1,10 +1,12 @@
-class Silo < Cask
+cask :v1 => 'silo' do
   version '2.3.02'
   sha256 '7d84001382c3d12ad2f436fdb5572a60335a9e1dbac6505fd959fc776efaf365'
 
-  url 'https://nevercenter.com/download/Install_Silo_2_3_02_mac.zip'
+  url "https://nevercenter.com/download/Install_Silo_#{version.gsub('.','_')}_mac.zip"
+  name 'Silo'
   homepage 'http://nevercenter.com/silo/'
-  nested_container 'Install_Silo_2_3_02_mac.dmg'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  container :nested => "Install_Silo_#{version.gsub('.','_')}_mac.dmg"
 
-  link 'Silo 2.3.app'
+  app "Silo #{version.sub(%r{^(\d+\.\d+).*},'\1')}.app"
 end

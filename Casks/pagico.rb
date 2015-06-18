@@ -1,11 +1,14 @@
-class Pagico < Cask
-  version '6.5 (r1549)'
-  sha256 'ad28214b082208025f9103dfbc2149b8224f0c488dfdcb06b51090e23d285bed'
+cask :v1 => 'pagico' do
+  version '6.8.1637'
+  sha256 '55df590853906fe6590f6526b2f8c2663f90f4b76c5baf2976f722d203383ddd'
 
-  url 'http://pagico.com/downloads/Pagico_Desktop_r1549.dmg'
+  url "http://pagico.com/downloads/Pagico_Desktop_r#{version.sub(%r{^.*\.},'')}.dmg"
+  name 'Pagico'
   homepage 'http://pagico.com/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  install 'Install Pagico 6.pkg'
+  pkg 'Install Pagico.pkg'
+
   uninstall :pkgutil => 'com.pagico.*',
-            :files => '/Applications/Pagico'
+            :delete => '/Applications/Pagico'
 end

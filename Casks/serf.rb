@@ -1,9 +1,12 @@
-class Serf < Cask
-  version '0.6.3'
-  sha256 'c406463486282ae9c6dc974a5d8688b8908a1fb6af46a2c1aca3785c16ac590b'
+cask :v1 => 'serf' do
+  version '0.6.4'
+  sha256 '8f1cd35ab55e95657c1dcc657df94fee62cb745ba72927d105559396c4f0a3ef'
 
-  url 'https://dl.bintray.com/mitchellh/serf/0.6.3_darwin_amd64.zip'
-  homepage 'http://www.serfdom.io/'
+  # bintray.com is the official download host per the vendor homepage
+  url "https://dl.bintray.com/mitchellh/serf/#{version}_darwin_amd64.zip"
+  name 'Serf'
+  homepage 'https://www.serfdom.io/'
+  license :mpl
 
   binary 'serf'
 end

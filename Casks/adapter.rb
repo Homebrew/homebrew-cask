@@ -1,10 +1,13 @@
-class Adapter < Cask
-  version '2.1.1'
-  sha256 'e46706c1b64acc2cd927456ba03be5220c2bc406c4eacab6fdd28490fb452a94'
+cask :v1 => 'adapter' do
+  version '2.1.4'
+  sha256 '7f4db4e89fcf1d7be692c5b74b02f4c22206396a0febd51f42a46262ff9d4927'
 
-  url 'http://downloads.macroplant.com/Adapter-2.1.1.dmg'
-  appcast 'http://www.macroplant.com/adapter/adapterAppcast.xml'
+  url "http://downloads.macroplant.com/Adapter-#{version}.dmg"
+  name 'Adapter'
+  appcast 'https://www.macroplant.com/adapter/adapterAppcast.xml',
+          :sha256 => '036eb7f0efa1ea980a1233e39f4342dcc2751e048acdfb967532864930ca84de'
   homepage 'http://www.macroplant.com/adapter/'
+  license :gratis
 
-  link 'Adapter.app'
+  app 'Adapter.app'
 end

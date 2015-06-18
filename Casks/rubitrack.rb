@@ -1,10 +1,13 @@
-class Rubitrack < Cask
-  version '3.4.4'
-  sha256 'f1ac426726b93ae144afd6809e2acc00b139cb64d4a89da7677795d7c11cffc4'
+cask :v1 => 'rubitrack' do
+  version '3.4.7'
+  sha256 '22bf1e7392d5e4cb6fc4e3c9d1ada3ea64976348ae3271ab13d55e6cdf55f5ce'
 
   url "http://www.rubitrack.com/files/rubiTrack-#{version}.dmg"
-  appcast 'http://www.rubitrack.com/autoupdate/sparkle3.xml'
+  appcast 'http://www.rubitrack.com/autoupdate/sparkle3.xml',
+          :sha256 => 'c7aca0d98b52caa1e7d54cf7b44cdf06317fab2cf982f1e29f4034fe419175e7'
+  name 'rubiTrack'
   homepage 'http://www.rubitrack.com/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link "rubiTrack #{version.to_i}.app"
+  app "rubiTrack #{version.to_i}.app"
 end

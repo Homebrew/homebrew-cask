@@ -1,9 +1,11 @@
-class RName < Cask
-  version 'latest'
+cask :v1 => 'r-name' do
+  version :latest
   sha256 :no_check
 
   url 'http://www.jacek-dom.net/software/R-Name/R-Name.app.zip'
+  name 'R-Name'
   homepage 'http://www.jacek-dom.net/software/R-Name/'
+  license :gpl
 
-  link 'R-Name.app'
+  app 'R-Name.app'
 end

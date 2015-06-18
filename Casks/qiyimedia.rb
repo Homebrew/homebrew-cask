@@ -1,9 +1,11 @@
-class Qiyimedia < Cask
-  version '2.6.0'
-  sha256 '9d66ba83afa84decb5b1a8a5f0032c6f1aae24d05ddf6da2f07ce5e3702e0033'
+cask :v1 => 'qiyimedia' do
+  version '3.1.14'
+  sha256 'bab6c18060eabb2ae3326c562de6e33041ab6a0476817ae7fc1f39d2265734b5'
 
   url 'http://static.qiyi.com/ext/common/QIYImedia_Mac_5.dmg'
+  name '爱奇艺视频'
   homepage 'http://www.iqiyi.com'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link '爱奇艺视频.app'
+  app '爱奇艺视频.app'
 end

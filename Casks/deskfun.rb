@@ -1,10 +1,13 @@
-class Deskfun < Cask
+cask :v1 => 'deskfun' do
   version '0.5.7'
   sha256 '4a3315d21350e118ea8fce934b7d500230c76680bc3345b59a9e86f90d2bb33f'
 
-  url 'http://www.furrysoft.de/download/DeskFun0.5.7.zip'
-  appcast 'http://www.furrysoft.de/appcast/DeskFun.xml'
+  url "http://www.furrysoft.de/download/DeskFun#{version}.zip"
+  appcast 'http://www.furrysoft.de/appcast/DeskFun.xml',
+          :sha256 => '57ed0eb9f5e08f7879eb825012bfb2b8ad21387aad8b35adce4f6659eb1b7999'
+  name 'DeskFun'
   homepage 'http://www.furrysoft.de/?page=deskfun'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'DeskFun.app'
+  app 'DeskFun.app'
 end

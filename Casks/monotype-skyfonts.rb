@@ -1,10 +1,12 @@
-class MonotypeSkyfonts < Cask
-  version '4.4.0.0'
-  sha256 '76c02eb0d4b5a1a31afb3a8ca4df2d040943dceff86c5ad18d3a42dd6a09ccaf'
+cask :v1 => 'monotype-skyfonts' do
+  version '4.7.1.0'
+  sha256 '9a473e2b2d89d62b4fc2d9d3400a064636c210c62dfd935dd26e693a4c5c5bad'
 
-  url 'http://cdn1.skyfonts.com/client/Monotype_SkyFonts_Mac64_4.4.0.0.dmg.zip'
+  # skyfonts.com is the official download host per the vendor homepage
+  url "http://cdn1.skyfonts.com/client/Monotype_SkyFonts_Mac64_#{version}.dmg"
+  name 'Monotype SkyFonts'
   homepage 'http://www.fonts.com/web-fonts/google'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  nested_container 'Monotype_SkyFonts_Mac64_4.4.0.0.dmg'
-  link 'Monotype Skyfonts.app'
+  app 'Monotype Skyfonts.app'
 end

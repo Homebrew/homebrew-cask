@@ -1,10 +1,13 @@
-class RoyalTsx < Cask
-  version '1.3.0.0'
-  sha256 '2306ae0579b097ccf4796f9cc08012819d3e55d5025a1424c8eca5330cdaedf5'
+cask :v1 => 'royal-tsx' do
+  version '2.0.4.8'
+  sha256 '89e34c235ea8b2c82bebce7466f7aa0a0334ae52f219534b14b3589a38f26ac9'
 
-  url 'http://app.royaltsx.com/updates/royaltsx_1.3.0.0.dmg'
-  appcast 'http://app.royaltsx.com/updates_stable.php'
+  url "http://v2.royaltsx.com/updates/royaltsx_#{version}.dmg"
+  appcast 'http://v2.royaltsx.com/updates_beta.php',
+          :sha256 => '322a251ba213a4ea9873ce4d5a1386cd9f17234ff683c88bcd939c6d9a458310'
+  name 'Royal TSX'
   homepage 'http://www.royaltsx.com'
+  license :freemium
 
-  link 'Royal TSX.app'
+  app 'Royal TSX.app'
 end

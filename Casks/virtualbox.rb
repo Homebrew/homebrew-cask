@@ -1,10 +1,17 @@
-class Virtualbox < Cask
-  version '4.3.14-95030'
-  sha256 'c89b22f3e5ba5d93ccf762c5922c1f21d2c4e7c21b9487d892ac0516d6f4d55a'
+cask :v1 => 'virtualbox' do
+  version '4.3.28-100309'
+  sha256 '16ef55298abe5de8cd0e9ac88895d6404cde5a17d9aa126f8860c411c4eeeac2'
 
-  url "http://download.virtualbox.org/virtualbox/#{version.gsub(/-.*/, '')}/VirtualBox-#{version}-OSX.dmg"
-  homepage 'http://www.virtualbox.org'
+  url "http://download.virtualbox.org/virtualbox/#{version.sub(/-.*$/, '')}/VirtualBox-#{version}-OSX.dmg"
+  name 'VirtualBox'
+  homepage 'https://www.virtualbox.org'
+  license :gpl
+  tags :vendor => 'Oracle'
 
-  install 'VirtualBox.pkg'
-  uninstall :script => { :executable => 'VirtualBox_Uninstall.tool', :args => %w[--unattended] }
+  pkg 'VirtualBox.pkg'
+  binary '/Applications/VirtualBox.app/Contents/MacOS/VBoxManage'
+  binary '/Applications/VirtualBox.app/Contents/MacOS/VBoxHeadless'
+
+  uninstall :script => { :executable => 'VirtualBox_Uninstall.tool', :args => %w[--unattended] },
+            :pkgutil => 'org.virtualbox.pkg.*'
 end

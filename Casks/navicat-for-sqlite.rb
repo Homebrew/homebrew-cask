@@ -1,9 +1,12 @@
-class NavicatForSqlite < Cask
-  version '11.0.20'
-  sha256 'bacc8a7767d9f53ce50db9ce02e7b4f1e2dd687e86d7edebfd16fcd320eb9fec'
+cask :v1 => 'navicat-for-sqlite' do
+  version '11.1.12'   # navicat-premium.rb and navicat-for-* should be upgraded together
+  sha256 '72cd4c79d81af9c36b7e6caf484c1b265d8080d5a4f882061f8d2942b63b83d8'
 
-  url 'http://download.navicat.com/download/navicat110_sqlite_en.dmg'
+  url "http://download.navicat.com/download/navicat#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_sqlite_en.dmg"
+  name 'Navicat for SQLite'
   homepage 'http://www.navicat.com/products/navicat-for-sqlite'
+  license :commercial
+  tags :vendor => 'Navicat'
 
-  link 'Navicat for SQLite.app'
+  app 'Navicat for SQLite.app'
 end

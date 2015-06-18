@@ -1,9 +1,13 @@
-class Postgres < Cask
-  version '9.3.4.2'
-  sha256 '8a7d67aaea2546df7639416453b929c2ec0092393f00e5e0bbbcf20458ea39a1'
+cask :v1 => 'postgres' do
+  version '9.4.2.0'
+  sha256 'cf567b299697ac9503775c7ad021697e32acd6024470bc937763e8eb4fbe576d'
 
+  # github.com is the official download host per the vendor homepage
   url "https://github.com/PostgresApp/PostgresApp/releases/download/#{version}/Postgres-#{version}.zip"
+  appcast 'https://github.com/PostgresApp/PostgresApp/releases.atom'
+  name 'Postgres'
   homepage 'http://postgresapp.com/'
+  license :oss
 
-  link 'Postgres.app'
+  app 'Postgres.app'
 end

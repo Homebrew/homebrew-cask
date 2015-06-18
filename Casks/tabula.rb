@@ -1,9 +1,12 @@
-class Tabula < Cask
-  version '0.9.3'
-  sha256 'fca11ca0f21e8ad42090ee7cc43aba356fa03b2877e8054af2ee39148c9f1cc9'
+cask :v1 => 'tabula' do
+  version '0.9.5.2'
+  sha256 'b6a2663cbf440d27cc94ac9ac05ac1875136e81f63980a25e1acaf6a3250e131'
 
-  url 'https://github.com/jazzido/tabula/releases/download/v0.9.3/tabula-mac-0.9.3d.zip'
+  url "https://github.com/jazzido/tabula/releases/download/v0.9.5/tabula-mac-#{version}.zip"
+  appcast 'https://github.com/jazzido/tabula/releases.atom'
+  name 'Tabula'
   homepage 'http://tabula.nerdpower.org'
+  license :mit
 
-  link 'tabula/Tabula.app'
+  app 'tabula/Tabula.app'
 end

@@ -1,9 +1,11 @@
-class Deathtodsstore < Cask
-  version '1.0.3'
-  sha256 '32e44486a06b76b59e894119fa5a55895e2d74be2212805159bdcb9aee0e9e10'
+cask :v1 => 'deathtodsstore' do
+  version '1.0.4'
+  sha256 'ea5f92d902b99be9f385df47e9cbb15bf9d4dcda3bb9534be3aed71e26b18ffb'
 
   url 'http://www.aorensoftware.com/Downloads/Files/DeathToDSStore.zip'
+  name 'DeathToDSStore'
   homepage 'http://www.aorensoftware.com/blog/2011/12/24/death-to-ds_store/'
+  license :mit
 
-  link 'DeathToDSStore.app'
+  app 'DeathToDSStore.app'
 end

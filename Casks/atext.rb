@@ -1,10 +1,12 @@
-class Atext < Cask
-  version 'latest'
+cask :v1 => 'atext' do
+  version :latest
   sha256 :no_check
 
   url 'http://www.trankynam.com/atext/downloads/aText.dmg'
+  name 'aText'
   appcast 'http://www.trankynam.com/atext/aText-Appcast.xml'
   homepage 'http://www.trankynam.com/atext/'
+  license :commercial
 
-  link 'aText.app'
+  app 'aText.app'
 end

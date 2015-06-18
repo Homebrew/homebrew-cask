@@ -1,10 +1,12 @@
-class Chocolat < Cask
-  version 'latest'
+cask :v1 => 'chocolat' do
+  version :latest
   sha256 :no_check
 
   url 'https://chocolatapp.com/download'
-  appcast 'http://chocolatapp.com/userspace/appcast/appcast_alpha.php'
-  homepage 'http://chocolatapp.com/'
+  appcast 'https://chocolatapp.com/userspace/appcast/appcast_alpha.php'
+  name 'Chocolat'
+  homepage 'https://chocolatapp.com/'
+  license :commercial
 
-  link 'Chocolat.app'
+  app 'Chocolat.app'
 end

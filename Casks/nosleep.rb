@@ -1,10 +1,16 @@
-class Nosleep < Cask
-  version '1.3.3'
-  sha256 '5fe90c54e975d3f1de9f7fdb66def0188c571eab083b18a7e94abaa5f0d41ba9'
+cask :v1 => 'nosleep' do
+  version '1.4.0'
+  sha256 '29e7f771970dce41936372687a5160700e2208357ef1ce37d81ac95c9188efe8'
 
-  url 'https://macosx-nosleep-extension.googlecode.com/files/NoSleep-1.3.3.dmg'
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/integralpro/nosleep/releases/download/v#{version}/NoSleep-#{version}.dmg"
+  appcast 'https://github.com/integralpro/nosleep/releases.atom'
+  name 'NoSleep'
   homepage 'https://code.google.com/p/macosx-nosleep-extension/'
+  license :gpl
 
-  install 'NoSleep.mpkg'
-  uninstall :script => 'Uninstall.command'
+  pkg 'NoSleep.pkg'
+
+  uninstall :script => 'Uninstall.command',
+            :pkgutil => 'com.protech.pkg.NoSleep'
 end

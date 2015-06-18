@@ -37,7 +37,7 @@ die () {
 
 xml_source_1 () {
     if /usr/bin/xattr -p "$attribute_1" "$file_arg" > /dev/null 2>&1; then
-        /usr/bin/xattr -p "$attribute_1" "$file_arg" | /usr/bin/xxd -r -p | /usr/bin/plutil -convert xml1 -o - -
+        /usr/bin/xattr -p "$attribute_1" "$file_arg" | /usr/bin/xxd -r -p | /usr/bin/plutil -convert xml1 -o - - 2> /dev/null
     fi
 }
 

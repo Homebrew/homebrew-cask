@@ -1,9 +1,11 @@
-class Omniplan < Cask
-  version 'latest'
+cask :v1 => 'omniplan' do
+  version :latest
   sha256 :no_check
 
   url 'https://www.omnigroup.com/download/latest/omniplan'
-  homepage 'http://www.omnigroup.com/products/omniplan/'
+  name 'OmniPlan'
+  homepage 'https://www.omnigroup.com/omniplan/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'OmniPlan.app'
+  app 'OmniPlan.app'
 end

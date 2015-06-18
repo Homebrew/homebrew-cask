@@ -1,10 +1,13 @@
-class AdobeDigitalEditions < Cask
-  version '3.0'
-  sha256 '540d0fdeeddd1aea5cf31a105b5f31b1c838219c4cf9baddfc02d729c098bb45'
+cask :v1 => 'adobe-digital-editions' do
+  version '4.0'
+  sha256 :no_check    # required as upstream package is updated in-place
 
-  url 'http://download.adobe.com/pub/adobe/digitaleditions/ADE_3.0_Installer.dmg'
-  homepage 'http://www.adobe.com/pt/products/digital-editions.html'
+  url "http://download.adobe.com/pub/adobe/digitaleditions/ADE_#{version}_Installer.dmg"
+  name 'Adobe Digital Editions'
+  homepage 'https://www.adobe.com/solutions/ebook/digital-editions.html'
+  license :gratis
 
-  install 'Digital Editions 3.0 Installer.pkg'
+  pkg "Digital Editions #{version} Installer.pkg"
+
   uninstall :pkgutil => 'com.adobe.adobedigitaleditions.app'
 end

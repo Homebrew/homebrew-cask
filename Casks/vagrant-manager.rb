@@ -1,10 +1,13 @@
-class VagrantManager < Cask
-  version '2.0.1'
-  sha256 '690cdc1649255b0d4c54636548f834c77d0b9f1705383380a99bbc46b9e7b3f3'
+cask :v1 => 'vagrant-manager' do
+  version '2.4.1'
+  sha256 'ce01f4be6f0d6d514a74aa2fa0313b8b4b50de087610161ec1da6d472f9b8203'
 
+  # github.com is the official download host per the vendor homepage
   url "https://github.com/lanayotech/vagrant-manager/releases/download/#{version}/vagrant-manager-#{version}.dmg"
-  appcast 'http://api.lanayo.com/appcast/vagrant_manager.xml'
+  appcast 'https://github.com/lanayotech/vagrant-manager/releases.atom'
+  name 'Vagrant Manager'
   homepage 'http://vagrantmanager.com/'
+  license :mit
 
-  link 'Vagrant Manager.app'
+  app 'Vagrant Manager.app'
 end

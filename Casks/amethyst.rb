@@ -1,10 +1,13 @@
-class Amethyst < Cask
-  version '0.8.6'
-  sha256 '498e16ee2cb3686fc9bb94d77711283b1fcf14c2d13ff3a9d2c365c914996257'
+cask :v1 => 'amethyst' do
+  version '0.9.4'
+  sha256 'c9fb397dffdc77422ee8da363a6f1dee25562d9c1186b10260255f6a7ad50a23'
 
-  url 'http://ianyh.com/amethyst/versions/Amethyst-0.8.6.zip'
-  appcast 'http://ianyh.github.io/Amethyst/appcast.xml'
+  url "http://ianyh.com/amethyst/versions/Amethyst-#{version}.zip"
+  name 'Amethyst'
+  appcast 'http://ianyh.github.io/Amethyst/appcast.xml',
+          :sha256 => '483c803029845953a1d93aa93f7ba2856d0cf1ca5a246d7d98b61508f7b09ff8'
   homepage 'http://ianyh.com/amethyst'
+  license :mit
 
-  link 'Amethyst.app'
+  app 'Amethyst.app'
 end

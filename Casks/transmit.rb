@@ -1,10 +1,17 @@
-class Transmit < Cask
-  version '4.4.6'
-  sha256 '55b4a6f9c178f82a55a370745ed22cea4ba92a471b4be7a31105f67d04d0290c'
+cask :v1 => 'transmit' do
+  version '4.4.8'
+  sha256 '3547a5e8baabffd18c4e21c766362cd4295d878d391ce48bb8f8f4d6eabd9ef9'
 
-  url 'https://www.panic.com/transmit/d/Transmit%204.4.6.zip'
+  url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   appcast 'http://www.panic.com/updates/update.php'
+  name 'Transmit'
   homepage 'http://panic.com/transmit'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'Transmit.app'
+  app 'Transmit.app'
+
+  zap :delete => [
+                  '~/Library/Preferences/com.panic.Transmit.plist',
+                  '~/Library/Application Support/Transmit',
+                 ]
 end

@@ -1,9 +1,12 @@
-class SonicVisualiser < Cask
-  version '2.3'
-  sha256 '8a8c6c5268f10dd6614afeabd40a4fa962a31d55db0aed1ddf369c5a5b8b4981'
+cask :v1 => 'sonic-visualiser' do
+  version '2.4.1'
+  sha256 '45edf5021376ed79e3a7a9a17745261f91362c05d90db17dc3179b1649c29332'
 
-  url 'https://code.soundsoftware.ac.uk/attachments/download/907/Sonic%20Visualiser-2.3.dmg'
+  # ac.uk is the official download host per the vendor homepage
+  url "https://code.soundsoftware.ac.uk/attachments/download/1186/Sonic%20Visualiser-#{version}.dmg"
+  name 'Sonic Visualiser'
   homepage 'http://www.sonicvisualiser.org/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'Sonic Visualiser.app'
+  app 'Sonic Visualiser.app'
 end

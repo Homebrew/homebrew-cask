@@ -1,9 +1,11 @@
-class Jiggler < Cask
-  version 'latest'
+cask :v1 => 'jiggler' do
+  version :latest
   sha256 :no_check
 
   url 'http://downloads.sticksoftware.com/Jiggler.dmg'
+  name 'Jiggler'
   homepage 'http://www.sticksoftware.com/software/Jiggler.html'
+  license :gratis
 
-  link 'Jiggler.app'
+  app 'Jiggler.app'
 end

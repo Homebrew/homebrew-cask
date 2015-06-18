@@ -1,9 +1,11 @@
-class Torpedo < Cask
-  version 'latest'
+cask :v1 => 'torpedo' do
+  version :latest
   sha256 :no_check
 
   url 'https://usetorpedo.com/app/mac/download'
+  name 'Torpedo'
   homepage 'https://usetorpedo.com'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'Torpedo.app'
+  app 'Torpedo.app'
 end

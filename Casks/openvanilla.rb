@@ -1,9 +1,11 @@
-class Openvanilla < Cask
-  version '1.0.10'
-  sha256 '7263f7518f79c766aae6f2029fe08858d4c8226bf83810f7b0c920b7e0989d91'
+cask :v1 => 'openvanilla' do
+  version '1.0.11'
+  sha256 '35745a0767e4131efbdcb34459c5a7b44126aa11e73af80310b813bf6efe1bc5'
 
-  url 'http://dl.openvanilla.org/file/openvanilla/OpenVanilla-Installer-Mac-1.0.10.zip'
-  homepage 'http://openvanilla.org/'
+  url "https://app.openvanilla.org/file/openvanilla/OpenVanilla-Installer-Mac-#{version}.zip"
+  name 'OpenVanilla'
+  homepage 'https://openvanilla.org/'
+  license :mit
 
   input_method 'OpenVanillaInstaller.app/Contents/Resources/OpenVanilla.app'
   caveats do

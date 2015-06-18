@@ -1,10 +1,12 @@
-class Frizzix < Cask
-  version 'latest'
+cask :v1 => 'frizzix' do
+  version :latest
   sha256 :no_check
 
   url 'http://mac.frizzix.de/downloads/currentVersion.dmg'
   appcast 'http://frizzix.de/downloads/FrizzixUpdate.xml'
+  name 'Frizzix'
   homepage 'http://mac.frizzix.de/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'Frizzix.app'
+  app 'Frizzix.app'
 end

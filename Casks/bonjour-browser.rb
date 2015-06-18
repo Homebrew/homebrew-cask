@@ -1,9 +1,11 @@
-class BonjourBrowser < Cask
-  version 'latest'
+cask :v1 => 'bonjour-browser' do
+  version :latest
   sha256 :no_check
 
   url 'http://www.tildesoft.com/files/BonjourBrowser.dmg'
+  name 'Bonjour Browser'
   homepage 'http://www.tildesoft.com/'
+  license :gratis
 
-  link 'Bonjour Browser.app'
+  app 'Bonjour Browser.app'
 end

@@ -1,11 +1,15 @@
-class DevonthinkPro < Cask
-  version '2.7.3'
-  sha256 '314b3dacbe567e8fb7314c3a62c1df7fd60bad7c66c8b63c7ea03de09ae8a0c4'
+cask :v1 => 'devonthink-pro' do
+  version '2.8.5'
+  sha256 '161632818b26eb6f2ee2e9818e7c3506d1b54d5ceb934d546403bbc6f62674a6'
 
-  url 'https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/2.7.3/DEVONthink_Pro.dmg.zip'
-  appcast 'http://www.devon-technologies.com/Sparkle/DEVONthinkPro2.xml'
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro.dmg.zip"
+  appcast 'http://www.devon-technologies.com/Sparkle/DEVONthinkPro2.xml',
+          :sha256 => '5a6d91414dcd0c755c3db5b757363177630005215a3c1c6fedcfdd2e2b2dc0c6'
+  name 'DEVONthink Pro'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro.html'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  nested_container 'DEVONthink_Pro.dmg'
-  link 'DEVONthink Pro.app'
+  container :nested => 'DEVONthink_Pro.dmg'
+  app 'DEVONthink Pro.app'
 end

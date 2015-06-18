@@ -1,13 +1,27 @@
-class Phpstorm < Cask
-  version '7.1.3'
-  sha256 '37ab8cb0739388da77d226fbdbf956ef441a8d7cb59e316e22815d57d11f6a1d'
+cask :v1 => 'phpstorm' do
+  version '8.0.3'
+  sha256 '6c9b36ebfed67f5ec2e6a96f2f61826653b312686ecd8a298e0e2ca3e3a09559'
 
-  url 'http://download.jetbrains.com/webide/PhpStorm-7.1.3.dmg'
+  url "http://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
+  name 'PhpStorm'
   homepage 'http://www.jetbrains.com/phpstorm/'
+  license :commercial
 
-  link 'PhpStorm.app'
+  app 'PhpStorm.app'
 
-  after_install do
-    system "/usr/libexec/PlistBuddy", "-c", "Set :JVMOptions:JVMVersion 1.6+", "#{destination_path}/PhpStorm.app/Contents/Info.plist"
-  end
+  zap :delete => [
+                  '~/Library/Application Support/WebIde80',
+                  '~/Library/Preferences/WebIde80',
+                  '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
+                 ]
+  caveats <<-EOS.undent
+    #{token} requires Java 6 like any other IntelliJ-based IDE.
+    You can install it with
+
+      brew cask install caskroom/homebrew-versions/java6
+
+    The vendor (JetBrains) doesn't support newer versions of Java (yet)
+    due to several critical issues, see details at
+    https://intellij-support.jetbrains.com/entries/27854363
+  EOS
 end

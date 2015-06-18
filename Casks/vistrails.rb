@@ -1,9 +1,12 @@
-class Vistrails < Cask
-  version '2.1.1'
-  sha256 '38ac9da9af7a557cee6eb703517e38ea1bcc430706a436a182eec6f976275b02'
+cask :v1 => 'vistrails' do
+  version '2.1.4-269e4808eca3'
+  sha256 '5f6d190cff7af60050357d993ee34b9544fe15672b535769766ab783cbd09f99'
 
-  url 'https://downloads.sourceforge.net/project/vistrails/vistrails/v2.1.1/vistrails-mac-10.6-intel-2.1.1-90975fc00211.dmg'
-  homepage 'http://www.vistrails.org/index.php/Main_Page'
+  # sourceforge.net is the official download host per the vendor homepage
+  url "http://downloads.sourceforge.net/project/vistrails/vistrails/v#{version.sub(%r{-.*},'')}/vistrails-mac-10.6-intel-#{version}.dmg"
+  name 'VisTrails'
+  homepage 'http://www.vistrails.org/'
+  license :bsd
 
-  link 'VisTrails'
+  suite 'VisTrails'
 end

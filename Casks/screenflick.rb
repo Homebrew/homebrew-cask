@@ -1,9 +1,11 @@
-class Screenflick < Cask
-  version 'latest'
+cask :v1 => 'screenflick' do
+  version :latest
   sha256 :no_check
 
-  url 'http://www.araelium.com/screenflick/downloads/Screenflick.dmg'
+  url 'http://www.araelium.com/screenflick/downloads/Screenflick.zip'
+  name 'Screenflick'
   homepage 'http://www.araelium.com/screenflick/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'Screenflick.app'
+  app 'Screenflick.app'
 end

@@ -1,10 +1,12 @@
-class Hostbuddy < Cask
-  version 'latest'
+cask :v1 => 'hostbuddy' do
+  version :latest
   sha256 :no_check
 
   url 'https://clickontyler.com/hostbuddy/download/'
   appcast 'http://shine.clickontyler.com/appcast.php?id=22'
-  homepage 'http://clickontyler.com'
+  name 'Hostbuddy'
+  homepage 'https://clickontyler.com/hostbuddy/'
+  license :commercial
 
-  link 'Hostbuddy.app'
+  app 'Hostbuddy.app'
 end

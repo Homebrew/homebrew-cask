@@ -1,10 +1,13 @@
-class Loadmytracks < Cask
-  version 'latest'
+cask :v1 => 'loadmytracks' do
+  version :latest
   sha256 :no_check
 
-  url 'http://www.cluetrust.com/Downloads/LoadMyTracks.dmg'
-  appcast 'http://www.cluetrust.com/AppCasts/LoadMyTracks.xml'
-  homepage 'http://www.cluetrust.com/loadmytracks.html'
+  # cluetrust.com is the official download host per the product homepage
+  url 'https://www.cluetrust.com/Downloads/LoadMyTracks.dmg'
+  appcast 'https://www.cluetrust.com/AppCasts/LoadMyTracks.xml'
+  name 'LoadMyTracks'
+  homepage 'http://www.loadmytracks.com/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'LoadMyTracks.app'
+  app 'LoadMyTracks.app'
 end

@@ -1,13 +1,17 @@
-class Totalfinder < Cask
-  version '1.6.2'
-  sha256 '7f60614a81f3efcbf34fd6213f9f0a912e5f8472c3039ce1bbde0e58236dc659'
+cask :v1 => 'totalfinder' do
+  version '1.6.17'
+  sha256 'f2badde257b54c5dad8c3cce46afc5f4511f1d91ef6ad4a80e3522faa2331106'
 
   url "http://downloads.binaryage.com/TotalFinder-#{version}.dmg"
+  name 'TotalFinder'
   homepage 'http://totalfinder.binaryage.com'
+  license :commercial
 
-  install 'TotalFinder.pkg'
-  uninstall :script => {
-    :executable => 'TotalFinder Uninstaller.app/Contents/MacOS/TotalFinder Uninstaller',
-    :args => %w[--headless]
-  }
+  pkg 'TotalFinder.pkg'
+
+  uninstall :pkgutil => 'com.binaryage.pkg.totalfinder.app',
+            :script => {
+                        :executable => 'TotalFinder Uninstaller.app/Contents/MacOS/TotalFinder Uninstaller',
+                        :args => %w[--headless],
+                       }
 end

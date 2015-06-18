@@ -1,9 +1,12 @@
-class Pharo < Cask
-  version '3.0'
-  sha256 'f811c7ab77240c680ac74f0d50390101cd61007f027045a9c68322f7dadc6c38'
+cask :v1 => 'pharo' do
+  version '4.0'
+  sha256 :no_check # required as upstream package is updated in-place
 
+  # pharo.org is the official download host per the vendor homepage
   url "http://files.pharo.org/platform/Pharo#{version}-mac.zip"
-  homepage 'http://www.pharo-project.org/home'
+  name 'Pharo'
+  homepage 'http://pharo.org'
+  license :oss
 
-  link "Pharo#{version}.app"
+  app "Pharo#{version}.app"
 end

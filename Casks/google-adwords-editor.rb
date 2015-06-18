@@ -1,10 +1,12 @@
-class GoogleAdwordsEditor < Cask
-  version '10.4.1'
-  sha256 '570d606ac6593ac31a82ece928d7b04ad6f0355b0f58382e604be7f922c4c4ba'
+cask :v1 => 'google-adwords-editor' do
+  version '11.0.3'
+  sha256 '0294ef3fceff0cad0bc954c24afb20af36c01f8cbd4cc15e9aee43565dbb44bf'
 
-  url 'https://dl.google.com/adwords_editor/10.4.1/mac/en-US/AdWords-Editor-10.4.1-en-US.dmg'
-  homepage 'http://www.google.com/intl/en_US/adwordseditor/'
+  url "https://dl.google.com/adwords_editor/#{version}/Google_AdWords_Editor.dmg"
+  name 'Google AdWords Editor'
+  homepage 'https://www.google.com/intl/en/adwordseditor/'
+  license :gratis
+  tags :vendor => 'Google'
 
-  install 'AdWords-Editor-10.4.1-en-US.pkg'
-  uninstall :pkgutil => 'com.google.adwordseditor.pkg'
+  app 'Google AdWords Editor.app'
 end

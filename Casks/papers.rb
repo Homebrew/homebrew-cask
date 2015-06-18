@@ -1,10 +1,12 @@
-class Papers < Cask
-  version 'latest'
+cask :v1 => 'papers' do
+  version :latest
   sha256 :no_check
 
   url 'http://papersapp.com/papers/download'
   appcast 'http://www.papersapp.com/papers/appcast_v3.xml'
+  name 'Papers'
   homepage 'http://www.papersapp.com/papers/'
+  license :commercial
 
-  link 'Papers.app'
+  app 'Papers.app'
 end

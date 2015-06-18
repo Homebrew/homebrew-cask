@@ -1,11 +1,15 @@
-class KensingtonTrackballWorks < Cask
-  version '1.1.2'
-  sha256 '02e3fed2fe01c234206d3fcf2c85f71f10aa2a3bc3d3dd6f4694ac41b725e3df'
+cask :v1 => 'kensington-trackball-works' do
+  version '1.2.0'
+  sha256 '11c67355484bb55e2a2aca33f40fa8294612aa70a0be21a1da18d4cbc6816975'
 
-  url 'http://accoblobstorageus.blob.core.windows.net/software/38c5e777-b2ef-4434-8091-6290cb41fc16.dmg'
+  # windows.net is the official download host per the vendor homepage
+  url 'http://accoblobstorageus.blob.core.windows.net/software/b54b0855-21e0-4cfa-a084-2b62e6f4aa93.dmg'
+  name 'Kensington TrackballWorks'
   homepage 'http://www.kensington.com/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  install 'Kensington TrackballWorks.pkg'
+  pkg 'Kensington TrackballWorks.pkg'
+
   uninstall :pkgutil   => 'com.kensington.trackballworks.driver.installer',
             :kext      => 'com.kensington.trackballworks.driver',
             :launchctl => [

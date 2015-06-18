@@ -1,9 +1,12 @@
-class KomodoIde < Cask
-  version '8.5.4-86985'
-  sha256 'dde427a79aa17f5404b15bb286c075857fe5407f98395cc97f3e0e9c8b27851c'
+cask :v1 => 'komodo-ide' do
+  version '9.0.1-87208'
+  sha256 'b140a291efad0b3a0451cb00cae699bd8485a785c3a9f79ad596b713e58a76bb'
 
-  url "http://downloads.activestate.com/Komodo/releases/#{version.gsub(/-.*/, '')}/Komodo-IDE-#{version}-macosx-x86_64.dmg"
+  # activestate.com is the official download host per the vendor homepage
+  url "http://downloads.activestate.com/Komodo/releases/#{version.sub(%r{-.*},'')}/Komodo-IDE-#{version}-macosx-x86_64.dmg"
+  name 'Komodo IDE'
   homepage 'http://komodoide.com/'
+  license :commercial
 
-  link 'Komodo IDE 8.app'
+  app 'Komodo IDE 9.app'
 end

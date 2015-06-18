@@ -1,10 +1,12 @@
-class FsUae < Cask
-  version '2.2.3'
-  sha256 '3e949a673fb44abd8c788aa70361315fb7fb389575966dddee89f66fbda354ca'
+cask :v1 => 'fs-uae' do
+  version '2.4.1'
+  sha256 '7fa26b9840cc677642956020e2fa5dfae4f5848554d06df2e39e98816ab6d736'
 
-  url "http://fs-uae.net/fs-uae/stable/#{version}/fs-uae-plus-#{version}-macosx.tar.gz"
+  url "http://fs-uae.net/stable/#{version}/fs-uae-suite_#{version}_macosx.tar.gz"
+  name 'FS-UAE'
   homepage 'http://fs-uae.net/'
+  license :oss
 
-  link "fs-uae-#{version}-macosx/FS-UAE.app"
-  link "fs-uae-#{version}-macosx/FS-UAE Launcher.app"
+  app 'FS-UAE Arcade.app'
+  app 'FS-UAE Launcher.app'
 end

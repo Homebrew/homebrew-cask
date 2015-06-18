@@ -1,9 +1,12 @@
-class SeafileClient < Cask
-  version '3.1.5'
-  sha256 '25eedd712d57bcf94fd19ba2783d5f0278c3e95403ee07f300e17dabbd6bb75a'
+cask :v1 => 'seafile-client' do
+  version '4.1.3'
+  sha256 '936da2e40ae38cf0594af4040a2395f712b14d6aefc39e1d13d2f3f587a922c4'
 
-  url 'https://bitbucket.org/haiwen/seafile/downloads/seafile-client-3.1.5.dmg'
+  # bitbucket.org is the official download host per the vendor homepage
+  url "https://bitbucket.org/haiwen/seafile/downloads/seafile-client-#{version}.dmg"
+  name 'Seafile Client'
   homepage 'http://seafile.com/'
+  license :gpl
 
-  link 'Seafile Client.app'
+  app 'Seafile Client.app'
 end

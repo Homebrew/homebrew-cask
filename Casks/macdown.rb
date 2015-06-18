@@ -1,10 +1,16 @@
-class Macdown < Cask
-  version '0.2.4'
-  sha256 '8720bb9644b391a9a6fa06af50a57f7fff495c2da80573fc0077445d9ca67367'
+cask :v1 => 'macdown' do
+  version :latest
+  sha256 :no_check
 
-  url "http://macdown.uranusjr.com/download/v#{version}/"
-  appcast 'http://macdown.uranusjr.com/sparkle/macdown/appcast.xml'
+  url 'http://macdown.uranusjr.com/download/latest/'
+  appcast 'http://macdown.uranusjr.com/sparkle/macdown/appcast.xml',
+          :sha256 => '81345496a64ca0d0d7ff8936e43ff0e1041ab6ebd61d534bc67f3357291b7478'
+  name 'MacDown'
   homepage 'http://macdown.uranusjr.com/'
+  license :mit
 
-  link 'MacDown.app'
+  app 'MacDown.app'
+
+  zap :delete => ['~/Library/Preferences/com.uranusjr.macdown.plist',
+                  '~/Library/Application Support/MacDown']
 end

@@ -1,10 +1,11 @@
-class Djview < Cask
-  version '4.5'
-  sha256 'eec2efee86136725ae0a7164f80e2cea428c647fe987e3b6843b81280c7c7664'
+cask :v1 => 'djview' do
+  version '4.10.2'
+  sha256 '71023ad00941f7d3a01f273db4dc2e5c9c12b621954d877b9fe34a9ecf4bf149'
 
-  url 'https://downloads.sourceforge.net/sourceforge/djvu/djvulibre-3.5.22%2Bdjview-4.5-intel-3.zip'
+  url "https://downloads.sourceforge.net/sourceforge/djvu/DjVuLibre-3.5.27.1%2BDjView-#{version}-intel64.dmg"
+  name 'DjView'
   homepage 'http://djvu.sourceforge.net/'
+  license :gpl
 
-  nested_container 'djvulibre-3.5.22+djview-4.5-intel.dmg'
-  link 'DjView.app'
+  app 'DjView.app'
 end

@@ -1,10 +1,13 @@
-class Paparazzi < Cask
+cask :v1 => 'paparazzi' do
   version '0.6.7'
   sha256 '111c94994176a7690512aa5303bff14761f308c720b527b541e39edd054777bd'
 
-  url 'https://derailer.org/paparazzi/Paparazzi!%200.6.7.dmg'
-  appcast 'https://derailer.org/paparazzi/appcast/'
+  url "https://derailer.org/paparazzi/Paparazzi!%20#{version}.dmg"
+  appcast 'https://derailer.org/paparazzi/appcast/',
+          :sha256 => '05c4173db7a34788c01999a5c20d5d9dcede3d4cf981cc2268fc24c195b38efe'
+  name 'Paparazzi!'
   homepage 'http://derailer.org/paparazzi/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'Paparazzi!.app'
+  app 'Paparazzi!.app'
 end

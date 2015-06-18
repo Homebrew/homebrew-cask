@@ -1,9 +1,16 @@
-class DwarfFortress < Cask
-  version '0.40.01'
-  sha256 'c4f729f094790671b1fde995c02c5d547d652d87790785b13a6cdc9f35dec6be'
+cask :v1 => 'dwarf-fortress' do
+  version '0.40.24'
+  sha256 '653837ed073ffe2825d25bc80f0967d6a8ccb9bf869a188d4bd4320154630936'
 
-  url 'http://www.bay12games.com/dwarves/df_40_01_osx.tar.bz2'
+  url "http://www.bay12games.com/dwarves/df_#{version.sub(%r{^0+\.},'').gsub('.','_')}_osx.tar.bz2"
+  name 'Dwarf Fortress'
   homepage 'http://www.bay12games.com/dwarves/'
-  
-  link 'df_osx/df', :target => 'Dwarf Fortress/df'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  # todo: should this be
+  #
+  #    suite 'df_osx', :target => 'Dwarf Fortress'
+  #
+  # ?
+  artifact 'df_osx/df', :target => 'Dwarf Fortress/df'
 end

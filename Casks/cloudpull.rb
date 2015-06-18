@@ -1,10 +1,12 @@
-class Cloudpull < Cask
-  version 'latest'
+cask :v1 => 'cloudpull' do
+  version :latest
   sha256 :no_check
 
   url 'http://downloads.goldenhillsoftware.com/cloudpull/CloudPull.zip'
   appcast 'https://secure.goldenhillsoftware.com/updates/cloudpull/appcast.xml'
+  name 'CloudPull'
   homepage 'http://www.goldenhillsoftware.com/'
+  license :freemium
 
-  link 'CloudPull.app'
+  app 'CloudPull.app'
 end

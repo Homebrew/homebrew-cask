@@ -1,9 +1,13 @@
-class Shotcut < Cask
-  version '14.09.03'
-  sha256 'ec84451780f180f058730128066a349e62ee5dc30a58d94114ac95f6ff83be90'
+cask :v1 => 'shotcut' do
+  version '15.06.01'
+  sha256 '8b543392309dbf5a42e1ca275d12d3aa27a2cfefbf465c7fc25c087fbadd04ae'
 
-  url "https://github.com/mltframework/shotcut/releases/download/v#{version.gsub(/\.\d{2}$/, '')}/shotcut-osx-x86_64-#{version.gsub('.', '')}.dmg"
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/mltframework/shotcut/releases/download/v#{version.sub(/\.\d+$/, '')}/shotcut-osx-x86_64-#{version.gsub('.', '')}.dmg"
+  appcast 'https://github.com/mltframework/shotcut/releases.atom'
+  name 'Shotcut'
   homepage 'http://www.shotcut.org/'
+  license :gpl
 
-  link 'Shotcut.app'
+  app 'Shotcut.app'
 end

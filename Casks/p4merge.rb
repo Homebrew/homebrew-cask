@@ -1,13 +1,24 @@
-class P4merge < Cask
-  version '2014.1'
-  sha256 'c5d05d78596fe9b4f83193a11805a027b2652fdf87365de1321e671286fdca3f'
+cask :v1 => 'p4merge' do
+  version '2014.3-1007540'
+  sha256 '07eac08f6bfb32e4a79bf47582116de8532fe0b18d91a014e1cd80861d6f0909'
 
-  url 'http://filehost.perforce.com/perforce/r14.1/bin.macosx106x86_64/P4V.dmg'
+  url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*},'\1')}/bin.macosx107x86_64/P4V.dmg"
+  name 'P4Merge'
   homepage 'http://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools'
+  license :gratis
+  tags :vendor => 'Perforce'
 
-  link 'p4merge.app'
+  app 'p4merge.app'
+
+  zap :delete => [
+                  '~/Library/Preferences/com.perforce.p4merge',
+                  '~/Library/Preferences/com.perforce.p4merge.plist',
+                  '~/Library/Saved Application State/com.perforce.p4merge.savedState'
+                 ]
+
   caveats <<-EOS.undent
-    You can set up git to use p4merge as a merge tool by following the instructions available here:
-      https://gist.github.com/henrik242/1510148
-    EOS
+    git can be configured to use p4merge as a merge tool via
+
+      http://pempek.net/articles/2014/04/18/git-p4merge/
+  EOS
 end

@@ -1,13 +1,15 @@
-class Openarena < Cask
+cask :v1 => 'openarena' do
   version '0.8.8'
   sha256 '5a8faf7f5b51f351b0a1618c06b6b98a5f1a6758f1d39818de2c87df2a0bac4a'
 
   url 'http://openarena.ws/request.php?4'
+  name 'OpenArena'
   homepage 'http://openarena.ws'
+  license :gpl
 
-  link 'openarena-0.8.8/OpenArena.app'
+  app "openarena-#{version}/OpenArena.app"
 
-  after_install do
-    system '/bin/chmod', '--', '755', "#{destination_path}/openarena-0.8.8/OpenArena.app/Contents/MacOS/openarena.ub"
+  postflight do
+    system '/bin/chmod', '--', '755', "#{staged_path}/openarena-#{version}/OpenArena.app/Contents/MacOS/openarena.ub"
   end
 end

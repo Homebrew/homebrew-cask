@@ -1,9 +1,11 @@
-class MacInformer < Cask
-  version 'latest'
+cask :v1 => 'mac-informer' do
+  version :latest
   sha256 :no_check
 
   url 'http://files.informer.com/simac.dmg'
+  name 'Mac Informer'
   homepage 'http://macdownload.informer.com/landing/'
+  license :gratis
 
-  link 'Mac Informer.app'
+  app 'Mac Informer.app'
 end

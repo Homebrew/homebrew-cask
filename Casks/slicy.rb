@@ -1,10 +1,12 @@
-class Slicy < Cask
-  version 'latest'
+cask :v1 => 'slicy' do
+  version :latest
   sha256 :no_check
 
   url 'https://macrabbit.com/slicy/get/'
   appcast 'http://update.macrabbit.com/slicy/1.1.3.xml'
+  name 'Slicy'
   homepage 'http://macrabbit.com/slicy/'
+  license :commercial
 
-  link 'Slicy.app'
+  app 'Slicy.app'
 end

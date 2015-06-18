@@ -1,10 +1,12 @@
-class Virtualhostx < Cask
-  version 'latest'
-  sha256 :no_check
+cask :v1 => 'virtualhostx' do
+  version '6.0.4'
+  sha256 'd0ab4ef0049639e94887dc011dbe36a46fbe963494a39af7ad190417c08620a3'
 
-  url 'https://clickontyler.com/virtualhostx/download/v5/'
-  appcast 'http://shine.clickontyler.com/appcast.php?id=23'
-  homepage 'http://clickontyler.com/virtualhostx/'
+  url "https://downloads-clickonideas.netdna-ssl.com/virtualhostx/virtualhostx60_#{version}.zip"
+  appcast 'https://shine.clickontyler.com/appcast.php?id=30'
+  name 'VirtualHostX'
+  homepage 'https://clickontyler.com/virtualhostx/'
+  license :commercial
 
-  link 'VirtualHostX.app'
+  app 'VirtualHostX.app'
 end

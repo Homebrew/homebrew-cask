@@ -1,10 +1,12 @@
-class Fotomagico < Cask
-  version '4.3.1-18650'
-  sha256 'ad4fff8a197424cc02770ca7bf2f71fe78abf5428a234b098d4589133fd16b39'
+cask :v1 => 'fotomagico' do
+  version '4.5.5-19761'
+  sha256 'eee16acc488004bbfbf5a7b743dc806862e94c6fa6486d9c7da2c730fca8df87'
 
-  url 'https://cdn.boinx.com/software/fotomagico/Boinx_FotoMagico_4.3.1-18650.zip'
+  url "https://cdn.boinx.com/software/fotomagico/Boinx_FotoMagico_#{version}.app.zip"
   appcast 'https://sparkle.boinx.com/appcast.lasso'
+  name 'FotoMagico'
   homepage 'http://www.boinx.com/fotomagico/'
+  license :commercial
 
-  link 'FotoMagico.app'
+  app 'FotoMagico.app'
 end

@@ -1,9 +1,13 @@
-class FramerStudio < Cask
-  version '1.5.8'
-  sha256 '856fdc591a33b94fecb4a3013219f8d9e7ea171b0f83cbb8dd732860f48fff96'
+cask :v1 => 'framer-studio' do
+  version '1.11.188'
+  sha256 'b1fff971456a4af5ad88661344dbad079d5ba08e25dfc2c6f252824d1916206b'
 
-  url 'http://studio.update.framerjs.com/static/downloads/Framer%20Studio-1.0.156.tar.gz'
+  url "http://studio.update.framerjs.com/static/downloads/Framer%20Studio-#{version}.zip"
+  name 'Framer Studio'
+  appcast 'http://studio.update.framerjs.com/appcast.xml',
+          :sha256 => '2d6e82bb3d57ecf9d7dcb339efea422f6feaed924b73a15b550b69f07b8b9172'
   homepage 'http://framerjs.com/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'Framer Studio.app'
+  app 'Framer Studio.app'
 end

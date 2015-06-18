@@ -1,12 +1,21 @@
-class Seil < Cask
-  version '10.10.0'
-  sha256 'a61653ce058dc943a403583281a1a10b2b8bd496362ecf7b93989fc90f5547df'
+cask :v1 => 'seil' do
+  version '11.1.0'
+  sha256 'eb87ad8b903ba14de69ce7e64913a85d53cc59ee8af5fa916211c3a00d29bf7d'
 
-  url 'https://pqrs.org/macosx/keyremap4macbook/files/Seil-10.10.0.dmg'
-  homepage 'https://pqrs.org/macosx/keyremap4macbook/seil.html.en'
+  url "https://pqrs.org/osx/karabiner/files/Seil-#{version}.dmg"
+  name 'Seil'
+  homepage 'https://pqrs.org/osx/karabiner/seil.html'
+  license :public_domain
 
-  install 'Seil.pkg'
+  pkg 'Seil.pkg'
+
   uninstall :quit => 'org.pqrs.Seil',
             :kext => 'org.pqrs.driver.Seil',
             :pkgutil => 'org.pqrs.driver.Seil'
+  zap       :delete => [
+                        '~/Library/Caches/org.pqrs.PCKeyboardHack',
+                        '~/Library/Caches/org.pqrs.Seil',
+                        '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
+                        '~/Library/Preferences/org.pqrs.Seil.plist',
+                       ]
 end

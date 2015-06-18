@@ -1,9 +1,11 @@
-class UnifiedRemote < Cask
-  version 'latest'
+cask :v1 => 'unified-remote' do
+  version :latest
   sha256 :no_check
 
-  url 'http://www.unifiedremote.com/download/macosx-setup'
-  homepage 'http://www.unifiedremote.com'
+  url 'https://www.unifiedremote.com/download/mac'
+  name 'Unified Remote'
+  homepage 'https://www.unifiedremote.com/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'Unified Remote.app'
+  app 'Unified Remote.app'
 end

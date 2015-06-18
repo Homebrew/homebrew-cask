@@ -1,9 +1,12 @@
-class Audioscrobbler < Cask
-  version '0.9.14'
-  sha256 'e7b37abcdb01f0e888a7135395b9369ed47edb37ab669f778dc96d674e83ed1c'
+cask :v1 => 'audioscrobbler' do
+  version '0.9.15'
+  sha256 'd14bd947f32a5e6c17645d9378b69b0aded91b95dd87a9a8971e013a8fff5063'
 
-  url 'https://github.com/mxcl/Audioscrobbler.app/releases/download/0.9.14/Audioscrobbler-0.9.14.zip'
+  url "https://github.com/mxcl/Audioscrobbler.app/releases/download/#{version}/Audioscrobbler-#{version}.zip"
+  appcast 'https://github.com/mxcl/Audioscrobbler.app/releases.atom'
+  name 'Audioscrobbler'
   homepage 'https://github.com/mxcl/Audioscrobbler.app'
+  license :gpl
 
-  link 'Audioscrobbler.app'
+  app 'Audioscrobbler.app'
 end

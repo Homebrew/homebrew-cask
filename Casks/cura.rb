@@ -1,9 +1,13 @@
-class Cura < Cask
-  version '14.07'
-  sha256 '6f627cd60bc849f86d9f4b29b3d2971744187b7dc5392965464d16dd45a35f9a'
+cask :v1 => 'cura' do
+  version '15.02.1'
+  sha256 'a8d174a6921281704b408c74fd7414b3b2a67ddd2787707db71c02c36a004088'
 
-  url "http://software.ultimaker.com/current/Cura-#{version}-MacOS.dmg"
-  homepage 'http://daid.github.com/Cura/'
+  url "https://ultimaker.com/en/software/download/23/Cura-#{version}-MacOS.dmg"
+  name 'Cura'
+  homepage 'https://ultimaker.com/en/products/software'
+  license :oss
 
-  link 'Cura.app'
+  app 'Cura/Cura.app'
+
+  zap :delete => '~/.cura'
 end

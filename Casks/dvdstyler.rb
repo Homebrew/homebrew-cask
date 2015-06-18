@@ -1,9 +1,12 @@
-class Dvdstyler < Cask
-  version '2.6'
-  sha256 'fbb26aeb2ee50890b4a192d06d16ddc8a98a8465aa4eeff75d16fdc4de375ed6'
+cask :v1 => 'dvdstyler' do
+  version '2.9.2'
+  sha256 '49d8f733a640b27fc07ce978dd57d8f3264f554e536ed6a9bc5a8bee4ea6a899'
 
-  url 'https://downloads.sourceforge.net/sourceforge/dvdstyler/DVDStyler-2.6-MacOSX.zip'
+  # sourceforge.net is the official download host per the vendor homepage
+  url "http://downloads.sourceforge.net/sourceforge/dvdstyler/DVDStyler-#{version}-MacOSX.dmg"
+  name 'DVDStyler'
   homepage 'http://dvdstyler.org'
+  license :gpl
 
-  link 'DVDStyler.app'
+  app 'DVDStyler.app'
 end

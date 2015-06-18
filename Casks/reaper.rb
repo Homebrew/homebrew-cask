@@ -1,16 +1,27 @@
-class Reaper < Cask
-  homepage 'http://www.reaper.fm/'
-  version '4.71'
+cask :v1 => 'reaper' do
+  version '4.78'
 
   if Hardware::CPU.is_32_bit?
-    url 'http://www.reaper.fm/files/4.x/reaper471_i386.dmg'
-    sha256 '1a670d5afb5956e1486c1fdef008ccfb4faa7987cc4d5ea8171a2794ff86ffca'
-    link 'REAPER.app'
-    link 'ReaMote.app'
+    sha256 'f7374c46a65b2d22c395cb22187d30f920bf59c4241f84299514ec4ae318b770'
+    url "http://www.reaper.fm/files/#{version.to_i}.x/reaper#{version.gsub('.','')}_i386.dmg"
+    app 'REAPER.app'
+    app 'ReaMote.app'
   else
-    url 'http://www.reaper.fm/files/4.x/reaper471_x86_64.dmg'
-    sha256 '3045fd59189bd0fe398b50f511d014a5e385c8cfb88f8a188a8437050f783d71'
-    link 'REAPER64.app'
-    link 'ReaMote64.app'
+    sha256 '305d6d5a65ed32e0d9cbbc947612e8cd3ae95e016d91ca1b7d9329b6b751228c'
+    url "http://www.reaper.fm/files/#{version.to_i}.x/reaper#{version.gsub('.','')}_x86_64.dmg"
+    app 'REAPER64.app'
+    app 'ReaMote64.app'
   end
+
+  name 'Reaper'
+  homepage 'http://www.reaper.fm/'
+  license :commercial
+
+  zap :delete => [
+                  '~/Library/Application Support/REAPER',
+                  '~/Library/Saved Application State/com.cockos.reaper.savedState',
+                  '~/Library/Saved Application State/com.cockos.reaperhosti386.savedState',
+                  '~/Library/Saved Application State/com.cockos.reaperhostx8664.savedState',
+                  '~/Library/Saved Application State/com.cockos.ReaMote.savedState'
+                 ]
 end

@@ -1,9 +1,11 @@
-class Machacha < Cask
-  version 'latest'
+cask :v1 => 'machacha' do
+  version :latest
   sha256 :no_check
 
   url 'http://www.julifos.com/soft/machacha/machacha.dmg'
-  homepage 'http://www.julifos.com/soft/machacha/index.html'
+  name 'MacHacha'
+  homepage 'http://www.julifos.com/soft/machacha/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'MacHacha.app'
+  app 'MacHacha.app'
 end

@@ -1,9 +1,11 @@
-class Zipcleaner < Cask
-  version 'latest'
+cask :v1 => 'zipcleaner' do
+  version :latest
   sha256 :no_check
 
   url 'http://roger-jolly.nl/software/downloads/zipcleaner/ZipCleaner.zip'
+  name 'ZipCleaner'
   homepage 'http://roger-jolly.nl/software/#zipcleaner'
+  license :isc
 
-  link 'ZipCleaner.app'
+  app 'ZipCleaner.app'
 end

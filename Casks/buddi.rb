@@ -1,9 +1,11 @@
-class Buddi < Cask
-  version 'latest'
+cask :v1 => 'buddi' do
+  version :latest
   sha256 :no_check
 
   url 'http://buddi.digitalcave.ca/buddi.dmg'
-  homepage 'http://buddi.digitalcave.ca/index.jsp'
+  name 'Buddi'
+  homepage 'http://buddi.digitalcave.ca/'
+  license :gpl
 
-  link 'Buddi.app'
+  app 'Buddi.app'
 end

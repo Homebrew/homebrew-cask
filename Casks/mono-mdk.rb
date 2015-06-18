@@ -1,10 +1,13 @@
-class MonoMdk < Cask
-  version '3.6.0'
-  sha256 '04a4543b00510f5df7d52eac3cd8583e44a30fdf12af536646de9351f360647e'
+cask :v1 => 'mono-mdk' do
+  version '4.0.0'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "http://download.mono-project.com/archive/#{version}/macos-10-x86/MonoFramework-MDK-#{version}.macos10.xamarin.x86.pkg"
-  homepage 'http://mono-project.com/'
+  name 'Mono'
+  homepage 'http://mono-project.com'
+  license :oss
 
-  install "MonoFramework-MDK-#{version}.macos10.xamarin.x86.pkg"
+  pkg "MonoFramework-MDK-#{version}.macos10.xamarin.x86.pkg"
+
   uninstall :pkgutil => 'com.xamarin.mono-MDK.pkg'
 end

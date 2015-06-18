@@ -1,10 +1,12 @@
-class IdocumentPlus < Cask
-  version 'latest'
+cask :v1 => 'idocument-plus' do
+  version :latest
   sha256 :no_check
 
   url 'http://t.icyblaze.com/idpluslatest'
   appcast 'http://t.icyblaze.com/idplusc4ud'
+  name 'iDocument Plus'
   homepage 'http://www.icyblaze.com/idocument/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'iDocument Plus.app'
+  app 'iDocument Plus.app'
 end

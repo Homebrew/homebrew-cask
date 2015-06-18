@@ -1,13 +1,18 @@
-class Praat < Cask
+cask :v1 => 'praat' do
+  version '5.4.08'
+
   if Hardware::CPU.is_32_bit?
-    url 'http://www.fon.hum.uva.nl/praat/praat5382_mac32.dmg'
-    version '5.3.82'
-    sha256 'c1ef06ed8fd9e36d5eb96699daf5fba3e04e2c32edcda0c2981d8f817c019371'
+    sha256 '2a64f314b24a9ad516f8dba075d73278a31660966a10a207a4f3342f7bd3edb7'
+    url "http://www.fon.hum.uva.nl/praat/praat#{version.gsub('.','')}_mac32.dmg"
   else
-    url 'http://www.fon.hum.uva.nl/praat/praat5382_mac64.dmg'
-    version '5.3.82'
-    sha256 'c02aa1ae0e896325cbc8a917e5cfef37a0f6e38e78d2b71757134158f7e563f3'
+    sha256 '3f6862f63ae9e98f60bbf25b709ba60e77d0140b0caa6fbd4ddd86d3eadb98c8'
+    url "http://www.fon.hum.uva.nl/praat/praat#{version.gsub('.','')}_mac64.dmg"
   end
+
+  name 'Praat'
   homepage 'http://www.fon.hum.uva.nl/praat/'
-  link 'Praat.app'
+  license :gpl
+
+  app 'Praat.app'
+  binary 'Praat.app/Contents/MacOS/Praat', :target => 'praat'
 end

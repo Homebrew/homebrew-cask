@@ -1,16 +1,5 @@
 # Frequently Asked Questions
 
-# NOTICE: Homebrew-cask has moved!
-
-The original repo at https://github.com/phinze/homebrew-cask has moved
-under the organizational umbrella at https://github.com/caskroom/homebrew-cask .
-
-Web redirection happens automatically.
-
-The location of the Cask Tap on disk has also changed, which should be
-handled automatically upon upgrading.  If you have technical difficulties,
-please see [TAP_MIGRATION.md](TAP_MIGRATION.md).
-
 ## What is a Cask?
 
 A `Cask` is like a `Formula` in Homebrew except it describes how to download
@@ -60,7 +49,7 @@ lot of the Homebrew stuff we lean on now.
 
 ## Can I set up my own Cask Tap?
 
-Yes! See [ALTERNATE_CASK_TAPS.md](ALTERNATE_CASK_TAPS.md).
+Yes! See [alternate_cask_taps.md](alternate_cask_taps.md).
 
 ## Can I install a version other than the English one?
 
@@ -69,3 +58,23 @@ Some applications such as Thunderbird or Firefox provides many localized version
 ## How about applications that auto-update but that are managed by Cask?
 
 Applications that auto-update such as Firefox, Thunderbird or VLC will do so as usual, nothing will be broken. A minor issue however is that the application will still be located in a versioned folder even though the version has changed. For example, the application might be installed in /opt/homebrew-cask/Caskroom/mygreatapp/1.3 even though the version number is now 1.4.
+
+## Is this the same project I used to Tap at phinze/homebrew-cask ?
+
+Yes. The original repo at https://github.com/phinze/homebrew-cask has moved
+under the organizational umbrella at https://github.com/caskroom/homebrew-cask .
+
+Web redirection happens automatically.
+
+The location of the Homebrew-cask Tap on disk has also changed.  If you have
+a very old installation, you may need to run:
+
+```bash
+$ brew untap phinze/cask; brew tap caskroom/cask
+```
+
+## `brew cask list` shows that a package is installed, but when I try to do `brew cask uninstall`, it tells me that the package is not installed. Help!
+
+This is a problem with the bookkeeping in the current implementation of Cask, which gets confused if a cask is updated after installation. For now, use the `brew cask uninstall --force` to uninstall these packages.
+
+This issue is currently being addressed [here](https://github.com/caskroom/homebrew-cask/issues/4688) and [here](https://github.com/caskroom/homebrew-cask/issues/4678).

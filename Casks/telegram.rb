@@ -1,10 +1,12 @@
-class Telegram < Cask
-  version 'latest'
-  sha256 :no_check
+cask :v1 => 'telegram' do
+  version '0.8.21'
+  sha256 '343176aabd1a4451bda97d84e9f6090c973eb7613c0cdbfa464e0eba301fbaaa'
 
-  url 'https://rink.hockeyapp.net/api/2/apps/c55f5e74ae5d0ad254df29f71a1b5f0e/?format=zip'
-  appcast 'https://rink.hockeyapp.net/api/2/apps/c55f5e74ae5d0ad254df29f71a1b5f0e'
-  homepage 'https://vk.com/telegram_osx'
+  # tdesktop.com is the official download host per the vendor homepage
+  url "https://updates.tdesktop.com/tmac/tsetup.#{version}.dmg"
+  name 'Telegram'
+  homepage 'https://telegram.org/'
+  license :gpl
 
-  link 'Telegram.app'
+  app 'Telegram.app'
 end

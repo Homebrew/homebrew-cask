@@ -1,11 +1,20 @@
-class SendToKindle < Cask
-  version '1.0.0.220'
-  sha256 'f43009bb0e48ed7e5a750a90163a6362f49e6518c698c5c49be0dce0d01fe3af'
+cask :v1 => 'send-to-kindle' do
+  version '1.0.0.221'
+  sha256 '87d21d392a5439dfafa5ee44ba68ea76fae06db7fcb38b8e848bc1ce1fb982e3'
 
-  url 'https://s3.amazonaws.com/sendtokindle/SendToKindleForMac-installer-v1.0.0.220.pkg'
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://s3.amazonaws.com/sendtokindle/SendToKindleForMac-installer-v#{version}.pkg"
+  name 'Send to Kindle'
   homepage 'http://www.amazon.com/gp/sendtokindle/mac'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  install 'SendToKindleForMac-installer-v1.0.0.220.pkg'
+  pkg "SendToKindleForMac-installer-v#{version}.pkg"
+
   uninstall :launchctl => 'com.amazon.sendtokindle.launcher',
             :pkgutil   => 'com.amazon.SendToKindleMacInstaller.pkg'
+  zap       :delete    => [
+                           '~/Library/Application Support/Amazon/SendToKindle',
+                           '~/Library/Preferences/com.amazon.SendToKindle.plist',
+                           '~/Library/Logs/SendToKindleInstall.log',
+                          ]
 end

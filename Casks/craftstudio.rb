@@ -1,17 +1,18 @@
-class Craftstudio < Cask
-  version 'latest'
+cask :v1 => 'craftstudio' do
+  version :latest
   sha256 :no_check
 
   url 'http://craftstud.io/files/OSX/CraftStudio.pkg'
+  name 'CraftStudio'
   homepage 'http://craftstud.io'
+  license :commercial
 
-  install 'CraftStudio.pkg'
+  pkg 'CraftStudio.pkg'
 
   uninstall :quit => 'com.sparklinlabs.CraftStudioLauncher',
             :pkgutil => 'com.sparklinlabs.CraftStudioLauncher'
-            # zap :files => '~/Library/CraftStudio'
 
-  caveats do
-    "Requires mono-mre. You can install this by running brew cask install mono-mre."
-  end
+  zap       :delete => '~/Library/CraftStudio'
+
+  depends_on :cask => 'mono-mre'
 end

@@ -1,9 +1,11 @@
-class Unicodechecker < Cask
-  version 'latest'
+cask :v1 => 'unicodechecker' do
+  version :latest
   sha256 :no_check
 
   url 'http://earthlingsoft.net/UnicodeChecker/UnicodeChecker.dmg'
+  name 'UnicodeChecker'
   homepage 'http://earthlingsoft.net/UnicodeChecker/'
+  license :gratis
 
-  link 'UnicodeChecker.app'
+  app 'UnicodeChecker.app'
 end

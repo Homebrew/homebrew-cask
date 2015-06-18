@@ -1,9 +1,11 @@
-class Keycue < Cask
-  version '7.1'
-  sha256 '7f46addc44d8b29b1913f411bd1cdb6329b7bd6d97ec658122b945f91f647f5d'
+cask :v1 => 'keycue' do
+  version '7.5'
+  sha256 '8d2ae27ac7a623e3cdcfe939caf996e81e39e3dbb7452f1a634b24dbe5050ad3'
 
-  url 'http://www.ergonis.com/downloads/products/keycue/KeyCue71-Install.dmg'
+  url "http://www.ergonis.com/downloads/products/keycue/KeyCue#{version.gsub('.','')}-Install.dmg"
+  name 'KeyCue'
   homepage 'http://www.ergonis.com/products/keycue/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'KeyCue.app'
+  app 'KeyCue.app'
 end

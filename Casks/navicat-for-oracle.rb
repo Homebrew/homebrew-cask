@@ -1,9 +1,12 @@
-class NavicatForOracle < Cask
-  version '11.0.20'
-  sha256 '531e6f5836203dd1f155dfa9e5734d2b7f0a615da45e533004efa3778355a155'
+cask :v1 => 'navicat-for-oracle' do
+  version '11.1.12'   # navicat-premium.rb and navicat-for-* should be upgraded together
+  sha256 'efe3b7edf8f3bb83731950934e40b530c9d2b8c288955b462af2da0abe22e0bb'
 
-  url 'http://download.navicat.com/download/navicat110_ora_en.dmg'
+  url "http://download.navicat.com/download/navicat#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_ora_en.dmg"
+  name 'Navicat for Oracle'
   homepage 'http://www.navicat.com/products/navicat-for-oracle'
+  license :commercial
+  tags :vendor => 'Navicat'
 
-  link 'Navicat for Oracle.app'
+  app 'Navicat for Oracle.app'
 end

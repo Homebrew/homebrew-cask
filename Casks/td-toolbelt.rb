@@ -1,16 +1,19 @@
-class TdToolbelt < Cask
-  version 'latest'
+cask :v1 => 'td-toolbelt' do
+  version :latest
   sha256 :no_check
 
   url 'http://toolbelt.treasuredata.com/mac'
+  name 'Treasure Data Toolbelt'
   homepage 'http://toolbelt.treasuredata.com/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  container_type :naked
-  before_install do
-    system '/bin/mv', '--', "#{destination_path}/mac", "#{destination_path}/td-toolbelt.pkg"
+  container :type => :naked
+  preflight do
+    system '/bin/mv', '--', "#{staged_path}/mac", "#{staged_path}/td-toolbelt.pkg"
   end
 
-  install 'td-toolbelt.pkg'
+  pkg 'td-toolbelt.pkg'
+
   uninstall :pkgutil => 'com.td.toolbelt'
-  # zap :pkgutil => 'org.ruby-lang.installer'
+  zap :pkgutil => 'org.ruby-lang.installer'
 end

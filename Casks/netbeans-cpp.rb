@@ -1,12 +1,13 @@
-class NetbeansCpp < Cask
-  version '8.0'
-  sha256 '55e58e5c01d38860919b8765a9ed5b048aef20d474c913305973bc03343b9d98'
+cask :v1 => 'netbeans-cpp' do
+  version '8.0.2'
+  sha256 'af81462adbe046b2c46afe2137f090b857cbe54f3ffacf7f4b90702cafda420b'
 
-  url 'http://download.netbeans.org/netbeans/8.0/final/bundles/netbeans-8.0-cpp-macosx.dmg'
+  url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-cpp-macosx.dmg"
+  name 'NetBeans IDE for C/C++'
   homepage 'https://netbeans.org/'
+  license :oss
 
-  install 'NetBeans 8.0.mpkg'
-  uninstall :files => [
-                       '/Applications/NetBeans'
-                      ]
+  pkg "NetBeans #{version}.mpkg"
+
+  uninstall :delete => '/Applications/NetBeans'
 end

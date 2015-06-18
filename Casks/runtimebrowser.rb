@@ -1,9 +1,12 @@
-class Runtimebrowser < Cask
-  version 'latest'
+cask :v1 => 'runtimebrowser' do
+  version :latest
   sha256 :no_check
 
+  # seriot.ch is the official download host per the vendor homepage
   url 'http://seriot.ch/temp/runtimebrowser.zip'
+  name 'RuntimeBrowser'
   homepage 'https://github.com/nst/RuntimeBrowser'
+  license :oss
 
-  link 'RuntimeBrowser.app'
+  app 'RuntimeBrowser.app'
 end

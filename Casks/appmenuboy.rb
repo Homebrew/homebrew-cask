@@ -1,9 +1,11 @@
-class Appmenuboy < Cask
-  version 'latest'
+cask :v1 => 'appmenuboy' do
+  version :latest
   sha256 :no_check
 
   url 'https://appmenuboy.googlecode.com/svn/html/AppMenuBoy.zip'
+  name 'AppMenuBoy'
   homepage 'https://code.google.com/p/appmenuboy/'
+  license :oss
 
-  link 'AppMenuBoy.app'
+  app 'AppMenuBoy.app'
 end

@@ -1,9 +1,14 @@
-class P5 < Cask
-  version '0.1.7'
-  sha256 'bfd0e30648d64388877c3e29255fcaa3a58404b47b22879174952846fbefd9e8'
+cask :v1 => 'p5' do
+  # note: "5" is not a version number, but an intrinsic part of the product name
+  version '0.3.0'
+  sha256 'bbe82a44a48fcc152c80fb71fa3af19ea891331b45c04a0f4003548b334805d2'
 
-  url "https://github.com/antiboredom/jside/releases/download/v#{version}/p5.zip"
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/processing/p5.js-editor/releases/download/v#{version}/p5.zip"
+  appcast 'https://github.com/processing/p5.js-editor/releases.atom'
+  name 'p5.js Editor'
   homepage 'http://p5js.org/download/#editor'
+  license :mit
 
-  link 'p5.app'
+  app 'p5.app'
 end

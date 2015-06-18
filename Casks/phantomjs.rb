@@ -1,9 +1,12 @@
-class Phantomjs < Cask
-  version '1.9.7'
-  sha256 '72731f8ff68db17ecb5f6c78bf036adb429317b9bdbe69e2f5f60514fa7e4a6f'
+cask :v1 => 'phantomjs' do
+  version '2.0.0'
+  sha256 '9ae74da20e8831c4d48105004993fecee3e7e66f5d3381f879de366d82f9215c'
 
-  url 'https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-macosx.zip'
+  # bitbucket.org is the official download host per the vendor homepage
+  url "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-#{version}-macosx.zip"
+  name 'PhantomJS'
   homepage 'http://phantomjs.org/'
+  license :bsd
 
-  binary 'phantomjs-1.9.7-macosx/bin/phantomjs'
+  binary "phantomjs-#{version}-macosx/bin/phantomjs"
 end

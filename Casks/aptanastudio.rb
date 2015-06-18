@@ -1,9 +1,13 @@
-class Aptanastudio < Cask
-  version '3.6.0'
-  sha256 'd2207934d485cca10d6ad624a67d9f21c1bef46e0a9d58a9db334cec7fb55948'
+cask :v1 => 'aptanastudio' do
+  version '3.6.1'
+  sha256 '1eed9a94ce9b9bf03743f0bfdc5efd752b3470842170ba571ee25d2810c3c8f0'
 
-  url 'http://download.aptana.com/studio3/standalone/3.6.0/mac/Aptana_Studio_3_Setup_3.6.0.dmg'
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/aptana/studio3/releases/download/v#{version}/Aptana_Studio_3_Setup_#{version}.dmg"
+  appcast 'https://github.com/aptana/studio3/releases.atom'
+  name 'Aptana Studio'
   homepage 'http://www.aptana.com/'
+  license :gpl
 
-  link 'Aptana Studio 3/AptanaStudio3.app'
+  app 'Aptana Studio 3/AptanaStudio3.app'
 end

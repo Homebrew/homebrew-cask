@@ -20,6 +20,13 @@ $opt_test = nil
 ### methods
 ###
 
+def check_ruby
+  if RUBY_VERSION.to_f < 1.9
+    print "You are currently using Ruby ", RUBY_VERSION, ", but version 1.9 or above is required."
+    exit 1
+  end
+end
+
 def usage
   <<-EOS
 list_running_app_ids [ -t <bundle-id> ]
@@ -97,6 +104,7 @@ end
 ### main
 ###
 
+check_ruby
 process_args
 load_apps
 

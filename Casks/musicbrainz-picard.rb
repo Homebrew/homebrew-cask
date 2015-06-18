@@ -1,9 +1,12 @@
-class MusicbrainzPicard < Cask
-  version '1.2'
-  sha256 '48f3e483fd422f39518134b7c1d68cf05bda084865776783efe3ed08fa099245'
+cask :v1 => 'musicbrainz-picard' do
+  version '1.3.2'
+  sha256 'e3a3139878d01cf4edd2fad20a9a6ced5d3ea669cb919e310a64947082dfdc15'
 
-  url 'ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg'
-  homepage 'http://musicbrainz.org/doc/MusicBrainz_Picard'
+  url "ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg"
+  name 'Picard'
+  homepage 'http://picard.musicbrainz.org'
+  license :gpl
+  tags :vendor => 'MusicBrainz'
 
-  link 'MusicBrainz Picard.app'
+  app 'MusicBrainz Picard.app'
 end

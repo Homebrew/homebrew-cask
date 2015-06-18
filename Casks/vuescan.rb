@@ -1,12 +1,17 @@
-class Vuescan < Cask
+cask :v1 => 'vuescan' do
+  version '9.5.08'
+
   if Hardware::CPU.is_32_bit?
-    url 'http://www.hamrick.com/files/vuex3294.dmg'
-    sha256 '9f12d5a180a79c9d297913cdfb793382b512f25388de66f007cb621f4d69f461'
+    sha256 'ca343dca3a4c08f90dffe4bf5a3b38e8033d472e73ad160c8ac0fe8bdc1139c6'
+    url "http://www.hamrick.com/files/vuex32#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}.dmg"
   else
-    url 'http://www.hamrick.com/files/vuex6494.dmg'
-    sha256 'a6e82863f7d6fc34400f678fb4de3cf5af6cbde9a20693ff4bfb5d95ad59f398'
+    sha256 '4912e5c0fe45dffef0ae70fca9b7386639d6dfb958934a97d3e194813aee7b2d'
+    url "http://www.hamrick.com/files/vuex64#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}.dmg"
   end
+
+  name 'VueScan'
   homepage 'http://www.hamrick.com'
-  version '9.4.37'
-  link 'VueScan.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'VueScan.app'
 end

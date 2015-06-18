@@ -1,9 +1,11 @@
-class WindowSwitch < Cask
-  version 'latest'
+cask :v1 => 'window-switch' do
+  version :latest
   sha256 :no_check
 
   url 'https://xpra.org/dists/osx/x86/Window-Switch.dmg'
+  name 'Window Switch'
   homepage 'http://xpra.org/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'Window-Switch.app'
+  app 'Window-Switch.app'
 end

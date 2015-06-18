@@ -1,10 +1,13 @@
-class Xscope < Cask
-  version '4.0.0'
-  sha256 '0f84d50383c52ae010074067597c89a3f52b0993ac14170268982d9774780626'
+cask :v1 => 'xscope' do
+  version '4.1.3'
+  sha256 'e967c296b6fd84270d926007b056826b3bc8826744f83ea2bea139609d082ad5'
 
-  url 'http://iconfactory.com/assets/software/xscope/xScope-4.0.zip'
-  appcast 'http://iconfactory.com/appcasts/xScope/appcast.xml'
+  url "http://iconfactory.com/assets/software/xscope/xScope-#{version}.zip"
+  appcast 'http://iconfactory.com/appcasts/xScope/appcast.xml',
+          :sha256 => '419794f0698b7ddb0a433e712d68064ce5907253ff849f22de95354d3e7eaa2a'
+  name 'xScope'
   homepage 'http://iconfactory.com/software/xscope'
+  license :commercial
 
-  link 'xScope.app'
+  app 'xScope.app'
 end

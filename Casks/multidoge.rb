@@ -1,9 +1,13 @@
-class Multidoge < Cask
-  version '0.1.2'
-  sha256 'e6639dac77df7a6ea34ce086d68dedda98d8537bd31d32b17598243e26122bcc'
+cask :v1 => 'multidoge' do
+  version '0.1.4'
+  sha256 '12ca734040c6dc887c7b17dbaf92c3320086522d6dbd1bb63ca9fb0c6d6c46de'
 
-  url 'https://github.com/langerhans/multidoge/releases/download/v0.1.2/multidoge-0.1.2.dmg'
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/langerhans/multidoge/releases/download/v#{version}/multidoge-#{version}.dmg"
+  appcast 'https://github.com/langerhans/multidoge/releases.atom'
+  name 'MultiDoge'
   homepage 'http://multidoge.org/'
+  license :mit
 
-  link 'MultiDoge.app'
+  app 'MultiDoge.app'
 end

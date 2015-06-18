@@ -1,9 +1,11 @@
-class Zed < Cask
-  version '0.13.0'
-  sha256 '8b7d79177928d04bf97f5f116623543a62f20c87935e1a8eb45b10d809d212a1'
+cask :v1 => 'zed' do
+  version '1.1.0'
+  sha256 '16b1660baeadb64a0e82ab57d0e2d5e09e3674d5d609f26b94a7f194881e3f35'
 
-  url 'http://download.zedapp.org/zed-mac-v0.13.0.tar.gz'
+  url "http://download.zedapp.org/zed-mac-v#{version}.tar.gz"
+  name 'Zed'
   homepage 'http://zedapp.org'
+  license :oss
 
-  link 'Zed.app'
+  app 'Zed.app'
 end

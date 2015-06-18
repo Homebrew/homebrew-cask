@@ -2,6 +2,11 @@
 #
 # develop_brew_cask
 #
+# Called via symlink as:
+#  production_brew_cask
+#
+
+called_as="$(basename $0)"
 
 ###
 ### settings
@@ -61,6 +66,19 @@ not_inside_homebrew () {
     fi
 }
 
+remove_dev_links () {
+    local tap_dir="$1"
+    /bin/rm -- rubylib Casks
+    /bin/mv -- production_rubylib rubylib
+    /bin/mv -- production_Casks   Casks
+    cd "$tap_dir"
+    /bin/rm -- lib Casks
+    /bin/mv -- production_lib   lib
+    /bin/mv -- production_Casks Casks
+    printf "brew-cask is now in production mode\n"
+    printf "It is safe to run 'brew update' if you are in production mode for all Caskroom repos.\n"
+}
+
 create_dev_links () {
     local tap_dir="$1"
     local git_root="$2"
@@ -81,7 +99,23 @@ create_dev_links () {
 ### main
 ###
 
-_develop_brew_cask () {
+_develop_brew_cask_develop_action () {
+    die "brew-cask is already set up for development"
+}
+
+_develop_brew_cask_production_action () {
+    create_dev_links "$tap_dir" "$git_root"
+}
+
+_production_brew_cask_develop_action () {
+    remove_dev_links "$tap_dir"
+}
+
+_production_brew_cask_production_action () {
+    die "brew-cask is already set up for production"
+}
+
+_main () {
 
     # initialization
     cd_to_project_root
@@ -97,15 +131,15 @@ _develop_brew_cask () {
     # action
     cd_to_version_dir "$cellar_dir" "$version_dir"
     if [[ -e "production_rubylib" ]]; then
-        die "brew-cask is already set up for development"
+        eval "_${called_as}_develop_action"
     else
-        create_dev_links "$tap_dir" "$git_root"
+        eval "_${called_as}_production_action"
     fi
 
 }
 
-# process args
-if [[ $1 =~ ^-+h(elp)?$ ]]; then
+_develop_brew_cask_usage () {
+
     printf "develop_brew_cask
 
 Symlink private repo directories into Homebrew's Cellar, so
@@ -120,10 +154,42 @@ Note: it is not safe to run 'brew update' while development
 mode is in effect.
 
 "
+
+}
+
+_production_brew_cask_usage () {
+
+    printf "production_brew_cask
+
+Undo all symlinks created by 'develop_brew_cask' so that the
+'brew cask' command will use only released code and Casks
+within Homebrew.
+
+After running this command it is safe to run 'brew update',
+unless you are using similar scripts to create symlinks into
+other Caskroom development repos.
+
+"
+
+}
+
+# ensure we're called by a valid name
+case "${called_as}" in
+    develop_brew_cask) ;;
+    production_brew_cask) ;;
+    *)
+        die "ERROR: name ${called_as} not recognized"
+        ;;
+esac
+
+
+# process args
+if [[ $1 =~ ^-+h(elp)?$ ]]; then
+    eval "_${called_as}_usage"
     exit
 fi
 
 # dispatch main
-_develop_brew_cask "${@}"
+_main "${@}"
 
 #

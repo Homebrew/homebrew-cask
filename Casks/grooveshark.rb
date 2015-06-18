@@ -1,13 +1,13 @@
-class Grooveshark < Cask
-  version 'latest'
+cask :v1 => 'grooveshark' do
+  version :latest
   sha256 :no_check
 
   url 'http://adops-fio.grooveshark.com/desktop-app/downloads/grooveshark.zip'
+  name 'Grooveshark'
   homepage 'http://www.grooveshark.com'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'Grooveshark.app'
-  caveats <<-EOS.undent
-    Grooveshark requires Adobe Flash.  Flash can be installed via:
-      brew cask install flash
-    EOS
+  app 'Grooveshark.app'
+
+  depends_on :cask => 'flash'
 end

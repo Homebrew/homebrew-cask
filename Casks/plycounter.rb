@@ -1,9 +1,11 @@
-class Plycounter < Cask
-  version 'latest'
+cask :v1 => 'plycounter' do
+  version :latest
   sha256 :no_check
 
   url 'https://www.plycount.com/plycounter/downloads/PlyCounter.dmg'
+  name 'PlyCounter'
   homepage 'http://www.plycount.com'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'PlyCounter.app'
+  app 'PlyCounter.app'
 end

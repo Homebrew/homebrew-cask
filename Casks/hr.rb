@@ -1,9 +1,13 @@
-class Hr < Cask
-  version '0.4'
-  sha256 '7d07901a88d449fcb352b17408d8bdbc98c849e12080f5dad5259a009dda5c4b'
+cask :v1 => 'hr' do
+  version :latest
+  sha256 :no_check
 
-  url "http://www.hrmacapp.com/releases/hr_#{version.gsub('.', '')}.zip"
+  url 'http://www.hrmacapp.com/download'
+  name 'hr'
   homepage 'http://www.hrmacapp.com/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'hr.app'
+  app 'hr.app'
+
+  depends_on :macos => '>= :mountain_lion'
 end

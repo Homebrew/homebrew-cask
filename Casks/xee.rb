@@ -1,10 +1,11 @@
-# encoding: UTF-8
-class Xee < Cask
-  version '3.3'
-  sha256 '8728d70c392b6da025a292ab62b47698c1e7f5a45b75eb797c9832b3a37d0062'
+cask :v1 => 'xee' do
+  version '3.4'
+  sha256 'e9d47feb6fd1365333958e04372bbc02d3bc098ba7a14695a0c91957dfb1fb99'
 
-  url 'http://wakaba.c3.cx/releases/mac/Xee3.3.dmg'
+  url "http://wakaba.c3.cx/releases/mac/Xee#{version}.dmg"
+  name 'Xee³'
   homepage 'http://xee.c3.cx/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  link 'Xee³.app'
+  app 'Xee³.app'
 end

@@ -1,9 +1,19 @@
-class FlashPlayerDebugger < Cask
-  version '14.0.0.176'
-  sha256 '4ea23e909aa54c130de0d7a6453409207d303523cce15c4621ad4a55e0681fcf'
+cask :v1 => 'flash-player-debugger' do
+  version '18.0.0.160'
+  sha256 'bb5804672538b154d75e2b519f3f45e32f5eb183886ab93154b2081a6dc9f3a5'
 
-  url 'https://fpdownload.macromedia.com/pub/flashplayer/updaters/14/flashplayer_14_sa_debug.dmg'
+  # macromedia.com is the official download host per the vendor homepage
+  url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.to_i}/flashplayer_#{version.to_i}_sa_debug.dmg"
+  name 'Adobe Flash Player Debugger'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
+  license :gratis
+  tags :vendor => 'Adobe'
 
-  link 'Flash Player.app', :target => 'Flash Player Debugger.app'
+  # Renamed to avoid conflict with flash-player.
+  app 'Flash Player.app', :target => 'Flash Player Debugger.app'
+
+  zap :delete => [
+                  '~/Library/Caches/Adobe/Flash Player',
+                  '~/Library/Logs/FlashPlayerInstallManager.log',
+                 ]
 end

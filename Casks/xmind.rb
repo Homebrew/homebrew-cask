@@ -1,9 +1,17 @@
-class Xmind < Cask
-  version '3.4.1'
-  sha256 '0a1b9f833c117ced046a7ccee854cf4efcc9d489c12a126cb269b7dbefcd309a'
+cask :v1 => 'xmind' do
+  version '3.5.2.201504270119'
+  sha256 '602dd1d90a41bfa30377881e37f6c5d95de84619cbe8d15755026e07ec1cb1bb'
 
-  url 'http://dl2.xmind.net/xmind-downloads/xmind-macosx-3.4.1.201401221918.dmg'
+  url "http://dl3.xmind.net/xmind-macosx-#{version}.dmg"
+  name 'XMind'
   homepage 'http://www.xmind.net'
+  license :freemium
+  tags :vendor => 'XMind'
 
-  link 'XMind.app'
+  zap :delete => [
+    '~/Library/XMind',
+    '~/Library/Saved Application State/org.xmind.cathy.application.savedState'
+  ]
+
+  app 'XMind.app'
 end
