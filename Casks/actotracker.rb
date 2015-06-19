@@ -7,7 +7,7 @@ cask :v1 => 'actotracker' do
   name 'ActoTracker'
   appcast 'http://onflapp.appspot.com/actotracker',
           :sha256 => '0d79b9232c6a18446e56fd91c7b65962b5486164c3a269dc5e1867b1a5354778'
-  homepage 'http://onflapp.wordpress.com/actotracker'
+  homepage 'https://onflapp.wordpress.com/actotracker/'
   license :gratis
 
   app 'ActoTracker.app'

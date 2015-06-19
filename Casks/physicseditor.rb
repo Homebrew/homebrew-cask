@@ -4,7 +4,7 @@ cask :v1 => 'physicseditor' do
 
   url "https://www.codeandweb.com/download/physicseditor/#{version}/PhysicsEditor-#{version}-uni.dmg"
   name 'PhysicsEditor'
-  homepage 'http://www.codeandweb.com/physicseditor'
+  homepage 'https://www.codeandweb.com/physicseditor'
   license :freemium
 
   app 'PhysicsEditor.app'

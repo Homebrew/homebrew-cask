@@ -4,7 +4,7 @@ cask :v1 => 'web-sharing' do
 
   url "http://dl.clickontyler.com/web-sharing/websharing_#{version}.zip"
   name 'Web Sharing'
-  homepage 'http://clickontyler.com/web-sharing/'
+  homepage 'https://clickontyler.com/web-sharing/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   prefpane 'Web Sharing.prefPane'

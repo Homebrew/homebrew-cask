@@ -11,7 +11,6 @@ cask :v1 => 'google-cloud-sdk' do
   binary 'google-cloud-sdk/bin/gcutil'
   binary 'google-cloud-sdk/bin/git-credential-gcloud.sh', :target => 'git-credential-gcloud'
   binary 'google-cloud-sdk/bin/gsutil'
-  binary 'google-cloud-sdk/bin/kubectl'
   installer :script => 'google-cloud-sdk/install.sh',
             :args => %w{--usage-reporting false --bash-completion false --path-update false --rc-path false},
             :sudo => false

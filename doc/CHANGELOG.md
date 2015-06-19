@@ -1,5 +1,26 @@
 # CHANGELOG
 
+## 0.54.1
+
+* __Casks__
+  - 97 Casks added (598 updated) by 218 contributors since 0.54.0
+  - 2588 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#11630][] Allows accessibility entry to be updated if previously installed <3 [@akitchen][]
+* __Contributors__
+  - 111 new contributors since 0.54.0
+  - 1929 total contributors
+* __Release Date__
+  - 2015-06-13 20:00:00 UTC
+
+[#11630]: https://github.com/caskroom/homebrew-cask/issues/11630
+[@akitchen]: https://github.com/akitchen
+
+
 ## 0.54.0
 
 * __Casks__

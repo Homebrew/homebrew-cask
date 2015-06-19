@@ -5,7 +5,7 @@ cask :v1 => 'serf' do
   # bintray.com is the official download host per the vendor homepage
   url "https://dl.bintray.com/mitchellh/serf/#{version}_darwin_amd64.zip"
   name 'Serf'
-  homepage 'http://www.serfdom.io/'
+  homepage 'https://www.serfdom.io/'
   license :mpl
 
   binary 'serf'

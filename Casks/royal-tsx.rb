@@ -1,6 +1,6 @@
 cask :v1 => 'royal-tsx' do
-  version '2.0.2.1000'
-  sha256 'a02a367ca4575b58f0ac832c2d12f50b0b51a0ec07bc94472b8e7b924dfbb6b0'
+  version '2.0.4.8'
+  sha256 '89e34c235ea8b2c82bebce7466f7aa0a0334ae52f219534b14b3589a38f26ac9'
 
   url "http://v2.royaltsx.com/updates/royaltsx_#{version}.dmg"
   appcast 'http://v2.royaltsx.com/updates_beta.php',

@@ -1,6 +1,6 @@
 cask :v1 => 'handbrake' do
-  version '0.10.1'
-  sha256 '7c6f231889433d932d3d483df8f4f90fab517386987376542176dd8d2d032bd2'
+  version '0.10.2'
+  sha256 '9591cefbfcbe97ad4e039b456f82ea0e76035b5db9c9aa2ebca044fb171d4dd5'
 
   url "http://download.handbrake.fr/releases/#{version}/HandBrake-#{version}-MacOSX.6_GUI_x86_64.dmg"
   appcast 'http://handbrake.fr/appcast.x86_64.xml',

@@ -7,7 +7,7 @@ cask :v1 => 'slack' do
   appcast 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1',
           :sha256 => '80d1a646291ca49cc8cb993d21e393575ab2fff5cbb60f33eb108bfc434c660d'
   name 'Slack'
-  homepage 'http://slack.com'
+  homepage 'https://slack.com/'
   license :gratis
 
   app 'Slack.app'

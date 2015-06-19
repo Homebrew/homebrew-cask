@@ -4,7 +4,7 @@ cask :v1 => 'processing' do
 
   url "http://download.processing.org/processing-#{version}-macosx.zip"
   name 'Processing'
-  homepage 'http://processing.org/'
+  homepage 'https://processing.org/'
   license :gpl
 
   app 'Processing.app'

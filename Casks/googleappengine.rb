@@ -5,7 +5,7 @@ cask :v1 => 'googleappengine' do
   # googleapis.com is the official download host per the vendor homepage
   url "https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-#{version}.dmg"
   appcast 'https://storage.googleapis.com/appengine-sdks',
-          :sha256 => '5b5ecde4e5248662ad27a8fd0da55132be78826ad51e7458dfe7b20d65a83d89'
+          :sha256 => '4981d218798ee2a124921c980c8c8a71b3538ddeb6f8b1d56ab97e4d6b1cca69'
   name 'Google App Engine'
   homepage 'https://developers.google.com/appengine/'
   license :apache

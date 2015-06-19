@@ -5,7 +5,7 @@ cask :v1 => 'devonthink-pro' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro.dmg.zip"
   appcast 'http://www.devon-technologies.com/Sparkle/DEVONthinkPro2.xml',
-          :sha256 => '038025b21f4e07e0dceb4b3e3b731f6d1482a3a339151cbac446e4cfb970a75e'
+          :sha256 => '5a6d91414dcd0c755c3db5b757363177630005215a3c1c6fedcfdd2e2b2dc0c6'
   name 'DEVONthink Pro'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

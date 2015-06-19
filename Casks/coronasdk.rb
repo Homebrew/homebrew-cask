@@ -4,7 +4,7 @@ cask :v1 => 'coronasdk' do
 
   url 'http://developer.coronalabs.com/sites/default/files/CoronaSDK-2014.2511.dmg'
   name 'Corona SDK'
-  homepage 'http://coronalabs.com/products/corona-sdk'
+  homepage 'https://coronalabs.com/products/corona-sdk/'
   license :gratis
 
   suite 'CoronaSDK'

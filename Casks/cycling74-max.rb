@@ -4,7 +4,7 @@ cask :v1 => 'cycling74-max' do
 
   url "http://filepivot.appspot.com/projects/maxmspjitter/files/Max#{version.sub('-','_').gsub('.','')}.dmg"
   name 'Max'
-  homepage 'http://cycling74.com'
+  homepage 'https://cycling74.com/'
   license :commercial
   tags :vendor => 'Cycling ‘74'
 

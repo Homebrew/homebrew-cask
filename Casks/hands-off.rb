@@ -4,7 +4,7 @@ cask :v1 => 'hands-off' do
 
   url "https://www.oneperiodic.com/files/Hands%20Off!%20v#{version}.dmg"
   appcast 'http://www.metakine.com/sparkle/handsoff2/checkupdate.php',
-          :sha256 => '1524e28fd5c28146adf04a00145623d716f4a0162f24d38f354dc49d7730af7d'
+          :sha256 => '1b948ddb214ba0bc85016341a77b389eabc70b77f3c43c24081776880396f03c'
   name 'Hands Off!'
   homepage 'http://www.oneperiodic.com/products/handsoff/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

@@ -1,6 +1,6 @@
 cask :v1 => 'deezer' do
-  version '0.9.17_4164'
-  sha256 '1c636c2b8137919638a7ed0e7c866143686e2502c5af6d8381ec787042b70fae'
+  version '1.0_4174'
+  sha256 'c506f6215b097a2eec5605030d053f70bf7a747a5138a5c7f997b247eeccc151'
 
   url "https://cdns-content.deezer.com/builds/mac/Deezer#{version.sub(%r{^[^_]*(_\d+)},'\1')}.dmg"
   name 'Deezer'

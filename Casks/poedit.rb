@@ -8,8 +8,8 @@ cask :v1 => 'poedit' do
   else
     version '1.8.1'
     sha256 '92febbe0240c883872039413df9727fbcce5b25bac0142c482c97e5be67b0831'
-    # worldssl.net is the official download host per the vendor homepage
-    url "https://poedit.r.worldssl.net/Poedit-#{version}.zip"
+    # cdn77.org is the official download host per the vendor homepage
+    url "https://poedit-957514.c.cdn77.org/Poedit-#{version}.zip"
     appcast 'https://poedit.net/updates/osx/appcast',
             :sha256 => '21334ec300dff8fd749f1351f1a96880091bb58bc41d2a9de9179f8d42f5602d'
   end

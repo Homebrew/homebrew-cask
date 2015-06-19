@@ -5,7 +5,7 @@ cask :v1 => 'vagrant' do
   # bintray.com is the official download host per the vendor homepage
   url "https://dl.bintray.com/mitchellh/vagrant/vagrant_#{version}.dmg"
   name 'Vagrant'
-  homepage 'http://www.vagrantup.com'
+  homepage 'https://www.vagrantup.com/'
   license :mit
 
   pkg 'Vagrant.pkg'

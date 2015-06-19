@@ -4,7 +4,7 @@ cask :v1 => 'spriteilluminator' do
 
   url "https://www.codeandweb.com/download/spriteilluminator/#{version}/SpriteIlluminator-#{version}-uni.dmg"
   name 'SpriteIlluminator'
-  homepage 'http://www.codeandweb.com/spriteilluminator'
+  homepage 'https://www.codeandweb.com/spriteilluminator'
   license :commercial
 
   app 'SpriteIlluminator.app'
