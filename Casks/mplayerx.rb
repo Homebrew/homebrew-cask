@@ -1,6 +1,6 @@
 cask :v1 => 'mplayerx' do
-  version '1.0.22.1'
-  sha256 '08ce85671814e65b8c7ec8438b85be593b6deaf7d5c3b242e686a6b0176a2c77'
+  version '1.1.0-1854'
+  sha256 '6a32302dc47e3776039cbcdf68726ebabac3b8a07933d01a48bc3d2ad3827aaa'
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/mplayerx-osx/MPlayerX-#{version}.zip"
