@@ -1,5 +1,5 @@
 cask :v1 => 'biicode' do
-  version '3.2'
+  version '3.3'
   sha256 'b6053999d893f27474fa0e8aa2a57052c0262073566fa75589bdaff9ef961d49'
 
   # amazonaws is the official download host per the vendor homepage
