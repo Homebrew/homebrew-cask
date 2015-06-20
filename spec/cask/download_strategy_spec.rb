@@ -64,7 +64,7 @@ describe 'download strategies' do
 
         shutup { downloader.fetch }
 
-        expect(curl_args.each_cons(2)).to include(['-A', 'Chrome/32.0.1000.00'])
+        expect(curl_args.each_cons(2)).to include(['-A', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10) http://caskroom.io'])
       end
     end
 
