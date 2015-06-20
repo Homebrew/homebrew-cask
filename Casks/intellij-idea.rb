@@ -1,6 +1,6 @@
 cask :v1 => 'intellij-idea' do
-  version '14.1.3'
-  sha256 'a7045dd58a6d632724a0444b46b71de55ee237a8f8fa31aa9a82b685d8d8bef2'
+  version '14.1.4'
+  sha256 '211b8a146870bbf1ac20a0498a49863dbbc1f06989a4780c602ba115a9c0a943'
 
   url "http://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
   name 'IntelliJ IDEA'
