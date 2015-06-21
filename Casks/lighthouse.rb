@@ -6,7 +6,7 @@ cask :v1 => 'lighthouse' do
   url 'https://s3-eu-west-1.amazonaws.com/vinumeris/lighthouse/Lighthouse.dmg'
   name 'Vinumeris Lighthouse'
   homepage 'https://www.vinumeris.com/lighthouse'
-  license :closed
+  license :apache
   tags :vendor => 'Vinumeris'
 
   app 'Lighthouse.app'
