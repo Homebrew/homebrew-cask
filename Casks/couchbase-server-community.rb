@@ -1,6 +1,6 @@
 cask :v1 => 'couchbase-server-community' do
-  version '3.0.4'
-  sha256 '9a395c960b28ae0234d211b6e78d12599e54623eccbd1a5d001a873965fd71cb'
+  version '3.0.1'
+  sha256 '6693176f6799ce43f71b9fa1f09af8ff6857309382e0d115a9a2253474e5a31a'
 
   url "http://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.zip"
   name 'Couchbase Server'
