@@ -10,4 +10,6 @@ cask :v1 => 'asepsis' do
   pkg 'Asepsis.pkg'
 
   uninstall :pkgutil => 'com.binaryage.pkg.asepsis'
+
+  depends_on :macos => '<= :yosemite'
 end
