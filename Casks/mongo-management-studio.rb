@@ -1,6 +1,6 @@
 cask :v1 => 'mongo-management-studio' do
-  version '1.5.0'
-  sha256 'a5bfd413ed7280b21ef353314da8ef4acac78077d872b292e91d9816fdbf79c7'
+  version '1.7.0'
+  sha256 'c03b71c81e1e11b26313d0452969d5673bd9adc3b0064432af659dd1446d40ae'
 
   url "http://packages.litixsoft.de/mms/#{version}/mms-v#{version}-community-darwin.pkg"
   name 'Mongo Management Studio'
