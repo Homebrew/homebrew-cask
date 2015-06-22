@@ -1,6 +1,6 @@
 cask :v1 => 'cdock' do
-  version '7.3'
-  sha256 '88aeadaa446241970bd96685ef9ddb53220b493f321ac0e579d0e7653ef6d984'
+  version '7.4'
+  sha256 '1409c8b3ccd0c15496aee8b98ff3b8544d24fa38227c889214d2075fffdcf67a'
 
   url "http://downloads.sourceforge.net/project/cdock/cDock/cDock_v#{version}.zip"
   name 'cDock'
