@@ -1,6 +1,6 @@
 cask :v1 => 'seil' do
-  version '11.1.0'
-  sha256 'eb87ad8b903ba14de69ce7e64913a85d53cc59ee8af5fa916211c3a00d29bf7d'
+  version '11.2.0'
+  sha256 '783426d11dbc2e75fdce3410ad8433f58d69b9a46696828f63f69e4847c53547'
 
   url "https://pqrs.org/osx/karabiner/files/Seil-#{version}.dmg"
   name 'Seil'
