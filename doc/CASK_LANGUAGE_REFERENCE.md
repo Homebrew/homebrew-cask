@@ -151,7 +151,7 @@ if MacOS.release <= '10.9'         # version string
 ```
 
 The available symbols for OS X versions are: `:tiger`, `:leopard`,
-`:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, and `:yosemite`.
+`:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, `:yosemite`, and `:el_capitan`.
 The corresponding numeric version strings should given as major releases
 containing a single dot.
 

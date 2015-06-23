@@ -154,8 +154,8 @@ though not consulted directly.  Use `$MACOS_RELEASE` for testing.
 
 ### Target Ruby Versions
 
-Homebrew-cask requires a Ruby interpreter version 2.0 or above.  This
-is the default system Ruby on Mavericks (10.9) and Yosemite (10.10).
+Homebrew-cask requires a Ruby interpreter version 2.0 or above.
+This is the default system Ruby on Mavericks (10.9) and later.
 
 ### Submitting Your Changes
 
