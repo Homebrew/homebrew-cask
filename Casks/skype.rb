@@ -22,5 +22,6 @@ cask :v1 => 'skype' do
                   '~/Library/Caches/com.skype.skype',
                   '~/Library/Preferences/com.skype.skype.plist',
                   '~/Library/Preferences/com.skype.skypewifi.plist',
+                  '~/Library/Saved Application State/com.skype.skype.savedState',
                  ]
 end
