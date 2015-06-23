@@ -1,6 +1,6 @@
 cask :v1 => 'flash-player' do
-  version '18.0.0.160'
-  sha256 '389c1031216933f76a400005c97329ef319e24cdd3ebf86e0be922b5dc3c8148'
+  version '18.0.0.194'
+  sha256 'de8ba3d70cf63b68933040f92e5ba3691d238232a68109051f72cce8357ed960'
 
   # macromedia.com is the official download host per the vendor homepage
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.to_i}/flashplayer_#{version.to_i}_sa.dmg"
