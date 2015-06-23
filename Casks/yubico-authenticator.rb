@@ -1,13 +1,13 @@
 cask :v1 => 'yubico-authenticator' do
-  version '0.1.1'
-  sha256 'ac181f1ff3684ba127315743ea45031bcee8142a9a6dbe0eefc31f628c2728b0'
+  version '2.0.1'
+  sha256 '9c36e1b8b2afd98213ae1fba5a97916d920a0a8c9cbe758719e703ea4e6abeff'
 
-  url "https://developers.yubico.com/yubioath-desktop/Releases/yubioath-desktop-#{version}.pkg"
+  url "https://developers.yubico.com/yubioath-desktop/Releases/yubioath-desktop-#{version}-mac.pkg"
   name 'Yubico Authenticator'
   homepage 'https://developers.yubico.com/yubioath-desktop/'
   license :gpl
 
-  pkg "yubioath-desktop-#{version}.pkg"
+  pkg "yubioath-desktop-#{version}-mac.pkg"
 
   uninstall :pkgutil => 'com.yubico.pkg.YubicoAuthenticatoOSX'
 end
