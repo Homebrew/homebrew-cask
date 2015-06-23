@@ -75,6 +75,10 @@ class Hbc::Cask
     staged_path.exist?
   end
 
+  def installed_at_all?
+    caskroom_path.exist?
+  end
+
   def to_s
     @token
   end
