@@ -6,7 +6,7 @@ cask :v1 => 'youview' do
   appcast 'http://mrgeckosmedia.com/applications/appcast/YouView'
   name 'YouView'
   homepage 'https://mrgeckosmedia.com/applications/info/YouView'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :oss
 
-  app 'YouView/YouView.app'
+  app 'YouView.app'
 end
