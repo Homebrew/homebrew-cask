@@ -1,9 +1,9 @@
 cask :v1 => 'tower' do
-  version '2.2.1-277'
-  sha256 'e8fd917eb00674b1a0db1a95165e12a782d2286ea631b7b19337b0ca54aff22a'
+  version '2.2.2-284'
+  sha256 'f2336a0565a99436b9159b7d066f30f136b6fe72f803ab354e678fe0fbc351fd'
 
   # amazonaws.com is the official download host per the vendor homepage
-  url "https://fournova-app-updates.s3.amazonaws.com/apps/tower2-mac/277-0be85680/Tower-2-#{version}.zip"
+  url "https://fournova-app-updates.s3.amazonaws.com/apps/tower2-mac/284-05b8a99e/Tower-2-#{version}.zip"
   appcast 'https://updates.fournova.com/updates/tower2-mac/stable'
   name 'Tower'
   homepage 'http://www.git-tower.com/'
