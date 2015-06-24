@@ -10,6 +10,6 @@ cask :v1 => 'digital-power-station' do
 
   pkg 'Digital Power Station Installer.pkg'
 
-  uninstall pkgutil: 'com.bongiovi.pkg.DigitalPowerStation.*'
+  uninstall :pkgutil => 'com.bongiovi.pkg.DigitalPowerStation.*'
   # TODO should prefer `/Applications/Digital Power Station/Uninstaller.app` instead?
 end
