@@ -15,7 +15,7 @@ describe Hbc::Artifact::App do
         Hbc::Artifact::App.new(cask).install_phase
       end
 
-      TestHelper.valid_alias?(Hbc.appdir.join('AnotherName.app')).must_equal true
+      TestHelper.valid_alias?(Hbc.appdir.join('AnotherName.app/Contents')).must_equal true
     end
 
     it "creates metadata containing the alternate target name" do
@@ -54,7 +54,7 @@ describe Hbc::Artifact::App do
           Hbc::Artifact::App.new(subdir_cask).install_phase
         end
 
-        TestHelper.valid_alias?(Hbc.appdir.join('AnotherName.app')).must_equal true
+        TestHelper.valid_alias?(Hbc.appdir.join('AnotherName.app/Contents')).must_equal true
       ensure
         if defined?(subdir_cask)
           shutup do
@@ -74,8 +74,8 @@ describe Hbc::Artifact::App do
         Hbc::Artifact::App.new(cask).install_phase
       end
 
-      TestHelper.valid_alias?(Hbc.appdir.join('AnotherName.app')).must_equal true
-      TestHelper.valid_alias?(Hbc.appdir.join('AnotherNameAgain.app')).must_equal false
+      TestHelper.valid_alias?(Hbc.appdir.join('AnotherName.app/Contents')).must_equal true
+      TestHelper.valid_alias?(Hbc.appdir.join('AnotherNameAgain.app/Contents')).must_equal false
     end
 
     it "avoids clobbering an existing app by linking over it" do
@@ -87,7 +87,7 @@ describe Hbc::Artifact::App do
         Hbc::Artifact::App.new(cask).install_phase
       }, "==> It seems there is already an App at '#{Hbc.appdir.join('AnotherName.app')}'; not linking.")
 
-      Hbc.appdir.join('AnotherName.app').wont_be :symlink?
+      Hbc.appdir.join('AnotherName.app/Contents').wont_be :symlink?
     end
 
     it "happily clobbers an existing symlink" do
@@ -99,7 +99,20 @@ describe Hbc::Artifact::App do
         Hbc::Artifact::App.new(cask).install_phase
       }, "==> Symlinking App 'Caffeine.app' to '#{Hbc.appdir.join('AnotherName.app')}'")
 
-      File.readlink(Hbc.appdir.join('AnotherName.app')).wont_equal '/tmp'
+      TestHelper.valid_alias?(Hbc.appdir.join('AnotherName.app/Contents')).must_equal true
+    end
+
+    it "happily clobbers an existing inner symlink" do
+      cask = local_alt_caffeine
+
+      Hbc.appdir.join('AnotherName.app').mkpath
+      Hbc.appdir.join('AnotherName.app/Contents').make_symlink('/tmp')
+
+      TestHelper.must_output(self, lambda {
+        Hbc::Artifact::App.new(cask).install_phase
+      }, "==> Symlinking App 'Caffeine.app' to '#{Hbc.appdir.join('AnotherName.app')}'")
+
+      File.readlink(Hbc.appdir.join('AnotherName.app/Contents')).wont_equal '/tmp'
     end
   end
 end

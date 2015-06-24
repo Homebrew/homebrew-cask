@@ -1,6 +1,10 @@
 class Hbc::Artifact::Symlinked < Hbc::Artifact::Base
+  def self.inner_link(path)
+    path
+  end
+
   def self.islink?(path)
-    path.symlink?
+    path.symlink? or inner_link(path).symlink?
   end
 
   def self.link_type_english_name
@@ -8,8 +12,9 @@ class Hbc::Artifact::Symlinked < Hbc::Artifact::Base
   end
 
   def create_filesystem_link(source, target)
-    Pathname.new(target).dirname.mkpath
-    @command.run!('/bin/ln', :args => ['-hfs', '--', source, target])
+    target.delete if target.symlink?
+    Pathname.new(self.class.inner_link(target)).dirname.mkpath
+    @command.run!('/bin/ln', :args => ['-hfs', '--', self.class.inner_link(source), self.class.inner_link(target)])
     add_altname_metadata source, target
   end
 
@@ -78,6 +83,9 @@ class Hbc::Artifact::Symlinked < Hbc::Artifact::Base
     load_specification artifact_spec
     if self.class.islink?(target)
       ohai "Removing #{self.class.artifact_english_name} #{self.class.link_type_english_name.downcase}: '#{target}'"
+      if not target.symlink?
+        self.class.inner_link(target).delete
+      end
       target.delete
     end
   end
