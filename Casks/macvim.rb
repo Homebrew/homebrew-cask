@@ -11,10 +11,10 @@ cask :v1 => 'macvim' do
     # github.com is the official download host per the vendor homepage
     url "https://github.com/b4winckler/macvim/releases/download/snapshot-#{version.sub(%r{^.*-},'')}/MacVim-snapshot-#{version.sub(%r{^.*-},'')}-Mavericks.tbz"
   else
-    version '7.4-75'
-    sha256 'e1093097fcd9f2338132aabc42d8dbbdd4049512b91c34e31bc5dca713f4aa32'
+    version '7.4-76'
+    sha256 'a8d55540527c7614d738b28e8f2b0476d01b341c1d2d6775b8155f900452faea'
     # github.com is the official download host per the vendor homepage
-    url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version.sub(%r{^.*-},'')}/MacVim-snapshot-#{version.sub(%r{^.*-},'')}-Yosemite.tbz"
+    url "https://github.com/macvim-dev/macvim/releases/download/Snapshot-#{version.sub(%r{^.*-},'')}/MacVim-snapshot-#{version.sub(%r{^.*-},'')}-Yosemite.tbz"
     appcast 'https://github.com/macvim-dev/macvim/releases.atom'
   end
 
