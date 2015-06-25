@@ -12,6 +12,7 @@ cask :v1 => 'intellij-idea' do
   zap :delete => [
                   '~/Library/Application Support/IntelliJIdea14',
                   '~/Library/Preferences/IntelliJIdea14',
+                  '~/Library/Preferences/com.jetbrains.intellij.plist',
                  ]
 
   caveats <<-EOS.undent
