@@ -1,6 +1,6 @@
 cask :v1 => 'wiznote' do
-  version '2015-01-14'
-  sha256 '5edd3fd654c6168779f89553de970c35038111624ff9a0a4b26dbaa2530b035e'
+  version '2015-06-16'
+  sha256 '73e139ff32476d9afa93d988c10686cc185f174f582ab1db0a9d6eb6dc545134'
 
   # wiz.cn is the official download host per the vendor homepage
   url "http://release.wiz.cn/wiznote-macos-#{version}.dmg"
