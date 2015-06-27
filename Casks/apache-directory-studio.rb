@@ -8,7 +8,7 @@ cask :v1 => 'apache-directory-studio' do
   homepage 'http://directory.apache.org/studio/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  app 'Apache Directory Studio.app'
+  app 'ApacheDirectoryStudio.app'
 
   zap :delete => '~/.ApacheDirectoryStudio'
 end
