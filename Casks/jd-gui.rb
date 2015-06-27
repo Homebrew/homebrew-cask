@@ -1,11 +1,13 @@
 cask :v1 => 'jd-gui' do
-  version '0.3.5'
-  sha256 'c76dff6d27410e0a11167dd52055b7c3df3a62b64ff2613bbabec5712a95054a'
+  version '1.2.0'
+  sha256 '4458b81a10a7169ced8d174addf918c7879e0e60976dc630e58f43fb68a2dc00'
 
-  url "http://jd.benow.ca/jd-gui/downloads/jd-gui-#{version}.osx.i686.dmg"
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/java-decompiler/jd-gui/releases/download/v#{version}/jd-gui-osx-#{version}.tar"
+  appcast 'https://github.com/java-decompiler/jd-gui/releases.atom'
   name 'JD-GUI'
   homepage 'http://jd.benow.ca/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
-  app 'JD-GUI.app'
+  app "jd-gui-osx-#{version}/JD-GUI.app"
 end
