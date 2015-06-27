@@ -4,7 +4,7 @@ cask :v1 => 'hear' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/prosoft-engineering/hear/Hear_#{version}.dmg"
-  appcast 'http://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear',
+  appcast 'https://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear',
           :sha256 => '48edc9b03ce5d9709b27fb5099dc3cce25cc8920656b9cdb9a066ae7999c8d9d'
   name 'Hear'
   homepage 'https://www.prosofteng.com/hear/'
