@@ -5,8 +5,8 @@ cask :v1 => 'bit-slicer' do
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/zorgiepoo/bit-slicer/downloads/Bit%20Slicer%20#{version}.zip"
   name 'Bit Slicer'
-  appcast 'http://zorg.tejat.net/bitslicer/update.php',
-          :sha256 => '273bf66e66a244e694d8144ee66d71859283679d5d862dd46e3752c1cb340fb7'
+  appcast 'https://zgcoder.net/bitslicer/update/appcast.xml',
+          :sha256 => '1deab6db866da60ea0c088b1d086039c8363f5c48fcb2bbdea62f52176395c33'
   homepage 'https://github.com/zorgiepoo/bit-slicer/'
   license :bsd
 
