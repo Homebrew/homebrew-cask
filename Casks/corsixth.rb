@@ -8,5 +8,7 @@ cask :v1 => 'corsixth' do
   homepage 'https://github.com/CorsixTH/CorsixTH'
   license :mit
 
-  app 'CorsixTH.app'
+  app 'CorsixTH/CorsixTH.app'
+  app 'CorsixTH/AnimView.app'
+  app 'CorsixTH/MapEdit.app'
 end
