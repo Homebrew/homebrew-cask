@@ -1,6 +1,6 @@
 cask :v1 => 'infer' do
-  version '0.1.1'
-  sha256 '1eb8c9b047b6940464bb79adacd752382b939b2c24c2963fa1072765c22907d0'
+  version '0.2.0'
+  sha256 'ef755c3f01ae3246cae8f67a914518cdff72d69d55172a45242ef11e2c62812f'
 
   url "https://github.com/facebook/infer/releases/download/v#{version}/infer-osx-v#{version}.tar.xz"
   appcast 'https://github.com/facebook/infer/releases.atom'
