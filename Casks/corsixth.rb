@@ -1,6 +1,6 @@
 cask :v1 => 'corsixth' do
-  version '0.30'
-  sha256 '2d9fbe47ac31955643ee1de0e53fd30ddac9e64d5a1c205c46ecd3bfda1929b4'
+  version '0.40'
+  sha256 'd4f3a289954fc2eb400615114f0a8bd729e38b310beedf20dbe97a0e1cecb127'
 
   url "https://github.com/CorsixTH/CorsixTH/releases/download/v#{version}/CorsixTH-#{version}-OSX.dmg"
   appcast 'https://github.com/CorsixTH/CorsixTH/releases.atom'
