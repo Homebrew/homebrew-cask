@@ -1,6 +1,6 @@
 cask :v1 => 'clamxav' do
-  version '2.7.5'
-  sha256 '33c6c76cb3e6f8ec9c23b521135b320ea5300910d9e929eaa0556e2bed15cbfe'
+  version '2.8.1'
+  sha256 'c75f73348b94658210263ee3afa07da53e54884a07257aa707fd41226be24490'
 
   url "http://www.clamxav.com/downloads/ClamXav_#{version}.dmg"
   appcast 'http://www.clamxav.com/sparkle/profileInfo.php',
