@@ -3,9 +3,9 @@ cask :v1 => 'sizeup' do
   sha256 :no_check
 
   url 'https://www.irradiatedsoftware.com/download/SizeUp.zip'
-  appcast 'http://www.irradiatedsoftware.com/updates/profiles/sizeup.php'
+  appcast 'https://www.irradiatedsoftware.com/updates/profiles/sizeup.php'
   name 'SizeUp'
-  homepage 'http://www.irradiatedsoftware.com/sizeup/'
+  homepage 'https://www.irradiatedsoftware.com/sizeup/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SizeUp.app'

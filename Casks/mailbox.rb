@@ -7,7 +7,7 @@ cask :v1 => 'mailbox' do
   appcast 'https://mb-dtop.s3.amazonaws.com/external-beta/external-beta-appcast.xml',
           :sha256 => '7f1958d4be2af3ea5283bc586f97d73df07cb559ae954f4914815529d99e62dc'
   name 'Mailbox'
-  homepage 'http://www.mailboxapp.com/'
+  homepage 'https://www.mailboxapp.com/'
   license :gratis
 
   app 'Mailbox (Beta).app'

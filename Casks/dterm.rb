@@ -3,9 +3,9 @@ cask :v1 => 'dterm' do
   sha256 :no_check
 
   url 'http://files.decimus.net/DTerm/DTerm.zip'
-  appcast 'http://decimus.net/appcasts/DTerm.xml'
+  appcast 'https://decimus.net/appcasts/DTerm.xml'
   name 'DTerm'
-  homepage 'http://decimus.net/DTerm'
+  homepage 'https://decimus.net/DTerm'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'DTerm.app'

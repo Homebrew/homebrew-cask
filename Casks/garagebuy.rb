@@ -5,7 +5,7 @@ cask :v1 => 'garagebuy' do
   # iwascoding.de is the official download host per the vendor homepage
   url "http://www.iwascoding.de/downloads/GarageBuy_#{version}.dmg"
   name 'GarageBuy'
-  homepage 'http://www.iwascoding.com/GarageBuy'
+  homepage 'https://www.iwascoding.com/GarageBuy'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'GarageBuy.app'

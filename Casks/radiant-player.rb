@@ -5,7 +5,7 @@ cask :v1 => 'radiant-player' do
   url "https://github.com/kbhomes/radiant-player-mac/releases/download/v#{version}/Radiant.Player.zip"
   appcast 'https://github.com/kbhomes/radiant-player-mac/releases.atom'
   name 'Radiant Player'
-  homepage 'http://kbhomes.github.io/radiant-player-mac/'
+  homepage 'https://kbhomes.github.io/radiant-player-mac/'
   license :mit
 
   app 'Radiant Player.app'

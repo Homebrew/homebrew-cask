@@ -4,7 +4,7 @@ cask :v1 => 'parallels-virtualization-sdk' do
 
   url "http://download.parallels.com/desktop/v#{version[/^\w+/]}/#{version.sub(/-.*$/, '')}/ParallelsVirtualizationSDK-#{version}-mac.dmg"
   name 'Parallels Virtualization SDK'
-  homepage 'http://www.parallels.com/products/desktop/download/'
+  homepage 'https://www.parallels.com/products/desktop/download/'
   license :gratis
 
   pkg 'Parallels Virtualization SDK.pkg'

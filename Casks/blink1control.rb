@@ -6,7 +6,7 @@ cask :v1 => 'blink1control' do
   url "https://github.com/todbot/blink1/releases/download/v#{version}/Blink1Control-mac.zip"
   appcast 'https://github.com/todbot/blink1/releases.atom'
   name 'Blink1Control'
-  homepage 'http://blink1.thingm.com/'
+  homepage 'https://blink1.thingm.com/'
   license :cc
 
   app 'Blink1Control.app'

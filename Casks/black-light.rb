@@ -4,7 +4,7 @@ cask :v1 => 'black-light' do
 
   url "https://littoral.michelf.ca/apps/black-light/black-light-#{version}.zip"
   name 'Black Light'
-  homepage 'http://michelf.ca/projects/black-light'
+  homepage 'https://michelf.ca/projects/black-light'
   license :commercial
 
   app 'Black Light.app'

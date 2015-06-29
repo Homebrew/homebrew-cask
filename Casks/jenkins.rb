@@ -4,7 +4,7 @@ cask :v1 => 'jenkins' do
 
   url "http://mirrors.jenkins-ci.org/osx/jenkins-#{version}.pkg"
   name 'Jenkins'
-  homepage 'http://jenkins-ci.org/'
+  homepage 'https://jenkins-ci.org/'
   license :mit
 
   pkg "jenkins-#{version}.pkg"

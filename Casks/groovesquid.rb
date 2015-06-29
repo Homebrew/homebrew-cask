@@ -6,7 +6,7 @@ cask :v1 => 'groovesquid' do
   url "https://github.com/groovesquid/groovesquid/releases/download/v#{version}/Groovesquid.dmg"
   appcast 'https://github.com/groovesquid/groovesquid/releases.atom'
   name 'Groovesquid'
-  homepage 'http://groovesquid.com/'
+  homepage 'https://groovesquid.com/'
   license :gpl
 
   app 'Groovesquid.app'

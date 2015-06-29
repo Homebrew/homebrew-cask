@@ -4,7 +4,7 @@ cask :v1 => 'synology-cloud-station' do
 
   url "https://global.download.synology.com/download/Tools/CloudStation/#{version}/Mac/synology-cloud-station-#{version}.dmg"
   name 'Synology Cloud Station'
-  homepage 'http://www.synology.com/'
+  homepage 'https://www.synology.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "synology-cloud-station-#{version}.pkg"

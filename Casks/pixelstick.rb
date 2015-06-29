@@ -5,7 +5,7 @@ cask :v1 => 'pixelstick' do
   url 'https://plumamazing.com/bin/pixelstick/pixelstick.zip'
   appcast 'https://plumamazing.com/appcastSSL.php?pid=100'
   name 'PixelStick'
-  homepage 'http://plumamazing.com/mac/pixelstick'
+  homepage 'https://plumamazing.com/mac/pixelstick'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'PixelStick.app'

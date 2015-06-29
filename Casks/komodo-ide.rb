@@ -5,7 +5,7 @@ cask :v1 => 'komodo-ide' do
   # activestate.com is the official download host per the vendor homepage
   url "http://downloads.activestate.com/Komodo/releases/#{version.sub(%r{-.*},'')}/Komodo-IDE-#{version}-macosx-x86_64.dmg"
   name 'Komodo IDE'
-  homepage 'http://komodoide.com/'
+  homepage 'https://komodoide.com/'
   license :commercial
 
   app 'Komodo IDE 9.app'

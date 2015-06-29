@@ -6,7 +6,7 @@ cask :v1 => 'airdisplay' do
   name 'Air Display'
   appcast 'https://www.avatron.com/updates/software/airdisplay/appcast.xml',
           :sha256 => '5318742e7d9f7f4da9498e3100d8b5f92abc18a574988f1d5fa5a551ad0af062'
-  homepage 'http://avatron.com/apps/air-display/'
+  homepage 'https://avatron.com/apps/air-display/'
   license :commercial
 
   pkg 'Air Display Installer.pkg'

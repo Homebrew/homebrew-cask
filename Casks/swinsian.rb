@@ -3,9 +3,9 @@ cask :v1 => 'swinsian' do
   sha256 :no_check
 
   url 'https://swinsian.com/sparkle/Swinsian.zip'
-  appcast 'http://www.swinsian.com/sparkle/sparklecast.xml'
+  appcast 'https://www.swinsian.com/sparkle/sparklecast.xml'
   name 'Swinsian'
-  homepage 'http://swinsian.com'
+  homepage 'https://swinsian.com'
   license :commercial
 
   app 'Swinsian.app'

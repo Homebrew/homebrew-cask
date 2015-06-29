@@ -5,7 +5,7 @@ cask :v1 => 'bandage' do
   url "https://github.com/rrwick/Bandage/releases/download/v#{version}/Bandage_Mac_v#{version}.zip"
   appcast 'https://github.com/rrwick/Bandage/releases.atom'
   name 'Bandage'
-  homepage 'http://rrwick.github.io/Bandage/'
+  homepage 'https://rrwick.github.io/Bandage/'
   license :gpl
 
   app 'Bandage.app'

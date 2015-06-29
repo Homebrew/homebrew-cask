@@ -5,7 +5,7 @@ cask :v1 => 'traktable' do
   url "https://github.com/yo-han/Traktable/releases/download/#{version}/Traktable.zip"
   appcast 'https://github.com/yo-han/Traktable/releases.atom'
   name 'Traktable'
-  homepage 'http://yo-han.github.io/Traktable/'
+  homepage 'https://yo-han.github.io/Traktable/'
   license :oss
 
   app 'Traktable.app'

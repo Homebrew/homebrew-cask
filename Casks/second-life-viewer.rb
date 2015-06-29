@@ -4,7 +4,7 @@ cask :v1 => 'second-life-viewer' do
 
   url "http://download.cloud.secondlife.com/Viewer_3/Second_Life_#{version.gsub('.','_')}_i386.dmg"
   name 'Second Life Viewer'
-  homepage 'http://secondlife.com/'
+  homepage 'https://secondlife.com/'
   license :gpl
   tags :vendor => 'Linden Lab'
 

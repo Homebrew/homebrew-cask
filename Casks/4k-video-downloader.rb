@@ -4,7 +4,7 @@ cask :v1 => '4k-video-downloader' do
 
   url "http://downloads.4kdownload.com/app/4kvideodownloader_#{version}.dmg"
   name '4K Video Downloader'
-  homepage 'http://www.4kdownload.com/products/product-videodownloader'
+  homepage 'https://www.4kdownload.com/products/product-videodownloader'
   license :freemium
 
   app '4K Video Downloader.app'

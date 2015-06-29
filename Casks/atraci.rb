@@ -5,7 +5,7 @@ cask :v1 => 'atraci' do
   url "https://github.com/Atraci/Atraci/releases/download/#{version}/Atraci-mac.zip"
   appcast 'https://github.com/Atraci/Atraci/releases.atom'
   name 'Atraci'
-  homepage 'http://atraci.github.io/Atraci-website/'
+  homepage 'https://atraci.github.io/Atraci-website/'
   license :mit
 
   app 'Atraci.app'

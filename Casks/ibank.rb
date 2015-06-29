@@ -18,6 +18,6 @@ cask :v1 => 'ibank' do
   end
 
   name 'iBank'
-  homepage 'http://www.iggsoftware.com/ibank'
+  homepage 'https://www.iggsoftware.com/ibank'
   license :commercial
 end

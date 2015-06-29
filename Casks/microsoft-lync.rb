@@ -4,7 +4,7 @@ cask :v1 => 'microsoft-lync' do
 
   url "http://download.microsoft.com/download/5/0/0/500C7E1F-3235-47D4-BC11-95A71A1BA3ED/lync_#{version}.dmg"
   name 'Microsoft Lync 2011'
-  homepage 'http://www.microsoft.com/mac/enterprise/lync'
+  homepage 'https://www.microsoft.com/mac/enterprise/lync'
   license :gratis
 
   pkg 'Lync Installer.pkg'

@@ -4,7 +4,7 @@ cask :v1 => 'silverlight' do
 
   url 'http://silverlight.dlservice.microsoft.com/download/B/D/C/BDCE18B1-73C1-47BA-9B11-46A4C14CF7B0/40416.00/Silverlight.dmg'
   name 'Silverlight'
-  homepage 'http://www.microsoft.com/silverlight/'
+  homepage 'https://www.microsoft.com/silverlight/'
   license :gratis
 
   pkg 'Silverlight.pkg'

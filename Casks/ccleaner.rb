@@ -4,7 +4,7 @@ cask :v1 => 'ccleaner' do
 
   url "http://download.piriform.com/mac/CCMacSetup#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}.dmg"
   name 'CCleaner'
-  homepage 'http://www.piriform.com/ccleaner'
+  homepage 'https://www.piriform.com/ccleaner'
   license :freemium
   tags :vendor => 'Piriform'
 

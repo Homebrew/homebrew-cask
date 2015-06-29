@@ -4,7 +4,7 @@ cask :v1 => 'istopmotion' do
 
   url "https://cdn.boinx.com/software/istopmotion/Boinx_iStopMotion_#{version}.app.zip"
   name 'iStopMotion'
-  homepage 'http://www.boinx.com/istopmotion/mac/'
+  homepage 'https://www.boinx.com/istopmotion/mac/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iStopMotion 3.app'

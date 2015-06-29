@@ -4,7 +4,7 @@ cask :v1 => 'vmware-horizon-client' do
 
   url "https://download3.vmware.com/software/view/viewclients/CART14Q4/VMware-Horizon-Client-#{version}.dmg"
   name 'VMware Horizon Client'
-  homepage 'http://www.vmware.com/'
+  homepage 'https://www.vmware.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'VMware Horizon Client.app'

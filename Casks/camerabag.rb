@@ -5,7 +5,7 @@ cask :v1 => 'camerabag' do
   # amazonaws.com is the official download host per the vendor homepage
   url "http://downloads.nevercenter.com.s3.amazonaws.com/CameraBag_Mac_#{version.gsub('.','_')}.dmg"
   name 'CameraBag'
-  homepage 'http://nevercenter.com/camerabag/desktop/'
+  homepage 'https://nevercenter.com/camerabag/desktop/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'CameraBag 2.app'

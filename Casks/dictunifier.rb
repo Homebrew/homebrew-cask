@@ -4,7 +4,7 @@ cask :v1 => 'dictunifier' do
 
   url "https://mac-dictionary-kit.googlecode.com/files/DictUnifier-#{version}.zip"
   name 'DictUnifier'
-  homepage 'http://code.google.com/p/mac-dictionary-kit/'
+  homepage 'https://code.google.com/p/mac-dictionary-kit/'
   license :oss
 
   app 'DictUnifier.app'

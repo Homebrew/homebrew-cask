@@ -4,7 +4,7 @@ cask :v1 => 'scout' do
 
   url "https://github.com/downloads/mhs/scout-app/ScoutAppInstaller-#{version}.dmg"
   name 'Scout'
-  homepage 'http://mhs.github.io/scout-app/'
+  homepage 'https://mhs.github.io/scout-app/'
   license :oss
 
   installer :manual => 'Install Scout.app'

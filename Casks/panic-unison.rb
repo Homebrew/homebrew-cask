@@ -5,7 +5,7 @@ cask :v1_1 => 'panic-unison' do
   url "http://download.panic.com/Unison/Unison%20#{version}.zip"
   appcast 'http://www.panic.com/updates/update.php'
   name 'Unison'
-  homepage 'http://panic.com/unison/'
+  homepage 'https://panic.com/unison/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
   tags :vendor => 'Panic'
 

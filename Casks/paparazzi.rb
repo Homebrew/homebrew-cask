@@ -6,7 +6,7 @@ cask :v1 => 'paparazzi' do
   appcast 'https://derailer.org/paparazzi/appcast/',
           :sha256 => '05c4173db7a34788c01999a5c20d5d9dcede3d4cf981cc2268fc24c195b38efe'
   name 'Paparazzi!'
-  homepage 'http://derailer.org/paparazzi/'
+  homepage 'https://derailer.org/paparazzi/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Paparazzi!.app'

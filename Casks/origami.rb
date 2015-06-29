@@ -6,7 +6,7 @@ cask :v1 => 'origami' do
   appcast 'https://facebook.github.io/origami/update/updates.xml.rss',
           :sha256 => 'cd9fc6d5cdad06e1df1e6808bd7fdaa3999b52a765f29cc6b3dcbf6c11220540'
   name 'Origami'
-  homepage 'http://facebook.github.io/origami'
+  homepage 'https://facebook.github.io/origami'
   license :gratis
 
   pkg "Origami #{version}.pkg"

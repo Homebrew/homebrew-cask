@@ -4,7 +4,7 @@ cask :v1 => 'gopro-studio' do
 
   url "http://software.gopro.com/Mac/GoProStudio-#{version}.dmg"
   name 'GoPro Studio'
-  homepage 'http://shop.gopro.com/APAC/softwareandapp/gopro-studio/GoPro-Studio.html#/start=1'
+  homepage 'https://shop.gopro.com/APAC/softwareandapp/gopro-studio/GoPro-Studio.html#/start=1'
   license :commercial
 
   pkg 'GoPro Studio.pkg'

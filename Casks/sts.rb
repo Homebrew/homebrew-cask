@@ -10,7 +10,7 @@ cask :v1 => 'sts' do
 
   url "http://dist.springsource.com/release/STS/#{version}.RELEASE/dist/e#{Utils.based_on_eclipse.gsub(/\.\d$/, '')}/spring-tool-suite-#{version}.RELEASE-e#{Utils.based_on_eclipse}-macosx-cocoa-x86_64.tar.gz"
   name 'Spring Tool Suite'
-  homepage 'http://spring.io/tools/sts'
+  homepage 'https://spring.io/tools/sts'
   license :eclipse
 
   app "sts-bundle/sts-#{version}.RELEASE/STS.app"

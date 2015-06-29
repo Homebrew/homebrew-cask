@@ -5,7 +5,7 @@ cask :v1 => 'comictagger' do
   # googledrive.com is the official download host per the vendor homepage
   url "https://googledrive.com/host/0Bw4IursaqWhhOHF6Wk9ab3FkejQ/#{version}/ComicTagger-#{version}.dmg"
   name 'ComicTagger'
-  homepage 'http://code.google.com/p/comictagger/'
+  homepage 'https://code.google.com/p/comictagger/'
   license :apache
 
   app 'ComicTagger.app'

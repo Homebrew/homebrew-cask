@@ -4,7 +4,7 @@ cask :v1 => 'boinxtv' do
 
   url "https://cdn.boinx.com/software/boinxtv/Boinx_BoinxTV_#{version}.app.zip"
   name 'BoinxTV'
-  homepage 'http://boinx.com/boinxtv/'
+  homepage 'https://boinx.com/boinxtv/'
   license :commercial
 
   app 'BoinxTV.app'

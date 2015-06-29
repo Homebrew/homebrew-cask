@@ -4,7 +4,7 @@ cask :v1 => 'zoommy' do
 
   url 'http://zoommyapp.com/zoommy.zip'
   name 'Zoommy'
-  homepage 'http://zoommyapp.com/'
+  homepage 'https://zoommyapp.com/'
   license :gratis
 
   app 'Zoommy.app'

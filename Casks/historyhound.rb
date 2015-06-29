@@ -6,7 +6,7 @@ cask :v1 => 'historyhound' do
   appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?HH',
           :sha256 => '22beb79fed4fa0f4a46c8970654ecc649eb4609fc2664b3458cde51b86470930'
   name 'HistoryHound'
-  homepage 'http://www.stclairsoft.com/HistoryHound/'
+  homepage 'https://www.stclairsoft.com/HistoryHound/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'HistoryHound.app'

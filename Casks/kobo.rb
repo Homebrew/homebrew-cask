@@ -5,7 +5,7 @@ cask :v1 => 'kobo' do
   # akamaihd.net is the official download host per the vendor homepage
   url 'http://kbdownload1-a.akamaihd.net/desktop/kobodesktop/kobosetup.dmg'
   name 'Kobo'
-  homepage 'http://www.kobo.com/'
+  homepage 'https://www.kobo.com/'
   license :gratis
 
   app 'Kobo.app'

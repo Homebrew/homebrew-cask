@@ -2,9 +2,9 @@ cask :v1 => 'cookie' do
   version :latest
   sha256 :no_check
 
-  url 'http://sweetpproductions.com/products/cookie/Cookie.dmg'
+  url 'https://sweetpproductions.com/products/cookie/Cookie.dmg'
   name 'Cookie'
-  homepage 'http://sweetpproductions.com/'
+  homepage 'https://sweetpproductions.com/'
   license :commercial
 
   app 'Cookie.app'

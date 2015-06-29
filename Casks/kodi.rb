@@ -6,7 +6,7 @@ cask :v1 => 'kodi' do
   url "http://mirrors.xbmc.org/releases/osx/x86_64/kodi-#{version}-Helix-x86_64.dmg"
   name 'Kodi'
   name 'XBMC' # former
-  homepage 'http://kodi.tv/'
+  homepage 'https://kodi.tv/'
   license :gpl
 
   app 'Kodi.app'

@@ -7,7 +7,7 @@ cask :v1 => 'roboto' do
   name 'Roboto'
   appcast 'https://roboto.build/mac/app-cast.xml',
           :sha256 => 'e8ace5183bbceaa8972a5e493f256f73f5a2d595a588231e43de8d21b6a105c2'
-  homepage 'http://roboto.build/'
+  homepage 'https://roboto.build/'
   license :gratis
 
   app 'Roboto.app'

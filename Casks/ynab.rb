@@ -5,7 +5,7 @@ cask :v1 => 'ynab' do
   url "https://www.youneedabudget.com/CDNOrigin/download/ynab4/liveCaptive/Mac/YNAB4_LiveCaptive_#{version}.dmg"
   name 'YNAB'
   name 'You Need A Budget'
-  homepage 'http://www.youneedabudget.com/'
+  homepage 'https://www.youneedabudget.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'YNAB 4.app'

@@ -4,7 +4,7 @@ cask :v1 => 'speedlimit' do
 
   url 'https://mschrag.github.io/speedlimit/SpeedLimit.prefPane.zip'
   name 'speedlimit'
-  homepage 'http://mschrag.github.io/'
+  homepage 'https://mschrag.github.io/'
   license :oss
 
   prefpane 'SpeedLimit.prefPane'

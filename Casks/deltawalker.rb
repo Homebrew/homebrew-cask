@@ -5,7 +5,7 @@ cask :v1 => 'deltawalker' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/deltawalker/DeltaWalker-#{version}_64.dmg"
   name 'DeltaWalker'
-  homepage 'http://www.deltopia.com/compare-merge-sync/macosx/'
+  homepage 'https://www.deltopia.com/compare-merge-sync/macosx/'
   license :commercial
 
   app 'DeltaWalker.app'

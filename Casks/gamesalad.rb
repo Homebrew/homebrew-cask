@@ -7,7 +7,7 @@ cask :v1 => 'gamesalad' do
   name 'GameSalad'
   appcast 'https://gamesalad.com/download/studioUpdates',
           :sha256 => 'b6b47498451094af58cbc95720a7e44707257b840f2f796896b18320fc1b84e8'
-  homepage 'http://gamesalad.com/'
+  homepage 'https://gamesalad.com/'
   license :commercial
 
   app 'GameSalad.app'
