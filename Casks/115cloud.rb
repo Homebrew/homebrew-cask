@@ -1,8 +1,8 @@
 cask :v1 => '115cloud' do
-  version 'v4.1.0'
-  sha256 'a72c886c54a6a280869f1fb4b3e5fa851b4bc6767b53999ca9ff8e6f1be690e3'
+  version '5.1.1.31.20150614'
+  sha256 'b87cc832bb11a90a087273be093f923e8f219f6a8b50fe890d031fdb912f7ba0'
 
-  url "http://pc.115.com/download/mac/115com_mac_#{version}.dmg"
+  url "http://down.115.com/client/mac/115Browser_v#{version}.dmg"
   name '115网盘'
   name '115 cloud'
   homepage 'http://pc.115.com/mac.html'
