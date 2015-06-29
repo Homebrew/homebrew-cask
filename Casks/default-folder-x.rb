@@ -1,6 +1,6 @@
 cask :v1 => 'default-folder-x' do
-  version '4.6.14'
-  sha256 '621fe0042ed44da7eab369471ae345e19432cf3a5c70cf0290e567ce805f6b99'
+  version '4.7.2'
+  sha256 '781c9de83cf9a218b026d451c2a9e87cbbc2d4b6cc33df3dc1825c6f74298be6'
 
   url "https://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
   name 'Default Folder X'
