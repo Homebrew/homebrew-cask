@@ -1,8 +1,14 @@
 cask :v1 => 'ableton-live' do
-  version '9.1.9'
-  sha256 '7a4da8531180afa8c7930a961289da1a0df567a8495e7ec205c7780f85dd0fda'
+  version '9.2'
 
-  url "http://cdn2-downloads.ableton.com/channels/#{version}/ableton_live_suite_#{version}_64.dmg"
+  if Hardware::CPU.is_32_bit?
+    sha256 '76af66fabf29349a86d86ba07c42756ed0edf36c0b2f4df02f715509997187e5'
+    url "http://cdn2-downloads.ableton.com/channels/#{version}/ableton_live_trial_#{version}_32.dmg"
+  else
+    sha256 '6ef19ad81674dbfb842e6964961d865ebe29c6399581d47efb1d77cf7db2cf86'
+    url "http://cdn2-downloads.ableton.com/channels/#{version}/ableton_live_trial_#{version}_64.dmg"
+  end
+
   name 'Ableton Live'
   homepage 'https://ableton.com/en/live'
   license :commercial
