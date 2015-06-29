@@ -4,8 +4,8 @@ cask :v1 => 'amethyst' do
 
   url "http://ianyh.com/amethyst/versions/Amethyst-#{version}.zip"
   name 'Amethyst'
-  appcast 'http://ianyh.github.io/Amethyst/appcast.xml',
-          :sha256 => '483c803029845953a1d93aa93f7ba2856d0cf1ca5a246d7d98b61508f7b09ff8'
+  appcast 'http://ianyh.com/amethyst/appcast.xml',
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   homepage 'http://ianyh.com/amethyst'
   license :mit
 
