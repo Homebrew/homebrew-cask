@@ -12,6 +12,7 @@ cask :v1 => 'colorport' do
   uninstall :pkgutil => 'com.xrite.colorport'
 
   caveats do
+    discontinued
     reboot
   end
 end
