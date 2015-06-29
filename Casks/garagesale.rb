@@ -1,6 +1,6 @@
 cask :v1 => 'garagesale' do
-  version '6.9.2'
-  sha256 '034918633b8cac8dd2cbc0613c8ff5be29e6f5dbba909b46d29d61ee0ba1d943'
+  version '6.9.5'
+  sha256 'a4ab4d956f93fec438d3f3881b76e98e203a4c06ac6e46845180e35bcf9adae2'
 
   url "https://downloads.iwascoding.com/downloads/GarageSale_#{version}.dmg"
   name 'GarageSale'
