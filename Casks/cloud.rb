@@ -5,7 +5,7 @@ cask :v1 => 'cloud' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/downloads.getcloudapp.com/mac/CloudApp-#{version}.dmg"
   name 'CloudApp'
-  homepage 'http://getcloudapp.com/'
+  homepage 'https://getcloudapp.com/'
   license :gratis
 
   app 'CloudApp.app'

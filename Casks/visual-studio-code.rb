@@ -2,7 +2,7 @@ cask :v1 => 'visual-studio-code' do
   version :latest
   sha256 :no_check
 
-  url 'http://go.microsoft.com/fwlink/?LinkID=534106'
+  url 'https://go.microsoft.com/fwlink/?LinkID=534106'
   name 'Visual Studio Code'
   homepage 'https://code.visualstudio.com/'
   license :gratis

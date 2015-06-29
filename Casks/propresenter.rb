@@ -6,7 +6,7 @@ cask :v1 => 'propresenter' do
   appcast 'https://www.renewedvision.com/update/ProPresenter6.php',
           :sha256 => '2cb31297b4531c578b3a84b07638c7e0f9e07af1f4591b97bba44e438a8a3dd7'
   name 'ProPresenter'
-  homepage 'http://www.renewedvision.com/propresenter.php'
+  homepage 'https://www.renewedvision.com/propresenter.php'
   license :commercial
 
   app 'ProPresenter 6.app'

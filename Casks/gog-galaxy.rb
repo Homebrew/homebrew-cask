@@ -4,7 +4,7 @@ cask :v1 => 'gog-galaxy' do
 
   url "http://cdn.gog.com/open/galaxy/client/installers/galaxy_client_#{version}.pkg"
   name 'GOG Galaxy Client'
-  homepage 'http://www.gog.com/galaxy'
+  homepage 'https://www.gog.com/galaxy'
   license :gratis
   tags :vendor => 'GOG'
 

@@ -4,7 +4,7 @@ cask :v1 => 'yed' do
 
   url "https://www.yworks.com/products/yed/demo/yEd-#{version}_with-JRE8.dmg"
   name 'yEd'
-  homepage 'http://www.yworks.com/en/products/yfiles/yed/'
+  homepage 'https://www.yworks.com/en/products/yfiles/yed/'
   license :gratis
   tags :vendor => 'yWorks'
 

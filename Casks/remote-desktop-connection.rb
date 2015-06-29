@@ -4,7 +4,7 @@ cask :v1 => 'remote-desktop-connection' do
 
   url "http://download.microsoft.com/download/C/F/0/CF0AE39A-3307-4D39-9D50-58E699C91B2F/RDC_#{version}_ALL.dmg"
   name 'Remote Desktop Connection'
-  homepage 'http://www.microsoft.com/en-us/download/details.aspx?id=18140'
+  homepage 'https://www.microsoft.com/en-us/download/details.aspx?id=18140'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
   tags :vendor => 'Microsoft'
 

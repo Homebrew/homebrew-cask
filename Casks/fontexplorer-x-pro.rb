@@ -4,7 +4,7 @@ cask :v1 => 'fontexplorer-x-pro' do
 
   url "http://fast.fontexplorerx.com/FontExplorerXPro#{version.gsub('.','')}.dmg"
   name 'FontExplorer X Pro'
-  homepage 'http://www.fontexplorerx.com/'
+  homepage 'https://www.fontexplorerx.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'FontExplorer X Pro.app'

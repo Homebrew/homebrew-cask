@@ -4,7 +4,7 @@ cask :v1 => 'microsoft-intellitype' do
 
   url 'http://download.microsoft.com/download/B/1/0/B109F931-70E2-425F-8681-EAAB75845AB8/Microsoft-Desktop_d305.dmg'
   name 'Microsoft IntelliType'
-  homepage 'http://www.microsoft.com/hardware/en-us/keyboards'
+  homepage 'https://www.microsoft.com/hardware/en-us/keyboards'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Microsoft Desktop Installer.app/Contents/Resources/Microsoft Desktop.mpkg/Contents/Packages/Microsoft Keyboard.pkg'

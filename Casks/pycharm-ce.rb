@@ -6,7 +6,7 @@ cask :v1 => 'pycharm-ce' do
   name 'PyCharm'
   name 'PyCharm Community Edition'
   name 'PyCharm CE'
-  homepage 'http://www.jetbrains.com/pycharm'
+  homepage 'https://www.jetbrains.com/pycharm'
   license :apache
 
   app 'PyCharm CE.app'

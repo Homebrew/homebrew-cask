@@ -5,7 +5,7 @@ cask :v1 => 'basictex' do
   # ctan.org is the official download host per the vendor homepage
   url 'http://mirror.ctan.org/systems/mac/mactex/BasicTeX.pkg'
   name 'BasicTeX'
-  homepage 'http://www.tug.org/mactex/morepackages.html'
+  homepage 'https://www.tug.org/mactex/morepackages.html'
   license :oss
 
   pkg 'BasicTeX.pkg'

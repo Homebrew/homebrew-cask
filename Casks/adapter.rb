@@ -6,7 +6,7 @@ cask :v1 => 'adapter' do
   name 'Adapter'
   appcast 'https://www.macroplant.com/adapter/adapterAppcast.xml',
           :sha256 => '036eb7f0efa1ea980a1233e39f4342dcc2751e048acdfb967532864930ca84de'
-  homepage 'http://www.macroplant.com/adapter/'
+  homepage 'https://www.macroplant.com/adapter/'
   license :gratis
 
   app 'Adapter.app'

@@ -7,7 +7,7 @@ cask :v1 => 'synalyze-it-pro' do
   name 'Synalyze It! Pro'
   appcast 'http://www.synalyze-it.com/SynalyzeItPro/appcast.xml',
           :sha256 => 'af1d32eca0a3085a258172fb4048c52211b0aefb6784593159d8f2a755224e61'
-  homepage 'http://www.synalysis.net/'
+  homepage 'https://www.synalysis.net/'
   license :commercial
 
   app 'Synalyze It! Pro.app'

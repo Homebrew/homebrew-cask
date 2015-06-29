@@ -4,7 +4,7 @@ cask :v1 => 'rubymine' do
 
   url "http://download-cf.jetbrains.com/ruby/RubyMine-#{version}.dmg"
   name 'RubyMine'
-  homepage 'http://www.jetbrains.com/ruby/'
+  homepage 'https://www.jetbrains.com/ruby/'
   license :commercial
 
   app 'RubyMine.app'

@@ -4,7 +4,7 @@ cask :v1 => 'ti-connect-ce' do
 
   url "http://edudownload.ti.com/downloads/files/cdn/ti-connect-ce/TIConnectCE-#{version}.dmg"
   name 'TI Connect™ CE'
-  homepage 'http://education.ti.com/en/us/products/computer_software/connectivity-software/ti-connect-ce-software'
+  homepage 'https://education.ti.com/en/us/products/computer_software/connectivity-software/ti-connect-ce-software'
   license :gratis
 
   app 'TI Connect CE.app'

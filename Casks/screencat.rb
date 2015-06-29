@@ -4,7 +4,7 @@ cask :v1 => 'screencat' do
 
   url "https://github.com/maxogden/screencat/releases/download/#{version}/ScreenCat.zip"
   name 'ScreenCat'
-  homepage 'http://maxogden.github.io/screencat/'
+  homepage 'https://maxogden.github.io/screencat/'
   license :oss
 
   app 'ScreenCat.app'

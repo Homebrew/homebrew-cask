@@ -5,7 +5,7 @@ cask :v1 => 'thyme' do
   url "https://github.com/joaomoreno/thyme/releases/download/#{version}/Thyme.#{version}.dmg"
   appcast 'https://github.com/joaomoreno/thyme/releases.atom'
   name 'Thyme'
-  homepage 'http://joaomoreno.github.io/thyme/'
+  homepage 'https://joaomoreno.github.io/thyme/'
   license :mit
 
   app 'Thyme.app'

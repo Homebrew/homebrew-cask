@@ -4,7 +4,7 @@ cask :v1 => 'intermission' do
 
   url 'http://dm.rogueamoeba.com/mirror/files/Intermission.zip'
   name 'Intermission'
-  homepage 'http://rogueamoeba.com/intermission/'
+  homepage 'https://rogueamoeba.com/intermission/'
   license :commercial
 
   app 'Intermission.app'

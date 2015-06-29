@@ -4,7 +4,7 @@ cask :v1 => 'zendserver' do
 
   url "http://downloads.zend.com/zendserver/#{version}/ZendServer-#{version}-php-5.5.7.dmg"
   name 'Zend Server'
-  homepage 'http://www.zend.com/en/products/server/'
+  homepage 'https://www.zend.com/en/products/server/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Zend Server.pkg'

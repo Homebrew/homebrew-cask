@@ -2,7 +2,7 @@ cask :v1 => 'ormr' do
   version :latest
   sha256 :no_check
 
-  url 'http://getormr.com/dn/Ormr.pkg'
+  url 'https://getormr.com/dn/Ormr.pkg'
   name 'Ormr'
   homepage 'http://getormr.com/home/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

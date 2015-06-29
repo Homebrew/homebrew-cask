@@ -4,7 +4,7 @@ cask :v1 => 'unity' do
 
   url "http://netstorage.unity3d.com/unity/unity-#{version}.dmg"
   name 'Unity'
-  homepage 'http://unity3d.com/unity/'
+  homepage 'https://unity3d.com/unity/'
   license :commercial
 
   pkg 'Unity.pkg'

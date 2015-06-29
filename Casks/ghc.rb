@@ -5,7 +5,7 @@ cask :v1 => 'ghc' do
   url "https://github.com/ghcformacosx/ghc-dot-app/releases/download/v#{version}/ghc-#{version}.zip"
   appcast 'https://github.com/ghcformacosx/ghc-dot-app/releases.atom'
   name 'GHC'
-  homepage 'http://ghcformacosx.github.io/'
+  homepage 'https://ghcformacosx.github.io/'
   license :oss
 
   app "ghc-#{version.sub(/-.+/,'')}.app"

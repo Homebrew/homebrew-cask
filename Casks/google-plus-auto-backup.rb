@@ -4,7 +4,7 @@ cask :v1 => 'google-plus-auto-backup' do
 
   url 'https://dl.google.com/dl/edgedl/picasa/gpautobackup_setup.dmg'
   name 'Google+ Auto Backup'
-  homepage 'http://picasa.google.com/'
+  homepage 'https://picasa.google.com/'
   license :gratis
   tags :vendor => 'Google'
 

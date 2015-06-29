@@ -4,7 +4,7 @@ cask :v1 => 'kkbox' do
 
   url "http://download.kkbox.com/files/KKBOX-#{version}.dmg"
   name 'KKBOX'
-  homepage 'http://www.kkbox.com/'
+  homepage 'https://www.kkbox.com/'
   license :commercial
 
   app 'KKBOX.app'

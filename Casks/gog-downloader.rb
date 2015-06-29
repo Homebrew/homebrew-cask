@@ -6,7 +6,7 @@ cask :v1 => 'gog-downloader' do
   appcast 'https://api.gog.com/en/downloader2/status/mac-stable',
           :sha256 => '91f8021f41c170428d3ff18770356284c0239c8d8a47f2eccb2d5d1c222829c5'
   name 'GOG Downloader'
-  homepage 'http://www.gog.com/downloader'
+  homepage 'https://www.gog.com/downloader'
   license :gratis
   tags :vendor => 'GOG'
 

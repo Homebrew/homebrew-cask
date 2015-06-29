@@ -5,7 +5,7 @@ cask :v1 => 'tagger' do
   url "https://github.com/Bilalh/Tagger/releases/download/1.8.0/Tagger_#{version}.zip"
   appcast 'https://github.com/Bilalh/Tagger/releases.atom'
   name 'Tagger'
-  homepage 'http://bilalh.github.io/projects/tagger/'
+  homepage 'https://bilalh.github.io/projects/tagger/'
   license :cc
 
   app 'Tagger.app'

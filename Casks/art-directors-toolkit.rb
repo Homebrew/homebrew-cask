@@ -4,7 +4,7 @@ cask :v1 => 'art-directors-toolkit' do
 
   url "http://www.code-line.com/download/ArtDirectorsToolkit#{version.to_i}i.zip"
   name 'Art Directors Toolkit'
-  homepage 'http://code-line.com/artdirectorstoolkit'
+  homepage 'https://code-line.com/artdirectorstoolkit'
   license :commercial
 
   app "Art Directors Toolkit #{version.to_i}i.app"

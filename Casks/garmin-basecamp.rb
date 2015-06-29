@@ -4,7 +4,7 @@ cask :v1 => 'garmin-basecamp' do
 
   url "http://download.garmin.com/software/BaseCampforMac_#{version.gsub('.', '')}.dmg"
   name 'Garmin BaseCamp'
-  homepage 'http://www.garmin.com/en-US/shop/downloads/basecamp'
+  homepage 'https://www.garmin.com/en-US/shop/downloads/basecamp'
   license :gratis
 
   pkg 'Install BaseCamp.pkg'

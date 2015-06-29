@@ -4,7 +4,7 @@ cask :v1 => 'presenter' do
 
   url "http://files.ipevo.com/download/driver/ipevo_presenter/Presenter_mac_#{version}.zip"
   name 'IPEVO Presenter'
-  homepage 'http://support.ipevo.com/support/qa/IPEVO-Presenter'
+  homepage 'https://support.ipevo.com/support/qa/IPEVO-Presenter'
   license :commercial
   tags :vendor => 'IPEVO'
 

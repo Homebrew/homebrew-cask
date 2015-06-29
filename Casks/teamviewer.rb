@@ -4,7 +4,7 @@ cask :v1 => 'teamviewer' do
 
   url 'https://download.teamviewer.com/download/TeamViewer.dmg'
   name 'TeamViewer'
-  homepage 'http://www.teamviewer.com/'
+  homepage 'https://www.teamviewer.com/'
   license :freemium
 
   pkg 'Install TeamViewer.pkg'

@@ -4,7 +4,7 @@ cask :v1 => 'qtpass' do
 
   url 'https://annejan.com/media/qtpass.dmg'
   name 'QtPass'
-  homepage 'http://qtpass.org/'
+  homepage 'https://qtpass.org/'
   license :gpl
 
   app 'QtPass.app'

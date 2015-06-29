@@ -4,7 +4,7 @@ cask :v1 => 'microsoft-office' do
 
   url 'http://officecdn.microsoft.com/pr/MacOffice2011/en-US/MicrosoftOffice2011.dmg'
   name 'Microsoft Office'
-  homepage 'http://www.microsoft.com/mac'
+  homepage 'https://www.microsoft.com/mac'
   license :commercial
 
   pkg 'Office Installer.pkg'

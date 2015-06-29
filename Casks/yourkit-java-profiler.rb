@@ -4,7 +4,7 @@ cask :v1 => 'yourkit-java-profiler' do
 
   url "http://www.yourkit.com/download/yjp-#{version}-mac.zip"
   name 'YourKit Java Profiler'
-  homepage 'http://www.yourkit.com/overview/'
+  homepage 'https://www.yourkit.com/overview/'
   license :commercial
   tags :vendor => 'YourKit'
 

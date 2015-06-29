@@ -6,7 +6,7 @@ cask :v1 => 'sketchupviewer' do
   # downloads can be found at http://www.sketchup.com/download/all
   url 'https://dl.trimble.com/sketchup/SketchUpViewer-en.dmg'
   name 'SketchUpViewer'
-  homepage 'http://www.sketchup.com/products/sketchup-viewer'
+  homepage 'https://www.sketchup.com/products/sketchup-viewer'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SketchUpViewer.app'

@@ -4,7 +4,7 @@ cask :v1 => 'adobe-reader' do
 
   url "http://ardownload.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.gsub('.', '')[2..-1]}/AcroRdrDC_#{version.gsub('.', '')[2..-1]}_MUI.dmg"
   name 'Adobe Acrobat Reader DC'
-  homepage 'http://www.adobe.com/products/reader.html'
+  homepage 'https://www.adobe.com/products/reader.html'
   license :gratis
   tags :vendor => 'Adobe'
 

@@ -2,7 +2,7 @@ cask :v1 => 'voicemac' do
   version :latest
   sha256 :no_check
 
-  url 'http://download.mrgeckosmedia.com/VoiceMac.zip'
+  url 'https://download.mrgeckosmedia.com/VoiceMac.zip'
   appcast 'https://mrgeckosmedia.com/applications/appcast/VoiceMac'
   name 'VoiceMac'
   homepage 'https://mrgeckosmedia.com/applications/info/VoiceMac'

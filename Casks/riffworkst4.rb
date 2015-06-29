@@ -5,7 +5,7 @@ cask :v1 => 'riffworkst4' do
 
   url 'https://www.sonomawireworks.com/accountManagerUI/files/RiffWorksT4.dmg'
   name 'RiffWorks T4'
-  homepage 'http://www.sonomawireworks.com/T4/'
+  homepage 'https://www.sonomawireworks.com/T4/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "RiffWorksT4V#{version.gsub('.','_')}.pkg"

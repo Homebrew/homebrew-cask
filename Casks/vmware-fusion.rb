@@ -4,7 +4,7 @@ cask :v1 => 'vmware-fusion' do
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   name 'VMware Fusion'
-  homepage 'http://www.vmware.com/products/fusion/'
+  homepage 'https://www.vmware.com/products/fusion/'
   license :commercial
   tags :vendor => 'VMware'
 

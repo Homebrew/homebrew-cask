@@ -5,7 +5,7 @@ cask :v1 => 'unison' do
   # petitepomme.net is the official download host per the vendor homepage
   url "http://alan.petitepomme.net/unison/assets/Unison-OS-X-#{version}.zip"
   name 'Unison'
-  homepage 'http://www.cis.upenn.edu/~bcpierce/unison/'
+  homepage 'https://www.cis.upenn.edu/~bcpierce/unison/'
   license :gpl
 
   app 'Unison.app'

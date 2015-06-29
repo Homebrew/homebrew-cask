@@ -5,7 +5,7 @@ cask :v1 => 'avast' do
   url 'http://download.ff.avast.com/mac/avast_free_mac_security.dmg'
   name 'Avast'
   name 'Avast Mac Security'
-  homepage 'http://www.avast.com/'
+  homepage 'https://www.avast.com/'
   license :commercial
 
   pkg 'Avast Mac Security.pkg'

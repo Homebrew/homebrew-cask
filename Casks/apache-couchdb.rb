@@ -3,9 +3,9 @@ cask :v1 => 'apache-couchdb' do
   sha256 'c94dcc4e2ff163dfd3df52a3170f5f18be05beda3bf64c3e12a78dfe622dbf8f'
 
   # mirrorservice.org is the official download host per the vendor homepage
-  url "http://www.mirrorservice.org/sites/ftp.apache.org/couchdb/binary/mac/#{version}/Apache-CouchDB-#{version}.zip"
+  url "https://www.mirrorservice.org/sites/ftp.apache.org/couchdb/binary/mac/#{version}/Apache-CouchDB-#{version}.zip"
   name 'Apache CouchDB'
-  homepage 'http://couchdb.apache.org/'
+  homepage 'https://couchdb.apache.org/'
   license :apache
 
   app 'Apache CouchDB.app'

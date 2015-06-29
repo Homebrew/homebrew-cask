@@ -26,7 +26,7 @@ cask :v1 => 'git-annex' do
   gpg "#{url}.sig",
       :key_url => 'https://downloads.kitenet.net/git-annex/gpg-pubkey.asc'
   name 'git-annex'
-  homepage 'http://git-annex.branchable.com/'
+  homepage 'https://git-annex.branchable.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'git-annex.app'

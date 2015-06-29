@@ -53,6 +53,6 @@ cask :v1 => 'cleanmymac' do
   end
 
   name 'CleanMyMac'
-  homepage 'http://macpaw.com/cleanmymac'
+  homepage 'https://macpaw.com/cleanmymac'
   license :commercial
 end

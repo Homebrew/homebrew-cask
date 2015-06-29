@@ -5,7 +5,7 @@ cask :v1 => 'eclipse-platform' do
   url "http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops#{version.to_i}/R-#{version}/eclipse-SDK-#{version.sub(%r{-.*},'')}-macosx-cocoa-x86_64.tar.gz&r=1"
   name 'Eclipse'
   name 'Eclipse SDK'
-  homepage 'http://eclipse.org'
+  homepage 'https://eclipse.org'
   license :eclipse
   depends_on :macos => '>= :leopard'
   depends_on :arch => :x86_64

@@ -6,7 +6,7 @@ cask :v1 => 'app-tamer' do
   name 'AppTamer'
   appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?AT',
           :sha256 => 'bd1cff488e1a43a407cb8f9b572e827d56c922d3ef6a91a3459b055cec903f30'
-  homepage 'http://www.stclairsoft.com/AppTamer/'
+  homepage 'https://www.stclairsoft.com/AppTamer/'
   license :commercial
 
   app 'App Tamer.app'

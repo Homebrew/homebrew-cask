@@ -5,7 +5,7 @@ cask :v1 => 'shuttle' do
   url "https://github.com/fitztrev/shuttle/releases/download/#{version}/Shuttle.zip"
   appcast 'https://github.com/fitztrev/shuttle/releases.atom'
   name 'Shuttle'
-  homepage 'http://fitztrev.github.io/shuttle/'
+  homepage 'https://fitztrev.github.io/shuttle/'
   license :mit
 
   app 'Shuttle.app'

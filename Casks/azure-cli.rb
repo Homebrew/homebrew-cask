@@ -4,7 +4,7 @@ cask :v1 => 'azure-cli' do
 
   url 'http://go.microsoft.com/fwlink/?linkid=252249&clcid=0x409'
   name 'Microsoft Azure SDK'
-  homepage 'http://azure.microsoft.com/en-us/documentation/articles/command-line-tools/'
+  homepage 'https://azure.microsoft.com/en-us/documentation/articles/command-line-tools/'
   license :gratis
   tags :vendor => 'Microsoft'
 

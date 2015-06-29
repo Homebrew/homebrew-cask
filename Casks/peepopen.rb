@@ -4,7 +4,7 @@ cask :v1 => 'peepopen' do
 
   url 'https://topfunky.github.io/PeepOpen/dl/PeepOpen.dmg'
   name 'PeepOpen'
-  homepage 'http://topfunky.github.io/PeepOpen/'
+  homepage 'https://topfunky.github.io/PeepOpen/'
   license :mit
 
   app 'PeepOpen.app'

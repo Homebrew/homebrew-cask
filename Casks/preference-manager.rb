@@ -3,9 +3,9 @@ cask :v1 => 'preference-manager' do
   sha256 :no_check
 
   url 'http://download.digitalrebellion.com/Pref_Man.dmg'
-  appcast 'http://www.digitalrebellion.com/rss/appcasts/pref_man_appcast.xml'
+  appcast 'https://www.digitalrebellion.com/rss/appcasts/pref_man_appcast.xml'
   name 'Preference Manager'
-  homepage 'http://www.digitalrebellion.com/prefman'
+  homepage 'https://www.digitalrebellion.com/prefman'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Preference Manager.app'

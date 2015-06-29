@@ -4,7 +4,7 @@ cask :v1 => 'yubikey-personalization-gui' do
 
   url "https://developers.yubico.com/yubikey-personalization-gui/Releases/yubikey-personalization-gui-#{version}.pkg"
   name 'YubiKey Personalization GUI'
-  homepage 'http://www.yubico.com/products/services-software/personalization-tools/use/'
+  homepage 'https://www.yubico.com/products/services-software/personalization-tools/use/'
   license :bsd
 
   pkg "yubikey-personalization-gui-#{version}.pkg"

@@ -6,7 +6,7 @@ cask :v1 => 'mysqlworkbench' do
   name 'MySQL Workbench'
   gpg "#{url}.asc",
       :key_id => '8c718d3b5072e1f5'
-  homepage 'http://www.mysql.com/products/workbench'
+  homepage 'https://www.mysql.com/products/workbench'
   license :gpl
 
   app 'MySQLWorkbench.app'

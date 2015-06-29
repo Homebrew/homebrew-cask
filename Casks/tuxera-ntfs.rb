@@ -4,7 +4,7 @@ cask :v1 => 'tuxera-ntfs' do
 
   url 'https://www.tuxera.com/mac/tuxerantfs_2014.dmg'
   name 'Tuxera NTFS'
-  homepage 'http://www.tuxera.com/products/tuxera-ntfs-for-mac/'
+  homepage 'https://www.tuxera.com/products/tuxera-ntfs-for-mac/'
   license :closed
 
   pkg '.packages/Flat/Install Tuxera NTFS.mpkg'

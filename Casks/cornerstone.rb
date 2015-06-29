@@ -6,7 +6,7 @@ cask :v1 => 'cornerstone' do
   appcast 'https://www.zennaware.com/cornerstone/appcast/feed2.php',
           :sha256 => '9c86ba0e2bdbcede056976040a507ebd3c34f4229ae2fd1fa402ab937adc95e6'
   name 'Cornerstone'
-  homepage 'http://www.zennaware.com/cornerstone/'
+  homepage 'https://www.zennaware.com/cornerstone/'
   license :commercial
 
   app 'Cornerstone.app'

@@ -4,7 +4,7 @@ cask :v1 => 'adobe-photoshop-lightroom' do
 
   url "http://download.adobe.com/pub/adobe/lightroom/mac/#{version.to_i}.x/Lightroom_#{version.to_i}_LS11_mac_#{version.gsub('.','_')}.dmg"
   name 'Adobe Photoshop Lightroom'
-  homepage 'http://www.adobe.com/products/photoshop-lightroom.html'
+  homepage 'https://www.adobe.com/products/photoshop-lightroom.html'
   license :commercial
 
   pkg "Adobe Photoshop Lightroom #{version.to_i}.pkg"

@@ -2,9 +2,9 @@ cask :v1 => 'sophos-anti-virus-home-edition' do
   version :latest
   sha256 :no_check
 
-  url 'http://downloads.sophos.com/home-edition/savosx_he_r.zip'
+  url 'https://downloads.sophos.com/home-edition/savosx_he_r.zip'
   name 'Sophos Anti-Virus Home Edition'
-  homepage 'http://www.sophos.com/en-us/products/free-tools/sophos-antivirus-for-mac-home-edition.aspx/'
+  homepage 'https://www.sophos.com/en-us/products/free-tools/sophos-antivirus-for-mac-home-edition.aspx/'
   license :gratis
   tags :vendor => 'Sophos'
 

@@ -4,7 +4,7 @@ cask :v1 => 'parallels-desktop' do
 
   url "http://download.parallels.com/desktop/v#{version[/^\w+/]}/#{version.sub(/-.*$/, '')}/ParallelsDesktop-#{version}.dmg"
   name 'Parallels Desktop'
-  homepage 'http://www.parallels.com/products/desktop/'
+  homepage 'https://www.parallels.com/products/desktop/'
   license :commercial
 
   app 'Parallels Desktop.app'

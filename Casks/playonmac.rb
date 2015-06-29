@@ -4,7 +4,7 @@ cask :v1 => 'playonmac' do
 
   url "http://repository.playonmac.com/PlayOnMac/PlayOnMac_#{version}.dmg"
   name 'PlayOnMac'
-  homepage 'http://www.playonmac.com/en'
+  homepage 'https://www.playonmac.com/en'
   license :gpl
 
   app 'PlayOnMac.app'

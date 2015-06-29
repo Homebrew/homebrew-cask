@@ -4,7 +4,7 @@ cask :v1 => 'fdt' do
 
   url 'http://fdt.powerflasher.com/update/fdt/installer/FDT_osx64.dmg'
   name 'FDT'
-  homepage 'http://fdt.powerflasher.com/'
+  homepage 'https://fdt.powerflasher.com/'
   license :commercial
 
   app 'FDT.app'

@@ -4,7 +4,7 @@ cask :v1 => 'mindjet-mindmanager' do
 
   url 'http://www.mindjet.com/mm-mac-dmg'
   name 'Mindjet Mindmanager'
-  homepage 'http://www.mindjet.com/mindmanager/'
+  homepage 'https://www.mindjet.com/mindmanager/'
   license :commercial
 
   app 'Mindjet MindManager.app'

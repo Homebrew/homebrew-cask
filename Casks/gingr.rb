@@ -6,7 +6,7 @@ cask :v1 => 'gingr' do
   url "https://github.com/marbl/gingr/releases/download/v#{version}/gingr-OSX64-v#{version}.zip"
   appcast 'https://github.com/marbl/gingr/releases.atom'
   name 'Gingr'
-  homepage 'http://harvest.readthedocs.org/en/latest/content/gingr.html'
+  homepage 'https://harvest.readthedocs.org/en/latest/content/gingr.html'
   license :bsd
 
   app 'Gingr.app'

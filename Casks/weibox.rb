@@ -6,7 +6,7 @@ cask :v1 => 'weibox' do
   appcast 'https://weiboformac.sinaapp.com/appcast/wm2.xml',
           :sha256 => '2aefd31728fb15674f7afd1bc2fd4b47f42b6720227f2ee81b8a6d80344815c3'
   name 'WeiboX'
-  homepage 'http://weiboformac.sinaapp.com'
+  homepage 'https://weiboformac.sinaapp.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'WeiboX.app'

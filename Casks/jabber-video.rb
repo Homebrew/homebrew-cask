@@ -13,7 +13,7 @@ cask :v1 => 'jabber-video' do
   postflight do
     # Remove ForcedConfig.plist from App bundle. This plist prevents us from editing the internal, external servers and Sip domain
     # See Cisco Jabber Video for Telepresence 4.8 Administrator Guide for more details
-    # http://www.cisco.com/c/en/us/td/docs/telepresence/endpoint/Jabber_Video/4_8/CJAB_BK_J4DBC2E7_00_jabber-video-admin-guide-4-8/CJAB_BK_J4DBC2E7_00_jabber-video-admin-guide-4-8_chapter_011.html#CJAB_TP_P465596C_00
+    # https://www.cisco.com/c/en/us/td/docs/telepresence/endpoint/Jabber_Video/4_8/CJAB_BK_J4DBC2E7_00_jabber-video-admin-guide-4-8/CJAB_BK_J4DBC2E7_00_jabber-video-admin-guide-4-8_chapter_011.html#CJAB_TP_P465596C_00
     system '/bin/rm', '--', "#{staged_path}/Jabber Video.app/Contents/Resources/ForcedConfig.plist"
   end
 

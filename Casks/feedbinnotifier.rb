@@ -5,7 +5,7 @@ cask :v1 => 'feedbinnotifier' do
   url "https://github.com/kmikael/FeedbinNotifier/releases/download/v#{version}/FeedbinNotifier.zip"
   appcast 'https://github.com/kmikael/FeedbinNotifier/releases.atom'
   name 'Feedbin Notifier'
-  homepage 'http://kmikael.github.io/FeedbinNotifier'
+  homepage 'https://kmikael.github.io/FeedbinNotifier'
   license :mit
 
   app 'FeedbinNotifier.app'

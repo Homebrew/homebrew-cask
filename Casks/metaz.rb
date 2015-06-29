@@ -5,7 +5,7 @@ cask :v1 => 'metaz' do
   url "https://github.com/griff/metaz/releases/download/v#{version}/MetaZ-#{version}.zip"
   appcast 'https://github.com/griff/metaz/releases.atom'
   name 'MetaZ'
-  homepage 'http://griff.github.io/metaz/'
+  homepage 'https://griff.github.io/metaz/'
   license :mit
 
   app 'MetaZ.app'

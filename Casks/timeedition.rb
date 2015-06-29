@@ -5,7 +5,7 @@ cask :v1 => 'timeedition' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/timeedition/timeEdition#{version}-macosx.dmg.zip"
   name 'timeEdition'
-  homepage 'http://www.timeedition.com/old/en/'
+  homepage 'https://www.timeedition.com/old/en/'
   license :gpl
 
   container :nested => "timeEdition#{version}-macosx.dmg"

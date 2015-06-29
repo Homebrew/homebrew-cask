@@ -5,7 +5,7 @@ cask :v1 => 'macpass' do
   url "https://github.com/mstarke/MacPass/releases/download/#{version}/MacPass-#{version}.zip"
   appcast 'https://github.com/mstarke/MacPass/releases.atom'
   name 'MacPass'
-  homepage 'http://mstarke.github.io/MacPass/'
+  homepage 'https://mstarke.github.io/MacPass/'
   license :gpl
 
   app 'MacPass.app'
