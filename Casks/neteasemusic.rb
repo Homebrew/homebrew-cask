@@ -9,4 +9,13 @@ cask :v1 => 'neteasemusic' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'NeteaseMusic.app'
+
+  uninstall :quit => 'com.netease.163music'
+
+  zap :delete => [
+                  '~/Library/Caches/com.netease.163music',
+                  '~/Library/Containers/com.netease.163music',
+                  '~/Library/Preferences/com.netease.163music.plist',
+                  '~/Library/Saved Application State/com.netease.163music.savedState'
+                 ]
 end
