@@ -1,6 +1,6 @@
 cask :v1 => 'angband' do
-  version '3.5.1'
-  sha256 'de8af2db62de6ce19034bcb5d542e9c161a069d5b240a77d9c0497cb473ea82c'
+  version '4.0.0'
+  sha256 'a49555fe1a686295978ddfc385077906461b53fa9d5087716636aedb54d662e4'
 
   versionnumber = /(.*)\.(.*)\.(.*)/.match(version)
 
