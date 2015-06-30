@@ -5,7 +5,7 @@ cask :v1 => 'qt-creator' do
   url "http://download.qt-project.org/official_releases/qtcreator/#{version.sub(%r{^(\d+\.\d+).*},'\1')}/#{version}/qt-creator-opensource-mac-x86_64-#{version}.dmg"
   name 'Qt Creator'
   homepage 'http://www.qt.io/developers/'
-  license :oss
+  license :gpl
 
   app 'Qt Creator.app'
 end
