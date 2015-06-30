@@ -6,7 +6,7 @@ cask :v1 => 'safe-in-cloud' do
   name 'SafeInCloud'
   name 'SafeInCloud Password Manager'
   homepage 'https://www.safe-in-cloud.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Safe In Cloud.app'
 end
