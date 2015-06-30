@@ -10,3 +10,4 @@ cask :v1 => 'cycling74-max' do
 
   app 'Max.app'
 end
+
