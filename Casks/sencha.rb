@@ -24,7 +24,7 @@ cask :v1 => 'sencha' do
     <<-EOS.undent
       Installing this Cask means you have AGREED to the Sencha Cmd License
 
-        http://www.sencha.com/legal/sencha-cmd-license
+        http://www.sencha.com/legal/sencha-tools-software-license-agreement/
 
       Sencha Cmd appends 2 lines to your ~/.bashrc or ~/.profile file:
 
