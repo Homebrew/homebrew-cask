@@ -1,6 +1,6 @@
 cask :v1 => 'noun-project' do
-  version '1.0.2'
-  sha256 '3063a23c568254053513fbadbdd9087f3cb6f87fd1a749e61e7452e36772a28b'
+  version '1.0.4'
+  sha256 '4b5024b3e425d8530a1be7b52e014b11b8d9ece5c6443afb31e7dfb454747d53'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/nounproject/mac/Noun-Project-#{version}.dmg"
