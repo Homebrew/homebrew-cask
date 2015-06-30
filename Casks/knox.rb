@@ -1,6 +1,6 @@
 cask :v1 => 'knox' do
-  version '2.3.1'
-  sha256 '93bac0f630bb90452e300d2aaaea38f1fe118f72fe6206377d76ebc691c81555'
+  version '2.3.2'
+  sha256 '35379e9af57d39ed0fcc965d295e1509f32300044379ab3c686b762fe1eac915'
 
   # cloudfront.net is the official download host per the vendor homepage
   url "https://d13itkw33a7sus.cloudfront.net/dist/K/Knox-#{version}.zip"
