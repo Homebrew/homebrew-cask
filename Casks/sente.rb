@@ -7,7 +7,7 @@ cask :v1 => 'sente' do
           :sha256 => '2083ee7a01313014c7d600e13018709521fd3f53d767bd31cd8d2caec2120c7f'
   name 'Sente'
   homepage 'http://www.thirdstreetsoftware.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   app 'Sente 6.app'
 end
