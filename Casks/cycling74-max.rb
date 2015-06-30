@@ -1,6 +1,6 @@
 cask :v1 => 'cycling74-max' do
-  version '7.0.3-150402'
-  sha256 'c63616022a19e8aafe7c7036265599644b13f3ae640509ffe17a3c7c6953d55e'
+  version '7.0.4-150625'
+  sha256 'e00be5bbef8085268aa0545a354074cf8181ca159e3fe30e1eb55d974a0df7a3'
 
   url "https://filepivot.appspot.com/projects/maxmspjitter/files/Max#{version.sub('-','_').gsub('.','')}.dmg"
   name 'Max'
