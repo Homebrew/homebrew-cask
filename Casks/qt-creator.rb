@@ -1,8 +1,8 @@
 cask :v1 => 'qt-creator' do
-  version '3.4.0'
-  sha256 '13a232534adf50f928ebf1ad1fde912a423cd7524d86d0c3d6a8efd321d3f858'
+  version '3.4.2'
+  sha256 '2908e39ebc1710746f2deee00ccf09758c4c1563231bf6940f154376b0ec6f4c'
 
-  url "http://download.qt-project.org/official_releases/qtcreator/#{version.sub(%r{^(\d+\.\d+).*},'\1')}/#{version}/qt-creator-opensource-mac-x86_64-#{version}.dmg"
+  url "http://download.qt.io/official_releases/qtcreator/#{version.to_f}/#{version}/qt-creator-opensource-mac-x86_64-#{version}.dmg"
   name 'Qt Creator'
   homepage 'http://www.qt.io/developers/'
   license :gpl
