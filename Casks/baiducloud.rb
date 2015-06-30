@@ -10,4 +10,11 @@ cask :v1 => 'baiducloud' do
   license :gratis
 
   app '百度云同步盘.app'
+
+  uninstall :quit => 'com.baidu.netdiskmac'
+
+  zap :delete => [
+                  '~/Library/Application Support/百度云同步盘',
+                  '~/Preferences/com.baidu.netdiskmac.plist'
+                 ]
 end
