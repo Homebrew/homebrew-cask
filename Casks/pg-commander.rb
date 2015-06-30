@@ -1,11 +1,12 @@
 cask :v1 => 'pg-commander' do
-  version '1.5.5'
-  sha256 '802a605757dcfff8ea5227ecd74c10ef2f3ca8f63a0b4aadc7c2052f37270c82'
+  version '1.5.6'
+  sha256 '6793dc4b3c6b5fd77b615ae9eb29783d17d264b35f765793f938cef4eb60a852'
 
-  url "https://eggerapps.at/pgcommander/download/pgcommander-#{version}.zip"
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://s3-eu-west-1.amazonaws.com/eggerapps.at/pgcommander/download/pgcommander-#{version}.zip"
   name 'PG Commander'
   homepage 'https://eggerapps.at/pgcommander/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'PG Commander.app'
 end
