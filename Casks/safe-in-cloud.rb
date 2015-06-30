@@ -9,4 +9,8 @@ cask :v1 => 'safe-in-cloud' do
   license :gratis
 
   app 'Safe In Cloud.app'
+
+  caveats do
+    free_license 'https://www.safe-in-cloud.com/en/license-agreement.html'
+  end
 end
