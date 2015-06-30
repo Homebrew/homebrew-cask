@@ -1,10 +1,10 @@
 cask :v1 => 'uninstallpkg' do
-  version '1.0.7'
-  sha256 '6f5b88434635afe3eee07dcd0b183f00233ccd089ba0c45e3c4a3c8ddaa1fa4a'
+  version '1.0.14'
+  sha256 'c4ccabfe80a95d0a1557b56a4fadb5580df244a3cabe2ebcc690f2b3b5b24547'
 
   url "https://www.corecode.at/downloads/uninstallpkg_#{version}.zip"
   appcast 'https://www.corecode.at/uninstallpkg/uninstallpkg.xml',
-          :sha256 => '5f5de8cb9ee55d7c96582f7359a41c9530170f589f45bdad5ee3f04dd22c829d'
+          :sha256 => '20096694c8ec313ea720872ada6f32388bff5c3dce6590f9776532edf2cd5d7a'
   name 'UninstallPKG'
   homepage 'https://www.corecode.at/uninstallpkg/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
