@@ -1,6 +1,6 @@
 cask :v1 => 'elm-platform' do
-  version '0.15'
-  sha256 'cb4a6a6510a231cf1c0109b892b2aea1f0139d6454c93b1568d3dfcf8df9def0'
+  version '0.15.1'
+  sha256 '09ad994a33215d954042c5917423eec0e2adbd6015dd6dd9ef571d5d7af9bf2b'
 
   url "http://install.elm-lang.org/Elm-Platform-#{version}.pkg"
   name 'Elm'
