@@ -1,11 +1,13 @@
 cask :v1 => 'sococo' do
-  version '3.5.9_13089'
-  sha256 '5630d397ae3816a965114abf299a594c972773b9de06f21b8b9f9d57d6f1dba6'
+  version '3.5.10_13372'
+  sha256 '8852a72506fa26ee56158fec5d814d9c818f775ad13a5a6f2d24f68a902601f8'
 
-  url "http://download.sococo.com/#{version.to_f}/Sococo_#{version.gsub('.','_')}.dmg"
+  url "http://download.sococo.com/release/Sococo_#{version.gsub('.','_')}.dmg"
   name 'Sococo'
   homepage 'https://www.sococo.com/'
   license :freemium
 
   app 'Sococo.app'
+
+  depends_on :macos => '>= :lion'
 end
