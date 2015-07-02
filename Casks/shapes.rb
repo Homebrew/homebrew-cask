@@ -9,5 +9,7 @@ cask :v1 => 'shapes' do
   homepage 'http://shapesapp.com'
   license :commercial
 
+  depends_on :macos => '>= :mountain_lion'
+
   app 'Shapes.app'
 end
