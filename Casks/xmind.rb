@@ -1,6 +1,6 @@
 cask :v1 => 'xmind' do
-  version '3.5.2.201504270119'
-  sha256 '602dd1d90a41bfa30377881e37f6c5d95de84619cbe8d15755026e07ec1cb1bb'
+  version '3.5.3.201506180105'
+  sha256 '94f6850bc82c06ba075e8eac338c5fe8ad60609fe31748bab5c9b99d105019c4'
 
   url "http://dl3.xmind.net/xmind-macosx-#{version}.dmg"
   name 'XMind'
@@ -12,6 +12,8 @@ cask :v1 => 'xmind' do
     '~/Library/XMind',
     '~/Library/Saved Application State/org.xmind.cathy.application.savedState'
   ]
+
+  depends_on :macos => '>= :snow_leopard'
 
   app 'XMind.app'
 end
