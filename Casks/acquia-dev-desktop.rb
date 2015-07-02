@@ -8,12 +8,12 @@ cask :v1 => 'acquia-dev-desktop' do
   license :gratis
 
   installer :script => 'Acquia Dev Desktop Installer.app/Contents/MacOS/installbuilder.sh',
-            :args => ['--mode' , 'unattended', '--unattendedmodeui', 'none'],
+            :args => ['--mode', 'unattended', '--unattendedmodeui', 'none'],
             :sudo => true
 
   uninstall :script => {
                         :executable => '/Applications/DevDesktop/uninstall.app/Contents/MacOS/installbuilder.sh',
-                        :args => ['--mode' , 'unattended', '--unattendedmodeui', 'none'],
+                        :args => ['--mode', 'unattended', '--unattendedmodeui', 'none'],
                         :sudo => true,
                        }
 end
