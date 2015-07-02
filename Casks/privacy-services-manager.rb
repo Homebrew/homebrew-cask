@@ -1,6 +1,6 @@
 cask :v1 => 'privacy-services-manager' do
-  version '1.5.0'
-  sha256 'fde9160728499ee1a24171b09f160b1e55892b59d8af7293ee3c5205766eb886'
+  version '1.6.6'
+  sha256 'fb8b26d0122719cfa52b0cd7fc9fa2d783b7fbf1589d63edfdd9b61338fcf902'
 
   url "https://github.com/univ-of-utah-marriott-library-apple/privacy_services_manager/releases/download/#{version}/Privacy_Services_Management_#{version}.dmg"
   appcast 'https://github.com/univ-of-utah-marriott-library-apple/privacy_services_manager/releases.atom'
