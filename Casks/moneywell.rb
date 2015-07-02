@@ -19,7 +19,7 @@ cask :v1 => 'moneywell' do
   end
   name 'MoneyWell'
   homepage 'http://nothirst.com/moneywell/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   depends_on :macos => '>= :tiger'
 
