@@ -1,6 +1,6 @@
 cask :v1 => 'nimbus' do
-  version '0.7.3'
-  sha256 '4915e57131db72e08c45e375e4a52a4441f70ef9cfb5a70e433d66949708e82b'
+  version '0.7.4'
+  sha256 '833f747d74fae3f670f145fa7458623779a1b18b482f3c5828aea13581f64033'
 
   url "https://github.com/jnordberg/irccloudapp/releases/download/#{version}/Nimbus-#{version}.zip"
   appcast 'https://github.com/jnordberg/irccloudapp/releases.atom'
