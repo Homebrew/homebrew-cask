@@ -150,7 +150,7 @@ if MacOS.release <= :mavericks     # symbolic name
 if MacOS.release <= '10.9'         # version string
 ```
 
-The available symbols for OS X versions are: `:tiger`, `:leopard`,
+The available symbols for OS X versions are: `:cheetah`, `:puma`, `:jaguar`, `:panther`, `:tiger`, `:leopard`,
 `:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, `:yosemite`, and `:el_capitan`.
 The corresponding numeric version strings should given as major releases
 containing a single dot.
@@ -608,6 +608,10 @@ The available values for OS X releases are:
 
 | symbol             | corresponding string
 | -------------------|----------------------
+| `:cheetah`         | `'10.0'`
+| `:puma`            | `'10.1'`
+| `:jaguar`          | `'10.2'`
+| `:panther`         | `'10.3'`
 | `:tiger`           | `'10.4'`
 | `:leopard`         | `'10.5'`
 | `:snow_leopard`    | `'10.6'`
@@ -615,6 +619,7 @@ The available values for OS X releases are:
 | `:mountain_lion`   | `'10.8'`
 | `:mavericks`       | `'10.9'`
 | `:yosemite`        | `'10.10'`
+| `:el_capitan`      | `'10.11'`
 
 Only major releases are covered (version numbers containing a single dot).
 The symbol form is preferred for readability.  The following are all valid
