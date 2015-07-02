@@ -1,6 +1,6 @@
 cask :v1 => 'pandoc' do
-  version '1.14.0.1'
-  sha256 'b3de12acc748fc943abb3ab2a14aba13e69460c4df38f8d3316cbadd5bd423df'
+  version '1.15'
+  sha256 '09546bfd900668ca9949dbb05124ef9ce9778725952a7112141e4e00abbb702e'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/jgm/pandoc/releases/download/#{version}/pandoc-#{version}-osx.pkg"
