@@ -1,13 +1,17 @@
 cask :v1 => 'todoist' do
   version '6.0.3'
-  sha256 '5457917cbc22092e12f736dfd7b1d22a2cb62ad0cda82d7b1c053fe287d9112e'
+  sha256 :no_check
 
   # cloudfront.net is the official download host per the appcast feed
   url 'https://d2dq6e731uoz0t.cloudfront.net/f34bc666b8a2458496a5c00a115f7cbd/as/Todoist.zip'
-  appcast 'https://todoist.com/static/native_apps/mac_app.xml'
+  appcast 'https://todoist.com/static/native_apps/mac_app.xml',
+          :sha256 => 'eb3fd73d34933f76bb7e3a375b0438ecc38ddf6df5d423b70eb62c2b4019eaf8'
   name 'Todoist'
   homepage 'https://todoist.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
+
+  depends_on :macos => '>= :mountain_lion'
+  depends_on :arch => :intel
 
   app 'Todoist.app'
 
