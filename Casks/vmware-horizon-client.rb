@@ -1,8 +1,8 @@
 cask :v1 => 'vmware-horizon-client' do
-  version '3.2.0-2331566'
-  sha256 '12a9c79ecdf9de719999955ba350f7829d1b6be179eb757728429fe2eef54e99'
+  version '3.4.0-2769709'
+  sha256 'df0ed13716d4dbd5dae7dc77f2f29668907860b205f50132b6a1533364d3dd97'
 
-  url "https://download3.vmware.com/software/view/viewclients/CART14Q4/VMware-Horizon-Client-#{version}.dmg"
+  url "https://download3.vmware.com/software/view/viewclients/CART15Q2/VMware-Horizon-Client-#{version}.dmg"
   name 'VMware Horizon Client'
   homepage 'https://www.vmware.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
