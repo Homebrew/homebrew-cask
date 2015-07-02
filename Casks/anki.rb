@@ -13,5 +13,7 @@ cask :v1 => 'anki' do
   homepage 'http://ankisrs.net/'
   license :affero
 
+  depends_on :arch => :intel
+
   app 'Anki.app'
 end
