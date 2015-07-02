@@ -7,5 +7,8 @@ cask :v1 => 'beatunes' do
   homepage 'https://www.beatunes.com'
   license :closed
 
+  depends_on :macos => '>= :lion'
+  depends_on :arch => :x86_64
+
   app 'beaTunes4.app'
 end
