@@ -1,8 +1,8 @@
 cask :v1 => 'crossover' do
-  version '14.1.1'
-  sha256 '814cae6f4f2ea9d79000601b3a94a2721bc0940a4f4ad5e1e57d077fb8ab1b57'
+  version '14.1.4'
+  sha256 '613456ea10d16d17670501f2f1e8c19d9584e31c99efbf6363380139418a2876'
 
-  url 'https://media.codeweavers.com/pub/crossover/cxmac/demo/crossover-14.1.1.zip'
+  url "https://media.codeweavers.com/pub/crossover/cxmac/demo/crossover-#{version}.zip"
   name 'CrossOver'
   appcast 'https://www.codeweavers.com/xml/versions/cxmac.xml',
           :sha256 => '75c89f7ed67f8fde23d9348c94fd9a801dff8d8c836e34410a9278599597b55c'
