@@ -1,11 +1,11 @@
 cask :v1 => 'shapes' do
-  version '4.3.1'
-  sha256 '2133d7064c88738596c6f76ce7902af999ca03a3459c68041ce932abe0ead1f1'
+  version '4.3.2'
+  sha256 '66999b3e7916374f5b6383b943efc611b3b78bc4806621dfdad8443f38c074f9'
 
   url "http://shapesapp.com/dist/Shapes_#{version}.zip"
   name 'Shapes'
   appcast 'http://shapesapp.com/appcast/shapes4.rss',
-          :sha256 => '9236ae13bdef0382deeb4dbde7b52764c38baed3087a15b255a247d116867b2d'
+          :sha256 => '5b316c39c372eef8fe58cb831cec273b2e581b9dcd4e5834e3885ceb14ce07f6'
   homepage 'http://shapesapp.com'
   license :commercial
 
