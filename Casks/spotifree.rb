@@ -1,8 +1,8 @@
 cask :v1 => 'spotifree' do
-  version :latest
-  sha256 :no_check
+  version '1.6.3'
+  sha256 'f58ee878dcadaffb4934793b78ef65d1dd0d32cf078d61f6178ab0531c7340e7'
 
-  url 'http://spotifree.gordinskiy.com/files/Spotifree.dmg'
+  url 'https://github.com/ArtemGordinsky/Spotifree/releases/download/1.6.3/Spotifree.dmg'
   appcast 'http://spotifree.gordinskiy.com/appcast.xml'
   name 'Spotifree'
   homepage 'http://spotifree.gordinskiy.com'
