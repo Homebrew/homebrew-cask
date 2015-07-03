@@ -5,8 +5,8 @@ cask :v1 => 'x-lite' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'http://counterpath.s3.amazonaws.com/downloads/X-Lite_4.8.4_t-xlite484-20150526-4800f_76590.dmg'
   name 'X-Lite'
-  homepage 'http://www.counterpath.com/x-lite.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'http://www.counterpath.com/x-lite/'
+  license :commercial
 
   app 'X-Lite.app'
 end
