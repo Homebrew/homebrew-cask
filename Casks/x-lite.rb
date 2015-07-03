@@ -1,9 +1,9 @@
 cask :v1 => 'x-lite' do
-  version '4.6.1_73074'
-  sha256 'a14f577a1af1d0c81428065d0b94f9a5ea0f7886c1c2c4442ae050a8c497b297'
+  version 'X-Lite_4.8.4_76590'
+  sha256 'a9ee144dd33616404a0ce1499c9e9004b70689fef285568c94f99767db87196e'
 
   # amazonaws.com is the official download host per the vendor homepage
-  url 'https://counterpath.s3.amazonaws.com/downloads/X-Lite_4.6.1_t-xlite-20140514-all-4610f_73074.dmg'
+  url 'http://counterpath.s3.amazonaws.com/downloads/X-Lite_4.8.4_t-xlite484-20150526-4800f_76590.dmg'
   name 'X-Lite'
   homepage 'http://www.counterpath.com/x-lite.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
