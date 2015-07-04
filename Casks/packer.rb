@@ -1,6 +1,6 @@
 cask :v1 => 'packer' do
-  version '0.8.0'
-  sha256 'fabdd4815d44314ccb253ab87b872d77522c813af8a0ba19837fa490400547bb'
+  version '0.8.1'
+  sha256 'ba853fdb7cdb000fa64899e88885f49c726cd62099bb76d95f248eca60e25af4'
 
   # bintray.com is the official download host per the vendor homepage
   url "https://dl.bintray.com/mitchellh/packer/packer_#{version}_darwin_amd64.zip"
