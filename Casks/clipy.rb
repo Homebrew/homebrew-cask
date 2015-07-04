@@ -1,6 +1,6 @@
 cask :v1 => 'clipy' do
-  version '1.0.0'
-  sha256 '3bd648fb8fcd9a4fec00dd9c0f9de81840635203bee08444303e96db89aadb64'
+  version '1.0.1'
+  sha256 '8ec7ab4e1a04034aa612f014579c7e73d2cbca5715fe3d057daaa84960a291eb'
 
   url "https://github.com/Clipy/Clipy/releases/download/#{version}/Clipy_#{version}.dmg"
   appcast 'https://github.com/Clipy/Clipy/releases.atom'
