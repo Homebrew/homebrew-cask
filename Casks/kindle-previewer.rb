@@ -8,5 +8,6 @@ cask :v1 => 'kindle-previewer' do
   homepage 'https://www.amazon.com/gp/feature.html/?docId=1000765261'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  app 'Kindle Previewer.app'
+  pkg 'Kindle Previewer.pkg'
+  uninstall :pkgutil => 'Amazon.Kindle.Previewer.pkg'
 end
