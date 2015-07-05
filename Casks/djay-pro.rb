@@ -1,11 +1,11 @@
 cask :v1 => 'djay-pro' do
-  version :latest
-  sha256 :no_check
+  version '1.1.3-201506261526'
+  sha256 '47bb67196483e684ce3009088886e915fb9e83049fc263d3cc96d38755f5185c'
 
-  url 'https://www.algoriddim.com/files/djay.zip'
+  url "http://download.algoriddim.com/djay/#{version.sub(%r{.*?-},'')}/djay_Pro_#{version.sub(%r{-\d+$},'')}.zip"
   name 'djay Pro'
   appcast 'https://www.algoriddim.com/djay-mac/releasenotes/appcast',
-          :sha256 => '4f31a04bd5952dac697eeb74d1a5872578e2c3e108e1d70a2612926e824b6a45',
+          :sha256 => '34da66c26e576ea02d0fbf42e1a655de5752e5389b176b7af18856ef7b202e66',
           :format => :sparkle
   homepage 'http://algoriddim.com/djay-mac'
   license :commercial
