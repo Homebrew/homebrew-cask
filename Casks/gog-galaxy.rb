@@ -1,8 +1,8 @@
 cask :v1 => 'gog-galaxy' do
-  version '1.0.2.939'
-  sha256 '2c46d7aafe862bc0b2aa6b4bc95490683f8ec80f96feffb7c6f7918e2203e4e7'
+  version '1.0.5.11'
+  sha256 '1adba93ef842bff2ecf40de423abb610e215d4e40536a622e16e8d008881057b'
 
-  url "http://cdn.gog.com/open/galaxy/client/installers/galaxy_client_#{version}.pkg"
+  url "http://cdn.gog.com/open/galaxy/client/galaxy_client_#{version}.pkg"
   name 'GOG Galaxy Client'
   homepage 'https://www.gog.com/galaxy'
   license :gratis
