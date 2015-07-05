@@ -8,5 +8,7 @@ cask :v1 => 'unsplash-wallpaper' do
   homepage 'http://leonspok.tumblr.com/unsplash-wallpaper'
   license :gratis
 
+  depends_on :macos => '>= :mountain_lion'
+
   app 'Unsplash Wallpaper.app'
 end
