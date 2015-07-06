@@ -5,8 +5,6 @@ cask :v1 => 'dynamiclyrics' do
   url "http://dl.martianz.cn/dynamiclyrics/DynamicLyricsBuild#{version.sub(%r{^.*\.},'')}.zip"
   name 'DynamicLyrics'
   homepage 'http://martianz.cn/dynamiclyrics/'
-  appcast 'http://martianlaboratory.com/dynamiclyrics/update.xml',
-          :sha256 => '104bf5fbe3dfa7bd383133bf1e0d01b88896030d1bb6ffa8854141e73ec8a229'
   license :oss
 
   app 'DynamicLyrics.app'
