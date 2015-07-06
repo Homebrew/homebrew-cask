@@ -9,4 +9,3 @@ cask :v1 => 'delayedlauncher' do
 
   app 'DelayedLauncher.app'
 end
-
