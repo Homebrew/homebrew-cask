@@ -17,5 +17,6 @@ cask :v1 => 'hopper-disassembler' do
                   '~/Library/Application Support/Hopper',
                   '~/Library/Application Support/Hopper Disassembler v3',
                   '~/Library/Preferences/com.cryptic-apps.hopper-web-3.plist',
+                  '/usr/local/bin/hopper',
                  ]
 end
