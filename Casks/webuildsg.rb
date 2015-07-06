@@ -1,6 +1,6 @@
 cask :v1 => 'webuildsg' do
-  version '1.0.2'
-  sha256 '8b64c3bbf16818a8e1daa5043fedfffab59a3e07085dd5a87f3366a9b5748971'
+  version '1.1.0'
+  sha256 '7fbc9f1cb1dcbb7093f861f28e1716d882be0a38ccc7feb9c6a95fc372bf2cd9'
 
   url "https://github.com/webuildsg/osx/releases/download/v#{version}/WeBuildSG.app.zip"
   appcast 'https://github.com/webuildsg/osx/releases.atom'
