@@ -8,7 +8,7 @@ cask :v1 => 'visual-studio-code' do
   license :gratis
   tags :vendor => 'Microsoft'
 
-  app 'VSCode-darwin/Visual Studio Code.app'
+  app 'VSCode-darwin-signed/Visual Studio Code.app'
 
   zap :delete => [
                   '~/Library/Application Support/Code',
