@@ -1,5 +1,5 @@
 cask :v1 => 'macports' do
-  version '2.3.2'
+  version '2.3.3'
 
   if MacOS.release <= :mountain_lion
     sha256 'd4648634b571ada1f81cdc5583a48d0ceed1ef55ce5a2de0bdaaaf4b570b77f0'
@@ -10,7 +10,7 @@ cask :v1 => 'macports' do
     url "https://distfiles.macports.org/MacPorts/MacPorts-#{version}-10.9-Mavericks.pkg"
     pkg "MacPorts-#{version}-10.9-Mavericks.pkg"
   else
-    sha256 '70a5b06600136f69a24c86ffaf7c4a86303e42ec4e447182cdda1cf2cf6f8a87'
+    sha256 '7eb27ccbdf5cb61840494d954e8b56a9ee96c250d6c6c6ac887f0d80836d2d17'
     url "https://distfiles.macports.org/MacPorts/MacPorts-#{version}-10.10-Yosemite.pkg"
     pkg "MacPorts-#{version}-10.10-Yosemite.pkg"
   end
