@@ -9,4 +9,8 @@ cask :v1 => 'audiomate' do
   license :mit
 
   app 'AudioMate.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
 end
