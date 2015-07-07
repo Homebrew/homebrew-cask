@@ -1,6 +1,6 @@
 cask :v1 => 'glimmerblocker' do
-  version '1.5.3'
-  sha256 '872f3edc5f6dc3b92ba17eaf00236308e561bf353ffb1579cc5d7afc27bbf0a5'
+  version '1.6.5'
+  sha256 'bcb9f53c4eb33a907fdaa42b7e5deb5b48d2495269e8746206691b393e2db507'
 
   url "https://glimmerblocker.org/downloads/GlimmerBlocker-#{version}.dmg"
   name 'GlimmerBlocker'
