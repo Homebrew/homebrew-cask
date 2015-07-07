@@ -4,6 +4,7 @@ cask :v1 => 'waltr' do
 
   # devmate.com is the official download host per the vendor homepage
   url 'http://dl.devmate.com/com.softorino.Waltr/WALTR.zip'
+  name 'WALTR'
   homepage 'http://softorino.com/waltr'
   license :commercial
 

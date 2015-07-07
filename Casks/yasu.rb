@@ -1,4 +1,4 @@
-cask :v1 => 'yasu' do
+cask :v1_1 => 'yasu' do
 
   if MacOS.release <= :snow_leopard
     version '2.8.2'
@@ -10,6 +10,9 @@ cask :v1 => 'yasu' do
     url "http://yasuapp.net/files/yasu_#{version}.zip"
   end
 
+  name 'Yasu'
+  appcast 'http://yasuapp.net/appcasts/yasu.xml',
+          :sha256 => 'e79812a2ecb9a4df2b1484f5e544d43d997ad539e5d8c1a3e058cd12d11b646e'
   homepage 'http://yasuapp.net'
   license :gratis
 
@@ -23,11 +26,7 @@ cask :v1 => 'yasu' do
                   '~/Library/Preferences/org.jimmitchell.yasu.plist',
                  ]
 
-  caveats <<-EOS.undent
-    Yasu is no longer maintained and updated. There is no support for any Yasu downloads. Yasu may not work with OS X beyond Yosemite.
-    Use at your own risk.
-
-    Official announcement can be found on the Yasu homepage.
-  EOS
-
+  caveats do
+    discontinued
+  end
 end

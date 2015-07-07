@@ -4,8 +4,9 @@ cask :v1 => 'logisim' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/circuit/#{version.sub(%r{\d+$},'x')}/#{version}/logisim-macosx-#{version}.tar.gz"
+  name 'Logisim'
   homepage 'http://www.cburch.com/logisim/'
-  license :oss
+  license :gpl
 
   app 'Logisim.app'
 end

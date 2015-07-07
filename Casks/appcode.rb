@@ -1,15 +1,25 @@
 cask :v1 => 'appcode' do
-  version '3.1.2'
-  sha256 'ab3c261c02d183d9783ea79458ea2b3c4588c28e1e30e791c59f4fb20094b9c1'
+  version '3.1.7'
+  sha256 '07e044187062c183af49c67259fe8ea207a846476c21d105c2643779ac4b405c'
 
-  url "http://download.jetbrains.com/objc/AppCode-#{version}.dmg"
+  url "https://download.jetbrains.com/objc/AppCode-#{version}.dmg"
   name 'AppCode'
-  homepage 'http://www.jetbrains.com/objc/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.jetbrains.com/objc/'
+  license :commercial
 
   app 'AppCode.app'
 
-  postflight do
-    plist_set(':JVMOptions:JVMVersion', '1.6+')
-  end
+  caveats <<-EOS.undent
+    #{token} requires Java 6 like any other IntelliJ-based IDE.
+    You can install it with
+
+      brew cask install caskroom/homebrew-versions/java6
+
+    The vendor (JetBrains) doesn't support newer versions of Java (yet)
+    due to several critical issues, see details at
+    https://intellij-support.jetbrains.com/entries/27854363
+
+    To use existing newer Java at your own risk,
+    add JVMVersion=1.6+ to ~/Library/Preferences/IntelliJIdea14/idea.properties
+  EOS
 end

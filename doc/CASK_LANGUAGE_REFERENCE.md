@@ -38,16 +38,20 @@ definition itself is always enclosed in a `do ... end` block.  Example:
 
 ```ruby
 cask :v1 => 'alfred' do
-  version '2.3_264'
-  sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
+  version '2.7.1_387'
+  sha256 'a3738d0513d736918a6d71535ef3d85dd184af267c05698e49ac4c6b48f38e17'
 
-  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
+  url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
   homepage 'http://www.alfredapp.com/'
   license :freemium
 
   app 'Alfred 2.app'
   app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
+
+  postflight do
+    suppress_move_to_applications :key => 'suppressMoveToApplications'
+  end
 end
 ```
 
@@ -75,7 +79,7 @@ Each of the following stanzas is required for every Cask.
 | ------------------ |------------------------------ | ----------- |
 | `version`          | no                            | application version; give value of `:latest`  if versioned downloads are not offered
 | `sha256`           | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
-| `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](#url-stanza-details))
+| `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application (see also [URL Stanza Details](#url-stanza-details))
 | `homepage`         | no                            | application homepage; used for the `brew cask home` command
 | `license`          | no                            | a symbol identifying the license category for the application. (see also [License Stanza Details](#license-stanza-details))
 
@@ -150,8 +154,8 @@ if MacOS.release <= :mavericks     # symbolic name
 if MacOS.release <= '10.9'         # version string
 ```
 
-The available symbols for OS X versions are: `:tiger`, `:leopard`,
-`:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, and `:yosemite`.
+The available symbols for OS X versions are: `:cheetah`, `:puma`, `:jaguar`, `:panther`, `:tiger`, `:leopard`,
+`:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, `:yosemite`, and `:el_capitan`.
 The corresponding numeric version strings should given as major releases
 containing a single dot.
 
@@ -246,6 +250,8 @@ The following methods may be called to generate standard warning messages:
 | `logout`                          | users should log out and log back in to complete installation
 | `reboot`                          | users should reboot to complete installation
 | `files_in_usr_local`              | the Cask installs files to `/usr/local`, which may confuse Homebrew
+| `discontinued`                    | software has been officially discontinued upstream
+| `free_license(web_page)`          | users may get an official license to use the software at `web_page`
 
 Example:
 
@@ -489,10 +495,10 @@ The `:target` key works similarly for most Cask artifacts, such as
 Don’t use `:target` for aesthetic reasons, like removing version numbers
 (`app "Slack #{version}.app", :target => 'Slack.app'`). With `app`, use it
 when it makes sense functionally and document your reason cleary in the Cask:
-was it [for clarity](../Casks/imagemin.rb); [for consistency](../Casks/devonthink-pro-office.rb);
-[to prevent conflicts](../Casks/flash-player-debugger.rb)? With `binary` you can
+was it [for clarity](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/imagemin.rb#L11); [for consistency](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/devonthink-pro-office.rb#L14);
+[to prevent conflicts](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/flash-player-debugger.rb#L13)? With `binary` you can
 take some extra liberties to be consistent with other command-line tools,
-like [changing case](../Casks/diffmerge.rb) or [removing an extension](../Casks/filebot.rb).
+like [changing case](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/diffmerge.rb#L11) or [removing an extension](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/filebot.rb#L12).
 
 
 ## Suite Stanza Details
@@ -606,6 +612,10 @@ The available values for OS X releases are:
 
 | symbol             | corresponding string
 | -------------------|----------------------
+| `:cheetah`         | `'10.0'`
+| `:puma`            | `'10.1'`
+| `:jaguar`          | `'10.2'`
+| `:panther`         | `'10.3'`
 | `:tiger`           | `'10.4'`
 | `:leopard`         | `'10.5'`
 | `:snow_leopard`    | `'10.6'`
@@ -613,6 +623,7 @@ The available values for OS X releases are:
 | `:mountain_lion`   | `'10.8'`
 | `:mavericks`       | `'10.9'`
 | `:yosemite`        | `'10.10'`
+| `:el_capitan`      | `'10.11'`
 
 Only major releases are covered (version numbers containing a single dot).
 The symbol form is preferred for readability.  The following are all valid
@@ -748,6 +759,7 @@ of the following key/value pairs as arguments to `uninstall`.
   - `:args` - array of arguments to the uninstall script
   - `:input` - array of lines of input to be sent to `stdin` of the script
   - `:must_succeed` - set to `false` if the script is allowed to fail
+  - `:sudo` - set to `false` if the script does not need `sudo`
 * `:delete` (string or array) - single-quoted, absolute paths of files or directory trees to remove.  `:delete` should only be used as a last resort. `:pkgutil` is strongly preferred
 * `:rmdir` (string or array) - single-quoted, absolute paths of directories to remove if empty.
 * `:trash` (string or array) - currently a synonym for `:delete`.  In the future this will cause files to be moved to the Trash.

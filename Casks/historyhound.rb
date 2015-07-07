@@ -1,11 +1,12 @@
 cask :v1 => 'historyhound' do
-  version '1.9.9'
-  sha256 '3b0873d2425115680c347d5e4be607e9232781e1711aec58ef76e07a07847ad3'
+  version '1.9.11'
+  sha256 '125cda1a46a2757128a48d49ef8c755fa7ec8d13040875fe29d0133a4518d5ae'
 
   url "https://www.stclairsoft.com/download/HistoryHound-#{version}.dmg"
   appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?HH',
-          :sha256 => '2cd20bfdf558b83ee35ef23c879d1b321350cbb999489eb4b5cf5fba9c00a7bd'
-  homepage 'http://www.stclairsoft.com/HistoryHound/'
+          :sha256 => '22beb79fed4fa0f4a46c8970654ecc649eb4609fc2664b3458cde51b86470930'
+  name 'HistoryHound'
+  homepage 'https://www.stclairsoft.com/HistoryHound/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'HistoryHound.app'

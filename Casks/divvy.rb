@@ -3,8 +3,9 @@ cask :v1 => 'divvy' do
   sha256 :no_check
 
   url 'https://mizage.com/downloads/Divvy.zip'
-  appcast 'http://mizage.com/updates/profiles/divvy.php'
-  homepage 'http://mizage.com/divvy/'
+  appcast 'https://mizage.com/updates/profiles/divvy.php'
+  name 'Divvy'
+  homepage 'https://mizage.com/divvy/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Divvy.app'

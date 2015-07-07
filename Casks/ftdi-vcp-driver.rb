@@ -9,5 +9,6 @@ cask :v1 => 'ftdi-vcp-driver' do
 
   pkg 'FTDIUSBSerialDriver_10_4_10_5_10_6_10_7.mpkg'
 
-  uninstall :pkgutil => 'com.FTDI.ftdiusbserialdriverinstaller.*'
+  uninstall :pkgutil => 'com.FTDI.ftdiusbserialdriverinstaller.*',
+            :kext    => 'com.FTDI.driver.FTDIUSBSerialDriver'
 end

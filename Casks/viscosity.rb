@@ -5,7 +5,7 @@ cask :v1 => 'viscosity' do
   url 'https://www.sparklabs.com/downloads/Viscosity.dmg'
   appcast 'http://www.viscosityvpn.com/update/viscosity.xml'
   name 'Viscosity'
-  homepage 'http://www.sparklabs.com/viscosity/'
+  homepage 'https://www.sparklabs.com/viscosity/'
   license :commercial
 
   app 'Viscosity.app'

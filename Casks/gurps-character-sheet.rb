@@ -4,8 +4,9 @@ cask :v1 => 'gurps-character-sheet' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/gcs-java/gcs-#{version}-mac.zip"
+  name 'GURPS Character Sheet'
   homepage 'http://gurpscharactersheet.com'
-  license :oss
+  license :mpl
 
   app "gcs-#{version}-mac/GURPS Character Sheet.app"
 end

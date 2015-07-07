@@ -1,11 +1,12 @@
 cask :v1 => 'devonthink-pro-office' do
-  version '2.8'
-  sha256 '592d2c5e8ce9839102afb7c15eb71147d94006c5710ff91a06c8783bee8ef91b'
+  version '2.8.5'
+  sha256 'df042d0506f5b8a338561c2570d9ca89c9a269374a14ad250ba46e99729b6ee2'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro_Office.dmg.zip"
   appcast 'http://www.devon-technologies.com/Sparkle/DEVONthinkProOffice2.xml',
-          :sha256 => '6db814e6797e848696b2c92613cf6764649b7050337842ac57dc8437af1b428e'
+          :sha256 => '56244b4d0f74d13b770a57b1bf1fb5b2de2dfe1e778bf4514fa6fecdfd7f610c'
+  name 'DEVONthink Pro Office'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

@@ -4,8 +4,9 @@ cask :v1 => 'hipchat' do
 
   url 'https://www.hipchat.com/downloads/latest/mac'
   appcast 'https://www.hipchat.com/release_notes/appcast/mac'
+  name 'HipChat'
   homepage 'https://www.hipchat.com/'
-  license :commercial
+  license :freemium
 
   app 'HipChat.app'
 

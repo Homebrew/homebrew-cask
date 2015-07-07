@@ -3,6 +3,7 @@ cask :v1 => 'oclint' do
   sha256 '68499fe4331b3ca2334a2884a8b3e89bba2ffa468a42a780df3dc73849c44939'
 
   url "http://archives.oclint.org/releases/#{version.sub(%r{\.\d+$},'')}/oclint-#{version}-x86_64-darwin-14.0.0.tar.gz"
+  name 'OCLint'
   homepage 'http://oclint.org'
   license :oss
 

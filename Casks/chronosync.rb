@@ -3,6 +3,7 @@ cask :v1 => 'chronosync' do
   sha256 :no_check
 
   url 'http://downloads.econtechnologies.com/CS4_Download.dmg'
+  name 'ChronoSync'
   homepage 'http://www.econtechnologies.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

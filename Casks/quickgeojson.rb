@@ -3,6 +3,8 @@ cask :v1 => 'quickgeojson' do
   sha256 '7f4cd78619e2ea12f4afcba017f08d72468dc1c9268f2b2ed6f1690bd4e3fa86'
 
   url "https://github.com/irees/quickgeojson/releases/download/#{version}/quickgeojson.qlgenerator.zip"
+  appcast 'https://github.com/irees/quickgeojson/releases.atom'
+  name 'quickgeojson'
   homepage 'https://github.com/irees/quickgeojson'
   license :bsd
 

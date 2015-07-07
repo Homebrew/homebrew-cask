@@ -4,6 +4,7 @@ cask :v1 => 'kicad' do
 
   # mdx4.org is the official download host per the vendor homepage
   url "http://www.mdx4.org/uploads/kicad/Kicad-product-#{version}.zip"
+  name 'KiCad'
   homepage 'http://www.kicad-pcb.org/'
   license :gpl
 

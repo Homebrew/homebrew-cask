@@ -1,9 +1,10 @@
 cask :v1 => 'komanda' do
-  version '1.0.0.beta'
-  sha256 'e54f195185d92b0b4a9e9be3b1db4b2cbd99723c93e9b6e57feb0df90b27a5d1'
+  version :latest
+  sha256 :no_check
 
-  url "https://github.com/mephux/komanda/releases/download/#{version}/Komanda-macosx.zip"
-  homepage 'https://github.com/mephux/komanda'
+  url 'http://komanda.io/stable/mac-current.zip'
+  name 'Komanda'
+  homepage 'http://komanda.io/'
   license :mit
 
   app 'Komanda.app'

@@ -4,7 +4,8 @@ cask :v1 => 'gephi' do
 
   # launchpadlibrarian.net is the official download host per the vendor homepage
   url "https://launchpadlibrarian.net/127456772/gephi-#{version}.dmg"
-  homepage 'http://gephi.org/'
+  name 'Gephi'
+  homepage 'https://gephi.github.io/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Gephi.app'

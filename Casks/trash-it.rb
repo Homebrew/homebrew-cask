@@ -11,6 +11,7 @@ cask :v1 => 'trash-it' do
     app "Trash It! #{version}/Drag content to Desktop/Trash It!.app"
   end
 
+  name 'Trash It!'
   homepage 'http://nonamescriptware.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 end

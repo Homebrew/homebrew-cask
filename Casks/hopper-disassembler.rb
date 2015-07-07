@@ -1,8 +1,8 @@
 cask :v1 => 'hopper-disassembler' do
-  version :latest
-  sha256 :no_check
+  version '3.9.16'
+  sha256 '045ee3ecba3c81388112dd038df91ffe6e4a905d9d2c8bd2650cfff43ec01217'
 
-  url 'http://www.hopperapp.com/HopperWeb/download_last_v3.php'
+  url "http://www.hopperapp.com/HopperWeb/downloads/Hopper-#{version}.zip"
   appcast 'http://www.hopperapp.com/HopperWeb/appcast.php'
   name 'Hopper'
   name 'Hopper Disassembler'
@@ -10,4 +10,12 @@ cask :v1 => 'hopper-disassembler' do
   license :commercial
 
   app 'Hopper Disassembler v3.app'
+
+  binary 'Hopper Disassembler v3.app/Contents/MacOS/hopper'
+
+  zap :delete => [
+                  '~/Library/Application Support/Hopper',
+                  '~/Library/Application Support/Hopper Disassembler v3',
+                  '~/Library/Preferences/com.cryptic-apps.hopper-web-3.plist',
+                 ]
 end

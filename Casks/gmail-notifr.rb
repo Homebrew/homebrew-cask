@@ -6,6 +6,7 @@ cask :v1 => 'gmail-notifr' do
   url "https://s3.amazonaws.com/assets.ashchan.com/gmailnotifr/GmailNotifr-#{version}.zip"
   appcast 'https://s3.amazonaws.com/assets.ashchan.com/gmailnotifr/update.xml',
           :sha256 => '20876c0cef8d54463a5189948259e7ad268a28424b96e7fa2fbad860b0ec9554'
+  name 'Gmail Notifr'
   homepage 'http://ashchan.com/projects/gmail-notifr'
   license :mit
 

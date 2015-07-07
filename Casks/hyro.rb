@@ -4,8 +4,8 @@ cask :v1 => 'hyro' do
 
   url "https://jawerty.github.io/Hyro/apps/Hyro-#{version}.dmg"
   name 'Hyro'
-  homepage 'http://jawerty.github.io/Hyro/'
-  license :oss
+  homepage 'https://jawerty.github.io/Hyro/'
+  license :mit
 
   app 'Hyro.app'
 end

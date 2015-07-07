@@ -1,4 +1,4 @@
-cask :v1 => 'rightzoom' do
+cask :v1_1 => 'rightzoom' do
   version :latest
   sha256 :no_check
 
@@ -8,4 +8,8 @@ cask :v1 => 'rightzoom' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'RightZoom.app'
+
+  caveats do
+    discontinued
+  end
 end

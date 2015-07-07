@@ -4,8 +4,9 @@ cask :v1 => 'flightgear' do
 
   # utwente.nl is the official download host per the vendor homepage
   url "http://ftp.snt.utwente.nl/pub/software/flightgear/ftp/MacOSX/FlightGear-#{version}.dmg"
+  name 'FlightGear'
   homepage 'http://www.flightgear.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'FlightGear.app'
 end

@@ -7,7 +7,7 @@ cask :v1 => 'paintbrush' do
   appcast 'http://paintbrush.sourceforge.net/updates2x.xml',
           :sha256 => 'ac96943a5d298201b711c719416073357f60545ef5ee7bf0853bbcf191bdc3d9'
   homepage 'http://paintbrush.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'Paintbrush.app'
 

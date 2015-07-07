@@ -4,6 +4,7 @@ cask :v1 => 'import-io' do
 
   # cloudfront.net is the official download host per the vendor homepage
   url 'https://d24s8iufolpmlr.cloudfront.net/prod/dist-simple/import.io.dmg'
+  name 'import.io'
   homepage 'https://import.io/'
   license :commercial
 

@@ -21,8 +21,9 @@ cask :v1 => 'maintenance' do
     # working, or is dangerous to run, on the next OS X release.
   end
 
-  homepage 'http://www.titanium.free.fr/downloadmaintenance.php'
-  license :closed
+  name 'Maintenance'
+  homepage 'http://www.titanium.free.fr/maintenance.html'
+  license :gratis
 
   app 'Maintenance.app'
 

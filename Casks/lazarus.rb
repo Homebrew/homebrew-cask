@@ -4,8 +4,9 @@ cask :v1 => 'lazarus' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/lazarus/lazarus-#{version}-i386-macosx.dmg"
+  name 'Lazarus'
   homepage 'http://lazarus.freepascal.org/'
-  license :oss
+  license :gpl
 
   pkg 'lazarus.pkg'
 

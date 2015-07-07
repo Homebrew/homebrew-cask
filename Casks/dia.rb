@@ -6,7 +6,7 @@ cask :v1 => 'dia' do
   url "http://downloads.sourceforge.net/dia-installer/dia/#{version.sub(%r{-.*},'')}/Dia-#{version}.dmg"
   name 'Dia'
   homepage 'http://dia-installer.de/'
-  license :oss
+  license :gpl
 
   app 'Dia.app'
 end

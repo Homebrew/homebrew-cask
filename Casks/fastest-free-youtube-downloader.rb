@@ -4,6 +4,7 @@ cask :v1 => 'fastest-free-youtube-downloader' do
 
   # appengine-distro.com is the official download host per the vendor homepage
   url "http://digitalocean.appengine-distro.com/YTD/Installers/#{version}/FastestFreeYouTubeDownloader-Setup.dmg"
+  name 'Fastest YouTube Downloader'
   homepage 'http://www.fastestvideodownloader.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

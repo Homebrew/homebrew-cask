@@ -3,7 +3,8 @@ cask :v1 => 'speedlimit' do
   sha256 :no_check
 
   url 'https://mschrag.github.io/speedlimit/SpeedLimit.prefPane.zip'
-  homepage 'http://mschrag.github.io/'
+  name 'speedlimit'
+  homepage 'https://mschrag.github.io/'
   license :oss
 
   prefpane 'SpeedLimit.prefPane'

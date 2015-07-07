@@ -1,11 +1,22 @@
 cask :v1 => 'youtrack-workflow' do
-  version '5.2.1'
-  sha256 'a0ecd6b54d8cb2726086aa4db2744446e75a42f02e99e975fee237200b244e91'
+  version '6.0'
+  sha256 '331bd2745696507da7ee3a6a193587fc53739face966c12736c16235211cda14'
 
-  url 'http://download-cf.jetbrains.com/charisma/youtrack-workflow-editor-8452-macos.zip'
+  url 'http://download-cf.jetbrains.com/charisma/youtrack-workflow-editor-3384fix-macos.zip'
   name 'YouTrack Workflow Editor'
-  homepage 'http://www.jetbrains.com/youtrack/download/get_youtrack.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.jetbrains.com/youtrack/download/get_youtrack.html#workflow'
+  license :gratis
 
   app 'youtrack-workflow.app'
+
+  caveats <<-EOS.undent
+    #{token} requires Java 6 like any other IntelliJ-based IDE.
+    You can install it with
+
+      brew cask install caskroom/homebrew-versions/java6
+
+    The vendor (JetBrains) doesn't support newer versions of Java (yet)
+    due to several critical issues, see details at
+    https://intellij-support.jetbrains.com/entries/27854363
+  EOS
 end

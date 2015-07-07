@@ -28,12 +28,12 @@ module Hbc::Options
       @verbose = _verbose
     end
 
-    def outdated
-      @outdated ||= false
+    def cleanup_outdated
+      @cleanup_outdated ||= false
     end
 
-    def outdated=(_outdated)
-      @outdated = _outdated
+    def cleanup_outdated=(_cleanup_outdated)
+      @cleanup_outdated = _cleanup_outdated
     end
   end
 end

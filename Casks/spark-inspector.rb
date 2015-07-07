@@ -4,6 +4,7 @@ cask :v1 => 'spark-inspector' do
 
   url 'http://sparkinspector.com/downloads/sparkinspector.dmg'
   appcast 'http://sparkinspector.com/sparkle/feed.xml'
+  name 'Spark Inspector'
   homepage 'http://sparkinspector.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

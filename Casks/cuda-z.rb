@@ -3,8 +3,9 @@ cask :v1 => 'cuda-z' do
   sha256 '5dcb79ada1fe872cf849e050e5c60471fca9ba18178ecf5819859e6990e96196'
 
   url "http://downloads.sourceforge.net/sourceforge/cuda-z/CUDA-Z-#{version}.dmg"
+  name 'CUDA-Z'
   homepage 'http://cuda-z.sourceforge.net'
-  license :oss
+  license :gpl
 
   app 'Cuda-Z.app'
 end

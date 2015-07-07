@@ -2,17 +2,16 @@ cask :v1 => 'crosspack-avr' do
   version '2013-12-16'
   sha256 '959f9bf00429a0e46e649a14d7891cb4086c9cf2d032d9f66899d6efbb628f6e'
 
-  url "http://www.obdev.at/downloads/crosspack/CrossPack-AVR-#{version.gsub('-','')}.dmg"
-  homepage 'http://www.obdev.at/products/crosspack/'
+  url "https://www.obdev.at/downloads/crosspack/CrossPack-AVR-#{version.gsub('-','')}.dmg"
+  name 'CrossPack'
+  homepage 'https://www.obdev.at/products/crosspack/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'CrossPack-AVR.pkg'
   uninstall_postflight do
     IO.popen('/usr/bin/yes | /usr/bin/sudo -E -- /usr/local/CrossPack-AVR/uninstall && /usr/bin/sudo -- /usr/sbin/pkgutil --forget at.obdev.CrossPack-AVR', 'r+') do |pipe|
       pipe.close_write
-      while line = pipe.gets
-        puts line
-      end
+      pipe.each { |line| puts line }
     end
   end
 

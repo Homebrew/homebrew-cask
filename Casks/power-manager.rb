@@ -3,6 +3,7 @@ cask :v1 => 'power-manager' do
   sha256 :no_check
 
   url 'https://www.dssw.co.uk/powermanager/dsswpowermanager.dmg'
+  name 'Power Manager'
   homepage 'https://www.dssw.co.uk/powermanager'
   license :commercial
 

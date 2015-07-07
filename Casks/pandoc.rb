@@ -1,8 +1,10 @@
 cask :v1 => 'pandoc' do
-  version '1.13.2'
-  sha256 '02455fba5353568b19d8b0bebbda9b99ba2c943b3f01b11b185f25c7db111b50'
+  version '1.15'
+  sha256 '09546bfd900668ca9949dbb05124ef9ce9778725952a7112141e4e00abbb702e'
 
+  # github.com is the official download host per the vendor homepage
   url "https://github.com/jgm/pandoc/releases/download/#{version}/pandoc-#{version}-osx.pkg"
+  appcast 'https://github.com/jgm/pandoc/releases.atom'
   name 'Pandoc'
   homepage 'http://johnmacfarlane.net/pandoc'
   license :gpl

@@ -3,14 +3,20 @@ cask :v1 => 'vuze' do
   sha256 :no_check
 
   url 'http://cf1.vuze.com/files/J7/VuzeBittorrentClientInstaller.dmg'
-  homepage 'http://www.vuze.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  name 'Vuze'
+  homepage 'https://www.vuze.com/'
+  license :gpl
 
-  installer :manual => 'Vuze Installer.app'
+  installer :script => 'Vuze Installer.app/Contents/MacOS/JavaApplicationStub',
+            :args => [ '-q' ]
 
   uninstall :delete => '/Applications/Vuze.app'
 
   zap :delete => '~/Library/Application Support/Vuze'
 
-  caveats 'If you pick an installation directory other than /Applications when installing this cask, you will need to uninstall it manually'
+  caveats <<-EOS.undent
+    #{token} requires Java 6+, you can install the latest Java using
+
+      brew cask install java
+  EOS
 end

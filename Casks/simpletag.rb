@@ -5,7 +5,7 @@ cask :v1 => 'simpletag' do
   url "http://downloads.sourceforge.net/sourceforge/simpletag/simpletag-gui-#{version}-osx.zip"
   name 'SimpleTAG'
   homepage 'http://sourceforge.net/projects/simpletag/'
-  license :oss
+  license :gpl
 
   app "simpletag-gui-jface-#{version}/SimpleTAG-GUI.app"
 end

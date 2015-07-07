@@ -3,6 +3,7 @@ cask :v1 => 'private-eye' do
   sha256 :no_check
 
   url 'http://radiosilenceapp.com/downloads/Private%20Eye.pkg'
+  name 'Private Eye'
   homepage 'http://radiosilenceapp.com/private-eye'
   license :oss
 

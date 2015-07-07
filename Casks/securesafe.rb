@@ -3,6 +3,7 @@ cask :v1 => 'securesafe' do
   sha256 :no_check
 
   url 'http://www.securesafe.com/en/assets/sync-client/SecureSafe.dmg'
+  name 'SecureSafe'
   homepage 'https://www.securesafe.com/'
   license :unknown
 

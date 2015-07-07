@@ -2,9 +2,11 @@ cask :v1 => 'mailmate' do
   version :latest
   sha256 :no_check
 
+  # app.com is the official download host per the vendor homepage
   url 'http://dl.mailmate-app.com/MailMate.tbz'
+  name 'MailMate'
   homepage 'http://freron.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'MailMate.app'
   binary 'MailMate.app/Contents/Resources/emate'

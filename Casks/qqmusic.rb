@@ -1,11 +1,11 @@
-# encoding: UTF-8
 cask :v1 => 'qqmusic' do
-  version '1.3.0'
-  sha256 '2f1198f9b3e1407822a771fcdfdd643b65f35f6b51cc0af8c6b11fa11fc30a0d'
+  version '2.3'
+  sha256 '6593590eb5b7fab34141283b0a893309ddec90cd3764c3a066499b487c2d33ff'
 
   url "http://dldir1.qq.com/music/clntupate/QQMusicForMacV#{version}.dmg"
+  name 'QQ音乐'
   homepage 'http://y.qq.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
-  app 'QQ音乐.app'
+  app 'QQMusic.app'
 end

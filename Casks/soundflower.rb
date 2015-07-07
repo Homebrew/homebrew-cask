@@ -3,6 +3,7 @@ cask :v1 => 'soundflower' do
   sha256 '61ca31d7478d057e32caaeac3c739f965ba9eb2a27570b3cc715e706d4740dfb'
 
   url "https://soundflower.googlecode.com/files/Soundflower-#{version}.dmg"
+  name 'Soundflower'
   homepage 'https://code.google.com/p/soundflower/'
   license :oss
 

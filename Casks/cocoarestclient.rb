@@ -1,12 +1,12 @@
 cask :v1 => 'cocoarestclient' do
-  version '1.3.7'
-  sha256 '78400a16afc4017a68b5506e7a6270d72ade48b3e77a802eaaaaae80a0f6319f'
+  version '1.3.9'
+  sha256 '611cf1112c8188d58ad5b00d507c4a5429fc6d1dff0bc0eb438116b672a880ba'
 
   url "https://github.com/mmattozzi/cocoa-rest-client/releases/download/#{version}/CocoaRestClient-#{version}.dmg"
-  appcast 'http://restlesscode.org/cocoa-rest-client/appcast.xml',
-          :sha256 => '32d1b71d2ade6fc17554d1e7bcbc900c9ace68c34046ea7c2d785142e0d60520'
-  homepage 'http://mmattozzi.github.io/cocoa-rest-client/'
-  license :oss
+  appcast 'https://github.com/mmattozzi/cocoa-rest-client/releases.atom'
+  name 'CocoaRestClient'
+  homepage 'https://mmattozzi.github.io/cocoa-rest-client/'
+  license :bsd
 
   app 'CocoaRestClient.app'
 end

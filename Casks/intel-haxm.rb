@@ -3,6 +3,7 @@ cask :v1 => 'intel-haxm' do
   sha256 'dd6dabfc34ebf73a19bc34eecfb5d8c4269773e3108ee6ef71ae2a5eacfd37d2'
 
   url 'https://software.intel.com/sites/default/files/managed/21/5f/haxm-macosx_r05.zip'
+  name 'Intel HAXM'
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

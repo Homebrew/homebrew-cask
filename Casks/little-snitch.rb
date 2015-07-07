@@ -1,11 +1,11 @@
 cask :v1 => 'little-snitch' do
-  version '3.5.1'
-  sha256 'c743187a5bb8abd36d9d41cc95944b37f6d965f761319f2ffae6d55e8ce45050'
+  version '3.5.3'
+  sha256 'cfe44ba45c669e1bf9a04910b2dd8675a26d7e6c00954b74adeffd12f90b8197'
 
-  url "http://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
+  url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
   name 'Little Snitch'
-  homepage 'http://www.obdev.at/products/littlesnitch/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.obdev.at/products/littlesnitch/'
+  license :commercial
 
   installer :manual => 'Little Snitch Installer.app'
 

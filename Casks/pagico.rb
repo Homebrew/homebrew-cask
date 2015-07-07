@@ -1,11 +1,11 @@
 cask :v1 => 'pagico' do
-  version '6.8.1637'
-  sha256 '55df590853906fe6590f6526b2f8c2663f90f4b76c5baf2976f722d203383ddd'
+  version '7.1.1781'
+  sha256 '17ddc8929540818aa7a7da7aa779b848f55c5db45c3a0e8d49703f16a7a3cc16'
 
-  url "http://pagico.com/downloads/Pagico_Desktop_r#{version.sub(%r{^.*\.},'')}.dmg"
+  url "http://pagico.com/downloads/Pagico_Desktop_r#{version.split('.')[2]}.dmg"
   name 'Pagico'
   homepage 'http://pagico.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   pkg 'Install Pagico.pkg'
 

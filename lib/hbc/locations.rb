@@ -4,10 +4,6 @@ module Hbc::Locations
   end
 
   module ClassMethods
-    def metadata_subdir
-      '.metadata'
-    end
-
     def caskroom
       @@caskroom ||= Pathname('/opt/homebrew-cask/Caskroom')
     end

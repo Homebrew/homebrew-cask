@@ -6,6 +6,7 @@ cask :v1 => 'gitbox' do
   url "https://d1oa71y4zxyi0a.cloudfront.net/gitbox-#{version}-ml.zip"
   appcast 'http://gitboxapp.com/updates.xml',
           :sha256 => '4a771aa4d35cd0bf9f821fbf1e60741cb1d9ee3724ff66550e46fba98bace8c1'
+  name 'Gitbox'
   homepage 'http://gitboxapp.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

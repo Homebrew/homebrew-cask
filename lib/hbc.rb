@@ -1,11 +1,12 @@
 HOMEBREW_CACHE_CASKS = HOMEBREW_CACHE.join('Casks')
 
-class Hbc; end
+module Hbc; end
 
 require 'hbc/extend'
 require 'hbc/artifact'
 require 'hbc/audit'
 require 'hbc/auditor'
+require 'hbc/cask'
 require 'hbc/without_source'
 require 'hbc/checkable'
 require 'hbc/cli'
@@ -14,7 +15,6 @@ require 'hbc/caveats'
 require 'hbc/container'
 require 'hbc/download'
 require 'hbc/download_strategy'
-require 'hbc/dsl'
 require 'hbc/exceptions'
 require 'hbc/fetcher'
 require 'hbc/hardware'
@@ -34,12 +34,12 @@ require 'hbc/underscore_supporting_uri'
 require 'hbc/url'
 require 'hbc/url_checker'
 require 'hbc/utils'
+require 'hbc/verify'
 require 'hbc/version'
 
 require 'vendor/plist'
 
-class Hbc
-  include Hbc::DSL
+module Hbc
   include Hbc::Locations
   include Hbc::Scopes
   include Hbc::Options
@@ -85,90 +85,5 @@ class Hbc
     cask = Hbc::Source.for_query(query).load
     cask.dumpcask
     cask
-  end
-
-  def self.token
-    # todo removeme: prepending KlassPrefix is transitional as we move away from representing Casks as classes
-    self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase
-  end
-
-  def self.nowstamp_metadata_path(container_path)
-    @timenow ||= Time.now.gmtime
-    if container_path.respond_to?(:join)
-      precision = 3
-      timestamp = @timenow.strftime('%Y%m%d%H%M%S')
-      fraction = ("%.#{precision}f" % (@timenow.to_f - @timenow.to_i))[1..-1]
-      timestamp.concat(fraction)
-      container_path.join(timestamp)
-    end
-  end
-
-  attr_reader :token, :sourcefile_path
-  def initialize(sourcefile_path=nil)
-    @sourcefile_path = sourcefile_path
-    @token = self.class.token
-  end
-
-  def caskroom_path
-    self.class.caskroom.join(token)
-  end
-
-  # todo: move to staged.rb ?
-  def staged_path
-    cask_version = version ? version : :unknown
-    caskroom_path.join(cask_version.to_s)
-  end
-
-  def metadata_master_container_path
-    caskroom_path.join(self.class.metadata_subdir)
-  end
-
-  def metadata_versioned_container_path
-    cask_version = version ? version : :unknown
-    metadata_master_container_path.join(cask_version.to_s)
-  end
-
-  def metadata_path(timestamp=:latest, create=false)
-    return nil unless metadata_versioned_container_path.respond_to?(:join)
-    if create and timestamp == :latest
-      raise Hbc::CaskError.new('Cannot create metadata path when timestamp is :latest')
-    end
-    if timestamp == :latest
-      path = Pathname.glob(metadata_versioned_container_path.join('*')).sort.last
-    elsif timestamp == :now
-      path = self.class.nowstamp_metadata_path(metadata_versioned_container_path)
-    else
-      path = metadata_versioned_container_path.join(timestamp)
-    end
-    if create
-      odebug "Creating metadata directory #{path}"
-      FileUtils.mkdir_p path
-    end
-    path
-  end
-
-  def metadata_subdir(leaf, timestamp=:latest, create=false)
-    if create and timestamp == :latest
-      raise Hbc::CaskError.new('Cannot create metadata subdir when timestamp is :latest')
-    end
-    unless leaf.respond_to?(:length) and leaf.length > 0
-      raise Hbc::CaskError.new('Cannot create metadata subdir for empty leaf')
-    end
-    parent = metadata_path(timestamp, create)
-    return nil unless parent.respond_to?(:join)
-    subdir = parent.join(leaf)
-    if create
-      odebug "Creating metadata subdirectory #{subdir}"
-      FileUtils.mkdir_p subdir
-    end
-    subdir
-  end
-
-  def installed?
-    staged_path.exist?
-  end
-
-  def to_s
-    @token
   end
 end

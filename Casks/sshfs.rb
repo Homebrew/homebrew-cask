@@ -3,8 +3,10 @@ cask :v1 => 'sshfs' do
   sha256 'f8f4f71814273ea42dbe6cd92199f7cff418571ffd1b10c0608878d3472d2162'
 
   url "https://github.com/osxfuse/sshfs/releases/download/osxfuse-sshfs-#{version}/sshfs-#{version}.pkg"
-  homepage 'http://osxfuse.github.io/'
-  license :oss
+  appcast 'https://github.com/osxfuse/sshfs/releases.atom'
+  name 'SSHFS'
+  homepage 'https://osxfuse.github.io/'
+  license :gpl
 
   pkg "sshfs-#{version}.pkg"
 

@@ -3,8 +3,9 @@ cask :v1 => 'openmsx' do
   sha256 :no_check
 
   url 'http://sourceforge.net/projects/openmsx/files/latest/download'
+  name 'openMSX'
   homepage 'http://openmsx.sourceforge.net'
-  license :oss
+  license :gpl
 
   app 'openMSX.app'
 end

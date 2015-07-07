@@ -3,6 +3,7 @@ cask :v1 => 'sloth' do
   sha256 '01f8f9fec88d5bc0cb0edcf7391d5ed0ac085f7fa8dcb6682059a238d7786165'
 
   url 'http://sveinbjorn.org/files/software/sloth.zip'
+  name 'Sloth'
   homepage 'http://sveinbjorn.org/sloth'
   license :gpl
 

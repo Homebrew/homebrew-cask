@@ -4,6 +4,7 @@ cask :v1 => 'cups-pdf' do
 
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/codepoet/cups-pdf-for-mac-os-x/downloads/CUPS-PDF%20#{version}%20Installer.pkg"
+  name 'CUPS-PDF'
   homepage 'http://www.cups-pdf.de'
   license :gpl
 

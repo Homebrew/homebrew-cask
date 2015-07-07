@@ -4,8 +4,14 @@ cask :v1 => 'hex-fiend' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/ridiculousfish/HexFiend/releases/download/v#{version}/Hex.Fiend.app.zip"
+  appcast 'https://github.com/ridiculousfish/HexFiend/releases.atom'
+  name 'Hex Fiend'
   homepage 'http://ridiculousfish.com/hexfiend/'
   license :bsd
 
   app 'Hex Fiend.app'
+
+  postflight do
+    system '/bin/chmod', '-R', 'og=u', "#{staged_path}/Hex Fiend.app/Contents/Frameworks/Sparkle.framework"
+  end
 end

@@ -3,8 +3,9 @@ cask :v1 => 'fenics' do
   sha256 'b0071fa25759fcef124e418c202cc81d297d12633b24385b70b9408af76c2bb5'
 
   url "http://www.fenicsproject.org/pub/software/fenics/fenics-#{version}-osx10.9.dmg"
+  name 'FEniCS'
   homepage 'http://fenicsproject.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'FEniCS.app'
 

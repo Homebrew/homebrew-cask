@@ -5,6 +5,7 @@ cask :v1 => 'simpholders' do
   url "http://simpholders.com/site/assets/files/1007/simpholders-#{version.gsub('.','_')}.dmg"
   appcast 'http://kfi-apps.com/appcasts/simpholders/',
           :sha256 => 'baa9148ebfb168d1c86480da0863b89a9eeb7b70e8d8e1e5806c7f7e1a0fdec2'
+  name 'SimPholders'
   homepage 'http://simpholders.com/'
   license :gratis
 

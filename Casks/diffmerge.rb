@@ -4,11 +4,16 @@ cask :v1 => 'diffmerge' do
 
   url "http://download-us.sourcegear.com/DiffMerge/4.2.0/DiffMerge.#{version}.intel.stable.dmg"
   name 'DiffMerge'
-  homepage 'http://www.sourcegear.com/diffmerge'
+  homepage 'https://www.sourcegear.com/diffmerge'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'DiffMerge.app'
   binary 'DiffMerge.app/Contents/MacOS/DiffMerge', :target => 'diffmerge'
+
+  zap :delete => [
+                  '~/Library/Preferences/com.sourcegear.DiffMerge.plist',
+                  '~/Library/Preferences/SourceGear DiffMerge Preferences'
+                 ]
 
   caveats <<-EOS.undent
     Use "diffmerge --nosplash" to hide the splash screen when using

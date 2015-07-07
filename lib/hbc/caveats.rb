@@ -29,11 +29,11 @@ class Hbc::CaveatsDSL
   end
 
   def caskroom_path
-    @cask.class.caskroom.join(token)
+    @cask.caskroom_path
   end
 
   def staged_path
-    caskroom_path.join(@cask.version.to_s)
+    @cask.staged_path
   end
 
   # DSL. Each method should handle output, following the convention of
@@ -88,6 +88,22 @@ class Hbc::CaveatsDSL
   def reboot
     puts <<-EOS.undent
     You must reboot for the installation of #{@cask} to take effect.
+
+    EOS
+  end
+
+  def discontinued
+    puts <<-EOS.undent
+    #{@cask} has been officially discontinued upstream.
+    It may stop working correctly (or at all) in recent versions of OS X.
+
+    EOS
+  end
+
+  def free_license(web_page)
+    puts <<-EOS.undent
+    The vendor offers a free license for #{@cask} at
+      #{web_page}
 
     EOS
   end

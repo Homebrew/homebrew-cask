@@ -3,7 +3,8 @@ cask :v1 => 'fdt' do
   sha256 :no_check
 
   url 'http://fdt.powerflasher.com/update/fdt/installer/FDT_osx64.dmg'
-  homepage 'http://fdt.powerflasher.com/'
+  name 'FDT'
+  homepage 'https://fdt.powerflasher.com/'
   license :commercial
 
   app 'FDT.app'

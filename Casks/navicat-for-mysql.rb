@@ -1,6 +1,6 @@
 cask :v1 => 'navicat-for-mysql' do
-  version '11.1.7'
-  sha256 'e02a0fbd93b31a3ad1da2ce22d2e36570693f9e0baae3727df462915b9a17a55'
+  version '11.1.12'   # navicat-premium.rb and navicat-for-* should be upgraded together
+  sha256 '790c6cf5704f9a6076d26e1eee789c1bf77926fb9580ff5587c34a913164c922'
 
   url "http://download.navicat.com/download/navicat#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_mysql_en.dmg"
   name 'Navicat for MySQL'

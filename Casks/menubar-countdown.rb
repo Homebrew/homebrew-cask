@@ -4,6 +4,7 @@ cask :v1 => 'menubar-countdown' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/capablehands/downloads/MenubarCountdown-#{version}.zip"
+  name 'Menubar Countdown'
   homepage 'http://capablehands.net/menubarcountdown'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

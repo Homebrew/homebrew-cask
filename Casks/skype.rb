@@ -16,5 +16,12 @@ cask :v1 => 'skype' do
 
   app 'Skype.app'
 
-  zap :delete => '~/Library/Application Support/Skype'
+  zap :delete => [
+                  '~/Library/Application Support/Skype',
+                  '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.skype.skype',
+                  '~/Library/Caches/com.skype.skype',
+                  '~/Library/Preferences/com.skype.skype.plist',
+                  '~/Library/Preferences/com.skype.skypewifi.plist',
+                  '~/Library/Saved Application State/com.skype.skype.savedState',
+                 ]
 end

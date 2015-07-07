@@ -4,9 +4,10 @@ cask :v1 => 'aether' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/nehbit/aether-public/releases/download/v#{version}-OSX/Aether.#{version}.dmg"
+  appcast 'https://github.com/nehbit/aether-public/releases.atom'
   name 'Aether'
   homepage 'http://getaether.net/'
-  license :oss
+  license :affero
 
   app 'Aether.app'
 end

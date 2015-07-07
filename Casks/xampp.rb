@@ -5,10 +5,11 @@ cask :v1 => 'xampp' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/xampp/XAMPP%20Mac%20OS%20X/#{version.sub(%r{-\d+$},'')}/xampp-osx-#{version}-installer.dmg"
   name 'XAMPP'
-  homepage 'http://www.apachefriends.org/'
-  license :oss
+  homepage 'https://www.apachefriends.org/'
+  license :gpl
 
-  installer :manual => 'XAMPP.app'
+  installer :script => 'XAMPP.app/Contents/MacOS/osx-intel',
+            :args => [ '--mode', 'unattended' ]
 
   uninstall :quit => 'com.bitnami.manager',
             :delete => '/Applications/XAMPP/'

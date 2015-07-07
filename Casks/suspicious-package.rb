@@ -3,6 +3,7 @@ cask :v1 => 'suspicious-package' do
   sha256 :no_check
 
   url 'http://www.mothersruin.com/software/downloads/SuspiciousPackage.pkg'
+  name 'Suspicious Package'
   homepage 'http://www.mothersruin.com/software/SuspiciousPackage/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

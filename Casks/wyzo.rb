@@ -3,6 +3,7 @@ cask :v1 => 'wyzo' do
   sha256 '18cda3c323544c729d7e532151a32c70d8427dae2762695229d102762b313026'
 
   url "http://download.wyzo.com/files/mac/WyzoSetup-#{version}.dmg"
+  name 'Wyzo'
   homepage 'http://wyzo.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

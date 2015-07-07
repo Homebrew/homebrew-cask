@@ -4,6 +4,8 @@ cask :v1 => 'fenix' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/coreybutler/fenix/releases/download/v#{version}/fenix-osx-#{version}.zip"
+  appcast 'https://github.com/coreybutler/fenix/releases.atom'
+  name 'Fenix'
   homepage 'http://fenixwebserver.com/'
   license :gpl
 

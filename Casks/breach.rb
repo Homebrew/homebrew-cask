@@ -4,6 +4,8 @@ cask :v1 => 'breach' do
 
   # githubusercontent.com is the official download host per the vendor homepage
   url "https://raw.githubusercontent.com/breach/releases/master/v#{version}/breach-v#{version}-darwin-ia32.tar.gz"
+  appcast 'https://raw.githubusercontent.com/breach/releases/master.atom'
+  name 'Breach'
   homepage 'http://breach.cc'
   license :mit
 

@@ -3,6 +3,7 @@ cask :v1 => 'snip' do
   sha256 '2e9c2863d4412dbfa1323c1f2cb056c6a81b77d520c8b2a732cade1e7b40df00'
 
   url "http://snip.qq.com/resources/Snip_V#{version}.dmg"
+  name 'Snip'
   homepage 'http://snip.qq.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

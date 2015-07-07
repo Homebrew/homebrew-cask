@@ -193,8 +193,8 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
     directives_set.select{ |h| h.key?(:early_script) }.each do |directives|
       executable, script_arguments = self.class.read_script_arguments(directives,
                                                                       'uninstall',
-                                                                      {:must_succeed => true},
-                                                                      {:sudo => true, :print_stdout => true},
+                                                                      {:must_succeed => true, :sudo => true},
+                                                                      {:print_stdout => true},
                                                                       :early_script)
 
       ohai "Running uninstall script #{executable}"
@@ -271,8 +271,8 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
     directives_set.select{ |h| h.key?(:script) }.each do |directives|
       executable, script_arguments = self.class.read_script_arguments(directives,
                                                                       'uninstall',
-                                                                      {:must_succeed => true},
-                                                                      {:sudo => true, :print_stdout => true},
+                                                                      {:must_succeed => true, :sudo => true},
+                                                                      {:print_stdout => true},
                                                                       :script)
       raise Hbc::CaskInvalidError.new(@cask, "#{stanza} :script without :executable.") if executable.nil?
       @command.run(@cask.staged_path.join(executable), script_arguments)
@@ -314,9 +314,8 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
         directory = self.class.expand_path_strings([directory]).first if expand_tilde
         directory = self.class.remove_relative_path_strings(:rmdir, [ directory ]).first
         directory = self.class.remove_undeletable_path_strings(:rmdir, [ directory ]).first
-        next unless directory.respond_to?(:length)
-        next unless directory.length > 0
-        ohai "Removing directory if empty: #{directory.utf8_inspect}"
+        next unless directory.to_s.length > 0
+        ohai "Removing directory if empty: #{directory.to_s.utf8_inspect}"
         directory = Pathname.new(directory)
         next unless directory.exist?
         @command.run!('/bin/rm', :args => [ '-f', '--', directory.join('.DS_Store') ],

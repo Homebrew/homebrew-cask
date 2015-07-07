@@ -1,11 +1,12 @@
 cask :v1 => 'remote-desktop-manager' do
-  version '1.0.2.0'
-  sha256 'd724df0195169b4b3bac4db6273433f4d64b1877dd50c1745ff1bc3b6115a258'
+  version '2.0.4.0'
+  sha256 'd5ba2c9c7242fcc55245ba39558d30de24ed27c2bff9e11a78753e2ff5e90fce'
 
-  url "http://download.devolutions.net/Mac/Devolutions.RemoteDesktopManager.Mac.#{version}.dmg"
+  # devolutions.net is the official download host per the vendor homepage
+  url "http://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Mac.#{version}.dmg"
   name 'Remote Desktop Manager'
-  homepage 'http://remotedesktopmanager.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'http://mac.remotedesktopmanager.com/'
+  license :gratis
 
   app 'Remote Desktop Manager.app'
 end

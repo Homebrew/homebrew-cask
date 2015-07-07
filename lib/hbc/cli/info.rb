@@ -38,7 +38,7 @@ PURPOSE
 
   def self.github_info(cask)
     cask_token = cask.token
-    cask_token = cask.class.all_tokens.detect { |t| t.split("/").last == cask_token } unless cask_token =~ /\//
+    cask_token = Hbc.all_tokens.detect { |t| t.split("/").last == cask_token } unless cask_token =~ /\//
     return nil unless cask_token.respond_to?(:length) and cask_token.length > 0
     path_elements = cask_token.split '/'
     if path_elements.count == 2
@@ -60,7 +60,7 @@ PURPOSE
     retval = ''
     Hbc::DSL::ClassMethods.ordinary_artifact_types.each do |type|
       if cask.artifacts[type].length > 0
-        retval = "#{Tty.blue.bold}==>#{Tty.white} Contents#{Tty.reset}\n" unless retval.length > 0
+        retval = "#{Tty.blue.bold}==>#{Tty.reset.bold} Contents#{Tty.reset}\n" unless retval.length > 0
         cask.artifacts[type].each do |artifact|
           activatable_item = type == :stage_only ? '<none>' : artifact.first
           retval.concat "  #{activatable_item} (#{type.to_s})\n"

@@ -3,6 +3,7 @@ cask :v1 => 'manopen' do
   sha256 '7b383ca493b0b360bb58e65f7e7ce0a92383ff38c5221cc410eaf03f1117a958'
 
   url "http://www.clindberg.org/projects/ManOpen-#{version}.dmg"
+  name 'ManOpen'
   homepage 'http://www.clindberg.org/projects/ManOpen.html'
   license :bsd
 

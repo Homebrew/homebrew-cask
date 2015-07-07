@@ -5,7 +5,7 @@ cask :v1 => 'media-converter' do
   url "http://downloads.sourceforge.net/project/media-converter/media-converter/#{version}/media-converter-#{version}.zip"
   name 'Media Converter'
   homepage 'http://media-converter.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'Media Converter.localized/Media Converter.app'
 end

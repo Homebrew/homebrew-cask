@@ -3,7 +3,9 @@ cask :v1 => 'shuttle' do
   sha256 '116a216b8f0a9485ed82d944b5ae99bfad1c96a7d2aa3c296808ab824264d7a4'
 
   url "https://github.com/fitztrev/shuttle/releases/download/#{version}/Shuttle.zip"
-  homepage 'http://fitztrev.github.io/shuttle/'
+  appcast 'https://github.com/fitztrev/shuttle/releases.atom'
+  name 'Shuttle'
+  homepage 'https://fitztrev.github.io/shuttle/'
   license :mit
 
   app 'Shuttle.app'

@@ -4,9 +4,9 @@ cask :v1 => 'adapter' do
 
   url "http://downloads.macroplant.com/Adapter-#{version}.dmg"
   name 'Adapter'
-  appcast 'http://www.macroplant.com/adapter/adapterAppcast.xml',
-          :sha256 => 'b3c13d29cccda4e5c30660f2eba270259c4481d39422106b01c669a58d655802'
-  homepage 'http://www.macroplant.com/adapter/'
+  appcast 'https://www.macroplant.com/adapter/adapterAppcast.xml',
+          :sha256 => '036eb7f0efa1ea980a1233e39f4342dcc2751e048acdfb967532864930ca84de'
+  homepage 'https://www.macroplant.com/adapter/'
   license :gratis
 
   app 'Adapter.app'

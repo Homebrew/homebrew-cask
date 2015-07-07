@@ -17,6 +17,7 @@ cask :v1 => 'ibank' do
     app 'iBank 5.app'
   end
 
-  homepage 'http://www.iggsoftware.com/ibank'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  name 'iBank'
+  homepage 'https://www.iggsoftware.com/ibank'
+  license :commercial
 end

@@ -6,7 +6,7 @@ cask :v1 => 'djv' do
   name 'DJV'
   name 'DJV Imaging'
   homepage 'http://djv.sourceforge.net'
-  license :oss
+  license :bsd
 
   app "djv-#{version}-OSX-64.app"
 end

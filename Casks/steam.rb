@@ -3,8 +3,9 @@ cask :v1 => 'steam' do
   sha256 :no_check
 
   url 'http://media.steampowered.com/client/installer/steam.dmg'
+  name 'Steam'
   homepage 'http://store.steampowered.com/about/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Steam.app'
 

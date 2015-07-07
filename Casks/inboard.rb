@@ -1,14 +1,13 @@
 cask :v1 => 'inboard' do
-  version '184'
-  sha256 '3bb602cde63f0b3401fc681cd50a3545c5a47c2326ea81cf66844039fb100522'
+  version '1.0.2-271'
+  sha256 '69fddd83a43ecce6254e524325ea5afb0108d41246e6fe618852775173821f65'
 
-  # devmate.com is the official download host per the vendor homepage
-  url "http://dl.devmate.com/com.ideabits.Inboard/#{version}/1390822305/Inboard-#{version}.dmg"
-  appcast 'http://updates.devmate.com/com.ideabits.Inboard.xml',
-          :sha256 => '3bde9bcd42058928757ce5b3edc9de1ef4f488b190b8efec40e6c7e4fd69a020'
+  url "http://inboardapp.com/trial/Inboard-#{version}.zip"
   name 'Inboard'
-  homepage 'http://inboardapp.com/beta'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  appcast 'http://inboardapp.com/appcast.xml',
+          :sha256 => '326af38da9022b159f30356465725bab198645bd4e5e124a13687db7cb3a139f'
+  homepage 'http://inboardapp.com'
+  license :commercial
 
   app 'Inboard.app'
 end

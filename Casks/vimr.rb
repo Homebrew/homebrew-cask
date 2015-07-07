@@ -1,8 +1,11 @@
 cask :v1 => 'vimr' do
-  version '0.5.1-25'
-  sha256 'b316e879b546a89f5339a510a7168801c98e3180759ca76c3c8272be22f4ad62'
+  version '0.7.1-29'
+  sha256 '6bdcb51a355cbd63f502def54475b6d94a03048e0b4d0de83e3ce4341b20ccb5'
 
-  url "https://github.com/qvacua/vimr/releases/download/v#{version}/VimR-#{version.sub(/-.*$/, '')}.tar.bz2"
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/qvacua/vimr/releases/download/v#{version}/VimR-#{version.sub(%r{-.*},'')}.tar.bz2"
+  appcast 'https://github.com/qvacua/vimr/releases.atom'
+  name 'VimR'
   homepage 'http://vimr.org/'
   license :gpl
 

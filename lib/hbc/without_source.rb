@@ -1,4 +1,4 @@
-class Hbc::WithoutSource < Hbc
+class Hbc::WithoutSource < Hbc::Cask
   def staged_path
     caskroom_path.children.first
   end

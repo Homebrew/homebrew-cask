@@ -1,14 +1,11 @@
 cask :v1 => 'webstorm' do
-  version '9.0.2'
-  sha256 '9638d9a9a68e96db11f8acdc2a0a3e71a316fc14ac74193bc4bcb4745d975203'
+  version '10.0.4'
+  sha256 '0e444910001fc74b401c3b12738abedb823cc8064af53a304ce8e8c4d9d0ca6a'
 
   url "http://download-cf.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
+  name 'WebStorm'
   homepage 'http://www.jetbrains.com/webstorm/'
   license :commercial
 
   app 'WebStorm.app'
-
-  postflight do
-    plist_set(':JVMOptions:JVMVersion', '1.6+')
-  end
 end

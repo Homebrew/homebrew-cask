@@ -5,7 +5,7 @@ cask :v1 => 'hugin' do
   url "http://downloads.sourceforge.net/sourceforge/hugin/Hugin-#{version}.dmg"
   name 'Hugin'
   homepage 'http://hugin.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'Hugin.app'
 end

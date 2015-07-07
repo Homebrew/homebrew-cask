@@ -4,6 +4,7 @@ cask :v1 => 'cfxr' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/downloads/nevyn/cfxr/cfxr%20#{version}.zip"
+  name 'cfxr'
   homepage 'http://thirdcog.eu/apps/cfxr'
   license :oss
 

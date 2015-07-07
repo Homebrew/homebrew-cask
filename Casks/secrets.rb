@@ -7,5 +7,5 @@ cask :v1 => 'secrets' do
   homepage 'http://secrets.blacktree.com'
   license :oss
 
-  prefpane 'Secrets.prefpane'
+  prefpane 'Secrets.prefPane'
 end

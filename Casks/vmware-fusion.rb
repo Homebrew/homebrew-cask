@@ -1,10 +1,10 @@
 cask :v1 => 'vmware-fusion' do
-  version '7.1.0-2314774'
-  sha256 'e51a93e2f2cc6499f4dcd1d32db33fcbb20f17fb73caff2a2b2cbe50f25272b5'
+  version '7.1.2-2779224'
+  sha256 '93e809ece4f915fcb462affabfce2d7c85eb08314b548e2cde44cb2a67ad7d76'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   name 'VMware Fusion'
-  homepage 'http://www.vmware.com/products/fusion/'
+  homepage 'https://www.vmware.com/products/fusion/'
   license :commercial
   tags :vendor => 'VMware'
 

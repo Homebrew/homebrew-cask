@@ -6,7 +6,7 @@ cask :v1 => 'doubletwist' do
   appcast 'http://download.doubletwist.com/mac/appcast.xml',
           :sha256 => '63ad1487f6e129aa79b9724f9191a52aa1a31ec0c26de63a9d778c1dd709a815'
   name 'doubleTwist'
-  homepage 'http://www.doubletwist.com/'
+  homepage 'https://www.doubletwist.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'doubleTwist.app'

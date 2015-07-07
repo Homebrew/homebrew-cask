@@ -3,6 +3,7 @@ cask :v1 => 'timer' do
   sha256 :no_check
 
   url 'http://www.apimac.com/download/Timer.zip'
+  name 'Timer'
   homepage 'http://www.apimac.com/mac/timer/'
   license :commercial
 

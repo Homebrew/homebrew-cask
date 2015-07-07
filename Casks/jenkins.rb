@@ -1,14 +1,14 @@
 cask :v1 => 'jenkins' do
-  version '1.596'
-  sha256 'eb7be5bd1e350b71ec8fb66721c28abbe0912e7062bc4f93ce61750467dfde4e'
+  version '1.619'
+  sha256 '660F85B7D24133B60972127B42308369B65C971CDBA0D9883F99270306901003'
 
   url "http://mirrors.jenkins-ci.org/osx/jenkins-#{version}.pkg"
   name 'Jenkins'
-  homepage 'http://jenkins-ci.org/'
-  license :cc
+  homepage 'https://jenkins-ci.org/'
+  license :mit
 
   pkg "jenkins-#{version}.pkg"
-  binary '/Library/Application Support/Jenkins/jenkins-runner.sh', :target => 'jenkins'
+  binary '/Library/Application Support/Jenkins/jenkins-runner.sh', :target => 'jenkins-runner'
 
   uninstall :script    => '/Library/Application Support/Jenkins/Uninstall.command',
             :pkgutil   => 'org.jenkins-ci.*pkg',

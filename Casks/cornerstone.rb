@@ -1,12 +1,13 @@
 cask :v1 => 'cornerstone' do
-  version '2.7.10'
-  sha256 '297237f24cbd605d6e7497fb893db3e7fbc6efef1333f5f25be8238a418d7650'
+  version '2.7.17'
+  sha256 '792882881b5e1f7642433f720e1673f7711d5dfca3d333e7a0fe5c7783092f09'
 
   url "https://www.zennaware.com/cornerstone/downloads/Cornerstone-#{version}.zip"
-  appcast 'http://www.zennaware.com/cornerstone/appcast/feed2.php',
-          :sha256 => '333fee9fc2c478a0d5305ad2d9faecdb2c44e5554e8d43762c0917a7531fb145'
-  homepage 'http://www.zennaware.com/cornerstone/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  appcast 'https://www.zennaware.com/cornerstone/appcast/feed2.php',
+          :sha256 => '9c86ba0e2bdbcede056976040a507ebd3c34f4229ae2fd1fa402ab937adc95e6'
+  name 'Cornerstone'
+  homepage 'https://www.zennaware.com/cornerstone/'
+  license :commercial
 
   app 'Cornerstone.app'
 end

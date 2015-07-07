@@ -1,10 +1,10 @@
 cask :v1 => 'controlplane' do
-  version '1.5.4'
-  sha256 'd35f24b8559a0554b501bc6ff6a0b5b8b4f3ab3c123db1464d5720df9359152b'
+  version '1.5.7'
+  sha256 '67782f1fbfbbcb908c4efdf99b0303178d17a38a2db5d85a031fbe83e7d46366'
 
   url "http://www.controlplaneapp.com/download/#{version}"
   appcast 'http://www.controlplaneapp.com/appcast.xml',
-          :sha256 => 'bc5bd3a27e1e12f09fc1d5089af79535992473d361030ae50993e7c0135ad287'
+          :sha256 => 'b5244a1703dac6ffa601e24b03b3a16f96cf74d5b840d0af14b666780407de77'
   name 'ControlPlane'
   homepage 'http://www.controlplaneapp.com/'
   license :gpl

@@ -3,7 +3,8 @@ cask :v1 => 'cmpl' do
   sha256 'f893ca2537d971682df9a4a08d34505732b40f58ee58037ad4fe736607d8953e'
 
   url "http://www.coliop.org/_download/Cmpl-#{version.gsub('.','-')}-osx.tar.gz"
-  homepage 'https://www.coliop.org/'
+  name 'CMPL'
+  homepage 'http://www.coliop.org/'
   license :gpl
 
   # linking into ~/Applications breaks Cmpl, due to hardcoded paths

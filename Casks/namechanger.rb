@@ -5,6 +5,7 @@ cask :v1 => 'namechanger' do
   url "http://www.mrrsoftware.com/Downloads/NameChanger/Updates/NameChanger-#{version.gsub('.','_')}.zip"
   appcast 'http://mrrsoftware.com/Downloads/NameChanger/Updates/NameChangerSoftwareUpdates.xml',
           :sha256 => 'f8e9f7e32a1402b6a1be71963ee33e79c86244ba2f6ca1fcf52e644b1c235192'
+  name 'NameChanger'
   homepage 'http://www.mrrsoftware.com/MRRSoftware/NameChanger.html'
   license :gratis
 

@@ -4,6 +4,7 @@ cask :v1 => 'massreplaceit' do
   container :nested => 'MassReplaceIt.dmg'
 
   url 'http://www.hexmonkeysoftware.com/files/mri.dmg.zip'
+  name 'MassReplaceIt'
   homepage 'http://www.hexmonkeysoftware.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

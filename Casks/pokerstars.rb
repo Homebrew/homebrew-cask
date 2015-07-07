@@ -2,9 +2,10 @@ cask :v1 => 'pokerstars' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.pokerstars.com/PokerStars.app.zip'
-  homepage 'http://www.pokerstars.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  url 'https://www.pokerstars.com/PokerStars.app.zip'
+  name 'PokerStars'
+  homepage 'https://www.pokerstars.com/'
+  license :freemium
 
   app 'PokerStars.app'
 

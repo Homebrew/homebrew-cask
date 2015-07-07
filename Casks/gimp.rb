@@ -3,8 +3,14 @@ cask :v1 => 'gimp' do
   sha256 'a90fe7001ee4f64d5108cd7b6aad843772aab7f1a7e67018564c620a4374460a'
 
   url "http://download.gimp.org/pub/gimp/v2.8/osx/gimp-#{version}.dmg"
+  name 'GIMP'
   homepage 'http://www.gimp.org'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
+
+  zap :delete => [
+    '~/Library/Application Support/GIMP',
+    '~/Library/Saved Application State/org.gnome.gimp.savedState'
+  ]
 
   app 'GIMP.app'
 end

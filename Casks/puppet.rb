@@ -1,12 +1,14 @@
 cask :v1 => 'puppet' do
-  version '3.7.3'
-  sha256 'f673b9c45dbefa410efa6d7f74ea820a1b01b4f659f142c92310f8ab3df477af'
+  version '3.7.4'
+  sha256 '8eb17151199cc8c726fd64a56aba20b25627f699ce841ce9d04dbe59edbe3223'
 
-  url "http://downloads.puppetlabs.com/mac/puppet-#{version}.dmg"
-  homepage 'http://puppetlabs.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  url "https://downloads.puppetlabs.com/mac/puppet-#{version}.dmg"
+  name 'Puppet'
+  homepage 'https://puppetlabs.com/'
+  license :apache
 
   pkg "puppet-#{version}.pkg"
 
   uninstall :pkgutil => 'com.puppetlabs.puppet'
+  depends_on :cask => 'facter'
 end

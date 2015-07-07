@@ -5,7 +5,7 @@ cask :v1 => 'arrsync' do
   url "http://downloads.sourceforge.net/sourceforge/arrsync/arrsync-#{version}.dmg"
   name 'arRsync'
   homepage 'http://arrsync.sourceforge.net'
-  license :oss
+  license :gpl
 
   app 'arRsync.app'
 end

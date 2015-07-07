@@ -4,6 +4,7 @@ cask :v1 => 'open-sankore' do
 
   # cndp.fr is the official download host per the vendor homepage
   url "http://www.cndp.fr/open-sankore/OpenSankore/Releases/v#{version}/Open-Sankore_MacOSX_#{version}.dmg"
+  name 'Open-Sankore'
   homepage 'http://open-sankore.org/'
   license :gpl
 

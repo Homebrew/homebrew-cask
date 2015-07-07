@@ -3,7 +3,8 @@ cask :v1 => 'fontexplorer-x-pro' do
   sha256 '9fd225ff73804231d094f16bdb435355a3b7557d74ec1aeb9d89e925f0673350'
 
   url "http://fast.fontexplorerx.com/FontExplorerXPro#{version.gsub('.','')}.dmg"
-  homepage 'http://www.fontexplorerx.com/'
+  name 'FontExplorer X Pro'
+  homepage 'https://www.fontexplorerx.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'FontExplorer X Pro.app'

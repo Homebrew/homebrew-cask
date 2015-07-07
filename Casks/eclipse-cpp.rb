@@ -1,16 +1,14 @@
 cask :v1 => 'eclipse-cpp' do
-  version '4.4.1'
+  version '4.5'
+  sha256 '6732013ac98123004f8053d1d06452d2b5bffb13077f4db22a9358479c7a2d31'
 
-  if Hardware::CPU.is_32_bit?
-    sha256 'bc208f2d3cedeecd721dc8e19d1d1a379ba5b3a295d5622071f8f5a2c1b98905'
-    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR1a/eclipse-cpp-luna-SR1a-macosx-cocoa.tar.gz'
-  else
-    sha256 'bd2fe24d261f8ae7e49cd33cf3b111aad279bdc64cc31efb2cd1fea789d5ae46'
-    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR1a/eclipse-cpp-luna-SR1a-macosx-cocoa-x86_64.tar.gz'
-  end
-
-  homepage 'http://eclipse.org/'
+  url 'http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/R/eclipse-cpp-mars-R-macosx-cocoa-x86_64.tar.gz&r=1'
+  name 'Eclipse'
+  name 'Eclipse IDE for C/C++ Developers'
+  homepage 'https://eclipse.org/'
   license :eclipse
+  depends_on :macos => '>= :leopard'
+  depends_on :arch => :x86_64
 
-  app 'eclipse/Eclipse.app'
+  app 'Eclipse.app'
 end

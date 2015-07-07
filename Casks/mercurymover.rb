@@ -3,6 +3,7 @@ cask :v1 => 'mercurymover' do
   sha256 :no_check
 
   url 'http://www.heliumfoot.com/files/release/mercurymover/MercuryMover.dmg'
+  name 'MercuryMover'
   homepage 'http://www.heliumfoot.com/mercurymover'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

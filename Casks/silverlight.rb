@@ -1,9 +1,10 @@
 cask :v1 => 'silverlight' do
-  version '5.1.30514.0'
-  sha256 '469a7b19cf4a87a1248caa850c7de61c88e67c0c5511fe77032817cd79df9dea'
+  version '5.1.40416.0'
+  sha256 :no_check    # required as upstream package is updated in-place
 
-  url 'http://silverlight.dlservice.microsoft.com/download/F/8/C/F8C0EACB-92D0-4722-9B18-965DD2A681E9/30514.00/Silverlight.dmg'
-  homepage 'http://www.microsoft.com/silverlight/'
+  url 'http://silverlight.dlservice.microsoft.com/download/B/D/C/BDCE18B1-73C1-47BA-9B11-46A4C14CF7B0/40416.00/Silverlight.dmg'
+  name 'Silverlight'
+  homepage 'https://www.microsoft.com/silverlight/'
   license :gratis
 
   pkg 'Silverlight.pkg'

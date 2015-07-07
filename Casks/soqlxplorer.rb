@@ -1,6 +1,6 @@
 cask :v1 => 'soqlxplorer' do
-  version '2.00'
-  sha256 '72c5d9dc582bc30d757c5199cdebdc79ffee479a3435252906554d52b236217d'
+  version '2.20'
+  sha256 '98e0c4184dc2870928df4791996afb1c5565652afd2375fc5f7fb89351efae25'
 
   url "http://www.pocketsoap.com/osx/soqlx/soqlXplorer_v#{version}.zip"
   appcast 'http://www.pocketsoap.com/osx/soqlx/appcast.xml',

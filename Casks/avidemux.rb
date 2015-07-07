@@ -6,7 +6,7 @@ cask :v1 => 'avidemux' do
   url "http://downloads.sourceforge.net/avidemux/Avidemux_#{version}_ml_64bits.dmg"
   name 'Avidemux'
   homepage 'http://www.avidemux.org/'
-  license :oss
+  license :gpl
 
   app 'Avidemux2.6.app'
 end

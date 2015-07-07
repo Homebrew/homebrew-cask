@@ -1,16 +1,14 @@
 cask :v1 => 'eclipse-java' do
-  version '4.4.1'
+  version '4.5'
+  sha256 '6145fcd4e15f03dac50898fe489e56b8cbe5ef152f191907e3b9ee52a3c1c09e'
 
-  if Hardware::CPU.is_32_bit?
-    sha256 'a4e80a5e4901027f74412786898456d8ce1b6b56d9689293b472f9509d1b65cf'
-    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR1/eclipse-java-luna-SR1-macosx-cocoa.tar.gz'
-  else
-    sha256 'adbfcd2fa587eac82a34da76079747120031a778478b3197ad1c94e537312268'
-    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR1/eclipse-java-luna-SR1-macosx-cocoa-x86_64.tar.gz'
-  end
-
-  homepage 'http://eclipse.org/'
+  url 'http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/R/eclipse-java-mars-R-macosx-cocoa-x86_64.tar.gz&r=1'
+  name 'Eclipse'
+  name 'Eclipse IDE for Java Developers'
+  homepage 'https://eclipse.org/'
   license :eclipse
+  depends_on :macos => '>= :leopard'
+  depends_on :arch => :x86_64
 
-  app 'eclipse/Eclipse.app'
+  app 'Eclipse.app'
 end

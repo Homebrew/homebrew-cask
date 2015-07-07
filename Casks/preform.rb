@@ -4,6 +4,7 @@ cask :v1 => 'preform' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/FormlabsReleases/Release/#{version.sub(%r{_.*},'')}/PreForm_#{version}.dmg"
+  name 'PreForm'
   homepage 'http://formlabs.com/en/products/preform/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

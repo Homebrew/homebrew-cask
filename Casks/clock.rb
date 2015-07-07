@@ -4,6 +4,7 @@ cask :v1 => 'clock' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/downloads/zachwaugh/Clock.app/Clock-#{version}.zip"
+  name 'Clock'
   homepage 'http://zachwaugh.me/clock/'
   license :oss
 

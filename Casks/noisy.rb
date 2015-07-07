@@ -5,7 +5,7 @@ cask :v1 => 'noisy' do
   url 'https://github.com/downloads/jonshea/Noisy/Noisy.zip'
   name 'Noisy'
   homepage 'https://github.com/jonshea/Noisy'
-  license :oss
+  license :bsd
 
   app 'Noisy.app'
 end

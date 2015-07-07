@@ -4,8 +4,9 @@ cask :v1 => 'hosts' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/downloads/specialunderwear/Hosts.prefpane/Hosts-#{version}.pkg"
+  name 'Hosts'
   homepage 'http://permanentmarkers.nl/software.html'
-  license :oss
+  license :gpl
 
   pkg "Hosts-#{version}.pkg"
 

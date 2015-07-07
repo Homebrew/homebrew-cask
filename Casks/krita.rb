@@ -1,9 +1,9 @@
 cask :v1 => 'krita' do
-  version '2.8.79.10'
-  sha256 '2a80c2cf856fbbb799db8cea0ed8a43346e10cfb465bf8a4e181a1142bee62cd'
+  version '2.9.0.0'
+  sha256 'f7a30e808ebb9b781a146d2491d1b9cfb07d39db805867da63252e61d73a2ad0'
 
-  # valdyas.org is the official download host per the vendor homepage
-  url "http://www.valdyas.org/~boud/Krita-#{version}.dmg"
+  # download dmg from kde official repository
+  url "http://download.kde.org/stable/krita/krita-#{version}.dmg"
   name 'Krita'
   homepage 'https://krita.org/'
   license :gpl

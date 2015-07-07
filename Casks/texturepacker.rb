@@ -1,11 +1,11 @@
 cask :v1 => 'texturepacker' do
-  version '3.6.0'
-  sha256 '4771b740335d38233547d68f6978684b7b6b3d9047385ed922037b035b254ae6'
+  version '3.8.0'
+  sha256 '3353c8c3d80f1d33e6b98f021464421babd659fc7b331307d75801957212b83f'
 
   url "https://www.codeandweb.com/download/texturepacker/#{version}/TexturePacker-#{version}-uni.dmg"
   name 'TexturePacker'
-  homepage 'http://www.codeandweb.com/texturepacker'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.codeandweb.com/texturepacker'
+  license :freemium
 
   app 'TexturePacker.app'
 end

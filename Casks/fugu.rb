@@ -4,8 +4,9 @@ cask :v1 => 'fugu' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/fugussh/Unstable/fugu-#{version}/Fugu-#{version}.zip"
+  name 'Fugu'
   homepage 'http://rsug.itd.umich.edu/software/fugu/'
-  license :oss
+  license :bsd
 
   app 'Fugu.app'
 end

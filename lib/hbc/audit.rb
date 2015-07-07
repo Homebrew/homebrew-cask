@@ -14,6 +14,7 @@ class Hbc::Audit
     _check_required_stanzas
     _check_no_string_version_latest
     _check_sha256_no_check_if_latest
+    _check_sha256_actually_256
     _check_sha256_invalid
     _check_sourceforge_download_url_format
     _check_download(download) if download
@@ -48,6 +49,15 @@ class Hbc::Audit
     odebug "Verifying sha256 :no_check with version :latest"
     if cask.version == :latest and cask.sha256 != :no_check
       add_error "you should use sha256 :no_check when version is :latest"
+    end
+  end
+
+  def _check_sha256_actually_256
+    odebug "Verifying sha256 string is a legal SHA-256 digest"
+    if cask.sha256.kind_of?(String)
+      unless cask.sha256.length == 64 && cask.sha256[/^[0-9a-f]+$/i]
+        add_error "sha256 string must be of 64 hexadecimal characters"
+      end
     end
   end
 

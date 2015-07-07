@@ -3,8 +3,9 @@ cask :v1 => 'utc-menu-clock' do
   sha256 '8a6d26228495aa802b3f9f80e43ee58bff92097e7de41de86dae994a9350d9b2'
 
   url "https://github.com/downloads/netik/UTCMenuClock/UTCMenuClock_#{version}_installer.pkg"
+  name 'UTCMenuClock'
   homepage 'https://github.com/netik/UTCMenuClock'
-  license :oss
+  license :apache
 
   pkg "UTCMenuClock_#{version}_installer.pkg"
 

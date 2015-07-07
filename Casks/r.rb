@@ -1,18 +1,24 @@
 cask :v1 => 'r' do
-  version '3.1.2'
 
-  if MacOS.release <= :snow_leopard
-    sha256 'aec21b31b3a6c4e777690bd4e2f19fa71f2ae443dd645d4fa93a0399345e5aac'
+  if MacOS.release < :mavericks
+    version '3.2.1'
+    sha256 '88b9a20af00a916f3902ccac83098643b95a2801eb4775d38130b26871323a3f'
+    # rstudio.com is the official download host per the vendor homepage
     url "http://cran.rstudio.com/bin/macosx/R-#{version}-snowleopard.pkg"
     pkg "R-#{version}-snowleopard.pkg"
   else
-    sha256 'ea1312d3d888861f33f5225a159fe39a5e90f382996eadc388808eb59bf6003f'
-    url "http://cran.rstudio.com/bin/macosx/R-#{version}-mavericks.pkg"
-    pkg "R-#{version}-mavericks.pkg"
+    version '3.2.1'
+    sha256 '91c5ff568bc450732fce46a2c177fd0f0a3b58246770852e3fed942daf94b9fd'
+    # rstudio.com is the official download host per the vendor homepage
+    url "http://cran.rstudio.com/bin/macosx/R-#{version}.pkg"
+    pkg "R-#{version}.pkg"
   end
 
+  name 'R'
   homepage 'http://www.r-project.org/'
   license :gpl
+
+  depends_on :macos => '>= :snow_leopard'
 
   uninstall :pkgutil => [
                          # eg org.r-project.R.maverics.fw.pkg

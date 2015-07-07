@@ -1,10 +1,11 @@
 cask :v1 => 'stackato' do
-  version '3.1.1'
-  sha256 '79b34288416e2adac24c30c8eacd0b1177f8c3985d355af16e13b7b9dd17259d'
+  version '3.2.2'
+  sha256 '12bbc6ce6bd4b142c13a02cbfa97c10a4a1759e416d9906064224d757765ef05'
 
-  url "http://downloads.activestate.com/stackato/client/v#{version}/stackato-#{version}-macosx10.5-i386-x86_64.zip"
-  homepage 'http://docs.stackato.com/user/client/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  url "https://downloads.activestate.com/stackato/client/v#{version}/stackato-#{version}-macosx10.5-i386-x86_64.zip"
+  name 'Stackato'
+  homepage 'https://docs.stackato.com/user/client/'
+  license :apache
 
   binary "stackato-#{version}-macosx10.5-i386-x86_64/stackato"
 end

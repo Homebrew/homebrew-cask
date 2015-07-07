@@ -4,8 +4,10 @@ cask :v1 => 'hazel' do
 
   url 'http://www.noodlesoft.com/Products/Hazel/download'
   name 'Hazel'
+  appcast 'http://update.noodlesoft.com/Products/Hazel/generate-appcast.php',
+          :sha256 => 'd406a5aaa7ac1ddbe8da979cda8605a1b04c3c393ca5dd90cf9a9e9fb2a6cb0f'
   homepage 'http://www.noodlesoft.com/hazel.php'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   prefpane 'Hazel.prefPane'
 

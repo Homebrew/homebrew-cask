@@ -4,6 +4,7 @@ cask :v1 => 'hubic' do
 
   # ovh.net is the official download host per the vendor homepage
   url "http://mir7.ovh.net/ovh-applications/hubic/hubiC-OSX/#{version.sub(%r{\.\d+$},'')}/hubiC-OSX-#{version}-osx.pkg"
+  name 'hubiC'
   homepage 'https://hubic.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

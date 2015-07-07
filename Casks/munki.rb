@@ -1,13 +1,15 @@
 cask :v1 => 'munki' do
-  version '2.0.1'
-  sha256 'f4b586c254fcd47f54d4b58ea7c43308ee1472b41f03e7b59ceb9fd6605a54b8'
+  version '2.1.1.2352'
+  sha256 'd2287454a1b3aa66ef49e41a34dfa55cfffd45d3e00de5d2288b3fd7ced2e42c'
 
-  url "https://github.com/munki/munki/releases/download/v#{version}/munkitools-#{version}.2253.pkg"
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/munki/munki/releases/download/v#{version}/munkitools-#{version}.pkg"
+  appcast 'https://github.com/munki/munki/releases.atom'
   name 'Munki'
-  homepage 'http://munki.github.io/munki/'
-  license :oss
+  homepage 'https://www.munki.org/munki/'
+  license :apache
 
-  pkg "munkitools-#{version}.2253.pkg"
+  pkg "munkitools-#{version}.pkg"
 
   uninstall :pkgutil => 'com.googlecode.munki.*'
 end

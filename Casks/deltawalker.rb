@@ -1,12 +1,14 @@
 cask :v1 => 'deltawalker' do
-  version '2.0.1'
-  sha256 'eae3127fb05d84885c91e7ce5da5277aaaf128fd53225d1721d66456719b82fa'
+  version '2.1.2'
+  sha256 '4ce4f47347df1c475fd631b52c246b1486aa92645fd6345acd8941d9f186afb0'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/deltawalker/DeltaWalker-#{version}_64.dmg"
   name 'DeltaWalker'
-  homepage 'http://www.deltopia.com/compare-merge-sync/macosx/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'http://www.deltawalker.com/'
+  license :commercial
+
+  depends_on :macos => '>= :tiger'
 
   app 'DeltaWalker.app'
 end

@@ -4,8 +4,10 @@ cask :v1 => 'air-connect' do
 
   url 'http://downloads.avatron.com/AirConnectInstaller.zip'
   name 'Air Connect'
-  homepage 'http://www.avatron.com/get-air-connect/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  appcast 'https://avatron.com/updates/software/airconnect_mac/appcast.xml',
+          :sha256 => 'af9bc6dc41bc632995c4e49b958a5623bc091ac0fe1fb337fbc9a571cfc1e85b'
+  homepage 'https://avatron.com/get-air-connect/'
+  license :gratis
 
   app 'Air Connect.app'
 end

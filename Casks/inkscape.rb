@@ -1,13 +1,16 @@
 cask :v1 => 'inkscape' do
-  version '0.48.5-2'
-  sha256 '72191861ee19a4e047d9084c7181a5ccf6e89d9b4410e197a98c2e1027e65e72'
+  version '0.91-1'
+  sha256 '66c9af880f87d5b64006391fc8dd2d3f546d93d6d91235eba7856deacba29862'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/inkscape/Inkscape-#{version}+X11.dmg"
-  homepage 'http://inkscape.org'
-  license :oss
+  # fastly.net is the official download host per the vendor homepage
+  url "https://inkscape.global.ssl.fastly.net/media/resources/file/Inkscape-#{version}-x11-10.7-x86_64.dmg"
+  name 'Inkscape'
+  homepage 'https://inkscape.org/'
+  license :gpl
 
   app 'Inkscape.app'
+  # NOTE: running inkscape on the command line requires absolute paths to files
+  binary 'Inkscape.app/Contents/Resources/bin/inkscape'
 
   zap :delete => '~/.inkscape-etc'
 
