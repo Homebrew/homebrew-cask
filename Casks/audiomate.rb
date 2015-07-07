@@ -1,9 +1,9 @@
 cask :v1 => 'audiomate' do
-  version '2.1.3'
-  sha256 'fffa5e90da27800bd619e10d60383d2999bac7411cefc8d05b29d53c19a4a510'
+  version '2.2.3_122'
+  sha256 '7065294d5ccbc72ba7da3b0c23a3ba52aa9a051e7c94694b96e6e3b422168eb6'
 
   # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3.amazonaws.com/downloads.troikalabs.com/audiomate/#{version}/72/AudioMate-v#{version}.dmg"
+  url "https://s3.amazonaws.com/downloads.9labs.io/audiomate/#{version.sub(%r{_.*},'')}/#{version.sub(%r{.*_},'')}/AudioMate-v#{version.sub(%r{_.*},'')}.dmg"
   name 'AudioMate'
   homepage 'http://audiomateapp.com/'
   license :mit
