@@ -1,6 +1,6 @@
 cask :v1 => 'igetter' do
-  version '2.9.2'
-  sha256 '86fd84cbd16ad975e586498cad89a7784087a62e11ba969000a1d48a0b634461'
+  version '2.9.3'
+  sha256 '52bf136958415abf4f6522fca6ee66e19bb35d5f7c523321fbd72add557fe7ae'
 
   url "http://www.igetter.net/search/downloads/iGetter#{version}.dmg"
   name 'iGetter'
