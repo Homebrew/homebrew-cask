@@ -17,4 +17,6 @@ cask :v1 => 'itunes-producer' do
   pkg 'iTunesProducer.pkg'
 
   depends_on :macos => '>= :snow_leopard'
+
+  uninstall :pkgutil => 'com.apple.pkg.iTunesProducer'
 end
