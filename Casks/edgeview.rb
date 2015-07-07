@@ -6,6 +6,9 @@ cask :v1 => 'edgeview' do
   url "https://dl.dropboxusercontent.com/u/168552/edgeViewUpdate/files/EdgeView_#{version.sub(%r{^\d+\.},'')}.zip"
   name 'EdgeView'
   homepage 'https://edgehigh.wordpress.com'
+  appcast 'https://dl.dropboxusercontent.com/u/168552/edgeViewUpdate/edgeView_update.xml',
+          :sha256 => 'c68970c8104ce2cc5cf9796abff746051f0632ae8872647327a557f845196813',
+          :format => :sparkle
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'EdgeView.app'
