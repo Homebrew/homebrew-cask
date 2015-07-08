@@ -16,4 +16,8 @@ cask :v1 => 'darteditor' do
   license :bsd
 
   app 'dart/DartEditor.app'
+
+  caveats do
+    discontinued
+  end
 end
