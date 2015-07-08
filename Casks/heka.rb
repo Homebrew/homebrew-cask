@@ -1,6 +1,6 @@
 cask :v1 => 'heka' do
-  version '0.9.1'
-  sha256 'edea54077c5a23848100310bfb8777c02bb2d7a4e52bfba0d0456852b1140395'
+  version '0.9.2'
+  sha256 '5fef4af06b97bf926fbec7ecb5c7983eed80601d56b2bedac02dad6b8677a094'
 
   url "https://github.com/mozilla-services/heka/releases/download/v#{version}/heka-#{version.gsub('.', '_')}-darwin-amd64.dmg"
   name 'heka'
