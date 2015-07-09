@@ -176,17 +176,7 @@ Even more special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE
 SourceForge projects are a common way to distribute binaries, but they
 provide many different styles of URLs to get to the goods.
 
-We prefer URLs of this format, if the app is Mac-exclusive
-(otherwise a command-line download defaults to the Windows version):
-
-```
-http://sourceforge.net/projects/$PROJECTNAME/files/latest/download
-```
-
-This lets SourceForge pick the best mirror for download.
-
-If the "latest" URL does not point to a valid file for a Mac app, then we
-fall back to this format:
+We prefer URLs of this format:
 
 ```
 http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
@@ -199,6 +189,14 @@ http://$STRING.sourceforge.jp/$PROJECTNAME/$RELEASEID/$FILENAME.$EXT
 ```
 
 `$STRING` is typically of the form `dl` or `$USER.dl`.
+
+If these formats are not available, and the application is Mac-exclusive
+(otherwise a command-line download defaults to the Windows version)
+we prefer the use of this format:
+
+```
+http://sourceforge.net/projects/$PROJECTNAME/files/latest/download
+```
 
 ### Personal Hosting Such as Dropbox
 
