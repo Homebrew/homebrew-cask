@@ -8,6 +8,8 @@ cask :v1 => 'remote-desktop-connection' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
   tags :vendor => 'Microsoft'
 
+  depends_on :macos => '>= :leopard'
+
   pkg 'RDC Installer.mpkg'
 
   uninstall :pkgutil => 'com.microsoft.rdc.all.*'
@@ -15,6 +17,4 @@ cask :v1 => 'remote-desktop-connection' do
   caveats do
     discontinued
   end
-
-  depends_on :macos => '<= :snow_leopard'
 end
