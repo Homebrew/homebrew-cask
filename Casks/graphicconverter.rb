@@ -4,6 +4,8 @@ cask :v1 => 'graphicconverter' do
 
   # lemkesoft.org is the official download host per the vendor homepage
   url "http://www.lemkesoft.org/files/graphicconverter/gc#{version}.dmg"
+  appcast 'http://www.lemkesoft.org/files/graphicconverter/graphicconverter9.xml',
+          :sha256 => '9c9a6a1078dddc8487a3676e9d13bd78929de3c68d75c635b01732d9409a238c'
   name 'GraphicConverter'
   homepage 'http://www.lemkesoft.de/en/products/graphicconverter/'
   license :commercial
