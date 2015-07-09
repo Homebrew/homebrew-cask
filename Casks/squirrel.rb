@@ -4,8 +4,10 @@ cask :v1 => 'squirrel' do
 
   url "https://dl.bintray.com/lotem/rime/Squirrel-#{version}.zip"
   name 'Squirrel'
-  homepage 'https://github.com/lotem/squirrel'
+  homepage 'https://github.com/rime/squirrel'
   license :gpl
+
+  depends_on :macos => '>= :lion'
 
   pkg 'Squirrel.pkg'
 
