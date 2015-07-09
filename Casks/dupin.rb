@@ -8,6 +8,8 @@ cask :v1 => 'dupin' do
   end
 
   url "http://dougscripts.com/itunes/scrx/dupinv#{version.gsub('.','')}.zip"
+  appcast 'http://dougscripts.com/itunes/itinfo/dupin_appcast.xml',
+          :sha256 => '7d8ad3a9a08acc11723de678f2a6b542eb832c1e16cd33546fe6550656634778'
   name 'Dupin'
   homepage 'http://dougscripts.com/apps/dupinapp.php'
   license :commercial
