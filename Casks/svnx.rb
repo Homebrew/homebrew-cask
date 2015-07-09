@@ -7,7 +7,7 @@ cask :v1 => 'svnx' do
   appcast 'https://svnx.googlecode.com/svn/wiki/svnX.rss.xml',
           :sha256 => '35166bbbcb22ee3704eddabcf6946eb60f415859c198c8b5480b346334c91056'
   homepage 'https://code.google.com/p/svnx/'
-  license :oss
+  license :gratis
 
   app 'svnX.app'
 end
