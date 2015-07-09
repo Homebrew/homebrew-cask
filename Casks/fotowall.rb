@@ -6,7 +6,7 @@ cask :v1 => 'fotowall' do
   url "https://fotowall.googlecode.com/files/Fotowall-#{version}-OSX.dmg"
   name 'Fotowall'
   homepage 'http://www.enricoros.com/opensource/fotowall/'
-  license :oss
+  license :gpl
 
   app 'Fotowall.app'
 end
