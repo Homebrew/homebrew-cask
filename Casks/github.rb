@@ -3,6 +3,8 @@ cask :v1 => 'github' do
   sha256 :no_check
 
   url 'https://central.github.com/mac/latest'
+  appcast 'https://central.github.com/mac/appcast.xml',
+          :sha256 => 'f67f6cc4f51758d15ff4e55173ce2976f312e5bb551b74d00198fd0d41dd9109'
   name 'GitHub'
   homepage 'https://mac.github.com/'
   license :oss
