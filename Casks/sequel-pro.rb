@@ -8,7 +8,9 @@ cask :v1 => 'sequel-pro' do
           :sha256 => 'd6137595bccddd81edfb3a07a82b4ed818b8b1af79750397f929bf74b91d3e32'
   name 'Sequel Pro'
   homepage 'http://www.sequelpro.com/'
-  license :oss
+  license :mit
+
+  depends_on :macos => '>= :leopard'
 
   app 'Sequel Pro.app'
 
