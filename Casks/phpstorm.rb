@@ -10,8 +10,8 @@ cask :v1 => 'phpstorm' do
   app 'PhpStorm.app'
 
   zap :delete => [
-                  '~/Library/Application Support/WebIde80',
-                  '~/Library/Preferences/WebIde80',
+                  '~/Library/Application Support/WebIde90',
+                  '~/Library/Preferences/WebIde90',
                   '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
                  ]
   caveats <<-EOS.undent
