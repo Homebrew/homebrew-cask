@@ -4,6 +4,8 @@ cask :v1 => 'find-any-file' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "http://files.tempel.org.s3.amazonaws.com/FindAnyFile_#{version}.zip"
+  appcast 'http://apps.tempel.org/FindAnyFile/appcast.xml',
+          :sha256 => '37b1ce4c9484e8a57cf0bdc26790ca7eeab4eb7975ec113a900cee789e2398ba'
   name 'Find Any File'
   homepage 'http://apps.tempel.org/FindAnyFile/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
