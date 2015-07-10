@@ -14,10 +14,10 @@ cask :v1 => 'korean-spelling-checker' do
             :sudo => false
 
   postflight do
-    system "/System/Library/CoreServices/pbs", "-flush"
+    system '/System/Library/CoreServices/pbs', '-flush'
   end
   
   uninstall_postflight do
-    system "/System/Library/CoreServices/pbs", "-flush"
+    system '/System/Library/CoreServices/pbs', '-flush'
   end
 end
