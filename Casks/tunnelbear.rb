@@ -1,6 +1,6 @@
 cask :v1 => 'tunnelbear' do
-  version '2.5.1'
-  sha256 '6790c18577bc04f3e0e7172769b03057317594d7d9989595754ef4a835e1d08b'
+  version '2.5.2'
+  sha256 '1ae3f205601e5a5b6bb5d93b870911e7ae5888186b76c9cd72dad6bcbb2d584b'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version}.zip"
