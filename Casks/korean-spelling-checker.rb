@@ -12,4 +12,12 @@ cask :v1 => 'korean-spelling-checker' do
   installer :script => '/System/Library/CoreServices/pbs',
             :args => %w[-flush],
             :sudo => false
+
+  postflight do
+    system "/System/Library/CoreServices/pbs", "-flush"
+  end
+  
+  uninstall_postflight do
+    system "/System/Library/CoreServices/pbs", "-flush"
+  end
 end
