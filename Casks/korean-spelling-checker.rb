@@ -9,10 +9,6 @@ cask :v1 => 'korean-spelling-checker' do
 
   service '✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
 
-  installer :script => '/System/Library/CoreServices/pbs',
-            :args => %w[-flush],
-            :sudo => false
-
   postflight do
     system '/System/Library/CoreServices/pbs', '-flush'
   end
