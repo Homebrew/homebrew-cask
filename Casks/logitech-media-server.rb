@@ -8,4 +8,6 @@ cask :v1 => 'logitech-media-server' do
   license :gpl
 
   pkg "LogitechMediaServer-#{version}.pkg"
+  uninstall :pkgutil => 'com.logitech.music.Squeezebox'
+  zap :delete => '~/Library/Preferences/com.slimdevices.slim.plist'
 end
