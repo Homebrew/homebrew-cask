@@ -9,12 +9,8 @@ cask :v1 => 'photo-supreme-postgresql' do
 
   pkg 'PhotoSupremePostgreSQL_V3.pkg'
 
-# Actually we need >= 10.6.8, but it doesn't look like you can use anything
-# other than n.m in the version check
   depends_on :macos => '>= 10.7'
 
-# We need postgresql >=9, but since the default is now at 9.4, might as well
-# just do that
   depends_on :formula => 'postgresql'
 
   uninstall :pkgutil => 'com.idimager.idimagersu'
