@@ -14,5 +14,4 @@ cask :v1 => 'photo-supreme-postgresql' do
   depends_on :formula => 'postgresql'
 
   uninstall :pkgutil => 'com.idimager.idimagersu'
-
 end
