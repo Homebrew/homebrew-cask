@@ -8,6 +8,7 @@ cask :v1 => 'atom' do
   name 'Atom'
   homepage 'https://atom.io/'
   license :mit
+  tags :vendor => 'Github'
 
   depends_on :macos => '>= :mountain_lion'
 
