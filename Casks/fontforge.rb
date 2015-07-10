@@ -9,4 +9,6 @@ cask :v1 => 'fontforge' do
   license :bsd
 
   app 'FontForge.app'
+  
+  depends_on :cask => 'xquartz'
 end
