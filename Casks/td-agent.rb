@@ -1,6 +1,6 @@
 cask :v1 => 'td-agent' do
-  version '2.1.1'
-  sha256 '388f418e9bd7a2314335eb37bc62b5c2cc1b61fdf1f1d29f74a99dc020f486bb'
+  version '2.1.4'
+  sha256 '14ffe35c81622590b0fa65f7ce61b6db39a1035fe7c4b4a10eae77e2901845c7'
 
   url "http://packages.treasuredata.com/2/macosx/td-agent-#{version}-0.dmg"
   name 'td-agent'
