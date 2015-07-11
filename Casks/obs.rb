@@ -1,6 +1,6 @@
 cask :v1 => 'obs' do
-  version '0.10.1'
-  sha256 '3ac583ff22510fc6d22dcebbad8dc88ea7c5e454e1500b7b4f8a05afade9b2d3'
+  version '0.11.1'
+  sha256 'f7732b15c56c23246ffa8c8545e9f8c5501652eb516bedff76469cb70db8dc1b'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/jp9000/obs-studio/releases/download/#{version}/obs-#{version}-installer.dmg"
