@@ -12,7 +12,6 @@ cask :v1 => 'korean-spelling-checker' do
   postflight do
     system '/System/Library/CoreServices/pbs', '-flush'
   end
-  
   uninstall_postflight do
     system '/System/Library/CoreServices/pbs', '-flush'
   end
