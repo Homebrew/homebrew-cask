@@ -9,7 +9,7 @@ cask :v1 => 'obs' do
   homepage 'https://obsproject.com/'
   license :gpl
 
-  pkg 'OBS.mpkg'
+  pkg 'OBS.pkg'
 
   uninstall :pkgutil => 'org.obsproject.pkg.obs-studio',
             :delete => '/Applications/SyphonInject.app'
