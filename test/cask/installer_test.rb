@@ -260,7 +260,7 @@ describe Hbc::Installer do
         Hbc::Installer.new(nested_app).install
       end
 
-      dest_path = Hbc.appdir.join('MyNestedApp.app')
+      dest_path = Hbc.appdir.join('MyNestedApp.app/Contents')
       TestHelper.valid_alias?(dest_path).must_equal true
     end
 
