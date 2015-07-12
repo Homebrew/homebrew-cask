@@ -1,8 +1,8 @@
 cask :v1 => 'appfresh' do
-  version :latest
-  sha256 :no_check
+  version '1.0.5_909'
+  sha256 'e4d4e719bebf17f0ea5e7336e5da84d032b26dfaefa2f5102250fe9a208674cc'
 
-  url 'http://backend.metaquark.de/download/appfresh'
+  url "http://backend.metaquark.de/download/appfresh/versions/#{version.sub(%r{.*_},'')}"
   name 'AppFresh'
   appcast 'http://backend.metaquark.de/appcast/appfresh.xml'
   homepage 'http://metaquark.de/appfresh/mac'
