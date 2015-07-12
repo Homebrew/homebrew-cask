@@ -1,8 +1,8 @@
 cask :v1 => 'finderminder' do
-  version :latest
-  sha256 :no_check
+  version '1.2'
+  sha256 '9123db1552c5b8f1a65fde3a0bcee8007bc7f6d04364f586a53fc4f1ad27797e'
 
-  url 'https://www.irradiatedsoftware.com/download/FinderMinder.zip'
+  url "https://www.irradiatedsoftware.com/downloads/FinderMinder_#{version}.zip"
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/finderminder.php',
           :sha256 => 'f546195134c20f6b04600b97c089467afeb02c7c3c86e683ca9545fbe8d49770'
   name 'FinderMinder'
