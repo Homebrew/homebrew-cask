@@ -1,9 +1,9 @@
 cask :v1 => 'seafile-client' do
-  version '4.1.3'
-  sha256 '936da2e40ae38cf0594af4040a2395f712b14d6aefc39e1d13d2f3f587a922c4'
+  version '4.2.7'
+  sha256 '6633db00b2498e159683ce620dac6a0316fb1f0ed43f3aa96a812b82b65b0608'
 
-  # bitbucket.org is the official download host per the vendor homepage
-  url "https://bitbucket.org/haiwen/seafile/downloads/seafile-client-#{version}.dmg"
+  # bintray.com is the official download host per the vendor homepage
+  url "https://bintray.com/artifact/download/seafile-org/seafile/seafile-client-#{version}.dmg"
   name 'Seafile Client'
   homepage 'http://seafile.com/'
   license :gpl
