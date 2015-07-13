@@ -1,8 +1,8 @@
 cask :v1 => 'beamer' do
-  version :latest
-  sha256 :no_check
+  version '2.1.2'
+  sha256 'c88b6e15fc725174d3ffeb7212ab1ef3dbf6d77e3b03a717b84939727f30390e'
 
-  url 'http://beamer-app.com/download'
+  url "http://tupil-beamer.s3.amazonaws.com/Beamer-#{version}.zip"
   name 'Beamer'
   appcast 'http://beamer-app.com/beamer2-appcast.xml'
   homepage 'http://beamer-app.com'
