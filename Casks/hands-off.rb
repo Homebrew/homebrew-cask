@@ -11,5 +11,9 @@ cask :v1 => 'hands-off' do
 
   app 'Hands Off!.app'
 
+  postflight do
+    suppress_move_to_applications
+  end
+
   zap :delete => '~/Library/Preferences/com.metakine.handsoff.plist'
 end
