@@ -1,6 +1,6 @@
 cask :v1 => 'simon' do
-  version '3.6.1'
-  sha256 '19a3395bdfd0c8c400c4e489e6d6ff192415661033e91023fc4c9297b28b4168'
+  version '4.0.3'
+  sha256 '227ac2b8cf042b090cb0d14904e8be61edd97eac980d2b2e9fba76815350afc7'
 
   url "http://www.dejal.com/download/simon-#{version}.zip"
   appcast 'http://www.dejal.com/appcast/?prod=simon',
