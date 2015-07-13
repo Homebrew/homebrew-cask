@@ -1,11 +1,11 @@
 cask :v1 => 'graphicconverter' do
-  version '9_build1780'
-  sha256 '034918633b8cac8dd2cbc0613c8ff5be29e6f5dbba909b46d29d61ee0ba1d943'
+  version '9-2045'
+  sha256 '0782f98ecdef5adfc4fb0ea5319be8b604bb364c6f486a01d0e6dfb19c28b39d'
 
   # lemkesoft.org is the official download host per the vendor homepage
-  url "http://www.lemkesoft.org/files/graphicconverter/gc#{version}.dmg"
+  url "http://www.lemkesoft.org/files/graphicconverter/gc#{version.to_i}_build#{version.sub(%r{^\d-},'')}.dmg"
   appcast 'http://www.lemkesoft.org/files/graphicconverter/graphicconverter9.xml',
-          :sha256 => '9c9a6a1078dddc8487a3676e9d13bd78929de3c68d75c635b01732d9409a238c'
+          :sha256 => '727b14e6a9a5e34792bbcf49ce4e088eeab4e665c73d756aac62fa1c9f24a397'
   name 'GraphicConverter'
   homepage 'http://www.lemkesoft.de/en/products/graphicconverter/'
   license :commercial
