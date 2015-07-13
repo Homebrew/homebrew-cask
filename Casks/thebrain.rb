@@ -1,11 +1,11 @@
 cask :v1 => 'thebrain' do
-  version '8.0.1.2'
-  sha256 '2ac492c6defc6d1156de434e84272daf9deb26edf7581da737ac077b244ad7f7'
+  version '8.0.1.8'
+  sha256 'c8bac038d1aa041f03868dc9e1436e12935b467398b40f8dd9188d8b1f9ab751'
 
-  url "http://assets.thebrain.com/downloads/TheBrain_macos_J7_#{version.gsub('.', '_')}-a.dmg"
+  url "http://assets.thebrain.com/downloads/TheBrain_macos_JRE_#{version.gsub('.', '_')}.dmg"
   name 'TheBrain'
   homepage 'https://www.thebrain.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'TheBrain.app'
 end
