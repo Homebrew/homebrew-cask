@@ -1,5 +1,5 @@
 cask :v1 => 'unsplash-wallpaper' do
-  version "1132"
+  version '1132'
   sha256 'c00e83f17212dc9cd6768f090ecc41bdb30890ecc822a34f5196805ff87b134b'
 
   # devmate.com is the official download host per the vendor homepage
