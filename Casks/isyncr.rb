@@ -1,6 +1,6 @@
 cask :v1 => 'isyncr' do
-  version '5.0.3'
-  sha256 'd819a9063ce2bc8294464efae1518f0eb3882debfa86b84754be976ede50d6de'
+  version '5.0.8'
+  sha256 '1b1c0e6054b890fa7dd903cc680fd2543bc6b40b34cde2d23f4c2e355dcffb87'
 
   url "http://www.jrtstudio.com/files/iSyncr%20#{version}.pkg"
   name 'iSyncr'
