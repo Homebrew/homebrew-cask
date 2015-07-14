@@ -8,4 +8,6 @@ cask :v1 => 'not-tetris' do
   license :oss
 
   app "Not Tetris #{version}.app"
+
+  zap :delete => '~/Library/Application Support/LOVE/not_tetris_2'
 end
