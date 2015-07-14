@@ -1,6 +1,6 @@
 cask :v1 => 'tether' do
-  version '1.5.14'
-  sha256 '3c6b8a822b25fcc600ef05bf5b6025cec58efbf3dc37790a2eebf0320a68384e'
+  version '1.6.2'
+  sha256 'eee8e71c1b2c55d9f476ba6230bff977136a9fc871a2d837600f6aad020d9591'
 
   url "http://hellotether.com/downloads/Tether_v#{version}.zip"
   name 'Tether'
