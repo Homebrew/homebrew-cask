@@ -1,6 +1,6 @@
 cask :v1 => 'docker-compose' do
-  version '1.3.1'
-  sha256 '3df40490ecfe5c2e44ad1788a5451d8a8b624dea9774c87cb15b952a3f32458e'
+  version '1.3.2'
+  sha256 '0541bd54e4308bfd6e8648e02d1253f48c73f03ef561f697b599f3f4b0b5f61c'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/docker/compose/releases/download/#{version}/docker-compose-Darwin-x86_64"
