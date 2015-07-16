@@ -9,4 +9,8 @@ cask :v1 => 'dia' do
   license :gpl
 
   app 'Dia.app'
+
+  postflight do
+    system '/usr/bin/sed', '-i', '--', 's/exec/exec env DISPLAY=:0/g', "#{staged_path}/Dia.app/Contents/Resources/bin/dia"
+  end
 end
