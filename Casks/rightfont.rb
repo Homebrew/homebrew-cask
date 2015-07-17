@@ -5,9 +5,11 @@ cask :v1 => 'rightfont' do
   url 'http://rightfontapp.com/download/rightfont_beta.zip'
   name 'RightFont'
   appcast 'http://rightfontapp.com/update/appcast.xml',
-          :sha256 => '191f0fe73366e1209be47c2d1029a128c75635605c529b7bb91bfdf208f47d1d'
+          :sha256 => '9c35fd40ec7fb36ace330916c69cb6c16eca44448832f573d4979ad5e71096ef'
   homepage 'http://rightfontapp.com/'
   license :unknown
+
+  depends_on :macos => '>= :yosemite'
 
   app 'RightFont.app'
 end
