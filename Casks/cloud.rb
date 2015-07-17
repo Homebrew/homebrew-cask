@@ -1,6 +1,6 @@
 cask :v1 => 'cloud' do
-  version '3.3.0'
-  sha256 'd2a0dc3a2ecff33b18e1d98d2e51db2f9a63ee6ec795ba862346a718dd8bc41d'
+  version '3.5.3'
+  sha256 '5fd6e0e5e1a4c9d37150acda5df40cc35ef29fb75f20073c213c52e2647cd9f4'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/downloads.getcloudapp.com/mac/CloudApp-#{version}.dmg"
