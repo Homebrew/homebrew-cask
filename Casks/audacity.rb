@@ -1,6 +1,6 @@
 cask :v1 => 'audacity' do
   version '2.1.0'
-  sha256 '0485ab70a86ab6d500b9365b24d279f10971b9260f0b537142b48832f8f84389'
+  sha256 '818a4b8bbcb50878a8b1b9f71b4274d242ab46bf860c74676e98dec1d0248821'
 
   url "http://downloads.sourceforge.net/project/audacity/audacity/#{version}/audacity-macosx-ub-#{version}.dmg"
   name 'Audacity'
