@@ -10,7 +10,7 @@ cask :v1 => 'bitdefender-adware-removal-tool' do
   app 'Adware Removal Tool.app'
 
   uninstall :pkgutil => 'com.bitdefender.Adware-Removal-Tool'
-  zap :trash =>[
+  zap :trash => [
     '~/Library/Preferences/com.bitdefender.com.bitdefender.Adware-Removal-Tool.plist',
     '~/Library/Saved Application State/com.com.bitdefender.Adware-Removal-Tool.savedState'
   ]
