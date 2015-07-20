@@ -1,10 +1,10 @@
 cask :v1 => 'launchcontrol' do
-  version '1.20.2'
-  sha256 'c85787f0ffd89e5a9cc49423a84145d894907be453d875413bc8b8ec132d9915'
+  version '1.21'
+  sha256 'fba3553f58abc5af121eb53868bdeac2ffb2d4df0d253a69ef7e5f70e476a060'
 
   url "http://www.soma-zone.com/download/files/LaunchControl_#{version}.tar.bz2"
   appcast 'http://www.soma-zone.com/LaunchControl/a/appcast.xml',
-          :sha256 => 'b912be992e090a301ab4909d14502d2c855bd7fa5d94bb709713a5f167d478fa'
+          :sha256 => '19eb4db9db87a0ecfc852a34d4506ec7698eef58b5bc3d956bb37bd0e46222ac'
   name 'LaunchControl'
   homepage 'http://www.soma-zone.com/LaunchControl/'
   license :commercial
