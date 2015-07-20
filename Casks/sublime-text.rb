@@ -8,7 +8,7 @@ cask :v1 => 'sublime-text' do
           :sha256 => 'e11769f18c577d4cb189c6f6485119a66db5e5d3ba4df99326080f193c1f74b3'
   name 'Sublime Text'
   homepage 'https://www.sublimetext.com/2'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :closed
 
   app 'Sublime Text 2.app'
   binary 'Sublime Text 2.app/Contents/SharedSupport/bin/subl'
