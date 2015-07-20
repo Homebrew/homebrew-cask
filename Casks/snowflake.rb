@@ -10,4 +10,8 @@ cask :v1 => 'snowflake' do
   license :commercial
 
   app 'Snowflake.app'
+
+  caveats do
+    discontinued
+  end
 end
