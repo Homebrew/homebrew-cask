@@ -7,7 +7,7 @@ cask :v1 => 'isyncr' do
   homepage 'http://www.jrtstudio.com/iSyncr-iTunes-for-Android'
   license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  pkg "iSyncr #{version}.pkg"
+  pkg "iSyncr Desktop #{version}.pkg"
 
   uninstall :pkgutil => 'com.test.iSyncr.pkg',
             :quit    => 'com.JRTStudio.iSyncrWiFi'
