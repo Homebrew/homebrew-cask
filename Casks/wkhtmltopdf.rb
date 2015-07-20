@@ -22,7 +22,10 @@ cask :v1 => 'wkhtmltopdf' do
   uninstall :pkgutil => 'org.wkhtmltopdf.wkhtmltox',
             :delete  => [
                           '/usr/local/include/wkhtmltox',
-                          '/usr/local/lib/libwkhtmltox.*',
+                          '/usr/local/lib/libwkhtmltox.dylib',
+                          "/usr/local/lib/libwkhtmltox.#{version.to_i}.dylib",
+                          "/usr/local/lib/libwkhtmltox.#{version.to_f}.dylib",
+                          "/usr/local/lib/libwkhtmltox.#{version.sub(%r{-.*$},'')}.dylib",
                           '/usr/local/bin/wkhtmltoimage',
                           '/usr/local/bin/wkhtmltopdf'
                         ]
