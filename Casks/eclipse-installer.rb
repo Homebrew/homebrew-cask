@@ -6,6 +6,7 @@ cask :v1 => 'eclipse-installer' do
   name 'Eclipse Installer'
   homepage 'http://eclipse.org/'
   license :eclipse
+
   depends_on :macos => '>= :leopard'
   depends_on :arch => :x86_64
 
