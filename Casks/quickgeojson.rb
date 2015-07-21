@@ -1,8 +1,8 @@
 cask :v1 => 'quickgeojson' do
-  version '1.0'
-  sha256 '7f4cd78619e2ea12f4afcba017f08d72468dc1c9268f2b2ed6f1690bd4e3fa86'
+  version '1.1'
+  sha256 '48a30865f3183c086c9ac70003276e2356c2fd4468e8818b0b2ec5adb3366332'
 
-  url "https://github.com/irees/quickgeojson/releases/download/#{version}/quickgeojson.qlgenerator.zip"
+  url "https://github.com/irees/quickgeojson/releases/download/v#{version}/quickgeojson.qlgenerator.zip"
   appcast 'https://github.com/irees/quickgeojson/releases.atom'
   name 'quickgeojson'
   homepage 'https://github.com/irees/quickgeojson'
