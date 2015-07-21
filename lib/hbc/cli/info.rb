@@ -15,6 +15,24 @@ class Hbc::CLI::Info < Hbc::CLI::Base
   end
 
   def self.info(cask)
+    out = info_report(cask)
+    metadata_versions_glob = Pathname.glob(cask.metadata_master_container_path.join('*'))
+    glob_size = metadata_versions_glob.size
+    if glob_size > 0 then
+      out << "\n#{glob_size} locally known version#{glob_size > 1 ? 's' : ''}:\n"
+    end
+    metadata_versions_glob.each do |ver_path|
+      out << "\n"
+      latest_timespamped_path = Pathname.glob(ver_path.join('*')).sort.last
+      src_path = latest_timespamped_path.join('Casks').join("#{cask.token}.rb")
+      out << "#{src_path}\n"
+      backedup_cask = Hbc::Source.for_query(src_path).load
+      out << info_report(backedup_cask)
+    end
+    out
+  end
+
+  def self.info_report(cask)
     installation = if cask.installed?
                      "#{cask.staged_path} (#{Hbc::Utils.cabv(cask.staged_path)})"
                    else
