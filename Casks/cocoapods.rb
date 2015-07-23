@@ -15,6 +15,6 @@ cask :v1 => 'cocoapods' do
 
   postflight do
     # Because Homebrew-Cask symlinks the binstub directly, stop the app from asking the user to install the binstub.
-    system 'defaults write org.cocoapods.CocoaPods CPRequestCLIToolInstallationAgain YES'
+    system 'defaults write org.cocoapods.CocoaPods CPDoNotRequestCLIToolInstallationAgain YES'
   end
 end
