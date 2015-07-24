@@ -61,6 +61,7 @@ before_script:
 script:
   - /System/Library/Frameworks/Ruby.framework/Versions/"${CASK_RUBY_TEST_VERSION}"/usr/bin/bundle exec "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/rake" test TESTOPTS="--seed=14830"
   - /System/Library/Frameworks/Ruby.framework/Versions/"${CASK_RUBY_TEST_VERSION}"/usr/bin/bundle exec "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/rake" rubocop
+  - developer/bin/audit_modified_casks "$TRAVIS_COMMIT_RANGE"
 
 notifications:
   irc:
