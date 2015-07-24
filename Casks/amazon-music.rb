@@ -1,8 +1,8 @@
 cask :v1 => 'amazon-music' do
-  version '3.9.5.543'
-  sha256 '845f19b0039a4dabf5661f8b8292d392b5d698ad591142bb52a9170df6e8644c'
+  version '3.10.0.663'
+  sha256 'b71c86dd0e2988ca4d914727c2c0226073c5717b5b80143b13c0f9619f11633c'
 
-  url 'https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/20150507/190803093e/AmazonMusicInstaller.dmg'
+  url 'https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/20150721/0452501530/AmazonMusicInstaller.dmg'
   name 'Amazon Music'
   homepage 'https://www.amazon.com/gp/feature.html/ref=dm_mo_cpw_fb_lm?docId=1001067901'
   license :gratis
