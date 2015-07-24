@@ -8,7 +8,6 @@ cask :v1 => 'google-cloud-sdk' do
   tags :vendor => 'Google'
   binary 'google-cloud-sdk/bin/bq'
   binary 'google-cloud-sdk/bin/gcloud'
-  binary 'google-cloud-sdk/bin/gcutil'
   binary 'google-cloud-sdk/bin/git-credential-gcloud.sh', :target => 'git-credential-gcloud'
   binary 'google-cloud-sdk/bin/gsutil'
   installer :script => 'google-cloud-sdk/install.sh',
