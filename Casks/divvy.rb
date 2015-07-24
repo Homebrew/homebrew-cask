@@ -1,8 +1,8 @@
 cask :v1 => 'divvy' do
-  version :latest
-  sha256 :no_check
+  version '1.4.1'
+  sha256 '225e5e8a1a9e145db588ca71710ffb41f5a7f926de5f48484710258d92b2a62a'
 
-  url 'https://mizage.com/downloads/Divvy.zip'
+  url "https://mizage.com/downloads/Divvy_#{version}.zip"
   appcast 'https://mizage.com/updates/profiles/divvy.php'
   name 'Divvy'
   homepage 'https://mizage.com/divvy/'
