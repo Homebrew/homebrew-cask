@@ -1,0 +1,119 @@
+#!/bin/bash
+#
+# audit_modified_casks
+#
+
+###
+### settings
+###
+
+set -o errexit
+set +o histexpand
+
+###
+### global variables
+###
+
+commit_range=''
+cask_dir='Casks'
+bin_dir='bin'
+brew_cask="$bin_dir/brew-cask"
+
+###
+### functions
+###
+
+warn () {
+    local message="$*"
+    message="${message//\\t/$'\011'}"
+    message="${message//\\n/$'\012'}"
+    message="${message%${message##*[![:space:]]}}"
+    printf "%s\n" "$message" 1>&2
+}
+
+die () {
+    warn "$@"
+    exit 1
+}
+
+usage () {
+    printf "audit_casks_modified_in_range <commit range>
+
+Given a range of Git commits, find any Casks that were modified
+and run \`brew cask audit\` on them. If one or both of the \`url\`
+or \`sha256\` stanzas were modified, run with the \`--download\`
+flag to verify the hash.
+
+"
+}
+
+cd_to_project_root () {
+    local script_dir git_root
+    script_dir="$(/usr/bin/dirname "$0")"
+    cd "$script_dir"
+    git_root="$(git rev-parse --show-toplevel)"
+    if [[ -z "$git_root" ]]; then
+        die 'ERROR: Could not find git project root'
+    fi
+    cd "$git_root"
+}
+
+audit_cask () {
+    local cask_file="$1"
+    if needs_verification "$cask_file"; then
+        "$brew_cask" audit --download "$cask_file"
+    else
+        "$brew_cask" audit "$cask_file"
+    fi
+}
+
+needs_verification () {
+    local cask_file="$1"
+    ! is_sha256_no_check "$cask_file" &&
+    file_diff "$cask_file" | is_url_or_sha256_modified
+}
+
+is_sha256_no_check () {
+    local cask_file="$1"
+    grep -q 'sha256\s*:no_check' "$cask_file"
+}
+
+file_diff () {
+    local cask_file="$1"
+    git diff "$commit_range" -- "$cask_file"
+}
+
+is_url_or_sha256_modified () {
+    grep -Eq '^\+\s*(url|sha256)'
+}
+
+modified_casks () {
+    modified_files | grep "^$cask_dir/"
+}
+
+modified_files () {
+    git diff --name-only --diff-filter=AM "$commit_range" --
+}
+
+###
+### main
+###
+
+_audit_modified_casks () {
+    commit_range="$1"
+    cd_to_project_root
+    while read -r cask_file; do
+        audit_cask "$cask_file"
+    done < <(modified_casks)
+}
+
+# process args
+if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
+    usage
+    exit
+fi
+
+# dispatch main
+_audit_modified_casks "$@"
+
+#
