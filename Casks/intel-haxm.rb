@@ -6,13 +6,17 @@ cask :v1 => 'intel-haxm' do
   name 'Intel HAXM'
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  container = { :type => :dmg, :nested => "haxm-macosx_r05/IntelHAXM_#{version}.dmg" }
 
-  container :nested => "haxm-macosx_r05/IntelHAXM_#{version}.dmg"
-
-  pkg "IntelHAXM_#{version}.mpkg"
+  if (MacOS.release >= :mountain_lion && MacOS.release <= :yosemite)
+    installer :script => 'silent_install.sh'
+  else
+    installer :manual => "IntelHAXM_#{version}.dmg"
+  end
 
   uninstall :script => {
-                        :executable => '/System/Library/Extensions/intelhaxm.kext/Contents/Resources/uninstall.sh',
-                        :input      => ['y']
-                       }
+    :executable => '/System/Library/Extensions/intelhaxm.kext/Contents/Resources/uninstall.sh',
+    :input      => ['y']
+  }
+
 end
