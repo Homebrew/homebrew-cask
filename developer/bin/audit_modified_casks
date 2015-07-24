@@ -70,7 +70,7 @@ audit_cask () {
 needs_verification () {
     local cask_file="$1"
     ! is_sha256_no_check "$cask_file" &&
-    file_diff "$cask_file" | is_url_or_sha256_modified
+    file_diff "$cask_file" | is_relevant_stanza_modified
 }
 
 is_sha256_no_check () {
@@ -83,8 +83,8 @@ file_diff () {
     git diff "$commit_range" -- "$cask_file"
 }
 
-is_url_or_sha256_modified () {
-    grep -Eq '^\+\s*(url|sha256)'
+is_relevant_stanza_modified () {
+    grep -Eq '^\+\s*(url|sha256|version)'
 }
 
 modified_casks () {
