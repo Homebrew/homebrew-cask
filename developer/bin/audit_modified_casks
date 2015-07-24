@@ -69,22 +69,23 @@ audit_cask () {
 
 needs_verification () {
     local cask_file="$1"
-    ! is_sha256_no_check "$cask_file" &&
-    file_diff "$cask_file" | is_relevant_stanza_modified
+    is_sha256_checked "$cask_file" &&
+    is_relevant_stanza_modified "$cask_file"
 }
 
-is_sha256_no_check () {
+is_sha256_checked () {
     local cask_file="$1"
-    grep -q 'sha256\s*:no_check' "$cask_file"
+    ! grep -q 'sha256\s*:no_check' "$cask_file"
+}
+
+is_relevant_stanza_modified () {
+    local cask_file="$1"
+    file_diff "$cask_file" | grep -Eq '^\+\s*(url|sha256|version)'
 }
 
 file_diff () {
     local cask_file="$1"
     git diff "$commit_range" -- "$cask_file"
-}
-
-is_relevant_stanza_modified () {
-    grep -Eq '^\+\s*(url|sha256|version)'
 }
 
 modified_casks () {
