@@ -12,9 +12,6 @@ cask :v1 => 'pandoc' do
   pkg "pandoc-#{version}-osx.pkg"
 
   uninstall :pkgutil => 'net.johnmacfarlane.pandoc'
-  caveats <<-EOS.undent
-    Note that homebrew also provides a compiled pandoc Formula that links its
-    binary to /usr/local/bin/pandoc. It's not recommended to install both the
-    Cask and the Formula of Pandoc.
-  EOS
+
+  conflicts_with :formula => 'pandoc'
 end
