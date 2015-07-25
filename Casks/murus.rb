@@ -1,6 +1,6 @@
 cask :v1 => 'murus' do
-  version '1.1.2'
-  sha256 'df4f1a005227cd3bd98ed3b1d1587ba7a30c4ec6e21c6c30d58284402e1b49a5'
+  version '1.3'
+  sha256 '66dd2d286b9567a02b8dafb83a7e848f8743d7dd6ef662e9b379496613442c50'
 
   url "http://www.murusfirewall.com/downloads/murus-#{version}.zip"
   name 'Murus Firewall'
@@ -10,8 +10,5 @@ cask :v1 => 'murus' do
   container :nested => "Murus #{version}.dmg"
   app 'Murus.app'
 
-  depends_on :macos => %w{
-                          :mavericks
-                          :yosemite
-                         }
+  depends_on :macos => '>= :mavericks'
 end
