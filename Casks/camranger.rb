@@ -4,8 +4,8 @@ cask :v1 => 'camranger' do
 
   url "http://www.camranger.com/downloadFiles/CamRanger_#{version.gsub('.', '_')}.dmg"
   name 'CamRanger'
-  homepage 'http://www.camranger.com/downloads/#fbox_5594'
+  homepage 'http://camranger.com/mac-downloads'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  app "#{version}/CamRanger.app"
+  app 'CamRanger.app'
 end
