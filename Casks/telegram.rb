@@ -1,14 +1,16 @@
 cask :v1 => 'telegram' do
-  version '0.8.38'
-  sha256 '1eadf4a061897070d993b2b17a208085834246548b8c6446f623e2710ec891a1'
+  version '1.71-598'
+  sha256 'aa6728944266d9c1877588d49aa83a38f3bbeb92f7f9bb5b6c64f833b2e8fa09'
 
-  # tdesktop.com is the official download host per the vendor homepage
-  url "https://updates.tdesktop.com/tmac/tsetup.#{version}.dmg"
+ # hockeyapp.net is the official download host per the appcast feed
+  url "https://rink.hockeyapp.net/api/2/apps/c55f5e74ae5d0ad254df29f71a1b5f0e/app_versions/#{version.sub(%r{^.*-},'')}?format=zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/c55f5e74ae5d0ad254df29f71a1b5f0e',
-          :sha256 => 'f15dbd6d38563e5e5bd66c71fd02c0e319642233e4853672760a55e6e390684f'
+          :sha256 => '836f03125c41b9dc0a13f542ff6e789c13d0be356f2698dc5d2b96fc63179b14'
   name 'Telegram'
   homepage 'https://telegram.org/'
   license :gpl
+
+  depends_on :macos => '>= :mountain_lion'
 
   app 'Telegram.app'
 end
