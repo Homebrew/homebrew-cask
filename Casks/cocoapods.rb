@@ -1,6 +1,6 @@
 cask :v1 => 'cocoapods' do
-  version '0.38.0'
-  sha256 'b9e2d3dd2c7acd7d37689e5393d1425fd048555f8faaf895d54a7aab66b49dc5'
+  version '0.38.2'
+  sha256 'f8e7e7335d6c70e35b57045f474e56fe2335b1fd85e5395f0dcdbb930b685231'
 
   url "https://github.com/CocoaPods/CocoaPods.app/releases/download/#{version}/CocoaPods.app-#{version}.tar.bz2"
   appcast 'https://app.cocoapods.org/sparkle'
