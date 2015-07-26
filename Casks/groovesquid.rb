@@ -5,7 +5,7 @@ cask :v1 => 'groovesquid' do
   url 'http://groovesquid.com/download.php?file=Groovesquid.dmg'
   name 'Groovesquid'
   homepage 'https://groovesquid.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Groovesquid.app'
 end
