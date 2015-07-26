@@ -5,6 +5,8 @@ cask :v1 => 'telegram' do
   # tdesktop.com is the official download host per the vendor homepage
   url "https://updates.tdesktop.com/tmac/tsetup.#{version}.dmg"
   name 'Telegram'
+  name 'Telegram Desktop'
+  name 'tdesktop'
   homepage 'https://telegram.org/'
   license :gpl
 
