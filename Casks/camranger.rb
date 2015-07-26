@@ -7,5 +7,5 @@ cask :v1 => 'camranger' do
   homepage 'http://camranger.com/mac-downloads'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  app "CamRanger.app"
+  app 'CamRanger.app'
 end
