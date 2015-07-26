@@ -7,7 +7,7 @@ cask :v1 => 'telegram' do
   name 'Telegram'
   name 'Telegram Desktop'
   name 'tdesktop'
-  homepage 'https://telegram.org/'
+  homepage 'https://desktop.telegram.org/'
   license :gpl
 
   app 'Telegram.app'
