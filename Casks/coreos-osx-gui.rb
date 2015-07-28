@@ -1,6 +1,6 @@
 cask :v1 => 'coreos-osx-gui' do
-  version '0.9.2'
-  sha256 'abc90b6954e684688e5169aacf7846312a8fd434f5644b122fc333ef1b2eb2c1'
+  version '0.9.3'
+  sha256 'd65fbb3d8f48a6525cc21eb52b1cd20b1a572f66c9b03440b311d8950edddf77'
 
   url "https://github.com/rimusz/coreos-osx-gui/releases/download/v#{version}/CoreOS_GUI_v#{version}.dmg"
   appcast 'https://github.com/rimusz/coreos-osx-gui/releases.atom'
