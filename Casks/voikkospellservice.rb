@@ -8,14 +8,14 @@ cask :v1 => 'voikkospellservice' do
   license :gpl
 
   service 'VoikkoSpellService.app'
-  
+
   zap :delete => [ '~/Library/Services/VoikkoSpellServices.app'	]
 
   preflight do
-  	system '/usr/bin/killall', '-kill', 'VoikkoSpellService'
+    system '/usr/bin/killall', '-kill', 'VoikkoSpellService'
   end
   uninstall_preflight do
-      system '/usr/bin/killall', '-kill', 'VoikkoSpellService'
+    system '/usr/bin/killall', '-kill', 'VoikkoSpellService'
   end
 
 end
