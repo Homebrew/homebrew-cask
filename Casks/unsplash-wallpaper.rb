@@ -7,7 +7,7 @@ cask :v1 => 'unsplash-wallpaper' do
   appcast 'http://updateinfo.devmate.com/com.leonspok.osx.Unsplash-Wallpaper/updates.xml',
           :sha256 => 'f1c0d391450a371bbb0f5ae3cfbf9d4630f26dce58618e216dedd56bb1015597'
   name 'Unsplash Wallpaper'
-  homepage 'http://leonspok.tumblr.com/unsplash-wallpaper'
+  homepage 'http://unsplash-wallpaper.tumblr.com'
   license :gratis
 
   depends_on :macos => '>= :mountain_lion'
