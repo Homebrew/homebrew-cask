@@ -1,6 +1,6 @@
 cask :v1 => 'vagrant-manager' do
-  version '2.4.1'
-  sha256 'ce01f4be6f0d6d514a74aa2fa0313b8b4b50de087610161ec1da6d472f9b8203'
+  version '2.4.2'
+  sha256 '785a20f21e27bb79cf528b60b9be2bf431937daed99e2047c2414580c3b47ff0'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/lanayotech/vagrant-manager/releases/download/#{version}/vagrant-manager-#{version}.dmg"
