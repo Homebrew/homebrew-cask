@@ -13,7 +13,7 @@ cask :v1 => 'sourcetree' do
           :sha256 => 'b43e0ea95de46d2c270cdbf9765e03ec3f13606cbf0bab5bcd3da0424ce2cff3'
   name 'SourceTree'
   homepage 'https://www.sourcetreeapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
   tags :vendor => 'Atlassian'
 
   app 'SourceTree.app'
