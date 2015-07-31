@@ -1,6 +1,6 @@
 cask :v1 => 'zotero' do
-  version '4.0.27.7'
-  sha256 'bb9b989f20638ca8f3e3250dfeed60ec46b254ed19fed6f70868bfdb790ae08c'
+  version '4.0.28'
+  sha256 '49fccdf461063cac3233c9472ce03cde690b8a6628fe964d17b269128b3e6c50'
 
   url "https://download.zotero.org/standalone/#{version}/Zotero-#{version}.dmg"
   name 'Zotero'
