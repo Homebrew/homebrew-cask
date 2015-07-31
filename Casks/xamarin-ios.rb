@@ -12,5 +12,8 @@ cask :v1 => 'xamarin-ios' do
 
   pkg "monotouch-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.xamarin.monotouch.pkg'
+  uninstall :pkgutil => [
+                         'com.xamarin.monotouch.pkg',
+                         'com.xamarin.xamarin-ios-build-host.pkg'
+                        ]
 end
