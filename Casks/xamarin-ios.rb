@@ -1,6 +1,6 @@
 cask :v1 => 'xamarin-ios' do
-  version '8.6.0.51'
-  sha256 'af65207d86529fff3ede3e6bc1d394fe7bc1abca67cc502e05c3d725710125c6'
+  version '8.10.3.2'
+  sha256 'fd3b51050ae6992a8209e6f31893673c9a7d90445529d0af7b766158ce3912c2'
 
   url "https://download.xamarin.com/MonoTouch/Mac/monotouch-#{version}.pkg"
   name 'Xamarin.iOS'
