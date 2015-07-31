@@ -6,7 +6,7 @@ cask :v1 => 'mactex' do
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version}.pkg"
   name 'MacTeX'
   homepage 'https://www.tug.org/mactex/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :oss
 
   pkg "mactex-#{version}.pkg"
 

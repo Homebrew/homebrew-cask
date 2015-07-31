@@ -1,8 +1,8 @@
 cask :v1 => 'dropzone' do
-  version :latest
-  sha256 :no_check
+  version '3.5.3'
+  sha256 '79a3c4dde4378cbfef3480048b9e72bbeeae43304f14a6a23160b0501a564516'
 
-  url 'https://aptonic.com/dropzone3/latest'
+  url "https://aptonic.com/dropzone3/sparkle/Dropzone-#{version}.zip"
   appcast 'https://aptonic.com/dropzone3/sparkle/updates.xml'
   name 'Dropzone'
   homepage 'https://aptonic.com'

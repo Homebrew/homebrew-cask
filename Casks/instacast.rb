@@ -10,4 +10,8 @@ cask :v1 => 'instacast' do
   license :commercial
 
   app 'Instacast.app'
+
+  caveats do
+    discontinued
+  end
 end

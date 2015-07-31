@@ -1,6 +1,6 @@
 cask :v1 => 'vagrant' do
-  version '1.7.3'
-  sha256 '3c6078d8ce9a9c01589b089034f0afcbe2f4908a7f77a1471360fc8011a18dc8'
+  version '1.7.4'
+  sha256 '3d2e680cc206ac1d480726052e42e193eabce56ed65fc79b91bc85e4c7d2deb8'
 
   # bintray.com is the official download host per the vendor homepage
   url "https://dl.bintray.com/mitchellh/vagrant/vagrant_#{version}.dmg"

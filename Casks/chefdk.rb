@@ -11,6 +11,10 @@ cask :v1 => 'chefdk' do
 
   pkg "chefdk-#{version}.pkg"
 
+  # When updating this formula, please verify the list of paths to delete (and
+  # add to it if necessary):
+  #  find /usr/bin -lname '/opt/chefdk/*'
+  # (Source: https://docs.chef.io/install_dk.html#mac-os-x)
   uninstall :pkgutil => 'com.getchef.pkg.chefdk',
             :delete  => [
                          '/opt/chefdk/',
@@ -23,11 +27,15 @@ cask :v1 => 'chefdk' do
                          '/usr/bin/chef-solo',
                          '/usr/bin/chef-vault',
                          '/usr/bin/chef-windows-service',
+                         '/usr/bin/chef-zero',
                          '/usr/bin/fauxhai',
                          '/usr/bin/foodcritic',
                          '/usr/bin/kitchen',
                          '/usr/bin/knife',
                          '/usr/bin/ohai',
                          '/usr/bin/rubocop',
+                         '/usr/bin/shef',
+                         '/usr/bin/strain',
+                         '/usr/bin/strainer',
                         ]
 end

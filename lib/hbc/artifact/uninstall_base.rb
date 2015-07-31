@@ -1,4 +1,5 @@
 require 'set'
+require 'pathname'
 
 class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
 
@@ -210,9 +211,22 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
         [false, true].each do |with_sudo|
           plist_status = @command.run('/bin/launchctl', :args => ['list', service], :sudo => with_sudo, :print_stderr => false).stdout
           if %r{^\{}.match(plist_status)
-            @command.run('/bin/launchctl',  :args => ['unload', '-w', '--', service], :sudo => with_sudo)
+            result = @command.run!('/bin/launchctl', :args => ['remove', service], :sudo => with_sudo)
+            if result.success?
+              paths = ["/Library/LaunchAgents/#{service}.plist",
+                       "/Library/LaunchDaemons/#{service}.plist"]
+              paths.each { |elt| elt.prepend('~') } unless with_sudo
+              paths = paths.map { |elt| Pathname(elt) }.select(&:exist?)
+              paths.each do |path|
+                @command.run!('/bin/rm', :args => ['-f', '--', path], :sudo => with_sudo)
+              end
+            end
             sleep 1
-            @command.run!('/bin/launchctl', :args => ['remove', service], :sudo => with_sudo)
+          end
+          # undocumented and untested: pass a path to uninstall :launchctl
+          if Pathname(service).exist?
+            @command.run!('/bin/launchctl', :args => ['unload', '-w', '--', service], :sudo => with_sudo)
+            @command.run!('/bin/rm',        :args => ['-f', '--', service], :sudo => with_sudo)
             sleep 1
           end
         end

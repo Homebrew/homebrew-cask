@@ -8,5 +8,5 @@ cask :v1 => 'calcservice' do
   homepage 'http://www.devontechnologies.com/products/freeware.html#c1111'
   license :gratis
 
-  service 'CalcService/CalcService.service'
+  app 'CalcService.app'
 end

@@ -1,13 +1,11 @@
 cask :v1 => 'groovesquid' do
-  version '0.9.3'
-  sha256 '5f7ad6c6ae6e47b993b6209021a12dfbba62a169a4cee7192e1b434319f43639'
+  version :latest
+  sha256 :no_check
 
-  # github.com is the official download host per the vendor homepage
-  url "https://github.com/groovesquid/groovesquid/releases/download/v#{version}/Groovesquid.dmg"
-  appcast 'https://github.com/groovesquid/groovesquid/releases.atom'
+  url 'https://groovesquid.com/download.php?file=Groovesquid.dmg'
   name 'Groovesquid'
   homepage 'https://groovesquid.com/'
-  license :gpl
+  license :gratis
 
   app 'Groovesquid.app'
 end

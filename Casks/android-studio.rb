@@ -17,7 +17,7 @@ cask :v1 => 'android-studio' do
   zap :delete => [
     '~/Library/Preferences/AndroidStudio*',
     '~/Library/Preferences/com.google.android.studio.plist',
-    '~/Library/Application\ Support/AndroidStudio*',
+    '~/Library/Application Support/AndroidStudio*',
     '~/Library/Logs/AndroidStudio*',
     '~/Library/Caches/AndroidStudio*',
   ],

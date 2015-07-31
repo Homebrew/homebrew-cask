@@ -4,7 +4,7 @@ cask :v1 => 'deezer' do
 
   url "https://cdns-content.deezer.com/builds/mac/Deezer#{version.sub(%r{^[^_]*(_\d+)},'\1')}.dmg"
   name 'Deezer'
-  homepage 'https://www.deezer.com/beta/formac'
+  homepage 'https://www.deezer.com/formac'
   license :gratis
 
   app 'Deezer.app'

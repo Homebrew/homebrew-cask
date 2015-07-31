@@ -30,12 +30,5 @@ cask :v1 => 'macvim' do
                   '~/Library/Preferences/org.vim.MacVim.plist',
                  ]
 
-  caveats do
-    files_in_usr_local
-    <<-EOS.undent
-      Note that homebrew also provides a compiled macvim Formula that links its
-      binary to /usr/local/bin/mvim. It's not recommended to install both the
-      Cask and the Formula of MacVim.
-    EOS
-  end
+  conflicts_with :formula => 'macvim'
 end
