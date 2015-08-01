@@ -1,6 +1,6 @@
 cask :v1 => 'navicat-data-modeler' do
-  version '2.0.3'
-  sha256 'a6879216efb39217d2f76ecea276480db5969964b12157f442e3ab8561fed91d'
+  version '2.0.4'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "http://download.navicat.com/download/modeler0#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_en.dmg"
   name 'Navicat Data Modeler'
