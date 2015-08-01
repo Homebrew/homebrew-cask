@@ -1,12 +1,13 @@
 cask :v1 => 'disk-drill' do
-  version '2.4.421'
-  sha256 '048cf05b3338b1392e0dd3585bf4d107ad6b7ac15a958983817593cbe328285c'
+  version '2.4.426'
+  sha256 '91107b0866bdc19d997f5dcfd3360dc3cace5afe9b072cd78f9f0146073694ec'
 
   url "http://www.cleverfiles.com/releases/DiskDrill_#{version}.zip"
-  appcast 'http://www.cleverfiles.com/releases/auto-update/dd2-newestr.xml'
+  appcast 'http://www.cleverfiles.com/releases/auto-update/dd2-newestr.xml',
+          :sha256 => '13eb31a4e92818faf847cc8d484ebed32750341f15faff6ef205921372efc9d8'
   name 'Disk Drill'
   homepage 'http://www.cleverfiles.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   app 'Disk Drill.app'
 
