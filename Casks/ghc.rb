@@ -1,6 +1,6 @@
 cask :v1 => 'ghc' do
-  version '7.10.1-r0'
-  sha256 '0daeeea37bad9cfb14d0240a531ced4f6cd8de2ceb5ec6f9328c5888f8c8abe0'
+  version '7.10.2-r0'
+  sha256 'b581a90ca6b6cf3c6f94304aac8b9018d95fa15e7b18c168efa434def1a249e5'
 
   url "https://github.com/ghcformacosx/ghc-dot-app/releases/download/v#{version}/ghc-#{version}.zip"
   appcast 'https://github.com/ghcformacosx/ghc-dot-app/releases.atom'
