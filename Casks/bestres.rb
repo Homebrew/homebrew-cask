@@ -8,5 +8,7 @@ cask :v1 => 'bestres' do
   homepage 'http://icyberon.com/bestres/'
   license :gratis
 
+  depends_on :macos => '>= :yosemite'
+
   app 'BestRes.app'
 end
