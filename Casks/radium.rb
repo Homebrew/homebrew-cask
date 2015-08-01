@@ -5,7 +5,7 @@ cask :v1 => 'radium' do
   url 'http://catpigstudios.com/Radium/updates/Radium.zip'
   name 'Radium'
   homepage 'http://catpigstudios.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Radium.app'
 end
