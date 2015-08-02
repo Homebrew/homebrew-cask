@@ -5,7 +5,7 @@ cask :v1 => 'colorpicker-propicker' do
   url "http://www.irradiated.net/appcasts/pro-picker/releases/#{version}/ProPicker.zip"
   name 'Pro Picker'
   homepage 'http://www.irradiated.net/?page=pro-picker'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   colorpicker 'ProPicker.colorPicker'
 end
