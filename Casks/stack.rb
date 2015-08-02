@@ -1,4 +1,4 @@
-cask :v1 => 'stack' do
+cask :v1_1 => 'stack' do
   version '0.1.2.0'
   sha256 '6e1039d9c5144fb03dbfb1f569a830724593191305998e9be87579d985feb36c'
 
