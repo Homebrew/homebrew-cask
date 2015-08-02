@@ -12,6 +12,6 @@ cask :v1 => 'dogestry' do
   binary "dogestry-darwin-#{version}", :target => 'dogestry'
 
   postflight do
-    system '/bin/chmod', '--', '0755', "#{staged_path}/dogestry-darwin-#{version}"
+    set_permissions "#{staged_path}/dogestry-darwin-#{version}", '0755'
   end
 end
