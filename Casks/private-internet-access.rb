@@ -1,4 +1,4 @@
-cask :v1 => 'private-internet-access' do
+cask :v1_1 => 'private-internet-access' do
   version :latest
   sha256 :no_check
 
