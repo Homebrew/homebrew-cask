@@ -10,8 +10,7 @@ cask :v1 => 'private-internet-access' do
   installer :script => 'Private Internet Access Installer.app/Contents/MacOS/runner.sh'
 
   postflight do
-    system '/usr/bin/sudo', '-E', '--',
-           '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", Pathname.new(File.expand_path('~')).join('.pia_manager')
+    set_ownership '~/.pia_manager'
   end
 
   uninstall :delete => '/Applications/Private Internet Access.app'
