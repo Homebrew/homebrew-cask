@@ -13,6 +13,6 @@ cask :v1 => 'onlabs' do
   binary 'onlabs_darwin_amd64', :target => 'onlabs'
 
   postflight do
-    system '/bin/chmod', '755', "#{staged_path}/onlabs_darwin_amd64"
+    set_permissions "#{staged_path}/onlabs_darwin_amd64", '755'
   end
 end
