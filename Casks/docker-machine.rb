@@ -13,7 +13,7 @@ cask :v1 => 'docker-machine' do
   binary 'docker-machine_darwin-amd64', :target => 'docker-machine'
 
   postflight do
-    system '/bin/chmod', '--', '0755', "#{staged_path}/docker-machine_darwin-amd64"
+    set_permissions "#{staged_path}/docker-machine_darwin-amd64", '0755'
   end
 
   depends_on :formula => 'docker'
