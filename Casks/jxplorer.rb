@@ -10,6 +10,6 @@ cask :v1 => 'jxplorer' do
 
   app "jxplorer-#{version}.app"
   postflight do
-    system '/bin/chmod', '--', 'a+x', "#{staged_path}/jxplorer-#{version}.app/Contents/MacOS/jxplorer"
+    set_permissions "#{staged_path}/jxplorer-#{version}.app/Contents/MacOS/jxplorer", 'a+x'
   end
 end
