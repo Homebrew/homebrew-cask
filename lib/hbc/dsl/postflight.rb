@@ -21,4 +21,20 @@ class Hbc::DSL::Postflight < Hbc::DSL::Base
     Hbc::Utils.method_missing_message(method, @cask.to_s, 'postflight')
     return nil
   end
+
+  def set_permissions(path, permissions_str)
+    full_path = Pathname(path).expand_path
+    @command.run!('/bin/chmod', args: ['-R', '--', permissions_str, full_path],
+                                sudo: true)
+  end
+
+  def set_ownership(path, user: current_user, group: 'staff')
+    full_path = Pathname(path).expand_path
+    @command.run!('/usr/sbin/chown', args: ['-R', '--', "#{user}:#{group}", full_path],
+                                     sudo: true)
+  end
+
+  def current_user
+    Etc.getpwuid(Process.euid).name
+  end
 end
