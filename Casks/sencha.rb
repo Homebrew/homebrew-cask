@@ -16,8 +16,7 @@ cask :v1 => 'sencha' do
                        }
 
   postflight do
-    system  '/usr/bin/sudo', '-E', '--',
-            '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", '/opt/Sencha'
+    set_ownership '/opt/Sencha'
   end
 
   caveats do
