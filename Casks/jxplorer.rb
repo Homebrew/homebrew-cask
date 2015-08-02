@@ -9,6 +9,7 @@ cask :v1 => 'jxplorer' do
   license :apache
 
   app "jxplorer-#{version}.app"
+
   postflight do
     set_permissions "#{staged_path}/jxplorer-#{version}.app/Contents/MacOS/jxplorer", 'a+x'
   end
