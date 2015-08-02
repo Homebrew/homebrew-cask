@@ -25,7 +25,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Depends_on Stanza Details](#depends_on-stanza-details)
  * [Conflicts_with Stanza Details](#conflicts_with-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
- * [Postflight Stanza Details](#postflight-stanza-details)
+ * [\*flight Stanza Details](#flight-stanzas-details)
  * [Zap Stanza Details](#zap-stanza-details)
  * [Arbitrary Ruby Methods](#arbitrary-ruby-methods)
  * [Revisions to the Cask DSL](#revisions-to-the-cask-dsl)
@@ -945,7 +945,7 @@ A fully manual method for finding bundle ids in a package file follows:
   5. Once bundle ids have been identified, the unpacked package directory can be deleted.
 
 
-## Postflight and Uninstall_preflight Stanza Details
+## \*flight Stanzas Details
 
 ### Evaluation of Blocks is Always Deferred
 
@@ -954,18 +954,18 @@ and `uninstall_postflight` are not evaluated until install time or uninstall
 time.  Within a block, you may refer to the `@cask` instance variable, and
 invoke any method available on `@cask`.
 
-### Postflight and Uninstall_preflight Mini-DSL
+### \*flight Mini-DSL
 
-There is a mini-DSL available within `postflight` blocks.
+There is a mini-DSL available within these blocks.
 
-The following methods may be called to perform standard postflight tasks:
+The following methods may be called to perform standard tasks:
 
-| method                                    | description |
-| ----------------------------------------- | ----------- |
-| `plist_set(key, value)`                   | set a value in the `Info.plist` file for the app bundle.  Example: [`rubymine.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/rubymine.rb#L12)
-| `set_ownership(paths)`                    | set user and group ownership of `paths`. Example: [`unifi-controller.rb`](https://github.com/caskroom/homebrew-cask/blob/8a452a41707af6a661049da6254571090fac5418/Casks/unifi-controller.rb#L13)
-| `set_permissions(paths, permissions_str)` | set permissions in `paths` to `permissions_str` Example: [`docker-machine.rb`](https://github.com/caskroom/homebrew-cask/blob/8a452a41707af6a661049da6254571090fac5418/Casks/docker-machine.rb#L16)
-| `suppress_move_to_applications`           | suppress a dialog asking the user to move the app to the `/Applications` folder.  Example: [`github.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/github.rb#L13).
+| method                                    | availability                        | description |
+| ----------------------------------------- | ----------------------------------- | ----------- |
+| `plist_set(key, value)`                   | `postflight`, `uninstall_preflight` | set a value in the `Info.plist` file for the app bundle.  Example: [`rubymine.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/rubymine.rb#L12)
+| `set_ownership(paths)`                    | `postflight`, `uninstall_preflight` | set user and group ownership of `paths`. Example: [`unifi-controller.rb`](https://github.com/caskroom/homebrew-cask/blob/8a452a41707af6a661049da6254571090fac5418/Casks/unifi-controller.rb#L13)
+| `set_permissions(paths, permissions_str)` | `postflight`, `uninstall_preflight` | set permissions in `paths` to `permissions_str` Example: [`docker-machine.rb`](https://github.com/caskroom/homebrew-cask/blob/8a452a41707af6a661049da6254571090fac5418/Casks/docker-machine.rb#L16)
+| `suppress_move_to_applications`           | `postflight`                        | suppress a dialog asking the user to move the app to the `/Applications` folder.  Example: [`github.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/github.rb#L13).
 
 `plist_set` currently has the limitation that it only operates on the
 bundle indicated by the first `app` stanza (and the Cask must contain
