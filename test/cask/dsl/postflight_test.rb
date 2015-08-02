@@ -35,24 +35,6 @@ describe Hbc::DSL::Postflight do
     @dsl.plist_set(':JVMOptions:JVMVersion', '1.6+')
   end
 
-  it "can suppress move to applications folder alert " do
-    @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
-
-    Hbc::FakeSystemCommand.expects_command(
-      ['/usr/bin/defaults', 'write', 'com.example.BasicCask', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true']
-    )
-    @dsl.suppress_move_to_applications
-  end
-
-  it "can suppress move to applications folder alert with a different key" do
-    @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
-
-    Hbc::FakeSystemCommand.expects_command(
-      ['/usr/bin/defaults', 'write', 'com.example.BasicCask', 'suppressMoveToApplications', '-bool', 'true']
-    )
-    @dsl.suppress_move_to_applications :key => 'suppressMoveToApplications'
-  end
-
   it "can set the permissions of a file" do
     Hbc::FakeSystemCommand.expects_command(
       ['/usr/bin/sudo', '-E', '--', '/bin/chmod', '-R', '--', '777', Pathname('/path/to/file')]
@@ -90,5 +72,23 @@ describe Hbc::DSL::Postflight do
       ['/usr/bin/sudo', '-E', '--', '/usr/sbin/chown', '-R', '--', 'other_user:other_group', Pathname('/path/to/file')]
     )
     @dsl.set_ownership('/path/to/file', user: 'other_user', group: 'other_group')
+  end
+
+  it "can suppress move to applications folder alert " do
+    @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
+
+    Hbc::FakeSystemCommand.expects_command(
+      ['/usr/bin/defaults', 'write', 'com.example.BasicCask', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true']
+    )
+    @dsl.suppress_move_to_applications
+  end
+
+  it "can suppress move to applications folder alert with a different key" do
+    @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
+
+    Hbc::FakeSystemCommand.expects_command(
+      ['/usr/bin/defaults', 'write', 'com.example.BasicCask', 'suppressMoveToApplications', '-bool', 'true']
+    )
+    @dsl.suppress_move_to_applications :key => 'suppressMoveToApplications'
   end
 end
