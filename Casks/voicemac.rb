@@ -10,6 +10,6 @@ cask :v1 => 'voicemac' do
 
   app 'VoiceMac/VoiceMac.app'
   postflight do
-    system '/bin/chmod', '--', 'a+r', "#{staged_path}/VoiceMac/VoiceMac.app/Contents/Info.plist"
+    set_permissions "#{staged_path}/VoiceMac/VoiceMac.app/Contents/Info.plist", 'a+r'
   end
 end
