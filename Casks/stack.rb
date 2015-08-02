@@ -9,8 +9,9 @@ cask :v1 => 'stack' do
   license :bsd
 
   binary "stack-#{version}", :target => 'stack'
+
   postflight do
-    system '/bin/chmod', '+x', "#{staged_path}/stack-#{version}"
+    set_permissions "#{staged_path}/stack-#{version}", '+x'
   end
 
   depends_on :arch => :x86_64
