@@ -35,6 +35,45 @@ describe Hbc::DSL::Postflight do
     @dsl.plist_set(':JVMOptions:JVMVersion', '1.6+')
   end
 
+  it "can set the permissions of a file" do
+    Hbc::FakeSystemCommand.expects_command(
+      ['/usr/bin/sudo', '-E', '--', '/bin/chmod', '-R', '--', '777', Pathname('/path/to/file')]
+    )
+    @dsl.set_permissions('/path/to/file', '777')
+  end
+
+  it "can set the permissions of multiple files" do
+    Hbc::FakeSystemCommand.expects_command(
+      ['/usr/bin/sudo', '-E', '--', '/bin/chmod', '-R', '--', '777', Pathname('/path/to/file'), Pathname('/path/to/other-file')]
+    )
+    @dsl.set_permissions(['/path/to/file', '/path/to/other-file'], '777')
+  end
+
+  it "can set the ownership of a file" do
+    @dsl.stubs(:current_user => 'fake_user')
+
+    Hbc::FakeSystemCommand.expects_command(
+      ['/usr/bin/sudo', '-E', '--', '/usr/sbin/chown', '-R', '--', 'fake_user:staff', Pathname('/path/to/file')]
+    )
+    @dsl.set_ownership('/path/to/file')
+  end
+
+  it "can set the ownership of multiple files" do
+    @dsl.stubs(:current_user => 'fake_user')
+
+    Hbc::FakeSystemCommand.expects_command(
+      ['/usr/bin/sudo', '-E', '--', '/usr/sbin/chown', '-R', '--', 'fake_user:staff', Pathname('/path/to/file'), Pathname('/path/to/other-file')]
+    )
+    @dsl.set_ownership(['/path/to/file', '/path/to/other-file'])
+  end
+
+  it "can set the ownership of a file with a different user and group" do
+    Hbc::FakeSystemCommand.expects_command(
+      ['/usr/bin/sudo', '-E', '--', '/usr/sbin/chown', '-R', '--', 'other_user:other_group', Pathname('/path/to/file')]
+    )
+    @dsl.set_ownership('/path/to/file', user: 'other_user', group: 'other_group')
+  end
+
   it "can suppress move to applications folder alert " do
     @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
 
