@@ -1,5 +1,44 @@
 # CHANGELOG
 
+## 0.55.0
+
+* __Casks__
+  - 66 Casks added (955 updated) by 270 contributors since 0.54.1
+  - 2654 total Casks
+* __Features__
+  - [#9995][] list installed packages versions <3 [@otzy007][]
+  - [#11672][] additions for El Capitan
+  - [#11972][] attempt to clean up launchctl plists on uninstall
+  - [#12067][] Change warning from red to yellow
+  - [#12977][] Add postflight helpers to set file ownership and permissions
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - none
+* __Internal Changes__
+  - add new maintainers: jawshooah and Ngrd
+  - [#11995][] Changing Fake User Agent <3 [@SeanSith][]
+  - [#12785][] Run audit\_modified\_casks script during Travis build
+* __Documentation__
+  - 6 doc commits since 0.54.1
+* __Contributors__
+  - 272 new contributors since 0.54.1
+  - 2071 total contributors
+* __Release Date__
+  - 2015-08-02 04:30:00 UTC
+
+[#11672]: https://github.com/caskroom/homebrew-cask/issues/11672
+[#11972]: https://github.com/caskroom/homebrew-cask/issues/11972
+[#11995]: https://github.com/caskroom/homebrew-cask/issues/11995
+[#12067]: https://github.com/caskroom/homebrew-cask/issues/12067
+[#12785]: https://github.com/caskroom/homebrew-cask/issues/12785
+[#12977]: https://github.com/caskroom/homebrew-cask/issues/12977
+[#9995]: https://github.com/caskroom/homebrew-cask/issues/9995
+[@SeanSith]: https://github.com/SeanSith
+[@otzy007]: https://github.com/otzy007
+
+
+
 ## 0.54.1
 
 * __Casks__
@@ -1017,7 +1056,7 @@
   - 1736 total Casks
 * __Features__
   - [#5517][] support pure gzip containers (*ie* not `tar.gz`)
-  - Numerous undocumented changes to DSL, transitioning to DSL 1.0 (see #4688)  
+  - Numerous undocumented changes to DSL, transitioning to DSL 1.0 (see #4688)
     - [#4953][], [#5540][] add `tags` stanza
     - [#4873][] add `license` stanza
     - [#4869][] add `zap` stanza
@@ -1044,7 +1083,7 @@
   - [#5519][] internal: Zip container does not need to `require 'tmpdir'`
   - [#5120][] internal: install rspec; move first few tests over
   - [#5132][] internal: rspecify scopes and download strategy tests
-  - [#4951][] internal:  
+  - [#4951][] internal:
     - move `read_script_argument` to `Cask::Artifact::Base`
     - generalize `read_script_arguments` and harmonize error messages
     - make `read_script_arguments` accept defaults/overrides
