@@ -11,7 +11,7 @@ cask :v1_1 => 'quick-search-box' do
   app 'Quick Search Box.app'
 
   postflight do
-    system '/bin/chmod', '-R', '--', 'u+w', staged_path
+    set_permissions staged_path, 'u+w'
   end
 
   zap :delete => '~/Library/Application Support/Google/Quick Search Box',
