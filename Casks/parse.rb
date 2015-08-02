@@ -13,6 +13,6 @@ cask :v1 => 'parse' do
   binary 'parse-latest', :target => 'parse'
 
   postflight do
-    system '/bin/chmod', '--', '0755', "#{staged_path}/parse-latest"
+    set_permissions "#{staged_path}/parse-latest", '0755'
   end
 end
