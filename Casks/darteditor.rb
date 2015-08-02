@@ -1,4 +1,4 @@
-cask :v1 => 'darteditor' do
+cask :v1_1 => 'darteditor' do
   version '1.10-45692'
 
   if Hardware::CPU.is_32_bit?
