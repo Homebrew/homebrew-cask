@@ -1,4 +1,4 @@
-cask :v1 => 'unifi-controller' do
+cask :v1_1 => 'unifi-controller' do
   version '4.6.6'
   sha256 '7ca063dfd368cd27fab2fd6fd60e317a736beafd8add9400b9b98553e8a6f858'
 
