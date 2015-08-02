@@ -52,4 +52,27 @@ describe Hbc::DSL::Postflight do
     )
     @dsl.suppress_move_to_applications :key => 'suppressMoveToApplications'
   end
+
+  it "can set the permissions of a file" do
+    Hbc::FakeSystemCommand.expects_command(
+      ['/usr/bin/sudo', '-E', '--', '/bin/chmod', '-R', '--', '777', Pathname('/path/to/file')]
+    )
+    @dsl.set_permissions('/path/to/file', '777')
+  end
+
+  it "can set the ownership of a file" do
+    @dsl.stubs(:current_user => 'fake_user')
+
+    Hbc::FakeSystemCommand.expects_command(
+      ['/usr/bin/sudo', '-E', '--', '/usr/sbin/chown', '-R', '--', 'fake_user:staff', Pathname('/path/to/file')]
+    )
+    @dsl.set_ownership('/path/to/file')
+  end
+
+  it "can set the ownership of a file with a different user and group" do
+    Hbc::FakeSystemCommand.expects_command(
+      ['/usr/bin/sudo', '-E', '--', '/usr/sbin/chown', '-R', '--', 'other_user:other_group', Pathname('/path/to/file')]
+    )
+    @dsl.set_ownership('/path/to/file', user: 'other_user', group: 'other_group')
+  end
 end
