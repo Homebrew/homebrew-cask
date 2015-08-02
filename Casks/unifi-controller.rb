@@ -10,8 +10,7 @@ cask :v1 => 'unifi-controller' do
   pkg 'Unifi.pkg'
 
   postflight do
-    system '/usr/bin/sudo', '-E', '--',
-           '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", Pathname.new(File.expand_path('~')).join('Library/Application Support/UniFi')
+    set_ownership '~/Library/Application Support/UniFi'
   end
 
   uninstall :pkgutil => 'com.ubnt.UniFi'
