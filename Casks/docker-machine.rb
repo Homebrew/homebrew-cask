@@ -1,4 +1,4 @@
-cask :v1 => 'docker-machine' do
+cask :v1_1 => 'docker-machine' do
   version 'v0.3.0'
   sha256 '1b94543ee506bfc75cad43662b346e3560aacf9d47fc78b9d27c2158df486026'
 
