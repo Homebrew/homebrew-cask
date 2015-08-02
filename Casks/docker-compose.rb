@@ -1,4 +1,4 @@
-cask :v1 => 'docker-compose' do
+cask :v1_1 => 'docker-compose' do
   version '1.3.3'
   sha256 '6872c2c760940fb15470f07085fa23ff536db4cccaed4541c15b6856fb0675d0'
 
