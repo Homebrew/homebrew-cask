@@ -16,8 +16,7 @@ cask :v1 => 'vmware-fusion' do
   app 'VMware Fusion.app'
 
   uninstall_preflight do
-    system '/usr/bin/sudo', '-E', '--',
-           '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", "#{staged_path}/VMware Fusion.app"
+    set_ownership "#{staged_path}/VMware Fusion.app"
   end
 
   zap :delete => [
