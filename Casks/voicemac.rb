@@ -1,4 +1,4 @@
-cask :v1 => 'voicemac' do
+cask :v1_1 => 'voicemac' do
   version :latest
   sha256 :no_check
 
