@@ -54,7 +54,7 @@ features which are available for the current Cask.
  * [`installer :script`](CASK_LANGUAGE_REFERENCE.md#installer-script)
  * [`license`](CASK_LANGUAGE_REFERENCE.md#license-stanza-details)
  * [`name`](CASK_LANGUAGE_REFERENCE.md#name-stanza-details)
- * [`postflight plist_set`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
+ * [`*flight plist_set`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
  * [`postflight suppress_move_to_applications`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
  * [`stage_only`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
    * replaced undocumented `caskroom_only`
@@ -66,8 +66,8 @@ features which are available for the current Cask.
  * [`zap`](CASK_LANGUAGE_REFERENCE.md#zap-stanza-details)
 
 ### (1.1)
- * [`postflight set_ownership`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
- * [`postflight set_permissions`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
+ * [`*flight set_ownership`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
+ * [`*flight set_permissions`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
 
 
 ## Renamed Forms (1.0)
@@ -153,14 +153,14 @@ For use in *eg* interpolation:
  * [`free_license(web_page)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
 
 
-## Postflight and Uninstall_preflight Mini-DSL (1.0)
+## \*flight Mini-DSL (1.0)
 ### (1.0)
- * [`plist_set`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
- * [`suppress_move_to_applications`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
+ * [`plist_set`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
+ * [`suppress_move_to_applications`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
 
 ### (1.1)
- * [`set_ownership`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
- * [`set_permissions`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
+ * [`set_ownership`](CASK_LANGUAGE_REFERENCE.md#*flight-stanzas-details)
+ * [`set_permissions`](CASK_LANGUAGE_REFERENCE.md#*flight-stanzas-details)
 
 ## References
 
