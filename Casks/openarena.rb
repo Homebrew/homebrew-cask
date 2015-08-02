@@ -10,6 +10,6 @@ cask :v1 => 'openarena' do
   app "openarena-#{version}/OpenArena.app"
 
   postflight do
-    system '/bin/chmod', '--', '755', "#{staged_path}/openarena-#{version}/OpenArena.app/Contents/MacOS/openarena.ub"
+    set_permissions "#{staged_path}/openarena-#{version}/OpenArena.app/Contents/MacOS/openarena.ub", '755'
   end
 end
