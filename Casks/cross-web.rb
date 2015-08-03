@@ -8,5 +8,5 @@ cask :v1 => 'cross-web' do
   license :gratis
 
   pkg "npCrossWeb_Mac.pkg"
-  uninstall :pkgutil => "kr.co.iniline.pkg.CrossWebPackage"
+  uninstall :script => "/Applications/CrossWeb/UninstallCrossWeb.app/Contents/MacOS/UninstallCrossWeb"
 end
