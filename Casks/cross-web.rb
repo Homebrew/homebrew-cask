@@ -3,7 +3,7 @@ cask :v1 => "cross-web" do
   sha256 :no_check
 
   url "https://open.citibank.co.kr/3rdParty/initech/plugin/down/npCrossWeb_Mac.pkg"
-  name "Cross WEB"
+  name 'Cross WEB'
   homepage "https://open.citibank.co.kr"
   license :gratis
 
