@@ -895,7 +895,6 @@ paths.
  * Double-quotes should not be used.  `ENV['HOME']` and other variables
    should not be interpolated in the value.
  * Only absolute paths should be given.
- * No tilde expansion is performed (`~` characters are literal).
  * No glob expansion is performed (*eg* `*` characters are literal), though
    glob expansion is a desired future feature.
 
