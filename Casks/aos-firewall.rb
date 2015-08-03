@@ -12,5 +12,5 @@ cask :v1 => 'aos-firewall' do
     [
       'com.ahnlab.aosFirewall.*',
       'com.ahnlab.firewall.*'
-    ]
+    ],
 end
