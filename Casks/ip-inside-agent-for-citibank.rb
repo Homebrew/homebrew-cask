@@ -1,18 +1,18 @@
-cask :v1 => 'ip-inside-agent-for-citibank' do
+cask :v1 => "ip-inside-agent-for-citibank" do
   version :latest
   sha256 :no_check
 
-  url 'https://open.citibank.co.kr/3rdParty/interezen/OSX-MAC/IPinsideAgent.dmg'
+  url "https://open.citibank.co.kr/3rdParty/interezen/OSX-MAC/IPinsideAgent.dmg"
   name 'IP inside Agent for Citi Bank'
-  homepage 'https://open.citibank.co.kr'
+  homepage "https://open.citibank.co.kr"
   license :gratis
 
-  pkg 'IPinsideAgent.pkg'
+  pkg "IPinsideAgent.pkg"
   uninstall :pkgutil =>
     [
-      'INTEREZEN Internet Plug-in Launch',
-      'INTEREZEN Internet Plug-in Uninstaller',
-      'INTEREZEN Internet Plug-in'
+      "INTEREZEN Internet Plug-in Launch",
+      "INTEREZEN Internet Plug-in Uninstaller",
+      "INTEREZEN Internet Plug-in"
     ],
-    :rmdir => '/Applications/IPinside'
+    :rmdir => "/Applications/IPinside"
 end
