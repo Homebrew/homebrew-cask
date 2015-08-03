@@ -10,17 +10,7 @@ cask :v1 => 'aos-firewall' do
   pkg "AOSFirewall.pkg"
   uninstall :pkgutil =>
     [
-        "com.ahnlab.firewall*"
-    ],
-  :trash =>
-    [
-        "/Applications/AhnLab/ASP/Firewall/Uninstaller.app"
-    ]
-
-  zap :trash =>
-    [
-      "~/Library/Application Support/ahnlabfwStatus*",
-      "~/Library/Preferences/Uninstaller.plist",
-      "~/Library/Saved Application State/Uninstaller.savedState"
+      "com.ahnlab.aosFirewall.*",
+      "com.ahnlab.firewall.*"
     ]
 end

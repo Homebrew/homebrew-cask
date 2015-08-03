@@ -8,5 +8,6 @@ cask :v1 => "veraport" do
   license :gratis
 
   pkg "veraport.pkg"
-  uninstall :script => "/Applications/Veraport/Uninstaller.app/Contents/MacOS/Uninstaller"
+  uninstall :pkgutil => "com.wizvera.veraport.veraport.*",
+    :rmdir => "/Applications/Veraport"
 end
