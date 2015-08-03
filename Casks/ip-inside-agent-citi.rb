@@ -3,7 +3,7 @@ cask :v1 => "ip-inside-agent-citi" do
   sha256 :no_check
 
   url "https://open.citibank.co.kr/3rdParty/interezen/OSX-MAC/IPinsideAgent.dmg"
-  name "IP inside Agent for Citi Bank"
+  name 'IP inside Agent for Citi Bank'
   homepage "https://open.citibank.co.kr"
   license :gratis
 
