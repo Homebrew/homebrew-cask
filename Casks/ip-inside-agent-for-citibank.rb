@@ -1,4 +1,4 @@
-cask :v1 => 'ip-inside-agent-for-citibank' do
+cask :v1 => "ip-inside-agent-for-citibank" do
   version :latest
   sha256 :no_check
 
