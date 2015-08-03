@@ -1,4 +1,4 @@
-cask :v1 => 'cockatrice' do
+cask v1: 'cockatrice' do
   version :latest
   sha256 :no_check
 
@@ -10,12 +10,12 @@ cask :v1 => 'cockatrice' do
   app 'cockatrice.app'
   app 'oracle.app'
 
-  uninstall :quit => [
+  uninstall quit: [
     'com.cockatrice.cockatrice',
     'com.cockatrice.oracle'
   ]
 
-  zap :delete => [
+  zap delete: [
     '~/Library/Application Support/Cockatrice',
     '~/Library/Preferences/com.cockatrice.Cockatrice.plist',
     '~/Library/Preferences/com.cockatrice.oracle.plist',

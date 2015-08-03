@@ -1,4 +1,4 @@
-cask :v1 => 'tuxera-ntfs' do
+cask v1: 'tuxera-ntfs' do
   version '2014'
   sha256 '808423a1246a3a9cfa03d4ada3b10cd7958e88dbb34bb0c044741d3266202514'
 
@@ -9,5 +9,5 @@ cask :v1 => 'tuxera-ntfs' do
 
   pkg '.packages/Flat/Install Tuxera NTFS.mpkg'
 
-  uninstall :script => '/System/Library/Filesystems/fusefs_txantfs.fs/Support/uninstall-package.sh'
+  uninstall script: '/System/Library/Filesystems/fusefs_txantfs.fs/Support/uninstall-package.sh'
 end

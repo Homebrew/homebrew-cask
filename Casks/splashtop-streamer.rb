@@ -1,4 +1,4 @@
-cask :v1 => 'splashtop-streamer' do
+cask v1: 'splashtop-streamer' do
   version '2.6.2.7'
   sha256 'e676b87ff0452af0b2462d911e6d03d9987ba7616e165c3adcfee14852ce4b76'
 
@@ -10,5 +10,5 @@ cask :v1 => 'splashtop-streamer' do
 
   pkg 'Splashtop Streamer.pkg'
 
-  uninstall :pkgutil => 'com.splashtop.splashtopStreamer.*'
+  uninstall pkgutil: 'com.splashtop.splashtopStreamer.*'
 end

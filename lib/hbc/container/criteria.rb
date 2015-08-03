@@ -7,15 +7,15 @@ class Hbc::Container::Criteria
   end
 
   def file
-    @file ||= @command.run('/usr/bin/file', :args => ['-Izb', '--', path]).stdout
+    @file ||= @command.run('/usr/bin/file', args: ['-Izb', '--', path]).stdout
   end
 
   def imageinfo
     @imageinfo ||= @command.run(
       '/usr/bin/hdiutil',
       # realpath is a failsafe against unusual filenames
-      :args => ['imageinfo', Pathname.new(path).realpath],
-      :print_stderr => false
+      args: ['imageinfo', Pathname.new(path).realpath],
+      print_stderr: false
     ).stdout
   end
 
@@ -23,8 +23,8 @@ class Hbc::Container::Criteria
     if Hbc.homebrew_prefix.join('bin/cabextract').exist?
       @cabextract ||= @command.run(
         Hbc.homebrew_prefix.join('bin/cabextract'),
-        :args => ['-t', '--', path],
-        :print_stderr => false
+        args: ['-t', '--', path],
+        print_stderr: false
       ).stdout
     end
   end
@@ -33,8 +33,8 @@ class Hbc::Container::Criteria
     if Hbc.homebrew_prefix.join('bin/lsar').exist?
       @lsar ||= @command.run(
         Hbc.homebrew_prefix.join('bin/lsar'),
-        :args => ['-l', '-t', '--', path],
-        :print_stderr => false
+        args: ['-l', '-t', '--', path],
+        print_stderr: false
       ).stdout
     end
   end

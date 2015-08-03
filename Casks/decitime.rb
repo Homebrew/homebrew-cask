@@ -1,4 +1,4 @@
-cask :v1 => 'decitime' do
+cask v1: 'decitime' do
   version '1.0.1'
   sha256 '3fcd9d6af7cf4710abd42df4db418432ca1758ba8db7affecb1a466d1996f877'
 
@@ -8,7 +8,7 @@ cask :v1 => 'decitime' do
   homepage 'http://www.tinbert.com/DeciTimeMac/'
   license :oss
 
-  container :nested => 'DeciTime101.dmg'
+  container nested: 'DeciTime101.dmg'
   app 'DeciTime.app'
 
   # fix wonky DMG by mounting it once read-write per discussion at

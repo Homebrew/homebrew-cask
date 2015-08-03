@@ -1,4 +1,4 @@
-cask :v1 => 'mountain' do
+cask v1: 'mountain' do
   version :latest
   sha256 :no_check
 
@@ -8,7 +8,7 @@ cask :v1 => 'mountain' do
   homepage 'http://appgineers.de/mountain/'
   license :commercial
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   app 'Mountain.app'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'yubikey-neo-manager' do
+cask v1: 'yubikey-neo-manager' do
   version '1.3.0'
   sha256 '9b28bc6350a7afe2e7e3e4397423359487de876ee67aafeca7902f9aaa5f1756'
 
@@ -9,5 +9,5 @@ cask :v1 => 'yubikey-neo-manager' do
 
   pkg "yubikey-neo-manager-#{version}-mac.pkg"
 
-  uninstall :pkgutil => 'com.yubico.pkg.YubiKeyNEOManager'
+  uninstall pkgutil: 'com.yubico.pkg.YubiKeyNEOManager'
 end

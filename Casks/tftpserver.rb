@@ -1,4 +1,4 @@
-cask :v1 => 'tftpserver' do
+cask v1: 'tftpserver' do
   version :latest
   sha256 :no_check
 

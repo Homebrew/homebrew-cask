@@ -1,4 +1,4 @@
-cask :v1 => 'amazon-music' do
+cask v1: 'amazon-music' do
   version '3.10.0.663'
   sha256 'b71c86dd0e2988ca4d914727c2c0226073c5717b5b80143b13c0f9619f11633c'
 
@@ -7,14 +7,14 @@ cask :v1 => 'amazon-music' do
   homepage 'https://www.amazon.com/gp/feature.html/ref=dm_mo_cpw_fb_lm?docId=1001067901'
   license :gratis
 
-  installer :script => 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
-            :args => [ '--unattendedmodeui', 'none' ]
+  installer script: 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
+            args: [ '--unattendedmodeui', 'none' ]
 
-  uninstall :quit => [
+  uninstall quit: [
               'com.amazon.music',
               'com.amazon.music-renderer'
             ],
-            :delete => [
+            delete: [
               '/Applications/Amazon Music.app'
             ]
 end

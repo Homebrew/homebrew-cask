@@ -1,4 +1,4 @@
-cask :v1 => 'chefdk' do
+cask v1: 'chefdk' do
   version '0.6.2-1'
   sha256 'a8e95bfabd9668d9083e0658f06b071c6261e518478165a4b61d02bddacefe5a'
 
@@ -15,8 +15,8 @@ cask :v1 => 'chefdk' do
   # add to it if necessary):
   #  find /usr/bin -lname '/opt/chefdk/*'
   # (Source: https://docs.chef.io/install_dk.html#mac-os-x)
-  uninstall :pkgutil => 'com.getchef.pkg.chefdk',
-            :delete  => [
+  uninstall pkgutil: 'com.getchef.pkg.chefdk',
+            delete: [
                          '/opt/chefdk/',
                          '/usr/bin/berks',
                          '/usr/bin/chef',

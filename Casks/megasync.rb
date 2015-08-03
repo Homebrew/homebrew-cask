@@ -1,4 +1,4 @@
-cask :v1 => 'megasync' do
+cask v1: 'megasync' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'mps' do
+cask v1: 'mps' do
   version '3.2.1'
   sha256 '3122634120c347c4ebb6e4a2de98f30fc9fa63427b607063ebb7096f4d4aec4e'
 
@@ -10,7 +10,7 @@ cask :v1 => 'mps' do
 
   app "MPS #{version[0,3]}.app"
 
-  zap :delete => [
+  zap delete: [
                   "~/Library/Application Support/MPS#{version.tr('.','')[0,2]}",
                   "~/Library/Preferences/MPS#{version.tr('.','')[0,2]}",
                  ]

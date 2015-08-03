@@ -1,4 +1,4 @@
-cask :v1 => 'evom' do
+cask v1: 'evom' do
   version :latest
   sha256 :no_check
 

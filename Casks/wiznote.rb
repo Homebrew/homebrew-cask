@@ -1,4 +1,4 @@
-cask :v1 => 'wiznote' do
+cask v1: 'wiznote' do
   version '2015-06-16'
   sha256 '73e139ff32476d9afa93d988c10686cc185f174f582ab1db0a9d6eb6dc545134'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'sysex-librarian' do
+cask v1: 'sysex-librarian' do
   version :latest
   sha256 :no_check
 
@@ -10,16 +10,16 @@ cask :v1 => 'sysex-librarian' do
 
   app 'SysEx Librarian.app'
 
-  uninstall :quit => [
+  uninstall quit: [
                       'com.snoize.SnoizeMIDI',
                       'com.snoize.SysExLibrarian'
                      ]
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/com.snoize.SysExLibrarian.plist',
                   '~/Library/Caches/com.snoize.SysExLibrarian',
                   '~/Library/Saved Application State/com.snoize.SysExLibrarian.savedState'
                  ]
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 end

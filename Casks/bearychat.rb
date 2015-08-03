@@ -1,4 +1,4 @@
-cask :v1 => 'bearychat' do
+cask v1: 'bearychat' do
   version :latest
   sha256 :no_check
 
@@ -9,7 +9,7 @@ cask :v1 => 'bearychat' do
 
   app 'BearyChat.app'
 
-  zap :delete => [
+  zap delete: [
     '~/Preferences/com.node-webkit-builder.bearychat.plist',
     '~/Library/Application Support/BearyChat',
   ]

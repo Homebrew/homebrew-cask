@@ -1,4 +1,4 @@
-cask :v1 => 'unified-remote' do
+cask v1: 'unified-remote' do
   version :latest
   sha256 :no_check
 

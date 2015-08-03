@@ -1,4 +1,4 @@
-cask :v1 => 'midi-monitor' do
+cask v1: 'midi-monitor' do
   version :latest
   sha256 :no_check
 
@@ -10,18 +10,18 @@ cask :v1 => 'midi-monitor' do
 
   app 'MIDI Monitor.app'
 
-  uninstall :quit => [
+  uninstall quit: [
                       'com.snoize.MIDIMonitor',
                       'com.snoize.MIDIMonitorDriver',
                       'com.snoize.MIDISpyFramework',
                       'com.snoize.SnoizeMIDI'
                      ]
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/com.snoize.MIDIMonitor.plist',
                   '~/Library/Caches/com.snoize.MIDIMonitor',
                   '~/Library/Saved Application State/com.snoize.MIDIMonitor.savedState'
                  ]
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 end

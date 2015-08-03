@@ -9,7 +9,7 @@ class Hbc::Artifact::Symlinked < Hbc::Artifact::Base
 
   def create_filesystem_link(source, target)
     Pathname.new(target).dirname.mkpath
-    @command.run!('/bin/ln', :args => ['-hfs', '--', source, target])
+    @command.run!('/bin/ln', args: ['-hfs', '--', source, target])
     add_altname_metadata source, target
   end
 
@@ -21,22 +21,22 @@ class Hbc::Artifact::Symlinked < Hbc::Artifact::Base
     return if source.basename.to_s.casecmp(target.basename) == 0
     odebug "Adding #{attribute} metadata"
     altnames = @command.run('/usr/bin/xattr',
-                            :args => ['-p', attribute, target],
-                            :print_stderr => false).stdout.sub(/\A\((.*)\)\Z/, "#{$1}")
+                            args: ['-p', attribute, target],
+                            print_stderr: false).stdout.sub(/\A\((.*)\)\Z/, "#{$1}")
     odebug "Existing metadata is: '#{altnames}'"
     altnames.concat(', ') if altnames.length > 0
     altnames.concat(%Q{"#{target.basename}"})
     altnames = %Q{(#{altnames})}
     @command.run!('/usr/bin/xattr',
-                  :args => ['-w', attribute, altnames, target],
-                  :print_stderr => false)
+                  args: ['-w', attribute, altnames, target],
+                  print_stderr: false)
   end
 
   def summary
     {
-      :english_description => "#{self.class.artifact_english_name} #{self.class.link_type_english_name}s managed by brew-cask:",
+      english_description: "#{self.class.artifact_english_name} #{self.class.link_type_english_name}s managed by brew-cask:",
 
-      :contents => @cask.artifacts[self.class.artifact_dsl_key].map do |artifact|
+      contents: @cask.artifacts[self.class.artifact_dsl_key].map do |artifact|
                      summarize_one_link(artifact)
                    end - [nil]
     }

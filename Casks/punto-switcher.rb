@@ -1,4 +1,4 @@
-cask :v1 => 'punto-switcher' do
+cask v1: 'punto-switcher' do
   version :latest
   sha256 :no_check
 
@@ -10,6 +10,6 @@ cask :v1 => 'punto-switcher' do
 
   pkg 'PuntoSwitcher Installer.pkg'
 
-  uninstall :quit => 'ru.yandex.desktop.PuntoSwitcher',
-            :pkgutil => [ 'ru.yandex.puntoSwitcher*', 'ru.yandex.PuntoSwitcher*' ]
+  uninstall quit: 'ru.yandex.desktop.PuntoSwitcher',
+            pkgutil: [ 'ru.yandex.puntoSwitcher*', 'ru.yandex.PuntoSwitcher*' ]
 end

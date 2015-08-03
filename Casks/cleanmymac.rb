@@ -1,4 +1,4 @@
-cask :v1 => 'cleanmymac' do
+cask v1: 'cleanmymac' do
   version :latest
   sha256 :no_check
 
@@ -14,9 +14,9 @@ cask :v1 => 'cleanmymac' do
     appcast 'http://updates.devmate.com/com.macpaw.CleanMyMac2.xml'
     app 'CleanMyMac 2.app'
 
-    uninstall :launchctl => 'com.macpaw.CleanMyMac2.Agent'
+    uninstall launchctl: 'com.macpaw.CleanMyMac2.Agent'
 
-    zap :delete => [
+    zap delete: [
       '/Library/LaunchDaemons/com.macpaw.CleanMyMac2.Agent.plist',
       '/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac2.Agent',
       '/Users/Shared/CleanMyMac 2',
@@ -34,9 +34,9 @@ cask :v1 => 'cleanmymac' do
     appcast 'http://updateinfo.devmate.com/com.macpaw.CleanMyMac3/updates.xml'
     app 'CleanMyMac 3.app'
 
-    uninstall :launchctl => 'com.macpaw.CleanMyMac3.Agent'
+    uninstall launchctl: 'com.macpaw.CleanMyMac3.Agent'
 
-    zap :delete => [
+    zap delete: [
       '/Library/LaunchDaemons/com.macpaw.CleanMyMac3.Agent.plist',
       '/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac3.Agent',
       '/Users/Shared/CleanMyMac 3',

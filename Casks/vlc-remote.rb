@@ -1,4 +1,4 @@
-cask :v1 => 'vlc-remote' do
+cask v1: 'vlc-remote' do
   version :latest
   sha256 :no_check
 
@@ -8,5 +8,5 @@ cask :v1 => 'vlc-remote' do
   homepage 'http://hobbyistsoftware.com/vlc'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  installer :manual => 'VLC Setup.app'
+  installer manual: 'VLC Setup.app'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'spamsieve' do
+cask v1: 'spamsieve' do
 
   if MacOS.release <= :tiger
     version '2.9.6'

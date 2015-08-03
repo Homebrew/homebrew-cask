@@ -1,4 +1,4 @@
-cask :v1 => 'dbvisualizer' do
+cask v1: 'dbvisualizer' do
   version '9.2.9'
   sha256 'ab0ef30391dcffbac310a259c04183aa2fc1a52817fb7cfee1ce9dba872a047e'
 
@@ -13,8 +13,8 @@ cask :v1 => 'dbvisualizer' do
 
   app 'DbVisualizer.app'
 
-  uninstall :signal => [[ 'TERM', 'com.dbvis.DbVisualizer' ]]
-  zap :delete => '~/.dbvis'
+  uninstall signal: [[ 'TERM', 'com.dbvis.DbVisualizer' ]]
+  zap delete: '~/.dbvis'
 
   caveats <<-EOS.undent
     #{token} requires Java 7. You can install the latest version with

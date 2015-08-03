@@ -1,4 +1,4 @@
-cask :v1 => 'sketch' do
+cask v1: 'sketch' do
   version :latest
   sha256 :no_check
 
@@ -10,7 +10,7 @@ cask :v1 => 'sketch' do
 
   app 'Sketch.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/com.bohemiancoding.sketch3',
                   '~/Library/Caches/com.bohemiancoding.sketch3',
                   '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.bohemiancoding.sketch3',

@@ -1,4 +1,4 @@
-cask :v1 => 'tuck' do
+cask v1: 'tuck' do
   version :latest
   sha256 :no_check
 
@@ -10,7 +10,7 @@ cask :v1 => 'tuck' do
 
   app 'Tuck.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/com.irradiatedsoftware.Tuck.plist',
                  ]
 end

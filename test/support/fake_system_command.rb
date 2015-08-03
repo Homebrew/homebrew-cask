@@ -44,7 +44,7 @@ class Hbc::FakeSystemCommand
   end
 
   def self.run!(command, options={})
-    run(command, options.merge(:must_succeed => true))
+    run(command, options.merge(must_succeed: true))
   end
 end
 

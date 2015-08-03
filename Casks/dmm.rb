@@ -1,4 +1,4 @@
-cask :v1 => 'dmm' do
+cask v1: 'dmm' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'dmm' do
 
   pkg 'DMMViewer.pkg'
 
-  uninstall :pkgutil => 'jp.co.cyphertec.installer.app.ImageViewer'
+  uninstall pkgutil: 'jp.co.cyphertec.installer.app.ImageViewer'
 end

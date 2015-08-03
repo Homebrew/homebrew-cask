@@ -1,4 +1,4 @@
-cask :v1 => 'understand' do
+cask v1: 'understand' do
   version '3.1.756'
   sha256 '87b91888b14d1548e618370325353668a9ef12a1e1b988ce2165cce55937e252'
 
@@ -7,7 +7,7 @@ cask :v1 => 'understand' do
   name 'Understand'
   homepage 'https://scitools.com'
   license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'SciTools'
+  tags vendor: 'SciTools'
 
   app 'scitools/bin/macosx/understand.app'
   app 'scitools/bin/macosx/licenseserver.app'

@@ -1,4 +1,4 @@
-cask :v1 => 'gyazo' do
+cask v1: 'gyazo' do
   version '2.1'
   sha256 '88491cc2a9d481fdb99b822ca49560427ed11578b304203c4504d83fc2562061'
 
@@ -7,9 +7,9 @@ cask :v1 => 'gyazo' do
   name 'Gyazo GIF'
   homepage 'https://gyazo.com/'
   license :other
-  tags :vendor => 'Nota'
+  tags vendor: 'Nota'
 
-  zap :delete => [
+  zap delete: [
     '~/Library/Caches/com.gyazo.gif',
     '~/Library/Caches/com.gyazo.mac',
     '~/Library/Preferences/com.gyazo.gif.plist',

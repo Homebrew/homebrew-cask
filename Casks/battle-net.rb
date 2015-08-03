@@ -1,4 +1,4 @@
-cask :v1 => 'battle-net' do
+cask v1: 'battle-net' do
   version :latest
   sha256 :no_check
 
@@ -7,13 +7,13 @@ cask :v1 => 'battle-net' do
   name 'Battle.net'
   homepage 'http://us.battle.net/en/'
   license :commercial
-  tags :vendor => 'Blizzard'
+  tags vendor: 'Blizzard'
 
-  installer :manual => 'Battle.net-Setup-enUS.app'
+  installer manual: 'Battle.net-Setup-enUS.app'
 
-  uninstall :delete => '/Applications/Battle.net.app'
+  uninstall delete: '/Applications/Battle.net.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/net.battle.net.app.plist',
                   '~/Library/Preferences/net.battle.Authenticator.prefs',
                   '~/Library/Preferences/net.battle.Identity.prefs',

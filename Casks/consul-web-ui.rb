@@ -1,4 +1,4 @@
-cask :v1 => 'consul-web-ui' do
+cask v1: 'consul-web-ui' do
   version '0.5.2'
   sha256 'ad883aa52e1c0136ab1492bbcedad1210235f26d59719fb6de3ef6464f1ff3b1'
 
@@ -10,7 +10,7 @@ cask :v1 => 'consul-web-ui' do
 
   stage_only true
 
-  depends_on :cask => 'consul'
+  depends_on cask: 'consul'
   caveats do
     "Invoke consul with '-ui-dir #{staged_path}/dist'"
   end

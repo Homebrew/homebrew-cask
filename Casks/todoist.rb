@@ -1,4 +1,4 @@
-cask :v1 => 'todoist' do
+cask v1: 'todoist' do
   version '6.0.3'
   sha256 '5457917cbc22092e12f736dfd7b1d22a2cb62ad0cda82d7b1c053fe287d9112e'
 
@@ -15,7 +15,7 @@ cask :v1 => 'todoist' do
     suppress_move_to_applications
   end
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Todoist',
                   '~/Library/Preferences/com.todoist.mac.Todoist.plist',
                  ]

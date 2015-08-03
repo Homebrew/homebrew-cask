@@ -1,4 +1,4 @@
-cask :v1 => 'kicad-library' do
+cask v1: 'kicad-library' do
   version '20-03-30'
   sha256 'ac3a4cb284132fefb151b45299e841ec60166492cce706a78ef4b5451f5d2b55'
 
@@ -8,5 +8,5 @@ cask :v1 => 'kicad-library' do
   homepage 'http://www.kicad-pcb.org/'
   license :gpl
 
-  artifact 'kicad', :target => Pathname.new(File.expand_path('~')).join('Library/Application Support/kicad')
+  artifact 'kicad', target: Pathname.new(File.expand_path('~')).join('Library/Application Support/kicad')
 end

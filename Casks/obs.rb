@@ -1,4 +1,4 @@
-cask :v1 => 'obs' do
+cask v1: 'obs' do
   version '0.11.2'
   sha256 '651d40896c30b2e4c51b26f869b0950dfcb8baabed15ba81276ccae9471d2fec'
 
@@ -11,10 +11,10 @@ cask :v1 => 'obs' do
 
   pkg 'OBS.pkg'
 
-  uninstall :pkgutil => 'org.obsproject.pkg.obs-studio',
-            :delete => '/Applications/SyphonInject.app'
+  uninstall pkgutil: 'org.obsproject.pkg.obs-studio',
+            delete: '/Applications/SyphonInject.app'
 
-  zap :delete => [
+  zap delete: [
                   '/private/var/db/receipts/zakk.lol.SyphonInject.bom',
                   '/private/var/db/receipts/zakk.lol.SyphonInject.plist'
                  ]

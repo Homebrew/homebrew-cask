@@ -1,4 +1,4 @@
-cask :v1 => 'macvim' do
+cask v1: 'macvim' do
 
   if MacOS.release <= :mountain_lion
     version '7.4-73'
@@ -25,10 +25,10 @@ cask :v1 => 'macvim' do
   app "MacVim-snapshot-#{version.sub(%r{^.*-},'')}/MacVim.app"
   binary "MacVim-snapshot-#{version.sub(%r{^.*-},'')}/mvim"
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
                   '~/Library/Preferences/org.vim.MacVim.plist',
                  ]
 
-  conflicts_with :formula => 'macvim'
+  conflicts_with formula: 'macvim'
 end

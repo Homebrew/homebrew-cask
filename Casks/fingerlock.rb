@@ -1,4 +1,4 @@
-cask :v1 => 'fingerlock' do
+cask v1: 'fingerlock' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'duplicate-annihilator' do
+cask v1: 'duplicate-annihilator' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,6 @@ cask :v1 => 'duplicate-annihilator' do
   homepage 'http://brattoo.com/propaganda/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  container :nested => 'Duplicate Annihilator.dmg'
+  container nested: 'Duplicate Annihilator.dmg'
   app 'Duplicate Annihilator.app'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'double-commander' do
+cask v1: 'double-commander' do
   version '0.6.2-6025'
   sha256 '4c55f266d99d5610e95626b5319b4c3cd7a2ad6068fe9dfb4d9faf44d62cdf4b'
 

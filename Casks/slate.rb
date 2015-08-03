@@ -1,4 +1,4 @@
-cask :v1 => 'slate' do
+cask v1: 'slate' do
   version :latest
   sha256 :no_check
 
@@ -11,7 +11,7 @@ cask :v1 => 'slate' do
 
   app 'Slate.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/.slate',
                   '~/.slate.js',
                   '~/Library/Application Support/com.slate.Slate',

@@ -1,4 +1,4 @@
-cask :v1 => 'pycharm' do
+cask v1: 'pycharm' do
   version '4.5.3'
   sha256 'cfad0f730c673f6652005ac45d68c9e542537a0a39603dd3195dc9e36908ed38'
 

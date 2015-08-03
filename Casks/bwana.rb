@@ -1,4 +1,4 @@
-cask :v1 => 'bwana' do
+cask v1: 'bwana' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,7 @@ cask :v1 => 'bwana' do
   name 'Bwana'
   homepage 'http://www.bruji.com/bwana/'
   license :mit
-  tags :vendor => 'Bruji'
+  tags vendor: 'Bruji'
 
   app 'Bwana.app'
 end

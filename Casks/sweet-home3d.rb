@@ -1,4 +1,4 @@
-cask :v1 => 'sweet-home3d' do
+cask v1: 'sweet-home3d' do
   version '4.6'
   sha256 'd784a9c62ce7115634348e7eeddff1e2fa54280539b022060abd28de18170d27'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'charlessoft-timetracker' do
+cask v1: 'charlessoft-timetracker' do
   version :latest
   sha256 :no_check
 

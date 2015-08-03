@@ -1,4 +1,4 @@
-cask :v1 => 'iordning' do
+cask v1: 'iordning' do
   version '6.0.11'
   sha256 '69e174863fc72befdbbf4b0860fe51c4879d08e83a1a9335e0d9d78f045f6af8'
 

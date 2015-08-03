@@ -1,4 +1,4 @@
-cask :v1 => 'pacifist' do
+cask v1: 'pacifist' do
   if MacOS.release <= :snow_leopard || Hardware::CPU.is_32_bit?
     version '3.0.10'
     sha256 '86da910b133ac3b7a38d165624e2657f6286bcca76af98c80d3c34d5b3f3a851'
@@ -12,12 +12,12 @@ cask :v1 => 'pacifist' do
 
   url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version}.dmg"
   appcast 'https://www.charlessoft.com/cgi-bin/pacifist_sparkle.cgi',
-          :sha256 => '1968fd8009efc6192aa5a66e78dd002fb104a34402a22363e2702368f4c1cb64'
+          sha256: '1968fd8009efc6192aa5a66e78dd002fb104a34402a22363e2702368f4c1cb64'
   name 'Pacifist'
   homepage 'https://www.charlessoft.com/'
   license :commercial
 
-  depends_on :macos => '>= :tiger'
+  depends_on macos: '>= :tiger'
 
   app 'Pacifist.app'
 end

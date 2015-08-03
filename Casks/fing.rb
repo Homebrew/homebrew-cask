@@ -1,4 +1,4 @@
-cask :v1 => 'fing' do
+cask v1: 'fing' do
   version '2.2'
   sha256 '6794afb734c266b0a9617209688259bf04ad8738cb9126fbb922d8816c7d74aa'
 
@@ -9,5 +9,5 @@ cask :v1 => 'fing' do
 
   pkg "overlook-fing-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.Overlook.Fing'
+  uninstall pkgutil: 'com.Overlook.Fing'
 end

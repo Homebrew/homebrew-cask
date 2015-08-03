@@ -1,4 +1,4 @@
-cask :v1 => 'foldit' do
+cask v1: 'foldit' do
   version :latest
   sha256 :no_check
 

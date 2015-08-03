@@ -1,4 +1,4 @@
-cask :v1 => 'kitematic' do
+cask v1: 'kitematic' do
   version '0.7.6'
   sha256 '297f6cd43de0474f194c9024ab01a6fa1225abb9b54e378653eeecc4627fa7c7'
 
@@ -11,7 +11,7 @@ cask :v1 => 'kitematic' do
 
   app 'Kitematic (Beta).app'
 
-  zap :delete => [
+  zap delete: [
     '~/Library/Application Support/Kitematic',
     '~/Kitematic'
   ]

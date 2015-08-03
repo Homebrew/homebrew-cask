@@ -1,4 +1,4 @@
-cask :v1 => 'dymo-label' do
+cask v1: 'dymo-label' do
   version '8.5.2'
   sha256 '8cd8e0d135613d48ddb41189ff352eb53214390d149c5afcb6c25f419518c54e'
 
@@ -9,8 +9,8 @@ cask :v1 => 'dymo-label' do
 
   pkg "DYMO Label v.#{version.to_i}.pkg"
 
-  uninstall :launchctl => 'com.dymo.pnpd',
-            :pkgutil => %w[
+  uninstall launchctl: 'com.dymo.pnpd',
+            pkgutil: %w[
               com.dymo.cups
               com.dymo.dls.addressbook.addin
               com.dymo.dls.application
@@ -22,7 +22,7 @@ cask :v1 => 'dymo-label' do
               com.dymo.dls.safari.addin
             ]
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/com.dymo.dls.plist',
                   '~/Library/Caches/com.dymo.dls'
                  ]

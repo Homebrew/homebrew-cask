@@ -1,4 +1,4 @@
-cask :v1 => 'wercker' do
+cask v1: 'wercker' do
   version :latest
   sha256 :no_check
 

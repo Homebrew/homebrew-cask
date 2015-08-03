@@ -1,4 +1,4 @@
-cask :v1 => 'git-annex' do
+cask v1: 'git-annex' do
   version :latest
   sha256 :no_check
 
@@ -14,7 +14,7 @@ cask :v1 => 'git-annex' do
     preflight do
       system '/bin/mv', '--', staged_path.join('git-annex-latest'), staged_path.join('git-annex-latest.dmg')
     end
-    container :nested => 'git-annex-latest.dmg'
+    container nested: 'git-annex-latest.dmg'
   elsif MacOS.release == :mavericks
     # kitenet.net is the official download host per the vendor homepage
     url 'https://downloads.kitenet.net/git-annex/OSX/current/10.9_Mavericks/git-annex.dmg'
@@ -24,7 +24,7 @@ cask :v1 => 'git-annex' do
   end
 
   gpg "#{url}.sig",
-      :key_url => 'https://downloads.kitenet.net/git-annex/gpg-pubkey.asc'
+      key_url: 'https://downloads.kitenet.net/git-annex/gpg-pubkey.asc'
   name 'git-annex'
   homepage 'https://git-annex.branchable.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
@@ -33,9 +33,9 @@ cask :v1 => 'git-annex' do
   binary 'git-annex.app/Contents/MacOS/git-annex'
   binary 'git-annex.app/Contents/MacOS/git-annex-shell'
 
-  uninstall :launchctl => 'com.branchable.git-annex.assistant'
+  uninstall launchctl: 'com.branchable.git-annex.assistant'
 
-  depends_on :macos => %w{
+  depends_on macos: %w{
                           :lion
                           :mountain_lion
                           :mavericks

@@ -1,4 +1,4 @@
-cask :v1 => 'coda' do
+cask v1: 'coda' do
   version '2.5.11'
   sha256 '7a1f723a661fe4fa0c6d3cfd13615492777167602ffea03eab34eaee0cbe9a5e'
 
@@ -6,9 +6,9 @@ cask :v1 => 'coda' do
   name 'Coda'
   homepage 'https://panic.com/Coda/'
   license :commercial
-  tags :vendor => 'Panic'
+  tags vendor: 'Panic'
 
-  zap :delete => [
+  zap delete: [
     '~/Library/Application Support/Coda 2',
     '~/Library/Application Support/Growl/Tickets/Coda 2.growlTicket',
     '~/Library/Caches/com.panic.Coda2',
@@ -19,7 +19,7 @@ cask :v1 => 'coda' do
     '~/Library/Saved Application State/com.panic.Coda2.savedState'
   ]
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   app 'Coda 2.app'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'viscosity' do
+cask v1: 'viscosity' do
   version :latest
   sha256 :no_check
 
@@ -10,7 +10,7 @@ cask :v1 => 'viscosity' do
 
   app 'Viscosity.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Viscosity',
                   '~/Library/Preferences/com.viscosityvpn.Viscosity.plist',
                  ]

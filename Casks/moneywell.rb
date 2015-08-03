@@ -1,4 +1,4 @@
-cask :v1 => 'moneywell' do
+cask v1: 'moneywell' do
   if MacOS.release <= :tiger
     version '1.4.13'
     sha256 'b2eb23a4d5d9e555d00529f83d4cae43abc184c9174a4b729693b55787dfd64d'
@@ -15,13 +15,13 @@ cask :v1 => 'moneywell' do
 
     url "http://downloads.nothirst.com/MoneyWell_#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}.zip"
     appcast 'http://nothirst.com/feeds/MoneyWell2Appcast.xml',
-            :sha256 => '768e6407c797e9cda478b3e16df53ffeeae7e3a1729e2871ab714e3d78b44869'
+            sha256: '768e6407c797e9cda478b3e16df53ffeeae7e3a1729e2871ab714e3d78b44869'
   end
   name 'MoneyWell'
   homepage 'http://nothirst.com/moneywell/'
   license :commercial
 
-  depends_on :macos => '>= :tiger'
+  depends_on macos: '>= :tiger'
 
   app 'MoneyWell.app'
 end

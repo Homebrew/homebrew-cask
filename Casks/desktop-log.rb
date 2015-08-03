@@ -1,4 +1,4 @@
-cask :v1 => 'desktop-log' do
+cask v1: 'desktop-log' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,7 @@ cask :v1 => 'desktop-log' do
   name 'Desktop Log'
   homepage 'http://www.nightproductions.net/desklog.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Night Productions'
+  tags vendor: 'Night Productions'
 
   app 'Desktop Log.app'
 end

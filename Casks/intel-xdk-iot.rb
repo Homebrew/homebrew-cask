@@ -1,4 +1,4 @@
-cask :v1 => 'intel-xdk-iot' do
+cask v1: 'intel-xdk-iot' do
   version '1878'
   sha256 '009bfc7b24a2eede47ff408a41ae2b57a9c4944d8b2fd5a00e377c06dcf656ef'
 
@@ -9,5 +9,5 @@ cask :v1 => 'intel-xdk-iot' do
 
   pkg "xdk_full_#{version}.pkg"
 
-  uninstall :pkgutil => 'com.intel.pkg.xdk_new'
+  uninstall pkgutil: 'com.intel.pkg.xdk_new'
 end

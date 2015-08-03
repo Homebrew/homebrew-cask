@@ -1,4 +1,4 @@
-cask :v1 => 'trezor-bridge' do
+cask v1: 'trezor-bridge' do
   version '1.1.0'
   sha256 'c1d80463b6327b24c17adb431b411ccde7dcf3e94615548ccd6af2e60923fa69'
 
@@ -10,9 +10,9 @@ cask :v1 => 'trezor-bridge' do
 
   pkg "trezor-bridge-#{version}.pkg"
 
-  uninstall :pkgutil   => 'com.bitcointrezor.pkg.TREZORBridge',
-            :launchctl => 'com.bitcointrezor.trezorBridge.trezord'
+  uninstall pkgutil: 'com.bitcointrezor.pkg.TREZORBridge',
+            launchctl: 'com.bitcointrezor.trezorBridge.trezord'
 
-  depends_on :formula => 'protobuf'
-  depends_on :formula => 'libmicrohttpd'
+  depends_on formula: 'protobuf'
+  depends_on formula: 'libmicrohttpd'
 end

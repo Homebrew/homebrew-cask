@@ -1,4 +1,4 @@
-cask :v1 => 'sparkle' do
+cask v1: 'sparkle' do
   version '1.10.0'
   sha256 '415d9a860453e24aa5cb07fe850eeb1e90a8296f926617d7e1a7521a2e2f7cae'
 

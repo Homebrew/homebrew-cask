@@ -1,4 +1,4 @@
-cask :v1 => 'picturelife' do
+cask v1: 'picturelife' do
   version :latest
   sha256 :no_check
 
@@ -9,9 +9,9 @@ cask :v1 => 'picturelife' do
 
   app 'Picturelife.app'
 
-  uninstall :quit => [ 'com.picturelife.sync' ]
+  uninstall quit: [ 'com.picturelife.sync' ]
 
-  zap :delete => [
+  zap delete: [
                     '~/Library/Preferences/com.picturelife.sync.plist',
                     '~/Library/Application Support/Picturelife',
                     '~/Library/Caches/com.picturelife.sync',

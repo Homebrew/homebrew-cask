@@ -1,4 +1,4 @@
-cask :v1 => 'flash' do
+cask v1: 'flash' do
   version '18.0.0.209'
   sha256 '67b9d3ec4b29f62cc1b54324855da6c9498d798f01629dd336a84ee5702c91d0'
 
@@ -7,13 +7,13 @@ cask :v1 => 'flash' do
   name 'Adobe Flash Player'
   homepage 'https://www.adobe.com/products/flashplayer/distribution3.html'
   license :gratis
-  tags :vendor => 'Adobe'
+  tags vendor: 'Adobe'
 
   pkg 'Install Adobe Flash Player.pkg'
 
-  uninstall :pkgutil => 'com.adobe.pkg.FlashPlayer',
-            :delete  => '/Library/Internet Plug-Ins/Flash Player.plugin'
-  zap       :delete => [
+  uninstall pkgutil: 'com.adobe.pkg.FlashPlayer',
+            delete: '/Library/Internet Plug-Ins/Flash Player.plugin'
+  zap       delete: [
                         '~/Library/Caches/Adobe/Flash Player',
                         '~/Library/Logs/FlashPlayerInstallManager.log',
                        ]

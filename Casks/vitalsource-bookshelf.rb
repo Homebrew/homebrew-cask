@@ -1,4 +1,4 @@
-cask :v1 => 'vitalsource-bookshelf' do
+cask v1: 'vitalsource-bookshelf' do
 
   if MacOS.release <= :lion
     version '6.5.2'
@@ -12,7 +12,7 @@ cask :v1 => 'vitalsource-bookshelf' do
 
   name 'VitalSource Bookshelf'
   appcast 'https://services.vitalbook.com/version/check',
-          :sha256 => 'a310b400eadb9aabc7bcf12e5e56ee2dd80d595288a380d8d2a572b242016bb8'
+          sha256: 'a310b400eadb9aabc7bcf12e5e56ee2dd80d595288a380d8d2a572b242016bb8'
   homepage 'https://www.vitalsource.com/bookshelf-features'
   license :freemium
 

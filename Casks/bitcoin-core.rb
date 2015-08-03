@@ -1,4 +1,4 @@
-cask :v1 => 'bitcoin-core' do
+cask v1: 'bitcoin-core' do
   version '0.11.0'
   sha256 'fa457e65662b73f3d33235c012d4bec181e2919dd2a400afaa0ff9ab4927fb89'
 
@@ -10,5 +10,5 @@ cask :v1 => 'bitcoin-core' do
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/3634
-  app 'Bitcoin-Qt.app', :target => 'Bitcoin Core.app'
+  app 'Bitcoin-Qt.app', target: 'Bitcoin Core.app'
 end

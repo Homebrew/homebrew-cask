@@ -8,7 +8,7 @@ class Hbc::Fetcher
       googlecode_fake_head(url)
     else
       Hbc::SystemCommand.run("curl",
-                              :args => ["--max-time", TIMEOUT, "--silent", "--location", "--head", url]).stdout
+                              args: ["--max-time", TIMEOUT, "--silent", "--location", "--head", url]).stdout
     end
   end
 

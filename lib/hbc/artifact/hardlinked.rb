@@ -10,7 +10,7 @@ class Hbc::Artifact::Hardlinked < Hbc::Artifact::Symlinked
 
   def create_filesystem_link(source, target)
     Pathname.new(target).dirname.mkpath
-    @command.run!('/bin/ln', :args => ['-hf', '--', source, target])
+    @command.run!('/bin/ln', args: ['-hf', '--', source, target])
     add_altname_metadata source, target
   end
 

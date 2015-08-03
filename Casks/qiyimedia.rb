@@ -1,4 +1,4 @@
-cask :v1 => 'qiyimedia' do
+cask v1: 'qiyimedia' do
   version :latest
   sha256 :no_check
 
@@ -9,7 +9,7 @@ cask :v1 => 'qiyimedia' do
 
   app '爱奇艺视频.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Containers/com.iqiyi.yingyin',
                  ]
 end

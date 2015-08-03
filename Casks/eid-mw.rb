@@ -1,4 +1,4 @@
-cask :v1 => 'eid-mw' do
+cask v1: 'eid-mw' do
   version '4.0.7'
   sha256 'e433fee88bf1090e485307beb31733bb76abb41f2ab7cb64c3c2d29de9ffe66f'
 
@@ -9,7 +9,7 @@ cask :v1 => 'eid-mw' do
 
   pkg 'beid-407-signed.pkg'
 
-  uninstall :pkgutil => 'be.eid.middleware'
+  uninstall pkgutil: 'be.eid.middleware'
 
   caveats <<-EOS.undent
     #{token} requires Java. You can install the latest version with

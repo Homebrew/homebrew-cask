@@ -1,4 +1,4 @@
-cask :v1 => 'sophos-anti-virus-home-edition' do
+cask v1: 'sophos-anti-virus-home-edition' do
   version :latest
   sha256 :no_check
 
@@ -6,24 +6,24 @@ cask :v1 => 'sophos-anti-virus-home-edition' do
   name 'Sophos Anti-Virus Home Edition'
   homepage 'https://www.sophos.com/en-us/products/free-tools/sophos-antivirus-for-mac-home-edition.aspx/'
   license :gratis
-  tags :vendor => 'Sophos'
+  tags vendor: 'Sophos'
 
-  installer :script => 'Sophos Anti-Virus Home Edition.app/Contents/MacOS/tools/InstallationDeployer', :args => %w[--install]
+  installer script: 'Sophos Anti-Virus Home Edition.app/Contents/MacOS/tools/InstallationDeployer', args: %w[--install]
 
-  uninstall :script => {
-                        :executable => 'Sophos Anti-Virus Home Edition.app/Contents/MacOS/tools/InstallationDeployer',
-                        :args => %w[--remove]
+  uninstall script: {
+                        executable: 'Sophos Anti-Virus Home Edition.app/Contents/MacOS/tools/InstallationDeployer',
+                        args: %w[--remove]
                        },
-            :launchctl => [
+            launchctl: [
                            'com.sophos.common.servicemanager',
                            'com.sophos.uiserver',
                           ],
-            :kext => [
+            kext: [
                       'com.sophos.kext.sav',
                       'com.sophos.nke.swi',
                      ],
-            :quit => 'com.sophos.ui',
-            :delete => [
+            quit: 'com.sophos.ui',
+            delete: [
                         '/Applications/Remove Sophos Anti-Virus.app',
                         '/Applications/Sophos Anti-Virus.app',
                         '/Library/Extensions/SophosNetworkInterceptor.kext',
@@ -38,7 +38,7 @@ cask :v1 => 'sophos-anti-virus-home-edition' do
                         '/usr/share/man/man1/sweep.1',
                        ]
 
-  zap :delete => [
+  zap delete: [
                   '/Library/Application Support/Sophos',
                   '/Library/Preferences/com.sophos.ac.plist',
                   '/Library/Preferences/com.sophos.dc.plist',

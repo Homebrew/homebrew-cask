@@ -1,4 +1,4 @@
-cask :v1 => 'splashtop-personal' do
+cask v1: 'splashtop-personal' do
   version '2.6.2.1'
   sha256 '9b0733ece58b9e36b5d4f566bbcf80e0e207ba751f0a0b188807738ba79cbbed'
 
@@ -10,5 +10,5 @@ cask :v1 => 'splashtop-personal' do
 
   pkg 'Splashtop Personal.pkg'
 
-  uninstall :pkgutil => 'com.splashtop.stp.*'
+  uninstall pkgutil: 'com.splashtop.stp.*'
 end

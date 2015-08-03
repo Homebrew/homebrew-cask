@@ -1,4 +1,4 @@
-cask :v1 => 'adobe-digital-editions' do
+cask v1: 'adobe-digital-editions' do
   version '4.0'
   sha256 :no_check    # required as upstream package is updated in-place
 
@@ -9,5 +9,5 @@ cask :v1 => 'adobe-digital-editions' do
 
   pkg "Digital Editions #{version} Installer.pkg"
 
-  uninstall :pkgutil => 'com.adobe.adobedigitaleditions.app'
+  uninstall pkgutil: 'com.adobe.adobedigitaleditions.app'
 end

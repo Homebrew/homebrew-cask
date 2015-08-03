@@ -1,4 +1,4 @@
-cask :v1 => 'waterfox' do
+cask v1: 'waterfox' do
   version '38.1.0'
   sha256 '612c324154107c23063a78b2040a41e6b8909baca058d98c3bfaec944e0b4cca'
 

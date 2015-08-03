@@ -1,4 +1,4 @@
-cask :v1 => 'playonmac' do
+cask v1: 'playonmac' do
   version '4.2.8'
   sha256 '11f0c6a24486c45bbc4d0d01afa27fcaea361278289e9db8277a9fe54ffbe4f0'
 

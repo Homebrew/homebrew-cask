@@ -1,4 +1,4 @@
-cask :v1 => 'sabnzbd' do
+cask v1: 'sabnzbd' do
   version '0.7.20'
   sha256 'f7c13afe87ad91ab2f12fb6384feef79ae07bf2417395304b3d8961513d23611'
 
@@ -10,7 +10,7 @@ cask :v1 => 'sabnzbd' do
 
   app 'SABnzbd.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/SABnzbd/sabnzbd.ini',
                   '~/Library/Application Support/SABnzbd/admin/rss_data.sab',
                  ]

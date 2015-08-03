@@ -1,4 +1,4 @@
-cask :v1 => 'brytonbridge' do
+cask v1: 'brytonbridge' do
   version :latest
   sha256 :no_check
 
@@ -9,8 +9,8 @@ cask :v1 => 'brytonbridge' do
 
   pkg 'BrytonBridge2.pkg'
 
-  uninstall :pkgutil => 'com.brytonsport.pkg.BrytonBridge2',
-            :quit    => 'com.yourcompany.BrytonBridge',
-            :delete  => '/Applications/BrytonBridge2'
-  zap       :delete   => '~/Library/Saved Application State/com.yourcompany.BrytonBridge.savedState'
+  uninstall pkgutil: 'com.brytonsport.pkg.BrytonBridge2',
+            quit: 'com.yourcompany.BrytonBridge',
+            delete: '/Applications/BrytonBridge2'
+  zap       delete: '~/Library/Saved Application State/com.yourcompany.BrytonBridge.savedState'
 end

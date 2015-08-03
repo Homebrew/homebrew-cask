@@ -1,4 +1,4 @@
-cask :v1 => 'backblaze' do
+cask v1: 'backblaze' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,5 @@ cask :v1 => 'backblaze' do
   homepage 'https://www.backblaze.com/'
   license :commercial
 
-  installer :manual => 'Backblaze Installer.app'
+  installer manual: 'Backblaze Installer.app'
 end

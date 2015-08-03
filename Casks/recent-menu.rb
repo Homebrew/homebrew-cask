@@ -1,4 +1,4 @@
-cask :v1 => 'recent-menu' do
+cask v1: 'recent-menu' do
   version :latest
   sha256 :no_check
 

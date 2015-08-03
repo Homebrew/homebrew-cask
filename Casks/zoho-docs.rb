@@ -1,4 +1,4 @@
-cask :v1 => 'zoho-docs' do
+cask v1: 'zoho-docs' do
   version :latest
   sha256 :no_check
 

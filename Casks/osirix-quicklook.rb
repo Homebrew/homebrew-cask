@@ -1,4 +1,4 @@
-cask :v1 => 'osirix-quicklook' do
+cask v1: 'osirix-quicklook' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'osirix-quicklook' do
 
   pkg 'OsiriXQuickLookInstaller.pkg'
 
-  uninstall :pkgutil => 'com.pixmeo.osirix.osirixQuicklookPlugin.OsiriXQuickLookPlugin.pkg'
+  uninstall pkgutil: 'com.pixmeo.osirix.osirixQuicklookPlugin.OsiriXQuickLookPlugin.pkg'
 end

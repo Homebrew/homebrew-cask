@@ -1,4 +1,4 @@
-cask :v1 => 'geniego' do
+cask v1: 'geniego' do
   version :latest
   sha256 :no_check
 
@@ -10,5 +10,5 @@ cask :v1 => 'geniego' do
   license :closed
 
   # Renamed for clarity: app name is inconsistent with its branding.
-  app 'Nomad.app', :target => 'GenieGO.app'
+  app 'Nomad.app', target: 'GenieGO.app'
 end

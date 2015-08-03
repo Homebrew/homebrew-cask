@@ -1,4 +1,4 @@
-cask :v1 => 'soulver' do
+cask v1: 'soulver' do
   version :latest
   sha256 :no_check
 
@@ -14,7 +14,7 @@ cask :v1 => 'soulver' do
     suppress_move_to_applications
   end
 
-  zap :delete => [
+  zap delete: [
                   # todo verify that this does not contain user-generated content
                   # '~/Library/Application Support/Soulver',
                   '~/Library/Preferences/com.acqualia.soulver.plist',

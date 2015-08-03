@@ -1,4 +1,4 @@
-cask :v1 => 'remote-buddy' do
+cask v1: 'remote-buddy' do
   version :latest
   sha256 :no_check
 

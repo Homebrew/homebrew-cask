@@ -1,4 +1,4 @@
-cask :v1 => 'whatsapp' do
+cask v1: 'whatsapp' do
   version '0.1.0'
   sha256 '1c85878b726a84de33b04e2fa7139c71c6804a08a3b14bdd99b400d2f7bbea49'
 

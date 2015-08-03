@@ -1,4 +1,4 @@
-cask :v1 => 'visual-studio-code' do
+cask v1: 'visual-studio-code' do
   version :latest
   sha256 :no_check
 
@@ -6,11 +6,11 @@ cask :v1 => 'visual-studio-code' do
   name 'Visual Studio Code'
   homepage 'https://code.visualstudio.com/'
   license :gratis
-  tags :vendor => 'Microsoft'
+  tags vendor: 'Microsoft'
 
   app 'VSCode-darwin-signed/Visual Studio Code.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Code',
                   '~/Library/Caches/Code',
                  ]

@@ -1,7 +1,7 @@
 class Hbc::CLI::Update < Hbc::CLI::Base
   def self.run(*_ignored)
     result = Hbc::SystemCommand.run(Hbc.homebrew_executable,
-                                    :args => %w{update})
+                                    args: %w{update})
     # todo: separating stderr/stdout is undesirable here.
     # Hbc::SystemCommand should have an option for plain
     # unbuffered output.

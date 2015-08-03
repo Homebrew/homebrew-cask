@@ -1,4 +1,4 @@
-cask :v1 => 'virtualhostx' do
+cask v1: 'virtualhostx' do
   version '6.0.4'
   sha256 'd0ab4ef0049639e94887dc011dbe36a46fbe963494a39af7ad190417c08620a3'
 

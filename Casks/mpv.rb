@@ -1,4 +1,4 @@
-cask :v1 => 'mpv' do
+cask v1: 'mpv' do
   version '0.9.2'
   sha256 '149dc1e945d3e743863db3fa2ac0abbb55e157ac3cbbe2c523a5fcca8aca4265'
 
@@ -18,7 +18,7 @@ cask :v1 => 'mpv' do
     system '/bin/ln', '-nsf', '--', staged_path.join('mpv.app/Contents/Resources/fonts.conf'), File.expand_path('~/.config/mpv/fonts.conf')
   end
 
-  zap :delete => [
+  zap delete: [
                   '~/.mpv/channels.conf',
                   '~/.mpv/config',
                   '~/.mpv/input.conf',
@@ -28,7 +28,7 @@ cask :v1 => 'mpv' do
                   '~/.config/mpv/input.conf',
                   '~/.config/mpv/fonts.conf',
                  ],
-      :rmdir  => [
+      rmdir: [
                   '~/.mpv',
                   '~/.config/mpv'
                  ]

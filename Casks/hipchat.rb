@@ -1,4 +1,4 @@
-cask :v1 => 'hipchat' do
+cask v1: 'hipchat' do
   version :latest
   sha256 :no_check
 
@@ -14,7 +14,7 @@ cask :v1 => 'hipchat' do
     suppress_move_to_applications
   end
 
-  zap :delete => [
+  zap delete: [
                   # todo expand/glob for '~/Library/<userid>/HipChat/'
                   '~/Library/Application Support/HipChat',
                   '~/Library/Caches/com.hipchat.HipChat',

@@ -1,4 +1,4 @@
-cask :v1 => 'ibank' do
+cask v1: 'ibank' do
 
   if MacOS.release <= :leopard
     version '3.5.7'

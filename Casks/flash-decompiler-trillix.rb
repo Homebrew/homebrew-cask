@@ -1,4 +1,4 @@
-cask :v1 => 'flash-decompiler-trillix' do
+cask v1: 'flash-decompiler-trillix' do
   version :latest
   sha256 :no_check
 

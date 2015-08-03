@@ -1,4 +1,4 @@
-cask :v1 => 'fiddler' do
+cask v1: 'fiddler' do
   version :latest
   sha256 :no_check
 
@@ -8,9 +8,9 @@ cask :v1 => 'fiddler' do
   name 'Fiddler'
   homepage 'http://www.telerik.com/fiddler'
   license :commercial
-  tags :vendor => 'Telerik'
+  tags vendor: 'Telerik'
 
-  depends_on :cask => 'mono-mdk'
+  depends_on cask: 'mono-mdk'
 
   app 'Fiddler.app'
 end

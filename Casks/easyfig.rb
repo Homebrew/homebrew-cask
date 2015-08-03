@@ -1,4 +1,4 @@
-cask :v1 => 'easyfig' do
+cask v1: 'easyfig' do
   version '2.1.0'
   sha256 '470809860367a448cd931a2ed54caed116576f1cdf5795cba6ad1e8be186bec4'
 

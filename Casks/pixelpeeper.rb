@@ -1,4 +1,4 @@
-cask :v1 => 'pixelpeeper' do
+cask v1: 'pixelpeeper' do
   version :latest
   sha256 :no_check
 

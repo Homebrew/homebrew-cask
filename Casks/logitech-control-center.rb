@@ -1,4 +1,4 @@
-cask :v1 => 'logitech-control-center' do
+cask v1: 'logitech-control-center' do
 
   if MacOS.release <= :leopard
     version '3.5.1.23'
@@ -19,8 +19,8 @@ cask :v1 => 'logitech-control-center' do
 
   pkg 'LCC Installer.app/Contents/Resources/Logitech Control Center.mpkg'
 
-  uninstall :script => 'LCC Installer.app/Contents/Resources/LCC Uninstaller Tool',
-            :pkgutil => [
+  uninstall script: 'LCC Installer.app/Contents/Resources/LCC Uninstaller Tool',
+            pkgutil: [
                         'com.Logitech.Control Center.pkg',
                         'com.Logitech.Unifying Software.pkg',
                         'com.Logitech.Updater.pkg',

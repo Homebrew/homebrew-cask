@@ -1,4 +1,4 @@
-cask :v1 => 'sonarr' do
+cask v1: 'sonarr' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'sonarr' do
 
   app 'Sonarr.app'
 
-  depends_on :cask => 'mono-mdk'
+  depends_on cask: 'mono-mdk'
 end

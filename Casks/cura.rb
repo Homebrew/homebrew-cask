@@ -1,4 +1,4 @@
-cask :v1 => 'cura' do
+cask v1: 'cura' do
   version '15.06.01'
   sha256 'e5119c37c6793c67f6cef2a4f8d86ba43e5a77ed14598227af45ecc31f8c4c0d'
 
@@ -9,5 +9,5 @@ cask :v1 => 'cura' do
 
   app 'Cura/Cura.app'
 
-  zap :delete => '~/.cura'
+  zap delete: '~/.cura'
 end

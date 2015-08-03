@@ -1,4 +1,4 @@
-cask :v1 => 'virtualbox-extension-pack' do
+cask v1: 'virtualbox-extension-pack' do
   version '5.0.0-101573'
   sha256 'c357e36368883df821ed092d261890a95c75e50422b75848c40ad20984086a7a'
 
@@ -6,11 +6,11 @@ cask :v1 => 'virtualbox-extension-pack' do
   name 'VirtualBox Extension Pack'
   homepage 'https://www.virtualbox.org'
   license :closed
-  tags :vendor => 'Oracle'
+  tags vendor: 'Oracle'
 
   stage_only true
 
-  container :type => :naked
+  container type: :naked
 
   postflight do
     system 'sudo', 'VBoxManage', 'extpack', 'install', '--replace', "#{staged_path}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
@@ -20,5 +20,5 @@ cask :v1 => 'virtualbox-extension-pack' do
     system 'sudo', 'VBoxManage', 'extpack', 'uninstall', 'Oracle VM VirtualBox Extension Pack'
   end
 
-  depends_on :cask => 'virtualbox'
+  depends_on cask: 'virtualbox'
 end

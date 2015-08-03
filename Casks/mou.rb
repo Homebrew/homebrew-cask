@@ -1,4 +1,4 @@
-cask :v1 => 'mou' do
+cask v1: 'mou' do
   version :latest
   sha256 :no_check
 
@@ -10,7 +10,7 @@ cask :v1 => 'mou' do
 
   app 'Mou.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/com.mouapp.Mou.plist',
                   '~/Library/Preferences/com.mouapp.Mou.LSSharedFileList.plist',
                   '~/Library/Application Support/Mou',

@@ -1,4 +1,4 @@
-cask :v1 => 'netbeans' do
+cask v1: 'netbeans' do
   version '8.0.2'
   sha256 'a256360136918001b17a6f5ad9fedc0b7ea8a094701cba37718568bc2cbb4c01'
 
@@ -21,13 +21,13 @@ cask :v1 => 'netbeans' do
   # receipts database that would be a bug upstream with NetBeans not prefixing
   # its GlassFish package with "org.netbeans."
   #
-  # If this ever becomes an issue, :pkgutil => 'glassfish-.*' could be moved
+  # If this ever becomes an issue, pkgutil: 'glassfish-.*' could be moved
   # to a separate "zap" stanza.
   #
   # The NetBeans installer does some postflight unpacking of paths installed by
   # the OS X installer, so it's insufficient to just delete the paths exposed
   # by pkgutil, hence the additional ":delete" option below.
 
-  uninstall :pkgutil => 'org.netbeans.ide.*|glassfish-.*',
-            :delete => '/Applications/NetBeans'
+  uninstall pkgutil: 'org.netbeans.ide.*|glassfish-.*',
+            delete: '/Applications/NetBeans'
 end

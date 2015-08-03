@@ -1,4 +1,4 @@
-cask :v1 => 'eclipse-ptp' do
+cask v1: 'eclipse-ptp' do
   version '4.5'
   sha256 'a3a65de4af4b2db327732cfec8c0ea4d2aa4ada66089ce004b42eac4e5727e8b'
 
@@ -7,8 +7,8 @@ cask :v1 => 'eclipse-ptp' do
   name 'Eclipse Parallel Tools Platform'
   homepage 'https://eclipse.org/'
   license :eclipse
-  depends_on :macos => '>= :leopard'
-  depends_on :arch => :x86_64
+  depends_on macos: '>= :leopard'
+  depends_on arch: :x86_64
 
   app 'Eclipse.app'
 end

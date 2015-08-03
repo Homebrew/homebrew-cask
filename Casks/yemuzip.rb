@@ -1,4 +1,4 @@
-cask :v1 => 'yemuzip' do
+cask v1: 'yemuzip' do
   version :latest
   sha256 :no_check
 

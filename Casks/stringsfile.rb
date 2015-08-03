@@ -1,4 +1,4 @@
-cask :v1 => 'stringsfile' do
+cask v1: 'stringsfile' do
   version :latest
   sha256 :no_check
 

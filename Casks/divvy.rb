@@ -1,4 +1,4 @@
-cask :v1 => 'divvy' do
+cask v1: 'divvy' do
   version '1.4.1'
   sha256 '225e5e8a1a9e145db588ca71710ffb41f5a7f926de5f48484710258d92b2a62a'
 
@@ -10,7 +10,7 @@ cask :v1 => 'divvy' do
 
   app 'Divvy.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/com.mizage.direct.Divvy.plist',
                   '~/Library/Preferences/com.mizage.Divvy.plist',
                  ]

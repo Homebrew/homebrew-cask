@@ -1,4 +1,4 @@
-cask :v1 => 'openoffice' do
+cask v1: 'openoffice' do
   version '4.1.1'
   sha256 '7becbdbe2abbcfd9d27953d2e11dc07da308d80f208b5f27f6213d225dc95e64'
 
@@ -7,7 +7,7 @@ cask :v1 => 'openoffice' do
   name 'OpenOffice'
   homepage 'https://www.openoffice.org/'
   license :apache
-  tags :vendor => 'Apache'
+  tags vendor: 'Apache'
 
   app 'OpenOffice.app'
 end

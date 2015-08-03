@@ -1,4 +1,4 @@
-cask :v1 => 'disconnect' do
+cask v1: 'disconnect' do
   version :latest
   sha256 :no_check
 
@@ -10,7 +10,7 @@ cask :v1 => 'disconnect' do
 
   pkg 'Disconnect+Desktop.pkg'
 
-  uninstall :pkgutil => [
+  uninstall pkgutil: [
                          'com.disconnect.pkg.DisconnectDependencies',
                          'com.disconnect.pkg.DisconnectDesktop',
                         ]

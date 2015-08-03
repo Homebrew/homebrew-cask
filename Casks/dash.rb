@@ -1,4 +1,4 @@
-cask :v1 => 'dash' do
+cask v1: 'dash' do
   version :latest
   sha256 :no_check
 
@@ -14,7 +14,7 @@ cask :v1 => 'dash' do
     suppress_move_to_applications
   end
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Dash',
                   '~/Library/Preferences/com.kapeli.dash.plist',
                   '~/Library/Preferences/com.kapeli.dashdoc.plist',

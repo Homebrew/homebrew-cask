@@ -67,8 +67,8 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
     begin
       Dir.chdir(homebrew_repository) do
         homebrew_origin = Hbc::SystemCommand.run('git',
-                                                  :args => %w{config --get remote.origin.url},
-                                                  :print_stderr => false).stdout.strip
+                                                  args: %w{config --get remote.origin.url},
+                                                  print_stderr: false).stdout.strip
       end
       if homebrew_origin !~ %r{\S}
         homebrew_origin = "#{none_string} #{error_string}"
@@ -105,8 +105,8 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
     @homebrew_constants[name] = notfound_string
     begin
       @homebrew_constants[name] = Hbc::SystemCommand.run!(Hbc.homebrew_executable,
-                                                          :args => [ "--#{name}" ],
-                                                          :print_stderr => false).stdout.strip
+                                                          args: [ "--#{name}" ],
+                                                          print_stderr: false).stdout.strip
       if @homebrew_constants[name] !~ %r{\S}
         @homebrew_constants[name] = "#{none_string} #{error_string}"
       end

@@ -1,4 +1,4 @@
-cask :v1 => 'jedit' do
+cask v1: 'jedit' do
   version '5.2.0'
   sha256 '0d5e6b38228b87a023dfb6944e54f2651cca7e75d237c6bc7f93fd95ca662270'
 

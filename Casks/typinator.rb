@@ -1,4 +1,4 @@
-cask :v1 => 'typinator' do
+cask v1: 'typinator' do
   version :latest
   sha256 :no_check
 

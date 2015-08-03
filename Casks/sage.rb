@@ -1,4 +1,4 @@
-cask :v1 => 'sage' do
+cask v1: 'sage' do
   version '6.7'
   sha256 'd5887741c1f3b85030ade9f623f55e308947a35c9c620e7ccb84bf23a6ec939f'
 
@@ -11,7 +11,7 @@ cask :v1 => 'sage' do
   app "Sage-#{version}.app"
   binary "Sage-#{version}.app/Contents/Resources/sage/sage"
 
-  zap :delete => [
+  zap delete: [
                   '~/.sage',
                   '~/Library/Logs/sage.log',
                  ]

@@ -1,4 +1,4 @@
-cask :v1 => 'dbeaver-community' do
+cask v1: 'dbeaver-community' do
   version '3.4.4'
 
   if Hardware::CPU.is_32_bit?

@@ -1,4 +1,4 @@
-cask :v1 => 'google-earth-pro' do
+cask v1: 'google-earth-pro' do
   version :latest
   sha256 :no_check
 
@@ -6,13 +6,13 @@ cask :v1 => 'google-earth-pro' do
   name 'Google Earth Pro'
   homepage 'https://www.google.com/earth/'
   license :gratis
-  tags :vendor => 'Google'
+  tags vendor: 'Google'
 
   pkg 'Install Google Earth.pkg'
 
-  uninstall :pkgutil => 'com.Google.GoogleEarthPro'
+  uninstall pkgutil: 'com.Google.GoogleEarthPro'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Google Earth',
                   '~/Library/Caches/Google Earth',
                   '~/Library/Caches/com.Google.GoogleEarthPro',

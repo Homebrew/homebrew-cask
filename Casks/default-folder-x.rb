@@ -1,4 +1,4 @@
-cask :v1 => 'default-folder-x' do
+cask v1: 'default-folder-x' do
   if MacOS.release <= :leopard
     version '4.5.12'
     sha256 'fc2225a106d0c26a4373d92e3a4b04483830506d22ec772b432a705a634c49ed'
@@ -12,9 +12,9 @@ cask :v1 => 'default-folder-x' do
   homepage 'https://www.stclairsoft.com/DefaultFolderX'
   license :commercial
 
-  installer :manual => 'Default Folder X Installer.app'
+  installer manual: 'Default Folder X Installer.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/com.stclairsoft.DefaultFolderX.favorites.plist',
                   '~/Library/Preferences/com.stclairsoft.DefaultFolderX.plist',
                   '~/Library/Preferences/com.stclairsoft.DefaultFolderX.settings.plist',

@@ -24,19 +24,19 @@ class Hbc::DSL::DependsOn
 
   # Intentionally undocumented: catch variant spellings.
   ARCH_SYNONYMS = {
-                   :x86_32     => :i386,
-                   :x8632      => :i386,
-                   :x8664      => :x86_64,
-                   :intel_32   => :i386,
-                   :intel32    => :i386,
-                   :intel_64   => :x86_64,
-                   :intel64    => :x86_64,
-                   :amd_64     => :x86_64,
-                   :amd64      => :x86_64,
-                   :ppc7400    => :ppc_7400,
-                   :ppc_32     => :ppc_7400,
-                   :ppc32      => :ppc_7400,
-                   :ppc64      => :ppc_64,
+                   x86_32: :i386,
+                   x8632: :i386,
+                   x8664: :x86_64,
+                   intel_32: :i386,
+                   intel32: :i386,
+                   intel_64: :x86_64,
+                   intel64: :x86_64,
+                   amd_64: :x86_64,
+                   amd64: :x86_64,
+                   ppc7400: :ppc_7400,
+                   ppc_32: :ppc_7400,
+                   ppc32: :ppc_7400,
+                   ppc64: :ppc_64,
                   }
 
   attr_accessor :java

@@ -1,4 +1,4 @@
-cask :v1 => 'phpstorm' do
+cask v1: 'phpstorm' do
   version '9.0'
   sha256 'd025e8b02ec16d8eed00f1edc9bad9b05d64ed04368ac73dec282633f7eaa591'
 
@@ -9,7 +9,7 @@ cask :v1 => 'phpstorm' do
 
   app 'PhpStorm.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/WebIde90',
                   '~/Library/Preferences/WebIde90',
                   '~/Library/Preferences/com.jetbrains.PhpStorm.plist',

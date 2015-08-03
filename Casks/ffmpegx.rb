@@ -1,4 +1,4 @@
-cask :v1 => 'ffmpegx' do
+cask v1: 'ffmpegx' do
   version :latest
   sha256 :no_check
 

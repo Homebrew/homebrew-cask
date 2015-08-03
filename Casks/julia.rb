@@ -1,4 +1,4 @@
-cask :v1 => 'julia' do
+cask v1: 'julia' do
   version '0.3.10'
   sha256 '0e02d51efb0111fa6ae5719470aa44d1ca411d7c154e8b9072e26f46c664bfb9'
 
@@ -11,7 +11,7 @@ cask :v1 => 'julia' do
   app "Julia-#{version}.app"
   binary "Julia-#{version}.app/Contents/Resources/julia/bin/julia"
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
-  zap :delete => '~/.julia'
+  zap delete: '~/.julia'
 end

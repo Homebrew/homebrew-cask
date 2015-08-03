@@ -1,4 +1,4 @@
-cask :v1 => 'pandoc' do
+cask v1: 'pandoc' do
   version '1.15.0.6'
   sha256 'e5b254480b43d5cce19c01723e93cd357ec285cfe8d320cae5bc15580afb92d4'
 
@@ -11,7 +11,7 @@ cask :v1 => 'pandoc' do
 
   pkg "pandoc-#{version}-osx.pkg"
 
-  uninstall :pkgutil => 'net.johnmacfarlane.pandoc'
+  uninstall pkgutil: 'net.johnmacfarlane.pandoc'
 
-  conflicts_with :formula => 'pandoc'
+  conflicts_with formula: 'pandoc'
 end

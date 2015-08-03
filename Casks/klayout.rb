@@ -1,4 +1,4 @@
-cask :v1 => 'klayout' do
+cask v1: 'klayout' do
   version '0.23.2'
   sha256 '96ce3fdead710248ed2ed4f25c9a94859949466d42eaa4f87881c17567dc1f15'
 
@@ -10,6 +10,6 @@ cask :v1 => 'klayout' do
 
   pkg "klayout.#{version}.pkg"
 
-  uninstall :pkgutil => 'klayout.de',
-            :quit => 'klayout.de'
+  uninstall pkgutil: 'klayout.de',
+            quit: 'klayout.de'
 end

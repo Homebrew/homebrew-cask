@@ -1,4 +1,4 @@
-cask :v1 => 'wasted' do
+cask v1: 'wasted' do
   version :latest
   sha256 :no_check
 

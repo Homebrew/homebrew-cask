@@ -1,4 +1,4 @@
-cask :v1 => 'fog-burner' do
+cask v1: 'fog-burner' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'fog-burner' do
 
   app 'Fog Burner.app'
 
-  depends_on :macos => '>= 10.9'
+  depends_on macos: '>= 10.9'
 end

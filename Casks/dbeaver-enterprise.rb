@@ -1,4 +1,4 @@
-cask :v1 => 'dbeaver-enterprise' do
+cask v1: 'dbeaver-enterprise' do
   version '3.4.4'
 
   if Hardware::CPU.is_32_bit?

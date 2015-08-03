@@ -1,4 +1,4 @@
-cask :v1 => 'zipeg' do
+cask v1: 'zipeg' do
   version :latest
   sha256 :no_check
 

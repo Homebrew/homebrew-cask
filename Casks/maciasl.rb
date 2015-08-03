@@ -1,4 +1,4 @@
-cask :v1 => 'maciasl' do
+cask v1: 'maciasl' do
   version '1.3'
 
   if MacOS.release == :lion
@@ -15,5 +15,5 @@ cask :v1 => 'maciasl' do
 
   app 'MaciASL.app'
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 end

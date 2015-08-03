@@ -1,4 +1,4 @@
-cask :v1 => 'crashplan' do
+cask v1: 'crashplan' do
   version '4.3.0'
   sha256 '22d2d26e6f9f356f40029947ace2031a4e34fa9fd54b275de10c6961b8574713'
 
@@ -9,6 +9,6 @@ cask :v1 => 'crashplan' do
 
   pkg 'Install CrashPlan.pkg'
 
-  uninstall :script  => 'Uninstall.app/Contents/Resources/uninstall.sh',
-            :pkgutil => 'com.crashplan.app.pkg'
+  uninstall script: 'Uninstall.app/Contents/Resources/uninstall.sh',
+            pkgutil: 'com.crashplan.app.pkg'
 end

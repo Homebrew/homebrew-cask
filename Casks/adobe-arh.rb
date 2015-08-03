@@ -1,4 +1,4 @@
-cask :v1_1 => 'adobe-arh' do
+cask v1_1: 'adobe-arh' do
   version :latest
   sha256 :no_check
 
@@ -8,7 +8,7 @@ cask :v1_1 => 'adobe-arh' do
   homepage 'http://help.adobe.com/en_US/air/redist/WS485a42d56cd19641-70d979a8124ef20a34b-8000.html'
   license :gratis
 
-  container :type => :naked
+  container type: :naked
   binary 'arh'
 
   postflight do

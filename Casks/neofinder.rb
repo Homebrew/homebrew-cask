@@ -1,4 +1,4 @@
-cask :v1 => 'neofinder' do
+cask v1: 'neofinder' do
   version :latest
   sha256 :no_check
 

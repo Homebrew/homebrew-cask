@@ -1,4 +1,4 @@
-cask :v1 => 'multimc' do
+cask v1: 'multimc' do
   version :latest
   sha256 :no_check
 

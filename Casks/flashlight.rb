@@ -1,4 +1,4 @@
-cask :v1 => 'flashlight' do
+cask v1: 'flashlight' do
   version :latest
   sha256 :no_check
 
@@ -7,7 +7,7 @@ cask :v1 => 'flashlight' do
   url 'https://flashlightplugins.appspot.com/latest_download'
   name 'Flashlight'
   appcast 'https://raw.githubusercontent.com/nate-parrott/flashlight/master/Appcast.xml',
-          :sha256 => '612946c9e6a7fd1de81bfd1cd822d4a047f986caa9451ba9bed3d3bbf57b4782'
+          sha256: '612946c9e6a7fd1de81bfd1cd822d4a047f986caa9451ba9bed3d3bbf57b4782'
   homepage 'http://flashlight.nateparrott.com/'
   license :gpl
 
@@ -17,9 +17,9 @@ cask :v1 => 'flashlight' do
     suppress_move_to_applications
   end
 
-  uninstall :quit => 'com.nateparrott.Flashlight.FlashlightSIMBLAgent'
+  uninstall quit: 'com.nateparrott.Flashlight.FlashlightSIMBLAgent'
 
-  zap :delete => [
+  zap delete: [
     '~/Library/Caches/com.nateparrott.Flashlight',
     '~/Library/FlashlightPlugins',
     '~/Library/Preferences/com.nateparrott.Flashlight.plist',

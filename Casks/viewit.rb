@@ -1,4 +1,4 @@
-cask :v1 => 'viewit' do
+cask v1: 'viewit' do
   version '2.51'
   sha256 '4558ec864234f2cd1037a345c7daea86fcc4f4e423a8ca093f9d31275f570f5d'
 

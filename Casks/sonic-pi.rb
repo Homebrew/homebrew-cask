@@ -1,4 +1,4 @@
-cask :v1 => 'sonic-pi' do
+cask v1: 'sonic-pi' do
   version :latest
   sha256 :no_check
 

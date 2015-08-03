@@ -1,4 +1,4 @@
-cask :v1 => 'cvc4' do
+cask v1: 'cvc4' do
 
   if MacOS.release <= :mountain_lion
     version '1.4'
@@ -22,7 +22,7 @@ cask :v1 => 'cvc4' do
   homepage 'https://cvc4.cs.nyu.edu/'
   license :oss
 
-  uninstall :pkgutil => 'org.macports.cvc4'
+  uninstall pkgutil: 'org.macports.cvc4'
 
   caveats do
     path_environment_variable('/opt/local/bin')

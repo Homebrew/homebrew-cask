@@ -1,4 +1,4 @@
-cask :v1 => 'prizmo' do
+cask v1: 'prizmo' do
   version '3.1.3'
   sha256 '52154553c4473dcb1613844991e49a62f96d2f9016254ea2577b0d4b5479c933'
 
@@ -9,7 +9,7 @@ cask :v1 => 'prizmo' do
   homepage 'http://www.creaceed.com/prizmo'
   license :freemium
 
-  depends_on :macos => '>= :yosemite'
+  depends_on macos: '>= :yosemite'
 
   app 'Prizmo.app'
 end

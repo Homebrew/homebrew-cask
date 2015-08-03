@@ -1,4 +1,4 @@
-cask :v1 => 'nomacs' do
+cask v1: 'nomacs' do
   version '2.4.5'
   sha256 '90da9d3d77a659c6ad14ebfb8f19f795f59a7ded5e2262ec610786b4b182106f'
 

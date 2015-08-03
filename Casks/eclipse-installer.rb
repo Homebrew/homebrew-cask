@@ -1,4 +1,4 @@
-cask :v1 => 'eclipse-installer' do
+cask v1: 'eclipse-installer' do
   version :latest
   sha256 :no_check
 
@@ -9,8 +9,8 @@ cask :v1 => 'eclipse-installer' do
 
   app 'Eclipse Installer.app'
 
-  depends_on :macos => '>= :leopard'
-  depends_on :arch => :x86_64
+  depends_on macos: '>= :leopard'
+  depends_on arch: :x86_64
 
   caveats <<-EOS.undent
     #{token} requires Java. You can install the latest version with

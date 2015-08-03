@@ -1,4 +1,4 @@
-cask :v1 => 'chronosync' do
+cask v1: 'chronosync' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'chronosync' do
 
   pkg 'Install.pkg'
 
-  uninstall :pkgutil => 'com.econtechnologies.pkg.ChronoSyncApplication'
+  uninstall pkgutil: 'com.econtechnologies.pkg.ChronoSyncApplication'
 end

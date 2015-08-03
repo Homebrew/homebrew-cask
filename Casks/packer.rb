@@ -1,4 +1,4 @@
-cask :v1 => 'packer' do
+cask v1: 'packer' do
   version '0.8.2'
   sha256 '1163dd8f01781e959cf1a986e00faeca7b3e2128298d8457105d5361d76dccfc'
 

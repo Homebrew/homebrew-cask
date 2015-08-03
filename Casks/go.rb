@@ -1,4 +1,4 @@
-cask :v1 => 'go' do
+cask v1: 'go' do
   version '1.4.2'
 
   if MacOS.release <= 10.6
@@ -15,7 +15,7 @@ cask :v1 => 'go' do
   homepage 'https://golang.org/'
   license :bsd
 
-  depends_on :macos => '>= 10.6'
+  depends_on macos: '>= 10.6'
 
-  uninstall :pkgutil => 'com.googlecode.go'
+  uninstall pkgutil: 'com.googlecode.go'
 end

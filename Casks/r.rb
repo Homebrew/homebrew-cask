@@ -1,4 +1,4 @@
-cask :v1 => 'r' do
+cask v1: 'r' do
 
   if MacOS.release < :mavericks
     version '3.2.1'
@@ -18,16 +18,16 @@ cask :v1 => 'r' do
   homepage 'http://www.r-project.org/'
   license :gpl
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
-  uninstall :pkgutil => [
+  uninstall pkgutil: [
                          # eg org.r-project.R.maverics.fw.pkg
                          #   org.r-project.R.mavericks.GUI.pkg
                          'org\.r-project\.R\..*(fw|GUI)\.pkg',
                          # eg org.r-project.x86_64.tcltk.x11
                          'org.r-project\..*\.tcltk.x11',
                         ],
-            :delete => [
+            delete: [
                         # symlinks
                         '/usr/bin/R',
                         '/usr/bin/Rscript',
@@ -36,7 +36,7 @@ cask :v1 => 'r' do
                         # /Library/Frameworks/R.Framework/Versions/3.1/Resources/fontconfig/cache
                         '/Library/Frameworks/R.Framework/Versions/3.1',
                        ]
-  zap       :delete => [
+  zap       delete: [
                         '~/.R',
                         '~/.RData',
                         '~/.Rapp.history',

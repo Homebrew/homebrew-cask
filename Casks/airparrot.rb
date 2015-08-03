@@ -1,4 +1,4 @@
-cask :v1 => 'airparrot' do
+cask v1: 'airparrot' do
   version '2.2.1'
   sha256 '0be7fa38ddfbc377356e14bc1b09bd9f876adcd6cc095bc3a58f8846cea0dd02'
 

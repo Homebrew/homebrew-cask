@@ -1,4 +1,4 @@
-cask :v1 => 'management-tools' do
+cask v1: 'management-tools' do
   version '1.8.1'
   sha256 '959d87a4699fb9ec85f06313c2842dca0fc7e9e230dc992cd3ea05f03d76f0b7'
 
@@ -10,7 +10,7 @@ cask :v1 => 'management-tools' do
 
   pkg "Management Tools [#{version}].pkg"
 
-  uninstall :pkgutil => 'edu.utah.scl.management-tools'
+  uninstall pkgutil: 'edu.utah.scl.management-tools'
 
-  depends_on :macos => '>= :mountain_lion'
+  depends_on macos: '>= :mountain_lion'
 end

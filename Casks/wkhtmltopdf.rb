@@ -1,4 +1,4 @@
-cask :v1 => 'wkhtmltopdf' do
+cask v1: 'wkhtmltopdf' do
   version '0.12.3-dev-79ff51e'
 
   if Hardware::CPU.is_32_bit?
@@ -17,10 +17,10 @@ cask :v1 => 'wkhtmltopdf' do
   homepage 'http://wkhtmltopdf.org/'
   license :gpl
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
-  uninstall :pkgutil => 'org.wkhtmltopdf.wkhtmltox',
-            :delete  => [
+  uninstall pkgutil: 'org.wkhtmltopdf.wkhtmltox',
+            delete: [
                           '/usr/local/include/wkhtmltox',
                           '/usr/local/lib/libwkhtmltox.dylib',
                           "/usr/local/lib/libwkhtmltox.#{version.to_i}.dylib",

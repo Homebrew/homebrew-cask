@@ -1,4 +1,4 @@
-cask :v1 => 'emby-server' do
+cask v1: 'emby-server' do
   version :latest
   sha256 :no_check
 
@@ -10,5 +10,5 @@ cask :v1 => 'emby-server' do
 
   pkg 'Emby.Server.Mac.pkg'
 
-  uninstall :pkgutil => 'com.MediaBrowser.MediaBrowser.Server.Mac'
+  uninstall pkgutil: 'com.MediaBrowser.MediaBrowser.Server.Mac'
 end

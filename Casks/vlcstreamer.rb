@@ -1,4 +1,4 @@
-cask :v1 => 'vlcstreamer' do
+cask v1: 'vlcstreamer' do
   version :latest
   sha256 :no_check
 

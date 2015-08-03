@@ -1,4 +1,4 @@
-cask :v1 => '4k-youtube-to-mp3' do
+cask v1: '4k-youtube-to-mp3' do
   # note: "3" is not a version number, but an intrinsic part of the product name
   version '2.10'
   sha256 '0b672b44d6b63bcf1ef37ef0705c93f4d70a3cebbf5bfdf80379665dd3cabb21'

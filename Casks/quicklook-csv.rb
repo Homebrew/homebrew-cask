@@ -1,4 +1,4 @@
-cask :v1 => 'quicklook-csv' do
+cask v1: 'quicklook-csv' do
   version :latest
   sha256 :no_check
 

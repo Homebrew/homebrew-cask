@@ -10,9 +10,9 @@ class Hbc::Container::Gzip < Hbc::Container::Base
 
   def extract
     Dir.mktmpdir do |unpack_dir|
-      @command.run!('/usr/bin/ditto',  :args => ['--', @path, unpack_dir])
-      @command.run!('/usr/bin/gunzip', :args => ['-q', '--', Pathname(unpack_dir).join(@path.basename)])
-      @command.run!('/usr/bin/ditto',  :args => ['--', unpack_dir, @cask.staged_path])
+      @command.run!('/usr/bin/ditto',  args: ['--', @path, unpack_dir])
+      @command.run!('/usr/bin/gunzip', args: ['-q', '--', Pathname(unpack_dir).join(@path.basename)])
+      @command.run!('/usr/bin/ditto',  args: ['--', unpack_dir, @cask.staged_path])
     end
   end
 end

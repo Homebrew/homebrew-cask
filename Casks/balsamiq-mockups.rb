@@ -1,4 +1,4 @@
-cask :v1 => 'balsamiq-mockups' do
+cask v1: 'balsamiq-mockups' do
   version '3.1.7'
   sha256 'e46f9d6c7abfc95b34ec6ff944efbdef9c256f5ac49fb54767c3f287fe38919a'
 

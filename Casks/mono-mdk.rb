@@ -1,4 +1,4 @@
-cask :v1 => 'mono-mdk' do
+cask v1: 'mono-mdk' do
   version '4.0.2'
   sha256 :no_check # required as upstream package is updated in-place
 
@@ -9,5 +9,5 @@ cask :v1 => 'mono-mdk' do
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.x86.pkg"
 
-  uninstall :pkgutil => 'com.xamarin.mono-MDK.pkg'
+  uninstall pkgutil: 'com.xamarin.mono-MDK.pkg'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'xbox360-controller-driver' do
+cask v1: 'xbox360-controller-driver' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'xbox360-controller-driver' do
 
   pkg 'Install360Controller.pkg'
 
-  uninstall :pkgutil => 'com.mice.pkg.Xbox360controller'
+  uninstall pkgutil: 'com.mice.pkg.Xbox360controller'
 end

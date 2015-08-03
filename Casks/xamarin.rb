@@ -1,4 +1,4 @@
-cask :v1 => 'xamarin' do
+cask v1: 'xamarin' do
   version :latest
   sha256 :no_check
 
@@ -7,10 +7,10 @@ cask :v1 => 'xamarin' do
   homepage 'https://xamarin.com/platform'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  installer :manual => 'Install Xamarin.app'
+  installer manual: 'Install Xamarin.app'
 
-  uninstall :delete => '/Applications/Xamarin Studio.app'
-  zap       :delete => '~/Library/Developer/Xamarin'
+  uninstall delete: '/Applications/Xamarin Studio.app'
+  zap       delete: '~/Library/Developer/Xamarin'
 
   caveats <<-EOS.undent
     If you choose to install Xamarin.Android, you'll need Java 6+,

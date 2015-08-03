@@ -1,4 +1,4 @@
-cask :v1 => 'appserver' do
+cask v1: 'appserver' do
   version '1.0.6-21'
   sha256 '33bd22f0b8852f37c6bbfcc1c9aa9e63a4916e12821642260a5054304916267b'
 
@@ -11,7 +11,7 @@ cask :v1 => 'appserver' do
 
   pkg "appserver-dist_#{version}_x86_64.pkg"
 
-  uninstall :pkgutil => [
+  uninstall pkgutil: [
                          'com.techdivision.appserver-io.runtime',
                          'com.techdivision.appserver-io.source'
                         ]

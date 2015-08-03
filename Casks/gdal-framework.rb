@@ -1,4 +1,4 @@
-cask :v1 => 'gdal-framework' do
+cask v1: 'gdal-framework' do
   version '1.11.1-1'
   sha256 :no_check    # upstream package is updated in-place
 
@@ -10,7 +10,7 @@ cask :v1 => 'gdal-framework' do
   pkg 'GDAL Complete.pkg'
   pkg 'Numpy.pkg'
 
-  uninstall :pkgutil  => [
+  uninstall pkgutil: [
                             'org.maptools.proj-framework-snow',
                             'org.sqlite.sqlite3b-framework-snow',
                             'com.kyngchaos.UnixImageIO-framework-E-lion',

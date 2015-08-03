@@ -1,4 +1,4 @@
-cask :v1 => 'reaper' do
+cask v1: 'reaper' do
   version '4.78'
 
   if Hardware::CPU.is_32_bit?
@@ -17,7 +17,7 @@ cask :v1 => 'reaper' do
   homepage 'http://www.reaper.fm/'
   license :commercial
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/REAPER',
                   '~/Library/Saved Application State/com.cockos.reaper.savedState',
                   '~/Library/Saved Application State/com.cockos.reaperhosti386.savedState',

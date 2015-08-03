@@ -1,4 +1,4 @@
-cask :v1 => 'intellij-idea' do
+cask v1: 'intellij-idea' do
   version '14.1.4'
   sha256 '211b8a146870bbf1ac20a0498a49863dbbc1f06989a4780c602ba115a9c0a943'
 
@@ -9,7 +9,7 @@ cask :v1 => 'intellij-idea' do
 
   app 'IntelliJ IDEA 14.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/IntelliJIdea14',
                   '~/Library/Preferences/IntelliJIdea14',
                   '~/Library/Preferences/com.jetbrains.intellij.plist',

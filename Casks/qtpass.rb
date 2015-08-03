@@ -1,4 +1,4 @@
-cask :v1 => 'qtpass' do
+cask v1: 'qtpass' do
   version :latest
   sha256 :no_check
 

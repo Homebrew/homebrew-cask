@@ -1,4 +1,4 @@
-cask :v1 => 'bestres' do
+cask v1: 'bestres' do
   version :latest
   sha256 :no_check
 
@@ -8,7 +8,7 @@ cask :v1 => 'bestres' do
   homepage 'http://icyberon.com/bestres/'
   license :gratis
 
-  depends_on :macos => '>= :yosemite'
+  depends_on macos: '>= :yosemite'
 
   app 'BestRes.app'
 end

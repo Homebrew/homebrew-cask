@@ -1,4 +1,4 @@
-cask :v1 => 'launchbar' do
+cask v1: 'launchbar' do
 
   if MacOS.release <= :mountain_lion
     version '5.6.4'
@@ -16,7 +16,7 @@ cask :v1 => 'launchbar' do
 
   app 'LaunchBar.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/at.obdev.LaunchBar.plist',
                   '~/Library/Application Support/LaunchBar',
                  ]

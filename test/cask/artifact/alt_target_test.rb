@@ -26,10 +26,10 @@ describe Hbc::Artifact::App do
       end
 
       Hbc::SystemCommand.run('/usr/bin/xattr',
-                              :args => ['-p',
+                              args: ['-p',
                                         'com.apple.metadata:kMDItemAlternateNames',
                                         Hbc.appdir.join('AnotherName.app')],
-                              :print_stderr => false).stdout.must_match(/AnotherName/)
+                              print_stderr: false).stdout.must_match(/AnotherName/)
     end
 
     it "works with an application in a subdir" do
@@ -39,7 +39,7 @@ describe Hbc::Artifact::App do
         homepage 'http://example.com/local-caffeine'
         version '1.2.3'
         sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
-        app 'subdir/Caffeine.app', :target => 'AnotherName.app'
+        app 'subdir/Caffeine.app', target: 'AnotherName.app'
       end
 
       begin

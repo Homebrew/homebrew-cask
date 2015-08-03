@@ -1,4 +1,4 @@
-cask :v1 => 'textexpander' do
+cask v1: 'textexpander' do
   if Hardware::CPU.type == :ppc && MacOS.release <= :leopard
     version '2.5'
     sha256 'dfcb5a66fd590dc6dabd4fe8586a0d83cf7d264e23d9e309c0d77ae8cd89ad86'
@@ -24,7 +24,7 @@ cask :v1 => 'textexpander' do
     sha256 'd0c4149fec181cd61579ac0dba0ad8e34153b09da4ee818068bd9f35d668b858'
     url "http://cdn.smilesoftware.com/TextExpander_#{version}.zip"
     appcast 'http://updates.smilesoftware.com/com.smileonmymac.textexpander.xml',
-            :sha256 => '20c1ab602462b7fc0d5b4cbd555cacf127b69a07a737579598ebcbc0f5b21319'
+            sha256: '20c1ab602462b7fc0d5b4cbd555cacf127b69a07a737579598ebcbc0f5b21319'
   end
 
   name 'TextExpander'
@@ -33,5 +33,5 @@ cask :v1 => 'textexpander' do
 
   app 'TextExpander.app'
 
-  zap :delete => '~/Library/Application Support/TextExpander/'
+  zap delete: '~/Library/Application Support/TextExpander/'
 end

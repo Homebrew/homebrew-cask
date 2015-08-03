@@ -1,4 +1,4 @@
-cask :v1 => 'electric-sheep' do
+cask v1: 'electric-sheep' do
   version '2.7b35b'
   sha256 '767062403cc93aa75192def84b509b4530caca3e271ba23267ffe79cb50da44f'
 
@@ -10,5 +10,5 @@ cask :v1 => 'electric-sheep' do
 
   pkg 'Electric Sheep.mpkg'
 
-  uninstall :pkgutil => 'org.electricsheep.electricSheep.*'
+  uninstall pkgutil: 'org.electricsheep.electricSheep.*'
 end

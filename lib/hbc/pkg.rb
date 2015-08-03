@@ -227,7 +227,7 @@ class Hbc::Pkg
                 ].map{|x| Pathname.new(x)}
 
   def self.all_matching(regexp, command)
-    command.run('/usr/sbin/pkgutil', :args => [%Q{--pkgs=#{regexp}}]).stdout.split("\n").map do |package_id|
+    command.run('/usr/sbin/pkgutil', args: [%Q{--pkgs=#{regexp}}]).stdout.split("\n").map do |package_id|
       new(package_id.chomp, command)
     end
   end
@@ -242,11 +242,11 @@ class Hbc::Pkg
   def uninstall
     odebug "Deleting pkg files"
     pkgutil_bom_files.each_slice(500) do |file_slice|
-      @command.run('/bin/rm', :args => file_slice.unshift('-f', '--'), :sudo => true)
+      @command.run('/bin/rm', args: file_slice.unshift('-f', '--'), sudo: true)
     end
     odebug "Deleting pkg symlinks and special files"
     pkgutil_bom_specials.each_slice(500) do |file_slice|
-      @command.run('/bin/rm', :args => file_slice.unshift('-f', '--'), :sudo => true)
+      @command.run('/bin/rm', args: file_slice.unshift('-f', '--'), sudo: true)
     end
     odebug "Deleting pkg directories"
     _deepest_path_first(pkgutil_bom_dirs).each do |dir|
@@ -263,24 +263,24 @@ class Hbc::Pkg
 
   def forget
     odebug "Unregistering pkg receipt (aka forgetting)"
-    @command.run!('/usr/sbin/pkgutil', :args => ['--forget', package_id], :sudo => true)
+    @command.run!('/usr/sbin/pkgutil', args: ['--forget', package_id], sudo: true)
   end
 
   def pkgutil_bom_files
     @command.run!('/usr/sbin/pkgutil',
-      :args => ['--only-files', '--files', package_id]
+      args: ['--only-files', '--files', package_id]
     ).stdout.split("\n").map { |path| root.join(path) }
   end
 
   def pkgutil_bom_dirs
     @command.run!('/usr/sbin/pkgutil',
-      :args => ['--only-dirs', '--files', package_id]
+      args: ['--only-dirs', '--files', package_id]
     ).stdout.split("\n").map { |path| root.join(path) }
   end
 
   def pkgutil_bom_all
     @command.run!('/usr/sbin/pkgutil',
-      :args => ['--files', package_id]
+      args: ['--files', package_id]
     ).stdout.split("\n").map { |path| root.join(path) }
   end
 
@@ -294,24 +294,24 @@ class Hbc::Pkg
 
   def info
     @command.run!('/usr/sbin/pkgutil',
-                  :args => ['--pkg-info-plist', package_id]
+                  args: ['--pkg-info-plist', package_id]
                  ).plist
   end
 
   def _rmdir(path)
     if path.children.empty?
-      @command.run!('/bin/rmdir', :args => ['--', path], :sudo => true)
+      @command.run!('/bin/rmdir', args: ['--', path], sudo: true)
     end
   end
 
   def _with_full_permissions(path, &block)
     original_mode = (path.stat.mode % 01000).to_s(8)
     # todo: similarly read and restore OS X flags (cf man chflags)
-    @command.run!('/bin/chmod', :args => ['--', '777', path], :sudo => true)
+    @command.run!('/bin/chmod', args: ['--', '777', path], sudo: true)
     block.call
   ensure
     if path.exist? # block may have removed dir
-      @command.run!('/bin/chmod', :args => ['--', original_mode, path], :sudo => true)
+      @command.run!('/bin/chmod', args: ['--', original_mode, path], sudo: true)
     end
   end
 
@@ -327,14 +327,14 @@ class Hbc::Pkg
   def _clean_broken_symlinks(dir)
     dir.children.each do |child|
       if _broken_symlink?(child)
-        @command.run!('/bin/rm', :args => ['--', child], :sudo => true)
+        @command.run!('/bin/rm', args: ['--', child], sudo: true)
       end
     end
   end
 
   def _clean_ds_store(dir)
     ds_store = dir.join('.DS_Store')
-    @command.run!('/bin/rm', :args => ['--', ds_store], :sudo => true) if ds_store.exist?
+    @command.run!('/bin/rm', args: ['--', ds_store], sudo: true) if ds_store.exist?
   end
 
   def _broken_symlink?(path)

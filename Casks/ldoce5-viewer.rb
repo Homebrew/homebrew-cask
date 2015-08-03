@@ -1,4 +1,4 @@
-cask :v1 => 'ldoce5-viewer' do
+cask v1: 'ldoce5-viewer' do
   version :latest
   sha256 :no_check
 

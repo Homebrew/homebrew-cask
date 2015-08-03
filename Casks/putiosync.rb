@@ -1,4 +1,4 @@
-cask :v1 => 'putiosync' do
+cask v1: 'putiosync' do
   version :latest
   sha256 :no_check
 

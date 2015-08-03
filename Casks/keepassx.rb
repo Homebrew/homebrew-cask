@@ -1,4 +1,4 @@
-cask :v1 => 'keepassx' do
+cask v1: 'keepassx' do
   version '2.0-beta1'
   sha256 '841c5a3ef3c49233457cb1a00f97ebcf18d5ec8454b351a62ab3890eafcfaa5d'
 
@@ -9,5 +9,5 @@ cask :v1 => 'keepassx' do
 
   app 'KeePassX.app'
 
-  zap :delete => '~/.keepassx'
+  zap delete: '~/.keepassx'
 end

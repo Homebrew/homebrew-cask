@@ -1,4 +1,4 @@
-cask :v1 => 'optimal-layout' do
+cask v1: 'optimal-layout' do
   version :latest
   sha256 :no_check
 

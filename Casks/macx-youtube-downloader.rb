@@ -1,4 +1,4 @@
-cask :v1 => 'macx-youtube-downloader' do
+cask v1: 'macx-youtube-downloader' do
   version :latest
   sha256 :no_check
 

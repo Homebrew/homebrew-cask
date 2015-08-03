@@ -1,4 +1,4 @@
-cask :v1 => 'helium' do
+cask v1: 'helium' do
   version :latest
   sha256 :no_check
 
@@ -10,7 +10,7 @@ cask :v1 => 'helium' do
 
   app 'Helium.app'
 
-  uninstall :quit => 'com.koushikdutta.Helium'
+  uninstall quit: 'com.koushikdutta.Helium'
 
-  zap :delete => '~/Library/Saved Application State/com.koushikdutta.Helium.savedState'
+  zap delete: '~/Library/Saved Application State/com.koushikdutta.Helium.savedState'
 end

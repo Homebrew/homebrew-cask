@@ -1,4 +1,4 @@
-cask :v1 => 'google-chrome' do
+cask v1: 'google-chrome' do
   version :latest
   sha256 :no_check
 
@@ -6,11 +6,11 @@ cask :v1 => 'google-chrome' do
   name 'Google Chrome'
   homepage 'https://www.google.com/chrome/'
   license :gratis
-  tags :vendor => 'Google'
+  tags vendor: 'Google'
 
   app 'Google Chrome.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Google/Chrome',
                   '~/Library/Caches/Google/Chrome',
                   '~/Library/Caches/com.google.Chrome',
@@ -20,7 +20,7 @@ cask :v1 => 'google-chrome' do
                   '~/Library/Google/GoogleSoftwareUpdate',
                   '~/Library/Logs/GoogleSoftwareUpdateAgent.log',
                  ],
-      :rmdir  => [
+      rmdir: [
                   '~/Library/Caches/Google',
                   '~/Library/Google',
                  ]

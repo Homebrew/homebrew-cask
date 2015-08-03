@@ -1,4 +1,4 @@
-cask :v1 => 'livestream-producer' do
+cask v1: 'livestream-producer' do
   version :latest
   sha256 :no_check
 
@@ -9,7 +9,7 @@ cask :v1 => 'livestream-producer' do
 
   pkg 'LivestreamProducer.pkg'
 
-  uninstall :pkgutil => [
+  uninstall pkgutil: [
                          'com.livestream.livestreamProducer.LivestreamProducer.pkg',
                          'com.livestream.livestreamProducer.ProcasterAudioRedirector.pkg',
                          'com.livestream.livestreamProducer.postflight.pkg',

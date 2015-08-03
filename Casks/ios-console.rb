@@ -1,4 +1,4 @@
-cask :v1 => 'ios-console' do
+cask v1: 'ios-console' do
   version :latest
   sha256 :no_check
 

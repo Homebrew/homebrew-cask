@@ -1,4 +1,4 @@
-cask :v1 => 'eclipse-rcp' do
+cask v1: 'eclipse-rcp' do
   version '4.5'
   sha256 '6142fa040b9166b08991a1224ee30822450fec4eedc1fe4b5dcca7333dfe3af7'
 
@@ -7,8 +7,8 @@ cask :v1 => 'eclipse-rcp' do
   name 'Eclipse for RCP and RAP Developers'
   homepage 'https://eclipse.org/'
   license :eclipse
-  depends_on :macos => '>= :leopard'
-  depends_on :arch => :x86_64
+  depends_on macos: '>= :leopard'
+  depends_on arch: :x86_64
 
   app 'Eclipse.app'
 end

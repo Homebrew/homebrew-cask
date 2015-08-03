@@ -1,4 +1,4 @@
-cask :v1 => 'chunkulus' do
+cask v1: 'chunkulus' do
   version :latest
   sha256 :no_check
 
@@ -13,5 +13,5 @@ cask :v1 => 'chunkulus' do
     system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName Chunkulus (Presstube)', "#{staged_path}/presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver/Contents/Info.plist"
   end
 
-  depends_on :cask => 'adobe-air'
+  depends_on cask: 'adobe-air'
 end

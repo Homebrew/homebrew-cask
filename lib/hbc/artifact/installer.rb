@@ -24,8 +24,8 @@ class Hbc::Artifact::Installer < Hbc::Artifact::Base
         executable, script_arguments = self.class.read_script_arguments(
                                                                         artifact.script,
                                                                         "#{self.class.artifact_dsl_key}",
-                                                                        {:must_succeed => true, :sudo => true},
-                                                                        {:print_stdout => true}
+                                                                        {must_succeed: true, sudo: true},
+                                                                        {print_stdout: true}
                                                                         )
         ohai "Running #{self.class.artifact_dsl_key} script #{executable}"
         raise Hbc::CaskInvalidError.new(@cask, "#{self.class.artifact_dsl_key} missing executable") if executable.nil?

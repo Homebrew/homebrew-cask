@@ -1,4 +1,4 @@
-cask :v1 => 'deeper' do
+cask v1: 'deeper' do
   version :latest
   sha256 :no_check
 
@@ -27,7 +27,7 @@ cask :v1 => 'deeper' do
 
   app 'Deeper.app'
 
-  depends_on :macos => %w{
+  depends_on macos: %w{
                           :tiger
                           :leopard
                           :snow_leopard

@@ -1,4 +1,4 @@
-cask :v1 => 'cartao-de-cidadao' do
+cask v1: 'cartao-de-cidadao' do
   version '1.26.2-1389'
   sha256 '28b2adf148451590dc73c991251798f3676ae784b176651f4f911ecf46a61e4f'
 
@@ -9,5 +9,5 @@ cask :v1 => 'cartao-de-cidadao' do
 
   pkg 'Cartao_de_Cidadao.pkg'
 
-  uninstall :script => '/usr/local/bin/pteid_uninstall.sh'
+  uninstall script: '/usr/local/bin/pteid_uninstall.sh'
 end

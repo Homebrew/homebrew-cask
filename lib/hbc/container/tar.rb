@@ -7,8 +7,8 @@ class Hbc::Container::Tar < Hbc::Container::Base
 
   def extract
     Dir.mktmpdir do |unpack_dir|
-      @command.run!('/usr/bin/tar', :args => ['xf', @path, '-C', unpack_dir])
-      @command.run!('/usr/bin/ditto', :args => ['--', unpack_dir, @cask.staged_path])
+      @command.run!('/usr/bin/tar', args: ['xf', @path, '-C', unpack_dir])
+      @command.run!('/usr/bin/ditto', args: ['--', unpack_dir, @cask.staged_path])
     end
   end
 end

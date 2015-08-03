@@ -1,4 +1,4 @@
-cask :v1 => 'tla-plus-toolbox' do
+cask v1: 'tla-plus-toolbox' do
   version '1.5.1'
   sha256 'd0d966c6742c6011d46e6de6760bf7300ed49649a85bccab0b097b0ec5ad42cd'
 
@@ -10,7 +10,7 @@ cask :v1 => 'tla-plus-toolbox' do
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8829
-  app 'toolbox/toolbox.app', :target => 'TLA+ Toolbox.app'
+  app 'toolbox/toolbox.app', target: 'TLA+ Toolbox.app'
 
   caveats <<-EOS.undent
     #{token} requires Java. You can install the latest version with

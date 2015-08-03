@@ -1,4 +1,4 @@
-cask :v1 => 'sling' do
+cask v1: 'sling' do
   version :latest
   sha256 :no_check
 
@@ -11,7 +11,7 @@ cask :v1 => 'sling' do
 
   app 'Sling.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Sling-shell',
                   '~/Library/Caches/com.Echostar.Sling',
                   '~/Library//Preferences/com.Echostar.Sling.plist',

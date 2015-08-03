@@ -1,4 +1,4 @@
-cask :v1 => 'aliedit' do
+cask v1: 'aliedit' do
   version :latest
   sha256 :no_check
 
@@ -9,12 +9,12 @@ cask :v1 => 'aliedit' do
 
   pkg 'installer.pkg'
 
-  uninstall :pkgutil => 'com.alipay.www',
-            :launchctl => [
+  uninstall pkgutil: 'com.alipay.www',
+            launchctl: [
                            'com.alipay.DispatcherService',
                            'com.alipay.refresher.agent',
                           ],
-            :delete => [
+            delete: [
                         '/Library/Application Support/Alipay',
                         '/Library/Google/Chrome/NativeMessagingHosts/com.alipay.cert.json',
                         '/Library/Google/Chrome/NativeMessagingHosts/com.alipay.edit.json',

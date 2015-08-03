@@ -1,4 +1,4 @@
-cask :v1 => 'anki' do
+cask v1: 'anki' do
 
   if MacOS.release <= :snow_leopard
     version '2.0.32.qt47'
@@ -13,7 +13,7 @@ cask :v1 => 'anki' do
   homepage 'http://ankisrs.net/'
   license :affero
 
-  depends_on :arch => :intel
+  depends_on arch: :intel
 
   app 'Anki.app'
 end

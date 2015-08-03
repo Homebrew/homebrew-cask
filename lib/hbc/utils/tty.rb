@@ -2,27 +2,27 @@
 
 class Hbc::Utils::Tty
   COLORS = {
-            :black      => 0,
-            :red        => 1,
-            :green      => 2,
-            :yellow     => 3,
-            :blue       => 4,
-            :magenta    => 5,
-            :cyan       => 6,
-            :white      => 7,
-            :default    => 9,
+            black: 0,
+            red: 1,
+            green: 2,
+            yellow: 3,
+            blue: 4,
+            magenta: 5,
+            cyan: 6,
+            white: 7,
+            default: 9,
            }
   ATTRIBUTES = {
-                :reset         => 0,
-                :bold          => 1,
-                :dim           => 2,
-                :italic        => 3,
-                :underline     => 4,
-                :blink         => 5,
-                :inverse       => 7,
-                :invisible     => 8,
-                :strikethrough => 9,
-                :normal        => 22,
+                reset: 0,
+                bold: 1,
+                dim: 2,
+                italic: 3,
+                underline: 4,
+                blink: 5,
+                inverse: 7,
+                invisible: 8,
+                strikethrough: 9,
+                normal: 22,
                }
 
   class << self

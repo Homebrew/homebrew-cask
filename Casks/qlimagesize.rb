@@ -1,4 +1,4 @@
-cask :v1 => 'qlimagesize' do
+cask v1: 'qlimagesize' do
   version :latest
   sha256 :no_check
 
@@ -10,5 +10,5 @@ cask :v1 => 'qlimagesize' do
 
   pkg 'qlImageSize.pkg'
 
-  uninstall :pkgutil => 'io.whine.qlimagesize.pkg'
+  uninstall pkgutil: 'io.whine.qlimagesize.pkg'
 end

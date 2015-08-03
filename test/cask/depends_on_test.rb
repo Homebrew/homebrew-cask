@@ -35,28 +35,28 @@ describe "Satisfy Dependencies and Requirements" do
   end
 
   describe "depends_on :macos" do
-    it "understands depends_on :macos => <array>" do
+    it "understands depends_on macos: <array>" do
       macos_cask = Hbc.load('with-depends-on-macos-array')
       shutup do
         Hbc::Installer.new(macos_cask).install
       end
     end
 
-    it "understands depends_on :macos => <comparison>" do
+    it "understands depends_on macos: <comparison>" do
       macos_cask = Hbc.load('with-depends-on-macos-comparison')
       shutup do
         Hbc::Installer.new(macos_cask).install
       end
     end
 
-    it "understands depends_on :macos => <string>" do
+    it "understands depends_on macos: <string>" do
       macos_cask = Hbc.load('with-depends-on-macos-string')
       shutup do
         Hbc::Installer.new(macos_cask).install
       end
     end
 
-    it "understands depends_on :macos => <symbol>" do
+    it "understands depends_on macos: <symbol>" do
       macos_cask = Hbc.load('with-depends-on-macos-symbol')
       shutup do
         Hbc::Installer.new(macos_cask).install
@@ -109,7 +109,7 @@ describe "Satisfy Dependencies and Requirements" do
       }.must_raise(Hbc::CaskX11DependencyError)
     end
 
-    it "never raises when depends_on :x11 => false" do
+    it "never raises when depends_on x11: false" do
       x11_cask = Hbc.load('with-depends-on-x11-false')
       Hbc.stubs(:x11_executable).returns(Pathname.new('/usr/path/does/not/exist'))
       lambda {

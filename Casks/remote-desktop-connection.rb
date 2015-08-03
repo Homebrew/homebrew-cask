@@ -1,4 +1,4 @@
-cask :v1_1 => 'remote-desktop-connection' do
+cask v1_1: 'remote-desktop-connection' do
   version '2.1.1'
   sha256 '4ebe551c9ee0e2da6b8f746be13c2df342c6f14cd3fbedbf2ab490f09b44616f'
 
@@ -6,15 +6,15 @@ cask :v1_1 => 'remote-desktop-connection' do
   name 'Remote Desktop Connection'
   homepage 'https://www.microsoft.com/en-us/download/details.aspx?id=18140'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Microsoft'
+  tags vendor: 'Microsoft'
 
   pkg 'RDC Installer.mpkg'
 
-  uninstall :pkgutil => 'com.microsoft.rdc.all.*'
+  uninstall pkgutil: 'com.microsoft.rdc.all.*'
 
   caveats do
     discontinued
   end
 
-  depends_on :macos => '<= :snow_leopard'
+  depends_on macos: '<= :snow_leopard'
 end

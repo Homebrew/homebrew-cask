@@ -1,4 +1,4 @@
-cask :v1 => 'wireless-transfer' do
+cask v1: 'wireless-transfer' do
   version :latest
   sha256 :no_check
 

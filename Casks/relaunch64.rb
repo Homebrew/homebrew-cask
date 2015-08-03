@@ -1,4 +1,4 @@
-cask :v1 => 'relaunch64' do
+cask v1: 'relaunch64' do
   # note: "64" is not a version number, but an intrinsic part of the product name
   version '3.3.2'
   sha256 'e45c6c06caa20eefcb1d1c1f1a77135ab7a4eb183792eb6808d7f6c3de4fcca9'
@@ -9,7 +9,7 @@ cask :v1 => 'relaunch64' do
   homepage 'http://www.popelganda.de/relaunch64.html'
   license :gpl
 
-  depends_on :arch => :x86_64
+  depends_on arch: :x86_64
 
   app 'Relaunch64.app'
 end

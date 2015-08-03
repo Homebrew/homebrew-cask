@@ -163,11 +163,11 @@ module Hbc::Utils
   def self.cabv(dir)
     output = ''
     count = Hbc::SystemCommand.run!('/usr/bin/find',
-                                     :args => [dir, *%w[-type f -not -name .DS_Store -print0]],
-                                     :print_stderr => false).stdout.count("\000")
+                                     args: [dir, *%w[-type f -not -name .DS_Store -print0]],
+                                     print_stderr: false).stdout.count("\000")
     size = Hbc::SystemCommand.run!('/usr/bin/du',
-                                    :args => ['-hs', '--', dir],
-                                    :print_stderr => false).stdout.split("\t").first.strip
+                                    args: ['-hs', '--', dir],
+                                    print_stderr: false).stdout.split("\t").first.strip
     output << "#{count} files, " if count > 1
     output << size
   end

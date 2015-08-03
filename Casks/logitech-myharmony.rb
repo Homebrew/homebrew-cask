@@ -1,4 +1,4 @@
-cask :v1 => 'logitech-myharmony' do
+cask v1: 'logitech-myharmony' do
   version '1.0'
   sha256 '537a11f2174dc748c27aff02bf01569b5bb2c93539b339c6fd61a7da07bb059f'
 
@@ -9,6 +9,6 @@ cask :v1 => 'logitech-myharmony' do
 
   pkg 'MyHarmonySetup.pkg'
 
-  uninstall :quit => 'org.logitech.MyHarmony',
-            :pkgutil => 'MyHarmony.pkg'
+  uninstall quit: 'org.logitech.MyHarmony',
+            pkgutil: 'MyHarmony.pkg'
 end

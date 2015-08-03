@@ -1,4 +1,4 @@
-cask :v1 => 'rawtherapee' do
+cask v1: 'rawtherapee' do
 
   if MacOS.release <= :mavericks
     version '4.2.171'
@@ -17,12 +17,12 @@ cask :v1 => 'rawtherapee' do
   license :gpl
 
   if MacOS.release <= :mavericks
-    container :nested => "RawTherapee_OSX_10.6_64_#{version}.dmg"
+    container nested: "RawTherapee_OSX_10.6_64_#{version}.dmg"
   else
-    container :nested => "RawTherapee_OSX_10.10_64_#{version}.dmg"
+    container nested: "RawTherapee_OSX_10.10_64_#{version}.dmg"
   end
   app 'RawTherapee.app'
 
-  depends_on :macos => '>= :snow_leopard',
-             :arch => :x86_64
+  depends_on macos: '>= :snow_leopard',
+             arch: :x86_64
 end

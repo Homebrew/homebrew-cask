@@ -1,4 +1,4 @@
-cask :v1 => 'bitbar' do
+cask v1: 'bitbar' do
   version '1.2.0'
   sha256 '1a5f3d72ed5f8225b2cd822ec84bb42778c178725871e5868cfc3bf473d56408'
 

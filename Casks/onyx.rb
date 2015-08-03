@@ -1,4 +1,4 @@
-cask :v1 => 'onyx' do
+cask v1: 'onyx' do
   version :latest
   sha256 :no_check
 
@@ -26,7 +26,7 @@ cask :v1 => 'onyx' do
 
   app 'OnyX.app'
 
-  depends_on :macos => %w{
+  depends_on macos: %w{
                           :tiger
                           :leopard
                           :snow_leopard

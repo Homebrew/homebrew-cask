@@ -1,4 +1,4 @@
-cask :v1 => 'korean-spelling-checker' do
+cask v1: 'korean-spelling-checker' do
   version '1.2.1'
   sha256 'd06e8f563357bc122ab921503e227241646f3b3db932a374236886987ebb07ab'
 

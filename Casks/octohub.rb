@@ -1,4 +1,4 @@
-cask :v1 => 'octohub' do
+cask v1: 'octohub' do
   version '0.5'
   sha256 '62e530fc7f7acf4374b44dc4e637f479deacc475016dba4f7994b236022a4e1f'
 
@@ -10,5 +10,5 @@ cask :v1 => 'octohub' do
 
   app 'Octohub.app'
 
-  depends_on :macos => '>= 10.10'
+  depends_on macos: '>= 10.10'
 end

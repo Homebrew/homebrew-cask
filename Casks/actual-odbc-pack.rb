@@ -1,4 +1,4 @@
-cask :v1 => 'actual-odbc-pack' do
+cask v1: 'actual-odbc-pack' do
   version :latest
   sha256 :no_check
 
@@ -11,6 +11,6 @@ cask :v1 => 'actual-odbc-pack' do
 
   pkg 'Actual ODBC Pack.pkg'
 
-  uninstall :pkgutil => ['com.actualtechnologies.odbcdriver.*',
+  uninstall pkgutil: ['com.actualtechnologies.odbcdriver.*',
                          'com.actualtechnologies.odbcmanager.pkg']
 end

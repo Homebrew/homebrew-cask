@@ -1,4 +1,4 @@
-cask :v1 => 'phonetrans' do
+cask v1: 'phonetrans' do
   version :latest
   sha256 :no_check
 

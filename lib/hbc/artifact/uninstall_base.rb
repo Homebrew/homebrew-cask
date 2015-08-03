@@ -194,8 +194,8 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
     directives_set.select{ |h| h.key?(:early_script) }.each do |directives|
       executable, script_arguments = self.class.read_script_arguments(directives,
                                                                       'uninstall',
-                                                                      {:must_succeed => true, :sudo => true},
-                                                                      {:print_stdout => true},
+                                                                      {must_succeed: true, sudo: true},
+                                                                      {print_stdout: true},
                                                                       :early_script)
 
       ohai "Running uninstall script #{executable}"
@@ -209,24 +209,24 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
       Array(directives[:launchctl]).each do |service|
         ohai "Removing launchctl service #{service}"
         [false, true].each do |with_sudo|
-          plist_status = @command.run('/bin/launchctl', :args => ['list', service], :sudo => with_sudo, :print_stderr => false).stdout
+          plist_status = @command.run('/bin/launchctl', args: ['list', service], sudo: with_sudo, print_stderr: false).stdout
           if %r{^\{}.match(plist_status)
-            result = @command.run!('/bin/launchctl', :args => ['remove', service], :sudo => with_sudo)
+            result = @command.run!('/bin/launchctl', args: ['remove', service], sudo: with_sudo)
             if result.success?
               paths = ["/Library/LaunchAgents/#{service}.plist",
                        "/Library/LaunchDaemons/#{service}.plist"]
               paths.each { |elt| elt.prepend('~') } unless with_sudo
               paths = paths.map { |elt| Pathname(elt) }.select(&:exist?)
               paths.each do |path|
-                @command.run!('/bin/rm', :args => ['-f', '--', path], :sudo => with_sudo)
+                @command.run!('/bin/rm', args: ['-f', '--', path], sudo: with_sudo)
               end
             end
             sleep 1
           end
           # undocumented and untested: pass a path to uninstall :launchctl
           if Pathname(service).exist?
-            @command.run!('/bin/launchctl', :args => ['unload', '-w', '--', service], :sudo => with_sudo)
-            @command.run!('/bin/rm',        :args => ['-f', '--', service], :sudo => with_sudo)
+            @command.run!('/bin/launchctl', args: ['unload', '-w', '--', service], sudo: with_sudo)
+            @command.run!('/bin/rm',        args: ['-f', '--', service], sudo: with_sudo)
             sleep 1
           end
         end
@@ -237,9 +237,9 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
     directives_set.select{ |h| h.key?(:quit) }.each do |directives|
       Array(directives[:quit]).each do |id|
         ohai "Quitting application ID #{id}"
-        num_running = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to count processes whose bundle identifier is "#{id}"}], :sudo => true).stdout.to_i
+        num_running = @command.run!('/usr/bin/osascript', args: ['-e', %Q{tell application "System Events" to count processes whose bundle identifier is "#{id}"}], sudo: true).stdout.to_i
         if num_running > 0
-          @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application id "#{id}" to quit}], :sudo => true)
+          @command.run!('/usr/bin/osascript', args: ['-e', %Q{tell application id "#{id}" to quit}], sudo: true)
           sleep 3
         end
       end
@@ -251,7 +251,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
         raise Hbc::CaskInvalidError.new(@cask, "Each #{stanza} :signal must have 2 elements.") unless pair.length == 2
         signal, id = pair
         ohai "Signalling '#{signal}' to application ID '#{id}'"
-        pid_string = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to get the unix id of every process whose bundle identifier is "#{id}"}], :sudo => true).stdout
+        pid_string = @command.run!('/usr/bin/osascript', args: ['-e', %Q{tell application "System Events" to get the unix id of every process whose bundle identifier is "#{id}"}], sudo: true).stdout
         if pid_string.match(%r{\A\d+(?:\s*,\s*\d+)*\Z})    # sanity check
           pids = pid_string.split(%r{\s*,\s*}).map(&:strip).map(&:to_i)
           if pids.length > 0
@@ -273,9 +273,9 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
     directives_set.select{ |h| h.key?(:kext) }.each do |directives|
       Array(directives[:kext]).each do |kext|
         ohai "Unloading kernel extension #{kext}"
-        is_loaded = @command.run!('/usr/sbin/kextstat', :args => ['-l', '-b', kext], :sudo => true).stdout
+        is_loaded = @command.run!('/usr/sbin/kextstat', args: ['-l', '-b', kext], sudo: true).stdout
         if is_loaded.length > 1
-          @command.run!('/sbin/kextunload', :args => ['-b', kext], :sudo => true)
+          @command.run!('/sbin/kextunload', args: ['-b', kext], sudo: true)
           sleep 1
         end
       end
@@ -285,8 +285,8 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
     directives_set.select{ |h| h.key?(:script) }.each do |directives|
       executable, script_arguments = self.class.read_script_arguments(directives,
                                                                       'uninstall',
-                                                                      {:must_succeed => true, :sudo => true},
-                                                                      {:print_stdout => true},
+                                                                      {must_succeed: true, sudo: true},
+                                                                      {print_stdout: true},
                                                                       :script)
       raise Hbc::CaskInvalidError.new(@cask, "#{stanza} :script without :executable.") if executable.nil?
       @command.run(@cask.staged_path.join(executable), script_arguments)
@@ -307,7 +307,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
         path_slice = self.class.expand_path_strings(path_slice) if expand_tilde
         path_slice = self.class.remove_relative_path_strings(:delete, path_slice)
         path_slice = self.class.remove_undeletable_path_strings(:delete, path_slice)
-        @command.run!('/bin/rm', :args => path_slice.unshift('-rf', '--'), :sudo => true)
+        @command.run!('/bin/rm', args: path_slice.unshift('-rf', '--'), sudo: true)
       end
     end
 
@@ -319,7 +319,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
         path_slice = self.class.expand_path_strings(path_slice) if expand_tilde
         path_slice = self.class.remove_relative_path_strings(:trash, path_slice)
         path_slice = self.class.remove_undeletable_path_strings(:trash, path_slice)
-        @command.run!('/bin/rm', :args => path_slice.unshift('-rf', '--'), :sudo => true)
+        @command.run!('/bin/rm', args: path_slice.unshift('-rf', '--'), sudo: true)
       end
     end
 
@@ -332,12 +332,12 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
         ohai "Removing directory if empty: #{directory.to_s.utf8_inspect}"
         directory = Pathname.new(directory)
         next unless directory.exist?
-        @command.run!('/bin/rm', :args => [ '-f', '--', directory.join('.DS_Store') ],
-                                 :sudo => true,
-                                 :print_stderr => false)
-        @command.run('/bin/rmdir', :args => [ '--', directory ],
-                                   :sudo => true,
-                                   :print_stderr => false)
+        @command.run!('/bin/rm', args: [ '-f', '--', directory.join('.DS_Store') ],
+                                 sudo: true,
+                                 print_stderr: false)
+        @command.run('/bin/rmdir', args: [ '--', directory ],
+                                   sudo: true,
+                                   print_stderr: false)
       end
     end
   end

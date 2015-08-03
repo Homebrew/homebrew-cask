@@ -1,4 +1,4 @@
-cask :v1 => 'keymo' do
+cask v1: 'keymo' do
   version '1.2.1'
   sha256 '6ae33f5287e8be279c87f0bb5d22e77f806b9e2438f826935de5d6df34641d67'
 
@@ -10,5 +10,5 @@ cask :v1 => 'keymo' do
 
   app 'Keymo.app'
 
-  zap :delete => '~/Library/Preferences/com.manytricks.Keymo.plist'
+  zap delete: '~/Library/Preferences/com.manytricks.Keymo.plist'
 end

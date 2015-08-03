@@ -1,4 +1,4 @@
-cask :v1 => 'gnubg' do
+cask v1: 'gnubg' do
   if Hardware::CPU.type == :ppc
     version '1.03.000-ppc'
     sha256 'd5a230225e9c85f7611a939b0848fe028e6834babb2fe8140013d65fa2b800fe'
@@ -18,7 +18,7 @@ cask :v1 => 'gnubg' do
   end
 
   name 'Gnu Backgammon'
-  depends_on :x11 => true
+  depends_on x11: true
   homepage 'http://gnubg.org/'
   license :gpl
   app 'gnubg.app'

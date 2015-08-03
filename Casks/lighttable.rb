@@ -1,4 +1,4 @@
-cask :v1 => 'lighttable' do
+cask v1: 'lighttable' do
   version '0.7.2'
   sha256 '236bb18d6715ce3095c975871b7c7f495f306a086dce8a50ff35f267a25c5163'
 
@@ -11,7 +11,7 @@ cask :v1 => 'lighttable' do
   app 'LightTable/LightTable.app'
   binary 'LightTable/light'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/LightTable/plugins',
                   '~/Library/Application Support/LightTable/settings',
                   '~/Library/Preferences/com.kodowa.LightTable.plist',

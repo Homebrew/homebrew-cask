@@ -1,4 +1,4 @@
-cask :v1 => 'neteasemusic' do
+cask v1: 'neteasemusic' do
   version :latest
   sha256 :no_check
 
@@ -10,9 +10,9 @@ cask :v1 => 'neteasemusic' do
 
   app 'NeteaseMusic.app'
 
-  uninstall :quit => 'com.netease.163music'
+  uninstall quit: 'com.netease.163music'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Caches/com.netease.163music',
                   '~/Library/Containers/com.netease.163music',
                   '~/Library/Preferences/com.netease.163music.plist',

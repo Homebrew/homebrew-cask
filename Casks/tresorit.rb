@@ -1,4 +1,4 @@
-cask :v1 => 'tresorit' do
+cask v1: 'tresorit' do
   version :latest
   sha256 :no_check
 

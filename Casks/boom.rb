@@ -1,4 +1,4 @@
-cask :v1 => 'boom' do
+cask v1: 'boom' do
   version :latest
   sha256 :no_check
 
@@ -14,5 +14,5 @@ cask :v1 => 'boom' do
     system '/bin/rm', '--', "#{staged_path}/.DMG_Background_new.png"
   end
 
-  depends_on :macos => '>= :yosemite'
+  depends_on macos: '>= :yosemite'
 end

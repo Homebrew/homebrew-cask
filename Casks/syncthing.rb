@@ -1,4 +1,4 @@
-cask :v1 => 'syncthing' do
+cask v1: 'syncthing' do
   version '0.11.18'
   appcast 'https://github.com/syncthing/syncthing/releases.atom'
   name 'Syncthing'
@@ -15,5 +15,5 @@ cask :v1 => 'syncthing' do
     binary "syncthing-macosx-amd64-v#{version}/syncthing"
   end
 
-  zap :delete => '~/Library/Application Support/Syncthing'
+  zap delete: '~/Library/Application Support/Syncthing'
 end

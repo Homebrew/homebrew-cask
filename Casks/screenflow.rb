@@ -1,4 +1,4 @@
-cask :v1 => 'screenflow' do
+cask v1: 'screenflow' do
   version '5.0.2'
   sha256 '2e020e6540af3c5f6e33302917345eb1aa8b9fa62995dfc9692515a966527f02'
 
@@ -10,5 +10,5 @@ cask :v1 => 'screenflow' do
 
   app 'ScreenFlow.app'
 
-  depends_on :macos => '>= :mavericks'
+  depends_on macos: '>= :mavericks'
 end

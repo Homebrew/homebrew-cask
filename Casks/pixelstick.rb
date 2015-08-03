@@ -1,4 +1,4 @@
-cask :v1 => 'pixelstick' do
+cask v1: 'pixelstick' do
   version :latest
   sha256 :no_check
 

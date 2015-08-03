@@ -7,7 +7,7 @@ module Hbc::Staged
   end
 
   def plist_exec(cmd)
-    @command.run!('/usr/libexec/PlistBuddy', :args => ['-c', cmd, info_plist_file])
+    @command.run!('/usr/libexec/PlistBuddy', args: ['-c', cmd, info_plist_file])
   end
 
   def plist_set(key, value)

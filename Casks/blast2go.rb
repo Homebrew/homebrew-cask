@@ -1,4 +1,4 @@
-cask :v1 => 'blast2go' do
+cask v1: 'blast2go' do
   version '3.0'
   sha256 '20739dea328c65ab35a7db765e1b7e90e625c39639c0076fcacf43166be1270e'
 
@@ -7,8 +7,8 @@ cask :v1 => 'blast2go' do
   homepage 'https://www.blast2go.com/'
   license :freemium
 
-  installer :script => 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
-            :args => [ '-q' ]
+  installer script: 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
+            args: [ '-q' ]
 
   caveats <<-EOS.undent
     #{token} requires Java 6+, you can install the latest Java using
@@ -16,5 +16,5 @@ cask :v1 => 'blast2go' do
       brew cask install java
   EOS
 
-  uninstall :delete => '/Applications/Blast2GO'
+  uninstall delete: '/Applications/Blast2GO'
 end

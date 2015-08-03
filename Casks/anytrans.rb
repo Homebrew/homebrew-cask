@@ -1,4 +1,4 @@
-cask :v1 => 'anytrans' do
+cask v1: 'anytrans' do
   version :latest
   sha256 :no_check
 

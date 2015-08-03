@@ -1,4 +1,4 @@
-cask :v1 => '1password' do
+cask v1: '1password' do
 
   if MacOS.release <= :lion
     version '3.8.22'
@@ -30,7 +30,7 @@ cask :v1 => '1password' do
   homepage 'https://agilebits.com/onepassword'
   license :commercial
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Scripts/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
                   '~/Library/Containers/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
                   '~/Library/Containers/com.agilebits.onepassword-osx',

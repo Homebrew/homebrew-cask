@@ -1,4 +1,4 @@
-cask :v1 => 'shuttle' do
+cask v1: 'shuttle' do
   version '1.2.2'
   sha256 '116a216b8f0a9485ed82d944b5ae99bfad1c96a7d2aa3c296808ab824264d7a4'
 
@@ -10,5 +10,5 @@ cask :v1 => 'shuttle' do
 
   app 'Shuttle.app'
 
-  zap :delete => '~/.shuttle.json'
+  zap delete: '~/.shuttle.json'
 end

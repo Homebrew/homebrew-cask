@@ -1,4 +1,4 @@
-cask :v1 => 'wdfirmwareupdater' do
+cask v1: 'wdfirmwareupdater' do
   version :latest
   sha256 :no_check
 

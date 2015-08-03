@@ -1,4 +1,4 @@
-cask :v1 => 'mailfollowup' do
+cask v1: 'mailfollowup' do
   if MacOS.release <= :tiger
     version '1.1'
     sha256 '1f345ae0c814cbdc7adad9d5b20003fbad2cdf4da0a9f9de4936fc2d2c65067d'
@@ -27,13 +27,13 @@ cask :v1 => 'mailfollowup' do
   homepage 'http://www.cs.unc.edu/~welch/MailFollowup/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  container :nested => "MailFollowUp_#{version}.dmg"
+  container nested: "MailFollowUp_#{version}.dmg"
   pkg 'Install MailFollowUp.pkg'
 
-  uninstall :quit  => 'com.apple.mail',
-            :pkgutil => [
+  uninstall quit: 'com.apple.mail',
+            pkgutil: [
                         'net.welchwold.mailfollowup',
                         'net.welchwold.mailfollowup.*',
                         ]
-  zap       :delete => '~/Library/Mail/Bundles/MailFollowUp.mailbundle/'
+  zap       delete: '~/Library/Mail/Bundles/MailFollowUp.mailbundle/'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'anylogic' do
+cask v1: 'anylogic' do
   version '7.1.2'
   sha256 'ff1a3ded5529bb7740227efaa300f60a993fa0858f698b0ad0fdc503a062b7b0'
 
@@ -7,11 +7,11 @@ cask :v1 => 'anylogic' do
   homepage 'http://www.anylogic.com'
   license :gratis
 
-  depends_on :arch => :x86_64
-  depends_on :macos => '>= :lion'
+  depends_on arch: :x86_64
+  depends_on macos: '>= :lion'
 
   pkg 'Install AnyLogic.pkg'
-  uninstall :pkgutil => 'com.anylogic.AnyLogic'
+  uninstall pkgutil: 'com.anylogic.AnyLogic'
 
   caveats <<-EOS.undent
     AnyLogic #{version.to_i} requires Java 8. You can install the latest Java using
