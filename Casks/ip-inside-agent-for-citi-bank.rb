@@ -1,4 +1,4 @@
-cask :v1 => "ip-inside-agent-citi" do
+cask :v1 => "ip-inside-agent-for-citi-bank" do
   version :latest
   sha256 :no_check
 
@@ -8,5 +8,5 @@ cask :v1 => "ip-inside-agent-citi" do
   license :gratis
 
   pkg "IPinsideAgent.pkg"
-  uninstall :script => "/opt/homebrew-cask/Caskroom/ip-inside-agent-citi/latest/IPinside Uninstaller.app/Contents/MacOS/IPinside Uninstaller"
+  uninstall :script => "/opt/homebrew-cask/Caskroom/ip-inside-agent-for-citi-bank/latest/IPinside Uninstaller.app/Contents/MacOS/IPinside Uninstaller"
 end
