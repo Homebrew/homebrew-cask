@@ -1,5 +1,5 @@
 cask :v1 => 'gitify' do
-  version '0.014'
+  version '0.0.14'
   sha256 '0a7fc4df27f690b7aaf88b19f2c8b117430d86368a6864942c0a61c3d3db8fb5'
 
   url "https://github.com/ekonstantinidis/gitify/releases/download/#{version}/gitify-osx.zip"
