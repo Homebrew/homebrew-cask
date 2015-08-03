@@ -1,4 +1,4 @@
-cask :v1 => "ip-inside-agent-for-hana-bank" do
+cask :v1 => 'ip-inside-agent-for-hana-bank' do
   version :latest
   sha256 :no_check
 

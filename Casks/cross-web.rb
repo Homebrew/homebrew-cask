@@ -1,4 +1,4 @@
-cask :v1 => "cross-web" do
+cask :v1 => 'cross-web' do
   version :latest
   sha256 :no_check
 
