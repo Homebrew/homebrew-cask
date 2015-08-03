@@ -1,12 +1,12 @@
-cask :v1 => 'cross-web' do
+cask :v1 => "cross-web" do
   version :latest
   sha256 :no_check
 
-  url 'https://open.citibank.co.kr/3rdParty/initech/plugin/down/npCrossWeb_Mac.pkg'
-  name 'Cross WEB'
-  homepage 'https://open.citibank.co.kr'
+  url "https://open.citibank.co.kr/3rdParty/initech/plugin/down/npCrossWeb_Mac.pkg"
+  name "Cross WEB"
+  homepage "https://open.citibank.co.kr"
   license :gratis
 
-  pkg 'npCrossWeb_Mac.pkg'
-  uninstall :pkgutil => 'kr.co.iniline.pkg.CrossWebPackage'
+  pkg "npCrossWeb_Mac.pkg"
+  uninstall :script => "/Applications/CrossWeb/UninstallCrossWeb.app/Contents/MacOS/UninstallCrossWeb"
 end
