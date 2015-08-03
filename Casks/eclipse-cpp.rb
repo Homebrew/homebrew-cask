@@ -1,4 +1,4 @@
-cask :v1 => 'eclipse-cpp' do
+cask v1: 'eclipse-cpp' do
   version '4.5'
   sha256 '6732013ac98123004f8053d1d06452d2b5bffb13077f4db22a9358479c7a2d31'
 
@@ -7,8 +7,8 @@ cask :v1 => 'eclipse-cpp' do
   name 'Eclipse IDE for C/C++ Developers'
   homepage 'https://eclipse.org/'
   license :eclipse
-  depends_on :macos => '>= :leopard'
-  depends_on :arch => :x86_64
+  depends_on macos: '>= :leopard'
+  depends_on arch: :x86_64
 
   app 'Eclipse.app'
 end

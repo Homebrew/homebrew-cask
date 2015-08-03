@@ -1,4 +1,4 @@
-cask :v1 => 'openra' do
+cask v1: 'openra' do
   version '20150614'
   sha256 '30afbc56e8f8964b158fd0cc811bb9d8bdc2f22a76e1b77458f1293658ff2fc8'
 
@@ -9,7 +9,7 @@ cask :v1 => 'openra' do
   homepage 'http://www.openra.net/'
   license :gpl
 
-  depends_on :cask => 'mono-mdk'
+  depends_on cask: 'mono-mdk'
 
   app 'OpenRA.app'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'xca' do
+cask v1: 'xca' do
   version '1.1.0'
   sha256 '124aa68b07a1b655e020e4ef0d36a6c8d490824f225088f6dfbf410aecaf1be1'
 

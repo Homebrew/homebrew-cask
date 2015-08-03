@@ -1,4 +1,4 @@
-cask :v1 => 'shupapan' do
+cask v1: 'shupapan' do
   version :latest
   sha256 :no_check
 

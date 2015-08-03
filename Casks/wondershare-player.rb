@@ -1,4 +1,4 @@
-cask :v1 => 'wondershare-player' do
+cask v1: 'wondershare-player' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,7 @@ cask :v1 => 'wondershare-player' do
   name 'Wondershare Player'
   homepage 'http://www.wondershare.com/video-player/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Wondershare'
+  tags vendor: 'Wondershare'
 
   app 'Wondershare Player.app'
 end

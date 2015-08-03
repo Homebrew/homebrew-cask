@@ -1,4 +1,4 @@
-cask :v1 => 'ksdiff' do
+cask v1: 'ksdiff' do
   version '2.1.0 (122)'
   sha256 '9570f53dcbeb558c53f4808ba58e8c9f394a3026e8bdd122277200a1cdf11e52'
 
@@ -9,9 +9,9 @@ cask :v1 => 'ksdiff' do
 
   pkg 'Install ksdiff.pkg'
 
-  uninstall :pkgutil => 'com.blackpixel.kaleidoscope.ksdiff.installer.pkg'
+  uninstall pkgutil: 'com.blackpixel.kaleidoscope.ksdiff.installer.pkg'
 
-  conflicts_with :cask => 'kaleidoscope'
+  conflicts_with cask: 'kaleidoscope'
 
   caveats <<-EOS.undent
     The #{token} Cask is not needed when installing Kaleidoscope via Cask. It

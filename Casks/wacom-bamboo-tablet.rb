@@ -1,4 +1,4 @@
-cask :v1 => 'wacom-bamboo-tablet' do
+cask v1: 'wacom-bamboo-tablet' do
   version '5.3.5-4'
   sha256 '3368525540f01c6160839a6dee8618c887681d33ed61b15a1835def1cd2c70f2'
 
@@ -9,11 +9,11 @@ cask :v1 => 'wacom-bamboo-tablet' do
 
   pkg 'Install Wacom Tablet.pkg'
 
-  uninstall :launchctl => 'com.wacom.pentablet',
-    :quit => [
+  uninstall launchctl: 'com.wacom.pentablet',
+    quit: [
       'com.wacom.TabletDriver',
       'com.wacom.PenTabletDriver',
       'com.wacom.ConsumerTouchDriver'
     ],
-    :pkgutil => 'com.wacom.installpentablet'
+    pkgutil: 'com.wacom.installpentablet'
 end

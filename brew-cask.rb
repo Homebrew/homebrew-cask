@@ -11,7 +11,7 @@ class Ruby20Requirement < Requirement
   fatal true
   default_formula "ruby"
 
-  satisfy :build_env => false do
+  satisfy build_env: false do
     next unless which "ruby"
     version = /\d\.\d/.match `ruby --version 2>&1`
     next unless version
@@ -30,8 +30,8 @@ end
 
 class BrewCask < Formula
   homepage "https://github.com/caskroom/homebrew-cask/"
-  url "https://github.com/caskroom/homebrew-cask.git", :tag => "v#{HBC_VERSION}"
-  head "https://github.com/caskroom/homebrew-cask.git", :branch => "master"
+  url "https://github.com/caskroom/homebrew-cask.git", tag: "v#{HBC_VERSION}"
+  head "https://github.com/caskroom/homebrew-cask.git", branch: "master"
 
   skip_clean "bin"
 

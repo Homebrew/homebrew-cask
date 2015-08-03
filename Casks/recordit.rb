@@ -1,4 +1,4 @@
-cask :v1 => 'recordit' do
+cask v1: 'recordit' do
   version :latest
   sha256 :no_check
 

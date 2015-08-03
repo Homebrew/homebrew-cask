@@ -1,4 +1,4 @@
-cask :v1 => 'juno' do
+cask v1: 'juno' do
   version '1.0.1'
   sha256 '5cce73948a348277c0ff5ce5faefb7b83e58043c57445f2d117f05c6e142c128'
 

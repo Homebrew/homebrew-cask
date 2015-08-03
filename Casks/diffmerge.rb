@@ -1,4 +1,4 @@
-cask :v1 => 'diffmerge' do
+cask v1: 'diffmerge' do
   version '4.2.0.697'
   sha256 '2c6368653af2440bb4460aef9bb1b2b5d8b84b5a3f47994c4abafc4d7ddbff9e'
 
@@ -8,9 +8,9 @@ cask :v1 => 'diffmerge' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'DiffMerge.app'
-  binary 'DiffMerge.app/Contents/MacOS/DiffMerge', :target => 'diffmerge'
+  binary 'DiffMerge.app/Contents/MacOS/DiffMerge', target: 'diffmerge'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/com.sourcegear.DiffMerge.plist',
                   '~/Library/Preferences/SourceGear DiffMerge Preferences'
                  ]

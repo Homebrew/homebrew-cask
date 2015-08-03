@@ -1,4 +1,4 @@
-cask :v1 => 'zendserver' do
+cask v1: 'zendserver' do
   version '8.0.2'
   sha256 '80fa2d34fde1f62ef8374bebea7bb0ccaa85ec0dd5371f45609fc6bf49dc7423'
 
@@ -9,8 +9,8 @@ cask :v1 => 'zendserver' do
 
   pkg 'Zend Server.pkg'
 
-  uninstall :script => { :executable => '/usr/local/zend/bin/uninstall.sh', :args => ['--automatic'] },
-            :pkgutil => 'zenith.pkg.ZendServer'
+  uninstall script: { executable: '/usr/local/zend/bin/uninstall.sh', args: ['--automatic'] },
+            pkgutil: 'zenith.pkg.ZendServer'
   caveats do
     files_in_usr_local
   end

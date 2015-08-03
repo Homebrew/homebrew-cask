@@ -1,4 +1,4 @@
-cask :v1 => 'privacy-services-manager' do
+cask v1: 'privacy-services-manager' do
   version '1.6.9'
   sha256 'd59db1d633c40f791578d7496ba3a6f94370fda24e64e6b8bafe9b4385b7a772'
 
@@ -11,7 +11,7 @@ cask :v1 => 'privacy-services-manager' do
 
   pkg "Privacy Services Management [#{version}].pkg"
 
-  uninstall :pkgutil => 'edu.utah.scl.privacy_services_manager'
+  uninstall pkgutil: 'edu.utah.scl.privacy_services_manager'
 
-  depends_on :macos => '>= :mountain_lion'
+  depends_on macos: '>= :mountain_lion'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'flux' do
+cask v1: 'flux' do
   version :latest
   sha256 :no_check
 
@@ -14,5 +14,5 @@ cask :v1 => 'flux' do
     suppress_move_to_applications
   end
 
-  zap :delete => '~/Library/Preferences/org.herf.Flux.plist'
+  zap delete: '~/Library/Preferences/org.herf.Flux.plist'
 end

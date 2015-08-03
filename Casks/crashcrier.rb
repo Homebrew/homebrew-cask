@@ -1,4 +1,4 @@
-cask :v1 => 'crashcrier' do
+cask v1: 'crashcrier' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'crashcrier' do
 
   app 'CrashCrier.app'
 
-  uninstall :quit => 'com.kainjow.CrashCrier'
+  uninstall quit: 'com.kainjow.CrashCrier'
 end

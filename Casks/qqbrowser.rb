@@ -1,4 +1,4 @@
-cask :v1 => 'qqbrowser' do
+cask v1: 'qqbrowser' do
   version '2.3.2160'
   sha256 '6e0a3cf5d889f733cc5a4b38c8441bb32201ad1634c038d599be6e0864a65d14'
 
@@ -9,9 +9,9 @@ cask :v1 => 'qqbrowser' do
 
   app 'QQBrowser.app'
 
-  uninstall :quit => 'com.tencent.QQBrowser'
+  uninstall quit: 'com.tencent.QQBrowser'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/QQBrowser2',
                   '~/Library/Caches/com.tencent.QQBrowser',
                   '~/Library/Caches/com.tencent.QQBrowser.helper',

@@ -1,4 +1,4 @@
-cask :v1 => 'qcad' do
+cask v1: 'qcad' do
   version '3.9.7'
   sha256 '8d625e74b01d921597c14a75cac6a07d1c03e50628761b3905b4cabeb7447353'
 
@@ -7,8 +7,8 @@ cask :v1 => 'qcad' do
   homepage 'http://www.qcad.org/'
   license :gpl
 
-  depends_on :macos => '>= :snow_leopard'
-  depends_on :arch => :intel
+  depends_on macos: '>= :snow_leopard'
+  depends_on arch: :intel
 
   app 'QCAD.app'
 end

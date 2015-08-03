@@ -18,7 +18,7 @@ class Hbc::DSL::Installer
       end
       parameters[:executable] = parameters[:script]
       parameters.delete(:script)
-      parameters = { :script => parameters }
+      parameters = { script: parameters }
     end
     unless parameters.keys.length == 1
       raise "invalid 'installer' stanza: only one of #{VALID_KEYS.inspect} is permitted"

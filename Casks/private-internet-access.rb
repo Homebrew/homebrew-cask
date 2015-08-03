@@ -1,4 +1,4 @@
-cask :v1_1 => 'private-internet-access' do
+cask v1_1: 'private-internet-access' do
   version :latest
   sha256 :no_check
 
@@ -7,12 +7,12 @@ cask :v1_1 => 'private-internet-access' do
   homepage 'https://www.privateinternetaccess.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  installer :script => 'Private Internet Access Installer.app/Contents/MacOS/runner.sh'
+  installer script: 'Private Internet Access Installer.app/Contents/MacOS/runner.sh'
 
   postflight do
     set_ownership '~/.pia_manager'
   end
 
-  uninstall :delete => '/Applications/Private Internet Access.app'
-  zap       :delete => '~/.pia_manager'
+  uninstall delete: '/Applications/Private Internet Access.app'
+  zap       delete: '~/.pia_manager'
 end

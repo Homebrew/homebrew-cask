@@ -1,4 +1,4 @@
-cask :v1 => 'vuze' do
+cask v1: 'vuze' do
   version :latest
   sha256 :no_check
 
@@ -7,12 +7,12 @@ cask :v1 => 'vuze' do
   homepage 'https://www.vuze.com/'
   license :gpl
 
-  installer :script => 'Vuze Installer.app/Contents/MacOS/JavaApplicationStub',
-            :args => [ '-q' ]
+  installer script: 'Vuze Installer.app/Contents/MacOS/JavaApplicationStub',
+            args: [ '-q' ]
 
-  uninstall :delete => '/Applications/Vuze.app'
+  uninstall delete: '/Applications/Vuze.app'
 
-  zap :delete => '~/Library/Application Support/Vuze'
+  zap delete: '~/Library/Application Support/Vuze'
 
   caveats <<-EOS.undent
     #{token} requires Java 6+, you can install the latest Java using

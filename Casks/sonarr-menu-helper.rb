@@ -1,4 +1,4 @@
-cask :v1 => 'sonarr-menu-helper' do
+cask v1: 'sonarr-menu-helper' do
   version '2.2'
   sha256 'a46ace8316b873823adb829719a7b91780194a89d313a9bb313a9677e4fda78f'
 
@@ -10,6 +10,6 @@ cask :v1 => 'sonarr-menu-helper' do
 
   app 'Sonarr.app'
 
-  depends_on :cask => 'mono-mdk'
-  conflicts_with :cask => 'sonarr'
+  depends_on cask: 'mono-mdk'
+  conflicts_with cask: 'sonarr'
 end

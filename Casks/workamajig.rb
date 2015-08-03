@@ -1,4 +1,4 @@
-cask :v1 => 'workamajig' do
+cask v1: 'workamajig' do
   version :latest
   sha256 :no_check
 
@@ -10,5 +10,5 @@ cask :v1 => 'workamajig' do
 
   app 'Workamajig.app'
 
-  depends_on :cask => 'adobe-air'
+  depends_on cask: 'adobe-air'
 end

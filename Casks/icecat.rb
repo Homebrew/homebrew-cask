@@ -1,4 +1,4 @@
-cask :v1 => 'icecat' do
+cask v1: 'icecat' do
   version '31.7.0'
   sha256 'f650d3bb8f983a3dfab0576c05e0f40637976a1e6084f3d1ad23a8d33c02eaee'
 

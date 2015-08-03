@@ -1,4 +1,4 @@
-cask :v1 => 'endnote' do
+cask v1: 'endnote' do
   version :latest
   sha256 :no_check
 

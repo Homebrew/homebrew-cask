@@ -1,4 +1,4 @@
-cask :v1 => 'dropbox' do
+cask v1: 'dropbox' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'dropbox' do
 
   app 'Dropbox.app'
 
-  zap :delete => '~/.dropbox'
+  zap delete: '~/.dropbox'
 end

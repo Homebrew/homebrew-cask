@@ -1,4 +1,4 @@
-cask :v1 => 'sketchup' do
+cask v1: 'sketchup' do
   version :latest
   sha256 :no_check
 
@@ -11,7 +11,7 @@ cask :v1 => 'sketchup' do
 
   suite 'SketchUp 2015'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/SketchUp 2015',
                   '~/Library/Caches/com.sketchup.SketchUp.2015',
                  ]

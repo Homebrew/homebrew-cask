@@ -1,4 +1,4 @@
-cask :v1 => 'parallels-desktop' do
+cask v1: 'parallels-desktop' do
   version '10.2.2-29105'
   sha256 '1065e1b85b5a3ccce0eecafe425dc29e17a9f71a8eed81716ca705aa1b738639'
 
@@ -14,14 +14,14 @@ cask :v1 => 'parallels-desktop' do
     system '/usr/bin/SetFile', '-a', 'v', staged_path.join('Parallels Desktop.app')
   end
 
-  uninstall :delete => [
+  uninstall delete: [
                          '/usr/bin/prl_convert',
                          '/usr/bin/prl_disk_tool',
                          '/usr/bin/prl_perf_ctl',
                          '/usr/bin/prlctl',
                          '/usr/bin/prlsrvctl',
                        ]
-  zap       :delete => [
+  zap       delete: [
                          '~/.parallels_settings',
                          '~/Library/Caches/com.parallels.desktop.console',
                          '~/Library/Preferences/com.parallels.desktop.console.LSSharedFileList.plist',

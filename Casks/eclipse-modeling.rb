@@ -1,4 +1,4 @@
-cask :v1 => 'eclipse-modeling' do
+cask v1: 'eclipse-modeling' do
   version '4.5'
   sha256 '5e8b32911af23b7361b686f226308929a165f71dfcf7aa3c0e91ddd311491302'
 
@@ -7,8 +7,8 @@ cask :v1 => 'eclipse-modeling' do
   name 'Eclipse Modeling Tools'
   homepage 'https://eclipse.org/'
   license :eclipse
-  depends_on :macos => '>= :leopard'
-  depends_on :arch => :x86_64
+  depends_on macos: '>= :leopard'
+  depends_on arch: :x86_64
 
   app 'Eclipse.app'
 end

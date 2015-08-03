@@ -1,4 +1,4 @@
-cask :v1 => 'apache-directory-studio' do
+cask v1: 'apache-directory-studio' do
   version '2.0.0.v20150606-M9'
   sha256 '9eca84d081a500fec84943600723782a6edac05eeab6791fe8a964e49c6d834e'
 
@@ -10,5 +10,5 @@ cask :v1 => 'apache-directory-studio' do
 
   app 'ApacheDirectoryStudio.app'
 
-  zap :delete => '~/.ApacheDirectoryStudio'
+  zap delete: '~/.ApacheDirectoryStudio'
 end

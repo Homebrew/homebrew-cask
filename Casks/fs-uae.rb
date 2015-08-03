@@ -1,4 +1,4 @@
-cask :v1 => 'fs-uae' do
+cask v1: 'fs-uae' do
   version '2.4.1'
   sha256 '7fa26b9840cc677642956020e2fa5dfae4f5848554d06df2e39e98816ab6d736'
 

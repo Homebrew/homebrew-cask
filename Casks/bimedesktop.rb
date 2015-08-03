@@ -1,4 +1,4 @@
-cask :v1 => 'bimedesktop' do
+cask v1: 'bimedesktop' do
   version :latest
   sha256 :no_check
 

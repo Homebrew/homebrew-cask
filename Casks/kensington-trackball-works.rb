@@ -1,4 +1,4 @@
-cask :v1 => 'kensington-trackball-works' do
+cask v1: 'kensington-trackball-works' do
   version '1.2.1'
   sha256 '285511269aea2e0517198b354923676655c72142062dcba7bdc41bc29d1f08d1'
 
@@ -10,11 +10,11 @@ cask :v1 => 'kensington-trackball-works' do
 
   pkg 'Kensington TrackballWorks.pkg'
 
-  uninstall :pkgutil   => 'com.kensington.trackballworks.driver.installer',
-            :kext      => 'com.kensington.trackballworks.driver',
-            :launchctl => [
+  uninstall pkgutil: 'com.kensington.trackballworks.driver.installer',
+            kext: 'com.kensington.trackballworks.driver',
+            launchctl: [
                            'com.kensington.slimblade.agent',
                            'com.kensington.slimblade.guiagent.plist',
                           ],
-            :quit      => 'com.kensington.trackballworks.helper'
+            quit: 'com.kensington.trackballworks.helper'
 end

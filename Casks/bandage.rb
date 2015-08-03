@@ -1,4 +1,4 @@
-cask :v1 => 'bandage' do
+cask v1: 'bandage' do
   version '0.6.2'
   sha256 '599648d23a14f26b41f5a3b2e0e34f162be2607058b1c02cea9370002a16ef81'
 

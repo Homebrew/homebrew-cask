@@ -1,4 +1,4 @@
-cask :v1 => 'macports' do
+cask v1: 'macports' do
   version '2.3.3'
 
   if MacOS.release <= :mountain_lion
@@ -16,11 +16,11 @@ cask :v1 => 'macports' do
   end
 
   gpg "#{url}.asc",
-      :key_id => '01ff673fb4aae6cd'
+      key_id: '01ff673fb4aae6cd'
   name 'MacPorts'
   homepage 'http://www.macports.org'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  uninstall :pkgutil => 'org.macports.MacPorts'
-  zap       :delete  => '~/.macports'
+  uninstall pkgutil: 'org.macports.MacPorts'
+  zap       delete: '~/.macports'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'maltego' do
+cask v1: 'maltego' do
   version '3.6.0.6526'
   sha256 'cda838e27afd3c73dd33705f0448f7e63918a3e65df0274928a9c87fe3340d00'
 
@@ -6,7 +6,7 @@ cask :v1 => 'maltego' do
   name 'Maltego'
   homepage 'https://www.paterva.com/web6/products/maltego.php'
   license :closed
-  tags :vendor => 'Paterva'
+  tags vendor: 'Paterva'
 
   app "Maltego Chlorine v#{version.sub(%r{\.\d+$},'')}.app"
 end

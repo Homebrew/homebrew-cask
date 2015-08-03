@@ -1,4 +1,4 @@
-cask :v1 => 'justinmind' do
+cask v1: 'justinmind' do
   version :latest
   sha256 :no_check
 
@@ -10,5 +10,5 @@ cask :v1 => 'justinmind' do
 
   pkg 'Justinmind.pkg'
 
-  uninstall :pkgutil => 'com.justinmind.justinmindprototyper631.pkg'
+  uninstall pkgutil: 'com.justinmind.justinmindprototyper631.pkg'
 end

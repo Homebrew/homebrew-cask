@@ -1,4 +1,4 @@
-cask :v1 => 'hubic' do
+cask v1: 'hubic' do
   version '2.1.0.256'
   sha256 'd6987dcb1ff767a96cf0790724b945e9ede22029e56b2d58179dcbfefb660a99'
 
@@ -10,5 +10,5 @@ cask :v1 => 'hubic' do
 
   pkg "hubiC-OSX-#{version}-osx.pkg"
 
-  uninstall :pkgutil => 'com.ovh.hubicmac'
+  uninstall pkgutil: 'com.ovh.hubicmac'
 end

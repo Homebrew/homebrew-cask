@@ -1,4 +1,4 @@
-cask :v1 => 'flavours' do
+cask v1: 'flavours' do
   version :latest
   sha256 :no_check
 
@@ -10,9 +10,9 @@ cask :v1 => 'flavours' do
 
   app 'Flavours.app'
 
-  uninstall :launchctl => 'net.interacto.flavours.helper',
-            :quit  => 'net.interacto.Flavours',
-            :delete => [
+  uninstall launchctl: 'net.interacto.flavours.helper',
+            quit: 'net.interacto.Flavours',
+            delete: [
                         '/usr/local/bin/flavours.agent',
                         '/usr/local/bin/flavours.ignitor',
                         '/usr/local/bin/restoreui',

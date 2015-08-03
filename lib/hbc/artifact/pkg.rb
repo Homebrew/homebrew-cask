@@ -48,6 +48,6 @@ class Hbc::Artifact::Pkg < Hbc::Artifact::Base
     ]
     args << '-verboseR' if Hbc.verbose
     args << '-allowUntrusted' if pkg_install_opts :allow_untrusted
-    @command.run!('/usr/sbin/installer', {:sudo => true, :args => args, :print_stdout => true})
+    @command.run!('/usr/sbin/installer', {sudo: true, args: args, print_stdout: true})
   end
 end

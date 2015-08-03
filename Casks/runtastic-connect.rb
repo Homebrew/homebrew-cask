@@ -1,4 +1,4 @@
-cask :v1 => 'runtastic-connect' do
+cask v1: 'runtastic-connect' do
   version :latest
   sha256 :no_check
 

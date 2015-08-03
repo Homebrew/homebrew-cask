@@ -1,4 +1,4 @@
-cask :v1 => 'goldencheetah' do
+cask v1: 'goldencheetah' do
   version '3.1'
   sha256 '53daceee5b54baa742278e370b2bada1ba02d32c9fa77afa757dd5cb51f4fb52'
 

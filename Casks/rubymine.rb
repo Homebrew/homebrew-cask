@@ -1,4 +1,4 @@
-cask :v1 => 'rubymine' do
+cask v1: 'rubymine' do
   version '7.1.4'
   sha256 'ec503be6a441850702c5e332c459ccb2ed71e1a337f82b01587377f76a4f379e'
 
@@ -9,7 +9,7 @@ cask :v1 => 'rubymine' do
 
   app 'RubyMine.app'
 
-  zap :delete => [
+  zap delete: [
                   "~/Library/Application Support/RubyMine#{version.gsub('.','')}",
                   "~/Library/Preferences/RubyMine#{version.gsub('.','')}",
                  ]

@@ -1,4 +1,4 @@
-cask :v1 => 'gitx' do
+cask v1: 'gitx' do
   version :latest
   sha256 :no_check
 
@@ -11,7 +11,7 @@ cask :v1 => 'gitx' do
   app 'GitX.app'
   binary 'GitX.app/Contents/Resources/gitx'
 
-  conflicts_with :cask => %w{
+  conflicts_with cask: %w{
                              laullon-gitx
                              rowanj-gitx
                             }

@@ -1,4 +1,4 @@
-cask :v1 => 'hostbuddy' do
+cask v1: 'hostbuddy' do
   version :latest
   sha256 :no_check
 

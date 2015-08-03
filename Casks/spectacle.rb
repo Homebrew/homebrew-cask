@@ -1,4 +1,4 @@
-cask :v1 => 'spectacle' do
+cask v1: 'spectacle' do
 
   if MacOS.release <= :mountain_lion
     version '0.8.6'
@@ -8,7 +8,7 @@ cask :v1 => 'spectacle' do
     sha256 '26e4ccc906a82c5df9d1d462f1b691fce746aea43405b178d3d230fb23551d44'
 
     appcast 'http://spectacleapp.com/updates/appcast.xml',
-            :sha256 => '5d75e2e07886ca135916e224b4b5c1468d9af1ea8ef355db33b28bff511fa6b2'
+            sha256: '5d75e2e07886ca135916e224b4b5c1468d9af1ea8ef355db33b28bff511fa6b2'
   end
 
   # amazonaws.com is the official download host per the vendor homepage
@@ -19,7 +19,7 @@ cask :v1 => 'spectacle' do
 
   app 'Spectacle.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Caches/com.divisiblebyzero.Spectacle',
                   '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.divisiblebyzero.Spectacle',
                   '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist',

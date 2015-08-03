@@ -1,4 +1,4 @@
-cask :v1 => 'lyrics-master' do
+cask v1: 'lyrics-master' do
   version '2.4.4'
   sha256 '659b958c8a4b9d3e24245398d0a08318b354d92815bbfd15d157cdc9367466c5'
 

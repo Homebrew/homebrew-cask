@@ -10,7 +10,7 @@ describe Hbc::DSL::Postflight do
     Hbc::FakeSystemCommand.expects_command(
       ['echo', 'homebrew-cask', 'rocks!']
     )
-    @dsl.system_command("echo", :args => ["homebrew-cask", "rocks!"])
+    @dsl.system_command("echo", args: ["homebrew-cask", "rocks!"])
   end
 
   it "can get the Info.plist file for the primary app" do
@@ -18,7 +18,7 @@ describe Hbc::DSL::Postflight do
   end
 
   it "can execute commands on the Info.plist file" do
-    @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
+    @dsl.stubs(bundle_identifier: 'com.example.BasicCask')
 
     Hbc::FakeSystemCommand.expects_command(
       ['/usr/libexec/PlistBuddy', '-c', 'Print CFBundleIdentifier', @dsl.info_plist_file]
@@ -27,7 +27,7 @@ describe Hbc::DSL::Postflight do
   end
 
   it "can set a key in the Info.plist file" do
-    @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
+    @dsl.stubs(bundle_identifier: 'com.example.BasicCask')
 
     Hbc::FakeSystemCommand.expects_command(
       ['/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', @dsl.info_plist_file]
@@ -50,7 +50,7 @@ describe Hbc::DSL::Postflight do
   end
 
   it "can set the ownership of a file" do
-    @dsl.stubs(:current_user => 'fake_user')
+    @dsl.stubs(current_user: 'fake_user')
 
     Hbc::FakeSystemCommand.expects_command(
       ['/usr/bin/sudo', '-E', '--', '/usr/sbin/chown', '-R', '--', 'fake_user:staff', Pathname('/path/to/file')]
@@ -59,7 +59,7 @@ describe Hbc::DSL::Postflight do
   end
 
   it "can set the ownership of multiple files" do
-    @dsl.stubs(:current_user => 'fake_user')
+    @dsl.stubs(current_user: 'fake_user')
 
     Hbc::FakeSystemCommand.expects_command(
       ['/usr/bin/sudo', '-E', '--', '/usr/sbin/chown', '-R', '--', 'fake_user:staff', Pathname('/path/to/file'), Pathname('/path/to/other-file')]
@@ -75,7 +75,7 @@ describe Hbc::DSL::Postflight do
   end
 
   it "can suppress move to applications folder alert " do
-    @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
+    @dsl.stubs(bundle_identifier: 'com.example.BasicCask')
 
     Hbc::FakeSystemCommand.expects_command(
       ['/usr/bin/defaults', 'write', 'com.example.BasicCask', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true']
@@ -84,11 +84,11 @@ describe Hbc::DSL::Postflight do
   end
 
   it "can suppress move to applications folder alert with a different key" do
-    @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
+    @dsl.stubs(bundle_identifier: 'com.example.BasicCask')
 
     Hbc::FakeSystemCommand.expects_command(
       ['/usr/bin/defaults', 'write', 'com.example.BasicCask', 'suppressMoveToApplications', '-bool', 'true']
     )
-    @dsl.suppress_move_to_applications :key => 'suppressMoveToApplications'
+    @dsl.suppress_move_to_applications key: 'suppressMoveToApplications'
   end
 end

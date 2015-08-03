@@ -1,4 +1,4 @@
-cask :v1 => 'ipartition' do
+cask v1: 'ipartition' do
   version :latest
   sha256 :no_check
 

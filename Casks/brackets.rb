@@ -1,4 +1,4 @@
-cask :v1 => 'brackets' do
+cask v1: 'brackets' do
   version '1.4'
   sha256 'c725999990fb20bf86cd23febea192f78e691a3b63e8425c50001d92fbee8dc9'
 
@@ -10,7 +10,7 @@ cask :v1 => 'brackets' do
 
   app 'Brackets.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Brackets',
                   '~/Library/Preferences/io.brackets.appshell.plist',
                  ]

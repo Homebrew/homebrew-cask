@@ -1,4 +1,4 @@
-cask :v1 => 'janusvr' do
+cask v1: 'janusvr' do
   version :latest
   sha256 :no_check
 

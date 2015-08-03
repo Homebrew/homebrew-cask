@@ -11,7 +11,7 @@ class Hbc::DSL::Postflight < Hbc::DSL::Base
     end
     key = options[:key] || 'moveToApplicationsFolderAlertSuppress'
     begin
-      @command.run!('/usr/bin/defaults', :args => ['write', bundle_identifier, key, '-bool', 'true'])
+      @command.run!('/usr/bin/defaults', args: ['write', bundle_identifier, key, '-bool', 'true'])
     rescue StandardError => e
       raise Hbc::CaskError.new("#{@cask.token}: 'suppress_move_to_applications' failed with: #{e}")
     end

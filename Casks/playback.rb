@@ -1,4 +1,4 @@
-cask :v1 => 'playback' do
+cask v1: 'playback' do
   version '1.3.1'
   sha256 'bffca6b43363b8a0a511eae6b3376d0bd0fbcf2c04a6d810cf09acbcd087bb38'
 

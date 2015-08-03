@@ -1,4 +1,4 @@
-cask :v1 => 'eve' do
+cask v1: 'eve' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,7 @@ cask :v1 => 'eve' do
   url 'https://s3.amazonaws.com/hotkeyeve/Downloads/EVE-latest.zip'
   name 'EVE'
   appcast 'https://s3.amazonaws.com/hotkeyeve/hotkeyEVEappcast.xml',
-          :sha256 => '771a6b166a2752502899a4c5117b08aae56b36a72122a34dbb304ab7d7c8b0e5'
+          sha256: '771a6b166a2752502899a4c5117b08aae56b36a72122a34dbb304ab7d7c8b0e5'
   homepage 'http://www.hotkey-eve.com/'
   license :gratis
 

@@ -41,7 +41,7 @@ class Hbc::Artifact::Base
 
     # backward-compatible string value
     if arguments.kind_of?(String)
-      arguments = { :executable => arguments }
+      arguments = { executable: arguments }
     end
 
     # key sanity

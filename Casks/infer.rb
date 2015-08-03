@@ -1,4 +1,4 @@
-cask :v1 => 'infer' do
+cask v1: 'infer' do
   version '0.2.0'
   sha256 'ef755c3f01ae3246cae8f67a914518cdff72d69d55172a45242ef11e2c62812f'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'harvest' do
+cask v1: 'harvest' do
   version :latest
   sha256 :no_check
 

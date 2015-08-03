@@ -1,4 +1,4 @@
-cask :v1 => 'utorrent' do
+cask v1: 'utorrent' do
   version :latest
   sha256 :no_check
 
@@ -8,14 +8,14 @@ cask :v1 => 'utorrent' do
   else
     url 'https://download-new.utorrent.com/endpoint/utmac/os/osx/track/stable/'
     appcast 'https://update.utorrent.com/checkupdate.php'
-    installer :manual => 'uTorrent.app'
+    installer manual: 'uTorrent.app'
   end
 
   name 'µTorrent'
   homepage 'https://www.utorrent.com/'
   license :freemium
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/uTorrent',
                   '~/Library/Preferences/com.bittorrent.uTorrent.plist',
                   '~/Library/Preferences/com.bittorrent.uTorrent-Installer.plist',

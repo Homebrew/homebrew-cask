@@ -1,4 +1,4 @@
-cask :v1 => 'xnconvert' do
+cask v1: 'xnconvert' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,7 @@ cask :v1 => 'xnconvert' do
   name 'XnConvert'
   homepage 'http://www.xnview.com/en/xnconvert/'
   license :gratis
-  tags :vendor => 'XnSoft'
+  tags vendor: 'XnSoft'
 
   app 'XnConvert.app'
 end

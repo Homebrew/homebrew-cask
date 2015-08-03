@@ -1,4 +1,4 @@
-cask :v1 => 'syncany' do
+cask v1: 'syncany' do
   version '0.4.5-alpha'
   sha256 '00e03cd3788a438a82c20d5c4ae0d13e69b6eec865b96084095c18aee4470a67'
 
@@ -9,5 +9,5 @@ cask :v1 => 'syncany' do
 
   app 'Syncany.app'
 
-  zap :delete => '~/.config/syncany'
+  zap delete: '~/.config/syncany'
 end

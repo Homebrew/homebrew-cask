@@ -1,4 +1,4 @@
-cask :v1 => 'rowanj-gitx' do
+cask v1: 'rowanj-gitx' do
   if MacOS.release <= :snow_leopard
     version '0.14.81'
     sha256 '17301ee1209bd4b12c126d7a58405efdb366f99f70b4f923a9c96e16c334ce2a'
@@ -20,7 +20,7 @@ cask :v1 => 'rowanj-gitx' do
   app 'GitX.app'
   binary 'GitX.app/Contents/Resources/gitx'
 
-  depends_on :macos => '>= :snow_leopard'
-  depends_on :arch => :intel
-  conflicts_with :cask => 'gitx'
+  depends_on macos: '>= :snow_leopard'
+  depends_on arch: :intel
+  conflicts_with cask: 'gitx'
 end

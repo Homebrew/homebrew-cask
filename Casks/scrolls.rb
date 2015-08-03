@@ -1,4 +1,4 @@
-cask :v1 => 'scrolls' do
+cask v1: 'scrolls' do
   version :latest
   sha256 :no_check
 
@@ -6,11 +6,11 @@ cask :v1 => 'scrolls' do
   name 'Scrolls'
   homepage 'https://scrolls.com/'
   license :gratis
-  tags :vendor => 'Mojang'
+  tags vendor: 'Mojang'
 
   app 'Scrolls.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Scrolls/',
                   '~/Library/Application Support/Scrolls Launcher/'
                  ]

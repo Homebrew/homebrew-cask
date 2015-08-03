@@ -1,4 +1,4 @@
-cask :v1 => 'tau' do
+cask v1: 'tau' do
   version :latest
   sha256 :no_check
 

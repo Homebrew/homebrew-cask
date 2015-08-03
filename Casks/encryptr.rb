@@ -1,4 +1,4 @@
-cask :v1 => 'encryptr' do
+cask v1: 'encryptr' do
   version '1.1.0'
   sha256 '95d76eaed329cb7e8725a4ca02380aeab8cc67c9b942ee8d24bcb356c195aa8b'
 
@@ -8,11 +8,11 @@ cask :v1 => 'encryptr' do
   name 'Encryptr'
   homepage 'https://encryptr.org/'
   license :gpl
-  tags :vendor => 'Devgeeks'
+  tags vendor: 'Devgeeks'
 
   app 'Encryptr.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/org.devgeeks.encryptr.plist',
                   '~/Library/Saved Application State/org.devgeeks.encryptr.savedState',
                  ]

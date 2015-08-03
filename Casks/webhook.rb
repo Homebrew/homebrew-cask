@@ -1,4 +1,4 @@
-cask :v1 => 'webhook' do
+cask v1: 'webhook' do
   version :latest
   sha256 :no_check
 

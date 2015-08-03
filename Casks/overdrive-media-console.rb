@@ -1,4 +1,4 @@
-cask :v1 => 'overdrive-media-console' do
+cask v1: 'overdrive-media-console' do
   version '1.2'
   sha256 '6e04ac61337647aa86c67d04d62552a0c0a31a3104bf4856aa726e8317272be9'
 
@@ -7,11 +7,11 @@ cask :v1 => 'overdrive-media-console' do
   homepage 'https://www.overdrive.com/'
   license :commercial
 
-  pkg "OverDrive-Mac-Installer-Version-#{version}.pkg", :allow_untrusted => true
+  pkg "OverDrive-Mac-Installer-Version-#{version}.pkg", allow_untrusted: true
 
-  uninstall :pkgutil => 'com.overdrive.overdriveMediaConsole.*'
+  uninstall pkgutil: 'com.overdrive.overdriveMediaConsole.*'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/com.overdrive.overdrivemediaconsole.plist',
                   '~/Library/Caches/com.overdrive.overdrivemediaconsole',
                  ]

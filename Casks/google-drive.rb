@@ -1,4 +1,4 @@
-cask :v1 => 'google-drive' do
+cask v1: 'google-drive' do
   version :latest
   sha256 :no_check
 
@@ -6,11 +6,11 @@ cask :v1 => 'google-drive' do
   name 'Google Drive'
   homepage 'https://drive.google.com/'
   license :gratis
-  tags :vendor => 'Google'
+  tags vendor: 'Google'
 
   app 'Google Drive.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Google/Drive',
                   '~/Library/Preferences/com.google.GoogleDrive.plist',
                  ]

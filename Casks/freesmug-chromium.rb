@@ -1,4 +1,4 @@
-cask :v1 => 'freesmug-chromium' do
+cask v1: 'freesmug-chromium' do
   version '44.0.2403.125'
   sha256 '2872f6b928bdeb14908e40c1c340f5e216e1fe93016e7aff661217e9e1864f48'
 

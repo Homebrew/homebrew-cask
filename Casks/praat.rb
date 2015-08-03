@@ -1,4 +1,4 @@
-cask :v1 => 'praat' do
+cask v1: 'praat' do
   version '5.4.12'
 
   if Hardware::CPU.is_32_bit? || MacOS.release <= :snow_leopard
@@ -14,5 +14,5 @@ cask :v1 => 'praat' do
   license :gpl
 
   app 'Praat.app'
-  binary 'Praat.app/Contents/MacOS/Praat', :target => 'praat'
+  binary 'Praat.app/Contents/MacOS/Praat', target: 'praat'
 end

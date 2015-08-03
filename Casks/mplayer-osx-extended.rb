@@ -1,4 +1,4 @@
-cask :v1 => 'mplayer-osx-extended' do
+cask v1: 'mplayer-osx-extended' do
   version 'rev15'
   sha256 '7979f2369730d389ceb4ec3082c65ffa3ec70f812f0699a2ef8acbae958a5c93'
 
@@ -11,5 +11,5 @@ cask :v1 => 'mplayer-osx-extended' do
 
   app 'MPlayer OSX Extended.app'
 
-  zap :delete => '~/.mplayer'
+  zap delete: '~/.mplayer'
 end

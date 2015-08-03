@@ -1,4 +1,4 @@
-cask :v1 => 'freelancy' do
+cask v1: 'freelancy' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'freelancy' do
 
   app 'Freelancy.app'
 
-  zap :delete => '~/Library/Application Support/freelancy'
+  zap delete: '~/Library/Application Support/freelancy'
 end

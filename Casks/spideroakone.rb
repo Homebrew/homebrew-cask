@@ -1,4 +1,4 @@
-cask :v1 => 'spideroakone' do
+cask v1: 'spideroakone' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'spideroakone' do
 
   pkg 'SpiderOakONE.pkg'
 
-  uninstall :delete => '/Applications/SpiderOakONE.app'
+  uninstall delete: '/Applications/SpiderOakONE.app'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'gopro-studio' do
+cask v1: 'gopro-studio' do
   version '2.5.5.52'
   sha256 'cab72d115b6f0731cd18839547eae54fc77004a85d15f281b4493bad23affef6'
 
@@ -9,5 +9,5 @@ cask :v1 => 'gopro-studio' do
 
   pkg 'GoPro Studio.pkg'
 
-  uninstall :pkgutil => 'com.GoPro.pkg.GoProStudio'
+  uninstall pkgutil: 'com.GoPro.pkg.GoProStudio'
 end

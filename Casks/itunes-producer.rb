@@ -1,4 +1,4 @@
-cask :v1 => 'itunes-producer' do
+cask v1: 'itunes-producer' do
   if MacOS.release <= :mavericks
     version '2.9.1'
 
@@ -16,7 +16,7 @@ cask :v1 => 'itunes-producer' do
   license :closed
   pkg 'iTunesProducer.pkg'
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
-  uninstall :pkgutil => 'com.apple.pkg.iTunesProducer'
+  uninstall pkgutil: 'com.apple.pkg.iTunesProducer'
 end

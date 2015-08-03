@@ -1,4 +1,4 @@
-cask :v1 => 'affinic-debugger-gui' do
+cask v1: 'affinic-debugger-gui' do
   version :latest
   sha256 :no_check
 

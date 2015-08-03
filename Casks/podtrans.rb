@@ -1,4 +1,4 @@
-cask :v1 => 'podtrans' do
+cask v1: 'podtrans' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'azure-cli' do
+cask v1: 'azure-cli' do
   version :latest
   sha256 :no_check
 
@@ -6,10 +6,10 @@ cask :v1 => 'azure-cli' do
   name 'Microsoft Azure SDK'
   homepage 'https://azure.microsoft.com/en-us/documentation/articles/command-line-tools/'
   license :gratis
-  tags :vendor => 'Microsoft'
+  tags vendor: 'Microsoft'
 
   pkg 'Install Command Line Interface.pkg'
 
-  uninstall :script => '/usr/local/bin/azure-uninstall',
-            :pkgutil => 'com.microsoft.azure.*'
+  uninstall script: '/usr/local/bin/azure-uninstall',
+            pkgutil: 'com.microsoft.azure.*'
 end

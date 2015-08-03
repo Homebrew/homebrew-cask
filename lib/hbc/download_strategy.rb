@@ -145,8 +145,8 @@ class Hbc::SubversionDownloadStrategy < Hbc::HbSubversionDownloadStrategy
     args << '-r' << revision if revision
     args << '--ignore-externals' if ignore_externals
     @command.run!('/usr/bin/svn',
-                  :args => args,
-                  :print_stderr => false)
+                  args: args,
+                  print_stderr: false)
   end
 
   def tarball_path
@@ -176,8 +176,8 @@ class Hbc::SubversionDownloadStrategy < Hbc::HbSubversionDownloadStrategy
 
   def compress
     Dir.chdir(cached_location) do
-      @command.run!('/usr/bin/tar', :args => ['-s/^\.//', '--exclude', '.svn', '-cf', Pathname.new(tarball_path), '--', '.'],
-                                    :print_stderr => false)
+      @command.run!('/usr/bin/tar', args: ['-s/^\.//', '--exclude', '.svn', '-cf', Pathname.new(tarball_path), '--', '.'],
+                                    print_stderr: false)
     end
     clear_cache
   end

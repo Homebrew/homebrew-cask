@@ -1,4 +1,4 @@
-cask :v1 => 'githubpulse' do
+cask v1: 'githubpulse' do
   version :latest
   sha256 :no_check
 

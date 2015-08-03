@@ -1,4 +1,4 @@
-cask :v1 => 'unity-web-player' do
+cask v1: 'unity-web-player' do
   version :latest
   sha256 :no_check
 
@@ -7,10 +7,10 @@ cask :v1 => 'unity-web-player' do
   homepage 'https://unity3d.com/webplayer'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   pkg 'Install Unity Web Player.pkg'
 
-  uninstall :pkgutil => 'com.unity.UnityWebPlayer',
-            :delete  => '/Library/Internet Plug-Ins/Unity Web Player.plugin'
+  uninstall pkgutil: 'com.unity.UnityWebPlayer',
+            delete: '/Library/Internet Plug-Ins/Unity Web Player.plugin'
 end

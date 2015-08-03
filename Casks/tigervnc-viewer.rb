@@ -1,4 +1,4 @@
-cask :v1 => 'tigervnc-viewer' do
+cask v1: 'tigervnc-viewer' do
   version '1.4.3'
   sha256 'e6c2f17092456f04ccce6d923af3103f7e69123c4a0f80e37b56ee3861149cca'
 

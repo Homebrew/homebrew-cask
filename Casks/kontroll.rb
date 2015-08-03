@@ -1,4 +1,4 @@
-cask :v1 => 'kontroll' do
+cask v1: 'kontroll' do
   version :latest
   sha256 :no_check
 
@@ -9,7 +9,7 @@ cask :v1 => 'kontroll' do
 
   app 'Kontroll.app'
 
-  depends_on :macos => '>= 10.10'
+  depends_on macos: '>= 10.10'
 
-  zap :delete => '~/Library/Preferences/com.vinkla.Kontroll.plist'
+  zap delete: '~/Library/Preferences/com.vinkla.Kontroll.plist'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'wiztoolsorg-restclient' do
+cask v1: 'wiztoolsorg-restclient' do
   version '3.5'
   sha256 'fddd89b694548b06adc4ab65adbbef81eb47c6f206818f95f953aca577aff263'
 

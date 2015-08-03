@@ -1,4 +1,4 @@
-cask :v1 => 'fontforge' do
+cask v1: 'fontforge' do
   version '2015-04-30'
   sha256 '69f01a6d15fc0e93c259828ec29e8e6243ba5a35017bee17d101ee54c2c2ab86'
 
@@ -10,5 +10,5 @@ cask :v1 => 'fontforge' do
 
   app 'FontForge.app'
 
-  depends_on :cask => 'xquartz'
+  depends_on cask: 'xquartz'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'pagico' do
+cask v1: 'pagico' do
   version '7.1.1797'
   sha256 '1693cbc6995c5665646465eea9e9c23590b65e21722bc3f16c1392fb8b95eabb'
 
@@ -7,10 +7,10 @@ cask :v1 => 'pagico' do
   homepage 'https://www.pagico.com/'
   license :commercial
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   pkg 'Install Pagico.pkg'
 
-  uninstall :pkgutil => 'com.pagico.*',
-            :delete => '/Applications/Pagico'
+  uninstall pkgutil: 'com.pagico.*',
+            delete: '/Applications/Pagico'
 end

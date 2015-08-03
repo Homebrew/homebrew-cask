@@ -1,4 +1,4 @@
-cask :v1 => 'qt-creator' do
+cask v1: 'qt-creator' do
   version '3.4.2'
   sha256 '2908e39ebc1710746f2deee00ccf09758c4c1563231bf6940f154376b0ec6f4c'
 

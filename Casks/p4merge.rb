@@ -1,4 +1,4 @@
-cask :v1 => 'p4merge' do
+cask v1: 'p4merge' do
   version '2014.3-1007540'
   sha256 '07eac08f6bfb32e4a79bf47582116de8532fe0b18d91a014e1cd80861d6f0909'
 
@@ -6,11 +6,11 @@ cask :v1 => 'p4merge' do
   name 'P4Merge'
   homepage 'http://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools'
   license :gratis
-  tags :vendor => 'Perforce'
+  tags vendor: 'Perforce'
 
   app 'p4merge.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/com.perforce.p4merge',
                   '~/Library/Preferences/com.perforce.p4merge.plist',
                   '~/Library/Saved Application State/com.perforce.p4merge.savedState'

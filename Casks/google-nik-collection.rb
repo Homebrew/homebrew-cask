@@ -1,4 +1,4 @@
-cask :v1 => 'google-nik-collection' do
+cask v1: 'google-nik-collection' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,7 @@ cask :v1 => 'google-nik-collection' do
   name 'Nik Collection'
   homepage 'https://www.google.com/nikcollection/'
   license :commercial
-  tags :vendor => 'Google'
+  tags vendor: 'Google'
 
-  installer :manual => 'Nik Collection.app'
+  installer manual: 'Nik Collection.app'
 end

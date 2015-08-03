@@ -1,4 +1,4 @@
-cask :v1 => 'maintenance' do
+cask v1: 'maintenance' do
   version :latest
   sha256 :no_check
 
@@ -27,7 +27,7 @@ cask :v1 => 'maintenance' do
 
   app 'Maintenance.app'
 
-  depends_on :macos => %w{
+  depends_on macos: %w{
                           :tiger
                           :leopard
                           :snow_leopard

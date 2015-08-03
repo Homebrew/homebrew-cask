@@ -1,4 +1,4 @@
-cask :v1 => 'img2icns' do
+cask v1: 'img2icns' do
   version :latest
   sha256 :no_check
 

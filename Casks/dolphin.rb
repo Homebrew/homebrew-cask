@@ -1,4 +1,4 @@
-cask :v1 => 'dolphin' do
+cask v1: 'dolphin' do
   version '4.0-7133'
   sha256 'e05048611113197f9c006b7a200ffd88d6b0ddc5a6308d8b80910af589a87142'
 
@@ -9,7 +9,7 @@ cask :v1 => 'dolphin' do
 
   app 'Dolphin.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Dolphin',
                   '~/Library/Preferences/org.dolphin-emu.dolphin.plist',
                  ]

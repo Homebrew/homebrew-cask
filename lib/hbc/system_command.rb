@@ -36,7 +36,7 @@ class Hbc::SystemCommand
   end
 
   def self.run!(command, options={})
-    run(command, options.merge(:must_succeed => true))
+    run(command, options.merge(must_succeed: true))
   end
 
   def self._process_options(executable, options)

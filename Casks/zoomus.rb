@@ -1,4 +1,4 @@
-cask :v1 => 'zoomus' do
+cask v1: 'zoomus' do
   version :latest
   sha256 :no_check
 
@@ -10,6 +10,6 @@ cask :v1 => 'zoomus' do
 
   pkg 'zoomusInstaller.pkg'
 
-  uninstall :delete => '/Applications/zoom.us.app'
-  zap       :delete => '~/Desktop/Zoom'
+  uninstall delete: '/Applications/zoom.us.app'
+  zap       delete: '~/Desktop/Zoom'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'razer-synapse' do
+cask v1: 'razer-synapse' do
   version '1.41'
   sha256 'f8fce465114da56f6d5f0771429b1f118ac547c77b9b05d3f84333f8d94b5019'
 
@@ -10,8 +10,8 @@ cask :v1 => 'razer-synapse' do
 
   pkg 'Razer Synapse.pkg'
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
-  uninstall :script => '/Applications/Utilities/Uninstall Razer Synapse.app/Contents/MacOS/Uninstall Razer Synapse',
-            :pkgutil => 'com.razerzone.*'
+  uninstall script: '/Applications/Utilities/Uninstall Razer Synapse.app/Contents/MacOS/Uninstall Razer Synapse',
+            pkgutil: 'com.razerzone.*'
 end

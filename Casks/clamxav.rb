@@ -1,4 +1,4 @@
-cask :v1 => 'clamxav' do
+cask v1: 'clamxav' do
   if MacOS.release <= :tiger
     version '2.2.1'
     sha256 'e075b21fe5154f31dcbde86e492531c87c67ab44ad75294d3063f32ae1e58278'
@@ -10,7 +10,7 @@ cask :v1 => 'clamxav' do
     sha256 '324b642a64df29d9fa47758adf559f2812aba7bbb4edeb659fdc51817385a643'
 
     appcast 'http://www.clamxav.com/sparkle/profileInfo.php',
-            :sha256 => '01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b'
+            sha256: '01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b'
   end
 
   url "https://www.clamxav.com/downloads/ClamXav_#{version}.dmg"
@@ -24,7 +24,7 @@ cask :v1 => 'clamxav' do
     suppress_move_to_applications
   end
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Caches/uk.co.markallan.clamxav',
                   '~/Library/Logs/clamXav-scan.log',
                   # todo glob/expand needed here

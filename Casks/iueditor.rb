@@ -1,4 +1,4 @@
-cask :v1 => 'iueditor' do
+cask v1: 'iueditor' do
   version :latest
   sha256 :no_check
 
@@ -6,11 +6,11 @@ cask :v1 => 'iueditor' do
   name 'IUEditor'
   homepage 'http://www.iueditor.org'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'JDLab'
+  tags vendor: 'JDLab'
 
   app 'IUEditor.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/org.jdlab.IUEditor.LSSharedFileList.plist',
                   '~/Library/Preferences/org.jdlab.IUEditor.plist',
                  ]

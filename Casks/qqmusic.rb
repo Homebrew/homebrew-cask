@@ -1,4 +1,4 @@
-cask :v1 => 'qqmusic' do
+cask v1: 'qqmusic' do
   version '2.3'
   sha256 '6593590eb5b7fab34141283b0a893309ddec90cd3764c3a066499b487c2d33ff'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'firefox' do
+cask v1: 'firefox' do
   version '39.0'
   sha256 '4578117ac49682673119b74a8d11a50bd2ab80c853dad8847512093eaad006c8'
 
@@ -7,11 +7,11 @@ cask :v1 => 'firefox' do
   name 'Mozilla Firefox'
   homepage 'https://www.mozilla.org/en-US/firefox/'
   license :mpl
-  tags :vendor => 'Mozilla'
+  tags vendor: 'Mozilla'
 
   app 'Firefox.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Firefox',
                   '~/Library/Caches/Firefox',
                  ]

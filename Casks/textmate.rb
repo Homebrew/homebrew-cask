@@ -1,4 +1,4 @@
-cask :v1 => 'textmate' do
+cask v1: 'textmate' do
   version '2.0-beta.7.4'
   sha256 'd6dd70494f861ec34ccc9cef87763f4e4c3e97df3e0187e057e999fff9d860d1'
 
@@ -11,7 +11,7 @@ cask :v1 => 'textmate' do
   app 'TextMate.app'
   binary 'TextMate.app/Contents/Resources/mate'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Avian',
                   '~/Library/Application Support/TextMate',
                   '~/Library/Preferences/com.macromates.TextMate.preview.LSSharedFileList.plist',

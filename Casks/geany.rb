@@ -1,4 +1,4 @@
-cask :v1 => 'geany' do
+cask v1: 'geany' do
   version '1.25'
   sha256 '1c435412d754d6e64e773c9066bae4534c481aea79ffc5a2ab6a7b723183870a'
 
@@ -9,5 +9,5 @@ cask :v1 => 'geany' do
 
   app 'Geany.app'
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 end

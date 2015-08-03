@@ -1,4 +1,4 @@
-cask :v1 => 'jenkins' do
+cask v1: 'jenkins' do
   version '1.619'
   sha256 '660F85B7D24133B60972127B42308369B65C971CDBA0D9883F99270306901003'
 
@@ -8,19 +8,19 @@ cask :v1 => 'jenkins' do
   license :mit
 
   pkg "jenkins-#{version}.pkg"
-  binary '/Library/Application Support/Jenkins/jenkins-runner.sh', :target => 'jenkins-runner'
+  binary '/Library/Application Support/Jenkins/jenkins-runner.sh', target: 'jenkins-runner'
 
-  uninstall :script    => '/Library/Application Support/Jenkins/Uninstall.command',
-            :pkgutil   => 'org.jenkins-ci.*pkg',
-            :launchctl => 'org.jenkins-ci'
+  uninstall script: '/Library/Application Support/Jenkins/Uninstall.command',
+            pkgutil: 'org.jenkins-ci.*pkg',
+            launchctl: 'org.jenkins-ci'
 
-  zap :delete => '/Library/Preferences/org.jenkins-ci.plist'
+  zap delete: '/Library/Preferences/org.jenkins-ci.plist'
 
-  conflicts_with :formula => %w{
+  conflicts_with formula: %w{
                                 jenkins
                                 homebrew/versions/jenkins-lts
                                },
-                 :cask    => 'caskroom/versions/jenkins-lts'
+                 cask: 'caskroom/versions/jenkins-lts'
 
   caveats <<-EOS.undent
     #{token} requires Java. You can install the latest version with

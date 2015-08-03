@@ -1,4 +1,4 @@
-cask :v1 => 'universalmailer' do
+cask v1: 'universalmailer' do
   version '2.1.5'
   sha256 '93055459aacd9c31b609ee00ef175a6c17e0c33657c9fef1db486f73b51dc437'
 
@@ -9,6 +9,6 @@ cask :v1 => 'universalmailer' do
 
   pkg 'UniversalMailer.pkg'
 
-  uninstall :pkgutil => 'it.noware.universalmailer.pkg',
-            :delete  => '/Library/Mail/Bundles/UniversalMailer.mailbundle'
+  uninstall pkgutil: 'it.noware.universalmailer.pkg',
+            delete: '/Library/Mail/Bundles/UniversalMailer.mailbundle'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'lingon-x' do
+cask v1: 'lingon-x' do
   version :latest
   sha256 :no_check
 
@@ -10,5 +10,5 @@ cask :v1 => 'lingon-x' do
 
   app 'Lingon X.app'
 
-  depends_on :macos => '>= :yosemite'
+  depends_on macos: '>= :yosemite'
 end

@@ -1,4 +1,4 @@
-cask :v1 => '115browser' do
+cask v1: '115browser' do
   version '5.1.1.31.20150614'
   sha256 'b87cc832bb11a90a087273be093f923e8f219f6a8b50fe890d031fdb912f7ba0'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'wireshark' do
+cask v1: 'wireshark' do
   version '1.12.6'
   sha256 '560f16b211fbf4e664206f3fc4e7b1684d00fa5ff669de732026dff0fc39c9d6'
 
@@ -22,12 +22,12 @@ cask :v1 => 'wireshark' do
     end
   end
 
-  uninstall :script  => {
-                         :executable => '/usr/sbin/dseditgroup',
-                         :args => ['-o', 'delete', 'access_bpf'],
+  uninstall script: {
+                         executable: '/usr/sbin/dseditgroup',
+                         args: ['-o', 'delete', 'access_bpf'],
                         },
-            :pkgutil => 'org.wireshark.*',
-            :delete  => [
+            pkgutil: 'org.wireshark.*',
+            delete: [
                          '/usr/local/bin/capinfos',
                          '/usr/local/bin/dftest',
                          '/usr/local/bin/dumpcap',
@@ -40,5 +40,5 @@ cask :v1 => 'wireshark' do
                          '/usr/local/bin/wireshark',
                         ]
 
-  depends_on :x11 => true
+  depends_on x11: true
 end

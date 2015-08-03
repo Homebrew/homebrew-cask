@@ -1,4 +1,4 @@
-cask :v1 => 'chrome-devtools' do
+cask v1: 'chrome-devtools' do
   version :latest
   sha256 :no_check
 

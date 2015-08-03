@@ -1,4 +1,4 @@
-cask :v1 => 'd235j-xbox360-controller-driver' do
+cask v1: 'd235j-xbox360-controller-driver' do
   version '0.14'
   sha256 'a7efe48fae89aa592e904d1dc3ba9a73b2d644362eac88feb5e73a774e3fcf88'
 
@@ -10,9 +10,9 @@ cask :v1 => 'd235j-xbox360-controller-driver' do
 
   pkg 'Install 360 Controller.pkg'
 
-  uninstall :pkgutil   => 'com.mice.pkg.Xbox360controller',
-            :launchctl => 'com.mice.360Daemon',
-            :kext      => [
+  uninstall pkgutil: 'com.mice.pkg.Xbox360controller',
+            launchctl: 'com.mice.360Daemon',
+            kext: [
                            'com.mice.Xbox360ControllerForceFeedback',
                            'com.mice.driver.Xbox360Controller',
                            'com.mice.driver.Wireless360Controller',
@@ -20,7 +20,7 @@ cask :v1 => 'd235j-xbox360-controller-driver' do
                           ],
             # Symlink to kext in /Library/Extensions is not removed
             # during :pkgutil phase of uninstall, so we delete it here.
-            :delete    => '/System/Library/Extensions/360Controller.kext'
+            delete: '/System/Library/Extensions/360Controller.kext'
 
   caveats do
     reboot

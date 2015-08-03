@@ -1,9 +1,9 @@
-cask :v1 => 'java' do
+cask v1: 'java' do
   version '1.8.0_51-b16'
   sha256 '85ee66d1fdce5244afcbfbfce8dc90582b8c7e3ec8ab4c21e0f4eb390af97832'
 
   url "http://download.oracle.com/otn-pub/java/jdk/#{version.sub(%r{^\d+\.(\d+).*?_(.*)$},'\1u\2')}/jdk-#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$},'\1u\2')}-macosx-x64.dmg",
-      :cookies => {
+      cookies: {
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
   name 'Java'
@@ -33,19 +33,19 @@ cask :v1 => 'java' do
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home/jre/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"
   end
 
-  uninstall :pkgutil => [
+  uninstall pkgutil: [
                          "com.oracle.jdk#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$},'\1u\2')}",         # manually update this for each version
                          'com.oracle.jre',
                         ],
-            :launchctl => [
+            launchctl: [
                            'com.oracle.java.Helper-Tool',
                            'com.oracle.java.Java-Updater',
                           ],
-            :quit => [
+            quit: [
                       'com.oracle.java.Java-Updater',
                       'net.java.openjdk.cmd',         # Java Control Panel
                      ],
-            :delete => [
+            delete: [
                         '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
                         "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents",
                         '/Library/PreferencePanes/JavaControlPanel.prefPane',
@@ -53,12 +53,12 @@ cask :v1 => 'java' do
                         '/Library/Java/Home',
                         '/usr/lib/java/libjdns_sd.jnilib',
                        ]
-  zap       :delete => [
+  zap       delete: [
                         '~/Library/Application Support/Oracle/Java',
                         '~/Library/Caches/com.oracle.java.Java-Updater',
                         '~/Library/Caches/net.java.openjdk.cmd',
                        ],
-            :rmdir  => '~/Library/Application Support/Oracle/'
+            rmdir: '~/Library/Application Support/Oracle/'
 
   caveats <<-EOS.undent
     This Cask makes minor modifications to the JRE to prevent issues with

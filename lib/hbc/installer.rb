@@ -178,13 +178,13 @@ class Hbc::Installer
     @cask.depends_on.formula.each do |dep_name|
       print "#{dep_name} ... "
       installed = @command.run(Hbc.homebrew_executable,
-                               :args => ['list', '--versions', dep_name],
-                               :print_stderr => false).stdout.include?(dep_name)
+                               args: ['list', '--versions', dep_name],
+                               print_stderr: false).stdout.include?(dep_name)
       if installed
         puts "already installed"
       else
         @command.run!(Hbc.homebrew_executable,
-                      :args => ['install', dep_name])
+                      args: ['install', dep_name])
         puts "done"
       end
     end
@@ -216,15 +216,15 @@ class Hbc::Installer
     ohai 'Enabling accessibility access'
     if MacOS.release >= :mavericks
       @command.run!('/usr/bin/sqlite3',
-                    :args => [
+                    args: [
                               Hbc.tcc_db,
                               "INSERT OR REPLACE INTO access VALUES('kTCCServiceAccessibility','#{bundle_identifier}',0,1,1,NULL);",
                              ],
-                    :sudo => true)
+                    sudo: true)
     else
       @command.run!('/usr/bin/touch',
-                    :args => [Hbc.pre_mavericks_accessibility_dotfile],
-                    :sudo => true)
+                    args: [Hbc.pre_mavericks_accessibility_dotfile],
+                    sudo: true)
     end
   end
 
@@ -233,11 +233,11 @@ class Hbc::Installer
     if MacOS.release >= :mavericks
       ohai 'Disabling accessibility access'
       @command.run!('/usr/bin/sqlite3',
-                    :args => [
+                    args: [
                               Hbc.tcc_db,
                               "DELETE FROM access WHERE client='#{bundle_identifier}';",
                              ],
-                    :sudo => true)
+                    sudo: true)
     else
       opoo <<-EOS.undent
         Accessibility access was enabled for #{@cask}, but it is not safe to disable
@@ -308,9 +308,9 @@ class Hbc::Installer
             #      The -h and -R flags cannot be combined, and behavior is
             #      dependent on whether the file argument has a trailing
             #      slash.  This should do the right thing, but is fragile.
-            @command.run!('/usr/bin/chflags', :args => ['-R', '--', '000',   path])
-            @command.run!('/bin/chmod',       :args => ['-R', '--', 'u+rwx', path])
-            @command.run!('/bin/chmod',       :args => ['-R', '-N',          path])
+            @command.run!('/usr/bin/chflags', args: ['-R', '--', '000',   path])
+            @command.run!('/bin/chmod',       args: ['-R', '--', 'u+rwx', path])
+            @command.run!('/bin/chmod',       args: ['-R', '-N',          path])
           rescue StandardError => e
             unless tried_ownership
               # in case of ownership problems
@@ -318,8 +318,8 @@ class Hbc::Installer
               #      before using sudo+chown
               ohai "Using sudo to gain ownership of path '#{path}'"
               current_user = Etc.getpwuid(Process.euid).name
-              @command.run('/usr/sbin/chown', :args => ['-R', '--', current_user, path],
-                                              :sudo => true)
+              @command.run('/usr/sbin/chown', args: ['-R', '--', current_user, path],
+                                              sudo: true)
               tried_ownership = true
               retry # permissions
             end

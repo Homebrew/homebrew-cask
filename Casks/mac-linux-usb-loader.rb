@@ -1,4 +1,4 @@
-cask :v1 => 'mac-linux-usb-loader' do
+cask v1: 'mac-linux-usb-loader' do
   version '3.0.2'
   sha256 'd122b24db9f6cf35ea1ea7d260123ca4c123f2191a4b20a8c3639d9aacd6d0e8'
 

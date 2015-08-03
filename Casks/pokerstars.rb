@@ -1,4 +1,4 @@
-cask :v1 => 'pokerstars' do
+cask v1: 'pokerstars' do
   version :latest
   sha256 :no_check
 
@@ -9,7 +9,7 @@ cask :v1 => 'pokerstars' do
 
   app 'PokerStars.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/com.pokerstars.user.ini',
                   '~/Library/Preferences/com.pokerstars.PokerStars.plist',
                  ]

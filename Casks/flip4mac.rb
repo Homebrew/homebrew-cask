@@ -1,4 +1,4 @@
-cask :v1 => 'flip4mac' do
+cask v1: 'flip4mac' do
   version '3.3.6'
   sha256 'd766ab49f22d28accd75b345b0bbd465b94ce3e90eef759a1c9b0276f280d7cb'
 
@@ -7,9 +7,9 @@ cask :v1 => 'flip4mac' do
   homepage 'http://www.telestream.net/flip4mac/'
   license :commercial
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   pkg 'Flip4Mac.pkg'
 
-  uninstall :pkgutil => 'net.telestream.Flip4Mac'
+  uninstall pkgutil: 'net.telestream.Flip4Mac'
 end

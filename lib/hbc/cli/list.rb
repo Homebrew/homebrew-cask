@@ -57,7 +57,7 @@ class Hbc::CLI::List < Hbc::CLI::Base
     elsif @options[:versions]
       installed_casks.each { |cask| puts "#{cask} #{cask.version}" }
     elsif @options[:long]
-      puts Hbc::SystemCommand.run!("/bin/ls", :args => ["-l", Hbc.caskroom]).stdout
+      puts Hbc::SystemCommand.run!("/bin/ls", args: ["-l", Hbc.caskroom]).stdout
     else
       puts_columns columns
     end

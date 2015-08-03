@@ -1,4 +1,4 @@
-cask :v1 => 'xiami' do
+cask v1: 'xiami' do
   version :latest
   sha256 :no_check
 

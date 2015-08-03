@@ -1,4 +1,4 @@
-cask :v1 => 'codelite' do
+cask v1: 'codelite' do
   version :latest
   sha256 :no_check
 
@@ -9,10 +9,10 @@ cask :v1 => 'codelite' do
 
   app 'codelite.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/codelite',
                   '~/Library/Preferences/codelite.plist'
                  ]
 
-  depends_on :macos => '>= :mountain_lion'
+  depends_on macos: '>= :mountain_lion'
 end

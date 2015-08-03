@@ -1,4 +1,4 @@
-cask :v1 => 'munki' do
+cask v1: 'munki' do
   version '2.2.4.2431'
   sha256 'e99ff8a826c3e3281decb4b124d93588347e8fb577cbfe29fd1223f3ca6ff000'
 
@@ -11,5 +11,5 @@ cask :v1 => 'munki' do
 
   pkg "munkitools-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.googlecode.munki.*'
+  uninstall pkgutil: 'com.googlecode.munki.*'
 end

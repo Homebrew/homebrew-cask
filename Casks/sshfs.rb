@@ -1,4 +1,4 @@
-cask :v1 => 'sshfs' do
+cask v1: 'sshfs' do
   version '2.5.0'
   sha256 'f8f4f71814273ea42dbe6cd92199f7cff418571ffd1b10c0608878d3472d2162'
 
@@ -10,7 +10,7 @@ cask :v1 => 'sshfs' do
 
   pkg "sshfs-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.github.osxfuse.pkg.SSHFS'
+  uninstall pkgutil: 'com.github.osxfuse.pkg.SSHFS'
 
-  depends_on :cask => 'osxfuse'
+  depends_on cask: 'osxfuse'
 end

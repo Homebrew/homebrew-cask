@@ -1,4 +1,4 @@
-cask :v1 => 'kindle-previewer' do
+cask v1: 'kindle-previewer' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'kindle-previewer' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Kindle Previewer.pkg'
-  uninstall :pkgutil => 'Amazon.Kindle.Previewer.pkg'
+  uninstall pkgutil: 'Amazon.Kindle.Previewer.pkg'
 end

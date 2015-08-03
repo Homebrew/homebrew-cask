@@ -1,4 +1,4 @@
-cask :v1 => 'chameleon-ssd-optimizer' do
+cask v1: 'chameleon-ssd-optimizer' do
   version '0.9.9g'
   sha256 'd02749075f205919d2803468906c773f27d362eaf9d54f5cca06166cb7050573'
 
@@ -10,7 +10,7 @@ cask :v1 => 'chameleon-ssd-optimizer' do
 
   app 'Chameleon SSD Optimizer.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/aletest.Chameleon-SSD-Optimizer.plist',
                   '~/Library/Caches/aletest.Chameleon-SSD-Optimizer/',
                  ]

@@ -1,4 +1,4 @@
-cask :v1 => 'fseventer' do
+cask v1: 'fseventer' do
   version :latest
   sha256 :no_check
 
@@ -10,5 +10,5 @@ cask :v1 => 'fseventer' do
 
   app 'fseventer/fseventer.app'
 
-  uninstall :script => 'fseventer/HelperToolUninstall.sh'
+  uninstall script: 'fseventer/HelperToolUninstall.sh'
 end

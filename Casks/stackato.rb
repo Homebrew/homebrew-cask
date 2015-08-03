@@ -1,4 +1,4 @@
-cask :v1 => 'stackato' do
+cask v1: 'stackato' do
   version '3.2.2'
   sha256 '12bbc6ce6bd4b142c13a02cbfa97c10a4a1759e416d9906064224d757765ef05'
 

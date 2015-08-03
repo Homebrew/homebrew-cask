@@ -1,4 +1,4 @@
-cask :v1 => 'cajviewer' do
+cask v1: 'cajviewer' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'cajviewer' do
 
   pkg 'CAJViewerMac.pkg'
 
-  uninstall :pkgutil => 'com.TTKN.CAJViewerMac'
+  uninstall pkgutil: 'com.TTKN.CAJViewerMac'
 end

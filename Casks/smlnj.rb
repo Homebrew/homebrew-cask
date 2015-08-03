@@ -1,4 +1,4 @@
-cask :v1 => 'smlnj' do
+cask v1: 'smlnj' do
   version '110.78'
   sha256 'a83c33b177c5e1700ebb1bd7026a1d1a3a4515d6ce6ce1f16ed6cb6fa544b2e9'
 
@@ -10,5 +10,5 @@ cask :v1 => 'smlnj' do
 
   pkg "smlnj-x86-#{version}.pkg"
 
-  uninstall :pkgutil => 'org.smlnj.x86.pkg'
+  uninstall pkgutil: 'org.smlnj.x86.pkg'
 end

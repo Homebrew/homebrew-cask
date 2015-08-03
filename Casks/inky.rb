@@ -1,4 +1,4 @@
-cask :v1 => 'inky' do
+cask v1: 'inky' do
   version :latest
   sha256 :no_check
 
@@ -9,7 +9,7 @@ cask :v1 => 'inky' do
 
   app 'Inky.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Arcode',
                   '~/Library/Caches/com.arcode.inky',
                  ]

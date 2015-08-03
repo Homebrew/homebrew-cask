@@ -1,4 +1,4 @@
-cask :v1 => 'blender' do
+cask v1: 'blender' do
   version '2.75'
   sha256 '78cec3ba19b7a37f1aae4e776169098127dccbd24bb1d12b53fbcd220d610ccc'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'postbox' do
+cask v1: 'postbox' do
   version '4.0.1'
   sha256 'bf2a11201513667779f3f7f946eb008e0ada4d62acf6b015831b02df3a00c0d5'
 
@@ -7,13 +7,13 @@ cask :v1 => 'postbox' do
   name 'Postbox'
   homepage 'https://www.postbox-inc.com/'
   license :commercial
-  tags :vendor => 'Postbox'
-  depends_on :macos => '>= :mavericks'
-  depends_on :arch => :x86_64
+  tags vendor: 'Postbox'
+  depends_on macos: '>= :mavericks'
+  depends_on arch: :x86_64
 
   app 'Postbox.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Postbox',
                   '~/Library/Caches/com.crashlytics.data/com.postbox-inc.postbox',
                   '~/Library/Caches/com.postbox-inc.postbox',

@@ -1,4 +1,4 @@
-cask :v1 => 'tripmode' do
+cask v1: 'tripmode' do
   version :latest
   sha256 :no_check
 
@@ -10,9 +10,9 @@ cask :v1 => 'tripmode' do
 
   pkg 'TripMode.pkg'
 
-  depends_on :macos => '>= :yosemite'
+  depends_on macos: '>= :yosemite'
 
-  uninstall :pkgutil => 'ch.tripmode.pkg.TripMode'
+  uninstall pkgutil: 'ch.tripmode.pkg.TripMode'
 
-  zap :delete => '~/Library/Preferences/ch.tripmode.TripMode.plist'
+  zap delete: '~/Library/Preferences/ch.tripmode.TripMode.plist'
 end

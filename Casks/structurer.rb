@@ -1,4 +1,4 @@
-cask :v1 => 'structurer' do
+cask v1: 'structurer' do
   version :latest
   sha256 :no_check
 

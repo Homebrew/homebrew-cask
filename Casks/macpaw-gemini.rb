@@ -1,4 +1,4 @@
-cask :v1 => 'macpaw-gemini' do
+cask v1: 'macpaw-gemini' do
   version :latest
   sha256 :no_check
 
@@ -8,9 +8,9 @@ cask :v1 => 'macpaw-gemini' do
   name 'MacPaw Gemini'
   homepage 'https://macpaw.com/gemini'
   license :commercial
-  tags :vendor => 'MacPaw'
+  tags vendor: 'MacPaw'
 
-  zap :delete => [
+  zap delete: [
     '~/Library/Application Support/MacPaw Gemini',
     '~/Library/Caches/com.macpaw.site.Gemini',
     '~/Library/Preferences/com.macpaw.site.Gemini.plist',

@@ -1,4 +1,4 @@
-cask :v1 => 'qlrest' do
+cask v1: 'qlrest' do
   version :latest
   sha256 :no_check
 

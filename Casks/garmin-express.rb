@@ -1,4 +1,4 @@
-cask :v1 => 'garmin-express' do
+cask v1: 'garmin-express' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'garmin-express' do
 
   pkg 'Install Garmin Express.pkg'
 
-  uninstall :pkgutil => 'com.garmin.renu.client'
+  uninstall pkgutil: 'com.garmin.renu.client'
 end

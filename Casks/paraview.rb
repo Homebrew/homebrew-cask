@@ -1,4 +1,4 @@
-cask :v1 => 'paraview' do
+cask v1: 'paraview' do
   version '4.2.0'
 
   if MacOS.release <= :mountain_lion
@@ -18,5 +18,5 @@ cask :v1 => 'paraview' do
 
   app 'paraview.app'
 
-  depends_on :arch => :x86_64
+  depends_on arch: :x86_64
 end

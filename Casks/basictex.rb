@@ -1,4 +1,4 @@
-cask :v1 => 'basictex' do
+cask v1: 'basictex' do
   version :latest
   sha256 :no_check
 
@@ -10,7 +10,7 @@ cask :v1 => 'basictex' do
 
   pkg 'BasicTeX.pkg'
 
-  uninstall :pkgutil => 'org.tug.mactex.basictex2015'
+  uninstall pkgutil: 'org.tug.mactex.basictex2015'
   caveats do
     path_environment_variable '/usr/texbin'
   end

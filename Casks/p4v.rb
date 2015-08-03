@@ -1,4 +1,4 @@
-cask :v1 => 'p4v' do
+cask v1: 'p4v' do
   version '2014.3-1007540'
   sha256 '07eac08f6bfb32e4a79bf47582116de8532fe0b18d91a014e1cd80861d6f0909'
 
@@ -7,12 +7,12 @@ cask :v1 => 'p4v' do
   name 'Perforce Visual Client'
   homepage 'http://www.perforce.com/product/components/perforce-visual-client'
   license :gratis
-  tags :vendor => 'Perforce'
+  tags vendor: 'Perforce'
 
   app 'p4v.app'
   binary 'p4vc'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/com.perforce.p4v',
                   '~/Library/Preferences/com.perforce.p4v.plist',
                   '~/Library/Saved Application State/com.perforce.p4v.savedState'

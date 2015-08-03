@@ -28,7 +28,7 @@ class Hbc::CLI::Audit < Hbc::CLI::Base
 
   def audit(cask)
     odebug "Auditing Cask #{cask}"
-    @auditor.audit(cask, :audit_download => audit_download?)
+    @auditor.audit(cask, audit_download: audit_download?)
   end
 
   def audit_download?

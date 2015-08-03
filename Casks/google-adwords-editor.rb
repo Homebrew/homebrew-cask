@@ -1,4 +1,4 @@
-cask :v1 => 'google-adwords-editor' do
+cask v1: 'google-adwords-editor' do
   version '11.0.3'
   sha256 '0294ef3fceff0cad0bc954c24afb20af36c01f8cbd4cc15e9aee43565dbb44bf'
 
@@ -6,7 +6,7 @@ cask :v1 => 'google-adwords-editor' do
   name 'Google AdWords Editor'
   homepage 'https://www.google.com/intl/en/adwordseditor/'
   license :gratis
-  tags :vendor => 'Google'
+  tags vendor: 'Google'
 
   app 'Google AdWords Editor.app'
 end

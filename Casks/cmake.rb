@@ -1,4 +1,4 @@
-cask :v1 => 'cmake' do
+cask v1: 'cmake' do
   version '3.2.2'
   sha256 '430b9f94a363ff19d5f66eacc5d6bc55bd9dac75d6fc6bcb813d8b451c1475c4'
 
@@ -15,5 +15,5 @@ cask :v1 => 'cmake' do
   binary 'CMake.app/Contents/bin/ctest'
   binary 'CMake.app/Contents/bin/cmake-gui'
 
-  conflicts_with :formula => 'cmake'
+  conflicts_with formula: 'cmake'
 end

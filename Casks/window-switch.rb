@@ -1,4 +1,4 @@
-cask :v1 => 'window-switch' do
+cask v1: 'window-switch' do
   version :latest
   sha256 :no_check
 

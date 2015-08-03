@@ -1,4 +1,4 @@
-cask :v1 => 'mover' do
+cask v1: 'mover' do
   version :latest
   sha256 :no_check
 

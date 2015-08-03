@@ -1,4 +1,4 @@
-cask :v1 => 'hammerspoon' do
+cask v1: 'hammerspoon' do
   version '0.9.36'
   sha256 'e2a72b1a02031509a7abdf64ba01335b28abe03d95ba52fa6bcb705f277b28e9'
 

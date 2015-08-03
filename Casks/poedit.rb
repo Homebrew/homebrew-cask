@@ -1,4 +1,4 @@
-cask :v1 => 'poedit' do
+cask v1: 'poedit' do
 
   if MacOS.release <= :snow_leopard
     version '1.5.7'
@@ -11,7 +11,7 @@ cask :v1 => 'poedit' do
 
     url "https://download.poedit.net/Poedit-#{version}.zip"
     appcast 'https://poedit.net/updates/osx/appcast',
-            :sha256 => '7f8ed0d9267fbd46cf4fe9eb9655827518653dd322e6d4040c2ea59caca76a55'
+            sha256: '7f8ed0d9267fbd46cf4fe9eb9655827518653dd322e6d4040c2ea59caca76a55'
   end
 
   name 'Poedit'

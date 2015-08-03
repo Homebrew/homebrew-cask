@@ -1,4 +1,4 @@
-cask :v1 => 'appcode' do
+cask v1: 'appcode' do
   version '3.1.7'
   sha256 '07e044187062c183af49c67259fe8ea207a846476c21d105c2643779ac4b405c'
 

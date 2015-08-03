@@ -1,4 +1,4 @@
-cask :v1 => 'epubquicklook' do
+cask v1: 'epubquicklook' do
   version '1.7'
   sha256 '2508a882ad53fa2fc1b9e42e9548c8ef9fe62f1c57788a874e6c098a1704b96e'
 

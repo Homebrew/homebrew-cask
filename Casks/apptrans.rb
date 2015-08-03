@@ -1,4 +1,4 @@
-cask :v1 => 'apptrans' do
+cask v1: 'apptrans' do
   version :latest
   sha256 :no_check
 

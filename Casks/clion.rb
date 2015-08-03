@@ -1,4 +1,4 @@
-cask :v1 => 'clion' do
+cask v1: 'clion' do
   version '1.0.5'
   sha256 '5148fbbff2cb70d1bf11bb3c72cf4cf099af993f0e8caa54c7443a64f3597010'
 
@@ -9,7 +9,7 @@ cask :v1 => 'clion' do
 
   app 'CLion.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/com.jetbrains.CLion.plist',
                   '~/Library/Preferences/clion10',
                   '~/Library/Application Support/clion10',
@@ -17,7 +17,7 @@ cask :v1 => 'clion' do
                   '~/Library/Logs/clion10',
                  ]
 
-  conflicts_with :cask => 'clion-bundled-jdk'
+  conflicts_with cask: 'clion-bundled-jdk'
   caveats <<-EOS.undent
     #{token} requires Java 6 like any other IntelliJ-based IDE.
     You can install it with

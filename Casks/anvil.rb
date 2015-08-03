@@ -1,4 +1,4 @@
-cask :v1 => 'anvil' do
+cask v1: 'anvil' do
   version '1.1.4'
   sha256 '757f64ec4b569eef104300fe111d1180fc5e38e0a83e41954b46e209af8a5c1b'
 

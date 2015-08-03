@@ -1,4 +1,4 @@
-cask :v1_1 => 'sencha' do
+cask v1_1: 'sencha' do
   version '5.1.3.61'
   sha256 '6083490b578191d2b8307b375e115c93c2223683e49636893edadfa1d76a412c'
 
@@ -7,12 +7,12 @@ cask :v1_1 => 'sencha' do
   homepage 'http://www.sencha.com/products/sencha-cmd/'
   license :freemium
 
-  installer :script => "SenchaCmd-#{version}-osx.app/Contents/MacOS/installbuilder.sh",
-            :args   => ['--mode', 'unattended', '--prefix', '/opt']
+  installer script: "SenchaCmd-#{version}-osx.app/Contents/MacOS/installbuilder.sh",
+            args: ['--mode', 'unattended', '--prefix', '/opt']
 
-  uninstall :script => {
-                         :executable => "/opt/Sencha/Cmd/#{version}/uninstall.app/Contents/MacOS/installbuilder.sh",
-                         :args => ['--mode', 'unattended']
+  uninstall script: {
+                         executable: "/opt/Sencha/Cmd/#{version}/uninstall.app/Contents/MacOS/installbuilder.sh",
+                         args: ['--mode', 'unattended']
                        }
 
   postflight do

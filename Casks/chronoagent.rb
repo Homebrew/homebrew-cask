@@ -1,4 +1,4 @@
-cask :v1 => 'chronoagent' do
+cask v1: 'chronoagent' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'chronoagent' do
 
   pkg 'Install.pkg'
 
-  uninstall :pkgutil => 'com.econtechnologies.pkg.ChronoAgent'
+  uninstall pkgutil: 'com.econtechnologies.pkg.ChronoAgent'
 end

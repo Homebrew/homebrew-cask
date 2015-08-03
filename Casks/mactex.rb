@@ -1,4 +1,4 @@
-cask :v1 => 'mactex' do
+cask v1: 'mactex' do
   version '20150613'
   sha256 'c5f5b0fd853a17dab6e844fb5e893804af78d938fa18ee94ec3b257611a95c12'
 
@@ -10,12 +10,12 @@ cask :v1 => 'mactex' do
 
   pkg "mactex-#{version}.pkg"
 
-  uninstall :pkgutil => [
+  uninstall pkgutil: [
                          'org.tug.mactex.ghostscript9.16',
                          'org.tug.mactex.gui2015',
                          'org.tug.mactex.texlive2015'
                         ],
-            :delete  => [
+            delete: [
                          '/Applications/TeX',
                          '/etc/paths.d/TeX',
                         ]

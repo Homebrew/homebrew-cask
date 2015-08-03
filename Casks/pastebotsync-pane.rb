@@ -1,4 +1,4 @@
-cask :v1 => 'pastebotsync-pane' do
+cask v1: 'pastebotsync-pane' do
   version :latest
   sha256 :no_check
 

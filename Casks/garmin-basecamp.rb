@@ -1,4 +1,4 @@
-cask :v1 => 'garmin-basecamp' do
+cask v1: 'garmin-basecamp' do
   version '4.4.8'
   sha256 '1ae1033fb4c80189ecc3c50b2f9ee90cbee6662f068cfa08800d886e1cf5ec42'
 
@@ -9,5 +9,5 @@ cask :v1 => 'garmin-basecamp' do
 
   pkg 'Install BaseCamp.pkg'
 
-  uninstall :pkgutil => 'com.garmin.BaseCamp'
+  uninstall pkgutil: 'com.garmin.BaseCamp'
 end

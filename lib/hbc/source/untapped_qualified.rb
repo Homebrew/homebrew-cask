@@ -8,7 +8,7 @@ class Hbc::Source::UntappedQualified < Hbc::Source::TappedQualified
     unless Hbc.homebrew_tapspath.join(tap).exist?
       ohai "Adding new tap '#{tap}'"
       result = Hbc::SystemCommand.run!(Hbc.homebrew_executable,
-                                       :args => ['tap', "#{user}/#{repo}"])
+                                       args: ['tap', "#{user}/#{repo}"])
               puts result.stdout
       $stderr.puts result.stderr
     end

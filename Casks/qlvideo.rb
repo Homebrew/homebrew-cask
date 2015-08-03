@@ -1,4 +1,4 @@
-cask :v1 => 'qlvideo' do
+cask v1: 'qlvideo' do
   version '1.84'
   sha256 '5f055f2e152e352217350712ed483f11e48a4966f49d30d42591c8cc7342c90a'
 
@@ -10,5 +10,5 @@ cask :v1 => 'qlvideo' do
 
   pkg "QLVideo_#{version.gsub('.', '')}.pkg"
 
-  uninstall :pkgutil => 'uk.org.marginal.qlvideo'
+  uninstall pkgutil: 'uk.org.marginal.qlvideo'
 end

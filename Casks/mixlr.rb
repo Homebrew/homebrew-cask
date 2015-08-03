@@ -1,4 +1,4 @@
-cask :v1 => 'mixlr' do
+cask v1: 'mixlr' do
   version :latest
   sha256 :no_check
 

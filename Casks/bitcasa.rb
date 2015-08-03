@@ -1,4 +1,4 @@
-cask :v1 => 'bitcasa' do
+cask v1: 'bitcasa' do
   version '2.0.0.3'
   sha256 '3ba706ae71d269a91f33ffdb424d8e52fdb4413129233bd3d7e5fbd1f0f8cd0f'
 
@@ -10,5 +10,5 @@ cask :v1 => 'bitcasa' do
 
   pkg 'InstallBitcasa.pkg'
 
-  uninstall :pkgutil => 'com.bitcasa.AutoLaunch|com.bitcasa.Bitcasa'
+  uninstall pkgutil: 'com.bitcasa.AutoLaunch|com.bitcasa.Bitcasa'
 end

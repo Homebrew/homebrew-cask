@@ -1,4 +1,4 @@
-cask :v1 => 'omnifocus' do
+cask v1: 'omnifocus' do
   if MacOS.release <= :mountain_lion
     version '1.10.6'
     sha256 'bd3aa44dced86fc3921c01f4467422a7b87a92afbd4be642ea4d4bb8b14b728c'
@@ -20,13 +20,13 @@ cask :v1 => 'omnifocus' do
   app 'OmniFocus.app'
 
   if MacOS.release <= :mountain_lion
-    zap :delete => [
+    zap delete: [
                     '~/Library/Application Support/OmniFocus/Plug-Ins',
                     '~/Library/Application Support/OmniFocus/Themes',
                     '~/Library/Preferences/com.omnigroup.OmniFocus.plist'
                    ]
   else
-    zap :delete => [
+    zap delete: [
                     '~/Library/containers/com.omnigroup.omnifocus2',
                     '~/Library/Preferences/com.omnigroup.OmniFocus2.LSSharedFileList.plist',
                     '~/Library/Preferences/com.omnigroup.OmniSoftwareUpdate.plist',

@@ -1,4 +1,4 @@
-cask :v1 => 'maddthesane-perian' do
+cask v1: 'maddthesane-perian' do
   version '1.3.2'
   sha256 'cc13f5b587f0cb53c5f95329d75686cd32eb599b125fe30e4ae31c3ab58d3a9e'
 
@@ -10,5 +10,5 @@ cask :v1 => 'maddthesane-perian' do
 
   prefpane 'Perian.prefPane'
 
-  depends_on :cask => 'caskroom/versions/quicktime-player7'
+  depends_on cask: 'caskroom/versions/quicktime-player7'
 end

@@ -9,7 +9,7 @@ class Hbc::GpgCheck
 
   def installed?
     cmd = @command.run('/usr/bin/type',
-                       :args => ['-p', 'gpg'])
+                       args: ['-p', 'gpg'])
 
     # if `gpg` is found, return its absolute path
     cmd.success? ? cmd.stdout : false
@@ -34,7 +34,7 @@ class Hbc::GpgCheck
            when @cask.gpg.key_url then ['--fetch-key', @cask.gpg.key_url.to_s]
            end
 
-    @command.run!('gpg', :args => args)
+    @command.run!('gpg', args: args)
   end
 
   def verify(file)
@@ -44,7 +44,7 @@ class Hbc::GpgCheck
     ohai "Verifying GPG signature for #{@cask}"
 
     @command.run!('gpg',
-                  :args => ['--verify', sig, file],
-                  :print_stdout => true)
+                  args: ['--verify', sig, file],
+                  print_stdout: true)
   end
 end

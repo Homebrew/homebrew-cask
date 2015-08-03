@@ -1,4 +1,4 @@
-cask :v1 => 'omnioutliner' do
+cask v1: 'omnioutliner' do
   version '4.3'
   sha256 '8941d9738c3377f4f57f097ff5bf24faa133bd0bf25498d919db751487153357'
 

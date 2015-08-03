@@ -1,4 +1,4 @@
-cask :v1 => 'terraform' do
+cask v1: 'terraform' do
   version '0.6.1'
   sha256 'a06768862d1c3ee928d26961302c5134c9c8f716e567c4cf52fce85951f61bee'
 

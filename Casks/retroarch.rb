@@ -1,4 +1,4 @@
-cask :v1 => 'retroarch' do
+cask v1: 'retroarch' do
   version '1.0.0.2'
 
   if MacOS.release <= :snow_leopard

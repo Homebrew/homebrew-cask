@@ -1,4 +1,4 @@
-cask :v1 => 'dashlane' do
+cask v1: 'dashlane' do
   version :latest
   sha256 :no_check
 

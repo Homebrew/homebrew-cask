@@ -9,11 +9,11 @@ class Hbc::Container::GenericUnar < Hbc::Container::Base
   def extract
     unar = Hbc.homebrew_prefix.join('bin/unar')
     if ! Pathname.new(unar).exist?
-      raise Hbc::CaskError.new "Expected to find unar executable. Cask #{@cask} must add: depends_on :formula => 'unar'"
+      raise Hbc::CaskError.new "Expected to find unar executable. Cask #{@cask} must add: depends_on formula: 'unar'"
     end
     Dir.mktmpdir do |unpack_dir|
-      @command.run!(unar, :args => ['-q', '-D', '-o', unpack_dir, '--', @path])
-      @command.run!('/usr/bin/ditto', :args => ['--', unpack_dir, @cask.staged_path])
+      @command.run!(unar, args: ['-q', '-D', '-o', unpack_dir, '--', @path])
+      @command.run!('/usr/bin/ditto', args: ['--', unpack_dir, @cask.staged_path])
     end
   end
 end

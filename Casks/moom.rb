@@ -1,4 +1,4 @@
-cask :v1 => 'moom' do
+cask v1: 'moom' do
   version :latest
   sha256 :no_check
 
@@ -10,7 +10,7 @@ cask :v1 => 'moom' do
 
   app 'Moom.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Preferences/com.manytricks.Moom.plist',
                   '~/Library/Application Support/Many Tricks',
                  ]

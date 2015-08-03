@@ -1,4 +1,4 @@
-cask :v1 => 'google-refine' do
+cask v1: 'google-refine' do
   version '2.5-r2407'
   sha256 '16454020c402fa0ab0fedfff44b63e8f027194723ae6ade9b5bb5b9223c68fcc'
 
@@ -11,6 +11,6 @@ cask :v1 => 'google-refine' do
 
   app 'Google Refine.app'
 
-  zap :delete => '~/Library/Application Support/Google/Refine',
-      :rmdir  => '~/Library/Application Support/Google/'
+  zap delete: '~/Library/Application Support/Google/Refine',
+      rmdir: '~/Library/Application Support/Google/'
 end

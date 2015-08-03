@@ -1,4 +1,4 @@
-cask :v1 => 'radiant-player' do
+cask v1: 'radiant-player' do
   version '1.4.0'
   sha256 '8811c634dbd4f0719ea76b91adf65b20c086f3e8aa72d2921a17858ea809e6c0'
 

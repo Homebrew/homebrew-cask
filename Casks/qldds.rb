@@ -1,4 +1,4 @@
-cask :v1 => 'qldds' do
+cask v1: 'qldds' do
   version '1.20'
   sha256 '8abd0978eb90b1ef55b5ac079960b028cbc926673535a0802bccd590fb253bc6'
 
@@ -10,5 +10,5 @@ cask :v1 => 'qldds' do
 
   pkg "QLdds_#{version.gsub('.','')}.pkg"
 
-  uninstall :pkgutil => 'uk.org.marginal.qldds'
+  uninstall pkgutil: 'uk.org.marginal.qldds'
 end

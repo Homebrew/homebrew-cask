@@ -1,4 +1,4 @@
-cask :v1 => 'chainsaw' do
+cask v1: 'chainsaw' do
   version :latest
   sha256 :no_check
 
@@ -9,7 +9,7 @@ cask :v1 => 'chainsaw' do
 
   app 'Chainsaw.app'
 
-  zap :delete => '~/.chainsaw'
+  zap delete: '~/.chainsaw'
 
-  depends_on :arch => :ppc
+  depends_on arch: :ppc
 end

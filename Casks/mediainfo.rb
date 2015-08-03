@@ -1,4 +1,4 @@
-cask :v1 => 'mediainfo' do
+cask v1: 'mediainfo' do
   version '0.7.72'
   sha256 'd7b283ec737a1e1e967b6ba4ab89c74ff3777e4b2ab53fecbc4381fd662dc723'
 

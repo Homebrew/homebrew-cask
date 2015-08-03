@@ -1,4 +1,4 @@
-cask :v1 => 'sonora' do
+cask v1: 'sonora' do
   version :latest
   sha256 :no_check
 

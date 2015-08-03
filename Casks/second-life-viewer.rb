@@ -1,4 +1,4 @@
-cask :v1 => 'second-life-viewer' do
+cask v1: 'second-life-viewer' do
   version '3.8.1.303130'
   sha256 'eecb67fbbba4b988a858a83318d87d5f99451dbfa567b75d4bd91059904bca42'
 
@@ -6,13 +6,13 @@ cask :v1 => 'second-life-viewer' do
   name 'Second Life Viewer'
   homepage 'https://secondlife.com/'
   license :gpl
-  tags :vendor => 'Linden Lab'
+  tags vendor: 'Linden Lab'
 
   app 'Second Life Viewer.app'
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/SecondLife',
                   '~/Library/Caches/SecondLife',
                  ]

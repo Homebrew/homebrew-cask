@@ -1,4 +1,4 @@
-cask :v1 => '0xed' do
+cask v1: '0xed' do
   version :latest
   sha256 :no_check
 
@@ -9,7 +9,7 @@ cask :v1 => '0xed' do
 
   app '0xED.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Caches/com.suavetech.0xED',
                   '~/Library/Logs/0xED.log',
                  ]

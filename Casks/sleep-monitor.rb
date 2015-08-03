@@ -1,4 +1,4 @@
-cask :v1 => 'sleep-monitor' do
+cask v1: 'sleep-monitor' do
   version :latest
   sha256 :no_check
 

@@ -5,9 +5,9 @@ describe 'download strategies' do
   let(:url_options) { Hash.new }
   let(:cask) {
     class_double(Hbc::Cask,
-      :token => 'some-cask',
-      :url => Hbc::URL.new(url, url_options),
-      :version => '1.2.3.4'
+      token: 'some-cask',
+      url: Hbc::URL.new(url, url_options),
+      version: '1.2.3.4'
     )
   }
 
@@ -40,7 +40,7 @@ describe 'download strategies' do
 
     context 'with an explicit user agent' do
       let(:url_options) {{
-        :user_agent => 'Mozilla/25.0.1'
+        user_agent: 'Mozilla/25.0.1'
       }}
 
       it 'adds the appropriate curl args' do
@@ -55,7 +55,7 @@ describe 'download strategies' do
 
     context 'with a generalized fake user agent' do
       let(:url_options) {{
-        :user_agent => :fake
+        user_agent: :fake
       }}
 
       it 'adds the appropriate curl args' do
@@ -70,9 +70,9 @@ describe 'download strategies' do
 
     context 'with cookies set' do
       let(:url_options) {{
-        :cookies => {
-          :coo => 'kie',
-          :mon => 'ster'
+        cookies: {
+          coo: 'kie',
+          mon: 'ster'
         }
       }}
 
@@ -88,7 +88,7 @@ describe 'download strategies' do
 
     context 'with referer set' do
       let(:url_options) {{
-        :referer => 'http://somehost/also'
+        referer: 'http://somehost/also'
       }}
 
       it 'adds curl args for referer' do
@@ -111,10 +111,10 @@ describe 'download strategies' do
 
     context 'with :using and :data specified' do
       let(:url_options) {{
-        :using => :post,
-        :data => {
-          :form => 'data',
-          :is => 'good'
+        using: :post,
+        data: {
+          form: 'data',
+          is: 'good'
         }
       }}
       it 'adds curl args for post arguments' do
@@ -130,7 +130,7 @@ describe 'download strategies' do
 
     context 'with :using but no :data' do
       let(:url_options) {{
-        :using => :post
+        using: :post
       }}
 
       it 'adds curl args for a POST request' do
@@ -146,7 +146,7 @@ describe 'download strategies' do
 
   describe Hbc::SubversionDownloadStrategy do
     let(:url_options) {{
-      :using => :svn
+      using: :svn
     }}
     let(:fake_system_command) { class_double(Hbc::SystemCommand) }
     let(:downloader) { Hbc::SubversionDownloadStrategy.new(cask, fake_system_command) }
@@ -182,7 +182,7 @@ describe 'download strategies' do
 
       expect(fake_system_command).to have_received(:run!).with(
         '/usr/bin/svn',
-        hash_including(:args => [
+        hash_including(args: [
           'checkout',
           '--force',
           '--config-option',
@@ -194,8 +194,8 @@ describe 'download strategies' do
 
     context 'with trust_cert set on the URL' do
       let(:url_options) {{
-        :using => :svn,
-        :trust_cert => true
+        using: :svn,
+        trust_cert: true
       }}
 
       it 'adds svn arguments for :trust_cert' do
@@ -205,7 +205,7 @@ describe 'download strategies' do
 
         expect(fake_system_command).to have_received(:run!).with(
           '/usr/bin/svn',
-          hash_including(:args => [
+          hash_including(args: [
           'checkout',
           '--force',
           '--config-option',
@@ -220,8 +220,8 @@ describe 'download strategies' do
 
     context 'with :revision set on url' do
       let(:url_options) {{
-        :using => :svn,
-        :revision => '10'
+        using: :svn,
+        revision: '10'
       }}
 
       it 'adds svn arguments for :revision' do
@@ -231,7 +231,7 @@ describe 'download strategies' do
 
         expect(fake_system_command).to have_received(:run!).with(
           '/usr/bin/svn',
-          hash_including(:args => [
+          hash_including(args: [
           'checkout',
           '--force',
           '--config-option',
@@ -256,7 +256,7 @@ describe 'download strategies' do
 
       expect(fake_system_command).to have_received(:run!).with(
         '/usr/bin/tar',
-        hash_including(:args => [
+        hash_including(args: [
         '-s/^\\.//',
         '--exclude',
         '.svn',

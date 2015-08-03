@@ -1,4 +1,4 @@
-cask :v1 => 'provisionql' do
+cask v1: 'provisionql' do
   version '1.1.0'
   sha256 '463d66986316ceadbca6acbd58e1381d26f6a80d464532342678ac46ec2492c0'
 

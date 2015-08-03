@@ -1,4 +1,4 @@
-cask :v1 => 'makemkv' do
+cask v1: 'makemkv' do
   version '1.9.5'
   sha256 '091a7ae803296783f018682bda2099d53a3d4fff61560836888ac4e73607a75e'
 
@@ -9,10 +9,10 @@ cask :v1 => 'makemkv' do
 
   app 'MakeMKV.app'
 
-  zap :delete => [
+  zap delete: [
                  '~/Library/Preferences/com.makemkv.MakeMKV.plist',
                  '~/Library/Saved Application State/com.makemkv.MakeMKV.savedState',
                  ]
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 end

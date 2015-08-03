@@ -1,4 +1,4 @@
-cask :v1 => 'mongodb' do
+cask v1: 'mongodb' do
   version '3.0.3-build.2'
   sha256 '9cfb8abb6d9210e1b42f9f8ed132e171884ca208b8b7cb5a58c9f8b2ff1da431'
 
@@ -11,7 +11,7 @@ cask :v1 => 'mongodb' do
 
   app 'MongoDB.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Caches/io.blimp.MongoDB',
                   '~/Library/Preferences/io.blimp.MongoDB.plist'
                  ]

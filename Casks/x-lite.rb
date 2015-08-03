@@ -1,4 +1,4 @@
-cask :v1 => 'x-lite' do
+cask v1: 'x-lite' do
   version '4.8.4_76590'
   sha256 'a9ee144dd33616404a0ce1499c9e9004b70689fef285568c94f99767db87196e'
 

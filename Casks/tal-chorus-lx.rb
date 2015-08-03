@@ -1,4 +1,4 @@
-cask :v1 => 'tal-chorus-lx' do
+cask v1: 'tal-chorus-lx' do
   version :latest
   sha256 :no_check
 
@@ -9,7 +9,7 @@ cask :v1 => 'tal-chorus-lx' do
 
   pkg 'TAL-Chorus-LX-installer.pkg'
 
-  uninstall :pkgutil => [
+  uninstall pkgutil: [
                         'ch.corrupt.talchoruslx.*',
                         'ch.corrupt.talunolxInstaller.TAL-Chorus-LX-64.pkg',
                         ]

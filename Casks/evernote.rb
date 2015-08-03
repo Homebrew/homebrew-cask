@@ -1,4 +1,4 @@
-cask :v1 => 'evernote' do
+cask v1: 'evernote' do
 
   if MacOS.release <= :snow_leopard
     version '5.5.2'

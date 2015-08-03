@@ -10,9 +10,9 @@ describe "Accessibility Access" do
 
   describe "install" do
     it "can enable accessibility access" do
-      MacOS.stubs(:release => MacOS::Release.new('10.9'))
+      MacOS.stubs(release: MacOS::Release.new('10.9'))
 
-      @installer.stubs(:bundle_identifier => 'com.example.BasicCask')
+      @installer.stubs(bundle_identifier: 'com.example.BasicCask')
 
       Hbc::FakeSystemCommand.expects_command(
         ['/usr/bin/sudo', '-E', '--', '/usr/bin/sqlite3', Hbc.tcc_db, %q{INSERT OR REPLACE INTO access VALUES('kTCCServiceAccessibility','com.example.BasicCask',0,1,1,NULL);}]
@@ -23,7 +23,7 @@ describe "Accessibility Access" do
     end
 
     it "can enable accessibility access in OS X releases prior to Mavericks" do
-      MacOS.stubs(:release => MacOS::Release.new('10.8'))
+      MacOS.stubs(release: MacOS::Release.new('10.8'))
 
       Hbc::FakeSystemCommand.expects_command(
         ['/usr/bin/sudo', '-E', '--', '/usr/bin/touch', Hbc.pre_mavericks_accessibility_dotfile]
@@ -36,9 +36,9 @@ describe "Accessibility Access" do
 
   describe "uninstall" do
     it "can disable accessibility access" do
-      MacOS.stubs(:release => MacOS::Release.new('10.9'))
+      MacOS.stubs(release: MacOS::Release.new('10.9'))
 
-      @installer.stubs(:bundle_identifier => 'com.example.BasicCask')
+      @installer.stubs(bundle_identifier: 'com.example.BasicCask')
 
       Hbc::FakeSystemCommand.expects_command(
         ['/usr/bin/sudo', '-E', '--', '/usr/bin/sqlite3', Hbc.tcc_db, %q{DELETE FROM access WHERE client='com.example.BasicCask';}]
@@ -48,9 +48,9 @@ describe "Accessibility Access" do
       end
     end
     it "warns about disabling accessibility access on old OS X releases" do
-      MacOS.stubs(:release => MacOS::Release.new('10.8'))
+      MacOS.stubs(release: MacOS::Release.new('10.8'))
 
-      @installer.stubs(:bundle_identifier => 'com.example.BasicCask')
+      @installer.stubs(bundle_identifier: 'com.example.BasicCask')
 
       out, err = capture_io do
         @installer.disable_accessibility_access

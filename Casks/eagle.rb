@@ -1,4 +1,4 @@
-cask :v1 => 'eagle' do
+cask v1: 'eagle' do
   version '7.3.0'
   sha256 '5dcda474ac96c65d5948e85f0f638706d5f3da105b29c796f076ad79047bcbf4'
 
@@ -7,10 +7,10 @@ cask :v1 => 'eagle' do
   name 'EAGLE'
   homepage 'http://www.cadsoftusa.com/'
   license :freemium
-  tags :vendor => 'CadSoft'
+  tags vendor: 'CadSoft'
 
   pkg "eagle-mac64-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.CadSoftComputerGmbH.EAGLE',
-            :delete => "/Applications/EAGLE-#{version}"
+  uninstall pkgutil: 'com.CadSoftComputerGmbH.EAGLE',
+            delete: "/Applications/EAGLE-#{version}"
 end

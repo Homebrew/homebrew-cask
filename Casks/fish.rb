@@ -1,4 +1,4 @@
-cask :v1 => 'fish' do
+cask v1: 'fish' do
   version '2.1.1'
   sha256 '257c112d1d200b8a4af556678fea62be286be76e96db5abe626fac0182870997'
 
@@ -10,5 +10,5 @@ cask :v1 => 'fish' do
 
   pkg 'fish.pkg'
 
-  uninstall :pkgutil => 'com.ridiculousfish.fish-shell-pkg'
+  uninstall pkgutil: 'com.ridiculousfish.fish-shell-pkg'
 end

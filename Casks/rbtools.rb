@@ -1,4 +1,4 @@
-cask :v1 => 'rbtools' do
+cask v1: 'rbtools' do
   version '0.7.2'
   sha256 '78a0ee38431e07d16adce9ba06481295eb4d789bbb0975ec439fba59ee42b063'
 
@@ -9,5 +9,5 @@ cask :v1 => 'rbtools' do
 
   pkg "RBTools-#{version}.pkg"
 
-  uninstall :pkgutil => 'org.reviewboard.rbtools'
+  uninstall pkgutil: 'org.reviewboard.rbtools'
 end

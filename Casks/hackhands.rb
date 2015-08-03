@@ -1,4 +1,4 @@
-cask :v1 => 'hackhands' do
+cask v1: 'hackhands' do
   version '1.4.8'
   sha256 'd91ff1cda8d6e4d9c4e892e8ad1f6ab67968b7d2db53de4c8f8b6e5122a601e8'
 

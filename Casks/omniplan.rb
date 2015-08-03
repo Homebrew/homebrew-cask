@@ -1,4 +1,4 @@
-cask :v1 => 'omniplan' do
+cask v1: 'omniplan' do
   version :latest
   sha256 :no_check
 

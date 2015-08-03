@@ -1,4 +1,4 @@
-cask :v1 => 'moneyplex' do
+cask v1: 'moneyplex' do
   version :latest
   sha256 :no_check
 
@@ -8,7 +8,7 @@ cask :v1 => 'moneyplex' do
   homepage 'http://www.matrica.de/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  pkg 'moneyplex.pkg', :allow_untrusted => true
+  pkg 'moneyplex.pkg', allow_untrusted: true
 
-  uninstall :pkgutil => 'de.matrica.moneyplex.Moneyplex.pkg'
+  uninstall pkgutil: 'de.matrica.moneyplex.Moneyplex.pkg'
 end

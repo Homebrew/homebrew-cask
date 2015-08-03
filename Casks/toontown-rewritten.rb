@@ -1,4 +1,4 @@
-cask :v1 => 'toontown-rewritten' do
+cask v1: 'toontown-rewritten' do
   version :latest
   sha256 :no_check
 
@@ -10,5 +10,5 @@ cask :v1 => 'toontown-rewritten' do
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8037
-  app 'Toontown Launcher.app', :target => 'Toontown Rewritten.app'
+  app 'Toontown Launcher.app', target: 'Toontown Rewritten.app'
 end

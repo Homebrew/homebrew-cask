@@ -1,4 +1,4 @@
-cask :v1 => 'craftstudio' do
+cask v1: 'craftstudio' do
   version :latest
   sha256 :no_check
 
@@ -9,10 +9,10 @@ cask :v1 => 'craftstudio' do
 
   pkg 'CraftStudio.pkg'
 
-  uninstall :quit => 'com.sparklinlabs.CraftStudioLauncher',
-            :pkgutil => 'com.sparklinlabs.CraftStudioLauncher'
+  uninstall quit: 'com.sparklinlabs.CraftStudioLauncher',
+            pkgutil: 'com.sparklinlabs.CraftStudioLauncher'
 
-  zap       :delete => '~/Library/CraftStudio'
+  zap       delete: '~/Library/CraftStudio'
 
-  depends_on :cask => 'mono-mre'
+  depends_on cask: 'mono-mre'
 end

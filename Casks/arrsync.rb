@@ -1,4 +1,4 @@
-cask :v1 => 'arrsync' do
+cask v1: 'arrsync' do
   version '0.4.1'
   sha256 '8a254771065f90a9f9f882589eccaf7bc51ad5d0ac86faf15847381bcdbe64f0'
 

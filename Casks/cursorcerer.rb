@@ -1,4 +1,4 @@
-cask :v1 => 'cursorcerer' do
+cask v1: 'cursorcerer' do
   version :latest
   sha256 :no_check
 

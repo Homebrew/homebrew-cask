@@ -1,4 +1,4 @@
-cask :v1_1 => 'yasu' do
+cask v1_1: 'yasu' do
 
   if MacOS.release <= :snow_leopard
     version '2.8.2'
@@ -12,13 +12,13 @@ cask :v1_1 => 'yasu' do
 
   name 'Yasu'
   appcast 'http://yasuapp.net/appcasts/yasu.xml',
-          :sha256 => 'e79812a2ecb9a4df2b1484f5e544d43d997ad539e5d8c1a3e058cd12d11b646e'
+          sha256: 'e79812a2ecb9a4df2b1484f5e544d43d997ad539e5d8c1a3e058cd12d11b646e'
   homepage 'http://yasuapp.net'
   license :gratis
 
   app 'Yasu.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Caches/com.apple.helpd/Generated/net.yasuapp.yasu.help',
                   '~/Library/Caches/net.yasuapp.yasu',
                   '~/Library/Logs/Yasu.log',

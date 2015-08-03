@@ -1,4 +1,4 @@
-cask :v1 => 'microsoft-office' do
+cask v1: 'microsoft-office' do
   version :latest
   sha256 :no_check
 
@@ -9,13 +9,13 @@ cask :v1 => 'microsoft-office' do
 
   pkg 'Office Installer.pkg'
 
-  uninstall :pkgutil   => 'com.microsoft.office.*',
-            :launchctl => 'com.microsoft.office.licensing.helper'
-  zap       :pkgutil   => [
+  uninstall pkgutil: 'com.microsoft.office.*',
+            launchctl: 'com.microsoft.office.licensing.helper'
+  zap       pkgutil: [
                            'com.microsoft.mau.all.autoupdate.*',
                            'com.microsoft.merp.all.errorreporting.*'
                           ],
-            :delete    => [
+            delete: [
                            '/Library/LaunchDaemons/com.microsoft.office.licensing.helper.plist',
                            '/Library/PrivilegedHelperTools/com.microsoft.office.licensing.helper',
                            '/Library/Application Support/Microsoft/MAU2.0',
@@ -45,7 +45,7 @@ cask :v1 => 'microsoft-office' do
                            '~/Documents/Microsoft User Data/Outlook Sound Sets',
                            '~/Documents/Microsoft User Data/Saved Attachments'
                           ],
-            :rmdir     => [
+            rmdir: [
                            '/Library/Application Support/Microsoft',
                            '~/Library/Application Support/Microsoft',
                            '~/Documents/Microsoft User Data'

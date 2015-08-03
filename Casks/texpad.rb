@@ -1,4 +1,4 @@
-cask :v1 => 'texpad' do
+cask v1: 'texpad' do
 
   if MacOS.release >= :mavericks
     version '1.7.8'
@@ -13,10 +13,10 @@ cask :v1 => 'texpad' do
     # unexpected behaviour or failures can occur.
   end
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml',
-          :sha256 => 'a8522a4533df93fbf9d50489aa5f1c91bb01916faebd81ee20f56ea96dad8d97'
+          sha256: 'a8522a4533df93fbf9d50489aa5f1c91bb01916faebd81ee20f56ea96dad8d97'
 
   name 'Texpad'
   homepage 'https://www.texpadapp.com/osx'

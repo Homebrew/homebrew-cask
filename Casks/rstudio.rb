@@ -1,4 +1,4 @@
-cask :v1 => 'rstudio' do
+cask v1: 'rstudio' do
   version '0.99.467'
   sha256 '3a9c88da0eb523556627282869919e590723777cb763515be8ea442cce71a333'
 
@@ -10,5 +10,5 @@ cask :v1 => 'rstudio' do
 
   app 'RStudio.app'
 
-  zap :delete => '~/.rstudio-desktop'
+  zap delete: '~/.rstudio-desktop'
 end

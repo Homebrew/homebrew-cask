@@ -1,4 +1,4 @@
-cask :v1 => 'lastpass' do
+cask v1: 'lastpass' do
   version :latest
   sha256 :no_check
 
@@ -7,7 +7,7 @@ cask :v1 => 'lastpass' do
   homepage 'https://lastpass.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  installer :manual => 'LastPass Installer.app'
+  installer manual: 'LastPass Installer.app'
 
-  uninstall :script => 'Uninstaller.app/Contents/Resources/uninstall.sh'
+  uninstall script: 'Uninstaller.app/Contents/Resources/uninstall.sh'
 end

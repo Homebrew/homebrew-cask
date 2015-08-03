@@ -1,4 +1,4 @@
-cask :v1 => 'skype' do
+cask v1: 'skype' do
 
   if MacOS.release <= :mountain_lion
     version '6.15.0.335'
@@ -16,7 +16,7 @@ cask :v1 => 'skype' do
 
   app 'Skype.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/Library/Application Support/Skype',
                   '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.skype.skype',
                   '~/Library/Caches/com.skype.skype',

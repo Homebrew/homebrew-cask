@@ -1,4 +1,4 @@
-cask :v1 => 'owasp-zap' do
+cask v1: 'owasp-zap' do
   version '2.4.0'
   sha256 'd8e296cc09908f7df9970ac6f701191bf7ccdff628d95194196a58689f8186be'
 
@@ -9,7 +9,7 @@ cask :v1 => 'owasp-zap' do
   name 'ZAP'
   homepage 'https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project'
   license :apache
-  tags :vendor => 'OWASP'
+  tags vendor: 'OWASP'
 
   app 'OWASP ZAP.app'
 end

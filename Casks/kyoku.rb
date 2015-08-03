@@ -1,4 +1,4 @@
-cask :v1 => 'kyoku' do
+cask v1: 'kyoku' do
   version '0.0.4'
   sha256 '5bac75ce062206a12c14d67411a8e802999fa31fb177e730b1ea913c293d6bd9'
 

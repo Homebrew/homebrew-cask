@@ -1,4 +1,4 @@
-cask :v1 => 'fbreader' do
+cask v1: 'fbreader' do
   version '0.99.5-alpha'
   sha256 'c05e23d66942b49533e0eabc9d39e2062c9a11086369c31b417a1937ac5886f9'
 
@@ -9,7 +9,7 @@ cask :v1 => 'fbreader' do
 
   app 'FBReader.app'
 
-  zap :delete => [
+  zap delete: [
                   '~/.FBReader',
                  ]
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'reflector' do
+cask v1: 'reflector' do
   version '2.0.2'
   sha256 '0b18a11c2d364af563cadfdc27cf3f1bf783a55ad1361275ff2e6cbca12aa1dd'
 
@@ -8,7 +8,7 @@ cask :v1 => 'reflector' do
   homepage 'http://www.airsquirrels.com/reflector/'
   license :commercial
 
-  depends_on :macos => '>= :mountain_lion'
+  depends_on macos: '>= :mountain_lion'
 
   app 'Reflector 2.app'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'daisydisk' do
+cask v1: 'daisydisk' do
 
   if MacOS.release == :snow_leopard
     version '2.1.2'
@@ -17,7 +17,7 @@ cask :v1 => 'daisydisk' do
 
   app 'DaisyDisk.app'
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
   postflight do
     suppress_move_to_applications
   end

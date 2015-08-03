@@ -1,4 +1,4 @@
-cask :v1 => 'flowdock' do
+cask v1: 'flowdock' do
   version :latest
   sha256 :no_check
 

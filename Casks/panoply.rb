@@ -1,4 +1,4 @@
-cask :v1 => 'panoply' do
+cask v1: 'panoply' do
   version :latest
   sha256 :no_check
 

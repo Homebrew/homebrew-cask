@@ -1,4 +1,4 @@
-cask :v1 => 'openpilot-gcs' do
+cask v1: 'openpilot-gcs' do
   version '15.02.01'
   sha256 '21f1db27188ad05cc755fdcdda97853bdd6ba6adfc09afe78095c414065d7da5'
 

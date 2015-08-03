@@ -1,4 +1,4 @@
-cask :v1 => 'racket' do
+cask v1: 'racket' do
   version '6.2'
   sha256 'ddfeb81dd61a7e1f8aabea8894ed44d65dec6534e3e9cc160d7e15f3a108adda'
 

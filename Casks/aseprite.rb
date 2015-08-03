@@ -1,4 +1,4 @@
-cask :v1 => 'aseprite' do
+cask v1: 'aseprite' do
   version '1.0.9'
   sha256 'a01474cfd416ef2a688c342a6f389cb51cc7966182700111dcca1b18911e116e'
 
