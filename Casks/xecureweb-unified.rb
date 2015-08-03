@@ -1,4 +1,4 @@
-cask :v1 => "xecure-web-unified" do
+cask :v1 => "xecureweb-unified" do
   version :latest
   sha256 :no_check
 
