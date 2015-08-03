@@ -8,5 +8,6 @@ cask :v1 => "ip-inside-agent-for-hana-bank" do
   license :gratis
 
   pkg "IPinsideAgent.pkg"
-  uninstall :script => "/opt/homebrew-cask/Caskroom/ip-inside-agent-for-hana-bank/latest/IPinside Uninstaller.app/Contents/MacOS/IPinside Uninstaller"
+  uninstall :pkgutil => "I3GManager.Plugin.ipinsideAgent.*",
+    :rmdir => "/Applications/IPinside"
 end

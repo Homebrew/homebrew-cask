@@ -8,5 +8,5 @@ cask :v1 => "xecureweb-unified" do
   license :gratis
 
   pkg "xw_unified_install_mac_universal.pkg"
-  uninstall :script => "/Applications/XecureWebUnified/Uninstaller.app/Contents/MacOS/Uninstaller"
+  uninstall :pkgutil => "com.softforum.xecurewebunifiedclient"
 end
