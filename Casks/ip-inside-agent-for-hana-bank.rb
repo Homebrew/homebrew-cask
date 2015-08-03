@@ -1,4 +1,4 @@
-cask :v1 => "ip-inside-agent-hana" do
+cask :v1 => "ip-inside-agent-for-hana-bank" do
   version :latest
   sha256 :no_check
 
@@ -8,5 +8,5 @@ cask :v1 => "ip-inside-agent-hana" do
   license :gratis
 
   pkg "IPinsideAgent.pkg"
-  uninstall :script => "/opt/homebrew-cask/Caskroom/ip-inside-agent-hana/latest/IPinside Uninstaller.app/Contents/MacOS/IPinside Uninstaller"
+  uninstall :script => "/opt/homebrew-cask/Caskroom/ip-inside-agent-for-hana-bank/latest/IPinside Uninstaller.app/Contents/MacOS/IPinside Uninstaller"
 end
