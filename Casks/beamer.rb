@@ -1,6 +1,6 @@
 cask :v1 => 'beamer' do
-  version '2.1.2'
-  sha256 'c88b6e15fc725174d3ffeb7212ab1ef3dbf6d77e3b03a717b84939727f30390e'
+  version '2.1.3'
+  sha256 '206567494951e06aa85149957e5a73c98d07613c347b3930fd7d2980a48c43c4'
 
   url "http://tupil-beamer.s3.amazonaws.com/Beamer-#{version}.zip"
   name 'Beamer'

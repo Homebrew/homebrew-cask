@@ -18,10 +18,6 @@ cask :v1 => 'launchbar' do
 
   zap :delete => [
                   '~/Library/Preferences/at.obdev.LaunchBar.plist',
-                  '~/Library/Application Support/LaunchBar/Configuration.plist',
-                  '~/Library/Application Support/LaunchBar/CustomShortcuts.plist',
-                  # todo unsure if these contain user-created content
-                  # '~/Library/Application Support/LaunchBar/Actions',
-                  # '~/Library/Application Support/LaunchBar/Snippets',
+                  '~/Library/Application Support/LaunchBar',
                  ]
 end

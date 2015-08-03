@@ -1,11 +1,11 @@
 cask :v1 => 'keepassx' do
-  version '2.0-alpha6'
-  sha256 '55aeaba8257d728b62ba173ba56df27897552737a556dc1e4e4ed6dcd3d6dd8a'
+  version '2.0-beta1'
+  sha256 '841c5a3ef3c49233457cb1a00f97ebcf18d5ec8454b351a62ab3890eafcfaa5d'
 
-  url "https://www.keepassx.org/dev/attachments/download/72/KeePassX-#{version}.dmg"
+  url "https://www.keepassx.org/dev/attachments/download/103/KeePassX-#{version}.dmg"
   name 'KeePassX'
   homepage 'http://www.keepassx.org'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   app 'KeePassX.app'
 

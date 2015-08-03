@@ -6,12 +6,12 @@ cask :v1 => 'poedit' do
 
     url "http://poedit.net/dl/poedit-#{version}.dmg"
   else
-    version '1.8.2'
-    sha256 '8da5cddc1b019057b7636d5dabd04723eae25066cf9ee252a01a571e50364efd'
+    version '1.8.3'
+    sha256 'dd17ff372583ddd29a7993b92bae20440b006a9907e249fc94b47ea6db6fc504'
 
     url "https://download.poedit.net/Poedit-#{version}.zip"
     appcast 'https://poedit.net/updates/osx/appcast',
-            :sha256 => 'e9a8bb8634538190abb5d904e23d9d2c4db9f29b97a4b612bf4308cedd8f060c'
+            :sha256 => '7f8ed0d9267fbd46cf4fe9eb9655827518653dd322e6d4040c2ea59caca76a55'
   end
 
   name 'Poedit'

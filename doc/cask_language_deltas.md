@@ -41,8 +41,8 @@ The term `:v1` identifies the DSL version (currently 1.0), and defines the
 features which are available for the current Cask.
 
 
-## New Forms (1.0)
-
+## New Forms
+###(1.0)
  * [`appcast`](CASK_LANGUAGE_REFERENCE.md#appcast-stanza-details)
  * [`artifact`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
  * [`depends_on :cask`](CASK_LANGUAGE_REFERENCE.md#depends_on-stanza-details)
@@ -54,7 +54,7 @@ features which are available for the current Cask.
  * [`installer :script`](CASK_LANGUAGE_REFERENCE.md#installer-script)
  * [`license`](CASK_LANGUAGE_REFERENCE.md#license-stanza-details)
  * [`name`](CASK_LANGUAGE_REFERENCE.md#name-stanza-details)
- * [`postflight plist_set`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
+ * [`*flight plist_set`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
  * [`postflight suppress_move_to_applications`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
  * [`stage_only`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
    * replaced undocumented `caskroom_only`
@@ -64,6 +64,10 @@ features which are available for the current Cask.
  * [`uninstall :trash`](CASK_LANGUAGE_REFERENCE.md#uninstall-key-trash)
    * *stub* - currently just a synonym for `uninstall :delete`
  * [`zap`](CASK_LANGUAGE_REFERENCE.md#zap-stanza-details)
+
+### (1.1)
+ * [`*flight set_ownership`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
+ * [`*flight set_permissions`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
 
 
 ## Renamed Forms (1.0)
@@ -138,7 +142,6 @@ For use in *eg* interpolation:
 
 ## Caveats Mini-DSL
 ### (1.0)
-
  * [`files_in_usr_local`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`logout`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
  * [`path_environment_variable(path)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
@@ -150,11 +153,14 @@ For use in *eg* interpolation:
  * [`free_license(web_page)`](CASK_LANGUAGE_REFERENCE.md#caveats-mini-dsl)
 
 
-## Postflight Mini-DSL (1.0)
+## \*flight Mini-DSL (1.0)
+### (1.0)
+ * [`plist_set`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
+ * [`suppress_move_to_applications`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
 
- * [`plist_set`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
- * [`suppress_move_to_applications`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
-
+### (1.1)
+ * [`set_ownership`](CASK_LANGUAGE_REFERENCE.md#*flight-stanzas-details)
+ * [`set_permissions`](CASK_LANGUAGE_REFERENCE.md#*flight-stanzas-details)
 
 ## References
 

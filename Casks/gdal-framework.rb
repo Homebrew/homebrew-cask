@@ -19,4 +19,9 @@ cask :v1 => 'gdal-framework' do
                             'org.scipy.numpy-lion',
                             'org.scipy.numpy-snow'
                           ]
+
+  caveats <<-EOS.undent
+    #{token} requires Java 6+, you can install the latest Java using
+      brew cask install java
+  EOS
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'voicemac' do
+cask :v1_1 => 'voicemac' do
   version :latest
   sha256 :no_check
 
@@ -9,7 +9,8 @@ cask :v1 => 'voicemac' do
   license :isc
 
   app 'VoiceMac/VoiceMac.app'
+
   postflight do
-    system '/bin/chmod', '--', 'a+r', "#{staged_path}/VoiceMac/VoiceMac.app/Contents/Info.plist"
+    set_permissions "#{staged_path}/VoiceMac/VoiceMac.app/Contents/Info.plist", 'a+r'
   end
 end

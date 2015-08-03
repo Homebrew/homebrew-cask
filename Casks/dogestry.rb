@@ -1,4 +1,4 @@
-cask :v1 => 'dogestry' do
+cask :v1_1 => 'dogestry' do
   version '2.0.1'
   sha256 '71a33b0c0b9c432df998d235693a765cdcefb0c7cefe9a45653a9f673da9349e'
 
@@ -12,6 +12,6 @@ cask :v1 => 'dogestry' do
   binary "dogestry-darwin-#{version}", :target => 'dogestry'
 
   postflight do
-    system '/bin/chmod', '--', '0755', "#{staged_path}/dogestry-darwin-#{version}"
+    set_permissions "#{staged_path}/dogestry-darwin-#{version}", '0755'
   end
 end
