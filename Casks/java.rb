@@ -34,7 +34,7 @@ cask :v1 => 'java' do
   end
 
   uninstall :pkgutil => [
-                         "com.oracle.jdk#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$},'\1u\2')}",         # manually update this for each version
+                         "com.oracle.jdk#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$},'\1u\2')}",
                          'com.oracle.jre',
                         ],
             :launchctl => [
