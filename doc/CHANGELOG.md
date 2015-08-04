@@ -1,5 +1,31 @@
 # CHANGELOG
 
+## 0.56.0
+
+* __Casks__
+  - 5 Casks added (40 updated) by 14 contributors since 0.55.0
+  - 2659 total Casks
+* __Features__
+  - [#12992][] Expand tilde in uninstall :delete
+  - [#11200][] Make symlink targets writeable, so we can write altnames
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - none
+* __Internal Changes__
+  - none
+* __Documentation__
+  - 4 doc commits since 0.55.0
+* __Contributors__
+  - 6 new contributors since 0.55.0
+  - 2077 total contributors
+* __Release Date__
+  - 2015-08-04 04:30:00 UTC
+
+
+[#11200]: https://github.com/caskroom/homebrew-cask/issues/11200
+[#12992]: https://github.com/caskroom/homebrew-cask/issues/12992
+
 ## 0.55.0
 
 * __Casks__
