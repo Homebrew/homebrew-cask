@@ -9,4 +9,6 @@ cask :v1 => 'vistrails' do
   license :bsd
 
   suite 'VisTrails'
+
+  depends_on :macos => '>= :snow_leopard'
 end
