@@ -8,4 +8,6 @@ cask :v1 => 'visit' do
   license :bsd
 
   app 'VisIt.app'
+
+  depends_on :macos => '>= :mountain_lion'
 end
