@@ -293,7 +293,7 @@ We maintain separate Taps for different types of binaries.
 
 Latest stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask).
 Software in the main repo should run on the latest release of OS X or the previous
-point release (currently: Mavericks and Mountain Lion).
+point release (in 2014, for example, that meant Mavericks and Yosemite).
 
 ### But There Is No Stable Version!
 
