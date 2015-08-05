@@ -6,7 +6,7 @@ cask :v1 => 'screenmailer' do
   appcast 'https://www.screenmailer.com/releases/current/releases.xml'
   name 'Screenmailer'
   homepage 'https://www.screenmailer.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Screenmailer.app'
 end
