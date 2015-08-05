@@ -79,7 +79,7 @@ Each of the following stanzas is required for every Cask.
 | ------------------ |------------------------------ | ----------- |
 | `version`          | no                            | application version; give value of `:latest`  if versioned downloads are not offered
 | `sha256`           | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
-| `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application (see also [URL Stanza Details](#url-stanza-details))
+| `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application. A [comment](#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see also [URL Stanza Details](#url-stanza-details))
 | `homepage`         | no                            | application homepage; used for the `brew cask home` command
 | `license`          | no                            | a symbol identifying the license category for the application. (see also [License Stanza Details](#license-stanza-details))
 
@@ -306,6 +306,27 @@ of key/value pairs appended to `url`:
 Example of using `:cookies`: [java.rb](../Casks/java.rb)
 
 Example of using `:referer`: [rrootage.rb](../Casks/rrootage.rb)
+
+### When URL and Homepage Hostnames Differ, Add a Comment
+
+When the hostnames of `url` and `homepage` differ, the discrepancy should be
+documented with a comment of the form:
+
+```
+# URL_HOSTNAME is the official download host per the vendor homepage
+```
+
+Examples can be seen in
+[visit.rb](https://github.com/caskroom/homebrew-cask/blob/cafcd7cf7922022ea607c5811c63d45863c7ed36/Casks/visit.rb#L5)
+and
+[vistrails.rb](https://github.com/caskroom/homebrew-cask/blob/cafcd7cf7922022ea607c5811c63d45863c7ed36/Casks/vistrails.rb#L5).
+
+These comments must be added so a user auditing the cask knows the URL is the
+one provided by the vendor, even though it may look unofficial or suspicious. It
+is our responsibility as homebrew-cask maintainers to verify both the `url` and
+`homepage` information when first added (or subsequently modified, apart from
+versioning). The exception to this rule is a `homepage` of `github.io` with a
+`url` of `github.com`, since we know this pair of hostnames is connected.
 
 ### Difficulty Finding a URL
 
