@@ -14,7 +14,7 @@ cask :v1 => 'paraview' do
 
   name 'ParaView'
   homepage 'http://www.paraview.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   app 'paraview.app'
 
