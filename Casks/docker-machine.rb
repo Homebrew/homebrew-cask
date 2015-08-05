@@ -1,6 +1,6 @@
 cask :v1_1 => 'docker-machine' do
-  version 'v0.3.0'
-  sha256 '1b94543ee506bfc75cad43662b346e3560aacf9d47fc78b9d27c2158df486026'
+  version 'v0.3.1'
+  sha256 'c16bb0603d5ac6441aa0e16e11c905117af2e6ca2018a6712bb0f70cd6d3be59'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/docker/machine/releases/download/#{version}/docker-machine_darwin-amd64"
