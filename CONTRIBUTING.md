@@ -287,40 +287,50 @@ out open issues.
 
 ## Finding a Home For Your Cask
 
-We maintain separate Taps for different types of binaries.
+We maintain separate Taps for different types of binaries. Our nomenclature is:
 
-### Latest Stable Versions
++ **Stable**: The latest version provided by the developer defined by them as such.
++ **Beta, Development, Unstable**: Subsequent versions to **stable**, yet incomplete and under development, aiming to eventually become the new **stable**.
++ **Nightly**: Constantly up-to-date versions of the current development state.
++ **Legacy**: Any **stable** version that is not the most recent.
++ **Trial**: Date-limited version that stops working entirely after it expires, requiring payment to lift the limitation.
++ **Freemium**: Gratis version that works indefinitely but with limitations that can be removed by paying.
++ **Fork**: An alternate version of an existing project, with a based-on but modified source and binary.
++ **Unofficial**: An *allegedly* unmodified compiled binary, by a third-party, of a binary that has no existing build by the owner of the source code.
++ **Vendorless**: A binary distributed without an official website, like a forum posting.
++ **Walled**: When the download URL is both behind a login/registration form and from a host that differs from the homepage.
 
-Latest stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask).
-Software in the main repo should run on the latest release of OS X or the previous
-point release (in 2014, for example, that meant Mavericks and Yosemite).
+### Stable Versions
+
+Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of OS X or the previous point release (in 2014, for example, that meant Mavericks and Yosemite).
 
 ### But There Is No Stable Version!
 
-When an App is only available as an unstable version (e.g. beta, nightly), or in cases where such a version is
-the general standard, then an "unstable" version can go into the main repo.
+When an App is only available as beta, development, or unstable versions, or in cases where such a version is
+the general standard, then said version can go into the main repo.
 
-### Unstable, Development, or Legacy Versions
+### Beta, Unstable, Development, Nightly, or Legacy Versions
 
-When an App already exists in the main repo, alternate versions can be Casked
-and submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
+When an App’s stable version already exists in the main repo, alternate versions can be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
 
-### Trial Versions
+### Trial and Freemium Versions
 
-Before submitting a trial, please make sure it can be made into a full working version
+Before submitting a trial, make sure it can be made into a full working version
 without the need to be redownloaded. If an App provides a trial but the only way to buy the full version
-is via the Mac App Store, it does not currently belong in any of the official repos.
+is via the Mac App Store, it does not belong in any of the official repos. Freemium versions are fine.
 
-### Unofficial, Vendorless, or Walled Builds
+### Forks and Apps with conflicting names
 
-When an App developer does not offer a binary download, the binary doesn't have an official vendor,
-or the download URL is both behind a registration wall and served from an unofficial host,
-please submit the Cask to [caskroom/homebrew-unofficial](http://github.com/caskroom/homebrew-unofficial).
-For a location to host unofficial builds, contact our sister project [alehouse](https://github.com/alehouse).
+Forks should have the vendor’s name as a prefix on the cask’s file name and token. For unrelated apps that share a name, the most popular one (usually the one already present) stays unprefixed. Since this can be subjective, if you disagree with a decision open an issue and make your case to the maintainers.
+
+### Unofficial, Vendorless, and Walled Builds
+
+Please submit these to [caskroom/homebrew-unofficial](http://github.com/caskroom/homebrew-unofficial).
+If you’ve made an unofficial build and need a place to host it, contact our sister project [alehouse](https://github.com/alehouse).
 
 ### Fonts
 
-Font Casks live in the [caskroom/homebrew-fonts](https://github.com/caskroom/homebrew-fonts)
+Font casks live in the [caskroom/homebrew-fonts](https://github.com/caskroom/homebrew-fonts)
 repository.  See the font repo [CONTRIBUTING.md](https://github.com/caskroom/homebrew-fonts/blob/master/CONTRIBUTING.md)
 for details.
 
