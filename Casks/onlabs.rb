@@ -6,7 +6,7 @@ cask :v1_1 => 'onlabs' do
   appcast 'https://github.com/lalyos/onlabs/releases.atom'
   name 'onlabs'
   homepage 'https://github.com/lalyos/onlabs'
-  license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :mit
 
   container :type => :naked
 
