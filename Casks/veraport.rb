@@ -7,6 +7,7 @@ cask :v1 => 'veraport' do
   homepage 'https://open.citibank.co.kr'
   license :gratis
 
+  pkg 'veraport.pkg'
   uninstall :pkgutil => 'com.wizvera.veraport.veraport.*',
     :rmdir => '/Applications/Veraport'
 end
