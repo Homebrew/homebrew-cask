@@ -7,12 +7,12 @@ cask :v1 => 'ip-inside-agent-for-citibank' do
   homepage 'https://open.citibank.co.kr'
   license :gratis
 
-  pkg "IPinsideAgent.pkg"
+  pkg 'IPinsideAgent.pkg'
   uninstall :pkgutil =>
     [
-      "INTEREZEN Internet Plug-in Launch",
-      "INTEREZEN Internet Plug-in Uninstaller",
-      "INTEREZEN Internet Plug-in"
+      'INTEREZEN Internet Plug-in Launch',
+      'INTEREZEN Internet Plug-in Uninstaller',
+      'INTEREZEN Internet Plug-in'
     ],
-    :rmdir => "/Applications/IPinside"
+    :rmdir => '/Applications/IPinside'
 end
