@@ -11,6 +11,7 @@ cask :v1 => 'terraform' do
   binary 'terraform'
   binary 'terraform-provider-atlas'
   binary 'terraform-provider-aws'
+  binary 'terraform-provider-azure'
   binary 'terraform-provider-cloudflare'
   binary 'terraform-provider-cloudstack'
   binary 'terraform-provider-consul'
