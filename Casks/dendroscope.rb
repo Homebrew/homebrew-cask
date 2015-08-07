@@ -17,4 +17,10 @@ cask :v1 => 'dendroscope' do
   uninstall_preflight do
     system "#{staged_path}/Dendroscope Uninstaller.app/Contents/MacOS/JavaApplicationStub", '-q'
   end
+
+  caveats <<-EOS.undent
+    #{token} requires Java. You can install the latest version with
+
+      brew cask install java
+  EOS
 end
