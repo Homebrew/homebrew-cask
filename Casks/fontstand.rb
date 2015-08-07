@@ -9,4 +9,8 @@ cask :v1 => 'fontstand' do
   license :gratis
 
   app 'Fontstand.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
 end
