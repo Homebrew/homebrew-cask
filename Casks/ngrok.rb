@@ -9,6 +9,6 @@ cask :v1 => 'ngrok' do
 
   binary 'ngrok'
 
-  # todo verify that this does not contain user-created content
-  # zap :delete => '~/.ngrok'
+  zap :delete => '~/.ngrok2/ngrok.yml',
+      :rmdir  => '~/.ngrok2/'
 end
