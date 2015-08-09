@@ -1,11 +1,11 @@
 cask :v1 => 'hocus-focus' do
-  version :latest
-  sha256 :no_check
+  version '1.2'
+  sha256 'ac3f26ed6f4149cfd7c115c8c2502b381d84fb5c61a64759852fd0db3029b5e0'
 
-  url 'http://hocusfoc.us/static/releases/latest.zip'
+  url "http://hocusfoc.us/static/releases/hocusfocus-#{version}.zip"
   name 'Hocus Focus'
   appcast 'http://hocusfoc.us/updates.xml',
-          :sha256 => '84d4431c23176a9ed9b6c2dadb31e465dd67a38a4ed4263997056e332a91b4ec'
+          :sha256 => '96e97e3faeee0def7f57dc292ccaae44ccdf52e1c659e572eb7c420f4dcb679e'
   homepage 'http://hocusfoc.us/'
   license :gratis
   app 'Hocus Focus.app'
