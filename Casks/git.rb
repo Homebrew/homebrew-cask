@@ -18,7 +18,7 @@ cask :v1 => 'git' do
     system "/usr/bin/yes yes | #{staged_path}/uninstall.sh"
   end
 
-  uninstall :pkgutil => "GitOSX.Installer.git#{version.gsub('.','')}Universal.*pkg"
+  uninstall :pkgutil => "GitOSX.Installer.git#{version.delete('.')}Universal.*pkg"
 
   depends_on :macos => '>= :snow_leopard'
 end
