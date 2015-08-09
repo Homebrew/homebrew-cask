@@ -5,7 +5,7 @@ cask :v1 => 'duelystlauncher' do
   # netdna-ssl.com is the official download host per the vendor homepage
   url "https://downloads-counterplaygames.netdna-ssl.com/launcher/v#{version}/DuelystLauncher-v#{version}.dmg"
   name 'Duelyst'
-  homepage 'http://forums.duelyst.com/t/desktop-client-early-preview/'
+  homepage 'http://launcher.counterplay.co/'
   license :gratis
 
   app 'DuelystLauncher.app'
