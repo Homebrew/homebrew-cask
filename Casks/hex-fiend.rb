@@ -14,4 +14,9 @@ cask :v1_1 => 'hex-fiend' do
   postflight do
     set_permissions "#{staged_path}/Hex Fiend.app/Contents/Frameworks/Sparkle.framework", 'og=u'
   end
+
+  zap :delete => [
+                  '~/Library/Preferences/com.ridiculousfish.HexFiend.LSSharedFileList.plist',
+                  '~/Library/Preferences/com.ridiculousfish.HexFiend.plist'
+                 ]
 end
