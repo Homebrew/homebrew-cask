@@ -9,4 +9,6 @@ cask :v1 => 'duelystlauncher' do
   license :gratis
 
   app 'DuelystLauncher.app'
+  
+  uninstall :delete => '~/.counterplay'
 end
