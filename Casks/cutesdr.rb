@@ -1,6 +1,6 @@
 cask :v1 => 'cutesdr' do
-  version '1.16'
-  sha256 '2b82f5b1e7e2dace30fdf96ae9cdfff71bc20367343152bee9a1739e94bdc05a'
+  version '1.18'
+  sha256 'b765c33cdf5cc074c0bda15c2a24995546422b4e35209d46966e6fea7e344963'
 
   url "http://downloads.sourceforge.net/project/cutesdr/CuteSdr#{version.gsub('.','')}.dmg"
   name 'CuteSDR'
