@@ -1,22 +1,20 @@
 cask :v1 => 'intel-haxm' do
-  version '1.1.1'
-  sha256 'dd6dabfc34ebf73a19bc34eecfb5d8c4269773e3108ee6ef71ae2a5eacfd37d2'
+  version '1.1.4'
+  sha256 '41ec5833015b17f147e2c9cc623f0dfc7ea33592f876f049bb11e69d6144ddc7'
 
-  url 'https://software.intel.com/sites/default/files/managed/21/5f/haxm-macosx_r05.zip'
+  url 'https://software.intel.com/sites/default/files/haxm-macosx_r05.zip'
   name 'Intel HAXM'
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :closed
 
-  if MacOS.release <= :mountain_lion
-    container :nested => "haxm-macosx_r05/IntelHAXM_#{version}_for_below_10_9.dmg"
-  else
-    container :nested => "haxm-macosx_r05/IntelHAXM_#{version}_for_10_9_and_above.dmg"
-  end
-
-  pkg "IntelHAXM_#{version}.mpkg"
+  installer :script => 'silent_install.sh',
+            :sudo => true,
+            :must_succeed => true
 
   uninstall :script => {
-                        :executable => '/System/Library/Extensions/intelhaxm.kext/Contents/Resources/uninstall.sh',
-                        :input      => ['y']
+                        :sudo => true,
+                        :must_succeed => true,
+                        :executable => 'silent_install.sh',
+                        :args => ['-u']
                        }
 end

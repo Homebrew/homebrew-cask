@@ -11,4 +11,8 @@ cask :v1 => 'tunnelbear' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TunnelBear.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
 end

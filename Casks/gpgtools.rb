@@ -36,6 +36,8 @@ cask :v1 => 'gpgtools' do
                           ],
             :delete => [
                         '/Applications/GPG Keychain Access.app',
+                        '/Applications/GPG Keychain.app',
+                        '/usr/local/MacGPG2',
                         '/Library/Services/GPGServices.service',
                         '/Library/Mail/Bundles/GPGMail.mailbundle',
                         '/Library/PreferencePanes/GPGPreferences.prefPane',
@@ -49,6 +51,7 @@ cask :v1 => 'gpgtools' do
                         '~/Library/Services/GPGServices.service',
                         '~/Library/Mail/Bundles/GPGMail.mailbundle',
                         '~/Library/PreferencePanes/GPGPreferences.prefPane',
+                        # todo expand/glob for ~/Library/Caches/org.gpgtools.gpg*
                        ]
 
   caveats do

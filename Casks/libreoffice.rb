@@ -5,8 +5,8 @@ cask :v1 => 'libreoffice' do
     # documentfoundation.org is the official download host per the vendor homepage
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86/LibreOffice_#{version}_MacOS_x86.dmg"
   else
-    version '4.4.4'
-    sha256 '41c93200a5325d702d841eb340b50df981ef6a124701201b04cc444fc0bd773f'
+    version '5.0.0'
+    sha256 '12dbb6f28a55521292eadfa31bc4e74d2bf4d1ab056dcc9077a07da43f5bc158'
     # documentfoundation.org is the official download host per the vendor homepage
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
   end

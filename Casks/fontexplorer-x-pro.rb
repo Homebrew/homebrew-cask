@@ -1,11 +1,13 @@
 cask :v1 => 'fontexplorer-x-pro' do
-  version '4.2.1'
-  sha256 '9fd225ff73804231d094f16bdb435355a3b7557d74ec1aeb9d89e925f0673350'
+  version '5.0.1'
+  sha256 'e75369d862a186a75dcbb9d0f61a5f99f03bd1482de02f3e71ffaa29a0828b9c'
 
   url "http://fast.fontexplorerx.com/FontExplorerXPro#{version.gsub('.','')}.dmg"
   name 'FontExplorer X Pro'
   homepage 'https://www.fontexplorerx.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
+
+  depends_on :macos => '>= :mountain_lion'
 
   app 'FontExplorer X Pro.app'
 

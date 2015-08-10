@@ -1,7 +1,7 @@
 cask :v1 => 'go' do
   version '1.4.2'
 
-  if MacOS.release <= 10.6
+  if MacOS.release <= :snow_leopard
     sha256 '8b8fe5c723663c2da0381643b2f04b0a597f623149095db61818c3fe22be9582'
     url "https://storage.googleapis.com/golang/go#{version}.darwin-amd64-osx10.6.pkg"
     pkg "go#{version}.darwin-amd64-osx10.6.pkg"
@@ -15,7 +15,7 @@ cask :v1 => 'go' do
   homepage 'https://golang.org/'
   license :bsd
 
-  depends_on :macos => '>= 10.6'
+  depends_on :macos => '>= :snow_leopard'
 
   uninstall :pkgutil => 'com.googlecode.go'
 end

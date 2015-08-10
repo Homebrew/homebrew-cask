@@ -25,7 +25,7 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
  * [Depends_on Stanza Details](#depends_on-stanza-details)
  * [Conflicts_with Stanza Details](#conflicts_with-stanza-details)
  * [Uninstall Stanza Details](#uninstall-stanza-details)
- * [Postflight Stanza Details](#postflight-stanza-details)
+ * [\*flight Stanza Details](#flight-stanzas-details)
  * [Zap Stanza Details](#zap-stanza-details)
  * [Arbitrary Ruby Methods](#arbitrary-ruby-methods)
  * [Revisions to the Cask DSL](#revisions-to-the-cask-dsl)
@@ -79,7 +79,7 @@ Each of the following stanzas is required for every Cask.
 | ------------------ |------------------------------ | ----------- |
 | `version`          | no                            | application version; give value of `:latest`  if versioned downloads are not offered
 | `sha256`           | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
-| `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application (see also [URL Stanza Details](#url-stanza-details))
+| `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application. A [comment](#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see also [URL Stanza Details](#url-stanza-details))
 | `homepage`         | no                            | application homepage; used for the `brew cask home` command
 | `license`          | no                            | a symbol identifying the license category for the application. (see also [License Stanza Details](#license-stanza-details))
 
@@ -306,6 +306,27 @@ of key/value pairs appended to `url`:
 Example of using `:cookies`: [java.rb](../Casks/java.rb)
 
 Example of using `:referer`: [rrootage.rb](../Casks/rrootage.rb)
+
+### When URL and Homepage Hostnames Differ, Add a Comment
+
+When the hostnames of `url` and `homepage` differ, the discrepancy should be
+documented with a comment of the form:
+
+```
+# URL_HOSTNAME is the official download host per the vendor homepage
+```
+
+Examples can be seen in
+[visit.rb](https://github.com/caskroom/homebrew-cask/blob/cafcd7cf7922022ea607c5811c63d45863c7ed36/Casks/visit.rb#L5)
+and
+[vistrails.rb](https://github.com/caskroom/homebrew-cask/blob/cafcd7cf7922022ea607c5811c63d45863c7ed36/Casks/vistrails.rb#L5).
+
+These comments must be added so a user auditing the cask knows the URL is the
+one provided by the vendor, even though it may look unofficial or suspicious. It
+is our responsibility as homebrew-cask maintainers to verify both the `url` and
+`homepage` information when first added (or subsequently modified, apart from
+versioning). The exception to this rule is a `homepage` of `github.io` with a
+`url` of `github.com`, since we know this pair of hostnames is connected.
 
 ### Difficulty Finding a URL
 
@@ -895,7 +916,6 @@ paths.
  * Double-quotes should not be used.  `ENV['HOME']` and other variables
    should not be interpolated in the value.
  * Only absolute paths should be given.
- * No tilde expansion is performed (`~` characters are literal).
  * No glob expansion is performed (*eg* `*` characters are literal), though
    glob expansion is a desired future feature.
 
@@ -945,7 +965,7 @@ A fully manual method for finding bundle ids in a package file follows:
   5. Once bundle ids have been identified, the unpacked package directory can be deleted.
 
 
-## Postflight Stanza Details
+## \*flight Stanzas Details
 
 ### Evaluation of Blocks is Always Deferred
 
@@ -954,20 +974,26 @@ and `uninstall_postflight` are not evaluated until install time or uninstall
 time.  Within a block, you may refer to the `@cask` instance variable, and
 invoke any method available on `@cask`.
 
-### Postflight Mini-DSL
+### \*flight Mini-DSL
 
-There is a mini-DSL available within `postflight` blocks.
+There is a mini-DSL available within these blocks.
 
-The following methods may be called to perform standard postflight tasks:
+The following methods may be called to perform standard tasks:
 
-| method                          | description |
-| ------------------------------- | ----------- |
-| `plist_set(key, value)`         | set a value in the `Info.plist` file for the app bundle.  Example: [`rubymine.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/rubymine.rb#L12)
-| `suppress_move_to_applications` | suppress a dialog asking the user to move the app to the `/Applications` folder.  Example: [`github.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/github.rb#L13).
+| method                                    | availability                        | description |
+| ----------------------------------------- | ----------------------------------- | ----------- |
+| `plist_set(key, value)`                   | `postflight`, `uninstall_preflight` | set a value in the `Info.plist` file for the app bundle.  Example: [`rubymine.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/rubymine.rb#L12)
+| `set_ownership(paths)`                    | `postflight`, `uninstall_preflight` | set user and group ownership of `paths`. Example: [`unifi-controller.rb`](https://github.com/caskroom/homebrew-cask/blob/8a452a41707af6a661049da6254571090fac5418/Casks/unifi-controller.rb#L13)
+| `set_permissions(paths, permissions_str)` | `postflight`, `uninstall_preflight` | set permissions in `paths` to `permissions_str` Example: [`docker-machine.rb`](https://github.com/caskroom/homebrew-cask/blob/8a452a41707af6a661049da6254571090fac5418/Casks/docker-machine.rb#L16)
+| `suppress_move_to_applications`           | `postflight`                        | suppress a dialog asking the user to move the app to the `/Applications` folder.  Example: [`github.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/github.rb#L13).
 
 `plist_set` currently has the limitation that it only operates on the
 bundle indicated by the first `app` stanza (and the Cask must contain
 an `app` stanza).
+
+`set_ownership(paths)` defaults user ownership to the current user and
+group ownership to 'staff'. These can be changed by passing in extra options:
+`set_ownership(paths, user: 'user', group: 'group')`.
 
 `suppress_move_to_applications` optionally accepts a `:key` parameter for
 apps which use a nonstandard `defaults` key.  Example: [`alfred.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/alfred.rb).

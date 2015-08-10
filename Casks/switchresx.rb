@@ -1,6 +1,6 @@
 cask :v1 => 'switchresx' do
   version '4.5.1'
-  sha256 'b4995cb72046cc2d0ef47d81ec885ca8bc32e52fe80f5bd50f561cb00c06b212'
+  sha256 '6d044b3be800f8e8c34a4b87cad7100d69a40b165f6e12297aa42516891b7aed'
 
   url "http://www.madrau.com/data/switchresx/SwitchResX#{version.to_i}.zip"
   name 'SwitchResX'

@@ -1,6 +1,6 @@
 cask :v1 => 'macupdate-desktop' do
-  version '6.0.7'
-  sha256 'b30a41ac76bcf705c4e2699171f1556c091699632b62f586353547a62496610e'
+  version '6.0.8'
+  sha256 '79b41692aa623e922455f2ca93b19b6dae1946ea2e48b052df9310e293a2cb1f'
 
   url "http://cdn.macupdate.com/MacUpdateDesktop#{version}.zip"
   appcast 'http://www.macupdate.com/desktop/updates.xml',

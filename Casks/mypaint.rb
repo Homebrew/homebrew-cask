@@ -6,7 +6,7 @@ cask :v1 => 'mypaint' do
   url "https://dl.dropbox.com/u/942685/MyPaint-#{version}.pkg"
   name 'MyPaint'
   homepage 'http://mypaint.intilinux.com'
-  license :oss
+  license :gpl
 
   pkg "MyPaint-#{version}.pkg"
 

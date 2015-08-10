@@ -1,11 +1,11 @@
 cask :v1 => 'plotdevice' do
-  version '0.9.4'
-  sha256 '70c7e484aa6de254095dce7ff1005e9b778b1fc02d4f8d27f0ee20ecdebba5c2'
+  version '0.10.0'
+  sha256 '8c224f228c5b014e76925339171f4207a0b4a09f595500703d791cb689a32e8d'
 
   url "http://plotdevice.io/app/PlotDevice_app-#{version}.zip"
   name 'PlotDevice'
   appcast 'http://plotdevice.io/app.xml',
-          :sha256 => 'ff2cccb9627a86b963d74727ae75c4dc2c1f90e3574fce71218b631d81b168a3'
+          :sha256 => '9a4327cb2b20c88921825197fb7b64daa382e59f8f8262dbc93f0236cf75ed4e'
   homepage 'http://plotdevice.io/'
   license :oss
 

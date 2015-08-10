@@ -1,6 +1,6 @@
 cask :v1 => 'xamarin-mdk' do
-  version '3.12.0.68'
-  sha256 '9591affdb4a342cbba3da0a1d7013592f1c801e2deb7eb70ec9cc1545dda468a'
+  version '4.0.2.5'
+  sha256 '5b8c4a9fee009a644769a88ab480aa3032fda9777df043543d8df5f430fc491d'
 
   url "https://download.xamarin.com/MonoFrameworkMDK/Macx86/MonoFramework-MDK-#{version}.macos10.xamarin.x86.pkg"
   name 'Xamarin Mono MDK'

@@ -30,6 +30,8 @@ MAINTAINERS = %w[
                   radeksimko
                   federicobond
                   claui
+                  jawshooah
+                  Ngrd
                   caskroom
                  ]
 

@@ -35,7 +35,7 @@ describe Hbc::Artifact::Uninstall do
       Hbc::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application id "my.fancy.package.app" to quit'])
 
       Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', @cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool'), '--please'])
-      Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-rf', '--', '/permissible/absolute/path'])
+      Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-rf', '--', Pathname.new('/permissible/absolute/path'), Pathname.new('~/permissible/path/with/tilde').expand_path])
       Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-f', '--', Pathname.new(TestHelper.local_binary_path('empty_directory')).join('.DS_Store')])
       Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rmdir', '--', Pathname.new(TestHelper.local_binary_path('empty_directory'))])
 
@@ -118,7 +118,6 @@ describe Hbc::Artifact::Uninstall do
       )
 
       Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/launchctl', 'remove', 'my.fancy.package.service'])
-      Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/launchctl', 'unload', '-w', '--', 'my.fancy.package.service'])
 
       Hbc::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/sbin/kextstat', '-l', '-b', 'my.fancy.package.kernelextension'], 'loaded')
       Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/sbin/kextunload', '-b', 'my.fancy.package.kernelextension'])

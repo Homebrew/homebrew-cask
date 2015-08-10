@@ -59,20 +59,6 @@ Some applications such as Thunderbird or Firefox provides many localized version
 
 Applications that auto-update such as Firefox, Thunderbird or VLC will do so as usual, nothing will be broken. A minor issue however is that the application will still be located in a versioned folder even though the version has changed. For example, the application might be installed in /opt/homebrew-cask/Caskroom/mygreatapp/1.3 even though the version number is now 1.4.
 
-## Is this the same project I used to Tap at phinze/homebrew-cask ?
-
-Yes. The original repo at https://github.com/phinze/homebrew-cask has moved
-under the organizational umbrella at https://github.com/caskroom/homebrew-cask .
-
-Web redirection happens automatically.
-
-The location of the Homebrew-cask Tap on disk has also changed.  If you have
-a very old installation, you may need to run:
-
-```bash
-$ brew untap phinze/cask; brew tap caskroom/cask
-```
-
 ## `brew cask list` shows that a package is installed, but when I try to do `brew cask uninstall`, it tells me that the package is not installed. Help!
 
 This is a problem with the bookkeeping in the current implementation of Cask, which gets confused if a cask is updated after installation. For now, use the `brew cask uninstall --force` to uninstall these packages.
