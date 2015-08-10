@@ -1,4 +1,4 @@
-cask :v1 => 'aja-system-test' do
+cask :v1 => 'geotag' do
 
   if MacOS.release <= :mountain_lion
     version '2.2'
