@@ -7,7 +7,15 @@ cask :v1 => 'uninstallpkg' do
           :sha256 => '98d2be956abe6a474278bfebdbec2c06570b1188d8242b4bdbb0dcf9a72127f2'
   name 'UninstallPKG'
   homepage 'https://www.corecode.at/uninstallpkg/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   app 'UninstallPKG.app'
+
+  zap :delete => [
+                  '~/Library/Preferences/com.corecode.UninstallPKG.plist',
+                  '~/Library/Application Support/UninstallPKG/',
+                  '~/Library/Saved Application State/com.corecode.UninstallPKG.savedState/',
+                  '/Library/PrivilegedHelperTools/com.corecode.UninstallPKGDeleteHelper',
+                  '/Library/LaunchDaemons/com.corecode.UninstallPKGDeleteHelper.plist'
+                 ]
 end
