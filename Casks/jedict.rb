@@ -1,6 +1,6 @@
 cask :v1 => 'jedict' do
-  version '4.9.5'
-  sha256 '6286c5f46e6c1404f007b364cc2baa3d7ce074c108be9c37de1270aca19bba78'
+  version '4.9.6'
+  sha256 '99dc7bd641a708c4d09e975e136c0dd05597620f2f47a77817b4604fc1731b9b'
 
   url "http://jedict.com/Downloads/JEDict#{version.gsub('.','')}.zip"
   name 'Jedict'
