@@ -1,8 +1,9 @@
 cask :v1 => 'cycling74-max' do
-  version '7.0.4-150625'
-  sha256 'e00be5bbef8085268aa0545a354074cf8181ca159e3fe30e1eb55d974a0df7a3'
+  version '7.0.5_150727'
+  sha256 '61d5d5e0a4ca4d56a1bffbc49343b5624c02f0a707bfed943e8c0eb15c91c557'
 
-  url "https://filepivot.appspot.com/projects/maxmspjitter/files/Max#{version.sub('-','_').gsub('.','')}.dmg"
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.sub('-','_').gsub('.','')}.dmg"
   name 'Max'
   homepage 'https://cycling74.com/'
   license :commercial
