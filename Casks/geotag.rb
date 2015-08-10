@@ -10,7 +10,7 @@ cask :v1 => 'geotag' do
   url "http://www.snafu.org/GeoTag/GeoTag-#{version}.dmg"
   name 'GeoTag'
   homepage 'http://www.snafu.org/GeoTag/'
-  license :unknown
+  license :cc
 
   app 'GeoTag.app'
 end
