@@ -13,7 +13,7 @@ cask :v1 => 'python' do
                        "/Library/Receipts/Python*-#{version.slice(/\d+\.\d+/)}.pkg",
                        "/Applications/Python #{version.slice(/\d+\.\d+/)}",
                        "/Library/Frameworks/Python.Framework/Versions/#{version.slice(/\d+\.\d+/)}",
-                       "/Library/Python/#{version.slice(/\d+\.\d+/)}",
+                       "/Library/Python/#{version.slice(/\d+\.\d+/)}"
                        ]
 
   zap :delete => "~/Library/Python/#{version.slice(/\d+\.\d+/)}"
