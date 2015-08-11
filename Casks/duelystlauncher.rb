@@ -11,7 +11,7 @@ cask :v1 => 'duelystlauncher' do
   app 'DuelystLauncher.app'
 
   uninstall :delete => '~/.counterplay'
-  
+
   zap :delete => [
                   '~/Library/Application Support/Duelyst',
                   '~/Library/Application Support/DuelystLauncher',
