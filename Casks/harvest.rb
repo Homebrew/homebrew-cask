@@ -1,6 +1,6 @@
 cask :v1 => 'harvest' do
-  version '1.4.3'
-  sha256 'fc4bac07ab6aff2fd5d1e9aa1ef653bb5b6b4b44322acecb1d5b01e1d10eb1dd'
+  version '1.4.2'
+  sha256 '1c1945d27b87943ca62d125d6f125ab9d3222ca62e028c062759e41892296e39'
 
   url "https://www.getharvest.com/harvest/mac/Harvest.#{version}.zip"
   appcast 'https://www.getharvest.com/harvest/mac/appcast.xml'
