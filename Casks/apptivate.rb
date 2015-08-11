@@ -5,7 +5,7 @@ cask :v1 => 'apptivate' do
   url 'http://www.apptivateapp.com/resources/Apptivate.app.zip'
   name 'Apptivate'
   homepage 'http://www.apptivateapp.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Apptivate.app'
 end
