@@ -31,5 +31,7 @@ cask :v1 => 'github-desktop' do
                   '~/Library/Caches/GitHub for Mac',
                   '~/Library/Caches/com.github.GitHub',
                   '~/Library/Containers/com.github.GitHub.Conduit',
+                  '~/Library/Preferences/com.github.GitHub.LSSharedFileList.plist',
+                  '~/Library/Preferences/com.github.GitHub.plist',
                  ]
 end
