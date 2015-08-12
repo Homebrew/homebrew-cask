@@ -11,6 +11,17 @@ class Hbc::CaskNotInstalledError < Hbc::CaskError
   end
 end
 
+class Hbc::CaskUninstallVersionError < Hbc::CaskError
+  attr_reader :token
+  def initialize(token)
+    @token = token
+  end
+
+  def to_s
+    "#{token} has an updated version, use uninstall --force to remove"
+  end
+end
+
 class Hbc::CaskUnavailableError < Hbc::CaskError
   attr_reader :token
   def initialize(token)
