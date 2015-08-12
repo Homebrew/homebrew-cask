@@ -1,6 +1,6 @@
 cask :v1 => 'netgeargenie' do
-  version '2.3.1.12(2014-11-27_11-00)'
-  sha256 'fd3fea9f6f71819797133a16cd55412df979d5275c963b76392de66c1bb6a895'
+  version '2.4.6(2015-7-14_13-30)'
+  sha256 '15ef4128ae36f89edb0f0b382d3dbc75eb654bff2949253432eb29d290172678'
 
   url 'http://updates1.netgear.com/netgeargenie/mac/update/NETGEARGenieInstaller.dmg'
   name 'NETGEARGenie'
