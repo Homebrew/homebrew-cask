@@ -4,13 +4,13 @@ cask :v1 => 'karabiner' do
 
   url "https://pqrs.org/osx/karabiner/files/Karabiner-#{version}.dmg"
   appcast 'https://pqrs.org/osx/karabiner/files/appcast.xml',
-          :sha256 => '5be44fb038e6b4842367e5186c9e2a366117e49691c778367dbb5d92dfb97bd5'
+          :sha256 => '309c41f2569783084f4e9bf7085d2749a482fe3d3f2ca58bf9be0da89c2956a1'
   name 'Karabiner'
   name 'KeyRemap4MacBook'
   homepage 'https://pqrs.org/osx/karabiner/'
   license :public_domain
 
-  pkg 'Karabiner.pkg'
+  pkg 'Karabiner.sparkle_guided.pkg'
   binary '/Applications/Karabiner.app/Contents/Library/vendor/bin/blueutil'
   binary '/Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position'
 
