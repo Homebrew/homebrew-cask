@@ -4,16 +4,17 @@ cask :v1 => 'seil' do
 
   url "https://pqrs.org/osx/karabiner/files/Seil-#{version}.dmg"
   appcast 'https://pqrs.org/osx/karabiner/files/seil-appcast.xml',
-          :sha256 => '1491ab1babc8ec5c65d845f9b0bf68b9ef575cc46b1ec7e41696b4eeb3fa3e7e'
+          :sha256 => '4c31a2e65806980f97638ce979d8a7654fef3664af921c0ae43eb5fbf5f418b5'
   name 'Seil'
   homepage 'https://pqrs.org/osx/karabiner/seil.html'
   license :public_domain
 
-  pkg 'Seil.pkg'
+  pkg 'Seil.sparkle_guided.pkg'
 
   uninstall :quit => 'org.pqrs.Seil',
             :kext => 'org.pqrs.driver.Seil',
             :pkgutil => 'org.pqrs.driver.Seil'
+
   zap       :delete => [
                         '~/Library/Caches/org.pqrs.PCKeyboardHack',
                         '~/Library/Caches/org.pqrs.Seil',
