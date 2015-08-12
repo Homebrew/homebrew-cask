@@ -1,5 +1,7 @@
 # Homebrew-Cask
 
+### Important 12/Aug/2015 update: Homebrew-cask will change its behaviour from linking apps to moving them. See [issue #13201](https://github.com/caskroom/homebrew-cask/issues/13201) for details.
+
 _“To install, drag this icon…” no more!_
 
 Let's see if we can get the elegance, simplicity, and speed of Homebrew for the
