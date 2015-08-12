@@ -8,11 +8,10 @@ cask :v1 => 'bittorrent' do
   license :freemium
 
   installer :manual => 'Bittorrent.app'
-  uninstall :trash =>
-    [
-      '/Applications/BitTorrent.app',
-    ]
-  zap :trash =>
+
+  uninstall :delete => '/Applications/BitTorrent.app'
+
+  zap :delete =>
     [
       '~/Library/Preferences/com.com.bittorrent.BitTorrent.plist',
       '~/Library/Application Support/BitTorrent',
