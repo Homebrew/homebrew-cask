@@ -6,8 +6,8 @@ cask :v1 => 'rawtherapee' do
 
     url "http://rawtherapee.com/releases_head/mac/RawTherapee_OSX_10.6_64_#{version}.zip"
   else
-    version '4.2.210'
-    sha256 '4214e100c5374ed4abf7328d95b41ad395e9aa8a722ab66ec7eac40cc8e4eff8'
+    version '4.2.270'
+    sha256 'de237c5d0c8ad6137d60c7c2d7de795a8c5ef17d37c87b8dbef6a473d4919477'
 
     url "http://rawtherapee.com/releases_head/mac/RawTherapee_OSX_10.10_64_#{version}.zip"
   end
