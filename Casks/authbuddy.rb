@@ -5,7 +5,7 @@ cask :v1 => 'authbuddy' do
   url 'https://www.dssw.co.uk/authbuddy/dsswauthbuddy.dmg'
   name 'authbuddy'
   homepage 'https://www.dssw.co.uk/authbuddy'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   pkg 'DssW authbuddy.pkg'
 

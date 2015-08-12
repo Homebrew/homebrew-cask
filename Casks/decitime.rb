@@ -3,7 +3,7 @@ cask :v1 => 'decitime' do
   sha256 '3fcd9d6af7cf4710abd42df4db418432ca1758ba8db7affecb1a466d1996f877'
 
   # filewell.com is the official download host per the vendor homepage
-  url "http://download.filewell.com/DeciTime#{version.gsub('.','')}.dmg.zip"
+  url "http://download.filewell.com/DeciTime#{version.delete('.')}.dmg.zip"
   name 'DeciTime'
   homepage 'http://www.tinbert.com/DeciTimeMac/'
   license :oss

@@ -8,7 +8,7 @@ cask :v1 => 'usb-overdrive' do
   end
 
   # senlick.com is the official download host per the vendor homepage
-  url "http://www.senlick.com/macsw/USB-Overdrive-#{version.gsub('.','')}.dmg"
+  url "http://www.senlick.com/macsw/USB-Overdrive-#{version.delete('.')}.dmg"
   name 'USB Overdrive'
   homepage 'http://www.usboverdrive.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

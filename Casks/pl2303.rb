@@ -11,7 +11,7 @@ cask :v1 => 'pl2303' do
 
   depends_on :macos => '>= 10.6'
 
-  uninstall :pkgutil => "com.prolific.prolificUsbserialCableDriverV#{version.gsub('.','')}.ProlificUsbSerial.pkg",
+  uninstall :pkgutil => "com.prolific.prolificUsbserialCableDriverV#{version.delete('.')}.ProlificUsbSerial.pkg",
             :kext => 'com.prolific.driver.PL2303',
             :delete => [
                         '/System/Library/Extensions/ProlificUsbSerial.kext',
