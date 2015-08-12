@@ -1,6 +1,6 @@
 cask :v1 => 'flash' do
-  version '18.0.0.209'
-  sha256 '67b9d3ec4b29f62cc1b54324855da6c9498d798f01629dd336a84ee5702c91d0'
+  version '18.0.0.232'
+  sha256 '565d4cad0a98dc755bb99af00a34623c2f6e63adf05484af2c9bdcbd0e2fb0f6'
 
   # macromedia.com is the official download host per the vendor homepage
   url "https://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_#{version.to_i}_osx_pkg.dmg"
