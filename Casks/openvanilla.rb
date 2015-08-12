@@ -8,6 +8,7 @@ cask :v1 => 'openvanilla' do
   license :mit
 
   input_method 'OpenVanillaInstaller.app/Contents/Resources/OpenVanilla.app'
+
   caveats do
     logout
   end
