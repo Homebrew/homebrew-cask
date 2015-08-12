@@ -8,7 +8,7 @@ cask :v1 => 'vrep' do
   license :other
 
   suite "V-REP_PRO_EDU_V#{version.gsub('.', '_')}_Mac"
-  
+
   caveats do
     free_license 'http://www.coppeliarobotics.com/licensing.html'
   end
