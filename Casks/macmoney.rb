@@ -1,6 +1,6 @@
 cask :v1 => 'macmoney' do
-  version '3.7'
-  sha256 'cc4b7524f340a4c66f793c86736254d431c65dbdb21ec9e8b25c06ea737f084f'
+  version '3.7.1'
+  sha256 '65c24dafbb957f2f050c10dafe39756f04a1dc12e2d8f3016e00a5347dcb5171'
 
   url 'http://www.devon.riceball.net/downloads/macmoney37.zip'
   name 'MacMoney'
