@@ -1,6 +1,6 @@
 cask :v1 => 'seil' do
-  version '11.2.0'
-  sha256 '783426d11dbc2e75fdce3410ad8433f58d69b9a46696828f63f69e4847c53547'
+  version '11.3.0'
+  sha256 '5fd57db4f96b833c4f1005b3d68711bb9ea52f0db8e98a0793eb2a9ff5d290b2'
 
   url "https://pqrs.org/osx/karabiner/files/Seil-#{version}.dmg"
   appcast 'https://pqrs.org/osx/karabiner/files/seil-appcast.xml',
