@@ -5,7 +5,7 @@ cask :v1 => 'bittorrent' do
   url 'http://download-new.utorrent.com/os/osx/track/stable/endpoint/btmac'
   name 'BitTorrent'
   homepage 'http://www.bittorrent.com'
-  license :freemium
+  license :gratis
 
   installer :manual => 'Bittorrent.app'
 
