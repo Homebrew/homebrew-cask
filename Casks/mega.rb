@@ -9,6 +9,6 @@ cask :v1 => 'mega' do
 
   app "MEGA#{version}-mac.app"
 
-  depends_on :macos => '>= 10.6'
+  depends_on :macos => '>= :snow_leopard'
   depends_on :arch => :intel
 end
