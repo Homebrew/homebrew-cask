@@ -6,7 +6,7 @@ cask :v1 => 'chatology' do
   appcast 'https://flexibits.com/chatology/appcast.php'
   name 'Chatology'
   homepage 'https://flexibits.com/chatology'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Chatology.app'
 end
