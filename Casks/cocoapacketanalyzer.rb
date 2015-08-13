@@ -7,7 +7,7 @@ cask :v1 => 'cocoapacketanalyzer' do
           :sha256 => 'e5471a829511ba4c4dd1cbf89bc2ea091fe5f27cc5eaae19fecffc94f8384f8a'
   name 'Cocoa Packet Analyzer'
   homepage 'http://www.tastycocoabytes.com/cpa/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'CocoaPacketAnalyzer.app'
 end
