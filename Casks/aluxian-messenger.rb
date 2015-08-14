@@ -9,4 +9,10 @@ cask :v1 => 'aluxian-messenger' do
   license :oss
 
   app 'Messenger.app'
+
+  zap :delete => [
+                  '~/Library/Preferences/com.aluxian.messengerfordesktop.plist',
+                  '~/Library/Application Support/Messenger/',
+                  '~/Library/Saved Application State/com.aluxian.messengerfordesktop.savedState/'
+                 ]
 end

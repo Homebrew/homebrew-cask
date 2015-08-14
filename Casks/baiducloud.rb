@@ -1,6 +1,6 @@
 cask :v1 => 'baiducloud' do
-  version '2.4.3'
-  sha256 'f8e1f5afa3e1cbdac4d3d859f2f8da41093e37afbb51959ab6ee6b2dc91fc069'
+  version '2.4.4'
+  sha256 '0a1a438f9ab69d67f0d53d585f0a8c5db7fdbb84ab0c0df55fc06068a67b8149'
 
   url "http://bcscdn.baidu.com/netdisk/BaiduYun_#{version}.dmg"
   name '百度云同步盘'

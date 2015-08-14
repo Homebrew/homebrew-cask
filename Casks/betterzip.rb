@@ -1,11 +1,11 @@
 cask :v1 => 'betterzip' do
-  version :latest
-  sha256 :no_check
+  version '3.0.1'
+  sha256 '8a462fd36470968e4f570ec9e8f7c4c21a564666086316f58a2bc3de82eb3043'
 
-  url 'http://macitbetter.com/BetterZip.zip'
+  url "http://macitbetter.com/dl/BetterZip-#{version}.zip"
   name 'BetterZip'
-  appcast 'http://macitbetter.com/BetterZip2.rss',
-          :sha256 => '63e78ce25d5d8f3f75fdb5a9b51f55a54c4d93e98393ab45da32c22a0fb69205'
+  appcast 'http://macitbetter.com/BetterZip3.rss',
+          :sha256 => 'fe0b1be2acc6c53ae8933f5921144831ce31232a946cb165b1374896f6ad6a11'
   homepage 'http://macitbetter.com'
   license :commercial
 

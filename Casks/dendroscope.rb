@@ -8,5 +8,19 @@ cask :v1 => 'dendroscope' do
   homepage 'http://dendroscope.org/'
   license :gpl
 
-  installer :manual => 'Dendroscope Installer.app'
+  preflight do
+    system "#{staged_path}/Dendroscope Installer.app/Contents/MacOS/JavaApplicationStub", '-q', '-dir', "#{staged_path}"
+  end
+
+  app 'Dendroscope.app'
+
+  uninstall_preflight do
+    system "#{staged_path}/Dendroscope Uninstaller.app/Contents/MacOS/JavaApplicationStub", '-q'
+  end
+
+  caveats <<-EOS.undent
+    #{token} requires Java. You can install the latest version with
+
+      brew cask install java
+  EOS
 end

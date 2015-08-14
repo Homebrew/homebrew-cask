@@ -4,7 +4,7 @@ cask :v1 => 'airmedia' do
 
   url "http://www.crestron.com/downloads/software/airmedia_guest_os_x_#{version}.dmg"
   name 'Crestron AirMedia'
-  homepage 'http://www.crestron.com/'
+  homepage 'http://www.crestron.com/airmedia'
   license :gratis
 
   app 'AirMedia.app'

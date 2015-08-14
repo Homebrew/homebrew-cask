@@ -10,8 +10,8 @@ cask :v1 => 'ksdiff' do
   pkg 'Install ksdiff.pkg'
 
   uninstall :pkgutil => 'com.blackpixel.kaleidoscope.ksdiff.installer.pkg'
-  # todo
-  # conflicts_with :cask => 'kaleidoscope'
+
+  conflicts_with :cask => 'kaleidoscope'
 
   caveats <<-EOS.undent
     The #{token} Cask is not needed when installing Kaleidoscope via Cask. It

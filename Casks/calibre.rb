@@ -4,8 +4,8 @@ cask :v1 => 'calibre' do
     sha256 '0533283965fbc9a6618d0b27c85bdf3671fe75ff0e89eeff406fe1457ee61b14'
     url "http://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
   else
-    version '2.33.0'
-    sha256 '4f7e8e884d77512ea01cbd78143c6a44c8fddd8860b754a1053254aa1bcb7c6e'
+    version '2.35.0'
+    sha256 'ad68a5723b16de451a7ec5ad1c755c66115aa1f8d79fb3e200adc15aaf2f80cf'
 
     # github.com is an official download host per the vendor homepage, and a faster mirror than the main one
     url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg"

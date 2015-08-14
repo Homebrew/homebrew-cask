@@ -1,8 +1,8 @@
 cask :v1 => 'ghostlab' do
-  version :latest
-  sha256 :no_check
+  version '2.0.8'
+  sha256 '5723c0e3d13d21001c903982d87a7b9867cac7f42fa80e78adb6af3757a679cd'
 
-  url 'http://awesome.vanamco.com/Ghostlab2/downloads/Ghostlab2.dmg'
+  url "http://awesome.vanamco.com/Ghostlab2/update/packages/mac/Ghostlab2-#{version}.zip"
   appcast 'http://awesome.vanamco.com/Ghostlab2/update/ghostlab2-cast.xml'
   name 'Ghostlab'
   homepage 'http://vanamco.com/ghostlab/'

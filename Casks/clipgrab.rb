@@ -1,6 +1,6 @@
 cask :v1 => 'clipgrab' do
-  version '3.4.10'
-  sha256 '36f241edd2b0894782e8ef3229779fa565078832c5cb29646ca219d51c2e0889'
+  version '3.5.1'
+  sha256 '6fcb973702798973acf1ae1fea60ece2b34f4926a7c8ff1f2cc71bbe2b990dff'
 
   url "http://download.clipgrab.de/ClipGrab-#{version}.dmg"
   name 'ClipGrab'

@@ -7,7 +7,7 @@ cask :v1 => 'dupin' do
     sha256 'e5dbb32d06fb25208f3b9e679a495831fcc505536e66720b668c0e2eeb40af39'
   end
 
-  url "http://dougscripts.com/itunes/scrx/dupinv#{version.gsub('.','')}.zip"
+  url "http://dougscripts.com/itunes/scrx/dupinv#{version.delete('.')}.zip"
   appcast 'http://dougscripts.com/itunes/itinfo/dupin_appcast.xml',
           :sha256 => '7d8ad3a9a08acc11723de678f2a6b542eb832c1e16cd33546fe6550656634778'
   name 'Dupin'

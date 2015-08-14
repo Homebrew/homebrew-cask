@@ -1,4 +1,4 @@
-cask :v1 => 'quick-search-box' do
+cask :v1_1 => 'quick-search-box' do
   version '2.0.0.1447'
   sha256 '3fec80343c50a5b492e140fef13bd1bc4cce835beb3952591e8b4638e5940470'
 
@@ -11,7 +11,7 @@ cask :v1 => 'quick-search-box' do
   app 'Quick Search Box.app'
 
   postflight do
-    system '/bin/chmod', '-R', '--', 'u+w', staged_path
+    set_permissions staged_path, 'u+w'
   end
 
   zap :delete => '~/Library/Application Support/Google/Quick Search Box',

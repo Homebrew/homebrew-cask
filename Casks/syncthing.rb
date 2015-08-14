@@ -1,5 +1,5 @@
 cask :v1 => 'syncthing' do
-  version '0.11.17'
+  version '0.11.18'
   appcast 'https://github.com/syncthing/syncthing/releases.atom'
   name 'Syncthing'
   homepage 'https://syncthing.net'
@@ -7,11 +7,11 @@ cask :v1 => 'syncthing' do
 
   if Hardware::CPU.is_32_bit?
     url "https://github.com/syncthing/syncthing/releases/download/v#{version}/syncthing-macosx-386-v#{version}.tar.gz"
-    sha256 'a68e11b315374aa9f84cce1547d262c6cc3e7d4027a22c39847a13f4bfd42082'
+    sha256 'f16a852b26bd80690f00404f38a33fc4691893fb2cb3da2620a9b90101b5a0bd'
     binary "syncthing-macosx-386-v#{version}/syncthing"
   else
     url "https://github.com/syncthing/syncthing/releases/download/v#{version}/syncthing-macosx-amd64-v#{version}.tar.gz"
-    sha256 '0e683b66b0869522b5f646e70c7f2bc7f806695a46ac279f921513482664a256'
+    sha256 '7a39683a4b22d24dfc7107011ad0b3315f57ef42a793f5b8bc18216a80229d8f'
     binary "syncthing-macosx-amd64-v#{version}/syncthing"
   end
 
