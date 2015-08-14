@@ -1,10 +1,10 @@
 cask :v1 => 'clipy' do
-  version '1.0.2'
-  sha256 'e8f09e7ad766f71e6f780c8a05f5cbdf5c71465c4586263f8b73a8e9ae632d93'
+  version '1.0.3'
+  sha256 '888476b91f7df5a2cef83901f7b426aab17dac4448ada0e60ada9b024751aeee'
 
   url "https://github.com/Clipy/Clipy/releases/download/#{version}/Clipy_#{version}.dmg"
   appcast 'http://clipy-app.com/appcast.xml',
-          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+          :sha256 => '888476b91f7df5a2cef83901f7b426aab17dac4448ada0e60ada9b024751aeee',
           :format => :sparkle
   name 'Clipy'
   homepage 'http://clipy-app.com/'
