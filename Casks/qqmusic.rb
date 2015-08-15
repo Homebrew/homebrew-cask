@@ -8,4 +8,12 @@ cask :v1 => 'qqmusic' do
   license :commercial
 
   app 'QQMusic.app'
+
+  uninstall :quit => 'com.tencent.QQMusicMac'
+
+  zap :delete => [
+                  '~/Library/Caches/com.tencent.QQMusicMac',
+                  '~/Library/Preferences/com.tencent.QQMusicMac.plist',
+                  '~/Library/Saved Application State/com.tencent.QQMusicMac.savedState'
+                 ]
 end
