@@ -1,6 +1,6 @@
 cask :v1 => 'hobo' do
-  version '1.1.3'
-  sha256 '6d04960efe0b9c4b4a7fad55be660640b1f85ca9a94d591a1a292218bf1a2b9b'
+  version '1.1.4'
+  sha256 'ff7b28a846ed10387d1d4bca18cbb514a735d1374798b03cf540adf5c27890c2'
 
   # netdna-ssl.com is the official download host per the vendor homepage
   url "https://downloads-clickonideas.netdna-ssl.com/hobo/hobo_#{version}.zip"
