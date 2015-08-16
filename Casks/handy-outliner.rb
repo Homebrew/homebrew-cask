@@ -2,7 +2,7 @@ cask :v1 => 'handy-outliner' do
   version '1.1.6.2'
   sha256 'a67a21650d29114c058e1f50bce3675e7c7b427abdd67a60e49098a31046d14d'
 
-  url "http://sourceforge.net/projects/handyoutlinerfo/files/#{version}/handyoutliner_#{version}.zip/download"
+  url "http://downloads.sourceforge.net/handyoutlinerfo/handyoutliner_#{version}.zip"
   name 'HandyOutliner for DjVu and PDF'
   homepage 'http://handyoutlinerfo.sourceforge.net'
   license :gpl
@@ -12,11 +12,11 @@ cask :v1 => 'handy-outliner' do
 
   preflight do
     FileUtils.touch "#{staged_path}/handy-outliner"
-    handyOutliner = File.open "#{staged_path}/handy-outliner", 'w'
-    handyOutliner.puts '# !/bin/bash'
-    handyOutliner.puts 'BASEDIR=$(dirname "$(readlink -n $0)")'
-    handyOutliner.puts "$BASEDIR/handyoutliner_#{version}/start-macos"
-    handyOutliner.close
+    handy_outliner = File.open "#{staged_path}/handy-outliner", 'w'
+    handy_outliner.puts '# !/bin/bash'
+    handy_outliner.puts 'BASEDIR=$(dirname "$(readlink -n $0)")'
+    handy_outliner.puts "$BASEDIR/handyoutliner_#{version}/start-macos"
+    handy_outliner.close
   end
 
   binary 'handy-outliner'
