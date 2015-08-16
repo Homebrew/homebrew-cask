@@ -10,4 +10,14 @@ cask :v1 => 'aliwangwang' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'AliWangwang.app'
+
+  uninstall :quit => 'com.taobao.aliwangwang'
+
+  zap :delete => [
+                  '~/Library/Caches/com.taobao.aliwangwang',
+                  '~/Library/Containers/com.taobao.aliwangwang',
+                  '~/Library/Internet Plug-Ins/WangwangPlugin.plugin',
+                  '~/Library/Preferences/com.taobao.aliwangwang.plist',
+                  '~/Library/Saved Application State/com.taobao.aliwangwang.savedState'
+                 ]
 end
