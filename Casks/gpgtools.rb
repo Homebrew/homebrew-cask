@@ -1,6 +1,6 @@
 cask :v1 => 'gpgtools' do
-  version '2015.06'
-  sha256 '298aa816aaeb45f6feefd7d7142caacb330770a9c3ff75a14fd544d7754680ee'
+  version '2015.08'
+  sha256 '8c3e34fa6a6d579e413ed278b0c50a54150793741dbba40923621d37efafafa2'
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   gpg "#{url}.sig",
