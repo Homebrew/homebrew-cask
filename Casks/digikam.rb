@@ -1,6 +1,6 @@
 cask :v1 => 'digikam' do
-  version '4.11.0'
-  sha256 'cfc3f1ec5963ba8a16e63cd998f8fdfd5de29586a1e172e546c05bc3bbecf751'
+  version '4.12.0'
+  sha256 'dfc4ec4226aca026175b84e7d285837e28e95439e44e99897321ab3e2a450317'
 
   url "http://download.kde.org/stable/digikam/digikam-#{version}-Yosemite.pkg"
   name 'digiKam'
