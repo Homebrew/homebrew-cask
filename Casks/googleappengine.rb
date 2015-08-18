@@ -1,6 +1,6 @@
 cask :v1 => 'googleappengine' do
-  version '1.9.24'
-  sha256 '0b3410ef8240d6b88b792e2e58a3ce0299dc3830778db3e0f1d9f7eb2b8f608c'
+  version '1.9.25'
+  sha256 'e3b69ef42262477a2e925783a8ce8856d81ffc4535595bd43d2d57d1e7d1c3ac'
 
   # googleapis.com is the official download host per the vendor homepage
   url "https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-#{version}.dmg"
