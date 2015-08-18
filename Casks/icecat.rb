@@ -1,6 +1,6 @@
 cask :v1 => 'icecat' do
-  version '31.7.0'
-  sha256 'f650d3bb8f983a3dfab0576c05e0f40637976a1e6084f3d1ad23a8d33c02eaee'
+  version '31.8.0'
+  sha256 'd5ec5308bba40f8498f89cd70c5bfb2ce51370543a326c0e9697cbeb5c41c0c9'
 
   url "https://ftp.gnu.org/gnu/gnuzilla/#{version}/icecat-#{version}.en-US.mac.dmg"
   name 'IceCat'
