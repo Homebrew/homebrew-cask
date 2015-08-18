@@ -1,6 +1,6 @@
 cask :v1 => 'mps' do
-  version '3.2.1'
-  sha256 '3122634120c347c4ebb6e4a2de98f30fc9fa63427b607063ebb7096f4d4aec4e'
+  version '3.2.3'
+  sha256 'cf6e842fbfe28035f2ab6fc4c39e97d82609ca72d5d6ffc486026772b5ddf35e'
 
   url "http://download-cf.jetbrains.com/mps/#{version.tr('.','')[0,2]}/MPS-#{version}-macos.dmg"
   name 'MPS'
