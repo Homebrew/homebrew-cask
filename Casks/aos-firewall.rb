@@ -12,5 +12,6 @@ cask :v1 => 'aos-firewall' do
   uninstall :pkgutil => [
                          'com.ahnlab.aosFirewall.*',
                          'com.ahnlab.firewall.*'
-                        ]
+                        ],
+            :delate => '/Users/Root/Library/Application Support/AhnLab'
 end
