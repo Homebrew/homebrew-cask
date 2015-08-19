@@ -13,4 +13,6 @@ cask :v1 => 'aos-firewall' do
                          'com.ahnlab.aosFirewall.*',
                          'com.ahnlab.firewall.*'
                         ]
+
+  zap :delate => '/Users/Root/Library/Application Support/AhnLab'
 end
