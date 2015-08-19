@@ -2,11 +2,12 @@ cask :v1 => 'shimo' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.chungwasoft.com/files/Shimo_latest.zip'
-  appcast 'http://www.chungwasoft.com/library/appcasts/Shimo3/shimocast.php'
+  url 'http://www.feingeist.io/fg-library/download.php?appName=Shimo4'
+  appcast 'http://www.feingeist.io/fg-library/appcast.php',
+          :format => :sparkle
   name 'Shimo'
-  homepage 'http://www.chungwasoft.com/shimo/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'http://www.feingeist.io/shimo-vpn-client-for-mac/'
+  license :commercial
 
   app 'Shimo.app'
 end

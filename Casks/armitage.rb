@@ -5,7 +5,7 @@ cask :v1 => 'armitage' do
   url "http://www.fastandeasyhacking.com/download/armitage#{version.gsub('.', '')}.dmg"
   name 'Armitage'
   homepage 'http://www.fastandeasyhacking.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   app 'Armitage.app'
 end

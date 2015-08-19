@@ -1,6 +1,6 @@
 cask :v1 => 'stattransfer' do
-  version '12'
-  sha256 '2559dffffd73f996604860e6fbdf2fd3ef4903bf8a37acc6016b6ea52affebd2'
+  version '13'
+  sha256 '2a5af41ee57a0300b11e2b1e62e613fcb582cb262b731b3f8facbed4b76a4b53'
 
   url 'https://www.stattransfer.com/downloads/stdemo.dmg'
   name 'Stat/Transfer'

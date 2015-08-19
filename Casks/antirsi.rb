@@ -5,7 +5,7 @@ cask :v1 => 'antirsi' do
   url "http://sabi.net/nriley/software/AntiRSI-#{version}.zip"
   name 'AntiRSI'
   homepage 'http://sabi.net/nriley/software/#antirsi'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'AntiRSI.app'
 end

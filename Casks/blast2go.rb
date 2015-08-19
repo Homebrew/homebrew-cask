@@ -1,6 +1,6 @@
 cask :v1 => 'blast2go' do
-  version '3.0'
-  sha256 '20739dea328c65ab35a7db765e1b7e90e625c39639c0076fcacf43166be1270e'
+  version '3.1'
+  sha256 '7160b1973437474508a1522cce9bee74e5ddd8f109fc17ddca81e3b914e819d6'
 
   url "http://download.blast2go.com/html/software/blast2go/latest/#{version.gsub('.','_')}/Blast2GO_macos_#{version.gsub('.','_')}.dmg"
   name 'Blast2GO'

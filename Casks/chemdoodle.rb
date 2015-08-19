@@ -5,7 +5,7 @@ cask :v1 => 'chemdoodle' do
   url "http://www.chemdoodle.com/downloads/ChemDoodle-osx-#{version}.dmg"
   name 'ChemDoodle'
   homepage 'http://www.chemdoodle.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   suite 'ChemDoodle'
 end

@@ -1,6 +1,6 @@
 cask :v1 => 'mcedit' do
-  version '1.3.3.0'
-  sha256 '7cb746127b5d0a9f4d40bb2724ad14767df5d8d3f120781efe03a74d99c56897'
+  version '1.4.0.1'
+  sha256 'e09c7efab389cdb8dfe4bcc74fd452aa9681cc7fb1d98756c922fbe28fd82122'
 
   url "https://github.com/Khroki/MCEdit-Unified/releases/download/#{version}/MCEdit.v#{version}.OSX.64bit.zip"
   appcast 'https://github.com/Khroki/MCEdit-Unified/releases.atom'

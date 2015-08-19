@@ -6,7 +6,7 @@ cask :v1 => 'codebug' do
   appcast 'http://codebugapp.com/update.xml'
   name 'Codebug'
   homepage 'http://www.codebugapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Codebug.app'
 end

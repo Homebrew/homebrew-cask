@@ -1,17 +1,17 @@
-cask :v1 => 'github' do
-  version '208'
-  sha256 '8c1f458d273d335a4983e5918374c9e0927e19ed5c86ca9607cd1aadc2d553da'
+cask :v1 => 'github-desktop' do
+  version '210'
+  sha256 '6cc85e7a0e59f6cde9d592e7ee86fecbd2689fcc72a017e6ed83dbe160c1d2d4'
 
   # cloudfront.net is the official download host per the vendor homepage
-  url "https://d4hwcs1zqtwzs.cloudfront.net/mac/GitHub%20for%20Mac%20#{version}.zip"
+  url "https://d4hwcs1zqtwzs.cloudfront.net/mac/GitHub%20Desktop%20#{version}.zip"
   appcast 'https://central.github.com/mac/appcast.xml',
-          :sha256 => 'f67f6cc4f51758d15ff4e55173ce2976f312e5bb551b74d00198fd0d41dd9109'
-  name 'GitHub'
-  homepage 'https://mac.github.com/'
-  license :oss
+          :sha256 => 'c45108bde35ed7836d995a083ea6eb837cc43e7e6944772f95d1c8eff2b8f886'
+  name 'GitHub Desktop'
+  homepage 'https://desktop.github.com/'
+  license :gratis
 
-  app 'GitHub.app'
-  binary 'GitHub.app/Contents/MacOS/github_cli', :target => 'github'
+  app 'GitHub Desktop.app'
+  binary 'GitHub Desktop.app/Contents/MacOS/github_cli', :target => 'github'
 
   postflight do
     suppress_move_to_applications
@@ -31,5 +31,7 @@ cask :v1 => 'github' do
                   '~/Library/Caches/GitHub for Mac',
                   '~/Library/Caches/com.github.GitHub',
                   '~/Library/Containers/com.github.GitHub.Conduit',
+                  '~/Library/Preferences/com.github.GitHub.LSSharedFileList.plist',
+                  '~/Library/Preferences/com.github.GitHub.plist',
                  ]
 end

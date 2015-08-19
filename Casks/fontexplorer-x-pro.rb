@@ -2,7 +2,7 @@ cask :v1 => 'fontexplorer-x-pro' do
   version '5.0.1'
   sha256 'e75369d862a186a75dcbb9d0f61a5f99f03bd1482de02f3e71ffaa29a0828b9c'
 
-  url "http://fast.fontexplorerx.com/FontExplorerXPro#{version.gsub('.','')}.dmg"
+  url "http://fast.fontexplorerx.com/FontExplorerXPro#{version.delete('.')}.dmg"
   name 'FontExplorer X Pro'
   homepage 'https://www.fontexplorerx.com/'
   license :commercial

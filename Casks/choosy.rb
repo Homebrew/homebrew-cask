@@ -7,7 +7,7 @@ cask :v1 => 'choosy' do
           :sha256 => '6c9105f7a2d400fb6928a1b0ed2384d098ef016a319b413684723033880d1601'
   name 'Choosy'
   homepage 'http://www.choosyosx.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   prefpane 'Choosy.prefPane'
 end
