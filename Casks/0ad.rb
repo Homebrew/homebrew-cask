@@ -5,7 +5,7 @@ cask :v1 => '0ad' do
   # wildfiregames.com is the official download host per the vendor homepage
   url "http://releases.wildfiregames.com/0ad-#{version}-osx64.dmg"
   name '0 A.D.'
-  homepage 'http://www.play0ad.com/'
+  homepage 'http://play0ad.com/'
   license :oss
 
   app '0ad.app'

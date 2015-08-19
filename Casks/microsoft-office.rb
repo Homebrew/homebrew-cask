@@ -2,52 +2,43 @@ cask :v1 => 'microsoft-office' do
   version :latest
   sha256 :no_check
 
-  url 'http://officecdn.microsoft.com/pr/MacOffice2011/en-US/MicrosoftOffice2011.dmg'
+  url 'http://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/Microsoft_Office_2016_Installer.pkg'
   name 'Microsoft Office'
   homepage 'https://www.microsoft.com/mac'
   license :commercial
 
-  pkg 'Office Installer.pkg'
+  depends_on :macos => '>= :yosemite'
 
-  uninstall :pkgutil   => 'com.microsoft.office.*',
-            :launchctl => 'com.microsoft.office.licensing.helper'
+  pkg 'Microsoft_Office_2016_Installer.pkg'
+
+  uninstall :pkgutil   => [
+                           'com.microsoft.package.*',
+                           'com.microsoft.pkg.licensing'
+                          ],
+            :launchctl => 'com.microsoft.office.licensingV2.helper.plist'
   zap       :pkgutil   => [
                            'com.microsoft.mau.all.autoupdate.*',
                            'com.microsoft.merp.all.errorreporting.*'
                           ],
             :delete    => [
-                           '/Library/LaunchDaemons/com.microsoft.office.licensing.helper.plist',
-                           '/Library/PrivilegedHelperTools/com.microsoft.office.licensing.helper',
-                           '/Library/Application Support/Microsoft/MAU2.0',
-                           '/Library/Application Support/Microsoft/MERP2.0',
-                           '/Library/Preferences/com.microsoft.Excel.plist',
-                           '/Library/Preferences/com.microsoft.Outlook.plist',
-                           '/Library/Preferences/com.microsoft.PlayReady.plist',
-                           '/Library/Preferences/com.microsoft.Powerpoint.plist',
-                           '/Library/Preferences/com.microsoft.Word.plist',
-                           '/Library/Preferences/com.microsoft.office.licensing.plist',
-                           '/Library/Preferences/com.microsoft.outlook.databasedaemon.plist',
-                           '/Library/Preferences/com.microsoft.outlook.officereminders.plist',
-                           '~/Library/Application Support/Microsoft/Office',
-                           '~/Library/Preferences/com.microsoft.Excel.plist',
-                           '~/Library/Preferences/com.microsoft.Outlook.plist',
-                           '~/Library/Preferences/com.microsoft.Powerpoint.plist',
-                           '~/Library/Preferences/com.microsoft.Word.plist',
-                           '~/Library/Preferences/com.microsoft.autoupdate2.plist',
-                           '~/Library/Preferences/com.microsoft.error_reporting.plist',
-                           '~/Library/Preferences/com.microsoft.office.plist',
-                           '~/Library/Preferences/com.microsoft.office.setupassistant.plist',
-                           '~/Library/Preferences/com.microsoft.outlook.databasedaemon.plist',
-                           '~/Library/Preferences/com.microsoft.outlook.office_reminders.plist',
-                           '~/Library/Preferences/com.microsoft.outlook.officereminders.plist',
-                           '~/Documents/Microsoft User Data/Microsoft',
-                           '~/Documents/Microsoft User Data/Office 2011 Identities',
-                           '~/Documents/Microsoft User Data/Outlook Sound Sets',
-                           '~/Documents/Microsoft User Data/Saved Attachments'
+                           '/Library/LaunchDaemons/com.microsoft.office.licensingV2.helper.plist',
+                           '/Library/PrivilegedHelperTools/com.microsoft.office.licensingV2.helper',
                           ],
             :rmdir     => [
                            '/Library/Application Support/Microsoft',
                            '~/Library/Application Support/Microsoft',
-                           '~/Documents/Microsoft User Data'
+                           '~/Documents/Microsoft User Data',
+                           '~/Library/Containers/com.microsoft.errorreporting',
+                           '~/Library/Containers/com.microsoft.Excel',
+                           '~/Library/Containers/com.microsoft.netlib.shipassertprocess',
+                           '~/Library/Containers/com.microsoft.Office365ServiceV2',
+                           '~/Library/Containers/com.microsoft.Outlook',
+                           '~/Library/Containers/com.microsoft.Powerpoint',
+                           '~/Library/Containers/com.microsoft.RMS-XPCService',
+                           '~/Library/Containers/com.microsoft.Word',
+                           '~/Library/Containers/com.microsoft.onenote.mac',
+                           '~/Library/Group Containers/UBF8T346G9.ms',
+                           '~/Library/Group Containers/UBF8T346G9.Office',
+                           '~/Library/Group Containers/UBF8T346G9.OfficeOsfWebHost'
                           ]
 end
