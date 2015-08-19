@@ -1,6 +1,6 @@
 cask :v1 => 'keyboard-maestro' do
-  version '7.0'
-  sha256 '39caa5e5b5dac584da141cd5eb2b428b7c5ee562a5f858370c6338b538a9c8ad'
+  version '7.0.1'
+  sha256 '5f0f104fc164c53be6ee258db2d5a62e2448493789a80e398593144f9ca0900d'
 
   # stairways.com is the official download host per the vendor homepage
   url "http://files.stairways.com/keyboardmaestro-#{version.delete('.')}.zip"
