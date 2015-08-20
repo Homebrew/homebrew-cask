@@ -7,7 +7,7 @@ cask :v1 => 'colorpicker' do
           :sha256 => '52d78504cf610c23eb719c689cc997d5836d85b0a7e5d8cc5c5998af8190d5bd'
   name 'ColorPicker'
   homepage 'http://www.northernspysoftware.com/software/colorpicker'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'ColorPicker.app'
 end
