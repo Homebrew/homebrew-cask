@@ -5,7 +5,7 @@ cask :v1 => 'color-oracle' do
   url 'http://colororacle.org/ColorOracleMac.zip'
   name 'Color Oracle'
   homepage 'http://colororacle.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :mit
 
   app 'Color Oracle.app'
 end
