@@ -6,7 +6,7 @@ cask :v1 => 'colorschemer-studio' do
   appcast 'https://www.colorschemer.com/appcast/studio2_mac.xml'
   name 'ColorSchemer Studio'
   homepage 'https://www.colorschemer.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'ColorSchemer Studio 2.app'
 end
