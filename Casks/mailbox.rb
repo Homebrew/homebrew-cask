@@ -1,16 +1,19 @@
 cask :v1 => 'mailbox' do
-  version '0.4.2_150316'
-  sha256 '5431ef92b83f5752193cbdaf2ae82a0798537c8b84426bc09c5367a7345875c7'
+  version '0.7.2'
+  sha256 '4472d761e05b99dc15f0476c7092ad6138bb8de1399c907452cfc5bf08196391'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://mb-dtop.s3.amazonaws.com/external-beta/Mailbox_EXT_Beta_#{version}.zip"
-  appcast 'https://mb-dtop.s3.amazonaws.com/external-beta/external-beta-appcast.xml',
-          :sha256 => '7f1958d4be2af3ea5283bc586f97d73df07cb559ae954f4914815529d99e62dc'
+  # hockeyapp.net is the official download host per the appcast feed
+  url 'https://rink.hockeyapp.net/api/2/apps/0de2e5766e01cde1f6c0fd5b9862c730/app_versions/4?format=zip&avtoken=b70a5f71b15fc402ec1db83426c0ecd6d2601f6b'
+  appcast 'https://rink.hockeyapp.net/api/2/apps/0de2e5766e01cde1f6c0fd5b9862c730',
+          :sha256 => '0a511ea99347c010c1df7ce45027ba412bedf47bde35de089bc5d13c3ba6c779'
   name 'Mailbox'
   homepage 'https://www.mailboxapp.com/'
   license :gratis
 
   app 'Mailbox (Beta).app'
 
-  zap :delete => '~/Library/Caches/com.dropbox.mbd.external-beta/'
+  zap :delete => [
+                  '~/Library/Caches/com.dropbox.mailbox/',
+                  '~/Library/Containers/com.dropbox.mailbox/'
+                 ]
 end
