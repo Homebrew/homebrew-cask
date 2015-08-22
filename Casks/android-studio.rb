@@ -1,9 +1,9 @@
 cask :v1 => 'android-studio' do
-  version '1.3.1.0'
-  sha256 '967f1750fc9cb86080c9761439421269b7a57864ab6a429f9c82ba9cafdc1e2a'
+  version '1.3.2.0'
+  sha256 'ace868fa34a40146c3796c61e4e8392f2ee7cf5ba3692f45b1d50b8059712459'
 
   # google.com is the official download host per the vendor homepage
-  url "https://dl.google.com/dl/android/studio/ide-zips/#{version}/android-studio-ide-141.2135290-mac.zip"
+  url "https://dl.google.com/dl/android/studio/ide-zips/#{version}/android-studio-ide-141.2178183-mac.zip"
   name 'Android Studio'
   homepage 'https://developer.android.com/sdk/'
   license :apache
