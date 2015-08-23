@@ -33,8 +33,8 @@ cask :v1 => 'r' do
                         '/usr/bin/Rscript',
                         '/Library/Frameworks/R.Framework/Versions/Current',
                         # :pkgutil won't delete this dir if the fontconfig cache was written to at
-                        # /Library/Frameworks/R.Framework/Versions/3.1/Resources/fontconfig/cache
-                        '/Library/Frameworks/R.Framework/Versions/3.1',
+                        # /Library/Frameworks/R.Framework/Versions/3.2/Resources/fontconfig/cache
+                        '/Library/Frameworks/R.Framework/Versions/3.2',
                        ]
   zap       :delete => [
                         '~/.R',
