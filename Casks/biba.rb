@@ -1,6 +1,6 @@
 cask :v1 => 'biba' do
-  version '3.3.3481'
-  sha256 'd921c32bab3c1383b9680fe0dcb018f06c553b351cfd460fe6ea77edcabb6e3a'
+  version '3.3.3520'
+  sha256 'd2cf68113399ac7ce57b8ccd6474dedebf93574e07408bd6bf5e09218a81df7b'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3-us-west-1.amazonaws.com/downloads.biba.com/builds/Biba-OSX-#{version}.dmg"
