@@ -1,6 +1,6 @@
 cask :v1 => 'karabiner' do
-  version '10.7.0'
-  sha256 'c5a64c01ac24a35f0cb84c581c0fd9490ef038c67b50864fdc8aefd33fe2ae39'
+  version '10.8.0'
+  sha256 '99cd002e17203279f174a9ef40c1999b70dd08eef01a04ab461da788cf5bb967'
 
   url "https://pqrs.org/osx/karabiner/files/Karabiner-#{version}.dmg"
   appcast 'https://pqrs.org/osx/karabiner/files/appcast.xml',
