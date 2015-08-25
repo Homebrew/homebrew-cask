@@ -1,4 +1,4 @@
-cask :v1 => 'img2icns' do
+cask :v1 => 'image2icon' do
   version '2.1'
   sha256 'c04c2cca6f6531271579af9f767322c9b08fc435dabb158929312ddceb1d824e'
 
@@ -8,5 +8,5 @@ cask :v1 => 'img2icns' do
   homepage 'http://www.img2icnsapp.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  app 'Img2icns.app'
+  app 'Image2Icon.app'
 end
