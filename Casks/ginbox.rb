@@ -9,7 +9,7 @@ cask :v1 => 'ginbox' do
   homepage 'https://github.com/chenasraf/gInbox'
   license :apache
 
-  depends_on :macos => '>= :lion'
+  depends_on :macos => '>= :mavericks'
 
   app 'Inbox by Google.app'
 end
