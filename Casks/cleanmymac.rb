@@ -38,6 +38,10 @@ cask :v1 => 'cleanmymac' do
     url "http://dl.devmate.com/com.macpaw.CleanMyMac#{version.to_i}/#{version.sub(%r{-.*$},'')}/#{version.sub(%r{.*?-},'')}/CleanMyMac3-#{version.sub(%r{-.*$},'')}.zip"
     app "CleanMyMac #{version.to_i}.app"
 
+    postflight do
+      suppress_move_to_applications
+    end
+
     uninstall :launchctl => "com.macpaw.CleanMyMac#{version.to_i}.Agent"
 
     zap :delete => [
