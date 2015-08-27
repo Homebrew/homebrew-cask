@@ -8,7 +8,7 @@ cask :v1 => 'difffork' do
   appcast 'http://www.dotfork.com/difffork/appcast.xml',
           :sha256 => 'e415fa377e3ea812e61e0d8a4695a42eafa96e9610f8f56d257a340f099d547e'
   homepage 'http://www.dotfork.com/difffork/'
-  license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'DiffFork.app'
 end
