@@ -7,7 +7,7 @@ cask :v1 => 'diskwave' do
           :sha256 => '95aadfc8afdacc59b3760957a2ddbb81cf60bbb54cc7bf935c4421d2b52818b6'
   name 'DiskWave'
   homepage 'http://diskwave.barthe.ph/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'DiskWave.app'
 end

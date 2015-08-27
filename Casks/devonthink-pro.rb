@@ -8,7 +8,7 @@ cask :v1 => 'devonthink-pro' do
           :sha256 => '5a6d91414dcd0c755c3db5b757363177630005215a3c1c6fedcfdd2e2b2dc0c6'
   name 'DEVONthink Pro'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   container :nested => 'DEVONthink_Pro.dmg'
   app 'DEVONthink Pro.app'

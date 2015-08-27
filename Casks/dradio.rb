@@ -6,7 +6,7 @@ cask :v1 => 'dradio' do
   appcast 'http://dradio.me/updates/appcast.xml'
   name 'dRadio'
   homepage 'http://dradio.me'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'dRadio.app'
 end

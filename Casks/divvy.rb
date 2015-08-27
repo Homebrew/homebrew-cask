@@ -6,7 +6,7 @@ cask :v1 => 'divvy' do
   appcast 'https://mizage.com/updates/profiles/divvy.php'
   name 'Divvy'
   homepage 'https://mizage.com/divvy/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Divvy.app'
 
