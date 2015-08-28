@@ -1,6 +1,6 @@
 cask :v1 => 'lunchy' do
-  version '0.1.5'
-  sha256 '13afd65921d3251dbd5f6c44bdf6f6a037d10228a69876c658470a23fc573f7f'
+  version '0.1.6'
+  sha256 '26b86cb3f955452353ae00e9be28b3fd843d7d2c4b202e4292e9251b0fe18433'
 
   url "https://github.com/sosedoff/lunchy-go/releases/download/v#{version}/#{version}_darwin_amd64.zip"
   appcast 'https://github.com/sosedoff/lunchy-go/releases.atom'
