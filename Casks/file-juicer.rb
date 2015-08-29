@@ -5,7 +5,7 @@ cask :v1 => 'file-juicer' do
   url 'http://echoone.com/filejuicer/FileJuicer.dmg'
   name 'File Juicer'
   homepage 'http://echoone.com/filejuicer/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'File Juicer.app'
 end

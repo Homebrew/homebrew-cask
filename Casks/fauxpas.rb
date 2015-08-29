@@ -6,7 +6,7 @@ cask :v1 => 'fauxpas' do
   appcast 'http://api.fauxpasapp.com/appcast'
   name 'Faux Pas'
   homepage 'http://fauxpasapp.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'FauxPas.app'
 end
