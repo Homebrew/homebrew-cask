@@ -7,7 +7,7 @@ cask :v1 => 'qiyimedia' do
   homepage 'http://www.iqiyi.com'
   license :gratis
 
-  app '爱奇艺视频.app'
+  app '爱奇艺.app'
 
   zap :delete => [
                   '~/Library/Containers/com.iqiyi.yingyin',
