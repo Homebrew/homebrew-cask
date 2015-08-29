@@ -222,7 +222,7 @@ or vendor, rather than an aggregator such as macupdate.com.
 
 If a token conflicts with an already-existing Cask, authors should manually
 make the new token unique by prepending the vendor name.  Example:
-[unison.rb](../Casks/unison.rb) and [panic-unison.rb](../Casks/panic-unison.rb).
+[unison.rb](../master/Casks/unison.rb) and [panic-unison.rb](../master/Casks/panic-unison.rb).
 
 If possible, avoid creating tokens which differ only by the placement of
 hyphens.
