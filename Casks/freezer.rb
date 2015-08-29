@@ -6,7 +6,7 @@ cask :v1 => 'freezer' do
   appcast 'https://mrgeckosmedia.com/applications/appcast/Freezer'
   name 'Freezer'
   homepage 'https://mrgeckosmedia.com/applications/info/Freezer'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Freezer/Freezer.app'
 end
