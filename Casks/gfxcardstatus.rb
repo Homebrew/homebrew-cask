@@ -7,7 +7,7 @@ cask :v1 => 'gfxcardstatus' do
           :sha256 => 'cc01a7466eb53f425920046a5b7ea0a23b35bd431b7ccca9c77bd8fa407cd718'
   name 'gfxCardStatus'
   homepage 'https://gfx.io/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   app 'gfxCardStatus.app'
 end
