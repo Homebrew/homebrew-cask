@@ -5,7 +5,7 @@ cask :v1 => 'garagesale' do
   url "https://downloads.iwascoding.com/downloads/GarageSale_#{version}.dmg"
   name 'GarageSale'
   homepage 'https://www.iwascoding.com/GarageSale/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'GarageSale.app'
 end

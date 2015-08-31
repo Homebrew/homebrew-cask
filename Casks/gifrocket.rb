@@ -5,7 +5,7 @@ cask :v1 => 'gifrocket' do
   url "http://www.gifrocket.com/Gifrocket.#{version}.zip"
   name 'Gifrocket'
   homepage 'http://www.gifrocket.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Gifrocket.app'
 end

@@ -6,7 +6,7 @@ cask :v1 => 'glyphish-gallery' do
   appcast 'https://github.com/glyphish/gallery/releases.atom'
   name 'Glyphish Gallery'
   homepage 'https://github.com/glyphish/gallery'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :oss
 
   app 'Glyphish Gallery.app'
 end
