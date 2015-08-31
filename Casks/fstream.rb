@@ -7,7 +7,7 @@ cask :v1 => 'fstream' do
           :sha256 => '01ef6ac710afdc6e9bff5969ee9bb3f4a04d9e962d94bf8c6755ba44409192ad'
   name 'FStream'
   homepage 'http://www.sourcemac.com/?page=fstream'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'FStream.app'
 end
