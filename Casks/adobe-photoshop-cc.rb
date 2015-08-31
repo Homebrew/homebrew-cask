@@ -10,10 +10,25 @@ cask :v1 => 'adobe-photoshop-cc' do
   license :commercial
 
   installer :script => 'Adobe Photoshop CC 2015/Install.app/Contents/MacOS/Install',
-            :args => %w[--mode=silent --deploymentFile='Adobe\ Photoshop\ CC\ 2015/Deployment/en_US_Deployment.xml']
+            :args => ["--mode=silent", "--deploymentFile='#{staged_path}/Adobe\ Photoshop\ CC\ 2015/Deployment/en_US_Deployment.xml'"]
 
-#  uninstall_preflight  (create uninstall.xml)
+  uninstall_preflight do
+                file = File.open "#{staged_path}/uninstall.xml", 'w'
+                file.puts '<?xml version="1.0" encoding="utf-8"?>
+            <Deployment>
+                <Properties>
+                    <Property name="removeUserPrefs">0</Property>
+                    <Property name="mediaSignature">{2614BC86-757D-4293-9E25-E4E16F370A9E}</Property>
+                </Properties>
+                <Payloads>
+                    <Payload adobeCode="{2614BC86-757D-4293-9E25-E4E16F370A9E}">
+                        <Action>remove</Action>
+                    </Payload>
+                </Payloads>
+            </Deployment>'
+                file.close
+              end
 
   uninstall :script => 'Adobe Photoshop CC 2015/Install.app/Contents/MacOS/Install',
-            :args => %w[--mode=silent --deploymentFile='uninstall.xml']
+            :args => ["--mode=silent", "--deploymentFile='#{staged_path}/uninstall.xml'"]
 end
