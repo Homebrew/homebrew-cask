@@ -6,7 +6,7 @@ cask :v1 => 'giffun' do
   url "https://dl.dropbox.com/u/2000860/GIFfun-#{version}.dmg"
   name 'GIFfun'
   homepage 'https://www.stone.com/GIFfun/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :oss
 
   app 'GIFfun.app'
 end
