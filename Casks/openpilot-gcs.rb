@@ -1,6 +1,6 @@
 cask :v1 => 'openpilot-gcs' do
-  version '15.02.01'
-  sha256 '21f1db27188ad05cc755fdcdda97853bdd6ba6adfc09afe78095c414065d7da5'
+  version '15.05.2'
+  sha256 'b092843c4d9288806b2baf2b4120591603e0eb486613426d14cf03259233e410'
 
   url "https://wiki.openpilot.org/download/attachments/361104/OpenPilot-RELEASE-#{version}-osx.dmg"
   name 'OpenPilot Ground Control Station'
