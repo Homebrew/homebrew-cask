@@ -7,7 +7,7 @@ cask :v1 => 'glimmerblocker' do
           :sha256 => 'fce1b515c7ee075a7ce56f91753ca292eb786cc32180f7d8eed4c521a2aa3a03'
   name 'GlimmerBlocker'
   homepage 'https://glimmerblocker.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   pkg 'GlimmerBlocker.pkg'
 
