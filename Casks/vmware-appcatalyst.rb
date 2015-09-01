@@ -1,8 +1,8 @@
 cask :v1 => 'vmware-appcatalyst' do
-  version :latest
-  sha256 :no_check
+  version 'August2015'
+  sha256 '343e6259ee4f60e5c077a080d5d3a550ea105d25c6e2762c2eaa151820c8a4dd'
 
-  url 'http://download3.vmware.com/cloudnative/VMware-AppCatalyst-Technical-Preview.dmg'
+  url 'http://getappcatalyst.com/downloads/VMware-AppCatalyst-Technical-Preview-August-2015.dmg'
   name 'VMware AppCatalyst'
   homepage 'https://communities.vmware.com/community/vmtn/devops/vmware-appcatalyst'
   license :commercial
