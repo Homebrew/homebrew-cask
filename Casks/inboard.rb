@@ -1,6 +1,6 @@
 cask :v1 => 'inboard' do
-  version '1.0.3-274'
-  sha256 'fdbb86224f14d21095b950983af5121e0f2eaf7f8601acf2fd659b4c93bf8235'
+  version '1.0.4-276'
+  sha256 '51e950163423f6131d7e3b5c2c61493398a05decc1c4467acd647e07bd92a892'
 
   url "http://inboardapp.com/trial/Inboard-#{version}.zip"
   name 'Inboard'
