@@ -1,6 +1,6 @@
 cask :v1 => 'pi-filler' do
-  version '1.1.1'
-  sha256 '566eb386dd48993bceb6d170f563adb1ff45342e42044023161631e7b17e25cb'
+  version '1.3'
+  sha256 '06179b365be0f86027f89ab634e98f5101899ccfe5378f44b4b9330aedf0a9b3'
 
   url 'http://ivanx.com/raspberrypi/files/PiFiller.zip'
   name 'Pi Filler'
