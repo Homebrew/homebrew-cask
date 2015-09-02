@@ -6,7 +6,7 @@ cask :v1 => 'harvest' do
   appcast 'https://www.getharvest.com/harvest/mac/appcast.xml'
   name 'Harvest'
   homepage 'https://www.getharvest.com/mac'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Harvest.app'
 end
