@@ -7,7 +7,7 @@ cask :v1 => 'ibettercharge' do
   appcast 'http://hook.softorino.com/ibc/appcast.xml'
   name 'iBetterCharge'
   homepage 'http://softorino.com/ibettercharge/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'iBetterCharge.app'
 end
