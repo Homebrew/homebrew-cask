@@ -8,7 +8,7 @@ cask :v1 => 'hear' do
           :sha256 => '5ff497340df135e5765942ab6f5ae4f083f06676a79be33073c00bd7c7814a88'
   name 'Hear'
   homepage 'https://www.prosofteng.com/hear/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Hear.app'
 

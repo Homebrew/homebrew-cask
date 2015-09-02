@@ -7,7 +7,7 @@ cask :v1 => 'hands-off' do
           :sha256 => '1b948ddb214ba0bc85016341a77b389eabc70b77f3c43c24081776880396f03c'
   name 'Hands Off!'
   homepage 'https://www.oneperiodic.com/products/handsoff/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Hands Off!.app'
 
