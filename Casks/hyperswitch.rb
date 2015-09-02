@@ -6,7 +6,7 @@ cask :v1 => 'hyperswitch' do
   appcast 'http://hyperswitch.bahoom.com/appcast.xml'
   name 'HyperSwitch'
   homepage 'http://bahoom.com/hyperswitch'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'HyperSwitch.app'
 end
