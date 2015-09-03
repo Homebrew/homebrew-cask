@@ -9,8 +9,12 @@ def homebrew_fork_system cmd, *args
     exec(cmd, *args) rescue nil
     exit! 1 # never gets here unless exec failed
   end
-  Process.wait(pid)
-  $?.success?
+  begin
+    Process.wait(pid)
+    $?.success?
+  rescue Interrupt => e
+    puts "Interrupted"
+  end
 end
 
 # Kernel.system but with exceptions
