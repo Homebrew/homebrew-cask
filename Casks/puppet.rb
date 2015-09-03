@@ -1,6 +1,6 @@
 cask :v1 => 'puppet' do
-  version '3.7.4'
-  sha256 '8eb17151199cc8c726fd64a56aba20b25627f699ce841ce9d04dbe59edbe3223'
+  version '3.8.2'
+  sha256 '8ff5746e5d3c121b947f27dabeea81766d902885df0d113af4080085a45aff84'
 
   url "https://downloads.puppetlabs.com/mac/puppet-#{version}.dmg"
   name 'Puppet'
