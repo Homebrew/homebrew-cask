@@ -1,5 +1,5 @@
 cask :v1 => 'kindlecomicconverter' do
-  version '4.6.2'
+  version '4.6.3'
   sha256 '13d1bb6d19780bc106b82b64b65922b28c412dbbab1c0007320bac9cef3c0ce9'
 
   url "http://kcc.iosphe.re/OSX/KindleComicConverter_osx_#{version}.zip"
