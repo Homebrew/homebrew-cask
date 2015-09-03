@@ -32,4 +32,6 @@ cask :v1 => 'adobe-photoshop-cc' do
   uninstall_preflight do
     system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe Photoshop CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{staged_path}/uninstall.xml"
   end
+
+  uninstall :rmdir => '/Applications/Utilities/Adobe Installers'
 end
