@@ -118,7 +118,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `conflicts_with`       | yes                           | a list of conflicts with this Cask (*not yet functional* see also [Conflicts_with Stanza Details](#conflicts_with-stanza-details))
 | `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](#caveats-stanza-details))
 | `preflight`            | yes                           | a Ruby block containing preflight install operations (needed only in very rare cases)
-| `postflight`           | yes                           | a Ruby block containing postflight install operations (see also [Postflight Stanza Details](#postflight-stanza-details))
+| `postflight`           | yes                           | a Ruby block containing postflight install operations (see also [Postflight Stanza Details](#flight-stanzas-details))
 | `uninstall_preflight`  | yes                           | a Ruby block containing preflight uninstall operations (needed only in very rare cases)
 | `uninstall_postflight` | yes                           | a Ruby block containing postflight uninstall operations
 | `accessibility_access` | no                            | `true` if the application should be granted accessibility access
