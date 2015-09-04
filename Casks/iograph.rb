@@ -5,7 +5,7 @@ cask :v1 => 'iograph' do
   url "http://iographica.com/download/osx/IOGraph_v#{version.gsub('.','_')}.dmg"
   name 'IOGraph'
   homepage 'http://iographica.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'IOGraph.app'
 end

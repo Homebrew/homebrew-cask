@@ -6,7 +6,7 @@ cask :v1 => 'ioquake3' do
   url "http://ioquake3.org/files/#{version}/ioquake3%20#{version}.dmg"
   name 'ioquake3'
   homepage 'http://ioquake3.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   suite 'ioquake3'
 

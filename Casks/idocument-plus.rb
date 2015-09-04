@@ -7,7 +7,7 @@ cask :v1 => 'idocument-plus' do
   appcast 'http://t.icyblaze.com/idplusc4ud'
   name 'iDocument Plus'
   homepage 'http://www.icyblaze.com/idocument/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'iDocument Plus.app'
 end

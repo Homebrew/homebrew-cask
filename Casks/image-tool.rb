@@ -5,7 +5,7 @@ cask :v1 => 'image-tool' do
   url "http://www.jimmcgowan.net/diskimages/ImageTool#{version}.dmg"
   name 'Image Tool'
   homepage 'http://www.jimmcgowan.net/Site/ImageTool.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Image Tool.app'
 end
