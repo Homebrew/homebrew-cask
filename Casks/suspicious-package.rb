@@ -5,7 +5,7 @@ cask :v1 => 'suspicious-package' do
   url 'http://www.mothersruin.com/software/downloads/SuspiciousPackage.pkg'
   name 'Suspicious Package'
   homepage 'http://www.mothersruin.com/software/SuspiciousPackage/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   pkg 'SuspiciousPackage.pkg'
 
