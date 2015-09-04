@@ -5,7 +5,7 @@ cask :v1 => 'ipaql' do
   url "http://ipaql.com/site/assets/files/1006/ipaql_#{version.gsub('.','-')}.zip"
   name 'CocoaDeveloper Quicklook Plugin'
   homepage 'http://ipaql.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   qlplugin 'ipaql.qlgenerator'
 end
