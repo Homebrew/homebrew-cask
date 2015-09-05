@@ -9,21 +9,15 @@ cask :v1 => 'anaconda' do
   tags :vendor => 'Continuum Analytics'
 
   installer :script => 'Anaconda-#{version}-MacOSX-x86_64.sh',
-            :args => [ '-b', '-p', '#{staged_path}' ]
+            :args => [ '-b' ]
 
   app 'Launcher.app'
 
   depends_on :macos => '>= :lion'
 
+  uninstall :delete => '~/anaconda'
+
   caveats do
-      <<-EOS.undent
-      To use Anaconda from the command line, you must add the 
-      $ANACONDA_ROOT/bin directory to your PATH environment variable.
-      For bash shell, add these lines to ~/.bash_profile:
-
-        export ANACONDA_ROOT=#{staged_path}
-        export PATH=$ANACONDA_ROOT/bin:"$PATH"
-
-  EOS
+    path_environment_variable '~/anaconda/bin'
   end
 end
