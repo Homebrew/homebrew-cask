@@ -8,6 +8,6 @@ cask :v1 => 'heroes-of-newerth' do
   license :gratis
 
   app 'Heroes of Newerth.app'
-  
+
   zap :delete => '~/Library/Application Support/Heroes of Newerth'
 end
