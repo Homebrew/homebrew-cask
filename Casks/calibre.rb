@@ -3,8 +3,8 @@ cask :v1 => 'calibre' do
     version '1.48.0'
     sha256 '0533283965fbc9a6618d0b27c85bdf3671fe75ff0e89eeff406fe1457ee61b14'
   else
-    version '2.36.0'
-    sha256 '2ab762f4d2829116bd0860b551f141ca5f20a7ff26ec8ab6e4b66dc59c210b61'
+    version '2.37.1'
+    sha256 '8cee654804704f6b0e031aec0d2f800d5ac033581a32156c35b736476d3d3e99'
     appcast 'https://github.com/kovidgoyal/calibre/releases.atom'
   end
 
