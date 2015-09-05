@@ -1,6 +1,6 @@
 cask :v1 => 'pokertracker' do
   version '4.14'
-  sha256 'd549d431f0a792b723d0dba6121652eb565d484d358e29b082f138fa1657da28'
+  sha256 'ee1b016904e49dad594605a33814a5cde7dd35e9de866297955f02597103e8ac'
 
   url "http://s3-us1.ptrackupdate.com/releases/PT-Install-v#{version}.dmg"
   name 'PokerTracker'
