@@ -5,7 +5,7 @@ cask :v1 => 'kext-utility' do
   url "http://cvad-mac.narod.ru/files/Kext_Utility.app.v#{version}.zip"
   name 'Kext Utility'
   homepage 'http://cvad-mac.narod.ru/index/0-4'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Kext Utility.app'
 end
