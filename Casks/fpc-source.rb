@@ -9,4 +9,9 @@ cask :v1 => 'fpc-source' do
   license :gpl
 
   pkg "fpcsrc-#{version}.pkg"
+
+  zap :delete => [
+                  '/usr/local/share/fpcsrc',
+                  '/Library/Receipts/fpcsrc-*.pkg'
+                 ]
 end
