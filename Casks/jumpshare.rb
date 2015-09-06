@@ -5,7 +5,7 @@ cask :v1 => 'jumpshare' do
   url "https://jumpshare.com/desktop/mac/Jumpshare_#{version}.dmg"
   name 'Jumpshare'
   homepage 'https://jumpshare.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Jumpshare.app'
 end
