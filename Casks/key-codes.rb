@@ -6,7 +6,7 @@ cask :v1 => 'key-codes' do
   appcast 'http://manytricks.com/keycodes/appcast.xml'
   name 'Key Codes'
   homepage 'http://manytricks.com/keycodes/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Key Codes.app'
 end
