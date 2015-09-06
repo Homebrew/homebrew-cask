@@ -10,8 +10,5 @@ cask :v1 => 'fpc-source' do
 
   pkg "fpcsrc-#{version}.pkg"
 
-  zap :delete => [
-                  '/usr/local/share/fpcsrc',
-                  '/Library/Receipts/fpcsrc-*.pkg'
-                 ]
+  uninstall :pkgutil => 'org.freepascal.fpc.source'
 end
