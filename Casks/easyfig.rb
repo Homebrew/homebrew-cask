@@ -8,5 +8,5 @@ cask :v1 => 'easyfig' do
   homepage 'http://mjsull.github.io/Easyfig/'
   license :gpl
 
-  app "Easyfig_mac_#{version.to_f}/Easyfig_mac_#{version.to_f}.app"
+  binary "Easyfig_#{version}_OSX/Easyfig", :target => 'easyfig'
 end
