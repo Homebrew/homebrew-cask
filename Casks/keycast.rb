@@ -5,7 +5,7 @@ cask :v1 => 'keycast' do
   url "https://github.com/cho45/KeyCast/releases/download/v#{version}/KeyCast.dmg"
   name 'KeyCast'
   homepage 'https://github.com/cho45/KeyCast'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   app 'KeyCast.app'
 end

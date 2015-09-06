@@ -6,7 +6,7 @@ cask :v1 => 'keymo' do
   appcast 'http://manytricks.com/keymo/appcast.xml'
   name 'Keymo'
   homepage 'http://manytricks.com/keymo'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Keymo.app'
 
