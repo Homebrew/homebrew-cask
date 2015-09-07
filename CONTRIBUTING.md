@@ -1,7 +1,7 @@
 # How To Contribute
 
 So you want to contribute to the project. **THIS IS GREAT NEWS!**  Seriously. We're
-all pretty happy about this.  Here's how to get started:
+all pretty happy about this.  Here’s how to get started:
 
  * [Getting Set Up To Contribute](#getting-set-up-to-contribute)
  * [Adding a Cask](#adding-a-cask)
@@ -14,7 +14,7 @@ all pretty happy about this.  Here's how to get started:
 
 ## Getting Set Up To Contribute
 
-1. Fork the repository in GitHub with the 'Fork' button
+1. Fork the repository in GitHub with the `Fork` button
 2. Add your GitHub fork as a remote for your homebrew-cask Tap
 
 ```bash
@@ -30,7 +30,7 @@ Making a Cask is easy: a Cask is a small Ruby file.
 
 ### Examples
 
-Here's a Cask for `Alfred.app` as an example.  Note that you may repeat
+Here’s a Cask for `Alfred.app` as an example.  Note that you may repeat
 the `app` stanza as many times as you need, to define multiple apps:
 
 ```ruby
@@ -252,7 +252,7 @@ Example:
 All Casks and code in the homebrew-cask project should be indented using two
 spaces (never tabs).
 
-If relevant, you may also use string manipulations to improve the maintainability of your Cask. Here's an example from `Lynkeos.app`:
+If relevant, you may also use string manipulations to improve the maintainability of your Cask. Here’s an example from `Lynkeos.app`:
 
 ```ruby
 cask :v1 => 'lynkeos' do
@@ -275,7 +275,7 @@ Give it a shot with `brew cask install my-new-cask`
 Did it install? If something went wrong, `brew cask uninstall my-new-cask` and
 edit your Cask to fix it.
 
-If everything looks good, you'll also want to make sure your Cask passes audit
+If everything looks good, you’ll also want to make sure your Cask passes audit
 with
 
 `brew cask audit my-new-cask --download`
@@ -349,7 +349,7 @@ $ git status
 #       Casks/my-new-cask.rb
 ```
 
-So far, so good. Now make a feature branch that you'll use in your pull
+So far, so good. Now make a feature branch that you’ll use in your pull
 request:
 
 ```bash
@@ -412,7 +412,7 @@ See more on https://help.github.com/articles/https-cloning-errors#provide-access
 
 Now go to *your* GitHub repository at
 https://github.com/my-github-username/homebrew-cask, switch branch to your
-topic branch and click the 'Pull Request' button. You can then add further
+topic branch and click the `Pull Request` button. You can then add further
 comments to your pull request.
 
 Congratulations! You are done now, and your Cask should be pulled in or
@@ -423,7 +423,7 @@ otherwise noticed in a while.
 If your pull request has multiple commits which revise the same lines of
 code, it is better to [squash](http://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
 
-But you don't always have to squash -- it is fine for a pull request to
+But you don’t always have to squash — it is fine for a pull request to
 contain multiple commits when there is a logical reason for the separation.
 
 
