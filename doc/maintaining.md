@@ -3,7 +3,7 @@
 __vv NOTE - DRAFT DOC! vv__
 
 This doc is just at a starting point. The maintainers team will be
-collaborating on it and we'll remove this header when we feel like it's stable.
+collaborating on it and we’ll remove this header when we feel like it’s stable.
 
 __^^ NOTE - DRAFT DOC! ^^__
 
@@ -14,10 +14,10 @@ and features, and plenty more!
 
 This responsibility is shared by @caskroom/maintainers - a team of humans
 spanning the globe each of whom has agreed to dedicate some of their spare time
-to helping our dear users. What a kind and friendly bunch they must be! (It's
+to helping our dear users. What a kind and friendly bunch they must be! (It’s
 true, they are.)
 
-As the project matures and grows, so does the team of maintainers. It's
+As the project matures and grows, so does the team of maintainers. It’s
 becoming more and more important to write down things that once were done
 ad-hoc.
 
@@ -40,7 +40,7 @@ So here is where we are gathering details about how we maintain the project.
 Casks are the lifeblood of this project, and they generate the most
 maintenance-requiring activity on the project.
 
-While we started as a tool for convenience, we're working on adding safety
+While we started as a tool for convenience, we’re working on adding safety
 and security to the list of things we do for our users. That means things
 like verifying download URLs, working to figure out file checksums when
 possible, *etc*.
@@ -75,7 +75,7 @@ Label | Description | Issues | Pull Requests
 
 ## Reviewing Core PRs
 
-Occasionally we'll get submissions from users that fix bugs or add features to
+Occasionally we’ll get submissions from users that fix bugs or add features to
 homebrew-cask itself. There is a subset of our maintainers who are less
 familiar with Ruby and prefer to leave these review to folks with more
 experience with the language. This is AOK!
