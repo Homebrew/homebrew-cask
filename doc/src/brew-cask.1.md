@@ -1,4 +1,4 @@
-homebrew-cask(1) -- A friendly binary installer for OS X
+homebrew-cask(1) — A friendly binary installer for OS X
 ========================================================
 
 ## SYNOPSIS
@@ -170,10 +170,10 @@ in a future version.
     Target location for Screen Saver links.  The default value is `~/Library/Screen Savers`.
 
   * `--no-binaries`:
-    Do not link "helper" executables to `/usr/local/bin`.
+    Do not link “helper” executables to `/usr/local/bin`.
 
   * `--binarydir=<path>`:
-    Target location for "helper" executable links.  The default value is `/usr/local/bin`.
+    Target location for “helper” executable links.  The default value is `/usr/local/bin`.
 
   * `--debug`:
     Output debugging information of use to Cask authors and developers.
@@ -237,7 +237,7 @@ Man page format based on `brew.1.md` from Homebrew.
 
 ## BUGS
 
-We still have bugs -- and we are busy fixing them!  If you have a problem, don't
+We still have bugs — and we are busy fixing them!  If you have a problem, don’t
 be shy about reporting it on our [GitHub issues page](https://github.com/caskroom/homebrew-cask/issues?state=open).
 
 When reporting bugs, remember that homebrew-cask is an independent project from
