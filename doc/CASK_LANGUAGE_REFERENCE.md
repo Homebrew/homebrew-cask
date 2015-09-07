@@ -57,14 +57,14 @@ end
 
 ## The Cask Language Is Declarative
 
-Each Cask contains a series of stanzas (or "fields") which *declare* how the
+Each Cask contains a series of stanzas (or “fields”) which *declare* how the
 software is to be obtained and installed.  In a declarative language, the
 author does not need to worry about **order**.  As long as all the needed fields
 are present, homebrew-cask will figure out what needs to be done at install
 time.
 
 To make maintenance easier, the most-frequently-updated stanzas are usually
-placed at the top.  But that's a convention, not a rule.
+placed at the top.  But that’s a convention, not a rule.
 
 Exception: `do` blocks such as `postflight` may enclose a block of pure Ruby
 code.  Lines within that block follow a procedural (order-dependent)
@@ -378,11 +378,11 @@ The values for `license` are categories, rather than fully-specified
 licenses.  For example, `:gpl` is a category; we do not distinguish between
 versions of the GPL.  Similarly, `:cc` and `:bsd` comprise many variants.
 They must always pertain to the license of the software itself, not the
-vendor's business model (a free app to access a paid service is still
+vendor’s business model (a free app to access a paid service is still
 `:gratis`, not `:freemium`).
 
 The `license` stanza is intended as an aid to search/filtering of Casks.
-For full and complete information, the user must always rely on the vendor's
+For full and complete information, the user must always rely on the vendor’s
 homepage.
 
 Note that `brew cask search` and `brew cask list` are not yet capable of
@@ -436,7 +436,7 @@ The `tags` stanza is not free-form.  The key-value pairs are limited to a list
 of valid keys.  All `tags` keys accept string values.
 
 The `tags` stanza is intended as an aid to search/filtering of Casks.  For
-detailed information, the user must rely on the vendor's homepage.
+detailed information, the user must rely on the vendor’s homepage.
 
 Note that `brew cask search` and `brew cask list` are not yet capable of
 using the information stored in the `tags` stanza.
@@ -550,7 +550,7 @@ pkg 'Unity.pkg'
 Subsequent arguments to `pkg` are key/value pairs which modify the install
 process.  Currently supported keys are
 
-  * `:allow_untrusted` -- pass `-allowUntrusted` to `/usr/sbin/installer`
+  * `:allow_untrusted` — pass `-allowUntrusted` to `/usr/sbin/installer`
 
 Example:
 
@@ -661,7 +661,7 @@ depends_on :macos => ['10.9', '10.10']
 
 `depends_on :macos` can also accept a string starting with a comparison
 operator such as `>=`, followed by an OS X release in the form above.  The
-following are both valid expressions meaning "at least OS X 10.9":
+following are both valid expressions meaning “at least OS X 10.9”:
 
 ```ruby
 depends_on :macos => '>= :mavericks'
@@ -675,7 +675,7 @@ A comparison expression cannot be combined with any other form of `depends_on :m
 The value for `depends_on :arch` may be a symbol or an array of symbols,
 listing the hardware compatibility requirements for a Cask.  The requirement
 is satisfied at install time if any one of multiple `:arch` value matches
-the user's hardware.
+the user’s hardware.
 
 The available symbols for hardware are:
 
@@ -992,7 +992,7 @@ bundle indicated by the first `app` stanza (and the Cask must contain
 an `app` stanza).
 
 `set_ownership(paths)` defaults user ownership to the current user and
-group ownership to 'staff'. These can be changed by passing in extra options:
+group ownership to `staff`. These can be changed by passing in extra options:
 `set_ownership(paths, user: 'user', group: 'group')`.
 
 `suppress_move_to_applications` optionally accepts a `:key` parameter for
@@ -1013,7 +1013,7 @@ $ brew cask zap td-toolbelt             # also removes org.ruby-lang.installer
 
 `zap` stanzas may remove:
 
- * Preference files and caches stored within the user's `~/Library` directory.
+ * Preference files and caches stored within the user’s `~/Library` directory.
  * Shared resources such as application updaters.  Since shared resources
    may be removed, other applications may be affected by `brew cask zap`.
    Understanding that is the responsibility of the end user.
