@@ -27,26 +27,6 @@ and we can get it working together.
 The whole idea is to build a _community-maintained_ list of easily installable
 packages, so the community part is important! Every little bit counts.
 
-
-## Why use Homebrew's Cellar? Why not just manage apps directly in Applications?
-
-The short answer to this would be: for the same reason that Homebrew does not
-install applications directly into /usr/local.
-
-We don't know up-front precisely what files are going to be in the
-dmg/zip/tgz/etc, so it's really helpful to have a place to dump all of them
-safely, then iterate through and act on the files we care about. For an `.app` file
-this may be symlinking it into `~/Applications` or `/Applications`, for a `.pkg` file
-this might be running the installer. For a Screen Saver it may be symlinking it
-into the appropriate directory for it to show up in System Preferences.
-
-The reason we implement this project on top of Homebrew was based on a belief
-that their methodology for managing applications has a lot of merit. We'd
-prefer to try and work things so that we can keep ourselves Homebrewy both in
-implementation and idioms. Trying to manage all of `~/Applications` would move
-the project more towards a standalone system, which would mean reimplementing a
-lot of the Homebrew stuff we lean on now.
-
 ## Can I set up my own Cask Tap?
 
 Yes! See [alternate_cask_taps.md](alternate_cask_taps.md).
@@ -54,10 +34,6 @@ Yes! See [alternate_cask_taps.md](alternate_cask_taps.md).
 ## Can I install a version other than the English one?
 
 Some applications such as Thunderbird or Firefox provides many localized versions. However, currently only English versions are provided in the main repository. Additional languages may be available in the [https://github.com/caskroom/homebrew-versions](homebrew-version repository). We are aiming to find a better system to manage multiple languages and versions.
-
-## How about applications that auto-update but that are managed by Cask?
-
-Applications that auto-update such as Firefox, Thunderbird or VLC will do so as usual, nothing will be broken. A minor issue however is that the application will still be located in a versioned folder even though the version has changed. For example, the application might be installed in /opt/homebrew-cask/Caskroom/mygreatapp/1.3 even though the version number is now 1.4.
 
 ## `brew cask list` shows that a package is installed, but when I try to do `brew cask uninstall`, it tells me that the package is not installed. Help!
 
