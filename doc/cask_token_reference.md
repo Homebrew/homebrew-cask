@@ -5,7 +5,7 @@ script, and covers detailed rules and exceptions which are not needed in
 most cases.
 
  * [Purpose](#purpose)
- * [Finding the Simplified Name of the Vendor's Distribution](#finding-the-simplified-name-of-the-vendors-distribution)
+ * [Finding the Simplified Name of the Vendor’s Distribution](#finding-the-simplified-name-of-the-vendors-distribution)
  * [Converting the Simplified Name To a Token](#converting-the-simplified-name-to-a-token)
  * [Cask Filenames](#cask-filenames)
  * [Cask Headers](#cask-headers)
@@ -25,11 +25,11 @@ The token itself should be
  * mnemonic
 
 Details of software names and brands will inevitably be lost in the
-conversion to a minimal token.  To capture the vendor's full name for a
+conversion to a minimal token.  To capture the vendor’s full name for a
 distribution, use the [`name`](CASK_LANGUAGE_REFERENCE.md#name-stanza-details) within a Cask.
 `name` accepts an unrestricted UTF-8 string.
 
-## Finding the Simplified Name of the Vendor's Distribution
+## Finding the Simplified Name of the Vendor’s Distribution
 
 ### Simplified Names of Apps
 
@@ -41,46 +41,46 @@ distribution, use the [`name`](CASK_LANGUAGE_REFERENCE.md#name-stanza-details) w
 
   * Remove `.app` from the end.
 
-  * Remove from the end: the string "app", if the vendor styles the name
-    like "Software App.app".  Exception: when "app" is an inseparable part of the
+  * Remove from the end: the string “app”, if the vendor styles the name
+    like “Software App.app”.  Exception: when “app” is an inseparable part of the
     name, without which the name would be inherently nonsensical, as in [rcdefaultapp.rb](../Casks/rcdefaultapp.rb).
 
   * Remove from the end: version numbers or incremental release designations such
-    as "alpha", "beta", or "release candidate".  Strings which distinguish different
-    capabilities or codebases such as "Community Edition" are currently accepted.
+    as “alpha”, “beta”, or “release candidate”.  Strings which distinguish different
+    capabilities or codebases such as “Community Edition” are currently accepted.
     Exception: when a number is not an incremental release counter, but a
     differentiator for a different product from a different vendor, as in [pgadmin3.rb](../Casks/pgadmin3.rb).
 
   * If the version number is arranged to occur in the middle of the App name,
     it should also be removed.  Example: [IntelliJ IDEA 13 CE.app](../Casks/intellij-idea-ce.rb).
 
-  * Remove from the end: "Launcher", "Quick Launcher".
+  * Remove from the end: “Launcher”, “Quick Launcher”.
 
-  * Remove from the end: strings such as "Mac", "for Mac", "for OS X".
-    These terms are generally added to ported software such as "MAME OS X.app".
-    Exception: when the software is not a port, and "Mac" is an inseparable
+  * Remove from the end: strings such as “Mac”, “for Mac”, “for OS X”.
+    These terms are generally added to ported software such as “MAME OS X.app”.
+    Exception: when the software is not a port, and “Mac” is an inseparable
     part of the name, without which the name would be inherently nonsensical,
     as in [PlayOnMac.app](../Casks/playonmac.rb).
 
-  * Remove from the end: hardware designations such as "for x86", "32-bit", "ppc".
+  * Remove from the end: hardware designations such as “for x86”, “32-bit”, “ppc”.
 
-  * Remove from the end: software framework names such as "Cocoa", "Qt",
-    "Gtk", "Wx", "Java", "Oracle JVM", etc.  Exception: the framework is the
+  * Remove from the end: software framework names such as “Cocoa”, “Qt”,
+    “Gtk”, “Wx”, “Java”, “Oracle JVM”, etc.  Exception: the framework is the
     product being Casked: [java.rb](../Casks/java.rb).
 
-  * Remove from the end: localization strings such as "en-US"
+  * Remove from the end: localization strings such as “en-US”
 
-  * If the result of that process is a generic term, such as "Macintosh Installer",
+  * If the result of that process is a generic term, such as “Macintosh Installer”,
     try prepending the name of the vendor or developer, followed by a hyphen.
-    If that doesn't work, then just create the best name you can, based on the
-    vendor's web page.
+    If that doesn’t work, then just create the best name you can, based on the
+    vendor’s web page.
 
   * If the result conflicts with the name of an existing Cask, make yours unique
     by prepending the name of the vendor or developer, followed by a hyphen.
     Example: [unison.rb](../Casks/unison.rb) and [panic-unison.rb](../Casks/panic-unison.rb).
 
   * Inevitably, there are a small number of exceptions not covered by the rules.
-    Don't hesitate to [contact the maintainers](../../../issues) if you have a
+    Don’t hesitate to [contact the maintainers](../../../issues) if you have a
     problem.
 
 ### Converting to ASCII
@@ -115,24 +115,24 @@ distribution, use the [`name`](CASK_LANGUAGE_REFERENCE.md#name-stanza-details) w
   * The Simplified Name of a `pkg` may be more tricky to determine than that
     of an App.  If a `pkg` installs an App, then use that App name with the
     rules above.  If not, just create the best name you can, based on the
-    vendor's web page.
+    vendor’s web page.
 
 ### Simplified Names of non-App Software
 
   * Currently, rules for generating a token are not well-defined for
     Preference Panes, QuickLook plugins, and several other types of software
     installable by homebrew-cask.  Just create the best name you can, based
-    on the filename on disk or the vendor's web page.  Watch out for
+    on the filename on disk or the vendor’s web page.  Watch out for
     duplicates.
 
     Non-app tokens should become more standardized in the future.
 
 ## Converting the Simplified Name To a Token
 
-The token is the primary identifier for a package in our project. It's
+The token is the primary identifier for a package in our project. It’s
 the unique string users refer to when operating on the Cask.
 
-To convert the App's Simplified Name (above) to a token:
+To convert the App’s Simplified Name (above) to a token:
 
   * convert all letters to lower case
   * expand the `+` symbol into a separated English word: `-plus-`
