@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-First ensure you have Homebrew version '0.9.5' or higher:
+First ensure you have Homebrew version `0.9.5` or higher:
 
 ```bash
 $ brew --version
@@ -19,17 +19,17 @@ $ brew install caskroom/cask/brew-cask
 
 Homebrew-cask is implemented as a subcommand of Homebrew.  All homebrew-cask
 commands begin with `brew cask`.  Homebrew-cask has its own set of command
-verbs many of which are similar to Homebrew's.  The most frequently-used
+verbs many of which are similar to Homebrew’s.  The most frequently-used
 commands are:
 
-* `search` -- searches all known Casks
-* `install` -- installs the given Cask
-* `uninstall` -- uninstalls the given Cask
+* `search` — searches all known Casks
+* `install` — installs the given Cask
+* `uninstall` — uninstalls the given Cask
 
 ## Searching for Casks
 
 The `brew cask search` command accepts a series of substring arguments,
-and returns tokens representing matching Casks.  Let's see if there's a
+and returns tokens representing matching Casks.  Let’s see if there’s a
 Cask for Google Chrome:
 
 ```bash
@@ -47,7 +47,7 @@ $ brew cask search
 ## Installing Casks
 
 The command `brew cask install` accepts a Cask token as returned by `brew cask search`.
-Let's try to install Google Chrome:
+Let’s try to install Google Chrome:
 
 ```bash
 $ brew cask install google-chrome
@@ -78,29 +78,29 @@ more information.
 
 ## Other Commands
 
-* `info` -- displays information about the given Cask
-* `list` -- with no args, lists installed Casks; given installed Casks, lists staged files
-* `fetch` -- downloads Cask resources to local cache (with `--force`, re-download even if already cached)
-* `doctor` -- checks for configuration issues
-* `cleanup` -- cleans up cached downloads (with `--outdated`, only cleans old downloads)
-* `home` -- opens the homepage of the given Cask; or with no arguments, the homebrew-cask project page
-* `update` -- a synonym for `brew update`
-* `zap` -- try to remove *all* files associated with a Cask (including resources which may be shared with other applications)
+* `info` — displays information about the given Cask
+* `list` — with no args, lists installed Casks; given installed Casks, lists staged files
+* `fetch` — downloads Cask resources to local cache (with `--force`, re-download even if already cached)
+* `doctor` — checks for configuration issues
+* `cleanup` — cleans up cached downloads (with `--outdated`, only cleans old downloads)
+* `home` — opens the homepage of the given Cask; or with no arguments, the homebrew-cask project page
+* `update` — a synonym for `brew update`
+* `zap` — try to remove *all* files associated with a Cask (including resources which may be shared with other applications)
 
 The following commands are for Cask authors:
 
-* `audit` -- verifies installability of Casks
-* `cat` -- dumps the given Cask to the standard output
-* `create` -- creates a Cask and opens it in an editor
-* `edit` -- edits the given Cask
+* `audit` — verifies installability of Casks
+* `cat` — dumps the given Cask to the standard output
+* `create` — creates a Cask and opens it in an editor
+* `edit` — edits the given Cask
 
 The following aliases and abbreviations are provided for convenience:
 
-* `ls` -- `list`
-* `-S` -- `search`
-* `rm`, `remove` -- `uninstall`
-* `up` -- `update`
-* `dr` -- `doctor`
+* `ls` — `list`
+* `-S` — `search`
+* `rm`, `remove` — `uninstall`
+* `up` — `update`
+* `dr` — `doctor`
 
 ## Inspecting Installed Casks
 
@@ -123,7 +123,7 @@ https://github.com/caskroom/homebrew-cask/blob/master/Casks/caffeine.rb
 
 ## Updating/Upgrading Casks
 
-Since the homebrew-cask repository is a Homebrew Tap, you'll pull down the latest
+Since the homebrew-cask repository is a Homebrew Tap, you’ll pull down the latest
 Casks every time you issue the regular Homebrew command `brew update`. Currently,
 homebrew-cask cannot always detect if an Application has been updated. You
 can force an update via the command `brew cask install --force`. We are working
