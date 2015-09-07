@@ -1,6 +1,6 @@
 # Release Standards
 
-Here's where we document how homebrew-cask is released.
+Here’s where we document how homebrew-cask is released.
 
 ## Versioning
 
@@ -116,7 +116,7 @@ changelog.
 	```bash
 	$ git push https://github.com/caskroom/homebrew-cask master && git push https://github.com/caskroom/homebrew-cask tag "$NEW_RELEASE_TAG" && echo "new release $NEW_RELEASE_TAG was successfully pushed"
 	```
-    If you don't see a success message, that probably means someone updated
+    If you don’t see a success message, that probably means someone updated
     master while you were working on the changelog.  You must pull and resolve.
 16. Open your browser to the relevant release page on GitHub:
 
@@ -133,7 +133,7 @@ changelog.
       in the pasted text.
     * The `Release title` field may be left blank.
 18. Click `Publish Release`.
-19. Unset the shell variable `$NEW_RELEASE_TAG`; you don't need it anymore:
+19. Unset the shell variable `$NEW_RELEASE_TAG`; you don’t need it anymore:
 
 	```bash
 	$ unset NEW_RELEASE_TAG
@@ -165,5 +165,5 @@ In general: go easy on the users!
 
   * We push the commits *before* pushing the tag to ensure that there are no
     conflicts.  The default behavior of `git push --follow-tags` is to push
-    tags to the public repo before commits, which caused the "lost" tag
+    tags to the public repo before commits, which caused the “lost” tag
     v0.39.0.
