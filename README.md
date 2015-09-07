@@ -4,20 +4,20 @@
 
 _“To install, drag this icon…” no more!_
 
-Let's see if we can get the elegance, simplicity, and speed of Homebrew for the
+Let’s see if we can get the elegance, simplicity, and speed of Homebrew for the
 installation and management of GUI Mac applications such as Google Chrome and Adium.
 
 Homebrew-cask provides a friendly homebrew-style CLI workflow for the
 administration of Mac applications distributed as binaries.
 
-It's implemented as a `homebrew` [external command](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/External-Commands.md)
+It’s implemented as a `homebrew` [external command](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/External-Commands.md)
 called `cask`.
 
 [![Build Status](https://img.shields.io/travis/caskroom/homebrew-cask/master.svg)](https://travis-ci.org/caskroom/homebrew-cask)
 [![Code Climate](https://img.shields.io/codeclimate/github/caskroom/homebrew-cask.svg)](https://codeclimate.com/github/caskroom/homebrew-cask)
 [![Coverage Status](https://img.shields.io/coveralls/caskroom/homebrew-cask.svg)](https://coveralls.io/r/caskroom/homebrew-cask)
 
-## Let's try it!
+## Let’s try it!
 ```sh
 $ brew install caskroom/cask/brew-cask
 $ brew cask install google-chrome
@@ -38,14 +38,14 @@ $ open ~/Applications/"Google Chrome.app"
 
 ## Questions? Wanna chat?
 
-We're really rather friendly! Here are the best places to talk about the project:
+We’re really rather friendly! Here are the best places to talk about the project:
 
  * Start an [issue on GitHub](https://github.com/caskroom/homebrew-cask/issues/new)
- * Join us on IRC, we're at `#homebrew-cask` on Freenode
+ * Join us on IRC, we’re at `#homebrew-cask` on Freenode
 
 ## Reporting Bugs
 
-We still have bugs -- and we are busy fixing them!  If you have a problem, don't
+We still have bugs — and we are busy fixing them!  If you have a problem, don’t
 be shy about reporting it on our [GitHub issues page](https://github.com/caskroom/homebrew-cask/issues?state=open). Always search for your issue before posting a new one.
 
 When reporting bugs, remember that homebrew-cask is an independent project from
@@ -60,7 +60,7 @@ $ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 ```
 
 If the issue persists, please run the problematic command with the `--verbose` flag
-and post its and `brew cask doctor`'s outputs in distinct [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
+and post its and `brew cask doctor`’s outputs in distinct [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
 
 ## License:
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
