@@ -36,6 +36,7 @@ describe "Repo layout" do
                     }
 
   TOPLEVEL_FILES = %w{
+                      .editorconfig
                       .gitignore
                       .rspec
                       .rubocop.yml
