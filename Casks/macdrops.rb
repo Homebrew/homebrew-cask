@@ -5,7 +5,7 @@ cask :v1 => 'macdrops' do
   url "https://interfacelift.com/apps/macdrops/v1/Macdrops_v#{version}.dmg"
   name 'Macdrops'
   homepage 'https://interfacelift.com/apps/macdrops/v1'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app "Macdrops v#{version}.app"
 end
