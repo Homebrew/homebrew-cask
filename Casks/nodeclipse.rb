@@ -3,7 +3,7 @@ cask :v1 => 'nodeclipse' do
   sha256 '674991d7c22ea05975a76800e6e9fe9231064a09a2a2412e6ec0448676bfa2e8'
 
   # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/project/nodeclipse/Enide-2015/7/Enide-2015-7-macosx-x64-20150706.zip"
+  url 'http://downloads.sourceforge.net/project/nodeclipse/Enide-2015/7/Enide-2015-7-macosx-x64-20150706.zip'
   name 'Nodeclipse'
   homepage 'http://www.nodeclipse.org/'
   license :oss
