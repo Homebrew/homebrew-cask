@@ -19,7 +19,7 @@ cask :v1 => 'macports' do
       :key_id => '01ff673fb4aae6cd'
   name 'MacPorts'
   homepage 'http://www.macports.org'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   uninstall :pkgutil => 'org.macports.MacPorts'
   zap       :delete  => '~/.macports'

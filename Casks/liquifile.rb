@@ -5,7 +5,7 @@ cask :v1 => 'liquifile' do
   url 'http://www.liquifile.info/Liquifile.dmg'
   name 'Liquifile'
   homepage 'http://www.liquifile.info/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app "Liquifile_#{version.gsub('.','_')}.app"
 end
