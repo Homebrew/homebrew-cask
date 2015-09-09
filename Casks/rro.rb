@@ -1,6 +1,6 @@
 cask :v1 => 'rro' do
-  version '3.2.1'
-  sha256 '786179097074036328e64d96344255063271cbc809202e919bb561fb8f616f23'
+  version '3.2.2'
+  sha256 '3dbb88f6ee928902c7b1be9eeb845502cfa152649c5b7d1497b9770a3199c9d8'
 
   url "https://mran.revolutionanalytics.com/install/RRO-#{version}-OSX.pkg"
   name 'Revolution R Open'
