@@ -1,6 +1,6 @@
 cask :v1 => 'voikkospellservice' do
-  version '1.0.5b1'
-  sha256 '2c01a3e44a0a689763e85b8478e7c13659e5d784336916ba9f7c7f0f36cce159'
+  version '1.0.5b2'
+  sha256 '15af9a009e68a2ebeef793a2d36062e48898eef9fa0c806175b3fd32609184cb'
 
   url "http://verteksi.net/files/osxspell/VoikkoSpellService-#{version}.dmg"
   name 'VoikkoSpellService'
