@@ -1,6 +1,6 @@
 cask :v1 => 'music-manager' do
-  version '1.0.104.6528'
-  sha256 'a1e4e48e008958f9a725bfee1e2d8360dc8efad38ef2532fc1b3e4b9c3df8f0d'
+  version '1.0.216.5719'
+  sha256 '948967d9325bde3e7344504e965dbcd9f94bee01512f4c49ad3e4d9425798f11'
 
   url "https://dl.google.com/dl/androidjumper/mac/#{version.sub(%r{^\d+\.\d+\.},'').delete('.')}/musicmanager.dmg"
   name 'Google Play Music Manager'
