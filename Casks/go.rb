@@ -12,8 +12,8 @@ cask :v1 => 'go' do
     url "https://storage.googleapis.com/golang/go#{version}.darwin-amd64-osx10.8.pkg"
     pkg "go#{version}.darwin-amd64-osx10.8.pkg"
   else
-    version '1.5'
-    sha256 '26891fed36b7fb4a0c8ce069d8adcb3120bc44fc28c91d1e43bc0d4b8b64dfcf'
+    version '1.5.1'
+    sha256 'a6d80fc6ce179df4fd7420e8581bb86d4bd92212896c86d09bfb9cbaad3e9e26'
 
     url "https://storage.googleapis.com/golang/go#{version}.darwin-amd64.pkg"
     pkg "go#{version}.darwin-amd64.pkg"
