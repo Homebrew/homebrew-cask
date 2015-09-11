@@ -20,9 +20,9 @@ class Hbc::Container::Criteria
   end
 
   def cabextract
-    if HOMEBREW_PREFIX.join('bin/cabextract').exist?
+    if Hbc.homebrew_prefix.join('bin/cabextract').exist?
       @cabextract ||= @command.run(
-        HOMEBREW_PREFIX.join('bin/cabextract'),
+        Hbc.homebrew_prefix.join('bin/cabextract'),
         :args => ['-t', '--', path],
         :print_stderr => false
       ).stdout
@@ -30,9 +30,9 @@ class Hbc::Container::Criteria
   end
 
   def lsar
-    if HOMEBREW_PREFIX.join('bin/lsar').exist?
+    if Hbc.homebrew_prefix.join('bin/lsar').exist?
       @lsar ||= @command.run(
-        HOMEBREW_PREFIX.join('bin/lsar'),
+        Hbc.homebrew_prefix.join('bin/lsar'),
         :args => ['-l', '-t', '--', path],
         :print_stderr => false
       ).stdout

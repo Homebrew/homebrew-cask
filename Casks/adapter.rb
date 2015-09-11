@@ -1,13 +1,15 @@
 cask :v1 => 'adapter' do
-  version '2.1.3'
-  sha256 '215987042772e1a55fb3a4592895286644344dddef478b3cccfd64235b20f6b7'
+  version '2.1.5'
+  sha256 '4daf1ce7ecabb4e2f8b5c3f2c04ff1d8ebee4e5b058acc6d8b0fe5c238dd73eb'
 
   url "http://downloads.macroplant.com/Adapter-#{version}.dmg"
   name 'Adapter'
-  appcast 'http://www.macroplant.com/adapter/adapterAppcast.xml',
-          :sha256 => 'b3c13d29cccda4e5c30660f2eba270259c4481d39422106b01c669a58d655802'
-  homepage 'http://www.macroplant.com/adapter/'
+  appcast 'https://www.macroplant.com/adapter/adapterAppcast.xml',
+          :sha256 => '036eb7f0efa1ea980a1233e39f4342dcc2751e048acdfb967532864930ca84de'
+  homepage 'https://www.macroplant.com/adapter/'
   license :gratis
+
+  depends_on :macos => '>= :snow_leopard'
 
   app 'Adapter.app'
 end

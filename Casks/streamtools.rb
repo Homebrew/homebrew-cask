@@ -8,9 +8,11 @@ cask :v1 => 'streamtools' do
   else
     sha256 '5ca21f4c4c2091c96c508bb277cb5c022f18a8cd3c53abb1ceb11ca0f6454309'
     url "https://github.com/nytlabs/streamtools/releases/download/#{version}/st_darwin_amd64-#{version}.tar.gz"
+    appcast 'https://github.com/nytlabs/streamtools/releases.atom'
     binary "st_darwin_amd64-#{version}/st"
   end
 
-  homepage 'https://github.com/nytlabs/streamtools'
-  license :oss
+  name 'streamtools'
+  homepage 'https://nytlabs.github.io/streamtools/'
+  license :apache
 end

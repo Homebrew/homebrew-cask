@@ -3,8 +3,10 @@ cask :v1 => 'qlmarkdown' do
   sha256 '045712562665673924397bbbef1ee1157b44e23c9744feda6feda27e107802d3'
 
   url "https://github.com/toland/qlmarkdown/releases/download/v#{version}/QLMarkdown.qlgenerator.zip"
+  appcast 'https://github.com/toland/qlmarkdown/releases.atom'
+  name 'QLMarkdown'
   homepage 'https://github.com/toland/qlmarkdown'
-  license :oss
+  license :bsd
 
   # Fix broken zip file with no toplevel bundle directory.  This was
   # not needed for version 1.3.2.  We could add an option to the main

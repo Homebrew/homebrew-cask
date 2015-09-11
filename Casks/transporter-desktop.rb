@@ -1,10 +1,14 @@
 cask :v1 => 'transporter-desktop' do
-  version '3.0.15_16791'
-  sha256 'a30e41afe1be4c0a3b10b2a61a059aee36da173d021ea25e3d73ba3a39d85d25'
+  version '3.1.36_19350'
+  sha256 '9e7ca3136f323c473ac548ea9908c8769c927734749d9bcaca5332ce7f000400'
 
+  # connecteddata.com is the official download host per the vendor homepage
   url "https://secure.connecteddata.com/mac/2.5/software/Transporter_Desktop_#{version}.dmg"
+  name 'Transporter Desktop'
+  appcast 'http://appsoftware.connecteddata.com/mac/2.5/Appcast.xml',
+          :sha256 => 'e3ab545795691139e7d6062c747a707c6e1db3a1c6a0ab11c4de8caed249e23d'
   homepage 'http://www.filetransporter.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Transporter Desktop.app'
 end

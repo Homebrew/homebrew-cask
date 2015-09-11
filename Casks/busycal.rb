@@ -8,5 +8,6 @@ cask :v1 => 'busycal' do
   license :commercial
 
   pkg 'BusyCal Installer.pkg'
+
   uninstall :pkgutil => 'com.busymac.busycal2.pkg'
 end

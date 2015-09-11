@@ -2,6 +2,7 @@ require 'rubygems'
 
 require 'hbc/cask_dependencies'
 require 'hbc/staged'
+require 'hbc/verify'
 
 class Hbc::Installer
 
@@ -11,6 +12,7 @@ class Hbc::Installer
   # should be explicit checks on whether staged state is valid in
   # every method.
   include Hbc::Staged
+  include Hbc::Verify
 
   PERSISTENT_METADATA_SUBDIRS = [ 'gpg' ]
 
@@ -59,6 +61,7 @@ class Hbc::Installer
     begin
       satisfy_dependencies(skip_cask_deps)
       download
+      verify
       extract_primary_container
       install_artifacts
       save_caskfile force
@@ -75,7 +78,7 @@ class Hbc::Installer
     s = if MacOS.release >= :lion and not ENV['HOMEBREW_NO_EMOJI']
       (ENV['HOMEBREW_INSTALL_BADGE'] || "\xf0\x9f\x8d\xba") + '  '
     else
-      "#{Tty.blue.bold}==>#{Tty.white} Success!#{Tty.reset} "
+      "#{Tty.blue.bold}==>#{Tty.reset.bold} Success!#{Tty.reset} "
     end
     s << "#{@cask} staged at '#{@cask.staged_path}' (#{Hbc::Utils.cabv(@cask.staged_path)})"
   end
@@ -86,6 +89,10 @@ class Hbc::Installer
     @downloaded_path = download.perform
     odebug "Downloaded to -> #{@downloaded_path}"
     @downloaded_path
+  end
+
+  def verify
+    Hbc::Verify.all(@downloaded_path, @cask)
   end
 
   def extract_primary_container
@@ -170,13 +177,13 @@ class Hbc::Installer
     ohai 'Installing Formula dependencies from Homebrew'
     @cask.depends_on.formula.each do |dep_name|
       print "#{dep_name} ... "
-      installed = @command.run(HOMEBREW_BREW_FILE,
+      installed = @command.run(Hbc.homebrew_executable,
                                :args => ['list', '--versions', dep_name],
                                :print_stderr => false).stdout.include?(dep_name)
       if installed
         puts "already installed"
       else
-        @command.run!(HOMEBREW_BREW_FILE,
+        @command.run!(Hbc.homebrew_executable,
                       :args => ['install', dep_name])
         puts "done"
       end
@@ -211,7 +218,7 @@ class Hbc::Installer
       @command.run!('/usr/bin/sqlite3',
                     :args => [
                               Hbc.tcc_db,
-                              "INSERT INTO access VALUES('kTCCServiceAccessibility','#{bundle_identifier}',0,1,1,NULL);",
+                              "INSERT OR REPLACE INTO access VALUES('kTCCServiceAccessibility','#{bundle_identifier}',0,1,1,NULL);",
                              ],
                     :sudo => true)
     else

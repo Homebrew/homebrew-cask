@@ -1,6 +1,6 @@
 cask :v1 => 'tigervnc-viewer' do
-  version '1.4.1'
-  sha256 '49d443b2a678030bab8d1b49868164543851ca998355eb70c72ea4ab19f1114c'
+  version '1.4.3'
+  sha256 'e6c2f17092456f04ccce6d923af3103f7e69123c4a0f80e37b56ee3861149cca'
 
   # bintray.com is the official download host per the vendor homepage
   url "https://bintray.com/artifact/download/tigervnc/stable/TigerVNC-#{version}.dmg"

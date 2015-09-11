@@ -2,9 +2,11 @@ cask :v1 => 'kobo' do
   version :latest
   sha256 :no_check
 
-  url 'http://download.kobobooks.com/desktop/kobodesktop/kobosetup.dmg'
-  homepage 'http://www.kobo.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  # akamaihd.net is the official download host per the vendor homepage
+  url 'http://kbdownload1-a.akamaihd.net/desktop/kobodesktop/kobosetup.dmg'
+  name 'Kobo'
+  homepage 'https://www.kobo.com/'
+  license :gratis
 
   app 'Kobo.app'
 end

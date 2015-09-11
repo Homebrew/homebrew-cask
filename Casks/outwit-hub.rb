@@ -3,6 +3,7 @@ cask :v1 => 'outwit-hub' do
   sha256 :no_check
 
   url 'https://www.outwit.com/downloads/release/outwit-hub.en-US.mac64.dmg'
+  name 'OutWit Hub'
   homepage 'http://www.outwit.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

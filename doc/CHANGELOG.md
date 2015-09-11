@@ -1,5 +1,242 @@
 # CHANGELOG
 
+## 0.56.0
+
+* __Casks__
+  - 5 Casks added (40 updated) by 14 contributors since 0.55.0
+  - 2659 total Casks
+* __Features__
+  - [#12992][] Expand tilde in uninstall :delete
+  - [#11200][] Make symlink targets writeable, so we can write altnames
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - none
+* __Internal Changes__
+  - none
+* __Documentation__
+  - 4 doc commits since 0.55.0
+* __Contributors__
+  - 6 new contributors since 0.55.0
+  - 2077 total contributors
+* __Release Date__
+  - 2015-08-04 04:30:00 UTC
+
+
+[#11200]: https://github.com/caskroom/homebrew-cask/issues/11200
+[#12992]: https://github.com/caskroom/homebrew-cask/issues/12992
+
+## 0.55.0
+
+* __Casks__
+  - 66 Casks added (955 updated) by 270 contributors since 0.54.1
+  - 2654 total Casks
+* __Features__
+  - [#9995][] list installed packages versions <3 [@otzy007][]
+  - [#11672][] additions for El Capitan
+  - [#11972][] attempt to clean up launchctl plists on uninstall
+  - [#12067][] Change warning from red to yellow
+  - [#12977][] Add postflight helpers to set file ownership and permissions
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - none
+* __Internal Changes__
+  - add new maintainers: jawshooah and Ngrd
+  - [#11995][] Changing Fake User Agent <3 [@SeanSith][]
+  - [#12785][] Run audit\_modified\_casks script during Travis build
+* __Documentation__
+  - 6 doc commits since 0.54.1
+* __Contributors__
+  - 272 new contributors since 0.54.1
+  - 2071 total contributors
+* __Release Date__
+  - 2015-08-02 04:30:00 UTC
+
+[#11672]: https://github.com/caskroom/homebrew-cask/issues/11672
+[#11972]: https://github.com/caskroom/homebrew-cask/issues/11972
+[#11995]: https://github.com/caskroom/homebrew-cask/issues/11995
+[#12067]: https://github.com/caskroom/homebrew-cask/issues/12067
+[#12785]: https://github.com/caskroom/homebrew-cask/issues/12785
+[#12977]: https://github.com/caskroom/homebrew-cask/issues/12977
+[#9995]: https://github.com/caskroom/homebrew-cask/issues/9995
+[@SeanSith]: https://github.com/SeanSith
+[@otzy007]: https://github.com/otzy007
+
+
+
+## 0.54.1
+
+* __Casks__
+  - 97 Casks added (598 updated) by 218 contributors since 0.54.0
+  - 2588 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#11630][] Allows accessibility entry to be updated if previously installed <3 [@akitchen][]
+* __Contributors__
+  - 111 new contributors since 0.54.0
+  - 1929 total contributors
+* __Release Date__
+  - 2015-06-13 20:00:00 UTC
+
+[#11630]: https://github.com/caskroom/homebrew-cask/issues/11630
+[@akitchen]: https://github.com/akitchen
+
+
+## 0.54.0
+
+* __Casks__
+  - 213 Casks added (1441 updated) by 495 contributors since 0.53.3
+  - Total current Casks in HEAD	    2491
+* __Features__
+  - [#10291][] Allow :sudo in uninstall stanza (:script + :early_script)
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#10549][] brew-cask: depend on Ruby 2.0. <3 [@mikemcquaid][]
+  - [#10622][] fix dependency name conflict <3 [@xu-cheng][]
+* __Internal Changes__
+  - [#9922][] Add rubocop rake task to travis config <3 [@jawshooah][]
+  - [#9776][] Audit for illegal SHA-256 digests
+  - [#10628][] brew-cask.rb: name requirement subclass better <3 [@mikemcquaid][]
+* __Documentation__
+  - 15 doc commits since 0.53.3
+* __Contributors__
+  - New contributors since 0.53.3	321
+  - All-time contributors	1818
+* __Release Date__
+  - 2015-05-11 03:00:00 UTC
+
+[#10291]: https://github.com/caskroom/homebrew-cask/issues/10291
+[#10549]: https://github.com/caskroom/homebrew-cask/issues/10549
+[#10622]: https://github.com/caskroom/homebrew-cask/issues/10622
+[#10628]: https://github.com/caskroom/homebrew-cask/issues/10628
+[#9776]: https://github.com/caskroom/homebrew-cask/issues/9776
+[#9922]: https://github.com/caskroom/homebrew-cask/issues/9922
+[@jawshooah]: https://github.com/jawshooah
+[@mikemcquaid]: https://github.com/mikemcquaid
+[@xu-cheng]: https://github.com/xu-cheng
+
+
+## 0.53.3
+
+* __Fixes__
+  - [#9516][] fix lingering problem in caveats methods
+
+[#9516]: https://github.com/caskroom/homebrew-cask/issues/9516
+
+
+## 0.53.2
+
+* __Fixes__
+  - [#9509][] fix preflight/postflight/caveats methods
+
+[#9509]: https://github.com/caskroom/homebrew-cask/issues/9509
+
+## 0.53.1
+
+* __Casks__
+  - 34 Casks added (576 updated) by 109 contributors since 0.53.0
+  - 2273 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#9473][] Use bold terminal escapes instead of white
+  - [#9455][] alfred: bring back cli command as stub
+* __Internal Changes__
+ - [#9478][] cli: [refactor] rename outdated option internally
+ - [#9480][] core: [refactor] separate Hbc::Cask from Hbc
+ - [#9152][] add a task `console` on rake. <3 [@WitzHsiao][]
+ - [#9216][] Use Hbc::Verify in Hbc::Installer
+ - [#9225][] Add test for creating binarydir if it doesn't exist
+ - [#9223][] Test casks decoupled
+ - [#9218][] binary_test (minitest) -> binary_spec (rspec)
+* __Documentation__
+  - 4 doc commits since 0.53.0
+* __Contributors__
+  - 49 new contributors since 0.53.0
+  - 1495 total contributors
+* __Release Date__
+  - 2015-02-08 14:00:00 UTC
+
+[#9152]: https://github.com/caskroom/homebrew-cask/issues/9152
+[#9216]: https://github.com/caskroom/homebrew-cask/issues/9216
+[#9218]: https://github.com/caskroom/homebrew-cask/issues/9218
+[#9223]: https://github.com/caskroom/homebrew-cask/issues/9223
+[#9225]: https://github.com/caskroom/homebrew-cask/issues/9225
+[#9455]: https://github.com/caskroom/homebrew-cask/issues/9455
+[#9473]: https://github.com/caskroom/homebrew-cask/issues/9473
+[#9478]: https://github.com/caskroom/homebrew-cask/issues/9478
+[#9480]: https://github.com/caskroom/homebrew-cask/issues/9480
+[@WitzHsiao]: https://github.com/WitzHsiao
+
+## 0.53.0
+
+* __Casks__
+  - 15 Casks added (720 updated) by 100 contributors since 0.52.1
+  - 2239 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - [#8840][] Removed Alfred support
+  - [#8751][] Removed widget support
+* __Fixes__
+  - [#8790][],[#8869][],[#8936][] Correctly launch editor in the absence of related ENV variables
+* __Internal Changes__
+  - [#8870][] remove homebrew-fork MACOS_RELEASE constants
+  - [#8871][] increment seed for Travis tests
+* __Documentation__
+  - 12 doc commits since 0.52.1 <3 [@bronson][]
+* __Contributors__
+  - 48 new contributors since 0.52.1
+  - 1446 total contributors
+* __Release Date__
+  - 2015-01-23 11:00:00 UTC
+
+[#8751]: https://github.com/caskroom/homebrew-cask/issues/8751
+[#8790]: https://github.com/caskroom/homebrew-cask/issues/8790
+[#8840]: https://github.com/caskroom/homebrew-cask/issues/8840
+[#8869]: https://github.com/caskroom/homebrew-cask/issues/8869
+[#8870]: https://github.com/caskroom/homebrew-cask/issues/8870
+[#8871]: https://github.com/caskroom/homebrew-cask/issues/8871
+[#8936]: https://github.com/caskroom/homebrew-cask/issues/8936
+[@bronson]: https://github.com/bronson
+
+## 0.52.1
+
+* __Casks__
+  - 8 Casks added (525 updated) by 35 contributors since 0.52.0
+  - 2224 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#8618][] Mmore robust cask dependency calculation
+  - [#8622][] Improve error message for AIR app reinstallation
+* __Internal Changes__
+  - [#8721][], [#8724][], [#8612][], [#8611][] integrate Homebrew code into our own backend
+* __Documentation__
+  - 4 doc commits since 0.52.0 <3 [@nZac][]
+* __Contributors__
+  - 13 new contributors since 0.52.0
+  - 1398 total contributors
+* __Release Date__
+  - 2015-01-07 23:30:00 UTC
+
+[#8611]: https://github.com/caskroom/homebrew-cask/issues/8611
+[#8612]: https://github.com/caskroom/homebrew-cask/issues/8612
+[#8618]: https://github.com/caskroom/homebrew-cask/issues/8618
+[#8622]: https://github.com/caskroom/homebrew-cask/issues/8622
+[#8721]: https://github.com/caskroom/homebrew-cask/issues/8721
+[#8724]: https://github.com/caskroom/homebrew-cask/issues/8724
+[@nZac]: https://github.com/nZac
+
 ## 0.52.0
 
 * __Casks__
@@ -845,7 +1082,7 @@
   - 1736 total Casks
 * __Features__
   - [#5517][] support pure gzip containers (*ie* not `tar.gz`)
-  - Numerous undocumented changes to DSL, transitioning to DSL 1.0 (see #4688)  
+  - Numerous undocumented changes to DSL, transitioning to DSL 1.0 (see #4688)
     - [#4953][], [#5540][] add `tags` stanza
     - [#4873][] add `license` stanza
     - [#4869][] add `zap` stanza
@@ -872,7 +1109,7 @@
   - [#5519][] internal: Zip container does not need to `require 'tmpdir'`
   - [#5120][] internal: install rspec; move first few tests over
   - [#5132][] internal: rspecify scopes and download strategy tests
-  - [#4951][] internal:  
+  - [#4951][] internal:
     - move `read_script_argument` to `Cask::Artifact::Base`
     - generalize `read_script_arguments` and harmonize error messages
     - make `read_script_arguments` accept defaults/overrides

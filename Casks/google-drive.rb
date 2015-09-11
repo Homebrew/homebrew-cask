@@ -5,9 +5,13 @@ cask :v1 => 'google-drive' do
   url 'https://dl.google.com/drive/installgoogledrive.dmg'
   name 'Google Drive'
   homepage 'https://drive.google.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
+  tags :vendor => 'Google'
 
   app 'Google Drive.app'
 
-  zap :delete => '~/Library/Preferences/com.google.GoogleDrive.plist'
+  zap :delete => [
+                  '~/Library/Application Support/Google/Drive',
+                  '~/Library/Preferences/com.google.GoogleDrive.plist',
+                 ]
 end

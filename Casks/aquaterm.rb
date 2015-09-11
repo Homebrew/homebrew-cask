@@ -5,7 +5,7 @@ cask :v1 => 'aquaterm' do
   url "http://downloads.sourceforge.net/project/aquaterm/AquaTerm/v#{version}/AquaTerm-#{version}.dmg"
   name 'AquaTerm'
   homepage 'http://aquaterm.sourceforge.net/'
-  license :oss
+  license :bsd
 
   pkg 'AquaTermInstaller.pkg'
 

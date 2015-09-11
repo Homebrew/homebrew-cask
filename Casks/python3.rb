@@ -1,11 +1,12 @@
 cask :v1 => 'python3' do
   # note: "3" is a trailing version number on the Cask token, which
   # breaks our own token conventions, for consistency with Homebrew
-  version '3.4.2'
-  sha256 '5a4edfac31efd4ecd2efb4cb7203c0c36e488f1d0a20755b674b04dcb3c21e1b'
+  version '3.4.3'
+  sha256 'ab76fa2ad87d9b36105ccc94b98e40aa158393975a0d45cf0ca491aad6bbcf22'
 
   url "https://www.python.org/ftp/python/#{version}/python-#{version}-macosx10.6.pkg"
-  homepage 'http://www.python.org/'
+  name 'Python'
+  homepage 'https://www.python.org/'
   license :oss
 
   pkg "python-#{version}-macosx10.6.pkg"

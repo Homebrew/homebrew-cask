@@ -1,6 +1,6 @@
 cask :v1 => 'ax88772' do
-  version '2.3.0'
-  sha256 '94d3916c4ad0c06bce827cb2fbcc17e09168530a475db6e2b1d857fc289fcc1b'
+  version '2.4.0_20141215'
+  sha256 'b9b2162f19d4a563071ef1eaa92f0bd2b2fa224eba721122366025e8be5ce907'
 
   module Utils
     def self.basename
@@ -14,7 +14,7 @@ cask :v1 => 'ax88772' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :nested => "#{Utils.basename}/AX88772.dmg"
-  pkg "AX88772_v#{version}.pkg"
+  pkg "AX88772_v#{version[0..-10]}.pkg"
 
   uninstall :script => { :executable => 'AX88772C_772B_772A_760_772_Uninstall_v130' }
 end

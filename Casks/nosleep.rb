@@ -3,8 +3,10 @@ cask :v1 => 'nosleep' do
   sha256 '29e7f771970dce41936372687a5160700e2208357ef1ce37d81ac95c9188efe8'
 
   url "https://github.com/integralpro/nosleep/releases/download/v#{version}/NoSleep-#{version}.dmg"
-  homepage 'https://code.google.com/p/macosx-nosleep-extension/'
-  license :oss
+  appcast 'https://github.com/integralpro/nosleep/releases.atom'
+  name 'NoSleep'
+  homepage 'https://integralpro.github.io/nosleep/'
+  license :gpl
 
   pkg 'NoSleep.pkg'
 

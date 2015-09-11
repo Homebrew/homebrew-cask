@@ -1,11 +1,12 @@
 cask :v1 => 'harvest' do
-  version :latest
-  sha256 :no_check
+  version '1.4.4'
+  sha256 '27d5f2a5dc9f954c6fb073a77ea6d17a16c69082a0b9a046682e26ab29fca9d9'
 
-  url 'https://www.getharvest.com/harvest/mac/Harvest.zip'
+  url "https://www.getharvest.com/harvest/mac/Harvest.#{version}.zip"
   appcast 'https://www.getharvest.com/harvest/mac/appcast.xml'
-  homepage 'http://www.getharvest.com/mac'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  name 'Harvest'
+  homepage 'https://www.getharvest.com/mac'
+  license :gratis
 
   app 'Harvest.app'
 end

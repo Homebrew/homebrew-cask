@@ -45,13 +45,13 @@ end
 # originally from Homebrew
 def ohai(title, *sput)
   title = Tty.truncate(title) if $stdout.tty? && !Hbc.verbose
-  puts "#{Tty.blue.bold}==>#{Tty.white} #{title}#{Tty.reset}"
+  puts "#{Tty.blue.bold}==>#{Tty.reset.bold} #{title}#{Tty.reset}"
   puts sput unless sput.empty?
 end
 
 # originally from Homebrew
 def opoo(warning)
-  $stderr.puts "#{Tty.red.underline}Warning#{Tty.reset}: #{warning}"
+  $stderr.puts "#{Tty.yellow.underline}Warning#{Tty.reset}: #{warning}"
 end
 
 # originally from Homebrew
@@ -65,7 +65,7 @@ def odebug(title, *sput)
     if $stdout.tty? and title.to_s.length > width
       title = title.to_s[0, width - 3] + '...'
     end
-    puts "#{Tty.magenta.bold}==>#{Tty.white} #{title}#{Tty.reset}"
+    puts "#{Tty.magenta.bold}==>#{Tty.reset.bold} #{title}#{Tty.reset}"
     puts sput unless sput.empty?
   end
 end
@@ -76,43 +76,16 @@ def puts_columns(items, star_items=[])
 end
 
 module Hbc::Utils
-  def dumpcask
-    if Hbc.respond_to?(:debug) and Hbc.debug
-      odebug "Cask instance dumps in YAML:"
-      odebug "Cask instance toplevel:", self.to_yaml
-      [
-       :full_name,
-       :homepage,
-       :url,
-       :appcast,
-       :version,
-       :license,
-       :tags,
-       :sha256,
-       :artifacts,
-       :caveats,
-       :depends_on,
-       :conflicts_with,
-       :container,
-       :gpg,
-       :accessibility_access,
-      ].each do |method|
-        printable_method = method.to_s
-        printable_method = "name" if printable_method == "full_name"
-        odebug "Cask instance method '#{printable_method}':", self.send(method).to_yaml
-      end
-    end
-  end
 
   def self.which(cmd, path=ENV['PATH'])
     unless File.basename(cmd) == cmd.to_s
-      # path contains a directory element
+      # cmd contains a directory element
       cmd_pn = Pathname(cmd)
       return nil unless cmd_pn.absolute?
       return resolve_executable(cmd_pn)
     end
     path.split(File::PATH_SEPARATOR).each do |elt|
-      fq_cmd = Pathname(elt).join(cmd)
+      fq_cmd = Pathname(elt).expand_path.join(cmd)
       resolved = resolve_executable fq_cmd
       return resolved if resolved
     end
@@ -133,9 +106,11 @@ module Hbc::Utils
   end
 
   def self.exec_editor(*args)
-    editor = [ *ENV.values_at('HOMEBREW_EDITOR', 'VISUAL', 'EDITOR'),
-               *%w{mate edit vim /usr/bin/vim} ].compact.first
-    exec(editor, *args)
+    editor = [
+              *ENV.values_at('HOMEBREW_EDITOR', 'VISUAL', 'EDITOR'),
+              *%w{mate edit vim /usr/bin/vim}.map{ |x| which(x) }
+             ].compact.first.to_s
+    exec(*editor.split.concat(args))
   end
 
   # originally from Homebrew puts_columns
@@ -220,13 +195,13 @@ module Hbc::Utils
 
   def self.error_message_with_suggestions
     <<-EOS.undent
-    #{ Tty.reset.white.bold }
+    #{ Tty.reset.bold }
       Most likely, this means you have an outdated version of homebrew-cask.#{
       } Please run:
 
           #{ Tty.green.normal }#{ UPDATE_CMD }
 
-      #{ Tty.white.bold }If this doesn’t fix the problem, please report this bug:
+      #{ Tty.reset.bold }If this doesn’t fix the problem, please report this bug:
 
           #{ Tty.underline }#{ ISSUES_URL }#{ Tty.reset }
 
@@ -240,5 +215,26 @@ module Hbc::Utils
     poo << "on Cask #{token}."
 
     opoo(poo.join(' ') + "\n" + error_message_with_suggestions)
+  end
+
+  # originally from Homebrew
+  def self.ignore_interrupts(opt = nil)
+    std_trap = trap('INT') do
+      puts 'One sec, just cleaning up' unless opt == :quietly
+    end
+    yield
+  ensure
+    trap('INT', std_trap)
+  end
+
+  def self.nowstamp_metadata_path(container_path)
+    @timenow ||= Time.now.gmtime
+    if container_path.respond_to?(:join)
+      precision = 3
+      timestamp = @timenow.strftime('%Y%m%d%H%M%S')
+      fraction = ("%.#{precision}f" % (@timenow.to_f - @timenow.to_i))[1..-1]
+      timestamp.concat(fraction)
+      container_path.join(timestamp)
+    end
   end
 end

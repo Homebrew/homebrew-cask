@@ -71,20 +71,6 @@ describe Hbc::CLI do
     Hbc.fontdir.must_equal Pathname('/some/path/bar')
   end
 
-  it "supports setting the widgetdir" do
-    Hbc::CLI.process_options %w{help --widgetdir=/some/path/foo}
-
-    Hbc.widgetdir.must_equal Pathname('/some/path/foo')
-  end
-
-  it "supports setting the widgetdir from ENV" do
-    ENV['HOMEBREW_CASK_OPTS'] = "--widgetdir=/some/path/bar"
-
-    Hbc::CLI.process_options %w{help}
-
-    Hbc.widgetdir.must_equal Pathname('/some/path/bar')
-  end
-
   it "supports setting the servicedir" do
     Hbc::CLI.process_options %w{help --servicedir=/some/path/foo}
 

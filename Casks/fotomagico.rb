@@ -1,11 +1,12 @@
 cask :v1 => 'fotomagico' do
-  version '4.3.1-18650'
-  sha256 'ad4fff8a197424cc02770ca7bf2f71fe78abf5428a234b098d4589133fd16b39'
+  version '4.6.2-19829'
+  sha256 '7b92c77092a8467b1bcc2584e1d98c8e39819da0c3c37eeba53ad6b3e666d27c'
 
-  url "https://cdn.boinx.com/software/fotomagico/Boinx_FotoMagico_#{version}.zip"
+  url "https://cdn.boinx.com/software/fotomagico/Boinx_FotoMagico_#{version}.app.zip"
   appcast 'https://sparkle.boinx.com/appcast.lasso'
+  name 'FotoMagico'
   homepage 'http://www.boinx.com/fotomagico/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'FotoMagico.app'
 end

@@ -1,10 +1,13 @@
 cask :v1 => 'flash-player' do
-  version '16.0.0.235'
-  sha256 'f7bd90f9ee7520195cb02c0bf7803b4b30da48e64da040cd7d84d638aa000102'
+  version '18.0.0.232'
+  sha256 'e5cba056c8ae0cfcc8a87fa4e9c627c422904c94a519d5962c5a7b7eaae8652a'
 
+  # macromedia.com is the official download host per the vendor homepage
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.to_i}/flashplayer_#{version.to_i}_sa.dmg"
+  name 'Adobe Flash Player'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
+  tags :vendor => 'Adobe'
 
   app 'Flash Player.app'
 

@@ -1,10 +1,13 @@
 cask :v1 => 'genymotion' do
-  version '2.3.1'
-  sha256 'aa41be79a773ccf3a6b68971088c38ef34ff864128c57b09a8362b878f4534e0'
+  version '2.5.2'
+  sha256 'b85f64c0d260befdb8a60132da98841cce2635cd8b72e5f254526603638095cb'
+
+  depends_on :cask => 'virtualbox'
 
   url "http://files2.genymotion.com/genymotion/genymotion-#{version}/genymotion-#{version}.dmg"
-  homepage 'http://www.genymotion.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  name 'Genymotion'
+  homepage 'https://www.genymotion.com/'
+  license :commercial
 
   app 'Genymotion.app'
   app 'Genymotion Shell.app'

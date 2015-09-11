@@ -5,16 +5,20 @@ cask :v1 => 'totalspaces' do
     sha256 'fd54c6ea092f6fae2035745959ff6e080953e77ec6c76715e532b4b0352235d4'
 
     url "http://downloads.binaryage.com/TotalSpaces-#{version}.zip"
+    appcast 'http://updates-s3.binaryage.com/totalspaces.xml',
+            :sha256 => '6c3149bdef9f537e45c66ffb83e9548bcf87d9be32ab0d0ed23a24df6bcc74ce'
 
     pkg 'TotalSpaces.pkg'
 
     uninstall :pkgutil => 'com.switchstep.totalspaces',
               :quit    => 'com.binaryage.TotalSpaces'
   else
-    version '2.2.9'
-    sha256 '66656dab328455906fd6e757bd966efac7d3a364b66155c847de55bfc57d8f14'
+    version '2.2.19'
+    sha256 'bf2d496ac7d688649fc0a43b4e9d1c8f15c3819a58628dc3aa16c11b1933726e'
 
     url "http://downloads.binaryage.com/TotalSpaces2-#{version}.dmg"
+    appcast 'http://updates-s3.binaryage.com/totalspaces2.xml',
+            :sha256 => 'bcce0b9691cee8b0a65ab4146184cf8d88ee5822904493bedf753b1c7d70788e'
 
     installer :manual => 'TotalSpaces2.app'
 
@@ -26,6 +30,7 @@ cask :v1 => 'totalspaces' do
               :quit    => 'com.binaryage.TotalSpaces2'
   end
 
+  name 'TotalSpaces'
   homepage 'http://totalspaces.binaryage.com/'
   license :commercial
 

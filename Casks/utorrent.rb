@@ -3,16 +3,16 @@ cask :v1 => 'utorrent' do
   sha256 :no_check
 
   if Hardware::CPU.type == :ppc
-    url 'http://download-new.utorrent.com/endpoint/utmac/os/osx-ppc/track/stable/'
+    url 'https://download-new.utorrent.com/endpoint/utmac/os/osx-ppc/track/stable/'
     app 'uTorrent.app'
   else
-    url 'http://download-new.utorrent.com/endpoint/utmac/os/osx/track/stable/'
-    appcast 'http://update.utorrent.com/checkupdate.php'
-    installer :manual => 'uTorrent-Installer.app'
+    url 'https://download-new.utorrent.com/endpoint/utmac/os/osx/track/stable/'
+    appcast 'https://update.utorrent.com/checkupdate.php'
+    installer :manual => 'uTorrent.app'
   end
 
   name 'µTorrent'
-  homepage 'http://www.utorrent.com/'
+  homepage 'https://www.utorrent.com/'
   license :freemium
 
   zap :delete => [

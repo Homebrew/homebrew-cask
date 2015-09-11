@@ -1,11 +1,13 @@
 cask :v1 => 'houdahspot' do
-  version :latest
-  sha256 :no_check
+  version '4.0.9'
+  sha256 '9494ce5fa33243d9196683b622d5a1ea5df2aed17a6a6e2086b5168b05221ccb'
 
-  url 'http://www.houdah.com/houdahSpot/download_assets/HoudahSpot_latest.zip'
-  appcast 'http://www.houdah.com/houdahSpot/updates/profileInfo3.php'
+  url "http://www.houdah.com/houdahSpot/download_assets/HoudahSpot#{version}.zip"
+  appcast "http://www.houdah.com/houdahSpot/updates/cast#{version.to_i}.xml",
+          :sha256 => '45f0570d244b214809b7949340d9c5c92cfde57926cb5c06e12ecd41b18a1edb'
+  name 'HoudahSpot'
   homepage 'http://www.houdah.com/houdahSpot/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'HoudahSpot.app'
 

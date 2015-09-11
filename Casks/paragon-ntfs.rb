@@ -3,7 +3,8 @@ cask :v1 => 'paragon-ntfs' do
   sha256 :no_check
 
   url 'http://dl.paragon-software.com/demo/ntfsmac_trial_u.dmg'
-  homepage 'http://www.paragon-software.com/home/ntfs-mac/'
+  name 'Paragon NTFS for Mac'
+  homepage 'https://www.paragon-software.com/home/ntfs-mac/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'FSInstaller.app/Contents/Resources/Paragon NTFS for Mac OS X.pkg'

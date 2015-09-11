@@ -1,7 +1,7 @@
 # How To Contribute
 
 So you want to contribute to the project. **THIS IS GREAT NEWS!**  Seriously. We're
-all pretty happy about this.  Here's how to get started:
+all pretty happy about this.  Here’s how to get started:
 
  * [Getting Set Up To Contribute](#getting-set-up-to-contribute)
  * [Adding a Cask](#adding-a-cask)
@@ -9,12 +9,12 @@ all pretty happy about this.  Here's how to get started:
  * [Finding a Home For Your Cask](#finding-a-home-for-your-cask)
  * [Submitting Your Changes](#submitting-your-changes)
  * [Cleaning up](#cleaning-up)
- * [Reporting Bugs](#reporting-bugs)
+ * [Reporting Bugs](README.md#reporting-bugs)
 
 
 ## Getting Set Up To Contribute
 
-1. Fork the repository in GitHub with the 'Fork' button
+1. Fork the repository in GitHub with the `Fork` button
 2. Add your GitHub fork as a remote for your homebrew-cask Tap
 
 ```bash
@@ -30,7 +30,7 @@ Making a Cask is easy: a Cask is a small Ruby file.
 
 ### Examples
 
-Here's a Cask for `Alfred.app` as an example.  Note that you may repeat
+Here’s a Cask for `Alfred.app` as an example.  Note that you may repeat
 the `app` stanza as many times as you need, to define multiple apps:
 
 ```ruby
@@ -139,7 +139,7 @@ Fill in the following stanzas for your Cask:
 | ------------------ | ----------- |
 | `version`          | application version; give the value `:latest` if an unversioned download is available
 | `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
-| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
+| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application. A [comment](doc/CASK_LANGUAGE_REFERENCE.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
 | `name`             | the full and proper name defined by the vendor, and any useful alternate names (see also [Name Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#name-stanza-details))
 | `homepage`         | application homepage; used for the `brew cask home` command
 | `license`          | a symbol identifying the license for the application.  Valid category licenses include `:oss`, `:closed`, and `:unknown`.  It is OK to leave as `:unknown`.  (see also [License Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#license-stanza-details))
@@ -160,7 +160,6 @@ Additional stanzas you might need for special use-cases:
 | `colorpicker`          | relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
 | `qlplugin`             | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `font`                 | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
-| `widget`               | relative path to a widget that should be linked into the `~/Library/Widgets` folder on installation (ALPHA: DOES NOT WORK YET)
 | `service`              | relative path to a service that should be linked into the `~/Library/Services` folder on installation
 | `binary`               | relative path to a binary that should be linked into the `/usr/local/bin` folder on installation
 | `input_method`         | relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
@@ -180,15 +179,6 @@ provide many different styles of URLs to get to the goods.
 We prefer URLs of this format:
 
 ```
-http://sourceforge.net/projects/$PROJECTNAME/files/latest/download
-```
-
-This lets the project maintainers choose the best URL for download.
-
-If the "latest" URL does not point to a valid file for a Mac app, then we
-fall back to this format:
-
-```
 http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 ```
 
@@ -199,6 +189,14 @@ http://$STRING.sourceforge.jp/$PROJECTNAME/$RELEASEID/$FILENAME.$EXT
 ```
 
 `$STRING` is typically of the form `dl` or `$USER.dl`.
+
+If these formats are not available, and the application is Mac-exclusive
+(otherwise a command-line download defaults to the Windows version)
+we prefer the use of this format:
+
+```
+http://sourceforge.net/projects/$PROJECTNAME/files/latest/download
+```
 
 ### Personal Hosting Such as Dropbox
 
@@ -224,7 +222,7 @@ or vendor, rather than an aggregator such as macupdate.com.
 
 If a token conflicts with an already-existing Cask, authors should manually
 make the new token unique by prepending the vendor name.  Example:
-[unison.rb](../Casks/unison.rb) and [panic-unison.rb](../Casks/panic-unison.rb).
+[unison.rb](../master/Casks/unison.rb) and [panic-unison.rb](../master/Casks/panic-unison.rb).
 
 If possible, avoid creating tokens which differ only by the placement of
 hyphens.
@@ -249,11 +247,26 @@ Example:
 	app 'TexmakerMacosxLion/texmaker.app'
 	```
 
-### Indenting
+### Style guide
 
 All Casks and code in the homebrew-cask project should be indented using two
 spaces (never tabs).
 
+If relevant, you may also use string manipulations to improve the maintainability of your Cask. Here’s an example from `Lynkeos.app`:
+
+```ruby
+cask :v1 => 'lynkeos' do
+  version '2.10'
+  sha256 'bd27055c51575555a1c8fe546cf057c57c0e45ea5d252510847277734dc550a4'
+
+  url "http://downloads.sourceforge.net/project/lynkeos/lynkeos/#{version}/Lynkeos-App-#{version.gsub('.', '-')}.zip"
+  name 'Lynkeos'
+  homepage 'http://lynkeos.sourceforge.net/'
+  license :gpl
+
+  app "Lynkeos-App-#{version.gsub('.', '-')}/Lynkeos.app"
+end
+```
 
 ## Testing Your New Cask
 
@@ -262,7 +275,7 @@ Give it a shot with `brew cask install my-new-cask`
 Did it install? If something went wrong, `brew cask uninstall my-new-cask` and
 edit your Cask to fix it.
 
-If everything looks good, you'll also want to make sure your Cask passes audit
+If everything looks good, you’ll also want to make sure your Cask passes audit
 with
 
 `brew cask audit my-new-cask --download`
@@ -274,39 +287,50 @@ out open issues.
 
 ## Finding a Home For Your Cask
 
-We maintain separate Taps for different types of binaries.
+We maintain separate Taps for different types of binaries. Our nomenclature is:
 
-### Latest Stable Versions
++ **Stable**: The latest version provided by the developer defined by them as such.
++ **Beta, Development, Unstable**: Subsequent versions to **stable**, yet incomplete and under development, aiming to eventually become the new **stable**.
++ **Nightly**: Constantly up-to-date versions of the current development state.
++ **Legacy**: Any **stable** version that is not the most recent.
++ **Trial**: Date-limited version that stops working entirely after it expires, requiring payment to lift the limitation.
++ **Freemium**: Gratis version that works indefinitely but with limitations that can be removed by paying.
++ **Fork**: An alternate version of an existing project, with a based-on but modified source and binary.
++ **Unofficial**: An *allegedly* unmodified compiled binary, by a third-party, of a binary that has no existing build by the owner of the source code.
++ **Vendorless**: A binary distributed without an official website, like a forum posting.
++ **Walled**: When the download URL is both behind a login/registration form and from a host that differs from the homepage.
 
-Latest stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask).
-Software in the main repo should run on the latest release of OS X or the previous
-point release (currently: Mavericks and Mountain Lion).
+### Stable Versions
+
+Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of OS X or the previous point release (in 2014, for example, that meant Mavericks and Yosemite).
 
 ### But There Is No Stable Version!
 
-When an App is only available as an unstable version (e.g. beta, nightly), or in cases where such a version is
-the general standard, then an "unstable" version can go into the main repo.
+When an App is only available as beta, development, or unstable versions, or in cases where such a version is
+the general standard, then said version can go into the main repo.
 
-### Unstable, Development, or Legacy Versions
+### Beta, Unstable, Development, Nightly, or Legacy Versions
 
-When an App already exists in the main repo, alternate versions can be Casked
-and submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
+When an App’s stable version already exists in the main repo, alternate versions can be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
 
-### Trial Versions
+### Trial and Freemium Versions
 
-Before submitting a trial, please make sure it can be made into a full working version
+Before submitting a trial, make sure it can be made into a full working version
 without the need to be redownloaded. If an App provides a trial but the only way to buy the full version
-is via the Mac App Store, it does not currently belong in any of the official repos.
+is via the Mac App Store, it does not belong in any of the official repos. Freemium versions are fine.
 
-### Unofficial Builds
+### Forks and Apps with conflicting names
 
-When an App developer does not offer a binary download, please submit the
-Cask to [caskroom/homebrew-unofficial](http://github.com/caskroom/homebrew-unofficial).
-For a location to host unofficial builds, contact our sister project [alehouse](https://github.com/alehouse).
+Forks should have the vendor’s name as a prefix on the cask’s file name and token. For unrelated apps that share a name, the most popular one (usually the one already present) stays unprefixed. Since this can be subjective, if you disagree with a decision open an issue and make your case to the maintainers.
+
+### Unofficial, Vendorless, and Walled Builds
+
+Please submit these to [caskroom/homebrew-unofficial](http://github.com/caskroom/homebrew-unofficial).
+If you’ve made an unofficial build and need a place to host it, contact our sister project [alehouse](https://github.com/alehouse).
 
 ### Fonts
 
-Font Casks live in the [caskroom/homebrew-fonts](https://github.com/caskroom/homebrew-fonts)
+Font casks live in the [caskroom/homebrew-fonts](https://github.com/caskroom/homebrew-fonts)
 repository.  See the font repo [CONTRIBUTING.md](https://github.com/caskroom/homebrew-fonts/blob/master/CONTRIBUTING.md)
 for details.
 
@@ -325,7 +349,7 @@ $ git status
 #       Casks/my-new-cask.rb
 ```
 
-So far, so good. Now make a feature branch that you'll use in your pull
+So far, so good. Now make a feature branch that you’ll use in your pull
 request:
 
 ```bash
@@ -388,7 +412,7 @@ See more on https://help.github.com/articles/https-cloning-errors#provide-access
 
 Now go to *your* GitHub repository at
 https://github.com/my-github-username/homebrew-cask, switch branch to your
-topic branch and click the 'Pull Request' button. You can then add further
+topic branch and click the `Pull Request` button. You can then add further
 comments to your pull request.
 
 Congratulations! You are done now, and your Cask should be pulled in or
@@ -399,7 +423,7 @@ otherwise noticed in a while.
 If your pull request has multiple commits which revise the same lines of
 code, it is better to [squash](http://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
 
-But you don't always have to squash -- it is fine for a pull request to
+But you don’t always have to squash — it is fine for a pull request to
 contain multiple commits when there is a logical reason for the separation.
 
 
@@ -415,26 +439,5 @@ git checkout master
 
 Neat and tidy!
 
-
-## Reporting Bugs
-
-We still have bugs -- and we are busy fixing them!  If you have a problem, don't
-be shy about reporting it on our [GitHub issues page](https://github.com/caskroom/homebrew-cask/issues?state=open).
-
-When reporting bugs, remember that homebrew-cask is an independent project from
-Homebrew.  Do your best to direct bug reports to the appropriate project.  If
-your command-line started with `brew cask`, bring the bug to us first!
-
-Before reporting a bug, make sure you have the latest versions of Homebrew,
-homebrew-cask, and all Taps by running the following command:
-
-```bash
-$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
-```
-
-## Working On homebrew-cask Itself
-
-If you'd like to hack on the Ruby code in the project itself, please
-see [hacking.md](doc/hacking.md).
 
 # <3 THANK YOU! <3

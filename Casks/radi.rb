@@ -3,6 +3,7 @@ cask :v1 => 'radi' do
   sha256 :no_check
 
   url 'http://radiapp.com/Radi.zip'
+  name 'Radi'
   homepage 'http://radiapp.com/'
   license :closed
 

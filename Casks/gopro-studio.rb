@@ -1,9 +1,10 @@
 cask :v1 => 'gopro-studio' do
-  version '2.5.3.460'
-  sha256 '870ede8a7f446caaf34690dcb623b2d3b193449575517339dca4ff81f07e2f9a'
+  version '2.5.6.75'
+  sha256 '4b632b35cb19aeff3091c1c34fb9ea698105b9b6e227d218245a0b13efe2d477'
 
   url "http://software.gopro.com/Mac/GoProStudio-#{version}.dmg"
-  homepage 'http://shop.gopro.com/APAC/softwareandapp/gopro-studio/GoPro-Studio.html#/start=1'
+  name 'GoPro Studio'
+  homepage 'https://shop.gopro.com/APAC/softwareandapp/gopro-studio/GoPro-Studio.html#/start=1'
   license :commercial
 
   pkg 'GoPro Studio.pkg'

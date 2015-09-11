@@ -4,14 +4,11 @@ cask :v1 => 'workamajig' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://s3.amazonaws.com/Workamajig/AIR/Workamajig.air'
+  name 'Workamajig'
   homepage 'http://www.workamajig.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Workamajig.app'
 
-  caveats <<-EOS.undent
-    #{token} requires Adobe Air, available via
-
-      brew cask install adobe-air
-  EOS
+  depends_on :cask => 'adobe-air'
 end

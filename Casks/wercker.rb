@@ -3,6 +3,7 @@ cask :v1 => 'wercker' do
   sha256 :no_check
 
   url 'http://downloads.wercker.com/release/wercker-darwin-latest.tar.gz'
+  name 'Wercker'
   homepage 'http://wercker.com/downloads/'
   license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

@@ -3,6 +3,7 @@ cask :v1 => 'heroku-toolbelt' do
   sha256 :no_check
 
   url 'http://assets.heroku.com/heroku-toolbelt/heroku-toolbelt.pkg'
+  name 'Heroku Toolbelt'
   homepage 'https://toolbelt.heroku.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
@@ -12,6 +13,8 @@ cask :v1 => 'heroku-toolbelt' do
             :delete  => [
                          '/usr/local/heroku',
                          '/usr/bin/heroku',
+                         '/usr/local/foreman',
+                         '/usr/bin/foreman'
                         ]
   zap       :delete => '~/.heroku'
 

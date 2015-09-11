@@ -1,14 +1,15 @@
 cask :v1 => 'wireshark' do
-  version '1.12.2'
-  sha256 '39a94d55dfa3b27ea9a672df12d98509150bf022da2e581817374274215a0f9a'
+  version '1.12.7'
+  sha256 'a531a51c2e6c271df936a636f563bc669f315bd220f322ad7d8c41e534593bf8'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
-  homepage 'http://www.wireshark.org'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  name 'Wireshark'
+  homepage 'https://www.wireshark.org/'
+  license :gpl
 
   pkg "Wireshark #{version} Intel 64.pkg"
   postflight do
-    if Process.euid == 0 then
+    if Process.euid == 0
       ohai 'Note:'
       puts <<-EOS.undent
         You executed 'brew cask' as the superuser.

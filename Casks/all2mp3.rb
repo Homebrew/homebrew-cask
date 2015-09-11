@@ -6,7 +6,7 @@ cask :v1 => 'all2mp3' do
   name 'All2MP3'
   appcast 'http://www.tresrrr.com/All2MP3/Appcast.xml'
   homepage 'http://www.tresrrr.com/All2MP3/ENGLISH.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'All2MP3.app'
 end

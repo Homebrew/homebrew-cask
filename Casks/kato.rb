@@ -3,6 +3,7 @@ cask :v1 => 'kato' do
   sha256 :no_check
 
   url 'http://labs.kato.im/Kato.pkg'
+  name 'Kato'
   homepage 'https://app.kato.im/'
   license :closed
 

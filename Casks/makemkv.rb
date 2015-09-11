@@ -1,10 +1,18 @@
 cask :v1 => 'makemkv' do
-  version '1.9.0'
-  sha256 'd7889b105ad7ef29c69a255279b129a8555c0101875e353431b6eb50b48dc222'
+  version '1.9.5'
+  sha256 '091a7ae803296783f018682bda2099d53a3d4fff61560836888ac4e73607a75e'
 
   url "http://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
+  name 'MakeMKV'
   homepage 'http://www.makemkv.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   app 'MakeMKV.app'
+
+  zap :delete => [
+                 '~/Library/Preferences/com.makemkv.MakeMKV.plist',
+                 '~/Library/Saved Application State/com.makemkv.MakeMKV.savedState',
+                 ]
+
+  depends_on :macos => '>= :snow_leopard'
 end

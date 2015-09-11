@@ -4,6 +4,7 @@ cask :v1 => 'mou' do
 
   url 'http://25.io/mou/download/Mou.zip'
   appcast 'http://25.io/mou/up/updates.xml'
+  name 'Mou'
   homepage 'http://25.io/mou/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

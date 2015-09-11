@@ -1,10 +1,11 @@
 cask :v1 => 'processing' do
-  version '2.2.1'
-  sha256 '8c237b3eb50626e8ffc648bfdeddaa18ceffbd6a48f8fec77a8eab5b774971fc'
+  version '3.0b5'
+  sha256 'ea684345279ec59dd749a2b7fb103eecf5d69576472e438adccdf3f3d9c2c43a'
 
   url "http://download.processing.org/processing-#{version}-macosx.zip"
-  homepage 'http://processing.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  name 'Processing'
+  homepage 'https://processing.org/'
+  license :gpl
 
   app 'Processing.app'
 

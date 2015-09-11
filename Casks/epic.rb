@@ -1,12 +1,14 @@
 cask :v1 => 'epic' do
-  version '37_4'
-  sha256 'b3dcd0d0e101629342d13c8683f3801412517274c75a70645d38813c07030a48'
+  version '2462'
+  sha256 'fc8fadf78816eaad050d514b3fc9a5c524b7fe5bf5a4b779e7b373ba2c240d1f'
 
-  # rackcdn.com is the official download host per the vendor homepage
-  url "https://ed5b681d56298a85550d-7d665255a6e48f36b11ee3cfeece77e0.ssl.cf1.rackcdn.com/epic_mac_#{version}_alternative/Epic.dmg"
-  appcast 'https://updates.epicbrowser.com/mac_updates/appcast.xml'
-  homepage 'http://www.epicbrowser.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  # kxcdn.com is the official download host per the vendor homepage
+  url "https://macepic-cbe.kxcdn.com/#{version}/sign/Epic.dmg"
+  name 'Epic Privacy Browser'
+  appcast 'https://updates.epicbrowser.com/mac_updates/appcast.xml',
+          :sha256 => '86f5ea26c4a6c06db017657484b1cf6754a4524cea40f1bb7a63c551c54668bd'
+  homepage 'https://www.epicbrowser.com/'
+  license :gratis
 
   app 'Epic.app'
 end

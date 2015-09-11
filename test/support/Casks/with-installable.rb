@@ -10,7 +10,7 @@ cask :v1test => 'with-installable' do
             :quit   => 'my.fancy.package.app',
             :delete => [
                         '/permissible/absolute/path',
-                        '~/impermissible/path/with/tilde',
+                        '~/permissible/path/with/tilde',
                         'impermissible/relative/path',
                         '/another/impermissible/../relative/path',
                        ],

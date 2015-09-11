@@ -4,8 +4,9 @@ cask :v1 => 'gity' do
 
   url 'http://gityapp.com/Gity.zip'
   appcast 'http://gityapp.com/gity.xml'
+  name 'Gity'
   homepage 'http://gityapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Gity.app'
 end

@@ -4,7 +4,8 @@ cask :v1 => 'pangu' do
 
   # 25pp.com is the official download host per the vendor homepage
   url "http://dl.pangu.25pp.com/jb/Pangu8_v#{version}.dmg"
-  homepage 'http://en.pangu.io/'
+  name 'Pangu8'
+  homepage 'https://en.pangu.io/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'pangu8.app'

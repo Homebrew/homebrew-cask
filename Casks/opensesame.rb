@@ -10,6 +10,7 @@ cask :v1 => 'opensesame' do
     url "http://www.cogsci.nl/dschreij/opensesame-mac/opensesame-#{version}-macos-x86_64-1.dmg"
   end
 
+  name 'OpenSesame'
   homepage 'http://osdoc.cogsci.nl/'
   license :gpl
 

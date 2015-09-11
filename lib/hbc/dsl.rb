@@ -244,7 +244,6 @@ module Hbc::DSL
                                      :prefpane,
                                      :qlplugin,
                                      :font,
-                                     :widget,
                                      :service,
                                      :colorpicker,
                                      :binary,

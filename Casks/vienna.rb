@@ -1,10 +1,12 @@
 cask :v1 => 'vienna' do
-  version '3.0.2'
-  sha256 'a52a8de9591483d4c440ab1390ab7f66bbafee0e27e23517b7300b0df4e461e0'
+  version '3.0.6'
+  sha256 '9bc9e93a443dc03234949e7baa648a94d43c9e8b86fcba426d8e677eaa7e3e12'
 
+  # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/vienna-rss/Vienna#{version}.tgz"
   appcast 'http://vienna-rss.org/changelog.xml',
-          :sha256 => 'fcfbae9fe2ccae3bd3531436daa2060c16fab7d72de2a8eea1d13ccbcb66814d'
+          :sha256 => 'a8fa8150ae0a2f591e443b1fe50ad605243e2b6b76b2eeb08b019a79076b6ee4'
+  name 'Vienna'
   homepage 'http://www.vienna-rss.org'
   license :apache
 

@@ -15,5 +15,10 @@ require 'vendor/homebrew-fork/global'
 
 require 'hbc'
 
-Hbc::CLI.process(ARGV)
+begin
+  Hbc::CLI.process(ARGV)
+rescue Interrupt => e
+  puts
+  exit 130
+end
 exit 0

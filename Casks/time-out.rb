@@ -9,6 +9,7 @@ cask :v1 => 'time-out' do
   end
 
   url "http://www.dejal.com/download/timeout-#{version}.zip"
+  name 'Time Out'
   homepage 'http://www.dejal.com/timeout/'
   license :gratis
 

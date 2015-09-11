@@ -2,9 +2,11 @@ cask :v1 => 'git-annex' do
   version :latest
   sha256 :no_check
 
-  if MacOS.release == :lion
+  if MacOS.release <= :lion
+    # kitenet.net is the official download host per the vendor homepage
     url 'https://downloads.kitenet.net/git-annex/OSX/current/10.7.5_Lion/git-annex.dmg'
   elsif MacOS.release == :mountain_lion
+    # kitenet.net is the official download host per the vendor homepage
     url 'https://downloads.kitenet.net/git-annex/OSX/current/10.8.2_Mountain_Lion/git-annex.dmg.bz2'
 
     # This is a horrible hack to force the file extension.  The
@@ -14,18 +16,18 @@ cask :v1 => 'git-annex' do
     end
     container :nested => 'git-annex-latest.dmg'
   elsif MacOS.release == :mavericks
+    # kitenet.net is the official download host per the vendor homepage
     url 'https://downloads.kitenet.net/git-annex/OSX/current/10.9_Mavericks/git-annex.dmg'
-  elsif MacOS.release == :yosemite
-    url 'https://downloads.kitenet.net/git-annex/OSX/current/10.10_Yosemite/git-annex.dmg'
   else
-    # Unusual case: there is no fall-through.  Each version of the software is
-    # specific to an OS X release, so define nothing when the release is unknown.
+    # kitenet.net is the official download host per the vendor homepage
+    url 'https://downloads.kitenet.net/git-annex/OSX/current/10.10_Yosemite/git-annex.dmg'
   end
 
   gpg "#{url}.sig",
       :key_url => 'https://downloads.kitenet.net/git-annex/gpg-pubkey.asc'
-  homepage 'http://git-annex.branchable.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  name 'git-annex'
+  homepage 'https://git-annex.branchable.com/'
+  license :gpl
 
   app 'git-annex.app'
   binary 'git-annex.app/Contents/MacOS/git-annex'

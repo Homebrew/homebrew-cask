@@ -24,7 +24,6 @@ require 'hbc/artifact/service'
 require 'hbc/artifact/stage_only'
 require 'hbc/artifact/suite'
 require 'hbc/artifact/uninstall'
-require 'hbc/artifact/widget'
 require 'hbc/artifact/zap'
 
 module Hbc::Artifact
@@ -45,7 +44,6 @@ module Hbc::Artifact
       Hbc::Artifact::Prefpane,
       Hbc::Artifact::Qlplugin,
       Hbc::Artifact::Font,
-      Hbc::Artifact::Widget,
       Hbc::Artifact::Service,
       Hbc::Artifact::StageOnly,
       Hbc::Artifact::Binary,

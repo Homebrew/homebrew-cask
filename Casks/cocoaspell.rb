@@ -2,6 +2,7 @@ cask :v1 => 'cocoaspell' do
   version '2.1'
   sha256 '06d6cd7f2b04c47f553c5a3a33ebe6bc5651457521cbe7e3ead84a6cb218053c'
 
+  # usc.edu is the official download host per the vendor homepage
   url "http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg"
   name 'cocoAspell'
   homepage 'http://cocoaspell.leuski.net/'

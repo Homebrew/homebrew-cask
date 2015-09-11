@@ -1,12 +1,13 @@
 cask :v1 => 'codekit' do
-  version '2.1.9 (18268)'
-  sha256 'ff1c605be76de91cf47214ed17cf1b4d630098259b4a09abfdd2562bc5378e88'
+  version '2.3.10-19033'
+  sha256 '6ace696b81de91d7f5d2b24cb27a6609a72aeadc2d36fb6cda56af2b768b34c8'
 
-  url 'https://incident57.com/codekit/files/codekit-18268.zip'
+  url "https://incident57.com/codekit/files/codekit-#{version.sub(%r{.*-},'')}.zip"
   appcast 'https://incident57.com/codekit/appcast/ck2appcast.xml',
-          :sha256 => '433feaa40f89043a2cf591145b8d4392d92abee9b84b258d0a3d99833eff4e39'
-  homepage 'http://incident57.com/codekit/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+          :sha256 => 'fba4e9552ebabca2b700f6bdcdbb83132856d6c467f536250fc34beed9a8f104'
+  name 'CodeKit'
+  homepage 'https://incident57.com/codekit/'
+  license :commercial
 
   app 'CodeKit.app'
 end

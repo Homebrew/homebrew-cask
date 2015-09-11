@@ -1,12 +1,12 @@
 cask :v1 => 'yourkit-java-profiler' do
-  version '2014-build-14114'
-  sha256 'd64d6496a7ae8e240ab5c32f6b1727898cd69a8f2e2716cf9901e3a9cc8a4c26'
+  version '2015-build-15074'
+  sha256 '4bc2f87166ee078cccd551534fec27989aa8d369de2d87f3be21f3a7a2461fb3'
 
   url "http://www.yourkit.com/download/yjp-#{version}-mac.zip"
   name 'YourKit Java Profiler'
-  homepage 'http://www.yourkit.com/overview/'
+  homepage 'https://www.yourkit.com/overview/'
   license :commercial
   tags :vendor => 'YourKit'
 
-  app 'YourKit_Java_Profiler_2014_build_14114.app'
+  app "YourKit_Java_Profiler_#{version.gsub('-','_')}.app"
 end

@@ -5,8 +5,9 @@ cask :v1 => 'shiori' do
   url "http://aki-null.net/shiori/release/Shiori_#{version}.zip"
   appcast 'http://aki-null.net/shiori/appcast.xml',
           :sha256 => '244668dde7c677ddaaccc55c997874e13d3c8de5213c5e0810eeacd6fdcc713e'
+  name 'Shiori'
   homepage 'http://aki-null.net/shiori/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Shiori.app'
 end

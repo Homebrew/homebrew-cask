@@ -3,7 +3,7 @@ cask :v1 => 'slicy' do
   sha256 :no_check
 
   url 'https://macrabbit.com/slicy/get/'
-  appcast 'http://update.macrabbit.com/slicy/1.1.3.xml'
+  appcast 'https://update.macrabbit.com/slicy/1.1.3.xml'
   name 'Slicy'
   homepage 'http://macrabbit.com/slicy/'
   license :commercial

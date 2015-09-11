@@ -3,6 +3,7 @@ cask :v1 => 'td-toolbelt' do
   sha256 :no_check
 
   url 'http://toolbelt.treasuredata.com/mac'
+  name 'Treasure Data Toolbelt'
   homepage 'http://toolbelt.treasuredata.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
@@ -14,5 +15,5 @@ cask :v1 => 'td-toolbelt' do
   pkg 'td-toolbelt.pkg'
 
   uninstall :pkgutil => 'com.td.toolbelt'
-  # zap :pkgutil => 'org.ruby-lang.installer'
+  zap :pkgutil => 'org.ruby-lang.installer'
 end

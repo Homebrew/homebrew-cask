@@ -1,8 +1,9 @@
 cask :v1 => 'hashcat' do
-  version '0.48'
-  sha256 '39fee1757b33b3e7232ce3797f0be024fa784dbbd0939b475b5b1ea7462cec5e'
+  version '0.50'
+  sha256 'ecbe4300306e929397f4e721f7b8476208e1be079caa2cd3c2a819fa225ca415'
 
   url "https://hashcat.net/files/hashcat-#{version}.7z"
+  name 'hashcat'
   homepage 'https://hashcat.net/hashcat/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

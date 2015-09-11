@@ -15,6 +15,7 @@ describe "Repo layout" do
                     .DS_Store
                     .bundle
                     .ruby-version
+                    .rubocop_todo.yml
                     coverage
                    }
 
@@ -35,8 +36,11 @@ describe "Repo layout" do
                     }
 
   TOPLEVEL_FILES = %w{
+                      .editorconfig
                       .gitignore
                       .rspec
+                      .rubocop.yml
+                      .simplecov
                       .travis.yml
                       CONDUCT.md
                       CONTRIBUTING.md

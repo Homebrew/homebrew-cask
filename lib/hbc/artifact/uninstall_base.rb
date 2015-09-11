@@ -1,4 +1,5 @@
 require 'set'
+require 'pathname'
 
 class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
 
@@ -176,7 +177,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
     dispatch_uninstall_directives(self.class.artifact_dsl_key)
   end
 
-  def dispatch_uninstall_directives(stanza, expand_tilde=false)
+  def dispatch_uninstall_directives(stanza, expand_tilde=true)
     directives_set = @cask.artifacts[stanza]
     ohai "Running #{stanza} process for #{@cask}; your password may be necessary"
 
@@ -193,8 +194,8 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
     directives_set.select{ |h| h.key?(:early_script) }.each do |directives|
       executable, script_arguments = self.class.read_script_arguments(directives,
                                                                       'uninstall',
-                                                                      {:must_succeed => true},
-                                                                      {:sudo => true, :print_stdout => true},
+                                                                      {:must_succeed => true, :sudo => true},
+                                                                      {:print_stdout => true},
                                                                       :early_script)
 
       ohai "Running uninstall script #{executable}"
@@ -210,9 +211,22 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
         [false, true].each do |with_sudo|
           plist_status = @command.run('/bin/launchctl', :args => ['list', service], :sudo => with_sudo, :print_stderr => false).stdout
           if %r{^\{}.match(plist_status)
-            @command.run('/bin/launchctl',  :args => ['unload', '-w', '--', service], :sudo => with_sudo)
+            result = @command.run!('/bin/launchctl', :args => ['remove', service], :sudo => with_sudo)
+            if result.success?
+              paths = ["/Library/LaunchAgents/#{service}.plist",
+                       "/Library/LaunchDaemons/#{service}.plist"]
+              paths.each { |elt| elt.prepend('~') } unless with_sudo
+              paths = paths.map { |elt| Pathname(elt) }.select(&:exist?)
+              paths.each do |path|
+                @command.run!('/bin/rm', :args => ['-f', '--', path], :sudo => with_sudo)
+              end
+            end
             sleep 1
-            @command.run!('/bin/launchctl', :args => ['remove', service], :sudo => with_sudo)
+          end
+          # undocumented and untested: pass a path to uninstall :launchctl
+          if Pathname(service).exist?
+            @command.run!('/bin/launchctl', :args => ['unload', '-w', '--', service], :sudo => with_sudo)
+            @command.run!('/bin/rm',        :args => ['-f', '--', service], :sudo => with_sudo)
             sleep 1
           end
         end
@@ -271,8 +285,8 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
     directives_set.select{ |h| h.key?(:script) }.each do |directives|
       executable, script_arguments = self.class.read_script_arguments(directives,
                                                                       'uninstall',
-                                                                      {:must_succeed => true},
-                                                                      {:sudo => true, :print_stdout => true},
+                                                                      {:must_succeed => true, :sudo => true},
+                                                                      {:print_stdout => true},
                                                                       :script)
       raise Hbc::CaskInvalidError.new(@cask, "#{stanza} :script without :executable.") if executable.nil?
       @command.run(@cask.staged_path.join(executable), script_arguments)
@@ -314,9 +328,8 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
         directory = self.class.expand_path_strings([directory]).first if expand_tilde
         directory = self.class.remove_relative_path_strings(:rmdir, [ directory ]).first
         directory = self.class.remove_undeletable_path_strings(:rmdir, [ directory ]).first
-        next unless directory.respond_to?(:length)
-        next unless directory.length > 0
-        ohai "Removing directory if empty: #{directory.utf8_inspect}"
+        next unless directory.to_s.length > 0
+        ohai "Removing directory if empty: #{directory.to_s.utf8_inspect}"
         directory = Pathname.new(directory)
         next unless directory.exist?
         @command.run!('/bin/rm', :args => [ '-f', '--', directory.join('.DS_Store') ],

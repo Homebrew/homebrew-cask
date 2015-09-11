@@ -1,8 +1,10 @@
 cask :v1 => 'hammerspoon' do
-  version '0.9.10'
-  sha256 '671ef52625bfc885915d98523dee77a75fdfafa5194eedba5c78e07f0e7fe3b9'
+  version '0.9.40'
+  sha256 'cf17ceae3529057ddd76b00cbc285b6710c42265af2e53d4aa0bdce3154fb70d'
 
+  # github.com is the official download host per the vendor homepage
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
+  appcast 'https://github.com/Hammerspoon/hammerspoon/releases.atom'
   name 'Hammerspoon'
   homepage 'http://www.hammerspoon.org/'
   license :mit

@@ -3,8 +3,11 @@ cask :v1 => 'xmrouter' do
   sha256 :no_check
 
   url 'http://bigota.miwifi.com/xiaoqiang/client/xqmac_client.dmg'
+  name '小米路由器'
+  name 'miwifi'
+  name 'xmrouter'
   homepage 'http://www1.miwifi.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'XMRouter.app'
 end

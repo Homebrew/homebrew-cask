@@ -3,8 +3,9 @@ cask :v1 => 'ntfs-free' do
   sha256 '1bc7122a2d869b740a35e2dba1fe29c380f21ad07481fc0a46b2f55bf79c574e'
 
   url "http://downloads.sourceforge.net/sourceforge/ntfsfree/NTFS-free-#{version}.pkg"
+  name 'NTFS-FREE'
   homepage 'http://sourceforge.net/projects/ntfsfree/'
-  license :oss
+  license :apache
 
   pkg "NTFS-free-#{version}.pkg"
 

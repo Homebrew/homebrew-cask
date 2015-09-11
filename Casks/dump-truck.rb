@@ -3,8 +3,9 @@ cask :v1 => 'dump-truck' do
   sha256 :no_check
 
   url 'https://www.goldenfrog.com/downloads/dumptruck/dumptruck.dmg'
-  homepage 'http://www.goldenfrog.com/dumptruck'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  name 'Dump Truck'
+  homepage 'https://www.goldenfrog.com/dumptruck'
+  license :gratis
 
   app 'Dump Truck.app'
 end

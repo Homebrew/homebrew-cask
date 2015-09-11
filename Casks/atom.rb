@@ -1,11 +1,16 @@
 cask :v1 => 'atom' do
-  version :latest
-  sha256 :no_check
+  version '1.0.11'
+  sha256 '0a173f06626c22f2cbb9a9cbba0f15a4e7cb34fed2261fc16792b3cc0548dd52'
 
-  url 'https://atom.io/download/mac'
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"
+  appcast 'https://github.com/atom/atom/releases.atom'
   name 'Atom'
-  homepage 'http://atom.io'
+  homepage 'https://atom.io/'
   license :mit
+  tags :vendor => 'Github'
+
+  depends_on :macos => '>= :mountain_lion'
 
   app 'Atom.app'
   binary 'Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm', :target => 'apm'
@@ -16,14 +21,9 @@ cask :v1 => 'atom' do
   end
 
   zap :delete => [
-                  '~/.atom/config.cson',
-                  '~/.atom/init.coffee',
-                  '~/.atom/keymap.cson',
-                  '~/.atom/keymaps',
-                  '~/.atom/packages',
-                  '~/.atom/snippets.cson',
-                  '~/.atom/styles.less',
+                  '~/.atom',
                   '~/Library/Application Support/ShipIt_stderr.log',
+                  '~/Library/Application Support/Atom',
                   '~/Library/Application Support/ShipIt_stdout.log',
                   '~/Library/Application Support/com.github.atom.ShipIt',
                   '~/Library/Caches/com.github.atom',

@@ -1,12 +1,14 @@
 cask :v1 => 'gamesalad' do
-  version '0.14.4.1-beta'
-  sha256 '05f68db92cee37fedffe23a2950fa55c375fd53acd7d19ae8fd42884345814e7'
+  version '0.13.30'
+  sha256 '0c0d9ceaf7cc92c59d7be18fc785dfd00d25c5b05999f1f1fe1dfbdec62c646b'
 
-  url 'http://gs.releases.s3.amazonaws.com/creator/0.10.4.1/GameSalad-Creator-0.10.4.1-beta.dmg'
-  appcast 'http://gamesalad.com/download/studioUpdates',
-          :sha256 => '8e036d02694dfc8e84a00aec29ae6306ab0e469a66e29514d3599e874200b355'
-  homepage 'http://gamesalad.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  # amazonaws.com is the official download host per the vendor homepage
+  url "http://gs.releases.s3.amazonaws.com/creator/#{version}/GameSalad-Creator-#{version}-beta.dmg"
+  name 'GameSalad'
+  appcast 'https://gamesalad.com/download/studioUpdates',
+          :sha256 => '2040ea4abaea2e9e089bfb35feefe6d35b7601b1ddd51c81117e2fde46f23a77'
+  homepage 'https://gamesalad.com/'
+  license :commercial
 
   app 'GameSalad.app'
 end

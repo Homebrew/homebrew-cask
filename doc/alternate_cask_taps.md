@@ -2,7 +2,7 @@
 
 ## Background
 
-Homebrew-cask is an open system, built on Homebrew's Tap conventions.
+Homebrew-cask is an open system, built on Homebrew’s Tap conventions.
 
 Anyone can set up alternative Taps to serve Casks which are not part of
 the main repository.

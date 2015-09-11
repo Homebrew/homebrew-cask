@@ -2,9 +2,11 @@ cask :v1 => 'xtrafinder' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg'
+  url 'https://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg'
+  appcast 'https://www.trankynam.com/xtrafinder/XtraFinder-Appcast.xml',
+          :sha256 => 'f1246aa1bf1285d96d00d3210f6746b1d3b6183f96d221e5714754654aaa2cdb'
   name 'XtraFinder'
-  homepage 'http://www.trankynam.com/xtrafinder/'
+  homepage 'https://www.trankynam.com/xtrafinder/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'XtraFinder.pkg'

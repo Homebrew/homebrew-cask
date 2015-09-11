@@ -6,7 +6,7 @@ cask :v1 => '8tracksradiohelper' do
   name '8tracks Radio Pref.Pane'
   name '8tracks Radio Preferences Pane'
   homepage 'http://8tracksformac.com/'
-  license :unknown
+  license :gratis
 
   prefpane '8TracksRadioHelper.prefPane'
 end

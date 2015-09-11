@@ -1,10 +1,11 @@
 cask :v1 => 'bowery' do
-  version '3.3.1'
-  sha256 '7ebe18bd25df7156027e5be857528a20c86ca8251a94d437086c77c6fb8b1f73'
+  version '3.6.0'
+  sha256 'ecdb5efe10dcf39a309e5f910d0a3712fe23147200b958a88d43c8bacf8ab1e1'
 
   url "http://desktop.bowery.io/#{version}_darwin_amd64.zip"
+  name 'Bowery'
   homepage 'http://bowery.io/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   pkg 'bowery.pkg'
 

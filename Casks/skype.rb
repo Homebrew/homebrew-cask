@@ -10,10 +10,18 @@ cask :v1 => 'skype' do
     url 'https://www.skype.com/go/getskype-macosx.dmg'
   end
 
+  name 'Skype'
   homepage 'http://www.skype.com'
   license :gratis
 
   app 'Skype.app'
 
-  zap :delete => '~/Library/Application Support/Skype'
+  zap :delete => [
+                  '~/Library/Application Support/Skype',
+                  '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.skype.skype',
+                  '~/Library/Caches/com.skype.skype',
+                  '~/Library/Preferences/com.skype.skype.plist',
+                  '~/Library/Preferences/com.skype.skypewifi.plist',
+                  '~/Library/Saved Application State/com.skype.skype.savedState',
+                 ]
 end

@@ -1,8 +1,10 @@
 cask :v1 => 'yubiswitch' do
-  version '0.7'
-  sha256 '680577971e037ca52292e62809e0709adce1d79946a7d740627e83cda6d4d6ca'
+  version '0.9'
+  sha256 '6ba3637fd48e8c8827136cb84e64d337a653112253f403121e4f3af0dd2fde48'
 
-  url "https://github.com/pallotron/yubiswitch/releases/download/v#{version}/yubiswitch_#{version}.dmg"
+  url "https://github.com/pallotron/yubiswitch/releases/download/v#{version}_fix/yubiswitch_#{version}.dmg"
+  appcast 'https://github.com/pallotron/yubiswitch/releases.atom'
+  name 'yubiswitch'
   homepage 'https://github.com/pallotron/yubiswitch'
   license :gpl
 

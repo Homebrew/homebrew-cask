@@ -168,9 +168,6 @@ class Hbc::CLI
       opts.on("--fontdir=MANDATORY") do |v|
         Hbc.fontdir = Pathname(v).expand_path
       end
-      opts.on("--widgetdir=MANDATORY") do |v|
-        Hbc.widgetdir = Pathname(v).expand_path
-      end
       opts.on("--servicedir=MANDATORY") do |v|
         Hbc.servicedir = Pathname(v).expand_path
       end
@@ -197,7 +194,7 @@ class Hbc::CLI
         Hbc.verbose = true
       end
       opts.on("--outdated") do |v|
-        Hbc.outdated = true
+        Hbc.cleanup_outdated = true
       end
     end
   end

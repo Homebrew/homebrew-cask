@@ -1,12 +1,15 @@
 cask :v1 => 'chainsaw' do
-  version '2.1.0'
-  sha256 '3449c1d0fca70f78b656a151dabaf5c8149e1dbec2854b7a662b7f242ce299d2'
+  version :latest
+  sha256 :no_check
 
-  url "http://people.apache.org/~sdeboy/apache-chainsaw-#{version}-SNAPSHOT.dmg"
-  homepage 'http://logging.apache.org/chainsaw/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  url 'https://logging.apache.org/chainsaw/webstart/chainsaw.dmg'
+  name 'Chainsaw'
+  homepage 'https://logging.apache.org/chainsaw/'
+  license :apache
 
   app 'Chainsaw.app'
 
   zap :delete => '~/.chainsaw'
+
+  depends_on :arch => :ppc
 end

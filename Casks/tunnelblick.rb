@@ -1,11 +1,12 @@
 cask :v1 => 'tunnelblick' do
-  version '3.4.2_build_4055.4161'
-  sha256 '19cd879009d8f6989abd1f7e1ed1feb5dc68995f3146e08c547d4b64d3679c5b'
+  version '3.5.3_build_4270.4371'
+  sha256 'd12547df269065a845277f700fca1127763b3e1f2139e992fa114e49b3094d64'
 
-  url "http://downloads.sourceforge.net/project/tunnelblick/All%20files/Tunnelblick_#{version}.dmg"
+  url "https://www.tunnelblick.net/release/Tunnelblick_#{version}.dmg"
   appcast 'https://www.tunnelblick.net/appcast.rss',
           :sha256 => '7fa119cda4d782dc61cb75895c70b3572652df737c908270c48a09d67a874592'
-  homepage 'https://code.google.com/p/tunnelblick/'
+  name 'Tunnelblick'
+  homepage 'https://www.tunnelblick.net'
   license :gpl
 
   app 'Tunnelblick.app'
@@ -15,10 +16,8 @@ cask :v1 => 'tunnelblick' do
 
   depends_on :macos => '>= :tiger'
 
-  caveats do
-    <<-EOS.undent
-    For security reasons, Tunnelblick must be installed to /Applications,
+  caveats <<-EOS.undent
+    For security reasons, #{token} must be installed to /Applications,
     and will request to be moved at launch.
-    EOS
-  end
+  EOS
 end

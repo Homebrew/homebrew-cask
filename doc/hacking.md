@@ -1,14 +1,14 @@
 # Hacking on Homebrew-cask
 
-If you'd like to hack on the Ruby code that drives this project, please
-join us, we'd love to have you!
+If you’d like to hack on the Ruby code that drives this project, please
+join us, we’d love to have you!
 
 ## Goals, Design, and Philosophy
 
 Homebrew-cask is an attempt to make a Linux-style package manager for
 precompiled OS X software. Homebrew-cask is not yet as featureful as
 `apt` or `yum`, but we are trying to be as close as we can get to those
-tools from the user's point of view.
+tools from the user’s point of view.
 
 We manage installed files via the “symlink farm” method, like [GNU Stow](http://www.gnu.org/software/stow/)
 and [Homebrew](http://brew.sh/). Similarly, we try to avoid `sudo`
@@ -27,8 +27,8 @@ Homebrew-cask is still young, and should be considered in alpha.
 We have good support for a variety of artifacts: apps, pkgs, binaries,
 plugins, and [fonts](https://github.com/caskroom/homebrew-fonts/).
 Homebrew-cask can install and uninstall any of those. However, these
-commands don't work well with multiple versions, and most importantly,
-we currently can't `upgrade`.
+commands don’t work well with multiple versions, and most importantly,
+we currently can’t `upgrade`.
 
 Since upgrading is a core feature of every package manager, the
 implementation of an `upgrade` verb is our top priority. For
@@ -38,7 +38,7 @@ implementation of an `upgrade` verb is our top priority. For
 - play nice with self-updating software.
 
 These and more requirements are tracked in our [`upgrade` roadmap](https://github.com/caskroom/homebrew-cask/issues/4678).
-If you'd like to contribute to `upgrade`, that's an excellent place to start.
+If you’d like to contribute to `upgrade`, that’s an excellent place to start.
 
 ## Homebrew and Homebrew-cask
 
@@ -53,7 +53,7 @@ The Homebrew codebase is based on how Homebrew Formulae work, and our
 Casks are very much unlike Formulae.
 
 Because our backend needs are so different, we are discussing whether
-we should completely separate our codebase from Homebrew's
+we should completely separate our codebase from Homebrew’s
 (see [#5080](https://github.com/caskroom/homebrew-cask/issues/5080)).
 
 ### Casks and Formulae
@@ -108,27 +108,27 @@ We recommend the following:
 	/<path>/<to>/<private>/<repo>/developer/bin/develop_brew_cask
 	```
    Now you can hack on your private repo, and use the `brew cask`
-   CLI like normal -- it will interact with your latest code.
+   CLI like normal — it will interact with your latest code.
 
-5. Important: while in development mode, you can't safely run
-   Homebrew's `brew update` command.  To switch back to production
+5. Important: while in development mode, you can’t safely run
+   Homebrew’s `brew update` command.  To switch back to production
    mode, run
 
 	```bash
 	/<path>/<to>/<private>/<repo>/developer/bin/production_brew_cask
 	```
 
-#### Forcing a Ruby interpreter
+### Forcing a Ruby interpreter
 
 You can force a specific version of the Ruby interpreter, and/or an
 alternate version of the `brew-cask` subcommand, by invoking `brew cask`
 with fully-qualified paths, like this:
 
 ```bash
-$ HOMEBREW_BREW_FILE=/usr/local/bin/brew /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/brew.rb /usr/local/Library/Taps/caskroom/homebrew-cask/bin/brew-cask-cmd.rb help
+$ /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/Taps/caskroom/homebrew-cask/lib/brew-cask-cmd.rb help
 ```
 
-#### Forcing a Specific Homebrew-cask Subcommand
+### Forcing a Specific Homebrew-cask Subcommand
 
 If you are developing a subcommand, you can force `brew cask` to dispatch a
 specific file by giving a fully-qualified path to the file containing the
@@ -140,10 +140,22 @@ $ brew cask /usr/local/Cellar/brew-cask/0.37.0/rubylib/hbc/cli/info.rb google-ch
 
 This form can also be combined with a specific Ruby interpreter as above.
 
+### Forcing a Specific OS X Release
+
+The environment variable `$MACOS_RELEASE` can be overridden at the command
+line for test purposes:
+
+```bash
+$ MACOS_RELEASE=10.9 brew cask info <cask>
+```
+
+The environment variable `$MACOS_RELEASE_WITH_PATCHLEVEL` is also available,
+though not consulted directly.  Use `$MACOS_RELEASE` for testing.
+
 ### Target Ruby Versions
 
-Homebrew-cask requires a Ruby interpreter version 2.0 or above.  This
-is the default system Ruby on Mavericks (10.9) and Yosemite (10.10).
+Homebrew-cask requires a Ruby interpreter version 2.0 or above.
+This is the default system Ruby on Mavericks (10.9) and later.
 
 ### Submitting Your Changes
 
@@ -159,9 +171,15 @@ pull request more quickly.
 
 #### Mind the test suite!
 
-If you're making changes - please write some tests for them! Also be sure to
-run the whole test suite using `rake test` before submitting (if you forget,
-Travis-CI will do that for you and embarrass you in front of all your friends). :)
+If you’re making changes - please write some tests for them! Install
+dependencies and run the whole test suite with:
+
+```bash
+bundle
+rake test
+```
+
+Be sure to run the test suite before submitting. If you forget, Travis-CI will do that for you and embarrass you in front of all your friends. :)
 
 You may also use a set of environment variables to increase verbosity:
 
@@ -191,8 +209,8 @@ homebrew-cask and Homebrew.  Example external commands may be found in
 
 ## Hanging out on IRC
 
-We're on IRC at `#homebrew-cask` on Freenode. If you are going to develop for
-homebrew-cask, it's a great idea to hang out with us there. Here's why:
+We’re on IRC at `#homebrew-cask` on Freenode. If you are going to develop for
+homebrew-cask, it’s a great idea to hang out with us there. Here’s why:
 
 - discuss your thoughts before coding and maybe get new ideas
 - get feedback from the Travis-CI bot on build failures

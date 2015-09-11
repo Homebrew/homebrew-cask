@@ -17,12 +17,13 @@ cask :v1 => 'deeper' do
   elsif MacOS.release == :yosemite
     url 'http://www.titanium.free.fr/download/1010/Deeper.dmg'
   else
-    # Unusual case: there is no fall-through.  Each version of the software is
-    # specific to an OS X release, so define nothing when the release is unknown.
+    # Unusual case: there is no fall-through.  The software will stop
+    # working, or is dangerous to run, on the next OS X release.
   end
 
-  homepage 'http://www.titanium.free.fr/downloaddeeper.php'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  name 'Deeper'
+  homepage 'http://www.titanium.free.fr/deeper.html'
+  license :gratis
 
   app 'Deeper.app'
 

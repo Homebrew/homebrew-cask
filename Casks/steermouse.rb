@@ -1,8 +1,9 @@
 cask :v1 => 'steermouse' do
-  version '4.2.2'
-  sha256 '4baa619cefde3145d9a1aec1fadbb20ec59ebb9f69768fdbe7cbe90395cf1baf'
+  version '4.2.4'
+  sha256 '7cfe807cb473de42b75f018c32d5567f68b949aa78243f36fa0ccc44d7009dcd'
 
   url "http://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
+  name 'SteerMouse'
   homepage 'http://plentycom.jp/en/steermouse/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

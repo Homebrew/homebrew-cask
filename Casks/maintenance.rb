@@ -17,12 +17,13 @@ cask :v1 => 'maintenance' do
   elsif MacOS.release == :yosemite
     url 'http://www.titanium.free.fr/download/1010/Maintenance.dmg'
   else
-    # Unusual case: there is no fall-through.  Each version of the software is
-    # specific to an OS X release, so define nothing when the release is unknown.
+    # Unusual case: there is no fall-through.  The software will stop
+    # working, or is dangerous to run, on the next OS X release.
   end
 
-  homepage 'http://www.titanium.free.fr/downloadmaintenance.php'
-  license :closed
+  name 'Maintenance'
+  homepage 'http://www.titanium.free.fr/maintenance.html'
+  license :gratis
 
   app 'Maintenance.app'
 

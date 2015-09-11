@@ -1,10 +1,11 @@
 cask :v1 => 'rekordbox' do
-  version '3.0.3'
-  sha256 '65e165e0c385142be825806c85e330d4636bab17e1a8a5c1f9bd5784d9ef721b'
+  version '3.2.2'
+  sha256 'f12cafb0764177bafbb267342c3bd367572c42cc9e340081a0e84ef2bf7ed433'
 
   url "http://rekordbox.com/_app/files/Install_rekordbox_#{version.gsub('.','_')}.pkg.zip"
+  name 'rekordbox'
   homepage 'http://rekordbox.com/en/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :closed
 
   pkg "Install_rekordbox_#{version.gsub('.','_')}.pkg"
 

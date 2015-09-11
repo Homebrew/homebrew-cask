@@ -1,13 +1,14 @@
 cask :v1 => 'slack' do
-  version '1.0.2'
-  sha256 '09c92acb4cd79bd94418bf1aebcc3675a0cc4e4125d72d202be237bf06507235'
+  version '1.1.3'
+  sha256 'd668bbf0aa1fd857dcb169df2e4040799a77e55e980255557e3e6e69b71773fd'
 
   # hockeyapp.net is the official download host per the appcast feed
-  url 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1/app_versions/5?format=zip&avtoken=10c1da892a7c9afb1ef4d3543565c6ee3c9825fa'
+  url 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1/app_versions/18?format=zip&avtoken=4519a445adc85152ea227dbf2b3675ee0a4ffe54'
   appcast 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1',
-          :sha256 => 'e7af629495c52f3082dd4d7dca917a5a21921031b871461045e204bcc6d8fe03'
-  homepage 'http://slack.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+          :sha256 => 'd9ed4686be46ffe4a3a67a2232c9bfe8dd5c96b7615b18467f42474b97c3678a'
+  name 'Slack'
+  homepage 'https://slack.com/'
+  license :gratis
 
   app 'Slack.app'
 end

@@ -1,11 +1,11 @@
 cask :v1 => 'aseprite' do
-  version '0.9.5'
-  sha256 '299eda3e5f11ae60d58bccdd26156169db6ebc01be8e806d7909f0b8f22e2928'
+  version '1.0.9'
+  sha256 'a01474cfd416ef2a688c342a6f389cb51cc7966182700111dcca1b18911e116e'
 
-  url "https://aseprite.googlecode.com/files/ASEPRITE_#{version}.dmg"
+  url "http://www.aseprite.org/downloads/Aseprite-v#{version}-trial-MacOSX.dmg"
   name 'Aseprite'
   homepage 'http://www.aseprite.org'
-  license :oss
+  license :gpl
 
   app 'aseprite.app'
 end

@@ -3,6 +3,7 @@ cask :v1 => 'sslmate' do
   sha256 :no_check
 
   url 'https://packages.sslmate.com/macosx/SSLMate-latest.pkg'
+  name 'SSLMate'
   homepage 'https://sslmate.com/'
   license :commercial
 

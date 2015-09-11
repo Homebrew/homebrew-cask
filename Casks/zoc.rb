@@ -1,10 +1,11 @@
 cask :v1 => 'zoc' do
-  version '6.60'
-  sha256 '2a73ceaa1515d2d2321905dc667e62bbc8c99d87fbfc5d003156d59b2c2d7e7b'
+  version '7.05.2'
+  sha256 '32e7582df299b2527afb6f84ee239cca2d8fdcbdde2382c028438f296af6dd96'
 
-  url "http://www.emtec.com/downloads/zoc/zoc#{version.gsub('.','')}.dmg"
+  url "http://www.emtec.com/downloads/zoc/zoc#{version.delete('.')}.dmg"
+  name 'ZOC'
   homepage 'http://www.emtec.com/zoc/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
-  app 'zoc6.app'
+  app 'zoc7.app'
 end

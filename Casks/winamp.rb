@@ -4,6 +4,7 @@ cask :v1 => 'winamp' do
 
   # macupdate.com is the official download host per the vendor homepage
   url "http://dl.macupdate.com/prod/Winamp-#{version}.dmg"
+  name 'Winamp'
   homepage 'http://www.winamp.com/'
   license :closed
 

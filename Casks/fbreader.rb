@@ -4,7 +4,7 @@ cask :v1 => 'fbreader' do
 
   url "http://fbreader.org/files/macos/FBReader%20#{version.gsub(/-/, '%20')}.dmg"
   name 'FBReader'
-  homepage 'http://fbreader.org/content/macos'
+  homepage 'https://fbreader.org/content/macos'
   license :gpl
 
   app 'FBReader.app'

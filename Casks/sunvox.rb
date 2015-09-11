@@ -1,8 +1,9 @@
 cask :v1 => 'sunvox' do
-  version '1.8'
-  sha256 'c69c7e8e849c29139be61a6b82a5a9fa7c396fba84ec749d2f4531bb5550ca37'
+  version '1.9b'
+  sha256 '3cb5d94c94337b34d8cf11918dc6fc0cb879a5bd87b42be054d16987cd18a725'
 
   url "http://www.warmplace.ru/soft/sunvox/sunvox-#{version}.zip"
+  name 'SunVox'
   homepage 'http://www.warmplace.ru/soft/sunvox/'
   license :gratis
 

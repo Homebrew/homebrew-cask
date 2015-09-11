@@ -6,7 +6,7 @@ describe Hbc::Artifact::PreflightBlock do
       called      = false
       yielded_arg = nil
 
-      CaskWithPreflight = Class.new(Hbc)
+      CaskWithPreflight = Class.new(Hbc::Cask)
       CaskWithPreflight.class_eval do
         preflight do |c|
           called = true
@@ -27,7 +27,7 @@ describe Hbc::Artifact::PreflightBlock do
       called      = false
       yielded_arg = nil
 
-      CaskWithUninstallPreflight = Class.new(Hbc)
+      CaskWithUninstallPreflight = Class.new(Hbc::Cask)
       CaskWithUninstallPreflight.class_eval do
         uninstall_preflight do |c|
           called = true

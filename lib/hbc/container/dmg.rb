@@ -32,8 +32,6 @@ class Hbc::Container::Dmg < Hbc::Container::Base
 
   def mount!
     plist = @command.run('/usr/bin/hdiutil',
-      # :startup may not be the minimum necessary privileges
-      :bsexec => :startup,
       # realpath is a failsafe against unusual filenames
       :args => %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp] + [Pathname.new(@path).realpath],
       :input => %w[y]
@@ -60,15 +58,11 @@ class Hbc::Container::Dmg < Hbc::Container::Base
       mountpath = Pathname.new(mount).realpath
       next unless mountpath.exist?
       @command.run('/usr/sbin/diskutil',
-                   # :startup may not be the minimum necessary privileges
-                   :bsexec => :startup,
                    :args => ['eject', mountpath],
                    :print_stderr => false)
       next unless mountpath.exist?
       sleep 1
       @command.run('/usr/sbin/diskutil',
-                   # :startup may not be the minimum necessary privileges
-                   :bsexec => :startup,
                    :args => ['eject', mountpath],
                    :print_stderr => false)
       next unless mountpath.exist?

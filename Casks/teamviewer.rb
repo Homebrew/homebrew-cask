@@ -3,8 +3,9 @@ cask :v1 => 'teamviewer' do
   sha256 :no_check
 
   url 'https://download.teamviewer.com/download/TeamViewer.dmg'
-  homepage 'http://www.teamviewer.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  name 'TeamViewer'
+  homepage 'https://www.teamviewer.com/'
+  license :freemium
 
   pkg 'Install TeamViewer.pkg'
 

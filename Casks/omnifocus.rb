@@ -3,23 +3,14 @@ cask :v1 => 'omnifocus' do
     version '1.10.6'
     sha256 'bd3aa44dced86fc3921c01f4467422a7b87a92afbd4be642ea4d4bb8b14b728c'
     url "http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.6/OmniFocus-#{version}.dmg"
-
-    zap :delete => [
-                    '~/Library/Application Support/OmniFocus/Plug-Ins',
-                    '~/Library/Application Support/OmniFocus/Themes',
-                    '~/Library/Preferences/com.omnigroup.OmniFocus.plist'
-                   ]
-  else
+  elsif MacOS.release <= :mavericks
     version '2.0.4'
-    sha256 'c5667f950147cbc33387ab45267b15666eef558391aeaf8d6df543a65edaa799'
+    sha256 '3282eb7e41ec2638f68a92a6509eddd96a96c39b65b954dcedcc4e62289f22a9'
     url "http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.9/OmniFocus-#{version}.dmg"
-
-    zap :delete => [
-                    '~/Library/containers/com.omnigroup.omnifocus2',
-                    '~/Library/Preferences/com.omnigroup.OmniFocus2.LSSharedFileList.plist',
-                    '~/Library/Preferences/com.omnigroup.OmniSoftwareUpdate.plist',
-                    '~/Library/Caches/Metadata/com.omnigroup.OmniFocus2'
-                   ]
+  else
+    version '2.2.5'
+    sha256 'c9bc4453f5f3d3706383b00643e723a6bb187cc7f75769d59380c151d110ef7d'
+    url "http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniFocus-#{version}.dmg"
   end
 
   name 'OmniFocus'
@@ -27,4 +18,19 @@ cask :v1 => 'omnifocus' do
   license :commercial
 
   app 'OmniFocus.app'
+
+  if MacOS.release <= :mountain_lion
+    zap :delete => [
+                    '~/Library/Application Support/OmniFocus/Plug-Ins',
+                    '~/Library/Application Support/OmniFocus/Themes',
+                    '~/Library/Preferences/com.omnigroup.OmniFocus.plist'
+                   ]
+  else
+    zap :delete => [
+                    '~/Library/containers/com.omnigroup.omnifocus2',
+                    '~/Library/Preferences/com.omnigroup.OmniFocus2.LSSharedFileList.plist',
+                    '~/Library/Preferences/com.omnigroup.OmniSoftwareUpdate.plist',
+                    '~/Library/Caches/Metadata/com.omnigroup.OmniFocus2'
+                   ]
+  end
 end

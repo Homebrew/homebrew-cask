@@ -1,10 +1,11 @@
 cask :v1 => 'macupdate-desktop' do
-  version '6.0.2'
-  sha256 '1aa04e0bec920f28af5417a2b875e40af832d5303a29dca27e527e30c4db42f5'
+  version '6.0.9'
+  sha256 '82f8b1bc8d9ed5d3881a8ca618df146fbb82634ecca4e5aac8f96ad65389e7c4'
 
-  url "http://dl.macupdate.com/MacUpdateDesktop#{version}.zip"
-  appcast 'https://www.macupdate.com/desktop/updates.xml',
-          :sha256 => 'f34602a28e842a77a7159342463747c05d783d44613feed26bbf742d88e3607f'
+  url "http://cdn.macupdate.com/MacUpdateDesktop#{version}.zip"
+  appcast 'http://www.macupdate.com/desktop/updates.xml',
+          :sha256 => 'cecc073acecb3a7221854fae2f629759fb59de2de2e161bf68c7f1c9800d9ca2'
+  name 'MacUpdate Desktop'
   homepage 'https://www.macupdate.com/desktop'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

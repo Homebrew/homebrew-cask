@@ -1,12 +1,13 @@
 cask :v1 => 'launchcontrol' do
-  version '1.16.2'
-  sha256 '207b90ff2342ad3eee66036c7e97057d1c73f5c81abd243a4804e715d371e015'
+  version '1.22.2'
+  sha256 '1a509a11219d6f7ad56fb2a8b3321c877bd1b285fa368ca7e33adaf12afe19bb'
 
   url "http://www.soma-zone.com/download/files/LaunchControl_#{version}.tar.bz2"
   appcast 'http://www.soma-zone.com/LaunchControl/a/appcast.xml',
-          :sha256 => 'a82b64b1b68b0fc013145825eee9b18930378caa24a664d93d5777848c6fcc15'
+          :sha256 => '4bdd5346150de3ec0e56f0a82f0d82c9bf3efface90aebdd5a3a81f5352afda3'
+  name 'LaunchControl'
   homepage 'http://www.soma-zone.com/LaunchControl/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'LaunchControl.app'
 end

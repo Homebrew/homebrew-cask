@@ -1,10 +1,13 @@
 cask :v1 => 'plex-media-server' do
-  version '0.9.11.4.739-a4e710f'
-  sha256 '69066c232cfbf4b8cd92881e954e8486042c0838bfd69c27b600d89d023abf96'
+  version '0.9.12.11.1406-8403350'
+  sha256 '232b38dd88e4858a1cfe4820660abf0a6325ae59983ee05b693fcb2df1499bd1'
 
   url "https://downloads.plex.tv/plex-media-server/#{version}/PlexMediaServer-#{version}-OSX.zip"
+  name 'Plex Media Server'
   homepage 'https://plex.tv/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
+
+  depends_on :macos => '>= :snow_leopard'
 
   app 'Plex Media Server.app'
 end

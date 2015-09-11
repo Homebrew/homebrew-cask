@@ -23,7 +23,7 @@ describe Hbc::CLI do
     }
 
     it "respects the env variable when choosing what appdir to create" do
-      with_env_var('HOMEBREW_CASK_OPTS', "--appdir=/custom/appdir") do
+      EnvHelper.with_env_var('HOMEBREW_CASK_OPTS', "--appdir=/custom/appdir") do
         allow(Hbc).to receive(:init) {
           expect(Hbc.appdir.to_s).to eq('/custom/appdir')
         }
@@ -34,7 +34,7 @@ describe Hbc::CLI do
     # todo: merely invoking init causes an attempt to create the caskroom directory
     #
     # it "respects the ENV variable when choosing a non-default Caskroom location" do
-    #   with_env_var 'HOMEBREW_CASK_OPTS', "--caskroom=/custom/caskdir" do
+    #   EnvHelper.with_env_var 'HOMEBREW_CASK_OPTS', "--caskroom=/custom/caskdir" do
     #     allow(Hbc).to receive(:init) {
     #       expect(Hbc.caskroom.to_s).to eq('/custom/caskdir')
     #     }
@@ -45,8 +45,10 @@ describe Hbc::CLI do
     it "exits with a status of 1 when something goes wrong" do
       Hbc::CLI.expects(:exit).with(1)
       Hbc::CLI.expects(:lookup_command).raises(Hbc::CaskError)
-      shutup {
-        Hbc::CLI.process('noop')
+      allow(Hbc).to receive(:init) {
+        shutup {
+          Hbc::CLI.process('noop')
+        }
       }
     end
   end

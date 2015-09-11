@@ -51,7 +51,7 @@ class Hbc::Source::PathBase
         is_test = ! $2.nil?
         header_token = $4
         dsl_version = Gem::Version.new(dsl_version_string.gsub('_','.'))
-        superclass_name = is_test ? 'TestHbc' : 'Hbc'
+        superclass_name = is_test ? 'Hbc::TestCask' : 'Hbc::Cask'
         cask_contents.sub!(%r{\A[^\n]+\n}, "class #{cask_class_name} < #{superclass_name}\n")
         # todo the minimum DSL version should be defined globally elsewhere
         minimum_dsl_version = Gem::Version.new('1.0')

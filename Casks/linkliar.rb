@@ -3,8 +3,9 @@ cask :v1 => 'linkliar' do
   sha256 :no_check
 
   url 'https://github.com/halo/LinkLiar/blob/master/latest_build/LinkLiar.zip?raw=true'
+  name 'LinkLiar'
   homepage 'https://github.com/halo/LinkLiar'
-  license :oss
+  license :mit
 
   prefpane 'LinkLiar.prefPane'
 end

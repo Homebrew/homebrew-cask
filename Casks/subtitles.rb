@@ -1,13 +1,13 @@
 cask :v1 => 'subtitles' do
-  version '2.2'
-  sha256 'c8f00cd00a85f16b7a74de846b9f03fcd0cd0e144336438aa09aef50d527ce0f'
+  version '3.1'
+  sha256 'c98e09eefc8cc39148ae0f9ef38ad6985f6dc0faffcd0c6a5f0f451ae90cadfd'
 
   url "http://subtitlesapp.com/download/Subtitles-mac-#{version}.zip"
   appcast 'http://subtitlesapp.com/updates.xml',
-          :sha256 => '417c1f9056428a2ed1b83a8e286b823e98305a8f29f17ddfce614ac4271343af'
+          :sha256 => '8f1cba83aa761565a9e07a194385cce8283e4d1e7662dc89256f04157864ec4d'
   name 'Subtitles'
   homepage 'http://subtitlesapp.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Subtitles.app'
 end

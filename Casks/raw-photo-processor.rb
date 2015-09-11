@@ -5,6 +5,7 @@ cask :v1 => 'raw-photo-processor' do
   url 'http://www.raw-photo-processor.com/RPP/RPP_64.zip'
   appcast 'http://www.raw-photo-processor.com/rpp_updates.xml',
           :sha256 => '83e550582ec77d965383ba778ce68e0e0c3f71501a546fab8619119ec2825287'
+  name 'Raw Photo Processor'
   homepage 'http://www.raw-photo-processor.com/RPP/Overview.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

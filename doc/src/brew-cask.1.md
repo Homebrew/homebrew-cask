@@ -1,4 +1,4 @@
-homebrew-cask(1) -- A friendly binary installer for OS X
+homebrew-cask(1) — A friendly binary installer for OS X
 ========================================================
 
 ## SYNOPSIS
@@ -37,10 +37,6 @@ names, and other aspects of this manual are still subject to change.
   * `audit` [ <token> ... ]:
    Check the given Casks for installability.
    If no tokens are given on the command line, all Casks are audited.
-
-  * `alfred`:
-    Modify Alfred's search scope to include the Caskroom directory where
-    Applications are stored.
 
   * `cat` <token> [ <token> ... ]:
     Dump the given Cask definition file to the standard output.
@@ -161,9 +157,6 @@ in a future version.
   * `--fontdir=<path>`:
     Target location for Font links.  The default value is `~/Library/Fonts`.
 
-  * `--widgetdir=<path>`:
-    Target location for Dashboard Widget links.  The default value is `~/Library/Widgets`.
-
   * `--servicedir=<path>`:
     Target location for Service links.  The default value is `~/Library/Services`.
 
@@ -177,10 +170,10 @@ in a future version.
     Target location for Screen Saver links.  The default value is `~/Library/Screen Savers`.
 
   * `--no-binaries`:
-    Do not link "helper" executables to `/usr/local/bin`.
+    Do not link “helper” executables to `/usr/local/bin`.
 
   * `--binarydir=<path>`:
-    Target location for "helper" executable links.  The default value is `/usr/local/bin`.
+    Target location for “helper” executable links.  The default value is `/usr/local/bin`.
 
   * `--debug`:
     Output debugging information of use to Cask authors and developers.
@@ -234,8 +227,6 @@ The homebrew-cask home page: <http://caskroom.io>.
 
 The homebrew-cask GitHub page: <https://github.com/caskroom/homebrew-cask>.
 
-Alfred.app: <http://www.alfredapp.com>
-
 `brew`(1), `curl`(1)
 
 ## AUTHORS
@@ -246,7 +237,7 @@ Man page format based on `brew.1.md` from Homebrew.
 
 ## BUGS
 
-We still have bugs -- and we are busy fixing them!  If you have a problem, don't
+We still have bugs — and we are busy fixing them!  If you have a problem, don’t
 be shy about reporting it on our [GitHub issues page](https://github.com/caskroom/homebrew-cask/issues?state=open).
 
 When reporting bugs, remember that homebrew-cask is an independent project from

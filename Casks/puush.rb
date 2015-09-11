@@ -4,7 +4,8 @@ cask :v1 => 'puush' do
 
   url 'https://puush.me/dl/puush.zip'
   appcast 'https://puush.me/dl/puush.xml?hax=jax'
-  homepage 'http://puush.me/'
+  name 'puush'
+  homepage 'https://puush.me/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'puush.app'

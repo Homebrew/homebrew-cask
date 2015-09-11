@@ -1,10 +1,11 @@
 cask :v1 => 'omnioutliner' do
-  version :latest
-  sha256 :no_check
+  version '4.3'
+  sha256 '8941d9738c3377f4f57f097ff5bf24faa133bd0bf25498d919db751487153357'
 
-  url 'https://www.omnigroup.com/download/latest/omnioutliner'
-  homepage 'http://www.omnigroup.com/omnioutliner/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  url "http://downloads2.omnigroup.com/software/MacOSX/10.10/OmniOutliner-#{version}.dmg"
+  name 'OmniOutliner'
+  homepage 'https://www.omnigroup.com/omnioutliner/'
+  license :commercial
 
   app 'OmniOutliner.app'
 end
