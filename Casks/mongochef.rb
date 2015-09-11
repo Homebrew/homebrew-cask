@@ -1,6 +1,6 @@
 cask :v1 => 'mongochef' do
-  version '3.0.0'
-  sha256 'affd66cba8ff8dc287b4f50e61ec346919a188f1c4102e36262d712832b3b14c'
+  version '3.0.1'
+  sha256 'e3b08a066e83d0042219aaa8a83fcd851b0d4e7f57cbdc979fdcd9de4b9cbcff'
 
   url "https://cdn.3t.io/mongochef/mac/#{version}/MongoChef.dmg"
   name 'MongoChef'
