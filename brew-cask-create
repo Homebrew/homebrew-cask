@@ -1,0 +1,8 @@
+#!/bin/sh
+APP_PATH=$1
+CASK_NAME=$2
+$ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/generate_cask_token" $APP_PATH
+brew cask create $CASK_NAME
+git add .
+git co -b $CASK_NAME
+git commit -m "Add $CASK_NAME"
