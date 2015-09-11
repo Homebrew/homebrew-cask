@@ -4,11 +4,11 @@ cask :v1 => 'spectacle' do
     version '0.8.6'
     sha256 '3e367d2d7e6fe7d5f41d717d49cb087ba7432624b71ddd91c0cfa9d5a5459b7c'
   else
-    version '1.0'
-    sha256 '98c26000f5c3e4a1cd83d0c37ed6e4c5da9f8791281eb186d46a29651ff973b5'
+    version '1.0.1'
+    sha256 '8b41469acb8ae5bc845f1441c2cf630f72f0fc14ad324e78336b0cb4268216d7'
 
     appcast 'http://spectacleapp.com/updates/appcast.xml',
-            :sha256 => '749481dae440e181fef0f538185454f1661fb9ae017dc8e370455894880865f6'
+            :sha256 => 'd79bb2db04e7e53a7bb9184f9c048e4dde76a06e1be1232a9761f60db3836084'
   end
 
   # amazonaws.com is the official download host per the vendor homepage
