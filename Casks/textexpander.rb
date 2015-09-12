@@ -20,11 +20,11 @@ cask :v1 => 'textexpander' do
     sha256 'ec90d6bd2e76bd14c0ca706d255c9673288f406b772e5ae6022e2dbe27848ee9'
     url "http://cdn.smilesoftware.com/TextExpander_#{version}.zip"
   else
-    version '5.0'
-    sha256 'd0c4149fec181cd61579ac0dba0ad8e34153b09da4ee818068bd9f35d668b858'
+    version '5.1.1'
+    sha256 '21cc3f6e2145a7bfe5feea24b1afbb52c63ac62337eb639a9f52905840069b9e'
     url "http://cdn.smilesoftware.com/TextExpander_#{version}.zip"
     appcast 'http://updates.smilesoftware.com/com.smileonmymac.textexpander.xml',
-            :sha256 => '20c1ab602462b7fc0d5b4cbd555cacf127b69a07a737579598ebcbc0f5b21319'
+            :sha256 => 'a862f46ec86052804aea71d26bb5e2c834c255c567ecd5aef457e56579871305'
   end
 
   name 'TextExpander'
