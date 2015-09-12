@@ -1,10 +1,10 @@
 cask :v1 => 'fontforge' do
-  version '2015-04-30'
-  sha256 '69f01a6d15fc0e93c259828ec29e8e6243ba5a35017bee17d101ee54c2c2ab86'
+  version '20150824'
+  sha256 '49d7f59350155b29ac0979987e35066beb8d4f30c6b79a87bc79b9b1f87c5bca'
 
-  url "https://github.com/fontforge/fontforge/releases/download/20150430/FontForge-#{version}-Mac.app.dmg"
+  url "https://github.com/fontforge/fontforge/releases/download/#{version}/FontForge-#{version}.dmg"
   appcast 'https://github.com/fontforge/fontforge/releases.atom'
-  name 'fontforge'
+  name 'FontForge'
   homepage 'https://fontforge.github.io/en-US/'
   license :bsd
 
