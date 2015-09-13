@@ -9,5 +9,5 @@ cask :v1 => 'node' do
 
   pkg  "node-v#{version}.pkg"
 
-  uninstall :pkgutil => 'org.nodejs'
+  uninstall :pkgutil => 'org.nodejs.node.pkg'
 end
