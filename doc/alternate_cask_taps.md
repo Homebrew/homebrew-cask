@@ -32,7 +32,8 @@ Possible uses of this feature include:
 
 ## Alternate Cask Taps Maintained by Users
 
-* [casidiablo/custom](https://github.com/casidiablo/homebrew-custom)
+* [casidiablo/custom](https://github.com/casidiablo/homebrew-custoom)
+* [lifepillar/appleii](https://github.com/lifepillar/homebrew-appleii)
 * [thehunmonkgroup/bumptop](https://github.com/thehunmonkgroup/homebrew-bumptop)
 
 <sup>1</sup> While we strive to be inclusive, sometimes this does happen: [#3954](https://github.com/caskroom/homebrew-cask/pull/3954) .
