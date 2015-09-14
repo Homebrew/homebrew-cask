@@ -3,8 +3,8 @@ cask :v1 => 'controlplane' do
     version '1.2.3'
     sha256 '37f93d3a3a17a6e2f24447f0bc74c7e89ec1581ca52e5970960544858c86f909'
   else
-    version '1.5.8'
-    sha256 'a580eb6d07c8daa4378065e4cfe56e7e8b8162190f1edf121c3d6df8c1995f88'
+    version '1.6.0'
+    sha256 '0427c92e543cd6017d0a85a50fb69d0d235e41cd3f4b81a7d93f33c4a853a0c2'
 
     appcast 'http://www.controlplaneapp.com/appcast.xml',
             :sha256 => '52a5d19431f0cc5de429581c8bf6d5202f4cd5ede8e210ed94613349870d3557'
