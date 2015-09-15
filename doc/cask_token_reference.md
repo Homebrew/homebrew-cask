@@ -25,7 +25,7 @@ The token itself should be
  * mnemonic
 
 Details of software names and brands will inevitably be lost in the
-conversion to a minimal token.  To capture the vendor’s full name for a
+conversion to a minimal token. To capture the vendor’s full name for a
 distribution, use the [`name`](CASK_LANGUAGE_REFERENCE.md#name-stanza-details) within a Cask.
 `name` accepts an unrestricted UTF-8 string.
 
@@ -42,17 +42,17 @@ distribution, use the [`name`](CASK_LANGUAGE_REFERENCE.md#name-stanza-details) w
   * Remove `.app` from the end.
 
   * Remove from the end: the string “app”, if the vendor styles the name
-    like “Software App.app”.  Exception: when “app” is an inseparable part of the
+    like “Software App.app”. Exception: when “app” is an inseparable part of the
     name, without which the name would be inherently nonsensical, as in [rcdefaultapp.rb](../Casks/rcdefaultapp.rb).
 
   * Remove from the end: version numbers or incremental release designations such
-    as “alpha”, “beta”, or “release candidate”.  Strings which distinguish different
+    as “alpha”, “beta”, or “release candidate”. Strings which distinguish different
     capabilities or codebases such as “Community Edition” are currently accepted.
     Exception: when a number is not an incremental release counter, but a
     differentiator for a different product from a different vendor, as in [pgadmin3.rb](../Casks/pgadmin3.rb).
 
   * If the version number is arranged to occur in the middle of the App name,
-    it should also be removed.  Example: [IntelliJ IDEA 13 CE.app](../Casks/intellij-idea-ce.rb).
+    it should also be removed. Example: [IntelliJ IDEA 13 CE.app](../Casks/intellij-idea-ce.rb).
 
   * Remove from the end: “Launcher”, “Quick Launcher”.
 
@@ -65,7 +65,7 @@ distribution, use the [`name`](CASK_LANGUAGE_REFERENCE.md#name-stanza-details) w
   * Remove from the end: hardware designations such as “for x86”, “32-bit”, “ppc”.
 
   * Remove from the end: software framework names such as “Cocoa”, “Qt”,
-    “Gtk”, “Wx”, “Java”, “Oracle JVM”, etc.  Exception: the framework is the
+    “Gtk”, “Wx”, “Java”, “Oracle JVM”, etc. Exception: the framework is the
     product being Casked: [java.rb](../Casks/java.rb).
 
   * Remove from the end: localization strings such as “en-US”
@@ -113,16 +113,16 @@ distribution, use the [`name`](CASK_LANGUAGE_REFERENCE.md#name-stanza-details) w
 ### Simplified Names of `pkg`-based Installers
 
   * The Simplified Name of a `pkg` may be more tricky to determine than that
-    of an App.  If a `pkg` installs an App, then use that App name with the
-    rules above.  If not, just create the best name you can, based on the
+    of an App. If a `pkg` installs an App, then use that App name with the
+    rules above. If not, just create the best name you can, based on the
     vendor’s web page.
 
 ### Simplified Names of non-App Software
 
   * Currently, rules for generating a token are not well-defined for
     Preference Panes, QuickLook plugins, and several other types of software
-    installable by homebrew-cask.  Just create the best name you can, based
-    on the filename on disk or the vendor’s web page.  Watch out for
+    installable by homebrew-cask. Just create the best name you can, based
+    on the filename on disk or the vendor’s web page. Watch out for
     duplicates.
 
     Non-app tokens should become more standardized in the future.
@@ -145,7 +145,7 @@ To convert the App’s Simplified Name (above) to a token:
   * delete a leading or trailing hyphen
 
 We avoid defining Cask tokens in the repository which differ only by the
-placement of hyphens.  Prepend the vendor name if needed to disambiguate
+placement of hyphens. Prepend the vendor name if needed to disambiguate
 the token.
 
 ## Cask Filenames
