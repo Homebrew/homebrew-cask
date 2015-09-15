@@ -33,8 +33,8 @@ Cask Domain-Specific Language (DSL) which are not needed in most cases.
 
 ## Casks Are Ruby Blocks
 
-Each Cask is a Ruby block, beginning with a special header line.  The Cask
-definition itself is always enclosed in a `do ... end` block.  Example:
+Each Cask is a Ruby block, beginning with a special header line. The Cask
+definition itself is always enclosed in a `do ... end` block. Example:
 
 ```ruby
 cask :v1 => 'alfred' do
@@ -58,16 +58,16 @@ end
 ## The Cask Language Is Declarative
 
 Each Cask contains a series of stanzas (or “fields”) which *declare* how the
-software is to be obtained and installed.  In a declarative language, the
-author does not need to worry about **order**.  As long as all the needed fields
+software is to be obtained and installed. In a declarative language, the
+author does not need to worry about **order**. As long as all the needed fields
 are present, homebrew-cask will figure out what needs to be done at install
 time.
 
 To make maintenance easier, the most-frequently-updated stanzas are usually
-placed at the top.  But that’s a convention, not a rule.
+placed at the top. But that’s a convention, not a rule.
 
 Exception: `do` blocks such as `postflight` may enclose a block of pure Ruby
-code.  Lines within that block follow a procedural (order-dependent)
+code. Lines within that block follow a procedural (order-dependent)
 paradigm.
 
 
@@ -78,7 +78,7 @@ Each of the following stanzas is required for every Cask.
 | name               | multiple occurrences allowed? | value       |
 | ------------------ |------------------------------ | ----------- |
 | `version`          | no                            | application version; give value of `:latest`  if versioned downloads are not offered
-| `sha256`           | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
+| `sha256`           | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
 | `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application. A [comment](#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see also [URL Stanza Details](#url-stanza-details))
 | `homepage`         | no                            | application homepage; used for the `brew cask home` command
 | `license`          | no                            | a symbol identifying the license category for the application. (see also [License Stanza Details](#license-stanza-details))
@@ -102,9 +102,9 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `screen_saver`     | yes                           | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
 | `service`          | yes                           | relative path to a service that should be linked into the `~/Library/Services` folder on installation
 | `suite`            | yes                           | relative path to a containing directory that should be linked into the `~/Applications` folder on installation (see also [Suite Stanza Details](#suite-stanza-details))
-| `artifact`         | yes                           | relative path to an arbitrary path that should be symlinked on installation.  This is only for unusual cases.  The `app` stanza is strongly preferred when linking `.app` bundles.
-| `installer`        | yes                           | describes an executable which must be run to complete the installation.  (see [Installer Stanza Details](#installer-stanza-details))
-| `stage_only`       | no                            | `true`.  Assert that the Cask contains no activatable artifacts.
+| `artifact`         | yes                           | relative path to an arbitrary path that should be symlinked on installation. This is only for unusual cases. The `app` stanza is strongly preferred when linking `.app` bundles.
+| `installer`        | yes                           | describes an executable which must be run to complete the installation. (see [Installer Stanza Details](#installer-stanza-details))
+| `stage_only`       | no                            | `true`. Assert that the Cask contains no activatable artifacts.
 
 ## Optional Stanzas
 
@@ -113,7 +113,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `name`                 | yes                           | a string providing the full and proper name defined by the vendor (see also [Name Stanza Details](#name-stanza-details))
 | `uninstall`            | yes                           | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](#uninstall-stanza-details))
 | `zap`                  | yes                           | additional procedures for a more complete uninstall, including user files and shared resources. (see also [Zap Stanza Details](#zap-stanza-details))
-| `appcast`              | no                            | a URL providing an appcast feed to find updates for this Cask.  (see also [Appcast Stanza Details](#appcast-stanza-details))
+| `appcast`              | no                            | a URL providing an appcast feed to find updates for this Cask. (see also [Appcast Stanza Details](#appcast-stanza-details))
 | `depends_on`           | yes                           | a list of dependencies and requirements for this Cask (see also [Depends_on Stanza Details](#depends_on-stanza-details))
 | `conflicts_with`       | yes                           | a list of conflicts with this Cask (*not yet functional* see also [Conflicts_with Stanza Details](#conflicts_with-stanza-details))
 | `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](#caveats-stanza-details))
@@ -123,8 +123,8 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `uninstall_postflight` | yes                           | a Ruby block containing postflight uninstall operations
 | `accessibility_access` | no                            | `true` if the application should be granted accessibility access
 | `container :nested =>` | no                            | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
-| `container :type =>`   | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`.  (example [parse.rb](../Casks/parse.rb))
-| `tags`                 | no                            | a list of key-value pairs for Cask annotation.  Not free-form.  (see also [Tags Stanza Details](#tags-stanza-details))
+| `container :type =>`   | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`. (example [parse.rb](../Casks/parse.rb))
+| `tags`                 | no                            | a list of key-value pairs for Cask annotation. Not free-form. (see also [Tags Stanza Details](#tags-stanza-details))
 | `gpg`                  | no                            | *stub: not yet functional.*  (see also [GPG Stanza Details](#gpg-stanza-details))
 
 
@@ -162,10 +162,10 @@ containing a single dot.
 ### Always Fall Through to the Newest Case
 
 Conditionals should be constructed so that the default is the newest OS
-version or hardware type.  When using an `if` statement, test for older
+version or hardware type. When using an `if` statement, test for older
 versions, and then let the `else` statement hold the latest and greatest.
 This makes it more likely that the Cask will work without alteration when
-a new OS is released.  Example (from [coconutbattery.rb](../Casks/coconutbattery.rb)):
+a new OS is released. Example (from [coconutbattery.rb](../Casks/coconutbattery.rb)):
 
 ```ruby
 if MacOS.release <= :tiger
@@ -194,7 +194,7 @@ The header line is not entirely strict Ruby: no comma is required after
 the Cask token.
 
 There are currently some arbitrary limitations on Cask tokens which are
-in the process of being removed.  The Travis bot will catch any errors
+in the process of being removed. The Travis bot will catch any errors
 during the transition.
 
 
@@ -213,7 +213,7 @@ branding as defined by the vendor.
 
 ### Caveats as a String
 
-When `caveats` is a string, it is evaluated at compile time.  The following
+When `caveats` is a string, it is evaluated at compile time. The following
 methods are available for interpolation if `caveats` is placed in its customary
 position at the end of the Cask:
 
@@ -331,9 +331,9 @@ versioning). The exception to this rule is a `homepage` of `github.io` with a
 ### Difficulty Finding a URL
 
 Web browsers may obscure the direct `url` download location for a variety of
-reasons.  Homebrew-cask supplies a script which can read extended file
+reasons. Homebrew-cask supplies a script which can read extended file
 attributes to extract the actual source URL for most files downloaded by a
-browser on OS X.  The script usually emits multiple candidate URLs; you may
+browser on OS X. The script usually emits multiple candidate URLs; you may
 have to test each of them:
 
 ```bash
@@ -356,7 +356,7 @@ following key/value pairs to `url`:
 ## Appcast Stanza Details
 
 The value of the `appcast` stanza is a string, holding the URL for an
-appcast which provides information on future updates.  Generally, the
+appcast which provides information on future updates. Generally, the
 appcast URL returns Sparkle-compatible XML, though that is not required.
 
 Example: [adium.rb](../../d7f8eafa4fc01a6c383925d9962b5da33876a8b6/Casks/adium.rb#L6)
@@ -366,17 +366,17 @@ Example: [adium.rb](../../d7f8eafa4fc01a6c383925d9962b5da33876a8b6/Casks/adium.r
 | key                | value       |
 | ------------------ | ----------- |
 | `:sha256`          | a string holding the SHA-256 checksum of the most recent appcast which matches the current Cask versioning
-| `:format`          | a symbol describing the appcast format.  One of: `:sparkle`, `:plaintext`, `:unknown`, where `:sparkle` is the default.
+| `:format`          | a symbol describing the appcast format. One of: `:sparkle`, `:plaintext`, `:unknown`, where `:sparkle` is the default.
 
 
 ## License Stanza Details
 
-The `license` stanza is not free-form.  A single value must be chosen from a
+The `license` stanza is not free-form. A single value must be chosen from a
 list of valid symbols.
 
 The values for `license` are categories, rather than fully-specified
-licenses.  For example, `:gpl` is a category; we do not distinguish between
-versions of the GPL.  Similarly, `:cc` and `:bsd` comprise many variants.
+licenses. For example, `:gpl` is a category; we do not distinguish between
+versions of the GPL. Similarly, `:cc` and `:bsd` comprise many variants.
 They must always pertain to the license of the software itself, not the
 vendor’s business model (a free app to access a paid service is still
 `:gratis`, not `:freemium`).
@@ -391,11 +391,11 @@ using the information stored in the `license` stanza.
 ### Generic Category Licenses
 
 Cask authors should use the most specific license category which is also
-correct.  Generic categories are provided for difficult cases.  `:unknown`
+correct. Generic categories are provided for difficult cases. `:unknown`
 is also perfectly fine if you are unsure.
 
 Example: [Chromium](http://www.chromium.org/chromium-os/licenses) includes code with multiple licenses, all of which are
-open source.  Chromium licensing is described by the generic category [`:oss`](https://github.com/caskroom/homebrew-cask/blob/54a79f7dcceea9a922a5b608ac99466b9d10a191/Casks/chromium.rb#L7).
+open source. Chromium licensing is described by the generic category [`:oss`](https://github.com/caskroom/homebrew-cask/blob/54a79f7dcceea9a922a5b608ac99466b9d10a191/Casks/chromium.rb#L7).
 
 | symbol      | meaning     |
 | ----------- | ----------- |
@@ -432,10 +432,10 @@ open source.  Chromium licensing is described by the generic category [`:oss`](h
 
 ## Tags Stanza Details
 
-The `tags` stanza is not free-form.  The key-value pairs are limited to a list
-of valid keys.  All `tags` keys accept string values.
+The `tags` stanza is not free-form. The key-value pairs are limited to a list
+of valid keys. All `tags` keys accept string values.
 
-The `tags` stanza is intended as an aid to search/filtering of Casks.  For
+The `tags` stanza is intended as an aid to search/filtering of Casks. For
 detailed information, the user must rely on the vendor’s homepage.
 
 Note that `brew cask search` and `brew cask list` are not yet capable of
@@ -445,7 +445,7 @@ using the information stored in the `tags` stanza.
 
 | key           | meaning
 | ------------- | -----------------------------
-| `:vendor`     | the full-text official name of the producer of the software: an author or corporate name, as appropriate.  As the value is intended as a search target, commonly shared abbreviations such as `Dr.` or `Inc.` should be omitted. (example [google-chrome.rb](../Casks/google-chrome.rb))
+| `:vendor`     | the full-text official name of the producer of the software: an author or corporate name, as appropriate. As the value is intended as a search target, commonly shared abbreviations such as `Dr.` or `Inc.` should be omitted. (example [google-chrome.rb](../Casks/google-chrome.rb))
 
 
 ## GPG Stanza Details
@@ -460,15 +460,15 @@ gpg <signature>, <parameter> => <value>
 ```
 
 where `<parameter>` is one of `:key_id` or `:key_url`, and `<signature>` points
-to the detached signature of the distribution.  Commonly, the signature
-follows the `url` value.  Example: [libreoffice.rb](../Casks/libreoffice.rb).
+to the detached signature of the distribution. Commonly, the signature
+follows the `url` value. Example: [libreoffice.rb](../Casks/libreoffice.rb).
 
 
 ## App Stanza Details
 
 In the simple case of a string argument to `app`, a symlink is created in
 the target `~/Applications` directory using the same basename as the source
-file.  For example:
+file. For example:
 
 ```ruby
 app 'Alfred 2.app'
@@ -499,7 +499,7 @@ app 'eclipse/Eclipse.app', :target => 'Scala IDE.app'
 
 If `:target` has a leading slash, it is interpreted as an absolute path.
 The containing directory for the absolute path will be created if it does
-not already exist.  Example (from [manopen.rb](../Casks/manopen.rb)):
+not already exist. Example (from [manopen.rb](../Casks/manopen.rb)):
 
 ```ruby
 artifact 'openman.1', :target => '/usr/local/share/man/man1/openman.1'
@@ -529,7 +529,7 @@ application with required data, to be installed together in a
 subdirectory of `~/Applications`.
 
 For these Casks, use the `suite` stanza to define the directory
-containing the application suite.  Example (from [sketchup.rb](../Casks/sketchup.rb)):
+containing the application suite. Example (from [sketchup.rb](../Casks/sketchup.rb)):
 
 ```ruby
 suite 'SketchUp 2015'
@@ -541,14 +541,14 @@ The value of `suite` is never an `.app` bundle, but a plain directory.
 ## Pkg Stanza Details
 
 The first argument to the `pkg` stanza should be a relative path to the `.pkg`
-file to be installed.  For example:
+file to be installed. For example:
 
 ```ruby
 pkg 'Unity.pkg'
 ```
 
 Subsequent arguments to `pkg` are key/value pairs which modify the install
-process.  Currently supported keys are
+process. Currently supported keys are
 
   * `:allow_untrusted` — pass `-allowUntrusted` to `/usr/sbin/installer`
 
@@ -567,8 +567,8 @@ which must be `:manual` or `:script`.
 ### Installer :manual
 
 `installer :manual` takes a single string value, describing a GUI installer
-which must be run by the user at a later time.  The path may be absolute,
-or relative to the Cask.  Example:
+which must be run by the user at a later time. The path may be absolute,
+or relative to the Cask. Example:
 
 ```ruby
 installer :manual => 'Little Snitch Installer.app'
@@ -576,7 +576,7 @@ installer :manual => 'Little Snitch Installer.app'
 ### Installer :script
 
 `installer :script` introduces a series of key-value pairs describing
-a command which will automate completion of the install.  The form is
+a command which will automate completion of the install. The form is
 similar to `uninstall :script`:
 
 | key             | value
@@ -587,7 +587,7 @@ similar to `uninstall :script`:
 | `:must_succeed` | set to `false` if the script is allowed to fail
 | `:sudo`         | set to `false` if the script does not need `sudo`
 
-The path may be absolute, or relative to the Cask.  Example:
+The path may be absolute, or relative to the Cask. Example:
 
 ```ruby
 installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
@@ -614,7 +614,7 @@ depends_on :cask => 'osxfuse'
 The value should name a Homebrew Formula needed by the Cask.
 
 Example use: some distributions are contained in archive formats such as
-`7z` which are not supported by stock Apple tools.  For these cases, a more
+`7z` which are not supported by stock Apple tools. For these cases, a more
 capable archive reader may be pulled in at install time by declaring a
 dependency on the Homebrew Formula `unar`:
 
@@ -647,7 +647,7 @@ The available values for OS X releases are:
 | `:el_capitan`      | `'10.11'`
 
 Only major releases are covered (version numbers containing a single dot).
-The symbol form is preferred for readability.  The following are all valid
+The symbol form is preferred for readability. The following are all valid
 ways to enumerate the exact OS X release requirements for a Cask:
 
 ```ruby
@@ -660,7 +660,7 @@ depends_on :macos => ['10.9', '10.10']
 #### Setting a Minimum OS X Release
 
 `depends_on :macos` can also accept a string starting with a comparison
-operator such as `>=`, followed by an OS X release in the form above.  The
+operator such as `>=`, followed by an OS X release in the form above. The
 following are both valid expressions meaning “at least OS X 10.9”:
 
 ```ruby
@@ -673,7 +673,7 @@ A comparison expression cannot be combined with any other form of `depends_on :m
 ### Depends_on :arch
 
 The value for `depends_on :arch` may be a symbol or an array of symbols,
-listing the hardware compatibility requirements for a Cask.  The requirement
+listing the hardware compatibility requirements for a Cask. The requirement
 is satisfied at install time if any one of multiple `:arch` value matches
 the user’s hardware.
 
@@ -722,7 +722,7 @@ depends_on :arch => :x86_64
 installing or working correctly.
 
 Several keys are accepted by `conflicts_with`, but none of them are yet
-enforced by the backend implementation.  It is fine to proactively add
+enforced by the backend implementation. It is fine to proactively add
 `conflicts_with` stanzas to Casks in anticipation of future backend support;
 they are currently just a type of structured comment.
 
@@ -739,18 +739,18 @@ they are currently just a type of structured comment.
 ## Uninstall Stanza Details
 
 IF YOU CANNOT DESIGN A WORKING `UNINSTALL` STANZA, PLEASE SUBMIT YOUR
-CASK ANYWAY.  The maintainers will help you write an `uninstall` stanza:
+CASK ANYWAY. The maintainers will help you write an `uninstall` stanza:
 just ask!
 
 ### `uninstall :pkgutil` Is The Easiest and Most Useful
 
-`:pkgutil` is the easiest and most useful `uninstall` directive.  See
+`:pkgutil` is the easiest and most useful `uninstall` directive. See
 [Uninstall Key :pkgutil](#uninstall-key-pkgutil).
 
 ### `uninstall` Is Required for Casks That Install a `pkg`
 
 For most Casks, uninstall actions are determined automatically, and an
-explicit `uninstall` stanza is not needed.  However, a Cask which uses
+explicit `uninstall` stanza is not needed. However, a Cask which uses
 the `pkg` stanza will **not** know how to uninstall correctly unless an
 `uninstall` stanza is given.
 
@@ -758,13 +758,13 @@ So, while the Cask language does not enforce the requirement, it is much
 better for end-users if every `pkg` has a corresponding `uninstall`.
 
 The `uninstall` stanza is available for non-`pkg` Casks, and is useful for
-a few corner cases.  However, the documentation below concerns the typical
+a few corner cases. However, the documentation below concerns the typical
 case of using `uninstall` to define procedures for a `pkg`.
 
 ### There Are Multiple Uninstall Techniques
 
 Since `pkg` installers can do arbitrary things, different techniques are
-needed to uninstall in each case.  You may need to specify one, or several,
+needed to uninstall in each case. You may need to specify one, or several,
 of the following key/value pairs as arguments to `uninstall`.
 
 ### Summary of Keys
@@ -781,25 +781,25 @@ of the following key/value pairs as arguments to `uninstall`.
   - `:input` - array of lines of input to be sent to `stdin` of the script
   - `:must_succeed` - set to `false` if the script is allowed to fail
   - `:sudo` - set to `false` if the script does not need `sudo`
-* `:delete` (string or array) - single-quoted, absolute paths of files or directory trees to remove.  `:delete` should only be used as a last resort. `:pkgutil` is strongly preferred
+* `:delete` (string or array) - single-quoted, absolute paths of files or directory trees to remove. `:delete` should only be used as a last resort. `:pkgutil` is strongly preferred
 * `:rmdir` (string or array) - single-quoted, absolute paths of directories to remove if empty.
-* `:trash` (string or array) - currently a synonym for `:delete`.  In the future this will cause files to be moved to the Trash.
+* `:trash` (string or array) - currently a synonym for `:delete`. In the future this will cause files to be moved to the Trash.
 
 Each `uninstall` technique is applied according to the order above. The order
 in which `uninstall` keys appear in the Cask file is ignored.
 
 For assistance filling in the right values for `uninstall` keys, there are
 several helper scripts found under `developer/bin` in the homebrew-cask
-repository.  Each of these scripts responds to the `-help` option with
+repository. Each of these scripts responds to the `-help` option with
 additional documentation.
 
 The easiest way to work out an `uninstall` stanza is on a system where the
-`pkg` is currently installed and operational.  To operate on an uninstalled
+`pkg` is currently installed and operational. To operate on an uninstalled
 `pkg` file, see [Working With a pkg File Manually](#working-with-a-pkg-file-manually), below.
 
 ### Uninstall Key :pkgutil
 
-This is the most useful uninstall key.  `:pkgutil` is often sufficient
+This is the most useful uninstall key. `:pkgutil` is often sufficient
 to completely uninstall a `pkg`, and is strongly preferred over `:delete`.
 
 IDs for the most recently-installed packages can be listed using the
@@ -809,7 +809,7 @@ $ ./developer/bin/list_recent_pkg_ids
 ```
 
 `:pkgutil` also accepts a regular expression match against multiple package
-IDs.  The regular expressions are somewhat nonstandard.  To test a `:pkgutil`
+IDs. The regular expressions are somewhat nonstandard. To test a `:pkgutil`
 regular expression against currently-installed packages, use the command
 
 ```bash
@@ -856,7 +856,7 @@ $ ./developer/bin/list_ids_in_app </path/to/application.app>
 `:signal` should only be needed in the rare case that a process does not
 respond to `:quit`.
 
-Bundle IDs for `:signal` targets may be obtained as for `:quit`.  The value
+Bundle IDs for `:signal` targets may be obtained as for `:quit`. The value
 for `:signal` is an array-of-arrays, with each cell containing two elements:
 the desired Unix signal followed by the corresponding bundle ID.
 
@@ -865,11 +865,11 @@ man page for more details).
 
 The elements of the `:signal` array are applied in order, only if there is
 an existing process associated the bundle ID, and stopping when that process
-terminates.  A bundle ID may be repeated to send more than one signal to the
+terminates. A bundle ID may be repeated to send more than one signal to the
 same process.
 
 It is better to use the least-severe signals which are sufficient to stop
-a process.  The `KILL` signal in particular can have unwanted side-effects.
+a process. The `KILL` signal in particular can have unwanted side-effects.
 
 An example, with commonly-used signals in ascending order of severity:
 
@@ -887,8 +887,8 @@ Note that when multiple running processes match the given Bundle ID, all
 matching processes will be signaled.
 
 Unlike `:quit` directives, Unix signals originate from the current user, not
-from the superuser.  This is construed as a safety feature, since the
-superuser is capable of bringing down the system via signals.  However, this
+from the superuser. This is construed as a safety feature, since the
+superuser is capable of bringing down the system via signals. However, this
 inconsistency may also be considered a bug, and should be addressed in some
 fashion in a future version.
 
@@ -913,7 +913,7 @@ Arguments to `uninstall :delete` should be static, single-quoted, absolute
 paths.
 
  * Only single quotes should be used.
- * Double-quotes should not be used.  `ENV['HOME']` and other variables
+ * Double-quotes should not be used. `ENV['HOME']` and other variables
    should not be interpolated in the value.
  * Only absolute paths should be given.
  * No glob expansion is performed (*eg* `*` characters are literal), though
@@ -924,8 +924,8 @@ To remove user-specific files, use the `zap` stanza.
 
 ### Uninstall Key :trash
 
-*stub* - currently a synonym for `:delete`.  In the future this will cause
-files to be moved to the Trash.  It is best not to use this stub until it
+*stub* - currently a synonym for `:delete`. In the future this will cause
+files to be moved to the Trash. It is best not to use this stub until it
 gains the proper functionality.
 
 
@@ -959,7 +959,7 @@ A fully manual method for finding bundle ids in a package file follows:
      with the command `find /tmp/expanded.unpkg -name PackageInfo`.
   3. `PackageInfo` files are XML files, and bundle ids are found within the `identifier` attributes of `<pkg-info>` tags that look like
      `<pkg-info ... identifier="com.oracle.jdk7u51" ... >`, where extraneous attributes have been snipped out and replaced with ellipses.
-  4. Kexts inside packages are also described in `PackageInfo` files.  If any kernel extensions are present, the command
+  4. Kexts inside packages are also described in `PackageInfo` files. If any kernel extensions are present, the command
      `find /tmp/expanded.unpkg -name PackageInfo -print0 | xargs -0 grep -i kext` should return a `<bundle id>` tag with a `path`
      attribute that contains a `.kext` extension, for example `<bundle id="com.wavtap.driver.WavTap" ... path="./WavTap.kext" ... />`.
   5. Once bundle ids have been identified, the unpacked package directory can be deleted.
@@ -971,7 +971,7 @@ A fully manual method for finding bundle ids in a package file follows:
 
 The Ruby blocks defined by `preflight`, `postflight`, `uninstall_preflight`,
 and `uninstall_postflight` are not evaluated until install time or uninstall
-time.  Within a block, you may refer to the `@cask` instance variable, and
+time. Within a block, you may refer to the `@cask` instance variable, and
 invoke any method available on `@cask`.
 
 ### \*flight Mini-DSL
@@ -982,10 +982,10 @@ The following methods may be called to perform standard tasks:
 
 | method                                    | availability                        | description |
 | ----------------------------------------- | ----------------------------------- | ----------- |
-| `plist_set(key, value)`                   | `postflight`, `uninstall_preflight` | set a value in the `Info.plist` file for the app bundle.  Example: [`rubymine.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/rubymine.rb#L12)
+| `plist_set(key, value)`                   | `postflight`, `uninstall_preflight` | set a value in the `Info.plist` file for the app bundle. Example: [`rubymine.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/rubymine.rb#L12)
 | `set_ownership(paths)`                    | `postflight`, `uninstall_preflight` | set user and group ownership of `paths`. Example: [`unifi-controller.rb`](https://github.com/caskroom/homebrew-cask/blob/8a452a41707af6a661049da6254571090fac5418/Casks/unifi-controller.rb#L13)
 | `set_permissions(paths, permissions_str)` | `postflight`, `uninstall_preflight` | set permissions in `paths` to `permissions_str` Example: [`docker-machine.rb`](https://github.com/caskroom/homebrew-cask/blob/8a452a41707af6a661049da6254571090fac5418/Casks/docker-machine.rb#L16)
-| `suppress_move_to_applications`           | `postflight`                        | suppress a dialog asking the user to move the app to the `/Applications` folder.  Example: [`github.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/github.rb#L13).
+| `suppress_move_to_applications`           | `postflight`                        | suppress a dialog asking the user to move the app to the `/Applications` folder. Example: [`github.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/github.rb#L13).
 
 `plist_set` currently has the limitation that it only operates on the
 bundle indicated by the first `app` stanza (and the Cask must contain
@@ -996,7 +996,7 @@ group ownership to `staff`. These can be changed by passing in extra options:
 `set_ownership(paths, user: 'user', group: 'group')`.
 
 `suppress_move_to_applications` optionally accepts a `:key` parameter for
-apps which use a nonstandard `defaults` key.  Example: [`alfred.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/alfred.rb).
+apps which use a nonstandard `defaults` key. Example: [`alfred.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/alfred.rb).
 
 
 ## Zap Stanza Details
@@ -1004,7 +1004,7 @@ apps which use a nonstandard `defaults` key.  Example: [`alfred.rb`](https://git
 ### Zap Stanza Purpose
 
 The `zap` stanza describes a more complete uninstallation of resources
-associated with a Cask.  The `zap` procedures will never be performed
+associated with a Cask. The `zap` procedures will never be performed
 by default, but only if the user invokes the `zap` verb:
 
 ```bash
@@ -1014,7 +1014,7 @@ $ brew cask zap td-toolbelt             # also removes org.ruby-lang.installer
 `zap` stanzas may remove:
 
  * Preference files and caches stored within the user’s `~/Library` directory.
- * Shared resources such as application updaters.  Since shared resources
+ * Shared resources such as application updaters. Since shared resources
    may be removed, other applications may be affected by `brew cask zap`.
    Understanding that is the responsibility of the end user.
 
@@ -1040,7 +1040,7 @@ Example: [injection.rb](../Casks/injection.rb)
 
 In the exceptional case that the Cask DSL is insufficient, it is possible to
 define arbitrary Ruby variables and methods inside the Cask by creating a
-`Utils` namespace.  Example:
+`Utils` namespace. Example:
 
 ```ruby
 cask :v1 => 'myapp' do
@@ -1062,7 +1062,7 @@ end
 ```
 
 This should be used sparingly: any method which is needed by two or more
-Casks should instead be rolled into the core.  Care must also be taken
+Casks should instead be rolled into the core. Care must also be taken
 that such methods be very efficient.
 
 Variables and methods should not be defined outside the `Utils` namespace,
@@ -1071,6 +1071,6 @@ as they may collide with Homebrew-cask internals.
 
 ## Revisions to the Cask DSL
 
-The Cask DSL is being revised and stabilized.  Changes are tracked in [cask_language_deltas.md](cask_language_deltas.md).
+The Cask DSL is being revised and stabilized. Changes are tracked in [cask_language_deltas.md](cask_language_deltas.md).
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3
