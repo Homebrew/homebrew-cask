@@ -3,8 +3,8 @@
 ## What is a Cask?
 
 A `Cask` is like a `Formula` in Homebrew except it describes how to download
-and install a binary application.  To learn how to write a Cask, see
-[CONTRIBUTING.md](../CONTRIBUTING.md).  For a complete reference, see
+and install a binary application. To learn how to write a Cask, see
+[CONTRIBUTING.md](../CONTRIBUTING.md). For a complete reference, see
 [CASK_LANGUAGE_REFERENCE.md](CASK_LANGUAGE_REFERENCE.md).
 
 ## What's the status of this project?  Where's it headed?
