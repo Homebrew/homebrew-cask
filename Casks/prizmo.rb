@@ -1,6 +1,6 @@
 cask :v1 => 'prizmo' do
-  version '3.1.3'
-  sha256 '52154553c4473dcb1613844991e49a62f96d2f9016254ea2577b0d4b5479c933'
+  version '3.1.4'
+  sha256 'be3bad97f4fccaa4a4f90e52c67c6091b9832fe619ec14b17d819a9e9740b4d6'
 
   url "http://www.creaceed.com/downloads/prizmo#{version.to_i}_#{version}.zip"
   appcast 'http://www.creaceed.com/appcasts/prizmo3.xml',
