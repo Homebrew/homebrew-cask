@@ -17,9 +17,7 @@ $ brew install caskroom/cask/brew-cask
 
 ## Frequently Used Commands
 
-Homebrew-cask is implemented as a subcommand of Homebrew. All homebrew-cask
-commands begin with `brew cask`. Homebrew-cask has its own set of command
-verbs many of which are similar to Homebrew’s. The most frequently-used
+Homebrew-cask is implemented as a subcommand of Homebrew. All homebrew-cask commands begin with `brew cask`. Homebrew-cask has its own set of command verbs many of which are similar to Homebrew’s. The most frequently-used
 commands are:
 
 * `search` — searches all known Casks
@@ -28,9 +26,7 @@ commands are:
 
 ## Searching for Casks
 
-The `brew cask search` command accepts a series of substring arguments,
-and returns tokens representing matching Casks. Let’s see if there’s a
-Cask for Google Chrome:
+The `brew cask search` command accepts a series of substring arguments, and returns tokens representing matching Casks. Let’s see if there’s a Cask for Google Chrome:
 
 ```bash
 $ brew cask search chrome
@@ -46,8 +42,7 @@ $ brew cask search
 
 ## Installing Casks
 
-The command `brew cask install` accepts a Cask token as returned by `brew cask search`.
-Let’s try to install Google Chrome:
+The command `brew cask install` accepts a Cask token as returned by `brew cask search`. Let’s try to install Google Chrome:
 
 ```bash
 $ brew cask install google-chrome
@@ -64,8 +59,7 @@ Easy peasy:
 $ brew cask uninstall google-chrome
 ```
 
-This will both uninstall the Cask and remove symlinks which were created in
-`~/Applications`.
+This will both uninstall the Cask and remove symlinks which were created in `~/Applications`.
 
 To uninstall all versions of a Cask, use `--force`:
 
@@ -73,8 +67,7 @@ To uninstall all versions of a Cask, use `--force`:
 $ brew cask uninstall --force google-chrome
 ```
 
-Note that `uninstall --force` is currently imperfect. See the man page for
-more information.
+Note that `uninstall --force` is currently imperfect. See the man page for more information.
 
 ## Other Commands
 
@@ -123,28 +116,21 @@ https://github.com/caskroom/homebrew-cask/blob/master/Casks/caffeine.rb
 
 ## Updating/Upgrading Casks
 
-Since the homebrew-cask repository is a Homebrew Tap, you’ll pull down the latest
-Casks every time you issue the regular Homebrew command `brew update`. Currently,
-homebrew-cask cannot always detect if an Application has been updated. You
-can force an update via the command `brew cask install --force`. We are working
-on improving this.
+Since the homebrew-cask repository is a Homebrew Tap, you’ll pull down the latest Casks every time you issue the regular Homebrew command `brew update`. Currently, homebrew-cask cannot always detect if an Application has been updated. You can force an update via the command `brew cask install --force`. We are working on improving this.
 
 It is generally safe to run updates from within an Application.
 
 ## Updating/Upgrading the Homebrew-cask Tool
 
-When a new version homebrew-cask is released, it will appear in the output of
-`brew outdated` after running `brew update`. You can upgrade it via the normal
-Homebrew `brew upgrade` workflow:
+When a new version homebrew-cask is released, it will appear in the output of `brew outdated` after running `brew update`. You can upgrade it via the normal Homebrew `brew upgrade` workflow:
+
 ```bash
 $ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 ```
 
 ## Additional Taps (optional)
 
-The primary homebrew-cask Tap includes most of the Casks that a typical user will
-be interested in. There are a few additional Taps where we store different kinds
-of Casks.
+The primary homebrew-cask Tap includes most of the Casks that a typical user will be interested in. There are a few additional Taps where we store different kinds of Casks.
 
 | Tap name | description |
 | -------- | ----------- |
@@ -160,8 +146,7 @@ You can tap any of the above with a `brew tap` command:
 $ brew tap <tap_name>
 ```
 
-after which, Casks from the new Tap will be available to `search` or `install` just like Casks from the main Tap.
-`brew update` will automatically keep your new Tap up to date.
+after which, Casks from the new Tap will be available to `search` or `install` just like Casks from the main Tap. `brew update` will automatically keep your new Tap up to date.
 
 You may also specify a fully-qualified Cask token (which includes the Tap) for any `brew cask` command. This will implicitly add the Tap if you have not previously added it with `brew tap`:
 
@@ -198,7 +183,6 @@ Default is `~/Library/Input Methods`
 * `--screen_saverdir=/my/path` changes the path for Screen Saver symlinks.
 Default is `~/Library/Screen Savers`
 
-
 To make these settings persistent, you might want to add the following line to your `.bash_profile` or `.zshenv`:
 
 ```bash
@@ -206,8 +190,7 @@ To make these settings persistent, you might want to add the following line to y
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/etc/Caskroom"
 ```
 
-Note that you still can override the environment variable `HOMEBREW_CASK_OPTS` by _explicitly_ providing
-options in the command line:
+Note that you still can override the environment variable `HOMEBREW_CASK_OPTS` by _explicitly_ providing options in the command line:
 
 ```bash
 # Will force the Chrome app to be linked to ~/Applications
@@ -217,10 +200,7 @@ $ brew cask install --appdir="~/Applications" google-chrome
 
 ## Advanced searching
 
-The default search algorithm is a lax substring approach, which does not
-use the command-line arguments exactly as given. If you need to specify
-a search more precisely, a single search argument enclosed in `/` characters
-will be taken as a Ruby regular expression:
+The default search algorithm is a lax substring approach, which does not use the command-line arguments exactly as given. If you need to specify a search more precisely, a single search argument enclosed in `/` characters will be taken as a Ruby regular expression:
 
 ```bash
 $ brew cask search '/^google.c[a-z]rome$/'
@@ -229,24 +209,19 @@ google-chrome
 
 ## Other Ways to Specify a Cask
 
-Most `brew cask` commands can accept a Cask token as an argument. As described
-above, the token on the command line can take the form of:
+Most `brew cask` commands can accept a Cask token as an argument. As described above, the token on the command line can take the form of:
 
- * a token as returned by `brew cask search`, _eg_: `google-chrome`
- * a fully-qualified token which includes the Tap, _eg_: `caskroom/fonts/font-symbola`
+* A token as returned by `brew cask search`, _eg_: `google-chrome`.
+* A fully-qualified token which includes the Tap, _eg_: `caskroom/fonts/font-symbola`.
 
 `brew cask` also accepts three other forms as arguments
 
- * a path to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
- * a `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
- * a file in the current working directory, _eg_: `my-modfied-google-chrome.rb`. Note
-   that matching Tapped Cask tokens will be preferred over this form when there is a
-   conflict. To force the use of a Cask file in the current directory, specify a
-   pathname with slashes, _eg_: `./google-chrome.rb`.
+* A path to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`.
+* A `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`.
+* A file in the current working directory, _eg_: `my-modfied-google-chrome.rb`. Note that matching Tapped Cask tokens will be preferred over this form when there is a conflict. To force the use of a Cask file in the current directory, specify a pathname with slashes, _eg_: `./google-chrome.rb`.
 
 The last three forms are intended for users who wish to maintain private Casks.
 
 ## Taps
 
-You can add Casks to your existing (or new) Taps: just create a directory named
-`Casks` inside your Tap, put your Cask files there, and everything will just work.
+You can add Casks to your existing (or new) Taps: just create a directory named `Casks` inside your Tap, put your Cask files there, and everything will just work.
