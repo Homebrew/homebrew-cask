@@ -12,12 +12,12 @@ number when we fix bugs, and we bump the MINOR number when we add features.
 Pretty simple.
 
 The script `./developer/bin/get_release_tag` can tell you the latest release
-tag that exists and/or calculate the proposed next release tag.  Docs are at
+tag that exists and/or calculate the proposed next release tag. Docs are at
 `get_release_tag -help`.
 
 ## Release Process
 
-This is partially scripted now.  The most time-consuming step is editing the
+This is partially scripted now. The most time-consuming step is editing the
 changelog.
 
 1. Be running on a checkout of `master` which is up to date and `git status`
@@ -58,7 +58,7 @@ changelog.
 	```
 
 6. Decide whether to bump the minor or patch field in the next release tag,
-   based on whether or not features were added.  For a feature release, run the
+   based on whether or not features were added. For a feature release, run the
    shell command:
 
 	```bash
@@ -104,7 +104,7 @@ changelog.
 	$ git pull https://github.com/caskroom/homebrew-cask master
 	```
 
-14. Tag the tip commit.  Make certain to provide a `-m` message so that we
+14. Tag the tip commit. Make certain to provide a `-m` message so that we
     get an annotated tag in the git history:
 
 	```bash
@@ -117,7 +117,7 @@ changelog.
 	$ git push https://github.com/caskroom/homebrew-cask master && git push https://github.com/caskroom/homebrew-cask tag "$NEW_RELEASE_TAG" && echo "new release $NEW_RELEASE_TAG was successfully pushed"
 	```
     If you don’t see a success message, that probably means someone updated
-    master while you were working on the changelog.  You must pull and resolve.
+    master while you were working on the changelog. You must pull and resolve.
 16. Open your browser to the relevant release page on GitHub:
 
 	```bash
@@ -147,8 +147,8 @@ changelog.
 ## Things to Consider
 
 The way `brew update` works, users will always be tracking `HEAD` in their
-Tap.  This means that the latest updates to Casks are always propagated
-ahead of code releases.  We need to be thoughtful about how we push out new
+Tap. This means that the latest updates to Casks are always propagated
+ahead of code releases. We need to be thoughtful about how we push out new
 or breaking functionality. As a pre-1.0 project we can still break backwards
 compatibility, but sometimes there might be decisions we can make about
 releasing to make things easier on our users.
@@ -160,10 +160,10 @@ In general: go easy on the users!
 * In steps 3 and 14:
 
   * The full URL is given for the repo because that does not change
-    depending on your local `.git/config`.  Equivalent commands may be
+    depending on your local `.git/config`. Equivalent commands may be
    `git push`, `git push origin master`, or `git push upstream master`.
 
   * We push the commits *before* pushing the tag to ensure that there are no
-    conflicts.  The default behavior of `git push --follow-tags` is to push
+    conflicts. The default behavior of `git push --follow-tags` is to push
     tags to the public repo before commits, which caused the “lost” tag
     v0.39.0.
