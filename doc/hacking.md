@@ -80,7 +80,7 @@ shorthand that offers the same (or better) functionality.
 ### Setup
 
 Cask authors often work directly within the Homebrew directory
-under `/usr/local`.  For coding, that is usually not sufficient.
+under `/usr/local`. For coding, that is usually not sufficient.
 
 We recommend the following:
 
@@ -100,7 +100,7 @@ We recommend the following:
 
 4. Now you have two copies of the homebrew-cask codebase on disk: the
    released version in `/usr/local/Library/Taps/caskroom/homebrew-cask`, and a
-   development version in your private repo.  To symlink the `Casks`
+   development version in your private repo. To symlink the `Casks`
    and `rubylib` folders from `/usr/local/...` into your private repo,
    run the following script:
 
@@ -111,7 +111,7 @@ We recommend the following:
    CLI like normal — it will interact with your latest code.
 
 5. Important: while in development mode, you can’t safely run
-   Homebrew’s `brew update` command.  To switch back to production
+   Homebrew’s `brew update` command. To switch back to production
    mode, run
 
 	```bash
@@ -150,7 +150,7 @@ $ MACOS_RELEASE=10.9 brew cask info <cask>
 ```
 
 The environment variable `$MACOS_RELEASE_WITH_PATCHLEVEL` is also available,
-though not consulted directly.  Use `$MACOS_RELEASE` for testing.
+though not consulted directly. Use `$MACOS_RELEASE` for testing.
 
 ### Target Ruby Versions
 
@@ -196,15 +196,15 @@ TESTOPTS='-v' SPEC_OPTS='-fd' VERBOSE_TESTS=1 rake test
 #### External Commands
 
 Advanced users may create their own external commands for homebrew-cask by
-following conventions similar to external commands for git or Homebrew.  An
+following conventions similar to external commands for git or Homebrew. An
 external command may be any executable on your `$PATH` which follows the
-form `brewcask-<command>`.  (So long as `<command>` does not conflict with
+form `brewcask-<command>`. (So long as `<command>` does not conflict with
 an existing command verb.)  The command will be invoked by `exec` and passed
-any unprocessed arguments from the original command-line.  An external
+any unprocessed arguments from the original command-line. An external
 command may also be implemented as an executable Ruby file, on your `$PATH`,
-which follows the form `brewcask-<command>.rb`.  The Ruby file will be
+which follows the form `brewcask-<command>.rb`. The Ruby file will be
 `required` and will have full access to the Ruby environments of both
-homebrew-cask and Homebrew.  Example external commands may be found in
+homebrew-cask and Homebrew. Example external commands may be found in
 `developer/examples`.
 
 ## Hanging out on IRC
