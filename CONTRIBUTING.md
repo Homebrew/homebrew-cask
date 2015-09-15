@@ -1,7 +1,7 @@
 # How To Contribute
 
 So you want to contribute to the project. **THIS IS GREAT NEWS!**  Seriously. We're
-all pretty happy about this.  Here’s how to get started:
+all pretty happy about this. Here’s how to get started:
 
  * [Getting Set Up To Contribute](#getting-set-up-to-contribute)
  * [Adding a Cask](#adding-a-cask)
@@ -30,7 +30,7 @@ Making a Cask is easy: a Cask is a small Ruby file.
 
 ### Examples
 
-Here’s a Cask for `Alfred.app` as an example.  Note that you may repeat
+Here’s a Cask for `Alfred.app` as an example. Note that you may repeat
 the `app` stanza as many times as you need, to define multiple apps:
 
 ```ruby
@@ -86,7 +86,7 @@ end
 ### Generating a Token for the Cask
 
 The Cask **token** is the mnemonic string people will use to interact with
-the Cask via `brew cask install`, `brew cask search`, etc.  The name of the
+the Cask via `brew cask install`, `brew cask search`, etc. The name of the
 Cask **file** is simply the token with the extension `.rb` appended.
 
 The easiest way to generate a token for a Cask is to run this command:
@@ -114,7 +114,7 @@ $ brew cask create my-new-cask
 ```
 
 This will open `$EDITOR` with a template for your new Cask, to be stored in
-the file `my-new-cask.rb`.  Running the `create` command above will get you
+the file `my-new-cask.rb`. Running the `create` command above will get you
 a template that looks like this:
 
 ```ruby
@@ -138,11 +138,11 @@ Fill in the following stanzas for your Cask:
 | name               | value       |
 | ------------------ | ----------- |
 | `version`          | application version; give the value `:latest` if an unversioned download is available
-| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`.  Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
+| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
 | `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application. A [comment](doc/CASK_LANGUAGE_REFERENCE.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
 | `name`             | the full and proper name defined by the vendor, and any useful alternate names (see also [Name Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#name-stanza-details))
 | `homepage`         | application homepage; used for the `brew cask home` command
-| `license`          | a symbol identifying the license for the application.  Valid category licenses include `:oss`, `:closed`, and `:unknown`.  It is OK to leave as `:unknown`.  (see also [License Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#license-stanza-details))
+| `license`          | a symbol identifying the license for the application. Valid category licenses include `:oss`, `:closed`, and `:unknown`. It is OK to leave as `:unknown`. (see also [License Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#license-stanza-details))
 | `app`              | relative path to an `.app` bundle that should be linked into the `~/Applications` folder on installation (see also [App Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#app-stanza-details))
 
 Other commonly-used stanzas are:
@@ -201,7 +201,7 @@ http://sourceforge.net/projects/$PROJECTNAME/files/latest/download
 ### Personal Hosting Such as Dropbox
 
 URLs from dropbox.com or cl.ly/cloudapp.com are not readily distinguishable
-as being controlled by the original software vendor.  These URLs should be
+as being controlled by the original software vendor. These URLs should be
 used only when given as such on the official project website.
 
 Also make sure to give the URL for the binary download itself, rather than
@@ -210,7 +210,7 @@ a preview page. (See <https://www.dropbox.com/help/201/en>.)
 ### Some Providers Block Command-line Downloads
 
 Some hosting providers actively block command-line HTTP clients (example:
-FossHub).  Such URLs cannot be used in Casks.
+FossHub). Such URLs cannot be used in Casks.
 
 ### Vendor URLs Are Preferred
 
@@ -221,7 +221,7 @@ or vendor, rather than an aggregator such as macupdate.com.
 ### Cask Token Details
 
 If a token conflicts with an already-existing Cask, authors should manually
-make the new token unique by prepending the vendor name.  Example:
+make the new token unique by prepending the vendor name. Example:
 [unison.rb](../master/Casks/unison.rb) and [panic-unison.rb](../master/Casks/panic-unison.rb).
 
 If possible, avoid creating tokens which differ only by the placement of
@@ -331,7 +331,7 @@ If you’ve made an unofficial build and need a place to host it, contact our si
 ### Fonts
 
 Font casks live in the [caskroom/homebrew-fonts](https://github.com/caskroom/homebrew-fonts)
-repository.  See the font repo [CONTRIBUTING.md](https://github.com/caskroom/homebrew-fonts/blob/master/CONTRIBUTING.md)
+repository. See the font repo [CONTRIBUTING.md](https://github.com/caskroom/homebrew-fonts/blob/master/CONTRIBUTING.md)
 for details.
 
 
@@ -374,7 +374,7 @@ See [a note about git commit messages](http://tbaggery.com/2008/04/19/a-note-abo
 for more.
 
 The first line of a commit message becomes the **title** of a pull
-request on GitHub, like the subject line of an email.  Including
+request on GitHub, like the subject line of an email. Including
 the key info in the first line will help us respond faster to
 your pull.
 
