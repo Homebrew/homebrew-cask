@@ -1,21 +1,20 @@
 # How To Contribute
 
-So you want to contribute to the project. **THIS IS GREAT NEWS!**  Seriously. We're
-all pretty happy about this. Here’s how to get started:
+So you want to contribute to the project. **THIS IS GREAT NEWS!**  Seriously. We're all pretty happy about this. Here’s how to get started:
 
- * [Getting Set Up To Contribute](#getting-set-up-to-contribute)
- * [Adding a Cask](#adding-a-cask)
- * [Testing Your New Cask](#testing-your-new-cask)
- * [Finding a Home For Your Cask](#finding-a-home-for-your-cask)
- * [Submitting Your Changes](#submitting-your-changes)
- * [Cleaning up](#cleaning-up)
- * [Reporting Bugs](README.md#reporting-bugs)
-
+* [Getting Set Up To Contribute](#getting-set-up-to-contribute)
+* [Adding a Cask](#adding-a-cask)
+* [Testing Your New Cask](#testing-your-new-cask)
+* [Finding a Home For Your Cask](#finding-a-home-for-your-cask)
+* [Submitting Your Changes](#submitting-your-changes)
+* [Cleaning up](#cleaning-up)
+* [Reporting Bugs](README.md#reporting-bugs)
 
 ## Getting Set Up To Contribute
 
-1. Fork the repository in GitHub with the `Fork` button
-2. Add your GitHub fork as a remote for your homebrew-cask Tap
+1. Fork the repository in GitHub with the `Fork` button.
+
+2. Add your GitHub fork as a remote for your homebrew-cask Tap:
 
 ```bash
 $ github_user='<my-github-username>'
@@ -23,15 +22,13 @@ $ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 $ git remote add "$github_user" "https://github.com/$github_user/homebrew-cask"
 ```
 
-
 ## Adding a Cask
 
 Making a Cask is easy: a Cask is a small Ruby file.
 
 ### Examples
 
-Here’s a Cask for `Alfred.app` as an example. Note that you may repeat
-the `app` stanza as many times as you need, to define multiple apps:
+Here’s a Cask for `Alfred.app` as an example. Note that you may repeat the `app` stanza as many times as you need, to define multiple apps:
 
 ```ruby
 cask :v1 => 'alfred' do
@@ -85,37 +82,31 @@ end
 
 ### Generating a Token for the Cask
 
-The Cask **token** is the mnemonic string people will use to interact with
-the Cask via `brew cask install`, `brew cask search`, etc. The name of the
-Cask **file** is simply the token with the extension `.rb` appended.
+The Cask **token** is the mnemonic string people will use to interact with the Cask via `brew cask install`, `brew cask search`, etc. The name of the Cask **file** is simply the token with the extension `.rb` appended.
 
 The easiest way to generate a token for a Cask is to run this command:
+
 ```bash
 $ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/generate_cask_token" '/full/path/to/new/software.app'
 ```
 
-If the software you wish to Cask is not installed, or does not have an
-associated App bundle, just give the full proper name of the software
-instead of a pathname:
+If the software you wish to Cask is not installed, or does not have an associated App bundle, just give the full proper name of the software instead of a pathname:
+
 ```bash
 $ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/generate_cask_token" 'Google Chrome'
 ```
 
 If the `generate_cask_token` script does not work for you, see [Cask Token Details](#cask-token-details).
 
-
 ### The `brew cask create` Command
 
-Once you know the token, create your Cask with the handy-dandy
-`brew cask create` command.
+Once you know the token, create your Cask with the handy-dandy `brew cask create` command.
 
 ```bash
 $ brew cask create my-new-cask
 ```
 
-This will open `$EDITOR` with a template for your new Cask, to be stored in
-the file `my-new-cask.rb`. Running the `create` command above will get you
-a template that looks like this:
+This will open `$EDITOR` with a template for your new Cask, to be stored in the file `my-new-cask.rb`. Running the `create` command above will get you a template that looks like this:
 
 ```ruby
 cask :v1 => 'my-new-cask' do
@@ -170,11 +161,9 @@ Additional stanzas you might need for special use-cases:
 
 Even more special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#optional-stanzas) and [Legacy Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#legacy-stanzas).
 
-
 ### SourceForge URLs
 
-SourceForge projects are a common way to distribute binaries, but they
-provide many different styles of URLs to get to the goods.
+SourceForge projects are a common way to distribute binaries, but they provide many different styles of URLs to get to the goods.
 
 We prefer URLs of this format:
 
@@ -190,9 +179,7 @@ http://$STRING.sourceforge.jp/$PROJECTNAME/$RELEASEID/$FILENAME.$EXT
 
 `$STRING` is typically of the form `dl` or `$USER.dl`.
 
-If these formats are not available, and the application is Mac-exclusive
-(otherwise a command-line download defaults to the Windows version)
-we prefer the use of this format:
+If these formats are not available, and the application is Mac-exclusive (otherwise a command-line download defaults to the Windows version) we prefer the use of this format:
 
 ```
 http://sourceforge.net/projects/$PROJECTNAME/files/latest/download
@@ -200,57 +187,45 @@ http://sourceforge.net/projects/$PROJECTNAME/files/latest/download
 
 ### Personal Hosting Such as Dropbox
 
-URLs from dropbox.com or cl.ly/cloudapp.com are not readily distinguishable
-as being controlled by the original software vendor. These URLs should be
-used only when given as such on the official project website.
+URLs from dropbox.com or cl.ly/cloudapp.com are not readily distinguishable as being controlled by the original software vendor. These URLs should be used only when given as such on the official project website.
 
-Also make sure to give the URL for the binary download itself, rather than
-a preview page. (See <https://www.dropbox.com/help/201/en>.)
+Also make sure to give the URL for the binary download itself, rather than a preview page. (See <https://www.dropbox.com/help/201/en>.)
 
 ### Some Providers Block Command-line Downloads
 
-Some hosting providers actively block command-line HTTP clients (example:
-FossHub). Such URLs cannot be used in Casks.
+Some hosting providers actively block command-line HTTP clients (example: FossHub). Such URLs cannot be used in Casks.
 
 ### Vendor URLs Are Preferred
 
-When possible, it is best to use a download URL from the original developer
-or vendor, rather than an aggregator such as macupdate.com.
-
+When possible, it is best to use a download URL from the original developer or vendor, rather than an aggregator such as macupdate.com.
 
 ### Cask Token Details
 
-If a token conflicts with an already-existing Cask, authors should manually
-make the new token unique by prepending the vendor name. Example:
-[unison.rb](../master/Casks/unison.rb) and [panic-unison.rb](../master/Casks/panic-unison.rb).
+If a token conflicts with an already-existing Cask, authors should manually make the new token unique by prepending the vendor name. Example: [unison.rb](../master/Casks/unison.rb) and [panic-unison.rb](../master/Casks/panic-unison.rb).
 
 If possible, avoid creating tokens which differ only by the placement of
 hyphens.
 
-To generate a token manually, or to learn about exceptions for unusual cases,
-see [cask_token_reference.md](doc/cask_token_reference.md).
-
+To generate a token manually, or to learn about exceptions for unusual cases, see [cask_token_reference.md](doc/cask_token_reference.md).
 
 ### Archives With Subfolders
 
-When a downloaded archive expands to a subfolder, the subfolder name must be
-included in the `app` value.
+When a downloaded archive expands to a subfolder, the subfolder name must be included in the `app` value.
 
 Example:
 
- * Texmaker is downloaded to the file `TexmakerMacosxLion.zip`.
- * `TexmakerMacosxLion.zip` unzips to a folder called `TexmakerMacosxLion`.
- * The folder `TexmakerMacosxLion` contains the application `texmaker.app`.
- * So, the `app` stanza should include the subfolder as a relative path:
+1. Texmaker is downloaded to the file `TexmakerMacosxLion.zip`.
+2. `TexmakerMacosxLion.zip` unzips to a folder called `TexmakerMacosxLion`.
+3. The folder `TexmakerMacosxLion` contains the application `texmaker.app`.
+4. So, the `app` stanza should include the subfolder as a relative path:
 
-	```ruby
-	app 'TexmakerMacosxLion/texmaker.app'
-	```
+  ```ruby
+  app 'TexmakerMacosxLion/texmaker.app'
+  ```
 
 ### Style guide
 
-All Casks and code in the homebrew-cask project should be indented using two
-spaces (never tabs).
+All Casks and code in the homebrew-cask project should be indented using two spaces (never tabs).
 
 If relevant, you may also use string manipulations to improve the maintainability of your Cask. Here’s an example from `Lynkeos.app`:
 
@@ -272,18 +247,15 @@ end
 
 Give it a shot with `brew cask install my-new-cask`
 
-Did it install? If something went wrong, `brew cask uninstall my-new-cask` and
-edit your Cask to fix it.
+Did it install? If something went wrong, `brew cask uninstall my-new-cask` and edit your Cask to fix it.
 
-If everything looks good, you’ll also want to make sure your Cask passes audit
-with
+If everything looks good, you’ll also want to make sure your Cask passes audit with:
 
-`brew cask audit my-new-cask --download`
+```bash
+brew cask audit my-new-cask --download
+```
 
-If your application and homebrew-cask do not work well together, feel free to
-[file an issue](https://github.com/caskroom/homebrew-cask/issues) after checking
-out open issues.
-
+If your application and homebrew-cask do not work well together, feel free to [file an issue](https://github.com/caskroom/homebrew-cask/issues) after checking out open issues.
 
 ## Finding a Home For Your Cask
 
@@ -306,8 +278,7 @@ Stable versions live in the main repository at [caskroom/homebrew-cask](https://
 
 ### But There Is No Stable Version!
 
-When an App is only available as beta, development, or unstable versions, or in cases where such a version is
-the general standard, then said version can go into the main repo.
+When an App is only available as beta, development, or unstable versions, or in cases where such a version is the general standard, then said version can go into the main repo.
 
 ### Beta, Unstable, Development, Nightly, or Legacy Versions
 
@@ -315,9 +286,7 @@ When an App’s stable version already exists in the main repo, alternate versio
 
 ### Trial and Freemium Versions
 
-Before submitting a trial, make sure it can be made into a full working version
-without the need to be redownloaded. If an App provides a trial but the only way to buy the full version
-is via the Mac App Store, it does not belong in any of the official repos. Freemium versions are fine.
+Before submitting a trial, make sure it can be made into a full working version without the need to be redownloaded. If an App provides a trial but the only way to buy the full version is via the Mac App Store, it does not belong in any of the official repos. Freemium versions are fine.
 
 ### Forks and Apps with conflicting names
 
@@ -325,15 +294,12 @@ Forks should have the vendor’s name as a prefix on the cask’s file name and 
 
 ### Unofficial, Vendorless, and Walled Builds
 
-Please submit these to [caskroom/homebrew-unofficial](http://github.com/caskroom/homebrew-unofficial).
-If you’ve made an unofficial build and need a place to host it, contact our sister project [alehouse](https://github.com/alehouse).
+Please submit these to [caskroom/homebrew-unofficial](http://github.com/caskroom/homebrew-unofficial). If you’ve made an unofficial build and need a place to host it, contact our sister project [alehouse](https://github.com/alehouse).
 
 ### Fonts
 
-Font casks live in the [caskroom/homebrew-fonts](https://github.com/caskroom/homebrew-fonts)
-repository. See the font repo [CONTRIBUTING.md](https://github.com/caskroom/homebrew-fonts/blob/master/CONTRIBUTING.md)
+Font casks live in the [caskroom/homebrew-fonts](https://github.com/caskroom/homebrew-fonts) repository. See the font repo [CONTRIBUTING.md](https://github.com/caskroom/homebrew-fonts/blob/master/CONTRIBUTING.md)
 for details.
-
 
 ## Submitting Your Changes
 
@@ -349,38 +315,30 @@ $ git status
 #       Casks/my-new-cask.rb
 ```
 
-So far, so good. Now make a feature branch that you’ll use in your pull
-request:
+So far, so good. Now make a feature branch that you’ll use in your pull request:
 
 ```bash
 $ git checkout -b my-new-cask
 Switched to a new branch 'my-new-cask'
 ```
 
-Stage your Cask with `git add Casks/my-new-cask.rb`. You can view the changes
-that are to be committed with `git diff --cached`.
+Stage your Cask with `git add Casks/my-new-cask.rb`. You can view the changes that are to be committed with `git diff --cached`.
 
 Commit your changes with `git commit -v`.
 
 ### Commit Messages
 
-For any git project, some good rules for commit messages are
+For any git project, some good rules for commit messages are:
 
- * the first line is commit summary, 50 characters or less,
- * followed by an empty line
- * followed by an explanation of the commit, wrapped to 72 characters.
+* The first line is commit summary, 50 characters or less,
+* Followed by an empty line
+* Followed by an explanation of the commit, wrapped to 72 characters.
 
-See [a note about git commit messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-for more.
+See [a note about git commit messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) for more.
 
-The first line of a commit message becomes the **title** of a pull
-request on GitHub, like the subject line of an email. Including
-the key info in the first line will help us respond faster to
-your pull.
+The first line of a commit message becomes the **title** of a pull request on GitHub, like the subject line of an email. Including the key info in the first line will help us respond faster to your pull.
 
-For Cask commits in the homebrew-cask project, we like to include
-the Application name, version number (or `:latest`), and purpose of
-the commit in the first line.
+For Cask commits in the homebrew-cask project, we like to include the Application name, version number (or `:latest`), and purpose of the commit in the first line.
 
 Examples of good, clear commit summaries:
 
@@ -403,34 +361,23 @@ $ github_user='<my-github-username>'
 $ git push "$github_user" my-new-cask
 ```
 
-If you are using [GitHub two-factor authentication](https://github.com/blog/1614-two-factor-authentication)
-and set your remote repository as HTTPS you will need to set up
-a personal access token and use that instead your password.
-See more on https://help.github.com/articles/https-cloning-errors#provide-access-token-if-2fa-enabled
+If you are using [GitHub two-factor authentication](https://github.com/blog/1614-two-factor-authentication) and set your remote repository as HTTPS you will need to set up a personal access token and use that instead your password. See more on https://help.github.com/articles/https-cloning-errors#provide-access-token-if-2fa-enabled
 
 ### Filing a Pull Request on GitHub
 
-Now go to *your* GitHub repository at
-https://github.com/my-github-username/homebrew-cask, switch branch to your
-topic branch and click the `Pull Request` button. You can then add further
-comments to your pull request.
+Now go to *your* GitHub repository at https://github.com/my-github-username/homebrew-cask, switch branch to your topic branch and click the `Pull Request` button. You can then add further comments to your pull request.
 
-Congratulations! You are done now, and your Cask should be pulled in or
-otherwise noticed in a while.
+Congratulations! You are done now, and your Cask should be pulled in or otherwise noticed in a while.
 
 ### Squashing
 
-If your pull request has multiple commits which revise the same lines of
-code, it is better to [squash](http://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
+If your pull request has multiple commits which revise the same lines of code, it is better to [squash](http://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
 
-But you don’t always have to squash — it is fine for a pull request to
-contain multiple commits when there is a logical reason for the separation.
-
+But you don’t always have to squash — it is fine for a pull request to contain multiple commits when there is a logical reason for the separation.
 
 ## Cleaning up
 
-After your Pull Request is away, you might want to get yourself back onto
-`master`, so that `brew update` will pull down new Casks properly.
+After your Pull Request is away, you might want to get yourself back onto `master`, so that `brew update` will pull down new Casks properly.
 
 ```bash
 cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
@@ -438,6 +385,5 @@ git checkout master
 ```
 
 Neat and tidy!
-
 
 # <3 THANK YOU! <3
