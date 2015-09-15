@@ -17,9 +17,9 @@ $ brew install caskroom/cask/brew-cask
 
 ## Frequently Used Commands
 
-Homebrew-cask is implemented as a subcommand of Homebrew.  All homebrew-cask
-commands begin with `brew cask`.  Homebrew-cask has its own set of command
-verbs many of which are similar to Homebrew’s.  The most frequently-used
+Homebrew-cask is implemented as a subcommand of Homebrew. All homebrew-cask
+commands begin with `brew cask`. Homebrew-cask has its own set of command
+verbs many of which are similar to Homebrew’s. The most frequently-used
 commands are:
 
 * `search` — searches all known Casks
@@ -29,7 +29,7 @@ commands are:
 ## Searching for Casks
 
 The `brew cask search` command accepts a series of substring arguments,
-and returns tokens representing matching Casks.  Let’s see if there’s a
+and returns tokens representing matching Casks. Let’s see if there’s a
 Cask for Google Chrome:
 
 ```bash
@@ -73,7 +73,7 @@ To uninstall all versions of a Cask, use `--force`:
 $ brew cask uninstall --force google-chrome
 ```
 
-Note that `uninstall --force` is currently imperfect.  See the man page for
+Note that `uninstall --force` is currently imperfect. See the man page for
 more information.
 
 ## Other Commands
@@ -134,7 +134,7 @@ It is generally safe to run updates from within an Application.
 ## Updating/Upgrading the Homebrew-cask Tool
 
 When a new version homebrew-cask is released, it will appear in the output of
-`brew outdated` after running `brew update`.  You can upgrade it via the normal
+`brew outdated` after running `brew update`. You can upgrade it via the normal
 Homebrew `brew upgrade` workflow:
 ```bash
 $ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
@@ -163,7 +163,7 @@ $ brew tap <tap_name>
 after which, Casks from the new Tap will be available to `search` or `install` just like Casks from the main Tap.
 `brew update` will automatically keep your new Tap up to date.
 
-You may also specify a fully-qualified Cask token (which includes the Tap) for any `brew cask` command.  This will implicitly add the Tap if you have not previously added it with `brew tap`:
+You may also specify a fully-qualified Cask token (which includes the Tap) for any `brew cask` command. This will implicitly add the Tap if you have not previously added it with `brew tap`:
 
 ```bash
 $ brew cask install caskroom/fonts/font-symbola
@@ -218,7 +218,7 @@ $ brew cask install --appdir="~/Applications" google-chrome
 ## Advanced searching
 
 The default search algorithm is a lax substring approach, which does not
-use the command-line arguments exactly as given.  If you need to specify
+use the command-line arguments exactly as given. If you need to specify
 a search more precisely, a single search argument enclosed in `/` characters
 will be taken as a Ruby regular expression:
 
@@ -239,9 +239,9 @@ above, the token on the command line can take the form of:
 
  * a path to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
  * a `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
- * a file in the current working directory, _eg_: `my-modfied-google-chrome.rb`.  Note
+ * a file in the current working directory, _eg_: `my-modfied-google-chrome.rb`. Note
    that matching Tapped Cask tokens will be preferred over this form when there is a
-   conflict.  To force the use of a Cask file in the current directory, specify a
+   conflict. To force the use of a Cask file in the current directory, specify a
    pathname with slashes, _eg_: `./google-chrome.rb`.
 
 The last three forms are intended for users who wish to maintain private Casks.
