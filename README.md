@@ -49,7 +49,7 @@ We still have bugs â€” and we are busy fixing them!  If you have a problem, donâ
 be shy about reporting it on our [GitHub issues page](https://github.com/caskroom/homebrew-cask/issues?state=open). Always search for your issue before posting a new one.
 
 When reporting bugs, remember that homebrew-cask is an independent project from
-Homebrew.  Do your best to direct bug reports to the appropriate project.  If
+Homebrew. Do your best to direct bug reports to the appropriate project. If
 your command-line started with `brew cask`, bring the bug to us first!
 
 Before reporting a bug, make sure you have the latest versions of homebrew,
