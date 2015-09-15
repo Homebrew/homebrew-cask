@@ -34,7 +34,7 @@ cask :v1 => 'my-app' do
 ```
 
 Legacy rules for mapping Cask filenames to header class names are no longer
-needed.  The token `'my-app'` in the header corresponds directly to the
+needed. The token `'my-app'` in the header corresponds directly to the
 filename `my-app.rb`.
 
 The term `:v1` identifies the DSL version (currently 1.0), and defines the
