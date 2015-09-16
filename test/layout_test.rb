@@ -27,6 +27,7 @@ describe "Repo layout" do
   TOPLEVEL_DIRS = %w{
                      .git
                      Casks
+                     Contributions
                      bin
                      developer
                      doc
