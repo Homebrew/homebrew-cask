@@ -8,7 +8,7 @@ cask :v1 => 'metanota' do
           :sha256 => '72ce5639aae8d21dd40a68dc518382b49d29cc8518ff28cfadb662f21b9fdef6'
   name 'Metanota'
   homepage 'http://www.metanota.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   app 'Metanota.app'
 end
