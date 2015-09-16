@@ -6,7 +6,7 @@ cask :v1 => 'ideskcal' do
   appcast 'https://hashbangind.com/appcasts/iDeskCal-profileInfo.php'
   name 'iDeskCal'
   homepage 'http://www.hashbangind.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'iDeskCal.app'
 end
