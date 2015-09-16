@@ -1,11 +1,11 @@
 cask :v1 => 'bilibili' do
-  version '2.00'
-  sha256 'cc0945e675c8fdf702ba1da8554955c68d9df9ad8c8c86b78af0d85d8d87cfc4'
+  version '2.07'
+  sha256 'f8220d46a39919e133633ef63b20f34cd2f2b805dce3ac1157bb47d7d55b99d4'
 
   url "https://github.com/typcn/bilibili-mac-client/releases/download/#{version}/Bilibili.dmg.zip"
   name 'Bilibili'
   appcast 'http://app.eqoe.cn/updates/bilimac.xml',
-          :sha256 => '44da046ea7dbfad40ce41fe913b330ba4656104ece8fb18648f0120420b30992'
+          :sha256 => '25d5e1f08a54e9dea3618f70796ea2aced8640bd0d542efe83990dc6f2e8c384'
   homepage 'https://github.com/typcn/bilibili-mac-client/'
   license :gpl
 
