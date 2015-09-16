@@ -5,7 +5,7 @@ cask :v1 => 'minimetro' do
   url "http://dinopoloclub.com/minimetro/builds/#{version.sub(%r{[a-z]$},'')}/MiniMetro-#{version}-osx.zip"
   name 'Mini Metro'
   homepage 'http://dinopoloclub.com/minimetro/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app "MiniMetro-#{version}-osx.app"
 end
