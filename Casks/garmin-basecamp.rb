@@ -1,6 +1,6 @@
 cask :v1 => 'garmin-basecamp' do
-  version '4.5.0'
-  sha256 '78e07cb729a6bfac2e2e86db54853f1574130c5bbf207a5ff476368f1f997eaf'
+  version '4.5.1'
+  sha256 '3e820d02f1cb245fd294233b970c5af01c833f5c4cb972b5c4824dfec4652ea6'
 
   url "http://download.garmin.com/software/BaseCampforMac_#{version.delete('.')}.dmg"
   name 'Garmin BaseCamp'
