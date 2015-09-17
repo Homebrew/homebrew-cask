@@ -13,6 +13,7 @@ It’s implemented as a `homebrew` [external command](https://github.com/Homebre
 [![Build Status](https://img.shields.io/travis/caskroom/homebrew-cask/master.svg)](https://travis-ci.org/caskroom/homebrew-cask)
 [![Code Climate](https://img.shields.io/codeclimate/github/caskroom/homebrew-cask.svg)](https://codeclimate.com/github/caskroom/homebrew-cask)
 [![Coverage Status](https://img.shields.io/coveralls/caskroom/homebrew-cask.svg)](https://coveralls.io/r/caskroom/homebrew-cask)
+[![Join the chat at https://gitter.im/caskroom/homebrew-cask](https://img.shields.io/badge/gitter-join%20chat-blue.svg)](https://gitter.im/caskroom/homebrew-cask)
 
 ## Let’s try it!
 
