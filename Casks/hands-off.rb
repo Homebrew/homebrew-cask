@@ -1,10 +1,10 @@
 cask :v1 => 'hands-off' do
-  version '2.3.5'
-  sha256 '2c4804ab30cc65e9604789928bc5bd73f619b2d633c885400b7ec32a74e171dc'
+  version '2.3.6'
+  sha256 '79243a6c23c1fec384b5a491e4a3b94e5d81284661257a360dfbbc6ce89dee0b'
 
   url "https://www.oneperiodic.com/files/Hands%20Off!%20v#{version}.dmg"
   appcast 'http://www.metakine.com/sparkle/handsoff2/checkupdate.php',
-          :sha256 => '1b948ddb214ba0bc85016341a77b389eabc70b77f3c43c24081776880396f03c'
+          :sha256 => '9703b6f8692548abcb336829cb0aabdbfdb40c047a3256f23ddfa63b5c01bdfa'
   name 'Hands Off!'
   homepage 'https://www.oneperiodic.com/products/handsoff/'
   license :commercial
