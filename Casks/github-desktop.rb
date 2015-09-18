@@ -1,11 +1,11 @@
 cask :v1 => 'github-desktop' do
-  version '210'
-  sha256 '6cc85e7a0e59f6cde9d592e7ee86fecbd2689fcc72a017e6ed83dbe160c1d2d4'
+  version '211'
+  sha256 '3572e61ce59a8ff928727efa78c14d566c0a91bbfc693a69a75703d292991064'
 
   # cloudfront.net is the official download host per the vendor homepage
   url "https://d4hwcs1zqtwzs.cloudfront.net/mac/GitHub%20Desktop%20#{version}.zip"
   appcast 'https://central.github.com/mac/appcast.xml',
-          :sha256 => 'c45108bde35ed7836d995a083ea6eb837cc43e7e6944772f95d1c8eff2b8f886'
+          :sha256 => 'bad3f308d30fa64b22c44071823db7245e92123abfc6a702606b7edf43cc0369'
   name 'GitHub Desktop'
   homepage 'https://desktop.github.com/'
   license :gratis
