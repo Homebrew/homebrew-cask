@@ -1,6 +1,6 @@
 cask :v1 => 'micro-snitch' do
-  version '1.0.1'
-  sha256 'b68f750f9e7ce00a2abdcf2bd467f30b33ba0f975db64bc9aa84de02c5e1ccc6'
+  version '1.1.1'
+  sha256 '494eedf1a8f87cb846eb37279bca7aecd851157bdd31347ab8e1d8f219613680'
 
   url "https://obdev.at/downloads/MicroSnitch/MicroSnitch-#{version}.zip"
   name 'Micro Snitch'
