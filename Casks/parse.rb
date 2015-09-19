@@ -9,7 +9,7 @@ cask :v1_1 => 'parse' do
 
   depends_on :formula => 'unar'
 
-  container :type => :generic_unar # The downloaded file don't have a .gz suffix, so specifying :gzip here won't work.
+  container :type => :generic_unar # The downloaded file doesn't have a .gz suffix, so specifying :gzip here won't work.
   binary 'parse-latest', :target => 'parse'
 
   postflight do
