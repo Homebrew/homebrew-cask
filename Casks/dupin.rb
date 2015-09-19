@@ -3,13 +3,13 @@ cask :v1 => 'dupin' do
     version '2.7.4'
     sha256 '4aba53f356606614627d57f6a33c1ee9cf13ddf06c13e7ac8487b930cb647b85'
   else
-    version '2.8.8'
-    sha256 'e5dbb32d06fb25208f3b9e679a495831fcc505536e66720b668c0e2eeb40af39'
+    version '2.8.10'
+    sha256 '22e0ef142f5fbad52af5d768bb257d46fbde355b64759827eea98bc35d89b864'
   end
 
   url "http://dougscripts.com/itunes/scrx/dupinv#{version.delete('.')}.zip"
   appcast 'http://dougscripts.com/itunes/itinfo/dupin_appcast.xml',
-          :sha256 => '7d8ad3a9a08acc11723de678f2a6b542eb832c1e16cd33546fe6550656634778'
+          :sha256 => '78e78fefc4b9830de0c8ecfbe8ea6ce0e80cef9564755025d52364fe73b6823b'
   name 'Dupin'
   homepage 'http://dougscripts.com/apps/dupinapp.php'
   license :commercial
