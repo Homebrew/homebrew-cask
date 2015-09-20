@@ -1,11 +1,11 @@
 cask :v1 => 'instabridge' do
-  version '1.0'
-  sha256 '62fa0d8766e1be5f21404c5d530c87c3c7351cced0a43c1176aefffee0c2c788'
+  version '1.2.1'
+  sha256 '7f316d42b649eb8d5dcde590540de4c135554026144577c680214b4e082b0a50'
 
-  url 'http://cdn.instabridge.com/mac/instabridge-osx.dmg'
+  url "http://cdn.instabridge.com/mac/Instabridge-#{version}.zip"
   name 'Instabridge'
   appcast 'http://cdn.instabridge.com/mac/updates.xml',
-          :sha256 => 'eaa67aa27e6497b9a15f8f983aca810d70104a1b45e09e61a58efbd4bfc61000'
+          :sha256 => '9974b9ea1d1701dd12aa42235de7bf2b4b2f1966c92e435ec92eae53e241c058'
   homepage 'http://instabridge.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
