@@ -7,7 +7,7 @@ cask :v1 => 'simon' do
           :sha256 => '7431a2e17604486863b071139da0665aec01e61a1447367b2f497080936e3f4b'
   name 'Simon'
   homepage 'http://www.dejal.com/simon/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Simon.app'
 end
