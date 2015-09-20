@@ -28,7 +28,7 @@ cask :v1 => 'minecraft-server' do
 
     file_name = "#{staged_path}/EULA.txt"
     contents = File.read(file_name).gsub(/false/, 'true')
-    File.open(file_name, 'w') {|file| file.puts contents }
+    File.open(file_name, 'w') { |file| file.puts contents }
   end
 
   caveats do
