@@ -7,7 +7,7 @@ cask :v1 => 'instabridge' do
   appcast 'http://cdn.instabridge.com/mac/updates.xml',
           :sha256 => '9974b9ea1d1701dd12aa42235de7bf2b4b2f1966c92e435ec92eae53e241c058'
   homepage 'http://instabridge.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Instabridge.app'
 end
