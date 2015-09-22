@@ -1,6 +1,6 @@
 cask :v1 => 'itools' do
-  version '2.5.4'
-  sha256 'e09f32ec189c2d282d481ecd51f6d9f5aeb9447569ebd89621c2f8199086f1c0'
+  version '2.7.0'
+  sha256 'b05fdfd3820ffe3f35947cfb17e65a75cf17e1f6e57717f0eb5e05f4d951588b'
 
   # itools.hk is the official download host per the vendor homepage
   url "http://dl2.itools.hk/dl/iTools_#{version}.dmg"
