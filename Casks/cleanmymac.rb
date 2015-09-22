@@ -31,8 +31,8 @@ cask :v1 => 'cleanmymac' do
       "~/Library/Preferences/com.macpaw.CleanMyMac#{version.to_i}.plist",
     ]
   else
-    version '3.0.2-1431158099'
-    sha256 'd38d255490380918bffeebf9bac7df27ccd05b6443583c0340ed514c9521ef07'
+    version '3.0.3-1439546681'
+    sha256 'd472f1dc798785ef75bfa5083c9997ac39e659daaa3c40fd355817cd8d36647a'
 
     # devmate.com is the official download host per the appcast feed
     url "http://dl.devmate.com/com.macpaw.CleanMyMac#{version.to_i}/#{version.sub(%r{-.*$},'')}/#{version.sub(%r{.*?-},'')}/CleanMyMac3-#{version.sub(%r{-.*$},'')}.zip"
