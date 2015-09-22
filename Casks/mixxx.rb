@@ -5,7 +5,7 @@ cask :v1 => 'mixxx' do
   url "http://downloads.mixxx.org/mixxx-#{version}/mixxx-#{version}-macintel.dmg"
   name 'Mixxx'
   homepage 'http://www.mixxx.org'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Mixxx.app'
 end
