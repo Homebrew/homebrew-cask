@@ -6,7 +6,7 @@ cask :v1 => 'yarbs' do
   appcast 'https://github.com/BakeRolls/yarbs/releases.atom'
   name 'yarbs'
   homepage 'https://github.com/BakeRolls/yarbs'
-  license :unknown
+  license :cc
 
   app 'yarbs-darwin-x64/yarbs.app'
 end
