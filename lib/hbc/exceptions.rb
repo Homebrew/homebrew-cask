@@ -44,6 +44,17 @@ class Hbc::CaskAlreadyInstalledError < Hbc::CaskError
   end
 end
 
+class Hbc::CaskAutoUpdatesError < Hbc::CaskError
+  attr_reader :token
+  def initialize(token)
+    @token = token
+  end
+
+  def to_s
+    %Q{A Cask for #{token} is already installed and using auto-updates. Add the "--force" option to force re-install.}
+  end
+end
+
 class Hbc::CaskCommandFailedError < Hbc::CaskError
   def initialize(cmd, output, status)
     @cmd = cmd

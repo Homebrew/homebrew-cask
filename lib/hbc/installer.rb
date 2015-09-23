@@ -52,6 +52,11 @@ class Hbc::Installer
 
   def install(force=false, skip_cask_deps=false)
     odebug "Hbc::Installer.install"
+
+    if @cask.installed? && @cask.auto_updates && !force
+      raise Hbc::CaskAutoUpdatesError.new(@cask)
+    end
+
     if @cask.installed? && !force
       raise Hbc::CaskAlreadyInstalledError.new(@cask)
     end

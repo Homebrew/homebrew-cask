@@ -51,6 +51,8 @@ module Hbc::DSL
 
   def accessibility_access; self.class.accessibility_access; end
 
+  def auto_updates; self.class.auto_updates; end
+
   module ClassMethods
 
     # A quite fragile shim to allow "full_name" be exposed as simply "name"
@@ -234,6 +236,13 @@ module Hbc::DSL
         raise Hbc::CaskInvalidError.new(self.token, "'accessibility_access' stanza may only appear once")
       end
       @accessibility_access ||= accessibility_access
+    end
+
+    def auto_updates(auto_updates=nil)
+      if @auto_updates and !auto_updates.nil?
+        raise Hbc::CaskInvalidError.new(self.token, "'auto_updates' stanza may only appear once")
+      end
+      @auto_updates ||= auto_updates
     end
 
     def self.ordinary_artifact_types
