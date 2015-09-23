@@ -7,9 +7,9 @@ describe Hbc::CLI::Install do
     end
 
     Hbc.load('local-transmission').must_be :installed?
-    Hbc.appdir.join('Transmission.app').must_be :symlink?
+    Hbc.appdir.join('Transmission.app').must_be :directory?
     Hbc.load('local-caffeine').must_be :installed?
-    Hbc.appdir.join('Caffeine.app').must_be :symlink?
+    Hbc.appdir.join('Caffeine.app').must_be :directory?
   end
 
   it "skips double install (without nuking existing installation)" do

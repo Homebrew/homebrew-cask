@@ -9,22 +9,4 @@ describe Hbc::DSL::Postflight do
   it_behaves_like Hbc::Staged do
     let(:staged) { @dsl }
   end
-
-  it "can suppress move to applications folder alert " do
-    @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
-
-    Hbc::FakeSystemCommand.expects_command(
-      ['/usr/bin/defaults', 'write', 'com.example.BasicCask', 'moveToApplicationsFolderAlertSuppress', '-bool', 'true']
-    )
-    @dsl.suppress_move_to_applications
-  end
-
-  it "can suppress move to applications folder alert with a different key" do
-    @dsl.stubs(:bundle_identifier => 'com.example.BasicCask')
-
-    Hbc::FakeSystemCommand.expects_command(
-      ['/usr/bin/defaults', 'write', 'com.example.BasicCask', 'suppressMoveToApplications', '-bool', 'true']
-    )
-    @dsl.suppress_move_to_applications :key => 'suppressMoveToApplications'
-  end
 end
