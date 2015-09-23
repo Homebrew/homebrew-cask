@@ -7,7 +7,7 @@ cask :v1 => 'totals' do
   appcast 'http://kedisoft.com/appcasts/appcast.php?app=totals3',
           :sha256 => '2355747b573a2d9143cfbc55529ac191a1ed949afed935d9e88ebdf3b54a08dd'
   homepage 'http://www.kedisoft.com/totals/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Totals.app'
 end
