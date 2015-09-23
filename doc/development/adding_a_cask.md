@@ -98,7 +98,7 @@ Fill in the following stanzas for your Cask:
 | `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](../cask_language_reference/stanzas/name.md))
 | `homepage`         | application homepage; used for the `brew cask home` command
 | `license`          | a symbol identifying the license for the application. Valid category licenses include `:oss`, `:closed`, and `:unknown`. It is OK to leave as `:unknown`. (see [License Stanza Details](../cask_language_reference/stanzas/license.md))
-| `app`              | relative path to an `.app` bundle that should be linked into the `~/Applications` folder on installation (see [App Stanza Details](../cask_language_reference/stanzas/app.md))
+| `app`              | relative path to an `.app` bundle that should be moved into the `~/Applications` folder on installation (see [App Stanza Details](../cask_language_reference/stanzas/app.md))
 
 Other commonly-used stanzas are:
 

@@ -53,7 +53,7 @@ Easy peasy:
 $ brew cask uninstall google-chrome
 ```
 
-This will both uninstall the Cask and remove symlinks which were created in `~/Applications`.
+This will both uninstall the Cask and remove applications which were moved to `~/Applications`.
 
 To uninstall all versions of a Cask, use `--force`:
 
@@ -176,9 +176,8 @@ You can also modify the default installation locations used when issuing `brew c
 * `--caskroom=/my/path` determines where the actual applications will be located.
 Should be handled with care — setting it outside `/opt` or your home directory might mess up your system.
 Default is `/opt/homebrew-cask/Caskroom`
-* `--appdir=/my/path` changes the path where the symlinks to the applications (above)
-will be generated. This is commonly used to create the links in the _root_ Applications directory
-instead of the _home_ Applications directory by specifying `--appdir=/Applications`. Default is `~/Applications`.
+* `--appdir=/my/path` changes the path where the applications (above)
+will be moved. Default is `~/Applications`.
 * `--prefpanedir=/my/path` changes the path for PreferencePane symlinks.
 Default is `~/Library/PreferencePanes`
 * `--qlplugindir=/my/path` changes the path for Quicklook Plugin symlinks.

@@ -11,7 +11,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('local-caffeine',caffeine.version)
       dest_path.must_be :directory?
-      application = dest_path.join('Caffeine.app')
+      application = Hbc.appdir.join('Caffeine.app')
       application.must_be :directory?
     end
 
@@ -24,7 +24,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('local-transmission',transmission.version)
       dest_path.must_be :directory?
-      application = dest_path.join('Transmission.app')
+      application = Hbc.appdir.join('Transmission.app')
       application.must_be :directory?
     end
 
@@ -37,7 +37,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('tarball',tarball.version)
       dest_path.must_be :directory?
-      application = dest_path.join('Tarball.app')
+      application = Hbc.appdir.join('Tarball.app')
       application.must_be :directory?
     end
 
@@ -53,7 +53,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('cab-container',cab_container.version)
       dest_path.must_be :directory?
-      application = dest_path.join('cabcontainer','Application.app')
+      application = Hbc.appdir.join('Application.app')
       application.must_be :directory?
     end
 
@@ -65,7 +65,7 @@ describe Hbc::Installer do
       end
       dest_path = Hbc.caskroom.join('adobe-air-container',air_container.version)
       dest_path.must_be :directory?
-      application = dest_path.join('GMDesk.app')
+      application = Hbc.appdir.join('GMDesk.app')
       application.must_be :directory?
     end
 
@@ -81,7 +81,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('sevenzip-container',sevenzip_container.version)
       dest_path.must_be :directory?
-      application = dest_path.join('sevenzipcontainer','Application.app')
+      application = Hbc.appdir.join('Application.app')
       application.must_be :directory?
     end
 
@@ -94,7 +94,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('xar-container',xar_container.version)
       dest_path.must_be :directory?
-      application = dest_path.join('xarcontainer','Application.app')
+      application = Hbc.appdir.join('Application.app')
       application.must_be :directory?
     end
 
@@ -110,7 +110,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('stuffit-container',stuffit_container.version)
       dest_path.must_be :directory?
-      application = dest_path.join('sheldonmac','v1.0')
+      application = Hbc.appdir.join('sheldonmac','v1.0')
       application.must_be :directory?
     end
 
@@ -126,7 +126,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('rar-container',rar_container.version)
       dest_path.must_be :directory?
-      application = dest_path.join('rarcontainer','Application.app')
+      application = Hbc.appdir.join('Application.app')
       application.must_be :directory?
     end
 
@@ -139,7 +139,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('bzipped-asset',asset.version)
       dest_path.must_be :directory?
-      file = dest_path.join("bzipped-asset-#{asset.version}")
+      file = Hbc.appdir.join("bzipped-asset-#{asset.version}")
       file.must_be :file?
     end
 
@@ -152,7 +152,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('gzipped-asset',asset.version)
       dest_path.must_be :directory?
-      file = dest_path.join("gzipped-asset-#{asset.version}")
+      file = Hbc.appdir.join("gzipped-asset-#{asset.version}")
       file.must_be :file?
     end
 
@@ -283,7 +283,7 @@ describe Hbc::Installer do
       end
 
       dest_path = Hbc.appdir.join('MyNestedApp.app')
-      TestHelper.valid_alias?(dest_path).must_equal true
+      File.ftype(dest_path).must_equal 'directory'
     end
 
     it "generates and finds a timestamped metadata directory for an installed Cask" do
