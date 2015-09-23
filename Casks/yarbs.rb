@@ -1,6 +1,6 @@
 cask :v1 => 'yarbs' do
-  version 'v0.1.7'
-  sha256 '53acdb014be17ae19d8fbd3055d80223a469e60c2bb1c5b662e1c8369dede355'
+  version 'v0.1.8'
+  sha256 '433511e2b80ef6b0d61e4a8d1049c043bbc901ebb1e707c11409302e56da0df7'
 
   url "https://github.com/BakeRolls/yarbs/releases/download/#{version}/yarbs-darwin-x64.zip"
   appcast 'https://github.com/BakeRolls/yarbs/releases.atom'
