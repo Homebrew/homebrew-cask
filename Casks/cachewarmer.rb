@@ -2,9 +2,10 @@ cask :v1 => 'cachewarmer' do
   version '13'
   sha256 '97f9d743a41c4a38ea3b2af5c33716e72b02e9e11b0fed3000d0a3c584f104f3'
 
-  url "https://glencode.net/_downloads/CacheWarmer-#{version}.pkg"
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://s3.amazonaws.com/glencode_downloads/CacheWarmer-#{version}.pkg"
   name 'CacheWarmer'
-  homepage 'https://glencode.net/cachewarmer/'
+  homepage 'https://assetcache.io/cachewarmer/'
   license :freemium
 
   pkg "CacheWarmer-#{version}.pkg"
