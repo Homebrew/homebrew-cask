@@ -3,10 +3,13 @@ cask :v1 => 'blockblock' do
   sha256 '719761707b8fca83014bfdd58d01d37ad0c32142d57913f8ed46c56a3011ad0c'
 
   # bitbucket.org is the official download host per the vendor homepage
-  url 'https://bitbucket.org/objective-see/deploy/downloads/BlockBlock_0.9.3.zip'
+  url "https://bitbucket.org/objective-see/deploy/downloads/BlockBlock_#{version}.zip"
   name 'BlockBlock'
   homepage 'https://objective-see.com/products/blockblock.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown
 
-  app 'BlockBlock.app'
+  installer :manual => 'BlockBlock.app'
+
+  uninstall :launchctl => ['/Library/LaunchDaemons/com.objectiveSee.blockblock.plist', '~/Library/LaunchAgents/com.objectiveSee.blockblock.plist'],
+            :delete => ['/Library/LaunchDaemons/com/objectiveSee.blockblock.plist', '~/Library/LaunchAgents/com.objectiveSee.blockblock.plist']
 end
