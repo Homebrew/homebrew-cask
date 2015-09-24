@@ -1,6 +1,6 @@
 cask :v1 => 'hacker-menu' do
-  version '1.1.3'
-  sha256 'fffa9d8b99984deafc8c1cba01fb399f1c4fdfb4a2a5132718c62a991fb53c97'
+  version '1.1.4'
+  sha256 '1ce1c9f9db7c2fc00f3804b8fdca57b02cf01c39fcefda2399f91f82c854414b'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/jingweno/hacker-menu/releases/download/v#{version}/hacker-menu-mac.zip"
