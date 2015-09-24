@@ -6,8 +6,8 @@ cask :v1 => 'clamxav' do
     version '2.5.1'
     sha256 '02a7529c74d11724e2d0e8226ac83a0d3cfb599afb354d02f6609632d69d9eb1'
   else
-    version '2.8.4'
-    sha256 '14b09f9417a4b792e9eca521ef1f315abbd25fcc7e13978b652b326d4a2dfd91'
+    version '2.8.5'
+    sha256 'd058eb5d27201ba7706c7daa9d8fe9f50597c0ce4fd4174555b60f91d097b955'
 
     appcast 'http://www.clamxav.com/sparkle/profileInfo.php',
             :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
