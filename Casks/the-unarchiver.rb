@@ -1,6 +1,6 @@
 cask :v1 => 'the-unarchiver' do
-  version '3.10'
-  sha256 'fa5fd1d3ec1c293b8fa8d60f6c3f36f441eeaf1237975249f7521eace430ea22'
+  version '3.10.1'
+  sha256 '945570d11c40592fecf98461e224928afe594fd2d178c8bd81b1f880fd616770'
 
   url "http://unarchiver.c3.cx/downloads/TheUnarchiver#{version}.dmg"
   name 'The Unarchiver'
