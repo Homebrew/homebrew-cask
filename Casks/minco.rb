@@ -1,11 +1,11 @@
 cask :v1 => 'minco' do
-  version '2.0.23'
-  sha256 'e8acbfb029f8df05f62164168653f0605aa0a11207c0b0fa255454ec033dea26'
+  version '2.0.24'
+  sha256 '4f33194afa5d17a986a82e2ad9518fe21de3eec51d49eaf2c6cb200415447fd7'
 
   # webpack.com is the official download host per the appcast feed
   url "https://ssl.webpack.de/celmaro.com/updates/minco2/Minco#{version.delete('.')}.zip"
   appcast 'https://ssl.webpack.de/celmaro.com/updates/minco2/minco.xml',
-          :sha256 => 'e8acbfb029f8df05f62164168653f0605aa0a11207c0b0fa255454ec033dea26'
+          :sha256 => '4f33194afa5d17a986a82e2ad9518fe21de3eec51d49eaf2c6cb200415447fd7'
   name 'Minco'
   homepage 'http://www.celmaro.com/minco/'
   license :commercial
