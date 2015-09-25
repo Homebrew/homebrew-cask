@@ -8,7 +8,5 @@ cask :v1 => 'bitcoin-core' do
   homepage 'https://bitcoin.org/'
   license :mit
 
-  # Renamed for clarity: app name is inconsistent with its branding.
-  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/3634
-  app 'Bitcoin-Qt.app', :target => 'Bitcoin Core.app'
+  app 'Bitcoin Core.app'
 end
