@@ -1,6 +1,6 @@
 cask :v1 => 'little-snitch' do
-  version '3.5.3'
-  sha256 'cfe44ba45c669e1bf9a04910b2dd8675a26d7e6c00954b74adeffd12f90b8197'
+  version '3.6'
+  sha256 'f33bf45f975ebdd5034ad5e53a65469377ace557492ea752098ba7ad0c09a07a'
 
   url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
   name 'Little Snitch'
