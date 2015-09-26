@@ -1,11 +1,11 @@
 cask :v1 => 'expandrive' do
-  version '5.0.18'
-  sha256 '1ca1bbec817efe707ed56a0fd55faae33fc045ee1ea123b53921151264dc2ce5'
+  version '5.0.19'
+  sha256 'a95d9d3305c28db6ac34f7b0a165d069a1d0174578fcf967b85156dc81c85a05'
 
   url "http://updates.expandrive.com/apps/expandrive/v/#{version.gsub('.','-')}/download.dmg"
   name 'ExpanDrive'
   appcast 'http://updates.expandrive.com/appcast/expandrive.xml?version=3',
-          :sha256 => 'a40c6bc63dd8b9afe454a0976787cb53b8356f9298473bbce1b999a9d3f4bc3f'
+          :sha256 => '5716be02c88b6c621d5219b1867b9eebd99ad21b2cbea406581523032a3fc7b3'
   homepage 'https://www.expandrive.com/expandrive'
   license :commercial
 
