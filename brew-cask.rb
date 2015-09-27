@@ -44,6 +44,7 @@ class BrewCask < Formula
 
     prefix.install "Casks", "bin"
     (bin+"brew-cask").chmod 0755
+    bash_completion.install "Contributions/brew_cask_bash_completion.sh" => "brew-cask"
   end
 
   test do
