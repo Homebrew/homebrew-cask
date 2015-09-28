@@ -11,5 +11,5 @@ cask :v1 => 'qgis' do
   uninstall :pkgutil => 'org.qgis.qgis-*'
 
   depends_on :cask => 'gdal-framework'
-  depends_on :cask => 'matplotlib'
+  depends_on :formula => 'matplotlib'
 end
