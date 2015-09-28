@@ -1,6 +1,6 @@
 cask :v1 => 'azure-cli' do
-  version '0.9.7'
-  sha256 '3f4c5528952505a326e6d18e4e065586cb08eba30d344203f3091d76cde9981f'
+  version '0.9.9'
+  sha256 '82cc0eec6f33e8c7dee457155112c7ba82559bae16494cf4f92fd2730851562f'
 
   # vo.msecnd.net is the official download host per the vendor homepage
   url "http://az412849.vo.msecnd.net/downloads04/azure-cli.#{version}.dmg"
