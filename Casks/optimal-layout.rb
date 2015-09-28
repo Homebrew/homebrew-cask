@@ -7,7 +7,7 @@ cask :v1 => 'optimal-layout' do
   appcast 'http://most-advantageous.com/sparkle/OL-AppCast.cfm'
   name 'Optimal Layout'
   homepage 'http://most-advantageous.com/optimal-layout/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Optimal Layout.app'
 end

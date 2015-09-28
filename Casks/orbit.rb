@@ -6,7 +6,7 @@ cask :v1 => 'orbit' do
   appcast 'http://orbitapp.net/updates/appcast.xml'
   name 'Orbit'
   homepage 'http://orbitapp.net'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app      'Orbit.app'
 end
