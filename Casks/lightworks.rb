@@ -9,9 +9,5 @@ cask :v1 => 'lightworks' do
 
   app 'Lightworks.app'
 
-  caveats do
-    free_license 'http://www.lwks.com'
-  end
-
   depends_on :macos => '>= 10.8'
 end
