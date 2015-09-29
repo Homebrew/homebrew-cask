@@ -1,4 +1,4 @@
-cask :v1 => 'zendstudio' do
+cask :v1 => 'zend-studio' do
   version '13.0.0'
   sha256 '3ed2492801c54fd7b1ec225d4824fb7609a674b35a5d8f437fdf3218cfd98067'
 
@@ -7,5 +7,5 @@ cask :v1 => 'zendstudio' do
   homepage 'https://www.zend.com/en/products/studio/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  app 'ZendStudio.app'
+  app 'Zend Studio.app'
 end
