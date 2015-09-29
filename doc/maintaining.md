@@ -49,7 +49,7 @@ Label | Description | Issues | Pull Requests
 **on hold** | A pull request that depends on another being merged before it itself can be as well. |  | &#x2713;
 **roadmap** | Roadmap for feature implementation. | &#x2713; |
 **ready to implement** | Usually accompanied by the closing of a **discussion** issue. It succinctly describes in points the implementation of something yet to be written, be it a feature or a documentation section. Anyone looking at such an issue can safely ignore every post following the top one, as it should always be kept up-to-date with the discussion. | &#x2713; |
-**travis bug** | Bug related to [Travis CI](https://travis-ci.org/). | &#x2713; | &#x2713;
+**travis** | Bug related to [Travis CI](https://travis-ci.org/). Must always be accompanied by **bug** or **enhancement**. | &#x2713; | &#x2713;
 **upstream** | Something we have no hand in, and can only be fixed with intervention from developers outside homebrew-cask. Always refers to a cask, and never to the core. | &#x2713; | &#x2713;
 **awaiting maintainer feedback** | A maintainer requires input from other maintainers to proceed. Other maintainers should occasionaly check this label and give their feedback on the subject, if able. | &#x2713; | &#x2713;
 **awaiting user reply** | A maintainer requires further action or information from the original poster to proceed. Particularly useful to weed out those cases where issues and pull requests would otherwise be left open indefinitely because the original poster never replies. | &#x2713; | &#x2713;
