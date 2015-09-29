@@ -6,13 +6,13 @@ cask :v1 => 'pacifist' do
     version '3.2.17'
     sha256 'd38e12293bc6087ddb09275e3c5ab34faa670e87e9dd41e04a587dd387f7b1d3'
   else
-    version '3.5.4'
-    sha256 'ef29b9a325d38dd32ba2e7f5cbacc0b3f52aae6f299a61a743a55dc57fc0e4f0'
+    version '3.5.5'
+    sha256 '0e74fdfe20560c891078976e1fc563d4bff3e4d7b29669b96ba251de85fa8865'
   end
 
   url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version}.dmg"
   appcast 'https://www.charlessoft.com/cgi-bin/pacifist_sparkle.cgi',
-          :sha256 => '1968fd8009efc6192aa5a66e78dd002fb104a34402a22363e2702368f4c1cb64'
+          :sha256 => '695bd3911774d3f6dcba7111d9f31846a915da96a850cfceb19d10c916d0925f'
   name 'Pacifist'
   homepage 'https://www.charlessoft.com/'
   license :commercial
