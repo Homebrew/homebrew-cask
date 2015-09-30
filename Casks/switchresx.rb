@@ -1,6 +1,6 @@
 cask :v1 => 'switchresx' do
   version '4.5.2'
-  sha256 '8129d66e7e9c297ea6b1d866f83599d134e235b17804a510f753790ac28f8f3a'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "http://www.madrau.com/data/switchresx/SwitchResX#{version.to_i}.zip"
   name 'SwitchResX'
