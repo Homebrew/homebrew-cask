@@ -6,7 +6,7 @@ cask :v1_1 => 'panic-unison' do
   appcast 'http://www.panic.com/updates/update.php'
   name 'Unison'
   homepage 'https://panic.com/unison/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
   tags :vendor => 'Panic'
 
   app 'Unison.app'
