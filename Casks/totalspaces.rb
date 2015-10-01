@@ -13,12 +13,12 @@ cask :v1 => 'totalspaces' do
     uninstall :pkgutil => 'com.switchstep.totalspaces',
               :quit    => 'com.binaryage.TotalSpaces'
   else
-    version '2.2.19'
-    sha256 'bf2d496ac7d688649fc0a43b4e9d1c8f15c3819a58628dc3aa16c11b1933726e'
+    version '2.3.6'
+    sha256 '1771d91df0a9fe74fa80425cfb774d8342837ec5fb570d66c3726c96143ac0a9'
 
     url "http://downloads.binaryage.com/TotalSpaces2-#{version}.dmg"
     appcast 'http://updates-s3.binaryage.com/totalspaces2.xml',
-            :sha256 => 'bcce0b9691cee8b0a65ab4146184cf8d88ee5822904493bedf753b1c7d70788e'
+            :sha256 => 'f19340bbfd445a54ef7f501e6dd8193dc9228cb18a642d21dc280d008631cb68'
 
     installer :manual => 'TotalSpaces2.app'
 
