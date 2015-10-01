@@ -7,7 +7,7 @@ cask :v1 => 'pester' do
           :sha256 => 'c9fdbf59afac8f0bdfd8daecb196155b8d194b199e906899ff17ab146b5fb4d5'
   name 'Pester'
   homepage 'http://sabi.net/nriley/software/index.html#pester'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   app 'Pester.app'
 end
