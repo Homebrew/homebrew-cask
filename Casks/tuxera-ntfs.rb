@@ -1,8 +1,8 @@
 cask :v1 => 'tuxera-ntfs' do
-  version '2014'
-  sha256 '808423a1246a3a9cfa03d4ada3b10cd7958e88dbb34bb0c044741d3266202514'
+  version '2015'
+  sha256 '4bed675786cbec9b8e80a0af2f12b7fda381b16978bf103458bc1011c8a24934'
 
-  url 'https://www.tuxera.com/mac/tuxerantfs_2014.dmg'
+  url 'https://www.tuxera.com/mac/tuxerantfs_2015.dmg'
   name 'Tuxera NTFS'
   homepage 'https://www.tuxera.com/products/tuxera-ntfs-for-mac/'
   license :closed
