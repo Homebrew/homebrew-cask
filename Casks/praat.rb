@@ -1,11 +1,11 @@
 cask :v1 => 'praat' do
-  version '5.4.20'
+  version '5.4.21'
 
   if Hardware::CPU.is_32_bit? || MacOS.release <= :snow_leopard
-    sha256 '57206a5c68393f2f52fcd970c87315b43de1bba4831b811e1f42a909cefa1c81'
+    sha256 '47a389591a7874c16bba74e69eaa7200a9f4867cf6f60811eb764bd5c7a345c4'
     url "https://github.com/praat/praat/releases/download/v#{version}/praat#{version.delete('.')}_mac32.dmg"
   else
-    sha256 'b8f5a5a2604ec3094e48eff2bd80c1d34794d2cde216d22bf8400c682db3c36f'
+    sha256 'edc65e625e7440e2e430fdf3e41f9ec0875f5fc7c1eea1d207e9a6b516eb7819'
     url "https://github.com/praat/praat/releases/download/v#{version}/praat#{version.delete('.')}_mac64.dmg"
   end
 
