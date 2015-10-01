@@ -5,7 +5,7 @@ cask :v1 => 'phoenix-slides' do
   url "http://blyt.net/phxslides/phoenix-slides-#{version.delete('.')}.zip"
   name 'Phoenix Slides'
   homepage 'http://blyt.net/phxslides'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Phoenix Slides.app'
 end
