@@ -1,6 +1,6 @@
 cask :v1 => 'airdroid' do
-  version '3.1.4'
-  sha256 '55f55012c7c519e9549a55fc6d1ab4a373be56e01a3268d50b2ce7eae78896c9'
+  version '3.2.0'
+  sha256 'd114417d7b27498fdc4100bd7dd46722cf604683c98538ccf06cb50611a61821'
 
   url "http://dl.airdroid.com/AirDroid_Desktop_Client_#{version}.dmg"
   name 'AirDroid'

@@ -1,6 +1,6 @@
 cask :v1 => 'ccleaner' do
-  version '1.09.313'
-  sha256 '464a75b9d038dec0334f70846d5ea68679ff907e57b9ec373331c5da18cb4865'
+  version '1.10.335'
+  sha256 '9f02434fb991c78634fd1a6a2a3819ecedd567fbe07fe7eec96bbf5628f6eadd'
 
   url "http://download.piriform.com/mac/CCMacSetup#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}.dmg"
   name 'CCleaner'

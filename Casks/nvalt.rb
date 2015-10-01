@@ -8,7 +8,7 @@ cask :v1 => 'nvalt' do
   appcast 'http://abyss.designheresy.com/nvalt2/nvalt2main.xml',
           :sha256 => '46ab145d41812854224a0341afa320e672ea53348abe61ce08ecf84326b1b2c4'
   homepage 'http://brettterpstra.com/project/nvalt/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   app 'nvALT.app'
 

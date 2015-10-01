@@ -5,7 +5,7 @@ cask :v1 => 'oneswarm' do
   url 'http://www.oneswarm.org/builds/OneSwarm.dmg'
   name 'OneSwarm'
   homepage 'http://www.oneswarm.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'OneSwarm.app'
 end

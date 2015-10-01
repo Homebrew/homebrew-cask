@@ -7,7 +7,7 @@ cask :v1 => 'tagspaces' do
   else
     sha256 '316dc12af0cf78ec8d472a5749d9e54f82d1e8f532f908257f49d4c6f5bf6119'
     url "http://www.tagspaces.org/downloads/tagspaces-#{version}-osx64.zip"
-    appcast 'https://github.com/uggrock/tagspaces/releases.atom'
+    appcast 'https://github.com/tagspaces/tagspaces/releases.atom'
   end
 
   name 'TagSpaces'

@@ -1,10 +1,10 @@
 cask :v1 => 'fantastical' do
-  version '2.0.7'
-  sha256 '25ae43ca4f9285a487bdc2eb43b348a9fa9f9c09bb2ac0a80380a114b9040888'
+  version '2.1'
+  sha256 '019e286a22752f1e2f5f6ba5dfa9e100dfc441b8ddc75d645544a7bb94fbbb92'
 
   url "http://cdn.flexibits.com/Fantastical_#{version}.zip"
   appcast 'https://flexibits.com/fantastical/appcast2.php',
-          :sha256 => '3634a59497cc6131cbadc25e1b6b90d7d5576e6a563c272cca462b92111c7a60'
+          :sha256 => '7500e3e08c27c070e44202fa67eb40672c9f64a894d2c5c24bd5d4a9aae4661c'
   name 'Fantastical'
   homepage 'https://flexibits.com/fantastical'
   license :freemium
