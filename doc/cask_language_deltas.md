@@ -49,7 +49,7 @@ The term `:v1` identifies the DSL version (currently 1.0), and defines the featu
 * [`license`](CASK_LANGUAGE_REFERENCE.md#license-stanza-details)
 * [`name`](CASK_LANGUAGE_REFERENCE.md#name-stanza-details)
 * [`*flight plist_set`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
-* [`postflight suppress_move_to_applications`](CASK_LANGUAGE_REFERENCE.md#postflight-stanza-details)
+* [`postflight suppress_move_to_applications`](CASK_LANGUAGE_REFERENCE.md#flight-stanza-details)
 * [`stage_only`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required) (replaced undocumented `caskroom_only`)
 * [`suite`](CASK_LANGUAGE_REFERENCE.md#suite-stanza-details)
 * [`tags`](CASK_LANGUAGE_REFERENCE.md#tags-stanza-details)
