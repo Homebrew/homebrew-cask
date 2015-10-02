@@ -1,6 +1,6 @@
 cask :v1 => 'navicat-for-sqlite' do
-  version '11.1.13'   # navicat-premium.rb and navicat-for-* should be upgraded together
-  sha256 'd8dfce2de0af81f7c0883773a3c5ed1be64eb076fb67708344d0748244b7566a'
+  version '11.1.15'
+  sha256 '53a2178861462ccc154e04d4108a3fbb0d45fe98f634547e97f3f035beb29493'
 
   url "http://download.navicat.com/download/navicat#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_sqlite_en.dmg"
   name 'Navicat for SQLite'
