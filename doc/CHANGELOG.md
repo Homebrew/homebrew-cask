@@ -1,5 +1,43 @@
 # CHANGELOG
 
+## 0.57.0
+
+* __Casks__
+  - 119 Casks added (828 updated) by 326 contributors since 0.56.0
+  - 2778 total Casks
+* __Features__
+  - [#13612][] Include Hbc::Staged module in Hbc::DSL::Preflight
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#11110][] remove `sort` from symlinked.rb <3 [@delphinus35][]
+  - [#13419][] Fix external command example: Cask => Hbc <3 [@zmwangx][]
+  - [#13567][] Gracefully handle interrupts (CTRL-C) at top level
+  - [#13783][] Fix commit range for audit_modified_casks
+  - [#13762][] Fix travis commit range to include only PR commits
+* __Internal Changes__
+  - [#13848][] Create .gitattributes
+  - [#13662][] add .editorconfig file <3 [@williamboman][]
+* __Documentation__
+  - 44 doc commits since 0.56.0
+* __Contributors__
+  - 179 new contributors since 0.56.0
+  - 2256 total contributors
+* __Release Date__
+  - 2015-10-02 17:03:00 UTC
+
+
+[#11110]: https://github.com/caskroom/homebrew-cask/issues/11110
+[#13419]: https://github.com/caskroom/homebrew-cask/issues/13419
+[#13612]: https://github.com/caskroom/homebrew-cask/issues/13612
+[#13762]: https://github.com/caskroom/homebrew-cask/issues/13762
+[#13783]: https://github.com/caskroom/homebrew-cask/issues/13783
+[#13848]: https://github.com/caskroom/homebrew-cask/issues/13848
+[#13567]: https://github.com/caskroom/homebrew-cask/issues/13567
+[@delphinus35]: https://github.com/delphinus35
+[@zmwangx]: https://github.com/zmwangx
+[@williamboman]: https://github.com/williamboman
+
 ## 0.56.0
 
 * __Casks__
