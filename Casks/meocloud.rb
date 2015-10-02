@@ -1,10 +1,10 @@
 cask :v1 => 'meocloud' do
-  version '0.2.7'
-  sha256 'c03824e1173d4df7ea6b79822ccd0ab5f4bc6a3e1a85a5308ecf751f31785c15'
+  version '0.2.29'
+  sha256 '909dfe26800c3ecbd424af4cbe8bb37670a057b6a75b05a24b4c86b210d2ef56'
 
   url "https://meocloud.pt/binaries/osx/MEOCloud-#{version}.dmg"
   appcast 'https://services.sapo.pt/Application/Catalog/Update?appid=pt.sapo.mac.cloudpt',
-          :sha256 => '0b3224464231b94ad2b2fb81a19beee7a6655e2efa09f8de04f0ba659fd933eb'
+          :sha256 => '203b4c163172f8c8eeb0016d11b17653e1b75994874d7c8f39013d18304922e1'
   name 'MEO Cloud'
   homepage 'https://meocloud.pt'
   license :gratis

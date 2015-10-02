@@ -1,6 +1,6 @@
 cask :v1 => 'pocketcasts' do
-  version '1.1'
-  sha256 '4cb676300da1737462f4d2e54604d3126f8072c3982fce5299cf9a18b651265a'
+  version '1.2'
+  sha256 '385456a2d23cf5fcf88007dcfc97bbe8d9f7019e1ac7f57f1c0c676fe7f2df03'
 
   url "https://github.com/mortenjust/PocketCastsOSX/releases/download/#{version}/PocketCasts#{version}.zip"
   appcast 'https://github.com/mortenjust/PocketCastsOSX/releases.atom'

@@ -1,11 +1,11 @@
 cask :v1 => 'mailbox' do
-  version '0.7.4'
-  sha256 '49cb3f0fb7c2dd3cfb776c51a947182617c4ca18db4609cda68742dd2b1995c0'
+  version '0.7.6'
+  sha256 'b5ca3e23d34c83c8d95b21fb623f78e3ae0e3af899dafb3ae8b23c7eb7a3d353'
 
   # hockeyapp.net is the official download host per the appcast feed
-  url 'https://rink.hockeyapp.net/api/2/apps/0de2e5766e01cde1f6c0fd5b9862c730/app_versions/6?format=zip&avtoken=77e2571a99a2ccbe2d110f671e0c45c9ae9a5df8'
+  url 'https://rink.hockeyapp.net/api/2/apps/0de2e5766e01cde1f6c0fd5b9862c730/app_versions/8?format=zip&amp;avtoken=a97f42a189ba7f4d7b5d44fc4d5467c2cc31cebc'
   appcast 'https://rink.hockeyapp.net/api/2/apps/0de2e5766e01cde1f6c0fd5b9862c730',
-          :sha256 => 'dcc85baae0952a9689a0a22df020978590d92a0e7bb65a67c51d43fd7bd9b55a'
+          :sha256 => '58db025253fce6f6229fe05aafd369e67e5a7f816d71ec65a9d30e34b32a775b'
   name 'Mailbox'
   homepage 'https://www.mailboxapp.com/'
   license :gratis

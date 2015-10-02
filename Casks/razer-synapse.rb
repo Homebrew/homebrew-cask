@@ -1,6 +1,6 @@
 cask :v1 => 'razer-synapse' do
-  version '1.44'
-  sha256 '63c739c78d4f537ec64b32126fc358fba4840194296e45bd7c22638af6529984'
+  version '1.45'
+  sha256 '4b4368bf5f90cb94667a60a120d49b9073329ba6d9efcd4f5108cf709bfe8115'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://razerdrivers.s3.amazonaws.com/drivers/Synapse2/mac/Razer_Synapse_Mac_Driver_v#{version}.dmg"

@@ -1,10 +1,10 @@
 cask :v1 => 'glimmerblocker' do
-  version '1.6.5'
-  sha256 'bcb9f53c4eb33a907fdaa42b7e5deb5b48d2495269e8746206691b393e2db507'
+  version '1.6.6'
+  sha256 'd207aa133986b8f82687fd80eda82ff6c03f71c9231294286a04df1a05b5deb0'
 
   url "https://glimmerblocker.org/downloads/GlimmerBlocker-#{version}.dmg"
   appcast 'https://glimmerblocker.org/site/rss/sparkle-final.xml',
-          :sha256 => 'fce1b515c7ee075a7ce56f91753ca292eb786cc32180f7d8eed4c521a2aa3a03'
+          :sha256 => '1a3b44ba7a5773b265a6a14fcd4c07f993aada41ae7ade0a931ac49787b0a1de'
   name 'GlimmerBlocker'
   homepage 'https://glimmerblocker.org/'
   license :gpl

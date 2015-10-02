@@ -1,6 +1,6 @@
 cask :v1 => 'hyperdock' do
-  version '1.5.2'
-  sha256 '83dcbc73ff3685487a80f665f30a44ef1d6f713afb3cf80aa3ba3656ac650a05'
+  version '1.6.0.1'
+  sha256 '30d90640052015a042ea40a4eb17889c2717cec72fd6af05dc447fd7679ce517'
 
   url "https://bahoom.com/hyperdock/#{version}/HyperDock-#{version}.dmg"
   appcast 'https://bahoom.com/hyperdock/appcast.xml',

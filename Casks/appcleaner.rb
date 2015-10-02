@@ -1,6 +1,6 @@
 cask :v1 => 'appcleaner' do
-  version '2.3'
-  sha256 '69da212e2972e23e361c93049e4b4505d7f226aff8652192125f078be7eecf7f'
+  version '3.0'
+  sha256 '277dcf9ef37a4bb896c505dd895926f0b861a0125808c53e9b2f63ca67f3fe0b'
 
   url "http://www.freemacsoft.net/downloads/AppCleaner_#{version}.zip"
   name 'AppCleaner'
@@ -14,5 +14,6 @@ cask :v1 => 'appcleaner' do
   zap :delete => [
                   '~/Library/Caches/com.freemacsoft.AppCleaner',
                   '~/Library/Preferences/com.freemacsoft.AppCleaner.plist',
+                  '~/Library/Saved Application State/com.freemacsoft.AppCleaner.savedState',
                  ]
 end

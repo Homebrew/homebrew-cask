@@ -5,7 +5,7 @@ cask :v1 => 'phd2' do
   url "http://openphdguiding.org/PHD2-v#{version}-OSX.zip"
   name 'PHD2'
   homepage 'http://openphdguiding.org/'
-  license :unknown
+  license :bsd
 
   app 'PHD2.app'
 end

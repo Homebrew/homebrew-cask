@@ -5,7 +5,7 @@ cask :v1 => 'nodebox' do
   url "https://secure.nodebox.net/downloads/NodeBox-#{version}.zip"
   name 'NodeBox'
   homepage 'https://www.nodebox.net/node/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'NodeBox.app'
 end

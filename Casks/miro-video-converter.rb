@@ -7,7 +7,7 @@ cask :v1 => 'miro-video-converter' do
   appcast 'http://miro-updates.participatoryculture.org/mvc-appcast-osx.xml'
   name 'Miro Video Converter'
   homepage 'http://www.mirovideoconverter.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Miro Video Converter.app'
 end

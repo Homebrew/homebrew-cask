@@ -1,12 +1,13 @@
 cask :v1 => 'neteasemusic' do
-  version :latest
-  sha256 :no_check
+  version '1.3.1'
+  sha256 '1a850e6c624d05e72d25caf6d449613713294ffd5fe4ddad4287684118a10fd6'
 
-  url 'http://music.163.com/api/osx/download/latest'
+  # 126.net is the official download host per the vendor homepage
+  url "http://s1.music.126.net/download/osx/NeteaseMusic_#{version}_366_web.dmg"
   name '网易云音乐'
   name 'NetEase cloud music'
   homepage 'http://music.163.com/#/download'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'NeteaseMusic.app'
 
