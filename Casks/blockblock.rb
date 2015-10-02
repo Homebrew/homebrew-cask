@@ -10,6 +10,10 @@ cask :v1 => 'blockblock' do
 
   installer :manual => 'BlockBlock.app'
 
+  uninstall_preflight do
+    set_ownership "/Library/LaunchDaemons/com.objectiveSee.blockblock.plist"
+  end
+
   uninstall :launchctl => ['/Library/LaunchDaemons/com.objectiveSee.blockblock.plist', '~/Library/LaunchAgents/com.objectiveSee.blockblock.plist'],
-            :delete => ['/Library/LaunchDaemons/com/objectiveSee.blockblock.plist', '~/Library/LaunchAgents/com.objectiveSee.blockblock.plist']
+            :delete => ['/Library/LaunchDaemons/com.objectiveSee.blockblock.plist', '~/Library/LaunchAgents/com.objectiveSee.blockblock.plist']
 end
