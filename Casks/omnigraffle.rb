@@ -8,8 +8,8 @@ cask :v1 => 'omnigraffle' do
     sha256 'a2eff19909d1ba38a4f01b2beecbde2f31f4af43d30e06d2c6921ae8880f85bc'
     url "http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.8/OmniGraffle-#{version}.dmg"
   else
-    version '6.3.2'
-    sha256 '2d1625a7f0a3e5f296825cad9faa7dc48f040511bc2691b83e667618252845f6'
+    version '6.4'
+    sha256 '747b421b2b7849d12624eddec47d53772fb862b5c176d4504e2db3fe1ce73130'
     url "http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniGraffle-#{version}.dmg"
   end
 
