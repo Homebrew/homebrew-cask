@@ -1,6 +1,6 @@
 cask :v1 => 'istat-menus' do
   version '5.11'
-  sha256 'cb02606a90e1cf4a9b771b6e0418c1e37233e4d736be285d03e7f5f2f9d6d5c4'
+  sha256 '720782256c427808669cef16bdb01cd7953c22d6f8a78d10a796f7e0fbcacf3e'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/bjango/files/istatmenus5/istatmenus#{version}.zip"
