@@ -1,8 +1,8 @@
 cask :v1 => 'diskmaker-x' do
-  version '5'
-  sha256 'e7227ce59fee42cca395ec2db7f07b9f809492c4e02a0ad53d82deec5d77ecfe'
+  version '5.0.1'
+  sha256 '69f2d57392f56fbc1fa9cccc0d1d2be57b8ff4d39bcfeb1cb6770fbf702fb3df'
 
-  url "http://diskmakerx.com/downloads/DiskMaker_X_#{version}.dmg"
+  url "http://diskmakerx.com/downloads/DiskMaker_X_#{version.to_i}.dmg"
   name 'DiskMaker X'
   homepage 'http://diskmakerx.com/'
   license :gratis
