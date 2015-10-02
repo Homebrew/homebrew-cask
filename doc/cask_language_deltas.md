@@ -153,8 +153,8 @@ For use in *eg* interpolation:
 
 ### (1.1)
 
-* [`set_ownership`](CASK_LANGUAGE_REFERENCE.md#*flight-stanzas-details)
-* [`set_permissions`](CASK_LANGUAGE_REFERENCE.md#*flight-stanzas-details)
+* [`set_ownership`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
+* [`set_permissions`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
 
 ## References
 
