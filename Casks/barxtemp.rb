@@ -1,6 +1,6 @@
 cask :v1 => 'barxtemp' do
-  version '1.3.1'
-  sha256 'cf9f0da35288f95d19140cb71657aa48ca90c850d43694f851fe27e4b63a8ed2'
+  version '1.3.2'
+  sha256 '85c8347ab8e7cbc8e7cf639317f3ff5df75feb9420bf94596dcfa05ac5914d16'
 
   url "https://github.com/Gabriele91/barXtemp/releases/download/#{version}/barXtemp.app.zip"
   appcast 'https://github.com/Gabriele91/barXtemp/releases.atom'
