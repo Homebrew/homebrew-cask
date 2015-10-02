@@ -1,4 +1,4 @@
-cask :v1_2 => 'anaconda' do
+cask :v1_1 => 'anaconda' do
   version '2.3.0'
   sha256 'c4bb59a57bf44dde80612041bbbcfd2e5cab8534842209ef456da7a46f919c33'
 
