@@ -6,7 +6,7 @@ cask :v1 => 'papers' do
   appcast 'http://appcaster.papersapp.com/apps/mac/production/appcast.xml',
           :sha256 => '0b58ec3ddcf8f5080a8d6e149e92a1c273e668bd4e04f7f865d4aaa6a347370a'
   name 'Papers'
-  homepage 'http://www.papersapp.com/papers/'
+  homepage 'http://www.papersapp.com/'
   license :commercial
 
   app 'Papers.app'
