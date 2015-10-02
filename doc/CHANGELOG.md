@@ -34,6 +34,7 @@
 [#13783]: https://github.com/caskroom/homebrew-cask/issues/13783
 [#13848]: https://github.com/caskroom/homebrew-cask/issues/13848
 [#13567]: https://github.com/caskroom/homebrew-cask/issues/13567
+[#13662]: https://github.com/caskroom/homebrew-cask/issues/13567
 [@delphinus35]: https://github.com/delphinus35
 [@zmwangx]: https://github.com/zmwangx
 [@williamboman]: https://github.com/williamboman
