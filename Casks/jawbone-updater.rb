@@ -1,6 +1,6 @@
 cask :v1 => 'jawbone-updater' do
-  version '2.2.4'
-  sha256 '2e9184cde74779f75c6827e0fcf021230da3f6aad48fd1f3d293e5e355264f7d'
+  version '2.2.5'
+  sha256 '0db771816535cb9bb0112aa5e3ea7147b29322bf9dce82c90afedb36a62a2945'
 
   url "https://content.jawbone.com/store/dashboard/Jawbone_Updater-#{version}.pkg"
   name 'Jawbone Updater'
