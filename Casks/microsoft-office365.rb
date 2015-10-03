@@ -1,4 +1,5 @@
-cask :v1 => 'microsoft-office-365' do
+cask :v1 => 'microsoft-office365' do
+  # note: "365" is not a version number, but an intrinsic part of the product name
   version :latest
   sha256 :no_check
 
