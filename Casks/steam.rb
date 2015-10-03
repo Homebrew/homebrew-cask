@@ -9,9 +9,14 @@ cask :v1 => 'steam' do
 
   app 'Steam.app'
 
-  uninstall :launchctl => 'com.valvesoftware.steamclean'
+  uninstall :quit      => 'com.valvesoftware.steam',
+            :launchctl => [
+                           'com.valvesoftware.steamclean',
+                           'com.valvesoftware.steam.ipctool'
+                          ]
 
   zap :delete => [
+                  '~/Library/LaunchAgents/com.valvesoftware.steamclean.plist',
                   '~/Library/Preferences/com.valvesoftware.steam.helper.plist',
                   '~/Library/Application Support/Steam/',
                   '~/Library/Saved Application State/com.valvesoftware.steam.savedState/'
