@@ -7,5 +7,5 @@ cask :v1 => 'diskmaker-x' do
   homepage 'http://diskmakerx.com/'
   license :gratis
 
-  app "DiskMaker X #{version}.app"
+  app "DiskMaker X #{version.to_i}.app"
 end
