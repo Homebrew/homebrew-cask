@@ -1,8 +1,8 @@
 cask :v1 => 'kindle' do
-  version '40961'
-  sha256 '5036fef92ccb2334afd5c3e6c92ae56dccd5d9d120c005264044fa64147ff538'
+  version '41015'
+  sha256 '1c15ce4df69044dc9d2d3562b7f5a8589b65efa5b8e64bc2bcdd7ed41c05df38'
 
-  url "http://kindleformac.amazon.com/#{version}/KindleForMac.dmg"
+  url "http://kindleformac.amazon.com/#{version}/KindleForMac-#{version}.dmg"
   name 'Kindle for Mac'
   homepage 'https://www.amazon.com/gp/digital/fiona/kcp-landing-page'
   license :gratis
@@ -13,5 +13,6 @@ cask :v1 => 'kindle' do
                   '~/Library/Preferences/com.amazon.Kindle.plist',
                   '~/Library/Application Support/Kindle/',
                   '~/Library/Saved Application State/com.amazon.Kindle.savedState/',
+                  '~/Library/Caches/com.amazon.Kindle-Crash-Reporter/'
                  ]
 end
