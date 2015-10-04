@@ -5,7 +5,7 @@ cask :v1 => 'pokemon-showdown' do
   url 'https://pokemonshowdown.com/files/pokemonshowdown-mac.zip'
   name 'Pokémon Showdown'
   homepage 'http://pokemonshowdown.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :mit
 
   app 'Pokemon Showdown.app'
 end

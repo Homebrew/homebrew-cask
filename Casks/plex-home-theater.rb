@@ -11,7 +11,7 @@ cask :v1 => 'plex-home-theater' do
 
   name 'Plex Home Theater'
   homepage 'https://plex.tv'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Plex Home Theater.app'
 end
