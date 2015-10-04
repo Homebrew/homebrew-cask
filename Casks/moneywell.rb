@@ -10,13 +10,13 @@ cask :v1 => 'moneywell' do
 
     url "http://downloads.nothirst.com/MoneyWell_#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}.zip"
   else
-    version '2.3.7'
-    sha256 '875da2864f364eaaa7fd81158ab58d1ad20e9e6a8fb6ba6ccdf6bad192f0da31'
+    version '2.3.9'
+    sha256 '0d262ee3c816e30088746d56f71475c46da82362d1edb3d50cf5dd416bd35a6f'
 
     # zenvilla.com is the official download host per the appcast feed
     url "http://zenvilla.com/mw/builds/MoneyWell-#{version}.zip"
     appcast 'http://nothirst.com/feeds/MoneyWell2Appcast.xml',
-            :sha256 => '7a674954d04d3225000008160fb64efc8c76fc3dcaf2394af7e9ebebb8394b71'
+            :sha256 => '1148b01298bca85e78043ee44c5118154926a2be5bf1443e044e6bdfe116e1c0'
   end
   name 'MoneyWell'
   homepage 'http://nothirst.com/moneywell/'
