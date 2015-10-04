@@ -1,9 +1,9 @@
 cask :v1 => 'prey' do
-  version '1.3.9'
-  sha256 'e01f342c4a6d57b495eaf182fc859f268fdf4f531d82560a97beb3310ec80587'
+  version '1.4.2'
+  sha256 '0b3c8a82ab2e437c4dd935051206598440093ac4cb74b51bac96bb6313b1c9ef'
 
   # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3.amazonaws.com/prey-releases/node-client/#{version}/prey-mac-#{version}-x64.pkg"
+  url "https://prey-releases.s3.amazonaws.com/node-client/#{version}/prey-mac-#{version}-x64.pkg"
   name 'Prey'
   homepage 'https://preyproject.com'
   license :gpl
