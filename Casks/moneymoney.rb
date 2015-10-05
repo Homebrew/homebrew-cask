@@ -6,7 +6,7 @@ cask :v1 => 'moneymoney' do
   appcast 'https://moneymoney-app.com/update/appcast.xml'
   name 'MoneyMoney'
   homepage 'https://moneymoney-app.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'MoneyMoney.app'
 end

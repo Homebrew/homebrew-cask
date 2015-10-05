@@ -5,7 +5,7 @@ cask :v1 => 'istat-server' do
   url 'http://download.bjango.com/istatserver/'
   name 'iStat Server'
   homepage 'http://bjango.com/mac/istatserver/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   pkg 'iStat Server.pkg'
 

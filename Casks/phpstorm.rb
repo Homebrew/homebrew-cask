@@ -1,6 +1,6 @@
 cask :v1 => 'phpstorm' do
-  version '9.0'
-  sha256 'd025e8b02ec16d8eed00f1edc9bad9b05d64ed04368ac73dec282633f7eaa591'
+  version '9.0.2'
+  sha256 '7995e951d442cb9203ed1e8ae491407a1b514828cef10bb9c7840880cbfacec2'
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
   name 'PhpStorm'

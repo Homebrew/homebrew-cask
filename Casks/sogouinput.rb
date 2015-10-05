@@ -1,8 +1,8 @@
 cask :v1 => 'sogouinput' do
-  version '3.2.0.68659'
-  sha256 '45abc1adef879c3b4c090b5d2bac9c7b89adcda88dde6b030305c52c5b2734f3'
+  version '3.3.0.74249'
+  sha256 '322da9a13da489644ce86fb93f3ea4f7ca113e0314dadddf73fd176878999da4'
 
-  url 'http://download.ime.sogou.com/1429884508/sogou_mac_32a.dmg'
+  url 'http://download.ime.sogou.com/1442312325/sogou_mac_33c.dmg'
   name '搜狗输入法'
   name 'Sogou Input Method'
   homepage 'http://pinyin.sogou.com/mac/'

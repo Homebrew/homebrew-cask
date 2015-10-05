@@ -6,7 +6,7 @@ cask :v1 => 'cinch' do
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/cinch.php'
   name 'Cinch'
   homepage 'https://www.irradiatedsoftware.com/cinch/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Cinch.app'
 end

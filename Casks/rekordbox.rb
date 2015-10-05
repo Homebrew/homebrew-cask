@@ -1,6 +1,6 @@
 cask :v1 => 'rekordbox' do
-  version '3.2.1'
-  sha256 '1fadb6590be4ab7eb9d746c578e81a2558d176df643cd85593c5fdc0bfbd3c50'
+  version '3.2.2'
+  sha256 'f12cafb0764177bafbb267342c3bd367572c42cc9e340081a0e84ef2bf7ed433'
 
   url "http://rekordbox.com/_app/files/Install_rekordbox_#{version.gsub('.','_')}.pkg.zip"
   name 'rekordbox'

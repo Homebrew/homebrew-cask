@@ -1,6 +1,6 @@
 cask :v1 => 'ricochet' do
-  version '1.1.0'
-  sha256 '80da185c8b2827ac8d953b9e58b8b517dc6f72d69dc8878c0d65131145cfa5e6'
+  version '1.1.1'
+  sha256 'e621fe34692ff6f10f3db863146903547e333d3373b4a62c468b58504576290b'
 
   url "https://ricochet.im/releases/#{version}/Ricochet-#{version}.dmg"
   gpg "#{url}.asc",

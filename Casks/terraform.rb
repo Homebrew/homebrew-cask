@@ -1,6 +1,6 @@
 cask :v1 => 'terraform' do
-  version '0.6.1'
-  sha256 'a06768862d1c3ee928d26961302c5134c9c8f716e567c4cf52fce85951f61bee'
+  version '0.6.3'
+  sha256 'd5c50b38bdba7dd11ccd31ebe04de9bb4a1f31a8b30ba967c863e3754d1bfd8b'
 
   # bintray.com is the official download host per the vendor homepage
   url "https://dl.bintray.com/mitchellh/terraform/terraform_#{version}_darwin_amd64.zip"
@@ -11,6 +11,7 @@ cask :v1 => 'terraform' do
   binary 'terraform'
   binary 'terraform-provider-atlas'
   binary 'terraform-provider-aws'
+  binary 'terraform-provider-azure'
   binary 'terraform-provider-cloudflare'
   binary 'terraform-provider-cloudstack'
   binary 'terraform-provider-consul'

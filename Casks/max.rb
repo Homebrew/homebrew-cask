@@ -7,7 +7,7 @@ cask :v1 => 'max' do
           :sha256 => 'd390d6c0b308d5957faf57a05b90960ab602101adb9b80bd61f5948663d6e892'
   name 'Max'
   homepage 'http://sbooth.org/Max/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app "Max-#{version}/Max.app"
 end

@@ -5,7 +5,7 @@ cask :v1 => 'fingerlock' do
   url 'http://www.fingerkeyapp.com/download/FingerLock.dmg'
   name 'FingerLock'
   homepage 'http://www.fingerkeyapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'FingerLock.app'
 end

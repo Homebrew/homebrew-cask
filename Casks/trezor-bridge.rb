@@ -1,6 +1,6 @@
 cask :v1 => 'trezor-bridge' do
   version '1.1.0'
-  sha256 'c1d80463b6327b24c17adb431b411ccde7dcf3e94615548ccd6af2e60923fa69'
+  sha256 '7002758ec4615130a163b8b0046fa63d7c0ac8ce67aa4ffc1a5dc0e07af6bf72'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://mytrezor.s3.amazonaws.com/bridge/#{version}/trezor-bridge-#{version}.pkg"

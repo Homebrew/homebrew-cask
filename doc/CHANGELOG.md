@@ -1,5 +1,109 @@
 # CHANGELOG
 
+## 0.57.0
+
+* __Casks__
+  - 119 Casks added (828 updated) by 326 contributors since 0.56.0
+  - 2778 total Casks
+* __Features__
+  - [#13612][] Include Hbc::Staged module in Hbc::DSL::Preflight
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#11110][] remove `sort` from symlinked.rb <3 [@delphinus35][]
+  - [#13419][] Fix external command example: Cask => Hbc <3 [@zmwangx][]
+  - [#13567][] Gracefully handle interrupts (CTRL-C) at top level
+  - [#13783][] Fix commit range for audit_modified_casks
+  - [#13762][] Fix travis commit range to include only PR commits
+* __Internal Changes__
+  - [#13848][] Create .gitattributes
+  - [#13662][] add .editorconfig file <3 [@williamboman][]
+* __Documentation__
+  - 44 doc commits since 0.56.0
+* __Contributors__
+  - 179 new contributors since 0.56.0
+  - 2256 total contributors
+* __Release Date__
+  - 2015-10-02 17:03:00 UTC
+
+
+[#11110]: https://github.com/caskroom/homebrew-cask/issues/11110
+[#13419]: https://github.com/caskroom/homebrew-cask/issues/13419
+[#13612]: https://github.com/caskroom/homebrew-cask/issues/13612
+[#13762]: https://github.com/caskroom/homebrew-cask/issues/13762
+[#13783]: https://github.com/caskroom/homebrew-cask/issues/13783
+[#13848]: https://github.com/caskroom/homebrew-cask/issues/13848
+[#13567]: https://github.com/caskroom/homebrew-cask/issues/13567
+[#13662]: https://github.com/caskroom/homebrew-cask/issues/13567
+[@delphinus35]: https://github.com/delphinus35
+[@zmwangx]: https://github.com/zmwangx
+[@williamboman]: https://github.com/williamboman
+
+## 0.56.0
+
+* __Casks__
+  - 5 Casks added (40 updated) by 14 contributors since 0.55.0
+  - 2659 total Casks
+* __Features__
+  - [#12992][] Expand tilde in uninstall :delete
+  - [#11200][] Make symlink targets writeable, so we can write altnames
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - none
+* __Internal Changes__
+  - none
+* __Documentation__
+  - 4 doc commits since 0.55.0
+* __Contributors__
+  - 6 new contributors since 0.55.0
+  - 2077 total contributors
+* __Release Date__
+  - 2015-08-04 04:30:00 UTC
+
+
+[#11200]: https://github.com/caskroom/homebrew-cask/issues/11200
+[#12992]: https://github.com/caskroom/homebrew-cask/issues/12992
+
+## 0.55.0
+
+* __Casks__
+  - 66 Casks added (955 updated) by 270 contributors since 0.54.1
+  - 2654 total Casks
+* __Features__
+  - [#9995][] list installed packages versions <3 [@otzy007][]
+  - [#11672][] additions for El Capitan
+  - [#11972][] attempt to clean up launchctl plists on uninstall
+  - [#12067][] Change warning from red to yellow
+  - [#12977][] Add postflight helpers to set file ownership and permissions
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - none
+* __Internal Changes__
+  - add new maintainers: jawshooah and Ngrd
+  - [#11995][] Changing Fake User Agent <3 [@SeanSith][]
+  - [#12785][] Run audit\_modified\_casks script during Travis build
+* __Documentation__
+  - 6 doc commits since 0.54.1
+* __Contributors__
+  - 272 new contributors since 0.54.1
+  - 2071 total contributors
+* __Release Date__
+  - 2015-08-02 04:30:00 UTC
+
+[#11672]: https://github.com/caskroom/homebrew-cask/issues/11672
+[#11972]: https://github.com/caskroom/homebrew-cask/issues/11972
+[#11995]: https://github.com/caskroom/homebrew-cask/issues/11995
+[#12067]: https://github.com/caskroom/homebrew-cask/issues/12067
+[#12785]: https://github.com/caskroom/homebrew-cask/issues/12785
+[#12977]: https://github.com/caskroom/homebrew-cask/issues/12977
+[#9995]: https://github.com/caskroom/homebrew-cask/issues/9995
+[@SeanSith]: https://github.com/SeanSith
+[@otzy007]: https://github.com/otzy007
+
+
+
 ## 0.54.1
 
 * __Casks__
@@ -1017,7 +1121,7 @@
   - 1736 total Casks
 * __Features__
   - [#5517][] support pure gzip containers (*ie* not `tar.gz`)
-  - Numerous undocumented changes to DSL, transitioning to DSL 1.0 (see #4688)  
+  - Numerous undocumented changes to DSL, transitioning to DSL 1.0 (see #4688)
     - [#4953][], [#5540][] add `tags` stanza
     - [#4873][] add `license` stanza
     - [#4869][] add `zap` stanza
@@ -1044,7 +1148,7 @@
   - [#5519][] internal: Zip container does not need to `require 'tmpdir'`
   - [#5120][] internal: install rspec; move first few tests over
   - [#5132][] internal: rspecify scopes and download strategy tests
-  - [#4951][] internal:  
+  - [#4951][] internal:
     - move `read_script_argument` to `Cask::Artifact::Base`
     - generalize `read_script_arguments` and harmonize error messages
     - make `read_script_arguments` accept defaults/overrides

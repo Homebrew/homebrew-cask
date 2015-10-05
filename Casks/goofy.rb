@@ -1,12 +1,12 @@
 cask :v1 => 'goofy' do
-  version :latest
-  sha256 :no_check
+  version '2.2.1'
+  sha256 '74b95abb0b6a48048c3c5094b3a256bd48f20a9537bbf010a5a10c529b62bbdd'
 
-  # uberspace.de is the official download host per the vendor homepage
-  url 'https://dani.taurus.uberspace.de/goofyapp/download.php'
+  # github.com is the official download host per the appcast feed
+  url "https://github.com/danielbuechele/goofy/releases/download/v#{version}/Goofy.app.zip"
   name 'Goofy'
-  appcast 'https://raw.githubusercontent.com/danielbuechele/goofy/master/update_feed.xml',
-          :sha256 => '8edb213ddc1bd54ed844837fc265dc06d4b6674d9c4dd2b3364b405ff03a6c94'
+  appcast 'https://github.com/danielbuechele/goofy/releases.atom',
+          :sha256 => '75d3451f50383b0a4a024ea5937bdf01582d73185e7f63cdebdc62e277815b31'
   homepage 'http://www.goofyapp.com/'
   license :mit
 

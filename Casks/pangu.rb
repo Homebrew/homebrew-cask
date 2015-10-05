@@ -6,7 +6,7 @@ cask :v1 => 'pangu' do
   url "http://dl.pangu.25pp.com/jb/Pangu8_v#{version}.dmg"
   name 'Pangu8'
   homepage 'https://en.pangu.io/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'pangu8.app'
 end

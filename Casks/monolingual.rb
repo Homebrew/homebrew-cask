@@ -10,8 +10,8 @@ cask :v1 => 'monolingual' do
     version '1.5.10'
     sha256 '2dd4d1164ced9c6ff431eb99db12e46faa10747c7753ed3889d6df493ee096a5'
   else
-    version '1.6.7'
-    sha256 'c96175ef35aae6409f760e6c1f70e7cc47d45ab2b769c3238b4a4d979d13756b'
+    version '1.7.1'
+    sha256 '53da7e43e52a2399ecca016e0636a434d619077fb1b01f79954f9de574a41784'
   end
 
   url "https://github.com/IngmarStein/Monolingual/releases/download/v#{version}/Monolingual-#{version}.dmg"

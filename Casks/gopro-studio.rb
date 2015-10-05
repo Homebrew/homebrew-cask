@@ -1,6 +1,6 @@
 cask :v1 => 'gopro-studio' do
-  version '2.5.5.52'
-  sha256 'cab72d115b6f0731cd18839547eae54fc77004a85d15f281b4493bad23affef6'
+  version '2.5.6.75'
+  sha256 '4b632b35cb19aeff3091c1c34fb9ea698105b9b6e227d218245a0b13efe2d477'
 
   url "http://software.gopro.com/Mac/GoProStudio-#{version}.dmg"
   name 'GoPro Studio'

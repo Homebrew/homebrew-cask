@@ -7,5 +7,6 @@ cask :v1 => 'pandora' do
   homepage 'http://www.pandora.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
+  depends_on :cask => 'adobe-air'
   app 'Pandora.app'
 end

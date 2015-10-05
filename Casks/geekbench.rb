@@ -7,7 +7,7 @@ cask :v1 => 'geekbench' do
           :sha256 => 'c8f482bf12e4ec327801466c46bc937d913a6e3a4f8689f54001bed06681faee'
   name 'Geekbench'
   homepage 'http://www.primatelabs.com/geekbench/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Geekbench 3.app'
 end

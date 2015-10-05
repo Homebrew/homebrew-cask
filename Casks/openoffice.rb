@@ -10,4 +10,6 @@ cask :v1 => 'openoffice' do
   tags :vendor => 'Apache'
 
   app 'OpenOffice.app'
+
+  zap :delete => '~/Library/Application Support/OpenOffice'
 end

@@ -7,5 +7,5 @@ cask :v1 => 'gridwars' do
   homepage 'http://gridwars.marune.de/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  app 'gridwars_osx_x86/gridwars.app'
+  suite 'gridwars_osx_x86'
 end

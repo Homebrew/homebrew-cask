@@ -7,7 +7,7 @@ cask :v1 => 'onionshare' do
       :key_url => 'https://onionshare.org/signing-key.asc'
   name 'OnionShare'
   homepage 'https://onionshare.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'OnionShare.app'
 end

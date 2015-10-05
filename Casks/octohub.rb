@@ -6,7 +6,7 @@ cask :v1 => 'octohub' do
   url 'https://rink.hockeyapp.net/api/2/apps/8e6427d1be6e591e851b554c57a77dfc/app_versions/6?format=zip&avtoken=d9d093695c89e51fb1ae75257e7e93fefa8e8f05'
   name 'Octohub'
   homepage 'http://octohubapp.com/'
-  license :unknown
+  license :gratis
 
   app 'Octohub.app'
 

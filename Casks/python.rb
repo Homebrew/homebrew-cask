@@ -1,6 +1,6 @@
 cask :v1 => 'python' do
-  version '2.7.9'
-  sha256 '6255db88811348cf5f950ad93bb301a913c20b118b1bedee4f2110f9e325e1fd'
+  version '2.7.10'
+  sha256 'dc08b90ebc21fd3987909144ed95aa36474f69e6f9c8deb224db5c626838d013'
 
   url "https://www.python.org/ftp/python/#{version}/python-#{version}-macosx10.6.pkg"
   name 'Python'
@@ -15,5 +15,6 @@ cask :v1 => 'python' do
                        "/Library/Frameworks/Python.Framework/Versions/#{version.slice(/\d+\.\d+/)}",
                        "/Library/Python/#{version.slice(/\d+\.\d+/)}",
                        ]
+
   zap :delete => "~/Library/Python/#{version.slice(/\d+\.\d+/)}"
 end

@@ -5,7 +5,7 @@ cask :v1 => 'jaikoz' do
   url 'http://jthink.net/jaikoz/jsp/manualdownload/jaikoz-osx.dmg'
   name 'Jaikoz'
   homepage 'http://jthink.net/jaikoz'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Jaikoz.app'
 end

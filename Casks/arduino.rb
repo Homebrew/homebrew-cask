@@ -1,10 +1,10 @@
 cask :v1 => 'arduino' do
-  version '1.6.5'
-  sha256 '945e65c86f476cb7f7f2d6c77b37d527ed654723aaa10d64e791a93f0568ab4b'
+  version '1.6.5-r5'
+  sha256 'aab6fe813502dddcd87790476f36dd4ba7419e8e5dcf8ef401f41c12e43d0734'
 
   url "http://downloads.arduino.cc/arduino-#{version}-macosx.zip"
   name 'Arduino'
-  homepage 'https://arduino.cc/'
+  homepage 'https://www.arduino.cc/'
   license :oss
 
   app 'Arduino.app'

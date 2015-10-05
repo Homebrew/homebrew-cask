@@ -1,10 +1,11 @@
 cask :v1 => 'audacity' do
-  version '2.1.0'
-  sha256 '0485ab70a86ab6d500b9365b24d279f10971b9260f0b537142b48832f8f84389'
+  version '2.1.1'
+  sha256 '266fa1b2f3aff3894730a8b0e9fcf5c24c93e726f15180855d2516c5c44de10e'
 
-  url "http://downloads.sourceforge.net/project/audacity/audacity/#{version}/audacity-macosx-ub-#{version}.dmg"
+  # oldfoss.com is the official download host per the vendor homepage
+  url "http://app.oldfoss.com:81/download/Audacity/audacity-macosx-ub-#{version}.dmg"
   name 'Audacity'
-  homepage 'http://audacity.sourceforge.net/'
+  homepage 'http://audacityteam.org'
   license :gpl
 
   app 'Audacity/Audacity.app'

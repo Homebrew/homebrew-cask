@@ -1,11 +1,11 @@
 cask :v1 => 'witgui' do
-  version '2.1.5'
-  sha256 '26cb3dab4f7805f5d48665c0478c488223083d164d1a9cf7dd27a96e172ffacd'
+  version '2.2.1'
+  sha256 'c4714f9c689e113bee85bba56b4ec0e38eef7a84dbd7b168d69efdd493e992c4'
 
   url "http://desairem.altervista.org/witgui/download.php?version=#{version}"
   name 'Witgui'
   appcast 'http://desairem.altervista.org/witgui/appcast.xml',
-          :sha256 => '2296729c95b01ea2eeae982672a3e156ae668e7df13c45650657a8fa9f834b0c'
+          :sha256 => '00acad0f41df33566b4fca4ad153b0658bb864ecdafc298c5a5e972e74f4862f'
   homepage 'http://desairem.altervista.org/witgui/wordpress/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

@@ -1,13 +1,13 @@
 cask :v1 => 'unsplash-wallpaper' do
-  version '1132'
-  sha256 'c00e83f17212dc9cd6768f090ecc41bdb30890ecc822a34f5196805ff87b134b'
+  version '1330_1440930902'
+  sha256 'f85d5a05de54c9407f4d2287a2cba54bdb8f5a5f97c64a22b9da129d5a3bcf8c'
 
   # devmate.com is the official download host per the vendor homepage
-  url "http://dl.devmate.com/com.leonspok.osx.Unsplash-Wallpaper/1132/1436541007/UnsplashWallpaper-#{version}.zip"
+  url "https://dl.devmate.com/com.leonspok.osx.Unsplash-Wallpaper/#{version.sub(%r{_.*},'')}/#{version.sub(%r{.*_},'')}/UnsplashWallpaper-#{version.sub(%r{_.*},'')}.zip"
   appcast 'http://updateinfo.devmate.com/com.leonspok.osx.Unsplash-Wallpaper/updates.xml',
-          :sha256 => '16756a17b97312c9baf0f72e64f40dab13f88fd508a09c981307d6e66cce960d'
+          :sha256 => '949b1642f6dfefde4569d16363c353a56892d1771ba08a307f7d05fbe4063840'
   name 'Unsplash Wallpaper'
-  homepage 'http://leonspok.tumblr.com/unsplash-wallpaper'
+  homepage 'http://unsplash-wallpaper.tumblr.com'
   license :gratis
 
   depends_on :macos => '>= :mountain_lion'

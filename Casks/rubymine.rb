@@ -10,8 +10,8 @@ cask :v1 => 'rubymine' do
   app 'RubyMine.app'
 
   zap :delete => [
-                  "~/Library/Application Support/RubyMine#{version.gsub('.','')}",
-                  "~/Library/Preferences/RubyMine#{version.gsub('.','')}",
+                  "~/Library/Application Support/RubyMine#{version.delete('.')}",
+                  "~/Library/Preferences/RubyMine#{version.delete('.')}",
                  ]
 
   caveats <<-EOS.undent

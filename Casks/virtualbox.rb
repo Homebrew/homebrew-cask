@@ -1,8 +1,8 @@
 cask :v1 => 'virtualbox' do
-  version '5.0.0-101573'
-  sha256 '4e27a30af6e4b0f6b1ea69485237d52fc57e6b5608cc234c9480ac0538b31402'
+  version '5.0.6-103037'   # virtualbox.rb and virtualbox-extension-pack.rb should be upgraded together
+  sha256 '612e73aafa3dcdcf99e69e8831fb526512a4e4f8d02a0f4ac9d05baee09bb452'
 
-  url "http://download.virtualbox.org/virtualbox/#{version.sub(/-.*$/, '')}/VirtualBox-#{version}-OSX.dmg"
+  url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*},'')}/VirtualBox-#{version}-OSX.dmg"
   name 'VirtualBox'
   homepage 'https://www.virtualbox.org'
   license :gpl

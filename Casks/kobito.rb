@@ -7,7 +7,7 @@ cask :v1 => 'kobito' do
           :sha256 => 'd39ff5e2dbc54ed1d7d332e3c775107eabab2bc0f99a1b766f4a9fd7f9448e17'
   name 'Kobito'
   homepage 'http://kobito.qiita.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Kobito.app'
 end

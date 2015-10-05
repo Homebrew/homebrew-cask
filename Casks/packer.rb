@@ -1,6 +1,6 @@
 cask :v1 => 'packer' do
-  version '0.8.2'
-  sha256 '1163dd8f01781e959cf1a986e00faeca7b3e2128298d8457105d5361d76dccfc'
+  version '0.8.6'
+  sha256 '91b5e5d4524a7a2f09a07aad1c8e26e1200b47191a42c1b2facac4a27fd674d0'
 
   # bintray.com is the official download host per the vendor homepage
   url "https://dl.bintray.com/mitchellh/packer/packer_#{version}_darwin_amd64.zip"
@@ -25,6 +25,7 @@ cask :v1 => 'packer' do
   binary 'packer-builder-virtualbox-ovf'
   binary 'packer-builder-vmware-iso'
   binary 'packer-builder-vmware-vmx'
+  binary 'packer-post-processor-artifice'
   binary 'packer-post-processor-atlas'
   binary 'packer-post-processor-compress'
   binary 'packer-post-processor-docker-import'

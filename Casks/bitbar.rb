@@ -5,7 +5,7 @@ cask :v1 => 'bitbar' do
   url "https://github.com/stretchr/bitbar/releases/download/#{version}/BitBar.zip"
   name 'BitBar'
   homepage 'https://github.com/stretchr/bitbar/'
-  license :unknown
+  license :mit
 
   app 'BitBar.app'
 end
