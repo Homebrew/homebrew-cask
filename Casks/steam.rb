@@ -9,7 +9,11 @@ cask :v1 => 'steam' do
 
   app 'Steam.app'
 
-  uninstall :quit      => 'com.valvesoftware.steam',
+  uninstall :quit      => [
+                           'com.valvesoftware.steam',
+                           'com.valvesoftware.steam.helper',
+                           'com.valvesoftware.steam.helper.EH'
+                          ],
             :launchctl => [
                            'com.valvesoftware.steamclean',
                            'com.valvesoftware.steam.ipctool'
