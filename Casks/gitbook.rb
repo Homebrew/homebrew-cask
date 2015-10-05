@@ -1,16 +1,11 @@
 cask :v1_1 => 'gitbook' do
-  version '1.1.0'
-  sha256 'f8e2f7b28e7dfa18b3736f8d43d68068228774c0827fdc8c685846a129459c5f'
+  version :latest
+  sha256 :no_check
 
-  url "https://github.com/GitbookIO/editor-legacy/releases/download/#{version}/gitbook-mac.dmg"
-  appcast 'https://github.com/GitbookIO/editor-legacy/releases.atom'
+  url "http://downloads.editor.gitbook.com/download/osx"
   name 'GitBook'
-  homepage 'https://github.com/GitbookIO/editor-legacy'
-  license :apache
+  homepage 'https://www.gitbook.com/editor'
+  license :unknown
 
-  app 'GitBook.app'
-
-  caveats do
-    discontinued
-  end
+  app 'GitBook Editor.app'
 end
