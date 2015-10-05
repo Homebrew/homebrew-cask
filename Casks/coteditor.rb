@@ -10,8 +10,8 @@ cask :v1 => 'coteditor' do
     # github.com is the official download host per the vendor homepage
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   else
-    version '2.2.0'
-    sha256 'd741e2d6b711011d388ba6a81112cd2efb915e6bcc07f0fcfaa7dd8c7cfde132'
+    version '2.2.1'
+    sha256 '9e5b9cae93182346825a98f5fc46754d06bbce0c174caf99d717d992aaf63fbe'
     # github.com is the official download host per the vendor homepage
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   end
