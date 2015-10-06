@@ -10,8 +10,12 @@ cask :v1 => 'couchbase-server-community' do
   end
 
   name 'Couchbase Server'
+  if MacOS.release >= :el_capitan
   appcast 'http://appcast.couchbase.com/membasex.xml',
-          :sha256 => 'f05312af8660b51401dd70cd55ddedeb6de551d5b92372ab155906bc597c9ec7'
+          :sha256 => '26edea946d845a96e21e887348f853dff0a632b7bf6d42e9d559b647855648f6'
+  else
+  appcast 'http://appcast.couchbase.com/membasex.xml',
+          :sha256 => 'ff994c89abf2efcc7dafa6753cfc25c821f3cc24935dccb7a979d170ced56162'
   homepage 'http://www.couchbase.com/'
   license :apache
 
