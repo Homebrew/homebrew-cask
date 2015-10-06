@@ -4,7 +4,7 @@ cask :v1 => 'rubitrack' do
 
   url "http://www.rubitrack.com/files/rubiTrack-#{version}.dmg"
   appcast "http://www.rubitrack.com/autoupdate/sparkle#{version.to_i}.xml",
-          :sha256 => '16c64a4ad655c8f8741985a283a8f7169df80d1386ef9318cbf27ff97b5a255e'
+          :sha256 => '190cd787d3557dde8a3b85a8f4242422cfad2f434aaf0505490633a22ba71f83'
   name 'rubiTrack'
   homepage 'http://www.rubitrack.com/'
   license :commercial

@@ -5,7 +5,7 @@ cask :v1 => 'techstoreclub-simple-comic' do
   url 'https://github.com/techstoreclub/Simple-Comic/releases/download/1.7_252/SimpleComic_1.7_252.zip'
   name 'Simple Comic'
   appcast 'http://www.dancingtortoise.com/simplecomic/simplecomic.xml',
-          :sha256 => 'a60ac75aa2656f347cb8554c411d44dcc6500dd74e666aee5da1e54fb5928bf3'
+          :sha256 => '9ba042626c87499a2fb41a3fc063ee1cd22153518c38ae3fe151e7c9ebbf0be3'
   homepage 'https://github.com/techstoreclub/Simple-Comic'
   license :mit
 

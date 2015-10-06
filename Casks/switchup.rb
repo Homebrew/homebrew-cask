@@ -4,7 +4,7 @@ cask :v1 => 'switchup' do
 
   url "https://www.irradiatedsoftware.com/downloads/SwitchUp_#{version}.zip"
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/switchup.php',
-          :sha256 => 'a9feeb5f7dcb832042ad2d8083844e6f26c0537628820870b27e1d8a8d5abb82'
+          :sha256 => '0d20321633384c6d1c15cb7f4b4f7e67242981d84ebd4dc971429cc46f76c43d'
   name 'SwitchUp'
   homepage 'https://www.irradiatedsoftware.com/switchup/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

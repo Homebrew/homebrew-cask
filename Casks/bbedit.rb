@@ -4,7 +4,7 @@ cask :v1 => 'bbedit' do
 
   url "http://pine.barebones.com/files/BBEdit_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/BBEdit.xml',
-          :sha256 => '6643066a1e2f009353024877cc81e4ba93bf353d72aa6e2b8facd5f1053cf7e2'
+          :sha256 => 'd561b86f676f39962e75020f364d83b8cf13c3f303279f276ebaead4ebb50e1e'
   name 'BBEdit'
   homepage 'http://www.barebones.com/products/bbedit/'
   license :commercial

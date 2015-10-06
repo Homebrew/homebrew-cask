@@ -6,7 +6,7 @@ cask :v1 => 'duet' do
   url "http://dl.devmate.com/com.kairos.duet/#{version.sub(%r{_.*},'')}/#{version.sub(%r{.*_},'')}/duet-#{version.sub(%r{_.*},'')}.zip"
   name 'Duet'
   appcast 'http://updates.duetdisplay.com/checkMacUpdates',
-          :sha256 => 'df779f7d35f7327a12bec484865311b869e6d09ccc6b43e11599d1dd47d1bc9d'
+          :sha256 => '04eef17e70ab06721cd521525bac3bb0a41659281a56ef3187df0b4b140dc71f'
   homepage 'http://www.duetdisplay.com/'
   license :unknown
 

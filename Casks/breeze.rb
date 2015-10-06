@@ -4,7 +4,7 @@ cask :v1 => 'breeze' do
 
   url "https://autumnapps.com/downloads/Breeze#{version}.dmg"
   appcast 'https://www.autumnapps.com/updates/profiles/breeze.php',
-          :sha256 => '57f8c2cd010312440cc9785869c79094ce673492ac42e359f2db9999e87000ab'
+          :sha256 => 'a8d54b5d405b9b89cd00c9f93d877c0153aa516f0af1dfb40df338ea50791892'
   name 'Breeze'
   homepage 'https://autumnapps.com/breeze/'
   license :freemium

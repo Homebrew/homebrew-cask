@@ -6,7 +6,7 @@ cask :v1 => 'actprinter' do
   url "http://www.actprinter.com/mac/ACTPrinter%20for%20Mac%20#{version}.zip"
   name 'ACTPrinter'
   appcast 'http://www.houdah.com/ACTPrinter/updates/profileInfo.php',
-          :sha256 => '01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   homepage 'http://houdah.com/ACTPrinter/'
   license :gratis
 

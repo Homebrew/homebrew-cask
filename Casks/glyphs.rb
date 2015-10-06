@@ -6,7 +6,7 @@ cask :v1 => 'glyphs' do
   name 'Glyphs'
   homepage 'https://www.glyphsapp.com'
   appcast "http://updates.glyphsapp.com/appcast#{version.to_i}.xml",
-          :sha256 => '044bc9b5748222115bc8fb8c783b141958190e3377730dd69d004fbdff3eee9b',
+          :sha256 => '6e50416faef5a0df87f7963e35e8475c9e6608ac28f35fd10dd9f0dfcde7a4b0',
           :format => :sparkle
   license :commercial
 

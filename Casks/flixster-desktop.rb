@@ -6,7 +6,7 @@ cask :v1 => 'flixster-desktop' do
   url 'https://d1rtylazwb77ux.cloudfront.net/desktop/mac/FlixsterDesktop.zip'
   name 'Flixster Desktop for Mac'
   appcast 'https://dtmmt9rxsy2no.cloudfront.net/desktop/mac/FlixsterDesktopMacAppcast.xml',
-          :sha256 => '56ab4151b24f968dfc4234186b9f566ebc99c9c75729bcc2508f722fad0700fa'
+          :sha256 => 'd831ab595160f76b60b038299d2ca9ae32780c150c941886cec54cde6e5ab695'
   homepage 'https://www.flixster.com/about/ultraviolet/'
   license :gratis
 

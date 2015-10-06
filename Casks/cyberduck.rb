@@ -4,7 +4,7 @@ cask :v1 => 'cyberduck' do
 
   url "https://update.cyberduck.io/Cyberduck-#{version}.zip"
   appcast 'https://version.cyberduck.io/changelog.rss',
-          :sha256 => 'b7150d07e69d18141f614de85bc1ddb4fa0ce440288d958bec5fe23104b4ee4c'
+          :sha256 => '4a9b30777203a1b1b1116c5d98e6f0fcbfcb2285eb0618a50518be7b1a8afa04'
   name 'Cyberduck'
   homepage 'https://cyberduck.io/'
   license :gpl

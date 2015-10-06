@@ -16,7 +16,7 @@ cask :v1 => 'texpad' do
   depends_on :macos => '>= :snow_leopard'
 
   appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml',
-          :sha256 => 'bc4c683c395fa35a46b17b1823f3c52480f445ddff2aa7f7fd1361da304dc72a'
+          :sha256 => 'c2ea6567dd4d3af33e44ac393906d034461124468c47cd05dc03f80e5d844bfb'
 
   name 'Texpad'
   homepage 'https://www.texpadapp.com/osx'

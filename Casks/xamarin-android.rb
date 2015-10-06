@@ -5,7 +5,7 @@ cask :v1 => 'xamarin-android' do
   url "https://download.xamarin.com/MonoforAndroid/Mac/mono-android-#{version}.pkg"
   name 'Xamarin.Android'
   appcast 'https://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          :sha256 => '79c309d6dbe6f08f1d022c9376a4678cc94f57be084007df90c5a12839b35cdd',
+          :sha256 => '5b5605346c740b76fadffe206ba0bd87fca32639f425e55dc514b4198a999386',
           :format => :unknown
   homepage 'https://xamarin.com/android'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

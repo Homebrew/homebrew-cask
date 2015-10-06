@@ -6,7 +6,7 @@ cask :v1 => 'beotsmusic' do
   url "https://github.com/kiding/beotsmusic/releases/download/#{version}/BeotsMusic.dmg"
   name 'BeotsMusic'
   appcast 'https://raw.github.com/kiding/beotsmusic/master/appcast.xml',
-          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+          :sha256 => '61f4f72620f655be40780dd5443f5a2d842bee9d6d6d36d4815734d8ccfe1df6'
   homepage 'http://beotsmusic.kiding.net/'
   license :mit
 

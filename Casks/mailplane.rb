@@ -5,7 +5,7 @@ cask :v1 => 'mailplane' do
   url 'http://update.mailplaneapp.com/mailplane_3.php'
   name 'Mailplane'
   appcast 'http://update.mailplaneapp.com/appcast.php?appName=Mailplane',
-          :sha256 => 'adae9ab9b89b12ce661a2475ff8a9d7b8220bb228e01dc38727ff28e2cd855e9'
+          :sha256 => 'bb0d94c7ae6fe94b2a1273cac330bcf446d97e2cf4e3539a6f62097ec93569c5'
   homepage 'http://mailplaneapp.com'
   license :commercial
 

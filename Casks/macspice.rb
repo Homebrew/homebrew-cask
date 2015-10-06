@@ -4,7 +4,7 @@ cask :v1 => 'macspice' do
 
   url "http://www.macspice.com/mirror/binaries/v#{version}/MacSpice3f5.dmg"
   appcast 'http://www.macspice.com/AppCast-v2.xml',
-          :sha256 => '31111c473934c550022a51f86fde12e5c9905515d188b3aa1f3b404b81173101'
+          :sha256 => '06453465656d258c11326d1f2cba6158a11ff9a939f557fb5da1b3b2d4402db0'
   name 'MacSpice'
   homepage 'http://www.macspice.com/'
   license :closed

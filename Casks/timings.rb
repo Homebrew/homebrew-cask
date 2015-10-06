@@ -4,7 +4,7 @@ cask :v1 => 'timings' do
 
   url "http://mediaatelier.com/Timings2/Timings_#{version}.zip"
   appcast 'http://mediaatelier.com/Timings/feed.php',
-          :sha256 => '10f7fc6bbb54db9916650e3d4c37705cb7900230c60f2375d50b1dbad6a61a3d'
+          :sha256 => '72f76163d85517ad0600287a25eb4c0f9fc34bbc243ab168f9dba2e2a3c7fc9e'
   name 'Timings'
   homepage 'http://mediaatelier.com/Timings'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

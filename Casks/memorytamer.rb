@@ -6,7 +6,7 @@ cask :v1 => 'memorytamer' do
   url 'https://paddle.s3.amazonaws.com/fulfillment_downloads/1657/492767/MemoryTamer.zip'
   name 'MemoryTamer'
   appcast 'https://rink.hockeyapp.net/api/2/apps/128ebd3240db358d4b1ea5f228269de6',
-          :sha256 => 'c256f2963829ccaa81d2bd0c98f1580bd93d0e593e946e57d5585c1c44a2bf7b'
+          :sha256 => '49e4e56a8b1041d0bd3bab47fc01b237e5b22d12f1a625a6abcc1717692c3ea2'
   homepage 'http://www.memorytamer.com/'
   license :commercial
 

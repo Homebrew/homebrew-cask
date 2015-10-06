@@ -5,7 +5,7 @@ cask :v1 => 'fakethunder' do
   # martianlaboratory.com is the official download host per the vendor homepage
   url 'http://martianlaboratory.com/fakethunder/fakeThunder217.zip'
   appcast 'http://martianlaboratory.com/fakethunder/update.xml',
-          :sha256 => '71c38833d0f6e1fb929d6914e2cbaa3978a5155cde21353eae7a73d046b10731'
+          :sha256 => '083d15a07f8702e1216f5ec39ee1879d1459e307a6ee7ae223651fed856dae93'
   name 'fakeThunder'
   homepage 'http://martianz.cn/fakethunder/'
   license :gpl

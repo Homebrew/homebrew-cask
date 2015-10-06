@@ -10,7 +10,7 @@ cask :v1 => 'clamxav' do
     sha256 'd058eb5d27201ba7706c7daa9d8fe9f50597c0ce4fd4174555b60f91d097b955'
 
     appcast 'http://www.clamxav.com/sparkle/profileInfo.php',
-            :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+            :sha256 => '1ec8a34273829111da3b4f4c121b442eef5f21c1acd728343ed11bd6619254c9'
   end
 
   url "https://www.clamxav.com/downloads/ClamXav_#{version}.dmg"

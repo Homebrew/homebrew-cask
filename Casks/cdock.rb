@@ -4,7 +4,7 @@ cask :v1 => 'cdock' do
 
   url "https://github.com/w0lfschild/cDock/releases/download/v#{version}/cDock_v#{version}.zip"
   appcast 'https://github.com/w0lfschild/cDock/releases.atom',
-          :sha256 => '9a2877e8cf8c466b2dbf5e3e063f27b663c91b54bb2c108548d52fb18fabc010'
+          :sha256 => 'aee72070788692bd02336b610f77e2ac67a1d1a663fe6feda8414b953b63968d'
   name 'cDock'
   homepage 'http://w0lfschild.github.io/pages/cdock.html'
   license :bsd

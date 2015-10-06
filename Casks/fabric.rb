@@ -5,7 +5,7 @@ cask :v1 => 'fabric' do
   url 'https://ssl-download-crashlytics-com.s3.amazonaws.com/fabric/builds/Fabric-latest.zip'
   name 'Fabric'
   appcast 'https://ssl-download-crashlytics-com.s3.amazonaws.com/fabric/version.xml',
-          :sha256 => '261546b7f617365ffa215ed1d1184f6892ce162ab035a3f31dee90058ef8fa9a'
+          :sha256 => 'da62e0832eac0f2a0a9df61ee3aeb3fcfb83547ca8ddd207ac02c6038c4be5e8'
   homepage 'https://get.fabric.io/'
   license :unknown
 

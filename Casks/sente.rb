@@ -9,7 +9,7 @@ cask :v1 => 'sente' do
 
   url "https://www.thirdstreetsoftware.com/downloads/Sente-#{version}.zip"
   appcast 'https://www.thirdstreetsoftware.com/rss/Sente65.xml?v=6.6.0',
-          :sha256 => '2083ee7a01313014c7d600e13018709521fd3f53d767bd31cd8d2caec2120c7f'
+          :sha256 => 'd58781bdcb37e3734f3bc270f900c3f48458a48cb0e20ae8b027028dba3ac2f0'
   name 'Sente'
   homepage 'http://www.thirdstreetsoftware.com'
   license :freemium

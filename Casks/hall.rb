@@ -5,7 +5,7 @@ cask :v1 => 'hall' do
   url "https://hall.com/desktop/osx/installers/Hall_#{version.gsub('.','_')}.dmg"
   name 'Hall'
   appcast 'https://hall.com/desktop/osx/appcast.xml',
-          :sha256 => '8205b01d6dbb320cab724d9592074c8fae07bd46ff464ef91a8d543285a5d7f7'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   homepage 'https://hall.com/download-hall/hall-for-mac'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

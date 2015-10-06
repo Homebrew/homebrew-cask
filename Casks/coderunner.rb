@@ -5,7 +5,7 @@ cask :v1 => 'coderunner' do
   # cloudfront.net is the official download host per the vendor homepage
   url "https://dktfof1z89xc1.cloudfront.net/CodeRunner%20#{version}.zip"
   appcast 'https://coderunnerapp.com/appcast.xml',
-          :sha256 => 'bc0a476a000d50dfc0e4fe997838b13794c483dd1d41c85752b77c01c9a07594'
+          :sha256 => '390fdaad2854bcad2a12aa293bdc5872f7de52576e4a9c5192431b60773c7020'
   name 'CodeRunner'
   homepage 'https://coderunnerapp.com/'
   license :commercial

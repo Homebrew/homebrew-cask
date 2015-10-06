@@ -5,7 +5,7 @@ cask :v1 => 'lightpaper' do
   # cl.ly is the official download host per the vendor homepage
   url 'http://f.cl.ly/items/3q1Q3C472c3G2L2l2X0m/LightPaper_v0.0.9.dmg'
   appcast 'http://links.clockworkengine.com/lp-mac-update-feed',
-          :sha256 => '88b4051a4255b9d82534f3fc502ecab5fa2d7df73a94ef563e02bec7848276c2'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   name 'LightPaper'
   homepage 'http://www.ashokgelal.com/lightpaper-for-mac/'
   license :gratis

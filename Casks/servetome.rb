@@ -4,7 +4,7 @@ cask :v1 => 'servetome' do
 
   url "http://downloads.zqueue.com/ServeToMe-v#{version}.dmg"
   appcast 'http://zqueue.com/servetome/stm3_mac_appcast.xml',
-          :sha256 => '48cc93d336da8f71ab2a804d609e54d2e81ce4cd17f626e57aa4b7a76624ea69'
+          :sha256 => '1988a16f030536e74d4c766017fa8c6c3ab2c9489ef1a6fade38b6d32e2019e8'
   name 'ServeToMe'
   homepage 'http://zqueue.com/servetome/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

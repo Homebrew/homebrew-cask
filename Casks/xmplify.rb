@@ -5,7 +5,7 @@ cask :v1 => 'xmplify' do
   url 'http://xmplifyapp.com/releases/Xmplify.dmg'
   name 'Xmplify'
   appcast 'http://xmplifyapp.com/appcast.xml',
-          :sha256 => 'c07056253091ae2c4955af290992f23042c356c3ac33fc23e86604f07349c83d'
+          :sha256 => '0a925497543b6cba4c541fbfe38cfdfbfa1ea1db517899d4590828c9fa57d73e'
   homepage 'http://xmplifyapp.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

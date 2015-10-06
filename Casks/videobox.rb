@@ -5,7 +5,7 @@ cask :v1 => 'videobox' do
   url "https://download.tastyapps.com/videobox_#{version}.dmg"
   name 'Videobox'
   appcast 'https://casts.tastyapps.com/cast.html',
-          :sha256 => 'a5946b653f3d86f641836b458e4781d2e97449f0f160674812b18a4700ae30a2'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   homepage 'https://www.tastyapps.com/videobox/'
   license :closed
 

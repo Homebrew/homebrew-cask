@@ -5,7 +5,7 @@ cask :v1 => 'witgui' do
   url "http://desairem.altervista.org/witgui/download.php?version=#{version}"
   name 'Witgui'
   appcast 'http://desairem.altervista.org/witgui/appcast.xml',
-          :sha256 => '00acad0f41df33566b4fca4ad153b0658bb864ecdafc298c5a5e972e74f4862f'
+          :sha256 => '6cac8130e4e785ebf497329b1fb01f43ef340bb619bc3115f623f1522f4a3166'
   homepage 'http://desairem.altervista.org/witgui/wordpress/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

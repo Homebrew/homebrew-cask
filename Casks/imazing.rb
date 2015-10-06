@@ -6,7 +6,7 @@ cask :v1 => 'imazing' do
   url "https://dl.devmate.com/com.DigiDNA.iMazingMac/#{version.sub(%r{-.*},'')}/#{version.sub(%r{.*?-},'')}/iMazingforMac-#{version.sub(%r{-.*},'')}.dmg"
   name 'iMazing'
   appcast 'http://updates.devmate.com/com.DigiDNA.iMazingMac.xml',
-          :sha256 => '396e01d8a69fa6a43886a90dd3a9e10f2febfc4397cf29aaacd7e9e0aa0aaeab'
+          :sha256 => 'f2d90c89ec502d3e6b0bda42291f94a96f9ef53639d8de26820db2b93b6eacfe'
   homepage 'https://imazing.com/'
   license :commercial
 

@@ -4,7 +4,7 @@ cask :v1 => 'hopper-disassembler' do
 
   url "http://www.hopperapp.com/HopperWeb/downloads/Hopper-#{version}.zip"
   appcast 'http://www.hopperapp.com/HopperWeb/appcast_v3.php',
-          :sha256 => '7fef169456987610e7e3c533d8629cfb29cfa38f442cbdd2401c8ac7acd0edd5'
+          :sha256 => 'ae81b57b450c7a0c99def5df3af9bf88994c1c265c1aa8d9fb2ab1bcdfcb7e59'
   name 'Hopper'
   name 'Hopper Disassembler'
   homepage 'http://www.hopperapp.com/'

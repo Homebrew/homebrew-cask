@@ -5,7 +5,7 @@ cask :v1 => 'tokens' do
   url 'http://usetokens.com/latest'
   name 'Tokens'
   appcast 'http://api.usetokens.com/updates/stable',
-          :sha256 => '87feb75f006cd8570bf7d11102e43576e7e6c9a3558454ebaf19376d587e3bc3'
+          :sha256 => '1bec42f216386a4ef2201b4b1f842a2f9cf49854411dba8c13d48aa6a4aa70dd'
   homepage 'http://usetokens.com/'
   license :closed
 

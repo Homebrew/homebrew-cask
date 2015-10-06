@@ -5,7 +5,7 @@ cask :v1 => 'icons8' do
 
   url 'https://s.icons8.com/download/Icons8App_for_Mac_OS.dmg'
   appcast 'https://icons8.com/icons8_cast',
-          :sha256 => 'd12d6eaeef140a4ad9e0801fb4ffba7765f2b40de786115d40526a9523809d2e'
+          :sha256 => '15a63306379c70481dfbac8582ad9573b58a6d46c82e278521b8b2f63ae3e8b7'
   name 'Icons8 App'
   homepage 'https://icons8.com/'
   license :freemium

@@ -5,7 +5,7 @@ cask :v1 => 'resolutionator' do
   url 'http://manytricks.com/download/resolutionator'
   name 'Resolutionator'
   appcast 'http://manytricks.com/resolutionator/appcast.xml',
-          :sha256 => 'daf1d476cf2235d77b3f0303b5f2672cafff7b713914a50a28d68c6747fece2f'
+          :sha256 => 'a4dc116671f35b8b93cccfa77a3962fa6e934704a99793c5799a8c1bc907be1b'
   homepage 'http://manytricks.com/resolutionator/'
   license :gratis
 

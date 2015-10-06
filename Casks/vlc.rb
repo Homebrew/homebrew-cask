@@ -6,7 +6,7 @@ cask :v1 => 'vlc' do
   gpg "#{url}.asc",
       :key_id => '65f7c6b4206bd057a7eb73787180713be58d1adc'
   appcast 'http://update.videolan.org/vlc/sparkle/vlc-intel64.xml',
-          :sha256 => '358ea9032ef0df1658c062bfb11ca4336ebf662b64bffec8e059b1e2faa4f788'
+          :sha256 => '8124c4204920da829739b6e9fed326de75cc2023c624e3f7af8a74aed5045f24'
   name 'VLC'
   name 'VLC media player'
   homepage 'https://www.videolan.org/vlc/'

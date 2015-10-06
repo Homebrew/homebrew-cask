@@ -4,7 +4,7 @@ cask :v1 => 'tomahawk' do
 
   url "http://download.tomahawk-player.org/Tomahawk-#{version}.dmg"
   appcast 'http://download.tomahawk-player.org/sparkle/update.php',
-          :sha256 => 'ef1c646c36717abdd5ffb12bd3a8f758fe12d575d975f6dca5353144679aca4f'
+          :sha256 => 'ee73fcea7ce77725c28d756a9fda5b043811c140e70473e7a463a162b3e721df'
   name 'Tomahawk'
   homepage 'https://www.tomahawk-player.org/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

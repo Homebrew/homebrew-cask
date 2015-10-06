@@ -6,7 +6,7 @@ cask :v1 => 'bleep' do
   url 'https://download-new.utorrent.com/endpoint/bleep/os/osx/track/stable/'
   name 'Bleep'
   appcast 'https://bleeposx.bittorrent.com/appcast.xml',
-          :sha256 => '266fc57b32cbbe67b46513eba330c1986681f767892d97ad66b0a61510d4aaf1'
+          :sha256 => '75d89f7c0d02e912eac9a5dcca9d401dcceee4f89ce355be5a3fd566e1ef7a31'
   homepage 'http://www.bleep.pm/'
   license :gratis
   tags :vendor => 'BitTorrent'

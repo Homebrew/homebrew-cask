@@ -5,7 +5,7 @@ cask :v1 => 'near-lock' do
   url 'http://nearlock.me/downloads/nearlock.dmg'
   name 'Near Lock'
   appcast 'http://nearlock.me/downloads/nearlock.xml',
-          :sha256 => '47bb4ce1aa116a19412d6ff9b33615f8706140b11e5439dc0b2e63e121b1acde'
+          :sha256 => 'd576185dc8e8f6428a69b5fa003d67a2f2a83944a9c74b4557336c14e1d5ca95'
   homepage 'http://nearlock.me/'
   license :gratis
 

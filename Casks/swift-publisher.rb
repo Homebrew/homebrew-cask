@@ -6,7 +6,7 @@ cask :v1 => 'swift-publisher' do
   url 'https://s3.amazonaws.com/belightsoft/SwiftPublisher.dmg'
   name 'Swift Publisher'
   appcast 'https://www.belightsoft.com/download/updates/appcast_SwiftPublisher3.xml',
-          :sha256 => '73bf29fcb6fa689fa32e5a1666ffb8db22401a6033a91e2866fc95d1be7ffd96'
+          :sha256 => '150948d411a38f911a4ae196981dbc1f4a61f0f9e1bbcf8945236b598b23a7be'
   homepage 'https://www.belightsoft.com/products/swiftpublisher/overview.php'
   license :closed
 

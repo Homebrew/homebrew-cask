@@ -4,7 +4,7 @@ cask :v1 => 'ukelele' do
 
   url "https://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Ukelele_#{version}&filename=Ukelele_#{version}.dmg"
   appcast 'https://scripts.sil.org/cms/scripts/render_download.php?site_id=nrsi&format=file&media_id=ukelele_su_feed&filename=ukelele_su_feed.xml',
-          :sha256 => '5409cb8f49f6de2b0a4c2d638a637d2c460c79532914c57ae87adc4551ed8d16'
+          :sha256 => '523b410e4108f8da352d4bef2d953bc0bf2ae7c538b8841c6368ce528f0cb889'
   name 'Ukelele'
   homepage 'https://scripts.sil.org/ukelele'
   license :gratis

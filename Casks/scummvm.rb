@@ -5,7 +5,7 @@ cask :v1 => 'scummvm' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/scummvm/scummvm/#{version}/scummvm-#{version}-macosx.dmg"
   appcast 'http://www.scummvm.org/appcasts/macosx/release.xml',
-          :sha256 => 'bea2fd9739e102c781753c991b6ee6481a1c0c3f00621e96dca06a2b83e42135'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   name 'ScummVM'
   homepage 'http://scummvm.org/'
   license :gpl

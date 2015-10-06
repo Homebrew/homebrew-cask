@@ -6,7 +6,7 @@ cask :v1 => 'insertpic' do
   url "https://s3.amazonaws.com/insertPic/InsertPic_#{version}.zip"
   name 'InsertPic'
   appcast 'http://getinsertpic.com/app_cast',
-          :sha256 => '20c1ab602462b7fc0d5b4cbd555cacf127b69a07a737579598ebcbc0f5b21319'
+          :sha256 => 'dffa55a1b1b73c2a8ec34794c69c6bf92964e888e4f08ac2f55d59ff413a5a7e'
   homepage 'http://www.getinsertpic.com/'
   license :gratis
 

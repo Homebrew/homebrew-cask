@@ -6,7 +6,7 @@ cask :v1 => 'cartographica' do
   url "https://www.cluetrust.com/Downloads/Cartographica_#{version.sub(%r{.*_},'')}.dmg"
   name 'Cartographica'
   appcast 'https://www.cluetrust.com/AppCasts/Cartographica.xml',
-          :sha256 => '9bb9075d8da457886cb86043d4807cbdd210e9f6c883f99ade7898911f90dd35'
+          :sha256 => '836d6694d66c60a7c151b0859f59532d9ebc2803030f7bd6d05f04c2faea5deb'
   homepage 'https://www.macgis.com/'
   license :commercial
 

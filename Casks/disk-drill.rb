@@ -4,7 +4,7 @@ cask :v1 => 'disk-drill' do
 
   url "http://www.cleverfiles.com/releases/DiskDrill_#{version}.zip"
   appcast 'http://www.cleverfiles.com/releases/auto-update/dd2-newestr.xml',
-          :sha256 => '13eb31a4e92818faf847cc8d484ebed32750341f15faff6ef205921372efc9d8'
+          :sha256 => '3f07d5095326732aff7f49488ebd37ad2ab60aede456ea009334f5e6f879572b'
   name 'Disk Drill'
   homepage 'http://www.cleverfiles.com/'
   license :freemium

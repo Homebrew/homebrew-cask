@@ -4,7 +4,7 @@ cask :v1 => 'screenflick' do
 
   url 'http://www.araelium.com/screenflick/downloads/Screenflick.zip'
   appcast 'https://arweb-assets.s3.amazonaws.com/downloads/screenflick/screenflick2.xml',
-          :sha256 => '2da4c7c5a2f954a6e205840f160e488729fe4a9f795c0b9543a2e92f17229a81'
+          :sha256 => '51e1529a4565a754cfbcead19f1c3cd80d01963aefcd01e9382051c548f10838'
   name 'Screenflick'
   homepage 'http://www.araelium.com/screenflick/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

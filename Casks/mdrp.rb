@@ -5,7 +5,7 @@ cask :v1 => 'mdrp' do
   url 'http://www.macdvdripperpro.com/download/'
   name 'Mac DVDRipper Pro'
   appcast 'https://www.macdvdripperpro.com/mdrp_sparkle5.xml',
-          :sha256 => '8e4f7c395dda29438cf1f4a931a626d484886109a01ea9ee733fa6d7c24f4634'
+          :sha256 => '271cc7c77e83248b9e3905bfb61cb0e28ec413d84bffb9783e46696970393f19'
   homepage 'https://www.macdvdripperpro.com/'
   license :commercial
 
