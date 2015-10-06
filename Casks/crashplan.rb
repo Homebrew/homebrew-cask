@@ -1,6 +1,6 @@
 cask :v1 => 'crashplan' do
-  version '4.3.0'
-  sha256 '22d2d26e6f9f356f40029947ace2031a4e34fa9fd54b275de10c6961b8574713'
+  version '4.4.1'
+  sha256 'd8110a9e65b93d3fc52c661453d9e997526ea57c40e1fcc4f41430476135447c'
 
   url "http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_#{version}_Mac.dmg"
   name 'CrashPlan'
