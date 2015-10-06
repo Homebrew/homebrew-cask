@@ -2,10 +2,10 @@ cask :v1 => 'couchbase-server-enterprise' do
   version '4.0.0'
 
   if MacOS.release >= :el_capitan
-    sha256 '1510e21f447f847f39509fdc9838a66e3a951ba8e2c1823848f573984bea480f'
+    sha256 '26edea946d845a96e21e887348f853dff0a632b7bf6d42e9d559b647855648f6'
     url "http://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-elcapitan_x86_64.zip"
   else
-    sha256 '1510e21f447f847f39509fdc9838a66e3a951ba8e2c1823848f573984bea480f'
+    sha256 'ff994c89abf2efcc7dafa6753cfc25c821f3cc24935dccb7a979d170ced56162'
     url "http://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.zip"
   end
 
