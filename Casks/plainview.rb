@@ -6,7 +6,7 @@ cask :v1 => 'plainview' do
   url "https://s3.amazonaws.com/plainviewapp/plainview_#{version}.zip"
   name 'Plainview'
   appcast 'http://barbariangroup.com/assets/appcasts/406/appcast.xml',
-          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+          :sha256 => 'f30f7bdc8123403098c157522720ec56a212af25ac18cce03276fba535c6dae9'
   homepage 'http://barbariangroup.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

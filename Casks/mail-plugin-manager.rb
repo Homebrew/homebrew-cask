@@ -5,7 +5,7 @@ cask :v1 => 'mail-plugin-manager' do
   url 'http://www.chungwasoft.com/files/MPM_latest.zip'
   name 'Mail Plugin Manager'
   appcast 'https://littleknownsoftware.com/feed/mpm',
-          :sha256 => 'c03181d20c855680dffd3a0fe3552694c3eceb166af38c0c92d79af28b763fc9'
+          :sha256 => 'd2c4c72e0bbbeb1b0d159bef42782a2141d292464853f8a511b3f3376cd95fb0'
   homepage 'http://www.chungwasoft.com/mailpluginmanager/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

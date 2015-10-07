@@ -4,7 +4,7 @@ cask :v1 => 'xtrafinder' do
 
   url 'https://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg'
   appcast 'https://www.trankynam.com/xtrafinder/XtraFinder-Appcast.xml',
-          :sha256 => 'f1246aa1bf1285d96d00d3210f6746b1d3b6183f96d221e5714754654aaa2cdb'
+          :sha256 => '8fa692bc68bba10e313a0289a3054b65c70fe984f2cd3a335e7ff02619a0f135'
   name 'XtraFinder'
   homepage 'https://www.trankynam.com/xtrafinder/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

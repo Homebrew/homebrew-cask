@@ -5,7 +5,7 @@ cask :v1 => 'cyberghost' do
   url "https://download.cyberghostvpn.com/mac/cg5mac_#{version}.dmg"
   name 'CyberGhost'
   appcast 'https://download.cyberghostvpn.com/mac/updates/cyberghost_mac_update.inf',
-          :sha256 => '47b058275557f590e834a9ca94f67f697d05565b020a437251377df35564c9fc'
+          :sha256 => 'c006b554455103fc01c48c491d5d4d3dcc35e16656d3224e48a43d4f70bc9508'
   homepage 'https://www.cyberghostvpn.com/'
   license :gratis
 

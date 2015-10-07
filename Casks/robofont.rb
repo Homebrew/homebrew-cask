@@ -5,7 +5,7 @@ cask :v1 => 'robofont' do
   url 'http://robofont.com/downloads/RoboFont_1410152315.dmg'
   name 'RoboFont'
   appcast 'http://doc.robofont.com/appcast',
-          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+          :sha256 => '3da1318b70b29c6ead3aa18d2eb297f48bfd1ee4f701e632f1b89f4096cfa634'
   homepage 'http://robofont.com'
   license :other # See http://doc.robofont.com/license-agreement/
 

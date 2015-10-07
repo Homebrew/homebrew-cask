@@ -6,7 +6,7 @@ cask :v1 => 'goofy' do
   url "https://github.com/danielbuechele/goofy/releases/download/v#{version}/Goofy.app.zip"
   name 'Goofy'
   appcast 'https://github.com/danielbuechele/goofy/releases.atom',
-          :sha256 => '75d3451f50383b0a4a024ea5937bdf01582d73185e7f63cdebdc62e277815b31'
+          :sha256 => '696e4bb6f28a12720eecb059cea69fd34c36b855db70ec00853e0f2972027d63'
   homepage 'http://www.goofyapp.com/'
   license :mit
 

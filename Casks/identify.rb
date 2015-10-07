@@ -4,7 +4,7 @@ cask :v1 => 'identify' do
 
   url "http://identify2.arrmihardies.com/appCast/iDentifyLite#{version}.zip"
   appcast 'https://dl.dropboxusercontent.com/u/1495067/iDentifySparkle/iDentifyAppcast.xml',
-          :sha256 => 'f4136921951cb3bd6a0488d819a6283957adc94d7afcda7477d1bf618d307e85'
+          :sha256 => 'db8eb3671673ae557911e5678b70738b07672dd30e93eec806532448ce22c28e'
   name 'iDentify'
   homepage 'http://identify2.arrmihardies.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

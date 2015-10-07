@@ -5,7 +5,7 @@ cask :v1_1 => 'snowtape' do
   url "http://assets.vemedio.com/software/snowtape/Snowtape-#{version}.dmg"
   name 'Snowtape'
   appcast 'http://vemedio.com/appcast/snowtape2_1',
-          :sha256 => '79ac6e1934109afb7d3c167d0cd6c9575df6cafa28e54398f8450bee68da4395'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   homepage 'http://vemedio.com/products/snowtape'
   license :commercial
 

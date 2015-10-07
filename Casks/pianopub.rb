@@ -4,7 +4,7 @@ cask :v1 => 'pianopub' do
 
   url "http://dev.kunugiken.com/Pianopub/release/Pianopub_#{version}.zip"
   appcast 'http://dev.kunugiken.com/appcasts/Pianopub.xml',
-          :sha256 => '5a120e806605b8c170a543c1fb1ecb22c8a39a7b2ab8f06f7d3efb795017daa4'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   name 'Pianopub'
   homepage 'http://dev.kunugiken.com/Pianopub/'
   license :mit

@@ -6,7 +6,7 @@ cask :v1 => 'lifeslice' do
   url 'http://wanderingstan.com/apps/lifeslice/LifeSlice.dmg'
   name 'LifeSlice'
   appcast 'http://wanderingstan.com/apps/lifeslice/sparkle-lifeslice-appcast-xml.php',
-          :sha256 => '90bd0939501fdc8a5b52bb24532919424ee1201a1b6281761b9e91d3b9068c61'
+          :sha256 => '57aa727b84ce1ac250eb00aa1eb3954f6e733e9d7b7baee9221c49efc8ddaf06'
   homepage 'https://wanderingstan.github.io/Lifeslice/'
   license :oss
 

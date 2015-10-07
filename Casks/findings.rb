@@ -4,7 +4,7 @@ cask :v1 => 'findings' do
 
   url "http://downloads.findingsapp.com/Findings_2725_#{version}.zip"
   appcast 'http://downloads.findingsapp.com/appcast.xml',
-          :sha256 => '51dae6921888aedc49e50375212746d9b92ebde1e653712c138af47eb5b8ab49'
+          :sha256 => 'b360595990d97f436194002c4b30c10459c1867b96b66cb122df48e6a67312fe'
   name 'Findings'
   homepage 'http://findingsapp.com'
   license :freemium

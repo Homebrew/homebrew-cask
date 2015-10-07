@@ -5,7 +5,7 @@ cask :v1 => 'github-desktop' do
   # cloudfront.net is the official download host per the vendor homepage
   url "https://d4hwcs1zqtwzs.cloudfront.net/mac/GitHub%20Desktop%20#{version}.zip"
   appcast 'https://central.github.com/mac/appcast.xml',
-          :sha256 => 'bad3f308d30fa64b22c44071823db7245e92123abfc6a702606b7edf43cc0369'
+          :sha256 => 'b5fac42dd8105c6d6b6940623120da5f7cacd26da8abf2b0511b7b4ee4ad1b8f'
   name 'GitHub Desktop'
   homepage 'https://desktop.github.com/'
   license :gratis

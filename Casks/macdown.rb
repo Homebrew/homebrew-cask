@@ -4,7 +4,7 @@ cask :v1 => 'macdown' do
 
   url 'http://macdown.uranusjr.com/download/latest/'
   appcast 'http://macdown.uranusjr.com/sparkle/macdown/appcast.xml',
-          :sha256 => '81345496a64ca0d0d7ff8936e43ff0e1041ab6ebd61d534bc67f3357291b7478'
+          :sha256 => '989bf03d9f106ad1e9c47b62476c350d353e57c3de2478e30da5d466c5bef4aa'
   name 'MacDown'
   homepage 'http://macdown.uranusjr.com/'
   license :mit

@@ -5,7 +5,7 @@ cask :v1 => 'game-capture-hd' do
   url "http://files.elgato.com/gamecapture/gchdm_#{version.delete('.')}.dmg"
   name 'Game Capture HD'
   appcast 'http://updates.elgato.com/autoupdate/gameCapture20.rss?lang=English',
-          :sha256 => '944d2a802d710c885d8218f7a5aa802e37b5c53f0fb85f52269830113f21d1ea'
+          :sha256 => '619d5f609fdcee62b97d246e533557a31ce7e32735d4a4a11e5e6a4d09f6a59b'
   homepage 'https://www.elgato.com/en/gaming/gamecapture-hd'
   license :commercial
 

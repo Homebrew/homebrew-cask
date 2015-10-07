@@ -6,7 +6,7 @@ cask :v1 => 'transporter-desktop' do
   url "https://secure.connecteddata.com/mac/2.5/software/Transporter_Desktop_#{version}.dmg"
   name 'Transporter Desktop'
   appcast 'http://appsoftware.connecteddata.com/mac/2.5/Appcast.xml',
-          :sha256 => 'e3ab545795691139e7d6062c747a707c6e1db3a1c6a0ab11c4de8caed249e23d'
+          :sha256 => 'efcff11ade18ff84419bb2bdde971c77cf067dc1fb6d84fd5b5898bb1bfefc5b'
   homepage 'http://www.filetransporter.com/'
   license :commercial
 

@@ -5,7 +5,7 @@ cask :v1 => 'apikitchen' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/envolto-static/ApiKitchen_#{version}.dmg"
   appcast 'http://apikitchen.com/updates/appcast.xml',
-          :sha256 => '12eb770758f5d5f36bd92e67e9d0a0da85343a62d2679934812a6c17521d7501'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   name 'APIKitchen'
   homepage 'http://apikitchen.com/'
   license :gratis

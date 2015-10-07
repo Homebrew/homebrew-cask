@@ -5,7 +5,7 @@ cask :v1 => 'bilibili' do
   url "https://github.com/typcn/bilibili-mac-client/releases/download/#{version}/Bilibili.dmg.zip"
   name 'Bilibili'
   appcast 'http://app.eqoe.cn/updates/bilimac.xml',
-          :sha256 => '48fc4cde8832c12247ff2a14f1a2317399884dccd8d10dfc3efdc5432bd5aa95'
+          :sha256 => '2ee55485b869c65a5389da0ed023c57505452f29c027b5cb5a8128d7c3a1a72a'
   homepage 'https://github.com/typcn/bilibili-mac-client/'
   license :gpl
 

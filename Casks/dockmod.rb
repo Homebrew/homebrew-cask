@@ -3,7 +3,7 @@ cask :v1 => 'dockmod' do
     version '2.04'
     sha256 '86c92aa446d436296a800ee832466afa845048316a09df15d0e793f5a4cad55d'
     appcast 'http://spyresoft.com/dockmod/updates.xml',
-            :sha256 => 'dd16b1284504bd43dbe9581508966061002b931b57cd48f30c844dcaaa5f7bd7'
+            :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   else
     version '3.01'
     sha256 '1d7582c5ec59dd4dc15a07db10042b8654ff0047091bb401e98a4bd6810699bb'

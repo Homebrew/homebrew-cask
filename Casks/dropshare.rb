@@ -5,7 +5,7 @@ cask :v1 => 'dropshare' do
   url 'https://getdropsha.re/sparkle/Dropshare-latest.zip'
   name 'Dropshare'
   appcast 'https://getdropsha.re/sparkle/Dropshare.xml',
-          :sha256 => 'bb9b88f179432633594ea0d417ce7b55e8a42fe24a2106e55f1fe711473ec86a'
+          :sha256 => '1ebb0d998879640da85a1e9e26f75c6c8aaae3f294d0f15098247e4ea8a48389'
   homepage 'https://getdropsha.re/'
   license :commercial
 

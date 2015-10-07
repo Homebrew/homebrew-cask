@@ -4,7 +4,7 @@ cask :v1 => 'kobito' do
 
   url "http://kobito.qiita.com/download/Kobito_v#{version}.zip"
   appcast 'http://kobito.qiita.com/appcast.xml',
-          :sha256 => 'd39ff5e2dbc54ed1d7d332e3c775107eabab2bc0f99a1b766f4a9fd7f9448e17'
+          :sha256 => '70b8dc4167e751914b99d633cb7b40d79a6af3f1d4ffe12bdd31717a5b7d7644'
   name 'Kobito'
   homepage 'http://kobito.qiita.com/'
   license :gratis

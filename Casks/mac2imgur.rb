@@ -6,7 +6,7 @@ cask :v1 => 'mac2imgur' do
   url 'https://mileswd.com/mac2imgur/latest'
   name 'mac2imgur'
   appcast 'https://mileswd.com/mac2imgur/update',
-          :sha256 => '1235c533476928d64f6787886a3dc78b421fe8e379cc4e936aeb44152dc09bd1'
+          :sha256 => '9bae9fb9910fbb4143bdb4b87c2deb5ddbbb21b49176ae5e745c54272d69f56e'
   homepage 'https://github.com/mileswd/mac2imgur'
   license :gpl
 

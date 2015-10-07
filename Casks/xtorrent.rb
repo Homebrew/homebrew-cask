@@ -6,7 +6,7 @@ cask :v1 => 'xtorrent' do
   url "http://acquisition.dreamhosters.com/xtorrent/Xtorrent#{version}.dmg"
   name 'Xtorrent'
   appcast 'https://xtorrent.s3.amazonaws.com/appcast.xml',
-          :sha256 => '21d8752a39782479a9f6f2485b0aba0af3f1f12d17ebc938c7526e5ca1a8b355'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   homepage 'http://www.xtorrent.com'
   license :freemium
 

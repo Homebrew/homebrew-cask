@@ -5,7 +5,7 @@ cask :v1 => 'pcalc' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/tlasystems/PCalc-#{version}.dmg"
   appcast 'http://www.pcalc.com/PCalcSUFeed.xml',
-          :sha256 => '5e84c3bd2c0cfa56ff20dffd5106d761d3073d9d1ea61062524cb4d0e6f369f5'
+          :sha256 => '2b582b7aa974e04439df517a5c50dbbce9b5eb30344d4bd4ef3935a7942f4df9'
   name 'PCalc'
   homepage 'http://www.pcalc.com/'
   license :commercial

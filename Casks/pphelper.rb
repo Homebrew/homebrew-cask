@@ -6,7 +6,7 @@ cask :v1 => 'pphelper' do
   name 'pp助手'
   name 'pphelper'
   appcast 'https://liveupdate.25pp.com/macpc/Appcast.xml',
-          :sha256 => 'fcffad714bc89ca0670d8bc0f8cc3371bbf4f078459bc219e6ee7db92ab2e180'
+          :sha256 => 'e6314c4ba7636e5521f5743cdbaf7fd31cef90ff954bdfdfd6185b6d50dc0a25'
   homepage 'http://pro.25pp.com/pp_mac_ios'
   license :gratis
 

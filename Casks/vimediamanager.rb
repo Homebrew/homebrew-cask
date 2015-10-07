@@ -5,7 +5,7 @@ cask :v1 => 'vimediamanager' do
   url "http://mariusth.channelwood.org/vimediamanager/files/vimediamanager_v#{version}.dmg"
   name 'ViMediaManager'
   appcast 'http://mariusth.heliohost.org/vimediamanager/appcast-cocoa.xml',
-          :sha256 => '595974a863e2502ca4cc038cf6f234d4e2606c93dd862bdfeacb50338fb6bf34'
+          :sha256 => '79c39ee503db054d15de98571385729eee7f9a2392ec14b54a2ac2e85a381992'
   homepage 'http://mariusth.heliohost.org/vimediamanager/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

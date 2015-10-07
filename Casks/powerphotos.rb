@@ -6,7 +6,7 @@ cask :v1 => 'powerphotos' do
   url "https://s3.amazonaws.com/fatcatsoftware/powerphotos/PowerPhotos_#{version.delete('.')}.zip"
   name 'PowerPhotos'
   appcast 'http://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml',
-          :sha256 => 'edf08e27f7b1a42e1da538a536631382e1c92e2dd148b4ff4cae93dbde48f25e'
+          :sha256 => '91b33d29cd1d958bcaa11ec802b2b01a1436b21409887ca6c26a28a9408f9eeb'
   homepage 'http://www.fatcatsoftware.com/powerphotos/'
   license :commercial
 

@@ -5,7 +5,7 @@ cask :v1 => 'clarify' do
   url "http://files.clarify-it.com/v2/updaters/#{version}/Clarify.app.zip"
   name 'Clarify'
   appcast 'http://www.bluemangolearning.com/download/clarify/2_0/auto_update/release/clarify_appcast.xml',
-          :sha256 => '4e03cb35a628946e3ea21ba547be2488f792f74364198d365f8f69d9ce4c93cb'
+          :sha256 => 'a00fef4fcfea2fc544d10b47553f7c69524afd0b8be165d2373477e016811e3e'
   homepage 'http://www.clarify-it.com/'
   license :commercial
 

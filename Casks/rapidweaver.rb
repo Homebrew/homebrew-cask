@@ -4,7 +4,7 @@ cask :v1 => 'rapidweaver' do
 
   url "http://realmacsoftware.com/redirects/rapidweaver#{version.to_i}/direct"
   appcast "http://www.realmacsoftware.com/stats/rapidweaver#{version.to_i}.php",
-            :sha256 => '4aea6e90591f80fc6a8f805b877ecab25d6116e7e6fb67fabbc3b0f74b3aacad',
+            :sha256 => 'df1e4c18bb7356b9de4b8ca719021b2bcf9ffffe367b08db66243f78b9b31842',
             :format => :sparkle
   name 'RapidWeaver'
   homepage 'http://realmacsoftware.com/rapidweaver'

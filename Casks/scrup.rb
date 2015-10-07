@@ -5,7 +5,7 @@ cask :v1_1 => 'scrup' do
   # hunch.se is the official download host per the vendor homepage
   url "http://data.hunch.se/scrup/Scrup-#{version}-bd23160.zip"
   appcast 'https://s.rsms.me/scrup/appcast.xml',
-          :sha256 => '140f4487d00bb157286f261bfddb8f7a8c29a4fc2e53a63119bdbe1c828a6d00'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   name 'Scrup'
   homepage 'https://github.com/rsms/scrup'
   license :mit

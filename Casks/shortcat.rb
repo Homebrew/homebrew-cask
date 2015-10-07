@@ -4,7 +4,7 @@ cask :v1 => 'shortcat' do
 
   url "https://files.shortcatapp.com/v#{version}/Shortcat.zip"
   appcast 'https://shortcatapp.com/updates/appcast.xml',
-          :sha256 => '38804c1de1cceb99418fb8393b57a99d78815c4d87dd850fe6b9acb0a4dc01de'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   name 'Shortcat'
   homepage 'https://shortcatapp.com/'
   license :commercial

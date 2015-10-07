@@ -5,7 +5,7 @@ cask :v1 => 'wizard101' do
   url 'https://www.wizard101.com/downloadGameMac/otherdownload'
   name 'Wizard101'
   appcast 'http://versionec.us.wizard101.com//Wizard101.xml',
-          :sha256 => '537ab70a2fe32fd73c7d56950ea5edee58e1e0b1daf0014a2c921d3550d18740'
+          :sha256 => 'cd1a2fdce2b114386c2e6bf77f157c2b7559d4c772a22681ec2cb41b451d0804'
   homepage 'https://www.wizard101.com/'
   license :unknown
 

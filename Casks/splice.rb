@@ -5,7 +5,7 @@ cask :v1 => 'splice' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://spliceosx.s3.amazonaws.com/Splice.dmg'
   appcast 'https://splice.com/appcast.xml',
-          :sha256 => '6928a8b8f69fbfe4fb9ddc49fe681a66bb9f0fea433a20961c20aece6c124f50'
+          :sha256 => '78ca29d1fcccb23888f8b5af9964fae50c61b3b3f543f1f6006fd1571b92ddda'
   name 'Splice'
   homepage 'https://splice.com/'
   license :gratis
