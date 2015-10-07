@@ -1,6 +1,6 @@
 cask :v1 => 'vrep' do
-  version '3.2.1'
-  sha256 '8bf388f38ee215a819a2062b6ee4d29e4607afedd44856b0dc76fe075000fad3'
+  version '3.2.2'
+  sha256 '9aa17c04d2e61fcd0ae2270c22b0a460beea9c86819636912cd9051237b446ff'
 
   url "http://coppeliarobotics.com/V-REP_PRO_EDU_V#{version.gsub('.','_')}_Mac.zip"
   name 'V-REP'
