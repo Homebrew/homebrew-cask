@@ -24,6 +24,7 @@ class Hbc::Source::PathBase
 
       # transitional hack: convert first lines of the new form
       #
+      #     cask v1: 'google-chrome' do
       #     cask :v1 => 'google-chrome' do
       #
       # to the old form
@@ -46,10 +47,10 @@ class Hbc::Source::PathBase
 
       # munge text
       cask_contents.sub!(%r{\A(\s*\#[^\n]*\n)+}, '');
-      if %r{\A\s*cask\s+:v([\d_]+)(test)?\s+=>\s+([\'\"])(\S+?)\3(?:\s*,\s*|\s+)do\s*\n}.match(cask_contents)
-        dsl_version_string = $1
-        is_test = ! $2.nil?
-        header_token = $4
+      if %r{\s*cask\s+(:v([\d_]+)(test)?\s=>|v([\d_]+)(test)?:)\s+([\'\"])(\S+?)\6\s+do\s*\n}.match(cask_contents)
+        dsl_version_string = $2 || $4
+        is_test = !$3.nil? || !$5.nil?
+        header_token = $7
         dsl_version = Gem::Version.new(dsl_version_string.gsub('_','.'))
         superclass_name = is_test ? 'Hbc::TestCask' : 'Hbc::Cask'
         cask_contents.sub!(%r{\A[^\n]+\n}, "class #{cask_class_name} < #{superclass_name}\n")
