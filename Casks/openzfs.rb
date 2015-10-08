@@ -16,5 +16,10 @@ cask :v1 => 'openzfs' do
     pkg "OpenZFS on OS X #{version.sub(%r{-.*},'')} Yosemite or higher.pkg"
   end
 
+  caveats <<-EOS.undent
+    #{token} requires SIP to be disabled on El Capitan, see
+      https://openzfsonosx.org/wiki/Install for further details.
+  EOS
+
   uninstall :pkgutil => 'net.lundman.openzfs.*'
 end
