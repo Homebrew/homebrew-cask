@@ -7,7 +7,7 @@ cask :v1 => 'screenflick' do
           :sha256 => '2da4c7c5a2f954a6e205840f160e488729fe4a9f795c0b9543a2e92f17229a81'
   name 'Screenflick'
   homepage 'http://www.araelium.com/screenflick/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Screenflick.app'
 end
