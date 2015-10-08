@@ -6,7 +6,7 @@ cask :v1 => 'ringtones' do
   appcast 'https://files.thelittleappfactory.com/ringtones/appcast.xml'
   name 'Ringtones'
   homepage 'http://thelittleappfactory.com/ringtones/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Ringtones.app'
 end
