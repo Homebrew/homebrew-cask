@@ -22,15 +22,17 @@ cask :v1 => 'java' do
     system '/usr/bin/sudo', '-E', '--',
       '/usr/libexec/PlistBuddy', '-c', 'Add :JavaVM:JVMCapabilities: string Applets',    "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Info.plist"
     system '/usr/bin/sudo', '-E', '--',
-      '/bin/rm', '-rf', '--', '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
-    system '/usr/bin/sudo', '-E', '--',
-      '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents", '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
-    system '/usr/bin/sudo', '-E', '--',
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home", '/Library/Java/Home'
     system '/usr/bin/sudo', '-E', '--',
       '/bin/mkdir', '-p', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home/bundle/Libraries"
     system '/usr/bin/sudo', '-E', '--',
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home/jre/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"
+    if MacOS.release <= :mavericks
+      system '/usr/bin/sudo', '-E', '--',
+        '/bin/rm', '-rf', '--', '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
+      system '/usr/bin/sudo', '-E', '--',
+        '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents", '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
+    end
   end
 
   uninstall :pkgutil => [
@@ -49,10 +51,10 @@ cask :v1 => 'java' do
                         '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
                         "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents",
                         '/Library/PreferencePanes/JavaControlPanel.prefPane',
-                        '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK',
                         '/Library/Java/Home',
                         '/usr/lib/java/libjdns_sd.jnilib',
-                       ]
+                        MacOS.release <= :mavericks ? '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK' : '',
+                       ].keep_if { |v| !v.empty? }
   zap       :delete => [
                         '~/Library/Application Support/Oracle/Java',
                         '~/Library/Caches/com.oracle.java.Java-Updater',
