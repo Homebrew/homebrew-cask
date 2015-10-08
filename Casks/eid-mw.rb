@@ -1,13 +1,13 @@
 cask :v1 => 'eid-mw' do
-  version '4.0.7'
-  sha256 'e433fee88bf1090e485307beb31733bb76abb41f2ab7cb64c3c2d29de9ffe66f'
+  version '4.1.5'
+  sha256 '1ac58ad4ef9668f0634f7648df79aed41b47789059fa5af29c0e7617b1545f2c'
 
-  url 'http://eid.belgium.be/nl/binaries/beid407_tcm227-262905.dmg'
+  url 'https://downloads.services.belgium.be/eid/beidbuild-415.dmg'
   name 'eID'
   homepage 'http://eid.belgium.be/'
   license :oss
 
-  pkg 'beid-407-signed.pkg'
+  pkg 'beidbuild-signed.pkg'
 
   uninstall :pkgutil => 'be.eid.middleware'
 
