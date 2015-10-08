@@ -5,7 +5,7 @@ cask :v1 => 'screencloud' do
   url "https://screencloud.net/files/mac/ScreenCloud-#{version}.dmg"
   name 'ScreenCloud'
   homepage 'https://screencloud.net/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'ScreenCloud.app'
 end
