@@ -5,7 +5,7 @@ cask :v1 => 'safaricookiecutter' do
   url "http://seiryu.home.comcast.net/~seiryu/software/SafariCookieCutter#{version}.dmg"
   name 'SafariCookieCutter'
   homepage 'http://seiryu.home.comcast.net/~seiryu/scc.html'
-  license :unknown
+  license :bsd
 
   app 'SafariCookieCutter.app'
 end

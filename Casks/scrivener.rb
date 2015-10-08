@@ -7,7 +7,7 @@ cask :v1 => 'scrivener' do
   appcast 'https://www.literatureandlatte.com/downloads/scrivener-2.xml'
   name 'Scrivener'
   homepage 'https://literatureandlatte.com/scrivener.php'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Scrivener.app'
 end
