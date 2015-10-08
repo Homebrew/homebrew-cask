@@ -6,7 +6,7 @@ cask :v1 => 'punto-switcher' do
   url 'http://cache-default02d.cdn.yandex.net/download.cdn.yandex.net/punto/mac/PuntoSwitcher.zip'
   name 'Punto Switcher'
   homepage 'http://punto.yandex.ru'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   pkg 'PuntoSwitcher Installer.pkg'
 
