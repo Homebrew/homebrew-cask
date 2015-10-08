@@ -1,9 +1,9 @@
 cask :v1 => 'prepros' do
-  version '5.8.0'
-  sha256 '42d0d7744ec5667a7ab0bc96e2bdb53551ea294cd0f5be30e16a14a8b2c02c5c'
+  version :latest
+  sha256 :no_check
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "http://prepros.io.s3.amazonaws.com/installers/Prepros-Mac-#{version}.zip"
+  # the vendor maintains a bit.ly link to the latest version they store on Amazon S3
+  url 'http://bit.ly/prepros-mac'
   name 'Prepros'
   homepage 'https://prepros.io/'
   license :commercial
