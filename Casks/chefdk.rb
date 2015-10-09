@@ -1,6 +1,6 @@
 cask :v1 => 'chefdk' do
-  version '0.8.0-1'
-  sha256 '4d4d6d29324aeed5331d7e573a6d658bae78b7bbf3e3502b52702476a8b747b4'
+  version '0.9.0-1'
+  sha256 '8e1d5e79976fc8242c3a1ef2dad728316fc19048c6bc1a68410786ab495b2acb'
 
   # amazonaws is the official download host per the vendor homepage
   url "https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-#{version}.dmg"
@@ -13,29 +13,26 @@ cask :v1 => 'chefdk' do
 
   # When updating this formula, please verify the list of paths to delete (and
   # add to it if necessary):
-  #  find /usr/bin -lname '/opt/chefdk/*'
+  #  find /usr/local/bin -lname '/opt/chefdk/*'
   # (Source: https://docs.chef.io/install_dk.html#mac-os-x)
   uninstall :pkgutil => 'com.getchef.pkg.chefdk',
             :delete  => [
                          '/opt/chefdk/',
-                         '/usr/bin/berks',
-                         '/usr/bin/chef',
-                         '/usr/bin/chef-apply',
-                         '/usr/bin/chef-client',
-                         '/usr/bin/chef-service-manager',
-                         '/usr/bin/chef-shell',
-                         '/usr/bin/chef-solo',
-                         '/usr/bin/chef-vault',
-                         '/usr/bin/chef-windows-service',
-                         '/usr/bin/chef-zero',
-                         '/usr/bin/fauxhai',
-                         '/usr/bin/foodcritic',
-                         '/usr/bin/kitchen',
-                         '/usr/bin/knife',
-                         '/usr/bin/ohai',
-                         '/usr/bin/rubocop',
-                         '/usr/bin/shef',
-                         '/usr/bin/strain',
-                         '/usr/bin/strainer',
+                         '/usr/local/bin/berks',
+                         '/usr/local/bin/chef',
+                         '/usr/local/bin/chef-apply',
+                         '/usr/local/bin/chef-client',
+                         '/usr/local/bin/chef-shell',
+                         '/usr/local/bin/chef-solo',
+                         '/usr/local/bin/chef-zero',
+                         '/usr/local/bin/fauxhai',
+                         '/usr/local/bin/foodcritic',
+                         '/usr/local/bin/kitchen',
+                         '/usr/local/bin/knife',
+                         '/usr/local/bin/ohai',
+                         '/usr/local/bin/rubocop',
+                         '/usr/local/bin/shef',
+                         '/usr/local/bin/strain',
+                         '/usr/local/bin/strainer'
                         ]
 end
