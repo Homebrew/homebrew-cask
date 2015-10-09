@@ -7,7 +7,7 @@ cask :v1 => 'sidplay' do
   appcast 'http://www.sidmusic.org/sidplay/mac/sidplay_appcast.xml'
   name 'SIDPLAY'
   homepage 'http://www.sidmusic.org/sidplay/mac/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'SIDPLAY.app'
 end
