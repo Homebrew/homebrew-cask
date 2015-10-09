@@ -7,7 +7,7 @@ cask :v1 => 'soqlxplorer' do
           :sha256 => '16b61d4f11f57698ffb54da8f25c1ca443f3f35606e1e794eca4c12ee6ebabae'
   name 'SoqlXplorer'
   homepage 'http://www.pocketsoap.com/osx/soqlx/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :mit
 
   app 'SoqlXplorer.app'
 end
