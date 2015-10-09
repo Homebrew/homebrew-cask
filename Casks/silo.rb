@@ -5,7 +5,7 @@ cask :v1 => 'silo' do
   url "https://nevercenter.com/download/Install_Silo_#{version.gsub('.','_')}_mac.zip"
   name 'Silo'
   homepage 'https://nevercenter.com/silo/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
   container :nested => "Install_Silo_#{version.gsub('.','_')}_mac.dmg"
 
   app "Silo #{version.sub(%r{^(\d+\.\d+).*},'\1')}.app"
