@@ -5,7 +5,7 @@ cask :v1 => 'retini' do
   url 'https://github.com/terwanerik/Retini/raw/master/Retini.zip'
   name 'Retini'
   homepage 'http://terwanerik.github.io/Retini/'
-  license :unknown
+  license :oss
 
   app 'Retini.app'
 end
