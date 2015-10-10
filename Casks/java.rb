@@ -52,9 +52,13 @@ cask :v1 => 'java' do
                         "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents",
                         '/Library/PreferencePanes/JavaControlPanel.prefPane',
                         '/Library/Java/Home',
-                        '/usr/lib/java/libjdns_sd.jnilib',
-                        MacOS.release <= :mavericks ? '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK' : '',
-                       ].keep_if { |v| !v.empty? }
+                        if MacOS.release <= :mavericks
+                          [
+                           '/usr/lib/java/libjdns_sd.jnilib',
+                           '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
+                          ]
+                        end
+                       ].keep_if { |v| !v.nil? }
   zap       :delete => [
                         '~/Library/Application Support/Oracle/Java',
                         '~/Library/Caches/com.oracle.java.Java-Updater',
