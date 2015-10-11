@@ -1,6 +1,6 @@
 cask :v1 => 'cuda' do
-  version '7.5.18'
-  sha256 '0a41f9abf0a96b9fa2d41b949054a63c916728bf320fd886d895f48f701d03ea'
+  version '7.5.20'
+  sha256 '53a569d2cbdf43942245ce356ee5851ccf1dbf55e15a035ad0aa95a0b7739181'
 
   url "http://developer.download.nvidia.com/compute/cuda/#{version.to_f}/Prod/local_installers/cuda_#{version}_mac.dmg"
   name 'CUDA'
