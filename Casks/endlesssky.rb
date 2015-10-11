@@ -1,6 +1,6 @@
 cask :v1 => 'endlesssky' do
-  version '0.8.3'
-  sha256 'f3f96120d6222c8546986d39687af063924ec1bd64671ff54929a571361325f3'
+  version '0.8.4'
+  sha256 'e98d1ff580fd69dfdc62a3e892bceabf76f52c1c830fdf1ef2f1c17ace04700d'
 
   url "https://github.com/endless-sky/endless-sky/releases/download/v#{version}/endless-sky-macosx-#{version}.dmg"
   appcast 'https://github.com/endless-sky/endless-sky/releases.atom'
