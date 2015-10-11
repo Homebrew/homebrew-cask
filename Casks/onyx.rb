@@ -16,7 +16,7 @@ cask :v1 => 'onyx' do
     url 'http://www.titanium.free.fr/download/109/OnyX.dmg'
   elsif MacOS.release == :yosemite
     url 'http://www.titanium.free.fr/download/1010/OnyX.dmg'
-  elsif MacOS.release == :el_capitan  
+  elsif MacOS.release == :el_capitan
     url 'http://joel.barriere.pagesperso-orange.fr/download/1011/OnyX.dmg'
   else
     # Unusual case: there is no fall-through.  The software will stop
