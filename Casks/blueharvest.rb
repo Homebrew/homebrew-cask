@@ -1,6 +1,6 @@
 cask :v1 => 'blueharvest' do
-  version '6.2.2'
-  sha256 'e1e9c93e5537444f314b0bb18c6f7bed9e34d43d8f8502d0755fca4340e7a6a6'
+  version '6.3.1'
+  sha256 '2af18a53012d9472422ec802e09eb1de7d0a79db9b62eb385940927635c8ad2e'
 
   url "http://zeroonetwenty.com/downloads/BlueHarvest#{version.delete('.')}.dmg"
   appcast 'https://cp37.ezyreg.com/~zeroonet/downloads/versioninfo/sparkle/blueharvest6.xml',
