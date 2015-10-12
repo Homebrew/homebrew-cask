@@ -1,10 +1,10 @@
 cask :v1 => 'lightworks' do
-  version '12.0.2'
-  sha256 '6d58dbc46981bd8f8e109f77ceb3605fda8af075d1411975950b2d30bbde590b'
+  version '12.5.0'
+  sha256 '579a953a975de6b0c7b8c3608286576b835288444f14b06a08297f94602cd317'
 
-  url "http://www.lwks.com/dmpub/lightworks_v#{version}.dmg"
+  url "https://www.lwks.com/dmpub/lightworks_v#{version}.dmg"
   name 'Lightworks'
-  homepage 'http://www.lwks.com'
+  homepage 'https://www.lwks.com'
   license :freemium
 
   app 'Lightworks.app'
