@@ -1,6 +1,6 @@
 cask :v1 => 'paw' do
-  version '2.2.4'
-  sha256 '899637641d6266db7f803d9e19c34d63e23e8897cf548f1b0a30901fa99342e7'
+  version '2.2.5'
+  sha256 '1a752b5d97fc8788839ce447411d26b0b43a433a4f8f4098e79d842c3ff58e46'
 
   url "https://luckymarmot.com/paw/download/#{version}"
   name 'Paw'
