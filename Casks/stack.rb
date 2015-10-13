@@ -10,9 +10,5 @@ cask :v1_1 => 'stack' do
 
   binary "stack-#{version}-x86_64-osx/stack"
 
-  postflight do
-    set_permissions "#{staged_path}/stack-#{version}", '+x'
-  end
-
   depends_on :arch => :x86_64
 end
