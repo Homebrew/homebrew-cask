@@ -28,7 +28,7 @@ $ brew cask install google-chrome
 And there we have it. Google Chrome installed with a few quick commands: no clicking, no dragging, no dropping.
 
 ```bash
-$ open ~/Applications/"Google Chrome.app"
+$ open -a "Google Chrome"
 ```
 
 ## Learn More
