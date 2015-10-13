@@ -10,5 +10,5 @@ cask :v1 => 'fontforge' do
 
   app 'FontForge.app'
 
-  depends_on :cask => 'xquartz'
+  depends_on :x11 => true
 end
