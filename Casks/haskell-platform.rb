@@ -9,7 +9,7 @@ cask :v1 => 'haskell-platform' do
 
   pkg "Haskell Platform #{version} 64bit-signed.pkg"
 
-  uninstall :script => { :executable => '/usr/bin/uninstall-hs', :args => %w[all --remove] },
+  uninstall :script => { :executable => '/Library/Haskell/bin/uninstall-hs', :args => %w[all --remove] },
             :pkgutil => 'org.haskell.HaskellPlatform.*'
 
   depends_on :macos => '>= :snow_leopard'
