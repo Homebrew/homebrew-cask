@@ -1,4 +1,4 @@
-cask :v1 => 'pocketcasts' do
+cask :v1 => 'pocketcast' do
   version '1.2.1'
   sha256 '09837af1105cbb37ef3c74cdc0c000385686777d86c20f2601e49832d553713c'
 
@@ -8,5 +8,5 @@ cask :v1 => 'pocketcasts' do
   homepage 'https://github.com/mortenjust/PocketCastsOSX'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  app 'PocketCasts.app'
+  app 'PocketCast.app'
 end
