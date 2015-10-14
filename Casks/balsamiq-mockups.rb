@@ -1,6 +1,6 @@
 cask :v1 => 'balsamiq-mockups' do
-  version '3.2.2'
-  sha256 '3b23ac6d7108dc3515a60c6fcb2bdd82331c4466833a4eddd0b579a9fbe6bd24'
+  version '3.2.3'
+  sha256 '499b2771f72e477ce9e4fc018735f32f9ed33d668b00078f3f2146d5dbf3df9b'
 
   url "https://builds.balsamiq.com/mockups-desktop/Balsamiq_Mockups_#{version}.dmg"
   name 'Balsamiq Mockups'
@@ -8,4 +8,6 @@ cask :v1 => 'balsamiq-mockups' do
   license :commercial
 
   app "Balsamiq Mockups #{version.to_i}.app"
+
+  zap :delete => '~/Library/Preferences/BalsamiqMockups3'
 end
