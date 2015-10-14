@@ -7,5 +7,31 @@ cask :v1 => 'soapui' do
   homepage 'http://www.soapui.org'
   license :oss
 
-  installer :manual => 'SoapUI 5.2.1 Installer.app'
+  installer :script => 'SoapUI 5.2.1 Installer.app/Contents/MacOS/JavaApplicationStub',
+            :args => %w[-c],
+            :input => [
+              'o',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '1',
+              '/Applications',
+              '1',
+              'n',
+              'n',
+              'n'
+            ]
+
+  # Not installing HermesJMS above, but if we did, add:
+  # '/Applications/HermesJMS'
+  uninstall :delete => [
+    '/Applications/SoapUI-5.2.1.app'
+  ]
 end
