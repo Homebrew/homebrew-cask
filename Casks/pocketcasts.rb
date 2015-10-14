@@ -8,5 +8,5 @@ cask :v1 => 'pocketcasts' do
   homepage 'https://github.com/mortenjust/PocketCastsOSX'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  app 'PocketCasts.app'
+  app 'PocketCast.app'
 end
