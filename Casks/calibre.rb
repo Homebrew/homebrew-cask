@@ -34,4 +34,10 @@ cask :v1 => 'calibre' do
   binary 'calibre.app/Contents/MacOS/lrs2lrf'
   binary 'calibre.app/Contents/MacOS/markdown-calibre'
   binary 'calibre.app/Contents/MacOS/web2disk'
+
+  zap :delete => [
+                  '~/Library/Preferences/net.kovidgoyal.calibre.plist',
+                  '~/Library/Preferences/calibre',
+                  '~/Library/Caches/calibre',
+                 ]
 end
