@@ -1,5 +1,29 @@
 # CHANGELOG
 
+## 0.58.0
+
+* __Casks__
+  - 19 Casks added
+  - 2797 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#14144][] updated accessibility method for el capitain compatibility <3 [@adityadalal924][]
+* __Internal Changes__
+  - none
+* __Documentation__
+  - 3 doc commits since 0.57.0
+* __Contributors__
+  - 45 new contributors since 0.57.0
+  - 2301 total contributors
+* __Release Date__
+  - 2015-10-15 01:10:00 UTC
+
+[#14144]: https://github.com/caskroom/homebrew-cask/issues/14144
+[@adityadalal924]: https://github.com/adityadalal924
+
 ## 0.57.0
 
 * __Casks__
