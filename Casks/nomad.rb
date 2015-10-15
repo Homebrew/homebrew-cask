@@ -1,6 +1,6 @@
 cask :v1 => 'nomad' do
-  version '0.1.0'
-  sha256 'bea96ca7fcb4e6ce446ab86c26770f4b2dbaf936e299355831e9a383d67b4849'
+  version '0.1.2'
+  sha256 '8fcff1029c6cc9bf24ee441d749ef1039a6132e62ef486561a8a8d9e6e519fbf'
 
   # bintray.com is the official download host per the vendor homepage
   url "https://dl.bintray.com/mitchellh/nomad/nomad_#{version}_darwin_amd64.zip"
