@@ -30,7 +30,8 @@ cask :v1 => 'soapui' do
   #   http://resources.ej-technologies.com/install4j/help/doc/index.html
   #
   installer :script => "SoapUI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
-            :args => [ '-q',
+            :args => [ 
+                '-q',
                 '-Vsys.adminRights$Boolean=true',
                 '-Vsys.programGroupDisabled$Boolean=true',
                 '-VcreateDesktopLinkAction$Boolean=false',
