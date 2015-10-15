@@ -1,6 +1,6 @@
 cask :v1 => 'freesmug-chromium' do
-  version '45.0.2454.101'
-  sha256 '663fd72f9089f601885959a3ca4db1ec992c210023ae34b6b1389a5ca1a8817b'
+  version '46.0.2490.71'
+  sha256 'bd97725594461ccdd1cbd81de8a00a16b15e2dcbb2cb3c9866c3af251fa562b3'
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/osxportableapps/Chromium_OSX_#{version}.dmg"
