@@ -1,13 +1,20 @@
 cask :v1 => 'timings' do
-  version '2.4.1'
-  sha256 'b68b3d01f552bf5c4679f740fb2ecbc1011a9e768208f236814131efa5bc3853'
+  version '2.4.3'
+  sha256 '2007794e42d30b9428716272c7fc9c62354553f9535059bcae12e436929dc280'
 
   url "http://mediaatelier.com/Timings2/Timings_#{version}.zip"
-  appcast 'http://mediaatelier.com/Timings/feed.php',
-          :sha256 => '10f7fc6bbb54db9916650e3d4c37705cb7900230c60f2375d50b1dbad6a61a3d'
+  appcast 'http://mediaatelier.com/Timings2/feed.php',
+          :sha256 => '6efe27fb9d44450a8a67d9bcbb746aae1b6b6f1d65358019f13150dc6a7d7a5e'
   name 'Timings'
   homepage 'http://mediaatelier.com/Timings'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
+  depends_on :macos => '>= :mavericks'
 
   app 'Timings.app'
+
+  zap :delete => [
+                  '~/Library/Preferences/com.mediaateller.Timings.plist',
+                  '~/Library/Application Support/Timings',
+                  '~/Library/Caches/com.mediaateller.timings',
+                 ]
 end
