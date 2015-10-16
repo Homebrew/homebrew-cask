@@ -1,5 +1,5 @@
 cask :v1 => 'pepper-flash' do
-  version '18'
+  version '19'
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://admdownload.adobe.com/bin/live/AdobeFlashPlayer_#{version}ppau_a_install.dmg"
