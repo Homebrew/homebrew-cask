@@ -20,5 +20,8 @@ cask :v1 => 'quicksilver' do
   zap :delete => [
                   '~/Library/Preferences/com.blacktree.Quicksilver.plist',
                   '~/Library/Application Support/Quicksilver',
+                  '~/Library/Caches/com.blacktree.Quicksilver',
+                  '~/Library/Caches/Quicksilver',
+                  '~/Library/Saved Application State/com.blacktree.Quicksilver.savedState'
                  ]
 end
