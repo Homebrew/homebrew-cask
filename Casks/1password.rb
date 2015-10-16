@@ -17,8 +17,8 @@ cask :v1 => '1password' do
 
     app "1Password #{version.to_i}.app"
   else
-    version '5.3.2'
-    sha256 '6051434c77ad48af7b11f2259a91b12ded21ce3357c8db4780718ce83f44b668'
+    version '5.4'
+    sha256 '1ac9970f8a8abb456f4d310d4e6f680d30bcd19f053f63e1e08122757a9b2a95'
 
     # cloudfront.net is the official download host per the vendor homepage
     url "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-#{version}.zip"
