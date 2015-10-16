@@ -14,11 +14,11 @@ cask :v1 => 'sublime-text' do
   binary 'Sublime Text 2.app/Contents/SharedSupport/bin/subl'
 
   zap :delete => [
-                  '~/Library/Application Support/Sublime Text 2/Installed Packages',
-                  '~/Library/Application Support/Sublime Text 2/Packages',
-                  '~/Library/Application Support/Sublime Text 2/Pristine Packages',
-                 ],
-      :rmdir  => '~/Library/Application Support/Sublime Text 2'
+                  '~/Library/Application Support/Sublime Text 2',
+                  '~/Library/Preferences/com.sublimetext.2.plist',
+                  '~/Library/Caches/com.sublimetext.2',
+                  '~/Library/Saved Application State/com.sublimetext.2.savedState'
+                 ]
 
   caveats do
     files_in_usr_local
