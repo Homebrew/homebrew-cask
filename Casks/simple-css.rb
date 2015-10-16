@@ -1,7 +1,11 @@
-class SimpleCss < Cask
-  url 'http://www.hostm.com/downloads/simplecss/mac/SimpleCSS.zip'
-  homepage 'http://www.hostm.com/css'
-  version 'latest'
-  no_checksum
-  link 'Simple CSS.app'
+cask :v1 => 'simple-css' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://www.hostm.com/downloads/simplecss/mac/SimpleCSS.zip'
+  name 'Simple CSS'
+  homepage 'https://www.hostm.com/css'
+  license :gratis
+
+  app 'Simple CSS.app'
 end

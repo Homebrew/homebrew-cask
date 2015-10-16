@@ -1,7 +1,13 @@
-class Tiled < Cask
-  url 'http://downloads.sourceforge.net/project/tiled/tiled-qt/0.9.1/tiled-qt-0.9.1.dmg'
+cask :v1 => 'tiled' do
+  version '0.14.1'
+  sha256 'f554f0d35c63b55483f0eea13f45e3c98deed59e3cf9c9e201e0599d909929ff'
+
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/bjorn/tiled/releases/download/v#{version}/tiled-#{version}.dmg"
+  appcast 'https://github.com/bjorn/tiled/releases.atom'
+  name 'Tiled'
   homepage 'http://www.mapeditor.org/'
-  version '0.9.1'
-  sha256 '17560ca54389c077e80636ac96ddb905d2f5a3a1932562a0be6d91c76bf395a1'
-  link 'Tiled.app'
+  license :gpl
+
+  app 'Tiled.app'
 end

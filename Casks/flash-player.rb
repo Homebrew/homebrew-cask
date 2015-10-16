@@ -1,7 +1,18 @@
-class FlashPlayer < Cask
-  url 'http://fpdownload.macromedia.com/pub/flashplayer/updaters/13/flashplayer_13_sa.dmg'
+cask :v1 => 'flash-player' do
+  version '19.0.0.226'
+  sha256 '58b8827b4afe865aa020688c75dff1e48d2cec33d2c83ce836d8b49a7fa58529'
+
+  # macromedia.com is the official download host per the vendor homepage
+  url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.to_i}/flashplayer_#{version.to_i}_sa.dmg"
+  name 'Adobe Flash Player'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
-  version '13.0.0.182'
-  sha256 '8f82c71bff085133b275455e8c6b51a7da16e2c4e1fa0379802e8e011e01de48'
-  link 'Flash Player.app'
+  license :gratis
+  tags :vendor => 'Adobe'
+
+  app 'Flash Player.app'
+
+  zap :delete => [
+                  '~/Library/Caches/Adobe/Flash Player',
+                  '~/Library/Logs/FlashPlayerInstallManager.log',
+                 ]
 end

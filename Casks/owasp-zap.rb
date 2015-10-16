@@ -1,7 +1,15 @@
-class OwaspZap < Cask
-  url 'https://zaproxy.googlecode.com/files/ZAP_2.2.2_Mac_OS_X.zip'
+cask :v1 => 'owasp-zap' do
+  version '2.4.2'
+  sha256 'b6d8f3a9632ab99bae4097084df74efd2321c22182aff3a119dd1e69ecc69a63'
+
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/zaproxy/zaproxy/releases/download/#{version}/ZAP_#{version}_MAC_OS_X.dmg"
+  name 'OWASP Zed Attack Proxy'
+  name 'OWASP ZAP'
+  name 'ZAP'
   homepage 'https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project'
-  version '2.2.2'
-  sha256 'b83f9808bbda4b9c34c7aba8d62e49c12337457b5ffed423c2ad08c8bcd048fb'
-  link 'OWASP ZAP.app'
+  license :apache
+  tags :vendor => 'OWASP'
+
+  app 'OWASP ZAP.app'
 end

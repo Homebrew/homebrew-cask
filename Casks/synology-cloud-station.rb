@@ -1,9 +1,14 @@
-class SynologyCloudStation < Cask
-  url 'http://global.download.synology.com/download/Tools/CloudStation/3005/Mac/CloudStation-3005-Mac-Installer.dmg'
-  homepage 'http://www.synology.com/'
-  version '3005'
-  sha256 '366847d1c2ccc242a0be24775610ca39b0498a0ae07cd38bf9dbd1e26839995f'
-  install 'CloudStation-3005-Mac-Installer.pkg'
-  uninstall :pkgutil => 'synology.cloudstation.installer',
+cask :v1 => 'synology-cloud-station' do
+  version '3.2-3484'
+  sha256 'aa544573ca9f7d3cb6693cba2406901a8b5e241eba0ed12762346c2f31b7c0cd'
+
+  url "https://global.download.synology.com/download/Tools/CloudStation/#{version}/Mac/Installer/synology-cloud-station-#{version.sub(%r{.*-},'')}.dmg"
+  name 'Synology Cloud Station'
+  homepage 'https://www.synology.com/'
+  license :gratis
+
+  pkg "synology-cloud-station-#{version.sub(%r{.*-},'')}.pkg"
+
+  uninstall :pkgutil => 'com.synology.CloudStation',
             :launchctl => 'com.synology.Synology Cloud Station'
 end

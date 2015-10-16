@@ -1,7 +1,11 @@
-class Subsurface < Cask
-  url 'http://subsurface.hohndel.org/downloads/Subsurface-4.0.3.dmg'
-  homepage 'http://subsurface.hohndel.org/'
-  version '4.0.3'
-  sha256 'bad56a7c6a1d99476b9361cd9de42adc458cc61eddcb519cefb049f2faf4a96d'
-  link 'Subsurface.app'
+cask :v1 => 'subsurface' do
+  version '4.4.2'
+  sha256 '7769b1b94623b1ddefe194c361888c9a88d7b45ad039a4a4082099b92da824a8'
+
+  url "https://subsurface-divelog.org/downloads/Subsurface-#{version}.dmg"
+  name 'Subsurface'
+  homepage 'https://subsurface-divelog.org'
+  license :gpl
+
+  app 'Subsurface.app'
 end

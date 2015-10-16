@@ -1,7 +1,12 @@
-class BluRayPlayer < Cask
+cask :v1 => 'blu-ray-player' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.macblurayplayer.com/user/download/Mac_Bluray_Player.dmg'
+  name 'Macgo Mac Blu-ray Player'
   homepage 'http://www.macblurayplayer.com/'
-  version '2.10.2'
-  sha256 'e866415e846dc923102126c04528055018c5076552c6c2c05c96283bcf3c1572'
-  link 'Blu-ray Player.app'
+  license :commercial
+  tags :vendor => 'Macgo'
+
+  app 'Blu-ray Player.app'
 end

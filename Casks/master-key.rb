@@ -1,7 +1,12 @@
-class MasterKey < Cask
+cask :v1 => 'master-key' do
+  version :latest
+  sha256 :no_check
+
   url 'http://macinmind.com/MasterKey.dmg'
+  appcast 'http://macinmind.com/pads/MasterKeyappcast.xml'
+  name 'Master Key'
   homepage 'http://macinmind.com/?area=app&app=masterkey&pg=info'
-  version 'latest'
-  no_checksum
-  link 'Master Key.app'
+  license :commercial
+
+  app 'Master Key.app'
 end

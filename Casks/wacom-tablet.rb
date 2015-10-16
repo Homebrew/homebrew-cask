@@ -1,9 +1,14 @@
-class WacomTablet < Cask
-  url 'http://cdn.wacom.com/u/drivers/mac/pro/WacomTablet_6.3.7-3.dmg'
+cask :v1 => 'wacom-tablet' do
+  version '6.3.14-2'
+  sha256 '4fc3aca61bb66f6690309ab022f61533b68a1f2f64ee1bd3a49a5852c3c9d9e8'
+
+  url "http://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_#{version}.dmg"
+  name 'Wacom Tablet'
   homepage 'http://www.wacom.com/'
-  version '6.3.7-3'
-  sha256 '894271d4ae01781664e8489e57471aaf78c7b84a48dce78b219a9259c6fc4e44'
-  install 'Install Wacom Tablet.pkg'
+  license :gratis
+
+  pkg 'Install Wacom Tablet.pkg'
+
   uninstall :launchctl => 'com.wacom.wacomtablet',
             :quit => [
                       'com.wacom.TabletDriver',
@@ -11,10 +16,16 @@ class WacomTablet < Cask
                       'com.wacom.WacomTouchDriver',
                      ],
             :kext => [
-                      'com.Wacom.iokit.TabletDriver',
+                      'com.wacom.kext.ftdi',
                       'com.wacom.kext.wacomtablet',
                       'com.silabs.driver.CP210xVCPDriver',
                       'com.silabs.driver.CP210xVCPDriver64',
                       ],
-            :pkgutil => 'com.wacom.installwacomtablet'
+            :pkgutil => 'com.wacom.TabletInstaller',
+            :delete => '/Applications/Wacom Tablet.localized'
+
+  zap :delete =>  [
+                    '~/Library//Preferences/com.wacom.wacomtablet.prefs',
+                    '~/Library//Preferences/com.wacom.wacomtouch.prefs'
+                  ]
 end

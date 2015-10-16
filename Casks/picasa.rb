@@ -1,7 +1,17 @@
-class Picasa < Cask
-  url 'http://dl.google.com/photos/picasamac39.dmg'
-  homepage 'http://picasa.google.com/'
+cask :v1 => 'picasa' do
   version '3.9'
-  sha256 'a3c4f0f0fdb94471e024469f83b29be333a8f3359aea1c5e0bfeca0d6b5c5d62'
-  link 'Picasa.app'
+  sha256 'df84018272ecf0f56e78e73cb6eb8f7c08911f6e24294fdc811e362a35dace9c'
+
+  url "https://dl.google.com/photos/picasamac#{version.delete('.')}.dmg"
+  name 'Picasa'
+  homepage 'https://picasa.google.com/'
+  license :gratis
+
+  app 'Picasa.app'
+
+  zap :delete => [
+                  '~/Library/Preferences/com.google.picasa.plist',
+                  '~/Library/Application Support/Google/Picasa3',
+                  '~/Library/Saved Application State/com.google.picasa.savedState'
+                 ]
 end

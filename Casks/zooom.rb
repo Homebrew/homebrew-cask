@@ -1,10 +1,20 @@
-class Zooom < Cask
-  url 'http://software.coderage-software.com/zooom/Zooom_2.5.0.dmg'
+cask :v1 => 'zooom' do
+  version :latest
+  sha256 :no_check
+
+  url 'http://software.coderage-software.com/zooom/Zooom_Latest.dmg'
+  name 'Zooom'
+  name 'Zooom/2'
   homepage 'http://coderage-software.com/zooom'
-  version '2.5.0'
-  sha256 '944d8c6f0869963ea0c0b11491d05eaa4357953072c43519f674fa81216e9e34'
-  install 'Zooom2.pkg'
+  license :commercial
+
+  pkg 'Zooom2.pkg'
+
+  uninstall :pkgutil => 'com.coderage.pkg.Zooom2'
+
+  depends_on :macos => '>= :mavericks'
+
   caveats do
-    os_version_only '10.8', '10.7', '10.6', '10.5'
+    "There are known issues with installing this package, so if installation fails you may need to run the installer at #{staged_path}/Zooom2.pkg manually."
   end
 end

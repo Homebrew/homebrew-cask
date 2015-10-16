@@ -1,7 +1,12 @@
-class Minecraft < Cask
+cask :v1 => 'minecraft' do
+  version :latest
+  sha256 :no_check
+
+  # amazonaws.com is the official download host per the vendor homepage
   url 'https://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.dmg'
-  homepage 'http://minecraft.net'
-  version 'latest'
-  no_checksum
-  link 'Minecraft.app'
+  name 'Minecraft'
+  homepage 'https://minecraft.net/'
+  license :commercial
+
+  app 'Minecraft.app'
 end

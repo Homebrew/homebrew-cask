@@ -1,7 +1,12 @@
-class Cloudytabs < Cask
-  url 'https://github.com/josh-/CloudyTabs/releases/download/v1.2/CloudyTabs.zip'
+cask :v1 => 'cloudytabs' do
+  version '1.6'
+  sha256 '0007f978204e55f3d52b099b143ee8dedb418f3d25ab1805ee1ce16e75a13983'
+
+  url "https://github.com/josh-/CloudyTabs/releases/download/v#{version}/CloudyTabs.zip"
+  appcast 'https://github.com/josh-/CloudyTabs/releases.atom'
+  name 'CloudyTabs'
   homepage 'https://github.com/josh-/CloudyTabs/'
-  version '1.2'
-  sha256 '7409dcce88355799a65060bdd3c957c4a3146886f4fb489d41208d4d9ed7d905'
-  link 'CloudyTabs.app'
+  license :mit
+
+  app 'CloudyTabs.app'
 end

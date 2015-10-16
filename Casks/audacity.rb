@@ -1,7 +1,12 @@
-class Audacity < Cask
-  url 'http://audacity.googlecode.com/files/audacity-macosx-ub-2.0.5.dmg'
-  homepage 'http://audacity.sourceforge.net/'
-  version '2.0.5'
-  sha256 'fb0e1c79159783e90403649c0c21fd067f709fd1d1c0f0f0b2a4b662617d8d90'
-  link 'Audacity/Audacity.app'
+cask :v1 => 'audacity' do
+  version '2.1.1'
+  sha256 '266fa1b2f3aff3894730a8b0e9fcf5c24c93e726f15180855d2516c5c44de10e'
+
+  # oldfoss.com is the official download host per the vendor homepage
+  url "http://app.oldfoss.com:81/download/Audacity/audacity-macosx-ub-#{version}.dmg"
+  name 'Audacity'
+  homepage 'http://audacityteam.org'
+  license :gpl
+
+  app 'Audacity/Audacity.app'
 end

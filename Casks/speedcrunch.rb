@@ -1,7 +1,12 @@
-class Speedcrunch < Cask
-  url 'http://speedcrunch.googlecode.com/files/SpeedCrunch-0.10.1.dmg'
+cask :v1 => 'speedcrunch' do
+  version '0.11'
+  sha256 '1ce5ef9d167614a2e63daad43a23bd8df60b8ea641df6be9aabdf826bbb5a826'
+
+  # bitbucket.org is the official download host per the vendor homepage
+  url "https://bitbucket.org/heldercorreia/speedcrunch/downloads/SpeedCrunch-#{version}.dmg"
+  name 'SpeedCrunch'
   homepage 'http://www.speedcrunch.org'
-  version '0.10.1'
-  sha256 'e6a15827fc50989d04b02cb73085a0bbf7b37421cf1f9aaa20bb79b10bc550b2'
-  link 'SpeedCrunch.app'
+  license :gpl
+
+  app 'SpeedCrunch.app'
 end

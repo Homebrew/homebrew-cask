@@ -1,7 +1,11 @@
-class TheUnarchiver < Cask
-  url 'http://theunarchiver.googlecode.com/files/TheUnarchiver3.9.1.zip'
-  homepage 'http://unarchiver.c3.cx/'
-  version '3.9.1'
-  sha256 '34fa3410237e17b2cdceb801a84ed8db93c74ac0db551ffe65913c2134ebbf05'
-  link 'The Unarchiver.app'
+cask :v1 => 'the-unarchiver' do
+  version '3.10.1'
+  sha256 '945570d11c40592fecf98461e224928afe594fd2d178c8bd81b1f880fd616770'
+
+  url "http://unarchiver.c3.cx/downloads/TheUnarchiver#{version}.dmg"
+  name 'The Unarchiver'
+  homepage 'http://unarchiver.c3.cx/unarchiver'
+  license :oss
+
+  app 'The Unarchiver.app'
 end

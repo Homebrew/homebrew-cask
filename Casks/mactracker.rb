@@ -1,7 +1,13 @@
-class Mactracker < Cask
-  url 'http://www.mactracker.ca/downloads/Mactracker_7.3.zip'
+cask :v1 => 'mactracker' do
+  version '7.4.6'
+  sha256 'ae9448481736cc04a14aa031033064163569add6519ec58ee66876e7bffc83a1'
+
+  url "http://www.mactracker.ca/downloads/Mactracker_#{version}.zip"
+  appcast 'http://update.mactracker.ca/appcast-b.xml',
+          :sha256 => '48b66546001a2cf246a4240bd9ff7756978967ee9030ac1b56d2c58d595cca7b'
+  name 'Mactracker'
   homepage 'http://mactracker.ca/'
-  version '7.3'
-  sha256 '6bda8bc13094018204084659b2bc2fc0f69d03a001a72d8c589d4c5cd3c00b39'
-  link 'Mactracker.app'
+  license :gratis
+
+  app 'Mactracker.app'
 end

@@ -1,17 +1,23 @@
-class AdobeAir < Cask
-  url 'http://airdownload.adobe.com/air/mac/download/4.0/AdobeAIR.dmg'
-  homepage 'https://get.adobe.com/air/'
-  version '4.0'
-  sha256 '7be7fa0b6cd59ca3a85805e519135f738373719017c040ce7021b916427144a0'
-  caskroom_only true
+cask :v1 => 'adobe-air' do
+  version '19.0'
+  sha256 :no_check # required as upstream package is updated in-place
 
-  after_install do
-    system '/usr/bin/sudo', '-E', '--',
-      "#{destination_path}/Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer", '-silent'
-  end
+  url "http://airdownload.adobe.com/air/mac/download/#{version}/AdobeAIR.dmg"
+  name 'Adobe AIR'
+  homepage 'https://get.adobe.com/air/'
+  license :gratis
+
+  installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
+            :args   => %w[-silent],
+            :sudo   => true
 
   uninstall :script => {
-    :executable => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
-    :args => %w[-uninstall]
-  }
+                        :executable => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
+                        :args       => %w[-uninstall]
+                       }
+  zap :delete => [
+                  '~/Library/Application Support/Adobe/AIR',
+                  '~/Library/Caches/com.adobe.air.ApplicationInstaller',
+                 ],
+      :rmdir  => '~/Library/Application Support/Adobe/'
 end

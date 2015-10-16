@@ -1,7 +1,23 @@
-class Controlplane < Cask
-  url 'http://www.controlplaneapp.com/download/1.4.0'
+cask :v1 => 'controlplane' do
+  if MacOS.release <= :snow_leopard
+    version '1.2.3'
+    sha256 '37f93d3a3a17a6e2f24447f0bc74c7e89ec1581ca52e5970960544858c86f909'
+  else
+    version '1.6.1'
+    sha256 '945ae102b81b838df65edf6f83292d33399218113e67bdfdaaa088c0f219ea47'
+
+    appcast 'http://www.controlplaneapp.com/appcast.xml',
+            :sha256 => '432b259fc8397206b28a2a19209551c350b7ca0f376f50013b8b81a832ff70b8'
+  end
+
+  url "http://www.controlplaneapp.com/download/#{version}"
+  name 'ControlPlane'
   homepage 'http://www.controlplaneapp.com/'
-  version '1.4.0'
-  sha256 '54a98fe70c8695a0e2ac80165512512a036cb5c9620764f148c728a5419825c0'
-  link 'ControlPlane.app'
+  license :gpl
+
+  depends_on :macos => '>= :snow_leopard'
+
+  app 'ControlPlane.app'
+
+  zap :delete => '~/Library/Preferences/com.dustinrue.ControlPlane.plist'
 end

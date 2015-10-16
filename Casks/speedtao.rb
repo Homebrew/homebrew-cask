@@ -1,7 +1,13 @@
-class Speedtao < Cask
-  url 'http://www.speedtao.net/download/SpeedTao_Beta26.dmg'
+cask :v1 => 'speedtao' do
+  version :latest
+  sha256 :no_check
+
+  url 'http://www.speedtao.net/beta_latest'
+  name 'SpeedTao'
+  appcast 'http://speedtao.net/su/su.xml',
+          :sha256 => '335236df2877584cd9515ecd53a9c1dcc680182511665455a1cffd505f8769fe'
   homepage 'http://www.speedtao.net/'
-  version 'Beta26'
-  sha256 '2a1c6a742a4a1e52c2459c0958e3bc2f93f80f4f6977ee35c674b06399502058'
-  link 'SpeedTao.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'SpeedTao.app'
 end

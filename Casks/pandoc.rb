@@ -1,8 +1,17 @@
-class Pandoc < Cask
-  url 'https://pandoc.googlecode.com/files/pandoc-1.12.3.pkg.zip'
+cask :v1 => 'pandoc' do
+  version '1.15.0.6'
+  sha256 'e5b254480b43d5cce19c01723e93cd357ec285cfe8d320cae5bc15580afb92d4'
+
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/jgm/pandoc/releases/download/#{version}/pandoc-#{version}-osx.pkg"
+  appcast 'https://github.com/jgm/pandoc/releases.atom'
+  name 'Pandoc'
   homepage 'http://johnmacfarlane.net/pandoc'
-  version '1.12.3'
-  sha256 '10d0de017e262fb875bf66497fa256cb4e30a33975c3c0f8f67a0ac9f2381cf8'
-  install 'pandoc-1.12.3.pkg'
+  license :gpl
+
+  pkg "pandoc-#{version}-osx.pkg"
+
   uninstall :pkgutil => 'net.johnmacfarlane.pandoc'
+
+  conflicts_with :formula => 'pandoc'
 end

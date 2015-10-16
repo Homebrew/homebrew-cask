@@ -1,7 +1,11 @@
-class TkSuiteClient < Cask
-  url 'ftp://ftp.agfeo.de/pub/software/TK-Suite-Client_intel32_agfeo_4.4.13.dmg'
+cask :v1 => 'tk-suite-client' do
+  version '4.4.34'
+  sha256 '60f0011b66f958a80295bf37011b166976967a1bde149ee278fa94b61172fb83'
+
+  url "ftp://ftp.agfeo.de/pub/software/TK-Suite-Client_intel32_agfeo_#{version}.dmg"
+  name 'TK-Suite Client'
   homepage 'http://agfeo.de/agfeo_web/hp3.nsf/lu/2064'
-  version '4.4.13'
-  sha256 '4047cf17e9ca009a2c95e5127fafc145a74ba8320a4c4c94c866aeb49203a5ef'
-  link 'TK-Suite-Client.app'
+  license :closed
+
+  app 'TK-Suite-Client.app'
 end

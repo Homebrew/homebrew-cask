@@ -1,7 +1,13 @@
-class Trailer < Cask
-  url 'http://dev.housetrip.com/trailer/trailer1019.zip'
-  homepage 'http://dev.housetrip.com/trailer/'
-  version '1.0.19'
-  sha256 '651b211c0c678de0719a6535a3c2be390cfd0d100108d310410efecae9eafd5f'
-  link 'Trailer.app'
+cask :v1 => 'trailer' do
+  version '1.3.7'
+  sha256 '9f022093051d6512a888cb1a0760afebed51e7c9f33dd991a81218f492491e55'
+
+  url "https://ptsochantaris.github.io/trailer/trailer#{version.delete('.')}.zip"
+  appcast 'https://ptsochantaris.github.io/trailer/appcast.xml',
+          :sha256 => 'aaf3f91888b757ec234643a9f45259fd9650a687c6146c723084e7d80979a6a4'
+  name 'Trailer'
+  homepage 'https://ptsochantaris.github.io/trailer/'
+  license :mit
+
+  app 'Trailer.app'
 end

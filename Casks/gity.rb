@@ -1,7 +1,12 @@
-class Gity < Cask
+cask :v1 => 'gity' do
+  version :latest
+  sha256 :no_check
+
   url 'http://gityapp.com/Gity.zip'
+  appcast 'http://gityapp.com/gity.xml'
+  name 'Gity'
   homepage 'http://gityapp.com/'
-  version 'latest'
-  no_checksum
-  link 'Gity.app'
+  license :gpl
+
+  app 'Gity.app'
 end

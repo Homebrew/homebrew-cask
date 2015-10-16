@@ -1,8 +1,13 @@
-class SynologyPhotoStationUploader < Cask
-  url 'http://global.download.synology.com/download/Tools/PhotoStationUploader/045/Mac/PhotoStationUploader-045-Mac-Installer.dmg'
-  homepage 'http://www.synology.com/'
-  version '045'
-  sha256 'e62e480e99cfd2cf75ed5041ad778b83198714541b73467de9e0cf9f8366401c'
-  install 'PhotoStationUploader-045-Mac-Installer.pkg'
+cask :v1 => 'synology-photo-station-uploader' do
+  version '1.3-056'
+  sha256 '515c01378d6cb660788c03a93be2bd509d977024184e9adbdb8414e6ad5c6bb9'
+
+  url "https://global.download.synology.com/download/Tools/PhotoStationUploader/#{version}/Mac/PhotoStationUploader-#{version.sub(%r{.*-},'')}-Mac-Installer.dmg"
+  name 'Synology Photo Station Uploader'
+  homepage 'https://www.synology.com/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  pkg "PhotoStationUploader-#{version.sub(%r{.*-},'')}-Mac-Installer.pkg"
+
   uninstall :pkgutil => 'com.synology.photostationuploader.installer'
 end

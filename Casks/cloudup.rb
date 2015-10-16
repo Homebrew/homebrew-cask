@@ -1,7 +1,11 @@
-class Cloudup < Cask
-  url 'https://zip.cloudup.com/f41gmwzoDkioEVevEkBW'
+cask :v1 => 'cloudup' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://updates.cloudup.com/update?os=osx&app=Cloudup&format=zip&channel=release'
+  name 'Cloudup'
   homepage 'https://cloudup.com/download'
-  version 'latest'
-  no_checksum
-  link 'Cloudup.app'
+  license :freemium
+
+  app 'Cloudup.app'
 end

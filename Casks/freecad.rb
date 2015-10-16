@@ -1,7 +1,11 @@
-class Freecad < Cask
-  url 'http://downloads.sourceforge.net/sourceforge/free-cad/FreeCAD_0.12_MacOSX10.7_20120110_x64.dmg'
+cask :v1 => 'freecad' do
+  version '0.15.4671'
+  sha256 '47815ef591d084e1ac248302256d1af5cdf3bba3b3c8afc2c477362f1cc95fd6'
+
+  url "http://downloads.sourceforge.net/sourceforge/free-cad/FreeCAD-#{version}_x64_osx.zip"
+  name 'FreeCAD'
   homepage 'http://sourceforge.net/projects/free-cad/'
-  version '0.12'
-  sha256 'aa27bafd7cf995d7e625007933dc4cb405dce6fcc7db3ba79c750153adf89969'
-  link 'FreeCAD.app'
+  license :gpl
+
+  app "FreeCAD-#{version}_x64_osx/FreeCAD.app"
 end

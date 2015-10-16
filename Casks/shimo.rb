@@ -1,7 +1,13 @@
-class Shimo < Cask
-  url 'http://www.chungwasoft.com/files/Shimo_3.2.3_2587.zip'
-  homepage 'http://www.chungwasoft.com/shimo/'
-  version '3.2.3_2587'
-  sha256 'ff8a5bc7254d6860ecae72a863e1da4faec5948c2b07e8b7da4c96dcb34ec5b4'
-  link 'Shimo.app'
+cask :v1 => 'shimo' do
+  version :latest
+  sha256 :no_check
+
+  url 'http://www.feingeist.io/fg-library/download.php?appName=Shimo4'
+  appcast 'http://www.feingeist.io/fg-library/appcast.php',
+          :format => :sparkle
+  name 'Shimo'
+  homepage 'http://www.feingeist.io/shimo-vpn-client-for-mac/'
+  license :commercial
+
+  app 'Shimo.app'
 end

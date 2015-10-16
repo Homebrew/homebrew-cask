@@ -1,8 +1,35 @@
-class RazerSynapse < Cask
-  url 'http://dl.razerzone.com/drivers/Synapse2/mac/Razer_Synapse_2.0_Mac_Driver_v1.21.dmg'
-  homepage 'http://www.razerzone.com/synapse2'
-  version '2.0 v1.21'
-  sha256 '2a102f2c2a2c724ad4ac7b666d6594ae7ec123126d51803bdf15ce1eab0964cd'
-  install 'Razer Synapse 2.0.pkg'
-  uninstall :script => '/Applications/Utilities/Uninstall Razer Synapse 2.0.app/Contents/MacOS/Uninstall Razer Synapse 2.0'
+cask :v1 => 'razer-synapse' do
+  version '1.45'
+  sha256 '4b4368bf5f90cb94667a60a120d49b9073329ba6d9efcd4f5108cf709bfe8115'
+
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://razerdrivers.s3.amazonaws.com/drivers/Synapse2/mac/Razer_Synapse_Mac_Driver_v#{version}.dmg"
+  name 'Razer Synapse'
+  homepage 'http://www.razerzone.com/synapse/'
+  license :gratis
+
+  pkg 'Razer Synapse.pkg'
+
+  depends_on :macos => '>= :lion'
+
+  uninstall :script => '/Applications/Utilities/Uninstall Razer Synapse.app/Contents/MacOS/Uninstall Razer Synapse',
+            :pkgutil => 'com.razerzone.*',
+            :quit =>  [
+                        'com.razerzone.RzUpdater',
+                        'com.razerzone.rzdeviceengine'
+                      ],
+            :launchctl => [
+                          'com.razer.rzupdater',
+                          'com.razerzone.rzdeviceengine'
+                          ]
+
+  zap :delete =>  [
+                    '~/Library/Preferenecs/com.razer.*',
+                    '~/Library/Preferenecs/com.razerzone.*'
+                  ]
+
+  caveats do
+    reboot
+  end
+
 end

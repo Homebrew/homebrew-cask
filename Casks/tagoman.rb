@@ -1,7 +1,14 @@
-class Tagoman < Cask
+cask :v1 => 'tagoman' do
+  version :latest
+  sha256 :no_check
+
+  # dropboxusercontent.com is the official download host per the vendor homepage
   url 'https://dl.dropboxusercontent.com/u/7614970/TagoMan.zip'
-  homepage 'http://onflapp.wordpress.com/tagoman'
-  version '0.6.1-BETA'
-  sha256 '7fbab6bb92867860e24ae0c1fc3ed9434e45056480b1c55a8f13a0c8683f2099'
-  link 'TagoMan.app'
+  name 'TagoMan'
+  appcast 'https://onflapp.appspot.com/tagoman',
+          :sha256 => 'b6e866d06fe73d9d2915e04cde5cb0270b452382b9cd9d0c7fc65d5735c15443'
+  homepage 'https://onflapp.wordpress.com/tagoman/'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'TagoMan.app'
 end

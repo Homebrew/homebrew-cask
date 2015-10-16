@@ -1,7 +1,11 @@
-class PhoenixSlides < Cask
-  url 'http://blyt.net/phxslides/phoenix-slides-130.zip'
+cask :v1 => 'phoenix-slides' do
+  version '1.4.0'
+  sha256 'ab65a2c2be1b8975f27cfed925c5d820e77e7089c0ab83c15d30bc930f1bf21f'
+
+  url "http://blyt.net/phxslides/phoenix-slides-#{version.delete('.')}.dmg"
+  name 'Phoenix Slides'
   homepage 'http://blyt.net/phxslides'
-  version '1.3'
-  sha256 '1d1b0f7044ff80ad46dfaaf988a85c25ecf897f9cc4173d3b1b0c8a0d7413039'
-  link 'Phoenix Slides.app'
+  license :gpl
+
+  app 'Phoenix Slides.app'
 end

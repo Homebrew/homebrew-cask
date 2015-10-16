@@ -1,7 +1,17 @@
-class PlexHomeTheater < Cask
-  url 'http://downloads.plexapp.com/plex-home-theater/1.0.9.180-bde1e61d/PlexHomeTheater-1.0.9.180-bde1e61d-macosx-i386.zip'
+cask :v1 => 'plex-home-theater' do
+  version '1.4.1.469-47a90f01'
+
+  if Hardware::CPU.is_32_bit?
+    sha256 'bcf40c09c23104d67c45381199a19a4e7c4147fb8a11508faff34d3fd4f6560b'
+    url "https://downloads.plex.tv/plex-home-theater/#{version}/PlexHomeTheater-#{version}-macosx-i386.zip"
+  else
+    sha256 'dd2babcfd023c03117e46a5e653b60bbd0567fe25328b778e09004b11e686995'
+    url "https://downloads.plex.tv/plex-home-theater/#{version}/PlexHomeTheater-#{version}-macosx-x86_64.zip"
+  end
+
+  name 'Plex Home Theater'
   homepage 'https://plex.tv'
-  version '1.0.9.180'
-  sha256 'f7c51b212febafbca77e0af193819c7d7035a38600d65550db1362edadee31b7'
-  link 'Plex Home Theater.app'
+  license :gratis
+
+  app 'Plex Home Theater.app'
 end

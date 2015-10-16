@@ -1,8 +1,21 @@
-class Gyazo < Cask
-  url 'https://gyazo.s3.amazonaws.com/setup/Gyazo_2.0.dmg'
+cask :v1 => 'gyazo' do
+  version '3.1.2'
+  sha256 '08c9b90691267b0d2894d5ee0c37ce7eecb529526d59230e6430ab8c2721aa32'
+
+  url "https://files.gyazo.com/setup/Gyazo-#{version}.dmg"
+  name 'Gyazo'
+  name 'Gyazo GIF'
   homepage 'https://gyazo.com/'
-  version '2.0'
-  sha256 '41242a421ee0c2b467ac0ff7fa1baa895c824e940bc5aee92a4ec2bf8e204eb3'
-  link 'Gyazo.app'
-  link 'Gyazo GIF.app'
+  license :other
+  tags :vendor => 'Nota'
+
+  zap :delete => [
+    '~/Library/Caches/com.gyazo.gif',
+    '~/Library/Caches/com.gyazo.mac',
+    '~/Library/Preferences/com.gyazo.gif.plist',
+    '~/Library/Preferences/com.gyazo.mac.plist'
+  ]
+
+  app 'Gyazo.app'
+  app 'Gyazo GIF.app'
 end

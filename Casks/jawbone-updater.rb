@@ -1,9 +1,14 @@
-class JawboneUpdater < Cask
-  url 'http://content.jawbone.com/store/dashboard/Jawbone_Updater-2.2.3.pkg'
-  homepage 'http://jawbone.com/'
-  version '2.2.3'
-  sha256 '3085edf935347e45573405ee7e51fbacce366847f5f06f783a4e1ea89d70aee6'
-  install 'Jawbone_Updater-2.2.3.pkg'
+cask :v1 => 'jawbone-updater' do
+  version '2.2.5'
+  sha256 '0db771816535cb9bb0112aa5e3ea7147b29322bf9dce82c90afedb36a62a2945'
+
+  url "https://content.jawbone.com/store/dashboard/Jawbone_Updater-#{version}.pkg"
+  name 'Jawbone Updater'
+  homepage 'https://jawbone.com/'
+  license :gpl
+
+  pkg "Jawbone_Updater-#{version}.pkg"
+
   uninstall :quit => 'com.aliph.Jawbone_Updater',
             :pkgutil => 'com.Aliph.[Jj]awbone(|Updater.*).pkg'
 end

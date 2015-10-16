@@ -1,7 +1,11 @@
-class BittorrentSync < Cask
-  url 'http://download-lb.utorrent.com/endpoint/btsync/os/osx/track/stable'
-  homepage 'http://www.bittorrent.com/sync'
-  version 'latest'
-  no_checksum
-  link 'BitTorrent Sync.app'
+cask :v1 => 'bittorrent-sync' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://download-cdn.getsync.com/stable/osx/BitTorrent-Sync.dmg'
+  name 'BitTorrent Sync'
+  homepage 'https://www.getsync.com/'
+  license :gratis
+
+  app 'BitTorrent Sync.app'
 end

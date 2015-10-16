@@ -1,7 +1,12 @@
-class Freezer < Cask
-  url 'http://download.mrgeckosmedia.com/Freezer.zip'
+cask :v1 => 'freezer' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://download.mrgeckosmedia.com/Freezer.zip'
+  appcast 'https://mrgeckosmedia.com/applications/appcast/Freezer'
+  name 'Freezer'
   homepage 'https://mrgeckosmedia.com/applications/info/Freezer'
-  version 'latest'
-  no_checksum
-  link 'Freezer/Freezer.app'
+  license :gratis
+
+  app 'Freezer/Freezer.app'
 end

@@ -1,8 +1,14 @@
-class Lazarus < Cask
-  url 'http://downloads.sourceforge.net/lazarus/lazarus-1.0.14-20131116-i386-macosx.dmg'
+cask :v1 => 'lazarus' do
+  version '1.4.2-20150711'
+  sha256 'a63ae1e6206044f60b7ab1640a33b7fb0de58a7e26c32efb17d15d94cbd7120c'
+
+  # sourceforge.net is the official download host per the vendor homepage
+  url "http://downloads.sourceforge.net/lazarus/lazarus-#{version}-i386-macosx.dmg"
+  name 'Lazarus'
   homepage 'http://lazarus.freepascal.org/'
-  version '1.0.14'
-  sha256 'b371f073ae2b8b83c88c356aed8dd717811ba4d9adfee6623a9a48a9c341531a'
-  install 'lazarus.pkg'
+  license :gpl
+
+  pkg 'lazarus.pkg'
+
   uninstall :pkgutil => 'org.freepascal.lazarus.www'
 end

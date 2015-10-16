@@ -1,7 +1,13 @@
-class Dogecoin < Cask
-  url 'https://github.com/dogecoin/dogecoin/releases/download/1.6/dogecoin-qt-1_6_0-mac.zip'
+cask :v1 => 'dogecoin' do
+  version '1.8.2'
+  sha256 'bdbdfabf5442a179b41936731d85ece9a2970cea80b106f5267911a0de4ddac2'
+
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/dogecoin/dogecoin/releases/download/v#{version}/dogecoin-#{version}-mac.zip"
+  appcast 'https://github.com/dogecoin/dogecoin/releases.atom'
+  name 'Dogecoin'
   homepage 'http://dogecoin.com/'
-  version '1.6.0'
-  sha256 '087fc6c8d0ab0715144434b147659649417d21901d4dda3024d8712fcc23bf06'
-  link 'Dogecoin-Qt.app'
+  license :mit
+
+  app 'Dogecoin-Qt.app'
 end

@@ -1,8 +1,12 @@
-class Kid3 < Cask
+cask :v1 => 'kid3' do
   # note: "3" is not a version number, but an intrinsic part of the product name (ID3 tags)
-  url 'http://downloads.sourceforge.net/sourceforge/kid3/kid3-3.0.2-Darwin.dmg'
+  version '3.2.0'
+  sha256 '8d8d8d4ab873cd8390bc3b6b999dcc5e2a2a15597012ea18b1ce43d7bcf701a0'
+
+  url "http://downloads.sourceforge.net/sourceforge/kid3/kid3-#{version}-Darwin.dmg"
+  name 'Kid3'
   homepage 'http://kid3.sourceforge.net/'
-  version '3.0.2'
-  sha256 'a1b60a4eea11ca62001365dd28d418c595ce2d073dd4e0ba07bd28a94cb5c260'
-  link 'Kid3.app'
+  license :gpl
+
+  app 'Kid3.app'
 end

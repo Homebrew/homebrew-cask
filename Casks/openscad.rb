@@ -1,7 +1,13 @@
-class Openscad < Cask
-  url 'https://openscad.googlecode.com/files/OpenSCAD-2013.06.dmg'
+cask :v1 => 'openscad' do
+  version '2015.03'
+  sha256 '405f27a81b89720c5b74a0b883c72a6d16f79f90f665c1a4f30f5db9268c4052'
+
+  url "http://files.openscad.org/OpenSCAD-#{version}.dmg"
+  name 'OpenSCAD'
+  appcast 'http://files.openscad.org/appcast.xml',
+          :sha256 => '8d29f24c07f1223560f12efa163b43348c135398e2b43617bfd9b11028debc01'
   homepage 'http://www.openscad.org/'
-  version '2013.06'
-  sha256 'fdcf51afb0e34cea14e3fbb5512840d580440f817354379bacb01f2dc3eecc83'
-  link 'OpenSCAD.app'
+  license :gpl
+
+  app 'OpenSCAD.app'
 end

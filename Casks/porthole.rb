@@ -1,7 +1,12 @@
-class Porthole < Cask
+cask :v1 => 'porthole' do
+  version :latest
+  sha256 :no_check
+
   url 'http://getporthole.com/downloads/trial'
+  appcast 'http://update.getporthole.com/appcast.rss'
+  name 'Porthole'
   homepage 'http://getporthole.com/'
-  version 'latest'
-  no_checksum
-  link 'Porthole.app'
+  license :commercial
+
+  app 'Porthole.app'
 end

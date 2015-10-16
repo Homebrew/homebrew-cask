@@ -1,7 +1,14 @@
-class Hype < Cask
-  url 'http://tumult.com/hype/download/Hype.zip'
+cask :v1 => 'hype' do
+  version '3.0.3-466'
+  sha256 '57285045b5742160af8c67e175669027f5ac632cf499e801d0788e36e1ed2b17'
+
+  url "http://static.tumult.com/hype/download/Hype-#{version.sub(%r{^.*?-},'')}.app.zip"
+  name 'Hype'
+  appcast 'https://tumult.com/hype/appcast_hype2.xml',
+          :sha256 => 'b8435a77bb13d39ddaecb92a1510786ceb135225e207aaaac91e7ef230d9edea'
   homepage 'http://tumult.com/hype/'
-  version 'latest'
-  no_checksum
-  link 'Hype2.app'
+  license :commercial
+  tags :vendor => 'Tumult'
+
+  app "Hype #{version.to_i}.app"
 end

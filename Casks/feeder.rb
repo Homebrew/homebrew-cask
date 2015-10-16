@@ -1,7 +1,13 @@
-class Feeder < Cask
-  url 'http://reinventedsoftware.com/feeder/downloads/Feeder_2.4.5.dmg'
-  homepage 'http://reinventedsoftware.com/feeder/'
-  version '2.4.5'
-  sha256 'bdc5922d6bb8ad0e35edf2f53885bd4a180a1d91e050ac432dead675ed945acb'
-  link 'Feeder.app'
+cask :v1 => 'feeder' do
+  version '3.0.4'
+  sha256 '308f5462aa6d705cc4c6b1c18824c7e4cb8d4b52521c6e3382f62376d8690f14'
+
+  url "https://reinventedsoftware.com/feeder/downloads/Feeder_#{version}.dmg"
+  appcast 'https://reinventedsoftware.com/feeder/downloads/Feeder3.xml',
+          :sha256 => '1a037d026be46a2e5719a001ead5efa704d5e17986cd238aefe78f93686e3854'
+  name 'Feeder'
+  homepage 'https://reinventedsoftware.com/feeder/'
+  license :commercial
+
+  app 'Feeder 3.app'
 end

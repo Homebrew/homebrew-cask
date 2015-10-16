@@ -1,7 +1,12 @@
-class Ctivo < Cask
-  url 'https://ctivo.googlecode.com/files/cTiVo_2.1_439.zip'
-  homepage 'https://code.google.com/p/ctivo/'
-  version '2.1'
-  sha256 'fda20c1d4cbd465e9e404c29ccf716b080179afd87cf42a090ad35f98d934b25'
-  link 'cTiVo.app'
+cask :v1 => 'ctivo' do
+  version '2.4.0'
+  sha256 'a6a310d301de327c6681121c62e439a9d4fc239568273cca3392b8fed1ccbb42'
+
+  url "https://github.com/dscottbuch/cTiVo/releases/download/#{version}/cTiVo.zip"
+  appcast 'https://github.com/dscottbuch/cTiVo/releases.atom'
+  name 'cTiVo'
+  homepage 'https://github.com/dscottbuch/cTiVo'
+  license :oss
+
+  app 'cTiVo.app'
 end

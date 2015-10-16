@@ -1,51 +1,58 @@
 require 'test_helper'
 
-module RecordEditorCalls
-  def exec_editor(*command)
+# monkeypatch for testing
+class Hbc::CLI::Edit
+  def self.exec_editor(*command)
     editor_commands << command
   end
 
-  def reset!
+  def self.reset!
     @editor_commands = []
   end
 
-  def editor_commands
+  def self.editor_commands
     @editor_commands ||= []
   end
 end
 
-module Cask::CLI::Edit
-  extend RecordEditorCalls
-end
-
-describe Cask::CLI::Edit do
+describe Hbc::CLI::Edit do
   before do
-    Cask::CLI::Edit.reset!
+    Hbc::CLI::Edit.reset!
   end
 
-  it 'opens the editor for the specified cask' do
-    Cask::CLI::Edit.run('alfred')
-    Cask::CLI::Edit.editor_commands.must_equal [
-      [Cask.path('alfred')]
+  it 'opens the editor for the specified Cask' do
+    Hbc::CLI::Edit.run('alfred')
+    Hbc::CLI::Edit.editor_commands.must_equal [
+      [Hbc.path('alfred')]
     ]
   end
 
   it 'throws away additional arguments and uses the first' do
-    Cask::CLI::Edit.run('adium', 'alfred')
-    Cask::CLI::Edit.editor_commands.must_equal [
-      [Cask.path('adium')]
+    Hbc::CLI::Edit.run('adium', 'alfred')
+    Hbc::CLI::Edit.editor_commands.must_equal [
+      [Hbc.path('adium')]
     ]
   end
 
-  it 'raises an exception when the cask doesnt exist' do
+  it 'raises an exception when the Cask doesnt exist' do
     lambda {
-      Cask::CLI::Edit.run('notacask')
-    }.must_raise CaskUnavailableError
+      Hbc::CLI::Edit.run('notacask')
+    }.must_raise Hbc::CaskUnavailableError
   end
 
-  it "raises an exception when no cask is specified" do
-    lambda {
-      Cask::CLI::Edit.run
-    }.must_raise CaskUnspecifiedError
+  describe "when no Cask is specified" do
+    it "raises an exception" do
+      lambda {
+        Hbc::CLI::Edit.run()
+      }.must_raise Hbc::CaskUnspecifiedError
+    end
+  end
+
+  describe "when no Cask is specified, but an invalid option" do
+    it "raises an exception" do
+      lambda {
+        Hbc::CLI::Edit.run('--notavalidoption')
+      }.must_raise Hbc::CaskUnspecifiedError
+    end
   end
 end

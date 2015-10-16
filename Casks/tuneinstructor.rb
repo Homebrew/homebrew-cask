@@ -1,8 +1,13 @@
-# encoding: UTF-8
-class Tuneinstructor < Cask
-  url 'http://www.tune-instructor.de/_data/TuneInstructor3.4b.dmg'
+cask :v1 => 'tuneinstructor' do
+  version '3.6'
+  sha256 'b5bc95a37d86af57ac607949e9eeeaa878d62031199438e6f70ebfbc485218c0'
+
+  url "http://www.tune-instructor.de/resources/downloads/TuneInstructor#{version}.dmg"
+  name 'Tune•Instructor'
   homepage 'http://www.tune-instructor.de/com/start.html'
-  version '3.4'
-  sha256 '7909eeaf0b3cbe41c511f2c450a6249c9d8a311a482547cf8fc11537b11ecbd4'
-  link 'Tune•Instructor.app'
+  license :commercial
+
+  depends_on :macos => '>= :yosemite'
+
+  app 'Tune•Instructor.app'
 end

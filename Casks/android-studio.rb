@@ -1,7 +1,25 @@
-class AndroidStudio < Cask
-  url 'http://dl.google.com/dl/android/studio/ide-zips/0.5.3/android-studio-ide-135.1092050-mac.zip'
-  homepage 'https://developer.android.com/sdk/installing/studio.html'
-  version '0.5.3 build-135.1092050'
-  sha256 '8558836c6a2e0108fceded0af7a01ac6896f20a25bb00ef2184817acfaa91c2d'
-  link 'Android Studio.app'
+cask :v1 => 'android-studio' do
+  version '1.4.0.10'
+  sha256 '1168faf59ffbe485bfe0e95e80bd9672a3ae5599efd2b720cf4b825bd859ffa0'
+
+  # google.com is the official download host per the vendor homepage
+  url "https://dl.google.com/dl/android/studio/ide-zips/#{version}/android-studio-ide-141.2288178-mac.zip"
+  name 'Android Studio'
+  homepage 'https://developer.android.com/sdk/'
+  license :apache
+
+  app 'Android Studio.app'
+
+  caveats <<-EOS.undent
+    #{token} requires Java. You can install the latest version with
+    brew cask install java
+  EOS
+  zap :delete => [
+    '~/Library/Preferences/AndroidStudio*',
+    '~/Library/Preferences/com.google.android.studio.plist',
+    '~/Library/Application Support/AndroidStudio*',
+    '~/Library/Logs/AndroidStudio*',
+    '~/Library/Caches/AndroidStudio*',
+  ],
+  :rmdir => '~/AndroidStudioProjects'
 end

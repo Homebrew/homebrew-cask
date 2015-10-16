@@ -1,12 +1,16 @@
-class Ridibooks < Cask
+cask :v1 => 'ridibooks' do
+  version :latest
+  sha256 :no_check
+
   url 'http://ridibooks.com/getapp?os=mac'
-  homepage 'http://ridibooks.com/support/introduce_appdown'
-  version 'latest'
-  no_checksum
-  container_type :naked
-  before_install do
-    system '/bin/mv', destination_path.join('getapp'), destination_path.join('ridibooks.pkg')
-  end
-  install 'ridibooks.pkg'
-  uninstall :pkgutil => 'com.ridibooks.Ridibooks'
+  name 'Ridibooks'
+  homepage 'https://ridibooks.com/support/app/download'
+  license :gratis
+
+  app 'Ridibooks.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/RIDI',
+                  '~/Library/Preferences/com.ridibooks.Ridibooks.plist',
+                 ]
 end

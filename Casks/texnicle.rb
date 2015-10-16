@@ -1,7 +1,13 @@
-class Texnicle < Cask
-  url 'http://www.bobsoft-mac.de/resources/TeXnicle/2.2/TeXnicle.app.2.2.9.zip'
+cask :v1 => 'texnicle' do
+  version '2.2.14'
+  sha256 '95a505f3668b11845103071c44d5aadd1188e04070fc26751ff42390ce4a8580'
+
+  url "http://www.bobsoft-mac.de/resources/TeXnicle/2.2/TeXnicle.app.#{version}.zip"
+  appcast 'http://www.bobsoft-mac.de/profileInfo.php',
+          :sha256 => '5fbf68ddbedd5cb0b8e013b9d62ded17431ff057867b54943625946df1b2b7d3'
+  name 'TeXnicle'
   homepage 'http://www.bobsoft-mac.de/texnicle/texnicle.html'
-  version '2.2.9'
-  sha256 '2076a2922bd156ac6e6af1afbb58bd928579a457f500fae40024f24f65a5e5dd'
-  link 'TeXnicle.app'
+  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  app 'TeXnicle.app'
 end

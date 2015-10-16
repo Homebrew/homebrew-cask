@@ -1,7 +1,12 @@
-class Dukto < Cask
-  url 'https://dukto.googlecode.com/files/DuktoR6-OSX.dmg'
-  homepage 'https://code.google.com/p/dukto/'
-  version 'r6'
+cask :v1 => 'dukto' do
+  version 'R6'
   sha256 '86f06ca92a28b5835cb3eaadfb09897f581a5da3fb8ee8246897b1bf4ee7348a'
-  link 'Dukto.app'
+
+  # sourceforge.net is the official download host per the vendor homepage
+  url "https://downloads.sourceforge.net/sourceforge/dukto/Dukto#{version}-OSX.dmg"
+  name 'Dukto'
+  homepage 'http://www.msec.it/dukto/'
+  license :oss
+
+  app 'Dukto.app'
 end

@@ -1,7 +1,11 @@
-class ColorOracle < Cask
+cask :v1 => 'color-oracle' do
+  version :latest
+  sha256 :no_check
+
   url 'http://colororacle.org/ColorOracleMac.zip'
+  name 'Color Oracle'
   homepage 'http://colororacle.org/'
-  version 'latest'
-  no_checksum
-  link 'Color Oracle.app'
+  license :mit
+
+  app 'Color Oracle.app'
 end

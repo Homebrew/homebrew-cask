@@ -1,7 +1,17 @@
-class Julia < Cask
-  url 'https://s3.amazonaws.com/julialang/bin/osx/x64/0.2/julia-0.2.1-osx10.7+.dmg'
+cask :v1 => 'julia' do
+  version '0.4.0'
+  sha256 '39a2765c7a0e03d798d3cfcce2ca265a1e612a9d8108a87315b040b14f2debff'
+
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://s3.amazonaws.com/julialang/bin/osx/x64/#{version.sub(/\.\d+$/, '')}/julia-#{version}-osx10.7+.dmg"
+  name 'Julia'
   homepage 'http://julialang.org/'
-  version '0.2.1'
-  sha256 '598c2e9051029ad8943d2de251602881fe183260df9afda8201f46587f1b9df4'
-  link 'Julia-0.2.1.app'
+  license :mit
+
+  app "Julia-#{version}.app"
+  binary "Julia-#{version}.app/Contents/Resources/julia/bin/julia"
+
+  depends_on :macos => '>= :lion'
+
+  zap :delete => '~/.julia'
 end

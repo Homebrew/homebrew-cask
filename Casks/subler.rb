@@ -1,7 +1,14 @@
-class Subler < Cask
-  url 'https://subler.googlecode.com/files/Subler-0.25.zip'
-  homepage 'https://code.google.com/p/subler/'
-  version '0.25'
-  sha256 '7b93d8a6afc1db00ea86b3bb2f6f8927012e66f1d74d7bfc7293d87cc8565f86'
-  link 'Subler.app'
+cask :v1 => 'subler' do
+  version '1.0.3'
+  sha256 '631495e84b6dcda68e589b1c7172fb5ad6f41f76cbd73e3b739f25f741b1a1a6'
+
+  # bitbucket.org is the official download host per the vendor homepage
+  url "https://bitbucket.org/galad87/subler/downloads/Subler-#{version}.zip"
+  appcast 'http://subler.org/appcast/appcast.xml',
+          :sha256 => 'c2997d3e545fb02306552377ac6a3fd0dc25d7d9761465397982f2904aaf7876'
+  name 'Subler'
+  homepage 'http://subler.org/'
+  license :gpl
+
+  app 'Subler.app'
 end

@@ -1,7 +1,14 @@
-class Rstudio < Cask
-  url 'http://download1.rstudio.org/RStudio-0.98.501.dmg'
+cask :v1 => 'rstudio' do
+  version '0.99.486'
+  sha256 '36bf213eb595568fe12090629d8082d7ce5f1e4073bba80a92e11c2e1809bcc3'
+
+  # rstudio.org is the official download host per the vendor homepage
+  url "http://download1.rstudio.org/RStudio-#{version}.dmg"
+  name 'RStudio'
   homepage 'http://www.rstudio.com/'
-  version '0.98.501'
-  sha256 '26cb3059c9f40d85856c103a3a34331d31a1e099b72c2bbee2319a4e39f82f35'
-  link 'RStudio.app'
+  license :affero
+
+  app 'RStudio.app'
+
+  zap :delete => '~/.rstudio-desktop'
 end

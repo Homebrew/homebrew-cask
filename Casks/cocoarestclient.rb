@@ -1,7 +1,12 @@
-class Cocoarestclient < Cask
-  url 'https://github.com/mmattozzi/cocoa-rest-client/releases/download/1.3.7/CocoaRestClient-1.3.7.dmg'
-  homepage 'http://mmattozzi.github.io/cocoa-rest-client/'
-  version '1.3.7'
-  sha256 '78400a16afc4017a68b5506e7a6270d72ade48b3e77a802eaaaaae80a0f6319f'
-  link 'CocoaRestClient.app'
+cask :v1 => 'cocoarestclient' do
+  version '1.3.9'
+  sha256 '611cf1112c8188d58ad5b00d507c4a5429fc6d1dff0bc0eb438116b672a880ba'
+
+  url "https://github.com/mmattozzi/cocoa-rest-client/releases/download/#{version}/CocoaRestClient-#{version}.dmg"
+  appcast 'https://github.com/mmattozzi/cocoa-rest-client/releases.atom'
+  name 'CocoaRestClient'
+  homepage 'https://mmattozzi.github.io/cocoa-rest-client/'
+  license :bsd
+
+  app 'CocoaRestClient.app'
 end

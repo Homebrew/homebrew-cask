@@ -1,7 +1,12 @@
-class NavicatPremium < Cask
-  url 'http://download.navicat.com/download/navicat110_premium_en.dmg'
+cask :v1 => 'navicat-premium' do
+  version '11.1.15'
+  sha256 'c1ba91359da1da4c1a8ebc437abf62c14b03d94e843bb04a76d30c19cb840e39'
+
+  url "http://download.navicat.com/download/navicat#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_premium_en.dmg"
+  name 'Navicat Premium'
   homepage 'http://www.navicat.com/products/navicat-premium'
-  version '11.0.16'
-  sha256 '9fc7908afa24bfd46ec265da408a865528328a0b17a29036891814875a10b88d'
-  link 'Navicat Premium.app'
+  license :commercial
+  tags :vendor => 'Navicat'
+
+  app 'Navicat Premium.app'
 end

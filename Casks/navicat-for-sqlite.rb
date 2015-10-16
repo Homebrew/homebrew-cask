@@ -1,7 +1,12 @@
-class NavicatForSqlite < Cask
-  url 'http://download.navicat.com/download/navicat110_sqlite_en.dmg'
+cask :v1 => 'navicat-for-sqlite' do
+  version '11.1.15'
+  sha256 '53a2178861462ccc154e04d4108a3fbb0d45fe98f634547e97f3f035beb29493'
+
+  url "http://download.navicat.com/download/navicat#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_sqlite_en.dmg"
+  name 'Navicat for SQLite'
   homepage 'http://www.navicat.com/products/navicat-for-sqlite'
-  version '11.0.16'
-  sha256 '583ec1190deaf83a3c3e0d6e6199d80a9089d7b04f6241d88bf5b70871e7a5e6'
-  link 'Navicat for SQLite.app'
+  license :commercial
+  tags :vendor => 'Navicat'
+
+  app 'Navicat for SQLite.app'
 end

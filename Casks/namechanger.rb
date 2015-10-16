@@ -1,7 +1,13 @@
-class Namechanger < Cask
-  url 'http://www.mrrsoftware.com/Downloads/NameChanger/Updates/NameChanger-2_3_3.zip'
+cask :v1 => 'namechanger' do
+  version '3.0.0'
+  sha256 'ab0cf99c272a113e7cfdfd6ad781d4dca1667ad943ef95958c51762c555915fd'
+
+  url "http://www.mrrsoftware.com/Downloads/NameChanger/Updates/NameChanger-#{version.gsub('.','_')}.zip"
+  appcast 'http://mrrsoftware.com/Downloads/NameChanger/Updates/NameChangerSoftwareUpdates.xml',
+          :sha256 => 'ff19ba484ad308ac0238031e79b0b2eaa604da9fe8573b8eecc2d19f89bc4c6e'
+  name 'NameChanger'
   homepage 'http://www.mrrsoftware.com/MRRSoftware/NameChanger.html'
-  version '2.3.3'
-  sha256 '3731773e2be9af5c0cda15aa4368393ebe05084e6a29a03a38756b5f4049fc8d'
-  link 'NameChanger.app'
+  license :gratis
+
+  app 'NameChanger.app'
 end

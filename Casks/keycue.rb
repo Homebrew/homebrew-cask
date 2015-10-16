@@ -1,7 +1,11 @@
-class Keycue < Cask
-  url 'http://www.ergonis.com/downloads/products/keycue/KeyCue71-Install.dmg'
+cask :v1 => 'keycue' do
+  version '7.5'
+  sha256 '8d2ae27ac7a623e3cdcfe939caf996e81e39e3dbb7452f1a634b24dbe5050ad3'
+
+  url "http://www.ergonis.com/downloads/products/keycue/KeyCue#{version.delete('.')}-Install.dmg"
+  name 'KeyCue'
   homepage 'http://www.ergonis.com/products/keycue/'
-  version '7.1'
-  sha256 '7f46addc44d8b29b1913f411bd1cdb6329b7bd6d97ec658122b945f91f647f5d'
-  link 'KeyCue.app'
+  license :commercial
+
+  app 'KeyCue.app'
 end

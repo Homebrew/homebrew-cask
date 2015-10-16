@@ -1,7 +1,25 @@
-class Appcode < Cask
-  url 'http://download.jetbrains.com/objc/AppCode-2.5.4.dmg'
-  homepage 'http://www.jetbrains.com/objc/'
-  version '2.5.4'
-  sha256 '39a78089d6b4fd69ceded6494a6f0857b8ef6630c2c5b0ed3599e080358a48f3'
-  link 'AppCode.app'
+cask :v1 => 'appcode' do
+  version '3.2'
+  sha256 '0f14171093f96199bb9ef68f286ee38e9f865864b285162f933116e7153e55fd'
+
+  url "https://download.jetbrains.com/objc/AppCode-#{version}.dmg"
+  name 'AppCode'
+  homepage 'https://www.jetbrains.com/objc/'
+  license :commercial
+
+  app 'AppCode.app'
+
+  caveats <<-EOS.undent
+    #{token} requires Java 6 like any other IntelliJ-based IDE.
+    You can install it with
+
+      brew cask install caskroom/homebrew-versions/java6
+
+    The vendor (JetBrains) doesn't support newer versions of Java (yet)
+    due to several critical issues, see details at
+    https://intellij-support.jetbrains.com/entries/27854363
+
+    To use existing newer Java at your own risk,
+    add JVMVersion=1.6+ to ~/Library/Preferences/IntelliJIdea14/idea.properties
+  EOS
 end

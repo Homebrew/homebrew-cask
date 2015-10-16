@@ -1,7 +1,15 @@
-class NavicatDataModeler < Cask
-  url 'http://download.navicat.com/download/modeler010_en.dmg'
+cask :v1 => 'navicat-data-modeler' do
+  version '2.0.6'
+  sha256 '02b0dcb81329e6f950fadee9145f0b8ec42774a9b3c6570ff57ad8ab44ba356c'
+
+  url "http://download.navicat.com/download/modeler0#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_en.dmg"
+  name 'Navicat Data Modeler'
   homepage 'http://www.navicat.com/products/navicat-data-modeler'
-  version '1.0.5'
-  sha256 'de0f1dbb450401f9ce29948886b60167508ccca621162a9ab9a805d54d574bbb'
-  link 'Navicat Data Modeler.app'
+  license :commercial
+  tags :vendor => 'Navicat'
+
+  depends_on :macos => '>= :lion'
+  depends_on :arch => :intel
+
+  app 'Navicat Data Modeler.app'
 end

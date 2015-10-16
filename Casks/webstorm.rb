@@ -1,7 +1,11 @@
-class Webstorm < Cask
-  url 'http://download.jetbrains.com/webstorm/WebStorm-8.0.dmg'
+cask :v1 => 'webstorm' do
+  version '10.0.4'
+  sha256 '0e444910001fc74b401c3b12738abedb823cc8064af53a304ce8e8c4d9d0ca6a'
+
+  url "http://download-cf.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
+  name 'WebStorm'
   homepage 'http://www.jetbrains.com/webstorm/'
-  version '8.0.0'
-  sha256 '39535d8d8ed4c6b61d28ddfe03775d3a0ec435df6520f0ea17831d6bbf9f8694'
-  link 'WebStorm.app'
+  license :commercial
+
+  app 'WebStorm.app'
 end

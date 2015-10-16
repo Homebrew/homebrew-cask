@@ -1,7 +1,19 @@
-class Mailplane < Cask
-  url 'http://dist.mailplaneapp.com/builds/Mailplane_3_878.tbz'
-  homepage 'http://mailplaneapp.com/'
-  version '3.1.1 (878)'
-  sha256 'a9729a4f43752a39fc57235b2d2d6cd1f5167a12cd1624b7b3b1774d27ca362e'
-  link 'Mailplane 3.app'
+cask :v1 => 'mailplane' do
+  version :latest
+  sha256 :no_check
+
+  url 'http://update.mailplaneapp.com/mailplane_3.php'
+  name 'Mailplane'
+  appcast 'http://update.mailplaneapp.com/appcast.php?appName=Mailplane',
+          :sha256 => 'adae9ab9b89b12ce661a2475ff8a9d7b8220bb228e01dc38727ff28e2cd855e9'
+  homepage 'http://mailplaneapp.com'
+  license :commercial
+
+  app 'Mailplane 3.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
+
+  zap :delete => '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
 end

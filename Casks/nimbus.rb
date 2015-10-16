@@ -1,7 +1,12 @@
-class Nimbus < Cask
-  url 'https://github.com/jnordberg/irccloudapp/releases/download/0.7.1/Nimbus-0.7.1.zip'
+cask :v1 => 'nimbus' do
+  version '0.7.4'
+  sha256 '833f747d74fae3f670f145fa7458623779a1b18b482f3c5828aea13581f64033'
+
+  url "https://github.com/jnordberg/irccloudapp/releases/download/#{version}/Nimbus-#{version}.zip"
+  appcast 'https://github.com/jnordberg/irccloudapp/releases.atom'
+  name 'Nimbus'
   homepage 'https://github.com/jnordberg/irccloudapp'
-  version '0.7.1'
-  sha256 'a755d8a32cd9bf5be2e4de182aa3b6edb34250bcf4966a1ced8cfdd19911e1a3'
-  link 'Nimbus.app'
+  license :mit
+
+  app 'Nimbus.app'
 end

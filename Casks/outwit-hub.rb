@@ -1,7 +1,11 @@
-class OutwitHub < Cask
-  url 'http://www.outwit.com/downloads/release/outwit-hub.en-US.mac64.dmg'
+cask :v1 => 'outwit-hub' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://www.outwit.com/downloads/release/outwit-hub.en-US.mac64.dmg'
+  name 'OutWit Hub'
   homepage 'http://www.outwit.com'
-  version 'latest'
-  no_checksum
-  link 'Outwit Hub.app'
+  license :freemium
+
+  app 'Outwit Hub.app'
 end

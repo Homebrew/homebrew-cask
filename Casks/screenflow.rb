@@ -1,7 +1,14 @@
-class Screenflow < Cask
-  url 'http://www.telestream.net/download-files/screenflow/4-5/ScreenFlow-4.5.dmg'
+cask :v1 => 'screenflow' do
+  version '5.0.2'
+  sha256 '2e020e6540af3c5f6e33302917345eb1aa8b9fa62995dfc9692515a966527f02'
+
+  url "http://www.telestream.net/download-files/screenflow/5-0/ScreenFlow-#{version}.dmg"
+  appcast 'http://www.telestream.net/updater/screenflow/appcast.xml'
+  name 'ScreenFlow'
   homepage 'http://www.telestream.net/screenflow/'
-  version '4.5'
-  sha256 '9ec0f4c1bb1b778ea37f3e37bf0ad494baffe08e567553027c13178f05c2fbcd'
-  link 'ScreenFlow.app'
+  license :commercial
+
+  app 'ScreenFlow.app'
+
+  depends_on :macos => '>= :mavericks'
 end

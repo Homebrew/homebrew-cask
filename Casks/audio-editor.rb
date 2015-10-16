@@ -1,7 +1,13 @@
-class AudioEditor < Cask
+cask :v1 => 'audio-editor' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.macsome.com/AudioEditor.dmg'
-  homepage 'http://www.macsome.com/audio-editor-mac/index.html'
-  version 'latest'
-  no_checksum
-  link 'Audio Editor.app'
+  name 'Macsome Audio Editor'
+  name 'Macsome AudioEditor'
+  appcast 'http://www.macsome.com/audio-editor-mac/su_feed.xml'
+  homepage 'http://www.macsome.com/audio-editor-mac/'
+  license :gratis
+
+  app 'Audio Editor.app'
 end

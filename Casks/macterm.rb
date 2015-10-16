@@ -1,7 +1,11 @@
-class Macterm < Cask
+cask :v1 => 'macterm' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.macterm.net/updates/macterm-latest.dmg'
-  version 'latest'
-  no_checksum
+  name 'MacTerm'
   homepage 'http://www.macterm.net/'
-  link 'MacTerm.app'
+  license :gpl
+
+  app 'MacTerm.app'
 end

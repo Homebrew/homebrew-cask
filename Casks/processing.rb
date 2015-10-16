@@ -1,7 +1,13 @@
-class Processing < Cask
-  url 'http://processing.googlecode.com/files/processing-2.1.1-macosx.zip'
-  homepage 'http://processing.org/'
-  version '2.1.1'
-  sha256 'b3e282350f062e89e827dc3619308015ba8f62ac62231eb6ca271f4a0785ce37'
-  link 'Processing.app'
+cask :v1 => 'processing' do
+  version '3.0'
+  sha256 '2a9d07733f1d244b19074bf5bc4278a9d257c9eb6a6269116cc9e412be16faba'
+
+  url "http://download.processing.org/processing-#{version}-macosx.zip"
+  name 'Processing'
+  homepage 'https://processing.org/'
+  license :gpl
+
+  app 'Processing.app'
+
+  zap :delete => '~/Library/Processing/preferences.txt'
 end

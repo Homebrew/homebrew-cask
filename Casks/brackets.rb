@@ -1,7 +1,17 @@
-class Brackets < Cask
-  url 'http://download.brackets.io/file.cfm?platform=OSX&build=37'
+cask :v1 => 'brackets' do
+  version '1.5'
+  sha256 '753d91370c6c67b028ddfecc8403ec6b887523e0cc48ed074835bb16df7b809b'
+
+  url "https://github.com/adobe/brackets/releases/download/release-#{version}/Brackets.Release.#{version}.dmg"
+  appcast 'https://github.com/adobe/brackets/releases.atom'
+  name 'Brackets'
   homepage 'http://brackets.io'
-  version '0.37.0-12014'
-  sha256 '3f9fbbcfa12015b30656d83c5b55f0c11f98a298499d6b9b2fd7c2a92bf38f99'
-  link 'Brackets.app'
+  license :mit
+
+  app 'Brackets.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/Brackets',
+                  '~/Library/Preferences/io.brackets.appshell.plist',
+                 ]
 end

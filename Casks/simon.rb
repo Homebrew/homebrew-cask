@@ -1,7 +1,13 @@
-class Simon < Cask
-  url 'http://www.dejal.com/download/simon-3.6.1.zip'
+cask :v1 => 'simon' do
+  version '4.1.1'
+  sha256 'fa3f221882c769350647bd1904b95f22e4846ed582de1a99cb892828f4f6ba8c'
+
+  url "http://www.dejal.com/download/simon-#{version}.zip"
+  appcast 'http://www.dejal.com/appcast/?prod=simon',
+          :sha256 => '7431a2e17604486863b071139da0665aec01e61a1447367b2f497080936e3f4b'
+  name 'Simon'
   homepage 'http://www.dejal.com/simon/'
-  version '3.6.1'
-  sha256 '19a3395bdfd0c8c400c4e489e6d6ff192415661033e91023fc4c9297b28b4168'
-  link 'Simon.app'
+  license :commercial
+
+  app 'Simon.app'
 end

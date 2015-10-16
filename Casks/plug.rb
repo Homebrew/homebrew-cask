@@ -1,7 +1,12 @@
-class Plug < Cask
+cask :v1 => 'plug' do
+  version :latest
+  sha256 :no_check
+
   url 'http://www.plugformac.com/files/Plug-latest.dmg'
+  appcast 'http://www.plugformac.com/files/sparklecast.xml'
+  name 'Plug'
   homepage 'http://www.plugformac.com/'
-  version 'latest'
-  no_checksum
-  link 'Plug.app'
+  license :gratis
+
+  app 'Plug.app'
 end

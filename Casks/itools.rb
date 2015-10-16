@@ -1,7 +1,12 @@
-class Itools < Cask
-  url 'http://dl2.itools.hk/dl/iTools_2.3.1.dmg'
-  homepage 'http://www.itools.cn/download.php?v=mac_en'
-  version '2.3.1'
-  sha256 '6851f86491c542bfcc4d060bd1b55366d212ad9fe92188d00eb6946a97642c23'
-  link 'iTools.app'
+cask :v1 => 'itools' do
+  version '2.7.0'
+  sha256 'b05fdfd3820ffe3f35947cfb17e65a75cf17e1f6e57717f0eb5e05f4d951588b'
+
+  # itools.hk is the official download host per the vendor homepage
+  url "http://dl2.itools.hk/dl/iTools_#{version}.dmg"
+  name 'iTools'
+  homepage 'http://pro.itools.cn/mac/english'
+  license :gratis
+
+  app 'iTools.app'
 end

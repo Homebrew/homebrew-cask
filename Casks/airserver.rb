@@ -1,7 +1,13 @@
-class Airserver < Cask
-  url 'http://dl.airserver.com/mac/AirServer-5.0.4.0.dmg'
+cask :v1 => 'airserver' do
+  version '6.0.1'
+  sha256 '1fef6a3ae39b8c42d422f2c9cc37d2af89bc0cce6c0f408a28724ec807c7d19b'
+
+  url "http://dl.airserver.com/mac/AirServer-#{version}.dmg"
+  appcast 'http://www.airserver.com/downloads/mac/appcast.xml',
+          :sha256 => '3c5b0d9b77c3ec120a0c65b9da853dbf2f4f00abdafcb6006280236f11fcfd1f'
+  name 'AirServer'
   homepage 'http://www.airserver.com'
-  version '5.0.4.0'
-  sha256 'd6e667bf91a0fb87d000ed778b3cf46c0d9d6e6d397a85de196f5da09f7f1a7a'
-  link 'AirServer.app'
+  license :commercial
+
+  app 'AirServer.app'
 end

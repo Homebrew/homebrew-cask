@@ -1,7 +1,12 @@
-class SeafileClient < Cask
-  url 'https://seacloud.cc/group/3/file/d/seafile-client-2.1.1.dmg'
+cask :v1 => 'seafile-client' do
+  version '4.3.4'
+  sha256 'c35e1da65d257c04811e4fc2372d54a3a177b5edb15b324e67305158c6238007'
+
+  # bintray.com is the official download host per the vendor homepage
+  url "https://bintray.com/artifact/download/seafile-org/seafile/seafile-client-#{version}.dmg"
+  name 'Seafile Client'
   homepage 'http://seafile.com/'
-  version '2.1.1'
-  sha256 'bff118cc2ff32660f658dc455f4a311a295197d988e4c6bd1778a95b159fc5b4'
-  link 'Seafile Client.app'
+  license :gpl
+
+  app 'Seafile Client.app'
 end

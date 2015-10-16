@@ -17,10 +17,10 @@ shopt -s nocasematch # case-insensitive regular expressions
 
 warn () {
     local message="$@"
-    if ! [[ $message =~ "\n"$ ]]; then
-        message="${message}\n"
-    fi
-    printf "$message" 1>&2
+    message="${message//\\t/$'\011'}"
+    message="${message//\\n/$'\012'}"
+    message="${message%"${message##*[![:space:]]}"}"
+    printf "%s\n" "$message" 1>&2
 }
 
 die () {
@@ -71,7 +71,7 @@ essential system files due to an exuberant regexp.
 
 For more information, see
 
-    https://github.com/phinze/homebrew-cask/blob/master/doc/CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details
+    https://github.com/caskroom/homebrew-cask/blob/master/doc/CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details
 
 "
     exit

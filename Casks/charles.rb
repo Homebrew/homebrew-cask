@@ -1,7 +1,16 @@
-class Charles < Cask
-  url 'http://www.charlesproxy.com/assets/release/3.8.3/charles-proxy-3.8.3-applejava.dmg'
+cask :v1 => 'charles' do
+  version '3.11'
+  sha256 'b31efe7c80464a92984d7a76e8a41df0d766c4047695b083f7278a9668585592'
+
+  url "http://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
+  name 'Charles'
   homepage 'http://www.charlesproxy.com/'
-  version '3.8.3'
-  sha256 '2c1b2d9b5085c34d95d580fec4575bbd0ff183eb1b323b7f260745f91e109083'
-  link 'Charles.app'
+  license :commercial
+
+  app 'Charles.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/Charles',
+                  '~/Library/Preferences/com.xk72.charles.config',
+                 ]
 end

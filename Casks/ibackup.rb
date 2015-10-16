@@ -1,7 +1,11 @@
-class Ibackup < Cask
-  url 'http://www.grapefruit.ch/iBackup/versions/iBackup%207.x/iBackup%207.5.dmg'
+cask :v1 => 'ibackup' do
+  version '7.6'
+  sha256 '97e34fd79a16193161e873e2eb77c32597dedb5b63d44ed48a61c40af8aba8e2'
+
+  url "http://www.grapefruit.ch/iBackup/versions/iBackup%20#{version.to_i}.x/iBackup%20#{version}.dmg"
+  name 'iBackup'
   homepage 'http://www.grapefruit.ch/iBackup'
-  version '7.5'
-  sha256 'a0f506075f53625e65b8dbeef8111a0c627bf474a34cb0690d2e281b2eed98bf'
-  link 'iBackup.app'
+  license :gratis
+
+  app 'iBackup.app'
 end
