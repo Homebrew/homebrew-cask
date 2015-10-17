@@ -1,8 +1,8 @@
 cask :v1 => 'eclipse-java' do
-  version '4.5'
-  sha256 '6145fcd4e15f03dac50898fe489e56b8cbe5ef152f191907e3b9ee52a3c1c09e'
+  version '4.5.1'
+  sha256 '557070cc428715ae32915d7eb72f1720ef01d3979b5b5d6dd3f627710970d6f5'
 
-  url 'http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/R/eclipse-java-mars-R-macosx-cocoa-x86_64.tar.gz&r=1'
+  url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/1/eclipse-java-mars-1-macosx-cocoa-x86_64.tar.gz&r=1'
   name 'Eclipse'
   name 'Eclipse IDE for Java Developers'
   homepage 'https://eclipse.org/'
