@@ -7,6 +7,6 @@ cask :v1 => 'blender' do
   homepage 'https://www.blender.org/'
   license :gpl
 
-  app 'Blender/blender.app'
-  app 'Blender/blenderplayer.app'
+  app 'Blender.app'
+  app 'BlenderPlayer.app'
 end
