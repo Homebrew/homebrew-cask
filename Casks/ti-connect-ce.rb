@@ -1,8 +1,8 @@
 cask :v1 => 'ti-connect-ce' do
-  version '5.0.0.182'
-  sha256 '54a80467c4807acbbe6f1dddf6516c045b36da0fc2d64c811d9212330cf9af9e'
+  version '5.1.0.68'
+  sha256 'e65815ad16ece77236cae631cfdca44626f6b9cfb08e3b184cc94fd9b607c52f'
 
-  url "http://edudownload.ti.com/downloads/files/cdn/ti-connect-ce/TIConnectCE-#{version}.dmg"
+  url "http://edudownload.ti.com/downloads/files/cdn/ti-connect/#{version.to_f}/TIConnectCE-#{version}.dmg"
   name 'TI Connect™ CE'
   homepage 'https://education.ti.com/en/us/products/computer_software/connectivity-software/ti-connect-ce-software'
   license :gratis
