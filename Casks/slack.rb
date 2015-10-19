@@ -1,11 +1,11 @@
 cask :v1 => 'slack' do
-  version '1.1.4'
-  sha256 'b3a6c2b651cf98d7bb817c063b3fbc9c5bb7f7ecfeb766359d1d85147267aa28'
+  version '1.1.6'
+  sha256 '3f0f03dc16f344302def106ee8d096196e196f06033606731c51f840b14d5cf5'
 
-  # hockeyapp.net is the official download host per the appcast feed
-  url 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1/app_versions/19?format=zip&avtoken=d11b1b4d9f90d53702d26bd4972a757345f1cfc0'
+  # fastly.net is the official download host per the vendor homepage
+  url "https://slack-ssb-updates.global.ssl.fastly.net/mac_public_releases/slack-#{version}.zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1',
-          :sha256 => 'b3a6c2b651cf98d7bb817c063b3fbc9c5bb7f7ecfeb766359d1d85147267aa28'
+          :sha256 => 'd514f17a63177586191a2e7955ac4dbcc8b10ce2eb56c4ae992b69b1e543f22e'
   name 'Slack'
   homepage 'https://slack.com/'
   license :gratis
