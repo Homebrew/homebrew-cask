@@ -9,5 +9,5 @@ cask :v1 => 'anvil' do
   homepage 'http://anvilformac.com/'
   license :mit
 
-  app "Anvil #{version}/Anvil.app"
+  app "Anvil #{version.sub('_',' ')}/Anvil.app"
 end
