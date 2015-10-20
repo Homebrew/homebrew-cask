@@ -1,10 +1,10 @@
-cask :v1 => 'vmware-fusion' do
-  version '7.1.1-2498930'
-  sha256 '5dc70b0598c3c89003acc18029eaf56fd0129ceeef958805d5f3b41f0624a253'
+cask :v1_1 => 'vmware-fusion' do
+  version '8.0.1-3094680'
+  sha256 'e16f66349ee136fd961550f73af243f1ffec63c17847b5f89b74c1cc77898ab4'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   name 'VMware Fusion'
-  homepage 'http://www.vmware.com/products/fusion/'
+  homepage 'https://www.vmware.com/products/fusion/'
   license :commercial
   tags :vendor => 'VMware'
 
@@ -16,13 +16,12 @@ cask :v1 => 'vmware-fusion' do
   app 'VMware Fusion.app'
 
   uninstall_preflight do
-    system '/usr/bin/sudo', '-E', '--',
-           '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", "#{staged_path}/VMware Fusion.app"
+    set_ownership "#{staged_path}/VMware Fusion.app"
   end
 
   zap :delete => [
                   # note: '~/Library/Application Support/VMware Fusion' is not safe
-                  # to delete.  In older versions, VM images were located there.
+                  # to delete. In older versions, VM images were located there.
                   '~/Library/Caches/com.vmware.fusion',
                   '~/Library/Logs/VMware',
                   '~/Library/Logs/VMware Fusion',

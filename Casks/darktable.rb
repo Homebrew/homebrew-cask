@@ -1,6 +1,6 @@
 cask :v1 => 'darktable' do
-  version '1.6.6'
-  sha256 'bce9a792ee362c47769839ec3e49973c07663dbdf6533ef5a987c93301358607'
+  version '1.6.8'
+  sha256 'ec4b1ad797ea7a483d7fc94724de99a1d18da7d7f75071220e1d313e0a4d8a53'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/darktable-org/darktable/releases/download/release-#{version}/darktable-#{version}.dmg"

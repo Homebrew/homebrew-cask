@@ -4,7 +4,7 @@ cask :v1 => 'cmpl' do
 
   url "http://www.coliop.org/_download/Cmpl-#{version.gsub('.','-')}-osx.tar.gz"
   name 'CMPL'
-  homepage 'https://www.coliop.org/'
+  homepage 'http://www.coliop.org/'
   license :gpl
 
   # linking into ~/Applications breaks Cmpl, due to hardcoded paths

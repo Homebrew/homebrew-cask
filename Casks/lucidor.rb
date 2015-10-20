@@ -5,7 +5,7 @@ cask :v1 => 'lucidor' do
   url "http://lucidor.org/get.php?id=lucidor-#{version}.dmg"
   name 'Lucidor'
   homepage 'http://lucidor.org/lucidor/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Lucidor.app'
 end

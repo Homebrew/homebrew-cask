@@ -5,7 +5,7 @@ cask :v1 => 'joinme' do
   url 'https://secure.join.me/Download.aspx?installer=mac&webdownload=true'
   name 'join.me'
   homepage 'https://join.me/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'join.me.app'
 end

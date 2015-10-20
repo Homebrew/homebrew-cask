@@ -3,6 +3,8 @@ cask :v1 => 'timemachinescheduler' do
   sha256 '22b0976139c42d163aa7d905d845594af41d4f3d4254a21b334f0232b3815f0a'
 
   url "http://www.klieme.com/Downloads/TimeMachineScheduler/TimeMachineScheduler_#{version}.zip"
+  appcast 'http://www.klieme.com/Downloads/TimeMachineScheduler/appcast.xml',
+          :sha256 => '2a2ac94fe0dee03907844876ac83ff5dee8f610be042d8b5f32d145eaae8ef55'
   name 'TimeMachineScheduler'
   homepage 'http://www.klieme.com/TimeMachineScheduler.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

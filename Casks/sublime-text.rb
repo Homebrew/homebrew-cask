@@ -4,21 +4,21 @@ cask :v1 => 'sublime-text' do
 
   # rackcdn.com is the official download host per the vendor homepage
   url "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20#{version}.dmg"
-  appcast 'http://www.sublimetext.com/updates/2/stable/appcast_osx.xml',
+  appcast 'https://www.sublimetext.com/updates/2/stable/appcast_osx.xml',
           :sha256 => 'e11769f18c577d4cb189c6f6485119a66db5e5d3ba4df99326080f193c1f74b3'
   name 'Sublime Text'
-  homepage 'http://www.sublimetext.com/2'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.sublimetext.com/2'
+  license :closed
 
   app 'Sublime Text 2.app'
   binary 'Sublime Text 2.app/Contents/SharedSupport/bin/subl'
 
   zap :delete => [
-                  '~/Library/Application Support/Sublime Text 2/Installed Packages',
-                  '~/Library/Application Support/Sublime Text 2/Packages',
-                  '~/Library/Application Support/Sublime Text 2/Pristine Packages',
-                 ],
-      :rmdir  => '~/Library/Application Support/Sublime Text 2'
+                  '~/Library/Application Support/Sublime Text 2',
+                  '~/Library/Preferences/com.sublimetext.2.plist',
+                  '~/Library/Caches/com.sublimetext.2',
+                  '~/Library/Saved Application State/com.sublimetext.2.savedState'
+                 ]
 
   caveats do
     files_in_usr_local

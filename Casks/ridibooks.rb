@@ -4,7 +4,7 @@ cask :v1 => 'ridibooks' do
 
   url 'http://ridibooks.com/getapp?os=mac'
   name 'Ridibooks'
-  homepage 'http://ridibooks.com/support/app/download'
+  homepage 'https://ridibooks.com/support/app/download'
   license :gratis
 
   app 'Ridibooks.app'

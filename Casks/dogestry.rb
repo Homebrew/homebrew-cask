@@ -1,6 +1,6 @@
-cask :v1 => 'dogestry' do
-  version '1.4.1'
-  sha256 '3db0ef89a9bc870905c3ee7ae857970ad843c95ac1a8ef93d6bf6f992016f0d0'
+cask :v1_1 => 'dogestry' do
+  version '2.0.2'
+  sha256 '2c1f6c8ac32ddb150ffccb877edef4b72727399f5cddade794825c3417ff2728'
 
   url "https://github.com/dogestry/dogestry/releases/download/v#{version}/dogestry-darwin-#{version}"
   appcast 'https://github.com/dogestry/dogestry/releases.atom'
@@ -12,6 +12,6 @@ cask :v1 => 'dogestry' do
   binary "dogestry-darwin-#{version}", :target => 'dogestry'
 
   postflight do
-    system '/bin/chmod', '--', '0755', "#{staged_path}/dogestry-darwin-#{version}"
+    set_permissions "#{staged_path}/dogestry-darwin-#{version}", '0755'
   end
 end

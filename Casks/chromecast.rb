@@ -5,7 +5,7 @@ cask :v1 => 'chromecast' do
   # google.com is the official download host per the vendor homepage
   url "https://dl.google.com/chromecast/setup/mac/chromecast-setup.#{version}.dmg"
   name 'Chromecast'
-  homepage 'http://chromecast.com/'
+  homepage 'https://chromecast.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Chromecast.app'

@@ -5,7 +5,7 @@ cask :v1 => 'send-to-kindle' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/sendtokindle/SendToKindleForMac-installer-v#{version}.pkg"
   name 'Send to Kindle'
-  homepage 'http://www.amazon.com/gp/sendtokindle/mac'
+  homepage 'https://www.amazon.com/gp/sendtokindle/mac'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "SendToKindleForMac-installer-v#{version}.pkg"

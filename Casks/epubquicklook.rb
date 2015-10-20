@@ -6,7 +6,7 @@ cask :v1 => 'epubquicklook' do
   appcast 'https://github.com/jaketmp/ePub-quicklook/releases.atom'
   name 'EPUB QuickLook'
   homepage 'https://github.com/jaketmp/ePub-quicklook'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   qlplugin 'epub.qlgenerator'
 end

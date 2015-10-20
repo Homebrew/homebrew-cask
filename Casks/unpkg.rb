@@ -5,7 +5,7 @@ cask :v1 => 'unpkg' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/downloads/timdoug/unpkg/unpkg-#{version}.zip"
   name 'unpkg'
-  homepage 'http://www.timdoug.com/unpkg/'
+  homepage 'https://www.timdoug.com/unpkg/'
   license :gpl
 
   app "unpkg #{version}/unpkg.app"

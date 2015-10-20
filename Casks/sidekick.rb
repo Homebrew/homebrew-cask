@@ -7,7 +7,7 @@ cask :v1 => 'sidekick' do
   appcast 'http://updates.oomphalot.com/?app=Sidekick'
   name 'Sidekick'
   homepage 'http://oomphalot.com/sidekick/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Sidekick.app'
 

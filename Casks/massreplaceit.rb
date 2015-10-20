@@ -6,7 +6,7 @@ cask :v1 => 'massreplaceit' do
   url 'http://www.hexmonkeysoftware.com/files/mri.dmg.zip'
   name 'MassReplaceIt'
   homepage 'http://www.hexmonkeysoftware.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'MassReplaceIt.app'
 end

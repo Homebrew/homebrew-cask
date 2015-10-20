@@ -6,7 +6,7 @@ cask :v1 => 'clementine' do
   url "https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg"
   appcast 'https://github.com/clementine-player/Clementine/releases.atom'
   name 'Clementine'
-  homepage 'http://www.clementine-player.org/'
+  homepage 'https://www.clementine-player.org/'
   license :gpl
 
   app 'clementine.app'

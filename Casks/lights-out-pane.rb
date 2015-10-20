@@ -5,7 +5,7 @@ cask :v1 => 'lights-out-pane' do
   url "https://github.com/samturner/lights-out/releases/download/v#{version}/lights-out.prefPane.zip"
   appcast 'https://github.com/samturner/lights-out/releases.atom'
   name 'Lights Out'
-  homepage 'http://samturner.github.io/lights-out/'
+  homepage 'https://samturner.github.io/lights-out/'
   license :gpl
 
   prefpane 'lights-out.prefPane'

@@ -1,13 +1,13 @@
 cask :v1 => 'unity' do
-  version '4.6.4'
-  sha256 'd5d840f30d0987b3aef29dc3b651141cb5fb77fc3c28405b5ff667e03b01360a'
+  version '5.2.1f1'
+  sha256 'b2fcde8b3ae7ef50984d61873939390bc5d5070acd3db132628c580d0135b6eb'
 
-  url "http://netstorage.unity3d.com/unity/unity-#{version}.dmg"
+  url 'http://netstorage.unity3d.com/unity/44735ea161b3/UnityDownloadAssistant-5.2.1f1.dmg'
   name 'Unity'
-  homepage 'http://unity3d.com/unity/'
+  homepage 'https://unity3d.com/unity/'
   license :commercial
 
-  pkg 'Unity.pkg'
+  installer :manual => 'Unity Download Assistant.app'
 
   uninstall :pkgutil => 'com.unity3d.*'
 end

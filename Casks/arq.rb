@@ -5,7 +5,11 @@ cask :v1 => 'arq' do
   url 'https://www.arqbackup.com/download/Arq_OSX.zip'
   name 'Arq'
   homepage 'https://www.arqbackup.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Arq.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
 end

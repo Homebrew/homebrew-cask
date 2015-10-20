@@ -1,10 +1,10 @@
 cask :v1 => 'kaleidoscope' do
-  version '2.1.0-134'
-  sha256 'e16360273fb6d37560c7974b95728d82a0482268641753c49f903bf36445d35b'
+  version '2.1.1-219'
+  sha256 '660b105e03391e93a8dffe584cd5b26326b431786adcbaabbb60aa00afc5c8c7'
 
   url "http://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-#{version}.zip"
   appcast 'https://updates.blackpixel.com/updates?app=ks',
-          :sha256 => '80eafc0b115e6f9ad4ec0cdec87809f21a3fc7ff1c540722f74d86dad64da158'
+          :sha256 => '0c1806533b06d08715959141f202ccf2bc30a12637dd71eef70c2552b6f18b09'
   name 'Kaleidoscope'
   homepage 'http://www.kaleidoscopeapp.com/'
   license :commercial

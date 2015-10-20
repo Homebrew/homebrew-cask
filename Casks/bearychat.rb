@@ -8,4 +8,9 @@ cask :v1 => 'bearychat' do
   license :gratis
 
   app 'BearyChat.app'
+
+  zap :delete => [
+    '~/Preferences/com.node-webkit-builder.bearychat.plist',
+    '~/Library/Application Support/BearyChat',
+  ]
 end

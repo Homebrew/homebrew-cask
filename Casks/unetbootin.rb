@@ -1,10 +1,11 @@
 cask :v1 => 'unetbootin' do
-  version '608'
-  sha256 '6348a25607b08426759063a77719b208f3efef3cf0721c3dbcc521b32e6a5ad5'
+  version '613'
+  sha256 'b9356ad2ef3cfa6881690ddc1136c45e6d3f25063fdeaeeb477633500b0c7684'
 
-  url "http://downloads.sourceforge.net/sourceforge/unetbootin/unetbootin-mac-#{version}.zip"
+  # launchpad.net is the official download host per the vendor homepage
+  url "http://launchpad.net/unetbootin/trunk/#{version}/+download/unetbootin-mac-#{version}.zip"
   name 'UNetbootin'
-  homepage 'http://unetbootin.sourceforge.net/'
+  homepage 'http://unetbootin.github.io/'
   license :gpl
 
   app 'unetbootin.app'

@@ -1,6 +1,6 @@
 cask :v1 => 'sqlworkbenchj' do
-  version '117'
-  sha256 '3d9698c9a0c8e939789e3407c55dfbd963e73cd430e5caf8d66627abae5a14d7'
+  version '118'
+  sha256 '5983eeebec79c781e76d6b5ceb789d2c4a9fcdeb2a93ec333b0cb6cb4a291915'
 
   url "http://www.sql-workbench.net/Workbench-Build#{version}-MacJava7.tgz"
   name 'SQL Workbench/J'

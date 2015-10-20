@@ -8,7 +8,7 @@ cask :v1 => 'pcalc' do
           :sha256 => '5e84c3bd2c0cfa56ff20dffd5106d761d3073d9d1ea61062524cb4d0e6f369f5'
   name 'PCalc'
   homepage 'http://www.pcalc.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'PCalc.app'
 end

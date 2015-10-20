@@ -1,6 +1,6 @@
 cask :v1 => 'safari-tab-switching' do
-  version '1.2.7'
-  sha256 'cda2d24dd7f273d5e26bf3ee32c1e711ebf28c0c44c619fa9f4e7f8efea488ca'
+  version '1.2.8'
+  sha256 'af604769a572939a41e9c7ab33efd6acc81cc8efda5a68782bec744fd3f51176'
 
   url "https://github.com/rs/SafariTabSwitching/releases/download/#{version}/Safari.Tab.Switching-#{version}.zip"
   appcast 'https://github.com/rs/SafariTabSwitching/releases.atom'

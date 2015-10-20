@@ -6,7 +6,7 @@ cask :v1 => 'mindnode-pro' do
   appcast 'https://www.mindnode.com/softwareupdate/mindnodepro.xml'
   name 'MindNode Pro'
   homepage 'https://mindnode.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'MindNode Pro.app'
 end

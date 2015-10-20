@@ -1,10 +1,10 @@
 cask :v1 => 'jenkins' do
-  version '1.598'
-  sha256 '382f68b259fddb6bb143c4db8bd8c3b8476be94a054cec16f7f532a6df965073'
+  version '1.619'
+  sha256 '660f85b7d24133b60972127b42308369b65c971cdba0d9883f99270306901003'
 
   url "http://mirrors.jenkins-ci.org/osx/jenkins-#{version}.pkg"
   name 'Jenkins'
-  homepage 'http://jenkins-ci.org/'
+  homepage 'https://jenkins-ci.org/'
   license :mit
 
   pkg "jenkins-#{version}.pkg"

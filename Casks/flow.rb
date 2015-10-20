@@ -4,7 +4,7 @@ cask :v1 => 'flow' do
 
   url 'http://www.getflow.com/mac/download'
   name 'Flow'
-  homepage 'http://www.getflow.com/'
+  homepage 'https://www.getflow.com/'
   license :commercial
 
   app 'Flow.app'

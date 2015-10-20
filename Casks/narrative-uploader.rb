@@ -6,7 +6,7 @@ cask :v1 => 'narrative-uploader' do
   appcast 'http://dl.getnarrative.com/appcast/osx.xml'
   name 'Narrative Uploader'
   homepage 'http://getnarrative.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Narrative Uploader.app'
 end

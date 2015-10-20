@@ -7,7 +7,7 @@ cask :v1 => 'pianopub' do
           :sha256 => '5a120e806605b8c170a543c1fb1ecb22c8a39a7b2ab8f06f7d3efb795017daa4'
   name 'Pianopub'
   homepage 'http://dev.kunugiken.com/Pianopub/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :mit
 
   app 'Pianopub.app'
 end

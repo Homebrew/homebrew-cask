@@ -4,7 +4,7 @@ cask :v1 => 'wuala' do
 
   url 'https://cdn.wuala.com/files/WualaInstaller.dmg'
   name 'Wuala'
-  homepage 'http://wuala.com'
+  homepage 'https://www.wuala.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Wuala.app'

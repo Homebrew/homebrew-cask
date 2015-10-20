@@ -1,10 +1,10 @@
 cask :v1 => 'parallels-virtualization-sdk' do
-  version '10.1.4-28883'
-  sha256 '7d3bca4a9b4b17e5033c132b03fb01d7c08402e6d2cd8c0a9dd42743a435dc04'
+  version '11.0.0-31193'
+  sha256 '5966961fa96e2124f7f4e8454620880f3fa618f46cb9cb46fcc7d6ec55e10718'
 
   url "http://download.parallels.com/desktop/v#{version[/^\w+/]}/#{version.sub(/-.*$/, '')}/ParallelsVirtualizationSDK-#{version}-mac.dmg"
   name 'Parallels Virtualization SDK'
-  homepage 'http://www.parallels.com/products/desktop/download/'
+  homepage 'https://www.parallels.com/products/desktop/download/'
   license :gratis
 
   pkg 'Parallels Virtualization SDK.pkg'

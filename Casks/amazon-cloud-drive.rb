@@ -8,5 +8,8 @@ cask :v1 => 'amazon-cloud-drive' do
   homepage 'https://www.amazon.com/clouddrive/home/'
   license :gratis
 
-  app 'Amazon Cloud Drive App.app'
+  installer :script => 'Amazon Cloud Drive Installer.app/Contents/MacOS/Amazon Cloud Drive Installer'
+
+  uninstall :quit => 'com.amazon.clouddrive.mac',
+            :delete => '/Applications/Amazon Cloud Drive App.app'
 end

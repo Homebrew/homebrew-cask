@@ -4,7 +4,7 @@ cask :v1 => 'ringcentral' do
 
   url 'http://downloads.ringcentral.com/sp/RingCentralForMac'
   name 'RingCentral for Mac'
-  homepage 'http://www.ringcentral.com/office/features/desktop-apps/overview.html'
+  homepage 'https://www.ringcentral.com/office/features/desktop-apps/overview.html'
   license :closed
 
   app 'RingCentral for Mac.app'

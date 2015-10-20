@@ -7,6 +7,8 @@ cask :v1 => 'unity-web-player' do
   homepage 'https://unity3d.com/webplayer'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
+  depends_on :macos => '>= :snow_leopard'
+
   pkg 'Install Unity Web Player.pkg'
 
   uninstall :pkgutil => 'com.unity.UnityWebPlayer',

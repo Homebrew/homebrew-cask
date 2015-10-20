@@ -6,7 +6,7 @@ cask :v1 => 'musique' do
   appcast 'http://flavio.tordini.org/musique-ws/appcast.xml'
   name 'Musique'
   homepage 'http://flavio.tordini.org/musique'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Musique.app'
 end

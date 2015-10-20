@@ -1,10 +1,10 @@
 cask :v1 => 'pycharm' do
-  version '4.5'
-  sha256 '96f97b5d031bdb509d300528aa79e60774fc8b2ec1e88800324095babb4902c9'
+  version '4.5.4'
+  sha256 '4bc042c0726fbe4ac738dd34cc3a59d52b14404ae5d32420b736ada57737017b'
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
   name 'PyCharm'
-  homepage 'http://www.jetbrains.com/pycharm/'
+  homepage 'https://www.jetbrains.com/pycharm/'
   license :commercial
 
   app 'PyCharm.app'

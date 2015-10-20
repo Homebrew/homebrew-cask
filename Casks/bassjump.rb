@@ -19,7 +19,7 @@ cask :v1 => 'bassjump' do
     pkg 'BassJumpInstaller.pkg'
   end
 
-  homepage 'http://www.twelvesouth.com/product/bassjump-2-for-macbook'
+  homepage 'https://www.twelvesouth.com/product/bassjump-2-for-macbook'
   license :gratis
 
   uninstall :pkgutil => [

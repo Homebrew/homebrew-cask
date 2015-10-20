@@ -1,6 +1,6 @@
-cask :v1 => 'docker-compose' do
-  version '1.2.0'
-  sha256 '24a5d284f3e85f5a42701afc3c9959a29aa2d874dc122fa711de5f710d0a01d8'
+cask :v1_1 => 'docker-compose' do
+  version '1.4.2'
+  sha256 '52024e4b7f28206684dfa5471e5385405f67bd87f5f98ddf29ca5b06c5bdd286'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/docker/compose/releases/download/#{version}/docker-compose-Darwin-x86_64"
@@ -13,7 +13,7 @@ cask :v1 => 'docker-compose' do
   binary 'docker-compose-Darwin-x86_64', :target => 'docker-compose'
 
   postflight do
-    system '/bin/chmod', '--', '0755', "#{staged_path}/docker-compose-Darwin-x86_64"
+    set_permissions "#{staged_path}/docker-compose-Darwin-x86_64", '0755'
   end
 
   depends_on :formula => 'docker'

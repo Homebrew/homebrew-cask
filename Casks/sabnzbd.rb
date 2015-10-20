@@ -5,10 +5,18 @@ cask :v1 => 'sabnzbd' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/sabnzbdplus/sabnzbdplus/#{version}/SABnzbd-#{version}-osx.dmg"
   name 'SABnzbd'
-  homepage 'http://sabnzbd.org/'
+  homepage 'https://sabnzbd.org/'
   license :gpl
 
-  app 'SABnzbd.app'
+  depends_on :macos => '>= :snow_leopard'
+
+  if MacOS.release == :snow_leopard
+    app 'Snow Leopard/SABnzbd.app'
+  elsif MacOS.release <= :lion
+    app 'Lion/SABnzbd.app'
+  else
+    app 'SABnzbd.app'
+  end
 
   zap :delete => [
                   '~/Library/Application Support/SABnzbd/sabnzbd.ini',

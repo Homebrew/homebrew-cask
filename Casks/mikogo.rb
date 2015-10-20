@@ -5,7 +5,7 @@ cask :v1 => 'mikogo' do
   # mikogo4.com is the official download host per the vendor homepage
   url 'http://download.mikogo4.com/mikogo.dmg'
   name 'Mikogo'
-  homepage 'http://www.mikogo.com/'
+  homepage 'https://www.mikogo.com/'
   license :gratis
 
   # Renamed for clarity: app name is inconsistent with its branding

@@ -4,7 +4,7 @@ cask :v1 => 'logic' do
 
   url "http://downloads.saleae.com/betas/#{version}/Logic-#{version}-Darwin.dmg"
   name 'Logic'
-  homepage 'http://www.saleae.com/'
+  homepage 'https://www.saleae.com/'
   license :commercial
 
   app 'Logic.app'

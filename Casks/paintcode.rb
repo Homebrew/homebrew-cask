@@ -1,12 +1,13 @@
 cask :v1 => 'paintcode' do
-  version '2.3.1'
-  sha256 '6355a0ea775de821982e0110fa094b5995ba37daf612363b75d24cf74be7a702'
+  version :latest
+  sha256 :no_check
 
-  url "http://www.paintcodeapp.com/content/versions/#{version}/paintcode-trial.zip"
+  # pixelcut.com is the official download host per the appcast feed
+  url 'http://www.pixelcut.com/paintcode/paintcode.zip'
   appcast 'http://www.pixelcut.com/paintcode/appcast.xml'
   name 'PaintCode'
   homepage 'http://www.paintcodeapp.com/'
   license :commercial
 
-  app 'PaintCode Trial.app'
+  app 'PaintCode.app'
 end

@@ -1,6 +1,6 @@
 cask :v1 => 'gpgtools' do
-  version '2015.03-b6'
-  sha256 '1fa07bffceb989f9e2204de12939e93338ccb922889eaa5b7ef9c29c6a29f4f3'
+  version '2015.09'
+  sha256 '0ec0f4bb66ef660d3c3b0433dd3186e093a1b4f23bf8fac8b4ebca9fa6d80420'
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   gpg "#{url}.sig",
@@ -36,6 +36,8 @@ cask :v1 => 'gpgtools' do
                           ],
             :delete => [
                         '/Applications/GPG Keychain Access.app',
+                        '/Applications/GPG Keychain.app',
+                        '/usr/local/MacGPG2',
                         '/Library/Services/GPGServices.service',
                         '/Library/Mail/Bundles/GPGMail.mailbundle',
                         '/Library/PreferencePanes/GPGPreferences.prefPane',
@@ -49,6 +51,7 @@ cask :v1 => 'gpgtools' do
                         '~/Library/Services/GPGServices.service',
                         '~/Library/Mail/Bundles/GPGMail.mailbundle',
                         '~/Library/PreferencePanes/GPGPreferences.prefPane',
+                        # todo expand/glob for ~/Library/Caches/org.gpgtools.gpg*
                        ]
 
   caveats do

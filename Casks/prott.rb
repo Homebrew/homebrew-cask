@@ -4,7 +4,7 @@ cask :v1 => 'prott' do
 
   url 'https://prottapp.com/app/gadgets/prott.dmg'
   name 'Prott'
-  homepage 'http://prottapp.com/'
+  homepage 'https://prottapp.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Prott.app'

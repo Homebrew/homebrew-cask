@@ -4,7 +4,7 @@ cask :v1 => 'syphon-virtual-screen' do
 
   url 'https://github.com/andreacremaschi/Syphon-virtual-screen/releases/download/1.3/Syphon.Virtual.Screen.mpkg.zip'
   name 'Syphon Virtual Screen'
-  homepage 'http://andreacremaschi.github.io/Syphon-virtual-screen/'
+  homepage 'https://andreacremaschi.github.io/Syphon-virtual-screen/'
   license :unknown
 
   pkg 'Syphon Virtual Screen.mpkg'

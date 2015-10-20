@@ -10,4 +10,8 @@ cask :v1 => 'schnapps' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Schnapps.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
 end

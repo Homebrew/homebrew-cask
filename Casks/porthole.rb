@@ -6,7 +6,7 @@ cask :v1 => 'porthole' do
   appcast 'http://update.getporthole.com/appcast.rss'
   name 'Porthole'
   homepage 'http://getporthole.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Porthole.app'
 end

@@ -1,9 +1,8 @@
 cask :v1 => 'coda' do
-  version '2.5.10'
-  sha256 'bb2e9c9f5b5e3a1afb1cf9cb8884afd8c833d5aa7fea7b3b9c7254da1de1fead'
+  version '2.5.12'
+  sha256 '3bcb4a1f99a47edd087b9579c206a38cecae1a31287e84121c5775b8752a8c3f'
 
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
-  appcast 'http://www.panic.com/updates/update.php'
   name 'Coda'
   homepage 'https://panic.com/Coda/'
   license :commercial
@@ -19,6 +18,8 @@ cask :v1 => 'coda' do
     '~/Library/Preferences/com.panic.Coda2.LSSharedFileList.plist.lockfile',
     '~/Library/Saved Application State/com.panic.Coda2.savedState'
   ]
+
+  depends_on :macos => '>= :lion'
 
   app 'Coda 2.app'
 end

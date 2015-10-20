@@ -6,7 +6,7 @@ cask :v1 => 'flavours' do
   appcast 'http://flavours-updates.interacto.net/appcast.xml'
   name 'Flavours'
   homepage 'http://flavours.interacto.net/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Flavours.app'
 

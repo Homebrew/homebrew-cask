@@ -3,10 +3,10 @@ cask :v1 => 'propane' do
   sha256 :no_check
 
   url 'https://propaneapp.com/appcast/Propane.zip'
-  appcast 'http://propaneapp.com/appcast/release.xml'
+  appcast 'https://propaneapp.com/appcast/release.xml'
   name 'Propane'
-  homepage 'http://propaneapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://propaneapp.com/'
+  license :commercial
 
   app 'Propane.app'
 end

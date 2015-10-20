@@ -5,7 +5,7 @@ cask :v1 => 'enfusegui' do
   url "http://software.bergmark.com/enfusegui/files/2.1/EnfuseGUI-#{version}.dmg"
   name 'EnfuseGUI'
   homepage 'http://software.bergmark.com/enfusegui/Main.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'EnfuseGUI.app'
 end

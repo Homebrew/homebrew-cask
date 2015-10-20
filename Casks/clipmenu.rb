@@ -4,11 +4,11 @@ cask :v1 => 'clipmenu' do
 
   # dropbox.com is the official download host per the vendor homepage
   url "https://dl.dropbox.com/u/1140644/clipmenu/ClipMenu_#{version}.dmg"
-  appcast 'http://feeds.feedburner.com/clipmenu-appcast',
+  appcast 'https://feeds.feedburner.com/clipmenu-appcast',
           :sha256 => 'e9f9df0e48aad4e00b8df26fd622f42a0218f5be662b6d2ee496664c5f45b4a3'
   name 'ClipMenu'
   homepage 'http://www.clipmenu.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'ClipMenu.app'
 

@@ -8,5 +8,7 @@ cask :v1 => 'andy' do
   homepage 'http://www.andyroid.net/'
   license :commercial
 
-  app 'Andy.app'
+  pkg "Andy_OSX_v#{version}.pkg"
+
+  uninstall :pkgutil => 'net.andyroid.andy.player.osx'
 end

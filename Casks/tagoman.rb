@@ -7,7 +7,7 @@ cask :v1 => 'tagoman' do
   name 'TagoMan'
   appcast 'https://onflapp.appspot.com/tagoman',
           :sha256 => 'b6e866d06fe73d9d2915e04cde5cb0270b452382b9cd9d0c7fc65d5735c15443'
-  homepage 'http://onflapp.wordpress.com/tagoman'
+  homepage 'https://onflapp.wordpress.com/tagoman/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TagoMan.app'

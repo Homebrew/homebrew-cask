@@ -4,7 +4,7 @@ cask :v1 => 'au-lab' do
 
   url 'http://images.apple.com/itunes/mastered-for-itunes/docs/au_lab.zip'
   name 'AU Lab'
-  homepage 'http://www.apple.com/itunes/mastered-for-itunes/'
+  homepage 'https://www.apple.com/itunes/mastered-for-itunes/'
   license :gratis
 
   container :nested => 'AU Lab Image.dmg'

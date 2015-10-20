@@ -1,6 +1,6 @@
 cask :v1 => 'mirador' do
-  version '1.3beta'
-  sha256 'c2c4e2b5c9a9723c99c65894db97fa008fa49def3ede3a2d32426877b5b89351'
+  version '1.3'
+  sha256 'bc9e8a6f3de948a8674de3d35b9f9074be15421f24f4bcce5591899dc828a9c2'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/mirador/mirador/releases/download/#{version}/mirador-macosx-#{version}.zip"

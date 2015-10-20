@@ -5,7 +5,7 @@ cask :v1 => 'sputnik' do
   url "http://sputnik.szwacz.com/downloads/Sputnik-v#{version}.dmg"
   name 'Sputnik'
   homepage 'http://sputnik.szwacz.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Sputnik.app'
 end
