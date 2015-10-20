@@ -7,9 +7,9 @@ cask :v1_1 => 'pd' do
   homepage 'http://msp.ucsd.edu/software.html'
   license :bsd
 
-  app 'Pd-0.46-6-64bit.app'
+  app "Pd-#{version}-64bit.app"
 
   postflight do
-    set_permissions "#{staged_path}/Pd-0.46-5-64bit.app", 'u+w'
+    set_permissions "#{staged_path}/Pd-#{version}-64bit.app", 'u+w'
   end
 end
