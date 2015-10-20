@@ -1,6 +1,6 @@
 cask :v1 => 'amethyst' do
   version '0.9.5'
-  sha256 'ceb73e48ea7774aa1e0cfbdace2599687b30ae6484ddd327713af2659c365738'
+  sha256 '7f346ab0f200d110a0bc058e7ab590bb7dc0a5353e67b3251b5b316c49b60c4f'
 
   url "http://ianyh.com/amethyst/versions/Amethyst-#{version}.zip"
   name 'Amethyst'
