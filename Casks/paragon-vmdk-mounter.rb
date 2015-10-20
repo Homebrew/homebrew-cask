@@ -9,5 +9,8 @@ cask :v1 => 'paragon-vmdk-mounter' do
 
   pkg 'Paragon VMDK Mounter.pkg'
 
-  uninstall :script  => 'Uninstall.app/Contents/MacOS/Uninstall'
+  uninstall \
+    :launchctl => 'com.paragon-software.vdmounter',
+    :kext => 'com.paragon-software.kext.VDMounter',
+    :pkgutil => 'com.paragon-software.VDMounter.pkg'
 end
