@@ -40,5 +40,4 @@ cask :v1 => 'wireshark2' do
                          '/usr/local/bin/wireshark',
                         ]
 
-  depends_on :x11 => true
 end
