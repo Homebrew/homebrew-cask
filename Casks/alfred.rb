@@ -8,7 +8,6 @@ cask :v1 => 'alfred' do
   license :freemium
 
   app 'Alfred 2.app'
-  app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 
   postflight do
     suppress_move_to_applications :key => 'suppressMoveToApplications'
