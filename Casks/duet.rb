@@ -1,6 +1,6 @@
 cask :v1 => 'duet' do
-  version '1.3.2_1435536275'
-  sha256 '18629ffa421cfd4482414137575ad1b95870ac345e10719d2b953d7f0f72333a'
+  version '1.4.0_1439081188'
+  sha256 'd3123f40c9d6d9989e8f9f9dd2ca3f3ccad79304ce739fcaa32d2334de4de4d2'
 
   # devmate.com is the official download host per the vendor homepage
   url "http://dl.devmate.com/com.kairos.duet/#{version.sub(%r{_.*},'')}/#{version.sub(%r{.*_},'')}/duet-#{version.sub(%r{_.*},'')}.zip"
