@@ -9,6 +9,8 @@ cask :v1 => 'alfred' do
 
   app 'Alfred 2.app'
 
+  accessibility_access true
+
   postflight do
     suppress_move_to_applications :key => 'suppressMoveToApplications'
   end
