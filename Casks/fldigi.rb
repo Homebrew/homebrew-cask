@@ -7,6 +7,6 @@ cask :v1 => 'fldigi' do
   homepage 'http://sourceforge.net/projects/fldigi/files/fldigi/'
   license :gpl
 
-  app 'fldigi-3.23.04.app'
-  app 'flarq-4.3.5.app'
+  app "fldigi-#{version}.app"
+  app 'flarq.app'
 end
