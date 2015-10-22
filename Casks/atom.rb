@@ -28,6 +28,5 @@ cask :v1 => 'atom' do
                   '~/Library/Application Support/com.github.atom.ShipIt',
                   '~/Library/Caches/com.github.atom',
                   '~/Library/Preferences/com.github.atom.plist',
-                 ],
-      :rmdir  => '~/.atom/'
+                 ]
 end
