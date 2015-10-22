@@ -1,6 +1,6 @@
 cask :v1 => 'wireshark' do
-  version '1.12.8'
-  sha256 '9eade167a2054e8b71fc6e9ce154422a14ed70a40e15d842ef6dfbf9d96152ec'
+  version '2.0.0rc1'
+  sha256 '2a8ced7cd6c1788b46aa366d91dfbad144842fdfb09443a3b72d2dfec058783b'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   name 'Wireshark'
@@ -39,6 +39,4 @@ cask :v1 => 'wireshark' do
                          '/usr/local/bin/tshark',
                          '/usr/local/bin/wireshark',
                         ]
-
-  depends_on :x11 => true
 end
