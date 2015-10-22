@@ -1,6 +1,6 @@
 cask :v1 => 'pepper-flash' do
-  version '18.0.0.232'
-  sha256 '0500b116c56d37c9f4467ba74524f66df1ada5bab9e1091af9ee9a252d3936ba'
+  version '19.0.0.226'
+  sha256 '735354dead04382629c39d2d6fd6e860631f13055e6746a515b20c3cd9774f91'
 
   url "https://admdownload.adobe.com/bin/live/AdobeFlashPlayer_#{version.to_i}ppau_a_install.dmg"
   name 'Pepper Flash Player'

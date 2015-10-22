@@ -7,7 +7,7 @@ cask :v1 => 'sofortbild' do
           :sha256 => 'bfec2c24e8156dc4fb07ead12901cc5734fb7194b76acb6dffd1f42bfe6f68f6'
   name 'Sofortbild'
   homepage 'http://www.sofortbildapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Sofortbild.app'
 end

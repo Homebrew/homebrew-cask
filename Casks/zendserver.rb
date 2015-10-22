@@ -1,8 +1,8 @@
 cask :v1 => 'zendserver' do
-  version '8.0.2'
-  sha256 '80fa2d34fde1f62ef8374bebea7bb0ccaa85ec0dd5371f45609fc6bf49dc7423'
+  version '8.5.1'
+  sha256 '5a34d8ea941eed7bb981810bfee11f44ae27d0c9e40e50e8fd1c93b8781352c9'
 
-  url "http://downloads.zend.com/zendserver/#{version}/ZendServer-#{version}-php-5.6.5.dmg"
+  url "http://downloads.zend.com/zendserver/#{version}/ZendServer-#{version}-php-5.6.10.dmg"
   name 'Zend Server'
   homepage 'https://www.zend.com/en/products/server/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

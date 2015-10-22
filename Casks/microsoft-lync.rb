@@ -1,10 +1,10 @@
 cask :v1 => 'microsoft-lync' do
-  version '14.1.1_150716'
-  sha256 'e2e2d0a4e72f59db765f46373c225aab5bffbc5d02f0a378cbccf334e1a83120'
+  version '14.2.1_150923'
+  sha256 'da1264855e3a7b372639862ed1b35a8e03c49ee5f26a440ac74daced5a743449'
 
   url "http://download.microsoft.com/download/5/0/0/500C7E1F-3235-47D4-BC11-95A71A1BA3ED/lync_#{version}.dmg"
   name 'Microsoft Lync 2011'
-  homepage 'https://www.microsoft.com/mac/enterprise/lync'
+  homepage 'https://www.microsoft.com/en-us/download/details.aspx?id=36517'
   license :gratis
 
   pkg 'Lync Installer.pkg'

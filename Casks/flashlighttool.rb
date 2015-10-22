@@ -6,7 +6,7 @@ cask :v1 => 'flashlighttool' do
   url "https://s3.amazonaws.com/easyaf/uploads/984cd555-3c75-45d7-9625-e331d3b95592/FlashlightTool-#{version}.zip"
   name 'FlashlightTool'
   homepage 'http://flashlighttool.42pag.es/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'FlashlightTool.app'
 end

@@ -1,10 +1,10 @@
 cask :v1 => 'uninstallpkg' do
-  version '1.0.15'
-  sha256 '783162231d10790511da79f66d305c079bfd852705a7e36f66496f0d1d063de8'
+  version '1.0.17'
+  sha256 '1ee7fecb7e465fc7f2995b22f7e7919915540d3e43e82fdf256a0ac78ba8fac2'
 
   url "https://www.corecode.at/downloads/uninstallpkg_#{version}.zip"
   appcast 'https://www.corecode.at/uninstallpkg/uninstallpkg.xml',
-          :sha256 => '98d2be956abe6a474278bfebdbec2c06570b1188d8242b4bdbb0dcf9a72127f2'
+          :sha256 => '7dd7eeff9077187fbf1d8f1aeefc896ff15c3f080fe46d1dfc0583a078350a43'
   name 'UninstallPKG'
   homepage 'https://www.corecode.at/uninstallpkg/'
   license :freemium

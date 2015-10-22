@@ -7,7 +7,7 @@ cask :v1 => 'sketchupviewer' do
   url 'https://dl.trimble.com/sketchup/SketchUpViewer-en.dmg'
   name 'SketchUpViewer'
   homepage 'https://www.sketchup.com/products/sketchup-viewer'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'SketchUpViewer.app'
 end

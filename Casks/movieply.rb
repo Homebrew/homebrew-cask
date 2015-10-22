@@ -5,7 +5,7 @@ cask :v1 => 'movieply' do
   url "http://www.movieply.com/download/MoviePly-#{version}.OSX.zip"
   name 'MoviePly'
   homepage 'http://www.movieply.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'MoviePly.app'
 end

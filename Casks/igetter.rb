@@ -5,7 +5,7 @@ cask :v1 => 'igetter' do
   url "http://www.igetter.net/search/downloads/iGetter#{version}.dmg"
   name 'iGetter'
   homepage 'http://www.igetter.net/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app "iGetter #{version}/iGetter.app"
 end

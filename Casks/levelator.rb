@@ -5,7 +5,7 @@ cask :v1 => 'levelator' do
   url "http://cdn.conversationsnetwork.org/Levelator-#{version}.dmg"
   name 'Levelator'
   homepage 'http://www.conversationsnetwork.org/levelator/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Levelator.app'
 end

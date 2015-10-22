@@ -1,6 +1,6 @@
 cask :v1 => 'atom' do
-  version '1.0.7'
-  sha256 'f68412561bbd0d46e92a4af0748f5f6fa9f31744bcfb9547f6f66de3073f47bd'
+  version '1.0.19'
+  sha256 '49cb4df7a8b79ea66f93e29732e229046ee0ef8a9e9a7af88ad616993fa96f50'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"
@@ -28,6 +28,5 @@ cask :v1 => 'atom' do
                   '~/Library/Application Support/com.github.atom.ShipIt',
                   '~/Library/Caches/com.github.atom',
                   '~/Library/Preferences/com.github.atom.plist',
-                 ],
-      :rmdir  => '~/.atom/'
+                 ]
 end

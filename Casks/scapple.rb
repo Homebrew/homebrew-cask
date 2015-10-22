@@ -7,7 +7,7 @@ cask :v1 => 'scapple' do
   appcast 'https://www.literatureandlatte.com/downloads/scapple/scapple.xml'
   name 'Scapple'
   homepage 'https://www.literatureandlatte.com/scapple.php'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Scapple.app'
 end

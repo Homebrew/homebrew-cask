@@ -5,7 +5,7 @@ cask :v1 => 'race-for-the-galaxy' do
   url "http://keldon.net/rftg/rftg-osx-#{version}.zip"
   name 'Race for the Galaxy'
   homepage 'http://keldon.net/rftg/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Race for the Galaxy.app'
 end

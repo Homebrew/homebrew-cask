@@ -5,7 +5,7 @@ cask :v1 => 'no-ip-duc' do
   url "https://www.noip.com/client/mac/noip#{version}.dmg"
   name 'No-IP DUC'
   homepage 'https://www.noip.com/download?page=mac'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'No-IP DUC.app'
 end

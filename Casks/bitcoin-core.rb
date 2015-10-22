@@ -1,6 +1,6 @@
 cask :v1 => 'bitcoin-core' do
-  version '0.11.0'
-  sha256 'fa457e65662b73f3d33235c012d4bec181e2919dd2a400afaa0ff9ab4927fb89'
+  version '0.11.1'
+  sha256 '4ac6dca07c9d1052f9471846c1069a1902e161f4fa520aa74c6b74b32db3b51b'
 
   url "https://bitcoin.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx.dmg"
   name 'Bitcoin'
@@ -8,7 +8,6 @@ cask :v1 => 'bitcoin-core' do
   homepage 'https://bitcoin.org/'
   license :mit
 
-  # Renamed for clarity: app name is inconsistent with its branding.
-  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/3634
+  # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'Bitcoin-Qt.app', :target => 'Bitcoin Core.app'
 end

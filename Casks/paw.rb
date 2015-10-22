@@ -1,9 +1,8 @@
 cask :v1 => 'paw' do
-  version '2.2.2'
-  sha256 '80af2f3bfd973c920d636453f9a9fb8b1d7c3fbd461e72132c2bf12373d06254'
+  version '2.2.5'
+  sha256 '1a752b5d97fc8788839ce447411d26b0b43a433a4f8f4098e79d842c3ff58e46'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://luckymarmot-distribution.s3.amazonaws.com/paw/Paw-#{version}.zip"
+  url "https://luckymarmot.com/paw/download/#{version}"
   name 'Paw'
   homepage 'https://luckymarmot.com/paw'
   license :commercial

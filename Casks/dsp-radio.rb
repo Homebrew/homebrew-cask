@@ -5,7 +5,7 @@ cask :v1 => 'dsp-radio' do
   url "https://dl2sdr.homepage.t-online.de/files/DSP_Radio_#{version.delete('.')}.zip"
   name 'DSP Radio'
   homepage 'https://dl2sdr.homepage.t-online.de/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app "DSP Radio #{version}.app"
 end

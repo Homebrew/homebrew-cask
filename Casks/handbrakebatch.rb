@@ -6,7 +6,7 @@ cask :v1_1 => 'handbrakebatch' do
   appcast 'https://www.osomac.com/appcasts/handbrakebatch/HandBrakeBatch.xml'
   name 'HandBrakeBatch'
   homepage 'https://www.osomac.com/apps/osx/handbrake-batch/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'HandBrakeBatch.app'
 

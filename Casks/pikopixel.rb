@@ -5,7 +5,7 @@ cask :v1 => 'pikopixel' do
   url "http://twilightedge.com/downloads/PikoPixel#{version}.dmg"
   name 'PikoPixel'
   homepage 'http://twilightedge.com/mac/pikopixel/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'PikoPixel.app'
 end

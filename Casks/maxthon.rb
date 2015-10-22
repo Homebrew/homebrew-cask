@@ -5,7 +5,7 @@ cask :v1 => 'maxthon' do
   url "https://dl.maxthon.com/mac/Maxthon-#{version}.dmg"
   name 'Maxthon'
   homepage 'http://www.maxthon.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Maxthon.app'
 end

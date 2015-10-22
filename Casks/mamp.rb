@@ -5,7 +5,7 @@ cask :v1_1 => 'mamp' do
   url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
   name 'MAMP'
   homepage 'https://www.mamp.info/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   pkg "MAMP_MAMP_PRO_#{version}.pkg"
 

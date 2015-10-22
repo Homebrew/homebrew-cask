@@ -5,7 +5,7 @@ cask :v1 => 'katana' do
   url 'http://download.witiz.com/Katana.zip'
   name 'Katana'
   homepage 'http://katana.witiz.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Katana.app'
 end

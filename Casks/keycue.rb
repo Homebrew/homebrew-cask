@@ -5,7 +5,7 @@ cask :v1 => 'keycue' do
   url "http://www.ergonis.com/downloads/products/keycue/KeyCue#{version.delete('.')}-Install.dmg"
   name 'KeyCue'
   homepage 'http://www.ergonis.com/products/keycue/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'KeyCue.app'
 end

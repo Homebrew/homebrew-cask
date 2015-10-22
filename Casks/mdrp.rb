@@ -7,7 +7,7 @@ cask :v1 => 'mdrp' do
   appcast 'https://www.macdvdripperpro.com/mdrp_sparkle5.xml',
           :sha256 => '8e4f7c395dda29438cf1f4a931a626d484886109a01ea9ee733fa6d7c24f4634'
   homepage 'https://www.macdvdripperpro.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'MDRP.app'
 end

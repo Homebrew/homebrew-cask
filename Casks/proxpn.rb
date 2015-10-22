@@ -1,6 +1,6 @@
 cask :v1 => 'proxpn' do
-  version '4.1.4'
-  sha256 '11e2edce81b6863f4365b4e7be2f6b1cf7cc019319a71f8806500c4626a8da71'
+  version '4.2.2'
+  sha256 '301ad32f944911628448228c46fc6ae98e87959e9ed54fc49aff175da496a8b3'
 
   url "https://www.proxpn.biz/updater/proXPN-MacOSX-10.5-#{version}.dmg"
   appcast 'https://www.proxpn.biz/updater/appcast.rss'

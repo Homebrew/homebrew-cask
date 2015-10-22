@@ -5,8 +5,8 @@ cask :v1 => 'sage' do
     # mit.edu is an official download host per the vendor download page
     url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-x86_64-Darwin-OSX_10.7_x86_64-app.dmg"
   else
-    version '6.8'
-    sha256 'cffdb518f2683adbf1b790617aefcf4491b43744efa1fc73d638e189e4cf18d6'
+    version '6.9'
+    sha256 '03112bf747cf807f308d518f34c1982ca3c9599e65bf64a6782efc78136198a4'
     # mit.edu is an official download host per the vendor download page
     url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-x86_64-Darwin-OSX_10.10_x86_64-app.dmg"
   end

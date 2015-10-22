@@ -1,6 +1,6 @@
-cask :v1 => 'dockertoolbox' do
-  version '1.8.1b'
-  sha256 '712ca552b7a49e30b2758a9794563eec6285bf5e15a16946f6a05bf47b1258b8'
+cask :v1_1 => 'dockertoolbox' do
+  version '1.8.3'
+  sha256 'bb85bf4b4e294cfbaf8cd3b1e4d83976d5b01d333910118f3575ec8348a0cb92'
 
   url "https://github.com/docker/toolbox/releases/download/v#{version}/DockerToolbox-#{version}.pkg"
   appcast 'https://github.com/docker/toolbox/releases.atom'

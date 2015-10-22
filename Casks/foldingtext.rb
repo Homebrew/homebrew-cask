@@ -8,7 +8,7 @@ cask :v1 => 'foldingtext' do
   appcast 'https://foldingtext.s3.amazonaws.com/FoldingText.rss',
           :sha256 => '5915bc0f4b102f040737726cb09086eef336203b78c9ea202356bc56efbec767'
   homepage 'http://www.foldingtext.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'FoldingText.app'
 end

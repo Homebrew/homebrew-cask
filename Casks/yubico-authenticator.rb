@@ -1,6 +1,6 @@
 cask :v1 => 'yubico-authenticator' do
-  version '2.0.1'
-  sha256 '9c36e1b8b2afd98213ae1fba5a97916d920a0a8c9cbe758719e703ea4e6abeff'
+  version '2.2.1'
+  sha256 '1c68b4589f377e6bae6f918e8018ed942172a4b71bcd3f907cdbca2b3f363313'
 
   url "https://developers.yubico.com/yubioath-desktop/Releases/yubioath-desktop-#{version}-mac.pkg"
   name 'Yubico Authenticator'

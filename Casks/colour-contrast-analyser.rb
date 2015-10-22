@@ -5,7 +5,7 @@ cask :v1 => 'colour-contrast-analyser' do
   url "http://files.paciellogroup.com/resources/CCA_#{version}.dmg"
   name 'Colour Contrast Analyser'
   homepage 'http://www.paciellogroup.com/resources/contrastanalyser/'
-  license :unknown
+  license :gpl
 
   app 'Colour Contrast Analyser.app'
 end

@@ -11,4 +11,9 @@ cask :v1 => 'genymotion' do
 
   app 'Genymotion.app'
   app 'Genymotion Shell.app'
+  binary 'Genymotion Shell.app/Contents/MacOS/genyshell'
+
+  caveats do
+    files_in_usr_local
+  end
 end

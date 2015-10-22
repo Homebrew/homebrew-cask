@@ -5,7 +5,7 @@ cask :v1 => 'readytalk' do
   url 'https://core.readytalk.com/ql/bins/QuickLauncherInstall.dmg'
   name 'ReadyTalk Quick Launcher'
   homepage 'https://www.readytalk.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'ReadyTalk Quick Launcher.app'
 end

@@ -1,10 +1,10 @@
 cask :v1 => 'ubar' do
-  version '2.5.0'
-  sha256 '0b5388a7bd599d48836e08b9138acc0c802aa86e65d6128f66e03a734eb2a823'
+  version '3.0.9'
+  sha256 'f05de1427fdf6cf4ca7d177e99da783bf2c499e99d2215539e69de3617a5536c'
 
   url "http://www.brawersoftware.com/downloads/ubar/ubar#{version.delete('.')}.zip"
   appcast "http://brawersoftware.com/appcasts/feeds/ubar/ubar#{version.to_i}.xml",
-          :sha256 => 'bc407a2ec6071e585a0a3843b49f7df32a7a38a77dafd79cc63e8ae197f21d13'
+          :sha256 => '7a2d319198f5fdc3e358a8238003cd87635ae0b47a5ddba5e598ac5f19bb7674'
   name 'uBar'
   homepage 'http://brawersoftware.com/products/ubar'
   license :commercial

@@ -1,10 +1,10 @@
 cask :v1 => 'karabiner' do
-  version '10.7.0'
-  sha256 'c5a64c01ac24a35f0cb84c581c0fd9490ef038c67b50864fdc8aefd33fe2ae39'
+  version '10.11.0'
+  sha256 'fb23658f7be3c5650724c46a48ba3ca36bb71dd66ae8b594a301cb85b0b1ed00'
 
   url "https://pqrs.org/osx/karabiner/files/Karabiner-#{version}.dmg"
   appcast 'https://pqrs.org/osx/karabiner/files/appcast.xml',
-          :sha256 => '309c41f2569783084f4e9bf7085d2749a482fe3d3f2ca58bf9be0da89c2956a1'
+          :sha256 => 'a2e51c1773f2a62fd2f8475ec854caca7464389a373013a60804d6bd1f344c09'
   name 'Karabiner'
   name 'KeyRemap4MacBook'
   homepage 'https://pqrs.org/osx/karabiner/'

@@ -1,6 +1,6 @@
 cask :v1 => 'clion' do
-  version '1.1'
-  sha256 'b7e4e719885c56530b9b1f524bcfbce457cbe139dbbf092a457bcdd317fca045'
+  version '1.1.1'
+  sha256 'f763c2bb6d6c6036fb7a165b9b15d40174709cf0e69682e63ffad3d28e120c26'
 
   url "https://download.jetbrains.com/cpp/CLion-#{version}.dmg"
   name 'CLion'

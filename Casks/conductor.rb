@@ -1,6 +1,6 @@
 cask :v1 => 'conductor' do
-  version '1.2.1'
-  sha256 '0df00414d64474093aeefd9f7b81fd80bb8a98da2b713164e498df6cd0e60cca'
+  version '1.2.2'
+  sha256 'a5f9ba34c258c7d6a902de86c4f14e36e0b6283ab3893d6c43a7ba95f3831e63'
 
   url "https://github.com/keith/conductor/releases/download/#{version}/Conductor.app.zip"
   appcast 'https://github.com/keith/conductor/releases.atom'

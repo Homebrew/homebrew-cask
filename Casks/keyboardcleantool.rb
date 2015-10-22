@@ -6,7 +6,7 @@ cask :v1 => 'keyboardcleantool' do
   url 'http://bettertouchtool.net/KeyboardCleanTool.zip'
   name 'KeyboardCleanTool'
   homepage 'http://blog.boastr.net/keyboardcleantool/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'KeyboardCleanTool.app'
 end
