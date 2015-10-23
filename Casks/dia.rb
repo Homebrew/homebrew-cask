@@ -9,7 +9,7 @@ cask :v1 => 'dia' do
   license :gpl
 
   app 'Dia.app'
-  
+
   depends_on :x11 => true
 
   postflight do
