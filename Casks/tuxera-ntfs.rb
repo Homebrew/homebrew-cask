@@ -9,5 +9,8 @@ cask :v1 => 'tuxera-ntfs' do
 
   pkg '.packages/Flat/Install Tuxera NTFS.mpkg'
 
-  uninstall :script => '/System/Library/Filesystems/fusefs_txantfs.fs/Support/uninstall-package.sh'
+  uninstall :pkgutil => [
+                         'com.tuxera.pkg.Tuxera_NTFS',
+                         'com.tuxera.pkg.Tuxera_NTFS_compat'
+                        ]
 end

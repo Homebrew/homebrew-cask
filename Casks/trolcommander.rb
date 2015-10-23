@@ -1,6 +1,6 @@
 cask :v1 => 'trolcommander' do
-  version '0.9.5'
-  sha256 '9bd9fe93245e55d20085ed14d1fafbfa0303806789416a594792e8a206a11457'
+  version '0.9.6'
+  sha256 '2378192a989c83e73ffad84a93b281ba2d0f8aeaac5763a454c3d66308423904'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/trol73/trol-commander-dist/blob/master/#{version}/trolcommander-#{version.gsub('.', '_')}.app.tar.gz?raw=true"
