@@ -31,6 +31,20 @@ And there we have it. Google Chrome installed with a few quick commands: no clic
 $ open ~/Applications/"Google Chrome.app"
 ```
 
+## Tab Completioin
+
+[Homebrew/homebrew-completions](https://github.com/Homebrew/homebrew-completions) support `bash` and `fish` completions(only for `brew-cask` right now), you should type:
+
+    brew install homebrew/completions/brew-cask-completion
+
+Or:
+
+    brew tap homebrew/completions
+    brew install brew-cask-completion
+
+If you are looking for `zsh` completion support, please use
+[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
+
 ## Learn More
 
 * Find basic documentation on using homebrew-cask in [USAGE.md](USAGE.md)
