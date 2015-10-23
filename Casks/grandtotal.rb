@@ -1,6 +1,6 @@
 cask :v1 => 'grandtotal' do
-  version '4.0.1'
-  sha256 '15f04b9ade6f817b7014e4a61de779283d66fc088b10fd71e738d33fad296bec'
+  version '4.0.3'
+  sha256 'd20b1132398af4f6969ed7c15e22f8a1f01158e0a758d0798e675531c6af9b1b'
 
   url "http://mediaatelier.com/GrandTotal3/GrandTotal_#{version}.zip"
   appcast 'http://mediaatelier.com/GrandTotal3/feed.php',
@@ -11,5 +11,5 @@ cask :v1 => 'grandtotal' do
 
   depends_on :macos => '>= :mountain_lion'
 
-  app "GrandTotal #{version.to_i}.app"
+  app 'GrandTotal.app'
 end
