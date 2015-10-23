@@ -9,6 +9,19 @@ cask :v1 => 'appcode' do
 
   app 'AppCode.app'
 
+  zap :delete => [
+                  '~/Library/Preferences/com.jetbrains.AppCode.plist',
+                  '~/Library/Preferences/AppCode32',
+                  '~/Library/Application Support/AppCode32',
+                  '~/Library/Caches/AppCode32',
+                  '~/Library/Logs/AppCode32',
+                 ]
+
+  conflicts_with :cask => [
+                           'appcode-eap',
+                           'appcode-bundled-jdk',
+                          ]
+
   caveats <<-EOS.undent
     #{token} requires Java 6 like any other IntelliJ-based IDE.
     You can install it with

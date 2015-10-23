@@ -1,10 +1,12 @@
 cask :v1 => 'nzbget' do
-  version '15.0'
-  sha256 'd4e6fa16d8404a2d1c1e6fe28e4bf4ca4f10d80cf53c724879867d82335167af'
+  version '16.1'
+  sha256 '4ec71fa2dcd94c69520eda5c7f43d36e1ab49149bd8b79339da9d5e08f740c8e'
 
-  url "https://downloads.sourceforge.net/project/nzbget/nzbget-stable/#{version}/nzbget-#{version}-bin-osx.zip"
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/nzbget/nzbget/releases/download/v#{version}/nzbget-#{version}-bin-osx.zip"
+  appcast 'https://github.com/nzbget/nzbget/releases.atom'
   name 'NZBGet'
-  homepage 'https://nzbget.net'
+  homepage 'http://nzbget.net'
   license :gpl
 
   app 'NZBGet.app'

@@ -19,6 +19,8 @@ cask :v1 => 'bettertouchtool' do
 
   app 'BetterTouchTool.app'
 
+  accessibility_access true
+
   zap :delete => [
                   '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',
                   '~/Library/Application Support/BetterTouchTool',
