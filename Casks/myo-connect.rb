@@ -1,6 +1,6 @@
 cask :v1 => 'myo-connect' do
-  version '0.14.0'
-  sha256 '8469972d3223154b0a938f811adef142aade2e0d426f79bc0bbdbb27ea17071a'
+  version '1.0.0'
+  sha256 'd0f91042dec36d69cf0a9968ea351cd33dbf618964a7631d12d9c1d9c7b362fe'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/thalmicdownloads/mac/#{version}/MyoConnect.dmg"

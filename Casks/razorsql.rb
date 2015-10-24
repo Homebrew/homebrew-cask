@@ -1,14 +1,17 @@
 cask :v1 => 'razorsql' do
-  version '6.3.25'
-  sha256 'fddfa081ec121c80da51b2781ee14b235159f828ae4a04d81a5e23e1bea8b060'
+  version '6.3.26'
 
-  url "http://downloads.razorsql.com/downloads/#{version.gsub('.', '_')}/razorsql#{version.gsub('.', '_')}_x64.dmg"
+  if Hardware::CPU.is_32_bit? || MacOS.release <= :snow_leopard
+    sha256 '820deccfc41be160db3158f9ed69570bf054d4306a4a0180bf8d89d70376a3db'
+    url "http://downloads.razorsql.com/downloads/#{version.gsub('.', '_')}/razorsql#{version.gsub('.', '_')}.dmg"
+  else
+    sha256 '1ac51415955b7d72197184763fba707d675cdf9c9c65cac1bee91fe925aca677'
+    url "http://downloads.razorsql.com/downloads/#{version.gsub('.', '_')}/razorsql#{version.gsub('.', '_')}_x64.dmg"
+  end
+
   name 'RazorSQL'
   homepage 'http://razorsql.com/download_mac.html'
   license :commercial
-
-  depends_on :macos => '>= :lion'
-  depends_on :arch => :x86_64
 
   app 'RazorSQL.app'
 

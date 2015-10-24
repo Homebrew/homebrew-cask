@@ -5,7 +5,7 @@ cask :v1 => 'freedv' do
   url "https://files.freedv.org/OSX/FreeDV-#{version}.dmg"
   name 'FreeDV'
   homepage 'https://freedv.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'FreeDV.app'
 end

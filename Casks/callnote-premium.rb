@@ -7,7 +7,7 @@ cask :v1 => 'callnote-premium' do
   homepage 'http://www.kandasoft.com/home/kanda-apps/skype-call-recorder.html'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  pkg "callnote-premium-install-#{version}.pkg"
+  pkg "callnote-premium-install-#{version}.pkg", :allow_untrusted => true
 
   uninstall :pkgutil => 'callnote-pro'
 end

@@ -1,12 +1,12 @@
 cask :v1 => 'gamesalad' do
-  version '0.13.30'
-  sha256 '0c0d9ceaf7cc92c59d7be18fc785dfd00d25c5b05999f1f1fe1dfbdec62c646b'
+  version '0.13.44'
+  sha256 'b3d09b4cbde5eaa695be5967ce8d08e1504b08640bf6569fb120fde91f2a4ed5'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "http://gs.releases.s3.amazonaws.com/creator/#{version}/GameSalad-Creator-#{version}-beta.dmg"
   name 'GameSalad'
   appcast 'https://gamesalad.com/download/studioUpdates',
-          :sha256 => '2040ea4abaea2e9e089bfb35feefe6d35b7601b1ddd51c81117e2fde46f23a77'
+          :sha256 => 'd82c182f2b11ec456e6c09e1f3f7430416c8938b67195f4239392918de0e6b62'
   homepage 'https://gamesalad.com/'
   license :commercial
 

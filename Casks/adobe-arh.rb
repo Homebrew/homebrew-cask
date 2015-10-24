@@ -1,4 +1,4 @@
-cask :v1 => 'adobe-arh' do
+cask :v1_1 => 'adobe-arh' do
   version :latest
   sha256 :no_check
 
@@ -12,6 +12,6 @@ cask :v1 => 'adobe-arh' do
   binary 'arh'
 
   postflight do
-    system '/bin/chmod', '--', '755', "#{staged_path}/arh"
+    set_permissions "#{staged_path}/arh", '755'
   end
 end

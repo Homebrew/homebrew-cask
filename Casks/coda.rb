@@ -1,6 +1,6 @@
 cask :v1 => 'coda' do
-  version '2.5.11'
-  sha256 '7a1f723a661fe4fa0c6d3cfd13615492777167602ffea03eab34eaee0cbe9a5e'
+  version '2.5.12'
+  sha256 '3bcb4a1f99a47edd087b9579c206a38cecae1a31287e84121c5775b8752a8c3f'
 
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
   name 'Coda'

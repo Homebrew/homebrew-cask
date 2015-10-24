@@ -5,7 +5,7 @@ cask :v1 => 'dump-truck' do
   url 'https://www.goldenfrog.com/downloads/dumptruck/dumptruck.dmg'
   name 'Dump Truck'
   homepage 'https://www.goldenfrog.com/dumptruck'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Dump Truck.app'
 end

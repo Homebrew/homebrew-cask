@@ -1,9 +1,9 @@
-cask :v1 => 'docker-machine' do
-  version 'v0.3.0'
-  sha256 '1b94543ee506bfc75cad43662b346e3560aacf9d47fc78b9d27c2158df486026'
+cask :v1_1 => 'docker-machine' do
+  version '0.4.1'
+  sha256 '6879c1cf4cf38f3b59209f86858305e4115b11dfdd98163b29b557f3648c14c9'
 
   # github.com is the official download host per the vendor homepage
-  url "https://github.com/docker/machine/releases/download/#{version}/docker-machine_darwin-amd64"
+  url "https://github.com/docker/machine/releases/download/v#{version}/docker-machine_darwin-amd64"
   appcast 'https://github.com/docker/machine/releases.atom'
   name 'Docker Machine'
   homepage 'https://docs.docker.com/machine'
@@ -13,7 +13,7 @@ cask :v1 => 'docker-machine' do
   binary 'docker-machine_darwin-amd64', :target => 'docker-machine'
 
   postflight do
-    system '/bin/chmod', '--', '0755', "#{staged_path}/docker-machine_darwin-amd64"
+    set_permissions "#{staged_path}/docker-machine_darwin-amd64", '0755'
   end
 
   depends_on :formula => 'docker'

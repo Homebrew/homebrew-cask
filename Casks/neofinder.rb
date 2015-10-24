@@ -6,7 +6,7 @@ cask :v1 => 'neofinder' do
   appcast 'http://www.wfs-apps.de/updates/neofinder-appcast-64.xml'
   name 'NeoFinder'
   homepage 'http://www.cdfinder.de'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'NeoFinder.app'
 end

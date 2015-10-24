@@ -1,11 +1,13 @@
 cask :v1 => 'pagico' do
-  version '7.1.1781'
-  sha256 '17ddc8929540818aa7a7da7aa779b848f55c5db45c3a0e8d49703f16a7a3cc16'
+  version '7.1.1797'
+  sha256 '1693cbc6995c5665646465eea9e9c23590b65e21722bc3f16c1392fb8b95eabb'
 
-  url "http://pagico.com/downloads/Pagico_Desktop_r#{version.split('.')[2]}.dmg"
+  url "https://www.pagico.com/downloads/Pagico_Desktop_r#{version.split('.')[2]}.dmg"
   name 'Pagico'
-  homepage 'http://pagico.com/'
+  homepage 'https://www.pagico.com/'
   license :commercial
+
+  depends_on :macos => '>= :lion'
 
   pkg 'Install Pagico.pkg'
 

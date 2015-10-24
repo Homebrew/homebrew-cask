@@ -10,7 +10,7 @@ cask :v1 => 'vuescan' do
 
   name 'VueScan'
   homepage 'http://www.hamrick.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'VueScan.app'
 end

@@ -177,7 +177,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
     dispatch_uninstall_directives(self.class.artifact_dsl_key)
   end
 
-  def dispatch_uninstall_directives(stanza, expand_tilde=false)
+  def dispatch_uninstall_directives(stanza, expand_tilde=true)
     directives_set = @cask.artifacts[stanza]
     ohai "Running #{stanza} process for #{@cask}; your password may be necessary"
 

@@ -7,7 +7,7 @@ cask :v1 => 'pupil' do
           :sha256 => 'f3fba366207956fb47f2a2b20f5587db6a70d461deb7826cdfe0230e8651c226'
   name 'Pupil'
   homepage 'http://pupil.io/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Pupil.app'
 end

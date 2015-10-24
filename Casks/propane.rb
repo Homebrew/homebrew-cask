@@ -6,7 +6,7 @@ cask :v1 => 'propane' do
   appcast 'https://propaneapp.com/appcast/release.xml'
   name 'Propane'
   homepage 'https://propaneapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Propane.app'
 end

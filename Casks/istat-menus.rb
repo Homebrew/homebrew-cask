@@ -1,10 +1,9 @@
 cask :v1 => 'istat-menus' do
-  version :latest
-  sha256 :no_check
+  version '5.11'
+  sha256 '5931ff8a024ea54f9268e66c650ae4a33b399ae25ca36586b7814d960ed77d19'
 
-  url 'http://download.bjango.com/istatmenus/'
-  appcast 'http://bjango.com/istatmenus/appcast/appcast2.xml',
-          :sha256 => '4780e5d8414c45e00e3ac792d67bd8ba0b1d59f1e9394ee1db0478352b040db2'
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://s3.amazonaws.com/bjango/files/istatmenus5/istatmenus#{version}.zip"
   name 'iStats Menus'
   homepage 'http://bjango.com/mac/istatmenus/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

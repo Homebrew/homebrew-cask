@@ -5,7 +5,7 @@ cask :v1 => 'minimalclock' do
   url 'http://www.ilovecolorz.net/download/MinimalClockScreenSaver.dmg'
   name 'MinimalClock'
   homepage 'http://ilovecolorz.net/minimalclock/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   pkg ' .pkg'
 

@@ -1,6 +1,6 @@
 cask :v1 => 'orange' do
-  version '2.7.8-dcf9af9'
-  sha256 '137a677c76c21be64e4b1e6ba3b4ea384f87b6fdaeb91afc0c52e7cfb6ca33c6'
+  version '2.7.8-7887ad2'
+  sha256 '312274a81c510227696dd655cc14a1fedd7029f58b67118a97ac7526af18608d'
 
   url "http://orange.biolab.si/download/files/Orange-#{version}.dmg"
   name 'Orange'

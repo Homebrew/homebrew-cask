@@ -6,7 +6,7 @@ cask :v1 => 'ripit' do
   appcast 'https://files.thelittleappfactory.com/ripit/appcast.xml'
   name 'RipIt'
   homepage 'http://thelittleappfactory.com/ripit/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'RipIt.app'
 end

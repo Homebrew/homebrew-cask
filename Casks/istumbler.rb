@@ -10,7 +10,7 @@ cask :v1 => 'istumbler' do
     url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   else
     version '101'
-    sha256 '71197bc2e00da263f1b33703aa857a0720e7cd7005315f286cafb250db9172de'
+    sha256 'c59192f9a48ba0166f4c21e9d770214d051d67b4a4130fc4195154dea4943985'
     url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   end
 

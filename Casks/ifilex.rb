@@ -5,7 +5,7 @@ cask :v1 => 'ifilex' do
   url 'http://www.osxbytes.com/iFileX.dmg'
   name 'iFileX'
   homepage 'http://www.osxbytes.com/page3/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'iFileX.app'
 end

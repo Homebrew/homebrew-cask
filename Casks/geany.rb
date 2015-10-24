@@ -1,8 +1,8 @@
 cask :v1 => 'geany' do
   version '1.25'
-  sha256 '1c435412d754d6e64e773c9066bae4534c481aea79ffc5a2ab6a7b723183870a'
+  sha256 '4b1fbe9a3abfe0c40da90542ca7fadac6c1147f73263f1f5118cc94fc4d2b85d'
 
-  url "http://download.geany.org/snapshots/geany-#{version}nightly_osx.dmg"
+  url "http://download.geany.org/geany-#{version}_osx.dmg"
   name 'Geany'
   homepage 'http://www.geany.org'
   license :gpl

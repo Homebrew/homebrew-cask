@@ -9,4 +9,14 @@ cask :v1 => 'wineskin-winery' do
   license :gpl
 
   app 'Wineskin Winery.app'
+
+  zap :delete => [
+                  '~/Library/Application Support/Wineskin',
+                  '~/Library/Preferences/com.urgesoftware.wineskin.wineskin.plist',
+                  '~/Library/Caches/com.urgesoftware.wineskin.wineskinwinery',
+                  '~/Library/Saved Application State/com.urgesoftware.wineskin.wineskin.savedState'
+                 ],
+      :rmdir => '~/Applications/Wineskin'
+
+  depends_on :macos => '>= :snow_leopard'
 end

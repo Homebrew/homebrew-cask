@@ -5,7 +5,7 @@ cask :v1 => 'sandvox' do
   url 'http://www.karelia.com/files/8/Sandvox.dmg'
   name 'Sandvox'
   homepage 'https://www.karelia.com/products/sandvox/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   app 'Sandvox.app'
 end

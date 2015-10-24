@@ -1,6 +1,6 @@
 cask :v1 => 'postico' do
-  version '0.25'
-  sha256 '91b523dc5657d5f9f32438c4176442c80504d54930aa1e73ed3ae3f08d5dbbc0'
+  version '0.28'
+  sha256 '42d5247cb9d8757bf0e5f7f5a523dc5474b8ed76a36e1a0a0b36229f06639c83'
 
   url "https://eggerapps.at/postico/download/postico-#{version}.zip"
   name 'Postico'
@@ -9,5 +9,5 @@ cask :v1 => 'postico' do
 
   app 'Postico.app'
 
-  depends_on :macos => '>= :mountain_lion'
+  depends_on :macos => '>= :mavericks'
 end

@@ -1,6 +1,6 @@
 cask :v1 => 'munki' do
-  version '2.2.4.2431'
-  sha256 'e99ff8a826c3e3281decb4b124d93588347e8fb577cbfe29fd1223f3ca6ff000'
+  version '2.3.1.2535'
+  sha256 '6362031c87685800e93f674e7e3750844d2a1413fe7bc6ebc689e84a259e2c18'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/munki/munki/releases/download/v#{version.sub(%r{^(\d+\.\d+.\d+).*},'\1')}/munkitools-#{version}.pkg"

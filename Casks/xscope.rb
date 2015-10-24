@@ -1,6 +1,6 @@
 cask :v1 => 'xscope' do
   version '4.1.4'
-  sha256 '6617f7ec94e22d3e1e137bf6386188c827575e7778f8d1d69dce8817efa752f2'
+  sha256 'd9f1eab342b885277344829eb7b10fa636b76991a9367fb2319f32a48a386ea2'
 
   url "https://iconfactory.com/assets/software/xscope/xScope-#{version}.zip"
   appcast 'https://iconfactory.com/appcasts/xScope/appcast.xml',

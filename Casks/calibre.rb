@@ -2,16 +2,13 @@ cask :v1 => 'calibre' do
   if MacOS.release < :mountain_lion
     version '1.48.0'
     sha256 '0533283965fbc9a6618d0b27c85bdf3671fe75ff0e89eeff406fe1457ee61b14'
-    url "http://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
   else
-    version '2.33.0'
-    sha256 '4f7e8e884d77512ea01cbd78143c6a44c8fddd8860b754a1053254aa1bcb7c6e'
-
-    # github.com is an official download host per the vendor homepage, and a faster mirror than the main one
-    url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg"
+    version '2.41.0'
+    sha256 '9ca61c1541a0616e91112eac31e09a23277992702359e470796d5c4427352ee1'
     appcast 'https://github.com/kovidgoyal/calibre/releases.atom'
   end
 
+  url "http://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
   name 'calibre'
   homepage 'http://calibre-ebook.com/'
   license :gpl
@@ -37,4 +34,10 @@ cask :v1 => 'calibre' do
   binary 'calibre.app/Contents/MacOS/lrs2lrf'
   binary 'calibre.app/Contents/MacOS/markdown-calibre'
   binary 'calibre.app/Contents/MacOS/web2disk'
+
+  zap :delete => [
+                  '~/Library/Preferences/net.kovidgoyal.calibre.plist',
+                  '~/Library/Preferences/calibre',
+                  '~/Library/Caches/calibre',
+                 ]
 end

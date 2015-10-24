@@ -1,6 +1,6 @@
 cask :v1 => 'java' do
-  version '1.8.0_51-b16'
-  sha256 '85ee66d1fdce5244afcbfbfce8dc90582b8c7e3ec8ab4c21e0f4eb390af97832'
+  version '1.8.0_66-b17'
+  sha256 'cd416de4f41f9f0a6984c456481437681674a717da62259740c54732f174fa08'
 
   url "http://download.oracle.com/otn-pub/java/jdk/#{version.sub(%r{^\d+\.(\d+).*?_(.*)$},'\1u\2')}/jdk-#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$},'\1u\2')}-macosx-x64.dmg",
       :cookies => {
@@ -22,19 +22,21 @@ cask :v1 => 'java' do
     system '/usr/bin/sudo', '-E', '--',
       '/usr/libexec/PlistBuddy', '-c', 'Add :JavaVM:JVMCapabilities: string Applets',    "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Info.plist"
     system '/usr/bin/sudo', '-E', '--',
-      '/bin/rm', '-rf', '--', '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
-    system '/usr/bin/sudo', '-E', '--',
-      '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents", '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
-    system '/usr/bin/sudo', '-E', '--',
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home", '/Library/Java/Home'
     system '/usr/bin/sudo', '-E', '--',
       '/bin/mkdir', '-p', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home/bundle/Libraries"
     system '/usr/bin/sudo', '-E', '--',
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home/jre/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"
+    if MacOS.release <= :mavericks
+      system '/usr/bin/sudo', '-E', '--',
+        '/bin/rm', '-rf', '--', '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
+      system '/usr/bin/sudo', '-E', '--',
+        '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents", '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
+    end
   end
 
   uninstall :pkgutil => [
-                         "com.oracle.jdk#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$},'\1u\2')}",         # manually update this for each version
+                         "com.oracle.jdk#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$},'\1u\2')}",
                          'com.oracle.jre',
                         ],
             :launchctl => [
@@ -49,10 +51,14 @@ cask :v1 => 'java' do
                         '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
                         "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents",
                         '/Library/PreferencePanes/JavaControlPanel.prefPane',
-                        '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK',
                         '/Library/Java/Home',
-                        '/usr/lib/java/libjdns_sd.jnilib',
-                       ]
+                        if MacOS.release <= :mavericks
+                          [
+                           '/usr/lib/java/libjdns_sd.jnilib',
+                           '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
+                          ]
+                        end
+                       ].keep_if { |v| !v.nil? }
   zap       :delete => [
                         '~/Library/Application Support/Oracle/Java',
                         '~/Library/Caches/com.oracle.java.Java-Updater',

@@ -4,8 +4,6 @@ cask :v1 => 'bittorrent-sync' do
 
   url 'https://download-cdn.getsync.com/stable/osx/BitTorrent-Sync.dmg'
   name 'BitTorrent Sync'
-  # todo: response was not XML
-  # appcast 'http://www.usyncapp.com/cfu.php'
   homepage 'https://www.getsync.com/'
   license :gratis
 

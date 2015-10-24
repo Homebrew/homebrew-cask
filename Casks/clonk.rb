@@ -6,7 +6,7 @@ cask :v1 => 'clonk' do
   url 'http://www.clonkx.de/rage/cr_full_mac.zip'
   name 'Clonk Rage'
   homepage 'http://www.clonk.de/cr.php'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :oss
 
   app 'Clonk.app'
 end

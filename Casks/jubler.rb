@@ -9,4 +9,9 @@ cask :v1 => 'jubler' do
   license :gpl
 
   app 'Jubler.app'
+
+  caveats <<-EOS.undent
+    #{token} requires Java 6+, you can install the latest Java using
+      brew cask install java
+  EOS
 end

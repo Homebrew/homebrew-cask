@@ -6,7 +6,7 @@ cask :v1 => 'comicbooklover' do
   appcast 'https://www.bitcartel.com/appcast/comicbooklover-1.7-dsa.xml'
   name 'ComicBookLover'
   homepage 'https://www.bitcartel.com/comicbooklover/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'ComicBookLover.app'
 end

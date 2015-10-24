@@ -1,6 +1,6 @@
 cask :v1 => 'debookee' do
-  version '4.2.0'
-  sha256 '7f2a67d6a8d80da39a9a5d3b200c3995868b608fc9abc34b0cd690d84db090fb'
+  version '4.2.2'
+  sha256 '483c2cfa4162fbc23411c33101c99c774d7f5594075270979fded40ce884b8c2'
 
   url 'http://www.iwaxx.com/debookee/debookee.zip'
   appcast 'http://www.iwaxx.com/debookee/appcast.php',

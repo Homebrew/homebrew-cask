@@ -5,7 +5,7 @@ cask :v1 => 'spark' do
   url 'http://www.shadowlab.org/softwares/Spark/Spark.dmg'
   name 'Spark'
   homepage 'http://www.shadowlab.org/softwares/spark.php'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :mit
 
   app 'Spark.app'
 

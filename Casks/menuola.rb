@@ -7,7 +7,7 @@ cask :v1 => 'menuola' do
           :sha256 => 'e18b081046702171648c929872c692adc2d1b816f5e9aff93b0612a11a3ea362'
   name 'Menuola'
   homepage 'https://www.geocom.co.nz'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   container :nested => 'Menuola.dmg'
   app 'Menuola.app'

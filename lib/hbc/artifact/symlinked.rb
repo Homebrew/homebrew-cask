@@ -27,6 +27,10 @@ class Hbc::Artifact::Symlinked < Hbc::Artifact::Base
     altnames.concat(', ') if altnames.length > 0
     altnames.concat(%Q{"#{target.basename}"})
     altnames = %Q{(#{altnames})}
+
+    # Some packges are shipped as u=rx (e.g. Bitcoin Core)
+    @command.run!('/bin/chmod', :args => ['u=rwx', source])
+
     @command.run!('/usr/bin/xattr',
                   :args => ['-w', attribute, altnames, target],
                   :print_stderr => false)
@@ -83,13 +87,11 @@ class Hbc::Artifact::Symlinked < Hbc::Artifact::Base
   end
 
   def install_phase
-    # the sort is for predictability between Ruby versions
-    @cask.artifacts[self.class.artifact_dsl_key].sort.each { |artifact| link(artifact) }
+    @cask.artifacts[self.class.artifact_dsl_key].each { |artifact| link(artifact) }
   end
 
   def uninstall_phase
-    # the sort is for predictability between Ruby versions
-    @cask.artifacts[self.class.artifact_dsl_key].sort.each { |artifact| unlink(artifact) }
+    @cask.artifacts[self.class.artifact_dsl_key].each { |artifact| unlink(artifact) }
   end
 
   def preflight_checks(source, target)

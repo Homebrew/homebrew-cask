@@ -1,6 +1,6 @@
 cask :v1 => 'tabula' do
-  version '0.9.7'
-  sha256 '8fe8c4879cc56f1c07e8068122eb06417c3d43d5e3cc1c77b39a604df8c100f9'
+  version '1.0.1'
+  sha256 '85e75f120c450bc702c01aa88a4ca9c2d227ef2906ec7020e892e0f174a7d70b'
 
   url "https://github.com/jazzido/tabula/releases/download/v#{version}/tabula-mac-#{version}.zip"
   appcast 'https://github.com/jazzido/tabula/releases.atom'

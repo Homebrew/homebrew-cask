@@ -11,8 +11,8 @@ cask :v1 => 'spamsieve' do
 
     url "https://c-command.com/downloads/SpamSieve-#{version}-leopard.dmg"
   else
-    version '2.9.20'
-    sha256 'd9515b853148f14c384052217c9b528c0ca878f044ad58ed0feae49f69494770'
+    version '2.9.22'
+    sha256 'ac4e674b5dacb1813e62c6e17d9922ea76ff23345ea636e1a217b5f2c19c2a73'
 
     url "https://c-command.com/downloads/SpamSieve-#{version}.dmg"
   end

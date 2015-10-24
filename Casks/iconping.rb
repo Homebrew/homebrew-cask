@@ -5,7 +5,7 @@ cask :v1 => 'iconping' do
   url "http://antirez.com/iconping/iconping-#{version}.app.dmg"
   name 'Icon Ping'
   homepage 'http://antirez.com/iconping/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   app 'iconping.app'
 end

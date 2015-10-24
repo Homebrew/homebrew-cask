@@ -1,6 +1,6 @@
 cask :v1 => 'steermouse' do
-  version '4.2.4'
-  sha256 '7cfe807cb473de42b75f018c32d5567f68b949aa78243f36fa0ccc44d7009dcd'
+  version '4.2.5'
+  sha256 '4e6dbe5a5390a91948b288333545101532f4371f8c6e37513efcb1abdc4ae63b'
 
   url "http://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
   name 'SteerMouse'

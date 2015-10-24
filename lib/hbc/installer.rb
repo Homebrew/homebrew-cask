@@ -214,7 +214,14 @@ class Hbc::Installer
   def enable_accessibility_access
     return unless @cask.accessibility_access
     ohai 'Enabling accessibility access'
-    if MacOS.release >= :mavericks
+    if MacOS.release >= :el_capitan
+      @command.run!('/usr/bin/sqlite3',
+                    :args => [
+                              Hbc.tcc_db,
+                              "INSERT OR REPLACE INTO access VALUES('kTCCServiceAccessibility','#{bundle_identifier}',0,1,1,NULL,NULL);",
+                             ],
+                    :sudo => true)
+    elsif MacOS.release >= :mavericks
       @command.run!('/usr/bin/sqlite3',
                     :args => [
                               Hbc.tcc_db,

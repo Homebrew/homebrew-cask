@@ -1,6 +1,6 @@
 cask :v1 => 'kodi' do
-  version '15.0'
-  sha256 '2ebec4af240f4ba1875f29e4784396902d1c1c1e73bfecfa4f2e6d92128f891f'
+  version '15.2'
+  sha256 '9529729cf84bcb5f014ba030bf71f41cd2cb6b325ddd07f8605f37eef66c5760'
 
   url "http://mirrors.kodi.tv/releases/osx/x86_64/kodi-#{version}-Isengard-x86_64.dmg"
   name 'Kodi'

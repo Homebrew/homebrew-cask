@@ -5,7 +5,7 @@ cask :v1 => 'foxmail' do
   url 'http://www.foxmail.com/mac/download'
   name 'Foxmail'
   homepage 'http://www.foxmail.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Foxmail.app'
 end

@@ -1,9 +1,9 @@
 cask :v1 => 'textmate' do
-  version :latest
-  sha256 :no_check
+  version '2.0-beta.8'
+  sha256 'd3a55811439bb9878ce591e906c3540bf5ef18e6f46b224a57640c55d303c4f0'
 
   # textmate.org is the official download host per the vendor homepage
-  url 'https://api.textmate.org/downloads/release'
+  url "https://api.textmate.org/downloads/TextMate_#{version}.tbz"
   name 'TextMate'
   homepage 'http://macromates.com/'
   license :gpl

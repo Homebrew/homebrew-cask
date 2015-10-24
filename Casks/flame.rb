@@ -5,7 +5,7 @@ cask :v1 => 'flame' do
   url "http://husk.org/apps/Flame-#{version}-universal.zip"
   name 'Flame'
   homepage 'http://husk.org/apps/flame/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Flame.app'
 end

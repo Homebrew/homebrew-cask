@@ -5,7 +5,7 @@ cask :v1 => 'pixel-check' do
   url "http://macguitar.me/apps/pixelcheck/PXC#{version}.zip"
   name 'PiXel Check'
   homepage 'http://macguitar.me/apps/pixelcheck/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app "PiXel Check #{version}/PiXel Check.app"
 end

@@ -5,7 +5,7 @@ cask :v1 => 'capsee' do
   url "http://www.threemagination.com/CapSee#{version.gsub('.','')}.zip"
   name 'CapSee'
   homepage 'http://www.threemagination.com/capsee/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   container :nested => "CapSee#{version.gsub('.','')}.dmg"
   app 'CapSee.app'
