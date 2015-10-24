@@ -1,6 +1,6 @@
 cask :v1 => 'sococo' do
-  version '3.5.10_13372'
-  sha256 '8852a72506fa26ee56158fec5d814d9c818f775ad13a5a6f2d24f68a902601f8'
+  version '3.5.17_14261'
+  sha256 '77d453cdc4bde06344c11bf48ab17604886cf4f68ae7270d12b9158327d1dea0'
 
   url "http://download.sococo.com/release/Sococo_#{version.gsub('.','_')}.dmg"
   name 'Sococo'
