@@ -1,6 +1,6 @@
 cask :v1 => 'glyphs' do
-  version '2.1.1-768'
-  sha256 '0f7ef4552a9ebde795231c49929b027b00d63c3365d74a4e905ba19b5f6f1133'
+  version '2.2.1-819'
+  sha256 'a523da385f9d4683c38872e9f15e23c9219dc40aaedaa80bdf42a0ce482637d1'
 
   url "https://updates.glyphsapp.com/Glyphs#{version}.zip"
   name 'Glyphs'
