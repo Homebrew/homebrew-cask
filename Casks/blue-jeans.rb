@@ -10,4 +10,9 @@ cask :v1 => 'blue-jeans' do
   depends_on :macos => '>= 10.6'
 
   installer :manual => 'Blue Jeans Launcher.app'
+  uninstall :quit => %w(
+                       com.bluejeans.nw.app
+                       com.bluejeans.nw.helper
+                     )
+  zap :delete => "~/Applications/Blue Jeans.app"
 end
