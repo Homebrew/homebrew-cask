@@ -5,7 +5,7 @@ cask :v1 => 'gitifier' do
   url "https://github.com/jsuder/Gitifier/releases/download/#{version}/Gitifier-#{version}.zip"
   appcast 'https://github.com/jsuder/Gitifier/releases.atom'
   name 'Gitifier'
-  homepage 'http://psionides.github.io/Gitifier/'
+  homepage 'https://psionides.github.io/Gitifier/'
   license :eclipse
 
   app 'Gitifier.app'

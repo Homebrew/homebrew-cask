@@ -7,7 +7,7 @@ cask :v1 => 'strongvpn-client' do
   appcast 'https://colomovers.com/mac.xml',
           :sha256 => '4d1440058cd3a699e61c75312b34dc9871f7614eac1dc0e5386eb2fd4eeae7b7'
   name 'StrongVPN Client'
-  homepage 'http://strongvpn.com/vpnclient.shtml'
+  homepage 'https://strongvpn.com/vpnclient.shtml'
   license :closed
 
   app 'StrongVPN Client.app'

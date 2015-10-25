@@ -16,7 +16,7 @@ cask :v1 => 'ncar-ncl' do
 
   name 'NCAR Command Language'
   name 'ncl'
-  homepage 'http://www.ncl.ucar.edu/'
+  homepage 'https://www.ncl.ucar.edu/'
   license :oss
 
   depends_on :cask => 'xquartz'
@@ -44,7 +44,7 @@ cask :v1 => 'ncar-ncl' do
     export DYLD_FALLBACK_LIBRARY_PATH=$(dirname $(gfortran --print-file-name libgfortran.3.dylib)):$DYLD_FALLBACK_LIBRARY_PATH
 
     For other information, please see:
-    http://www.ncl.ucar.edu/Download/macosx.shtml
+    https://www.ncl.ucar.edu/Download/macosx.shtml
     EOS
   end
 end

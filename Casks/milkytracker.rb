@@ -5,7 +5,7 @@ cask :v1 => 'milkytracker' do
   url "http://www.milkytracker.org/files/milkytracker-#{version}-osx_universal.zip"
   name 'MilkyTracker'
   homepage 'http://www.milkytracker.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app "milkytracker-#{version}-osx_universal/MilkyTracker.app"
 end

@@ -4,7 +4,7 @@ cask :v1 => 'wiretap-studio' do
 
   url 'http://www.ambrosiasw.com/dl/wiretap'
   name 'WireTap Studio'
-  appcast 'http://www.AmbrosiaSW.com/updates/profile.php/wiretap_studio/release',
+  appcast 'https://www.AmbrosiaSW.com/updates/profile.php/wiretap_studio/release',
           :sha256 => 'b1903154579259dce440840029c34294417fe68a4ede2eddc6ee6ef27acca8c2'
   homepage 'http://www.ambrosiasw.com/utilities/wiretap/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

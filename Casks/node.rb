@@ -1,6 +1,6 @@
 cask :v1 => 'node' do
-  version '0.12.4'
-  sha256 'ca483deb4cf71bb308e2c140c4773d7521a42e27d0f17a07f183169bb416aea0'
+  version '4.2.1'
+  sha256 '688df0a12461f378b296f69e8ae2c1cbb974b0216278624815bce7dcfea080c2'
 
   url "https://nodejs.org/dist/v#{version}/node-v#{version}.pkg"
   name 'Node.js'
@@ -9,5 +9,5 @@ cask :v1 => 'node' do
 
   pkg  "node-v#{version}.pkg"
 
-  uninstall :pkgutil => 'org.nodejs'
+  uninstall :pkgutil => 'org.nodejs.node.pkg'
 end

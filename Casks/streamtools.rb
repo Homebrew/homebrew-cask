@@ -13,6 +13,6 @@ cask :v1 => 'streamtools' do
   end
 
   name 'streamtools'
-  homepage 'http://nytlabs.github.io/streamtools/'
+  homepage 'https://nytlabs.github.io/streamtools/'
   license :apache
 end

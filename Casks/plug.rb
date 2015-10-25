@@ -6,7 +6,7 @@ cask :v1 => 'plug' do
   appcast 'http://www.plugformac.com/files/sparklecast.xml'
   name 'Plug'
   homepage 'http://www.plugformac.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Plug.app'
 end

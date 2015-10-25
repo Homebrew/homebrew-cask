@@ -5,7 +5,7 @@ cask :v1 => 'macwinzipper' do
   url "http://tidajapan.com/files/MacWinZipper-#{version}.dmg?download"
   name 'MacWinZipper'
   homepage 'http://tidajapan.com/macwinzipper'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'MacWinZipper.app'
 end

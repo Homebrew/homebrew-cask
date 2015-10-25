@@ -1,10 +1,10 @@
 cask :v1 => 'adobe-reader' do
-  version '2015.007.20033'
-  sha256 '46703ba27599512223e9b89c308075a0ddb625287be8e22a87574dfc70a77eb5'
+  version '2015.009.20069'
+  sha256 '5b04f44a94882568aebb51ab31ebbf4bc53a3791a23af7c52af5db02cddd444a'
 
   url "http://ardownload.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.gsub('.', '')[2..-1]}/AcroRdrDC_#{version.gsub('.', '')[2..-1]}_MUI.dmg"
   name 'Adobe Acrobat Reader DC'
-  homepage 'http://www.adobe.com/products/reader.html'
+  homepage 'https://www.adobe.com/products/reader.html'
   license :gratis
   tags :vendor => 'Adobe'
 

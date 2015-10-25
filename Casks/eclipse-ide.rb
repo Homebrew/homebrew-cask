@@ -1,18 +1,14 @@
 cask :v1 => 'eclipse-ide' do
-  version '4.4.1'
+  version '4.5.1'
+  sha256 'ec2a963367f3ee99429f151d0af3bb6d70d0550f27e2d7ab65730b429b54c9a9'
 
-  if Hardware::CPU.is_32_bit?
-    sha256 'ab9c32bc1d3ff8ebbe763b24ef8a2a1c12e3366427eaebfafaf29f349683d07c'
-    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR1a/eclipse-standard-luna-SR1a-macosx-cocoa.tar.gz'
-  else
-    sha256 '528fdda23799600126b0bdd9341d3b749e315eb914a3187bc66317cf9c24d499'
-    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR1a/eclipse-standard-luna-SR1a-macosx-cocoa-x86_64.tar.gz'
-  end
-
+  url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/1/eclipse-committers-mars-1-macosx-cocoa-x86_64.tar.gz&r=1'
   name 'Eclipse'
   name 'Eclipse IDE for Eclipse Committers'
-  homepage 'http://eclipse.org/'
+  homepage 'https://eclipse.org/'
   license :eclipse
+  depends_on :macos => '>= :leopard'
+  depends_on :arch => :x86_64
 
-  app 'eclipse/Eclipse.app'
+  app 'Eclipse.app'
 end

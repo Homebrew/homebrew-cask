@@ -1,17 +1,17 @@
 cask :v1 => 'phpstorm' do
-  version '8.0.3'
-  sha256 '6c9b36ebfed67f5ec2e6a96f2f61826653b312686ecd8a298e0e2ca3e3a09559'
+  version '9.0.2'
+  sha256 '7995e951d442cb9203ed1e8ae491407a1b514828cef10bb9c7840880cbfacec2'
 
-  url "http://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
+  url "https://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
   name 'PhpStorm'
-  homepage 'http://www.jetbrains.com/phpstorm/'
+  homepage 'https://www.jetbrains.com/phpstorm/'
   license :commercial
 
   app 'PhpStorm.app'
 
   zap :delete => [
-                  '~/Library/Application Support/WebIde80',
-                  '~/Library/Preferences/WebIde80',
+                  '~/Library/Application Support/WebIde90',
+                  '~/Library/Preferences/WebIde90',
                   '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
                  ]
   caveats <<-EOS.undent

@@ -5,7 +5,7 @@ cask :v1 => 'jadengeller-helium' do
   url "https://github.com/JadenGeller/Helium/releases/download/v#{version}/Helium.app.zip"
   appcast 'https://github.com/JadenGeller/Helium/releases.atom'
   name 'Helium'
-  homepage 'http://jadengeller.github.io/Helium/'
+  homepage 'https://jadengeller.github.io/Helium/'
   license :mit
 
   app 'Helium.app'

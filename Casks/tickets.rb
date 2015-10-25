@@ -3,10 +3,10 @@ cask :v1 => 'tickets' do
   sha256 '8f2d7879581fb2604158367fb6e7eda8bc9ebf15e97781b69b64355f2832af6e'
 
   url 'https://www.irradiatedsoftware.com/download/Tickets.zip'
-  appcast 'http://www.irradiatedsoftware.com/updates/profiles/tickets.php',
+  appcast 'https://www.irradiatedsoftware.com/updates/profiles/tickets.php',
           :sha256 => '24a551412959452baf56b0cba06fdd502057f76812d596136b7fda1c14895386'
   name 'Tickets'
-  homepage 'http://www.irradiatedsoftware.com/tickets/'
+  homepage 'https://www.irradiatedsoftware.com/tickets/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Tickets.app'

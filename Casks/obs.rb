@@ -1,6 +1,6 @@
 cask :v1 => 'obs' do
-  version '0.10.1'
-  sha256 '3ac583ff22510fc6d22dcebbad8dc88ea7c5e454e1500b7b4f8a05afade9b2d3'
+  version '0.11.2'
+  sha256 '651d40896c30b2e4c51b26f869b0950dfcb8baabed15ba81276ccae9471d2fec'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/jp9000/obs-studio/releases/download/#{version}/obs-#{version}-installer.dmg"
@@ -9,7 +9,7 @@ cask :v1 => 'obs' do
   homepage 'https://obsproject.com/'
   license :gpl
 
-  pkg 'OBS.mpkg'
+  pkg 'OBS.pkg'
 
   uninstall :pkgutil => 'org.obsproject.pkg.obs-studio',
             :delete => '/Applications/SyphonInject.app'

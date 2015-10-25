@@ -4,7 +4,7 @@ cask :v1 => 'terminology' do
 
   url 'http://media.agiletortoise.com/Terminology-for-OS-X/Terminology-for-OS-X.zip'
   name 'terminology'
-  homepage 'http://agiletortoise.com/terminology/mac/'
+  homepage 'https://agiletortoise.com/terminology/mac/'
   license :gratis
 
   installer :script => 'Terminology-for-OS-X/Install.command', :sudo => false

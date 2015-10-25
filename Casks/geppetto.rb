@@ -12,7 +12,7 @@ cask :v1 => 'geppetto' do
   end
 
   name 'Geppetto'
-  homepage 'http://puppetlabs.github.io/geppetto/'
+  homepage 'https://puppetlabs.github.io/geppetto/'
   license :oss
 
   app 'geppetto/Geppetto.app'

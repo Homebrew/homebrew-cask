@@ -4,12 +4,12 @@ cask :v1 => 'gambit-c' do
   if Hardware::CPU.is_32_bit?
     sha256 '002ea1d272a4328a0448eab69e6256e104d888bc3c98133d072092457f842bbf'
     # umontreal.ca is the official download host per the vendor homepage
-    url "http://www.iro.umontreal.ca/~gambit/download/gambit/v4.7/prebuilt/gambc-v#{version.gsub('.', '_')}-macosx-intel32.dmg"
+    url "https://www.iro.umontreal.ca/~gambit/download/gambit/v4.7/prebuilt/gambc-v#{version.gsub('.', '_')}-macosx-intel32.dmg"
     pkg "gambc-v#{version.gsub('.', '_')}-macosx-intel32.pkg"
   else
     sha256 'bfdad5d4c5025b3ab21926554d870cb37a68607534b78912f81c62db29054a02'
     # umontreal.ca is the official download host per the vendor homepage
-    url "http://www.iro.umontreal.ca/~gambit/download/gambit/v4.7/prebuilt/gambc-v#{version.gsub('.', '_')}-macosx-intel64.dmg"
+    url "https://www.iro.umontreal.ca/~gambit/download/gambit/v4.7/prebuilt/gambc-v#{version.gsub('.', '_')}-macosx-intel64.dmg"
     pkg "gambc-v#{version.gsub('.', '_')}-macosx-intel64.pkg"
   end
 

@@ -5,7 +5,7 @@ cask :v1 => 'outwit-hub' do
   url 'https://www.outwit.com/downloads/release/outwit-hub.en-US.mac64.dmg'
   name 'OutWit Hub'
   homepage 'http://www.outwit.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   app 'Outwit Hub.app'
 end

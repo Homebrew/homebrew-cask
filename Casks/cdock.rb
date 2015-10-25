@@ -1,11 +1,14 @@
 cask :v1 => 'cdock' do
-  version '7.3'
-  sha256 '88aeadaa446241970bd96685ef9ddb53220b493f321ac0e579d0e7653ef6d984'
+  version '0.9.7'
+  sha256 '45c87cd2dbed30038bc2ecefa2ddda2c27eb37eb7c3f3a11657d68f8cec16a32'
 
-  url "http://downloads.sourceforge.net/project/cdock/cDock/cDock_v#{version}.zip"
+  url "https://github.com/w0lfschild/cDock/releases/download/cDock2-#{version}/cDock.zip"
+  appcast 'https://github.com/w0lfschild/cDock/releases.atom',
+          :sha256 => 'aee72070788692bd02336b610f77e2ac67a1d1a663fe6feda8414b953b63968d'
+  name 'cDock2'
   name 'cDock'
-  homepage 'http://sourceforge.net/projects/cdock/'
-  license :oss
+  homepage 'http://w0lfschild.github.io/pages/cdock.html'
+  license :bsd
 
   app 'cDock.app'
 
@@ -15,4 +18,5 @@ cask :v1 => 'cdock' do
   EOS
 
   depends_on :cask => 'easysimbl'
+  depends_on :macos => '>= :mavericks'
 end

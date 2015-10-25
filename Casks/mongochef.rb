@@ -1,10 +1,10 @@
 cask :v1 => 'mongochef' do
-  version '2.0.1'
-  sha256 'fc99bb76c4cfa3bbc3a6b319d1e362f1c73b0ce8a43a313014443d6b19057bbf'
+  version '3.0.5'
+  sha256 'b11a778f6dbc280b2e6036e855f2f574bb94355ddcb3ff70b8b016f85d533e4c'
 
-  url "http://cdn.3t.io/mongochef/mac/#{version}/MongoChef.dmg"
+  url "https://cdn.3t.io/mongochef/mac/#{version}/MongoChef.dmg"
   name 'MongoChef'
-  homepage 'http://3t.io/mongochef/'
+  homepage 'https://3t.io/mongochef/'
   # License is free for personal use (gratis) and paid for business use (commercial)
   license :other
 

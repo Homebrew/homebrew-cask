@@ -7,7 +7,7 @@ cask :v1 => 'snippet-edit' do
           :sha256 => 'a32af024b5e43f5bd6fef837808d8130359000c2f7f975f38abc46aecf17e113'
   name 'Snippet Edit'
   homepage 'http://cocoaholic.com/snippet_edit/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Snippet Edit.app'
 end

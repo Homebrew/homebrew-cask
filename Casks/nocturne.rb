@@ -4,7 +4,7 @@ cask :v1 => 'nocturne' do
 
   url "https://blacktree-nocturne.googlecode.com/files/Nocturne.#{version}.zip"
   name 'Nocturne'
-  homepage 'http://code.google.com/p/blacktree-nocturne/'
+  homepage 'https://code.google.com/p/blacktree-nocturne/'
   license :oss
 
   app 'Nocturne.app'

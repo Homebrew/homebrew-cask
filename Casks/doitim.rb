@@ -1,11 +1,11 @@
 cask :v1 => 'doitim' do
-  version '40141202'
-  sha256 'f5966c2c72dd286429b175480da8c206b664dd986ab109e416a98ade4aecba00'
+  version '4.2.3'
+  sha256 'd9cc46729385cf94f7fc653e7e425baa33f3a7c193bfe386255b4afc88e685eb'
 
-  url "http://version.doit.im/dl/Doit.im.#{version}.zip"
+  url "http://version.doit.im/dl/doit.im.#{version}.zip"
   name 'Doit.im'
   appcast 'http://version.doit.im/mac/update.xml',
-          :sha256 => '3ab0939dc09ccabb0beb97bf9da3c88aef5f8813bda743ebdb881640c9e0bab9'
+          :sha256 => '77ffb114e798daded7492f6ef651a45e61f265b88918b519265014210f2f214f'
   homepage 'http://doit.im/'
   license :commercial
 

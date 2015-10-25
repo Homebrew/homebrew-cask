@@ -1,10 +1,10 @@
 cask :v1 => 'macid' do
-  version '1.2.2'
-  sha256 '6dd7ad1992355be510df33ee6c0209690c6d3522a93afa9d6750b999b36c67be'
+  version '1.2.5'
+  sha256 'e95661227bc2dd638ee77d1027d70986dbbb8155cc6c60baa5d420c318530120'
 
-  url "http://macid.co/app/#{version}/MacID-for-OS-X.zip"
+  url "https://macid.co/app/#{version}/MacID-for-OS-X.zip"
   name 'MacID'
-  homepage 'http://macid.co/'
+  homepage 'https://macid.co/'
   license :gratis
 
   app 'MacID.app'

@@ -6,7 +6,7 @@ cask :v1 => 'chronicle' do
   appcast 'http://www.littlefin.com/downloads/chronicle3.xml'
   name 'Chronicle'
   homepage 'http://chronicleapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Chronicle.app'
 end

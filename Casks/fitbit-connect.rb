@@ -4,7 +4,7 @@ cask :v1 => 'fitbit-connect' do
 
   url "http://cache.fitbit.com/FitbitConnect/FitbitConnect_Mac_20141029_#{version}.dmg"
   name 'Fitbit Connect'
-  homepage 'http://www.fitbit.com/'
+  homepage 'https://www.fitbit.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install Fitbit Connect.pkg'

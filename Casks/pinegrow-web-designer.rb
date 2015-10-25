@@ -1,6 +1,6 @@
 cask :v1 => 'pinegrow-web-designer' do
-  version '2.01'
-  sha256 'f6811ca1cda6fcb370a5dbdc7742cc4aa7b2f26b7573d7ad75f83a5c10860782'
+  version '2.2'
+  sha256 'c0d1b9595963b8080298261c4d9744237427e5d2ed02d38d38fbdbcbb43a7f1a'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://pinegrow.s3.amazonaws.com/PinegrowMac.#{version}.dmg"

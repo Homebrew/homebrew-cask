@@ -5,7 +5,7 @@ cask :v1 => 'spacious' do
   url 'https://www.iospirit.com/static/objectfiles/file/159/Spacious.zip'
   name 'Spacious'
   homepage 'https://www.iospirit.com/products/spacious'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Spacious.app'
 end

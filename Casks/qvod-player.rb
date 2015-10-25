@@ -1,6 +1,6 @@
 cask :v1 => 'qvod-player' do
   version '1.1.26'
-  sha256 '6a52cf7e297f8976e3b3c8ce954a4c77ac1c99c7bd89ad3ba5b31938c8df6ad4'
+  sha256 'e824084e6a0539be3f30da795938b45c0f88bdb49794f61615a5753aedd92c4e'
 
   url "http://dl.kuaibo.com/mac/QvodPlayer_v#{version}.dmg"
   name '快播'

@@ -6,7 +6,7 @@ cask :v1 => 'spek' do
   url "https://spek.googlecode.com/files/spek-#{version}.dmg"
   name 'Spek'
   homepage 'http://spek.cc'
-  license :oss
+  license :gpl
 
   app 'Spek.app'
 end

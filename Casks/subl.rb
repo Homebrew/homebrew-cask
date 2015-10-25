@@ -1,6 +1,6 @@
 cask :v1 => 'subl' do
-  version '1.2'
-  sha256 '2f66cd6f873b51fa7bf31a6fe0bff1af4ac2cf0d9fff21a4b0f647c1cdcd6eef'
+  version '1.4'
+  sha256 '9e252eb6d7e12d27f80cd6a510c69772c6993b9e6140129fd5e9178f441099c6'
 
   url "https://github.com/dhoulb/subl/releases/download/v#{version}/Subl.app.zip"
   appcast 'https://github.com/dhoulb/subl/releases.atom'

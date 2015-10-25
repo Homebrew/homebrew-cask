@@ -1,6 +1,6 @@
 cask :v1 => 'todotxt' do
-  version '1.5.1'
-  sha256 'c848d808d2ea7147cd6f822f518cfcf622041a1d907406be56bb9caf58e5ca4c'
+  version '1.6.1'
+  sha256 'c3a01cc38058cafec61ada15cc1e48ae09e66d1aded9cd3545eb30a3b14b30cf'
 
   url "https://github.com/mjdescy/TodoTxtMac/releases/download/#{version}/TodoTxtMac.app.zip"
   appcast 'https://github.com/mjdescy/TodoTxtMac/releases.atom'

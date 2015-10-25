@@ -9,7 +9,7 @@ cask :v1 => 'espionage' do
   appcast 'https://updates.taoeffect.com/espionage3/appcast.xml',
           :sha256 => '47bca65264d0dce5ac4f065c2f6312727123a5b6cb83e5d1bfdedea2a0b3a80e'
   homepage 'https://www.espionageapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Espionage.app'
 end

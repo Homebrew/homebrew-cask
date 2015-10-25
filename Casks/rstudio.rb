@@ -1,6 +1,6 @@
 cask :v1 => 'rstudio' do
-  version '0.99.441'
-  sha256 'c7095ec8ea0de052a1a9f07292244a74f398e20e4d06be9742c5be9506bbeadd'
+  version '0.99.486'
+  sha256 '36bf213eb595568fe12090629d8082d7ce5f1e4073bba80a92e11c2e1809bcc3'
 
   # rstudio.org is the official download host per the vendor homepage
   url "http://download1.rstudio.org/RStudio-#{version}.dmg"

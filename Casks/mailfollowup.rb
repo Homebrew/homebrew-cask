@@ -25,7 +25,7 @@ cask :v1 => 'mailfollowup' do
   url "https://www.cs.unc.edu/~welch/MailFollowup/media/MailFollowUp_#{version}.dmg.zip"
   name 'MailFollowUp'
   homepage 'http://www.cs.unc.edu/~welch/MailFollowup/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   container :nested => "MailFollowUp_#{version}.dmg"
   pkg 'Install MailFollowUp.pkg'

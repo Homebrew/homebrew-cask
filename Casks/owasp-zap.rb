@@ -1,9 +1,9 @@
 cask :v1 => 'owasp-zap' do
-  version '2.4.0'
-  sha256 'd8e296cc09908f7df9970ac6f701191bf7ccdff628d95194196a58689f8186be'
+  version '2.4.2'
+  sha256 'b6d8f3a9632ab99bae4097084df74efd2321c22182aff3a119dd1e69ecc69a63'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/sourceforge/zaproxy/ZAP_#{version}_Mac_OS_X.dmg"
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/zaproxy/zaproxy/releases/download/#{version}/ZAP_#{version}_MAC_OS_X.dmg"
   name 'OWASP Zed Attack Proxy'
   name 'OWASP ZAP'
   name 'ZAP'

@@ -6,7 +6,7 @@ cask :v1 => 'evom' do
   appcast 'https://files.thelittleappfactory.com/evom/appcast.xml'
   name 'Evom'
   homepage 'http://thelittleappfactory.com/evom/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Evom.app'
 end

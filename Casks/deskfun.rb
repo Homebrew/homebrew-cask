@@ -7,7 +7,7 @@ cask :v1 => 'deskfun' do
           :sha256 => '57ed0eb9f5e08f7879eb825012bfb2b8ad21387aad8b35adce4f6659eb1b7999'
   name 'DeskFun'
   homepage 'http://www.furrysoft.de/?page=deskfun'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'DeskFun.app'
 end

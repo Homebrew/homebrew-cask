@@ -1,9 +1,8 @@
 cask :v1 => 'tunnelblick' do
-  version '3.5.0_build_4265'
-  sha256 '3ed4b749f85924937e41f5c78d84db2cdaf52cb60b5528d5e019468be7a1ad04'
+  version '3.5.4_build_4270.4395'
+  sha256 'b4ab4d3e7b6b61b3f19f73e82af36c5161a0844ef9696a82c001ea972626dc7d'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/project/tunnelblick/All%20files/Tunnelblick_#{version}.dmg"
+  url "https://www.tunnelblick.net/release/Tunnelblick_#{version}.dmg"
   appcast 'https://www.tunnelblick.net/appcast.rss',
           :sha256 => '7fa119cda4d782dc61cb75895c70b3572652df737c908270c48a09d67a874592'
   name 'Tunnelblick'

@@ -1,17 +1,17 @@
 cask :v1 => 'rubymine' do
-  version '7.1.2'
-  sha256 '01d28529e7e4456b362799d7501abe6f060176df60943a9f8955403f8d4f0f22'
+  version '7.1.4'
+  sha256 'ec503be6a441850702c5e332c459ccb2ed71e1a337f82b01587377f76a4f379e'
 
   url "http://download-cf.jetbrains.com/ruby/RubyMine-#{version}.dmg"
   name 'RubyMine'
-  homepage 'http://www.jetbrains.com/ruby/'
+  homepage 'https://www.jetbrains.com/ruby/'
   license :commercial
 
   app 'RubyMine.app'
 
   zap :delete => [
-                  "~/Library/Application Support/RubyMine#{version.gsub('.','')}",
-                  "~/Library/Preferences/RubyMine#{version.gsub('.','')}",
+                  "~/Library/Application Support/RubyMine#{version.delete('.')}",
+                  "~/Library/Preferences/RubyMine#{version.delete('.')}",
                  ]
 
   caveats <<-EOS.undent

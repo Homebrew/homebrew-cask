@@ -5,7 +5,7 @@ cask :v1 => 'bankid' do
   url 'https://install.bankid.com/FileDownloader?fileId=Mac'
   name 'BankID'
   homepage 'https://www.bankid.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   container :type => :naked
   preflight do

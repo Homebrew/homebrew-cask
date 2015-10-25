@@ -1,6 +1,6 @@
 cask :v1 => 'sqlitebrowser' do
-  version '3.6.0'
-  sha256 '6231a90898cf2189b5d9715e64a04d59c9f1aa83ca81501274ab03316f0adf06'
+  version '3.7.0'
+  sha256 '421dc0d64a61f393bee6a482bc32fbdce4b4cdab6f5be10e9214624604079bbb'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version}/sqlitebrowser-#{version}.dmg"

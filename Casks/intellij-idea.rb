@@ -1,8 +1,8 @@
 cask :v1 => 'intellij-idea' do
-  version '14.1.3'
-  sha256 'a7045dd58a6d632724a0444b46b71de55ee237a8f8fa31aa9a82b685d8d8bef2'
+  version '14.1.5'
+  sha256 '50941026863e2d43f4c8dcc1c02f749c096c2d0bcf53943220314f0898efec24'
 
-  url "http://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
+  url "https://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
   name 'IntelliJ IDEA'
   homepage 'https://www.jetbrains.com/idea/'
   license :commercial
@@ -12,6 +12,7 @@ cask :v1 => 'intellij-idea' do
   zap :delete => [
                   '~/Library/Application Support/IntelliJIdea14',
                   '~/Library/Preferences/IntelliJIdea14',
+                  '~/Library/Preferences/com.jetbrains.intellij.plist',
                  ]
 
   caveats <<-EOS.undent

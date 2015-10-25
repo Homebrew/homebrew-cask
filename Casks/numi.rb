@@ -2,7 +2,8 @@ cask :v1 => 'numi' do
   version :latest
   sha256 :no_check
 
-  url 'http://numi.io/static/files/Numi.zip'
+  # devmate.com is the official download host per the vendor homepage
+  url 'http://dl.devmate.com/com.dmitrynikolaev.numi/Numi.zip'
   name 'Numi'
   homepage 'http://numi.io/'
   license :gratis

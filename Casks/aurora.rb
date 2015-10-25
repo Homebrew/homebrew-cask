@@ -4,9 +4,9 @@ cask :v1 => 'aurora' do
 
   url "https://www.oneperiodic.com/files/Aurora%20v#{version}.zip"
   name 'Aurora'
-  appcast 'http://www.oneperiodic.com/aurora5.xml',
+  appcast 'https://www.oneperiodic.com/aurora5.xml',
           :sha256 => 'dae31492d459b5b8c1061a5866868b7f8f3f82afebf55a09ba8d559fdae185dd'
-  homepage 'http://www.oneperiodic.com/products/aurora/'
+  homepage 'https://www.oneperiodic.com/products/aurora/'
   license :commercial
 
   app 'Aurora.app'

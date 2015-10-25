@@ -4,7 +4,7 @@ cask :v1 => 'cord' do
 
   url "http://downloads.sourceforge.net/sourceforge/cord/CoRD_#{version}.zip"
   appcast 'http://cord.sourceforge.net/sparkle.xml',
-          :sha256 => 'aef1255be65ccd044bf03edcd5eec7bebe07b1a4f6dcbed715fa1112a384b09a'
+          :sha256 => '891e1675b678f03d7f050ecb426c28362dab3c92da1592fce8a36afcb7606b69'
   name 'CoRD'
   homepage 'http://cord.sourceforge.net/'
   license :gpl

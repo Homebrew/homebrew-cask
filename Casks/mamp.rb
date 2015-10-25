@@ -1,16 +1,16 @@
-cask :v1 => 'mamp' do
-  version '3.2.1'
-  sha256 '370b9b70f7b3ad7155fe84a6635366e28f277948fd15f7721b9c4aad09203a9b'
+cask :v1_1 => 'mamp' do
+  version '3.4'
+  sha256 '4351c048f770b99bc69da6d5240e7b1cff2dbaef485dec7e04327187f3d8df55'
 
-  url "http://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
+  url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
   name 'MAMP'
   homepage 'https://www.mamp.info/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   pkg "MAMP_MAMP_PRO_#{version}.pkg"
+
   postflight do
-    system '/usr/bin/sudo', '-E', '--',
-           '/usr/sbin/chown', '-R', '--', "#{Etc.getpwuid(Process.euid).name}:staff", '/Applications/MAMP', '/Applications/MAMP PRO'
+    set_ownership ['/Applications/MAMP', '/Applications/MAMP PRO']
   end
 
   uninstall :pkgutil => 'de.appsolute.installer.(mamp|mampacticon|mampendinstall|mamppro).pkg',

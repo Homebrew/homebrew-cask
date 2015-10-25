@@ -4,8 +4,8 @@ cask :v1 => 'comicbookloversync' do
 
   url 'https://www.bitcartel.com/downloads/comicbookloversync.zip'
   name 'ComicBookLover Sync'
-  homepage 'http://www.bitcartel.com/comicbooklover'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.bitcartel.com/comicbooklover/'
+  license :gratis
 
   app 'ComicBookLoverSync.app'
 end

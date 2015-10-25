@@ -1,6 +1,6 @@
 cask :v1 => 'yojimbo' do
-  version '4.0.3'
-  sha256 '3d56523799db955ddf362e3b4b43a4a193b426ea76cf02d1647ecd56e5231c3b'
+  version '4.0.4'
+  sha256 '1da84ee26dffc3812ccf8bd2d9323e1dbd058be04648bf127f7f023d92039ecb'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/BBSW-download/Yojimbo_#{version}.dmg"

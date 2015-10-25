@@ -1,4 +1,4 @@
-cask :v1 => 'microsoft-lync-plugin' do
+cask :v1_1 => 'microsoft-lync-plugin' do
   version :latest
   sha256 :no_check
 
@@ -13,4 +13,8 @@ cask :v1 => 'microsoft-lync-plugin' do
                          'Lync.Client.LwaPluginInstaller.*.LwaPlugin.pkg',
                          'Lync.Client.Plugin'
                         ]
+
+  caveats do
+    discontinued
+  end
 end

@@ -1,13 +1,22 @@
 cask :v1 => 'clamxav' do
-  version '2.7.5'
-  sha256 '33c6c76cb3e6f8ec9c23b521135b320ea5300910d9e929eaa0556e2bed15cbfe'
+  if MacOS.release <= :tiger
+    version '2.2.1'
+    sha256 'e075b21fe5154f31dcbde86e492531c87c67ab44ad75294d3063f32ae1e58278'
+  elsif MacOS.release <= :leopard
+    version '2.5.1'
+    sha256 '02a7529c74d11724e2d0e8226ac83a0d3cfb599afb354d02f6609632d69d9eb1'
+  else
+    version '2.8.5'
+    sha256 'd058eb5d27201ba7706c7daa9d8fe9f50597c0ce4fd4174555b60f91d097b955'
 
-  url "http://www.clamxav.com/downloads/ClamXav_#{version}.dmg"
-  appcast 'http://www.clamxav.com/sparkle/profileInfo.php',
-          :sha256 => '02c70a63eb2b650523d6fdbba82ffb102b19676d576c4a2baa8332194828feb3'
+    appcast 'http://www.clamxav.com/sparkle/profileInfo.php',
+            :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+  end
+
+  url "https://www.clamxav.com/downloads/ClamXav_#{version}.dmg"
   name 'ClamXav'
-  homepage 'http://www.clamxav.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.clamxav.com/'
+  license :commercial
 
   app 'ClamXav.app'
 

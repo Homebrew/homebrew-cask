@@ -4,7 +4,7 @@ cask :v1 => 'vuze' do
 
   url 'http://cf1.vuze.com/files/J7/VuzeBittorrentClientInstaller.dmg'
   name 'Vuze'
-  homepage 'http://www.vuze.com/'
+  homepage 'https://www.vuze.com/'
   license :gpl
 
   installer :script => 'Vuze Installer.app/Contents/MacOS/JavaApplicationStub',
