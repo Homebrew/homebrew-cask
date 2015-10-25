@@ -1,11 +1,11 @@
 cask :v1 => 'diffmerge' do
-  version '4.2.0.697'
-  sha256 '681b43b6ba5750934143798ee6876cde1ffe63db0fd8eae692dd75a59ceb26cf'
+  version '4.2.1.1013'
+  sha256 '1f19897513fb7af8fc7d3b40643bd6dee80e401c7245a0ed774e8211fd48e388'
 
-  url "http://download-us.sourcegear.com/DiffMerge/#{version.sub(/\.\d+$/, '')}/DiffMerge.#{version}.intel.stable.pkg"
+  url "http://download.sourcegear.com/DiffMerge/#{version.sub(/\.\d+$/, '')}/DiffMerge.#{version}.intel.stable.pkg"
   name 'DiffMerge'
   homepage 'https://www.sourcegear.com/diffmerge'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   pkg "DiffMerge.#{version}.intel.stable.pkg"
 
