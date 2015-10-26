@@ -33,5 +33,7 @@ cask :v1 => 'textexpander' do
 
   app 'TextExpander.app'
 
+  accessibility_access true
+
   zap :delete => '~/Library/Application Support/TextExpander/'
 end

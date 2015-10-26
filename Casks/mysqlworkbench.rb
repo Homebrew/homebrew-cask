@@ -1,6 +1,6 @@
 cask :v1 => 'mysqlworkbench' do
-  version '6.3.4'
-  sha256 'af214391dfc9c6bdb7640bf286732ce7d4500721906d9a0ad3b107db8f15e57a'
+  version '6.3.5'
+  sha256 '7b92e7dc0909f5225bb1d940addd2384d2f1b3d60c3b46a03014bdfc1e95f1ae'
 
   url "https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-osx-x86_64.dmg"
   name 'MySQL Workbench'
