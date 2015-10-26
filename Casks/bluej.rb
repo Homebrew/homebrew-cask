@@ -1,6 +1,6 @@
 cask :v1 => 'bluej' do
-  version '3.1.5'
-  sha256 'a9b30c1dcfd8f4245f22fb000a64ec09c1a8c353d4880cb818cc14b1f6fdf6ef'
+  version '3.1.6'
+  sha256 'b53cb1ce8384845767074480b26b2795aecf7d0f0e9027747c0106918a7471a6'
 
   url "http://www.bluej.org/download/files/BlueJ-#{version.delete('.')}.zip"
   name 'BlueJ'

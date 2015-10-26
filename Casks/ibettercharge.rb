@@ -1,6 +1,6 @@
 cask :v1 => 'ibettercharge' do
-  version '1.0.9-1423225886'
-  sha256 'c3be38df08b85b021a71893603deda5307011c840c3e63b611b7540dd4693a9c'
+  version '1.0.10-1443542332'
+  sha256 'd4c3b410b77836ecc97bf6133e7109934c2d0a6b64349083d2c03b0280e21985'
 
   # dl.devmate.com is the official download host per the appcast feed
   url "http://dl.devmate.com/com.softorino.iBetterCharge/#{version.sub(%r{-.*$},'')}/#{version.sub(%r{^.*?-},'')}/iBetterCharge-#{version.sub(%r{-.*$},'')}.zip"
