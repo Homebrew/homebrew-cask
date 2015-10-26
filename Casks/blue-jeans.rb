@@ -14,5 +14,5 @@ cask :v1 => 'blue-jeans' do
                          ['TERM', 'com.bluejeans.nw.app'],
                          ['TERM', 'com.bluejeans.nw.helper']
                        ]
-  uninstall :delete => "~/Applications/Blue Jeans.app"
+  uninstall :delete => '~/Applications/Blue Jeans.app'
 end
