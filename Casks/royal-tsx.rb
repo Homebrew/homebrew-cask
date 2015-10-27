@@ -7,7 +7,7 @@ cask :v1 => 'royal-tsx' do
           :sha256 => '035b9ce2264b942108386aa40456ebb87ab772df35569898867ffdfd64b95901'
   name 'Royal TSX'
   homepage 'http://www.royaltsx.com'
-  license :gratis
+  license :freemium
 
   app 'Royal TSX.app'
 end
