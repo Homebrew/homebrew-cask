@@ -1,6 +1,6 @@
 cask :v1 => 'jadengeller-helium' do
-  version '1.7'
-  sha256 'bc638f8a3be85e4f497a6b261c0798d20be531e12e4b876755072a39d5cb6f01'
+  version '1.8'
+  sha256 '62ba5942754ba44bb97af463e8c39d4cf151125ed4497856b8d23b2f4bdc4bbb'
 
   url "https://github.com/JadenGeller/Helium/releases/download/v#{version}/Helium.app.zip"
   appcast 'https://github.com/JadenGeller/Helium/releases.atom'
