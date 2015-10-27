@@ -1,6 +1,6 @@
 cask :v1 => 'ampps' do
-  version '3.0'
-  sha256 '290f2df59bf657d8a43d809bae55bb81cf392cdc3e58fe0f90cdff47f99ede51'
+  version '3.3'
+  sha256 '2304de68a6de293f1b36c72ac8763414da4397c5f80a3ccaebc5039afab55dae'
 
   url "http://files.ampps.com/AMPPS-#{version}.dmg"
   name 'AMPPS'
