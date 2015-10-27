@@ -4,15 +4,15 @@ cask :v1 => 'tiddlywiki' do
   if Hardware::CPU.is_32_bit?
     sha256 '42512d123afe38a1ad40562fcb34c7556bf76930a96ed47ba30e98ff7fe8f76e'
     url "https://github.com/Jermolene/TiddlyDesktop/releases/download/v#{version}/tiddlydesktop-mac32-v#{version}.zip"
+    app "TiddlyDesktop-mac32-v#{version}/TiddlyWiki.app"
   else
     sha256 '59d34e2fb142d776dc33d9738a8f5032274f8a580ee28bd37b35b6f288c05e65'
     url "https://github.com/Jermolene/TiddlyDesktop/releases/download/v#{version}/tiddlydesktop-mac64-v#{version}.zip"
+    app "TiddlyDesktop-mac64-v#{version}/TiddlyWiki.app"
     appcast 'https://github.com/Jermolene/TiddlyDesktop/releases.atom'
   end
 
   name 'TiddlyWiki'
   homepage 'https://github.com/Jermolene/TiddlyDesktop'
   license :bsd
-
-  app 'TiddlyWiki.app'
 end
