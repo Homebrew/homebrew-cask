@@ -1,6 +1,6 @@
 cask :v1 => 'sonarr-menu' do
-  version '3.1'
-  sha256 'fb9e43972321b5e486adfec1bb4d58a377ddccf1b5e1fa651aa964e118ec1889'
+  version '3.2'
+  sha256 '04269ee43683f09ffe3d874d4867b11e8006ed5aa9fba8e3a01b8c52a4bd994d'
 
   url "https://github.com/jefbarn/Sonarr-Menu/releases/download/v#{version}/Sonarr-Menu.v#{version}.zip"
   appcast 'https://github.com/jefbarn/Sonarr-Menu/releases.atom'
@@ -11,8 +11,8 @@ cask :v1 => 'sonarr-menu' do
   app 'Sonarr-Menu.app'
 
   uninstall :quit => 'tv.sonarr.Sonarr-Menu',
-            :launchctl => 'com.osx.sonarr.tv.job',
-            :delete => '~/Library/LaunchAgents/SonarrAgent.plist'
+            :launchctl => 'tv.sonarr.Sonarr-Menu',
+            :delete => '~/Library/LaunchAgents/tv.sonarr.Sonarr-Menu.plist'
 
   depends_on :cask => 'sonarr'
   depends_on :macos => '>= :mavericks'
