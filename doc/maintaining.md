@@ -35,7 +35,7 @@ Every open issue and pull request must have a label added to it, unless the main
 
 Label | Description | Issues | Pull Requests
 ----- | ----------- | :----: | :-----------:
-**bug** | Something isn’t working as expected. A modification/addition/removal . Must always be accompanied by **cask** or **core** | &#x2713; | &#x2713;
+**bug** | Something isn’t working as expected. A modification/addition/removal. Must always be accompanied by **cask** or **core** | &#x2713; | &#x2713;
 **cask** | Relates directly to a cask. Must always be accompanied by **bug** or **enhancement**. | &#x2713; | &#x2713;
 **cask request** | Either a request for a new cask or a call for correction in an existing one. | &#x2713; |
 **chief bug** | When multiple people open new issues for the same bug, the main issue where its progression is being tracked should have this label. Every other one should be marked **duplicate** and closed. | &#x2713; |

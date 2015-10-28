@@ -1,8 +1,8 @@
 cask :v1 => 'jumpshare' do
-  version '2.1.1'
-  sha256 '8181e5b35bd02dda770f81ba8f39b83e3c1cde0b934e2e563d962ce4ea16fced'
+  version '2.1.2'
+  sha256 '4745d9aa6902c902dd81eefdb1977b59da6687ce4040b0f3840f9c47ae0a3d48'
 
-  url "https://jumpshare.com/apps/mac/Jumpshare-#{version}.zip"
+  url "https://apps.jumpshare.com/desktop/mac/Jumpshare-#{version}.zip"
   name 'Jumpshare'
   homepage 'https://jumpshare.com/'
   license :gratis
