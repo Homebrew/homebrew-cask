@@ -3,7 +3,7 @@
 ## 0.59.0
 
 * __Casks__
-  - 37 Casks added ...
+  - 37 Casks added (192 updated) by 154 contributors since 0.58.0
   - 2834 total Casks
 * __Features__
   - none
