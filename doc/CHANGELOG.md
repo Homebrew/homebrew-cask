@@ -16,9 +16,9 @@
 * __Internal Changes__
   - none
 * __Documentation__
-  - 4 doc commits since ...
+  - 4 doc commits since 0.58.0
 * __Contributors__
-  - 82 new contributors since ...
+  - 82 new contributors since 0.58.0
   - 2383 total contributors
 * __Release Date__
   - 2015-10-28 18:00:00 UTC
