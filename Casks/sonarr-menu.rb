@@ -11,8 +11,7 @@ cask :v1 => 'sonarr-menu' do
   app 'Sonarr-Menu.app'
 
   uninstall :quit => 'tv.sonarr.Sonarr-Menu',
-            :launchctl => 'tv.sonarr.Sonarr-Menu',
-            :delete => '~/Library/LaunchAgents/tv.sonarr.Sonarr-Menu.plist'
+            :launchctl => 'tv.sonarr.Sonarr-Menu'
 
   depends_on :cask => 'sonarr'
   depends_on :macos => '>= :mavericks'
