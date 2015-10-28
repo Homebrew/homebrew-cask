@@ -1,5 +1,34 @@
 # CHANGELOG
 
+## 0.59.0
+
+* __Casks__
+  - 37 Casks added ...
+  - 2834 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - [#14581][] finished removing Alfred support
+* __Fixes__
+  - [#14301][] Improve Ruby version check in the formula <3 [@jgonera][]
+  - [#14730][] Remove launchjobs even if they are not loaded
+    - Use ENV['HOME'] to check existence of launchjobs
+* __Internal Changes__
+  - none
+* __Documentation__
+  - 4 doc commits since ...
+* __Contributors__
+  - 82 new contributors since ...
+  - 2383 total contributors
+* __Release Date__
+  - 2015-10-28 18:00:00 UTC
+
+
+[#14301]: https://github.com/caskroom/homebrew-cask/issues/14301
+[#14581]: https://github.com/caskroom/homebrew-cask/issues/14581
+[#14730]: https://github.com/caskroom/homebrew-cask/issues/14730
+[@jgonera]: https://github.com/jgonera
+
 ## 0.58.0
 
 * __Casks__
