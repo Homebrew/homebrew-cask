@@ -1,5 +1,5 @@
 cask :v1 => 'graffitipot' do
-  version :latest
+  version '1.1'
   sha256 :no_check
 
   url 'http://crystaly.com/graffitipot/GraffitiPot_1.1.zip'
