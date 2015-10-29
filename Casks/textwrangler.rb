@@ -8,7 +8,7 @@ cask :v1 => 'textwrangler' do
           :sha256 => '11eab5ef576e132926b507f89031ff34419f1b817d7ff226755ea3c79ff76af6'
   name 'TextWrangler'
   homepage 'http://www.barebones.com/products/textwrangler'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'TextWrangler.app'
   binary 'TextWrangler.app/Contents/Helpers/edit'
