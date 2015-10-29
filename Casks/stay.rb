@@ -7,7 +7,7 @@ cask :v1 => 'stay' do
           :sha256 => '92fa8a5630cbeb21bb108721dd8d28b0da58c3e4634e390161a557b281493cf0'
   name 'Stay'
   homepage 'https://cordlessdog.com/stay/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Stay.app'
 end

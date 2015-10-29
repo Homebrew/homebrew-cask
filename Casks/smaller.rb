@@ -6,7 +6,7 @@ cask :v1 => 'smaller' do
   appcast 'http://smallerapp.com/up/updates.xml'
   name 'Smaller'
   homepage 'http://smallerapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Smaller.app'
 end

@@ -5,7 +5,7 @@ cask :v1 => 'subclassed-mnemosyne' do
   url 'https://www.subclassed.com/download/Mnemosyne.zip'
   name 'Mnemosyne'
   homepage 'https://www.subclassed.com/apps/mnemosyne/details'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Mnemosyne.app'
 end

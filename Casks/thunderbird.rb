@@ -9,4 +9,11 @@ cask :v1 => 'thunderbird' do
   tags :vendor => 'Mozilla'
 
   app 'Thunderbird.app'
+
+  zap :delete => [
+        '~/Library/Thunderbird',
+        '~/Library/Caches/Thunderbird',
+        '~/Library/Saved Application State/org.mozilla.thunderbird.savedState',
+        '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.thunderbird.sfl'
+      ]
 end

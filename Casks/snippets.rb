@@ -7,7 +7,7 @@ cask :v1 => 'snippets' do
           :sha256 => '4158b1f63ea202992e9ffdcf231e7c21323cc1a0ed52305e69effc0858b902d3'
   name 'Snippets'
   homepage 'http://snippets.me/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Snippets.app'
 end
