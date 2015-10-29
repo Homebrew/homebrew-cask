@@ -1,10 +1,10 @@
 cask :v1 => 'timings' do
-  version '2.4.3'
-  sha256 '2007794e42d30b9428716272c7fc9c62354553f9535059bcae12e436929dc280'
+  version '2.4.4'
+  sha256 '35627d1c6a46f600555fbefcfac8e2422932a651ec36717a2934146ac3acd719'
 
   url "http://mediaatelier.com/Timings2/Timings_#{version}.zip"
   appcast 'http://mediaatelier.com/Timings2/feed.php',
-          :sha256 => '6efe27fb9d44450a8a67d9bcbb746aae1b6b6f1d65358019f13150dc6a7d7a5e'
+          :sha256 => '1d13902682950cfe77c621cde054c08502903b0effca0e09703b562da5d9e683'
   name 'Timings'
   homepage 'http://mediaatelier.com/Timings'
   license :commercial
