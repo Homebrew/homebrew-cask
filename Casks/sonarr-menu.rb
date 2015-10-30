@@ -1,6 +1,6 @@
 cask :v1 => 'sonarr-menu' do
-  version '3.2'
-  sha256 '04269ee43683f09ffe3d874d4867b11e8006ed5aa9fba8e3a01b8c52a4bd994d'
+  version '3.3'
+  sha256 '627c7df205e0914209a39c17f6a05756a37c5c96232f4dfc3e198219aa05762d'
 
   url "https://github.com/jefbarn/Sonarr-Menu/releases/download/v#{version}/Sonarr-Menu.v#{version}.zip"
   appcast 'https://github.com/jefbarn/Sonarr-Menu/releases.atom'
