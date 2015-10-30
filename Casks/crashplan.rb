@@ -5,7 +5,7 @@ cask :v1 => 'crashplan' do
   url "http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_#{version}_Mac.dmg"
   name 'CrashPlan'
   homepage 'https://www.code42.com/crashplan/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   pkg 'Install CrashPlan.pkg'
 
