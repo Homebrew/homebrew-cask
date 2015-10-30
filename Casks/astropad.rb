@@ -1,11 +1,11 @@
 cask :v1 => 'astropad' do
-  version '1.3'
-  sha256 '115416cbdcc4cf2f745bb9c404a08f91d72d73facc156f4bc392e6671fa336ad'
+  version '1.3.1'
+  sha256 'd085bdf142beef0c1212665c25e5b5ca2d58b0a8a9d9d4c889ca40c87c25a007'
 
   # amazonaws.com is the official download host per the appcast feed
   url "http://astropad.com/downloads/Astropad-#{version}.zip"
   appcast 'http://astropad.com/downloads/sparkle.xml',
-          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+          :sha256 => 'd9e1678a8eee11706e9b3d6d35f1626494e6d77904a65ad6826a7ff3862c30fe'
   name 'Astropad'
   homepage 'http://astropad.com/'
   license :gratis
