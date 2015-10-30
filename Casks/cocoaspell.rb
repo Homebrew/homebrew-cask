@@ -6,7 +6,7 @@ cask :v1 => 'cocoaspell' do
   url "http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg"
   name 'cocoAspell'
   homepage 'http://cocoaspell.leuski.net/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   pkg 'cocoAspell.pkg'
 
