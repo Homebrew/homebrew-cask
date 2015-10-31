@@ -4,7 +4,7 @@ cask :v1 => 'peakhour' do
 
   url "https://updates.peakhourapp.com/releases/PeakHour%20#{version}.zip"
   name 'PeakHour'
-  homepage 'http://www.peakhourapp.com'
+  homepage 'https://www.peakhourapp.com'
   license :commercial
 
   app "PeakHour #{version.to_i}.app"
