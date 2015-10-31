@@ -8,7 +8,7 @@ cask :v1 => 'boinc' do
   homepage 'https://boinc.berkeley.edu/'
   license :gpl
 
-  installer :manual => "boinc_#{version}_macOSX_x86_64/BOINC Installer.app"
+  pkg "boinc_#{version}_macOSX_x86_64/BOINC Installer.app/Contents/Resources/BOINC.pkg"
 
   uninstall :pkgutil => 'edu.berkeley.boinc'
 end
