@@ -1,6 +1,6 @@
 cask :v1 => 'gitify' do
-  version '0.0.17'
-  sha256 'a8cd21365b057d7fe1ec943e34f79db0b837af86cf69646f445ba08ce62ea20c'
+  version '0.0.18'
+  sha256 '5916a5054f5ed70660e3118bd43ec72d3f592337d091b2883a203bb4ab5173e6'
 
   url "https://github.com/ekonstantinidis/gitify/releases/download/#{version}/gitify-osx.zip"
   appcast 'https://github.com/ekonstantinidis/gitify/releases.atom'

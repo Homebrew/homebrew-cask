@@ -7,8 +7,8 @@ cask :v1 => 'bettertouchtool' do
     # bettertouchtool.com is the official download host per the vendor homepage
     url "http://bettertouchtool.net/btt#{version}.zip"
   else
-    version '1.27'
-    sha256 '5369c089752838800ed45cee83f3f098fc58eaf6f11e4daa587f90ab1f666d25'
+    version '1.36'
+    sha256 '128a54c2f48f37ae1ed6bfe9b84fb0af8c4f0bd56f93be067f6b179bb9acf8d8'
     url "http://boastr.net/releases/btt#{version}.zip"
   end
 
@@ -18,6 +18,8 @@ cask :v1 => 'bettertouchtool' do
   license :gratis
 
   app 'BetterTouchTool.app'
+
+  accessibility_access true
 
   zap :delete => [
                   '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',

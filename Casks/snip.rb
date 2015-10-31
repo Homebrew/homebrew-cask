@@ -5,7 +5,7 @@ cask :v1 => 'snip' do
   url "http://snip.qq.com/resources/Snip_V#{version}.dmg"
   name 'Snip'
   homepage 'http://snip.qq.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   pkg "Snip_V#{version.sub(%r{^(\d+\.\d+).*},'\1')}.pkg"
 

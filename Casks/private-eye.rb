@@ -2,12 +2,12 @@ cask :v1 => 'private-eye' do
   version :latest
   sha256 :no_check
 
-  url 'http://radiosilenceapp.com/downloads/Private%20Eye.pkg'
+  url 'http://radiosilenceapp.com/downloads/Private_Eye_for_OS_X_10.9_and_later.pkg'
   name 'Private Eye'
   homepage 'http://radiosilenceapp.com/private-eye'
   license :oss
 
-  pkg 'Private Eye.pkg'
+  pkg 'Private_Eye_for_OS_X_10.9_and_later.pkg'
   # We intentionally unload the kext twice as a workaround
   # See https://github.com/caskroom/homebrew-cask/pull/1802#issuecomment-34171151
 
@@ -18,5 +18,6 @@ cask :v1 => 'private-eye' do
             },
             :quit => 'com.radiosilenceapp.PrivateEye',
             :kext => 'com.radiosilenceapp.nke.PrivateEye',
-            :pkgutil => 'com.radiosilenceapp.privateEye.*'
+            :pkgutil => 'com.radiosilenceapp.privateEye.*',
+            :launchctl => 'com.radiosilenceapp.nke.PrivateEye'
 end

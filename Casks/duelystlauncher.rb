@@ -1,6 +1,6 @@
 cask :v1 => 'duelystlauncher' do
-  version '0.0.4'
-  sha256 '8a5fbe6fdba433cf7d57d8da8f238d136f8e0ce436cf250101df56a71f4da898'
+  version '0.0.5'
+  sha256 'ec38c906b05a8ac74560ac0d96c4c8189876c579d485bc3af4a6ceac4ee6baad'
 
   # netdna-ssl.com is the official download host per the vendor homepage
   url "https://downloads-counterplaygames.netdna-ssl.com/launcher/v#{version}/DuelystLauncher-v#{version}.dmg"

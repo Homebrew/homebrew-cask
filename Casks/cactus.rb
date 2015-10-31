@@ -1,11 +1,11 @@
 cask :v1 => 'cactus' do
-  version '1.1.18'
-  sha256 'ae19cfaaf1995da09041e30b53061f6d3572c7dd35a607090118a54c502adb90'
+  version '1.1.22'
+  sha256 'af920f5f180b64731adef561a45213064c27830f5d9030d6a862f339ffc4e88c'
 
   url "http://update.cactusformac.com/static/downloads/Cactus-#{version}.zip"
   name 'Cactus'
   appcast 'http://update.cactusformac.com.s3-website-us-east-1.amazonaws.com/appcast.xml',
-          :sha256 => '5fa42be56b7d6ace4fd7697a70f2b03daa33ad57bcc3178b2b28f106de8508a8'
+          :sha256 => '986a46c150f6d6cf402462b27ebf9630c968cb3f5e09aad1d79140030e528733'
   homepage 'http://cactusformac.com/'
   license :bsd
 

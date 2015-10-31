@@ -1,6 +1,6 @@
 cask :v1 => 'air-video-server-hd' do
-  version '2.1.4'
-  sha256 '7c516edccbc7556d798af330fada0498f9a57ddd91e325be69ad81c9357d241a'
+  version '2.2.0'
+  sha256 'f43c826dd5742d01e0586ad0e07edd2771353480482ac0b8eb9cc98da20a6f0e'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/AirVideoHD/Download/Air+Video+Server+HD+#{version}.dmg"

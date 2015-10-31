@@ -1,6 +1,6 @@
 cask :v1 => 'epubquicklook' do
   version '1.7'
-  sha256 '2508a882ad53fa2fc1b9e42e9548c8ef9fe62f1c57788a874e6c098a1704b96e'
+  sha256 '9d1816628d9718de0b6bfc97c30a4f0569561b4102f46c9e2e890502e9047456'
 
   url "https://github.com/jaketmp/ePub-quicklook/releases/download/v#{version}/epub.qlgenerator.zip"
   appcast 'https://github.com/jaketmp/ePub-quicklook/releases.atom'

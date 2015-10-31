@@ -1,6 +1,6 @@
 cask :v1 => 'trailer' do
-  version '1.3.7'
-  sha256 '9f022093051d6512a888cb1a0760afebed51e7c9f33dd991a81218f492491e55'
+  version '1.3.9'
+  sha256 'd539ad8e672bedf403236871f4d066871fe68c17f034a5e9fe87d0e44ea4ebbf'
 
   url "https://ptsochantaris.github.io/trailer/trailer#{version.delete('.')}.zip"
   appcast 'https://ptsochantaris.github.io/trailer/appcast.xml',

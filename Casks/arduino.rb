@@ -5,7 +5,7 @@ cask :v1 => 'arduino' do
   url "http://downloads.arduino.cc/arduino-#{version}-macosx.zip"
   name 'Arduino'
   homepage 'https://www.arduino.cc/'
-  license :oss
+  license :gpl
 
   app 'Arduino.app'
 end
