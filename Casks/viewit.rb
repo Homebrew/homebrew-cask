@@ -1,6 +1,6 @@
 cask :v1 => 'viewit' do
-  version '2.51'
-  sha256 '4558ec864234f2cd1037a345c7daea86fcc4f4e423a8ca093f9d31275f570f5d'
+  version '2.52'
+  sha256 '66813bb951b2bc015c094069f602600d4e8475ba08d9b2a44d758c483cebfd81'
 
   url "http://www.hexcat.com/downloads/ViewIt-#{version}.dmg"
   name 'ViewIt'
