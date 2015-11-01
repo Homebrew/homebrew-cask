@@ -7,7 +7,7 @@ cask :v1 => 'tangerine' do
   appcast 'http://launch.karelia.com/appcast.php?version=0&product=13&appname=Tangerine!',
           :sha256 => 'c8e3f2ce6c968bd670dd33e2be1412a3a7f7614256737c05e7f3c3e5414e2bc9'
   homepage 'https://www.karelia.com/products/tangerine/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Tangerine!.app'
 
