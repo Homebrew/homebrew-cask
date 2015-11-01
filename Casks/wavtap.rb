@@ -7,7 +7,7 @@ cask :v1 => 'wavtap' do
   homepage 'https://github.com/pje/wavtap'
   license :mit
 
-  pkg "WavTap #{version}.pkg"
+  pkg "WavTap.#{version}.pkg"
 
   uninstall :pkgutil => 'com.wavtap.*',
             :kext => 'com.wavtap.driver.WavTap'
