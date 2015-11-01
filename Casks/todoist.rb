@@ -7,7 +7,7 @@ cask :v1 => 'todoist' do
   appcast 'https://todoist.com/static/native_apps/mac_app.xml'
   name 'Todoist'
   homepage 'https://todoist.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Todoist.app'
 
