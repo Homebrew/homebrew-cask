@@ -7,7 +7,7 @@ cask :v1 => 'tomahawk' do
           :sha256 => 'ef1c646c36717abdd5ffb12bd3a8f758fe12d575d975f6dca5353144679aca4f'
   name 'Tomahawk'
   homepage 'https://www.tomahawk-player.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Tomahawk.app'
 end
