@@ -1,6 +1,6 @@
 cask :v1 => 'crossover' do
-  version '14.1.10'
-  sha256 'd52b5200df3ba749709318bba4280d9e245f37583402c8f9e037dcbf08f63790'
+  version '14.1.11'
+  sha256 '2cf9f5090400ef812262eced4ef851c30227e626cab75e7474a7f39276d55e34'
 
   url "https://media.codeweavers.com/pub/crossover/cxmac/demo/crossover-#{version}.zip"
   name 'CrossOver'
