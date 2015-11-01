@@ -9,4 +9,14 @@ cask :v1 => 'turbo-boost-switcher' do
   license :gpl
 
   app 'Turbo Boost Switcher.app'
+
+  uninstall :quit => 'rugarciap.com.Turbo-Boost-Switcher',
+            :kext => 'com.rugarciap.DisableTurboBoost'
+
+  uninstall_postflight do
+    system '/usr/bin/osascript', '-e', %Q{tell application "System Events" to delete every \
+      login item whose name is "#{token.gsub(/\w+/, &:capitalize).gsub('-', ' ')}"}
+  end
+
+  zap :delete => '~/Library/Preferences/rugarciap.com.Turbo-Boost-Switcher.plist'
 end
