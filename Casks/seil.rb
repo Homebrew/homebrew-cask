@@ -21,4 +21,5 @@ cask :v1 => 'seil' do
                         '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
                         '~/Library/Preferences/org.pqrs.Seil.plist',
                        ]
+  caveats 'Requires >= OS X 10.9'
 end
