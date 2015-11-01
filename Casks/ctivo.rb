@@ -1,6 +1,6 @@
 cask :v1 => 'ctivo' do
-  version '2.4.1'
-  sha256 'ba8c4e8d570af804f435d2f55276932e762742c05aafe946fdcc19d2a4403b3e'
+  version '2.4.2'
+  sha256 '0e05b8213251e1ccae91b946e9fce982a703acfda04bbe41ec1b4ed8c97c30d7'
 
   url "https://github.com/dscottbuch/cTiVo/releases/download/#{version}/cTiVo.zip"
   appcast 'https://github.com/dscottbuch/cTiVo/releases.atom'
