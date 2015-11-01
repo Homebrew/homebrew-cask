@@ -6,7 +6,7 @@ cask :v1 => 'the-hit-list' do
   appcast 'http://www.potionfactory.com/appcast/thehitlist.php'
   name 'The Hit List'
   homepage 'http://www.potionfactory.com/thehitlist'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'The Hit List.app'
 end
