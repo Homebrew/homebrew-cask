@@ -6,7 +6,7 @@ cask :v1 => 'remote-desktop-manager' do
   url "http://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Mac.#{version}.dmg"
   name 'Remote Desktop Manager'
   homepage 'http://mac.remotedesktopmanager.com/'
-  license :gratis
+  license :commercial
 
   app 'Remote Desktop Manager.app'
 end
