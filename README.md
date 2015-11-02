@@ -1,6 +1,5 @@
 # Homebrew-Cask
 
----
 ### 12/Aug/2015 Important Update : At some point in the ***future*** Homebrew-cask will change its behaviour from linking apps to moving them. See [issue #13201](https://github.com/caskroom/homebrew-cask/issues/13201) for details.
 
 ---
