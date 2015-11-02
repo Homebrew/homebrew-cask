@@ -2,8 +2,8 @@ cask :v1 => 'packer' do
   version '0.8.6'
   sha256 '91b5e5d4524a7a2f09a07aad1c8e26e1200b47191a42c1b2facac4a27fd674d0'
 
-  # bintray.com is the official download host per the vendor homepage
-  url "https://dl.bintray.com/mitchellh/packer/packer_#{version}_darwin_amd64.zip"
+  # hashicorp.com is the official download host per the vendor homepage
+  url "https://releases.hashicorp.com/packer/#{version}/packer_#{version}_darwin_amd64.zip"
   name 'Packer'
   homepage 'https://www.packer.io/'
   license :oss
