@@ -9,4 +9,11 @@ cask :v1 => 'chromium' do
   license :oss
 
   app 'chrome-mac/Chromium.app'
+
+  zap :delete => [
+                  '~/Library/Preferences/org.chromium.Chromium.plist',
+                  '~/Library/Caches/Chromium',
+                  '~/Library/Application Support/Chromium',
+                  '~/Library/Saved Application State/org.chromium.Chromium.savedState'
+                 ]
 end
