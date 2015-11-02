@@ -1,7 +1,6 @@
 # Homebrew-Cask
 
 ### 12/Aug/2015 Important Update : At some point in the ***future*** Homebrew-cask will change its behaviour from linking apps to moving them. See [issue #13201](https://github.com/caskroom/homebrew-cask/issues/13201) for details.
-
 ---
 
 _“To install, drag this icon…” no more!_
@@ -16,10 +15,6 @@ It’s implemented as a `homebrew` [external command](https://github.com/Homebre
 [![Code Climate](https://img.shields.io/codeclimate/github/caskroom/homebrew-cask.svg)](https://codeclimate.com/github/caskroom/homebrew-cask)
 [![Coverage Status](https://img.shields.io/coveralls/caskroom/homebrew-cask.svg)](https://coveralls.io/r/caskroom/homebrew-cask)
 [![Join the chat at https://gitter.im/caskroom/homebrew-cask](https://img.shields.io/badge/gitter-join%20chat-blue.svg)](https://gitter.im/caskroom/homebrew-cask)
-
-
-
-
 
 ## Let’s try it!
 
