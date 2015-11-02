@@ -7,7 +7,7 @@ cask :v1 => 'tickets' do
           :sha256 => '24a551412959452baf56b0cba06fdd502057f76812d596136b7fda1c14895386'
   name 'Tickets'
   homepage 'https://www.irradiatedsoftware.com/tickets/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Tickets.app'
 end

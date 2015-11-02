@@ -1,6 +1,6 @@
 cask :v1 => 'cumulus' do
-  version '0.5.0'
-  sha256 '6d131749b379965157b41ebdf2ec67dc0a011ea0e0e9e409cf945ddc5ed5150e'
+  version '0.5.2'
+  sha256 '9100fdad02b0cea69fbfcc351052fb2f262034456d043abd724b8124a9ca24a5'
 
   url "https://github.com/gillesdemey/Cumulus/releases/download/v#{version}/Cumulus-#{version}-osx.zip"
   appcast 'https://github.com/gillesdemey/Cumulus/releases.atom'

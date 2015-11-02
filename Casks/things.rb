@@ -6,7 +6,7 @@ cask :v1 => 'things' do
   appcast 'https://downloads.culturedcode.com/things/download/Things_Updates.php'
   name 'Things'
   homepage 'https://culturedcode.com/things/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Things.app'
 end

@@ -7,7 +7,7 @@ cask :v1 => 'taskpaper' do
   appcast 'http://www.hogbaysoftware.com/products/taskpaper/releases.rss'
   name 'TaskPaper'
   homepage 'http://www.hogbaysoftware.com/products/taskpaper'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'TaskPaper.app'
 end

@@ -21,4 +21,6 @@ cask :v1 => 'seil' do
                         '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
                         '~/Library/Preferences/org.pqrs.Seil.plist',
                        ]
+
+  depends_on :macos => '>= :mavericks'
 end

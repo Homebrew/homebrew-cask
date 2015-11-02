@@ -8,7 +8,7 @@ cask :v1 => 'tilemill' do
           :sha256 => '839122af3c2d526d97557078a0f84dc6c3c146bd35bcba915949c671be79ac02'
   name 'TileMill'
   homepage 'https://www.mapbox.com/tilemill/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   app 'TileMill.app'
 end
