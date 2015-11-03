@@ -30,8 +30,8 @@ cask :v1 => 'cocktail' do
     url "http://www.maintain.se/downloads/sparkle/yosemite/Cocktail_#{version}.zip"
     appcast 'http://www.maintain.se/downloads/sparkle/yosemite/yosemite.xml'
   else
-    version '9.0.1'
-    sha256 'e3cefa7f47f3c9f6b5fb82b2185b92a897cef682e7930c82651fdd310901686e'
+    version '9.0.3'
+    sha256 '2b45bba84a829bc773a1862ba71a9c4827c07109f53a0f2d7f7f1c66ca61500c'
 
     url "http://www.maintain.se/downloads/sparkle/elcapitan/Cocktail_#{version}.zip"
     appcast 'http://www.maintain.se/downloads/sparkle/elcapitan/elcapitan.xml'
