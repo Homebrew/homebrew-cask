@@ -9,7 +9,7 @@ cask :v1 => 'pl2303' do
 
   pkg "PL2303_MacOSX_v#{version}.pkg"
 
-  depends_on :macos => '>= 10.6'
+  depends_on :macos => [:snow_leopard, :lion, :mountain_lion, :mavericks, :yosemite]
 
   uninstall :pkgutil => "com.prolific.prolificUsbserialCableDriverV#{version.delete('.')}.ProlificUsbSerial.pkg",
             :kext => 'com.prolific.driver.PL2303',
