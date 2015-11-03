@@ -7,7 +7,7 @@ _“To install, drag this icon…” no more!_
 
 Homebrew-Cask extends [Homebrew](http://brew.sh) and brings its elegance, simplicity, and speed to the installation and management of GUI Mac applications such as Google Chrome and Adium.
 
-We do this by provding a friendly homebrew-style CLI workflow for the administration of Mac applications distributed as binaries.
+We do this by providing a friendly homebrew-style CLI workflow for the administration of Mac applications distributed as binaries.
 
 It’s implemented as a `homebrew` [external command](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/External-Commands.md) called `cask`.
 
