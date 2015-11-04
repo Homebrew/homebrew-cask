@@ -1,6 +1,6 @@
 cask :v1 => 'daylite' do
-  version '5.0.9'
-  sha256 '44f1f0fcf20d10581b7ee412ed83d8afced0b673087bf33e69f47ec0b6098f37'
+  version '5.0.10'
+  sha256 'b9243e731511d3b7f29a453e886e4f8e3c60c961ee047d25bff8151baeb728cd'
 
   url "https://download.marketcircle.com/daylite/daylitedma#{version.delete('.')}.dmg"
   name 'Daylite'
