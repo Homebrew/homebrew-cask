@@ -1,6 +1,6 @@
 cask :v1 => 'rightfont' do
-  version '2.1.0'
-  sha256 '8ce711b22c38c924ba80f77aa730993f769100a548a5ebbf3753dcb6bb27d8f4'
+  version '2.2.1'
+  sha256 '236c103ff1a8dc48b276f1a2e72fefe6864ca847eaadfb872429d7da20b9db29'
 
   url "http://rightfontapp.com/downloads/#{version}/rightfont.zip"
   name 'RightFont'
