@@ -6,7 +6,7 @@ cask :v1 => 'tubbler' do
   appcast 'https://ssl.webpack.de/celmaro.com/updates/tubbler/tubbler.xml'
   name 'Tubbler'
   homepage 'http://www.celmaro.com/tubbler'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Tubbler.app'
 end

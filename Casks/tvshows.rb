@@ -7,7 +7,7 @@ cask :v1 => 'tvshows' do
   appcast 'http://tvshowsapp.com/tvshows.xml',
           :sha256 => '8e1e0a10dafa1f5ae362f9e8a006818d08c9f6349f47d7ba900ad8dcaef3c108'
   homepage 'http://tvshowsapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   prefpane 'TVShows.prefPane'
 end
