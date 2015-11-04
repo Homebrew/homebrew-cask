@@ -1,6 +1,6 @@
 cask :v1 => 'appcleaner' do
-  version '3.0.2'
-  sha256 'f724d73900036027144234e3edfa6a7ec6971447ab3dab41a2298ddb6caac285'
+  version '3.1'
+  sha256 'a2adecf5ed63f712554af724a7cf91b8533c505766a6a26d541ec9f227a57a4d'
 
   url "http://www.freemacsoft.net/downloads/AppCleaner_#{version}.zip"
   name 'AppCleaner'
