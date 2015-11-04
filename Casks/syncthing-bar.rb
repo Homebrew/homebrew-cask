@@ -1,6 +1,6 @@
 cask :v1 => 'syncthing-bar' do
-  version '0.0.7'
-  sha256 '00e539d12365404258d2ae0f2cbd938d790323f9010c7f1269e37b12613f43b6'
+  version '0.0.9'
+  sha256 '61277e5f1efd70a98a2e574e1f1a8b40ec88c84086cb362a98f951ab05657cb9'
 
   url "https://github.com/m0ppers/syncthing-bar/releases/download/#{version}/syncthing-bar-#{version}.pkg"
   appcast 'https://github.com/m0ppers/syncthing-bar/releases.atom'
