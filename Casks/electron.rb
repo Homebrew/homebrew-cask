@@ -13,7 +13,7 @@ cask :v1 => 'electron' do
   binary 'Electron.app/Contents/MacOS/Electron', :target => 'electron'
 
   caveats <<-EOS.undent
-    Starting #{token} applications with the symlink (e.g. from the terminal) will cause the app not to 
-    accept user input, use the full path instead
-  EOS  
+    Starting #{token} applications with the symlink (e.g. from the terminal)
+    will cause the app not to accept user input, use the full path instead
+  EOS
 end
