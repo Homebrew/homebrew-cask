@@ -1,8 +1,8 @@
 cask :v1 => 'rubymine' do
   version '8.0.0'
-  sha256 '56ce3197e05f313ff1d8993938899f6da4305d499aedc07558956c82efb2d0ba'
+  sha256 '6e20d0fbbd3edf71c44f0c46e6ad8b400a51d5e1604d68fb8ec8ccee8f6e851d'
 
-  url "http://download-cf.jetbrains.com/ruby/RubyMine-#{version}.dmg"
+  url "https://download.jetbrains.com/ruby/RubyMine-#{version}-custom-jdk-bundled.dmg"
   name 'RubyMine'
   homepage 'https://www.jetbrains.com/ruby/'
   license :commercial
@@ -13,15 +13,4 @@ cask :v1 => 'rubymine' do
                   "~/Library/Application Support/RubyMine#{version.delete('.')}",
                   "~/Library/Preferences/RubyMine#{version.delete('.')}",
                  ]
-
-  caveats <<-EOS.undent
-    #{token} requires Java 6 like any other IntelliJ-based IDE.
-    You can install it with
-
-      brew cask install caskroom/homebrew-versions/java6
-
-    The vendor (JetBrains) doesn't support newer versions of Java (yet)
-    due to several critical issues, see details at
-    https://intellij-support.jetbrains.com/entries/27854363
-  EOS
 end
