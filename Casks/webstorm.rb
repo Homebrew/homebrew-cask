@@ -8,4 +8,14 @@ cask :v1 => 'webstorm' do
   license :commercial
 
   app 'WebStorm.app'
+  binary 'WebStorm.app/Contents/MacOS/webstorm'
+
+  zap :delete => [
+                  '~/.WebStorm11',
+                  '~/Library/Preferences/com.jetbrains.webstorm.plist',
+                  '~/Library/Preferences/WebStorm11',
+                  '~/Library/Application Support/WebStorm11',
+                  '~/Library/Caches/WebStorm11',
+                  '~/Library/Logs/WebStorm11',
+                 ]
 end
