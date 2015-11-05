@@ -17,8 +17,5 @@ cask :v1 => 'appcode' do
                   '~/Library/Logs/AppCode33',
                  ]
 
-  conflicts_with :cask => [
-                           'appcode-eap',
-                           'appcode-bundled-jdk',
-                          ]
+  conflicts_with :cask => 'appcode-eap'
 end
