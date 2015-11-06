@@ -1,6 +1,6 @@
 cask :v1 => 'servetome' do
-  version '4.0.0123'
-  sha256 'afde55a5a5da1e1b02df4c06a3881140ba1ecdcc7d06d7cbe6a638d0f885388b'
+  version '3.9.0.3101'
+  sha256 '507987377436f80f985e3c46e1f5ffaecea933d8fbe36c23a5eb09f11c77567a'
 
   url "http://downloads.zqueue.com/ServeToMe-v#{version}.dmg"
   name 'ServeToMe'
