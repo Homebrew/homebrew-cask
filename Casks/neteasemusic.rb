@@ -1,9 +1,9 @@
 cask :v1 => 'neteasemusic' do
-  version '1.3.1'
-  sha256 '1a850e6c624d05e72d25caf6d449613713294ffd5fe4ddad4287684118a10fd6'
+  version '1.4.0'
+  sha256 'da5e545bbe213a7f073602519da29c3d4d68bb25de99804c4dd61dd6d02dc763'
 
   # 126.net is the official download host per the vendor homepage
-  url "http://s1.music.126.net/download/osx/NeteaseMusic_#{version}_366_web.dmg"
+  url "http://s1.music.126.net/download/osx/NeteaseMusic_#{version}_418_web.dmg"
   name '网易云音乐'
   name 'NetEase cloud music'
   homepage 'http://music.163.com/#/download'
