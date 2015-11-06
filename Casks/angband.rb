@@ -1,6 +1,6 @@
 cask :v1 => 'angband' do
-  version '4.0.1'
-  sha256 '965d70dfc4a104757da9faf311439be5aa11de0dc3fee4c4cb8732ed9ed878bf'
+  version '4.0.3'
+  sha256 'af2747c3f8a3cc5e6e430fdd09e60a35f4b02a3a270fbe364a95a25bb61a0012'
 
   url "http://rephial.org/downloads/#{version.to_f}/Angband-#{version}-osx.dmg"
   name 'Angband'
