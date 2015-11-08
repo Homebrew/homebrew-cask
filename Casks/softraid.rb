@@ -1,6 +1,6 @@
 cask :v1 => 'softraid' do
-  version '5.0.7'
-  sha256 'b37fc5bb131ad05af020fcb1aec196a06bff4e4f9bf62e6a1c6ae5a9141ad5d3'
+  version '5.1'
+  sha256 '3ce535878cb92e7401f044a683c7e6e2e6ec6576695adac85f15c10c2d9b1548'
 
   url "http://www.softraid.com/updates/SoftRAID%20#{version}.dmg"
   name 'SoftRAID'
