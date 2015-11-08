@@ -1,6 +1,6 @@
 cask :v1 => 'm3unify' do
-  version '1.4.0'
-  sha256 '861921244bf6dd530bedc65cf65b3f8858beacb02bd8227d1f17b0b9391ee4df'
+  version '1.4.1'
+  sha256 'aceda65ecb588fd51380e4dc77cd6c1b95070b60fd30e65b50ba093b11efcc1f'
 
   url "http://dougscripts.com/itunes/scrx/m3unifyv#{version.delete('.')}.zip"
   name 'M3Unify'
