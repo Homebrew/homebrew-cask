@@ -1,6 +1,6 @@
 cask :v1 => 'expandrive' do
-  version '5.1.2'
-  sha256 'e0bda4b5ebd5b41a656ab69e88badd53571ee7f66d12d8ad8cc6f5b953daf8e0'
+  version '5.1.4'
+  sha256 '65d7088553533a96f258c7355e5e211219b9c49c5eed2948c543ac1a5010b43e'
 
   url "http://updates.expandrive.com/apps/expandrive/v/#{version.gsub('.','-')}/download.dmg"
   name 'ExpanDrive'
