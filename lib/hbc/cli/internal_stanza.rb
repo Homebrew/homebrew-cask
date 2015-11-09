@@ -34,6 +34,7 @@ class Hbc::CLI::InternalStanza < Hbc::CLI::InternalUseBase
                        :input_method,
                        :internet_plugin,
                        :screen_saver,
+                       :xcplugin,
                        :pkg,
                        :installer,
                        :stage_only,

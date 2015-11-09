@@ -196,6 +196,8 @@ Default is `/usr/local/bin`
 Default is `~/Library/Input Methods`
 * `--screen_saverdir=/my/path` changes the path for Screen Saver symlinks.
 Default is `~/Library/Screen Savers`
+* `--xcplugindir=/my/path` changes the path for Xcode Plugin symlinks.
+Default is `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins`
 
 To make these settings persistent, you might want to add the following line to your `.bash_profile` or `.zshenv`:
 

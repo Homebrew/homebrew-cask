@@ -92,6 +92,14 @@ module Hbc::Locations
       @screen_saverdir = _screen_saverdir
     end
 
+    def xcplugindir
+      @xcplugindir ||= Pathname.new('~/Library/Application Support/Developer/Shared/Xcode/Plug-ins').expand_path
+    end
+
+    def xcplugindir=(_xcplugindir)
+      @xcplugindir = _xcplugindir
+    end
+
     def default_tap
       @default_tap ||= 'caskroom/homebrew-cask'
     end

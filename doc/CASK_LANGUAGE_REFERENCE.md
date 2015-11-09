@@ -93,6 +93,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `artifact`         | yes                           | relative path to an arbitrary path that should be symlinked on installation. This is only for unusual cases. The `app` stanza is strongly preferred when linking `.app` bundles.
 | `installer`        | yes                           | describes an executable which must be run to complete the installation. (see [Installer Stanza Details](#installer-stanza-details))
 | `stage_only`       | no                            | `true`. Assert that the Cask contains no activatable artifacts.
+| `xcplugin`         | yes                           | relative path to a Xcode plugin that should be linked into the `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins` folder on installation
 
 ## Optional Stanzas
 
@@ -425,7 +426,7 @@ artifact 'openman.1', :target => '/usr/local/share/man/man1/openman.1'
 
 ### :target Works on Most Artifact Types
 
-The `:target` key works similarly for most Cask artifacts, such as `app`, `binary`, `colorpicker`, `font`, `input_method`, `prefpane`, `qlplugin`, `service`, `suite`, and `artifact`.
+The `:target` key works similarly for most Cask artifacts, such as `app`, `binary`, `colorpicker`, `font`, `input_method`, `prefpane`, `qlplugin`, `service`, `suite`, `xcplugin`, and `artifact`.
 
 ### :target Should Only Be Used in Select Cases
 

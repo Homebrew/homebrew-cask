@@ -250,6 +250,7 @@ module Hbc::DSL
                                      :input_method,
                                      :internet_plugin,
                                      :screen_saver,
+                                     :xcplugin,
                                      :pkg,
                                      :stage_only,
                                     ]

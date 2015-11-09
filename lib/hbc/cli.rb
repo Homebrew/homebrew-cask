@@ -182,6 +182,9 @@ class Hbc::CLI
       opts.on("--screen_saverdir=MANDATORY") do |v|
        Hbc.screen_saverdir = Pathname(v).expand_path
       end
+      opts.on("--xcplugindir=MANDATORY") do |v|
+        Hbc.xcplugindir = Pathname(v).expand_path
+      end
 
       opts.on("--no-binaries") do |v|
         Hbc.no_binaries = true
