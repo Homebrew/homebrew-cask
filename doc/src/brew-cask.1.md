@@ -169,6 +169,9 @@ in a future version.
   * `--screen_saverdir=<path>`:
     Target location for Screen Saver links. The default value is `~/Library/Screen Savers`.
 
+  * `--xcplugindir=<path>`:
+    Target location for Xcode Plugin links. The default value is `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins`.
+
   * `--no-binaries`:
     Do not link “helper” executables to `/usr/local/bin`.
 

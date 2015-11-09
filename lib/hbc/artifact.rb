@@ -24,6 +24,7 @@ require 'hbc/artifact/service'
 require 'hbc/artifact/stage_only'
 require 'hbc/artifact/suite'
 require 'hbc/artifact/uninstall'
+require 'hbc/artifact/xcplugin'
 require 'hbc/artifact/zap'
 
 module Hbc::Artifact
@@ -52,6 +53,7 @@ module Hbc::Artifact
       Hbc::Artifact::ScreenSaver,
       Hbc::Artifact::Uninstall,
       Hbc::Artifact::PostflightBlock,
+      Hbc::Artifact::Xcplugin,
       Hbc::Artifact::Zap,
     ]
   end

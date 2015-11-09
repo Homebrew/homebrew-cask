@@ -158,6 +158,7 @@ Additional stanzas you might need for special use-cases:
 | `suite`                | relative path to a containing directory that should be linked into the `~/Applications` folder on installation
 | `container :nested =>` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `caveats`              | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#caveats-stanza-details))
+| `xcplugin`             | relative path to a Xcode plugin that should be linked into the `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins` folder on installation
 
 Even more special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#optional-stanzas) and [Legacy Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#legacy-stanzas).
 
