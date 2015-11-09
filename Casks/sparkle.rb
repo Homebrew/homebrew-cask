@@ -1,6 +1,6 @@
 cask :v1 => 'sparkle' do
-  version '1.11.0'
-  sha256 'd7b5130ddbb5f7c4334dc55c4d6784a831ffa5cbdcbc09975f4ddcc27d7f19f8'
+  version '1.11.1'
+  sha256 'bfa298d1160d4af4469245cc0feb7e5e5101f127f167f5ba89d5ce2b154afeec'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/sparkle-project/Sparkle/releases/download/#{version}/Sparkle-#{version}.tar.bz2"
