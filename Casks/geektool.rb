@@ -1,10 +1,8 @@
 cask :v1 => 'geektool' do
-  version '3.1.1-311'
-  sha256 'ef1a7439d91f0de9e459a4677c6f95fe35bd7e02c300adc9ce315b5590cbbfc9'
+  version '3.1.3'
+  sha256 'f881d212dff433b302146ce3325cdcc79e73b8a7e871f9de8cd6d69173e33ec7'
 
   url "http://download.tynsoe.org/GeekTool-#{version}.zip"
-  appcast 'https://dl.dropboxusercontent.com/u/1760713/appcast/appcast.xml',
-          :sha256 => 'd6c25d30d5289824a9b1526f56c5bdacbfd6ffda9cb9d6a8ac42e88fe2dbebc3'
   name 'GeekTool'
   homepage 'http://projects.tynsoe.org/en/geektool/'
   license :mit
