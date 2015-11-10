@@ -1,6 +1,6 @@
 cask :v1 => 'chefdk' do
-  version '0.9.0-1'
-  sha256 '8e1d5e79976fc8242c3a1ef2dad728316fc19048c6bc1a68410786ab495b2acb'
+  version '0.10.0-1'
+  sha256 '8d2b7f1dfde97e8120393288bb230547fc80e9cca518afcec46026c5288a5952'
 
   # amazonaws is the official download host per the vendor homepage
   url "https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.11/x86_64/chefdk-#{version}.dmg"
