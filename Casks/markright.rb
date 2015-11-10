@@ -1,6 +1,6 @@
 cask :v1 => 'markright' do
-  version '0.1.3'
-  sha256 'b386b2f24294ceafd012cd009da8af0a329d5a1c560ca7a9b18088bdf086965e'
+  version '0.1.5'
+  sha256 '3631f805285293e2653fe5e5d96c975f85b145ad841694661ec9cd572b2907d5'
 
   url "https://github.com/dvcrn/markright/releases/download/#{version}/MarkRight_Mac.dmg"
   appcast 'https://github.com/dvcrn/markright/releases.atom'
