@@ -1,6 +1,6 @@
 cask :v1 => 'papers' do
-  version '3.4.0-386'
-  sha256 'f0e31f58b2d1085c35e12a5fd3f8e67fde619cc84f7097fe5d86d731736a1f85'
+  version '3.4.1-407'
+  sha256 '9a1d3f9d2e6cfc55881ac69882c3b362c89aaa471449fd001a59dceb8730189b'
 
   url "http://appcaster.papersapp.com/apps/mac/production/download/#{version.sub(%r{^.*-},'')}/papers_#{version.delete('.').sub('-','_')}.dmg"
   appcast 'http://appcaster.papersapp.com/apps/mac/production/appcast.xml',

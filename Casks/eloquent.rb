@@ -1,6 +1,6 @@
 cask :v1 => 'eloquent' do
   version '2.4.9'
-  sha256 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+  sha256 'c792bc3f4685f49052d105c89c9edc830ccc27f1bec9bbe3b841c976b0d0b249'
 
   url "https://launchpad.net/eloquent/trunk/#{version}/+download/Eloquent-#{version}.app.zip"
   name 'Eloquent'

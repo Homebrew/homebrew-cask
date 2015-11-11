@@ -7,7 +7,7 @@ cask :v1 => 'vimediamanager' do
   appcast 'http://mariusth.heliohost.org/vimediamanager/appcast-cocoa.xml',
           :sha256 => '595974a863e2502ca4cc038cf6f234d4e2606c93dd862bdfeacb50338fb6bf34'
   homepage 'http://mariusth.heliohost.org/vimediamanager/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'ViMediaManager.app'
 end

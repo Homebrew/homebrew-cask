@@ -1,8 +1,8 @@
 cask :v1 => 'pycharm-ce' do
-  version '4.5.4'
-  sha256 'b42161a213316ee6cc3c0fc95f2c8316ddbdda7e3b2d771aa9ae6b520d43d156'
+  version '5.0'
+  sha256 '770596ac464012439e2ff25b7ba3c49996f916a5af18a94a582c8427e61ca4e6'
 
-  url "https://download.jetbrains.com/python/pycharm-community-#{version}.dmg"
+  url "https://download.jetbrains.com/python/pycharm-community-#{version}-jdk-bundled.dmg"
   name 'PyCharm'
   name 'PyCharm Community Edition'
   name 'PyCharm CE'
@@ -10,15 +10,4 @@ cask :v1 => 'pycharm-ce' do
   license :apache
 
   app 'PyCharm CE.app'
-
-  caveats <<-EOS.undent
-    #{token} requires Java 6 like any other IntelliJ-based IDE.
-    You can install it with
-
-      brew cask install caskroom/homebrew-versions/java6
-
-    The vendor (JetBrains) doesn't support newer versions of Java (yet)
-    due to several critical issues, see details at
-    https://intellij-support.jetbrains.com/entries/27854363
-  EOS
 end

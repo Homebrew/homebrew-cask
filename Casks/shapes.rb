@@ -1,6 +1,6 @@
 cask :v1 => 'shapes' do
-  version '4.4.1'
-  sha256 'ed59bfc41e4dc9902d9209e832544fda42b51325d127e4dd2aea40aa1344f663'
+  version '4.4.2'
+  sha256 '70acd1cf68c8f69f4cd8a67caca06931b875684cb6cae5ccd59995e8cadff325'
 
   url "http://shapesapp.com/dist/Shapes_#{version}.zip"
   name 'Shapes'

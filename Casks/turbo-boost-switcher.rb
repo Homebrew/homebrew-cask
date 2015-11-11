@@ -9,4 +9,9 @@ cask :v1 => 'turbo-boost-switcher' do
   license :gpl
 
   app 'Turbo Boost Switcher.app'
+
+  uninstall :quit => 'rugarciap.com.Turbo-Boost-Switcher',
+            :kext => 'com.rugarciap.DisableTurboBoost'
+
+  zap :delete => '~/Library/Preferences/rugarciap.com.Turbo-Boost-Switcher.plist'
 end

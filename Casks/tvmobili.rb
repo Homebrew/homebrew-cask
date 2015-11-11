@@ -5,7 +5,7 @@ cask :v1 => 'tvmobili' do
   url 'http://www.tvmobili.com/binaries/stable/tvmobili-yosemite-universal.dmg'
   name 'TVMOBiLi'
   homepage 'http://www.tvmobili.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   pkg 'tvmobili-yosemite-universal.2.1.4693.pkg'
 

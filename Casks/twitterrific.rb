@@ -8,7 +8,7 @@ cask :v1 => 'twitterrific' do
           :sha256 => '0d8a09937e5ea81dc2f16ff23497077fecb6bc89c3266b47d0465a13776dd7ea'
   name 'Twitterrific'
   homepage 'http://twitterrific.com/mac'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Twitterrific.app'
 

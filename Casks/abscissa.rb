@@ -7,5 +7,5 @@ cask :v1 => 'abscissa' do
   homepage 'http://rbruehl.macbay.de/Abscissa'
   license :gratis
 
-  app 'Abscissa.app'
+  app 'Abscissa-#{version}/Abscissa.app'
 end
