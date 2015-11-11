@@ -7,7 +7,7 @@ cask :v1 => 'witgui' do
   appcast 'http://desairem.altervista.org/witgui/appcast.xml',
           :sha256 => '6cac8130e4e785ebf497329b1fb01f43ef340bb619bc3115f623f1522f4a3166'
   homepage 'http://desairem.altervista.org/witgui/wordpress/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Witgui.app'
 end

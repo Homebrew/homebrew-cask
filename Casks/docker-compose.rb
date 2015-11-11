@@ -16,6 +16,6 @@ cask :v1_1 => 'docker-compose' do
     set_permissions "#{staged_path}/docker-compose-Darwin-x86_64", '0755'
   end
 
-  depends_on :formula => 'docker'
+  depends_on :cask => 'docker'
   depends_on :arch => :x86_64
 end
