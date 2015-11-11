@@ -6,7 +6,7 @@ cask :v1 => 'wraparound' do
   appcast 'http://www.digicowsoftware.com/appcast/'
   name 'Wraparound'
   homepage 'http://www.digicowsoftware.com/detail?_app=Wraparound'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Wraparound.app'
 end
