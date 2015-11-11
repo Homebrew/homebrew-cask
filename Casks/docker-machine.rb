@@ -26,6 +26,6 @@ cask :v1_1 => 'docker-machine' do
   binary 'docker-machine-driver-vmwarevcloudair'
   binary 'docker-machine-driver-vmwarevsphere'
 
-  depends_on :formula => 'docker'
+  depends_on :cask => 'docker'
   depends_on :arch => :x86_64
 end
