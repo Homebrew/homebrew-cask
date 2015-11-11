@@ -1,6 +1,6 @@
 cask :v1 => 'extrabuildphase' do
-  version '0.2'
-  sha256 '3d5033e2c63e7d46d1c63ee25142c5448018f5af1e0ee498330ddcdff1970e84'
+  version '0.3'
+  sha256 'd4023faf158677b455458cb4ce4267e27907bf790fed29fc8d046099dc477277'
 
   url "https://github.com/norio-nomura/ExtraBuildPhase/releases/download/#{version}/ExtraBuildPhase-#{version}.pkg"
   appcast 'https://github.com/norio-nomura/ExtraBuildPhase/releases.atom'
