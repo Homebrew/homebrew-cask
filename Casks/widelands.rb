@@ -6,7 +6,7 @@ cask :v1 => 'widelands' do
   url 'https://launchpad.net/widelands/build18/build-18/+download/widelands-build18-mac.dmg'
   name 'Widelands'
   homepage 'https://wl.widelands.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Widelands.app'
 end
