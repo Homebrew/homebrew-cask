@@ -5,7 +5,7 @@ cask :v1 => 'worksnaps-client' do
   url "https://www.worksnaps.net/download/WSClient-mac-#{version}.dmg"
   name 'Worksnaps Client'
   homepage 'https://www.worksnaps.net/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Worksnaps Client.app'
 end

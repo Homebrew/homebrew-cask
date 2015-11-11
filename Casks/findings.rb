@@ -1,6 +1,6 @@
 cask :v1 => 'findings' do
-  version '1.2.4-2731'
-  sha256 '6bec3882f65fcb9ae6d9d5f0960b0e28687311c4d6c2129ccfacc175a61d26a2'
+  version '1.3-3009'
+  sha256 '9abc844ce945c99d3c718c7ebd67caf80f341f87692e332c9d64330207885b51'
 
   url "http://downloads.findingsapp.com/Findings_#{version.sub(%r{^.*-},'')}_#{version.sub(%r{-.*$},'')}.zip"
   appcast 'http://downloads.findingsapp.com/appcast.xml',
