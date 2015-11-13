@@ -1,6 +1,6 @@
 cask :v1 => 'appserver' do
-  version '1.0.6-21'
-  sha256 '33bd22f0b8852f37c6bbfcc1c9aa9e63a4916e12821642260a5054304916267b'
+  version '1.1.0-100'
+  sha256 'c2333a17470d74fa83e51187183f71601500241fd05e922bbb341ccd34aaaa9f'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/appserver-io/appserver/releases/download/#{version.sub(/-.*/, '')}/appserver-dist_#{version}_x86_64.pkg"
