@@ -16,9 +16,4 @@ cask :v1 => 'diffmerge' do
                          '~/Library/Preferences/SourceGear DiffMerge Preferences',
                          '~/Library/Saved Application State/com.sourcegear.DiffMerge.savedState'
                         ]
-
-  caveats <<-EOS.undent
-    Use "diffmerge --nosplash" to hide the splash screen when using
-    diffmerge with external tools such as git.
-  EOS
 end
