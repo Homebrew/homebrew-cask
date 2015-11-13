@@ -1,6 +1,6 @@
 cask :v1 => 'astropad' do
-  version '1.3.1'
-  sha256 'd085bdf142beef0c1212665c25e5b5ca2d58b0a8a9d9d4c889ca40c87c25a007'
+  version '1.3.3'
+  sha256 '31aa1c77cad7744f0e978c0a225c9bdf3d558d1497713fce8e06f72eeea203d1'
 
   # amazonaws.com is the official download host per the appcast feed
   url "http://astropad.com/downloads/Astropad-#{version}.zip"
