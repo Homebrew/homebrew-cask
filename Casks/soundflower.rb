@@ -1,10 +1,11 @@
 cask :v1 => 'soundflower' do
-  version '1.6.6b'
-  sha256 '61ca31d7478d057e32caaeac3c739f965ba9eb2a27570b3cc715e706d4740dfb'
+  version '2.0b2'
+  sha256 '6b5e56d53238cf0f9075886aa40580634fc9d23368239f22eccebfd97c9f8e34'
 
-  url "https://soundflower.googlecode.com/files/Soundflower-#{version}.dmg"
+  url "https://github.com/mattingalls/Soundflower/releases/download/#{version}/Soundflower-#{version}.dmg"
+
   name 'Soundflower'
-  homepage 'https://code.google.com/p/soundflower/'
+  homepage 'https://github.com/mattingalls/Soundflower'
   license :oss
 
   pkg 'Soundflower.pkg', :allow_untrusted => true
