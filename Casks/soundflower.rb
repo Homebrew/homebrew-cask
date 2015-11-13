@@ -8,7 +8,7 @@ cask :v1 => 'soundflower' do
   homepage 'https://github.com/mattingalls/Soundflower'
   license :oss
 
-  pkg 'Soundflower.pkg', :allow_untrusted => true
+  pkg 'Soundflower.pkg'
   postflight do
     system '/usr/bin/sudo', '-E', '--',
       '/sbin/kextload', '-b', 'com.Cycling74.driver.Soundflower'
