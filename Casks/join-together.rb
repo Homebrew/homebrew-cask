@@ -1,6 +1,6 @@
 cask :v1 => 'join-together' do
-  version '7.5.2'
-  sha256 '113eafed2832f3053c80419e832d1ad8d9e5da2806b09c8ec4cbce55c4843b8f'
+  version '7.5.3'
+  sha256 '2df29280c83580e16acaac20e5015acf1d24889de1439cc252f735658053af23'
 
   url "http://dougscripts.com/itunes/scrx/jointogether#{version.delete('.')}.zip"
   name 'Join Together'
