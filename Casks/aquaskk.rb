@@ -1,6 +1,6 @@
 cask :v1 => 'aquaskk' do
-  version '4.2.7'
-  sha256 'ce0e4dab61b68ce832b700ec061f364fcddeb13fd64e84b7fb6e79aa01dd60a1'
+  version '4.3.2'
+  sha256 '1294b4e02b563410796737c86467cd321f87cc85e359a132c26ea0a2f1a344fe'
 
   url "https://github.com/codefirst/aquaskk/releases/download/#{version}/AquaSKK-#{version}.dmg"
   name 'AquaSKK'
