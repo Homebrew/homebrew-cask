@@ -1,6 +1,6 @@
 cask :v1 => 'ipvanish-vpn' do
-  version '2.1.1-228'
-  sha256 '6ecc596311496cac5f73f8ea8fc7b9934a54dc41c7c57c879ce1d9d6d35965ac'
+  version '2.2.0-231'
+  sha256 '35b3140ef065e99d22b4491ffd51cda6eb51f360d9c38e7447b9f64350fb54eb'
 
   url "https://www.ipvanish.com/software/osx/IPVanish_v#{version.sub('-','_')}.zip"
   name 'IPVanish'
