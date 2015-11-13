@@ -1,6 +1,6 @@
 cask :v1 => 'houdahspot' do
-  version '4.0.10'
-  sha256 '7f38d62ecef2d1bcba176db303dcc93aeaba876dde4ca10693e0251eade06d1c'
+  version '4.1'
+  sha256 'ecd30e68eb8a19e70887701b24b978c82b2498df46873bd2a08882b5484b8630'
 
   url "http://www.houdah.com/houdahSpot/download_assets/HoudahSpot#{version}.zip"
   appcast "http://www.houdah.com/houdahSpot/updates/cast#{version.to_i}.xml",
