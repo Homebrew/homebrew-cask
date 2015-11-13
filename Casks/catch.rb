@@ -1,6 +1,6 @@
 cask :v1 => 'catch' do
-  version '1.9.2'
-  sha256 '4bc7e9dbfaf11581f6caf63fd57e8df1e45245da0980656a748cf31ff6cff162'
+  version '1.9.3'
+  sha256 'a68ec939abe55d25b992047a6f88b448f9aad25b545c2e9b137e00296c40eec1'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/mipstian/catch/releases/download/#{version}/Catch-#{version}.zip"
