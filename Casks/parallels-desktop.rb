@@ -1,8 +1,8 @@
 cask :v1 => 'parallels-desktop' do
-  version '11.0.2-31348'
-  sha256 'd87fce2df3fc6be6ab18f827e689fbded42a8845355ccc0517f4ce1f2f38eadf'
+  version '11.1.0-32202'
+  sha256 'd62f9e470fae3a7a2ac6a3041e3ecdff8e028fab8eaa5841d88fa708ccd16670'
 
-  url "http://download.parallels.com/desktop/v#{version[/^\w+/]}/#{version.sub(/-.*$/, '')}/ParallelsDesktop-#{version}.dmg"
+  url "http://download.parallels.com/desktop/v#{version[/^\w+/]}/#{version}/ParallelsDesktop-#{version}.dmg"
   name 'Parallels Desktop'
   homepage 'https://www.parallels.com/products/desktop/'
   license :commercial
