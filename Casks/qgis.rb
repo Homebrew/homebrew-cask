@@ -12,4 +12,10 @@ cask :v1 => 'qgis' do
 
   depends_on :cask => 'gdal-framework'
   depends_on :formula => 'matplotlib'
+
+  caveats <<-EOS.undent
+    #{token} requires matplotlib in a specific location. Please run the following to finish install:
+
+      sudo ln -s /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python /Library/Python/2.7/site-packages/matplotlib-override
+  EOS
 end
