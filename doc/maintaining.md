@@ -58,6 +58,18 @@ Label | Description | Issues | Pull Requests
 
 Occasionally we’ll get submissions from users that fix bugs or add features to homebrew-cask itself. There is a subset of our maintainers who are less familiar with Ruby and prefer to leave these review to folks with more experience with the language. This is AOK!
 
+## Handling Cask Update PRs
+
+The most common pull requests we get are to add or update Casks. [Vítor Galvão](https://github.com/vitorgalvao) has created [some excellent scripts](https://github.com/vitorgalvao/tiny-scripts) to make these rote changes more painless. You can use **fastmerge** if the PR is ready to merge (Cask file is valid, no Rubocop errors, single commit). Sometimes, new contributors aren't aware of how to squash commits, posting something like "Please [squash your commits](https://davidwalsh.name/squash-commits-git), thanks!" should help them out.
+
+If the PR has an error, you can use **prfixmaster** to make any necessary changes.
+
+Lastly, if you see an outdated cask that just needs a version bump, you can use **cask-repair** to make the PR yourself quickly.
+
+## Tips
+
+* To keep my repository up to date with caskroom/master, I have a custom bash function. While it is likely overkill, feel free to adapt it your own needs --> `cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "$GITHUB_USERNAME" master; git remote prune origin; git fetch -p origin; git remote update --prune`
+
 ## Ideas for other things to include here
 
 * Productivity enhancing tips / tools / scripts that help with PR review, cask testing, etc.
