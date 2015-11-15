@@ -6,6 +6,6 @@ cask :v1 => 'shellhere' do
   name 'ShellHere'
   homepage 'https://github.com/lhagan/ShellHere'
   license :unknown
-  
+
   app 'ShellHere.app'
 end
