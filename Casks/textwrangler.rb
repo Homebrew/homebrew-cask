@@ -1,6 +1,6 @@
 cask :v1 => 'textwrangler' do
-  version '5.0'
-  sha256 'bba090699501a61a4592c73f5fe0eaf2e10b5f7eed5d4192b4f236491f9054cf'
+  version '5.0.2'
+  sha256 '29484008bc95aee2e2731781b514cd60ca1e19fdb5a4b575ac5dbbf79472c346'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/BBSW-download/TextWrangler_#{version}.dmg"
