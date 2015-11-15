@@ -1,10 +1,10 @@
 cask :v1 => 'flexiglass' do
-  version '1.6-12312'
-  sha256 '1fbe8aeac30254487cf69ccc556f8a214acfdcc340edc885697e4d0618a95641'
+  version '1.6.1-12795'
+  sha256 'e929497301312054866b809fbe64ff06a33ad6bc188e4cb64da980aa6085496f'
 
   url "http://downloads.nulana.com/flexiglass/Flexiglass-#{version}.zip"
   appcast 'http://downloads.nulana.com/flexiglass/appcast.xml',
-          :sha256 => 'f70568526030303c5d319daa0823eb80b24715e9abbcfb7952ad3b716fd6276b'
+          :sha256 => '6b788c43781b1ac872c669d37da3bf3919ce2ca9e3e618bb416d4cb8f6430419'
   name 'Flexiglass'
   homepage 'http://nulana.com/flexiglass/'
   license :commercial

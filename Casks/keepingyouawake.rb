@@ -1,6 +1,6 @@
 cask :v1 => 'keepingyouawake' do
-  version '1.2.1'
-  sha256 'e1f40532043949b785d0cb1d6f6a5a3a4ed4073a3db4ca6ed9b3d0275d7d1c2f'
+  version '1.3'
+  sha256 'edc08fa7e8504035ab721cc6a2c8fb2c482c5cc82d6666410444738eacaa0748'
 
   url "https://github.com/newmarcel/KeepingYouAwake/releases/download/#{version}/KeepingYouAwake-#{version}.zip"
   appcast 'https://github.com/newmarcel/KeepingYouAwake/releases.atom'

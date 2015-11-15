@@ -3,8 +3,8 @@ cask :v1 => 'virtualbox' do
     version '4.3.32-103443'
     sha256 'dcfbd1d3014ab393dc5944a9474eeabf8b33471e7d95cb4c94070dc7acab772c'
   else
-    version '5.0.8-103449'
-    sha256 '4c0987af48340866c3d5902d70f4ef59bdcf05898a36aa425f26c80b29561d4e'
+    version '5.0.10-104061'
+    sha256 '62f933115498e51ddf5f2dab47dc1eebb42eb78ea1a7665cb91c53edacc847c6'
   end
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*},'')}/VirtualBox-#{version}-OSX.dmg"

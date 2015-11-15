@@ -1,6 +1,6 @@
 cask :v1 => 'multidoge' do
-  version '0.1.4'
-  sha256 '12ca734040c6dc887c7b17dbaf92c3320086522d6dbd1bb63ca9fb0c6d6c46de'
+  version '0.1.6'
+  sha256 'ca6ff07ecb1ecaad3040969270b963edae22875fa92e8695bf4ebcc068061441'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/langerhans/multidoge/releases/download/v#{version}/multidoge-#{version}.dmg"

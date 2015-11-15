@@ -23,7 +23,7 @@ class Ruby20Requirement < Requirement
       rubies = `/usr/bin/type -aP ruby`.split("\n")
       rubies += [
         "/usr/local/bin/ruby",
-        "#{`brew --prefix 2>/dev/null`.strip}/bin/ruby",
+        "#{`brew --repository 2>/dev/null`.strip}/bin/ruby",
       ]
 
       rubies.uniq.each do |ruby|

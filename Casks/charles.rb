@@ -1,6 +1,6 @@
 cask :v1 => 'charles' do
-  version '3.11'
-  sha256 'b31efe7c80464a92984d7a76e8a41df0d766c4047695b083f7278a9668585592'
+  version '3.11.2'
+  sha256 'db0a7d9c318ed239bc3d32a96f73ebba80e75cd31954179be42019222ae6557d'
 
   url "http://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
   name 'Charles'

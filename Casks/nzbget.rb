@@ -1,6 +1,6 @@
 cask :v1 => 'nzbget' do
-  version '16.1'
-  sha256 '4ec71fa2dcd94c69520eda5c7f43d36e1ab49149bd8b79339da9d5e08f740c8e'
+  version '16.3'
+  sha256 'fe43e60ca7cb8e34fe3efb141c7da6441dd784da39328fc5d8706599bc9f649e'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/nzbget/nzbget/releases/download/v#{version}/nzbget-#{version}-bin-osx.zip"
@@ -10,6 +10,10 @@ cask :v1 => 'nzbget' do
   license :gpl
 
   app 'NZBGet.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
 
   zap :delete => [
                   '~/Library/Application Support/NZBGet',

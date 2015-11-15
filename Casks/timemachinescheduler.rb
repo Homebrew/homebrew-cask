@@ -7,7 +7,7 @@ cask :v1 => 'timemachinescheduler' do
           :sha256 => '2a2ac94fe0dee03907844876ac83ff5dee8f610be042d8b5f32d145eaae8ef55'
   name 'TimeMachineScheduler'
   homepage 'http://www.klieme.com/TimeMachineScheduler.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   container :nested => 'TimeMachineScheduler3_Installer.dmg'
   prefpane 'TimeMachineScheduler3_Installer.app/Contents/Resources/TimeMachineScheduler.prefPane'

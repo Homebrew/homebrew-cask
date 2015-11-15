@@ -120,10 +120,10 @@ _main () {
     # initialization
     cd_to_project_root
     local git_root="$(/bin/pwd)"
-    local brew_prefix="$(brew --prefix)"
-    local cellar_dir="$brew_prefix/Cellar/brew-cask"
+    local brew_repository="$(brew --repository)"
+    local cellar_dir="$brew_repository/Cellar/brew-cask"
     local version_dir="$(/bin/ls -- "$cellar_dir/" | /usr/bin/sort | /usr/bin/tail -1)"
-    local tap_dir="$brew_prefix/$tap_subdir"
+    local tap_dir="$brew_repository/$tap_subdir"
 
     # sanity check
     not_inside_homebrew "$tap_dir" "$git_root"

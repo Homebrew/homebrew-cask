@@ -1,6 +1,6 @@
 cask :v1 => 'qbittorrent' do
-  version '3.2.3'
-  sha256 'c88f1bd90c8e9b667dd5d8c35ccd490c56293ca86b9a203c15e083c7f18f4136'
+  version '3.2.5'
+  sha256 '24cd6d4c4b31a48c15db2c3dad24f0ad001281ca6ca2dfbecc24670ba429a6af'
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/qbittorrent/qbittorrent-#{version}.dmg"

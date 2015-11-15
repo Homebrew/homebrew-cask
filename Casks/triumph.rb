@@ -5,7 +5,7 @@ cask :v1 => 'triumph' do
   url 'https://www.audiofile-engineering.com/triumph/download/Triumph.dmg'
   name 'Triumph'
   homepage 'https://www.audiofile-engineering.com/triumph/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Triumph.app'
   app 'Triumph.app/Contents/Applications/DDP Player.app'

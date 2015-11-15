@@ -5,7 +5,7 @@ cask :v1 => 'steermouse' do
   url "http://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
   name 'SteerMouse'
   homepage 'http://plentycom.jp/en/steermouse/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   pkg 'SteerMouse Installer.app/Contents/Resources/SteerMouse.pkg'
 

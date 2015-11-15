@@ -1,10 +1,10 @@
 cask :v1 => 'quickbooks' do
-  version '2.0.0'
-  sha256 'cfbb56fd941b9f535cd0a048557fcfdabf36742edf30f0bdaf94fa63ce4e598d'
+  version '2.2.0'
+  sha256 '0fb97f313e33cbb8e4ee7158d53bf9316868ef92a12cb98c62971fe74f8842fd'
 
-  url "https://http-download.intuit.com/http.intuit/CMO/apple_web/sample/static/qbomac/releases/QuickBooks_#{version}/QuickBooks.dmg"
-  appcast 'https://http-download.intuit.com/http.intuit/CMO/apple_web_Dev/sample/static/qbomac/rssfeeds/Staged/QuickBooksMacApp.xml',
-          :sha256 => 'b28438af287a4ad92d549e353a9dcb1c0ffbd3d0a6ecee5c47df0e7c9a8f4e4f'
+  url "https://http-download.intuit.com/http.intuit/CMO/apple_web/sample/static/qbomac/releases/QuickBooks_#{version}/QuickBooks.QBOWeb.dmg"
+  appcast 'https://http-download.intuit.com/http.intuit/CMO/apple_web/sample/static/qbomac/rssfeeds/Staged/QuickBooks.QBOWeb.Release.xml',
+          :sha256 => 'c24ad4d5c7a3a8ca4e5922d652b2d4a83eb42cc3d1ef8ff5e6c9dfd4668af10d'
   name 'QuickBooks Mac App'
   name 'QuickBooks'
   homepage 'https://qbo.intuit.com/'

@@ -10,7 +10,7 @@ cask :v1 => 'quicksilver' do
     sha256 'e5e6fd5338ebbcf08e266f6e6daf5a7773d005b18349f377207d8ab6dca3634c'
   end
 
-  url "http://cdn.qsapp.com/plugins/files/com.blacktree.Quicksilver__#{version.sub(%r{^.*?-},'')}.dmg"
+  url "https://qs0.qsapp.com/plugins/download.php?qsversion=#{version.sub(%r{^.*?-},'')}.dmg"
   name 'Quicksilver'
   homepage 'http://qsapp.com/'
   license :apache

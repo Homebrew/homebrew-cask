@@ -1,9 +1,8 @@
 cask :v1 => 'openlp' do
-  version '2.0.5'
-  sha256 '0ba5a37c359394c277e221f8ca74191d3425cf3cfbd70699d81346c77c93d746'
+  version '2.2'
+  sha256 'c031fbffc0cf8542df893c5d79b8c827b6a7eac865ff0f5155b0d20ca9f4ab0a'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/project/openlp/openlp/#{version}/OpenLP-#{version}.dmg"
+  url "https://get.openlp.org/#{version}/OpenLP-#{version}.dmg"
   name 'OpenLP'
   homepage 'http://openlp.org'
   license :gpl
