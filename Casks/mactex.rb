@@ -7,7 +7,7 @@ cask :v1 => 'mactex' do
   homepage 'https://www.tug.org/mactex/'
   license :oss
 
-  pkg "mactex-#{version}.pkg"
+  pkg 'MacTeX.pkg'
 
   uninstall :pkgutil => [
                          'org.tug.mactex.ghostscript9.16',
