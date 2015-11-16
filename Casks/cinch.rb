@@ -1,6 +1,6 @@
 cask :v1 => 'cinch' do
-  version '1.2'
-  sha256 '61c63fedf9dd876f9f0885042463baba6914062ae0bef0883a72855a41c7b3a7'
+  version '1.2.1'
+  sha256 'd4e2ce94bb97a3e61e67372dbf9495e4542d9a3eca5625d3119ed8f9c24d61ab'
 
   url "https://www.irradiatedsoftware.com/downloads/Cinch_#{version}.zip"
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/cinch.php'

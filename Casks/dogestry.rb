@@ -1,6 +1,6 @@
 cask :v1_1 => 'dogestry' do
-  version '2.1.1'
-  sha256 '5019c57177e4b985ee38dabdc3279dfcb0e617139277f21bdcf49dc794fcfd6a'
+  version '2.1.2'
+  sha256 '38435fc03f4221633d17f472629548978513e9e25e4c96aad6e2e594817c8598'
 
   url "https://github.com/dogestry/dogestry/releases/download/v#{version}/dogestry-darwin-#{version}"
   appcast 'https://github.com/dogestry/dogestry/releases.atom'
