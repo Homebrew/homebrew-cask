@@ -60,7 +60,7 @@ Occasionally we’ll get submissions from users that fix bugs or add features to
 
 ## Handling Cask Update PRs
 
-The most common pull requests we get are to add or update Casks. [Vítor Galvão](https://github.com/vitorgalvao) has created [some excellent scripts](https://github.com/vitorgalvao/tiny-scripts) to make these rote changes more painless. You can use [`fastmerge`](https://github.com/vitorgalvao/tiny-scripts/blob/master/fastmerge) if the PR is ready to merge (Cask file is valid, no Rubocop errors, single commit). Sometimes, new contributors aren't aware of how to squash commits, posting something like "_Please [squash your commits](https://davidwalsh.name/squash-commits-git), thanks!_" should help them out.
+The most common pull requests we get are to add or update Casks. [Vítor Galvão](https://github.com/vitorgalvao) has created [some excellent scripts](https://github.com/vitorgalvao/tiny-scripts) to make these rote changes more painless. You can use [`fastmerge`](https://github.com/vitorgalvao/tiny-scripts/blob/master/fastmerge) if the PR is ready to merge (everything looks fine, all tests passed). Sometimes, new contributors aren't aware of how to squash commits, posting something like “Please [squash your commits](https://davidwalsh.name/squash-commits-git). Thanks!” should help them out.
 
 If the PR has an error, you can use [`prfixmaster`](https://github.com/vitorgalvao/tiny-scripts/blob/master/prfixmaster) to make any necessary changes.
 
