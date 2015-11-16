@@ -20,12 +20,6 @@ module Hbc::Scopes
       @all_tapped_cask_dirs
     end
 
-    def reset_all_tapped_cask_dirs
-      # The memoized value should be reset when a Tap is added/removed
-      # (which is a rare event in our codebase).
-      @all_tapped_cask_dirs = nil
-    end
-
     def all_tokens
       cask_tokens = all_tapped_cask_dirs.map { |d| Dir.glob d.join('*.rb') }.flatten
       cask_tokens.map { |c|
@@ -57,6 +51,10 @@ module Hbc::Scopes
           Hbc.load(cask_token)
         end
       end
+    end
+
+    def outdated
+      installed.select(&:outdated?)
     end
   end
 end

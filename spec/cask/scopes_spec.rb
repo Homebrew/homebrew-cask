@@ -41,4 +41,18 @@ describe Hbc::Scopes do
       expect(Hbc).to have_received(:load).with(absolute_path_to_cask)
     end
   end
+
+  describe 'outdated' do
+    let(:installed_casks) {[
+      double('Cask', name: 'up-to-date', outdated?: false),
+      double('Cask', name: 'pretty-old', outdated?: true),
+    ]}
+    before do
+      allow(Hbc).to receive(:installed) { installed_casks }
+    end
+
+    it 'returns the list of casks whose installed version does not match the latest available version' do
+      expect(Hbc.outdated.map(&:name)).to eq(%w[pretty-old])
+    end
+  end
 end
