@@ -16,9 +16,8 @@ cask :v1 => 'mactex' do
                         ],
             :delete  => [
                          '/Applications/TeX',
+                         '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
                          '/etc/paths.d/TeX',
+                         '/etc/manpaths.d/TeX'
                         ]
-  caveats do
-    zsh_path_helper '/usr/texbin'
-  end
 end
