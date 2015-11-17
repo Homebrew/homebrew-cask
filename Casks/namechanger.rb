@@ -1,6 +1,6 @@
 cask :v1 => 'namechanger' do
-  version '3.0.0'
-  sha256 'ab0cf99c272a113e7cfdfd6ad781d4dca1667ad943ef95958c51762c555915fd'
+  version '3.0.1'
+  sha256 'a26635151ec7632652b8f57d4fceb42176dc85b9109da7f7b5db5688bbecd42b'
 
   url "http://www.mrrsoftware.com/Downloads/NameChanger/Updates/NameChanger-#{version.gsub('.','_')}.zip"
   appcast 'http://mrrsoftware.com/Downloads/NameChanger/Updates/NameChangerSoftwareUpdates.xml',
