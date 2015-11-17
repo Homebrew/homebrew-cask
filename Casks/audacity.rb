@@ -9,4 +9,6 @@ cask :v1 => 'audacity' do
   license :gpl
 
   app 'Audacity/Audacity.app'
+
+  zap :delete => '~/Library/Application Support/audacity'
 end
