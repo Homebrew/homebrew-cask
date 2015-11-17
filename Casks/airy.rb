@@ -1,6 +1,6 @@
 cask :v1 => 'airy' do
-  version '2.2.96'
-  sha256 '69ec2c218c319f08df2dec4ebb7d858cc01356581d980384ee70fd90a8423504'
+  version '2.2.98'
+  sha256 'abfa6b5dd1998fac5709873697e22abc732fa7816868ec8024512ecbf47c840c'
 
   url "http://www.eltima.com/download/airy-update/airy_#{version}.dmg"
   appcast 'http://mac.eltima.com/download/airy-update/airy.xml',
