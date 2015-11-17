@@ -1,10 +1,10 @@
 cask :v1 => 'electron' do
-  version '0.34.3'
-  sha256 '72ef8a0dc70ecb3119691c7ec332f51eb7db5d6e4be774ce74cd30323a0e5b63'
+  version '0.35.0'
+  sha256 '7ef9be84f464b32db6602fc187ee4cdf9f2d1af1bb5df84646a1526cf34f958a'
 
   url "https://github.com/atom/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/atom/electron/releases.atom',
-          :sha256 => '406774cdb85a5a87962b506ff518facb8aa39b6b7382ed81d75286492a778014'
+          :sha256 => '7b76ea4d7bdef5fc980632b829f8cfd8e81c96dec755ccb1ca1416d9ba6c89ea'
   name 'Electron'
   homepage 'http://electron.atom.io/'
   license :mit
