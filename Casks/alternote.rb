@@ -1,6 +1,6 @@
 cask :v1 => 'alternote' do
-  version '1.0.5_1005'
-  sha256 'f507742ca0a1cd4a6239bbf5096e62ed8960e575d9ff5be82c2645951f9bb1b5'
+  version '1.0.6_1006'
+  sha256 '31ff36a3a02daba52b3363d9f8b75e1183df488ff844f8f7f919f67ba57bb4d2'
 
   url "http://alternoteapp.com/assets/downloads/Alternote#{version.sub(%r{.*_},'')}.zip"
   appcast 'http://alternoteapp.com/assets/appcast.xml',
