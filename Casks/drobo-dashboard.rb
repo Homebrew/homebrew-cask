@@ -9,6 +9,7 @@ cask :v1 => 'drobo-dashboard' do
 
   pkg "Install.app/Contents/Drobo_Dashboard_Installer_#{version}.pkg"
 
-  uninstall :script => 'Uninstall.app/Contents/Resources/Scripts/Drobo_Dashboard_uninstall.sh',
+  uninstall :script => { :executable => 'Uninstall.app/Contents/Resources/Scripts/Drobo_Dashboard_uninstall.sh',
+                         :sudo => true },
             :pkgutil => 'com.datarobotics.drobodashboard'
 end
