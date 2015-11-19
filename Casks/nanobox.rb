@@ -2,7 +2,7 @@
 # is the official download host per the discussion with the project lead
 # @tyler_flint
 #
-# nanbox just installs the nanobox binary.  
+# nanbox just installs the nanobox binary.
 # Christopher Liljenstolpe <cask@cdl.is>  2015-Nov-18
 cask :v1 => 'nanobox' do
   version :latest
