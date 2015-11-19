@@ -1,6 +1,6 @@
 cask :v1 => 'slack' do
-  version '1.1.7'
-  sha256 '83da0591a20efe9a265e5d3579c67b29d071f366bef0b534f3bfa565f64de954'
+  version '1.1.8'
+  sha256 'a3c9833329da4f1fc11947f5d944742caf95efca6d8246e9f8f6887b40686d6a'
 
   # fastly.net is the official download host per the vendor homepage
   url "https://slack-ssb-updates.global.ssl.fastly.net/mac_public_releases/slack-#{version}.zip"
