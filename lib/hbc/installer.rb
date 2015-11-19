@@ -214,7 +214,11 @@ class Hbc::Installer
   def enable_accessibility_access
     return unless @cask.accessibility_access
     ohai 'Enabling accessibility access'
-    if MacOS.release >= :mavericks
+    if MacOS.release <= :mountain_lion
+      @command.run!('/usr/bin/touch',
+                    :args => [Hbc.pre_mavericks_accessibility_dotfile],
+                    :sudo => true)
+    elsif MacOS.release <= :yosemite
       @command.run!('/usr/bin/sqlite3',
                     :args => [
                               Hbc.tcc_db,
@@ -222,8 +226,11 @@ class Hbc::Installer
                              ],
                     :sudo => true)
     else
-      @command.run!('/usr/bin/touch',
-                    :args => [Hbc.pre_mavericks_accessibility_dotfile],
+      @command.run!('/usr/bin/sqlite3',
+                    :args => [
+                              Hbc.tcc_db,
+                              "INSERT OR REPLACE INTO access VALUES('kTCCServiceAccessibility','#{bundle_identifier}',0,1,1,NULL,NULL);",
+                             ],
                     :sudo => true)
     end
   end
@@ -302,29 +309,28 @@ class Hbc::Installer
         path.rmtree
       rescue StandardError => e
         # in case of permissions problems
-        if path.exist? and !tried_permissions
-          begin
-            # todo Better handling for the case where path is a symlink.
-            #      The -h and -R flags cannot be combined, and behavior is
-            #      dependent on whether the file argument has a trailing
-            #      slash.  This should do the right thing, but is fragile.
-            @command.run!('/usr/bin/chflags', :args => ['-R', '--', '000',   path])
-            @command.run!('/bin/chmod',       :args => ['-R', '--', 'u+rwx', path])
-            @command.run!('/bin/chmod',       :args => ['-R', '-N',          path])
-          rescue StandardError => e
-            unless tried_ownership
-              # in case of ownership problems
-              # todo Further examine files to see if ownership is the problem
-              #      before using sudo+chown
-              ohai "Using sudo to gain ownership of path '#{path}'"
-              current_user = Etc.getpwuid(Process.euid).name
-              @command.run('/usr/sbin/chown', :args => ['-R', '--', current_user, path],
-                                              :sudo => true)
-              tried_ownership = true
-              retry # permissions
-            end
-          end
+        unless tried_permissions
+          # todo Better handling for the case where path is a symlink.
+          #      The -h and -R flags cannot be combined, and behavior is
+          #      dependent on whether the file argument has a trailing
+          #      slash.  This should do the right thing, but is fragile.
+          @command.run!('/usr/bin/chflags', :args => ['-R', '--', '000',   path])
+          @command.run!('/bin/chmod',       :args => ['-R', '--', 'u+rwx', path])
+          @command.run!('/bin/chmod',       :args => ['-R', '-N',          path])
           tried_permissions = true
+          retry # rmtree
+        end
+        unless tried_ownership
+          # in case of ownership problems
+          # todo Further examine files to see if ownership is the problem
+          #      before using sudo+chown
+          ohai "Using sudo to gain ownership of path '#{path}'"
+          current_user = Etc.getpwuid(Process.euid).name
+          @command.run('/usr/sbin/chown', :args => ['-R', '--', current_user, path],
+                                          :sudo => true)
+          tried_ownership = true
+          # retry chflags/chmod after chown
+          tried_permissions = false
           retry # rmtree
         end
       end

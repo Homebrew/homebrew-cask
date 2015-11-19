@@ -1,6 +1,6 @@
 cask :v1 => 'spyder' do
-  version '2.3.4'
-  sha256 'dbc71eb3c3952171fa37251ed441be80c525c47143626b4315f3775b8b4b1fed'
+  version '2.3.6'
+  sha256 'bceb41c323f8910f6e3ad113bd4adbb4d52e996602de146a482b12d57a7bdf82'
 
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-#{version}-py2.7.dmg"

@@ -1,6 +1,6 @@
 cask :v1 => 'insertpic' do
-  version '4.0'
-  sha256 'cb2bd2aa1f00637a49ef035018eba66df3095bc3c9a69520a9287d6f8c81aa70'
+  version '4.2'
+  sha256 '1c9ed72327496bb24bd2e6820eadbac41befe6faa7dddc8215e66c577bf7f10e'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/insertPic/InsertPic_#{version}.zip"

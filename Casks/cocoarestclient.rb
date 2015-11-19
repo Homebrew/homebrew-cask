@@ -5,7 +5,7 @@ cask :v1 => 'cocoarestclient' do
   url "https://github.com/mmattozzi/cocoa-rest-client/releases/download/#{version}/CocoaRestClient-#{version}.dmg"
   appcast 'https://github.com/mmattozzi/cocoa-rest-client/releases.atom'
   name 'CocoaRestClient'
-  homepage 'http://mmattozzi.github.io/cocoa-rest-client/'
+  homepage 'https://mmattozzi.github.io/cocoa-rest-client/'
   license :bsd
 
   app 'CocoaRestClient.app'

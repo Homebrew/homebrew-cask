@@ -4,7 +4,7 @@ cask :v1 => 'wowhead-client' do
 
   url 'https://static.wowhead.com/download/Wowhead_Client.dmg'
   name 'Wowhead Client'
-  appcast 'http://client.wowhead.com/files/wowhead-client-appcast.xml',
+  appcast 'https://client.wowhead.com/files/wowhead-client-appcast.xml',
           :sha256 => '70f04bcdeedb2c902e80b6b22b9cd328d0f77af88e981f5865b019afd94130bc'
   homepage 'http://wowhead.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder

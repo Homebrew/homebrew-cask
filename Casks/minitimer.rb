@@ -5,7 +5,7 @@ cask :v1 => 'minitimer' do
   url "http://kevingessner.com/public/downloads/miniTimer/#{version}/miniTimer.dmg"
   name 'miniTimer'
   homepage 'http://kevingessner.com/software/minitimer/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'miniTimer.app'
 end

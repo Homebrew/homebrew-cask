@@ -5,7 +5,7 @@ cask :v1 => 'simplecap' do
   url "http://xcatsan.com/simplecap/download/SimpleCap-#{version}.zip"
   name 'SimpleCap'
   homepage 'http://xcatsan.com/simplecap-en/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'SimpleCap.app'
 end

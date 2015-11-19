@@ -5,7 +5,7 @@ cask :v1 => 'textroom' do
   url "https://textroom.googlecode.com/files/textroom-#{version}.dmg"
   name 'TextRoom'
   homepage 'https://code.google.com/p/textroom/'
-  license :oss
+  license :gpl
 
   app 'textroom.app'
 end

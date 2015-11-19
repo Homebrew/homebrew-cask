@@ -1,14 +1,25 @@
 cask :v1 => 'imazing' do
-  version :latest
-  sha256 :no_check
+  version '1.3.8-1447430071'
+  sha256 'a78d45218cde01845c20087a68a77153a4746fed2fe9a6b35061ddc227a960f8'
 
   # devmate.com is the official download host per the vendor homepage
-  url 'http://dl.devmate.com/com.DigiDNA.iMazingMac/iMazingforMac.dmg'
+  url "https://dl.devmate.com/com.DigiDNA.iMazingMac/#{version.sub(%r{-.*},'')}/#{version.sub(%r{.*?-},'')}/iMazingforMac-#{version.sub(%r{-.*},'')}.dmg"
   name 'iMazing'
   appcast 'http://updates.devmate.com/com.DigiDNA.iMazingMac.xml',
-          :sha256 => '20c1ab602462b7fc0d5b4cbd555cacf127b69a07a737579598ebcbc0f5b21319'
-  homepage 'http://imazing.com/'
+          :sha256 => '57e3299100e16ac2f4f828d652c5e5a104d09119fb299ad39007dec5275e07e8'
+  homepage 'https://imazing.com/'
   license :commercial
 
   app 'iMazing.app'
+
+  depends_on :macos => '>= :lion'
+
+  zap :delete => [
+        '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.digidna.imazingmac.sfl',
+        '~/Library/Application Support/iMazing',
+        '~/Library/Caches/com.DigiDNA.iMazingMac',
+        '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.DigiDNA.iMazingMac',
+        '~/Library/Caches/iMazing',
+        '~/Library/Preferences/com.DigiDNA.iMazingMac.plist'
+      ]
 end

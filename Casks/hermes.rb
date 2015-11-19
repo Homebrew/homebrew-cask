@@ -7,7 +7,7 @@ cask :v1 => 'hermes' do
   appcast 'https://hermesapp.org/versions.xml',
           :sha256 => 'abfa2b7257a081bcff21eb97c9425c09444baac4d979309c0d93b623a4b567f5'
   name 'Hermes'
-  homepage 'http://hermesapp.org/'
+  homepage 'https://hermesapp.org/'
   license :mit
 
   app 'Hermes.app'

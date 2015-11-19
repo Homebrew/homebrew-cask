@@ -1,6 +1,6 @@
 cask :v1 => 'track-o-bot' do
-  version '0.4.2'
-  sha256 '3746f662cda62047c8b9e870997bfc8d4f04040b72e1573177c4da2cfc5e8cb3'
+  version '0.6.2'
+  sha256 'b694f4d4044a124ce3c02a001cfdc6dcb1f43c89bf902d79c8980163aa4e7554'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/stevschmid/track-o-bot/releases/download/#{version}/Track-o-Bot_#{version}.dmg"

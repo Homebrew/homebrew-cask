@@ -5,7 +5,7 @@ cask :v1 => 'jaspersoft-studio' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/jasperstudio/JaspersoftStudio-#{version}/TIBCOJaspersoftStudio-#{version}.final-mac-x86_64.dmg"
   name 'Jaspersoft Studio'
-  homepage 'http://community.jaspersoft.com/project/jaspersoft-studio'
+  homepage 'https://community.jaspersoft.com/project/jaspersoft-studio'
   license :oss
 
   app "Jaspersoft Studio #{version}.final/Jaspersoft Studio.app"

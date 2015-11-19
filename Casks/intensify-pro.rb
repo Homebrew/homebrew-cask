@@ -1,11 +1,11 @@
 cask :v1 => 'intensify-pro' do
-  version '1.0.4_703'
-  sha256 '9234595b20dc5c4053ba9f34a26d026e3915964f1b25c31ad3100cbac426babc'
+  version '1.0.5_708'
+  sha256 'b7133a5e5bab8cfd4f8d576686be17528aef5a84b18256b9ba6654d67eff0c55'
 
   url "http://cdn.macphun.com/updates/IntensifyPro/IntensifyPro_Distribution_v#{version.gsub('.','_')}.zip"
   name 'Intensify Pro'
   appcast 'http://cdn.macphun.com/updates/IntensifyPro/appcast.xml',
-          :sha256 => '2e8537a93ce1f48b5dcb3746488f9e87c82db7f6abc586b27b50fda1645bd2cf'
+          :sha256 => '1478fc12d15d86c890f76810c70d58ce7b1f2086c6ddf8f302a06e97404f133d'
   homepage 'http://macphun.com/intensify'
   license :commercial
 

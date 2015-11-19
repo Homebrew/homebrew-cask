@@ -7,7 +7,7 @@ cask :v1 => 'pollev-presenter' do
   name 'PollEv Presenter'
   appcast 'https://polleverywhere-app.s3.amazonaws.com/mac-beta/appcast.xml',
           :sha256 => 'dbfce32dced0e0370f6757d34aa89e176cab2495dcaaafc4a4fba85090e35bf6'
-  homepage 'http://www.polleverywhere.com/'
+  homepage 'https://www.polleverywhere.com/'
   license :gratis
   tags :vendor => 'Poll Everywhere'
 

@@ -1,8 +1,8 @@
 cask :v1 => 'multibit' do
-  version '0.5.18'
-  sha256 '0d2fe6fa68385c1ca964d9588272787dabffbc2061f29ebaab422317d0972257'
+  version '0.5.19'
+  sha256 'f84aefa0b3762e36659ea3e71806f747db4198641d658d88c8772978b23f99dc'
 
-  url "https://multibit.org/releases/multibit-#{version}/multibit-#{version}.dmg"
+  url "https://multibit.org/releases/multibit-classic/multibit-classic-#{version}/multibit-classic-macos-#{version}.dmg"
   gpg "#{url}.asc",
       :key_id => '23f7fb7b'
   name 'MultiBit'

@@ -1,11 +1,11 @@
 cask :v1 => 'charles' do
-  version '3.10.1'
-  sha256 '5d94f04d4936dd1dd9293f406457f13a825422dc28c5146f19581de2f8e76c9d'
+  version '3.11.2'
+  sha256 'db0a7d9c318ed239bc3d32a96f73ebba80e75cd31954179be42019222ae6557d'
 
   url "http://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
   name 'Charles'
   homepage 'http://www.charlesproxy.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Charles.app'
 

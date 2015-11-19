@@ -6,7 +6,7 @@ cask :v1 => 'glyphish-color-changer' do
   appcast 'https://github.com/glyphish/color-changer/releases.atom'
   name 'Glyphish Color Changer'
   homepage 'https://github.com/glyphish/color-changer'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :oss
 
   app 'Glyphish Color Changer.app'
 end

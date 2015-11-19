@@ -5,7 +5,7 @@ cask :v1 => 'ireadfast' do
   url "http://www.gengis.net/downloads/iReadFast%20#{version}.dmg"
   name 'iReadFast'
   homepage 'http://www.gengis.net/prodotti/iReadFast_Mac/en/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'iReadFast.app'
 end

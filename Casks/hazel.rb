@@ -1,11 +1,12 @@
 cask :v1 => 'hazel' do
-  version :latest
-  sha256 :no_check
+  version '3.3.6'
+  sha256 '6e8bfc32dfb07ffe34bca4fd26b7e2e718f7f071fea0bde4b048f13965da50d8'
 
-  url 'http://www.noodlesoft.com/Products/Hazel/download'
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://s3.amazonaws.com/Noodlesoft/Hazel-#{version}.dmg"
   name 'Hazel'
   appcast 'http://update.noodlesoft.com/Products/Hazel/generate-appcast.php',
-          :sha256 => 'd406a5aaa7ac1ddbe8da979cda8605a1b04c3c393ca5dd90cf9a9e9fb2a6cb0f'
+          :sha256 => 'c0668f7c61d403b4690d48eb410eb49e8247ef3f91fafe97e4228b07d8a7678a'
   homepage 'http://www.noodlesoft.com/hazel.php'
   license :freemium
 

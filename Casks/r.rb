@@ -1,14 +1,14 @@
 cask :v1 => 'r' do
 
   if MacOS.release < :mavericks
-    version '3.1.3'
-    sha256 '4d590d285e5085073ff1a1cb525a2261895b0bf3998a24071efadb33b2be530e'
+    version '3.2.1'
+    sha256 '88b9a20af00a916f3902ccac83098643b95a2801eb4775d38130b26871323a3f'
     # rstudio.com is the official download host per the vendor homepage
     url "http://cran.rstudio.com/bin/macosx/R-#{version}-snowleopard.pkg"
     pkg "R-#{version}-snowleopard.pkg"
   else
-    version '3.2.0'
-    sha256 '97552ad7e916e4aa94436ea692b2dae0c811e0a9b90fff6952050b1a529b2d39'
+    version '3.2.2'
+    sha256 '747bafd900695434133e200551e28fd1b2485473a9e374c80deb4bec73827d73'
     # rstudio.com is the official download host per the vendor homepage
     url "http://cran.rstudio.com/bin/macosx/R-#{version}.pkg"
     pkg "R-#{version}.pkg"
@@ -33,8 +33,8 @@ cask :v1 => 'r' do
                         '/usr/bin/Rscript',
                         '/Library/Frameworks/R.Framework/Versions/Current',
                         # :pkgutil won't delete this dir if the fontconfig cache was written to at
-                        # /Library/Frameworks/R.Framework/Versions/3.1/Resources/fontconfig/cache
-                        '/Library/Frameworks/R.Framework/Versions/3.1',
+                        # /Library/Frameworks/R.Framework/Versions/3.2/Resources/fontconfig/cache
+                        '/Library/Frameworks/R.Framework/Versions/3.2',
                        ]
   zap       :delete => [
                         '~/.R',

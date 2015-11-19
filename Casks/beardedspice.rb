@@ -1,10 +1,10 @@
 cask :v1 => 'beardedspice' do
-  version '1.0.8'
-  sha256 '38078bc6c7e1a744643041f70a3380e43ef606ec614bd38f9cfa4a1895177b8a'
+  version '1.2.1'
+  sha256 '1498c78cfa447155e308e06a369016e520d719772ed2b8e35a15dd6671d3fb70'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/beardedspice/beardedspice/releases/download/v#{version}/BeardedSpice-#{version}.zip"
-  appcast 'https://github.com/beardedspice/beardedspice/raw.atom'
+  appcast 'https://github.com/beardedspice/beardedspice/releases.atom'
   name 'BeardedSpice'
   homepage 'http://www.beardedspice.com'
   license :oss

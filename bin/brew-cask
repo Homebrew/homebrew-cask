@@ -88,6 +88,7 @@ ensure_executable () {
     fi
 }
 
+# NOTE: Keep in sync with `Ruby20Requirement` in `/brew-cask.rb`.
 find_ruby_2_plus () {
     declare -a rubies
     local favorite_ruby="/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby"
@@ -98,7 +99,7 @@ find_ruby_2_plus () {
     else
         IFS=$'\n' rubies=( $(/usr/bin/type -aP ruby)   \
                            "/usr/local/bin/ruby"       \
-                           "$(brew --prefix 2>/dev/null)/bin/ruby" )
+                           "$(brew --repository 2>/dev/null)/bin/ruby" )
         for ruby in "${rubies[@]}"; do
             version_str="$("$ruby" --version 2>/dev/null)"
             if [[ "$version_str" =~ ^ruby.2 ]]; then

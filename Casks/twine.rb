@@ -1,6 +1,6 @@
 cask :v1 => 'twine' do
-  version '2.0.5'
-  sha256 'e385a1dfc411186c571620da446bb746989d6dc16c2f126156a13df74ec934f5'
+  version '2.0.8'
+  sha256 'b7c61e838343bdce86ce7a7bf3618376c23f0388ce4ce7f8209bf6fb5ac27d75'
 
   url "http://twinery.org/downloads/twine_#{version}_osx.zip"
   name 'Twine'

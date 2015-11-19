@@ -1,11 +1,14 @@
 cask :v1 => 'garmin-basecamp' do
-  version '4.4.8'
-  sha256 '1ae1033fb4c80189ecc3c50b2f9ee90cbee6662f068cfa08800d886e1cf5ec42'
+  version '4.5.1'
+  sha256 '3e820d02f1cb245fd294233b970c5af01c833f5c4cb972b5c4824dfec4652ea6'
 
-  url "http://download.garmin.com/software/BaseCampforMac_#{version.gsub('.', '')}.dmg"
+  url "http://download.garmin.com/software/BaseCampforMac_#{version.delete('.')}.dmg"
   name 'Garmin BaseCamp'
-  homepage 'http://www.garmin.com/en-US/shop/downloads/basecamp'
+  homepage 'https://www.garmin.com/en-US/shop/downloads/basecamp'
   license :gratis
+
+  depends_on :macos => '>= :yosemite'
+  depends_on :arch => :intel
 
   pkg 'Install BaseCamp.pkg'
 

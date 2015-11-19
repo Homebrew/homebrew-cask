@@ -1,9 +1,9 @@
 cask :v1 => 'gnucash' do
-  version '2.6.6-5'
-  sha256 'c0ac1ea91e1a71519d8a4664190b8e4c7b0af60cb68a610f7ce7de30e3feaed8'
+  version '2.6.9-1'
+  sha256 'f3b7d875d15dbaff4f903b571f0ca44a73aa5cbf741f0f087cb3bbb444c93eeb'
 
   # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-#{version}.dmg"
+  url "http://downloads.sourceforge.net/project/gnucash/gnucash%20(stable)/#{version[/[^-]+/]}/Gnucash-Intel-#{version}.dmg"
   name 'GnuCash'
   homepage 'http://www.gnucash.org'
   license :gpl

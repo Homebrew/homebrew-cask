@@ -6,7 +6,7 @@ cask :v1 => 'objektiv' do
   url 'http://nthloop.com/objektiv/objektiv-latest.zip'
   appcast 'http://nthloop.com/objektiv/appcast.xml'
   name 'Objektiv'
-  homepage 'http://nthloop.github.io/Objektiv/'
+  homepage 'https://nthloop.github.io/Objektiv/'
   license :mit
 
   app 'Objektiv.app'

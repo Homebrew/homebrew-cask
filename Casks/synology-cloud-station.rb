@@ -1,13 +1,13 @@
 cask :v1 => 'synology-cloud-station' do
-  version '3475'
-  sha256 'ce777034689f05a2b03d937addeb2b2560f912288f8638df8188050672e55e7d'
+  version '3.2-3487'
+  sha256 'c2446bb15ce0e113253635a3457643c260f9c92cf9aec5e4d69b5d49c2592631'
 
-  url "https://global.download.synology.com/download/Tools/CloudStation/#{version}/Mac/synology-cloud-station-#{version}.dmg"
+  url "https://global.download.synology.com/download/Tools/CloudStation/#{version}/Mac/Installer/synology-cloud-station-#{version.sub(%r{.*-},'')}.dmg"
   name 'Synology Cloud Station'
-  homepage 'http://www.synology.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.synology.com/'
+  license :gratis
 
-  pkg "synology-cloud-station-#{version}.pkg"
+  pkg "synology-cloud-station-#{version.sub(%r{.*-},'')}.pkg"
 
   uninstall :pkgutil => 'com.synology.CloudStation',
             :launchctl => 'com.synology.Synology Cloud Station'

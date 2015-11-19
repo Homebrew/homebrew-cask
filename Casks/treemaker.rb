@@ -5,7 +5,7 @@ cask :v1 => 'treemaker' do
   url 'http://www.langorigami.com/science/computational/treemaker/TreeMaker.dmg'
   name 'TreeMaker'
   homepage 'http://www.langorigami.com/science/computational/treemaker/treemaker.php'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app "TreeMaker #{version.to_i}.app"
 end

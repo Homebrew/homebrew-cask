@@ -4,7 +4,7 @@ cask :v1 => 'avidcodecsle' do
 
   url "http://resources.avid.com/supportfiles/attach/AvidCodecsLE_#{version.gsub('.','_')}/Mac/AvidCodecsLE.pkg.zip"
   name 'Avid DNxHR codec'
-  homepage 'http://www.avid.com/US/industries/workflow/DNxHD-Codec'
+  homepage 'https://www.avid.com/US/industries/workflow/DNxHD-Codec'
   license :commercial
 
   pkg 'AvidCodecsLE.pkg'

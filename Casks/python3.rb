@@ -1,8 +1,8 @@
 cask :v1 => 'python3' do
   # note: "3" is a trailing version number on the Cask token, which
   # breaks our own token conventions, for consistency with Homebrew
-  version '3.4.3'
-  sha256 'ab76fa2ad87d9b36105ccc94b98e40aa158393975a0d45cf0ca491aad6bbcf22'
+  version '3.5.0'
+  sha256 'bbba4d284accd5eed4e09c7dc67571d779e576d7159ade1a001e7405bf223b2e'
 
   url "https://www.python.org/ftp/python/#{version}/python-#{version}-macosx10.6.pkg"
   name 'Python'

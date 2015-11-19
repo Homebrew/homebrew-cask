@@ -1,6 +1,6 @@
 cask :v1 => 'textadept' do
-  version '7.9'
-  sha256 'd9c294bd25cdf40c1a7fc0316be694d9481a3a439e194c7420923a51d2277f42'
+  version '8.3'
+  sha256 '25215aa18ce279fc312dd2a8e5b88eca32ce551991f5475cb12dbd491b24619d'
 
   url "http://foicica.com/textadept/download/textadept_#{version}.osx.zip"
   name 'Textadept'

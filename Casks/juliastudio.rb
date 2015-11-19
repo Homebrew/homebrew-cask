@@ -12,7 +12,7 @@ cask :v1 => 'juliastudio' do
   end
 
   name 'Julia Studio'
-  homepage 'http://forio.com/labs/julia-studio/'
+  homepage 'https://forio.com/labs/julia-studio/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'JuliaStudio.app'

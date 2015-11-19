@@ -1,6 +1,6 @@
 cask :v1 => 'validator-sac' do
-  version '0.10.4'
-  sha256 '45ed10a41d49cdce8c048dae50f96abc78d9a45d5d0137d5757ed69de333a67f'
+  version '0.10.8'
+  sha256 '1555a9d20fdd35398407cded18f2208ad28b9d4647dcf8eef320354e63556f15'
 
   url "http://habilis.net/download/Validator-SAC_#{version}.zip"
   name 'Validator S.A.C.'

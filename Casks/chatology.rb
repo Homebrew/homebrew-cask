@@ -1,12 +1,12 @@
 cask :v1 => 'chatology' do
-  version :latest
-  sha256 :no_check
+  version '1.0.7'
+  sha256 '5cb80a22b3e9cbd654591606fcea41d9cf2484ca4cd528736118a94c6034158d'
 
-  url 'https://flexibits.com/chatology/download'
+  url "http://cdn.flexibits.com/Chatology_#{version}.zip"
   appcast 'https://flexibits.com/chatology/appcast.php'
   name 'Chatology'
-  homepage 'http://flexibits.com/chatology'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://flexibits.com/chatology'
+  license :commercial
 
   app 'Chatology.app'
 end

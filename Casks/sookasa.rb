@@ -1,6 +1,6 @@
 cask :v1 => 'sookasa' do
-  version '3.12.4'
-  sha256 '0f6ee6802184f70052999d75aee74680e5461df00c89c088d694476cfac546b2'
+  version '3.15.5'
+  sha256 'd9989261c0f3d108ca485256f5e2ea63cd20d1d19e5e6968f8fcfe91ed50e69f'
 
   # cloudfront.net is the official download host per the vendor homepage
   url "https://d2rs8uj3cnos4.cloudfront.net/mac-apps/releases/Sookasa_#{version}.pkg"

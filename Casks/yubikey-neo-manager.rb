@@ -1,6 +1,6 @@
 cask :v1 => 'yubikey-neo-manager' do
   version '1.3.0'
-  sha256 '9b28bc6350a7afe2e7e3e4397423359487de876ee67aafeca7902f9aaa5f1756'
+  sha256 'ad4c17487af82e79be4265366403667b8ca704e5eb4f18fdf56b329420e571bf'
 
   url "https://developers.yubico.com/yubikey-neo-manager/Releases/yubikey-neo-manager-#{version}-mac.pkg"
   name 'YubiKey NEO Manager'

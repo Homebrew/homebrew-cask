@@ -1,6 +1,6 @@
 cask :v1 => 'dnscrypt' do
-  version '1.0.6'
-  sha256 'aef75581cbc8af465c4509ec5d164b1fb5751105eeaadfd7b8f009cf320db11c'
+  version '1.0.10'
+  sha256 'd092d9151035a0853902261e883d5ba7c50cb93beea9834db41303b2ec4276e0'
 
   url "https://github.com/alterstep/dnscrypt-osxclient/releases/download/#{version}/dnscrypt-osxclient-#{version}.dmg"
   appcast 'https://github.com/alterstep/dnscrypt-osxclient/releases.atom'
@@ -8,7 +8,7 @@ cask :v1 => 'dnscrypt' do
   homepage 'https://github.com/alterstep/dnscrypt-osxclient'
   license :oss
 
-  pkg 'DNSCrypt.mpkg'
+  pkg 'DNSCrypt.pkg'
 
   uninstall :quit      => 'com.github.dnscrypt-osxclient.DNSCrypt-Menubar',
             :pkgutil   => 'com.github.dnscrypt-osxclient.dnscryptClient.*',

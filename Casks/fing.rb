@@ -1,6 +1,6 @@
 cask :v1 => 'fing' do
-  version '2.2'
-  sha256 '6794afb734c266b0a9617209688259bf04ad8738cb9126fbb922d8816c7d74aa'
+  version '2.3'
+  sha256 'ffa5d42e023d0da50eed152b78f91b1341ff4547f0a92e43be48131f30408e15'
 
   url 'http://www.overlooksoft.com/packages/download?plat=osx'
   name 'Fing'

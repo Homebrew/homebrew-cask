@@ -1,6 +1,6 @@
 cask :v1 => 'reflector' do
-  version '2.0.2'
-  sha256 '0b18a11c2d364af563cadfdc27cf3f1bf783a55ad1361275ff2e6cbca12aa1dd'
+  version '2.3.0'
+  sha256 '42de2e58a434848daf849ae5c5a392c564369bb49adfc5181981cbf3e1e822d4'
 
   url "http://download.airsquirrels.com/Reflector2/Mac/Reflector-#{version}.dmg"
   appcast 'https://updates.airsquirrels.com/Reflector2/Mac/Reflector2.xml'

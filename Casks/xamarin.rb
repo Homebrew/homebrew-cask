@@ -2,9 +2,9 @@ cask :v1 => 'xamarin' do
   version :latest
   sha256 :no_check
 
-  url 'http://download.xamarin.com/Installer/Mac/XamarinInstaller.dmg'
+  url 'https://download.xamarin.com/Installer/Mac/XamarinInstaller.dmg'
   name 'Xamarin Platform'
-  homepage 'http://xamarin.com/platform'
+  homepage 'https://xamarin.com/platform'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer :manual => 'Install Xamarin.app'

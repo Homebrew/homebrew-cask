@@ -5,7 +5,7 @@ cask :v1 => 'growl-fork' do
   url "https://bitbucket.org/pmetzger/growl/downloads/Growl-#{version}.dmg"
   name 'Growl'
   homepage 'https://bitbucket.org/pmetzger/growl'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   pkg 'Growl.pkg'
 

@@ -1,12 +1,14 @@
 cask :v1 => 'tcl' do
-  version '8.6.2.0.298433'
-  sha256 '75caf8a4a449d47deb818ed0293dc1668c01edb0f418ca3a3100045122ee08f5'
+  version '8.6.4.0.298892'
+  sha256 '2aae9686f40a7216e185877e7bf8421af35f597c20545d565511367587659bb9'
 
   # activestate.com is the official download host per the vendor homepage
   url "http://downloads.activestate.com/ActiveTcl/releases/#{version.sub(%r{\.\d+$},'')}/ActiveTcl#{version}-macosx10.5-i386-x86_64-threaded.dmg"
   name 'ActiveTcl'
   homepage 'http://tcl.tk/'
   license :oss
+
+  depends_on :macos => '>= :leopard'
 
   pkg "ActiveTcl-#{version.sub(%r{^(\d+)\.(\d+).*},'\1.\2')}.pkg"
 

@@ -6,7 +6,7 @@ cask :v1 => 'todos' do
   appcast 'http://www.dbachrach.com/opensoft/appcasts/Todos.xml'
   name 'Todos'
   homepage 'http://dbachrach.com/opensoft/index.php?page=Todos'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Todos.app'
 end

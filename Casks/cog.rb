@@ -8,7 +8,7 @@ cask :v1 => 'cog' do
           :sha256 => 'f5770d73ad0c4a19af24cf25195c01d1cc05b937a79416fe82ead0949beee62e'
   name 'Cog'
   homepage 'http://cogx.org'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Cog.app'
 end

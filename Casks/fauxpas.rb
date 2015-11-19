@@ -1,12 +1,12 @@
 cask :v1 => 'fauxpas' do
-  version :latest
-  sha256 :no_check
+  version '1.6'
+  sha256 '6a5d518df5a67ffef360cdcaef41dd10365bc90390354d5cde19e310d6ad9da6'
 
-  url 'http://api.fauxpasapp.com/download_latest'
+  url "http://files.fauxpasapp.com/FauxPas-#{version}.tar.bz2"
   appcast 'http://api.fauxpasapp.com/appcast'
   name 'Faux Pas'
   homepage 'http://fauxpasapp.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'FauxPas.app'
 end

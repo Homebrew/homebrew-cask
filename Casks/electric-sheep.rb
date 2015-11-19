@@ -6,7 +6,7 @@ cask :v1 => 'electric-sheep' do
   url "https://electricsheep.googlecode.com/files/electricsheep-#{version}.dmg"
   name 'Electric Sheep'
   homepage 'http://www.electricsheep.org'
-  license :oss
+  license :gpl
 
   pkg 'Electric Sheep.mpkg'
 

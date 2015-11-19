@@ -1,13 +1,13 @@
 cask :v1 => 'mactracker' do
-  version '7.4.5'
-  sha256 '9c580a0cee515e1d01de8a6295606b76946aa7a558978af7e90cfabfaef89566'
+  version '7.5'
+  sha256 'e5a22349e14b5ec50a38810d6a2db520ff29cc0dbf665769a6c2852a022d134f'
 
   url "http://www.mactracker.ca/downloads/Mactracker_#{version}.zip"
   appcast 'http://update.mactracker.ca/appcast-b.xml',
-          :sha256 => '4792d02bbece6924e8ddb068327d0814b733475b1f95dddf33bb3cc9ecf0810c'
+          :sha256 => '48b66546001a2cf246a4240bd9ff7756978967ee9030ac1b56d2c58d595cca7b'
   name 'Mactracker'
   homepage 'http://mactracker.ca/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Mactracker.app'
 end

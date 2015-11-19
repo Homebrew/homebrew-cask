@@ -51,7 +51,7 @@ end
 
 # originally from Homebrew
 def opoo(warning)
-  $stderr.puts "#{Tty.red.underline}Warning#{Tty.reset}: #{warning}"
+  $stderr.puts "#{Tty.yellow.underline}Warning#{Tty.reset}: #{warning}"
 end
 
 # originally from Homebrew

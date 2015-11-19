@@ -8,7 +8,7 @@ cask :v1 => 'lightpaper' do
           :sha256 => '88b4051a4255b9d82534f3fc502ecab5fa2d7df73a94ef563e02bec7848276c2'
   name 'LightPaper'
   homepage 'http://www.ashokgelal.com/lightpaper-for-mac/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'LightPaper.app'
 end

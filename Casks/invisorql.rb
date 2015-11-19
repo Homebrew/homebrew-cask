@@ -5,7 +5,7 @@ cask :v1 => 'invisorql' do
   url "http://www.pozdeev.com/invisor/download/InvisorQL-#{version}.dmg"
   name 'Invisor QuickLook Plug-In'
   homepage 'http://www.pozdeev.com/invisor/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
   depends_on :macos => '>= :lion'
   depends_on :arch => :x86_64
   depends_on :cask => 'invisor-lite'

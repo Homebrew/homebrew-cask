@@ -6,7 +6,7 @@ cask :v1 => 'picturesque' do
   appcast 'http://www.acqualia.com/picturesque/appcast/appcast3.xml'
   name 'Picturesque'
   homepage 'http://www.acqualia.com/picturesque/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Picturesque.app'
 end

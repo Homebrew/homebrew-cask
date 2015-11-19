@@ -4,7 +4,7 @@ cask :v1 => 'chainsaw' do
 
   url 'https://logging.apache.org/chainsaw/webstart/chainsaw.dmg'
   name 'Chainsaw'
-  homepage 'http://logging.apache.org/chainsaw/'
+  homepage 'https://logging.apache.org/chainsaw/'
   license :apache
 
   app 'Chainsaw.app'

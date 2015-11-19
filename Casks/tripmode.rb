@@ -2,7 +2,7 @@ cask :v1 => 'tripmode' do
   version :latest
   sha256 :no_check
 
-  url 'http://tripmode.ch/TripMode.pkg'
+  url 'https://tripmode.ch/TripMode.pkg'
   name 'TripMode'
   appcast 'http://updates.tripmode.ch/app/appcast.xml'
   homepage 'https://www.tripmode.ch/'

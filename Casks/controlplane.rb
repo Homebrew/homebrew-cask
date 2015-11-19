@@ -1,13 +1,21 @@
 cask :v1 => 'controlplane' do
-  version '1.5.7'
-  sha256 '67782f1fbfbbcb908c4efdf99b0303178d17a38a2db5d85a031fbe83e7d46366'
+  if MacOS.release <= :snow_leopard
+    version '1.2.3'
+    sha256 '37f93d3a3a17a6e2f24447f0bc74c7e89ec1581ca52e5970960544858c86f909'
+  else
+    version '1.6.1'
+    sha256 '945ae102b81b838df65edf6f83292d33399218113e67bdfdaaa088c0f219ea47'
+
+    appcast 'http://www.controlplaneapp.com/appcast.xml',
+            :sha256 => '432b259fc8397206b28a2a19209551c350b7ca0f376f50013b8b81a832ff70b8'
+  end
 
   url "http://www.controlplaneapp.com/download/#{version}"
-  appcast 'http://www.controlplaneapp.com/appcast.xml',
-          :sha256 => 'b5244a1703dac6ffa601e24b03b3a16f96cf74d5b840d0af14b666780407de77'
   name 'ControlPlane'
   homepage 'http://www.controlplaneapp.com/'
   license :gpl
+
+  depends_on :macos => '>= :snow_leopard'
 
   app 'ControlPlane.app'
 

@@ -7,15 +7,36 @@ rescue
   HBC_VERSION = HOMEBREW_CASK_VERSION
 end
 
+# NOTE: Keep in sync with `find_ruby_2_plus` in `/bin/brew-cask`.
 class Ruby20Requirement < Requirement
   fatal true
   default_formula "ruby"
 
   satisfy :build_env => false do
-    next unless which "ruby"
-    version = /\d\.\d/.match `ruby --version 2>&1`
-    next unless version
-    Version.new(version.to_s) >= Version.new("2.0")
+    result = false
+    favorite_ruby =
+      "/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby"
+
+    if File.executable?(favorite_ruby)
+      result = true
+    else
+      rubies = `/usr/bin/type -aP ruby`.split("\n")
+      rubies += [
+        "/usr/local/bin/ruby",
+        "#{`brew --repository 2>/dev/null`.strip}/bin/ruby",
+      ]
+
+      rubies.uniq.each do |ruby|
+        version = /\d\.\d/.match(`#{ruby} --version 2>/dev/null`)
+
+        if version && Version.new(version.to_s) >= Version.new("2.0")
+          result = true
+          break
+        end
+      end
+    end
+
+    result
   end
 
   env do

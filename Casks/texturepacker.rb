@@ -1,8 +1,10 @@
 cask :v1 => 'texturepacker' do
-  version '3.8.0'
-  sha256 '3353c8c3d80f1d33e6b98f021464421babd659fc7b331307d75801957212b83f'
+  version '4.0.1'
+  sha256 '1d49ccf921513112469e406e60adf570eee415f9b19575922372d448f6a2f365'
 
   url "https://www.codeandweb.com/download/texturepacker/#{version}/TexturePacker-#{version}-uni.dmg"
+  appcast 'https://www.codeandweb.com/releases/TexturePacker/appcast-mac-release.xml',
+          :sha256 => 'c4b65445ed1c68f6c024cb672f1915b156402c213e514595942c0c6096d8cd65'
   name 'TexturePacker'
   homepage 'https://www.codeandweb.com/texturepacker'
   license :freemium

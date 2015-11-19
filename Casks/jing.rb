@@ -6,7 +6,7 @@ cask :v1 => 'jing' do
   appcast 'http://www.techsmith.com/redirect.asp?product=jing&ver=2.0.0&lang=enu&target=SparkleAppcast'
   name 'Jing'
   homepage 'https://www.techsmith.com/jing.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Jing.app'
 end

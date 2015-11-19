@@ -1,10 +1,10 @@
 cask :v1 => 'sqleditor' do
-  version '2.9.7'
-  sha256 '3d5429e492d1407d89638b40afdb160f40149d4d71557dd5f6e5430040161e67'
+  version '2.9.11'
+  sha256 '9741a3b6a24e3c75220926b369462513af84f7a048eb53e3d3a061a9c5006a32'
 
   url "https://www.malcolmhardie.com/sqleditor/releases/#{version}/SQLEditor-#{version.gsub('.','-')}.zip"
   appcast 'https://www.malcolmhardie.com/sqleditor/appcast/sq2release.xml',
-          :sha256 => 'b7650b4e3cc7d8b369d962238f2a31fb7883cf76524c96781f7e29cc1de65e2f'
+          :sha256 => 'fae525c20b0d8984375345ad41c7ebc272555462ab5375ba4e9928556e765712'
   name 'SQLEditor'
   homepage 'https://www.malcolmhardie.com/sqleditor/'
   license :commercial

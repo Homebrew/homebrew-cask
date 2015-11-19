@@ -1,15 +1,15 @@
 cask :v1 => 'appserver' do
-  version '1.0.2'
-  sha256 '1a578fdb626b0fab16422d003d09e89cff4f83afddc4095ae283352fe42ad3d8'
+  version '1.1.0-100'
+  sha256 'c2333a17470d74fa83e51187183f71601500241fd05e922bbb341ccd34aaaa9f'
 
   # github.com is the official download host per the vendor homepage
-  url "https://github.com/appserver-io/appserver/releases/download/#{version}/appserver-dist_#{version}-56_x86_64.pkg"
+  url "https://github.com/appserver-io/appserver/releases/download/#{version.sub(/-.*/, '')}/appserver-dist_#{version}_x86_64.pkg"
   appcast 'https://github.com/appserver-io/appserver/releases.atom'
   name 'appserver.io'
   homepage 'http://www.appserver.io'
   license :oss
 
-  pkg "appserver-dist_#{version}-56_x86_64.pkg"
+  pkg "appserver-dist_#{version}_x86_64.pkg"
 
   uninstall :pkgutil => [
                          'com.techdivision.appserver-io.runtime',

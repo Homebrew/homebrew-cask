@@ -1,11 +1,11 @@
 cask :v1 => 'm3unify' do
-  version :latest
-  sha256 :no_check
+  version '1.4.1'
+  sha256 'aceda65ecb588fd51380e4dc77cd6c1b95070b60fd30e65b50ba093b11efcc1f'
 
-  url 'http://dougscripts.com/itunes/scrx/m3unifyml.zip'
+  url "http://dougscripts.com/itunes/scrx/m3unifyv#{version.delete('.')}.zip"
   name 'M3Unify'
   appcast 'http://dougscripts.com/itunes/itinfo/m3unify_appcast.xml',
-          :sha256 => 'e2a0cd2a135e0f54344babb3300f8aeb99498953474955a9366e5f5989e05cc1'
+          :sha256 => '9e120bf105c1089546f88ca341817430cb5514e98b5e60b77d901e5f94cf444b'
   homepage 'http://dougscripts.com/itunes/itinfo/m3unify.php'
   license :commercial
 

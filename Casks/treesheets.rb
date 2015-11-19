@@ -5,7 +5,7 @@ cask :v1 => 'treesheets' do
   url 'http://strlen.com/treesheets/treesheets_osx.zip'
   name 'TreeSheets'
   homepage 'http://strlen.com/treesheets/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :oss
 
   app 'TreeSheetsBeta/TreeSheets.app'
 end
