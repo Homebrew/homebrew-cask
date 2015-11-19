@@ -1,5 +1,5 @@
 cask :v1 => 'android-studio' do
-  version '1.4.1.0'
+  version '1.5.0.4'
   sha256 'cf998e0cbc51566521e00f08fa8504f16089e6164cfd51a8048ae800f27954ac'
 
   # google.com is the official download host per the vendor homepage
