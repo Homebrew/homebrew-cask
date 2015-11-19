@@ -8,6 +8,9 @@ cask :v1 => 'nanobox' do
   homepage 'http://www.nanobox.io/'
   license :mpl
 
+  depends_on :cask => 'virtualbox'
+  depends_on :cask => 'vagrant'
+
   container :type => :naked
 
   binary 'nanobox'
@@ -15,4 +18,6 @@ cask :v1 => 'nanobox' do
   postflight do
     set_permissions "#{staged_path}/nanobox", '755'
   end
+
+  zap :delete => '~/.nanobox'
 end
