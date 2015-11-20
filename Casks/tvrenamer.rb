@@ -1,9 +1,9 @@
 cask :v1 => 'tvrenamer' do
-  version '0.6'
-  sha256 'fe38d8f7fab69bc54673ef9822b01401d5d72453865842f27023ecd7de4a531a'
+  version '0.7.1'
+  sha256 '51c56fca7ce361aed823d4b943a438f4d0b1d516620c4f8548cbefbff0ecf309'
 
   # github.com is the official download host per the vendor homepage
-  url "https://github.com/tvrenamer/tvrenamer/releases/download/v#{version}/TVRenamer-#{version}-osx64.zip"
+  url "https://github.com/tvrenamer/tvrenamer/releases/download/#{version}/TVRenamer-#{version}-osx64.zip"
   appcast 'https://github.com/tvrenamer/tvrenamer/releases.atom'
   name 'TVRenamer'
   homepage 'http://tvrenamer.org'

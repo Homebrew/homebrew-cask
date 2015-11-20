@@ -1,6 +1,6 @@
 cask :v1 => 'texts' do
-  version '1.0'
-  sha256 '6f078d6bb6c0d8f8c49ca8206e1f82ac8472ebac94aaaece7a7df1eee769ecc1'
+  version '1.1'
+  sha256 'd536f98a35242006fc58c570777fc3c4d39f415505856d2d752cffdf01ac1e60'
 
   url "http://www.texts.io/Texts-#{version}.dmg"
   name 'Texts'

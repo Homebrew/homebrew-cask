@@ -1,6 +1,6 @@
 cask :v1 => 'psequel' do
-  version '1.3.3'
-  sha256 'b73e2eb0f7eb03704b284009182caf202617d7410328dff48d6634f45e3fb098'
+  version '1.3.4'
+  sha256 '795fa5c7999eb80f19cf7ca6532c5c134b76c42a57b78312c5db5cb9857ac413'
 
   url "http://www.psequel.com/download?version=#{version}"
   name 'PSequel'

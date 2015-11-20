@@ -1,6 +1,6 @@
 cask :v1 => 'synology-cloud-station' do
-  version '3.2-3484'
-  sha256 'aa544573ca9f7d3cb6693cba2406901a8b5e241eba0ed12762346c2f31b7c0cd'
+  version '3.2-3487'
+  sha256 'c2446bb15ce0e113253635a3457643c260f9c92cf9aec5e4d69b5d49c2592631'
 
   url "https://global.download.synology.com/download/Tools/CloudStation/#{version}/Mac/Installer/synology-cloud-station-#{version.sub(%r{.*-},'')}.dmg"
   name 'Synology Cloud Station'

@@ -1,6 +1,6 @@
 cask :v1 => 'hypo' do
-  version '0.5.3'
-  sha256 'fc32274ce0189358b28072a5ac612551481312aa21dfda8e69d9d6d1ec765916'
+  version '0.5.4'
+  sha256 '7f815338d91baf6cac953b9f85350f32285d063a90e4ba3197266f23fc54cd4c'
 
   # github.io is the official download host per the vendor homepage
   url "http://hypo.github.io/HypoAppPublic/hypo-#{version}.app.tbz"

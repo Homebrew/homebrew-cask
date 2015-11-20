@@ -1,6 +1,6 @@
 cask :v1 => 'buildasaur' do
-  version '0.6.3'
-  sha256 '347edecdade78a3959bf6c00f43d0d5b7eb33e78b1f53363b36cc8b61f3593f5'
+  version '0.6.4'
+  sha256 'e851d5bc9ce7fe13ad65f559617d9130040e444aeaf35191013069e96eae8fc6'
 
   url "https://github.com/czechboy0/Buildasaur/releases/download/v#{version}/Buildasaur.app.zip"
   appcast 'https://github.com/czechboy0/Buildasaur/releases.atom'

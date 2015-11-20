@@ -1,11 +1,11 @@
 cask :v1 => 'appcleaner' do
-  version '3.0.2'
-  sha256 'f724d73900036027144234e3edfa6a7ec6971447ab3dab41a2298ddb6caac285'
+  version '3.2.1'
+  sha256 '96ba58688df66dd605b9e109d3c75726eab143193a25c2c2c9e3ddcb5135ad09'
 
   url "http://www.freemacsoft.net/downloads/AppCleaner_#{version}.zip"
   name 'AppCleaner'
   appcast 'http://www.freemacsoft.net/appcleaner/Updates.xml',
-          :sha256 => '545b9c80a0c03fa2b431ee495ba5f59770c93faa0ff373a33ad5751a520dd2b3'
+          :sha256 => 'bd9df047d51943acc4bc6cf55d88edb5b6785a53337ee2a0f74dd521aedde87d'
   homepage 'http://www.freemacsoft.net/appcleaner/'
   license :gratis
 

@@ -6,7 +6,7 @@ cask :v1 => 'trailrunner' do
   appcast 'https://rink.hockeyapp.net/api/2/apps/83c4086e3f968b874757ba689e71f610'
   name 'TrailRunner'
   homepage 'http://trailrunnerx.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'TrailRunner.app'
 end

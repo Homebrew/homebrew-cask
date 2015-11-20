@@ -1,6 +1,6 @@
 cask :v1 => 'bitcoin-core' do
-  version '0.11.1'
-  sha256 '4ac6dca07c9d1052f9471846c1069a1902e161f4fa520aa74c6b74b32db3b51b'
+  version '0.11.2'
+  sha256 '413dd4335ced455c0e773d4081f7ff7e5e23e8098bf1fe402e0185cc584ca0df'
 
   url "https://bitcoin.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx.dmg"
   name 'Bitcoin'

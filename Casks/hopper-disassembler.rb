@@ -1,6 +1,6 @@
 cask :v1 => 'hopper-disassembler' do
-  version '3.11.1'
-  sha256 '60b64f216a8f86f1632c990c1fff8570293ff45e350093bfdee794de66d5c3ae'
+  version '3.11.2'
+  sha256 'b41e49bf60d49d855429bcd34fe04a05420e4975a1fcb9c01a8039ab37121259'
 
   url "http://www.hopperapp.com/HopperWeb/downloads/Hopper-#{version}.zip"
   appcast 'http://www.hopperapp.com/HopperWeb/appcast_v3.php',
