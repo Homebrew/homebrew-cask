@@ -19,5 +19,8 @@ cask :v1 => 'nanobox' do
     set_permissions "#{staged_path}/nanobox", '755'
   end
 
-  zap :delete => '~/.nanobox'
+  zap :delete => [
+                    '~/.nanobox',
+                    '/opt/nanobox',
+                ]
 end
