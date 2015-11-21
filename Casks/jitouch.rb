@@ -1,11 +1,11 @@
 cask :v1 => 'jitouch' do
   version :latest
-  sha256 :no_check
+  sha256 'a3b762820beb60d91ba0f4383fb0ffa2eeb06bca6f6c366bf2d871c2cb23d019'
 
-  url 'https://www.jitouch.com/jitouch_yosemite.zip'
+  url 'https://www.jitouch.com/jitouch_el_capitan.zip'
   name 'jitouch'
   homepage 'https://www.jitouch.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   prefpane 'jitouch/Jitouch.prefPane'
 
