@@ -1,6 +1,6 @@
 cask :v1 => 'nmap' do
-  version '6.47'
-  sha256 'eb277f24d4d77d323400c23c5e0b4296143524dc2e4ddbe844cc3c4c7fc878d2'
+  version '7.00'
+  sha256 'f96f8dd4f50039b40a524ec1d4b467d60fefd3a74018df4e7f5fa88cb85bcaa2'
 
   url "https://nmap.org/dist/nmap-#{version}.dmg"
   name 'Nmap'
