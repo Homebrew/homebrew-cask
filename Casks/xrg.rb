@@ -5,7 +5,7 @@ cask :v1 => 'xrg' do
   url "http://download.gauchosoft.com/xrg/XRG-release-#{version}.zip"
   name 'XRG'
   homepage 'http://www.gauchosoft.com/Products/XRG/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'XRG.app'
 end
