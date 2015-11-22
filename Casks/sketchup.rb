@@ -6,13 +6,13 @@ cask :v1 => 'sketchup' do
   # trimble.com is the official download host per the vendor homepage
   url 'https://dl.trimble.com/sketchup/SketchUpMake-en.dmg'
   name 'SketchUp'
-  homepage 'https://www.sketchup.com/intl/en/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.sketchup.com/'
+  license :gratis
 
-  suite 'SketchUp 2015'
+  suite 'SketchUp 2016'
 
   zap :delete => [
-                  '~/Library/Application Support/SketchUp 2015',
-                  '~/Library/Caches/com.sketchup.SketchUp.2015',
+                  '~/Library/Application Support/SketchUp 2016',
+                  '~/Library/Caches/com.sketchup.SketchUp.2016',
                  ]
 end
