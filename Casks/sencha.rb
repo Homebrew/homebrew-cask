@@ -8,7 +8,7 @@ cask :v1_1 => 'sencha' do
   license :freemium
 
   installer :script => "SenchaCmd-#{version}-osx-no_jre.app/Contents/MacOS/JavaApplicationStub",
-            :args   => ['-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
+            :args => ['-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
             :sudo => true
 
   uninstall :script => {
