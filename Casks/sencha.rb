@@ -2,17 +2,19 @@ cask :v1_1 => 'sencha' do
   version '6.0.2.14'
   sha256 'babc6e27c5956558a53206381db496d653f0b7be50e3838663a3477a63c5b4d4'
 
-  url "http://cdn.sencha.com/cmd/6.0.2.14/no-jre/SenchaCmd-6.0.2.14-osx-no_jre.app.zip"
+  url "http://cdn.sencha.com/cmd/#{version}/jre/SenchaCmd-#{version}-osx.app.zip"
   name 'Sencha Cmd'
   homepage 'http://www.sencha.com/products/sencha-cmd/'
   license :freemium
 
   installer :script => "SenchaCmd-#{version}-osx-no_jre.app/Contents/MacOS/JavaApplicationStub",
-            :args   => ['-q', '-dir', "/opt/Sencha/Cmd/#{version}"]
+            :args   => ['-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
+            :sudo => true
 
   uninstall :script => {
                          :executable => "/opt/Sencha/Cmd/#{version}/.install4j/Sencha Cmd Uninstaller.app/Contents/MacOS/JavaApplicationStub",
-                         :args => ['-q']
+                         :args => ['-q'],
+                         :sudo => true
                        }
 
   postflight do
