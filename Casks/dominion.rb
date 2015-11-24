@@ -9,6 +9,6 @@ cask :v1 => 'dominion' do
   depends_on :macos => '>= 10.7'
 
   pkg "Dominion #{version}.pkg"
-  
+
   uninstall :pkgutil => 'com.makingfun.dominion'
 end
