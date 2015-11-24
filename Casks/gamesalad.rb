@@ -1,6 +1,6 @@
 cask :v1 => 'gamesalad' do
-  version '1.23.1'
-  sha256 '7dc668dd8dc0ce509f315b7f31c83cf258201b5af829ede8d65bfa425d053bd6'
+  version '1.24.35'
+  sha256 'f20cfc5a917c2ae351043fe10df7210e0347de77ec5c08afa10a9a8b1a876e96'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "http://gs.releases.s3.amazonaws.com/creator/#{version}/GameSalad-Creator-#{version}.dmg"

@@ -6,7 +6,7 @@ cask :v1 => 'ynab' do
   name 'YNAB'
   name 'You Need A Budget'
   homepage 'https://www.youneedabudget.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'YNAB 4.app'
 end
