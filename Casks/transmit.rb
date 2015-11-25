@@ -1,6 +1,6 @@
 cask :v1 => 'transmit' do
-  version '4.4.8'
-  sha256 '3547a5e8baabffd18c4e21c766362cd4295d878d391ce48bb8f8f4d6eabd9ef9'
+  version '4.4.10'
+  sha256 '9255bff3e337d5c93e867a553d3889cf97aeecae70304f468648384b1990a257'
 
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   appcast 'http://www.panic.com/updates/update.php'
