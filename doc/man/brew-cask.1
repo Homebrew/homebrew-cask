@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "BREW\-CASK" "1" "September 2015" "Homebrew-cask" "brew-cask"
+.TH "BREW\-CASK" "1" "November 2015" "Homebrew-cask" "brew-cask"
 .
 .SH "SYNOPSIS"
 \fBbrew cask\fR command [options] [\fItoken\fR \.\.\.]
@@ -85,6 +85,14 @@ Without any arguments, list all installed Casks\. With \fB\-1\fR, always format 
 If \fItoken\fR is given, summarize the staged files associated with the given Cask\.
 .
 .TP
+\fBsearch\fR or \fB\-S\fR
+Display all Casks available for install\.
+.
+.TP
+\fBsearch\fR or \fB\-S\fR \fItext\fR | /\fIregexp\fR/
+Perform a substring search of known Cask tokens for \fItext\fR\. If the text is delimited by slashes, it is interpreted as a Ruby regular expression\.
+.
+.TP
 \fBuninstall [\-\-force]\fR or \fBrm\fR or \fBremove\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
 Uninstall the given Cask\. With \fB\-\-force\fR, uninstall even if the Cask does not appear to be present\.
 .
@@ -93,6 +101,10 @@ Note that \fBuninstall \-\-force\fR is currently imperfect\. It will follow the 
 .
 .IP
 \fBuninstall\fR without \fB\-\-force\fR is also imperfect\. It may be unable to perform an \fBuninstall\fR operation if the given Cask has changed since you installed it\. This issue is being addressed\.
+.
+.TP
+\fBupdate\fR
+For convenience\. \fBbrew cask update\fR is a synonym for \fBbrew update\fR\.
 .
 .TP
 \fBzap\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
@@ -109,18 +121,6 @@ If the Cask definition contains a \fBzap\fR stanza, performs additional \fBzap\f
 .
 .IP
 \fB\fBzap\fR may remove resources which are shared between applications\.\fR
-.
-.TP
-\fBsearch\fR or \fB\-S\fR
-Display all Casks available for install\.
-.
-.TP
-\fBsearch\fR or \fB\-S\fR \fItext\fR | /\fIregexp\fR/
-Perform a substring search of known Cask tokens for \fItext\fR\. If the text is delimited by slashes, it is interpreted as a Ruby regular expression\.
-.
-.TP
-\fBupdate\fR
-For convenience, \fBbrew cask update\fR is a synonym for \fBbrew update\fR\.
 .
 .SH "OPTIONS"
 To make these options persistent, see the ENVIRONMENT section, below\.
@@ -189,7 +189,7 @@ Target location for “helper” executable links\. The default value is \fB/usr
 Output debugging information of use to Cask authors and developers\.
 .
 .SH "INTERACTION WITH HOMEBREW"
-Homebrew\-cask is implemented as a external command for Homebrew\. That means this project is entirely built upon the Homebrew infrastructure\. For example, upgrades to the Homebrew\-cask tool are received through Homebrew: brew update && brew upgrade brew\-cask && brew cleanup && brew cask cleanup
+Homebrew\-cask is implemented as a external command for Homebrew\. That means this project is entirely built upon the Homebrew infrastructure\. For example, upgrades to the Homebrew\-cask tool are received through Homebrew: \fBbrew update && brew upgrade brew\-cask && brew cleanup && brew cask cleanup\fR
 .
 .P
 And updates to individual Cask definitions are received whenever you issue the Homebrew command: brew update
@@ -224,7 +224,7 @@ Environment variables specific to homebrew\-cask:
 .
 .TP
 HOMEBREW_CASK_OPTS
-This variable may contain any arguments normally used as options on the command\-line\. This is partiularly useful to make options persistent\. For example, you might add to your \.bash_profile or \.zshenv something like: \fBexport HOMEBREW_CASK_OPTS=\'\-\-appdir=/Applications \-\-caskroom=/etc/Caskroom\'\fR\.
+This variable may contain any arguments normally used as options on the command\-line\. This is particularly useful to make options persistent\. For example, you might add to your \.bash_profile or \.zshenv something like: \fBexport HOMEBREW_CASK_OPTS=\'\-\-appdir=/Applications \-\-caskroom=/etc/Caskroom\'\fR\.
 .
 .SH "SEE ALSO"
 The homebrew\-cask home page: \fIhttp://caskroom\.io\fR\.
