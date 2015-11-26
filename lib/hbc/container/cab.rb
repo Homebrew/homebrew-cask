@@ -13,9 +13,15 @@ class Hbc::Container::Cab < Hbc::Container::Base
     if ! Pathname.new(cabextract).exist?
       raise Hbc::CaskError.new "Expected to find cabextract executable. Cask '#{@cask}' must add: depends_on :formula => 'cabextract'"
     end
+
+    debug_args = []
+    debug_args << '--debug' if Hbc.verbose
+
     Dir.mktmpdir do |unpack_dir|
-      @command.run!(cabextract, :args => ['-d', unpack_dir, '--', @path])
-      @command.run!('/usr/bin/ditto', :args => ['--', unpack_dir, @cask.staged_path])
+      @command.run!(cabextract,
+        :args => ['-d', unpack_dir, '--', @path])
+      @command.run!('/usr/bin/ditto',
+        :args => debug_args + ['--', unpack_dir, @cask.staged_path])
     end
   end
 end

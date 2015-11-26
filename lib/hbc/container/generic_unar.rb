@@ -11,9 +11,16 @@ class Hbc::Container::GenericUnar < Hbc::Container::Base
     if ! Pathname.new(unar).exist?
       raise Hbc::CaskError.new "Expected to find unar executable. Cask #{@cask} must add: depends_on :formula => 'unar'"
     end
+
+    ditto_debug_args = []
+    
+    ditto_debug_args << '--debug' if Hbc.verbose
+
     Dir.mktmpdir do |unpack_dir|
-      @command.run!(unar, :args => ['-q', '-D', '-o', unpack_dir, '--', @path])
-      @command.run!('/usr/bin/ditto', :args => ['--', unpack_dir, @cask.staged_path])
+      @command.run!(unar,
+        :args => ditto_debug_args + ['--', unpack_dir, @cask.staged_path])
+      @command.run!('/usr/bin/ditto',
+        :args => ['-q', '-D', '-o', unpack_dir, '--', @path])
     end
   end
 end
