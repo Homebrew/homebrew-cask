@@ -1,6 +1,6 @@
 cask :v1 => 'contexts' do
-  version '1.9.1'
-  sha256 'ea276539cb4c4dd92bbfca3279143f0d48940323ad910dd38e91a4424d5bab0a'
+  version '1.9.2'
+  sha256 'cf01b2c7f8ff061071f8352794dbbc8f385bc0c2089a5df30792627d587baa59'
 
   url "https://contexts.co/releases/Contexts-#{version}.zip"
   appcast 'https://contexts.co/appcasts/stable.xml'

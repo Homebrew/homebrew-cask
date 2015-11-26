@@ -7,13 +7,13 @@ cask :v1_1 => 'sencha' do
   homepage 'http://www.sencha.com/products/sencha-cmd/'
   license :freemium
 
-  installer :script => "SenchaCmd-#{version}-osx-no_jre.app/Contents/MacOS/JavaApplicationStub",
-            :args => ['-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
+  installer :script => "SenchaCmd-#{version}-osx.app/Contents/MacOS/JavaApplicationStub",
+            :args => ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
             :sudo => true
 
   uninstall :script => {
                          :executable => "/opt/Sencha/Cmd/#{version}/.install4j/Sencha Cmd Uninstaller.app/Contents/MacOS/JavaApplicationStub",
-                         :args => ['-q'],
+                         :args => ['-Djava.awt.headless=true', '-q'],
                          :sudo => true
                        }
 
