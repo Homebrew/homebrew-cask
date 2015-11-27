@@ -9,4 +9,8 @@ cask :v1 => 'blender' do
 
   app "blender-#{version}-OSX_10.6-x86_64/Blender.app"
   app "blender-#{version}-OSX_10.6-x86_64/BlenderPlayer.app"
+
+  postflight do
+    set_permissions "#{staged_path}/blender-#{version}-OSX_10.6-x86_64/", '0755'
+  end
 end
