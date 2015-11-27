@@ -8,7 +8,7 @@ cask :v1 => 'bettertouchtool' do
     url "http://bettertouchtool.net/btt#{version}.zip"
   else
     version '1.44'
-    sha256 '2e3d94cb814b8718117e98017c0c6f257cde753fcc6dc868c53f9fff0121331f'
+    sha256 '9b9ad56f9fcb363b6c03aaa88a2529b68dfbf080bd05d9973dcf43a9abb5e394'
     url "http://boastr.net/releases/btt#{version}.zip"
   end
 
