@@ -12,5 +12,7 @@ cask :v1 => 'phoenix' do
 
   depends_on :macos => '>= :yosemite'
 
+  accessibility_access true
+
   zap :delete => '~/.phoenix.js'
 end
