@@ -9,5 +9,6 @@ cask :v1 => 'lastpass' do
 
   installer :manual => 'LastPass Installer.app'
 
-  uninstall :script => 'Uninstaller.app/Contents/Resources/uninstall.sh'
+  uninstall :script => 'Uninstaller.app/Contents/Resources/uninstall.sh',
+            :sudo => true
 end
