@@ -16,5 +16,5 @@ cask :v1 => 'qlmarkdown' do
     system '/usr/bin/ditto', '-xk', '--', "#{staged_path}/QLMarkdown.qlgenerator.zip", "#{staged_path}/QLMarkdown.qlgenerator"
   end
 
-  qlplugin 'QLMarkdown.qlgenerator'
+  qlplugin 'QLMarkdown.qlgenerator/QLMarkdown.qlgenerator'
 end
