@@ -1,6 +1,6 @@
 cask :v1 => 'mancy' do
-  version '2.0.1'
-  sha256 '8b7bc2f2879469b8a7c425f4be1b861d8d3471a55b2e759d542d1b8d0d33ad69'
+  version '2.1.0'
+  sha256 '080fefad737118e90ec594f5a486fd11fe038db815e6b911706af6eea9f033b6'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/princejwesley/Mancy/releases/download/v#{version}/Mancy-darwin-x64.zip"
