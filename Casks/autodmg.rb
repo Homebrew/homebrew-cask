@@ -1,6 +1,6 @@
 cask :v1 => 'autodmg' do
-  version '1.5.3'
-  sha256 '3d38efa6b76c2efc8d318a1f3db09f872fee964fc68694406dbd7a095ed4a9d2'
+  version '1.5.4'
+  sha256 'f7ffd098e5d96a7ffaccf6bcacfd10cf99991882d93f42267859d94f38578dab'
 
   url "https://github.com/MagerValp/AutoDMG/releases/download/v#{version}/AutoDMG-#{version}.dmg"
   appcast 'https://github.com/MagerValp/AutoDMG/releases.atom'

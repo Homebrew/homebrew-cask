@@ -3,9 +3,9 @@ cask :v1 => 'hyperswitch' do
   sha256 '98b0b6bea2e786e0acc859e69cd89921f4f74bd80a65002950a0a4809017c9cb'
 
   url "https://bahoom.com/hyperswitch/#{version}/HyperSwitch.zip"
-  appcast 'http://hyperswitch.bahoom.com/appcast.xml'
+  appcast 'https://bahoom.com/hyperswitch/appcast.xml'
   name 'HyperSwitch'
-  homepage 'http://bahoom.com/hyperswitch'
+  homepage 'https://bahoom.com/hyperswitch/'
   license :gratis
 
   app 'HyperSwitch.app'

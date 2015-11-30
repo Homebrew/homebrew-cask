@@ -1,6 +1,6 @@
 cask :v1 => 'xamarin-studio' do
-  version '5.9.4.5-0'
-  sha256 '852aff8d1760c209fd1e6568e692565f38c46cb2265121c45f8b6d8bd8562edf'
+  version '5.10.0.871-0'
+  sha256 '21514c0c941b285fd4cef7efc579b51d48578ca22aa10c94e73cc32c3c7f1863'
 
   url "https://download.xamarin.com/studio/Mac/XamarinStudio-#{version}.dmg"
   name 'Xamarin Studio'
