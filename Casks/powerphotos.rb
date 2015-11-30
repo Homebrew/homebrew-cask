@@ -1,9 +1,9 @@
 cask :v1 => 'powerphotos' do
-  version '1.0.6'
-  sha256 '927c1095858d259b9469c86d20ce39cf0bfc350ad0b64ae8ba0ca0557b632305'
+  version '1.1.12'
+  sha256 '2822c28f1aab47fe5063e0527afe80fff3d044d181493068f9177e0ef8d8e31c'
 
   # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3.amazonaws.com/fatcatsoftware/powerphotos/PowerPhotos_#{version.delete('.')}.zip"
+  url "https://s3.amazonaws.com/fatcatsoftware/powerphotos/PowerPhotos_#{version.sub('1.', '').delete('.')}.zip"
   name 'PowerPhotos'
   appcast 'http://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml',
           :sha256 => 'edf08e27f7b1a42e1da538a536631382e1c92e2dd148b4ff4cae93dbde48f25e'
