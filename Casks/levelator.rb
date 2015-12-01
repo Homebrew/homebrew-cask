@@ -1,6 +1,6 @@
 cask :v1 => 'levelator' do
-  version '2.1.1'
-  sha256 '2f22f1cf7851a987dcb194a504e43f8255261d428074ea7144e2683b79d6975d'
+  version '2.1.2'
+  sha256 '0ea7a28fab1d842f0d37f599ac3f1072cc88d68914fe2b12e0f230fb683889fa'
 
   url "http://cdn.conversationsnetwork.org/Levelator-#{version}.dmg"
   name 'Levelator'
