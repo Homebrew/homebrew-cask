@@ -7,9 +7,6 @@ cask :v1 => 'adobe-photoshop-lightroom' do
   homepage 'https://www.adobe.com/products/photoshop-lightroom.html'
   license :commercial
 
-  uninstall :pkgutil => "com.adobe.Lightroom#{version.to_i}",
-            :quit => "com.adobe.Lightroom#{version.to_i}",
-            :delete => "/Applications/Adobe Photoshop Lightroom #{version.to_i}.app"
   zap       :delete => [
                         '~/Library/Application Support/Adobe/Lightroom',
                         "~/Library/Preferences/com.adobe.Lightroom#{version.to_i}.plist"
