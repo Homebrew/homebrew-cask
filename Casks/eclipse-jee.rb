@@ -1,8 +1,8 @@
 cask :v1 => 'eclipse-jee' do
-  version '4.5'
-  sha256 '84fb3aedf7eb7202b02ca3d1d5b4f6eeaac5d36bd298759334df4f4e74e0ae51'
+  version '4.5.1'
+  sha256 'efea4c0c2287e0975d5aa30db465048eab012803804a3cdabaefb1ea223eba16'
 
-  url 'http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/R/eclipse-jee-mars-R-macosx-cocoa-x86_64.tar.gz&r=1'
+  url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/1/eclipse-jee-mars-1-macosx-cocoa-x86_64.tar.gz&r=1'
   name 'Eclipse'
   name 'Eclipse IDE for Java EE Developers'
   homepage 'https://eclipse.org/'

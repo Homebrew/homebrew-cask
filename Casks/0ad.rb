@@ -1,6 +1,6 @@
 cask :v1 => '0ad' do
-  version '0.0.18-alpha'
-  sha256 '0b1138032c38a14e67ba78301ac113247523c2128cbc4c673fb847a4b3a48f91'
+  version '0.0.19-alpha'
+  sha256 '83f75a2702daec6195bea7a2c705aa2929fcd1b0b0507afc59d0ecfa15301ba9'
 
   # wildfiregames.com is the official download host per the vendor homepage
   url "http://releases.wildfiregames.com/0ad-#{version}-osx64.dmg"

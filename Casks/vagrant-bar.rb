@@ -1,6 +1,6 @@
 cask :v1 => 'vagrant-bar' do
-  version '1.19'
-  sha256 '8984a54eb90e7c8559a23f80e94480fed364ac1fee60cc6dc6502cfeedf34db8'
+  version '1.20'
+  sha256 'f9e52af82b8560881e73fd82390dfaa33f9d0ef0144aadcdc40778537bb2a29f'
 
   url "https://github.com/BipSync/VagrantBar/releases/download/#{version}/Vagrant.Bar.zip"
   appcast 'https://github.com/BipSync/VagrantBar/releases.atom'

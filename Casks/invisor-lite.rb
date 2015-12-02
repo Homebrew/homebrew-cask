@@ -1,6 +1,6 @@
 cask :v1 => 'invisor-lite' do
-  version '3.3'
-  sha256 '74bd41fa922a710016d7922e0814558df58ce1790da57b00d867cb58b9191ad3'
+  version '3.5.1'
+  sha256 '77f481352cbabd583aec22d73273a5952c2febdb53bf16b6be3a5bbf3b9f879a'
 
   url "http://www.pozdeev.com/invisor/download/InvisorLite-#{version}.dmg"
   name 'Invisor Lite'

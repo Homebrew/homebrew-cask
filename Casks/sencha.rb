@@ -1,18 +1,20 @@
 cask :v1_1 => 'sencha' do
-  version '5.1.3.61'
-  sha256 '6083490b578191d2b8307b375e115c93c2223683e49636893edadfa1d76a412c'
+  version '6.0.2.14'
+  sha256 '7d131f333585ed74a31c4c4efa9ecc5176cf5d5410eeddb631c974a847216cec'
 
-  url "https://cdn.sencha.com/cmd/#{version}/SenchaCmd-#{version}-osx.app.zip"
+  url "http://cdn.sencha.com/cmd/#{version}/jre/SenchaCmd-#{version}-osx.app.zip"
   name 'Sencha Cmd'
   homepage 'http://www.sencha.com/products/sencha-cmd/'
   license :freemium
 
-  installer :script => "SenchaCmd-#{version}-osx.app/Contents/MacOS/installbuilder.sh",
-            :args   => ['--mode', 'unattended', '--prefix', '/opt']
+  installer :script => "SenchaCmd-#{version}-osx.app/Contents/MacOS/JavaApplicationStub",
+            :args => ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
+            :sudo => true
 
   uninstall :script => {
-                         :executable => "/opt/Sencha/Cmd/#{version}/uninstall.app/Contents/MacOS/installbuilder.sh",
-                         :args => ['--mode', 'unattended']
+                         :executable => "/opt/Sencha/Cmd/#{version}/.install4j/Sencha Cmd Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+                         :args => ['-Djava.awt.headless=true', '-q'],
+                         :sudo => true
                        }
 
   postflight do
@@ -25,10 +27,9 @@ cask :v1_1 => 'sencha' do
 
         http://www.sencha.com/legal/sencha-tools-software-license-agreement/
 
-      Sencha Cmd appends 2 lines to your ~/.bashrc or ~/.profile file:
+      Sencha Cmd appends 1 line to your ~/.bash_profile or ~/.profile file:
 
-        export PATH=/opt/Sencha/Cmd/#{version}:$PATH
-        export SENCHA_CMD_3_0_0="/opt/Sencha/Cmd/#{version}"
+        export PATH="/opt/Sencha/Cmd:$PATH"
 
       If you are a zshell user, append both lines to your .zshrc file.
     EOS

@@ -7,7 +7,7 @@ cask :v1 => 'mathtype' do
   homepage 'www.dessci.com'
   license :commercial
 
-  pkg "MTM#{version.delete('.')}h_EN.pkg"
+  installer :manual => "MTM#{version.delete('.')}h_EN.pkg"
 
   uninstall :pkgutil => "com.dessci.mathtype#{version.delete('.')}Hf.MathType.pkg",
             :delete => "/Applications/MathType #{version.to_i}"

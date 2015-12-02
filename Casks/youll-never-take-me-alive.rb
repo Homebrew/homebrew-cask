@@ -1,6 +1,6 @@
 cask :v1 => 'youll-never-take-me-alive' do
-  version '1.0.1'
-  sha256 'e5fe98b1a0e89084f87e4646e3ec1159019b384bbd5a9ea71b92fcc2612f49e5'
+  version '1.0.2'
+  sha256 '6d89162762e4e952bec046943c094f37c06b89795d477fff46006362bc6c282a'
 
   url "https://github.com/iSECPartners/yontma-mac/releases/download/#{version}/yontma-#{version}.dmg"
   appcast 'https://github.com/iSECPartners/yontma-mac/releases.atom'

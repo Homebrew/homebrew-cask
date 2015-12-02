@@ -7,7 +7,7 @@ cask :v1 => 'videomonkey' do
           :sha256 => '76c09866931509d5fbe0de5c46fa1466520a43885a32f82e72dd16173af54daa'
   name 'Video Monkey'
   homepage 'http://videomonkey.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   app 'VideoMonkey.app'
 end

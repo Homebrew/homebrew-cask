@@ -1,6 +1,6 @@
 cask :v1 => 'flash-player-debugger' do
-  version '19.0.0.207'
-  sha256 '1189be62b12ba43e30b4d786521267de24da379daaf065c834fef1c4168285ac'
+  version '19.0.0.245'
+  sha256 '4bc5047aa96fc984f6927c12a196ac771d1dc45be50e5c8f7753477b23256ec5'
 
   # macromedia.com is the official download host per the vendor homepage
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.to_i}/flashplayer_#{version.to_i}_sa_debug.dmg"

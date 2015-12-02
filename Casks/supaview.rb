@@ -7,7 +7,7 @@ cask :v1 => 'supaview' do
   appcast 'http://twinside.free.fr/supaview/supaview-appcast.xml',
           :sha256 => 'd8c47e3f827e1f85702713e72012cc62e0398cbf5a91d86122785bcce448425e'
   homepage 'http://twinside.free.fr/supaview/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'SupaView.app'
 end

@@ -1,6 +1,6 @@
 cask :v1 => 'caprine' do
-  version '0.1.2'
-  sha256 '38d8df342713829cf11277ce29f256d2cdb810cb17f34e10b91257f39c4037c0'
+  version '0.4.0'
+  sha256 '0cb1199c9f80d8ff26337c507fccece3341cfe454b6adfcadff7c1ed93ed0221'
 
   url "https://github.com/sindresorhus/caprine/releases/download/#{version}/Caprine-osx-#{version}.zip"
   appcast 'https://github.com/sindresorhus/caprine/releases.atom'

@@ -6,11 +6,11 @@ cask :v1 => 'quicksilver' do
     version '1.2.0-16399'
     sha256 '08c5aeaa7fe89427bcec30a9700eb0b7484bd68b647776b2c82c95355d1679d4'
   else
-    version '1.3.1-16403'
-    sha256 'c630c6fe386c653e17734a5def40e0d86afa47884602c810510cb180e3d2bcce'
+    version '1.3.2-16404'
+    sha256 'e5e6fd5338ebbcf08e266f6e6daf5a7773d005b18349f377207d8ab6dca3634c'
   end
 
-  url "http://cdn.qsapp.com/plugins/files/com.blacktree.Quicksilver__#{version.sub(%r{^.*?-},'')}.dmg"
+  url "https://qs0.qsapp.com/plugins/download.php?qsversion=#{version.sub(%r{^.*?-},'')}.dmg"
   name 'Quicksilver'
   homepage 'http://qsapp.com/'
   license :apache

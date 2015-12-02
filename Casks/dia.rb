@@ -10,6 +10,8 @@ cask :v1 => 'dia' do
 
   app 'Dia.app'
 
+  depends_on :x11 => true
+
   postflight do
     system '/usr/bin/sed', '-i', '--', 's/exec/exec env DISPLAY=:0/g', "#{staged_path}/Dia.app/Contents/Resources/bin/dia"
   end

@@ -1,10 +1,10 @@
 cask :v1 => 'beamer' do
-  version '2.1.3'
-  sha256 '206567494951e06aa85149957e5a73c98d07613c347b3930fd7d2980a48c43c4'
+  version '3.0.1'
+  sha256 '1f73fb789214ddacb5493ff4df1603e1b3c6aa54d0a677995eb77481c0e5198c'
 
-  url "http://tupil-beamer.s3.amazonaws.com/Beamer-#{version}.zip"
+  url "https://beamer-app.com/resources/downloads/Beamer-#{version}.zip"
   name 'Beamer'
-  appcast 'http://beamer-app.com/beamer2-appcast.xml'
+  appcast 'http://beamer-app.com/beamer3-appcast.xml'
   homepage 'http://beamer-app.com'
   license :commercial
 

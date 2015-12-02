@@ -1,8 +1,8 @@
 cask :v1 => 'restool' do
-  version '0.2.1'
-  sha256 '7eb100229d41dc2b284c0e74c74e1ed785c8fd0ed2665756073d847806efe66e'
+  version '0.3.0'
+  sha256 'a5b85a8483006adcf91bf9ebdc1d21084ae0616a56d582ece1335db4d8786746'
 
-  url "https://github.com/Nikola-K/RESTool/releases/download/v#{version}/RESTool#{version}osx.zip"
+  url "https://github.com/Nikola-K/RESTool/releases/download/v#{version}/RESTool_#{version}_osx.zip"
   appcast 'https://github.com/Nikola-K/RESTool/releases.atom'
   name 'RESTool'
   homepage 'https://nikola-k.github.io/RESTool/'

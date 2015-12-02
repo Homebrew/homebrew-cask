@@ -6,7 +6,7 @@ cask :v1 => 'vinoteka' do
   appcast 'http://download.vinotekasoft.com/vinoteka_update.xml'
   name 'Vinoteka'
   homepage 'http://www.vinotekasoft.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Vinoteka.app'
 end

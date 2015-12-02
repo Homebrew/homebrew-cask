@@ -1,6 +1,6 @@
 cask :v1 => 'firefox' do
-  version '41.0.1'
-  sha256 '296062d1614666fca8d1534807ad2508cd39d9a996bf7be2b1e667481ad8c5aa'
+  version '42.0'
+  sha256 '83a41b8a427038e668759fd80ab3d6019cd1fe67dbe866fd31ef9be68c4ea084'
 
   url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/en-US/Firefox%20#{version}.dmg"
   name 'Firefox'
@@ -15,4 +15,10 @@ cask :v1 => 'firefox' do
                   '~/Library/Application Support/Firefox',
                   '~/Library/Caches/Firefox',
                  ]
+
+  caveats <<-EOS.undent
+  The Mac App Store version of 1Password won't work with a Homebrew-cask-linked Mozilla Firefox. To bypass this limitation, you need to either:
+    + Move Mozilla Firefox to your /Applications directory (the app itself, not a symlink).
+    + Install 1Password from outside the Mac App Store (licenses should transfer automatically, but you should contact AgileBits about it).
+  EOS
 end

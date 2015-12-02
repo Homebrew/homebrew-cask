@@ -1,6 +1,7 @@
 cask :v1 => 'paragon-ntfs' do
+  # note: version represents major version number only while url does not change for minor version updates
   version '14'
-  sha256 'eb25919b05d37dbde9da3555db3f2fb97d54038e8e8c98394e33116e2c40861a'
+  sha256 '9b2a2e5b0b2eec51ef85aa72048a9da7aa3eab3a07477a3e670dca31cd7a4ad9'
 
   url "http://dl.paragon-software.com/demo/ntfsmac#{version}_trial_e.dmg"
   name 'Paragon NTFS for Mac'

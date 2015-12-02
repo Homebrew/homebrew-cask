@@ -7,7 +7,7 @@ cask :v1 => 'slimbatterymonitor' do
           :sha256 => 'd0e455439ba8f1a4dc1e575a0e990836beed2ffc175e61f0a0674c238a84b9bf'
   name 'SlimBatteryMonitor'
   homepage 'http://www.orange-carb.org/SBM/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'SlimBatteryMonitor.app'
 end

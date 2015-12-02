@@ -7,7 +7,7 @@ cask :v1 => 'windownaut' do
   appcast 'http://www.binarybakery.com/products/windownaut-appcast.xml',
           :sha256 => '66a74e75906524b5b52bcdc412e2d3931f0b30ebf508cc47f106922a1bb51df4'
   homepage 'http://www.binarybakery.com/aprod/windownaut.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Windownaut.app'
 end

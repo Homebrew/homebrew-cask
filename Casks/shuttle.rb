@@ -1,8 +1,8 @@
 cask :v1 => 'shuttle' do
-  version '1.2.2'
-  sha256 '116a216b8f0a9485ed82d944b5ae99bfad1c96a7d2aa3c296808ab824264d7a4'
+  version '1.2.5'
+  sha256 '7df182f506b80011222c0cdd470be76e0376f38e331f3fafbb6af9add3578023'
 
-  url "https://github.com/fitztrev/shuttle/releases/download/#{version}/Shuttle.zip"
+  url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
   appcast 'https://github.com/fitztrev/shuttle/releases.atom'
   name 'Shuttle'
   homepage 'https://fitztrev.github.io/shuttle/'

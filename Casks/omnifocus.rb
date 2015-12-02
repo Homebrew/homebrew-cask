@@ -8,8 +8,8 @@ cask :v1 => 'omnifocus' do
     sha256 '3282eb7e41ec2638f68a92a6509eddd96a96c39b65b954dcedcc4e62289f22a9'
     url "http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.9/OmniFocus-#{version}.dmg"
   else
-    version '2.2.5'
-    sha256 'c9bc4453f5f3d3706383b00643e723a6bb187cc7f75769d59380c151d110ef7d'
+    version '2.3.1'
+    sha256 'd616d55aa6a4d7d5c0ceee060029728edbd670e5c82bb58fea6cf1c509209326'
     url "http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniFocus-#{version}.dmg"
   end
 

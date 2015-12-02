@@ -1,6 +1,6 @@
 cask :v1 => 'xamarin-android' do
-  version '5.1.4-16'
-  sha256 '9f21d240e2fc180b26b74b277e019379a78976e634195e383ff3ef64c565bbfc'
+  version '6.0.0-34'
+  sha256 'c4164f0d6bd59cfd954c7a6ff5812775f6553883777c3f9e12b69ca4b9765b45'
 
   url "https://download.xamarin.com/MonoforAndroid/Mac/mono-android-#{version}.pkg"
   name 'Xamarin.Android'

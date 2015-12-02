@@ -1,11 +1,11 @@
 cask :v1 => 'backuploupe' do
-  version '2.8.2'
-  sha256 '3bd9412e5f7e0e10846a141b0ad32ce3b7de0bfb7d637560f8aa728dec9c1cc5'
+  version '2.9'
+  sha256 '1936d3bebe38942a43a0e0071ab08a0ed62ef84c973b4c0176fa95b59d0e55b5'
 
   url "http://www.soma-zone.com/download/files/BackupLoupe_#{version}.tar.bz2"
   name 'BackupLoupe'
   appcast 'http://www.soma-zone.com/BackupLoupe/a/appcast.xml',
-          :sha256 => '8bbbea597c07c2d81fecc48302ebfd54c4e0732b8e31db17b2d8b05a14afbe98'
+          :sha256 => '3e702b3720bc82c5012636beec2b3a2f4ed01cd120cef36652ee97dfd37f38ef'
   homepage 'http://www.soma-zone.com/BackupLoupe/'
   license :commercial
 

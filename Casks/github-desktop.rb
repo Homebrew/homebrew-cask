@@ -1,6 +1,6 @@
 cask :v1 => 'github-desktop' do
-  version '212'
-  sha256 '4a6477d6397150a9374ef7e3f674e852adf36b8e0b5e57978e10741c490678d1'
+  version '216'
+  sha256 '5e3f5c92080aa55a3487b9709e789daf01c1db9d52d838d64aed6e9e45648255'
 
   # cloudfront.net is the official download host per the vendor homepage
   url "https://d4hwcs1zqtwzs.cloudfront.net/mac/GitHub%20Desktop%20#{version}.zip"

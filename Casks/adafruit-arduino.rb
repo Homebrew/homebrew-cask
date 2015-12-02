@@ -1,12 +1,14 @@
 cask :v1 => 'adafruit-arduino' do
-  version '1.0.5'
-  sha256 'de1c64233c8a2c6b039f9eddd4c417e594afee51558cd9f2f335a831580e2d42'
+  version '1.6.3'
+  sha256 'c964acbe728b616f0595517b21bbf97c88b8ee92379c06943a2862399d0196e2'
 
   # amazonaws.com is the official download host per the vendor homepage
-  url "https://adafruit-download.s3.amazonaws.com/Adafruit%20Arduino%20#{version}%20-%20Mac%2011-8-13.zip"
+  url "https://s3.amazonaws.com/adafruit-download/adafruit-arduino-#{version}-macosx.zip"
   name 'Adafruit Arduino'
   homepage 'https://adafruit.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
-  app "Adafruit Arduino #{version}.app"
+  app 'Arduino.app'
+
+  conflicts_with :cask => 'arduino'
 end

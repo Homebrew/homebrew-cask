@@ -1,9 +1,9 @@
 cask :v1 => 'baiduhi' do
-  version '1.5.0.1'
-  sha256 'ade49453de3778bfe063b853c5873b3a97798ff4917d04624efee39a99782199'
+  version '1.6.0.0'
+  sha256 '15de7fee8818b6ae9565a15e97fc0c3938041a129bc9cec1a359ddc8dc82590f'
 
-  url "http://mac.im.baidu.com/machi_#{version}.dmg"
-  name '百度Hi'
+  url "http://bs.baidu.com/app-res/mac/machi_#{version}.dmg"
+  name '百度 Hi'
   name 'Baidu Hi'
   homepage 'http://im.baidu.com/'
   license :gratis

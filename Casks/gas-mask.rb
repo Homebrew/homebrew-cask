@@ -1,6 +1,6 @@
 cask :v1 => 'gas-mask' do
-  version '0.8.1'
-  sha256 'f384e973603088ed5afbe841ef7d5698262988c65a0437a9d8011dcb667fcc2e'
+  version '0.8.3'
+  sha256 '907aa5979d1a902fa2582f5b6a4f2b1087e5f4e60cc9eb87594407d60fcd2d53'
 
   url "http://gmask.clockwise.ee/files/gas_mask_#{version}.zip"
   appcast 'http://gmask.clockwise.ee/check_update/',

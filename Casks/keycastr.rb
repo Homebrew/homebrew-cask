@@ -1,6 +1,6 @@
 cask :v1 => 'keycastr' do
-  version 'v0.8.5'
-  sha256 '4a0ba75562608f16be2144efcdb9dfb57fc3470ef0e81df751b80a04dfcd2fb7'
+  version 'v0.9.1'
+  sha256 '4edc81d69117d2e6fdbf0f06f8334bc0449ecafc92abd649eb73d526a534cf61'
 
   url "https://github.com/keycastr/keycastr/releases/download/#{version}/KeyCastr.app.zip"
   appcast 'https://github.com/keycastr/keycastr/releases.atom'

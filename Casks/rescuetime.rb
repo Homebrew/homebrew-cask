@@ -5,7 +5,7 @@ cask :v1 => 'rescuetime' do
   url 'https://www.rescuetime.com/installers/RescueTimeInstaller.dmg'
   name 'RescueTime'
   homepage 'https://www.rescuetime.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'RescueTime.app'
 end

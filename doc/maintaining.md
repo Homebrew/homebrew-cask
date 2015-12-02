@@ -35,7 +35,7 @@ Every open issue and pull request must have a label added to it, unless the main
 
 Label | Description | Issues | Pull Requests
 ----- | ----------- | :----: | :-----------:
-**bug** | Something isn’t working as expected. A modification/addition/removal . Must always be accompanied by **cask** or **core** | &#x2713; | &#x2713;
+**bug** | Something isn’t working as expected. A modification/addition/removal. Must always be accompanied by **cask** or **core** | &#x2713; | &#x2713;
 **cask** | Relates directly to a cask. Must always be accompanied by **bug** or **enhancement**. | &#x2713; | &#x2713;
 **cask request** | Either a request for a new cask or a call for correction in an existing one. | &#x2713; |
 **chief bug** | When multiple people open new issues for the same bug, the main issue where its progression is being tracked should have this label. Every other one should be marked **duplicate** and closed. | &#x2713; |
@@ -57,6 +57,18 @@ Label | Description | Issues | Pull Requests
 ## Reviewing Core PRs
 
 Occasionally we’ll get submissions from users that fix bugs or add features to homebrew-cask itself. There is a subset of our maintainers who are less familiar with Ruby and prefer to leave these review to folks with more experience with the language. This is AOK!
+
+## Handling Cask Update PRs
+
+The most common pull requests we get are to add or update Casks. [Vítor Galvão](https://github.com/vitorgalvao) has created [some excellent scripts](https://github.com/vitorgalvao/tiny-scripts) to make these rote changes more painless. You can use [`fastmerge`](https://github.com/vitorgalvao/tiny-scripts/blob/master/fastmerge) if the PR is ready to merge (everything looks fine, all tests passed). Sometimes, new contributors aren't aware of how to squash commits, posting something like “Please [squash your commits](https://davidwalsh.name/squash-commits-git). Thanks!” should help them out.
+
+If the PR has an error, you can use [`prfixmaster`](https://github.com/vitorgalvao/tiny-scripts/blob/master/prfixmaster) to make any necessary changes.
+
+Lastly, if you see an outdated cask that just needs a version bump, you can use [`cask-repair`](https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair) to make the PR yourself quickly.
+
+## Tips
+
+* To keep your repository up to date with caskroom/master, you can create a custom bash function to save some typing. Feel free to adapt the following set of commands to your specific needs --> `cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "$GITHUB_USERNAME" master; git remote prune origin; git fetch -p origin; git remote update --prune`
 
 ## Ideas for other things to include here
 

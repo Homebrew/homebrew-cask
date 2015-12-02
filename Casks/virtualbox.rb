@@ -1,6 +1,11 @@
 cask :v1 => 'virtualbox' do
-  version '5.0.6-103037'   # virtualbox.rb and virtualbox-extension-pack.rb should be upgraded together
-  sha256 '612e73aafa3dcdcf99e69e8831fb526512a4e4f8d02a0f4ac9d05baee09bb452'
+  if MacOS.release <= :lion
+    version '4.3.32-103443'
+    sha256 'dcfbd1d3014ab393dc5944a9474eeabf8b33471e7d95cb4c94070dc7acab772c'
+  else
+    version '5.0.10-104061'
+    sha256 '62f933115498e51ddf5f2dab47dc1eebb42eb78ea1a7665cb91c53edacc847c6'
+  end
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*},'')}/VirtualBox-#{version}-OSX.dmg"
   name 'VirtualBox'
@@ -9,8 +14,6 @@ cask :v1 => 'virtualbox' do
   tags :vendor => 'Oracle'
 
   pkg 'VirtualBox.pkg'
-  binary '/Applications/VirtualBox.app/Contents/MacOS/VBoxManage'
-  binary '/Applications/VirtualBox.app/Contents/MacOS/VBoxHeadless'
 
   uninstall :script => { :executable => 'VirtualBox_Uninstall.tool', :args => %w[--unattended] },
             :pkgutil => 'org.virtualbox.pkg.*'

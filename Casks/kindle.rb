@@ -7,7 +7,7 @@ cask :v1 => 'kindle' do
   homepage 'https://www.amazon.com/gp/digital/fiona/kcp-landing-page'
   license :gratis
 
-  app 'Kindle.App'
+  app 'Kindle.app'
 
   zap :delete => [
                   '~/Library/Preferences/com.amazon.Kindle.plist',

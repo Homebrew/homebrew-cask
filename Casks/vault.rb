@@ -1,9 +1,9 @@
 cask :v1 => 'vault' do
-  version '0.3.0'
-  sha256 'f6c7a30671a90df09d39197262e019a7dd7ad36a68d2f5895080b899aa81fc58'
+  version '0.3.1'
+  sha256 '0a67d3ee6743c96e6cb96484b208555a2ea6f19fd7b51057410fd6f4a49aafad'
 
-  # bintray.com is the official download host per the vendor homepage
-  url "https://dl.bintray.com/mitchellh/vault/vault_#{version}_darwin_amd64.zip"
+  # hashicorp.com is the official download host per the vendor homepage
+  url "https://releases.hashicorp.com/vault/#{version}/vault_#{version}_darwin_amd64.zip"
   name 'Vault'
   homepage 'https://www.vaultproject.io'
   license :mpl

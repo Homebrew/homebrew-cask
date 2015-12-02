@@ -3,8 +3,8 @@ cask :v1 => 'dupin' do
     version '2.7.4'
     sha256 '4aba53f356606614627d57f6a33c1ee9cf13ddf06c13e7ac8487b930cb647b85'
   else
-    version '2.9.0'
-    sha256 'e34274b8186196b1042b3ea559ac3e463e4377231dc7bfd100050a62c3312c01'
+    version '2.10.0'
+    sha256 '44b47c6dfb83dda4991110875168aa0af6457325ae7b6b5e583c08335942474d'
   end
 
   url "http://dougscripts.com/itunes/scrx/dupinv#{version.delete('.')}.zip"

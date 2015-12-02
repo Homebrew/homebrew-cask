@@ -1,10 +1,10 @@
 cask :v1 => 'rbtools' do
-  version '0.7.2'
-  sha256 '78a0ee38431e07d16adce9ba06481295eb4d789bbb0975ec439fba59ee42b063'
+  version '0.7.5'
+  sha256 'fd910542e24d067df3fe635e982ae5e3526a0036f79ff129c29cf66f02751bd6'
 
   url "https://downloads.reviewboard.org/releases/RBTools/#{version.sub(%r{\.\d+$},'')}/RBTools-#{version}.pkg"
   name 'RBTools'
-  homepage 'https://www.reviewboard.org/docs/rbtools/dev/'
+  homepage 'https://www.reviewboard.org/docs/rbtools/0.7/'
   license :mit
 
   pkg "RBTools-#{version}.pkg"

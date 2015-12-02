@@ -1,9 +1,9 @@
 cask :v1 => 'otto' do
-  version '0.1.1'
-  sha256 '91aaf90903d5decaf0f4317ba72a1d3f932289b429bdee02d2700e1d9137d5b5'
+  version '0.1.2'
+  sha256 'ffdcb201227dd878361777336ea6387f7bdf5193d4a5ad65a3955f3e18e2a2b6'
 
-  # bintray.com is the official download host per the vendor homepage
-  url "https://dl.bintray.com/mitchellh/otto/otto_#{version}_darwin_amd64.zip"
+  # hashicorp.com is the official download host per the vendor homepage
+  url "https://releases.hashicorp.com/otto/#{version}/otto_#{version}_darwin_amd64.zip"
   name 'Otto'
   homepage 'https://www.ottoproject.io/'
   license :mpl

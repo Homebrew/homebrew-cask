@@ -64,7 +64,7 @@ cask :v1 => 'unity' do
 end
 ```
 
-And here is one for `Firefox.app`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when an unversioned download URL is available:
+And here is one for `Firefox.app`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available:
 
 ```ruby
 cask :v1 => 'firefox' do
@@ -254,6 +254,16 @@ If everything looks good, you’ll also want to make sure your Cask passes audit
 ```bash
 brew cask audit my-new-cask --download
 ```
+
+You should also check stylistic details with the [`rubocop`](https://github.com/bbatsov/rubocop) gem:
+
+```bash
+cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask"
+bundle install
+bundle exec rubocop Casks/my-new-cask.rb
+```
+
+Keep in mind all of these checks will be made when you submit your PR, so by doing them in advance you’re saving everyone a lot of time and trouble.
 
 If your application and homebrew-cask do not work well together, feel free to [file an issue](https://github.com/caskroom/homebrew-cask/issues) after checking out open issues.
 

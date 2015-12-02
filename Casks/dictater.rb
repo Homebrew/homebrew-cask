@@ -1,8 +1,8 @@
 cask :v1 => 'dictater' do
-  version '1.0'
-  sha256 'd97d69344e690b55da7bfdad0da16d31ba0b4b7f79e4d9824cd8d34f24dba782'
+  version '1.2'
+  sha256 '32ae561c93af4979d23c0c8e22f31665a93f4f654539a0c10f725b35a62c9557'
 
-  url "https://github.com/Nosrac/Dictater/releases/download/#{version}/Dictater.app.zip"
+  url "https://github.com/Nosrac/Dictater/releases/download/#{version}/Dictater.zip"
   appcast 'https://github.com/Nosrac/Dictater/releases.atom'
   name 'Dictater'
   homepage 'https://nosrac.github.io/Dictater/'

@@ -7,7 +7,7 @@ cask :v1 => 'unrarx' do
           :sha256 => '64b9cf92511cbef012dbf9b03381d7f6b883fbbf879ae04ec5899fd49507d0c4'
   name 'UnRarX'
   homepage 'http://www.unrarx.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'UnRarX.app'
 end

@@ -1,6 +1,6 @@
 cask :v1 => 'mapbox-studio' do
-  version '0.3.1'
-  sha256 'ed5cb9ca0db8135caf2b82c30e3b58c4ad1689f7a3b6d05d7ecf82642c95e812'
+  version '0.3.3'
+  sha256 'e88ec6986fd0b3c05923cf0e647863137cf28a4246f8822949d934c873f050cb'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://mapbox.s3.amazonaws.com/mapbox-studio/mapbox-studio-darwin-x64-v#{version}.zip"

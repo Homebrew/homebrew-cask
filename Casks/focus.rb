@@ -1,6 +1,6 @@
 cask :v1 => 'focus' do
-  version '1.4.1'
-  sha256 '4abacd3895b56c41753cbf7c4e26a490f8dfe6dae9e3871e48f6f894d33488d0'
+  version '1.4.11'
+  sha256 '22524abb327ce17d70ab50ffc9de4d8911fd30bf84490d14c28383c8fd8d45ed'
 
   url "https://heyfocus.com/releases/Focus-#{version}.zip"
   appcast 'https://heyfocus.com/appcast.xml',

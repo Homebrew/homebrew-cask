@@ -7,7 +7,7 @@ cask :v1 => 'xmplify' do
   appcast 'http://xmplifyapp.com/appcast.xml',
           :sha256 => 'c07056253091ae2c4955af290992f23042c356c3ac33fc23e86604f07349c83d'
   homepage 'http://xmplifyapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Xmplify.app'
 

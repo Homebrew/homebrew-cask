@@ -1,6 +1,6 @@
 cask :v1 => 'archi' do
-  version '3.2.1'
-  sha256 '6ac375c6acc56d238704e98a0900225859c1593a2be612ccf3d25baf715a5d47'
+  version '3.3.1'
+  sha256 '737d3287fdde718ed9a2363259efa814ff1c29feaf632bc6de594fdbe7c7af19'
 
   url "http://www.archimatetool.com/downloads/latest/Archi-mac64-#{version}.zip"
   name 'Archi'
