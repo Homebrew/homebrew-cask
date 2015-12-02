@@ -5,7 +5,7 @@ cask :v1 => 'zend-studio' do
   url "http://downloads.zend.com/studio-eclipse/#{version}/ZendStudio-#{version}-macosx.cocoa.x86_64.dmg"
   name 'Zend Studio'
   homepage 'https://www.zend.com/en/products/studio/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Zend Studio.app'
 end

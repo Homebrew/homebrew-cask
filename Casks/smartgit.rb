@@ -1,6 +1,6 @@
 cask :v1 => 'smartgit' do
-  version '7.0.0'
-  sha256 '21cf4da86c4c58a4147af51e189a12f0c4215477e6410c87c80306684036f783'
+  version '7.0.3'
+  sha256 '4e0cff341fec1d5a943d8755e62f492924dc3e37462dc3bf10d0a24bec4d035f'
 
   url "https://www.syntevo.com/downloads/smartgit/smartgit-macosx-#{version.gsub('.', '_')}.dmg"
   name 'SmartGit'

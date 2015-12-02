@@ -1,6 +1,6 @@
 cask :v1 => 'simpholders' do
-  version '2.0'
-  sha256 'f98517e2dc3eee2a564409d1bb0e59239a4221048102b67477c3f754436596bb'
+  version '2.1'
+  sha256 '68472926b108bc46b84fd2b6c1083b9fd1810f5fb70fc0924818d60f5bb8e668'
 
   url "http://simpholders.com/site/assets/files/1115/simpholders_#{version.gsub('.','_')}.dmg"
   appcast 'http://kfi-apps.com/appcasts/simpholders/',

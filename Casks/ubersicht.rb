@@ -1,6 +1,6 @@
 cask :v1 => 'ubersicht' do
-  version '0.6.20'
-  sha256 '50a56f68533f0a7ed5e82bd7cd877c3361c60cc9217689195c24bdc2e77b3f95'
+  version '0.7'
+  sha256 '3ac9cb5b8e488029a50f216ff39f370f75b71a27d46c5d5b0a7df49732f3d334'
 
   url "http://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
   name 'Übersicht'
