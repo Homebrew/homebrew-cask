@@ -1,6 +1,6 @@
 cask :v1 => 'genymotion' do
-  version '2.5.2'
-  sha256 'b85f64c0d260befdb8a60132da98841cce2635cd8b72e5f254526603638095cb'
+  version '2.6.0'
+  sha256 '9d12ae904761d76b15a556262d7eb32d1f5031fe60690224d7b0a70303cf8d39'
 
   depends_on :cask => 'virtualbox'
 
