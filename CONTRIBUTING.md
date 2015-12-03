@@ -28,7 +28,7 @@ Making a Cask is easy: a Cask is a small Ruby file.
 
 ### Examples
 
-Here’s a Cask for `Shuttle.app` as an example. Note that the `url` stanza uses `#{version}` (string interpolation) to create a Cask that only needs `version` and `sha256` updated with an application update.
+Here’s a Cask for `shuttle` as an example. Note that the `url` stanza uses `#{version}` ([string interpolation](https://en.wikipedia.org/wiki/String_interpolation#Ruby)) to create a Cask that only needs `version` and `sha256` changes when updated.
 
 ```ruby
 cask :v1 => 'shuttle' do
@@ -71,19 +71,23 @@ cask :v1 => 'genymotion' do
 end
 ```
 
-And here is one for `Firefox.app`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available:
+And here is one for `gateblu`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available. Also note the comment above `url`, which is needed when [the url and homepage hostnames differ](doc/CASK_LANGUAGE_REFERENCE.md#when-url-and-homepage-hostnames-differ-add-a-comment):
 
 ```ruby
-cask :v1 => 'firefox' do
+cask :v1 => 'gateblu' do
   version :latest
   sha256 :no_check
 
-  url 'https://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US'
-  name 'Firefox'
-  homepage 'https://www.mozilla.org/en-US/firefox/'
-  license :mpl
+  # amazonaws.com is the official download host per the vendor homepage
+  url 'https://s3-us-west-2.amazonaws.com/gateblu/gateblu-ui/latest/Gateblu.dmg'
+  name 'Gateblu'
+  homepage 'https://gateblu.octoblu.com'
+  license :mit
 
-  app 'Firefox.app'
+  pkg 'Gateblu Installer.pkg'
+
+  uninstall :pkgutil => 'com.octoblu.*',
+            :delete => '/Applications/Gateblu.app'
 end
 ```
 
@@ -204,14 +208,13 @@ Some hosting providers actively block command-line HTTP clients (example: FossHu
 
 ### Vendor URLs Are Preferred
 
-When possible, it is best to use a download URL from the original developer or vendor, rather than an aggregator such as macupdate.com.
+When possible, it is best to use a download URL from the original developer or vendor, rather than an aggregator such as `macupdate.com`.
 
 ### Cask Token Details
 
 If a token conflicts with an already-existing Cask, authors should manually make the new token unique by prepending the vendor name. Example: [unison.rb](../master/Casks/unison.rb) and [panic-unison.rb](../master/Casks/panic-unison.rb).
 
-If possible, avoid creating tokens which differ only by the placement of
-hyphens.
+If possible, avoid creating tokens which differ only by the placement of hyphens.
 
 To generate a token manually, or to learn about exceptions for unusual cases, see [cask_token_reference.md](doc/cask_token_reference.md).
 
@@ -291,7 +294,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 
 ### Stable Versions
 
-Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of OS X or the previous point release (in 2014, for example, that meant Mavericks and Yosemite).
+Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of OS X or the previous point release (in 2015, for example, that meant El Capitan and Yosemite).
 
 ### But There Is No Stable Version!
 
@@ -378,7 +381,7 @@ $ github_user='<my-github-username>'
 $ git push "$github_user" my-new-cask
 ```
 
-If you are using [GitHub two-factor authentication](https://github.com/blog/1614-two-factor-authentication) and set your remote repository as HTTPS you will need to set up a personal access token and use that instead your password. See more on https://help.github.com/articles/https-cloning-errors#provide-access-token-if-2fa-enabled
+If you are using [GitHub two-factor authentication](https://help.github.com/articles/about-two-factor-authentication/) and set your remote repository as HTTPS you will need to set up a personal access token and use that instead your password. See more on [here](https://help.github.com/articles/https-cloning-errors/#provide-access-token-if-2fa-enabled).
 
 ### Filing a Pull Request on GitHub
 
