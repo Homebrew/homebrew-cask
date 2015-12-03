@@ -28,39 +28,46 @@ Making a Cask is easy: a Cask is a small Ruby file.
 
 ### Examples
 
-Here’s a Cask for `Alfred.app` as an example. Note that you may repeat the `app` stanza as many times as you need, to define multiple apps:
+Here’s a Cask for `Shuttle.app` as an example. Note that the `url` stanza uses `#{version}` (string interpolation) to create a Cask that only needs `version` and `sha256` updated with an application update.
 
 ```ruby
-cask :v1 => 'alfred' do
-  version '2.3_264'
-  sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
+cask :v1 => 'shuttle' do
+  version '1.2.5'
+  sha256 '7df182f506b80011222c0cdd470be76e0376f38e331f3fafbb6af9add3578023'
 
-  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
-  name 'Alfred'
-  homepage 'http://www.alfredapp.com/'
-  license :freemium
+  url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
+  appcast 'https://github.com/fitztrev/shuttle/releases.atom'
+  name 'Shuttle'
+  homepage 'https://fitztrev.github.io/shuttle/'
+  license :mit
 
-  app 'Alfred 2.app'
-  app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
+  app 'Shuttle.app'
+
+  zap :delete => '~/.shuttle.json'
 end
 ```
 
-Here is another Cask for `Unity.pkg`:
+Here is another Cask for `genymotion`. Note that you may repeat the `app` stanza as many times as you need, to define multiple apps:
 
 ```ruby
-cask :v1 => 'unity' do
-  version '4.5.4'
-  sha256 '6fb72bfacf78df072559dd9a024a9d47e49b5717c8f17d53f05e2fc74a721876'
+cask :v1 => 'genymotion' do
+  version '2.6.0'
+  sha256 '9d12ae904761d76b15a556262d7eb32d1f5031fe60690224d7b0a70303cf8d39'
 
-  url 'http://netstorage.unity3d.com/unity/unity-4.5.4.dmg'
-  name 'Unity'
-  name 'Unity3D'
-  homepage 'http://unity3d.com/unity/'
+  depends_on :cask => 'virtualbox'
+
+  url "http://files2.genymotion.com/genymotion/genymotion-#{version}/genymotion-#{version}.dmg"
+  name 'Genymotion'
+  homepage 'https://www.genymotion.com/'
   license :commercial
 
-  pkg 'Unity.pkg'
+  app 'Genymotion.app'
+  app 'Genymotion Shell.app'
+  binary 'Genymotion Shell.app/Contents/MacOS/genyshell'
 
-  uninstall :pkgutil => 'com.unity3d.*'
+  caveats do
+    files_in_usr_local
+  end
 end
 ```
 
@@ -381,7 +388,7 @@ Congratulations! You are done now, and your Cask should be pulled in or otherwis
 
 ### Squashing
 
-If your pull request has multiple commits which revise the same lines of code, it is better to [squash](http://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
+If your pull request has multiple commits which revise the same lines of code, or if you make some changes after comments from one of the maintainers, it is better to [squash](http://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
 
 But you don’t always have to squash — it is fine for a pull request to contain multiple commits when there is a logical reason for the separation.
 
