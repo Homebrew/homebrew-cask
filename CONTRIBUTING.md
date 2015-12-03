@@ -381,13 +381,7 @@ $ github_user='<my-github-username>'
 $ git push "$github_user" my-new-cask
 ```
 
-If you are using [GitHub two-factor authentication](https://help.github.com/articles/about-two-factor-authentication/) and set your remote repository as HTTPS you will need to set up a personal access token and use that instead your password. See more on [here](https://help.github.com/articles/https-cloning-errors/#provide-access-token-if-2fa-enabled).
-
-### Filing a Pull Request on GitHub
-
-Now go to *your* GitHub repository at https://github.com/my-github-username/homebrew-cask, switch branch to your topic branch and click the `Pull Request` button. You can then add further comments to your pull request.
-
-Congratulations! You are done now, and your Cask should be pulled in or otherwise noticed in a while.
+If you are using [GitHub two-factor authentication](https://help.github.com/articles/about-two-factor-authentication/) and set your remote repository as HTTPS you will need to set up a personal access token and use that instead of your password. Further information [here](https://help.github.com/articles/https-cloning-errors/#provide-access-token-if-2fa-enabled).
 
 ### Squashing
 
@@ -395,9 +389,15 @@ If your pull request has multiple commits which revise the same lines of code, o
 
 But you don’t always have to squash — it is fine for a pull request to contain multiple commits when there is a logical reason for the separation.
 
+### Filing a Pull Request on GitHub
+
+Now go to *your* GitHub repository at https://github.com/my-github-username/homebrew-cask, switch branch to your topic branch and click the `New Pull Request` button. If it isn't automatically selected, choose to `compare across forks`. The base fork should be `caskroom/homebrew-cask @ master`, and the head fork should be `my-github-username/homebrew-cask @ my-new-cask`. You can also add any further comments to your pull request at this stage.
+
+Congratulations! You are done now, and your Cask should be pulled in or otherwise noticed in a while. If a maintainer suggests some changes, just make them on the `my-new-cask` branch locally, [squash](CONTRIBUTING.md#squashing), and [push](CONTRIBUTING.md#pushing).
+
 ## Cleaning up
 
-After your Pull Request is away, you might want to get yourself back onto `master`, so that `brew update` will pull down new Casks properly.
+After your Pull Request is submitted, you might want to get yourself back onto `master`, so that `brew update` will pull down new Casks properly.
 
 ```bash
 cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
