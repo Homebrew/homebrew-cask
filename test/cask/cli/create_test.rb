@@ -40,7 +40,7 @@ describe Hbc::CLI::Create do
         version ''
         sha256 ''
 
-        url 'https://'
+        url "https://"      # todo: if applicable, use \#{version} rather than hardcoding version number
         name ''
         homepage ''
         license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
