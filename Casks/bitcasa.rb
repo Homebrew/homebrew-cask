@@ -1,14 +1,14 @@
 cask :v1 => 'bitcasa' do
-  version '2.0.0.3'
-  sha256 '3ba706ae71d269a91f33ffdb424d8e52fdb4413129233bd3d7e5fbd1f0f8cd0f'
+  version '3.0.18.2'
+  sha256 '09fcece3ac576ee9e8157445655e0571ec9b3aee1174ffe22b15852ac7107cde'
 
   # cloudfront.net is the official download host per the vendor homepage
-  url "https://d1kbf262vwnlmm.cloudfront.net/Bitcasa_#{version}.dmg"
+  url "https://dist.bitcasa.com/update/InstallBitcasa.#{version}.pkg"
   name 'Bitcasa CloudFS'
   homepage 'https://www.bitcasa.com'
   license :gratis
 
-  pkg 'InstallBitcasa.pkg'
+  pkg "InstallBitcasa.#{version}.pkg"
 
   uninstall :pkgutil => 'com.bitcasa.AutoLaunch|com.bitcasa.Bitcasa'
 end

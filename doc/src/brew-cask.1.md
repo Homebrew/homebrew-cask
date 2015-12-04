@@ -83,6 +83,13 @@ names, and other aspects of this manual are still subject to change.
     If <token> is given, summarize the staged files associated with the
     given Cask.
 
+  * `search` or `-S`:
+    Display all Casks available for install.
+
+  * `search` or `-S` <text> | /<regexp>/:
+    Perform a substring search of known Cask tokens for <text>. If the text
+    is delimited by slashes, it is interpreted as a Ruby regular expression.
+	
   * `uninstall [--force]` or `rm` or `remove` <token> [ <token> ... ]:
     Uninstall the given Cask. With `--force`, uninstall even if the Cask
     does not appear to be present.
@@ -98,6 +105,9 @@ names, and other aspects of this manual are still subject to change.
     `uninstall` without `--force` is also imperfect. It may be unable to
     perform an `uninstall` operation if the given Cask has changed since you
     installed it. This issue is being addressed.
+	
+  * `update`:
+    For convenience. `brew cask update` is a synonym for `brew update`.
 
   * `zap` <token> [ <token> ... ]:
     Unconditionally remove _all_ files associated with the given Cask.
@@ -114,16 +124,6 @@ names, and other aspects of this manual are still subject to change.
     defined by the Cask author.
 
     **`zap` may remove resources which are shared between applications.**
-
-  * `search` or `-S`:
-    Display all Casks available for install.
-
-  * `search` or `-S` <text> | /<regexp>/:
-    Perform a substring search of known Cask tokens for <text>. If the text
-    is delimited by slashes, it is interpreted as a Ruby regular expression.
-
-  * `update`:
-    For convenience, `brew cask update` is a synonym for `brew update`.
 
 ## OPTIONS
 
@@ -217,7 +217,7 @@ Environment variables specific to homebrew-cask:
 
   * HOMEBREW\_CASK\_OPTS:
     This variable may contain any arguments normally used as options on
-    the command-line. This is partiularly useful to make options persistent.
+    the command-line. This is particularly useful to make options persistent.
     For example, you might add to your .bash_profile or .zshenv something like:
     `export HOMEBREW_CASK_OPTS='--appdir=/Applications --caskroom=/etc/Caskroom'`.
 

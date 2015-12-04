@@ -1,6 +1,6 @@
 cask :v1 => 'beamer' do
-  version '3.0'
-  sha256 'fcf08bb2e46318a056207786dc50992d19645d373e9783403a0ebe2c9de488c1'
+  version '3.0.1'
+  sha256 '1f73fb789214ddacb5493ff4df1603e1b3c6aa54d0a677995eb77481c0e5198c'
 
   url "https://beamer-app.com/resources/downloads/Beamer-#{version}.zip"
   name 'Beamer'

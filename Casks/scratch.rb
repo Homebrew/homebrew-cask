@@ -1,6 +1,6 @@
 cask :v1 => 'scratch' do
-  version '437'
-  sha256 '3615721aaffc5f94512887afd5a470488bd2d33c952137c1a89a3fa1830b91a5'
+  version '441.1'
+  sha256 'f04a3157328e9e3e536e4b52869be55162a0115eea658632d43a8dbd3e19e426'
 
   url "https://scratch.mit.edu/scratchr2/static/sa/Scratch-#{version}.dmg"
   name 'Scratch'
