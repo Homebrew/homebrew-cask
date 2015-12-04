@@ -28,55 +28,66 @@ Making a Cask is easy: a Cask is a small Ruby file.
 
 ### Examples
 
-Here’s a Cask for `Alfred.app` as an example. Note that you may repeat the `app` stanza as many times as you need, to define multiple apps:
+Here’s a Cask for `shuttle` as an example. Note that the `url` stanza uses `#{version}` ([string interpolation](https://en.wikipedia.org/wiki/String_interpolation#Ruby)) to create a Cask that only needs `version` and `sha256` changes when updated.
 
 ```ruby
-cask :v1 => 'alfred' do
-  version '2.3_264'
-  sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
+cask :v1 => 'shuttle' do
+  version '1.2.5'
+  sha256 '7df182f506b80011222c0cdd470be76e0376f38e331f3fafbb6af9add3578023'
 
-  url 'https://cachefly.alfredapp.com/Alfred_2.3_264.zip'
-  name 'Alfred'
-  homepage 'http://www.alfredapp.com/'
-  license :freemium
+  url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
+  appcast 'https://github.com/fitztrev/shuttle/releases.atom'
+  name 'Shuttle'
+  homepage 'https://fitztrev.github.io/shuttle/'
+  license :mit
 
-  app 'Alfred 2.app'
-  app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
+  app 'Shuttle.app'
+
+  zap :delete => '~/.shuttle.json'
 end
 ```
 
-Here is another Cask for `Unity.pkg`:
+Here is another Cask for `genymotion`. Note that you may repeat the `app` stanza as many times as you need, to define multiple apps:
 
 ```ruby
-cask :v1 => 'unity' do
-  version '4.5.4'
-  sha256 '6fb72bfacf78df072559dd9a024a9d47e49b5717c8f17d53f05e2fc74a721876'
+cask :v1 => 'genymotion' do
+  version '2.6.0'
+  sha256 '9d12ae904761d76b15a556262d7eb32d1f5031fe60690224d7b0a70303cf8d39'
 
-  url 'http://netstorage.unity3d.com/unity/unity-4.5.4.dmg'
-  name 'Unity'
-  name 'Unity3D'
-  homepage 'http://unity3d.com/unity/'
+  depends_on :cask => 'virtualbox'
+
+  url "http://files2.genymotion.com/genymotion/genymotion-#{version}/genymotion-#{version}.dmg"
+  name 'Genymotion'
+  homepage 'https://www.genymotion.com/'
   license :commercial
 
-  pkg 'Unity.pkg'
+  app 'Genymotion.app'
+  app 'Genymotion Shell.app'
+  binary 'Genymotion Shell.app/Contents/MacOS/genyshell'
 
-  uninstall :pkgutil => 'com.unity3d.*'
+  caveats do
+    files_in_usr_local
+  end
 end
 ```
 
-And here is one for `Firefox.app`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available:
+And here is one for `gateblu`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available. Also note the comment above `url`, which is needed when [the url and homepage hostnames differ](doc/CASK_LANGUAGE_REFERENCE.md#when-url-and-homepage-hostnames-differ-add-a-comment):
 
 ```ruby
-cask :v1 => 'firefox' do
+cask :v1 => 'gateblu' do
   version :latest
   sha256 :no_check
 
-  url 'https://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US'
-  name 'Firefox'
-  homepage 'https://www.mozilla.org/en-US/firefox/'
-  license :mpl
+  # amazonaws.com is the official download host per the vendor homepage
+  url 'https://s3-us-west-2.amazonaws.com/gateblu/gateblu-ui/latest/Gateblu.dmg'
+  name 'Gateblu'
+  homepage 'https://gateblu.octoblu.com'
+  license :mit
 
-  app 'Firefox.app'
+  pkg 'Gateblu Installer.pkg'
+
+  uninstall :pkgutil => 'com.octoblu.*',
+            :delete => '/Applications/Gateblu.app'
 end
 ```
 
@@ -197,14 +208,13 @@ Some hosting providers actively block command-line HTTP clients (example: FossHu
 
 ### Vendor URLs Are Preferred
 
-When possible, it is best to use a download URL from the original developer or vendor, rather than an aggregator such as macupdate.com.
+When possible, it is best to use a download URL from the original developer or vendor, rather than an aggregator such as `macupdate.com`.
 
 ### Cask Token Details
 
 If a token conflicts with an already-existing Cask, authors should manually make the new token unique by prepending the vendor name. Example: [unison.rb](../master/Casks/unison.rb) and [panic-unison.rb](../master/Casks/panic-unison.rb).
 
-If possible, avoid creating tokens which differ only by the placement of
-hyphens.
+If possible, avoid creating tokens which differ only by the placement of hyphens.
 
 To generate a token manually, or to learn about exceptions for unusual cases, see [cask_token_reference.md](doc/cask_token_reference.md).
 
@@ -284,7 +294,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 
 ### Stable Versions
 
-Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of OS X or the previous point release (in 2014, for example, that meant Mavericks and Yosemite).
+Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of OS X or the previous point release (in 2015, for example, that meant El Capitan and Yosemite).
 
 ### But There Is No Stable Version!
 
@@ -371,23 +381,23 @@ $ github_user='<my-github-username>'
 $ git push "$github_user" my-new-cask
 ```
 
-If you are using [GitHub two-factor authentication](https://github.com/blog/1614-two-factor-authentication) and set your remote repository as HTTPS you will need to set up a personal access token and use that instead your password. See more on https://help.github.com/articles/https-cloning-errors#provide-access-token-if-2fa-enabled
-
-### Filing a Pull Request on GitHub
-
-Now go to *your* GitHub repository at https://github.com/my-github-username/homebrew-cask, switch branch to your topic branch and click the `Pull Request` button. You can then add further comments to your pull request.
-
-Congratulations! You are done now, and your Cask should be pulled in or otherwise noticed in a while.
+If you are using [GitHub two-factor authentication](https://help.github.com/articles/about-two-factor-authentication/) and set your remote repository as HTTPS you will need to set up a personal access token and use that instead of your password. Further information [here](https://help.github.com/articles/https-cloning-errors/#provide-access-token-if-2fa-enabled).
 
 ### Squashing
 
-If your pull request has multiple commits which revise the same lines of code, it is better to [squash](http://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
+If your pull request has multiple commits which revise the same lines of code, or if you make some changes after comments from one of the maintainers, it is better to [squash](http://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
 
 But you don’t always have to squash — it is fine for a pull request to contain multiple commits when there is a logical reason for the separation.
 
+### Filing a Pull Request on GitHub
+
+Now go to *your* GitHub repository at https://github.com/my-github-username/homebrew-cask, switch branch to your topic branch and click the `New Pull Request` button. If it isn't automatically selected, choose to `compare across forks`. The base fork should be `caskroom/homebrew-cask @ master`, and the head fork should be `my-github-username/homebrew-cask @ my-new-cask`. You can also add any further comments to your pull request at this stage.
+
+Congratulations! You are done now, and your Cask should be pulled in or otherwise noticed in a while. If a maintainer suggests some changes, just make them on the `my-new-cask` branch locally, [squash](CONTRIBUTING.md#squashing), and [push](CONTRIBUTING.md#pushing).
+
 ## Cleaning up
 
-After your Pull Request is away, you might want to get yourself back onto `master`, so that `brew update` will pull down new Casks properly.
+After your Pull Request is submitted, you might want to get yourself back onto `master`, so that `brew update` will pull down new Casks properly.
 
 ```bash
 cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
