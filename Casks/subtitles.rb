@@ -10,4 +10,6 @@ cask :v1 => 'subtitles' do
   license :commercial
 
   app 'Subtitles.app'
+
+  zap :delete => '~/Library/Application Support/Subtitles'
 end
