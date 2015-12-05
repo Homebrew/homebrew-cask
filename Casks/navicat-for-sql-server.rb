@@ -1,6 +1,6 @@
 cask :v1 => 'navicat-for-sql-server' do
-  version '11.1.15'
-  sha256 'fc85b72dcab03dc9597192d29bdc79e02916b80b7e61ffb425676862d9e54c62'
+  version '11.1.17'
+  sha256 '6fd42eeebb1b020bc583ca369e9e79b15d266b37eb3dfdad470545d4ba7cb303'
 
   url "http://download.navicat.com/download/navicat#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_sqlserver_en.dmg"
   name 'Navicat for SQL Server'
