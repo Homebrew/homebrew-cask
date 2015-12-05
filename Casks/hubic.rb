@@ -11,4 +11,11 @@ cask :v1 => 'hubic' do
   pkg "hubiC-OSX-#{version}-osx.pkg"
 
   uninstall :pkgutil => 'com.ovh.hubicmac'
+
+  zap :delete => [
+        '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ovh.hubicfinderplugin.sfl',
+        '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ovh.hubicmac.sfl',
+        '~/Library/Caches/com.ovh.hubicmac',
+        '~/Library/Cookies/com.ovh.hubicmac.binarycookies'
+      ]
 end

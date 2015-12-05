@@ -6,7 +6,7 @@ cask :v1 => 'pandoc' do
   url "https://github.com/jgm/pandoc/releases/download/#{version}/pandoc-#{version}-osx.pkg"
   appcast 'https://github.com/jgm/pandoc/releases.atom'
   name 'Pandoc'
-  homepage 'http://johnmacfarlane.net/pandoc'
+  homepage 'http://pandoc.org/'
   license :gpl
 
   pkg "pandoc-#{version}-osx.pkg"
