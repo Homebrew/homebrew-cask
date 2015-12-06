@@ -8,7 +8,6 @@ cask :v1 => 'cacoo-ninja' do
   license :gratis
 
   installer :script => 'Install Cacoo Ninja.app/Contents/MacOS/Install Cacoo Ninja',
-            :args   => %w[-silent],
             :sudo   => true
 
   uninstall :script => { :executable => 'Install Cacoo Ninja.app/Contents/MacOS/Install Cacoo Ninja' }
