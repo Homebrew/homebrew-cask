@@ -89,7 +89,7 @@ names, and other aspects of this manual are still subject to change.
   * `search` or `-S` <text> | /<regexp>/:
     Perform a substring search of known Cask tokens for <text>. If the text
     is delimited by slashes, it is interpreted as a Ruby regular expression.
-	
+
   * `uninstall [--force]` or `rm` or `remove` <token> [ <token> ... ]:
     Uninstall the given Cask. With `--force`, uninstall even if the Cask
     does not appear to be present.
@@ -105,7 +105,7 @@ names, and other aspects of this manual are still subject to change.
     `uninstall` without `--force` is also imperfect. It may be unable to
     perform an `uninstall` operation if the given Cask has changed since you
     installed it. This issue is being addressed.
-	
+
   * `update`:
     For convenience. `brew cask update` is a synonym for `brew update`.
 
@@ -165,6 +165,12 @@ in a future version.
 
   * `--internet_plugindir=<path>`:
     Target location for Internet Plugin links. The default value is `~/Library/Internet Plug-Ins`.
+
+  * `--audio_unit_plugindir=<path>`:
+    Target location for Audio Unit Plugin links. The default value is `~/Library/Audio/Plug-Ins/Components`.
+
+  * `--vst_plugindir=<path>`:
+    Target location for VST Plugin links. The default value is `~/Library/Audio/Plug-Ins/VST`.
 
   * `--screen_saverdir=<path>`:
     Target location for Screen Saver links. The default value is `~/Library/Screen Savers`.
