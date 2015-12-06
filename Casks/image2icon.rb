@@ -1,6 +1,6 @@
 cask :v1 => 'image2icon' do
   version '2.2'
-  sha256 'dd1d588a4450c96272e345e16a8e9a8b4738d473e1683ceee19e1756eb39c6d7'
+  sha256 'b4f0ddf283c3f134d832ee9510921bb3aebd3920588bb3a718b3e9ac1e526aaa'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://sf-applications.s3.amazonaws.com/Image2Icon/app-releases/Image2icon#{version}.zip"
