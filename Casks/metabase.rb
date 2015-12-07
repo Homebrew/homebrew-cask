@@ -1,6 +1,6 @@
 cask :v1 => 'metabase' do
-  version '0.12.1'
-  sha256 'e5c16b342864f64f1502c31398eb814413269d0b10c114992b87a16a5c5c6f0d'
+  version '0.13.0'
+  sha256 '35b741061928eac96d4ba53b584dd0c99fd7ddb59cc9812fb802fe53843c28c3'
 
   url "http://downloads.metabase.com/v#{version}/Metabase.dmg"
   appcast 'http://downloads.metabase.com/appcast.xml'
