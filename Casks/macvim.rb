@@ -1,6 +1,6 @@
 cask :v1 => 'macvim' do
-  version '7.4-84'
-  sha256 '513dd15596153897d3a19e8827c0e64abfad2c6120884e41b4f2a80240fc6dd5'
+  version '7.4-85'
+  sha256 'b83c8f584a2a7928edb7e9c5ce931ed66f9265c18f014ca4e377e0fa8062edc3'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version.sub(%r{^.*-},'')}/MacVim-#{version.sub(%r{-.*$},'')}.dmg"
