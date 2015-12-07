@@ -1,6 +1,6 @@
 cask :v1 => 'bandage' do
-  version '0.7.0'
-  sha256 '0da51065f7ac38cd3bdad354d8cda427ba4e7e17a5658407d4a8729b7464935d'
+  version '0.7.1'
+  sha256 '29f88973388f27fa6456065c7659d5250dd0e825f184c3604621baacd440452f'
 
   url "https://github.com/rrwick/Bandage/releases/download/v#{version}/Bandage_Mac_v#{version}.zip"
   appcast 'https://github.com/rrwick/Bandage/releases.atom'
