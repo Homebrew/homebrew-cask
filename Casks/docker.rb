@@ -1,6 +1,6 @@
 cask :v1 => 'docker' do
-  version '1.9.0'
-  sha256 '91a8701e41a479def5371a333657c58c36478602e1f5eb1835457a3880232a2e'
+  version '1.9.1'
+  sha256 '8750ccc2098ec94ef7db110e0016ab02cfa47a1a76f0deb3faa50335b5ec0df9'
 
   url "https://get.docker.com/builds/Darwin/x86_64/docker-#{version}"
   appcast 'https://github.com/docker/machine/releases.atom'

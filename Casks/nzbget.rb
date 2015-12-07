@@ -1,6 +1,6 @@
 cask :v1 => 'nzbget' do
-  version '16.3'
-  sha256 'fe43e60ca7cb8e34fe3efb141c7da6441dd784da39328fc5d8706599bc9f649e'
+  version '16.4'
+  sha256 '90d7c1282f89e9cab67dd2681b76b45889481fb188ea7de0a06b842b9d7b5589'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/nzbget/nzbget/releases/download/v#{version}/nzbget-#{version}-bin-osx.zip"

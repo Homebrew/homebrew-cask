@@ -1,6 +1,6 @@
 cask :v1_1 => 'stack' do
-  version '0.1.8.0'
-  sha256 '16e574595046a5cf2ecc395506c800f1eb194587173c74e374732d776c060f57'
+  version '0.1.10.0'
+  sha256 'd3f98aef526b8037dc5bcdea2a8944378c47e1e7c44b39eaefb4f55e7cb48703'
 
   url "https://github.com/commercialhaskell/stack/releases/download/v#{version}/stack-#{version}-osx-x86_64.tar.gz"
   appcast 'https://github.com/commercialhaskell/stack/releases.atom'
