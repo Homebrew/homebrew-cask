@@ -1,7 +1,7 @@
 cask :v1 => 'kid3' do
   # note: "3" is not a version number, but an intrinsic part of the product name (ID3 tags)
-  version '3.2.0'
-  sha256 '8d8d8d4ab873cd8390bc3b6b999dcc5e2a2a15597012ea18b1ce43d7bcf701a0'
+  version '3.3.0'
+  sha256 'c9469bcab5d2654e0ca324bf44b1fe8d0c4e7e59cf91ae067bf335010307dba9'
 
   url "http://downloads.sourceforge.net/sourceforge/kid3/kid3-#{version}-Darwin.dmg"
   name 'Kid3'
