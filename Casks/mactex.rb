@@ -1,6 +1,6 @@
 cask :v1 => 'mactex' do
   version :latest
-  sha256 :no_check
+  sha256 'c5f5b0fd853a17dab6e844fb5e893804af78d938fa18ee94ec3b257611a95c12'
 
   url 'http://tug.org/cgi-bin/mactex-download/MacTeX.pkg'
   name 'MacTeX'
