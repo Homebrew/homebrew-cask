@@ -232,12 +232,10 @@ class Hbc::CLI
         puts HBC_VERSION
       else
         purpose
-        if @attempted_verb and @attempted_verb != "help"
-          puts "!! "
-          puts "!! no command verb: #{@attempted_verb}"
-          puts "!! \n\n"
-        end
         usage
+        unless @attempted_verb.to_s.strip.empty? || @attempted_verb == "help"
+          raise Hbc::CaskError.new("Unknown command: #{@attempted_verb}")
+        end
       end
     end
 
