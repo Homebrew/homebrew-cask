@@ -1,6 +1,6 @@
 cask :v1 => 'houdahgeo' do
-  version '4.3.2'
-  sha256 '1d88f16a159608cf4e2a432609a3b0d0a86e53bb1b42cbac9b21899185a9ff02'
+  version '4.4'
+  sha256 '065c215e8c61081d4ff6c925ea20a56ba87d08633d2796aa423066ba9cf1f041'
 
   url "http://houdah.com/houdahGeo/download_assets/HoudahGeo#{version}.zip"
   appcast "http://www.houdah.com/houdahGeo/updates#{version.to_i}/profileInfo.php",
