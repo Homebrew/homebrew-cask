@@ -7,5 +7,7 @@ cask :v1 => 'kicad' do
   homepage 'http://www.kicad-pcb.org/'
   license :gpl
 
+  artifact 'kicad', :target => "#{ENV['HOME']}/Library/Application Support/kicad"
+
   suite 'Kicad'
 end
