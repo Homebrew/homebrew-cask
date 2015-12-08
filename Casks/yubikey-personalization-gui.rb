@@ -1,6 +1,6 @@
 cask :v1 => 'yubikey-personalization-gui' do
-  version '3.1.21'
-  sha256 '576299eeec8ad85d3f6d9f56204022128fc32cbc062fc7ef7c48dde69b3efda1'
+  version '3.1.23'
+  sha256 'f00aa7931045f64903eb94279b33b595eb3791026fa54074dba9c11ad701d089'
 
   url "https://developers.yubico.com/yubikey-personalization-gui/Releases/yubikey-personalization-gui-#{version}.pkg"
   name 'YubiKey Personalization GUI'

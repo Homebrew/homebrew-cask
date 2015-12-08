@@ -1,6 +1,6 @@
 cask :v1 => 'navicat-for-mysql' do
-  version '11.1.15'
-  sha256 'a387caab73cf7feb027010b1cba91d0c536161cefb983a78831bfd805ad5d708'
+  version '11.1.17'
+  sha256 'ec38ed419eee4090020ef4f475625a5c3ea431e25dc7c0ecce776e1fe920c20f'
 
   url "http://download.navicat.com/download/navicat#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_mysql_en.dmg"
   name 'Navicat for MySQL'
