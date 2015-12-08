@@ -1,9 +1,8 @@
 cask :v1 => 'kicad' do
-  version '2014-02-26'
+  version '4.0.0'
   sha256 '066520f10e9646e88c2e1d7812adf54a73a331592076f394cb439a97c228410b'
 
-  # mdx4.org is the official download host per the vendor homepage
-  url "http://www.mdx4.org/uploads/kicad/Kicad-product-#{version}.zip"
+  url "http://downloads.kicad-pcb.org/osx/stable/kicad-#{version}.dmg"
   name 'KiCad'
   homepage 'http://www.kicad-pcb.org/'
   license :gpl
