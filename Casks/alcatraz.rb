@@ -1,6 +1,6 @@
 cask :v1 => 'alcatraz' do
   version '1.1.15'
-  sha256 'e28bfd9fcc22cdfde0c7c8f31e3468a4847e7bda9cb69f309f24257eee3dd41'
+  sha256 'a7b5e94db039d25474daa23466b436021e0d7f1d234c16e888141e61441d88be'
 
   url "https://github.com/alcatraz/Alcatraz/releases/download/#{version}/Alcatraz.tar.gz"
   appcast 'https://github.com/alcatraz/Alcatraz/releases.atom'
