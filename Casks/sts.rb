@@ -1,6 +1,6 @@
 cask :v1 => 'sts' do
-  version '3.7.1.RELEASE'
-  sha256 'b98c8e8c677b9cdc6fb9debcbb2634c89f37a03d65ef468af73088306a17f683'
+  version '3.7.2.RELEASE'
+  sha256 'f49bbcc74662bf8e8db403a4cff527a8f914ed0b43d5b3b6a97be977dce5bbe6'
 
   module Utils
     def self.eclipse_version
