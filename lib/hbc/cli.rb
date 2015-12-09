@@ -229,7 +229,7 @@ class Hbc::CLI
 
     def run(*args)
       if args.include?('--version') or @attempted_verb == '--version'
-        puts HBC_VERSION
+        puts Hbc.full_version
       else
         purpose
         usage
