@@ -1,6 +1,6 @@
 cask :v1 => 'bartender' do
-  version '2.0.5'
-  sha256 '7a114172ca5c3dfdc38f9d056b7d208d471e814c8c1dae5f0408bea2e71eadc9'
+  version '2.0.7'
+  sha256 'e96ee3ab2fe6bca413a16899cd1388e69a58ac00ab87e597138163d0632a1689'
 
   url "http://macbartender.com/B2/updates/#{version.gsub('.', '-')}/Bartender%202.zip",
       :referer => 'http://www.macbartender.com'
