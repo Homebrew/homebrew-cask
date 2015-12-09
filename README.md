@@ -19,7 +19,6 @@ It’s implemented as a `homebrew` [external command](https://github.com/Homebre
 ## Let’s try it!
 
 ```bash
-$ brew tap caskroom/cask
 $ brew cask install google-chrome
 => Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
 => Success! google-chrome installed to /opt/homebrew-cask/Caskroom/google-chrome/stable-channel
