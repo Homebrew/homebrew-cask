@@ -1,6 +1,6 @@
 cask :v1 => 'fog' do
-  version '1.0.0'
-  sha256 '61631589fddeb657f41d713e8edbb31430e975b1cc4ee870581110e422dddbe8'
+  version '1.0.1'
+  sha256 '6eaa11324ba9fc470c577ed067d3843e5f2ef7ec8da012dcfc780ffd8b832b69'
 
   url "https://github.com/vitorgalvao/fog/releases/download/v#{version}/Fog-osx-#{version}.zip"
   appcast 'https://github.com/vitorgalvao/fog/releases.atom'
