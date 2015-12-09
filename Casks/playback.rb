@@ -1,6 +1,6 @@
 cask :v1 => 'playback' do
-  version '1.3.1'
-  sha256 'bffca6b43363b8a0a511eae6b3376d0bd0fbcf2c04a6d810cf09acbcd087bb38'
+  version '1.6.0'
+  sha256 '32588de0f9f8c6281cae11e4f64f5f4e4d3919f5d8b94d03be4d8552fbd8f0a8'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/mafintosh/playback/releases/download/v#{version}/Playback.app.zip"
