@@ -16,8 +16,7 @@ set +o histexpand
 
 commit_range=''
 cask_dir='Casks'
-bin_dir='bin'
-brew_cask="$bin_dir/brew-cask"
+brew_cask="cmd/brew-cask.rb"
 
 ###
 ### functions
