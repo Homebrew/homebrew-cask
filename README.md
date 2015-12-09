@@ -54,7 +54,7 @@ When reporting bugs, remember that homebrew-cask is an independent project from 
 Before reporting a bug, make sure you have the latest versions of homebrew, homebrew-cask, and all Taps by running the following command:
 
 ```bash
-$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+$ brew update ; brew cleanup ; brew cask cleanup
 ```
 
 If the issue persists, please run the problematic command with the `--verbose` flag and post its and `brew cask doctor`’s outputs in distinct [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
