@@ -101,6 +101,9 @@ modified_files () {
 
 _audit_modified_casks () {
     commit_range="$1"
+    if [[ -n "$TRAVIS" ]]; then
+      echo "Commit range: $commit_range"
+    fi
     cd_to_project_root
     while read -r cask_file; do
         audit_cask "$cask_file"
