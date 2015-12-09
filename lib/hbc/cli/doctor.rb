@@ -184,9 +184,12 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
   # things are less dependable.
   def self.render_install_location(current_version)
     locations = Dir.glob(homebrew_cellar.join('brew-cask', '*')).reverse
-    locations.each do |l|
-      basename = File.basename l
-      l.concat %Q{ #{error_string %Q{error: old version. Run "brew cleanup".}}} unless basename == current_version
+    if locations.empty?
+      none_string
+    else
+      locations.collect do |l|
+        %Q{#{l} #{error_string %Q{error: legacy install. Run "brew uninstall --force brew-cask".}}}
+      end
     end
   end
 
