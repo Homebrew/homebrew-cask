@@ -26,10 +26,11 @@ describe "Repo layout" do
   TOPLEVEL_DIRS = %w{
                      .git
                      Casks
-                     bin
+                     cmd
                      developer
                      doc
                      lib
+                     man
                      spec
                      test
                     }
