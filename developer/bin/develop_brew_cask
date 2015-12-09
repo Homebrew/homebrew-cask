@@ -6,7 +6,7 @@
 #  production_brew_cask
 #
 
-called_as="$(basename $0)"
+called_as="$(basename "$0")"
 
 ###
 ### settings
@@ -29,10 +29,10 @@ dev_links=("cmd" "lib" "Casks")
 ###
 
 warn () {
-    local message="$@"
+    local message="$*"
     message="${message//\\t/$'\011'}"
     message="${message//\\n/$'\012'}"
-    message="${message%"${message##*[![:space:]]}"}"
+    message="${message%${message##*[![:space:]]}}"
     printf "%s\n" "$message" 1>&2
 }
 
@@ -42,9 +42,10 @@ die () {
 }
 
 cd_to_project_root () {
-    local script_dir="$(/usr/bin/dirname "$0")"
+    local script_dir git_root
+    script_dir="$(/usr/bin/dirname "$0")"
     cd "$script_dir"
-    local git_root="$(git rev-parse --show-toplevel)"
+    git_root="$(git rev-parse --show-toplevel)"
     if [[ -z "$git_root" ]]; then
         die "ERROR: Could not find git project root"
     fi
@@ -119,13 +120,14 @@ _production_brew_cask_production_action () {
 }
 
 _main () {
+    local git_root brew_repository taps_dir tap_dir
 
     # initialization
     cd_to_project_root
-    local git_root="$(/bin/pwd)"
-    local brew_repository="$(brew --repository)"
-    local taps_dir="$brew_repository/$taps_subdir"
-    local tap_dir="$taps_dir/$cask_tap_subdir"
+    git_root="$(/bin/pwd)"
+    brew_repository="$(brew --repository)"
+    taps_dir="$brew_repository/$taps_subdir"
+    tap_dir="$taps_dir/$cask_tap_subdir"
 
     # sanity check
     not_inside_homebrew "$tap_dir" "$git_root"
