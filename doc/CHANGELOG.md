@@ -4,7 +4,7 @@
 
 **NOTE** This is the final release of Homebrew-cask. As of this release, it is no longer necessary to `brew install brew-cask`. `brew tap caskroom/cask` will install `brew-cask` as a Homebrew [external command](https://github.com/Homebrew/homebrew/blob/15f291ddaa05cc010456a733b799382175c29dd4/share/doc/homebrew/External-Commands.md), and `brew update` will keep it up-to-date.
 
-You can `brew update && brew uninstall --force brew-cask` to clean up.
+You can `brew uninstall --force brew-cask && brew update` to clean up.
 
 * __Casks__
   - 76 Casks added (588 updated) by 278 contributors since 0.59.0
