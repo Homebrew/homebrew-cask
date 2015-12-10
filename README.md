@@ -1,5 +1,7 @@
 # Homebrew-Cask
 
+#### Important December update: Homebrew-Cask will now be kept up to date together with Homebrew (see [#15381](https://github.com/caskroom/homebrew-cask/pull/15381) for details). If you haven’t yet, run `brew uninstall --force brew-cask; brew update` to switch to the new system.
+
 #### Important: At some point in the future Homebrew-cask will change its behaviour from linking apps to moving them. See [issue #13201](https://github.com/caskroom/homebrew-cask/issues/13201) for details.
 ---
 
@@ -56,6 +58,8 @@ Before reporting a bug, make sure you have the latest versions of homebrew, home
 ```bash
 $ brew update ; brew cleanup ; brew cask cleanup
 ```
+
+In addition, if you haven’t yet, run `brew uninstall --force brew-cask; brew update` once to [switch to the new system](https://github.com/caskroom/homebrew-cask#important-december-update-homebrew-cask-will-now-be-kept-up-to-date-together-with-homebrew-see-15381-for-details-if-you-havent-yet-run-brew-uninstall---force-brew-cask-brew-update-to-switch-to-the-new-system).
 
 If the issue persists, please run the problematic command with the `--verbose` flag and post its and `brew cask doctor`’s outputs in distinct [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
 
