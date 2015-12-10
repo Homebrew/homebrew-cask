@@ -56,7 +56,7 @@ When reporting bugs, remember that homebrew-cask is an independent project from 
 Before reporting a bug, make sure you have the latest versions of homebrew, homebrew-cask, and all Taps by running the following command:
 
 ```bash
-$ brew update ; brew cleanup ; brew cask cleanup
+$ brew update; brew cleanup; brew cask cleanup
 ```
 
 In addition, if you haven’t yet, run `brew uninstall --force brew-cask; brew update` once to [switch to the new system](https://github.com/caskroom/homebrew-cask#important-december-update-homebrew-cask-will-now-be-kept-up-to-date-together-with-homebrew-see-15381-for-details-if-you-havent-yet-run-brew-uninstall---force-brew-cask-brew-update-to-switch-to-the-new-system).
