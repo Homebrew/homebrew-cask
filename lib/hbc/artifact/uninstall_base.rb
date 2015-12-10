@@ -184,7 +184,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
     directives_set.each do |directives|
       unknown_keys = directives.keys - [:early_script, :launchctl, :quit, :signal, :kext, :script, :pkgutil, :delete, :trash, :rmdir]
       unless unknown_keys.empty?
-        opoo %Q{Unknown arguments to #{stanza} -- #{unknown_keys.inspect}. Running "brew update ; brew cleanup ; brew cask cleanup" will likely fix it.}
+        opoo %Q{Unknown arguments to #{stanza} -- #{unknown_keys.inspect}. Running "brew update; brew cleanup; brew cask cleanup" will likely fix it.}
       end
     end
 
