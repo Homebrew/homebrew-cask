@@ -1,6 +1,6 @@
 cask :v1 => 'pycharm-edu' do
-  version '2.0.2'
-  sha256 '9801d8d8a32632600f416e68879f992a4e1875ead354978e3016c66fa775a2f0'
+  version '2.0.3'
+  sha256 '2c3b98051c90e5647ada4e4f3b33ad1c974b88ee1f30d1631e7a874e8dcafe3d'
 
   url "https://download.jetbrains.com/python/pycharm-edu-#{version}.dmg"
   name 'PyCharm'
