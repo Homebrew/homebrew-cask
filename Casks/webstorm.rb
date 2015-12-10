@@ -8,7 +8,6 @@ cask :v1 => 'webstorm' do
   license :commercial
 
   app 'WebStorm.app'
-  binary 'WebStorm.app/Contents/MacOS/webstorm'
 
   zap :delete => [
                   '~/.WebStorm11',
