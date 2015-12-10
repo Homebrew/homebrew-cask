@@ -1,6 +1,6 @@
 cask :v1 => 'textmate' do
-  version '2.0-beta.8'
-  sha256 'd3a55811439bb9878ce591e906c3540bf5ef18e6f46b224a57640c55d303c4f0'
+  version '2.0-beta.8.5'
+  sha256 '18ef15feea960cff6034c9cbe5e3cb38cbf0fcd0d57e4b8c78656a392dd5dc07'
 
   # textmate.org is the official download host per the vendor homepage
   url "https://api.textmate.org/downloads/TextMate_#{version}.tbz"
