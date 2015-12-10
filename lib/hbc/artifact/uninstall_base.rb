@@ -145,6 +145,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
                         :launchctl,
                         :quit,
                         :signal,
+                        :login_item,
                         :kext,
                         :script,
                         :pkgutil,
@@ -296,6 +297,16 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
           sleep 3
         end
       end
+    end
+  end
+
+  def uninstall_login_item(directives)
+    Array(directives[:login_item]).each do |name|
+      ohai "Removing login item #{name}"
+      @command.run!('/usr/bin/osascript',
+                    :args => ['-e', %Q{tell application "System Events" to delete every login item whose name is "#{name}"}],
+                    :sudo => false)
+      sleep 1
     end
   end
 
