@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "BREW\-CASK" "1" "November 2015" "Homebrew-cask" "brew-cask"
+.TH "BREW\-CASK" "1" "December 2015" "Homebrew-cask" "brew-cask"
 .
 .SH "SYNOPSIS"
 \fBbrew cask\fR command [options] [\fItoken\fR \.\.\.]
@@ -189,7 +189,7 @@ Target location for “helper” executable links\. The default value is \fB/usr
 Output debugging information of use to Cask authors and developers\.
 .
 .SH "INTERACTION WITH HOMEBREW"
-Homebrew\-cask is implemented as a external command for Homebrew\. That means this project is entirely built upon the Homebrew infrastructure\. For example, upgrades to the Homebrew\-cask tool are received through Homebrew: \fBbrew update && brew upgrade brew\-cask && brew cleanup && brew cask cleanup\fR
+Homebrew\-cask is implemented as a external command for Homebrew\. That means this project is entirely built upon the Homebrew infrastructure\. For example, upgrades to the Homebrew\-cask tool are received through Homebrew: \fBbrew update; brew cleanup; brew cask cleanup\fR
 .
 .P
 And updates to individual Cask definitions are received whenever you issue the Homebrew command: brew update

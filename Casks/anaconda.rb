@@ -1,6 +1,6 @@
 cask :v1_1 => 'anaconda' do
-  version '2.4.0'
-  sha256 '6d41e4cace78d9ed3cc4151898236ee8688cf8135cffd21de4727199c96c4737'
+  version '2.4.1'
+  sha256 '22a3267638da9b7d64210d7da90d8762da7948234c21c0010a74f2621ee0ef68'
 
   url "https://repo.continuum.io/archive/Anaconda3-#{version}-MacOSX-x86_64.sh"
   name 'Anaconda'

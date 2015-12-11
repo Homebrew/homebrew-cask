@@ -1,11 +1,11 @@
 cask :v1 => 'adobe-indesign-cc' do
-  version :latest
-  sha256 :no_check
+  version '2015'
+  sha256 '1387e8180cbe61ecff2146df25c2d71dd68fa59e8828928464d20db188b3cd52'
 
   url 'http://trials3.adobe.com/AdobeProducts/IDSN/11/osx10/InDesign_11_LS20.dmg',
       :user_agent => :fake,
       :cookies => { 'MM_TRIALS' => '1234' }
-  name 'Adobe InDesign CC 2015'
+  name 'Adobe InDesign CC'
   homepage 'https://www.adobe.com/products/indesign.html'
   license :commercial
   tags :vendor => 'Adobe'

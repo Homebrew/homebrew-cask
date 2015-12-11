@@ -7,7 +7,7 @@ class Hbc::DSL::Postflight < Hbc::DSL::Base
     permitted_keys = [:key]
     unknown_keys = options.keys - permitted_keys
     unless unknown_keys.empty?
-      opoo %Q{Unknown arguments to suppress_move_to_applications -- #{unknown_keys.inspect} (ignored). Running "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" will likely fix it.}
+      opoo %Q{Unknown arguments to suppress_move_to_applications -- #{unknown_keys.inspect} (ignored). Running "brew update; brew cleanup; brew cask cleanup" will likely fix it.}
     end
     key = options[:key] || 'moveToApplicationsFolderAlertSuppress'
     begin
