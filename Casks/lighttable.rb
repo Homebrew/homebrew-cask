@@ -1,15 +1,15 @@
 cask :v1 => 'lighttable' do
-  version '0.7.2'
-  sha256 '236bb18d6715ce3095c975871b7c7f495f306a086dce8a50ff35f267a25c5163'
+  version '0.8.0'
+  sha256 'e8f22456ec9aa0233d8eb407ce49455c728ecf24dc8c0b2e535a9d905173460c'
 
-  # cloudfront.net is the official download host per the vendor homepage
-  url "https://d35ac8ww5dfjyg.cloudfront.net/playground/bins/#{version}/LightTableMac.zip"
+  url "https://github.com/LightTable/LightTable/releases/download/#{version}/lighttable-#{version}-mac.tar.gz"
+  appcast 'https://github.com/LightTable/LightTable/releases.atom'
   name 'Light Table'
   homepage 'http://www.lighttable.com/'
   license :mit
 
-  app 'LightTable/LightTable.app'
-  binary 'LightTable/light'
+  app "lighttable-#{version}-mac/LightTable.app"
+  binary "lighttable-#{version}-mac/light"
 
   zap :delete => [
                   '~/Library/Application Support/LightTable/plugins',
