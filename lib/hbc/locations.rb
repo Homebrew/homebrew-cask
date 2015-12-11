@@ -100,6 +100,10 @@ module Hbc::Locations
       @default_tap = _tap
     end
 
+    def default_tappath
+      @default_tappath ||= homebrew_tapspath.join(default_tap)
+    end
+
     def path(query)
       if query.include?('/')
         token_with_tap = query

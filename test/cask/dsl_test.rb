@@ -27,7 +27,7 @@ describe Hbc::DSL do
         .*
         Unexpected method 'future_feature' called on Cask unexpected-method-cask\\.
         .*
-        brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+        brew update; brew cleanup; brew cask cleanup
         .*
         https://github.com/caskroom/homebrew-cask/issues
       EOREGEX

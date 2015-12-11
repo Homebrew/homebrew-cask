@@ -1,6 +1,6 @@
 cask :v1 => 'mumble' do
-  version '1.2.10'
-  sha256 'f88f56e049b3375544f57777da20ca8461d4b631e4ef0de26fbfc5b789601504'
+  version '1.2.11'
+  sha256 'e7d606013c6e86f0e3d4b6690b21c2af65b19a21b4b737c739ab8a2e63a82ea3'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/mumble-voip/mumble/releases/download/#{version}/Mumble-#{version}.dmg"

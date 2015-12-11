@@ -1,6 +1,6 @@
 cask :v1 => 'webstorm' do
-  version '11.0.1'
-  sha256 'f40b492e52ea0778b31840e618ca9639b84da2c276a56fd19d8325ede4764542'
+  version '11.0.2'
+  sha256 '43e0352fee07fa5b92dd22e557cb1d050ccde0cf97273e02f694930695b15134'
 
   url "https://download.jetbrains.com/webstorm/WebStorm-#{version}-custom-jdk-bundled.dmg"
   name 'WebStorm'
@@ -8,7 +8,6 @@ cask :v1 => 'webstorm' do
   license :commercial
 
   app 'WebStorm.app'
-  binary 'WebStorm.app/Contents/MacOS/webstorm'
 
   zap :delete => [
                   '~/.WebStorm11',

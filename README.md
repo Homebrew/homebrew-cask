@@ -1,5 +1,7 @@
 # Homebrew-Cask
 
+#### Important December update: Homebrew-Cask will now be kept up to date together with Homebrew (see [#15381](https://github.com/caskroom/homebrew-cask/pull/15381) for details). If you haven’t yet, run `brew uninstall --force brew-cask; brew update` to switch to the new system.
+
 #### Important: At some point in the future Homebrew-cask will change its behaviour from linking apps to moving them. See [issue #13201](https://github.com/caskroom/homebrew-cask/issues/13201) for details.
 ---
 
@@ -42,22 +44,31 @@ $ open ~/Applications/"Google Chrome.app"
 
 We’re really rather friendly! Here are the best places to talk about the project:
 
-* Start an [issue on GitHub](https://github.com/caskroom/homebrew-cask/issues/new)
+* Start an issue on GitHub using one of these templates:
+  * [Bug report][bug_report_template]
+  * [Feature request][feature_request_template]
+  * [Cask request][cask_request_template]
 * Join us on IRC, we’re at `#homebrew-cask` on Freenode
 
 ## Reporting Bugs
 
-We still have bugs — and we are busy fixing them!  If you have a problem, don’t be shy about reporting it on our [GitHub issues page](https://github.com/caskroom/homebrew-cask/issues?state=open). Always search for your issue before posting a new one.
+We still have bugs — and we are busy fixing them!  If you have a problem, don’t be shy about [reporting it][bug_report_template] on our [GitHub issues page](https://github.com/caskroom/homebrew-cask/issues?state=open). Always search for your issue before posting a new one.
 
 When reporting bugs, remember that homebrew-cask is an independent project from Homebrew. Do your best to direct bug reports to the appropriate project. If your command-line started with `brew cask`, bring the bug to us first!
 
 Before reporting a bug, make sure you have the latest versions of homebrew, homebrew-cask, and all Taps by running the following command:
 
 ```bash
-$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+$ brew update; brew cleanup; brew cask cleanup
 ```
+
+In addition, if you haven’t yet, run `brew uninstall --force brew-cask; brew update` once to [switch to the new system](https://github.com/caskroom/homebrew-cask#important-december-update-homebrew-cask-will-now-be-kept-up-to-date-together-with-homebrew-see-15381-for-details-if-you-havent-yet-run-brew-uninstall---force-brew-cask-brew-update-to-switch-to-the-new-system).
 
 If the issue persists, please run the problematic command with the `--verbose` flag and post its and `brew cask doctor`’s outputs in distinct [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
 
 ## License:
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
+
+[bug_report_template]: https://github.com/caskroom/homebrew-cask/issues/new?title=Bug%20report%3A&body=%28Remember%20to%20run%20%60brew%20update%3B%20brew%20cleanup%3B%20brew%20cask%20cleanup%60%20before%20reporting%20your%20issue.%20It%20usually%20fixes%20things%21%29%0A%0A%23%23%23%20Description%20of%20issue%0A%0A%0A%0A%23%23%23%20Output%20of%20%60brew%20cask%20%3Ccommand%3E%20--verbose%60%0A%0A%60%60%60%0A%28paste%20output%20here%29%0A%60%60%60%0A%0A%23%23%23%20Output%20of%20%60brew%20doctor%60%0A%0A%60%60%60%0A%28paste%20output%20here%29%0A%60%60%60%0A%0A%23%23%23%20Output%20of%20%60brew%20cask%20doctor%60%0A%0A%60%60%60%0A%28paste%20output%20here%29%0A%60%60%60%0A
+[cask_request_template]: https://github.com/caskroom/homebrew-cask/issues/new?title=Cask%20request%3A&body=%23%23%23%20Cask%20details%0A%0A%28Please%20fill%20out%20as%20much%20as%20possible%29%0A%0A%2A%2AName%2A%2A%20-%0A%0A%2A%2AHomepage%2A%2A%20-%0A%0A%2A%2ALicense%2A%2A%20-%0A%0A%2A%2ADownload%20URL%2A%2A%20-%0A%0A%2A%2ADescription%2A%2A%20-%0A
+[feature_request_template]: https://github.com/caskroom/homebrew-cask/issues/new?title=Feature%20request%3A&body=%23%23%23%20Description%20of%20feature%2Fenhancement%0A%0A%0A%0A%23%23%23%20Justification%0A%0A%0A%0A%23%23%23%20Example%20use%20case%0A%0A%0A%0A

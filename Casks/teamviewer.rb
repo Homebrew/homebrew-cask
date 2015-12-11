@@ -12,6 +12,7 @@ cask :v1 => 'teamviewer' do
   uninstall :pkgutil   => 'com.teamviewer.*',
             :launchctl => 'com.teamviewer.service',
             :delete    => [
+                            '/Aplications/TeamViewer.app',
                             '/Library/LaunchAgents/com.teamviewer.teamviewer_desktop.plist',
                             '/Library/LaunchAgents/com.teamviewer.teamviewer.plist',
                             '/Library/LaunchDaemons/com.teamviewer.Helper.plist',

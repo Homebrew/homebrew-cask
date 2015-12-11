@@ -1,6 +1,6 @@
 cask :v1 => 'screens' do
-  version '3.6.8b4690'
-  sha256 'f452fe0ed4e75ba1637c5557c759b71cc3d6fe7767ad3e176ecba6dd75964587'
+  version '3.6.9b4770'
+  sha256 '818c2598dedd12a37827f27d0ecf111102739ec595be183bb487d281da969366'
 
   url "http://download.edovia.com/screens/Screens%20#{version}.zip"
   name 'Screens'
