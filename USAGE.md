@@ -9,12 +9,6 @@ $ brew --version
 0.9.5
 ```
 
-Install the homebrew-cask tool:
-
-```bash
-$ brew install caskroom/cask/brew-cask
-```
-
 ## Frequently Used Commands
 
 Homebrew-cask is implemented as a subcommand of Homebrew. All homebrew-cask commands begin with `brew cask`. Homebrew-cask has its own set of command verbs many of which are similar to Homebrew’s. The most frequently-used
