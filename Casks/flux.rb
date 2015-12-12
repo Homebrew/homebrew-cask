@@ -1,4 +1,4 @@
-cask :v1 => 'flux' do
+cask :v1_2 => 'flux' do
   version '36-5'
   sha256 '83fcca5c8b050da1e898bf9e39e01ba62ba766ecfbebc9ebc50dc910f249f5c6'
 
@@ -13,6 +13,8 @@ cask :v1 => 'flux' do
   postflight do
     suppress_move_to_applications
   end
+
+  uninstall :login_item => 'Flux'
 
   zap :delete => '~/Library/Preferences/org.herf.Flux.plist'
 end
