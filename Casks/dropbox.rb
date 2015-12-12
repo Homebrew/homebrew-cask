@@ -1,4 +1,4 @@
-cask :v1 => 'dropbox' do
+cask :v1_2 => 'dropbox' do
   version :latest
   sha256 :no_check
 
@@ -8,6 +8,8 @@ cask :v1 => 'dropbox' do
   license :gratis
 
   app 'Dropbox.app'
+
+  uninstall :login_item => 'Dropbox'
 
   zap :delete => '~/.dropbox'
 end
