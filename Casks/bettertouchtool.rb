@@ -1,4 +1,4 @@
-cask :v1 => 'bettertouchtool' do
+cask :v1_2 => 'bettertouchtool' do
 
   if MacOS.release <= :snow_leopard
     version '0.939'
@@ -20,6 +20,8 @@ cask :v1 => 'bettertouchtool' do
   app 'BetterTouchTool.app'
 
   accessibility_access true
+
+  uninstall :login_item => 'BetterTouchTool'
 
   zap :delete => [
                   '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',
