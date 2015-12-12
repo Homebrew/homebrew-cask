@@ -642,6 +642,7 @@ Since `pkg` installers can do arbitrary things, different techniques are needed 
 * `:launchctl` (string or array) - ids of `launchctl` jobs to remove
 * `:quit` (string or array) - bundle ids of running applications to quit
 * `:signal` (array of arrays) - signal numbers and bundle ids of running applications to send a Unix signal to (used when `:quit` does not work)
+* `:login_item` (string or array) - names of login items to remove
 * `:kext` (string or array) - bundle ids of kexts to unload from the system
 * `:pkgutil` (string, regexp or array of strings and regexps) - strings or regexps matching bundle ids of packages to uninstall using `pkgutil`
 * `:script` (string or hash) - relative path to an uninstall script to be run via sudo; use hash if args are needed
@@ -741,6 +742,16 @@ An example, with commonly-used signals in ascending order of severity:
 Note that when multiple running processes match the given Bundle ID, all matching processes will be signaled.
 
 Unlike `:quit` directives, Unix signals originate from the current user, not from the superuser. This is construed as a safety feature, since the superuser is capable of bringing down the system via signals. However, this inconsistency may also be considered a bug, and should be addressed in some fashion in a future version.
+
+### Uninstall key :login_item
+
+Login items associated with an Application bundle on disk can be listed using the command:
+
+```bash
+$ ./developer/bin/list_login_items_for_app </path/to/application.app>
+```
+
+Note that you will likely need to have opened the app at least once for any login items to be present.
 
 ### Uninstall Key :kext
 

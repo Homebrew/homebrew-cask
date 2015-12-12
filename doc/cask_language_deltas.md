@@ -62,6 +62,10 @@ The term `:v1` identifies the DSL version (currently 1.0), and defines the featu
 * [`*flight set_ownership`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
 * [`*flight set_permissions`](CASK_LANGUAGE_REFERENCE.md#flight-stanzas-details)
 
+### (1.2)
+
+* [`uninstall :login_item`](CASK_LANGUAGE_REFERENCE.md#uninstall-key-login_item)
+
 ## Renamed Forms (1.0)
 
 | old form                                | new form
