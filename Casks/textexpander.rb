@@ -1,4 +1,4 @@
-cask :v1 => 'textexpander' do
+cask :v1_2 => 'textexpander' do
   if Hardware::CPU.type == :ppc && MacOS.release <= :leopard
     version '2.5'
     sha256 'dfcb5a66fd590dc6dabd4fe8586a0d83cf7d264e23d9e309c0d77ae8cd89ad86'
@@ -34,6 +34,8 @@ cask :v1 => 'textexpander' do
   app 'TextExpander.app'
 
   accessibility_access true
+
+  uninstall :login_item => 'TextExpander'
 
   zap :delete => '~/Library/Application Support/TextExpander/'
 end
