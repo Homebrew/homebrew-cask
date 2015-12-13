@@ -5,7 +5,7 @@ cask :v1 => 'xbench' do
   url "http://xbench.com/Xbench_#{version}.dmg"
   name 'Xbench'
   homepage 'http://xbench.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'XBench.app'
 end

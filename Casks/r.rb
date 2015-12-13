@@ -7,8 +7,8 @@ cask :v1 => 'r' do
     url "http://cran.rstudio.com/bin/macosx/R-#{version}-snowleopard.pkg"
     pkg "R-#{version}-snowleopard.pkg"
   else
-    version '3.2.2'
-    sha256 '747bafd900695434133e200551e28fd1b2485473a9e374c80deb4bec73827d73'
+    version '3.2.3'
+    sha256 '13bf63bd2f4247d9ee63b87fafdd2c8646171f5524356e6fc27e818f59bf008d'
     # rstudio.com is the official download host per the vendor homepage
     url "http://cran.rstudio.com/bin/macosx/R-#{version}.pkg"
     pkg "R-#{version}.pkg"

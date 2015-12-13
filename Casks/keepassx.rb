@@ -1,8 +1,8 @@
 cask :v1 => 'keepassx' do
-  version '2.0-beta2'
-  sha256 'ae4a40796b12496440aa6781534930f0f80ec175cd6ff03daf3481ad6e013f50'
+  version '2.0'
+  sha256 'e3b497e57beb3ef2878a78851ed680a0eba074f8aca475f3d90b8e7ad9d2e714'
 
-  url "https://www.keepassx.org/dev/attachments/download/117/KeePassX-#{version}.dmg"
+  url "https://www.keepassx.org/releases/#{version}/KeePassX-#{version}.dmg"
   name 'KeePassX'
   homepage 'http://www.keepassx.org'
   license :bsd

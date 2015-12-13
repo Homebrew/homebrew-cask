@@ -8,7 +8,7 @@ cask :v1 => 'duet' do
   appcast 'http://updates.duetdisplay.com/checkMacUpdates',
           :sha256 => 'df779f7d35f7327a12bec484865311b869e6d09ccc6b43e11599d1dd47d1bc9d'
   homepage 'http://www.duetdisplay.com/'
-  license :unknown
+  license :gratis
 
   app 'duet.app'
 

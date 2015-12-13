@@ -1,6 +1,6 @@
 cask :v1 => 'racket' do
-  version '6.2.1'
-  sha256 '7a8f61e2ecb17cc4ce05a45f7bbd02bddabda1213ca0dd25391f536387055eb5'
+  version '6.3'
+  sha256 '489bcbae3ecfbbedf82c54c9cf75b93e74feeac317cee112cfe27f2719985121'
 
   url "http://mirror.racket-lang.org/installers/#{version}/racket-#{version}-x86_64-macosx.dmg"
   name 'Racket'

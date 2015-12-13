@@ -2,12 +2,13 @@ cask :v1 => 'xquartz' do
   version '2.7.8'
   sha256 '17a4c2da1ab3b676fdf80d1a0714c6bfd22183a604e823b4fd8329fdb4432c2a'
 
+  # macosforge.org is the official download host per the vendor homepage
   url "https://xquartz.macosforge.org/downloads/SL/XQuartz-#{version}.dmg"
   appcast 'https://xquartz-dl.macosforge.org/sparkle/release.xml',
-          :sha256 => '9792f0d6abd547e523f6ca33c4dd3847134bc3d46d77ac91b93fe932d6123568'
+          :sha256 => '0b2c7d4e0b101eefc0a3efb000b779b3ec7246fcb5d14a0540e85f540f26a9e6'
   name 'XQuartz'
-  homepage 'https://xquartz.macosforge.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'http://www.xquartz.org/'
+  license :oss
 
   pkg 'XQuartz.pkg'
 

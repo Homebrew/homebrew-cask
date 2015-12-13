@@ -1,8 +1,9 @@
 cask :v1 => 'marked' do
-  version :latest
-  sha256 :no_check
+  version '2.5.3910'
+  sha256 'd3c9193fff0c349e0efaf5f14fd9c44d18545044e469d27340ef2c44864f02de'
 
-  url 'http://marked2app.com/download/Marked.zip'
+  # abyss.designheresy.com is the official download host per the appcast feed
+  url "http://abyss.designheresy.com/marked/Marked#{version}.zip"
   appcast 'http://abyss.designheresy.com/marked/marked.xml'
   name 'Marked'
   homepage 'http://marked2app.com'

@@ -1,6 +1,6 @@
 cask :v1 => 'rubymine' do
-  version '8.0.0'
-  sha256 '6e20d0fbbd3edf71c44f0c46e6ad8b400a51d5e1604d68fb8ec8ccee8f6e851d'
+  version '8.0.2'
+  sha256 '66494daacb0147bdf9e4f3148f2a7f0bdb4f4b65df108df562d03afa1acc23a3'
 
   url "https://download.jetbrains.com/ruby/RubyMine-#{version}-custom-jdk-bundled.dmg"
   name 'RubyMine'

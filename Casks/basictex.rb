@@ -10,8 +10,10 @@ cask :v1 => 'basictex' do
 
   pkg 'BasicTeX.pkg'
 
-  uninstall :pkgutil => 'org.tug.mactex.basictex2015'
-  caveats do
-    path_environment_variable '/usr/texbin'
-  end
+  uninstall :pkgutil => 'org.tug.mactex.basictex2015',
+            :delete  => [
+                         '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
+                         '/etc/paths.d/TeX',
+                         '/etc/manpaths.d/TeX'
+                        ]
 end

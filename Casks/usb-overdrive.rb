@@ -11,7 +11,7 @@ cask :v1 => 'usb-overdrive' do
   url "http://www.senlick.com/macsw/USB-Overdrive-#{version.delete('.')}.dmg"
   name 'USB Overdrive'
   homepage 'http://www.usboverdrive.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   pkg 'Install USB Overdrive.pkg'
 

@@ -1,6 +1,6 @@
 cask :v1 => 'goofy' do
-  version '2.2.3'
-  sha256 '6d57b7c6067c63e3096eb49120138642488a4ff33a902fd9adac44fcfe415700'
+  version '2.2.4'
+  sha256 '95c85fb48a89d5f8e0e54ecfd24f3e1829d0cd63758cb2119cefe8e827293e81'
 
   # github.com is the official download host per the appcast feed
   url "https://github.com/danielbuechele/goofy/releases/download/v#{version}/Goofy.app.zip"

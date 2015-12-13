@@ -8,5 +8,8 @@ cask :v1 => 'gateblu' do
   homepage 'https://gateblu.octoblu.com'
   license :mit
 
-  app 'Gateblu.app'
+  pkg 'Gateblu Installer.pkg'
+
+  uninstall :pkgutil => 'com.octoblu.*',
+            :delete => '/Applications/Gateblu.app'
 end

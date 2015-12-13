@@ -5,7 +5,7 @@ cask :v1 => 'wakeonlan' do
   url "https://www.readpixel.com/downloads/files/WakeOnLan#{version}.zip"
   name 'WakeOnLan'
   homepage 'https://www.readpixel.com/wakeonlan/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'WakeOnLan/WakeOnLan.app'
 end

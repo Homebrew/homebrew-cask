@@ -1,6 +1,6 @@
 cask :v1_1 => 'docker-machine' do
-  version '0.5.0'
-  sha256 '75f18940c734425b3635c9485da148910dee6612cc677549563ba7662e3d36f6'
+  version '0.5.2'
+  sha256 '298a9d51d00c3b01c7b74853f19638467a07b6cf954d3116c0252232879de42e'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/docker/machine/releases/download/v#{version}/docker-machine_darwin-amd64.zip"
@@ -26,6 +26,6 @@ cask :v1_1 => 'docker-machine' do
   binary 'docker-machine-driver-vmwarevcloudair'
   binary 'docker-machine-driver-vmwarevsphere'
 
-  depends_on :formula => 'docker'
+  depends_on :cask => 'docker'
   depends_on :arch => :x86_64
 end

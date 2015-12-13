@@ -37,6 +37,8 @@ describe Hbc::Artifact::Zap do
       Hbc::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application "System Events" to count processes whose bundle identifier is "my.fancy.package.app"'], '1')
       Hbc::FakeSystemCommand.stubs_command(['/usr/bin/sudo', '-E', '--', '/usr/bin/osascript', '-e', 'tell application id "my.fancy.package.app" to quit'])
 
+      Hbc::FakeSystemCommand.expects_command(['/usr/bin/osascript', '-e', 'tell application "System Events" to delete every login item whose name is "Fancy"'])
+
       Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', @cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool'), '--please'])
       Hbc::FakeSystemCommand.expects_command(['/usr/bin/sudo', '-E', '--', '/bin/rm', '-rf', '--',
                                                Pathname.new('~/Library/Preferences/my.fancy.app.plist').expand_path])

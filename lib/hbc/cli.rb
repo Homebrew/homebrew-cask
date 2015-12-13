@@ -229,15 +229,13 @@ class Hbc::CLI
 
     def run(*args)
       if args.include?('--version') or @attempted_verb == '--version'
-        puts HBC_VERSION
+        puts Hbc.full_version
       else
         purpose
-        if @attempted_verb and @attempted_verb != "help"
-          puts "!! "
-          puts "!! no command verb: #{@attempted_verb}"
-          puts "!! \n\n"
-        end
         usage
+        unless @attempted_verb.to_s.strip.empty? || @attempted_verb == "help"
+          raise Hbc::CaskError.new("Unknown command: #{@attempted_verb}")
+        end
       end
     end
 

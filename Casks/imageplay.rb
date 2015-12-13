@@ -1,9 +1,9 @@
 cask :v1 => 'imageplay' do
-  version '6.0.0-beta.4'
-  sha256 'e15443e31a8199153b483422c7f43c9eea17f261cefc3fff38748169caa8269b'
+  version '6.0.0'
+  sha256 '669b56528cd8c8634c1d16f0fce0c0c450004705b55566922a4062974d7df01e'
 
   # github.com is the official download host per the vendor homepage
-  url "https://github.com/cpvrlab/ImagePlay/releases/download/#{version}/ImagePlay.#{version}.dmg"
+  url "https://github.com/cpvrlab/ImagePlay/releases/download/#{version}/ImagePlay-#{version}.dmg"
   appcast 'https://github.com/cpvrlab/ImagePlay/releases.atom'
   name 'ImagePlay'
   homepage 'http://imageplay.io/'

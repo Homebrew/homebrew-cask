@@ -1,5 +1,50 @@
 # CHANGELOG
 
+## 0.60.0
+
+**NOTE** This is the final release of Homebrew-cask. As of this release, it is no longer necessary to `brew install brew-cask`. `brew tap caskroom/cask` will install `brew-cask` as a Homebrew [external command](https://github.com/Homebrew/homebrew/blob/15f291ddaa05cc010456a733b799382175c29dd4/share/doc/homebrew/External-Commands.md), and `brew update` will keep it up-to-date.
+
+You can `brew uninstall --force brew-cask && brew update` to clean up.
+
+* __Casks__
+  - 76 Casks added (588 updated) by 278 contributors since 0.59.0
+  - 2910 total Casks
+* __Features__
+  - [#15381][] Warn of legacy installs in doctor <3 [@mikemcquaid][]
+    - Changes to develop_brew_cask for #15381
+    - brew-cask: move to using tap cmd directory.
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#15685][] Error out if user attempts an unknown command
+  - [#14845][] invoke chown more reliable while removing remove artifacts <3 [@forkbomber][]
+  - [#14648][] installer.rb: fix accessibility access conditional order
+* __Internal Changes__
+  - [#15424][] generic_unar.rb: use long flags
+    - Move .rubocop_todo.yml from to TOPLEVEL_FILES
+  - [#14716][] last changes of 'brew --prefix' into 'brew --repository'
+* __Documentation__
+  - [#14652][] finished removing maintainers
+    - added adityadalal924 as maintainer
+    - removed old maintainers (and fixed missing ones)
+  - 15 doc commits since 0.59.0
+* __Contributors__
+  - 140 new contributors since 0.59.0
+  - 2523 total contributors
+* __Release Date__
+  - 2015-12-09 21:00:00 UTC
+
+
+[#14648]: https://github.com/caskroom/homebrew-cask/issues/14648
+[#14652]: https://github.com/caskroom/homebrew-cask/issues/14652
+[#14716]: https://github.com/caskroom/homebrew-cask/issues/14716
+[#14845]: https://github.com/caskroom/homebrew-cask/issues/14845
+[#15381]: https://github.com/caskroom/homebrew-cask/issues/15381
+[#15424]: https://github.com/caskroom/homebrew-cask/issues/15424
+[#15685]: https://github.com/caskroom/homebrew-cask/issues/15685
+[@forkbomber]: https://github.com/forkbomber
+[@mikemcquaid]: https://github.com/mikemcquaid
+
 ## 0.59.0
 
 * __Casks__

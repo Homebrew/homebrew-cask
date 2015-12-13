@@ -4,9 +4,9 @@ cask :v1 => 'a-better-finder-rename' do
 
   url 'http://www.publicspace.net/download/ABFRX.dmg'
   name 'A Better Finder Rename'
-  appcast 'http://www.publicspace.net/app/signed_abfr9.xml'
+  appcast 'http://www.publicspace.net/app/signed_abfr10.xml'
   homepage 'http://www.publicspace.net/ABetterFinderRename/'
   license :commercial
 
-  app 'A Better Finder Rename 9.app'
+  app 'A Better Finder Rename 10.app'
 end

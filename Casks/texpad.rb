@@ -1,8 +1,8 @@
 cask :v1 => 'texpad' do
 
   if MacOS.release >= :mavericks
-    version '1.7.18'
-    sha256 '7bd9d72b548b8d580d69254005e759aa6fb2d81bb1e44a4fa801a6b859614bf7'
+    version '1.7.19'
+    sha256 '7caba1e52fda572f32944fc52d37c2b1e2b0fb3b6794c930bc7cf247dd825316'
     url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.gsub('.','_')}.zip"
   elsif MacOS.release <= :mountain_lion && MacOS.release >= :snow_leopard
     version '1.6.14'

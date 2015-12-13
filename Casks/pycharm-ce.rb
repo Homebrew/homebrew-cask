@@ -1,6 +1,6 @@
 cask :v1 => 'pycharm-ce' do
-  version '5.0'
-  sha256 '770596ac464012439e2ff25b7ba3c49996f916a5af18a94a582c8427e61ca4e6'
+  version '5.0.2'
+  sha256 'ccb67b2b10c51b139f7d186b6670771487fe967bb10211e6d89896ce3b6125d0'
 
   url "https://download.jetbrains.com/python/pycharm-community-#{version}-jdk-bundled.dmg"
   name 'PyCharm'

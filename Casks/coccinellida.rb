@@ -1,10 +1,10 @@
 cask :v1 => 'coccinellida' do
-  version '0.6.1'
-  sha256 'bd590bf54667b85b4c14dae95d727bfa44cc893a75f231490b48a4a65049d8df'
+  version '0.7'
+  sha256 '9eb8376fa3764e406433aff969fb5aa9f8ba78886948d013ea690cf979baaf88'
 
   url "http://downloads.sourceforge.net/project/coccinellida/Coccinellida-#{version}.zip"
-  appcast 'http://coccinellida.sourceforge.net/sparkle.xml',
-          :sha256 => '8d868a49b014c2ccee0289d54a0a22883c6eadc20e2246f58c49939ad00b55a1'
+  appcast 'https://raw.githubusercontent.com/troydm/coccinellida/master/sparkle.xml',
+          :sha256 => 'd336e5c62e70c015481efc58d550cead48e8dac5b92fee4469fe0b79d08a0baa'
   name 'Coccinellida'
   homepage 'http://coccinellida.sourceforge.net/'
   license :gpl

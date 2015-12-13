@@ -1,14 +1,13 @@
 cask :v1 => 'encryptr' do
-  version '1.2.0'
-  sha256 '6216e5185755b8f24b2b0a950e3c1b511df11730dca968bff5e42b3ba0ad9bf8'
+  version '2.0.0'
+  sha256 '54e2ef8f8c4d22a20793b68fd35c65f8af34ffd783c48140b84c1a9b445589ea'
 
-  # github.com is the official download host per the vendor homepage
-  url "https://github.com/devgeeks/Encryptr/releases/download/v#{version}/Encryptr-v#{version}-mac.dmg"
-  appcast 'https://github.com/devgeeks/Encryptr/releases.atom'
+  url "https://spideroak.com/dist/encryptr/signed/osx/Encryptr-v#{version}-mac.dmg"
+  appcast 'https://github.com/SpiderOak/Encryptr/releases.atom'
   name 'Encryptr'
-  homepage 'https://encryptr.org/'
+  homepage 'https://spideroak.com/solutions/encryptr'
   license :gpl
-  tags :vendor => 'Devgeeks'
+  tags :vendor => 'SpiderOak'
 
   app 'Encryptr.app'
 
