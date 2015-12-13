@@ -16,6 +16,8 @@ cask :v1 => 'maintenance' do
     url 'http://www.titanium.free.fr/download/109/Maintenance.dmg'
   elsif MacOS.release == :yosemite
     url 'http://www.titanium.free.fr/download/1010/Maintenance.dmg'
+  elsif MacOS.release == :el_capitan
+    url 'http://joel.barriere.pagesperso-orange.fr/download/1011/Maintenance.dmg'
   else
     # Unusual case: there is no fall-through.  The software will stop
     # working, or is dangerous to run, on the next OS X release.
@@ -35,6 +37,7 @@ cask :v1 => 'maintenance' do
                           :mountain_lion
                           :mavericks
                           :yosemite
+                          :el_capitan
                          }
 
   caveats do
