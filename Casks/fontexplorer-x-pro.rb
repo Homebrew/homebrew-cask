@@ -12,8 +12,6 @@ cask :v1 => 'fontexplorer-x-pro' do
   app 'FontExplorer X Pro.app'
 
   zap :delete => [
-                  # todo: is this user-created content?
-                  # '~/FontExplorer X',
                   '/Library/PrivilegedHelperTools/com.linotype.FontExplorerX.securityhelper',
                   '/Library/LaunchDaemons/com.linotype.FontExplorerX.securityhelper.plist',
                   '~/Library/Application Support/Linotype/FontExplorer X',
