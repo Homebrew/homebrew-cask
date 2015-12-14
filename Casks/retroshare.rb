@@ -1,11 +1,15 @@
 cask :v1 => 'retroshare' do
-  version '0.5.5b'
-  sha256 '24beb2e1087e7a93ba996030c0785cd9f3a575d3adc5dcfda0d58aab3b40aebe'
+  version '0.6.0-RC2'
+  sha256 '94d339613f61df4a1d74fd9e7e13ca40c4773af35ffd3ab721723d58a818dfdd'
 
-  url "http://downloads.sourceforge.net/project/retroshare/RetroShare/#{version}/Retroshare-V#{version}-svn6877_OSX10.6u.dmg"
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/RetroShare/RetroShare/releases/download/v#{version}/RetroShare06-RC2.dmg.zip"
+  appcast 'https://github.com/RetroShare/RetroShare/releases.atom'
   name 'RetroShare'
   homepage 'http://retroshare.sourceforge.net/'
   license :gpl
+
+  container :nested => 'RetroShare06-RC2.dmg'
 
   app 'Retroshare.app'
 end
