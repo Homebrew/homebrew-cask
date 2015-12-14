@@ -1,13 +1,13 @@
 cask :v1 => 'silverlight' do
-  version '5.1.40728.0'
+  version '5.1.41105.0'
   sha256 :no_check    # required as upstream package is updated in-place
 
-  url 'http://silverlight.dlservice.microsoft.com/download/8/E/7/8E7D9B4B-2088-4AED-8356-20E65BE3EC91/40728.00/Silverlight.dmg'
+  url 'http://download.microsoft.com/download/8/5/8/858377D7-5FDE-410D-B2FA-411B8078D227/41105/41105.00/Silverlight.dmg'
   name 'Silverlight'
   homepage 'https://www.microsoft.com/silverlight/'
   license :gratis
 
-  pkg 'Silverlight.pkg'
+  pkg 'silverlight.pkg'
 
   uninstall :pkgutil => 'com.microsoft.SilverlightInstaller'
   zap       :delete => [
