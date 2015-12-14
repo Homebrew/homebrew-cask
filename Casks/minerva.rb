@@ -8,6 +8,7 @@ cask :v1 => 'minerva' do
   license :gratis
 
   depends_on :cask => 'adobe-air'
+
   app 'minerva.app'
 
   caveats do
