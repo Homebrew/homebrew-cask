@@ -6,7 +6,7 @@ cask :v1 => 'vox' do
   url 'https://dl.devmate.com/com.coppertino.Vox/Vox.dmg'
   name 'VOX'
   appcast 'http://updates.devmate.com/com.coppertino.Vox.xml',
-          :sha256 => '20c1ab602462b7fc0d5b4cbd555cacf127b69a07a737579598ebcbc0f5b21319'
+          :sha256 => '66ec1b8207f876ef8b77dc062301f8c149c4899647cbe9549ee9f4547a919bad'
   homepage 'https://coppertino.com/vox/mac'
   license :freemium
 
