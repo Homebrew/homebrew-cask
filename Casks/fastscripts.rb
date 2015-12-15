@@ -1,10 +1,10 @@
 cask :v1 => 'fastscripts' do
-  version '2.6.8'
-  sha256 '7cc170ecacad63872fe3faddd8dbaaa8f0e232687dbd8365594221ff64999def'
+  version '2.6.9'
+  sha256 '4b34c5fca7c0478480b6506d66b5969eebc4fcc099e7fa6b1e198f4d172c9ee8'
 
   url "https://www.red-sweater.com/fastscripts/FastScripts#{version}.zip"
   appcast 'https://red-sweater.com/fastscripts/appcast2.php',
-          :sha256 => '500cd40fd4f6a40f76d8329d7246f79414f4d5aeba5bf605be18c16a6de657f5'
+          :sha256 => 'acea39d17b8ea31b829580e079364525869a3ac10b958354cd0914a6df711f18'
   name 'FastScripts'
   homepage 'https://red-sweater.com/fastscripts/'
   license :freemium

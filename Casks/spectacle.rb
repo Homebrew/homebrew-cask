@@ -1,4 +1,4 @@
-cask :v1 => 'spectacle' do
+cask :v1_2 => 'spectacle' do
 
   if MacOS.release <= :mountain_lion
     version '0.8.6'
@@ -18,6 +18,8 @@ cask :v1 => 'spectacle' do
   license :mit
 
   app 'Spectacle.app'
+
+  uninstall :login_item => 'Spectacle'
 
   zap :delete => [
                   '~/Library/Caches/com.divisiblebyzero.Spectacle',

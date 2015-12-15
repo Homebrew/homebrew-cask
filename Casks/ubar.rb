@@ -12,4 +12,11 @@ cask :v1 => 'ubar' do
   app 'uBar.app'
 
   depends_on :macos => '>= :mavericks'
+
+  zap :delete => [
+                  '~/Library/Application Support/uBar',
+                  '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ca.brawer.ubar.sfl',
+                  '~/Library/Caches/ca.brawer.uBar',
+                  '~/Library/Preferences/ca.brawer.uBar.plist',
+                 ]
 end

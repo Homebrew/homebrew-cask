@@ -1,6 +1,6 @@
 cask :v1 => 'photo-supreme-postgresql' do
   version '3'
-  sha256 'ed1d669e46cf073a4720224c0f08aca70da2e6c6687be1a9d733bda9e45a5304'
+  sha256 :no_check  # required as upstream package is updated in place
 
   url 'http://www.idimager.com/Trial/PhotoSupremePostgreSQL_V3.pkg'
   name 'Photo Supreme with PostreSQL'

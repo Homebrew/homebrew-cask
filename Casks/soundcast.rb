@@ -1,9 +1,9 @@
 cask :v1 => 'soundcast' do
-  version :latest
-  sha256 :no_check
+  version '1.5'
+  sha256 '19c53bac9900904ed3773360036ecc04f0c3cc24d09f908e3692b4ac9c422505'
 
-  # dropboxusercontent.com is the official download host per the vendor homepage
-  url 'https://dl.dropboxusercontent.com/u/6618408/soundcast.zip'
+  url "https://github.com/andresgottlieb/soundcast/releases/download/v#{version}/Soundcast_v#{version}.zip"
+  appcast 'https://github.com/andresgottlieb/soundcast/releases.atom'
   name 'Soundcast'
   homepage 'https://github.com/andresgottlieb/soundcast'
   license :mit

@@ -1,4 +1,4 @@
-cask :v1 => 'alfred' do
+cask :v1_2 => 'alfred' do
   version '2.8.1_425'
   sha256 'ed112b6c72701b4b58e3a431d49e4b5139940ed6438ed3fd413f2c9eac693a6b'
 
@@ -15,7 +15,8 @@ cask :v1 => 'alfred' do
     suppress_move_to_applications :key => 'suppressMoveToApplications'
   end
 
-  uninstall :quit => 'com.runningwithcrayons.Alfred-2'
+  uninstall :quit => 'com.runningwithcrayons.Alfred-2',
+            :login_item => 'Alfred 2'
 
   zap :delete => [
                   '~/Library/Application Support/Alfred 2',

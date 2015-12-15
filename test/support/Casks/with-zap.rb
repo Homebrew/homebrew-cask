@@ -12,5 +12,6 @@ cask :v1test => 'with-zap' do
                   :args => %w[--please]
                   },
       :quit => 'my.fancy.package.app',
+      :login_item => 'Fancy',
       :delete => '~/Library/Preferences/my.fancy.app.plist'
 end

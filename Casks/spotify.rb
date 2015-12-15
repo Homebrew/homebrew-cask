@@ -1,4 +1,4 @@
-cask :v1 => 'spotify' do
+cask :v1_2 => 'spotify' do
   version :latest
   sha256 :no_check
 
@@ -10,7 +10,8 @@ cask :v1 => 'spotify' do
 
   app 'Spotify.app'
 
-  uninstall :launchctl => 'com.spotify.webhelper'
+  uninstall :launchctl => 'com.spotify.webhelper',
+            :login_item => 'Spotify'
 
   zap :delete => [
                   '~/Library/Application Support/Spotify',

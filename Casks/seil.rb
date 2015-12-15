@@ -1,6 +1,6 @@
 cask :v1 => 'seil' do
-  version '11.3.0'
-  sha256 '5fd57db4f96b833c4f1005b3d68711bb9ea52f0db8e98a0793eb2a9ff5d290b2'
+  version '12.0.0'
+  sha256 'ebfcc6b8a709048cb4aa81fc7a020112f77282934c4b30aedae8448d6534d65d'
 
   url "https://pqrs.org/osx/karabiner/files/Seil-#{version}.dmg"
   appcast 'https://pqrs.org/osx/karabiner/files/seil-appcast.xml',
@@ -22,5 +22,5 @@ cask :v1 => 'seil' do
                         '~/Library/Preferences/org.pqrs.Seil.plist',
                        ]
 
-  depends_on :macos => '>= :mavericks'
+  depends_on :macos => '>= :el_capitan'
 end
