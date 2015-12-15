@@ -1,6 +1,6 @@
 cask :v1 => 'aliwangwang' do
-  version '3.4.3-4340'
-  sha256 '3f3017c534ffdb3a5c1135eed0bf97623bb5036dc125b19066d6ec93b864d261'
+  version '3.5.0-4428'
+  sha256 'b1ea86f576833084c17ba1d6d66dc31e7941e239cc4474fe9d61e473169c434e'
 
   # alicdn.com is the official download host per the vendor homepage
   url "https://dbison.alicdn.com/updates/macww-nosandbox-#{version}.dmg"
