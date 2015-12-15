@@ -4,7 +4,7 @@ cask :v1 => 'secrets' do
 
   url "https://blacktree-secrets.googlecode.com/files/Secrets_#{version}.zip"
   name 'Secrets'
-  homepage 'http://secrets.blacktree.com'
+  homepage 'https://code.google.com/p/blacktree-secrets/'
   license :oss
 
   prefpane 'Secrets.prefPane'
