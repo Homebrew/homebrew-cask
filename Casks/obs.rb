@@ -1,5 +1,5 @@
 cask :v1 => 'obs' do
-  version '0.12.0'
+  version '0.12.2'
   sha256 '701b8d172b914fb574a70a0e4db907474c9c29316b05a2f41b6cfae872ab0c43'
 
   # github.com is the official download host per the vendor homepage
