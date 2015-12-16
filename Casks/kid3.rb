@@ -8,5 +8,5 @@ cask :v1 => 'kid3' do
   homepage 'http://kid3.sourceforge.net/'
   license :gpl
 
-  app 'Kid3.app'
+  app 'kid3.app'
 end
