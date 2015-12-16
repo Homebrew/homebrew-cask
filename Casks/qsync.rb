@@ -8,7 +8,7 @@ cask :v1 => 'qsync' do
   license :gratis
   tags :vendor => 'Qnap'
 
-  pkg 'Qsync.pkg'
+  pkg 'Qsync Client.pkg'
 
   uninstall :pkgutil => 'com.qnap.qsync.*'
 end
