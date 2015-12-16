@@ -249,6 +249,8 @@ module Hbc::DSL
                                      :binary,
                                      :input_method,
                                      :internet_plugin,
+                                     :audio_unit_plugin,
+                                     :vst_plugin,
                                      :screen_saver,
                                      :pkg,
                                      :stage_only,
