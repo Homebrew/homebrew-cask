@@ -1,4 +1,4 @@
-cask :v1 => 'pineapple-pro' do
+cask :v1 => 'pineapple' do
   version '0.8.0'
   sha256 '9ad7c2371ff5c82be5ad236c17085261dba80f462f19fafd33de6a718c162881'
 
@@ -8,5 +8,5 @@ cask :v1 => 'pineapple-pro' do
   homepage 'http://nwhitehead.github.io/pineapple/'
   license :gpl
 
-  app 'Pineapple-Pro.app'
+  app 'Pineapple.app'
 end
