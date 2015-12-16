@@ -59,6 +59,11 @@ class Hbc::Audit
         add_error "sha256 string must be of 64 hexadecimal characters"
       end
     end
+    if cask.appcast.sha256.kind_of?(String)
+      unless cask.appcast.sha256.length == 64 && cask.appcast.sha256[/^[0-9a-f]+$/i]
+        add_warning "appcast sha256 string must be of 64 hexadecimal characters"
+      end
+    end
   end
 
   def _check_sha256_invalid
@@ -66,6 +71,9 @@ class Hbc::Audit
     empty_sha256 = 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
     if cask.sha256 == empty_sha256
       add_error "cannot use the sha256 for an empty string: #{empty_sha256}"
+    end
+    if cask.appcast.sha256 == empty_sha256
+      add_warning "cannot use the sha256 for an empty string: #{empty_sha256}"
     end
   end
 
