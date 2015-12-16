@@ -65,6 +65,8 @@ The term `:v1` identifies the DSL version (currently 1.0), and defines the featu
 ### (1.2)
 
 * [`uninstall :login_item`](CASK_LANGUAGE_REFERENCE.md#uninstall-key-login_item)
+* [`audio_unit_plugin`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
+* [`vst_plugin`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
 
 ## Renamed Forms (1.0)
 
@@ -94,6 +96,7 @@ The term `:v1` identifies the DSL version (currently 1.0), and defines the featu
 * [`app`](CASK_LANGUAGE_REFERENCE.md#app-stanza-details)
 * [`appcast`](CASK_LANGUAGE_REFERENCE.md#appcast-stanza-details)
 * [`artifact`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
+* [`audio_unit_plugin`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
 * [`binary`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
 * [`caveats`](CASK_LANGUAGE_REFERENCE.md#caveats-stanza-details)
 * [`colorpicker`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
@@ -123,6 +126,7 @@ The term `:v1` identifies the DSL version (currently 1.0), and defines the featu
 * [`uninstall`](CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details)
 * [`url`](CASK_LANGUAGE_REFERENCE.md#url-stanza-details)
 * [`version`](CASK_LANGUAGE_REFERENCE.md#required-stanzas)
+* [`vst_plugin`](CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required)
 * [`zap`](CASK_LANGUAGE_REFERENCE.md#zap-stanza-details)
 
 ## Other Supported Non-stanza Methods (1.0)
