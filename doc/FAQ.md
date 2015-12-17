@@ -12,7 +12,7 @@ The idea is for each Cask to encapsulate and automate the story of how a given a
 
 __Yes, yes, yes!__ Please fork/pull request to update Casks, add features and clean up documentation! Anything you can do to help out is very welcome.
 
-It's also [__pretty darn easy__ to create Casks](../CONTRIBUTING.md), so please build more of them for the software you use. And if homebrew-cask doesn't support the packaging format of your software, please [open an issue](https://github.com/caskroom/homebrew-cask/issues) and we can get it working together.
+It's also [__pretty darn easy__ to create Casks](../CONTRIBUTING.md), so please build more of them for the software you use. And if homebrew-cask doesn't support the packaging format of your software, please [open an issue][feature_request_template] and we can get it working together.
 
 The whole idea is to build a _community-maintained_ list of easily installable packages, so the community part is important! Every little bit counts.
 
@@ -29,3 +29,5 @@ Some applications such as Thunderbird or Firefox provides many localized version
 This is a problem with the bookkeeping in the current implementation of Cask, which gets confused if a cask is updated after installation. For now, use the `brew cask uninstall --force` to uninstall these packages.
 
 This issue is currently being addressed [here](https://github.com/caskroom/homebrew-cask/issues/4688) and [here](https://github.com/caskroom/homebrew-cask/issues/4678).
+
+[feature_request_template]: https://github.com/caskroom/homebrew-cask/issues/new?title=Feature%20request%3A&body=%23%23%23%20Description%20of%20feature%2Fenhancement%0A%0A%0A%0A%23%23%23%20Justification%0A%0A%0A%0A%23%23%23%20Example%20use%20case%0A%0A%0A%0A
