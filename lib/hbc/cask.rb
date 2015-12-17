@@ -14,16 +14,6 @@ class Hbc::Cask
     @token = self.class.token
   end
 
-  def caskroom_path
-    Hbc.caskroom.join(token)
-  end
-
-  # todo: move to staged.rb ?
-  def staged_path
-    cask_version = version ? version : :unknown
-    caskroom_path.join(cask_version.to_s)
-  end
-
   METADATA_SUBDIR = '.metadata'
 
   def metadata_master_container_path
