@@ -7,7 +7,7 @@ require 'stringio'
 require 'hbc/utils/tty'
 
 UPDATE_CMD = "brew update; brew cleanup; brew cask cleanup"
-ISSUES_URL = "https://github.com/caskroom/homebrew-cask/issues"
+ISSUES_URL = "https://github.com/caskroom/homebrew-cask#reporting-bugs"
 
 # todo: temporary
 Tty = Hbc::Utils::Tty
