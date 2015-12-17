@@ -18,7 +18,7 @@ class Hbc::Download
     else
       downloader = Hbc::CurlDownloadStrategy.new(cask)
     end
-    downloader.clear_cache if force
+    downloader.clear_cache if force || cask.version == :latest
     begin
       downloaded_path = downloader.fetch
     rescue StandardError => e
