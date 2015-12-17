@@ -29,7 +29,7 @@ describe Hbc::DSL do
         .*
         brew update; brew cleanup; brew cask cleanup
         .*
-        https://github.com/caskroom/homebrew-cask/issues
+        https://github.com/caskroom/homebrew-cask#reporting-bugs
       EOREGEX
 
       TestHelper.must_output(self, attempt_unknown_method, expected)
