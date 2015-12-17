@@ -18,7 +18,7 @@ shopt -s nocasematch  # case-insensitive regular expressions
 script_subdir='developer/bin'
 template_subdir='doc/issue_templates'
 generate_url_script='generate_issue_template_urls'
-files_to_update=('README.md')
+files_to_update=('README.md' 'doc/FAQ.md')
 
 ###
 ### functions
