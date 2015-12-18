@@ -5,8 +5,7 @@ cask 'bmglyph' do
   url "http://www.bmglyph.com/application/bmGlyph.#{version}.zip"
   name 'bmGlyph'
   appcast 'http://www.bmglyph.com/application/bmGlyphVersion.xml',
-          :sha256 => '43c86d82a5f63b1316913b06399598e792ed2ae23e6bdc2e6e8ad98b3d7e4178',
-          :format => :sparkle
+          :sha256 => '43c86d82a5f63b1316913b06399598e792ed2ae23e6bdc2e6e8ad98b3d7e4178'
   homepage 'http://www.bmglyph.com/'
   license :commercial
 

@@ -5,8 +5,7 @@ cask 'xamarin-jdk' do
   url "https://download.xamarin.com/Installer/MonoForAndroid/jdk-#{version.sub(%r{^\d+\.(\d+).*?_(.*)$},'\1u\2')}-macosx-x64.dmg"
   name 'Xamarin Java JDK'
   appcast 'https://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          :sha256 => '79c309d6dbe6f08f1d022c9376a4678cc94f57be084007df90c5a12839b35cdd',
-          :format => :unknown
+          :sha256 => '79c309d6dbe6f08f1d022c9376a4678cc94f57be084007df90c5a12839b35cdd'
   homepage 'https://xamarin.com/platform'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

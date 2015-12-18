@@ -4,8 +4,7 @@ cask 'clipy' do
 
   url "https://github.com/Clipy/Clipy/releases/download/#{version}/Clipy_#{version}.dmg"
   appcast 'https://clipy-app.com/appcast.xml',
-          :sha256 => '230588ccc0ea43d7fb3c0ef9a59336025944f2d4e7d87285ba60a876031d93a9',
-          :format => :sparkle
+          :sha256 => '230588ccc0ea43d7fb3c0ef9a59336025944f2d4e7d87285ba60a876031d93a9'
   name 'Clipy'
   homepage 'https://clipy-app.com/'
   license :mit
