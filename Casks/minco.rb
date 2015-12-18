@@ -1,4 +1,4 @@
-cask :v1 => 'minco' do
+cask 'minco' do
   version '2.0.25'
   sha256 'a5192aea97d2d322e1af5a8ffb9de28ae0521121ac668e4171c9bcc5b71136a4'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'wkhtmltopdf' do
+cask 'wkhtmltopdf' do
   version '0.12.3-dev-79ff51e'
 
   if Hardware::CPU.is_32_bit?

@@ -1,4 +1,4 @@
-cask :v1 => 'yubikey-personalization-gui' do
+cask 'yubikey-personalization-gui' do
   version '3.1.23'
   sha256 'f00aa7931045f64903eb94279b33b595eb3791026fa54074dba9c11ad701d089'
 

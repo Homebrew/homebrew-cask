@@ -1,4 +1,4 @@
-cask :v1 => 'netspot' do
+cask 'netspot' do
   version :latest
   sha256 :no_check
 

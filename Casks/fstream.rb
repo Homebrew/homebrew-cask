@@ -1,4 +1,4 @@
-cask :v1 => 'fstream' do
+cask 'fstream' do
   version :latest
   sha256 :no_check
 

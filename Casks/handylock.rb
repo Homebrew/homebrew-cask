@@ -1,4 +1,4 @@
-cask :v1 => 'handylock' do
+cask 'handylock' do
   version '1.2.9'
   sha256 'f6052c4229613590be2916f68fbcb5c6b632488745fc6e9c1074bfe0452d11cf'
 

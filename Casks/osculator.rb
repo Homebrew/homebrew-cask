@@ -1,4 +1,4 @@
-cask :v1 => 'osculator' do
+cask 'osculator' do
   version '2.13.2-12-gbab8aab'
   sha256 'adfa94655876daebee61ddcf2bfe3781c1591d52bcc026044d4a51c5ee979ea4'
 

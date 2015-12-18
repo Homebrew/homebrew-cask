@@ -1,4 +1,4 @@
-cask :v1 => 'glyphish-gallery' do
+cask 'glyphish-gallery' do
   version '2.1'
   sha256 '86edda062a651799517990cc96e7f23f38818ecd3f0194e3ad040de0fa82f2d2'
 

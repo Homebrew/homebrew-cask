@@ -1,4 +1,4 @@
-cask :v1 => 'mocksmtp' do
+cask 'mocksmtp' do
   version :latest
   sha256 :no_check
 

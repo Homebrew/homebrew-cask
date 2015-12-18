@@ -1,4 +1,4 @@
-cask :v1 => 'graphviz' do
+cask 'graphviz' do
   if MacOS.release == :leopard
     version '2.28.0'
     sha256 'a2c96c9f1ec5cc59c042f53c1f26dae942a2216deda40ca606de3a10070e8a63'

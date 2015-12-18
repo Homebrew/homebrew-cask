@@ -1,4 +1,4 @@
-cask :v1 => 'memoryanalyzer' do
+cask 'memoryanalyzer' do
   version '1.5.0.20150527'
   sha256 'e7b2fbb156d8b61c449778756c20a6cf1567c48f7e446752b9fba8e479cd3d4e'
 

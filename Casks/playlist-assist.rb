@@ -1,4 +1,4 @@
-cask :v1 => 'playlist-assist' do
+cask 'playlist-assist' do
   version '1.2.2'
   sha256 '6bcc953cabcee2e47497bb3b51cd76c3ee6dcb6ac5e4222740a5ec775f221e75'
 

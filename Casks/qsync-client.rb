@@ -1,4 +1,4 @@
-cask :v1 => 'qsync-client' do
+cask 'qsync-client' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'trello-x' do
+cask 'trello-x' do
   version :latest
   sha256 :no_check
 

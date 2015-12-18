@@ -1,4 +1,4 @@
-cask :v1 => 'xguardian' do
+cask 'xguardian' do
   version :latest
   sha256 :no_check
 

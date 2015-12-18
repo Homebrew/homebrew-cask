@@ -1,4 +1,4 @@
-cask :v1 => 'pepper-flash' do
+cask 'pepper-flash' do
   version '20.0.0.228'
   sha256 'c94600c9b85f5e96f21580ac8aaa4be2aa8511c18379d1cb488a3d813bcbcce1'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'proxpn' do
+cask 'proxpn' do
   version '4.3.4'
   sha256 'd0d5476bec2f5f6f894d57087d628284d7f0f02ef8b98e23630765010933898b'
 

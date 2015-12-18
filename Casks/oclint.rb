@@ -1,4 +1,4 @@
-cask :v1 => 'oclint' do
+cask 'oclint' do
   version '0.8.1'
   sha256 '68499fe4331b3ca2334a2884a8b3e89bba2ffa468a42a780df3dc73849c44939'
 

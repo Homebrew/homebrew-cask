@@ -1,4 +1,4 @@
-cask :v1 => 'navicat-for-oracle' do
+cask 'navicat-for-oracle' do
   version '11.1.17'
   sha256 '2fa7bded4307dc52378263fbeec810c2cc2637e30b1d2f1424965df2022f27a7'
 

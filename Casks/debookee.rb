@@ -1,4 +1,4 @@
-cask :v1 => 'debookee' do
+cask 'debookee' do
   version '4.2.2'
   sha256 '483c2cfa4162fbc23411c33101c99c774d7f5594075270979fded40ce884b8c2'
 

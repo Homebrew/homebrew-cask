@@ -1,4 +1,4 @@
-cask :v1 => 'virtualc64' do
+cask 'virtualc64' do
   # note: "64" is not a version number, but an intrinsic part of the product name
   version '0.9.9.4'
   sha256 'd5c1ed83a0ec81b45f8879920cbce41f851e593ba476de2cd29a267433a30f85'

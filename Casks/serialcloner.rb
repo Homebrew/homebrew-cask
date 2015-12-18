@@ -1,4 +1,4 @@
-cask :v1 => 'serialcloner' do
+cask 'serialcloner' do
   version '2.6.1'
   sha256 '8027731f0ed031bb0c40009d9f5237fb73d66a3ef97029024811aa41ae873aae'
 

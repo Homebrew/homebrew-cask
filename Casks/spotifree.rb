@@ -1,4 +1,4 @@
-cask :v1 => 'spotifree' do
+cask 'spotifree' do
   version '1.6.4'
   sha256 '4f20883f1c3d3530999979712ea804f339b88602e3c976b8cb85f7df6b767e76'
 

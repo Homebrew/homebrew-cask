@@ -1,4 +1,4 @@
-cask :v1 => 'bootchamp' do
+cask 'bootchamp' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'houdahgeo' do
+cask 'houdahgeo' do
   version '4.4'
   sha256 '065c215e8c61081d4ff6c925ea20a56ba87d08633d2796aa423066ba9cf1f041'
 

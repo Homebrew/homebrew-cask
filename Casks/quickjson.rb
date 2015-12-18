@@ -1,4 +1,4 @@
-cask :v1 => 'quickjson' do
+cask 'quickjson' do
   version '1.0.0'
   sha256 '874fc0afd431f68527929a0592c23a81b70d53e6032419e540551fccd662cfd2'
 

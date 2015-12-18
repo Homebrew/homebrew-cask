@@ -1,4 +1,4 @@
-cask :v1 => 'vrep' do
+cask 'vrep' do
   version '3.2.2'
   sha256 '9aa17c04d2e61fcd0ae2270c22b0a460beea9c86819636912cd9051237b446ff'
 

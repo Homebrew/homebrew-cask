@@ -1,4 +1,4 @@
-cask :v1 => 'app-tamer' do
+cask 'app-tamer' do
   version '2.1'
   sha256 'a8786527526f3b9e21975f70d93c0538b017b60667a29c15291ae62df2d74168'
 

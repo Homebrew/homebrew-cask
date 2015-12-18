@@ -1,4 +1,4 @@
-cask :v1 => 'boinxtv' do
+cask 'boinxtv' do
   version '1.9.11-17138'
   sha256 'ae9b4e245172665e198313ef7bbf46289fd56795258a49b7b9b05727a2d62f21'
 

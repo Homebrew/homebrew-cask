@@ -1,4 +1,4 @@
-cask :v1 => 'metaz' do
+cask 'metaz' do
   version '1.0a15'
   sha256 '7dcc71a917bed0d5686884c4ec198275a1f656ce09db71fa49cc73e46933820c'
 

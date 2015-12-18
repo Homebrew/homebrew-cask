@@ -1,4 +1,4 @@
-cask :v1 => 'cleanarchiver' do
+cask 'cleanarchiver' do
   version '3.0a6'
   sha256 '9b24c7ac24e976b6d364a81e746dcd1526fcbda57e787cd3c0fce00eba1b5847'
 

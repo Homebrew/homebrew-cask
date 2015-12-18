@@ -1,4 +1,4 @@
-cask :v1 => 'deep-dreamer' do
+cask 'deep-dreamer' do
   version :latest
   sha256 :no_check
 

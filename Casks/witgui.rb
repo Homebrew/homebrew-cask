@@ -1,4 +1,4 @@
-cask :v1 => 'witgui' do
+cask 'witgui' do
   version '2.2.3'
   sha256 '2d50c1701afc164120dbd09bbfe343a407a78469446e3e02524282189a3c68e2'
 

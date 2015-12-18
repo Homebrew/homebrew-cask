@@ -1,4 +1,4 @@
-cask :v1 => 'chrome-devtools' do
+cask 'chrome-devtools' do
   version '1.1.0'
   sha256 'decb98cf06ed9dd65301449347e788dd757315460cf3c77ad91ceb3ef503831a'
 

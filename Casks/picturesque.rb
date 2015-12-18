@@ -1,4 +1,4 @@
-cask :v1 => 'picturesque' do
+cask 'picturesque' do
   version :latest
   sha256 :no_check
 

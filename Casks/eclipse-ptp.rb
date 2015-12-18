@@ -1,4 +1,4 @@
-cask :v1 => 'eclipse-ptp' do
+cask 'eclipse-ptp' do
   version '4.5.1'
   sha256 '4d9a3b7c52e40fde59335779803128d5682dfbaae176ab604894d519193fd799'
 

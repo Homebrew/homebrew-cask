@@ -1,4 +1,4 @@
-cask :v1 => 'cocktail' do
+cask 'cocktail' do
   if MacOS.release == :snow_leopard
     version '5.1'
     sha256 '630fc5236e95d5ec36c0de4b487f8ece76d8f02ecd00ec4b37124ddd0eed0f34'

@@ -1,4 +1,4 @@
-cask :v1 => 'tex-live-utility' do
+cask 'tex-live-utility' do
   version '1.23'
   sha256 'a1641f61259268bc92a16ffeffd0260a6c93b6c70d095433c3b722b448cf9b6a'
 

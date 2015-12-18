@@ -1,4 +1,4 @@
-cask :v1 => 'lilypond' do
+cask 'lilypond' do
   version '2.18.2-1'
 
   if Hardware::CPU.type == :ppc

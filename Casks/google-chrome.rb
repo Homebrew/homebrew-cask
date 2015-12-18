@@ -1,4 +1,4 @@
-cask :v1 => 'google-chrome' do
+cask 'google-chrome' do
   version :latest
   sha256 :no_check
 

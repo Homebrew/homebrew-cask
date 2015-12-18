@@ -1,4 +1,4 @@
-cask :v1 => 'obs' do
+cask 'obs' do
   version '0.12.4'
   sha256 'd34ee7c2100fdf99074b6d75a9f28c2780c37bd02c9a3bfb899502828e4797e0'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'hsang' do
+cask 'hsang' do
   version '1.6.0'
   sha256 '38034028316b9a9f5c0a51459a5af4e853acb7237bfa4ba38cc818c2578d1517'
 

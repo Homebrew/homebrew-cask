@@ -1,4 +1,4 @@
-cask :v1 => 'nimbus' do
+cask 'nimbus' do
   version '0.7.4'
   sha256 '833f747d74fae3f670f145fa7458623779a1b18b482f3c5828aea13581f64033'
 

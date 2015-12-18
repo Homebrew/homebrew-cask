@@ -1,4 +1,4 @@
-cask :v1 => 'jive-chime' do
+cask 'jive-chime' do
   version :latest
   sha256 :no_check
 

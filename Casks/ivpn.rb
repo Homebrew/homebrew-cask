@@ -1,4 +1,4 @@
-cask :v1 => 'ivpn' do
+cask 'ivpn' do
   version '7.3.1'
   sha256 '85f5e4fb9d09fabf13c08841aa1f35e64d44792b09fd521f49a5281a675d17f5'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'sqleditor' do
+cask 'sqleditor' do
   version '2.9.12'
   sha256 'b0243086f656ceea8f7fe4183d719f77feadaffefcd26790aee6f1a670836a23'
 

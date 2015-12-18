@@ -1,4 +1,4 @@
-cask :v1 => 'tvmobili' do
+cask 'tvmobili' do
   version :latest
   sha256 :no_check
 

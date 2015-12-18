@@ -1,4 +1,4 @@
-cask :v1 => 'macid' do
+cask 'macid' do
   version '1.3'
   sha256 '6fb7fdc60b2c6dbce711263cea72ef1044e1527eae42efed7df23a172eec0b38'
 

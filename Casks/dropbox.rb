@@ -1,4 +1,4 @@
-cask :v1_2 => 'dropbox' do
+cask 'dropbox' do
   version :latest
   sha256 :no_check
 

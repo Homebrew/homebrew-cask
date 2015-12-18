@@ -1,4 +1,4 @@
-cask :v1_1 => 'adobe-arh' do
+cask 'adobe-arh' do
   version :latest
   sha256 :no_check
 

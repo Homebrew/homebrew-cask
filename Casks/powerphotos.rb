@@ -1,4 +1,4 @@
-cask :v1 => 'powerphotos' do
+cask 'powerphotos' do
   version '1.1.2'
   sha256 '2822c28f1aab47fe5063e0527afe80fff3d044d181493068f9177e0ef8d8e31c'
 

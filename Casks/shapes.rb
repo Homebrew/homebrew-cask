@@ -1,4 +1,4 @@
-cask :v1 => 'shapes' do
+cask 'shapes' do
   version '4.5.1'
   sha256 '841c581b36412fefe0d2b186cef23fc8125af4ba543d35a4bc75380dd69cb6ed'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'kindlegen' do
+cask 'kindlegen' do
   version '2.9'
   sha256 '7aad3b01c8f0d61096f86d7ba34e4deeef22355b9dbf2555c6dd05a281f5d17e'
 

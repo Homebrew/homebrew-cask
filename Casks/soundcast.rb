@@ -1,4 +1,4 @@
-cask :v1 => 'soundcast' do
+cask 'soundcast' do
   version '1.5'
   sha256 '19c53bac9900904ed3773360036ecc04f0c3cc24d09f908e3692b4ac9c422505'
 

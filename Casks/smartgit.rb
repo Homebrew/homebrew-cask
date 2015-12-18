@@ -1,4 +1,4 @@
-cask :v1 => 'smartgit' do
+cask 'smartgit' do
   version '7.0.3'
   sha256 '4e0cff341fec1d5a943d8755e62f492924dc3e37462dc3bf10d0a24bec4d035f'
 

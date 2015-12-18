@@ -1,4 +1,4 @@
-cask :v1 => 'spyder' do
+cask 'spyder' do
   version '2.3.8'
   sha256 '03bbdb9e2dc753d663b70ff3ac2190d5141099e58744465378f07597c81067be'
 

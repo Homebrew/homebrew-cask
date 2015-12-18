@@ -1,4 +1,4 @@
-cask :v1 => 'movist' do
+cask 'movist' do
   version :latest
   sha256 :no_check
 

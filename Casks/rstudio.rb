@@ -1,4 +1,4 @@
-cask :v1 => 'rstudio' do
+cask 'rstudio' do
   version '0.99.489'
   sha256 'e211c0645540b8c668824b6fecdfd19820fe937c4db4432abc7aba06e7efd9e6'
 

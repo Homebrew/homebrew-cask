@@ -1,4 +1,4 @@
-cask :v1 => 'airy' do
+cask 'airy' do
   version '2.2.100'
   sha256 '5e0895a336c0eab4c15b422b5e0034a5d31ab90d1d4d63bdf8cd99ebc59f4868'
 

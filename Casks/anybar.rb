@@ -1,4 +1,4 @@
-cask :v1 => 'anybar' do
+cask 'anybar' do
   version '0.1.3'
   sha256 'aaf23b72b682fe4db6ea19908a2e0ffceb54c33aa1c551c5de833c56bca74ef6'
 

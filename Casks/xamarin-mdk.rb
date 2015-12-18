@@ -1,4 +1,4 @@
-cask :v1 => 'xamarin-mdk' do
+cask 'xamarin-mdk' do
   version '4.0.2.5'
   sha256 '5b8c4a9fee009a644769a88ab480aa3032fda9777df043543d8df5f430fc491d'
 

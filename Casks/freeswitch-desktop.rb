@@ -1,4 +1,4 @@
-cask :v1 => 'freeswitch-desktop' do
+cask 'freeswitch-desktop' do
   version '1.2.0'
   sha256 '66bcd5b0ad7caa35c47cf098cf745b6898ff03953ee319ee0a7595f1bf79998d'
 

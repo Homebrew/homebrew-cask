@@ -1,4 +1,4 @@
-cask :v1 => 'live-interior-3d-pro' do
+cask 'live-interior-3d-pro' do
   version :latest
   sha256 :no_check
 

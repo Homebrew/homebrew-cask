@@ -1,4 +1,4 @@
-cask :v1 => 'sigil' do
+cask 'sigil' do
   version '0.9.1'
   sha256 '9bdcdce5dcf9164c75cb78196e673f47592b29b0f6beb555ca6a87e24b016ee8'
 

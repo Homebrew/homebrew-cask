@@ -1,4 +1,4 @@
-cask :v1 => 'couchbase-server-community' do
+cask 'couchbase-server-community' do
   version '4.0.0'
 
   if MacOS.release <= :yosemite

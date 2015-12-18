@@ -1,4 +1,4 @@
-cask :v1 => 'royal-tsx' do
+cask 'royal-tsx' do
   version '2.2.1.1'
   sha256 '5041be5501b87612070677efe0b3752e6051833033a95c9f0ba99a72833ef34e'
 

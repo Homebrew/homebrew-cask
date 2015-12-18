@@ -1,4 +1,4 @@
-cask :v1 => 'mousepose' do
+cask 'mousepose' do
   version '3.2.7'
   sha256 '05a3c5175206e971b386a75cd28e51873fdff6c47e24c5673a8116af127d336c'
 

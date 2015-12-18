@@ -1,4 +1,4 @@
-cask :v1 => 'tripmode' do
+cask 'tripmode' do
   version :latest
   sha256 :no_check
 

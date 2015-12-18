@@ -1,4 +1,4 @@
-cask :v1 => 'lytro-desktop' do
+cask 'lytro-desktop' do
   version '4.3.2-151113.97'
   sha256 '0646b7515e5bf591c6b75d646a1d98d1f31be949add736b11e7f4c2282487854'
 

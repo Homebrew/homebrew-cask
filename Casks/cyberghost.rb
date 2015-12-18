@@ -1,4 +1,4 @@
-cask :v1 => 'cyberghost' do
+cask 'cyberghost' do
   version '5.0.14.12'
   sha256 'c1ed2c4837be99e0c2fef9c957d9e798a359f1b1bacb03dd5850cc9f779855be'
 

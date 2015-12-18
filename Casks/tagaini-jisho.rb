@@ -1,4 +1,4 @@
-cask :v1 => 'tagaini-jisho' do
+cask 'tagaini-jisho' do
   version '1.0.3'
   sha256 'a75ad999372ada05f7f00158d69c4bade4023da27f15dec56bdc478763702643'
 

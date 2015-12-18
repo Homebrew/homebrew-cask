@@ -1,4 +1,4 @@
-cask :v1 => 'sizeup' do
+cask 'sizeup' do
   version :latest
   sha256 :no_check
 

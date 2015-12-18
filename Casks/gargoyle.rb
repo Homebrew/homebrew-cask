@@ -1,4 +1,4 @@
-cask :v1 => 'gargoyle' do
+cask 'gargoyle' do
   version '2011.1'
   sha256 '4e830ad3feec78d623ce5c13ce14f440f9769d302ac46604afc4b9785baa038c'
 

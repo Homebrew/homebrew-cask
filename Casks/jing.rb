@@ -1,4 +1,4 @@
-cask :v1 => 'jing' do
+cask 'jing' do
   version :latest
   sha256 :no_check
 

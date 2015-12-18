@@ -1,4 +1,4 @@
-cask :v1 => 'astah-community' do
+cask 'astah-community' do
   version '7.0.0'
   sha256 '27e05ceaf64bc4ebdb9dcce2d042380d7c141e35b6f2d8e2f91a7c1ff57703dd'
 

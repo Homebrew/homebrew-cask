@@ -1,4 +1,4 @@
-cask :v1 => 'displaperture' do
+cask 'displaperture' do
   version :latest
   sha256 :no_check
 

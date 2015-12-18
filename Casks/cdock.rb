@@ -1,4 +1,4 @@
-cask :v1 => 'cdock' do
+cask 'cdock' do
   version '0.9.8'
   sha256 'b3de2eb88db355f28a22adb2fb173c28086c438b582b2d2f0e59c3d937fd12f4'
 

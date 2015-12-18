@@ -1,4 +1,4 @@
-cask :v1 => 'yubiswitch' do
+cask 'yubiswitch' do
   version '0.12'
   sha256 '691ff7017c000211587217c60a6a9f352b3cb8d9ee2ce099f01d096d794a01ff'
 

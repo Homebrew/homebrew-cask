@@ -1,4 +1,4 @@
-cask :v1 => 'management-tools' do
+cask 'management-tools' do
   version '1.9.0'
   sha256 '43cd5344c2516aadb22f2b6966da65acabf58faa21ff5fb2a03378aea5041c5b'
 

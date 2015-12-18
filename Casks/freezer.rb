@@ -1,4 +1,4 @@
-cask :v1 => 'freezer' do
+cask 'freezer' do
   version :latest
   sha256 :no_check
 

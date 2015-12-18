@@ -1,4 +1,4 @@
-cask :v1 => 'qlvideo' do
+cask 'qlvideo' do
   version '1.84'
   sha256 '5f055f2e152e352217350712ed483f11e48a4966f49d30d42591c8cc7342c90a'
 

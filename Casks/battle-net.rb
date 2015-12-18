@@ -1,4 +1,4 @@
-cask :v1 => 'battle-net' do
+cask 'battle-net' do
   version :latest
   sha256 :no_check
 

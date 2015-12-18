@@ -1,4 +1,4 @@
-cask :v1 => 'outwit-hub' do
+cask 'outwit-hub' do
   version :latest
   sha256 :no_check
 

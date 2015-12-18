@@ -1,4 +1,4 @@
-cask :v1 => 'postgres' do
+cask 'postgres' do
   version '9.4.5.0'
   sha256 'ce3018430d7a783b2211c153aa9d7ab6197a39356668b516b9086fd0b5084e6a'
 

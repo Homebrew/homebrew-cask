@@ -1,4 +1,4 @@
-cask :v1 => 'macvim' do
+cask 'macvim' do
   version '7.4-85'
   sha256 'b83c8f584a2a7928edb7e9c5ce931ed66f9265c18f014ca4e377e0fa8062edc3'
 

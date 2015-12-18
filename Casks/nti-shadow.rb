@@ -1,4 +1,4 @@
-cask :v1 => 'nti-shadow' do
+cask 'nti-shadow' do
   version '5.0.0.52'
   sha256 'fb432cf051ecdf0a84000ab10c945a80e940188c33f8938465102d786f388ee2'
 

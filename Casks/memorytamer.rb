@@ -1,4 +1,4 @@
-cask :v1 => 'memorytamer' do
+cask 'memorytamer' do
   version :latest
   sha256 :no_check
 

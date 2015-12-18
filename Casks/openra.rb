@@ -1,4 +1,4 @@
-cask :v1 => 'openra' do
+cask 'openra' do
   version '20150919'
   sha256 '395ab15e92cec263ca6fda3f97b3593fd7e42ab9e7b3ca23f302bc4809605761'
 

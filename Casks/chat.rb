@@ -1,4 +1,4 @@
-cask :v1 => 'chat' do
+cask 'chat' do
   version '1.0.3-1429112097'
   sha256 '430028e75c0a01ae2f8cad9b3b2bb64ae30893c5fc4ce524b5c5dd3a9413c123'
 

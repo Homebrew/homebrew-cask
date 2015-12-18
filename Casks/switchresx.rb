@@ -1,4 +1,4 @@
-cask :v1 => 'switchresx' do
+cask 'switchresx' do
   version '4.5.2'
   sha256 :no_check # required as upstream package is updated in-place
 

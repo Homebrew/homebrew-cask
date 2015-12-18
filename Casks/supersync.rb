@@ -1,4 +1,4 @@
-cask :v1 => 'supersync' do
+cask 'supersync' do
   version '6.1.1'
 
   if Hardware::CPU.is_32_bit? || MacOS.release <= :snow_leopard

@@ -1,4 +1,4 @@
-cask :v1 => 'xtrafinder' do
+cask 'xtrafinder' do
   version :latest
   sha256 :no_check
 

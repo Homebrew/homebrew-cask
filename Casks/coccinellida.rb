@@ -1,4 +1,4 @@
-cask :v1 => 'coccinellida' do
+cask 'coccinellida' do
   version '0.7'
   sha256 '9eb8376fa3764e406433aff969fb5aa9f8ba78886948d013ea690cf979baaf88'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'videomonkey' do
+cask 'videomonkey' do
   version '0.17'
   sha256 'f0f70793f13f6e52f4115d292d3d425749a8d70b36f47055640b4ce1f519df6b'
 

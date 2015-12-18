@@ -1,4 +1,4 @@
-cask :v1 => 'cacoo-ninja' do
+cask 'cacoo-ninja' do
   version '1.2.0'
   sha256 'd536efe0d4d947b724a513d9874a8d47e13299c1f6c1767cb9f56c50e7e38ccb'
 

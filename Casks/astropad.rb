@@ -1,4 +1,4 @@
-cask :v1 => 'astropad' do
+cask 'astropad' do
   version '1.3.3'
   sha256 '31aa1c77cad7744f0e978c0a225c9bdf3d558d1497713fce8e06f72eeea203d1'
 

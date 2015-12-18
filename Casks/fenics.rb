@@ -1,4 +1,4 @@
-cask :v1 => 'fenics' do
+cask 'fenics' do
   version '1.4.0'
   sha256 'b0071fa25759fcef124e418c202cc81d297d12633b24385b70b9408af76c2bb5'
 

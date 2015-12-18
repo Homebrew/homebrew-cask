@@ -1,4 +1,4 @@
-cask :v1 => 'fog' do
+cask 'fog' do
   version '1.0.1'
   sha256 '6eaa11324ba9fc470c577ed067d3843e5f2ef7ec8da012dcfc780ffd8b832b69'
 

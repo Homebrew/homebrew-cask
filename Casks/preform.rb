@@ -1,4 +1,4 @@
-cask :v1 => 'preform' do
+cask 'preform' do
   version '1.8.1_1'
   sha256 '51ed43f83821c9ba10a50d315990aa59ede13a64e46bda438a3e113a93385209'
 

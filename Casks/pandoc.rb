@@ -1,4 +1,4 @@
-cask :v1 => 'pandoc' do
+cask 'pandoc' do
   version '1.15.2'
   sha256 'fa80c90e30ec24d00d3982caf345854671122d7e50b89b04d7d1628671f185b0'
 

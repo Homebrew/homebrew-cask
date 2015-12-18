@@ -1,4 +1,4 @@
-cask :v1 => 'automatic' do
+cask 'automatic' do
   version '2.4.7.392'
   sha256 'b1d4b7b4a85eb81010b5863b439b978179f49c1c5d6522e481106bf93fbea94f'
 

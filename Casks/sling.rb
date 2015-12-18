@@ -1,4 +1,4 @@
-cask :v1 => 'sling' do
+cask 'sling' do
   version :latest
   sha256 :no_check
 

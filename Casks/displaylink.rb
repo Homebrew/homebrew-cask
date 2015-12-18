@@ -1,4 +1,4 @@
-cask :v1 => 'displaylink' do
+cask 'displaylink' do
   if MacOS.release <= :leopard
     version '1.7'
     sha256 'b35dc49fe286aa858d7f6f44fd3f6703de83fae2316d20b05e637a1134ba2440'

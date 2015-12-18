@@ -1,4 +1,4 @@
-cask :v1 => 'ltspice' do
+cask 'ltspice' do
   version :latest
   sha256 :no_check
 

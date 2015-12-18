@@ -1,4 +1,4 @@
-cask :v1 => 'prizmo' do
+cask 'prizmo' do
   version '3.1.4'
   sha256 'be3bad97f4fccaa4a4f90e52c67c6091b9832fe619ec14b17d819a9e9740b4d6'
 

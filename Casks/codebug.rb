@@ -1,4 +1,4 @@
-cask :v1 => 'codebug' do
+cask 'codebug' do
   version '0.9.4'
   sha256 '2a568b2eff8145823b552668d0b1caa75a98077afe7692ccb69ca030508c86b9'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'cleanapp' do
+cask 'cleanapp' do
   if MacOS.release <= :leopard
     version '3.4.12'
     sha256 'e6020a82949a55ae1eb5b7e45f736bc8b51c7d5e94503f0e4a88b5f8940ab269'

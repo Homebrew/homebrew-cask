@@ -1,4 +1,4 @@
-cask :v1 => 'adapter' do
+cask 'adapter' do
   version '2.1.5'
   sha256 '4daf1ce7ecabb4e2f8b5c3f2c04ff1d8ebee4e5b058acc6d8b0fe5c238dd73eb'
 

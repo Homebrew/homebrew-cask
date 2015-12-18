@@ -1,4 +1,4 @@
-cask :v1 => 'inboard' do
+cask 'inboard' do
   version '1.0.6-279'
   sha256 '071a85c42b26d15387d6ab03b110823871c20234b5cf05b464829bfdb40eb7b1'
 

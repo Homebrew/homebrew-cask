@@ -1,4 +1,4 @@
-cask :v1 => 'nndd' do
+cask 'nndd' do
   version '2.4.3'
   sha256 '6a73dcad2e73d877ad1503ed1162cae1a1c84f21d1abaa6aaf9b31bb2fbca531'
 

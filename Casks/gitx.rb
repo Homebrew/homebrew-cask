@@ -1,4 +1,4 @@
-cask :v1 => 'gitx' do
+cask 'gitx' do
   version :latest
   sha256 :no_check
 

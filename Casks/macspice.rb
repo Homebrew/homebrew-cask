@@ -1,4 +1,4 @@
-cask :v1 => 'macspice' do
+cask 'macspice' do
   version '3.1.7'
   sha256 '80e1824e710467115700f377311f5ac287be7154caf228d87ab2ffab3a52b69c'
 

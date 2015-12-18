@@ -1,4 +1,4 @@
-cask :v1 => 'zoc' do
+cask 'zoc' do
   version '7.06.0'
   sha256 '08549be9d919bae6761f4cac784ab1bbead1758e4938e130289114099ed44768'
 

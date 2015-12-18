@@ -1,4 +1,4 @@
-cask :v1 => 'origami' do
+cask 'origami' do
   version '2.1.2'
   sha256 '23a73555ccf1153e3e556a376f29c8b1b7b331629d3909b243d4eb4e0345df25'
 

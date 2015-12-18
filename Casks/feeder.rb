@@ -1,4 +1,4 @@
-cask :v1 => 'feeder' do
+cask 'feeder' do
   version '3.1.3'
   sha256 '39205ffc12e40e447d7cabc758d3a1872fdb066aab5a13b0d21f7c4ab54c1c9c'
 

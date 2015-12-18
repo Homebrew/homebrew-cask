@@ -1,4 +1,4 @@
-cask :v1 => 'slice' do
+cask 'slice' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'diffmerge' do
+cask 'diffmerge' do
   version '4.2.1.1013'
   sha256 '1f19897513fb7af8fc7d3b40643bd6dee80e401c7245a0ed774e8211fd48e388'
 

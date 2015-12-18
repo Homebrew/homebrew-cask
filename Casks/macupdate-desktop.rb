@@ -1,4 +1,4 @@
-cask :v1 => 'macupdate-desktop' do
+cask 'macupdate-desktop' do
   version '6.0.9'
   sha256 '82f8b1bc8d9ed5d3881a8ca618df146fbb82634ecca4e5aac8f96ad65389e7c4'
 

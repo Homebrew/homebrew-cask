@@ -1,4 +1,4 @@
-cask :v1 => 'youdao' do
+cask 'youdao' do
   version :latest
   sha256 :no_check
 

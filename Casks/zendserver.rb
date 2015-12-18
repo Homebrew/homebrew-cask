@@ -1,4 +1,4 @@
-cask :v1 => 'zendserver' do
+cask 'zendserver' do
   version '8.5.1'
   sha256 '5a34d8ea941eed7bb981810bfee11f44ae27d0c9e40e50e8fd1c93b8781352c9'
 

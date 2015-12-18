@@ -1,4 +1,4 @@
-cask :v1 => 'pdf-converter-master' do
+cask 'pdf-converter-master' do
   version '4.0.0'
   sha256 '00e74521645b2b744836352d6be342f95fd80f4c8e85966a2afb016ce89bcefd'
 

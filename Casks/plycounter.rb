@@ -1,4 +1,4 @@
-cask :v1 => 'plycounter' do
+cask 'plycounter' do
   version :latest
   sha256 :no_check
 

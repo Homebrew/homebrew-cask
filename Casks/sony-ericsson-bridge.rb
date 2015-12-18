@@ -1,4 +1,4 @@
-cask :v1 => 'sony-ericsson-bridge' do
+cask 'sony-ericsson-bridge' do
   version :latest
   sha256 :no_check
 

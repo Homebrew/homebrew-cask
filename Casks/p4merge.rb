@@ -1,4 +1,4 @@
-cask :v1 => 'p4merge' do
+cask 'p4merge' do
   version '2014.3-1007540'
   sha256 '07eac08f6bfb32e4a79bf47582116de8532fe0b18d91a014e1cd80861d6f0909'
 

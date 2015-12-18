@@ -1,4 +1,4 @@
-cask :v1 => 'vagrant-manager' do
+cask 'vagrant-manager' do
   version '2.5.0'
   sha256 '2e6949ee6bafdb5f087ddf58446f8b48438684ddb11708838ae2897bb41b5232'
 

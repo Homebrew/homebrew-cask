@@ -1,4 +1,4 @@
-cask :v1 => 'netshade' do
+cask 'netshade' do
   version :latest
   sha256 :no_check
 

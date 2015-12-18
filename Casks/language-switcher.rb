@@ -1,4 +1,4 @@
-cask :v1 => 'language-switcher' do
+cask 'language-switcher' do
   version '1.1.7'
   sha256 'c65882f00b195a0821dd3baf2c81a71d3ddd01b64cf6beaf56abb47cb948ffa8'
 

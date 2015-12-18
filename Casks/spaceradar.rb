@@ -1,4 +1,4 @@
-cask :v1 => 'spaceradar' do
+cask 'spaceradar' do
   version '4.4.0'
   sha256 'de93d62bb2845fa815b7010a5f42960ce849487489370fae3636177944b083ff'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'github-desktop' do
+cask 'github-desktop' do
   version '216'
   sha256 '5e3f5c92080aa55a3487b9709e789daf01c1db9d52d838d64aed6e9e45648255'
 

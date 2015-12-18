@@ -1,4 +1,4 @@
-cask :v1 => 'hive' do
+cask 'hive' do
   version '1.4.2'
   sha256 '94b92d963c2b6f7c33ae0d0ced1de7df554f86331178c38516ef7327b1cda695'
 

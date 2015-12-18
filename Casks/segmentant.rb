@@ -1,4 +1,4 @@
-cask :v1 => 'segmentant' do
+cask 'segmentant' do
   version '1.0.0'
   sha256 '547a31a50389a342a6e22c4dea3828dfb3ef4d01dffbfb83fb75483b514c16d4'
 

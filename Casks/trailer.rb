@@ -1,4 +1,4 @@
-cask :v1 => 'trailer' do
+cask 'trailer' do
   version '1.3.10'
   sha256 '85b6f65683e0a639e170a36b120a821664a37b6fbf011d6c849024bd3383e41f'
 

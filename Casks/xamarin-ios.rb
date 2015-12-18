@@ -1,4 +1,4 @@
-cask :v1 => 'xamarin-ios' do
+cask 'xamarin-ios' do
   version '8.10.3.2'
   sha256 'fd3b51050ae6992a8209e6f31893673c9a7d90445529d0af7b766158ce3912c2'
 

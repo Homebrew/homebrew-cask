@@ -1,4 +1,4 @@
-cask :v1 => 'beatport-pro' do
+cask 'beatport-pro' do
   version '2.2.3_166'
   sha256 'f59fa20b15c02a659e0beef2951e794010b397e7ce0a54cf25148e4528ef4e26'
 

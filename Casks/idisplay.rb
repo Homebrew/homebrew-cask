@@ -1,4 +1,4 @@
-cask :v1 => 'idisplay' do
+cask 'idisplay' do
 
   if MacOS.release <= :leopard
     version '1.1.12'

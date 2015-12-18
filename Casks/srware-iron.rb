@@ -1,4 +1,4 @@
-cask :v1 => 'srware-iron' do
+cask 'srware-iron' do
   version :latest
   sha256 :no_check
 

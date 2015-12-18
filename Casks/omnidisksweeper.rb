@@ -1,4 +1,4 @@
-cask :v1 => 'omnidisksweeper' do
+cask 'omnidisksweeper' do
   version :latest
   sha256 :no_check
 

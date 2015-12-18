@@ -1,4 +1,4 @@
-cask :v1 => 'cornerstone' do
+cask 'cornerstone' do
   version '2.7.18'
   sha256 'caddc967fa98693d005383d133e79ee20cebc85aabcffe39bbc8c1ac77d51306'
 

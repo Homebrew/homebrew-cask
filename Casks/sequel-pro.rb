@@ -1,4 +1,4 @@
-cask :v1 => 'sequel-pro' do
+cask 'sequel-pro' do
   version '1.1'
   sha256 'dfefd39b64a78084db88210e2ea365effbaeb8903173f3dfd55b60421ee461fa'
 

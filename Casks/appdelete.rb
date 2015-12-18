@@ -1,4 +1,4 @@
-cask :v1 => 'appdelete' do
+cask 'appdelete' do
   version :latest
   sha256 :no_check
 

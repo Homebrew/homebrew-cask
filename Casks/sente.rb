@@ -1,4 +1,4 @@
-cask :v1 => 'sente' do
+cask 'sente' do
   if MacOS.release <= :snow_leopard
     version '6.6.5.11312'
     sha256 '0a848a2eada32651707e2deec991f06cc068a4c78b23447d38453853d434c2c8'

@@ -1,4 +1,4 @@
-cask :v1 => 'noun-project' do
+cask 'noun-project' do
   version '1.1.3'
   sha256 '48cccb6c6e96f98eb3e31f10ec5a9478c1448637aa5c6e689d98f7d5b4c86931'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'skynet-edge' do
+cask 'skynet-edge' do
   version :latest
   sha256 :no_check
 

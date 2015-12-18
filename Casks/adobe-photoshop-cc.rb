@@ -1,4 +1,4 @@
-cask :v1 => 'adobe-photoshop-cc' do
+cask 'adobe-photoshop-cc' do
   version '2015'
   sha256 'c5a30a102299215b7df7e0cc519d3d63c20a63b0fecf54bc41eb68061c96dec7'
 

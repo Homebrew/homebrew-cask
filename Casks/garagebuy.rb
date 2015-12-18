@@ -1,4 +1,4 @@
-cask :v1 => 'garagebuy' do
+cask 'garagebuy' do
   version '3.2'
   sha256 'b54c2b2e11f9a449fa3211c6db98c6f26f2418b88c89cb0272c9014c6f5c23ea'
 

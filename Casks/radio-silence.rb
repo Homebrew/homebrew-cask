@@ -1,4 +1,4 @@
-cask :v1 => 'radio-silence' do
+cask 'radio-silence' do
   version :latest
   sha256 :no_check
 

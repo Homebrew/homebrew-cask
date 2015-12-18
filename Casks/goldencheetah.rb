@@ -1,4 +1,4 @@
-cask :v1 => 'goldencheetah' do
+cask 'goldencheetah' do
   version '3.2.0'
 
   if Hardware::CPU.is_32_bit?

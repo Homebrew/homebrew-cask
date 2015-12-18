@@ -1,4 +1,4 @@
-cask :v1 => 'remote-desktop-manager' do
+cask 'remote-desktop-manager' do
   version '3.0.6.0'
   sha256 'd0b6351831e81009cb115a23166f883eacedfef920c732c3525119d02d0a6a07'
 

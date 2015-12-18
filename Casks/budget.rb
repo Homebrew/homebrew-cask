@@ -1,4 +1,4 @@
-cask :v1 => 'budget' do
+cask 'budget' do
   version :latest
   sha256 :no_check
 

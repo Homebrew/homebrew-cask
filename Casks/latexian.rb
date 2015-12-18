@@ -1,4 +1,4 @@
-cask :v1 => 'latexian' do
+cask 'latexian' do
   version :latest
   sha256 :no_check
 

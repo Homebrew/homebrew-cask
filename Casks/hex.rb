@@ -1,4 +1,4 @@
-cask :v1 => 'hex' do
+cask 'hex' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'actual-odbc-pack' do
+cask 'actual-odbc-pack' do
   version :latest
   sha256 :no_check
 

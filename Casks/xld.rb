@@ -1,4 +1,4 @@
-cask :v1 => 'xld' do
+cask 'xld' do
   version '20151214'
   sha256 '08a03d72cf0ff2cc9e8810dc76604fd527270b0b6d35563d133e537a3ea30117'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'qtpass' do
+cask 'qtpass' do
   version '1.0.5'
   sha256 '2f1b7e2027c38930d40559e858f06eadcfc695a02e67c5b4052f871c9f23ba2d'
 

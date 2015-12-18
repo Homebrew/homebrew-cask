@@ -1,4 +1,4 @@
-cask :v1 => 'komodo-ide' do
+cask 'komodo-ide' do
   version '9.3.0-88117'
   sha256 'f3e97a5b57b91e524a41f0dac11df991d19ed5ff81f33e26602b7be8bb2935a3'
 

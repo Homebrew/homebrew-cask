@@ -1,4 +1,4 @@
-cask :v1 => 'the-escapers-flux' do
+cask 'the-escapers-flux' do
   version :latest
   sha256 :no_check
 

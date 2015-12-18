@@ -1,4 +1,4 @@
-cask :v1 => 'shadowsweeper' do
+cask 'shadowsweeper' do
   version :latest
   sha256 :no_check
 

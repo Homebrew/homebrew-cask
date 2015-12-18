@@ -1,4 +1,4 @@
-cask :v1 => 'techstoreclub-simple-comic' do
+cask 'techstoreclub-simple-comic' do
   version '1.7_252'
   sha256 '4ddd18a02a79fc8201824e6ab99291c6d4c8680f79f94bc372bf71f0535def35'
 

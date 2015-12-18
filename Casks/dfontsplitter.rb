@@ -1,4 +1,4 @@
-cask :v1 => 'dfontsplitter' do
+cask 'dfontsplitter' do
   version '0.4.1'
   sha256 'd9345ffe0e9be0c096e65114be21fc3aac676a9a3a53e84f1d6cebff0b7796b3'
 

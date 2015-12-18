@@ -1,4 +1,4 @@
-cask :v1 => 'drop-to-gif' do
+cask 'drop-to-gif' do
   version '1.25'
   sha256 '2d137b0dccde1087d619af41edb48bf4f1b7f7badcc7cafa8ae3f2770d843824'
 

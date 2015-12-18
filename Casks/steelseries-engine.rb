@@ -1,4 +1,4 @@
-cask :v1 => 'steelseries-engine' do
+cask 'steelseries-engine' do
   version '3.5.3'
   sha256 'ae25d45e7af3a1a2f3519ee1c74b9c1361e9bbcd3f2d78c915a69ae923d530e5'
 

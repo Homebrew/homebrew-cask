@@ -1,4 +1,4 @@
-cask :v1 => 'haskell-platform' do
+cask 'haskell-platform' do
   if MacOS.release <= :yosemite
     version '7.10.2-a'
     sha256 'dd1b64ecec95178044e12a08d9038f1e2156bbd51537da07b18832531b637672'

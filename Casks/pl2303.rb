@@ -1,4 +1,4 @@
-cask :v1 => 'pl2303' do
+cask 'pl2303' do
   version '1.6.0_20151022'
   sha256 'ed0d7965c57e6d855e1909e0af7228372bedb0ae47247a00c5eea519b5dde6bb'
 

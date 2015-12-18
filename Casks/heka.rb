@@ -1,4 +1,4 @@
-cask :v1 => 'heka' do
+cask 'heka' do
   version '0.9.2'
   sha256 '5fef4af06b97bf926fbec7ecb5c7983eed80601d56b2bedac02dad6b8677a094'
 

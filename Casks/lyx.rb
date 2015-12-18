@@ -1,4 +1,4 @@
-cask :v1 => 'lyx' do
+cask 'lyx' do
   version '2.1.4'
   sha256 'a89e0c90cf0fe5e974ec3eaa241403b1074878430f2f81552e62fb8f3b157597'
 

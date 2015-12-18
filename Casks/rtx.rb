@@ -1,4 +1,4 @@
-cask :v1 => 'rtx' do
+cask 'rtx' do
   version :latest
   sha256 :no_check
 

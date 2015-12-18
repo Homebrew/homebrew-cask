@@ -1,4 +1,4 @@
-cask :v1 => 'keepassx' do
+cask 'keepassx' do
   version '2.0'
   sha256 'e3b497e57beb3ef2878a78851ed680a0eba074f8aca475f3d90b8e7ad9d2e714'
 

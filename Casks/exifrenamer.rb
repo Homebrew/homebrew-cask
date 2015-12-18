@@ -1,4 +1,4 @@
-cask :v1 => 'exifrenamer' do
+cask 'exifrenamer' do
   version :latest
   sha256 :no_check
 

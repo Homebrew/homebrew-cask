@@ -1,4 +1,4 @@
-cask :v1 => 'anxiety' do
+cask 'anxiety' do
   version '1.0'
   sha256 'dba5afb10069592fbef623b2ddd53009da84dbf9bb3fd6720e849c304282e708'
 

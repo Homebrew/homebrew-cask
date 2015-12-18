@@ -1,4 +1,4 @@
-cask :v1 => 'ukelele' do
+cask 'ukelele' do
   version '3.0.0'
   sha256 'a14702662220f50020aaefb9a2bfcfc7b3f12f3a86cbc358cf1dd404a6d5bfdb'
 

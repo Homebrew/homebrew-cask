@@ -1,4 +1,4 @@
-cask :v1_1 => 'vmware-fusion' do
+cask 'vmware-fusion' do
   version '8.1.0-3272237'
   sha256 'da5acdda4b6fe862278dc1658bfe1b021d7bcd06560d51f4e058dce98f86ba3b'
 

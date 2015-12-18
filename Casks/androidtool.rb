@@ -1,4 +1,4 @@
-cask :v1 => 'androidtool' do
+cask 'androidtool' do
   version '1.51'
   sha256 '16419eecff75c227aa43bf71ed429789fac2ccc0de3c4a6dcac55eaf0ee71154'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'hewlettpackardprinterdrivers' do
+cask 'hewlettpackardprinterdrivers' do
   version '3.1'
   sha256 'd8b618878b1949496197e31ee4b8d36b50ad6169cc5acef8c1cb1917e6b4200b'
 

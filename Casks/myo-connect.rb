@@ -1,4 +1,4 @@
-cask :v1 => 'myo-connect' do
+cask 'myo-connect' do
   version '1.0.0'
   sha256 'd0f91042dec36d69cf0a9968ea351cd33dbf618964a7631d12d9c1d9c7b362fe'
 

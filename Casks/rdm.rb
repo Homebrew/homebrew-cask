@@ -1,4 +1,4 @@
-cask :v1 => 'rdm' do
+cask 'rdm' do
   version '0.8.3-2550'
   sha256 '10132a8fcd4d3dc67ddc862ac5f2ef16ba9d5620f57ec9ef906ed9a7c134fd86'
 

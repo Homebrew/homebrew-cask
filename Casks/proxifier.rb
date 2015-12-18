@@ -1,4 +1,4 @@
-cask :v1 => 'proxifier' do
+cask 'proxifier' do
   version :latest
   sha256 :no_check
 

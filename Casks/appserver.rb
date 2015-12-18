@@ -1,4 +1,4 @@
-cask :v1 => 'appserver' do
+cask 'appserver' do
   version '1.1.0-100'
   sha256 'c2333a17470d74fa83e51187183f71601500241fd05e922bbb341ccd34aaaa9f'
 

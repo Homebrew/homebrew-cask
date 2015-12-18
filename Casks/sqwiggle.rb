@@ -1,4 +1,4 @@
-cask :v1 => 'sqwiggle' do
+cask 'sqwiggle' do
   version :latest
   sha256 :no_check
 

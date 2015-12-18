@@ -1,4 +1,4 @@
-cask :v1 => 'preferencecleaner' do
+cask 'preferencecleaner' do
   version :latest
   sha256 :no_check
 

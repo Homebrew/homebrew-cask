@@ -1,4 +1,4 @@
-cask :v1 => 'airvpn' do
+cask 'airvpn' do
   version '2.10'
   sha256 '2ab80137f9a80b0c8dcd549c56b66ca74c8aa6fd03156f6d665f18da949ce055'
 

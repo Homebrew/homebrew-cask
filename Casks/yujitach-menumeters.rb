@@ -1,4 +1,4 @@
-cask :v1 => 'yujitach-menumeters' do
+cask 'yujitach-menumeters' do
   version '1.9.1'
   sha256 'cffa931287fe0b4f7b05e400b96bead4317702524233bafc25460687ed20aebf'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'bitpim' do
+cask 'bitpim' do
   version '1.0.7'
   sha256 '567d41ececc8c416746c3aa9365182797b339001d255dc4da7acc285bb289880'
 

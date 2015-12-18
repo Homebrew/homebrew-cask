@@ -1,4 +1,4 @@
-cask :v1 => 'macscale' do
+cask 'macscale' do
   version :latest
   sha256 :no_check
 

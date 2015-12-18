@@ -1,4 +1,4 @@
-cask :v1 => 'barxtemp' do
+cask 'barxtemp' do
   version '1.3.2'
   sha256 '85c8347ab8e7cbc8e7cf639317f3ff5df75feb9420bf94596dcfa05ac5914d16'
 

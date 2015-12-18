@@ -1,4 +1,4 @@
-cask :v1 => 'fender-amp-drivers' do
+cask 'fender-amp-drivers' do
   version '2.7.1'
   sha256 'e68de1a1c1068d34dda354e2678ddac4a796b2ccdface95b034a438455442919'
 

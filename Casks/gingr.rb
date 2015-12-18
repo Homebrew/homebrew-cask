@@ -1,4 +1,4 @@
-cask :v1 => 'gingr' do
+cask 'gingr' do
   version '1.2'
   sha256 '27ba08606ae3f743ffdbcb6d554048ab3a7560087577f10503a0f5cd0227f9d3'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'coteditor' do
+cask 'coteditor' do
   if MacOS.release <= :snow_leopard
     version '1.3.1'
     sha256 '5c871bd9de30fc3c76fc66acb4ea258d4d3762ae341181d65a7ef1f8de4751c5'

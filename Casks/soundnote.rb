@@ -1,4 +1,4 @@
-cask :v1 => 'soundnote' do
+cask 'soundnote' do
   version :latest
   sha256 :no_check
 

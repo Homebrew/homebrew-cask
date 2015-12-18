@@ -1,4 +1,4 @@
-cask :v1 => 'kicad' do
+cask 'kicad' do
   version '4.0.0'
   sha256 '71b47ce37acd1d32eaee898254114203ef2de8b382f1353db7a01caa37a798e5'
 

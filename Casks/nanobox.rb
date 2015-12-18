@@ -1,4 +1,4 @@
-cask :v1 => 'nanobox' do
+cask 'nanobox' do
   version :latest
   sha256 :no_check
 

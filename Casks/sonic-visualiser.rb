@@ -1,4 +1,4 @@
-cask :v1 => 'sonic-visualiser' do
+cask 'sonic-visualiser' do
   version '2.4.1'
   sha256 '45edf5021376ed79e3a7a9a17745261f91362c05d90db17dc3179b1649c29332'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'beaker' do
+cask 'beaker' do
   version '1.4.2-1-ge55c059'
   sha256 '76cbdb1ccafdf5ad10179fa2493e91ab6de16916b366a6c9592a5792ab50bdde'
 

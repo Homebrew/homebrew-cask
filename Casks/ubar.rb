@@ -1,4 +1,4 @@
-cask :v1 => 'ubar' do
+cask 'ubar' do
   version '3.1.1'
   sha256 'f5470e803ba75977099a9582a6d2eabd39aaad9baf6028bbc60b53a1c9bcc409'
 

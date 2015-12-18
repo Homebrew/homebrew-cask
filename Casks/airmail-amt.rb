@@ -1,4 +1,4 @@
-cask :v1 => 'airmail-amt' do
+cask 'airmail-amt' do
   version :latest
   sha256 :no_check
 

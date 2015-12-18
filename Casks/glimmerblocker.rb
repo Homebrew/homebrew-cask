@@ -1,4 +1,4 @@
-cask :v1 => 'glimmerblocker' do
+cask 'glimmerblocker' do
   version '1.6.6'
   sha256 'd207aa133986b8f82687fd80eda82ff6c03f71c9231294286a04df1a05b5deb0'
 

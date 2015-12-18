@@ -1,4 +1,4 @@
-cask :v1 => 'colour-contrast-analyser' do
+cask 'colour-contrast-analyser' do
   version '1.5.13'
   sha256 '2e737dde56179725ccbad1306bfa8db2711bbc910d046cdb4c567e6a5ad86bb4'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'eclipse-installer' do
+cask 'eclipse-installer' do
   version :latest
   sha256 :no_check
 

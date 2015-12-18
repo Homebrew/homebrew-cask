@@ -1,4 +1,4 @@
-cask :v1 => 'flowdock' do
+cask 'flowdock' do
   version '1.2.7'
   sha256 '80cce5d7062ca5e24189d268bb6b0c08ce732c5039156bbe393c0bdecec5eadd'
 

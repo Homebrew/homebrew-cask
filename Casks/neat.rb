@@ -1,4 +1,4 @@
-cask :v1 => 'neat' do
+cask 'neat' do
   version '4.3.0.36'
   sha256 '4db396a5e9e6dbf1d03670830959fbba5753caeb77d279a60f6f251f376f3f1d'
 

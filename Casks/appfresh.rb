@@ -1,4 +1,4 @@
-cask :v1 => 'appfresh' do
+cask 'appfresh' do
   version '1.0.5_909'
   sha256 'e4d4e719bebf17f0ea5e7336e5da84d032b26dfaefa2f5102250fe9a208674cc'
 

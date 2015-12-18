@@ -1,4 +1,4 @@
-cask :v1 => 'eagle' do
+cask 'eagle' do
   version '7.5.0'
   sha256 '1abad61ebd8dd42dca64c289dccb38f39c2fe9c67d3313d53ec31e6bad74870b'
 

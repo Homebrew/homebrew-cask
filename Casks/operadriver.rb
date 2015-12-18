@@ -1,4 +1,4 @@
-cask :v1 => 'operadriver' do
+cask 'operadriver' do
   version '0.2.2'
   sha256 '6584ea2b0ebb06a2c5639570fdac0a28de90bb88982ce9e74d531147106988bd'
 

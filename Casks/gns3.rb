@@ -1,4 +1,4 @@
-cask :v1 => 'gns3' do
+cask 'gns3' do
   version '1.3.11'
   sha256 'baece9951303bca6e887be5fdce730fcc238350446203e227f39906dbd9010f8'
 

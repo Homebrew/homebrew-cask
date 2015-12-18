@@ -1,4 +1,4 @@
-cask :v1 => 'liteicon' do
+cask 'liteicon' do
   version '3.6.2'
   sha256 'b9b12c02e69c38f983568a2231d0bd85690839736b1e5595a7d3358c2c7cf304'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'timer' do
+cask 'timer' do
   version :latest
   sha256 :no_check
 

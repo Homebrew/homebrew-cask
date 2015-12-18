@@ -1,4 +1,4 @@
-cask :v1 => 'jdownloader' do
+cask 'jdownloader' do
   version :latest
   sha256 :no_check
 

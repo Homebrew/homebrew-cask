@@ -1,4 +1,4 @@
-cask :v1 => 'sublime' do
+cask 'sublime' do
   version :latest
   sha256 :no_check
 

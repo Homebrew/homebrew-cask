@@ -1,4 +1,4 @@
-cask :v1 => 'butter' do
+cask 'butter' do
   version '0.2.1'
   sha256 'f7fc79992efec76864903f5e5f3e637912d7870bbe93108ddf136fd4b8fe03b8'
 

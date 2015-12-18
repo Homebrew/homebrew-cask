@@ -1,4 +1,4 @@
-cask :v1 => 'boinc' do
+cask 'boinc' do
   version '7.6.12'
   sha256 '194c91040807d995a5f54574c207d12b8970008319e146abb8fcfa13f75e39c6'
 

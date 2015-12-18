@@ -1,4 +1,4 @@
-cask :v1_2 => 'turbo-boost-switcher' do
+cask 'turbo-boost-switcher' do
   version '1.2.0'
   sha256 'c1b42d0aac3114a0bef8bfcdbfc948387738fd333210e58563c0c161d29dcb9a'
 

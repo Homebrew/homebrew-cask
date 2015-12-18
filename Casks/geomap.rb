@@ -1,4 +1,4 @@
-cask :v1 => 'geomap' do
+cask 'geomap' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'taskpaper' do
+cask 'taskpaper' do
   version '2.3.2'
   sha256 'faaaef9c9b6398aa7beb6782b1704ccc74b11e251f428d6b921248235afc3a06'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'cycling74-max' do
+cask 'cycling74-max' do
   version '7.0.6_150930'
   sha256 '8498d56b174e214808e8ddfa05fa02c0e5b7f51b34182ab6cfe5eb9d60ef1697'
 

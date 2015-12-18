@@ -1,4 +1,4 @@
-cask :v1 => 'pokemon-showdown' do
+cask 'pokemon-showdown' do
   version :latest
   sha256 :no_check
 

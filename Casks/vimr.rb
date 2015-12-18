@@ -1,4 +1,4 @@
-cask :v1 => 'vimr' do
+cask 'vimr' do
   version '0.8.0-32'
   sha256 '8660e7d5157b3165faab8a228f67a1bd63016c51bc300af131b90edc18dda678'
 

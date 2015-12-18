@@ -1,4 +1,4 @@
-cask :v1 => 'between' do
+cask 'between' do
   version :latest
   sha256 :no_check
 

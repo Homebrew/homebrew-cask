@@ -1,4 +1,4 @@
-cask :v1 => 'picasa' do
+cask 'picasa' do
   version '3.9'
   sha256 'df84018272ecf0f56e78e73cb6eb8f7c08911f6e24294fdc811e362a35dace9c'
 

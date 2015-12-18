@@ -1,4 +1,4 @@
-cask :v1 => 'git' do
+cask 'git' do
   version '2.2.1'
   name 'git-osx-installer'
   homepage 'https://sourceforge.net/projects/git-osx-installer'

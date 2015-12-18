@@ -1,4 +1,4 @@
-cask :v1 => 'netnewswire' do
+cask 'netnewswire' do
   version '4.0.1-335'
   sha256 'b5240f104c23f93eacf05a900992db2cd4b3fcb8c2dbdc7a0a504dd4cb8fcb7b'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'th-makerx' do
+cask 'th-makerx' do
   version '3.6.0'
   sha256 '7b45203fc92355a4c1714a85c48bc6ac5ab9d9ee3762fa500c94cd68c6d60792'
 

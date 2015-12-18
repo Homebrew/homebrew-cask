@@ -1,4 +1,4 @@
-cask :v1 => 'bbc-iplayer-downloads' do
+cask 'bbc-iplayer-downloads' do
   version '1.14.1'
   sha256 'a895f1473d9f0d8e9f185bb2a98c0cd56ccf0c4c9b05b8fe3ae705bcf88fcf40'
 

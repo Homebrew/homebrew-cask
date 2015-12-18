@@ -1,4 +1,4 @@
-cask :v1 => 'sophos-anti-virus-home-edition' do
+cask 'sophos-anti-virus-home-edition' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'microsoft-intellitype' do
+cask 'microsoft-intellitype' do
   version '8.2'
   sha256 '8aaaef8fc2722f1e896facb23c69ef759f7ecd92d94031c51ca0a890d198cd58'
 

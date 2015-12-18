@@ -1,4 +1,4 @@
-cask :v1 => 'tiled' do
+cask 'tiled' do
   version '0.14.2'
   sha256 'ee8c7f3bba284d3fe5fa89cfe313f60bdd20e1386f08ed2649b60cb9159d268a'
 

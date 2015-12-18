@@ -1,4 +1,4 @@
-cask :v1 => 'audio-editor' do
+cask 'audio-editor' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'bilibili' do
+cask 'bilibili' do
   version '2.21'
   sha256 '097cd67faf04b22a5ba78b6c060d5ba9fc94dacc64b7973771a86238a363c8ce'
 

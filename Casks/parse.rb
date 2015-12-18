@@ -1,4 +1,4 @@
-cask :v1_1 => 'parse' do
+cask 'parse' do
   version :latest
   sha256 :no_check
 

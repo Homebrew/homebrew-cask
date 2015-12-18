@@ -1,4 +1,4 @@
-cask :v1 => 'ibettercharge' do
+cask 'ibettercharge' do
   version '1.0.10-1443542332'
   sha256 'd4c3b410b77836ecc97bf6133e7109934c2d0a6b64349083d2c03b0280e21985'
 

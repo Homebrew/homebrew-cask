@@ -1,4 +1,4 @@
-cask :v1 => 'monu' do
+cask 'monu' do
   version '1.2.0'
   sha256 'ee90e1eadb95983e694c3b8d482cd88758c773dc01024f8ba79b8d9b41175045'
 

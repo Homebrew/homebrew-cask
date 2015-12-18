@@ -1,4 +1,4 @@
-cask :v1 => 'audiomate' do
+cask 'audiomate' do
   version '2.2.3_122'
   sha256 '7065294d5ccbc72ba7da3b0c23a3ba52aa9a051e7c94694b96e6e3b422168eb6'
 

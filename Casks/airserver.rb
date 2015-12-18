@@ -1,4 +1,4 @@
-cask :v1 => 'airserver' do
+cask 'airserver' do
   version '6.0.3'
   sha256 'b4d08ac1db459ea01ae1812a11421ad1f380ed417eb6b857b5142c86b3e09d29'
 

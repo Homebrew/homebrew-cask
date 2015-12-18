@@ -1,4 +1,4 @@
-cask :v1 => 'hopper-disassembler' do
+cask 'hopper-disassembler' do
   version '3.11.2'
   sha256 'b41e49bf60d49d855429bcd34fe04a05420e4975a1fcb9c01a8039ab37121259'
 

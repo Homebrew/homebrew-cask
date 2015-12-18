@@ -1,4 +1,4 @@
-cask :v1 => 'moneyguru' do
+cask 'moneyguru' do
   version '2.9.3'
   sha256 '5f47715fa02c5fcd6595a733b35b99bd86b3008dff2a566deb692a7abe0b21a6'
 

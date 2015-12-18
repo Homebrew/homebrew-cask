@@ -1,4 +1,4 @@
-cask :v1 => 'powerkey' do
+cask 'powerkey' do
   version '1.3'
   sha256 '5f6246133953a65709252880738de7f69198ed3f23dc61bbfc062887e2313102'
 

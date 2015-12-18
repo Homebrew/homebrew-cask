@@ -1,4 +1,4 @@
-cask :v1 => 'delicious-library' do
+cask 'delicious-library' do
   version '3.3.5'
   sha256 '7f039110430f02013e217ab2ca6c3aba1922f795961ee744d8465d155f004104'
 

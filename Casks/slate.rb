@@ -1,4 +1,4 @@
-cask :v1 => 'slate' do
+cask 'slate' do
   version :latest
   sha256 :no_check
 

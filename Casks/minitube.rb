@@ -1,4 +1,4 @@
-cask :v1 => 'minitube' do
+cask 'minitube' do
   version :latest
   sha256 :no_check
 

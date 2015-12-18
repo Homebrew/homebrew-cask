@@ -1,4 +1,4 @@
-cask :v1 => 'anki' do
+cask 'anki' do
 
   if MacOS.release <= :snow_leopard
     version '2.0.33.qt47'

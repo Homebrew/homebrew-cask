@@ -1,4 +1,4 @@
-cask :v1_1 => 'dogestry' do
+cask 'dogestry' do
   version '2.1.5'
   sha256 '7629c0c143f86c45906a502906afe926b35252ba77588d5c63566c3ffceb5af0'
 

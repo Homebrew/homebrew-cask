@@ -1,4 +1,4 @@
-cask :v1 => 'go' do
+cask 'go' do
   if MacOS.release <= :snow_leopard
     version '1.4.2'
     sha256 '8b8fe5c723663c2da0381643b2f04b0a597f623149095db61818c3fe22be9582'

@@ -1,4 +1,4 @@
-cask :v1 => 'macbreakz' do
+cask 'macbreakz' do
   version :latest
   sha256 :no_check
 

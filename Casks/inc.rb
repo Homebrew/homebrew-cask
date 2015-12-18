@@ -1,4 +1,4 @@
-cask :v1 => 'inc' do
+cask 'inc' do
   version :latest
   sha256 :no_check
 

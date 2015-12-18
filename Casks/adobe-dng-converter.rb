@@ -1,4 +1,4 @@
-cask :v1 => 'adobe-dng-converter' do
+cask 'adobe-dng-converter' do
   version '9.1.1'
   sha256 'c48ad14fe396f2bba0bdd028c4a0be76458c7076fa5d36822943ce84fbe20e1d'
 

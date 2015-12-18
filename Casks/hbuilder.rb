@@ -1,4 +1,4 @@
-cask :v1 => 'hbuilder' do
+cask 'hbuilder' do
   version '6.8.2'
   sha256 '5ed6f94b2a4049971289b46ed0ecabdae186677b5ff35fc8c458a9568c820e02'
 

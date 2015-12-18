@@ -1,4 +1,4 @@
-cask :v1 => 'vinoteka' do
+cask 'vinoteka' do
   version :latest
   sha256 :no_check
 

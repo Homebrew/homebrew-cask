@@ -1,4 +1,4 @@
-cask :v1 => 'image2icon' do
+cask 'image2icon' do
   version '2.2'
   sha256 'b4f0ddf283c3f134d832ee9510921bb3aebd3920588bb3a718b3e9ac1e526aaa'
 

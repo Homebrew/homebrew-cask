@@ -1,4 +1,4 @@
-cask :v1 => 'hockey' do
+cask 'hockey' do
   version :latest
   sha256 :no_check
 

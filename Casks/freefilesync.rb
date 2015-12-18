@@ -1,4 +1,4 @@
-cask :v1 => 'freefilesync' do
+cask 'freefilesync' do
   version '7.6'
   sha256 '8785195124b1c1f33fd91513ab9cdef098ff9f9fafe0880eca187803838f528a'
 

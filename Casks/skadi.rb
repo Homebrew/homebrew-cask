@@ -1,4 +1,4 @@
-cask :v1 => 'skadi' do
+cask 'skadi' do
   version '1.0.0'
   sha256 '26c08d7061bbca81bb8f23d83563465ae92422d51d2d63b73d20ad945a43b1d4'
 

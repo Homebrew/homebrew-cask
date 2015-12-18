@@ -1,4 +1,4 @@
-cask :v1 => 'pritunl' do
+cask 'pritunl' do
   version '0.10.14'
   sha256 'afa302d8e95d1635584673a3c206d370c93846f519735d9898e75af43d9bd3a8'
 

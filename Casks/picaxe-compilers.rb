@@ -1,4 +1,4 @@
-cask :v1 => 'picaxe-compilers' do
+cask 'picaxe-compilers' do
   version :latest
   sha256 :no_check
 

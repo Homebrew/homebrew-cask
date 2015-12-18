@@ -1,4 +1,4 @@
-cask :v1 => 'xscreensaver' do
+cask 'xscreensaver' do
   version '5.33'
   sha256 'ba83ae56a7c011c9bd39824b94679e1082375e7d0bc2ebe0afe813147fe38c11'
 

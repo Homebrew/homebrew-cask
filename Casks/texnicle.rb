@@ -1,4 +1,4 @@
-cask :v1 => 'texnicle' do
+cask 'texnicle' do
   version '2.2.14'
   sha256 '95a505f3668b11845103071c44d5aadd1188e04070fc26751ff42390ce4a8580'
 

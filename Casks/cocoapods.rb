@@ -1,4 +1,4 @@
-cask :v1 => 'cocoapods' do
+cask 'cocoapods' do
   version '0.39.0'
   sha256 '51c5d0117272a9b3c30c15dd0a9776574a23c5d810ec0c4b298b0ce4c483f27f'
 

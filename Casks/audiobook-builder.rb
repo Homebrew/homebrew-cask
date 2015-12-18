@@ -1,4 +1,4 @@
-cask :v1 => 'audiobook-builder' do
+cask 'audiobook-builder' do
   version '1.5.3'
   sha256 '8ae30fcc3811292c84a23febb50c78e110bc7514f0d3085ce21b427f45be5d4c'
 

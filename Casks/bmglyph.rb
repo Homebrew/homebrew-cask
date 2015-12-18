@@ -1,4 +1,4 @@
-cask :v1 => 'bmglyph' do
+cask 'bmglyph' do
   version '2.2.0'
   sha256 'b4e42720274ec4825651d5e6376c7e9d80d62770edd5d9f4dc5dc8e24f3fe3fe'
 

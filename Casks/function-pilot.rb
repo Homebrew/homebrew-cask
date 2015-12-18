@@ -1,4 +1,4 @@
-cask :v1 => 'function-pilot' do
+cask 'function-pilot' do
   version :latest
   sha256 :no_check
 

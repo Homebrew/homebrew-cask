@@ -1,4 +1,4 @@
-cask :v1 => 'near-lock' do
+cask 'near-lock' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'syphon-virtual-screen' do
+cask 'syphon-virtual-screen' do
   version '1.3'
   sha256 '0cf56d171f3427d623d4b12d55e0342a34cd8d12dd7082c7ed372b5effac8a46'
 

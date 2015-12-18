@@ -1,4 +1,4 @@
-cask :v1 => 'blink1control' do
+cask 'blink1control' do
   version '1.98'
   sha256 '49c680f3ec174662cc00a4f4649074a891e8fc55b82aec284c5aade0efb44ce1'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'a-better-finder-rename' do
+cask 'a-better-finder-rename' do
   version :latest
   sha256 :no_check
 

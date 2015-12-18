@@ -1,4 +1,4 @@
-cask :v1 => 'verizoninhomeagent' do
+cask 'verizoninhomeagent' do
   version :latest
   sha256 :no_check
 

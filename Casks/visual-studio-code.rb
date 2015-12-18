@@ -1,4 +1,4 @@
-cask :v1 => 'visual-studio-code' do
+cask 'visual-studio-code' do
   version '0.10.3'
   sha256 '90e4d35f176d045e12647c603a23eb270d47ede91b5fa933f26bb800ccf4ad04'
 

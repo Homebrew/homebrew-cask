@@ -1,4 +1,4 @@
-cask :v1 => 'steelseries-exactmouse-tool' do
+cask 'steelseries-exactmouse-tool' do
   version :latest
   sha256 :no_check
 

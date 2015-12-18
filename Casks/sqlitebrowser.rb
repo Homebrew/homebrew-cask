@@ -1,4 +1,4 @@
-cask :v1 => 'sqlitebrowser' do
+cask 'sqlitebrowser' do
   version '3.7.0'
   sha256 '421dc0d64a61f393bee6a482bc32fbdce4b4cdab6f5be10e9214624604079bbb'
 

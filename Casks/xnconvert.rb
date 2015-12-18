@@ -1,4 +1,4 @@
-cask :v1 => 'xnconvert' do
+cask 'xnconvert' do
   version :latest
   sha256 :no_check
 

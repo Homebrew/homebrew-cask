@@ -1,4 +1,4 @@
-cask :v1 => 'track-o-bot' do
+cask 'track-o-bot' do
   version '0.6.2'
   sha256 'b694f4d4044a124ce3c02a001cfdc6dcb1f43c89bf902d79c8980163aa4e7554'
 

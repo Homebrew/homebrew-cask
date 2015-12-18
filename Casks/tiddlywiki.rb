@@ -1,4 +1,4 @@
-cask :v1 => 'tiddlywiki' do
+cask 'tiddlywiki' do
   version '0.0.7'
 
   if Hardware::CPU.is_32_bit?

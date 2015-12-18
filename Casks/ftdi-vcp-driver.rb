@@ -1,4 +1,4 @@
-cask :v1 => 'ftdi-vcp-driver' do
+cask 'ftdi-vcp-driver' do
   if MacOS.release <= :mountain_lion
     version '2.2.18'
     sha256 '248f582527175ab07334f6a1255c8be2da4dfc36da49e26d39a2f61f5b7ba2e7'

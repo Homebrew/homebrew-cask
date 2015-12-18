@@ -1,4 +1,4 @@
-cask :v1 => 'people-plus-content-ip' do
+cask 'people-plus-content-ip' do
   version '1.0.1'
   sha256 '4a29e7eb0901db45572e7dac108df74b52015c75d4aaa9fe774b5027b8bf9990'
 

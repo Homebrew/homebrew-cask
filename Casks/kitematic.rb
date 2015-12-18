@@ -1,4 +1,4 @@
-cask :v1 => 'kitematic' do
+cask 'kitematic' do
   version '0.9.4'
   sha256 '770f8a9f30c9705bcc02a9cb06adfc8e3961afe482497dc8405f7e8cec8bd2b4'
 

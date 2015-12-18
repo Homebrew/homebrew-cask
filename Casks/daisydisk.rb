@@ -1,4 +1,4 @@
-cask :v1 => 'daisydisk' do
+cask 'daisydisk' do
 
   if MacOS.release == :snow_leopard
     version '2.1.2'

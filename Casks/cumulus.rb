@@ -1,4 +1,4 @@
-cask :v1 => 'cumulus' do
+cask 'cumulus' do
   version '0.5.4'
   sha256 'cb0a6c6ae579e4877c634b72db3a5425d975f91bd4353c7c3ccd63d05aa8713f'
 

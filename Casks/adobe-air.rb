@@ -1,4 +1,4 @@
-cask :v1 => 'adobe-air' do
+cask 'adobe-air' do
   version '20.0'
   sha256 :no_check # required as upstream package is updated in-place
 

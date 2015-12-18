@@ -1,4 +1,4 @@
-cask :v1 => 'appcleaner' do
+cask 'appcleaner' do
   version '3.2.1'
   sha256 '96ba58688df66dd605b9e109d3c75726eab143193a25c2c2c9e3ddcb5135ad09'
 

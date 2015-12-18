@@ -1,4 +1,4 @@
-cask :v1 => 'texshop' do
+cask 'texshop' do
   version '3.58'
   sha256 '182d257d00344c4e03523668f5c94cb23e2a32791efa7e46d5c1bf908a11d423'
 

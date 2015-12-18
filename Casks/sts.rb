@@ -1,4 +1,4 @@
-cask :v1 => 'sts' do
+cask 'sts' do
   version '3.7.2.RELEASE'
   sha256 'f49bbcc74662bf8e8db403a4cff527a8f914ed0b43d5b3b6a97be977dce5bbe6'
 

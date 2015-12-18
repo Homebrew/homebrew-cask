@@ -1,4 +1,4 @@
-cask :v1 => 'eclipse-php' do
+cask 'eclipse-php' do
   version '4.5.1'
   sha256 '142fdeeedf091149a6d72e0aacf28f6937fe6bef01d83cbf141be4d847172492'
 

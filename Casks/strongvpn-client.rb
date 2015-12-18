@@ -1,4 +1,4 @@
-cask :v1 => 'strongvpn-client' do
+cask 'strongvpn-client' do
   version '1.1.6'
   sha256 '839312f789e8ad4ad64091149316e2ae08f8fb9e048fb16cf984f4ded23e91fd'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'gity' do
+cask 'gity' do
   version :latest
   sha256 :no_check
 

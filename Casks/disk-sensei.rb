@@ -1,4 +1,4 @@
-cask :v1 => 'disk-sensei' do
+cask 'disk-sensei' do
   version :latest
   sha256 :no_check
 

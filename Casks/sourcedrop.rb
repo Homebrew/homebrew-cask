@@ -1,4 +1,4 @@
-cask :v1 => 'sourcedrop' do
+cask 'sourcedrop' do
   version '1.6.1'
   sha256 'b756b182e6cf5bb4253f66ae21acb7de3c1ee2fcc7ffd5e6429a5fbc155de591'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'suspicious-package' do
+cask 'suspicious-package' do
   version :latest
   sha256 :no_check
 

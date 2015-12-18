@@ -1,4 +1,4 @@
-cask :v1 => 'historyhound' do
+cask 'historyhound' do
   version '1.9.11'
   sha256 '125cda1a46a2757128a48d49ef8c755fa7ec8d13040875fe29d0133a4518d5ae'
 

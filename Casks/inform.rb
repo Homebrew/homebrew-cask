@@ -1,4 +1,4 @@
-cask :v1 => 'inform' do
+cask 'inform' do
   version '7.6L38'
   sha256 '79a478600bbcb10347711794349c19c12ce8109a701e3aa737f638f6d4e9127b'
 

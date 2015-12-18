@@ -1,4 +1,4 @@
-cask :v1 => 'time-relic' do
+cask 'time-relic' do
   version :latest
   sha256 :no_check
 

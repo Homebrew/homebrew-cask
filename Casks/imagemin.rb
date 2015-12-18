@@ -1,4 +1,4 @@
-cask :v1 => 'imagemin' do
+cask 'imagemin' do
   version '0.1.0'
   sha256 '8a4304d37eaa8a71fbeb550aece6a80c98dbcdf7a9fb6eb09faae1ad93df40d6'
 

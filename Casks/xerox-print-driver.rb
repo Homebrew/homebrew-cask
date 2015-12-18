@@ -1,4 +1,4 @@
-cask :v1 => 'xerox-print-driver' do
+cask 'xerox-print-driver' do
   name 'Xerox Print Driver'
   homepage 'http://www.support.xerox.com/support/colorqube-8900/downloads'
   license :gratis

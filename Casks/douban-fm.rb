@@ -1,4 +1,4 @@
-cask :v1 => 'douban-fm' do
+cask 'douban-fm' do
   version '1.0'
   sha256 'cbd00a0e035004feabf74181730d6a9ee3840da11ecf0e5e5d53094a26663456'
 

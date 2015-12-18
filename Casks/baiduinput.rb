@@ -1,4 +1,4 @@
-cask :v1 => 'baiduinput' do
+cask 'baiduinput' do
   version '3.4_1000e'
   sha256 'dd7a65c1eb2c1f300c96bea2bac63bbdb4a23d31a78ddbdb4f4cd5d14eba08e3'
 

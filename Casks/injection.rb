@@ -1,4 +1,4 @@
-cask :v1 => 'injection' do
+cask 'injection' do
   version '6.4'
   sha256 'a015934d2223345796757ceeb8bd8c1d21b8f63ed9fbd27b36ffe7e5a82b0933'
 

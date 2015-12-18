@@ -1,4 +1,4 @@
-cask :v1 => 'tor-messenger' do
+cask 'tor-messenger' do
   version '0.1.0b4'
   sha256 '82ddb5f301f70d7ddd5013a6b30f365988d650ef80059cf4172d908b352cb23f'
 

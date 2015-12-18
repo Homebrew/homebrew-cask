@@ -1,4 +1,4 @@
-cask :v1 => 'yakyak' do
+cask 'yakyak' do
   version '1.1.1'
   sha256 '992197916e36f02cffb5a85ae53b8a61d563a0a818de45bba7ab60d210f6924a'
 

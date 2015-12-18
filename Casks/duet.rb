@@ -1,4 +1,4 @@
-cask :v1 => 'duet' do
+cask 'duet' do
   version '1.4.0_1439081188'
   sha256 'd3123f40c9d6d9989e8f9f9dd2ca3f3ccad79304ce739fcaa32d2334de4de4d2'
 

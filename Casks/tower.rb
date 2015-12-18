@@ -1,4 +1,4 @@
-cask :v1 => 'tower' do
+cask 'tower' do
   version '2.3.2-299-6e9850db'
   sha256 '2778bb1c98417b694bf0b72908c3d88c3b055ac959b6a1366186c0b789a2f20a'
 

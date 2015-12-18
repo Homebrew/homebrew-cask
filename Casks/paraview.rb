@@ -1,4 +1,4 @@
-cask :v1 => 'paraview' do
+cask 'paraview' do
   version '4.3.1'
 
   if MacOS.release == :snow_leopard

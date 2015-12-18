@@ -1,4 +1,4 @@
-cask :v1 => 'windownaut' do
+cask 'windownaut' do
   version :latest
   sha256 :no_check
 

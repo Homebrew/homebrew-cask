@@ -1,4 +1,4 @@
-cask :v1 => 'menubar-colors' do
+cask 'menubar-colors' do
   version '2.3.0'
   sha256 'b12188d45b57ae8614d9fc25d97c8302936916655ac6c8b19b9ca629c9ee7367'
 

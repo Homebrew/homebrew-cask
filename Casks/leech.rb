@@ -1,4 +1,4 @@
-cask :v1 => 'leech' do
+cask 'leech' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'launchcontrol' do
+cask 'launchcontrol' do
   version '1.25'
   sha256 'cafa8454acba01fadc5710c2f395ca288e9eacf92ad6725593c1f7466da46e79'
 

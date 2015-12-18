@@ -1,4 +1,4 @@
-cask :v1 => 'textbar' do
+cask 'textbar' do
   version '1.7.95'
   sha256 '7fe84b1aa092bf37c51165c247b73e2e94e0ba0c6464f9d522666ff37dc35c3b'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'resolutionator' do
+cask 'resolutionator' do
   version :latest
   sha256 :no_check
 

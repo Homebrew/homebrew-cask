@@ -1,4 +1,4 @@
-cask :v1 => 'whatsdesktop' do
+cask 'whatsdesktop' do
   version '1.2.0'
   sha256 '0eb3f31f600568694ffe7d6727e8d248afc6a2780ca1d25e6365ed28cc9872c1'
 

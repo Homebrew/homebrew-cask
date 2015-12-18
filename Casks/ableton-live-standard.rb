@@ -1,4 +1,4 @@
-cask :v1 => 'ableton-live-standard' do
+cask 'ableton-live-standard' do
   version '9.5'
 
   if Hardware::CPU.is_32_bit?
