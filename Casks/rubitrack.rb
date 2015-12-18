@@ -1,10 +1,10 @@
 cask 'rubitrack' do
-  version '4.1.1'
-  sha256 '5d77a72ce0618c9bdeeb0101fc262f8ec5f418557e4ff84e396a0c36c270170a'
+  version '4.3'
+  sha256 '80976d5f976ab2691e6f05634b882b361333b3645f83de799101bc552cb5a2da'
 
   url "http://www.rubitrack.com/files/rubiTrack-#{version}.dmg"
   appcast "http://www.rubitrack.com/autoupdate/sparkle#{version.to_i}.xml",
-          :sha256 => '16c64a4ad655c8f8741985a283a8f7169df80d1386ef9318cbf27ff97b5a255e'
+          :sha256 => '1bec07ac86eea62ba55c1f720568c5bc9b6ab21c009cb788a5ef9bc9f9c6a6bb'
   name 'rubiTrack'
   homepage 'http://www.rubitrack.com/'
   license :commercial
