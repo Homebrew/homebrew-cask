@@ -1,4 +1,4 @@
-cask :v1 => 'querious' do
+cask 'querious' do
   version :latest
   sha256 :no_check
 

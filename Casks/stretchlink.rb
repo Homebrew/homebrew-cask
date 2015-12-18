@@ -1,4 +1,4 @@
-cask :v1 => 'stretchlink' do
+cask 'stretchlink' do
   version :latest
   sha256 :no_check
 

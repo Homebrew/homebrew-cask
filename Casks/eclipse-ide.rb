@@ -1,4 +1,4 @@
-cask :v1 => 'eclipse-ide' do
+cask 'eclipse-ide' do
   version '4.5.1'
   sha256 'ec2a963367f3ee99429f151d0af3bb6d70d0550f27e2d7ab65730b429b54c9a9'
 

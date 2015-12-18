@@ -1,4 +1,4 @@
-cask :v1 => 'xmind' do
+cask 'xmind' do
   version '3.6.0.R-201511090408'
   sha256 'c7b452da9ccdbf2da7745147db9954365f8fe41b294c8673140c5a79a6a4a92f'
 

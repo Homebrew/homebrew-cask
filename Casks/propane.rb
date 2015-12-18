@@ -1,4 +1,4 @@
-cask :v1 => 'propane' do
+cask 'propane' do
   version :latest
   sha256 :no_check
 

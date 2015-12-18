@@ -1,4 +1,4 @@
-cask :v1 => 'sauce-connect' do
+cask 'sauce-connect' do
   version '4.3.13'
   sha256 '97541227092564a4f15f25ba9b3257da8e1ffebc827d5c5cbd66e674d8a20cba'
 

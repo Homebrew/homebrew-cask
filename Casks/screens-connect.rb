@@ -1,4 +1,4 @@
-cask :v1_1 => 'screens-connect' do
+cask 'screens-connect' do
   version '3.6_b930'
   sha256 '23570864f111c8eb610f61ad6cb35ed4a9f11cd9836a7c606d89ba87daf2f01b'
 

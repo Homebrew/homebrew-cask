@@ -1,4 +1,4 @@
-cask :v1 => 'gramps' do
+cask 'gramps' do
   version '4.2.1-1'
   sha256 '9672a1cdde835ccdd1ab130019f2a71877991e0b75d3b6f02eb4b5fc68e3dec6'
 

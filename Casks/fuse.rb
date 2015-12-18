@@ -1,4 +1,4 @@
-cask :v1 => 'fuse' do
+cask 'fuse' do
   version '0.9.3.5207'
   sha256 '3a3a408dfe646b9d1bff466dafe2b31116f1295d092c5ffe6522603d06334bc7'
 

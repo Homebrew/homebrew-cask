@@ -1,4 +1,4 @@
-cask :v1 => 'bitwig-studio' do
+cask 'bitwig-studio' do
   version '1.3.3'
   sha256 '6d614095b1b39e387ed4c96a70342c5d982a6d4a5c71e6a4498f25b7898b909b'
 

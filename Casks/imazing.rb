@@ -1,4 +1,4 @@
-cask :v1 => 'imazing' do
+cask 'imazing' do
   version '1.3.8-1447430071'
   sha256 'a78d45218cde01845c20087a68a77153a4746fed2fe9a6b35061ddc227a960f8'
 

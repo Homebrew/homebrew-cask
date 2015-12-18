@@ -1,4 +1,4 @@
-cask :v1 => 'home-inventory' do
+cask 'home-inventory' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'deploymate' do
+cask 'deploymate' do
   version '1.2.9'
   sha256 '0e2be785a35b9264791ad8bf5a3580b61cff446c0f0fa498ff3e12faaf9ce10e'
 

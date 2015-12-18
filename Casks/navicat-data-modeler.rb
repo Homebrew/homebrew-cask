@@ -1,4 +1,4 @@
-cask :v1 => 'navicat-data-modeler' do
+cask 'navicat-data-modeler' do
   version '2.0.6'
   sha256 '02b0dcb81329e6f950fadee9145f0b8ec42774a9b3c6570ff57ad8ab44ba356c'
 

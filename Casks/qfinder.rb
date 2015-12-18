@@ -1,4 +1,4 @@
-cask :v1 => 'qfinder' do
+cask 'qfinder' do
   version :latest
   sha256 :no_check
 

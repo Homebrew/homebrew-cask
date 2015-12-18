@@ -1,4 +1,4 @@
-cask :v1 => 'quotefix' do
+cask 'quotefix' do
   version '2.7.2'
   sha256 'f8431da47b026137d3c43633ce683627e0a390e00ab96638c04869d1ae30d4e9'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'infinit' do
+cask 'infinit' do
   version :latest
   sha256 :no_check
 

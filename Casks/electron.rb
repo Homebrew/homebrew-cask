@@ -1,4 +1,4 @@
-cask :v1 => 'electron' do
+cask 'electron' do
   version '0.36.0'
   sha256 '79c59ae51ed4242a490b1c4cf832e3795808eb1b4afd8a3dfa6e612d96952894'
 

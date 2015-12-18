@@ -1,4 +1,4 @@
-cask :v1 => 'clamxav' do
+cask 'clamxav' do
   if MacOS.release <= :tiger
     version '2.2.1'
     sha256 'e075b21fe5154f31dcbde86e492531c87c67ab44ad75294d3063f32ae1e58278'

@@ -1,4 +1,4 @@
-cask :v1 => 'iojs' do
+cask 'iojs' do
   version '2.4.0'
   sha256 '7d842eb47b4208f8eb1e9fd7d34e8c1d8b5cde70ba731c2d7565c76f2629b98f'
 

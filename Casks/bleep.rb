@@ -1,4 +1,4 @@
-cask :v1 => 'bleep' do
+cask 'bleep' do
   version :latest
   sha256 :no_check
 

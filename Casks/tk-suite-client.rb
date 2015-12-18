@@ -1,4 +1,4 @@
-cask :v1 => 'tk-suite-client' do
+cask 'tk-suite-client' do
   version '4.4.34'
   sha256 '60f0011b66f958a80295bf37011b166976967a1bde149ee278fa94b61172fb83'
 

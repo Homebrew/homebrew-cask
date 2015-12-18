@@ -1,4 +1,4 @@
-cask :v1 => 'path-finder' do
+cask 'path-finder' do
   version :latest
   sha256 :no_check
 

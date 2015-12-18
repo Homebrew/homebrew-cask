@@ -1,4 +1,4 @@
-cask :v1 => 'baidumusic' do
+cask 'baidumusic' do
   version :latest
   sha256 :no_check
 

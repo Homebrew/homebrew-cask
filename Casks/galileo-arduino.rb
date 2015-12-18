@@ -1,4 +1,4 @@
-cask :v1 => 'galileo-arduino' do
+cask 'galileo-arduino' do
   version '1.5.3'
   sha256 '8fafc626fb7d0918d7f4ddb98d59823c0fcc9b3aeb8e1d252ae9688b4095c153'
 

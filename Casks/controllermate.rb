@@ -1,4 +1,4 @@
-cask :v1 => 'controllermate' do
+cask 'controllermate' do
   version '4.9.8'
   sha256 'ab0e8bf540c04f691d71e39e6fd03350d96112780ee610f3d68fb284bad16765'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'maltego' do
+cask 'maltego' do
   version '3.6.0.6526'
   sha256 'cda838e27afd3c73dd33705f0448f7e63918a3e65df0274928a9c87fe3340d00'
 

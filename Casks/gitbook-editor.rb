@@ -1,4 +1,4 @@
-cask :v1 => 'gitbook-editor' do
+cask 'gitbook-editor' do
   version :latest
   sha256 :no_check
 

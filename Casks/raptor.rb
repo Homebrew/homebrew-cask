@@ -1,4 +1,4 @@
-cask :v1 => 'raptor' do
+cask 'raptor' do
   version '98u3f5'
   sha256 'e19dc03ab5e0f7bb17179ce4bcf364211cee3928d7182d3db1dd0c4cf7ee87e0'
 

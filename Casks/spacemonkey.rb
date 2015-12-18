@@ -1,4 +1,4 @@
-cask :v1 => 'spacemonkey' do
+cask 'spacemonkey' do
   version :latest
   sha256 :no_check
 

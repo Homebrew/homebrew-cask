@@ -1,4 +1,4 @@
-cask :v1 => 'polycom-realpresence-desktop' do
+cask 'polycom-realpresence-desktop' do
   version '3.3_50871'
   sha256 '75cc90740112f055ae85955f16a9da255bed60819e00a6343d42648d155b8c0c'
 

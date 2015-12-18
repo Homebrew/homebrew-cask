@@ -1,4 +1,4 @@
-cask :v1 => 'blue-jeans-browser-plugin' do
+cask 'blue-jeans-browser-plugin' do
   version '2.115.99.8'
   sha256 '2a367b63a7d18b2249472179d10e8a51ed3b5c76241513e9397560ecc8065825'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'gpgtools' do
+cask 'gpgtools' do
   version '2015.09'
   sha256 '0ec0f4bb66ef660d3c3b0433dd3186e093a1b4f23bf8fac8b4ebca9fa6d80420'
 

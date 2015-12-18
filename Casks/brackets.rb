@@ -1,4 +1,4 @@
-cask :v1 => 'brackets' do
+cask 'brackets' do
   version '1.5'
   sha256 '753d91370c6c67b028ddfecc8403ec6b887523e0cc48ed074835bb16df7b809b'
 

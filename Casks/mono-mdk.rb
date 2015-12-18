@@ -1,4 +1,4 @@
-cask :v1 => 'mono-mdk' do
+cask 'mono-mdk' do
   version '4.2.1.102'
   sha256 :no_check # required as upstream package is updated in-place
 

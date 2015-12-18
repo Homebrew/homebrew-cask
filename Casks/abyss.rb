@@ -1,4 +1,4 @@
-cask :v1 => 'abyss' do
+cask 'abyss' do
   version 'x1'
   sha256 '63b0b8d6420a0f65899ea1fa7827f04c8c8b3fa444a9f6361054d6605cf13fed'
 

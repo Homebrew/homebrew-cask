@@ -1,4 +1,4 @@
-cask :v1 => 'kindle' do
+cask 'kindle' do
   version '41015'
   sha256 '1c15ce4df69044dc9d2d3562b7f5a8589b65efa5b8e64bc2bcdd7ed41c05df38'
 

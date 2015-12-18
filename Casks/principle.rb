@@ -1,4 +1,4 @@
-cask :v1 => 'principle' do
+cask 'principle' do
   version '0.0.80'
   sha256 '2d6ce166a974a2668e7327daa66137506bc7b67733bee136c1137515001ad1bc'
 

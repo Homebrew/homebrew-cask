@@ -1,4 +1,4 @@
-cask :v1 => 'j' do
+cask 'j' do
   version '802'
   sha256 '294cc7a2b92afe43ad19ec7921de2d9a65351ba1c5cfd9836bc07fe9d9a0d159'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'scansnap-manager-ix100' do
+cask 'scansnap-manager-ix100' do
   version '6.3L32'
   sha256 'd00c23c350a9bcd5032c520234647f67dbe972c6a5ba8291ab19b40c4379091f'
 

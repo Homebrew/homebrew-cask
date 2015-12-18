@@ -1,4 +1,4 @@
-cask :v1 => 'aliwangwang' do
+cask 'aliwangwang' do
   version '3.5.0-4428'
   sha256 'b1ea86f576833084c17ba1d6d66dc31e7941e239cc4474fe9d61e473169c434e'
 

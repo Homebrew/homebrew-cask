@@ -1,4 +1,4 @@
-cask :v1 => 'intensify-pro' do
+cask 'intensify-pro' do
   version '1.0.5_708'
   sha256 'b7133a5e5bab8cfd4f8d576686be17528aef5a84b18256b9ba6654d67eff0c55'
 

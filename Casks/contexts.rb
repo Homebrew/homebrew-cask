@@ -1,4 +1,4 @@
-cask :v1 => 'contexts' do
+cask 'contexts' do
   version '1.9.2'
   sha256 'cf01b2c7f8ff061071f8352794dbbc8f385bc0c2089a5df30792627d587baa59'
 

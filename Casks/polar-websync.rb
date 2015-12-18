@@ -1,4 +1,4 @@
-cask :v1 => 'polar-websync' do
+cask 'polar-websync' do
   version '2.8.2'
   sha256 '287230ee323cca9887f31e448cbac759c770448e25c31c164b87f69bb3ead9b9'
 

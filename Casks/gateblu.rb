@@ -1,4 +1,4 @@
-cask :v1 => 'gateblu' do
+cask 'gateblu' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'notational-velocity' do
+cask 'notational-velocity' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'welly' do
+cask 'welly' do
   if MacOS.release <= :leopard
     version '2.4'
     sha256 '8cf6ca119184112e774103f6df1e279826c10d64fe4b303167dc68ffd28f6b8b'

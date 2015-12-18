@@ -1,4 +1,4 @@
-cask :v1 => 'qget' do
+cask 'qget' do
   version :latest
   sha256 :no_check
 

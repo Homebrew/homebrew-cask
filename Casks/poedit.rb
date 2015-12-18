@@ -1,4 +1,4 @@
-cask :v1 => 'poedit' do
+cask 'poedit' do
 
   if MacOS.release <= :snow_leopard
     version '1.5.7'

@@ -1,4 +1,4 @@
-cask :v1 => 'open-sankore' do
+cask 'open-sankore' do
   version '2.5.0'
   sha256 '773e563a312b64542b0ca905b290606b46c85372e24e2ab5c807de7933f38828'
 

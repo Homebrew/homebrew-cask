@@ -1,4 +1,4 @@
-cask :v1 => 'bezel' do
+cask 'bezel' do
   version '1.2'
   sha256 'cf9a9fbd2049723675e354fd869607a9f828a38b992d8d45783a6c89772192b9'
 

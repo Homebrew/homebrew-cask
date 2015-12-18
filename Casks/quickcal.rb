@@ -1,4 +1,4 @@
-cask :v1 => 'quickcal' do
+cask 'quickcal' do
   version :latest
   sha256 :no_check
 

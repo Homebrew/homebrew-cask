@@ -1,4 +1,4 @@
-cask :v1 => 'freeze' do
+cask 'freeze' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'sparkbox' do
+cask 'sparkbox' do
   version '1.2.4'
   sha256 '1b5eb4fb54de0e3151405ab3f8d643b13188a68ea4a1a2a2a2f552cf7f138b30'
 

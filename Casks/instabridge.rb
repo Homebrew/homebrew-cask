@@ -1,4 +1,4 @@
-cask :v1 => 'instabridge' do
+cask 'instabridge' do
   version '1.2.1'
   sha256 '7f316d42b649eb8d5dcde590540de4c135554026144577c680214b4e082b0a50'
 

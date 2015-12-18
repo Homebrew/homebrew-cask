@@ -1,4 +1,4 @@
-cask :v1 => 'loading' do
+cask 'loading' do
   version :latest
   sha256 :no_check
 

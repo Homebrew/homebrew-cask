@@ -1,4 +1,4 @@
-cask :v1 => 'lastfm' do
+cask 'lastfm' do
   version '2.1.36'
   sha256 'd61d4947117080998937c0d63148caf693f1bed5ec768d86feeb3a86f84d1ff9'
 

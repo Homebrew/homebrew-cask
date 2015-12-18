@@ -1,4 +1,4 @@
-cask :v1 => 'bitcoin-core' do
+cask 'bitcoin-core' do
   version '0.11.2'
   sha256 '413dd4335ced455c0e773d4081f7ff7e5e23e8098bf1fe402e0185cc584ca0df'
 

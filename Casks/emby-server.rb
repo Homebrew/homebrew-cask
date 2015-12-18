@@ -1,4 +1,4 @@
-cask :v1 => 'emby-server' do
+cask 'emby-server' do
   version :latest
   sha256 :no_check
 

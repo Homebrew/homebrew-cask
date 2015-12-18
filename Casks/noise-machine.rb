@@ -1,4 +1,4 @@
-cask :v1 => 'noise-machine' do
+cask 'noise-machine' do
   if MacOS.release <= :leopard
     version '1.0'
     sha256 '8b8d531688c259ffe4cb31fb75ec77f55bca16405fc75c1c77393f3b7e8bd447'

@@ -1,4 +1,4 @@
-cask :v1 => 'namechanger' do
+cask 'namechanger' do
   version '3.0.1'
   sha256 'a26635151ec7632652b8f57d4fceb42176dc85b9109da7f7b5db5688bbecd42b'
 

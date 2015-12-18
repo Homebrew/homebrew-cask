@@ -1,4 +1,4 @@
-cask :v1 => 'nomad' do
+cask 'nomad' do
   version '0.2.1'
   sha256 '7f40f24c7c386bff4f97fad89c258ca7549d9629260d319a71a27fbb9e9ba31f'
 

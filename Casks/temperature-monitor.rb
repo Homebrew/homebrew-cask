@@ -1,4 +1,4 @@
-cask :v1_1 => 'temperature-monitor' do
+cask 'temperature-monitor' do
   version :latest
   sha256 :no_check
 

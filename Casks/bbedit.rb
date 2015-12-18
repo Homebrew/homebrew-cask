@@ -1,4 +1,4 @@
-cask :v1 => 'bbedit' do
+cask 'bbedit' do
   version '11.1.4'
   sha256 '9e14bcafaa2f1e9900a9826e2d51c194e530641b6fd5f55334444531736f68df'
 

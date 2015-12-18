@@ -1,4 +1,4 @@
-cask :v1 => 'djay-pro' do
+cask 'djay-pro' do
   version '1.2-201508141249'
   sha256 '1abf8861828d6233cf0254b0fe8621f2fb8ce1780201b2d1af1cdb1c3c8463af'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'slingshot' do
+cask 'slingshot' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'python3' do
+cask 'python3' do
   # note: "3" is a trailing version number on the Cask token, which
   # breaks our own token conventions, for consistency with Homebrew
   version '3.5.0'

@@ -1,4 +1,4 @@
-cask :v1 => 'abgx360' do
+cask 'abgx360' do
   version '1.0.6'
   sha256 'b2b066d1500e6c6a64d103b2c1a9e1760be0a4e16df314b4868024c19df8c741'
 

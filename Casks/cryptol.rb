@@ -1,4 +1,4 @@
-cask :v1 => 'cryptol' do
+cask 'cryptol' do
   version '2.2.5'
   sha256 'db74cdf45b10e9b2856525e4197e47246d05632b7fd7f3baaaae55b5a2808a03'
 

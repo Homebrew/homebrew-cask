@@ -1,4 +1,4 @@
-cask :v1 => 'physicseditor' do
+cask 'physicseditor' do
   version '1.5.0'
   sha256 'ca3e62b6141e9394f6c61082820de57160c9364e51f5d01c2b66ef0671ceb558'
 

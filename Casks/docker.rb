@@ -1,4 +1,4 @@
-cask :v1 => 'docker' do
+cask 'docker' do
   version '1.9.1'
   sha256 '8750ccc2098ec94ef7db110e0016ab02cfa47a1a76f0deb3faa50335b5ec0df9'
 

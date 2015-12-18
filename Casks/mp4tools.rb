@@ -1,4 +1,4 @@
-cask :v1 => 'mp4tools' do
+cask 'mp4tools' do
   version '3.4.5'
   sha256 'b42382c36a69078d3cdc9d4b3b98c4618efdd24ddcba55f5e3ccc5389367d532'
 

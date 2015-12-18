@@ -1,4 +1,4 @@
-cask :v1 => 'tomahawk' do
+cask 'tomahawk' do
   version '0.8.4'
   sha256 '65fba8767e21b898a61feeb077ae9a87685b5ebf4d2ecbccddd7168e85e695da'
 

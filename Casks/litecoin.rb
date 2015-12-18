@@ -1,4 +1,4 @@
-cask :v1 => 'litecoin' do
+cask 'litecoin' do
   version '0.10.2.2'
   sha256 'f37c813319504dcb50883eaf9c77795df1be1fe748b5e452ca19c89c2b7543da'
 

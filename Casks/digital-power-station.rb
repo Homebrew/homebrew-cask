@@ -1,4 +1,4 @@
-cask :v1 => 'digital-power-station' do
+cask 'digital-power-station' do
   version :latest
   sha256 :no_check
 

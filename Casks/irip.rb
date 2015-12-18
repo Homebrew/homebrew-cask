@@ -1,4 +1,4 @@
-cask :v1 => 'irip' do
+cask 'irip' do
   sha256 :no_check
   version :latest
 

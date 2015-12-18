@@ -1,4 +1,4 @@
-cask :v1 => 'startupizer' do
+cask 'startupizer' do
   version :latest
   sha256 :no_check
 

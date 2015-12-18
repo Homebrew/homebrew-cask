@@ -1,4 +1,4 @@
-cask :v1 => 'viscosity' do
+cask 'viscosity' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'telegram' do
+cask 'telegram' do
   version '0.9.10'
   sha256 '8cff026fb5a001218ab89174b90b7a3eb7b2d157b473b6a7a778623d3a8d1cc1'
 

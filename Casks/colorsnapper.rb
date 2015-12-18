@@ -1,4 +1,4 @@
-cask :v1 => 'colorsnapper' do
+cask 'colorsnapper' do
   version '1.0.9'
   sha256 'f3fec6e9c0cc7c20c2d6d514596796dea91be94ea5d739e97029af95c8f98a0e'
 

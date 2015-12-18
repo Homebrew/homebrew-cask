@@ -1,4 +1,4 @@
-cask :v1 => 'macdown' do
+cask 'macdown' do
   version '0.5.3'
   sha256 '1225f0c93f9a54b8df2e0348ed2cfc32eb0ee74bef8ba4006805cd3014ef0af7'
 

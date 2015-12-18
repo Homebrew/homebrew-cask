@@ -1,4 +1,4 @@
-cask :v1 => 'kindlepreviewer' do
+cask 'kindlepreviewer' do
   version :latest
   sha256 :no_check
 

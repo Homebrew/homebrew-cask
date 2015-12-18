@@ -1,4 +1,4 @@
-cask :v1 => 'retroarch' do
+cask 'retroarch' do
   version '1.2.2'
   sha256 'fb5bb649edb2be67ca106166be27e3c4be8fe0d84169a4af1ae6e00ad3b3e784'
 

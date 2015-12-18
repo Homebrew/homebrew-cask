@@ -1,4 +1,4 @@
-cask :v1 => 'particle-dev' do
+cask 'particle-dev' do
   version '0.0.24'
   sha256 'c93dc366bc782bc08317942a334a4b4092cca3917112ac8d3d85c031c3684712'
 

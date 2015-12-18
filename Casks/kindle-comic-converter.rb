@@ -1,4 +1,4 @@
-cask :v1 => 'kindle-comic-converter' do
+cask 'kindle-comic-converter' do
   version '5.0.1'
   sha256 '48bf8bb6d57972652399d99a89d04aee2fcd3ead31898ea07594ea7db0edfed9'
 

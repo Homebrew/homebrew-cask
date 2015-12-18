@@ -1,4 +1,4 @@
-cask :v1 => 'pusher' do
+cask 'pusher' do
   version '0.6.3'
   sha256 '735ad86c7139058e0ae1d2fb7ad0bc516b4b9284e6e0046a1255c360d58dba3c'
 

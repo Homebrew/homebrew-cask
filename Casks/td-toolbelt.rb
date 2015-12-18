@@ -1,4 +1,4 @@
-cask :v1 => 'td-toolbelt' do
+cask 'td-toolbelt' do
   version :latest
   sha256 :no_check
 

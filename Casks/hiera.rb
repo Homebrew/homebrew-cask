@@ -1,4 +1,4 @@
-cask :v1 => 'hiera' do
+cask 'hiera' do
   version '1.3.4'
   sha256 'f0c5342b09b6f48c727ded033e03d207313d3ebf12d41b50b0f2f71fd1c411e9'
 

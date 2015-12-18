@@ -1,4 +1,4 @@
-cask :v1 => 'hots-replay-uploader' do
+cask 'hots-replay-uploader' do
   version '2.0.1'
   sha256 '800b6c3f6a1648815a66dfdbfdd4012436c455bf17cbc1ad26d30030877d6d6b'
 

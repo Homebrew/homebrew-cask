@@ -1,4 +1,4 @@
-cask :v1 => 'openoffice' do
+cask 'openoffice' do
   version '4.1.2'
   sha256 'cc6ca4ae4d10a295f5283ee8030da13c0110a439b164680de4fbdf5dfa926c19'
 

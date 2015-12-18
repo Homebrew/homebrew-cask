@@ -1,4 +1,4 @@
-cask :v1 => 'ammonite' do
+cask 'ammonite' do
   version '1.13'
   sha256 '1a76406380fe633b475539b8238fdb4dd7667572caa44544bcd0dc110d636962'
 

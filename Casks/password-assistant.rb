@@ -1,4 +1,4 @@
-cask :v1 => 'password-assistant' do
+cask 'password-assistant' do
   version '1.3.0'
   sha256 '9088a74bcbf440af921dee416a9bbd5688362e60d4b73c88ff8e2013f6d83134'
 

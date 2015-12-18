@@ -1,4 +1,4 @@
-cask :v1 => 'controlplane' do
+cask 'controlplane' do
   if MacOS.release <= :snow_leopard
     version '1.2.3'
     sha256 '37f93d3a3a17a6e2f24447f0bc74c7e89ec1581ca52e5970960544858c86f909'

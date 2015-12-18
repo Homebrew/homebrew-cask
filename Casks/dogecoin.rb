@@ -1,4 +1,4 @@
-cask :v1 => 'dogecoin' do
+cask 'dogecoin' do
   version '1.8.2'
   sha256 'bdbdfabf5442a179b41936731d85ece9a2970cea80b106f5267911a0de4ddac2'
 

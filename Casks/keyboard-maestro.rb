@@ -1,4 +1,4 @@
-cask :v1 => 'keyboard-maestro' do
+cask 'keyboard-maestro' do
   version '7.0.2'
   sha256 'd80b9cc8790c9b1595bfe132f47f12f54210fc3430c462d8cd668784c4f1c6c0'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'markright' do
+cask 'markright' do
   version '0.1.10'
   sha256 'e0466e92e0ed10605b8cf4b5d178de096b662455585c9fe4ef08209d9ed458e7'
 

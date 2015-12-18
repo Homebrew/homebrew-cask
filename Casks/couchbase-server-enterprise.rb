@@ -1,4 +1,4 @@
-cask :v1 => 'couchbase-server-enterprise' do
+cask 'couchbase-server-enterprise' do
   version '4.1.0'
   sha256 '0b8e56ce84169fd491ef70df81317f87e140784b81aff8c8b5740a3564b264cd'
   url "http://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.zip"

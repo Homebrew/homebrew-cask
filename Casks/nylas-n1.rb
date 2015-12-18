@@ -1,4 +1,4 @@
-cask :v1 => 'nylas-n1' do
+cask 'nylas-n1' do
   version '0.3.27-1c2a936'
   sha256 '7b07783c61682cdff80b2cb9c395660f8944d77e24f80cc395ecf71cd4b6d2e2'
 

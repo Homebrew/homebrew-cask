@@ -1,4 +1,4 @@
-cask :v1 => 'mactracker' do
+cask 'mactracker' do
   version '7.5'
   sha256 'e5a22349e14b5ec50a38810d6a2db520ff29cc0dbf665769a6c2852a022d134f'
 

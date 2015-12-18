@@ -1,4 +1,4 @@
-cask :v1 => 'plex-media-server' do
+cask 'plex-media-server' do
   version '0.9.12.19.1537-f38ac80'
   sha256 '047b08823d15013cc8daecbe8ba1da33fd21965aef7ae5be653fe3bb36116b69'
 

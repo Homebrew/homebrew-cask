@@ -1,4 +1,4 @@
-cask :v1 => 'eloquent' do
+cask 'eloquent' do
   version '2.4.9'
   sha256 'c792bc3f4685f49052d105c89c9edc830ccc27f1bec9bbe3b841c976b0d0b249'
 

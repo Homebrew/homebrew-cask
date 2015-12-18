@@ -1,4 +1,4 @@
-cask :v1 => 'short-menu' do
+cask 'short-menu' do
   version :latest
   sha256 :no_check
 

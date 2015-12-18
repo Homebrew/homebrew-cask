@@ -1,4 +1,4 @@
-cask :v1 => 'linein' do
+cask 'linein' do
   version :latest
   sha256 :no_check
 

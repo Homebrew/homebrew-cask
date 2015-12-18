@@ -1,4 +1,4 @@
-cask :v1 => 'glyphs' do
+cask 'glyphs' do
   version '2.2.2-822'
   sha256 '13e71a8edae377cdb5a8773829cc17e599114ab9e8c3502a305cc1d9ea6c02db'
 

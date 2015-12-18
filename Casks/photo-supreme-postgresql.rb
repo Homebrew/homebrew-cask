@@ -1,4 +1,4 @@
-cask :v1 => 'photo-supreme-postgresql' do
+cask 'photo-supreme-postgresql' do
   version '3'
   sha256 :no_check  # required as upstream package is updated in place
 

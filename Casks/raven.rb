@@ -1,4 +1,4 @@
-cask :v1 => 'raven' do
+cask 'raven' do
   version '0.2.0-alpha'
   sha256 '91792dfbe2abbc13f79bcafbe903e697f99b5abccfa900084b015e2c642eb633'
 

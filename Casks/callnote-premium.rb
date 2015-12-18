@@ -1,4 +1,4 @@
-cask :v1 => 'callnote-premium' do
+cask 'callnote-premium' do
   version '2.3.7'
   sha256 '968c61f2cd1e71f91ec45b9f69023765210010e3d28256eeb65942ee075e756b'
 

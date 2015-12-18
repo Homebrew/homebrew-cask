@@ -1,4 +1,4 @@
-cask :v1 => 'reflector' do
+cask 'reflector' do
   version '2.3.1'
   sha256 'e780b023343029eb7ccda2667b4da7d2c8f7f894419796a180c41e1056a53942'
 

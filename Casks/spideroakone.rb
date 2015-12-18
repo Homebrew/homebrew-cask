@@ -1,4 +1,4 @@
-cask :v1 => 'spideroakone' do
+cask 'spideroakone' do
   version :latest
   sha256 :no_check
 

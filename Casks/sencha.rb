@@ -1,4 +1,4 @@
-cask :v1_1 => 'sencha' do
+cask 'sencha' do
   version '6.0.2.14'
   sha256 '7d131f333585ed74a31c4c4efa9ecc5176cf5d5410eeddb631c974a847216cec'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'endlesssky' do
+cask 'endlesssky' do
   version '0.8.9'
   sha256 'adb12878ba4bc97eae7fb387ecb206d297540a8cb21da793955c854781911cc0'
 

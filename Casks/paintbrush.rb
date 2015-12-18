@@ -1,4 +1,4 @@
-cask :v1 => 'paintbrush' do
+cask 'paintbrush' do
   version '2.1.2'
   sha256 '3bf18908a191b65efec2a15af0c5f5e95f76e1ec00d71063e235a146b9f6c417'
 

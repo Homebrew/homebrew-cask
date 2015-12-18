@@ -1,4 +1,4 @@
-cask :v1 => 'ncar-ncl' do
+cask 'ncar-ncl' do
   version '6.3.0'
 
   if MacOS.release == :mountain_lion

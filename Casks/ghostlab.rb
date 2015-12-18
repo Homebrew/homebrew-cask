@@ -1,4 +1,4 @@
-cask :v1 => 'ghostlab' do
+cask 'ghostlab' do
   version '2.0.10'
   sha256 '1174edf1e0496b2dff3b1a9c17fd31690259afb48227baa478e55e96c522821a'
 

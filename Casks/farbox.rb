@@ -1,4 +1,4 @@
-cask :v1 => 'farbox' do
+cask 'farbox' do
   version '0.5.3.6'
   sha256 '8884a7cc281467565dff6b698bc168288a04510d51c4f6e8717f0db784dafb2b'
 

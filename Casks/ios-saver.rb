@@ -1,4 +1,4 @@
-cask :v1 => 'ios-saver' do
+cask 'ios-saver' do
   version :latest
   sha256 :no_check
 

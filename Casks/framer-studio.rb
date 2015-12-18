@@ -1,4 +1,4 @@
-cask :v1 => 'framer-studio' do
+cask 'framer-studio' do
   version '1.11.188'
   sha256 'b1fff971456a4af5ad88661344dbad079d5ba08e25dfc2c6f252824d1916206b'
 

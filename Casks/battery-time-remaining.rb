@@ -1,4 +1,4 @@
-cask :v1 => 'battery-time-remaining' do
+cask 'battery-time-remaining' do
   version '3.0'
   sha256 '55765d8543b23512953dc80f12f3717a9e6b2053f6097fac3d3624e72763a8d4'
 

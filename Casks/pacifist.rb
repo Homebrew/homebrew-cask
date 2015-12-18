@@ -1,4 +1,4 @@
-cask :v1 => 'pacifist' do
+cask 'pacifist' do
   if MacOS.release <= :snow_leopard || Hardware::CPU.is_32_bit?
     version '3.0.10'
     sha256 '86da910b133ac3b7a38d165624e2657f6286bcca76af98c80d3c34d5b3f3a851'

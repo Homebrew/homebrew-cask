@@ -1,4 +1,4 @@
-cask :v1 => 'google-cloud-sdk' do
+cask 'google-cloud-sdk' do
   version :latest
   sha256 :no_check
 

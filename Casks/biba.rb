@@ -1,4 +1,4 @@
-cask :v1 => 'biba' do
+cask 'biba' do
   version '3.6.3699'
   sha256 '179b511ad7c6cbb26cfdf7ecffe3a145d49372c2bff397c38c76f4254dc46e80'
 

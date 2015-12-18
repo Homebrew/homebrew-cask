@@ -1,4 +1,4 @@
-cask :v1 => 'araxis-merge' do
+cask 'araxis-merge' do
   version '2014.4581'
 
   depends_on :macos => '>= :mavericks'

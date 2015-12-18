@@ -1,4 +1,4 @@
-cask :v1 => 'rodeo' do
+cask 'rodeo' do
   version '1.1.19'
   sha256 '7c91c88715e05cebf6ce2f64551c26d560c1675d786c7f1b5ff6bee03b5fcc79'
 

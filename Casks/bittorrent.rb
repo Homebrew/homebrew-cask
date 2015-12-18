@@ -1,4 +1,4 @@
-cask :v1 => 'bittorrent' do
+cask 'bittorrent' do
   version :latest
   sha256 :no_check
 

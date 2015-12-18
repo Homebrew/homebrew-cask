@@ -1,4 +1,4 @@
-cask :v1 => 'the-hit-list' do
+cask 'the-hit-list' do
   version '1.1.17'
   sha256 '0a6bd16d26c19a27f2146cdba27fc5c8119da8c382643d285203b41fadaebe98'
 

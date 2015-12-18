@@ -1,4 +1,4 @@
-cask :v1 => 'seil' do
+cask 'seil' do
   version '12.0.0'
   sha256 'ebfcc6b8a709048cb4aa81fc7a020112f77282934c4b30aedae8448d6534d65d'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'delayedlauncher' do
+cask 'delayedlauncher' do
   version :latest
   sha256 :no_check
 

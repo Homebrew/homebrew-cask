@@ -1,4 +1,4 @@
-cask :v1 => 'captur' do
+cask 'captur' do
   version '2.4'
   sha256 '1f6f19806290c1c366701a8391fdc26cae3b1a54e3d54d715e420346eeb66648'
 

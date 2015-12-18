@@ -1,4 +1,4 @@
-cask :v1 => 'subsmarine' do
+cask 'subsmarine' do
   version '1.2.2'
   sha256 'b6533f4fa1f3d477a7474a7c5f3baeb8c0c06b8da0d83ca8acddd138cfd1aeb1'
 

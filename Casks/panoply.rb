@@ -1,4 +1,4 @@
-cask :v1 => 'panoply' do
+cask 'panoply' do
   version '4.3.2'
   sha256 'c25076bf62d367cb10f22b0a86249a9989f7b9ca91ff9a392585471c67bd9a3a'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'swinsian' do
+cask 'swinsian' do
   version '1.11.5'
   sha256 '65dca978e36ebd96b8b62517edc290a74ae4782b85406d0078207f1c56216db8'
 

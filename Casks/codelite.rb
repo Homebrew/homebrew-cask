@@ -1,4 +1,4 @@
-cask :v1 => 'codelite' do
+cask 'codelite' do
   version :latest
   sha256 :no_check
 

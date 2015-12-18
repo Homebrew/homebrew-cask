@@ -1,4 +1,4 @@
-cask :v1 => 'objektiv' do
+cask 'objektiv' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'spotdox' do
+cask 'spotdox' do
   version :latest
   sha256 :no_check
 

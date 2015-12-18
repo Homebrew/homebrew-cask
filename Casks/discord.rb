@@ -1,4 +1,4 @@
-cask :v1 => 'discord' do
+cask 'discord' do
   version '0.0.231'
   sha256 '78da63758a567c3c12ff5e138b4613096119f66adb5fce6fb530bb50891c1374'
 

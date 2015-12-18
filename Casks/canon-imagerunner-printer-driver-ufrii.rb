@@ -1,4 +1,4 @@
-cask :v1 => 'canon-imagerunner-printer-driver-ufrii' do
+cask 'canon-imagerunner-printer-driver-ufrii' do
   version '10.08.01'
   sha256 '4255b1236bbf6b30b6b78db277fd2425d051ee58fd13a954068f5790ab7e2a28'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'understand' do
+cask 'understand' do
   version '3.1.756'
   sha256 '87b91888b14d1548e618370325353668a9ef12a1e1b988ce2165cce55937e252'
 

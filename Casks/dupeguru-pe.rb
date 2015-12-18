@@ -1,4 +1,4 @@
-cask :v1 => 'dupeguru-pe' do
+cask 'dupeguru-pe' do
   version '2.10.1'
   sha256 '5a0abebfe3932fe0df10bd301f37d884f987537f1d137fecd2263db82f0457a9'
 

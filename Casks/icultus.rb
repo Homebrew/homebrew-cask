@@ -1,4 +1,4 @@
-cask :v1 => 'icultus' do
+cask 'icultus' do
   version '1.1.0'
   sha256 '7c4716f780468e8e33aea8e6dc439bfb975f82da3d301136f39398eb25b39733'
 

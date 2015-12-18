@@ -1,4 +1,4 @@
-cask :v1 => 'tactor' do
+cask 'tactor' do
   version :latest
   sha256 :no_check
 

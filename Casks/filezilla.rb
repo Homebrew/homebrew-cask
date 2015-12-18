@@ -1,4 +1,4 @@
-cask :v1 => 'filezilla' do
+cask 'filezilla' do
 
   if MacOS.release <= :snow_leopard
     version '3.8.1'

@@ -1,4 +1,4 @@
-cask :v1 => 'logitech-control-center' do
+cask 'logitech-control-center' do
 
   if MacOS.release <= :leopard
     version '3.5.1.23'

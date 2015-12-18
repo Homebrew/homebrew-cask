@@ -1,4 +1,4 @@
-cask :v1 => 'mirrordisplays' do
+cask 'mirrordisplays' do
   version :latest
   sha256 :no_check
 

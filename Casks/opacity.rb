@@ -1,4 +1,4 @@
-cask :v1 => 'opacity' do
+cask 'opacity' do
   version :latest
   sha256 :no_check
 

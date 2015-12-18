@@ -1,4 +1,4 @@
-cask :v1 => 'hippoconnect' do
+cask 'hippoconnect' do
   version :latest
   sha256 :no_check
 

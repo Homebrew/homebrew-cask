@@ -1,4 +1,4 @@
-cask :v1 => 'flashlighttool' do
+cask 'flashlighttool' do
   version '1.3'
   sha256 '733f89735109f43f32d9081a37cf2cf5de68535ddd0e64ce45a41e5017058cfa'
 

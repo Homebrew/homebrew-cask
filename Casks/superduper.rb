@@ -1,4 +1,4 @@
-cask :v1 => 'superduper' do
+cask 'superduper' do
   version :latest
   sha256 :no_check
 

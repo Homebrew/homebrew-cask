@@ -1,4 +1,4 @@
-cask :v1 => 'pcalc' do
+cask 'pcalc' do
   version '3.9'
   sha256 '3d0b3c034c944e2d007f95d201fd999d3c98c29fc7e65105bdaeb04c3b7b8310'
 

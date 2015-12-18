@@ -1,4 +1,4 @@
-cask :v1 => 'consul-web-ui' do
+cask 'consul-web-ui' do
   version '0.6.0'
   sha256 '73c5e7ee50bb4a2efe56331d330e6d7dbf46335599c028344ccc4031c0c32eb0'
 

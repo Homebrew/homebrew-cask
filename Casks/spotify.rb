@@ -1,4 +1,4 @@
-cask :v1_2 => 'spotify' do
+cask 'spotify' do
   version :latest
   sha256 :no_check
 

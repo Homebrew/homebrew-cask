@@ -1,4 +1,4 @@
-cask :v1 => 'colorpicker' do
+cask 'colorpicker' do
   version '1.7'
   sha256 'cb5aac90b50b5541bd3e9e17e365a23ce59031839de3a6c0c92901d40ee87db1'
 

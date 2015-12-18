@@ -1,4 +1,4 @@
-cask :v1 => 'adobe-indesign-cc' do
+cask 'adobe-indesign-cc' do
   version '2015'
   sha256 '1387e8180cbe61ecff2146df25c2d71dd68fa59e8828928464d20db188b3cd52'
 

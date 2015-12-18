@@ -1,4 +1,4 @@
-cask :v1 => 'webuildsg' do
+cask 'webuildsg' do
   version '1.1.0'
   sha256 '7fbc9f1cb1dcbb7093f861f28e1716d882be0a38ccc7feb9c6a95fc372bf2cd9'
 

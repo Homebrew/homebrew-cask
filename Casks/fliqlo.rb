@@ -1,4 +1,4 @@
-cask :v1 => 'fliqlo' do
+cask 'fliqlo' do
   version '1.6.1'
   sha256 'fe17a9d2004df7113ae8fab1bac075114c6aab779c3d68f614fad8f02363f547'
 

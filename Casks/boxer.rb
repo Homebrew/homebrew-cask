@@ -1,4 +1,4 @@
-cask :v1 => 'boxer' do
+cask 'boxer' do
   version '1.3.2-20120713'
   sha256 'e96bd463d185d7d6a6f670b3d498ffa61c6f4ae226a535bfa24bad95faea21a1'
 

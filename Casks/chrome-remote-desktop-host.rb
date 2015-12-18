@@ -1,4 +1,4 @@
-cask :v1 => 'chrome-remote-desktop-host' do
+cask 'chrome-remote-desktop-host' do
   version :latest
   sha256 :no_check
 

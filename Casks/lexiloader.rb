@@ -1,4 +1,4 @@
-cask :v1 => 'lexiloader' do
+cask 'lexiloader' do
   version '30'
   sha256 '68c0d9482fe8f3b8c7251b452929ba4b58bbfdf478f5dc68740edc09fd87d860'
 

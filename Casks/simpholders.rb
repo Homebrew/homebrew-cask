@@ -1,4 +1,4 @@
-cask :v1 => 'simpholders' do
+cask 'simpholders' do
   version '2.1'
   sha256 '68472926b108bc46b84fd2b6c1083b9fd1810f5fb70fc0924818d60f5bb8e668'
 

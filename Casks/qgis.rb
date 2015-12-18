@@ -1,4 +1,4 @@
-cask :v1 => 'qgis' do
+cask 'qgis' do
   version '2.12.0-1'
   sha256 'b398f12904f7762ee74a1d9ddebd1fd44eef85007488320dcd4899aebefc6089'
 

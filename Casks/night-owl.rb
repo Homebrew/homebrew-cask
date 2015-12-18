@@ -1,4 +1,4 @@
-cask :v1 => 'night-owl' do
+cask 'night-owl' do
   version :latest
   sha256 :no_check
 

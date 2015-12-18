@@ -1,4 +1,4 @@
-cask :v1 => 'anylogic' do
+cask 'anylogic' do
   version '7.2.0'
   sha256 '49a8274cb0cf2150d3f504660060ef279fe838c1a903538268b2e442a7969265'
 

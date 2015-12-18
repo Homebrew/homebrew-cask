@@ -1,4 +1,4 @@
-cask :v1 => 'auftakt' do
+cask 'auftakt' do
   version '1.1.0'
   sha256 '817d851d0ba416426dba62e215d8a855c13742070e2b4b12898f721f3277583d'
 

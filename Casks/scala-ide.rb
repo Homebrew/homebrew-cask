@@ -1,4 +1,4 @@
-cask :v1 => 'scala-ide' do
+cask 'scala-ide' do
   version '4.3.0'
 
   if Hardware::CPU.is_32_bit?

@@ -1,4 +1,4 @@
-cask :v1 => 'popchar' do
+cask 'popchar' do
   version '7.3.1'
   sha256 '1f7d06897b165613f564e34409ff42e20e383f831b45c86d6e4bd71bc1c1b670'
 

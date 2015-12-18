@@ -1,4 +1,4 @@
-cask :v1 => 'xamarin-studio' do
+cask 'xamarin-studio' do
   version '5.10.0.871-0'
   sha256 '21514c0c941b285fd4cef7efc579b51d48578ca22aa10c94e73cc32c3c7f1863'
 

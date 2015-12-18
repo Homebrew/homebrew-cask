@@ -1,4 +1,4 @@
-cask :v1 => 'fing' do
+cask 'fing' do
   version '2.3'
   sha256 'ffa5d42e023d0da50eed152b78f91b1341ff4547f0a92e43be48131f30408e15'
 

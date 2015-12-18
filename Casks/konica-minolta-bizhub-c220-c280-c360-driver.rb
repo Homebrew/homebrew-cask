@@ -1,4 +1,4 @@
-cask :v1 => 'konica-minolta-bizhub-c220-c280-c360-driver' do
+cask 'konica-minolta-bizhub-c220-c280-c360-driver' do
   version '3.9.0'
   sha256 '0468ff398757a5e73418305c38aee376c4b3dd09c2b0783902e5b05fd072d29b'
 

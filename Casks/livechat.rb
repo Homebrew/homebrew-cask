@@ -1,4 +1,4 @@
-cask :v1 => 'livechat' do
+cask 'livechat' do
   version :latest
   sha256 :no_check
 

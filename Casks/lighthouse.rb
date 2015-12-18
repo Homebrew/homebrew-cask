@@ -1,4 +1,4 @@
-cask :v1 => 'lighthouse' do
+cask 'lighthouse' do
   version :latest
   sha256 :no_check
 

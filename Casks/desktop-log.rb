@@ -1,4 +1,4 @@
-cask :v1 => 'desktop-log' do
+cask 'desktop-log' do
   version :latest
   sha256 :no_check
 

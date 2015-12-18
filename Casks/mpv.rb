@@ -1,4 +1,4 @@
-cask :v1 => 'mpv' do
+cask 'mpv' do
   version '0.14.0'
   sha256 '1ab1e2dafd117041e0d1d766285d8ee76bdc6d4c151ef9fb11d3ec0652762eb6'
 

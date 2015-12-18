@@ -1,4 +1,4 @@
-cask :v1 => 'ghc' do
+cask 'ghc' do
   version '7.10.2-r0'
   sha256 'b581a90ca6b6cf3c6f94304aac8b9018d95fa15e7b18c168efa434def1a249e5'
 

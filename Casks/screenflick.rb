@@ -1,4 +1,4 @@
-cask :v1 => 'screenflick' do
+cask 'screenflick' do
   version :latest
   sha256 :no_check
 

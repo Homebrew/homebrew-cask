@@ -1,4 +1,4 @@
-cask :v1 => 'ricoh-driver-aficio-sp-c240dn' do
+cask 'ricoh-driver-aficio-sp-c240dn' do
   version '2.022.02'
   sha256 'ee97bb2775f62b69785996b475ed2b599872d618c4630f543a2603ef75f73c04'
 

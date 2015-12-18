@@ -1,4 +1,4 @@
-cask :v1 => 'rythem' do
+cask 'rythem' do
   version '2014-2-21'
   sha256 'd4c5c578fb0f4d155cc07af22184f88a9b190a7453d0dc45962fd179f72da34d'
 

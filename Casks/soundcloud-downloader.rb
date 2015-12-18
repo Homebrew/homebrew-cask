@@ -1,4 +1,4 @@
-cask :v1 => 'soundcloud-downloader' do
+cask 'soundcloud-downloader' do
   version '2.6.4'
   sha256 'eabb5f3f7ef0db45a804a720069fa98160ff51ca6ec6e0184423f1f4ef98e0af'
 

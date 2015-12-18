@@ -1,4 +1,4 @@
-cask :v1 => 'choose-wisely' do
+cask 'choose-wisely' do
   version '0.5'
   sha256 '2b7ef3de0563693a4b8fe895a4f5a9a131bfca2a74726db3380ffe6576c02b5f'
 

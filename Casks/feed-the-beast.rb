@@ -1,4 +1,4 @@
-cask :v1 => 'feed-the-beast' do
+cask 'feed-the-beast' do
   version :latest
   sha256 :no_check
 

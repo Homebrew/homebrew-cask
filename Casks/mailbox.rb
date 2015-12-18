@@ -1,4 +1,4 @@
-cask :v1 => 'mailbox' do
+cask 'mailbox' do
   version '0.7.6'
   sha256 'b5ca3e23d34c83c8d95b21fb623f78e3ae0e3af899dafb3ae8b23c7eb7a3d353'
 

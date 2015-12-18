@@ -1,4 +1,4 @@
-cask :v1 => 'robofont' do
+cask 'robofont' do
   version '1.6'
   sha256 'fb2fd390868a32fb9e89490081f3f052e65c1156ee32b39cac1c799b87abc4c7'
 

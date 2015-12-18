@@ -1,4 +1,4 @@
-cask :v1 => 'yed' do
+cask 'yed' do
   version '3.14.4'
   sha256 '616a193585abf959cdb89a9f0154883ecd96eac64b165f49c7b1a6e7b655162a'
 

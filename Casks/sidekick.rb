@@ -1,4 +1,4 @@
-cask :v1 => 'sidekick' do
+cask 'sidekick' do
   version :latest
   sha256 :no_check
 

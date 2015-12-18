@@ -1,4 +1,4 @@
-cask :v1 => 'wch-ch34x-usb-serial-driver' do
+cask 'wch-ch34x-usb-serial-driver' do
   version '1.1'
   sha256 'e2d9e46d3b09be09341fad017e0679988bcf0495dbeef933d1e1f4a33715c09b'
 

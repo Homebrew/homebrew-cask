@@ -1,4 +1,4 @@
-cask :v1 => 'thebrain' do
+cask 'thebrain' do
   version '8.0.2.1'
   sha256 'ccdee14f634808d15afad5d5b50436d1f46e3b05552a9d3c0497c7120a13ef33'
 

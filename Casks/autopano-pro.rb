@@ -1,4 +1,4 @@
-cask :v1 => 'autopano-pro' do
+cask 'autopano-pro' do
   version :latest
   sha256 :no_check
 

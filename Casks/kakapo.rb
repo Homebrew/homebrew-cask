@@ -1,4 +1,4 @@
-cask :v1 => 'kakapo' do
+cask 'kakapo' do
   version '1.1.0'
   sha256 'd002b403029ee8939f77136531aa517947bebc1d2fc6dc8d2d8628e9068e9dde'
 

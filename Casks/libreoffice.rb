@@ -1,4 +1,4 @@
-cask :v1 => 'libreoffice' do
+cask 'libreoffice' do
   if Hardware::CPU.is_32_bit? || MacOS.release < :mountain_lion
     version '4.3.7'
     sha256 '2964a952ab633426df402de2f128cf788354ac622b7c30b25209d185d17617ec'

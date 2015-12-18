@@ -1,4 +1,4 @@
-cask :v1 => 'psychopy' do
+cask 'psychopy' do
   version '1.82.00'
   sha256 '42f980455815d6dd883d125265ed97cecdf4b366608620dadbf12965f40254ad'
 

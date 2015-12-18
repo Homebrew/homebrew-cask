@@ -1,4 +1,4 @@
-cask :v1 => 'pollev-presenter' do
+cask 'pollev-presenter' do
   version :latest
   sha256 :no_check
 

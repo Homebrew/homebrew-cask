@@ -1,4 +1,4 @@
-cask :v1 => 'cleanmymac' do
+cask 'cleanmymac' do
   if MacOS.release <= :snow_leopard
     version '1.11-1417522595'
     sha256 'ac5d4bf36882dd34bdb0a68eb384a6b3aba355be896d03dfa40a120c6bef4a0d'

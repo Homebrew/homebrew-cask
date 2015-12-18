@@ -1,4 +1,4 @@
-cask :v1 => 'cmake' do
+cask 'cmake' do
   version '3.3.2'
   sha256 '077ab2751b15e4d2debfbdbcab205e6dc59f49466cd12622b3f604cc6aebef85'
 

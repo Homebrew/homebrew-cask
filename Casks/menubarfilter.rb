@@ -1,4 +1,4 @@
-cask :v1 => 'menubarfilter' do
+cask 'menubarfilter' do
   version :latest
   sha256 :no_check
 

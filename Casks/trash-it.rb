@@ -1,4 +1,4 @@
-cask :v1 => 'trash-it' do
+cask 'trash-it' do
   if MacOS.release <= :leopard
     version '4.1'
     sha256 'a30ed22452d4c2fcefdbf2d892394524a3744ebd50fdcee2203ff705e648240e'

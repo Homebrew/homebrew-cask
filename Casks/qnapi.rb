@@ -1,4 +1,4 @@
-cask :v1 => 'qnapi' do
+cask 'qnapi' do
   version '0.2.0'
   sha256 'a6eb52a4f70c6c22816a442741a7d8c44c62d793461596876e31c72453048d81'
 

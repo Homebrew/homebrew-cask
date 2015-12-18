@@ -1,4 +1,4 @@
-cask :v1 => 'invisionsync' do
+cask 'invisionsync' do
   version '1.7.20-673'
   sha256 '219d670309a6f21c91b634f9189f0226d8d1fe1c0ccfc472ef90d6839f8ff734'
 

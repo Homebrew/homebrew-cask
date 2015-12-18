@@ -1,4 +1,4 @@
-cask :v1 => 'screensteps' do
+cask 'screensteps' do
   version '2.9.6'
   sha256 'e48082731531198d8c22e5218a7aa59500843e4fd4fd7f44161688aebcfc621b'
 

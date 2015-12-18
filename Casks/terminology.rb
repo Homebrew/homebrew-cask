@@ -1,4 +1,4 @@
-cask :v1 => 'terminology' do
+cask 'terminology' do
   version :latest
   sha256 :no_check
 

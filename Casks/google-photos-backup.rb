@@ -1,4 +1,4 @@
-cask :v1 => 'google-photos-backup' do
+cask 'google-photos-backup' do
   version :latest
   sha256 :no_check
 

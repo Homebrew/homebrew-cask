@@ -1,4 +1,4 @@
-cask :v1 => 'yummy-ftp' do
+cask 'yummy-ftp' do
   version :latest
   sha256 :no_check
 

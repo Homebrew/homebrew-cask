@@ -1,4 +1,4 @@
-cask :v1 => '4k-video-downloader' do
+cask '4k-video-downloader' do
   version '3.7'
   sha256 '4fc9d184adb4fa348c9008fbe81e59c24d706a6cb1d2e3d5619f4f7a3b01ca8b'
 

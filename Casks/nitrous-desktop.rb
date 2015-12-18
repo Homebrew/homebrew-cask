@@ -1,4 +1,4 @@
-cask :v1 => 'nitrous-desktop' do
+cask 'nitrous-desktop' do
   version :latest
   sha256 :no_check
 

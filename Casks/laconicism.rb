@@ -1,4 +1,4 @@
-cask :v1 => 'laconicism' do
+cask 'laconicism' do
   version :latest
   sha256 :no_check
 

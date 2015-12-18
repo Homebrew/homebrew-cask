@@ -1,4 +1,4 @@
-cask :v1 => 'firestormos' do
+cask 'firestormos' do
   version '4.6.9.42974'
   sha256 '423c7f6f0d262153fa655fd8a39b6d56c22744c57dfc2d7972bf4bf94d612459'
 

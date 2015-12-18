@@ -1,4 +1,4 @@
-cask :v1 => 'graphicconverter' do
+cask 'graphicconverter' do
   version '9-2083'
   sha256 '2c3aa286866241f6c076e8b0e92a9a4ce0fdae27fab49828cd959239eaec76e7'
 

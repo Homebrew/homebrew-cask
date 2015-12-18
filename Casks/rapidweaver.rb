@@ -1,4 +1,4 @@
-cask :v1 => 'rapidweaver' do
+cask 'rapidweaver' do
   version '6.3.5'
   sha256 :no_check # required as upstream package is updated in-place
 

@@ -1,4 +1,4 @@
-cask :v1 => 'cd-to' do
+cask 'cd-to' do
   version '2.6.0'
   sha256 'a92def521d332a373f655a41338d0ec18dfaa6e24eb9ec2ca6df281398db3d46'
 

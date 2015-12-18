@@ -1,4 +1,4 @@
-cask :v1 => 'miro-video-converter' do
+cask 'miro-video-converter' do
   version :latest
   sha256 :no_check
 

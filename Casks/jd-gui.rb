@@ -1,4 +1,4 @@
-cask :v1 => 'jd-gui' do
+cask 'jd-gui' do
   version '1.4.0'
   sha256 '9e0629cf3108f0ddd20c1244aaa75c4517c89e7e4abe626e6441b6d02b1b3ff3'
 

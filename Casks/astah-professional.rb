@@ -1,4 +1,4 @@
-cask :v1 => 'astah-professional' do
+cask 'astah-professional' do
   version '7.0.0'
   sha256 'f9077dfe61f7ccf378c68031f9d888f2c5d349a83aeb34c9517cc046baca953e'
 

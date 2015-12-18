@@ -1,4 +1,4 @@
-cask :v1 => 'skim' do
+cask 'skim' do
   version '1.4.16'
   sha256 '9586083eae00131bf930a9e31da9b8be13f9563249d5ecb7a3ef147c0961d526'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'mongoproc' do
+cask 'mongoproc' do
   version '3.0'
   sha256 'f453b079f4df63b9439265dda20d7dd9ceb2889148d3c2155ff8c6780bc90af4'
 

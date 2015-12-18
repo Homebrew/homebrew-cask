@@ -1,4 +1,4 @@
-cask :v1 => 'carbon-copy-cloner' do
+cask 'carbon-copy-cloner' do
   version :latest
   sha256 :no_check
 

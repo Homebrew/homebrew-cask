@@ -1,4 +1,4 @@
-cask :v1 => 'eclipse-modeling' do
+cask 'eclipse-modeling' do
   version '4.5.1'
   sha256 'cc3478ef7c2f220d3ee0d90bed27892db2b3a2386d2e7d6fe48b8f375c71da7b'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'p4v' do
+cask 'p4v' do
   version '2015.2-1312139'
   sha256 '6f64cca4e84d344c5f420e58a72bd07c4fbf5f3eb9665b165acd8baa36c18eb9'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'praat' do
+cask 'praat' do
   version '6.0.06'
 
   if Hardware::CPU.is_32_bit? || MacOS.release <= :snow_leopard

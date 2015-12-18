@@ -1,4 +1,4 @@
-cask :v1 => 'putio-adder' do
+cask 'putio-adder' do
   version '2.9'
   sha256 'f0ed3f2a8c4bd5ab3d83dcef72403785c72f990692190de58f1f7d3edf85c0a3'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'qcad' do
+cask 'qcad' do
   version '3.9.8'
   sha256 '7e6f04d7989914bb3543f2eb64265453d9f26c98d7bd671b30bd71cf3ab07677'
 

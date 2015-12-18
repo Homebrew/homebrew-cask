@@ -1,4 +1,4 @@
-cask :v1 => 'minimalclock' do
+cask 'minimalclock' do
   version :latest
   sha256 :no_check
 

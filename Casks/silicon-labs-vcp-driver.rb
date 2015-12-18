@@ -1,4 +1,4 @@
-cask :v1 => 'silicon-labs-vcp-driver' do
+cask 'silicon-labs-vcp-driver' do
   version :latest
   sha256 :no_check
 

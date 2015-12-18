@@ -1,4 +1,4 @@
-cask :v1 => 'au-wifi-connect' do
+cask 'au-wifi-connect' do
   version :latest
   sha256 :no_check
 

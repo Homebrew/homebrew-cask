@@ -1,4 +1,4 @@
-cask :v1 => 'regexhibit' do
+cask 'regexhibit' do
   version :latest
   sha256 :no_check
 

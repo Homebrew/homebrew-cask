@@ -1,4 +1,4 @@
-cask :v1 => 'stand' do
+cask 'stand' do
   version '1.0_4'
   sha256 '8919e43c9c591657d8d6961b25e8dc5f77d706d71eb246839be22522a82bb0ec'
 

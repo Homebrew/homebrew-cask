@@ -1,4 +1,4 @@
-cask :v1 => 'festify' do
+cask 'festify' do
   version '1.4.2'
   sha256 '07f3ad04bede2d6a622f3652382193e7024f6d1f308b6f1208a036d13c15413a'
 

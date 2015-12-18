@@ -1,4 +1,4 @@
-cask :v1 => 'pocketcast' do
+cask 'pocketcast' do
   version '1.2.2'
   sha256 'e24dd60e04fa7258522e62cf871c241e55685ed03ff76057f5c2926cf848151d'
 

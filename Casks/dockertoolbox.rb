@@ -1,4 +1,4 @@
-cask :v1_1 => 'dockertoolbox' do
+cask 'dockertoolbox' do
   version '1.9.1e'
   sha256 'af110d7f23064f2df761ed3c54289ed54669b7ee0125325c16443716a013718e'
 

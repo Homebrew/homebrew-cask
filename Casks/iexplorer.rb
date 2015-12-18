@@ -1,4 +1,4 @@
-cask :v1 => 'iexplorer' do
+cask 'iexplorer' do
   version '3.8.6.0'
   sha256 '4f98a8012820b2d587b11ed046cadbae98ef0071b6418055b72874abe5ad5924'
 

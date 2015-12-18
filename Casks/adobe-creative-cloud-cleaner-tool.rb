@@ -1,4 +1,4 @@
-cask :v1 => 'adobe-creative-cloud-cleaner-tool' do
+cask 'adobe-creative-cloud-cleaner-tool' do
   version :latest
   sha256 :no_check
 

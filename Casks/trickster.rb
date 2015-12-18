@@ -1,4 +1,4 @@
-cask :v1 => 'trickster' do
+cask 'trickster' do
   if MacOS.release <= :lion
     version '2.1.1'
     sha256 'cddc4a27c3c2a016f86d1688ef9708d3e8c605cfe06302470471309ccdc241db'

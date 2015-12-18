@@ -1,4 +1,4 @@
-cask :v1 => 'chatology' do
+cask 'chatology' do
   version '1.0.7'
   sha256 '5cb80a22b3e9cbd654591606fcea41d9cf2484ca4cd528736118a94c6034158d'
 

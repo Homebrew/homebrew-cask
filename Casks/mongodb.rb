@@ -1,4 +1,4 @@
-cask :v1 => 'mongodb' do
+cask 'mongodb' do
   version '3.2.0-build.1449793677'
   sha256 '43fa50505f757e8f7d6e7134b456d0633ece563831b49e9962489ac2f88059d1'
 

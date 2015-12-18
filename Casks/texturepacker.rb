@@ -1,4 +1,4 @@
-cask :v1 => 'texturepacker' do
+cask 'texturepacker' do
   version '4.0.1'
   sha256 '1d49ccf921513112469e406e60adf570eee415f9b19575922372d448f6a2f365'
 

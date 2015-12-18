@@ -1,4 +1,4 @@
-cask :v1 => 'pdfpen' do
+cask 'pdfpen' do
   version :latest
   sha256 :no_check
 

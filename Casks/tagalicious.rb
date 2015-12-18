@@ -1,4 +1,4 @@
-cask :v1 => 'tagalicious' do
+cask 'tagalicious' do
   version :latest
   sha256 :no_check
 

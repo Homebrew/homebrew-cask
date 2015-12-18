@@ -1,4 +1,4 @@
-cask :v1 => 'lego-mindstorms-ev3' do
+cask 'lego-mindstorms-ev3' do
   # note: "3" is not a version number, but an intrinsic part of the product name
   version '1.1.1'
   sha256 '7331e72cfff30661606387c86e8153b2526547b588525385ac2ecd272d38194a'

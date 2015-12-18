@@ -1,4 +1,4 @@
-cask :v1 => 'edgeview' do
+cask 'edgeview' do
   version '0.9997'
   sha256 '5972e4db1508de88b838dd9287c56b20eea3dda9b5b52d88490897020368a6aa'
 

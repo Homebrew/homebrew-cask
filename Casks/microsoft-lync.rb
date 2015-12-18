@@ -1,4 +1,4 @@
-cask :v1 => 'microsoft-lync' do
+cask 'microsoft-lync' do
   version '14.2.1_150923'
   sha256 'da1264855e3a7b372639862ed1b35a8e03c49ee5f26a440ac74daced5a743449'
 

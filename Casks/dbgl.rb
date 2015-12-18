@@ -1,4 +1,4 @@
-cask :v1 => 'dbgl' do
+cask 'dbgl' do
   version '0.79'
   sha256 '0a5aaf171f1a77f305564e5d952c24fe866e59c6db4678aee77cfde71172775c'
 

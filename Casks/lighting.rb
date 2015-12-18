@@ -1,4 +1,4 @@
-cask :v1 => 'lighting' do
+cask 'lighting' do
   version '1.1.5'
   sha256 '228ce357f1c6cd916cbd37c5fd80e7e63b1100bfcf26b714d51c3f16ad2e0ce6'
 

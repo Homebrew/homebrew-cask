@@ -1,4 +1,4 @@
-cask :v1 => 'vivaldi' do
+cask 'vivaldi' do
   version '1.0.303.52'
   sha256 :no_check # required as upstream package is updated in-place
 

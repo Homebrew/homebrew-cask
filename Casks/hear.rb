@@ -1,4 +1,4 @@
-cask :v1 => 'hear' do
+cask 'hear' do
   version '1.2.4'
   sha256 '54bd28a771cd26813a9177bbd41879694a3998bf712ca6b94b18c45895bc79e6'
 

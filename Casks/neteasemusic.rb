@@ -1,4 +1,4 @@
-cask :v1 => 'neteasemusic' do
+cask 'neteasemusic' do
   version '1.4.0_418'
   sha256 'da5e545bbe213a7f073602519da29c3d4d68bb25de99804c4dd61dd6d02dc763'
 

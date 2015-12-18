@@ -1,4 +1,4 @@
-cask :v1 => 'datagrip' do
+cask 'datagrip' do
   version '1.0'
   sha256 '32640fd394c57b4c5625e254971d423e84b3e39c0dede63cad17620be52ca155'
 

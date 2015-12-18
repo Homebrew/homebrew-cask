@@ -1,4 +1,4 @@
-cask :v1 => 'pixlr' do
+cask 'pixlr' do
   version '1.1.0_73'
   sha256 'd4ee65c63fa307da05ba54d641f081c951581976655507efbcd466143a4afa92'
 

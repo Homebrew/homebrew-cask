@@ -1,4 +1,4 @@
-cask :v1 => 'ccleaner' do
+cask 'ccleaner' do
   version '1.10.335'
   sha256 '9f02434fb991c78634fd1a6a2a3819ecedd567fbe07fe7eec96bbf5628f6eadd'
 

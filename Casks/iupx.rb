@@ -1,4 +1,4 @@
-cask :v1 => 'iupx' do
+cask 'iupx' do
   version '1.2'
   sha256 '24f2bc2dacd31ce7f3dd883b70b32fc9b8cea447a7b309333108b9888cb194d5'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'splice' do
+cask 'splice' do
   version :latest
   sha256 :no_check
 

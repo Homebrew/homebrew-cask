@@ -1,4 +1,4 @@
-cask :v1 => 'mockplus' do
+cask 'mockplus' do
   version '2.0.9.10'
   sha256 'a0297e6120d1cec13b6947a4926a192b0adee89c25323c4fdcbfb1a2e2b5f638'
 

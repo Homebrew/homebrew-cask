@@ -1,4 +1,4 @@
-cask :v1 => 'clipy' do
+cask 'clipy' do
   version '1.0.5'
   sha256 '774446dd5da9d47960ec8be2d44e26318913792603a17d76853774d1c12fdd25'
 

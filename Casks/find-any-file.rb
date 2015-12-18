@@ -1,4 +1,4 @@
-cask :v1 => 'find-any-file' do
+cask 'find-any-file' do
   version '1.8.9'
   sha256 'fde3cd23b38f5baa626f557ac40148795a5afee6cc84ecb28b74b439bdae0189'
 

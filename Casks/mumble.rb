@@ -1,4 +1,4 @@
-cask :v1 => 'mumble' do
+cask 'mumble' do
   version '1.2.11'
   sha256 'e7d606013c6e86f0e3d4b6690b21c2af65b19a21b4b737c739ab8a2e63a82ea3'
 

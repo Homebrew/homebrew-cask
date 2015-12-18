@@ -1,4 +1,4 @@
-cask :v1 => 'fastscripts' do
+cask 'fastscripts' do
   version '2.6.9'
   sha256 '4b34c5fca7c0478480b6506d66b5969eebc4fcc099e7fa6b1e198f4d172c9ee8'
 

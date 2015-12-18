@@ -1,4 +1,4 @@
-cask :v1 => 'macpaw-gemini' do
+cask 'macpaw-gemini' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'osxfuse' do
+cask 'osxfuse' do
   version '2.8.2'
   sha256 'c0cc4066642136fdd4f5fead10bed2e495f636f86f451deee85dbb5aa95fa7fa'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'textmate' do
+cask 'textmate' do
   version '2.0-beta.8.5'
   sha256 '18ef15feea960cff6034c9cbe5e3cb38cbf0fcd0d57e4b8c78656a392dd5dc07'
 

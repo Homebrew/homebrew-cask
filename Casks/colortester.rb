@@ -1,4 +1,4 @@
-cask :v1 => 'colortester' do
+cask 'colortester' do
   version :latest
   sha256 :no_check
 

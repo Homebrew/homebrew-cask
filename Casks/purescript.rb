@@ -1,4 +1,4 @@
-cask :v1 => 'purescript' do
+cask 'purescript' do
   version '0.7.6.1'
   sha256 'a98ec09df6512c46ee96557bd0cf4a7937e4aabd6adf81177e7a5b4cdf061763'
 

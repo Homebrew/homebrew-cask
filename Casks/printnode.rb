@@ -1,4 +1,4 @@
-cask :v1 => 'printnode' do
+cask 'printnode' do
   version '4.8.0'
   sha256 '3c8203d7200de76deeb0274b7ff69b54fd21e91a7140210c1459fd46f78b04fa'
 

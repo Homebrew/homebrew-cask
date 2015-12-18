@@ -1,4 +1,4 @@
-cask :v1 => 'm3unify' do
+cask 'm3unify' do
   version '1.4.1'
   sha256 'aceda65ecb588fd51380e4dc77cd6c1b95070b60fd30e65b50ba093b11efcc1f'
 

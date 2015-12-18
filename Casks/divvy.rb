@@ -1,4 +1,4 @@
-cask :v1 => 'divvy' do
+cask 'divvy' do
   version '1.4.2'
   sha256 '4e30a42d50a5e484ae410d1ed14021e7bb661ca2872def435c4d38ab0adcc9b9'
 

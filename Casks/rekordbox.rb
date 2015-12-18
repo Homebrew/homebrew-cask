@@ -1,4 +1,4 @@
-cask :v1 => 'rekordbox' do
+cask 'rekordbox' do
   version '3.2.2'
   sha256 'f12cafb0764177bafbb267342c3bd367572c42cc9e340081a0e84ef2bf7ed433'
 

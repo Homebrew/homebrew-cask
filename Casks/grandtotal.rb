@@ -1,4 +1,4 @@
-cask :v1 => 'grandtotal' do
+cask 'grandtotal' do
   version '4.1.3'
   sha256 '17a3fea3abab3013ee1181cd1d7bebe499d6d5f3e362e116cc3345c0ea3e319a'
 

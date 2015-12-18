@@ -1,4 +1,4 @@
-cask :v1 => 'aptanastudio' do
+cask 'aptanastudio' do
   version '3.6.1'
   sha256 '1eed9a94ce9b9bf03743f0bfdc5efd752b3470842170ba571ee25d2810c3c8f0'
 

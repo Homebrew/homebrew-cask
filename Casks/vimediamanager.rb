@@ -1,4 +1,4 @@
-cask :v1 => 'vimediamanager' do
+cask 'vimediamanager' do
   version '0.7a13c'
   sha256 'da5a1f76d556bbdb4cff76295cd0e60a47d05f6073b35dae20a88387f4eb10ce'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'xbox360-controller-driver' do
+cask 'xbox360-controller-driver' do
   version '0.14'
   sha256 'a7efe48fae89aa592e904d1dc3ba9a73b2d644362eac88feb5e73a774e3fcf88'
 

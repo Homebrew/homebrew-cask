@@ -1,4 +1,4 @@
-cask :v1 => 'komodo-edit' do
+cask 'komodo-edit' do
   version '9.3.0-16396'
   sha256 'f1c5a0c3542754b7f96db86547871b6fb70d205c2274a906a696b23194c75080'
 

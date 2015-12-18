@@ -1,4 +1,4 @@
-cask :v1 => 'pki-io' do
+cask 'pki-io' do
   version '0.1.0-release1'
   sha256 '7daf9349250c5da5f8bc1a126d704faf161977f82befb9f707bc1d788efbace4'
 

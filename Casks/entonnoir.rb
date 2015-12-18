@@ -1,4 +1,4 @@
-cask :v1 => 'entonnoir' do
+cask 'entonnoir' do
   version :latest
   sha256 :no_check
 

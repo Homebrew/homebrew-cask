@@ -1,4 +1,4 @@
-cask :v1 => 'delibar' do
+cask 'delibar' do
   version '1.6'
   sha256 '960714a35c659dc327f73752b20a53c25b3aa77da578e457b187e9ff76cac5c8'
 

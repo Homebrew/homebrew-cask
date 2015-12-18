@@ -1,4 +1,4 @@
-cask :v1 => 'ctivo' do
+cask 'ctivo' do
   version '2.4.4'
   sha256 '7a3bfdc09d275360d868a2cc198aeb114705ba549e6eadb761a561991afc83fe'
 

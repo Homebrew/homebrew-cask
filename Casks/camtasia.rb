@@ -1,4 +1,4 @@
-cask :v1 => 'camtasia' do
+cask 'camtasia' do
   version :latest
   sha256 :no_check
 

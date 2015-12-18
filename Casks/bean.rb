@@ -1,4 +1,4 @@
-cask :v1 => 'bean' do
+cask 'bean' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'foreman' do
+cask 'foreman' do
   version :latest
   sha256 :no_check
 

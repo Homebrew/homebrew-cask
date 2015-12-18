@@ -1,4 +1,4 @@
-cask :v1 => 'all2mp3' do
+cask 'all2mp3' do
   version :latest
   sha256 :no_check
 

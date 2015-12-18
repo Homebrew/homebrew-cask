@@ -1,4 +1,4 @@
-cask :v1 => 'safemonk' do
+cask 'safemonk' do
   version :latest
   sha256 :no_check
 

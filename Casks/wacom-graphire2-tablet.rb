@@ -1,4 +1,4 @@
-cask :v1 => 'wacom-graphire2-tablet' do
+cask 'wacom-graphire2-tablet' do
   version '6.1.7-4'
   sha256 '593cdd4c51bee7714aecbef77d6e3809dd80a8393893ee1937f9c15c567bb4b4'
 

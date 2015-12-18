@@ -1,4 +1,4 @@
-cask :v1 => 'securesafe' do
+cask 'securesafe' do
   version :latest
   sha256 :no_check
 

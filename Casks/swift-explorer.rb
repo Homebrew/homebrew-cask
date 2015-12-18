@@ -1,4 +1,4 @@
-cask :v1 => 'swift-explorer' do
+cask 'swift-explorer' do
   version '1.0.7'
   sha256 '24b73711f5555aff19cf2b48edfb781488778fca1d0568c4d9b56b829e70f395'
 

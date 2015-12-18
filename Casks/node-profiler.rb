@@ -1,4 +1,4 @@
-cask :v1 => 'node-profiler' do
+cask 'node-profiler' do
   version '0.12.6'
   sha256 '25047304ab6b894b6aa4f910b606b6e6c31e680e7194016d6a0cee39af9631be'
 

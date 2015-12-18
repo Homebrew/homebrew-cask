@@ -1,4 +1,4 @@
-cask :v1 => 'time-out' do
+cask 'time-out' do
 
   if MacOS.release <= :snow_leopard
     version '1.6.5'

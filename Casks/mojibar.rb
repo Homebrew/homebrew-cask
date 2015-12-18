@@ -1,4 +1,4 @@
-cask :v1 => 'mojibar' do
+cask 'mojibar' do
   version '1.2.0'
   sha256 '85471afcab61f08c92328ad3267d806caf288d3b554103b5b74929a6be3f577f'
 

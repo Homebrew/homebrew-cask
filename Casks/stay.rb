@@ -1,4 +1,4 @@
-cask :v1 => 'stay' do
+cask 'stay' do
   version '1.2.5'
   sha256 '4ca4048d75c2b3199e1a46c06797a1a483ebf7f9ca9fa48ddac9eb1bfe75bc58'
 

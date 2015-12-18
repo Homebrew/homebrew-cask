@@ -1,4 +1,4 @@
-cask :v1 => 'xscope' do
+cask 'xscope' do
   version '4.1.4'
   sha256 'd9f1eab342b885277344829eb7b10fa636b76991a9367fb2319f32a48a386ea2'
 

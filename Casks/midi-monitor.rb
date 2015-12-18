@@ -1,4 +1,4 @@
-cask :v1 => 'midi-monitor' do
+cask 'midi-monitor' do
   version :latest
   sha256 :no_check
 

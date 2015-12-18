@@ -1,4 +1,4 @@
-cask :v1 => 'youtrack-workflow' do
+cask 'youtrack-workflow' do
   version '6.0'
   sha256 '331bd2745696507da7ee3a6a193587fc53739face966c12736c16235211cda14'
 

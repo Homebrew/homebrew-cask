@@ -1,4 +1,4 @@
-cask :v1 => 'changes' do
+cask 'changes' do
   version '1.7.3'
   sha256 '64fd2d6af3f3a85fb6d172d5e9bce15ae07d4b94de5b2360181445227bcc9c1a'
 

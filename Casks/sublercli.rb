@@ -1,4 +1,4 @@
-cask :v1 => 'sublercli' do
+cask 'sublercli' do
   version :latest
   sha256 :no_check
 

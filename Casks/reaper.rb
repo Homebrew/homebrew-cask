@@ -1,4 +1,4 @@
-cask :v1 => 'reaper' do
+cask 'reaper' do
   version '5.1'
 
   if Hardware::CPU.is_32_bit?

@@ -1,4 +1,4 @@
-cask :v1 => 'duelystlauncher' do
+cask 'duelystlauncher' do
   version '0.0.5'
   sha256 'ec38c906b05a8ac74560ac0d96c4c8189876c579d485bc3af4a6ceac4ee6baad'
 

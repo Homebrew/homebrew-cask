@@ -1,4 +1,4 @@
-cask :v1 => 'jump-desktop' do
+cask 'jump-desktop' do
   version :latest
   sha256 :no_check
 

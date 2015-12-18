@@ -1,4 +1,4 @@
-cask :v1 => 'tubcloud' do
+cask 'tubcloud' do
   version :latest
   sha256 :no_check
 
