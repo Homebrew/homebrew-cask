@@ -1,5 +1,7 @@
 inherit_from: .rubocop_todo.yml
 
+require: rubocop-cask
+
 AllCops:
   Exclude:
     - '**/Gemfile'
