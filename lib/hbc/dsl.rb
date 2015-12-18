@@ -222,11 +222,13 @@ module Hbc::DSL
     end
 
     def caskroom_path
-      @caskroom_path ||= self.caskroom
+      @caskroom_path ||= Hbc.caskroom.join(self.token)
     end
 
     def staged_path
-      @staged_path ||= self.caskroom.join(self.name, self.version)
+      return @staged_path if @staged_path
+      cask_version = self.version || :unknown
+      @staged_path = self.caskroom_path.join(cask_version.to_s)
     end
 
     def caveats(*string, &block)
