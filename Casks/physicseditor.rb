@@ -1,10 +1,10 @@
 cask 'physicseditor' do
-  version '1.5.0'
-  sha256 'ca3e62b6141e9394f6c61082820de57160c9364e51f5d01c2b66ef0671ceb558'
+  version '1.5.2'
+  sha256 '98b4c0d3b7db1df2bac0163cb3bb25c67c5e011b74291ccb9f8acfd62cbd8d6f'
 
   url "https://www.codeandweb.com/download/physicseditor/#{version}/PhysicsEditor-#{version}-uni.dmg"
   appcast 'https://www.codeandweb.com/releases/PhysicsEditor/appcast-mac-release.xml',
-          :sha256 => 'da033d51b015aa41d5a3e710d6017b255861b61e21f47fee457c677edf82bc8b'
+          :sha256 => '360da772f6506501942b1cdb76db6caeefb168abd94693538df7fb4e9593699d'
   name 'PhysicsEditor'
   homepage 'https://www.codeandweb.com/physicseditor'
   license :freemium
