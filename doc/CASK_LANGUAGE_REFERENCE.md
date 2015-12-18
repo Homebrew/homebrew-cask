@@ -34,7 +34,7 @@ This document acts as a complete specification, and covers aspects of the Cask D
 Each Cask is a Ruby block, beginning with a special header line. The Cask definition itself is always enclosed in a `do … end` block. Example:
 
 ```ruby
-cask :v1 => 'alfred' do
+cask 'alfred' do
   version '2.7.1_387'
   sha256 'a3738d0513d736918a6d71535ef3d85dd184af267c05698e49ac4c6b48f38e17'
 
@@ -877,7 +877,7 @@ Example: [injection.rb](../Casks/injection.rb)
 In the exceptional case that the Cask DSL is insufficient, it is possible to define arbitrary Ruby variables and methods inside the Cask by creating a `Utils` namespace. Example:
 
 ```ruby
-cask :v1 => 'myapp' do
+cask 'myapp' do
   module Utils
     def self.arbitrary_method
       ...

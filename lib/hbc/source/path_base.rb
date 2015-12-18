@@ -24,7 +24,7 @@ class Hbc::Source::PathBase
 
       # transitional hack: convert first lines of the new form
       #
-      #     cask :v1 => 'google-chrome' do
+      #     cask 'google-chrome' do
       #
       # to the old form
       #

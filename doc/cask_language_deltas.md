@@ -28,7 +28,7 @@ class MyApp < Cask
 to
 
 ```ruby
-cask :v1 => 'my-app' do
+cask 'my-app' do
 ```
 
 Legacy rules for mapping Cask filenames to header class names are no longer needed. The token `'my-app'` in the header corresponds directly to the filename `my-app.rb`.

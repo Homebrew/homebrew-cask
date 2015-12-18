@@ -25,7 +25,7 @@ class Hbc::CLI::Create < Hbc::CLI::Base
 
   def self.template(cask_token)
     <<-EOS.undent
-      cask :v1 => '#{cask_token}' do
+      cask '#{cask_token}' do
         version ''
         sha256 ''
 
