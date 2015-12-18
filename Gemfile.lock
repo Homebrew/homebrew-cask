@@ -61,7 +61,7 @@ GEM
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.7)
       tins (<= 1.6.0)
-    rubocop-cask (0.0.0)
+    rubocop-cask (0.0.1)
     ruby-progressbar (1.7.5)
     simplecov (0.11.1)
       docile (~> 1.1.0)
@@ -88,7 +88,7 @@ DEPENDENCIES
   ronn (= 0.7.3)
   rspec (~> 3.0.0)
   rubocop
-  rubocop-cask (= 0.0.0)
+  rubocop-cask (= 0.0.1)
 
 BUNDLED WITH
    1.10.6
