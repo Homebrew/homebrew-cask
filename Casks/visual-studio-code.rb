@@ -1,6 +1,6 @@
 cask 'visual-studio-code' do
-  version '0.10.3'
-  sha256 '90e4d35f176d045e12647c603a23eb270d47ede91b5fa933f26bb800ccf4ad04'
+  version '0.10.5'
+  sha256 '0faafafed481652a059f04ab83c00161aed951a2414c6d5ef5363854ec4f0348'
 
   # vo.msecnd.net is the official download host per the vendor homepage
   url "https://az764295.vo.msecnd.net/public/#{version}/VSCode-darwin.zip"
