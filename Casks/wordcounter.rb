@@ -1,4 +1,4 @@
-cask :v1 => 'wordcounter' do
+cask 'wordcounter' do
   version :latest
   sha256 :no_check
 

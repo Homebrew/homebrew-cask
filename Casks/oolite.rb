@@ -1,4 +1,4 @@
-cask :v1 => 'oolite' do
+cask 'oolite' do
   version '1.82'
   sha256 'b1f324355dfb531102fd6e407d7e0fbb4547c720ffe833d31fcc5e26565b29a0'
 

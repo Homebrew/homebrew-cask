@@ -1,4 +1,4 @@
-cask :v1_2 => 'spectacle' do
+cask 'spectacle' do
 
   if MacOS.release <= :mountain_lion
     version '0.8.6'

@@ -1,4 +1,4 @@
-cask :v1 => 'join-together' do
+cask 'join-together' do
   version '7.5.3'
   sha256 '2df29280c83580e16acaac20e5015acf1d24889de1439cc252f735658053af23'
 

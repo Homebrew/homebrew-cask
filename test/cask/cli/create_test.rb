@@ -36,7 +36,7 @@ describe Hbc::CLI::Create do
     Hbc::CLI::Create.run('new-cask')
     template = File.read(Hbc.path('new-cask'))
     template.must_equal <<-TEMPLATE.undent
-      cask :v1 => 'new-cask' do
+      cask 'new-cask' do
         version ''
         sha256 ''
 

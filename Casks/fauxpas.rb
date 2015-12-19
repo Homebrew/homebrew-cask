@@ -1,4 +1,4 @@
-cask :v1 => 'fauxpas' do
+cask 'fauxpas' do
   version '1.6'
   sha256 '6a5d518df5a67ffef360cdcaef41dd10365bc90390354d5cde19e310d6ad9da6'
 

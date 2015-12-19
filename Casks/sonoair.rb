@@ -1,4 +1,4 @@
-cask :v1 => 'sonoair' do
+cask 'sonoair' do
   version '1.0-beta-4.0'
   sha256 '2f14f818322f5bbf96833880edb5aee46cda5fa74456d7c951e3d36372c09067'
 

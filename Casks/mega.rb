@@ -1,4 +1,4 @@
-cask :v1 => 'mega' do
+cask 'mega' do
   version '6.06'
   sha256 '7344b76a34719520f11f36f19cea1b3e93cb6d257fdf637616111da8321e903b'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'gureumkim' do
+cask 'gureumkim' do
   version '1.8.9c'
   sha256 'f0e69d60ac57b83f475313b2e38ca42c06b3d46cfec69ef77a274a89695ff9ae'
 

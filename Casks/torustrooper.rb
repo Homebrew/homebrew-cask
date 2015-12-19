@@ -1,4 +1,4 @@
-cask :v1 => 'torustrooper' do
+cask 'torustrooper' do
   version :latest
   sha256 :no_check
 

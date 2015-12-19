@@ -1,4 +1,4 @@
-cask :v1 => 'coderunner' do
+cask 'coderunner' do
   version '2.1.1'
   sha256 '8b18a0db9966c537b6eb7b36502e74fa93cfed20aa06e4c56c57ecf3cc9e304c'
 

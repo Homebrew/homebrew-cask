@@ -1,4 +1,4 @@
-cask :v1 => 'tuntap' do
+cask 'tuntap' do
   version '20150118'
   sha256 '2f31ffece5ad349aaae0516c08e2f6bd569d61ba2ec54b27909ba71537e7b4ff'
 

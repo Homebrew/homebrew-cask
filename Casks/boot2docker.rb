@@ -1,4 +1,4 @@
-cask :v1 => 'boot2docker' do
+cask 'boot2docker' do
   version '1.8.0'
   sha256 'b457bd33c046568a7a56ea89256563768b59ebaf5a50827f5e6f8703480dc329'
 

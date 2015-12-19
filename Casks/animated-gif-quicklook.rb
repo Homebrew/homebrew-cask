@@ -1,4 +1,4 @@
-cask :v1 => 'animated-gif-quicklook' do
+cask 'animated-gif-quicklook' do
   version :latest
   sha256 :no_check
 

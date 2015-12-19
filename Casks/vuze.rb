@@ -1,4 +1,4 @@
-cask :v1 => 'vuze' do
+cask 'vuze' do
   version :latest
   sha256 :no_check
 

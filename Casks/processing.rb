@@ -1,4 +1,4 @@
-cask :v1 => 'processing' do
+cask 'processing' do
   version '3.0.1'
   sha256 '1edc0b4a38c21a6e584f62784717b76967cdef14a4d75639c4e572419cd66db5'
 

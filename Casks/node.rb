@@ -1,4 +1,4 @@
-cask :v1 => 'node' do
+cask 'node' do
   version '4.2.1'
   sha256 '688df0a12461f378b296f69e8ae2c1cbb974b0216278624815bce7dcfea080c2'
 

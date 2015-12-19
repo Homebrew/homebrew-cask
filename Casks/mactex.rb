@@ -1,4 +1,4 @@
-cask :v1 => 'mactex' do
+cask 'mactex' do
   version :latest
   sha256 :no_check
 

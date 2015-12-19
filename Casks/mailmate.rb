@@ -1,4 +1,4 @@
-cask :v1 => 'mailmate' do
+cask 'mailmate' do
   version :latest
   sha256 :no_check
 

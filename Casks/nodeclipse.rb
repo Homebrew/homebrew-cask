@@ -1,4 +1,4 @@
-cask :v1 => 'nodeclipse' do
+cask 'nodeclipse' do
   version '0.17'
   sha256 '674991d7c22ea05975a76800e6e9fe9231064a09a2a2412e6ec0448676bfa2e8'
 

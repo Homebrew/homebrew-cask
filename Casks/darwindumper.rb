@@ -1,4 +1,4 @@
-cask :v1 => 'darwindumper' do
+cask 'darwindumper' do
   version '2.9.8'
   sha256 '7ac65b9d3700df8b8a49d1819bb8f6e42a6a6fb0fd4a2257e500fd04594002fc'
 

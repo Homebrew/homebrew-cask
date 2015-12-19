@@ -29,7 +29,7 @@ describe Hbc::DSL do
         .*
         brew update; brew cleanup; brew cask cleanup
         .*
-        https://github.com/caskroom/homebrew-cask/issues
+        https://github.com/caskroom/homebrew-cask#reporting-bugs
       EOREGEX
 
       TestHelper.must_output(self, attempt_unknown_method, expected)
@@ -60,12 +60,11 @@ describe Hbc::DSL do
       err.message.must_include 'does not match file name'
     end
 
-    it "requires a valid minimum DSL version in the header" do
-      err = lambda {
-        invalid_cask = Hbc.load('invalid/invalid-header-version')
-      }.must_raise(Hbc::CaskInvalidError)
-      err.message.must_include 'Bad header line:'
-      err.message.must_include 'is less than required minimum version'
+    it "does not require a DSL version in the header" do
+      test_cask = Hbc.load('no-dsl-version')
+      test_cask.url.to_s.must_equal 'http://example.com/TestCask.dmg'
+      test_cask.homepage.must_equal 'http://example.com/'
+      test_cask.version.must_equal '1.2.3'
     end
   end
 

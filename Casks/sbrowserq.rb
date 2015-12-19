@@ -1,4 +1,4 @@
-cask :v1 => 'sbrowserq' do
+cask 'sbrowserq' do
   version '3.0'
   sha256 '32d996a6e1044ea639b3e1f92f20df3a938872f95fc7837beb2231bbe9fd7a13'
 

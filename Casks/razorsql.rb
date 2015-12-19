@@ -1,4 +1,4 @@
-cask :v1 => 'razorsql' do
+cask 'razorsql' do
   version '6.3.26'
 
   if Hardware::CPU.is_32_bit? || MacOS.release <= :snow_leopard

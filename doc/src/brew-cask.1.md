@@ -166,6 +166,12 @@ in a future version.
   * `--internet_plugindir=<path>`:
     Target location for Internet Plugin links. The default value is `~/Library/Internet Plug-Ins`.
 
+  * `--audio_unit_plugindir=<path>`:
+    Target location for Audio Unit Plugin links. The default value is `~/Library/Audio/Plug-Ins/Components`.
+
+  * `--vst_plugindir=<path>`:
+    Target location for VST Plugin links. The default value is `~/Library/Audio/Plug-Ins/VST`.
+
   * `--screen_saverdir=<path>`:
     Target location for Screen Saver links. The default value is `~/Library/Screen Savers`.
 

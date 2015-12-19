@@ -1,4 +1,4 @@
-cask :v1 => 'restool' do
+cask 'restool' do
   version '0.3.0'
   sha256 'a5b85a8483006adcf91bf9ebdc1d21084ae0616a56d582ece1335db4d8786746'
 

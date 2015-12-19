@@ -1,4 +1,4 @@
-cask :v1 => 'hub' do
+cask 'hub' do
   version '2.2.2'
   sha256 '570664fdb22c5c40b16f0d17eb33d881332601ac289f724fe3aceab0c610a2a6'
 

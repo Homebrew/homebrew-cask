@@ -1,4 +1,4 @@
-cask :v1 => 'crashlytics' do
+cask 'crashlytics' do
   version '2.6.25_419'
   sha256 'b671cbd7deacb00fbb9fe5b16dbef074ae094a0d80a54382eee7641b1f7fb063'
 

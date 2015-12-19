@@ -1,4 +1,4 @@
-cask :v1 => 'tcl' do
+cask 'tcl' do
   version '8.6.4.0.298892'
   sha256 '2aae9686f40a7216e185877e7bf8421af35f597c20545d565511367587659bb9'
 

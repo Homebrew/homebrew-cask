@@ -1,4 +1,4 @@
-cask :v1 => 'silverlight' do
+cask 'silverlight' do
   version '5.1.41105.0'
   sha256 :no_check    # required as upstream package is updated in-place
 

@@ -1,4 +1,4 @@
-cask :v1 => 'wd-my-cloud' do
+cask 'wd-my-cloud' do
   version :latest
   sha256 :no_check
 

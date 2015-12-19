@@ -1,4 +1,4 @@
-cask :v1 => 'tla-plus-toolbox' do
+cask 'tla-plus-toolbox' do
   version '1.5.1'
   sha256 'd0d966c6742c6011d46e6de6760bf7300ed49649a85bccab0b097b0ec5ad42cd'
 

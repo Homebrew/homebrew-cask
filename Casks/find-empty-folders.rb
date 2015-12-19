@@ -1,4 +1,4 @@
-cask :v1 => 'find-empty-folders' do
+cask 'find-empty-folders' do
   version '1.1'
   sha256 '6eea5c0cde96b1d2297ccbd9c98391f6c76ef2076654871faf5e27030ca1e293'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'dictater' do
+cask 'dictater' do
   version '1.2'
   sha256 '32ae561c93af4979d23c0c8e22f31665a93f4f654539a0c10f725b35a62c9557'
 

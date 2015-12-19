@@ -1,4 +1,4 @@
-cask :v1 => 'cool-retro-term' do
+cask 'cool-retro-term' do
   version '1.0.0'
   sha256 'ccb1c78b54e1c2dcde1a660730da2b0f6d2e4213e3748e5ad81a5653926c920e'
 

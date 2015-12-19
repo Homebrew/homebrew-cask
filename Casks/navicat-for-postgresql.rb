@@ -1,4 +1,4 @@
-cask :v1 => 'navicat-for-postgresql' do
+cask 'navicat-for-postgresql' do
   version '11.1.17'
   sha256 '825ac85ecbe2d1df43dd2b7ba94fea625ae3468fc73459cc56bab0206472affd'
 

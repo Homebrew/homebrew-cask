@@ -1,4 +1,4 @@
-cask :v1 => 'second-life-viewer' do
+cask 'second-life-viewer' do
   version '3.8.1.303130'
   sha256 'eecb67fbbba4b988a858a83318d87d5f99451dbfa567b75d4bd91059904bca42'
 

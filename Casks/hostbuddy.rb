@@ -1,4 +1,4 @@
-cask :v1 => 'hostbuddy' do
+cask 'hostbuddy' do
   version '1.0.3'
   sha256 '0f4c52c536978e0ea9e113edd68932dbd8fa65d4e83ef519ee24aa9dfc751d6c'
 

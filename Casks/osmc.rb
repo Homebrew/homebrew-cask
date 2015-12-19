@@ -1,4 +1,4 @@
-cask :v1 => 'osmc' do
+cask 'osmc' do
   version :latest
   sha256 :no_check
 

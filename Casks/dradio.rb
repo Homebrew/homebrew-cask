@@ -1,4 +1,4 @@
-cask :v1 => 'dradio' do
+cask 'dradio' do
   version '1.6.1_1576'
   sha256 '1a297d0ccdf1554caf421f8774d3e6342d1ce600cb70392ca1bc3e345b04e9ea'
 

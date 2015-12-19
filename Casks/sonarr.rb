@@ -1,4 +1,4 @@
-cask :v1 => 'sonarr' do
+cask 'sonarr' do
   version :latest
   sha256 :no_check
 

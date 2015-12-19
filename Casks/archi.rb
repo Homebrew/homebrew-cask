@@ -1,4 +1,4 @@
-cask :v1 => 'archi' do
+cask 'archi' do
   version '3.3.1'
   sha256 '737d3287fdde718ed9a2363259efa814ff1c29feaf632bc6de594fdbe7c7af19'
 

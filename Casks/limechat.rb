@@ -1,4 +1,4 @@
-cask :v1 => 'limechat' do
+cask 'limechat' do
 
   if MacOS.release <= :lion
     version '2.38'

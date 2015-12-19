@@ -1,4 +1,4 @@
-cask :v1 => 'gisto' do
+cask 'gisto' do
   version '0.3.1'
   sha256 '93df9da2888f1cca3e649ccc30b8c4784e95ad22000c77d684d89363d873cbba'
 

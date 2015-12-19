@@ -1,4 +1,4 @@
-cask :v1 => 'flip4mac' do
+cask 'flip4mac' do
   version '3.3.7'
   sha256 'daaa82dfceb46e879078aacdced1a724e821586d8f6a8573d5f9d650f0fa41be'
 

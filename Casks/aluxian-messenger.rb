@@ -1,4 +1,4 @@
-cask :v1 => 'aluxian-messenger' do
+cask 'aluxian-messenger' do
   version '1.4.3'
   sha256 'a187cd9e704b8a6333ec7fef736b9838a04a7d983d6e35c7fb782235d59bb492'
 

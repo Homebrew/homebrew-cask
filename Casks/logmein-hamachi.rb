@@ -1,4 +1,4 @@
-cask :v1 => 'logmein-hamachi' do
+cask 'logmein-hamachi' do
   version :latest
   sha256 :no_check
 

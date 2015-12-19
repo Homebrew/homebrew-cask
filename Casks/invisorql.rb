@@ -1,4 +1,4 @@
-cask :v1 => 'invisorql' do
+cask 'invisorql' do
   version '2.0'
   sha256 '0ac603ab71b927d55a2580a498380b0cada46f3bc50c6439fb1879c793a6f543'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'volatility' do
+cask 'volatility' do
   version '2.4'
   sha256 '528f06cfd9f0562f7a437c7f1db0d1f54650c3fe9969974718794fd737fbff6d'
 

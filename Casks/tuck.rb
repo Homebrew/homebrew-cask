@@ -1,4 +1,4 @@
-cask :v1 => 'tuck' do
+cask 'tuck' do
   version :latest
   sha256 :no_check
 

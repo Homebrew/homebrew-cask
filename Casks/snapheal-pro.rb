@@ -1,4 +1,4 @@
-cask :v1 => 'snapheal-pro' do
+cask 'snapheal-pro' do
   version '1.4.980'
   sha256 'c9beb872e8639395d996a2582e37bec305c12bfbe5ca036bffc6ffd4c9654801'
 

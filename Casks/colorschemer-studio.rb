@@ -1,4 +1,4 @@
-cask :v1 => 'colorschemer-studio' do
+cask 'colorschemer-studio' do
   version :latest
   sha256 :no_check
 

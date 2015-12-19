@@ -1,4 +1,4 @@
-cask :v1 => 'bibdesk' do
+cask 'bibdesk' do
   version '1.6.5'
   sha256 '88bba68bac01d2702404f1a245485c61cd4b97af0314cb138f6fae8aa3ca1457'
 

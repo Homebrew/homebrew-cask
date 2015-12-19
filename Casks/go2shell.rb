@@ -1,4 +1,4 @@
-cask :v1 => 'go2shell' do
+cask 'go2shell' do
   version :latest
   sha256 :no_check
 

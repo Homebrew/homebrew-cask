@@ -1,4 +1,4 @@
-cask :v1 => 'serf' do
+cask 'serf' do
   version '0.6.4'
   sha256 '8f1cd35ab55e95657c1dcc657df94fee62cb745ba72927d105559396c4f0a3ef'
 

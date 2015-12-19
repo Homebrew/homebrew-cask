@@ -1,4 +1,4 @@
-cask :v1 => 'nisus-thesaurus' do
+cask 'nisus-thesaurus' do
   version '1.1.1'
   sha256 'ee9203ada1fa944ac4b7fc04f03ec58fd7c60ce1d73e6058321583f7dbf8ae5a'
 

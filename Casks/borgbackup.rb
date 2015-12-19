@@ -1,4 +1,4 @@
-cask :v1 => 'borgbackup' do
+cask 'borgbackup' do
   version '0.28.2'
   sha256 'b4dcc75cf0a224abaa26c5cad565b6670050ca43e89ca144683a74fe6fff58fa'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'smart-scroll' do
+cask 'smart-scroll' do
   version '4.0.6'
   sha256 '18582a39a6cfb08ab9f2ff99852eb245055d506d70b5573bf59be62e4c5c6078'
 

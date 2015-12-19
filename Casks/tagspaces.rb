@@ -1,4 +1,4 @@
-cask :v1 => 'tagspaces' do
+cask 'tagspaces' do
   version '2.0.1'
 
   if Hardware::CPU.is_32_bit?

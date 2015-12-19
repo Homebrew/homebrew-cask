@@ -1,4 +1,4 @@
-cask :v1 => 'kaleidoscope' do
+cask 'kaleidoscope' do
   version '2.1.1-219'
   sha256 '660b105e03391e93a8dffe584cd5b26326b431786adcbaabbb60aa00afc5c8c7'
 

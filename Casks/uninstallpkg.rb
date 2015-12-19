@@ -1,4 +1,4 @@
-cask :v1 => 'uninstallpkg' do
+cask 'uninstallpkg' do
   version '1.0.19'
   sha256 '8dd282c2c8b98f83ed7a7799629407443a95e8eef503f7926c3d3b60c8c001f8'
 

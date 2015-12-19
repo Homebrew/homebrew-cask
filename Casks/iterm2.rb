@@ -1,4 +1,4 @@
-cask :v1 => 'iterm2' do
+cask 'iterm2' do
   # note: "2" is not a version number, but indicates a different vendor
   version '2.1.4'
   sha256 '1062b83e7808dc1e13362f4a83ef770e1c24ea4ae090d1346b49f6196e9064cd'

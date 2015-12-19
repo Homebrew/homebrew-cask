@@ -1,4 +1,4 @@
-cask :v1 => 'epoch' do
+cask 'epoch' do
   version '2.0.0'
   sha256 'e50d1b89150bc600cc38430243f7533a1a6f651711dd400a72e2f4c645d947d4'
 

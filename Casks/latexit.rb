@@ -1,4 +1,4 @@
-cask :v1 => 'latexit' do
+cask 'latexit' do
   version '2.8.0'
   sha256 '74258cbf8673ef17fb6ce8fbfdc630ea98002fb2a7012c251429299cf9b68489'
 

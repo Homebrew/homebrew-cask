@@ -1,4 +1,4 @@
-cask :v1 => 'weka' do
+cask 'weka' do
   version '3.6.13'
   sha256 '1a070b1e36f927a89cf71590222560019e2bc1533ba4caca50543cc8bae3c631'
 

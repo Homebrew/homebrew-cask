@@ -1,4 +1,4 @@
-cask :v1 => 'feeds' do
+cask 'feeds' do
   version '2.1.1'
   sha256 '098dc0ceec2ca1ef26e6ff9f3a7ab4fd7c71877a7fc698584c986525a2204fdf'
 

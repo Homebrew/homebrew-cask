@@ -1,4 +1,4 @@
-cask :v1 => 'findings' do
+cask 'findings' do
   version '1.3.1-3058'
   sha256 'db31b3d88964d8d350b2e2363df44757793addb6d33b860be5eeb78fddf5d82a'
 

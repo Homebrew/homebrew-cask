@@ -1,4 +1,4 @@
-cask :v1 => 'tinyumbrella' do
+cask 'tinyumbrella' do
   version :latest
   sha256 :no_check
 

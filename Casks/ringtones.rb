@@ -1,4 +1,4 @@
-cask :v1 => 'ringtones' do
+cask 'ringtones' do
   version :latest
   sha256 :no_check
 

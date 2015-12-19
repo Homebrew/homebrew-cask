@@ -1,4 +1,4 @@
-cask :v1 => 'qlgradle' do
+cask 'qlgradle' do
   version '0.0.1'
   sha256 'ea76846953ecfbd180d65167ec31cb7c316030f500a6669cd79857c03b951b63'
 

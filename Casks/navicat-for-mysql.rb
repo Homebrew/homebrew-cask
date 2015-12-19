@@ -1,4 +1,4 @@
-cask :v1 => 'navicat-for-mysql' do
+cask 'navicat-for-mysql' do
   version '11.1.17'
   sha256 'ec38ed419eee4090020ef4f475625a5c3ea431e25dc7c0ecce776e1fe920c20f'
 

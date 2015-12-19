@@ -1,4 +1,4 @@
-cask :v1 => 'srclib' do
+cask 'srclib' do
   version :latest
   sha256 :no_check
 

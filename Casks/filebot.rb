@@ -1,4 +1,4 @@
-cask :v1 => 'filebot' do
+cask 'filebot' do
   version '4.6.1'
   sha256 'eed87622fe833a53fed2db816c08b5b5d68f663ef4356835e7b8f9ff3ad1d471'
 

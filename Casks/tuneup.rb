@@ -1,4 +1,4 @@
-cask :v1 => 'tuneup' do
+cask 'tuneup' do
   version :latest
   sha256 :no_check
 

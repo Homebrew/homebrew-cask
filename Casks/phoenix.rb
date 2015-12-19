@@ -1,4 +1,4 @@
-cask :v1 => 'phoenix' do
+cask 'phoenix' do
   version '2.0.1'
   sha256 '95c1cf43b581f7957658f95a89a6567bdbc95050d6dd796156c676092055defa'
 

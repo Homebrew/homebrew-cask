@@ -1,4 +1,4 @@
-cask :v1 => 'mitmproxy' do
+cask 'mitmproxy' do
   version '0.15'
   sha256 'b071e758be27005f10e580e3ca7b194d475fe8e57b971f36b44275234a7617d6'
 

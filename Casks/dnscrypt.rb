@@ -1,4 +1,4 @@
-cask :v1 => 'dnscrypt' do
+cask 'dnscrypt' do
   version '1.0.10'
   sha256 'd092d9151035a0853902261e883d5ba7c50cb93beea9834db41303b2ec4276e0'
 

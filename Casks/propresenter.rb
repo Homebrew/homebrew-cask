@@ -1,4 +1,4 @@
-cask :v1 => 'propresenter' do
+cask 'propresenter' do
   version '6.0.12_b15052'
   sha256 'c1dde213162bfa1e0adff980aaebde486fd7efd9f8cc5f09e87f9a6448202131'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'tribler' do
+cask 'tribler' do
   version '6.4.3'
   sha256 '74b79421a91e755518c16a941f8646968d94b167d38f9a911a8f97f91de29cae'
 

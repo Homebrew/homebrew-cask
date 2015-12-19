@@ -1,4 +1,4 @@
-cask :v1 => 'data-rescue' do
+cask 'data-rescue' do
   version '4.2.1'
   sha256 '2f713f61dd40619029ccaaa3bcc85cc56e6e2cc099fd39649741c7ad069fb948'
 

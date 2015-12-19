@@ -1,4 +1,4 @@
-cask :v1 => 'paparazzi' do
+cask 'paparazzi' do
   version '0.6.7'
   sha256 '111c94994176a7690512aa5303bff14761f308c720b527b541e39edd054777bd'
 

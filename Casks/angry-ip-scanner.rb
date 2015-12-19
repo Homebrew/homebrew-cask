@@ -1,4 +1,4 @@
-cask :v1 => 'angry-ip-scanner' do
+cask 'angry-ip-scanner' do
   version '3.4'
   sha256 '56976a6b2d3b62ef3e46626df51eb20a4e849e346a5292bf923481f4efb5da4a'
 

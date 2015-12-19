@@ -1,4 +1,4 @@
-cask :v1 => 'flash' do
+cask 'flash' do
   version '20.0.0.235'
   sha256 'ee6c197709583b4c38d8fed6b31a049e99c5a23136c84e77394bf11b810ffd9b'
 

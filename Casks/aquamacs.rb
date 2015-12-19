@@ -1,4 +1,4 @@
-cask :v1 => 'aquamacs' do
+cask 'aquamacs' do
   if Hardware::CPU.is_32_bit?
     version '2.5'
     sha256 '04835075a0c2db072bc974b0e01876e4c95e89deed0485755354f2bbffc8481a'

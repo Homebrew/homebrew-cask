@@ -1,4 +1,4 @@
-cask :v1 => 'smoothmouse' do
+cask 'smoothmouse' do
   version '1.0.10'
   sha256 '3bff8843fbe263426d0587a2ae671f3e55fe2a46e069677355cf41f6afa28497'
 

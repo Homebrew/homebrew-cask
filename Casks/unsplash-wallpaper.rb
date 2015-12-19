@@ -1,4 +1,4 @@
-cask :v1 => 'unsplash-wallpaper' do
+cask 'unsplash-wallpaper' do
   version '1341_1445283621'
   sha256 '5683d617ffb5c9090bd356b864db6500665b9ca84ab61aaffdf154f4148d33fd'
 

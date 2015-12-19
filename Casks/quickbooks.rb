@@ -1,4 +1,4 @@
-cask :v1 => 'quickbooks' do
+cask 'quickbooks' do
   version '2.3.1'
   sha256 '2e8df91e1c9e1c2725cc3b4a9db8baf73b7fa3c6fda02613442ba5efcdfd3bed'
 

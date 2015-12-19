@@ -1,4 +1,4 @@
-cask :v1 => 'typora' do
+cask 'typora' do
   version :latest
   sha256 :no_check
 

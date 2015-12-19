@@ -1,4 +1,4 @@
-cask :v1 => 'scrutiny' do
+cask 'scrutiny' do
   version :latest
   sha256 :no_check
 

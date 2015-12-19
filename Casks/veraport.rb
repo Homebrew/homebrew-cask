@@ -1,4 +1,4 @@
-cask :v1 => 'veraport' do
+cask 'veraport' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'fontexplorer-x-pro' do
+cask 'fontexplorer-x-pro' do
   version '5.0.2'
   sha256 'ef86771fb2acf2eaa3c30b72d51594eda4ab2cd4c9a7454585184460d49b043a'
 

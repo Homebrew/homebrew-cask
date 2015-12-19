@@ -1,4 +1,4 @@
-cask :v1 => 'focus' do
+cask 'focus' do
   version '1.4.11'
   sha256 '22524abb327ce17d70ab50ffc9de4d8911fd30bf84490d14c28383c8fd8d45ed'
 

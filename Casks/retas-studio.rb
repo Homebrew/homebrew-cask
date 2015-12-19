@@ -1,4 +1,4 @@
-cask :v1 => 'retas-studio' do
+cask 'retas-studio' do
   version '6.6.0'
   sha256 '387d299ac77dad4a4116605e492e7c69614c463cde2ce5df439caaa55c9befb5'
 

@@ -1,4 +1,4 @@
-cask :v1_2 => 'bartender' do
+cask 'bartender' do
   version '2.0.7'
   sha256 'e96ee3ab2fe6bca413a16899cd1388e69a58ac00ab87e597138163d0632a1689'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'mcedit' do
+cask 'mcedit' do
   version '1.4.0.1'
   sha256 'e09c7efab389cdb8dfe4bcc74fd452aa9681cc7fb1d98756c922fbe28fd82122'
 

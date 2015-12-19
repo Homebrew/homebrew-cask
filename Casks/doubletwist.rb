@@ -1,4 +1,4 @@
-cask :v1 => 'doubletwist' do
+cask 'doubletwist' do
   version '3.1.2'
   sha256 '47975cc7517a6cf8c90362536a7feb53f0ff8af7d45866481d37cad2fcae4dac'
 

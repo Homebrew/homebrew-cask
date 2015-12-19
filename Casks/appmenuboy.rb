@@ -1,4 +1,4 @@
-cask :v1 => 'appmenuboy' do
+cask 'appmenuboy' do
   version :latest
   sha256 :no_check
 

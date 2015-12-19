@@ -1,4 +1,4 @@
-cask :v1 => 'scythebill' do
+cask 'scythebill' do
   version '12.6.0'
   sha256 '463612974cb2686eea3edc78f8587098087da88ca8cf6b13103e85fe8c182a89'
 

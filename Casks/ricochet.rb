@@ -1,4 +1,4 @@
-cask :v1 => 'ricochet' do
+cask 'ricochet' do
   version '1.1.1'
   sha256 'e621fe34692ff6f10f3db863146903547e333d3373b4a62c468b58504576290b'
 

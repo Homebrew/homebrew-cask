@@ -1,4 +1,4 @@
-cask :v1 => 'timings' do
+cask 'timings' do
   version '2.4.4'
   sha256 '35627d1c6a46f600555fbefcfac8e2422932a651ec36717a2934146ac3acd719'
 

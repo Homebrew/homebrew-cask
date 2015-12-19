@@ -1,4 +1,4 @@
-cask :v1 => 'screens' do
+cask 'screens' do
   version '3.6.9b4770'
   sha256 '818c2598dedd12a37827f27d0ecf111102739ec595be183bb487d281da969366'
 

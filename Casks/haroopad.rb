@@ -1,4 +1,4 @@
-cask :v1 => 'haroopad' do
+cask 'haroopad' do
   version '0.13.1'
   sha256 '97ea132dfb1efa5492d98ee3b7de4beda79796ac75ce293c57e8300e11b1f694'
 

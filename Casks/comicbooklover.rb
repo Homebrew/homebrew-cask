@@ -1,4 +1,4 @@
-cask :v1 => 'comicbooklover' do
+cask 'comicbooklover' do
   version '1.7_1529'
   sha256 'fe77d4a579e5401d1749fe78f51e03b8630daa62cb6acea842e1ea7eec552804'
 

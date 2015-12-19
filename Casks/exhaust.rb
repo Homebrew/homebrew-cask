@@ -1,4 +1,4 @@
-cask :v1 => 'exhaust' do
+cask 'exhaust' do
   version :latest
   sha256 :no_check
 

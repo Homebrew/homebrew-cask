@@ -1,4 +1,4 @@
-cask :v1 => 'qqmacmgr' do
+cask 'qqmacmgr' do
   version '2.4.0'
   sha256 'd8dd104bdf30e4e9fde8add44b546b667a717e21c2666886a317f9d2f08fb2f7'
 

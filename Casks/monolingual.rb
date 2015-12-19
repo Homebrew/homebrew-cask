@@ -1,4 +1,4 @@
-cask :v1 => 'monolingual' do
+cask 'monolingual' do
 
   if MacOS.release <= :tiger
     version '1.3.9'

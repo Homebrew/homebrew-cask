@@ -1,4 +1,4 @@
-cask :v1 => 'audioscrobbler' do
+cask 'audioscrobbler' do
   version '0.9.15'
   sha256 'd14bd947f32a5e6c17645d9378b69b0aded91b95dd87a9a8971e013a8fff5063'
 

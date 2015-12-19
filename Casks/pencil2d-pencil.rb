@@ -1,4 +1,4 @@
-cask :v1 => 'pencil2d-pencil' do
+cask 'pencil2d-pencil' do
   version '0.5.4b'
   sha256 'ea667aa1ec3b3793b36230ee2cc6b6cefbd0b8cc4e3c9011bc37ee770b475fca'
 

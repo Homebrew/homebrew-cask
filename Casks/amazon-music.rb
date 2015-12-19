@@ -1,4 +1,4 @@
-cask :v1 => 'amazon-music' do
+cask 'amazon-music' do
   version '20151118_201234b234'
   sha256 '4d16ba59486118c5b1180cbfaef7570cc814c2773aa83ea980af7ed5c4108ca7'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'tunnelblick' do
+cask 'tunnelblick' do
   version '3.5.5_build_4270.4461'
   sha256 '0977d4f35706ed5000ff6f9ab11471ce0eaf9acc6319b6d6157191894c4038d5'
 

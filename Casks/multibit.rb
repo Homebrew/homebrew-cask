@@ -1,4 +1,4 @@
-cask :v1 => 'multibit' do
+cask 'multibit' do
   version '0.5.19'
   sha256 'f84aefa0b3762e36659ea3e71806f747db4198641d658d88c8772978b23f99dc'
 

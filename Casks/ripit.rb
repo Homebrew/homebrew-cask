@@ -1,4 +1,4 @@
-cask :v1 => 'ripit' do
+cask 'ripit' do
   version :latest
   sha256 :no_check
 

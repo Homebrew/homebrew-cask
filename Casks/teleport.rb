@@ -1,4 +1,4 @@
-cask :v1 => 'teleport' do
+cask 'teleport' do
   version :latest
   sha256 :no_check
 

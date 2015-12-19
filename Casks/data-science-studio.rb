@@ -1,4 +1,4 @@
-cask :v1 => 'data-science-studio' do
+cask 'data-science-studio' do
   version '2.0.0'
   sha256 '97a2e10d14a26d337ba71170ddc5e4ad6e2b3eafe36adcd02048c7da2d402774'
 

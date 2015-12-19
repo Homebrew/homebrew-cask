@@ -1,4 +1,4 @@
-cask :v1 => 'arranger' do
+cask 'arranger' do
   version '1.6'
   sha256 'cc52b300a999b1b10bfc35cbd2846fc99ef1ded69b4d385971bf9ac499b3515f'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'powermate' do
+cask 'powermate' do
   version '1.2.4_0'
   sha256 '6fd755961bb5a486cb3ab9d47217f7877d4bb021134f32a3c32ceede3fd3cf3d'
 

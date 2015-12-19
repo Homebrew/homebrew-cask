@@ -1,4 +1,4 @@
-cask :v1 => 'retini' do
+cask 'retini' do
   version :latest
   sha256 :no_check
 

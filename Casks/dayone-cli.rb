@@ -1,4 +1,4 @@
-cask :v1 => 'dayone-cli' do
+cask 'dayone-cli' do
   version :latest
   sha256 :no_check
 

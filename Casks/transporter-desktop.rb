@@ -1,4 +1,4 @@
-cask :v1 => 'transporter-desktop' do
+cask 'transporter-desktop' do
   version '4.1.5_20060'
   sha256 '98111e1178f1db00b6b6cf395b78256c3f681151e6f07a70d4497250da0ca238'
 

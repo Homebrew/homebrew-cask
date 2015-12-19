@@ -1,4 +1,4 @@
-cask :v1 => 'soundcleod' do
+cask 'soundcleod' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'eclipse-cpp' do
+cask 'eclipse-cpp' do
   version '4.5.1'
   sha256 'd485444edbd6761da697dd55e974f8a45691f6bce515880eeb4216ea5ef6cbb5'
 

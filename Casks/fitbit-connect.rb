@@ -1,4 +1,4 @@
-cask :v1 => 'fitbit-connect' do
+cask 'fitbit-connect' do
   version '20150619_2.0.0.6583'
   sha256 '89f3c1f14944a2edd85b68bfeafecf3b00245551d08f8f785dcdedc9b0aa404d'
 

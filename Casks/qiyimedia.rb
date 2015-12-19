@@ -1,4 +1,4 @@
-cask :v1 => 'qiyimedia' do
+cask 'qiyimedia' do
   version :latest
   sha256 :no_check
 

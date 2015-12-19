@@ -1,4 +1,4 @@
-cask :v1 => 'baretorrent' do
+cask 'baretorrent' do
   version '0.4.4'
   sha256 'dea7c210e9b57b74fc44b498d8f5d238458ffffff3c66b2a91bd77f5cec5238d'
 

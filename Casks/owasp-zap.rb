@@ -1,4 +1,4 @@
-cask :v1 => 'owasp-zap' do
+cask 'owasp-zap' do
   version '2.4.3'
   sha256 '581e1746384263a01a8d4def828d291e707fca3788d9302c1e57edb457db18ae'
 

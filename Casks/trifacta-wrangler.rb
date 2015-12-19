@@ -1,4 +1,4 @@
-cask :v1 => 'trifacta-wrangler' do
+cask 'trifacta-wrangler' do
   version :latest
   sha256 :no_check
 

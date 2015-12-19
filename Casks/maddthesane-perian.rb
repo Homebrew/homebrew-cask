@@ -1,4 +1,4 @@
-cask :v1 => 'maddthesane-perian' do
+cask 'maddthesane-perian' do
   version '1.3.2'
   sha256 'cc13f5b587f0cb53c5f95329d75686cd32eb599b125fe30e4ae31c3ab58d3a9e'
 

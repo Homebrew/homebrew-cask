@@ -1,4 +1,4 @@
-cask :v1 => 'scroll-reverser' do
+cask 'scroll-reverser' do
 
   if MacOS.release <= :snow_leopard
     version '1.5.1'

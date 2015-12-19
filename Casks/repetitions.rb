@@ -1,4 +1,4 @@
-cask :v1 => 'repetitions' do
+cask 'repetitions' do
   version '1.821'
   sha256 '8158cd39d8ba285ed8224bb42629cf2cf015c2f9239460b80343b01007180cf4'
 

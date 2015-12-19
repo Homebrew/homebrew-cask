@@ -1,4 +1,4 @@
-cask :v1 => 'fetch' do
+cask 'fetch' do
   version '5.7.5'
   sha256 '8f154a7e353dc6ab672d794b019fa5f298010a366379eda3cfa9a1c1c9d71e0d'
 

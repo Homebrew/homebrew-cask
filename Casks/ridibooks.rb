@@ -1,4 +1,4 @@
-cask :v1 => 'ridibooks' do
+cask 'ridibooks' do
   version '1.5.9b'
   sha256 '27e06ef0625f8958a909c7801bfd0108d975164fec9b241d1a12ab083edea2e0'
 

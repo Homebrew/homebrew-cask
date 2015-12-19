@@ -1,4 +1,4 @@
-cask :v1 => 'saoimage-ds9' do
+cask 'saoimage-ds9' do
   version '7.3.2'
   sha256 'dcbed96db8c0809468d443aba83d7deed602ba297a9a5b47cc33f7821a1ae13b'
 

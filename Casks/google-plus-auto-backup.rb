@@ -1,4 +1,4 @@
-cask :v1 => 'google-plus-auto-backup' do
+cask 'google-plus-auto-backup' do
   version :latest
   sha256 :no_check
 

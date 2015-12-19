@@ -1,4 +1,4 @@
-cask :v1 => 'devonthink-pro-office' do
+cask 'devonthink-pro-office' do
   version '2.8.7'
   sha256 '3c272a0656afe1bee9a683190dbc55484724a81492a3b2ae7f50af8bc96b5894'
 

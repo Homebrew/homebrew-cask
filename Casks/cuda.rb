@@ -1,4 +1,4 @@
-cask :v1 => 'cuda' do
+cask 'cuda' do
   version '7.5.20'
   sha256 '53a569d2cbdf43942245ce356ee5851ccf1dbf55e15a035ad0aa95a0b7739181'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'unity' do
+cask 'unity' do
   version '5.2.2f1'
   sha256 '1a810817712f4adea34894b3473b52a6bf2a0c79045edc8eb4ee8df3dd2f07fe'
 

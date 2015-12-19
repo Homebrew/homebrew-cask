@@ -1,4 +1,4 @@
-cask :v1 => 'finderminder' do
+cask 'finderminder' do
   version '1.2'
   sha256 '9123db1552c5b8f1a65fde3a0bcee8007bc7f6d04364f586a53fc4f1ad27797e'
 

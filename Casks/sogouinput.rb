@@ -1,4 +1,4 @@
-cask :v1 => 'sogouinput' do
+cask 'sogouinput' do
   version '3.3.0.76660'
   sha256 'ec3a007301d9c948b5e9463846b74cbcb034a518b37ee010b004aeb243aaa808'
 

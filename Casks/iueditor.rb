@@ -1,4 +1,4 @@
-cask :v1 => 'iueditor' do
+cask 'iueditor' do
   version '1.1.1.6'
   sha256 'f644d8e8a4f0aab420cf76ce724fb8e680e4f592de1bdad54399f938342fa641'
 

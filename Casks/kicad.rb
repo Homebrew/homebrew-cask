@@ -1,12 +1,17 @@
-cask :v1 => 'kicad' do
-  version '2014-02-26'
-  sha256 '066520f10e9646e88c2e1d7812adf54a73a331592076f394cb439a97c228410b'
+cask 'kicad' do
+  version '4.0.0'
+  sha256 '71b47ce37acd1d32eaee898254114203ef2de8b382f1353db7a01caa37a798e5'
 
-  # mdx4.org is the official download host per the vendor homepage
-  url "http://www.mdx4.org/uploads/kicad/Kicad-product-#{version}.zip"
+  url "http://downloads.kicad-pcb.org/osx/stable/kicad-#{version}.dmg"
   name 'KiCad'
   homepage 'http://www.kicad-pcb.org/'
   license :gpl
 
-  suite 'Kicad'
+  preflight do
+    system '/bin/mkdir', '--', "#{staged_path}/Kicad-apps"
+    system '/bin/mv', '--', "#{staged_path}/Kicad/*.app", "#{staged_path}/Kicad-apps/"
+  end
+
+  suite 'Kicad-apps', :target => 'Kicad'
+  artifact 'kicad', :target => "#{ENV['HOME']}/Library/Application Support/kicad"
 end

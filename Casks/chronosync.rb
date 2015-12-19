@@ -1,4 +1,4 @@
-cask :v1 => 'chronosync' do
+cask 'chronosync' do
   version :latest
   sha256 :no_check
 

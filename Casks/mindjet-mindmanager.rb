@@ -1,4 +1,4 @@
-cask :v1 => 'mindjet-mindmanager' do
+cask 'mindjet-mindmanager' do
   version :latest
   sha256 :no_check
 

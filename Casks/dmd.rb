@@ -1,4 +1,4 @@
-cask :v1 => 'dmd' do
+cask 'dmd' do
   version '2.067.0'
   sha256 'c5d327f72cc0bcf16b598d6b3688c87f51faf8ebc43f85f20fa552dfac08309b'
 

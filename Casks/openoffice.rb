@@ -1,6 +1,6 @@
-cask :v1 => 'openoffice' do
+cask 'openoffice' do
   version '4.1.2'
-  sha256 'cc6ca4ae4d10a295f5283ee8030da13c0110a439b164680de4fbdf5dfa926c19'
+  sha256 '4fe8e4b30989d0476fe3afc6d9d4374af57d38bd04f4a5e1947462bf5dde7699'
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/openofficeorg.mirror/Apache_OpenOffice_#{version}_MacOS_x86-64_install_en-US.dmg"

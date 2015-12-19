@@ -1,4 +1,4 @@
-cask :v1 => 'parallels-virtualization-sdk' do
+cask 'parallels-virtualization-sdk' do
   version '11.1.0-32202'
   sha256 'cfb7fff41a956a1583e6d4bb86eac09429c6373f98c894f8c6ada855e7d414e4'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'docker-machine-driver-parallels' do
+cask 'docker-machine-driver-parallels' do
   version '1.0.1'
   sha256 'd9802e3f21a769293ada9d3c86a5870b87e40df38b5395957105ceea025f23b9'
 

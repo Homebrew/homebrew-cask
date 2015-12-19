@@ -1,4 +1,4 @@
-cask :v1 => 'glueprint' do
+cask 'glueprint' do
   version '1.1'
   sha256 '3a11d1150dd00b0e880ea0543aafc1bba5756a27f896a5e151a10d920595e747'
 

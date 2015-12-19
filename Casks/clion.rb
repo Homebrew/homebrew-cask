@@ -1,4 +1,4 @@
-cask :v1 => 'clion' do
+cask 'clion' do
   version '1.2.2'
   sha256 'd5140067aa270f205457a9e5bf03ef00dc42f290b64865406e9b338ca244eb4b'
 

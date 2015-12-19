@@ -1,4 +1,4 @@
-cask :v1 => 'macports' do
+cask 'macports' do
   version '2.3.4'
 
   if MacOS.release <= :mountain_lion

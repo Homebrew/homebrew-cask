@@ -1,4 +1,4 @@
-cask :v1 => 'chronoagent' do
+cask 'chronoagent' do
   version :latest
   sha256 :no_check
 

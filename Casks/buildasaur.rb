@@ -1,4 +1,4 @@
-cask :v1 => 'buildasaur' do
+cask 'buildasaur' do
   version '0.6.4'
   sha256 'e851d5bc9ce7fe13ad65f559617d9130040e444aeaf35191013069e96eae8fc6'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'unetbootin' do
+cask 'unetbootin' do
   version '613'
   sha256 'b9356ad2ef3cfa6881690ddc1136c45e6d3f25063fdeaeeb477633500b0c7684'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'mikogo' do
+cask 'mikogo' do
   version :latest
   sha256 :no_check
 

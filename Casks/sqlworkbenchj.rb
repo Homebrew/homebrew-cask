@@ -1,4 +1,4 @@
-cask :v1 => 'sqlworkbenchj' do
+cask 'sqlworkbenchj' do
   version '118'
   sha256 '5983eeebec79c781e76d6b5ceb789d2c4a9fcdeb2a93ec333b0cb6cb4a291915'
 

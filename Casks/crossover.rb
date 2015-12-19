@@ -1,4 +1,4 @@
-cask :v1 => 'crossover' do
+cask 'crossover' do
   version '15.0.0'
   sha256 '62fb015ebd1b90cc53ee447b73b74665bbb09dd8e04fc76fe10667d78100916a'
 

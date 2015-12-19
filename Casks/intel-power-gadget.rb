@@ -1,4 +1,4 @@
-cask :v1 => 'intel-power-gadget' do
+cask 'intel-power-gadget' do
   version '3.0.1'
   sha256 '538a792721604e2155b3a48caa4084db751a91b170e5fa62bf0331d3147f2239'
 

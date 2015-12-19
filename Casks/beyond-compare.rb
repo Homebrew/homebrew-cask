@@ -1,4 +1,4 @@
-cask :v1 => 'beyond-compare' do
+cask 'beyond-compare' do
   version '4.1.2.20720'
   sha256 '1e947349e53315d5c935867ee5784c22cd71e4b581f205cdc3ad34a2910b4b71'
 

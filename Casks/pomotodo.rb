@@ -1,4 +1,4 @@
-cask :v1 => 'pomotodo' do
+cask 'pomotodo' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'plug' do
+cask 'plug' do
   version :latest
   sha256 :no_check
 

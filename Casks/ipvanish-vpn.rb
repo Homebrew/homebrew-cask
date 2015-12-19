@@ -1,4 +1,4 @@
-cask :v1 => 'ipvanish-vpn' do
+cask 'ipvanish-vpn' do
   version '2.2.0-231'
   sha256 '35b3140ef065e99d22b4491ffd51cda6eb51f360d9c38e7447b9f64350fb54eb'
 

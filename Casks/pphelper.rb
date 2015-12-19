@@ -1,4 +1,4 @@
-cask :v1 => 'pphelper' do
+cask 'pphelper' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'feisty-dog-tag' do
+cask 'feisty-dog-tag' do
   version :latest
   sha256 :no_check
 

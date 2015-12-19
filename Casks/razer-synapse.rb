@@ -1,4 +1,4 @@
-cask :v1 => 'razer-synapse' do
+cask 'razer-synapse' do
   version '1.45'
   sha256 '4b4368bf5f90cb94667a60a120d49b9073329ba6d9efcd4f5108cf709bfe8115'
 

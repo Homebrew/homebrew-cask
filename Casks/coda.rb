@@ -1,4 +1,4 @@
-cask :v1 => 'coda' do
+cask 'coda' do
   version '2.5.12'
   sha256 '3bcb4a1f99a47edd087b9579c206a38cecae1a31287e84121c5775b8752a8c3f'
 

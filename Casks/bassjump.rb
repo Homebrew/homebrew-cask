@@ -1,4 +1,4 @@
-cask :v1 => 'bassjump' do
+cask 'bassjump' do
   if MacOS.release <= :mountain_lion
     version '2.0.3'
     sha256 '8e4dffa6bb3b532b994f379d19d70903f59fc019916f10cba9d01b8075d69a7f'

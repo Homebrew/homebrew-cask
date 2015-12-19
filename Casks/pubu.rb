@@ -1,4 +1,4 @@
-cask :v1 => 'pubu' do
+cask 'pubu' do
   version '2.0.0'
   sha256 'f0ce2abd31867de7f545a1d9a04a082e597178ca6697c0ae9c3404eb1f7c1b71'
 

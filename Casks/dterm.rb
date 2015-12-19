@@ -1,4 +1,4 @@
-cask :v1 => 'dterm' do
+cask 'dterm' do
   version '1.6.0_5201'
   sha256 '34292f3450567f2964288998b3fdda0f85f49a36845457c46a74974e41c234ac'
 

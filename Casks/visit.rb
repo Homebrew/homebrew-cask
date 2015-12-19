@@ -1,4 +1,4 @@
-cask :v1 => 'visit' do
+cask 'visit' do
   version '2.9.2'
   sha256 '9dc908c9d298f65ba4be58b5772338c92bc771043054e8eb2979c77a8a56f865'
 

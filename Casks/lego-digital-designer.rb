@@ -1,4 +1,4 @@
-cask :v1 => 'lego-digital-designer' do
+cask 'lego-digital-designer' do
   version '4.3.8'
   sha256 'aeba6d0a2d0feb2bf6ce2c6be257a87caf6d51a4038e046d45568c8df7e3c6ca'
 

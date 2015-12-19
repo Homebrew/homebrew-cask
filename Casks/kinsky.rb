@@ -1,4 +1,4 @@
-cask :v1 => 'kinsky' do
+cask 'kinsky' do
   version '4.3.17'
   sha256 '624d2ee1c2ab62e347b7effe0ec8b1bd32d6e70d9cae6fb62d8fb8e2995c7173'
 

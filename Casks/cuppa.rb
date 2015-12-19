@@ -1,4 +1,4 @@
-cask :v1 => 'cuppa' do
+cask 'cuppa' do
   version '1.7.8'
   sha256 'd8be48b618b8d6bb1e435de379d88fe5697041e2a2ec52bf68218c76b9d21fe2'
 

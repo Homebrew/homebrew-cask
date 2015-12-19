@@ -1,4 +1,4 @@
-cask :v1 => 'pycharm-edu' do
+cask 'pycharm-edu' do
   version '2.0.3'
   sha256 '2c3b98051c90e5647ada4e4f3b33ad1c974b88ee1f30d1631e7a874e8dcafe3d'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'lightning' do
+cask 'lightning' do
   version '1.8.3'
   sha256 '3ececcf522275b458257295d58738b48f98c6c2e66ea1d611952455c853dafb3'
 

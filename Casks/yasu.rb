@@ -1,4 +1,4 @@
-cask :v1_1 => 'yasu' do
+cask 'yasu' do
 
   if MacOS.release <= :snow_leopard
     version '2.8.2'

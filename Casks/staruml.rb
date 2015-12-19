@@ -1,4 +1,4 @@
-cask :v1 => 'staruml' do
+cask 'staruml' do
   version '2.5.1'
   sha256 '7d0df865b2a883c1b90a164ac29f5ab5ebe9dcbb22d7595e98eb011888abcf23'
 

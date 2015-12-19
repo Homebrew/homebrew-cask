@@ -1,4 +1,4 @@
-cask :v1 => 'screenflow' do
+cask 'screenflow' do
   version '5.0.3'
   sha256 '5f729b09b04c29e20af3048aaccd8e60ad0527c4e6e5f0cdb07e82d73da3af88'
 

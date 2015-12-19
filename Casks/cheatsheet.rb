@@ -1,4 +1,4 @@
-cask :v1 => 'cheatsheet' do
+cask 'cheatsheet' do
   version '1.2.2'
   sha256 '41cfec767f761e2400d5ad700c936339c8c2e80a9dfbaf44b66375e63192763c'
 

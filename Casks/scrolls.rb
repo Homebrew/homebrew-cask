@@ -1,4 +1,4 @@
-cask :v1 => 'scrolls' do
+cask 'scrolls' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'syncthing-bar' do
+cask 'syncthing-bar' do
   version '0.0.9'
   sha256 '61277e5f1efd70a98a2e574e1f1a8b40ec88c84086cb362a98f951ab05657cb9'
 

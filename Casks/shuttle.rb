@@ -1,4 +1,4 @@
-cask :v1 => 'shuttle' do
+cask 'shuttle' do
   version '1.2.5'
   sha256 '7df182f506b80011222c0cdd470be76e0376f38e331f3fafbb6af9add3578023'
 

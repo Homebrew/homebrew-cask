@@ -1,4 +1,4 @@
-cask :v1 => 'wondershare-player' do
+cask 'wondershare-player' do
   version :latest
   sha256 :no_check
 

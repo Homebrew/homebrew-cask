@@ -1,4 +1,4 @@
-cask :v1 => 'disk-drill' do
+cask 'disk-drill' do
   version '2.4.426'
   sha256 '91107b0866bdc19d997f5dcfd3360dc3cace5afe9b072cd78f9f0146073694ec'
 

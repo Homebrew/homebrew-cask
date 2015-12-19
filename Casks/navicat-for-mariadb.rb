@@ -1,4 +1,4 @@
-cask :v1 => 'navicat-for-mariadb' do
+cask 'navicat-for-mariadb' do
   version '11.1.17'
   sha256 '80921f110a2e1a0735c371cb3e943eb21c270b854907378580a6325254a1d0ea'
 

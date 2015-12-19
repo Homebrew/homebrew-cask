@@ -1,4 +1,4 @@
-cask :v1 => 'doitim' do
+cask 'doitim' do
   version '4.2.3'
   sha256 'd9cc46729385cf94f7fc653e7e425baa33f3a7c193bfe386255b4afc88e685eb'
 

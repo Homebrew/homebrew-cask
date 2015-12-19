@@ -1,4 +1,4 @@
-cask :v1 => 'onionshare' do
+cask 'onionshare' do
   version '0.8'
   sha256 '2344215e269795ab0943a85071350d292aebcbc996ffc84e1d2af2ad9cd5b959'
 

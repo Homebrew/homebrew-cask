@@ -1,4 +1,4 @@
-cask :v1_1 => 'fivedetails-flow' do
+cask 'fivedetails-flow' do
   version :latest
   sha256 :no_check
 

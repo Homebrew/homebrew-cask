@@ -1,4 +1,4 @@
-cask :v1 => 'dymo-label' do
+cask 'dymo-label' do
   version '8.5.2'
   sha256 '8cd8e0d135613d48ddb41189ff352eb53214390d149c5afcb6c25f419518c54e'
 

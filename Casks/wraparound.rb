@@ -1,4 +1,4 @@
-cask :v1 => 'wraparound' do
+cask 'wraparound' do
   version '2.0b2'
   sha256 'f156dfa65dad43d38cb3b0f8febd8de9711f4794bb166a293ced93860ebf7879'
 

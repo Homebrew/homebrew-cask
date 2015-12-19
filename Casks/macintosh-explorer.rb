@@ -1,4 +1,4 @@
-cask :v1 => 'macintosh-explorer' do
+cask 'macintosh-explorer' do
   version :latest
   sha256 :no_check
 

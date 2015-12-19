@@ -1,4 +1,4 @@
-cask :v1 => 'chromatic' do
+cask 'chromatic' do
   version :latest
   sha256 :no_check
 

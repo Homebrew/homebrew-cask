@@ -1,4 +1,4 @@
-cask :v1 => 'amazon-workspaces' do
+cask 'amazon-workspaces' do
   version :latest
   sha256 :no_check
 

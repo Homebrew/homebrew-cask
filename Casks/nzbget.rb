@@ -1,4 +1,4 @@
-cask :v1 => 'nzbget' do
+cask 'nzbget' do
   version '16.4'
   sha256 '90d7c1282f89e9cab67dd2681b76b45889481fb188ea7de0a06b842b9d7b5589'
 

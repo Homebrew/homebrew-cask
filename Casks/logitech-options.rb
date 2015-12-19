@@ -1,4 +1,4 @@
-cask :v1 => 'logitech-options' do
+cask 'logitech-options' do
   version '5.40.22'
   sha256 '7761222d349dc5fe9cb94b12ae517cfab0d5419d10ab2e92f7e8d172d81c8670'
 

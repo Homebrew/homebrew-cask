@@ -1,4 +1,4 @@
-cask :v1 => 'jettison' do
+cask 'jettison' do
   version '1.5'
   sha256 'b502b1b0cd7730eea576fe7f524bd9914c0652dbbb631362300194cbc7f610ce'
 

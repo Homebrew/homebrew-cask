@@ -1,4 +1,4 @@
-cask :v1 => 'slicy' do
+cask 'slicy' do
   version :latest
   sha256 :no_check
 

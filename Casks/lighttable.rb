@@ -1,4 +1,4 @@
-cask :v1 => 'lighttable' do
+cask 'lighttable' do
   version '0.8.0'
   sha256 'e8f22456ec9aa0233d8eb407ce49455c728ecf24dc8c0b2e535a9d905173460c'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'maintenance' do
+cask 'maintenance' do
   version :latest
   sha256 :no_check
 

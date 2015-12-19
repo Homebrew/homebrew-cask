@@ -1,4 +1,4 @@
-cask :v1 => 'keycastr' do
+cask 'keycastr' do
   version 'v0.9.1'
   sha256 '4edc81d69117d2e6fdbf0f06f8334bc0449ecafc92abd649eb73d526a534cf61'
 

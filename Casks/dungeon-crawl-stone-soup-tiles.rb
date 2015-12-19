@@ -1,4 +1,4 @@
-cask :v1 => 'dungeon-crawl-stone-soup-tiles' do
+cask 'dungeon-crawl-stone-soup-tiles' do
   version '0.16.2'
   sha256 '610b6c876c4704a343e066f5a9a1704c491fe25820707c7af66ebf3e6728ab61'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'googleappengine' do
+cask 'googleappengine' do
   version '1.9.30'
   sha256 '11f28ae1f343ad44102e79e94887465c7a7ed9daa1c2cc749bb3b921e64a447f'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'gitify' do
+cask 'gitify' do
   version '0.0.18'
   sha256 '5916a5054f5ed70660e3118bd43ec72d3f592337d091b2883a203bb4ab5173e6'
 

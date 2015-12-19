@@ -1,4 +1,4 @@
-cask :v1 => 'vmware-appcatalyst' do
+cask 'vmware-appcatalyst' do
   version 'August-2015'
   sha256 '343e6259ee4f60e5c077a080d5d3a550ea105d25c6e2762c2eaa151820c8a4dd'
 

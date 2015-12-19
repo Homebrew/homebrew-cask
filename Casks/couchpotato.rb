@@ -1,4 +1,4 @@
-cask :v1 => 'couchpotato' do
+cask 'couchpotato' do
   version '3.0.1'
   sha256 'b1db35f93727fc30e50f4d2023b7d844db5a725d16fd6072e3d10b805c2d7e28'
 

@@ -1,4 +1,4 @@
-cask :v1_2 => 'bettertouchtool' do
+cask 'bettertouchtool' do
 
   if MacOS.release <= :snow_leopard
     version '0.939'

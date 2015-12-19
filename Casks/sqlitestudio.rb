@@ -1,4 +1,4 @@
-cask :v1 => 'sqlitestudio' do
+cask 'sqlitestudio' do
   version '3.0.6'
   sha256 '15a2687efc657ecf27766c6153a952aab17adaaefaf94636567032d0d6df2f5a'
 

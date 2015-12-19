@@ -1,4 +1,4 @@
-cask :v1 => 'foldingtext' do
+cask 'foldingtext' do
   version '2.1'
   sha256 '007e882d1d09273accf84d95ed15e89db056da9bebf81258098d3efb38ce6df2'
 

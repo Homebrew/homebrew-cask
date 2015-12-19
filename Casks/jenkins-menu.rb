@@ -1,4 +1,4 @@
-cask :v1 => 'jenkins-menu' do
+cask 'jenkins-menu' do
   version '0.2.0'
   sha256 'dc2b69ab27b99ed0b0c165ade90b504b7c8201213b5334c6d927affd8cf106b4'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'avira-antivirus' do
+cask 'avira-antivirus' do
   version :latest
   sha256 :no_check
 

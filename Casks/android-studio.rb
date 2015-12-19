@@ -1,4 +1,4 @@
-cask :v1 => 'android-studio' do
+cask 'android-studio' do
   version '1.5.1.0_2456560'
   sha256 '2fe2ab35d9be1780269f6ade2cf097c5b5dc494ef44fbdd6ce84008609576430'
 

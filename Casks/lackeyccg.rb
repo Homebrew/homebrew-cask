@@ -1,4 +1,4 @@
-cask :v1 => 'lackeyccg' do
+cask 'lackeyccg' do
   version :latest
   sha256 :no_check
 

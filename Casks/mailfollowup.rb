@@ -1,4 +1,4 @@
-cask :v1 => 'mailfollowup' do
+cask 'mailfollowup' do
   if MacOS.release <= :tiger
     version '1.1'
     sha256 '1f345ae0c814cbdc7adad9d5b20003fbad2cdf4da0a9f9de4936fc2d2c65067d'

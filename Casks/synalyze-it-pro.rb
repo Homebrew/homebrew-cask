@@ -1,4 +1,4 @@
-cask :v1 => 'synalyze-it-pro' do
+cask 'synalyze-it-pro' do
   version '1.13'
   sha256 '64cdee281ae9c5829e5e4cf6734088414a776d46d282b6edae6a7e08ce7290f3'
 

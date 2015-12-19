@@ -1,4 +1,4 @@
-cask :v1 => 'invisor-lite' do
+cask 'invisor-lite' do
   version '3.5.1'
   sha256 '77f481352cbabd583aec22d73273a5952c2febdb53bf16b6be3a5bbf3b9f879a'
 

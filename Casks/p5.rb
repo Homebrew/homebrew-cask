@@ -1,4 +1,4 @@
-cask :v1 => 'p5' do
+cask 'p5' do
   # note: "5" is not a version number, but an intrinsic part of the product name
   version '0.5.7'
   sha256 'f46942ea6939384634d83172fe6544f243d24aebe0a289d5402853f3dba10d64'

@@ -1,4 +1,4 @@
-cask :v1 => 'stellarium' do
+cask 'stellarium' do
   version '0.14.0'
   sha256 '1b7350a0a84f6c0056c53bc432c384f1501e3935c6118b64d87a365eb035982b'
 

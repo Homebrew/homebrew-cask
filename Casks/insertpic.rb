@@ -1,4 +1,4 @@
-cask :v1 => 'insertpic' do
+cask 'insertpic' do
   version '4.2'
   sha256 '1c9ed72327496bb24bd2e6820eadbac41befe6faa7dddc8215e66c577bf7f10e'
 

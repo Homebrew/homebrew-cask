@@ -1,4 +1,4 @@
-cask :v1 => 'beamer' do
+cask 'beamer' do
   version '3.0.2'
   sha256 '3f3ce843b579e0b1aa9796bb0a2057b018a5afe0e719f0c143076f037ac194d4'
 

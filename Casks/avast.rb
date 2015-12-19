@@ -1,4 +1,4 @@
-cask :v1 => 'avast' do
+cask 'avast' do
   version :latest
   sha256 :no_check
 

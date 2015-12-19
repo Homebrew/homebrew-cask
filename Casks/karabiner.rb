@@ -1,4 +1,4 @@
-cask :v1 => 'karabiner' do
+cask 'karabiner' do
   version '10.14.0'
   sha256 '429e88ba2e1c6a4d4f40cef9e17ff0b646e54fda3e7bc02ca7f4ed5eda7ca275'
 

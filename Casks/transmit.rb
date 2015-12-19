@@ -1,4 +1,4 @@
-cask :v1 => 'transmit' do
+cask 'transmit' do
   version '4.4.10'
   sha256 '9255bff3e337d5c93e867a553d3889cf97aeecae70304f468648384b1990a257'
 

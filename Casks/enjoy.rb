@@ -1,4 +1,4 @@
-cask :v1 => 'enjoy' do
+cask 'enjoy' do
   version '1.2.1'
   sha256 '95f37aae546392697a55c3e72add68dadff67663ceba0b9f86815c867cc9e85d'
 

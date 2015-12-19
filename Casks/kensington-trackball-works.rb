@@ -1,4 +1,4 @@
-cask :v1 => 'kensington-trackball-works' do
+cask 'kensington-trackball-works' do
   version '1.2.1'
   sha256 '285511269aea2e0517198b354923676655c72142062dcba7bdc41bc29d1f08d1'
 

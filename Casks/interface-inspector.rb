@@ -1,4 +1,4 @@
-cask :v1 => 'interface-inspector' do
+cask 'interface-inspector' do
   version '2.2'
   sha256 '2c365cffa8987a4e6f86f9381798e0066cd1c971824602cdefefc06d4bc704fe'
 

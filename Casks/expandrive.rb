@@ -1,4 +1,4 @@
-cask :v1 => 'expandrive' do
+cask 'expandrive' do
   version '5.1.4'
   sha256 '65d7088553533a96f258c7355e5e211219b9c49c5eed2948c543ac1a5010b43e'
 

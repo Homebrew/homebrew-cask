@@ -34,7 +34,7 @@ This document acts as a complete specification, and covers aspects of the Cask D
 Each Cask is a Ruby block, beginning with a special header line. The Cask definition itself is always enclosed in a `do … end` block. Example:
 
 ```ruby
-cask :v1 => 'alfred' do
+cask 'alfred' do
   version '2.7.1_387'
   sha256 'a3738d0513d736918a6d71535ef3d85dd184af267c05698e49ac4c6b48f38e17'
 
@@ -89,6 +89,8 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `qlplugin`         | yes                           | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `screen_saver`     | yes                           | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
 | `service`          | yes                           | relative path to a service that should be linked into the `~/Library/Services` folder on installation
+| `audio_unit_plugin`| yes                           | relative path to an Audio Unit plugin that should be linked into the `~/Library/Audio/Components` folder on installation
+| `vst_plugin`       | yes                           | relative path to a VST plugin that should be linked into the `~/Library/Audio/VST` folder on installation
 | `suite`            | yes                           | relative path to a containing directory that should be linked into the `~/Applications` folder on installation (see also [Suite Stanza Details](#suite-stanza-details))
 | `artifact`         | yes                           | relative path to an arbitrary path that should be symlinked on installation. This is only for unusual cases. The `app` stanza is strongly preferred when linking `.app` bundles.
 | `installer`        | yes                           | describes an executable which must be run to complete the installation. (see [Installer Stanza Details](#installer-stanza-details))
@@ -875,7 +877,7 @@ Example: [injection.rb](../Casks/injection.rb)
 In the exceptional case that the Cask DSL is insufficient, it is possible to define arbitrary Ruby variables and methods inside the Cask by creating a `Utils` namespace. Example:
 
 ```ruby
-cask :v1 => 'myapp' do
+cask 'myapp' do
   module Utils
     def self.arbitrary_method
       ...

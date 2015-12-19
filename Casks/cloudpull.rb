@@ -1,4 +1,4 @@
-cask :v1 => 'cloudpull' do
+cask 'cloudpull' do
   version '2.7.4_4042'
   sha256 'e923e94699d89c19d79e052633b671004464e264ab4fe44362f51b4a53274595'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'sonarr-menu' do
+cask 'sonarr-menu' do
   version '3.3'
   sha256 '627c7df205e0914209a39c17f6a05756a37c5c96232f4dfc3e198219aa05762d'
 

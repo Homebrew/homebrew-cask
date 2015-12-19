@@ -1,4 +1,4 @@
-cask :v1 => 'conductor' do
+cask 'conductor' do
   version '1.3.0'
   sha256 'e1a63c988fbcc9de3307987b53799632de4101ab41c9215610f6c9a70c411816'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'flashlight' do
+cask 'flashlight' do
   version :latest
   sha256 :no_check
 

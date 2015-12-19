@@ -1,4 +1,4 @@
-cask :v1 => 'totalspaces' do
+cask 'totalspaces' do
 
   if MacOS.release <= :mountain_lion
     version '1.2.11'

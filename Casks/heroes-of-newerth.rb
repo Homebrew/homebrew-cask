@@ -1,4 +1,4 @@
-cask :v1 => 'heroes-of-newerth' do
+cask 'heroes-of-newerth' do
   version '3.7.5.2'
   sha256 '90f3c91e77e73bc5a6eebf2cb41bc7ad43dea5d750fa49f6ac499125e2a0d940'
 

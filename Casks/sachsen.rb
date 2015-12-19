@@ -1,4 +1,4 @@
-cask :v1 => 'sachsen' do
+cask 'sachsen' do
   version :latest
   sha256 :no_check
 

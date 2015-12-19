@@ -1,4 +1,4 @@
-cask :v1 => 'geektool' do
+cask 'geektool' do
   version '3.1.3'
   sha256 'f881d212dff433b302146ce3325cdcc79e73b8a7e871f9de8cd6d69173e33ec7'
 

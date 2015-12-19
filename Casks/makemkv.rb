@@ -1,4 +1,4 @@
-cask :v1 => 'makemkv' do
+cask 'makemkv' do
   version '1.9.7'
   sha256 'a80d3df885c5fab3bcf09edef0a1458800b596724850830aed83adc5a5af2d84'
 

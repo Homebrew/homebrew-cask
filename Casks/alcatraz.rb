@@ -1,4 +1,4 @@
-cask :v1 => 'alcatraz' do
+cask 'alcatraz' do
   version '1.1.15'
   sha256 'a7b5e94db039d25474daa23466b436021e0d7f1d234c16e888141e61441d88be'
 

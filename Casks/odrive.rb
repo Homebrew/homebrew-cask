@@ -1,4 +1,4 @@
-cask :v1 => 'odrive' do
+cask 'odrive' do
   version '3801'
   sha256 '3f655ccfab6a04bbcf6d5660b03ea0532184ee0840f6f5edec71d65340ebb3fe'
 

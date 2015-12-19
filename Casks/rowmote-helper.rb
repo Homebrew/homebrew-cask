@@ -1,4 +1,4 @@
-cask :v1 => 'rowmote-helper' do
+cask 'rowmote-helper' do
   version '4.1.4'
   sha256 '7f58d3596d2ffd6310c5cdb9fef89d0f55e60e45deb3fade04990ed73e9c0bc9'
 

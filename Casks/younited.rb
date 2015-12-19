@@ -1,4 +1,4 @@
-cask :v1_1 => 'younited' do
+cask 'younited' do
   # todo: Cask may be deleted after October 1, 2015
   version :latest
   sha256 :no_check

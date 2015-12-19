@@ -1,4 +1,4 @@
-cask :v1 => 'coqide' do
+cask 'coqide' do
   version '8.4pl5'
   sha256 'ebcb0ef2b5abd659373b3c039de0abd7712ef6ee7901936d5f7962735a59e135'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'synthesia' do
+cask 'synthesia' do
   version '10.1'
   sha256 '394418e9a32cd2dc53858f8721c81832be3ca460c0cf210bd8e179f1d6b2ba1d'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'mongochef' do
+cask 'mongochef' do
   version '3.2.3'
   sha256 '76a1fc65473c5a4b6888d5d23584c6339dcdd952edfe53cbe82fa6ef677a6d93'
 

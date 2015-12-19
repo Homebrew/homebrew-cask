@@ -1,4 +1,4 @@
-cask :v1 => 'munki' do
+cask 'munki' do
   version '2.4.0.2561'
   sha256 '7fc73752855099185627374904388a61f4c18450e53ca674455b168719197bdf'
 

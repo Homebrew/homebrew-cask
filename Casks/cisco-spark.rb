@@ -1,4 +1,4 @@
-cask :v1 => 'cisco-spark' do
+cask 'cisco-spark' do
   version :latest
   sha256 :no_check
 

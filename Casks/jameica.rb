@@ -1,4 +1,4 @@
-cask :v1 => 'jameica' do
+cask 'jameica' do
   version :latest
   sha256 :no_check
 

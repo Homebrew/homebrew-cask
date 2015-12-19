@@ -1,4 +1,4 @@
-cask :v1 => 'snapz-pro-x' do
+cask 'snapz-pro-x' do
   version '2.6.0'
   sha256 'f603dae7a8fe64633f01ca2a53a1eed0907d17e3733f125fedb6d2e96b491b64'
 

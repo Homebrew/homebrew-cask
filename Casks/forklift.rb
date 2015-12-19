@@ -1,4 +1,4 @@
-cask :v1 => 'forklift' do
+cask 'forklift' do
   version '2.6.6'
   sha256 '0fa2bb7927d07c0c13b964b517b500ea6a77a6a569becba3ea392b2f82c05fce'
 

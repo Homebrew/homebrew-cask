@@ -1,4 +1,4 @@
-cask :v1 => 'shotcut' do
+cask 'shotcut' do
   version '15.11.01'
   sha256 '1a4dc85a01a877e5a68ef8b35aa937e469c808fae6471f22bfc38fe7b8814de4'
 

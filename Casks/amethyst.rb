@@ -1,4 +1,4 @@
-cask :v1 => 'amethyst' do
+cask 'amethyst' do
   version '0.9.10'
   sha256 '82adf42ce6031ab59a3072e607788e73f594ad5f21c7118aabc6c5dafe3d0b47'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'quiterss' do
+cask 'quiterss' do
   version '0.17.7'
   sha256 '7967cd729044152b1e876eba9492fbfc307104b259dbb2bb664d486836cda3dd'
 

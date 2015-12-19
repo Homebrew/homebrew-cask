@@ -1,4 +1,4 @@
-cask :v1 => 'navicat-premium-essentials' do
+cask 'navicat-premium-essentials' do
   version '11.1.17'
   sha256 '99523352805cbbc85706e86e9d06014cd95eb0146d8045e38be70c44d4a2ce99'
 

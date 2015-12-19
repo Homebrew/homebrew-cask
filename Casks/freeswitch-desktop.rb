@@ -1,6 +1,6 @@
-cask :v1 => 'freeswitch-desktop' do
-  version '1.1.0'
-  sha256 'b776c83232b233d3b9d4f3c96503284749be490819c6310a30402acc6bc9ba26'
+cask 'freeswitch-desktop' do
+  version '1.2.0'
+  sha256 '66bcd5b0ad7caa35c47cf098cf745b6898ff03953ee319ee0a7595f1bf79998d'
 
   url "https://github.com/pablote/fs-mgmt/releases/download/v#{version}/freeswitch-desktop-osx64.zip"
   appcast 'https://github.com/pablote/fs-mgmt/releases.atom'

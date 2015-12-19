@@ -1,4 +1,4 @@
-cask :v1 => 'gurps-character-sheet' do
+cask 'gurps-character-sheet' do
   version '4.1.1'
   sha256 'e5b397384730affe350e26a80a0db57f4dcd636711de6de93fe3acedaca5b5d6'
 

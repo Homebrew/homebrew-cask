@@ -1,4 +1,4 @@
-cask :v1 => 'idocument-plus' do
+cask 'idocument-plus' do
   version '2.7'
   sha256 'a3ec0e2ada87b7795f1d7bc1b12610a800c2ce6b4442d07e7e24703c8f34a1e2'
 

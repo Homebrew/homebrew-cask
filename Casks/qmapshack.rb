@@ -1,4 +1,4 @@
-cask :v1 => 'qmapshack' do
+cask 'qmapshack' do
   version '1.4.0'
   sha256 '1e3c8d5eaf38b71fe4af7074152c1efb55bab9c0eb4a2b964cafc0033d47d9ca'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'omnifocus' do
+cask 'omnifocus' do
   if MacOS.release <= :mountain_lion
     version '1.10.6'
     sha256 'bd3aa44dced86fc3921c01f4467422a7b87a92afbd4be642ea4d4bb8b14b728c'

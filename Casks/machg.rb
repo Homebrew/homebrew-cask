@@ -1,4 +1,4 @@
-cask :v1 => 'machg' do
+cask 'machg' do
   version '1.0.2'
   sha256 'af15173111c1d350ba5b62edf6fe5ab3a186cc8bdb6302455c4fb04f2a809305'
 

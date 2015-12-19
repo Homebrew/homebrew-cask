@@ -1,4 +1,4 @@
-cask :v1 => 'send-to-kindle' do
+cask 'send-to-kindle' do
   version :latest
   sha256 :no_check
 

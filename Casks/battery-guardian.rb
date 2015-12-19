@@ -1,4 +1,4 @@
-cask :v1 => 'battery-guardian' do
+cask 'battery-guardian' do
   version :latest
   sha256 :no_check
 

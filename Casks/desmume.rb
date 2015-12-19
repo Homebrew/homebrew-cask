@@ -1,4 +1,4 @@
-cask :v1 => 'desmume' do
+cask 'desmume' do
   version '0.9.11'
   sha256 'c3ff7024e0905f1c1da390d0fa793a3dc42d026ceded333958f3b79243a11db1'
 

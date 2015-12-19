@@ -1,4 +1,4 @@
-cask :v1 => 'espresso' do
+cask 'espresso' do
   version '2.2.3'
   sha256 '5d6be08f97fb87cf4a1ba713c4ea7f9f09c7eb11658891725df171fe1cf73442'
 

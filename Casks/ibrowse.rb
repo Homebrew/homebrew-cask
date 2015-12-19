@@ -1,4 +1,4 @@
-cask :v1 => 'ibrowse' do
+cask 'ibrowse' do
   version '1.0.4.0'
   sha256 '2224f521744b92ef478eef284ad8e6a3e4c42f3d899c4dd7a7bf2d232fdd8755'
 

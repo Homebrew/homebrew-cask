@@ -1,4 +1,4 @@
-cask :v1 => 'mcs783x' do
+cask 'mcs783x' do
   version '1.1.0_20141202'
   sha256 'd86bdf6107cec7d3990f6967a5be782f7945cb722f22789cb04051514ba87a10'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'subler' do
+cask 'subler' do
   version '1.0.6'
   sha256 '84e09cb84fd262c23b9ed61298ea98f1b6a611e4d355f8f95ed6a6890510b840'
 

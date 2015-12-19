@@ -1,4 +1,4 @@
-cask :v1 => 'fontforge' do
+cask 'fontforge' do
   version '20150824'
   sha256 '49d7f59350155b29ac0979987e35066beb8d4f30c6b79a87bc79b9b1f87c5bca'
 

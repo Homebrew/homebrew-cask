@@ -1,4 +1,4 @@
-cask :v1 => 'opendns-updater' do
+cask 'opendns-updater' do
   version :latest
   sha256 :no_check
 

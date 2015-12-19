@@ -1,4 +1,4 @@
-cask :v1 => 'google-earth-pro' do
+cask 'google-earth-pro' do
   version :latest
   sha256 :no_check
 

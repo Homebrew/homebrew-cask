@@ -1,4 +1,4 @@
-cask :v1 => 'intel-xdk' do
+cask 'intel-xdk' do
   version '2170'
   sha256 'f10e883140921ef3f9f9231b58fb7d1b1b092728bc68fd13e1fda4a209a57145'
 

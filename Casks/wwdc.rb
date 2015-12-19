@@ -1,4 +1,4 @@
-cask :v1 => 'wwdc' do
+cask 'wwdc' do
   version '2.3'
   sha256 '2abb2ab8f33d8b9b7fd68229fa654e06419e679d2c30f748ab2b664bace3e2f1'
 

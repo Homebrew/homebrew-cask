@@ -1,4 +1,4 @@
-cask :v1 => 'genymotion' do
+cask 'genymotion' do
   version '2.6.0'
   sha256 '9d12ae904761d76b15a556262d7eb32d1f5031fe60690224d7b0a70303cf8d39'
 

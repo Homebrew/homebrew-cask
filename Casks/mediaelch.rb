@@ -1,4 +1,4 @@
-cask :v1 => 'mediaelch' do
+cask 'mediaelch' do
   version '2.2.2'
   sha256 '0968767db15fe505ed39359566ef446badcdd4ccbd880b40dbd3b4f609a6e9aa'
 

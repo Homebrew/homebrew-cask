@@ -1,4 +1,4 @@
-cask :v1 => 'create-recovery-partition-installer' do
+cask 'create-recovery-partition-installer' do
   version '1.1'
   sha256 '19dfb873cfa574bc0692e58b0c96554e8f59c8406bb720889da490a548400882'
 

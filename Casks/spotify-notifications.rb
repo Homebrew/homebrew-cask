@@ -1,4 +1,4 @@
-cask :v1 => 'spotify-notifications' do
+cask 'spotify-notifications' do
   version '0.5.2'
   sha256 'c464da41ae084dfc208c94656e33465c86721a54391f2ee1ecba29e269296972'
 

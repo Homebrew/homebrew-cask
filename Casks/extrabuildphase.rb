@@ -1,4 +1,4 @@
-cask :v1 => 'extrabuildphase' do
+cask 'extrabuildphase' do
   version '0.3.2'
   sha256 'a2181e7bdc78851f336752091ae30b23ede348f06dc6d3ab9980725e2cacbf64'
 

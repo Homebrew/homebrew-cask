@@ -1,4 +1,4 @@
-cask :v1 => 'texmacs' do
+cask 'texmacs' do
   version '1.99.2'
   sha256 '2d8ab5440a1d68abef2f6d2f5663887d5713770f819aa8e292a5450ce12f708a'
 

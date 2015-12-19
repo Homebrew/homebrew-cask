@@ -1,4 +1,4 @@
-cask :v1 => 'cpumeter' do
+cask 'cpumeter' do
   version :latest
   sha256 :no_check
 

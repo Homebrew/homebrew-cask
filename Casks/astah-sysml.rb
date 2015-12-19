@@ -1,4 +1,4 @@
-cask :v1 => 'astah-sysml' do
+cask 'astah-sysml' do
   version '1.3.1'
   sha256 'c84d04faf765ede1979e5d88a00fbc766f193295411fa7691274618611e049a5'
 

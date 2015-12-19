@@ -1,4 +1,4 @@
-cask :v1 => 'vectoraster' do
+cask 'vectoraster' do
   version '6.2.2'
   sha256 'd0a6d68c403c34056586281ceb925018b6b4673c2a8fe4ad475f00fcf1ba981b'
 
