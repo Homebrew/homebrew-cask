@@ -18,6 +18,12 @@ It’s implemented as a `homebrew` [external command](https://github.com/Homebre
 [![Coverage Status](https://img.shields.io/coveralls/caskroom/homebrew-cask.svg)](https://coveralls.io/r/caskroom/homebrew-cask)
 [![Join the chat at https://gitter.im/caskroom/homebrew-cask](https://img.shields.io/badge/gitter-join%20chat-blue.svg)](https://gitter.im/caskroom/homebrew-cask)
 
+## Get Cask
+
+```bash
+$ brew tap caskroom/cask
+```
+
 ## Let’s try it!
 
 ```bash
