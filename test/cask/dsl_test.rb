@@ -217,12 +217,6 @@ describe Hbc::DSL do
         invalid_cask = Hbc.load('invalid/invalid-appcast-url')
       }.must_raise(Hbc::CaskInvalidError)
     end
-
-    it "refuses to load if appcast :format is invalid" do
-      err = lambda {
-        invalid_cask = Hbc.load('invalid/invalid-appcast-format')
-      }.must_raise(Hbc::CaskInvalidError)
-    end
   end
 
   describe "gpg stanza" do
