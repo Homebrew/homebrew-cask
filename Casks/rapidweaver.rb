@@ -5,8 +5,7 @@ cask 'rapidweaver' do
   # devmate.com is the official download host per the appcast feed
   url "http://dl.devmate.com/com.realmacsoftware.rapidweaver#{version.to_i}/RapidWeaver#{version.to_i}.zip"
   appcast "http://updates.devmate.com/com.realmacsoftware.rapidweaver#{version.to_i}.xml",
-            :sha256 => '4dfae736ef9b65d391e69bb5db65ec275968f9a7d6c2cda6d57be2e6abc9fe5b',
-            :format => :sparkle
+            :sha256 => '4dfae736ef9b65d391e69bb5db65ec275968f9a7d6c2cda6d57be2e6abc9fe5b'
   name 'RapidWeaver'
   homepage 'http://realmacsoftware.com/rapidweaver'
   license :commercial
