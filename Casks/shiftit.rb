@@ -4,8 +4,8 @@ cask 'shiftit' do
 
   url "https://github.com/fikovnik/ShiftIt/releases/download/version-#{version}/ShiftIt-#{version}.zip"
   name 'ShiftIt'
-  appcast 'https://raw.github.com/fikovnik/ShiftIt/develop/release/appcast.xml',
-          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+  appcast 'https://github.com/fikovnik/ShiftIt/releases.atom',
+          :sha256 => '27768f3e0be91ae446110e3e478d895b543745f2c01f914cfb2b932f1070fba8'
   homepage 'https://github.com/fikovnik/ShiftIt'
   license :gpl
 
