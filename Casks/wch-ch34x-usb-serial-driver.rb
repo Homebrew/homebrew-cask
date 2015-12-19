@@ -12,4 +12,9 @@ cask 'wch-ch34x-usb-serial-driver' do
   pkg 'CH341SER_MAC/ch34xInstall.pkg'
 
   uninstall :pkgutil => 'com.wch.ch34xinstall.usb.pkg'
+
+  caveats <<-EOS.undent
+    This driver is not signed and thus will not work with Mac OS X
+    Yosemite or later (unless kext signature checks are disabled).
+  EOS
 end
