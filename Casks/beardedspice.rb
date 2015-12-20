@@ -1,6 +1,6 @@
 cask 'beardedspice' do
-  version '1.2.1'
-  sha256 '1498c78cfa447155e308e06a369016e520d719772ed2b8e35a15dd6671d3fb70'
+  version '1.2.3'
+  sha256 'dd2bed9071fc54debee3f3137829e690c1f1e5dc8581283b299e9f4172489c2e'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/beardedspice/beardedspice/releases/download/v#{version}/BeardedSpice-#{version}.zip"
