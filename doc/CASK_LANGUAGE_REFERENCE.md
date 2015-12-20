@@ -313,7 +313,6 @@ Example: [adium.rb](../../d7f8eafa4fc01a6c383925d9962b5da33876a8b6/Casks/adium.r
 | key                | value       |
 | ------------------ | ----------- |
 | `:sha256`          | a string holding the SHA-256 checksum of the most recent appcast which matches the current Cask versioning
-| `:format`          | a symbol describing the appcast format. One of: `:sparkle`, `:plaintext`, `:unknown`, where `:sparkle` is the default.
 
 ## License Stanza Details
 
