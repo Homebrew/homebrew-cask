@@ -1,6 +1,6 @@
 cask 'sigil' do
-  version '0.9.1'
-  sha256 '9bdcdce5dcf9164c75cb78196e673f47592b29b0f6beb555ca6a87e24b016ee8'
+  version '0.9.2'
+  sha256 'ea9aca6e9c1c4d7931982fd6a3c5bcc4e1d35986e728fe3522dc92e9a6200f25'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/user-none/Sigil/releases/download/#{version}/Sigil-#{version}-Mac-Package.dmg"
