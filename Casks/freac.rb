@@ -1,6 +1,6 @@
 cask 'freac' do
-  version '20151004'
-  sha256 '3a6f0029638a71097f60771bc33bfcd4c3be7de7830fe67c345b23c5dd814a3e'
+  version '20151122'
+  sha256 'bb41701858a8158114b32a2fadfdc835093f2f089a43eb08dbfea2f4d1056345'
 
   # sourceforge.net is the official download host per the vendor homepage
   url "https://downloads.sourceforge.net/bonkenc/freac-#{version}-macosx.dmg"
