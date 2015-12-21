@@ -208,10 +208,10 @@ Homebrew-cask also accepts three other forms in place of plain tokens:
     `caskroom/fonts/font-symbola`
 
   * A fully-qualified pathname to a Cask file, _eg_
-    `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
+    `/usr/local/Library/Taps/caskroom/homebrew-cask/Casks/google-chrome.rb`
 
   * A `curl`-retrievable URI to a Cask file, _eg_
-   `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
+   `https://raw.githubusercontent.com/caskroom/homebrew-cask/f25b6babcd398abf48e33af3d887b2d00de1d661/Casks/google-chrome.rb`
 
 ## ENVIRONMENT
 
