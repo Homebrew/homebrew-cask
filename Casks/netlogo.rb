@@ -1,8 +1,8 @@
 cask 'netlogo' do
-  version '5.3'
+  version '5.3.0'
   sha256 'c6cf96f6c3e788b4015d56e6679c5cb6ee46799f610d482ab8a83eff5aae6630'
 
-  url "https://ccl.northwestern.edu/netlogo/#{version}.0/NetLogo-#{version}.dmg"
+  url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo-#{version.to_f}.dmg"
   name 'NetLogo'
   homepage 'http://ccl.northwestern.edu/netlogo/'
   license :gpl
@@ -12,5 +12,5 @@ cask 'netlogo' do
                   '~/Library/Saved Application State/org.nlogo.NetLogo.savedState'
                  ]
 
-  app "NetLogo #{version}/NetLogo #{version}.app"
+  app "NetLogo #{version.to_f}/NetLogo #{version.to_f}.app"
 end
