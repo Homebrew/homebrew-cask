@@ -97,7 +97,7 @@ $ /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/l
 If you are developing a subcommand, you can force `brew cask` to dispatch a specific file by giving a fully-qualified path to the file containing the subcommand, like this:
 
 ```bash
-$ brew cask /usr/local/Cellar/brew-cask/0.37.0/rubylib/hbc/cli/info.rb google-chrome
+$ brew cask /usr/local/Library/Taps/caskroom/homebrew-cask/lib/hbc/cli/info.rb google-chrome
 ```
 
 This form can also be combined with a specific Ruby interpreter as above.
