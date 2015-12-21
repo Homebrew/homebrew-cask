@@ -1,9 +1,10 @@
 cask 'gephi' do
-  version '0.8.2-beta'
-  sha256 'ee8f7845ade6109de7e88ed03cc92885c6d936c34d666503d7c92bf3c5d0659d'
+  version '0.9.0'
+  sha256 '359301e7720f50bee26fa2df86044f9aa9b284c34bd5734f9434f4db4d55632f'
 
-  # launchpadlibrarian.net is the official download host per the vendor homepage
-  url "https://launchpadlibrarian.net/127456772/gephi-#{version}.dmg"
+  url "https://github.com/gephi/gephi/releases/download/v#{version}/gephi-#{version}-macos.dmg"
+  appcast 'https://github.com/gephi/gephi/releases.atom',
+          :sha256 => '35c743eda7cc503f5acdcecdf505a53450971bed680c1851bff42f15d9057ebc'
   name 'Gephi'
   homepage 'https://gephi.github.io/'
   license :oss
