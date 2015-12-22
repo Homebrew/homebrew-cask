@@ -898,8 +898,4 @@ This should be used sparingly: any method which is needed by two or more Casks s
 
 Variables and methods should not be defined outside the `Utils` namespace, as they may collide with Homebrew-cask internals.
 
-## Revisions to the Cask DSL
-
-The Cask DSL is being revised and stabilized. Changes are tracked in [cask_language_deltas.md](cask_language_deltas.md).
-
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3
