@@ -10,10 +10,6 @@ cask 'anaconda' do
 
   container :type => :naked
 
-  preflight do
-    set_permissions "#{staged_path}/Anaconda3-#{version}-MacOSX-x86_64.sh", '+x'
-  end
-
   installer :script => "Anaconda3-#{version}-MacOSX-x86_64.sh",
             :args => [ '-b' ],
             :sudo => false

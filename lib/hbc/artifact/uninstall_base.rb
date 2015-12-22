@@ -225,15 +225,18 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
   # :early_script should not delete files, better defer that to :script.
   # If Cask writers never need :early_script it may be removed in the future.
   def uninstall_early_script(directives)
-    executable, script_arguments = self.class.read_script_arguments(directives,
+    executable, script_arguments = self.class.read_script_arguments(
+                                                                    directives,
                                                                     'uninstall',
                                                                     {:must_succeed => true, :sudo => true},
                                                                     {:print_stdout => true},
-                                                                    :early_script)
-
+                                                                    :early_script
+                                                                   )
     ohai "Running uninstall script #{executable}"
     raise Hbc::CaskInvalidError.new(@cask, "#{stanza} :early_script without :executable") if executable.nil?
-    @command.run(@cask.staged_path.join(executable), script_arguments)
+    executable_path = @cask.staged_path.join(executable)
+    @command.run('/bin/chmod', :args => ['+x', executable_path]) if File.exists?(executable_path)
+    @command.run(executable_path, script_arguments)
     sleep 1
   end
 

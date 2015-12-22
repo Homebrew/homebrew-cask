@@ -21,8 +21,4 @@ cask 'screens-connect' do
               :must_succeed => false
               },
             :pkgutil => 'com.edovia.pkg.screens.connect.*'
-
-  uninstall_preflight do
-    set_permissions "#{staged_path}/Uninstall Screens Connect.app/Contents/Resources/sc-uninstaller.tool", '+x'
-  end
 end
