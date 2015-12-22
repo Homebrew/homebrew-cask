@@ -6,8 +6,8 @@ cask 'pacifist' do
     version '3.2.17'
     sha256 'd38e12293bc6087ddb09275e3c5ab34faa670e87e9dd41e04a587dd387f7b1d3'
   else
-    version '3.5.6'
-    sha256 'e730c3d7e1c57819e43c461a6acdc09cbad3cc295533e9a30e22e3a633246496'
+    version '3.5.7'
+    sha256 'd7caa20ce185152dbd6c868b90df07085748c2c1b791e3fd133d287a8161ac79'
   end
 
   url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version}.dmg"
