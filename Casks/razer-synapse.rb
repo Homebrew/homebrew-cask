@@ -31,5 +31,4 @@ cask 'razer-synapse' do
   caveats do
     reboot
   end
-
 end

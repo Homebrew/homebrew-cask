@@ -8,6 +8,7 @@ cask 'gobbler' do
   license :gratis
 
   installer :manual => 'Gobbler.app'
+
   uninstall :script  => {
                           :executable => '/Library/Gobbler/Uninstaller/uninstall_gobbler.sh',
                           :args => ['-f'],

@@ -8,6 +8,7 @@ cask 'neat' do
   license :gratis
 
   pkg 'Install Neat.pkg'
+
   uninstall :pkgutil => 'com.neat.pkg.NeatBall',
             :quit    => 'com.neatreceipts.nrm'
 end

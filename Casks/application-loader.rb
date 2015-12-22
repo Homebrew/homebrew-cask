@@ -8,5 +8,6 @@ cask 'application-loader' do
   license :gratis
 
   pkg 'ApplicationLoader.pkg'
+
   uninstall :pkgutil => 'com.apple.pkg.ApplicationLoader'
 end

@@ -40,5 +40,4 @@ cask 'ftdi-vcp-driver' do
       reconnect it for it to show up in /dev.
     EOC
   end
-
 end
