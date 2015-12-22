@@ -7,9 +7,9 @@ cask 'dbvisualizer' do
   homepage 'https://www.dbvis.com/'
   license :commercial
 
-  preflight do
-    system "#{staged_path}/DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub", '-q', '-dir', "#{staged_path}"
-  end
+  installer :script => 'DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub',
+            :args => ['-q', '-dir', "#{staged_path}"],
+            :sudo => false
 
   app 'DbVisualizer.app'
 

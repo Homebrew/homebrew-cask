@@ -8,5 +8,6 @@ cask 'chessx' do
   license :gpl
 
   pkg 'chessx-installer.mpkg'
+
   uninstall :pkgutil => 'net.sourceforge.chessx'
 end

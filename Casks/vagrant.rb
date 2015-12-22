@@ -1,6 +1,6 @@
 cask 'vagrant' do
-  version '1.7.4'
-  sha256 '3d2e680cc206ac1d480726052e42e193eabce56ed65fc79b91bc85e4c7d2deb8'
+  version '1.8.0'
+  sha256 'cfc63e433c9aef61384175b263dea081f8b570b6a3e69edd0b77c47c96dce84d'
 
   # hashicorp.com is the official download host per the vendor homepage
   url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}.dmg"

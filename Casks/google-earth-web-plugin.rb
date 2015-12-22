@@ -9,5 +9,6 @@ cask 'google-earth-web-plugin' do
   tags :vendor => 'Google'
 
   pkg 'Install Google Earth.pkg'
+
   uninstall :pkgutil => 'com.Google.GoogleEarthPlugin.plugin'
 end

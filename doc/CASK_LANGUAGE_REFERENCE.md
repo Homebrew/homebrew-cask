@@ -313,7 +313,6 @@ Example: [adium.rb](../../d7f8eafa4fc01a6c383925d9962b5da33876a8b6/Casks/adium.r
 | key                | value       |
 | ------------------ | ----------- |
 | `:sha256`          | a string holding the SHA-256 checksum of the most recent appcast which matches the current Cask versioning
-| `:format`          | a symbol describing the appcast format. One of: `:sparkle`, `:plaintext`, `:unknown`, where `:sparkle` is the default.
 
 ## License Stanza Details
 
@@ -898,9 +897,5 @@ end
 This should be used sparingly: any method which is needed by two or more Casks should instead be rolled into the core. Care must also be taken that such methods be very efficient.
 
 Variables and methods should not be defined outside the `Utils` namespace, as they may collide with Homebrew-cask internals.
-
-## Revisions to the Cask DSL
-
-The Cask DSL is being revised and stabilized. Changes are tracked in [cask_language_deltas.md](cask_language_deltas.md).
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3

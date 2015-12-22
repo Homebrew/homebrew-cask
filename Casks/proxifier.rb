@@ -9,5 +9,4 @@ cask 'proxifier' do
   license :commercial
 
   app 'Proxifier.app'
-
 end
