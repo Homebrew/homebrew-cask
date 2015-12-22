@@ -1,6 +1,6 @@
 cask 'hazel' do
-  version '3.3.6'
-  sha256 '6e8bfc32dfb07ffe34bca4fd26b7e2e718f7f071fea0bde4b048f13965da50d8'
+  version '3.3.7'
+  sha256 '2b62354eb885e809ee48aba37de6dd701d4ab22ec4686b66efdc08ac36162efc'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/Noodlesoft/Hazel-#{version}.dmg"
