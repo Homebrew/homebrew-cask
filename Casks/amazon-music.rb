@@ -1,6 +1,6 @@
 cask 'amazon-music' do
-  version '20151118_201234b234'
-  sha256 '4d16ba59486118c5b1180cbfaef7570cc814c2773aa83ea980af7ed5c4108ca7'
+  version '20151215_033955b5fb'
+  sha256 'c430be9914fe81c4c1162290e8665632b98962d8c7837a60b67afe671f4d53f8'
 
   url "https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/#{version.sub(%r{_.*},'')}/#{version.sub(%r{.*_},'')}/AmazonMusicInstaller.dmg"
   name 'Amazon Music'
