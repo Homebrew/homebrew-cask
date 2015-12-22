@@ -118,6 +118,10 @@ class TestHelper
   end
 end
 
+# Extend MiniTest API with support for RSpec-style shared examples
+require 'support/shared_examples'
+require 'support/shared_examples/staged.rb'
+
 require 'support/fake_fetcher'
 require 'support/fake_dirs'
 require 'support/fake_system_command'
