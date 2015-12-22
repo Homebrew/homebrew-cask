@@ -18,5 +18,4 @@ cask 'ableton-live-standard' do
   zap :delete => '~/Library/*/*[Aa]bleton*',
       :rmdir => '~/Music/Ableton/Factory Packs'
       #:trash => '~/Music/Ableton/User Library'
-
 end

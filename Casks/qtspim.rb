@@ -8,5 +8,6 @@ cask 'qtspim' do
   license :bsd
 
   pkg 'QtSpim.mpkg'
+
   uninstall :pkgutil => 'org.larusstone.pkg.QtSpim'
 end

@@ -8,5 +8,6 @@ cask 'mipony' do
   license :unknown
 
   pkg 'Mipony-Installer.pkg', :allow_untrusted => true
+
   uninstall :pkgutil => 'net.installer.mipony.*'
 end

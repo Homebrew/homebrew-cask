@@ -11,5 +11,4 @@ cask 'wd-my-cloud' do
 
   uninstall  :pkgutil => 'com.wdc.wdMyCloud.*',
              :rmdir => '/Applications/WD My Cloud'
-
 end

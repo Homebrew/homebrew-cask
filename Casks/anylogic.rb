@@ -11,6 +11,7 @@ cask 'anylogic' do
   depends_on :macos => '>= :lion'
 
   pkg 'Install AnyLogic.pkg'
+
   uninstall :pkgutil => 'com.anylogic.AnyLogic'
 
   caveats <<-EOS.undent
@@ -20,5 +21,4 @@ cask 'anylogic' do
     For activation instructions, check up on
       http://www.anylogic.com/upload/activation-guides/AnyLogic_#{version.slice(/\w+/)}_PLE_License.pdf
   EOS
-
 end
