@@ -10,7 +10,10 @@ module Hbc::Verify
       expected = cask.sha256
     rescue RuntimeError => e
     end
-    return if expected == :no_check
+    if expected == :no_check
+      ohai 'Checksum not available'
+      return
+    end
     computed = Digest::SHA2.file(path).hexdigest
     if expected.nil? or expected.empty?
       raise Hbc::CaskSha256MissingError.new("sha256 required: sha256 '#{computed}'")
