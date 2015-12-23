@@ -1,36 +1,50 @@
-require 'digest'
+require 'fileutils'
 require 'hbc/verify'
 
 class Hbc::Download
   attr_reader :cask
-
-  include Hbc::Verify
 
   def initialize(cask)
     @cask = cask
   end
 
   def perform(force=false)
-    if cask.url.using == :svn
-      downloader = Hbc::SubversionDownloadStrategy.new(cask)
-    elsif cask.url.using == :post
-      downloader = Hbc::CurlPostDownloadStrategy.new(cask)
-    else
-      downloader = Hbc::CurlDownloadStrategy.new(cask)
-    end
-    downloader.clear_cache if force || cask.version == :latest
-    begin
-      downloaded_path = downloader.fetch
-    rescue StandardError => e
-      raise Hbc::CaskError.new("Download failed on Cask '#{cask}' with message: #{e}")
-    end
-    begin
-      # this symlink helps track which downloads are ours
-      File.symlink downloaded_path,
-                   HOMEBREW_CACHE_CASKS.join(downloaded_path.basename)
-    rescue StandardError => e
-    end
-    Hbc::Verify.checksum(downloaded_path, cask)
+    clear_cache(force)
+    fetch
+    create_cache_symlink
+    verify
     downloaded_path
+  end
+
+  private
+
+  attr_accessor :downloaded_path
+
+  def downloader
+    @downloader ||= case cask.url.using
+    when :svn then Hbc::SubversionDownloadStrategy.new(cask)
+    when :post then Hbc::CurlPostDownloadStrategy.new(cask)
+    else Hbc::CurlDownloadStrategy.new(cask)
+    end
+  end
+
+  def clear_cache(force)
+    downloader.clear_cache if force || cask.version == :latest
+  end
+
+  def fetch
+    self.downloaded_path = downloader.fetch
+  rescue StandardError => e
+    raise Hbc::CaskError.new("Download failed on Cask '#{cask}' with message: #{e}")
+  end
+
+  # this symlink helps track which downloads are ours
+  def create_cache_symlink
+    symlink_path = HOMEBREW_CACHE_CASKS.join(downloaded_path.basename)
+    FileUtils.ln_sf downloaded_path, symlink_path
+  end
+
+  def verify
+    Hbc::Verify.checksum(downloaded_path, cask)
   end
 end
