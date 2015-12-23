@@ -11,4 +11,6 @@ cask 'securedownloadmanager' do
   pkg 'SDM.pkg'
 
   uninstall :pkgutil => 'e-academy.com.secureDownloadManager.SecureDownloadManager.pkg'
+
+  zap :pkgutil => 'e-academy.com.secureDownloadManager.Applications.pkg'
 end
