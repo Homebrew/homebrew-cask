@@ -24,4 +24,14 @@ cask 'amazon-music' do
                   '~/Library/Preferences/com.amazon.music.plist',
                   '~/Library/Application Support/Amazon Music/'
                 ]
+
+  caveats <<-EOS.undent
+    If the app won't launch after installation, try
+
+      brew cask zap #{token}
+      brew cask install #{token}
+
+    then re-launch the app. You can read more about the issue on Amazon's customer forums
+    http://www.amazon.com/App-wont-open-OS-Yosemite/forum/FxZLHSK3AW6KZU/Tx1EJYW65OQ5TZS
+  EOS
 end
