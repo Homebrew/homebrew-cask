@@ -92,7 +92,7 @@ class Hbc::Installer
   end
 
   def verify
-    Hbc::Verify.all(@downloaded_path, @cask)
+    Hbc::Verify.all(@cask, @downloaded_path)
   end
 
   def extract_primary_container

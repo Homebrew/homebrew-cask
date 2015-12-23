@@ -45,6 +45,6 @@ class Hbc::Download
   end
 
   def verify
-    Hbc::Verify.checksum(downloaded_path, cask)
+    Hbc::Verify.all(cask, downloaded_path)
   end
 end
