@@ -12,7 +12,6 @@ class Hbc::Download
     clear_cache(force)
     fetch
     create_cache_symlink
-    verify
     downloaded_path
   end
 
@@ -42,9 +41,5 @@ class Hbc::Download
   def create_cache_symlink
     symlink_path = HOMEBREW_CACHE_CASKS.join(downloaded_path.basename)
     FileUtils.ln_sf downloaded_path, symlink_path
-  end
-
-  def verify
-    Hbc::Verify.all(cask, downloaded_path)
   end
 end

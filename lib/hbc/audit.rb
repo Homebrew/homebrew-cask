@@ -71,7 +71,8 @@ class Hbc::Audit
 
   def _check_download(download)
     odebug "Auditing download"
-    download.perform
+    downloaded_path = download.perform
+    Hbc::Verify.all(cask, downloaded_path)
   rescue => e
     add_error "download not possible: #{e.message}"
   end
