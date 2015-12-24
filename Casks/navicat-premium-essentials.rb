@@ -6,7 +6,6 @@ cask 'navicat-premium-essentials' do
   name 'Navicat Premium Essentials'
   homepage 'http://navicat.com/products/navicat-essentials'
   license :commercial
-  tags :vendor => 'Navicat'
 
   app 'Navicat Premium Essentials.app'
 end

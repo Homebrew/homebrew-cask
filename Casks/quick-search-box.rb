@@ -6,7 +6,6 @@ cask 'quick-search-box' do
   name 'Quick Search Box'
   homepage 'https://code.google.com/p/qsb-mac/'
   license :oss
-  tags :vendor => 'Google'
 
   app 'Quick Search Box.app'
 

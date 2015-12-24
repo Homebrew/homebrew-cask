@@ -7,7 +7,6 @@ cask 'understand' do
   name 'Understand'
   homepage 'https://scitools.com'
   license :commercial
-  tags :vendor => 'SciTools'
 
   app 'scitools/bin/macosx/understand.app'
   app 'scitools/bin/macosx/licenseserver.app'

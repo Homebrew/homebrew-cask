@@ -6,7 +6,6 @@ cask 'lego-digital-designer' do
   name 'Lego Digital Designer'
   homepage 'http://ldd.lego.com/'
   license :commercial
-  tags :vendor => 'Lego'
 
   pkg 'LDD.pkg'
 

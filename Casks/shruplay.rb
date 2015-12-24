@@ -6,7 +6,6 @@ cask 'shruplay' do
   name 'SHRUPlay'
   homepage 'http://getshru.com/'
   license :gratis
-  tags :vendor => 'PDX Pet Design'
 
   app 'ShruPlay.app'
 end

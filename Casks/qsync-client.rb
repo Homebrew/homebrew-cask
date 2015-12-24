@@ -6,7 +6,6 @@ cask 'qsync-client' do
   url 'https://download.qnap.com/webstart/QNAPQsync_Mac.dmg'
   homepage 'https://www.qnap.com/i/in/utility/#block_3'
   license :gratis
-  tags :vendor => 'Qnap'
 
   pkg 'Qsync Client.pkg'
 

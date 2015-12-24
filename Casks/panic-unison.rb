@@ -7,7 +7,6 @@ cask 'panic-unison' do
   name 'Unison'
   homepage 'https://panic.com/unison/'
   license :gratis
-  tags :vendor => 'Panic'
 
   app 'Unison.app'
 

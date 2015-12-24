@@ -6,7 +6,6 @@ cask 'google-chrome' do
   name 'Google Chrome'
   homepage 'https://www.google.com/chrome/'
   license :gratis
-  tags :vendor => 'Google'
 
   app 'Google Chrome.app'
 

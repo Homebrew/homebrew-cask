@@ -7,7 +7,6 @@ cask 'visual-studio-code' do
   name 'Visual Studio Code'
   homepage 'https://code.visualstudio.com/'
   license :mit
-  tags :vendor => 'Microsoft'
 
   app 'Visual Studio Code.app'
 

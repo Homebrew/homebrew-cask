@@ -7,7 +7,6 @@ cask 'mongo-management-studio' do
   name 'MMS'
   homepage 'http://www.litixsoft.de/english/mms/'
   license :freemium
-  tags :vendor => 'Litixsoft'
 
   pkg "mms-v#{version}-community-darwin.pkg"
 

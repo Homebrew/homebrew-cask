@@ -7,7 +7,6 @@ cask 'digital-power-station' do
   name 'DPS Plugin'
   homepage 'http://dpsplugin.com/home/'
   license :closed
-  tags :vendor => 'Bongiovi'
 
   pkg 'Digital Power Station Installer.pkg'
 

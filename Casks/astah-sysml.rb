@@ -6,7 +6,6 @@ cask 'astah-sysml' do
   name 'Astah SysML'
   homepage 'http://astah.net/editions/sysml'
   license :commercial
-  tags :vendor => 'Change Vision'
 
   pkg "astah sysml ver #{version.gsub('.','_')}.pkg"
 

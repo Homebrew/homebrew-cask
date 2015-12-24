@@ -6,7 +6,6 @@ cask 'xnconvert' do
   name 'XnConvert'
   homepage 'http://www.xnview.com/en/xnconvert/'
   license :gratis
-  tags :vendor => 'XnSoft'
 
   app 'XnConvert.app'
 end

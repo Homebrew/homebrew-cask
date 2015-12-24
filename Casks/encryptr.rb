@@ -7,7 +7,6 @@ cask 'encryptr' do
   name 'Encryptr'
   homepage 'https://spideroak.com/solutions/encryptr'
   license :gpl
-  tags :vendor => 'SpiderOak'
 
   app 'Encryptr.app'
 

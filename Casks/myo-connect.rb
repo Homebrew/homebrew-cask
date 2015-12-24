@@ -7,7 +7,6 @@ cask 'myo-connect' do
   name 'Myo Connect'
   homepage 'https://developer.thalmic.com'
   license :gratis
-  tags :vendor => 'Thalmic Labs'
 
   app 'Myo Connect.app'
 

@@ -6,7 +6,6 @@ cask 'hiera' do
   name 'Hiera'
   homepage 'https://projects.puppetlabs.com/projects/hiera'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Puppet Labs'
 
   pkg "hiera-#{version}.pkg"
 

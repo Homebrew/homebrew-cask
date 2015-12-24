@@ -6,7 +6,6 @@ cask 'cisco-spark' do
   name 'Cisco Spark'
   homepage 'http://www.webex.com/projectsquared/'
   license :gratis
-  tags :vendor => 'Cisco Systems'
 
   depends_on :macos => '>= :mavericks'
 

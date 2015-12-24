@@ -7,7 +7,6 @@ cask 'steelseries-exactmouse-tool' do
   name 'ExactMouse'
   homepage 'http://steelseries.com/support/downloads'
   license :gratis
-  tags :vendor => 'SteelSeries'
 
   app 'SteelSeries ExactMouse Tool.app'
 

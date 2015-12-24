@@ -6,7 +6,6 @@ cask 'itouch-server' do
   name 'Touch Mouse Server'
   homepage 'http://support.logitech.com/en_us/product/6367'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Logitech'
 
   app 'iTouch-Server.app'
 end

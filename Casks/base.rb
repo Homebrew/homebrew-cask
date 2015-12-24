@@ -7,7 +7,6 @@ cask 'base' do
   name 'Base'
   homepage 'http://menial.co.uk/base/'
   license :commercial
-  tags :vendor => 'Menial'
 
   app 'Base.app'
 end

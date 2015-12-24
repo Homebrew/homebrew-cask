@@ -7,7 +7,6 @@ cask 'cycling74-max' do
   name 'Max'
   homepage 'https://cycling74.com/'
   license :commercial
-  tags :vendor => 'Cycling ‘74'
 
   app 'Max.app'
 end

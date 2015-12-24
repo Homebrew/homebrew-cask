@@ -6,7 +6,6 @@ cask 'second-life-viewer' do
   name 'Second Life Viewer'
   homepage 'https://secondlife.com/'
   license :gpl
-  tags :vendor => 'Linden Lab'
 
   app 'Second Life Viewer.app'
 

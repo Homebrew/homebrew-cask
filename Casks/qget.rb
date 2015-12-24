@@ -6,7 +6,6 @@ cask 'qget' do
   url 'https://download.qnap.com/webstart/QNAPQGet_Mac.dmg'
   homepage 'https://www.qnap.com/i/in/utility/#block_5'
   license :gratis
-  tags :vendor => 'Qnap'
 
   pkg 'Qget.pkg'
 

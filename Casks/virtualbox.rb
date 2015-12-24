@@ -11,7 +11,6 @@ cask 'virtualbox' do
   name 'VirtualBox'
   homepage 'https://www.virtualbox.org'
   license :gpl
-  tags :vendor => 'Oracle'
 
   pkg 'VirtualBox.pkg'
 

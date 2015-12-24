@@ -7,7 +7,6 @@ cask 'flash-player' do
   name 'Adobe Flash Player'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
   license :gratis
-  tags :vendor => 'Adobe'
 
   app 'Flash Player.app'
 

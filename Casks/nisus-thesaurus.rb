@@ -6,7 +6,6 @@ cask 'nisus-thesaurus' do
   name 'Nisus Thesaurus'
   homepage 'http://nisus.com/Thesaurus/'
   license :gratis
-  tags :vendor => 'Nisus Software'
 
   depends_on :macos => '>= :snow_leopard'
 

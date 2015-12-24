@@ -6,7 +6,6 @@ cask 'logitech-unifying' do
   name 'Logitech Unifying Software'
   homepage 'http://www.logitech.com/en-us/promotions/6072'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Logitech'
 
   pkg 'Logitech Unifying Software.mpkg'
 

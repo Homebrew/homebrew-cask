@@ -6,7 +6,6 @@ cask 'desktop-log' do
   name 'Desktop Log'
   homepage 'http://www.nightproductions.net/desklog.html'
   license :gratis
-  tags :vendor => 'Night Productions'
 
   app 'Desktop Log.app'
 end

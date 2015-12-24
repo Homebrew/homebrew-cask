@@ -6,7 +6,6 @@ cask 'anaconda' do
   name 'Anaconda'
   homepage 'https://www.continuum.io/why-anaconda'
   license :gratis
-  tags :vendor => 'Continuum Analytics'
 
   container :type => :naked
 

@@ -6,7 +6,6 @@ cask 'scrolls' do
   name 'Scrolls'
   homepage 'https://scrolls.com/'
   license :gratis
-  tags :vendor => 'Mojang'
 
   app 'Scrolls.app'
 

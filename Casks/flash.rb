@@ -7,7 +7,6 @@ cask 'flash' do
   name 'Adobe Flash Player'
   homepage 'https://www.adobe.com/products/flashplayer/distribution3.html'
   license :gratis
-  tags :vendor => 'Adobe'
 
   pkg 'Install Adobe Flash Player.pkg'
 

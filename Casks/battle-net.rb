@@ -7,7 +7,6 @@ cask 'battle-net' do
   name 'Battle.net'
   homepage 'http://us.battle.net/en/'
   license :commercial
-  tags :vendor => 'Blizzard'
 
   installer :manual => 'Battle.net-Setup-enUS.app'
 

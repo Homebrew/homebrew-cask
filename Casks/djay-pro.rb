@@ -8,7 +8,6 @@ cask 'djay-pro' do
           :sha256 => 'b4289029993baacd8d95e458b65227fdb1c449713efe1696c064e6e2032717e3'
   homepage 'http://algoriddim.com/djay-mac'
   license :commercial
-  tags :vendor => 'algoriddim'
 
   app 'djay Pro.app'
 end

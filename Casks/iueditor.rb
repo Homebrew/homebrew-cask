@@ -7,7 +7,6 @@ cask 'iueditor' do
   name 'IUEditor'
   homepage 'http://www.iueditor.org'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'JDLab'
 
   app 'IUEditor.app'
 

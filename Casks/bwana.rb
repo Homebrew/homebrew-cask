@@ -6,7 +6,6 @@ cask 'bwana' do
   name 'Bwana'
   homepage 'http://www.bruji.com/bwana/'
   license :mit
-  tags :vendor => 'Bruji'
 
   app 'Bwana.app'
 end

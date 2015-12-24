@@ -6,7 +6,6 @@ cask 'astah-community' do
   name 'Astah Community'
   homepage 'http://astah.net/editions/community'
   license :gratis
-  tags :vendor => 'Change Vision'
 
   pkg "astah community ver #{version.gsub('.','_')}.pkg"
 

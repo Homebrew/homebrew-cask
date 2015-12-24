@@ -6,7 +6,6 @@ cask 'xmind' do
   name 'XMind'
   homepage 'http://www.xmind.net'
   license :freemium
-  tags :vendor => 'XMind'
 
   zap :delete => [
     '~/Library/XMind',

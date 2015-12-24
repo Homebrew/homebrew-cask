@@ -6,7 +6,6 @@ cask 'navicat-data-modeler' do
   name 'Navicat Data Modeler'
   homepage 'http://www.navicat.com/products/navicat-data-modeler'
   license :commercial
-  tags :vendor => 'Navicat'
 
   depends_on :macos => '>= :lion'
   depends_on :arch => :intel

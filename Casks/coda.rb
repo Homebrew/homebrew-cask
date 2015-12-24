@@ -6,7 +6,6 @@ cask 'coda' do
   name 'Coda'
   homepage 'https://panic.com/Coda/'
   license :commercial
-  tags :vendor => 'Panic'
 
   zap :delete => [
     '~/Library/Application Support/Coda 2',

@@ -6,7 +6,6 @@ cask 'navicat-for-postgresql' do
   name 'Navicat for PostgreSQL'
   homepage 'http://www.navicat.com/products/navicat-for-postgresql'
   license :commercial
-  tags :vendor => 'Navicat'
 
   app 'Navicat for PostgreSQL.app'
 end

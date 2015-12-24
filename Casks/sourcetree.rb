@@ -14,7 +14,6 @@ cask 'sourcetree' do
   name 'SourceTree'
   homepage 'https://www.sourcetreeapp.com/'
   license :gratis
-  tags :vendor => 'Atlassian'
 
   app 'SourceTree.app'
   binary 'SourceTree.app/Contents/Resources/stree'

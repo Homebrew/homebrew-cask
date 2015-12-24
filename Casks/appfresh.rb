@@ -7,7 +7,6 @@ cask 'appfresh' do
   appcast 'http://backend.metaquark.de/appcast/appfresh.xml'
   homepage 'http://metaquark.de/appfresh/mac'
   license :commercial
-  tags :vendor => 'metaquark'
 
   uninstall :launchctl => 'de.metaquark.appfresh'
 

@@ -6,7 +6,6 @@ cask 'intel-xdk' do
   name 'Intel XDK'
   homepage 'http://xdk-software.intel.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Intel'
 
   pkg "xdk_full_#{version}.pkg"
 

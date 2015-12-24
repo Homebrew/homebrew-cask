@@ -7,7 +7,6 @@ cask 'gyazo' do
   name 'Gyazo GIF'
   homepage 'https://gyazo.com/'
   license :other
-  tags :vendor => 'Nota'
 
   zap :delete => [
     '~/Library/Caches/com.gyazo.gif',

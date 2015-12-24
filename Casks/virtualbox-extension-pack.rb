@@ -6,7 +6,6 @@ cask 'virtualbox-extension-pack' do
   name 'VirtualBox Extension Pack'
   homepage 'https://www.virtualbox.org'
   license :closed
-  tags :vendor => 'Oracle'
 
   stage_only true
 

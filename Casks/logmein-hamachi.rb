@@ -7,7 +7,6 @@ cask 'logmein-hamachi' do
   name 'Hamachi'
   homepage 'http://vpn.net'
   license :freemium
-  tags :vendor => 'LogMeIn'
 
   installer :script => 'LogMeInHamachiInstaller.app/Contents/MacOS/Lili',
             :args => [ '-s' ]

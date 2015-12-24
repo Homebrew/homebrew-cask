@@ -6,7 +6,6 @@ cask 'pepper-flash' do
   name 'Pepper Flash Player'
   homepage 'https://get.adobe.com/flashplayer/otherversions'
   license :gratis
-  tags :vendor => 'Adobe'
 
   installer :manual => 'Install Adobe Flash Player.app'
 

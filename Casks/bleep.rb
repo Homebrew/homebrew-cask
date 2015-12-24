@@ -9,7 +9,6 @@ cask 'bleep' do
           :sha256 => '266fc57b32cbbe67b46513eba330c1986681f767892d97ad66b0a61510d4aaf1'
   homepage 'http://www.bleep.pm/'
   license :gratis
-  tags :vendor => 'BitTorrent'
 
   app 'Bleep.app'
 

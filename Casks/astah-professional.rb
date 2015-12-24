@@ -6,7 +6,6 @@ cask 'astah-professional' do
   name 'Astah Professional'
   homepage 'http://astah.net/editions/professional'
   license :commercial
-  tags :vendor => 'Change Vision'
 
   pkg "astah professional ver #{version.gsub('.','_')}.pkg"
 

@@ -6,7 +6,6 @@ cask 'musicbrainz-picard' do
   name 'Picard'
   homepage 'http://picard.musicbrainz.org'
   license :gpl
-  tags :vendor => 'MusicBrainz'
 
   app 'MusicBrainz Picard.app'
 end

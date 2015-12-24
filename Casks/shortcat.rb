@@ -8,7 +8,6 @@ cask 'shortcat' do
   name 'Shortcat'
   homepage 'https://shortcatapp.com/'
   license :commercial
-  tags :vendor => 'Sproutcube'
 
   app 'Shortcat.app'
 end

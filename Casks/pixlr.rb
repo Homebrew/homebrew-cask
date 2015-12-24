@@ -8,7 +8,6 @@ cask 'pixlr' do
           :sha256 => '46d01575b9fd926b62093e9d5614544428f49a5f1013217b92c29b2dbed78966'
   homepage 'https://pixlr.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Autodesk'
 
   app 'Pixlr.app'
 end

@@ -6,7 +6,6 @@ cask 'aqua-data-studio' do
   name 'Aqua Data Studio'
   homepage 'http://www.aquafold.com/aquadatastudio.html'
   license :commercial
-  tags :vendor => 'Aquafold'
 
   app 'Aqua Data Studio.app'
 end

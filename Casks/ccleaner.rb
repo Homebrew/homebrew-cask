@@ -6,7 +6,6 @@ cask 'ccleaner' do
   name 'CCleaner'
   homepage 'https://www.piriform.com/ccleaner'
   license :freemium
-  tags :vendor => 'Piriform'
 
   zap :delete => [
     '~/Library/Application Support/CCleaner',

@@ -14,7 +14,6 @@ cask 'cleanapp' do
   name 'CleanApp'
   homepage 'http://www.syniumsoftware.com/cleanapp'
   license :commercial
-  tags :vendor => 'Synium Software'
 
   app 'CleanApp.app'
 end

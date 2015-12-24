@@ -6,7 +6,6 @@ cask 'heka' do
   name 'heka'
   homepage 'https://github.com/mozilla-services/heka'
   license :mpl
-  tags :vendor => 'Mozilla'
 
   pkg "heka-#{version.gsub('.', '_')}-darwin-amd64.pkg"
 

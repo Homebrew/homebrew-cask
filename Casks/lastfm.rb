@@ -7,7 +7,6 @@ cask 'lastfm' do
   name 'Last.fm Scrobbler'
   homepage 'http://www.last.fm/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Last.fm'
 
   app 'Last.fm.app'
 end

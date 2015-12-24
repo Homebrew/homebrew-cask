@@ -7,7 +7,6 @@ cask 'lighthouse' do
   name 'Vinumeris Lighthouse'
   homepage 'https://www.vinumeris.com/lighthouse'
   license :apache
-  tags :vendor => 'Vinumeris'
 
   app 'Lighthouse.app'
 end

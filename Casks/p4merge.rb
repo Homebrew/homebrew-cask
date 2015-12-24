@@ -6,7 +6,6 @@ cask 'p4merge' do
   name 'P4Merge'
   homepage 'http://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools'
   license :gratis
-  tags :vendor => 'Perforce'
 
   app 'p4merge.app'
 

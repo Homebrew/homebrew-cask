@@ -6,7 +6,6 @@ cask 'ultimate-control' do
   name 'Ultimate Control'
   homepage 'http://www.negusoft.com/index.php/ultimate-control'
   license :mpl
-  tags :vendor => 'NEGU Soft'
 
   app 'Ultimate Control.app'
 end

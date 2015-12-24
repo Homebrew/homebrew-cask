@@ -7,7 +7,6 @@ cask 'eagle' do
   name 'EAGLE'
   homepage 'http://www.cadsoftusa.com/'
   license :freemium
-  tags :vendor => 'CadSoft'
 
   pkg "eagle-mac64-#{version}.pkg"
 

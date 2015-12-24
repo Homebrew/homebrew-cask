@@ -6,7 +6,6 @@ cask 'powermate' do
   name 'Griffin Powermate'
   homepage 'http://support.griffintechnology.com/support/powermate/'
   license :gratis
-  tags :vendor => 'Griffin'
 
   app 'PowerMate.app'
 end

@@ -6,7 +6,6 @@ cask 'cuda' do
   name 'CUDA'
   homepage 'https://developer.nvidia.com/cuda-zone'
   license :other
-  tags :vendor => 'Nvidia'
 
   installer :script => 'CUDAMacOSXInstaller.app/Contents/MacOS/CUDAMacOSXInstaller',
             :args => [ '--accept-eula', '--silent' ]

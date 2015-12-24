@@ -8,7 +8,6 @@ cask 'fiddler' do
   name 'Fiddler'
   homepage 'http://www.telerik.com/fiddler'
   license :commercial
-  tags :vendor => 'Telerik'
 
   depends_on :cask => 'mono-mdk'
 

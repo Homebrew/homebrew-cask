@@ -6,7 +6,6 @@ cask 'maltego' do
   name 'Maltego'
   homepage 'https://www.paterva.com/web6/products/maltego.php'
   license :closed
-  tags :vendor => 'Paterva'
 
   app "Maltego Chlorine v#{version.sub(%r{\.\d+$},'')}.app"
 end

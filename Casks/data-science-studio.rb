@@ -6,7 +6,6 @@ cask 'data-science-studio' do
   name 'Data Science Studio'
   homepage 'https://www.dataiku.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Dataiku'
 
   app 'DataScienceStudio.app'
 end

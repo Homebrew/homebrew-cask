@@ -6,7 +6,6 @@ cask 'jabber-video' do
   name 'Jabber Video'
   homepage 'https://www.ciscojabbervideo.com/home'
   license :closed
-  tags :vendor => 'Cisco Systems'
 
   app 'Jabber Video.app'
 

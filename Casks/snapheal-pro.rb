@@ -8,7 +8,6 @@ cask 'snapheal-pro' do
   name 'Snapheal Pro'
   homepage 'https://macphun.com/snapheal/'
   license :commercial
-  tags :vendor => 'Macphun'
 
   app 'Snapheal Pro.app'
 

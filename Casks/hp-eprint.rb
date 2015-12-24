@@ -6,7 +6,6 @@ cask 'hp-eprint' do
   name 'HP ePrint'
   homepage 'http://h20331.www2.hp.com/hpsub/us/en/eprint/overview.html'
   license :gratis
-  tags :vendor => 'HP'
 
   pkg 'HP ePrint Installer.pkg'
 

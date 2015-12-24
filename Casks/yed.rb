@@ -6,7 +6,6 @@ cask 'yed' do
   name 'yEd'
   homepage 'https://www.yworks.com/en/products/yfiles/yed/'
   license :gratis
-  tags :vendor => 'yWorks'
 
   app 'yEd.app'
 

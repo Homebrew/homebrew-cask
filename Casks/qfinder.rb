@@ -6,7 +6,6 @@ cask 'qfinder' do
   url 'https://download.qnap.com/webstart/QNAPQfinder_Mac.dmg'
   homepage 'http://www.qnap.com/i/in/utility/#block_1'
   license :gratis
-  tags :vendor => 'Qnap'
 
   pkg 'Qfinder.pkg'
 

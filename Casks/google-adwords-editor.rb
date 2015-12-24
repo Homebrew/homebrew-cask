@@ -6,7 +6,6 @@ cask 'google-adwords-editor' do
   name 'Google AdWords Editor'
   homepage 'https://www.google.com/intl/en/adwordseditor/'
   license :gratis
-  tags :vendor => 'Google'
 
   app 'Google AdWords Editor.app'
 end
