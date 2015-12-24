@@ -12,7 +12,7 @@ cask 'scratch' do
             :sudo   => true
 
   uninstall :script => {
-              :executable => '/Applications/Utilities/Adobe AIR Application Installer.app/Contents/MacOS/Adobe AIR Application Installer',
+              :executable => Hbc::Container::Air::INSTALLER_PATHNAME,
               :args => %w[-uninstall -silent /Applications/Scratch\ 2.app]
             }
 
