@@ -8,7 +8,7 @@ cask 'virtualbox' do
   end
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*},'')}/VirtualBox-#{version}-OSX.dmg"
-  name 'VirtualBox'
+  name 'Oracle VirtualBox'
   homepage 'https://www.virtualbox.org'
   license :gpl
 
