@@ -3,7 +3,7 @@ cask 'xnconvert' do
   sha256 :no_check
 
   url 'http://download.xnview.com/XnConvert-mac-x64.tgz'
-  name 'XnConvert'
+  name 'XnSoft XnConvert'
   homepage 'http://www.xnview.com/en/xnconvert/'
   license :gratis
 
