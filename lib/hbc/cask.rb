@@ -80,7 +80,6 @@ class Hbc::Cask
        :appcast,
        :version,
        :license,
-       :tags,
        :sha256,
        :artifacts,
        :caveats,
