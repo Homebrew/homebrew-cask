@@ -3,14 +3,13 @@ class Hbc::Verify::Gpg
     cask.gpg
   end
 
-  attr_reader :cask, :downloaded_path, :signature, :successful
+  attr_reader :cask, :downloaded_path, :signature
 
   def initialize(cask, downloaded_path, force_fetch=false, command=Hbc::SystemCommand)
     @command = command
     @cask = cask
     @downloaded_path = downloaded_path
     @signature = retrieve_signature(force_fetch)
-    @successful = nil
   end
 
   def available?
@@ -66,7 +65,6 @@ class Hbc::Verify::Gpg
     check = @command.run('gpg', :args => ['--verify', @signature, downloaded_path],
                                 :print_stdout => true)
 
-    @successful = check.success?
-    raise Hbc::CaskGpgVerificationFailedError.new(cask.token, downloaded_path, @signature) unless @successful
+    raise Hbc::CaskGpgVerificationFailedError.new(cask.token, downloaded_path, @signature) unless check.success?
   end
 end
