@@ -4,7 +4,7 @@ cask 'visual-studio-code' do
 
   # vo.msecnd.net is the official download host per the vendor homepage
   url "https://az764295.vo.msecnd.net/public/#{version}/VSCode-darwin.zip"
-  name 'Visual Studio Code'
+  name 'Microsoft Visual Studio Code'
   homepage 'https://code.visualstudio.com/'
   license :mit
 
