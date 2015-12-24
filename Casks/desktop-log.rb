@@ -3,7 +3,7 @@ cask 'desktop-log' do
   sha256 :no_check
 
   url 'http://www.nightproductions.net/downloads/desklog.dmg'
-  name 'Desktop Log'
+  name 'Night Productions Desktop Log'
   homepage 'http://www.nightproductions.net/desklog.html'
   license :gratis
 
