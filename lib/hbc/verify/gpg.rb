@@ -67,5 +67,6 @@ class Hbc::Verify::Gpg
                                 :print_stdout => true)
 
     @successful = check.success?
+    raise Hbc::CaskGpgVerificationFailedError.new(cask.token, downloaded_path, @signature) unless @successful
   end
 end
