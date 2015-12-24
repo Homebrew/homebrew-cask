@@ -8,8 +8,8 @@ module Hbc::Verify
 
   def verifications
     [
-      Hbc::Verify::Checksum
-      # todo: Hbc::Verify::Gpg
+      Hbc::Verify::Checksum,
+      Hbc::Verify::Gpg
     ]
   end
 
