@@ -414,4 +414,11 @@ describe Hbc::DSL do
       err.message.must_include "'stage_only' must be the only activatable artifact"
     end
   end
+
+  describe "auto_updates stanza" do
+    it "allows auto_updates stanza to be specified" do
+      cask = Hbc.load('auto-updates')
+      cask.auto_updates.must_equal true
+    end
+  end
 end
