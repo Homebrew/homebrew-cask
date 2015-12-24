@@ -4,12 +4,13 @@ require 'hbc/verify'
 class Hbc::Download
   attr_reader :cask
 
-  def initialize(cask)
+  def initialize(cask, force=false)
     @cask = cask
+    @force = force
   end
 
-  def perform(force=false)
-    clear_cache(force)
+  def perform
+    clear_cache
     fetch
     create_cache_symlink
     downloaded_path
@@ -17,6 +18,7 @@ class Hbc::Download
 
   private
 
+  attr_reader :force
   attr_accessor :downloaded_path
 
   def downloader
@@ -27,7 +29,7 @@ class Hbc::Download
     end
   end
 
-  def clear_cache(force)
+  def clear_cache
     downloader.clear_cache if force || cask.version == :latest
   end
 
