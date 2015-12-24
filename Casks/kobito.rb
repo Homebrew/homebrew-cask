@@ -10,4 +10,8 @@ cask 'kobito' do
   license :gratis
 
   app 'Kobito.app'
+
+  caveats do
+    discontinued
+  end
 end
