@@ -35,12 +35,13 @@ before_install:
   - echo ls_ruby_bindir; ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin"
 
 # install steps
-# * brew Formulae without which some tests will be skipped
+# * brew Formulae and Casks without which some tests will be skipped
 # * bundler gem
 # * Ruby gems required for brew-cask
 install:
   - brew install cabextract
   - brew install unar
+  - cmd/brew-cask.rb install Casks/adobe-air.rb
   - echo gem_install_bundler; sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/gem" install bundler --bindir="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin"
   - echo bundle; sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/bundle" --system
 
