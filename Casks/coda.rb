@@ -3,7 +3,7 @@ cask 'coda' do
   sha256 '3bcb4a1f99a47edd087b9579c206a38cecae1a31287e84121c5775b8752a8c3f'
 
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
-  name 'Coda'
+  name 'Panic Coda'
   homepage 'https://panic.com/Coda/'
   license :commercial
 
