@@ -4,7 +4,7 @@ cask 'cave-story' do
 
   # nakiwo.com is the official download host per the vendor homepage
   url "http://www.nakiwo.com/attachments/doukutsu#{version.gsub('.','_')}.dmg"
-  name 'Cave Story'
+  name 'Pixel Cave Story'
   name 'Doukutsu'
   name '洞窟物語'
   homepage 'http://www.cavestory.org'
