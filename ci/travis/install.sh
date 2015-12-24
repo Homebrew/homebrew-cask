@@ -24,6 +24,7 @@ if must_run_tests; then
   # install Formulae and Casks without which some tests would be skipped
   brew_install cabextract
   brew_install unar
+  brew_install gnupg
   run brew cask install Casks/adobe-air.rb
 fi
 
