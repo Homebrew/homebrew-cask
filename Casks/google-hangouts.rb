@@ -6,7 +6,6 @@ cask 'google-hangouts' do
   name 'Google Hangouts'
   homepage 'https://www.google.com/tools/dlpage/hangoutplugin'
   license :gratis
-  tags :vendor => 'Google'
 
   pkg 'Google Voice and Video.pkg'
 

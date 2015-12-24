@@ -7,7 +7,6 @@ cask 'data-integration' do
   name 'Pentaho Data Integration'
   homepage 'http://community.pentaho.com'
   license :oss
-  tags :vendor => 'Pentaho'
 
   app 'data-integration/Data Integration.app'
 end

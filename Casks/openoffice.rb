@@ -4,10 +4,9 @@ cask 'openoffice' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/openofficeorg.mirror/Apache_OpenOffice_#{version}_MacOS_x86-64_install_en-US.dmg"
-  name 'OpenOffice'
+  name 'Apache OpenOffice'
   homepage 'https://www.openoffice.org/'
   license :apache
-  tags :vendor => 'Apache'
 
   app 'OpenOffice.app'
 

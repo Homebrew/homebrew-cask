@@ -7,7 +7,6 @@ cask 'sqlectron' do
   name 'Sqlectron'
   homepage 'https://sqlectron.github.io/'
   license :mit
-  tags :vendor => 'Sqlectron'
 
   depends_on :macos => '>= :mountain_lion'
 

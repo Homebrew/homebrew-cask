@@ -8,7 +8,6 @@ cask 'gog-downloader' do
   name 'GOG Downloader'
   homepage 'https://www.gog.com/downloader'
   license :gratis
-  tags :vendor => 'GOG'
 
   zap :delete => [
     '~/Library/Application Support/GOG Downloader',

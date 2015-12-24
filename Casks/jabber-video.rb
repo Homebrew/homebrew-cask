@@ -3,10 +3,9 @@ cask 'jabber-video' do
   sha256 '571375bb9fa9f01994633a9e395ec42c4b1869e28d5f5559678f9981c4af4a9c'
 
   url "http://sjc1-movi-pr-download-vip.ciscojabbervideo.com/JabberVideo_#{version}.dmg"
-  name 'Jabber Video'
+  name 'Cisco Systems Jabber Video'
   homepage 'https://www.ciscojabbervideo.com/home'
   license :closed
-  tags :vendor => 'Cisco Systems'
 
   app 'Jabber Video.app'
 

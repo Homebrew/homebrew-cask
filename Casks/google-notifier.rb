@@ -6,7 +6,6 @@ cask 'google-notifier' do
   name 'Google Notifier'
   homepage 'http://toolbar.google.com/gmail-helper/notifier_mac.html'
   license :gratis
-  tags :vendor => 'Google'
 
   app 'Google Notifier.app'
 

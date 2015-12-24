@@ -7,7 +7,6 @@ cask 'logitech-media-server' do
   name 'Logitech Media Server'
   homepage 'http://www.mysqueezebox.com/'
   license :gpl
-  tags :vendor => 'Logitech'
 
   pkg "LogitechMediaServer-#{version}.pkg"
 

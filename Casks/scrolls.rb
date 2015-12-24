@@ -3,10 +3,9 @@ cask 'scrolls' do
   sha256 :no_check
 
   url 'http://download.scrolls.com/new-installer/mac/Scrolls.dmg'
-  name 'Scrolls'
+  name 'Mojang Scrolls'
   homepage 'https://scrolls.com/'
   license :gratis
-  tags :vendor => 'Mojang'
 
   app 'Scrolls.app'
 

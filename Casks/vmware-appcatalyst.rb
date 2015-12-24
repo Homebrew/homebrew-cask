@@ -6,7 +6,6 @@ cask 'vmware-appcatalyst' do
   name 'VMware AppCatalyst'
   homepage 'http://getappcatalyst.com/'
   license :commercial
-  tags :vendor => 'VMware'
 
   depends_on :macos => '>= :mavericks'
 

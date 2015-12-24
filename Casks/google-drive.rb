@@ -6,7 +6,6 @@ cask 'google-drive' do
   name 'Google Drive'
   homepage 'https://drive.google.com/'
   license :gratis
-  tags :vendor => 'Google'
 
   app 'Google Drive.app'
 

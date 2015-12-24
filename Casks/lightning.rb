@@ -6,7 +6,6 @@ cask 'lightning' do
   name 'FileWave Lightning'
   homepage 'https://www.filewave.com/products/imaging/lightning-thunderbolt'
   license :gratis
-  tags :vendor => 'FileWave'
 
   depends_on :macos => '>= :lion'
 

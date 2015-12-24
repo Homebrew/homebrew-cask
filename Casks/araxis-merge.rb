@@ -13,7 +13,6 @@ cask 'araxis-merge' do
   name 'Araxis Merge'
   homepage 'http://www.araxis.com/merge'
   license :commercial
-  tags :vendor => 'Araxis'
 
   app 'Araxis Merge.app'
 

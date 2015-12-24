@@ -12,7 +12,6 @@ require 'hbc/dsl/installer'
 require 'hbc/dsl/license'
 require 'hbc/dsl/postflight'
 require 'hbc/dsl/preflight'
-require 'hbc/dsl/tags'
 require 'hbc/dsl/uninstall_postflight'
 require 'hbc/dsl/uninstall_preflight'
 
@@ -40,8 +39,6 @@ module Hbc::DSL
   def conflicts_with; self.class.conflicts_with; end
 
   def container; self.class.container; end
-
-  def tags; self.class.tags; end
 
   def sha256; self.class.sha256; end
 
@@ -165,19 +162,6 @@ module Hbc::DSL
         raise Hbc::CaskInvalidError.new(self.token, "invalid 'sha256' value: '#{arg.inspect}'")
       end
       @sha256 ||= arg
-    end
-
-    def tags(*args)
-      return @tags if args.empty?
-      if @tags and !args.empty?
-        # consider removing this limitation
-        raise Hbc::CaskInvalidError.new(self.token, "'tags' stanza may only appear once")
-      end
-      @tags ||= begin
-        Hbc::DSL::Tags.new(*args) unless args.empty?
-      rescue StandardError => e
-        raise Hbc::CaskInvalidError.new(self.token, e)
-      end
     end
 
     def license(arg=nil)

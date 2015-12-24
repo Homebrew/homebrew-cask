@@ -4,10 +4,9 @@ cask 'understand' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/builds.scitools.com/all_builds/b#{version.sub(%r{.*\.},'')}/Understand/Understand-#{version}-MacOSX-x86.dmg"
-  name 'Understand'
+  name 'SciTools Understand'
   homepage 'https://scitools.com'
   license :commercial
-  tags :vendor => 'SciTools'
 
   app 'scitools/bin/macosx/understand.app'
   app 'scitools/bin/macosx/licenseserver.app'

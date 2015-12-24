@@ -5,10 +5,9 @@ cask 'snapheal-pro' do
   url "http://cdn.macphun.com/updates/SnaphealMacPRO/SnaphealPRONA_Distribution_v#{version.gsub('.','_')}.zip"
   appcast 'http://cdn.macphun.com/updates/SnaphealMacPRO/appcast.xml',
           :sha256 => '58c31104e33c7a557eaeaf83ee0e614012916349de19760737fdf60924c8286b'
-  name 'Snapheal Pro'
+  name 'Macphun Snapheal Pro'
   homepage 'https://macphun.com/snapheal/'
   license :commercial
-  tags :vendor => 'Macphun'
 
   app 'Snapheal Pro.app'
 

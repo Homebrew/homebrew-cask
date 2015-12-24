@@ -13,7 +13,7 @@ cask 'unison' do
     url "http://alan.petitepomme.net/unison/assets/Unison-OS-X-#{version}.zip"
   end
 
-  name 'Unison'
+  name 'Panic Unison'
   homepage 'https://www.cis.upenn.edu/~bcpierce/unison/'
   license :gpl
 

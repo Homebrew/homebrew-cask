@@ -8,7 +8,6 @@ cask 'sony-ericsson-bridge' do
           :sha256 => '0e516c239fff99ac24ec531546195ba185675bd890a0a09599e6f3fb5cd30fba'
   homepage 'http://support.sonymobile.com/au/tools/bridge-for-mac/'
   license :gratis
-  tags :vendor => 'Sony'
 
   app 'Sony Ericsson Bridge for Mac.app'
 end

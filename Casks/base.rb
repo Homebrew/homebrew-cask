@@ -4,10 +4,9 @@ cask 'base' do
 
   url "http://files.menial.co.uk/base/base_#{version}.zip"
   appcast 'http://update.menial.co.uk/software/base/'
-  name 'Base'
+  name 'Menial Base'
   homepage 'http://menial.co.uk/base/'
   license :commercial
-  tags :vendor => 'Menial'
 
   app 'Base.app'
 end

@@ -6,7 +6,6 @@ cask 'navicat-for-mariadb' do
   name 'Navicat for MariaDB'
   homepage 'http://www.navicat.com/products/navicat-for-mariadb'
   license :commercial
-  tags :vendor => 'Navicat'
 
   app 'Navicat for MariaDB.app'
 end

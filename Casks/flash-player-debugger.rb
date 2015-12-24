@@ -7,7 +7,6 @@ cask 'flash-player-debugger' do
   name 'Adobe Flash Player Debugger'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
   license :gratis
-  tags :vendor => 'Adobe'
 
   # Renamed to avoid conflict with flash-player.
   app 'Flash Player.app', :target => 'Flash Player Debugger.app'

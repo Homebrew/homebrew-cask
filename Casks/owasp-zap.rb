@@ -5,11 +5,9 @@ cask 'owasp-zap' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/zaproxy/zaproxy/releases/download/#{version}/ZAP_#{version}_MAC_OS_X.dmg"
   name 'OWASP Zed Attack Proxy'
-  name 'OWASP ZAP'
   name 'ZAP'
   homepage 'https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project'
   license :apache
-  tags :vendor => 'OWASP'
 
   app 'OWASP ZAP.app'
 end

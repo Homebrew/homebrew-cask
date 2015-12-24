@@ -6,7 +6,6 @@ cask 'yourkit-java-profiler' do
   name 'YourKit Java Profiler'
   homepage 'https://www.yourkit.com/overview/'
   license :commercial
-  tags :vendor => 'YourKit'
 
   app "YourKit_Java_Profiler_#{version.gsub('-','_')}.app"
 end

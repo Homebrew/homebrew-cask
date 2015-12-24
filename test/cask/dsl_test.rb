@@ -401,26 +401,6 @@ describe Hbc::DSL do
     end
   end
 
-  describe "tags stanza" do
-    it "allows tags stanza to be specified" do
-      cask = Hbc.load('with-tags')
-      cask.tags.to_s.must_match %r{\S}
-    end
-
-    it "prevents specifying tags multiple times" do
-      err = lambda {
-        invalid_cask = Hbc.load('invalid/invalid-tags-multiple')
-      }.must_raise(Hbc::CaskInvalidError)
-      err.message.must_include "'tags' stanza may only appear once"
-    end
-
-    it "refuses to load if tags key is invalid" do
-      err = lambda {
-        invalid_cask = Hbc.load('invalid/invalid-tags-key')
-      }.must_raise(Hbc::CaskInvalidError)
-    end
-  end
-
   describe "stage_only stanza" do
     it "allows stage_only stanza to be specified" do
       cask = Hbc.load('stage-only')

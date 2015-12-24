@@ -6,7 +6,6 @@ cask 'vmware-fusion' do
   name 'VMware Fusion'
   homepage 'https://www.vmware.com/products/fusion/'
   license :commercial
-  tags :vendor => 'VMware'
 
   binary 'VMware Fusion.app/Contents/Library/vmnet-cfgcli'
   binary 'VMware Fusion.app/Contents/Library/vmnet-cli'

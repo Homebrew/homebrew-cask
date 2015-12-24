@@ -6,7 +6,6 @@ cask 'navicat-for-sqlite' do
   name 'Navicat for SQLite'
   homepage 'http://www.navicat.com/products/navicat-for-sqlite'
   license :commercial
-  tags :vendor => 'Navicat'
 
   app 'Navicat for SQLite.app'
 end

@@ -4,10 +4,9 @@ cask 'encryptr' do
 
   url "https://spideroak.com/dist/encryptr/signed/osx/Encryptr-v#{version}-mac.dmg"
   appcast 'https://github.com/SpiderOak/Encryptr/releases.atom'
-  name 'Encryptr'
+  name 'SpiderOak Encryptr'
   homepage 'https://spideroak.com/solutions/encryptr'
   license :gpl
-  tags :vendor => 'SpiderOak'
 
   app 'Encryptr.app'
 

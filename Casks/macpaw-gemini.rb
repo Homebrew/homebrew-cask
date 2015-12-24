@@ -8,7 +8,6 @@ cask 'macpaw-gemini' do
   name 'MacPaw Gemini'
   homepage 'https://macpaw.com/gemini'
   license :commercial
-  tags :vendor => 'MacPaw'
 
   zap :delete => [
     '~/Library/Application Support/MacPaw Gemini',

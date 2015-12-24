@@ -3,10 +3,9 @@ cask 'p4merge' do
   sha256 '07eac08f6bfb32e4a79bf47582116de8532fe0b18d91a014e1cd80861d6f0909'
 
   url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*},'\1')}/bin.macosx107x86_64/P4V.dmg"
-  name 'P4Merge'
+  name 'Perforce P4Merge'
   homepage 'http://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools'
   license :gratis
-  tags :vendor => 'Perforce'
 
   app 'p4merge.app'
 

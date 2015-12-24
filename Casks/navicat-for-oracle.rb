@@ -6,7 +6,6 @@ cask 'navicat-for-oracle' do
   name 'Navicat for Oracle'
   homepage 'http://www.navicat.com/products/navicat-for-oracle'
   license :commercial
-  tags :vendor => 'Navicat'
 
   app 'Navicat for Oracle.app'
 end
