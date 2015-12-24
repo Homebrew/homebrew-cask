@@ -25,8 +25,8 @@ class Hbc::Verify::Gpg
   end
 
   def retrieve_signature
-    maybe_dir = @cask.metadata_subdir('gpg')
-    versioned_cask = @cask.version.is_a?(String)
+    maybe_dir = cask.metadata_subdir('gpg')
+    versioned_cask = cask.version.is_a?(String)
 
     # maybe_dir may be:
     # - nil, in the absence of a parent metadata directory;
@@ -36,10 +36,10 @@ class Hbc::Verify::Gpg
     #   saved.
     cached = maybe_dir if versioned_cask && maybe_dir && maybe_dir.exist?
 
-    meta_dir = cached || @cask.metadata_subdir('gpg', :now, true)
+    meta_dir = cached || cask.metadata_subdir('gpg', :now, true)
     sig_path = meta_dir.join('signature.asc')
 
-    curl(@cask.gpg.signature, '-o', sig_path) if !cached || !sig_path.exist? || force_fetch
+    curl(cask.gpg.signature, '-o', sig_path) if !cached || !sig_path.exist? || force_fetch
 
     sig_path
   end
@@ -53,14 +53,14 @@ class Hbc::Verify::Gpg
     import = @command.run('gpg', :args => args,
                                  :print_stderr => true)
     unless import.success?
-      raise CaskError.new("GPG failed to retrieve the #{@cask} signing key: #{@cask.gpg.key_id || @cask.gpg.key_url}")
+      raise CaskError.new("GPG failed to retrieve the #{cask} signing key: #{cask.gpg.key_id || cask.gpg.key_url}")
     end
   end
 
   def verify
     unless available?
       opoo <<-EOS.undent
-        Skipping GPG signature for #{@cask} because gpg is not available.
+        Skipping GPG signature for #{cask} because gpg is not available.
         To enable GPG signature verification, install gpg with:
 
           brew install gpg
@@ -71,7 +71,7 @@ class Hbc::Verify::Gpg
     import_key
     signature = retrieve_signature
 
-    ohai "Verifying GPG signature for #{@cask}"
+    ohai "Verifying GPG signature for #{cask}"
     check = @command.run('gpg', :args => ['--verify', signature, downloaded_path],
                                 :print_stdout => true)
 
