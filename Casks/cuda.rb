@@ -3,7 +3,7 @@ cask 'cuda' do
   sha256 '53a569d2cbdf43942245ce356ee5851ccf1dbf55e15a035ad0aa95a0b7739181'
 
   url "http://developer.download.nvidia.com/compute/cuda/#{version.to_f}/Prod/local_installers/cuda_#{version}_mac.dmg"
-  name 'CUDA'
+  name 'Nvidia CUDA'
   homepage 'https://developer.nvidia.com/cuda-zone'
   license :other
 
