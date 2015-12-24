@@ -1,6 +1,6 @@
 cask 'kakapo' do
-  version '1.1.0'
-  sha256 'd002b403029ee8939f77136531aa517947bebc1d2fc6dc8d2d8628e9068e9dde'
+  version '1.2.0'
+  sha256 '68fa13cfea3a78784ea1aa0f38f13a7d6cfea306735a39a8349ef1bd50120f93'
 
   url "https://github.com/bluedaniel/Kakapo-app/releases/download/v#{version}/Kakapo-#{version}-Mac.zip"
   appcast 'https://github.com/bluedaniel/Kakapo-app/releases.atom'
