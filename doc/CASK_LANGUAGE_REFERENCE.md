@@ -14,7 +14,6 @@ This document acts as a complete specification, and covers aspects of the Cask D
 * [Checksum Stanza Details](#checksum-stanza-details)
 * [URL Stanza Details](#url-stanza-details)
 * [Appcast Stanza Details](#appcast-stanza-details)
-* [Tags Stanza Details](#tags-stanza-details)
 * [License Stanza Details](#license-stanza-details)
 * [GPG Stanza Details](#gpg-stanza-details)
 * [App Stanza Details](#app-stanza-details)
@@ -114,7 +113,6 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `accessibility_access` | no                            | `true` if the application should be granted accessibility access
 | `container :nested =>` | no                            | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `container :type =>`   | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`. (example [parse.rb](https://github.com/caskroom/homebrew-cask/blob/ffdc9a1aa459d80a084ee0d24176409388efe71f/Casks/parse.rb#L12))
-| `tags`                 | no                            | a list of key-value pairs for Cask annotation. Not free-form. (see also [Tags Stanza Details](#tags-stanza-details))
 | `gpg`                  | no                            | *stub: not yet functional.*  (see also [GPG Stanza Details](#gpg-stanza-details))
 
 ## Conditional Statements
@@ -361,20 +359,6 @@ Example: [Chromium](http://www.chromium.org/chromium-os/licenses) includes code 
 | `:public_domain` | `:oss`           | not copyrighted                                                    | <http://creativecommons.org/publicdomain/zero/1.0/legalcode>
 | `:ubuntu_font`   | `:oss`           | Ubuntu Font License                                                | <http://font.ubuntu.com/licence/>
 | `:x11`           | `:oss`           | X Consortium License                                               | <http://www.xfree86.org/3.3.6/COPYRIGHT2.html>
-
-## Tags Stanza Details
-
-The `tags` stanza is not free-form. The key-value pairs are limited to a list of valid keys. All `tags` keys accept string values.
-
-The `tags` stanza is intended as an aid to search/filtering of Casks. For detailed information, the user must rely on the vendor’s homepage.
-
-Note that `brew cask search` and `brew cask list` are not yet capable of using the information stored in the `tags` stanza.
-
-### Valid Tag Keys
-
-| key           | meaning
-| ------------- | -----------------------------
-| `:vendor`     | the full-text official name of the producer of the software: an author or corporate name, as appropriate. As the value is intended as a search target, commonly shared abbreviations such as `Dr.` or `Inc.` should be omitted. (example [google-chrome.rb](../Casks/google-chrome.rb))
 
 ## GPG Stanza Details
 
