@@ -3,7 +3,7 @@ cask 'cisco-spark' do
   sha256 :no_check
 
   url 'https://download.ciscospark.com/mac/Spark.dmg'
-  name 'Cisco Spark'
+  name 'Cisco Systems Spark'
   homepage 'http://www.webex.com/projectsquared/'
   license :gratis
 
