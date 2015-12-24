@@ -3,8 +3,7 @@ cask 'srware-iron' do
   sha256 :no_check
 
   url 'https://www.srware.net/downloads/iron-mac64.zip'
-  name 'SRWare Iron'
-  name 'Iron'
+  name 'SRWare SRWare Iron'
   homepage 'https://www.srware.net/en/software_srware_iron.php'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
