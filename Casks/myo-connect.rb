@@ -4,7 +4,7 @@ cask 'myo-connect' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/thalmicdownloads/mac/#{version}/MyoConnect.dmg"
-  name 'Myo Connect'
+  name 'Thalmic Labs Myo Connect'
   homepage 'https://developer.thalmic.com'
   license :gratis
 
