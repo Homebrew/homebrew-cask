@@ -206,6 +206,28 @@ describe Hbc::Installer do
       with_macosx_dir.staged_path.join('__MACOSX').wont_be :directory?
     end
 
+    it "installer method raises an exception when already-installed Casks which auto-update are attempted" do
+      auto_updates = Hbc.load('auto-updates')
+      auto_updates.installed?.must_equal false
+      installer = Hbc::Installer.new(auto_updates)
+
+      shutup { installer.install }
+      lambda {
+        installer.install
+      }.must_raise(Hbc::CaskAutoUpdatesError)
+    end
+
+    it "allows already-installed Casks which auto-update to be installed if force is provided" do
+      auto_updates = Hbc.load('auto-updates')
+      auto_updates.installed?.must_equal false
+      installer = Hbc::Installer.new(auto_updates)
+
+      shutup { installer.install }
+      shutup {
+        installer.install(true)
+      } # wont_raise
+    end
+
     # unlike the CLI, the internal interface throws exception on double-install
     it "installer method raises an exception when already-installed Casks are attempted" do
       transmission = Hbc.load('local-transmission')
