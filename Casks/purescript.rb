@@ -4,7 +4,8 @@ cask 'purescript' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/purescript/purescript/releases/download/v#{version}/macos.tar.gz"
-  appcast 'https://github.com/purescript/purescript/releases.atom'
+  appcast 'https://github.com/purescript/purescript/releases.atom',
+          :sha256 => 'dc2925ca33ff6ac14858b7573e0922e2e98862aba4cae180e7106c3ed2c1c70a'
   name 'PureScript'
   homepage 'http://purescript.org'
   license :mit

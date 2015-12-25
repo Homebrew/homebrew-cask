@@ -9,7 +9,8 @@ cask 'aquamacs' do
     sha256 '0bdbbe20afd1d2f2bc23fd583de9475a8826493fcf9fe0e4d2717353cf5f04b2'
     # github.com is the official download host per the vendor homepage
     url "https://github.com/davidswelt/aquamacs-emacs-pre2015/releases/download/Aquamacs-#{version}/Aquamacs-Emacs-#{version}.dmg"
-    appcast 'https://github.com/davidswelt/aquamacs-emacs/releases.atom'
+    appcast 'https://github.com/davidswelt/aquamacs-emacs/releases.atom',
+            :sha256 => '485aed222707fa3dd41af2afd106ada6abc1766abbb8977ad17af91d56392cee'
   end
 
   name 'Aquamacs'

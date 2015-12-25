@@ -4,7 +4,8 @@ cask 'aptanastudio' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/aptana/studio3/releases/download/v#{version}/Aptana_Studio_3_Setup_#{version}.dmg"
-  appcast 'https://github.com/aptana/studio3/releases.atom'
+  appcast 'https://github.com/aptana/studio3/releases.atom',
+          :sha256 => '795dbb0123a994485eb2211e45340e23ceca4a7454ad68404758858310d9fa8a'
   name 'Aptana Studio'
   homepage 'http://www.aptana.com/'
   license :gpl

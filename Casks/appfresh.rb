@@ -4,7 +4,8 @@ cask 'appfresh' do
 
   url "http://backend.metaquark.de/download/appfresh/versions/#{version.sub(%r{.*_},'')}"
   name 'metaquark AppFresh'
-  appcast 'http://backend.metaquark.de/appcast/appfresh.xml'
+  appcast 'http://backend.metaquark.de/appcast/appfresh.xml',
+          :sha256 => 'b73152fbd1275b63e2cdd523124a409d5673d061db08397da0f9fac2436929c8'
   homepage 'http://metaquark.de/appfresh/mac'
   license :commercial
 

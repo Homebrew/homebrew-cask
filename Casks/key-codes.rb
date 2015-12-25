@@ -3,7 +3,8 @@ cask 'key-codes' do
   sha256 '1b7b4de0d15dfd483811b913821b722afab181cad031a5d0c1172e981a0dc6bd'
 
   url 'http://manytricks.com/download/keycodes'
-  appcast 'http://manytricks.com/keycodes/appcast.xml'
+  appcast 'http://manytricks.com/keycodes/appcast.xml',
+          :sha256 => '8d887901c2bfd31cfe644b0c2cce15b153decffc96199fd6f41080de5ae13f16'
   name 'Key Codes'
   homepage 'http://manytricks.com/keycodes/'
   license :gratis

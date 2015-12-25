@@ -16,7 +16,8 @@ cask 'coteditor' do
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   end
 
-  appcast 'https://github.com/coteditor/CotEditor/releases.atom'
+  appcast 'https://github.com/coteditor/CotEditor/releases.atom',
+          :sha256 => 'dac6ecbea56d959f6f6b7239abf6f415709898c7b502ad37aebb8747c8f489af'
   name 'CotEditor'
   homepage 'http://coteditor.com/'
   license :gpl

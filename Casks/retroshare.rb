@@ -4,7 +4,8 @@ cask 'retroshare' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/RetroShare/RetroShare/releases/download/v#{version}/RetroShare06-RC2.dmg.zip"
-  appcast 'https://github.com/RetroShare/RetroShare/releases.atom'
+  appcast 'https://github.com/RetroShare/RetroShare/releases.atom',
+          :sha256 => '5f384599700537c1a12640de62635bae9c8b384d29c36ccb5ac9acd84a099e38'
   name 'RetroShare'
   homepage 'http://retroshare.sourceforge.net/'
   license :gpl

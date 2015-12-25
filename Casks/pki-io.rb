@@ -4,7 +4,8 @@ cask 'pki-io' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/pki-io/admin/releases/download/#{version}/pki.io_#{version}_darwin_amd64.tar.gz"
-  appcast 'https://github.com/pki-io/admin/releases.atom'
+  appcast 'https://github.com/pki-io/admin/releases.atom',
+          :sha256 => '4a9ff1539471616d321f00c3556f7127e3bde30547d26fe73d2f3008ed07808c'
   name 'pki.io'
   homepage 'https://pki.io'
   license :apache

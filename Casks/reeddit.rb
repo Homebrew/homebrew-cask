@@ -4,7 +4,8 @@ cask 'reeddit' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/berbaquero/Reeddit-app/releases/download/v#{version}/Reeddit.app.zip"
-  appcast 'https://github.com/berbaquero/Reeddit-app/releases.atom'
+  appcast 'https://github.com/berbaquero/Reeddit-app/releases.atom',
+          :sha256 => '6c029ef230f82c430494d258b46ce49cd74a73ebb21214ed856b1e007b3fbd7d'
   name 'Reeddit'
   homepage 'http://mac.reedditapp.com'
   license :mit

@@ -4,7 +4,8 @@ cask 'playback' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/mafintosh/playback/releases/download/v#{version}/Playback.app.zip"
-  appcast 'https://github.com/mafintosh/playback/releases.atom'
+  appcast 'https://github.com/mafintosh/playback/releases.atom',
+          :sha256 => '7ad205703ce9b96d1788c7c5c69d653e0882d9311b8abbb1229a358db2f73dce'
   name 'Playback'
   homepage 'https://mafintosh.github.io/playback/'
   license :mit

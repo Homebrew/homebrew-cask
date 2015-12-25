@@ -12,7 +12,8 @@ cask 'bettertouchtool' do
     url "http://boastr.net/releases/btt#{version}.zip"
   end
 
-  appcast 'http://appcast.boastr.net'
+  appcast 'http://appcast.boastr.net',
+          :sha256 => 'd22e6a9b68ea9d83446ee27e24023fd734cb258b56f01162db52a0880bba6ef1'
   name 'BetterTouchTool'
   homepage 'http://boastr.net/'
   license :gratis

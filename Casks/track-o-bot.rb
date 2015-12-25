@@ -4,7 +4,8 @@ cask 'track-o-bot' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/stevschmid/track-o-bot/releases/download/#{version}/Track-o-Bot_#{version}.dmg"
-  appcast 'https://github.com/stevschmid/track-o-bot/releases.atom'
+  appcast 'https://github.com/stevschmid/track-o-bot/releases.atom',
+          :sha256 => '4917f6aa88f1777d953ae1c428ba3a215f7e949140fd060404602154b40eaec3'
   name 'Track-o-Bot'
   homepage 'https://trackobot.com/'
   license :gpl

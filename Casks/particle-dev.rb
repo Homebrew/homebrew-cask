@@ -4,7 +4,8 @@ cask 'particle-dev' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/spark/spark-dev/releases/download/v#{version}/particle-dev-mac.zip"
-  appcast 'https://github.com/spark/spark-dev/releases.atom'
+  appcast 'https://github.com/spark/spark-dev/releases.atom',
+          :sha256 => '6f53072bf19f57bcc2383fd1eda7621ac56ddd86ae9b40e2ab2015c1a30dcb12'
   name 'Particle Dev'
   homepage 'https://www.particle.io/dev'
   license :apache
