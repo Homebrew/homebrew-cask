@@ -761,6 +761,7 @@ Arguments to `uninstall :delete` should be static, single-quoted, absolute paths
 * Only single quotes should be used.
 * Double-quotes should not be used. `ENV['HOME']` and other variables
  should not be interpolated in the value.
+* Basic tilde expansion is performed on paths, i.e., leading `~/` is expanded to the home directory.
 * Only absolute paths should be given.
 * No glob expansion is performed (*eg* `*` characters are literal), though glob expansion is a desired future feature.
 
@@ -846,12 +847,7 @@ $ brew cask zap td-toolbelt             # also removes org.ruby-lang.installer
 
 ### Zap Stanza Syntax
 
-The form of `zap` stanza follows the [`uninstall` stanza](#uninstall-stanza-details). All of the same directives are available.
-
-`zap` differs from `uninstall` in the following ways:
-
-* The use of `:delete` is not discouraged.
-* The target values for `:delete` and `:rmdir` accept leading tilde characters (`~`), which will be expanded to home directories.
+The form of `zap` stanza follows the [`uninstall` stanza](#uninstall-stanza-details). All of the same directives are available. Unlike with `uninstall`, however, `:delete` is not discouraged in `zap`.
 
 Example: [injection.rb](../Casks/injection.rb)
 
