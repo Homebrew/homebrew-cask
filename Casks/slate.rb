@@ -4,7 +4,8 @@ cask 'slate' do
 
   # ninjamonkeysoftware.com is the official download host per the vendor homepage
   url 'http://slate.ninjamonkeysoftware.com/Slate.dmg'
-  appcast 'https://www.ninjamonkeysoftware.com/slate/appcast.xml'
+  appcast 'https://www.ninjamonkeysoftware.com/slate/appcast.xml',
+          :sha256 => '396aaea6c145ba580d18747550a6418d20c95bfba2438874991bedb5ae48a606'
   name 'Slate'
   homepage 'https://github.com/jigish/slate'
   license :gpl

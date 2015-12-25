@@ -4,7 +4,8 @@ cask 'sourcedrop' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/hohl/sourcedrop-osx/releases/download/r#{version}/SourceDrop.app.zip"
-  appcast 'https://github.com/hohl/sourcedrop-osx/releases.atom'
+  appcast 'https://github.com/hohl/sourcedrop-osx/releases.atom',
+          :sha256 => '0e1e7ede6837460052fb22ad64fcaed3511b1668c27ba74b536fe32ccc49cf29'
   name 'SourceDrop'
   homepage 'http://sourcedrop.net/'
   license :bsd

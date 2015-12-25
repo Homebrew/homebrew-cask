@@ -4,7 +4,8 @@ cask 'teitoku' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/geta6/teitoku/releases/download/#{version}/teitoku-#{version}-osx.zip"
-  appcast 'https://github.com/geta6/teitoku/releases.atom'
+  appcast 'https://github.com/geta6/teitoku/releases.atom',
+          :sha256 => '84392c67a7a06a97fd1c37593bebaf1470da8475e37c0b44476ed7b746f92cfa'
   name 'Teitoku'
   homepage 'http://makebooth.com/i/1xkN1'
   license :mit

@@ -4,7 +4,8 @@ cask 'spotifree' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/ArtemGordinsky/Spotifree/releases/download/#{version}/Spotifree.dmg"
-  appcast 'http://spotifree.gordinskiy.com/appcast.xml'
+  appcast 'http://spotifree.gordinskiy.com/appcast.xml',
+          :sha256 => '9fc447ae4ee85183fa04efbf3396f86bdcc0f8d2303dc7c111bbbcd1faf46a68'
   name 'Spotifree'
   homepage 'http://spotifree.gordinskiy.com'
   license :oss

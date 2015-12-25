@@ -3,7 +3,8 @@ cask 'cumulus' do
   sha256 'cb0a6c6ae579e4877c634b72db3a5425d975f91bd4353c7c3ccd63d05aa8713f'
 
   url "https://github.com/gillesdemey/Cumulus/releases/download/v#{version}/Cumulus-#{version}-osx.zip"
-  appcast 'https://github.com/gillesdemey/Cumulus/releases.atom'
+  appcast 'https://github.com/gillesdemey/Cumulus/releases.atom',
+          :sha256 => '97c90bfc6b090a781a3096907cf90ab0fa2b5c8b5eb1146a6207272840671e27'
   name 'Cumulus'
   homepage 'http://gillesdemey.github.io/Cumulus/'
   license :oss

@@ -5,7 +5,8 @@ cask 'aliwangwang' do
   # alicdn.com is the official download host per the vendor homepage
   url "https://dbison.alicdn.com/updates/macww-nosandbox-#{version}.dmg"
   name 'Ali Wangwang'
-  appcast 'http://update.labs.etao.com/macww/updates.xml'
+  appcast 'http://update.labs.etao.com/macww/updates.xml',
+          :sha256 => 'be61920aa7408e95378893f2829a8292d19bf06df1d95e854425df31ff49cc0f'
   homepage 'http://wangwang.taobao.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

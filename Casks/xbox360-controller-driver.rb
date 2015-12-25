@@ -3,7 +3,8 @@ cask 'xbox360-controller-driver' do
   sha256 'a7efe48fae89aa592e904d1dc3ba9a73b2d644362eac88feb5e73a774e3fcf88'
 
   url "https://github.com/360Controller/360Controller/releases/download/v#{version}-unofficial/360ControllerInstall_#{version}_unofficial.dmg"
-  appcast 'https://github.com/360Controller/360Controller/releases.atom'
+  appcast 'https://github.com/360Controller/360Controller/releases.atom',
+          :sha256 => 'cbedc24b52358fbe5f0bd72f4d02ee96eac271ac3b544e8a37f42d9cfe9eccf1'
   name 'XBox 360 Controller driver for Mac OS X'
   name 'TattieBogle Xbox 360 Driver with improvements'
   homepage 'https://github.com/360Controller/360Controller'

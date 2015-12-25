@@ -3,7 +3,8 @@ cask 'soundflower' do
   sha256 '6b5e56d53238cf0f9075886aa40580634fc9d23368239f22eccebfd97c9f8e34'
 
   url "https://github.com/mattingalls/Soundflower/releases/download/#{version}/Soundflower-#{version}.dmg"
-  appcast 'https://github.com/mattingalls/Soundflower/releases.atom'
+  appcast 'https://github.com/mattingalls/Soundflower/releases.atom',
+          :sha256 => '5782759ffb2d6994cb222c88476011dee82680de40bef5011adcc36df6cdca49'
   name 'Soundflower'
   homepage 'https://github.com/mattingalls/Soundflower'
   license :oss

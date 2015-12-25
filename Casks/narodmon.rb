@@ -4,7 +4,8 @@ cask 'narodmon' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/niki-timofe/NarodMonOSX/releases/download/#{version}/NarodMon.zip"
-  appcast 'https://github.com/niki-timofe/NarodMonOSX/releases.atom'
+  appcast 'https://github.com/niki-timofe/NarodMonOSX/releases.atom',
+          :sha256 => 'cf50ae01f26bbe62dec5bb0391504c816fd45639402a0319a28d9f4dc7023183'
   name 'NarodMon'
   homepage 'http://narodmon.ru/'
   license :mit

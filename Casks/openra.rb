@@ -4,7 +4,8 @@ cask 'openra' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.zip"
-  appcast 'https://github.com/OpenRA/OpenRA/releases.atom'
+  appcast 'https://github.com/OpenRA/OpenRA/releases.atom',
+          :sha256 => '6375065250a8ecd493ac7e19b37e60c18f57c28883a74458455fe751ac155bf0'
   name 'OpenRA'
   homepage 'http://www.openra.net/'
   license :gpl

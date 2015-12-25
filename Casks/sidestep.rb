@@ -4,7 +4,8 @@ cask 'sidestep' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/chetan51/sidestep/releases/download/#{version}/Sidestep.zip"
-  appcast 'https://github.com/chetan51/sidestep/releases.atom'
+  appcast 'https://github.com/chetan51/sidestep/releases.atom',
+          :sha256 => 'fe529f01ce391e1ec8d93a811d47c6c0f50008006fa9741f895e356d578d4fe3'
   name 'Sidestep'
   homepage 'http://chetansurpur.com/projects/sidestep/'
   license :mit

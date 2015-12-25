@@ -4,7 +4,8 @@ cask 'imageplay' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/cpvrlab/ImagePlay/releases/download/#{version}/ImagePlay-#{version}.dmg"
-  appcast 'https://github.com/cpvrlab/ImagePlay/releases.atom'
+  appcast 'https://github.com/cpvrlab/ImagePlay/releases.atom',
+          :sha256 => 'fb7eee5114029e3ce1cf0e40b01f6e99393fa6dd567e6d6df5de2cad56589d3b'
   name 'ImagePlay'
   homepage 'http://imageplay.io/'
   license :gpl

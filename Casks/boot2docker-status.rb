@@ -4,7 +4,8 @@ cask 'boot2docker-status' do
 
   # ghithub.com is the official download host per the vendor homepage
   url "https://github.com/nickgartmann/boot2docker-status/releases/download/#{version}/Boot2Docker.Status-v#{version}.zip"
-  appcast 'https://github.com/nickgartmann/boot2docker-status/releases.atom'
+  appcast 'https://github.com/nickgartmann/boot2docker-status/releases.atom',
+          :sha256 => 'e399bad2bf54114275f4dbce07312b54338baca54d8489326405130501a02a0e'
   name 'Boot2Docker Status'
   homepage 'http://boot2docker-status.nickgartmann.com'
   license :apache
