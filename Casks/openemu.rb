@@ -33,5 +33,5 @@ cask 'openemu' do
                   '~/Library/Preferences/org.openemu.VisualBoyAdvance.plist'
                  ]
 
-  depends_on :macos => '>= :lion'
+  depends_on :macos => '>= :el_capitan'
 end
