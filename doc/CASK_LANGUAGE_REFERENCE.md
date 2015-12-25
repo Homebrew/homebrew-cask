@@ -761,7 +761,7 @@ Arguments to `uninstall :delete` should be static, single-quoted, absolute paths
 * Only single quotes should be used.
 * Double-quotes should not be used. `ENV['HOME']` and other variables
  should not be interpolated in the value.
-* Basic tilde expansion is performed on paths, i.e., leading `~/` is expanded to the home directory.
+* Basic tilde expansion is performed on paths, i.e., leading `~` is expanded to the home directory.
 * Only absolute paths should be given.
 * No glob expansion is performed (*eg* `*` characters are literal), though glob expansion is a desired future feature.
 
