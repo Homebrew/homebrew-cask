@@ -5,7 +5,7 @@ cask 'shimo' do
   url 'http://www.feingeist.io/fg-library/download.php?appName=Shimo4'
   appcast 'http://www.feingeist.io/fg-library/appcast.php'
   name 'Shimo'
-  homepage 'http://www.feingeist.io/shimo-vpn-client-for-mac/'
+  homepage 'https://www.feingeist.io/shimo/'
   license :commercial
 
   app 'Shimo.app'
