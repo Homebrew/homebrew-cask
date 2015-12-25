@@ -58,7 +58,7 @@ describe Hbc::Installer do
     end
 
     it "works with Adobe AIR-based Casks" do
-      skip unless Pathname('/Applications/Utilities/Adobe AIR Application Installer.app/Contents/MacOS/Adobe AIR Application Installer').exist?
+      skip unless Hbc::Container::Air.installer_exist?
       air_container = Hbc.load('adobe-air-container')
       shutup do
         Hbc::Installer.new(air_container).install
