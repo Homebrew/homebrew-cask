@@ -11,7 +11,10 @@ cask 'cacoo-ninja' do
             :args   => %w[-silent],
             :sudo   => true
 
-  uninstall :script => { :executable => 'Install Cacoo Ninja.app/Contents/MacOS/Install Cacoo Ninja' }
+  uninstall :script => {
+                        :executable => Hbc::Container::Air::INSTALLER_PATHNAME,
+                        :args => %w[-uninstall -silent /Applications/Cacoo\ Ninja.app]
+                       }
 
   depends_on :cask => 'adobe-air'
 end
