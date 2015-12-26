@@ -8,4 +8,8 @@ cask 'manico' do
   license :commercial
 
   app 'Manico.app'
+
+  zap :delete => [
+                  '~/Library/Containers/im.manico.Manico',
+                 ]
 end
