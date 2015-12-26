@@ -4,7 +4,7 @@ cask 'doxygen' do
 
   url "ftp://ftp.stack.nl/pub/users/dimitri/Doxygen-#{version}.dmg"
   name 'Doxygen'
-  homepage 'http://www.stack.nl/~dimitri/doxygen/'
+  homepage 'https://www.stack.nl/~dimitri/doxygen/'
   license :gpl
 
   app 'Doxygen.app'

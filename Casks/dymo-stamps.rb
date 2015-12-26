@@ -4,7 +4,7 @@ cask 'dymo-stamps' do
 
   url 'http://download.endicia.com/dymostamps/dymostamps.dmg'
   name 'Dymo Stamps'
-  homepage 'http://www.dymo.com/en-US/online-support'
+  homepage 'https://www.dymo.com/en-US/online-support'
   license :gratis
 
   app 'DYMO Stamps.app'

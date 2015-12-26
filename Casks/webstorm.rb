@@ -4,7 +4,7 @@ cask 'webstorm' do
 
   url "https://download.jetbrains.com/webstorm/WebStorm-#{version}-custom-jdk-bundled.dmg"
   name 'WebStorm'
-  homepage 'http://www.jetbrains.com/webstorm/'
+  homepage 'https://www.jetbrains.com/webstorm/'
   license :commercial
 
   app 'WebStorm.app'

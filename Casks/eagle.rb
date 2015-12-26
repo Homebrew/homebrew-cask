@@ -5,7 +5,7 @@ cask 'eagle' do
   # cadsoft.de is the official download host per the vendor homepage
   url "http://web.cadsoft.de/ftp/eagle/program/#{version.sub(%r{\.\d+$},'')}/eagle-mac64-#{version}.zip"
   name 'CadSoft EAGLE'
-  homepage 'http://www.cadsoftusa.com/'
+  homepage 'https://www.cadsoftusa.com/'
   license :freemium
 
   pkg "eagle-mac64-#{version}.pkg"

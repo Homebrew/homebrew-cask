@@ -5,7 +5,7 @@ cask 'nanobox' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://s3.amazonaws.com/tools.nanobox.io/cli/darwin/amd64/nanobox'
   name 'nanobox'
-  homepage 'http://www.nanobox.io/'
+  homepage 'https://www.nanobox.io/'
   license :mpl
 
   depends_on :cask => 'virtualbox'

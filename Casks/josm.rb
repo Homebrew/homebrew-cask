@@ -4,7 +4,7 @@ cask 'josm' do
 
   url "https://josm.openstreetmap.de/download/macosx/josm-macosx-#{version}.zip"
   name 'JOSM'
-  homepage 'http://josm.openstreetmap.de'
+  homepage 'https://josm.openstreetmap.de'
   license :gpl
 
   app 'JOSM.app'

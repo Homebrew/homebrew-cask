@@ -2,7 +2,7 @@ cask 'pphelper' do
   version :latest
   sha256 :no_check
 
-  url 'http://ghost.25pp.com/soft/pp_mac.dmg'
+  url 'https://ghost.25pp.com/soft/pp_mac.dmg'
   name 'pp助手'
   name 'pphelper'
   appcast 'https://liveupdate.25pp.com/macpc/Appcast.xml',

@@ -6,7 +6,7 @@ cask 'glo-bible' do
   url 'http://immersion.vo.llnwd.net/o42/pub/glo/mac/en-us/Glo.dmg'
   name 'Glo'
   name 'Glo Bible'
-  homepage 'http://globible.com/gloformac/'
+  homepage 'https://globible.com/gloformac/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Glo Bible.app'

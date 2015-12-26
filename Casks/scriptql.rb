@@ -2,9 +2,9 @@ cask 'scriptql' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.kainjow.com/downloads/ScriptQL_qlgenerator.zip'
+  url 'https://www.kainjow.com/downloads/ScriptQL_qlgenerator.zip'
   name 'ScriptQL'
-  homepage 'http://www.kainjow.com/'
+  homepage 'https://www.kainjow.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   qlplugin 'ScriptQL.qlgenerator'

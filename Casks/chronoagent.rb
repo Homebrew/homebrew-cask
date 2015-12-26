@@ -4,7 +4,7 @@ cask 'chronoagent' do
 
   url 'http://downloads.econtechnologies.com/CA_Mac_Download.dmg'
   name 'ChronoAgent'
-  homepage 'http://www.econtechnologies.com'
+  homepage 'https://www.econtechnologies.com'
   license :commercial
 
   pkg 'Install.pkg'

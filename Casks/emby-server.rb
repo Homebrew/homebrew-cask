@@ -5,7 +5,7 @@ cask 'emby-server' do
   # github.com is the official download host per the vendor homepage
   url 'https://github.com/MediaBrowser/Emby.Releases/raw/master/Server/Emby.Server.Mac.pkg'
   name 'Emby Server'
-  homepage 'http://emby.media/'
+  homepage 'https://emby.media/'
   license :gpl
 
   pkg 'Emby.Server.Mac.pkg'

@@ -4,7 +4,7 @@ cask 'openlp' do
 
   url "https://get.openlp.org/#{version}/OpenLP-#{version}.dmg"
   name 'OpenLP'
-  homepage 'http://openlp.org'
+  homepage 'https://openlp.org'
   license :gpl
 
   app 'OpenLP.app'

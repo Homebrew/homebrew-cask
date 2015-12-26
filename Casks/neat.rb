@@ -4,7 +4,7 @@ cask 'neat' do
 
   url "http://cdn.neatco.com/Neat-#{version}-Release.dmg"
   name 'Neat for Mac'
-  homepage 'http://www.neat.com'
+  homepage 'https://www.neat.com'
   license :gratis
 
   pkg 'Install Neat.pkg'

@@ -6,7 +6,7 @@ cask 'wowhead-client' do
   name 'Wowhead Client'
   appcast 'https://client.wowhead.com/files/wowhead-client-appcast.xml',
           :sha256 => '70f04bcdeedb2c902e80b6b22b9cd328d0f77af88e981f5865b019afd94130bc'
-  homepage 'http://wowhead.com'
+  homepage 'https://wowhead.com'
   license :gratis
 
   app 'Wowhead Client.app'

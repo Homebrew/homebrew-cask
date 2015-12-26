@@ -4,7 +4,7 @@ cask 'fotomagico' do
 
   url "https://cdn.boinx.com/software/fotomagico/Boinx_FotoMagico_#{version}.app.zip"
   name 'FotoMagico'
-  homepage 'http://www.boinx.com/fotomagico/'
+  homepage 'https://www.boinx.com/fotomagico/'
   license :commercial
 
   app 'FotoMagico.app'

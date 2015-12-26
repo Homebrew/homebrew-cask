@@ -5,7 +5,7 @@ cask 'love' do
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/rude/love/downloads/love-#{version}-macosx-x64.zip"
   name 'LÖVE'
-  homepage 'http://love2d.org'
+  homepage 'https://love2d.org'
   license :oss
 
   app 'love.app'

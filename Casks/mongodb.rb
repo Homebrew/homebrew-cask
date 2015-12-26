@@ -7,7 +7,7 @@ cask 'mongodb' do
   appcast 'https://github.com/gcollazo/mongodbapp/releases.atom',
           :sha256 => '5c46c5a7620876b92d6dfb17be2c92fe00c6b97601c9a827ad7c9b1aa47853e6'
   name 'MongoDB'
-  homepage 'http://elweb.co/mongodb-app/'
+  homepage 'https://elweb.co/mongodb-app/'
   license :mit
 
   app 'MongoDB.app'

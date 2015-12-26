@@ -2,7 +2,7 @@ cask 'vuze' do
   version :latest
   sha256 :no_check
 
-  url 'http://cf1.vuze.com/files/J7/VuzeBittorrentClientInstaller.dmg'
+  url 'https://cf1.vuze.com/files/J7/VuzeBittorrentClientInstaller.dmg'
   name 'Vuze'
   homepage 'https://www.vuze.com/'
   license :gpl

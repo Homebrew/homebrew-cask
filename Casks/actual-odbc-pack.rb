@@ -3,7 +3,7 @@ cask 'actual-odbc-pack' do
   sha256 :no_check
 
   # cachefly.net is the official download host per the vendor homepage
-  url 'http://actualtechnologies.cachefly.net/Actual_ODBC_Pack.dmg'
+  url 'https://actualtechnologies.cachefly.net/Actual_ODBC_Pack.dmg'
   name 'Actual ODBC Driver Pack'
   name 'Actual ODBC Drivers'
   homepage 'https://www.actualtech.com/products.php'

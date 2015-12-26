@@ -4,7 +4,7 @@ cask 'dispcalgui' do
 
   url 'http://dispcalgui.hoech.net/download/dispcalGUI.dmg'
   name 'dispcalGUI'
-  homepage 'http://dispcalgui.hoech.net'
+  homepage 'https://dispcalgui.hoech.net'
   license :gpl
 
   app 'dispcalGUI.app'
