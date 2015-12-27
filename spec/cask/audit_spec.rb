@@ -52,11 +52,25 @@ describe Hbc::Audit do
         audit.run!
         expect(audit.errors).to include('at least one name stanza is required')
       end
+    end
 
-      it "adds an error if version is latest and using sha256" do
+    describe "sha256 checks" do
+      it "adds an error if version is :latest and sha256 is not :no_check" do
         audit = Hbc::Audit.new(Hbc.load('version-latest-with-checksum'))
         audit.run!
-        expect(audit.errors).to include(%q{you should use sha256 :no_check when version is :latest})
+        expect(audit.errors).to include('you should use sha256 :no_check when version is :latest')
+      end
+
+      it "adds an error if sha256 is not a string of 64 hexadecimal characters" do
+        audit = Hbc::Audit.new(Hbc.load('invalid-sha256'))
+        audit.run!
+        expect(audit.errors).to include('sha256 string must be of 64 hexadecimal characters')
+      end
+
+      it "adds an error if sha256 is sha256 for empty string" do
+        audit = Hbc::Audit.new(Hbc.load('sha256-for-empty-string'))
+        audit.run!
+        expect(audit.errors).to include('cannot use the sha256 for an empty string: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855')
       end
     end
 
