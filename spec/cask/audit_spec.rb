@@ -61,7 +61,7 @@ describe Hbc::Audit do
         expect(audit.errors).to include('you should use sha256 :no_check when version is :latest')
       end
 
-      it "adds an error if sha256 is not a string of 64 hexadecimal characters" do
+      it "adds an error if sha256 is not a legal SHA-256 digest" do
         audit = Hbc::Audit.new(Hbc.load('invalid-sha256'))
         audit.run!
         expect(audit.errors).to include('sha256 string must be of 64 hexadecimal characters')
