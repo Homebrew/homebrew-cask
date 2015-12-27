@@ -291,16 +291,6 @@ Web browsers may obscure the direct `url` download location for a variety of rea
 $ ./developer/bin/list_url_attributes_on_file <file>
 ```
 
-### Subversion URLs
-
-In rare cases, a distribution may not be available over ordinary HTTP/S. Subversion URLs are also supported, and can be specified by appending the following key/value pairs to `url`:
-
-| key                | value       |
-| ------------------ | ----------- |
-| `:using`           | the symbol `:svn` is the only legal value
-| `:revision`        | a string identifying the subversion revision to download
-| `:trust_cert`      | set to `true` to automatically trust the certificate presented by the server (avoiding an interactive prompt)
-
 ## Appcast Stanza Details
 
 The value of the `appcast` stanza is a string, holding the URL for an appcast which provides information on future updates. Generally, the appcast URL returns Sparkle-compatible XML, though that is not required.
