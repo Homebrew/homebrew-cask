@@ -13,9 +13,8 @@ class Hbc::Audit
   def run!(download = false)
     check_required_stanzas
     check_no_string_version_latest
-    check_sha256_no_check_if_latest
-    check_sha256_actually_256
-    check_sha256_invalid
+    check_sha256
+    check_appcast
     check_sourceforge_download_url_format
     check_download(download) if download
     return !(errors? or warnings?)
@@ -47,6 +46,13 @@ class Hbc::Audit
     end
   end
 
+  def check_sha256
+    return unless cask.sha256
+    check_sha256_no_check_if_latest
+    check_sha256_actually_256
+    check_sha256_invalid
+  end
+
   def check_sha256_no_check_if_latest
     odebug "Verifying sha256 :no_check with version :latest"
     if cask.version == :latest and cask.sha256 != :no_check
@@ -54,21 +60,35 @@ class Hbc::Audit
     end
   end
 
-  def check_sha256_actually_256
-    odebug "Verifying sha256 string is a legal SHA-256 digest"
-    if cask.sha256.kind_of?(String)
-      unless cask.sha256.length == 64 && cask.sha256[/^[0-9a-f]+$/i]
+  def check_sha256_actually_256(sha256: cask.sha256, stanza: 'sha256')
+    odebug "Verifying #{stanza} string is a legal SHA-256 digest"
+    if sha256.kind_of?(String)
+      unless sha256.length == 64 && sha256[/^[0-9a-f]+$/i]
         add_error "sha256 string must be of 64 hexadecimal characters"
       end
     end
   end
 
-  def check_sha256_invalid
-    odebug "Verifying sha256 is not a known invalid value"
+  def check_sha256_invalid(sha256: cask.sha256, stanza: 'sha256')
+    odebug "Verifying #{stanza} is not a known invalid value"
     empty_sha256 = 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
-    if cask.sha256 == empty_sha256
+    if sha256 == empty_sha256
       add_error "cannot use the sha256 for an empty string: #{empty_sha256}"
     end
+  end
+
+  def check_appcast
+    return unless cask.appcast
+    odebug 'Auditing appcast'
+    check_appcast_has_sha256
+    return unless cask.appcast.sha256
+    check_sha256_actually_256(sha256: cask.appcast.sha256, stanza: 'appcast :sha256')
+    check_sha256_invalid(sha256: cask.appcast.sha256, stanza: 'appcast :sha256')
+  end
+
+  def check_appcast_has_sha256
+    odebug 'Verifying appcast has :sha256 key'
+    add_error 'a sha256 is required for appcast' unless cask.appcast.sha256
   end
 
   def check_download(download)

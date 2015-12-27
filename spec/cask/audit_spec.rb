@@ -74,6 +74,26 @@ describe Hbc::Audit do
       end
     end
 
+    describe "appcast checks" do
+      it "adds an error if appcast has no sha256" do
+        audit = Hbc::Audit.new(Hbc.load('appcast-missing-sha256'))
+        audit.run!
+        expect(audit.errors).to include('a sha256 is required for appcast')
+      end
+
+      it "adds an error if appcast sha256 is not a string of 64 hexadecimal characters" do
+        audit = Hbc::Audit.new(Hbc.load('appcast-invalid-sha256'))
+        audit.run!
+        expect(audit.errors).to include('sha256 string must be of 64 hexadecimal characters')
+      end
+
+      it "adds an error if appcast sha256 is sha256 for empty string" do
+        audit = Hbc::Audit.new(Hbc.load('appcast-sha256-for-empty-string'))
+        audit.run!
+        expect(audit.errors).to include('cannot use the sha256 for an empty string: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855')
+      end
+    end
+
     describe "preferred download URL formats" do
       it "adds a warning if SourceForge doesn't use download subdomain" do
         warning_msg = 'SourceForge URL format incorrect. See https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforge-urls'
