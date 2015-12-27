@@ -47,6 +47,12 @@ describe Hbc::Audit do
         expect(audit.errors).to include('a license value is required (:unknown is OK)')
       end
 
+      it "adds an error if name is missing" do
+        audit = Hbc::Audit.new(Hbc.load('missing-name'))
+        audit.run!
+        expect(audit.errors).to include('at least one name stanza is required')
+      end
+
       it "adds an error if version is latest and using sha256" do
         audit = Hbc::Audit.new(Hbc.load('version-latest-with-checksum'))
         audit.run!
