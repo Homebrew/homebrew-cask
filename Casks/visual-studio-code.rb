@@ -14,4 +14,6 @@ cask 'visual-studio-code' do
                   '~/Library/Application Support/Code',
                   '~/Library/Caches/Code',
                  ]
+
+  auto_updates true
 end
