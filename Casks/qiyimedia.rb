@@ -4,7 +4,7 @@ cask 'qiyimedia' do
 
   url 'http://static.qiyi.com/ext/common/QIYImedia_Mac_5.dmg'
   name '爱奇艺视频'
-  homepage 'http://www.iqiyi.com'
+  homepage 'https://www.iqiyi.com'
   license :gratis
 
   app '爱奇艺.app'

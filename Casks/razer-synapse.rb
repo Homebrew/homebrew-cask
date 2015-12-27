@@ -5,7 +5,7 @@ cask 'razer-synapse' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://razerdrivers.s3.amazonaws.com/drivers/Synapse2/mac/Razer_Synapse_Mac_Driver_v#{version}.dmg"
   name 'Razer Synapse'
-  homepage 'http://www.razerzone.com/synapse/'
+  homepage 'https://www.razerzone.com/synapse/'
   license :gratis
 
   pkg 'Razer Synapse.pkg'

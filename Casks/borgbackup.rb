@@ -4,7 +4,7 @@ cask 'borgbackup' do
 
   url "https://github.com/borgbackup/borg/releases/download/#{version}/borg-macosx64"
   name 'BorgBackup'
-  homepage 'http://borgbackup.readthedocs.org/en/stable/'
+  homepage 'https://borgbackup.readthedocs.org/en/stable/'
   license :bsd
   gpg "#{url}.asc",
       :key_id => '243ACFA951F78E01'

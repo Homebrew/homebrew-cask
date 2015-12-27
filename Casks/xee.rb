@@ -4,7 +4,7 @@ cask 'xee' do
 
   url "http://xee.c3.cx/downloads/Xee#{version}.dmg"
   name 'Xee³'
-  homepage 'http://xee.c3.cx/'
+  homepage 'https://xee.c3.cx/'
   license :commercial
 
   app 'Xee³.app'

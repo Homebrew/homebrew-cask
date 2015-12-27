@@ -4,7 +4,7 @@ cask 'steelseries-exactmouse-tool' do
 
   url 'http://downloads.steelseriescdn.com/drivers/tools/steelseries-exactmouse-tool.dmg'
   name 'SteelSeries ExactMouse Tool'
-  homepage 'http://steelseries.com/support/downloads'
+  homepage 'https://steelseries.com/support/downloads'
   license :gratis
 
   app 'SteelSeries ExactMouse Tool.app'

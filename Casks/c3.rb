@@ -6,7 +6,7 @@ cask 'c3' do
   # cloudfront.net is the official download host per the vendor homepage
   url "https://d2xj26462na9l3.cloudfront.net/c3/C3-#{version}.dmg"
   name 'C3'
-  homepage 'http://www.downloadc3.com/'
+  homepage 'https://www.downloadc3.com/'
   license :gratis
 
   app 'c3.app'

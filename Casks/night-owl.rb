@@ -3,7 +3,7 @@ cask 'night-owl' do
   sha256 :no_check
 
   # null.net is the official download host per the vendor homepage
-  url 'http://aki-null.net/yf/NightOwl.zip'
+  url 'https://aki-null.net/yf/NightOwl.zip'
   name 'YoruFukurou'
   name 'NightOwl'
   appcast 'https://sites.google.com/site/yorufukurou/distribution/appcast.xml',

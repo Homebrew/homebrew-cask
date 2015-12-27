@@ -14,7 +14,7 @@ cask 'sente' do
   appcast 'https://www.thirdstreetsoftware.com/rss/Sente65.xml?v=6.6.0',
           :sha256 => '2083ee7a01313014c7d600e13018709521fd3f53d767bd31cd8d2caec2120c7f'
   name 'Sente'
-  homepage 'http://www.thirdstreetsoftware.com'
+  homepage 'https://www.thirdstreetsoftware.com'
   license :freemium
 
   app 'Sente 6.app'

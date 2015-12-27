@@ -4,7 +4,7 @@ cask 'zipeg' do
 
   url 'https://www.zipeg.net/downloads/zipeg_mac.dmg'
   name 'Zipeg'
-  homepage 'http://www.zipeg.net/'
+  homepage 'https://www.zipeg.net/'
   license :gratis
 
   app 'Zipeg.app'

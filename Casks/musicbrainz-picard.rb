@@ -4,7 +4,7 @@ cask 'musicbrainz-picard' do
 
   url "ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg"
   name 'MusicBrainz Picard'
-  homepage 'http://picard.musicbrainz.org'
+  homepage 'https://picard.musicbrainz.org'
   license :gpl
 
   app 'MusicBrainz Picard.app'

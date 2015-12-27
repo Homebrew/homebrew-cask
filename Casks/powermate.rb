@@ -4,7 +4,7 @@ cask 'powermate' do
 
   url "http://support.griffintechnology.com/sites/default/files/PowerMate_v#{version}.zip"
   name 'Griffin Powermate'
-  homepage 'http://support.griffintechnology.com/support/powermate/'
+  homepage 'https://support.griffintechnology.com/support/powermate/'
   license :gratis
 
   app 'PowerMate.app'

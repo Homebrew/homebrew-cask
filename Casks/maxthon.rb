@@ -4,7 +4,7 @@ cask 'maxthon' do
 
   url "https://dl.maxthon.com/mac/Maxthon-#{version}.dmg"
   name 'Maxthon'
-  homepage 'http://www.maxthon.com/'
+  homepage 'https://www.maxthon.com/'
   license :gratis
 
   app 'Maxthon.app'

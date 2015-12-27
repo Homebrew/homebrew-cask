@@ -4,7 +4,7 @@ cask 'xmind' do
 
   url "http://www.xmind.net/xmind/downloads/xmind7-macosx-#{version}.dmg"
   name 'XMind'
-  homepage 'http://www.xmind.net'
+  homepage 'https://www.xmind.net'
   license :freemium
 
   zap :delete => [

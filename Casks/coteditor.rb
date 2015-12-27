@@ -19,7 +19,7 @@ cask 'coteditor' do
   appcast 'https://github.com/coteditor/CotEditor/releases.atom',
           :sha256 => 'dac6ecbea56d959f6f6b7239abf6f415709898c7b502ad37aebb8747c8f489af'
   name 'CotEditor'
-  homepage 'http://coteditor.com/'
+  homepage 'https://coteditor.com/'
   license :gpl
 
   app 'CotEditor.app'

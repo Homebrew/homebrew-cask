@@ -4,7 +4,7 @@ cask 'docear' do
 
   url 'http://docear.org/download/docear.dmg'
   name 'Docear'
-  homepage 'http://docear.org'
+  homepage 'https://docear.org'
   license :gpl
 
   app 'Docear.app'

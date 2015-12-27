@@ -39,7 +39,7 @@ cask 'alfred' do
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
-  homepage 'http://www.alfredapp.com/'
+  homepage 'https://www.alfredapp.com/'
   license :freemium
 
   app 'Alfred 2.app'

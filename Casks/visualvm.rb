@@ -4,7 +4,7 @@ cask 'visualvm' do
 
   url "https://java.net/downloads/visualvm/release138/VisualVM_#{version.delete('.')}.dmg"
   name 'VisualVM'
-  homepage 'http://visualvm.java.net'
+  homepage 'https://visualvm.java.net'
   license :gpl
 
   app 'VisualVM.app'

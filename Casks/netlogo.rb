@@ -4,7 +4,7 @@ cask 'netlogo' do
 
   url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo-#{version.to_f}.dmg"
   name 'NetLogo'
-  homepage 'http://ccl.northwestern.edu/netlogo/'
+  homepage 'https://ccl.northwestern.edu/netlogo/'
   license :gpl
 
   zap :delete => [

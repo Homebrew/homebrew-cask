@@ -6,13 +6,13 @@ cask 'imagealpha' do
   else
     version '1.4.0'
     sha256 '7dc856013d5e5b8ecaa63dba2da8bd0db17de22ee60790e3b664898327727ed8'
-    appcast 'http://pngmini.com/appcast.xml',
+    appcast 'https://pngmini.com/appcast.xml',
             :sha256 => '6586efef537dc200f439a265d1daee36ef4af08c43c81e4a56fcd4fae088ddbb'
   end
 
-  url "http://pngmini.com/ImageAlpha#{version}.tar.bz2"
+  url "https://pngmini.com/ImageAlpha#{version}.tar.bz2"
   name 'ImageAlpha'
-  homepage 'http://pngmini.com/'
+  homepage 'https://pngmini.com/'
   license :gpl
 
   app 'ImageAlpha.app'

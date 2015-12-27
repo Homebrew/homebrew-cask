@@ -4,7 +4,7 @@ cask 'eclipse-installer' do
 
   url 'http://eclipse.org/downloads/download.php?file=/oomph/products/eclipse-inst-mac64.tar.gz&r=1'
   name 'Eclipse Installer'
-  homepage 'http://eclipse.org/'
+  homepage 'https://eclipse.org/'
   license :eclipse
 
   app 'Eclipse Installer.app'

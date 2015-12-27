@@ -6,7 +6,7 @@ cask 'docker' do
   appcast 'https://github.com/docker/machine/releases.atom',
           :sha256 => '2840ae55fa5e849ab523eae9f9d6c2a2cd055d42503caa055cdb43120baee94c'
   name 'Docker Engine Client'
-  homepage 'http://docs.docker.com/engine/userguide/'
+  homepage 'https://docs.docker.com/engine/userguide/'
   license :apache
 
   container :type => :naked

@@ -4,7 +4,7 @@ cask 'outwit-hub' do
 
   url 'https://www.outwit.com/downloads/release/outwit-hub.en-US.mac64.dmg'
   name 'OutWit Hub'
-  homepage 'http://www.outwit.com'
+  homepage 'https://www.outwit.com'
   license :freemium
 
   app 'Outwit Hub.app'

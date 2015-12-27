@@ -4,7 +4,7 @@ cask 'go-server' do
 
   url "http://download.go.cd/gocd/go-server-#{version}-osx.zip"
   name 'Go Server'
-  homepage 'http://www.go.cd/'
+  homepage 'https://www.go.cd/'
   license :apache
 
   app 'Go Server.app'

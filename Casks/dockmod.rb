@@ -13,7 +13,7 @@ cask 'dockmod' do
 
   url "http://spyresoft.com/dockmod/download.php?version=#{version}"
   name 'DockMod'
-  homepage 'http://spyresoft.com/dockmod/'
+  homepage 'https://spyresoft.com/dockmod/'
   license :freemium
 
   app 'DockMod.app'

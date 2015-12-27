@@ -4,7 +4,7 @@ cask 'simple-sync' do
 
   # roomieremote.com is the official download host per the vendor homepage
   url "https://www.roomieremote.com/b/SimpleSync-#{version.delete('.')}.zip"
-  appcast 'http://www.roomieremote.com/b/Simple-SyncAppcast.xml',
+  appcast 'https://www.roomieremote.com/b/Simple-SyncAppcast.xml',
           :sha256 => '3968102cbd303c83db82ef0a73170e0891d5ff681996f94b69c8c80120659d51'
   name 'Simple Sync'
   homepage 'https://simplecontrol.com/simple-sync'

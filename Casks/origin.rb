@@ -5,7 +5,7 @@ cask 'origin' do
   # akamaihd.net is the official download host per the vendor homepage
   url 'https://eaassets-a.akamaihd.net/Origin-Client-Download/origin/mac/Origin.dmg'
   name 'Origin'
-  homepage 'http://origin.com'
+  homepage 'https://origin.com'
   license :gratis
 
   app 'Origin.app'

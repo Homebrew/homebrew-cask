@@ -5,7 +5,7 @@ cask 'imazing' do
   # devmate.com is the official download host per the vendor homepage
   url "https://dl.devmate.com/com.DigiDNA.iMazingMac/#{version.sub(%r{-.*},'')}/#{version.sub(%r{.*-},'')}/iMazingforMac-#{version.sub(%r{-.*},'')}.dmg"
   name 'iMazing'
-  appcast 'http://updates.devmate.com/com.DigiDNA.iMazingMac.xml',
+  appcast 'https://updates.devmate.com/com.DigiDNA.iMazingMac.xml',
           :sha256 => '57e3299100e16ac2f4f828d652c5e5a104d09119fb299ad39007dec5275e07e8'
   homepage 'https://imazing.com/'
   license :commercial

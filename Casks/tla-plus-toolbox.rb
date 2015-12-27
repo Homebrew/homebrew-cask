@@ -5,7 +5,7 @@ cask 'tla-plus-toolbox' do
   # inria.fr is the official download host per the vendor homepage
   url "https://tla.msr-inria.inria.fr/tlatoolbox/products/TLAToolbox-#{version}-macosx.cocoa.x86_64.zip"
   name 'TLA+ Toolbox'
-  homepage 'http://research.microsoft.com/en-us/um/people/lamport/tla/toolbox.html'
+  homepage 'https://research.microsoft.com/en-us/um/people/lamport/tla/toolbox.html'
   license :mit
 
   # Renamed for clarity: app name is inconsistent with its branding.

@@ -4,7 +4,7 @@ cask 'the-unarchiver' do
 
   url "http://unarchiver.c3.cx/downloads/TheUnarchiver#{version}.dmg"
   name 'The Unarchiver'
-  homepage 'http://unarchiver.c3.cx/unarchiver'
+  homepage 'https://unarchiver.c3.cx/unarchiver'
   license :oss
 
   app 'The Unarchiver.app'

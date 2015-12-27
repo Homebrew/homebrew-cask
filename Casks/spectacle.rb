@@ -7,14 +7,14 @@ cask 'spectacle' do
     version '1.0.1'
     sha256 '8b41469acb8ae5bc845f1441c2cf630f72f0fc14ad324e78336b0cb4268216d7'
 
-    appcast 'http://spectacleapp.com/updates/appcast.xml',
+    appcast 'https://spectacleapp.com/updates/appcast.xml',
             :sha256 => 'd79bb2db04e7e53a7bb9184f9c048e4dde76a06e1be1232a9761f60db3836084'
   end
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/spectacle/downloads/Spectacle+#{version}.zip"
   name 'Spectacle'
-  homepage 'http://spectacleapp.com/'
+  homepage 'https://spectacleapp.com/'
   license :mit
 
   app 'Spectacle.app'

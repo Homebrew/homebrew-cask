@@ -5,7 +5,7 @@ cask 'sunlogin-remote' do
   url "http://download.oray.com/sunlogin/SunloginRemote_v#{version}.dmg"
   name 'Sunlogin Remote'
   name '向日葵控制端'
-  homepage 'http://sunlogin.oray.com'
+  homepage 'https://sunlogin.oray.com'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Sunlogin Remote.app'

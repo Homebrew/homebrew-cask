@@ -5,7 +5,7 @@ cask 'p4v' do
   url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*},'\1')}/bin.macosx107x86_64/P4V.dmg"
   name 'Perforce Visual Client'
   name 'P4V'
-  homepage 'http://www.perforce.com/product/components/perforce-visual-client'
+  homepage 'https://www.perforce.com/product/components/perforce-visual-client'
   license :gratis
 
   app 'p4v.app'

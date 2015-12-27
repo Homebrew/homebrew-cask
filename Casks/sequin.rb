@@ -4,7 +4,7 @@ cask 'sequin' do
 
   url 'ftp://ftp.ncbi.nih.gov/sequin/sequin.mac.dmg'
   name 'Sequin'
-  homepage 'http://www.ncbi.nlm.nih.gov/Sequin/'
+  homepage 'https://www.ncbi.nlm.nih.gov/Sequin/'
   license :unknown
 
   app 'Sequin Folder/Sequin.app'

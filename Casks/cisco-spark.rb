@@ -4,7 +4,7 @@ cask 'cisco-spark' do
 
   url 'https://download.ciscospark.com/mac/Spark.dmg'
   name 'Cisco Systems Spark'
-  homepage 'http://www.webex.com/projectsquared/'
+  homepage 'https://www.webex.com/projectsquared/'
   license :gratis
 
   depends_on :macos => '>= :mavericks'

@@ -7,7 +7,7 @@ cask 'pritunl' do
   appcast 'https://github.com/pritunl/pritunl-client-electron/releases.atom',
           :sha256 => 'bc21320479679d2db525581edfaf33e0f8abab534e658aa190eb973a0050ca98'
   name 'Pritunl OpenVPN Client'
-  homepage 'http://client.pritunl.com'
+  homepage 'https://client.pritunl.com'
   license :gpl
 
   pkg 'Pritunl.pkg'

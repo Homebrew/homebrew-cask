@@ -22,7 +22,7 @@ cask 'macports' do
   gpg "#{url}.asc",
       :key_id => '01ff673fb4aae6cd'
   name 'MacPorts'
-  homepage 'http://www.macports.org'
+  homepage 'https://www.macports.org'
   license :bsd
 
   uninstall :pkgutil => 'org.macports.MacPorts'

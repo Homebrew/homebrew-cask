@@ -4,7 +4,7 @@ cask 'macintosh-explorer' do
 
   url 'http://www.ragesw.com/downloads/ragesw/mac_explorer_alt.dmg'
   name 'Macintosh Explorer'
-  homepage 'http://www.ragesw.com/products/explorer.html'
+  homepage 'https://www.ragesw.com/products/explorer.html'
   license :gratis
 
   app 'Macintosh Explorer.app'

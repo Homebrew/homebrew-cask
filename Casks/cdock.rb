@@ -7,7 +7,7 @@ cask 'cdock' do
           :sha256 => '962f344212a4dfdfb421854d1151dbab96336c87fda9f9105748b4d1a5770392'
   name 'cDock2'
   name 'cDock'
-  homepage 'http://w0lfschild.github.io/cdock'
+  homepage 'https://w0lfschild.github.io/cdock'
   license :bsd
 
   app 'cDock.app'

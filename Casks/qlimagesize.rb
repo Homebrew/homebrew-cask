@@ -3,7 +3,7 @@ cask 'qlimagesize' do
   sha256 :no_check
 
   # whine.fr is the official download host per the vendor homepage
-  url 'http://repo.whine.fr/qlImageSize.pkg'
+  url 'https://repo.whine.fr/qlImageSize.pkg'
   name 'qlImageSize'
   homepage 'https://github.com/Nyx0uf/qlImageSize'
   license :bsd

@@ -8,12 +8,12 @@ cask 'witch' do
     sha256 :no_check
 
     url 'http://manytricks.com/download/witch'
-    appcast 'http://manytricks.com/witch/appcast.xml',
+    appcast 'https://manytricks.com/witch/appcast.xml',
             :sha256 => '36fc6fa7454af97645ec12d1ee76fed2ff3a4bf6339e931b257fe75bd46f5027'
   end
 
   name 'Witch'
-  homepage 'http://manytricks.com/witch/'
+  homepage 'https://manytricks.com/witch/'
   license :commercial
 
   prefpane 'Witch.prefPane'

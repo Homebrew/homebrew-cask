@@ -4,7 +4,7 @@ cask 'wacom-graphire4-tablet' do
 
   url "http://cdn.wacom.com/U/Drivers/Mac/Consumer/#{version.sub(%r{-.*},'').delete('.')}/PenTablet_#{version}.dmg"
   name 'Graphire4 (CTE) Legacy Driver'
-  homepage 'http://us.wacom.com/en/support/legacy-drivers/'
+  homepage 'https://us.wacom.com/en/support/legacy-drivers/'
   license :gratis
 
   pkg 'Install Bamboo.pkg'

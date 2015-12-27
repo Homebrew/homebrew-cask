@@ -5,7 +5,7 @@ cask 'logmein-hamachi' do
   # logmein.com is the official download host per the vendor homepage
   url 'https://secure.logmein.com/LogMeInHamachi.zip'
   name 'LogMeIn Hamachi'
-  homepage 'http://vpn.net'
+  homepage 'https://vpn.net'
   license :freemium
 
   installer :script => 'LogMeInHamachiInstaller.app/Contents/MacOS/Lili',

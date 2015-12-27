@@ -4,7 +4,7 @@ cask 'dynamiclyrics' do
 
   url "http://dl.martianz.cn/dynamiclyrics/DynamicLyricsBuild#{version.sub(%r{^.*\.},'')}.zip"
   name 'DynamicLyrics'
-  homepage 'http://martianz.cn/dynamiclyrics/'
+  homepage 'https://martianz.cn/dynamiclyrics/'
   license :oss
 
   app 'DynamicLyrics.app'

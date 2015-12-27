@@ -7,7 +7,7 @@ cask 'darktable' do
   appcast 'https://github.com/darktable-org/darktable/releases.atom',
           :sha256 => 'db63bd878b86eeabbf524a936fb843661b9778d2a3f17b022a7a83de7cc3b076'
   name 'darktable'
-  homepage 'http://www.darktable.org/'
+  homepage 'https://www.darktable.org/'
   license :gpl
 
   app 'darktable.app'

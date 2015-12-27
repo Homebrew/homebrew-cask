@@ -4,7 +4,7 @@ cask 'rust' do
 
   url "https://static.rust-lang.org/dist/rust-#{version}-x86_64-apple-darwin.pkg"
   name 'Rust'
-  homepage 'http://www.rust-lang.org/'
+  homepage 'https://www.rust-lang.org/'
   license :oss
 
   pkg "rust-#{version}-x86_64-apple-darwin.pkg"

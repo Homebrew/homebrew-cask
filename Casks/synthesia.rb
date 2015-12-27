@@ -5,7 +5,7 @@ cask 'synthesia' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://synthesia.s3.amazonaws.com/files/Synthesia-#{version}.dmg"
   name 'Synthesia'
-  homepage 'http://www.synthesiagame.com'
+  homepage 'https://www.synthesiagame.com'
   license :freemium
 
   app 'Synthesia.app'

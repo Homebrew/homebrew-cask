@@ -10,7 +10,7 @@ cask 'ableton-live-suite' do
   end
 
   name 'Ableton Live Suite'
-  homepage 'http://ableton.com/en/live'
+  homepage 'https://ableton.com/en/live'
   license :commercial
 
   app "Ableton Live #{version[0]} Suite.app"

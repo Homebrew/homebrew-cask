@@ -10,7 +10,7 @@ cask 'razorsql' do
   end
 
   name 'RazorSQL'
-  homepage 'http://razorsql.com/download_mac.html'
+  homepage 'https://razorsql.com/download_mac.html'
   license :commercial
 
   app 'RazorSQL.app'

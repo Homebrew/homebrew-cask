@@ -3,11 +3,11 @@ cask 'scala-ide' do
 
   if Hardware::CPU.is_32_bit?
     # typesafe.com is the official download host per the vendor homepage
-    url "http://downloads.typesafe.com/scalaide-pack/#{version}-vfinal-luna-211-20150928/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86.zip"
+    url "https://downloads.typesafe.com/scalaide-pack/#{version}-vfinal-luna-211-20150928/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86.zip"
     sha256 '3f43fef5ccb7f01b6e539c9270e26799361c006b3bfdba2140a9af8e8eafe197'
   else
     # typesafe.com is the official download host per the vendor homepage
-    url "http://downloads.typesafe.com/scalaide-pack/#{version}-vfinal-luna-211-20151201/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86_64.zip"
+    url "https://downloads.typesafe.com/scalaide-pack/#{version}-vfinal-luna-211-20151201/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86_64.zip"
     sha256 '3a7ad459cf2257da2cb8694b47c6fdb30ff3c3bcc020e03636fc49635a476ef6'
   end
 

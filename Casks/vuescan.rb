@@ -9,7 +9,7 @@ cask 'vuescan' do
   end
 
   name 'VueScan'
-  homepage 'http://www.hamrick.com'
+  homepage 'https://www.hamrick.com'
   license :commercial
 
   app 'VueScan.app'

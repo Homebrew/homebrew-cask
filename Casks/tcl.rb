@@ -3,9 +3,9 @@ cask 'tcl' do
   sha256 '2aae9686f40a7216e185877e7bf8421af35f597c20545d565511367587659bb9'
 
   # activestate.com is the official download host per the vendor homepage
-  url "http://downloads.activestate.com/ActiveTcl/releases/#{version.sub(%r{\.\d+$},'')}/ActiveTcl#{version}-macosx10.5-i386-x86_64-threaded.dmg"
+  url "https://downloads.activestate.com/ActiveTcl/releases/#{version.sub(%r{\.\d+$},'')}/ActiveTcl#{version}-macosx10.5-i386-x86_64-threaded.dmg"
   name 'ActiveTcl'
-  homepage 'http://tcl.tk/'
+  homepage 'https://tcl.tk/'
   license :oss
 
   depends_on :macos => '>= :leopard'
