@@ -1,6 +1,6 @@
 cask 'quotefix' do
-  version '2.7.2'
-  sha256 'f8431da47b026137d3c43633ce683627e0a390e00ab96638c04869d1ae30d4e9'
+  version '2.7.3'
+  sha256 '5382def466d6350bb060dd19eb11f7d9cf90ba37ffac7284a1f574771c6de45f'
 
   url "https://github.com/robertklep/quotefixformac/releases/download/v#{version}/QuoteFix-v#{version}.zip"
   appcast 'https://github.com/robertklep/quotefixformac/releases.atom',
