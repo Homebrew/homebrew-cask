@@ -18,6 +18,8 @@ cask 'bettertouchtool' do
   homepage 'http://boastr.net/'
   license :gratis
 
+  auto_updates true
+
   app 'BetterTouchTool.app'
 
   accessibility_access true
