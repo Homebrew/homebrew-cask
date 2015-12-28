@@ -7,6 +7,8 @@ cask 'vmware-fusion' do
   homepage 'https://www.vmware.com/products/fusion/'
   license :commercial
 
+  auto_updates true
+
   binary 'VMware Fusion.app/Contents/Library/vmnet-cfgcli'
   binary 'VMware Fusion.app/Contents/Library/vmnet-cli'
   binary 'VMware Fusion.app/Contents/Library/vmrun'
