@@ -293,15 +293,15 @@ $ ./developer/bin/list_url_attributes_on_file <file>
 
 ## Appcast Stanza Details
 
-The value of the `appcast` stanza is a string, holding the URL for an appcast which provides information on future updates. Generally, the appcast URL returns Sparkle-compatible XML, though that is not required.
+The value of the `appcast` stanza is a string, holding the URL for an appcast which provides information on future updates.
 
-Example: [adium.rb](../../d7f8eafa4fc01a6c383925d9962b5da33876a8b6/Casks/adium.rb#L6)
-
-### Additional Appcast Parameters
+### Required Appcast Parameters
 
 | key                | value       |
 | ------------------ | ----------- |
 | `:sha256`          | a string holding the SHA-256 checksum of the most recent appcast which matches the current Cask versioning
+
+Example: [atom.rb](../../127387b9fc686370ffa92c01eeed8979df9e1621/Casks/atom.rb#L7#L8)
 
 ## License Stanza Details
 
