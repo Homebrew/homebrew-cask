@@ -131,7 +131,7 @@ if [[ -z "$1" ]]; then
 
   for file in *.rb;
   do
-    ${program} ${options} ${file}
+    "$0" ${options} ${file}
   done
 
   exit 0
