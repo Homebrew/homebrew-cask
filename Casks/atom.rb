@@ -11,7 +11,6 @@ cask 'atom' do
   license :mit
 
   auto_updates true
-
   depends_on :macos => '>= :mountain_lion'
 
   app 'Atom.app'
