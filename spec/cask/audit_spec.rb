@@ -23,22 +23,12 @@ describe Hbc::Audit do
 
   describe "run!" do
     describe "required fields" do
-      it "adds an error if url is missing" do
-        audit = Hbc::Audit.new(Hbc.load('missing-url'))
-        audit.run!
-        expect(audit.errors).to include('a url stanza is required')
-      end
-
-      it "adds an error if version is missing" do
-        audit = Hbc::Audit.new(Hbc.load('missing-version'))
-        audit.run!
-        expect(audit.errors).to include('a version stanza is required')
-      end
-
-      it "adds an error if homepage is missing" do
-        audit = Hbc::Audit.new(Hbc.load('missing-homepage'))
-        audit.run!
-        expect(audit.errors).to include('a homepage stanza is required')
+      %w[version sha256 url homepage].each do |stanza|
+        it "adds an error if #{stanza} is missing" do
+          audit = Hbc::Audit.new(Hbc.load("missing-#{stanza}"))
+          audit.run!
+          expect(audit.errors).to include("a #{stanza} stanza is required")
+        end
       end
 
       it "adds an error if license is missing" do
