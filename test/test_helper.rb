@@ -46,8 +46,8 @@ HOMEBREW_CACHE.join('Casks').mkpath
 
 # must be called after testing_env so at_exit hooks are in proper order
 require 'minitest/autorun'
-# todo, re-enable minitest-colorize, broken under current test environment for unknown reasons
-# require 'minitest-colorize'
+require 'minitest/reporters'
+Minitest::Reporters.use! Minitest::Reporters::DefaultReporter.new(color: true)
 
 # Force mocha to patch MiniTest since we have both loaded thanks to homebrew's testing_env
 require 'mocha/api'
