@@ -1,4 +1,4 @@
-cask :v1 => 'quip' do
+cask 'quip' do
   version '4.2'
   sha256 'b1277eec2ffee0559f80d67840718f7c60e38ae29f9a1faf8a1ca1ffdc86151b'
 

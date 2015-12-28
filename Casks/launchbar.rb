@@ -1,4 +1,4 @@
-cask :v1 => 'launchbar' do
+cask 'launchbar' do
 
   if MacOS.release <= :mountain_lion
     version '5.6.4'

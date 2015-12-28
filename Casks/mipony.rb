@@ -1,4 +1,4 @@
-cask :v1 => 'mipony' do
+cask 'mipony' do
   version :latest
   sha256 :no_check
 
@@ -8,5 +8,6 @@ cask :v1 => 'mipony' do
   license :unknown
 
   pkg 'Mipony-Installer.pkg', :allow_untrusted => true
+
   uninstall :pkgutil => 'net.installer.mipony.*'
 end

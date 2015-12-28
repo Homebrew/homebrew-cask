@@ -14,7 +14,6 @@ This document acts as a complete specification, and covers aspects of the Cask D
 * [Checksum Stanza Details](#checksum-stanza-details)
 * [URL Stanza Details](#url-stanza-details)
 * [Appcast Stanza Details](#appcast-stanza-details)
-* [Tags Stanza Details](#tags-stanza-details)
 * [License Stanza Details](#license-stanza-details)
 * [GPG Stanza Details](#gpg-stanza-details)
 * [App Stanza Details](#app-stanza-details)
@@ -34,13 +33,13 @@ This document acts as a complete specification, and covers aspects of the Cask D
 Each Cask is a Ruby block, beginning with a special header line. The Cask definition itself is always enclosed in a `do … end` block. Example:
 
 ```ruby
-cask :v1 => 'alfred' do
+cask 'alfred' do
   version '2.7.1_387'
   sha256 'a3738d0513d736918a6d71535ef3d85dd184af267c05698e49ac4c6b48f38e17'
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
-  homepage 'http://www.alfredapp.com/'
+  homepage 'https://www.alfredapp.com/'
   license :freemium
 
   app 'Alfred 2.app'
@@ -69,6 +68,7 @@ Each of the following stanzas is required for every Cask.
 | `version`          | no                            | application version; give value of `:latest`  if versioned downloads are not offered
 | `sha256`           | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
 | `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application. A [comment](#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see also [URL Stanza Details](#url-stanza-details))
+| `name`             | yes                           | a string providing the full and proper name defined by the vendor (see also [Name Stanza Details](#name-stanza-details))
 | `homepage`         | no                            | application homepage; used for the `brew cask home` command
 | `license`          | no                            | a symbol identifying the license category for the application. (see also [License Stanza Details](#license-stanza-details))
 
@@ -89,6 +89,8 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `qlplugin`         | yes                           | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `screen_saver`     | yes                           | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
 | `service`          | yes                           | relative path to a service that should be linked into the `~/Library/Services` folder on installation
+| `audio_unit_plugin`| yes                           | relative path to an Audio Unit plugin that should be linked into the `~/Library/Audio/Components` folder on installation
+| `vst_plugin`       | yes                           | relative path to a VST plugin that should be linked into the `~/Library/Audio/VST` folder on installation
 | `suite`            | yes                           | relative path to a containing directory that should be linked into the `~/Applications` folder on installation (see also [Suite Stanza Details](#suite-stanza-details))
 | `artifact`         | yes                           | relative path to an arbitrary path that should be symlinked on installation. This is only for unusual cases. The `app` stanza is strongly preferred when linking `.app` bundles.
 | `installer`        | yes                           | describes an executable which must be run to complete the installation. (see [Installer Stanza Details](#installer-stanza-details))
@@ -98,7 +100,6 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 
 | name                   | multiple occurrences allowed? | value       |
 | ---------------------- |------------------------------ | ----------- |
-| `name`                 | yes                           | a string providing the full and proper name defined by the vendor (see also [Name Stanza Details](#name-stanza-details))
 | `uninstall`            | yes                           | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](#uninstall-stanza-details))
 | `zap`                  | yes                           | additional procedures for a more complete uninstall, including user files and shared resources. (see also [Zap Stanza Details](#zap-stanza-details))
 | `appcast`              | no                            | a URL providing an appcast feed to find updates for this Cask. (see also [Appcast Stanza Details](#appcast-stanza-details))
@@ -112,8 +113,8 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `accessibility_access` | no                            | `true` if the application should be granted accessibility access
 | `container :nested =>` | no                            | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `container :type =>`   | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`. (example [parse.rb](https://github.com/caskroom/homebrew-cask/blob/ffdc9a1aa459d80a084ee0d24176409388efe71f/Casks/parse.rb#L12))
-| `tags`                 | no                            | a list of key-value pairs for Cask annotation. Not free-form. (see also [Tags Stanza Details](#tags-stanza-details))
 | `gpg`                  | no                            | *stub: not yet functional.*  (see also [GPG Stanza Details](#gpg-stanza-details))
+| `auto_updates`         | no                            | `true`. Assert the Cask artifacts auto-update
 
 ## Conditional Statements
 
@@ -176,11 +177,11 @@ There are currently some arbitrary limitations on Cask tokens which are in the p
 
 ## Name Stanza Details
 
-`name` stanza accepts a UTF-8 string defining the full name of the software.
+`name` accepts a UTF-8 string defining the full name of the software, and is used to help with searchability and disambiguation. It can be repeated multiple times if there are useful alternative names.
 
-If there are useful alternate names, `name` can be repeated multiple times. (Or, equivalently, an array value may be given.)
+Its first instance should use the latin alphabet, include the software vendor’s name, and be as verbose as possible while still making sense.
 
-When multiple names are given, the first should follow the canonical branding as defined by the vendor.
+A good example is [`pycharm-ce`](https://github.com/caskroom/homebrew-cask/blob/fc05c0353aebb28e40db72faba04b82ca832d11a/Casks/pycharm-ce.rb#L6#L7). `Jetbrains PyCharm Community Edition` makes sense even though it is likely never referenced as such anywhere, but `Jetbrains PyCharm Community Edition CE` doesn’t, hence why it has a second line. Another example are casks whose original names do not use the latin alphabet, like [`cave-story`](https://github.com/caskroom/homebrew-cask/blob/0fe48607f5656e4f1de58c6884945378b7e6f960/Casks/cave-story.rb#L7#L9).
 
 ## Caveats Stanza Details
 
@@ -290,28 +291,17 @@ Web browsers may obscure the direct `url` download location for a variety of rea
 $ ./developer/bin/list_url_attributes_on_file <file>
 ```
 
-### Subversion URLs
-
-In rare cases, a distribution may not be available over ordinary HTTP/S. Subversion URLs are also supported, and can be specified by appending the following key/value pairs to `url`:
-
-| key                | value       |
-| ------------------ | ----------- |
-| `:using`           | the symbol `:svn` is the only legal value
-| `:revision`        | a string identifying the subversion revision to download
-| `:trust_cert`      | set to `true` to automatically trust the certificate presented by the server (avoiding an interactive prompt)
-
 ## Appcast Stanza Details
 
-The value of the `appcast` stanza is a string, holding the URL for an appcast which provides information on future updates. Generally, the appcast URL returns Sparkle-compatible XML, though that is not required.
+The value of the `appcast` stanza is a string, holding the URL for an appcast which provides information on future updates.
 
-Example: [adium.rb](../../d7f8eafa4fc01a6c383925d9962b5da33876a8b6/Casks/adium.rb#L6)
-
-### Additional Appcast Parameters
+### Required Appcast Parameters
 
 | key                | value       |
 | ------------------ | ----------- |
 | `:sha256`          | a string holding the SHA-256 checksum of the most recent appcast which matches the current Cask versioning
-| `:format`          | a symbol describing the appcast format. One of: `:sparkle`, `:plaintext`, `:unknown`, where `:sparkle` is the default.
+
+Example: [atom.rb](../../127387b9fc686370ffa92c01eeed8979df9e1621/Casks/atom.rb#L7#L8)
 
 ## License Stanza Details
 
@@ -360,20 +350,6 @@ Example: [Chromium](http://www.chromium.org/chromium-os/licenses) includes code 
 | `:public_domain` | `:oss`           | not copyrighted                                                    | <http://creativecommons.org/publicdomain/zero/1.0/legalcode>
 | `:ubuntu_font`   | `:oss`           | Ubuntu Font License                                                | <http://font.ubuntu.com/licence/>
 | `:x11`           | `:oss`           | X Consortium License                                               | <http://www.xfree86.org/3.3.6/COPYRIGHT2.html>
-
-## Tags Stanza Details
-
-The `tags` stanza is not free-form. The key-value pairs are limited to a list of valid keys. All `tags` keys accept string values.
-
-The `tags` stanza is intended as an aid to search/filtering of Casks. For detailed information, the user must rely on the vendor’s homepage.
-
-Note that `brew cask search` and `brew cask list` are not yet capable of using the information stored in the `tags` stanza.
-
-### Valid Tag Keys
-
-| key           | meaning
-| ------------- | -----------------------------
-| `:vendor`     | the full-text official name of the producer of the software: an author or corporate name, as appropriate. As the value is intended as a search target, commonly shared abbreviations such as `Dr.` or `Inc.` should be omitted. (example [google-chrome.rb](../Casks/google-chrome.rb))
 
 ## GPG Stanza Details
 
@@ -642,6 +618,7 @@ Since `pkg` installers can do arbitrary things, different techniques are needed 
 * `:launchctl` (string or array) - ids of `launchctl` jobs to remove
 * `:quit` (string or array) - bundle ids of running applications to quit
 * `:signal` (array of arrays) - signal numbers and bundle ids of running applications to send a Unix signal to (used when `:quit` does not work)
+* `:login_item` (string or array) - names of login items to remove
 * `:kext` (string or array) - bundle ids of kexts to unload from the system
 * `:pkgutil` (string, regexp or array of strings and regexps) - strings or regexps matching bundle ids of packages to uninstall using `pkgutil`
 * `:script` (string or hash) - relative path to an uninstall script to be run via sudo; use hash if args are needed
@@ -742,6 +719,16 @@ Note that when multiple running processes match the given Bundle ID, all matchin
 
 Unlike `:quit` directives, Unix signals originate from the current user, not from the superuser. This is construed as a safety feature, since the superuser is capable of bringing down the system via signals. However, this inconsistency may also be considered a bug, and should be addressed in some fashion in a future version.
 
+### Uninstall key :login_item
+
+Login items associated with an Application bundle on disk can be listed using the command:
+
+```bash
+$ ./developer/bin/list_login_items_for_app </path/to/application.app>
+```
+
+Note that you will likely need to have opened the app at least once for any login items to be present.
+
 ### Uninstall Key :kext
 
 IDs for currently loaded kernel extensions can be listed using the command:
@@ -765,6 +752,7 @@ Arguments to `uninstall :delete` should be static, single-quoted, absolute paths
 * Only single quotes should be used.
 * Double-quotes should not be used. `ENV['HOME']` and other variables
  should not be interpolated in the value.
+* Basic tilde expansion is performed on paths, i.e., leading `~` is expanded to the home directory.
 * Only absolute paths should be given.
 * No glob expansion is performed (*eg* `*` characters are literal), though glob expansion is a desired future feature.
 
@@ -850,12 +838,7 @@ $ brew cask zap td-toolbelt             # also removes org.ruby-lang.installer
 
 ### Zap Stanza Syntax
 
-The form of `zap` stanza follows the [`uninstall` stanza](#uninstall-stanza-details). All of the same directives are available.
-
-`zap` differs from `uninstall` in the following ways:
-
-* The use of `:delete` is not discouraged.
-* The target values for `:delete` and `:rmdir` accept leading tilde characters (`~`), which will be expanded to home directories.
+The form of `zap` stanza follows the [`uninstall` stanza](#uninstall-stanza-details). All of the same directives are available. Unlike with `uninstall`, however, `:delete` is not discouraged in `zap`.
 
 Example: [injection.rb](../Casks/injection.rb)
 
@@ -864,7 +847,7 @@ Example: [injection.rb](../Casks/injection.rb)
 In the exceptional case that the Cask DSL is insufficient, it is possible to define arbitrary Ruby variables and methods inside the Cask by creating a `Utils` namespace. Example:
 
 ```ruby
-cask :v1 => 'myapp' do
+cask 'myapp' do
   module Utils
     def self.arbitrary_method
       ...
@@ -885,9 +868,5 @@ end
 This should be used sparingly: any method which is needed by two or more Casks should instead be rolled into the core. Care must also be taken that such methods be very efficient.
 
 Variables and methods should not be defined outside the `Utils` namespace, as they may collide with Homebrew-cask internals.
-
-## Revisions to the Cask DSL
-
-The Cask DSL is being revised and stabilized. Changes are tracked in [cask_language_deltas.md](cask_language_deltas.md).
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3

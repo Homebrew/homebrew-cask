@@ -1,10 +1,11 @@
-cask :v1_1 => 'docker-machine' do
+cask 'docker-machine' do
   version '0.5.2'
   sha256 '298a9d51d00c3b01c7b74853f19638467a07b6cf954d3116c0252232879de42e'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/docker/machine/releases/download/v#{version}/docker-machine_darwin-amd64.zip"
-  appcast 'https://github.com/docker/machine/releases.atom'
+  appcast 'https://github.com/docker/machine/releases.atom',
+          :sha256 => '2840ae55fa5e849ab523eae9f9d6c2a2cd055d42503caa055cdb43120baee94c'
   name 'Docker Machine'
   homepage 'https://docs.docker.com/machine'
   license :apache

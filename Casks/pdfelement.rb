@@ -1,4 +1,4 @@
-cask :v1 => 'pdfelement' do
+cask 'pdfelement' do
   version '5.3.9'
   sha256 'a958f592125f6b518fd9b3d69fa430d58937d2bbeab3efd1eb029348f140c5eb'
 

@@ -1,9 +1,9 @@
-cask :v1 => 'hyper' do
+cask 'hyper' do
   version :latest
   sha256 :no_check
 
   # amazonaws.com is the official download host per the vendor homepage
-  url 'http://hyper-install.s3.amazonaws.com/hyper-mac.pkg'
+  url 'https://hyper-install.s3.amazonaws.com/hyper-mac.pkg'
   name 'Hyper'
   homepage 'https://hyper.sh/'
   license :apache

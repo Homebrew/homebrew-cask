@@ -1,4 +1,4 @@
-cask :v1 => 'vistrails' do
+cask 'vistrails' do
   version '2.2.2-358e9a9fc33c'
   sha256 'efee1669d3ba39985079e44a423f6e7b6b17493669c5945a3bbd70ec8659fc22'
 

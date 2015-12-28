@@ -1,4 +1,4 @@
-cask :v1 => 'google-cloud-sdk' do
+cask 'google-cloud-sdk' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,6 @@ cask :v1 => 'google-cloud-sdk' do
   name 'Google Cloud SDK'
   homepage 'https://cloud.google.com/sdk/'
   license :apache
-  tags :vendor => 'Google'
 
   installer :script => 'google-cloud-sdk/install.sh',
             :args => %w{--usage-reporting false --bash-completion false --path-update false --rc-path false},

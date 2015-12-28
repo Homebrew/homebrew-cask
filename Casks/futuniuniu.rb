@@ -1,4 +1,4 @@
-cask :v1 => 'futuniuniu' do
+cask 'futuniuniu' do
   version '3.4.2_090201'
   sha256  '72605f586d124cac852ff670517f9c8669d3a4c60c1dfad00feedfac8f1c74bd'
 

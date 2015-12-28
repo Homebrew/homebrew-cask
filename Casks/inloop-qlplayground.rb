@@ -1,4 +1,4 @@
-cask :v1 => 'inloop-qlplayground' do
+cask 'inloop-qlplayground' do
   version '1.0'
   sha256 '44c25a7da0dc3748b01deb0c01634044ccbc625b4266b4fea0630cbedb773929'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'gif-for-mac' do
+cask 'gif-for-mac' do
   version :latest
   sha256 :no_check
 

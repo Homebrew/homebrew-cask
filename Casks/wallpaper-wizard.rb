@@ -1,4 +1,4 @@
-cask :v1 => 'wallpaper-wizard' do
+cask 'wallpaper-wizard' do
   version '1.5.1'
   sha256 '5f6d190cff7af60050357d993ee34b9544fe15672b535769766ab783cbd09f99'
 

@@ -1,14 +1,14 @@
-cask :v1 => 'atom' do
-  version '1.2.4'
-  sha256 'edae1d9dc5b7ea6e52aca7fc965a2803c20344fadee176a94b627991089073b4'
+cask 'atom' do
+  version '1.3.2'
+  sha256 'cd5727afaa9047cfac49f706040e119e22badada1144ef4cd99a6073b2c93b5a'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"
-  appcast 'https://github.com/atom/atom/releases.atom'
-  name 'Atom'
+  appcast 'https://github.com/atom/atom/releases.atom',
+          :sha256 => '225f0b8392201baa49c2a32c322a1b3f7a5ca6f87338c25340922f9cf74b696f'
+  name 'Github Atom'
   homepage 'https://atom.io/'
   license :mit
-  tags :vendor => 'Github'
 
   depends_on :macos => '>= :mountain_lion'
 

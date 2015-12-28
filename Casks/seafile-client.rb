@@ -1,4 +1,4 @@
-cask :v1 => 'seafile-client' do
+cask 'seafile-client' do
   version '4.4.2'
   sha256 'b6f821002f6466ff6a0ec6b6743c484fb8edb38e8052cbca8003d27aea4cbcf7'
 

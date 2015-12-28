@@ -1,4 +1,4 @@
-cask :v1 => 'sookasa' do
+cask 'sookasa' do
   version '3.15.5'
   sha256 'd9989261c0f3d108ca485256f5e2ea63cd20d1d19e5e6968f8fcfe91ed50e69f'
 

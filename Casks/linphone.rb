@@ -1,4 +1,4 @@
-cask :v1 => 'linphone' do
+cask 'linphone' do
   version '3.8.5'
   sha256 '250d6b0b8ca3fd5029185b479199ae47b5d8c57062007a2bbb864ca63034a5de'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'kafka-tool' do
+cask 'kafka-tool' do
   version :latest
   sha256 :no_check
 

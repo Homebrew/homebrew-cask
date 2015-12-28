@@ -1,4 +1,4 @@
-cask :v1 => 'nomachine' do
+cask 'nomachine' do
   version '5.0.53_1'
   sha256 'f2bbb00e970b76af7947dd56be4a9cb0f373fd641657563a9136b034735c8c3b'
 

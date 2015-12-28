@@ -1,4 +1,4 @@
-cask :v1 => 'dragondrop' do
+cask 'dragondrop' do
   version '1.4.1'
   sha256 '40e91b83d9a70a6f416394cddb58e758b44fa1c84950f99a6a391f60bce32e81'
 

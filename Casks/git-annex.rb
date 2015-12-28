@@ -1,4 +1,4 @@
-cask :v1 => 'git-annex' do
+cask 'git-annex' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'geekbench' do
+cask 'geekbench' do
   version '3.3.2'
   sha256 '17ccf365001cb25dd39d49c3b6a5fbaa3db056336819e6eeab75da96fed64f9a'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'mailsmith' do
+cask 'mailsmith' do
   version '2.4_470'
   sha256 '5a599ceb64cb5d4410a26da3029e2e2ffa3eefd1efaf317cd33344ceccb059a2'
 

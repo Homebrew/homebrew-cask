@@ -1,9 +1,10 @@
-cask :v1 => 'gitx' do
+cask 'gitx' do
   version :latest
   sha256 :no_check
 
   url 'http://frim.frim.nl/GitXStable.app.zip'
-  appcast 'http://gitx.frim.nl/Downloads/appcast.xml'
+  appcast 'http://gitx.frim.nl/Downloads/appcast.xml',
+          :sha256 => '932c7654b3065834ed45218514ff4a5ac46292a5a04a83b1abacfdfb5f903532'
   name 'GitX'
   homepage 'http://gitx.frim.nl/'
   license :gpl

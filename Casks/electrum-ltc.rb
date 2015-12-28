@@ -1,4 +1,4 @@
-cask :v1 => 'electrum-ltc' do
+cask 'electrum-ltc' do
   version '2.3.2.2'
   sha256 '8dbd0245c43f953822848ed8827df581468340a0873e1152919b30c29774271e'
 

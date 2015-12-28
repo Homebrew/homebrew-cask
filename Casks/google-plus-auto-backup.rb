@@ -1,4 +1,4 @@
-cask :v1 => 'google-plus-auto-backup' do
+cask 'google-plus-auto-backup' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,6 @@ cask :v1 => 'google-plus-auto-backup' do
   name 'Google+ Auto Backup'
   homepage 'https://picasa.google.com/'
   license :gratis
-  tags :vendor => 'Google'
 
   app 'Google+ Auto Backup.app'
 end

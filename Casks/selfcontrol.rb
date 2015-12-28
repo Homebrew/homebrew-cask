@@ -1,4 +1,4 @@
-cask :v1 => 'selfcontrol' do
+cask 'selfcontrol' do
   if MacOS.release <= :snow_leopard
     version '1.5.1'
     sha256 'd3823a1e9ba0b47dc2cb39c93cd51837c2dafc7d5a5a564825f4a440fd2ab9ad'

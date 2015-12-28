@@ -1,4 +1,4 @@
-cask :v1 => 'mail-plugin-manager' do
+cask 'mail-plugin-manager' do
   version :latest
   sha256 :no_check
 

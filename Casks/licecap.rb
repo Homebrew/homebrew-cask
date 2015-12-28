@@ -1,4 +1,4 @@
-cask :v1 => 'licecap' do
+cask 'licecap' do
   version '1.25'
   sha256 '0ed33667b3e19ee47fc09b3619499816e229bc678884fd5c27e24e785472f6ba'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'ynab' do
+cask 'ynab' do
   version '4.3.655'
   sha256 '0635c56582a1367c2ca3a8ab88805ec89625f2c5042497e7f13081726b2238a3'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'openzfs' do
+cask 'openzfs' do
   version '1.4.5'
   sha256 '9ad0b21bc54c5453a90427d478533f530ff9bb98744d17f2fcb127a81af18169'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'jitouch' do
+cask 'jitouch' do
   version :latest
   sha256 :no_check
 

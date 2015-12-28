@@ -1,4 +1,4 @@
-cask :v1 => 'juliastudio' do
+cask 'juliastudio' do
   version '0.4.4'
 
   if MacOS.release <= :snow_leopard

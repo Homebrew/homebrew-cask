@@ -1,4 +1,4 @@
-cask :v1 => 'combine-pdfs' do
+cask 'combine-pdfs' do
   version :latest
   sha256 :no_check
 

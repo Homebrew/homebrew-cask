@@ -1,4 +1,4 @@
-cask :v1 => 'duplicate-annihilator' do
+cask 'duplicate-annihilator' do
   version :latest
   sha256 :no_check
 

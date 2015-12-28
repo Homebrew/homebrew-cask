@@ -1,4 +1,4 @@
-cask :v1 => 'python' do
+cask 'python' do
   version '2.7.10'
   sha256 'dc08b90ebc21fd3987909144ed95aa36474f69e6f9c8deb224db5c626838d013'
 

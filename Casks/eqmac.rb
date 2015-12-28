@@ -1,4 +1,4 @@
-cask :v1 => 'eqmac' do
+cask 'eqmac' do
   version '2.0.0beta3'
   sha256 '892bfb439f4ee4fdb009ce4b1d802d997e0675976cc8c8434506d95b994acdc4'
 

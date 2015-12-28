@@ -48,7 +48,7 @@ class Hbc::Artifact::Base
     permitted_keys = [:args, :input, :executable, :must_succeed, :sudo, :bsexec, :print_stdout, :print_stderr]
     unknown_keys = arguments.keys - permitted_keys
     unless unknown_keys.empty?
-      opoo %Q{Unknown arguments to #{description} -- #{unknown_keys.inspect} (ignored). Running "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" will likely fix it.}
+      opoo %Q{Unknown arguments to #{description} -- #{unknown_keys.inspect} (ignored). Running "brew update; brew cleanup; brew cask cleanup" will likely fix it.}
     end
     arguments.reject! {|k,v| ! permitted_keys.include?(k)}
 

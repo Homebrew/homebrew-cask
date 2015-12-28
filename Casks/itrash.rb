@@ -1,4 +1,4 @@
-cask :v1 => 'itrash' do
+cask 'itrash' do
 
   if MacOS.release <= :leopard
     version '1.5.5'

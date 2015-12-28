@@ -1,4 +1,4 @@
-cask :v1 => 'hipchat' do
+cask 'hipchat' do
   version '3.3.6-202'
   sha256 '1d98ba1f6b6f67f62c38bd200e8c5a29d2ee47fcf3c6fa574c741771eb1a8d83'
 

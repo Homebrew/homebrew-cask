@@ -1,4 +1,4 @@
-cask :v1 => 'clusters' do
+cask 'clusters' do
   version '1.7.2'
   sha256 'da14d05b8aa824ce747038f1d14a82d71e02fb9dd0883ea2f9dfa32a3ca5e063'
 

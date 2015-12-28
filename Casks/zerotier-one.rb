@@ -1,4 +1,4 @@
-cask :v1 => 'zerotier-one' do
+cask 'zerotier-one' do
   version :latest
   sha256 :no_check
 

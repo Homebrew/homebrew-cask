@@ -1,4 +1,4 @@
-cask :v1 => 'tortoisehg' do
+cask 'tortoisehg' do
   version '3.2.4'
   sha256 'c529539e20f4ff2f6d181a5c7f64ad5dcd9346605011ab4c3725c7cedf6b5a8c'
 

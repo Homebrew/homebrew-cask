@@ -1,4 +1,4 @@
-cask :v1 => 'tikzit' do
+cask 'tikzit' do
   version '0.8'
   sha256 '6e2721d2b46d16219a0c7abc92c3abfb8a924d8413ac53fde9d10a7465f1559e'
 

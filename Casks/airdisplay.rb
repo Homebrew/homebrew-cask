@@ -1,4 +1,4 @@
-cask :v1 => 'airdisplay' do
+cask 'airdisplay' do
   version '3.0.1'
   sha256 '2da921517a94872b6909b225d8964081a1bad9d2b93be12592bd264665f4b769'
 

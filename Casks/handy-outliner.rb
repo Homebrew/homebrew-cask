@@ -1,4 +1,4 @@
-cask :v1 => 'handy-outliner' do
+cask 'handy-outliner' do
   version '1.1.6.2'
   sha256 'a67a21650d29114c058e1f50bce3675e7c7b427abdd67a60e49098a31046d14d'
 

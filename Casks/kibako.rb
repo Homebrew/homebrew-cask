@@ -1,4 +1,4 @@
-cask :v1 => 'kibako' do
+cask 'kibako' do
   version :latest
   sha256 :no_check
 

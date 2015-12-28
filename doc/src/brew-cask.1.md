@@ -89,7 +89,7 @@ names, and other aspects of this manual are still subject to change.
   * `search` or `-S` <text> | /<regexp>/:
     Perform a substring search of known Cask tokens for <text>. If the text
     is delimited by slashes, it is interpreted as a Ruby regular expression.
-	
+
   * `uninstall [--force]` or `rm` or `remove` <token> [ <token> ... ]:
     Uninstall the given Cask. With `--force`, uninstall even if the Cask
     does not appear to be present.
@@ -105,7 +105,7 @@ names, and other aspects of this manual are still subject to change.
     `uninstall` without `--force` is also imperfect. It may be unable to
     perform an `uninstall` operation if the given Cask has changed since you
     installed it. This issue is being addressed.
-	
+
   * `update`:
     For convenience. `brew cask update` is a synonym for `brew update`.
 
@@ -166,6 +166,12 @@ in a future version.
   * `--internet_plugindir=<path>`:
     Target location for Internet Plugin links. The default value is `~/Library/Internet Plug-Ins`.
 
+  * `--audio_unit_plugindir=<path>`:
+    Target location for Audio Unit Plugin links. The default value is `~/Library/Audio/Plug-Ins/Components`.
+
+  * `--vst_plugindir=<path>`:
+    Target location for VST Plugin links. The default value is `~/Library/Audio/Plug-Ins/VST`.
+
   * `--screen_saverdir=<path>`:
     Target location for Screen Saver links. The default value is `~/Library/Screen Savers`.
 
@@ -183,7 +189,7 @@ in a future version.
 Homebrew-cask is implemented as a external command for Homebrew. That means
 this project is entirely built upon the Homebrew infrastructure. For
 example, upgrades to the Homebrew-cask tool are received through Homebrew:
-    `brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup`
+    `brew update; brew cleanup; brew cask cleanup`
 
 And updates to individual Cask definitions are received whenever you issue
 the Homebrew command:
@@ -202,10 +208,10 @@ Homebrew-cask also accepts three other forms in place of plain tokens:
     `caskroom/fonts/font-symbola`
 
   * A fully-qualified pathname to a Cask file, _eg_
-    `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
+    `/usr/local/Library/Taps/caskroom/homebrew-cask/Casks/google-chrome.rb`
 
   * A `curl`-retrievable URI to a Cask file, _eg_
-   `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
+   `https://raw.githubusercontent.com/caskroom/homebrew-cask/f25b6babcd398abf48e33af3d887b2d00de1d661/Casks/google-chrome.rb`
 
 ## ENVIRONMENT
 

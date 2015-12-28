@@ -1,11 +1,12 @@
-cask :v1 => 'calibre' do
+cask 'calibre' do
   if MacOS.release < :mountain_lion
     version '1.48.0'
     sha256 '0533283965fbc9a6618d0b27c85bdf3671fe75ff0e89eeff406fe1457ee61b14'
   else
-    version '2.45.0'
-    sha256 '24901577c7b107985e1d55694cde601641a45062d6da2ce526c33761771ec0ba'
-    appcast 'https://github.com/kovidgoyal/calibre/releases.atom'
+    version '2.47.0'
+    sha256 '4aa32233a6b019c20a960a2db14b0c3defd52d0c858bea9044c7afa5fbf9506c'
+    appcast 'https://github.com/kovidgoyal/calibre/releases.atom',
+            :sha256 => '726d899be9f97fa56c0ec359491143942d9f8b7d1191cb7d9547966f0207acec'
   end
 
   url "http://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"

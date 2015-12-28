@@ -1,10 +1,11 @@
-cask :v1 => 'cocoapods' do
+cask 'cocoapods' do
   version '0.39.0'
   sha256 '51c5d0117272a9b3c30c15dd0a9776574a23c5d810ec0c4b298b0ce4c483f27f'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/CocoaPods/CocoaPods-app/releases/download/#{version}/CocoaPods.app-#{version}.tar.bz2"
-  appcast 'https://app.cocoapods.org/sparkle'
+  appcast 'https://app.cocoapods.org/sparkle',
+          :sha256 => '8e4dc6eb590c79b25984e25800e70dde002f6199e3411bc3407717b15dc89719'
   name 'CocoaPods.app'
   container :type => :tar
   homepage 'https://cocoapods.org/'

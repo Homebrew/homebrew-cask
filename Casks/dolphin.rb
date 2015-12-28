@@ -1,4 +1,4 @@
-cask :v1 => 'dolphin' do
+cask 'dolphin' do
   version '4.0-8225'
   sha256 'db81a7a45cdbbd02a5020caf2defd725005d1effe9f6abefa42242365100cb74'
 

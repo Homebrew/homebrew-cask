@@ -12,7 +12,6 @@ require 'hbc/dsl/installer'
 require 'hbc/dsl/license'
 require 'hbc/dsl/postflight'
 require 'hbc/dsl/preflight'
-require 'hbc/dsl/tags'
 require 'hbc/dsl/uninstall_postflight'
 require 'hbc/dsl/uninstall_preflight'
 
@@ -41,15 +40,19 @@ module Hbc::DSL
 
   def container; self.class.container; end
 
-  def tags; self.class.tags; end
-
   def sha256; self.class.sha256; end
 
   def artifacts; self.class.artifacts; end
 
+  def caskroom_path; self.class.caskroom_path; end
+
+  def staged_path; self.class.staged_path; end
+
   def caveats; self.class.caveats; end
 
   def accessibility_access; self.class.accessibility_access; end
+
+  def auto_updates; self.class.auto_updates; end
 
   module ClassMethods
 
@@ -163,19 +166,6 @@ module Hbc::DSL
       @sha256 ||= arg
     end
 
-    def tags(*args)
-      return @tags if args.empty?
-      if @tags and !args.empty?
-        # consider removing this limitation
-        raise Hbc::CaskInvalidError.new(self.token, "'tags' stanza may only appear once")
-      end
-      @tags ||= begin
-        Hbc::DSL::Tags.new(*args) unless args.empty?
-      rescue StandardError => e
-        raise Hbc::CaskInvalidError.new(self.token, e)
-      end
-    end
-
     def license(arg=nil)
       return @license if arg.nil?
       if @license and !arg.nil?
@@ -217,6 +207,16 @@ module Hbc::DSL
       @artifacts ||= Hash.new { |hash, key| hash[key] = Set.new }
     end
 
+    def caskroom_path
+      @caskroom_path ||= Hbc.caskroom.join(self.token)
+    end
+
+    def staged_path
+      return @staged_path if @staged_path
+      cask_version = self.version || :unknown
+      @staged_path = self.caskroom_path.join(cask_version.to_s)
+    end
+
     def caveats(*string, &block)
       @caveats ||= []
       if block_given?
@@ -236,6 +236,13 @@ module Hbc::DSL
       @accessibility_access ||= accessibility_access
     end
 
+    def auto_updates(auto_updates=nil)
+      if @auto_updates and !auto_updates.nil?
+        raise Hbc::CaskInvalidError.new(self.token, "'auto_updates' stanza may only appear once")
+      end
+      @auto_updates ||= auto_updates
+    end
+
     def self.ordinary_artifact_types
       @@ordinary_artifact_types ||= [
                                      :app,
@@ -249,6 +256,8 @@ module Hbc::DSL
                                      :binary,
                                      :input_method,
                                      :internet_plugin,
+                                     :audio_unit_plugin,
+                                     :vst_plugin,
                                      :screen_saver,
                                      :pkg,
                                      :stage_only,

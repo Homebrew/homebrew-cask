@@ -1,13 +1,12 @@
-cask :v1 => 'firefox' do
-  version '42.0'
-  sha256 '83a41b8a427038e668759fd80ab3d6019cd1fe67dbe866fd31ef9be68c4ea084'
+cask 'firefox' do
+  version '43.0.2'
+  sha256 '9bfeae79d01f5c61a53e77529c16468b87a932f5820db18290b2e8e29904b346'
 
   url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/en-US/Firefox%20#{version}.dmg"
   name 'Firefox'
   name 'Mozilla Firefox'
   homepage 'https://www.mozilla.org/en-US/firefox/'
   license :mpl
-  tags :vendor => 'Mozilla'
 
   app 'Firefox.app'
 

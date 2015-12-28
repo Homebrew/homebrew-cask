@@ -1,4 +1,4 @@
-cask :v1 => 'airdroid' do
+cask 'airdroid' do
   version '3.2.1'
   sha256 '6384f670d374f40e0559ad962bf7992ec310f974bdab469ed021bae69e932a59'
 

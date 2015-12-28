@@ -1,4 +1,4 @@
-cask :v1 => 'texpad' do
+cask 'texpad' do
 
   if MacOS.release >= :mavericks
     version '1.7.19'

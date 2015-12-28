@@ -1,4 +1,4 @@
-cask :v1 => 'netloc' do
+cask 'netloc' do
   version :latest
   sha256 :no_check
 

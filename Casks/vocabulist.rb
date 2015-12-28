@@ -1,4 +1,4 @@
-cask :v1 => 'vocabulist' do
+cask 'vocabulist' do
   version '2.3'
   sha256 '25a7c55c1b3adda3a5afdf91912e107bb1a437d0a83051812878d359d4a280a6'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'apache-couchdb' do
+cask 'apache-couchdb' do
   version '1.6.1'
   sha256 'c94dcc4e2ff163dfd3df52a3170f5f18be05beda3bf64c3e12a78dfe622dbf8f'
 

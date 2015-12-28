@@ -9,12 +9,6 @@ $ brew --version
 0.9.5
 ```
 
-Install the homebrew-cask tool:
-
-```bash
-$ brew install caskroom/cask/brew-cask
-```
-
 ## Frequently Used Commands
 
 Homebrew-cask is implemented as a subcommand of Homebrew. All homebrew-cask commands begin with `brew cask`. Homebrew-cask has its own set of command verbs many of which are similar to Homebrew’s. The most frequently-used
@@ -139,7 +133,7 @@ It is generally safe to run updates from within an Application.
 When a new version homebrew-cask is released, it will appear in the output of `brew outdated` after running `brew update`. You can upgrade it via the normal Homebrew `brew upgrade` workflow:
 
 ```bash
-$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+$ brew update; brew cleanup; brew cask cleanup
 ```
 
 ## Additional Taps (optional)
@@ -230,8 +224,8 @@ Most `brew cask` commands can accept a Cask token as an argument. As described a
 
 `brew cask` also accepts three other forms as arguments
 
-* A path to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`.
-* A `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`.
+* A path to a Cask file, _eg_: `/usr/local/Library/Taps/caskroom/homebrew-cask/Casks/google-chrome.rb`.
+* A `curl`-retrievable URI to a Cask file, _eg_: `https://raw.githubusercontent.com/caskroom/homebrew-cask/f25b6babcd398abf48e33af3d887b2d00de1d661/Casks/google-chrome.rb`.
 * A file in the current working directory, _eg_: `my-modfied-google-chrome.rb`. Note that matching Tapped Cask tokens will be preferred over this form when there is a conflict. To force the use of a Cask file in the current directory, specify a pathname with slashes, _eg_: `./google-chrome.rb`.
 
 The last three forms are intended for users who wish to maintain private Casks.

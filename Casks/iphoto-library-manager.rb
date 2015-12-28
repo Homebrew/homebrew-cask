@@ -1,4 +1,4 @@
-cask :v1 => 'iphoto-library-manager' do
+cask 'iphoto-library-manager' do
   version '4.2.3'
   sha256 '4f7a45fefefa8fdf5c498422091c3ed150d436e01b4b8127569f652e5d5503ff'
 

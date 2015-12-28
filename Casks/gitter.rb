@@ -1,4 +1,4 @@
-cask :v1 => 'gitter' do
+cask 'gitter' do
   version '1.162'
   sha256 'faeeba7c607a0faff20c613ffbaf3f98bde88de0e1c73a638dc20e6e915ba81c'
 

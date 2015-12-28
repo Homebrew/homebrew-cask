@@ -1,4 +1,4 @@
-cask :v1 => 'itsycal' do
+cask 'itsycal' do
   version '0.10.8'
   sha256 'f9d49a3b0cf30cb59109740e7c415cee880f345ecbfc9fc3b8eb98485f8752d2'
 

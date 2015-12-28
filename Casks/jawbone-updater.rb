@@ -1,4 +1,4 @@
-cask :v1 => 'jawbone-updater' do
+cask 'jawbone-updater' do
   version '2.2.5'
   sha256 '0db771816535cb9bb0112aa5e3ea7147b29322bf9dce82c90afedb36a62a2945'
 

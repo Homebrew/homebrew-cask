@@ -1,4 +1,4 @@
-cask :v1 => 'ionic-lab' do
+cask 'ionic-lab' do
   version :latest
   sha256 :no_check
 

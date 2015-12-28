@@ -1,4 +1,4 @@
-cask :v1 => 'skype' do
+cask 'skype' do
 
   if MacOS.release <= :mountain_lion
     version '6.15.0.335'

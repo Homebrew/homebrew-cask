@@ -1,4 +1,4 @@
-cask :v1 => 'keyfinder' do
+cask 'keyfinder' do
   version :latest
   sha256 :no_check
 

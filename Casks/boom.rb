@@ -1,4 +1,4 @@
-cask :v1 => 'boom' do
+cask 'boom' do
   version :latest
   sha256 :no_check
 

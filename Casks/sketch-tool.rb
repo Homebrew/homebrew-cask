@@ -1,4 +1,4 @@
-cask :v1 => 'sketch-tool' do
+cask 'sketch-tool' do
   version :latest
   sha256 :no_check
 

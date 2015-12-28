@@ -1,4 +1,4 @@
-cask :v1 => 'nwjs' do
+cask 'nwjs' do
   version '0.12.1'
 
   if Hardware::CPU.is_32_bit?

@@ -1,4 +1,4 @@
-cask :v1 => 'dockmod' do
+cask 'dockmod' do
   if MacOS.release <= :mavericks
     version '2.04'
     sha256 '86c92aa446d436296a800ee832466afa845048316a09df15d0e793f5a4cad55d'
@@ -13,7 +13,7 @@ cask :v1 => 'dockmod' do
 
   url "http://spyresoft.com/dockmod/download.php?version=#{version}"
   name 'DockMod'
-  homepage 'http://spyresoft.com/dockmod/'
+  homepage 'https://spyresoft.com/dockmod/'
   license :freemium
 
   app 'DockMod.app'

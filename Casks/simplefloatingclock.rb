@@ -1,4 +1,4 @@
-cask :v1 => 'simplefloatingclock' do
+cask 'simplefloatingclock' do
   version :latest
   sha256 :no_check
 

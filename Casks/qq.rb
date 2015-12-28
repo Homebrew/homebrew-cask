@@ -1,4 +1,4 @@
-cask :v1 => 'qq' do
+cask 'qq' do
   version '4.0.6'
   sha256 'a4316efeecc9d67104f951c470a22677294a11028af6d541e696b5bf037e6b8c'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'sync' do
+cask 'sync' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'papers' do
+cask 'papers' do
   version '3.4.1-407'
   sha256 '9a1d3f9d2e6cfc55881ac69882c3b362c89aaa471449fd001a59dceb8730189b'
 

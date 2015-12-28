@@ -1,4 +1,4 @@
-cask :v1 => 'enpass' do
+cask 'enpass' do
   version '5.0.2'
   sha256 '553702000415aad0e682514a4d66f2424f55d99796389c738a3ecd671efd8c60'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'breeze' do
+cask 'breeze' do
   version '1.5.11'
   sha256 'eaa54f9ccc6539fb548ffa274a7317913840ee3144ed781acd4da8b0b2d0d5ba'
 

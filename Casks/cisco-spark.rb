@@ -1,12 +1,11 @@
-cask :v1 => 'cisco-spark' do
+cask 'cisco-spark' do
   version :latest
   sha256 :no_check
 
   url 'https://download.ciscospark.com/mac/Spark.dmg'
-  name 'Cisco Spark'
-  homepage 'http://www.webex.com/projectsquared/'
+  name 'Cisco Systems Spark'
+  homepage 'https://www.webex.com/projectsquared/'
   license :gratis
-  tags :vendor => 'Cisco Systems'
 
   depends_on :macos => '>= :mavericks'
 

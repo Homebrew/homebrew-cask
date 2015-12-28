@@ -1,4 +1,4 @@
-cask :v1 => 'toggldesktop' do
+cask 'toggldesktop' do
   version :latest
   sha256 :no_check
 

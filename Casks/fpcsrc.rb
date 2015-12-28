@@ -1,4 +1,4 @@
-cask :v1 => 'fpcsrc' do
+cask 'fpcsrc' do
   version '2.6.4-20140421'
   sha256 'fa7fdfff220241de9e11222e159bcc1b6f3c82588d437191666b5b0ec5fb51cf'
 

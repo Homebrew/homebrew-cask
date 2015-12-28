@@ -1,4 +1,4 @@
-cask :v1 => 'idris' do
+cask 'idris' do
   version :latest
   sha256 :no_check
 

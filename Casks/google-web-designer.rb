@@ -1,4 +1,4 @@
-cask :v1 => 'google-web-designer' do
+cask 'google-web-designer' do
   version :latest
   sha256 :no_check
 

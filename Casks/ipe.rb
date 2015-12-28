@@ -1,4 +1,4 @@
-cask :v1 => 'ipe' do
+cask 'ipe' do
   version '7.1.10'
   sha256 '5e14f13d213905af34561a0d169e9f1f9eed91ae8f85f163df951af2c2392198'
 

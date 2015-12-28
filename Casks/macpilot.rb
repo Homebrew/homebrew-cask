@@ -1,4 +1,4 @@
-cask :v1 => 'macpilot' do
+cask 'macpilot' do
   version :latest
   sha256 :no_check
 

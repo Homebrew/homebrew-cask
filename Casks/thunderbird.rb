@@ -1,4 +1,4 @@
-cask :v1 => 'thunderbird' do
+cask 'thunderbird' do
   version '38.4.0'
   sha256 '9d2b0596d38cbfb17a70a7682ec630ead4181212f349106f7a59ec15a5fe080f'
 
@@ -6,7 +6,6 @@ cask :v1 => 'thunderbird' do
   name 'Mozilla Thunderbird'
   homepage 'https://www.mozilla.org/en-US/thunderbird/'
   license :mpl
-  tags :vendor => 'Mozilla'
 
   app 'Thunderbird.app'
 

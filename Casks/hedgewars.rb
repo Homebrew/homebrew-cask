@@ -1,4 +1,4 @@
-cask :v1 => 'hedgewars' do
+cask 'hedgewars' do
   version '0.9.22'
   sha256 'adc0b6dd3b47de115e85db1cb72841836444c0ebc77caee8139bfd6561e28fe8'
 

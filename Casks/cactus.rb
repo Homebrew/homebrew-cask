@@ -1,4 +1,4 @@
-cask :v1 => 'cactus' do
+cask 'cactus' do
   version '1.1.22'
   sha256 'af920f5f180b64731adef561a45213064c27830f5d9030d6a862f339ffc4e88c'
 

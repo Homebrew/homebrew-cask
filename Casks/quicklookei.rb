@@ -1,4 +1,4 @@
-cask :v1 => 'quicklookei' do
+cask 'quicklookei' do
   version '1.8.1'
   sha256 'cb56a118409db5571ce15641904fdc7f6a44427db2f1a27debea242349587284'
 

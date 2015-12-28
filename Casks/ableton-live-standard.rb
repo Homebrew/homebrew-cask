@@ -1,4 +1,4 @@
-cask :v1 => 'ableton-live-standard' do
+cask 'ableton-live-standard' do
   version '9.5'
 
   if Hardware::CPU.is_32_bit?
@@ -18,5 +18,4 @@ cask :v1 => 'ableton-live-standard' do
   zap :delete => '~/Library/*/*[Aa]bleton*',
       :rmdir => '~/Music/Ableton/Factory Packs'
       #:trash => '~/Music/Ableton/User Library'
-
 end

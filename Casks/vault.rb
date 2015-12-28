@@ -1,4 +1,4 @@
-cask :v1 => 'vault' do
+cask 'vault' do
   version '0.3.1'
   sha256 '0a67d3ee6743c96e6cb96484b208555a2ea6f19fd7b51057410fd6f4a49aafad'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'linkinus' do
+cask 'linkinus' do
   version :latest
   sha256 :no_check
 

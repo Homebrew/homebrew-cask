@@ -1,4 +1,4 @@
-cask :v1 => 'sketchupviewer' do
+cask 'sketchupviewer' do
   version :latest
   sha256 :no_check
 

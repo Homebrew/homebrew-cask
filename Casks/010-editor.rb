@@ -1,4 +1,4 @@
-cask :v1 => '010-editor' do
+cask '010-editor' do
   version :latest
   sha256 :no_check
 

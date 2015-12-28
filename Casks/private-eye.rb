@@ -1,4 +1,4 @@
-cask :v1 => 'private-eye' do
+cask 'private-eye' do
   version :latest
   sha256 :no_check
 

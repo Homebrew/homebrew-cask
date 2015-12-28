@@ -1,4 +1,4 @@
-cask :v1 => 'konachan' do
+cask 'konachan' do
   version '1.0'
   sha256 '248ff1db7bf9ca3d8148253c7b7053c89982419dd1481e103780b8dfb9aa1e11'
 

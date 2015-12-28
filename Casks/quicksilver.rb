@@ -1,4 +1,4 @@
-cask :v1 => 'quicksilver' do
+cask 'quicksilver' do
   if MacOS.release <= :snow_leopard
     version '1.0.0-16384'
     sha256 '0afb16445d12d7dd641aa8b2694056e319d23f785910a8c7c7de56219db6853c'
@@ -12,7 +12,7 @@ cask :v1 => 'quicksilver' do
 
   url "https://qs0.qsapp.com/plugins/download.php?qsversion=#{version.sub(%r{^.*?-},'')}.dmg"
   name 'Quicksilver'
-  homepage 'http://qsapp.com/'
+  homepage 'https://qsapp.com/'
   license :apache
 
   app 'Quicksilver.app'

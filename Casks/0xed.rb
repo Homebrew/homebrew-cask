@@ -1,4 +1,4 @@
-cask :v1 => '0xed' do
+cask '0xed' do
   version :latest
   sha256 :no_check
 

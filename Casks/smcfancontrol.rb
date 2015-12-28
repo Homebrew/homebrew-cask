@@ -1,4 +1,4 @@
-cask :v1 => 'smcfancontrol' do
+cask 'smcfancontrol' do
   version '2.5.2'
   sha256 'e543b6a9fdb1bda6612699692f4dbaa9305007d451c987f2ae586950cbdf852b'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'bathyscaphe' do
+cask 'bathyscaphe' do
   version '260-v876'
   sha256 'fabcd00800d589de199074db2999a768a38cf025da02460564e2986dd05521ee'
 

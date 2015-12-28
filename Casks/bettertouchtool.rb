@@ -1,4 +1,4 @@
-cask :v1 => 'bettertouchtool' do
+cask 'bettertouchtool' do
 
   if MacOS.release <= :snow_leopard
     version '0.939'
@@ -7,12 +7,13 @@ cask :v1 => 'bettertouchtool' do
     # bettertouchtool.com is the official download host per the vendor homepage
     url "http://bettertouchtool.net/btt#{version}.zip"
   else
-    version '1.44'
-    sha256 '9b9ad56f9fcb363b6c03aaa88a2529b68dfbf080bd05d9973dcf43a9abb5e394'
+    version '1.47d'
+    sha256 '81b15b17a13018e48edb796f972732d379f22b9f0601300899fea3d77162bc5e'
     url "http://boastr.net/releases/btt#{version}.zip"
   end
 
-  appcast 'http://appcast.boastr.net'
+  appcast 'http://appcast.boastr.net',
+          :sha256 => 'd22e6a9b68ea9d83446ee27e24023fd734cb258b56f01162db52a0880bba6ef1'
   name 'BetterTouchTool'
   homepage 'http://boastr.net/'
   license :gratis
@@ -20,6 +21,8 @@ cask :v1 => 'bettertouchtool' do
   app 'BetterTouchTool.app'
 
   accessibility_access true
+
+  uninstall :login_item => 'BetterTouchTool'
 
   zap :delete => [
                   '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',

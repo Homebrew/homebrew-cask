@@ -1,4 +1,4 @@
-cask :v1 => 'easyfind' do
+cask 'easyfind' do
   version '4.9.3'
   sha256 'eb57b21fa28a84116072e80a4c19b0340d5879f407e9f16bf606760b19e647ed'
 

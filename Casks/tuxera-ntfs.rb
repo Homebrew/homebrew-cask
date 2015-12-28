@@ -1,4 +1,4 @@
-cask :v1 => 'tuxera-ntfs' do
+cask 'tuxera-ntfs' do
   version :latest
   sha256 :no_check
 

@@ -1,10 +1,10 @@
-cask :v1 => 'smartsynchronize' do
+cask 'smartsynchronize' do
   version '3.4.3'
   sha256 'd0542f16dd665044bc2de8f1cc9316419a2590fd883a7886ee44d7ecae10930e'
 
-  url "http://www.syntevo.com/downloads/smartsynchronize/smartsynchronize-macosx-#{version.gsub('.','_')}.dmg"
+  url "https://www.syntevo.com/downloads/smartsynchronize/smartsynchronize-macosx-#{version.gsub('.','_')}.dmg"
   name 'SmartSynchronize'
-  homepage 'http://www.syntevo.com/smartsynchronize/'
+  homepage 'https://www.syntevo.com/smartsynchronize/'
   license :commercial
 
   app 'SmartSynchronize.app'

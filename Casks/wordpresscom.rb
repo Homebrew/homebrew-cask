@@ -1,6 +1,6 @@
-cask :v1 => 'wordpresscom' do
+cask 'wordpresscom' do
   version '1.1'
-  sha256 '2ee6503a319180895f7e75e4ff3ba06a695524e34152bdb5f6d6f39aa6c7c50c'
+  sha256 '300154133f3acda34a4db631cab9f6a5cffa0a7103fffabfd4b96d4f3defa740'
 
   url "https://public-api.wordpress.com/rest/v#{version}/desktop/osx/download?type=dmg"
   name 'WordPress.com'

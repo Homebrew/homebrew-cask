@@ -1,4 +1,4 @@
-cask :v1 => 'ubar' do
+cask 'ubar' do
   version '3.1.1'
   sha256 'f5470e803ba75977099a9582a6d2eabd39aaad9baf6028bbc60b53a1c9bcc409'
 
@@ -12,4 +12,11 @@ cask :v1 => 'ubar' do
   app 'uBar.app'
 
   depends_on :macos => '>= :mavericks'
+
+  zap :delete => [
+                  '~/Library/Application Support/uBar',
+                  '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ca.brawer.ubar.sfl',
+                  '~/Library/Caches/ca.brawer.uBar',
+                  '~/Library/Preferences/ca.brawer.uBar.plist',
+                 ]
 end

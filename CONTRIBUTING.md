@@ -31,7 +31,7 @@ Making a Cask is easy: a Cask is a small Ruby file.
 Here’s a Cask for `shuttle` as an example. Note that the `url` stanza uses `#{version}` ([string interpolation](https://en.wikipedia.org/wiki/String_interpolation#Ruby)) to create a Cask that only needs `version` and `sha256` changes when updated.
 
 ```ruby
-cask :v1 => 'shuttle' do
+cask 'shuttle' do
   version '1.2.5'
   sha256 '7df182f506b80011222c0cdd470be76e0376f38e331f3fafbb6af9add3578023'
 
@@ -50,7 +50,7 @@ end
 Here is another Cask for `genymotion`. Note that you may repeat the `app` stanza as many times as you need, to define multiple apps:
 
 ```ruby
-cask :v1 => 'genymotion' do
+cask 'genymotion' do
   version '2.6.0'
   sha256 '9d12ae904761d76b15a556262d7eb32d1f5031fe60690224d7b0a70303cf8d39'
 
@@ -74,7 +74,7 @@ end
 And here is one for `gateblu`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available. Also note the comment above `url`, which is needed when [the url and homepage hostnames differ](doc/CASK_LANGUAGE_REFERENCE.md#when-url-and-homepage-hostnames-differ-add-a-comment):
 
 ```ruby
-cask :v1 => 'gateblu' do
+cask 'gateblu' do
   version :latest
   sha256 :no_check
 
@@ -120,7 +120,7 @@ $ brew cask create my-new-cask
 This will open `$EDITOR` with a template for your new Cask, to be stored in the file `my-new-cask.rb`. Running the `create` command above will get you a template that looks like this:
 
 ```ruby
-cask :v1 => 'my-new-cask' do
+cask 'my-new-cask' do
   version ''
   sha256 ''
 
@@ -240,7 +240,7 @@ All Casks and code in the homebrew-cask project should be indented using two spa
 If relevant, you may also use string manipulations to improve the maintainability of your Cask. Here’s an example from `Lynkeos.app`:
 
 ```ruby
-cask :v1 => 'lynkeos' do
+cask 'lynkeos' do
   version '2.10'
   sha256 'bd27055c51575555a1c8fe546cf057c57c0e45ea5d252510847277734dc550a4'
 
@@ -275,7 +275,7 @@ bundle exec rubocop Casks/my-new-cask.rb
 
 Keep in mind all of these checks will be made when you submit your PR, so by doing them in advance you’re saving everyone a lot of time and trouble.
 
-If your application and homebrew-cask do not work well together, feel free to [file an issue](https://github.com/caskroom/homebrew-cask/issues) after checking out open issues.
+If your application and homebrew-cask do not work well together, feel free to [file an issue](https://github.com/caskroom/homebrew-cask#reporting-bugs) after checking out open issues.
 
 ## Finding a Home For Your Cask
 

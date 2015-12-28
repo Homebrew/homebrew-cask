@@ -1,10 +1,10 @@
-cask :v1 => 'mozyhome' do
+cask 'mozyhome' do
   version '2.13.8.1552-77645'
   sha256 '13708fefed1301d55dff1d5331a346bdf70938c2994075c170e5bbd13619e01f'
 
   url "https://secure.mozy.com/downloads/mozy-#{version.gsub('.','_')}.dmg"
   name 'MozyHome'
-  homepage 'http://mozy.com/'
+  homepage 'https://mozy.com/'
   license :commercial
 
   pkg 'MozyHome Installer.pkg'

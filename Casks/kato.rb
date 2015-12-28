@@ -1,4 +1,4 @@
-cask :v1 => 'kato' do
+cask 'kato' do
   version :latest
   sha256 :no_check
 

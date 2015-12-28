@@ -1,4 +1,4 @@
-cask :v1 => 'meocloud' do
+cask 'meocloud' do
   version '0.2.29'
   sha256 '909dfe26800c3ecbd424af4cbe8bb37670a057b6a75b05a24b4c86b210d2ef56'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'vienna' do
+cask 'vienna' do
   version '3.0.9'
   sha256 'f819bf8db030b03c1ca176d5e0927efe9aa3e42e3679039e878214c215276ba6'
 

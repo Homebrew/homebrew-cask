@@ -1,4 +1,4 @@
-cask :v1 => 'foxmail' do
+cask 'foxmail' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'amazon-cloud-drive' do
+cask 'amazon-cloud-drive' do
   version :latest
   sha256 :no_check
 

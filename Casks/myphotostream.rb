@@ -1,4 +1,4 @@
-cask :v1 => 'myphotostream' do
+cask 'myphotostream' do
   version :latest
   sha256 :no_check
 

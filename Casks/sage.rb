@@ -1,4 +1,4 @@
-cask :v1 => 'sage' do
+cask 'sage' do
   if MacOS.release <= :lion
     version '6.6'
     sha256 'bdd740d8c92df5467269787aaf00e8cd0b2430cead259a4f15ef04e92b274282'

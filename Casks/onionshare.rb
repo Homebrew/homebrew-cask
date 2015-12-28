@@ -1,9 +1,10 @@
-cask :v1 => 'onionshare' do
-  version '0.7.1'
-  sha256 '219051eb003e6ed36db8d39e3c6436f20ed53d4758d433e80676616a2eee968f'
+cask 'onionshare' do
+  version '0.8'
+  sha256 '2344215e269795ab0943a85071350d292aebcbc996ffc84e1d2af2ad9cd5b959'
 
   url "https://github.com/micahflee/onionshare/releases/download/#{version}/OnionShare.pkg"
-  appcast 'https://github.com/micahflee/onionshare/releases.atom'
+  appcast 'https://github.com/micahflee/onionshare/releases.atom',
+          :sha256 => '676d6738cf56a76e852aa1b66e4ad7b6a6974c32788320b51a2935a5e9b455d7'
   gpg "#{url}.sig",
       :key_url => 'https://onionshare.org/signing-key.asc'
   name 'OnionShare'

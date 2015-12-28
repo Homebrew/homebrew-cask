@@ -1,4 +1,4 @@
-cask :v1 => 'itunes-producer' do
+cask 'itunes-producer' do
   if MacOS.release <= :mavericks
     version '2.9.1'
 

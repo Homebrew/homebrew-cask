@@ -1,4 +1,4 @@
-cask :v1 => 'iboostup' do
+cask 'iboostup' do
   version :latest
   sha256 :no_check
 

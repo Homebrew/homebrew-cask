@@ -1,4 +1,4 @@
-cask :v1 => 'wi2-connect' do
+cask 'wi2-connect' do
   version :latest
   sha256 :no_check
 

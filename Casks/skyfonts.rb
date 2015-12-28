@@ -1,4 +1,4 @@
-cask :v1 => 'skyfonts' do
+cask 'skyfonts' do
   version '4.10.0.0'
   sha256 'a0186bdde3f1abccef35a9be32ce139bd5e61b428cf5efabaacc194a52a0d4b0'
 

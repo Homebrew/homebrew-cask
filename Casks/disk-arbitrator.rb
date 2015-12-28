@@ -1,4 +1,4 @@
-cask :v1 => 'disk-arbitrator' do
+cask 'disk-arbitrator' do
   version '0.5'
   sha256 'dcc05e6579a7ef3835cb06beb4c9e1dcc64f01128e91fc00cfc7e3a00876fd2a'
 

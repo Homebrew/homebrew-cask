@@ -1,4 +1,4 @@
-cask :v1 => 'platypus' do
+cask 'platypus' do
   version '5.0'
   sha256 'a14c9f2360feff9f07d5db5eeee238fbc602dccf574c3ebd1ce875fede43bdb1'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'air-connect' do
+cask 'air-connect' do
   version '2.0.1'
   sha256 'e8f93fbcb626241f9cbe0f934cf9dada319f3f80399ec83558aa696988575b2a'
 

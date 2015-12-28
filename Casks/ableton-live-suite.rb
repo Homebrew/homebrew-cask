@@ -1,4 +1,4 @@
-cask :v1 => 'ableton-live-suite' do
+cask 'ableton-live-suite' do
   version '9.5'
 
   if Hardware::CPU.is_32_bit?
@@ -10,7 +10,7 @@ cask :v1 => 'ableton-live-suite' do
   end
 
   name 'Ableton Live Suite'
-  homepage 'http://ableton.com/en/live'
+  homepage 'https://ableton.com/en/live'
   license :commercial
 
   app "Ableton Live #{version[0]} Suite.app"

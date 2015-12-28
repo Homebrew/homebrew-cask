@@ -1,4 +1,4 @@
-cask :v1 => 'rro' do
+cask 'rro' do
   version '3.2.2'
   sha256 'd7d096f5e258a6b1945235aefcdf9c52b3e63daaa515d39305a864f6a3a7b640'
 

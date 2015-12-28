@@ -1,4 +1,4 @@
-cask :v1 => 'real-vnc' do
+cask 'real-vnc' do
   version '5.2.3'
   sha256 '1e59895d261b8903e8cdc9e0419804289e62ac7834fd8efb62d678559198bd8e'
 

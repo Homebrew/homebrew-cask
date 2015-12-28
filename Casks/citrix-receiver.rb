@@ -1,4 +1,4 @@
-cask :v1 => 'citrix-receiver' do
+cask 'citrix-receiver' do
   version :latest
   sha256 :no_check
 

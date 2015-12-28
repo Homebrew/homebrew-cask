@@ -1,4 +1,4 @@
-cask :v1 => 'keyboardcleantool' do
+cask 'keyboardcleantool' do
   version :latest
   sha256 :no_check
 

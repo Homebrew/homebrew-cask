@@ -1,4 +1,4 @@
-cask :v1 => 'terminology' do
+cask 'terminology' do
   version :latest
   sha256 :no_check
 
@@ -8,5 +8,6 @@ cask :v1 => 'terminology' do
   license :gratis
 
   installer :script => 'Terminology-for-OS-X/Install.command', :sudo => false
+
   uninstall :delete => Pathname.new(File.expand_path('~')).join('Library/Dictionaries/Terminology.dictionary')
 end

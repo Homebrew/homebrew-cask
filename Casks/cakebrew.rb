@@ -1,4 +1,4 @@
-cask :v1 => 'cakebrew' do
+cask 'cakebrew' do
   version '1.1.5'
   sha256 '8a49e2bd6172ba7466dbd760242f037da99bf0b327c0ea0ea25f2ef099e89aa9'
 

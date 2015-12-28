@@ -1,4 +1,4 @@
-cask :v1 => 'textwrangler' do
+cask 'textwrangler' do
   version '5.0.2'
   sha256 '29484008bc95aee2e2731781b514cd60ca1e19fdb5a4b575ac5dbbf79472c346'
 

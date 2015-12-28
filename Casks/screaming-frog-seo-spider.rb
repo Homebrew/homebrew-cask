@@ -1,4 +1,4 @@
-cask :v1 => 'screaming-frog-seo-spider' do
+cask 'screaming-frog-seo-spider' do
   if MacOS.release <= :lion
     version '2.40'
     sha256 'f37a517cb1ddb13a0621ae2ef98eba148027b3a2b5ce56b6e6b4ca756e40329b'

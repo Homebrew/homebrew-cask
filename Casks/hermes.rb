@@ -1,4 +1,4 @@
-cask :v1 => 'hermes' do
+cask 'hermes' do
   version '1.2.6'
   sha256 '3735d1bbae0e3ef773e0a2d169ca7f838f3e3510fe7b6fa59546c01fccbb9aa8'
 

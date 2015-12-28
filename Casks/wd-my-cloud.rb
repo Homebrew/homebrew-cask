@@ -1,4 +1,4 @@
-cask :v1 => 'wd-my-cloud' do
+cask 'wd-my-cloud' do
   version :latest
   sha256 :no_check
 
@@ -11,5 +11,4 @@ cask :v1 => 'wd-my-cloud' do
 
   uninstall  :pkgutil => 'com.wdc.wdMyCloud.*',
              :rmdir => '/Applications/WD My Cloud'
-
 end

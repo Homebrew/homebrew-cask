@@ -1,4 +1,4 @@
-cask :v1 => 'moneywell' do
+cask 'moneywell' do
   if MacOS.release <= :tiger
     version '1.4.13'
     sha256 'b2eb23a4d5d9e555d00529f83d4cae43abc184c9174a4b729693b55787dfd64d'

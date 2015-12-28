@@ -1,4 +1,4 @@
-cask :v1 => 'betterzip' do
+cask 'betterzip' do
   version '3.0.3'
   sha256 '5bcce666ff501957cf535d13d156ef7e5da79f7af283a2f911ef7e959c847594'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'alternote' do
+cask 'alternote' do
   version '1.0.6_1006'
   sha256 '31ff36a3a02daba52b3363d9f8b75e1183df488ff844f8f7f919f67ba57bb4d2'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'scenery' do
+cask 'scenery' do
   version '1.0.1'
   sha256 '239fb51d54104f6e95a58bfcac9bd380eb67ff1c5bc53ed5312b176ef8a09a6a'
 

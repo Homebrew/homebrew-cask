@@ -1,4 +1,4 @@
-cask :v1 => 'flymaster-firmware' do
+cask 'flymaster-firmware' do
   version :latest
   sha256 :no_check
 

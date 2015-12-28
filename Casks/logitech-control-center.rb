@@ -1,4 +1,4 @@
-cask :v1 => 'logitech-control-center' do
+cask 'logitech-control-center' do
 
   if MacOS.release <= :leopard
     version '3.5.1.23'
@@ -14,7 +14,7 @@ cask :v1 => 'logitech-control-center' do
   end
 
   name 'Logitech Control Center'
-  homepage 'http://support.logitech.com/en_us/product/3129'
+  homepage 'https://support.logitech.com/en_us/product/3129'
   license :closed
 
   pkg 'LCC Installer.app/Contents/Resources/Logitech Control Center.mpkg'

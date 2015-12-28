@@ -1,4 +1,4 @@
-cask :v1 => 'subtitles' do
+cask 'subtitles' do
   version '3.2.7'
   sha256 'aa1eaf186cd21689b6a7235aaf920204eed5523e77c76b85afc2aeb8caf1592f'
 

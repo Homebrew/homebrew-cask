@@ -1,4 +1,4 @@
-cask :v1 => 'atlauncher' do
+cask 'atlauncher' do
   version :latest
   sha256 :no_check
 

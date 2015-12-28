@@ -1,4 +1,4 @@
-cask :v1 => 'bit-slicer' do
+cask 'bit-slicer' do
   version '1.7.6'
   sha256 '03e9125481bd4c6459e379b3b0df69a2eecbde80f7cb11d9be8dfc9c0f8d3a58'
 

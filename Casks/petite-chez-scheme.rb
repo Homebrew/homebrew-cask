@@ -1,4 +1,4 @@
-cask :v1 => 'petite-chez-scheme' do
+cask 'petite-chez-scheme' do
   version '8.4'
   sha256 '3ed7200c3e265d36d03129569a78bfde8aedaea1ec7565d3c7a4daca26389701'
 

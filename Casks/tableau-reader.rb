@@ -1,4 +1,4 @@
-cask :v1 => 'tableau-reader' do
+cask 'tableau-reader' do
   version :latest
   sha256 :no_check
 

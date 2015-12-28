@@ -1,4 +1,4 @@
-cask :v1 => 'pdf-toolbox' do
+cask 'pdf-toolbox' do
   version :latest
   sha256 :no_check
 

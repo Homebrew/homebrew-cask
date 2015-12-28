@@ -1,4 +1,4 @@
-cask :v1 => 'minecraft-server' do
+cask 'minecraft-server' do
   version '1.8.8'
   sha256 '39aef720dc5309476f56f2e96a516f3dd3041bbbf442cbfd47d63acbd06af31e'
 

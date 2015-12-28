@@ -1,11 +1,12 @@
-cask :v1 => 'beamer' do
-  version '3.0.1'
-  sha256 '1f73fb789214ddacb5493ff4df1603e1b3c6aa54d0a677995eb77481c0e5198c'
+cask 'beamer' do
+  version '3.0.3'
+  sha256 '183a28b096415825e9e22816b25cdfbe4b6a55d53d0e1da89cae8d3a55c26f17'
 
   url "https://beamer-app.com/resources/downloads/Beamer-#{version}.zip"
+  appcast 'https://beamer-app.com/beamer3-appcast.xml',
+          :sha256 => '3b362b71ab9eaec3f9b0b347dece549b1d3c26ae39a064ce687c9fba3c091f83'
   name 'Beamer'
-  appcast 'http://beamer-app.com/beamer3-appcast.xml'
-  homepage 'http://beamer-app.com'
+  homepage 'https://beamer-app.com/'
   license :commercial
 
   app 'Beamer.app'

@@ -1,4 +1,4 @@
-cask :v1 => 'mdrp' do
+cask 'mdrp' do
   version :latest
   sha256 :no_check
 

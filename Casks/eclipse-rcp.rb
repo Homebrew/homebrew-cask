@@ -1,4 +1,4 @@
-cask :v1 => 'eclipse-rcp' do
+cask 'eclipse-rcp' do
   version '4.5.1'
   sha256 'a257149a47065b35dc66f8795a91fe36fdc1985fbc4b3d20bd6853b518e6e427'
 

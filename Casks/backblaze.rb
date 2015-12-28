@@ -1,4 +1,4 @@
-cask :v1 => 'backblaze' do
+cask 'backblaze' do
   version :latest
   sha256 :no_check
 

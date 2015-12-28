@@ -1,4 +1,4 @@
-cask :v1 => 'praat' do
+cask 'praat' do
   version '6.0.06'
 
   if Hardware::CPU.is_32_bit? || MacOS.release <= :snow_leopard
@@ -9,7 +9,8 @@ cask :v1 => 'praat' do
     url "https://github.com/praat/praat/releases/download/v#{version}/praat#{version.delete('.')}_mac64.dmg"
   end
 
-  appcast 'https://github.com/praat/praat/releases.atom'
+  appcast 'https://github.com/praat/praat/releases.atom',
+          :sha256 => '59a4fe43d795b61c7efa9ce61503f13a731878a422b93b22c49f8b9e05f09a39'
   name 'Praat'
   homepage 'http://www.fon.hum.uva.nl/praat/'
   license :gpl

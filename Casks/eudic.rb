@@ -1,4 +1,4 @@
-cask :v1 => 'eudic' do
+cask 'eudic' do
   version :latest
   sha256 :no_check
 

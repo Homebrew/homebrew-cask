@@ -1,4 +1,4 @@
-cask :v1 => 'garmin-basecamp' do
+cask 'garmin-basecamp' do
   version '4.5.1'
   sha256 '3e820d02f1cb245fd294233b970c5af01c833f5c4cb972b5c4824dfec4652ea6'
 

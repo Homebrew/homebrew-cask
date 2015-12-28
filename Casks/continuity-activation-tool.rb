@@ -1,4 +1,4 @@
-cask :v1 => 'continuity-activation-tool' do
+cask 'continuity-activation-tool' do
   version :latest
   sha256 :no_check
 
