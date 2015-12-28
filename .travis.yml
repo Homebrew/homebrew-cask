@@ -24,6 +24,8 @@ matrix:
 # * update Homebrew
 # * informational feedback
 before_install:
+  - export TRAVIS_COMMIT=$(git rev-parse --verify -q HEAD)
+  - env | grep TRAVIS_
   - rvm use system
   - export PATH="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin":"$PATH"
   - brew update
