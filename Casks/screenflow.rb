@@ -9,6 +9,8 @@ cask 'screenflow' do
   homepage 'https://www.telestream.net/screenflow/'
   license :commercial
 
+  auto_updates true
+
   app 'ScreenFlow.app'
 
   depends_on :macos => '>= :mavericks'
