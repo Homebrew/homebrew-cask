@@ -4,6 +4,7 @@ So you want to contribute to the project. **THIS IS GREAT NEWS!**  Seriously. We
 
 * [Getting Set Up To Contribute](#getting-set-up-to-contribute)
 * [Adding a Cask](#adding-a-cask)
+* [Stanza order](#stanza-order)
 * [Testing Your New Cask](#testing-your-new-cask)
 * [Finding a Home For Your Cask](#finding-a-home-for-your-cask)
 * [Submitting Your Changes](#submitting-your-changes)
@@ -171,6 +172,63 @@ Additional stanzas you might need for special use-cases:
 | `caveats`              | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#caveats-stanza-details))
 
 Even more special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#optional-stanzas) and [Legacy Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#legacy-stanzas).
+
+### Stanza order
+
+Having a common order for stanzas makes Casks easier to update and parse. Empty lines shown here are also important as they help to visually make sense of blocks of information.
+
+```
+version
+sha256
+
+url
+appcast,
+  :sha256 # required
+name
+homepage
+license
+gpg, :key_id # on same line, since first part is typically small
+
+auto_updates
+accessibility_access
+conflicts_with
+depends_on
+container
+
+suite
+app
+pkg
+installer
+binary
+colorpicker
+font
+input_method
+internet_plugin
+prefpane
+qlplugin
+screen_saver
+service
+audio_unit_plugin
+vst_plugin
+artifact, :target # :target is required in this case
+stage_only
+
+preflight
+
+postflight
+
+uninstall_preflight
+
+uninstall_postflight
+
+uninstall
+
+zap
+
+caveats
+```
+
+Note that every stanza that has additional parameters (`:symbols` after a `,`) shall have them on separate lines, one per line, in alphabetical order. Exceptions are `gpg` and `:target` (when not applied to `url`) which typically consist of short lines.
 
 ### SourceForge URLs
 
