@@ -55,12 +55,12 @@ cask 'genymotion' do
   version '2.6.0'
   sha256 '9d12ae904761d76b15a556262d7eb32d1f5031fe60690224d7b0a70303cf8d39'
 
-  depends_on :cask => 'virtualbox'
-
   url "http://files2.genymotion.com/genymotion/genymotion-#{version}/genymotion-#{version}.dmg"
   name 'Genymotion'
   homepage 'https://www.genymotion.com/'
   license :commercial
+
+  depends_on :cask => 'virtualbox'
 
   app 'Genymotion.app'
   app 'Genymotion Shell.app'
@@ -175,7 +175,7 @@ Even more special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE
 
 ### Stanza order
 
-Having a common order for stanzas makes Casks easier to update and parse. Empty lines shown here are also important as they help to visually make sense of blocks of information.
+Having a common order for stanzas makes Casks easier to update and parse. Below is the the complete stanza sequence (no Cask will have all stanzas). The empty lines shown here are also important, as they help to visually delineate information.
 
 ```
 version
@@ -183,7 +183,7 @@ sha256
 
 url
 appcast,
-  :sha256 # required
+  :sha256 # shown here as it is required with `appcast`
 name
 homepage
 license
@@ -210,7 +210,7 @@ screen_saver
 service
 audio_unit_plugin
 vst_plugin
-artifact, :target # :target is required in this case
+artifact, :target # :target shown here as is required with `artifact`
 stage_only
 
 preflight
