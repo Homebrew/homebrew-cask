@@ -31,6 +31,8 @@ cask 'textexpander' do
   homepage 'https://www.smilesoftware.com/TextExpander/'
   license :commercial
 
+  auto_updates true
+
   app 'TextExpander.app'
 
   accessibility_access true
