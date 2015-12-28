@@ -10,8 +10,7 @@ cask 'screenflow' do
   license :commercial
 
   auto_updates true
+  depends_on :macos => '>= :mavericks'
 
   app 'ScreenFlow.app'
-
-  depends_on :macos => '>= :mavericks'
 end
