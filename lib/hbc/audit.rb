@@ -4,20 +4,25 @@ require 'hbc/download'
 class Hbc::Audit
   include Hbc::Checkable
 
-  attr_reader :cask
+  attr_reader :cask, :download
 
-  def initialize(cask)
+  def initialize(cask, download = false)
     @cask = cask
+    @download = download
   end
 
-  def run!(download = false)
+  def run!
     check_required_stanzas
     check_no_string_version_latest
     check_sha256
     check_appcast
     check_sourceforge_download_url_format
-    check_download(download) if download
-    return !(errors? or warnings?)
+    check_download if download
+    self
+  end
+
+  def success?
+    !(errors? || warnings?)
   end
 
   def summary_header
@@ -31,7 +36,7 @@ class Hbc::Audit
     %i{version sha256 url homepage}.each do |sym|
       add_error "a #{sym} stanza is required" unless cask.send(sym)
     end
-    add_error 'a license value is required (:unknown is OK)' unless cask.license
+    add_error 'a license stanza is required (:unknown is OK)' unless cask.license
     add_error 'at least one name stanza is required' if cask.full_name.empty?
     # todo: specific DSL knowledge should not be spread around in various files like this
     # todo: nested_container should not still be a pseudo-artifact at this point
@@ -91,7 +96,7 @@ class Hbc::Audit
     add_error 'a sha256 is required for appcast' unless cask.appcast.sha256
   end
 
-  def check_download(download)
+  def check_download
     odebug "Auditing download"
     downloaded_path = download.perform
     Hbc::Verify.all(cask, downloaded_path)
