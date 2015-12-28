@@ -7,6 +7,8 @@ cask 'dropbox' do
   homepage 'https://www.dropbox.com/'
   license :gratis
 
+  auto_updates true
+
   app 'Dropbox.app'
 
   uninstall :login_item => 'Dropbox'
