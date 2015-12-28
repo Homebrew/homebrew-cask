@@ -51,7 +51,7 @@ class Hbc::Audit
 
   def check_no_string_version_latest
     odebug "Verifying version :latest does not appear as a string ('latest')"
-    if (cask.version == 'latest')
+    if cask.version.raw_version == 'latest'
       add_error "you should use version :latest instead of version 'latest'"
     end
   end
@@ -65,7 +65,7 @@ class Hbc::Audit
 
   def check_sha256_no_check_if_latest
     odebug "Verifying sha256 :no_check with version :latest"
-    if cask.version == :latest and cask.sha256 != :no_check
+    if cask.version.latest? && cask.sha256 != :no_check
       add_error "you should use sha256 :no_check when version is :latest"
     end
   end
