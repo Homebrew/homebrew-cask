@@ -8,10 +8,9 @@ cask 'alfred' do
   license :freemium
 
   auto_updates true
+  accessibility_access true
 
   app 'Alfred 2.app'
-
-  accessibility_access true
 
   postflight do
     suppress_move_to_applications :key => 'suppressMoveToApplications'
