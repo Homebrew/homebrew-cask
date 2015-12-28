@@ -1,11 +1,11 @@
 cask 'spotifree' do
-  version '1.6.4'
-  sha256 '4f20883f1c3d3530999979712ea804f339b88602e3c976b8cb85f7df6b767e76'
+  version '1.6.5'
+  sha256 'f518a09187bbf1c033e007fbfbd900222d17c7efd103ef239e61bfdec7caaaec'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/ArtemGordinsky/Spotifree/releases/download/#{version}/Spotifree.dmg"
   appcast 'http://spotifree.gordinskiy.com/appcast.xml',
-          :sha256 => '9fc447ae4ee85183fa04efbf3396f86bdcc0f8d2303dc7c111bbbcd1faf46a68'
+          :sha256 => 'fdbbed5f9245062d5045d556b9670ca31dde276df369d8303a65ab15d65e09a4'
   name 'Spotifree'
   homepage 'http://spotifree.gordinskiy.com'
   license :oss
