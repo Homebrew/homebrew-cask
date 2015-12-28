@@ -13,11 +13,11 @@ class Hbc::Audit
 
   def run!
     check_required_stanzas
-    check_no_string_version_latest
+    check_version
     check_sha256
     check_appcast
-    check_sourceforge_download_url_format
-    check_download if download
+    check_url
+    check_download
     self
   end
 
@@ -42,6 +42,11 @@ class Hbc::Audit
     # todo: nested_container should not still be a pseudo-artifact at this point
     installable_artifacts = cask.artifacts.reject{ |k,v| [:uninstall, :zap, :nested_container].include?(k)}
     add_error 'at least one activatable artifact stanza is required' unless installable_artifacts.size > 0
+  end
+
+  def check_version
+    return unless cask.version
+    check_no_string_version_latest
   end
 
   def check_no_string_version_latest
@@ -96,12 +101,9 @@ class Hbc::Audit
     add_error 'a sha256 is required for appcast' unless cask.appcast.sha256
   end
 
-  def check_download
-    odebug "Auditing download"
-    downloaded_path = download.perform
-    Hbc::Verify.all(cask, downloaded_path)
-  rescue => e
-    add_error "download not possible: #{e.message}"
+  def check_url
+    return unless cask.url
+    check_sourceforge_download_url_format
   end
 
   def check_sourceforge_download_url_format
@@ -123,5 +125,14 @@ class Hbc::Audit
       %r{\Ahttps?://excalibur\.sourceforge\.net/get\.php\?id=},
     ]
     valid_url_formats.none? { |format| cask.url.to_s =~ format }
+  end
+
+  def check_download
+    return unless download
+    odebug "Auditing download"
+    downloaded_path = download.perform
+    Hbc::Verify.all(cask, downloaded_path)
+  rescue => e
+    add_error "download not possible: #{e.message}"
   end
 end
