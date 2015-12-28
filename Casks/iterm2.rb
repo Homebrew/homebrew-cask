@@ -10,6 +10,8 @@ cask 'iterm2' do
           :sha256 => 'dbe44305b0b7e620fb020a60d6ca78042144a8e04b4b4f2fc3cec84e0df9fc44'
   license :gpl
 
+  auto_updates true
+
   app 'iTerm.app'
 
   zap :delete => '~/Library/Preferences/com.googlecode.iterm2.plist'
