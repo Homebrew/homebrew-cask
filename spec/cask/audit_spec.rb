@@ -23,28 +23,64 @@ describe Hbc::Audit do
 
   describe "run!" do
     describe "required fields" do
-      it "adds an error if url is missing" do
-        audit = Hbc::Audit.new(Hbc.load('missing-url'))
-        audit.run!
-        expect(audit.errors).to include('a url stanza is required')
+      %w[version sha256 url homepage].each do |stanza|
+        it "adds an error if #{stanza} is missing" do
+          audit = Hbc::Audit.new(Hbc.load("missing-#{stanza}"))
+          audit.run!
+          expect(audit.errors).to include("a #{stanza} stanza is required")
+        end
       end
 
-      it "adds an error if version is missing" do
-        audit = Hbc::Audit.new(Hbc.load('missing-version'))
+      it "adds an error if license is missing" do
+        audit = Hbc::Audit.new(Hbc.load('missing-license'))
         audit.run!
-        expect(audit.errors).to include('a version stanza is required')
+        expect(audit.errors).to include('a license value is required (:unknown is OK)')
       end
 
-      it "adds an error if homepage is missing" do
-        audit = Hbc::Audit.new(Hbc.load('missing-homepage'))
+      it "adds an error if name is missing" do
+        audit = Hbc::Audit.new(Hbc.load('missing-name'))
         audit.run!
-        expect(audit.errors).to include('a homepage stanza is required')
+        expect(audit.errors).to include('at least one name stanza is required')
       end
+    end
 
-      it "adds an error if version is latest and using sha256" do
+    describe "sha256 checks" do
+      it "adds an error if version is :latest and sha256 is not :no_check" do
         audit = Hbc::Audit.new(Hbc.load('version-latest-with-checksum'))
         audit.run!
-        expect(audit.errors).to include(%q{you should use sha256 :no_check when version is :latest})
+        expect(audit.errors).to include('you should use sha256 :no_check when version is :latest')
+      end
+
+      it "adds an error if sha256 is not a legal SHA-256 digest" do
+        audit = Hbc::Audit.new(Hbc.load('invalid-sha256'))
+        audit.run!
+        expect(audit.errors).to include('sha256 string must be of 64 hexadecimal characters')
+      end
+
+      it "adds an error if sha256 is sha256 for empty string" do
+        audit = Hbc::Audit.new(Hbc.load('sha256-for-empty-string'))
+        audit.run!
+        expect(audit.errors).to include('cannot use the sha256 for an empty string: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855')
+      end
+    end
+
+    describe "appcast checks" do
+      it "adds an error if appcast has no sha256" do
+        audit = Hbc::Audit.new(Hbc.load('appcast-missing-sha256'))
+        audit.run!
+        expect(audit.errors).to include('a sha256 is required for appcast')
+      end
+
+      it "adds an error if appcast sha256 is not a string of 64 hexadecimal characters" do
+        audit = Hbc::Audit.new(Hbc.load('appcast-invalid-sha256'))
+        audit.run!
+        expect(audit.errors).to include('sha256 string must be of 64 hexadecimal characters')
+      end
+
+      it "adds an error if appcast sha256 is sha256 for empty string" do
+        audit = Hbc::Audit.new(Hbc.load('appcast-sha256-for-empty-string'))
+        audit.run!
+        expect(audit.errors).to include('cannot use the sha256 for an empty string: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855')
       end
     end
 
