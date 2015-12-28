@@ -7,6 +7,8 @@ cask 'alfred' do
   homepage 'https://www.alfredapp.com/'
   license :freemium
 
+  auto_updates true
+
   app 'Alfred 2.app'
 
   accessibility_access true
