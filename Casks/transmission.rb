@@ -10,6 +10,8 @@ cask 'transmission' do
   homepage 'http://www.transmissionbt.com/'
   license :gpl
 
+  auto_updates true
+
   app 'Transmission.app'
 
   zap :delete => [
