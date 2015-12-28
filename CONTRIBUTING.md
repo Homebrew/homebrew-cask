@@ -36,7 +36,8 @@ cask 'shuttle' do
   sha256 '7df182f506b80011222c0cdd470be76e0376f38e331f3fafbb6af9add3578023'
 
   url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
-  appcast 'https://github.com/fitztrev/shuttle/releases.atom'
+  appcast 'https://github.com/fitztrev/shuttle/releases.atom',
+          :sha256 => '9f66dbb98f73f69f4a1759d4bdb8d2552060d599548427740e239ca45185fe5c'
   name 'Shuttle'
   homepage 'https://fitztrev.github.io/shuttle/'
   license :mit
@@ -139,7 +140,7 @@ Fill in the following stanzas for your Cask:
 
 | name               | value       |
 | ------------------ | ----------- |
-| `version`          | application version; give the value `:latest` if an unversioned download is available
+| `version`          | application version; give the value `:latest` if only an unversioned download is available
 | `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
 | `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application. A [comment](doc/CASK_LANGUAGE_REFERENCE.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
 | `name`             | the full and proper name defined by the vendor, and any useful alternate names (see also [Name Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#name-stanza-details))
