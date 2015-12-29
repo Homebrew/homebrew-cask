@@ -20,7 +20,6 @@ cask 'airtool' do
                         zap :delete => [
                           '/Library/Application Support/Airtool',
                           '/Library/LaunchDaemons/com.adriangranados.airtool.airtool-bpf.plist',
-                          '~/Library/Saved Application State/com.freemacsoft.AppCleaner.savedState',
                           '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adriangranados.airtool.sfl',
                         ]
 end
