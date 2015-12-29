@@ -345,6 +345,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 + **Nightly**: Constantly up-to-date versions of the current development state.
 + **Legacy**: Any **stable** version that is not the most recent.
 + **Alternative**: Alternative edition of an existing app, by the same vendor (developer editions, community editions, pro editions, …).
++ **Regional, Localized**: Any version that isn’t the US English one, when that exists.
 + **Trial**: Date-limited version that stops working entirely after it expires, requiring payment to lift the limitation.
 + **Freemium**: Gratis version that works indefinitely but with limitations that can be removed by paying.
 + **Fork**: An alternate version of an existing project, with a based-on but modified source and binary.
@@ -363,6 +364,10 @@ When an App is only available as beta, development, or unstable versions, or in 
 ### Beta, Unstable, Development, Nightly, Legacy, or Alternative Versions
 
 When an App’s principal stable version already exists in the main repo, alternative versions should be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
+
+### Regional and Localized
+
+When an App exists in more than one language or has different regional editions, the US English one belongs in the main repo, and all the others in [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions). When not already part of the name of the app, a [regional identifier](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) and a [language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) are to be appended to the Cask’s token (both when available, or just the appropriate one when not).
 
 ### Trial and Freemium Versions
 
