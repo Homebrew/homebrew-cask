@@ -344,6 +344,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 + **Beta, Development, Unstable**: Subsequent versions to **stable**, yet incomplete and under development, aiming to eventually become the new **stable**.
 + **Nightly**: Constantly up-to-date versions of the current development state.
 + **Legacy**: Any **stable** version that is not the most recent.
++ **Alternative**: Alternative edition of an existing app, by the same vendor (developer editions, community editions, pro editions, …).
 + **Trial**: Date-limited version that stops working entirely after it expires, requiring payment to lift the limitation.
 + **Freemium**: Gratis version that works indefinitely but with limitations that can be removed by paying.
 + **Fork**: An alternate version of an existing project, with a based-on but modified source and binary.
@@ -359,9 +360,9 @@ Stable versions live in the main repository at [caskroom/homebrew-cask](https://
 
 When an App is only available as beta, development, or unstable versions, or in cases where such a version is the general standard, then said version can go into the main repo.
 
-### Beta, Unstable, Development, Nightly, or Legacy Versions
+### Beta, Unstable, Development, Nightly, Legacy, or Alternative Versions
 
-When an App’s stable version already exists in the main repo, alternate versions can be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
+When an App’s principal stable version already exists in the main repo, alternative versions should be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
 
 ### Trial and Freemium Versions
 
