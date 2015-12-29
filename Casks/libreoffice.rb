@@ -18,4 +18,16 @@ cask 'libreoffice' do
   license :mpl
 
   app 'LibreOffice.app'
+  binary 'LibreOffice.app/Contents/MacOS/gengal'
+  binary 'LibreOffice.app/Contents/MacOS/regmerge'
+  binary 'LibreOffice.app/Contents/MacOS/regview'
+  binary 'LibreOffice.app/Contents/MacOS/senddoc'
+  binary 'LibreOffice.app/Contents/MacOS/soffice'
+  binary 'LibreOffice.app/Contents/MacOS/ui-previewer'
+  binary 'LibreOffice.app/Contents/MacOS/uno'
+  binary 'LibreOffice.app/Contents/MacOS/unoinfo'
+  binary 'LibreOffice.app/Contents/MacOS/unopkg'
+  binary 'LibreOffice.app/Contents/MacOS/urelibs'
+  binary 'LibreOffice.app/Contents/MacOS/uri-encode'
+  binary 'LibreOffice.app/Contents/MacOS/xpdfimport'
 end

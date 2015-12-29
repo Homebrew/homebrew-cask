@@ -1,4 +1,4 @@
-cask 'unity' do
+cask 'unity-download-assistant' do
   version '5.3.1f1'
   sha256 '6c2a31e6241d2b511a53b9cb88713a38ded25b7f29de540eaf281f44441287f5'
 

@@ -4,6 +4,7 @@ So you want to contribute to the project. **THIS IS GREAT NEWS!**  Seriously. We
 
 * [Getting Set Up To Contribute](#getting-set-up-to-contribute)
 * [Adding a Cask](#adding-a-cask)
+* [Stanza order](#stanza-order)
 * [Testing Your New Cask](#testing-your-new-cask)
 * [Finding a Home For Your Cask](#finding-a-home-for-your-cask)
 * [Submitting Your Changes](#submitting-your-changes)
@@ -36,7 +37,8 @@ cask 'shuttle' do
   sha256 '7df182f506b80011222c0cdd470be76e0376f38e331f3fafbb6af9add3578023'
 
   url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
-  appcast 'https://github.com/fitztrev/shuttle/releases.atom'
+  appcast 'https://github.com/fitztrev/shuttle/releases.atom',
+          :sha256 => '9f66dbb98f73f69f4a1759d4bdb8d2552060d599548427740e239ca45185fe5c'
   name 'Shuttle'
   homepage 'https://fitztrev.github.io/shuttle/'
   license :mit
@@ -54,12 +56,12 @@ cask 'genymotion' do
   version '2.6.0'
   sha256 '9d12ae904761d76b15a556262d7eb32d1f5031fe60690224d7b0a70303cf8d39'
 
-  depends_on :cask => 'virtualbox'
-
   url "http://files2.genymotion.com/genymotion/genymotion-#{version}/genymotion-#{version}.dmg"
   name 'Genymotion'
   homepage 'https://www.genymotion.com/'
   license :commercial
+
+  depends_on :cask => 'virtualbox'
 
   app 'Genymotion.app'
   app 'Genymotion Shell.app'
@@ -127,7 +129,7 @@ cask 'my-new-cask' do
   url ''
   name ''
   homepage ''
-  license :unknown
+  license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app ''
 end
@@ -139,7 +141,7 @@ Fill in the following stanzas for your Cask:
 
 | name               | value       |
 | ------------------ | ----------- |
-| `version`          | application version; give the value `:latest` if an unversioned download is available
+| `version`          | application version; give the value `:latest` if only an unversioned download is available
 | `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
 | `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application. A [comment](doc/CASK_LANGUAGE_REFERENCE.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
 | `name`             | the full and proper name defined by the vendor, and any useful alternate names (see also [Name Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#name-stanza-details))
@@ -171,6 +173,63 @@ Additional stanzas you might need for special use-cases:
 | `caveats`              | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#caveats-stanza-details))
 
 Even more special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#optional-stanzas) and [Legacy Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#legacy-stanzas).
+
+### Stanza order
+
+Having a common order for stanzas makes Casks easier to update and parse. Below is the the complete stanza sequence (no Cask will have all stanzas). The empty lines shown here are also important, as they help to visually delineate information.
+
+```
+version
+sha256
+
+url
+appcast,
+  :sha256 # shown here as it is required with `appcast`
+name
+homepage
+license
+gpg, :key_id # on same line, since first part is typically small
+
+auto_updates
+accessibility_access
+conflicts_with
+depends_on
+container
+
+suite
+app
+pkg
+installer
+binary
+colorpicker
+font
+input_method
+internet_plugin
+prefpane
+qlplugin
+screen_saver
+service
+audio_unit_plugin
+vst_plugin
+artifact, :target # :target shown here as is required with `artifact`
+stage_only
+
+preflight
+
+postflight
+
+uninstall_preflight
+
+uninstall_postflight
+
+uninstall
+
+zap
+
+caveats
+```
+
+Note that every stanza that has additional parameters (`:symbols` after a `,`) shall have them on separate lines, one per line, in alphabetical order. Exceptions are `gpg` and `:target` (when not applied to `url`) which typically consist of short lines.
 
 ### SourceForge URLs
 
