@@ -7,6 +7,8 @@ cask 'steam' do
   homepage 'http://store.steampowered.com/about/'
   license :gratis
 
+  auto_updates true
+
   app 'Steam.app'
 
   uninstall :quit      => [

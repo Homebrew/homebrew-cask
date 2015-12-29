@@ -10,6 +10,8 @@ cask 'bartender' do
   homepage 'https://www.macbartender.com/'
   license :commercial
 
+  auto_updates true
+
   app "Bartender #{version.to_i}.app"
 
   postflight do
