@@ -14,7 +14,7 @@ cask 'logitech-control-center' do
   end
 
   name 'Logitech Control Center'
-  homepage 'http://support.logitech.com/en_us/product/3129'
+  homepage 'https://support.logitech.com/en_us/product/3129'
   license :closed
 
   pkg 'LCC Installer.app/Contents/Resources/Logitech Control Center.mpkg'

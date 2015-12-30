@@ -6,7 +6,6 @@ cask 'steelseries-engine' do
   name 'SteelSeries Engine 3'
   homepage 'https://steelseries.com/engine'
   license :gratis
-  tags :vendor => 'SteelSeries'
 
   pkg "SteelSeriesEngine#{version}.pkg"
 

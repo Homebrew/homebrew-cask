@@ -4,7 +4,8 @@ cask 'delibar' do
 
   # shinynode.com is the official download host per the appcast feed
   url "http://apps.shinynode.com/apps/update/delibar_#{version}.zip"
-  appcast 'http://apps.shinynode.com/apps/delibar_appcast.xml'
+  appcast 'http://apps.shinynode.com/apps/delibar_appcast.xml',
+          :sha256 => 'f13c80882de84573bacc42701a6659fcc3244f4840ca64314ca753a9baccabb8'
   name 'Delibar'
   homepage 'http://www.delibarapp.com/'
   license :freemium

@@ -6,7 +6,6 @@ cask 'google-earth' do
   name 'Google Earth'
   homepage 'https://www.google.com/earth/'
   license :gratis
-  tags :vendor => 'Google'
 
   pkg 'Install Google Earth.pkg'
 

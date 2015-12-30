@@ -5,7 +5,7 @@ cask 'perian' do
   # cachefly.net is the official download host per the vendor homepage
   url "https://perian.cachefly.net/Perian_#{version}.dmg"
   name 'Perian'
-  homepage 'http://www.perian.org/'
+  homepage 'https://www.perian.org/'
   license :gpl
 
   prefpane 'Perian.prefPane'

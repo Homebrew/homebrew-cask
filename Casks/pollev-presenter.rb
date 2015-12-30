@@ -9,7 +9,6 @@ cask 'pollev-presenter' do
           :sha256 => 'dbfce32dced0e0370f6757d34aa89e176cab2495dcaaafc4a4fba85090e35bf6'
   homepage 'https://www.polleverywhere.com/'
   license :gratis
-  tags :vendor => 'Poll Everywhere'
 
   app 'PollEv Presenter.app'
 end

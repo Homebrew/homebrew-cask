@@ -4,7 +4,7 @@ cask 'memoryanalyzer' do
 
   url "http://www.eclipse.org/downloads/download.php?file=/mat/#{version.to_f}/rcp/MemoryAnalyzer-#{version}-macosx.cocoa.x86_64.zip&r=1"
   name 'Eclipse Memory Analyzer'
-  homepage 'http://www.eclipse.org/mat/'
+  homepage 'https://www.eclipse.org/mat/'
   license :eclipse
 
   app 'mat/MemoryAnalyzer.app'

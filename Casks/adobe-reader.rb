@@ -6,7 +6,6 @@ cask 'adobe-reader' do
   name 'Adobe Acrobat Reader DC'
   homepage 'https://www.adobe.com/products/reader.html'
   license :gratis
-  tags :vendor => 'Adobe'
 
   depends_on :macos => '>= 10.9'
 

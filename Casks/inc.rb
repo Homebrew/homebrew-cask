@@ -5,7 +5,7 @@ cask 'inc' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'http://inc-static.kippt.com.s3.amazonaws.com/apps/inc-osx.zip'
   name 'Inc'
-  homepage 'http://sendtoinc.com/apps/'
+  homepage 'https://sendtoinc.com/apps/'
   license :gratis
 
   app 'Inc.app'

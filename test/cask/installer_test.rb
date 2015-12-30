@@ -58,7 +58,7 @@ describe Hbc::Installer do
     end
 
     it "works with Adobe AIR-based Casks" do
-      skip unless Pathname('/Applications/Utilities/Adobe AIR Application Installer.app/Contents/MacOS/Adobe AIR Application Installer').exist?
+      skip unless Hbc::Container::Air.installer_exist?
       air_container = Hbc.load('adobe-air-container')
       shutup do
         Hbc::Installer.new(air_container).install
@@ -204,6 +204,28 @@ describe Hbc::Installer do
         Hbc::Installer.new(with_macosx_dir).install
       end
       with_macosx_dir.staged_path.join('__MACOSX').wont_be :directory?
+    end
+
+    it "installer method raises an exception when already-installed Casks which auto-update are attempted" do
+      auto_updates = Hbc.load('auto-updates')
+      auto_updates.installed?.must_equal false
+      installer = Hbc::Installer.new(auto_updates)
+
+      shutup { installer.install }
+      lambda {
+        installer.install
+      }.must_raise(Hbc::CaskAutoUpdatesError)
+    end
+
+    it "allows already-installed Casks which auto-update to be installed if force is provided" do
+      auto_updates = Hbc.load('auto-updates')
+      auto_updates.installed?.must_equal false
+      installer = Hbc::Installer.new(auto_updates)
+
+      shutup { installer.install }
+      shutup {
+        installer.install(true)
+      } # wont_raise
     end
 
     # unlike the CLI, the internal interface throws exception on double-install

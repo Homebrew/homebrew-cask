@@ -4,7 +4,8 @@ cask 'all2mp3' do
 
   url 'http://www.tresrrr.com/Program/All2MP3.zip'
   name 'All2MP3'
-  appcast 'http://www.tresrrr.com/All2MP3/Appcast.xml'
+  appcast 'http://www.tresrrr.com/All2MP3/Appcast.xml',
+          :sha256 => '1d08335e65da7cf40d1c4a7ba0088e0f39b9c5a4b2e42de95fc9ffa69fb96c7a'
   homepage 'http://www.tresrrr.com/All2MP3/ENGLISH.html'
   license :gratis
 

@@ -4,7 +4,8 @@ cask 'pdfsam-basic' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/torakiki/pdfsam-v2/releases/download/v#{version}/pdfsam-#{version}.dmg"
-  appcast 'https://github.com/torakiki/pdfsam-v2/releases.atom'
+  appcast 'https://github.com/torakiki/pdfsam-v2/releases.atom',
+          :sha256 => 'd8dd91d9fdd50bd85655d34ba9e78f6a9ab224f3c6edb61a8ed0acf043dfba99'
   name 'PDFsam Basic'
   homepage 'http://www.pdfsam.org/'
   license :gpl

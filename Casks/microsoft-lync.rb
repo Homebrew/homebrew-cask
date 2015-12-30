@@ -2,7 +2,7 @@ cask 'microsoft-lync' do
   version '14.2.1_150923'
   sha256 'da1264855e3a7b372639862ed1b35a8e03c49ee5f26a440ac74daced5a743449'
 
-  url "http://download.microsoft.com/download/5/0/0/500C7E1F-3235-47D4-BC11-95A71A1BA3ED/lync_#{version}.dmg"
+  url "https://download.microsoft.com/download/5/0/0/500C7E1F-3235-47D4-BC11-95A71A1BA3ED/lync_#{version}.dmg"
   name 'Microsoft Lync 2011'
   homepage 'https://www.microsoft.com/en-us/download/details.aspx?id=36517'
   license :gratis

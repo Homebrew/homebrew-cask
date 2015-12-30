@@ -1,6 +1,6 @@
 cask 'warsow' do
-  version '2.0'
-  sha256 '07a4975c5c5abeb96ee9c11b53b363fb00aeba5d2a016563862538d28acf3763'
+  version '2.01'
+  sha256 '1a144b59dd7b642d86eb4530e6dc6388c6acb30a1cce28b31b16dfea269e0790'
 
   url "https://www.warsow.gg/download?dl=warsow#{version.delete('.')}mac"
   name 'Warsow'

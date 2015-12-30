@@ -6,7 +6,6 @@ cask 'blu-ray-player' do
   name 'Macgo Mac Blu-ray Player'
   homepage 'http://www.macblurayplayer.com/'
   license :commercial
-  tags :vendor => 'Macgo'
 
   app 'Blu-ray Player.app'
 end

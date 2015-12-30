@@ -4,7 +4,8 @@ cask 'vagrant-manager' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/lanayotech/vagrant-manager/releases/download/#{version}/vagrant-manager-#{version}.dmg"
-  appcast 'https://github.com/lanayotech/vagrant-manager/releases.atom'
+  appcast 'https://github.com/lanayotech/vagrant-manager/releases.atom',
+          :sha256 => 'ce7a6200bf6be5ffa10a4aeadda0b5754dedabe9af29bfd3ff6b0cf337fda7d6'
   name 'Vagrant Manager'
   homepage 'http://vagrantmanager.com/'
   license :mit

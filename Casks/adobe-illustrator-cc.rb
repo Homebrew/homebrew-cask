@@ -8,7 +8,6 @@ cask 'adobe-illustrator-cc' do
   name 'Adobe Illustrator CC'
   homepage 'https://www.adobe.com/products/illustrator.html'
   license :commercial
-  tags :vendor => 'Adobe'
 
   preflight do
     system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe Illustrator CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{staged_path}/Adobe\ Illustrator\ CC\ 2015/Deployment/deployment.xml"

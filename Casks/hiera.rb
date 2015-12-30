@@ -3,10 +3,9 @@ cask 'hiera' do
   sha256 'f0c5342b09b6f48c727ded033e03d207313d3ebf12d41b50b0f2f71fd1c411e9'
 
   url "https://downloads.puppetlabs.com/mac/hiera-#{version}.dmg"
-  name 'Hiera'
+  name 'Puppet Labs Hiera'
   homepage 'https://projects.puppetlabs.com/projects/hiera'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Puppet Labs'
 
   pkg "hiera-#{version}.pkg"
 

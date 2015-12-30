@@ -5,7 +5,7 @@ cask 'rstudio' do
   # rstudio.org is the official download host per the vendor homepage
   url "https://download1.rstudio.org/RStudio-#{version}.dmg"
   name 'RStudio'
-  homepage 'http://www.rstudio.com/'
+  homepage 'https://www.rstudio.com/'
   license :affero
 
   app 'RStudio.app'

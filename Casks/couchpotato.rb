@@ -4,7 +4,8 @@ cask 'couchpotato' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/RuudBurger/CouchPotatoServer/releases/download/build%2F#{version}/CouchPotato-#{version}.macosx-10_6-intel.zip"
-  appcast 'https://github.com/RuudBurger/CouchPotatoServer/releases.atom'
+  appcast 'https://github.com/RuudBurger/CouchPotatoServer/releases.atom',
+          :sha256 => '9963099e2ae38921d80c3f3a339b80f422161d76ccdd735f1b17664076895958'
   name 'CouchPotato'
   homepage 'https://couchpota.to/'
   license :gpl

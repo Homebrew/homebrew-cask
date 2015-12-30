@@ -6,7 +6,6 @@ cask 'google-photos-backup' do
   name 'Google Photos Backup'
   homepage 'https://photos.google.com/'
   license :gratis
-  tags :vendor => 'Google'
 
   app 'Google Photos Backup.app'
 

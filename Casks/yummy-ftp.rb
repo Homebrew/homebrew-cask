@@ -8,7 +8,6 @@ cask 'yummy-ftp' do
           :sha256 => 'fac71ab836dffdc1ae5b0b4acb03d63d2d93fb2639dd38d57b32d691a08d1ea7'
   homepage 'http://www.yummysoftware.com'
   license :commercial
-  tags :vendor => 'Yummy Software'
 
   app 'Yummy FTP.app'
 end

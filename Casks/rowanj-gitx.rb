@@ -14,7 +14,8 @@ cask 'rowanj-gitx' do
   name 'GitX'
   name 'GitX-dev'
   homepage 'https://rowanj.github.io/gitx/'
-  appcast 'https://s3.amazonaws.com/builds.phere.net/GitX/development/GitX-dev.xml'
+  appcast 'https://s3.amazonaws.com/builds.phere.net/GitX/development/GitX-dev.xml',
+          :sha256 => '698b51822d4b35d97089ab5058379392954b4fe6d37aaaa5ae691732d5706f46'
   license :gpl
 
   app 'GitX.app'

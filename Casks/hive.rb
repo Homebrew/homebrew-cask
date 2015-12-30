@@ -4,7 +4,8 @@ cask 'hive' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/hivewallet/hive-mac/releases/download/#{version}/Hive-#{version}.zip"
-  appcast 'https://github.com/hivewallet/hive-mac/releases.atom'
+  appcast 'https://github.com/hivewallet/hive-mac/releases.atom',
+          :sha256 => '8e016f112a87ec43f0665ff2d29a1e93c18cae7332061a8cf19f0199dabd1e95'
   name 'Hive'
   homepage 'https://mac.hivewallet.com'
   license :gpl

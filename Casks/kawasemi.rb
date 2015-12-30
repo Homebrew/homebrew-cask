@@ -2,10 +2,10 @@ cask 'kawasemi' do
   version :latest
   sha256 :no_check
 
-  url 'http://store.monokakido.jp/download/Kawasemi2/Kawasemi2.dmg'
+  url 'https://store.monokakido.jp/download/Kawasemi2/Kawasemi2.dmg'
   name 'かわせみ'
   name 'Kawasemi'
-  homepage 'http://www.monokakido.jp/mac/kawasemi2.html'
+  homepage 'https://www.monokakido.jp/mac/kawasemi2.html'
   license :commercial
 
   pkg 'Kawasemi2 Installer.app/Contents/Resources/Kawasemi2.pkg'

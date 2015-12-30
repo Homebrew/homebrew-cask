@@ -7,7 +7,6 @@ cask 'postbox' do
   name 'Postbox'
   homepage 'https://www.postbox-inc.com/'
   license :commercial
-  tags :vendor => 'Postbox'
   depends_on :macos => '>= :mavericks'
   depends_on :arch => :x86_64
 

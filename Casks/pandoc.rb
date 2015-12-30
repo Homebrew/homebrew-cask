@@ -4,7 +4,8 @@ cask 'pandoc' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/jgm/pandoc/releases/download/#{version}/pandoc-#{version}-osx.pkg"
-  appcast 'https://github.com/jgm/pandoc/releases.atom'
+  appcast 'https://github.com/jgm/pandoc/releases.atom',
+          :sha256 => '1a31f4b4e13283e87e6f09b0a3f3b32c19eb93c98bd7298917d14008aabcacaf'
   name 'Pandoc'
   homepage 'http://pandoc.org/'
   license :gpl

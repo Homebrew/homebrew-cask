@@ -4,7 +4,7 @@ cask 'mozyhome' do
 
   url "https://secure.mozy.com/downloads/mozy-#{version.gsub('.','_')}.dmg"
   name 'MozyHome'
-  homepage 'http://mozy.com/'
+  homepage 'https://mozy.com/'
   license :commercial
 
   pkg 'MozyHome Installer.pkg'

@@ -3,7 +3,8 @@ cask 'syncthing-bar' do
   sha256 '61277e5f1efd70a98a2e574e1f1a8b40ec88c84086cb362a98f951ab05657cb9'
 
   url "https://github.com/m0ppers/syncthing-bar/releases/download/#{version}/syncthing-bar-#{version}.pkg"
-  appcast 'https://github.com/m0ppers/syncthing-bar/releases.atom'
+  appcast 'https://github.com/m0ppers/syncthing-bar/releases.atom',
+          :sha256 => 'c6bd419e4755507254d735dc69ebadfd0ab342bbba0e5b61ab7edd91634da737'
   name 'Syncthing bar'
   homepage 'https://github.com/m0ppers/syncthing-bar'
   license :oss

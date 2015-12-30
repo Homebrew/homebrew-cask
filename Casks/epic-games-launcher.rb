@@ -6,7 +6,6 @@ cask 'epic-games-launcher' do
   name 'Epic Games Launcher'
   homepage 'https://www.unrealengine.com/what-is-unreal-engine-4'
   license :commercial
-  tags :vendor => 'EpicGames'
 
   app 'Epic Games Launcher.app'
 end

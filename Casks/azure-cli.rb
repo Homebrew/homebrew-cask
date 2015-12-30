@@ -7,7 +7,6 @@ cask 'azure-cli' do
   name 'Microsoft Azure CLI'
   homepage 'https://azure.microsoft.com/en-us/documentation/articles/xplat-cli/'
   license :apache
-  tags :vendor => 'Microsoft'
 
   pkg 'Install Command Line Interface.pkg'
 

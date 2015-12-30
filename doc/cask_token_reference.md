@@ -8,6 +8,7 @@ This document describes the algorithm implemented in the `generate_cask_token` s
 * [Cask Filenames](#cask-filenames)
 * [Cask Headers](#cask-headers)
 * [Cask Token Examples](#cask-token-examples)
+* [Token Overlap](#token-overlap)
 
 ## Purpose
 
@@ -118,5 +119,9 @@ App Name on Disk       | Simplified App Name | Cask Token       | Filename
 `BetterTouchTool.app`  | BetterTouchTool     | bettertouchtool  | `bettertouchtool.rb`
 `LPK25 Editor.app`     | LPK25 Editor        | lpk25-editor     | `lpk25-editor.rb`
 `Sublime Text 2.app`   | Sublime Text        | sublime-text     | `sublime-text.rb`
+
+# Token Overlap
+
+When the token for a new Cask would otherwise conflict with the token of an already existing Cask, the nature of that overlap dictates the token (for possibly both Casks). See [Finding a Home For Your Cask](https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#finding-a-home-for-your-cask) for information on how to proceed.
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3

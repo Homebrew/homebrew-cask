@@ -12,7 +12,6 @@ require 'hbc/dsl/installer'
 require 'hbc/dsl/license'
 require 'hbc/dsl/postflight'
 require 'hbc/dsl/preflight'
-require 'hbc/dsl/tags'
 require 'hbc/dsl/uninstall_postflight'
 require 'hbc/dsl/uninstall_preflight'
 
@@ -41,8 +40,6 @@ module Hbc::DSL
 
   def container; self.class.container; end
 
-  def tags; self.class.tags; end
-
   def sha256; self.class.sha256; end
 
   def artifacts; self.class.artifacts; end
@@ -54,6 +51,8 @@ module Hbc::DSL
   def caveats; self.class.caveats; end
 
   def accessibility_access; self.class.accessibility_access; end
+
+  def auto_updates; self.class.auto_updates; end
 
   module ClassMethods
 
@@ -167,19 +166,6 @@ module Hbc::DSL
       @sha256 ||= arg
     end
 
-    def tags(*args)
-      return @tags if args.empty?
-      if @tags and !args.empty?
-        # consider removing this limitation
-        raise Hbc::CaskInvalidError.new(self.token, "'tags' stanza may only appear once")
-      end
-      @tags ||= begin
-        Hbc::DSL::Tags.new(*args) unless args.empty?
-      rescue StandardError => e
-        raise Hbc::CaskInvalidError.new(self.token, e)
-      end
-    end
-
     def license(arg=nil)
       return @license if arg.nil?
       if @license and !arg.nil?
@@ -248,6 +234,13 @@ module Hbc::DSL
         raise Hbc::CaskInvalidError.new(self.token, "'accessibility_access' stanza may only appear once")
       end
       @accessibility_access ||= accessibility_access
+    end
+
+    def auto_updates(auto_updates=nil)
+      if @auto_updates and !auto_updates.nil?
+        raise Hbc::CaskInvalidError.new(self.token, "'auto_updates' stanza may only appear once")
+      end
+      @auto_updates ||= auto_updates
     end
 
     def self.ordinary_artifact_types

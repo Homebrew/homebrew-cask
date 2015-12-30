@@ -6,7 +6,6 @@ cask 'google-plus-auto-backup' do
   name 'Google+ Auto Backup'
   homepage 'https://picasa.google.com/'
   license :gratis
-  tags :vendor => 'Google'
 
   app 'Google+ Auto Backup.app'
 end

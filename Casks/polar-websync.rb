@@ -4,7 +4,7 @@ cask 'polar-websync' do
 
   url "https://www.polarpersonaltrainer.com/downloads/websync_#{version}.dmg"
   name 'Polar WebSync Software'
-  homepage 'http://www.polar.com/us-en/support/downloads/Polar_WebSync_Software'
+  homepage 'https://www.polar.com/us-en/support/downloads/Polar_WebSync_Software'
   license :closed
 
   # cannot be installed automatically, because it presents a choice

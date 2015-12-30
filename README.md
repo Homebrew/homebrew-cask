@@ -20,6 +20,8 @@ It’s implemented as a `homebrew` [external command](https://github.com/Homebre
 
 ## Let’s try it!
 
+To start using Homebrew-Cask, you just need [Homebrew](http://brew.sh/) installed.
+
 ```bash
 $ brew cask install google-chrome
 => Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg

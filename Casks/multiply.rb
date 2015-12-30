@@ -2,7 +2,7 @@ cask 'multiply' do
   version '1.1.1'
   sha256 'f4056d2e88886ee30ad8a6e05efcfcf37559a26190753610067248087ec4abff'
 
-  url "http://acondigital.com/software/Multiply_OSX_#{version.gsub('.', '_')}.pkg.zip"
+  url "https://acondigital.com/software/Multiply_OSX_#{version.gsub('.', '_')}.pkg.zip"
   name 'Multiply'
   homepage 'https://acondigital.com/products/multiply/'
   license :gratis

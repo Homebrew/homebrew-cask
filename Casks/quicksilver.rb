@@ -12,7 +12,7 @@ cask 'quicksilver' do
 
   url "https://qs0.qsapp.com/plugins/download.php?qsversion=#{version.sub(%r{^.*?-},'')}.dmg"
   name 'Quicksilver'
-  homepage 'http://qsapp.com/'
+  homepage 'https://qsapp.com/'
   license :apache
 
   app 'Quicksilver.app'

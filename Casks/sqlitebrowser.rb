@@ -4,7 +4,8 @@ cask 'sqlitebrowser' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version}/sqlitebrowser-#{version}.dmg"
-  appcast 'https://github.com/sqlitebrowser/sqlitebrowser/releases.atom'
+  appcast 'https://github.com/sqlitebrowser/sqlitebrowser/releases.atom',
+          :sha256 => '650c126c7a2ffb3b5d0dbe378c1f592bfe24f4c541ead3a12828d0b2d7ea2144'
   name 'DB Browser for SQLite'
   name 'SQLite Database Browser'
   homepage 'http://sqlitebrowser.org'

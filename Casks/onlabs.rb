@@ -3,7 +3,8 @@ cask 'onlabs' do
   sha256 '4fa575158f80d60f40826fab0b77217cc343ca0fc4af5e7840c606a4f4bd97c5'
 
   url "https://github.com/lalyos/onlabs/releases/download/v#{version}/onlabs_darwin_amd64"
-  appcast 'https://github.com/lalyos/onlabs/releases.atom'
+  appcast 'https://github.com/lalyos/onlabs/releases.atom',
+          :sha256 => 'c04cfded371be6d1f1df7ac96d6ff95dc3e75ab4203d67c8f5ae480a081effa6'
   name 'onlabs'
   homepage 'https://github.com/lalyos/onlabs'
   license :mit

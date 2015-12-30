@@ -4,7 +4,7 @@ cask 'gns3' do
 
   url "https://github.com/GNS3/gns3-gui/releases/download/v#{version}/GNS3-#{version}.dmg"
   name 'GNS3'
-  homepage 'http://www.gns3.com/'
+  homepage 'https://www.gns3.com/'
   license :gpl
 
   app 'GNS3.app'

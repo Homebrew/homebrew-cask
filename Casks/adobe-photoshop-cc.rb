@@ -8,7 +8,6 @@ cask 'adobe-photoshop-cc' do
   name 'Adobe Photoshop CC'
   homepage 'https://www.adobe.com/products/photoshop.html'
   license :commercial
-  tags :vendor => 'Adobe'
 
   preflight do
     file = File.open "#{staged_path}/uninstall.xml", 'w'

@@ -3,7 +3,8 @@ cask 'docker-machine-driver-parallels' do
   sha256 'd9802e3f21a769293ada9d3c86a5870b87e40df38b5395957105ceea025f23b9'
 
   url "https://github.com/Parallels/docker-machine-parallels/releases/download/v#{version}/docker-machine-driver-parallels"
-  appcast 'https://github.com/Parallels/docker-machine-parallels/releases.atom'
+  appcast 'https://github.com/Parallels/docker-machine-parallels/releases.atom',
+          :sha256 => '13fdb94dc1822f11669c595b3e2e71b7053c192997b078feb06ab0e320dfa227'
   name 'Parallels driver for Docker Machine'
   homepage 'https://github.com/Parallels/docker-machine-parallels'
   license :unknown

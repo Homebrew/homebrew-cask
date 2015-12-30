@@ -5,7 +5,7 @@ cask 'textmate' do
   # textmate.org is the official download host per the vendor homepage
   url "https://api.textmate.org/downloads/TextMate_#{version}.tbz"
   name 'TextMate'
-  homepage 'http://macromates.com/'
+  homepage 'https://macromates.com/'
   license :gpl
 
   app 'TextMate.app'

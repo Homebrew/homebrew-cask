@@ -4,7 +4,7 @@ cask 'rrootage' do
 
   url 'https://workram.com/downloads.php?f=rRootage', :referer => 'https://workram.com/games/rrootage'
   name 'rRootage'
-  homepage 'http://workram.com/games/rrootage/'
+  homepage 'https://workram.com/games/rrootage/'
   license :bsd
 
   app 'rRootage.app'

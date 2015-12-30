@@ -4,7 +4,7 @@ cask 'icecat' do
 
   url "https://ftp.gnu.org/gnu/gnuzilla/#{version}/icecat-#{version}.en-US.mac.dmg"
   name 'IceCat'
-  homepage 'http://www.gnu.org/software/gnuzilla/'
+  homepage 'https://www.gnu.org/software/gnuzilla/'
   license :gpl
 
   app 'IceCat.app'

@@ -6,7 +6,6 @@ cask 'gog-galaxy' do
   name 'GOG Galaxy Client'
   homepage 'https://www.gog.com/galaxy'
   license :gratis
-  tags :vendor => 'GOG'
 
   pkg "galaxy_client_#{version}.pkg"
 

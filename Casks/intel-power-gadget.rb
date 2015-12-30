@@ -6,7 +6,6 @@ cask 'intel-power-gadget' do
   name 'Intel Power Gadget'
   homepage 'https://software.intel.com/en-us/articles/intel-power-gadget-20'
   license :gratis
-  tags :vendor => 'Intel'
 
   # this bogus-looking character accurately reflects an upstream error
   container :nested => 'IntelÆ Power Gadget.dmg'

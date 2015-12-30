@@ -6,7 +6,6 @@ cask 'music-manager' do
   name 'Google Play Music Manager'
   homepage 'https://play.google.com/music/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Google'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/4282

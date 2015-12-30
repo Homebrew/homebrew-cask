@@ -7,5 +7,7 @@ cask 'readefine' do
   homepage 'http://readefine.anirudhsasikumar.net/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
+  depends_on :cask => 'adobe-air'
+
   app 'Readefine.app'
 end

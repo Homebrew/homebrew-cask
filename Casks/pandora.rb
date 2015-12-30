@@ -4,7 +4,7 @@ cask 'pandora' do
 
   url "https://www.pandora.com/static/desktop_app/pandora_#{version.gsub('.','_')}.air"
   name 'Pandora'
-  homepage 'http://www.pandora.com/'
+  homepage 'https://www.pandora.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   depends_on :cask => 'adobe-air'

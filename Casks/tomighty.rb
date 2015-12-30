@@ -4,7 +4,8 @@ cask 'tomighty' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/ccidral/tomighty-osx/releases/download/v#{version}/Tomighty-#{version}.dmg"
-  appcast 'https://github.com/ccidral/tomighty-osx/releases.atom'
+  appcast 'https://github.com/ccidral/tomighty-osx/releases.atom',
+          :sha256 => '3ccc1006f6bdba0a3fb7314c23e8089d5acc0edac9e8955315e25a1c56e19d8f'
   name 'Tomighty'
   homepage 'http://www.tomighty.org/'
   license :apache

@@ -2,9 +2,9 @@ cask 'istat-server' do
   version :latest
   sha256 :no_check
 
-  url 'http://download.bjango.com/istatserver/'
+  url 'https://download.bjango.com/istatserver/'
   name 'iStat Server'
-  homepage 'http://bjango.com/mac/istatserver/'
+  homepage 'https://bjango.com/mac/istatserver/'
   license :gratis
 
   pkg 'iStat Server.pkg'

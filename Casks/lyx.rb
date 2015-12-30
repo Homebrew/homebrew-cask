@@ -6,7 +6,7 @@ cask 'lyx' do
   gpg "#{url}.sig",
       :key_id => 'de7a44fac7fb382d'
   name 'LyX'
-  homepage 'http://www.lyx.org'
+  homepage 'https://www.lyx.org'
   license :gpl
 
   app 'LyX.app'

@@ -1,6 +1,6 @@
 cask 'parallels-desktop' do
-  version '11.1.1-32312'
-  sha256 'ba0eb500dfcf8c4a0707a8eaa06b9e4f5d1a5ae3959b46997aa9403f58c86cb9'
+  version '11.1.2-32408'
+  sha256 '6de7591cd24d837f109c895d23b56938b720debcb336c49634664e67b49f69e0'
 
   url "http://download.parallels.com/desktop/v#{version[/^\w+/]}/#{version}/ParallelsDesktop-#{version}.dmg"
   name 'Parallels Desktop'
@@ -29,5 +29,5 @@ cask 'parallels-desktop' do
                          '~/Library/Preferences/com.parallels.Parallels Desktop Statistics.plist',
                          '~/Library/Preferences/com.parallels.Parallels Desktop.plist',
                          '~/Library/Preferences/com.parallels.Parallels.plist',
-                        ]
+                       ]
 end

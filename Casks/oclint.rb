@@ -1,8 +1,9 @@
 cask 'oclint' do
-  version '0.8.1'
-  sha256 '68499fe4331b3ca2334a2884a8b3e89bba2ffa468a42a780df3dc73849c44939'
+  version '0.10.1'
+  sha256 'e9111f1a79aac54af17f62c38be280bcefd54ba3cdc09091ef127d906abfac83'
 
-  url "http://archives.oclint.org/releases/#{version.sub(%r{\.\d+$},'')}/oclint-#{version}-x86_64-darwin-14.0.0.tar.gz"
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/oclint/oclint/releases/download/v#{version}/oclint-#{version}-x86_64-darwin-15.0.0.tar.gz"
   name 'OCLint'
   homepage 'http://oclint.org'
   license :oss

@@ -1,6 +1,6 @@
 cask 'pycharm' do
-  version '5.0.2'
-  sha256 'a35146c4163b348000ba3db1a3db34341b6443cda6bf9242f181d84390a9d647'
+  version '5.0.3'
+  sha256 '4cf5ba4799cb897e65ae989b77d518ba544871f460776786c1a9db5f6f80c1b3'
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version}-jdk-bundled.dmg"
   name 'PyCharm'

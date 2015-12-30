@@ -8,7 +8,6 @@ cask 'adobe-indesign-cc' do
   name 'Adobe InDesign CC'
   homepage 'https://www.adobe.com/products/indesign.html'
   license :commercial
-  tags :vendor => 'Adobe'
 
   preflight do
     system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe InDesign CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{staged_path}/Adobe\ InDesign\ CC\ 2015/deploy/install.xml"

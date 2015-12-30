@@ -4,7 +4,7 @@ cask 'letterfix' do
 
   url "http://dl.sourceforge.jp/letter-fix/62451/LetterFix-#{version}a.dmg"
   name 'LetterFix'
-  homepage 'http://sourceforge.jp/projects/letter-fix/'
+  homepage 'https://sourceforge.jp/projects/letter-fix/'
   license :mit
 
   pkg "LetterFix-#{version}.pkg"

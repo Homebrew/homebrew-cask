@@ -2,7 +2,7 @@ cask 'overdrive-media-console' do
   version '1.2'
   sha256 '6e04ac61337647aa86c67d04d62552a0c0a31a3104bf4856aa726e8317272be9'
 
-  url 'http://app.overdrive.com/downloads/ODMediaConsoleSetup.dmg'
+  url 'https://app.overdrive.com/downloads/ODMediaConsoleSetup.dmg'
   name 'OverDrive Media Console'
   homepage 'https://www.overdrive.com/'
   license :commercial

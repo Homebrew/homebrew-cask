@@ -80,7 +80,6 @@ class Hbc::Cask
        :appcast,
        :version,
        :license,
-       :tags,
        :sha256,
        :artifacts,
        :caveats,
@@ -89,6 +88,7 @@ class Hbc::Cask
        :container,
        :gpg,
        :accessibility_access,
+       :auto_updates
       ].each do |method|
         printable_method = method.to_s
         printable_method = "name" if printable_method == "full_name"

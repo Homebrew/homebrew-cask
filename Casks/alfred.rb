@@ -4,12 +4,13 @@ cask 'alfred' do
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
-  homepage 'http://www.alfredapp.com/'
+  homepage 'https://www.alfredapp.com/'
   license :freemium
 
-  app 'Alfred 2.app'
-
+  auto_updates true
   accessibility_access true
+
+  app 'Alfred 2.app'
 
   postflight do
     suppress_move_to_applications :key => 'suppressMoveToApplications'

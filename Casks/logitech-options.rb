@@ -4,7 +4,7 @@ cask 'logitech-options' do
 
   url "http://www.logitech.com/pub/techsupport/options/Options_#{version}.zip"
   name 'Logitech Options'
-  homepage 'http://support.logitech.com/en_us/software/options-mac'
+  homepage 'https://support.logitech.com/en_us/software/options-mac'
   license :closed
 
   pkg 'LogiMgr Installer.app/Contents/Resources/LogiMgr.mpkg'

@@ -4,7 +4,8 @@ cask 'hacker-menu' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/jingweno/hacker-menu/releases/download/v#{version}/hacker-menu-mac.zip"
-  appcast 'https://github.com/jingweno/hacker-menu/releases.atom'
+  appcast 'https://github.com/jingweno/hacker-menu/releases.atom',
+          :sha256 => 'a55f652b40c1db009dddf4d3ee763d13fe679d93d062c8c33f5675bad2a944cb'
   name 'Hacker Menu'
   homepage 'https://hackermenu.io/'
   license :mit

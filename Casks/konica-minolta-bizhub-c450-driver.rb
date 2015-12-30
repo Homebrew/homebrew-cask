@@ -6,7 +6,6 @@ cask 'konica-minolta-bizhub-c450-driver' do
   name 'Konica Minolta Bizhub C450 Driver'
   homepage 'http://www.biz.konicaminolta.com/download/'
   license :gratis
-  tags :vendor => 'Konica Minolta'
 
   pkg 'KONICAMINOLTA_C450_109.pkg'
 

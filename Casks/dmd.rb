@@ -4,7 +4,7 @@ cask 'dmd' do
 
   url "http://downloads.dlang.org/releases/2.x/#{version}/dmd.#{version}.dmg"
   name 'DMD'
-  homepage 'http://dlang.org/'
+  homepage 'https://dlang.org/'
   license :oss
 
   pkg 'DMD2.pkg'

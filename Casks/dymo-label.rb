@@ -4,7 +4,7 @@ cask 'dymo-label' do
 
   url "http://download.dymo.com/dymo/Software/Mac/DLS#{version.to_i}Setup.#{version}.dmg"
   name 'Dymo Label'
-  homepage 'http://www.dymo.com/en-US/online-support'
+  homepage 'https://www.dymo.com/en-US/online-support'
   license :gratis
 
   pkg "DYMO Label v.#{version.to_i}.pkg"

@@ -5,7 +5,7 @@ cask 'pharo' do
   # pharo.org is the official download host per the vendor homepage
   url "http://files.pharo.org/platform/Pharo#{version}-mac.zip"
   name 'Pharo'
-  homepage 'http://pharo.org'
+  homepage 'https://pharo.org'
   license :oss
 
   app "Pharo#{version}.app"

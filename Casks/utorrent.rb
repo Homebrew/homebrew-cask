@@ -7,7 +7,8 @@ cask 'utorrent' do
     app 'uTorrent.app'
   else
     url 'https://download-new.utorrent.com/endpoint/utmac/os/osx/track/stable/'
-    appcast 'https://update.utorrent.com/checkupdate.php'
+    appcast 'https://update.utorrent.com/checkupdate.php',
+            :sha256 => '946ad7e609c8361af5e1fcd34d59116bd83400f6c2e56e7acd7ce9784c5b6095'
     installer :manual => 'uTorrent.app'
   end
 

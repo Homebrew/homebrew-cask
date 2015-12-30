@@ -4,6 +4,7 @@ cask 'au-wifi-connect' do
 
   # wi2.ne.jp is the official download host per the vendor homepage
   url 'https://service.wi2.ne.jp/sw/auwifi/autoLogin/MacOSX/auWifiConnectForMac.dmg.gz'
+  name 'au Wi-Fi SPOT'
   homepage 'http://www.au.kddi.com/mobile/service/smartphone/wifi/wifi-spot/usage/mac/'
   license :gratis
 

@@ -5,7 +5,7 @@ cask 'pineapple' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/com.nathansuniversity/Pineapple/Releases/Pineapple-#{version}-Python3.5.dmg"
   name 'Pineapple'
-  homepage 'http://nwhitehead.github.io/pineapple/'
+  homepage 'https://nwhitehead.github.io/pineapple/'
   license :gpl
 
   app 'Pineapple.app'

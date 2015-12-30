@@ -7,7 +7,6 @@ cask 'scansnap-manager-ix100' do
   name 'ScanSnap Manager for Fujitsu ScanSnap iX100'
   homepage 'https://www.fujitsu.com/global/support/products/computing/peripheral/scanners/scansnap/software/ix100.html'
   license :gratis
-  tags :vendor => 'Fujitsu'
 
   pkg 'ScanSnap Manager.pkg'
 

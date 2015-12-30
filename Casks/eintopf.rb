@@ -4,7 +4,8 @@ cask 'eintopf' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/mazehall/eintopf/releases/download/#{version}/eintopf_#{version}-x64.dmg"
-  appcast 'https://github.com/mazehall/eintopf/releases.atom'
+  appcast 'https://github.com/mazehall/eintopf/releases.atom',
+          :sha256 => 'ddc8eff06f0c72bad9dc3832f22eb5240cd187de0eb35b0bc6f4fdc33efbf1c8'
   name 'Eintopf'
   homepage 'https://eintopf.io'
   license :mit
