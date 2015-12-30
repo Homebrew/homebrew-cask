@@ -222,7 +222,7 @@ The following methods may be called to generate standard warning messages:
 | `logout`                          | users should log out and log back in to complete installation
 | `reboot`                          | users should reboot to complete installation
 | `files_in_usr_local`              | the Cask installs files to `/usr/local`, which may confuse Homebrew
-| `discontinued`                    | software has been officially discontinued upstream
+| `discontinued`                    | all software development has been officially discontinued upstream
 | `free_license(web_page)`          | users may get an official license to use the software at `web_page`
 
 Example:
