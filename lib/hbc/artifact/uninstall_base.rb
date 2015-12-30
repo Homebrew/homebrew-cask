@@ -271,11 +271,10 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
   def uninstall_quit(directives)
     Array(directives[:quit]).each do |id|
       ohai "Quitting application ID #{id}"
-      num_running = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to count processes whose bundle identifier is "#{id}"}], :sudo => true).stdout.to_i
-      if num_running > 0
-        @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application id "#{id}" to quit}], :sudo => true)
-        sleep 3
-      end
+      num_running = count_running_processes(id)
+      next unless num_running > 0
+      @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application id "#{id}" to quit}], :sudo => true)
+      sleep 3
     end
   end
 
@@ -285,22 +284,32 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
       raise Hbc::CaskInvalidError.new(@cask, "Each #{stanza} :signal must have 2 elements.") unless pair.length == 2
       signal, id = pair
       ohai "Signalling '#{signal}' to application ID '#{id}'"
-      pid_string = @command.run!('/usr/bin/osascript', :args => ['-e', %Q{tell application "System Events" to get the unix id of every process whose bundle identifier is "#{id}"}], :sudo => true).stdout
-      if pid_string.match(%r{\A\d+(?:\s*,\s*\d+)*\Z})    # sanity check
-        pids = pid_string.split(%r{\s*,\s*}).map(&:strip).map(&:to_i)
-        if pids.length > 0
-          # Note that unlike :quit, signals are sent from the
-          # current user (not upgraded to the superuser).  This is a
-          # todo item for the future, but there should be some
-          # additional thought/safety checks about that, as a
-          # misapplied "kill" by root could bring down the system.
-          # The fact that we learned the pid from AppleScript is
-          # already some degree of protection, though indirect.
-          Process.kill(signal, *pids)
-          sleep 3
-        end
-      end
+      pids = get_unix_pids(id)
+      next unless pids.any?
+      # Note that unlike :quit, signals are sent from the current user (not
+      # upgraded to the superuser).  This is a todo item for the future, but
+      # there should be some additional thought/safety checks about that, as a
+      # misapplied "kill" by root could bring down the system. The fact that we
+      # learned the pid from AppleScript is already some degree of protection,
+      # though indirect.
+      odebug "Unix ids are #{pids.inspect} for processes with bundle identifier #{id}"
+      Process.kill(signal, *pids)
+      sleep 3
     end
+  end
+
+  def count_running_processes(bundle_id)
+    @command.run!('/usr/bin/osascript',
+                  :args => ['-e', %Q{tell application "System Events" to count processes whose bundle identifier is "#{bundle_id}"}],
+                  :sudo => true).stdout.to_i
+  end
+
+  def get_unix_pids(bundle_id)
+    pid_string = @command.run!('/usr/bin/osascript',
+                               :args => ['-e', %Q{tell application "System Events" to get the unix id of every process whose bundle identifier is "#{id}"}],
+                               :sudo => true).stdout.chomp
+    return [] unless pid_string.match(%r{\A\d+(?:\s*,\s*\d+)*\Z}) # sanity check
+    pid_string.split(%r{\s*,\s*}).map(&:strip).map(&:to_i)
   end
 
   def uninstall_login_item(directives)
