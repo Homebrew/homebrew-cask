@@ -16,7 +16,7 @@ cask 'airtool' do
                          'com.adriangranados.airtool.airtool-bpf.*',
                          'com.adriangranados.airtool.Airtool.pkg'
                         ],
-            :launchctl => 'com.adriangranados.airtool.airtool-bpf',
+            :launchctl => 'com.adriangranados.airtool.airtool-bpf.pkg',
             :login_item => 'Airtool'
 
   zap :delete => [
