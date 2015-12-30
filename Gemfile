@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 group :development do
   gem 'rubocop'
   gem 'rubocop-cask', '0.0.1'
+  gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :release do
