@@ -1,6 +1,6 @@
 cask 'mysqlworkbench' do
-  version '6.3.5'
-  sha256 '7b92e7dc0909f5225bb1d940addd2384d2f1b3d60c3b46a03014bdfc1e95f1ae'
+  version '6.3.6'
+  sha256 '81732bddff9e9d6b71cc565e4d3b4636e0e47db5b344aaef4b7e20c83177d94a'
 
   url "https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-osx-x86_64.dmg"
   name 'MySQL Workbench'

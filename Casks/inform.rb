@@ -1,6 +1,6 @@
 cask 'inform' do
   version '6M62'
-  sha256 '6fd0442a4b64a66ee27f0d09caf27bcc117737bd997653b94e8404ef7795f963'
+  sha256 'e3c9cbbd7fd3933e7585a0a89596c0c736e89d8bb5a9f297edfd6ad7d0f97c8c'
 
   url "http://inform7.com/download/content/#{version}/I7-#{version}-OSX.dmg"
   name 'Inform'

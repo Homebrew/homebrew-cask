@@ -7,12 +7,14 @@ cask 'vmware-fusion' do
   homepage 'https://www.vmware.com/products/fusion/'
   license :commercial
 
+  auto_updates true
+
+  app 'VMware Fusion.app'
   binary 'VMware Fusion.app/Contents/Library/vmnet-cfgcli'
   binary 'VMware Fusion.app/Contents/Library/vmnet-cli'
   binary 'VMware Fusion.app/Contents/Library/vmrun'
   binary 'VMware Fusion.app/Contents/Library/vmware-vdiskmanager'
   binary 'VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool'
-  app 'VMware Fusion.app'
 
   uninstall_preflight do
     set_ownership "#{staged_path}/VMware Fusion.app"

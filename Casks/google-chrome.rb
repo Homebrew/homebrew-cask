@@ -7,6 +7,8 @@ cask 'google-chrome' do
   homepage 'https://www.google.com/chrome/'
   license :gratis
 
+  auto_updates true
+
   app 'Google Chrome.app'
 
   zap :delete => [
