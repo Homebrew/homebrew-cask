@@ -4,7 +4,7 @@ group :development do
   gem 'rubocop'
   gem 'rubocop-cask', '0.0.1'
   gem 'pry'
-  gem 'pry-byebug'
+  gem 'pry-byebug', platforms: :mri
 end
 
 group :release do
