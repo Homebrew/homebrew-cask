@@ -6,7 +6,8 @@ cask 'doomrl' do
   name 'Doom the Roguelike'
   homepage 'http://doom.chaosforge.org'
   license :closed
+  
   depends_on :arch => :x86_64
 
-  app "DoomRL.app"
+  app 'DoomRL.app'
 end
