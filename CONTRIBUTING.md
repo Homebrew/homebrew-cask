@@ -4,7 +4,6 @@ So you want to contribute to the project. **THIS IS GREAT NEWS!**  Seriously. We
 
 * [Getting Set Up To Contribute](#getting-set-up-to-contribute)
 * [Adding a Cask](#adding-a-cask)
-* [Stanza order](#stanza-order)
 * [Testing Your New Cask](#testing-your-new-cask)
 * [Finding a Home For Your Cask](#finding-a-home-for-your-cask)
 * [Submitting Your Changes](#submitting-your-changes)
