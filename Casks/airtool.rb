@@ -13,11 +13,11 @@ cask 'airtool' do
   pkg "airtool_#{version}.pkg"
 
   uninstall :pkgutil => [
-                         'com.adriangranados.airtool.airtool-bpf.pkg',
-                         'com.adriangranados.airtool.airtool-bpf.plist.pkg',
+                         'com.adriangranados.airtool.airtool-bpf.*',
                          'com.adriangranados.airtool.Airtool.pkg'
                         ],
-            :launchctl => 'com.adriangranados.airtool.airtool-bpf'
+            :launchctl => 'com.adriangranados.airtool.airtool-bpf',
+            :login_item => 'Airtool'
 
   zap :delete => [
                   '/Library/Application Support/Airtool',
