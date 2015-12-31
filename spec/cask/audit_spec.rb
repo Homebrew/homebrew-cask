@@ -87,7 +87,7 @@ describe Hbc::Audit do
       end
 
       context "correct SourceForge URL format for version :latest" do
-        let(:cask_token) { 'sourceforge-other-correct-url-format' }
+        let(:cask_token) { 'sourceforge-version-latest-correct-url-format' }
         it { should_not warn_with(warning_msg) }
       end
 
