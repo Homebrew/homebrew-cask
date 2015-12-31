@@ -28,7 +28,7 @@ Making a Cask is easy: a Cask is a small Ruby file.
 
 ### Examples
 
-Here’s a Cask for `shuttle` as an example. Note that the `url` stanza uses `#{version}` ([string interpolation](https://en.wikipedia.org/wiki/String_interpolation#Ruby)) to create a Cask that only needs `version` and `sha256` changes when updated.
+Here’s a Cask for `shuttle` as an example.
 
 ```ruby
 cask 'shuttle' do
@@ -91,6 +91,67 @@ cask 'gateblu' do
             :delete => '/Applications/Gateblu.app'
 end
 ```
+
+#### `version` methods
+
+In the examples above, when possible the `url` stanza uses `#{version}` ([string interpolation](https://en.wikipedia.org/wiki/String_interpolation#Ruby)) to create a Cask that only needs `version` and `sha256` changes when updated. This can be taken further, when needed, with [ruby String methods](http://ruby-doc.org/core/String.html). For example:
+
+Instead of
+
+```ruby
+version '1.2.3'
+url 'http://example.com/file-version-123.dmg'
+```
+
+We can
+
+```ruby
+version '1.2.3'
+url "http://example.com/file-version-#{version.delete('.')}.dmg"
+```
+
+We can also leverage the power of regular expressions. So instead of
+
+```ruby
+version '1.2.3build4'
+url 'http://example.com/1.2.3/file-version-1.2.3build4.dmg'
+```
+
+We can
+
+```ruby
+version '1.2.3build4'
+url "http://example.com/#{version.sub(%r{build\d+}, '')}/file-version-#{version}.dmg"
+```
+
+That can become hard to read, however. Since many of these changes are common, we provide a number of helpers to clearly interpret otherwise obtuse cases:
+
+| Method                   | Input                  | Output                 |
+|--------------------------|------------------------|------------------------|
+| `major`                  | `1.2.3-a45_b67/ccdd88` | `1`                    |
+| `minor`                  | `1.2.3-a45_b67/ccdd88` | `2`                    |
+| `patch`                  | `1.2.3-a45_b67/ccdd88` | `3`                    |
+| `major_minor`            | `1.2.3-a45_b67/ccdd88` | `1.2`                  |
+| `major_minor_patch`      | `1.2.3-a45_b67/ccdd88` | `1.2.3`                |
+| `before_slash`           | `1.2.3-a45_b67/ccdd88` | `1.2.3-a45_b67`        |
+| `after_slash`            | `1.2.3-a45_b67/ccdd88` | `ccdd88`               |
+| `dots_to_hyphens`        | `1.2.3-a45_b67/ccdd88` | `1-2-3-a45_b67/ccdd88` |
+| `dots_to_underscores`    | `1.2.3-a45_b67/ccdd88` | `1_2_3-a45_b67/ccdd88` |
+| `dots_to_slashes`        | `1.2.3-a45_b67/ccdd88` | `1/2/3-a45_b67/ccdd88` |
+| `hyphens_to_dots`        | `1.2.3-a45_b67/ccdd88` | `1.2.3.a45_b67/ccdd88` |
+| `hyphens_to_underscores` | `1.2.3-a45_b67/ccdd88` | `1.2.3_a45_b67/ccdd88` |
+| `hyphens_to_slashes`     | `1.2.3-a45_b67/ccdd88` | `1.2.3/a45_b67/ccdd88` |
+| `underscores_to_dots`    | `1.2.3-a45_b67/ccdd88` | `1.2.3-a45.b67/ccdd88` |
+| `underscores_to_hyphens` | `1.2.3-a45_b67/ccdd88` | `1.2.3-a45-b67/ccdd88` |
+| `underscores_to_slashes` | `1.2.3-a45_b67/ccdd88` | `1.2.3-a45/b67/ccdd88` |
+| `slashes_to_dots`        | `1.2.3-a45_b67/ccdd88` | `1.2.3-a45_b67.ccdd88` |
+| `slashes_to_hyphens`     | `1.2.3-a45_b67/ccdd88` | `1.2.3-a45_b67-ccdd88` |
+| `slashes_to_underscores` | `1.2.3-a45_b67/ccdd88` | `1.2.3-a45_b67_ccdd88` |
+| `no_dots`                | `1.2.3-a45_b67/ccdd88` | `123-a45_b67/ccdd88`   |
+| `no_hyphens`             | `1.2.3-a45_b67/ccdd88` | `1.2.3a45_b67/ccdd88`  |
+| `no_underscores`         | `1.2.3-a45_b67/ccdd88` | `1.2.3-a45b67/ccdd88`  |
+| `no_slashes`             | `1.2.3-a45_b67/ccdd88` | `1.2.3-a45_b67ccdd88`  |
+| `no_dividers`            | `1.2.3-a45_b67/ccdd88` | `123a45b67ccdd88`      |
 
 ### Generating a Token for the Cask
 
