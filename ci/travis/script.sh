@@ -19,8 +19,9 @@ run bundle exec rake test TESTOPTS='--seed=14830'
 run bundle exec rake rubocop
 
 if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then
+  TRAVIS_BRANCH_COMMIT="$(git rev-parse --verify -q "${TRAVIS_BRANCH}")"
   # audit any modified casks (download if version, sha256, or url changed)
-  run developer/bin/audit_modified_casks "${TRAVIS_BRANCH}..${TRAVIS_COMMIT}"
+  run developer/bin/audit_modified_casks "${TRAVIS_BRANCH_COMMIT}..${TRAVIS_COMMIT}"
 fi
 
 exit_build_step
