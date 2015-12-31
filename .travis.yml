@@ -4,23 +4,21 @@ sudo: false
 
 env:
   global:
-    - HOMEBREW_RUBY=2.0.0
     - LANG=en_US.UTF-8
     - LANGUAGE=en_US.UTF-8
     - LC_ALL=en_US.UTF-8
-    - CASK_TAP_DIR=/usr/local/Library/Taps/caskroom/homebrew-cask
 
 matrix:
   include:
-    - env: OSX=10.11
+    - env: OSX=10.11 HOMEBREW_RUBY=2.0.0
       os: osx
       osx_image: xcode7.2
       rvm: system
-    - env: OSX=10.10
+    - env: OSX=10.10 HOMEBREW_RUBY=2.0.0
       os: osx
       osx_image: xcode7.1
       rvm: system
-    - env: OSX=10.9
+    - env: OSX=10.9 HOMEBREW_RUBY=2.0.0
       os: osx
       osx_image: beta-xcode6.2
       rvm: system
@@ -30,61 +28,17 @@ cache:
     - /usr/local
     - $HOME/.gem
 
-# before_install steps
-# * set TRAVIS_COMMIT (https://github.com/travis-ci/travis-ci/issues/2666)
-# * set PATH according to env matrix
-# * update Homebrew
-# * uninstall pre-installed brew-cask
-# * rsync repo to tap directory and run from there
-# * informational feedback
 before_install:
-  - export TRAVIS_COMMIT="$(git rev-parse --verify -q HEAD)"
-  - env | grep TRAVIS_
-  - sw_vers
-  - export HOMEBREW_RUBY_PATH="/System/Library/Frameworks/Ruby.framework/Versions/$HOMEBREW_RUBY/usr/bin/ruby"
-  - printenv HOMEBREW_RUBY_PATH
-  - export PATH="$HOME/.gem/ruby/$HOMEBREW_RUBY/bin:$PATH"
-  - printenv PATH
-  - which ruby
-  - ruby --version
-  - which gem
-  - gem --version
-  - brew update
-  - brew uninstall --force brew-cask
-  - mkdir -p "$CASK_TAP_DIR"
-  - rsync -az --delete "$TRAVIS_BUILD_DIR/" "$CASK_TAP_DIR/"
-  - export TRAVIS_BUILD_DIR="$CASK_TAP_DIR"
-  - cd "$CASK_TAP_DIR"
+  - . ci/travis/before_install.sh
 
-# install steps
-# * brew Formulae and Casks without which some tests will be skipped
-# * install bundler gem
-# * bundle gems required for testing brew-cask
 install:
-  - brew install cabextract
-  - brew install unar
-  - brew cask install Casks/adobe-air.rb
-  - gem install --no-ri --no-rdoc --user-install bundler
-  - bundle install
+  - . ci/travis/install.sh
 
-# before_script steps
-# * informational feedback
 before_script:
-  - which rake
-  - rake --version
-  - which bundle
-  - bundle --version
+  - . ci/travis/before_script.sh
 
-# script steps
-# * run test suite
-# * lint with rubocop
-# * audit any modified casks (download if version, sha256, or url changed)
-# @@@ todo: setting the --seed here is an ugly temporary hack, to remain only
-#     until test-suite glitches are fixed.
 script:
-  - bundle exec rake test TESTOPTS="--seed=14830"
-  - bundle exec rake rubocop
-  - developer/bin/audit_modified_casks "$TRAVIS_BRANCH..$TRAVIS_COMMIT"
+  - . ci/travis/script.sh
 
 notifications:
   irc:
