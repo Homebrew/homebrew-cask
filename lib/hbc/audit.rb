@@ -16,7 +16,7 @@ class Hbc::Audit
     check_no_string_version_latest
     check_sha256
     check_appcast
-    check_sourceforge_download_url_format
+    check_download_url_format
     check_download if download
     self
   end
@@ -104,10 +104,12 @@ class Hbc::Audit
     add_error "download not possible: #{e.message}"
   end
 
-  def check_sourceforge_download_url_format
+  def check_download_url_format
     odebug "Auditing URL format"
     if bad_sourceforge_url?
-      add_warning "SourceForge URL format incorrect. See https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforge-urls"
+      add_warning "SourceForge URL format incorrect. See https://github.com/caskroom/homebrew-cask/blob/sourceforge-osdn/CONTRIBUTING.md#sourceforgeosdn-urls"
+    elsif bad_osdn_url?
+      add_warning "OSDN URL format incorrect. See https://github.com/caskroom/homebrew-cask/blob/sourceforge-osdn/CONTRIBUTING.md#sourceforgeosdn-urls"
     end
   end
 
@@ -121,6 +123,14 @@ class Hbc::Audit
       %r{\Ahttps?://brushviewer\.sourceforge\.net/brushviewql\.zip\Z},
       %r{\Ahttps?://doublecommand\.sourceforge\.net/files/},
       %r{\Ahttps?://excalibur\.sourceforge\.net/get\.php\?id=},
+    ]
+    valid_url_formats.none? { |format| cask.url.to_s =~ format }
+  end
+
+  def bad_osdn_url?
+    return false unless cask.url.to_s =~ /osdn/
+    valid_url_formats = [
+      %r{\Ahttps?://[^/]+\.osdn\.jp/},
     ]
     valid_url_formats.none? { |format| cask.url.to_s =~ format }
   end
