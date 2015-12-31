@@ -5,7 +5,7 @@ cask 'programmer-dvorak' do
   url "http://www.kaufmann.no/downloads/macos/ProgrammerDvorak-#{version.gsub('.','_')}.pkg.zip"
   name 'Programmer Dvorak'
   homepage 'http://kaufmann.no/roland/dvorak/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :oss
 
   pkg 'Programmer Dvorak v1.2.pkg'
 
