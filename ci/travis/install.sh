@@ -13,8 +13,8 @@ enter_build_step
 header 'Running install.sh...'
 
 # install Formulae and Casks without which some tests would be skipped
-run brew install cabextract
-run brew install unar
+brew_install cabextract
+brew_install unar
 run brew cask install Casks/adobe-air.rb
 
 # install bundler and project dependencies in $GEM_HOME
