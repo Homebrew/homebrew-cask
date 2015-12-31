@@ -9,7 +9,7 @@ cask 'exiftool' do
   homepage 'http://www.sno.phy.queensu.ca/~phil/exiftool/'
   license :gpl
 
-  pkg "ExifTool-10.08.pkg"
+  pkg "ExifTool-#{vesion}.pkg"
 
   uninstall :pkgutil   => 'com.philharvey.image-exiftool'
 end
