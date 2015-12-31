@@ -9,6 +9,13 @@ cask 'programmer-dvorak' do
 
   pkg "Programmer Dvorak v#{version.sub(%r{b.*},'')}.pkg"
 
+  if MacOS.release >= :mavericks
+    postflight do
+      # clear the layout cache before new layouts are recognized
+      File.delete(*Dir.glob('/System/Library/Caches/com.apple.IntlDataCache.le*'))
+    end
+  end
+
   uninstall :pkgutil => 'com.apple.keyboardlayout.Programmer Dvorak',
             :delete => [
                         '/Library/Keyboard Layouts/Programmer Dvorak.bundle/',
@@ -16,11 +23,4 @@ cask 'programmer-dvorak' do
                         # todo expand/glob for '/System/Library/Caches/com.apple.IntlDataCache.le*',
                         # todo expand/glob for '/private/var/folders/*/*/-Caches-/com.apple.IntlDataCache.le*',
                        ]
-  if MacOS.release >= :mavericks
-    postflight do
-      # clear the layout cache before new layouts are recognized
-      # todo this will not work because the glob will not be expanded
-      system '/bin/rm', '-f', '--', '/System/Library/Caches/com.apple.IntlDataCache.le*'
-    end
-  end
 end
