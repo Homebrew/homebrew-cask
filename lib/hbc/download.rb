@@ -30,7 +30,7 @@ class Hbc::Download
   end
 
   def clear_cache
-    downloader.clear_cache if force || cask.version == :latest
+    downloader.clear_cache if force || cask.version.latest?
   end
 
   def fetch

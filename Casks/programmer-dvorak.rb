@@ -5,23 +5,22 @@ cask 'programmer-dvorak' do
   url "http://www.kaufmann.no/downloads/macos/ProgrammerDvorak-#{version.gsub('.','_')}.pkg.zip"
   name 'Programmer Dvorak'
   homepage 'http://kaufmann.no/roland/dvorak/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :oss
 
-  pkg 'Programmer Dvorak v1.2.pkg'
+  pkg "Programmer Dvorak v#{version.sub(%r{b.*},'')}.pkg"
 
-  uninstall :pkgutil => 'com.apple.keyboardlayout.Programmer Dvorak',
-            :delete => [
-                        '/Library/Keyboard Layouts/Programmer Dvorak.bundle/',
-                        # todo these will not work because the glob will not be expanded
-                        '/Library/Caches/com.apple.IntlDataCache*',
-                        '/System/Library/Caches/com.apple.IntlDataCache.le*',
-                        '/private/var/folders/*/*/-Caches-/com.apple.IntlDataCache.le*',
-                       ]
   if MacOS.release >= :mavericks
     postflight do
       # clear the layout cache before new layouts are recognized
-      # todo this will not work because the glob will not be expanded
-      system '/bin/rm', '-f', '--', '/System/Library/Caches/com.apple.IntlDataCache.le*'
+      File.delete(*Dir.glob('/System/Library/Caches/com.apple.IntlDataCache.le*'))
     end
   end
+
+  uninstall :pkgutil => 'com.apple.keyboardlayout.Programmer Dvorak',
+            :delete => [
+                         '/Library/Keyboard Layouts/Programmer Dvorak.bundle/',
+                         # todo expand/glob for '/Library/Caches/com.apple.IntlDataCache*',
+                         # todo expand/glob for '/System/Library/Caches/com.apple.IntlDataCache.le*',
+                         # todo expand/glob for '/private/var/folders/*/*/-Caches-/com.apple.IntlDataCache.le*',
+                       ]
 end
