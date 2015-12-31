@@ -28,7 +28,7 @@ class Hbc::DSL::Version < ::String
     end
 
     def deletion_method_name(divider)
-      plural_divider_name = PLURAL_DIVIDER_NAMES[divider]
+      plural_divider_name = plural_divider_name(divider)
       "no_#{plural_divider_name}"
     end
 
@@ -46,9 +46,13 @@ class Hbc::DSL::Version < ::String
     end
 
     def conversion_method_name(left_divider, right_divider)
-      plural_left_divider_name = PLURAL_DIVIDER_NAMES[left_divider]
-      plural_right_divider_name = PLURAL_DIVIDER_NAMES[right_divider]
+      plural_left_divider_name = plural_divider_name(left_divider)
+      plural_right_divider_name = plural_divider_name(right_divider)
       "#{plural_left_divider_name}_to_#{plural_right_divider_name}"
+    end
+
+    def plural_divider_name(divider)
+      PLURAL_DIVIDER_NAMES[divider]
     end
   end
 
