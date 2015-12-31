@@ -8,12 +8,12 @@ cask 'real-vnc' do
   license :freemium
 
   container :type => :naked
+
+  pkg "VNC-#{version}-MacOSX.pkg"
+
   preflight do
     system '/bin/mv', '--', staged_path.join('1775'), staged_path.join("VNC-#{version}-MacOSX.pkg")
   end
 
-  pkg "VNC-#{version}-MacOSX.pkg"
-
-  uninstall :early_script => '/Applications/RealVNC/Advanced.localized/Uninstall VNC Server.app/Contents/Resources/uninstaller.sh',
-    :script => '/Applications/RealVNC/Advanced.localized/Uninstall VNC Viewer.app/Contents/Resources/uninstaller.sh'
+  uninstall :script => '/Applications/RealVNC/Advanced.localized/Uninstall VNC Viewer.app/Contents/Resources/uninstaller.sh'
 end
