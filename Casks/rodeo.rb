@@ -1,6 +1,6 @@
 cask 'rodeo' do
-  version '1.1.19'
-  sha256 '7c91c88715e05cebf6ce2f64551c26d560c1675d786c7f1b5ff6bee03b5fcc79'
+  version '1.2.1'
+  sha256 'f5b6c2cdf5ed6c42f5726c4c40512bf6a5bd63bbb124f8cf9420175969f5be54'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://rodeo-releases.s3.amazonaws.com/#{version}/Rodeo-v#{version}-darwin_64.dmg"
