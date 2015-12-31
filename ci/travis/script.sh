@@ -18,7 +18,9 @@ run bundle exec rake test TESTOPTS='--seed=14830'
 
 run bundle exec rake rubocop
 
-# audit any modified casks (download if version, sha256, or url changed)
-run developer/bin/audit_modified_casks "${TRAVIS_BRANCH}..${TRAVIS_COMMIT}"
+if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then
+  # audit any modified casks (download if version, sha256, or url changed)
+  run developer/bin/audit_modified_casks "${TRAVIS_BRANCH}..${TRAVIS_COMMIT}"
+fi
 
 exit_build_step
