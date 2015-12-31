@@ -7,7 +7,7 @@ cask 'programmer-dvorak' do
   homepage 'http://kaufmann.no/roland/dvorak/'
   license :oss
 
-  pkg 'Programmer Dvorak v1.2.pkg'
+  pkg "Programmer Dvorak v#{version.sub(%r{b.*},'')}.pkg"
 
   uninstall :pkgutil => 'com.apple.keyboardlayout.Programmer Dvorak',
             :delete => [
