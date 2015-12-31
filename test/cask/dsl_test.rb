@@ -5,7 +5,7 @@ describe Hbc::DSL do
     test_cask = Hbc.load('basic-cask')
     test_cask.url.to_s.must_equal 'http://example.com/TestCask.dmg'
     test_cask.homepage.must_equal 'http://example.com/'
-    test_cask.version.must_equal '1.2.3'
+    test_cask.version.to_s.must_equal '1.2.3'
   end
 
   describe "when a Cask includes an unknown method" do
@@ -64,7 +64,7 @@ describe Hbc::DSL do
       test_cask = Hbc.load('no-dsl-version')
       test_cask.url.to_s.must_equal 'http://example.com/TestCask.dmg'
       test_cask.homepage.must_equal 'http://example.com/'
-      test_cask.version.must_equal '1.2.3'
+      test_cask.version.to_s.must_equal '1.2.3'
     end
   end
 
