@@ -6,7 +6,8 @@ cask 'spotify' do
   name 'Spotify'
   homepage 'https://www.spotify.com'
   license :gratis
-  depends_on :macos => '>= :snow_leopard'
+  
+  depends_on :macos => '>= :lion'
 
   app 'Spotify.app'
 
