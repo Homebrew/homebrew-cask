@@ -12,30 +12,47 @@ class Hbc::DSL::Version < ::String
 
   MAJOR_MINOR_PATCH_REGEX = /^(\d+)(?:\.(\d+)(?:\.(\d+))?)?/
 
-  def self.define_divider_deletion_method(divider)
-    plural_divider_name = PLURAL_DIVIDER_NAMES[divider]
-    method_name = "no_#{plural_divider_name}"
-    define_method(method_name) do
-      version { delete(divider) }
-    end
-  end
+  class << self
+    private
 
-  def self.define_divider_conversion_methods(left_divider)
-    (DIVIDERS - [left_divider]).each do |right_divider|
-      plural_left_divider_name = PLURAL_DIVIDER_NAMES[left_divider]
-      plural_right_divider_name = PLURAL_DIVIDER_NAMES[right_divider]
-      method_name =
-        "#{plural_left_divider_name}_to_#{plural_right_divider_name}"
+    def define_divider_methods(divider)
+      define_divider_deletion_method(divider)
+      define_divider_conversion_methods(divider)
+    end
+
+    def define_divider_deletion_method(divider)
+      method_name = deletion_method_name(divider)
+      define_method(method_name) do
+        version { delete(divider) }
+      end
+    end
+
+    def deletion_method_name(divider)
+      plural_divider_name = PLURAL_DIVIDER_NAMES[divider]
+      "no_#{plural_divider_name}"
+    end
+
+    def define_divider_conversion_methods(left_divider)
+      (DIVIDERS - [left_divider]).each do |right_divider|
+        define_divider_conversion_method(left_divider, right_divider)
+      end
+    end
+
+    def define_divider_conversion_method(left_divider, right_divider)
+      method_name = conversion_method_name(left_divider, right_divider)
       define_method(method_name) do
         version { gsub(left_divider, right_divider) }
       end
     end
+
+    def conversion_method_name(left_divider, right_divider)
+      plural_left_divider_name = PLURAL_DIVIDER_NAMES[left_divider]
+      plural_right_divider_name = PLURAL_DIVIDER_NAMES[right_divider]
+      "#{plural_left_divider_name}_to_#{plural_right_divider_name}"
+    end
   end
 
-  DIVIDERS.each do |divider|
-    define_divider_deletion_method(divider)
-    define_divider_conversion_methods(divider)
-  end
+  DIVIDERS.each { |divider| define_divider_methods(divider) }
 
   attr_reader :raw_version
 
