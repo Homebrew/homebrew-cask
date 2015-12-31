@@ -1,70 +1,90 @@
 language: objective-c
 
-# todo
-#
-# test with Ruby 2.1, but allow failure
-#
+sudo: false
 
-# "Current" is dependent on OS X release.  At the time of writing, it
-# is always either 1.8 or 2.0
 env:
-  matrix:
-    - CASK_RUBY_TEST_VERSION="2.0"
-    - CASK_RUBY_TEST_VERSION="Current"
+  global:
+    - HOMEBREW_RUBY=2.0.0
+    - LANG=en_US.UTF-8
+    - LANGUAGE=en_US.UTF-8
+    - LC_ALL=en_US.UTF-8
+    - CASK_TAP_DIR=/usr/local/Library/Taps/caskroom/homebrew-cask
 
-# permit "Current" to fail without affecting our badge
 matrix:
-  allow_failures:
-    - env: CASK_RUBY_TEST_VERSION="Current"
-  fast_finish: true
+  include:
+    - env: OSX=10.11
+      os: osx
+      osx_image: xcode7.2
+      rvm: system
+    - env: OSX=10.10
+      os: osx
+      osx_image: xcode7.1
+      rvm: system
+    - env: OSX=10.9
+      os: osx
+      osx_image: beta-xcode6.2
+      rvm: system
+
+cache:
+  directories:
+    - /usr/local
+    - $HOME/.gem
 
 # before_install steps
-# * turn off RVM
+# * set TRAVIS_COMMIT (https://github.com/travis-ci/travis-ci/issues/2666)
 # * set PATH according to env matrix
 # * update Homebrew
+# * uninstall pre-installed brew-cask
+# * rsync repo to tap directory and run from there
 # * informational feedback
 before_install:
-  - export TRAVIS_COMMIT=$(git rev-parse --verify -q HEAD)
+  - export TRAVIS_COMMIT="$(git rev-parse --verify -q HEAD)"
   - env | grep TRAVIS_
-  - rvm use system
-  - export PATH="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin":"$PATH"
-  - brew update
+  - sw_vers
+  - export HOMEBREW_RUBY_PATH="/System/Library/Frameworks/Ruby.framework/Versions/$HOMEBREW_RUBY/usr/bin/ruby"
+  - printenv HOMEBREW_RUBY_PATH
+  - export PATH="$HOME/.gem/ruby/$HOMEBREW_RUBY/bin:$PATH"
   - printenv PATH
-  - /usr/bin/which ruby
+  - which ruby
   - ruby --version
-  - /usr/bin/which rake
-  - rake --version
-  - echo ls_ruby_bindir; ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin"
+  - which gem
+  - gem --version
+  - brew update
+  - brew uninstall --force brew-cask
+  - mkdir -p "$CASK_TAP_DIR"
+  - rsync -az --delete "$TRAVIS_BUILD_DIR/" "$CASK_TAP_DIR/"
+  - export TRAVIS_BUILD_DIR="$CASK_TAP_DIR"
+  - cd "$CASK_TAP_DIR"
 
 # install steps
 # * brew Formulae and Casks without which some tests will be skipped
-# * bundler gem
-# * Ruby gems required for brew-cask
+# * install bundler gem
+# * bundle gems required for testing brew-cask
 install:
   - brew install cabextract
   - brew install unar
-  - cmd/brew-cask.rb install Casks/adobe-air.rb
-  - echo gem_install_bundler; sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/gem" install bundler --bindir="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin"
-  - echo bundle; sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/bundle" --system
+  - brew cask install Casks/adobe-air.rb
+  - gem install --no-ri --no-rdoc --user-install bundler
+  - bundle install
 
-# informational feedback
+# before_script steps
+# * informational feedback
 before_script:
-  - printenv PATH
-  - /usr/bin/which ruby
-  - ruby --version
-  - /usr/bin/which bundle
-  - bundle --version
-  - /usr/bin/which rake
+  - which rake
   - rake --version
-  - echo ls_ruby_bindir; ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin"
+  - which bundle
+  - bundle --version
 
-# the test itself
-# path-quoting is different here due to YAML constraints
-# @@@ todo: setting the --seed here is an ugly temporary hack, to remain only until test-suite glitches are fixed.
+# script steps
+# * run test suite
+# * lint with rubocop
+# * audit any modified casks (download if version, sha256, or url changed)
+# @@@ todo: setting the --seed here is an ugly temporary hack, to remain only
+#     until test-suite glitches are fixed.
 script:
-  - /System/Library/Frameworks/Ruby.framework/Versions/"${CASK_RUBY_TEST_VERSION}"/usr/bin/bundle exec "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/rake" test TESTOPTS="--seed=14830"
-  - /System/Library/Frameworks/Ruby.framework/Versions/"${CASK_RUBY_TEST_VERSION}"/usr/bin/bundle exec "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/rake" rubocop
-  - developer/bin/audit_modified_casks "${TRAVIS_BRANCH}..${TRAVIS_COMMIT}"
+  - bundle exec rake test TESTOPTS="--seed=14830"
+  - bundle exec rake rubocop
+  - developer/bin/audit_modified_casks "$TRAVIS_BRANCH..$TRAVIS_COMMIT"
 
 notifications:
   irc:
