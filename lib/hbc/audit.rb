@@ -103,19 +103,25 @@ class Hbc::Audit
 
   def check_url
     return unless cask.url
-    check_sourceforge_download_url_format
+    check_download_url_format
   end
 
-  def check_sourceforge_download_url_format
+  def check_download_url_format
     odebug "Auditing URL format"
     if bad_sourceforge_url?
-      add_warning "SourceForge URL format incorrect. See https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforge-urls"
+      add_warning "SourceForge URL format incorrect. See https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforgeosdn-urls"
+    elsif bad_osdn_url?
+      add_warning "OSDN URL format incorrect. See https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforgeosdn-urls"
     end
   end
 
+  def bad_url_format?(regex, valid_formats_array)
+    return false unless cask.url.to_s =~ regex
+    valid_formats_array.none? { |format| cask.url.to_s =~ format }
+  end
+
   def bad_sourceforge_url?
-    return false unless cask.url.to_s =~ /sourceforge/
-    valid_url_formats = [
+    bad_url_format?(/sourceforge/, [
       %r{\Ahttps?://sourceforge\.net/projects/[^/]+/files/latest/download\Z},
       %r{\Ahttps?://downloads\.sourceforge\.net/},
       %r{\Ahttps?://[^/]+\.sourceforge\.jp/},
@@ -123,8 +129,13 @@ class Hbc::Audit
       %r{\Ahttps?://brushviewer\.sourceforge\.net/brushviewql\.zip\Z},
       %r{\Ahttps?://doublecommand\.sourceforge\.net/files/},
       %r{\Ahttps?://excalibur\.sourceforge\.net/get\.php\?id=},
-    ]
-    valid_url_formats.none? { |format| cask.url.to_s =~ format }
+    ])
+  end
+
+  def bad_osdn_url?
+    bad_url_format?(/osd/, [
+      %r{\Ahttps?://[^/]+\.osdn\.jp/},
+    ])
   end
 
   def check_download

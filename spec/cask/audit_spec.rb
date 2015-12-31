@@ -96,7 +96,7 @@ describe Hbc::Audit do
     end
 
     describe "preferred download URL formats" do
-      let(:warning_msg) { /SourceForge URL format incorrect/ }
+      let(:warning_msg) { /URL format incorrect/ }
 
       context "with incorrect SourceForge URL format" do
         let(:cask_token) { 'sourceforge-incorrect-url-format' }
@@ -109,7 +109,17 @@ describe Hbc::Audit do
       end
 
       context "with correct SourceForge URL format for version :latest" do
-        let(:cask_token) { 'sourceforge-other-correct-url-format' }
+        let(:cask_token) { 'sourceforge-version-latest-correct-url-format' }
+        it { should_not warn_with(warning_msg) }
+      end
+
+      context "with incorrect OSDN URL format" do
+        let(:cask_token) { 'osdn-incorrect-url-format' }
+        it { should warn_with(warning_msg) }
+      end
+
+      context "with correct OSDN URL format" do
+        let(:cask_token) { 'osdn-correct-url-format' }
         it { should_not warn_with(warning_msg) }
       end
     end

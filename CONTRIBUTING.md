@@ -230,9 +230,9 @@ caveats
 
 Note that every stanza that has additional parameters (`:symbols` after a `,`) shall have them on separate lines, one per line, in alphabetical order. Exceptions are `gpg` and `:target` (when not applied to `url`) which typically consist of short lines.
 
-### SourceForge URLs
+### SourceForge/OSDN URLs
 
-SourceForge projects are a common way to distribute binaries, but they provide many different styles of URLs to get to the goods.
+SourceForge and OSDN (formerly SourceForge.JP) projects are common ways to distribute binaries, but they provide many different styles of URLs to get to the goods.
 
 We prefer URLs of this format:
 
@@ -240,10 +240,10 @@ We prefer URLs of this format:
 http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 ```
 
-Or, if it’s from [SourceForge.JP](http://sourceforge.jp/):
+Or, if it’s from [OSDN](https://osdn.jp/):
 
 ```
-http://$STRING.sourceforge.jp/$PROJECTNAME/$RELEASEID/$FILENAME.$EXT
+http://$STRING.osdn.jp/$PROJECTNAME/$RELEASEID/$FILENAME.$EXT
 ```
 
 `$STRING` is typically of the form `dl` or `$USER.dl`.
