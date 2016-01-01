@@ -14,6 +14,7 @@ cask 'backblaze' do
                            'com.backblaze.bzbmenu.plist'
                           ],
             :delete    => '/Library/PreferencePanes/BackblazeBackup.prefPane'
+
   zap       :delete    => [
                            '/Library/Backblaze.bzpkg',
                            '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.backblazebackup.sfl',
