@@ -20,8 +20,13 @@ run bundle exec rake rubocop
 
 if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then
   TRAVIS_BRANCH_COMMIT="$(git rev-parse --verify -q "${TRAVIS_BRANCH}")"
-  # audit any modified casks (download if version, sha256, or url changed)
-  run developer/bin/audit_modified_casks "${TRAVIS_BRANCH_COMMIT}..${TRAVIS_COMMIT}"
+  TRAVIS_COMMIT_RANGE="${TRAVIS_BRANCH_COMMIT}..${TRAVIS_COMMIT}"
+else
+  TRAVIS_LAST_COMMIT="$(git rev-parse --verify -q "${TRAVIS_COMMIT}^")"
+  TRAVIS_COMMIT_RANGE="${TRAVIS_LAST_COMMIT}..${TRAVIS_COMMIT}"
 fi
+
+# audit any modified casks (download if version, sha256, or url changed)
+run developer/bin/audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
 
 exit_build_step
