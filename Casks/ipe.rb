@@ -1,6 +1,6 @@
 cask 'ipe' do
-  version '7.1.10'
-  sha256 '5e14f13d213905af34561a0d169e9f1f9eed91ae8f85f163df951af2c2392198'
+  version '7.2.1'
+  sha256 'd55877d6162bb49c27219ca5b299f9ce598c0600b61cec4c555a7b1f6cdc2e5f'
 
   # bintray.com is the official download host per the vendor homepage
   url "https://dl.bintray.com/otfried/generic/ipe/#{version.to_f}/ipe-#{version}-mac.dmg"
