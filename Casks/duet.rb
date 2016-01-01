@@ -1,12 +1,12 @@
 cask 'duet' do
-  version '1.4.0_1439081188'
-  sha256 'd3123f40c9d6d9989e8f9f9dd2ca3f3ccad79304ce739fcaa32d2334de4de4d2'
+  version '1.5.1.1'
+  sha256 'dc3e7adc8b07f1d921944403b0356815b9df84bd8de9524fd3e7d63878a14496'
 
-  # devmate.com is the official download host per the vendor homepage
-  url "https://dl.devmate.com/com.kairos.duet/#{version.sub(%r{_.*},'')}/#{version.sub(%r{.*_},'')}/duet-#{version.sub(%r{_.*},'')}.zip"
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://s3-us-west-1.amazonaws.com/duetmac/#{version.dots_to_underscores}/duet_#{version.dots_to_underscores}.zip"
   name 'Duet'
-  appcast 'http://updates.duetdisplay.com/checkMacUpdates',
-          :sha256 => 'df779f7d35f7327a12bec484865311b869e6d09ccc6b43e11599d1dd47d1bc9d'
+  appcast "https://s3-us-west-1.amazonaws.com/duetmac/#{version.dots_to_underscores}/DuetDisplayAppcast.xml",
+          :sha256 => '8e020dd515c9693fe4eda510d5330e1bc873caa8d2b562a4197afe14b5ef7ed3'
   homepage 'http://www.duetdisplay.com/'
   license :gratis
 
