@@ -31,6 +31,7 @@ header () {
 
 brew_install () {
   local pkg=$1
+  # if pkg is already installed, upgrade it
   if brew list -1 | grep -q "^${pkg}\$"; then
     brew_upgrade "$pkg"
   else
@@ -41,7 +42,8 @@ brew_install () {
 brew_upgrade () {
   local pkg=$1
   if ! brew outdated "$pkg"; then
-    run brew upgrade "$pkg"
+    # allow upgrade to fail since we don't strictly need it
+    run brew upgrade "$pkg" || true
   fi
 }
 
