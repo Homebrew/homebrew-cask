@@ -47,6 +47,91 @@ describe Hbc::Artifact::Uninstall do
       subject
     end
 
+    describe 'when using launchctl' do
+      let(:cask) { Hbc.load('with-uninstall-launchctl') }
+      let(:launchctl_list_cmd) { %w[/bin/launchctl list my.fancy.package.service] }
+      let(:launchctl_remove_cmd) { %w[/bin/launchctl remove my.fancy.package.service]}
+      let(:unknown_response) { "launchctl list returned unknown response\n" }
+      let(:service_info) {
+        <<-PLIST.undent
+          {
+                  "LimitLoadToSessionType" = "Aqua";
+                  "Label" = "my.fancy.package.service";
+                  "TimeOut" = 30;
+                  "OnDemand" = true;
+                  "LastExitStatus" = 0;
+                  "ProgramArguments" = (
+                          "argument";
+                  );
+          };
+        PLIST
+      }
+
+      describe 'when launchctl job is owned by user' do
+        it 'can uninstall' do
+          Hbc::FakeSystemCommand.stubs_command(
+            launchctl_list_cmd,
+            service_info)
+
+          Hbc::FakeSystemCommand.stubs_command(
+            sudo(launchctl_list_cmd),
+            unknown_response)
+
+          Hbc::FakeSystemCommand.expects_command(launchctl_remove_cmd)
+
+          subject
+        end
+      end
+
+      describe 'when launchctl job is owned by system' do
+        it 'can uninstall' do
+          Hbc::FakeSystemCommand.stubs_command(
+            launchctl_list_cmd,
+            unknown_response)
+
+          Hbc::FakeSystemCommand.stubs_command(
+            sudo(launchctl_list_cmd),
+            service_info)
+
+          Hbc::FakeSystemCommand.expects_command(sudo(launchctl_remove_cmd))
+
+          subject
+        end
+      end
+    end
+
+    describe 'when using pkgutil' do
+      # todo
+    end
+
+    describe 'when using quit' do
+      # todo
+    end
+
+    describe 'when using signal' do
+      # todo
+    end
+
+    describe 'when using kext' do
+      # todo
+    end
+
+    describe 'when using delete' do
+      # todo
+    end
+
+    describe 'when using rmdir' do
+      # todo
+    end
+
+    describe 'when using script' do
+      # todo
+    end
+
+    describe 'when using early_script' do
+      # todo
+    end
+
     describe 'when using pkgutil, launchutil, and kext' do
       let(:cask) { Hbc.load('with-pkgutil-uninstall') }
 
