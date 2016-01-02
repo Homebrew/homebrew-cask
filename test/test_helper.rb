@@ -41,6 +41,10 @@ def shutup
   end
 end
 
+def sudo(cmd)
+  %w[/usr/bin/sudo -E --] + Array(cmd)
+end
+
 # making homebrew's cache dir allows us to actually download Casks in tests
 HOMEBREW_CACHE.mkpath
 HOMEBREW_CACHE.join('Casks').mkpath
