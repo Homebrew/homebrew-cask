@@ -18,10 +18,7 @@ cask 'cocoaspell' do
   zap :delete => [
                  '~/.aspell.conf',
                  '~/.aspell.en.prepl',
-                 # Debatable. The Pws holds user-created content, though typically
-                 # created through the application, and the user is not likely aware
-                 # of this particular file.
-                 # '~/.aspell.en.pws',
+                 '~/.aspell.en.pws',
                 ]
 
   caveats <<-EOS.undent
