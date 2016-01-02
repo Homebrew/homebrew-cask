@@ -3,9 +3,7 @@ cask 'java' do
   sha256 'cd416de4f41f9f0a6984c456481437681674a717da62259740c54732f174fa08'
 
   url "http://download.oracle.com/otn-pub/java/jdk/#{version.sub(%r{^\d+\.(\d+).*?_(.*)$},'\1u\2')}/jdk-#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$},'\1u\2')}-macosx-x64.dmg",
-      :cookies => {
-                    'oraclelicense' => 'accept-securebackup-cookie'
-                  }
+      :cookies => { 'oraclelicense' => 'accept-securebackup-cookie' }
   name 'Java'
   name 'Java Standard Edition Development Kit'
   homepage "http://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.split('.')[1]}-downloads-2133151.html"
