@@ -9,18 +9,19 @@ if RUBY_VERSION.to_i < 2
   raise 'brew-cask: Ruby 2.0 or greater is required.'
 end
 
-# force some environment variables
-ENV['HOMEBREW_NO_EMOJI']='1'
-
 # add homebrew-cask lib to load path
 brew_cask_path = Pathname.new(File.expand_path(__FILE__+'/../../'))
 casks_path = brew_cask_path.join('Casks')
 lib_path = brew_cask_path.join('lib')
 $:.push(lib_path)
 
-# require homebrew testing env
 # todo: removeme, this is transitional
-require 'vendor/homebrew-fork/testing_env'
+require "#{brew_cask_path}/spec/support/kernel_at_exit_hacks"
+require "#{brew_cask_path}/spec/support/homebrew_testing_environment"
+include HomebrewTestingEnvironment
+
+# force some environment variables
+ENV['HOMEBREW_CASK_OPTS'] = nil
 
 # todo temporary, copied from old Homebrew, this method is now moved inside a class
 def shutup
