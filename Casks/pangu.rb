@@ -1,4 +1,4 @@
-cask :v1 => 'pangu' do
+cask 'pangu' do
   version '1.0.0'
   sha256 '910c2fcc6bbaea54f2944eb275de9674bc4613bf79f1f60dbf8ad0064269a252'
 
@@ -6,7 +6,7 @@ cask :v1 => 'pangu' do
   url "http://dl.pangu.25pp.com/jb/Pangu8_v#{version}.dmg"
   name 'Pangu8'
   homepage 'https://en.pangu.io/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'pangu8.app'
 end

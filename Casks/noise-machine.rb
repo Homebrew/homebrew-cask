@@ -1,4 +1,4 @@
-cask :v1 => 'noise-machine' do
+cask 'noise-machine' do
   if MacOS.release <= :leopard
     version '1.0'
     sha256 '8b8d531688c259ffe4cb31fb75ec77f55bca16405fc75c1c77393f3b7e8bd447'
@@ -14,7 +14,8 @@ cask :v1 => 'noise-machine' do
   end
 
   name 'Noise Machine'
-  appcast 'http://www.publicspace.net/app/nm.xml'
+  appcast 'http://www.publicspace.net/app/nm.xml',
+          :sha256 => '17dd1be13846b0c1ea527b93783fa7f8312d95e41c0d57c5bcbe897b7876beba'
   homepage 'http://www.publicspace.net/NoiseMachine'
   license :commercial
 

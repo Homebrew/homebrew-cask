@@ -1,4 +1,4 @@
-cask :v1 => 'scribus' do
+cask 'scribus' do
   version '1.4.5'
   sha256 '2cae3e4afa552e2db4209e3e3efae816202bb3055857b57bdcd60e1b2eca410c'
 

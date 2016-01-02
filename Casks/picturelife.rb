@@ -1,4 +1,4 @@
-cask :v1 => 'picturelife' do
+cask 'picturelife' do
   version :latest
   sha256 :no_check
 

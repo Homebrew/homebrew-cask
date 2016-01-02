@@ -1,4 +1,4 @@
-cask :v1 => 'nitroshare' do
+cask 'nitroshare' do
   version '0.3.0'
   sha256 '159f9ea92aff66f6123df8f0214c9c2e39b1ca347ce005efc2838ff6cde4b759'
 

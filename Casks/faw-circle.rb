@@ -1,4 +1,4 @@
-cask :v1 => 'faw-circle' do
+cask 'faw-circle' do
   version '2.0.1'
   sha256 'aa201dd641f7270cdf791065ec0f855b2d6949f60243cbf9675e63318b4aefed'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'bankid' do
+cask 'bankid' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'gdal-framework' do
+cask 'gdal-framework' do
   version '1.11.1-1'
   sha256 :no_check    # upstream package is updated in-place
 

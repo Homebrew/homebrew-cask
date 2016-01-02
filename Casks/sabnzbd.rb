@@ -1,4 +1,4 @@
-cask :v1 => 'sabnzbd' do
+cask 'sabnzbd' do
   version '0.7.20'
   sha256 'f7c13afe87ad91ab2f12fb6384feef79ae07bf2417395304b3d8961513d23611'
 

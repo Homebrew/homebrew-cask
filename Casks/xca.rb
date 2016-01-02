@@ -1,6 +1,6 @@
-cask :v1 => 'xca' do
-  version '1.1.0'
-  sha256 '124aa68b07a1b655e020e4ef0d36a6c8d490824f225088f6dfbf410aecaf1be1'
+cask 'xca' do
+  version '1.3.2'
+  sha256 '8117821eef637c3fb78ce6e583fe0a3e667c714525e992b37d4d977a279a967e'
 
   url "http://downloads.sourceforge.net/project/xca/xca/#{version}/xca-#{version}.dmg"
   name 'XCA'

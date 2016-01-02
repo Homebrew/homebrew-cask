@@ -1,4 +1,4 @@
-cask :v1 => 'singularity' do
+cask 'singularity' do
   version '1.8.6(6156)'
   sha256 '002597a1d7386ff1b505416476fce812037a38c61bd152212fd758db943de40c'
 

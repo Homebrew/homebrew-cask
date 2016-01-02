@@ -1,13 +1,13 @@
-cask :v1 => 'invisionsync' do
-  version '1.7.16-668'
-  sha256 'a6131c61b050b78350e3b608bcffedc2f047e78bff68010cb30531675593cb6c'
+cask 'invisionsync' do
+  version '1.7.20-673'
+  sha256 '219d670309a6f21c91b634f9189f0226d8d1fe1c0ccfc472ef90d6839f8ff734'
 
   url "https://projects.invisionapp.com/native_app/mac/sparkle/#{version.sub(%r{^.*?-},'')}.zip"
   name 'InVision Sync'
   appcast 'https://projects.invisionapp.com/native_app/mac/sparkle/appcast_v2.xml',
-          :sha256 => '13265e17eb103d1f566047dd2817e4dea53122291e07ac33d6331459261b3134'
+          :sha256 => '599e3c057def64d8e0bef737f32a78ea46922e4cc831b9663dcb83482ca00c0f'
   homepage 'http://invisionapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'InVisionSync.app'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'vpaint' do
+cask 'vpaint' do
   version '1.5'
   sha256 '3ebadd7518698cf83ce7cbf7d0736599ffc385bb4c00587fa1e957905b3050af'
 

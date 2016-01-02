@@ -1,4 +1,4 @@
-cask :v1 => 'mailfollowup' do
+cask 'mailfollowup' do
   if MacOS.release <= :tiger
     version '1.1'
     sha256 '1f345ae0c814cbdc7adad9d5b20003fbad2cdf4da0a9f9de4936fc2d2c65067d'
@@ -24,8 +24,8 @@ cask :v1 => 'mailfollowup' do
 
   url "https://www.cs.unc.edu/~welch/MailFollowup/media/MailFollowUp_#{version}.dmg.zip"
   name 'MailFollowUp'
-  homepage 'http://www.cs.unc.edu/~welch/MailFollowup/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.cs.unc.edu/~welch/MailFollowup/'
+  license :gratis
 
   container :nested => "MailFollowUp_#{version}.dmg"
   pkg 'Install MailFollowUp.pkg'

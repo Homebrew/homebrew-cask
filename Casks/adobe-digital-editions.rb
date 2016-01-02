@@ -1,4 +1,4 @@
-cask :v1 => 'adobe-digital-editions' do
+cask 'adobe-digital-editions' do
   version '4.0'
   sha256 :no_check    # required as upstream package is updated in-place
 

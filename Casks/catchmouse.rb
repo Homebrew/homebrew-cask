@@ -1,4 +1,4 @@
-cask :v1 => 'catchmouse' do
+cask 'catchmouse' do
   version :latest
   sha256 :no_check
 

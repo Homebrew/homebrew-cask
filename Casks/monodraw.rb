@@ -1,4 +1,4 @@
-cask :v1 => 'monodraw' do
+cask 'monodraw' do
   version :latest
   sha256 :no_check
 

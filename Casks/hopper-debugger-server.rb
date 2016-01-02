@@ -1,4 +1,4 @@
-cask :v1 => 'hopper-debugger-server' do
+cask 'hopper-debugger-server' do
   version '2.4'
   sha256 '32879ffedbe88d172aa59c1cdb32cdba024d842c20d705458ea4279f5bc18dab'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'firetask' do
+cask 'firetask' do
   version '3.7.5'
   sha256 'fe8ca19270ce248dd78fdba0183ee2e9f6b69a889f8e6b66974f4ed8e3b81e8d'
 

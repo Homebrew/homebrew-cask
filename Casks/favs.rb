@@ -1,4 +1,4 @@
-cask :v1 => 'favs' do
+cask 'favs' do
   version '141'
   sha256 '7617f9ae1ef5552b7264b2938d48a05bea1661771eb6729f581866485a6d9a16'
 

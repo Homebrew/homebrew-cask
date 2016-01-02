@@ -1,4 +1,4 @@
-cask :v1_1 => 'pdftotext' do
+cask 'pdftotext' do
   version :latest
   sha256 :no_check
 

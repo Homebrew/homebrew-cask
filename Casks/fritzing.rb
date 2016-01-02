@@ -1,4 +1,4 @@
-cask :v1 => 'fritzing' do
+cask 'fritzing' do
   version '0.9.2b'
   sha256 'ad0a23897a761b1342cf1aaae2806109824fbc37d95567aab836877363385fdd'
 

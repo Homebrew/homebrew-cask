@@ -1,4 +1,4 @@
-cask :v1 => 'plex-home-theater' do
+cask 'plex-home-theater' do
   version '1.4.1.469-47a90f01'
 
   if Hardware::CPU.is_32_bit?
@@ -11,7 +11,7 @@ cask :v1 => 'plex-home-theater' do
 
   name 'Plex Home Theater'
   homepage 'https://plex.tv'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Plex Home Theater.app'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'google-japanese-ime' do
+cask 'google-japanese-ime' do
   version :latest
   sha256 :no_check
 
@@ -7,7 +7,6 @@ cask :v1 => 'google-japanese-ime' do
   name 'Google Japanese Input Method Editor'
   homepage 'https://www.google.co.jp/ime/'
   license :gratis
-  tags :vendor => 'Google'
 
   pkg 'GoogleJapaneseInput.pkg'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'hotswitch' do
+cask 'hotswitch' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'pgadmin3' do
+cask 'pgadmin3' do
   # note: "3" is not a version number, but indicates a different vendor
   version '1.20.0'
   sha256 '0712106cca16240db9962214384874c108fe8397d0c418a79dfb3639f8f140da'

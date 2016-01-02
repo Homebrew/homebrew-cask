@@ -1,12 +1,13 @@
-cask :v1 => 'dropzone' do
+cask 'dropzone' do
   version '3.5.4'
-  sha256 '4595172ca1ccdef7882dd856f7ef2fbda6419689f506b8dc9e5c56f39b11378d'
+  sha256 '163f8c912dec520462581f5bdc053c930c72597e1c279397cd14429aec2a92c7'
 
   url "https://aptonic.com/dropzone3/sparkle/Dropzone-#{version}.zip"
-  appcast 'https://aptonic.com/dropzone3/sparkle/updates.xml'
+  appcast 'https://aptonic.com/dropzone3/sparkle/updates.xml',
+          :sha256 => 'e8758519f737d337f770f7c1983bc477e6aac4d004301f66994c08ef8b851160'
   name 'Dropzone'
   homepage 'https://aptonic.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Dropzone 3.app'
 end

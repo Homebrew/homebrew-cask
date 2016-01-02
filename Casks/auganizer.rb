@@ -1,4 +1,4 @@
-cask :v1 => 'auganizer' do
+cask 'auganizer' do
   version '1.1.4'
   sha256 '9f35899fac64ad4880352998bab05dd33ca693ea6dd51db8d05ba8e0a2a55990'
 

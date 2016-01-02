@@ -1,4 +1,4 @@
-cask :v1 => 'flow' do
+cask 'flow' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'prott' do
+cask 'prott' do
   version :latest
   sha256 :no_check
 

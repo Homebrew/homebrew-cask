@@ -1,4 +1,4 @@
-cask :v1 => 'port-map' do
+cask 'port-map' do
   version :latest
   sha256 :no_check
 

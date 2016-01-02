@@ -1,4 +1,4 @@
-cask :v1 => 'vitalsource-bookshelf' do
+cask 'vitalsource-bookshelf' do
 
   if MacOS.release <= :lion
     version '6.5.2'

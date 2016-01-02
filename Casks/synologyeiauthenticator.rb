@@ -1,4 +1,4 @@
-cask :v1 => 'synologyeiauthenticator' do
+cask 'synologyeiauthenticator' do
   version '1.1-013'
   sha256 'cc38db617f309ca5c7d8ea67cafb63d5509a07e43186d87ab19461366ea30691'
 

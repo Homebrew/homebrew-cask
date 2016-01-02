@@ -1,4 +1,4 @@
-cask :v1 => 'sophos-anti-virus-home-edition' do
+cask 'sophos-anti-virus-home-edition' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,6 @@ cask :v1 => 'sophos-anti-virus-home-edition' do
   name 'Sophos Anti-Virus Home Edition'
   homepage 'https://www.sophos.com/en-us/products/free-tools/sophos-antivirus-for-mac-home-edition.aspx/'
   license :gratis
-  tags :vendor => 'Sophos'
 
   installer :script => 'Sophos Anti-Virus Home Edition.app/Contents/MacOS/tools/InstallationDeployer', :args => %w[--install]
 

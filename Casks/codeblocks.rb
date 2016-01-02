@@ -1,4 +1,4 @@
-cask :v1 => 'codeblocks' do
+cask 'codeblocks' do
   version '13.12'
   sha256 'ef0b541a8897db3132494b899034019739ccee8b8add2a36f018922a82d08b84'
 

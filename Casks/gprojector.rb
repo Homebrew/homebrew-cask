@@ -1,4 +1,4 @@
-cask :v1 => 'gprojector' do
+cask 'gprojector' do
   version '1.7.4'
   sha256 '6e8d8c5659b8d9719cbf1ac95a1fee814a8411362639493ecfa383a6b929fb71'
 

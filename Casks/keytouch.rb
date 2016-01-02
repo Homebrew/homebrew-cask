@@ -1,4 +1,4 @@
-cask :v1 => 'keytouch' do
+cask 'keytouch' do
   version :latest
   sha256 :no_check
 

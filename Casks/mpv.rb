@@ -1,12 +1,13 @@
-cask :v1 => 'mpv' do
-  version '0.9.2'
-  sha256 '149dc1e945d3e743863db3fa2ac0abbb55e157ac3cbbe2c523a5fcca8aca4265'
+cask 'mpv' do
+  version '0.14.0'
+  sha256 '1ab1e2dafd117041e0d1d766285d8ee76bdc6d4c151ef9fb11d3ec0652762eb6'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/mpv-player/mpv/releases/download/v#{version}/mpv_#{version}_mac.tar.bz2"
-  appcast 'https://github.com/mpv-player/mpv/releases.atom'
+  appcast 'https://github.com/mpv-player/mpv/releases.atom',
+          :sha256 => '36931e63138ed1389a1f3f9d64fe074a8eb70e273eff849f025e2bddf648e3f7'
   name 'mpv'
-  homepage 'http://mpv.io/'
+  homepage 'https://mpv.io/'
   license :gpl
 
   app 'mpv.app'

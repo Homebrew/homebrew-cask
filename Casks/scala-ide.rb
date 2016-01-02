@@ -1,14 +1,14 @@
-cask :v1 => 'scala-ide' do
-  version '4.1.0'
+cask 'scala-ide' do
+  version '4.3.0'
 
   if Hardware::CPU.is_32_bit?
     # typesafe.com is the official download host per the vendor homepage
-    url "https://downloads.typesafe.com/scalaide-pack/#{version}-vfinal-luna-211-20150704/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86.zip"
-    sha256 'b8294874953176150913e91b5ca0728e123d5aaeb31a8df81f94b873ac666a78'
+    url "https://downloads.typesafe.com/scalaide-pack/#{version}-vfinal-luna-211-20150928/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86.zip"
+    sha256 '3f43fef5ccb7f01b6e539c9270e26799361c006b3bfdba2140a9af8e8eafe197'
   else
     # typesafe.com is the official download host per the vendor homepage
-    url "https://downloads.typesafe.com/scalaide-pack/#{version}-vfinal-luna-211-20150704/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86_64.zip"
-    sha256 '80b4056c96709c21c198cfbbe9b4014fa44b3a9c081ae233dd3b0fe9832a9c7a'
+    url "https://downloads.typesafe.com/scalaide-pack/#{version}-vfinal-luna-211-20151201/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86_64.zip"
+    sha256 '3a7ad459cf2257da2cb8694b47c6fdb30ff3c3bcc020e03636fc49635a476ef6'
   end
 
   name 'Scala IDE'

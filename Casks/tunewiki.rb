@@ -1,4 +1,4 @@
-cask :v1 => 'tunewiki' do
+cask 'tunewiki' do
   version :latest
   sha256 :no_check
 

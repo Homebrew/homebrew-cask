@@ -1,4 +1,4 @@
-cask :v1 => 'toontown-rewritten' do
+cask 'toontown-rewritten' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'istumbler' do
+cask 'istumbler' do
 
   if MacOS.release <= :mountain_lion
     version '99'

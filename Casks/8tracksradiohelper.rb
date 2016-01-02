@@ -1,4 +1,4 @@
-cask :v1 => '8tracksradiohelper' do
+cask '8tracksradiohelper' do
   version :latest
   sha256 :no_check
 

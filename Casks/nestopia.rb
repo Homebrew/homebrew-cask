@@ -1,4 +1,4 @@
-cask :v1 => 'nestopia' do
+cask 'nestopia' do
   version :latest
   sha256 :no_check
 

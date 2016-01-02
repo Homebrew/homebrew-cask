@@ -1,4 +1,4 @@
-cask :v1 => 'kuaipan' do
+cask 'kuaipan' do
   version '4.8'
   sha256 '300a1381de0ca32be3bf0ac4a6e98ad5e62f94db15eb564be83836fe161bdcb6'
 

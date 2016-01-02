@@ -1,4 +1,4 @@
-cask :v1 => 'dictcc-en-de-dictionary-plugin' do
+cask 'dictcc-en-de-dictionary-plugin' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'daemon-tools-lite' do
+cask 'daemon-tools-lite' do
   version '2.3.114'
   sha256 '1f7b2491a98b1956fa3fc740e74113cee59d557ba8fa6e137027eab469cafc9e'
 

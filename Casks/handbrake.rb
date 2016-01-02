@@ -1,4 +1,4 @@
-cask :v1 => 'handbrake' do
+cask 'handbrake' do
   version '0.10.2'
   sha256 '9591cefbfcbe97ad4e039b456f82ea0e76035b5db9c9aa2ebca044fb171d4dd5'
 

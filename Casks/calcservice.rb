@@ -1,4 +1,4 @@
-cask :v1 => 'calcservice' do
+cask 'calcservice' do
   version '3.4.1'
   sha256 'e30a576a7a3782d881e171c6f077dbf0933d69bbbe9343bf919fc3d67bac8527'
 

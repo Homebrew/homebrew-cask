@@ -1,4 +1,4 @@
-cask :v1 => 'coconutbattery' do
+cask 'coconutbattery' do
 
   if MacOS.release <= :tiger
     version '2.6.6'

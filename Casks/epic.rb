@@ -1,4 +1,4 @@
-cask :v1 => 'epic' do
+cask 'epic' do
   version '2462'
   sha256 'fc8fadf78816eaad050d514b3fc9a5c524b7fe5bf5a4b779e7b373ba2c240d1f'
 

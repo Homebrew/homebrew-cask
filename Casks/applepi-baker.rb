@@ -1,4 +1,4 @@
-cask :v1 => 'applepi-baker' do
+cask 'applepi-baker' do
   version :latest
   sha256 :no_check
 

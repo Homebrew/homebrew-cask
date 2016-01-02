@@ -1,4 +1,4 @@
-cask :v1 => 'heart' do
+cask 'heart' do
   version :latest
   sha256 :no_check
 

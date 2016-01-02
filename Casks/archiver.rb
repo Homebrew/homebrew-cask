@@ -1,4 +1,4 @@
-cask :v1 => 'archiver' do
+cask 'archiver' do
   version :latest
   sha256 :no_check
 

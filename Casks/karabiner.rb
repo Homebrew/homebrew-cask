@@ -1,10 +1,10 @@
-cask :v1 => 'karabiner' do
-  version '10.7.0'
-  sha256 'c5a64c01ac24a35f0cb84c581c0fd9490ef038c67b50864fdc8aefd33fe2ae39'
+cask 'karabiner' do
+  version '10.15.0'
+  sha256 '91f3f8709103213fbcaedc352feb135fa0a5c55cda9643135b532bc453acf89e'
 
   url "https://pqrs.org/osx/karabiner/files/Karabiner-#{version}.dmg"
   appcast 'https://pqrs.org/osx/karabiner/files/appcast.xml',
-          :sha256 => '309c41f2569783084f4e9bf7085d2749a482fe3d3f2ca58bf9be0da89c2956a1'
+          :sha256 => 'f68e6cccf5656635b25da4de037351502f71e144efd555075aaffba486b10d5f'
   name 'Karabiner'
   name 'KeyRemap4MacBook'
   homepage 'https://pqrs.org/osx/karabiner/'
@@ -24,5 +24,9 @@ cask :v1 => 'karabiner' do
                         '~/Library/Preferences/org.pqrs.Karabiner-AXNotifier.plist',
                         '~/Library/Preferences/org.pqrs.Karabiner.multitouchextension.plist',
                         '~/Library/Preferences/org.pqrs.Karabiner.plist',
+                        '~/Library/Preferences/org.pqrs.Karabiner.EventViewer.plist',
+                        '~/Library/Caches/org.pqrs.Karabiner',
+                        '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.sfl',
+                        '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.eventviewer.sfl',
                        ]
 end

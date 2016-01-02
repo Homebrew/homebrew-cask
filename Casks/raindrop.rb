@@ -1,4 +1,4 @@
-cask :v1 => 'raindrop' do
+cask 'raindrop' do
   version :latest
   sha256 :no_check
 

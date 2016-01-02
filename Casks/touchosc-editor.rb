@@ -1,4 +1,4 @@
-cask :v1 => 'touchosc-editor' do
+cask 'touchosc-editor' do
   version '1.7.0'
   sha256 'c23baa9eb9f3c15bb71f83f713a6b2e9aa01cc0ffe0acc15f23a6a8042acb766'
 

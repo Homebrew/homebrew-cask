@@ -1,4 +1,4 @@
-cask :v1 => 'alinof-timer' do
+cask 'alinof-timer' do
   version :latest
   sha256 :no_check
 

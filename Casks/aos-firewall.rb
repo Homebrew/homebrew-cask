@@ -1,4 +1,4 @@
-cask :v1 => 'aos-firewall' do
+cask 'aos-firewall' do
   version :latest
   sha256 :no_check
 

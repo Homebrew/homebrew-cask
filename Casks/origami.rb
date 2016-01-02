@@ -1,10 +1,10 @@
-cask :v1 => 'origami' do
-  version '2.0.2'
-  sha256 '0a41379bc2dd816c5fd34e7107f02d6c00a67f5b87096e8e2f122204128627cc'
+cask 'origami' do
+  version '2.1.2'
+  sha256 '23a73555ccf1153e3e556a376f29c8b1b7b331629d3909b243d4eb4e0345df25'
 
   url "https://origami.facebook.com/download/Origami-#{version}.zip"
   appcast 'https://facebook.github.io/origami/update/updates.xml.rss',
-          :sha256 => 'cd9fc6d5cdad06e1df1e6808bd7fdaa3999b52a765f29cc6b3dcbf6c11220540'
+          :sha256 => '8a5e0d9a2aa5d536927e08deaace15988410dd5062145af230094298259836bd'
   name 'Origami'
   homepage 'https://facebook.github.io/origami'
   license :gratis

@@ -1,4 +1,4 @@
-cask :v1 => 'rss' do
+cask 'rss' do
   version :latest
   sha256 :no_check
 

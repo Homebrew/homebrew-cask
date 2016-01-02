@@ -1,4 +1,4 @@
-cask :v1 => 'xmrouter' do
+cask 'xmrouter' do
   version :latest
   sha256 :no_check
 

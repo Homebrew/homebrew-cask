@@ -1,4 +1,4 @@
-cask :v1 => 'tn5250' do
+cask 'tn5250' do
   version :latest
   sha256 :no_check
 

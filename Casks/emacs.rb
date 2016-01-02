@@ -1,4 +1,4 @@
-cask :v1 => 'emacs' do
+cask 'emacs' do
   version '24.5-1'
   sha256 'c99c3def07886c0897c7c4bfc4a19338ea3d5bbcc2986d48be98aae1401f5830'
 

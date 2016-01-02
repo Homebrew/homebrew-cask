@@ -1,4 +1,4 @@
-cask :v1 => 'tuneup' do
+cask 'tuneup' do
   version :latest
   sha256 :no_check
 
@@ -7,8 +7,7 @@ cask :v1 => 'tuneup' do
           :sha256 => 'aed2e65b28225b29c01f5c02f1be2a0557a71a8930d337bdbfe080b8e39b2386'
   name 'TuneUp'
   homepage 'https://www.tuneupmedia.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
-  # todo: installer :manual should have a matching uninstall
   installer :manual => 'TuneUp-Installer.app'
 end

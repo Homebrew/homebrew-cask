@@ -1,4 +1,4 @@
-cask :v1 => 'mailplane' do
+cask 'mailplane' do
   version :latest
   sha256 :no_check
 

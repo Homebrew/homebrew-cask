@@ -1,4 +1,4 @@
-cask :v1 => 'easytether' do
+cask 'easytether' do
   version :latest
   sha256 :no_check
 

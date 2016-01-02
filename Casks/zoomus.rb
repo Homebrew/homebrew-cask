@@ -1,12 +1,12 @@
-cask :v1 => 'zoomus' do
+cask 'zoomus' do
   version :latest
   sha256 :no_check
 
   url 'https://zoom.us/client/latest/zoomusInstaller.pkg'
   name 'Zoom'
   name 'Zoom.us'
-  homepage 'http://www.zoom.us'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.zoom.us'
+  license :gratis
 
   pkg 'zoomusInstaller.pkg'
 

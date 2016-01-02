@@ -1,12 +1,13 @@
-cask :v1 => 'divvy' do
-  version '1.4.1'
-  sha256 '225e5e8a1a9e145db588ca71710ffb41f5a7f926de5f48484710258d92b2a62a'
+cask 'divvy' do
+  version '1.4.2'
+  sha256 '4e30a42d50a5e484ae410d1ed14021e7bb661ca2872def435c4d38ab0adcc9b9'
 
   url "https://mizage.com/downloads/Divvy_#{version}.zip"
-  appcast 'https://mizage.com/updates/profiles/divvy.php'
+  appcast 'https://mizage.com/updates/profiles/divvy.php',
+          :sha256 => 'bd0cf3969d52bf6dd3741adef9da9d9e419325e3adf97aba9661eeb05c26d0a9'
   name 'Divvy'
   homepage 'https://mizage.com/divvy/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Divvy.app'
 

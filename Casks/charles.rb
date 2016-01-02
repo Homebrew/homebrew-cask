@@ -1,10 +1,10 @@
-cask :v1 => 'charles' do
-  version '3.10.2'
-  sha256 'd68be46d7dc9654b4b3b094a2f451226376d7bf3c5d401aecba082b27e0b8b6a'
+cask 'charles' do
+  version '3.11.2'
+  sha256 'db0a7d9c318ed239bc3d32a96f73ebba80e75cd31954179be42019222ae6557d'
 
-  url "http://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
+  url "https://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
   name 'Charles'
-  homepage 'http://www.charlesproxy.com/'
+  homepage 'https://www.charlesproxy.com/'
   license :commercial
 
   app 'Charles.app'

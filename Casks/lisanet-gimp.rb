@@ -1,4 +1,4 @@
-cask :v1 => 'lisanet-gimp' do
+cask 'lisanet-gimp' do
   version '2.8.14p2'
   sha256 '17666088c365f39b0ad666e2f888e9204b5c6843ae420bb9529872290139b17d'
 

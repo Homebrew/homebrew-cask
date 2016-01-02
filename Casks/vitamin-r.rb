@@ -1,4 +1,4 @@
-cask :v1 => 'vitamin-r' do
+cask 'vitamin-r' do
   if MacOS.release <= :leopard
     version '1.48'
     sha256 '9a06bbf02da9ff61d10fc5cc14ff888c6125e8ccef92dc42e3878284c46afe45'
@@ -23,7 +23,8 @@ cask :v1 => 'vitamin-r' do
     version :latest
     sha256 :no_check
     url 'http://www.publicspace.net/download/Vitamin.dmg'
-    appcast 'http://www.publicspace.net/app/vitamin2.xml'
+    appcast 'http://www.publicspace.net/app/vitamin2.xml',
+            :sha256 => 'dc9e2084b13257e40e5385d65d0496b42d6998726583264de481a7d74f46862c'
     app 'Vitamin-R 2.app'
   end
 

@@ -1,4 +1,4 @@
-cask :v1 => 'unity-web-player' do
+cask 'unity-web-player' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'mongodbpreferencepane' do
+cask 'mongodbpreferencepane' do
   version :latest
   sha256 :no_check
 

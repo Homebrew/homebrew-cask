@@ -1,4 +1,4 @@
-cask :v1 => 'prefs-editor' do
+cask 'prefs-editor' do
   version :latest
   sha256 :no_check
 

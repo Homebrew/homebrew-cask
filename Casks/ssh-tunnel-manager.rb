@@ -1,4 +1,4 @@
-cask :v1 => 'ssh-tunnel-manager' do
+cask 'ssh-tunnel-manager' do
   version '2.1.3'
   sha256 '33bf922e76c8784361814abac245920be5fd5648ec1e150f01c0b6b655d36faa'
 

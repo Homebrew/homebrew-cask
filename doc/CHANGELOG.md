@@ -1,5 +1,142 @@
 # CHANGELOG
 
+## 0.60.0
+
+**NOTE** This is the final release of Homebrew-cask. As of this release, it is no longer necessary to `brew install brew-cask`. `brew tap caskroom/cask` will install `brew-cask` as a Homebrew [external command](https://github.com/Homebrew/homebrew/blob/15f291ddaa05cc010456a733b799382175c29dd4/share/doc/homebrew/External-Commands.md), and `brew update` will keep it up-to-date.
+
+You can `brew uninstall --force brew-cask && brew update` to clean up.
+
+* __Casks__
+  - 76 Casks added (588 updated) by 278 contributors since 0.59.0
+  - 2910 total Casks
+* __Features__
+  - [#15381][] Warn of legacy installs in doctor <3 [@mikemcquaid][]
+    - Changes to develop_brew_cask for #15381
+    - brew-cask: move to using tap cmd directory.
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#15685][] Error out if user attempts an unknown command
+  - [#14845][] invoke chown more reliable while removing remove artifacts <3 [@forkbomber][]
+  - [#14648][] installer.rb: fix accessibility access conditional order
+* __Internal Changes__
+  - [#15424][] generic_unar.rb: use long flags
+    - Move .rubocop_todo.yml from to TOPLEVEL_FILES
+  - [#14716][] last changes of 'brew --prefix' into 'brew --repository'
+* __Documentation__
+  - [#14652][] finished removing maintainers
+    - added adityadalal924 as maintainer
+    - removed old maintainers (and fixed missing ones)
+  - 15 doc commits since 0.59.0
+* __Contributors__
+  - 140 new contributors since 0.59.0
+  - 2523 total contributors
+* __Release Date__
+  - 2015-12-09 21:00:00 UTC
+
+
+[#14648]: https://github.com/caskroom/homebrew-cask/issues/14648
+[#14652]: https://github.com/caskroom/homebrew-cask/issues/14652
+[#14716]: https://github.com/caskroom/homebrew-cask/issues/14716
+[#14845]: https://github.com/caskroom/homebrew-cask/issues/14845
+[#15381]: https://github.com/caskroom/homebrew-cask/issues/15381
+[#15424]: https://github.com/caskroom/homebrew-cask/issues/15424
+[#15685]: https://github.com/caskroom/homebrew-cask/issues/15685
+[@forkbomber]: https://github.com/forkbomber
+[@mikemcquaid]: https://github.com/mikemcquaid
+
+## 0.59.0
+
+* __Casks__
+  - 37 Casks added (192 updated) by 154 contributors since 0.58.0
+  - 2834 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - [#14581][] finished removing Alfred support
+* __Fixes__
+  - [#14301][] Improve Ruby version check in the formula <3 [@jgonera][]
+  - [#14730][] Remove launchjobs even if they are not loaded
+    - Use ENV['HOME'] to check existence of launchjobs
+* __Internal Changes__
+  - none
+* __Documentation__
+  - 4 doc commits since 0.58.0
+* __Contributors__
+  - 82 new contributors since 0.58.0
+  - 2383 total contributors
+* __Release Date__
+  - 2015-10-28 18:00:00 UTC
+
+
+[#14301]: https://github.com/caskroom/homebrew-cask/issues/14301
+[#14581]: https://github.com/caskroom/homebrew-cask/issues/14581
+[#14730]: https://github.com/caskroom/homebrew-cask/issues/14730
+[@jgonera]: https://github.com/jgonera
+
+## 0.58.0
+
+* __Casks__
+  - 19 Casks added
+  - 2797 total Casks
+* __Features__
+  - none
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#14144][] updated accessibility method for el capitain compatibility <3 [@adityadalal924][]
+* __Internal Changes__
+  - none
+* __Documentation__
+  - 3 doc commits since 0.57.0
+* __Contributors__
+  - 45 new contributors since 0.57.0
+  - 2301 total contributors
+* __Release Date__
+  - 2015-10-15 01:10:00 UTC
+
+[#14144]: https://github.com/caskroom/homebrew-cask/issues/14144
+[@adityadalal924]: https://github.com/adityadalal924
+
+## 0.57.0
+
+* __Casks__
+  - 119 Casks added (828 updated) by 326 contributors since 0.56.0
+  - 2778 total Casks
+* __Features__
+  - [#13612][] Include Hbc::Staged module in Hbc::DSL::Preflight
+* __Breaking Changes__
+  - none
+* __Fixes__
+  - [#11110][] remove `sort` from symlinked.rb <3 [@delphinus35][]
+  - [#13419][] Fix external command example: Cask => Hbc <3 [@zmwangx][]
+  - [#13567][] Gracefully handle interrupts (CTRL-C) at top level
+  - [#13783][] Fix commit range for audit_modified_casks
+  - [#13762][] Fix travis commit range to include only PR commits
+* __Internal Changes__
+  - [#13848][] Create .gitattributes
+  - [#13662][] add .editorconfig file <3 [@williamboman][]
+* __Documentation__
+  - 44 doc commits since 0.56.0
+* __Contributors__
+  - 179 new contributors since 0.56.0
+  - 2256 total contributors
+* __Release Date__
+  - 2015-10-02 17:03:00 UTC
+
+
+[#11110]: https://github.com/caskroom/homebrew-cask/issues/11110
+[#13419]: https://github.com/caskroom/homebrew-cask/issues/13419
+[#13612]: https://github.com/caskroom/homebrew-cask/issues/13612
+[#13762]: https://github.com/caskroom/homebrew-cask/issues/13762
+[#13783]: https://github.com/caskroom/homebrew-cask/issues/13783
+[#13848]: https://github.com/caskroom/homebrew-cask/issues/13848
+[#13567]: https://github.com/caskroom/homebrew-cask/issues/13567
+[#13662]: https://github.com/caskroom/homebrew-cask/issues/13567
+[@delphinus35]: https://github.com/delphinus35
+[@zmwangx]: https://github.com/zmwangx
+[@williamboman]: https://github.com/williamboman
+
 ## 0.56.0
 
 * __Casks__

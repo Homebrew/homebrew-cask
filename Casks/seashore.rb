@@ -1,4 +1,4 @@
-cask :v1 => 'seashore' do
+cask 'seashore' do
   version :latest
   sha256 :no_check
 

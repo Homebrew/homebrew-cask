@@ -1,4 +1,4 @@
-cask :v1 => 'box-edit' do
+cask 'box-edit' do
   version :latest
   sha256 :no_check
 

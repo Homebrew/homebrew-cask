@@ -1,4 +1,4 @@
-cask :v1 => 'flymaster-designer' do
+cask 'flymaster-designer' do
   version :latest
   sha256 :no_check
 

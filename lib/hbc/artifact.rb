@@ -13,6 +13,8 @@ require 'hbc/artifact/font'
 require 'hbc/artifact/input_method'
 require 'hbc/artifact/installer'
 require 'hbc/artifact/internet_plugin'
+require 'hbc/artifact/audio_unit_plugin'
+require 'hbc/artifact/vst_plugin'
 require 'hbc/artifact/nested_container'
 require 'hbc/artifact/pkg'
 require 'hbc/artifact/postflight_block'
@@ -49,6 +51,8 @@ module Hbc::Artifact
       Hbc::Artifact::Binary,
       Hbc::Artifact::InputMethod,
       Hbc::Artifact::InternetPlugin,
+      Hbc::Artifact::AudioUnitPlugin,
+      Hbc::Artifact::VstPlugin,
       Hbc::Artifact::ScreenSaver,
       Hbc::Artifact::Uninstall,
       Hbc::Artifact::PostflightBlock,

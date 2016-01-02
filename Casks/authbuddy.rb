@@ -1,4 +1,4 @@
-cask :v1 => 'authbuddy' do
+cask 'authbuddy' do
   version :latest
   sha256 :no_check
 

@@ -1,11 +1,11 @@
-cask :v1 => 'join-together' do
-  version '7.4.1'
-  sha256 '86f7e31e437f7fbdbfa58db2f6e566d1f37f7eed74535ebcaa3e96eba23a4f18'
+cask 'join-together' do
+  version '7.5.3'
+  sha256 '2df29280c83580e16acaac20e5015acf1d24889de1439cc252f735658053af23'
 
   url "http://dougscripts.com/itunes/scrx/jointogether#{version.delete('.')}.zip"
   name 'Join Together'
   appcast 'http://dougscripts.com/itunes/itinfo/jointogether_appcast.xml',
-          :sha256 => 'd83ab7e864a6f2df3500ce6b28ed44868bdb869af5a691372f305585c90ee03b'
+          :sha256 => '8e0c1bffffc4da135dd9c906e377cd49ad718d222a7a8b2fd5d896de1c4e00ac'
   homepage 'http://dougscripts.com/itunes/itinfo/jointogether.php'
   license :commercial
 

@@ -1,4 +1,4 @@
-cask :v1 => 'cloudfoundry-cli' do
+cask 'cloudfoundry-cli' do
   version '6.12.1'
   sha256 '4810c0dc3427db8f1c81c3f658dd5e6265120ae109ea438d1969ba7b96b6db84'
 

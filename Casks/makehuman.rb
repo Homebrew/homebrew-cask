@@ -1,4 +1,4 @@
-cask :v1 => 'makehuman' do
+cask 'makehuman' do
   version '1.0.2'
   sha256 'ea74381b1fd9c0f699b2cf1a3476d7cf9447fad3beb3c48de0a4017032c44de9'
 

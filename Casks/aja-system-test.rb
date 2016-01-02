@@ -1,4 +1,4 @@
-cask :v1 => 'aja-system-test' do
+cask 'aja-system-test' do
   version :latest
   sha256 :no_check
 

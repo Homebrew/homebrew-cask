@@ -1,11 +1,11 @@
-cask :v1 => 'diskmaker-x' do
-  version '4b4'
-  sha256 '84c7c61973182573ba4d819f493528b665ad2c06a77698999f21ee2026b18a15'
+cask 'diskmaker-x' do
+  version '5.0.1'
+  sha256 '69f2d57392f56fbc1fa9cccc0d1d2be57b8ff4d39bcfeb1cb6770fbf702fb3df'
 
-  url "http://diskmakerx.com/downloads/DiskMakerX#{version}.dmg"
+  url "http://diskmakerx.com/downloads/DiskMaker_X_#{version.to_i}.dmg"
   name 'DiskMaker X'
   homepage 'http://diskmakerx.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
-  app "DiskMaker X #{version}.app"
+  app "DiskMaker X #{version.to_i}.app"
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'eye-one-profiler' do
+cask 'eye-one-profiler' do
   version '1.5.6'
   sha256 '29804334aebcb98469e7db4ab476b1d20c42b73eb98e2c8b495057f282972528'
 

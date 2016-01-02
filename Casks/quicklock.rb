@@ -1,4 +1,4 @@
-cask :v1 => 'quicklock' do
+cask 'quicklock' do
   version :latest
   sha256 :no_check
 

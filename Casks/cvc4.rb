@@ -1,4 +1,4 @@
-cask :v1 => 'cvc4' do
+cask 'cvc4' do
 
   if MacOS.release <= :mountain_lion
     version '1.4'

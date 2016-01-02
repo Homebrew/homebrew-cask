@@ -1,12 +1,13 @@
-cask :v1 => 'hub' do
-  version '2.2.1'
-  sha256 '5e04212ff1db0504c5a085613771f12b38a906a92aec0339cd3ccb467b79ba53'
+cask 'hub' do
+  version '2.2.2'
+  sha256 '570664fdb22c5c40b16f0d17eb33d881332601ac289f724fe3aceab0c610a2a6'
 
-  url "https://github.com/github/hub/releases/download/v#{version}/hub-mac-amd64-#{version}.tar.gz"
-  appcast 'https://github.com/github/hub/releases.atom'
+  url "https://github.com/github/hub/releases/download/v#{version}/hub-darwin-amd64-#{version}.tgz"
+  appcast 'https://github.com/github/hub/releases.atom',
+          :sha256 => 'eec9baedadcccad08f996cc9f3767e77318e7936d0190ae45320bdc6208450e3'
   name 'hub'
   homepage 'https://github.com/github/hub'
   license :mit
 
-  binary "hub-mac-amd64-#{version}/hub"
+  binary "hub-darwin-amd64-#{version}/bin/hub"
 end

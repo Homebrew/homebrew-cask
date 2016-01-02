@@ -1,4 +1,4 @@
-cask :v1 => 'swift-publisher' do
+cask 'swift-publisher' do
   version :latest
   sha256 :no_check
 

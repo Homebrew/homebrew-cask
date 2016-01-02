@@ -1,4 +1,4 @@
-cask :v1 => 'opensesame' do
+cask 'opensesame' do
 
   if MacOS.release <= :snow_leopard
     version '0.26'

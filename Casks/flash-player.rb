@@ -1,13 +1,12 @@
-cask :v1 => 'flash-player' do
-  version '18.0.0.232'
-  sha256 'e5cba056c8ae0cfcc8a87fa4e9c627c422904c94a519d5962c5a7b7eaae8652a'
+cask 'flash-player' do
+  version '20.0.0.267'
+  sha256 '8c8e3dcd01668c4d59850b52e6add1d09658aa01754e5e363422fe526387bbf0'
 
   # macromedia.com is the official download host per the vendor homepage
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.to_i}/flashplayer_#{version.to_i}_sa.dmg"
   name 'Adobe Flash Player'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
   license :gratis
-  tags :vendor => 'Adobe'
 
   app 'Flash Player.app'
 

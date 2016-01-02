@@ -1,4 +1,4 @@
-cask :v1 => 'magicprefs' do
+cask 'magicprefs' do
   version :latest
   sha256 :no_check
 

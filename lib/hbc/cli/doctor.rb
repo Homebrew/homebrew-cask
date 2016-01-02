@@ -11,7 +11,7 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
     ohai 'Homebrew Cellar Path:',                            render_with_none_as_error( homebrew_cellar )
     ohai 'Homebrew Repository Path:',                        render_with_none_as_error( homebrew_repository )
     ohai 'Homebrew Origin:',                                 render_with_none_as_error( homebrew_origin )
-    ohai 'Homebrew-cask Version:',                           render_with_none_as_error( HBC_VERSION )
+    ohai 'Homebrew-cask Version:',                           render_with_none_as_error( Hbc.full_version )
     ohai 'Homebrew-cask Install Location:',                    render_install_location( HBC_VERSION )
     ohai 'Homebrew-cask Staging Location:',                    render_staging_location( Hbc.caskroom )
     ohai 'Homebrew-cask Cached Downloads:',                     render_cached_downloads
@@ -93,9 +93,9 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
     homebrew_constants('version')
   end
 
-  def self.homebrew_libdir
-    @homebrew_libdir ||= if homebrew_repository.respond_to?(:join)
-      homebrew_repository.join('Library', 'Homebrew')
+  def self.homebrew_taps
+    @homebrew_taps ||= if homebrew_repository.respond_to?(:join)
+      homebrew_repository.join('Library', 'Taps')
     end
   end
 
@@ -184,9 +184,12 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
   # things are less dependable.
   def self.render_install_location(current_version)
     locations = Dir.glob(homebrew_cellar.join('brew-cask', '*')).reverse
-    locations.each do |l|
-      basename = File.basename l
-      l.concat %Q{ #{error_string %Q{error: old version. Run "brew cleanup".}}} unless basename == current_version
+    if locations.empty?
+      none_string
+    else
+      locations.collect do |l|
+        %Q{#{l} #{error_string %Q{error: legacy install. Run "brew uninstall --force brew-cask".}}}
+      end
     end
   end
 
@@ -206,14 +209,10 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
       return "#{none_string} #{error_string}"
     end
     copy = Array.new(paths)
-    unless Hbc::Utils.file_is_descendant(copy[0], homebrew_cellar)
-      copy[0] = "#{copy[0]} #{error_string %Q{error: should be descendant of Homebrew Cellar}}"
+    unless Hbc::Utils.file_is_descendant(copy[0], homebrew_taps)
+      copy[0] = "#{copy[0]} #{error_string %Q{error: should be descendant of Homebrew taps directory}}"
     end
-    copy.map! do |elt|
-      elt = (homebrew_libdir and Hbc::Utils.file_is_descendant(elt, homebrew_libdir)) ?
-              "#{elt} #{error_string %Q{error: should not be descendant of Homebrew Library dir}}" :
-              elt
-    end
+    copy
   end
 
   def self.render_cached_downloads

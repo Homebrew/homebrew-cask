@@ -1,4 +1,4 @@
-cask :v1 => '1password' do
+cask '1password' do
 
   if MacOS.release <= :lion
     version '3.8.22'
@@ -17,8 +17,8 @@ cask :v1 => '1password' do
 
     app "1Password #{version.to_i}.app"
   else
-    version '5.3.2'
-    sha256 '6051434c77ad48af7b11f2259a91b12ded21ce3357c8db4780718ce83f44b668'
+    version '5.4.2'
+    sha256 'e4c447629419d7df4d7ad0e02e794647e61be04c87f3f6a86a0ee12598a82453'
 
     # cloudfront.net is the official download host per the vendor homepage
     url "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-#{version}.zip"

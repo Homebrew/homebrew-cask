@@ -1,10 +1,10 @@
-cask :v1 => 'qqmusic' do
-  version '2.3'
-  sha256 '6593590eb5b7fab34141283b0a893309ddec90cd3764c3a066499b487c2d33ff'
+cask 'qqmusic' do
+  version '3.1Build12'
+  sha256 '0622dd0772372d17ac8b40fa9ab1eb975645b61bedf77c5f29f03336b345993e'
 
-  url "http://dldir1.qq.com/music/clntupate/QQMusicForMacV#{version}.dmg"
+  url "http://dldir1.qq.com/music/clntupate/mac/QQMusic#{version}.dmg"
   name 'QQ音乐'
-  homepage 'http://y.qq.com'
+  homepage 'https://y.qq.com'
   license :commercial
 
   app 'QQMusic.app'
@@ -13,6 +13,7 @@ cask :v1 => 'qqmusic' do
 
   zap :delete => [
                   '~/Library/Caches/com.tencent.QQMusicMac',
+                  '~/Library/Application Support/com.tencent.QQMusicMac',
                   '~/Library/Preferences/com.tencent.QQMusicMac.plist',
                   '~/Library/Saved Application State/com.tencent.QQMusicMac.savedState'
                  ]

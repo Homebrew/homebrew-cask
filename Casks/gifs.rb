@@ -1,4 +1,4 @@
-cask :v1 => 'gifs' do
+cask 'gifs' do
   version :latest
   sha256 :no_check
 

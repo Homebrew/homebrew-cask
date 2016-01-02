@@ -1,10 +1,10 @@
-cask :v1 => 'prizmo' do
-  version '3.1.3'
-  sha256 '52154553c4473dcb1613844991e49a62f96d2f9016254ea2577b0d4b5479c933'
+cask 'prizmo' do
+  version '3.1.5'
+  sha256 'f81bbfd40004671c3e573a12679833d188349407da544b29e8357d8b31cae74c'
 
   url "http://www.creaceed.com/downloads/prizmo#{version.to_i}_#{version}.zip"
   appcast 'http://www.creaceed.com/appcasts/prizmo3.xml',
-          sha256 => 'bee39edd6664aad47129cb215867aa8eb0b396fcc83f5e31110f98f43f7e15b0'
+          :sha256 => '879492687d7a7bc8bd4ab31c8853c8ccd5b47b3cf9d351a4ec7e4c95ab7b1834'
   name 'Prizmo'
   homepage 'http://www.creaceed.com/prizmo'
   license :freemium

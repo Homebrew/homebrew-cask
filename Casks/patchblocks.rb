@@ -1,4 +1,4 @@
-cask :v1 => 'patchblocks' do
+cask 'patchblocks' do
   version '0.3.3'
   sha256 'd039d82a61a53b75962ebf9fb7b31426b69435271988b61f5ba23ec58001fa83'
 

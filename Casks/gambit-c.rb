@@ -1,4 +1,4 @@
-cask :v1 => 'gambit-c' do
+cask 'gambit-c' do
   version '4.7.3'
 
   if Hardware::CPU.is_32_bit?

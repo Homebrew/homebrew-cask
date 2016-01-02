@@ -1,4 +1,4 @@
-cask :v1 => 'peepopen' do
+cask 'peepopen' do
   version :latest
   sha256 :no_check
 

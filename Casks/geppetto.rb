@@ -1,4 +1,4 @@
-cask :v1 => 'geppetto' do
+cask 'geppetto' do
   version '4.3.0-R201409300140'
 
   if Hardware::CPU.is_32_bit?

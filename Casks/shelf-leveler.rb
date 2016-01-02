@@ -1,4 +1,4 @@
-cask :v1 => 'shelf-leveler' do
+cask 'shelf-leveler' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'wxcrafter' do
+cask 'wxcrafter' do
   version :latest
   sha256 :no_check
 

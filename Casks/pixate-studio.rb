@@ -1,4 +1,4 @@
-cask :v1 => 'pixate-studio' do
+cask 'pixate-studio' do
   version :latest
   sha256 :no_check
 

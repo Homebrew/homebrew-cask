@@ -1,4 +1,4 @@
-cask :v1 => 'vassal' do
+cask 'vassal' do
   version '3.2.15'
   sha256 '936f7eeda9ee19c78708102e647aa43b91bfd70690da2552c72a28d5fbd10541'
 

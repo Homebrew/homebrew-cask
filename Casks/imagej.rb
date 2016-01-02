@@ -1,4 +1,4 @@
-cask :v1 => 'imagej' do
+cask 'imagej' do
   version '1.49'
   sha256 '539c816c10849cb9820663d46c28b9ae1d36f43a29cc50fe7b5d819e9e60dd44'
 

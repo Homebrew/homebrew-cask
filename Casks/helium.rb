@@ -1,4 +1,4 @@
-cask :v1 => 'helium' do
+cask 'helium' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'mac-informer' do
+cask 'mac-informer' do
   version :latest
   sha256 :no_check
 

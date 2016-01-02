@@ -1,13 +1,14 @@
-cask :v1 => 'ibettercharge' do
-  version '1.0.9-1423225886'
-  sha256 'c3be38df08b85b021a71893603deda5307011c840c3e63b611b7540dd4693a9c'
+cask 'ibettercharge' do
+  version '1.0.10-1443542332'
+  sha256 'd4c3b410b77836ecc97bf6133e7109934c2d0a6b64349083d2c03b0280e21985'
 
   # dl.devmate.com is the official download host per the appcast feed
-  url "http://dl.devmate.com/com.softorino.iBetterCharge/#{version.sub(%r{-.*$},'')}/#{version.sub(%r{^.*?-},'')}/iBetterCharge-#{version.sub(%r{-.*$},'')}.zip"
-  appcast 'http://hook.softorino.com/ibc/appcast.xml'
+  url "https://dl.devmate.com/com.softorino.iBetterCharge/#{version.sub(%r{-.*$},'')}/#{version.sub(%r{^.*?-},'')}/iBetterCharge-#{version.sub(%r{-.*$},'')}.zip"
+  appcast 'http://hook.softorino.com/ibc/appcast.xml',
+          :sha256 => 'ccfa0731f1d7861bf01427351e5758c3752e1816a5e55b02dad23c4323fcabfe'
   name 'iBetterCharge'
   homepage 'http://softorino.com/ibettercharge/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'iBetterCharge.app'
 end

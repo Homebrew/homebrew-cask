@@ -1,4 +1,4 @@
-cask :v1 => 'macpar-deluxe' do
+cask 'macpar-deluxe' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'fog-burner' do
+cask 'fog-burner' do
   version :latest
   sha256 :no_check
 

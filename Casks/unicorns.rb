@@ -1,4 +1,4 @@
-cask :v1 => 'unicorns' do
+cask 'unicorns' do
   version :latest
   sha256 :no_check
 

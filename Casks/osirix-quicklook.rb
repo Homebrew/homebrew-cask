@@ -1,4 +1,4 @@
-cask :v1 => 'osirix-quicklook' do
+cask 'osirix-quicklook' do
   version :latest
   sha256 :no_check
 

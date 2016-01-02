@@ -1,4 +1,4 @@
-cask :v1 => 'vuescan' do
+cask 'vuescan' do
   version '9.5.19'
   sha256 :no_check # required as upstream package is updated in-place
 
@@ -9,7 +9,7 @@ cask :v1 => 'vuescan' do
   end
 
   name 'VueScan'
-  homepage 'http://www.hamrick.com'
+  homepage 'https://www.hamrick.com'
   license :commercial
 
   app 'VueScan.app'

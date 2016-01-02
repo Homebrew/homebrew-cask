@@ -1,4 +1,4 @@
-cask :v1 => 'openvanilla' do
+cask 'openvanilla' do
   version '1.0.11'
   sha256 '35745a0767e4131efbdcb34459c5a7b44126aa11e73af80310b813bf6efe1bc5'
 

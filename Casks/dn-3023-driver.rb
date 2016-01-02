@@ -1,4 +1,4 @@
-cask :v1 => 'dn-3023-driver' do
+cask 'dn-3023-driver' do
   version '20140926'
   sha256 'baa5d20f17cd322b2c53e0bd82c444d1648eefabd5ec383d15f9a16f99810b10'
 

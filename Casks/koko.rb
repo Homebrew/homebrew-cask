@@ -1,9 +1,10 @@
-cask :v1 => 'koko' do
-  version '0.1.5'
-  sha256 '1a11817863d21039f02837567112d5e97a5edf6e08f214255ca05ddbf8e80766'
+cask 'koko' do
+  version '0.2.0'
+  sha256 '68febd6299ed082c24d849445f26eacd5a49f4d010b4c10943ee8953d14fe5ce'
 
   url "https://github.com/noraesae/koko/releases/download/v#{version}/koko-mac.zip"
-  appcast 'https://github.com/noraesae/koko/releases.atom'
+  appcast 'https://github.com/noraesae/koko/releases.atom',
+          :sha256 => '7c97c79db2e5cef29e780c7af796647068e85aeab9c0e93130bad2783762c272'
   name 'Koko'
   homepage 'https://github.com/noraesae/koko'
   license :mit

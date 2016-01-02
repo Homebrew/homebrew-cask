@@ -1,4 +1,4 @@
-cask :v1 => 'adware-removal-tool' do
+cask 'adware-removal-tool' do
   version :latest
   sha256 :no_check
 

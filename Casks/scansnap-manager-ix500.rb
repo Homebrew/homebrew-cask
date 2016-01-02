@@ -1,4 +1,4 @@
-cask :v1 => 'scansnap-manager-ix500' do
+cask 'scansnap-manager-ix500' do
   version :latest
   sha256 :no_check
 
@@ -7,7 +7,6 @@ cask :v1 => 'scansnap-manager-ix500' do
   name 'ScanSnap Manager for Fujitsu ScanSnap iX500'
   homepage 'https://www.fujitsu.com/global/support/products/computing/peripheral/scanners/scansnap/software/ix500.html'
   license :gratis
-  tags :vendor => 'Fujitsu'
 
   pkg 'ScanSnap Manager.pkg'
 

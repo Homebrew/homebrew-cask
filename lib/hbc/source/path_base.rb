@@ -24,7 +24,7 @@ class Hbc::Source::PathBase
 
       # transitional hack: convert first lines of the new form
       #
-      #     cask :v1 => 'google-chrome' do
+      #     cask 'google-chrome' do
       #
       # to the old form
       #
@@ -46,18 +46,11 @@ class Hbc::Source::PathBase
 
       # munge text
       cask_contents.sub!(%r{\A(\s*\#[^\n]*\n)+}, '');
-      if %r{\A\s*cask\s+:v([\d_]+)(test)?\s+=>\s+([\'\"])(\S+?)\3(?:\s*,\s*|\s+)do\s*\n}.match(cask_contents)
-        dsl_version_string = $1
-        is_test = ! $2.nil?
+      if %r{\A\s*(test_)?cask\s+(?::v[\d_]+(test)?\s+=>\s+)?([\'\"])(\S+?)\3(?:\s*,\s*|\s+)do\s*\n}.match(cask_contents)
+        is_test = $1 || $2
         header_token = $4
-        dsl_version = Gem::Version.new(dsl_version_string.gsub('_','.'))
         superclass_name = is_test ? 'Hbc::TestCask' : 'Hbc::Cask'
         cask_contents.sub!(%r{\A[^\n]+\n}, "class #{cask_class_name} < #{superclass_name}\n")
-        # todo the minimum DSL version should be defined globally elsewhere
-        minimum_dsl_version = Gem::Version.new('1.0')
-        unless dsl_version >= minimum_dsl_version
-          raise Hbc::CaskInvalidError.new(cask_token, "Bad header line: 'v#{dsl_version_string}' is less than required minimum version '#{minimum_dsl_version}'")
-        end
         if header_token != cask_token
           raise Hbc::CaskInvalidError.new(cask_token, "Bad header line: '#{header_token}' does not match file name")
         end

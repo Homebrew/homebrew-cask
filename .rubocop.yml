@@ -1,5 +1,7 @@
 inherit_from: .rubocop_todo.yml
 
+require: rubocop-cask
+
 AllCops:
   Exclude:
     - '**/Gemfile'
@@ -14,9 +16,20 @@ Metrics/LineLength:
   Exclude:
     - Casks/**/*
 
+Performance/StringReplacement:
+  Exclude:
+    - Casks/**/*
+
 Style/BarePercentLiterals:
   EnforcedStyle: percent_q
+
+Style/ExtraSpacing:
+  Exclude:
+    - Casks/**/*
 
 Style/FileName:
   Exclude:
     - Casks/**/*
+
+Style/HashSyntax:
+  EnforcedStyle: hash_rockets

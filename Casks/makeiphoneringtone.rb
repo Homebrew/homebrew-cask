@@ -1,4 +1,4 @@
-cask :v1 => 'makeiphoneringtone' do
+cask 'makeiphoneringtone' do
   version :latest
   sha256 :no_check
 

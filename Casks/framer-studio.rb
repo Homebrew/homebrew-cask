@@ -1,4 +1,4 @@
-cask :v1 => 'framer-studio' do
+cask 'framer-studio' do
   version '1.11.188'
   sha256 'b1fff971456a4af5ad88661344dbad079d5ba08e25dfc2c6f252824d1916206b'
 
@@ -7,7 +7,7 @@ cask :v1 => 'framer-studio' do
   appcast 'http://studio.update.framerjs.com/appcast.xml',
           :sha256 => '2d6e82bb3d57ecf9d7dcb339efea422f6feaed924b73a15b550b69f07b8b9172'
   homepage 'http://framerjs.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Framer Studio.app'
 end

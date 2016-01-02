@@ -1,4 +1,4 @@
-cask :v1 => 'pg-commander' do
+cask 'pg-commander' do
   version '1.5.6'
   sha256 '6793dc4b3c6b5fd77b615ae9eb29783d17d264b35f765793f938cef4eb60a852'
 

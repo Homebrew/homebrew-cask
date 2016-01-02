@@ -1,4 +1,4 @@
-cask :v1 => 'citrix-receiver' do
+cask 'citrix-receiver' do
   version :latest
   sha256 :no_check
 
@@ -20,4 +20,12 @@ cask :v1 => 'citrix-receiver' do
                            'com.citrix.ReceiverHelper',
                           ],
             :pkgutil   => 'com.citrix.ICAClient'
+
+  zap :delete => [
+                  '~/Library/Application Support/Citrix Receiver',
+                  '~/Library/Preferences/com.citrix.receiver.nomas.plist',
+                  '~/Library/Preferences/com.citrix.receiver.nomas.plist.lockfile',
+                  '~/Library/Preferences/com.citrix.ReceiverFTU.AccountRecords.plist',
+                  '~/Library/Preferences/com.citrix.ReceiverFTU.AccountRecords.plist.lockfile',
+                 ]
 end

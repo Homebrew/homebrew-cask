@@ -1,4 +1,4 @@
-cask :v1 => 'antetype' do
+cask 'antetype' do
   version :latest
   sha256 :no_check
 

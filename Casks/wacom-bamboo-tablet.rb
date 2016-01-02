@@ -1,10 +1,10 @@
-cask :v1 => 'wacom-bamboo-tablet' do
-  version '5.3.5-4'
-  sha256 '3368525540f01c6160839a6dee8618c887681d33ed61b15a1835def1cd2c70f2'
+cask 'wacom-bamboo-tablet' do
+  version '5.3.6-6'
+  sha256 '3eb78dda089da8f4019782502fe59529a5e00afae8c89005d9f5cc9e04e2283e'
 
   url "http://cdn.wacom.com/u/productsupport/drivers/mac/consumer/pentablet_#{version}.dmg"
   name 'Wacom Bamboo Tablet'
-  homepage 'http://us.wacom.com/en/support/drivers'
+  homepage 'https://us.wacom.com/en/support/drivers'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install Wacom Tablet.pkg'

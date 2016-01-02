@@ -1,9 +1,9 @@
-cask :v1 => 'qbittorrent' do
-  version '3.2.3'
-  sha256 'c88f1bd90c8e9b667dd5d8c35ccd490c56293ca86b9a203c15e083c7f18f4136'
+cask 'qbittorrent' do
+  version '3.3.0'
+  sha256 'fc4b23c48ccb3bff9595c2e5c90709c4fec419a0f0e4ea3a568d1f39664a0767'
 
   # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/sourceforge/qbittorrent/qbittorrent-#{version}.dmg"
+  url "http://downloads.sourceforge.net/project/qbittorrent/qbittorrent-mac/qbittorrent-#{version}/qbittorrent-#{version}.dmg"
   name 'qBittorrent'
   homepage 'http://www.qbittorrent.org'
   license :gpl

@@ -1,4 +1,4 @@
-cask :v1 => 'solidworks-edrawings' do
+cask 'solidworks-edrawings' do
   version '2014 SP05'
   sha256 '986bbb63effd84a9e0ca4d9cb8fbe3a13ec25cfc15599e568ceb8ac531c6011f'
 

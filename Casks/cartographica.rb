@@ -1,4 +1,4 @@
-cask :v1 => 'cartographica' do
+cask 'cartographica' do
   version '1.4.6_610'
   sha256 '8f8db101e6bfce04aaea71a70c3eef210fc12284ca26f963db883a2f62d86ebe'
 

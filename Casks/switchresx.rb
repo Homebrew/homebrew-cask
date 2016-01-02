@@ -1,11 +1,11 @@
-cask :v1 => 'switchresx' do
-  version '4.5.1'
-  sha256 '6d044b3be800f8e8c34a4b87cad7100d69a40b165f6e12297aa42516891b7aed'
+cask 'switchresx' do
+  version '4.5.2'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "http://www.madrau.com/data/switchresx/SwitchResX#{version.to_i}.zip"
   name 'SwitchResX'
   homepage 'http://www.madrau.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   prefpane 'SwitchResX.prefPane'
 

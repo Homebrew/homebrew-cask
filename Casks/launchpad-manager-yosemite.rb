@@ -1,4 +1,4 @@
-cask :v1 => 'launchpad-manager-yosemite' do
+cask 'launchpad-manager-yosemite' do
   version :latest
   sha256 :no_check
 

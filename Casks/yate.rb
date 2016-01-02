@@ -1,4 +1,4 @@
-cask :v1 => 'yate' do
+cask 'yate' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'gitbox' do
+cask 'gitbox' do
   version '1.6.2'
   sha256 '181ac55515221bf07c9994f25a11e962a9057e4249600b4d95424bcb6bb5c6d7'
 
@@ -8,7 +8,7 @@ cask :v1 => 'gitbox' do
           :sha256 => '4a771aa4d35cd0bf9f821fbf1e60741cb1d9ee3724ff66550e46fba98bace8c1'
   name 'Gitbox'
   homepage 'http://gitboxapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Gitbox.app'
 

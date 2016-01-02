@@ -1,4 +1,4 @@
-cask :v1 => 'pixelapse' do
+cask 'pixelapse' do
   version '2.0.3'
   sha256 'c47eaa6d36286a31f8c87ba1d6855729c17f7f203975e90505a2c23dbe83eb09'
 

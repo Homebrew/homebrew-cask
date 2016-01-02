@@ -1,4 +1,4 @@
-cask :v1 => 'iannix' do
+cask 'iannix' do
   version '0.9.16'
   sha256 'b45d332fc450342ad9a5b73fedcd554c299d435f989f0fe099522554434d00de'
 

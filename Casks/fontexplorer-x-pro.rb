@@ -1,6 +1,6 @@
-cask :v1 => 'fontexplorer-x-pro' do
-  version '5.0.1'
-  sha256 'e75369d862a186a75dcbb9d0f61a5f99f03bd1482de02f3e71ffaa29a0828b9c'
+cask 'fontexplorer-x-pro' do
+  version '5.0.2'
+  sha256 'ef86771fb2acf2eaa3c30b72d51594eda4ab2cd4c9a7454585184460d49b043a'
 
   url "http://fast.fontexplorerx.com/FontExplorerXPro#{version.delete('.')}.dmg"
   name 'FontExplorer X Pro'
@@ -12,8 +12,14 @@ cask :v1 => 'fontexplorer-x-pro' do
   app 'FontExplorer X Pro.app'
 
   zap :delete => [
-                  # todo: is this user-created content?
-                  # '~/FontExplorer X',
+                  '/Library/PrivilegedHelperTools/com.linotype.FontExplorerX.securityhelper',
+                  '/Library/LaunchDaemons/com.linotype.FontExplorerX.securityhelper.plist',
                   '~/Library/Application Support/Linotype/FontExplorer X',
+                  '~/Library/Application\ Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.linotype.fontexplorerx.sfl',
+                  '~/Library/Caches/com.linotype.FontExplorerX',
+                  '~/Library/Cookies/com.linotype.FontExplorerX.binarycookies',
+                  '~/Library/LaunchAgents/com.linotype.FontFolderProtector.plist',
+                  '~/Library/Preferences/com.linotype.FontExplorerX.plist',
+                  '~/Library/Saved\ Application\ State/com.linotype.FontExplorerX.savedState',
                  ]
 end

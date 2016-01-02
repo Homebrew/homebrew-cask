@@ -1,6 +1,6 @@
-cask :v1 => 'scratch' do
-  version '437'
-  sha256 '3615721aaffc5f94512887afd5a470488bd2d33c952137c1a89a3fa1830b91a5'
+cask 'scratch' do
+  version '441.2'
+  sha256 '46cb9b5806bea0d0b6fc111eabc5f24b18226f437643ff8173a57a394492bba0'
 
   url "https://scratch.mit.edu/scratchr2/static/sa/Scratch-#{version}.dmg"
   name 'Scratch'
@@ -12,7 +12,7 @@ cask :v1 => 'scratch' do
             :sudo   => true
 
   uninstall :script => {
-              :executable => '/Applications/Utilities/Adobe AIR Application Installer.app/Contents/MacOS/Adobe AIR Application Installer',
+              :executable => Hbc::Container::Air::INSTALLER_PATHNAME,
               :args => %w[-uninstall -silent /Applications/Scratch\ 2.app]
             }
 

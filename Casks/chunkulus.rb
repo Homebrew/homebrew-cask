@@ -1,4 +1,4 @@
-cask :v1 => 'chunkulus' do
+cask 'chunkulus' do
   version :latest
   sha256 :no_check
 

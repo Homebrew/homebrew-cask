@@ -1,4 +1,4 @@
-cask :v1 => 'xact' do
+cask 'xact' do
   version '2.36'
   sha256 '8b25b05bdcbee23f58866df3c69ea8d3d14236643a802316423c10c3e058e80f'
 

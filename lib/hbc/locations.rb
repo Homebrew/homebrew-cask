@@ -84,6 +84,22 @@ module Hbc::Locations
       @internet_plugindir = _internet_plugindir
     end
 
+    def audio_unit_plugindir
+      @audio_unit_plugindir ||= Pathname.new('~/Library/Audio/Plug-Ins/Components').expand_path
+    end
+
+    def audio_unit_plugindir=(_audio_unit_plugindir)
+      @audio_unit_plugindir = _audio_unit_plugindir
+    end
+
+    def vst_plugindir
+      @vst_plugindir ||= Pathname.new('~/Library/Audio/Plug-Ins/VST').expand_path
+    end
+
+    def vst_plugindir=(_vst_plugindir)
+      @vst_plugindir = _vst_plugindir
+    end
+
     def screen_saverdir
       @screen_saverdir ||= Pathname.new('~/Library/Screen Savers').expand_path
     end
@@ -98,6 +114,10 @@ module Hbc::Locations
 
     def default_tap=(_tap)
       @default_tap = _tap
+    end
+
+    def default_tappath
+      @default_tappath ||= homebrew_tapspath.join(default_tap)
     end
 
     def path(query)

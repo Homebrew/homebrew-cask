@@ -1,4 +1,4 @@
-cask :v1 => 'garmin-express' do
+cask 'garmin-express' do
   version :latest
   sha256 :no_check
 

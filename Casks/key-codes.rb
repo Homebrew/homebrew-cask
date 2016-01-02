@@ -1,12 +1,13 @@
-cask :v1 => 'key-codes' do
+cask 'key-codes' do
   version '2.0.1'
-  sha256 '47d61049953e8fcf881c0c6b9c7060fed2248750f23c26b71b51092384bd5a4a'
+  sha256 '1b7b4de0d15dfd483811b913821b722afab181cad031a5d0c1172e981a0dc6bd'
 
   url 'http://manytricks.com/download/keycodes'
-  appcast 'http://manytricks.com/keycodes/appcast.xml'
+  appcast 'https://manytricks.com/keycodes/appcast.xml',
+          :sha256 => '8d887901c2bfd31cfe644b0c2cce15b153decffc96199fd6f41080de5ae13f16'
   name 'Key Codes'
-  homepage 'http://manytricks.com/keycodes/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://manytricks.com/keycodes/'
+  license :gratis
 
   app 'Key Codes.app'
 end

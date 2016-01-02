@@ -1,4 +1,4 @@
-cask :v1 => 'ember' do
+cask 'ember' do
   version '1.8.3'
   sha256 'cbd61a207b87a4668907b187198c62bc0b89dfdc31896cb5cbefcf95e2e8f1d1'
 

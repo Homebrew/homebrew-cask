@@ -1,4 +1,4 @@
-cask :v1 => 'bfxr' do
+cask 'bfxr' do
   version :latest
   sha256 :no_check
 

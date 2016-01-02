@@ -1,4 +1,4 @@
-cask :v1 => 'mac2imgur' do
+cask 'mac2imgur' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'yacreader' do
+cask 'yacreader' do
   version '8.0.0'
   sha256 '6e6e2f857a3f1ad4fa19c57550677e5e46c63ffaea955e353a832e51461d3e80'
 

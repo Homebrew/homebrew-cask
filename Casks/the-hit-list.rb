@@ -1,12 +1,13 @@
-cask :v1 => 'the-hit-list' do
-  version :latest
-  sha256 :no_check
+cask 'the-hit-list' do
+  version '1.1.17'
+  sha256 '0a6bd16d26c19a27f2146cdba27fc5c8119da8c382643d285203b41fadaebe98'
 
-  url 'http://www.potionfactory.com/files/thehitlist/TheHitList.zip'
-  appcast 'http://www.potionfactory.com/appcast/thehitlist.php'
+  url 'http://distrib.karelia.com/downloads/TheHitList-302.zip'
+  appcast 'https://launch.karelia.com/appcast.php?product=9&appname=The+Hit+List',
+          :sha256 => 'd34151b1e3f683b4d20c74ea1aa19539c607eeb529a3d137e42a8f63525447c4'
   name 'The Hit List'
-  homepage 'http://www.potionfactory.com/thehitlist'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.karelia.com/products/the-hit-list/mac.html'
+  license :commercial
 
   app 'The Hit List.app'
 end

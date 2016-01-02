@@ -1,4 +1,4 @@
-cask :v1 => 'audio-hijack' do
+cask 'audio-hijack' do
   version :latest
   sha256 :no_check
 

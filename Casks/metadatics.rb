@@ -1,4 +1,4 @@
-cask :v1 => 'metadatics' do
+cask 'metadatics' do
   version :latest
   sha256 :no_check
 

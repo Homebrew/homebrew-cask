@@ -1,4 +1,4 @@
-cask :v1 => 'eve' do
+cask 'eve' do
   version :latest
   sha256 :no_check
 

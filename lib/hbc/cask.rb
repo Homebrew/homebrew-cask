@@ -14,16 +14,6 @@ class Hbc::Cask
     @token = self.class.token
   end
 
-  def caskroom_path
-    Hbc.caskroom.join(token)
-  end
-
-  # todo: move to staged.rb ?
-  def staged_path
-    cask_version = version ? version : :unknown
-    caskroom_path.join(cask_version.to_s)
-  end
-
   METADATA_SUBDIR = '.metadata'
 
   def metadata_master_container_path
@@ -90,7 +80,6 @@ class Hbc::Cask
        :appcast,
        :version,
        :license,
-       :tags,
        :sha256,
        :artifacts,
        :caveats,
@@ -99,6 +88,7 @@ class Hbc::Cask
        :container,
        :gpg,
        :accessibility_access,
+       :auto_updates
       ].each do |method|
         printable_method = method.to_s
         printable_method = "name" if printable_method == "full_name"

@@ -1,4 +1,4 @@
-cask :v1 => 'logmein-client' do
+cask 'logmein-client' do
   version :latest
   sha256 :no_check
 

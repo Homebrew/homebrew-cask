@@ -1,4 +1,4 @@
-cask :v1 => 'cmb-security-plugin' do
+cask 'cmb-security-plugin' do
   version :latest
   sha256 :no_check
 

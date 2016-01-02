@@ -1,12 +1,12 @@
-cask :v1 => 'libreoffice' do
+cask 'libreoffice' do
   if Hardware::CPU.is_32_bit? || MacOS.release < :mountain_lion
     version '4.3.7'
     sha256 '2964a952ab633426df402de2f128cf788354ac622b7c30b25209d185d17617ec'
     # documentfoundation.org is the official download host per the vendor homepage
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86/LibreOffice_#{version}_MacOS_x86.dmg"
   else
-    version '5.0.0'
-    sha256 '12dbb6f28a55521292eadfa31bc4e74d2bf4d1ab056dcc9077a07da43f5bc158'
+    version '5.0.4'
+    sha256 '36d3a99dde9fd5bb845f93a24c091a36c97ff1adedf878ed2188704f3dfeb2ae'
     # documentfoundation.org is the official download host per the vendor homepage
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
   end
@@ -18,4 +18,16 @@ cask :v1 => 'libreoffice' do
   license :mpl
 
   app 'LibreOffice.app'
+  binary 'LibreOffice.app/Contents/MacOS/gengal'
+  binary 'LibreOffice.app/Contents/MacOS/regmerge'
+  binary 'LibreOffice.app/Contents/MacOS/regview'
+  binary 'LibreOffice.app/Contents/MacOS/senddoc'
+  binary 'LibreOffice.app/Contents/MacOS/soffice'
+  binary 'LibreOffice.app/Contents/MacOS/ui-previewer'
+  binary 'LibreOffice.app/Contents/MacOS/uno'
+  binary 'LibreOffice.app/Contents/MacOS/unoinfo'
+  binary 'LibreOffice.app/Contents/MacOS/unopkg'
+  binary 'LibreOffice.app/Contents/MacOS/urelibs'
+  binary 'LibreOffice.app/Contents/MacOS/uri-encode'
+  binary 'LibreOffice.app/Contents/MacOS/xpdfimport'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'blast2go' do
+cask 'blast2go' do
   version '3.1'
   sha256 '7160b1973437474508a1522cce9bee74e5ddd8f109fc17ddca81e3b914e819d6'
 

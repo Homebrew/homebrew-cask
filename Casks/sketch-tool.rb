@@ -1,11 +1,11 @@
-cask :v1 => 'sketch-tool' do
+cask 'sketch-tool' do
   version :latest
   sha256 :no_check
 
   url 'http://sketchtool.bohemiancoding.com/sketchtool-latest.zip'
   name 'SketchTool'
   homepage 'https://bohemiancoding.com/sketch/tool/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   binary 'sketchtool/bin/sketchtool'
   binary 'sketchtool/bin/sketchmigrate'

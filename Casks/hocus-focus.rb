@@ -1,4 +1,4 @@
-cask :v1 => 'hocus-focus' do
+cask 'hocus-focus' do
   version '1.2'
   sha256 'ac3f26ed6f4149cfd7c115c8c2502b381d84fb5c61a64759852fd0db3029b5e0'
 

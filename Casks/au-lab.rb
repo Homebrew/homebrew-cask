@@ -1,4 +1,4 @@
-cask :v1 => 'au-lab' do
+cask 'au-lab' do
   version :latest
   sha256 :no_check
 

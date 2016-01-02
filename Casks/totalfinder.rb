@@ -1,6 +1,6 @@
-cask :v1 => 'totalfinder' do
-  version '1.6.27'
-  sha256 '0b0c5fe81aa2da7094a2b1d5d75e9d40069a00d085cae25a17cefb86a40f9738'
+cask 'totalfinder' do
+  version '1.7.10'
+  sha256 '18bc9083a556063a6650f7a18cfd5a763139383c89d8fef7356831e53812807e'
 
   url "http://downloads.binaryage.com/TotalFinder-#{version}.dmg"
   name 'TotalFinder'

@@ -4,7 +4,6 @@ require 'optparse'
 require 'shellwords'
 
 require 'hbc/cli/base'
-require 'hbc/cli/alfred'
 require 'hbc/cli/audit'
 require 'hbc/cli/cat'
 require 'hbc/cli/cleanup'
@@ -79,7 +78,6 @@ class Hbc::CLI
       command.run(*rest)
     elsif require? Hbc::Utils.which("brewcask-#{command}.rb").to_s
       # external command as Ruby library on PATH, Homebrew-style
-      exit 0
     elsif command.to_s.include?('/') and require? command.to_s
       # external command as Ruby library with literal path, useful
       # for development and troubleshooting
@@ -94,7 +92,6 @@ class Hbc::CLI
         klass.run(*rest)
       else
         # other Ruby libraries must do everything via "require"
-        exit 0
       end
     elsif Hbc::Utils.which "brewcask-#{command}"
       # arbitrary external executable on PATH, Homebrew-style
@@ -180,6 +177,12 @@ class Hbc::CLI
       opts.on("--internet_plugindir=MANDATORY") do |v|
         Hbc.internet_plugindir = Pathname(v).expand_path
       end
+      opts.on("--audio_unit_plugindir=MANDATORY") do |v|
+        Hbc.audio_unit_plugindir = Pathname(v).expand_path
+      end
+      opts.on("--vst_plugindir=MANDATORY") do |v|
+        Hbc.vst_plugindir = Pathname(v).expand_path
+      end
       opts.on("--screen_saverdir=MANDATORY") do |v|
        Hbc.screen_saverdir = Pathname(v).expand_path
       end
@@ -230,15 +233,13 @@ class Hbc::CLI
 
     def run(*args)
       if args.include?('--version') or @attempted_verb == '--version'
-        puts HBC_VERSION
+        puts Hbc.full_version
       else
         purpose
-        if @attempted_verb and @attempted_verb != "help"
-          puts "!! "
-          puts "!! no command verb: #{@attempted_verb}"
-          puts "!! \n\n"
-        end
         usage
+        unless @attempted_verb.to_s.strip.empty? || @attempted_verb == "help"
+          raise Hbc::CaskError.new("Unknown command: #{@attempted_verb}")
+        end
       end
     end
 

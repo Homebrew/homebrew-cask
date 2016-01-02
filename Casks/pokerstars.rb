@@ -1,4 +1,4 @@
-cask :v1 => 'pokerstars' do
+cask 'pokerstars' do
   version :latest
   sha256 :no_check
 
@@ -6,6 +6,8 @@ cask :v1 => 'pokerstars' do
   name 'PokerStars'
   homepage 'https://www.pokerstars.com/'
   license :freemium
+
+  auto_updates true
 
   app 'PokerStars.app'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'ringcentral' do
+cask 'ringcentral' do
   version :latest
   sha256 :no_check
 

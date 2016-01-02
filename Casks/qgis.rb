@@ -1,6 +1,6 @@
-cask :v1 => 'qgis' do
-  version '2.8.2-1'
-  sha256 '6a02d2dde377e66d0a05c6bfcff74ab16faec0bd5c2033bbf8cb64bad0b38189'
+cask 'qgis' do
+  version '2.12.0-1'
+  sha256 'b398f12904f7762ee74a1d9ddebd1fd44eef85007488320dcd4899aebefc6089'
 
   url "http://www.kyngchaos.com/files/software/qgis/QGIS-#{version}.dmg"
   name 'QGIS'
@@ -11,5 +11,11 @@ cask :v1 => 'qgis' do
   uninstall :pkgutil => 'org.qgis.qgis-*'
 
   depends_on :cask => 'gdal-framework'
-  depends_on :cask => 'matplotlib'
+  depends_on :formula => 'matplotlib'
+
+  caveats <<-EOS.undent
+    #{token} requires matplotlib in a specific location. Please run the following to finish install:
+
+      sudo ln -s /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python /Library/Python/2.7/site-packages/matplotlib-override
+  EOS
 end

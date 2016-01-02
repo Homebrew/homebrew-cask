@@ -1,4 +1,4 @@
-cask :v1 => 'sonarr' do
+cask 'sonarr' do
   version :latest
   sha256 :no_check
 
@@ -10,4 +10,10 @@ cask :v1 => 'sonarr' do
   app 'Sonarr.app'
 
   depends_on :cask => 'mono-mdk'
+
+  zap :delete => [
+                  '~/Library/Application Support/Sonarr',
+                  '~/.config/NzbDrone',
+                  '~/Library/Preferences/tv.sonarr.Sonarr.plist'
+                 ]
 end

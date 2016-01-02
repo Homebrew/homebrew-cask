@@ -1,4 +1,4 @@
-cask :v1 => 'biicode' do
+cask 'biicode' do
   version '3.3'
   sha256 'ada000955e41d6267f61305d9744c75769e087b1972f8ae6d2c25cdb38960ea5'
 

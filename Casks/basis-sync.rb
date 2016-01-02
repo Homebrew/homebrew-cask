@@ -1,4 +1,4 @@
-cask :v1 => 'basis-sync' do
+cask 'basis-sync' do
   version '1.7.3'
   sha256 '9d2434cbd8bf49a42df236bc9b4a4b999a28a2ce2e990237ac908199638328b5'
 

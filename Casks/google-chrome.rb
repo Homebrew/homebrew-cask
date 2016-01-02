@@ -1,4 +1,4 @@
-cask :v1 => 'google-chrome' do
+cask 'google-chrome' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,8 @@ cask :v1 => 'google-chrome' do
   name 'Google Chrome'
   homepage 'https://www.google.com/chrome/'
   license :gratis
-  tags :vendor => 'Google'
+
+  auto_updates true
 
   app 'Google Chrome.app'
 

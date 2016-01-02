@@ -1,4 +1,4 @@
-cask :v1 => 'synology-photo-station-uploader' do
+cask 'synology-photo-station-uploader' do
   version '1.3-056'
   sha256 '515c01378d6cb660788c03a93be2bd509d977024184e9adbdb8414e6ad5c6bb9'
 

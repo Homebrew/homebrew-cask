@@ -1,15 +1,16 @@
-cask :v1 => 'atom' do
-  version '1.0.7'
-  sha256 'f68412561bbd0d46e92a4af0748f5f6fa9f31744bcfb9547f6f66de3073f47bd'
+cask 'atom' do
+  version '1.3.2'
+  sha256 'cd5727afaa9047cfac49f706040e119e22badada1144ef4cd99a6073b2c93b5a'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"
-  appcast 'https://github.com/atom/atom/releases.atom'
-  name 'Atom'
+  appcast 'https://github.com/atom/atom/releases.atom',
+          :sha256 => '225f0b8392201baa49c2a32c322a1b3f7a5ca6f87338c25340922f9cf74b696f'
+  name 'Github Atom'
   homepage 'https://atom.io/'
   license :mit
-  tags :vendor => 'Github'
 
+  auto_updates true
   depends_on :macos => '>= :mountain_lion'
 
   app 'Atom.app'
@@ -28,6 +29,5 @@ cask :v1 => 'atom' do
                   '~/Library/Application Support/com.github.atom.ShipIt',
                   '~/Library/Caches/com.github.atom',
                   '~/Library/Preferences/com.github.atom.plist',
-                 ],
-      :rmdir  => '~/.atom/'
+                 ]
 end

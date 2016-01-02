@@ -1,4 +1,4 @@
-cask :v1 => 'gedit' do
+cask 'gedit' do
   version '3.2.6-3'
   sha256 '29847dfeff20518822ff012ef770a874c1f95670fa7f166bbb97a23995ac0686'
 

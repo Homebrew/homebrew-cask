@@ -1,4 +1,4 @@
-cask :v1 => 'speedlimit' do
+cask 'speedlimit' do
   version :latest
   sha256 :no_check
 

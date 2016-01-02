@@ -1,4 +1,4 @@
-cask :v1 => 'rawtherapee' do
+cask 'rawtherapee' do
 
   if MacOS.release <= :mavericks
     version '4.2.171'

@@ -1,4 +1,4 @@
-cask :v1 => 'sonic-visualiser' do
+cask 'sonic-visualiser' do
   version '2.4.1'
   sha256 '45edf5021376ed79e3a7a9a17745261f91362c05d90db17dc3179b1649c29332'
 
@@ -6,7 +6,7 @@ cask :v1 => 'sonic-visualiser' do
   url "https://code.soundsoftware.ac.uk/attachments/download/1186/Sonic%20Visualiser-#{version}.dmg"
   name 'Sonic Visualiser'
   homepage 'http://www.sonicvisualiser.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Sonic Visualiser.app'
 end

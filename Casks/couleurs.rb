@@ -1,4 +1,4 @@
-cask :v1 => 'couleurs' do
+cask 'couleurs' do
   version '1.1'
   sha256 'c05e5121e2d2cfdb6b4cac234b8e8bce4b0990209249d134b51e1d8ef63919ff'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'ax88772' do
+cask 'ax88772' do
   version '2.4.0_20141215'
   sha256 'b9b2162f19d4a563071ef1eaa92f0bd2b2fa224eba721122366025e8be5ce907'
 

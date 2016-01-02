@@ -1,10 +1,10 @@
-cask :v1 => 'td-toolbelt' do
+cask 'td-toolbelt' do
   version :latest
   sha256 :no_check
 
   url 'http://toolbelt.treasuredata.com/mac'
   name 'Treasure Data Toolbelt'
-  homepage 'http://toolbelt.treasuredata.com/'
+  homepage 'https://toolbelt.treasuredata.com/'
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :type => :naked

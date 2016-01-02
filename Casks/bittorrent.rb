@@ -1,10 +1,10 @@
-cask :v1 => 'bittorrent' do
+cask 'bittorrent' do
   version :latest
   sha256 :no_check
 
-  url 'http://download-new.utorrent.com/os/osx/track/stable/endpoint/btmac'
+  url 'https://download-new.utorrent.com/os/osx/track/stable/endpoint/btmac'
   name 'BitTorrent'
-  homepage 'http://www.bittorrent.com'
+  homepage 'https://www.bittorrent.com'
   license :gratis
 
   installer :manual => 'Bittorrent.app'

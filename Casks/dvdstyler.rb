@@ -1,4 +1,4 @@
-cask :v1 => 'dvdstyler' do
+cask 'dvdstyler' do
   version '2.9.2'
   sha256 '49d8f733a640b27fc07ce978dd57d8f3264f554e536ed6a9bc5a8bee4ea6a899'
 

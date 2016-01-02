@@ -1,4 +1,4 @@
-cask :v1 => 'wallpaper-clocks' do
+cask 'wallpaper-clocks' do
   version :latest
   sha256 :no_check
 

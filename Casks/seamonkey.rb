@@ -1,6 +1,6 @@
-cask :v1 => 'seamonkey' do
-  version '2.25'
-  sha256 '3217e3d1fb94376d01ca38cc926b1b23306579c96e96adfdd50f0f66fc71c5e8'
+cask 'seamonkey' do
+  version '2.39'
+  sha256 '43bc6ad087242055db6ae6a3f14ef83729f4b455d7a2e10f7935a9304d84dcf8'
 
   # mozilla.org is the official download host per the vendor homepage
   url "https://download.mozilla.org/?product=seamonkey-#{version}&os=osx&lang=en-US"

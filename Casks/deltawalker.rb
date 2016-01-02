@@ -1,4 +1,4 @@
-cask :v1 => 'deltawalker' do
+cask 'deltawalker' do
   version '2.1.2'
   sha256 '4ce4f47347df1c475fd631b52c246b1486aa92645fd6345acd8941d9f186afb0'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'dasher' do
+cask 'dasher' do
   version '2010-06-06'
   sha256 'e17ab0b328f2b456d756e4ab284234d9e398cc4e4a2144d38160d06c6eeaebd0'
 

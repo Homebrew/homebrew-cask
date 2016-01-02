@@ -1,12 +1,12 @@
-cask :v1 => 'virtualc64' do
+cask 'virtualc64' do
   # note: "64" is not a version number, but an intrinsic part of the product name
-  version '0.9.9.4'
-  sha256 'd5c1ed83a0ec81b45f8879920cbce41f851e593ba476de2cd29a267433a30f85'
+  version '1.4.1'
+  sha256 'bc63006146e7d7710e5da0dce24e1c4df893f0aa412e9b0ba850630357693431'
 
   url "http://www.dirkwhoffmann.de/virtualc64/VirtualC64_#{version}.zip"
   name 'Virtual C64'
   appcast 'http://dirkwhoffmann.de/virtualc64/VirtualC64Appcast.xml',
-          :sha256 => '1778a743b3ac853e07236243191d72876ab91f04a5d61088b0690ef205cb3e1b'
+          :sha256 => 'ee401a5d795bec2b3a1d687e19861b59b2f9fcb43e68e629ae7a4776c14a40a9'
   homepage 'http://www.dirkwhoffmann.de/virtualc64/'
   license :gpl
 

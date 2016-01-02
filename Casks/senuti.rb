@@ -1,4 +1,4 @@
-cask :v1 => 'senuti' do
+cask 'senuti' do
   version '1.3.3'
   sha256 '23bf22a7c468753ab71a6464d920f05223a093ec17bc9e3a7d3be8ea6913474f'
 

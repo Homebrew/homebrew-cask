@@ -1,4 +1,4 @@
-cask :v1 => 'trim-enabler' do
+cask 'trim-enabler' do
   if MacOS.release <= :snow_leopard
     version '2.2'
     sha256 '3d9a7ad184435c05c4d8d5bf74484dcd9ac0f6eeb6a7a78e22709ca1557ff108'

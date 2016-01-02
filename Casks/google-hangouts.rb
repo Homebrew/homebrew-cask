@@ -1,4 +1,4 @@
-cask :v1 => 'google-hangouts' do
+cask 'google-hangouts' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,6 @@ cask :v1 => 'google-hangouts' do
   name 'Google Hangouts'
   homepage 'https://www.google.com/tools/dlpage/hangoutplugin'
   license :gratis
-  tags :vendor => 'Google'
 
   pkg 'Google Voice and Video.pkg'
 

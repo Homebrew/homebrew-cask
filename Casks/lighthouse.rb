@@ -1,4 +1,4 @@
-cask :v1 => 'lighthouse' do
+cask 'lighthouse' do
   version :latest
   sha256 :no_check
 
@@ -7,7 +7,6 @@ cask :v1 => 'lighthouse' do
   name 'Vinumeris Lighthouse'
   homepage 'https://www.vinumeris.com/lighthouse'
   license :apache
-  tags :vendor => 'Vinumeris'
 
   app 'Lighthouse.app'
 end

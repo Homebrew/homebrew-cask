@@ -1,4 +1,4 @@
-cask :v1 => 'miro' do
+cask 'miro' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,7 @@ cask :v1 => 'miro' do
   url 'http://ftp.osuosl.org/pub/pculture.org/miro/osx/Miro.dmg'
   name 'Miro'
   homepage 'http://www.getmiro.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Miro.app'
 end

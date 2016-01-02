@@ -1,4 +1,4 @@
-cask :v1 => 'yabumi' do
+cask 'yabumi' do
   version :latest
   sha256 :no_check
 

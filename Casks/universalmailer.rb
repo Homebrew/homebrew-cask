@@ -1,4 +1,4 @@
-cask :v1 => 'universalmailer' do
+cask 'universalmailer' do
   version '2.1.6'
   sha256 '873f2606f1bf4168775ad48213638d2ede3dee4d8925c84049a42e31a38a9137'
 

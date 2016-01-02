@@ -1,4 +1,4 @@
-cask :v1 => 'satellite-eyes' do
+cask 'satellite-eyes' do
   version '1.4.1'
   sha256 '06778b404bb928c81a4861b511b12293762b4f75918fec3ad5967b7f0d29f165'
 

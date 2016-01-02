@@ -5,7 +5,7 @@ describe Hbc::DSL do
     test_cask = Hbc.load('basic-cask')
     test_cask.url.to_s.must_equal 'http://example.com/TestCask.dmg'
     test_cask.homepage.must_equal 'http://example.com/'
-    test_cask.version.must_equal '1.2.3'
+    test_cask.version.to_s.must_equal '1.2.3'
   end
 
   describe "when a Cask includes an unknown method" do
@@ -27,9 +27,9 @@ describe Hbc::DSL do
         .*
         Unexpected method 'future_feature' called on Cask unexpected-method-cask\\.
         .*
-        brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+        brew update; brew cleanup; brew cask cleanup
         .*
-        https://github.com/caskroom/homebrew-cask/issues
+        https://github.com/caskroom/homebrew-cask#reporting-bugs
       EOREGEX
 
       TestHelper.must_output(self, attempt_unknown_method, expected)
@@ -60,12 +60,11 @@ describe Hbc::DSL do
       err.message.must_include 'does not match file name'
     end
 
-    it "requires a valid minimum DSL version in the header" do
-      err = lambda {
-        invalid_cask = Hbc.load('invalid/invalid-header-version')
-      }.must_raise(Hbc::CaskInvalidError)
-      err.message.must_include 'Bad header line:'
-      err.message.must_include 'is less than required minimum version'
+    it "does not require a DSL version in the header" do
+      test_cask = Hbc.load('no-dsl-version')
+      test_cask.url.to_s.must_equal 'http://example.com/TestCask.dmg'
+      test_cask.homepage.must_equal 'http://example.com/'
+      test_cask.version.to_s.must_equal '1.2.3'
     end
   end
 
@@ -216,12 +215,6 @@ describe Hbc::DSL do
     it "refuses to load invalid appcast URLs" do
       err = lambda {
         invalid_cask = Hbc.load('invalid/invalid-appcast-url')
-      }.must_raise(Hbc::CaskInvalidError)
-    end
-
-    it "refuses to load if appcast :format is invalid" do
-      err = lambda {
-        invalid_cask = Hbc.load('invalid/invalid-appcast-format')
       }.must_raise(Hbc::CaskInvalidError)
     end
   end
@@ -408,26 +401,6 @@ describe Hbc::DSL do
     end
   end
 
-  describe "tags stanza" do
-    it "allows tags stanza to be specified" do
-      cask = Hbc.load('with-tags')
-      cask.tags.to_s.must_match %r{\S}
-    end
-
-    it "prevents specifying tags multiple times" do
-      err = lambda {
-        invalid_cask = Hbc.load('invalid/invalid-tags-multiple')
-      }.must_raise(Hbc::CaskInvalidError)
-      err.message.must_include "'tags' stanza may only appear once"
-    end
-
-    it "refuses to load if tags key is invalid" do
-      err = lambda {
-        invalid_cask = Hbc.load('invalid/invalid-tags-key')
-      }.must_raise(Hbc::CaskInvalidError)
-    end
-  end
-
   describe "stage_only stanza" do
     it "allows stage_only stanza to be specified" do
       cask = Hbc.load('stage-only')
@@ -439,6 +412,13 @@ describe Hbc::DSL do
         invalid_cask = Hbc.load('invalid/invalid-stage-only-conflict')
       }.must_raise(Hbc::CaskInvalidError)
       err.message.must_include "'stage_only' must be the only activatable artifact"
+    end
+  end
+
+  describe "auto_updates stanza" do
+    it "allows auto_updates stanza to be specified" do
+      cask = Hbc.load('auto-updates')
+      cask.auto_updates.must_equal true
     end
   end
 end

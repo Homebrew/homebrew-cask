@@ -1,10 +1,10 @@
-cask :v1 => 'skim' do
-  version '1.4.12'
-  sha256 '4984de6749589cda6a5c9d28a2a3541ba58407b7758afe3bffdbb43900831ba2'
+cask 'skim' do
+  version '1.4.16'
+  sha256 '9586083eae00131bf930a9e31da9b8be13f9563249d5ecb7a3ef147c0961d526'
 
   url "http://downloads.sourceforge.net/project/skim-app/Skim/Skim-#{version}/Skim-#{version}.dmg"
   appcast 'http://skim-app.sourceforge.net/skim.xml',
-          :sha256 => '4aa953c1e52056552bcc8fa1609fcd80fe83fac66861de456760a5f7c8fe6f43'
+          :sha256 => '9cc2f44deaa4cbdc53665595a059de90428b3f558e91c5cc599d06e577af047c'
   name 'Skim'
   homepage 'http://skim-app.sourceforge.net/'
   license :bsd

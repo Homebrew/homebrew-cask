@@ -1,4 +1,4 @@
-cask :v1 => 'namecoin' do
+cask 'namecoin' do
   version '0.3.80-a00c33d'
   sha256 '5e2432e384b46615d34c00fbe2bcb0a9cbc4f1cc1a27cd72fbffceebcac7eb95'
 

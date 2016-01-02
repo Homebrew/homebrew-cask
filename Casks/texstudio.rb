@@ -1,8 +1,8 @@
-cask :v1 => 'texstudio' do
-  version '2.9.4'
-  sha256 '1ce348f00310c4091d27b292081186626f1d186a4f529f1e2685ad2e03e7906c'
+cask 'texstudio' do
+  version '2.10.4'
+  sha256 '2881fa4d44e8cf92d01a7dbc5c314ff059f00f610ea1144a70b4abdcbee61d1b'
 
-  url "http://downloads.sourceforge.net/sourceforge/texstudio/texstudio_#{version}_osx_qt5.zip"
+  url "http://downloads.sourceforge.net/sourceforge/texstudio/texstudio-#{version}-osx-qt5.5.1.zip"
   name 'TeXstudio'
   homepage 'http://texstudio.sourceforge.net/'
   license :gpl

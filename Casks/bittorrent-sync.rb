@@ -1,4 +1,4 @@
-cask :v1 => 'bittorrent-sync' do
+cask 'bittorrent-sync' do
   version :latest
   sha256 :no_check
 

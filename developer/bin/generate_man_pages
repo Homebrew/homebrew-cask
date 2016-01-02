@@ -50,6 +50,6 @@ if ! /usr/bin/which ronn >/dev/null 2>&1; then
     die "ERROR: The 'ronn' gem must be installed"
 fi
 
-ronn --roff --pipe --organization='Homebrew-cask' --manual='brew-cask' doc/src/brew-cask.1.md > doc/man/brew-cask.1
+ronn --roff --pipe --organization='Homebrew-cask' --manual='brew-cask' doc/src/brew-cask.1.md > man/man1/brew-cask.1
 
 #

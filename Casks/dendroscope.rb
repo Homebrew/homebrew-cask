@@ -1,4 +1,4 @@
-cask :v1 => 'dendroscope' do
+cask 'dendroscope' do
   version '3.3.2'
   sha256 '21eccfc97aba6400ecb9d81f1bc02a1f8fc9c4cd07e6c09b5f310d414b00c7e2'
 

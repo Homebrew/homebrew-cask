@@ -1,14 +1,25 @@
-cask :v1 => 'imazing' do
-  version '1.2.2-1438365180'
-  sha256 '737d4e25df54169c890b712968a4aa8ec3f665199e05f9320af444e458b2ad2c'
+cask 'imazing' do
+  version '1.3.8-1447430071'
+  sha256 'a78d45218cde01845c20087a68a77153a4746fed2fe9a6b35061ddc227a960f8'
 
   # devmate.com is the official download host per the vendor homepage
-  url "https://dl.devmate.com/com.DigiDNA.iMazingMac/#{version.sub(%r{-.*},'')}/#{version.sub(%r{.*?-},'')}/iMazingforMac-#{version.sub(%r{-.*},'')}.dmg"
+  url "https://dl.devmate.com/com.DigiDNA.iMazingMac/#{version.sub(%r{-.*},'')}/#{version.sub(%r{.*-},'')}/iMazingforMac-#{version.sub(%r{-.*},'')}.dmg"
   name 'iMazing'
-  appcast 'http://updates.devmate.com/com.DigiDNA.iMazingMac.xml',
-          :sha256 => 'b5ff3d4d493f31ce59b7f6803dd7407e84128a0ed71681130ba90e86cd2e93e3'
+  appcast 'https://updates.devmate.com/com.DigiDNA.iMazingMac.xml',
+          :sha256 => '57e3299100e16ac2f4f828d652c5e5a104d09119fb299ad39007dec5275e07e8'
   homepage 'https://imazing.com/'
   license :commercial
 
   app 'iMazing.app'
+
+  depends_on :macos => '>= :lion'
+
+  zap :delete => [
+        '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.digidna.imazingmac.sfl',
+        '~/Library/Application Support/iMazing',
+        '~/Library/Caches/com.DigiDNA.iMazingMac',
+        '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.DigiDNA.iMazingMac',
+        '~/Library/Caches/iMazing',
+        '~/Library/Preferences/com.DigiDNA.iMazingMac.plist'
+      ]
 end

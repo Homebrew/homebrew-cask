@@ -1,4 +1,4 @@
-cask :v1 => 'profilemanager' do
+cask 'profilemanager' do
   version '1.0'
   sha256 'a46295851063d8a0630cace6720813e571e86a66734a8765f9706bab939b3f48'
 

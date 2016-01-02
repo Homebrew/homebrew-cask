@@ -1,4 +1,4 @@
-cask :v1 => 'actotracker' do
+cask 'actotracker' do
   version :latest
   sha256 :no_check
 

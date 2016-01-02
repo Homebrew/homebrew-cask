@@ -1,4 +1,4 @@
-cask :v1 => 'lifeslice' do
+cask 'lifeslice' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'unicodechecker' do
+cask 'unicodechecker' do
   version '1.17'
   sha256 'cb474087e25c94deccac85ae2f973b70969a0241ee029cb0f198554b1997ed9c'
 

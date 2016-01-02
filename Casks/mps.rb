@@ -1,4 +1,4 @@
-cask :v1 => 'mps' do
+cask 'mps' do
   version '3.2.3'
   sha256 'cf6e842fbfe28035f2ab6fc4c39e97d82609ca72d5d6ffc486026772b5ddf35e'
 

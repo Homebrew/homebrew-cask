@@ -1,13 +1,11 @@
-cask :v1 => 'gyazo' do
-  version '2.1'
-  sha256 '88491cc2a9d481fdb99b822ca49560427ed11578b304203c4504d83fc2562061'
+cask 'gyazo' do
+  version '3.1.2'
+  sha256 '08c9b90691267b0d2894d5ee0c37ce7eecb529526d59230e6430ab8c2721aa32'
 
-  url "https://files.gyazo.com/setup/Gyazo_#{version}.dmg"
-  name 'Gyazo'
-  name 'Gyazo GIF'
+  url "https://files.gyazo.com/setup/Gyazo-#{version}.dmg"
+  name 'Nota Gyazo GIF'
   homepage 'https://gyazo.com/'
   license :other
-  tags :vendor => 'Nota'
 
   zap :delete => [
     '~/Library/Caches/com.gyazo.gif',

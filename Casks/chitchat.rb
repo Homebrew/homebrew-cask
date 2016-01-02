@@ -1,9 +1,10 @@
-cask :v1 => 'chitchat' do
-  version '1.2.0'
-  sha256 '0e821745282fac10ea235087ad0e12971a5ffb4a5d879d8e0de9642337df373f'
+cask 'chitchat' do
+  version '1.5'
+  sha256 'dbcfe1698d6d4cd9239480f757e821f7a784f7ac89a0bd26b32a0b9014999db0'
 
-  url "https://github.com/stonesam92/ChitCHat/releases/download/v#{version}/ChitChat.zip"
-  appcast 'https://github.com/stonesam92/ChitChat/releases.atom'
+  url "https://github.com/stonesam92/ChitChat/releases/download/v#{version}/ChitChat.zip"
+  appcast 'https://github.com/stonesam92/ChitChat/releases.atom',
+          :sha256 => '5aab4cfa3ff23c6b9d0706df5deb9cf0c251a272555c57e3b35cdaeb2ba8796e'
   name 'ChitChat'
   homepage 'https://github.com/stonesam92/ChitChat'
   license :oss

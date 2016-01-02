@@ -1,4 +1,4 @@
-cask :v1 => 'photoninja' do
+cask 'photoninja' do
   version '1.2.4RC'
   sha256 '6bb3d42e319f318db9232478a043f59adfc73033234cfe38cea90c11bec6d1a9'
 
@@ -6,7 +6,7 @@ cask :v1 => 'photoninja' do
   url "https://picturecode.cachefly.net/photoninja/downloads/Install_PhotoNinja_#{version}.dmg"
   name 'Photo Ninja'
   homepage 'http://www.picturecode.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'PhotoNinja.app'
 end

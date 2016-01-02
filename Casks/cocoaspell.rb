@@ -1,4 +1,4 @@
-cask :v1 => 'cocoaspell' do
+cask 'cocoaspell' do
   version '2.1'
   sha256 '06d6cd7f2b04c47f553c5a3a33ebe6bc5651457521cbe7e3ead84a6cb218053c'
 
@@ -6,7 +6,7 @@ cask :v1 => 'cocoaspell' do
   url "http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg"
   name 'cocoAspell'
   homepage 'http://cocoaspell.leuski.net/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   pkg 'cocoAspell.pkg'
 
@@ -18,10 +18,7 @@ cask :v1 => 'cocoaspell' do
   zap :delete => [
                  '~/.aspell.conf',
                  '~/.aspell.en.prepl',
-                 # Debatable. The Pws holds user-created content, though typically
-                 # created through the application, and the user is not likely aware
-                 # of this particular file.
-                 # '~/.aspell.en.pws',
+                 '~/.aspell.en.pws',
                 ]
 
   caveats <<-EOS.undent

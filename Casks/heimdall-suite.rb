@@ -1,4 +1,4 @@
-cask :v1 => 'heimdall-suite' do
+cask 'heimdall-suite' do
   version '1.4.0'
   sha256 '4b283fc7bc331f8ec84031c939ef9d2aa71bb8fe6be6d3434dd268d76f7c0e60'
 

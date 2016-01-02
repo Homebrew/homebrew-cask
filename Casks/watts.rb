@@ -1,4 +1,4 @@
-cask :v1 => 'watts' do
+cask 'watts' do
   version '1.3.3'
   sha256 '706802ac56b523086d405cc56c5101f93b5ae886f6522775f66e9c6969b98331'
 

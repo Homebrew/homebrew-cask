@@ -1,12 +1,11 @@
-cask :v1 => 'pepper-flash' do
-  version '18.0.0.232'
-  sha256 '0500b116c56d37c9f4467ba74524f66df1ada5bab9e1091af9ee9a252d3936ba'
+cask 'pepper-flash' do
+  version '20.0.0.228'
+  sha256 'c94600c9b85f5e96f21580ac8aaa4be2aa8511c18379d1cb488a3d813bcbcce1'
 
   url "https://admdownload.adobe.com/bin/live/AdobeFlashPlayer_#{version.to_i}ppau_a_install.dmg"
-  name 'Pepper Flash Player'
+  name 'Adobe Pepper Flash Player'
   homepage 'https://get.adobe.com/flashplayer/otherversions'
   license :gratis
-  tags :vendor => 'Adobe'
 
   installer :manual => 'Install Adobe Flash Player.app'
 

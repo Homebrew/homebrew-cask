@@ -1,20 +1,23 @@
-cask :v1 => 'alfred' do
-  version '2.7.1_387'
-  sha256 'a3738d0513d736918a6d71535ef3d85dd184af267c05698e49ac4c6b48f38e17'
+cask 'alfred' do
+  version '2.8.1_425'
+  sha256 'ed112b6c72701b4b58e3a431d49e4b5139940ed6438ed3fd413f2c9eac693a6b'
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
-  homepage 'http://www.alfredapp.com/'
+  homepage 'https://www.alfredapp.com/'
   license :freemium
 
+  auto_updates true
+  accessibility_access true
+
   app 'Alfred 2.app'
-  app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 
   postflight do
     suppress_move_to_applications :key => 'suppressMoveToApplications'
   end
 
-  uninstall :quit => 'com.runningwithcrayons.Alfred-2'
+  uninstall :quit => 'com.runningwithcrayons.Alfred-2',
+            :login_item => 'Alfred 2'
 
   zap :delete => [
                   '~/Library/Application Support/Alfred 2',
