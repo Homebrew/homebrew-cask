@@ -1,5 +1,4 @@
 cask 'r' do
-
   if MacOS.release < :mavericks
     version '3.2.1'
     sha256 '88b9a20af00a916f3902ccac83098643b95a2801eb4775d38130b26871323a3f'

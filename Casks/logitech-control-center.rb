@@ -1,5 +1,4 @@
 cask 'logitech-control-center' do
-
   if MacOS.release <= :leopard
     version '3.5.1.23'
     sha256 'b0b944edcb7549ff94d150d7caf72fb662fe825e3c829642c242180f4478d1ca'

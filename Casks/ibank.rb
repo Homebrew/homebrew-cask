@@ -1,5 +1,4 @@
 cask 'ibank' do
-
   if MacOS.release <= :leopard
     version '3.5.7'
     sha256 '9f02f1465e1d3539246298ab165953d13c2cfb800814c5093e239c72ef1817b6'

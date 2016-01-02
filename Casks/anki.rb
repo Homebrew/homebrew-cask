@@ -1,5 +1,4 @@
 cask 'anki' do
-
   if MacOS.release <= :snow_leopard
     version '2.0.33.qt47'
     sha256 '85a49099b37160c12b1ceb18d4728e99d87ed7d0e6ee978f237794a14b3b53d6'
