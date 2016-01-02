@@ -42,5 +42,6 @@ Hbc.default_tap = project_root.join('spec', 'support')
 Hbc.caskroom = Hbc.homebrew_prefix.join('TestCaskroom')
 
 RSpec.configure do |config|
+  config.order = :random
   config.include ShutupHelper
 end
