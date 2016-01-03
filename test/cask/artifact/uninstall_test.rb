@@ -251,11 +251,31 @@ describe Hbc::Artifact::Uninstall do
     end
 
     describe 'when using script' do
-      # todo
+      let(:cask) { Hbc.load('with-uninstall-script') }
+      let(:script_pathname) { cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool') }
+
+      it 'can uninstall' do
+        Hbc::FakeSystemCommand.expects_command(%w[/bin/chmod +x --] + [script_pathname])
+
+        Hbc::FakeSystemCommand.expects_command(
+          sudo(cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool'), '--please'))
+
+        subject
+      end
     end
 
     describe 'when using early_script' do
-      # todo
+      let(:cask) { Hbc.load('with-uninstall-early-script') }
+      let(:script_pathname) { cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool') }
+
+      it 'can uninstall' do
+        Hbc::FakeSystemCommand.expects_command(%w[/bin/chmod +x --] + [script_pathname])
+
+        Hbc::FakeSystemCommand.expects_command(
+          sudo(cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool'), '--please'))
+
+        subject
+      end
     end
 
     describe 'when using pkgutil, launchutil, and kext' do
