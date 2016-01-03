@@ -235,7 +235,18 @@ describe Hbc::Artifact::Uninstall do
     end
 
     describe 'when using rmdir' do
-      # todo
+      let(:cask) { Hbc.load('with-uninstall-rmdir') }
+      let(:dir_pathname) { Pathname(TestHelper.local_binary_path('empty_directory')) }
+
+      it 'can uninstall' do
+        Hbc::FakeSystemCommand.expects_command(
+          sudo(%w[/bin/rm -f --], dir_pathname.join('.DS_Store')))
+
+        Hbc::FakeSystemCommand.expects_command(
+          sudo(%w[/bin/rmdir --], dir_pathname))
+
+        subject
+      end
     end
 
     describe 'when using script' do
