@@ -8,11 +8,11 @@ cask 'inkscape' do
   homepage 'https://inkscape.org/'
   license :gpl
 
-  app 'Inkscape.app'
+  depends_on :x11 => true
+
   # NOTE: running inkscape on the command line requires absolute paths to files
+  app 'Inkscape.app'
   binary 'Inkscape.app/Contents/Resources/bin/inkscape'
 
   zap :delete => '~/.inkscape-etc'
-
-  depends_on :x11 => true
 end
