@@ -7,7 +7,7 @@ cask 'ricoh-driver-aficio-sp-c240dn' do
   homepage 'http://support.ricoh.com/bb/html/dr_ut_e/ra/model/spc240/spc240en.htm'
   license :closed
 
-  pkg  'Ricoh Aficio SP C240DN.pkg'
+  pkg 'Ricoh Aficio SP C240DN.pkg'
 
   uninstall :pkgutil => 'printer.RICOH Aficio SP C240DN.com'
 end
