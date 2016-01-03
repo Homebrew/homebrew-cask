@@ -1,6 +1,6 @@
 cask 'navicat-for-sqlite' do
-  version '11.2.5'
-  sha256 'acbc76dbfebe476de97780e061b8c10dd96b634fbe0410922035391082268eac'
+  version '11.2.6'
+  sha256 '62367f5d08f802725216542f6d2482a5635cbefe7c2ca843059525d7077445d0'
 
   url "http://download.navicat.com/download/navicat#{version.sub(%r{^(\d+)\.(\d+).*}, '\1\2')}_sqlite_en.dmg"
   name 'Navicat for SQLite'
