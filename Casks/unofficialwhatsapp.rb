@@ -12,8 +12,8 @@ cask 'unofficialwhatsapp' do
   app 'UnofficialWhatsApp.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.aluxian.whatsappfordesktop.plist',
-                  '~/Library/Application Support/UnofficialWhatsApp/',
-                  '~/Library/Saved Application State/com.aluxian.whatsappfordesktop.savedState/'
+                   '~/Library/Preferences/com.aluxian.whatsappfordesktop.plist',
+                   '~/Library/Application Support/UnofficialWhatsApp/',
+                   '~/Library/Saved Application State/com.aluxian.whatsappfordesktop.savedState/',
                  ]
 end
