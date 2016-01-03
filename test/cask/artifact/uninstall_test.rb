@@ -39,6 +39,7 @@ describe Hbc::Artifact::Uninstall do
 
       Hbc::FakeSystemCommand.expects_command(['/usr/bin/osascript', '-e', 'tell application "System Events" to delete every login item whose name is "Fancy"'])
 
+      Hbc::FakeSystemCommand.expects_command(['/bin/chmod', '+x', '--', cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool')])
       Hbc::FakeSystemCommand.expects_command(sudo([cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool'), '--please']))
       Hbc::FakeSystemCommand.expects_command(sudo(['/bin/rm', '-rf', '--', Pathname.new('/permissible/absolute/path'), Pathname.new('~/permissible/path/with/tilde').expand_path]))
       Hbc::FakeSystemCommand.expects_command(sudo(['/bin/rm', '-f', '--', Pathname.new(TestHelper.local_binary_path('empty_directory')).join('.DS_Store')]))
