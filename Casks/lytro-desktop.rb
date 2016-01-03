@@ -5,7 +5,7 @@ cask 'lytro-desktop' do
   # amazonaws.com is the official download host per the appcast feed
   url "https://s3.amazonaws.com/lytro-distro/lytro-#{version.sub(%r{.*-},'')}.dmg"
   appcast 'https://pictures.lytro.com/support/software_update',
-    :sha256 => 'a24271bb26982429e8e42ff2f3e1ab3d1690192cc2acc2ce36346ed4302e5904'
+          :sha256 => 'a24271bb26982429e8e42ff2f3e1ab3d1690192cc2acc2ce36346ed4302e5904'
   name 'Lytro Desktop'
   homepage 'https://www.lytro.com/'
   license :gratis

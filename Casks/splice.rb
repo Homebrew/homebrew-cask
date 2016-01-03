@@ -11,7 +11,7 @@ cask 'splice' do
   license :gratis
 
   installer :script => 'Splice Installer.app/Contents/MacOS/Splice Installer',
-            :args => [ '-q' ],
+            :args => ['-q'],
             :sudo => false
 
   uninstall :quit => 'com.splice.Splice',

@@ -8,7 +8,7 @@ cask 'blast2go' do
   license :freemium
 
   installer :script => 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
-            :args => [ '-q' ]
+            :args => ['-q']
 
   caveats <<-EOS.undent
     #{token} requires Java 6+, you can install the latest Java using

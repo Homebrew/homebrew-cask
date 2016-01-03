@@ -8,12 +8,12 @@ cask 'thinkorswim' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer :script => 'thinkorswim Installer.app/Contents/MacOS/JavaApplicationStub',
-            :args => [ '-q' ],
+            :args => ['-q'],
             :sudo => false
 
   uninstall :script => {
               :executable => '/Applications/thinkorswim/thinkorswim Uninstaller.app/Contents/MacOS/JavaApplicationStub',
-              :args => [ '-q' ],
+              :args => ['-q'],
               :sudo => false
             }
 end

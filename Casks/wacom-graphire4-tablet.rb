@@ -15,5 +15,5 @@ cask 'wacom-graphire4-tablet' do
                       'com.wacom.PenTabletDriver',
                       'com.wacom.ConsumerTouchDriver'
                      ],
-           :pkgutil => 'com.wacom.installpentablet'
+            :pkgutil => 'com.wacom.installpentablet'
 end

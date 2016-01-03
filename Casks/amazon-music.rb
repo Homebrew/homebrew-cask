@@ -8,7 +8,7 @@ cask 'amazon-music' do
   license :gratis
 
   installer :script => 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
-            :args => [ '--unattendedmodeui', 'none' ],
+            :args => ['--unattendedmodeui', 'none'],
             :sudo => true
 
   uninstall :quit => [

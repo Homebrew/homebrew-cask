@@ -14,9 +14,9 @@ cask 'switchresx' do
                         'fr.madrau.switchresx.daemon',  # note, daemon does not :quit cleanly
                        ],
             :signal => [
-                        [ 'INT',  'fr.madrau.switchresx.daemon' ],
-                        [ 'KILL', 'fr.madrau.switchresx.daemon' ],
-                      ],
+                        ['INT',  'fr.madrau.switchresx.daemon'],
+                        ['KILL', 'fr.madrau.switchresx.daemon'],
+                       ],
             :delete => [
                         '/Library/ScriptingAdditions/SwitchResX Extensions.osax',
                         '/Library/ScriptingAdditions/SwitchResX Menu.osax',

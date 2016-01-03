@@ -1,5 +1,4 @@
 cask 'vitalsource-bookshelf' do
-
   if MacOS.release <= :lion
     version '6.5.2'
     sha256 'bf5873bb39ff76421a55c9ab769007bb1af64b21dabf6630a4087bbc29c27d55'

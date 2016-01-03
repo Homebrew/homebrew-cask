@@ -1,5 +1,4 @@
 cask 'coconutbattery' do
-
   if MacOS.release <= :tiger
     version '2.6.6'
     sha256 '8d235b237e42754ceda26af2babc160fd23f890d0fe6d7780b86a8e9c6effe42'

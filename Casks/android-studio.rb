@@ -21,5 +21,5 @@ cask 'android-studio' do
     '~/Library/Logs/AndroidStudio*',
     '~/Library/Caches/AndroidStudio*',
   ],
-  :rmdir => '~/AndroidStudioProjects'
+      :rmdir => '~/AndroidStudioProjects'
 end

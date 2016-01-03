@@ -1,5 +1,4 @@
 cask 'yasu' do
-
   if MacOS.release <= :snow_leopard
     version '2.8.2'
     sha256 '427672a45b8315c2f38d968ea5e0c35c21b91091a1fe0e750fcd2b0078644336'

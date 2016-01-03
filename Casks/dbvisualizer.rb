@@ -13,7 +13,7 @@ cask 'dbvisualizer' do
 
   app 'DbVisualizer.app'
 
-  uninstall :signal => [[ 'TERM', 'com.dbvis.DbVisualizer' ]]
+  uninstall :signal => ['TERM', 'com.dbvis.DbVisualizer']
   zap :delete => '~/.dbvis'
 
   caveats <<-EOS.undent
