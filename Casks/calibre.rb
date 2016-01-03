@@ -37,8 +37,8 @@ cask 'calibre' do
   binary 'calibre.app/Contents/MacOS/web2disk'
 
   zap :delete => [
-                  '~/Library/Preferences/net.kovidgoyal.calibre.plist',
-                  '~/Library/Preferences/calibre',
-                  '~/Library/Caches/calibre',
+                   '~/Library/Preferences/net.kovidgoyal.calibre.plist',
+                   '~/Library/Preferences/calibre',
+                   '~/Library/Caches/calibre',
                  ]
 end
