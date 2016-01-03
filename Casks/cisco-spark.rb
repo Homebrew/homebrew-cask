@@ -12,11 +12,12 @@ cask 'cisco-spark' do
   app 'Spark.app'
 
   uninstall :signal => [
-                        ['TERM', 'Cisco-Systems.Spark']
+                         ['TERM', 'Cisco-Systems.Spark']
                        ]
+
   zap :delete => [
                    '~/Library/Preferences/Cisco-Systems.Spark.plist',
                    '~/Library/Caches/Cisco-Systems.Spark',
                    '~/Library/Logs/Spark',
-                  ]
+                 ]
 end
