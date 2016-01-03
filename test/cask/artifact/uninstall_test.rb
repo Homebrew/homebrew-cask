@@ -180,15 +180,26 @@ describe Hbc::Artifact::Uninstall do
       end
     end
 
+    describe 'when using kext' do
+      let(:cask) { Hbc.load('with-uninstall-kext') }
+      let(:kext_id) { 'my.fancy.package.kernelextension' }
+
+      it 'can uninstall' do
+        Hbc::FakeSystemCommand.stubs_command(
+          sudo(%W[/usr/sbin/kextstat -l -b #{kext_id}]), 'loaded')
+
+        Hbc::FakeSystemCommand.expects_command(
+          sudo(%W[/sbin/kextunload -b #{kext_id}]))
+
+        subject
+      end
+    end
+
     describe 'when using quit' do
       # todo
     end
 
     describe 'when using signal' do
-      # todo
-    end
-
-    describe 'when using kext' do
       # todo
     end
 
