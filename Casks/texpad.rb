@@ -10,7 +10,7 @@ cask 'texpad' do
     # unexpected behaviour or failures can occur.
   end
 
-  url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.gsub('.','_')}.zip"
+  url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.gsub('.', '_')}.zip"
   appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml',
           :sha256 => 'd16b1bb80a8c38d6b82b26eb629cad0deaa15882a08db5d17b3484d63cd3e451'
   name 'Texpad'
