@@ -14,9 +14,9 @@ cask 'fog' do
   uninstall :quit => 'com.vitorgalvao.fog'
 
   zap :delete => [
-                  '~/Library/Application Support/Fog',
-                  '~/Library/Caches/Fog',
-                  '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vitorgalvao.fog.sfl',
-                  '~/Library/Saved Application State/com.vitorgalvao.fog.savedState'
+                   '~/Library/Application Support/Fog',
+                   '~/Library/Caches/Fog',
+                   '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vitorgalvao.fog.sfl',
+                   '~/Library/Saved Application State/com.vitorgalvao.fog.savedState',
                  ]
 end
