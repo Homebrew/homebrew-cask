@@ -8,7 +8,7 @@ cask 'enpass' do
   homepage 'https://enpass.io'
   license :gratis
 
-  app 'Enpass.app'
-
   depends_on :macos => '>= :mountain_lion'
+
+  app 'Enpass.app'
 end
