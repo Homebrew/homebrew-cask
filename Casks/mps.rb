@@ -2,17 +2,17 @@ cask 'mps' do
   version '3.2.3'
   sha256 'cf6e842fbfe28035f2ab6fc4c39e97d82609ca72d5d6ffc486026772b5ddf35e'
 
-  url "http://download-cf.jetbrains.com/mps/#{version.tr('.','')[0,2]}/MPS-#{version}-macos.dmg"
+  url "http://download-cf.jetbrains.com/mps/#{version.tr('.', '')[0, 2]}/MPS-#{version}-macos.dmg"
   name 'MPS'
   name 'JetBrains MPS'
   homepage 'https://www.jetbrains.com/mps'
   license :apache
 
-  app "MPS #{version[0,3]}.app"
+  app "MPS #{version[0, 3]}.app"
 
   zap :delete => [
-                  "~/Library/Application Support/MPS#{version.tr('.','')[0,2]}",
-                  "~/Library/Preferences/MPS#{version.tr('.','')[0,2]}",
+                   "~/Library/Application Support/MPS#{version.tr('.', '')[0, 2]}",
+                   "~/Library/Preferences/MPS#{version.tr('.', '')[0, 2]}",
                  ]
 
   caveats <<-EOS.undent
