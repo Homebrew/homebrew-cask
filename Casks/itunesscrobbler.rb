@@ -6,7 +6,7 @@ cask 'itunesscrobbler' do
   name 'iTunes (Radio) Scrobbler'
   name 'iTunesScrobbler'
   homepage 'http://www.easyclasspage.de/lastfm/seite-19.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iTunesScrobbler.app'
 end
