@@ -4,7 +4,6 @@ cask 'freefilesync' do
 
   url "http://www.freefilesync.org/download/p4blb1h5my6tw5f/FreeFileSync_#{version}_Mac_OS_X_64-bit.zip",
       :referer => 'http://www.freefilesync.org/download.php'
-
   name 'FreeFileSync'
   homepage 'http://www.freefilesync.org'
   license :gpl
