@@ -9,6 +9,6 @@ cask 'noejectdelay' do
 
   pkg 'NoEjectDelay.pkg'
 
-  uninstall :kext => 'org.pqrs.driver.NoEjectDelay',
+  uninstall :kext    => 'org.pqrs.driver.NoEjectDelay',
             :pkgutil => 'org.pqrs.driver.NoEjectDelay'
 end
