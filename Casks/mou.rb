@@ -12,8 +12,8 @@ cask 'mou' do
   app 'Mou.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.mouapp.Mou.plist',
-                  '~/Library/Preferences/com.mouapp.Mou.LSSharedFileList.plist',
-                  '~/Library/Application Support/Mou',
+                   '~/Library/Preferences/com.mouapp.Mou.plist',
+                   '~/Library/Preferences/com.mouapp.Mou.LSSharedFileList.plist',
+                   '~/Library/Application Support/Mou',
                  ]
 end
