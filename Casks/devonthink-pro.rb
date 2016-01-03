@@ -11,5 +11,6 @@ cask 'devonthink-pro' do
   license :commercial
 
   container :nested => 'DEVONthink_Pro.dmg'
+
   app 'DEVONthink Pro.app'
 end
