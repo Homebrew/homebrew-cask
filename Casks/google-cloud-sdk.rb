@@ -8,9 +8,8 @@ cask 'google-cloud-sdk' do
   license :apache
 
   installer :script => 'google-cloud-sdk/install.sh',
-            :args => %w{--usage-reporting false --bash-completion false --path-update false --rc-path false},
-            :sudo => false
-
+            :args   => %w[--usage-reporting false --bash-completion false --path-update false --rc-path false],
+            :sudo   => false
   binary 'google-cloud-sdk/bin/bq'
   binary 'google-cloud-sdk/bin/gcloud'
   binary 'google-cloud-sdk/bin/git-credential-gcloud.sh', :target => 'git-credential-gcloud'
