@@ -8,6 +8,7 @@ cask 'wireshark' do
   license :gpl
 
   pkg "Wireshark #{version} Intel 64.pkg"
+
   postflight do
     if Process.euid == 0
       ohai 'Note:'
@@ -23,20 +24,20 @@ cask 'wireshark' do
   end
 
   uninstall :script  => {
-                         :executable => '/usr/sbin/dseditgroup',
-                         :args => ['-o', 'delete', 'access_bpf'],
+                          :executable => '/usr/sbin/dseditgroup',
+                          :args       => ['-o', 'delete', 'access_bpf'],
                         },
             :pkgutil => 'org.wireshark.*',
             :delete  => [
-                         '/usr/local/bin/capinfos',
-                         '/usr/local/bin/dftest',
-                         '/usr/local/bin/dumpcap',
-                         '/usr/local/bin/editcap',
-                         '/usr/local/bin/mergecap',
-                         '/usr/local/bin/randpkt',
-                         '/usr/local/bin/rawshark',
-                         '/usr/local/bin/text2pcap',
-                         '/usr/local/bin/tshark',
-                         '/usr/local/bin/wireshark',
+                          '/usr/local/bin/capinfos',
+                          '/usr/local/bin/dftest',
+                          '/usr/local/bin/dumpcap',
+                          '/usr/local/bin/editcap',
+                          '/usr/local/bin/mergecap',
+                          '/usr/local/bin/randpkt',
+                          '/usr/local/bin/rawshark',
+                          '/usr/local/bin/text2pcap',
+                          '/usr/local/bin/tshark',
+                          '/usr/local/bin/wireshark',
                         ]
 end
