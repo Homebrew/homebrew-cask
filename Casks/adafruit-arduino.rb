@@ -8,7 +8,7 @@ cask 'adafruit-arduino' do
   homepage 'https://adafruit.com'
   license :gpl
 
-  app 'Arduino.app'
-
   conflicts_with :cask => 'arduino'
+
+  app 'Arduino.app'
 end
