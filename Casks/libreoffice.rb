@@ -10,12 +10,11 @@ cask 'libreoffice' do
     # documentfoundation.org is the official download host per the vendor homepage
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
   end
-  gpg "#{url}.asc",
-      :key_id => 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
-
   name 'LibreOffice'
   homepage 'https://www.libreoffice.org/'
   license :mpl
+  gpg "#{url}.asc",
+      :key_id => 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
   app 'LibreOffice.app'
   binary 'LibreOffice.app/Contents/MacOS/gengal'
