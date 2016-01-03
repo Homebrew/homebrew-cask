@@ -3,12 +3,12 @@ cask 'vistrails' do
   sha256 'efee1669d3ba39985079e44a423f6e7b6b17493669c5945a3bbd70ec8659fc22'
 
   # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/project/vistrails/vistrails/v#{version.sub(%r{-.*},'')}/vistrails-mac-10.6-intel-#{version}.dmg"
+  url "http://downloads.sourceforge.net/project/vistrails/vistrails/v#{version.sub(%r{-.*}, '')}/vistrails-mac-10.6-intel-#{version}.dmg"
   name 'VisTrails'
   homepage 'http://www.vistrails.org/'
   license :bsd
 
-  suite 'VisTrails'
-
   depends_on :macos => '>= :snow_leopard'
+
+  suite 'VisTrails'
 end
