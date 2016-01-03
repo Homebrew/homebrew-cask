@@ -7,13 +7,13 @@ cask 'virtualbox' do
     sha256 'e74a078780377133789e3f984e3f75324bdb5e57bf3b920a036bf52a403a5aa0'
   end
 
-  url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*},'')}/VirtualBox-#{version}-OSX.dmg"
+  url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/VirtualBox-#{version}-OSX.dmg"
   name 'Oracle VirtualBox'
   homepage 'https://www.virtualbox.org'
   license :gpl
 
   pkg 'VirtualBox.pkg'
 
-  uninstall :script => { :executable => 'VirtualBox_Uninstall.tool', :args => %w[--unattended] },
+  uninstall :script  => { :executable => 'VirtualBox_Uninstall.tool', :args => %w[--unattended] },
             :pkgutil => 'org.virtualbox.pkg.*'
 end
