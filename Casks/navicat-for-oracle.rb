@@ -1,6 +1,6 @@
 cask 'navicat-for-oracle' do
-  version '11.2.5'
-  sha256 'fa7813994162ce2f80f106907dd3feff87b2d783cf3c23de10421c61badab1b2'
+  version '11.2.6'
+  sha256 '62367f5d08f802725216542f6d2482a5635cbefe7c2ca843059525d7077445d0'
 
   url "http://download.navicat.com/download/navicat#{version.sub(%r{^(\d+)\.(\d+).*}, '\1\2')}_ora_en.dmg"
   name 'Navicat for Oracle'
