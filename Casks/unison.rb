@@ -17,7 +17,7 @@ cask 'unison' do
   homepage 'https://www.cis.upenn.edu/~bcpierce/unison/'
   license :gpl
 
-  app 'Unison.app'
-
   depends_on :arch => :x86_64
+
+  app 'Unison.app'
 end
