@@ -9,6 +9,7 @@ cask 'password-gorilla' do
   license :gpl
 
   app 'Password Gorilla.app'
+
   caveats <<-EOS.undent
     Password Gorilla must be run in 32-bit mode.
     Gatekeeper may need to be temporarily disabled for the first launch.
