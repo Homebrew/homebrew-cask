@@ -13,8 +13,8 @@ cask 'lighttable' do
   binary "lighttable-#{version}-mac/light"
 
   zap :delete => [
-                  '~/Library/Application Support/LightTable/plugins',
-                  '~/Library/Application Support/LightTable/settings',
-                  '~/Library/Preferences/com.kodowa.LightTable.plist',
+                   '~/Library/Application Support/LightTable/plugins',
+                   '~/Library/Application Support/LightTable/settings',
+                   '~/Library/Preferences/com.kodowa.LightTable.plist',
                  ]
 end
