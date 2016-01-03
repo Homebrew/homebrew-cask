@@ -7,7 +7,7 @@ cask 'lastfm' do
           :sha256 => '5ce3a6697f1c24a83e632ad5d9d00e4a5613d3ba713d0bec58531feb0bf75dd3'
   name 'Last.fm Scrobbler'
   homepage 'http://www.last.fm/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Last.fm.app'
 end
