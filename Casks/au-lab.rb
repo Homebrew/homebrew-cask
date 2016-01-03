@@ -8,5 +8,6 @@ cask 'au-lab' do
   license :gratis
 
   container :nested => 'AU Lab Image.dmg'
+
   app 'AU Lab.app'
 end
