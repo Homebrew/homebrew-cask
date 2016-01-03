@@ -1,6 +1,6 @@
 cask 'whatsdesktop' do
-  version '1.2.0'
-  sha256 '0eb3f31f600568694ffe7d6727e8d248afc6a2780ca1d25e6365ed28cc9872c1'
+  version '1.3.0'
+  sha256 'efd01a6e7140017d40b25a82e553b79d0e36c98bf85317a629064713efafa9d1'
 
   url "https://github.com/mawie81/whatsdesktop/releases/download/#{version}/WhatsDesktop-osx-#{version}.zip"
   appcast 'https://github.com/mawie81/whatsdesktop/releases.atom',
