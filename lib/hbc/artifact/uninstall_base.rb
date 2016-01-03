@@ -346,7 +346,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
   end
 
   def uninstall_delete(directives, expand_tilde=true)
-    Array(directives[:delete]).flatten.each_slice(PATH_ARG_SLICE_SIZE) do |path_slice|
+    Array(directives[:delete]).concat(Array(directives[:trash])).flatten.each_slice(PATH_ARG_SLICE_SIZE) do |path_slice|
       ohai "Removing files: #{path_slice.utf8_inspect}"
       path_slice = self.class.expand_path_strings(path_slice) if expand_tilde
       path_slice = self.class.remove_relative_path_strings(:delete, path_slice)
