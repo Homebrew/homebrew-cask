@@ -9,6 +9,6 @@ cask 'avira-antivirus' do
 
   pkg 'Avira_Free_Antivirus_for_Mac.pkg'
 
-  uninstall :script => '/Applications/Utilities/Avira-Uninstall.app/Contents/MacOS/uninstall',
+  uninstall :script  => '/Applications/Utilities/Avira-Uninstall.app/Contents/MacOS/uninstall',
             :pkgutil => 'com.avira.pkg.AviraMacSecurity'
 end
