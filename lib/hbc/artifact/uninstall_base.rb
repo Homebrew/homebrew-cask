@@ -294,7 +294,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
 
   def get_unix_pids(bundle_id)
     pid_string = @command.run!('/usr/bin/osascript',
-                               :args => ['-e', %Q{tell application "System Events" to get the unix id of every process whose bundle identifier is "#{id}"}],
+                               :args => ['-e', %Q{tell application "System Events" to get the unix id of every process whose bundle identifier is "#{bundle_id}"}],
                                :sudo => true).stdout.chomp
     return [] unless pid_string.match(%r{\A\d+(?:\s*,\s*\d+)*\Z}) # sanity check
     pid_string.split(%r{\s*,\s*}).map(&:strip).map(&:to_i)
