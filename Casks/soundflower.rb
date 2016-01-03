@@ -13,16 +13,16 @@ cask 'soundflower' do
 
   postflight do
     system '/usr/bin/sudo', '-E', '--',
-      '/sbin/kextload', '-b', 'com.Cycling74.driver.Soundflower'
+           '/sbin/kextload', '-b', 'com.Cycling74.driver.Soundflower'
   end
 
   # early_script is a workaround for a slowly unloading kext, see private-eye Cask
   uninstall :early_script => {
-              :executable => '/sbin/kextunload',
-              :args => ['-b', 'com.Cycling74.driver.Soundflower'],
-              :must_succeed => false,
-            },
-            :pkgutil => 'com.cycling74.soundflower.*',
-            :delete => '/Applications/Soundflower',
-            :kext => 'com.Cycling74.driver.Soundflower'
+                               :executable   => '/sbin/kextunload',
+                               :args         => ['-b', 'com.Cycling74.driver.Soundflower'],
+                               :must_succeed => false,
+                             },
+            :pkgutil      => 'com.cycling74.soundflower.*',
+            :delete       => '/Applications/Soundflower',
+            :kext         => 'com.Cycling74.driver.Soundflower'
 end
