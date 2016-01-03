@@ -26,7 +26,7 @@ cask 'bettertouchtool' do
   uninstall :login_item => 'BetterTouchTool'
 
   zap :delete => [
-                  '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',
-                  '~/Library/Application Support/BetterTouchTool',
+                   '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',
+                   '~/Library/Application Support/BetterTouchTool',
                  ]
 end
