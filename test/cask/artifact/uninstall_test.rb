@@ -222,7 +222,16 @@ describe Hbc::Artifact::Uninstall do
     end
 
     describe 'when using delete' do
-      # todo
+      let(:cask) { Hbc.load('with-uninstall-delete') }
+
+      it 'can uninstall' do
+        Hbc::FakeSystemCommand.expects_command(
+          sudo(%w[/bin/rm -rf --],
+               Pathname.new('/permissible/absolute/path'),
+               Pathname.new('~/permissible/path/with/tilde').expand_path))
+
+        subject
+      end
     end
 
     describe 'when using rmdir' do
