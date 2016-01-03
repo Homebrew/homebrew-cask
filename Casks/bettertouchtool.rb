@@ -6,12 +6,12 @@ cask 'bettertouchtool' do
     # bettertouchtool.com is the official download host per the vendor homepage
     url "http://bettertouchtool.net/btt#{version}.zip"
   else
-    version '1.47d'
-    sha256 '81b15b17a13018e48edb796f972732d379f22b9f0601300899fea3d77162bc5e'
+    version '1.49'
+    sha256 'a0ea79136322c634545c0b9da6001944fad5ec734b891fbc63c5485ba0cfd516'
 
     url "http://boastr.net/releases/btt#{version}.zip"
     appcast 'http://appcast.boastr.net',
-            :sha256 => 'd22e6a9b68ea9d83446ee27e24023fd734cb258b56f01162db52a0880bba6ef1'
+            :sha256 => '1cb51646c9d3a28ec6f6904f04d83a3d73aface7ca055793439a2746d8f2a112'
   end
 
   name 'BetterTouchTool'
