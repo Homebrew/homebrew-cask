@@ -14,9 +14,9 @@ cask 'neteasemusic' do
   uninstall :quit => 'com.netease.163music'
 
   zap :delete => [
-                  '~/Library/Caches/com.netease.163music',
-                  '~/Library/Containers/com.netease.163music',
-                  '~/Library/Preferences/com.netease.163music.plist',
-                  '~/Library/Saved Application State/com.netease.163music.savedState'
+                   '~/Library/Caches/com.netease.163music',
+                   '~/Library/Containers/com.netease.163music',
+                   '~/Library/Preferences/com.netease.163music.plist',
+                   '~/Library/Saved Application State/com.netease.163music.savedState',
                  ]
 end
