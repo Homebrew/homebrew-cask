@@ -8,5 +8,6 @@ cask 'people-plus-content-ip' do
   license :gratis
 
   container :nested => "PPCIPmac_v#{version}.dmg"
+
   app 'People + Content IP.app'
 end
