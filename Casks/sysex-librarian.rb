@@ -9,18 +9,18 @@ cask 'sysex-librarian' do
   homepage 'http://www.snoize.com/SysExLibrarian'
   license :bsd
 
+  depends_on :macos => '>= :lion'
+
   app 'SysEx Librarian.app'
 
   uninstall :quit => [
-                      'com.snoize.SnoizeMIDI',
-                      'com.snoize.SysExLibrarian'
+                       'com.snoize.SnoizeMIDI',
+                       'com.snoize.SysExLibrarian',
                      ]
 
   zap :delete => [
-                  '~/Library/Preferences/com.snoize.SysExLibrarian.plist',
-                  '~/Library/Caches/com.snoize.SysExLibrarian',
-                  '~/Library/Saved Application State/com.snoize.SysExLibrarian.savedState'
+                   '~/Library/Preferences/com.snoize.SysExLibrarian.plist',
+                   '~/Library/Caches/com.snoize.SysExLibrarian',
+                   '~/Library/Saved Application State/com.snoize.SysExLibrarian.savedState',
                  ]
-
-  depends_on :macos => '>= :lion'
 end
