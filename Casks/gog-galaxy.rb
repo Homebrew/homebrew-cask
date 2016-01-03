@@ -7,10 +7,10 @@ cask 'gog-galaxy' do
   homepage 'https://www.gog.com/galaxy'
   license :gratis
 
+  depends_on :macos => '>= :mountain_lion'
+
   pkg "galaxy_client_#{version}.pkg"
 
   uninstall :pkgutil => "com.gog.galaxy.galaxy_client_#{version}.pkg",
-            :delete => '/Applications/GalaxyClient.app'
-
-  depends_on :macos => '>= :mountain_lion'
+            :delete  => '/Applications/GalaxyClient.app'
 end
