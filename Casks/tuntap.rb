@@ -9,17 +9,17 @@ cask 'tuntap' do
 
   pkg "tuntap_#{version}.pkg"
 
-  uninstall :pkgutil => 'tuntap.startup_item.tap|tuntap.startup_item.tun|tuntap.tap|tuntap.tun',
+  uninstall :pkgutil   => 'tuntap.startup_item.tap|tuntap.startup_item.tun|tuntap.tap|tuntap.tun',
             :launchctl => [
-                           'net.sf.tuntaposx.tun.plist',
-                           'net.sf.tuntaposx.tap.plist',
+                            'net.sf.tuntaposx.tun.plist',
+                            'net.sf.tuntaposx.tap.plist',
                           ],
-            :kext => [
-                      'net.sf.tuntaposx.tap',
-                      'net.sf.tuntaposx.tun'
-                     ],
-            :delete => [
-                        '/Library/LaunchDaemons/net.sf.tuntaposx.tap.plist',
-                        '/Library/LaunchDaemons/net.sf.tuntaposx.tun.plist'
-                       ]
+            :kext      => [
+                            'net.sf.tuntaposx.tap',
+                            'net.sf.tuntaposx.tun',
+                          ],
+            :delete    => [
+                            '/Library/LaunchDaemons/net.sf.tuntaposx.tap.plist',
+                            '/Library/LaunchDaemons/net.sf.tuntaposx.tun.plist',
+                          ]
 end
