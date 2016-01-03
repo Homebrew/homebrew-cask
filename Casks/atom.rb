@@ -22,12 +22,12 @@ cask 'atom' do
   end
 
   zap :delete => [
-                  '~/.atom',
-                  '~/Library/Application Support/ShipIt_stderr.log',
-                  '~/Library/Application Support/Atom',
-                  '~/Library/Application Support/ShipIt_stdout.log',
-                  '~/Library/Application Support/com.github.atom.ShipIt',
-                  '~/Library/Caches/com.github.atom',
-                  '~/Library/Preferences/com.github.atom.plist',
+                   '~/.atom',
+                   '~/Library/Application Support/ShipIt_stderr.log',
+                   '~/Library/Application Support/Atom',
+                   '~/Library/Application Support/ShipIt_stdout.log',
+                   '~/Library/Application Support/com.github.atom.ShipIt',
+                   '~/Library/Caches/com.github.atom',
+                   '~/Library/Preferences/com.github.atom.plist',
                  ]
 end
