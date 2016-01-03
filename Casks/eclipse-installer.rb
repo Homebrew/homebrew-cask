@@ -7,10 +7,10 @@ cask 'eclipse-installer' do
   homepage 'https://eclipse.org/'
   license :eclipse
 
-  app 'Eclipse Installer.app'
-
   depends_on :macos => '>= :leopard'
   depends_on :arch => :x86_64
+
+  app 'Eclipse Installer.app'
 
   caveats <<-EOS.undent
     #{token} requires Java. You can install the latest version with
