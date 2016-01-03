@@ -196,7 +196,25 @@ describe Hbc::Artifact::Uninstall do
     end
 
     describe 'when using quit' do
-      # todo
+      let(:cask) { Hbc.load('with-uninstall-quit') }
+      let(:bundle_id) { 'my.fancy.package.app' }
+      let(:count_processes_script) {
+        'tell application "System Events" to count processes ' +
+        %Q{whose bundle identifier is "#{bundle_id}"}
+      }
+      let(:quit_application_script) {
+        %Q{tell application id "#{bundle_id}" to quit}
+      }
+
+      it 'can uninstall' do
+        Hbc::FakeSystemCommand.stubs_command(
+          sudo(%W[/usr/bin/osascript -e #{count_processes_script}]), '1')
+
+        Hbc::FakeSystemCommand.stubs_command(
+          sudo(%W[/usr/bin/osascript -e #{quit_application_script}]))
+
+        subject
+      end
     end
 
     describe 'when using signal' do
