@@ -7,9 +7,9 @@ cask 'chainsaw' do
   homepage 'https://logging.apache.org/chainsaw/'
   license :apache
 
+  depends_on :arch => :ppc
+
   app 'Chainsaw.app'
 
   zap :delete => '~/.chainsaw'
-
-  depends_on :arch => :ppc
 end
