@@ -13,7 +13,7 @@ cask 'visual-studio-code' do
   app 'Visual Studio Code.app'
 
   zap :delete => [
-                  '~/Library/Application Support/Code',
-                  '~/Library/Caches/Code',
+                   '~/Library/Application Support/Code',
+                   '~/Library/Caches/Code',
                  ]
 end
