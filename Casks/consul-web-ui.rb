@@ -8,9 +8,9 @@ cask 'consul-web-ui' do
   homepage 'https://www.consul.io/intro/getting-started/ui.html'
   license :mpl
 
-  stage_only true
-
   depends_on :cask => 'consul'
+
+  stage_only true
   caveats do
     "Invoke consul with '-ui-dir #{staged_path}'"
   end
