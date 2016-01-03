@@ -16,12 +16,12 @@ cask 'nomachine' do
                         :executable  => '/bin/rm',
                         :args        => ['-f', '--', '/Library/Application Support/NoMachine/nxuninstall.sh']
                        },
-              :quit => 'com.nomachine.nxdock',
-              :kext => [
-                        'com.nomachine.driver.nxau',
-                        'com.nomachine.driver.nxtun',
-                        'com.nomachine.kext.nxfs',
-                       ],
-           :pkgutil => 'com.nomachine.nomachine.NoMachine.*',
-         :launchctl => 'com.nomachine.uninstall'
+      :quit => 'com.nomachine.nxdock',
+      :kext => [
+                'com.nomachine.driver.nxau',
+                'com.nomachine.driver.nxtun',
+                'com.nomachine.kext.nxfs',
+               ],
+      :pkgutil => 'com.nomachine.nomachine.NoMachine.*',
+      :launchctl => 'com.nomachine.uninstall'
 end

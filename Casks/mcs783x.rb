@@ -6,6 +6,7 @@ cask 'mcs783x' do
     def self.basename
       "MCS783x_Mac_OSX_10.5_to_10.10_driver_v#{Module.nesting.last.version}"
     end
+
     def self.stripped_version
       Module.nesting.last.version.partition('_').first
     end

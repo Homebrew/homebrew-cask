@@ -9,7 +9,7 @@ cask 'nndd' do
 
   preflight do
     system_command staged_path.join('Install NNDD.app/Contents/MacOS/Install NNDD'),
-      :args => ['-silent', '-eulaAccepted', '-location', staged_path]
+                   :args => ['-silent', '-eulaAccepted', '-location', staged_path]
   end
   app 'NNDD.app'
 
