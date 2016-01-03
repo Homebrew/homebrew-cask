@@ -235,6 +235,19 @@ describe Hbc::Artifact::Uninstall do
       end
     end
 
+    describe 'when using trash' do
+      let(:cask) { Hbc.load('with-uninstall-trash') }
+
+      it 'can uninstall' do
+        Hbc::FakeSystemCommand.expects_command(
+          sudo(%w[/bin/rm -rf --],
+               Pathname.new('/permissible/absolute/path'),
+               Pathname.new('~/permissible/path/with/tilde').expand_path))
+
+        subject
+      end
+    end
+
     describe 'when using rmdir' do
       let(:cask) { Hbc.load('with-uninstall-rmdir') }
       let(:dir_pathname) { Pathname(TestHelper.local_binary_path('empty_directory')) }
