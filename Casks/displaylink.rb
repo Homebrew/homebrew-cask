@@ -11,41 +11,40 @@ cask 'displaylink' do
   end
 
   url 'http://www.displaylink.com/downloads/file.php',
-      :data => {
-        'id' => '420',
-        'file' => "DisplayLink_OSX_#{version}.dmg",
-        'folder' => 'publicsoftware'
-      },
+      :data  => {
+                  'id'     => '420',
+                  'file'   => "DisplayLink_OSX_#{version}.dmg",
+                  'folder' => 'publicsoftware',
+                },
       :using => :post
-
   name 'DisplayLink USB Graphics Software'
   homepage 'http://www.displaylink.com'
   license :gratis
 
   pkg 'DisplayLink Software Installer.pkg'
 
-  uninstall :pkgutil => [
-                         'com.displaylink.displaylinkdriver',
-                         'com.displaylink.displaylinkdriversigned',
-                         'com.displaylink.displaylinkdriverunsigned'
-                        ],
+  uninstall :pkgutil   => [
+                            'com.displaylink.displaylinkdriver',
+                            'com.displaylink.displaylinkdriversigned',
+                            'com.displaylink.displaylinkdriverunsigned',
+                          ],
             # 'kextunload -b com.displaylink.driver.DisplayLinkDriver' causes kernel panic
             # :kext => [
             #            'com.displaylink.driver.DisplayLinkDriver',
             #            'com.displaylink.dlusbncm'
             #           ],
             :launchctl => [
-                           'com.displaylink.useragent-prelogin',
-                           'com.displaylink.useragent',
-                           'com.displaylink.displaylinkmanager'
+                            'com.displaylink.useragent-prelogin',
+                            'com.displaylink.useragent',
+                            'com.displaylink.displaylinkmanager',
                           ],
-            :quit => 'DisplayLinkUserAgent',
-            :delete => [
-                        '/Applications/DisplayLink',
-                        '/Library/LaunchAgents/com.displaylink.useragent-prelogin.plist',
-                        '/Library/LaunchAgents/com.displaylink.useragent.plist',
-                        '/Library/LaunchDaemons/com.displaylink.displaylinkmanager.plist'
-                       ]
+            :quit      => 'DisplayLinkUserAgent',
+            :delete    => [
+                            '/Applications/DisplayLink',
+                            '/Library/LaunchAgents/com.displaylink.useragent-prelogin.plist',
+                            '/Library/LaunchAgents/com.displaylink.useragent.plist',
+                            '/Library/LaunchDaemons/com.displaylink.displaylinkmanager.plist',
+                          ]
 
   caveats <<-EOS.undent
     Installing this Cask means you have AGREED to the DisplayLink
