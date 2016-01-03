@@ -12,14 +12,14 @@ cask 'smoothmouse' do
   pkg 'SmoothMouse.pkg'
 
   uninstall :launchctl => [
-                           'com.cyberic.smoothmouse',
-                           'com.cyberic.smoothmouseupdater',
+                            'com.cyberic.smoothmouse',
+                            'com.cyberic.smoothmouseupdater',
                           ],
             :quit      => 'com.test.SmoothMouseDaemon',
             :kext      => 'com.cyberic.SmoothMouse',
             :pkgutil   => [
-                           'com.cyberic.pkg.SmoothMousePrefPane',
-                           'com.cyberic.pkg.SmoothMouseKext2',
+                            'com.cyberic.pkg.SmoothMousePrefPane',
+                            'com.cyberic.pkg.SmoothMouseKext2',
                           ],
             :delete    => '/usr/bin/smoothmouse'
 end
