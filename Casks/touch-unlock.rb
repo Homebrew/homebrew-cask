@@ -10,6 +10,6 @@ cask 'touch-unlock' do
   app 'Touch Unlock for Mac.app'
 
   zap :delete => [
-                  '~/Library/Caches/com.reconditorium.Touch-Unlock-for-Mac',
+                   '~/Library/Caches/com.reconditorium.Touch-Unlock-for-Mac'
                  ]
 end
