@@ -12,6 +12,6 @@ cask 'manico' do
   app 'Manico.app'
 
   zap :delete => [
-                  '~/Library/Containers/im.manico.Manico',
+                   '~/Library/Containers/im.manico.Manico'
                  ]
 end
