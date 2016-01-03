@@ -1,5 +1,4 @@
 cask 'daisydisk' do
-
   if MacOS.release == :snow_leopard
     version '2.1.2'
     sha256 'd0a606dee19e524d6fa7b79fd48b3b9865123ca4126fb8805f8e96c317b57b31'
@@ -16,9 +15,9 @@ cask 'daisydisk' do
   homepage 'https://www.daisydiskapp.com'
   license :freemium
 
-  app 'DaisyDisk.app'
-
   depends_on :macos => '>= :snow_leopard'
+
+  app 'DaisyDisk.app'
   postflight do
     suppress_move_to_applications
   end
