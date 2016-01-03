@@ -204,7 +204,25 @@ describe Hbc::Artifact::Uninstall do
     end
 
     describe 'when using signal' do
-      # todo
+      let(:cask) { Hbc.load('with-uninstall-signal') }
+      let(:bundle_id) { 'my.fancy.package.app' }
+      let(:signals) { %w[TERM KILL] }
+      let(:unix_pids) { [12345, 67890] }
+      let(:get_unix_pids_script) {
+        'tell application "System Events" to get the unix id of every process ' +
+        %Q{whose bundle identifier is "#{bundle_id}"}
+      }
+
+      it 'can uninstall' do
+        Hbc::FakeSystemCommand.stubs_command(
+          sudo(%W[/usr/bin/osascript -e #{get_unix_pids_script}]), unix_pids.join(', '))
+
+        signals.each do |signal|
+          Process.expects(:kill).with(signal, *unix_pids)
+        end
+
+        subject
+      end
     end
 
     describe 'when using delete' do
