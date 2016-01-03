@@ -1,5 +1,4 @@
 cask 'totalspaces' do
-
   if MacOS.release <= :mountain_lion
     version '1.2.11'
     sha256 'fd54c6ea092f6fae2035745959ff6e080953e77ec6c76715e532b4b0352235d4'
@@ -24,8 +23,8 @@ cask 'totalspaces' do
 
     uninstall :pkgutil => 'com.binaryage.TotalSpaces2',
               :script  => {
-                           :executable => 'TotalSpaces2 Uninstaller.app/Contents/MacOS/TotalSpaces2 Uninstaller',
-                           :args       => %w[--headless],
+                            :executable => 'TotalSpaces2 Uninstaller.app/Contents/MacOS/TotalSpaces2 Uninstaller',
+                            :args       => %w[--headless],
                           },
               :quit    => 'com.binaryage.TotalSpaces2'
   end
@@ -34,8 +33,8 @@ cask 'totalspaces' do
   homepage 'http://totalspaces.binaryage.com/'
   license :commercial
 
-  uninstall :signal  => [
+  uninstall :signal => [
                          ['INT', 'com.binaryage.totalspacescrashwatcher'],
                          ['KILL', 'com.binaryage.totalspacescrashwatcher'],
-                        ]
+                       ]
 end
