@@ -9,5 +9,16 @@ cask 'amethyst' do
   homepage 'https://ianyh.com/amethyst'
   license :mit
 
+  accessibility_access true
+
   app 'Amethyst.app'
+
+  uninstall  :login_item => 'Amethyst'
+
+  zap        :delete => [
+                          '~/Library/Caches/com.amethyst.Amethyst',
+                          '~/Library/Preferences/com.amethyst.Amethyst.plist',
+                          '~/Library/Cookies/com.amethyst.Amethyst.binarycookies',
+                          '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.amethyst.amethyst.sfl',
+                        ]
 end
