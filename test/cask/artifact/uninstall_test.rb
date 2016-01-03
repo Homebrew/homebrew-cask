@@ -291,6 +291,18 @@ describe Hbc::Artifact::Uninstall do
       end
     end
 
+    describe 'when using login_item' do
+      let(:cask) { Hbc.load('with-uninstall-login-item') }
+
+      it 'can uninstall' do
+        Hbc::FakeSystemCommand.expects_command(
+          ['/usr/bin/osascript', '-e', 'tell application "System Events" to delete every login ' \
+                                       'item whose name is "Fancy"'])
+
+        subject
+      end
+    end
+
     describe 'when using pkgutil, launchutil, and kext' do
       let(:cask) { Hbc.load('with-pkgutil-uninstall') }
 
