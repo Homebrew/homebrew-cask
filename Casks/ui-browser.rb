@@ -13,6 +13,6 @@ cask 'ui-browser' do
                           'com.pfiddlesoft.pkg.uibrowser',
                           'com.pfiddlesoft.pkg.uielementscriptsfolder',
                           'com.pfiddlesoft.pkg.pfassistiveframework',
-                          'com.pfiddlesoft.pkg.pfeventtapsframework'
+                          'com.pfiddlesoft.pkg.pfeventtapsframework',
                         ]
 end
