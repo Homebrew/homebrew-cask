@@ -12,5 +12,5 @@ cask 'pagico' do
   pkg 'Install Pagico.pkg'
 
   uninstall :pkgutil => 'com.pagico.*',
-            :delete => '/Applications/Pagico'
+            :delete  => '/Applications/Pagico'
 end
