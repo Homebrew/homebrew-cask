@@ -1,8 +1,8 @@
 cask 'blackvue-viewer' do
-  version '1.31_20150406'
-  sha256 '633a795e12b0e4c73f14b2a1232cc561839ed251a1e00b87c5fe1309b37ceb66'
+  version :latest
+  sha256 'b46b1ee52e5a9d44c6c78a00466d5912d0574d29278ca925db285b1686c47507'
 
-  url "http://www.blackvue.com/en/common/downloadHIT.asp?downfile=BlackVue%20Viewer_#{version.sub(%r{^(\d+)\.(\d+)_.*}, '\1.\2')}.app.zip&path=board&idx=2052"
+  url 'http://www.blackvue.com/?wpdmdl=4041'
   name 'BlackVue Viewer'
   homepage 'http://blackvue.com'
   license :closed
