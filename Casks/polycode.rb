@@ -7,8 +7,8 @@ cask 'polycode' do
   homepage 'http://polycode.org/'
   license :mit
 
-  app 'Darwin/Polycode.app'
-
   depends_on :macos => '>= :lion'
   depends_on :arch => :x86_64
+
+  app 'Darwin/Polycode.app'
 end
