@@ -12,18 +12,18 @@ cask 'google-chrome' do
   app 'Google Chrome.app'
 
   zap :delete => [
-                  '~/Library/Application Support/Google/Chrome',
-                  '~/Library/Caches/Google/Chrome',
-                  '~/Library/Caches/com.google.Chrome',
-                  '~/Library/Caches/com.google.Chrome.helper.EH',
-                  '~/Library/Caches/com.google.Keystone.Agent',
-                  '~/Library/Caches/com.google.SoftwareUpdate',
-                  '~/Library/Google/GoogleSoftwareUpdate',
-                  '~/Library/Logs/GoogleSoftwareUpdateAgent.log',
+                   '~/Library/Application Support/Google/Chrome',
+                   '~/Library/Caches/Google/Chrome',
+                   '~/Library/Caches/com.google.Chrome',
+                   '~/Library/Caches/com.google.Chrome.helper.EH',
+                   '~/Library/Caches/com.google.Keystone.Agent',
+                   '~/Library/Caches/com.google.SoftwareUpdate',
+                   '~/Library/Google/GoogleSoftwareUpdate',
+                   '~/Library/Logs/GoogleSoftwareUpdateAgent.log',
                  ],
       :rmdir  => [
-                  '~/Library/Caches/Google',
-                  '~/Library/Google',
+                   '~/Library/Caches/Google',
+                   '~/Library/Google',
                  ]
 
   caveats <<-EOS.undent
