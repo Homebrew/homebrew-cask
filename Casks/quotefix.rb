@@ -14,8 +14,8 @@ cask 'quotefix' do
   postflight do
     system 'defaults', 'write', 'com.apple.mail', 'EnableBundles', '-bool', 'true'
     system 'defaults', 'write', 'com.apple.mail', 'BundleCompatibilityVersion', '-string', '3'
-    system 'mkdir', '-p',  File.expand_path('~/Library/Mail/Bundles')
-    system 'cp', '-r',  File.join(staged_path, 'QuoteFix.mailbundle'), File.expand_path('~/Library/Mail/Bundles')
+    system 'mkdir', '-p', File.expand_path('~/Library/Mail/Bundles')
+    system 'cp', '-r', File.join(staged_path, 'QuoteFix.mailbundle'), File.expand_path('~/Library/Mail/Bundles')
   end
 
   uninstall :delete => File.expand_path('~/Library/Mail/Bundles/QuoteFix.mailbundle')
