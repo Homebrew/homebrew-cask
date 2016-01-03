@@ -14,9 +14,9 @@ cask 'xld' do
   app 'XLD.app'
 
   zap :delete => [
-                  '~/Library/Application Support/XLD',
-                  '~/Library/Preferences/jp.tmkk.XLD.plist',
-                  '~/Library/Caches/jp.tmkk.XLD',
-                  '~/Library/Saved Application State/jp.tmkk.XLD.savedState'
+                   '~/Library/Application Support/XLD',
+                   '~/Library/Preferences/jp.tmkk.XLD.plist',
+                   '~/Library/Caches/jp.tmkk.XLD',
+                   '~/Library/Saved Application State/jp.tmkk.XLD.savedState',
                  ]
 end
