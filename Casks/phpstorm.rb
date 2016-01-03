@@ -10,8 +10,8 @@ cask 'phpstorm' do
   app 'PhpStorm.app'
 
   zap :delete => [
-                  '~/Library/Application Support/WebIde100',
-                  '~/Library/Preferences/WebIde100',
-                  '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
+                   '~/Library/Application Support/WebIde100',
+                   '~/Library/Preferences/WebIde100',
+                   '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
                  ]
 end
