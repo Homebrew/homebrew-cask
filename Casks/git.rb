@@ -1,5 +1,6 @@
 cask 'git' do
   version '2.2.1'
+
   name 'git-osx-installer'
   homepage 'https://sourceforge.net/projects/git-osx-installer'
   license :mit
@@ -18,7 +19,7 @@ cask 'git' do
     system "/usr/bin/yes yes | #{staged_path}/uninstall.sh"
   end
 
-  uninstall :pkgutil => "GitOSX.Installer.git#{version.delete('.')}Universal.*pkg"
-
   depends_on :macos => '>= :snow_leopard'
+
+  uninstall :pkgutil => "GitOSX.Installer.git#{version.delete('.')}Universal.*pkg"
 end
