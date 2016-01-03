@@ -7,11 +7,11 @@ cask 'bitpim' do
   homepage 'http://www.bitpim.org/'
   license :gpl
 
+  depends_on :macos => '>= :tiger'
+
   app 'BitPim.app'
 
   uninstall :quit => 'org.bitpim.bitpim'
 
   zap :delete => '~/Library/Preferences/org.bitpim.bitpim.plist'
-
-  depends_on :macos => '>= :tiger'
 end
