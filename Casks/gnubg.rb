@@ -18,9 +18,11 @@ cask 'gnubg' do
   end
 
   name 'Gnu Backgammon'
-  depends_on :x11 => true
   homepage 'http://gnubg.org/'
   license :gpl
+
+  depends_on :x11 => true
+
   app 'gnubg.app'
 
   caveats do
