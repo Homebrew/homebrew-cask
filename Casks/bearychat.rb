@@ -10,7 +10,7 @@ cask 'bearychat' do
   app 'BearyChat.app'
 
   zap :delete => [
-    '~/Preferences/com.node-webkit-builder.bearychat.plist',
-    '~/Library/Application Support/BearyChat',
-  ]
+                   '~/Preferences/com.node-webkit-builder.bearychat.plist',
+                   '~/Library/Application Support/BearyChat',
+                 ]
 end
