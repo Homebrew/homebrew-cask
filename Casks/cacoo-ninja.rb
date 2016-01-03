@@ -7,14 +7,14 @@ cask 'cacoo-ninja' do
   homepage 'https://cacoo.com/extension'
   license :gratis
 
+  depends_on :cask => 'adobe-air'
+
   installer :script => 'Install Cacoo Ninja.app/Contents/MacOS/Install Cacoo Ninja',
             :args   => %w[-silent],
             :sudo   => true
 
   uninstall :script => {
-                        :executable => Hbc::Container::Air::INSTALLER_PATHNAME,
-                        :args => %w[-uninstall -silent /Applications/Cacoo\ Ninja.app]
+                         :executable => Hbc::Container::Air::INSTALLER_PATHNAME,
+                         :args       => %w[-uninstall -silent /Applications/Cacoo\ Ninja.app],
                        }
-
-  depends_on :cask => 'adobe-air'
 end
