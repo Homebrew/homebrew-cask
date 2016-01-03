@@ -115,24 +115,6 @@ describe Hbc::DSL::Version do
       }
     end
 
-    describe '#before_slash' do
-      include_examples 'version expectations hash', :before_slash, {
-        '1.2.3'     => '1.2.3',
-        '1.2.3/'    => '1.2.3',
-        '/abc'      => '',
-        '1.2.3/abc' => '1.2.3'
-      }
-    end
-
-    describe '#after_slash' do
-      include_examples 'version expectations hash', :after_slash, {
-        '1.2.3'     => '',
-        '1.2.3/'    => '',
-        '/abc'      => 'abc',
-        '1.2.3/abc' => 'abc'
-      }
-    end
-
     describe '#dots_to_hyphens' do
       include_examples 'version expectations hash', :dots_to_hyphens, {
         '1.2.3_4-5' => '1-2-3_4-5'
