@@ -5,7 +5,7 @@ cask 'eye-fi' do
   url "https://download.eyefi.com/x2/#{version}/Eye-Fi.dmg"
   name 'Eye-Fi Center'
   homepage 'http://support.eye.fi/downloads'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Eye-Fi.mpkg'
 
