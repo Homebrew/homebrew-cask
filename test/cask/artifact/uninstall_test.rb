@@ -101,7 +101,83 @@ describe Hbc::Artifact::Uninstall do
     end
 
     describe 'when using pkgutil' do
-      # todo
+      let(:cask) { Hbc.load('with-uninstall-pkgutil') }
+      let(:main_pkg_id) { 'my.fancy.package.main' }
+      let(:agent_pkg_id) { 'my.fancy.package.agent' }
+      let(:main_files) {
+        %w[
+          fancy/bin/fancy.exe
+          fancy/var/fancy.data
+        ]
+      }
+      let(:main_dirs) {
+        %w[
+          fancy
+          fancy/bin
+          fancy/var
+        ]
+      }
+      let(:agent_files) {
+        %w[
+          fancy/agent/fancy-agent.exe
+          fancy/agent/fancy-agent.pid
+          fancy/agent/fancy-agent.log
+        ]
+      }
+      let(:agent_dirs) {
+        %w[
+          fancy
+          fancy/agent
+        ]
+      }
+      let(:pkg_info_plist) {
+        <<-PLIST.undent
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+                  <key>install-location</key>
+                  <string>tmp</string>
+                  <key>volume</key>
+                  <string>/</string>
+          </dict>
+          </plist>
+        PLIST
+      }
+
+      it 'can uninstall' do
+        Hbc::FakeSystemCommand.stubs_command(
+          %w[/usr/sbin/pkgutil --pkgs=my.fancy.package.*],
+          "#{main_pkg_id}\n#{agent_pkg_id}")
+
+        [
+          [main_pkg_id, main_files, main_dirs],
+          [agent_pkg_id, agent_files, agent_dirs]
+        ].each do |pkg_id, pkg_files, pkg_dirs|
+          Hbc::FakeSystemCommand.stubs_command(
+            %W[/usr/sbin/pkgutil --only-files --files #{pkg_id}],
+            pkg_files.join("\n"))
+
+          Hbc::FakeSystemCommand.stubs_command(
+            %W[/usr/sbin/pkgutil --only-dirs --files #{pkg_id}],
+            pkg_dirs.join("\n"))
+
+          Hbc::FakeSystemCommand.stubs_command(
+            %W[/usr/sbin/pkgutil --files #{pkg_id}],
+            (pkg_files + pkg_dirs).join("\n"))
+
+          Hbc::FakeSystemCommand.stubs_command(
+            %W[/usr/sbin/pkgutil --pkg-info-plist #{pkg_id}],
+            pkg_info_plist)
+
+          Hbc::FakeSystemCommand.expects_command(sudo(%W[/usr/sbin/pkgutil --forget #{pkg_id}]))
+
+          Hbc::FakeSystemCommand.expects_command(
+            sudo(%w[/bin/rm -f --] + pkg_files.map { |path| Pathname("/tmp/#{path}")}))
+        end
+
+        subject
+      end
     end
 
     describe 'when using quit' do
