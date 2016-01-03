@@ -6,7 +6,7 @@ cask 'qvod-player' do
   name '快播'
   name 'QvodPlayer'
   homepage 'http://www.kuaibo.com/download.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg '双击安装快播.pkg'
 
