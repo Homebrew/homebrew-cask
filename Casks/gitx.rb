@@ -9,11 +9,11 @@ cask 'gitx' do
   homepage 'http://gitx.frim.nl/'
   license :gpl
 
+  conflicts_with :cask => %w[
+                            laullon-gitx
+                            rowanj-gitx
+                          ]
+
   app 'GitX.app'
   binary 'GitX.app/Contents/Resources/gitx'
-
-  conflicts_with :cask => %w{
-                             laullon-gitx
-                             rowanj-gitx
-                            }
 end
