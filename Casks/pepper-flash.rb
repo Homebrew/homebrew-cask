@@ -11,8 +11,9 @@ cask 'pepper-flash' do
 
   uninstall :pkgutil => 'com.adobe.pkg.PepperFlashPlayer',
             :delete  => '/Library/Internet Plug-Ins/PepperFlashPlayer.plugin'
+
   zap       :delete => [
-                        '~/Library/Caches/Adobe/Flash Player',
-                        '~/Library/Logs/FlashPlayerInstallManager.log',
+                         '~/Library/Caches/Adobe/Flash Player',
+                         '~/Library/Logs/FlashPlayerInstallManager.log',
                        ]
 end
