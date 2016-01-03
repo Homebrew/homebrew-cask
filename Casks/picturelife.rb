@@ -9,7 +9,7 @@ cask 'picturelife' do
 
   app 'Picturelife.app'
 
-  uninstall :quit => [ 'com.picturelife.sync' ]
+  uninstall :quit => ['com.picturelife.sync']
 
   zap :delete => [
                     '~/Library/Preferences/com.picturelife.sync.plist',

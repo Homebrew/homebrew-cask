@@ -8,7 +8,7 @@ cask 'paye-tools' do
   license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer :script => "payetools-rti-#{version}-osx.app/Contents/MacOS/osx-intel",
-            :args => [ '--mode', 'unattended' ]
+            :args => ['--mode', 'unattended']
 
   uninstall :quit => 'uk.gov.hmrc.bptrti'
 end
