@@ -9,7 +9,7 @@ cask 'conductor' do
   homepage 'https://github.com/keith/conductor'
   license :mit
 
-  app 'Conductor.app'
-
   accessibility_access true
+
+  app 'Conductor.app'
 end
