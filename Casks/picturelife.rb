@@ -9,12 +9,12 @@ cask 'picturelife' do
 
   app 'Picturelife.app'
 
-  uninstall :quit => [ 'com.picturelife.sync' ]
+  uninstall :quit => ['com.picturelife.sync']
 
   zap :delete => [
-                    '~/Library/Preferences/com.picturelife.sync.plist',
-                    '~/Library/Application Support/Picturelife',
-                    '~/Library/Caches/com.picturelife.sync',
-                    '~/Desktop/Drop to Picturelife'
+                   '~/Library/Preferences/com.picturelife.sync.plist',
+                   '~/Library/Application Support/Picturelife',
+                   '~/Library/Caches/com.picturelife.sync',
+                   '~/Desktop/Drop to Picturelife',
                  ]
 end
