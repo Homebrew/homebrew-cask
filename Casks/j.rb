@@ -7,11 +7,11 @@ cask 'j' do
   homepage 'http://www.jsoftware.com'
   license :gpl
 
-  %w<jbrk jcon jhs jqt>.each do |a|
+  %w[jbrk jcon jhs jqt].each do |a|
     app "j64-#{version}/#{a}.app"
   end
 
-  %w<jconsole>.each do |b|
+  %w[jconsole].each do |b|
     binary "j64-#{version}/bin/#{b}"
   end
 end
