@@ -25,10 +25,10 @@ cask 'clamxav' do
   end
 
   zap :delete => [
-                  '~/Library/Caches/uk.co.markallan.clamxav',
-                  '~/Library/Logs/clamXav-scan.log',
-                  # todo glob/expand needed here
-                  '~/Library/Logs/clamXav-scan.log.0.bz2',
+                   '~/Library/Caches/uk.co.markallan.clamxav',
+                   '~/Library/Logs/clamXav-scan.log',
+                   # TODO: glob/expand needed here
+                   '~/Library/Logs/clamXav-scan.log.0.bz2',
                  ]
 
   caveats do
