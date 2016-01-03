@@ -9,6 +9,6 @@ cask 'jawbone-updater' do
 
   pkg "Jawbone_Updater-#{version}.pkg"
 
-  uninstall :quit => 'com.aliph.Jawbone_Updater',
+  uninstall :quit    => 'com.aliph.Jawbone_Updater',
             :pkgutil => 'com.Aliph.[Jj]awbone(|Updater.*).pkg'
 end
