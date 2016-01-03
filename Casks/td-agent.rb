@@ -5,10 +5,10 @@ cask 'td-agent' do
   url "https://packages.treasuredata.com/2/macosx/td-agent-#{version}-0.dmg"
   name 'td-agent'
   homepage 'https://www.fluentd.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "tdagent-#{version}-0.pkg"
 
-  uninstall :pkgutil => 'test.treasuredatainc.pkg.tdagent2',
+  uninstall :pkgutil   => 'test.treasuredatainc.pkg.tdagent2',
             :launchctl => 'td-agent'
 end
