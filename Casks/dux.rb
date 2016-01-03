@@ -13,7 +13,7 @@ cask 'dux' do
   app 'Dux.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.duxapp.Dux.plist',
-                  '~/Library/Application Support/Dux/'
+                   '~/Library/Preferences/com.duxapp.Dux.plist',
+                   '~/Library/Application Support/Dux/',
                  ]
 end
