@@ -89,12 +89,20 @@ class Hbc::DSL::Version < ::String
     version { [major, minor, patch].reject(&:empty?).join('.') }
   end
 
-  def before_slash
-    version { split('/', 2)[0] }
+  def before_comma
+    version { split(',', 2)[0] }
   end
 
-  def after_slash
-    version { split('/', 2)[1] }
+  def after_comma
+    version { split(',', 2)[1] }
+  end
+
+  def before_colon
+    version { split(':', 2)[0] }
+  end
+
+  def after_colon
+    version { split(':', 2)[1] }
   end
 
   def no_dividers

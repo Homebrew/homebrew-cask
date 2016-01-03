@@ -115,21 +115,40 @@ describe Hbc::DSL::Version do
       }
     end
 
-    describe '#before_slash' do
-      include_examples 'version expectations hash', :before_slash, {
+    describe '#before_comma' do
+      include_examples 'version expectations hash', :before_comma, {
         '1.2.3'     => '1.2.3',
-        '1.2.3/'    => '1.2.3',
-        '/abc'      => '',
-        '1.2.3/abc' => '1.2.3'
+        '1.2.3,'    => '1.2.3',
+        ',abc'      => '',
+        '1.2.3,abc' => '1.2.3'
       }
     end
 
-    describe '#after_slash' do
-      include_examples 'version expectations hash', :after_slash, {
+    describe '#after_comma' do
+      include_examples 'version expectations hash', :after_comma, {
         '1.2.3'     => '',
-        '1.2.3/'    => '',
-        '/abc'      => 'abc',
-        '1.2.3/abc' => 'abc'
+        '1.2.3,'    => '',
+        ',abc'      => 'abc',
+        '1.2.3,abc' => 'abc'
+      }
+    end
+
+
+    describe '#before_colon' do
+      include_examples 'version expectations hash', :before_colon, {
+        '1.2.3'     => '1.2.3',
+        '1.2.3:'    => '1.2.3',
+        ':abc'      => '',
+        '1.2.3:abc' => '1.2.3'
+      }
+    end
+
+    describe '#after_colon' do
+      include_examples 'version expectations hash', :after_colon, {
+        '1.2.3'     => '',
+        '1.2.3:'    => '',
+        ':abc'      => 'abc',
+        '1.2.3:abc' => 'abc'
       }
     end
 
