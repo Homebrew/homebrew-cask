@@ -10,7 +10,7 @@ cask 'xmarks-safari' do
   pkg 'Xmarks for Safari Installer.pkg'
 
   uninstall :pkgutil => [
-                         'com.xmarks.XmarksForSafari.pkg',
-                         'com.xmarks.XmarksPreferencePane.pkg',
+                          'com.xmarks.XmarksForSafari.pkg',
+                          'com.xmarks.XmarksPreferencePane.pkg',
                         ]
 end
