@@ -13,8 +13,8 @@ cask 'hypo' do
   app 'Hypo.app'
 
   zap :delete => [
-                  '~/Library/Caches/cc.hypo.hypo',
-                  '~/Library/Preferences/cc.hypo.hypo.plist',
-                  '~/Library/Saved Application State/cc.hypo.hypo.savedState'
+                   '~/Library/Caches/cc.hypo.hypo',
+                   '~/Library/Preferences/cc.hypo.hypo.plist',
+                   '~/Library/Saved Application State/cc.hypo.hypo.savedState',
                  ]
 end
