@@ -12,9 +12,9 @@ cask 'imageoptim' do
   app 'ImageOptim.app'
 
   zap :delete => [
-                  '~/Library/Preferences/net.pornel.ImageOptim.plist',
-                  '~/Library/Caches/net.pornel.ImageOptim',
-                  '~/Library/Caches/ImageOptimResults.db',
-                  '~/Library/Saved Application State/net.pornel.ImageOptim.savedState'
+                   '~/Library/Preferences/net.pornel.ImageOptim.plist',
+                   '~/Library/Caches/net.pornel.ImageOptim',
+                   '~/Library/Caches/ImageOptimResults.db',
+                   '~/Library/Saved Application State/net.pornel.ImageOptim.savedState',
                  ]
 end
