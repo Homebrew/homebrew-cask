@@ -7,7 +7,7 @@ cask 'fog-burner' do
   homepage 'http://fogburner.tofumatt.com/'
   license :oss
 
-  app 'Fog Burner.app'
-
   depends_on :macos => '>= 10.9'
+
+  app 'Fog Burner.app'
 end

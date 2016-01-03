@@ -10,14 +10,14 @@ cask 'blockblock' do
 
   installer :manual => 'BlockBlock_Installer.app'
 
-  uninstall :quit => 'com.objectivesee.BlockBlock',
+  uninstall :quit      => 'com.objectivesee.BlockBlock',
             :launchctl => [
-                           'com.objectiveSee.blockblock.agent',
-                           'com.objectiveSee.blockblock.daemon'
+                            'com.objectiveSee.blockblock.agent',
+                            'com.objectiveSee.blockblock.daemon',
                           ],
-            :delete => [
-                        '/Applications/BlockBlock.app',
-                        '/Library/LaunchDaemons/com.objectiveSee.blockblock.plist',
-                        '~/Library/LaunchAgents/com.objectiveSee.blockblock.plist'
-                       ]
+            :delete    => [
+                            '/Applications/BlockBlock.app',
+                            '/Library/LaunchDaemons/com.objectiveSee.blockblock.plist',
+                            '~/Library/LaunchAgents/com.objectiveSee.blockblock.plist',
+                          ]
 end

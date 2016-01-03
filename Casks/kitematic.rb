@@ -13,7 +13,7 @@ cask 'kitematic' do
   app 'Kitematic (Beta).app'
 
   zap :delete => [
-    '~/Library/Application Support/Kitematic',
-    '~/Kitematic'
-  ]
+                   '~/Library/Application Support/Kitematic',
+                   '~/Kitematic',
+                 ]
 end

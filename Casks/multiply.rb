@@ -10,5 +10,5 @@ cask 'multiply' do
   pkg 'Multiply_OSX_1_1_1.pkg'
 
   uninstall :pkgutil => 'com.Acon.Multiply',
-            :delete => '/Library/Audio/Plug-Ins/VST/Multiply.vst'
+            :delete  => '/Library/Audio/Plug-Ins/VST/Multiply.vst'
 end

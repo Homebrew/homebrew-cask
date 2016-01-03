@@ -19,7 +19,7 @@ cask 'sabnzbd' do
   end
 
   zap :delete => [
-                  '~/Library/Application Support/SABnzbd/sabnzbd.ini',
-                  '~/Library/Application Support/SABnzbd/admin/rss_data.sab',
+                   '~/Library/Application Support/SABnzbd/sabnzbd.ini',
+                   '~/Library/Application Support/SABnzbd/admin/rss_data.sab',
                  ]
 end

@@ -12,7 +12,7 @@ cask 'viscosity' do
   app 'Viscosity.app'
 
   zap :delete => [
-                  '~/Library/Application Support/Viscosity',
-                  '~/Library/Preferences/com.viscosityvpn.Viscosity.plist',
+                   '~/Library/Application Support/Viscosity',
+                   '~/Library/Preferences/com.viscosityvpn.Viscosity.plist',
                  ]
 end

@@ -17,9 +17,9 @@ cask 'syncthing-bar' do
             :delete    => '/Applications/syncthing-bar.app'
 
   zap :delete => [
-                  '~/Library/Application Support/Syncthing',
-                  '~/Library/Caches/koeln.mop.syncthing-bar',
-                  '~/Library/Saved Application State/koeln.mop.syncthing-bar.savedState',
-                  '/Library/LaunchAgents/koeln.mop.syncthing-bar.agent.plist'
+                   '~/Library/Application Support/Syncthing',
+                   '~/Library/Caches/koeln.mop.syncthing-bar',
+                   '~/Library/Saved Application State/koeln.mop.syncthing-bar.savedState',
+                   '/Library/LaunchAgents/koeln.mop.syncthing-bar.agent.plist',
                  ]
 end

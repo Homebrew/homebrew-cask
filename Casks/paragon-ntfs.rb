@@ -10,10 +10,10 @@ cask 'paragon-ntfs' do
 
   pkg 'FSInstaller.app/Contents/Resources/Paragon NTFS for Mac OS X.pkg'
 
-  uninstall :pkgutil => 'com.paragon-software.filesystems.NTFS.pkg',
-            :script => 'Uninstall.app/Contents/Resources/uninstall.sh',
+  uninstall :pkgutil   => 'com.paragon-software.filesystems.NTFS.pkg',
+            :script    => 'Uninstall.app/Contents/Resources/uninstall.sh',
             :launchctl => [
-                           'com.paragon.ntfs*',
-                           'com.paragon.updater'
+                            'com.paragon.ntfs*',
+                            'com.paragon.updater',
                           ]
 end

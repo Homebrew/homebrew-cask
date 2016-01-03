@@ -12,9 +12,9 @@ cask 'xone' do
 
   pkg "Xone-Driver-#{version}.pkg", :allow_untrusted => true
 
-  uninstall :kext => 'com.vestigl.driver.Xone-Driver',
+  uninstall :kext   => 'com.vestigl.driver.Xone-Driver',
             :delete => [
-                        '/Library/PreferencePanes/Xone Driver Pref Pane.prefPane',
-                        '/Library/Extensions/Xone Driver.kext'
+                         '/Library/PreferencePanes/Xone Driver Pref Pane.prefPane',
+                         '/Library/Extensions/Xone Driver.kext',
                        ]
 end

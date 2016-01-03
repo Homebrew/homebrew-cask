@@ -17,10 +17,10 @@ cask 'jabber-video' do
   end
 
   zap :delete => [
-                  '/Library/Preferences/com.cisco.JabberVideo.plist',
-                  '~/Library/Preferences/com.cisco.JabberVideo.plist',
-                  '~/Library/Application Support/Jabber Video',
-                  '~/Library/Logs/Jabber Video',
-                  ],
+                   '/Library/Preferences/com.cisco.JabberVideo.plist',
+                   '~/Library/Preferences/com.cisco.JabberVideo.plist',
+                   '~/Library/Application Support/Jabber Video',
+                   '~/Library/Logs/Jabber Video',
+                 ],
       :script => 'Jabber Video.app/Contents/SharedSupport/remove_user_data.sh'
 end

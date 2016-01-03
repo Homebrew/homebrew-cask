@@ -7,7 +7,7 @@ cask 'find-empty-folders' do
   homepage 'http://www.tempel.org/FindEmptyFolders'
   license :gratis
 
-  app 'Find Empty Folders.app'
-
   depends_on :macos => '>= :snow_leopard'
+
+  app 'Find Empty Folders.app'
 end

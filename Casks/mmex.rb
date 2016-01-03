@@ -11,8 +11,8 @@ cask 'mmex' do
   app 'mmex.app'
 
   zap :delete => [
-                  '~/Library/Application Support/mmex',
-                  '~/Library/Caches/com.yourcompany.MMEX',
-                  '~/Library/Preferences/com.yourcompany.MMEX.plist',
+                   '~/Library/Application Support/mmex',
+                   '~/Library/Caches/com.yourcompany.MMEX',
+                   '~/Library/Preferences/com.yourcompany.MMEX.plist',
                  ]
 end

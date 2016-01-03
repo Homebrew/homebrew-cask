@@ -9,5 +9,6 @@ cask 'captur' do
   license :gratis
 
   container :nested => "captur-#{version}.dmg"
+
   app '64 Bit/Captur.app'
 end

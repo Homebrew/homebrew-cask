@@ -11,9 +11,10 @@ cask 'ax88772' do
   url "http://www.asix.com.tw/FrootAttach/driver/#{Utils.basename}.zip"
   name 'AX88772'
   homepage 'http://www.asix.com.tw/products.php?op=pItemdetail&PItemID=86;71;101&PLine=71'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :nested => "#{Utils.basename}/AX88772.dmg"
+
   pkg "AX88772_v#{version[0..-10]}.pkg"
 
   uninstall :script => { :executable => 'AX88772C_772B_772A_760_772_Uninstall_v130' }

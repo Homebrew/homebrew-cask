@@ -10,5 +10,6 @@ cask 'menuola' do
   license :gratis
 
   container :nested => 'Menuola.dmg'
+
   app 'Menuola.app'
 end

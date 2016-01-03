@@ -10,6 +10,6 @@ cask 'opennx' do
 
   pkg 'OpenNX.pkg'
 
-  uninstall :script => { :executable => '/Library/OpenNX/bin/macuninstall', :args => ['--batch'] },
+  uninstall :script  => { :executable => '/Library/OpenNX/bin/macuninstall', :args => ['--batch'] },
             :pkgutil => 'org.opennx.OpenNX'
 end

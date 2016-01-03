@@ -17,7 +17,7 @@ cask 'nzbget' do
   end
 
   zap :delete => [
-                  '~/Library/Application Support/NZBGet',
-                  '~/Library/Preferences/net.sourceforge.nzbget.plist'
+                   '~/Library/Application Support/NZBGet',
+                   '~/Library/Preferences/net.sourceforge.nzbget.plist',
                  ]
 end

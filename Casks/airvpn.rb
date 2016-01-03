@@ -7,9 +7,9 @@ cask 'airvpn' do
   homepage 'https://airvpn.org/macosx/'
   license :oss
 
-  binary '/Applications/AirVPN.app/Contents/MacOS/AirVPN'
   pkg 'airvpn_osx_x64_installer.pkg'
+  binary '/Applications/AirVPN.app/Contents/MacOS/AirVPN'
 
-  uninstall :quit => 'com.airvpn.client',
+  uninstall :quit    => 'com.airvpn.client',
             :pkgutil => 'com.airvpn.client'
 end

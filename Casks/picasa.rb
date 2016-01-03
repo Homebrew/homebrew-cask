@@ -10,8 +10,8 @@ cask 'picasa' do
   app 'Picasa.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.google.picasa.plist',
-                  '~/Library/Application Support/Google/Picasa3',
-                  '~/Library/Saved Application State/com.google.picasa.savedState'
+                   '~/Library/Preferences/com.google.picasa.plist',
+                   '~/Library/Application Support/Google/Picasa3',
+                   '~/Library/Saved Application State/com.google.picasa.savedState',
                  ]
 end

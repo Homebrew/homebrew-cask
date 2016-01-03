@@ -10,8 +10,8 @@ cask 'totalterminal' do
   pkg 'TotalTerminal.pkg'
 
   uninstall :pkgutil => 'com.binaryage.pkg.totalterminal.app',
-            :script => {
-                        :executable => 'TotalTerminal Uninstaller.app/Contents/MacOS/TotalTerminal Uninstaller',
-                        :args => %w[--headless],
-                       }
+            :script  => {
+                          :executable => 'TotalTerminal Uninstaller.app/Contents/MacOS/TotalTerminal Uninstaller',
+                          :args       => %w[--headless],
+                        }
 end

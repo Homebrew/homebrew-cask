@@ -8,7 +8,7 @@ cask 'tunnelbear' do
           :sha256 => '9a437f3b3c02ce7947c7563ce9fa1f0f431d0f8fc00b398513e0f2d33312ae89'
   name 'TunnelBear'
   homepage 'https://www.tunnelbear.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TunnelBear.app'
 

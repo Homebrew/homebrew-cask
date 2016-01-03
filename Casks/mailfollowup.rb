@@ -28,12 +28,14 @@ cask 'mailfollowup' do
   license :gratis
 
   container :nested => "MailFollowUp_#{version}.dmg"
+
   pkg 'Install MailFollowUp.pkg'
 
-  uninstall :quit  => 'com.apple.mail',
+  uninstall :quit    => 'com.apple.mail',
             :pkgutil => [
-                        'net.welchwold.mailfollowup',
-                        'net.welchwold.mailfollowup.*',
+                          'net.welchwold.mailfollowup',
+                          'net.welchwold.mailfollowup.*',
                         ]
+
   zap       :delete => '~/Library/Mail/Bundles/MailFollowUp.mailbundle/'
 end

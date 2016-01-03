@@ -10,9 +10,9 @@ cask 'pandoc' do
   homepage 'http://pandoc.org/'
   license :gpl
 
+  conflicts_with :formula => 'pandoc'
+
   pkg "pandoc-#{version}-osx.pkg"
 
   uninstall :pkgutil => 'net.johnmacfarlane.pandoc'
-
-  conflicts_with :formula => 'pandoc'
 end

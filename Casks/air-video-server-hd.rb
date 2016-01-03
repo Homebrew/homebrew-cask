@@ -13,8 +13,8 @@ cask 'air-video-server-hd' do
   app 'Air Video Server HD.app'
 
   zap :delete => [
-                  '~/Library/Caches/com.inmethod.AirVideoServerHD',
-                  '~/Library/Logs/AirVideoServerHD',
-                  '~/Library/Preferences/com.inmethod.AirVideoServerHD.plist',
+                   '~/Library/Caches/com.inmethod.AirVideoServerHD',
+                   '~/Library/Logs/AirVideoServerHD',
+                   '~/Library/Preferences/com.inmethod.AirVideoServerHD.plist',
                  ]
 end

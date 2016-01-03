@@ -5,7 +5,7 @@ cask 'pixate-studio' do
   url 'http://cdn.pixate.com/downloads/studio/latest/PixateStudio.zip'
   name 'Pixate'
   homepage 'http://www.pixate.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Pixate Studio.app'
 end

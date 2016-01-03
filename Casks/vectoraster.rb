@@ -6,11 +6,12 @@ cask 'vectoraster' do
   name 'Vectoraster'
   homepage 'http://www.lostminds.com/content/product.php?vectoraster6'
   license :commercial
+
   app "Vectoraster #{version.to_i}/Vectoraster.app"
 
   zap :delete => [
-                  '~/Library/Caches/com.lostminds.Vectoraster',
-                  '~/Library/Preferences/com.lostminds.Vectoraster.plist',
-                  '~/Library/Application Support/Vectoraster',
+                   '~/Library/Caches/com.lostminds.Vectoraster',
+                   '~/Library/Preferences/com.lostminds.Vectoraster.plist',
+                   '~/Library/Application Support/Vectoraster',
                  ]
 end

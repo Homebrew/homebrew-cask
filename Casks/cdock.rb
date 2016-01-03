@@ -10,13 +10,13 @@ cask 'cdock' do
   homepage 'https://w0lfschild.github.io/cdock'
   license :bsd
 
+  depends_on :cask => 'easysimbl'
+  depends_on :macos => '>= :mavericks'
+
   app 'cDock.app'
 
   caveats <<-EOS.undent
     #{token} will only run from within /Applications,
     and will request to be moved at launch.
   EOS
-
-  depends_on :cask => 'easysimbl'
-  depends_on :macos => '>= :mavericks'
 end

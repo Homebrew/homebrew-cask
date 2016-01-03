@@ -12,8 +12,9 @@ cask 'flash' do
 
   uninstall :pkgutil => 'com.adobe.pkg.FlashPlayer',
             :delete  => '/Library/Internet Plug-Ins/Flash Player.plugin'
+
   zap       :delete => [
-                        '~/Library/Caches/Adobe/Flash Player',
-                        '~/Library/Logs/FlashPlayerInstallManager.log',
+                         '~/Library/Caches/Adobe/Flash Player',
+                         '~/Library/Logs/FlashPlayerInstallManager.log',
                        ]
 end

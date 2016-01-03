@@ -12,7 +12,7 @@ cask 'encryptr' do
   app 'Encryptr.app'
 
   zap :delete => [
-                  '~/Library/Preferences/org.devgeeks.encryptr.plist',
-                  '~/Library/Saved Application State/org.devgeeks.encryptr.savedState',
+                   '~/Library/Preferences/org.devgeeks.encryptr.plist',
+                   '~/Library/Saved Application State/org.devgeeks.encryptr.savedState',
                  ]
 end

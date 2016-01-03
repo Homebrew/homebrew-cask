@@ -8,7 +8,7 @@ cask 'cuda' do
   license :other
 
   installer :script => 'CUDAMacOSXInstaller.app/Contents/MacOS/CUDAMacOSXInstaller',
-            :args => [ '--accept-eula', '--silent' ]
+            :args   => ['--accept-eula', '--silent']
 
   uninstall :script => "/Developer/NVIDIA/CUDA-#{version.to_f}/bin/uninstall_cuda_#{version.to_f}.pl"
 end

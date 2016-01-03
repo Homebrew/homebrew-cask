@@ -5,16 +5,16 @@ cask 'pgadmin3' do
 
   # postgresql.org is the official download host per the vendor homepage
   url "https://ftp.postgresql.org/pub/pgadmin3/release/v#{version}/osx/pgadmin3-#{version}.dmg"
-  gpg "#{url}.sig",
-      :key_id => 'e0c4ceeb826b1fda4fb468e024adfaaf698f1519'
   name 'pgAdmin'
   homepage 'http://pgadmin.org'
   license :oss
+  gpg "#{url}.sig",
+      :key_id => 'e0c4ceeb826b1fda4fb468e024adfaaf698f1519'
 
   app 'pgAdmin3.app'
 
   zap :delete => [
-                  '~/Library/Preferences/pgadmin3 Preferences',
-                  '~/Library/Saved Application State/org.postgresql.pgadmin.savedState'
+                   '~/Library/Preferences/pgadmin3 Preferences',
+                   '~/Library/Saved Application State/org.postgresql.pgadmin.savedState',
                  ]
 end

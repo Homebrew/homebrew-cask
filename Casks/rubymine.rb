@@ -10,7 +10,7 @@ cask 'rubymine' do
   app 'RubyMine.app'
 
   zap :delete => [
-                  "~/Library/Application Support/RubyMine#{version.delete('.')}",
-                  "~/Library/Preferences/RubyMine#{version.delete('.')}",
+                   "~/Library/Application Support/RubyMine#{version.delete('.')}",
+                   "~/Library/Preferences/RubyMine#{version.delete('.')}",
                  ]
 end

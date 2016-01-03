@@ -10,8 +10,8 @@ cask 'eve-launcher' do
   app 'EVE Launcher.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.ccpgames.EVE.plist',
-                  '~/Library/Application Support/EVE Online',
-                  '~/Library/Application Support/CCP/EVE'
+                   '~/Library/Preferences/com.ccpgames.EVE.plist',
+                   '~/Library/Application Support/EVE Online',
+                   '~/Library/Application Support/CCP/EVE',
                  ]
 end

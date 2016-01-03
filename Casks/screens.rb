@@ -10,11 +10,11 @@ cask 'screens' do
   app 'Screens.app'
 
   zap :delete => [
-                  '~/Library/Application Support/Screens',
-                  '~/Library/Application Support/com.edovia.screens.mac',
-                  '~/Library/Caches/com.edovia.screens.mac',
-                  '~/Library/Caches/com.edovia.screens.mac',
-                  '~/Library/Logs/Screens',
-                  '~/Library/Preferences/com.edovia.screens.mac.plist',
+                   '~/Library/Application Support/Screens',
+                   '~/Library/Application Support/com.edovia.screens.mac',
+                   '~/Library/Caches/com.edovia.screens.mac',
+                   '~/Library/Caches/com.edovia.screens.mac',
+                   '~/Library/Logs/Screens',
+                   '~/Library/Preferences/com.edovia.screens.mac.plist',
                  ]
 end

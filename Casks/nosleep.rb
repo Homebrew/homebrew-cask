@@ -11,6 +11,6 @@ cask 'nosleep' do
 
   pkg 'NoSleep.pkg'
 
-  uninstall :script => 'Uninstall.command',
+  uninstall :script  => 'Uninstall.command',
             :pkgutil => 'com.protech.pkg.NoSleep'
 end

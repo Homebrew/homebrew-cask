@@ -11,7 +11,7 @@ cask 'tvmobili' do
 
   uninstall :pkgutil   => 'com.tvmobili.tvmobilisvcd',
             :launchctl => [
-                           'com.tvmobili.artwork',
-                           'com.tvmobili.tvmobilisvcd',
+                            'com.tvmobili.artwork',
+                            'com.tvmobili.tvmobilisvcd',
                           ]
 end

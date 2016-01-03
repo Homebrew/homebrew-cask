@@ -5,7 +5,7 @@ cask 'garmin-communicator' do
   url "http://download.garmin.com/software/CommunicatorPluginforMac_#{version.delete('.')}.dmg"
   name 'Garmin Communicator Plugin'
   homepage 'https://www8.garmin.com/support/download_details.jsp?id=3739'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install Communicator Plugin.pkg'
 

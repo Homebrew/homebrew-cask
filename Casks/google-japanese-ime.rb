@@ -10,9 +10,9 @@ cask 'google-japanese-ime' do
 
   pkg 'GoogleJapaneseInput.pkg'
 
-  uninstall :pkgutil => 'com.google.pkg.GoogleJapaneseInput',
+  uninstall :pkgutil   => 'com.google.pkg.GoogleJapaneseInput',
             :launchctl => [
-                           'com.google.inputmethod.Japanese.Converter',
-                           'com.google.inputmethod.Japanese.Renderer'
+                            'com.google.inputmethod.Japanese.Converter',
+                            'com.google.inputmethod.Japanese.Renderer',
                           ]
 end

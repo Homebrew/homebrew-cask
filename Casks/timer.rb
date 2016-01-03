@@ -10,7 +10,7 @@ cask 'timer' do
   app 'Timer.app'
 
   zap :delete => [
-                  '~/Library/Preferences/Apimac',
-                  '~/Library/Application Support/Apimac',
+                   '~/Library/Preferences/Apimac',
+                   '~/Library/Application Support/Apimac',
                  ]
 end

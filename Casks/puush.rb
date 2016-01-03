@@ -7,7 +7,7 @@ cask 'puush' do
           :sha256 => 'a95f192ce61400b1e8de6e880072f59229eefa4b2aa646b1707def6abbb375cc'
   name 'puush'
   homepage 'https://puush.me/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'puush.app'
 end

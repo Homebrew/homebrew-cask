@@ -17,6 +17,6 @@ cask 'pritunl' do
   zap :delete => [
                    '~/Library/Application Support/pritunl',
                    '~/Library/Caches/pritunl',
-                   '~/Library/Preferences/com.electron.pritunl.plist'
+                   '~/Library/Preferences/com.electron.pritunl.plist',
                  ]
 end

@@ -10,7 +10,7 @@ cask 'prey' do
 
   pkg "prey-mac-#{version}-x64.pkg"
 
-  uninstall :pkgutil => 'com.prey.agent',
+  uninstall :pkgutil   => 'com.prey.agent',
             :launchctl => 'com.prey.agent'
 
   caveats <<-EOS.undent

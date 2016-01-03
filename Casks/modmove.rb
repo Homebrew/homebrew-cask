@@ -9,7 +9,7 @@ cask 'modmove' do
   homepage 'https://github.com/keith/modmove'
   license :mit
 
-  app 'ModMove.app'
-
   accessibility_access true
+
+  app 'ModMove.app'
 end

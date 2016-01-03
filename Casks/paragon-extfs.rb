@@ -9,10 +9,10 @@ cask 'paragon-extfs' do
 
   pkg 'FSInstaller.app/Contents/Resources/Paragon ExtFS for Mac OS X.pkg'
 
-  uninstall :pkgutil => 'com.paragon-software.filesystems.ExtFS.pkg',
-            :script  => 'Uninstall.app/Contents/Resources/uninstall.sh',
+  uninstall :pkgutil   => 'com.paragon-software.filesystems.ExtFS.pkg',
+            :script    => 'Uninstall.app/Contents/Resources/uninstall.sh',
             :launchctl => [
-                           'com.paragon.extfs*',
-                           'com.paragon.updater'
+                            'com.paragon.extfs*',
+                            'com.paragon.updater',
                           ]
 end

@@ -8,7 +8,7 @@ cask 'loadmytracks' do
           :sha256 => 'd65520d6ff9a358ff2ff27514eff80f17b56df099fe6223f4780b16126560849'
   name 'LoadMyTracks'
   homepage 'http://www.loadmytracks.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'LoadMyTracks.app'
 end

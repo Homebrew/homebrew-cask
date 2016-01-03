@@ -7,12 +7,12 @@ cask 'craftstudio' do
   homepage 'http://craftstud.io'
   license :commercial
 
+  depends_on :cask => 'mono-mre'
+
   pkg 'CraftStudio.pkg'
 
-  uninstall :quit => 'com.sparklinlabs.CraftStudioLauncher',
+  uninstall :quit    => 'com.sparklinlabs.CraftStudioLauncher',
             :pkgutil => 'com.sparklinlabs.CraftStudioLauncher'
 
   zap       :delete => '~/Library/CraftStudio'
-
-  depends_on :cask => 'mono-mre'
 end

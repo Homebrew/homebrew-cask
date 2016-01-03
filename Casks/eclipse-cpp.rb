@@ -7,6 +7,7 @@ cask 'eclipse-cpp' do
   name 'Eclipse IDE for C/C++ Developers'
   homepage 'https://eclipse.org/'
   license :eclipse
+
   depends_on :macos => '>= :leopard'
   depends_on :arch => :x86_64
 

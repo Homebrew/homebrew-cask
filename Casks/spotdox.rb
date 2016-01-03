@@ -8,7 +8,7 @@ cask 'spotdox' do
           :sha256 => '72e0cd200f0f9d848f3887526c2eb077b4d1e38b794bb5cedc4251f82ad4aaca'
   name 'Spotdox'
   homepage 'https://spotdox.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Spotdox.app'
 end

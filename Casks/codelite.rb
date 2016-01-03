@@ -7,12 +7,12 @@ cask 'codelite' do
   homepage 'http://codelite.org'
   license :gpl
 
+  depends_on :macos => '>= :mountain_lion'
+
   app 'codelite.app'
 
   zap :delete => [
-                  '~/Library/Application Support/codelite',
-                  '~/Library/Preferences/codelite.plist'
+                   '~/Library/Application Support/codelite',
+                   '~/Library/Preferences/codelite.plist',
                  ]
-
-  depends_on :macos => '>= :mountain_lion'
 end

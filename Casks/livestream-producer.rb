@@ -10,9 +10,9 @@ cask 'livestream-producer' do
   pkg 'LivestreamProducer.pkg'
 
   uninstall :pkgutil => [
-                         'com.livestream.livestreamProducer.LivestreamProducer.pkg',
-                         'com.livestream.livestreamProducer.ProcasterAudioRedirector.pkg',
-                         'com.livestream.livestreamProducer.postflight.pkg',
-                         'com.livestream.livestreamProducer.preflight.pkg'
+                          'com.livestream.livestreamProducer.LivestreamProducer.pkg',
+                          'com.livestream.livestreamProducer.ProcasterAudioRedirector.pkg',
+                          'com.livestream.livestreamProducer.postflight.pkg',
+                          'com.livestream.livestreamProducer.preflight.pkg',
                         ]
 end

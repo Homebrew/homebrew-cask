@@ -9,6 +9,7 @@ cask 'scythebill' do
   license :apache
 
   container :nested => "Scythebill #{version}.dmg"
+
   app 'Scythebill.app'
 
   caveats <<-EOS.undent

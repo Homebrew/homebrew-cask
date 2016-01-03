@@ -8,11 +8,11 @@ cask 'zooom' do
   homepage 'http://coderage-software.com/zooom'
   license :commercial
 
+  depends_on :macos => '>= :mavericks'
+
   pkg 'Zooom2.pkg'
 
   uninstall :pkgutil => 'com.coderage.pkg.Zooom2'
-
-  depends_on :macos => '>= :mavericks'
 
   caveats do
     "There are known issues with installing this package, so if installation fails you may need to run the installer at #{staged_path}/Zooom2.pkg manually."

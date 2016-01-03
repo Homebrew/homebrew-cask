@@ -14,5 +14,6 @@ cask 'private-internet-access' do
   end
 
   uninstall :delete => '/Applications/Private Internet Access.app'
+
   zap       :delete => '~/.pia_manager'
 end

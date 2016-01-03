@@ -5,7 +5,7 @@ cask 'tableau-public' do
   url 'https://downloads.tableausoftware.com/public/TableauPublic.dmg'
   name 'Tableau Public'
   homepage 'https://www.tableausoftware.com/public'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Tableau Public.app'
 end

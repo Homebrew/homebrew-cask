@@ -12,7 +12,7 @@ cask 'divvy' do
   app 'Divvy.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.mizage.direct.Divvy.plist',
-                  '~/Library/Preferences/com.mizage.Divvy.plist',
+                   '~/Library/Preferences/com.mizage.direct.Divvy.plist',
+                   '~/Library/Preferences/com.mizage.Divvy.plist',
                  ]
 end

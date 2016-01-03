@@ -5,7 +5,7 @@ cask 'hiera' do
   url "https://downloads.puppetlabs.com/mac/hiera-#{version}.dmg"
   name 'Puppet Labs Hiera'
   homepage 'https://projects.puppetlabs.com/projects/hiera'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "hiera-#{version}.pkg"
 

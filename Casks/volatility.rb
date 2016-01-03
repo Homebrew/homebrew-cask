@@ -5,7 +5,7 @@ cask 'volatility' do
   url "http://downloads.volatilityfoundation.org/releases/#{version}/volatility_#{version}.mac.standalone.zip"
   name 'Volatility'
   homepage 'http://www.volatilityfoundation.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   if Hardware::CPU.is_32_bit?
     binary "volatility_#{version}.mac.standalone/volatility_#{version}_x86", :target => 'volatility'

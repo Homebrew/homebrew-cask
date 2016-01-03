@@ -9,7 +9,7 @@ cask 'stack' do
   homepage 'https://github.com/commercialhaskell/stack'
   license :bsd
 
-  binary "stack-#{version}-osx-x86_64/stack"
-
   depends_on :arch => :x86_64
+
+  binary "stack-#{version}-osx-x86_64/stack"
 end

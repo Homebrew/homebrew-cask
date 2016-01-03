@@ -12,9 +12,9 @@ cask 'cumulus' do
   app 'Cumulus.app'
 
   zap :delete => [
-                  '~/Library/Application Support/Cumulus',
-                  '~/Library/Caches/Cumulus',
-                  '~/Library/Preferences/com.gillesdemey.cumulus.plist',
-                  '~/Library/Saved Application State/com.gillesdemey.cumulus.savedState'
+                   '~/Library/Application Support/Cumulus',
+                   '~/Library/Caches/Cumulus',
+                   '~/Library/Preferences/com.gillesdemey.cumulus.plist',
+                   '~/Library/Saved Application State/com.gillesdemey.cumulus.savedState',
                  ]
 end

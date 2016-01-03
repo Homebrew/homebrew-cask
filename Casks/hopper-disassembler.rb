@@ -13,14 +13,13 @@ cask 'hopper-disassembler' do
   depends_on :macos => '>= :lion'
 
   app 'Hopper Disassembler v3.app'
-
   binary 'Hopper Disassembler v3.app/Contents/MacOS/hopper'
 
   zap :delete => [
-                  '~/Library/Application Support/Hopper',
-                  '~/Library/Application Support/Hopper Disassembler v3',
-                  '~/Library/Caches/com.cryptic-apps.hopper-web-3',
-                  '~/Library/Preferences/com.cryptic-apps.hopper-web-3.plist',
-                  '~/Library/Saved Application State/com.cryptic-apps.hopper-web-3.savedState'
+                   '~/Library/Application Support/Hopper',
+                   '~/Library/Application Support/Hopper Disassembler v3',
+                   '~/Library/Caches/com.cryptic-apps.hopper-web-3',
+                   '~/Library/Preferences/com.cryptic-apps.hopper-web-3.plist',
+                   '~/Library/Saved Application State/com.cryptic-apps.hopper-web-3.savedState',
                  ]
 end

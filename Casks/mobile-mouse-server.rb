@@ -10,9 +10,10 @@ cask 'mobile-mouse-server' do
   app 'Mobile Mouse Server.app'
 
   uninstall :quit => 'com.rpatechnology.mobilemouse'
+
   zap :delete => [
-                  '/Users/tangestani/Library/Caches/com.crashlytics.data/com.rpatechnology.mobilemouse',
-                  '/Users/tangestani/Library/Caches/com.rpatechnology.mobilemouse',
-                  '/Users/tangestani/Library/Preferences/com.rpatechnology.mobilemouse.plist'
+                   '/Users/tangestani/Library/Caches/com.crashlytics.data/com.rpatechnology.mobilemouse',
+                   '/Users/tangestani/Library/Caches/com.rpatechnology.mobilemouse',
+                   '/Users/tangestani/Library/Preferences/com.rpatechnology.mobilemouse.plist',
                  ]
 end

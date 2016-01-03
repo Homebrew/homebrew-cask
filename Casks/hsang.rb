@@ -4,11 +4,11 @@ cask 'hsang' do
 
   # netease.com is the official download host per the vendor homepage
   url "http://nie.gdl.netease.com/lushi/HSAng_#{version}.dmg"
-  name 'HSAng'
   appcast 'http://lushi.163.com/mac.xml',
           :sha256 => '61a0d703f0f0f0b76472870df97016a346e53f23e223ebb9ba02c5a0c2fc2980'
+  name 'HSAng'
   homepage 'http://lushi.163.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'HSAng.app'
 end

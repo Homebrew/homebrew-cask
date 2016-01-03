@@ -9,20 +9,20 @@ cask 'dockertoolbox' do
   homepage 'https://www.docker.com/toolbox'
   license :apache
 
-  pkg "DockerToolbox-#{version}.pkg"
+  depends_on :cask => 'virtualbox'
 
   postflight do
     set_ownership '~/.docker'
   end
 
-  uninstall :pkgutil => [
-                         'io.boot2dockeriso.pkg.boot2dockeriso',
-                         'io.docker.pkg.docker',
-                         'io.docker.pkg.dockercompose',
-                         'io.docker.pkg.dockermachine',
-                         'io.docker.pkg.dockerquickstartterminalapp',
-                         'io.docker.pkg.kitematicapp',
-                        ]
+  pkg "DockerToolbox-#{version}.pkg"
 
-  depends_on :cask => 'virtualbox'
+  uninstall :pkgutil => [
+                          'io.boot2dockeriso.pkg.boot2dockeriso',
+                          'io.docker.pkg.docker',
+                          'io.docker.pkg.dockercompose',
+                          'io.docker.pkg.dockermachine',
+                          'io.docker.pkg.dockerquickstartterminalapp',
+                          'io.docker.pkg.kitematicapp',
+                        ]
 end

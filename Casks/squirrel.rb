@@ -13,5 +13,5 @@ cask 'squirrel' do
   pkg 'Squirrel.pkg'
 
   uninstall :pkgutil => 'com.googlecode.rimeime.Squirrel.pkg',
-            :delete => '/Library/Input Methods/Squirrel.app'
+            :delete  => '/Library/Input Methods/Squirrel.app'
 end

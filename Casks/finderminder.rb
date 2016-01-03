@@ -9,9 +9,9 @@ cask 'finderminder' do
   homepage 'http://irradiatedsoftware.com/labs'
   license :gratis
 
-  app 'FinderMinder.app'
-
   accessibility_access true
+
+  app 'FinderMinder.app'
 
   zap :delete => '~/Library/Preferences/com.irradiatedsoftware.FinderMinder.plist'
 end

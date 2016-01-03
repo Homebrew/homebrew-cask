@@ -8,5 +8,6 @@ cask 'anonym' do
   license :oss
 
   container :nested => "Anonym #{version}.dmg"
+
   app 'Anonym.app'
 end

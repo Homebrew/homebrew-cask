@@ -4,16 +4,16 @@ cask 'nvalt' do
 
   # designheresy.com is the official download host per the vendor homepage
   url "http://abyss.designheresy.com/nvaltb/nvalt#{version}.zip"
-  name 'nvALT'
   appcast 'http://abyss.designheresy.com/nvalt2/nvalt2main.xml',
           :sha256 => '46ab145d41812854224a0341afa320e672ea53348abe61ce08ecf84326b1b2c4'
+  name 'nvALT'
   homepage 'http://brettterpstra.com/project/nvalt/'
   license :bsd
 
   app 'nvALT.app'
 
   zap :delete => [
-                  '~/Library/Preferences/net.elasticthreads.nv.plist',
-                  '~/Library/Application Support/Notational Velocity',
+                   '~/Library/Preferences/net.elasticthreads.nv.plist',
+                   '~/Library/Application Support/Notational Velocity',
                  ]
 end

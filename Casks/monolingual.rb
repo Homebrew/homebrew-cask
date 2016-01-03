@@ -1,5 +1,4 @@
 cask 'monolingual' do
-
   if MacOS.release <= :tiger
     version '1.3.9'
     sha256 '7bf1ec8642ec8674443945dec12cf9c991306912e1e27c305c6db4776e037b16'

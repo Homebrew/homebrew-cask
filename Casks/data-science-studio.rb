@@ -5,7 +5,7 @@ cask 'data-science-studio' do
   url "https://downloads.dataiku.com/public/studio/Data%20Science%20Studio%20#{version}.dmg"
   name 'Dataiku Data Science Studio'
   homepage 'https://www.dataiku.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'DataScienceStudio.app'
 end

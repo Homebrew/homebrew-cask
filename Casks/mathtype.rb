@@ -10,5 +10,5 @@ cask 'mathtype' do
   installer :manual => "MTM#{version.delete('.')}h_EN.pkg"
 
   uninstall :pkgutil => "com.dessci.mathtype#{version.delete('.')}Hf.MathType.pkg",
-            :delete => "/Applications/MathType #{version.to_i}"
+            :delete  => "/Applications/MathType #{version.to_i}"
 end

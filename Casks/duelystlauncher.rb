@@ -13,9 +13,9 @@ cask 'duelystlauncher' do
   uninstall :delete => '~/.counterplay'
 
   zap :delete => [
-                  '~/Library/Application Support/Duelyst',
-                  '~/Library/Application Support/DuelystLauncher',
-                  '~/Library/Preferences/com.electron.duelyst.plist',
-                  '~/Library/Preferences/com.electron.duelystlauncher.plist',
+                   '~/Library/Application Support/Duelyst',
+                   '~/Library/Application Support/DuelystLauncher',
+                   '~/Library/Preferences/com.electron.duelyst.plist',
+                   '~/Library/Preferences/com.electron.duelystlauncher.plist',
                  ]
 end

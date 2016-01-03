@@ -7,7 +7,7 @@ cask 'vlcstreamer' do
           :sha256 => '4f399361af7aea85d00ba7b89def316f121459f30a397753695a3c73d3e9b053'
   name 'VLC Streamer'
   homepage 'http://hobbyistsoftware.com/vlcstreamer'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'VLCStreamer.app'
 end

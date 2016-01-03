@@ -15,9 +15,9 @@ cask 'transmission' do
   app 'Transmission.app'
 
   zap :delete => [
-                  '~/Library/Application Support/Transmission',
-                  '~/Library/Preferences/org.m0k.transmission.plist',
-                  '~/Library/Preferences/org.m0k.transmission.LSSharedFileList.plist',
-                  '~/Library/Caches/org.m0k.transmission',
+                   '~/Library/Application Support/Transmission',
+                   '~/Library/Preferences/org.m0k.transmission.plist',
+                   '~/Library/Preferences/org.m0k.transmission.LSSharedFileList.plist',
+                   '~/Library/Caches/org.m0k.transmission',
                  ]
 end

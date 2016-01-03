@@ -10,7 +10,7 @@ cask 'google-drive' do
   app 'Google Drive.app'
 
   zap :delete => [
-                  '~/Library/Application Support/Google/Drive',
-                  '~/Library/Preferences/com.google.GoogleDrive.plist',
+                   '~/Library/Application Support/Google/Drive',
+                   '~/Library/Preferences/com.google.GoogleDrive.plist',
                  ]
 end

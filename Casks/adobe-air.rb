@@ -12,12 +12,13 @@ cask 'adobe-air' do
             :sudo   => true
 
   uninstall :script => {
-                        :executable => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
-                        :args       => %w[-uninstall]
+                         :executable => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
+                         :args       => %w[-uninstall],
                        }
+
   zap :delete => [
-                  '~/Library/Application Support/Adobe/AIR',
-                  '~/Library/Caches/com.adobe.air.ApplicationInstaller',
+                   '~/Library/Application Support/Adobe/AIR',
+                   '~/Library/Caches/com.adobe.air.ApplicationInstaller',
                  ],
       :rmdir  => '~/Library/Application Support/Adobe/'
 end

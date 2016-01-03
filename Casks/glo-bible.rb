@@ -7,7 +7,7 @@ cask 'glo-bible' do
   name 'Glo'
   name 'Glo Bible'
   homepage 'https://globible.com/gloformac/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Glo Bible.app'
 end

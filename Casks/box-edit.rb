@@ -9,16 +9,15 @@ cask 'box-edit' do
 
   app 'Install Box Edit.app/Contents/Resources/Box Edit.app',
       :target => "#{ENV['HOME']}/Library/Application Support/Box/Box Edit/Box Edit.app"
-
   internet_plugin 'Install Box Edit.app/Contents/Resources/Box Edit.plugin'
 
-  uninstall :quit =>  [
-                        'com.Box.Box-Edit',
-                        'com.box.Box-Local-Com-Server'
-                      ]
+  uninstall :quit => [
+                       'com.Box.Box-Edit',
+                       'com.box.Box-Local-Com-Server',
+                     ]
 
   zap :delete => '~/Library/Application Support/Box/Box Edit',
-      :rmdir => '~/Library/Application Support/Box'
+      :rmdir  => '~/Library/Application Support/Box'
 
   caveats <<-EOS.undent
     Box Edit currently only works with Safari and Firefox.

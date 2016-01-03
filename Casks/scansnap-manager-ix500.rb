@@ -8,9 +8,9 @@ cask 'scansnap-manager-ix500' do
   homepage 'https://www.fujitsu.com/global/support/products/computing/peripheral/scanners/scansnap/software/ix500.html'
   license :gratis
 
+  depends_on :macos => '>= :lion'
+
   pkg 'ScanSnap Manager.pkg'
 
   uninstall :pkgutil => 'jp.co.pfu.ScanSnap.*'
-
-  depends_on :macos => '>= :lion'
 end

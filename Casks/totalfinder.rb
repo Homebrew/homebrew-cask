@@ -10,8 +10,8 @@ cask 'totalfinder' do
   pkg 'TotalFinder.pkg'
 
   uninstall :pkgutil => 'com.binaryage.pkg.totalfinder.app',
-            :script => {
-                        :executable => 'TotalFinder Uninstaller.app/Contents/MacOS/TotalFinder Uninstaller',
-                        :args => %w[--headless],
-                       }
+            :script  => {
+                          :executable => 'TotalFinder Uninstaller.app/Contents/MacOS/TotalFinder Uninstaller',
+                          :args       => %w[--headless],
+                        }
 end

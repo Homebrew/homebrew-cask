@@ -12,14 +12,14 @@ cask 'fontexplorer-x-pro' do
   app 'FontExplorer X Pro.app'
 
   zap :delete => [
-                  '/Library/PrivilegedHelperTools/com.linotype.FontExplorerX.securityhelper',
-                  '/Library/LaunchDaemons/com.linotype.FontExplorerX.securityhelper.plist',
-                  '~/Library/Application Support/Linotype/FontExplorer X',
-                  '~/Library/Application\ Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.linotype.fontexplorerx.sfl',
-                  '~/Library/Caches/com.linotype.FontExplorerX',
-                  '~/Library/Cookies/com.linotype.FontExplorerX.binarycookies',
-                  '~/Library/LaunchAgents/com.linotype.FontFolderProtector.plist',
-                  '~/Library/Preferences/com.linotype.FontExplorerX.plist',
-                  '~/Library/Saved\ Application\ State/com.linotype.FontExplorerX.savedState',
+                   '/Library/PrivilegedHelperTools/com.linotype.FontExplorerX.securityhelper',
+                   '/Library/LaunchDaemons/com.linotype.FontExplorerX.securityhelper.plist',
+                   '~/Library/Application Support/Linotype/FontExplorer X',
+                   '~/Library/Application\ Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.linotype.fontexplorerx.sfl',
+                   '~/Library/Caches/com.linotype.FontExplorerX',
+                   '~/Library/Cookies/com.linotype.FontExplorerX.binarycookies',
+                   '~/Library/LaunchAgents/com.linotype.FontFolderProtector.plist',
+                   '~/Library/Preferences/com.linotype.FontExplorerX.plist',
+                   '~/Library/Saved\ Application\ State/com.linotype.FontExplorerX.savedState',
                  ]
 end

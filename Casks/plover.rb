@@ -10,7 +10,7 @@ cask 'plover' do
   homepage 'http://stenoknight.com/wiki/Main_Page'
   license :gpl
 
-  app 'plover.app'
-
   accessibility_access true
+
+  app 'plover.app'
 end

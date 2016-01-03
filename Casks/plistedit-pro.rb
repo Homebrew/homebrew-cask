@@ -10,7 +10,7 @@ cask 'plistedit-pro' do
   app 'PlistEdit Pro.app'
 
   zap :delete => [
-    '~/Library/Preferences/com.fatcatsoftware.pledpro.plist',
-    '~/Library/Application Support/PlistEdit Pro'
-  ]
+                   '~/Library/Preferences/com.fatcatsoftware.pledpro.plist',
+                   '~/Library/Application Support/PlistEdit Pro',
+                 ]
 end

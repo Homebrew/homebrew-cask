@@ -9,14 +9,14 @@ cask 'ubar' do
   homepage 'http://brawersoftware.com/products/ubar'
   license :commercial
 
-  app 'uBar.app'
-
   depends_on :macos => '>= :mavericks'
 
+  app 'uBar.app'
+
   zap :delete => [
-                  '~/Library/Application Support/uBar',
-                  '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ca.brawer.ubar.sfl',
-                  '~/Library/Caches/ca.brawer.uBar',
-                  '~/Library/Preferences/ca.brawer.uBar.plist',
+                   '~/Library/Application Support/uBar',
+                   '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ca.brawer.ubar.sfl',
+                   '~/Library/Caches/ca.brawer.uBar',
+                   '~/Library/Preferences/ca.brawer.uBar.plist',
                  ]
 end

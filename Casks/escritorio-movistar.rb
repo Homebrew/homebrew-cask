@@ -5,16 +5,16 @@ cask 'escritorio-movistar' do
   url "https://www.movistar.es/estaticos/descargaaplicaciones/Escritorio%20Movistar_v#{version}.pkg"
   name 'Escritorio Movistar'
   homepage 'https://www.movistar.es/particulares/servicios/descargaaplicaciones'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "Escritorio Movistar_v#{version}.pkg"
 
-  uninstall :quit => 'com.movistar.tgcm.devel.tme',
+  uninstall :quit    => 'com.movistar.tgcm.devel.tme',
             :pkgutil => [
                           'com.ZTE.DatacardDriver.MacV1.3.41NDISICAEM1000.01.02',
                           'com.bellardo.driver.HuaweiDataCardDriver',
                           'com.movistar.tgcm.tme',
-                          'com.novatelwireless.3G'
+                          'com.novatelwireless.3G',
                         ]
 
   caveats do

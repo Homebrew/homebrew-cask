@@ -9,7 +9,7 @@ cask 'weibox' do
   homepage 'https://weiboformac.sinaapp.com'
   license :gratis
 
-  app 'WeiboX.app'
-
   depends_on :macos => '>= :mountain_lion'
+
+  app 'WeiboX.app'
 end

@@ -7,12 +7,12 @@ cask 'adobe-photoshop-lightroom' do
   homepage 'https://www.adobe.com/products/photoshop-lightroom.html'
   license :commercial
 
-  zap       :delete => [
-                        '~/Library/Application Support/Adobe/Lightroom',
-                        "~/Library/Preferences/com.adobe.Lightroom#{version.to_i}.plist"
-                       ]
-
   depends_on :cask => 'caskroom/versions/adobe-photoshop-lightroom600'
+
+  zap :delete => [
+                   '~/Library/Application Support/Adobe/Lightroom',
+                   "~/Library/Preferences/com.adobe.Lightroom#{version.to_i}.plist",
+                 ]
 
   # staged_path not available in Installer/Uninstall Stanza, workaround by nesting with preflight/postflight
   # see https://github.com/caskroom/homebrew-cask/pull/8887

@@ -25,9 +25,9 @@ cask 'wkhtmltopdf' do
                           '/usr/local/lib/libwkhtmltox.dylib',
                           "/usr/local/lib/libwkhtmltox.#{version.to_i}.dylib",
                           "/usr/local/lib/libwkhtmltox.#{version.to_f}.dylib",
-                          "/usr/local/lib/libwkhtmltox.#{version.sub(%r{-.*$},'')}.dylib",
+                          "/usr/local/lib/libwkhtmltox.#{version.sub(%r{-.*$}, '')}.dylib",
                           '/usr/local/bin/wkhtmltoimage',
-                          '/usr/local/bin/wkhtmltopdf'
+                          '/usr/local/bin/wkhtmltopdf',
                         ]
 
   caveats do

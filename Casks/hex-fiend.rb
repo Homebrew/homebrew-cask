@@ -17,7 +17,7 @@ cask 'hex-fiend' do
   end
 
   zap :delete => [
-                  '~/Library/Preferences/com.ridiculousfish.HexFiend.LSSharedFileList.plist',
-                  '~/Library/Preferences/com.ridiculousfish.HexFiend.plist'
+                   '~/Library/Preferences/com.ridiculousfish.HexFiend.LSSharedFileList.plist',
+                   '~/Library/Preferences/com.ridiculousfish.HexFiend.plist',
                  ]
 end

@@ -8,5 +8,6 @@ cask 'fluxus' do
   license :gpl
 
   container :nested => "fluxus-#{version}.mac_intel.10.5.dmg"
+
   app 'Fluxus.app'
 end

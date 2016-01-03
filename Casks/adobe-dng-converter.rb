@@ -9,7 +9,7 @@ cask 'adobe-dng-converter' do
 
   pkg "DNGConverter_#{version.gsub('.', '_')}.pkg"
 
-  uninstall :delete => '/Applications/Adobe DNG Converter.app',
+  uninstall :delete  => '/Applications/Adobe DNG Converter.app',
             :pkgutil => 'com.adobe.adobeDngConverter*',
-            :quit =>    'com.adobe.DNGConverter'
+            :quit    => 'com.adobe.DNGConverter'
 end

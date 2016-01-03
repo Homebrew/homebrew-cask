@@ -8,5 +8,6 @@ cask 'macmoney' do
   license :commercial
 
   container :nested => "MacMoney_#{version}.dmg"
+
   app 'MacMoney.app'
 end
