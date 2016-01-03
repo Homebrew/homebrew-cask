@@ -41,8 +41,8 @@ def shutup
   end
 end
 
-def sudo(cmd)
-  %w[/usr/bin/sudo -E --] + Array(cmd)
+def sudo(*args)
+  %w[/usr/bin/sudo -E --] + Array(args).flatten
 end
 
 # making homebrew's cache dir allows us to actually download Casks in tests
