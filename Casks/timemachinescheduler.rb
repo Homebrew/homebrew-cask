@@ -10,5 +10,6 @@ cask 'timemachinescheduler' do
   license :gratis
 
   container :nested => 'TimeMachineScheduler3_Installer.dmg'
+
   prefpane 'TimeMachineScheduler3_Installer.app/Contents/Resources/TimeMachineScheduler.prefPane'
 end
