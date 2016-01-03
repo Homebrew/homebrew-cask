@@ -5,11 +5,12 @@ cask 'cloudera-hive-odbc' do
   url "https://downloads.cloudera.com/connectors/hive-#{version}.1006/MacOSX/ClouderaHiveODBC.dmg"
   name 'Cloudera ODBC Driver for Hive'
   homepage 'http://www.cloudera.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'ClouderaHiveODBC.pkg'
 
   uninstall :pkgutil => 'cloudera.hiveodbc'
+
   caveats <<-EOS.undent
     For configuration instructions, see
 
