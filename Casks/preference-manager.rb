@@ -7,7 +7,7 @@ cask 'preference-manager' do
           :sha256 => '9892c646befabc81e7b5020de103abeb1e72d3090ebd421407112407e0626a37'
   name 'Preference Manager'
   homepage 'https://www.digitalrebellion.com/prefman'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Preference Manager.app'
 end
