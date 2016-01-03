@@ -7,7 +7,7 @@ cask 'snip' do
   homepage 'http://snip.qq.com/'
   license :gratis
 
-  pkg "Snip_V#{version.sub(%r{^(\d+\.\d+).*},'\1')}.pkg"
+  pkg "Snip_V#{version.sub(%r{^(\d+\.\d+).*}, '\1')}.pkg"
 
   uninstall :pkgutil => 'com.tencent.snip.Snip.pkg'
 end
