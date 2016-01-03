@@ -6,7 +6,7 @@ test_cask 'with-depends-on-macos-array' do
   homepage 'http://example.com/with-depends-on-macos-array'
 
   # since all OS releases are included, this should always pass
-  depends_on :macos => [ '10.0', '10.1', '10.2', '10.3', '10.3', '10.5', '10.6', '10.7', '10.8', '10.9', '10.10', MacOS.release.to_s ]
+  depends_on :macos => ['10.0', '10.1', '10.2', '10.3', '10.3', '10.5', '10.6', '10.7', '10.8', '10.9', '10.10', MacOS.release.to_s]
 
   app 'Caffeine.app'
 end

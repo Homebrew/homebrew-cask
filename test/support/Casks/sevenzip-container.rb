@@ -6,5 +6,6 @@ test_cask 'sevenzip-container' do
   homepage 'http://example.com/sevenzip-container'
 
   depends_on :formula => 'unar'
+
   app 'sevenzipcontainer/Application.app'
 end

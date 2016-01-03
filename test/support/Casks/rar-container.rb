@@ -6,5 +6,6 @@ test_cask 'rar-container' do
   homepage 'http://example.com/rar-container'
 
   depends_on :formula => 'unar'
+
   app 'rarcontainer/Application.app'
 end

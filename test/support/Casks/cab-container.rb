@@ -6,5 +6,6 @@ test_cask 'cab-container' do
   homepage 'http://example.com/cab-container'
 
   depends_on :formula => 'cabextract'
+
   app 'cabcontainer/Application.app'
 end

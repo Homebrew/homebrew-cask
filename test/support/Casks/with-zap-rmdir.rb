@@ -6,5 +6,6 @@ test_cask 'with-zap-rmdir' do
   homepage 'http://example.com/fancy-pkg'
 
   pkg 'MyFancyPkg/Fancy.pkg'
+
   zap :rmdir => TestHelper.local_binary_path('empty_directory')
 end

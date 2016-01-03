@@ -5,7 +5,7 @@ test_cask 'invalid-gpg-conflicting-keys' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/invalid-gpg-conflicting-keys'
   gpg 'http://example.com/gpg-signature.asc',
-      :key_id => '01234567',
+      :key_id  => '01234567',
       :key_url => 'http://example.com/gpg-key-url'
 
   app 'Caffeine.app'

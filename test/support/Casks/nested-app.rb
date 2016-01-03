@@ -6,5 +6,6 @@ test_cask 'nested-app' do
   homepage 'http://example.com/nested-app'
 
   container :nested => 'NestedApp.dmg'
+
   app 'MyNestedApp.app'
 end
