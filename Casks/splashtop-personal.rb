@@ -6,7 +6,7 @@ cask 'splashtop-personal' do
   url "https://d17kmd0va0f0mp.cloudfront.net/macclient/STP/Splashtop_Personal_v#{version}.dmg"
   name 'Splashtop Personal'
   homepage 'http://www.splashtop.com/personal'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Splashtop Personal.pkg'
 
