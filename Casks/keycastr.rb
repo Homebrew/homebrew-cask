@@ -9,7 +9,7 @@ cask 'keycastr' do
   homepage 'https://github.com/keycastr/keycastr'
   license :bsd
 
-  app 'KeyCastr.app'
-
   accessibility_access true
+
+  app 'KeyCastr.app'
 end
