@@ -378,7 +378,7 @@ You should also check stylistic details with the [`rubocop`](https://github.com/
 ```bash
 cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask"
 bundle install
-bundle exec rubocop Casks/my-new-cask.rb
+bundle exec rubocop --auto-correct Casks/my-new-cask.rb
 ```
 
 Keep in mind all of these checks will be made when you submit your PR, so by doing them in advance you’re saving everyone a lot of time and trouble.
