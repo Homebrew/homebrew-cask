@@ -6,5 +6,6 @@ test_cask 'with-gpg-key-url' do
   homepage 'http://example.com/with-gpg-key-url'
   gpg 'http://example.com/gpg-signature.asc',
       :key_url => 'http://example.com/gpg-key-url'
+
   app 'Caffeine.app'
 end

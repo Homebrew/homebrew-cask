@@ -6,5 +6,6 @@ test_cask 'with-uninstall-kext' do
   homepage 'http://example.com/fancy-pkg'
 
   pkg 'Fancy.pkg'
+
   uninstall :kext => 'my.fancy.package.kernelextension'
 end

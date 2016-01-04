@@ -9,7 +9,7 @@ test_cask 'with-installer-script' do
             :args   => ['--flag']
   # acceptable alternate form
   installer :script => {
-                        :executable => '/usr/bin/false',
-                        :args       => ['--flag'],
+                         :executable => '/usr/bin/false',
+                         :args       => ['--flag'],
                        }
 end

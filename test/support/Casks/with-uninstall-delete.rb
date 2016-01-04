@@ -8,9 +8,9 @@ test_cask 'with-uninstall-delete' do
   pkg 'Fancy.pkg'
 
   uninstall :delete => [
-                        '/permissible/absolute/path',
-                        '~/permissible/path/with/tilde',
-                        'impermissible/relative/path',
-                        '/another/impermissible/../relative/path',
+                         '/permissible/absolute/path',
+                         '~/permissible/path/with/tilde',
+                         'impermissible/relative/path',
+                         '/another/impermissible/../relative/path',
                        ]
 end

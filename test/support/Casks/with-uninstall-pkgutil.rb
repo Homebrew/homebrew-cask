@@ -6,5 +6,6 @@ test_cask 'with-uninstall-pkgutil' do
   homepage 'http://example.com/fancy-pkg'
 
   pkg 'Fancy.pkg'
+
   uninstall :pkgutil => 'my.fancy.package.*'
 end

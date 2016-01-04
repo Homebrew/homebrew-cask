@@ -8,7 +8,7 @@ test_cask 'with-zap-signal' do
   pkg 'MyFancyPkg/Fancy.pkg'
 
   zap :signal => [
-                        ['TERM', 'my.fancy.package.app'],
-                        ['KILL', 'my.fancy.package.app']
-                       ]
+                   ['TERM', 'my.fancy.package.app'],
+                   ['KILL', 'my.fancy.package.app'],
+                 ]
 end

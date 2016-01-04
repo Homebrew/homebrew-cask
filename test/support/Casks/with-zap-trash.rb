@@ -8,9 +8,9 @@ test_cask 'with-zap-trash' do
   pkg 'Fancy.pkg'
 
   zap :trash => [
-                       '/permissible/absolute/path',
-                       '~/permissible/path/with/tilde',
-                       'impermissible/relative/path',
-                       '/another/impermissible/../relative/path',
-                      ]
+                  '/permissible/absolute/path',
+                  '~/permissible/path/with/tilde',
+                  'impermissible/relative/path',
+                  '/another/impermissible/../relative/path',
+                ]
 end

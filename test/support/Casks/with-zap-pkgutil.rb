@@ -6,5 +6,6 @@ test_cask 'with-zap-pkgutil' do
   homepage 'http://example.com/fancy-pkg'
 
   pkg 'Fancy.pkg'
+
   zap :pkgutil => 'my.fancy.package.*'
 end
