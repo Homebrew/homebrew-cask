@@ -1,4 +1,4 @@
-homebrew-cask(1) — A friendly binary installer for OS X
+homebrew-cask(1) - A friendly binary installer for OS X
 ========================================================
 
 ## SYNOPSIS
@@ -189,10 +189,12 @@ in a future version.
 Homebrew-cask is implemented as a external command for Homebrew. That means
 this project is entirely built upon the Homebrew infrastructure. For
 example, upgrades to the Homebrew-cask tool are received through Homebrew:
-    `brew update; brew cleanup; brew cask cleanup`
+
+    brew update; brew cleanup; brew cask cleanup
 
 And updates to individual Cask definitions are received whenever you issue
 the Homebrew command:
+
     brew update
 
 ## OTHER WAYS TO SPECIFY A CASK
