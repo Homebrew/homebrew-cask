@@ -32,3 +32,9 @@ task :console do
   ARGV.clear
   Hbc.pry
 end
+
+desc 'Generate man page from Markdown source'
+task :man do
+  sh 'ronn --roff --pipe --organization=Homebrew-cask --manual=brew-cask ' \
+     'doc/src/brew-cask.1.md > man/man1/brew-cask.1'
+end
