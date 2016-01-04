@@ -11,6 +11,7 @@ cask 'istat-server' do
 
   uninstall :script  => '/Applications/iStat Server.app/Contents/Resources/Uninstaller',
             :pkgutil => 'com.bjango.istatserver.*'
+
   caveats do
     reboot
   end

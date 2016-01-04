@@ -12,6 +12,8 @@ cask 'linphone' do
 
   container :type => :xar
 
+  app 'Linphone.app'
+
   preflight do
     system '/usr/bin/tar', '-xf', "#{staged_path}/linphone.pkg/Payload", '-C', staged_path
   end
@@ -20,6 +22,4 @@ cask 'linphone' do
     system 'rm', '-rf', "#{staged_path}/linphone.pkg"
     system 'rm', '-f', "#{staged_path}/Distribution"
   end
-
-  app 'Linphone.app'
 end

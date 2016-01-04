@@ -10,9 +10,9 @@ cask 'flixster-desktop' do
   homepage 'https://www.flixster.com/about/ultraviolet/'
   license :gratis
 
+  app 'Flixster Desktop.app'
+
   postflight do
     suppress_move_to_applications :key => 'moveToApplicationsFolderAlertSuppress'
   end
-
-  app 'Flixster Desktop.app'
 end

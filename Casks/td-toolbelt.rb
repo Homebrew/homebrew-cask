@@ -9,11 +9,11 @@ cask 'td-toolbelt' do
 
   container :type => :naked
 
+  pkg 'td-toolbelt.pkg'
+
   preflight do
     system '/bin/mv', '--', "#{staged_path}/mac", "#{staged_path}/td-toolbelt.pkg"
   end
-
-  pkg 'td-toolbelt.pkg'
 
   uninstall :pkgutil => 'com.td.toolbelt'
 

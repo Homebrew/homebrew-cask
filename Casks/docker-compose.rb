@@ -12,11 +12,11 @@ cask 'docker-compose' do
 
   depends_on :cask => 'docker'
   depends_on :arch => :x86_64
-  postflight do
-    set_permissions "#{staged_path}/docker-compose-Darwin-x86_64", '0755'
-  end
-
   container :type => :naked
 
   binary 'docker-compose-Darwin-x86_64', :target => 'docker-compose'
+
+  postflight do
+    set_permissions "#{staged_path}/docker-compose-Darwin-x86_64", '0755'
+  end
 end

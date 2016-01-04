@@ -14,6 +14,7 @@ cask 'chrome-remote-desktop-host' do
                           :args       => %w[--no-ui],
                         },
             :pkgutil => 'com.google.pkg.ChromeRemoteDesktopHost'
+
   caveats do
     logout
   end

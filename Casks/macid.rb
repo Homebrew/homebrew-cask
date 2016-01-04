@@ -9,11 +9,11 @@ cask 'macid' do
 
   depends_on :macos => '>= :yosemite'
 
+  app 'MacID.app'
+
   postflight do
     suppress_move_to_applications
   end
-
-  app 'MacID.app'
 
   zap :delete => '~/Library/Preferences/com.kanecheshire.MacIDOSX.plist'
 end
