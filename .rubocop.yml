@@ -5,6 +5,7 @@ AllCops:
     - '**/Gemfile'
     - '**/Rakefile'
     - '**/brew-cask.rb'
+    - '**/invalid-header-format.rb'
     - '**/spec/*.rb'
     - '**/spec/support/*.rb'
     - '**/test/*.rb'
