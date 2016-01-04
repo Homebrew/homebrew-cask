@@ -9,6 +9,6 @@ test_cask 'with-conditional-caveats' do
 
   # a do block may print and use a DSL
   caveats do
-    puts 'This caveat is conditional' if false
+    puts 'This caveat is conditional' if false # rubocop:disable Lint/LiteralInCondition
   end
 end
