@@ -126,6 +126,9 @@ class Hbc::CaskInvalidError < Hbc::CaskError
   end
 end
 
+class Hbc::CaskHeaderParseError < Hbc::CaskInvalidError
+end
+
 class Hbc::CaskSha256MissingError < ArgumentError
 end
 
