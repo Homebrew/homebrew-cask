@@ -13,7 +13,7 @@ enter_build_step
 header 'Running script.sh...'
 
 run bundle exec rake test:coverage
-run bundle exec rake coveralls:push
+run bundle exec rake coveralls:push || true # in case of networking errors
 run bundle exec rake rubocop
 
 if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then
