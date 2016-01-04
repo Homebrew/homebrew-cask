@@ -18,6 +18,7 @@ cask 'daisydisk' do
   depends_on :macos => '>= :snow_leopard'
 
   app 'DaisyDisk.app'
+
   postflight do
     suppress_move_to_applications
   end

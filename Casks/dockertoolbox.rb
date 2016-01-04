@@ -11,11 +11,11 @@ cask 'dockertoolbox' do
 
   depends_on :cask => 'virtualbox'
 
+  pkg "DockerToolbox-#{version}.pkg"
+
   postflight do
     set_ownership '~/.docker'
   end
-
-  pkg "DockerToolbox-#{version}.pkg"
 
   uninstall :pkgutil => [
                           'io.boot2dockeriso.pkg.boot2dockeriso',

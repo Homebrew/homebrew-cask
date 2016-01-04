@@ -8,6 +8,7 @@ cask 'crosspack-avr' do
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'CrossPack-AVR.pkg'
+
   uninstall_postflight do
     IO.popen('/usr/bin/yes | /usr/bin/sudo -E -- /usr/local/CrossPack-AVR/uninstall && /usr/bin/sudo -- /usr/sbin/pkgutil --forget at.obdev.CrossPack-AVR', 'r+') do |pipe|
       pipe.close_write

@@ -12,9 +12,9 @@ cask 'docker' do
   depends_on :arch => :x86_64
   container :type => :naked
 
+  binary "docker-#{version}", :target => 'docker'
+
   postflight do
     set_permissions "#{staged_path}/docker-#{version}", '0755'
   end
-
-  binary "docker-#{version}", :target => 'docker'
 end

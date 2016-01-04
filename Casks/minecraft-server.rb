@@ -10,6 +10,8 @@ cask 'minecraft-server' do
 
   container :type => :naked
 
+  binary 'minecraft-server'
+
   preflight do
     FileUtils.touch "#{staged_path}/minecraft-server"
     minecraft_server = File.open "#{staged_path}/minecraft-server", 'w'
@@ -19,8 +21,6 @@ cask 'minecraft-server' do
     minecraft_server.puts 'java -Xmx1024M -Xms1024M -jar minecraft_server.1.8.8.jar nogui'
     minecraft_server.close
   end
-
-  binary 'minecraft-server'
 
   postflight do
     set_permissions "#{staged_path}/minecraft-server", '+x'

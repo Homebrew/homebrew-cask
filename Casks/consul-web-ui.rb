@@ -11,6 +11,7 @@ cask 'consul-web-ui' do
   depends_on :cask => 'consul'
 
   stage_only true
+
   caveats do
     "Invoke consul with '-ui-dir #{staged_path}'"
   end

@@ -7,11 +7,12 @@ cask 'nndd' do
   homepage 'https://osdn.jp/projects/nndd/'
   license :x11
 
+  depends_on :cask => 'adobe-air'
+
+  app 'NNDD.app'
+
   preflight do
     system_command staged_path.join('Install NNDD.app/Contents/MacOS/Install NNDD'),
                    :args => ['-silent', '-eulaAccepted', '-location', staged_path]
   end
-  depends_on :cask => 'adobe-air'
-
-  app 'NNDD.app'
 end

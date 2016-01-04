@@ -16,10 +16,6 @@ cask 'kaleidoscope' do
     suppress_move_to_applications
   end
 
-  caveats do
-    files_in_usr_local
-  end
-
   zap :delete => [
                    '~/Library/Application Support/Kaleidoscope',
                    '~/Library/Caches/com.blackpixel.kaleidoscope',
@@ -28,4 +24,8 @@ cask 'kaleidoscope' do
                    '~/Library/Preferences/com.blackpixel.kaleidoscope.plist',
                    '~/Library/Saved Application State/com.blackpixel.kaleidoscope.savedState',
                  ]
+
+  caveats do
+    files_in_usr_local
+  end
 end

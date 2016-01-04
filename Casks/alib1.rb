@@ -10,9 +10,9 @@ cask 'alib1' do
 
   depends_on :cask => 'adobe-air'
 
+  screen_saver 'Presstube-ALib1.app/Contents/Resources/Presstube - ALib1.saver'
+
   postflight do
     system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName ALib1 (Presstube)', "#{staged_path}/presstube-alib1.app/Contents/Resources/Presstube - ALib1.saver/Contents/Info.plist"
   end
-
-  screen_saver 'Presstube-ALib1.app/Contents/Resources/Presstube - ALib1.saver'
 end

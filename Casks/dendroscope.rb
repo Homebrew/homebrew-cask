@@ -8,11 +8,11 @@ cask 'dendroscope' do
   homepage 'http://dendroscope.org/'
   license :gpl
 
+  app 'Dendroscope.app'
+
   preflight do
     system "#{staged_path}/Dendroscope Installer.app/Contents/MacOS/JavaApplicationStub", '-q', '-dir', staged_path.to_s
   end
-
-  app 'Dendroscope.app'
 
   uninstall_preflight do
     system "#{staged_path}/Dendroscope Uninstaller.app/Contents/MacOS/JavaApplicationStub", '-q'

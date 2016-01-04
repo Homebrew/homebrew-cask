@@ -11,15 +11,15 @@ cask 'sencha' do
             :args   => ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
             :sudo   => true
 
+  postflight do
+    set_ownership '/opt/Sencha'
+  end
+
   uninstall :script => {
                          :executable => "/opt/Sencha/Cmd/#{version}/.install4j/Sencha Cmd Uninstaller.app/Contents/MacOS/JavaApplicationStub",
                          :args       => ['-Djava.awt.headless=true', '-q'],
                          :sudo       => true,
                        }
-
-  postflight do
-    set_ownership '/opt/Sencha'
-  end
 
   caveats do
     <<-EOS.undent

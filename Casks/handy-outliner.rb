@@ -10,6 +10,8 @@ cask 'handy-outliner' do
   depends_on :cask    => 'mono-mdk',
              :formula => 'djvulibre'
 
+  binary 'handy-outliner'
+
   preflight do
     FileUtils.touch "#{staged_path}/handy-outliner"
     handy_outliner = File.open "#{staged_path}/handy-outliner", 'w'
@@ -18,8 +20,6 @@ cask 'handy-outliner' do
     handy_outliner.puts "$BASEDIR/handyoutliner_#{version}/start-macos"
     handy_outliner.close
   end
-
-  binary 'handy-outliner'
 
   postflight do
     set_permissions "#{staged_path}/handy-outliner", '+x'

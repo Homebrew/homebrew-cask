@@ -12,6 +12,8 @@ cask 'jdownloader' do
   homepage 'http://jdownloader.org/'
   license :gpl
 
+  app 'JDownloader 2.0/JDownloader2.app'
+
   preflight do
     system "\"#{staged_path}/JDownloader Installer.app/Contents/MacOS/JavaApplicationStub\" " \
            "-dir \"#{staged_path}\" " \
@@ -22,8 +24,6 @@ cask 'jdownloader' do
            '-VaddToDockAction\$Boolean=false ' \
            '> /dev/null 2>&1'
   end
-
-  app 'JDownloader 2.0/JDownloader2.app'
 
   caveats <<-EOS.undent
     #{token} requires Java 6+, you can install the latest Java using

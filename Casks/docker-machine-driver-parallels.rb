@@ -11,11 +11,11 @@ cask 'docker-machine-driver-parallels' do
 
   depends_on :cask => 'docker-machine'
   depends_on :arch => :x86_64
-  postflight do
-    set_permissions "#{staged_path}/docker-machine-driver-parallels", '0755'
-  end
-
   container :type => :naked
 
   binary 'docker-machine-driver-parallels'
+
+  postflight do
+    set_permissions "#{staged_path}/docker-machine-driver-parallels", '0755'
+  end
 end
