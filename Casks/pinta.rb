@@ -10,7 +10,7 @@ cask 'pinta' do
   homepage 'http://pinta-project.com/'
   license :mit
 
-  app 'Pinta.app'
-
   depends_on :cask => 'mono-mdk'
+
+  app 'Pinta.app'
 end

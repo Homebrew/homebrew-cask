@@ -1,5 +1,4 @@
 cask 'rawtherapee' do
-
   if MacOS.release <= :mavericks
     version '4.2.171'
     sha256 'c898fd7fa1b0e588bc811f38345b39441ddad71cc0238d568e7407ae4e8b32c8'
@@ -21,8 +20,8 @@ cask 'rawtherapee' do
   else
     container :nested => "RawTherapee_OSX_10.10_64_#{version}.dmg"
   end
-  app 'RawTherapee.app'
-
   depends_on :macos => '>= :snow_leopard',
-             :arch => :x86_64
+             :arch  => :x86_64
+
+  app 'RawTherapee.app'
 end

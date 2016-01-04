@@ -6,12 +6,12 @@ cask 'iueditor' do
   url "https://iueditor.s3.amazonaws.com/Release/IUEditorV#{version}.zip"
   name 'JDLab IUEditor'
   homepage 'http://www.iueditor.org'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'IUEditor.app'
 
   zap :delete => [
-                  '~/Library/Preferences/org.jdlab.IUEditor.LSSharedFileList.plist',
-                  '~/Library/Preferences/org.jdlab.IUEditor.plist',
+                   '~/Library/Preferences/org.jdlab.IUEditor.LSSharedFileList.plist',
+                   '~/Library/Preferences/org.jdlab.IUEditor.plist',
                  ]
 end

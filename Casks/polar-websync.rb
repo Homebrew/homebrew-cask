@@ -12,6 +12,6 @@ cask 'polar-websync' do
   installer :manual => 'Polar WebSync.pkg'
 
   uninstall :pkgutil => 'fi.polar.websync.pkg',
-            :quit => 'fi.polar.WebSync',
-            :delete => '/Applications/WebSync.app'
+            :quit    => 'fi.polar.WebSync',
+            :delete  => '/Applications/WebSync.app'
 end

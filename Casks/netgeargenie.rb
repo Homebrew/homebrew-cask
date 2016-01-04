@@ -12,8 +12,8 @@ cask 'netgeargenie' do
   uninstall :quit    => 'com.yourcompany.NETGEARGenie',
             :pkgutil => 'com.netgear.netgearGenie.NETGEARGenie.pkg'
 
-  zap       :delete  => [
+  zap       :delete => [
                          '~/Library/Application Support/NETGEARGenie',
-                         '~/Library/Saved Application State/com.yourcompany.NETGEARGenie.savedState'
-                        ]
+                         '~/Library/Saved Application State/com.yourcompany.NETGEARGenie.savedState',
+                       ]
 end

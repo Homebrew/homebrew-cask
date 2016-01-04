@@ -1,5 +1,4 @@
 cask 'spectacle' do
-
   if MacOS.release <= :mountain_lion
     version '0.8.6'
     sha256 '3e367d2d7e6fe7d5f41d717d49cb087ba7432624b71ddd91c0cfa9d5a5459b7c'
@@ -22,8 +21,8 @@ cask 'spectacle' do
   uninstall :login_item => 'Spectacle'
 
   zap :delete => [
-                  '~/Library/Caches/com.divisiblebyzero.Spectacle',
-                  '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.divisiblebyzero.Spectacle',
-                  '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist',
+                   '~/Library/Caches/com.divisiblebyzero.Spectacle',
+                   '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.divisiblebyzero.Spectacle',
+                   '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist',
                  ]
 end

@@ -222,7 +222,7 @@ The following methods may be called to generate standard warning messages:
 | `logout`                          | users should log out and log back in to complete installation
 | `reboot`                          | users should reboot to complete installation
 | `files_in_usr_local`              | the Cask installs files to `/usr/local`, which may confuse Homebrew
-| `discontinued`                    | software has been officially discontinued upstream
+| `discontinued`                    | all software development has been officially discontinued upstream
 | `free_license(web_page)`          | users may get an official license to use the software at `web_page`
 
 Example:
@@ -292,6 +292,16 @@ Web browsers may obscure the direct `url` download location for a variety of rea
 ```bash
 $ ./developer/bin/list_url_attributes_on_file <file>
 ```
+
+### Subversion URLs
+
+In rare cases, a distribution may not be available over ordinary HTTP/S. Subversion URLs are also supported, and can be specified by appending the following key/value pairs to `url`:
+
+| key                | value       |
+| ------------------ | ----------- |
+| `:using`           | the symbol `:svn` is the only legal value
+| `:revision`        | a string identifying the subversion revision to download
+| `:trust_cert`      | set to `true` to automatically trust the certificate presented by the server (avoiding an interactive prompt)
 
 ## Appcast Stanza Details
 

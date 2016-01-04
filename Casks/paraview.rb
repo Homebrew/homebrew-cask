@@ -13,8 +13,8 @@ cask 'paraview' do
   homepage 'http://www.paraview.org/'
   license :bsd
 
-  app 'paraview.app'
-
   depends_on :arch => :x86_64
   depends_on :macos => '>= :snow_leopard'
+
+  app 'paraview.app'
 end

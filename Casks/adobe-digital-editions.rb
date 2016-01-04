@@ -1,6 +1,6 @@
 cask 'adobe-digital-editions' do
   version '4.0'
-  sha256 :no_check    # required as upstream package is updated in-place
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "http://download.adobe.com/pub/adobe/digitaleditions/ADE_#{version}_Installer.dmg"
   name 'Adobe Digital Editions'

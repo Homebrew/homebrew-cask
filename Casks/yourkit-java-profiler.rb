@@ -7,5 +7,5 @@ cask 'yourkit-java-profiler' do
   homepage 'https://www.yourkit.com/overview/'
   license :commercial
 
-  app "YourKit_Java_Profiler_#{version.gsub('-','_')}.app"
+  app "YourKit_Java_Profiler_#{version.gsub('-', '_')}.app"
 end

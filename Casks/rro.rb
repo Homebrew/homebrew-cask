@@ -12,26 +12,26 @@ cask 'rro' do
   pkg "RRO-#{version}-OSX.pkg"
 
   uninstall :pkgutil => [
-                         'com.mygreatcompany.pkg.untitled_package_1',
-                         'com.mygreatcompany.pkg.untitled-package',
-                         'org.R-project.R',
-                         'org.r-project.R-framework'
+                          'com.mygreatcompany.pkg.untitled_package_1',
+                          'com.mygreatcompany.pkg.untitled-package',
+                          'org.R-project.R',
+                          'org.r-project.R-framework',
                         ],
-            :delete => [
-                        '/usr/bin/R',
-                        '/usr/bin/Rscript',
-                        '/Library/Frameworks/R.Framework/Versions/Current',
-                        '/Library/Frameworks/R.Framework/Versions/3.2',
-                       ]
+            :delete  => [
+                          '/usr/bin/R',
+                          '/usr/bin/Rscript',
+                          '/Library/Frameworks/R.Framework/Versions/Current',
+                          '/Library/Frameworks/R.Framework/Versions/3.2',
+                        ]
 
   zap       :delete => [
-                        '~/.R',
-                        '~/.RData',
-                        '~/.Rapp.history',
-                        '~/.Rhistory',
-                        '~/.Rprofile',
-                        '~/Library/R',
-                        '~/Library/Caches/org.R-project.R',
+                         '~/.R',
+                         '~/.RData',
+                         '~/.Rapp.history',
+                         '~/.Rhistory',
+                         '~/.Rprofile',
+                         '~/Library/R',
+                         '~/Library/Caches/org.R-project.R',
                        ]
 
   caveats do

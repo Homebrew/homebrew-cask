@@ -7,8 +7,8 @@ cask 'mega' do
   homepage 'http://megasoftware.net/'
   license :gratis
 
-  app "MEGA#{version}-mac.app"
-
   depends_on :macos => '>= :snow_leopard'
   depends_on :arch => :intel
+
+  app "MEGA#{version}-mac.app"
 end

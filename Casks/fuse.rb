@@ -14,6 +14,7 @@ cask 'fuse' do
   end
 
   container :type => :pkg
+
   pkg 'fuse.pkg'
 
   uninstall :pkgutil => 'com.fusetools.fuse'

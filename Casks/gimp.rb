@@ -7,10 +7,10 @@ cask 'gimp' do
   homepage 'https://www.gimp.org'
   license :gpl
 
-  zap :delete => [
-    '~/Library/Application Support/GIMP',
-    '~/Library/Saved Application State/org.gnome.gimp.savedState'
-  ]
-
   app 'GIMP.app'
+
+  zap :delete => [
+                   '~/Library/Application Support/GIMP',
+                   '~/Library/Saved Application State/org.gnome.gimp.savedState',
+                 ]
 end

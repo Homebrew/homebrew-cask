@@ -51,5 +51,12 @@ describe Hbc::CLI do
         }
       }
     end
+
+    it "passes `--version` along to the subcommand" do
+      expect(Hbc::CLI).to receive(:run_command).with(noop_command, '--version')
+      shutup {
+        Hbc::CLI.process(['noop', '--version'])
+      }
+    end
   end
 end

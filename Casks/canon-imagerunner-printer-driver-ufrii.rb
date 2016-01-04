@@ -8,6 +8,7 @@ cask 'canon-imagerunner-printer-driver-ufrii' do
   license :gratis
 
   container :nested => "UFRII_v#{version}_MAC.dmg"
+
   pkg 'UFRII_LT_LIPS_LX_Installer.pkg'
 
   uninstall :pkgutil => 'jp.co.canon.CUPSPrinter.*'

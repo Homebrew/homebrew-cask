@@ -12,7 +12,7 @@ cask 'robomongo' do
   uninstall :quit => 'Robomongo'
 
   zap :delete => [
-    '~/.config/robomongo',
-    '~/Library/Saved Application State/Robomongo.savedState'
-  ]
+                   '~/.config/robomongo',
+                   '~/Library/Saved Application State/Robomongo.savedState',
+                 ]
 end

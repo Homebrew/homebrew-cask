@@ -12,7 +12,7 @@ cask 'lantern' do
   uninstall :quit => 'com.getlantern.lantern'
 
   zap :delete => [
-                  '~/Library/Application Support/Lantern',
-                  '~/Library/Logs/Lantern'
+                   '~/Library/Application Support/Lantern',
+                   '~/Library/Logs/Lantern',
                  ]
 end

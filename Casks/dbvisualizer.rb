@@ -7,13 +7,13 @@ cask 'dbvisualizer' do
   homepage 'https://www.dbvis.com/'
   license :commercial
 
-  installer :script => 'DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub',
-            :args => ['-q', '-dir', "#{staged_path}"],
-            :sudo => false
-
   app 'DbVisualizer.app'
+  installer :script => 'DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub',
+            :args   => ['-q', '-dir', staged_path.to_s],
+            :sudo   => false
 
-  uninstall :signal => [[ 'TERM', 'com.dbvis.DbVisualizer' ]]
+  uninstall :signal => [['TERM', 'com.dbvis.DbVisualizer']]
+
   zap :delete => '~/.dbvis'
 
   caveats <<-EOS.undent

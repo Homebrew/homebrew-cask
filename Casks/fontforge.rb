@@ -9,9 +9,9 @@ cask 'fontforge' do
   homepage 'https://fontforge.github.io/en-US/'
   license :bsd
 
-  app 'FontForge.app'
-
   depends_on :x11 => true
+
+  app 'FontForge.app'
 
   caveats <<-EOS.undent
     Version '2015-08-24' of #{token} has an issue that requires it to be launched from a terminal.

@@ -6,11 +6,12 @@ cask 'injection' do
   url "http://injectionforxcode.johnholdsworth.com/InjectionPluginV#{version}.pkg"
   name 'Injection for Xcode'
   homepage 'http://injectionforxcode.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "InjectionPluginV#{version}.pkg"
 
   uninstall :pkgutil => 'com.injectionforxcode.injectionPluginForXcode.InjectionPlugin.pkg',
-            :quit => 'com.johnholdsworth.InjectionPluginIII'
+            :quit    => 'com.johnholdsworth.InjectionPluginIII'
+
   zap       :delete => '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/InjectionPlugin.xcplugin'
 end

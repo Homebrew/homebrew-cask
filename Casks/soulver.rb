@@ -16,11 +16,10 @@ cask 'soulver' do
   end
 
   zap :delete => [
-                  # todo verify that this does not contain user-generated content
-                  # '~/Library/Application Support/Soulver',
-                  '~/Library/Preferences/com.acqualia.soulver.plist',
-                  '~/Library/Autosave Information/Unsaved Soulver Document.soulver',
-                  # todo glob/expand support
-                  # '~/Library/Autosave Information/Unsaved Soulver Document 2.soulver',
+                   '~/Library/Application Support/Soulver',
+                   '~/Library/Preferences/com.acqualia.soulver.plist',
+                   '~/Library/Autosave Information/Unsaved Soulver Document.soulver',
+                   # TODO: glob/expand support
+                   # '~/Library/Autosave Information/Unsaved Soulver Document 2.soulver',
                  ]
 end

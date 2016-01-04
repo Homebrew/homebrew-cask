@@ -3,9 +3,9 @@ cask 'betterzip' do
   sha256 '5bcce666ff501957cf535d13d156ef7e5da79f7af283a2f911ef7e959c847594'
 
   url "http://macitbetter.com/dl/BetterZip-#{version}.zip"
-  name 'BetterZip'
   appcast 'http://macitbetter.com/BetterZip3.rss',
           :sha256 => 'e219c96ec87b7df24d997134efc056f027523021ff4f26b033286d1dd884abe0'
+  name 'BetterZip'
   homepage 'http://macitbetter.com'
   license :commercial
 

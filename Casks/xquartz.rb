@@ -22,18 +22,19 @@ cask 'xquartz' do
     system '/bin/launchctl', 'load', '/Library/LaunchAgents/org.macosforge.xquartz.startx.plist'
   end
 
-  uninstall :quit => 'org.macosforge.xquartz.X11',
+  uninstall :quit      => 'org.macosforge.xquartz.X11',
             :launchctl => 'org.macosforge.xquartz.startx',
-            :pkgutil => 'org.macosforge.xquartz.pkg',
-            :delete => '/opt/X11/'
+            :pkgutil   => 'org.macosforge.xquartz.pkg',
+            :delete    => '/opt/X11/'
+
   zap       :delete => [
-                        '~/Library/Caches/org.macosforge.xquartz.X11',
-                        '~/Library/Logs/X11',
-                        '~/Library/Logs/X11.org.macosforge.xquartz.log',
-                        '~/Library/Logs/X11.org.macosforge.xquartz.log.old',
-                        '~/Library/Preferences/org.macosforge.xquartz.X11.plist',
-                        '~/Library/Saved Application State/org.macosforge.xquartz.X11.savedState',
-                        '~/.Xauthority',
+                         '~/Library/Caches/org.macosforge.xquartz.X11',
+                         '~/Library/Logs/X11',
+                         '~/Library/Logs/X11.org.macosforge.xquartz.log',
+                         '~/Library/Logs/X11.org.macosforge.xquartz.log.old',
+                         '~/Library/Preferences/org.macosforge.xquartz.X11.plist',
+                         '~/Library/Saved Application State/org.macosforge.xquartz.X11.savedState',
+                         '~/.Xauthority',
                        ],
-            :rmdir => '~/.fonts'
+            :rmdir  => '~/.fonts'
 end

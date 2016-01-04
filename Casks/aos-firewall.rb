@@ -10,7 +10,7 @@ cask 'aos-firewall' do
   pkg 'AOSFirewall.pkg'
 
   uninstall :pkgutil => [
-                         'com.ahnlab.aosFirewall.*',
-                         'com.ahnlab.firewall.*'
+                          'com.ahnlab.aosFirewall.*',
+                          'com.ahnlab.firewall.*',
                         ]
 end

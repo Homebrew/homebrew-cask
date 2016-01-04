@@ -5,10 +5,10 @@ cask 'paye-tools' do
   url "https://www.gov.uk/government/uploads/uploaded/hmrc/payetools-rti-#{version}-osx.zip"
   name 'Basic PAYE Tools'
   homepage 'https://www.hmrc.gov.uk/payerti/payroll/bpt/paye-tools.htm'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer :script => "payetools-rti-#{version}-osx.app/Contents/MacOS/osx-intel",
-            :args => [ '--mode', 'unattended' ]
+            :args   => ['--mode', 'unattended']
 
   uninstall :quit => 'uk.gov.hmrc.bptrti'
 end

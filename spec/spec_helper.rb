@@ -11,7 +11,12 @@ project_root = Pathname(File.expand_path("../..", __FILE__))
 
 Dir["#{project_root}/spec/support/*.rb"].each { |f| require f }
 
+# todo: removeme, this is transitional
 include HomebrewTestingEnvironment
+
+# force some environment variables
+ENV['HOMEBREW_CASK_OPTS'] = nil
+
 # from Homebrew. Provides expects method.
 require 'mocha/api'
 
@@ -42,5 +47,6 @@ Hbc.default_tap = project_root.join('spec', 'support')
 Hbc.caskroom = Hbc.homebrew_prefix.join('TestCaskroom')
 
 RSpec.configure do |config|
+  config.order = :random
   config.include ShutupHelper
 end

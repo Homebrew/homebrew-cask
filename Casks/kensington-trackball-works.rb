@@ -6,15 +6,15 @@ cask 'kensington-trackball-works' do
   url 'https://accoblobstorageus.blob.core.windows.net/software/a7d905eb-8a38-49e5-b25a-11d59a7e765f.dmg'
   name 'Kensington TrackballWorks'
   homepage 'http://www.kensington.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Kensington TrackballWorks.pkg'
 
   uninstall :pkgutil   => 'com.kensington.trackballworks.driver.installer',
             :kext      => 'com.kensington.trackballworks.driver',
             :launchctl => [
-                           'com.kensington.slimblade.agent',
-                           'com.kensington.slimblade.guiagent.plist',
+                            'com.kensington.slimblade.agent',
+                            'com.kensington.slimblade.guiagent.plist',
                           ],
             :quit      => 'com.kensington.trackballworks.helper'
 end

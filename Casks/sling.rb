@@ -13,8 +13,8 @@ cask 'sling' do
   app 'Sling.app'
 
   zap :delete => [
-                  '~/Library/Application Support/Sling-shell',
-                  '~/Library/Caches/com.Echostar.Sling',
-                  '~/Library//Preferences/com.Echostar.Sling.plist',
+                   '~/Library/Application Support/Sling-shell',
+                   '~/Library/Caches/com.Echostar.Sling',
+                   '~/Library//Preferences/com.Echostar.Sling.plist',
                  ]
 end

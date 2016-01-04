@@ -10,9 +10,9 @@ cask 'privacy-services-manager' do
   homepage 'https://github.com/univ-of-utah-marriott-library-apple/privacy_services_manager'
   license :mit
 
+  depends_on :macos => '>= :mountain_lion'
+
   pkg "Privacy Services Management [#{version}].pkg"
 
   uninstall :pkgutil => 'edu.utah.scl.privacy_services_manager'
-
-  depends_on :macos => '>= :mountain_lion'
 end

@@ -89,7 +89,7 @@ We recommend the following:
 You can force a specific version of the Ruby interpreter, and/or an alternate version of the `brew-cask` subcommand, by invoking `brew cask` with fully-qualified paths, like this:
 
 ```bash
-$ /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/Taps/caskroom/homebrew-cask/lib/brew-cask-cmd.rb help
+$ /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/Taps/caskroom/homebrew-cask/cmd/brew-cask.rb help
 ```
 
 ### Forcing a Specific Homebrew-cask Subcommand

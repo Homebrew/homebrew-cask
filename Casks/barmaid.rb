@@ -9,7 +9,7 @@ cask 'barmaid' do
   homepage 'https://github.com/zenonas/barmaid'
   license :mit
 
-  app 'Barmaid.app'
-
   depends_on :macos => '>= 10.9'
+
+  app 'Barmaid.app'
 end

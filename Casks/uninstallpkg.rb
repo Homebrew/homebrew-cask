@@ -12,10 +12,10 @@ cask 'uninstallpkg' do
   app 'UninstallPKG.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.corecode.UninstallPKG.plist',
-                  '~/Library/Application Support/UninstallPKG/',
-                  '~/Library/Saved Application State/com.corecode.UninstallPKG.savedState/',
-                  '/Library/PrivilegedHelperTools/com.corecode.UninstallPKGDeleteHelper',
-                  '/Library/LaunchDaemons/com.corecode.UninstallPKGDeleteHelper.plist'
+                   '~/Library/Preferences/com.corecode.UninstallPKG.plist',
+                   '~/Library/Application Support/UninstallPKG/',
+                   '~/Library/Saved Application State/com.corecode.UninstallPKG.savedState/',
+                   '/Library/PrivilegedHelperTools/com.corecode.UninstallPKGDeleteHelper',
+                   '/Library/LaunchDaemons/com.corecode.UninstallPKGDeleteHelper.plist',
                  ]
 end

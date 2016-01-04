@@ -6,6 +6,7 @@ cask 'airstream' do
   name 'AirStream'
   homepage 'http://airstream.io/download/'
   license :gratis
+
   app 'AirStream.app'
 
   caveats <<-EOS.undent

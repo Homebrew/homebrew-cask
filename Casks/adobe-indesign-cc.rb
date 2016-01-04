@@ -4,7 +4,7 @@ cask 'adobe-indesign-cc' do
 
   url 'http://trials3.adobe.com/AdobeProducts/IDSN/11/osx10/InDesign_11_LS20.dmg',
       :user_agent => :fake,
-      :cookies => { 'MM_TRIALS' => '1234' }
+      :cookies    => { 'MM_TRIALS' => '1234' }
   name 'Adobe InDesign CC'
   homepage 'https://www.adobe.com/products/indesign.html'
   license :commercial

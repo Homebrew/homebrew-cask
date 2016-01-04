@@ -8,5 +8,6 @@ cask 'waterroof' do
   license :oss
 
   container :nested => "WaterRoof #{version}.dmg"
+
   app 'WaterRoof.app'
 end

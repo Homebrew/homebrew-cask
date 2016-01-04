@@ -14,10 +14,10 @@ cask 'sublime-text' do
   binary 'Sublime Text 2.app/Contents/SharedSupport/bin/subl'
 
   zap :delete => [
-                  '~/Library/Application Support/Sublime Text 2',
-                  '~/Library/Preferences/com.sublimetext.2.plist',
-                  '~/Library/Caches/com.sublimetext.2',
-                  '~/Library/Saved Application State/com.sublimetext.2.savedState'
+                   '~/Library/Application Support/Sublime Text 2',
+                   '~/Library/Preferences/com.sublimetext.2.plist',
+                   '~/Library/Caches/com.sublimetext.2',
+                   '~/Library/Saved Application State/com.sublimetext.2.savedState',
                  ]
 
   caveats do

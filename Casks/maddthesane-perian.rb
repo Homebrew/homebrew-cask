@@ -9,7 +9,7 @@ cask 'maddthesane-perian' do
   homepage 'https://github.com/MaddTheSane/perian'
   license :gpl
 
-  prefpane 'Perian.prefPane'
-
   depends_on :cask => 'caskroom/versions/quicktime-player7'
+
+  prefpane 'Perian.prefPane'
 end

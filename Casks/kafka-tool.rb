@@ -8,7 +8,7 @@ cask 'kafka-tool' do
   license :commercial
 
   installer :script => 'Kafka Tool Installer.app/Contents/MacOS/JavaApplicationStub',
-            :args => [ '-q' ]
+            :args   => ['-q']
 
   uninstall :delete => '/Applications/Kafka Tool.app'
 

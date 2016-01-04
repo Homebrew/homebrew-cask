@@ -9,7 +9,7 @@ cask 'arranger' do
   homepage 'http://bucketomac.de/arranger/arranger/'
   license :gratis
 
-  app 'Arranger.app'
-
   accessibility_access true
+
+  app 'Arranger.app'
 end

@@ -4,7 +4,7 @@ cask 'adobe-illustrator-cc' do
 
   url 'http://trials3.adobe.com/AdobeProducts/ILST/19/osx10-64/Illustrator_19_LS20.dmg',
       :user_agent => :fake,
-      :cookies => { 'MM_TRIALS' => '1234' }
+      :cookies    => { 'MM_TRIALS' => '1234' }
   name 'Adobe Illustrator CC'
   homepage 'https://www.adobe.com/products/illustrator.html'
   license :commercial

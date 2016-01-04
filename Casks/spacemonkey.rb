@@ -7,7 +7,7 @@ cask 'spacemonkey' do
           :sha256 => '7a5cd0fd25c71e92ca2cdf388bd5d5f49e927699a44197e10fdc7a951caf1ecc'
   name 'Space Monkey'
   homepage 'https://www.spacemonkey.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SpaceMonkey.app'
 end

@@ -14,9 +14,10 @@ cask 'focus' do
   app 'Focus.app'
 
   uninstall :quit => 'BradJasper.focus'
+
   zap :delete => [
-                  '~/Library/Caches/BradJasper.focus/',
-                  '~/Library/Application Support/Focus/',
-                  '~/Library/Preferences/BradJasper.focus.plist'
+                   '~/Library/Caches/BradJasper.focus/',
+                   '~/Library/Application Support/Focus/',
+                   '~/Library/Preferences/BradJasper.focus.plist',
                  ]
 end

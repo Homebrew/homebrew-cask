@@ -23,13 +23,14 @@ class Hbc::Download
 
   def downloader
     @downloader ||= case cask.url.using
+    when :svn then Hbc::SubversionDownloadStrategy.new(cask)
     when :post then Hbc::CurlPostDownloadStrategy.new(cask)
     else Hbc::CurlDownloadStrategy.new(cask)
     end
   end
 
   def clear_cache
-    downloader.clear_cache if force || cask.version == :latest
+    downloader.clear_cache if force || cask.version.latest?
   end
 
   def fetch

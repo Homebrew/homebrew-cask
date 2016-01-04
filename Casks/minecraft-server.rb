@@ -6,7 +6,7 @@ cask 'minecraft-server' do
   url "https://s3.amazonaws.com/Minecraft.Download/versions/#{version}/minecraft_server.#{version}.jar"
   name 'Minecraft Server'
   homepage 'https://minecraft.net/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :type => :naked
 
@@ -27,7 +27,7 @@ cask 'minecraft-server' do
     system 'minecraft-server'
 
     file_name = "#{staged_path}/EULA.txt"
-    contents = File.read(file_name).gsub(/false/, 'true')
+    contents = File.read(file_name).gsub(%r{false}, 'true')
     File.open(file_name, 'w') { |file| file.puts contents }
   end
 

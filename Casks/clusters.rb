@@ -12,7 +12,7 @@ cask 'clusters' do
   prefpane 'Clusters.prefPane'
 
   zap :delete => [
-                  '~/Library/Application Support/Clusters',
-                  '~/Library/Preferences/com.latenitesoft.Clusters*'
+                   '~/Library/Application Support/Clusters',
+                   '~/Library/Preferences/com.latenitesoft.Clusters*',
                  ]
 end

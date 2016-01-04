@@ -19,7 +19,7 @@ cask 'vmware-appcatalyst' do
   uninstall :pkgutil => 'com.vmware.pkg.AppCatalyst'
 
   zap :delete => [
-                  '~/.appcatalyst.conf',
-                  '~/Library/Logs/VMware',
+                   '~/.appcatalyst.conf',
+                   '~/Library/Logs/VMware',
                  ]
 end

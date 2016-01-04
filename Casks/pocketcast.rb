@@ -7,7 +7,7 @@ cask 'pocketcast' do
           :sha256 => 'ee704890c820b78f10af822f5a0824af3f308124e6836deddcfbe680ee9680a5'
   name 'Pocket Casts for Mac'
   homepage 'https://github.com/mortenjust/PocketCastsOSX'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'PocketCast.app'
 end

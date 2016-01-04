@@ -10,20 +10,20 @@ cask 'dymo-label' do
   pkg "DYMO Label v.#{version.to_i}.pkg"
 
   uninstall :launchctl => 'com.dymo.pnpd',
-            :pkgutil => %w[
-              com.dymo.cups
-              com.dymo.dls.addressbook.addin
-              com.dymo.dls.application
-              com.dymo.dls.appsupport
-              com.dymo.dls.documents
-              com.dymo.dls.frameworks
-              com.dymo.dls.npapi.addin
-              com.dymo.dls.office.addins
-              com.dymo.dls.safari.addin
-            ]
+            :pkgutil   => %w[
+                            com.dymo.cups
+                            com.dymo.dls.addressbook.addin
+                            com.dymo.dls.application
+                            com.dymo.dls.appsupport
+                            com.dymo.dls.documents
+                            com.dymo.dls.frameworks
+                            com.dymo.dls.npapi.addin
+                            com.dymo.dls.office.addins
+                            com.dymo.dls.safari.addin
+                          ]
 
   zap :delete => [
-                  '~/Library/Preferences/com.dymo.dls.plist',
-                  '~/Library/Caches/com.dymo.dls'
+                   '~/Library/Preferences/com.dymo.dls.plist',
+                   '~/Library/Caches/com.dymo.dls',
                  ]
 end

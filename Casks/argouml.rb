@@ -7,11 +7,11 @@ cask 'argouml' do
   homepage 'http://argouml.tigris.org/'
   license :oss
 
+  app 'ArgoUML.app'
+
   caveats <<-EOS.undent
     #{token} requires Java 6. You can install it with
 
       brew cask install caskroom/homebrew-versions/java6
   EOS
-
-  app 'ArgoUML.app'
 end

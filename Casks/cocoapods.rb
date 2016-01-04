@@ -7,12 +7,12 @@ cask 'cocoapods' do
   appcast 'https://app.cocoapods.org/sparkle',
           :sha256 => '8e4dc6eb590c79b25984e25800e70dde002f6199e3411bc3407717b15dc89719'
   name 'CocoaPods.app'
-  container :type => :tar
   homepage 'https://cocoapods.org/'
   license :mit
 
-  app 'CocoaPods.app'
+  container :type => :tar
 
+  app 'CocoaPods.app'
   binary 'CocoaPods.app/Contents/Helpers/pod'
 
   postflight do

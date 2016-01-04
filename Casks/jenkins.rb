@@ -7,6 +7,12 @@ cask 'jenkins' do
   homepage 'https://jenkins-ci.org/'
   license :mit
 
+  conflicts_with :formula => %w[
+                               jenkins
+                               homebrew/versions/jenkins-lts
+                             ],
+                 :cask    => 'caskroom/versions/jenkins-lts'
+
   pkg "jenkins-#{version}.pkg"
   binary '/Library/Application Support/Jenkins/jenkins-runner.sh', :target => 'jenkins-runner'
 
@@ -15,12 +21,6 @@ cask 'jenkins' do
             :launchctl => 'org.jenkins-ci'
 
   zap :delete => '/Library/Preferences/org.jenkins-ci.plist'
-
-  conflicts_with :formula => %w{
-                                jenkins
-                                homebrew/versions/jenkins-lts
-                               },
-                 :cask    => 'caskroom/versions/jenkins-lts'
 
   caveats <<-EOS.undent
     #{token} requires Java. You can install the latest version with

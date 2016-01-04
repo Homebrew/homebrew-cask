@@ -7,7 +7,7 @@ cask 'yed' do
   homepage 'https://www.yworks.com/en/products/yfiles/yed/'
   license :gratis
 
-  app 'yEd.app'
-
   depends_on :macos => '>= 10.8'
+
+  app 'yEd.app'
 end

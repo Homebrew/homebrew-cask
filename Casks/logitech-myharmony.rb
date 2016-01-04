@@ -5,10 +5,10 @@ cask 'logitech-myharmony' do
   url "https://app.myharmony.com/prod/mac/#{version}/MyHarmony-App.dmg"
   name 'MyHarmony'
   homepage 'https://setup.myharmony.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'MyHarmonySetup.pkg'
 
-  uninstall :quit => 'org.logitech.MyHarmony',
+  uninstall :quit    => 'org.logitech.MyHarmony',
             :pkgutil => 'MyHarmony.pkg'
 end

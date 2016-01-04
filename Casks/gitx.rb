@@ -9,11 +9,18 @@ cask 'gitx' do
   homepage 'http://gitx.frim.nl/'
   license :gpl
 
+  conflicts_with :cask => %w[
+                            laullon-gitx
+                            rowanj-gitx
+                          ]
+
   app 'GitX.app'
   binary 'GitX.app/Contents/Resources/gitx'
 
-  conflicts_with :cask => %w{
-                             laullon-gitx
-                             rowanj-gitx
-                            }
+  zap :delete => [
+                   '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/nl.frim.gitx.sfl',
+                   '~/Library/Caches/nl.frim.GitX',
+                   '~/Library/Preferences/nl.frim.GitX.plist',
+                   '~/Library/Saved Application State/nl.frim.GitX.savedState',
+                 ]
 end

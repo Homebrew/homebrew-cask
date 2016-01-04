@@ -7,6 +7,7 @@ cask 'eclipse-ptp' do
   name 'Eclipse Parallel Tools Platform'
   homepage 'https://eclipse.org/'
   license :eclipse
+
   depends_on :macos => '>= :leopard'
   depends_on :arch => :x86_64
 

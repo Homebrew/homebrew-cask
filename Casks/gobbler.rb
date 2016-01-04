@@ -9,8 +9,8 @@ cask 'gobbler' do
 
   installer :manual => 'Gobbler.app'
 
-  uninstall :script  => {
-                          :executable => '/Library/Gobbler/Uninstaller/uninstall_gobbler.sh',
-                          :args => ['-f'],
-                        }
+  uninstall :script => {
+                         :executable => '/Library/Gobbler/Uninstaller/uninstall_gobbler.sh',
+                         :args       => ['-f'],
+                       }
 end

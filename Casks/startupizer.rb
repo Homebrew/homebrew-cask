@@ -11,7 +11,7 @@ cask 'startupizer' do
   app 'Startupizer2.app'
 
   zap :delete => [
-                  '~/Library/Caches/com.gentlebytes.Startupizer2',
-                  '~/Library/Preferences/com.gentlebytes.Startupizer2.plist',
+                   '~/Library/Caches/com.gentlebytes.Startupizer2',
+                   '~/Library/Preferences/com.gentlebytes.Startupizer2.plist',
                  ]
 end

@@ -13,11 +13,11 @@ class Hbc::Audit
 
   def run!
     check_required_stanzas
-    check_no_string_version_latest
+    check_version
     check_sha256
     check_appcast
-    check_sourceforge_download_url_format
-    check_download if download
+    check_url
+    check_download
     self
   end
 
@@ -44,9 +44,14 @@ class Hbc::Audit
     add_error 'at least one activatable artifact stanza is required' unless installable_artifacts.size > 0
   end
 
+  def check_version
+    return unless cask.version
+    check_no_string_version_latest
+  end
+
   def check_no_string_version_latest
     odebug "Verifying version :latest does not appear as a string ('latest')"
-    if (cask.version == 'latest')
+    if cask.version.raw_version == 'latest'
       add_error "you should use version :latest instead of version 'latest'"
     end
   end
@@ -60,7 +65,7 @@ class Hbc::Audit
 
   def check_sha256_no_check_if_latest
     odebug "Verifying sha256 :no_check with version :latest"
-    if cask.version == :latest and cask.sha256 != :no_check
+    if cask.version.latest? && cask.sha256 != :no_check
       add_error "you should use sha256 :no_check when version is :latest"
     end
   end
@@ -96,24 +101,27 @@ class Hbc::Audit
     add_error 'a sha256 is required for appcast' unless cask.appcast.sha256
   end
 
-  def check_download
-    odebug "Auditing download"
-    downloaded_path = download.perform
-    Hbc::Verify.all(cask, downloaded_path)
-  rescue => e
-    add_error "download not possible: #{e.message}"
+  def check_url
+    return unless cask.url
+    check_download_url_format
   end
 
-  def check_sourceforge_download_url_format
+  def check_download_url_format
     odebug "Auditing URL format"
     if bad_sourceforge_url?
-      add_warning "SourceForge URL format incorrect. See https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforge-urls"
+      add_warning "SourceForge URL format incorrect. See https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforgeosdn-urls"
+    elsif bad_osdn_url?
+      add_warning "OSDN URL format incorrect. See https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#sourceforgeosdn-urls"
     end
   end
 
+  def bad_url_format?(regex, valid_formats_array)
+    return false unless cask.url.to_s =~ regex
+    valid_formats_array.none? { |format| cask.url.to_s =~ format }
+  end
+
   def bad_sourceforge_url?
-    return false unless cask.url.to_s =~ /sourceforge/
-    valid_url_formats = [
+    bad_url_format?(/sourceforge/, [
       %r{\Ahttps?://sourceforge\.net/projects/[^/]+/files/latest/download\Z},
       %r{\Ahttps?://downloads\.sourceforge\.net/},
       %r{\Ahttps?://[^/]+\.sourceforge\.jp/},
@@ -121,7 +129,21 @@ class Hbc::Audit
       %r{\Ahttps?://brushviewer\.sourceforge\.net/brushviewql\.zip\Z},
       %r{\Ahttps?://doublecommand\.sourceforge\.net/files/},
       %r{\Ahttps?://excalibur\.sourceforge\.net/get\.php\?id=},
-    ]
-    valid_url_formats.none? { |format| cask.url.to_s =~ format }
+    ])
+  end
+
+  def bad_osdn_url?
+    bad_url_format?(/osd/, [
+      %r{\Ahttps?://[^/]+\.osdn\.jp/},
+    ])
+  end
+
+  def check_download
+    return unless download
+    odebug "Auditing download"
+    downloaded_path = download.perform
+    Hbc::Verify.all(cask, downloaded_path)
+  rescue => e
+    add_error "download not possible: #{e.message}"
   end
 end

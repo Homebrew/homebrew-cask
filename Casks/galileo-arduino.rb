@@ -5,7 +5,7 @@ cask 'galileo-arduino' do
   url "https://downloadmirror.intel.com/23171/eng/Intel_Galileo_Arduino_SW_#{version}_on_MacOSX%20_v1.0.0.zip"
   name 'Intel Galileo Arduino SW'
   homepage 'https://communities.intel.com/docs/DOC-22226'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Arduino.app'
 end

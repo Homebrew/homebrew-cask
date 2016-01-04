@@ -9,5 +9,5 @@ cask 'orbit' do
   homepage 'http://orbitapp.net'
   license :gratis
 
-  app      'Orbit.app'
+  app 'Orbit.app'
 end

@@ -12,16 +12,16 @@ cask 'kawasemi' do
 
   uninstall :pkgutil   => 'jp.monokakido.Kawasemi2.pkg',
             :launchctl => [
-                           'jp.monokakido.Kawasemi2.Enabler',
-                           'jp.monokakido.Kawasemi2.Update.helper'
+                            'jp.monokakido.Kawasemi2.Enabler',
+                            'jp.monokakido.Kawasemi2.Update.helper',
                           ]
 
   zap :delete => [
-                  '/Library/Application Support/MONOKAKIDO/Kawasemi2',
-                  '/Library/LaunchAgents/jp.monokakido.Kawasemi2.Enabler.plist',
-                  '/Library/Preferences/jp.monokakido.inputmethod.Kawasemi2.registration.plist',
-                  '~/Library/Preferences/jp.monokakido.Kawasemi2.Enabler.plist',
-                  '~/Library/Preferences/jp.monokakido.inputmethod.Kawasemi2.registration.plist'
+                   '/Library/Application Support/MONOKAKIDO/Kawasemi2',
+                   '/Library/LaunchAgents/jp.monokakido.Kawasemi2.Enabler.plist',
+                   '/Library/Preferences/jp.monokakido.inputmethod.Kawasemi2.registration.plist',
+                   '~/Library/Preferences/jp.monokakido.Kawasemi2.Enabler.plist',
+                   '~/Library/Preferences/jp.monokakido.inputmethod.Kawasemi2.registration.plist',
                  ]
 
   caveats do

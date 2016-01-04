@@ -10,12 +10,12 @@ cask 'macpaw-gemini' do
   homepage 'https://macpaw.com/gemini'
   license :commercial
 
-  zap :delete => [
-    '~/Library/Application Support/MacPaw Gemini',
-    '~/Library/Caches/com.macpaw.site.Gemini',
-    '~/Library/Preferences/com.macpaw.site.Gemini.plist',
-    '~/Library/Saved Application State/com.macpaw.site.Gemini.savedState'
-  ]
-
   app 'MacPaw Gemini.app'
+
+  zap :delete => [
+                   '~/Library/Application Support/MacPaw Gemini',
+                   '~/Library/Caches/com.macpaw.site.Gemini',
+                   '~/Library/Preferences/com.macpaw.site.Gemini.plist',
+                   '~/Library/Saved Application State/com.macpaw.site.Gemini.savedState',
+                 ]
 end

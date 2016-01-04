@@ -5,17 +5,18 @@ cask 'heroku-toolbelt' do
   url 'http://assets.heroku.com/heroku-toolbelt/heroku-toolbelt.pkg'
   name 'Heroku Toolbelt'
   homepage 'https://toolbelt.heroku.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'heroku-toolbelt.pkg'
 
   uninstall :pkgutil => 'com.heroku.toolbelt',
             :delete  => [
-                         '/usr/local/heroku',
-                         '/usr/bin/heroku',
-                         '/usr/local/foreman',
-                         '/usr/bin/foreman'
+                          '/usr/local/heroku',
+                          '/usr/bin/heroku',
+                          '/usr/local/foreman',
+                          '/usr/bin/foreman',
                         ]
+
   zap       :delete => '~/.heroku'
 
   caveats do

@@ -6,19 +6,20 @@ cask 'spotify' do
   name 'Spotify'
   homepage 'https://www.spotify.com'
   license :gratis
-  depends_on :macos => '>= :snow_leopard'
+
+  depends_on :macos => '>= :lion'
 
   app 'Spotify.app'
 
-  uninstall :launchctl => 'com.spotify.webhelper',
+  uninstall :launchctl  => 'com.spotify.webhelper',
             :login_item => 'Spotify'
 
   zap :delete => [
-                  '~/Library/Application Support/Spotify',
-                  '~/Library/Preferences/com.spotify.client.plist',
-                  '~/Library/Preferences/com.spotify.client.helper.plist',
-                  '~/Library/Caches/com.spotify.client',
-                  '~/Library/Saved Application State/com.spotify.client.savedState',
-                  '~/Library/Logs/Spotify'
+                   '~/Library/Application Support/Spotify',
+                   '~/Library/Preferences/com.spotify.client.plist',
+                   '~/Library/Preferences/com.spotify.client.helper.plist',
+                   '~/Library/Caches/com.spotify.client',
+                   '~/Library/Saved Application State/com.spotify.client.savedState',
+                   '~/Library/Logs/Spotify',
                  ]
 end

@@ -5,7 +5,7 @@ cask 'pashua' do
   url 'https://www.bluem.net/files/Pashua.dmg'
   name 'Pashua'
   homepage 'https://www.bluem.net/en/mac/pashua/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Pashua.app'
 end

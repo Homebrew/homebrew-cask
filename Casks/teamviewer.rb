@@ -18,8 +18,9 @@ cask 'teamviewer' do
                             '/Library/LaunchDaemons/com.teamviewer.Helper.plist',
                             '/Library/LaunchDaemons/com.teamviewer.teamviewer_service.plist',
                           ]
-  zap       :delete    => [
-                           '~/Library/Caches/com.teamviewer.TeamViewer',
-                           '~/Library/Logs/TeamViewer',
-                          ]
+
+  zap       :delete => [
+                         '~/Library/Caches/com.teamviewer.TeamViewer',
+                         '~/Library/Logs/TeamViewer',
+                       ]
 end

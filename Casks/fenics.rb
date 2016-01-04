@@ -7,9 +7,9 @@ cask 'fenics' do
   homepage 'http://fenicsproject.org/'
   license :gpl
 
-  app 'FEniCS.app'
-
   depends_on :macos => '>= :mavericks'
+
+  app 'FEniCS.app'
 
   caveats do
     <<-EOS.undent

@@ -10,12 +10,12 @@ cask 'cachewarmer' do
 
   pkg "CacheWarmer-#{version}.pkg"
 
-  uninstall :pkgutil => 'net.glencode.CacheWarmer',
+  uninstall :pkgutil   => 'net.glencode.CacheWarmer',
             :launchctl => 'net.glencode.CacheWarmer',
-            :delete => [
-                        '/etc/newsyslog.d/net.glencode.CacheWarmer.conf',
-                        '/usr/local/bin/CacheWarmer',
-                        '/Library/LaunchDaemons/net.glencode.CacheWarmer.plist',
-                        '/Library/Application Support/net.glencode.CacheWarmer'
-                       ]
+            :delete    => [
+                            '/etc/newsyslog.d/net.glencode.CacheWarmer.conf',
+                            '/usr/local/bin/CacheWarmer',
+                            '/Library/LaunchDaemons/net.glencode.CacheWarmer.plist',
+                            '/Library/Application Support/net.glencode.CacheWarmer',
+                          ]
 end

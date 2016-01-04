@@ -7,7 +7,7 @@ cask 'identify' do
           :sha256 => 'f4136921951cb3bd6a0488d819a6283957adc94d7afcda7477d1bf618d307e85'
   name 'iDentify'
   homepage 'http://identify2.arrmihardies.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iDentify.app'
 end

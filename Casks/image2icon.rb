@@ -9,16 +9,16 @@ cask 'image2icon' do
   homepage 'http://www.img2icnsapp.com/'
   license :freemium
 
+  depends_on :macos => '>= :mavericks'
+
   app 'Image2Icon.app'
 
   zap :delete => [
-                  '~/Library/Caches/net.shinyfrog.image2icon',
-                  '~/Library/Preferences/net.shinyfrog.image2icon.plist',
-                  '~/Library/Containers/net.shinyfrog.image2icon',
-                  '~/Library/Containers/net.shinyfrog.image2icon.templateRenderer',
-                  '~/Library/Containers/net.shinyfrog.templateRenderer',
-                  '~/Library/Saved Application State/net.shinyfrog.image2icon.savedState'
+                   '~/Library/Caches/net.shinyfrog.image2icon',
+                   '~/Library/Preferences/net.shinyfrog.image2icon.plist',
+                   '~/Library/Containers/net.shinyfrog.image2icon',
+                   '~/Library/Containers/net.shinyfrog.image2icon.templateRenderer',
+                   '~/Library/Containers/net.shinyfrog.templateRenderer',
+                   '~/Library/Saved Application State/net.shinyfrog.image2icon.savedState',
                  ]
-
-  depends_on :macos => '>= :mavericks'
 end

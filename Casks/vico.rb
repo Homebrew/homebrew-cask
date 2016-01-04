@@ -7,7 +7,7 @@ cask 'vico' do
           :sha256 => '7d2a33fb72c3c89b4e1f83c86e33fd5655651723e3b0de35a9e7cc90cca06445'
   name 'Vico'
   homepage 'http://www.vicoapp.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Vico.app'
   binary 'Vico.app/Contents/MacOS/vicotool', :target => 'vico'

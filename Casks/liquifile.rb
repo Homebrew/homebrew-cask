@@ -7,5 +7,5 @@ cask 'liquifile' do
   homepage 'http://www.liquifile.info/'
   license :commercial
 
-  app "Liquifile_#{version.gsub('.','_')}.app"
+  app "Liquifile_#{version.gsub('.', '_')}.app"
 end

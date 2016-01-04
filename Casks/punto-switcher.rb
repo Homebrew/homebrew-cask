@@ -10,6 +10,6 @@ cask 'punto-switcher' do
 
   pkg 'PuntoSwitcher Installer.pkg'
 
-  uninstall :quit => 'ru.yandex.desktop.PuntoSwitcher',
-            :pkgutil => [ 'ru.yandex.puntoSwitcher*', 'ru.yandex.PuntoSwitcher*' ]
+  uninstall :quit    => 'ru.yandex.desktop.PuntoSwitcher',
+            :pkgutil => ['ru.yandex.puntoSwitcher*', 'ru.yandex.PuntoSwitcher*']
 end

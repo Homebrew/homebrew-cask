@@ -7,7 +7,7 @@ cask 'handy-outliner' do
   homepage 'http://handyoutlinerfo.sourceforge.net'
   license :gpl
 
-  depends_on :cask => 'mono-mdk',
+  depends_on :cask    => 'mono-mdk',
              :formula => 'djvulibre'
 
   preflight do

@@ -7,7 +7,7 @@ cask 'saoimage-ds9' do
   homepage 'http://ds9.si.edu/site/Home.html'
   license :oss
 
-  app 'SAOImage DS9.app'
-
   depends_on :macos => '>= :mavericks'
+
+  app 'SAOImage DS9.app'
 end

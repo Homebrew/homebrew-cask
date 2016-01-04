@@ -9,13 +9,13 @@ cask 'docker-machine-driver-parallels' do
   homepage 'https://github.com/Parallels/docker-machine-parallels'
   license :unknown
 
-  container :type => :naked
-  binary 'docker-machine-driver-parallels'
-
+  depends_on :cask => 'docker-machine'
+  depends_on :arch => :x86_64
   postflight do
     set_permissions "#{staged_path}/docker-machine-driver-parallels", '0755'
   end
 
-  depends_on :cask => 'docker-machine'
-  depends_on :arch => :x86_64
+  container :type => :naked
+
+  binary 'docker-machine-driver-parallels'
 end

@@ -9,6 +9,6 @@ cask 'dmd' do
 
   pkg 'DMD2.pkg'
 
-  uninstall :script => 'uninstall.command',
+  uninstall :script  => 'uninstall.command',
             :pkgutil => 'org.dlang.dmd.dmd2.pkg'
 end

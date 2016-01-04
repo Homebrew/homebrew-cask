@@ -7,15 +7,15 @@ cask 'appcode' do
   homepage 'https://www.jetbrains.com/objc/'
   license :commercial
 
+  conflicts_with :cask => 'appcode-eap'
+
   app 'AppCode.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.jetbrains.AppCode.plist',
-                  '~/Library/Preferences/AppCode33',
-                  '~/Library/Application Support/AppCode33',
-                  '~/Library/Caches/AppCode33',
-                  '~/Library/Logs/AppCode33',
+                   '~/Library/Preferences/com.jetbrains.AppCode.plist',
+                   '~/Library/Preferences/AppCode33',
+                   '~/Library/Application Support/AppCode33',
+                   '~/Library/Caches/AppCode33',
+                   '~/Library/Logs/AppCode33',
                  ]
-
-  conflicts_with :cask => 'appcode-eap'
 end

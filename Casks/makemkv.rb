@@ -7,12 +7,12 @@ cask 'makemkv' do
   homepage 'http://www.makemkv.com/'
   license :freemium
 
+  depends_on :macos => '>= :snow_leopard'
+
   app 'MakeMKV.app'
 
   zap :delete => [
-                 '~/Library/Preferences/com.makemkv.MakeMKV.plist',
-                 '~/Library/Saved Application State/com.makemkv.MakeMKV.savedState',
+                   '~/Library/Preferences/com.makemkv.MakeMKV.plist',
+                   '~/Library/Saved Application State/com.makemkv.MakeMKV.savedState',
                  ]
-
-  depends_on :macos => '>= :snow_leopard'
 end

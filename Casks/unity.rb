@@ -9,6 +9,6 @@ cask 'unity' do
 
   pkg 'Unity.pkg'
 
-  uninstall :quit => 'com.unity3d.UnityEditor5.x',
+  uninstall :quit    => 'com.unity3d.UnityEditor5.x',
             :pkgutil => 'com.unity3d.UnityEditor5.x'
 end

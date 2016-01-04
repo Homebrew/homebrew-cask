@@ -3,9 +3,9 @@ cask 'aurora' do
   sha256 '4293c5ffdf6eb8e5d7031f02b1c83238472f486fe8a964f2f62ac71c72c22eb2'
 
   url "https://www.oneperiodic.com/files/Aurora%20v#{version}.zip"
-  name 'Aurora'
   appcast 'https://www.oneperiodic.com/aurora5.xml',
           :sha256 => 'dae31492d459b5b8c1061a5866868b7f8f3f82afebf55a09ba8d559fdae185dd'
+  name 'Aurora'
   homepage 'https://www.oneperiodic.com/products/aurora/'
   license :commercial
 

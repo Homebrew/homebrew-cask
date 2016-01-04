@@ -7,6 +7,7 @@ cask 'eclipse-rcp' do
   name 'Eclipse for RCP and RAP Developers'
   homepage 'https://eclipse.org/'
   license :eclipse
+
   depends_on :macos => '>= :leopard'
   depends_on :arch => :x86_64
 

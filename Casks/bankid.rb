@@ -8,6 +8,7 @@ cask 'bankid' do
   license :gratis
 
   container :type => :naked
+
   preflight do
     system '/bin/mv', '--', staged_path.join('FileDownloader'), staged_path.join('bankid-latest.pkg')
   end

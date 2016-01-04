@@ -10,7 +10,7 @@ cask 'th-makerx' do
   app "Th-MakerX_#{version.delete('.')}/Th-MakerX.app"
 
   zap :delete => [
-                  '~/Library/Preferences/jp.ne.wind.miko.ThMakerX3.plist',
-                  '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.ne.wind.miko.thmakerx3.sfl'
+                   '~/Library/Preferences/jp.ne.wind.miko.ThMakerX3.plist',
+                   '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.ne.wind.miko.thmakerx3.sfl',
                  ]
 end

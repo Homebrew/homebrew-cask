@@ -8,13 +8,13 @@ cask 'sencha' do
   license :freemium
 
   installer :script => "SenchaCmd-#{version}-osx.app/Contents/MacOS/JavaApplicationStub",
-            :args => ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
-            :sudo => true
+            :args   => ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
+            :sudo   => true
 
   uninstall :script => {
                          :executable => "/opt/Sencha/Cmd/#{version}/.install4j/Sencha Cmd Uninstaller.app/Contents/MacOS/JavaApplicationStub",
-                         :args => ['-Djava.awt.headless=true', '-q'],
-                         :sudo => true
+                         :args       => ['-Djava.awt.headless=true', '-q'],
+                         :sudo       => true,
                        }
 
   postflight do

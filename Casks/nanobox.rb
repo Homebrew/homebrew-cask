@@ -10,7 +10,6 @@ cask 'nanobox' do
 
   depends_on :cask => 'virtualbox'
   depends_on :cask => 'vagrant'
-
   container :type => :naked
 
   binary 'nanobox'
@@ -20,7 +19,7 @@ cask 'nanobox' do
   end
 
   zap :delete => [
-                    '~/.nanobox',
-                    '/opt/nanobox',
-                ]
+                   '~/.nanobox',
+                   '/opt/nanobox',
+                 ]
 end

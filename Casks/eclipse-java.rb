@@ -7,6 +7,7 @@ cask 'eclipse-java' do
   name 'Eclipse IDE for Java Developers'
   homepage 'https://eclipse.org/'
   license :eclipse
+
   depends_on :macos => '>= :leopard'
   depends_on :arch => :x86_64
 

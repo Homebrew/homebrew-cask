@@ -7,7 +7,7 @@ cask 'geany' do
   homepage 'http://www.geany.org'
   license :gpl
 
-  app 'Geany.app'
-
   depends_on :macos => '>= :lion'
+
+  app 'Geany.app'
 end

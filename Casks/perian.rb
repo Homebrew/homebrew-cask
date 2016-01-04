@@ -8,9 +8,9 @@ cask 'perian' do
   homepage 'https://www.perian.org/'
   license :gpl
 
-  prefpane 'Perian.prefPane'
-
   depends_on :cask => 'caskroom/versions/quicktime-player7'
+
+  prefpane 'Perian.prefPane'
 
   caveats do
     discontinued

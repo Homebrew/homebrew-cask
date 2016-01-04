@@ -10,6 +10,7 @@ cask 'dogestry' do
   license :mit
 
   container :type => :naked
+
   binary "dogestry-darwin-#{version}", :target => 'dogestry'
 
   postflight do

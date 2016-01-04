@@ -14,8 +14,8 @@ cask 'changes' do
   binary 'Changes.app/Contents/Resources/chdiff'
 
   zap :delete => [
-                  '~/Library/Preferences/com.bitbq.Changes.plist',
-                  '~/Library/Application Support/Changes',
-                  '~/Library/Caches/com.bitbq.Changes',
+                   '~/Library/Preferences/com.bitbq.Changes.plist',
+                   '~/Library/Application Support/Changes',
+                   '~/Library/Caches/com.bitbq.Changes',
                  ]
 end

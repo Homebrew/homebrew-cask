@@ -6,7 +6,7 @@ cask 'skyfonts' do
   url "http://cdn1.skyfonts.com/client/Monotype_SkyFonts_Mac64_#{version}.dmg"
   name 'SkyFonts'
   homepage 'https://www.fonts.com/web-fonts/google'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SkyFonts.app'
 end

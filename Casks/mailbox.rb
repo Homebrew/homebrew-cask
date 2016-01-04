@@ -13,7 +13,7 @@ cask 'mailbox' do
   app 'Mailbox (Beta).app'
 
   zap :delete => [
-                  '~/Library/Caches/com.dropbox.mailbox/',
-                  '~/Library/Containers/com.dropbox.mailbox/'
+                   '~/Library/Caches/com.dropbox.mailbox/',
+                   '~/Library/Containers/com.dropbox.mailbox/',
                  ]
 end

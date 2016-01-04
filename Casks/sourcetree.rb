@@ -21,8 +21,8 @@ cask 'sourcetree' do
   uninstall :launchctl => 'com.atlassian.SourceTreePrivilegedHelper2'
 
   zap :delete => [
-                  '~/Library/Application Support/SourceTree',
-                  '~/Library/Caches/com.torusknot.SourceTreeNotMAS',
+                   '~/Library/Application Support/SourceTree',
+                   '~/Library/Caches/com.torusknot.SourceTreeNotMAS',
                  ]
 
   caveats do

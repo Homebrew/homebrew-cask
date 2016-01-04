@@ -4,7 +4,6 @@ So you want to contribute to the project. **THIS IS GREAT NEWS!**  Seriously. We
 
 * [Getting Set Up To Contribute](#getting-set-up-to-contribute)
 * [Adding a Cask](#adding-a-cask)
-* [Stanza order](#stanza-order)
 * [Testing Your New Cask](#testing-your-new-cask)
 * [Finding a Home For Your Cask](#finding-a-home-for-your-cask)
 * [Submitting Your Changes](#submitting-your-changes)
@@ -29,7 +28,7 @@ Making a Cask is easy: a Cask is a small Ruby file.
 
 ### Examples
 
-Here’s a Cask for `shuttle` as an example. Note that the `url` stanza uses `#{version}` ([string interpolation](https://en.wikipedia.org/wiki/String_interpolation#Ruby)) to create a Cask that only needs `version` and `sha256` changes when updated.
+Here’s a Cask for `shuttle` as an example.
 
 ```ruby
 cask 'shuttle' do
@@ -92,6 +91,56 @@ cask 'gateblu' do
             :delete => '/Applications/Gateblu.app'
 end
 ```
+
+#### `version` methods
+
+In the examples above, when possible the `url` stanza uses `#{version}` ([string interpolation](https://en.wikipedia.org/wiki/String_interpolation#Ruby)) to create a Cask that only needs `version` and `sha256` changes when updated. This can be taken further, when needed, with [ruby String methods](http://ruby-doc.org/core/String.html). For example:
+
+Instead of
+
+```ruby
+version '1.2.3'
+url 'http://example.com/file-version-123.dmg'
+```
+
+We can
+
+```ruby
+version '1.2.3'
+url "http://example.com/file-version-#{version.delete('.')}.dmg"
+```
+
+We can also leverage the power of regular expressions. So instead of
+
+```ruby
+version '1.2.3build4'
+url 'http://example.com/1.2.3/file-version-1.2.3build4.dmg'
+```
+
+We can
+
+```ruby
+version '1.2.3build4'
+url "http://example.com/#{version.sub(%r{build\d+}, '')}/file-version-#{version}.dmg"
+```
+
+That can become hard to read, however. Since many of these changes are common, we provide a number of helpers to clearly interpret otherwise obtuse cases:
+
+| Method                   | Input              | Output             |
+|--------------------------|--------------------|--------------------|
+| `major`                  | `1.2.3-a45,ccdd88` | `1`                |
+| `minor`                  | `1.2.3-a45,ccdd88` | `2`                |
+| `patch`                  | `1.2.3-a45,ccdd88` | `3`                |
+| `major_minor`            | `1.2.3-a45,ccdd88` | `1.2`              |
+| `major_minor_patch`      | `1.2.3-a45,ccdd88` | `1.2.3`            |
+| `before_comma`           | `1.2.3-a45,ccdd88` | `1.2.3-a45`        |
+| `after_comma`            | `1.2.3-a45,ccdd88` | `ccdd88`           |
+| `dots_to_hyphens`        | `1.2.3-a45,ccdd88` | `1-2-3-a45,ccdd88` |
+| `no_dots`                | `1.2.3-a45,ccdd88` | `123-a45,ccdd88`   |
+
+Similar to `dots_to_hyphens`, we provide all logical permutations of `{dots,hyphens,underscores,slashes}_to_{dots,hyphens,underscores,slashes}`. The same applies to `no_dots` in the form of `no_{dots,hyphens,underscores,slashes}`, with an extra `no_dividers` that applies all of those at once.
+
+Finally, there are `before_colon` and `after_colon` that act like their `comma` counterparts. These four are extra special to allow for otherwise complex cases, and should be used sparingly. There should be no more than one of `,` and `:` per `version`. Use `,` first, and `:` only if absolutely necessary.
 
 ### Generating a Token for the Cask
 
@@ -231,9 +280,9 @@ caveats
 
 Note that every stanza that has additional parameters (`:symbols` after a `,`) shall have them on separate lines, one per line, in alphabetical order. Exceptions are `gpg` and `:target` (when not applied to `url`) which typically consist of short lines.
 
-### SourceForge URLs
+### SourceForge/OSDN URLs
 
-SourceForge projects are a common way to distribute binaries, but they provide many different styles of URLs to get to the goods.
+SourceForge and OSDN (formerly SourceForge.JP) projects are common ways to distribute binaries, but they provide many different styles of URLs to get to the goods.
 
 We prefer URLs of this format:
 
@@ -241,10 +290,10 @@ We prefer URLs of this format:
 http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
 ```
 
-Or, if it’s from [SourceForge.JP](http://sourceforge.jp/):
+Or, if it’s from [OSDN](https://osdn.jp/):
 
 ```
-http://$STRING.sourceforge.jp/$PROJECTNAME/$RELEASEID/$FILENAME.$EXT
+http://$STRING.osdn.jp/$PROJECTNAME/$RELEASEID/$FILENAME.$EXT
 ```
 
 `$STRING` is typically of the form `dl` or `$USER.dl`.
@@ -329,7 +378,7 @@ You should also check stylistic details with the [`rubocop`](https://github.com/
 ```bash
 cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask"
 bundle install
-bundle exec rubocop Casks/my-new-cask.rb
+bundle exec rubocop --auto-correct Casks/my-new-cask.rb
 ```
 
 Keep in mind all of these checks will be made when you submit your PR, so by doing them in advance you’re saving everyone a lot of time and trouble.
@@ -344,6 +393,8 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 + **Beta, Development, Unstable**: Subsequent versions to **stable**, yet incomplete and under development, aiming to eventually become the new **stable**.
 + **Nightly**: Constantly up-to-date versions of the current development state.
 + **Legacy**: Any **stable** version that is not the most recent.
++ **Alternative**: Alternative edition of an existing app, by the same vendor (developer editions, community editions, pro editions, …).
++ **Regional, Localized**: Any version that isn’t the US English one, when that exists.
 + **Trial**: Date-limited version that stops working entirely after it expires, requiring payment to lift the limitation.
 + **Freemium**: Gratis version that works indefinitely but with limitations that can be removed by paying.
 + **Fork**: An alternate version of an existing project, with a based-on but modified source and binary.
@@ -359,9 +410,13 @@ Stable versions live in the main repository at [caskroom/homebrew-cask](https://
 
 When an App is only available as beta, development, or unstable versions, or in cases where such a version is the general standard, then said version can go into the main repo.
 
-### Beta, Unstable, Development, Nightly, or Legacy Versions
+### Beta, Unstable, Development, Nightly, Legacy, or Alternative Versions
 
-When an App’s stable version already exists in the main repo, alternate versions can be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
+When an App’s principal stable version already exists in the main repo, alternative versions should be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
+
+### Regional and Localized
+
+When an App exists in more than one language or has different regional editions, the US English one belongs in the main repo, and all the others in [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions). When not already part of the name of the app, a [regional identifier](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) and a [language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) are to be appended to the Cask’s token (both when available, or just the appropriate one when not).
 
 ### Trial and Freemium Versions
 

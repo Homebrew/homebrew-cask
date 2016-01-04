@@ -7,7 +7,7 @@ cask 'typinator' do
   homepage 'http://www.ergonis.com/'
   license :commercial
 
-  app 'Typinator.app'
-
   accessibility_access true
+
+  app 'Typinator.app'
 end

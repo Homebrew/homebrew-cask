@@ -199,6 +199,9 @@ class Hbc::CLI
       opts.on("--outdated") do |v|
         Hbc.cleanup_outdated = true
       end
+      opts.on("--version") do |v|
+        raise OptionParser::InvalidOption # override default handling of --version
+      end
     end
   end
 

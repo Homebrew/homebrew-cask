@@ -13,8 +13,8 @@ cask 'twitterrific' do
   app 'Twitterrific.app'
 
   zap :delete => [
-                  '~/Library/Application Support/Twitterrific',
-                  '~/Library/Caches/com.iconfactory.Twitterrific',
-                  '~/Library/Preferences/com.iconfactory.Twitterrific.plist'
+                   '~/Library/Application Support/Twitterrific',
+                   '~/Library/Caches/com.iconfactory.Twitterrific',
+                   '~/Library/Preferences/com.iconfactory.Twitterrific.plist',
                  ]
 end

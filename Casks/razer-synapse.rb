@@ -8,25 +8,25 @@ cask 'razer-synapse' do
   homepage 'https://www.razerzone.com/synapse/'
   license :gratis
 
-  pkg 'Razer Synapse.pkg'
-
   depends_on :macos => '>= :lion'
 
-  uninstall :script => '/Applications/Utilities/Uninstall Razer Synapse.app/Contents/MacOS/Uninstall Razer Synapse',
-            :pkgutil => 'com.razerzone.*',
-            :quit =>  [
-                        'com.razerzone.RzUpdater',
-                        'com.razerzone.rzdeviceengine'
-                      ],
+  pkg 'Razer Synapse.pkg'
+
+  uninstall :script    => '/Applications/Utilities/Uninstall Razer Synapse.app/Contents/MacOS/Uninstall Razer Synapse',
+            :pkgutil   => 'com.razerzone.*',
+            :quit      => [
+                            'com.razerzone.RzUpdater',
+                            'com.razerzone.rzdeviceengine',
+                          ],
             :launchctl => [
-                          'com.razer.rzupdater',
-                          'com.razerzone.rzdeviceengine'
+                            'com.razer.rzupdater',
+                            'com.razerzone.rzdeviceengine',
                           ]
 
-  zap :delete =>  [
-                    '~/Library/Preferenecs/com.razer.*',
-                    '~/Library/Preferenecs/com.razerzone.*'
-                  ]
+  zap :delete => [
+                   '~/Library/Preferenecs/com.razer.*',
+                   '~/Library/Preferenecs/com.razerzone.*',
+                 ]
 
   caveats do
     reboot

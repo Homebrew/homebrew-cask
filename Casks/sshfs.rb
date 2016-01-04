@@ -9,9 +9,9 @@ cask 'sshfs' do
   homepage 'https://osxfuse.github.io/'
   license :gpl
 
+  depends_on :cask => 'osxfuse'
+
   pkg "sshfs-#{version}.pkg"
 
   uninstall :pkgutil => 'com.github.osxfuse.pkg.SSHFS'
-
-  depends_on :cask => 'osxfuse'
 end

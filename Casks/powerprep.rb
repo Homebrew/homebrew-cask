@@ -10,5 +10,5 @@ cask 'powerprep' do
   pkg "PowerPrepIIV#{version.gsub('.', '_')}.pkg"
 
   uninstall :pkgutil => 'org.ets.GrePowerprepII.Applications.pkg',
-            :delete => '/Applications/POWERPREP II'
+            :delete  => '/Applications/POWERPREP II'
 end

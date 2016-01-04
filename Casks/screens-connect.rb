@@ -11,15 +11,15 @@ cask 'screens-connect' do
   homepage 'https://screensconnect.com'
   license :gratis
 
-  pkg 'Screens Connect.pkg'
-
   depends_on :macos => '>= :mountain_lion'
+
+  pkg 'Screens Connect.pkg'
 
   # Uninstall script can fail when trying to remove legacy PKGIDS
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8833
-  uninstall :script => {
-              :executable => 'Uninstall Screens Connect.app/Contents/Resources/sc-uninstaller.tool',
-              :must_succeed => false
-              },
+  uninstall :script  => {
+                          :executable   => 'Uninstall Screens Connect.app/Contents/Resources/sc-uninstaller.tool',
+                          :must_succeed => false,
+                        },
             :pkgutil => 'com.edovia.pkg.screens.connect.*'
 end

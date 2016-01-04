@@ -14,8 +14,8 @@ cask 'contexts' do
   uninstall :quit => 'com.contextsformac.Contexts'
 
   zap :delete => [
-                  '~/Library/Application Support/.com.contextsformac.Contexts.plist',
-                  '~/Library/Caches/com.contextsformac.Contexts',
-                  '~/Library/Preferences/com.contextsformac.Contexts.plist'
+                   '~/Library/Application Support/.com.contextsformac.Contexts.plist',
+                   '~/Library/Caches/com.contextsformac.Contexts',
+                   '~/Library/Preferences/com.contextsformac.Contexts.plist',
                  ]
 end

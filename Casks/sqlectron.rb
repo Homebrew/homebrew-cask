@@ -10,8 +10,8 @@ cask 'sqlectron' do
   license :mit
 
   depends_on :macos => '>= :mountain_lion'
-
   container :nested => 'Sqlectron.dmg'
+
   app 'Sqlectron.app'
 
   postflight do
@@ -19,7 +19,7 @@ cask 'sqlectron' do
   end
 
   zap :delete => [
-    '~/.sqlectron.json',
-    '~/Library/Application Support/Sqlectron'
-  ]
+                   '~/.sqlectron.json',
+                   '~/Library/Application Support/Sqlectron',
+                 ]
 end

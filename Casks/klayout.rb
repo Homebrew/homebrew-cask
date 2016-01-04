@@ -6,10 +6,10 @@ cask 'klayout' do
   url "http://178.77.72.242/downloads/klayout.#{version}.pkg"
   name 'KLayout'
   homepage 'http://www.klayout.de/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "klayout.#{version}.pkg"
 
   uninstall :pkgutil => 'klayout.de',
-            :quit => 'klayout.de'
+            :quit    => 'klayout.de'
 end
