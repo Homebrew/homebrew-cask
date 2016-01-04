@@ -3,6 +3,8 @@ require 'rake/testtask'
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 
+$LOAD_PATH.unshift(File.expand_path('../lib', __FILE__))
+
 Coveralls::RakeTask.new
 
 Rake::TestTask.new do |t|
@@ -21,6 +23,12 @@ end
 task :test => [:minitest, :spec, 'coveralls:push']
 task :default => [:test, :rubocop]
 
+desc 'Open a REPL for debugging and experimentation'
 task :console do
-    sh 'irb -Ilib -rvendor/homebrew-fork/global -rhbc'
+  require 'pry'
+  require 'pry-byebug'
+  require 'vendor/homebrew-fork/global'
+  require 'hbc'
+  ARGV.clear
+  Hbc.pry
 end
