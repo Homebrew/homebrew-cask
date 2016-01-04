@@ -3,7 +3,7 @@ cask 'fuse' do
   sha256 '3a3a408dfe646b9d1bff466dafe2b31116f1295d092c5ffe6522603d06334bc7'
 
   url "https://api.fusetools.com/fuse-release-management/releases/#{version}/osx"
-  name 'fuse'
+  name 'Fuse Fusetools'
   homepage 'https://www.fusetools.com'
   license :closed
 
