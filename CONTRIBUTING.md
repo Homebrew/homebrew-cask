@@ -133,7 +133,7 @@ That can become hard to read, however. Since many of these changes are common, w
 | `patch`                  | `1.2.3-a45,ccdd88` | `3`                |
 | `major_minor`            | `1.2.3-a45,ccdd88` | `1.2`              |
 | `major_minor_patch`      | `1.2.3-a45,ccdd88` | `1.2.3`            |
-| `before_comma`           | `1.2.3-a45,ccdd88` | `1.2.3-a45_b67`    |
+| `before_comma`           | `1.2.3-a45,ccdd88` | `1.2.3-a45`        |
 | `after_comma`            | `1.2.3-a45,ccdd88` | `ccdd88`           |
 | `dots_to_hyphens`        | `1.2.3-a45,ccdd88` | `1-2-3-a45,ccdd88` |
 | `no_dots`                | `1.2.3-a45,ccdd88` | `123-a45,ccdd88`   |
