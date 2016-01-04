@@ -64,7 +64,17 @@ Before reporting a bug, make sure you have the latest versions of homebrew, home
 $ brew update; brew cleanup; brew cask cleanup
 ```
 
-In addition, if you haven’t yet, run `brew uninstall --force brew-cask; brew update` once to [switch to the new system](https://github.com/caskroom/homebrew-cask#important-december-update-homebrew-cask-will-now-be-kept-up-to-date-together-with-homebrew-see-15381-for-details-if-you-havent-yet-run-brew-uninstall---force-brew-cask-brew-update-to-switch-to-the-new-system).
+In addition, if you haven’t yet, run the following once to [switch to the new system](https://github.com/caskroom/homebrew-cask#important-december-update-homebrew-cask-will-now-be-kept-up-to-date-together-with-homebrew-see-15381-for-details-if-you-havent-yet-run-brew-uninstall---force-brew-cask-brew-update-to-switch-to-the-new-system):
+
+```bash
+$ brew uninstall --force brew-cask; brew update
+```
+
+Finally, if it's been a while since you last updated Homebrew-Cask, you may still have the old `phinze/cask` tap installed. Run the following to clean up, then try your command again:
+
+```bash
+$ brew untap phinze/cask; brew untap caskroom/cask; brew update
+```
 
 If the issue persists, please run the problematic command with the `--verbose` flag and post its and `brew cask doctor`’s outputs in distinct [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
 
