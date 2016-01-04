@@ -12,9 +12,10 @@ cask 'smartcutter' do
 
   # This might remove preferences for all FameRing products on the system
   # but right now SmartCutter is the only OS X application by the company.
-  zap :delete => [
+  zap :delete => 
+  [
     '~/Library/Application Support/FameRing/',
-    '~/Library/Preferences/fltk.org/'
+    '~/Library/Preferences/fltk.org/',
   ]
 
   caveats 'The unregistered version can be used indefinitely and applies a watermark at beginning of exported files.'
