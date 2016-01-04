@@ -1,7 +1,10 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "BREW\-CASK" "1" "December 2015" "Homebrew-cask" "brew-cask"
+.TH "HOMEBREW\-CASK" "1" "January 2016" "Homebrew-cask" "brew-cask"
+.
+.SH "NAME"
+\fBhomebrew\-cask\fR \- A friendly binary installer for OS X
 .
 .SH "SYNOPSIS"
 \fBbrew cask\fR command [options] [\fItoken\fR \.\.\.]
@@ -197,10 +200,30 @@ Target location for “helper” executable links\. The default value is \fB/usr
 Output debugging information of use to Cask authors and developers\.
 .
 .SH "INTERACTION WITH HOMEBREW"
-Homebrew\-cask is implemented as a external command for Homebrew\. That means this project is entirely built upon the Homebrew infrastructure\. For example, upgrades to the Homebrew\-cask tool are received through Homebrew: \fBbrew update; brew cleanup; brew cask cleanup\fR
+Homebrew\-cask is implemented as a external command for Homebrew\. That means this project is entirely built upon the Homebrew infrastructure\. For example, upgrades to the Homebrew\-cask tool are received through Homebrew:
+.
+.IP "" 4
+.
+.nf
+
+brew update; brew cleanup; brew cask cleanup
+.
+.fi
+.
+.IP "" 0
 .
 .P
-And updates to individual Cask definitions are received whenever you issue the Homebrew command: brew update
+And updates to individual Cask definitions are received whenever you issue the Homebrew command:
+.
+.IP "" 4
+.
+.nf
+
+brew update
+.
+.fi
+.
+.IP "" 0
 .
 .SH "OTHER WAYS TO SPECIFY A CASK"
 Most homebrew\-cask commands can accept a Cask token as an argument\. As described above, the argument can take the form of:
