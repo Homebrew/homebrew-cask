@@ -1,6 +1,6 @@
 cask 'fuse' do
-  version '0.9.3.5207'
-  sha256 '3a3a408dfe646b9d1bff466dafe2b31116f1295d092c5ffe6522603d06334bc7'
+  version '0.9.5.5424'
+  sha256 '9df279da161f3d8a89bcedacfc7aaeade7a9005784602177a82e7008a6592e57'
 
   url "https://api.fusetools.com/fuse-release-management/releases/#{version}/osx"
   name 'fuse'
