@@ -2,7 +2,7 @@ cask 'eclipse-installer' do
   version :latest
   sha256 :no_check
 
-  url 'http://eclipse.org/downloads/download.php?file=/oomph/products/eclipse-inst-mac64.tar.gz&r=1'
+  url 'http://eclipse.org/downloads/download.php?file=/oomph/epp/mars/R1a/eclipse-inst-mac64.tar.gz&r=1'
   name 'Eclipse Installer'
   homepage 'https://eclipse.org/'
   license :eclipse
