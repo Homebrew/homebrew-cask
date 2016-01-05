@@ -5,7 +5,7 @@ cask 'sync-messenger' do
   url 'https://wtd-sync-update-channel.herokuapp.com/download/latest?platform=darwin&channel=production'
   name 'sync-messenger'
   homepage 'https://www.wantedly.com/sync'
-  license :unknown # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Sync.app'
 end
