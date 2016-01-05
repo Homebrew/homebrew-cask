@@ -9,7 +9,7 @@ cask 'gear-player' do
   homepage 'https://www.gearmusicplayer.com'
   license :commercial
 
-  auto_updates
+  auto_updates true
 
   app 'Gear Player.app'
 end
