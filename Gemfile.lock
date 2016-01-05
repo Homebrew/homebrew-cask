@@ -81,7 +81,7 @@ GEM
     rspec-mocks (3.0.4)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.4)
-    rubocop-cask (0.2.2)
+    rubocop-cask (0.3.0)
     ruby-progressbar (1.7.5)
     simplecov (0.11.1)
       docile (~> 1.1.0)
