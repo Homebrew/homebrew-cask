@@ -833,7 +833,7 @@ The following methods may be called to perform standard tasks:
 
 ### Zap Stanza Purpose
 
-The `zap` stanza describes a more complete uninstallation of resources associated with a Cask. The `zap` procedures will never be performed by default, but only if the user invokes the `zap` verb:
+The `zap` stanza describes a more complete uninstallation of files associated with a Cask. The `zap` procedures will never be performed by default, but only if the user invokes the `zap` verb:
 
 ```bash
 $ brew cask zap td-toolbelt             # also removes org.ruby-lang.installer
