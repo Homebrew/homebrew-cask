@@ -3,11 +3,11 @@ require 'test_helper'
 describe Hbc::CLI::Search do
   it "lists the available Casks that match the search term" do
     lambda {
-      Hbc::CLI::Search.run('intellij')
+      Hbc::CLI::Search.run('photoshop')
     }.must_output <<-OUTPUT.gsub(/^ */, '')
       ==> Partial matches
-      intellij-idea
-      intellij-idea-ce
+      adobe-photoshop-cc
+      adobe-photoshop-lightroom
     OUTPUT
   end
 
