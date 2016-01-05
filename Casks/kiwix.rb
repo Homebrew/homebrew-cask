@@ -6,7 +6,7 @@ cask 'kiwix' do
   url "http://downloads.sourceforge.net/project/kiwix/#{version}/kiwix-#{version}.dmg"
   name 'Kiwix'
   homepage 'http://www.kiwix.org'
-  license :unknown
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Kiwix.app'
 end
