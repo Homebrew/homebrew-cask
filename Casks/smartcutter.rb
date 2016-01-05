@@ -14,7 +14,7 @@ cask 'smartcutter' do
                    '~/Library/Preferences/fltk.org/fltk.prefs',
                  ],
       :rmdir  => [
-                   '~/Library/Application Support/FameRing/SmartCutter',
+                   '~/Library/Application Support/FameRing',
                    '~/Library/Preferences/fltk.org',
                  ]
 end
