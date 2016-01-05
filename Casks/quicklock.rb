@@ -8,7 +8,7 @@ cask 'quicklock' do
           :sha256 => '2f6ef1ba9c7c94fc16948e8cc706388579bf898a738b383d54f4ff6f7dec41c6'
   name 'QuickLock'
   homepage 'http://www.quicklockapp.com/'
-  license :unknown
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'QuickLock.app'
 end
