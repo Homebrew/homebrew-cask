@@ -55,7 +55,7 @@ class Hbc::Source::PathBase
           raise Hbc::CaskInvalidError.new(cask_token, "Bad header line: '#{header_token}' does not match file name")
         end
       else
-        raise Hbc::CaskInvalidError.new(cask_token, "Bad header line: parse failed")
+        raise Hbc::CaskHeaderParseError.new(cask_token, "Bad header line: parse failed")
       end
 
       # simulate "require"

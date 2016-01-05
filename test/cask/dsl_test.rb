@@ -48,7 +48,7 @@ describe Hbc::DSL do
     it "requires a valid header format" do
       err = lambda {
         invalid_cask = Hbc.load('invalid/invalid-header-format')
-      }.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskHeaderParseError)
       err.message.must_include 'Bad header line: parse failed'
     end
 

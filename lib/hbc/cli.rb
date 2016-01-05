@@ -116,12 +116,13 @@ class Hbc::CLI
     run_command(command, *rest)
   rescue Hbc::CaskError, Hbc::CaskSha256MismatchError => e
     onoe e
+    $stderr.puts Hbc::Utils.error_message_with_suggestions if e.is_a?(Hbc::CaskHeaderParseError)
     $stderr.puts e.backtrace if Hbc.debug
     exit 1
   rescue StandardError, ScriptError, NoMemoryError => e
     onoe e
-    puts Hbc::Utils.error_message_with_suggestions
-    puts e.backtrace
+    $stderr.puts Hbc::Utils.error_message_with_suggestions
+    $stderr.puts e.backtrace
     exit 1
   end
 
