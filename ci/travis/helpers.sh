@@ -62,7 +62,7 @@ exit_build_step () {
 
 modified_cask_files () {
   if [[ -z "${MODIFIED_CASK_FILES+defined}" ]]; then
-    MODIFIED_CASK_FILES="$(git diff --name-only --diff-filter=AM "${TRAVIS_COMMIT_RANGE}" -- Casks)"
+    MODIFIED_CASK_FILES="$(git diff --name-only --diff-filter=AM "${TRAVIS_COMMIT_RANGE}" -- Casks/*.rb)"
     export MODIFIED_CASK_FILES
   fi
   echo "${MODIFIED_CASK_FILES}"
