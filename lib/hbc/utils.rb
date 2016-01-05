@@ -6,7 +6,7 @@ require 'stringio'
 
 require 'hbc/utils/tty'
 
-UPDATE_CMD = "brew uninstall --force brew-cask; brew update; brew cleanup; brew cask cleanup"
+UPDATE_CMD = "brew uninstall --force brew-cask; brew untap phinze/cask; brew update; brew cleanup; brew cask cleanup"
 ISSUES_URL = "https://github.com/caskroom/homebrew-cask#reporting-bugs"
 
 # todo: temporary
