@@ -1,10 +1,10 @@
 cask 'ax88772' do
-  version '2.4.0_20141215'
-  sha256 'b9b2162f19d4a563071ef1eaa92f0bd2b2fa224eba721122366025e8be5ce907'
+  version '2.4.0_20151117'
+  sha256 'cc336a77ed35ab6b9972f76fb2a4c77650072c2844fd1632a1875b035a311c6f'
 
   module Utils
     def self.basename
-      "AX88772C_772B_772A_760_772_Macintosh_10.5_to_10.10_Driver_Installer_v#{Module.nesting.last.version}"
+      "AX88772C_772B_772A_760_772_Macintosh_10.5_to_10.11_Driver_Installer_v#{Module.nesting.last.version}"
     end
   end
 
@@ -15,7 +15,7 @@ cask 'ax88772' do
 
   container :nested => "#{Utils.basename}/AX88772.dmg"
 
-  pkg "AX88772_v#{version[0..-10]}.pkg"
+  pkg "AX88772_v#{version.major_minor_patch}.pkg"
 
   uninstall :script => { :executable => 'AX88772C_772B_772A_760_772_Uninstall_v130' }
 end
