@@ -4,7 +4,7 @@ cask 'adobe-photoshop-cc' do
 
   url 'http://trials3.adobe.com/AdobeProducts/PHSP/16/osx10/Photoshop_16_LS20.dmg',
       :user_agent => :fake,
-      :cookies => { 'MM_TRIALS' => '1234' }
+      :cookies    => { 'MM_TRIALS' => '1234' }
   name 'Adobe Photoshop CC'
   homepage 'https://www.adobe.com/products/photoshop.html'
   license :commercial

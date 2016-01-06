@@ -10,9 +10,9 @@ cask 'abgx360' do
 
   pkg "abgx360-#{version}.pkg"
 
-  uninstall :quit => 'net.abgx360.abgx360gui',
+  uninstall :quit    => 'net.abgx360.abgx360gui',
             :pkgutil => [
-                         'net.abgx360.abgx360.pkg',
-                         'net.abgx360.abgx360gui.pkg',
+                          'net.abgx360.abgx360.pkg',
+                          'net.abgx360.abgx360gui.pkg',
                         ]
 end

@@ -12,6 +12,8 @@ cask 'jdownloader' do
   homepage 'http://jdownloader.org/'
   license :gpl
 
+  app 'JDownloader 2.0/JDownloader2.app'
+
   preflight do
     system "\"#{staged_path}/JDownloader Installer.app/Contents/MacOS/JavaApplicationStub\" " \
            "-dir \"#{staged_path}\" " \
@@ -28,6 +30,4 @@ cask 'jdownloader' do
 
       brew cask install java
   EOS
-
-  app 'JDownloader 2.0/JDownloader2.app'
 end

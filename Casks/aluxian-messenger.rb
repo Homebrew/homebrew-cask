@@ -12,8 +12,8 @@ cask 'aluxian-messenger' do
   app 'Messenger.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.aluxian.messengerfordesktop.plist',
-                  '~/Library/Application Support/Messenger/',
-                  '~/Library/Saved Application State/com.aluxian.messengerfordesktop.savedState/'
+                   '~/Library/Preferences/com.aluxian.messengerfordesktop.plist',
+                   '~/Library/Application Support/Messenger/',
+                   '~/Library/Saved Application State/com.aluxian.messengerfordesktop.savedState/',
                  ]
 end

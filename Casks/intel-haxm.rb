@@ -7,14 +7,14 @@ cask 'intel-haxm' do
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
   license :closed
 
-  installer :script => 'silent_install.sh',
-            :sudo => true,
+  installer :script       => 'silent_install.sh',
+            :sudo         => true,
             :must_succeed => true
 
   uninstall :script => {
-                        :sudo => true,
-                        :must_succeed => true,
-                        :executable => 'silent_install.sh',
-                        :args => ['-u']
+                         :sudo         => true,
+                         :must_succeed => true,
+                         :executable   => 'silent_install.sh',
+                         :args         => ['-u'],
                        }
 end

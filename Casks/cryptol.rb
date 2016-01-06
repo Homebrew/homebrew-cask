@@ -6,17 +6,17 @@ cask 'cryptol' do
   url "https://github.com/GaloisInc/cryptol/releases/download/v#{version}/cryptol-#{version}-MacOSX-64.tar.gz"
   appcast 'https://github.com/GaloisInc/cryptol/releases.atom',
           :sha256 => 'a297a208be4d6a81e6bf0675fd8d204eb99ad3254b4c886d382d0707824c0a03'
-  gpg "#{url}.sig",
-      :key_url => 'http://cryptol.net/files/Galois.asc'
   name 'Cryptol'
   homepage 'http://cryptol.net/'
   license :bsd
+  gpg "#{url}.sig",
+      :key_url => 'http://cryptol.net/files/Galois.asc'
+
+  depends_on :cask => 'cvc4'
 
   binary "cryptol-#{version}-MacOSX-64/bin/cryptol"
 
   zap :delete => '~/.cryptol'
-
-  depends_on :cask => 'cvc4'
 
   caveats do
     files_in_usr_local

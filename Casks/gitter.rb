@@ -16,14 +16,14 @@ cask 'gitter' do
   end
 
   uninstall :quit => [
-                      'com.troupe.gitter.mac.Gitter',
-                      'com.troupe.gitter.mac.GitterHelperApp'
+                       'com.troupe.gitter.mac.Gitter',
+                       'com.troupe.gitter.mac.GitterHelperApp',
                      ]
 
   zap :delete => [
-                  '~/Library/Application Support/Gitter',
-                  '~/Library/Caches/com.troupe.gitter.mac.Gitter',
-                  '~/Library/Preferences/com.troupe.gitter.mac.Gitter.plist',
-                  '~/Library/Saved Application State/com.troupe.gitter.mac.Gitter.savedState'
+                   '~/Library/Application Support/Gitter',
+                   '~/Library/Caches/com.troupe.gitter.mac.Gitter',
+                   '~/Library/Preferences/com.troupe.gitter.mac.Gitter.plist',
+                   '~/Library/Saved Application State/com.troupe.gitter.mac.Gitter.savedState',
                  ]
 end

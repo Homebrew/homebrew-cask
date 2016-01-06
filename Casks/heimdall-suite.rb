@@ -14,9 +14,9 @@ cask 'heimdall-suite' do
             :kext    => 'au.com.glassechidna.heimdall_usb_shield'
 
   zap :delete => [
-    '~/Library/Preferences/com.yourcompany.heimdall-frontend.plist',
-    '~/Library/Saved Application State/com.yourcompany.heimdall-frontend.savedState'
-  ]
+                   '~/Library/Preferences/com.yourcompany.heimdall-frontend.plist',
+                   '~/Library/Saved Application State/com.yourcompany.heimdall-frontend.savedState',
+                 ]
 
   caveats do
     reboot

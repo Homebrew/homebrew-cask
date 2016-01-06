@@ -17,13 +17,13 @@ cask 'hipchat' do
   end
 
   zap :delete => [
-                  # todo expand/glob for '~/Library/<userid>/HipChat/'
-                  '~/Library/Application Support/HipChat',
-                  '~/Library/Caches/com.hipchat.HipChat',
-                  '~/Library/HipChat',
-                  '~/Library/Logs/HipChat',
-                  '~/Library/Preferences/com.hipchat.HipChat.plist',
-                  '~/Library/Saved Application State/com.hipchat.HipChat.savedState',
-                  '~/Library/chat.hipchat.com',
+                   # TODO: expand/glob for '~/Library/<userid>/HipChat/'
+                   '~/Library/Application Support/HipChat',
+                   '~/Library/Caches/com.hipchat.HipChat',
+                   '~/Library/HipChat',
+                   '~/Library/Logs/HipChat',
+                   '~/Library/Preferences/com.hipchat.HipChat.plist',
+                   '~/Library/Saved Application State/com.hipchat.HipChat.savedState',
+                   '~/Library/chat.hipchat.com',
                  ]
 end

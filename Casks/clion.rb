@@ -10,10 +10,10 @@ cask 'clion' do
   app 'CLion.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.jetbrains.CLion.plist',
-                  '~/Library/Preferences/clion12',
-                  '~/Library/Application Support/clion12',
-                  '~/Library/Caches/clion12',
-                  '~/Library/Logs/clion12',
+                   '~/Library/Preferences/com.jetbrains.CLion.plist',
+                   '~/Library/Preferences/clion12',
+                   '~/Library/Application Support/clion12',
+                   '~/Library/Caches/clion12',
+                   '~/Library/Logs/clion12',
                  ]
 end

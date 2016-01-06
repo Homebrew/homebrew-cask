@@ -1,10 +1,10 @@
 cask 'codebug' do
-  version '0.9.4'
-  sha256 '2a568b2eff8145823b552668d0b1caa75a98077afe7692ccb69ca030508c86b9'
+  version '1.5.1'
+  sha256 '31e6c99c95bbc2d146ce96aaecf38743f9ab83195483192a90b9da03732b765f'
 
-  url "http://codebugapp.com/downloads/Codebug#{version.gsub('.','-')}.zip"
-  appcast 'http://codebugapp.com/update.xml',
-          :sha256 => '70782ae334e666a9ce810ce2d4f60df63fdb02fade4a266eca0f66341a299788'
+  url "http://codebugapp.com/downloads/Codebug#{version}.zip"
+  appcast 'http://codebugapp.com/updateV1.xml',
+          :sha256 => 'b7e35ecf3c846faf2015234aeb4327c9b9211699e680918d8957a5a33f53e148'
   name 'Codebug'
   homepage 'http://www.codebugapp.com/'
   license :commercial

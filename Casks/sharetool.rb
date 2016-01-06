@@ -8,5 +8,6 @@ cask 'sharetool' do
   license :gratis
 
   container :nested => "ShareTool #{version.to_i}.dmg"
+
   app 'ShareTool.app'
 end

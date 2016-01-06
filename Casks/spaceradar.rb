@@ -14,9 +14,9 @@ cask 'spaceradar' do
   uninstall :quit => 'com.electron.spaceradar'
 
   zap :delete => [
-                  '~/Library/Application Support/space-radar',
-                  '~/Library/Caches/space-radar',
-                  '~/Library/Preferences/com.electron.spaceradar.plist',
-                  '~/Library/Saved Application State/com.electron.spaceradar.savedState'
+                   '~/Library/Application Support/space-radar',
+                   '~/Library/Caches/space-radar',
+                   '~/Library/Preferences/com.electron.spaceradar.plist',
+                   '~/Library/Saved Application State/com.electron.spaceradar.savedState',
                  ]
 end

@@ -225,19 +225,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
   # :early_script should not delete files, better defer that to :script.
   # If Cask writers never need :early_script it may be removed in the future.
   def uninstall_early_script(directives)
-    executable, script_arguments = self.class.read_script_arguments(
-                                                                    directives,
-                                                                    'uninstall',
-                                                                    {:must_succeed => true, :sudo => true},
-                                                                    {:print_stdout => true},
-                                                                    :early_script
-                                                                   )
-    ohai "Running uninstall script #{executable}"
-    raise Hbc::CaskInvalidError.new(@cask, "#{stanza} :early_script without :executable") if executable.nil?
-    executable_path = @cask.staged_path.join(executable)
-    @command.run('/bin/chmod', :args => ['+x', executable_path]) if File.exists?(executable_path)
-    @command.run(executable_path, script_arguments)
-    sleep 1
+    uninstall_script(directives, directive_name: :early_script)
   end
 
   # :launchctl must come before :quit/:signal for cases where app would instantly re-launch
@@ -306,7 +294,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
 
   def get_unix_pids(bundle_id)
     pid_string = @command.run!('/usr/bin/osascript',
-                               :args => ['-e', %Q{tell application "System Events" to get the unix id of every process whose bundle identifier is "#{id}"}],
+                               :args => ['-e', %Q{tell application "System Events" to get the unix id of every process whose bundle identifier is "#{bundle_id}"}],
                                :sudo => true).stdout.chomp
     return [] unless pid_string.match(%r{\A\d+(?:\s*,\s*\d+)*\Z}) # sanity check
     pid_string.split(%r{\s*,\s*}).map(&:strip).map(&:to_i)
@@ -335,14 +323,17 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
   end
 
   # :script must come before :pkgutil, :delete, or :trash so that the script file is not already deleted
-  def uninstall_script(directives)
+  def uninstall_script(directives, directive_name: :script)
     executable, script_arguments = self.class.read_script_arguments(directives,
                                                                     'uninstall',
                                                                     {:must_succeed => true, :sudo => true},
                                                                     {:print_stdout => true},
-                                                                    :script)
-    raise Hbc::CaskInvalidError.new(@cask, "#{stanza} :script without :executable.") if executable.nil?
-    @command.run(@cask.staged_path.join(executable), script_arguments)
+                                                                    directive_name)
+    ohai "Running uninstall script #{executable}"
+    raise Hbc::CaskInvalidError.new(@cask, "#{stanza} :#{directive_name} without :executable.") if executable.nil?
+    executable_path = @cask.staged_path.join(executable)
+    @command.run('/bin/chmod', :args => ['+x', '--', executable_path]) if File.exists?(executable_path)
+    @command.run(executable_path, script_arguments)
     sleep 1
   end
 
@@ -355,7 +346,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
   end
 
   def uninstall_delete(directives, expand_tilde=true)
-    Array(directives[:delete]).flatten.each_slice(PATH_ARG_SLICE_SIZE) do |path_slice|
+    Array(directives[:delete]).concat(Array(directives[:trash])).flatten.each_slice(PATH_ARG_SLICE_SIZE) do |path_slice|
       ohai "Removing files: #{path_slice.utf8_inspect}"
       path_slice = self.class.expand_path_strings(path_slice) if expand_tilde
       path_slice = self.class.remove_relative_path_strings(:delete, path_slice)

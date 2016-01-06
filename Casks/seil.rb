@@ -9,18 +9,18 @@ cask 'seil' do
   homepage 'https://pqrs.org/osx/karabiner/seil.html'
   license :public_domain
 
+  depends_on :macos => '>= :el_capitan'
+
   pkg 'Seil.sparkle_guided.pkg'
 
-  uninstall :quit => 'org.pqrs.Seil',
-            :kext => 'org.pqrs.driver.Seil',
+  uninstall :quit    => 'org.pqrs.Seil',
+            :kext    => 'org.pqrs.driver.Seil',
             :pkgutil => 'org.pqrs.driver.Seil'
 
   zap       :delete => [
-                        '~/Library/Caches/org.pqrs.PCKeyboardHack',
-                        '~/Library/Caches/org.pqrs.Seil',
-                        '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
-                        '~/Library/Preferences/org.pqrs.Seil.plist',
+                         '~/Library/Caches/org.pqrs.PCKeyboardHack',
+                         '~/Library/Caches/org.pqrs.Seil',
+                         '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
+                         '~/Library/Preferences/org.pqrs.Seil.plist',
                        ]
-
-  depends_on :macos => '>= :el_capitan'
 end

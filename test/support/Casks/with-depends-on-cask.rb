@@ -6,5 +6,6 @@ test_cask 'with-depends-on-cask' do
   homepage 'http://example.com/with-depends-on-cask'
 
   depends_on :cask => 'local-transmission'
+
   app 'Caffeine.app'
 end

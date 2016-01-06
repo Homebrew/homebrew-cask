@@ -89,7 +89,7 @@ We recommend the following:
 You can force a specific version of the Ruby interpreter, and/or an alternate version of the `brew-cask` subcommand, by invoking `brew cask` with fully-qualified paths, like this:
 
 ```bash
-$ /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/Taps/caskroom/homebrew-cask/lib/brew-cask-cmd.rb help
+$ /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/Taps/caskroom/homebrew-cask/cmd/brew-cask.rb help
 ```
 
 ### Forcing a Specific Homebrew-cask Subcommand
@@ -129,8 +129,8 @@ The first line of a commit message (the summary line) is like the subject line o
 If you’re making changes - please write some tests for them! Install dependencies and run the whole test suite with:
 
 ```bash
-bundle
-rake test
+bundle install
+bundle exec rake test
 ```
 
 Be sure to run the test suite before submitting. If you forget, Travis-CI will do that for you and embarrass you in front of all your friends. :)
@@ -144,7 +144,7 @@ You may also use a set of environment variables to increase verbosity:
 Example of a very verbose output:
 
 ```shell
-TESTOPTS='-v' SPEC_OPTS='-fd' VERBOSE_TESTS=1 rake test
+TESTOPTS='-v' SPEC_OPTS='-fd' VERBOSE_TESTS=1 bundle exec rake test
 ```
 
 #### External Commands

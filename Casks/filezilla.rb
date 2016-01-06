@@ -1,5 +1,4 @@
 cask 'filezilla' do
-
   if MacOS.release <= :snow_leopard
     version '3.8.1'
     sha256 '86c725246e2190b04193ce8e7e5ea89d5b9318e9f20f5b6f9cdd45b6f5c2d283'
@@ -17,8 +16,8 @@ cask 'filezilla' do
   app 'FileZilla.app'
 
   zap :delete => [
-                  '~/Library/Saved Application State/de.filezilla.savedState',
-                  '~/Library/Preferences/de.filezilla.plist',
-                 ],
-      :rmdir => '~/.config/filezilla'
+                   '~/.config/filezilla',
+                   '~/Library/Saved Application State/de.filezilla.savedState',
+                   '~/Library/Preferences/de.filezilla.plist',
+                 ]
 end

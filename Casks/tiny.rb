@@ -9,7 +9,7 @@ cask 'tiny' do
   homepage 'http://www.delightfuldev.com/tiny/'
   license :gratis
 
-  app 'Tiny.app'
-
   depends_on :macos => '>= 10.10'
+
+  app 'Tiny.app'
 end

@@ -7,7 +7,7 @@ cask 'fseventer' do
           :sha256 => '483154f2f21405fc571a4623f3ba2203510034fbcac947627e9dc8ace9deddd4'
   name 'fseventer'
   homepage 'http://www.fernlightning.com/doku.php?id=software:fseventer:start'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'fseventer/fseventer.app'
 

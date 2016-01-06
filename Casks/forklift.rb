@@ -12,7 +12,7 @@ cask 'forklift' do
   app 'ForkLift.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.binarynights.ForkLift2.plist',
-                  '~/Library/Caches/com.binarynights.ForkLift2'
-  ]
+                   '~/Library/Preferences/com.binarynights.ForkLift2.plist',
+                   '~/Library/Caches/com.binarynights.ForkLift2',
+                 ]
 end

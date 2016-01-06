@@ -13,8 +13,8 @@ cask 'vienna' do
   app 'Vienna.app'
 
   zap :delete => [
-                  '~/Library/Application Support/Vienna',
-                  '~/Library/Caches/uk.co.opencommunity.vienna2',
-                  '~/Library/Preferences/uk.co.opencommunity.vienna2.plist',
-                  ]
+                   '~/Library/Application Support/Vienna',
+                   '~/Library/Caches/uk.co.opencommunity.vienna2',
+                   '~/Library/Preferences/uk.co.opencommunity.vienna2.plist',
+                 ]
 end

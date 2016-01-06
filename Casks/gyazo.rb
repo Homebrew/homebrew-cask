@@ -7,13 +7,13 @@ cask 'gyazo' do
   homepage 'https://gyazo.com/'
   license :other
 
-  zap :delete => [
-    '~/Library/Caches/com.gyazo.gif',
-    '~/Library/Caches/com.gyazo.mac',
-    '~/Library/Preferences/com.gyazo.gif.plist',
-    '~/Library/Preferences/com.gyazo.mac.plist'
-  ]
-
   app 'Gyazo.app'
   app 'Gyazo GIF.app'
+
+  zap :delete => [
+                   '~/Library/Caches/com.gyazo.gif',
+                   '~/Library/Caches/com.gyazo.mac',
+                   '~/Library/Preferences/com.gyazo.gif.plist',
+                   '~/Library/Preferences/com.gyazo.mac.plist',
+                 ]
 end

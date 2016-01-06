@@ -9,6 +9,7 @@ cask 'adobe-arh' do
   license :gratis
 
   container :type => :naked
+
   binary 'arh'
 
   postflight do

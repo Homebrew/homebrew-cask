@@ -9,9 +9,9 @@ cask 'couchbase-server-community' do
     url "http://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-elcapitan_x86_64.zip"
   end
 
-  name 'Couchbase Server'
   appcast 'http://appcast.couchbase.com/membasex.xml',
           :sha256 => 'f05312af8660b51401dd70cd55ddedeb6de551d5b92372ab155906bc597c9ec7'
+  name 'Couchbase Server'
   homepage 'http://www.couchbase.com/'
   license :apache
 

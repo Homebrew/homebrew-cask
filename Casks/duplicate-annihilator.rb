@@ -8,5 +8,6 @@ cask 'duplicate-annihilator' do
   license :commercial
 
   container :nested => 'Duplicate Annihilator.dmg'
+
   app 'Duplicate Annihilator.app'
 end

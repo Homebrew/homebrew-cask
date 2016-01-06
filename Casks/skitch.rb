@@ -5,12 +5,12 @@ cask 'skitch' do
   url "https://cdn1.evernote.com/skitch/mac/release/Skitch-#{version}.zip"
   name 'Skitch'
   homepage 'https://evernote.com/skitch/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Skitch.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.plasq.skitch.plist',
-                  '~/Library/Preferences/com.plasq.skitch.history',
+                   '~/Library/Preferences/com.plasq.skitch.plist',
+                   '~/Library/Preferences/com.plasq.skitch.history',
                  ]
 end

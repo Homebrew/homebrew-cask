@@ -7,13 +7,13 @@ cask 'doubletwist' do
           :sha256 => '63ad1487f6e129aa79b9724f9191a52aa1a31ec0c26de63a9d778c1dd709a815'
   name 'doubleTwist'
   homepage 'https://www.doubletwist.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'doubleTwist.app'
 
   zap :delete => [
-                  '~/Library/Application Support/doubleTwist',
-                  '~/Library/Preferences/com.doubleTwist.desktop.plist',
-                  '~/Library/Caches/com.doubleTwist.desktop'
+                   '~/Library/Application Support/doubleTwist',
+                   '~/Library/Preferences/com.doubleTwist.desktop.plist',
+                   '~/Library/Caches/com.doubleTwist.desktop',
                  ]
 end

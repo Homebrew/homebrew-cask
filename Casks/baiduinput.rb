@@ -11,6 +11,6 @@ cask 'baiduinput' do
 
   installer :manual => '安装百度输入法.app'
 
-  uninstall :pkgutil  => 'com.baidu.inputmethod.*',
-            :delete   => '/Library/Input Methods/BaiduIM.app'
+  uninstall :pkgutil => 'com.baidu.inputmethod.*',
+            :delete  => '/Library/Input Methods/BaiduIM.app'
 end

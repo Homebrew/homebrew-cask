@@ -3,7 +3,7 @@ require 'digest'
 class Hbc::Verify::Checksum
   def self.me?(cask)
     return true unless cask.sha256 == :no_check
-    ohai "Skipping checksum for Cask #{cask}"
+    ohai "No checksum defined for Cask #{cask}, skipping verification"
     false
   end
 

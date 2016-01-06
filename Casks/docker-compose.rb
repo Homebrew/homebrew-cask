@@ -10,13 +10,13 @@ cask 'docker-compose' do
   homepage 'https://docs.docker.com/compose'
   license :apache
 
+  depends_on :cask => 'docker'
+  depends_on :arch => :x86_64
   container :type => :naked
+
   binary 'docker-compose-Darwin-x86_64', :target => 'docker-compose'
 
   postflight do
     set_permissions "#{staged_path}/docker-compose-Darwin-x86_64", '0755'
   end
-
-  depends_on :cask => 'docker'
-  depends_on :arch => :x86_64
 end

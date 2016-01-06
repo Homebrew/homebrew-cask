@@ -8,6 +8,7 @@ cask 'candybar' do
   license :gratis
 
   app 'CandyBar.app'
+
   caveats do
     discontinued
     free_license 'https://panic.com/bin/setup.php/cb3/PPQA-YAMA-E3KP-VHXG-B6AL-L'

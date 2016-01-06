@@ -16,11 +16,11 @@ cask 'mailsmith' do
   end
 
   zap :delete => [
-                  '~/Library/Application Support/Mailsmith',
-                  '~/Library/Caches/com.barebones.mailsmith',
-                  '~/Library/Logs/Mailsmith',
-                  '~/Library/Preferences/com.barebones.mailsmith.plist',
-                  '~/Library/Preferences/com.barebones.mailsmith.PreferenceData',
-                  '~/Library/Saved Application State/com.barebones.mailsmith.savedState'
+                   '~/Library/Application Support/Mailsmith',
+                   '~/Library/Caches/com.barebones.mailsmith',
+                   '~/Library/Logs/Mailsmith',
+                   '~/Library/Preferences/com.barebones.mailsmith.plist',
+                   '~/Library/Preferences/com.barebones.mailsmith.PreferenceData',
+                   '~/Library/Saved Application State/com.barebones.mailsmith.savedState',
                  ]
 end

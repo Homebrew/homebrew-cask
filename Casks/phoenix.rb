@@ -9,11 +9,10 @@ cask 'phoenix' do
   homepage 'https://github.com/kasper/phoenix/'
   license :mit
 
-  app 'Phoenix.app'
-
+  accessibility_access true
   depends_on :macos => '>= :yosemite'
 
-  accessibility_access true
+  app 'Phoenix.app'
 
   zap :delete => '~/.phoenix.js'
 end

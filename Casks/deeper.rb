@@ -28,18 +28,18 @@ cask 'deeper' do
   homepage 'http://www.titanium.free.fr/deeper.html'
   license :gratis
 
-  app 'Deeper.app'
+  depends_on :macos => %w[
+                         :tiger
+                         :leopard
+                         :snow_leopard
+                         :lion
+                         :mountain_lion
+                         :mavericks
+                         :yosemite
+                         :el_capitan
+                       ]
 
-  depends_on :macos => %w{
-                          :tiger
-                          :leopard
-                          :snow_leopard
-                          :lion
-                          :mountain_lion
-                          :mavericks
-                          :yosemite
-                          :el_capitan
-                         }
+  app 'Deeper.app'
 
   caveats do
     if [:leopard, :tiger].include?(MacOS.release.to_sym)

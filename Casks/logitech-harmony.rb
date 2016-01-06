@@ -6,15 +6,15 @@ cask 'logitech-harmony' do
   url "http://logitech-sjca.navisite.net/web/ftp/pub/techsupport/harmony/LogitechHarmonyRemoteSoftware#{version}-OSX.dmg"
   name 'Logitech Harmony Remote Software'
   homepage 'http://www.logitech.com/en-us/support/universal-remotes'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'LogitechRemoteSoftware.pkg'
 
-  uninstall :quit => 'com.logitech.harmony.cappuccino.client.logitech',
-            :kext => [
-                      'com.RemoteControl.USBLAN.usbpart',
-                      'com.Belcarra.iokit.USBLAN_netpart',
-                      'com.Belcarra.iokit.USBLAN_usbpart',
-                     ],
+  uninstall :quit    => 'com.logitech.harmony.cappuccino.client.logitech',
+            :kext    => [
+                          'com.RemoteControl.USBLAN.usbpart',
+                          'com.Belcarra.iokit.USBLAN_netpart',
+                          'com.Belcarra.iokit.USBLAN_usbpart',
+                        ],
             :pkgutil => 'com.logitech.harmony.logitechRemoteSoftware.*'
 end

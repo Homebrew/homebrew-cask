@@ -7,8 +7,10 @@ cask 'handy-outliner' do
   homepage 'http://handyoutlinerfo.sourceforge.net'
   license :gpl
 
-  depends_on :cask => 'mono-mdk',
+  depends_on :cask    => 'mono-mdk',
              :formula => 'djvulibre'
+
+  binary 'handy-outliner'
 
   preflight do
     FileUtils.touch "#{staged_path}/handy-outliner"
@@ -18,8 +20,6 @@ cask 'handy-outliner' do
     handy_outliner.puts "$BASEDIR/handyoutliner_#{version}/start-macos"
     handy_outliner.close
   end
-
-  binary 'handy-outliner'
 
   postflight do
     set_permissions "#{staged_path}/handy-outliner", '+x'

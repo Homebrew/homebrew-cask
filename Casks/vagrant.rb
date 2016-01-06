@@ -10,6 +10,8 @@ cask 'vagrant' do
 
   pkg 'Vagrant.pkg'
 
-  uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] },
+  uninstall :script  => { :executable => 'uninstall.tool', :input => %w[Yes] },
             :pkgutil => 'com.vagrant.vagrant'
+
+  zap :delete => '~/.vagrant.d'
 end

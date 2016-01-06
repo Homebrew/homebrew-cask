@@ -8,13 +8,14 @@ cask 'timings' do
   name 'Timings'
   homepage 'http://mediaatelier.com/Timings'
   license :commercial
+
   depends_on :macos => '>= :mavericks'
 
   app 'Timings.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.mediaateller.Timings.plist',
-                  '~/Library/Application Support/Timings',
-                  '~/Library/Caches/com.mediaateller.timings',
+                   '~/Library/Preferences/com.mediaateller.Timings.plist',
+                   '~/Library/Application Support/Timings',
+                   '~/Library/Caches/com.mediaateller.timings',
                  ]
 end

@@ -7,15 +7,15 @@ cask 'docker-machine-driver-parallels' do
           :sha256 => '13fdb94dc1822f11669c595b3e2e71b7053c192997b078feb06ab0e320dfa227'
   name 'Parallels driver for Docker Machine'
   homepage 'https://github.com/Parallels/docker-machine-parallels'
-  license :unknown
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
+  depends_on :cask => 'docker-machine'
+  depends_on :arch => :x86_64
   container :type => :naked
+
   binary 'docker-machine-driver-parallels'
 
   postflight do
     set_permissions "#{staged_path}/docker-machine-driver-parallels", '0755'
   end
-
-  depends_on :cask => 'docker-machine'
-  depends_on :arch => :x86_64
 end

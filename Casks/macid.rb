@@ -7,13 +7,13 @@ cask 'macid' do
   homepage 'https://macid.co/'
   license :gratis
 
+  depends_on :macos => '>= :yosemite'
+
   app 'MacID.app'
 
   postflight do
     suppress_move_to_applications
   end
-
-  depends_on :macos => '>= :yosemite'
 
   zap :delete => '~/Library/Preferences/com.kanecheshire.MacIDOSX.plist'
 end

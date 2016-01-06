@@ -7,12 +7,12 @@ cask 'wxcrafter' do
   homepage 'http://wxcrafter.codelite.org'
   license :freemium
 
+  depends_on :macos => '>= :mountain_lion'
+
   app 'wxCrafter.app'
 
   zap :delete => [
-                  '~/Library/Application Support/wxcrafter',
-                  '~/Library/Preferences/wxcrafter.plist'
+                   '~/Library/Application Support/wxcrafter',
+                   '~/Library/Preferences/wxcrafter.plist',
                  ]
-
-  depends_on :macos => '>= :mountain_lion'
 end

@@ -20,18 +20,18 @@ cask 'mpv' do
   end
 
   zap :delete => [
-                  '~/.mpv/channels.conf',
-                  '~/.mpv/config',
-                  '~/.mpv/input.conf',
-                  '~/.mpv/fonts.conf',
-                  '~/.config/mpv/channels.conf',
-                  '~/.config/mpv/mpv.conf',
-                  '~/.config/mpv/input.conf',
-                  '~/.config/mpv/fonts.conf',
+                   '~/.mpv/channels.conf',
+                   '~/.mpv/config',
+                   '~/.mpv/input.conf',
+                   '~/.mpv/fonts.conf',
+                   '~/.config/mpv/channels.conf',
+                   '~/.config/mpv/mpv.conf',
+                   '~/.config/mpv/input.conf',
+                   '~/.config/mpv/fonts.conf',
                  ],
       :rmdir  => [
-                  '~/.mpv',
-                  '~/.config/mpv'
+                   '~/.mpv',
+                   '~/.config/mpv',
                  ]
 
   caveats do

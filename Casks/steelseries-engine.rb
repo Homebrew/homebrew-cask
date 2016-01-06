@@ -9,16 +9,16 @@ cask 'steelseries-engine' do
 
   pkg "SteelSeriesEngine#{version}.pkg"
 
-  uninstall :pkgutil => [
-                         'com.steelseries.SSENext',
-                         'com.steelseries.ssenext.driver',
-                         'com.steelseries.ssenext.driver.signed',
-                         'com.steelseries.ssenext.uninstaller'
-                        ],
+  uninstall :pkgutil   => [
+                            'com.steelseries.SSENext',
+                            'com.steelseries.ssenext.driver',
+                            'com.steelseries.ssenext.driver.signed',
+                            'com.steelseries.ssenext.uninstaller',
+                          ],
             :launchctl => 'com.steelseries.SSENext',
-            :quit => 'com.steelseries.SteelSeries-Engine-3',
-            :delete => [
-                        '/Applications/SteelSeries Engine 3',
-                        '/Library/LaunchAgents/com.steelseries.SSENext.plist'
-                       ]
+            :quit      => 'com.steelseries.SteelSeries-Engine-3',
+            :delete    => [
+                            '/Applications/SteelSeries Engine 3',
+                            '/Library/LaunchAgents/com.steelseries.SSENext.plist',
+                          ]
 end

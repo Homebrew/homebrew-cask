@@ -10,8 +10,8 @@ cask 'intellij-idea' do
   app 'IntelliJ IDEA 15.app'
 
   zap :delete => [
-                  '~/Library/Application Support/IntelliJIdea15',
-                  '~/Library/Preferences/IntelliJIdea15',
-                  '~/Library/Preferences/com.jetbrains.intellij.plist',
+                   '~/Library/Application Support/IntelliJIdea15',
+                   '~/Library/Preferences/IntelliJIdea15',
+                   '~/Library/Preferences/com.jetbrains.intellij.plist',
                  ]
 end

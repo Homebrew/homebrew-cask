@@ -10,7 +10,7 @@ cask 'regexhibit' do
   app 'RegExhibit.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.JollyRogerSoft.RegExhibit.plist',
-                  '~/Library/Application\ Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.jollyrogersoft.regexhibit.sfl',
+                   '~/Library/Preferences/com.JollyRogerSoft.RegExhibit.plist',
+                   '~/Library/Application\ Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.jollyrogersoft.regexhibit.sfl',
                  ]
 end

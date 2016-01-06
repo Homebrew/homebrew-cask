@@ -9,11 +9,11 @@ cask 'sonarr-menu' do
   homepage 'https://github.com/jefbarn/Sonarr-Menu'
   license :gpl
 
-  app 'Sonarr-Menu.app'
-
-  uninstall :quit => 'tv.sonarr.Sonarr-Menu',
-            :launchctl => 'tv.sonarr.Sonarr-Menu'
-
   depends_on :cask => 'sonarr'
   depends_on :macos => '>= :mavericks'
+
+  app 'Sonarr-Menu.app'
+
+  uninstall :quit      => 'tv.sonarr.Sonarr-Menu',
+            :launchctl => 'tv.sonarr.Sonarr-Menu'
 end

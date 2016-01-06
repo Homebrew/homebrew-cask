@@ -13,15 +13,15 @@ cask 'glimmerblocker' do
 
   uninstall :pkgutil   => 'org.glimmerblocker.pkg',
             :launchctl => [
-                           'org.glimmerblocker.proxy',
-                           'org.glimmerblocker.updater'
+                            'org.glimmerblocker.proxy',
+                            'org.glimmerblocker.updater',
                           ],
             :delete    => '/Library/PreferencePanes/GlimmerBlocker.prefPane'
 
-  zap       :delete    => [
-                           '/Library/GlimmerBlocker',
-                           '/Library/Logs/GlimmerBlocker'
-                          ]
+  zap       :delete => [
+                         '/Library/GlimmerBlocker',
+                         '/Library/Logs/GlimmerBlocker',
+                       ]
 
   caveats <<-EOS.undent
     You must deactivate GlimmerBlocker from the installed preference

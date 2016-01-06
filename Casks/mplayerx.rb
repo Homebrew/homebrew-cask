@@ -13,10 +13,10 @@ cask 'mplayerx' do
   app 'MPlayerX.app'
 
   zap :delete => [
-                  '~/.mplayer',
-                  '~/Library/Application Support/MPlayerX',
-                  '~/Library/Preferences/org.niltsh.MPlayerX.LSSharedFileList.plist',
-                  '~/Library/Preferences/org.niltsh.MPlayerX.plist',
-                  '~/Library/Caches/org.niltsh.MPlayerX'
+                   '~/.mplayer',
+                   '~/Library/Application Support/MPlayerX',
+                   '~/Library/Preferences/org.niltsh.MPlayerX.LSSharedFileList.plist',
+                   '~/Library/Preferences/org.niltsh.MPlayerX.plist',
+                   '~/Library/Caches/org.niltsh.MPlayerX',
                  ]
 end

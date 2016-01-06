@@ -8,11 +8,11 @@ cask 'alib1' do
   homepage 'http://presstube.com/blog/2011/alib1/'
   license :gratis
 
+  depends_on :cask => 'adobe-air'
+
   screen_saver 'Presstube-ALib1.app/Contents/Resources/Presstube - ALib1.saver'
 
   postflight do
     system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName ALib1 (Presstube)', "#{staged_path}/presstube-alib1.app/Contents/Resources/Presstube - ALib1.saver/Contents/Info.plist"
   end
-
-  depends_on :cask => 'adobe-air'
 end

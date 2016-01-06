@@ -4,7 +4,7 @@ cask 'sts' do
 
   module Utils
     def self.eclipse_version
-      '4.5.1'   # find eclipse version at http://spring.io/tools/sts/all
+      '4.5.1' # find eclipse version at http://spring.io/tools/sts/all
     end
 
     def self.eclipse_version_major_minor

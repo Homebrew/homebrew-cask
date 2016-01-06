@@ -9,5 +9,5 @@ cask 'ghc' do
   homepage 'https://ghcformacosx.github.io/'
   license :oss
 
-  app "ghc-#{version.sub(/-.+/,'')}.app"
+  app "ghc-#{version.sub(%r{-.+}, '')}.app"
 end

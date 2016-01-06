@@ -12,6 +12,7 @@ cask 'macfusion' do
   depends_on :cask => 'sshfs'
 
   app 'Macfusion.app'
+
   # fix broken bundled sshfs, see https://github.com/osxfuse/osxfuse/wiki/SSHFS#macfusion
   postflight do
     Dir.chdir("#{staged_path}/Macfusion.app/Contents/PlugIns/sshfs.mfplugin/Contents/Resources") do

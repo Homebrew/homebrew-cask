@@ -9,7 +9,7 @@ cask 'lingon-x' do
   homepage 'https://www.peterborgapps.com/lingon/'
   license :commercial
 
-  app 'Lingon X.app'
-
   depends_on :macos => '>= :yosemite'
+
+  app 'Lingon X.app'
 end

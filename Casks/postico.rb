@@ -7,7 +7,7 @@ cask 'postico' do
   homepage 'https://eggerapps.at/postico/'
   license :freemium
 
-  app 'Postico.app'
-
   depends_on :macos => '>= :mavericks'
+
+  app 'Postico.app'
 end

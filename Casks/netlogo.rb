@@ -7,10 +7,10 @@ cask 'netlogo' do
   homepage 'https://ccl.northwestern.edu/netlogo/'
   license :gpl
 
-  zap :delete => [
-                  '~/Library/Preferences/org.nlogo.netlogo.plist',
-                  '~/Library/Saved Application State/org.nlogo.NetLogo.savedState'
-                 ]
-
   app "NetLogo #{version.to_f}/NetLogo #{version.to_f}.app"
+
+  zap :delete => [
+                   '~/Library/Preferences/org.nlogo.netlogo.plist',
+                   '~/Library/Saved Application State/org.nlogo.NetLogo.savedState',
+                 ]
 end

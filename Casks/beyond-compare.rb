@@ -14,9 +14,9 @@ cask 'beyond-compare' do
   end
 
   zap :delete => [
-                  '~/Library/Application Support/Beyond Compare',
-                  '~/Library/Caches/com.apple.helpd/Generated/com.ScooterSoftware.BeyondCompare.help',
-                  '~/Library/Caches/com.ScooterSoftware.BeyondCompare',
-                  '~/Library/Saved Application State/com.ScooterSoftware.BeyondCompare.savedState',
+                   '~/Library/Application Support/Beyond Compare',
+                   '~/Library/Caches/com.apple.helpd/Generated/com.ScooterSoftware.BeyondCompare.help',
+                   '~/Library/Caches/com.ScooterSoftware.BeyondCompare',
+                   '~/Library/Saved Application State/com.ScooterSoftware.BeyondCompare.savedState',
                  ]
 end

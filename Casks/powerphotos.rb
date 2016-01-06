@@ -4,9 +4,9 @@ cask 'powerphotos' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/fatcatsoftware/powerphotos/PowerPhotos_#{version.delete('.')}.zip"
-  name 'PowerPhotos'
   appcast 'http://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml',
           :sha256 => '67c166e96bc9f51af923100a133ef6d743e599ef83d4e19a48ba68f30d6a9334'
+  name 'PowerPhotos'
   homepage 'http://www.fatcatsoftware.com/powerphotos/'
   license :commercial
 

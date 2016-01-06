@@ -9,6 +9,7 @@ cask 'silicon-labs-vcp-driver' do
   license :gratis
 
   container :nested => 'SiLabsUSBDriverDisk.dmg'
+
   pkg 'Silicon Labs VCP Driver.pkg'
 
   uninstall :pkgutil => 'com.silabs.siliconLabsVcpDriver.*'

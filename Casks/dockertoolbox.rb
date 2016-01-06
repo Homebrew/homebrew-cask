@@ -9,6 +9,8 @@ cask 'dockertoolbox' do
   homepage 'https://www.docker.com/toolbox'
   license :apache
 
+  depends_on :cask => 'virtualbox'
+
   pkg "DockerToolbox-#{version}.pkg"
 
   postflight do
@@ -16,13 +18,11 @@ cask 'dockertoolbox' do
   end
 
   uninstall :pkgutil => [
-                         'io.boot2dockeriso.pkg.boot2dockeriso',
-                         'io.docker.pkg.docker',
-                         'io.docker.pkg.dockercompose',
-                         'io.docker.pkg.dockermachine',
-                         'io.docker.pkg.dockerquickstartterminalapp',
-                         'io.docker.pkg.kitematicapp',
+                          'io.boot2dockeriso.pkg.boot2dockeriso',
+                          'io.docker.pkg.docker',
+                          'io.docker.pkg.dockercompose',
+                          'io.docker.pkg.dockermachine',
+                          'io.docker.pkg.dockerquickstartterminalapp',
+                          'io.docker.pkg.kitematicapp',
                         ]
-
-  depends_on :cask => 'virtualbox'
 end

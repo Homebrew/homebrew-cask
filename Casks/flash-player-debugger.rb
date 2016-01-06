@@ -12,7 +12,7 @@ cask 'flash-player-debugger' do
   app 'Flash Player.app', :target => 'Flash Player Debugger.app'
 
   zap :delete => [
-                  '~/Library/Caches/Adobe/Flash Player',
-                  '~/Library/Logs/FlashPlayerInstallManager.log',
+                   '~/Library/Caches/Adobe/Flash Player',
+                   '~/Library/Logs/FlashPlayerInstallManager.log',
                  ]
 end

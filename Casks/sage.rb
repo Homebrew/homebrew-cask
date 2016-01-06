@@ -19,8 +19,8 @@ cask 'sage' do
   binary "Sage-#{version}.app/Contents/Resources/sage/sage"
 
   zap :delete => [
-                  '~/.sage',
-                  '~/Library/Logs/sage.log',
+                   '~/.sage',
+                   '~/Library/Logs/sage.log',
                  ]
 
   caveats do

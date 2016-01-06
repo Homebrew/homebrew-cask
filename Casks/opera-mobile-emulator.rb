@@ -6,7 +6,7 @@ cask 'opera-mobile-emulator' do
   name 'Opera Mobile Emulator'
   name 'Opera Mobile Classic Emulator'
   homepage 'http://www.opera.com/developer/mobile-emulator'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Opera Mobile Emulator.app'
 end

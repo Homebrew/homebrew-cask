@@ -19,12 +19,13 @@ cask 'macports' do
     pkg "MacPorts-#{version}-10.11-ElCapitan.pkg"
   end
 
-  gpg "#{url}.asc",
-      :key_id => '01ff673fb4aae6cd'
   name 'MacPorts'
   homepage 'https://www.macports.org'
   license :bsd
+  gpg "#{url}.asc",
+      :key_id => '01ff673fb4aae6cd'
 
   uninstall :pkgutil => 'org.macports.MacPorts'
+
   zap       :delete  => '~/.macports'
 end

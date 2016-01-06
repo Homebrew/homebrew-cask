@@ -11,8 +11,8 @@ cask 'riverflow' do
   app 'Riverflow.app'
 
   zap :delete => [
-                  '~/Library/Application Support/jp.questbeat.Riverflow',
-                  '~/Library/Caches/jp.questbeat.Riverflow',
-                  '~/Library/Preferences/jp.questbeat.Riverflow.plist',
+                   '~/Library/Application Support/jp.questbeat.Riverflow',
+                   '~/Library/Caches/jp.questbeat.Riverflow',
+                   '~/Library/Preferences/jp.questbeat.Riverflow.plist',
                  ]
 end

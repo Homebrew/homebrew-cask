@@ -9,5 +9,6 @@ cask 'avogadro' do
   license :gpl
 
   container :nested => "Avogadro-#{version}.dmg"
+
   app 'Avogadro.app'
 end

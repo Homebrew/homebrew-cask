@@ -8,7 +8,7 @@ cask 'vuze' do
   license :gpl
 
   installer :script => 'Vuze Installer.app/Contents/MacOS/JavaApplicationStub',
-            :args => [ '-q' ]
+            :args   => ['-q']
 
   uninstall :delete => '/Applications/Vuze.app'
 

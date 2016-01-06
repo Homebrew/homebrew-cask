@@ -7,7 +7,7 @@ cask 'super-otr' do
           :sha256 => '191fa832fae581006bbc419d37acbb59121a3aefcdebefe0364a6f8e216bcca2'
   name 'Super OTR'
   homepage 'http://apfel-a.macbay.de/super-otr/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Super OTR.app'
 end

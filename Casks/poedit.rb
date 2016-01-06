@@ -1,5 +1,4 @@
 cask 'poedit' do
-
   if MacOS.release <= :snow_leopard
     version '1.5.7'
     sha256 '2017538011239f07924b709e4c13aa3fd7f83a96f76208b8b746fcee29251caf'

@@ -1,5 +1,4 @@
 cask 'limechat' do
-
   if MacOS.release <= :lion
     version '2.38'
     sha256 '1d7bf505ce60f1bfeb809de67d9f07c996a19eaa6d43b3c5e9df3fcc76077e11'
@@ -19,9 +18,9 @@ cask 'limechat' do
   app 'LimeChat.app'
 
   zap :delete => [
-                  '~/Library/Application Support/LimeChat',
-                  '~/Library/Caches/net.limechat.LimeChat',
-                  '~/Library/Preferences/net.limechat.LimeChat.plist',
-                  '~/Library/Preferences/net.limechat.LimeChat-AppStore.plist'
+                   '~/Library/Application Support/LimeChat',
+                   '~/Library/Caches/net.limechat.LimeChat',
+                   '~/Library/Preferences/net.limechat.LimeChat.plist',
+                   '~/Library/Preferences/net.limechat.LimeChat-AppStore.plist',
                  ]
 end

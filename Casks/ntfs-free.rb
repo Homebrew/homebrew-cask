@@ -10,8 +10,8 @@ cask 'ntfs-free' do
   pkg "NTFS-free-#{version}.pkg"
 
   uninstall :delete => [
-                        '/System/Library/Extensions/ntfs-free.kext',
-                        '/sbin/mount_ntfs-free',
-                        '/System/Library/Filesystems/ntfs-free.fs',
+                         '/System/Library/Extensions/ntfs-free.kext',
+                         '/sbin/mount_ntfs-free',
+                         '/System/Library/Filesystems/ntfs-free.fs',
                        ]
 end

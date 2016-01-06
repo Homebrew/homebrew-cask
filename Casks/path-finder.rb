@@ -14,7 +14,7 @@ cask 'path-finder' do
   end
 
   zap :delete => [
-                  '~/Library/Preferences/com.cocoatech.PathFinder.plist',
-                  '~/Library/Application Support/Path Finder',
+                   '~/Library/Preferences/com.cocoatech.PathFinder.plist',
+                   '~/Library/Application Support/Path Finder',
                  ]
 end

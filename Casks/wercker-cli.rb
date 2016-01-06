@@ -10,6 +10,7 @@ cask 'wercker-cli' do
   license :mit
 
   container :type => :naked
+
   binary 'wercker'
 
   postflight do

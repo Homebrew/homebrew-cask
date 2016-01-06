@@ -17,9 +17,9 @@ cask 'astropad' do
   uninstall :quit => 'com.astro-hq.AstropadMac'
 
   zap :delete => [
-                  '~/Library/Caches/Astropad',
-                  '~/Library/Caches/com.astro-hq.AstropadMac',
-                  '~/Library/Preferences/com.astro-hq.AstropadMac.plist',
-                  '~/Library/Saved Application State/com.astro-hq.AstropadMac.savedState'
+                   '~/Library/Caches/Astropad',
+                   '~/Library/Caches/com.astro-hq.AstropadMac',
+                   '~/Library/Preferences/com.astro-hq.AstropadMac.plist',
+                   '~/Library/Saved Application State/com.astro-hq.AstropadMac.savedState',
                  ]
 end

@@ -8,5 +8,6 @@ cask 'ntfsmounter' do
   license :gratis
 
   container :nested => "NTFS Mounter #{version}.dmg"
+
   app 'ntfsMounter.app'
 end

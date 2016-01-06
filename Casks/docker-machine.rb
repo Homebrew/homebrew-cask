@@ -10,6 +10,9 @@ cask 'docker-machine' do
   homepage 'https://docs.docker.com/machine'
   license :apache
 
+  depends_on :cask => 'docker'
+  depends_on :arch => :x86_64
+
   binary 'docker-machine'
   binary 'docker-machine-driver-amazonec2'
   binary 'docker-machine-driver-azure'
@@ -26,7 +29,4 @@ cask 'docker-machine' do
   binary 'docker-machine-driver-vmwarefusion'
   binary 'docker-machine-driver-vmwarevcloudair'
   binary 'docker-machine-driver-vmwarevsphere'
-
-  depends_on :cask => 'docker'
-  depends_on :arch => :x86_64
 end

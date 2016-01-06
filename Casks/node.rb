@@ -7,7 +7,7 @@ cask 'node' do
   homepage 'https://nodejs.org/'
   license :mit
 
-  pkg  "node-v#{version}.pkg"
+  pkg "node-v#{version}.pkg"
 
   uninstall :pkgutil => 'org.nodejs.node.pkg'
 end

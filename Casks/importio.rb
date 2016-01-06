@@ -8,11 +8,11 @@ cask 'importio' do
   homepage 'https://import.io'
   license :gratis
 
+  app 'import.io.app'
+
   preflight do
     system '/usr/bin/xar', '-xf', "#{staged_path}/install.pkg", 'importio.pkg/Payload', '-C', staged_path
     system '/usr/bin/tar', '-xf', "#{staged_path}/importio.pkg/Payload", '-C', staged_path
     system '/bin/rm', '-r', "#{staged_path}/importio.pkg", "#{staged_path}/install.pkg"
   end
-
-  app 'import.io.app'
 end

@@ -1,5 +1,4 @@
 cask 'cvc4' do
-
   if MacOS.release <= :mountain_lion
     version '1.4'
     sha256 '436ebe16872a08bb41270cb1302c4258a7ccd187bf8e68ad8301300e49fb7718'

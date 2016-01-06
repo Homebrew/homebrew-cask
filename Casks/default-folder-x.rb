@@ -15,8 +15,8 @@ cask 'default-folder-x' do
   installer :manual => 'Default Folder X Installer.app'
 
   zap :delete => [
-                  '~/Library/Preferences/com.stclairsoft.DefaultFolderX.favorites.plist',
-                  '~/Library/Preferences/com.stclairsoft.DefaultFolderX.plist',
-                  '~/Library/Preferences/com.stclairsoft.DefaultFolderX.settings.plist',
+                   '~/Library/Preferences/com.stclairsoft.DefaultFolderX.favorites.plist',
+                   '~/Library/Preferences/com.stclairsoft.DefaultFolderX.plist',
+                   '~/Library/Preferences/com.stclairsoft.DefaultFolderX.settings.plist',
                  ]
 end

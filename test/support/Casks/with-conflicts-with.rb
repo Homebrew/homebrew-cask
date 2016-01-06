@@ -6,5 +6,6 @@ test_cask 'with-conflicts-with' do
   homepage 'http://example.com/with-conflicts-with'
 
   conflicts_with :formula => 'unar'
+
   app 'Caffeine.app'
 end

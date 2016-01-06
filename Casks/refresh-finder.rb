@@ -5,8 +5,9 @@ cask 'refresh-finder' do
   url "http://soderhavet.com/refresh/Refresh_Finder_#{version}.dmg.zip"
   name 'Refresh Finder'
   homepage 'http://soderhavet.com/refresh/refresh-finder/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container :nested => "Refresh_Finder_#{version}.dmg"
+
   app 'Refresh Finder.app'
 end

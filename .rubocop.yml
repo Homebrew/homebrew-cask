@@ -1,5 +1,3 @@
-inherit_from: .rubocop_todo.yml
-
 require: rubocop-cask
 
 AllCops:
@@ -7,29 +5,69 @@ AllCops:
     - '**/Gemfile'
     - '**/Rakefile'
     - '**/brew-cask.rb'
+    - '**/invalid-header-format.rb'
+    - '**/spec/*.rb'
+    - '**/spec/support/*.rb'
+    - '**/test/*.rb'
+    - '**/test/support/*.rb'
     - 'developer/**/*'
     - 'lib/**/*'
-    - 'spec/**/*'
-    - 'test/**/*'
+    - 'spec/cask/**/*'
+    - 'test/cask/**/*'
+    - 'test/Casks/**/*'
+    - 'test/plist/**/*'
+    - 'test/support/shared_examples/**/*'
 
 Metrics/LineLength:
   Exclude:
-    - Casks/**/*
+    - '**/Casks/**/*'
 
 Performance/StringReplacement:
   Exclude:
-    - Casks/**/*
+    - '**/Casks/**/*'
+
+Style/AlignHash:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
 
 Style/BarePercentLiterals:
   EnforcedStyle: percent_q
 
-Style/ExtraSpacing:
+Style/Documentation:
   Exclude:
-    - Casks/**/*
+    - '**/Casks/**/*'
+
+Style/EmptyElse:
+  Exclude:
+    - '**/Casks/**/*'
 
 Style/FileName:
   Exclude:
-    - Casks/**/*
+    - '**/Casks/**/*'
 
 Style/HashSyntax:
   EnforcedStyle: hash_rockets
+
+Style/IndentArray:
+  EnforcedStyle: align_brackets
+
+Style/IndentHash:
+  EnforcedStyle: align_braces
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%':  '{}'
+    '%i': '{}'
+    '%q': '{}'
+    '%Q': '{}'
+    '%r': '{}'
+    '%s': '()'
+    '%w': '[]'
+    '%W': '[]'
+    '%x': '()'
+
+Style/RegexpLiteral:
+  EnforcedStyle: percent_r
+
+Style/TrailingComma:
+  EnforcedStyleForMultiline: comma

@@ -8,4 +8,17 @@ cask 'backblaze' do
   license :commercial
 
   installer :manual => 'Backblaze Installer.app'
+
+  uninstall :launchctl => [
+                            'com.backblaze.bzserv.plist',
+                            'com.backblaze.bzbmenu.plist',
+                          ],
+            :delete    => '/Library/PreferencePanes/BackblazeBackup.prefPane'
+
+  zap       :delete => [
+                         '/Library/Backblaze.bzpkg',
+                         '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.backblazebackup.sfl',
+                         '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.bzdoinstall.sfl',
+                         '~/Library/Logs/BackblazeGUIInstaller',
+                       ]
 end

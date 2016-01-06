@@ -5,10 +5,9 @@ cask 'touchosc-editor' do
   url "http://hexler.net/pub/touchosc/touchosc-editor-#{version}-osx.zip"
   name 'TouchOSC Editor'
   homepage 'http://hexler.net/software/touchosc'
-  license :unknown
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "touchosc-editor-#{version}-osx/TouchOSC Editor.app"
-
   artifact "touchosc-editor-#{version}-osx/layouts", :target => Pathname.new(File.expand_path('~')).join('Library/Application Support/TouchOSCEditor/layouts')
 
   zap :delete => '~/Library/*/*TouchOSCEditor*'

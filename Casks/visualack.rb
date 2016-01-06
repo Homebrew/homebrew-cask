@@ -8,7 +8,7 @@ cask 'visualack' do
           :sha256 => '6efd94f78b76082e0dd4a67fc12357f0ab8b0468690fdf6251c5e5a9e5a4d591'
   name 'VisualAck'
   homepage 'https://blog.kowalczyk.info/software/vack/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'VisualAck.app'
 end

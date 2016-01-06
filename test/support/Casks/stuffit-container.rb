@@ -6,5 +6,6 @@ test_cask 'stuffit-container' do
   homepage 'http://www.tobias-jung.de/seekingprofont/'
 
   depends_on :formula => 'unar'
+
   artifact 'sheldonmac/v1.0'
 end

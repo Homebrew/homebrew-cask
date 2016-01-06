@@ -6,5 +6,6 @@ test_cask 'with-depends-on-formula' do
   homepage 'http://example.com/with-depends-on-formula'
 
   depends_on :formula => 'unar'
+
   app 'Caffeine.app'
 end

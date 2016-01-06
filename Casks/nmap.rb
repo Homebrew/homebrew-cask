@@ -1,6 +1,6 @@
 cask 'nmap' do
-  version '7.00'
-  sha256 'f96f8dd4f50039b40a524ec1d4b467d60fefd3a74018df4e7f5fa88cb85bcaa2'
+  version '7.01'
+  sha256 'c121b30d0bb3296d3c89ba9df7c89c7624f2b112e4092130da30a87ede2f7243'
 
   url "https://nmap.org/dist/nmap-#{version}.dmg"
   name 'Nmap'

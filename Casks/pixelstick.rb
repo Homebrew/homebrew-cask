@@ -7,7 +7,7 @@ cask 'pixelstick' do
           :sha256 => 'a35fc57bf6f39ae049b493cb69fed689a646349f5a8bf718dd78375841cd4545'
   name 'PixelStick'
   homepage 'https://plumamazing.com/mac/pixelstick'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'PixelStick.app'
 end

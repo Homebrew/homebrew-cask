@@ -8,7 +8,7 @@ cask 'suspicious-package' do
   license :gratis
 
   depends_on :formula => 'unar'
-
   container :type => :generic_unar
+
   qlplugin 'Suspicious Package.qlgenerator'
 end

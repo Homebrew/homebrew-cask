@@ -19,6 +19,6 @@ cask 'anylogic' do
       brew cask install java
 
     For activation instructions, check up on
-      http://www.anylogic.com/upload/activation-guides/AnyLogic_#{version.slice(/\w+/)}_PLE_License.pdf
+      http://www.anylogic.com/upload/activation-guides/AnyLogic_#{version.slice(%r{\w+})}_PLE_License.pdf
   EOS
 end

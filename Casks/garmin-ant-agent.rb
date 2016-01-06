@@ -5,10 +5,10 @@ cask 'garmin-ant-agent' do
   url "http://download.garmin.com/software/ANTAgentforMac_#{version.delete('.')}.dmg"
   name 'Garmin ANT Agent'
   homepage 'https://www8.garmin.com/support/download_details.jsp?id=4417'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install Garmin ANT Agent.pkg'
 
-  uninstall :quit => 'com.garmin.AntAgent',
+  uninstall :quit    => 'com.garmin.AntAgent',
             :pkgutil => 'com.garmin.garminANTAgent.pkg'
 end

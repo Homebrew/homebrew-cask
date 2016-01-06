@@ -9,7 +9,7 @@ cask 'x48' do
   homepage 'http://blog.sharkus.com/2012/08/osx-hp48-emulators.html'
   license :gpl
 
-  app "x48-#{version} osx/x48.app"
-
   depends_on :x11 => true
+
+  app "x48-#{version} osx/x48.app"
 end

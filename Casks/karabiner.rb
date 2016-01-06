@@ -14,19 +14,20 @@ cask 'karabiner' do
   binary '/Applications/Karabiner.app/Contents/Library/vendor/bin/blueutil'
   binary '/Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position'
 
-  uninstall :quit => 'org.pqrs.Karabiner',
+  uninstall :quit    => 'org.pqrs.Karabiner',
             :pkgutil => 'org.pqrs.driver.Karabiner',
-            :kext => 'org.pqrs.driver.Karabiner'
+            :kext    => 'org.pqrs.driver.Karabiner'
+
   zap       :delete => [
-                        '~/Library/Application Support/Karabiner',
-                        '~/Library/Application Support/KeyRemap4MacBook',
-                        '~/Library/Caches/org.pqrs.KeyRemap4MacBook',
-                        '~/Library/Preferences/org.pqrs.Karabiner-AXNotifier.plist',
-                        '~/Library/Preferences/org.pqrs.Karabiner.multitouchextension.plist',
-                        '~/Library/Preferences/org.pqrs.Karabiner.plist',
-                        '~/Library/Preferences/org.pqrs.Karabiner.EventViewer.plist',
-                        '~/Library/Caches/org.pqrs.Karabiner',
-                        '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.sfl',
-                        '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.eventviewer.sfl',
+                         '~/Library/Application Support/Karabiner',
+                         '~/Library/Application Support/KeyRemap4MacBook',
+                         '~/Library/Caches/org.pqrs.KeyRemap4MacBook',
+                         '~/Library/Preferences/org.pqrs.Karabiner-AXNotifier.plist',
+                         '~/Library/Preferences/org.pqrs.Karabiner.multitouchextension.plist',
+                         '~/Library/Preferences/org.pqrs.Karabiner.plist',
+                         '~/Library/Preferences/org.pqrs.Karabiner.EventViewer.plist',
+                         '~/Library/Caches/org.pqrs.Karabiner',
+                         '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.sfl',
+                         '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.eventviewer.sfl',
                        ]
 end

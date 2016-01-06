@@ -10,7 +10,7 @@ cask 'charles' do
   app 'Charles.app'
 
   zap :delete => [
-                  '~/Library/Application Support/Charles',
-                  '~/Library/Preferences/com.xk72.charles.config',
+                   '~/Library/Application Support/Charles',
+                   '~/Library/Preferences/com.xk72.charles.config',
                  ]
 end

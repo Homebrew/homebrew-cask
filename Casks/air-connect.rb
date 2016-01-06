@@ -3,9 +3,9 @@ cask 'air-connect' do
   sha256 'e8f93fbcb626241f9cbe0f934cf9dada319f3f80399ec83558aa696988575b2a'
 
   url "https://www.avatron.com/updates/software/airconnect_mac/acmac#{version.delete('.')}.zip"
-  name 'Air Connect'
   appcast 'https://avatron.com/updates/software/airconnect_mac/appcast.xml',
           :sha256 => 'af9bc6dc41bc632995c4e49b958a5623bc091ac0fe1fb337fbc9a571cfc1e85b'
+  name 'Air Connect'
   homepage 'https://avatron.com/get-air-connect/'
   license :gratis
 

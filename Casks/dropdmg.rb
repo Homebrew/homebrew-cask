@@ -7,14 +7,14 @@ cask 'dropdmg' do
   homepage 'https://c-command.com/dropdmg/'
   license :commercial
 
+  depends_on :macos => '>= :snow_leopard'
+  depends_on :arch => :intel
+
   app 'DropDMG.app'
 
   zap :delete => [
-                  '~/Library/Automator/DropDMG.action',
-                  '~/Library/Automator/Expand Disk Image.action',
-                  '~Library/Preferences/com.c-command.DropDMG.plist',
+                   '~/Library/Automator/DropDMG.action',
+                   '~/Library/Automator/Expand Disk Image.action',
+                   '~Library/Preferences/com.c-command.DropDMG.plist',
                  ]
-
-  depends_on :macos => '>= :snow_leopard'
-  depends_on :arch => :intel
 end

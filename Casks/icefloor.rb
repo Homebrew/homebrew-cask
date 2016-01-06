@@ -8,5 +8,6 @@ cask 'icefloor' do
   license :oss
 
   container :nested => "IceFloor #{version}.dmg"
+
   app 'IceFloor.app'
 end

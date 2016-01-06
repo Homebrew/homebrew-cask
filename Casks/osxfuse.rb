@@ -10,12 +10,12 @@ cask 'osxfuse' do
 
   pkg "Install OSXFUSE #{version[0..-3]}.pkg"
 
-  uninstall :pkgutil => 'com.github.osxfuse.pkg.Core|com.github.osxfuse.pkg.PrefPane',
-            :kext => 'com.github.osxfuse.filesystems.osxfusefs'
-
   postflight do
     set_ownership ['/usr/local/include', '/usr/local/lib']
   end
+
+  uninstall :pkgutil => 'com.github.osxfuse.pkg.Core|com.github.osxfuse.pkg.PrefPane',
+            :kext    => 'com.github.osxfuse.filesystems.osxfusefs'
 
   caveats do
     reboot

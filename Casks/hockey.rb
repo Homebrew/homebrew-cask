@@ -7,7 +7,7 @@ cask 'hockey' do
           :sha256 => 'd8d57be56af4a0889214786809e9a602dd4c04ea001ec4e2b50e2111f186a5f5'
   name 'HockeyApp'
   homepage 'http://hockeyapp.net/releases/mac/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'HockeyApp.app'
   binary 'HockeyApp.app/Contents/Resources/puck'

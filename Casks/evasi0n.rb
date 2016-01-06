@@ -6,7 +6,7 @@ cask 'evasi0n' do
   url 'https://evad3rs.box.com/shared/static/gu7bfneoh85aajgic0xp.dmg'
   name 'evasi0n7'
   homepage 'https://evasi0n.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'evasi0n 7.app'
 end

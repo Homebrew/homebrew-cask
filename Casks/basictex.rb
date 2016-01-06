@@ -12,8 +12,8 @@ cask 'basictex' do
 
   uninstall :pkgutil => 'org.tug.mactex.basictex2015',
             :delete  => [
-                         '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
-                         '/etc/paths.d/TeX',
-                         '/etc/manpaths.d/TeX'
+                          '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
+                          '/etc/paths.d/TeX',
+                          '/etc/manpaths.d/TeX',
                         ]
 end

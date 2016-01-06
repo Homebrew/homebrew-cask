@@ -14,6 +14,7 @@ require 'hbc/dsl/postflight'
 require 'hbc/dsl/preflight'
 require 'hbc/dsl/uninstall_postflight'
 require 'hbc/dsl/uninstall_preflight'
+require 'hbc/dsl/version'
 
 module Hbc::DSL
   def self.included(base)
@@ -142,13 +143,13 @@ module Hbc::DSL
 
     def version(arg=nil)
       if arg.nil?
-        @version
+        return @version
       elsif @version
         raise Hbc::CaskInvalidError.new(self.token, "'version' stanza may only appear once")
       elsif !arg.is_a?(String) and !SYMBOLIC_VERSIONS.include?(arg)
         raise Hbc::CaskInvalidError.new(self.token, "invalid 'version' value: '#{arg.inspect}'")
       end
-      @version ||= arg
+      @version ||= Hbc::DSL::Version.new(arg)
     end
 
     SYMBOLIC_SHA256S = Set.new [
@@ -157,7 +158,7 @@ module Hbc::DSL
 
     def sha256(arg=nil)
       if arg.nil?
-        @sha256
+        return @sha256
       elsif @sha256
         raise Hbc::CaskInvalidError.new(self.token, "'sha256' stanza may only appear once")
       elsif !arg.is_a?(String) and !SYMBOLIC_SHA256S.include?(arg)

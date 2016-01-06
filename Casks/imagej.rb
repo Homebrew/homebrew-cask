@@ -7,7 +7,8 @@ cask 'imagej' do
   homepage 'http://imagej.nih.gov/ij/index.html'
   license :public_domain
 
-  suite 'ImageJ'
   depends_on :cask => 'java'
   depends_on :macos => '>= :mountain_lion'
+
+  suite 'ImageJ'
 end

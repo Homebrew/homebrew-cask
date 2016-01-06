@@ -10,6 +10,6 @@ cask 'paragon-vmdk-mounter' do
   pkg 'Paragon VMDK Mounter.pkg'
 
   uninstall :launchctl => 'com.paragon-software.vdmounter',
-            :kext => 'com.paragon-software.kext.VDMounter',
-            :pkgutil => 'com.paragon-software.VDMounter.pkg'
+            :kext      => 'com.paragon-software.kext.VDMounter',
+            :pkgutil   => 'com.paragon-software.VDMounter.pkg'
 end

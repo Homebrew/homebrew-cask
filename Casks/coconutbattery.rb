@@ -1,5 +1,4 @@
 cask 'coconutbattery' do
-
   if MacOS.release <= :tiger
     version '2.6.6'
     sha256 '8d235b237e42754ceda26af2babc160fd23f890d0fe6d7780b86a8e9c6effe42'
@@ -11,7 +10,7 @@ cask 'coconutbattery' do
   else
     version '3.2.1'
     sha256 'b403fb2cb79e487192d8754e5c5fd3df3b47bc39a85b5c834305a9029490e749'
-    url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.gsub('.','_')}.zip"
+    url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.gsub('.', '_')}.zip"
     appcast 'http://updates.coconut-flavour.com/coconutBatteryIntel.xml',
             :sha256 => '382587021d294ea5b6e3bab40b87c6ca7e98592d250527a035ba8a1bee2188f3'
   end

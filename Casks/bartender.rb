@@ -21,9 +21,9 @@ cask 'bartender' do
   uninstall :login_item => 'Bartender 2'
 
   zap :delete => [
-                  '/Library/ScriptingAdditions/BartenderHelper.osax',
-                  '~/Library/Preferences/com.surteesstudios.Bartender.plist',
-                  '/Library/PrivilegedHelperTools/com.surteesstudios.Bartender.BartenderInstallHelper',
-                  '/System/Library/ScriptingAdditions/BartenderSystemHelper.osax'
+                   '/Library/ScriptingAdditions/BartenderHelper.osax',
+                   '~/Library/Preferences/com.surteesstudios.Bartender.plist',
+                   '/Library/PrivilegedHelperTools/com.surteesstudios.Bartender.BartenderInstallHelper',
+                   '/System/Library/ScriptingAdditions/BartenderSystemHelper.osax',
                  ]
 end

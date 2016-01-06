@@ -10,7 +10,7 @@ cask 'animated-gif-quicklook' do
   pkg 'Animated GIF Quicklook Plugin Installer.pkg'
 
   uninstall :pkgutil => [
-                         'com.dford.animatedGifQuicklookPlugin.animatedgifql.pkg',
-                         'com.dford.animatedGifQuicklookPlugin.animatedgifqlreadme.pkg'
+                          'com.dford.animatedGifQuicklookPlugin.animatedgifql.pkg',
+                          'com.dford.animatedGifQuicklookPlugin.animatedgifqlreadme.pkg',
                         ]
 end

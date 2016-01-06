@@ -16,8 +16,8 @@ cask 'dash' do
   end
 
   zap :delete => [
-                  '~/Library/Application Support/Dash',
-                  '~/Library/Preferences/com.kapeli.dash.plist',
-                  '~/Library/Preferences/com.kapeli.dashdoc.plist',
+                   '~/Library/Application Support/Dash',
+                   '~/Library/Preferences/com.kapeli.dash.plist',
+                   '~/Library/Preferences/com.kapeli.dashdoc.plist',
                  ]
 end

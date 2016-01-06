@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 group :development do
-  gem 'rubocop'
-  gem 'rubocop-cask', '0.0.1'
+  gem 'rubocop', github: 'bbatsov/rubocop', branch: 'master'
+  gem 'rubocop-cask', '~> 0.2'
   gem 'pry'
   gem 'pry-byebug', platforms: :mri
 end

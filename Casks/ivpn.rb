@@ -13,19 +13,19 @@ cask 'ivpn' do
 
   uninstall :quit      => [
                             'com.MacServe.iVPN',
-                            'com.MacServe.iVPN-Monitor'
+                            'com.MacServe.iVPN-Monitor',
                           ],
             :launchctl => [
-                           'com.MacServe.ivpnHelper',
-                           'com.macserve.ivpn',
-                           'com.macserve.ppp.l2tp',
-                           'com.macserve.ppp.pptp'
+                            'com.MacServe.ivpnHelper',
+                            'com.macserve.ivpn',
+                            'com.macserve.ppp.l2tp',
+                            'com.macserve.ppp.pptp',
                           ]
 
-  zap       :delete    => [
-                           '~/Library/Preferences/com.MacServe.iVPN.plist',
-                           '/Library/LaunchDaemons/com.macserve.ppp.l2tp.plist',
-                           '/Library/LaunchDaemons/com.macserve.ppp.pptp.plist',
-                           '/private/etc/ppp/'
-                          ]
+  zap       :delete => [
+                         '~/Library/Preferences/com.MacServe.iVPN.plist',
+                         '/Library/LaunchDaemons/com.macserve.ppp.l2tp.plist',
+                         '/Library/LaunchDaemons/com.macserve.ppp.pptp.plist',
+                         '/private/etc/ppp/',
+                       ]
 end

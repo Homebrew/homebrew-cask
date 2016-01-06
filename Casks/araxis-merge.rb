@@ -1,7 +1,7 @@
 cask 'araxis-merge' do
   version '2014.4581'
 
-  depends_on :macos => '>= :mavericks'
+  name 'Araxis Merge'
   if MacOS.release <= :mavericks
     sha256 '4029be850bbffd8a46b30b7701434474c33e07e678848ae47e094ddba04668d2'
     url "http://www.araxis.com/download/Merge#{version}-OSX10.9.dmg"
@@ -10,12 +10,12 @@ cask 'araxis-merge' do
     url "http://www.araxis.com/download/Merge#{version}-OSX10.10.dmg"
   end
 
-  name 'Araxis Merge'
   homepage 'http://www.araxis.com/merge'
   license :commercial
 
-  app 'Araxis Merge.app'
+  depends_on :macos => '>= :mavericks'
 
+  app 'Araxis Merge.app'
   binary 'Utilities/araxisgitdiff'
   binary 'Utilities/araxisopendiff'
   binary 'Utilities/araxissvndiff'
@@ -29,8 +29,8 @@ cask 'araxis-merge' do
   binary 'Utilities/araxissvnmerge'
 
   zap :delete => [
-                 '~/Library/Preferences/com.araxis.merge.LSSharedFileList.plist',
-                 '~/Library/Preferences/com.araxis.merge.plist',
+                   '~/Library/Preferences/com.araxis.merge.LSSharedFileList.plist',
+                   '~/Library/Preferences/com.araxis.merge.plist',
                  ]
 
   caveats <<-EOS.undent

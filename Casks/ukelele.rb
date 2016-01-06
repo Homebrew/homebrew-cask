@@ -12,9 +12,9 @@ cask 'ukelele' do
   app 'Ukelele.app'
 
   zap :delete => [
-                  '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sil.ukelele.sfl',
-                  '~/Library/Preferences/org.sil.ukelele.plist',
-                  '~/Library/Preferences/Ukelele',
-                  '~/Library/Caches/org.sil.Ukelele'
+                   '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sil.ukelele.sfl',
+                   '~/Library/Preferences/org.sil.ukelele.plist',
+                   '~/Library/Preferences/Ukelele',
+                   '~/Library/Caches/org.sil.Ukelele',
                  ]
 end

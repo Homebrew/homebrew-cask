@@ -12,5 +12,5 @@ cask 'snapz-pro-x' do
   pkg 'Snapz Pro X.pkg'
 
   uninstall :pkgutil => 'com.ambrosiasw.pkg.(snapz|audiosupport)',
-            :kext => 'com.AmbrosiaSW.AudioSupport'
+            :kext    => 'com.AmbrosiaSW.AudioSupport'
 end

@@ -9,12 +9,12 @@ cask 'gog-downloader' do
   homepage 'https://www.gog.com/downloader'
   license :gratis
 
-  zap :delete => [
-    '~/Library/Application Support/GOG Downloader',
-    '~/Library/Caches/com.gog.downloader',
-    '~/Library/Preferences/com.gog.downloader.plist',
-    '~/Library/Saved Application State/com.gog.downloader.savedState'
-  ]
-
   app 'GOG Downloader.app'
+
+  zap :delete => [
+                   '~/Library/Application Support/GOG Downloader',
+                   '~/Library/Caches/com.gog.downloader',
+                   '~/Library/Preferences/com.gog.downloader.plist',
+                   '~/Library/Saved Application State/com.gog.downloader.savedState',
+                 ]
 end
