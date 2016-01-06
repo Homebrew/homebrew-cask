@@ -5,7 +5,7 @@ cask 'clementine' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg"
   appcast 'https://github.com/clementine-player/Clementine/releases.atom',
-          :sha256 => '0b5029726140e900aaf1f14442d397962db09f7c102d951955af4a779edfd5c7'
+          :sha256 => '460ea33daaedccd5c58ce4cda1ace8c86827ba3533dac9a5d0ca0df5e1e1f875'
   name 'Clementine'
   homepage 'https://www.clementine-player.org/'
   license :gpl
