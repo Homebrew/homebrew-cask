@@ -72,9 +72,9 @@ describe Hbc::DSL do
         name 'Proper Name'
       end
 
-      cask.full_name.must_equal [
-                                     'Proper Name',
-                                    ]
+      cask.name.must_equal [
+                             'Proper Name',
+                           ]
     end
 
     it "Accepts an array value to the name stanza" do
@@ -82,10 +82,10 @@ describe Hbc::DSL do
         name ['Proper Name', 'Alternate Name']
       end
 
-      cask.full_name.must_equal [
-                                     'Proper Name',
-                                     'Alternate Name',
-                                    ]
+      cask.name.must_equal [
+                             'Proper Name',
+                             'Alternate Name',
+                           ]
     end
 
     it "Accepts multiple name stanzas" do
@@ -94,10 +94,10 @@ describe Hbc::DSL do
         name 'Alternate Name'
       end
 
-      cask.full_name.must_equal [
-                                     'Proper Name',
-                                     'Alternate Name',
-                                    ]
+      cask.name.must_equal [
+                             'Proper Name',
+                             'Alternate Name',
+                           ]
     end
   end
 

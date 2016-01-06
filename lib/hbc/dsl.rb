@@ -60,7 +60,6 @@ class Hbc::DSL
     :conflicts_with,
     :container,
     :depends_on,
-    :full_name,
     :gpg,
     :homepage,
     :license,
@@ -80,23 +79,10 @@ class Hbc::DSL
     @token = token
   end
 
-  # A quite fragile shim to allow "full_name" be exposed as simply "name"
-  # in the DSL.  We detect the difference with the already-existing "name"
-  # method by arity, and use "full_name" exclusively in backend code.
   def name(*args)
-    if args.empty?
-      super
-    else
-      self.full_name(args)
-    end
-  end
-
-  def full_name(_full_name=nil)
-    @full_name ||= []
-    if _full_name
-      @full_name.concat(Array(*_full_name))
-    end
-    @full_name
+    @name ||= []
+    return @name if args.empty?
+    @name.concat(args.flatten)
   end
 
   def homepage(homepage=nil)

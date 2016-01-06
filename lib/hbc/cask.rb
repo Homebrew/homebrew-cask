@@ -77,7 +77,7 @@ class Hbc::Cask
       odebug "Cask instance dumps in YAML:"
       odebug "Cask instance toplevel:", self.to_yaml
       [
-       :full_name,
+       :name,
        :homepage,
        :url,
        :appcast,
@@ -93,9 +93,7 @@ class Hbc::Cask
        :accessibility_access,
        :auto_updates
       ].each do |method|
-        printable_method = method.to_s
-        printable_method = "name" if printable_method == "full_name"
-        odebug "Cask instance method '#{printable_method}':", self.send(method).to_yaml
+        odebug "Cask instance method '#{method}':", self.send(method).to_yaml
       end
     end
   end
