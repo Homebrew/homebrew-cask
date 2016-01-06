@@ -67,12 +67,12 @@ Note that `uninstall --force` is currently imperfect. See the man page for more 
 
 * `info` — displays information about the given Cask
 * `list` — with no args, lists installed Casks; given installed Casks, lists staged files
-* `fetch` — downloads Cask resources to local cache (with `--force`, re-download even if already cached)
+* `fetch` — downloads remote application files for the given Cask to the local cache (with `--force`, re-download even if already cached)
 * `doctor` — checks for configuration issues
 * `cleanup` — cleans up cached downloads (with `--outdated`, only cleans old downloads)
 * `home` — opens the homepage of the given Cask; or with no arguments, the homebrew-cask project page
 * `update` — a synonym for `brew update`
-* `zap` — try to remove *all* files associated with a Cask (including resources which may be shared with other applications)
+* `zap` — try to remove *all* files associated with a Cask (may include resources shared with other applications)
 
 The following commands are for Cask authors:
 
