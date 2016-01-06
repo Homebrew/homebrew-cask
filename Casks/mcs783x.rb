@@ -6,10 +6,6 @@ cask 'mcs783x' do
     def self.basename
       "MCS783x_Mac_OSX_10.5_to_10.10_driver_v#{Module.nesting.last.version}"
     end
-
-    def self.stripped_version
-      Module.nesting.last.version.partition('_').first
-    end
   end
 
   url "http://www.asix.com.tw/FrootAttach/driver/#{Utils.basename}.zip"
@@ -17,9 +13,9 @@ cask 'mcs783x' do
   homepage 'http://www.asix.com.tw/products.php?op=pItemdetail&PItemID=108;71;101&PLine=71'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  container :nested => "#{Utils.basename}/MCS7830_v#{Utils.stripped_version}.dmg"
+  container :nested => "#{Utils.basename}/MCS7830_v#{version.major_minor_patch}.dmg"
 
-  pkg "MCS7830 v#{Utils.stripped_version}.pkg"
+  pkg "MCS7830 v#{version.major_minor_patch}.pkg"
 
   # The "uninstal" (one "l") isn't a typo, that's the exact filename
   uninstall :script  => { :executable => 'uninstal driver' },
