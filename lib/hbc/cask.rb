@@ -1,17 +1,20 @@
+require 'forwardable'
+
 require 'hbc/dsl'
 
 class Hbc::Cask
-  include Hbc::DSL
-
-  def self.token
-    # todo removeme: prepending KlassPrefix is transitional as we move away from representing Casks as classes
-    self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase
-  end
+  extend Forwardable
 
   attr_reader :token, :sourcefile_path
-  def initialize(sourcefile_path=nil)
+  def initialize(token, sourcefile_path=nil, dsl=nil, &block)
+    @token = token
     @sourcefile_path = sourcefile_path
-    @token = self.class.token
+    @dsl = dsl || Hbc::DSL.new(@token)
+    @dsl.instance_eval(&block) if block_given?
+  end
+
+  Hbc::DSL::DSL_METHODS.each do |method_name|
+    define_method(method_name) { @dsl.send(method_name) }
   end
 
   METADATA_SUBDIR = '.metadata'

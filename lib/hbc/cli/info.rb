@@ -58,7 +58,7 @@ PURPOSE
 
   def self.artifact_info(cask)
     retval = ''
-    Hbc::DSL::ClassMethods.ordinary_artifact_types.each do |type|
+    Hbc::DSL::ORDINARY_ARTIFACT_TYPES.each do |type|
       if cask.artifacts[type].length > 0
         retval = "#{Tty.blue.bold}==>#{Tty.reset.bold} Contents#{Tty.reset}\n" unless retval.length > 0
         cask.artifacts[type].each do |artifact|
