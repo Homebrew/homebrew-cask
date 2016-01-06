@@ -50,7 +50,7 @@ We’re really rather friendly! Here are the best places to talk about the proje
   * [Bug report][bug_report_template]
   * [Feature request][feature_request_template]
   * [Cask request][cask_request_template]
-* Join us on IRC, we’re at `#homebrew-cask` on Freenode
+* Join us (and [caskbot](https://github.com/passcod/caskbot)) on IRC at `#homebrew-cask` on Freenode
 * Join us on [Gitter](https://gitter.im/caskroom/homebrew-cask)
 
 ## Reporting Bugs
