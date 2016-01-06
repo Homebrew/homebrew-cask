@@ -51,7 +51,7 @@ We’re really rather friendly! Here are the best places to talk about the proje
   * [Feature request][feature_request_template]
   * [Cask request][cask_request_template]
 * Join us on IRC, we’re at `#homebrew-cask` on Freenode
-* Join us on [Gitter](https://gitter.im/caskroom/homebrew-cask).
+* Join us on [Gitter](https://gitter.im/caskroom/homebrew-cask)
 
 ## Reporting Bugs
 
