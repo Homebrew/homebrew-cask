@@ -41,6 +41,7 @@ module Hbc::Scopes
     end
 
     def installed
+      @installed ||= {}
       installed_cask_dirs = Pathname.glob(caskroom.join("*"))
       # Hbc.load has some DWIM which is slow.  Optimize here
       # by spoon-feeding Hbc.load fully-qualified paths.
@@ -52,9 +53,9 @@ module Hbc::Scopes
           tap_dir.join("#{cask_token}.rb").exist?
         end
         if path_to_cask
-          Hbc.load(path_to_cask.join("#{cask_token}.rb"))
+          @installed[cask_token] ||= Hbc.load(path_to_cask.join("#{cask_token}.rb"))
         else
-          Hbc.load(cask_token)
+          @installed[cask_token] ||= Hbc.load(cask_token)
         end
       end
     end
