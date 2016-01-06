@@ -6,7 +6,7 @@ class Hbc::Cask
   extend Forwardable
 
   attr_reader :token, :sourcefile_path
-  def initialize(token, sourcefile_path=nil, dsl=nil, &block)
+  def initialize(token, sourcefile_path: nil, dsl: nil, &block)
     @token = token
     @sourcefile_path = sourcefile_path
     @dsl = dsl || Hbc::DSL.new(@token)

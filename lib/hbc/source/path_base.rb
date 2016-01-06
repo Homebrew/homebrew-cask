@@ -58,7 +58,7 @@ class Hbc::Source::PathBase
 
   def build_cask(cask_class, header_token, &block)
     raise Hbc::CaskTokenDoesNotMatchError.new(cask_token, header_token) unless cask_token == header_token
-    cask_class.new(cask_token, path, &block)
+    cask_class.new(cask_token, sourcefile_path: path, &block)
   end
 
   def cask_token
