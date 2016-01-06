@@ -1,7 +1,7 @@
 cask 'rowanj-gitx' do
   if MacOS.release <= :snow_leopard
     version '0.14.81'
-    sha256 '17301ee1209bd4b12c126d7a58405efdb366f99f70b4f923a9c96e16c334ce2a'
+    sha256 'ba61b4b84cb613a6196e6bd1d3102ad460ec0645a885b1cb94132e5244e1d330'
   elsif MacOS.release <= :lion
     version '0.15.1949'
     sha256 '17301ee1209bd4b12c126d7a58405efdb366f99f70b4f923a9c96e16c334ce2a'
