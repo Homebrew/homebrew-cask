@@ -1,11 +1,11 @@
 cask 'bleep' do
-  version :latest
-  sha256 :no_check
+  version '1.1.0'
+  sha256 '7b28ab86de771e5b446769e385a7c5f689d3711a880f532fdd5db664ba46723c'
 
   # utorrent.com is the official download host per the vendor homepage
   url 'https://download-new.utorrent.com/endpoint/bleep/os/osx/track/stable/'
   appcast 'https://bleeposx.bittorrent.com/appcast.xml',
-          :sha256 => '266fc57b32cbbe67b46513eba330c1986681f767892d97ad66b0a61510d4aaf1'
+          :sha256 => '1a1f1b970294837f0f43752bfab8c15fb0e2a763910d2e21f5c4b98b415ffa39'
   name 'BitTorrent Bleep'
   homepage 'http://www.bleep.pm/'
   license :gratis
