@@ -4,7 +4,7 @@ cask 'chameleon-ssd-optimizer' do
 
   url "http://chameleon.alessandroboschini.com/download/ChameleonSSDOptimizer#{version.delete('.')}.zip"
   appcast 'http://chameleon.alessandroboschini.com/sparkle/profileInfo.php',
-          :sha256 => '32ced9c346b4054804b0389d8c81d88a44febb1212e6153fb0a52d900cdb09ab'
+          :sha256 => '38de27b9dd3d9c672caa5ecd79c26d4d59961ab6795ed5e8539d113421f1307c'
   name 'Chameleon SSD optimizer'
   homepage 'http://chameleon.alessandroboschini.com/'
   license :gratis
