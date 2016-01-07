@@ -1,4 +1,4 @@
-cask 'coreos-osx-gui' do
+cask 'coreos-gui' do
   version '1.1.4'
   sha256 'c3db1aa6949ea5d28c559cd0c3185e6fd40ae31f5d5bb290f70f2a8761158e03'
 
