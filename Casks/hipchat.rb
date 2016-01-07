@@ -5,7 +5,7 @@ cask 'hipchat' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://s3.amazonaws.com/uploads.hipchat.com/10804/1699248/dZxE36RSiZCYmKe/HipChat.zip'
   appcast 'https://www.hipchat.com/release_notes/appcast/mac',
-          :sha256 => 'f4a0980dea0e8ebb79155bc70134cec830076ca24d221041f130a9505e4a9357'
+          :sha256 => 'ddd53560a65bf7c45c4701dcd33243b289c859a1f8cc8f557480de4ae143fad8'
   name 'HipChat'
   homepage 'https://www.hipchat.com/'
   license :freemium
