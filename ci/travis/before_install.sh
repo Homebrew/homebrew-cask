@@ -15,13 +15,16 @@ header 'Running before_install.sh...'
 # unset rvm hook functions
 run unset -f cd gem
 
-# see https://github.com/travis-ci/travis-ci/issues/2666
-# shellcheck disable=SC2016
-run 'TRAVIS_COMMIT="$(git rev-parse --verify -q HEAD)"'
-run export TRAVIS_COMMIT="${TRAVIS_COMMIT}"
-
 # print all travis-defined environment variables
 run 'env | sort'
+
+# see https://github.com/travis-ci/travis-ci/issues/2666
+run export BRANCH_COMMIT="${TRAVIS_COMMIT_RANGE##*.}"
+run export TARGET_COMMIT="${TRAVIS_COMMIT_RANGE%%.*}"
+# shellcheck disable=SC2016
+run 'MERGE_BASE="$(git merge-base "${BRANCH_COMMIT}" "${TARGET_COMMIT}")"'
+run export MERGE_BASE="${MERGE_BASE}"
+run export TRAVIS_COMMIT_RANGE="${MERGE_BASE}...${BRANCH_COMMIT}"
 
 # print detailed OSX version info
 run sw_vers
