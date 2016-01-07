@@ -5,7 +5,7 @@ cask 'macvim' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version.sub(%r{^.*-}, '')}/MacVim-#{version.sub(%r{-.*$}, '')}.dmg"
   appcast 'https://github.com/macvim-dev/macvim/releases.atom',
-          :sha256 => '4afea4c3067e73bca18868c602cdfd6f6ff20779d11d189945b25fef8c07ea06'
+          :sha256 => 'f3d72f38f82dc43ee72a8ad9a6c72b5ba67a7a98425a59869cb50a67ee62e306'
   name 'MacVim'
   homepage 'https://github.com/macvim-dev/macvim'
   license :oss
