@@ -21,7 +21,7 @@ run 'TRAVIS_COMMIT="$(git rev-parse --verify -q HEAD)"'
 run export TRAVIS_COMMIT="${TRAVIS_COMMIT}"
 
 # print all travis-defined environment variables
-run 'env | grep TRAVIS'
+run 'env | sort'
 
 # print detailed OSX version info
 run sw_vers
