@@ -4,7 +4,7 @@ cask 'gephi' do
 
   url "https://github.com/gephi/gephi/releases/download/v#{version}/gephi-#{version}-macos.dmg"
   appcast 'https://github.com/gephi/gephi/releases.atom',
-          :sha256 => '35c743eda7cc503f5acdcecdf505a53450971bed680c1851bff42f15d9057ebc'
+          :sha256 => 'df39806f9fe19cb0fff4d9a607aad4919a38c174c33daf3c3f3a786d80b0f4f7'
   name 'Gephi'
   homepage 'https://gephi.github.io/'
   license :oss
