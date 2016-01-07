@@ -77,7 +77,7 @@ Finally, if it's been a while since you last updated Homebrew-Cask, you may stil
 $ brew untap phinze/cask; brew untap caskroom/cask; brew update
 ```
 
-If the issue persists, please run the problematic command with the `--verbose` flag and post its and `brew cask doctor`’s outputs in distinct [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
+If the issue persists, please use our [bug report template][bug_report_template] to report the output of running the problematic command with the `--verbose` flag, along with the output of `brew cask doctor`.
 
 ## License:
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
