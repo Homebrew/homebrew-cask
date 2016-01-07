@@ -3,8 +3,8 @@ cask 'docker' do
   sha256 '8750ccc2098ec94ef7db110e0016ab02cfa47a1a76f0deb3faa50335b5ec0df9'
 
   url "https://get.docker.com/builds/Darwin/x86_64/docker-#{version}"
-  appcast 'https://github.com/docker/docker/releases',
-          :sha256 => 'e0ba6388be0597f74e8f1396025820ef9ccf7e7a3dc91bfad8de64185631d441'
+  appcast 'https://github.com/docker/docker/releases.atom',
+          :sha256 => '9d1288f2e3ad3cb8390ca011b3538630394c1fe7cf4c9e88bbdcb9eef332ae34'
   name 'Docker Engine Client'
   homepage 'https://docs.docker.com/engine/userguide/'
   license :apache
