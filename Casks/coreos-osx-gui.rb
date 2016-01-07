@@ -1,14 +1,13 @@
 cask 'coreos-osx-gui' do
-  version '1.0.9'
-  sha256 '7e53fc1c5c8e1ae47199548f87455a602cbe424525fd0c0afab2a2d791957da8'
+  version '1.1.4'
+  sha256 'c3db1aa6949ea5d28c559cd0c3185e6fd40ae31f5d5bb290f70f2a8761158e03'
 
-  url "https://github.com/rimusz/coreos-osx/releases/download/v#{version}/CoreOS_GUI_v#{version}.dmg"
-  appcast 'https://github.com/rimusz/coreos-osx/releases.atom',
-          :sha256 => '614c5bffc95a843d601a24899d16d58ad9578d7676c6c014cde229dc71813669'
+  url "https://github.com/TheNewNormal/coreos-osx/releases/download/v#{version}/CoreOS_v#{version}.dmg"
+  appcast 'https://github.com/TheNewNormal/coreos-osx/releases.atom',
+          :sha256 => '55927d94bc026ca8264afa2676799cf363fb3be10f58b7f4e03b561e737eb77d'
   name 'CoreOS GUI'
-  name 'CoreOS-Vagrant GUI'
-  homepage 'https://github.com/rimusz/coreos-osx'
-  license :oss
+  homepage 'https://github.com/TheNewNormal/coreos-osx'
+  license :apache
 
   app 'CoreOS GUI.app'
 end
