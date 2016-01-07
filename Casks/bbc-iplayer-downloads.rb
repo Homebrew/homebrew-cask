@@ -5,7 +5,7 @@ cask 'bbc-iplayer-downloads' do
   # bbci.co.uk is the official download host per the vendor homepage
   url "https://a.files.bbci.co.uk/iplayer/downloads/BBC-iPlayer-Downloads-#{version}.dmg"
   appcast 'http://ipd-hq.cloud.bbc.co.uk/downloads/update.xml',
-          :sha256 => 'dbdc992225590fb6e644c720af73d60a5c821347bc43ddeb2681ec30935b2cdb'
+          :sha256 => 'beaca7e86fdda214f2ceff4d2b7902bebd3ebc998a363d3700c89fe4a2335fa2'
   name 'BBC iPlayer Downloads'
   homepage 'http://www.bbc.co.uk/iplayer/install'
   license :gratis
