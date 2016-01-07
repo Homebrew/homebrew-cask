@@ -1,10 +1,10 @@
 cask 'bootchamp' do
-  version :latest
-  sha256 :no_check
+  version '1.7'
+  sha256 'a6494fbc9efd057d8f25ba3aa8122e2b037145cc78e1bba12c69401afc06d0bc'
 
-  url 'https://www.kainjow.com/downloads/BootChamp.zip'
+  url 'http://kainjow.com/downloads/BootChamp.zip'
   appcast 'https://kainjow.com/updates/bootchamp.xml',
-          :sha256 => 'b117cae73e7f24153c05549dab19cbd82013a410b5db89dbc6f9e36d5fd67f4f'
+          :sha256 => 'e3304e693f6f12a77ff2560785f7b7f35ac90013595d3bfbe349e199b6d5ad61'
   name 'BootChamp'
   homepage 'https://www.kainjow.com/'
   license :oss
