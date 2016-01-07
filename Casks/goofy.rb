@@ -5,7 +5,7 @@ cask 'goofy' do
   # github.com is the official download host per the appcast feed
   url "https://github.com/danielbuechele/goofy/releases/download/v#{version}/Goofy.app.zip"
   appcast 'https://github.com/danielbuechele/goofy/releases.atom',
-          :sha256 => 'fb33fcb13e310a06a718c63cffc9ef70f18859d4c058d3714dd5a50c56080e91'
+          :sha256 => 'ad286f4d5cbea9e8d5199e1af9e62356c0106be536ca600eb95925348233790e'
   name 'Goofy'
   homepage 'http://www.goofyapp.com/'
   license :mit
