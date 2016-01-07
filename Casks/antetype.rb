@@ -1,11 +1,11 @@
 cask 'antetype' do
-  version :latest
-  sha256 :no_check
+  version '1.7.2'
+  sha256 '9a40450e01e0efa4b44ab3e7a2abcae8efc88eb615425273f0930ba3230680fc'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url 'https://s3.amazonaws.com/AntetypeDownload/Antetype.zip'
+  # rink.hockeyapp.net is the official download host per the appcast feed
+  url 'https://rink.hockeyapp.net/api/2/apps/6ab08fb043a94f51c9109c216e295a50/app_versions/17?format=zip&avtoken=80aaf809156fdbf4f99e6efe71695d9d8f077580'
   appcast 'https://rink.hockeyapp.net/api/2/apps/6ab08fb043a94f51c9109c216e295a50',
-          :sha256 => 'e37e854fab4d88a5dc7529fd6f9778cfabb9d1e7b6c059defabb2c0d7458f17e'
+          :sha256 => 'a1eddf9455e0069cf06db4661568bccd54dd650111e8a6bbef42264b436d8a83'
   name 'Antetype'
   homepage 'http://antetype.com'
   license :commercial
