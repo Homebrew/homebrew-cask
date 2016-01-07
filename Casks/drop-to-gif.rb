@@ -1,10 +1,10 @@
 cask 'drop-to-gif' do
-  version '1.25'
-  sha256 '2d137b0dccde1087d619af41edb48bf4f1b7f7badcc7cafa8ae3f2770d843824'
+  version '1.28'
+  sha256 'e4814912d1054f9d1c56357d10480ffb59996e59a54b969b45b2d01835fdc707'
 
-  url "https://github.com/mortenjust/droptogif/releases/download/#{version}/Drop.to.GIF.zip"
+  url "https://github.com/mortenjust/droptogif/releases/download/#{version}/Drop.to.GIF#{version.no_dots}.zip"
   appcast 'https://github.com/mortenjust/droptogif/releases.atom',
-          :sha256 => '735e03431ec20fbe03b9ceeae206b91488cfdc4149328ca7aa5e097d26cabdf5'
+          :sha256 => '6ac820bac52e7780d1aa24a31dd17e34c7c1253ae1c23f16dc77a91cfc77bab6'
   name 'Drop to GIF'
   homepage 'http://mortenjust.github.io/droptogif'
   license :oss
