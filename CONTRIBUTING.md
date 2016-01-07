@@ -3,6 +3,7 @@
 So you want to contribute to the project. **THIS IS GREAT NEWS!**  Seriously. We're all pretty happy about this. Here’s how to get started:
 
 * [Getting Set Up To Contribute](#getting-set-up-to-contribute)
+* [Updating a Cask](#updating-a-cask)
 * [Adding a Cask](#adding-a-cask)
 * [Testing Your New Cask](#testing-your-new-cask)
 * [Finding a Home For Your Cask](#finding-a-home-for-your-cask)
@@ -22,9 +23,27 @@ $ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 $ git remote add "$github_user" "https://github.com/$github_user/homebrew-cask"
 ```
 
+
+## Updating a Cask
+
+Notice an application that's out-of-date in Homebrew Cask? In most cases, it's very simple to update it. We have a [script](https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair) that will ask for the new version number, and take care of updating the Cask file and submitting a pull request to us.
+
+```bash
+# install and setup script - only needed once
+brew install vitorgalvao/tiny-scripts/cask-repair
+cask-repair --help
+
+# use to update <outdated-cask>
+outdated_cask='<the-cask-i-want-to-update>'
+cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
+cask-repair --pull origin --push $github_user $outdated-cask
+```
+
+If there is a more complicated change, or there is a case where `cask-repair` fails, you can also follow the steps in [Adding a Cask](#adding-a-cask) to do the same thing manually. 
+
 ## Adding a Cask
 
-Making a Cask is easy: a Cask is a small Ruby file.
+Making a new Cask is easy: a Cask is a small Ruby file.
 
 ### Examples
 
@@ -48,29 +67,6 @@ cask 'shuttle' do
 end
 ```
 
-Here is another Cask for `genymotion`. Note that you may repeat the `app` stanza as many times as you need, to define multiple apps:
-
-```ruby
-cask 'genymotion' do
-  version '2.6.0'
-  sha256 '9d12ae904761d76b15a556262d7eb32d1f5031fe60690224d7b0a70303cf8d39'
-
-  url "http://files2.genymotion.com/genymotion/genymotion-#{version}/genymotion-#{version}.dmg"
-  name 'Genymotion'
-  homepage 'https://www.genymotion.com/'
-  license :commercial
-
-  depends_on :cask => 'virtualbox'
-
-  app 'Genymotion.app'
-  app 'Genymotion Shell.app'
-  binary 'Genymotion Shell.app/Contents/MacOS/genyshell'
-
-  caveats do
-    files_in_usr_local
-  end
-end
-```
 
 And here is one for `gateblu`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available. Also note the comment above `url`, which is needed when [the url and homepage hostnames differ](doc/CASK_LANGUAGE_REFERENCE.md#when-url-and-homepage-hostnames-differ-add-a-comment):
 
@@ -103,7 +99,7 @@ version '1.2.3'
 url 'http://example.com/file-version-123.dmg'
 ```
 
-We can
+We can use
 
 ```ruby
 version '1.2.3'
@@ -117,7 +113,7 @@ version '1.2.3build4'
 url 'http://example.com/1.2.3/file-version-1.2.3build4.dmg'
 ```
 
-We can
+We can use
 
 ```ruby
 version '1.2.3build4'
@@ -191,37 +187,23 @@ Fill in the following stanzas for your Cask:
 | name               | value       |
 | ------------------ | ----------- |
 | `version`          | application version; give the value `:latest` if only an unversioned download is available
-| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
-| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application. A [comment](doc/CASK_LANGUAGE_REFERENCE.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see also [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
-| `name`             | the full and proper name defined by the vendor, and any useful alternate names (see also [Name Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#name-stanza-details))
+| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
+| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application. A [comment](doc/CASK_LANGUAGE_REFERENCE.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
+| `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#name-stanza-details))
 | `homepage`         | application homepage; used for the `brew cask home` command
-| `license`          | a symbol identifying the license for the application. Valid category licenses include `:oss`, `:closed`, and `:unknown`. It is OK to leave as `:unknown`. (see also [License Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#license-stanza-details))
-| `app`              | relative path to an `.app` bundle that should be linked into the `~/Applications` folder on installation (see also [App Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#app-stanza-details))
+| `license`          | a symbol identifying the license for the application. Valid category licenses include `:oss`, `:closed`, and `:unknown`. It is OK to leave as `:unknown`. (see [License Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#license-stanza-details))
+| `app`              | relative path to an `.app` bundle that should be linked into the `~/Applications` folder on installation (see [App Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#app-stanza-details))
 
 Other commonly-used stanzas are:
 
 | name               | value       |
 | ------------------ | ----------- |
-| `pkg`              | relative path to a `.pkg` file containing the distribution (see also [Pkg Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#pkg-stanza-details))
-| `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details))
+| `appcast`          | a URL providing an appcast feed to find updates for this Cask. (see [Appcast Stanza Details](#appcast-stanza-details))
+| `pkg`              | relative path to a `.pkg` file containing the distribution (see [Pkg Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#pkg-stanza-details))
+| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see [Caveats Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#caveats-stanza-details))
+| `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see [Uninstall Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details))
 
-Additional stanzas you might need for special use-cases:
-
-| name                   | value       |
-| ---------------------- | ----------- |
-| `prefpane`             | relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
-| `colorpicker`          | relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
-| `qlplugin`             | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
-| `font`                 | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
-| `service`              | relative path to a service that should be linked into the `~/Library/Services` folder on installation
-| `binary`               | relative path to a binary that should be linked into the `/usr/local/bin` folder on installation
-| `input_method`         | relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
-| `screen_saver`         | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
-| `suite`                | relative path to a containing directory that should be linked into the `~/Applications` folder on installation
-| `container :nested =>` | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
-| `caveats`              | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#caveats-stanza-details))
-
-Even more special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#optional-stanzas) and [Legacy Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#legacy-stanzas).
+Additional `artifact` stanzas you might need for special use-cases can be found [here](doc/CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required). Even more special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#optional-stanzas) and [Legacy Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#legacy-stanzas).
 
 ### Stanza order
 
@@ -343,21 +325,21 @@ Example:
 
 ### Style guide
 
-All Casks and code in the homebrew-cask project should be indented using two spaces (never tabs).
+All Casks and code in the homebrew-cask project should be indented using two spaces (never tabs). There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Language Reference](doc/CASK_LANGUAGE_REFERENCE.md).
 
-If relevant, you may also use string manipulations to improve the maintainability of your Cask. Here’s an example from `Lynkeos.app`:
+If relevant, you may also use string manipulations to improve the maintainability of your Cask. (See [`version` methods](#version-methods)) Here’s an example from `Lynkeos.app`:
 
 ```ruby
 cask 'lynkeos' do
   version '2.10'
   sha256 'bd27055c51575555a1c8fe546cf057c57c0e45ea5d252510847277734dc550a4'
 
-  url "http://downloads.sourceforge.net/project/lynkeos/lynkeos/#{version}/Lynkeos-App-#{version.gsub('.', '-')}.zip"
+  url "http://downloads.sourceforge.net/project/lynkeos/lynkeos/#{version}/Lynkeos-App-#{version.dots_to_hyphens}.zip"
   name 'Lynkeos'
   homepage 'http://lynkeos.sourceforge.net/'
   license :gpl
 
-  app "Lynkeos-App-#{version.gsub('.', '-')}/Lynkeos.app"
+  app "Lynkeos-App-#{version.dots_to_hyphens}/Lynkeos.app"
 end
 ```
 
@@ -373,7 +355,7 @@ If everything looks good, you’ll also want to make sure your Cask passes audit
 brew cask audit my-new-cask --download
 ```
 
-You should also check stylistic details with the [`rubocop`](https://github.com/bbatsov/rubocop) gem:
+You should also check stylistic details with the [`rubocop-cask`](https://github.com/caskroom/rubocop-cask) gem:
 
 ```bash
 cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask"
@@ -505,13 +487,13 @@ But you don’t always have to squash — it is fine for a pull request to conta
 
 ### Filing a Pull Request on GitHub
 
-Now go to *your* GitHub repository at https://github.com/my-github-username/homebrew-cask, switch branch to your topic branch and click the `New Pull Request` button. If it isn't automatically selected, choose to `compare across forks`. The base fork should be `caskroom/homebrew-cask @ master`, and the head fork should be `my-github-username/homebrew-cask @ my-new-cask`. You can also add any further comments to your pull request at this stage.
+Now go to the [`homebrew-cask` GitHub repository](https://github.com/caskroom/homebrew-cask). GitHub will often show your `my-new-cask` branch with a handy button to `Compare & pull request`. Otherwise, click the `New pull request` button and choose to `compare across forks`. The base fork should be `caskroom/homebrew-cask @ master`, and the head fork should be `my-github-username/homebrew-cask @ my-new-cask`. You can also add any further comments to your pull request at this stage.
 
 Congratulations! You are done now, and your Cask should be pulled in or otherwise noticed in a while. If a maintainer suggests some changes, just make them on the `my-new-cask` branch locally, [squash](CONTRIBUTING.md#squashing), and [push](CONTRIBUTING.md#pushing).
 
 ## Cleaning up
 
-After your Pull Request is submitted, you might want to get yourself back onto `master`, so that `brew update` will pull down new Casks properly.
+After your Pull Request is submitted, you should get yourself back onto `master`, so that `brew update` will pull down new Casks properly.
 
 ```bash
 cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
