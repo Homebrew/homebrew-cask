@@ -1,10 +1,11 @@
 cask 'identify' do
-  version '545'
-  sha256 'e850d12335befe8c092b8758f0ca1b26cb7f0c1decda98e5ef0525b3a37fb2d2'
+  version '551'
+  sha256 'b3691e56912882deb9d8021afa30643cc3e7dd9e4758d550a83649f491b9285a'
 
-  url "http://identify2.arrmihardies.com/appCast/iDentifyLite#{version}.zip"
+  # dropbox.com is the official download host per the appcast feed
+  url "http://dl.dropbox.com/u/1495067/iDentifySparkle/iDentifyLite#{version}.zip"
   appcast 'https://dl.dropboxusercontent.com/u/1495067/iDentifySparkle/iDentifyAppcast.xml',
-          :sha256 => 'f4136921951cb3bd6a0488d819a6283957adc94d7afcda7477d1bf618d307e85'
+          :sha256 => 'db8eb3671673ae557911e5678b70738b07672dd30e93eec806532448ce22c28e'
   name 'iDentify'
   homepage 'http://identify2.arrmihardies.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
