@@ -46,5 +46,5 @@ Style/PercentLiteralDelimiters:
 Style/RegexpLiteral:
   EnforcedStyle: percent_r
 
-Style/TrailingComma:
+Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: comma
