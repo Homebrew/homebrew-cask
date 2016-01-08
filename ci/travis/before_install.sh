@@ -52,8 +52,6 @@ run ruby --version
 run which gem
 run gem --version
 
-run brew update
-
 # ensure that we are the only brew-cask available
 run brew uninstall --force brew-cask
 
