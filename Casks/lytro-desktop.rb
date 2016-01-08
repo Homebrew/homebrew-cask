@@ -1,11 +1,11 @@
 cask 'lytro-desktop' do
-  version '4.3.2-151113.97'
-  sha256 '0646b7515e5bf591c6b75d646a1d98d1f31be949add736b11e7f4c2282487854'
+  version '4.3.3,151118.98'
+  sha256 '500b28ed7d67aaf18a59a8770e3fb83a4b96e692728ddbd522a52879af758966'
 
   # amazonaws.com is the official download host per the appcast feed
-  url "https://s3.amazonaws.com/lytro-distro/lytro-#{version.sub(%r{.*-}, '')}.dmg"
+  url "https://s3.amazonaws.com/lytro-distro/lytro-#{version.after_comma}.dmg"
   appcast 'https://pictures.lytro.com/support/software_update',
-          :sha256 => 'a24271bb26982429e8e42ff2f3e1ab3d1690192cc2acc2ce36346ed4302e5904'
+          :sha256 => '66f0c430f2f38cfabb723e19e33fc0275c5281b553a72f576f8c11e6f4335ad3'
   name 'Lytro Desktop'
   homepage 'https://www.lytro.com/'
   license :gratis
