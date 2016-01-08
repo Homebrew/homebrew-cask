@@ -9,7 +9,7 @@ end
 
 group :development do
   gem 'rubocop', github: 'bbatsov/rubocop', branch: 'master'
-  gem 'rubocop-cask', '~> 0.2'
+  gem 'rubocop-cask', '~> 0.3'
 end
 
 group :release do
