@@ -7,11 +7,13 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
   end
 
   def self.run(*_ignored)
+    disk_space = Hbc::Utils.disk_usage_readable(default.disk_cleanup_size)
     default.cleanup!
+    ohai "This operation has freed approximately #{disk_space} of disk space."
   end
 
   def self.default
-    new(HOMEBREW_CACHE_CASKS, Hbc.cleanup_outdated)
+    @default ||= new(HOMEBREW_CACHE_CASKS, Hbc.cleanup_outdated)
   end
 
   attr_reader :cache_location, :outdated_only
@@ -66,28 +68,25 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
     cache_incompletes + cache_completes
   end
 
-  def space_in_megs(files)
-    bytes = files.map { |f| begin File.size(f); rescue; 0; end }.reduce(&:+) || 0
-    sprintf '%0.2f', bytes / (1024.0 * 1024.0)
+  def disk_cleanup_size
+    Hbc::Utils.size_in_bytes(all_cache_files)
   end
 
   def remove_dead_symlinks
     ohai "Removing dead symlinks"
-    to_delete = dead_symlinks
-    puts "Nothing to do" unless to_delete.count > 0
-    to_delete.each do |item|
-      puts item
-      item.unlink
-    end
+    delete_paths(dead_symlinks)
   end
 
   def remove_all_cache_files
     message = "Removing cached downloads"
     message.concat " older than #{OUTDATED_DAYS} days old" if outdated_only
     ohai message
-    to_delete = all_cache_files
-    puts "Nothing to do" unless to_delete.count > 0
-    to_delete.each do |item|
+    delete_paths(all_cache_files)
+  end
+
+  def delete_paths(paths)
+    puts "Nothing to do" if paths.empty?
+    paths.each do |item|
       puts item
       item.unlink
     end
