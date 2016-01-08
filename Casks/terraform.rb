@@ -1,6 +1,6 @@
 cask 'terraform' do
-  version '0.6.8'
-  sha256 '71fd8ff20f657a4c7d82794756d55c55b0686516a8253356b8edd1a728230577'
+  version '0.6.9'
+  sha256 '9cf892c073a9fce0e9f136162f82c5b2d373c32cc2c5bd5c5eb16631262fad89'
 
   # hashicorp.com is the official download host per the vendor homepage
   url "https://releases.hashicorp.com/terraform/#{version}/terraform_#{version}_darwin_amd64.zip"
