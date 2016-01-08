@@ -1,3 +1,5 @@
+require 'pathname'
+
 if ENV['COVERAGE']
   require 'coveralls'
   Coveralls.wear_merged!

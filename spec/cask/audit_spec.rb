@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Hbc::Audit do
   include AuditMatchers
 
-  let(:cask) { Hbc::Cask.new }
+  let(:cask) { instance_double(Hbc::Cask) }
   let(:download) { false }
   let(:audit) { Hbc::Audit.new(cask, download) }
 
@@ -125,7 +125,8 @@ describe Hbc::Audit do
     end
 
     describe "audit of downloads" do
-      let(:cask) { Hbc::Cask.new }
+      let(:cask_token) { 'with-binary' }
+      let(:cask) { Hbc.load(cask_token) }
       let(:download) { instance_double(Hbc::Download) }
       let(:verify) { class_double(Hbc::Verify).as_stubbed_const }
       let(:error_msg) { "Download Failed" }
