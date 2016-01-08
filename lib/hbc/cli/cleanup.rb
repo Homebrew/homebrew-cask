@@ -33,7 +33,7 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
     cache_symlinks.reject(&:exist?)
   end
 
-  def cache_incompletes(outdated=nil)
+  def cache_incompletes
     cache_symlinks.collect do |symlink|
       incomplete_file = Dir.chdir cache_location do
         f = symlink.readlink
@@ -41,19 +41,19 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
         Pathname.new(f.to_s.concat('.incomplete'))
       end
       incomplete_file = nil unless incomplete_file.exist?
-      incomplete_file = nil if outdated and incomplete_file and incomplete_file.stat.mtime > OUTDATED_TIMESTAMP
+      incomplete_file = nil if outdated_only and incomplete_file and incomplete_file.stat.mtime > OUTDATED_TIMESTAMP
       incomplete_file
     end.compact
   end
 
-  def cache_completes(outdated=nil)
+  def cache_completes
     cache_symlinks.collect do |symlink|
       file = Dir.chdir cache_location do
         f = symlink.readlink
         f.exist? ? f.realpath : f
       end
       file = nil unless file.exist?
-      if outdated and file and file.stat.mtime > OUTDATED_TIMESTAMP
+      if outdated_only and file and file.stat.mtime > OUTDATED_TIMESTAMP
         file = nil
         symlink = nil
       end
@@ -62,8 +62,8 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
   end
 
   # will include dead symlinks if they aren't handled separately
-  def all_cache_files(outdated=nil)
-    cache_incompletes(outdated) + cache_completes(outdated)
+  def all_cache_files
+    cache_incompletes + cache_completes
   end
 
   def space_in_megs(files)
@@ -85,7 +85,7 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
     message = "Removing cached downloads"
     message.concat " older than #{OUTDATED_DAYS} days old" if outdated_only
     ohai message
-    to_delete = all_cache_files(outdated_only)
+    to_delete = all_cache_files
     puts "Nothing to do" unless to_delete.count > 0
     to_delete.each do |item|
       puts item
