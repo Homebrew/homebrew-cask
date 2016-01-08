@@ -50,7 +50,8 @@ We’re really rather friendly! Here are the best places to talk about the proje
   * [Bug report][bug_report_template]
   * [Feature request][feature_request_template]
   * [Cask request][cask_request_template]
-* Join us on IRC, we’re at `#homebrew-cask` on Freenode
+* Join us (and [caskbot](https://github.com/passcod/caskbot)) on IRC at `#homebrew-cask` on Freenode
+* Join us on [Gitter](https://gitter.im/caskroom/homebrew-cask)
 
 ## Reporting Bugs
 
@@ -76,7 +77,7 @@ Finally, if it's been a while since you last updated Homebrew-Cask, you may stil
 $ brew untap phinze/cask; brew untap caskroom/cask; brew update
 ```
 
-If the issue persists, please run the problematic command with the `--verbose` flag and post its and `brew cask doctor`’s outputs in distinct [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
+If the issue persists, please use our [bug report template][bug_report_template] to report the output of running the problematic command with the `--verbose` flag, along with the output of `brew cask doctor`.
 
 ## License:
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)

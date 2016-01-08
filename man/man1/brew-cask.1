@@ -60,7 +60,7 @@ Open the given Cask definition file for editing\.
 .
 .TP
 \fBfetch\fR [\-\-force] \fItoken\fR [ \fItoken\fR \.\.\. ]
-Fetch remote resources for the given Cask to the local cache\. With \fB\-\-force\fR, force re\-download even if the resources are already cached\.
+Download remote application files for the given Cask to the local cache\. With \fB\-\-force\fR, force re\-download even if the files are already cached\.
 .
 .TP
 \fBhome\fR or \fBhomepage\fR [\fItoken\fR]
@@ -123,7 +123,7 @@ Removes all staged versions of the Cask distribution found under \fB/opt/homebre
 If the Cask definition contains a \fBzap\fR stanza, performs additional \fBzap\fR actions as defined there, such as removing local preference files\. \fBzap\fR actions are variable, depending on the level of detail defined by the Cask author\.
 .
 .IP
-\fB\fBzap\fR may remove resources which are shared between applications\.\fR
+\fB\fBzap\fR may remove files which are shared between applications\.\fR
 .
 .SH "OPTIONS"
 To make these options persistent, see the ENVIRONMENT section, below\.

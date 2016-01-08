@@ -4,7 +4,7 @@ cask 'electron' do
 
   url "https://github.com/atom/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/atom/electron/releases.atom',
-          :sha256 => '55892603ffe9108f3d3056c6452e02961b1ba4d19599cfd829deba8be060c0cd'
+          :sha256 => '234b1beb92bd96e4fefd9a7c1214cfb36a7a88b7462b511deb3f21a112995bf5'
   name 'Electron'
   homepage 'http://electron.atom.io/'
   license :mit

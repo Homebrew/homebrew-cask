@@ -4,8 +4,8 @@ cask 'insertpic' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/insertPic/InsertPic_#{version}.zip"
-  appcast 'http://getinsertpic.com/app_cast',
-          :sha256 => '20c1ab602462b7fc0d5b4cbd555cacf127b69a07a737579598ebcbc0f5b21319'
+  appcast 'http://www.getinsertpic.com/app_cast',
+          :sha256 => 'dffa55a1b1b73c2a8ec34794c69c6bf92964e888e4f08ac2f55d59ff413a5a7e'
   name 'InsertPic'
   homepage 'http://www.getinsertpic.com/'
   license :gratis

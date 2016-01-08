@@ -3,8 +3,8 @@ cask 'appcleaner' do
   sha256 '96ba58688df66dd605b9e109d3c75726eab143193a25c2c2c9e3ddcb5135ad09'
 
   url "https://www.freemacsoft.net/downloads/AppCleaner_#{version}.zip"
-  appcast 'https://www.freemacsoft.net/appcleaner/Updates.xml',
-          :sha256 => 'bd9df047d51943acc4bc6cf55d88edb5b6785a53337ee2a0f74dd521aedde87d'
+  appcast 'https://freemacsoft.net/appcleaner/Updates.xml',
+          :sha256 => 'f0f46578d7d6f9a4913af8774dd5fd71921f146b43c344b29fd449c6cd54b8e1'
   name 'AppCleaner'
   homepage 'https://www.freemacsoft.net/appcleaner/'
   license :gratis

@@ -1,11 +1,11 @@
 cask 'devonthink-pro-office' do
-  version '2.8.7'
-  sha256 '3c272a0656afe1bee9a683190dbc55484724a81492a3b2ae7f50af8bc96b5894'
+  version '2.8.8'
+  sha256 'dbed3e907dd1a55c6fddccb8aadc88b88bf4d65bacfa143c0a50eec77844f280'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro_Office.dmg.zip"
-  appcast 'http://www.devon-technologies.com/Sparkle/DEVONthinkProOffice2.xml',
-          :sha256 => 'ba7fe4186fdd3577f33e06ede3712de88977e4080388558a4b6990c42bf8bf76'
+  appcast 'http://www.devon-technologies.com/fileadmin/templates/filemaker/sparkle.php?product=300125739&format=xml',
+          :sha256 => '8025fb4129142d3fa8b04b5a43b947b533ca74ba75bf471ad696e7729a278f7a'
   name 'DEVONthink Pro Office'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
   license :commercial

@@ -4,7 +4,7 @@ cask 'blueharvest' do
 
   url "http://zeroonetwenty.com/downloads/BlueHarvest#{version.delete('.')}.dmg"
   appcast 'https://cp37.ezyreg.com/~zeroonet/downloads/versioninfo/sparkle/blueharvest6.xml',
-          :sha256 => 'f77096fccaa1a6f2ce2cd0c5ef6ac4c4b9197b67fe274cf63599bc12c3452084'
+          :sha256 => '89141150318fa66224063ba89050062fa2f44b800bb8269e75529426f8c0b60c'
   name 'BlueHarvest'
   homepage 'http://zeroonetwenty.com/blueharvest/'
   license :commercial
