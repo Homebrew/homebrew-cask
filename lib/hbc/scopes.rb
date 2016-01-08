@@ -5,7 +5,8 @@ module Hbc::Scopes
 
   module ClassMethods
     def all
-      all_tokens.map { |c| self.load c }
+      @all_casks ||= {}
+      all_tokens.map { |t| @all_casks[t] ||= self.load(t) }
     end
 
     def all_tapped_cask_dirs
