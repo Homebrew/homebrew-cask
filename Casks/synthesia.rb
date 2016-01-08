@@ -9,5 +9,4 @@ cask 'synthesia' do
   license :freemium
 
   app 'Synthesia.app'
-  app 'SynthesiaConfig.app'
 end
