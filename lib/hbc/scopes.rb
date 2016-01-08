@@ -35,7 +35,7 @@ module Hbc::Scopes
         c = c.split('/').last 4
         # => ["caskroom", "example-tap", "Casks", "example"]
         c.delete_at(-2)
-        # => ["example-tap", "example"]
+        # => ["caskroom", "example-tap", "example"]
         c = c.join '/'
       }
     end
