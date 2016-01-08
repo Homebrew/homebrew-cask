@@ -14,10 +14,10 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
     new(HOMEBREW_CACHE_CASKS, Hbc.cleanup_outdated)
   end
 
-  attr_reader :cache_location, :cleanup_outdated
-  def initialize(cache_location, cleanup_outdated)
+  attr_reader :cache_location, :outdated_only
+  def initialize(cache_location, outdated_only)
     @cache_location = Pathname(cache_location)
-    @cleanup_outdated = cleanup_outdated
+    @outdated_only = outdated_only
   end
 
   def cleanup!
@@ -83,9 +83,9 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
 
   def remove_all_cache_files
     message = "Removing cached downloads"
-    message.concat " older than #{OUTDATED_DAYS} days old" if cleanup_outdated
+    message.concat " older than #{OUTDATED_DAYS} days old" if outdated_only
     ohai message
-    to_delete = all_cache_files(cleanup_outdated)
+    to_delete = all_cache_files(outdated_only)
     puts "Nothing to do" unless to_delete.count > 0
     to_delete.each do |item|
       puts item
