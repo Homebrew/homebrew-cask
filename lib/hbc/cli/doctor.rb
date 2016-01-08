@@ -216,15 +216,14 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
   end
 
   def self.render_cached_downloads
-    files = Hbc::CLI::Cleanup.default.all_cache_files
-    count = files.count
-    space = Hbc::CLI::Cleanup.default.space_in_megs files
-    [
-     HOMEBREW_CACHE,
-     HOMEBREW_CACHE_CASKS,
-     count.to_s.concat(" files").concat(count == 0 ? '' : %Q{ #{error_string %Q{warning: run "brew cask cleanup"}}}),
-     space.to_s.concat(" megs").concat(count == 0 ? '' : %Q{ #{error_string %Q{warning: run "brew cask cleanup"}}}),
-    ]
+    cleanup = Hbc::CLI::Cleanup.default
+    files = cleanup.all_cache_files
+    count = files.size
+    size = cleanup.disk_cleanup_size
+    size_msg = "#{Hbc::Utils.number_readable(count)} files, #{Hbc::Utils.disk_usage_readable(size)}"
+    warn_msg = error_string('warning: run "brew cask cleanup"')
+    size_msg << " #{warn_msg}" if count > 0
+    [HOMEBREW_CACHE, HOMEBREW_CACHE_CASKS, size_msg]
   end
 
   def self.help
