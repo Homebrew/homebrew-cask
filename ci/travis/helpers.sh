@@ -9,6 +9,9 @@
 set -o errexit
 set -o pipefail
 
+# enable extended globbing syntax
+shopt -s extglob
+
 CYAN='\033[0;36m'
 MAGENTA='\033[1;35m'
 NC='\033[0m' # no color
@@ -55,4 +58,17 @@ enter_build_step () {
 # allow unbound variables so Travis doesn't get mad at us
 exit_build_step () {
   set +o nounset
+}
+
+files_modified_outside_casks () {
+  git diff --name-only "${TRAVIS_COMMIT_RANGE}" -- !(Casks)
+}
+
+# return 0 if we can't skip running the test suite
+must_run_tests () {
+  if [[ -z "${FILES_MODIFIED_OUTSIDE_CASKS+defined}" ]]; then
+    FILES_MODIFIED_OUTSIDE_CASKS="$(files_modified_outside_casks)"
+    export FILES_MODIFIED_OUTSIDE_CASKS
+  fi
+  [[ -n "${FILES_MODIFIED_OUTSIDE_CASKS}" ]]
 }
