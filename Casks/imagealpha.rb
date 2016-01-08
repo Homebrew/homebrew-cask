@@ -6,7 +6,7 @@ cask 'imagealpha' do
     version '1.4.0'
     sha256 '7dc856013d5e5b8ecaa63dba2da8bd0db17de22ee60790e3b664898327727ed8'
     appcast 'https://pngmini.com/appcast.xml',
-            :sha256 => '6586efef537dc200f439a265d1daee36ef4af08c43c81e4a56fcd4fae088ddbb'
+            :sha256 => 'd35e98c25df03bb1e4e8068993ee5f5c0292f02e4faa51793e5601c3b95ef634'
   end
 
   url "https://pngmini.com/ImageAlpha#{version}.tar.bz2"
