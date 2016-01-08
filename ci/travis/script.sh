@@ -12,10 +12,11 @@ enter_build_step
 
 header 'Running script.sh...'
 
-# audit any modified casks (download if version, sha256, or url changed)
-run developer/bin/audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
-
-run bundle exec rubocop
+if any_casks_modified; then
+  modified_casks=($(modified_cask_files))
+  run developer/bin/audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
+  run bundle exec rubocop --force-exclusion "${modified_casks[@]}"
+fi
 
 if must_run_tests; then
   run bundle exec rake test:coverage

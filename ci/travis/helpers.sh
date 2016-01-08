@@ -60,15 +60,26 @@ exit_build_step () {
   set +o nounset
 }
 
-files_modified_outside_casks () {
-  git diff --name-only "${TRAVIS_COMMIT_RANGE}" -- !(Casks)
+modified_cask_files () {
+  if [[ -z "${MODIFIED_CASK_FILES+defined}" ]]; then
+    MODIFIED_CASK_FILES="$(git diff --name-only --diff-filter=AM "${TRAVIS_COMMIT_RANGE}" -- Casks)"
+    export MODIFIED_CASK_FILES
+  fi
+  echo "${MODIFIED_CASK_FILES}"
 }
 
-# return 0 if we can't skip running the test suite
-must_run_tests () {
-  if [[ -z "${FILES_MODIFIED_OUTSIDE_CASKS+defined}" ]]; then
-    FILES_MODIFIED_OUTSIDE_CASKS="$(files_modified_outside_casks)"
-    export FILES_MODIFIED_OUTSIDE_CASKS
+modified_files_outside_casks () {
+  if [[ -z "${MODIFIED_FILES_OUTSIDE_CASKS+defined}" ]]; then
+    MODIFIED_FILES_OUTSIDE_CASKS="$(git diff --name-only "${TRAVIS_COMMIT_RANGE}" -- !(Casks))"
+    export MODIFIED_FILES_OUTSIDE_CASKS
   fi
-  [[ -n "${FILES_MODIFIED_OUTSIDE_CASKS}" ]]
+  echo "${MODIFIED_FILES_OUTSIDE_CASKS}"
+}
+
+any_casks_modified () {
+  [[ -n "$(modified_cask_files)" ]]
+}
+
+must_run_tests () {
+  [[ -n "$(modified_files_outside_casks)" ]]
 }
