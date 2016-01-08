@@ -1,8 +1,8 @@
 cask 'qqbrowser' do
-  version '3.9.3943.400'
-  sha256 '4770ad6d40db55c765a8937424b228778e53c960e41db1e6112b788557ed52e1'
+  version :latest
+  sha256 :no_check
 
-  url "http://dldir1.qq.com/invc/tt/QQBrowser.#{version.sub(%r{^.*\.}, '')}.dmg"
+  url 'http://dldir1.qq.com/invc/tt/QQBrowser_for_Mac.dmg'
   name 'QQ浏览器'
   homepage 'http://browser.qq.com/mac/'
   license :commercial
