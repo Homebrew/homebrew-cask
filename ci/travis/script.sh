@@ -15,7 +15,7 @@ header 'Running script.sh...'
 # audit any modified casks (download if version, sha256, or url changed)
 run developer/bin/audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
 
-run bundle exec rake rubocop
+run bundle exec rubocop
 
 if must_run_tests; then
   run bundle exec rake test:coverage
