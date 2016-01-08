@@ -9,5 +9,5 @@ cask 'texshop' do
   homepage 'http://pages.uoregon.edu/koch/texshop'
   license :gpl
 
-  app 'TexShop.app'
+  app 'TeXShop.app'
 end
