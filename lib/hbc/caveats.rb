@@ -77,10 +77,17 @@ class Hbc::CaveatsDSL
     end
   end
 
-  def depends_on_java(java_version = 'latest')
-    if java_version == 'latest'
+  def depends_on_java(java_version = 'any')
+    if java_version == 'any'
       puts <<-EOS.undent
       #{@cask} requires Java. You can install the latest version with
+
+        brew cask install java
+
+      EOS
+    elsif java_version =~ /8/ || java_version =~ /\+/
+      puts <<-EOS.undent
+      #{@cask} requires Java #{java_version}. You can install the latest version with
 
         brew cask install java
 
