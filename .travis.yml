@@ -22,6 +22,7 @@ matrix:
       os: osx
       osx_image: beta-xcode6.2
       rvm: system
+  fast_finish: true
 
 cache:
   directories:
