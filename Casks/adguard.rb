@@ -7,7 +7,7 @@ cask 'adguard' do
           :sha256 => 'da71722e3f38d233508d4581d67f1b499fe1f9f4e4117a18bfff8ec2002ca3ee'
   name 'Adguard for Mac'
   homepage 'https://adguard.com/'
-  license :gratis
+  license :commercial
 
   app 'Adguard.app'
 end
