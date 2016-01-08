@@ -60,17 +60,9 @@ exit_build_step () {
   set +o nounset
 }
 
-modified_files () {
-  if [[ -z "${MODIFIED_FILES+defined}" ]]; then
-    MODIFIED_FILES="$(git diff --name-only "${TRAVIS_COMMIT_RANGE}" --)"
-    export MODIFIED_FILES
-  fi
-  echo "${MODIFIED_FILES}"
-}
-
 modified_cask_files () {
   if [[ -z "${MODIFIED_CASK_FILES+defined}" ]]; then
-    MODIFIED_CASK_FILES="$(modified_files | grep '^Casks/.*\.rb')"
+    MODIFIED_CASK_FILES="$(git diff --name-only --diff-filter=AM "${TRAVIS_COMMIT_RANGE}" -- Casks)"
     export MODIFIED_CASK_FILES
   fi
   echo "${MODIFIED_CASK_FILES}"
@@ -78,7 +70,7 @@ modified_cask_files () {
 
 modified_files_outside_casks () {
   if [[ -z "${MODIFIED_FILES_OUTSIDE_CASKS+defined}" ]]; then
-    MODIFIED_FILES_OUTSIDE_CASKS="$(modified_files | grep -v ^Casks)"
+    MODIFIED_FILES_OUTSIDE_CASKS="$(git diff --name-only "${TRAVIS_COMMIT_RANGE}" -- !(Casks))"
     export MODIFIED_FILES_OUTSIDE_CASKS
   fi
   echo "${MODIFIED_FILES_OUTSIDE_CASKS}"
