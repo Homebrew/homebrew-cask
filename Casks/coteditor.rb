@@ -10,14 +10,14 @@ cask 'coteditor' do
     # github.com is the official download host per the vendor homepage
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   else
-    version '2.3.2'
-    sha256 '7c3610431bd34d6946494d6fd42a21f31f077a68bdef1d8d3a8c5d4c9ee7eaa9'
+    version '2.3.3'
+    sha256 '7d8b339dbc12e28854700be70a4c26be7dd65130cd555954bf63dc2ab6feb8c4'
     # github.com is the official download host per the vendor homepage
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   end
 
   appcast 'https://github.com/coteditor/CotEditor/releases.atom',
-          :sha256 => 'dac6ecbea56d959f6f6b7239abf6f415709898c7b502ad37aebb8747c8f489af'
+          :sha256 => '24f111f2cce5f41a03705aa0e258fae65722366912dacbbd3d63cfcd94f94114'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
   license :gpl
