@@ -24,6 +24,10 @@ matrix:
       rvm: system
   fast_finish: true
 
+branches:
+  only:
+    - master
+
 cache:
   directories:
     - /usr/local
