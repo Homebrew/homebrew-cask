@@ -31,6 +31,7 @@ cask 'terraform' do
   binary 'terraform-provider-template'
   binary 'terraform-provider-terraform'
   binary 'terraform-provider-tls'
+  binary 'terraform-provider-vcd'
   binary 'terraform-provider-vsphere'
   binary 'terraform-provisioner-chef'
   binary 'terraform-provisioner-file'
