@@ -4,7 +4,7 @@ cask 'quickradar' do
 
   url "http://www.quickradar.com/#{version}.zip"
   appcast 'http://www.quickradar.com/appcast.xml',
-          :sha256 => 'a619b28824bf188921dc93eb9d475111c0f5d68ea3ec865562d922a7c312d1f3'
+          :sha256 => '72e49641f37b6e82a1896bb7887864382d755a67b5d25dabc7c26ff13e6783de'
   name 'QuickRadar'
   homepage 'http://www.quickradar.com/'
   license :bsd
