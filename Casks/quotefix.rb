@@ -4,7 +4,7 @@ cask 'quotefix' do
 
   url "https://github.com/robertklep/quotefixformac/releases/download/v#{version}/QuoteFix-v#{version}.zip"
   appcast 'https://github.com/robertklep/quotefixformac/releases.atom',
-          :sha256 => '5aab014aa4bfe79e0cb79be9c40686dd6471b98d21985b2fa9f06f1ca549e816'
+          :sha256 => '041d7df6ebdd0b61f92f6c58c55aeade4894d9f8f0e2ff92e05da4b676f8fb1d'
   name 'QuoteFix'
   homepage 'https://github.com/robertklep/quotefixformac'
   license :oss
