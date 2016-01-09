@@ -4,7 +4,7 @@ cask 'pupil' do
 
   url "http://pupil.io/downloads/#{version}/Pupil.app.zip"
   appcast 'http://pupil.io/appcast.rss',
-          :sha256 => 'f3fba366207956fb47f2a2b20f5587db6a70d461deb7826cdfe0230e8651c226'
+          :sha256 => 'appcast is probbly incorrect, as non-200 (OK) HTTP response code was returned (301)'
   name 'Pupil'
   homepage 'http://pupil.io/'
   license :commercial
