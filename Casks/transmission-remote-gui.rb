@@ -1,6 +1,6 @@
 cask 'transmission-remote-gui' do
   version '5.0.1'
-  sha256 'b961aeb244b2519563837745f3475d21379e3da32bae2b3cbb20ca91d1a90d75'
+  sha256 '322de6700ef13ea31ed0376a1783434b5d5660e63d267169f8ed0f8d4caf5f62'
 
   url "http://downloads.sourceforge.net/sourceforge/transgui/transgui-#{version}.dmg"
   name 'Transmission Remote GUI'
