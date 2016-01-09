@@ -10,11 +10,12 @@ cask 'cleanmymac' do
     app 'CleanMyMac.app'
     # TODO: add uninstall and zap stanzas for legacy app
   elsif MacOS.release <= :lion
-    version '2.3.5-1427986644'
-    sha256 '16e192edcf58f25c6763349ef0e5194268bec4d000912b64b34f5897b4784097'
+    version '2.4-1443544143'
+    sha256 '0d08f4d9b36493359f6ca3ff2f96a9b769a8eed4ea017ecbb2d5644f75aafad0'
     # devmate.com is the official download host per the appcast feed
     url "https://dl.devmate.com/com.macpaw.CleanMyMac2/#{version.sub(%r{-.*$}, '')}/#{version.sub(%r{.*?-}, '')}/CleanMyMac#{version.to_i}-#{version.sub(%r{-.*$}, '')}.zip"
-    appcast "http://updates.devmate.com/com.macpaw.CleanMyMac#{version.to_i}.xml"
+    appcast "http://updates.devmate.com/com.macpaw.CleanMyMac#{version.to_i}.xml",
+            :sha256 => '612be3e443f49b6b1d5539611693714b2897b9b774896ac15c048daec76a34cb'
     app "CleanMyMac #{version.to_i}.app"
 
     uninstall :launchctl => "com.macpaw.CleanMyMac#{version.to_i}.Agent"
@@ -32,11 +33,13 @@ cask 'cleanmymac' do
                      "~/Library/Preferences/com.macpaw.CleanMyMac#{version.to_i}.plist",
                    ]
   else
-    version '3.2.1-1448556223'
-    sha256 'a5e7587d7edcece90c0d5b0b6aed8d008b6a1a93cb6911f0cf2e9e0c0453e6c4'
+    version '3.3.0-1451475053'
+    sha256 '14038d3554f771e32840dbd0936235d62b95713638b4b1ca94daf32847da389f'
 
     # devmate.com is the official download host per the appcast feed
     url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.to_i}/#{version.sub(%r{-.*$}, '')}/#{version.sub(%r{.*?-}, '')}/CleanMyMac3-#{version.sub(%r{-.*$}, '')}.zip"
+    appcast "http://updates.devmate.com/com.macpaw.CleanMyMac#{version.to_i}.xml",
+            :sha256 => 'e62a4026c55f52a3c31a0070e8fb9d49c63244697dff9332a3ab37f74d02c5aa'
     app "CleanMyMac #{version.to_i}.app"
 
     postflight do
