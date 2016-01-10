@@ -66,15 +66,13 @@ check_url_for_https() {
 
   # check if the URL sends a 200 HTTP code, else abort
   browser_headers="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36"
-  cask_status=$(curl --silent ${verbose_option}--head --max-time 10 --proto =https --location --header "${browser_headers}" "${cask_url}")
+  cask_status=$(curl --silent ${verbose_option} --head --max-time 10 --proto =https --location --header "${browser_headers}" --write-out '%{http_code}' "${cask_url}" -o '/dev/null')
   exit_code=$?
 
   if [[ exit_code -ne 0 ]]; then
     echo "curl returned ${exit_code}: FAIL for ${cask_url}"
     return 1
   fi
-
-  cask_status=$(echo ${cask_status} | grep '^HTTP' | tail -1 | perl -pe 's|.* (\d{3}) .*|\1|')
 
   if [[ "${cask_status}" != '200' ]]; then
     if [[ -z "${cask_status}" ]]; then
