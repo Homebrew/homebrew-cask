@@ -1,6 +1,6 @@
 cask 'sunvox' do
-  version '1.9b'
-  sha256 '3cb5d94c94337b34d8cf11918dc6fc0cb879a5bd87b42be054d16987cd18a725'
+  version '1.9.1'
+  sha256 'b03d79483c7fff705e5373dc9c1853c521208f7318f21032a809aae8f186a77d'
 
   url "http://www.warmplace.ru/soft/sunvox/sunvox-#{version}.zip"
   name 'SunVox'
