@@ -5,7 +5,7 @@ cask 'satellite-eyes' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://satellite-eyes.s3.amazonaws.com/satellite-eyes-#{version}.zip"
   appcast 'https://satellite-eyes.s3.amazonaws.com/appcast.xml',
-          :sha256 => '5853ce38284dd959729ea64a423c359d6f2e383be3f062b38825762dfb97860b'
+          :sha256 => '4f8442b010054afde7b0f1545623b0ada25c16af803353af1a1254e6d5857339'
   name 'Satellite Eyes'
   homepage 'http://satelliteeyes.tomtaylor.co.uk/'
   license :apache
