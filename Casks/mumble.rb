@@ -1,11 +1,11 @@
 cask 'mumble' do
-  version '1.2.12'
-  sha256 '411cae18632a2db9aac7e546520f631dc0346f08f9ec5603b299ec65a27aea0a'
+  version '1.2.13'
+  sha256 'bf9fbefd3f233014903f13e1279197e24d94cbea9cd088cea4ee5bda3f41f37d'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/mumble-voip/mumble/releases/download/#{version}/Mumble-#{version}.dmg"
   appcast 'https://github.com/mumble-voip/mumble/releases.atom',
-          :sha256 => 'be259be289e7a3d03f7e45d2a293ebf867566c0c796ad315cda20a531c58e905'
+          :sha256 => 'a83b5d227b21e5e7452511e7744ca4a4e34a8cfb2c29630365bdf391a99616f8'
   name 'Mumble'
   homepage 'http://www.mumble.info'
   license :bsd
