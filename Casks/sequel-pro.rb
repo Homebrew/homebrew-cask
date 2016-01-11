@@ -4,8 +4,8 @@ cask 'sequel-pro' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/sequelpro/sequelpro/releases/download/release-#{version}/sequel-pro-#{version}.dmg"
-  appcast 'http://www.sequelpro.com/appcast/app-releases.xml',
-          :sha256 => 'd6137595bccddd81edfb3a07a82b4ed818b8b1af79750397f929bf74b91d3e32'
+  appcast 'https://github.com/sequelpro/sequelpro/releases.atom',
+          :sha256 => '13a9846bd10fcf63a777fb854cdbdff4b370055c8004f73c31efba32644ea595'
   name 'Sequel Pro'
   homepage 'http://www.sequelpro.com/'
   license :mit
