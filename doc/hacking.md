@@ -35,8 +35,6 @@ The Homebrew-Cask CLI is implemented as a Homebrew subcommand, so we try to matc
 
 However, very little backend code is shared between the two projects. The Homebrew codebase is based on how Homebrew Formulae work, and our Casks are very different from Formulae.
 
-Because our backend needs are so different, we are discussing whether we should completely separate our codebase from Homebrew’s (see [#5080](https://github.com/caskroom/homebrew-cask/issues/5080)).
-
 ### Casks and Formulae
 
 Homebrew Formulae deal with many different build processes, and often include arbitrary Ruby code.
