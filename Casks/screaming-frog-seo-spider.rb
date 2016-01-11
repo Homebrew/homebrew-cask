@@ -9,7 +9,6 @@ cask 'screaming-frog-seo-spider' do
 
   url "https://www.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-#{version}.dmg"
   name 'Screaming Frog SEO Spider'
-  name 'Screaming Frog'
   homepage 'http://www.screamingfrog.co.uk/seo-spider/'
   license :freemium
 
