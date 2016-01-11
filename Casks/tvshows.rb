@@ -10,4 +10,6 @@ cask 'tvshows' do
   license :gpl
 
   prefpane 'TVShows.prefPane'
+
+  zap :delete => '~/Library/Application Support/TVShows 2'
 end
