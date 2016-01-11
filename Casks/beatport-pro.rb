@@ -5,7 +5,6 @@ cask 'beatport-pro' do
   url "https://pro.beatport.com/mac/#{version}/beatportpro_#{version}.zip"
   appcast 'https://pro.beatport.com/mac/appcast.xml',
           :sha256 => 'b855defa3a7f0add216a0568c6c8922857954e61786dcb30fce4c1b565ad5716'
-  name 'Beatport'
   name 'Beatport Pro'
   homepage 'https://pro.beatport.com/'
   license :closed
