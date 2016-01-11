@@ -205,63 +205,6 @@ Other commonly-used stanzas are:
 
 Additional `artifact` stanzas you might need for special use-cases can be found [here](doc/CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required). Even more special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#optional-stanzas) and [Legacy Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#legacy-stanzas).
 
-### Stanza order
-
-Having a common order for stanzas makes Casks easier to update and parse. Below is the the complete stanza sequence (no Cask will have all stanzas). The empty lines shown here are also important, as they help to visually delineate information.
-
-```
-version
-sha256
-
-url
-appcast,
-  :sha256 # shown here as it is required with `appcast`
-name
-homepage
-license
-gpg, :key_id # on same line, since first part is typically small
-
-auto_updates
-accessibility_access
-conflicts_with
-depends_on
-container
-
-suite
-app
-pkg
-installer
-binary
-colorpicker
-font
-input_method
-internet_plugin
-prefpane
-qlplugin
-screen_saver
-service
-audio_unit_plugin
-vst_plugin
-artifact, :target # :target shown here as is required with `artifact`
-stage_only
-
-preflight
-
-postflight
-
-uninstall_preflight
-
-uninstall_postflight
-
-uninstall
-
-zap
-
-caveats
-```
-
-Note that every stanza that has additional parameters (`:symbols` after a `,`) shall have them on separate lines, one per line, in alphabetical order. Exceptions are `gpg` and `:target` (when not applied to `url`) which typically consist of short lines.
-
 ### SourceForge/OSDN URLs
 
 SourceForge and OSDN (formerly SourceForge.JP) projects are common ways to distribute binaries, but they provide many different styles of URLs to get to the goods.
@@ -342,6 +285,63 @@ cask 'lynkeos' do
   app "Lynkeos-App-#{version.dots_to_hyphens}/Lynkeos.app"
 end
 ```
+
+#### Stanza order
+
+Having a common order for stanzas makes Casks easier to update and parse. Below is the the complete stanza sequence (no Cask will have all stanzas). The empty lines shown here are also important, as they help to visually delineate information.
+
+```
+version
+sha256
+
+url
+appcast,
+  :sha256 # shown here as it is required with `appcast`
+name
+homepage
+license
+gpg, :key_id # on same line, since first part is typically small
+
+auto_updates
+accessibility_access
+conflicts_with
+depends_on
+container
+
+suite
+app
+pkg
+installer
+binary
+colorpicker
+font
+input_method
+internet_plugin
+prefpane
+qlplugin
+screen_saver
+service
+audio_unit_plugin
+vst_plugin
+artifact, :target # :target shown here as is required with `artifact`
+stage_only
+
+preflight
+
+postflight
+
+uninstall_preflight
+
+uninstall_postflight
+
+uninstall
+
+zap
+
+caveats
+```
+
+Note that every stanza that has additional parameters (`:symbols` after a `,`) shall have them on separate lines, one per line, in alphabetical order. Exceptions are `gpg` and `:target` (when not applied to `url`) which typically consist of short lines.
 
 ## Testing Your New Cask
 
