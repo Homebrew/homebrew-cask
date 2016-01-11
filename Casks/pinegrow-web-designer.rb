@@ -4,8 +4,6 @@ cask 'pinegrow-web-designer' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://pinegrow.s3.amazonaws.com/PinegrowMac.#{version}.dmg"
-  name 'Pinegrow'
-  name 'Pinegrow Web Editor'
   name 'Pinegrow Web Designer'
   homepage 'http://pinegrow.com/'
   license :commercial
