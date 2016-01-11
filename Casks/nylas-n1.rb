@@ -4,7 +4,6 @@ cask 'nylas-n1' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://edgehill.s3-us-west-2.amazonaws.com/#{version}/darwin/x64/N1.dmg"
-  name 'N1'
   name 'Nylas N1'
   homepage 'https://www.nylas.com/n1'
   license :gpl

@@ -4,7 +4,6 @@ cask 'panoply' do
 
   url "http://www.giss.nasa.gov/tools/panoply/PanoplyOSX-#{version}.dmg"
   name 'Panoply netCDF, HDF and GRIB Data Viewer'
-  name 'Panoply'
   homepage 'http://www.giss.nasa.gov/tools/panoply/'
   license :closed
 

@@ -4,7 +4,6 @@ cask 'rro' do
 
   url "https://mran.revolutionanalytics.com/install/RRO-#{version}-OSX.pkg"
   name 'Revolution R Open'
-  name 'Revolution R'
   name 'RRO'
   homepage 'http://www.revolutionanalytics.com'
   license :gpl

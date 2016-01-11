@@ -6,7 +6,6 @@ cask 'audiobookbinder' do
   appcast 'http://bluezbox.com/audiobookbinder/appcast.xml',
           :sha256 => '11938c904098f5a6dd0dbf6a607cdde44be5d7f1a0d7fdeb5e54965320c0f441'
   name 'Audiobook Binder'
-  name 'AudiobookBinder'
   homepage 'http://bluezbox.com/audiobookbinder.html'
   license :oss
 

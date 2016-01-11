@@ -6,8 +6,8 @@ cask 'night-owl' do
   url 'https://aki-null.net/yf/NightOwl.zip'
   appcast 'https://sites.google.com/site/yorufukurou/distribution/appcast.xml',
           :sha256 => '773b0639a4774732129241d5fc6f92c216d92a2d203886bb784ad5844dd6ba02'
-  name 'YoruFukurou'
   name 'NightOwl'
+  name 'YoruFukurou'
   homepage 'https://sites.google.com/site/yorufukurou/home-en'
   license :gratis
 

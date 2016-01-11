@@ -6,7 +6,6 @@ cask 'cdock' do
   appcast 'https://github.com/w0lfschild/cDock2/releases.atom',
           :sha256 => '8b23380512d766d9773b145642876ab353987f2efe47efa2b42168ba7154aab3'
   name 'cDock2'
-  name 'cDock'
   homepage 'https://w0lfschild.github.io/cdock'
   license :bsd
 

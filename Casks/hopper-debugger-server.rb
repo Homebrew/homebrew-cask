@@ -6,8 +6,6 @@ cask 'hopper-debugger-server' do
   appcast 'http://www.hopperapp.com/HopperGDBServer/appcast.xml',
           :sha256 => 'b31817c655cb478d64f00bfb48ba3c2c6635660ac8021192e16f67511ee346c3'
   name 'Hopper Debugger Server'
-  name 'Hopper GDB Server'
-  name 'HopperGDBServer'
   homepage 'http://www.hopperapp.com/HopperGDBServer/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

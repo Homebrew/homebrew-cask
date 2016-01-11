@@ -6,7 +6,6 @@ cask 'java' do
       :cookies => {
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
-  name 'Java'
   name 'Java Standard Edition Development Kit'
   homepage "http://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.split('.')[1]}-downloads-2133151.html"
   license :gratis

@@ -3,7 +3,6 @@ cask 'bitcoin-core' do
   sha256 '413dd4335ced455c0e773d4081f7ff7e5e23e8098bf1fe402e0185cc584ca0df'
 
   url "https://bitcoin.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx.dmg"
-  name 'Bitcoin'
   name 'Bitcoin Core'
   homepage 'https://bitcoin.org/'
   license :mit
