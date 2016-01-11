@@ -6,7 +6,6 @@ cask 'karabiner' do
   appcast 'https://pqrs.org/osx/karabiner/files/appcast.xml',
           :sha256 => '80507c8ee91466c273fccee7a815a9e773cb14e778b807c95f67719c97d57c23'
   name 'Karabiner'
-  name 'KeyRemap4MacBook'
   homepage 'https://pqrs.org/osx/karabiner/'
   license :public_domain
 
