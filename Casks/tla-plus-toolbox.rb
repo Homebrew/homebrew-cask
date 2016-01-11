@@ -1,5 +1,5 @@
 cask 'tla-plus-toolbox' do
-  version '1.5.1'
+  version '1.5.2'
   sha256 'd0d966c6742c6011d46e6de6760bf7300ed49649a85bccab0b097b0ec5ad42cd'
 
   # inria.fr is the official download host per the vendor homepage
