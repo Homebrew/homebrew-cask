@@ -282,7 +282,7 @@ cask 'lynkeos' do
   homepage 'http://lynkeos.sourceforge.net/'
   license :gpl
 
-  app "Lynkeos-App-#{version.gsub('.', '-')}/Lynkeos.app"
+  app "Lynkeos-App-#{version.dots_to_hyphens}/Lynkeos.app"
 end
 ```
 
@@ -386,7 +386,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 
 ### Stable Versions
 
-Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of OS X or the previous point release (in 2016, for example, that meant El Capitan and Yosemite).
+Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of OS X or the previous point release (in 2015, for example, that meant El Capitan and Yosemite).
 
 ### But There Is No Stable Version!
 
