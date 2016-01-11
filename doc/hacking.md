@@ -1,23 +1,23 @@
-# Hacking on Homebrew-cask
+# Hacking on Homebrew-Cask
 
 If you’d like to hack on the Ruby code that drives this project, please join us, we’d love to have you!
 
 ## Goals, Design, and Philosophy
 
-Homebrew-cask is an attempt to make a Linux-style package manager for precompiled OS X software. Homebrew-cask is not yet as featureful as `apt` or `yum`, but we are trying to be as close as we can get to those tools from the user’s point of view.
+Homebrew-Cask is an attempt to make a Linux-style package manager for precompiled OS X software. Homebrew-Cask is not yet as featureful as `apt` or `yum`, but we are trying to be as close as we can get to those tools from the user’s point of view.
 
 We manage installed files via the “symlink farm” method, like [GNU Stow](http://www.gnu.org/software/stow/) and [Homebrew](http://brew.sh/). Similarly, we try to avoid `sudo` where possible.
 
-Homebrew-cask is designed to work like a traditional Unix tool:
+Homebrew-Cask is designed to work like a traditional Unix tool:
 
 * All functionality should be accessible from the CLI. The user should be freed (**freed!**) from interacting with a GUI.
-* Homebrew-cask should itself be scriptable.
+* Homebrew-Cask should itself be scriptable.
 
 ## Project Status
 
-Homebrew-cask is still young, and should be considered in alpha.
+Homebrew-Cask is still young, and should be considered in alpha.
 
-We have good support for a variety of artifacts: apps, pkgs, binaries, plugins, and [fonts](https://github.com/caskroom/homebrew-fonts/). Homebrew-cask can install and uninstall any of those. However, these commands don’t work well with multiple versions, and most importantly, we currently can’t `upgrade`.
+We have good support for a variety of artifacts: apps, pkgs, binaries, plugins, and [fonts](https://github.com/caskroom/homebrew-fonts/). Homebrew-Cask can install and uninstall any of those. However, these commands don’t work well with multiple versions, and most importantly, we currently can’t `upgrade`.
 
 Since upgrading is a core feature of every package manager, the implementation of an `upgrade` verb is our top priority. For `upgrade` to work reliably, we must:
 
@@ -27,13 +27,13 @@ Since upgrading is a core feature of every package manager, the implementation o
 
 These and more requirements are tracked in our [`upgrade` roadmap](https://github.com/caskroom/homebrew-cask/issues/4678). If you’d like to contribute to `upgrade`, that’s an excellent place to start.
 
-## Homebrew and Homebrew-cask
+## Homebrew and Homebrew-Cask
 
-Homebrew-cask is independent of Homebrew as a project.
+Homebrew-Cask is independent of Homebrew as a project.
 
-The Homebrew-cask CLI is implemented as a Homebrew subcommand, so we try to match semantics wherever possible. That means that similar functionality should have similar flags and parameters.
+The Homebrew-Cask CLI is implemented as a Homebrew subcommand, so we try to match semantics wherever possible. That means that similar functionality should have similar flags and parameters.
 
-However, very little backend code is shared between the two projects. The Homebrew codebase is based on how Homebrew Formulae work, and our Casks are very much unlike Formulae.
+However, very little backend code is shared between the two projects. The Homebrew codebase is based on how Homebrew Formulae work, and our Casks are very different from Formulae.
 
 Because our backend needs are so different, we are discussing whether we should completely separate our codebase from Homebrew’s (see [#5080](https://github.com/caskroom/homebrew-cask/issues/5080)).
 
@@ -70,7 +70,7 @@ We recommend the following:
   git remote add upstream https://github.com/caskroom/homebrew-cask.git
   ```
 
-4. Now you have two copies of the homebrew-cask codebase on disk: the released version in `/usr/local/Library/Taps/caskroom/homebrew-cask`, and a development version in your private repo. To symlink the `Casks` and `rubylib` folders from `/usr/local/...` into your private repo, run the following script:
+4. Now you have two copies of the Homebrew-Cask codebase on disk: the released version in `/usr/local/Library/Taps/caskroom/homebrew-cask`, and a development version in your private repo. To symlink the `Casks` and `rubylib` folders from `/usr/local/...` into your private repo, run the following script:
 
   ```bash
   /<path>/<to>/<private>/<repo>/developer/bin/develop_brew_cask
@@ -92,7 +92,7 @@ You can force a specific version of the Ruby interpreter, and/or an alternate ve
 $ /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Library/Taps/caskroom/homebrew-cask/cmd/brew-cask.rb help
 ```
 
-### Forcing a Specific Homebrew-cask Subcommand
+### Forcing a Specific Homebrew-Cask Subcommand
 
 If you are developing a subcommand, you can force `brew cask` to dispatch a specific file by giving a fully-qualified path to the file containing the subcommand, like this:
 
@@ -114,7 +114,7 @@ The environment variable `$MACOS_RELEASE_WITH_PATCHLEVEL` is also available, tho
 
 ### Target Ruby Versions
 
-Homebrew-cask requires a Ruby interpreter version 2.0 or above. This is the default system Ruby on Mavericks (10.9) and later.
+Homebrew-Cask requires a Ruby interpreter version 2.0 or above. This is the default system Ruby on Mavericks (10.9) and later.
 
 ### Submitting Your Changes
 
@@ -149,11 +149,11 @@ TESTOPTS='-v' SPEC_OPTS='-fd' VERBOSE_TESTS=1 bundle exec rake test
 
 #### External Commands
 
-Advanced users may create their own external commands for homebrew-cask by following conventions similar to external commands for git or Homebrew. An external command may be any executable on your `$PATH` which follows the form `brewcask-<command>`. (So long as `<command>` does not conflict with an existing command verb.) The command will be invoked by `exec` and passed any unprocessed arguments from the original command-line. An external command may also be implemented as an executable Ruby file, on your `$PATH`, which follows the form `brewcask-<command>.rb`. The Ruby file will be `required` and will have full access to the Ruby environments of both homebrew-cask and Homebrew. Example external commands may be found in `developer/examples`.
+Advanced users may create their own external commands for Homebrew-Cask by following conventions similar to external commands for git or Homebrew. An external command may be any executable on your `$PATH` which follows the form `brewcask-<command>`. (So long as `<command>` does not conflict with an existing command verb.) The command will be invoked by `exec` and passed any unprocessed arguments from the original command-line. An external command may also be implemented as an executable Ruby file, on your `$PATH`, which follows the form `brewcask-<command>.rb`. The Ruby file will be `required` and will have full access to the Ruby environments of both Homebrew-Cask and Homebrew. Example external commands may be found in `developer/examples`.
 
 ## Hanging out on IRC
 
-We’re on IRC at `#homebrew-cask` on Freenode. If you are going to develop for homebrew-cask, it’s a great idea to hang out with us there. Here’s why:
+We’re on IRC at `#homebrew-cask` on Freenode. If you are going to develop for Homebrew-Cask, it’s a great idea to hang out with us there. Here’s why:
 
 * Discuss your thoughts before coding and maybe get new ideas
 * Get feedback from the Travis-CI bot on build failures

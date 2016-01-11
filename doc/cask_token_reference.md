@@ -49,7 +49,7 @@ Details of software names and brands will inevitably be lost in the conversion t
 
 * Remove from the end: software framework names such as “Cocoa”, “Qt”, “Gtk”, “Wx”, “Java”, “Oracle JVM”, etc. Exception: the framework is the product being Casked: [java.rb](../Casks/java.rb).
 
-* Remove from the end: localization strings such as “en-US”
+* Remove from the end: localization strings such as “en-US”.
 
 * If the result of that process is a generic term, such as “Macintosh Installer”, try prepending the name of the vendor or developer, followed by a hyphen. If that doesn’t work, then just create the best name you can, based on the vendor’s web page.
 
@@ -94,7 +94,7 @@ To convert the App’s Simplified Name (above) to a token:
 * Spaces become hyphens.
 * Hyphens stay hyphens.
 * Digits stay digits.
-* Delete any character which is not alphanumeric or hyphen.
+* Delete any character which is not alphanumeric or a hyphen.
 * Collapse a series of multiple hyphens into one hyphen.
 * Delete a leading or trailing hyphen.
 
