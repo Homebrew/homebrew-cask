@@ -4,8 +4,8 @@ cask 'neteasemusic' do
 
   # 126.net is the official download host per the vendor homepage
   url "http://s1.music.126.net/download/osx/NeteaseMusic_#{version}_web.dmg"
-  name '网易云音乐'
   name 'NetEase cloud music'
+  name '网易云音乐'
   homepage 'http://music.163.com/#/download'
   license :gratis
 
