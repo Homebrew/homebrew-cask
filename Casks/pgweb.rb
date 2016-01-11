@@ -1,6 +1,6 @@
 cask 'pgweb' do
-  version '0.7.0'
-  sha256 '146e9c35674652021d14c80e1cea9d009a6e29331638121130854867113703f7'
+  version '0.8.0'
+  sha256 '259ceaa19e0359af8090fa805a8fbf80633bdcfecbcbd2c472614b8b533fd20b'
 
   url "https://github.com/sosedoff/pgweb/releases/download/v#{version}/pgweb_darwin_amd64.zip"
   appcast 'https://github.com/sosedoff/pgweb/releases.atom',
