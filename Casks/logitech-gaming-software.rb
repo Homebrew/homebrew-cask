@@ -7,7 +7,7 @@ cask 'logitech-gaming-software' do
   homepage 'http://support.logitech.com/en_us/downloads'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  pkg "LogiGamingSetup.mpkg"
+  pkg 'LogiGamingSetup.mpkg'
 
   uninstall :script  => '/Applications/Logitech/Uninstaller.app/Contents/Resources/UninstallScript.sh',
             :pkgutil => [
