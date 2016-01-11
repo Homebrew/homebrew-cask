@@ -1,6 +1,6 @@
 cask 'tla-plus-toolbox' do
-  version '1.5.1'
-  sha256 'd0d966c6742c6011d46e6de6760bf7300ed49649a85bccab0b097b0ec5ad42cd'
+  version '1.5.2'
+  sha256 '4c35713d1c5cdb8c4b3883fcd002098dcc1d2e64f9251455857fcb71a44d00e6'
 
   # inria.fr is the official download host per the vendor homepage
   url "https://tla.msr-inria.inria.fr/tlatoolbox/products/TLAToolbox-#{version}-macosx.cocoa.x86_64.zip"
