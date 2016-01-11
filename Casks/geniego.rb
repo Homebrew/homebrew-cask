@@ -4,8 +4,6 @@ cask 'geniego' do
 
   url 'http://directv.vo.llnwd.net/e4/nomad/MACOS-client.dmg'
   name 'DIRECTV GenieGO'
-  name 'GenieGO'
-  name 'Nomad'
   homepage 'http://www.directv.com/technology/geniego'
   license :closed
 
