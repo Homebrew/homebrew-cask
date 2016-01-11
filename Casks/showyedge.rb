@@ -4,7 +4,7 @@ cask 'showyedge' do
 
   url "https://pqrs.org/osx/ShowyEdge/files/ShowyEdge-#{version}.dmg"
   appcast 'https://pqrs.org/osx/ShowyEdge/files/appcast.xml',
-          :sha256 => 'f342c2d998d11f615b00fecb57b919b036f1f33f3275d2aea1719ba04edcdcfd'
+          :sha256 => '4c126ea5665cbf1dbf928d6fbc25f0630719908f321a7ead3eaca0b64274d93c'
   name 'ShowyEdge'
   homepage 'https://pqrs.org/osx/ShowyEdge/'
   license :public_domain
