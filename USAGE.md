@@ -175,12 +175,12 @@ $ brew cask install caskroom/fonts/font-symbola
 
 You can also modify the default installation locations used when issuing `brew cask install`:
 
-* `--caskroom=/my/path` determines where the actual applications will be located.
+* `--caskroom=/my/path` determines where the actual applications will be located
 Should be handled with care — setting it outside `/opt` or your home directory might mess up your system.
 Default is `/opt/homebrew-cask/Caskroom`
 * `--appdir=/my/path` changes the path where the symlinks to the applications (above)
 will be generated. This is commonly used to create the links in the _root_ Applications directory
-instead of the _home_ Applications directory by specifying `--appdir=/Applications`. Default is `~/Applications`.
+instead of the _home_ Applications directory by specifying `--appdir=/Applications`. Default is `~/Applications`
 * `--prefpanedir=/my/path` changes the path for PreferencePane symlinks.
 Default is `~/Library/PreferencePanes`
 * `--qlplugindir=/my/path` changes the path for Quicklook Plugin symlinks.
@@ -222,7 +222,7 @@ google-chrome
 
 Most `brew cask` commands can accept a Cask token as an argument. As described above, the token on the command line can take the form of:
 
-* A token as returned by `brew cask search`, _eg_: `google-chrome`.
+* A token as returned by `brew cask search`, _eg_: `google-chrome`,
 * A fully-qualified token which includes the Tap, _eg_: `caskroom/fonts/font-symbola`.
 
 `brew cask` also accepts three other forms as arguments:
