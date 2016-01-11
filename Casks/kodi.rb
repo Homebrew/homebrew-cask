@@ -4,7 +4,6 @@ cask 'kodi' do
 
   url "http://mirrors.kodi.tv/releases/osx/x86_64/kodi-#{version}-Isengard-x86_64.dmg"
   name 'Kodi'
-  name 'XBMC' # former
   homepage 'https://kodi.tv/'
   license :gpl
 
