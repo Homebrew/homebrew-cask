@@ -1,13 +1,13 @@
 cask 'sizeup' do
-  version :latest
-  sha256 :no_check
+  version '1.7.1'
+  sha256 'e722b4c96256fcea252a92c798d03a0927b2826a1d6752446ed4f4f20817743a'
 
-  url 'https://www.irradiatedsoftware.com/download/SizeUp.zip'
+  url "http://www.irradiatedsoftware.com/downloads/SizeUp_#{version}.zip"
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/sizeup.php',
-          :sha256 => '017c02d6671e43dcdbe80e9b5c8f2ae48110846ffb833591bd4fb7a38276ecde'
+          :sha256 => '563a7a8eb8623b0af56921f32407cfbc83752edc5a0f2dfe1eff73be7525c2d6'
   name 'SizeUp'
   homepage 'https://www.irradiatedsoftware.com/sizeup/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'SizeUp.app'
 
