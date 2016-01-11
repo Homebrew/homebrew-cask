@@ -8,4 +8,6 @@ cask 'mac-informer' do
   license :gratis
 
   app 'Mac Informer.app'
+
+  zap :delete => '~/Library/Application Support/MacInformer'
 end
