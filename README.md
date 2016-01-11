@@ -35,7 +35,7 @@ And there we have it. Google Chrome installed with a few quick commands: no clic
 $ open ~/Applications/"Google Chrome.app"
 ```
 
-## Learn more
+## Learn More
 
 * Find basic documentation on using homebrew-cask in [USAGE.md](USAGE.md)
 * Want to contribute a Cask? Awesome! See [CONTRIBUTING.md](CONTRIBUTING.md)
@@ -53,7 +53,7 @@ We’re really rather friendly! Here are the best places to talk about the proje
 * Join us (and [caskbot](https://github.com/passcod/caskbot)) on IRC at `#homebrew-cask` on Freenode
 * Join us on [Gitter](https://gitter.im/caskroom/homebrew-cask)
 
-## Reporting bugs
+## Reporting Bugs
 
 We still have bugs — and we are busy fixing them!  If you have a problem, don’t be shy about [reporting it][bug_report_template] on our [GitHub issues page](https://github.com/caskroom/homebrew-cask/issues?state=open). Always search for your issue before posting a new one.
 
