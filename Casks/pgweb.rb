@@ -4,7 +4,7 @@ cask 'pgweb' do
 
   url "https://github.com/sosedoff/pgweb/releases/download/v#{version}/pgweb_darwin_amd64.zip"
   appcast 'https://github.com/sosedoff/pgweb/releases.atom',
-          :sha256 => '3a0c23bf19e274e52895f4d1a9ae781cb86704f2d2eefa53d8a89690786ec748'
+          :sha256 => '1f3fcec0f463001cd69229dfdd3bc1e7ed93c0c6e392004042bd8846fc4fbe7b'
   name 'pgweb'
   homepage 'https://github.com/sosedoff/pgweb'
   license :mit

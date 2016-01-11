@@ -5,35 +5,23 @@ describe "Cask" do
     it "returns an instance of the Cask for the given token" do
       c = Hbc.load("adium")
       c.must_be_kind_of(Hbc::Cask)
-      c.must_be_instance_of(KlassPrefixAdium)
+      c.token.must_equal('adium')
     end
 
     it "returns an instance of the Cask from a specific file location" do
-      # defensive constant cleanup is required because Cask
-      # classes may already be loaded due to audit test
-      begin
-        Object.class_eval{remove_const :KlassPrefixDia}
-      rescue
-      end
       location = File.expand_path('./Casks/dia.rb')
       c = Hbc.load(location)
       c.must_be_kind_of(Hbc::Cask)
-      c.must_be_instance_of(KlassPrefixDia)
-      Object.class_eval{remove_const :KlassPrefixDia}
+      c.token.must_equal('dia')
     end
 
     it "returns an instance of the Cask from a url" do
-      begin
-        Object.class_eval{remove_const :KlassPrefixDia}
-      rescue
-      end
       url = "file://" + File.expand_path('./Casks/dia.rb')
       c = shutup do
         Hbc.load(url)
       end
       c.must_be_kind_of(Hbc::Cask)
-      c.must_be_instance_of(KlassPrefixDia)
-      Object.class_eval{remove_const :KlassPrefixDia}
+      c.token.must_equal('dia')
     end
 
     it "raises an error when failing to download a Cask from a url" do
@@ -46,19 +34,14 @@ describe "Cask" do
     end
 
     it "returns an instance of the Cask from a relative file location" do
-      begin
-        Object.class_eval{remove_const :KlassPrefixBbedit}
-      rescue
-      end
       c = Hbc.load("./Casks/bbedit.rb")
       c.must_be_kind_of(Hbc::Cask)
-      c.must_be_instance_of(KlassPrefixBbedit)
-      Object.class_eval{remove_const :KlassPrefixBbedit}
+      c.token.must_equal('bbedit')
     end
 
     it "uses exact match when loading by token" do
-      Hbc.load('test-opera').must_be_instance_of(KlassPrefixTestOpera)
-      Hbc.load('test-opera-mail').must_be_instance_of(KlassPrefixTestOperaMail)
+      Hbc.load('test-opera').token.must_equal('test-opera')
+      Hbc.load('test-opera-mail').token.must_equal('test-opera-mail')
     end
 
     it "raises an error when attempting to load a Cask that doesn't exist" do
@@ -72,19 +55,7 @@ describe "Cask" do
     it "returns a token for every Cask" do
       all_cask_tokens = Hbc.all_tokens
       all_cask_tokens.count.must_be :>, 20
-      all_cask_tokens.each { |cask| cask.must_be_kind_of String }
-    end
-  end
-
-  describe "token" do
-    it "converts a class constant to a token-style dashed string" do
-      KlassPrefixPascalCasedConstant = Class.new(Hbc::Cask)
-      KlassPrefixPascalCasedConstant.token.must_equal 'pascal-cased-constant'
-    end
-
-    it "properly dasherizes constants with single letters in the middle" do
-      KlassPrefixGamesXChange = Class.new(Hbc::Cask)
-      KlassPrefixGamesXChange.token.must_equal 'games-x-change'
+      all_cask_tokens.each { |token| token.must_be_kind_of String }
     end
   end
 

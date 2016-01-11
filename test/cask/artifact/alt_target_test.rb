@@ -33,8 +33,7 @@ describe Hbc::Artifact::App do
     end
 
     it "works with an application in a subdir" do
-      AltSubDirCask = Class.new(Hbc::Cask)
-      AltSubDirCask.class_eval do
+      subdir_cask = Hbc::Cask.new('subdir') do
         url TestHelper.local_binary_url('caffeine.zip')
         homepage 'http://example.com/local-caffeine'
         version '1.2.3'
@@ -43,9 +42,7 @@ describe Hbc::Artifact::App do
       end
 
       begin
-        subdir_cask = AltSubDirCask.new.tap do |cask|
-          TestHelper.install_without_artifacts(cask)
-        end
+        TestHelper.install_without_artifacts(subdir_cask)
 
         appsubdir = subdir_cask.staged_path.join('subdir').tap(&:mkpath)
         FileUtils.mv(subdir_cask.staged_path.join('Caffeine.app'), appsubdir)

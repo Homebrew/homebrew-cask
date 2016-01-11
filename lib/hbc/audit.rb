@@ -37,7 +37,7 @@ class Hbc::Audit
       add_error "a #{sym} stanza is required" unless cask.send(sym)
     end
     add_error 'a license stanza is required (:unknown is OK)' unless cask.license
-    add_error 'at least one name stanza is required' if cask.full_name.empty?
+    add_error 'at least one name stanza is required' if cask.name.empty?
     # todo: specific DSL knowledge should not be spread around in various files like this
     # todo: nested_container should not still be a pseudo-artifact at this point
     installable_artifacts = cask.artifacts.reject{ |k,v| [:uninstall, :zap, :nested_container].include?(k)}
