@@ -3,7 +3,6 @@ cask 'avast' do
   sha256 :no_check
 
   url 'http://download.ff.avast.com/mac/avast_free_mac_security.dmg'
-  name 'Avast'
   name 'Avast Mac Security'
   homepage 'https://www.avast.com/'
   license :commercial
