@@ -5,7 +5,7 @@ cask 'invisiblix' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/invisiblix/invisibliX-#{version}.zip"
   appcast 'http://www.read-write.fr/invisiblix/appcast.xml',
-          :sha256 => '35040c896c24cd6299de79f3a977584af0bdc29de72f1c4f4023ae41e17b0d6c'
+          :sha256 => 'a4c7a042cca1506de8133f56d2d4dec5b3173c2cd42cde2b27bd2dac79284387'
   name 'invisibliX'
   homepage 'http://www.read-write.fr/invisiblix/'
   license :oss
