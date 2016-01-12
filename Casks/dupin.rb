@@ -7,7 +7,7 @@ cask 'dupin' do
     sha256 '44b47c6dfb83dda4991110875168aa0af6457325ae7b6b5e583c08335942474d'
 
     appcast 'http://dougscripts.com/itunes/itinfo/dupin_appcast.xml',
-            :sha256 => 'debfafddf7b859d5898bca9114025187f9b0ca2a71fb4919b7b34a3d848b0301'
+            :sha256 => '2271aab9ffecd7a311a55addb5cfafb822792070c274acb0d734dade5b995564'
   end
 
   url "http://dougscripts.com/itunes/scrx/dupinv#{version.no_dots}.zip"
