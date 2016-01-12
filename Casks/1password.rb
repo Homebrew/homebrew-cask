@@ -14,20 +14,22 @@ cask '1password' do
     # cloudfront.net is the official download host per the vendor homepage
     url "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-#{version}.zip"
 
-    app "1Password #{version.to_i}.app"
+    app "1Password #{version.major}.app"
   else
-    version '5.4.3'
-    sha256 '4456d1d61752d0cd8e2bb792f0924f38ce3012d4ca90c8dced6d99c09700c5bd'
+    version '6.0'
+    sha256 '15a70e05fb57b34fcea301758c1d33023129d5aeac2b99e2436b9c92098eb8cb'
 
     # cloudfront.net is the official download host per the vendor homepage
     url "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-#{version}.zip"
 
-    app "1Password #{version.to_i}.app"
+    app "1Password #{version.major}.app"
   end
 
   name '1Password'
   homepage 'https://agilebits.com/onepassword'
   license :commercial
+
+  auto_updates true
 
   zap :delete => [
                    '~/Library/Application Scripts/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
