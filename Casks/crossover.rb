@@ -4,7 +4,7 @@ cask 'crossover' do
 
   url "https://media.codeweavers.com/pub/crossover/cxmac/demo/crossover-#{version}.zip"
   appcast 'https://www.codeweavers.com/xml/versions/cxmac.xml',
-          :sha256 => '5b27ca654f165ff1e3003a4565a5c155787f7356c4bd603554a13e72cf9aeeed'
+          :sha256 => 'd8a757753920f4bb81ad9567070f4852750f8bef67d1bce4b2d780184f10eac4'
   name 'CrossOver'
   homepage 'https://www.codeweavers.com/products/crossover-mac/'
   license :commercial
