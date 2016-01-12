@@ -4,7 +4,7 @@ cask 'preen' do
 
   url "http://anomiesoftware.com/downloads/preenImage#{version}.dmg"
   appcast 'http://www.anomiesoftware.com/PreenAppcast.xml',
-          :sha256 => 'd4e76fcd407b0b93ea02071f03adc934606c4bc061d6f7fb3d2186c81762803d'
+          :sha256 => 'a99f8b0dc8714842bba34f61da3ceb8032b29a12d8abe3c3911695797098b11c'
   name 'Preen'
   homepage 'http://anomiesoftware.com/Anomie_Software/Preen.html'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
