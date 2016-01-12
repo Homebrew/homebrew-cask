@@ -4,7 +4,7 @@ cask 'menucalendarclock-ical' do
 
   url "http://www.objectpark.net/download/MenuCalendarClock-#{version}.dmg.gz"
   appcast 'http://www.objectpark.net/appcasts/MCC3.xml',
-          :sha256 => 'd257aeaf7c2b2e59f845dedd8fa65e2fb715b7750211b66a5c471582ab9dcf67'
+          :sha256 => 'db8674825c2f0a3fd1e5ad98e1c32230a235e33a37a022f9ec032fae1f905e71'
   name 'MenuCalendarClock'
   homepage 'http://www.objectpark.net/en/mcc.html'
   license :freemium
