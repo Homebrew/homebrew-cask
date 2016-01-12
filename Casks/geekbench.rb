@@ -4,7 +4,7 @@ cask 'geekbench' do
 
   url "http://cdn.primatelabs.com/Geekbench-#{version}-Mac.zip"
   appcast 'http://www.primatelabs.com/appcast/geekbench3.xml',
-          :sha256 => 'c8f482bf12e4ec327801466c46bc937d913a6e3a4f8689f54001bed06681faee'
+          :sha256 => 'b4a7ee484f9bc99028247edd8d663d039469d784c8cb93fdc8b5955f45039413'
   name 'Geekbench'
   homepage 'http://www.primatelabs.com/geekbench/'
   license :commercial
