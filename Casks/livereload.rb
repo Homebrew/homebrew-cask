@@ -4,7 +4,7 @@ cask 'livereload' do
 
   url "http://download.livereload.com/LiveReload-#{version}.zip"
   appcast 'https://s3.amazonaws.com/download.livereload.com/LiveReload-Mac-appcast.xml',
-          :sha256 => '0e20dc6e8868fbb064b8b346775ef14a29487b76c7d856f5be592979454c2d04'
+          :sha256 => 'c964172d8b200396e632bee8d38f37d01406457b523656b666549d5254e6a9cc'
   name 'LiveReload'
   homepage 'http://livereload.com'
   license :oss
