@@ -4,7 +4,7 @@ cask 'iphone-backup-extractor' do
 
   url 'http://supercrazyawesome.com/downloads/iPhone%20Backup%20Extractor.app.zip'
   appcast 'http://supercrazyawesome.com/sparkle.xml',
-          :sha256 => '9741720f2335c72c43b297545c4c834d4ad1064f24fc582af9802cd627bb6d83'
+          :sha256 => '5b6e8c6065fa86b595431eef2622dec93f5eada09024608a4c19ec468c0275c5'
   name 'iPhone Backup Extractor'
   homepage 'http://supercrazyawesome.com/'
   license :gratis
