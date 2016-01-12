@@ -16,8 +16,7 @@ cask 'dbvisualizer' do
 
   zap :delete => '~/.dbvis'
 
-  caveats <<-EOS.undent
-    #{token} requires Java 8. You can install the latest version with
-      brew cask install java
-  EOS
+  caveats do
+    depends_on_java('8')
+  end
 end
