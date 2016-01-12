@@ -4,7 +4,7 @@ cask 'cakebrew' do
 
   url "https://www.cakebrew.com/files/cakebrew-#{version}.zip"
   appcast 'https://www.cakebrew.com/appcast/profileInfo.php',
-          :sha256 => 'efcdc4e76bd1d3b268b6b371f729d15b40f05852e4a08cde7c37186fbe42e51f'
+          :sha256 => 'e8994af1206c2e0d34cb6d2715e3218baa4e58811072183e7305b09707e21b07'
   name 'Cakebrew'
   homepage 'https://www.cakebrew.com/'
   license :gpl
