@@ -4,7 +4,7 @@ cask 'sketch-toolbox' do
 
   url 'http://sketchtoolbox.com/Sketch%20Toolbox.zip'
   appcast 'http://sketchtoolbox.com/updates/appcast.xml',
-          :sha256 => 'db5407ef7547d317f7d3667c36ddf788b89814eec4fea9d88d4de33260355e9e'
+          :sha256 => 'f7f8618e435aa590d4e869658413b358324598a228619f325fad02dcc96c7f3c'
   name 'Sketch Toolbox'
   homepage 'http://sketchtoolbox.com'
   license :mit
