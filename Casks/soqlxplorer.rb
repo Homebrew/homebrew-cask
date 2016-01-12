@@ -4,7 +4,7 @@ cask 'soqlxplorer' do
 
   url "http://www.pocketsoap.com/osx/soqlx/soqlXplorer_v#{version}.zip"
   appcast 'http://www.pocketsoap.com/osx/soqlx/appcast.xml',
-          :sha256 => '16f0bf9d75169890328740496590cf71dc2c39e971139ec1a7ef052e641e092e'
+          :sha256 => '0c946b4cfe055844c2dbd40e9e2b9421e616a47e9c595e8162ca46a70205d9ef'
   name 'SoqlXplorer'
   homepage 'http://www.pocketsoap.com/osx/soqlx/'
   license :mit
