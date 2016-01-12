@@ -5,7 +5,7 @@ cask 'spotdox' do
   # herokuapp.com is the official download host per the vendor homepage
   url 'https://spotdox.herokuapp.com/downloads/Spotdox.zip'
   appcast 'https://spotdox.herokuapp.com/downloads/appcast.xml',
-          :sha256 => '85f5ae67e941460449989575db1e977c78c34c7eff2e8519aac092518449e4ff'
+          :sha256 => '490eb6f9ca809b303cb583d7050ae0bba2006f98e839a1df249eda766a7d5d24'
   name 'Spotdox'
   homepage 'https://spotdox.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
