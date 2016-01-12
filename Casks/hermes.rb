@@ -5,7 +5,7 @@ cask 'hermes' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/hermesmacapp/Hermes-#{version}.zip"
   appcast 'https://hermesapp.org/versions.xml',
-          :sha256 => 'abfa2b7257a081bcff21eb97c9425c09444baac4d979309c0d93b623a4b567f5'
+          :sha256 => 'f49abc9c6df278e3effae34ce56a97c11f97337f974401aede9c3519dcb9f280'
   name 'Hermes'
   homepage 'https://hermesapp.org/'
   license :mit
