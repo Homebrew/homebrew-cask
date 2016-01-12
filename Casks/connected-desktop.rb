@@ -5,7 +5,7 @@ cask 'connected-desktop' do
   # connecteddata.com is the official download host per the vendor homepage
   url "https://secure.connecteddata.com/mac/2.4/software/Connected_Desktop_#{version}.dmg"
   appcast 'http://appsoftware.connecteddata.com/mac/2.0/Appcast.xml',
-          :sha256 => '51d51ee36b94570f4c02379f9aef8d0b1387abf97509757da89f0dd82b30cb95'
+          :sha256 => 'd6de7927ec9a6e23f96679a84e934d75d4b8a662b78b0ddbf6151f5a3ee8685e'
   name 'Connected Desktop'
   homepage 'http://www.filetransporter.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
