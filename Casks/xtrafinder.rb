@@ -1,10 +1,10 @@
 cask 'xtrafinder' do
-  version :latest
-  sha256 :no_check
+  version '0.25.8'
+  sha256 'a5efae114fbdf0bf28bdc3340b0c2c8f79bded07dc6730cf612b1d7750779f66'
 
   url 'https://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg'
   appcast 'https://www.trankynam.com/xtrafinder/XtraFinder-Appcast.xml',
-          :sha256 => 'f1246aa1bf1285d96d00d3210f6746b1d3b6183f96d221e5714754654aaa2cdb'
+          :sha256 => '51012c5a6b09281cd39041879b0b60ae3db5b8ca6afb266bbe90663e7557e3a1'
   name 'XtraFinder'
   homepage 'https://www.trankynam.com/xtrafinder/'
   license :gratis
