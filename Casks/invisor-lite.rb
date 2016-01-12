@@ -4,7 +4,7 @@ cask 'invisor-lite' do
 
   url "http://www.pozdeev.com/invisor/download/InvisorLite-#{version}.dmg"
   appcast 'http://www.pozdeev.com/invisor/appcast_lite.xml',
-          :sha256 => '31894c0458d112bc22850856112548afd5fb5918b2c57708b830ac904d027b14'
+          :sha256 => 'ab73611625302e9b70341d3576070704272a686ba2901c6f383d1a9ef0d72cda'
   name 'Invisor Lite'
   homepage 'http://www.pozdeev.com/invisor/'
   license :gratis
