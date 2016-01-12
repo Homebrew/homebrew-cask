@@ -5,7 +5,7 @@ cask 'flowdock' do
   # amazonaws.com is the official download host per the appcast feed
   url "https://s3.amazonaws.com/flowdock-resources/mac/#{version}/Flowdock.zip"
   appcast 'https://s3.amazonaws.com/flowdock-resources/mac/appcast.xml',
-          :sha256 => '04a4168eee2add871c4341aeea910c8b58f9bed3dc2e0ba3d8c3bc020e125299'
+          :sha256 => '3befc9c32e9aea1edf57563cc86407b87b056ad5657da6180c785a4058c74103'
   name 'Flowdock'
   homepage 'https://www.flowdock.com/'
   license :gratis
