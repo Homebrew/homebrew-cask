@@ -5,7 +5,7 @@ cask 'swift-publisher' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://s3.amazonaws.com/belightsoft/SwiftPublisher.dmg'
   appcast 'https://www.belightsoft.com/download/updates/appcast_SwiftPublisher3.xml',
-          :sha256 => '150948d411a38f911a4ae196981dbc1f4a61f0f9e1bbcf8945236b598b23a7be'
+          :sha256 => 'a57c23992686b6b380c439f5d218d27618494e059c641d2c2d33c6a3ba6e02d3'
   name 'Swift Publisher'
   homepage 'https://www.belightsoft.com/products/swiftpublisher/overview.php'
   license :closed
