@@ -6,7 +6,7 @@ cask 'namechanger' do
   appcast 'https://mrrsoftware.com/Downloads/NameChanger/Updates/NameChangerSoftwareUpdates.xml',
           :sha256 => '49c3bd5a23dda0e2e8949cd32378dfe2bb05455bf0abab522e718af845451a13'
   name 'NameChanger'
-  homepage 'http://mrrsoftware.com/namechanger/'
+  homepage 'https://mrrsoftware.com/namechanger/'
   license :gratis
 
   app 'NameChanger.app'
