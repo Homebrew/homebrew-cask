@@ -5,7 +5,7 @@ cask 'laullon-gitx' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/downloads/laullon/gitx/GitX-L_v#{version}.zip"
   appcast 'http://gitx.laullon.com/appcast.xml',
-          :sha256 => '7ce5197de931145d75c57c2171fba559481e79e23bedd58ec107b476731f693b'
+          :sha256 => '1133bf13bb8cbd78eadaebbeb8bcc38d9c61f56b0fb5a39606db22d7c5544422'
   name 'GitX (L)'
   homepage 'http://gitx.laullon.com/'
   license :gpl
