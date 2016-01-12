@@ -4,7 +4,7 @@ cask 'grandtotal' do
 
   url "https://mediaatelier.com/GrandTotal4/GrandTotal_#{version}.zip"
   appcast 'https://mediaatelier.com/GrandTotal4/feed.php',
-          :sha256 => 'e0021023a0e17d686d6dc52f57766f3bf8266cea9f2086dbcdd58252ec5724fb'
+          :sha256 => '76319b51186047621d3da8a6def039617c7cc0a60515d59d636cd6d38d67ee33'
   name 'GrandTotal'
   homepage 'https://www.mediaatelier.com/GrandTotal4/'
   license :commercial
