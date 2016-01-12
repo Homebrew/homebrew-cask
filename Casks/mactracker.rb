@@ -4,7 +4,7 @@ cask 'mactracker' do
 
   url "http://www.mactracker.ca/downloads/Mactracker_#{version}.zip"
   appcast 'http://update.mactracker.ca/appcast-b.xml',
-          :sha256 => 'f461c77f9dd1edeaee0fc3a673821a273600854e507caf5407358b88a39807df'
+          :sha256 => 'a0316344b17cc633236fc6227f9843707ee3ae0b8b48794cf8b1e45cb9e5f728'
   name 'Mactracker'
   homepage 'http://mactracker.ca/'
   license :gratis
