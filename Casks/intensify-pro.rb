@@ -10,5 +10,5 @@ cask 'intensify-pro' do
   homepage 'https://macphun.com/intensify'
   license :commercial
 
-  app 'Intensify Pro.app'
+  app 'Intensify CK.app'
 end
