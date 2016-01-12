@@ -10,7 +10,8 @@ cask 'tla-plus-toolbox' do
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8829
-  app 'toolbox/toolbox.app', :target => 'TLA+ Toolbox.app'
+  # Fixed upstream: App name is now consistent with it's branding
+  app 'TLA+ Toolbox.app'
 
   caveats <<-EOS.undent
     #{token} requires Java. You can install the latest version with
