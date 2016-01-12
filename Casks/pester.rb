@@ -4,7 +4,7 @@ cask 'pester' do
 
   url "http://sabi.net/nriley/software/Pester-#{version}.dmg"
   appcast 'http://sabi.net/nriley/software/Pester/updates.xml',
-          :sha256 => 'c9fdbf59afac8f0bdfd8daecb196155b8d194b199e906899ff17ab146b5fb4d5'
+          :sha256 => '169db8b6696e039e4aa660bacfa07a96640e21f95cb8c376a39861fc3faf274d'
   name 'Pester'
   homepage 'http://sabi.net/nriley/software/index.html#pester'
   license :bsd
