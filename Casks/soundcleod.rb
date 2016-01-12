@@ -4,7 +4,7 @@ cask 'soundcleod' do
 
   url 'https://github.com/salomvary/soundcleod/raw/master/dist/SoundCleod.dmg'
   appcast 'https://raw.github.com/salomvary/soundcleod/master/appcast.xml',
-          :sha256 => 'f95a8f938521b80875ad438a059ac93e2d0e929c2c4d7622c0cbbd9b157ab0ce'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   name 'SoundCleod'
   homepage 'https://salomvary.github.io/soundcleod/'
   license :mit
