@@ -4,7 +4,7 @@ cask 'xscope' do
 
   url "https://iconfactory.com/assets/software/xscope/xScope-#{version}.zip"
   appcast 'https://iconfactory.com/appcasts/xScope/appcast.xml',
-          :sha256 => '29eaf2c30992f4c72e4a98d96ce912a1cfde16d751a6b68044ef3c116672d8eb'
+          :sha256 => '4dbe3c97a4d28ef2bd3ea0853a918de7565164fe4abf958cccd7c9f9a39b9c7e'
   name 'xScope'
   homepage 'http://iconfactory.com/software/xscope'
   license :commercial
