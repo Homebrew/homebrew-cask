@@ -4,7 +4,7 @@ cask 'carbon-copy-cloner' do
 
   url 'https://www.bombich.com/software/download_ccc.php?v=latest&l=alternate'
   appcast 'https://www.bombich.com/software/updates/ccc.php',
-          :sha256 => 'ec02ebdd3e4bee0527d46e8256372249780fb1a4fb93ddb782e9da87787bbdff'
+          :sha256 => '06cfc29f8c4b697139c437a95092890dc87cbab6ef3e9bc4e1561f70f7e15af4'
   name 'Carbon Copy Cloner'
   homepage 'https://bombich.com/'
   license :commercial
