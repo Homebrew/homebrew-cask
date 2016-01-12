@@ -4,7 +4,7 @@ cask 'latexit' do
 
   url "http://www.chachatelier.fr/latexit/downloads/LaTeXiT-#{version.gsub('.', '_')}.dmg"
   appcast 'http://pierre.chachatelier.fr/latexit/downloads/latexit-sparkle-en.rss',
-          :sha256 => '34cab0a120226e056f8ea3f24afa7e252429e487b522345adf862365986b2d66'
+          :sha256 => '9bea4215fe332d5d67ce82571fc909face2e8cb391b42a5d45a55cb2cd49be47'
   name 'LaTeXiT'
   homepage 'http://www.chachatelier.fr/latexit'
   license :oss
