@@ -4,7 +4,7 @@ cask 'moneyguru' do
 
   url "https://download.hardcoded.net/moneyguru_osx_#{version.gsub('.', '_')}.dmg"
   appcast 'https://www.hardcoded.net/updates/moneyguru.appcast',
-          :sha256 => '3ff1173f8c5384118a3886952937ff8c21b9779c0a7cf592c985851a1e74c130'
+          :sha256 => 'e80d6ed5f87a6be27ff0cd816cff1d381610896b1da3ce5879e2044c30b6ab95'
   name 'moneyGuru'
   homepage 'https://www.hardcoded.net/moneyguru/'
   license :bsd
