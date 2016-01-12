@@ -1,13 +1,13 @@
 cask 'reaper' do
-  version '5.11'
+  version '5.111'
 
   if Hardware::CPU.is_32_bit?
-    sha256 '496be71d8d8b4ce8fa9a4476d78ef1d93be9645db4a5019b5ad362edbd788aba'
+    sha256 'b6c980388d15502d08e37fbe7dabe70ed7119d32ba38a85b650a590ebad919a8'
     url "http://www.reaper.fm/files/#{version.to_i}.x/reaper#{version.delete('.')}_i386.dmg"
     app 'REAPER.app'
     app 'ReaMote.app'
   else
-    sha256 '810d88c51b9878e056565347959458cef79791e1fd5969d662304ab95f24c4e1'
+    sha256 '6c9112712d58215db7ed86eba11e3d2d092b20b5fcdc493e2ce1554a76ad06e0'
     url "http://www.reaper.fm/files/#{version.to_i}.x/reaper#{version.delete('.')}_x86_64.dmg"
     app 'REAPER64.app'
     app 'ReaMote64.app'
