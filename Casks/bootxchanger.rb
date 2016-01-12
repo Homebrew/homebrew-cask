@@ -4,7 +4,7 @@ cask 'bootxchanger' do
 
   url "http://namedfork.net/_media/bootxchanger_#{version}.dmg"
   appcast 'http://swupdate.namedfork.net/bootxchanger.xml',
-          :sha256 => 'afbae3b2a378ebb18f1668c062ba48436e956cad840fcc86cba610d351931187'
+          :sha256 => 'd49278c876353b2f1171a0f0aecbf32549c94aed52cb9fecc93f9eed014ee00b'
   name 'BootXChanger'
   homepage 'http://namedfork.net/bootxchanger'
   license :gpl
