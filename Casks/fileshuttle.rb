@@ -4,7 +4,7 @@ cask 'fileshuttle' do
 
   url "https://fileshuttle.io/fileshuttle-#{version}.zip"
   appcast 'https://fileshuttle.io/update.xml',
-          :sha256 => 'bb04ae1f2834d488b0faf6a12320b8a75832e3de1123e9fb538c5f22e835b9d9'
+          :sha256 => '7c64af82391b1e84d716e9a51dcb86ca6d36f6232c156c09fddec5470bafb292'
   name 'FileShuttle'
   homepage 'https://fileshuttle.io/'
   license :other
