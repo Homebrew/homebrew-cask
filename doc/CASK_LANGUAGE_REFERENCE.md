@@ -33,34 +33,20 @@ Each Cask is a Ruby block, beginning with a special header line. The Cask defini
 
 ```ruby
 cask 'alfred' do
-  version '2.8.2_431'
-  sha256 'efff18c2459fa11be096934b4f00526d717df79687153ca246ac93fadd90daa3'
+  version '2.7.1_387'
+  sha256 'a3738d0513d736918a6d71535ef3d85dd184af267c05698e49ac4c6b48f38e17'
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
   homepage 'https://www.alfredapp.com/'
   license :freemium
 
-  auto_updates true
-  accessibility_access true
-
   app 'Alfred 2.app'
+  app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 
   postflight do
     suppress_move_to_applications :key => 'suppressMoveToApplications'
   end
-
-  uninstall :quit       => 'com.runningwithcrayons.Alfred-2',
-            :login_item => 'Alfred 2'
-
-  zap :delete => [
-                   '~/Library/Application Support/Alfred 2',
-                   '~/Library/Caches/com.runningwithcrayons.Alfred-2',
-                   '~/Library/Caches/com.runningwithcrayons.Alfred-Preferences',
-                   '~/Library/Preferences/com.runningwithcrayons.Alfred-2.plist',
-                   '~/Library/Preferences/com.runningwithcrayons.Alfred-Preferences.plist',
-                   '~/Library/Saved Application State/com.runningwithcrayons.Alfred-Preferences.savedState',
-                 ]
 end
 ```
 
@@ -79,8 +65,8 @@ Each of the following stanzas is required for every Cask.
 | name               | multiple occurrences allowed? | value       |
 | ------------------ |------------------------------ | ----------- |
 | `version`          | no                            | application version; give value of `:latest`  if versioned downloads are not offered
-| `sha256`           | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
-| `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application. A [comment](#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ. (see also [URL Stanza Details](#url-stanza-details))
+| `sha256`           | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check` (see also [Checksum Stanza Details](#checksum-stanza-details))
+| `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application. A [comment](#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see also [URL Stanza Details](#url-stanza-details))
 | `name`             | yes                           | a string providing the full and proper name defined by the vendor (see also [Name Stanza Details](#name-stanza-details))
 | `homepage`         | no                            | application homepage; used for the `brew cask home` command
 | `license`          | no                            | a symbol identifying the license category for the application (see also [License Stanza Details](#license-stanza-details))
@@ -138,8 +124,8 @@ Tests on the following values are known to be acceptable:
 
 | value                       | examples
 | ----------------------------|--------------------------------------
-| `MacOS.release`             | [macports.rb](../Casks/macports.rb), [coconutbattery.rb](../Casks/coconutbattery.rb)
-| `Hardware::CPU.is_32_bit?`  | [vuescan.rb](../Casks/vuescan.rb)
+| `MacOS.release`             | [macports.rb](https://github.com/caskroom/homebrew-cask/blob/9eae0af0daf9b55f81a3af010cca3b0b1272e2db/Casks/macports.rb#L4#L20), [coconutbattery.rb](https://github.com/caskroom/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb#L3#L17)
+| `Hardware::CPU.is_32_bit?`  | [vuescan.rb](https://github.com/caskroom/homebrew-cask/blob/655bfe48b41ae94cb81b1003182b8de5fa2995ef/Casks/vuescan.rb#L5#L9)
 | `Hardware::CPU.is_64_bit?`  | none, see [Always Fall Through to the Newest Case](#always-fall-through-to-the-newest-case)
 
 ### Version Comparisons
@@ -159,7 +145,7 @@ The available symbols for OS X versions are: `:cheetah`, `:puma`, `:jaguar`, `:p
 
 ### Always Fall Through to the Newest Case
 
-Conditionals should be constructed so that the default is the newest OS version or hardware type. When using an `if` statement, test for older versions, and then let the `else` statement hold the latest and greatest. This makes it more likely that the Cask will work without alteration when a new OS is released. Example (from [coconutbattery.rb](../Casks/coconutbattery.rb)):
+Conditionals should be constructed so that the default is the newest OS version or hardware type. When using an `if` statement, test for older versions, and then let the `else` statement hold the latest and greatest. This makes it more likely that the Cask will work without alteration when a new OS is released. Example (from [coconutbattery.rb](https://github.com/caskroom/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb)):
 
 ```ruby
 if MacOS.release <= :tiger
@@ -192,7 +178,7 @@ There are currently some arbitrary limitations on Cask tokens which are in the p
 
 Its first instance should use the latin alphabet, include the software vendor’s name, and be as verbose as possible while still making sense.
 
-An example are casks whose original names do not use the latin alphabet, like [`cave-story`](../Casks/cave-story.rb).
+A good example is [`pycharm-ce`](https://github.com/caskroom/homebrew-cask/blob/fc05c0353aebb28e40db72faba04b82ca832d11a/Casks/pycharm-ce.rb#L6#L7). `Jetbrains PyCharm Community Edition` makes sense even though it is likely never referenced as such anywhere, but `Jetbrains PyCharm Community Edition CE` doesn’t, hence why it has a second line. Another example are casks whose original names do not use the latin alphabet, like [`cave-story`](https://github.com/caskroom/homebrew-cask/blob/0fe48607f5656e4f1de58c6884945378b7e6f960/Casks/cave-story.rb#L7#L9).
 
 Note that `brew cask search` and `brew cask list` are not yet capable of using the information stored in the `name` stanza.
 
@@ -281,9 +267,9 @@ When a plain URL string is insufficient to fetch a file, additional information 
 | `:user_agent`      | a string holding the user agent to set for the download request. Can also be set to the symbol `:fake`, which will use a generic Browser-like user agent string. We prefer `:fake` when the server does not require a specific user agent.
 | `:data`            | a hash of parameters to be set in the POST request
 
-Example of using `:cookies`: [java.rb](../Casks/java.rb)
+Example of using `:cookies`: [java.rb](https://github.com/caskroom/homebrew-cask/blob/b78fb320fc303fc503386aa6fac47fdd105ecbfb/Casks/java.rb#L5#L8)
 
-Example of using `:referer`: [rrootage.rb](../Casks/rrootage.rb)
+Example of using `:referer`: [rrootage.rb](https://github.com/caskroom/homebrew-cask/blob/992d34fec0a12193207a91d57b92bfcfb25174ea/Casks/rrootage.rb#L5)
 
 ### When URL and Homepage Hostnames Differ, Add a Comment
 
@@ -293,7 +279,7 @@ When the hostnames of `url` and `homepage` differ, the discrepancy should be doc
 # URL_HOSTNAME is the official download host per the vendor homepage
 ```
 
-Examples can be seen in [visit.rb](../Casks/visit.rb) and [vistrails.rb](../Casks/vistrails.rb).
+Examples can be seen in [visit.rb](https://github.com/caskroom/homebrew-cask/blob/cafcd7cf7922022ea607c5811c63d45863c7ed36/Casks/visit.rb#L5) and [vistrails.rb](https://github.com/caskroom/homebrew-cask/blob/cafcd7cf7922022ea607c5811c63d45863c7ed36/Casks/vistrails.rb#L5).
 
 These comments must be added so a user auditing the cask knows the URL is the one provided by the vendor, even though it may look unofficial or suspicious. It is our responsibility as Homebrew-Cask maintainers to verify both the `url` and `homepage` information when first added (or subsequently modified, apart from versioning). The exception to this rule is a `homepage` of `github.io` with a `url` of `github.com`, since we know this pair of hostnames is connected.
 
@@ -302,7 +288,7 @@ These comments must be added so a user auditing the cask knows the URL is the on
 Web browsers may obscure the direct `url` download location for a variety of reasons. Homebrew-Cask supplies a script which can read extended file attributes to extract the actual source URL for most files downloaded by a browser on OS X. The script usually emits multiple candidate URLs; you may have to test each of them:
 
 ```bash
-$ /usr/local/Library/Taps/caskroom/homebrew-cask/developer/bin/list_url_attributes_on_file <file>
+$ (brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_url_attributes_on_file <file>
 ```
 
 ### Subversion URLs
@@ -325,7 +311,7 @@ The value of the `appcast` stanza is a string, holding the URL for an appcast wh
 | ------------------ | ----------- |
 | `:sha256`          | a string holding the SHA-256 checksum of the most recent appcast which matches the current Cask versioning
 
-Example: [atom.rb](../Casks/atom.rb)
+Example: [atom.rb](https://github.com/caskroom/homebrew-cask/blob/127387b9fc686370ffa92c01eeed8979df9e1621/Casks/atom.rb#L7#L8)
 
 ## License Stanza Details
 
@@ -341,7 +327,7 @@ Note that `brew cask search` and `brew cask list` are not yet capable of using t
 
 Cask authors should use the most specific license category which is also correct. Generic categories are provided for difficult cases. `:unknown` is also perfectly fine if you are unsure.
 
-Example: [Chromium](http://www.chromium.org/chromium-os/licenses) includes code with multiple licenses, all of which are open source. Chromium licensing is described by the generic category [`:oss`](../Casks/chromium.rb).
+Example: [Chromium](http://www.chromium.org/chromium-os/licenses) includes code with multiple licenses, all of which are open source. Chromium licensing is described by the generic category [`:oss`](https://github.com/caskroom/homebrew-cask/blob/54a79f7dcceea9a922a5b608ac99466b9d10a191/Casks/chromium.rb#L7).
 
 | symbol      | meaning     |
 | ----------- | ----------- |
@@ -385,7 +371,7 @@ The `gpg` stanza contains signature information for GPG-signed distributions. Th
 gpg <signature>, <parameter> => <value>
 ```
 
-where `<parameter>` is one of `:key_id` or `:key_url`, and `<signature>` points to the detached signature of the distribution. Commonly, the signature follows the `url` value. Example: [libreoffice.rb](../Casks/libreoffice.rb).
+where `<parameter>` is one of `:key_id` or `:key_url`, and `<signature>` points to the detached signature of the distribution. Commonly, the signature follows the `url` value. Example: [libreoffice.rb](https://github.com/caskroom/homebrew-cask/blob/ae2b41394f19c864c3ff9dee0818620715fcc07e/Casks/libreoffice.rb#L13#L14).
 
 ## App Stanza Details
 
@@ -409,7 +395,7 @@ which points to a source file such as:
 
 ### Renaming the Target
 
-You can rename the target link which appears in your `~/Applications` directory by adding a `:target` key to `app`. Example (from [scala-ide.rb](../Casks/scala-ide.rb)):
+You can rename the target link which appears in your `~/Applications` directory by adding a `:target` key to `app`. Example (from [scala-ide.rb](https://github.com/caskroom/homebrew-cask/blob/84e8df88836a2c11657e09264bd01b96783bb0d1/Casks/scala-ide.rb)):
 
 ```ruby
 app 'eclipse/Eclipse.app', :target => 'Scala IDE.app'
@@ -417,7 +403,7 @@ app 'eclipse/Eclipse.app', :target => 'Scala IDE.app'
 
 ### :target May Contain an Absolute Path
 
-If `:target` has a leading slash, it is interpreted as an absolute path. The containing directory for the absolute path will be created if it does not already exist. Example (from [manopen.rb](../Casks/manopen.rb)):
+If `:target` has a leading slash, it is interpreted as an absolute path. The containing directory for the absolute path will be created if it does not already exist. Example (from [manopen.rb](https://github.com/caskroom/homebrew-cask/blob/84e8df88836a2c11657e09264bd01b96783bb0d1/Casks/manopen.rb)):
 
 ```ruby
 artifact 'openman.1', :target => '/usr/local/share/man/man1/openman.1'
@@ -435,7 +421,7 @@ Don’t use `:target` for aesthetic reasons, like removing version numbers (`app
 
 Some distributions provide a suite of multiple applications, or an application with required data, to be installed together in a subdirectory of `~/Applications`.
 
-For these Casks, use the `suite` stanza to define the directory containing the application suite. Example (from [sketchup.rb](../Casks/sketchup.rb)):
+For these Casks, use the `suite` stanza to define the directory containing the application suite. Example (from [sketchup.rb](https://github.com/caskroom/homebrew-cask/blob/b2c8d178ae8c668b233d390688812980cb3d4a29/Casks/sketchup.rb)):
 
 ```ruby
 suite 'SketchUp 2016'
@@ -455,7 +441,7 @@ Subsequent arguments to `pkg` are key/value pairs which modify the install proce
 
 * `:allow_untrusted` — pass `-allowUntrusted` to `/usr/sbin/installer`
 
-Example (from [alinof-timer.rb](../Casks/alinof-timer.rb)):
+Example (from [alinof-timer.rb](https://github.com/caskroom/homebrew-cask/blob/9a617c077dc238aac28dc9ad325f8924b19d6306/Casks/alinof-timer.rb)):
 
 ```ruby
 pkg 'AlinofTimer.pkg', :allow_untrusted => true
@@ -467,7 +453,7 @@ The `installer` stanza takes a series of key-value pairs, the first key of which
 
 ### Installer :manual
 
-`installer :manual` takes a single string value, describing a GUI installer which must be run by the user at a later time. The path may be absolute, or relative to the Cask. Example (from [little-snitch.rb](../Casks/little-snitch.rb)):
+`installer :manual` takes a single string value, describing a GUI installer which must be run by the user at a later time. The path may be absolute, or relative to the Cask. Example (from [little-snitch.rb](https://github.com/caskroom/homebrew-cask/blob/fb2ac85d9fe4bf5095a63b01d58e69ca64a6c728/Casks/little-snitch.rb)):
 
 ```ruby
 installer :manual => 'Little Snitch Installer.app'
@@ -485,7 +471,7 @@ installer :manual => 'Little Snitch Installer.app'
 | `:must_succeed` | set to `false` if the script is allowed to fail
 | `:sudo`         | set to `false` if the script does not need `sudo`
 
-The path may be absolute, or relative to the Cask. Example (from [adobe-air.rb](../Casks/adobe-air.rb)):
+The path may be absolute, or relative to the Cask. Example (from [adobe-air.rb](https://github.com/caskroom/homebrew-cask/blob/240320bef456fe74621d89fd160c4a6b5a7f56cc/Casks/adobe-air.rb)):
 
 ```ruby
   installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
@@ -502,7 +488,7 @@ The path may be absolute, or relative to the Cask. Example (from [adobe-air.rb](
 
 The value should be another Cask token, needed by the current Cask.
 
-Example use: [`SSHFS`](https://github.com/caskroom/homebrew-cask/blob/master/Casks/sshfs.rb) depends on OSXFUSE:
+Example use: [`SSHFS`](https://github.com/caskroom/homebrew-cask/blob/feba4ec740920b73ac8bcee206bf65c945a1dc2e/Casks/sshfs.rb) depends on OSXFUSE:
 
 ```ruby
 depends_on :cask => 'osxfuse'
@@ -728,7 +714,7 @@ The elements of the `:signal` array are applied in order, only if there is an ex
 
 It is better to use the least-severe signals which are sufficient to stop a process. The `KILL` signal in particular can have unwanted side-effects.
 
-An example, with commonly-used signals in ascending order of severity (from [switchresx.rb](../Casks/switchresx.rb)):
+An example, with commonly-used signals in ascending order of severity (from [switchresx.rb](https://github.com/caskroom/homebrew-cask/blob/50ef347b517a9f293b74452367b3e2798a409e1e/Casks/switchresx.rb)):
 
 ```ruby
   uninstall :signal => [
@@ -828,16 +814,16 @@ The following methods may be called to perform standard tasks:
 
 | method                                    | availability                                     | description |
 | ----------------------------------------- | ------------------------------------------------ | ----------- |
-| `plist_set(key, value)`                   | `preflight`, `postflight`, `uninstall_preflight` | set a value in the `Info.plist` file for the app bundle.
-| `set_ownership(paths)`                    | `preflight`, `postflight`, `uninstall_preflight` | set user and group ownership of `paths`. Example: [`unifi-controller.rb`](../Casks/unifi-controller.rb)
-| `set_permissions(paths, permissions_str)` | `preflight`, `postflight`, `uninstall_preflight` | set permissions in `paths` to `permissions_str`. Example: [`docker.rb`](../Casks/docker.rb)
-| `suppress_move_to_applications`           | `postflight`                                     | suppress a dialog asking the user to move the app to the `/Applications` folder. Example: [`github-desktop.rb`](../Casks/github-desktop.rb)
+| `plist_set(key, value)`                   | `preflight`, `postflight`, `uninstall_preflight` | set a value in the `Info.plist` file for the app bundle. Example: [`rubymine.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/rubymine.rb#L12)
+| `set_ownership(paths)`                    | `preflight`, `postflight`, `uninstall_preflight` | set user and group ownership of `paths`. Example: [`unifi-controller.rb`](https://github.com/caskroom/homebrew-cask/blob/8a452a41707af6a661049da6254571090fac5418/Casks/unifi-controller.rb#L13)
+| `set_permissions(paths, permissions_str)` | `preflight`, `postflight`, `uninstall_preflight` | set permissions in `paths` to `permissions_str`. Example: [`docker-machine.rb`](https://github.com/caskroom/homebrew-cask/blob/8a452a41707af6a661049da6254571090fac5418/Casks/docker-machine.rb#L16)
+| `suppress_move_to_applications`           | `postflight`                                     | suppress a dialog asking the user to move the app to the `/Applications` folder. Example: [`github.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/github.rb#L13)
 
 `plist_set` currently has the limitation that it only operates on the bundle indicated by the first `app` stanza (and the Cask must contain an `app` stanza).
 
 `set_ownership(paths)` defaults user ownership to the current user and group ownership to `staff`. These can be changed by passing in extra options: `set_ownership(paths, user: 'user', group: 'group')`.
 
-`suppress_move_to_applications` optionally accepts a `:key` parameter for apps which use a nonstandard `defaults` key. Example: [`alfred.rb`](../Casks/alfred.rb).
+`suppress_move_to_applications` optionally accepts a `:key` parameter for apps which use a nonstandard `defaults` key. Example: [`alfred.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/alfred.rb#L13).
 
 ## Zap Stanza Details
 
@@ -862,7 +848,7 @@ $ brew cask zap td-toolbelt             # also removes org.ruby-lang.installer
 
 The form of `zap` stanza follows the [`uninstall` stanza](#uninstall-stanza-details). All of the same directives are available. Unlike with `uninstall`, however, `:delete` is not discouraged in `zap`.
 
-Example: [injection.rb](../Casks/injection.rb)
+Example: [injection.rb](https://github.com/caskroom/homebrew-cask/blob/2d3289e96f0a44c1569912c37e97bbac5c352c16/Casks/injection.rb#L15)
 
 ## Arbitrary Ruby Methods
 
