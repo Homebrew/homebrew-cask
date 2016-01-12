@@ -4,7 +4,7 @@ cask 'zepheer' do
 
   url 'http://candysquare.com/files/zepheer/Zepheer.dmg'
   appcast 'http://candysquare.com/files/zepheer/updates/appcast.xml',
-          :sha256 => 'a9cee73258eb4d3a3b115b215ce7abc810aec4014fc2ba4b9cd20bab8bcb33c6'
+          :sha256 => '5a0ff42fecfa4ef956ec995243b5033e6330bf1d508aa47f467433095c978e60'
   name 'Zepheer'
   homepage 'http://candysquare.com/products/zepheer/'
   license :commercial
