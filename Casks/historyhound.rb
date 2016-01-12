@@ -4,7 +4,7 @@ cask 'historyhound' do
 
   url "https://www.stclairsoft.com/download/HistoryHound-#{version}.dmg"
   appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?HH',
-          :sha256 => '22beb79fed4fa0f4a46c8970654ecc649eb4609fc2664b3458cde51b86470930'
+          :sha256 => '016b4e98d2cc4e79be76ebcb2174e3818f3ef9b8f91e366d2d00c8b2c7127131'
   name 'HistoryHound'
   homepage 'https://www.stclairsoft.com/HistoryHound/'
   license :commercial
