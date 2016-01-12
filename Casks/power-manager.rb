@@ -4,7 +4,7 @@ cask 'power-manager' do
 
   url "http://www.dssw.co.uk/powermanager/dsswpowermanager-#{version.no_dots}.dmg"
   appcast 'https://version.dssw.co.uk/powermanager/application',
-          :sha256 => '6264d35d55220a128a1025cd50d3b22f70eeb15bbaf09b40ceacb50971a047fc'
+          :sha256 => 'd33f5929cba4638750188badf06ea3ed59b27b224ed0547756e81bf450269adb'
   name 'Power Manager'
   homepage 'https://www.dssw.co.uk/powermanager'
   license :commercial
