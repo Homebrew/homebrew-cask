@@ -5,7 +5,7 @@ cask 'macpaw-gemini' do
   # devmate.com is the official download host per the vendor homepage
   url 'https://dl.devmate.com/com.macpaw.site.Gemini/MacPawGemini.dmg'
   appcast 'https://updates.devmate.com/com.macpaw.site.Gemini.xml',
-          :sha256 => '2d207012f1af4396c5cd8a4aa7a889418862436dd0cdc63b4e54880fe306c8db'
+          :sha256 => '6cf998626b284ae5275d2adce4a9ca24120204a06e206acf9ce43747c8d5470f'
   name 'MacPaw Gemini'
   homepage 'https://macpaw.com/gemini'
   license :commercial
