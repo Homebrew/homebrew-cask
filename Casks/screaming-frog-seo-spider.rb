@@ -14,8 +14,7 @@ cask 'screaming-frog-seo-spider' do
 
   app 'Screaming Frog SEO Spider.app'
 
-  caveats <<-EOS.undent
-    #{token} requires Java 7+, you can install the latest Java using
-      brew cask install java
-  EOS
+  caveats do
+    depends_on_java('7+')
+  end
 end
