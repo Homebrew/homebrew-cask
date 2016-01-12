@@ -5,7 +5,7 @@ cask 'makerbot-desktop' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/downloads-makerbot-com/makerware/MakerBot%20Bundle%20BETA%20#{version}.dmg"
   name 'MakerBot Desktop'
-  homepage 'http://www.makerbot.com/desktop'
+  homepage 'https://www.makerbot.com/desktop'
   license :gratis
 
   pkg "MakerBot Bundle BETA #{version}.pkg"
