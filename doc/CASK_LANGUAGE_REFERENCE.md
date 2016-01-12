@@ -26,7 +26,6 @@ This document acts as a complete specification, and covers aspects of the Cask D
 * [\*flight Stanza Details](#flight-stanzas-details)
 * [Zap Stanza Details](#zap-stanza-details)
 * [Arbitrary Ruby Methods](#arbitrary-ruby-methods)
-* [Revisions to the Cask DSL](#revisions-to-the-cask-dsl)
 
 ## Casks Are Ruby Blocks
 
@@ -34,26 +33,40 @@ Each Cask is a Ruby block, beginning with a special header line. The Cask defini
 
 ```ruby
 cask 'alfred' do
-  version '2.7.1_387'
-  sha256 'a3738d0513d736918a6d71535ef3d85dd184af267c05698e49ac4c6b48f38e17'
+  version '2.8.2_431'
+  sha256 'efff18c2459fa11be096934b4f00526d717df79687153ca246ac93fadd90daa3'
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
   homepage 'https://www.alfredapp.com/'
   license :freemium
 
+  auto_updates true
+  accessibility_access true
+
   app 'Alfred 2.app'
-  app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 
   postflight do
     suppress_move_to_applications :key => 'suppressMoveToApplications'
   end
+
+  uninstall :quit       => 'com.runningwithcrayons.Alfred-2',
+            :login_item => 'Alfred 2'
+
+  zap :delete => [
+                   '~/Library/Application Support/Alfred 2',
+                   '~/Library/Caches/com.runningwithcrayons.Alfred-2',
+                   '~/Library/Caches/com.runningwithcrayons.Alfred-Preferences',
+                   '~/Library/Preferences/com.runningwithcrayons.Alfred-2.plist',
+                   '~/Library/Preferences/com.runningwithcrayons.Alfred-Preferences.plist',
+                   '~/Library/Saved Application State/com.runningwithcrayons.Alfred-Preferences.savedState',
+                 ]
 end
 ```
 
 ## The Cask Language Is Declarative
 
-Each Cask contains a series of stanzas (or “fields”) which *declare* how the software is to be obtained and installed. In a declarative language, the author does not need to worry about **order**. As long as all the needed fields are present, homebrew-cask will figure out what needs to be done at install time.
+Each Cask contains a series of stanzas (or “fields”) which *declare* how the software is to be obtained and installed. In a declarative language, the author does not need to worry about **order**. As long as all the needed fields are present, Homebrew-Cask will figure out what needs to be done at install time.
 
 To make maintenance easier, the most-frequently-updated stanzas are usually placed at the top. But that’s a convention, not a rule.
 
@@ -67,10 +80,10 @@ Each of the following stanzas is required for every Cask.
 | ------------------ |------------------------------ | ----------- |
 | `version`          | no                            | application version; give value of `:latest`  if versioned downloads are not offered
 | `sha256`           | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see also [Checksum Stanza Details](#checksum-stanza-details))
-| `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application. A [comment](#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see also [URL Stanza Details](#url-stanza-details))
+| `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application. A [comment](#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ. (see also [URL Stanza Details](#url-stanza-details))
 | `name`             | yes                           | a string providing the full and proper name defined by the vendor (see also [Name Stanza Details](#name-stanza-details))
 | `homepage`         | no                            | application homepage; used for the `brew cask home` command
-| `license`          | no                            | a symbol identifying the license category for the application. (see also [License Stanza Details](#license-stanza-details))
+| `license`          | no                            | a symbol identifying the license category for the application (see also [License Stanza Details](#license-stanza-details))
 
 ## At Least One Artifact Stanza Is Also Required
 
@@ -80,20 +93,20 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | ------------------ |------------------------------ | ----------- |
 | `app`              | yes                           | relative path to an `.app` that should be linked into the `~/Applications` folder on installation (see also [App Stanza Details](#app-stanza-details))
 | `pkg`              | yes                           | relative path to a `.pkg` file containing the distribution (see also [Pkg Stanza Details](#pkg-stanza-details))
-| `binary`           | yes                           | relative path to a binary that should be linked into the `/usr/local/bin` folder on installation
+| `binary`           | yes                           | relative path to a Binary that should be linked into the `/usr/local/bin` folder on installation
 | `colorpicker`      | yes                           | relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
-| `font`             | yes                           | relative path to a font that should be linked into the `~/Library/Fonts` folder on installation
-| `input_method`     | yes                           | relative path to a input method that should be linked into the `~/Library/Input Methods` folder on installation
-| `internet_plugin`  | yes                           | relative path to a service that should be linked into the `~/Library/Internet Plug-Ins` folder on installation
-| `prefpane`         | yes                           | relative path to a preference pane that should be linked into the `~/Library/PreferencePanes` folder on installation
-| `qlplugin`         | yes                           | relative path to a QuickLook plugin that should be linked into the `~/Library/QuickLook` folder on installation
+| `font`             | yes                           | relative path to a Font that should be linked into the `~/Library/Fonts` folder on installation
+| `input_method`     | yes                           | relative path to a Input Method that should be linked into the `~/Library/Input Methods` folder on installation
+| `internet_plugin`  | yes                           | relative path to a Service that should be linked into the `~/Library/Internet Plug-Ins` folder on installation
+| `prefpane`         | yes                           | relative path to a Preference Pane that should be linked into the `~/Library/PreferencePanes` folder on installation
+| `qlplugin`         | yes                           | relative path to a QuickLook Plugin that should be linked into the `~/Library/QuickLook` folder on installation
 | `screen_saver`     | yes                           | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
-| `service`          | yes                           | relative path to a service that should be linked into the `~/Library/Services` folder on installation
+| `service`          | yes                           | relative path to a Service that should be linked into the `~/Library/Services` folder on installation
 | `audio_unit_plugin`| yes                           | relative path to an Audio Unit plugin that should be linked into the `~/Library/Audio/Components` folder on installation
-| `vst_plugin`       | yes                           | relative path to a VST plugin that should be linked into the `~/Library/Audio/VST` folder on installation
+| `vst_plugin`       | yes                           | relative path to a VST Plugin that should be linked into the `~/Library/Audio/VST` folder on installation
 | `suite`            | yes                           | relative path to a containing directory that should be linked into the `~/Applications` folder on installation (see also [Suite Stanza Details](#suite-stanza-details))
 | `artifact`         | yes                           | relative path to an arbitrary path that should be symlinked on installation. This is only for unusual cases. The `app` stanza is strongly preferred when linking `.app` bundles.
-| `installer`        | yes                           | describes an executable which must be run to complete the installation. (see [Installer Stanza Details](#installer-stanza-details))
+| `installer`        | yes                           | describes an executable which must be run to complete the installation (see [Installer Stanza Details](#installer-stanza-details))
 | `stage_only`       | no                            | `true`. Assert that the Cask contains no activatable artifacts.
 
 ## Optional Stanzas
@@ -101,8 +114,8 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | name                   | multiple occurrences allowed? | value       |
 | ---------------------- |------------------------------ | ----------- |
 | `uninstall`            | yes                           | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see also [Uninstall Stanza Details](#uninstall-stanza-details))
-| `zap`                  | yes                           | additional procedures for a more complete uninstall, including user files and shared resources. (see also [Zap Stanza Details](#zap-stanza-details))
-| `appcast`              | no                            | a URL providing an appcast feed to find updates for this Cask. (see also [Appcast Stanza Details](#appcast-stanza-details))
+| `zap`                  | yes                           | additional procedures for a more complete uninstall, including user files and shared resources (see also [Zap Stanza Details](#zap-stanza-details))
+| `appcast`              | no                            | a URL providing an appcast feed to find updates for this Cask (see also [Appcast Stanza Details](#appcast-stanza-details))
 | `depends_on`           | yes                           | a list of dependencies and requirements for this Cask (see also [Depends_on Stanza Details](#depends_on-stanza-details))
 | `conflicts_with`       | yes                           | a list of conflicts with this Cask (*not yet functional* see also [Conflicts_with Stanza Details](#conflicts_with-stanza-details))
 | `caveats`              | yes                           | a string or Ruby block providing the user with Cask-specific information at install time (see also [Caveats Stanza Details](#caveats-stanza-details))
@@ -112,9 +125,9 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `uninstall_postflight` | yes                           | a Ruby block containing postflight uninstall operations
 | `accessibility_access` | no                            | `true` if the application should be granted accessibility access
 | `container :nested =>` | no                            | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
-| `container :type =>`   | no                            | a symbol to override container-type autodetect. may be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`. (example [parse.rb](https://github.com/caskroom/homebrew-cask/blob/ffdc9a1aa459d80a084ee0d24176409388efe71f/Casks/parse.rb#L12))
+| `container :type =>`   | no                            | a symbol to override container-type autodetect. May be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`. (example [parse.rb](https://github.com/caskroom/homebrew-cask/blob/ffdc9a1aa459d80a084ee0d24176409388efe71f/Casks/parse.rb#L12))
 | `gpg`                  | no                            | *stub: not yet functional.*  (see also [GPG Stanza Details](#gpg-stanza-details))
-| `auto_updates`         | no                            | `true`. Assert the Cask artifacts auto-update
+| `auto_updates`         | no                            | `true`. Assert the Cask artifacts auto-update.
 
 ## Conditional Statements
 
@@ -163,10 +176,8 @@ end
 The first non-comment line in a Cask follows the form:
 
 ```ruby
-cask <dsl-version> => '<cask-token>' do
+cask '<cask-token>' do
 ```
-
-`<dsl-version>` identifies the version of the Cask DSL, currently `:v1`.
 
 `<cask-token>` should match the Cask filename, without the `.rb` extension,
 enclosed in single quotes.
@@ -181,7 +192,7 @@ There are currently some arbitrary limitations on Cask tokens which are in the p
 
 Its first instance should use the latin alphabet, include the software vendor’s name, and be as verbose as possible while still making sense.
 
-A good example is [`pycharm-ce`](https://github.com/caskroom/homebrew-cask/blob/fc05c0353aebb28e40db72faba04b82ca832d11a/Casks/pycharm-ce.rb#L6#L7). `Jetbrains PyCharm Community Edition` makes sense even though it is likely never referenced as such anywhere, but `Jetbrains PyCharm Community Edition CE` doesn’t, hence why it has a second line. Another example are casks whose original names do not use the latin alphabet, like [`cave-story`](https://github.com/caskroom/homebrew-cask/blob/0fe48607f5656e4f1de58c6884945378b7e6f960/Casks/cave-story.rb#L7#L9).
+An example are casks whose original names do not use the latin alphabet, like [`cave-story`](../Casks/cave-story.rb).
 
 Note that `brew cask search` and `brew cask list` are not yet capable of using the information stored in the `name` stanza.
 
@@ -238,7 +249,7 @@ end
 
 ### Calculating the SHA256
 
-The `sha256` value is usually calculated by the command
+The `sha256` value is usually calculated by the command:
 
 ```bash
 $ shasum -a 256 <file>
@@ -267,7 +278,7 @@ When a plain URL string is insufficient to fetch a file, additional information 
 | `:using`           | the symbol `:post` is the only legal value
 | `:cookies`         | a hash of cookies to be set in the download request
 | `:referer`         | a string holding the URL to set as referrer in the download request
-| `:user_agent`      | a string holding the user agent to set for the download request. Can also be set to the symbol `:fake`, which will use a generic Browser-like user agent string. we prefer `:fake` when the server does not require a specific user agent.
+| `:user_agent`      | a string holding the user agent to set for the download request. Can also be set to the symbol `:fake`, which will use a generic Browser-like user agent string. We prefer `:fake` when the server does not require a specific user agent.
 | `:data`            | a hash of parameters to be set in the POST request
 
 Example of using `:cookies`: [java.rb](../Casks/java.rb)
@@ -282,16 +293,16 @@ When the hostnames of `url` and `homepage` differ, the discrepancy should be doc
 # URL_HOSTNAME is the official download host per the vendor homepage
 ```
 
-Examples can be seen in [visit.rb](https://github.com/caskroom/homebrew-cask/blob/cafcd7cf7922022ea607c5811c63d45863c7ed36/Casks/visit.rb#L5) and [vistrails.rb](https://github.com/caskroom/homebrew-cask/blob/cafcd7cf7922022ea607c5811c63d45863c7ed36/Casks/vistrails.rb#L5).
+Examples can be seen in [visit.rb](../Casks/visit.rb) and [vistrails.rb](../Casks/vistrails.rb).
 
-These comments must be added so a user auditing the cask knows the URL is the one provided by the vendor, even though it may look unofficial or suspicious. It is our responsibility as homebrew-cask maintainers to verify both the `url` and `homepage` information when first added (or subsequently modified, apart from versioning). The exception to this rule is a `homepage` of `github.io` with a `url` of `github.com`, since we know this pair of hostnames is connected.
+These comments must be added so a user auditing the cask knows the URL is the one provided by the vendor, even though it may look unofficial or suspicious. It is our responsibility as Homebrew-Cask maintainers to verify both the `url` and `homepage` information when first added (or subsequently modified, apart from versioning). The exception to this rule is a `homepage` of `github.io` with a `url` of `github.com`, since we know this pair of hostnames is connected.
 
 ### Difficulty Finding a URL
 
-Web browsers may obscure the direct `url` download location for a variety of reasons. Homebrew-cask supplies a script which can read extended file attributes to extract the actual source URL for most files downloaded by a browser on OS X. The script usually emits multiple candidate URLs; you may have to test each of them:
+Web browsers may obscure the direct `url` download location for a variety of reasons. Homebrew-Cask supplies a script which can read extended file attributes to extract the actual source URL for most files downloaded by a browser on OS X. The script usually emits multiple candidate URLs; you may have to test each of them:
 
 ```bash
-$ ./developer/bin/list_url_attributes_on_file <file>
+$ /usr/local/Library/Taps/caskroom/homebrew-cask/developer/bin/list_url_attributes_on_file <file>
 ```
 
 ### Subversion URLs
@@ -314,7 +325,7 @@ The value of the `appcast` stanza is a string, holding the URL for an appcast wh
 | ------------------ | ----------- |
 | `:sha256`          | a string holding the SHA-256 checksum of the most recent appcast which matches the current Cask versioning
 
-Example: [atom.rb](../../127387b9fc686370ffa92c01eeed8979df9e1621/Casks/atom.rb#L7#L8)
+Example: [atom.rb](../Casks/atom.rb)
 
 ## License Stanza Details
 
@@ -330,7 +341,7 @@ Note that `brew cask search` and `brew cask list` are not yet capable of using t
 
 Cask authors should use the most specific license category which is also correct. Generic categories are provided for difficult cases. `:unknown` is also perfectly fine if you are unsure.
 
-Example: [Chromium](http://www.chromium.org/chromium-os/licenses) includes code with multiple licenses, all of which are open source. Chromium licensing is described by the generic category [`:oss`](https://github.com/caskroom/homebrew-cask/blob/54a79f7dcceea9a922a5b608ac99466b9d10a191/Casks/chromium.rb#L7).
+Example: [Chromium](http://www.chromium.org/chromium-os/licenses) includes code with multiple licenses, all of which are open source. Chromium licensing is described by the generic category [`:oss`](../Casks/chromium.rb).
 
 | symbol      | meaning     |
 | ----------- | ----------- |
@@ -393,12 +404,12 @@ causes the creation of this symlink:
 which points to a source file such as:
 
 ```bash
-/opt/homebrew-cask/Caskroom/alfred/2.1.1_227/Alfred 2.app
+/opt/homebrew-cask/Caskroom/alfred/2.8.2_431/Alfred 2.app
 ```
 
 ### Renaming the Target
 
-You can rename the target link which appears in your `~/Applications` directory by adding a `:target` key to `app`. Example (from [scala-ide.rb](https://github.com/caskroom/homebrew-cask/blob/84e8df88836a2c11657e09264bd01b96783bb0d1/Casks/scala-ide.rb#L21):
+You can rename the target link which appears in your `~/Applications` directory by adding a `:target` key to `app`. Example (from [scala-ide.rb](../Casks/scala-ide.rb)):
 
 ```ruby
 app 'eclipse/Eclipse.app', :target => 'Scala IDE.app'
@@ -406,7 +417,7 @@ app 'eclipse/Eclipse.app', :target => 'Scala IDE.app'
 
 ### :target May Contain an Absolute Path
 
-If `:target` has a leading slash, it is interpreted as an absolute path. The containing directory for the absolute path will be created if it does not already exist. Example (from [manopen.rb](https://github.com/caskroom/homebrew-cask/blob/84e8df88836a2c11657e09264bd01b96783bb0d1/Casks/manopen.rb#L12)):
+If `:target` has a leading slash, it is interpreted as an absolute path. The containing directory for the absolute path will be created if it does not already exist. Example (from [manopen.rb](../Casks/manopen.rb)):
 
 ```ruby
 artifact 'openman.1', :target => '/usr/local/share/man/man1/openman.1'
@@ -427,7 +438,7 @@ Some distributions provide a suite of multiple applications, or an application w
 For these Casks, use the `suite` stanza to define the directory containing the application suite. Example (from [sketchup.rb](../Casks/sketchup.rb)):
 
 ```ruby
-suite 'SketchUp 2015'
+suite 'SketchUp 2016'
 ```
 
 The value of `suite` is never an `.app` bundle, but a plain directory.
@@ -440,14 +451,14 @@ The first argument to the `pkg` stanza should be a relative path to the `.pkg` f
 pkg 'Unity.pkg'
 ```
 
-Subsequent arguments to `pkg` are key/value pairs which modify the install process. Currently supported keys are
+Subsequent arguments to `pkg` are key/value pairs which modify the install process. Currently supported keys are:
 
 * `:allow_untrusted` — pass `-allowUntrusted` to `/usr/sbin/installer`
 
-Example:
+Example (from [alinof-timer.rb](../Casks/alinof-timer.rb)):
 
 ```ruby
-pkg 'Soundflower.pkg', :allow_untrusted => true
+pkg 'AlinofTimer.pkg', :allow_untrusted => true
 ```
 
 ## Installer Stanza Details
@@ -456,7 +467,7 @@ The `installer` stanza takes a series of key-value pairs, the first key of which
 
 ### Installer :manual
 
-`installer :manual` takes a single string value, describing a GUI installer which must be run by the user at a later time. The path may be absolute, or relative to the Cask. Example:
+`installer :manual` takes a single string value, describing a GUI installer which must be run by the user at a later time. The path may be absolute, or relative to the Cask. Example (from [little-snitch.rb](../Casks/little-snitch.rb)):
 
 ```ruby
 installer :manual => 'Little Snitch Installer.app'
@@ -474,11 +485,12 @@ installer :manual => 'Little Snitch Installer.app'
 | `:must_succeed` | set to `false` if the script is allowed to fail
 | `:sudo`         | set to `false` if the script does not need `sudo`
 
-The path may be absolute, or relative to the Cask. Example:
+The path may be absolute, or relative to the Cask. Example (from [adobe-air.rb](../Casks/adobe-air.rb)):
 
 ```ruby
-installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
-          :args => %w[-silent]
+  installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
+            :args   => %w[-silent],
+            :sudo   => true
 ```
 
 ## Depends_on Stanza Details
@@ -490,7 +502,7 @@ installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer
 
 The value should be another Cask token, needed by the current Cask.
 
-Example use: [`SSHFS`](https://github.com/caskroom/homebrew-cask/blob/master/Casks/sshfs.rb) depends on OSXFUSE.
+Example use: [`SSHFS`](https://github.com/caskroom/homebrew-cask/blob/master/Casks/sshfs.rb) depends on OSXFUSE:
 
 ```ruby
 depends_on :cask => 'osxfuse'
@@ -585,9 +597,9 @@ depends_on :arch => :x86_64
 | ---------- | ----------- |
 | `:formula` | a Homebrew Formula
 | `:cask`    | a Cask token
-| `:macos`   | a symbol, string, array, or comparison expression defining OS X release requirements.
-| `:arch`    | a symbol or array defining hardware requirements.
-| `:x11`     | a Boolean indicating a dependency on X11.
+| `:macos`   | a symbol, string, array, or comparison expression defining OS X release requirements
+| `:arch`    | a symbol or array defining hardware requirements
+| `:x11`     | a Boolean indicating a dependency on X11
 | `:java`    | *stub - not yet functional*
 
 ## conflicts_with Stanza Details
@@ -640,13 +652,13 @@ Since `pkg` installers can do arbitrary things, different techniques are needed 
   - `:input` - array of lines of input to be sent to `stdin` of the script
   - `:must_succeed` - set to `false` if the script is allowed to fail
   - `:sudo` - set to `false` if the script does not need `sudo`
-* `:delete` (string or array) - single-quoted, absolute paths of files or directory trees to remove. `:delete` should only be used as a last resort. `:pkgutil` is strongly preferred
-* `:rmdir` (string or array) - single-quoted, absolute paths of directories to remove if empty.
+* `:delete` (string or array) - single-quoted, absolute paths of files or directory trees to remove. `:delete` should only be used as a last resort. `:pkgutil` is strongly preferred.
+* `:rmdir` (string or array) - single-quoted, absolute paths of directories to remove if empty
 * `:trash` (string or array) - currently a synonym for `:delete`. In the future this will cause files to be moved to the Trash.
 
 Each `uninstall` technique is applied according to the order above. The order in which `uninstall` keys appear in the Cask file is ignored.
 
-For assistance filling in the right values for `uninstall` keys, there are several helper scripts found under `developer/bin` in the homebrew-cask repository. Each of these scripts responds to the `-help` option with additional documentation.
+For assistance filling in the right values for `uninstall` keys, there are several helper scripts found under `developer/bin` in the Homebrew-Cask repository. Each of these scripts responds to the `-help` option with additional documentation.
 
 The easiest way to work out an `uninstall` stanza is on a system where the `pkg` is currently installed and operational. To operate on an uninstalled `pkg` file, see [Working With a pkg File Manually](#working-with-a-pkg-file-manually), below.
 
@@ -716,14 +728,11 @@ The elements of the `:signal` array are applied in order, only if there is an ex
 
 It is better to use the least-severe signals which are sufficient to stop a process. The `KILL` signal in particular can have unwanted side-effects.
 
-An example, with commonly-used signals in ascending order of severity:
+An example, with commonly-used signals in ascending order of severity (from [switchresx.rb](../Casks/switchresx.rb)):
 
 ```ruby
   uninstall :signal => [
-                        ['TERM', 'fr.madrau.switchresx.daemon'],
-                        ['QUIT', 'fr.madrau.switchresx.daemon'],
                         ['INT',  'fr.madrau.switchresx.daemon'],
-                        ['HUP',  'fr.madrau.switchresx.daemon'],
                         ['KILL', 'fr.madrau.switchresx.daemon'],
                        ]
 ```
@@ -819,16 +828,16 @@ The following methods may be called to perform standard tasks:
 
 | method                                    | availability                                     | description |
 | ----------------------------------------- | ------------------------------------------------ | ----------- |
-| `plist_set(key, value)`                   | `preflight`, `postflight`, `uninstall_preflight` | set a value in the `Info.plist` file for the app bundle. Example: [`rubymine.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/rubymine.rb#L12)
-| `set_ownership(paths)`                    | `preflight`, `postflight`, `uninstall_preflight` | set user and group ownership of `paths`. Example: [`unifi-controller.rb`](https://github.com/caskroom/homebrew-cask/blob/8a452a41707af6a661049da6254571090fac5418/Casks/unifi-controller.rb#L13)
-| `set_permissions(paths, permissions_str)` | `preflight`, `postflight`, `uninstall_preflight` | set permissions in `paths` to `permissions_str` Example: [`docker-machine.rb`](https://github.com/caskroom/homebrew-cask/blob/8a452a41707af6a661049da6254571090fac5418/Casks/docker-machine.rb#L16)
-| `suppress_move_to_applications`           | `postflight`                                     | suppress a dialog asking the user to move the app to the `/Applications` folder. Example: [`github.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/github.rb#L13).
+| `plist_set(key, value)`                   | `preflight`, `postflight`, `uninstall_preflight` | set a value in the `Info.plist` file for the app bundle.
+| `set_ownership(paths)`                    | `preflight`, `postflight`, `uninstall_preflight` | set user and group ownership of `paths`. Example: [`unifi-controller.rb`](../Casks/unifi-controller.rb)
+| `set_permissions(paths, permissions_str)` | `preflight`, `postflight`, `uninstall_preflight` | set permissions in `paths` to `permissions_str`. Example: [`docker.rb`](../Casks/docker.rb)
+| `suppress_move_to_applications`           | `postflight`                                     | suppress a dialog asking the user to move the app to the `/Applications` folder. Example: [`github-desktop.rb`](../Casks/github-desktop.rb)
 
 `plist_set` currently has the limitation that it only operates on the bundle indicated by the first `app` stanza (and the Cask must contain an `app` stanza).
 
 `set_ownership(paths)` defaults user ownership to the current user and group ownership to `staff`. These can be changed by passing in extra options: `set_ownership(paths, user: 'user', group: 'group')`.
 
-`suppress_move_to_applications` optionally accepts a `:key` parameter for apps which use a nonstandard `defaults` key. Example: [`alfred.rb`](https://github.com/caskroom/homebrew-cask/blob/c5dbc58b7c1b6290b611677882b205d702b29190/Casks/alfred.rb).
+`suppress_move_to_applications` optionally accepts a `:key` parameter for apps which use a nonstandard `defaults` key. Example: [`alfred.rb`](../Casks/alfred.rb).
 
 ## Zap Stanza Details
 
@@ -880,6 +889,6 @@ end
 
 This should be used sparingly: any method which is needed by two or more Casks should instead be rolled into the core. Care must also be taken that such methods be very efficient.
 
-Variables and methods should not be defined outside the `Utils` namespace, as they may collide with Homebrew-cask internals.
+Variables and methods should not be defined outside the `Utils` namespace, as they may collide with Homebrew-Cask internals.
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3
