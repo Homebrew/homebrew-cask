@@ -4,7 +4,7 @@ cask 'password-practice' do
 
   url 'https://mrgeckosmedia.com/applications/download/PasswordPractice'
   appcast 'https://mrgeckosmedia.com/applications/appcast/PasswordPractice',
-          :sha256 => 'c5a7bbb1521e79e766a7fef4978bc1898df655964e724960b8a8f55bc3190f81'
+          :sha256 => '604d9a0939d7a8cadce346a58972c9dbef64ed00e6394faa4d8f7a0e6bd876d6'
   name 'Password Practice'
   homepage 'https://mrgeckosmedia.com/applications/info/PasswordPractice'
   license :public_domain
