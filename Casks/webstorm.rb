@@ -17,4 +17,8 @@ cask 'webstorm' do
                    '~/Library/Caches/WebStorm11',
                    '~/Library/Logs/WebStorm11',
                  ]
+
+  caveats do
+    depends_on_java
+  end
 end
