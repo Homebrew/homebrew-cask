@@ -4,7 +4,7 @@ cask 'ifunbox' do
 
   url "http://dl.i-funbox.com/updates/ifunbox.mac/#{version}/ifunboxmac.dmg"
   appcast 'http://dl.i-funbox.com/updates/ifunbox.mac/update.xml',
-          :sha256 => '8b0bbc299863a1e9cd198e6924c89e819283f74f59d6abd9d29ae8e1104677c3'
+          :sha256 => 'c263e57abd0c544847ab54dd430bf4e968df8d7dbd00a6703137c6662f2a6b9c'
   name 'iFunBox'
   homepage 'http://www.i-funbox.com/'
   license :gratis
