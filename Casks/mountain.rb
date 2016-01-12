@@ -4,7 +4,7 @@ cask 'mountain' do
 
   url 'http://appgineers.de/mountain/files/Mountain.zip'
   appcast 'http://appgineers.de/mountain/files/mountaincast.xml',
-          :sha256 => 'c9f3e83a35d8096ca20b05e8a51e946c480818cf9e6331309a559d1f968022a0'
+          :sha256 => 'd91127cb5e8304d663292aed75e842f066bada8a849917e49df8110c76cae1cc'
   name 'Mountain'
   homepage 'http://appgineers.de/mountain/'
   license :commercial
