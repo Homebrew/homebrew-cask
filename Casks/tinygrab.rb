@@ -4,7 +4,7 @@ cask 'tinygrab' do
 
   url "http://tinygrab.com/downloads/app/TinyGrab#{version}.dmg"
   appcast 'http://tinygrab.com/appcast/tinygrab-appcast.xml',
-          :sha256 => '918a398a34b634076c71660304495a85e1555529f9f3e5432fa961107a481bb3'
+          :sha256 => '6611fd43595df3071114183e52cd54467eab423052b77c0e83840c35ad2487a6'
   name 'TinyGrab'
   homepage 'http://www.tinygrab.com'
   license :gratis
