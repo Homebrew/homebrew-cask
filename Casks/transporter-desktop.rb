@@ -1,11 +1,11 @@
 cask 'transporter-desktop' do
-  version '4.1.5_20060'
-  sha256 '98111e1178f1db00b6b6cf395b78256c3f681151e6f07a70d4497250da0ca238'
+  version '4.2.3_20317'
+  sha256 '457c53318f95ae2c645a9ce60302622ac3a863e288bdf79e645701eb91df01f0'
 
   # connecteddata.com is the official download host per the vendor homepage
   url "https://secure.connecteddata.com/mac/2.5/software/Transporter_Desktop_#{version}.dmg"
   appcast 'http://appsoftware.connecteddata.com/mac/2.5/Appcast.xml',
-          :sha256 => 'e3ab545795691139e7d6062c747a707c6e1db3a1c6a0ab11c4de8caed249e23d'
+          :sha256 => '29fb77c68603aa092ae558e9a625100bf4c371be6a38e72eaf8a965e0074c145'
   name 'Transporter Desktop'
   homepage 'http://www.filetransporter.com/'
   license :commercial
