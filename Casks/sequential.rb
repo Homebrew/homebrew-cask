@@ -4,7 +4,7 @@ cask 'sequential' do
 
   url "http://sequentialx.com/Sequential#{version}.zip"
   appcast 'http://www.sequentialx.com/sequential.xml',
-          :sha256 => '447db3c7237bdd750ad128556b1d3ff6f3f3c26f8c2bd0131b9993b5365f7d6b'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   name 'Sequential'
   homepage 'http://sequentialx.com'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
