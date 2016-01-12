@@ -4,7 +4,7 @@ cask 'youview' do
 
   url 'https://download.mrgeckosmedia.com/YouView.zip'
   appcast 'https://mrgeckosmedia.com/applications/appcast/YouView',
-          :sha256 => 'af50e435974bcd8920e231d829918457565fe5a4709fd39aadc8b699c9c284ad'
+          :sha256 => '8dfd8b4bc472993e9301a2bdb05a885a612c95b969cd064045bca4bb7284febe'
   name 'YouView'
   homepage 'https://mrgeckosmedia.com/applications/info/YouView'
   license :oss
