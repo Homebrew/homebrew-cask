@@ -4,7 +4,7 @@ cask 'hockey' do
 
   url 'https://rink.hockeyapp.net/api/2/apps/67503a7926431872c4b6c1549f5bd6b1?format=zip'
   appcast 'https://rink.hockeyapp.net/api/2/apps/67503a7926431872c4b6c1549f5bd6b1',
-          :sha256 => 'd8d57be56af4a0889214786809e9a602dd4c04ea001ec4e2b50e2111f186a5f5'
+          :sha256 => 'd83c32dc41ea9d91733f6fa06a36090e9041fe99779e1011108b8af1c5c4c058'
   name 'HockeyApp'
   homepage 'http://hockeyapp.net/releases/mac/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
