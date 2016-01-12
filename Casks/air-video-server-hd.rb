@@ -5,7 +5,7 @@ cask 'air-video-server-hd' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/AirVideoHD/Download/Air+Video+Server+HD+#{version}.dmg"
   appcast 'https://s3.amazonaws.com/AirVideoHD/Download/appcast.xml',
-          :sha256 => 'a1f263353a12ba7faca84629fe6c9d22daf19de8c1c47570ea3e5e6d1f096201'
+          :sha256 => '9ae133b82c2361c41e217f0dd7ab70817feb42bffa0f2053e09b2910255dcf90'
   name 'Air Video Server HD'
   homepage 'http://www.inmethod.com/airvideohd'
   license :gratis
