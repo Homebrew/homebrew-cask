@@ -5,7 +5,7 @@ cask 'strongvpn-client' do
   # reliablehosting.com is the official download host per the vendor homepage
   url "https://mirror2.reliablehosting.com/mac/StrongVPN_Mac_#{version}.zip"
   appcast 'https://colomovers.com/mac.xml',
-          :sha256 => '21a0af23d360451292889ddefe34f3b35053a71bff16ac2d4fe3a4a7d85a95ec'
+          :sha256 => '611933221c760561c624def47f1e03f8f9ba708df52dd64726667a1aff0b4985'
   name 'StrongVPN Client'
   homepage 'https://strongvpn.com/vpnclient.shtml'
   license :closed
