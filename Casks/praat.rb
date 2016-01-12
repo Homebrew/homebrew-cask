@@ -10,7 +10,7 @@ cask 'praat' do
   end
 
   appcast 'https://github.com/praat/praat/releases.atom',
-          :sha256 => '4770bede37ef657126871d91158340e623e54ad2ab8a4da030529893541a3fb1'
+          :sha256 => '70a27d1b503c65fb7e517864b19e56e53e90162f990bbb68bb8948f7667d06e4'
   name 'Praat'
   homepage 'http://www.fon.hum.uva.nl/praat/'
   license :gpl
