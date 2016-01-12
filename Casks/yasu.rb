@@ -8,8 +8,6 @@ cask 'yasu' do
   end
 
   url "http://yasuapp.net/files/yasu_#{version}.zip"
-  appcast 'http://yasuapp.net/appcasts/yasu.xml',
-          :sha256 => 'e79812a2ecb9a4df2b1484f5e544d43d997ad539e5d8c1a3e058cd12d11b646e'
   name 'Yasu'
   homepage 'http://yasuapp.net'
   license :gratis
