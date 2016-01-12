@@ -1,11 +1,11 @@
 cask 'docker-machine' do
-  version '0.5.5'
-  sha256 'e19a74e4d9cce8dc50ab16a1f478fe5d6953bda9f794939032b3a1e84cbf6eb2'
+  version '0.5.6'
+  sha256 'a9fb7146d370b3623ca8b13f75e1c0bdf2a07ef2553ac94e61ec96d47c6c895b'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/docker/machine/releases/download/v#{version}/docker-machine_darwin-amd64"
   appcast 'https://github.com/docker/machine/releases.atom',
-          :sha256 => '1db29b8a10da6c5b1781bb56048a30358e7e3979d6eba0102ed813ca1ccab2fb'
+          :sha256 => '85dafeba763acbb1431ad940e35a024af5b8e4dc81a57148b630aa42534dca40'
   name 'Docker Machine'
   homepage 'https://docs.docker.com/machine'
   license :apache
