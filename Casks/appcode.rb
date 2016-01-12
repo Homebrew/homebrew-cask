@@ -18,4 +18,8 @@ cask 'appcode' do
                    '~/Library/Caches/AppCode33',
                    '~/Library/Logs/AppCode33',
                  ]
+
+  caveats do
+    depends_on_java
+  end
 end
