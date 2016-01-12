@@ -5,7 +5,7 @@ cask 'feeds' do
   # googleapis.com is the official download host per the vendor homepage
   url "https://storage.googleapis.com/feeds-releases/Feeds-#{version}.zip"
   appcast 'https://storage.googleapis.com/feeds-releases/appcast.xml',
-          :sha256 => '2c1c1e58c342c3975126181da367f8bbd342fc6586832ac5b0f4d84a0f17042c'
+          :sha256 => '9aa6518fde53b72e366ddc23ad2eafde9333e095ba476304ec5c6bf9de11097d'
   name 'Feeds'
   homepage 'http://www.feedsapp.com/'
   license :mit
