@@ -4,7 +4,7 @@ cask 'adium' do
 
   url "http://download.adium.im/Adium_#{version}.dmg"
   appcast 'https://www.adium.im/sparkle/appcast-release.xml',
-          :sha256 => '5d05831689494b3059ddf31580438579dee1d1b2a34f24a018b86fcaadd46e53'
+          :sha256 => '2a91b29bbccd62170d3f9d740c2f6a3ae903c5726c8347801a8a3dc9dbb2282e'
   name 'Adium'
   homepage 'https://www.adium.im/'
   license :gpl
