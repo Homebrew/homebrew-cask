@@ -4,7 +4,7 @@ cask 'iboostup' do
 
   url 'https://www.iboostup.com/iboostup.dmg'
   appcast 'https://www.iboostup.com/updates',
-          :sha256 => '77f250b304b5c6994e4b4c977eef0e819efc2f496e63fc9a0938336d6296d59c'
+          :sha256 => '18cb729386ed277372515a5c23e8157c0fb9122cf95bf2e9fd038e1ae334d76b'
   name 'iBoostUp'
   homepage 'https://www.iboostup.com/'
   license :freemium
