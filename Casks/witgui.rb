@@ -4,7 +4,7 @@ cask 'witgui' do
 
   url "http://desairem.altervista.org/witgui/download.php?version=#{version}"
   appcast 'http://desairem.altervista.org/witgui/appcast.xml',
-          :sha256 => 'a345b0c24c4e2c188e24c27dd98d0c9c14d48462fcc40c102e7226a5ebd89ce2'
+          :sha256 => '3f253e5cbd3562ba446964fcfda1a812f5b5ef503036832422e2f0463e5259d0'
   name 'Witgui'
   homepage 'http://desairem.altervista.org/witgui/wordpress/'
   license :gratis
