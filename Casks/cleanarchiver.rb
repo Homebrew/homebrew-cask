@@ -4,7 +4,7 @@ cask 'cleanarchiver' do
 
   url "https://www.sopht.jp/pub/Mac/CleanArchiver-#{version}.dmg"
   appcast 'https://www.sopht.jp/cleanarchiver/appcast.xml',
-          :sha256 => '8027040d84f421c4861374d4e51fc63da34a999ed9d4f90fb6682202dd7eeecc'
+          :sha256 => '610b2e588513fed2fc3a4fcfb76e1eb0bbd4320d0cb8e3518978addf38a5613f'
   name 'CleanArchiver'
   homepage 'https://www.sopht.jp/cleanarchiver/'
   license :bsd
