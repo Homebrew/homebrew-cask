@@ -4,7 +4,7 @@ cask 'ammonite' do
 
   url "http://www.soma-zone.com/download/files/Ammonite_#{version}.tbz"
   appcast 'http://www.soma-zone.com/Ammonite/a/appcast.xml',
-          :sha256 => 'd8a28c27fff6cd47329846952eae3ac7d79f51139a222111f7b007794be795e8'
+          :sha256 => 'a33a2b488a7af224b492e6e85915d2c4a1433c1daec06ffee7cca8c193a48b54'
   name 'Ammonite'
   homepage 'http://www.soma-zone.com/Ammonite/'
   license :closed
