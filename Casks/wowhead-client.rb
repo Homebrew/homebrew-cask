@@ -4,7 +4,7 @@ cask 'wowhead-client' do
 
   url 'https://static.wowhead.com/download/Wowhead_Client.dmg'
   appcast 'https://client.wowhead.com/files/wowhead-client-appcast.xml',
-          :sha256 => '70f04bcdeedb2c902e80b6b22b9cd328d0f77af88e981f5865b019afd94130bc'
+          :sha256 => '87704cb16b15c9960f5eb0515d7da0788e46155727c330bc8cc4d80c364186d4'
   name 'Wowhead Client'
   homepage 'https://wowhead.com'
   license :gratis
