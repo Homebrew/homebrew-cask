@@ -4,7 +4,7 @@ cask 'kaleidoscope' do
 
   url "http://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-#{version}.zip"
   appcast 'https://updates.blackpixel.com/updates?app=ks',
-          :sha256 => '0c1806533b06d08715959141f202ccf2bc30a12637dd71eef70c2552b6f18b09'
+          :sha256 => '8d61d4affa5f76723456bd64636655b5d48d9f1c65a5d3810be85a6dde089ecb'
   name 'Kaleidoscope'
   homepage 'http://www.kaleidoscopeapp.com/'
   license :commercial
