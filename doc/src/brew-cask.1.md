@@ -7,13 +7,13 @@ homebrew-cask(1) - A friendly binary installer for OS X
 
 ## DESCRIPTION
 
-Homebrew-cask is a tool for installing precompiled OS X binaries (such as
+Homebrew-Cask is a tool for installing precompiled OS X binaries (such as
 Applications) from the command line. The user is never required to use the
 graphical user interface.
 
 ## ALPHA-QUALITY SOFTWARE
 
-Homebrew-cask works robustly enough that we welcome new users, but the
+Homebrew-Cask works robustly enough that we welcome new users, but the
 project is still in early development. That means command names, option
 names, and other aspects of this manual are still subject to change.
 
@@ -35,8 +35,8 @@ names, and other aspects of this manual are still subject to change.
 ## COMMANDS
 
   * `audit` [ <token> ... ]:
-   Check the given Casks for installability.
-   If no tokens are given on the command line, all Casks are audited.
+    Check the given Casks for installability.
+    If no tokens are given on the command line, all Casks are audited.
 
   * `cat` <token> [ <token> ... ]:
     Dump the given Cask definition file to the standard output.
@@ -61,7 +61,7 @@ names, and other aspects of this manual are still subject to change.
     cache. With `--force`, force re-download even if the files are already
     cached.
 
-  * `home` or `homepage` [<token>]:
+  * `home` or `homepage` [ <token> ... ]:
     Display the homepage associated with a given Cask in a browser.
 
     With no arguments, display the project page <http://caskroom.io>.
@@ -117,7 +117,7 @@ names, and other aspects of this manual are still subject to change.
     the Cask does not appear to be currently installed.
 
     Removes all staged versions of the Cask distribution found under
-    `/opt/homebrew-cask/Caskroom/<token>`
+    `/opt/homebrew-cask/Caskroom/<token>`.
 
     If the Cask definition contains a `zap` stanza, performs additional
     `zap` actions as defined there, such as removing local preference
@@ -187,9 +187,9 @@ in a future version.
 
 ## INTERACTION WITH HOMEBREW
 
-Homebrew-cask is implemented as a external command for Homebrew. That means
+Homebrew-Cask is implemented as a external command for Homebrew. That means
 this project is entirely built upon the Homebrew infrastructure. For
-example, upgrades to the Homebrew-cask tool are received through Homebrew:
+example, upgrades to the Homebrew-Cask tool are received through Homebrew:
 
     brew update; brew cleanup; brew cask cleanup
 
@@ -200,12 +200,12 @@ the Homebrew command:
 
 ## OTHER WAYS TO SPECIFY A CASK
 
-Most homebrew-cask commands can accept a Cask token as an argument. As
+Most Homebrew-Cask commands can accept a Cask token as an argument. As
 described above, the argument can take the form of:
 
   * A token as returned by `brew cask search`, _eg_ `google-chrome`
 
-Homebrew-cask also accepts three other forms in place of plain tokens:
+Homebrew-Cask also accepts three other forms in place of plain tokens:
 
   * A fully-qualified token which includes the Tap name, _eg_
     `caskroom/fonts/font-symbola`
@@ -214,15 +214,15 @@ Homebrew-cask also accepts three other forms in place of plain tokens:
     `/usr/local/Library/Taps/caskroom/homebrew-cask/Casks/google-chrome.rb`
 
   * A `curl`-retrievable URI to a Cask file, _eg_
-   `https://raw.githubusercontent.com/caskroom/homebrew-cask/f25b6babcd398abf48e33af3d887b2d00de1d661/Casks/google-chrome.rb`
+    `https://raw.githubusercontent.com/caskroom/homebrew-cask/f25b6babcd398abf48e33af3d887b2d00de1d661/Casks/google-chrome.rb`
 
 ## ENVIRONMENT
 
-Homebrew-cask respects many of the environment variables used by the
+Homebrew-Cask respects many of the environment variables used by the
 parent command `brew`. Please refer to the `brew`(1) man page for more
 information.
 
-Environment variables specific to homebrew-cask:
+Environment variables specific to Homebrew-Cask:
 
   * HOMEBREW\_CASK\_OPTS:
     This variable may contain any arguments normally used as options on
@@ -232,9 +232,9 @@ Environment variables specific to homebrew-cask:
 
 ## SEE ALSO
 
-The homebrew-cask home page: <http://caskroom.io>.
+The Homebrew-Cask home page: <http://caskroom.io>.
 
-The homebrew-cask GitHub page: <https://github.com/caskroom/homebrew-cask>.
+The Homebrew-Cask GitHub page: <https://github.com/caskroom/homebrew-cask>.
 
 `brew`(1), `curl`(1)
 
@@ -249,6 +249,6 @@ Man page format based on `brew.1.md` from Homebrew.
 We still have bugs — and we are busy fixing them!  If you have a problem, don’t
 be shy about reporting it on our [GitHub issues page](https://github.com/caskroom/homebrew-cask/issues?state=open).
 
-When reporting bugs, remember that homebrew-cask is an independent project from
+When reporting bugs, remember that Homebrew-Cask is an independent project from
 Homebrew. Do your best to direct bug reports to the appropriate project. If
 your command-line started with `brew cask`, bring the bug to us first!
