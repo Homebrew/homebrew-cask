@@ -4,7 +4,7 @@ cask 'xact' do
 
   url "http://xact.scottcbrown.org/xACT#{version}.zip"
   appcast 'http://xactupdate.scottcbrown.org/xACT.xml',
-          :sha256 => '2cc4afe59c874ae2d0d29e40f23631e439ab7b6181313a17d2ca91edf81a29a7'
+          :sha256 => '0757524cb17948d8eca9f6cc90e756444030a07d18d0c2fdc68b18c5c316dd40'
   name 'xACT'
   homepage 'http://xact.scottcbrown.org'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
