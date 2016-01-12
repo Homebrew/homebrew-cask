@@ -4,7 +4,7 @@ cask 'skim' do
 
   url "http://downloads.sourceforge.net/project/skim-app/Skim/Skim-#{version}/Skim-#{version}.dmg"
   appcast 'http://skim-app.sourceforge.net/skim.xml',
-          :sha256 => '8e83499de8f3a6836350fe0e5938ab83d925849a3f51e767b55cc8aca98e929d'
+          :sha256 => '08faec640c9027564ea12e45d9fe88009512f9da900cd7c0920bbaab9ac47c8b'
   name 'Skim'
   homepage 'http://skim-app.sourceforge.net/'
   license :bsd
