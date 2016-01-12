@@ -25,9 +25,7 @@ cask 'jdownloader' do
            '> /dev/null 2>&1'
   end
 
-  caveats <<-EOS.undent
-    #{token} requires Java 6+, you can install the latest Java using
-
-      brew cask install java
-  EOS
+  caveats do
+    depends_on_java
+  end
 end
