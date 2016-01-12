@@ -5,7 +5,7 @@ cask 'gmail-notifr' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/assets.ashchan.com/gmailnotifr/GmailNotifr-#{version}.zip"
   appcast 'https://s3.amazonaws.com/assets.ashchan.com/gmailnotifr/update.xml',
-          :sha256 => '20876c0cef8d54463a5189948259e7ad268a28424b96e7fa2fbad860b0ec9554'
+          :sha256 => '45ae2b697ab4aa9ba974992b0e317b9352d1930ce4456a37ecda82fa3632daef'
   name 'Gmail Notifr'
   homepage 'http://ashchan.com/projects/gmail-notifr'
   license :mit
