@@ -1,10 +1,11 @@
 cask 'tuneup' do
-  version :latest
-  sha256 :no_check
+  version '2.5.3.0'
+  sha256 '8a2722d8719323d692c4a14935d945a3e42946aa9abd8a772fbd3737e4698b5d'
 
-  url 'https://www.tuneupmedia.com/redirect/mac-download'
+  # cloudfront.net is the official download host per the vendor homepage
+  url "https://dvk2ozaytrec6.cloudfront.net/mac4/Sparkle/TuneUp-Installer-#{version.major_minor}.0.zip"
   appcast 'https://dvk2ozaytrec6.cloudfront.net/mac4/appcast.xml',
-          :sha256 => 'aed2e65b28225b29c01f5c02f1be2a0557a71a8930d337bdbfe080b8e39b2386'
+          :sha256 => '2a2db87df2326bfab9f9922517096eb11090d6a7e3aa2f1bbf44810b52e8a9d2'
   name 'TuneUp'
   homepage 'https://www.tuneupmedia.com/'
   license :commercial
