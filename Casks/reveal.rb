@@ -4,7 +4,7 @@ cask 'reveal' do
 
   url "http://download.revealapp.com/Reveal.app-#{version}.zip"
   appcast 'http://download.revealapp.com/reveal-release.xml',
-          :sha256 => '37f7261e44a8e5e268524db944c668e68036a3249f465567fd63033d9df93d94'
+          :sha256 => 'a240206b0ed484dfc4ed0193e2468dcdbe23eb91d8fe35a75ed1ce9aaca62e7b'
   name 'Reveal'
   homepage 'http://revealapp.com/'
   license :commercial
