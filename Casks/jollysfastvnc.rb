@@ -4,7 +4,7 @@ cask 'jollysfastvnc' do
 
   url "https://www.jinx.de/JollysFastVNC_files/JollysFastVNC.#{version.sub(%r{_.*}, '')}.(#{version.sub(%r{.*_}, '')}).10.7.dmg"
   appcast 'https://www.jinx.de/JollysFastVNC.update.0E.i386.xml',
-          :sha256 => 'a7e1113e717a81fdab3cb6054b730e1b32c38f5de976bbe2a1c6fffc22a6956f'
+          :sha256 => 'ec431aa45e4344ef53ae2ee2b84c54d635024d0293f9c02ff468b144da205ac7'
   name 'JollysFastVNC'
   homepage 'https://www.jinx.de/JollysFastVNC.html'
   license :commercial
