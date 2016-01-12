@@ -1,10 +1,10 @@
 cask 'wizard101' do
-  version :latest
-  sha256  :no_check
+  version '1.10'
+  sha256 'cbb3f58869cff4a428ee74c50a49280aed4d2d616a1509ad5411f81f6e5ee529'
 
-  url 'https://www.wizard101.com/downloadGameMac/otherdownload'
+  url 'http://versionec.us.wizard101.com//Wizard101.dmg'
   appcast 'http://versionec.us.wizard101.com//Wizard101.xml',
-          :sha256 => '537ab70a2fe32fd73c7d56950ea5edee58e1e0b1daf0014a2c921d3550d18740'
+          :sha256 => '46f56cb7eeb715d7b6ffbbdccc49d601f31aeafeb702a819b309952453099eb7'
   name 'Wizard101'
   homepage 'https://www.wizard101.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
