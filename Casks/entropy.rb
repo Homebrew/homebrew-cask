@@ -5,7 +5,7 @@ cask 'entropy' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://eigenlogik.s3.amazonaws.com/releases/entropy/Entropy-#{version}.zip"
   appcast 'http://hyperion.eigenlogik.com/appcast/feed/entropy/',
-          :sha256 => '27177d5fa935d8cf5058c1d372557071e18c79496e9015b171c360743f628b95'
+          :sha256 => '697eb2a2f99b3837e3415197677ddbf9970f27aebe00f2e0f5bc6d267cd050fa'
   name 'Entropy'
   homepage 'http://www.eigenlogik.com/entropy/'
   license :commercial
