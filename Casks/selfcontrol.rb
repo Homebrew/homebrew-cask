@@ -14,6 +14,8 @@ cask 'selfcontrol' do
   homepage 'https://selfcontrolapp.com/'
   license :gpl
 
+  auto_updates true
+
   app 'SelfControl.app'
 
   zap :delete => '~/Library/Preferences/org.eyebeam.SelfControl.plist'
