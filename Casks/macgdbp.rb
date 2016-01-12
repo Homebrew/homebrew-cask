@@ -4,7 +4,7 @@ cask 'macgdbp' do
 
   url "https://www.bluestatic.org/downloads/macgdbp/macgdbp-#{version}.zip"
   appcast 'https://www.bluestatic.org/versioncast.php/macgdbp',
-          :sha256 => '5c1c3548e8e993df1bd38d0d0c5149e8e4312566da858bbfdbbe83ca93793048'
+          :sha256 => '169f0f39b0e4998de503623724fd81eca28c6615b13840dee9e9719e2e297f35'
   name 'MacGDBp'
   homepage 'https://www.bluestatic.org/software/macgdbp/'
   license :gpl
