@@ -5,7 +5,7 @@ cask 'pixelapse' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/download-pixelapse/Pixelapse%20#{version}.dmg"
   appcast 'https://download-pixelapse.s3.amazonaws.com/macappcast.xml',
-          :sha256 => '888b63afa261b3b5484ac92e67478c970e9fecbc634312a3a23ea97be570ddae'
+          :sha256 => '01c7636055fd9bee36c32ff8303db1ab110d4fa788df04b441419f2e27781039'
   name 'Pixelapse'
   homepage 'https://www.pixelapse.com'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
