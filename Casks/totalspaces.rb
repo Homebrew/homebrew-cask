@@ -5,7 +5,7 @@ cask 'totalspaces' do
 
     url "http://downloads.binaryage.com/TotalSpaces-#{version}.zip"
     appcast 'http://updates-s3.binaryage.com/totalspaces.xml',
-            :sha256 => '6c3149bdef9f537e45c66ffb83e9548bcf87d9be32ab0d0ed23a24df6bcc74ce'
+            :sha256 => '85c4fc2cb399d66dce6c54a7499f80903dfdc837f80dfd0d4d6c31a84320db7c'
 
     pkg 'TotalSpaces.pkg'
 
@@ -17,7 +17,7 @@ cask 'totalspaces' do
 
     url "http://downloads.binaryage.com/TotalSpaces2-#{version}.dmg"
     appcast 'http://updates-s3.binaryage.com/totalspaces2.xml',
-            :sha256 => 'f19340bbfd445a54ef7f501e6dd8193dc9228cb18a642d21dc280d008631cb68'
+            :sha256 => '85c4fc2cb399d66dce6c54a7499f80903dfdc837f80dfd0d4d6c31a84320db7c'
 
     installer :manual => 'TotalSpaces2.app'
 
