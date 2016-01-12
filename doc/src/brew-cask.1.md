@@ -61,7 +61,7 @@ names, and other aspects of this manual are still subject to change.
     cache. With `--force`, force re-download even if the files are already
     cached.
 
-  * `home` or `homepage` [<token> ... ]:
+  * `home` or `homepage` [ <token> ... ]:
     Display the homepage associated with a given Cask in a browser.
 
     With no arguments, display the project page <http://caskroom.io>.
