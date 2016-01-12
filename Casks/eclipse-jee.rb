@@ -11,4 +11,8 @@ cask 'eclipse-jee' do
   depends_on :arch => :x86_64
 
   app 'Eclipse.app'
+
+  caveats do
+    depends_on_java
+  end
 end
