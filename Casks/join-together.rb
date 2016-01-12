@@ -4,7 +4,7 @@ cask 'join-together' do
 
   url "http://dougscripts.com/itunes/scrx/jointogether#{version.no_dots}.zip"
   appcast 'http://dougscripts.com/itunes/itinfo/jointogether_appcast.xml',
-          :sha256 => '8c9ac13d0dcf1559b4881f19000a144d60b16511944b1090fe7df5203e49cc3e'
+          :sha256 => '10661472af4b4b1fdd644a596bee77cb666df27769dbb58138f2aae032bb6db5'
   name 'Join Together'
   homepage 'http://dougscripts.com/itunes/itinfo/jointogether.php'
   license :commercial
