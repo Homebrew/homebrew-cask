@@ -4,7 +4,7 @@ cask 'dfontsplitter' do
 
   url "https://peter.upfold.org.uk/files/dfontsplitter/dfontsplitter-#{version}-mac.zip"
   appcast 'https://apps.upfold.org.uk/appupdate/dfontsplitter.xml',
-          :sha256 => 'b7a3ed81f5e160a4888afdb5810d97f5b2ed828ecec4569dc1d1a6bd825bcc59'
+          :sha256 => '202e6635566edc7d44d1feda0fc10844ce27962481276fd2a0695d4253c8fa50'
   name 'DfontSplitter'
   homepage 'https://peter.upfold.org.uk/projects/dfontsplitter'
   license :gpl
