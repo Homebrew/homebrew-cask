@@ -4,7 +4,7 @@ cask 'vlc-webplugin' do
 
   url "https://get.videolan.org/vlc/#{version}/macosx/VLC-webplugin-#{version}.dmg"
   name 'VLC for OS X web plugin'
-  homepage 'http://www.videolan.org/vlc/download-macosx.html'
+  homepage 'https://www.videolan.org/vlc/download-macosx.html'
   license :gpl
 
   internet_plugin 'VLC Plugin.plugin'
