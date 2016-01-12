@@ -4,7 +4,7 @@ cask 'pdfmasher' do
 
   url "https://download.hardcoded.net/pdfmasher_osx_#{version.dots_to_underscores}.dmg"
   appcast 'https://www.hardcoded.net/updates/pdfmasher.appcast',
-          :sha256 => '400556f9c424326d59f9e3c571f86b93c40e34671c2eb1fb513668a6d1dd7553'
+          :sha256 => '0f4e6cdc0f03c82f21f9b152b41bed38a3d2e09733cf01c3baf249c3ca606f13'
   name 'PdfMasher'
   homepage 'https://www.hardcoded.net/pdfmasher/'
   license :gpl
