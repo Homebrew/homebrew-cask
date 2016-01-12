@@ -4,7 +4,7 @@ cask 'chicken' do
 
   url "http://downloads.sourceforge.net/project/chicken/Chicken-#{version}.dmg"
   appcast 'http://chicken.sourceforge.net/chicken.xml',
-          :sha256 => 'a649ec458aa8ea0bd34ed395a85d35d7ca333f2442d1c209c8f159226ba92088'
+          :sha256 => 'c7f19062980fe48a78b5157f341eeb9b3aa1ba81bce83b1c01484d2dbbb2f7d8'
   name 'Chicken'
   homepage 'http://sourceforge.net/projects/chicken/'
   license :gpl
