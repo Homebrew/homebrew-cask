@@ -8,12 +8,9 @@ cask 'tla-plus-toolbox' do
   homepage 'https://research.microsoft.com/en-us/um/people/lamport/tla/toolbox.html'
   license :mit
 
-  # Renamed for clarity: app name is inconsistent with its branding.
-  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8829
-  app 'toolbox/toolbox.app', :target => 'TLA+ Toolbox.app'
+  app 'TLA+ Toolbox.app'
 
-  caveats <<-EOS.undent
-    #{token} requires Java. You can install the latest version with
-      brew cask install java
-  EOS
+  caveats do
+    depends_on_java
+  end
 end
