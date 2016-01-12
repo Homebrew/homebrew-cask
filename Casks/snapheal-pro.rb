@@ -5,7 +5,7 @@ cask 'snapheal-pro' do
   # amazonaws.com is the official download host per the appcast feed
   url "https://creativekit.s3.amazonaws.com/SnaphealCK/SnaphealCKNA_Distribution_v#{version.dots_to_underscores}.zip"
   appcast 'http://cdn.macphun.com/updates/SnaphealMacPRO/appcast.xml',
-          :sha256 => '3c29cd133345294e0f073a1d02df5339dd69facee830d3bfc77fa7f3be79739d'
+          :sha256 => '69d15ecf7e6c9f21b7a800f516702b7cff629c1f3ba8c61d1cde1845e30d2fe9'
   name 'Macphun Snapheal Pro'
   homepage 'https://macphun.com/snapheal/'
   license :commercial
