@@ -4,7 +4,7 @@ cask 'uninstallpkg' do
 
   url "https://www.corecode.at/downloads/uninstallpkg_#{version}.zip"
   appcast 'https://www.corecode.at/uninstallpkg/uninstallpkg.xml',
-          :sha256 => '4ea9237e4f58b815dd3f7a23597076b95f12abb2c31feb65bc88c5e8113d1d60'
+          :sha256 => 'e76a9fe615b5db7ba18a3432fc75d887bca36e4b27985e4ea6da6528edb84b62'
   name 'UninstallPKG'
   homepage 'https://www.corecode.at/uninstallpkg/'
   license :freemium
