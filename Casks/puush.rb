@@ -4,7 +4,7 @@ cask 'puush' do
 
   url 'https://puush.me/dl/puush.zip'
   appcast 'https://puush.me/dl/puush.xml?hax=jax',
-          :sha256 => 'a95f192ce61400b1e8de6e880072f59229eefa4b2aa646b1707def6abbb375cc'
+          :sha256 => '2beaf344f474b3368400ac090e941f8795895bc95b5849988a9c0c34fcd5b066'
   name 'puush'
   homepage 'https://puush.me/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
