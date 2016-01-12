@@ -4,7 +4,7 @@ cask 'oovoo' do
 
   url 'http://download.cdn.oovoo.com/download/ooVoo.dmg'
   name 'ooVoo'
-  homepage 'http://www.oovoo.com'
+  homepage 'https://www.oovoo.com'
   license :gratis
 
   app 'Oovoo.app'
