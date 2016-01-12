@@ -4,7 +4,7 @@ cask 'm3unify' do
 
   url "http://dougscripts.com/itunes/scrx/m3unifyv#{version.delete('.')}.zip"
   appcast 'http://dougscripts.com/itunes/itinfo/m3unify_appcast.xml',
-          :sha256 => '522e2d09c204f4e0c5e99d132a4903ba97c86296c382a4089888667dc41b19b7'
+          :sha256 => 'f17cc4b26077dcb3addd16e0ddfaf0dd81cfdf69a004c65934ee751bd6dc7af0'
   name 'M3Unify'
   homepage 'http://dougscripts.com/itunes/itinfo/m3unify.php'
   license :commercial
