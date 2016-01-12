@@ -4,7 +4,7 @@ cask 'chromatic' do
 
   url 'https://download.mrgeckosmedia.com/Chromatic.zip'
   appcast 'https://mrgeckosmedia.com/applications/appcast/Chromatic',
-          :sha256 => '330e572519b938538a747d04a19b8068787bc843e858e64df11102a34c6aa324'
+          :sha256 => '094ede862354894f7fee778cd3d3c97b85af5a075f2a49bb7dc76701c7f6a23b'
   name 'Chromatic'
   homepage 'https://mrgeckosmedia.com/applications/info/Chromatic'
   license :isc
