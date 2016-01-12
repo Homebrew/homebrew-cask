@@ -4,7 +4,7 @@ cask 'webarchiveplayer' do
 
   url "https://github.com/ikreymer/webarchiveplayer/releases/download/#{version}/webarchiveplayer.dmg"
   appcast 'https://github.com/ikreymer/webarchiveplayer/releases.atom',
-	  :sha256 => 'a7e74d747990945fd55b7e097abb39918d2670fa3414bc26027cea7d6a0c9006'
+	        :sha256 => 'a7e74d747990945fd55b7e097abb39918d2670fa3414bc26027cea7d6a0c9006'
   name 'webarchiveplayer'
   homepage 'https://github.com/ikreymer/webarchiveplayer'
   license :gpl
