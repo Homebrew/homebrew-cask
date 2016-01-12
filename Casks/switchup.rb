@@ -4,7 +4,7 @@ cask 'switchup' do
 
   url "https://www.irradiatedsoftware.com/downloads/SwitchUp_#{version}.zip"
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/switchup.php',
-          :sha256 => '0d20321633384c6d1c15cb7f4b4f7e67242981d84ebd4dc971429cc46f76c43d'
+          :sha256 => 'bdb7014f82e4ee553274a9b65604f6ed5d8a8cde345b1bcd1d8337183e3641c9'
   name 'SwitchUp'
   homepage 'https://www.irradiatedsoftware.com/switchup/'
   license :commercial
