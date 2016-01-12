@@ -4,7 +4,7 @@ cask 'myphotostream' do
 
   url 'http://www.weareyeah.com/MyPhotostream/download'
   appcast 'http://www.weareyeah.com/MyPhotostream/feeds/update.appcast',
-          :sha256 => 'a310ba257cb8c82100ad68ea5332ace6b8204629d671622691cec559e783f686'
+          :sha256 => '06929a013a1d5ab035588b620e35fc083b5556522110bc7e923958fd8b219351'
   name 'MyPhotostream'
   homepage 'http://www.weareyeah.com/MyPhotostream/'
   license :commercial
