@@ -4,7 +4,7 @@ cask 'quickcal' do
 
   url 'http://quickcalapp.com/app/quickcal-latest.zip'
   appcast 'http://quickcalapp.com/app/appcast.xml',
-          :sha256 => '7524d0f790b23f051cb62bb9cef21e32acb1d85bd2f3195d30997e516edf7768'
+          :sha256 => '9b5e09452c5e03ba8656fa75690afe10d29e47e93a006bc805df6f1baeb5909e'
   name 'QuickCal'
   homepage 'http://quickcalapp.com/'
   license :commercial
