@@ -4,7 +4,7 @@ cask 'irip' do
 
   url 'https://files.thelittleappfactory.com/iRip2/iRip.zip'
   appcast 'https://files.thelittleappfactory.com/iRip2/appcast.xml',
-          :sha256 => 'a4b4db7521ac5d24eff02cfc8405eb7f2e323677483a28433970c774ea733641'
+          :sha256 => '67468e37f2a1b519de068309d749a11f991b6d3a2eec8f718e4437fafbc6af12'
   name 'iRip'
   homepage 'http://thelittleappfactory.com/irip/'
   license :commercial
