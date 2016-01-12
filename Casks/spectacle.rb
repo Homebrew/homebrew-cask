@@ -7,7 +7,7 @@ cask 'spectacle' do
     sha256 '8b41469acb8ae5bc845f1441c2cf630f72f0fc14ad324e78336b0cb4268216d7'
 
     appcast 'https://spectacleapp.com/updates/appcast.xml',
-            :sha256 => 'd79bb2db04e7e53a7bb9184f9c048e4dde76a06e1be1232a9761f60db3836084'
+            :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   end
 
   # amazonaws.com is the official download host per the vendor homepage
