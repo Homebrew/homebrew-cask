@@ -4,7 +4,7 @@ cask 'racket' do
 
   url "http://mirror.racket-lang.org/installers/#{version}/racket-#{version}-x86_64-macosx.dmg"
   name 'Racket'
-  homepage 'http://racket-lang.org/'
+  homepage 'https://racket-lang.org/'
   license :oss
 
   suite "Racket v#{version}"
