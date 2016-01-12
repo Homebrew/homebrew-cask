@@ -4,7 +4,7 @@ cask 'sofortbild' do
 
   url 'http://www.sofortbildapp.com/download/Sofortbild.zip'
   appcast 'http://www.sofortbildapp.com/appcast.xml',
-          :sha256 => 'bfec2c24e8156dc4fb07ead12901cc5734fb7194b76acb6dffd1f42bfe6f68f6'
+          :sha256 => '48d27b995a543c6b5e37a8e9a226231713ef69cf5b46ba12b5b25b6d8568dc6a'
   name 'Sofortbild'
   homepage 'http://www.sofortbildapp.com/'
   license :gratis
