@@ -1,6 +1,6 @@
 cask 'combine-pdfs' do
-  version :latest
-  sha256 :no_check
+  version '5.1'
+  sha256 '993f46880b114de2f8f59f6ae1c96fb54370a07fe88bbf0a0db8ad63e2155faf'
 
   url 'https://www.monkeybreadsoftware.de/Freeware/CombinePDFs.dmg'
   appcast 'https://www.monkeybreadsoftware.de/Freeware/CombinePDFs/appcast.xml',
