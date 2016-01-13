@@ -4,7 +4,6 @@ cask 'spyder' do
 
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-#{version}-py3.5.dmg"
-  name 'Spyder'
   name 'Spyder-Py3'
   homepage 'https://github.com/spyder-ide/spyder'
   license :mit

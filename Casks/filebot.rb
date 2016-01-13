@@ -11,5 +11,7 @@ cask 'filebot' do
   app 'FileBot.app'
   binary 'FileBot.app/Contents/MacOS/filebot.sh', :target => 'filebot'
 
-  caveats 'FileBot requires Java 8. Run "java -version" to verify.'
+  caveats do
+    depends_on_java('8')
+  end
 end

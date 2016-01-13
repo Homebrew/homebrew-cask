@@ -1,11 +1,11 @@
 cask 'splice' do
-  version :latest
-  sha256 :no_check
+  version '1.6.12-201601071747'
+  sha256 '49052352bb81cbd104b73241401e4f4a6d333749f12db32839c76e36dfc96784'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url 'https://spliceosx.s3.amazonaws.com/Splice.dmg'
+  # amazonaws.com is the official download host per the appcast feed
+  url "https://s3-us-west-1.amazonaws.com/spliceosx/Splice.app-#{version}.zip"
   appcast 'https://splice.com/appcast.xml',
-          :sha256 => '6928a8b8f69fbfe4fb9ddc49fe681a66bb9f0fea433a20961c20aece6c124f50'
+          :sha256 => 'aa13ed8622cf3aaa5a58590cc6fb7fa5493b7c2c400a60e07c6bf284124152d1'
   name 'Splice'
   homepage 'https://splice.com/'
   license :gratis

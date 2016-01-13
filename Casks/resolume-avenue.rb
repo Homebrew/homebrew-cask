@@ -4,7 +4,6 @@ cask 'resolume-avenue' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "http://download.resolume.com.s3.amazonaws.com/Resolume_Avenue_#{version.gsub('.', '_')}_Installer.dmg"
-  name 'Resolume'
   name 'Resolume Avenue'
   homepage 'https://resolume.com'
   license :freemium

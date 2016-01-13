@@ -12,8 +12,7 @@ cask 'eclipse-installer' do
 
   app 'Eclipse Installer.app'
 
-  caveats <<-EOS.undent
-    #{token} requires Java. You can install the latest version with
-      brew cask install java
-  EOS
+  caveats do
+    depends_on_java
+  end
 end

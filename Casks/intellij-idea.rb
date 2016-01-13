@@ -14,4 +14,8 @@ cask 'intellij-idea' do
                    '~/Library/Preferences/IntelliJIdea15',
                    '~/Library/Preferences/com.jetbrains.intellij.plist',
                  ]
+
+  caveats do
+    depends_on_java
+  end
 end

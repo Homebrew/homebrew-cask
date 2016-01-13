@@ -6,11 +6,11 @@ cask 'skype' do
   else
     version :latest
     sha256 :no_check
-    url 'https://www.skype.com/go/getskype-macosx.dmg'
+    url 'http://www.skype.com/go/getskype-macosx.dmg'
   end
 
   name 'Skype'
-  homepage 'http://www.skype.com'
+  homepage 'https://www.skype.com'
   license :gratis
 
   app 'Skype.app'

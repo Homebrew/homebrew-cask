@@ -13,10 +13,7 @@ cask 'xamarin' do
 
   zap       :delete => '~/Library/Developer/Xamarin'
 
-  caveats <<-EOS.undent
-    If you choose to install Xamarin.Android, you'll need Java 6+,
-    you can install the latest Java using
-
-      brew cask install java
-  EOS
+  caveats do
+    depends_on_java
+  end
 end

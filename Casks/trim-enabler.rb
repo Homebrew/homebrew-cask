@@ -8,8 +8,6 @@ cask 'trim-enabler' do
     sha256 :no_check
     # amazonaws.com is the official download host per the vendor homepage
     url 'https://s3.amazonaws.com/cindori/TrimEnabler.dmg'
-    appcast 'https://cindori.org/trimenabler/updates/update.xml',
-            :sha256 => 'df50f513bec87bfd937e7572715706240bbc094728e82c07289f956064f546da'
   end
 
   name 'Trim Enabler'

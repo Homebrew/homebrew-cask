@@ -5,8 +5,8 @@ cask 'pphelper' do
   url 'https://ghost.25pp.com/soft/pp_mac.dmg'
   appcast 'https://liveupdate.25pp.com/macpc/Appcast.xml',
           :sha256 => '96e55462ba3629ff18e88c08d83fd5e202aec637eafed6856179ca214c1ddab4'
-  name 'pp助手'
   name 'pphelper'
+  name 'pp助手'
   homepage 'http://pro.25pp.com/pp_mac_ios'
   license :gratis
 

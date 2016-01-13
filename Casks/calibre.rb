@@ -9,9 +9,9 @@ cask 'calibre' do
             :sha256 => '35c6901d28c2afc52bb09abedfacc4a5c97919821b26442a7364ab7b144de2a0'
   end
 
-  url "http://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
+  url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
   name 'calibre'
-  homepage 'http://calibre-ebook.com/'
+  homepage 'https://calibre-ebook.com/'
   license :gpl
 
   app 'calibre.app'

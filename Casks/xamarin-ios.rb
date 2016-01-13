@@ -3,8 +3,8 @@ cask 'xamarin-ios' do
   sha256 '7ffe0e60ed200d3545e14901ac2b5ab7a017785225d6e48fd433cba00bbdea98'
 
   url "https://download.xamarin.com/MonoTouch/Mac/monotouch-#{version}.pkg"
-  appcast 'https://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          :sha256 => 'b30881e8f9262311eafbc2bf4ea51d9663a1a0067c0ebb6372ca9b86e466b502'
+  appcast 'https://static.xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
+          :sha256 => '9fd357039968b833cd2b2e0f0acd276a8eb30059a240765f4a18d5045565f704'
   name 'Xamarin.iOS'
   homepage 'https://xamarin.com/ios'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

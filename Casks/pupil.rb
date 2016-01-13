@@ -6,7 +6,7 @@ cask 'pupil' do
   appcast 'http://www.pupil.io/index.php?p=appcast.rss',
           :sha256 => 'bb44937c4ac1cc66b9f9dd1e4b7a7e98f0495a5d940ee9a8a95b67be98d0e0b8'
   name 'Pupil'
-  homepage 'http://pupil.io/'
+  homepage 'https://pupil.io/'
   license :commercial
 
   app 'Pupil.app'

@@ -24,9 +24,9 @@ To start using Homebrew-Cask, you just need [Homebrew](http://brew.sh/) installe
 
 ```bash
 $ brew cask install google-chrome
-=> Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
-=> Success! google-chrome installed to /opt/homebrew-cask/Caskroom/google-chrome/stable-channel
-=> Linking Google Chrome.app to /Users/phinze/Applications/Google Chrome.app
+==> Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
+==> Symlinking App 'Google Chrome.app' to '/Users/Your_Account_Name/Applications/Google Chrome.app'
+🍺  google-chrome staged at '/opt/homebrew-cask/Caskroom/google-chrome/latest' (208 files, 184M)
 ```
 
 And there we have it. Google Chrome installed with a few quick commands: no clicking, no dragging, no dropping.
@@ -79,7 +79,7 @@ $ brew untap phinze/cask; brew untap caskroom/cask; brew update
 
 If the issue persists, please use our [bug report template][bug_report_template] to report the output of running the problematic command with the `--verbose` flag, along with the output of `brew cask doctor`.
 
-## License:
+## License
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
 
 [bug_report_template]: https://github.com/caskroom/homebrew-cask/issues/new?title=Bug%20report%3A&body=%28Remember%20to%20run%20%60brew%20update%3B%20brew%20cleanup%3B%20brew%20cask%20cleanup%60%20before%20reporting%20your%20issue.%20It%20usually%20fixes%20things%21%29%0A%0A%23%23%23%20Description%20of%20issue%0A%0A%0A%0A%23%23%23%20Output%20of%20%60brew%20cask%20%3Ccommand%3E%20--verbose%60%0A%0A%60%60%60%0A%28paste%20output%20here%29%0A%60%60%60%0A%0A%23%23%23%20Output%20of%20%60brew%20doctor%60%0A%0A%60%60%60%0A%28paste%20output%20here%29%0A%60%60%60%0A%0A%23%23%23%20Output%20of%20%60brew%20cask%20doctor%60%0A%0A%60%60%60%0A%28paste%20output%20here%29%0A%60%60%60%0A

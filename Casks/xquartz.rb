@@ -5,7 +5,7 @@ cask 'xquartz' do
   # macosforge.org is the official download host per the vendor homepage
   url "https://xquartz.macosforge.org/downloads/SL/XQuartz-#{version}.dmg"
   appcast 'https://xquartz-dl.macosforge.org/sparkle/release.xml',
-          :sha256 => '0b2c7d4e0b101eefc0a3efb000b779b3ec7246fcb5d14a0540e85f540f26a9e6'
+          :sha256 => '0bbfb27ff8686b3ce35e40a9f6d307e1568bda2db48e6a2a840d4e8d29f5f768'
   name 'XQuartz'
   homepage 'http://www.xquartz.org/'
   license :oss

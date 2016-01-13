@@ -9,9 +9,7 @@ cask 'argouml' do
 
   app 'ArgoUML.app'
 
-  caveats <<-EOS.undent
-    #{token} requires Java 6. You can install it with
-
-      brew cask install caskroom/homebrew-versions/java6
-  EOS
+  caveats do
+    depends_on_java('6')
+  end
 end

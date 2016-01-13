@@ -8,4 +8,8 @@ cask 'arduino' do
   license :gpl
 
   app 'Arduino.app'
+
+  caveats do
+    depends_on_java
+  end
 end

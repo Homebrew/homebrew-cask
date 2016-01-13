@@ -14,8 +14,7 @@ cask 'kafka-tool' do
 
   zap :delete => '~/.kafkatool'
 
-  caveats <<-EOS.undent
-    #{token} requires Java 8+, you can install the latest Java using
-      brew cask install java
-  EOS
+  caveats do
+    depends_on_java('8')
+  end
 end

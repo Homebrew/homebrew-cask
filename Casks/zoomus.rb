@@ -3,7 +3,6 @@ cask 'zoomus' do
   sha256 :no_check
 
   url 'https://zoom.us/client/latest/zoomusInstaller.pkg'
-  name 'Zoom'
   name 'Zoom.us'
   homepage 'https://www.zoom.us'
   license :gratis

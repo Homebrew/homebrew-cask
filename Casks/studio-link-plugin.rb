@@ -5,7 +5,7 @@ cask 'studio-link-plugin' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/Studio-Link-v2/backend/releases/download/#{version}/studio-link-osx.zip"
   appcast 'https://github.com/Studio-Link-v2/backend/releases.atom',
-          :sha256 => '36dca30211bfa4caaef3c10fc892facc7109f5e74399c51453297061df6d5734'
+          :sha256 => 'abd00cdc82b7db10f419108d6cc44b83f7f1dcbac1ec579ef5aade18408c2694'
   name 'Studio Link Plugin'
   homepage 'https://doku.studio-link.de/plugin/installation-plugin.html'
   license :bsd

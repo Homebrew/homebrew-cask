@@ -1,11 +1,11 @@
 cask 'squire' do
-  version :latest
-  sha256 :no_check
+  version '1.5.7'
+  sha256 '3cfa37fa0a5cdf64d4a936d044b5fa35ef39c728db439d5e34d83795415c6297'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url 'https://s3.amazonaws.com/Squire_Mac_Builds/Squire.dmg'
+  # amazonaws.com is the official download host per the appcast feed
+  url "https://s3.amazonaws.com/Squire_Mac_Builds/Squire_Mac_#{version.dots_to_underscores}.zip"
   appcast 'http://www.sylion.com/squireapp/sparkle/SquireMac/appcastSquireMac.xml',
-          :sha256 => '05ed2a267054a31dd81c36b9e9e2a05fb26f40d9c913427134154f4b9147949a'
+          :sha256 => '44f1cbac4a8e20d3b5b6998cb0b3dc63ccb615d4f935462568706bb38f16fffc'
   name 'Squire'
   homepage 'http://squireapp.com'
   license :commercial

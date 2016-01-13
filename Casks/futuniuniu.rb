@@ -3,8 +3,8 @@ cask 'futuniuniu' do
   sha256  '72605f586d124cac852ff670517f9c8669d3a4c60c1dfad00feedfac8f1c74bd'
 
   url "https://www.futu5.com/client/nn/mac/FTNNForMac_#{version}.dmg"
-  name '富途牛牛'
   name 'FutuNiuniu'
+  name '富途牛牛'
   homepage 'http://www.futu5.com'
   license :commercial
 
