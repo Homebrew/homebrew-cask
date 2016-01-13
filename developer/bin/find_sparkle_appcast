@@ -24,7 +24,7 @@ absolute_path() {
 appcast_found_error() {
   local error_reason="$1"
 
-  echo "An appcast was found, but it ${error_reason}. You should:
+  echo "An appcast was found pointing to ${appcast_url}, but it ${error_reason}. You should:
 
   1. Check your internet connection.
   2. Try again later.
