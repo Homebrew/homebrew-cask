@@ -4,7 +4,7 @@ cask 'kamakiri' do
 
   url "https://mochidev.com/appresources/downloads/Kamakiri%20#{version.sub(%r{-.*$}, '')}%20(#{version.sub(%r{^.*-}, '')}).zip"
   appcast 'https://mochidev.com/appresources/updates/kamakiridd.xml',
-          :sha256 => 'b3f7fdf1557e3f988a036ac2d9ed0dc9b97d151c1a30cf90420bc20cd25d2e9a'
+          :checkpoint => 'b3f7fdf1557e3f988a036ac2d9ed0dc9b97d151c1a30cf90420bc20cd25d2e9a'
   name 'Kamakiri'
   homepage 'https://mochidev.com/apps/kamakiri/'
   license :commercial

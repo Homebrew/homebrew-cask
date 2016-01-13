@@ -4,7 +4,7 @@ cask 'hands-off' do
 
   url "https://www.oneperiodic.com/files/Hands%20Off!%20v#{version}.dmg"
   appcast "http://www.oneperiodic.com/handsoff#{version.major}.xml",
-          :sha256 => '26574caa21b5ac2201e25c6ff86791eb4798f12f406e5123e5f7608c2d8fd21f'
+          :checkpoint => '26574caa21b5ac2201e25c6ff86791eb4798f12f406e5123e5f7608c2d8fd21f'
   name 'Hands Off!'
   homepage 'https://www.oneperiodic.com/products/handsoff/'
   license :commercial

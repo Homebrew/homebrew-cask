@@ -4,7 +4,7 @@ cask 'peakhour' do
 
   url "https://updates.peakhourapp.com/releases/PeakHour%20#{version}.zip"
   appcast 'https://updates.peakhourapp.com/PeakHourAppcast.xml',
-          :sha256 => '1f4b56a064edc1b436276de9bd31463286ec553d933434880c5f50feb3a49737'
+          :checkpoint => '1f4b56a064edc1b436276de9bd31463286ec553d933434880c5f50feb3a49737'
   name 'PeakHour'
   homepage 'https://www.peakhourapp.com'
   license :commercial

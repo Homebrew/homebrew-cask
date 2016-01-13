@@ -4,7 +4,7 @@ cask 'name-mangler' do
 
   url 'http://manytricks.com/download/namemangler'
   appcast 'https://manytricks.com/namemangler/appcast.xml',
-          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856'
+          :checkpoint => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856'
   name 'Name Mangler'
   homepage 'https://manytricks.com/namemangler/'
   license :freemium

@@ -9,7 +9,7 @@ cask 'selfcontrol' do
 
   url "http://downloads.selfcontrolapp.com/SelfControl-#{version}.zip"
   appcast 'https://selfcontrolapp.com/SelfControlAppcast.xml',
-          :sha256 => '358e7ca232d529ba1bc202f7d5ba68d323140394eb22013c1c9324916483f608'
+          :checkpoint => '358e7ca232d529ba1bc202f7d5ba68d323140394eb22013c1c9324916483f608'
   name 'SelfControl'
   homepage 'https://selfcontrolapp.com/'
   license :gpl

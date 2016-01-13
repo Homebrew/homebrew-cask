@@ -4,7 +4,7 @@ cask 'spillo' do
 
   url "http://bananafishsoftware.com/software/spillo/app/spillo-#{version}.zip"
   appcast 'http://bananafishsoftware.com/feeds/spillo.xml',
-          :sha256 => '9dedb220bef5f4812fb74247ebbe2e71a6e5b375e131345cb9ef90bae777c529'
+          :checkpoint => '9dedb220bef5f4812fb74247ebbe2e71a6e5b375e131345cb9ef90bae777c529'
   name 'Spillo'
   homepage 'http://bananafishsoftware.com/products/spillo/'
   license :commercial

@@ -4,7 +4,7 @@ cask 'plotdevice' do
 
   url "http://plotdevice.io/app/PlotDevice_app-#{version}.zip"
   appcast 'http://plotdevice.io/app.xml',
-          :sha256 => 'fd3eca428b5e7d8398db4d9c779c56860c2a2feb09cec91bb81af53004a7be54'
+          :checkpoint => 'fd3eca428b5e7d8398db4d9c779c56860c2a2feb09cec91bb81af53004a7be54'
   name 'PlotDevice'
   homepage 'http://plotdevice.io/'
   license :oss

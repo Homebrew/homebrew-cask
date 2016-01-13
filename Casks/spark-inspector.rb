@@ -4,7 +4,7 @@ cask 'spark-inspector' do
 
   url 'http://sparkinspector.com/downloads/sparkinspector.dmg'
   appcast 'http://sparkinspector.com/sparkle/feed.xml',
-          :sha256 => '48bb4142d8ab21f0eff8c0758fcb8ac4becae2786c969e1f1d6128662a507136'
+          :checkpoint => '48bb4142d8ab21f0eff8c0758fcb8ac4becae2786c969e1f1d6128662a507136'
   name 'Spark Inspector'
   homepage 'http://sparkinspector.com/'
   license :commercial

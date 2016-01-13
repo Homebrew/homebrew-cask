@@ -4,7 +4,7 @@ cask 'coccinellida' do
 
   url "http://downloads.sourceforge.net/project/coccinellida/Coccinellida-#{version}.zip"
   appcast 'https://raw.githubusercontent.com/troydm/coccinellida/master/sparkle.xml',
-          :sha256 => 'fd8ab328cb4792b47f6d280417bd58e037263b59e8cafbcf6b9b04c8d165c954'
+          :checkpoint => 'fd8ab328cb4792b47f6d280417bd58e037263b59e8cafbcf6b9b04c8d165c954'
   name 'Coccinellida'
   homepage 'http://coccinellida.sourceforge.net/'
   license :gpl

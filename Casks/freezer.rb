@@ -4,7 +4,7 @@ cask 'freezer' do
 
   url 'https://download.mrgeckosmedia.com/Freezer.zip'
   appcast 'https://mrgeckosmedia.com/applications/appcast/Freezer',
-          :sha256 => 'ceec8f6bfaac2e5a5e688e464398032cfbcc4f392fbad88ba4bcecdda51844a8'
+          :checkpoint => 'ceec8f6bfaac2e5a5e688e464398032cfbcc4f392fbad88ba4bcecdda51844a8'
   name 'Freezer'
   homepage 'https://mrgeckosmedia.com/applications/info/Freezer'
   license :gratis

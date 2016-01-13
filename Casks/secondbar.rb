@@ -5,7 +5,7 @@ cask 'secondbar' do
   # boastr.de is the official download host per the vendor homepage
   url 'http://boastr.de/SecondBar.zip'
   appcast 'https://blog.boastr.net/secondbar/appcast.xml',
-          :sha256 => '733fd0d9c7c8fb25163f656cb80277217dbbf151d59bb75c2e95ccc1f2eca9e9'
+          :checkpoint => '733fd0d9c7c8fb25163f656cb80277217dbbf151d59bb75c2e95ccc1f2eca9e9'
   name 'SecondBar'
   homepage 'https://blog.boastr.net/?page_id=79'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

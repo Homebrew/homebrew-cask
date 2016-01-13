@@ -5,7 +5,7 @@ cask 'atom' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"
   appcast 'https://github.com/atom/atom/releases.atom',
-          :sha256 => 'f6eb5ed94e0d68fd64ad7be63ddacfaea7b3e29e237648c44c3b22e87c8b5ef8'
+          :checkpoint => 'f6eb5ed94e0d68fd64ad7be63ddacfaea7b3e29e237648c44c3b22e87c8b5ef8'
   name 'Github Atom'
   homepage 'https://atom.io/'
   license :mit

@@ -6,7 +6,7 @@ cask 'flashlight' do
   # Original discussion: https://github.com/nate-parrott/Flashlight/issues/104
   url 'https://flashlightplugins.appspot.com/latest_download'
   appcast 'https://raw.githubusercontent.com/nate-parrott/flashlight/master/Appcast.xml',
-          :sha256 => '612946c9e6a7fd1de81bfd1cd822d4a047f986caa9451ba9bed3d3bbf57b4782'
+          :checkpoint => '612946c9e6a7fd1de81bfd1cd822d4a047f986caa9451ba9bed3d3bbf57b4782'
   name 'Flashlight'
   homepage 'https://flashlight.nateparrott.com/'
   license :gpl

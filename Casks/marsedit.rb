@@ -4,7 +4,7 @@ cask 'marsedit' do
 
   url "http://www.red-sweater.com/marsedit/MarsEdit#{version}.zip"
   appcast 'https://www.red-sweater.com/marsedit/appcast3.php',
-          :sha256 => 'dbeebc057471f81ce47f00a5cb8b8dbf8ffc44f7aeabf65d16fe3083f1cdb10b'
+          :checkpoint => 'dbeebc057471f81ce47f00a5cb8b8dbf8ffc44f7aeabf65d16fe3083f1cdb10b'
   name 'MarsEdit'
   homepage 'https://www.red-sweater.com/marsedit/'
   license :commercial

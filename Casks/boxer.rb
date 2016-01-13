@@ -5,7 +5,7 @@ cask 'boxer' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/downloads/alunbestor/Boxer/boxer-#{version}.1.zip"
   appcast 'http://boxerapp.com/appcast',
-          :sha256 => 'a10cdac61d93d372ed5cef515d7d59cf5bfeb45c276ba3e576694d0c369fa831'
+          :checkpoint => 'a10cdac61d93d372ed5cef515d7d59cf5bfeb45c276ba3e576694d0c369fa831'
   name 'Boxer'
   homepage 'http://boxerapp.com/'
   license :gpl

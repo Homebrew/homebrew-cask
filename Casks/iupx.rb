@@ -4,7 +4,7 @@ cask 'iupx' do
 
   url "http://downloads.sourceforge.net/sourceforge/iupx/iUPX_#{version.sub('.', '_')}_universal.zip"
   appcast 'http://iupx.sourceforge.net/updates/appcast.xml',
-          :sha256 => '4dbae1b69841d573fa64a4feef160079843d545534815fe1c606e87b43d6cfc3'
+          :checkpoint => '4dbae1b69841d573fa64a4feef160079843d545534815fe1c606e87b43d6cfc3'
   name 'iUPX'
   homepage 'http://iupx.sourceforge.net'
   license :gpl

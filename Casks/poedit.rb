@@ -10,7 +10,7 @@ cask 'poedit' do
 
     url "https://download.poedit.net/Poedit-#{version}.zip"
     appcast 'https://poedit.net/updates/osx/appcast',
-            :sha256 => '122d34b6cba0987f59e4791ae85f3ff48a896531400852d3f195213f0c72bb49'
+            :checkpoint => '122d34b6cba0987f59e4791ae85f3ff48a896531400852d3f195213f0c72bb49'
   end
 
   name 'Poedit'

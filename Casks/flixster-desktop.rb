@@ -5,7 +5,7 @@ cask 'flixster-desktop' do
   # cloudfront.net is the official download host per the vendor homepage
   url 'https://dtmmt9rxsy2no.cloudfront.net/desktop/mac/FlixsterDesktop.zip'
   appcast 'https://dtmmt9rxsy2no.cloudfront.net/desktop/mac/FlixsterDesktopMacAppcast.xml',
-          :sha256 => 'a427240ad5a5a433173df4b5cc7462644209d4da3476734fc77154498d0da598'
+          :checkpoint => 'a427240ad5a5a433173df4b5cc7462644209d4da3476734fc77154498d0da598'
   name 'Flixster Desktop for Mac'
   homepage 'https://www.flixster.com/about/ultraviolet/'
   license :gratis

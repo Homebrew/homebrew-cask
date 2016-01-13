@@ -4,7 +4,7 @@ cask 'gear-player' do
 
   url 'https://dl.gearmusicplayer.com/gearupdate.zip'
   appcast 'https://dl.gearmusicplayer.com/gearcast.xml',
-          :sha256 => '594b38a46538ffb93a5ecb4c0d99d6b541f82a9ed55a28822823e1ad970d4529'
+          :checkpoint => '594b38a46538ffb93a5ecb4c0d99d6b541f82a9ed55a28822823e1ad970d4529'
   name 'Gear Player'
   homepage 'https://www.gearmusicplayer.com'
   license :commercial

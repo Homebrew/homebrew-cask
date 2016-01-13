@@ -4,7 +4,7 @@ cask 'screenhero' do
 
   url 'https://secure.screenhero.com/update/screenhero/Screenhero.dmg'
   appcast 'http://dl.screenhero.com/update/screenhero/sparkle.xml',
-          :sha256 => '3b8ea92b934782ea5fe7d21760d98554443f7f95f34e464ca4d90021f6c4912c'
+          :checkpoint => '3b8ea92b934782ea5fe7d21760d98554443f7f95f34e464ca4d90021f6c4912c'
   name 'Screenhero'
   homepage 'https://screenhero.com/'
   license :commercial

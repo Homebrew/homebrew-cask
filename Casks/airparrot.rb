@@ -4,7 +4,7 @@ cask 'airparrot' do
 
   url "https://download.airsquirrels.com/AirParrot2/Mac/AirParrot-#{version}.dmg"
   appcast 'https://updates.airsquirrels.com/AirParrot2/Mac/AirParrot2.xml',
-          :sha256 => '758a5fd4a47e64ba421cf6b3187b0b49af0373e246c376e6c7e18cd675b508fb'
+          :checkpoint => '758a5fd4a47e64ba421cf6b3187b0b49af0373e246c376e6c7e18cd675b508fb'
   name 'AirParrot'
   homepage 'http://www.airsquirrels.com/airparrot/'
   license :commercial

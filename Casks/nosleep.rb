@@ -4,7 +4,7 @@ cask 'nosleep' do
 
   url "https://github.com/integralpro/nosleep/releases/download/v#{version}/NoSleep-#{version}.dmg"
   appcast 'https://github.com/integralpro/nosleep/releases.atom',
-          :sha256 => '1eaf1f3d98aa20ecf03d10f96c4558a916651c46138d80cf86b5f8afe56c5b43'
+          :checkpoint => '1eaf1f3d98aa20ecf03d10f96c4558a916651c46138d80cf86b5f8afe56c5b43'
   name 'NoSleep'
   homepage 'https://integralpro.github.io/nosleep/'
   license :gpl

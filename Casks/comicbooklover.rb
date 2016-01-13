@@ -4,7 +4,7 @@ cask 'comicbooklover' do
 
   url "https://www.bitcartel.com/downloads/comicbooklover_#{version.sub(%r{.*_}, '')}.zip"
   appcast 'https://www.bitcartel.com/appcast/comicbooklover-1.7-dsa.xml',
-          :sha256 => '7e76c3f92be7769a3b7d0a111fab887f31c096c65b9f99d8a193f3492ca4d5fe'
+          :checkpoint => '7e76c3f92be7769a3b7d0a111fab887f31c096c65b9f99d8a193f3492ca4d5fe'
   name 'ComicBookLover'
   homepage 'https://www.bitcartel.com/comicbooklover/'
   license :commercial

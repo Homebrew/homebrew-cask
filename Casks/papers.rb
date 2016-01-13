@@ -4,7 +4,7 @@ cask 'papers' do
 
   url "http://appcaster.papersapp.com/apps/mac/production/download/#{version.after_comma}/papers_#{version.before_comma.no_dots}_#{version.after_comma}.dmg"
   appcast 'http://appcaster.papersapp.com/apps/mac/production/appcast.xml',
-          :sha256 => '58187e3a0515dc4460bbfe1f106919bf257185c15e7a6c510648b16d7458e09f'
+          :checkpoint => '58187e3a0515dc4460bbfe1f106919bf257185c15e7a6c510648b16d7458e09f'
   name 'Papers'
   homepage 'http://www.papersapp.com/'
   license :commercial

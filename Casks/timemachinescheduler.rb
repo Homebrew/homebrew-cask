@@ -4,7 +4,7 @@ cask 'timemachinescheduler' do
 
   url "http://www.klieme.com/Downloads/TimeMachineScheduler/TimeMachineScheduler_#{version}.zip"
   appcast 'http://www.klieme.com/Downloads/TimeMachineScheduler/appcast.xml',
-          :sha256 => '7a2f6800f438af01c48a8c6dc25a1edf2f6475daa3a83ef922d2ace70800edad'
+          :checkpoint => '7a2f6800f438af01c48a8c6dc25a1edf2f6475daa3a83ef922d2ace70800edad'
   name 'TimeMachineScheduler'
   homepage 'http://www.klieme.com/TimeMachineScheduler.html'
   license :gratis

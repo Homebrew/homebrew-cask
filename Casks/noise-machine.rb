@@ -14,7 +14,7 @@ cask 'noise-machine' do
   end
 
   appcast 'http://www.publicspace.net/app/nm.xml',
-          :sha256 => 'e60a76b8d2830d94c2bdc1dca897b1c5f1311f149c14aa50efddab79b5b6598f'
+          :checkpoint => 'e60a76b8d2830d94c2bdc1dca897b1c5f1311f149c14aa50efddab79b5b6598f'
   name 'Noise Machine'
   homepage 'http://www.publicspace.net/NoiseMachine'
   license :commercial

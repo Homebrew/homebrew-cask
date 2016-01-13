@@ -5,7 +5,7 @@ cask 'slingplayer-desktop' do
   # slingmedia.com is the official download host per the vendor homepage
   url "http://download.slingmedia.com/SlingplayerDesktop/Mac/#{version}/SlingplayerDesktop-#{version}.dmg"
   appcast 'http://qaautoupdate.sling.com/plugin_binary/downloads/SPD/Mac/DevAppcast/SlingPlayerDesktopAppcast.xml',
-          :sha256 => '9e029216959c0c1b428ac4df47f49cf9b2382ffc622b2b1038625a9be5ae143b'
+          :checkpoint => '9e029216959c0c1b428ac4df47f49cf9b2382ffc622b2b1038625a9be5ae143b'
   name 'Slingplayer Desktop'
   homepage 'http://www.slingbox.com'
   license :gratis

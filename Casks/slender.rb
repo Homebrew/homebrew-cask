@@ -4,7 +4,7 @@ cask 'slender' do
 
   url "http://downloads.dragonforged.com/slender#{version.delete('.')}.zip"
   appcast 'http://dragonforged.com/slender/sparkle/?bundleId=com.dfsw.Slender',
-          :sha256 => 'cb3da43b49eead1d877331699ba0eeb88581b04821967881d0f686b09ada8e81'
+          :checkpoint => 'cb3da43b49eead1d877331699ba0eeb88581b04821967881d0f686b09ada8e81'
   name 'Slender'
   homepage 'http://dragonforged.com/slender/'
   license :commercial

@@ -4,7 +4,7 @@ cask 'jitsi' do
 
   url "https://download.jitsi.org/jitsi/macosx/jitsi-#{version}.dmg"
   appcast 'https://download.jitsi.org/jitsi/macosx/sparkle/updates.xml',
-          :sha256 => '94bdc6bab187aa1a58d9c923938d6cf53b5b2b5f1510da278ab4391b1685adfc'
+          :checkpoint => '94bdc6bab187aa1a58d9c923938d6cf53b5b2b5f1510da278ab4391b1685adfc'
   name 'Jitsi'
   homepage 'https://jitsi.org/'
   license :gpl

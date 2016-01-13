@@ -4,7 +4,7 @@ cask 'jump-desktop' do
 
   url 'https://jumpdesktop.com/downloads/jdmac'
   appcast 'https://service.jumpdesktop.com/update/jdmac-web/appcast.xml',
-          :sha256 => '43ba2aeefaf1562ba962137dda9ea17f2166faf90b8de006c47e4f5a7e4f0808'
+          :checkpoint => '43ba2aeefaf1562ba962137dda9ea17f2166faf90b8de006c47e4f5a7e4f0808'
   name 'Jump Desktop'
   homepage 'https://jumpdesktop.com/#jdmac'
   license :commercial

@@ -4,7 +4,7 @@ cask 'hocus-focus' do
 
   url "http://hocusfoc.us/static/releases/hocusfocus-#{version}.zip"
   appcast 'http://hocusfoc.us/updates.xml',
-          :sha256 => 'fe0ae7184a40c71315e010a7307ec5bb51fca10698a8647a94d482db3bc2bd9b'
+          :checkpoint => 'fe0ae7184a40c71315e010a7307ec5bb51fca10698a8647a94d482db3bc2bd9b'
   name 'Hocus Focus'
   homepage 'http://hocusfoc.us/'
   license :gratis

@@ -4,7 +4,7 @@ cask 'jaksta' do
 
   url "http://downloads.jaksta.com/release/mac/Jaksta-#{version}.dmg"
   appcast 'http://downloads.jaksta.com/release/mac/sparkle/JakstaforMac.xml',
-          :sha256 => 'f0a160591507d8089ca848bf0c060420d149cda74aed580ccefa67968af3162f'
+          :checkpoint => 'f0a160591507d8089ca848bf0c060420d149cda74aed580ccefa67968af3162f'
   name 'Jaksta'
   homepage 'https://www.jaksta.com/Products#JakstaMediaRecorderMac'
   license :commercial

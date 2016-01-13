@@ -11,7 +11,7 @@ cask 'bettertouchtool' do
 
     url "https://boastr.net/releases/btt#{version}.zip"
     appcast 'http://appcast.boastr.net',
-            :sha256 => '96eaea7d8a1c5874044d02ad3919e45117554995a0a43914b8991323a9546b41'
+            :checkpoint => '96eaea7d8a1c5874044d02ad3919e45117554995a0a43914b8991323a9546b41'
   end
 
   name 'BetterTouchTool'

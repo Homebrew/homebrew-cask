@@ -5,7 +5,7 @@ cask 'simple-sync' do
   # roomieremote.com is the official download host per the vendor homepage
   url "https://www.roomieremote.com/b/SimpleSync-#{version.no_dots}.zip"
   appcast 'https://www.roomieremote.com/b/Simple-SyncAppcast.xml',
-          :sha256 => '6c9e8939aa495f3d789ddb3da623acd88ea819b1e8b5e510d7a7b7d11b581d62'
+          :checkpoint => '6c9e8939aa495f3d789ddb3da623acd88ea819b1e8b5e510d7a7b7d11b581d62'
   name 'Simple Sync'
   homepage 'https://simplecontrol.com/simple-sync'
   license :commercial

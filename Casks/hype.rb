@@ -4,7 +4,7 @@ cask 'hype' do
 
   url "http://static.tumult.com/hype/download/Hype-#{version.sub(%r{^.*?-}, '')}.app.zip"
   appcast 'https://tumult.com/hype/appcast_hype2.xml',
-          :sha256 => '55fd355e0639bd1413fab16736cafe1cfbc09dc6a63c22fe52b30789e85f422a'
+          :checkpoint => '55fd355e0639bd1413fab16736cafe1cfbc09dc6a63c22fe52b30789e85f422a'
   name 'Tumult Hype'
   homepage 'https://tumult.com/hype/'
   license :commercial

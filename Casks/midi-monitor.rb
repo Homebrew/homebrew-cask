@@ -4,7 +4,7 @@ cask 'midi-monitor' do
 
   url 'https://www.snoize.com/MIDIMonitor/MIDIMonitor.zip'
   appcast 'https://www.snoize.com/MIDIMonitor/MIDIMonitor.xml',
-          :sha256 => '647ee477f5c25ff5d161594c2f6d22eb9142f82ab793dba83a05fe12f64c3620'
+          :checkpoint => '647ee477f5c25ff5d161594c2f6d22eb9142f82ab793dba83a05fe12f64c3620'
   name 'MIDI Monitor'
   homepage 'https://www.snoize.com/MIDIMonitor/'
   license :bsd

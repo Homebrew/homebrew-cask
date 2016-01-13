@@ -4,7 +4,7 @@ cask 'repetier-host' do
 
   url "http://www.repetier.com/updates/rhm/Repetier-Host-Mac_#{version.gsub('.', '_')}.dmg"
   appcast 'http://www.repetier.com/updates/rhm/rhm-appcast.xml',
-          :sha256 => 'cf7fcd61c3a79b8f87cbb702a6da19ededb77b4a0caeefeabed6406a22a9efd2'
+          :checkpoint => 'cf7fcd61c3a79b8f87cbb702a6da19ededb77b4a0caeefeabed6406a22a9efd2'
   name 'Repetier-Host'
   homepage 'http://www.repetier.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

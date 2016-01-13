@@ -4,7 +4,7 @@ cask 'whiskey' do
 
   url 'http://usewhiskey.com/latest'
   appcast 'http://usewhiskey.com/appcast.xml',
-          :sha256 => '8ed356abbe036dbe99d6cb9e6a62bfeacb1387e9a03ab054446773bcb99cd439'
+          :checkpoint => '8ed356abbe036dbe99d6cb9e6a62bfeacb1387e9a03ab054446773bcb99cd439'
   name 'Whiskey'
   homepage 'http://usewhiskey.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

@@ -4,7 +4,7 @@ cask 'gas-mask' do
 
   url "http://gmask.clockwise.ee/files/gas_mask_#{version}.zip"
   appcast 'http://gmask.clockwise.ee/check_update/',
-          :sha256 => '6dfa3c1ee1ffbb8c0e62e1dd27684644608911147119857f3cfec55dc55df5db'
+          :checkpoint => '6dfa3c1ee1ffbb8c0e62e1dd27684644608911147119857f3cfec55dc55df5db'
   name 'Gas Mask'
   homepage 'http://www.clockwise.ee/'
   license :gpl

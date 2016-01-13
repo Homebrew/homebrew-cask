@@ -5,7 +5,7 @@ cask 'virtualc64' do
 
   url "http://www.dirkwhoffmann.de/virtualc64/VirtualC64_#{version}.zip"
   appcast 'http://dirkwhoffmann.de/virtualc64/VirtualC64Appcast.xml',
-          :sha256 => '52c9050f65b46e665f6dd4364b384b2d56abfa042b7297476a1ec2d481f6c8cf'
+          :checkpoint => '52c9050f65b46e665f6dd4364b384b2d56abfa042b7297476a1ec2d481f6c8cf'
   name 'Virtual C64'
   homepage 'http://www.dirkwhoffmann.de/virtualc64/'
   license :gpl

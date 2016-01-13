@@ -4,7 +4,7 @@ cask 'xmplify' do
 
   url "http://xmplifyapp.com/releases/Xmplify-#{version}.dmg"
   appcast 'http://xmplifyapp.com/appcast.xml',
-          :sha256 => 'e2c7c700b4ceb44a57e1a9f4cd5daafd1ee986d2894603ac4d7f77b4dee907db'
+          :checkpoint => 'e2c7c700b4ceb44a57e1a9f4cd5daafd1ee986d2894603ac4d7f77b4dee907db'
   name 'Xmplify'
   homepage 'http://xmplifyapp.com/'
   license :commercial

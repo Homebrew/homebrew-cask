@@ -4,7 +4,7 @@ cask 'netnewswire' do
 
   url "http://cdn.netnewswireapp.com/releases/NetNewsWire-#{version}.zip"
   appcast 'https://updates.blackpixel.com/updates?app=nnw',
-          :sha256 => '23ebe86c31816e492ad4bf62f8aef23f789fbb3a03cb53dd57d39734f07e02a9'
+          :checkpoint => '23ebe86c31816e492ad4bf62f8aef23f789fbb3a03cb53dd57d39734f07e02a9'
   name 'NetNewsWire'
   homepage 'http://netnewswireapp.com/'
   license :commercial

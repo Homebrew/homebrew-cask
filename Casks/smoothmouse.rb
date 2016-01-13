@@ -4,7 +4,7 @@ cask 'smoothmouse' do
 
   url "http://update.smoothmouse.com/SmoothMouse%20#{version}.zip"
   appcast 'http://update.smoothmouse.com/appcast.xml',
-          :sha256 => '9e89f88aca074daaee7eacfd5aecdb42ecdaa2a4cbdc4b40916a98531e059d9d'
+          :checkpoint => '9e89f88aca074daaee7eacfd5aecdb42ecdaa2a4cbdc4b40916a98531e059d9d'
   name 'SmoothMouse'
   homepage 'http://smoothmouse.com'
   license :gratis

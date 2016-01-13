@@ -4,7 +4,7 @@ cask 'insomniax' do
 
   url "http://insomniax.semaja2.net/InsomniaX-#{version}.tgz"
   appcast 'http://insomniax.semaja2.net/profile/profileInfo.php',
-          :sha256 => 'ee4c8bdae6cc13851531db7c39fba1ab1ecd75b540daaf84192256abbf530a5d'
+          :checkpoint => 'ee4c8bdae6cc13851531db7c39fba1ab1ecd75b540daaf84192256abbf530a5d'
   name 'InsomniaX'
   homepage 'https://semaja2.net/projects/insomniaxinfo/'
   license :gratis

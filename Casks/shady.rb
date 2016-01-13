@@ -4,7 +4,7 @@ cask 'shady' do
 
   url "http://instinctivecode.com/shady/shady_#{version}.zip"
   appcast 'http://instinctivecode.com/appcasts/shady.xml',
-          :sha256 => 'bcae59ef6588af2892f648519badb064c46998a73c89c97a896b77c0e69e8af4'
+          :checkpoint => 'bcae59ef6588af2892f648519badb064c46998a73c89c97a896b77c0e69e8af4'
   name 'Shady'
   homepage 'http://instinctivecode.com/shady/'
   license :oss

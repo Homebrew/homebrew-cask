@@ -5,7 +5,7 @@ cask 'mac2imgur' do
   # mileswd.com is the official download host per the vendor homepage
   url 'https://mileswd.com/mac2imgur/latest'
   appcast 'https://mileswd.com/mac2imgur/update',
-          :sha256 => 'cd85f67023a9a430f41949a60be77d0d7e4a60d2ab2a464ed3fae3497feb16bf'
+          :checkpoint => 'cd85f67023a9a430f41949a60be77d0d7e4a60d2ab2a464ed3fae3497feb16bf'
   name 'mac2imgur'
   homepage 'https://github.com/mileswd/mac2imgur'
   license :gpl

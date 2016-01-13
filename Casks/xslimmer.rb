@@ -4,7 +4,7 @@ cask 'xslimmer' do
 
   url "http://latenitesoft.com/xslimmer/download/Xslimmer_#{version.to_f}.dmg"
   appcast 'http://www.xslimmer.com/releases.xml',
-          :sha256 => 'f2c4b2c876647450cd27c337ed5ad65ab31d1d1875813f9ed66b6257bf5a5984'
+          :checkpoint => 'f2c4b2c876647450cd27c337ed5ad65ab31d1d1875813f9ed66b6257bf5a5984'
   name 'Xslimmer'
   homepage 'https://latenitesoft.com/xslimmer/'
   license :commercial

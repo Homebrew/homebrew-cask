@@ -5,7 +5,7 @@ cask 'cartographica' do
   # cluetrust.com is the official download host per the vendor homepage
   url "https://www.cluetrust.com/Downloads/Cartographica_#{version.after_comma}.dmg"
   appcast 'https://www.cluetrust.com/AppCasts/Cartographica.xml',
-          :sha256 => 'bf00baba233fdebc0fa92fab2431fe15e5142f6e0cfc5a6af4188c98215b2568'
+          :checkpoint => 'bf00baba233fdebc0fa92fab2431fe15e5142f6e0cfc5a6af4188c98215b2568'
   name 'Cartographica'
   homepage 'https://www.macgis.com/'
   license :commercial

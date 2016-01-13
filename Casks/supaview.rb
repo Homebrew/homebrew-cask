@@ -4,7 +4,7 @@ cask 'supaview' do
 
   url "http://twinside.free.fr/supaview/SupaView.#{version}.zip"
   appcast 'http://twinside.free.fr/supaview/supaview-appcast.xml',
-          :sha256 => '1a1c45ae7a9d8c16f08d9cfc79c39cce881927654d1045066a22a6beb28c51dd'
+          :checkpoint => '1a1c45ae7a9d8c16f08d9cfc79c39cce881927654d1045066a22a6beb28c51dd'
   name 'SupaView'
   homepage 'http://twinside.free.fr/supaview/'
   license :gratis

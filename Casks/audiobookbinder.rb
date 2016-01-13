@@ -4,7 +4,7 @@ cask 'audiobookbinder' do
 
   url "http://bluezbox.com/audiobookbinder/AudiobookBinder-#{version}.dmg"
   appcast 'http://bluezbox.com/audiobookbinder/appcast.xml',
-          :sha256 => '1ee1709229e5f52fcc4d07c76f60a7aab113b73791da65ca270b3f343467f4c9'
+          :checkpoint => '1ee1709229e5f52fcc4d07c76f60a7aab113b73791da65ca270b3f343467f4c9'
   name 'Audiobook Binder'
   homepage 'http://bluezbox.com/audiobookbinder.html'
   license :oss

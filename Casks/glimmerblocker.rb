@@ -4,7 +4,7 @@ cask 'glimmerblocker' do
 
   url "https://glimmerblocker.org/downloads/GlimmerBlocker-#{version}.dmg"
   appcast 'https://glimmerblocker.org/site/rss/sparkle-final.xml',
-          :sha256 => '959783d7fcc3eb091d1e817a3f8bb481515beb936b43e8759ca44c503d8a77c1'
+          :checkpoint => '959783d7fcc3eb091d1e817a3f8bb481515beb936b43e8759ca44c503d8a77c1'
   name 'GlimmerBlocker'
   homepage 'https://glimmerblocker.org/'
   license :gpl

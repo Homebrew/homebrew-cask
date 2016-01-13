@@ -4,7 +4,7 @@ cask 'imodsign' do
 
   url 'https://imzdl.com/iModSign/iModSign.zip'
   appcast 'https://imzdl.com/iModSign/appcast.xml',
-          :sha256 => '9e1817d65a5f1c55e0705b9119f2ca078a1a27cd5f6a3067c90fb14bf5e293aa'
+          :checkpoint => '9e1817d65a5f1c55e0705b9119f2ca078a1a27cd5f6a3067c90fb14bf5e293aa'
   name 'iModSign'
   homepage 'https://imzdl.com'
   license :closed

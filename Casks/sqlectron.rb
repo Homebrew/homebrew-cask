@@ -4,7 +4,7 @@ cask 'sqlectron' do
 
   url "https://github.com/sqlectron/sqlectron-gui/releases/download/v#{version}/Sqlectron-darwin-x64.zip"
   appcast 'https://github.com/sqlectron/sqlectron-gui/releases.atom',
-          :sha256 => '4a00f5ddffcc8f6621f7f6e51ed38c7cd872ab837e6d54b312ea3540d0a96d36'
+          :checkpoint => '4a00f5ddffcc8f6621f7f6e51ed38c7cd872ab837e6d54b312ea3540d0a96d36'
   name 'Sqlectron'
   homepage 'https://sqlectron.github.io/'
   license :mit

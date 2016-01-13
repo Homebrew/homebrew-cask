@@ -4,7 +4,7 @@ cask 'origami' do
 
   url "https://origami.facebook.com/download/Origami-#{version}.zip"
   appcast 'https://facebook.github.io/origami/update/updates.xml.rss',
-          :sha256 => '6fa7cf186162dfda50e569656237448d3a3e4b14ff0d32c753ca09654b19e8d3'
+          :checkpoint => '6fa7cf186162dfda50e569656237448d3a3e4b14ff0d32c753ca09654b19e8d3'
   name 'Origami'
   homepage 'https://facebook.github.io/origami'
   license :gratis

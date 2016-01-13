@@ -5,7 +5,7 @@ cask 'cocoapods' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/CocoaPods/CocoaPods-app/releases/download/#{version}/CocoaPods.app-#{version}.tar.bz2"
   appcast 'https://app.cocoapods.org/sparkle',
-          :sha256 => '4dcf12abf3405095e524c85296485b3e20d27ace4f176025ecff769e8befb001'
+          :checkpoint => '4dcf12abf3405095e524c85296485b3e20d27ace4f176025ecff769e8befb001'
   name 'CocoaPods.app'
   homepage 'https://cocoapods.org/'
   license :mit

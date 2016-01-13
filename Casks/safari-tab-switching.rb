@@ -4,7 +4,7 @@ cask 'safari-tab-switching' do
 
   url "https://github.com/rs/SafariTabSwitching/releases/download/#{version}/Safari.Tab.Switching-#{version}.zip"
   appcast 'https://github.com/rs/SafariTabSwitching/releases.atom',
-          :sha256 => '8f472627f4f0c83a4d91e0c3b54ba23abe7a8ad907c05c8c1c4902ae4bb979d6'
+          :checkpoint => '8f472627f4f0c83a4d91e0c3b54ba23abe7a8ad907c05c8c1c4902ae4bb979d6'
   name 'Safari Tab Switching'
   homepage 'https://github.com/rs/SafariTabSwitching'
   license :oss

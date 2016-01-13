@@ -5,7 +5,7 @@ cask 'mplayerx' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/mplayerx-osx/MPlayerX-#{version}.zip"
   appcast 'https://raw.githubusercontent.com/niltsh/MPlayerX-Deploy/master/appcast.xml',
-          :sha256 => 'c1d0ce3488c89219e8e3ba39f0348ea34b88c752d09b42c019fdc92f89f70383'
+          :checkpoint => 'c1d0ce3488c89219e8e3ba39f0348ea34b88c752d09b42c019fdc92f89f70383'
   name 'MPlayerX'
   homepage 'http://mplayerx.org/'
   license :oss

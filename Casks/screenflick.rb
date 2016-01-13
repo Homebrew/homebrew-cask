@@ -4,7 +4,7 @@ cask 'screenflick' do
 
   url "https://store.araelium.com/screenflick/downloads/versions/Screenflick#{version}.zip"
   appcast 'https://arweb-assets.s3.amazonaws.com/downloads/screenflick/screenflick2.xml',
-          :sha256 => '2d5c82ae20520bcce65187fa43a218447b815ceaa903700b3edf397973bc7206'
+          :checkpoint => '2d5c82ae20520bcce65187fa43a218447b815ceaa903700b3edf397973bc7206'
   name 'Screenflick'
   homepage 'http://www.araelium.com/screenflick/'
   license :commercial

@@ -4,7 +4,7 @@ cask 'lyn' do
 
   url "http://www.lynapp.com/downloads/Lyn-#{version}.dmg"
   appcast 'http://www.lynapp.com/lyn/update.xml',
-          :sha256 => '095046c5cb09f4e73d4de78cd8d3a97c05fa89b95a4f7a65fe954680c7a284c9'
+          :checkpoint => '095046c5cb09f4e73d4de78cd8d3a97c05fa89b95a4f7a65fe954680c7a284c9'
   name 'Lyn'
   homepage 'http://www.lynapp.com/'
   license :commercial

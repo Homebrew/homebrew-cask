@@ -4,7 +4,7 @@ cask 'airdisplay' do
 
   url "https://www.avatron.com/updates/software/airdisplay/ad#{version.delete('.')}.zip"
   appcast 'https://avatron.com/updates/software/airdisplay/appcast.xml',
-          :sha256 => '02fc57a78f2222a28af08168595d30b81adf3474bd9a456e9fd59d132b51caaf'
+          :checkpoint => '02fc57a78f2222a28af08168595d30b81adf3474bd9a456e9fd59d132b51caaf'
   name 'Air Display'
   homepage 'https://avatron.com/apps/air-display/'
   license :commercial

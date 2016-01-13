@@ -4,7 +4,7 @@ cask 'vocabulist' do
 
   url "http://vocabulistapp.com/downloads/Vocabulist-#{version}.dmg"
   appcast 'http://vocabulistapp.com/downloads/appcast.xml',
-          :sha256 => 'f3beeac460e424a0e8cdca3920ad896881b62ebdf981351fdcc321e68a2b5057'
+          :checkpoint => 'f3beeac460e424a0e8cdca3920ad896881b62ebdf981351fdcc321e68a2b5057'
   name 'Vocabulist'
   homepage 'http://vocabulistapp.com/'
   license :oss

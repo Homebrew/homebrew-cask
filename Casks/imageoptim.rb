@@ -4,7 +4,7 @@ cask 'imageoptim' do
 
   url "https://imageoptim.com/ImageOptim#{version}.tar.bz2"
   appcast 'https://imageoptim.com/appcast.xml',
-          :sha256 => 'e28aa824852a519070a7b37bbbc5e65edf54826f5e72ece9b7599aa431a81d4c'
+          :checkpoint => 'e28aa824852a519070a7b37bbbc5e65edf54826f5e72ece9b7599aa431a81d4c'
   name 'ImageOptim'
   homepage 'https://imageoptim.com/'
   license :gpl

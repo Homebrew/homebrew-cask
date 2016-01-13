@@ -4,7 +4,7 @@ cask 'couleurs' do
 
   url "https://couleursapp.com/couleurs-#{version}.zip"
   appcast 'https://couleursapp.com/updates/releases.xml',
-          :sha256 => 'b0f2d4c4d39692fea7ecd32f1951525bb7c73b90cbbbf2212b22f13635b2c05f'
+          :checkpoint => 'b0f2d4c4d39692fea7ecd32f1951525bb7c73b90cbbbf2212b22f13635b2c05f'
   name 'Couleurs'
   homepage 'https://couleursapp.com/'
   license :gratis

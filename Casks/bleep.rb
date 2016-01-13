@@ -5,7 +5,7 @@ cask 'bleep' do
   # utorrent.com is the official download host per the vendor homepage
   url 'https://download-new.utorrent.com/endpoint/bleep/os/osx/track/stable/'
   appcast 'https://bleeposx.bittorrent.com/appcast.xml',
-          :sha256 => 'd5b0b2228b2f8186d501dcb48101a8945169668f21a4424631d696231f545c31'
+          :checkpoint => 'd5b0b2228b2f8186d501dcb48101a8945169668f21a4424631d696231f545c31'
   name 'BitTorrent Bleep'
   homepage 'http://www.bleep.pm/'
   license :gratis

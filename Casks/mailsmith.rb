@@ -4,7 +4,7 @@ cask 'mailsmith' do
 
   url "http://www.mailsmith.org/files/mailsmith-#{version.delete('.')}.dmg"
   appcast 'http://www.mailsmith.org/files/MailsmithSUFeed.xml',
-          :sha256 => '8a01c594f885a7e898f802707bdf105cec9aec3390138ba851353ca80d363bf5'
+          :checkpoint => '8a01c594f885a7e898f802707bdf105cec9aec3390138ba851353ca80d363bf5'
   name 'Mailsmith'
   homepage 'http://www.mailsmith.org/'
   license :gratis

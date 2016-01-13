@@ -4,7 +4,7 @@ cask 'tangerine' do
 
   url 'http://distrib.karelia.com/downloads/Tangerine!-4008.zip'
   appcast 'https://launch.karelia.com/appcast.php?version=0&product=13&appname=Tangerine!',
-          :sha256 => '1fd629ecb579272a5a0033500cd72a9396bb26dc53eb0cb24b7302d0ff529501'
+          :checkpoint => '1fd629ecb579272a5a0033500cd72a9396bb26dc53eb0cb24b7302d0ff529501'
   name 'Tangerine!'
   homepage 'https://www.karelia.com/products/tangerine/'
   license :commercial

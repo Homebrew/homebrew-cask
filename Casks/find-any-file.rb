@@ -5,7 +5,7 @@ cask 'find-any-file' do
   # amazonaws.com is the official download host per the vendor homepage
   url "http://files.tempel.org.s3.amazonaws.com/FindAnyFile_#{version}.zip"
   appcast 'http://apps.tempel.org/FindAnyFile/appcast.xml',
-          :sha256 => 'b3d4794ed2b92a1aa22282e8cb1c8031edbf433b3845546e564f14d1c2125d76'
+          :checkpoint => 'b3d4794ed2b92a1aa22282e8cb1c8031edbf433b3845546e564f14d1c2125d76'
   name 'Find Any File'
   homepage 'http://apps.tempel.org/FindAnyFile/'
   license :commercial

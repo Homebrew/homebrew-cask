@@ -4,7 +4,7 @@ cask 'eloquent' do
 
   url "https://launchpad.net/eloquent/trunk/#{version}/+download/Eloquent-#{version}.app.zip"
   appcast 'http://www.eloquent-bible-study.eu/Eloquent_L2_Appcast.xml',
-          :sha256 => '4318901483b75e6f9cbef00639272cf42904149ea3021294472800bc3e393b99'
+          :checkpoint => '4318901483b75e6f9cbef00639272cf42904149ea3021294472800bc3e393b99'
   name 'Eloquent'
   homepage 'https://launchpad.net/eloquent'
   license :gratis

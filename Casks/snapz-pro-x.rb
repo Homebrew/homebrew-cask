@@ -4,7 +4,7 @@ cask 'snapz-pro-x' do
 
   url "http://downloads3.ambrosiasw.com/snapzprox/essentials/SnapzProX#{version.to_i}.dmg"
   appcast 'https://www.ambrosiasw.com/updates/profile.php/snapz_pro_x/release',
-          :sha256 => '77800abfc3516a95df06bd546b09042461554335bc47b065fd5b54d006e1fcd1'
+          :checkpoint => '77800abfc3516a95df06bd546b09042461554335bc47b065fd5b54d006e1fcd1'
   name 'Snapz Pro X'
   homepage 'http://www.ambrosiasw.com/utilities/snapzprox/'
   license :commercial

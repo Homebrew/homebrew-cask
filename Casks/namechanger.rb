@@ -4,7 +4,7 @@ cask 'namechanger' do
 
   url "https://www.mrrsoftware.com/Downloads/NameChanger/Updates/NameChanger-#{version.dots_to_underscores}.zip"
   appcast 'https://mrrsoftware.com/Downloads/NameChanger/Updates/NameChangerSoftwareUpdates.xml',
-          :sha256 => 'aee6a4f9a3f496fe96f63509377655a5e48551106c34afbabea1e4e47ec65c66'
+          :checkpoint => 'aee6a4f9a3f496fe96f63509377655a5e48551106c34afbabea1e4e47ec65c66'
   name 'NameChanger'
   homepage 'https://mrrsoftware.com/namechanger/'
   license :gratis

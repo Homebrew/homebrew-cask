@@ -4,7 +4,7 @@ cask 'enjoyable' do
 
   url "https://yukkurigames.com/enjoyable/Enjoyable-#{version}.zip"
   appcast 'https://yukkurigames.com/enjoyable/appcast.xml',
-          :sha256 => '22631322161a222d987ec60cac86b9fea313b93c25b87c69ff440657c2c9e037'
+          :checkpoint => '22631322161a222d987ec60cac86b9fea313b93c25b87c69ff440657c2c9e037'
   name 'Enjoyable'
   homepage 'https://yukkurigames.com/enjoyable/'
   license :gratis

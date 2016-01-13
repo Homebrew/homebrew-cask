@@ -5,7 +5,7 @@ cask 'anvil' do
   # amazonaws.com is the official download host as per the vendor homepage
   url "https://s3.amazonaws.com/sparkler_versions/versions/uploads/000/000/120/original/Anvil_#{version}.zip"
   appcast 'https://sparkler.herokuapp.com/apps/3/updates.xml',
-          :sha256 => '4a0d074e6cf29c1162af49cd778d53c9f64c2508f26d782a7030675e4f68ed36'
+          :checkpoint => '4a0d074e6cf29c1162af49cd778d53c9f64c2508f26d782a7030675e4f68ed36'
   name 'Anvil'
   homepage 'http://anvilformac.com/'
   license :mit

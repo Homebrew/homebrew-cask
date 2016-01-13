@@ -4,7 +4,7 @@ cask 'divvy' do
 
   url "https://mizage.com/downloads/Divvy_#{version}.zip"
   appcast 'https://mizage.com/updates/profiles/divvy.php',
-          :sha256 => '74ffc4cfa2896020f986fa3a6c5a1c4c697023a482af998345ce8bd7974e058f'
+          :checkpoint => '74ffc4cfa2896020f986fa3a6c5a1c4c697023a482af998345ce8bd7974e058f'
   name 'Divvy'
   homepage 'https://mizage.com/divvy/'
   license :commercial

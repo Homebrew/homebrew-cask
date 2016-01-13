@@ -4,7 +4,7 @@ cask 'flexiglass' do
 
   url "http://downloads.nulana.com/flexiglass/Flexiglass-#{version}.zip"
   appcast 'http://downloads.nulana.com/flexiglass/appcast.xml',
-          :sha256 => '02e04a49dad7cf9edafa0369cb110b31fda5316877cbd2551e7011ff036cb519'
+          :checkpoint => '02e04a49dad7cf9edafa0369cb110b31fda5316877cbd2551e7011ff036cb519'
   name 'Flexiglass'
   homepage 'http://nulana.com/flexiglass/'
   license :commercial

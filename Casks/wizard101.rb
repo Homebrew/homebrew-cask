@@ -4,7 +4,7 @@ cask 'wizard101' do
 
   url 'http://versionec.us.wizard101.com//Wizard101.dmg'
   appcast 'http://versionec.us.wizard101.com//Wizard101.xml',
-          :sha256 => '2e6dcb002e411bc8a692a4f10f4437e311c14d8f87cd8ef3ed820429ae23ca97'
+          :checkpoint => '2e6dcb002e411bc8a692a4f10f4437e311c14d8f87cd8ef3ed820429ae23ca97'
   name 'Wizard101'
   homepage 'https://www.wizard101.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

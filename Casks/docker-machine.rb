@@ -5,7 +5,7 @@ cask 'docker-machine' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/docker/machine/releases/download/v#{version}/docker-machine_darwin-amd64"
   appcast 'https://github.com/docker/machine/releases.atom',
-          :sha256 => '85dafeba763acbb1431ad940e35a024af5b8e4dc81a57148b630aa42534dca40'
+          :checkpoint => '85dafeba763acbb1431ad940e35a024af5b8e4dc81a57148b630aa42534dca40'
   name 'Docker Machine'
   homepage 'https://docs.docker.com/machine'
   license :apache

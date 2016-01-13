@@ -4,7 +4,7 @@ cask 'gitter' do
 
   url "https://update.gitter.im/osx/Gitter-#{version}.dmg"
   appcast 'https://update.gitter.im/osx/appcast.xml',
-          :sha256 => 'eecf1a4fd5c18590f0cae29af9de6df06351042e3ef86ac7e21f657c22ea48f4'
+          :checkpoint => 'eecf1a4fd5c18590f0cae29af9de6df06351042e3ef86ac7e21f657c22ea48f4'
   name 'Gitter'
   homepage 'https://gitter.im/'
   license :freemium

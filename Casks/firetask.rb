@@ -4,7 +4,7 @@ cask 'firetask' do
 
   url "http://downloads.firetask.com/firetask-mac/Firetask-Mac-#{version}.zip"
   appcast 'http://www.firetask.com/firetask-mac/updates/firetask-mac.xml',
-          :sha256 => '7ca12cc0992bcf535bd81d841b08b0a1de6e7dfba934dbc018bcc8bf45fadad6'
+          :checkpoint => '7ca12cc0992bcf535bd81d841b08b0a1de6e7dfba934dbc018bcc8bf45fadad6'
   name 'FireTask'
   homepage 'http://firetask.com'
   license :commercial

@@ -4,7 +4,7 @@ cask 'cloak' do
 
   url "https://static.getcloak.com/downloads/osx/updates/Release/Cloak-#{version}.dmg"
   appcast 'https://www.getcloak.com/updates/osx/public/',
-          :sha256 => '489c072792a4440ec012035d0b15b289c1c67deaa355cf286751762e0f684f9b'
+          :checkpoint => '489c072792a4440ec012035d0b15b289c1c67deaa355cf286751762e0f684f9b'
   name 'Cloak'
   homepage 'https://www.getcloak.com'
   license :gratis

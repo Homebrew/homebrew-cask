@@ -4,7 +4,7 @@ cask 'protonet' do
 
   url "http://clients.protonet.info/osx/stable/protonet-#{version}.zip"
   appcast 'http://clients.protonet.info/osx/stable/appcast.xml',
-          :sha256 => 'c7647efce7af2687caa0ce9df3ea838b9aa4b3c3679641d2c7e971a756dce0a0'
+          :checkpoint => 'c7647efce7af2687caa0ce9df3ea838b9aa4b3c3679641d2c7e971a756dce0a0'
   name 'Protonet'
   homepage 'http://clients.protonet.info/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
