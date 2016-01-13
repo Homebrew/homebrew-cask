@@ -1,6 +1,6 @@
 cask 'battery-report' do
-  version :latest
-  sha256 :no_check
+  version '1.2.0'
+  sha256 'd77969d003b940fbce8ca6c7899f1d8911b972a75f61c8ea12df2c42346b6fda'
 
   url 'https://www.dssw.co.uk/batteryreport/dsswbatteryreport.dmg'
   appcast 'https://version.dssw.co.uk/batteryreport/standard',
