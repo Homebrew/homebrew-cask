@@ -1,6 +1,6 @@
 cask 'battery-guardian' do
-  version :latest
-  sha256 :no_check
+  version '1.1.0'
+  sha256 'cf9ebfe03fbd1bc1e841dcf9eaa3d5e71132245b22e0d6338a281ab192afad79'
 
   url 'https://www.dssw.co.uk/batteryguardian/dsswbatteryguardian.dmg'
   appcast 'https://version.dssw.co.uk/batteryguardian/standard',
