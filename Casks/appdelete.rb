@@ -1,6 +1,6 @@
 cask 'appdelete' do
-  version :latest
-  sha256 :no_check
+  version '4.2.2'
+  sha256 '567da30120737f1ffe67478ad7008023abfd0493212cdcead718a60d34e9da8a'
 
   url 'http://www.reggieashworth.com/downloads/AppDelete.dmg'
   appcast 'http://www.reggieashworth.com/AD4Appcast.xml',
