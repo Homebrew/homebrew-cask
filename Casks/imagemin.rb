@@ -4,7 +4,7 @@ cask 'imagemin' do
 
   url "https://github.com/imagemin/imagemin-app/releases/download/#{version}/imagemin-app-v#{version}-darwin.zip"
   appcast 'https://github.com/imagemin/imagemin-app/releases.atom',
-          :sha256 => '941c5b106f525dfd9e9459aef979c2224a8d00272313b75811bc2aa3ad48bcf5'
+          :checkpoint => '941c5b106f525dfd9e9459aef979c2224a8d00272313b75811bc2aa3ad48bcf5'
   name 'imagemin'
   homepage 'https://github.com/imagemin/imagemin-app'
   license :mit

@@ -5,7 +5,7 @@ cask 'inssider' do
   # metageek.net is the official download host per the vendor homepage
   url "http://files.metageek.net/downloads/inSSIDer#{version.major}-installer.dmg"
   appcast 'http://www.metageek.com/misc/versions/MacSSIDer/MacSSIDer_appcast.xml',
-          :sha256 => '0f428f51658210944724edf5daedb6003735a59ad701bfd09477c1249f471cfb'
+          :checkpoint => 'fd7b7d1cff572bf9567cb87524e4db3e6c01115d52ab70ceca9523d04bb17c26'
   name 'inSSIDer'
   homepage 'http://www.inssider.com/'
   license :commercial

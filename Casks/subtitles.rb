@@ -4,7 +4,7 @@ cask 'subtitles' do
 
   url "http://subtitlesapp.com/download/Subtitles-mac-#{version}.zip"
   appcast 'http://subtitlesapp.com/updates.xml',
-          :sha256 => '639d4dd71085e2df4aff0e863698574082f3f3bc8d2e93c53f5c9da39e1df8b9'
+          :checkpoint => 'a5a1ef9ee94168d9522dbd922d5e292af79766e9dca5f79f1772bc548085b2a9'
   name 'Subtitles'
   homepage 'http://subtitlesapp.com'
   license :commercial

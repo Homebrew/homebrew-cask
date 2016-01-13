@@ -4,7 +4,7 @@ cask 'expandrive' do
 
   url "http://updates.expandrive.com/apps/expandrive/v/#{version.dots_to_hyphens}/download.dmg"
   appcast 'http://updates.expandrive.com/appcast/expandrive.xml?version=3',
-          :sha256 => '6d7e2c74ac535da1b8d211107eea7ba3c48455793e5b07ec4bf52a9f24afed96'
+          :checkpoint => 'd15a5204fac3d80d0f2a6386b07391d3c3f65791455af300600ca0ff1331fcad'
   name 'ExpanDrive'
   homepage 'https://www.expandrive.com/expandrive'
   license :commercial

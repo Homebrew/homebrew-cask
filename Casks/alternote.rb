@@ -4,7 +4,7 @@ cask 'alternote' do
 
   url "http://alternoteapp.com/assets/downloads/Alternote#{version.sub(%r{.*_}, '')}.zip"
   appcast 'http://alternoteapp.com/assets/appcast.xml',
-          :sha256 => 'a0dae1f2ae1022036c3b4f4b0000ffd84e7a75ebc9a9db3f48b20eda8ffcbef3'
+          :checkpoint => '0d5cf38032fb44cb02d4fa5cf2d30b5853cfa0568cbdd66e2d1dd3f590d419f7'
   name 'Alternote'
   homepage 'http://alternoteapp.com/'
   license :commercial

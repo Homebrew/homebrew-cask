@@ -4,7 +4,7 @@ cask 'iexplorer' do
 
   url "https://www.macroplant.com/release/iExplorer-#{version}.dmg"
   appcast 'https://www.macroplant.com/iexplorer/ie3-appcast.xml',
-          :sha256 => '03bc1c95590f550bbafbeaf9b55af592a154d2faf87c1f82172e103424780b2c'
+          :checkpoint => 'f3523ef8974ea4face7eda1b6b6115bd6a393833f5f0043a7f0869896bb97f00'
   name 'iExplorer'
   homepage 'https://www.macroplant.com/iexplorer/'
   license :freemium

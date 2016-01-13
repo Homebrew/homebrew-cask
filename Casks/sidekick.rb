@@ -5,7 +5,7 @@ cask 'sidekick' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'http://releases.oomphalot.com.s3-website-us-east-1.amazonaws.com/Sidekick/Sidekick.zip'
   appcast 'http://updates.oomphalot.com/?app=Sidekick',
-          :sha256 => 'c40321d5554f65b4d54b6258b8d808350e4992e5ef1cb65b3b9272b383e58de3'
+          :checkpoint => '3189e9a047142b750c4a04e2d5b1b83fb3424581e9430688b07a48c148767fe1'
   name 'Sidekick'
   homepage 'http://oomphalot.com/sidekick/'
   license :commercial

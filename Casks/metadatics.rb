@@ -4,7 +4,7 @@ cask 'metadatics' do
 
   url 'http://www.markvapps.com/applications/metadatics/Metadatics.zip'
   appcast 'http://www.markvapps.com/applications/metadatics/metadatics_appcast.xml',
-          :sha256 => 'dd15e8dbbc8fa5479224534b19f6cb3166f5aed388f7caebad521e1f98b47317'
+          :checkpoint => '02ccedda9536d6f20470fb2e8e97dfeb6152a7b804e33dceef804b6626431db3'
   name 'Metadatics'
   homepage 'http://markvapps.com/metadatics'
   license :commercial

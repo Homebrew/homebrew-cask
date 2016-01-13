@@ -4,7 +4,7 @@ cask 'texshop' do
 
   url "http://pages.uoregon.edu/koch/texshop/texshop-64/texshop#{version.sub('.', '')}.zip"
   appcast 'http://pages.uoregon.edu/koch/texshop/texshop-64/texshopappcast.xml',
-          :sha256 => '1bc33bfa9eb4cc5d540b5cc2653b8172dd3eead094bc3fbf2b950df6f65c73c2'
+          :checkpoint => 'a20d654b0fbd712d421b6af0cac57f96241298f0fc870ae191c79e50bc5ebfbd'
   name 'TeXShop'
   homepage 'http://pages.uoregon.edu/koch/texshop'
   license :gpl

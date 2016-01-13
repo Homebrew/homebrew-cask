@@ -5,7 +5,7 @@ cask 'sonora' do
   # github.com is the official download host per the vendor homepage
   url 'https://github.com/downloads/sonoramac/Sonora/Sonora.zip'
   appcast 'https://getsonora.com/updates/sonora2.xml',
-          :sha256 => '1f1bc37f92e4e02d1370733d50c9460bb0266e79cd2efe50303381f2769f50b7'
+          :checkpoint => '6bc10e0ee1e63b8d453557ffba549974fcca1e0847f7b5ecd7d96e4595e1458d'
   name 'Sonora'
   homepage 'https://getsonora.com/'
   license :gratis

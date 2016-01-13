@@ -5,7 +5,7 @@ cask 'foldingtext' do
   # amazonaws.com is the official download host per the appcast feed
   url "https://FoldingText.s3.amazonaws.com/FoldingText-#{version}.dmg"
   appcast 'https://foldingtext.s3.amazonaws.com/FoldingText.rss',
-          :sha256 => '9c337ade7a35d99473ba708045550aeeb3e8d30a94931983603b69006f28d6bb'
+          :checkpoint => 'bc16b2b5bf258bd70244286243231f6487248b676f708cc95e6d81d333df416d'
   name 'FoldingText'
   homepage 'http://www.foldingtext.com'
   license :commercial

@@ -4,7 +4,7 @@ cask 'xbox360-controller-driver' do
 
   url "https://github.com/360Controller/360Controller/releases/download/v#{version}-unofficial/360ControllerInstall_#{version}_unofficial.dmg"
   appcast 'https://github.com/360Controller/360Controller/releases.atom',
-          :sha256 => 'cbedc24b52358fbe5f0bd72f4d02ee96eac271ac3b544e8a37f42d9cfe9eccf1'
+          :checkpoint => 'cbedc24b52358fbe5f0bd72f4d02ee96eac271ac3b544e8a37f42d9cfe9eccf1'
   name 'TattieBogle Xbox 360 Controller Driver (with improvements)'
   homepage 'https://github.com/360Controller/360Controller'
   license :gpl

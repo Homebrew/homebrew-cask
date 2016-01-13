@@ -4,7 +4,7 @@ cask 'videospec' do
 
   url "http://videospec.free.fr/VideoSpec_#{version}.dmg"
   appcast 'http://videospec.free.fr/release/videospec.xml',
-          :sha256 => '921ba1c98354d094d0c76efbca5ae10df6a8e963e61d5f871ce510568d2326c2'
+          :checkpoint => '17195c9c14a1c6d71726f764d54fa534b23e642492a64100186b2540fe331bed'
   name 'VideoSpec'
   homepage 'http://videospec.free.fr/english/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

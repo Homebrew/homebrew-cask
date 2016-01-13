@@ -4,7 +4,7 @@ cask 'dockertoolbox' do
 
   url "https://github.com/docker/toolbox/releases/download/v#{version}/DockerToolbox-#{version}.pkg"
   appcast 'https://github.com/docker/toolbox/releases.atom',
-          :sha256 => '8e07c5c2dc128b33d81119563c7ad6bc2a21f0b0eca3500a045b494c01d3d6ec'
+          :checkpoint => 'c9defce1f25d647de0e17f989b28a38a04b2344496e629fd0e8f1766277828d9'
   name 'Docker Toolbox'
   homepage 'https://www.docker.com/toolbox'
   license :apache

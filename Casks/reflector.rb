@@ -4,7 +4,7 @@ cask 'reflector' do
 
   url "https://download.airsquirrels.com/Reflector2/Mac/Reflector-#{version}.dmg"
   appcast 'https://updates.airsquirrels.com/Reflector2/Mac/Reflector2.xml',
-          :sha256 => '50bb6e8818a9bceab5ce5aacef0b448bcee17345ce011916d2df7ee9c4a3e666'
+          :checkpoint => '2242fafaab777ea8ff137f9994b4b73e30a64f1a524c3953ce9f49cecc817b35'
   name 'Reflector 2'
   homepage 'http://www.airsquirrels.com/reflector/'
   license :commercial

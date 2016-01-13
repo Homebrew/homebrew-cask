@@ -4,7 +4,7 @@ cask 'neofinder' do
 
   url 'http://www.cdfinder.de/neofinder.zip'
   appcast 'http://www.wfs-apps.de/updates/neofinder-appcast-64.xml',
-          :sha256 => 'd65ad22d2fb3e748acdd40108e411435870f96e8f7db4a7bd16f8642fcf2b69d'
+          :checkpoint => '61a7348103f1c225a1dca738efd97d0a10a614854f57fbf667c55480dcbe10b7'
   name 'NeoFinder'
   homepage 'http://www.cdfinder.de'
   license :commercial

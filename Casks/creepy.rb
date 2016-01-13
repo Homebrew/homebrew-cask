@@ -5,7 +5,7 @@ cask 'creepy' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/jkakavas/creepy/releases/download/v#{version}/cree.py_#{version}.dmg.zip"
   appcast 'https://github.com/jkakavas/creepy/releases.atom',
-          :sha256 => '9833afcf3b027d02970bc72454103a21a4163a1d8b6dcc88b60e3b929170ae6d'
+          :checkpoint => '9833afcf3b027d02970bc72454103a21a4163a1d8b6dcc88b60e3b929170ae6d'
   name 'Creepy'
   homepage 'http://www.geocreepy.com/'
   license :gpl

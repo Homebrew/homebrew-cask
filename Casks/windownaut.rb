@@ -4,7 +4,7 @@ cask 'windownaut' do
 
   url 'http://www.binarybakery.com/products/Windownaut.dmg'
   appcast 'http://www.binarybakery.com/products/windownaut-appcast.xml',
-          :sha256 => '9013652fc0b016429c7280f0563b65b6f6a92321744cd3c15b59eefc248f73da'
+          :checkpoint => '6edfb85c32f30aee7f9e22698fc8216ec8776296c66da8cb7c0d30dca2f13369'
   name 'Windownaut'
   homepage 'http://www.binarybakery.com/aprod/windownaut.html'
   license :commercial

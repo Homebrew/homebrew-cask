@@ -4,7 +4,7 @@ cask 'rowmote-helper' do
 
   url "http://regularrateandrhythm.com/rowmote-pro/rh/rowmote-helper-#{version}.zip"
   appcast 'http://www.regularrateandrhythm.com/apps/rowmote-pro/rowmote-appcast.xml',
-          :sha256 => 'a9465d20a89a6c36893a9cba56afc702c1049fad35340c4f468265413fbb48e0'
+          :checkpoint => '329a44fb6a09bb2ef82d924fe586feaad2ed39b25af9c89f7945a97576d90a45'
   name 'Rowmote Helper'
   homepage 'http://regularrateandrhythm.com/apps/rowmote-pro/'
   license :commercial

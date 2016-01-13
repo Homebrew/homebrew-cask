@@ -6,7 +6,7 @@ cask 'cleanmymac' do
     # devmate.com is the official download host per the appcast feed
     url "https://dl.devmate.com/com.macpaw.CleanMyMac/#{version.major_minor}/#{version.after_comma}/CleanMyMacClassic-#{version.major_minor}.zip"
     appcast 'https://updates.devmate.com/com.macpaw.CleanMyMac.xml',
-            :sha256 => '15d977eac4369d98243e283f5dd65ac906ec79311bca0cc58a502219d2a90ea2'
+            :checkpoint => 'd9ac93bf9f995dc0903a668b357dadbe7cb187bc1382f6183bc40e5d79a26802'
     app 'CleanMyMac.app'
     # TODO: add uninstall and zap stanzas for legacy app
   elsif MacOS.release <= :lion
@@ -16,7 +16,7 @@ cask 'cleanmymac' do
     # devmate.com is the official download host per the appcast feed
     url "https://dl.devmate.com/com.macpaw.CleanMyMac2/#{version.major_minor_patch}/#{version.after_comma}/CleanMyMac#{version.to_i}-#{version.major_minor_patch}.zip"
     appcast "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml",
-            :sha256 => '15d977eac4369d98243e283f5dd65ac906ec79311bca0cc58a502219d2a90ea2'
+            :checkpoint => 'd9ac93bf9f995dc0903a668b357dadbe7cb187bc1382f6183bc40e5d79a26802'
     app "CleanMyMac #{version.major}.app"
 
     uninstall :launchctl => "com.macpaw.CleanMyMac#{version.major}.Agent"
@@ -40,7 +40,7 @@ cask 'cleanmymac' do
     # devmate.com is the official download host per the appcast feed
     url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/#{version.major_minor_patch}/#{version.after_comma}/CleanMyMac3-#{version.major_minor_patch}.zip"
     appcast "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml",
-            :sha256 => '15d977eac4369d98243e283f5dd65ac906ec79311bca0cc58a502219d2a90ea2'
+            :checkpoint => 'd9ac93bf9f995dc0903a668b357dadbe7cb187bc1382f6183bc40e5d79a26802'
     app "CleanMyMac #{version.major}.app"
 
     postflight do

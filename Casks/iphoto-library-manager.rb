@@ -4,7 +4,7 @@ cask 'iphoto-library-manager' do
 
   url 'http://www.fatcatsoftware.com/iplm/iPhotoLibraryManager.zip'
   appcast 'http://www.fatcatsoftware.com/iplm/iplm4_appcast.xml',
-          :sha256 => '534f40ef59f481023f7f374d9b3241a17d98834a9a4a403d769296fbb0a76f77'
+          :checkpoint => '9cd0d4af7715f97f8390581f11d3962e35b89bff700fd4a33a074c7626348c98'
   name 'iPhoto Library Manager'
   homepage 'http://www.fatcatsoftware.com/iplm/'
   license :commercial

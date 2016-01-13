@@ -4,7 +4,7 @@ cask 'ipvanish-vpn' do
 
   url "https://www.ipvanish.com/software/osx/IPVanish_v#{version}.zip"
   appcast 'https://www.ipvanish.com/software/osx/updates.xml',
-          :sha256 => 'f7c6037421fe2d0d57c8273b34888c7a989eaa58281e5252241d0ffcb4536524'
+          :checkpoint => '999bcbe8e257f51dd07573199541e90c7fd130db717445024e2cd55b0d916507'
   name 'IPVanish'
   homepage 'https://www.ipvanish.com/'
   license :gratis

@@ -4,7 +4,7 @@ cask 'sleep-monitor' do
 
   url 'https://www.dssw.co.uk/sleepmonitor/dsswsleepmonitor.dmg'
   appcast 'https://version.dssw.co.uk/sleepmonitor/standard',
-          :sha256 => 'c15b9fa6129ab99305d23e69ff635771f1bcc97dc9da3e31d16b428c54cc7ecb'
+          :checkpoint => '495f3bf7b2abb0728d57f5e1a7648e0a55d8a38f0084591c25c944401f7ce31e'
   name 'Sleep Monitor'
   homepage 'https://www.dssw.co.uk/sleepmonitor'
   license :commercial

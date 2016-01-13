@@ -4,7 +4,7 @@ cask 'barmaid' do
 
   url "https://github.com/zenonas/barmaid/releases/download/v#{version}/Barmaid-v#{version.delete('-')}.dmg"
   appcast 'https://github.com/zenonas/barmaid/releases.atom',
-          :sha256 => '3c124e15a4425dca571ca4b1e5600a3196b48a648edfc3d4c083e98d97c9db95'
+          :checkpoint => '3c124e15a4425dca571ca4b1e5600a3196b48a648edfc3d4c083e98d97c9db95'
   name 'Barmaid'
   homepage 'https://github.com/zenonas/barmaid'
   license :mit

@@ -5,7 +5,7 @@ cask 'principle' do
   # dropboxusercontent.com is the official download host per the vendor homepage
   url "https://dl.dropboxusercontent.com/u/13897407/Principle_#{version.dots_to_underscores}.zip"
   appcast 'https://dl.dropboxusercontent.com/u/13897407/buildTrain-601A6666-57A4-4C19-BDD3-1387B3CB9719.xml',
-          :sha256 => '7db7f8f18a9886ab55a67a1298b5b56b609ae9dc849df5164bcaf61d6bf69c4d'
+          :checkpoint => '19d2ed17922df59075a92e5b8773ea28f781127f916a3e93027d1b76645c46bf'
   name 'Principle'
   homepage 'http://principleformac.com/'
   license :commercial

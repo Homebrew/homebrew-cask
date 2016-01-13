@@ -5,7 +5,7 @@ cask 'colorsnapper' do
   # amazonaws.com is the official download host per the appcast feed
   url "https://s3.amazonaws.com/cs2-binaries/ColorSnapper2-#{version.gsub('.', '_')}.zip"
   appcast 'http://colorsnapper.com/app/appcast.xml',
-          :sha256 => 'fe8f652ccabc1622dd7a6e2bc511f5a9d973cc3cc03f64d8bede9805f44bdd2e'
+          :checkpoint => '7be12d5557005c859548ed40e93e5ce57147f9cab7b4cb50a1a88e3bb01e4a33'
   name 'ColorSnapper 2'
   homepage 'http://colorsnapper.com/'
   license :commercial

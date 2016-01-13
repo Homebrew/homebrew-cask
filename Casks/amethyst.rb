@@ -4,7 +4,7 @@ cask 'amethyst' do
 
   url "https://ianyh.com/amethyst/versions/Amethyst-#{version}.zip"
   appcast 'https://ianyh.com/amethyst/appcast.xml',
-          :sha256 => '160954d849522a05450dbc1a0c2810a9764e61330b4aaad03ddf206fee1107a6'
+          :checkpoint => 'be0c9e327e43647131cf23189b8f218f13c5a4f2e9db330a1142cdb652db88e6'
   name 'Amethyst'
   homepage 'https://ianyh.com/amethyst'
   license :mit

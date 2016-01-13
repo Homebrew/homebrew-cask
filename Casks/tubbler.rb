@@ -4,7 +4,7 @@ cask 'tubbler' do
 
   url 'http://www.celmaro.com/files/tubbler/Tubbler.zip'
   appcast 'https://ssl.webpack.de/celmaro.com/updates/tubbler/tubbler.xml',
-          :sha256 => 'ab17ceb8a4ae681599626c0ccc35abaad4e1e386370f2b43f2b34fcff9d72f43'
+          :checkpoint => '332992e2232a2bfe6a207493f7ef6b97e1c5044d8d1e68b60bc9f9f2f0f5b26a'
   name 'Tubbler'
   homepage 'http://www.celmaro.com/tubbler'
   license :gratis

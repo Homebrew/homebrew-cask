@@ -5,7 +5,7 @@ cask 'mongodb' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/gcollazo/mongodbapp/releases/download/#{version}/MongoDB.zip"
   appcast 'https://github.com/gcollazo/mongodbapp/releases.atom',
-          :sha256 => 'e9c23fafe5fb9aa71c79ac97421f207305e05ee5bba7884614cca97edbf65ed9'
+          :checkpoint => 'e9c23fafe5fb9aa71c79ac97421f207305e05ee5bba7884614cca97edbf65ed9'
   name 'MongoDB'
   homepage 'https://elweb.co/mongodb-app/'
   license :mit

@@ -4,7 +4,7 @@ cask 'adventure' do
 
   url 'http://www.lobotomo.com/products/downloads/Adventure.dmg'
   appcast 'http://www.lobotomo.com/products/Adventure/profileInfo.php',
-          :sha256 => 'bd690120b93b99efa6765ec29decec63ad62e41f4a080aa7ce947f0ba03f26d4'
+          :checkpoint => '22d2e51cd63dfb367f541216a9f0b8b52b8004cb3a481defe2c92c29741d46a8'
   name 'Adventure'
   homepage 'http://www.lobotomo.com/products/Adventure/'
   license :gratis

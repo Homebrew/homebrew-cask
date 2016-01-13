@@ -4,7 +4,7 @@ cask 'delayedlauncher' do
 
   url 'https://www.taoeffect.com/delayedlauncher/DelayedLauncher.zip'
   appcast 'https://www.taoeffect.com/delayedlauncher/appcast.xml',
-          :sha256 => 'a8d8ca4e2e5aad56bdd75ae853f7fdd57fbbdb0850a200d9f35542ad8738b493'
+          :checkpoint => 'eac79b7a9a9a11236d6813c182f8468821349b6562d31bbdbd6003d4807e2a9d'
   name 'DelayedLauncher'
   homepage 'https://www.taoeffect.com/blog/2010/03/delayedlauncher-2-0/'
   license :bsd

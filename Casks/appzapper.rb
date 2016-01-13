@@ -4,7 +4,7 @@ cask 'appzapper' do
 
   url "http://www.appzapper.com/downloads/AppZapper#{version}.zip"
   appcast 'http://www.appzapper.com/az2appcast.xml',
-          :sha256 => '16346109b4433f51cac07c897d9565b7125a7e348a28e1984f044b9220129b00'
+          :checkpoint => 'b91ae47cbd23159ada1e03357647dc3140cd35ef509dfa44ed13e369aad07e88'
   name 'AppZapper'
   homepage 'http://www.appzapper.com/'
   license :commercial

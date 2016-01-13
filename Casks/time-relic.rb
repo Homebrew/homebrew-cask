@@ -5,7 +5,7 @@ cask 'time-relic' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://timerelic-download.s3.amazonaws.com/Time%20Relic.app.zip'
   appcast 'https://timerelic-download.s3.amazonaws.com/appcast.xml',
-          :sha256 => '2c78c94e36597412a15177781894281bc97a3267954d95bed25ec2d80caadfee'
+          :checkpoint => '21916a631a669e1c56ac746c79f24bf4ec084fd12d2d4f8bdd490b897841c40e'
   name 'Time Relic'
   homepage 'http://timerelic.com/'
   license :gratis

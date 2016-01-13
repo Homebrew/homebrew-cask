@@ -4,7 +4,7 @@ cask 'vlc-remote' do
 
   url 'http://hobbyistsoftware.com/Downloads/VLCRemote/latest-mac.php?cdn'
   appcast 'http://hobbyistsoftware.com/Downloads/VLCRemote/vlcSetupHelperVersions.xml',
-          :sha256 => '59ab86dad470e43083ba3d6a670374beff8ac0921e3c935a7007a9fd07574568'
+          :checkpoint => 'dbc6822df1776a697c456f13c7185db772ae288ba8c0b4062737b53584c7ac94'
   name 'VLC Remote'
   homepage 'http://hobbyistsoftware.com/vlc'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

@@ -5,7 +5,7 @@ cask 'deploymate' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/deploymate/download/Deploymate#{version.delete('.')}.zip"
   appcast 'http://www.deploymateapp.com/deploymate-updates.xml',
-          :sha256 => '6ec651743325e3a955728d8ae2b710a859415e914cf835391bf3f53b5f84d4e3'
+          :checkpoint => 'afc087e83be77502d67c5fbe237fbb815a651ed405081ff656106a61904a34f1'
   name 'Deploymate'
   homepage 'http://www.deploymateapp.com'
   license :commercial

@@ -4,7 +4,7 @@ cask 'vlcstreamer' do
 
   url 'http://hobbyistsoftware.com/Downloads/VLCStreamer/latest-mac.php?cdn'
   appcast 'http://hobbyistsoftware.com/Downloads/VLCStreamer/vlcStreamerVersions.xml',
-          :sha256 => '4dc80b0c0481113f000e61cf605422aa862219ace6a08fc511baf88926e6e5bc'
+          :checkpoint => 'f6e93c6c3700e6fb73bf154e016a814f6ee3fbb44bc1e22dac095c6bc14b6f6d'
   name 'VLC Streamer'
   homepage 'http://hobbyistsoftware.com/vlcstreamer'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

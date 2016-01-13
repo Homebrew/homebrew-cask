@@ -4,7 +4,7 @@ cask 'dewdrop' do
 
   url "http://dewdrop.dangelov.com/binaries/DewdropClient-#{version}-Mac.tar.gz"
   appcast 'http://dewdrop.dangelov.com/mac-appcast/updates.xml',
-          :sha256 => '127bad8090e0f8bc9637bfc681deef4b21f4c388f83c768e4de7bb4debd59bfe'
+          :checkpoint => '0e697e33ef9613eaf868ba539db57d725bfaf0414e37bbab7bc50971095d33f0'
   name 'Dewdrop Client'
   homepage 'http://dewdrop.dangelov.com/'
   license :gpl

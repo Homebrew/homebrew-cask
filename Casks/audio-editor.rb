@@ -4,7 +4,7 @@ cask 'audio-editor' do
 
   url 'http://www.macsome.com/AudioEditor.dmg'
   appcast 'http://www.macsome.com/audio-editor-mac/su_feed.xml',
-          :sha256 => 'eae94846cf703af4153e2a3d7627b6a94f057a6bdf31d0c25a2e959108d749c8'
+          :checkpoint => 'cba23cfdf00721f576b7f14ab9a6ce7dd54fae398054193e3f7d120316cb0bb0'
   name 'Macsome Audio Editor'
   homepage 'http://www.macsome.com/audio-editor-mac/'
   license :gratis

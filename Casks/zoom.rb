@@ -4,7 +4,7 @@ cask 'zoom' do
 
   url "http://www.logicalshift.co.uk/mac/Zoom-#{version}.dmg"
   appcast 'http://www.logicalshift.co.uk/unix/zoom/update.xml',
-          :sha256 => 'd65d27c2e458bc2edf3c4d69dfa90335a71d01932570bdb2bdb1caa6c9547e8f'
+          :checkpoint => '100f800b8d8508447fd6e2690ef28f2dfe6e96d37d697583a6efcfbdf5dfc7fa'
   name 'Zoom'
   homepage 'http://www.logicalshift.co.uk/unix/zoom/'
   license :gpl

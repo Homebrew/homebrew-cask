@@ -4,7 +4,7 @@ cask 'keymo' do
 
   url "https://manytricks.com/download/_do_not_hotlink_/keymo#{version.delete('.')}.dmg"
   appcast 'https://manytricks.com/keymo/appcast.xml',
-          :sha256 => '0fada217a8b17fe20397e043c45a94fa984b8928877efb59ffa88997c5b2939a'
+          :checkpoint => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856'
   name 'Keymo'
   homepage 'https://manytricks.com/keymo'
   license :commercial

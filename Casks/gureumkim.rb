@@ -4,7 +4,7 @@ cask 'gureumkim' do
 
   url "https://github.com/gureum/gureum/releases/download/GureumKIM-#{version.delete('a-z')}/GureumKIM-#{version}.pkg"
   appcast 'https://github.com/gureum/gureum/releases.atom',
-          :sha256 => '241eb7bbf1ff3a4d272b6d4813c343fe885ef1258159311ec32e02fb291a5262'
+          :checkpoint => '241eb7bbf1ff3a4d272b6d4813c343fe885ef1258159311ec32e02fb291a5262'
   name '구름 입력기'
   homepage 'http://gureum.io'
   license :oss

@@ -5,7 +5,7 @@ cask 'subler' do
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/galad87/subler/downloads/Subler-#{version}.zip"
   appcast 'https://subler.org/appcast/appcast.xml',
-          :sha256 => '8d196dbe3bd7c95991fc41f839b0edd3e52566709aae0e5f51cd105db8f4a9c1'
+          :checkpoint => '348e5ac77e8e5cecb8c9e73683fb4e131a5ac9688e70893254e526125ca07117'
   name 'Subler'
   homepage 'https://subler.org/'
   license :gpl

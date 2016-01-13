@@ -4,7 +4,7 @@ cask 'hiss' do
 
   url 'http://collect3.com.au/hiss/Hiss.zip'
   appcast 'http://collect3.com.au/hiss/appcast.xml',
-          :sha256 => '93326c3c5ea8cf01b32e42b2275b8dd2900687bd5b8e984a6f4f104d835e4bc5'
+          :checkpoint => '39b84089688241802c5e76e7fa8c38c687f407c14086f0aa4532fb9ba8bc9a02'
   name 'Hiss'
   homepage 'http://collect3.com.au/hiss/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

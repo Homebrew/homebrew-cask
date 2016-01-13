@@ -4,7 +4,7 @@ cask 'juicephone' do
 
   url "http://download.addpod.de/juicephone/#{version}"
   appcast 'http://update.addpod.com/juicephone.xml',
-          :sha256 => '6b7e3d2cd46ae9fac2dafdfba486c729bd91856142a10a32f727f85d972ffd97'
+          :checkpoint => 'd2783c7f8f483409f5e251e27d8e54b50b549511e90fb0b0acab3b7c1778df4e'
   name 'JuicePhone'
   homepage 'http://addpod.com/juicephone'
   license :gratis

@@ -7,7 +7,7 @@ cask 'controlplane' do
     sha256 '945ae102b81b838df65edf6f83292d33399218113e67bdfdaaa088c0f219ea47'
 
     appcast 'http://www.controlplaneapp.com/appcast.xml',
-            :sha256 => 'a12647263016d58bedf5f2044fbd60ec5c7a950e37d984d4e0f02a0c17a7a3f0'
+            :checkpoint => 'c4b1f509972a926c73775eed1feab651348c557fe7cb383a3f50bd7cd390aa9f'
   end
 
   url "http://www.controlplaneapp.com/download/#{version}"

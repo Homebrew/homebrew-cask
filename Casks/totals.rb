@@ -4,7 +4,7 @@ cask 'totals' do
 
   url "http://www.kedisoft.com/dl/totals/Totals-#{version}.dmg"
   appcast 'http://kedisoft.com/appcasts/appcast.php?app=totals3',
-          :sha256 => 'aa1ce22bfd04205e65602b6146542ce736f6a9c108bd3f87e169cc4d7ffe1c1d'
+          :checkpoint => '3eefa6a78c823068357a5c46850cc2fdf568a0755f1bbdf8eaa7719476d21336'
   name 'Totals'
   homepage 'http://www.kedisoft.com/totals/'
   license :commercial

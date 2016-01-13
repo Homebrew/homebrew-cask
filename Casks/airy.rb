@@ -4,7 +4,7 @@ cask 'airy' do
 
   url "http://www.eltima.com/download/airy-update/airy_#{version}.dmg"
   appcast 'http://mac.eltima.com/download/airy-update/airy.xml',
-          :sha256 => '1ddec6d47bc4ba2700ee228ba7fc8267a4284efb0d22442bf916a672af0f6c03'
+          :checkpoint => '1ddec6d47bc4ba2700ee228ba7fc8267a4284efb0d22442bf916a672af0f6c03'
   name 'Airy'
   homepage 'http://mac.eltima.com/youtube-downloader-mac.html'
   license :commercial

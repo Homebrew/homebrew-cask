@@ -4,7 +4,7 @@ cask 'wedge' do
 
   url 'http://wedge.natestedman.com/release/Wedge.app.zip'
   appcast 'http://wedge.natestedman.com/appcast.xml',
-          :sha256 => '60a2c89c8b3525b9884edc4175b1ed8f4d8ae8bccb697f806b4f62d04664b927'
+          :checkpoint => '2a2f34cb7ee8a7e61c0bb685aeba02aabd3b6681ef76730b8eb758913cddbf4d'
   name 'Wedge'
   homepage 'http://wedge.natestedman.com'
   license :gratis

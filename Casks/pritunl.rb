@@ -5,7 +5,7 @@ cask 'pritunl' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.pkg.zip"
   appcast 'https://github.com/pritunl/pritunl-client-electron/releases.atom',
-          :sha256 => '851b79be1bdadb1d745c10793fb705fca96a49f185894f660aacc7d5ef5182fe'
+          :checkpoint => '851b79be1bdadb1d745c10793fb705fca96a49f185894f660aacc7d5ef5182fe'
   name 'Pritunl OpenVPN Client'
   homepage 'https://client.pritunl.com'
   license :gpl

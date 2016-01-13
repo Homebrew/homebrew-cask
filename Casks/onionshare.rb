@@ -4,7 +4,7 @@ cask 'onionshare' do
 
   url "https://github.com/micahflee/onionshare/releases/download/#{version}/OnionShare.pkg"
   appcast 'https://github.com/micahflee/onionshare/releases.atom',
-          :sha256 => '676d6738cf56a76e852aa1b66e4ad7b6a6974c32788320b51a2935a5e9b455d7'
+          :checkpoint => '676d6738cf56a76e852aa1b66e4ad7b6a6974c32788320b51a2935a5e9b455d7'
   name 'OnionShare'
   homepage 'https://onionshare.org/'
   license :gpl

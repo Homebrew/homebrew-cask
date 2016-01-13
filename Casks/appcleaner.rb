@@ -4,7 +4,7 @@ cask 'appcleaner' do
 
   url "https://www.freemacsoft.net/downloads/AppCleaner_#{version}.zip"
   appcast 'https://freemacsoft.net/appcleaner/Updates.xml',
-          :sha256 => 'a5aefca431912c0491987b99aab0584c0143b2dc3b1a30f29887b7cee5ae4c45'
+          :checkpoint => 'f231315156c6d1e158dbbd5d11b4b4e36d2ba0bab343e0e87d55d0af3e4d8596'
   name 'AppCleaner'
   homepage 'https://www.freemacsoft.net/appcleaner/'
   license :gratis

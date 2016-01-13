@@ -4,7 +4,7 @@ cask 'chatology' do
 
   url "http://cdn.flexibits.com/Chatology_#{version}.zip"
   appcast 'https://flexibits.com/chatology/appcast.php',
-          :sha256 => 'c003c41a9b70dd29e1c2aa3f388eaf29122e67f445b6d3980e8f6e07eab37b0b'
+          :checkpoint => 'ea2ca59301336db753a723fff0fe7680a2ea52abf163a5450163b5a15ed245b2'
   name 'Chatology'
   homepage 'https://flexibits.com/chatology'
   license :commercial

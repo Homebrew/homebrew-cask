@@ -5,7 +5,7 @@ cask 'biba' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3-us-west-1.amazonaws.com/downloads.biba.com/builds/Biba-OSX-#{version}.dmg"
   appcast 'https://s3-us-west-1.amazonaws.com/downloads.biba.com/appcast/mac',
-          :sha256 => '35558aeeb9765d3371eda6e7f55d232813c91c96acd5468bb65e46df2aed3318'
+          :checkpoint => '66a1fa16c09efafc80b9057bb243048c1ef501303853abbefb2688a5cec39003'
   name 'Biba'
   homepage 'https://www.biba.com'
   license :closed

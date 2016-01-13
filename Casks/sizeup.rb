@@ -4,7 +4,7 @@ cask 'sizeup' do
 
   url "https://www.irradiatedsoftware.com/downloads/SizeUp_#{version}.zip"
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/sizeup.php',
-          :sha256 => 'cb9191cb1c5cc0dc8fa7863e453064c4f615425240fc4c34bf0b50e0138f44ff'
+          :checkpoint => '72cab54bfab0d39660861fc45e691929faeaab312adc5f11d1368c28d40cc266'
   name 'SizeUp'
   homepage 'https://www.irradiatedsoftware.com/sizeup/'
   license :commercial

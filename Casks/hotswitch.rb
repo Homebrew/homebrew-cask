@@ -4,7 +4,7 @@ cask 'hotswitch' do
 
   url 'https://oniatsu.github.io/HotSwitch/release/zip/HotSwitch.zip'
   appcast 'https://oniatsu.github.io/HotSwitch/release/appcast.xml',
-          :sha256 => '7be543bb5d7da557abb9b78ce9c455db71de9625bfac0f63e4c89ae030b8cefc'
+          :checkpoint => 'ea46fbc74644b1bb6c0028028e365cade8cc3c2e7132d4d1b63f5ad6f4440985'
   name 'HotSwitch'
   homepage 'https://oniatsu.github.io/HotSwitch/'
   license :mit

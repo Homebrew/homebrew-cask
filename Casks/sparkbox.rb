@@ -5,7 +5,7 @@ cask 'sparkbox' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/IcyBlaze-iDocument2/Download/sparkbox_#{version}.zip"
   appcast 'http://matrix.icyblaze.com/index.php/checkupdate/p/8',
-          :sha256 => '6651d8423c428326e9b213812cd24b261f97f91b74574888afde249f34ed5333'
+          :checkpoint => '6651d8423c428326e9b213812cd24b261f97f91b74574888afde249f34ed5333'
   name 'Sparkbox'
   homepage 'http://www.icyblaze.com/sparkbox'
   license :commercial

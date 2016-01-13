@@ -5,7 +5,7 @@ cask 'gitbox' do
   # cloudfront.net is the official download host per the vendor homepage
   url "https://d1oa71y4zxyi0a.cloudfront.net/gitbox-#{version}-ml.zip"
   appcast 'http://gitboxapp.com/updates.xml',
-          :sha256 => 'df71744d6aeb51632acdb0c97e96f3a608625b7cac001b3b0aa76d5570db2dd0'
+          :checkpoint => 'd22fec338fe94f98556990084e8f11ab1c4378e8d4b6b2430544a857adc6215e'
   name 'Gitbox'
   homepage 'http://gitboxapp.com/'
   license :commercial

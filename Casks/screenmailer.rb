@@ -4,7 +4,7 @@ cask 'screenmailer' do
 
   url 'https://www.screenmailer.com/releases/current/Screenmailer.zip'
   appcast 'https://www.screenmailer.com/releases/current/releases.xml',
-          :sha256 => '06034ed6b253c0563a9a1d8dcddd35fa400b381cb4024095f9c015af3858617f'
+          :checkpoint => '072f2675a4e36c0c6f4f4ae82457ad8e7548e695cf8daee00211de79b726f17a'
   name 'Screenmailer'
   homepage 'https://www.screenmailer.com/'
   license :commercial

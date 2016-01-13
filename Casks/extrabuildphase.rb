@@ -4,7 +4,7 @@ cask 'extrabuildphase' do
 
   url "https://github.com/norio-nomura/ExtraBuildPhase/releases/download/#{version}/ExtraBuildPhase.xcplugin-#{version}.zip"
   appcast 'https://github.com/norio-nomura/ExtraBuildPhase/releases.atom',
-          :sha256 => '7b9d29c0defc4b1ee1ac0099372ee35f67599a04dfc1dd0339b37fa06adc87be'
+          :checkpoint => '7b9d29c0defc4b1ee1ac0099372ee35f67599a04dfc1dd0339b37fa06adc87be'
   name 'ExtraBuildPhase'
   homepage 'https://github.com/norio-nomura/ExtraBuildPhase'
   license :mit

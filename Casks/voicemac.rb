@@ -4,7 +4,7 @@ cask 'voicemac' do
 
   url 'https://download.mrgeckosmedia.com/VoiceMac.zip'
   appcast 'https://mrgeckosmedia.com/applications/appcast/VoiceMac',
-          :sha256 => '0aa78497d1d83ad029d8fbd0b5635eda0dd519b47ef92b7f2ff9a5621e447942'
+          :checkpoint => '5d43ea3a7e616074ea46cc1ae3d9edac151d6368aa890932e015374f742f99b9'
   name 'VoiceMac'
   homepage 'https://mrgeckosmedia.com/applications/info/VoiceMac'
   license :isc

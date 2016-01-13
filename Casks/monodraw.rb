@@ -4,7 +4,7 @@ cask 'monodraw' do
 
   url 'http://updates.helftone.com/monodraw/downloads/Monodraw-latest.zip'
   appcast 'http://updates.helftone.com/monodraw/appcast-beta.xml',
-          :sha256 => '7cbf74a76be621a867b2d1f02581ee94d343301a816cac8c760ac17abacd643e'
+          :checkpoint => '5830ff9786d7be63384f29a25ca50d0cd90a857c93beb607abee08518de09c1f'
   name 'Monodraw'
   homepage 'http://monodraw.helftone.com'
   license :commercial

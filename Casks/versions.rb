@@ -4,7 +4,7 @@ cask 'versions' do
 
   url 'http://versionsapp.com/redirect/versionslatest'
   appcast 'https://updates.blackpixel.com/updates?app=vs',
-          :sha256 => '67f9a7a2e92a81422e6d9bb1889ae8bb6467792ab2af619a5ea7a199928042a3'
+          :checkpoint => '2ed6c00361f6f454c263250fd3a2ef34d7534ea15895fb65742cf2683ead995e'
   name 'Versions'
   homepage 'http://versionsapp.com/'
   license :commercial
