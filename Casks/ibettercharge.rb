@@ -5,7 +5,7 @@ cask 'ibettercharge' do
   # dl.devmate.com is the official download host per the appcast feed
   url "https://dl.devmate.com/com.softorino.iBetterCharge/#{version.sub(%r{-.*$}, '')}/#{version.sub(%r{^.*?-}, '')}/iBetterCharge-#{version.sub(%r{-.*$}, '')}.zip"
   appcast 'http://hook.softorino.com/ibc/appcast.xml',
-          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856'
   name 'iBetterCharge'
   homepage 'http://softorino.com/ibettercharge/'
   license :gratis

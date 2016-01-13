@@ -4,7 +4,7 @@ cask 'moom' do
 
   url "https://manytricks.com/download/_do_not_hotlink_/moom#{version.gsub('.', '')}.dmg"
   appcast 'https://manytricks.com/moom/appcast.xml',
-          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856'
   name 'Moom'
   homepage 'https://manytricks.com/moom/'
   license :commercial

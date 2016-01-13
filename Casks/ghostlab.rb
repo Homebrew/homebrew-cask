@@ -4,7 +4,7 @@ cask 'ghostlab' do
 
   url "https://awesome.vanamco.com/Ghostlab2/update/packages/mac/Ghostlab2-#{version}.zip"
   appcast 'https://awesome.vanamco.com/Ghostlab2/update/ghostlab2-cast.xml',
-          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856'
   name 'Ghostlab'
   homepage 'https://vanamco.com/ghostlab/'
   license :commercial

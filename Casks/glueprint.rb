@@ -4,7 +4,7 @@ cask 'glueprint' do
 
   url "http://glueprintapp.com/static/download/GluePrint-#{version}.app.zip"
   appcast 'http://glueprint-update.s3-website-us-east-1.amazonaws.com/appcast.xml',
-          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856'
   name 'GluePrint'
   homepage 'http://glueprintapp.com/'
   license :gratis

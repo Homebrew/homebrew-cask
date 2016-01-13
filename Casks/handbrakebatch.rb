@@ -4,7 +4,7 @@ cask 'handbrakebatch' do
 
   url "https://www.osomac.com/appcasts/handbrakebatch/HandBrakeBatch_#{version}.zip"
   appcast 'https://www.osomac.com/appcasts/handbrakebatch/HandBrakeBatch.xml',
-          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856'
   name 'HandBrakeBatch'
   homepage 'https://www.osomac.com/apps/osx/handbrake-batch/'
   license :gpl
