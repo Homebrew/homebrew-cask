@@ -11,7 +11,7 @@ cask 'kicad' do
   artifact 'kicad', :target => "#{ENV['HOME']}/Library/Application Support/kicad"
 
   preflight do
-    system '/bin/mkdir', '--', "#{staged_path}/Kicad-apps"
-    system '/bin/mv', '--', "#{staged_path}/Kicad/*.app", "#{staged_path}/Kicad-apps/"
+    system_command '/bin/mkdir', :args => ['--', "#{staged_path}/Kicad-apps"]
+    system_command '/bin/mv', :args => ['--', *Dir["#{staged_path}/Kicad/*.app"], "#{staged_path}/Kicad-apps/"]
   end
 end
