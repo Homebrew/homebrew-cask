@@ -4,7 +4,7 @@ cask 'invisionsync' do
 
   url "https://projects.invisionapp.com/native_app/mac/sparkle/#{version.sub(%r{^.*?-}, '')}.zip"
   appcast 'https://projects.invisionapp.com/native_app/mac/sparkle/appcast_v2.xml',
-          :checkpoint => '7cfefed21a18a26a9fecfd92e8ed0795b22f7da21ca486dc1b6c0ef239108516'
+          :checkpoint => '47ee79e0524d91a88e985b64bdd4da86759bb4b14301526976ca9cd006b70f61'
   name 'InVision Sync'
   homepage 'http://invisionapp.com/'
   license :gratis

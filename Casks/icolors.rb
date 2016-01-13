@@ -4,7 +4,7 @@ cask 'icolors' do
 
   url "https://www.fadingred.com/files/icolors/icolors_#{version}.zip"
   appcast 'http://www.fadingred.com/icolors/updates.xml',
-          :checkpoint => '7facd161ae0a1d5986866ba8bc7d6911b6af98659841634e30b64b3b80dfb602'
+          :checkpoint => '5b0763ad2b44c2b64c9fc2c6e225574e5a8bbb89730653def24e667fe615b7bd'
   name 'iColors'
   homepage 'http://www.fadingred.com/icolors/'
   license :gratis

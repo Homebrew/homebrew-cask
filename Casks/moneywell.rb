@@ -16,7 +16,7 @@ cask 'moneywell' do
     # zenvilla.com is the official download host per the appcast feed
     url "http://zenvilla.com/mw/builds/MoneyWell-#{version}.zip"
     appcast 'http://nothirst.com/feeds/MoneyWell2Appcast.xml',
-            :checkpoint => '44b186b5481aab40719ad2e41079d5b35beb7d24effaca91d7e51fbeb695e0eb'
+            :checkpoint => 'c15c3d7d302707b80fe7256771ac8add22478defe9280e6b4d57784be271a936'
   end
   name 'MoneyWell'
   homepage 'http://nothirst.com/moneywell/'

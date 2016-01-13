@@ -4,7 +4,7 @@ cask 'mou' do
 
   url 'http://25.io/mou/download/Mou.zip'
   appcast 'http://25.io/mou/up/updates.xml',
-          :checkpoint => '940c8371b3befffb6075dcbde77fd7c5d8dfb127ddb6c733f5d1cbfbe4246dcb'
+          :checkpoint => 'd97ac9eeef0a00c1f583ff7fd804ca12f63c970a61eeb0925bfb3b0f3d018eb6'
   name 'Mou'
   homepage 'http://25.io/mou/'
   license :commercial

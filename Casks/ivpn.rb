@@ -4,7 +4,7 @@ cask 'ivpn' do
 
   url "https://macserve.org.uk/downloads/ivpn/iVPN_#{version}.zip"
   appcast 'http://macserve.org.uk:8090/profileInfo.php',
-          :checkpoint => 'b8bd5832537a488dfa579310570a9712f802488d46d6b1f0140fde7548165ed2'
+          :checkpoint => '7184e0158d170544ee95a29762c4aa6fe0f96782862894814c0832ac91d7fba9'
   name 'iVPN'
   homepage 'https://macserve.org.uk/projects/ivpn/'
   license :commercial

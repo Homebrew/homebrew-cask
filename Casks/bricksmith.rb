@@ -4,7 +4,7 @@ cask 'bricksmith' do
 
   url "http://downloads.sourceforge.net/sourceforge/bricksmith/bricksmith/Bricksmith%20#{version}/BricksmithComplete#{version}.zip"
   appcast 'http://bricksmith.sourceforge.net/files/bricksmith_appcast.xml',
-          :checkpoint => '7b1535d7576cd20a1e3599935ec6a038a06198c2079c11372b3dc665d1421b24'
+          :checkpoint => '6e0946bf3dca4270977ed6eb67c33e7ccc2322703535c45ef972c7ac7cb692c0'
   name 'Bricksmith'
   homepage 'http://bricksmith.sourceforge.net/'
   license :bsd

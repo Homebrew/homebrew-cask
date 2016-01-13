@@ -4,7 +4,7 @@ cask 'hostr' do
 
   url "https://hostr.co/apps/mac/Hostr-#{version}.zip"
   appcast 'https://hostr.co/updaters/mac.xml',
-          :checkpoint => '4d1609abef999c1355da7ed28971a9af9a4070c753a14f55897cd491a0517741'
+          :checkpoint => '5c98bdf298b336c3f61761f0ae0aca5d71e52b2293959508eb0afc611516501d'
   name 'Hostr'
   homepage 'https://hostr.co/'
   license :gratis

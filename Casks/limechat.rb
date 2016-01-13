@@ -10,7 +10,7 @@ cask 'limechat' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/limechat/limechat/LimeChat_#{version}.tbz"
   appcast 'http://limechat.net/mac/appcast.xml',
-          :checkpoint => '90b1b494b411d180994bbfb9eb6b90a7563f18a4f9b6d0874c9a37689a4d73e6'
+          :checkpoint => '73cc22d3e73c2070a39994285ffa411cf4bc9d11e9d6782f16e5dc4a3b0c5175'
   name 'LimeChat'
   homepage 'http://limechat.net/mac/'
   license :gpl

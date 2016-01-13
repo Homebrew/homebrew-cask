@@ -4,7 +4,7 @@ cask 'easyvpn' do
 
   url "http://www.squashedsoftware.com/downloads/easyVPN_#{version}.zip"
   appcast 'http://www.squashedsoftware.com/appcasts/easyvpn.xml',
-          :checkpoint => 'd4e71c0b530a0128249446d3333e709d4ae45fd7bed9e3c9aeaa92881b79e1ef'
+          :checkpoint => '34cc9739526b33f9ee56e2140da9418b9cfa764458c323391413db347f6f1431'
   name 'EasyVPN'
   homepage 'http://www.squashedsoftware.com/products-easyvpn.php'
   license :commercial

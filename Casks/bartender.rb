@@ -5,7 +5,7 @@ cask 'bartender' do
   url "https://macbartender.com/B2/updates/#{version.gsub('.', '-')}/Bartender%20#{version.to_i}.zip",
       :referer => 'http://www.macbartender.com'
   appcast 'https://www.macbartender.com/B2/updates/updates.php',
-          :checkpoint => 'c1af9459cd5465ceaffae9d9cc7fad50d78f0b5307141e55477ef0b73213739f'
+          :checkpoint => 'e659a2a6c64eb2bddda4027c34538e146ae46775dae606c391b6da19e5013b4c'
   name 'Bartender'
   homepage 'https://www.macbartender.com/'
   license :commercial

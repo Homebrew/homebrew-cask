@@ -4,7 +4,7 @@ cask 'teleport' do
 
   url 'http://www.abyssoft.com/software/teleport/downloads/teleport.zip'
   appcast 'http://www.abyssoft.com/software/teleport/versions.xml',
-          :checkpoint => '17a5b5e859f5da4d794933ccfcf558c68bc385f6c3251ccc0666be627aa7e216'
+          :checkpoint => 'b7b68db7e36eab08273f35394eaa245b60ec48525a23c6f35a4daf7478e707c8'
   name 'teleport'
   homepage 'http://www.abyssoft.com/software/teleport/'
   license :gratis

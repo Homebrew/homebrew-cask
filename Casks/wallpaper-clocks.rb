@@ -4,7 +4,7 @@ cask 'wallpaper-clocks' do
 
   url 'http://files.vladstudio.com/wallpaperclock/WallpaperClocksOSX.zip'
   appcast 'http://www.vladstudio.com/wallpaperclock/wallclocks_en.xml',
-          :checkpoint => 'f489bd062dce7caf673e9b1b7468eec359ddc5966b7bd2b32c2e7f990b4aabe3'
+          :checkpoint => '9c205568e9bdc28f73f8bcf82a44e4c03605020551fa0e286e51d681c4cd8dd3'
   name 'Wallpaper clocks'
   homepage 'http://www.vladstudio.com/wallpaperclocks/'
   license :gratis

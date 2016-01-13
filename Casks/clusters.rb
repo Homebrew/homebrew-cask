@@ -4,7 +4,7 @@ cask 'clusters' do
 
   url "http://latenitesoft.com/clusters/download/Clusters_#{version.to_f}.dmg"
   appcast 'http://clustersapp.com/clusters_releases.xml',
-          :checkpoint => 'cbfe462804fa6307b7480b2b369a1e12990af5a16ac0b7535d1882861241a65e'
+          :checkpoint => 'e6833dc630494764aed0331f43210978f7c753b7c2b11716e50ad83d18f1ac06'
   name 'Clusters'
   homepage 'http://latenitesoft.com/clusters'
   license :commercial

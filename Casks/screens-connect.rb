@@ -6,7 +6,7 @@ cask 'screens-connect' do
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8816
   url "http://download.edovia.com/screensconnect/screensconnect_#{version}.dmg"
   appcast 'https://screensconnect.com/sparkle/appcast.xml',
-          :checkpoint => '96267f2ed0e8c84b45182902584d4897f0fe77a41ccbd720ec524d98cac7f4fb'
+          :checkpoint => '34a8603709c7b8d1eab7f39e99ff49bbe71172dcce5b8d6fe4edd543c224f3cc'
   name 'Screens Connect'
   homepage 'https://screensconnect.com'
   license :gratis

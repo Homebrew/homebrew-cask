@@ -4,7 +4,7 @@ cask 'battery-report' do
 
   url 'https://www.dssw.co.uk/batteryreport/dsswbatteryreport.dmg'
   appcast 'https://version.dssw.co.uk/batteryreport/standard',
-          :checkpoint => '0abf6f79f1b21e25f17183fdcfe9f8a3e879a9ed51bd540deaf004fdf83d2292'
+          :checkpoint => '0cfa65130f06fcfc93184858c4dde3337cea3175e8aaecf7a4f8664f600b171d'
   name 'Battery Report'
   homepage 'https://www.dssw.co.uk/batteryreport'
   license :commercial

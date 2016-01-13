@@ -4,7 +4,7 @@ cask 'fake' do
 
   url "http://fakeapp.com/dist/Fake_#{version}.zip"
   appcast 'http://fakeapp.com/appcast/fake.rss',
-          :checkpoint => '6069254b0fcb6358f2eebfafa1074856ab0f392a387611cc2434b873f9c2166a'
+          :checkpoint => '6aefee27566eb1546276748794754b09080686032c16a326f0e729245ed79f0c'
   name 'Fake'
   homepage 'http://fakeapp.com/'
   license :commercial

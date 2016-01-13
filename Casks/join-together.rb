@@ -4,7 +4,7 @@ cask 'join-together' do
 
   url "http://dougscripts.com/itunes/scrx/jointogether#{version.no_dots}.zip"
   appcast 'http://dougscripts.com/itunes/itinfo/jointogether_appcast.xml',
-          :checkpoint => '10661472af4b4b1fdd644a596bee77cb666df27769dbb58138f2aae032bb6db5'
+          :checkpoint => '92193058495ef375d16fae918ddb413070c3f433a9efcf9038a4e1790be11ede'
   name 'Join Together'
   homepage 'http://dougscripts.com/itunes/itinfo/jointogether.php'
   license :commercial

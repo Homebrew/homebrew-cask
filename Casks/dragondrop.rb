@@ -4,7 +4,7 @@ cask 'dragondrop' do
 
   url "https://shinyplasticbag.com/dragondrop/releases/dragondrop_#{version}.dmg"
   appcast 'https://shinyplasticbag.com/dragondrop/updates.xml',
-          :checkpoint => '6b0d27ada18459bd2d65c2cbf6284b1db6350489a63cd32c27973ceedc728d48'
+          :checkpoint => '1e5a31caed5009c9df8e41cb7543ec154fee14852b63660f62e29411654d4928'
   name 'DragonDrop'
   homepage 'https://shinyplasticbag.com/dragondrop/'
   license :commercial

@@ -4,7 +4,7 @@ cask 'power-manager-pro' do
 
   url 'https://www.dssw.co.uk/powermanager/dsswpowermanagerpro.dmg'
   appcast 'https://version.dssw.co.uk/powermanager/professional',
-          :checkpoint => 'b318c4c4481dbe4e2d269c65ffc2603339b3ed633f512dcd363c49bad79eb52a'
+          :checkpoint => '435fa5b5df46da8aa8c39d09851b947b5e3f4deb4d7bad9cb57031a9a16228fb'
   name 'Power Manager Pro'
   homepage 'https://www.dssw.co.uk/powermanager'
   license :commercial

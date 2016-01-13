@@ -4,7 +4,7 @@ cask 'hot-shots' do
 
   url "https://gngrwzrd.com/HotShots#{version.to_i}.zip"
   appcast 'https://www.gngrwzrd.com/hotshots2-appcast.xml',
-          :checkpoint => 'd0ad8f060c3d574688563b4b44e71962258846889035c0d62cf3a5f1a6d60ec5'
+          :checkpoint => 'bc2389f3e28b96748c5f94508d125124f0af2d188b810d397c412e12f166eb59'
   name 'Hot Shots'
   homepage 'https://gngrwzrd.com/hotshots/'
   license :commercial

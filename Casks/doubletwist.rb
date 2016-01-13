@@ -4,7 +4,7 @@ cask 'doubletwist' do
 
   url "http://download.doubletwist.com/releases/mac/dT-#{version}-kronos-patch1-r11040/doubleTwist.dmg"
   appcast 'http://download.doubletwist.com/mac/appcast.xml',
-          :checkpoint => 'c14d82c35a56318042f0b708cc74f177397b44b77f21314060f4d1774a58699c'
+          :checkpoint => 'a3f962a943107206797fc0c4352333e32d875750a507bd69932fc722f8c360f6'
   name 'doubleTwist'
   homepage 'https://www.doubletwist.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

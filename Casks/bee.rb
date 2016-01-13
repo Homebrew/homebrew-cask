@@ -5,7 +5,7 @@ cask 'bee' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://bee-app.s3.amazonaws.com/public/Bee-#{version}.zip"
   appcast 'http://www.neat.io/appcasts/bee-appcast.xml',
-          :checkpoint => '52606d7d21c26bd9a22f9c1af194d9291cec9e6f2b2a907ebdd88d7d9eb8faf2'
+          :checkpoint => 'e5144f3cdb7198b8c4765df91026d4deefd2e5eb637bfe9f021712c7a9b7239f'
   name 'Bee'
   homepage 'http://neat.io/bee/'
   license :commercial

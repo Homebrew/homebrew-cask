@@ -4,7 +4,7 @@ cask 'swinsian' do
 
   url "https://www.swinsian.com/sparkle/Swinsian_#{version}.zip"
   appcast 'https://www.swinsian.com/sparkle/sparklecast.xml',
-          :checkpoint => '2fba983f625d0f14f8c9f4f1d7494237cc4239c7b71de7009554bb37f7b1c8fb'
+          :checkpoint => 'a7b2d9e496369b5600395a2f525a849652e586c4ce5108e50d2fd8f2cdab9d8f'
   name 'Swinsian'
   homepage 'https://swinsian.com'
   license :commercial

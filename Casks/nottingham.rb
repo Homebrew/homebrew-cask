@@ -4,7 +4,7 @@ cask 'nottingham' do
 
   url "http://dl.clickontyler.com/nottingham/nottingham20_#{version}.zip"
   appcast 'https://shine.clickontyler.com/appcast.php?id=11',
-          :checkpoint => 'd3eb2331d5a8b11de3af047dda36eee68ff387281c1b14c53fad7c6d4cc205e2'
+          :checkpoint => 'f5f9477be149a49ca79728c8d8b16feef8e183edd1ea6ee693d29e6d01256910'
   name 'Nottingham'
   homepage 'https://clickontyler.com/nottingham/'
   license :gratis

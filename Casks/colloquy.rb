@@ -4,7 +4,7 @@ cask 'colloquy' do
 
   url "http://colloquy.info/downloads/colloquy-#{version}.zip"
   appcast 'http://colloquy.info/update.php?rss',
-          :checkpoint => '0a09b0c260d780f13338a8d7598d8f948cc7c3d35dcdc1a9def84e2e5947e6ee'
+          :checkpoint => '91009856ce35364f86861d42e3f06d6603648914ef374997cde0a28f860ae52f'
   name 'Colloquy'
   homepage 'http://colloquy.info/'
   license :gpl

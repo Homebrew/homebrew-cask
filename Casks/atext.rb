@@ -4,7 +4,7 @@ cask 'atext' do
 
   url 'https://www.trankynam.com/atext/downloads/aText.dmg'
   appcast 'https://www.trankynam.com/atext/aText-Appcast.xml',
-          :checkpoint => '9245a7626187141d35f981232224d720f09b7b0b990542c9374a238fae4f5c3d'
+          :checkpoint => 'cd4af0d98f5c892e6f1c152cd093f23394864034770baba0372b7eecae0d46a4'
   name 'aText'
   homepage 'https://www.trankynam.com/atext/'
   license :commercial

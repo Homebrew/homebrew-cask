@@ -4,7 +4,7 @@ cask 'jbidwatcher' do
 
   url "https://www.jbidwatcher.com/download/JBidwatcher-#{version}.dmg"
   appcast 'https://www.jbidwatcher.com/sparkle/updates.xml',
-          :checkpoint => '933921fe72c6bdb91ad48d5a76c2eb861a065fd6be3470907789bd8673b5aadc'
+          :checkpoint => '9166bea6295666e8357685aa6c3d2d43a6a555ed80c4272122ab76a24559eb7c'
   name 'JBidwatcher'
   homepage 'https://www.jbidwatcher.com'
   license :cc

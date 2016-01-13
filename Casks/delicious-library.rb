@@ -4,7 +4,7 @@ cask 'delicious-library' do
 
   url "https://delicious-monster.com/downloads/DeliciousLibrary#{version.major}/v#{version}/DeliciousLibrary#{version.major}.zip"
   appcast 'https://www.delicious-monster.com/downloads/DeliciousLibrary3.xml',
-          :checkpoint => '52ffde2cc4994cc0421ce656630db51c069a0ffd05e6ff865a36130d68fb6d5f'
+          :checkpoint => 'c140037244a7777c02a144b033f0b2ea37557907dad21a63f78f3ffab74d26cf'
   name 'Delicious Library'
   homepage 'https://delicious-monster.com/'
   license :commercial

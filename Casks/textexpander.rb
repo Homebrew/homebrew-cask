@@ -30,7 +30,7 @@ cask 'textexpander' do
 
     url "https://dl.smilesoftware.com/com.smileonmymac.textexpander/#{version.sub(%r{-.*}, '')}/#{version.sub(%r{.*-}, '')}/TextExpander-#{version.sub(%r{-.*}, '')}.zip"
     appcast 'https://updates.smilesoftware.com/com.smileonmymac.textexpander.xml',
-            :checkpoint => '4accf98f476548fbdf1a146b545c08d63375e7e9a8c3d7f6092b071ec11d82c7'
+            :checkpoint => 'cc78825ef59a9e785f64f78178d19f840495eec3e564a6b3ca8661cac4d2029b'
   end
 
   name 'TextExpander'

@@ -5,7 +5,7 @@ cask 'iterm2' do
 
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.gsub('.', '_')}.zip"
   appcast 'https://iterm2.com/appcasts/final.xml',
-          :checkpoint => 'bfb02febff8a4ff80562f0b84ed9bb6dc88f97c8b9c46733931cfda183320476'
+          :checkpoint => 'e9de319b2fa344a35dd297ee07cd9ea6c9d4ff93e96fece38c36409319767f55'
   name 'iTerm2'
   homepage 'https://www.iterm2.com/'
   license :gpl

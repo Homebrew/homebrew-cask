@@ -4,7 +4,7 @@ cask 'subsmarine' do
 
   url "http://www.cocoawithchurros.com/downloads/SubsMarine.#{version}.zip"
   appcast 'http://www.cocoawithchurros.com/shine/appcast.php?id=7',
-          :checkpoint => '3c7f4e70f5fe98f916e71d8884f84fc8e03cd550a00ed4e1f38e861aa71b4c87'
+          :checkpoint => 'a6076937b5f95403d0d867e409b7d833f5f1d56cd0c060be4ea6ae3546a3554a'
   name 'SubsMarine'
   homepage 'http://www.cocoawithchurros.com/subsmarine.php'
   license :commercial

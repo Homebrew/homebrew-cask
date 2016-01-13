@@ -4,7 +4,7 @@ cask 'combine-pdfs' do
 
   url 'https://www.monkeybreadsoftware.de/Freeware/CombinePDFs.dmg'
   appcast 'https://www.monkeybreadsoftware.de/Freeware/CombinePDFs/appcast.xml',
-          :checkpoint => '40aa36f411d51741047b8ee7569e23fe3a20191e933ba028f2ef6f9fd02d013a'
+          :checkpoint => '658d11704361dfadb0713024ed208d796d09922e33cb09383ab7b6ace5a392b0'
   name 'Combine PDFs'
   homepage 'https://www.monkeybreadsoftware.de/Freeware/CombinePDFs.shtml'
   license :commercial

@@ -4,7 +4,7 @@ cask 'appfresh' do
 
   url "http://backend.metaquark.de/download/appfresh/versions/#{version.sub(%r{.*_}, '')}"
   appcast 'http://backend.metaquark.de/appcast/appfresh.xml',
-          :checkpoint => '589e8ecde2de885a25445d10d0f2742ffc0ec9b4edba28b1f1da9b4b821c1cdd'
+          :checkpoint => '47eaf3743f5384da1cd77e5fa122d6be1e3377b0232bb5da7467ec62e8631ec7'
   name 'metaquark AppFresh'
   homepage 'http://metaquark.de/appfresh/mac'
   license :commercial

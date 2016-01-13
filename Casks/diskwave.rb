@@ -4,7 +4,7 @@ cask 'diskwave' do
 
   url "http://diskwave.barthe.ph/download/DiskWave_#{version}.dmg"
   appcast 'https://diskwave.barthe.ph/sparkle/appcast_64bit.php',
-          :checkpoint => '5f3221b84e810313f4b121a370aa68e11185fd19a46bd7ae018d238caa59d968'
+          :checkpoint => '8bc850c307554a6250a90dee47a0249810d7773abc33f772cd4f1de06b5b75b8'
   name 'DiskWave'
   homepage 'https://diskwave.barthe.ph/'
   license :gratis

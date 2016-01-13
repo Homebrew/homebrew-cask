@@ -4,7 +4,7 @@ cask 'picturesque' do
 
   url 'http://www.acqualia.com/files/download.php?product=picturesque'
   appcast 'http://www.acqualia.com/picturesque/appcast/appcast3.xml',
-          :checkpoint => 'c68980393c1aad4cc2d7bb61c2b831819d09b486dc04b7e493425641432bb44a'
+          :checkpoint => '7db4a3309234e776218d3191220b897233e1c8c05ea7e69a11ceb2338c1be23f'
   name 'Picturesque'
   homepage 'http://www.acqualia.com/picturesque/'
   license :commercial

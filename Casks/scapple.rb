@@ -5,7 +5,7 @@ cask 'scapple' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://scrivener.s3.amazonaws.com/Scapple.dmg'
   appcast 'https://www.literatureandlatte.com/downloads/scapple/scapple.xml',
-          :checkpoint => 'bc0c367a2e57f9c8c9ff80b82365e7044d8dfca5a1688dda4ae446e551d8141d'
+          :checkpoint => '81c37dc0b445e6e8a5a1dbcdeff51f710598208bd78d31dfb79744ecf9b2f00a'
   name 'Scapple'
   homepage 'https://www.literatureandlatte.com/scapple.php'
   license :commercial

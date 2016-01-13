@@ -4,7 +4,7 @@ cask 'findings' do
 
   url "http://downloads.findingsapp.com/Findings_#{version.sub(%r{^.*-}, '')}_#{version.sub(%r{-.*$}, '')}.zip"
   appcast 'http://downloads.findingsapp.com/appcast.xml',
-          :checkpoint => '0f43983b0ab7cb4064e4ad12e0c41975b8a5b57a875170714f621167858f831a'
+          :checkpoint => 'e982841610ccdca5e92ad1f80355339b0bae079a05533fcc3f436a3685ad0b48'
   name 'Findings'
   homepage 'http://findingsapp.com'
   license :freemium

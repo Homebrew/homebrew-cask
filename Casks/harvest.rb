@@ -4,7 +4,7 @@ cask 'harvest' do
 
   url "https://www.getharvest.com/harvest/mac/Harvest.#{version}.zip"
   appcast 'https://www.getharvest.com/harvest/mac/appcast.xml',
-          :checkpoint => '7a16d3ed0b19d1eddd65878d9dd9ff5fa96783d5fd5a26a8d2df45a8b06dedb5'
+          :checkpoint => '9e616b4d70accff2dc64f23e9d94b64aef4db292b2a591667d48f31d99ceafa1'
   name 'Harvest'
   homepage 'https://www.getharvest.com/mac'
   license :gratis

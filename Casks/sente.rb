@@ -12,7 +12,7 @@ cask 'sente' do
 
   url "https://www.thirdstreetsoftware.com/downloads/Sente-#{version}.zip"
   appcast 'https://www.thirdstreetsoftware.com/rss/Sente65.xml',
-          :checkpoint => '17200df44a06fa31d086ea8e66f7c38331bdb87dcb8dd13341b191cde302c93c'
+          :checkpoint => 'aaabfb0506ef8ffa3e825478a5a7bc643ab9098f6984ce56d1c99a2bd7a00808'
   name 'Sente'
   homepage 'https://www.thirdstreetsoftware.com'
   license :freemium

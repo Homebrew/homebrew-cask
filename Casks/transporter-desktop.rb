@@ -5,7 +5,7 @@ cask 'transporter-desktop' do
   # connecteddata.com is the official download host per the vendor homepage
   url "https://secure.connecteddata.com/mac/2.5/software/Transporter_Desktop_#{version}.dmg"
   appcast 'http://appsoftware.connecteddata.com/mac/2.5/Appcast.xml',
-          :checkpoint => '7e99edbf05a6ee2d4fd9db9c30d2bb5e26b1f4b59f99e55484ef19f924ea48a1'
+          :checkpoint => '23ec86d50b2c47035e1916106a88eb07a0206d5b0d9e9fc1fead8882ce641543'
   name 'Transporter Desktop'
   homepage 'http://www.filetransporter.com/'
   license :commercial

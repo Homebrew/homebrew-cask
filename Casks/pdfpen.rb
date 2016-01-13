@@ -4,7 +4,7 @@ cask 'pdfpen' do
 
   url "https://dl.smilesoftware.com/com.smileonmymac.PDFpen/#{version.before_comma}/#{version.after_comma}/PDFpen-#{version.before_comma}.zip"
   appcast 'https://updates.smilesoftware.com/com.smileonmymac.PDFpen.xml',
-          :checkpoint => '5df0b2298faad1440ce2686145b6678843b9d195358d234d39a46eb99fce7fc1'
+          :checkpoint => 'dfe4c3a82ad4c9f319722fb0dc2e58e73926d0d7fa8d4c2d5c82d71fb7ccbe7d'
   name 'PDFpen'
   homepage 'https://smilesoftware.com/PDFpen/'
   license :commercial

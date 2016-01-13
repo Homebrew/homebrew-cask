@@ -4,7 +4,7 @@ cask 'vinoteka' do
 
   url 'http://download.vinotekasoft.com/Vinoteka.zip'
   appcast 'http://download.vinotekasoft.com/vinoteka_update.xml',
-          :checkpoint => '2a8645eec168b391ae9b09837dc1c92ea61b527518f43b6b09c01b9c032ed0bc'
+          :checkpoint => '4ba9b7e1b45d4a69750b3a2eac9a84b6b59a1881d76eecf2c981fffeacfe302f'
   name 'Vinoteka'
   homepage 'http://www.vinotekasoft.com/'
   license :commercial

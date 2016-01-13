@@ -4,7 +4,7 @@ cask 'contexts' do
 
   url "https://contexts.co/releases/Contexts-#{version}.zip"
   appcast 'https://contexts.co/appcasts/stable.xml',
-          :checkpoint => '2414f515102637b48d444f895697416ed1b767635654cb1ee35872c6f5f9afb4'
+          :checkpoint => 'c3c271dcc8fad21e821c702b5da65b1a32b641219c0629b88063e20aa243960d'
   name 'Contexts'
   homepage 'https://contexts.co'
   license :commercial

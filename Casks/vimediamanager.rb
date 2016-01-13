@@ -4,7 +4,7 @@ cask 'vimediamanager' do
 
   url "http://mariusth.channelwood.org/vimediamanager/files/vimediamanager_v#{version}.dmg"
   appcast 'http://mariusth.heliohost.org/vimediamanager/appcast-cocoa.xml',
-          :checkpoint => 'e222f18fca8d4f831dc28d370c7ace6c74d9e7aea5d9008595a2caebde2fae16'
+          :checkpoint => '432abeca6ddfeae43f3e915996d9f691ec7b066620545abe05b237d385e4a468'
   name 'ViMediaManager'
   homepage 'http://mariusth.heliohost.org/vimediamanager/'
   license :gratis

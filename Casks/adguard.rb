@@ -4,7 +4,7 @@ cask 'adguard' do
 
   url "https://static.adguard.com/mac/Adguard-#{version}.release.dmg"
   appcast 'https://static.adguard.com/mac/adguard-release-appcast.xml',
-          :checkpoint => '139d8f94b95d3044a86e96de6cfce4915e70a6e88fb72c45bd76c61f25fa493d'
+          :checkpoint => '6d78234d82be433e81311e85d5b78fd915323bb32fb59c0b17891561367c3c5b'
   name 'Adguard for Mac'
   homepage 'https://adguard.com/'
   license :commercial

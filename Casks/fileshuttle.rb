@@ -4,7 +4,7 @@ cask 'fileshuttle' do
 
   url "https://fileshuttle.io/fileshuttle-#{version}.zip"
   appcast 'https://fileshuttle.io/update.xml',
-          :checkpoint => '7c64af82391b1e84d716e9a51dcb86ca6d36f6232c156c09fddec5470bafb292'
+          :checkpoint => 'd313d70dd38d61d4157fd14494cd1acf3d87eeb56ba3d1152f869afd6fe35675'
   name 'FileShuttle'
   homepage 'https://fileshuttle.io/'
   license :other

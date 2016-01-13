@@ -4,7 +4,7 @@ cask 'lastfm' do
 
   url "http://cdn.last.fm/client/Mac/Last.fm-#{version}.zip"
   appcast 'http://cdn.last.fm/client/Mac/updates.xml',
-          :checkpoint => 'e29be4df68a4aad3b28f91a9dbc01097227597ba1b9c5129ee3795eb2c49d2e4'
+          :checkpoint => '6cc2826bd38f16b11c2c2d2d2b5011c19bb9b99e274aed42c1ed70edf242caf5'
   name 'Last.fm Scrobbler'
   homepage 'http://www.last.fm/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

@@ -4,7 +4,7 @@ cask 'chicken' do
 
   url "http://downloads.sourceforge.net/project/chicken/Chicken-#{version}.dmg"
   appcast 'http://chicken.sourceforge.net/chicken.xml',
-          :checkpoint => 'c7f19062980fe48a78b5157f341eeb9b3aa1ba81bce83b1c01484d2dbbb2f7d8'
+          :checkpoint => '7dc47253417a3a5a34bbb32d25563b49cdec2c3d34f06893402349e1d19362e0'
   name 'Chicken'
   homepage 'http://sourceforge.net/projects/chicken/'
   license :gpl

@@ -4,7 +4,7 @@ cask 'tagalicious' do
 
   url 'https://files.thelittleappfactory.com/tagalicious/Tagalicious.zip'
   appcast 'https://files.thelittleappfactory.com/tagalicious/appcast.xml',
-          :checkpoint => 'b26d8680d1188dd7907cc2436da0235aab89556e561a1f6c80e55af73e1bf4f6'
+          :checkpoint => '730c604d39098c99082aa446f07b14f420a1da2feaeeeeb71acdd71fde73bb46'
   name 'Tagalicious'
   homepage 'http://thelittleappfactory.com/tagalicious/'
   license :commercial

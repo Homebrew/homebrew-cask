@@ -4,7 +4,7 @@ cask 'bmglyph' do
 
   url "http://www.bmglyph.com/application/bmGlyph.#{version}.zip"
   appcast 'http://www.bmglyph.com/application/bmGlyphVersion.xml',
-          :checkpoint => '43981d6f100374c4a14c750865f0479407101aea3288fb0ae3ee93d9e54dfc6a'
+          :checkpoint => 'a758ecf728343284d3271c230483f31ba5c0165e79c0462c83690a9b7fe0039e'
   name 'bmGlyph'
   homepage 'http://www.bmglyph.com/'
   license :commercial

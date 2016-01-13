@@ -4,7 +4,7 @@ cask 'tickets' do
 
   url 'https://www.irradiatedsoftware.com/download/Tickets.zip'
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/tickets.php',
-          :checkpoint => '312bb197a356e741cad77364961f5f15c06df2432fbd77af1cb418f28c8ef6d2'
+          :checkpoint => '7e2de498cbcc71c944e00256c9cb64cfa50a9ba5c1bbe20575e9743b73ec34fe'
   name 'Tickets'
   homepage 'https://www.irradiatedsoftware.com/tickets/'
   license :commercial

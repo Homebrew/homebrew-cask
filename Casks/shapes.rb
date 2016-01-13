@@ -4,7 +4,7 @@ cask 'shapes' do
 
   url "http://shapesapp.com/dist/Shapes_#{version}.zip"
   appcast 'http://shapesapp.com/appcast/shapes4.rss',
-          :checkpoint => 'f426841d45d581e9ee667ad3b2e1d4201021ee5a0efa12a41b418c95cd15bf2f'
+          :checkpoint => 'a733a8f85532786e295b0eaf33489490623775a710426bc2e5a3b03cecab75ca'
   name 'Shapes'
   homepage 'http://shapesapp.com'
   license :commercial

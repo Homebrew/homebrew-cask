@@ -4,7 +4,7 @@ cask 'orbit' do
 
   url 'http://orbitapp.net/updates/Orbit.zip'
   appcast 'http://orbitapp.net/updates/appcast.xml',
-          :checkpoint => 'a9f942b47e1c4a6407cb5ecf8b5eb868df5328911bbc60120b095a9bc9bba0ed'
+          :checkpoint => 'd62b66471abc3ea5463ab2bf7115913f5774b89faffdcfb98f314ed53caaeba6'
   name 'Orbit'
   homepage 'http://orbitapp.net'
   license :gratis

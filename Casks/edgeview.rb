@@ -5,7 +5,7 @@ cask 'edgeview' do
   # dropboxusercontent.com is the official download host per the vendor homepage
   url "https://dl.dropboxusercontent.com/u/168552/edgeViewUpdate/files/EdgeView_#{version.sub(%r{^\d+\.}, '')}.zip"
   appcast 'https://dl.dropboxusercontent.com/u/168552/edgeViewUpdate/edgeView_update.xml',
-          :checkpoint => '9087dce8ef4596a40f6f2323016cda3c728f69b90ee4ebc83a69a439d096e431'
+          :checkpoint => '006594c1812dbf8a14cf909f05508dd965e4af1d58b3a27cd9fcffdf8752220e'
   name 'EdgeView'
   homepage 'https://edgehigh.wordpress.com'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

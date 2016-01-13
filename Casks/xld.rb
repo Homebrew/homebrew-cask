@@ -5,7 +5,7 @@ cask 'xld' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/xld/xld-#{version.no_dots}.dmg"
   appcast 'https://svn.code.sf.net/p/xld/code/appcast/xld-appcast_e.xml',
-          :checkpoint => '4bb11c39d18eb2f70c27e25ea4bdbabbe09b07b9881c8aadbc7c25bb752ef6fa'
+          :checkpoint => 'c4658828a87e26aad584edf9c0d6414ca45037c7219fb3d5889cac3e2578da33'
   name 'X Lossless Decoder'
   name 'XLD'
   homepage 'http://tmkk.undo.jp/xld/index_e.html'

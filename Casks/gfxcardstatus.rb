@@ -4,7 +4,7 @@ cask 'gfxcardstatus' do
 
   url "https://gfx.io/downloads/gfxCardStatus-#{version}.zip"
   appcast 'https://gfx.io/appcast.xml',
-          :checkpoint => '605c9f1f8f9ebdb8bfde4a28d8d4ecc34dd079262de1a741cf078a6941c23818'
+          :checkpoint => 'c52a51d2da8795e12eceb2d035f45ceb44197a480883408f9ea7cff96e7d2c90'
   name 'gfxCardStatus'
   homepage 'https://gfx.io/'
   license :bsd

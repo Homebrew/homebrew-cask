@@ -4,7 +4,7 @@ cask 'timings' do
 
   url "https://mediaatelier.com/Timings2/Timings_#{version}.zip"
   appcast 'https://mediaatelier.com/Timings2/feed.php',
-          :checkpoint => '2a30e086311219a5188090a2472c6f4e8e1e8e8221ff32b8e8b7d611f92d151f'
+          :checkpoint => '3b6e549e1b34da291cc51eddad9b27db684b6165ddd2f7fd8c72432e55982694'
   name 'Timings'
   homepage 'http://mediaatelier.com/Timings'
   license :commercial

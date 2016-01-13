@@ -4,7 +4,7 @@ cask 'linear' do
 
   url "https://github.com/mikaa123/linear/releases/download/#{version}/linear.zip"
   appcast 'https://github.com/mikaa123/linear/releases.atom',
-          :checkpoint => 'ab8d6067976c26aec6fac91da4739a39ca445656c5bdb9503f3aed27a2df6229'
+          :checkpoint => '604b2fdad9d513e82c80ae1efccab182aa36335a7488b14eb753158969a6b571'
   name 'Linear'
   homepage 'https://mikaa123.github.io/linear-website/'
   license :mit

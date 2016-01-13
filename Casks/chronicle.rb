@@ -4,7 +4,7 @@ cask 'chronicle' do
 
   url 'http://chronicleapp.com/static/downloads/chronicle.zip'
   appcast 'http://www.littlefin.com/downloads/chronicle3.xml',
-          :checkpoint => 'dfcf04a5f4de8fbf4182fc431f4428f7278afda41d3c1476663e822d7cccbe19'
+          :checkpoint => '143465ba0dda54d7de226e50fe24966c6faed507cf3dde641ffc25d809a89567'
   name 'Chronicle'
   homepage 'http://chronicleapp.com/'
   license :commercial

@@ -4,7 +4,7 @@ cask 'shelf-leveler' do
 
   url 'https://download.mrgeckosmedia.com/ShelfLeveler.zip'
   appcast 'https://mrgeckosmedia.com/applications/appcast/Shelf-Leveler',
-          :checkpoint => '6ea7303b494ecba77928c26a80ada73f3e810c5dcb71a65029708c4a16f5c4e4'
+          :checkpoint => '89acfa3ea13123d8624ef733dfa5e37d9e9e72aaa63d43f4866346b96cef4965'
   name 'Shelf Leveler'
   homepage 'https://mrgeckosmedia.com/applications/info/Shelf-Leveler'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

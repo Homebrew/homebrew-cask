@@ -4,7 +4,7 @@ cask 'soundnote' do
 
   url 'https://download.mrgeckosmedia.com/SoundNote.zip'
   appcast 'https://mrgeckosmedia.com/applications/appcast/SoundNote',
-          :checkpoint => '731d0fc05ef63d6839ea453d406c7105669ef1e37e8991a3a66444ea770d09a8'
+          :checkpoint => '5c715b3362c86a59e130f668ab1b3e07a9c71ad753530cd2ff6f249320e78e6b'
   name 'SoundNote'
   homepage 'https://mrgeckosmedia.com/applications/info/SoundNote'
   license :isc

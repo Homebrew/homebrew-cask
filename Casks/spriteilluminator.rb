@@ -4,7 +4,7 @@ cask 'spriteilluminator' do
 
   url "https://www.codeandweb.com/download/spriteilluminator/#{version}/SpriteIlluminator-#{version}-uni.dmg"
   appcast 'https://www.codeandweb.com/releases/SpriteIlluminator/appcast-mac-release.xml',
-          :checkpoint => 'b3bc6d96cae70733fd1634780bc0f40dfc18c518c1ae9afa8c183d833044ffbf'
+          :checkpoint => '6eecc1343d3aebcd37e00cb8ea5954c0830e0959d6c542a45abf124b9533396b'
   name 'SpriteIlluminator'
   homepage 'https://www.codeandweb.com/spriteilluminator'
   license :commercial

@@ -4,7 +4,7 @@ cask 'gpgtools' do
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   appcast 'https://gpgtools.org/releases/gka/appcast.xml',
-          :checkpoint => 'c47a9531c1462ae6bfa2c36db2801dde2bed9801f86747398497a1fe54f6694b'
+          :checkpoint => 'cfae78bc857a5fd52d452ddc11c3a39d3fc6233b8e0ef6bbc61fd7ed1e0f841d'
   name 'GPG Suite'
   homepage 'https://gpgtools.org/'
   license :gpl

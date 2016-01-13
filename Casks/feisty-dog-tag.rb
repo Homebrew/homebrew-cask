@@ -5,7 +5,7 @@ cask 'feisty-dog-tag' do
   # amazonaws.com is the official download host per the appcast feed
   url "https://s3.amazonaws.com/feisty-dog/versions/binaries/000/000/#{version.after_comma}/Tag-#{version.before_comma}.zip"
   appcast 'https://www.feisty-dog.com/panel/updates/Tag',
-          :checkpoint => '21c61115edee993df88b7c3494e7813b14c122eadf4b93a08592e77ce6318b84'
+          :checkpoint => 'ce6634f8e74e8f0cc3f35f51e129063d950bef1c9b2e44fd5df5160c5b1610d0'
   name 'Tag'
   homepage 'https://www.feisty-dog.com/tag/'
   license :commercial

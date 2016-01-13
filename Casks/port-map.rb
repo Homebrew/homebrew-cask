@@ -4,7 +4,7 @@ cask 'port-map' do
 
   url 'http://www.codingmonkeys.de/portmap/download'
   appcast 'https://www.codingmonkeys.de/portmap/appcast.rss',
-          :checkpoint => '0363c9622ad7c674c403b2dbca4923e0e0318d65814ec324974180a4d3075eae'
+          :checkpoint => 'a38f4002c10dfa37b46014d8e9607fcdb02cf938910047090e11f037dddf2208'
   name 'Port Map'
   homepage 'https://www.codingmonkeys.de/portmap'
   license :mit

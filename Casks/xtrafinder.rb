@@ -4,7 +4,7 @@ cask 'xtrafinder' do
 
   url 'https://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg'
   appcast 'https://www.trankynam.com/xtrafinder/XtraFinder-Appcast.xml',
-          :checkpoint => '60454c386365510df149c5cbc766eee6401f370143cfe859140ddd6cddf909c6'
+          :checkpoint => 'fc88e2af722c86ec1d6649427470d711fffa2a814cdd8f27bc59fae62d430cb3'
   name 'XtraFinder'
   homepage 'https://www.trankynam.com/xtrafinder/'
   license :gratis

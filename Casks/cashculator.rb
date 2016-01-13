@@ -4,7 +4,7 @@ cask 'cashculator' do
 
   url "http://dl.apparentsoft.com/Cashculator_#{version}.dmg"
   appcast 'http://dl.apparentsoft.com/cashculator.rss',
-          :checkpoint => 'c0ad69afcc31a03b28469f91b90cca502e87abcc409baef3eeef28f76412bb0e'
+          :checkpoint => '56b9baae5a54c6fd4d83472ab3f33a9f2a7d555bd6b18bff4dbb3502962fbd30'
   name 'Cashculator'
   homepage 'http://www.apparentsoft.com/cashculator'
   license :freemium

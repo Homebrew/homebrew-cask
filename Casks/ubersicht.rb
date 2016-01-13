@@ -4,7 +4,7 @@ cask 'ubersicht' do
 
   url "http://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
   appcast 'http://tracesof.net/uebersicht/updates.xml.rss',
-          :checkpoint => 'ab8839f324434167f344f7d64df6cedd0e2891e87e8b324cedf45245a713abde'
+          :checkpoint => '07ec6b517d4be5bd4cb83cb0e4cd7b486feddcc4720254077bce026df34ef0b6'
   name 'Übersicht'
   homepage 'http://tracesof.net/uebersicht'
   license :gpl

@@ -4,7 +4,7 @@ cask 'reveal' do
 
   url "http://download.revealapp.com/Reveal.app-#{version}.zip"
   appcast 'http://download.revealapp.com/reveal-release.xml',
-          :checkpoint => 'a240206b0ed484dfc4ed0193e2468dcdbe23eb91d8fe35a75ed1ce9aaca62e7b'
+          :checkpoint => '7d3b89ebb18c4a7384a3b919c7b89e146d7d1e72fa58bf2139417909b1c12511'
   name 'Reveal'
   homepage 'http://revealapp.com/'
   license :commercial

@@ -4,7 +4,7 @@ cask 'go2shell' do
 
   url 'http://zipzapmac.com/download/Go2Shell'
   appcast 'http://appcast.zipzapmac.com/go2shell.xml',
-          :checkpoint => '4fa3da8281cf079b1a609799f4b99781a847fd16162e5f4e13a7fee3b18fdc39'
+          :checkpoint => '80d5e9cc0a8c1a16116e34341d09a8d78b1aff5ce2a77c7fc0c0ff1f56b96235'
   name 'Go2Shell'
   homepage 'http://zipzapmac.com/go2shell'
   license :gratis

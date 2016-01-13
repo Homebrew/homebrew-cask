@@ -4,7 +4,7 @@ cask 'handbrake' do
 
   url "http://download.handbrake.fr/releases/#{version}/HandBrake-#{version}-MacOSX.6_GUI_x86_64.dmg"
   appcast 'https://handbrake.fr/appcast.x86_64.xml',
-          :checkpoint => 'f06989af1016fe81f79eb4d14c06c6c5873564eab575d6c48911d26e4f164803'
+          :checkpoint => '751918e991147ecd36ac29782bb0f0eda5a3fde1301e4727ef5e5e02d63b1d44'
   name 'HandBrake'
   homepage 'https://handbrake.fr'
   license :oss

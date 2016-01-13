@@ -10,7 +10,7 @@ cask 'sourcetree' do
   # atlassian.com is the official download host per the vendor homepage
   url "https://downloads.atlassian.com/software/sourcetree/SourceTree_#{version}.dmg"
   appcast 'https://www.sourcetreeapp.com/update/SparkleAppcast.xml',
-          :checkpoint => '384377600faaeaf5248250d77e94c0990c7fece5a0335c200ca57092273cfc4a'
+          :checkpoint => 'ef1f286dd1194d6715994ce99332e1db203de7f83555f15c5442773a9de44bf3'
   name 'Atlassian SourceTree'
   homepage 'https://www.sourcetreeapp.com/'
   license :gratis

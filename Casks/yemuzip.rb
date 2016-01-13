@@ -4,7 +4,7 @@ cask 'yemuzip' do
 
   url 'http://www.yellowmug.com/download/YemuZip.dmg'
   appcast 'http://yellowmug.com/yemuzip/appcast.xml',
-          :checkpoint => 'f10fe5f89839cda39543f15caa8cd985ec0ce6a7c4ff082eb39135fe4ea2e2eb'
+          :checkpoint => '2ede15a2a242f583876e6e5f5957368819435adff6347431862c5a45ee7b2a42'
   name 'YemuZip'
   homepage 'http://www.yellowmug.com/yemuzip'
   license :commercial

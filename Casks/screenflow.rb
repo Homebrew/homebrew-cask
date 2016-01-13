@@ -4,7 +4,7 @@ cask 'screenflow' do
 
   url "https://www.telestream.net/download-files/screenflow/5-0/ScreenFlow-#{version}.dmg"
   appcast 'https://www.telestream.net/updater/screenflow/appcast.xml',
-          :checkpoint => 'b8a20194607e083dc8a481340aec3e5a7162b26b3a4953a7053c2b87625cdb2b'
+          :checkpoint => 'aa64d30b6d59753d13e44634ca15a1a134d14272bfce261e4621113aaafa6408'
   name 'ScreenFlow'
   homepage 'https://www.telestream.net/screenflow/'
   license :commercial

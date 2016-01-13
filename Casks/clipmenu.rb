@@ -5,7 +5,7 @@ cask 'clipmenu' do
   # dropbox.com is the official download host per the vendor homepage
   url "https://dl.dropbox.com/u/1140644/clipmenu/ClipMenu_#{version}.dmg"
   appcast 'https://feeds.feedburner.com/clipmenu-appcast',
-          :checkpoint => '313a03110b6afe53d33a54660de745b77ac98016f1f9b76f515933523a6b4149'
+          :checkpoint => 'bcd91bd0f5da24998cbdb2ac0be516c156a60105a9504aedc05ae2a7a4165647'
   name 'ClipMenu'
   homepage 'http://www.clipmenu.com/'
   license :gratis
