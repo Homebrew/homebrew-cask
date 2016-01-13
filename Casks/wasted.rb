@@ -4,7 +4,7 @@ cask 'wasted' do
 
   url 'http://wasted.werk01.de/Wasted.zip'
   appcast 'http://wasted.werk01.de/appcast.xml',
-          :sha256 => '9fb3139c5061c58d62e25ffce233c28f774439c7f9d09276ce5470e891f959d7'
+          :sha256 => '38b416d34b42dcf6369eec1bee9460a138d22bb74b4fc0dd586fa1aa36d37d81'
   name 'WASTED'
   homepage 'http://wasted.werk01.de'
   license :mit

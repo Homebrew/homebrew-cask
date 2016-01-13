@@ -4,7 +4,7 @@ cask 'macfusion' do
 
   url "http://macfusionapp.org/releases/Macfusion_#{version}.zip"
   appcast 'http://macfusionapp.org/appcast.xml',
-          :sha256 => '70e41fcd7c77f7270da749ac762485f34d3dfb5dafe5cf27260866007ee4c20b'
+          :sha256 => '1a1da2c914b81edda8939347be0a4628c22fd8ac598da75d130db6eb5be2570d'
   name 'Macfusion'
   homepage 'http://macfusionapp.org/'
   license :apache

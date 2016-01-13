@@ -5,7 +5,7 @@ cask 'cathode' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/cjcaufield/products/cathode/cathode_#{version.gsub('.', '')}.zip"
   appcast 'http://store.secretgeometry.com/appcast.php?id=7',
-          :sha256 => '4c319653dc0883e0534eae3b2e51ecf92e6ff7f91d9329e1c2e8c39139cb1eee'
+          :sha256 => '7ad75fdca0ba2c18e84f44e08f9fc272a7b2c7c83f586541fd790c9a4b89b30d'
   name 'Cathode'
   homepage 'http://www.secretgeometry.com/apps/cathode'
   license :commercial

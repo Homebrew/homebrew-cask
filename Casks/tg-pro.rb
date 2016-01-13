@@ -4,7 +4,7 @@ cask 'tg-pro' do
 
   url "https://www.tunabellysoftware.com/resources/TGPro_#{version.dots_to_underscores}.zip"
   appcast 'https://www.tunabellysoftware.com/resources/sparkle/tgpro/profileInfo.php',
-          :sha256 => 'd762e608760132bf8da8e269488d231a7f582e536dfca65752f4d82e46c0beab'
+          :sha256 => '7b9b65133c5e6b7103e7cbba59c65b9608a7336d7676543a827802eb698b3b66'
   name 'TG Pro'
   homepage 'https://www.tunabellysoftware.com/tgpro/'
   license :commercial

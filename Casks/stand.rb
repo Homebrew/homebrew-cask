@@ -5,7 +5,7 @@ cask 'stand' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://get-stand-app.s3.amazonaws.com/#{version.sub(%r{.*_}, '')}/Stand.zip"
   appcast 'https://standapp-sparkle-updater.herokuapp.com/',
-          :sha256 => '08ede24a7ff0e38bb8960d60b86348465610c223f968147542e43400618817b6'
+          :sha256 => 'f09774db625e43d2e5f3bc0d68a10b8e9c3a4ccc5e02f6347bcf7e6526a64e4a'
   name 'Stand'
   homepage 'https://getstandapp.com/'
   license :gratis

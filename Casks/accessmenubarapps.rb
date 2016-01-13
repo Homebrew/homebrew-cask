@@ -4,7 +4,7 @@ cask 'accessmenubarapps' do
 
   url "http://www.ortisoft.de/resources/AccessMenuBarApps#{version}.dmg"
   appcast 'http://www.ortisoft.de/accessmenubarapps/profileInfo.php',
-          :sha256 => '4963699d6d9a67e002172b57c632cac982980d6b681c759f60a471dc585e4706'
+          :sha256 => '7c8e18b61138c0661d055c1618a13fbe4ac9f9183f32ab87b0acbd18f6ab8654'
   name 'AccessMenuBarApps'
   homepage 'http://www.ortisoft.de/accessmenubarapps/'
   license :gratis

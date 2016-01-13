@@ -4,7 +4,7 @@ cask 'a-better-finder-attributes' do
 
   url 'http://www.publicspace.net/download/ABFAX.dmg'
   appcast 'http://www.publicspace.net/app/signed_abfa5.xml',
-          :sha256 => '787737e75cc0a7914ba2e454c3750e53908d05dd80c79235187c89d40bc07c6b'
+          :sha256 => 'f640f80cb9b26bfaed5169c56718b7a72d48bda25148cbc1f1b9b68e30e2a8fa'
   name 'A Better Finder Attributes'
   homepage 'http://www.publicspace.net/ABetterFinderAttributes/'
   license :commercial

@@ -4,7 +4,7 @@ cask 'manico' do
 
   url "http://manico.im/static/Manico_#{version}.dmg"
   appcast 'http://manico.im/static/manico-official-appcast.xml',
-          :sha256 => '0a471a6f997a468135c993ac3e625227854c99c512f5a78460174436d15d0284'
+          :sha256 => 'c4f9e5448fd3ee32d8247c85e9bb770cc908686d6ea1649b8d0ccf4f07b7ca36'
   name 'Manico'
   homepage 'http://manico.im/'
   license :commercial

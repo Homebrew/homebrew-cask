@@ -4,7 +4,7 @@ cask 'ukelele' do
 
   url "https://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Ukelele_#{version}&filename=Ukelele_#{version}.dmg"
   appcast 'https://dl.dropboxusercontent.com/u/60565698/Ukelele/Ukelele_appcast.xml',
-          :sha256 => '530df6038665946f4658ea15ace6fffd4776221ccbc2a2aef650f0bed10601da'
+          :sha256 => '3fdb79513a21aebd3bc0deb49a7b2869ed5a4513dcb5933ed1d51de75f4ab53d'
   name 'Ukelele'
   homepage 'https://scripts.sil.org/ukelele'
   license :gratis

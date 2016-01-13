@@ -4,7 +4,7 @@ cask 'simon' do
 
   url "http://www.dejal.com/download/simon-#{version}.zip"
   appcast 'http://www.dejal.com/appcast/?prod=simon',
-          :sha256 => '7431a2e17604486863b071139da0665aec01e61a1447367b2f497080936e3f4b'
+          :sha256 => 'fad59fcf94141c263a3cfcdeb19af33e8d96366e7491987f0e5b5d7af6984017'
   name 'Simon'
   homepage 'http://www.dejal.com/simon/'
   license :commercial

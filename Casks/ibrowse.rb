@@ -5,7 +5,7 @@ cask 'ibrowse' do
   # macroplant.com is the official download host per the vendor homepage
   url "https://www.macroplant.com/release/iBrowse-#{version}.dmg"
   appcast 'https://www.macroplant.com/ibrowse/ib-appcast.xml',
-          :sha256 => '29b0aa6c0748ed9f8bd9b7aa808ef18706d3569699633593660519cd8ebfdb46'
+          :sha256 => '1156a1dff1995596cbae4d98da46c8570c73fd55862499f3580efbdf10c5cbac'
   name 'iBrowse'
   homepage 'https://www.ibrowseapp.com/'
   license :gratis

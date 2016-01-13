@@ -4,7 +4,7 @@ cask 'smcfancontrol' do
 
   url "http://www.eidac.de/smcfancontrol/smcfancontrol_#{version.gsub('.', '_')}.zip"
   appcast 'http://www.eidac.de/smcfancontrol/smcfancontrol.xml',
-          :sha256 => '031f140c1ad807c5799bee5818d7dd14601d8893e99883a90b421c13a05cce2a'
+          :sha256 => '0d2842e77bd59abf47dda446d047d439008fe243c3b1a6c449e93f672349d1e8'
   name 'smcFanControl'
   homepage 'http://www.eidac.de/?cat=40'
   license :gpl

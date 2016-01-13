@@ -4,7 +4,7 @@ cask 'exiftool' do
 
   url "http://owl.phy.queensu.ca/~phil/exiftool/ExifTool-#{version}.dmg"
   appcast 'http://owl.phy.queensu.ca/~phil/exiftool/rss.xml',
-          :sha256 => '582a5c0292ec962adb5e6adb13b52075616575d96ca806417f9dced896cb888c'
+          :sha256 => '621c41a97e70700df1dd1991b1b58221720dd8ac77b3107432f54837dc4b4539'
   name 'ExifTool by Phil Harvey'
   homepage 'http://www.sno.phy.queensu.ca/~phil/exiftool/'
   license :gpl

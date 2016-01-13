@@ -5,7 +5,7 @@ cask 'automatic' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://com-codingcurious-downloads.s3.amazonaws.com/Automatic.#{version}.zip"
   appcast 'http://update.codingcurious.com/automatic/appcast2.xml',
-          :sha256 => '8267eef79de744bb9f0075524c4cab6f3f83e0b0c6ced213131e632e37b34984'
+          :sha256 => '5f6401adefe07978a8136fd440ff6c9a5268e11cc1b0857aa75a4447d048b1ce'
   name 'Automatic'
   homepage 'http://codingcurious.com/automatic/'
   license :commercial

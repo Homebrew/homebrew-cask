@@ -4,7 +4,7 @@ cask 'the-tagger' do
 
   url 'http://deadbeatsw.com/thetagger/TheTaggerLatest.zip'
   appcast 'http://deadbeatsw.com/thetagger/appcast.xml',
-          :sha256 => '41ea65403b2a02ddda76e9e43bb0bdc510113d6988572c2cb83860f9ba747291'
+          :sha256 => '5c637096309217850b868d4ad34addba477aa4bb02d7d7c6371f64340018de3d'
   name 'The Tagger'
   homepage 'http://deadbeatsw.com/thetagger/'
   license :commercial

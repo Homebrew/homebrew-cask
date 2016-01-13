@@ -5,7 +5,7 @@ cask 'world-of-tanks' do
   # wargaming.net is the official download host per the vendor homepage
   url 'http://redirect.wargaming.net/WoT/latest_mac_install_na'
   appcast 'https://wot.gcdn.co/us/files/osx/WoT_OSX_update_na.xml',
-          :sha256 => 'ad2bb678e019058df53ff567bc50069e87e1ad1fb0b1dc27b2d2ee26f3f2759e'
+          :sha256 => '39a9e6d2d79bfd1853b7da9f36305cb60474619a36157fc3f39640c25d4d5414'
   name 'World Of Tanks'
   homepage 'http://worldoftanks.com/'
   license :gratis

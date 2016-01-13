@@ -5,7 +5,7 @@ cask 'vienna' do
   # bintray.com is the official download host per the appcast feed
   url "https://dl.bintray.com/viennarss/vienna-rss/Vienna#{version}.tgz"
   appcast 'http://vienna-rss.org/changelog.xml',
-          :sha256 => 'c67ecc2d8bbff9756210f86671256c4dc605274f32cdff5624102449f3174eb6'
+          :sha256 => '638146a79dd2963c47856c545fa2d3418052bd00bef44038eceb43d322501114'
   name 'Vienna'
   homepage 'http://www.vienna-rss.org'
   license :apache

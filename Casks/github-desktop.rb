@@ -4,7 +4,7 @@ cask 'github-desktop' do
 
   url "https://mac-installer.github.com/mac/GitHub%20Desktop%20#{version}.zip"
   appcast 'https://central.github.com/mac/appcast.xml',
-          :sha256 => '47640ca78a555b99cdbb9e8b85c640ac2305331b7c030a48cd5dfaf09aa17c10'
+          :sha256 => '401f83808001e8dd35d30709ee11c3970d3240bf9fe970be51ed295a6c61f7c3'
   name 'GitHub Desktop'
   homepage 'https://desktop.github.com/'
   license :gratis

@@ -4,7 +4,7 @@ cask 'flavours' do
 
   url 'http://flavours-updates.interacto.net/Flavours.dmg'
   appcast 'http://flavours-updates.interacto.net/appcast.xml',
-          :sha256 => '59f532eec5201cb735a8ca2beb6dc0e7eb7a25ea1940f3acff83e490b6d74e5e'
+          :sha256 => '6ba004dd0aa592b94ff62eaee15aa9e51f4c15e10efccd3ae832fc6e887f822d'
   name 'Flavours'
   homepage 'http://flavours.interacto.net/'
   license :commercial

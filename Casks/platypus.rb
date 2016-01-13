@@ -4,7 +4,7 @@ cask 'platypus' do
 
   url "http://sveinbjorn.org/files/software/platypus/platypus#{version}.zip"
   appcast 'http://www.sveinbjorn.org/files/appcasts/PlatypusAppcast.xml',
-          :sha256 => '2eb402188ef9006152796d65342be4ef75fd5fbc3c8a516f7f3a294509a9a5b9'
+          :sha256 => 'b88c3e9846267f04d5f2fb053e9eeb158ef3072f2e53a472803fb5778a63656d'
   name 'Platypus'
   homepage 'http://sveinbjorn.org/platypus'
   license :bsd

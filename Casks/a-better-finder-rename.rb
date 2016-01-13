@@ -4,7 +4,7 @@ cask 'a-better-finder-rename' do
 
   url 'http://www.publicspace.net/download/ABFRX.dmg'
   appcast 'http://www.publicspace.net/app/signed_abfr10.xml',
-          :sha256 => '1f0457b0a280d86194117e2fd093cbcec0e56e50fdd80e5dc286a292506998d8'
+          :sha256 => '7f6769bd083c2f4c2fa05cc70e756eff9b9168ac6d2bd33c8dd98064010c25c0'
   name 'A Better Finder Rename'
   homepage 'http://www.publicspace.net/ABetterFinderRename/'
   license :commercial

@@ -5,7 +5,7 @@ cask 'transmission' do
   # cachefly.net is the official download host per the vendor homepage
   url "https://transmission.cachefly.net/Transmission-#{version}.dmg"
   appcast 'https://update.transmissionbt.com/appcast.xml',
-          :sha256 => '178ebfb426dfefd19ce177577addab884ac8139c1f6b85bb1859cd6d3fc0d774'
+          :sha256 => '00db997f37daaaf3f46c3aa41588d8f05ed831db41c8009c640231d4d8e9cf10'
   name 'Transmission'
   homepage 'http://www.transmissionbt.com/'
   license :gpl

@@ -4,7 +4,7 @@ cask 'videomonkey' do
 
   url "http://videomonkey.org/download/videomonkey-#{version}.zip"
   appcast 'http://videomonkey.org/releases/videomonkeycast.xml',
-          :sha256 => '76c09866931509d5fbe0de5c46fa1466520a43885a32f82e72dd16173af54daa'
+          :sha256 => 'c91aa43fadae980c2bce3b6bd1444d70ec281654a0a6657c6c00b2bea7ded7a4'
   name 'Video Monkey'
   homepage 'http://videomonkey.org/'
   license :bsd

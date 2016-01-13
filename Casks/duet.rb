@@ -5,7 +5,7 @@ cask 'duet' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3-us-west-1.amazonaws.com/duetmac/#{version.dots_to_underscores}/duet_#{version.dots_to_underscores}.zip"
   appcast "https://s3-us-west-1.amazonaws.com/duetmac/#{version.dots_to_underscores}/DuetDisplayAppcast.xml",
-          :sha256 => '8e020dd515c9693fe4eda510d5330e1bc873caa8d2b562a4197afe14b5ef7ed3'
+          :sha256 => '3833aad771bbc62666983f16fd1e7393c215c532f77595680219ea95d89e9bfb'
   name 'Duet'
   homepage 'http://www.duetdisplay.com/'
   license :gratis

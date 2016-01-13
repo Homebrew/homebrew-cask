@@ -5,7 +5,7 @@ cask 'night-owl' do
   # null.net is the official download host per the vendor homepage
   url 'https://aki-null.net/yf/NightOwl.zip'
   appcast 'https://sites.google.com/site/yorufukurou/distribution/appcast.xml',
-          :sha256 => '773b0639a4774732129241d5fc6f92c216d92a2d203886bb784ad5844dd6ba02'
+          :sha256 => 'c5b6bf63c12d377c8759b21a2dc4da903a1097019f5b23997162ede6f1f0f970'
   name 'NightOwl'
   name 'YoruFukurou'
   homepage 'https://sites.google.com/site/yorufukurou/home-en'

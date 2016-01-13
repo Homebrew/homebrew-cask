@@ -4,7 +4,7 @@ cask 'meocloud' do
 
   url "https://meocloud.pt/binaries/osx/MEOCloud-#{version}.dmg"
   appcast 'https://services.sapo.pt/Application/Catalog/Update?appid=pt.sapo.mac.cloudpt',
-          :sha256 => '203b4c163172f8c8eeb0016d11b17653e1b75994874d7c8f39013d18304922e1'
+          :sha256 => '63e8470798c81f09583c33eaafd3d3b5475ce92907d5bfff7715e7f02b12a853'
   name 'MEO Cloud'
   homepage 'https://meocloud.pt'
   license :gratis

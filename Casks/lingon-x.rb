@@ -4,7 +4,7 @@ cask 'lingon-x' do
 
   url "https://www.peterborgapps.com/downloads/LingonX#{version.major}.zip"
   appcast "https://www.peterborgapps.com/updates/lingonx#{version.major}-appcast.xml",
-          :sha256 => 'c7918aff6af4b54ee257205ab5a08c22c77b2f8485665b8beac03a1e5fb63cf1'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   name 'Lingon X'
   homepage 'https://www.peterborgapps.com/lingon/'
   license :commercial

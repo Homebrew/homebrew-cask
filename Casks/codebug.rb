@@ -4,7 +4,7 @@ cask 'codebug' do
 
   url "http://codebugapp.com/downloads/Codebug#{version}.zip"
   appcast 'http://codebugapp.com/updateV1.xml',
-          :sha256 => 'b7e35ecf3c846faf2015234aeb4327c9b9211699e680918d8957a5a33f53e148'
+          :sha256 => '06bfc8c5f723322981d338288630c4abd73676c10f48e803e561b6d153f18656'
   name 'Codebug'
   homepage 'http://www.codebugapp.com/'
   license :commercial

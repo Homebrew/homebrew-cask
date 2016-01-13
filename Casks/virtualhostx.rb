@@ -4,7 +4,7 @@ cask 'virtualhostx' do
 
   url "https://downloads-clickonideas.netdna-ssl.com/virtualhostx/virtualhostx60_#{version}.zip"
   appcast 'https://shine.clickontyler.com/appcast.php?id=30',
-          :sha256 => 'fbfca452758bd5dbe86c5f8ee72abbc87f65d3885da95fecdba765363f92a8e0'
+          :sha256 => 'b1990758542b2e5f95a7aa519b8060293366e2ac43fb5fd4e738157377b5a835'
   name 'VirtualHostX'
   homepage 'https://clickontyler.com/virtualhostx/'
   license :commercial

@@ -4,7 +4,7 @@ cask 'gfxcardstatus' do
 
   url "https://gfx.io/downloads/gfxCardStatus-#{version}.zip"
   appcast 'https://gfx.io/appcast.xml',
-          :sha256 => 'cc01a7466eb53f425920046a5b7ea0a23b35bd431b7ccca9c77bd8fa407cd718'
+          :sha256 => '605c9f1f8f9ebdb8bfde4a28d8d4ecc34dd079262de1a741cf078a6941c23818'
   name 'gfxCardStatus'
   homepage 'https://gfx.io/'
   license :bsd

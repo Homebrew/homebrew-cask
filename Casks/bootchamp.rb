@@ -4,7 +4,7 @@ cask 'bootchamp' do
 
   url 'https://kainjow.com/downloads/BootChamp.zip'
   appcast 'https://kainjow.com/updates/bootchamp.xml',
-          :sha256 => 'e3304e693f6f12a77ff2560785f7b7f35ac90013595d3bfbe349e199b6d5ad61'
+          :sha256 => '37d00975e1b9077228c98830917a373e33961f029cff1e4f9120544b1944192a'
   name 'BootChamp'
   homepage 'https://www.kainjow.com/'
   license :oss

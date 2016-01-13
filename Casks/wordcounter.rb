@@ -5,7 +5,7 @@ cask 'wordcounter' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/wordcounterapp/WordCounter-v#{version}.zip"
   appcast "https://update.christiantietze.de/wordcounter/v#{version.major}/beta.xml",
-          :sha256 => '96b36ea1ddf1b899710c77a2d5d2ad6ce5b0943aa1cbc4f92f00a8b350f95b6a'
+          :sha256 => '4accc4dc07290f0970781b86baa4bd15500d8a39be2e1bdbd5a97d52d71897f5'
   name 'WordCounter'
   homepage 'http://wordcounterapp.com/'
   license :commercial

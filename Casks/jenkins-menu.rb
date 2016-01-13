@@ -5,7 +5,7 @@ cask 'jenkins-menu' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/qvacua/jenkins-menu/releases/download/v#{version}/Jenkins.Menu-#{version}.zip"
   appcast 'http://qvacua.com/jenkinsmenu/appcast.xml',
-          :sha256 => '420aaafc9de36c174ba1b43d1dfd4719603808f1754da8b7bb2a4ef1e934429d'
+          :sha256 => 'f025e4e221460c3961febe6b85f910a0d38b358d61a10913bdd78d051766a5ce'
   name 'Jenkins Menu'
   homepage 'http://qvacua.com'
   license :gpl

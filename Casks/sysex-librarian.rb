@@ -4,7 +4,7 @@ cask 'sysex-librarian' do
 
   url 'https://www.snoize.com/SysExLibrarian/SysExLibrarian.zip'
   appcast 'https://www.snoize.com/SysExLibrarian/SysExLibrarian.xml',
-          :sha256 => 'b2bf48b31196149f1d2e4cec64ff1903aadb39d419128d44fff9aa46ee626f8b'
+          :sha256 => '4f30ab1b477eba22265001b7c92990930b29e5a43c78ba37a7b83cf9a42e4a90'
   name 'SysEx Librarian'
   homepage 'http://www.snoize.com/SysExLibrarian'
   license :bsd

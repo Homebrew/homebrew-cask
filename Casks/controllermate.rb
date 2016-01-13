@@ -5,7 +5,7 @@ cask 'controllermate' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/orderedbytes/ControllerMate#{version.delete('.')}.zip"
   appcast 'http://www.orderedbytes.com/sparkle/appcast_cm460.xml',
-          :sha256 => 'b75925e88055ccce64c3845876552c31dd3f1981a555747a0b52d3af9f75b72f'
+          :sha256 => '65b120dc95f2e99771589209b002e40841181cb52dd3d11b0b39224e397cbb90'
   name 'ControllerMate'
   homepage 'http://www.orderedbytes.com/controllermate/'
   license :freemium

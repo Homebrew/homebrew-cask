@@ -4,7 +4,7 @@ cask 'opacity' do
 
   url 'http://downloads.likethought.com/opacity.zip'
   appcast 'http://downloads.likethought.com/appcasts/opacity.php',
-          :sha256 => '031a196c3a9fb04b1eb31d791b154bed797a043621b8350d85eca73c113c2fe0'
+          :sha256 => 'fcb96c7649851c604eb947af284ebed7aa900c02b0fcb563d402e31cec7ed847'
   name 'Opacity'
   homepage 'http://likethought.com/opacity/'
   license :commercial

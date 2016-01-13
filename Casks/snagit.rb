@@ -4,7 +4,7 @@ cask 'snagit' do
 
   url 'http://download.techsmith.com/snagitmac/enu/Snagit.dmg'
   appcast 'https://techsmithredirect.appspot.com/',
-          :sha256 => '33e89684f8f33f097a14efc51fc1dca1757a505287e701af8fc7974f0f853c6e'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   name 'Snagit'
   homepage 'https://www.techsmith.com/snagit.html'
   license :commercial

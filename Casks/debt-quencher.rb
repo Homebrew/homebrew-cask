@@ -4,7 +4,7 @@ cask 'debt-quencher' do
 
   url "http://downloads.nothirst.com/DebtQuencher_#{version.sub(%r{^(\d+)\.(\d+).*}, '\1.\2')}.zip"
   appcast 'http://nothirst.com/feeds/DebtQuencherAppcast.xml',
-          :sha256 => '28091e568c2ebfacd37e9a0e33de29e8e0ac43ad5e596446d4cc4d9173239a89'
+          :sha256 => '94b828b02a48d534a892040858ff4749925ee8e3bfc9152af0c0a7144d3cd34e'
   name 'Debt Quencher'
   homepage 'http://nothirst.com/debtquencher/'
   license :freemium

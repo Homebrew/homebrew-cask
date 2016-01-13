@@ -4,7 +4,7 @@ cask 'choosy' do
 
   url "http://downloads.choosyosx.com/choosy_#{version}.zip"
   appcast 'http://www.choosyosx.com/sparkle/feed',
-          :sha256 => '6c9105f7a2d400fb6928a1b0ed2384d098ef016a319b413684723033880d1601'
+          :sha256 => '2fad3d77c88c2c3adc6a366e61dad458c9c453eca3680239cad65b7e33e8ee73'
   name 'Choosy'
   homepage 'http://www.choosyosx.com/'
   license :commercial

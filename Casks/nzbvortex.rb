@@ -4,7 +4,7 @@ cask 'nzbvortex' do
 
   url 'http://www.nzbvortex.com/downloads/NZBVortex.dmg'
   appcast 'http://www.nzbvortex.com/update/appcast.xml',
-          :sha256 => 'f91b5f3874597a1c67b10c714b2e726e8f649e8fa6da95af66ef4b5dbd668d13'
+          :sha256 => '66b0065e6fac5d0178c64bd235dd9587b42c09897914f48de18b71bae3717bd5'
   name 'NZBVortex'
   homepage 'http://www.nzbvortex.com/'
   license :commercial

@@ -5,7 +5,7 @@ cask 'unsplash-wallpaper' do
   # devmate.com is the official download host per the vendor homepage
   url "https://dl.devmate.com/com.leonspok.osx.Unsplash-Wallpaper/#{version.sub(%r{_.*}, '')}/#{version.sub(%r{.*_}, '')}/UnsplashWallpaper-#{version.sub(%r{_.*}, '')}.zip"
   appcast 'http://updateinfo.devmate.com/com.leonspok.osx.Unsplash-Wallpaper/updates.xml',
-          :sha256 => '72fee1b20b7a639966c7a56b0f276f46df7866d0efa533e8cfd497a0ecfee72b'
+          :sha256 => 'fa8082b2a95326c519a0c0485cf1530742fd45b103c7d8b72435e5a35317895a'
   name 'Unsplash Wallpaper'
   homepage 'http://unsplash-wallpaper.tumblr.com'
   license :gratis

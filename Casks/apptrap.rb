@@ -4,7 +4,7 @@ cask 'apptrap' do
 
   url "http://onnati.net/apptrap/download/AppTrap#{version.dots_to_hyphens}.zip"
   appcast 'http://onnati.net/apptrap/ReleaseNotes.xml',
-          :sha256 => '557732cd118173c9b9ac078a54da8a8dc93ba678268be5677dddd5496da7c394'
+          :sha256 => 'e5ad0ae80a845683989e8946ee710923dadf90d1c66c15992d701bc1f81b5919'
   name 'AppTrap'
   homepage 'http://onnati.net/apptrap'
   license :other # see https://github.com/kvijayan/AppTrap/blob/master/LICENSE

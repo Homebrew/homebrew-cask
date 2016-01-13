@@ -10,7 +10,7 @@ cask 'daisydisk' do
   end
 
   appcast 'https://www.daisydiskapp.com/downloads/appcastFeed.php',
-          :sha256 => '622ac0e225a09a7a40476f014aa9ea53adc483546d73e942729d86b2c9cc0907'
+          :sha256 => '6d4ff00bbcb357beeb22859d931c098aad448192f0ff93376a31cbb23e2d294f'
   name 'DaisyDisk'
   homepage 'https://www.daisydiskapp.com'
   license :freemium

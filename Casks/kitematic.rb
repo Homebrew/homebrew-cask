@@ -5,7 +5,7 @@ cask 'kitematic' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/kitematic/kitematic/releases/download/v#{version}/Kitematic-#{version}-Mac.zip"
   appcast 'https://github.com/kitematic/kitematic/releases.atom',
-          :sha256 => 'bc2e4c8b498952d720949fc2d7c6d44ca641a9d6bdf6f2e88827817f5c0595a7'
+          :sha256 => '99a114dd6c566e0d39d4fc1fa2715588c0d405427555613f696e53d7847e12a6'
   name 'Kitematic'
   homepage 'https://kitematic.com/'
   license :apache

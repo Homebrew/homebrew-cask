@@ -5,7 +5,7 @@ cask 'nvalt' do
   # designheresy.com is the official download host per the vendor homepage
   url "http://abyss.designheresy.com/nvaltb/nvalt#{version}.zip"
   appcast 'http://abyss.designheresy.com/nvalt2/nvalt2main.xml',
-          :sha256 => '46ab145d41812854224a0341afa320e672ea53348abe61ce08ecf84326b1b2c4'
+          :sha256 => '0ad38419eb2b69f74bc34ac8eb2668c5436efb6f9feb17605e6ab1f31f795f63'
   name 'nvALT'
   homepage 'http://brettterpstra.com/project/nvalt/'
   license :bsd

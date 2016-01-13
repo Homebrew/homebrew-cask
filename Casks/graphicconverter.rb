@@ -5,7 +5,7 @@ cask 'graphicconverter' do
   # lemkesoft.org is the official download host per the vendor homepage
   url "http://www.lemkesoft.org/files/graphicconverter/gc#{version.to_i}_build#{version.sub(%r{^\d-}, '')}.dmg"
   appcast 'http://www.lemkesoft.org/files/graphicconverter/graphicconverter9.xml',
-          :sha256 => '56fcc2ffcee42fb2863f026f3d3bca6de075299d3ec27c86271250490daacf50'
+          :sha256 => 'b4e3ab22d46d5b30ecb585efbc3e20c0984651c2f388631afe3b8acd447895e9'
   name 'GraphicConverter'
   homepage 'http://www.lemkesoft.de/en/products/graphicconverter/'
   license :commercial

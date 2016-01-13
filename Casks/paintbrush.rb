@@ -4,7 +4,7 @@ cask 'paintbrush' do
 
   url "http://downloads.sourceforge.net/project/paintbrush/Paintbrush%202.x/Paintbrush%20#{version}/Paintbrush-#{version}.zip"
   appcast 'http://paintbrush.sourceforge.net/updates2x.xml',
-          :sha256 => '287a3d82bf8883d38a7414a63df7a8ca6702b02d3955e8f2211e0481025dbb48'
+          :sha256 => '4caacfbbc8af979c37e16b3c0eb305a5940d20fd1077c75feb8cd18279bd8252'
   name 'Paintbrush'
   homepage 'http://paintbrush.sourceforge.net/'
   license :gpl

@@ -4,7 +4,7 @@ cask 'appdelete' do
 
   url 'http://www.reggieashworth.com/downloads/AppDelete.dmg'
   appcast 'http://www.reggieashworth.com/AD4Appcast.xml',
-          :sha256 => '958b61c33ea46297761dea20f69e3ac0190b40ce9cf96d8b7f7ae378d0d3ad39'
+          :sha256 => 'c3324cf700a0b2c6062a75dc2683bae12b0a3296b6be78c5c37349ffdf347b3f'
   name 'AppDelete'
   homepage 'http://www.reggieashworth.com/appdelete'
   license :commercial

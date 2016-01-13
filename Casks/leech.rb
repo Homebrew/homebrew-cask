@@ -4,7 +4,7 @@ cask 'leech' do
 
   url 'http://manytricks.com/download/leech'
   appcast 'https://manytricks.com/leech/appcast.xml',
-          :sha256 => 'ef4c85840f37dc92c0999f88e5e64acc5eb76b3e3933582710cdb703583473a1'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   name 'Leech'
   homepage 'https://manytricks.com/leech/'
   license :commercial

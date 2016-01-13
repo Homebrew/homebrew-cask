@@ -5,7 +5,7 @@ cask 'tactor' do
   # dropbox is the official download host per the vendor homepage
   url 'https://dl.dropboxusercontent.com/u/7614970/Tactor.zip'
   appcast 'https://onflapp.appspot.com/tactor',
-          :sha256 => 'de6620c8fd971681e356f2c24280ae9d38d09b78cafd2f25593fe50a235fd997'
+          :sha256 => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   name 'Tactor'
   homepage 'https://onflapp.wordpress.com/tactor/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

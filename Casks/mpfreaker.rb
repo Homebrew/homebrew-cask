@@ -4,7 +4,7 @@ cask 'mpfreaker' do
 
   url 'http://www.lairware.com/download/MPFreaker.dmg'
   appcast 'http://lwupdate.dyndns.org/mpfreaker.xml',
-          :sha256 => '7b5d860a7dbb36f765bafd2813f3acfbf62dd4b7ab4b60d5e273819732a584f1'
+          :sha256 => 'bcca68500c6e095da7586506adb21583498678fb81bd8d0fd1a6a7a954bc2ed1'
   name 'MPFreaker'
   homepage 'http://www.lairware.com/mpfreaker/'
   license :freemium

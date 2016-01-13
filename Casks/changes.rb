@@ -5,7 +5,7 @@ cask 'changes' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://bitbq_changes.s3.amazonaws.com/changes-#{version}.zip"
   appcast 'https://bitbq_changes.s3.amazonaws.com/changes-production.xml',
-          :sha256 => 'c1224334faffe115ed11ff3e69edcfde305e28687f48d18e870b65289e6136df'
+          :sha256 => '518a27abdfba9df840de0ea54452faf868fe457c80919f27d815c617f93348c3'
   name 'Changes'
   homepage 'http://martiancraft.com/products/changes.html'
   license :commercial

@@ -4,7 +4,7 @@ cask 'ripit' do
 
   url 'https://files.thelittleappfactory.com/ripit/RipIt.zip'
   appcast 'https://files.thelittleappfactory.com/ripit/appcast.xml',
-          :sha256 => 'b2f4306183f5a193000dbfc55e70949e3c7394488264e4dac6c42ee463970b30'
+          :sha256 => 'f2f0bf51620b592b296ecfdb898eb6effa64af9d3ace8b5db9b66bc137b35571'
   name 'RipIt'
   homepage 'http://thelittleappfactory.com/ripit/'
   license :commercial

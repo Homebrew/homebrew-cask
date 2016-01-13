@@ -4,7 +4,7 @@ cask 'todos' do
 
   url 'http://dbachrach.com/opensoft/downloads/apps/Todos.dmg'
   appcast 'http://www.dbachrach.com/opensoft/appcasts/Todos.xml',
-          :sha256 => 'fc76d9d409b3412188993473cde32eb51d36a5ebd3fdf8f786334272829bc055'
+          :sha256 => '61c4f43c0984df5c3cadfc8fabc5de1f9582909fe52a65f97c7547f3399dc97e'
   name 'Todos'
   homepage 'http://dbachrach.com/opensoft/index.php?page=Todos'
   license :gpl

@@ -4,7 +4,7 @@ cask 'notifyr' do
 
   url 'http://getnotifyr.com/app/Notifyr.zip'
   appcast 'http://getnotifyr.com/app/appcast.xml',
-          :sha256 => 'ed45021ad3a68300749e070acdd41a52506ca14f9743d438058463c1c9c9e803'
+          :sha256 => 'de1016b8d5d38d7cef29825dd0c1615763c8f44b5fb1ae7744081c1b33392a9d'
   name 'Notifyr'
   homepage 'http://getnotifyr.com'
   license :gratis

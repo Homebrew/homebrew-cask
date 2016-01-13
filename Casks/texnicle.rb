@@ -4,7 +4,7 @@ cask 'texnicle' do
 
   url "http://www.bobsoft-mac.de/resources/TeXnicle/#{version.major_minor}/TeXnicle.app.#{version}.zip"
   appcast 'http://www.bobsoft-mac.de/profileInfo.php',
-          :sha256 => '1e683d5d82758e72e3287873d4a0a164dffe1c89a3ddfbd0c76c1c4b2d0da848'
+          :sha256 => 'ed82c00f4844d5e10b602664cc69da23d6ee9aa0ceac8a12cdc3fd3b8579445e'
   name 'TeXnicle'
   homepage 'http://www.bobsoft-mac.de/texnicle/texnicle.html'
   license :gratis

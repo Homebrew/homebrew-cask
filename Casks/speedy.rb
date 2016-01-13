@@ -4,7 +4,7 @@ cask 'speedy' do
 
   url 'http://www.apimac.com/download/Speedy.zip'
   appcast 'http://www.apimac.com/version_checking/speedy_mac.xml',
-          :sha256 => '7dddd319b0035c46f79e445d1e91d260a50f46f51963ef494c3f9e5cbe76fe58'
+          :sha256 => '6b0638d63dd078a73c3ffd8ae2a625123d52d9a30c4f220676aae8eb36718707'
   name 'Speedy'
   homepage 'http://www.apimac.com/mac/speedy/'
   license :commercial

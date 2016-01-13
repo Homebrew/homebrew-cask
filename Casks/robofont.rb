@@ -4,7 +4,7 @@ cask 'robofont' do
 
   url "http://robofont.com/downloads/RoboFont_#{version.after_comma}.dmg"
   appcast 'http://doc.robofont.com/version-history-index/',
-          :sha256 => 'aeaf66c982d07b2a172a5c96f340d9afa9f740053e1968c3ca6fdbbb00a18615'
+          :sha256 => '20fd666897887814a7101134a37ff02b64fd0efb93fac1f64d4876b4c91517b6'
   name 'RoboFont'
   homepage 'http://robofont.com'
   license :other # See http://doc.robofont.com/license-agreement/

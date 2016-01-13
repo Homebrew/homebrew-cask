@@ -4,7 +4,7 @@ cask 'sony-ericsson-bridge' do
 
   url 'https://www-support-downloads.sonymobile.com/Software%20Downloads/Bridge%20for%20Mac/SonyBridgeForMac_web.dmg'
   appcast 'https://dl-desktop-macapps.sonyericsson.com/production/Bridge/Databases_Prod/appcast.xml',
-          :sha256 => '818b435f630092d977cf4a9062c1d1770fbe1f4863ecff6fda91c87b918bcbd0'
+          :sha256 => '87d83a0ea0fdc30bec729809d75f8153533846e4182d2ccd31d85e48fab305bf'
   name 'Sony Ericsson Bridge for Mac'
   homepage 'https://support.sonymobile.com/au/tools/bridge-for-mac/'
   license :gratis

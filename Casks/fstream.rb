@@ -4,7 +4,7 @@ cask 'fstream' do
 
   url 'http://www.sourcemac.com/fstream_FStream.tgz'
   appcast 'http://www.sourcemac.com/sparkle.php?id=156&content=xml',
-          :sha256 => '01ef6ac710afdc6e9bff5969ee9bb3f4a04d9e962d94bf8c6755ba44409192ad'
+          :sha256 => '06d8e1aa53a1ad03b5446c10d4482d5bb38765dfb08a1253d14afdde7d2fa53e'
   name 'FStream'
   homepage 'http://www.sourcemac.com/?page=fstream'
   license :gratis

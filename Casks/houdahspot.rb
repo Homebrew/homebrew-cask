@@ -4,7 +4,7 @@ cask 'houdahspot' do
 
   url "https://www.houdah.com/houdahSpot/updates/cast4_assets/HoudahSpot#{version}.zip"
   appcast "https://www.houdah.com/houdahSpot/updates/cast#{version.major}.xml",
-          :sha256 => 'cbaea676d2684a8b2f5709cedc63ac66e462e079d8519c9117bc2ebf5200579d'
+          :sha256 => '8053e176c92464a84412376f1fd7530f272489c427581c02b5c8bb140e14b368'
   name 'HoudahSpot'
   homepage 'https://www.houdah.com/houdahSpot/'
   license :commercial

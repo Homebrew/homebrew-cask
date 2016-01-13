@@ -5,7 +5,7 @@ cask 'boxcryptor' do
   # cloudfront.net is the official download host per the vendor homepage
   url "https://d3k3ih5otj72mn.cloudfront.net/Boxcryptor_v#{version}_Installer.dmg"
   appcast 'https://rink.hockeyapp.net/api/2/apps/7fd6db3e51a977132e3b120c613eaea8',
-          :sha256 => '8c9d547d276df2cebf9cb5934b973c6d3b3959168767ac202d08c852d5bbeaa1'
+          :sha256 => '9873a491e524392a6b52bf244adb1eecd61ec8300acf68e0273d2528727cffb0'
   name 'Boxcryptor'
   homepage 'https://www.boxcryptor.com/en'
   license :commercial

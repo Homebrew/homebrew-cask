@@ -4,7 +4,7 @@ cask 'macaw' do
 
   url "http://download.macaw.co/#{version}/Macaw#{version}.dmg"
   appcast 'http://download.macaw.co/appcast.xml',
-          :sha256 => '89c8f4d9ac4f0dcbf29893de75bdf1bb0c60220280c60e4547d62a8b43300112'
+          :sha256 => 'ef754c41ddbf8942bcad85c9a00212f87a18e9f724184ee776992f911ac16ebf'
   name 'Macaw'
   homepage 'http://macaw.co/'
   license :commercial

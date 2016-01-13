@@ -4,7 +4,7 @@ cask 'auganizer' do
 
   url "http://dl.auganizer.com/Auganizer-#{version}.dmg"
   appcast 'http://www.auganizer.com/updates/aurora.php',
-          :sha256 => 'd3b78360ce50e0f2dfe6371a0a4b4433063c21ee7f74ad8301051b5d1bf070ba'
+          :sha256 => 'cb6a73cecc9fb1fa3181cf8de2b34510d9f808d0bb30f0a4c68dcab82c2cc891'
   name 'Auganizer'
   homepage 'http://auganizer.com/'
   license :commercial

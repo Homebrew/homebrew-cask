@@ -4,7 +4,7 @@ cask 'houdahgeo' do
 
   url "https://www.houdah.com/houdahGeo/updates4/cast_assets/HoudahGeo#{version}.zip"
   appcast "https://www.houdah.com/houdahGeo/updates#{version.major}/cast.xml",
-          :sha256 => '6a894387c4db638e52d6b1057a619e688eef0e222d78df50af7e5948a0b8e594'
+          :sha256 => '8b8704052d23013297a6e41cd6ee01cbc964989082c0bcbf9e4f6ab05767f1f6'
   name 'HoudahGeo'
   homepage 'https://houdah.com/houdahGeo/'
   license :commercial

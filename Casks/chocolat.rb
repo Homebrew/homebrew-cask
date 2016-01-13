@@ -5,7 +5,7 @@ cask 'chocolat' do
   # fileability.net is the official download host per the vendor homepage
   url "http://files.fileability.net/Chocolat_#{version}.zip"
   appcast 'https://chocolatapp.com/userspace/appcast/appcast_alpha.php',
-          :sha256 => '6eea1e8e68612efe87ddaaf43ec29a3a232bbcec6b217777a1cdb03126dfa0ff'
+          :sha256 => 'c871746d77d40e4ab42566e933d517f9c70eba338544492b580d32849e909b72'
   name 'Chocolat'
   homepage 'https://chocolatapp.com/'
   license :commercial

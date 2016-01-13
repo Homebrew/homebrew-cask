@@ -4,7 +4,7 @@ cask 'better-window-manager' do
 
   url "https://gngrwzrd.com/BetterWindowManager-#{version}.zip"
   appcast 'https://www.gngrwzrd.com/betterwindowmanager-appcast.xml',
-          :sha256 => 'db3d611bb08871b390bd7d609db9e2d62ef23c22fd9906dfa1368138196aceec'
+          :sha256 => '430bc6f3280a462875cd82c6a932f311846ac67198622c578c86abd3450b3c9c'
   name 'Better Window Manager'
   homepage 'https://www.gngrwzrd.com/better-window-manager/'
   license :commercial

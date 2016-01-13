@@ -5,7 +5,7 @@ cask 'taskpaper' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://taskpaper.s3.amazonaws.com/TaskPaper-#{version}.dmg"
   appcast 'http://www.hogbaysoftware.com/products/taskpaper/releases.rss',
-          :sha256 => '48eb0cde463052b282cebb7fbc38a764152acfa4bef79b798bd9076ac2ca5539'
+          :sha256 => 'b7f53027a4188f7fdd4382c457603654cfb558d4ec9ebc3bbcec4d62ba4783a0'
   name 'TaskPaper'
   homepage 'http://www.hogbaysoftware.com/products/taskpaper'
   license :commercial

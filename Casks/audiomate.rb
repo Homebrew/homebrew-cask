@@ -5,7 +5,7 @@ cask 'audiomate' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/downloads.9labs.io/audiomate/#{version.before_comma}/#{version.after_comma}/AudioMate-v#{version.before_comma}.dmg"
   appcast 'https://backend.9labs.io/appcast/audiomate',
-          :sha256 => 'fb35f65d30d27b7668db67d0311b6d5ed27d07e1b74984699cf4abdc8c8d3685'
+          :sha256 => 'e67e1dc32671dba2770b67deb894295ee39105fa935a6e9c4b986a3e0856772d'
   name 'AudioMate'
   homepage 'https://audiomateapp.com/'
   license :mit

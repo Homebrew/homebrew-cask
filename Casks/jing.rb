@@ -4,7 +4,7 @@ cask 'jing' do
 
   url 'http://download.techsmith.com/jing/mac/jing.dmg'
   appcast 'http://www.techsmith.com/redirect.asp?product=jing&ver=2.0.0&lang=enu&target=SparkleAppcast',
-          :sha256 => '68723e056570ef658c3958738b98e7bf3daad7faf82a048b30fcae1da2eeeb10'
+          :sha256 => 'fab0cd39e2113e82f4c26d137a9f87783e3293e4af1876f080932dddc10d2eac'
   name 'Jing'
   homepage 'https://www.techsmith.com/jing.html'
   license :gratis

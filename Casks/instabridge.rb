@@ -4,7 +4,7 @@ cask 'instabridge' do
 
   url "http://cdn.instabridge.com/mac/Instabridge-#{version}.zip"
   appcast 'http://cdn.instabridge.com/mac/updates.xml',
-          :sha256 => '9974b9ea1d1701dd12aa42235de7bf2b4b2f1966c92e435ec92eae53e241c058'
+          :sha256 => '466484b3f300e9df787578a31917c0b84129f9cb8b55766c95b9cfd1a6f26d06'
   name 'Instabridge'
   homepage 'https://instabridge.com/'
   license :gratis

@@ -4,7 +4,7 @@ cask 'ideskcal' do
 
   url "https://hashbangind.com/files/iDeskCal-#{version}.zip"
   appcast 'https://hashbangind.com/appcasts/iDeskCal-profileInfo.php',
-          :sha256 => 'fe555566a6286329c5068140fb3ce75d14d48e97fdcf6e15d974eff5cd1ebf86'
+          :sha256 => '66a208ae0c59f02ef236030d7fef7bf770b636abce27806525860817921e5ebf'
   name 'iDeskCal'
   homepage 'http://www.hashbangind.com'
   license :commercial

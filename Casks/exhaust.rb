@@ -4,7 +4,7 @@ cask 'exhaust' do
 
   url 'https://download.mrgeckosmedia.com/Exhaust.zip'
   appcast 'https://mrgeckosmedia.com/applications/appcast/Exhaust',
-          :sha256 => 'ad7db13ba9c8e73c5c774fbe91dddc1be9f7c02886c52e62e2d2d2c20fa4b1f8'
+          :sha256 => '3edb0f99e14815dd48a900e52b681c767887a78a23c209159625b38533fb98bc'
   name 'Exhaust'
   homepage 'https://mrgeckosmedia.com/applications/info/Exhaust'
   license :oss

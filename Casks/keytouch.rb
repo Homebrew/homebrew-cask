@@ -4,7 +4,7 @@ cask 'keytouch' do
 
   url 'http://usekeytouch.com/download/KeyTouch.zip'
   appcast 'http://www.usekeytouch.com/appcast.xml',
-          :sha256 => '83170a9909908aea862c0a66eb3e186b6aa8cfa592a4759079183db96fdae5d7'
+          :sha256 => 'b5b301f5367c7fe0240c2c7c121560a8263a7bb199afdb493f31126b55dfcf4c'
   name 'KeyTouch'
   homepage 'http://usekeytouch.com/'
   license :gratis
