@@ -288,7 +288,7 @@ These comments must be added so a user auditing the cask knows the URL is the on
 Web browsers may obscure the direct `url` download location for a variety of reasons. Homebrew-Cask supplies a script which can read extended file attributes to extract the actual source URL for most files downloaded by a browser on OS X. The script usually emits multiple candidate URLs; you may have to test each of them:
 
 ```bash
-$ (brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_url_attributes_on_file <file>
+$ $(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_url_attributes_on_file <file>
 ```
 
 ### Subversion URLs
