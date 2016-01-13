@@ -1,6 +1,6 @@
 cask 'chronicle' do
-  version :latest
-  sha256 :no_check
+  version '5.7.0'
+  sha256 '1171b77577cdfabc5cf1a140ba909a0697fcb157fc0ba2a0a8fca7ed639ab687'
 
   url 'http://chronicleapp.com/static/downloads/chronicle.zip'
   appcast 'http://www.littlefin.com/downloads/chronicle3.xml',
