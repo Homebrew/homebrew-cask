@@ -113,7 +113,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install)
 | `container :nested =>` | no                            | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `container :type =>`   | no                            | a symbol to override container-type autodetect. May be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`. (example [parse.rb](https://github.com/caskroom/homebrew-cask/blob/ffdc9a1aa459d80a084ee0d24176409388efe71f/Casks/parse.rb#L12))
 | `gpg`                  | no                            | *stub: not yet functional.*  (see also [GPG Stanza Details](#gpg-stanza-details))
-| `auto_updates`         | no                            | `true`. Assert the Cask artifacts auto-update.
+| `auto_updates`         | no                            | `true`. Assert the Cask artifacts auto-update. (Use if `Check for Updates…` or similar is present in app menu)
 
 ## Conditional Statements
 
@@ -309,19 +309,17 @@ The value of the `appcast` stanza is a string, holding the URL for an appcast wh
 
 | key                | value       |
 | ------------------ | ----------- |
-| `:checkpoint`          | a string holding the checksum of the most recent appcast which matches the current Cask versioning. Use `curl --compressed "{{appcast_url}}" | sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256` to calculate it.
+| `:checkpoint`          | a string holding a custom checksum of the most recent appcast which matches the current Cask versioning. Use `curl --compressed "{{appcast_url}}" | sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256` to calculate it.
 
-Example: [atom.rb](https://github.com/caskroom/homebrew-cask/blob/8f2da08f007d099e603d1d6c64c72b815f7af0b0/Casks/atom.rb#L7#L8)
+Example: [`atom.rb`](https://github.com/caskroom/homebrew-cask/blob/8f2da08f007d099e603d1d6c64c72b815f7af0b0/Casks/atom.rb#L7#L8)
 
 There are a few different ways the `appcast` can be determined:
 
- - If the app is distributed via GitHub releases, the `appcast` will be of the form `https://github.com/{{user}}/{{project}}/releases.atom`. (Example Cask - [`electron.rb`](https://github.com/caskroom/homebrew-cask/blob/master/Casks/electron.rb))
+ * If the app is distributed via GitHub releases, the `appcast` will be of the form `https://github.com/{{user}}/{{project}}/releases.atom`. (Example Cask: [`electron.rb`](https://github.com/caskroom/homebrew-cask/blob/b543c9215c0af31a7e2f526429eb3011a5beb597/Casks/electron.rb#L6#L7))
 
- - A popular update framework, [Sparkle](http://sparkle-project.org) generally uses the `SUFeedURL` property inside `Contents/Info.plist`. You can use the script [`developer/bin/find_sparkle_appcast`](https://github.com/caskroom/homebrew-cask/blob/master/developer/bin/find_sparkle_appcast) to add this automatically. (Example Cask - [`glyphs.rb `](https://github.com/caskroom/homebrew-cask/blob/master/Casks/glyphs.rb))
+ * The popular update framework [Sparkle](http://sparkle-project.org) generally uses the `SUFeedURL` property in `Contents/Info.plist` inside `.app` bundles. You can use the script [`find_sparkle_appcast`](https://github.com/caskroom/homebrew-cask/blob/master/developer/bin/find_sparkle_appcast) to add this automatically. (Example Cask: [`glyphs.rb`](https://github.com/caskroom/homebrew-cask/blob/b543c9215c0af31a7e2f526429eb3011a5beb597/Casks/glyphs.rb#L6#L7))
 
-- An appcast can be any URL hosted by the app’s developer that changes every time a new release is out (e.g. a changelog RSS feed). (Example Cask - [`fluid.rb `](https://github.com/caskroom/homebrew-cask/blob/master/Casks/fluid.rb))
-
-If the application has a `Check for Updates...` option in its menu, you should also add `auto_updates true` to the Cask.
+* An appcast can be any URL hosted by the app’s developer that changes every time a new release is out (e.g. a changelog RSS feed). (Example Cask: [`fluid.rb`](https://github.com/caskroom/homebrew-cask/blob/b543c9215c0af31a7e2f526429eb3011a5beb597/Casks/fluid.rb#L6#L7))
 
 ## License Stanza Details
 
