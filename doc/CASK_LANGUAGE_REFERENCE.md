@@ -309,9 +309,19 @@ The value of the `appcast` stanza is a string, holding the URL for an appcast wh
 
 | key                | value       |
 | ------------------ | ----------- |
-| `:sha256`          | a string holding the SHA-256 checksum of the most recent appcast which matches the current Cask versioning
+| `:checkpoint`          | a string holding the checksum of the most recent appcast which matches the current Cask versioning. Use `curl --compressed "{{appcast_url}}" | sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256` to calculate it.
 
-Example: [atom.rb](https://github.com/caskroom/homebrew-cask/blob/127387b9fc686370ffa92c01eeed8979df9e1621/Casks/atom.rb#L7#L8)
+Example: [atom.rb](https://github.com/caskroom/homebrew-cask/blob/8f2da08f007d099e603d1d6c64c72b815f7af0b0/Casks/atom.rb#L7#L8)
+
+There are a few different ways the `appcast` can be determined:
+
+ - If the app is distributed via GitHub releases, the `appcast` will be of the form `https://github.com/{{user}}/{{project}}/releases.atom`. (Example Cask - [`electron.rb`](https://github.com/caskroom/homebrew-cask/blob/master/Casks/electron.rb))
+
+ - A popular update framework, [Sparkle](http://sparkle-project.org) generally uses the `SUFeedURL` property inside `Contents/Info.plist`. You can use the script [`developer/bin/find_sparkle_appcast`](https://github.com/caskroom/homebrew-cask/blob/master/developer/bin/find_sparkle_appcast) to add this automatically. (Example Cask - [`glyphs.rb `](https://github.com/caskroom/homebrew-cask/blob/master/Casks/glyphs.rb))
+
+- An appcast can be any URL hosted by the app’s developer that changes every time a new release is out (e.g. a changelog RSS feed). (Example Cask - [`fluid.rb `](https://github.com/caskroom/homebrew-cask/blob/master/Casks/fluid.rb))
+
+If the application has a `Check for Updates...` option in its menu, you should also add `auto_updates true` to the Cask.
 
 ## License Stanza Details
 
