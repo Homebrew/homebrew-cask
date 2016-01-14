@@ -109,7 +109,7 @@ class Hbc::Installer
        Hbc::Container.for_path(@downloaded_path, @command)
     end
     unless container
-      raise Hbc::CaskError.new "Uh oh, could not identify primary container for '#{@downloaded_path}'"
+      raise Hbc::CaskError.new "Uh oh, could not figure out how to unpack '#{@downloaded_path}'"
     end
     odebug "Using container class #{container} for #{@downloaded_path}"
     container.new(@cask, @downloaded_path, @command).extract
