@@ -1,12 +1,10 @@
 cask 'flashlight' do
-  version :latest
-  sha256 :no_check
+  version '1.0.1'
+  sha256 'b1d6172d1fb7901fdb50c7d4b2fc185ea324df8ae86158669c635babbfb85aec'
 
-  # appspot.com is the official download host for the latest version, per the developer
-  # Original discussion: https://github.com/nate-parrott/Flashlight/issues/104
-  url 'https://flashlightplugins.appspot.com/latest_download'
-  appcast 'https://raw.githubusercontent.com/nate-parrott/flashlight/master/Appcast.xml',
-          :checkpoint => '612946c9e6a7fd1de81bfd1cd822d4a047f986caa9451ba9bed3d3bbf57b4782'
+  url "https://github.com/nate-parrott/Flashlight/releases/download/v#{version}/Flashlight.zip"
+  appcast 'https://github.com/nate-parrott/Flashlight/releases.atom',
+          :checkpoint => '8c5e2c28b99d28496b74bd58b778ef895bb143f19bc6eaee21d8e0eeb55c0309'
   name 'Flashlight'
   homepage 'https://flashlight.nateparrott.com/'
   license :gpl
