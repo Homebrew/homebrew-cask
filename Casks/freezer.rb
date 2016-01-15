@@ -1,6 +1,6 @@
 cask 'freezer' do
-  version :latest
-  sha256 :no_check
+  version '0.3'
+  sha256 'ad5882b867c1ace5255f6ac3b3ec2ebd0098c64047adcbdebc273cd0beff3ff3'
 
   url 'https://download.mrgeckosmedia.com/Freezer.zip'
   appcast 'https://mrgeckosmedia.com/applications/appcast/Freezer',
