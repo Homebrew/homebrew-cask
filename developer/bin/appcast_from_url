@@ -1,0 +1,93 @@
+#!/bin/bash
+
+set -o pipefail
+
+readonly program="$(basename "$0")"
+verbose=0
+
+syntax_error() {
+  echo "$program: $1" >&2
+  echo "Try \`$program --help\` for more information." >&2
+  exit 1
+}
+
+usage() {
+  echo "
+    This script generates a appcast stanza for the given url
+
+    usage: $program [options] <appcast_url>
+    options:
+      -v, --verbose                 Show more verbose output.
+      -h, --help                    Show this help.
+  " | sed -E 's/^ {4}//'
+}
+
+# available flags
+while [[ "$1" ]]; do
+  case "$1" in
+    -h | --help)
+      usage
+      exit 0
+      ;;
+    -v | --verbose)
+      verbose=1
+      ;;
+    -*)
+      syntax_error "unrecognized option: $1"
+      ;;
+    *)
+      break
+      ;;
+  esac
+  shift
+done
+
+appcast_url="$1"
+
+# exit if no argument was given
+if [[ -z "${appcast_url}" ]]; then
+  usage
+  exit 1
+fi
+
+appcast_found_error() {
+  local error_reason="$1"
+
+  echo "An appcast was found pointing to ${appcast_url}, but it ${error_reason}. You should:
+
+  1. Check your internet connection.
+  2. Try again later.
+  3. Make sure the contents change not on every request.
+  4. Contact the developer."
+
+  exit 1
+}
+
+verbose_option=''
+[[ ${verbose} -ne 0 ]] && verbose_option="-v"
+
+# validate appcast
+appcast_http_response="$(curl --silent ${verbose_option} --head --write-out '%{http_code}' "${appcast_url}" -o /dev/null)"
+[[ "${appcast_http_response}" != '200' ]] && appcast_found_error "returned a non-200 (OK) HTTP response code (${appcast_http_response})"
+
+curl_appcast () {
+  curl --silent ${verbose_option} "${appcast_url}" | sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256 | awk '{ print $1 }'
+}
+
+appcast_checkpoint=$(curl_appcast)
+[[ "${appcast_checkpoint}" == 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' ]] && appcast_found_error 'seems to be empty'
+
+sleep 1
+appcast_checkpoint2=$(curl_appcast)
+[[ "${appcast_checkpoint}" == "${appcast_checkpoint2}" ]] || appcast_found_error 'results in different checkpoints on two consecutive requests'
+
+# output appcast
+echo "The appcast was fetched successfully. You should add it to your cask between 'url' and 'name':
+
+  url ...
+  appcast '${appcast_url}',
+          :checkpoint => '${appcast_checkpoint}'
+  name ...
+"
+
+exit 0
