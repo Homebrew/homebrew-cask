@@ -1,6 +1,6 @@
 cask 'playonmac' do
-  version '4.2.9'
-  sha256 '4c91b84ad66e2f4e5312a03f5b8052bd5bc7917e413cc85b71647f163e1641e5'
+  version '4.2.10'
+  sha256 'fd75c4b348a65090dac798727c86b407c9e1363c19186f77c8ec5a9fe0e549d1'
 
   url "http://repository.playonmac.com/PlayOnMac/PlayOnMac_#{version}.dmg"
   name 'PlayOnMac'
