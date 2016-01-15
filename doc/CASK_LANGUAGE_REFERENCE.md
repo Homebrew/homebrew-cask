@@ -309,7 +309,7 @@ The value of the `appcast` stanza is a string, holding the URL for an appcast wh
 
 | key                | value       |
 | ------------------ | ----------- |
-| `:checkpoint`          | a string holding a custom checksum of the most recent appcast which matches the current Cask versioning. Use `curl --compressed "{{appcast_url}}" | sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256` to calculate it.
+| `:checkpoint`      | a string holding a custom checksum of the most recent appcast which matches the current Cask versioning. You can use [`appcast_from_url`](https://github.com/caskroom/homebrew-cask/blob/master/developer/bin/appcast_from_url)` {{appcast_url}}` to calculate it.
 
 Example: [`atom`](https://github.com/caskroom/homebrew-cask/blob/8f2da08f007d099e603d1d6c64c72b815f7af0b0/Casks/atom.rb#L7#L8)
 
