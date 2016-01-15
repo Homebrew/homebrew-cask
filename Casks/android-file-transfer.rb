@@ -10,6 +10,5 @@ cask 'android-file-transfer' do
 
   app 'Android File Transfer.app'
 
-  zap :delete => '~/Library/Application Support/Google/Android File Transfer',
-      :rmdir  => '~/Library/Application Support/Google/'
+  zap :delete => '~/Library/Application Support/Google/Android File Transfer'
 end
