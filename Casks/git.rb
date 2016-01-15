@@ -15,11 +15,11 @@ cask 'git' do
     pkg "git-#{version}-intel-universal-mavericks.pkg"
   end
 
+  depends_on :macos => '>= :snow_leopard'
+
   uninstall_preflight do
     system "/usr/bin/yes yes | #{staged_path}/uninstall.sh"
   end
-
-  depends_on :macos => '>= :snow_leopard'
 
   uninstall :pkgutil => "GitOSX.Installer.git#{version.delete('.')}Universal.*pkg"
 end

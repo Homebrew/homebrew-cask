@@ -3,7 +3,6 @@ cask 'startupizer' do
   sha256 :no_check
 
   url 'http://gentlebytes.com/content/appcasts/startupizer/latest.php'
-  name 'Startupizer'
   name 'Startupizer2'
   homepage 'http://gentlebytes.com/startupizer/'
   license :commercial

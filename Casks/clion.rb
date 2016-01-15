@@ -1,6 +1,6 @@
 cask 'clion' do
-  version '1.2.3'
-  sha256 '3067c3e702b0ecb958a0681445331bf133a79f40a707b4b81887c32f42ff249c'
+  version '1.2.4'
+  sha256 'e476eb093fc4624090f941d5767dc20edbcd12aca98bc388d8482606691452b9'
 
   url "https://download.jetbrains.com/cpp/CLion-#{version}-custom-jdk-bundled.dmg"
   name 'CLion'

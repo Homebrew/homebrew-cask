@@ -4,7 +4,6 @@ cask 'helium' do
 
   url 'http://download.clockworkmod.com/carbon/carbon-mac.zip'
   name 'Helium'
-  name 'Carbon'
   homepage 'https://www.clockworkmod.com/carbon'
   license :gratis
 

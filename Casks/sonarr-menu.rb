@@ -4,7 +4,7 @@ cask 'sonarr-menu' do
 
   url "https://github.com/jefbarn/Sonarr-Menu/releases/download/v#{version}/Sonarr-Menu.v#{version}.zip"
   appcast 'https://github.com/jefbarn/Sonarr-Menu/releases.atom',
-          :sha256 => '10522a3868d5f6eef2200873fd4384947a46bac5622423a38ed35a867ac58b3b'
+          :checkpoint => '10522a3868d5f6eef2200873fd4384947a46bac5622423a38ed35a867ac58b3b'
   name 'Sonarr Menu'
   homepage 'https://github.com/jefbarn/Sonarr-Menu'
   license :gpl

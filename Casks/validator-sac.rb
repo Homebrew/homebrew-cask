@@ -4,7 +4,7 @@ cask 'validator-sac' do
 
   url "https://habilis.net/download/Validator-SAC_#{version}.zip"
   appcast 'https://habilis.net/download/validator-sac.xml',
-          :sha256 => '0b01f16e91ba9915b50b443f807deb6aa252966de6ac7e8b73ae78ccbb78a0c6'
+          :checkpoint => '77f03c3c2861b79981b146bca3ea710dd34747691c5a3828c301b56bace34e58'
   name 'Validator S.A.C.'
   homepage 'https://habilis.net/validator-sac/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

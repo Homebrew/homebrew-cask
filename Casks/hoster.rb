@@ -4,7 +4,7 @@ cask 'hoster' do
 
   url "http://www.redwinder.com/macapp/hoster/tmp/Hoster#{version}08.zip"
   appcast 'http://www.redwinder.com/macapp/hoster/hoster12.xml',
-          :sha256 => 'e992ca66e708b04a0a6aaa1efaddfda8652790b83b555201581ca37fc9374fa7'
+          :checkpoint => '2fd3f530371d11a463ebf019a77eb77a2c79c100231f3e05785b1ab454e0a013'
   name 'Hoster'
   homepage 'http://www.redwinder.com/macapp/hoster/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

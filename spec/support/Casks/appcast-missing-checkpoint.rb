@@ -1,3 +1,3 @@
-test_cask 'appcast-missing-sha256' do
+test_cask 'appcast-missing-checkpoint' do
   appcast 'http://localhost/appcast.xml'
 end

@@ -4,7 +4,7 @@ cask 'mindnode-pro' do
 
   url 'https://www.mindnode.com/download/MindNodePro.zip'
   appcast 'https://www.mindnode.com/softwareupdate/mindnodepro.xml',
-          :sha256 => '8f435aeb6632be36252b7f47a2b1019528a5227f2008c4ae5940c6162919a68a'
+          :checkpoint => '3de4f9ae0f4f5879d1c03d9cc90164ae7799b534c368b0e5af0aecefe04b9ed9'
   name 'MindNode Pro'
   homepage 'https://mindnode.com/'
   license :commercial

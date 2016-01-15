@@ -4,7 +4,7 @@ cask 'ichm' do
 
   url "https://ichm.googlecode.com/files/iChm.#{version}.zip"
   appcast 'http://www.robinlu.com/ichm/release.xml',
-          :sha256 => '57f3dcb6b02b8934d1eb63112843567946526920e34f2fd3869df9da8c78e6ac'
+          :checkpoint => '5f0a7cb734628ddd4301a2f1e82ba6787a4a42bc4cc0db7f945622fc3c37321a'
   name 'iChm'
   homepage 'https://code.google.com/p/ichm/'
   license :oss

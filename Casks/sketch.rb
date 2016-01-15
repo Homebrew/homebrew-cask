@@ -4,7 +4,7 @@ cask 'sketch' do
 
   url 'http://bohemiancoding.com/static/download/sketch.zip'
   appcast 'https://www.bohemiancoding.com/sketch/appcast.xml',
-          :sha256 => 'dbd6e648552d3fedff548f8458f5c382c606a7e57eaf13bab5a12fe3b580f64d'
+          :checkpoint => 'f5d5ba56e17a9d4169d69a68ffe8c47509ff6a7b6073b430271fa0e48706e590'
   name 'Sketch'
   homepage 'https://www.bohemiancoding.com/sketch/'
   license :commercial

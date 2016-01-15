@@ -4,7 +4,7 @@ cask 'rdio' do
 
   url 'https://www.rdio.com/media/static/desktop/mac/Rdio.dmg'
   appcast 'https://www.rdio.com/media/static/desktop/mac/appcast.xml',
-          :sha256 => 'a4437e0520fa2e700d054c63edbc2b3494aaa7e141e1d99b6ae3d83a50a8fca3'
+          :checkpoint => 'b0b8bcdb83beea548c0fdf3ab7da0274c0be661e39a6c881a3a92634226d1332'
   name 'Rdio'
   homepage 'https://www.rdio.com'
   license :gratis

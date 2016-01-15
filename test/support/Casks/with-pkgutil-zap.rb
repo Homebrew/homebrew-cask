@@ -6,7 +6,8 @@ test_cask 'with-pkgutil-zap' do
   homepage 'http://example.com/fancy-pkg'
 
   pkg 'Fancy.pkg'
-  zap :pkgutil => 'my.fancy.package.*',
-      :kext => 'my.fancy.package.kernelextension',
+
+  zap :pkgutil   => 'my.fancy.package.*',
+      :kext      => 'my.fancy.package.kernelextension',
       :launchctl => 'my.fancy.package.service'
 end

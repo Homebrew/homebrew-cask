@@ -4,7 +4,7 @@ cask 'speedtao' do
 
   url 'http://www.speedtao.net/beta_latest'
   appcast 'http://speedtao.net/su/su.xml',
-          :sha256 => '335236df2877584cd9515ecd53a9c1dcc680182511665455a1cffd505f8769fe'
+          :checkpoint => '0aa02fc70783ceebc25a3bcc16d9480395f76f44d3488e0d2127f283ded753a7'
   name 'SpeedTao'
   homepage 'http://www.speedtao.net/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

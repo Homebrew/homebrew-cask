@@ -9,7 +9,7 @@ cask 'witch' do
 
     url 'http://manytricks.com/download/witch'
     appcast 'https://manytricks.com/witch/appcast.xml',
-            :sha256 => '36fc6fa7454af97645ec12d1ee76fed2ff3a4bf6339e931b257fe75bd46f5027'
+            :checkpoint => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856'
   end
 
   name 'Witch'

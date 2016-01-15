@@ -9,10 +9,10 @@ cask 'boom' do
 
   depends_on :macos => '>= :yosemite'
 
+  app 'Boom 2.app'
+
   postflight do
     # Delete the background image so that it will launch
     system '/bin/rm', '--', "#{staged_path}/.DMG_Background_new.png"
   end
-
-  app 'Boom 2.app'
 end

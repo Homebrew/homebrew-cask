@@ -2,7 +2,7 @@ cask 'eclipse-installer' do
   version :latest
   sha256 :no_check
 
-  url 'http://eclipse.org/downloads/download.php?file=/oomph/products/eclipse-inst-mac64.tar.gz&r=1'
+  url 'http://eclipse.org/downloads/download.php?file=/oomph/epp/mars/R1a/eclipse-inst-mac64.tar.gz&r=1'
   name 'Eclipse Installer'
   homepage 'https://eclipse.org/'
   license :eclipse
@@ -12,8 +12,7 @@ cask 'eclipse-installer' do
 
   app 'Eclipse Installer.app'
 
-  caveats <<-EOS.undent
-    #{token} requires Java. You can install the latest version with
-      brew cask install java
-  EOS
+  caveats do
+    depends_on_java
+  end
 end

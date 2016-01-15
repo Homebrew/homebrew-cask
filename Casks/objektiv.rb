@@ -5,7 +5,7 @@ cask 'objektiv' do
   # nthloop.com is the official download host per the vendor homepage
   url 'http://nthloop.com/objektiv/objektiv-latest.zip'
   appcast 'http://nthloop.com/objektiv/appcast.xml',
-          :sha256 => '584d7df99345003c038869e211dc7355fcb837c04d7a786a3b6eb0ec2f1b2d5c'
+          :checkpoint => '58b2ecf14b9f598a60cd8656bb6f69e62bbd0083c21cc02ce5a178ae2cd1ff0c'
   name 'Objektiv'
   homepage 'https://nthloop.github.io/Objektiv/'
   license :mit

@@ -14,9 +14,9 @@ cask 'anaconda' do
             :args   => ['-b'],
             :sudo   => false
 
+  uninstall :delete => '~/anaconda3'
+
   caveats do
     path_environment_variable '~/anaconda3/bin'
   end
-
-  uninstall :delete => '~/anaconda3'
 end

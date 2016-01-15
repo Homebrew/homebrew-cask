@@ -5,7 +5,7 @@ cask 'hypo' do
   # github.io is the official download host per the vendor homepage
   url "https://hypo.github.io/HypoAppPublic/hypo-#{version}.app.tbz"
   appcast 'https://hypo.github.io/HypoAppPublic/appcast.xml',
-          :sha256 => '917c51dfaf3bc58c265e8f465813d82ace4f4d0765b0dfaa322fb26a2e545018'
+          :checkpoint => 'c0358e1ff9666ece8596550cdae999e6a4129c4abe8722650cc47511e9624835'
   name 'hypo'
   homepage 'https://hypo.cc/mac.html'
   license :gratis

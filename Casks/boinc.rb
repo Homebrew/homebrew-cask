@@ -3,8 +3,8 @@ cask 'boinc' do
   sha256 '194c91040807d995a5f54574c207d12b8970008319e146abb8fcfa13f75e39c6'
 
   url "https://boinc.berkeley.edu/dl/boinc_#{version}_macOSX_x86_64.zip"
-  name 'BOINC'
   name 'Berkeley Open Infrastructure for Network Computing'
+  name 'BOINC'
   homepage 'https://boinc.berkeley.edu/'
   license :gpl
 

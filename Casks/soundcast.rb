@@ -4,7 +4,7 @@ cask 'soundcast' do
 
   url "https://github.com/andresgottlieb/soundcast/releases/download/v#{version}/Soundcast_v#{version}.zip"
   appcast 'https://github.com/andresgottlieb/soundcast/releases.atom',
-          :sha256 => '3a10b331d63d7abebfb4feb78415e09cbc42c918458e0a717edcfb876f8425ab'
+          :checkpoint => '3a10b331d63d7abebfb4feb78415e09cbc42c918458e0a717edcfb876f8425ab'
   name 'Soundcast'
   homepage 'https://github.com/andresgottlieb/soundcast'
   license :mit

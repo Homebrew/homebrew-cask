@@ -4,7 +4,7 @@ cask 'magicprefs' do
 
   url 'http://magicprefs.com/MagicPrefs.app.zip'
   appcast 'http://magicprefs.com/appcast.xml',
-          :sha256 => '907873f5493a31dc57884c1b34cdc36ef53eccda2a857593285e26e2016fd348'
+          :checkpoint => '515d0495170164ccda0bee47cd69646298fe0ac0943c95defee79fc4f01cb207'
   name 'MagicPrefs'
   homepage 'http://magicprefs.com/'
   license :gratis

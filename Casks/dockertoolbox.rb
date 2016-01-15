@@ -1,21 +1,21 @@
 cask 'dockertoolbox' do
-  version '1.9.1f'
-  sha256 '32bb5325f99ec0fbd42295565b48756ab2c8bedb02bc1c8a8cff7b70b90591c0'
+  version '1.9.1h'
+  sha256 '3a3e960f3a7c57fbf64ab3c049e35e4946a91deb2807475a4dfb4dcde8540864'
 
   url "https://github.com/docker/toolbox/releases/download/v#{version}/DockerToolbox-#{version}.pkg"
   appcast 'https://github.com/docker/toolbox/releases.atom',
-          :sha256 => '5226300f0a706a3cb20d7b42d4445fc1be59d77475fb7a267fa6c2baf145b982'
+          :checkpoint => 'c9defce1f25d647de0e17f989b28a38a04b2344496e629fd0e8f1766277828d9'
   name 'Docker Toolbox'
   homepage 'https://www.docker.com/toolbox'
   license :apache
 
   depends_on :cask => 'virtualbox'
 
+  pkg "DockerToolbox-#{version}.pkg"
+
   postflight do
     set_ownership '~/.docker'
   end
-
-  pkg "DockerToolbox-#{version}.pkg"
 
   uninstall :pkgutil => [
                           'io.boot2dockeriso.pkg.boot2dockeriso',

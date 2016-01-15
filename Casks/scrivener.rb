@@ -5,7 +5,7 @@ cask 'scrivener' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://scrivener.s3.amazonaws.com/Scrivener.dmg'
   appcast 'https://www.literatureandlatte.com/downloads/scrivener-2.xml',
-          :sha256 => 'ef649700a85274140e4f7eae854a646a2946f4676d82f373c07fb2d6593364bd'
+          :checkpoint => 'a72d55b3c4787fd7bc602a9c5bfbb36b3103faf4a97ff12cd1d987c9e065eaa0'
   name 'Scrivener'
   homepage 'https://literatureandlatte.com/scrivener.php'
   license :commercial

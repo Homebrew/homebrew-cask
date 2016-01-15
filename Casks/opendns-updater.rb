@@ -4,7 +4,7 @@ cask 'opendns-updater' do
 
   url 'https://www.opendns.com/download/mac/'
   appcast 'https://opendnsupdate.appspot.com/macupdatecheck/ipupdater/AppCast.xml',
-          :sha256 => 'd5938a67e84d710e93b5e74a1b515f6881a3f0ff251bfbb5ea61ecdf1596a4a6'
+          :checkpoint => '3585aa32b22700303af09058c569daf7c2726a4c2f90ec581f4014464371b833'
   name 'OpenDNS Updater'
   homepage 'https://support.opendns.com/entries/23218654-Where-do-I-download-an-OpenDNS-Dynamic-IP-updater-client-'
   license :gratis

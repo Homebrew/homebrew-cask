@@ -1,10 +1,11 @@
 cask 'boxcryptor' do
-  version :latest
-  sha256 :no_check
+  version '2.1.461.704'
+  sha256 '128231f33b8ac938ff517ca58ffef6a1c05526461226e90d88966937caa56f1f'
 
-  url 'https://www.boxcryptor.com/l/download-macosx'
+  # cloudfront.net is the official download host per the vendor homepage
+  url "https://d3k3ih5otj72mn.cloudfront.net/Boxcryptor_v#{version}_Installer.dmg"
   appcast 'https://rink.hockeyapp.net/api/2/apps/7fd6db3e51a977132e3b120c613eaea8',
-          :sha256 => '7b62a9cdd0e94fded41b4e4b0d8a015af04e86a2ffa1b741076fae69e2b7ec91'
+          :checkpoint => '74dfc32d84ff9747d3f35ca753390c1c4aec6a4b59b583e338eb9fb3ea6542d1'
   name 'Boxcryptor'
   homepage 'https://www.boxcryptor.com/en'
   license :commercial

@@ -6,5 +6,6 @@ test_cask 'with-zap-kext' do
   homepage 'http://example.com/fancy-pkg'
 
   pkg 'Fancy.pkg'
+
   zap :kext => 'my.fancy.package.kernelextension'
 end

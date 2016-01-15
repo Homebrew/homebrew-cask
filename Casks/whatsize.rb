@@ -4,7 +4,7 @@ cask 'whatsize' do
 
   url 'http://www.whatsizemac.com/software/whatsize6/whatsize.dmg'
   appcast 'http://www.id-design.com/software/whatsize/release/notes.xml',
-          :sha256 => '36834641d561994f6cbc1d6f4a82fb5d08d52639bf5e3919df440c255fd990ff'
+          :checkpoint => '279abde04434b0f20a846ad0498828042efe3e6cad2512f8fd0cf98340247866'
   name 'WhatSize'
   homepage 'http://whatsizemac.com/'
   license :commercial

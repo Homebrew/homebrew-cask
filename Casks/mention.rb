@@ -4,7 +4,7 @@ cask 'mention' do
 
   url 'https://en.mention.com/downloads/mac/mention.dmg'
   appcast 'https://web.mention.com/uploads/appcast-mention.xml',
-          :sha256 => 'e3ee4b1624ab193b8236392da1c2051ca1ad5d8bf1c6baae76fed80cfd9d59c4'
+          :checkpoint => '87e9053220e4eff05ab00275283c876a28eb0bfcf84aff6b8acb2ef2f6ce9582'
   name 'Mention'
   homepage 'https://en.mention.com/'
   license :gratis

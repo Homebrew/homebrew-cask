@@ -4,7 +4,7 @@ cask 'stretchlink' do
 
   url 'http://stretchlinkapp.com/download/StretchLink.zip'
   appcast 'http://abyss.designheresy.com/stretchlink/stretchlink.xml',
-          :sha256 => 'e9f19089d6229af9ca9647511e76068ca8f08e990b1d85bc6922933c7dd8a497'
+          :checkpoint => '50db6bf7a27a9a4fe0b3c7f802913be1dfd54cbb85c9f42c7513184c9014f0c9'
   name 'StretchLink'
   homepage 'http://stretchlinkapp.com/'
   license :commercial

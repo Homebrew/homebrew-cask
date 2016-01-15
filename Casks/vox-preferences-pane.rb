@@ -5,7 +5,7 @@ cask 'vox-preferences-pane' do
   # devmate.com is the official download host per the vendor homepage
   url 'https://dl.devmate.com/com.coppertino.VoxPrefs/VoxPrefs.dmg'
   appcast 'http://updateinfo.devmate.com/com.coppertino.VoxPrefs/updates.xml',
-          :sha256 => '25284589df6ed7b6b3819c23c70e77ac8f8122fec303f7ecb1e11cb173f7bb12'
+          :checkpoint => 'c5d5496d2f6dd7567cb3b32535847b5d8cb403289bcdce458b977cb2df496da3'
   name 'VOX Preferences'
   homepage 'https://coppertino.com/addon'
   license :gratis

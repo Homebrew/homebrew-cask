@@ -4,7 +4,7 @@ cask 'smaller' do
 
   url 'http://smallerapp.com/download/Smaller.zip'
   appcast 'http://smallerapp.com/up/updates.xml',
-          :sha256 => 'e2ab08e7db22d35dc6e89843a309050660fbcfcc17f173aff94e46d4a4e1dd7d'
+          :checkpoint => 'f3dcdd9aa67653c819d149e3a50efbdf5752a4614056b2bef415ba32314eb4ee'
   name 'Smaller'
   homepage 'http://smallerapp.com/'
   license :commercial

@@ -3,7 +3,6 @@ cask 'aladin' do
   sha256 :no_check
 
   url 'http://aladin.u-strasbg.fr/java/download/Aladin.dmg'
-  name 'Aladin'
   name 'Aladin Desktop'
   homepage 'http://aladin.u-strasbg.fr/AladinDesktop/'
   license :gpl

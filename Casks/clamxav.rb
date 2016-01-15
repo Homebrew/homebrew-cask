@@ -10,7 +10,7 @@ cask 'clamxav' do
     sha256 'd9a460ecf762cacf8ae3ef93d04ce1b223fd1ea2c54327b7bc231e8fbd516cd3'
 
     appcast 'https://www.clamxav.com/sparkle/appcast.xml',
-            :sha256 => 'e68625af3cc82a17dc19f7e378b74b0e15d61dc9b16ace1cb5f0bdc308d27389'
+            :checkpoint => 'a679946f8794fcdf4637a4f27c714eb9fbdec1ae8711a3f53d1bbd3b655415cd'
   end
 
   url "https://www.clamxav.com/downloads/ClamXav_#{version}.dmg"

@@ -4,7 +4,7 @@ cask 'gpgtools' do
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   appcast 'https://gpgtools.org/releases/gka/appcast.xml',
-          :sha256 => '23d1d5dea53c4c380bed5f7b6331060539e3acd62cd844bda834388d0a26da81'
+          :checkpoint => 'cfae78bc857a5fd52d452ddc11c3a39d3fc6233b8e0ef6bbc61fd7ed1e0f841d'
   name 'GPG Suite'
   homepage 'https://gpgtools.org/'
   license :gpl
@@ -18,6 +18,12 @@ cask 'gpgtools' do
     system '/usr/bin/sudo', '-E', '--',
            '/usr/local/MacGPG2/libexec/fixGpgHome', Etc.getpwuid(Process.euid).name,
            ENV['GNUPGHOME'] ? ENV['GNUPGHOME'] : Pathname.new(File.expand_path('~')).join('.gnupg')
+  end
+
+  uninstall_postflight do
+    system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg2)"      =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg2'
+    system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg)"       =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg'
+    system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg-agent)" =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg-agent'
   end
 
   uninstall :pkgutil   => 'org.gpgtools.*',
@@ -44,11 +50,6 @@ cask 'gpgtools' do
                             '/Library/PreferencePanes/GPGPreferences.prefPane',
                           ]
 
-  uninstall_postflight do
-    system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg2)"      =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg2'
-    system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg)"       =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg'
-    system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg-agent)" =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg-agent'
-  end
   zap :delete => [
                    '~/Library/Services/GPGServices.service',
                    '~/Library/Mail/Bundles/GPGMail.mailbundle',

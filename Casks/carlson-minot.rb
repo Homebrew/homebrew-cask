@@ -11,6 +11,7 @@ cask 'carlson-minot' do
 
   uninstall :pkgutil => 'com.carlson-minot.arm-*',
             :delete  => '/usr/local/carlson-minot'
+
   caveats do
     files_in_usr_local
   end

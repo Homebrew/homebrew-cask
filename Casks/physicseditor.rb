@@ -4,7 +4,7 @@ cask 'physicseditor' do
 
   url "https://www.codeandweb.com/download/physicseditor/#{version}/PhysicsEditor-#{version}-uni.dmg"
   appcast 'https://www.codeandweb.com/releases/PhysicsEditor/appcast-mac-release.xml',
-          :sha256 => '360da772f6506501942b1cdb76db6caeefb168abd94693538df7fb4e9593699d'
+          :checkpoint => '6097dfb52608017de6254756b2aeecfe2eb975a0802e8d9377a890a15fe95682'
   name 'PhysicsEditor'
   homepage 'https://www.codeandweb.com/physicseditor'
   license :freemium

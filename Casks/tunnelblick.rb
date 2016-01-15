@@ -4,7 +4,7 @@ cask 'tunnelblick' do
 
   url "https://www.tunnelblick.net/release/Tunnelblick_#{version}.dmg"
   appcast 'https://www.tunnelblick.net/appcast.rss',
-          :sha256 => '7fa119cda4d782dc61cb75895c70b3572652df737c908270c48a09d67a874592'
+          :checkpoint => 'dbeb8845f3fb88a2b3faf4bb3a9ef2b9a0af19b586a0fd03b83fa88d8583570c'
   name 'Tunnelblick'
   homepage 'https://www.tunnelblick.net'
   license :gpl

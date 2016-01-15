@@ -4,8 +4,7 @@ cask 'image2icon' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://sf-applications.s3.amazonaws.com/Image2Icon/app-releases/Image2icon#{version}.zip"
-  name 'Image2icon'
-  name 'Img2icns'
+  name 'Image2Icon'
   homepage 'http://www.img2icnsapp.com/'
   license :freemium
 

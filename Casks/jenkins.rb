@@ -22,18 +22,19 @@ cask 'jenkins' do
 
   zap :delete => '/Library/Preferences/org.jenkins-ci.plist'
 
-  caveats <<-EOS.undent
-    #{token} requires Java. You can install the latest version with
-      brew cask install java
+  caveats do
+    depends_on_java
 
-    You can change the launch parameters for #{token} using "defaults",
-    as described in
-      https://wiki.jenkins-ci.org/display/JENKINS/Thanks+for+using+OSX+Installer
+    <<-EOS.undent
+      You can change the launch parameters for #{token} using "defaults",
+      as described in
+        https://wiki.jenkins-ci.org/display/JENKINS/Thanks+for+using+OSX+Installer
 
-    Alternatively, you can directly run #{token} with custom parameters, eg
-      java -jar /Applications/Jenkins/jenkins.war -XX:PermSize=$MIN_PERM_GEN --httpPort=$HTTP_PORT
+      Alternatively, you can directly run #{token} with custom parameters, eg
+        java -jar /Applications/Jenkins/jenkins.war -XX:PermSize=$MIN_PERM_GEN --httpPort=$HTTP_PORT
 
-    For more options, see
-      https://wiki.jenkins-ci.org/display/JENKINS/Starting+and+Accessing+Jenkins
-  EOS
+      For more options, see
+        https://wiki.jenkins-ci.org/display/JENKINS/Starting+and+Accessing+Jenkins
+    EOS
+  end
 end

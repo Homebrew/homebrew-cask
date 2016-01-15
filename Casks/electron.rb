@@ -1,19 +1,13 @@
 cask 'electron' do
-  version '0.36.2'
-  sha256 '676c3740c15fcb79dce88207b0c515236d2538c75dd76127f6a5f91fd57e04bb'
+  version '0.36.3'
+  sha256 'cffd1c3244c4ba364d8f9e7dab28b24b08bce180ec3b892bee2de48e597bb09f'
 
   url "https://github.com/atom/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/atom/electron/releases.atom',
-          :sha256 => '55892603ffe9108f3d3056c6452e02961b1ba4d19599cfd829deba8be060c0cd'
+          :checkpoint => '20815ca140c69ad570cbb3fb32255b76eb8256276fa08c2eff4c2f0a86fbd5c2'
   name 'Electron'
   homepage 'http://electron.atom.io/'
   license :mit
 
   app 'Electron.app'
-  binary 'Electron.app/Contents/MacOS/Electron', :target => 'electron'
-
-  caveats <<-EOS.undent
-    Starting #{token} applications with the symlink (e.g. from the terminal)
-    will cause the app not to accept user input, use the full path instead
-  EOS
 end

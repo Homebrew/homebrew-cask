@@ -1,6 +1,9 @@
-require 'coveralls'
+require 'pathname'
 
-Coveralls.wear_merged!
+if ENV['COVERAGE']
+  require 'coveralls'
+  Coveralls.wear_merged!
+end
 
 # just in case
 if RUBY_VERSION.to_i < 2

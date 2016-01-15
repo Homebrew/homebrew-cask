@@ -4,7 +4,7 @@ cask 'tuck' do
 
   url 'https://www.irradiatedsoftware.com/downloads/Tuck.zip'
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/tuck.php',
-          :sha256 => '41f3671d34410e0dc854ccc02aa1b8e2699e3755fe070185e408c19edff61c94'
+          :checkpoint => '9b7c8e54b14cf0c58f6c55fccdc7a553552045eb93fbfdda32311cf4c51c6084'
   name 'Tuck'
   homepage 'https://www.irradiatedsoftware.com/labs/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

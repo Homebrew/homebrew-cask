@@ -4,7 +4,7 @@ cask 'soulver' do
 
   url 'http://www.acqualia.com/files/download.php?product=soulver'
   appcast 'http://www.acqualia.com/soulver/appcast/soulver2.xml',
-          :sha256 => 'c364aeff900ba505d118cae610bcbdb53ab0ccb94cb483e3a59ba2c8066adea9'
+          :checkpoint => 'a9b7fd6b220bcbc4174af28176edfb36f903325a1ae4e93a8ef6ae13c06f084e'
   name 'Soulver'
   homepage 'http://www.acqualia.com/soulver/'
   license :commercial

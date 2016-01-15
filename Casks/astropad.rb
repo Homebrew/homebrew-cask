@@ -5,7 +5,7 @@ cask 'astropad' do
   # amazonaws.com is the official download host per the appcast feed
   url "http://astropad.com/downloads/Astropad-#{version}.zip"
   appcast 'http://astropad.com/downloads/sparkle.xml',
-          :sha256 => '7d2aadbee31513151e2afe988cce98d436ced0cfd15d27ee89a339015191370c'
+          :checkpoint => '9863ff6ac45b686f673c9eb2ffa4c65eb4ec0370e9fd0904c36d1c2b79f9d804'
   name 'Astropad'
   homepage 'http://astropad.com/'
   license :gratis

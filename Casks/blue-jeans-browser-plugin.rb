@@ -9,12 +9,12 @@ cask 'blue-jeans-browser-plugin' do
 
   container :type => :xar
 
+  internet_plugin "rbjninstallplugin_#{version}.plugin"
+  internet_plugin "rbjnplugin_#{version}.plugin"
+
   # container :nested => 'Scripts' doesn't recognize a gzipped CPIO
   preflight do
     system '/usr/bin/tar', '-xf', "#{staged_path}/Scripts", '-C', staged_path
     system '/bin/rm', '-f', '--', "#{staged_path}/Scripts"
   end
-
-  internet_plugin "rbjninstallplugin_#{version}.plugin"
-  internet_plugin "rbjnplugin_#{version}.plugin"
 end

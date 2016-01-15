@@ -4,7 +4,7 @@ cask 'pref-setter' do
 
   url 'http://www.nightproductions.net/downloads/prefsetter.zip'
   appcast 'http://www.nightproductions.net/feeds/prefsetter.xml',
-          :sha256 => 'f1b7198f1e689695eb730cf7d68fb39e802f146213c2e41ab5b1c381ffdfc357'
+          :checkpoint => '3cf40e0893b96cec1314c601d7bb93782c28202585903f5fd0e6e6eb1fb821c8'
   name 'Pref Setter'
   homepage 'http://www.nightproductions.net/prefsetter.html'
   license :gratis

@@ -8,4 +8,8 @@ cask 'pycharm' do
   license :commercial
 
   app 'PyCharm.app'
+
+  caveats do
+    depends_on_java
+  end
 end

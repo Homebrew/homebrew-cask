@@ -4,7 +4,7 @@ cask 'viscosity' do
 
   url 'https://www.sparklabs.com/downloads/Viscosity.dmg'
   appcast 'http://www.viscosityvpn.com/update/viscosity.xml',
-          :sha256 => 'e7306d24fbfaf3be9ca4195bc6ae2c23c974647a3bf0f9d8e733f7acaba4b6b5'
+          :checkpoint => '1dba070850ab55b9c94b8287e3f67a167c502ccf4da6a84088cb38fb0278e571'
   name 'Viscosity'
   homepage 'https://www.sparklabs.com/viscosity/'
   license :commercial

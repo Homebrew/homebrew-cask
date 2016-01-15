@@ -12,7 +12,7 @@ cask 'welly' do
     sha256 'cb24a26432d8927b1159a1865602c3f30b5190f628167c954e4d6cc723cfcb0f'
     url "https://welly.googlecode.com/files/Welly.v#{version}.fix.zip"
     appcast 'https://welly.googlecode.com/svn/wiki/WellyUpdate.xml',
-            :sha256 => '0f7d24defff0753fd85883c94111714eded290bae284a2244aba5bfa63224a8c'
+            :checkpoint => '1aaf7059d1e3152c94ce82b60a6f8c7ae27f832f4016eed100ba0576c97707af'
   end
 
   name 'Welly'

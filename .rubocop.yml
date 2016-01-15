@@ -5,18 +5,26 @@ AllCops:
     - '**/Gemfile'
     - '**/Rakefile'
     - '**/brew-cask.rb'
+    - '**/invalid-header-format.rb'
+    - '**/spec/*.rb'
+    - '**/spec/support/*.rb'
+    - '**/test/*.rb'
+    - '**/test/support/*.rb'
     - 'developer/**/*'
     - 'lib/**/*'
-    - 'spec/**/*'
-    - 'test/**/*'
+    - 'spec/cask/**/*'
+    - 'test/cask/**/*'
+    - 'test/Casks/**/*'
+    - 'test/plist/**/*'
+    - 'test/support/shared_examples/**/*'
 
 Metrics/LineLength:
   Exclude:
-    - 'Casks/**/*'
+    - '**/Casks/**/*'
 
 Performance/StringReplacement:
   Exclude:
-    - 'Casks/**/*'
+    - '**/Casks/**/*'
 
 Style/AlignHash:
   EnforcedHashRocketStyle: table
@@ -27,15 +35,15 @@ Style/BarePercentLiterals:
 
 Style/Documentation:
   Exclude:
-    - 'Casks/**/*'
+    - '**/Casks/**/*'
 
 Style/EmptyElse:
   Exclude:
-    - 'Casks/**/*'
+    - '**/Casks/**/*'
 
 Style/FileName:
   Exclude:
-    - 'Casks/**/*'
+    - '**/Casks/**/*'
 
 Style/HashSyntax:
   EnforcedStyle: hash_rockets

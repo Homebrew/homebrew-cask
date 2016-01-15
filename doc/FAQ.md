@@ -12,7 +12,7 @@ The idea is for each Cask to encapsulate and automate the story of how a given a
 
 __Yes, yes, yes!__ Please fork/pull request to update Casks, add features and clean up documentation! Anything you can do to help out is very welcome.
 
-It's also [__pretty darn easy__ to create Casks](../CONTRIBUTING.md), so please build more of them for the software you use. And if homebrew-cask doesn't support the packaging format of your software, please [open an issue][feature_request_template] and we can get it working together.
+It's also [__pretty darn easy__ to create Casks](../CONTRIBUTING.md), so please build more of them for the software you use. And if Homebrew-Cask doesn't support the packaging format of your software, please [open an issue][feature_request_template] so we can get them to work together.
 
 The whole idea is to build a _community-maintained_ list of easily installable packages, so the community part is important! Every little bit counts.
 
@@ -22,7 +22,7 @@ Yes! See [alternate_cask_taps.md](alternate_cask_taps.md).
 
 ## Can I install a version other than the English one?
 
-Some applications such as Thunderbird or Firefox provides many localized versions. However, currently only English versions are provided in the main repository. Additional languages may be available in the [https://github.com/caskroom/homebrew-versions](homebrew-version repository). We are aiming to find a better system to manage multiple languages and versions.
+Some applications such as Thunderbird or Firefox provide many localized versions. However, currently only English versions are provided in the main repository. Additional languages may be available in the [https://github.com/caskroom/homebrew-versions](homebrew-version repository). We are aiming to find a better system to manage multiple languages and versions.
 
 ## `brew cask list` shows that a package is installed, but when I try to do `brew cask uninstall`, it tells me that the package is not installed. Help!
 

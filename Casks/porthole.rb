@@ -4,7 +4,7 @@ cask 'porthole' do
 
   url 'http://getporthole.com/downloads/trial'
   appcast 'https://update.getporthole.com/appcast.rss',
-          :sha256 => '3ef0f2a1f0df7613bdeab8603c49420bd3f15a81b83804cb01352ee3ce9cf806'
+          :checkpoint => '1eedb1650d2ddbbac106b5b65a88b1f07ee239264ed8d4f6c303637cc1b65a55'
   name 'Porthole'
   homepage 'http://getporthole.com/'
   license :commercial

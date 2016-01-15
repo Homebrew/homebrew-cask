@@ -4,7 +4,7 @@ cask 'master-key' do
 
   url 'http://macinmind.com/MasterKey.dmg'
   appcast 'http://macinmind.com/pads/MasterKeyappcast.xml',
-          :sha256 => 'e4a1622410ab55f90cef0b98baa6811978494e93eec1d1022dc0ded8858e4832'
+          :checkpoint => '680e469511621b3f9dfb3976d6ef7c5518a322423fc1b4bf402945508660cf7d'
   name 'Master Key'
   homepage 'http://macinmind.com/?area=app&app=masterkey&pg=info'
   license :commercial

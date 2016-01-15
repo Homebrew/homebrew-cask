@@ -1,6 +1,6 @@
 cask 'gdal-framework' do
   version '1.11.1-1'
-  sha256 :no_check # upstream package is updated in-place
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "http://www.kyngchaos.com/files/software/frameworks/GDAL_Complete-#{version.sub(%r{^(\d+\.\d+).*}, '\1')}.dmg"
   name 'GDAL Complete'
@@ -20,8 +20,7 @@ cask 'gdal-framework' do
                           'org.scipy.numpy-snow',
                         ]
 
-  caveats <<-EOS.undent
-    #{token} requires Java 6+, you can install the latest Java using
-      brew cask install java
-  EOS
+  caveats do
+    depends_on_java
+  end
 end

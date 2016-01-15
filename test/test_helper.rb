@@ -1,8 +1,11 @@
 require 'bundler'
 require 'bundler/setup'
-require 'coveralls'
+require 'pathname'
 
-Coveralls.wear_merged!
+if ENV['COVERAGE']
+  require 'coveralls'
+  Coveralls.wear_merged!
+end
 
 # just in case
 if RUBY_VERSION.to_i < 2
@@ -16,11 +19,10 @@ lib_path = brew_cask_path.join('lib')
 $:.push(lib_path)
 
 # todo: removeme, this is transitional
-require "#{brew_cask_path}/spec/support/kernel_at_exit_hacks"
-require "#{brew_cask_path}/spec/support/homebrew_testing_environment"
-include HomebrewTestingEnvironment
+require 'vendor/homebrew-fork/testing_env'
 
 # force some environment variables
+ENV['HOMEBREW_NO_EMOJI'] = '1'
 ENV['HOMEBREW_CASK_OPTS'] = nil
 
 # todo temporary, copied from old Homebrew, this method is now moved inside a class
@@ -85,7 +87,7 @@ class TestHelper
   end
 
   def self.test_cask
-    Hbc.load('basic-cask')
+    @test_cask ||= Hbc.load('basic-cask')
   end
 
   def self.fake_fetcher

@@ -4,7 +4,7 @@ cask 'tripmode' do
 
   url 'https://tripmode.ch/TripMode.pkg'
   appcast 'http://updates.tripmode.ch/app/appcast.xml',
-          :sha256 => '61c10ba3fec1b0cc235bb907ef1fe820856da2d151ab01dd92caafb546729623'
+          :checkpoint => '17050527bb387e74b051dab31e15b36ffe99b0c3a3ab138afa417a555221d362'
   name 'TripMode'
   homepage 'https://www.tripmode.ch/'
   license :freemium

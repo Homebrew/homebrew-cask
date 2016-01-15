@@ -14,7 +14,7 @@ cask 'istumbler' do
   end
 
   appcast 'https://istumbler.net/feeds/appcast.rss',
-          :sha256 => '6f5814a0cd44fb1825657a2cca3e91dd1038bd1a4796c79f40de5ec82105ab2d'
+          :checkpoint => '34a8b8cf15c866c8e7e3484b5eb894f178a68fb1dde20b47b6ce6d841f976403'
   name 'iStumbler'
   homepage 'https://istumbler.net/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

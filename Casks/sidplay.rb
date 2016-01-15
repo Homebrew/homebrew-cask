@@ -5,7 +5,7 @@ cask 'sidplay' do
   # twinbirds.com is the official download host per the vendor homepage
   url 'http://www.twinbirds.com/sidplay/SIDPLAY4.zip'
   appcast 'http://www.sidmusic.org/sidplay/mac/sidplay_appcast.xml',
-          :sha256 => 'ee17d340cdf68ba522aaebcdc78e34a8087e0e5719de4311f285cce2ae02c8cc'
+          :checkpoint => 'b76e236f3dcca61d0a82c39d2e8449b7995c84e2f2546b1bd7958459c14cc186'
   name 'SIDPLAY'
   homepage 'http://www.sidmusic.org/sidplay/mac/'
   license :gpl

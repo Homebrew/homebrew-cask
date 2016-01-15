@@ -5,7 +5,7 @@ cask 'loadmytracks' do
   # cluetrust.com is the official download host per the product homepage
   url 'https://www.cluetrust.com/Downloads/LoadMyTracks.dmg'
   appcast 'https://www.cluetrust.com/AppCasts/LoadMyTracks.xml',
-          :sha256 => 'd65520d6ff9a358ff2ff27514eff80f17b56df099fe6223f4780b16126560849'
+          :checkpoint => 'bef86b055707d407eb2835db82e07d615968d344450417515cae5719fd97cefd'
   name 'LoadMyTracks'
   homepage 'http://www.loadmytracks.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

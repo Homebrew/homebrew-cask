@@ -6,7 +6,7 @@ require 'stringio'
 
 require 'hbc/utils/tty'
 
-UPDATE_CMD = "brew update; brew cleanup; brew cask cleanup"
+UPDATE_CMD = "brew uninstall --force brew-cask; brew untap phinze/cask; brew update; brew cleanup; brew cask cleanup"
 ISSUES_URL = "https://github.com/caskroom/homebrew-cask#reporting-bugs"
 
 # todo: temporary
@@ -236,5 +236,40 @@ module Hbc::Utils
       timestamp.concat(fraction)
       container_path.join(timestamp)
     end
+  end
+
+  def self.size_in_bytes(files)
+    Array(files).reduce(0) { |t, f| t + (File.size?(f) || 0) }
+  end
+
+  # originally from Homebrew
+  def self.disk_usage_readable(size_in_bytes)
+    if size_in_bytes >= 1_073_741_824
+      size = size_in_bytes.to_f / 1_073_741_824
+      unit = "G"
+    elsif size_in_bytes >= 1_048_576
+      size = size_in_bytes.to_f / 1_048_576
+      unit = "M"
+    elsif size_in_bytes >= 1_024
+      size = size_in_bytes.to_f / 1_024
+      unit = "K"
+    else
+      size = size_in_bytes
+      unit = "B"
+    end
+
+    # avoid trailing zero after decimal point
+    if (size * 10).to_i % 10 == 0
+      "#{size.to_i}#{unit}"
+    else
+      "#{"%.1f" % size}#{unit}"
+    end
+  end
+
+  # originally from Homebrew
+  def self.number_readable(number)
+    numstr = number.to_i.to_s
+    (numstr.size - 3).step(1, -3) { |i| numstr.insert(i, ",") }
+    numstr
   end
 end

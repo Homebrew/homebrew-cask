@@ -4,7 +4,7 @@ cask 'schnapps' do
 
   url 'https://d15xn61otjv90c.cloudfront.net/download/Schnapps_latest.zip'
   appcast 'http://schnappsformac.com/download/appcast.xml',
-          :sha256 => '1fa261b1b268b99f43353523c760d602ae10e41ae1a7daeadeb98e9d9fae4f4b'
+          :checkpoint => '9d8006fdd5db72e9f79ee2814bb794c4aa775710243bf5f96655bfad562664f0'
   name 'Schnapps'
   homepage 'http://schnappsformac.com/'
   license :commercial

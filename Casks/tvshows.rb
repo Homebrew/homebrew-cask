@@ -4,10 +4,12 @@ cask 'tvshows' do
 
   url 'http://tvshowsapp.com/TVShows.zip'
   appcast 'http://tvshowsapp.com/tvshows.xml',
-          :sha256 => '8e1e0a10dafa1f5ae362f9e8a006818d08c9f6349f47d7ba900ad8dcaef3c108'
+          :checkpoint => 'fe41e5a5084f9565a0697f49f4cc0bccd548bd52d1c5e6d3b350a394bc8f3465'
   name 'TVShows'
   homepage 'http://tvshowsapp.com/'
   license :gpl
 
   prefpane 'TVShows.prefPane'
+
+  zap :delete => '~/Library/Application Support/TVShows 2'
 end

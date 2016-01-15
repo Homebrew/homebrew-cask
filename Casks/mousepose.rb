@@ -4,7 +4,6 @@ cask 'mousepose' do
 
   url "https://cdn.boinx.com/software/mousepose/Boinx_Mousepose_#{version}-10878.app.zip"
   name 'Mouseposé'
-  name 'Mousepose'
   homepage 'https://www.boinx.com/mousepose/'
   license :gratis
 

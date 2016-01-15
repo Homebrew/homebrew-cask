@@ -4,7 +4,7 @@ cask 'svnx' do
 
   url "https://svnx.googlecode.com/files/svnX%20#{version}.dmg"
   appcast 'https://svnx.googlecode.com/svn/wiki/svnX.rss.xml',
-          :sha256 => '13000f56917910f7fceb8c4763d6d69dc7d8cac5cc70b52dff83f1b8d9e2b975'
+          :checkpoint => '720e2c382abca0a9f9881e15615dd6c83120898cca0a73ab926f0a8419f38de3'
   name 'SvnX'
   homepage 'https://code.google.com/p/svnx/'
   license :gratis

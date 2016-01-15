@@ -4,10 +4,8 @@ cask 'hopper-debugger-server' do
 
   url "http://www.hopperapp.com/HopperGDBServer/HopperDebuggerServer-#{version}.zip"
   appcast 'http://www.hopperapp.com/HopperGDBServer/appcast.xml',
-          :sha256 => 'b554d3f681960d00d94bdce4db2efe1cc6addc69db9441e359839d6f2379924b'
+          :checkpoint => '208cead0553000971b5b0b7dece33d71e7eb2467dd9887f8e24c65523f408347'
   name 'Hopper Debugger Server'
-  name 'Hopper GDB Server'
-  name 'HopperGDBServer'
   homepage 'http://www.hopperapp.com/HopperGDBServer/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 

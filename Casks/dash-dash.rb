@@ -4,7 +4,6 @@ cask 'dash-dash' do
 
   url "https://www.dashpay.io/binaries/dash-#{version}-osx.dmg"
   name 'Dash'
-  name 'Dash Core'
   homepage 'https://www.dashpay.io/'
   license :mit
 

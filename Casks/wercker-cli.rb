@@ -5,7 +5,6 @@ cask 'wercker-cli' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://s3.amazonaws.com/downloads.wercker.com/cli/stable/darwin_amd64/wercker'
   name 'wercker'
-  name 'wercker-cli'
   homepage 'http://wercker.com/'
   license :mit
 

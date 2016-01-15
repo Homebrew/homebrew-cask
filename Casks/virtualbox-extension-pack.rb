@@ -10,6 +10,8 @@ cask 'virtualbox-extension-pack' do
   depends_on :cask => 'virtualbox'
   container :type => :naked
 
+  stage_only true
+
   postflight do
     system 'sudo', 'VBoxManage', 'extpack', 'install', '--replace', "#{staged_path}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
   end
@@ -17,6 +19,4 @@ cask 'virtualbox-extension-pack' do
   uninstall_postflight do
     system 'sudo', 'VBoxManage', 'extpack', 'uninstall', 'Oracle VM VirtualBox Extension Pack'
   end
-
-  stage_only true
 end

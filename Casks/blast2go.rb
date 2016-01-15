@@ -12,9 +12,7 @@ cask 'blast2go' do
 
   uninstall :delete => '/Applications/Blast2GO'
 
-  caveats <<-EOS.undent
-    #{token} requires Java 6+, you can install the latest Java using
-
-      brew cask install java
-  EOS
+  caveats do
+    depends_on_java
+  end
 end

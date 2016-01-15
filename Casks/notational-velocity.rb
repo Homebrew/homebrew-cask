@@ -4,7 +4,7 @@ cask 'notational-velocity' do
 
   url 'http://notational.net/NotationalVelocity.zip'
   appcast 'http://notational.net/nvupdates.xml',
-          :sha256 => '7bc6cdef4f6682626f6af044653c51f85b69692554f61bb80ef518f05eeaffda'
+          :checkpoint => '8d4ad4439a1c5963205f5183ac55682b3935f3c44a711fcf1cd9a1db1a855ae1'
   name 'Notational Velocity'
   homepage 'http://notational.net'
   license :gpl

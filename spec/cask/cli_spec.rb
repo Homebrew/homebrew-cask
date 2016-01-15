@@ -15,48 +15,42 @@ describe Hbc::CLI do
     ])
   end
 
-  describe ".process" do
+  context ".process" do
     let(:noop_command) { double('CLI::Noop') }
-    before {
-      allow(Hbc::CLI).to receive(:lookup_command) { noop_command }
-      allow(noop_command).to receive(:run)
-    }
 
-    it "respects the env variable when choosing what appdir to create" do
-      EnvHelper.with_env_var('HOMEBREW_CASK_OPTS', "--appdir=/custom/appdir") do
-        allow(Hbc).to receive(:init) {
-          expect(Hbc.appdir.to_s).to eq('/custom/appdir')
-        }
-        Hbc::CLI.process('noop')
-      end
+    before do
+      allow(Hbc).to receive(:init)
+      allow(described_class).to receive(:lookup_command).with('noop').and_return(noop_command)
+      allow(noop_command).to receive(:run)
     end
 
-    # todo: merely invoking init causes an attempt to create the caskroom directory
-    #
-    # it "respects the ENV variable when choosing a non-default Caskroom location" do
-    #   EnvHelper.with_env_var 'HOMEBREW_CASK_OPTS', "--caskroom=/custom/caskdir" do
-    #     allow(Hbc).to receive(:init) {
-    #       expect(Hbc.caskroom.to_s).to eq('/custom/caskdir')
-    #     }
-    #     Hbc::CLI.process('noop')
-    #   end
-    # end
-
-    it "exits with a status of 1 when something goes wrong" do
-      Hbc::CLI.expects(:exit).with(1)
-      Hbc::CLI.expects(:lookup_command).raises(Hbc::CaskError)
-      allow(Hbc).to receive(:init) {
-        shutup {
-          Hbc::CLI.process('noop')
-        }
-      }
+    around do |example|
+      shutup { example.run }
     end
 
     it "passes `--version` along to the subcommand" do
-      expect(Hbc::CLI).to receive(:run_command).with(noop_command, '--version')
-      shutup {
-        Hbc::CLI.process(['noop', '--version'])
-      }
+      expect(described_class).to receive(:run_command).with(noop_command, '--version')
+      described_class.process(%w[noop --version])
+    end
+
+    it "respects the env variable when choosing what appdir to create" do
+      EnvHelper.with_env_var('HOMEBREW_CASK_OPTS', "--appdir=/custom/appdir") do
+        expect(Hbc).to receive(:appdir=).with(Pathname('/custom/appdir'))
+        described_class.process('noop')
+      end
+    end
+
+    it "respects the env variable when choosing a non-default Caskroom location" do
+      EnvHelper.with_env_var 'HOMEBREW_CASK_OPTS', "--caskroom=/custom/caskdir" do
+        expect(Hbc).to receive(:caskroom=).with(Pathname('/custom/caskdir'))
+        described_class.process('noop')
+      end
+    end
+
+    it "exits with a status of 1 when something goes wrong" do
+      allow(described_class).to receive(:lookup_command).and_raise(Hbc::CaskError)
+      expect(described_class).to receive(:exit).with(1)
+      described_class.process('noop')
     end
   end
 end

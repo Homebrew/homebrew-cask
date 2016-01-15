@@ -4,7 +4,7 @@ cask 'slingshot' do
 
   url 'https://download.airsquirrels.com/Slingshot/Mac/Slingshot.dmg'
   appcast 'https://updates.airsquirrels.com/Slingshot/Mac/Slingshot.xml',
-          :sha256 => '412888289e91de20b475819622788cf78414d6815c702f5beeb479b405a515ac'
+          :checkpoint => 'd01e5c1777840a7dd1a87c16f640bcc12450d6ac46c3ac0bba4fdea959724ae8'
   name 'Slingshot'
   homepage 'http://www.airsquirrels.com/slingshot/'
   license :commercial

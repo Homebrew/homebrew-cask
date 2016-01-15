@@ -4,7 +4,7 @@ cask 'narrative-uploader' do
 
   url 'https://dl.getnarrative.com/appcast/installers/NarrativeUploader.dmg'
   appcast 'https://dl.getnarrative.com/appcast/osx.xml',
-          :sha256 => '82825330318ddb9cec11226ad6c040fa63defbd4a2356b0f18b976f2117e22d0'
+          :checkpoint => 'db3fe560e55b1735cfeb457552ec724d95c75b72699bb28e2590c12b58972919'
   name 'Narrative Uploader'
   homepage 'http://getnarrative.com'
   license :gratis
