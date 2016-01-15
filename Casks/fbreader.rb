@@ -10,6 +10,6 @@ cask 'fbreader' do
   app 'FBReader.app'
 
   zap :delete => [
-                   '~/.FBReader'
+                   '~/.FBReader',
                  ]
 end

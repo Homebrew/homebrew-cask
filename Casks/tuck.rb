@@ -12,6 +12,6 @@ cask 'tuck' do
   app 'Tuck.app'
 
   zap :delete => [
-                   '~/Library/Preferences/com.irradiatedsoftware.Tuck.plist'
+                   '~/Library/Preferences/com.irradiatedsoftware.Tuck.plist',
                  ]
 end

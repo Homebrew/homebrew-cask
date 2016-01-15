@@ -4,7 +4,7 @@ cask 'applepi-baker' do
 
   url 'http://www.tweaking4all.com/downloads/raspberrypi/ApplePi-Baker.zip',
       :cookies => {
-                    'gdbbx_session_activity' => '0'
+                    'gdbbx_session_activity' => '0',
                   }
   name 'ApplePi-Baker'
   homepage 'http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/'
