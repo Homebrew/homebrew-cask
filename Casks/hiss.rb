@@ -1,6 +1,6 @@
 cask 'hiss' do
-  version :latest
-  sha256 :no_check
+  version '0.3'
+  sha256 'c6a1181602e481068d8eeda05d26bee5ac8435ee752da63786eaaa742df16580'
 
   url 'http://collect3.com.au/hiss/Hiss.zip'
   appcast 'http://collect3.com.au/hiss/appcast.xml',
