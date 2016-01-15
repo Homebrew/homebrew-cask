@@ -9,6 +9,8 @@ cask 'flashlight' do
   homepage 'https://flashlight.nateparrott.com/'
   license :gpl
 
+  auto_updates true
+
   app 'Flashlight.app'
 
   postflight do
