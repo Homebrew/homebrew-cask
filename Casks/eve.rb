@@ -1,6 +1,6 @@
 cask 'eve' do
-  version :latest
-  sha256 :no_check
+  version '1.4.3'
+  sha256 '52ee822e2a931e03aa6f54f96453ceb3574490b4f5a9b2bafbc9c008e783f550'
 
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://s3.amazonaws.com/hotkeyeve/Downloads/EVE-latest.zip'
