@@ -1,6 +1,6 @@
 cask 'musique' do
-  version :latest
-  sha256 :no_check
+  version '1.4'
+  sha256 '9754ac4b22085915cefa8ad0b7e3534a7c53c40dbfa31f8bdd13119ae7187cfb'
 
   url 'http://flavio.tordini.org/files/musique/musique.dmg'
   appcast 'http://flavio.tordini.org/musique-ws/appcast.xml',
