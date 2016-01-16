@@ -1,6 +1,6 @@
 cask 'magicprefs' do
-  version :latest
-  sha256 :no_check
+  version '2.4.2'
+  sha256 '6d7bd768404bc522e76f69369f79d389b253f4c9486985ca5872aa670970a493'
 
   url 'http://magicprefs.com/MagicPrefs.app.zip'
   appcast 'http://magicprefs.com/appcast.xml',
