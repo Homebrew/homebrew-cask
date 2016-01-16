@@ -1,6 +1,6 @@
 cask 'macspice' do
-  version '3.1.8'
-  sha256 'bf93677e91ea00e9604a347611c70d13312ccf479b42d215cce530e50e979082'
+  version '3.1.9'
+  sha256 'f0231aacc7aa881ed286015af599d5f550ab8b054aca80ce04c8d7a3abf1305c'
 
   url "http://www.macspice.com/mirror/binaries/v#{version}/MacSpice3f5.dmg"
   appcast 'http://www.macspice.com/AppCast-v2.xml',
