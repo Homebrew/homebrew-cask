@@ -96,6 +96,10 @@ Display all Casks available for install\.
 Perform a substring search of known Cask tokens for \fItext\fR\. If the text is delimited by slashes, it is interpreted as a Ruby regular expression\.
 .
 .TP
+\fBstyle\fR [\-\-fix] [ \fItoken\fR \.\.\. ]
+Check the given Casks for correct style using RuboCop Cask \fIhttps://github\.com/caskroom/rubocop\-cask\fR\. If no tokens are given on the command line, all Casks are checked\. With \fB\-\-fix\fR, auto\-correct any style errors if possible\.
+.
+.TP
 \fBuninstall [\-\-force]\fR or \fBrm\fR or \fBremove\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
 Uninstall the given Cask\. With \fB\-\-force\fR, uninstall even if the Cask does not appear to be present\.
 .

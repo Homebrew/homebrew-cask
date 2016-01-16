@@ -22,7 +22,6 @@ if must_run_tests; then
   run bundle install --path="${GEM_HOME%/*/*}" --with=test
 
   # install Formulae and Casks without which some tests would be skipped
-  run brew update
   brew_install cabextract
   brew_install unar
   run brew cask install Casks/adobe-air.rb

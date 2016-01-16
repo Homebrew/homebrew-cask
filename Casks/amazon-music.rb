@@ -16,7 +16,7 @@ cask 'amazon-music' do
                             'com.amazon.music-renderer',
                           ],
             :delete    => [
-                            '/Applications/Amazon Music.app'
+                            '/Applications/Amazon Music.app',
                           ],
             :launchctl => 'com.amazon.music'
 

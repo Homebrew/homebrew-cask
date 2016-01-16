@@ -38,7 +38,7 @@ cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
 cask-repair --pull origin --push $github_user $outdated_cask
 ```
 
-If there is a more complicated change, or there is a case where `cask-repair` fails, you can also follow the steps in [Adding a Cask](#adding-a-cask) to do the same thing manually. 
+If there is a more complicated change, or there is a case where `cask-repair` fails, you can also follow the steps in [Adding a Cask](#adding-a-cask) to do the same thing manually.
 
 ## Adding a Cask
 
@@ -355,12 +355,11 @@ If everything looks good, you’ll also want to make sure your Cask passes audit
 brew cask audit my-new-cask --download
 ```
 
-You should also check stylistic details with the [`rubocop-cask`](https://github.com/caskroom/rubocop-cask) gem:
+You should also check stylistic details with `brew cask style`:
 
 ```bash
-cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask"
-bundle install
-bundle exec rubocop --auto-correct Casks/my-new-cask.rb
+$ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
+$ brew cask style Casks/my-new-cask.rb [--fix]
 ```
 
 Keep in mind all of these checks will be made when you submit your PR, so by doing them in advance you’re saving everyone a lot of time and trouble.

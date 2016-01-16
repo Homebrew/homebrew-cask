@@ -91,6 +91,11 @@ names, and other aspects of this manual are still subject to change.
     Perform a substring search of known Cask tokens for <text>. If the text
     is delimited by slashes, it is interpreted as a Ruby regular expression.
 
+  * `style` [--fix] [ <token> ... ]:
+   Check the given Casks for correct style using [RuboCop Cask](https://github.com/caskroom/rubocop-cask).
+   If no tokens are given on the command line, all Casks are checked.
+   With `--fix`, auto-correct any style errors if possible.
+
   * `uninstall [--force]` or `rm` or `remove` <token> [ <token> ... ]:
     Uninstall the given Cask. With `--force`, uninstall even if the Cask
     does not appear to be present.

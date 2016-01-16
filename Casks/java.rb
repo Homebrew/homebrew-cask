@@ -4,7 +4,7 @@ cask 'java' do
 
   url "http://download.oracle.com/otn-pub/java/jdk/#{version.sub(%r{^\d+\.(\d+).*?_(.*)$}, '\1u\2')}/jdk-#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$}, '\1u\2')}-macosx-x64.dmg",
       :cookies => {
-                    'oraclelicense' => 'accept-securebackup-cookie'
+                    'oraclelicense' => 'accept-securebackup-cookie',
                   }
   name 'Java Standard Edition Development Kit'
   homepage "http://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.split('.')[1]}-downloads-2133151.html"
