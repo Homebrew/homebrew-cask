@@ -1,6 +1,6 @@
 cask 'metadatics' do
-  version :latest
-  sha256 :no_check
+  version '1.5.3'
+  sha256 '65ce4d052ac526e73705350e1bafefca7cde5d5fb3872b14a08cc6d9c62f8e96'
 
   url 'http://www.markvapps.com/applications/metadatics/Metadatics.zip'
   appcast 'http://www.markvapps.com/applications/metadatics/metadatics_appcast.xml',
