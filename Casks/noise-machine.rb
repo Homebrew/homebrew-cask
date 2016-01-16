@@ -8,8 +8,8 @@ cask 'noise-machine' do
     sha256 '501415e60204b77e8e15b46ea08c3f8526cfeb28e6ca11c647b7bffb1f3b9d28'
     url 'http://www.publicspace.net/download/NoiseMachine_Snow_Leopard.dmg'
   else
-    version :latest
-    sha256 :no_check
+    version '1.12'
+    sha256 '393738585ec7bb90bc2f43ac30a63c8699e4fcaffc567135635a549893d7e9b9'
     url 'http://www.publicspace.net/download/NoiseMachine.dmg'
   end
 
