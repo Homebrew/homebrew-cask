@@ -1,6 +1,6 @@
 cask 'neofinder' do
-  version :latest
-  sha256 :no_check
+  version '6.8'
+  sha256 'b410f7a14fc248a6de5f27bcdc5116a35e50c0b5f47204e4e2efb3284b54326b'
 
   url 'http://www.cdfinder.de/neofinder.zip'
   appcast 'http://www.wfs-apps.de/updates/neofinder-appcast-64.xml',
