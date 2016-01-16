@@ -1,6 +1,6 @@
 cask 'locko' do
-  version :latest
-  sha256 :no_check
+  version '1.2'
+  sha256 'b9831813aaed104d7fd746b50b5b9ee47a334826cda045aae86cc04e2f17abc8'
 
   url 'http://download.binarynights.com/Locko.zip'
   appcast 'http://update.binarynights.com/locko/sparkle-update.xml',
