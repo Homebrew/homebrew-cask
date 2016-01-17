@@ -1,8 +1,8 @@
 cask 'schnapps' do
-  version :latest
-  sha256 :no_check
+  version '1.2'
+  sha256 'aa47011ead3fd64f3263641fe93f6fdf52945763df39295c3abf6aa5ae7f5fe0'
 
-  url 'https://d15xn61otjv90c.cloudfront.net/download/Schnapps_latest.zip'
+  url "http://www.schnappsformac.com/download/Schnapps_v#{version}.zip"
   appcast 'http://schnappsformac.com/download/appcast.xml',
           :checkpoint => '9d8006fdd5db72e9f79ee2814bb794c4aa775710243bf5f96655bfad562664f0'
   name 'Schnapps'
