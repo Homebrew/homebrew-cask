@@ -4,7 +4,7 @@ cask 'mathtype' do
 
   url "https://www.dessci.com/en/dl/MTM#{version.delete('.')}h_EN.pkg"
   name 'MathType'
-  homepage 'www.dessci.com'
+  homepage 'https://www.dessci.com'
   license :commercial
 
   installer :manual => "MTM#{version.delete('.')}h_EN.pkg"
