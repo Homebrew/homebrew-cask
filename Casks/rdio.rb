@@ -1,6 +1,6 @@
 cask 'rdio' do
-  version :latest
-  sha256 :no_check
+  version '2.38'
+  sha256 'b7cd0f16e11128d4d3aac130ecb9745bbabee9a53aaad16ecc60647fc73ad783'
 
   url 'https://www.rdio.com/media/static/desktop/mac/Rdio.dmg'
   appcast 'https://www.rdio.com/media/static/desktop/mac/appcast.xml',
