@@ -4,7 +4,7 @@ cask 'apogee-duet' do
 
   url "http://www.apogeedigital.com/drivers/Duet_#{version}.dmg"
   name 'Apogee Duet'
-  homepage 'www.apogeedigital.com/support/software-downloads#tab-id-8'
+  homepage 'http://www.apogeedigital.com/support/software-downloads#tab-id-8'
   license :gratis
 
   depends_on :macos => '>= :mavericks'
