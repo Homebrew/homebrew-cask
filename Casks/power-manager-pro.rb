@@ -1,6 +1,6 @@
 cask 'power-manager-pro' do
-  version :latest
-  sha256 :no_check
+  version '4.5.0'
+  sha256 '5e5e535a9a042313d8b8e0cff88ec3a42ac36b44fcd57282710b0cab8d868596'
 
   url 'https://www.dssw.co.uk/powermanager/dsswpowermanagerpro.dmg'
   appcast 'https://version.dssw.co.uk/powermanager/professional',
