@@ -1,6 +1,6 @@
 cask 'screenmailer' do
-  version :latest
-  sha256 :no_check
+  version '2.0.4'
+  sha256 'ceb6a29dfc154292347b2fd76e45e310e39803882b8f964f1323b86b2816a53e'
 
   url 'https://www.screenmailer.com/releases/current/Screenmailer.zip'
   appcast 'https://www.screenmailer.com/releases/current/releases.xml',
