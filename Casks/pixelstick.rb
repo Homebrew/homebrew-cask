@@ -1,6 +1,6 @@
 cask 'pixelstick' do
-  version :latest
-  sha256 :no_check
+  version '2.9'
+  sha256 '3aa737ccb1aa05e20d145c73b6925aef437d3f91de0b230dd9d630d79856415b'
 
   url 'https://plumamazing.com/bin/pixelstick/pixelstick.zip'
   appcast 'https://plumamazing.com/appcastSSL.php?pid=100',
