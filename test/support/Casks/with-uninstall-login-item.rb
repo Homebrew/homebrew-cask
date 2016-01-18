@@ -7,5 +7,5 @@ test_cask 'with-uninstall-login-item' do
 
   pkg 'MyFancyPkg/Fancy.pkg'
 
-  uninstall :login_item => 'Fancy'
+  uninstall login_item: 'Fancy'
 end

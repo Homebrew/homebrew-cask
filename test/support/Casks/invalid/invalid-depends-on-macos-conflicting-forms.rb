@@ -5,8 +5,8 @@ test_cask 'invalid-depends-on-macos-conflicting-forms' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/invalid-depends-on-macos-conflicting-forms'
 
-  depends_on :macos => :yosemite
-  depends_on :macos => '>= :mavericks'
+  depends_on macos: :yosemite
+  depends_on macos: '>= :mavericks'
 
   app 'Caffeine.app'
 end

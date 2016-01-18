@@ -5,5 +5,5 @@ test_cask 'naked-executable' do
   url TestHelper.local_binary_url('naked_executable')
   homepage 'http://example.com/naked-executable'
 
-  container :type => :naked
+  container type: :naked
 end

@@ -5,11 +5,11 @@ test_cask 'with-installer-script' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/with-install-script'
 
-  installer :script => '/usr/bin/true',
-            :args   => ['--flag']
+  installer script: '/usr/bin/true',
+            args:   ['--flag']
   # acceptable alternate form
-  installer :script => {
-                         :executable => '/usr/bin/false',
-                         :args       => ['--flag'],
-                       }
+  installer script: {
+                      executable: '/usr/bin/false',
+                      args:       ['--flag'],
+                    }
 end

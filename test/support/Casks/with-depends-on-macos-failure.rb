@@ -6,7 +6,7 @@ test_cask 'with-depends-on-macos-failure' do
   homepage 'http://example.com/with-depends-on-macos-failure'
 
   # guarantee a mismatched release
-  depends_on :macos => MacOS.release.to_s == '10.0' ? '10.1' : '10.0'
+  depends_on macos: MacOS.release.to_s == '10.0' ? '10.1' : '10.0'
 
   app 'Caffeine.app'
 end

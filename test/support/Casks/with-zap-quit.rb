@@ -7,5 +7,5 @@ test_cask 'with-zap-quit' do
 
   pkg 'MyFancyPkg/Fancy.pkg'
 
-  zap :quit => 'my.fancy.package.app'
+  zap quit: 'my.fancy.package.app'
 end
