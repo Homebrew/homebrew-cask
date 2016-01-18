@@ -1,6 +1,6 @@
 cask 'vinoteka' do
-  version :latest
-  sha256 :no_check
+  version '3.4.8'
+  sha256 'cc6520196c4725f21385492ea8a71001ffa3c4ba3439a499449a159d7f7239f4'
 
   url 'http://download.vinotekasoft.com/Vinoteka.zip'
   appcast 'http://download.vinotekasoft.com/vinoteka_update.xml',
