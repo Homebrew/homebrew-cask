@@ -4,7 +4,7 @@ cask 'nethackcocoa' do
 
   url "https://nethack-cocoa.googlecode.com/files/NetHackCocoa-#{version}.dmg"
   name 'NetHackCocoa'
-  homepage 'https://code.google.com/p/nethack-cocoa/'
+  homepage 'https://github.com/dirkz/NetHack-Cocoa'
   license :oss
 
   app 'NetHackCocoa.app'
