@@ -1,6 +1,6 @@
 cask 'windownaut' do
-  version :latest
-  sha256 :no_check
+  version '1.2.6'
+  sha256 '1b779ce1f885b5157edba9e4e77b8a0681ffff7acec98752dce374b332036df8'
 
   url 'http://www.binarybakery.com/products/Windownaut.dmg'
   appcast 'http://www.binarybakery.com/products/windownaut-appcast.xml',
