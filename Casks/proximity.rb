@@ -4,7 +4,7 @@ cask 'proximity' do
 
   url "https://reduxcomputing-proximity.googlecode.com/files/Proximity%20#{version}.zip"
   name 'Proximity'
-  homepage 'https://code.google.com/p/reduxcomputing-proximity/'
+  homepage 'https://github.com/revned/proximity'
   license :oss
 
   app 'Proximity.app'
