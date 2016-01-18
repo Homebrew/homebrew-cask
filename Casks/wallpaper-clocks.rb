@@ -1,6 +1,6 @@
 cask 'wallpaper-clocks' do
-  version :latest
-  sha256 :no_check
+  version '1.1'
+  sha256 '8e088a53d0061f13d2f1f9e972caf3cc2fb67355d57440b5f8d236d2e9bae863'
 
   url 'http://files.vladstudio.com/wallpaperclock/WallpaperClocksOSX.zip'
   appcast 'http://www.vladstudio.com/wallpaperclock/wallclocks_en.xml',
