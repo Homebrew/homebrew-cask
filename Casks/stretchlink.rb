@@ -1,6 +1,6 @@
 cask 'stretchlink' do
-  version :latest
-  sha256 :no_check
+  version '1.0.3-105'
+  sha256 'a12b8199207009a4906d5bc54992bdccc91ff9c877c4d2b8730a2153d04c8180'
 
   url 'http://stretchlinkapp.com/download/StretchLink.zip'
   appcast 'http://abyss.designheresy.com/stretchlink/stretchlink.xml',
