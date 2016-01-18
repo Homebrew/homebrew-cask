@@ -36,7 +36,7 @@ cask-repair --help
 # use to update <outdated-cask>
 outdated_cask='<the-cask-i-want-to-update>'
 cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
-cask-repair --pull origin --push $github_user $outdated-cask
+cask-repair --pull origin --push $github_user $outdated_cask
 ```
 
 If there is a more complicated change, or there is a case where `cask-repair` fails, you can also follow the steps in [Adding a Cask](#adding-a-cask) to do the same thing manually. 
