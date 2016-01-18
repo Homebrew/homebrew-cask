@@ -4,7 +4,7 @@ cask 'monodraw' do
 
   url "http://updates.helftone.com/monodraw/downloads/Monodraw-#{version}.zip"
   appcast 'http://updates.helftone.com/monodraw/appcast-beta.xml',
-          :checkpoint => '5830ff9786d7be63384f29a25ca50d0cd90a857c93beb607abee08518de09c1f'
+          checkpoint: '5830ff9786d7be63384f29a25ca50d0cd90a857c93beb607abee08518de09c1f'
   name 'Monodraw'
   homepage 'http://monodraw.helftone.com'
   license :commercial
@@ -15,8 +15,8 @@ cask 'monodraw' do
     suppress_move_to_applications
   end
 
-  zap :delete => [
-                   '~/Library/Preferences/com.helftone.monodraw.plist',
-                   '~/Library/Caches/com.helftone.monodraw',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.helftone.monodraw.plist',
+                '~/Library/Caches/com.helftone.monodraw',
+              ]
 end

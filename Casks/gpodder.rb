@@ -8,7 +8,7 @@ cask 'gpodder' do
   homepage 'http://gpodder.org/'
   license :gpl
 
-  depends_on :x11 => true
+  depends_on x11: true
 
   app 'gPodder.app'
 end

@@ -4,7 +4,7 @@ cask 'key-codes' do
 
   url 'http://manytricks.com/download/keycodes'
   appcast 'https://manytricks.com/keycodes/appcast.xml',
-          :checkpoint => '8d887901c2bfd31cfe644b0c2cce15b153decffc96199fd6f41080de5ae13f16'
+          checkpoint: '8d887901c2bfd31cfe644b0c2cce15b153decffc96199fd6f41080de5ae13f16'
   name 'Key Codes'
   homepage 'https://manytricks.com/keycodes/'
   license :gratis

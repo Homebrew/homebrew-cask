@@ -9,11 +9,11 @@ cask 'vivaldi' do
 
   app 'Vivaldi.app'
 
-  zap :delete => [
-                   '~/Library/Preferences/com.vivaldi.Vivaldi.plist',
-                   '~/Library/Application Support/Vivaldi',
-                   '~/Library/Caches/Vivaldi',
-                   '~/Library/Caches/com.vivaldi.Vivaldi',
-                   '~/Library/Saved Application State/com.vivaldi.Vivaldi.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.vivaldi.Vivaldi.plist',
+                '~/Library/Application Support/Vivaldi',
+                '~/Library/Caches/Vivaldi',
+                '~/Library/Caches/com.vivaldi.Vivaldi',
+                '~/Library/Saved Application State/com.vivaldi.Vivaldi.savedState',
+              ]
 end

@@ -5,7 +5,7 @@ cask 'hammerspoon' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
   appcast 'https://github.com/Hammerspoon/hammerspoon/releases.atom',
-          :checkpoint => 'd8329b0a7606b9599c6779ea111929cbeac3f2aaef6b059fc352cf5a0f1f9e96'
+          checkpoint: 'd8329b0a7606b9599c6779ea111929cbeac3f2aaef6b059fc352cf5a0f1f9e96'
   name 'Hammerspoon'
   homepage 'http://www.hammerspoon.org/'
   license :mit

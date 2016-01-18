@@ -4,7 +4,7 @@ cask 'hyperswitch' do
 
   url "https://bahoom.com/hyperswitch/#{version}/HyperSwitch.zip"
   appcast 'https://bahoom.com/hyperswitch/appcast.xml',
-          :checkpoint => '208dcaff84a5601fb5336b5a89ec5e9f5d19fecee38bfce436f12028f4afdedc'
+          checkpoint: '208dcaff84a5601fb5336b5a89ec5e9f5d19fecee38bfce436f12028f4afdedc'
   name 'HyperSwitch'
   homepage 'https://bahoom.com/hyperswitch/'
   license :gratis

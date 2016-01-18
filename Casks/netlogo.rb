@@ -9,8 +9,8 @@ cask 'netlogo' do
 
   app "NetLogo #{version.to_f}/NetLogo #{version.to_f}.app"
 
-  zap :delete => [
-                   '~/Library/Preferences/org.nlogo.netlogo.plist',
-                   '~/Library/Saved Application State/org.nlogo.NetLogo.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/org.nlogo.netlogo.plist',
+                '~/Library/Saved Application State/org.nlogo.NetLogo.savedState',
+              ]
 end

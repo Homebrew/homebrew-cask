@@ -7,7 +7,7 @@ cask 'minerva' do
   homepage 'http://blog.coursevector.com/minerva/'
   license :gratis
 
-  depends_on :cask => 'adobe-air'
+  depends_on cask: 'adobe-air'
 
   app 'minerva.app'
 

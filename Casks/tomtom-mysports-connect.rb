@@ -9,10 +9,10 @@ cask 'tomtom-mysports-connect' do
 
   pkg 'TomTomMySportsConnectInstaller.pkg'
 
-  uninstall :quit    => 'com.tomtom.mysportsconnect',
-            :pkgutil => [
-                          'com.tomtom.tomtomfa.pkg',
-                          'com.tomtom.tomtomfa.temp.pkg',
-                        ],
-            :delete  => '/Applications/TomTom MySports Connect.app'
+  uninstall quit:    'com.tomtom.mysportsconnect',
+            pkgutil: [
+                       'com.tomtom.tomtomfa.pkg',
+                       'com.tomtom.tomtomfa.temp.pkg',
+                     ],
+            delete:  '/Applications/TomTom MySports Connect.app'
 end

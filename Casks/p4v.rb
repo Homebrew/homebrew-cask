@@ -11,9 +11,9 @@ cask 'p4v' do
   app 'p4v.app'
   binary 'p4vc'
 
-  zap :delete => [
-                   '~/Library/Preferences/com.perforce.p4v',
-                   '~/Library/Preferences/com.perforce.p4v.plist',
-                   '~/Library/Saved Application State/com.perforce.p4v.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.perforce.p4v',
+                '~/Library/Preferences/com.perforce.p4v.plist',
+                '~/Library/Saved Application State/com.perforce.p4v.savedState',
+              ]
 end

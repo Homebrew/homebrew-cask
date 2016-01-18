@@ -7,11 +7,11 @@ cask 'ksdiff' do
   homepage 'http://www.kaleidoscopeapp.com/ksdiff2'
   license :gratis
 
-  conflicts_with :cask => 'kaleidoscope'
+  conflicts_with cask: 'kaleidoscope'
 
   pkg 'Install ksdiff.pkg'
 
-  uninstall :pkgutil => 'com.blackpixel.kaleidoscope.ksdiff.installer.pkg'
+  uninstall pkgutil: 'com.blackpixel.kaleidoscope.ksdiff.installer.pkg'
 
   caveats <<-EOS.undent
     The #{token} Cask is not needed when installing Kaleidoscope via Cask. It

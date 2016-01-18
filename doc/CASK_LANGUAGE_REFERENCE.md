@@ -45,7 +45,7 @@ cask 'alfred' do
   app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
 
   postflight do
-    suppress_move_to_applications :key => 'suppressMoveToApplications'
+    suppress_move_to_applications key: 'suppressMoveToApplications'
   end
 end
 ```
@@ -406,7 +406,7 @@ which points to a source file such as:
 You can rename the target link which appears in your `~/Applications` directory by adding a `:target` key to `app`. Example (from [scala-ide.rb](https://github.com/caskroom/homebrew-cask/blob/84e8df88836a2c11657e09264bd01b96783bb0d1/Casks/scala-ide.rb#L21)):
 
 ```ruby
-app 'eclipse/Eclipse.app', :target => 'Scala IDE.app'
+app 'eclipse/Eclipse.app', target: 'Scala IDE.app'
 ```
 
 ### :target May Contain an Absolute Path
@@ -414,7 +414,7 @@ app 'eclipse/Eclipse.app', :target => 'Scala IDE.app'
 If `:target` has a leading slash, it is interpreted as an absolute path. The containing directory for the absolute path will be created if it does not already exist. Example (from [manopen.rb](https://github.com/caskroom/homebrew-cask/blob/84e8df88836a2c11657e09264bd01b96783bb0d1/Casks/manopen.rb#L12)):
 
 ```ruby
-artifact 'openman.1', :target => '/usr/local/share/man/man1/openman.1'
+artifact 'openman.1', target: '/usr/local/share/man/man1/openman.1'
 ```
 
 ### :target Works on Most Artifact Types
@@ -423,7 +423,7 @@ The `:target` key works similarly for most Cask artifacts, such as `app`, `binar
 
 ### :target Should Only Be Used in Select Cases
 
-Don’t use `:target` for aesthetic reasons, like removing version numbers (`app "Slack #{version}.app", :target => 'Slack.app'`). With `app`, use it when it makes sense functionally and document your reason cleary in the Cask: was it [for clarity](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/imagemin.rb#L11); [for consistency](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/devonthink-pro-office.rb#L14); [to prevent conflicts](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/flash-player-debugger.rb#L13)? With `binary` you can take some extra liberties to be consistent with other command-line tools, like [changing case](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/diffmerge.rb#L11) or [removing an extension](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/filebot.rb#L12).
+Don’t use `:target` for aesthetic reasons, like removing version numbers (`app "Slack #{version}.app", target: 'Slack.app'`). With `app`, use it when it makes sense functionally and document your reason cleary in the Cask: was it [for clarity](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/imagemin.rb#L11); [for consistency](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/devonthink-pro-office.rb#L14); [to prevent conflicts](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/flash-player-debugger.rb#L13)? With `binary` you can take some extra liberties to be consistent with other command-line tools, like [changing case](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/diffmerge.rb#L11) or [removing an extension](https://github.com/caskroom/homebrew-cask/blob/6e4eb6ba58ca0d9e6d42a1d78856cc8a35cf5fce/Casks/filebot.rb#L12).
 
 ## Suite Stanza Details
 
@@ -452,7 +452,7 @@ Subsequent arguments to `pkg` are key/value pairs which modify the install proce
 Example (from [alinof-timer.rb](https://github.com/caskroom/homebrew-cask/blob/9a617c077dc238aac28dc9ad325f8924b19d6306/Casks/alinof-timer.rb)):
 
 ```ruby
-pkg 'AlinofTimer.pkg', :allow_untrusted => true
+pkg 'AlinofTimer.pkg', allow_untrusted: true
 ```
 
 ## Installer Stanza Details
@@ -464,7 +464,7 @@ The `installer` stanza takes a series of key-value pairs, the first key of which
 `installer :manual` takes a single string value, describing a GUI installer which must be run by the user at a later time. The path may be absolute, or relative to the Cask. Example (from [little-snitch.rb](https://github.com/caskroom/homebrew-cask/blob/fb2ac85d9fe4bf5095a63b01d58e69ca64a6c728/Casks/little-snitch.rb)):
 
 ```ruby
-installer :manual => 'Little Snitch Installer.app'
+installer manual: 'Little Snitch Installer.app'
 ```
 
 ### Installer :script
@@ -482,9 +482,9 @@ installer :manual => 'Little Snitch Installer.app'
 The path may be absolute, or relative to the Cask. Example (from [adobe-air.rb](https://github.com/caskroom/homebrew-cask/blob/240320bef456fe74621d89fd160c4a6b5a7f56cc/Casks/adobe-air.rb)):
 
 ```ruby
-installer :script => 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
-          :args   => %w[-silent],
-          :sudo   => true
+installer script: 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
+          args:   %w[-silent],
+          sudo:   true
 ```
 
 ## Depends_on Stanza Details
@@ -499,7 +499,7 @@ The value should be another Cask token, needed by the current Cask.
 Example use: [`SSHFS`](https://github.com/caskroom/homebrew-cask/blob/feba4ec740920b73ac8bcee206bf65c945a1dc2e/Casks/sshfs.rb) depends on OSXFUSE:
 
 ```ruby
-depends_on :cask => 'osxfuse'
+depends_on cask: 'osxfuse'
 ```
 
 ### Depends_on :formula
@@ -509,7 +509,7 @@ The value should name a Homebrew Formula needed by the Cask.
 Example use: some distributions are contained in archive formats such as `7z` which are not supported by stock Apple tools. For these cases, a more capable archive reader may be pulled in at install time by declaring a dependency on the Homebrew Formula `unar`:
 
 ```ruby
-depends_on :formula => 'unar'
+depends_on formula: 'unar'
 ```
 
 ### Depends_on :macos
@@ -538,10 +538,10 @@ The available values for OS X releases are:
 Only major releases are covered (version numbers containing a single dot). The symbol form is preferred for readability. The following are all valid ways to enumerate the exact OS X release requirements for a Cask:
 
 ```ruby
-depends_on :macos => :yosemite
-depends_on :macos => [:mavericks, :yosemite]
-depends_on :macos => '10.9'
-depends_on :macos => ['10.9', '10.10']
+depends_on macos: :yosemite
+depends_on macos: [:mavericks, :yosemite]
+depends_on macos: '10.9'
+depends_on macos: ['10.9', '10.10']
 ```
 
 #### Setting a Minimum OS X Release
@@ -549,8 +549,8 @@ depends_on :macos => ['10.9', '10.10']
 `depends_on :macos` can also accept a string starting with a comparison operator such as `>=`, followed by an OS X release in the form above. The following are both valid expressions meaning “at least OS X 10.9”:
 
 ```ruby
-depends_on :macos => '>= :mavericks'
-depends_on :macos => '>= 10.9'
+depends_on macos: '>= :mavericks'
+depends_on macos: '>= 10.9'
 ```
 
 A comparison expression cannot be combined with any other form of `depends_on :macos`.
@@ -573,16 +573,16 @@ The available symbols for hardware are:
 The following are all valid expressions:
 
 ```ruby
-depends_on :arch => :x86_64
-depends_on :arch => [:x86_64]          # same meaning as above
-depends_on :arch => :intel
-depends_on :arch => [:i386, :x86_64]   # same meaning as above
+depends_on arch: :x86_64
+depends_on arch: [:x86_64]          # same meaning as above
+depends_on arch: :intel
+depends_on arch: [:i386, :x86_64]   # same meaning as above
 ```
 
 Since PowerPC hardware is no longer common, the expression most frequently needed will be:
 
 ```ruby
-depends_on :arch => :x86_64
+depends_on arch: :x86_64
 ```
 
 ### All Depends_on Keys
@@ -725,13 +725,13 @@ It is better to use the least-severe signals which are sufficient to stop a proc
 An example, with commonly-used signals in ascending order of severity:
 
 ```ruby
-  uninstall :signal => [
-                         ['TERM', 'fr.madrau.switchresx.daemon'],
-                         ['QUIT', 'fr.madrau.switchresx.daemon'],
-                         ['INT',  'fr.madrau.switchresx.daemon'],
-                         ['HUP',  'fr.madrau.switchresx.daemon'],
-                         ['KILL', 'fr.madrau.switchresx.daemon'],
-                       ]
+  uninstall signal: [
+                      ['TERM', 'fr.madrau.switchresx.daemon'],
+                      ['QUIT', 'fr.madrau.switchresx.daemon'],
+                      ['INT',  'fr.madrau.switchresx.daemon'],
+                      ['HUP',  'fr.madrau.switchresx.daemon'],
+                      ['KILL', 'fr.madrau.switchresx.daemon'],
+                    ]
 ```
 
 Note that when multiple running processes match the given Bundle ID, all matching processes will be signaled.

@@ -4,16 +4,16 @@ cask 'hocus-focus' do
 
   url "http://hocusfoc.us/static/releases/hocusfocus-#{version}.zip"
   appcast 'http://hocusfoc.us/updates.xml',
-          :checkpoint => '3757afb32c1a6859edbfde3c09affd115a6e3742017787fea6dfd333a2114326'
+          checkpoint: '3757afb32c1a6859edbfde3c09affd115a6e3742017787fea6dfd333a2114326'
   name 'Hocus Focus'
   homepage 'http://hocusfoc.us/'
   license :gratis
 
   app 'Hocus Focus.app'
 
-  zap :delete => [
-                   '~/Library/Caches/com.uglyapps.HocusFocus',
-                   '~/Library/Application Support/com.uglyapps.HocusFocus',
-                   '~/Library/Preferences/com.uglyapps.HocusFocus.plist',
-                 ]
+  zap delete: [
+                '~/Library/Caches/com.uglyapps.HocusFocus',
+                '~/Library/Application Support/com.uglyapps.HocusFocus',
+                '~/Library/Preferences/com.uglyapps.HocusFocus.plist',
+              ]
 end

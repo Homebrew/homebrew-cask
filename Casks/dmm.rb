@@ -9,5 +9,5 @@ cask 'dmm' do
 
   pkg 'DMMViewer.pkg'
 
-  uninstall :pkgutil => 'jp.co.cyphertec.installer.app.ImageViewer'
+  uninstall pkgutil: 'jp.co.cyphertec.installer.app.ImageViewer'
 end

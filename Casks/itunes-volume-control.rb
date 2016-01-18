@@ -4,7 +4,7 @@ cask 'itunes-volume-control' do
 
   url 'https://github.com/alberti42/iTunes-Volume-Control/raw/master/iTunes%20Volume%20Control.dmg'
   appcast 'https://github.com/alberti42/iTunes-Volume-Control/releases.atom',
-          :checkpoint => '16c4f984043ff2321f6be00f0d7b06a5ce87a014747aedcdd5074d9e18e2b56a'
+          checkpoint: '16c4f984043ff2321f6be00f0d7b06a5ce87a014747aedcdd5074d9e18e2b56a'
   name 'iTunes Volume Control'
   homepage 'https://github.com/alberti42/iTunes-Volume-Control'
   license :oss

@@ -4,7 +4,7 @@ cask 'dupeguru' do
 
   url "https://download.hardcoded.net/dupeguru_osx_#{version.dots_to_underscores}.dmg"
   appcast 'https://www.hardcoded.net/updates/dupeguru.appcast',
-          :checkpoint => 'bfb7c3e66f4a60fd71d31f412dd5e5921e1e20313dd4a7ee572f85d748df3a35'
+          checkpoint: 'bfb7c3e66f4a60fd71d31f412dd5e5921e1e20313dd4a7ee572f85d748df3a35'
   name 'dupeGuru'
   homepage 'https://www.hardcoded.net/dupeguru/'
   license :bsd

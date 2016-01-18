@@ -5,17 +5,17 @@ cask 'macpaw-gemini' do
   # devmate.com is the official download host per the appcast feed
   url "https://dl.devmate.com/com.macpaw.site.Gemini/#{version.before_comma}/#{version.after_comma}/MacPawGemini-#{version.before_comma}.zip"
   appcast 'https://updates.devmate.com/com.macpaw.site.Gemini.xml',
-          :checkpoint => 'c5e98cb5ad6b531a34850e48b6cb29611cd504e6ee3c7d970cf651c6fe571baf'
+          checkpoint: 'c5e98cb5ad6b531a34850e48b6cb29611cd504e6ee3c7d970cf651c6fe571baf'
   name 'MacPaw Gemini'
   homepage 'https://macpaw.com/gemini'
   license :commercial
 
   app 'MacPaw Gemini.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/MacPaw Gemini',
-                   '~/Library/Caches/com.macpaw.site.Gemini',
-                   '~/Library/Preferences/com.macpaw.site.Gemini.plist',
-                   '~/Library/Saved Application State/com.macpaw.site.Gemini.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/MacPaw Gemini',
+                '~/Library/Caches/com.macpaw.site.Gemini',
+                '~/Library/Preferences/com.macpaw.site.Gemini.plist',
+                '~/Library/Saved Application State/com.macpaw.site.Gemini.savedState',
+              ]
 end

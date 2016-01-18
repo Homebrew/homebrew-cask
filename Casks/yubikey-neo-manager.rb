@@ -9,5 +9,5 @@ cask 'yubikey-neo-manager' do
 
   pkg "yubikey-neo-manager-#{version}-mac.pkg"
 
-  uninstall :pkgutil => 'com.yubico.pkg.YubiKeyNEOManager'
+  uninstall pkgutil: 'com.yubico.pkg.YubiKeyNEOManager'
 end

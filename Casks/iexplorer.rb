@@ -4,12 +4,12 @@ cask 'iexplorer' do
 
   url "https://www.macroplant.com/release/iExplorer-#{version}.dmg"
   appcast 'https://www.macroplant.com/iexplorer/ie3-appcast.xml',
-          :checkpoint => 'f3523ef8974ea4face7eda1b6b6115bd6a393833f5f0043a7f0869896bb97f00'
+          checkpoint: 'f3523ef8974ea4face7eda1b6b6115bd6a393833f5f0043a7f0869896bb97f00'
   name 'iExplorer'
   homepage 'https://www.macroplant.com/iexplorer/'
   license :freemium
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   app 'iExplorer.app'
 end

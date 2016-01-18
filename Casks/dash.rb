@@ -4,7 +4,7 @@ cask 'dash' do
 
   url "http://kapeli.com/downloads/v#{version.major}/Dash.zip"
   appcast "https://kapeli.com/Dash#{version.major}.xml",
-          :checkpoint => '999eae5ad653ec9b3ef5a1003b8f6fdd02738a1ff429e09174dc248b58282959'
+          checkpoint: '999eae5ad653ec9b3ef5a1003b8f6fdd02738a1ff429e09174dc248b58282959'
   name 'Dash'
   homepage 'https://kapeli.com/dash'
   license :commercial
@@ -15,9 +15,9 @@ cask 'dash' do
     suppress_move_to_applications
   end
 
-  zap :delete => [
-                   '~/Library/Application Support/Dash',
-                   '~/Library/Preferences/com.kapeli.dash.plist',
-                   '~/Library/Preferences/com.kapeli.dashdoc.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Dash',
+                '~/Library/Preferences/com.kapeli.dash.plist',
+                '~/Library/Preferences/com.kapeli.dashdoc.plist',
+              ]
 end

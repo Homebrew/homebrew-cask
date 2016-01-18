@@ -9,5 +9,5 @@ cask 'daylite' do
 
   pkg 'Install Daylite & Mail Assistant.pkg'
 
-  uninstall :pkgutil => 'com.marketcircle.Daylite4.*'
+  uninstall pkgutil: 'com.marketcircle.Daylite4.*'
 end

@@ -10,5 +10,5 @@ cask 'electric-sheep' do
 
   pkg 'Electric Sheep.pkg'
 
-  uninstall :pkgutil => 'org.electricsheep.electricSheep.*'
+  uninstall pkgutil: 'org.electricsheep.electricSheep.*'
 end

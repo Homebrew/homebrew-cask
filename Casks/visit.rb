@@ -8,7 +8,7 @@ cask 'visit' do
   homepage 'https://wci.llnl.gov/simulation/computer-codes/visit'
   license :bsd
 
-  depends_on :macos => '>= :mountain_lion'
+  depends_on macos: '>= :mountain_lion'
 
   app 'VisIt.app'
 end

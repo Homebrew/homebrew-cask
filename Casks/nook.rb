@@ -7,7 +7,7 @@ cask 'nook' do
   homepage 'http://www.barnesandnoble.com/u/nook-for-mac/379003592/'
   license :gratis
 
-  container :nested => 'NOOK for Mac.dmg'
+  container nested: 'NOOK for Mac.dmg'
 
   app 'NookForMac.app'
 end

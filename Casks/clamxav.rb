@@ -10,7 +10,7 @@ cask 'clamxav' do
     sha256 'd9a460ecf762cacf8ae3ef93d04ce1b223fd1ea2c54327b7bc231e8fbd516cd3'
 
     appcast 'https://www.clamxav.com/sparkle/appcast.xml',
-            :checkpoint => 'a679946f8794fcdf4637a4f27c714eb9fbdec1ae8711a3f53d1bbd3b655415cd'
+            checkpoint: 'a679946f8794fcdf4637a4f27c714eb9fbdec1ae8711a3f53d1bbd3b655415cd'
   end
 
   url "https://www.clamxav.com/downloads/ClamXav_#{version}.dmg"
@@ -24,12 +24,12 @@ cask 'clamxav' do
     suppress_move_to_applications
   end
 
-  zap :delete => [
-                   '~/Library/Caches/uk.co.markallan.clamxav',
-                   '~/Library/Logs/clamXav-scan.log',
-                   # TODO: glob/expand needed here
-                   '~/Library/Logs/clamXav-scan.log.0.bz2',
-                 ]
+  zap delete: [
+                '~/Library/Caches/uk.co.markallan.clamxav',
+                '~/Library/Logs/clamXav-scan.log',
+                # TODO: glob/expand needed here
+                '~/Library/Logs/clamXav-scan.log.0.bz2',
+              ]
 
   caveats do
     # this happens sometime after installation, but still worth warning about

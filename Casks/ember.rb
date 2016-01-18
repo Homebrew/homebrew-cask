@@ -4,7 +4,7 @@ cask 'ember' do
 
   url "http://downloads.realmacmedia.com/ember/ember-#{version.no_dots}.zip"
   appcast 'https://realmacsoftware.com/feeds/ember.xml',
-          :checkpoint => '3d67f61fbc5b1bf154a4da1a28bca8dba7585456cfc16a8e89d84500343c00b8'
+          checkpoint: '3d67f61fbc5b1bf154a4da1a28bca8dba7585456cfc16a8e89d84500343c00b8'
   name 'Ember'
   homepage 'http://realmacsoftware.com/ember'
   license :commercial

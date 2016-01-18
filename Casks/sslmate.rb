@@ -9,5 +9,5 @@ cask 'sslmate' do
 
   pkg 'SSLMate-latest.pkg'
 
-  uninstall :pkgutil => 'com.sslmate.client'
+  uninstall pkgutil: 'com.sslmate.client'
 end

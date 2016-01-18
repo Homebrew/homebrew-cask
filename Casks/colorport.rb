@@ -9,7 +9,7 @@ cask 'colorport' do
 
   pkg "ColorPort#{version.sub(%r{^(\d+)\.(\d+).*}, '\1\2')}Distribution.mpkg"
 
-  uninstall :pkgutil => 'com.xrite.colorport'
+  uninstall pkgutil: 'com.xrite.colorport'
 
   caveats do
     discontinued

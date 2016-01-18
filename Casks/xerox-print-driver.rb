@@ -23,11 +23,11 @@ cask 'xerox-print-driver' do
 
   pkg "Xerox Print Driver #{version.sub(%r{_.*}, '')}.pkg"
 
-  uninstall :pkgutil => [
-                          'com.xerox.installer.addprintqueue',
-                          'com.xerox.installer.finishup',
-                          'com.xerox.print.xeroxPrinter.pkg',
-                        ]
+  uninstall pkgutil: [
+                       'com.xerox.installer.addprintqueue',
+                       'com.xerox.installer.finishup',
+                       'com.xerox.print.xeroxPrinter.pkg',
+                     ]
 
-  zap :rmdir => '/Library/Application Support/Xerox'
+  zap rmdir: '/Library/Application Support/Xerox'
 end

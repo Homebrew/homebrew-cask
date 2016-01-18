@@ -15,5 +15,5 @@ cask 'razorsql' do
 
   app 'RazorSQL.app'
 
-  zap :delete => '~/.razorsql'
+  zap delete: '~/.razorsql'
 end

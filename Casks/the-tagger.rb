@@ -4,7 +4,7 @@ cask 'the-tagger' do
 
   url 'http://deadbeatsw.com/thetagger/TheTaggerLatest.zip'
   appcast 'http://deadbeatsw.com/thetagger/appcast.xml',
-          :checkpoint => 'dad3dd5d7fddb361fd75d449ada6982d291a204cf044fc0ac9172f225739fd18'
+          checkpoint: 'dad3dd5d7fddb361fd75d449ada6982d291a204cf044fc0ac9172f225739fd18'
   name 'The Tagger'
   homepage 'http://deadbeatsw.com/thetagger/'
   license :commercial

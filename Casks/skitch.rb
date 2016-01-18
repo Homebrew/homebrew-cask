@@ -9,8 +9,8 @@ cask 'skitch' do
 
   app 'Skitch.app'
 
-  zap :delete => [
-                   '~/Library/Preferences/com.plasq.skitch.plist',
-                   '~/Library/Preferences/com.plasq.skitch.history',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.plasq.skitch.plist',
+                '~/Library/Preferences/com.plasq.skitch.history',
+              ]
 end

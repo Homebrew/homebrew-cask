@@ -12,12 +12,12 @@ cask 'texpad' do
 
   url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.gsub('.', '_')}.zip"
   appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml',
-          :checkpoint => 'c2ae454ef1b24a4ed05aa2cd361017159385ea8d030b102f693446d5bc020c8e'
+          checkpoint: 'c2ae454ef1b24a4ed05aa2cd361017159385ea8d030b102f693446d5bc020c8e'
   name 'Texpad'
   homepage 'https://www.texpadapp.com/osx'
   license :commercial
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   app 'Texpad.app'
 end

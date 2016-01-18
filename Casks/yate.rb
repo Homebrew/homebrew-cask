@@ -4,7 +4,7 @@ cask 'yate' do
 
   url 'https://2manyrobots.com/Builds/Yate/Yate.dmg'
   appcast 'https://2manyrobots.com/Updates/Yate/appcast.xml',
-          :checkpoint => '2ee3046d2801acdb58793da6c666563ff1d66aa1be506967bd8817be9bc1e7c8'
+          checkpoint: '2ee3046d2801acdb58793da6c666563ff1d66aa1be506967bd8817be9bc1e7c8'
   name 'Yate'
   homepage 'https://2manyrobots.com/yate/'
   license :commercial

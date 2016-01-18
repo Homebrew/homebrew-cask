@@ -4,7 +4,7 @@ cask 'yummy-ftp' do
 
   url 'http://www.yummysoftware.com/downloads/YummyFTP.zip'
   appcast 'http://www.yummysoftware.com/su/yummyftp/feed.xml',
-          :checkpoint => 'be9e1c0ec042b91831aff6c9a7f2e08147f50472579be634cff59f6776d410a0'
+          checkpoint: 'be9e1c0ec042b91831aff6c9a7f2e08147f50472579be634cff59f6776d410a0'
   name 'Yummy FTP'
   homepage 'http://www.yummysoftware.com'
   license :commercial

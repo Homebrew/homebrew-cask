@@ -10,5 +10,5 @@ cask 'kollaborate-transfer' do
 
   app 'Kollaborate Transfer.app'
 
-  zap :delete => '~/Library/Preferences/com.digitalrebellion.KollabTransfer.plist'
+  zap delete: '~/Library/Preferences/com.digitalrebellion.KollabTransfer.plist'
 end

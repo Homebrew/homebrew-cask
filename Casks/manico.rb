@@ -4,14 +4,14 @@ cask 'manico' do
 
   url "http://manico.im/static/Manico_#{version}.dmg"
   appcast 'http://manico.im/static/manico-official-appcast.xml',
-          :checkpoint => '0c20ba7f38321babd46cde6d61497690aa17068ebb5d03b8e678240413a04f97'
+          checkpoint: '0c20ba7f38321babd46cde6d61497690aa17068ebb5d03b8e678240413a04f97'
   name 'Manico'
   homepage 'http://manico.im/'
   license :commercial
 
   app 'Manico.app'
 
-  zap :delete => [
-                   '~/Library/Containers/im.manico.Manico',
-                 ]
+  zap delete: [
+                '~/Library/Containers/im.manico.Manico',
+              ]
 end

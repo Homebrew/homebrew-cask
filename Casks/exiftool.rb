@@ -4,12 +4,12 @@ cask 'exiftool' do
 
   url "http://owl.phy.queensu.ca/~phil/exiftool/ExifTool-#{version}.dmg"
   appcast 'http://owl.phy.queensu.ca/~phil/exiftool/rss.xml',
-          :checkpoint => '0b16178549bcecd52cc3543a740969f23f9cad41772ed053b989e7b44ec5e21a'
+          checkpoint: '0b16178549bcecd52cc3543a740969f23f9cad41772ed053b989e7b44ec5e21a'
   name 'ExifTool by Phil Harvey'
   homepage 'http://www.sno.phy.queensu.ca/~phil/exiftool/'
   license :gpl
 
   pkg "ExifTool-#{version}.pkg"
 
-  uninstall :pkgutil   => 'com.philharvey.image-exiftool'
+  uninstall pkgutil: 'com.philharvey.image-exiftool'
 end

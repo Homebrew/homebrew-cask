@@ -4,7 +4,7 @@ cask 'max' do
 
   url "http://files.sbooth.org/Max-#{version}.tar.bz2"
   appcast 'http://sbooth.org/Max/appcast.xml',
-          :checkpoint => 'da0e3f2c4da860454e69657f5cbdf7b7866a68fa26cd456ae844e535981a4bc6'
+          checkpoint: 'da0e3f2c4da860454e69657f5cbdf7b7866a68fa26cd456ae844e535981a4bc6'
   name 'Max'
   homepage 'http://sbooth.org/Max/'
   license :gpl

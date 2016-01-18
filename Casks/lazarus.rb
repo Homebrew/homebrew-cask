@@ -10,5 +10,5 @@ cask 'lazarus' do
 
   pkg 'lazarus.pkg'
 
-  uninstall :pkgutil => 'org.freepascal.lazarus.www'
+  uninstall pkgutil: 'org.freepascal.lazarus.www'
 end

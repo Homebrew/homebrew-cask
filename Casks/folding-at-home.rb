@@ -7,14 +7,14 @@ cask 'folding-at-home' do
   homepage 'https://folding.stanford.edu'
   license :closed
 
-  depends_on :macos => '>= 10.6'
+  depends_on macos: '>= 10.6'
 
   pkg "fah-installer_#{version}_x86_64.pkg"
 
-  uninstall :pkgutil   => 'edu.stanford.folding.*',
-            :launchctl => 'edu.stanford.folding.fahclient',
-            :quit      => %w[
-                            edu.stanford.folding.fahviewer
-                            edu.stanford.folding.fahcontrol
-                          ]
+  uninstall pkgutil:   'edu.stanford.folding.*',
+            launchctl: 'edu.stanford.folding.fahclient',
+            quit:      %w[
+                         edu.stanford.folding.fahviewer
+                         edu.stanford.folding.fahcontrol
+                       ]
 end

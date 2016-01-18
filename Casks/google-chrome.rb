@@ -11,20 +11,20 @@ cask 'google-chrome' do
 
   app 'Google Chrome.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/Google/Chrome',
-                   '~/Library/Caches/Google/Chrome',
-                   '~/Library/Caches/com.google.Chrome',
-                   '~/Library/Caches/com.google.Chrome.helper.EH',
-                   '~/Library/Caches/com.google.Keystone.Agent',
-                   '~/Library/Caches/com.google.SoftwareUpdate',
-                   '~/Library/Google/GoogleSoftwareUpdate',
-                   '~/Library/Logs/GoogleSoftwareUpdateAgent.log',
-                 ],
-      :rmdir  => [
-                   '~/Library/Caches/Google',
-                   '~/Library/Google',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Google/Chrome',
+                '~/Library/Caches/Google/Chrome',
+                '~/Library/Caches/com.google.Chrome',
+                '~/Library/Caches/com.google.Chrome.helper.EH',
+                '~/Library/Caches/com.google.Keystone.Agent',
+                '~/Library/Caches/com.google.SoftwareUpdate',
+                '~/Library/Google/GoogleSoftwareUpdate',
+                '~/Library/Logs/GoogleSoftwareUpdateAgent.log',
+              ],
+      rmdir:  [
+                '~/Library/Caches/Google',
+                '~/Library/Google',
+              ]
 
   caveats <<-EOS.undent
     The Mac App Store version of 1Password won't work with a Homebrew-Cask-linked Google Chrome. To bypass this limitation, you need to either:

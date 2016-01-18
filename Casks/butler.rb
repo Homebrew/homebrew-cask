@@ -4,7 +4,7 @@ cask 'butler' do
 
   url 'https://manytricks.com/download/butler'
   appcast 'http://manytricks.com/butler/butlercast.xml',
-          :checkpoint => 'a1f08dffa7a7797bf62c560d9a88fe4df169425e0d4d96a9bfc17de4971aeb95'
+          checkpoint: 'a1f08dffa7a7797bf62c560d9a88fe4df169425e0d4d96a9bfc17de4971aeb95'
   name 'Butler'
   homepage 'https://manytricks.com/butler/'
   license :commercial

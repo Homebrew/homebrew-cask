@@ -8,5 +8,5 @@ cask 'kivy' do
   license :mit
 
   app 'Kivy.app'
-  binary 'Kivy.app/Contents/Resources/script', :target => 'kivy'
+  binary 'Kivy.app/Contents/Resources/script', target: 'kivy'
 end

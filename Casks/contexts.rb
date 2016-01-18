@@ -4,18 +4,18 @@ cask 'contexts' do
 
   url "https://contexts.co/releases/Contexts-#{version}.zip"
   appcast 'https://contexts.co/appcasts/stable.xml',
-          :checkpoint => 'c3c271dcc8fad21e821c702b5da65b1a32b641219c0629b88063e20aa243960d'
+          checkpoint: 'c3c271dcc8fad21e821c702b5da65b1a32b641219c0629b88063e20aa243960d'
   name 'Contexts'
   homepage 'https://contexts.co'
   license :commercial
 
   app 'Contexts.app'
 
-  uninstall :quit => 'com.contextsformac.Contexts'
+  uninstall quit: 'com.contextsformac.Contexts'
 
-  zap :delete => [
-                   '~/Library/Application Support/.com.contextsformac.Contexts.plist',
-                   '~/Library/Caches/com.contextsformac.Contexts',
-                   '~/Library/Preferences/com.contextsformac.Contexts.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/.com.contextsformac.Contexts.plist',
+                '~/Library/Caches/com.contextsformac.Contexts',
+                '~/Library/Preferences/com.contextsformac.Contexts.plist',
+              ]
 end

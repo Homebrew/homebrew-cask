@@ -7,7 +7,7 @@ cask 'hetimazipql' do
   homepage 'http://hetima.com/hetimazipql/'
   license :oss # zlib License
 
-  depends_on :macos => '>= :mountain_lion'
+  depends_on macos: '>= :mountain_lion'
 
   qlplugin "HetimaZip.qlgenerator#{version}/HetimaZip.qlgenerator"
 end

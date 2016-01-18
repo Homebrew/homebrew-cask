@@ -21,7 +21,7 @@ cask 'gnubg' do
   homepage 'http://gnubg.org/'
   license :gpl
 
-  depends_on :x11 => true
+  depends_on x11: true
 
   app 'gnubg.app'
 

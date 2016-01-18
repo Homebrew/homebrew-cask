@@ -16,7 +16,7 @@ cask 'araxis-merge' do
   homepage 'http://www.araxis.com/merge'
   license :commercial
 
-  depends_on :macos => '>= :mavericks'
+  depends_on macos: '>= :mavericks'
 
   app 'Araxis Merge.app'
   binary 'Utilities/araxisgitdiff'
@@ -31,10 +31,10 @@ cask 'araxis-merge' do
   binary 'Utilities/araxisp4winmrg'
   binary 'Utilities/araxissvnmerge'
 
-  zap :delete => [
-                   '~/Library/Preferences/com.araxis.merge.LSSharedFileList.plist',
-                   '~/Library/Preferences/com.araxis.merge.plist',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.araxis.merge.LSSharedFileList.plist',
+                '~/Library/Preferences/com.araxis.merge.plist',
+              ]
 
   caveats <<-EOS.undent
     For instructions to integrate Araxis Merge with Finder or other applications,

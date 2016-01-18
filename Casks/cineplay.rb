@@ -9,7 +9,7 @@ cask 'cineplay' do
 
   pkg 'Install CinePlay.pkg'
 
-  uninstall :pkgutil => 'com.digitalrebellion.pkg.CinePlay'
+  uninstall pkgutil: 'com.digitalrebellion.pkg.CinePlay'
 
-  zap :delete => '~/Library/Preferences/com.digitalrebellion.CinePlay.plist'
+  zap delete: '~/Library/Preferences/com.digitalrebellion.CinePlay.plist'
 end

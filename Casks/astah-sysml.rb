@@ -9,5 +9,5 @@ cask 'astah-sysml' do
 
   pkg "astah sysml ver #{version.gsub('.', '_')}.pkg"
 
-  uninstall :pkgutil => 'com.change-vision.astahsysml.astahsysml.pkg'
+  uninstall pkgutil: 'com.change-vision.astahsysml.astahsysml.pkg'
 end

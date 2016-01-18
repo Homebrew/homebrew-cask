@@ -10,5 +10,5 @@ cask 'kollaborate-folder-watcher' do
 
   app 'Kollaborate Folder Watcher.app'
 
-  zap :delete => '~/Library/Preferences/com.digitalrebellion.KollabFolderWatcher.plist'
+  zap delete: '~/Library/Preferences/com.digitalrebellion.KollabFolderWatcher.plist'
 end

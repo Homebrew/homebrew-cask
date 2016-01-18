@@ -9,12 +9,12 @@ cask 'xiami' do
 
   app 'Xiami.app'
 
-  uninstall :quit => 'com.xiami.client'
+  uninstall quit: 'com.xiami.client'
 
-  zap :delete => [
-                   '~/Library/Caches/com.xiami.client',
-                   '~/Library/Containers/com.xiami.client',
-                   '~/Library/Preferences/com.xiami.client.plist',
-                   '~/Library/Saved Application State/com.xiami.client.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Caches/com.xiami.client',
+                '~/Library/Containers/com.xiami.client',
+                '~/Library/Preferences/com.xiami.client.plist',
+                '~/Library/Saved Application State/com.xiami.client.savedState',
+              ]
 end

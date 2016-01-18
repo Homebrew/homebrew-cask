@@ -9,5 +9,5 @@ cask 'logitech-unifying' do
 
   pkg 'Logitech Unifying Software.mpkg'
 
-  uninstall :pkgutil => 'com.Logitech.*pkg'
+  uninstall pkgutil: 'com.Logitech.*pkg'
 end

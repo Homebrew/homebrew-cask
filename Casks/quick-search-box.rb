@@ -13,8 +13,8 @@ cask 'quick-search-box' do
     set_permissions staged_path, 'u+w'
   end
 
-  zap :delete => '~/Library/Application Support/Google/Quick Search Box',
-      :rmdir  => '~/Library/Application Support/Google/'
+  zap delete: '~/Library/Application Support/Google/Quick Search Box',
+      rmdir:  '~/Library/Application Support/Google/'
 
   caveats do
     discontinued

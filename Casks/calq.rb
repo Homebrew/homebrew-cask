@@ -7,7 +7,7 @@ cask 'calq' do
   homepage 'http://www.katoemba.net/makesnosenseatall/calq/'
   license :gratis
 
-  container :nested => "Calq-#{version}.dmg"
+  container nested: "Calq-#{version}.dmg"
 
   app 'Calq.app'
 
@@ -17,5 +17,5 @@ cask 'calq' do
     system '/bin/mv', '--', staged_path.join("Calq-#{version}"), staged_path.join("Calq-#{version}.dmg")
   end
 
-  zap :delete => '~/Library/Preferences/com.katoemba.calq.plist'
+  zap delete: '~/Library/Preferences/com.katoemba.calq.plist'
 end

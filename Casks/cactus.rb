@@ -4,16 +4,16 @@ cask 'cactus' do
 
   url "http://update.cactusformac.com/static/downloads/Cactus-#{version}.zip"
   appcast 'http://update.cactusformac.com.s3-website-us-east-1.amazonaws.com/appcast.xml',
-          :checkpoint => '4a09054e73a1272707e4ae35eb0e9281a269877f660c708f6e426a3250bba342'
+          checkpoint: '4a09054e73a1272707e4ae35eb0e9281a269877f660c708f6e426a3250bba342'
   name 'Cactus'
   homepage 'http://cactusformac.com/'
   license :bsd
 
   app 'Cactus.app'
 
-  zap :delete => [
-                   '~/Library/Caches/com.nektar.Cactus',
-                   '~/Library/Preferences/com.nektar.Cactus.LSSharedFileList.plist',
-                   '~/Library/Preferences/com.nektar.Cactus.plist',
-                 ]
+  zap delete: [
+                '~/Library/Caches/com.nektar.Cactus',
+                '~/Library/Preferences/com.nektar.Cactus.LSSharedFileList.plist',
+                '~/Library/Preferences/com.nektar.Cactus.plist',
+              ]
 end

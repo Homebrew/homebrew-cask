@@ -9,5 +9,5 @@ cask 'yubikey-personalization-gui' do
 
   pkg "yubikey-personalization-gui-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.yubico.YKPersonalization'
+  uninstall pkgutil: 'com.yubico.YKPersonalization'
 end

@@ -7,13 +7,13 @@ cask 'private-internet-access' do
   homepage 'https://www.privateinternetaccess.com'
   license :gratis
 
-  installer :script => 'Private Internet Access Installer.app/Contents/MacOS/runner.sh'
+  installer script: 'Private Internet Access Installer.app/Contents/MacOS/runner.sh'
 
   postflight do
     set_ownership '~/.pia_manager'
   end
 
-  uninstall :delete => '/Applications/Private Internet Access.app'
+  uninstall delete: '/Applications/Private Internet Access.app'
 
-  zap       :delete => '~/.pia_manager'
+  zap       delete: '~/.pia_manager'
 end

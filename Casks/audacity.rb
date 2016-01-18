@@ -10,5 +10,5 @@ cask 'audacity' do
 
   app 'Audacity/Audacity.app'
 
-  zap :delete => '~/Library/Application Support/audacity'
+  zap delete: '~/Library/Application Support/audacity'
 end

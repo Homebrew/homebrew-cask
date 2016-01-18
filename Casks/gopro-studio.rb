@@ -9,5 +9,5 @@ cask 'gopro-studio' do
 
   pkg 'GoPro Studio.pkg'
 
-  uninstall :pkgutil => 'com.GoPro.pkg.GoProStudio'
+  uninstall pkgutil: 'com.GoPro.pkg.GoProStudio'
 end

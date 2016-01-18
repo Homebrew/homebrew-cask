@@ -13,9 +13,9 @@ cask 'mamp' do
     set_ownership ['/Applications/MAMP', '/Applications/MAMP PRO']
   end
 
-  uninstall :pkgutil => 'de.appsolute.installer.(mamp|mampacticon|mampendinstall|mamppro).pkg',
-            :delete  => [
-                          '/Applications/MAMP',
-                          '/Applications/MAMP PRO',
-                        ]
+  uninstall pkgutil: 'de.appsolute.installer.(mamp|mampacticon|mampendinstall|mamppro).pkg',
+            delete:  [
+                       '/Applications/MAMP',
+                       '/Applications/MAMP PRO',
+                     ]
 end

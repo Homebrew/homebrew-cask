@@ -12,14 +12,14 @@ cask 'rowanj-gitx' do
 
   url "https://github.com/rowanj/gitx/releases/download/builds%2F#{version.sub(%r{\.\d+$}, '')}%2F#{version.sub(%r{.+\.}, '')}/GitX-dev-#{version.sub(%r{.+\.}, '')}.dmg"
   appcast 'https://s3.amazonaws.com/builds.phere.net/GitX/development/GitX-dev.xml',
-          :checkpoint => '5038df68d0212f12285fecbc6e0014c48d7c79ef4e9926d048de33b1be3da4e7'
+          checkpoint: '5038df68d0212f12285fecbc6e0014c48d7c79ef4e9926d048de33b1be3da4e7'
   name 'GitX-dev'
   homepage 'https://rowanj.github.io/gitx/'
   license :gpl
 
-  conflicts_with :cask => 'gitx'
-  depends_on :macos => '>= :snow_leopard'
-  depends_on :arch => :intel
+  conflicts_with cask: 'gitx'
+  depends_on macos: '>= :snow_leopard'
+  depends_on arch: :intel
 
   app 'GitX.app'
   binary 'GitX.app/Contents/Resources/gitx'

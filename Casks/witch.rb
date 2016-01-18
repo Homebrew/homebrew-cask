@@ -9,7 +9,7 @@ cask 'witch' do
 
     url 'http://manytricks.com/download/witch'
     appcast 'https://manytricks.com/witch/appcast.xml',
-            :checkpoint => '36fc6fa7454af97645ec12d1ee76fed2ff3a4bf6339e931b257fe75bd46f5027'
+            checkpoint: '36fc6fa7454af97645ec12d1ee76fed2ff3a4bf6339e931b257fe75bd46f5027'
   end
 
   name 'Witch'
@@ -18,5 +18,5 @@ cask 'witch' do
 
   prefpane 'Witch.prefPane'
 
-  zap :delete => '~/Library/Preferences/com.manytricks.Witch.plist'
+  zap delete: '~/Library/Preferences/com.manytricks.Witch.plist'
 end

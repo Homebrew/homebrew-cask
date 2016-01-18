@@ -7,5 +7,5 @@ cask 'omnifocus-clip-o-tron' do
   homepage 'https://support.omnigroup.com/omnifocus-clip-o-tron'
   license :commercial
 
-  installer :manual => 'OmniFocus Clip-o-Tron.app'
+  installer manual: 'OmniFocus Clip-o-Tron.app'
 end

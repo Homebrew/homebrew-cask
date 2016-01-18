@@ -4,7 +4,7 @@ cask 'moneymoney' do
 
   url 'https://service.moneymoney-app.com/1/MoneyMoney.zip'
   appcast 'https://service.moneymoney-app.com/1/Appcast.xml',
-          :checkpoint => 'd6dcca568821e4fb0cdfedbc27eee377dd08027dbc1cc11b346f11516ee2f16c'
+          checkpoint: 'd6dcca568821e4fb0cdfedbc27eee377dd08027dbc1cc11b346f11516ee2f16c'
   name 'MoneyMoney'
   homepage 'https://moneymoney-app.com/'
   license :commercial

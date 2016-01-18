@@ -4,7 +4,7 @@ cask 'schnapps' do
 
   url "http://www.schnappsformac.com/download/Schnapps_v#{version}.zip"
   appcast 'http://schnappsformac.com/download/appcast.xml',
-          :checkpoint => '9d8006fdd5db72e9f79ee2814bb794c4aa775710243bf5f96655bfad562664f0'
+          checkpoint: '9d8006fdd5db72e9f79ee2814bb794c4aa775710243bf5f96655bfad562664f0'
   name 'Schnapps'
   homepage 'http://schnappsformac.com/'
   license :commercial

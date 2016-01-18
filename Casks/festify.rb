@@ -4,7 +4,7 @@ cask 'festify' do
 
   url "http://getfestify.com/updates/mac/packages/#{version}/Festify.zip"
   appcast 'http://getfestify.com/updates/mac/festify.xml',
-          :checkpoint => 'c38bc30efe3ecf2ac377a760cac281fbda793baf37949bbb331ad7359c082544'
+          checkpoint: 'c38bc30efe3ecf2ac377a760cac281fbda793baf37949bbb331ad7359c082544'
   name 'Festify'
   homepage 'http://getfestify.com/'
   license :gratis

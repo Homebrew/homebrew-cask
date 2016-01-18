@@ -14,7 +14,7 @@ cask 'trim-enabler' do
   homepage 'https://www.cindori.org/software/trimenabler/'
   license :freemium
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   app 'Trim Enabler.app'
 end

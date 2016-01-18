@@ -7,7 +7,7 @@ cask 'bankid' do
   homepage 'https://www.bankid.com/'
   license :gratis
 
-  container :type => :naked
+  container type: :naked
 
   pkg 'bankid-latest.pkg'
 
@@ -15,5 +15,5 @@ cask 'bankid' do
     system '/bin/mv', '--', staged_path.join('FileDownloader'), staged_path.join('bankid-latest.pkg')
   end
 
-  uninstall :pkgutil => 'com.bankid.bankid.BankID.pkg'
+  uninstall pkgutil: 'com.bankid.bankid.BankID.pkg'
 end

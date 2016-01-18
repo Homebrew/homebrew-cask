@@ -9,5 +9,5 @@ cask 'fcs-remover' do
 
   app 'FCS Remover.app'
 
-  zap :delete => '~/Library/Preferences/com.digitalrebellion.FCSRemover.plist'
+  zap delete: '~/Library/Preferences/com.digitalrebellion.FCSRemover.plist'
 end

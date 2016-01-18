@@ -4,7 +4,7 @@ cask 'gitter' do
 
   url "https://update.gitter.im/osx/Gitter-#{version}.dmg"
   appcast 'https://update.gitter.im/osx/appcast.xml',
-          :checkpoint => '2ede75afab8a6d0ee210863c3ac4b61381d899aff068a3e343d703ac84ece7e5'
+          checkpoint: '2ede75afab8a6d0ee210863c3ac4b61381d899aff068a3e343d703ac84ece7e5'
   name 'Gitter'
   homepage 'https://gitter.im/'
   license :freemium
@@ -15,15 +15,15 @@ cask 'gitter' do
     suppress_move_to_applications
   end
 
-  uninstall :quit => [
-                       'com.troupe.gitter.mac.Gitter',
-                       'com.troupe.gitter.mac.GitterHelperApp',
-                     ]
+  uninstall quit: [
+                    'com.troupe.gitter.mac.Gitter',
+                    'com.troupe.gitter.mac.GitterHelperApp',
+                  ]
 
-  zap :delete => [
-                   '~/Library/Application Support/Gitter',
-                   '~/Library/Caches/com.troupe.gitter.mac.Gitter',
-                   '~/Library/Preferences/com.troupe.gitter.mac.Gitter.plist',
-                   '~/Library/Saved Application State/com.troupe.gitter.mac.Gitter.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Gitter',
+                '~/Library/Caches/com.troupe.gitter.mac.Gitter',
+                '~/Library/Preferences/com.troupe.gitter.mac.Gitter.plist',
+                '~/Library/Saved Application State/com.troupe.gitter.mac.Gitter.savedState',
+              ]
 end

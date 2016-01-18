@@ -8,7 +8,7 @@ cask 'scythebill' do
   homepage 'http://www.scythebill.com/'
   license :apache
 
-  container :nested => "Scythebill #{version}.dmg"
+  container nested: "Scythebill #{version}.dmg"
 
   app 'Scythebill.app'
 

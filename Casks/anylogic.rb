@@ -7,12 +7,12 @@ cask 'anylogic' do
   homepage 'http://www.anylogic.com'
   license :gratis
 
-  depends_on :arch => :x86_64
-  depends_on :macos => '>= :lion'
+  depends_on arch: :x86_64
+  depends_on macos: '>= :lion'
 
   pkg 'Install AnyLogic.pkg'
 
-  uninstall :pkgutil => 'com.anylogic.AnyLogic'
+  uninstall pkgutil: 'com.anylogic.AnyLogic'
 
   caveats do
     depends_on_java('8')

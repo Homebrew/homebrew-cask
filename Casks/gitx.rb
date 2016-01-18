@@ -4,23 +4,23 @@ cask 'gitx' do
 
   url 'http://frim.frim.nl/GitXStable.app.zip'
   appcast 'http://gitx.frim.nl/Downloads/appcast.xml',
-          :checkpoint => '55accf881c6e6bc22e4c30d394e7d1b51c7f7b2de4b1a746f5fdeae742311ac9'
+          checkpoint: '55accf881c6e6bc22e4c30d394e7d1b51c7f7b2de4b1a746f5fdeae742311ac9'
   name 'GitX'
   homepage 'http://gitx.frim.nl/'
   license :gpl
 
-  conflicts_with :cask => %w[
-                            laullon-gitx
-                            rowanj-gitx
-                          ]
+  conflicts_with cask: %w[
+                         laullon-gitx
+                         rowanj-gitx
+                       ]
 
   app 'GitX.app'
   binary 'GitX.app/Contents/Resources/gitx'
 
-  zap :delete => [
-                   '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/nl.frim.gitx.sfl',
-                   '~/Library/Caches/nl.frim.GitX',
-                   '~/Library/Preferences/nl.frim.GitX.plist',
-                   '~/Library/Saved Application State/nl.frim.GitX.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/nl.frim.gitx.sfl',
+                '~/Library/Caches/nl.frim.GitX',
+                '~/Library/Preferences/nl.frim.GitX.plist',
+                '~/Library/Saved Application State/nl.frim.GitX.savedState',
+              ]
 end

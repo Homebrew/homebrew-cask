@@ -17,14 +17,14 @@ cask 'ncar-ncl' do
   homepage 'https://www.ncl.ucar.edu/'
   license :oss
 
-  depends_on :cask => 'xquartz'
-  depends_on :formula => 'gcc'
-  depends_on :macos => ['10.8', '10.9', '10.10']
-  depends_on :arch => :x86_64
+  depends_on cask: 'xquartz'
+  depends_on formula: 'gcc'
+  depends_on macos: ['10.8', '10.9', '10.10']
+  depends_on arch: :x86_64
 
-  artifact 'include', :target => '/usr/local/ncl-6.3.0/include'
-  artifact 'bin', :target => '/usr/local/ncl-6.3.0/bin'
-  artifact 'lib', :target => '/usr/local/ncl-6.3.0/lib'
+  artifact 'include', target: '/usr/local/ncl-6.3.0/include'
+  artifact 'bin', target: '/usr/local/ncl-6.3.0/bin'
+  artifact 'lib', target: '/usr/local/ncl-6.3.0/lib'
 
   caveats do
     <<-EOS.undent

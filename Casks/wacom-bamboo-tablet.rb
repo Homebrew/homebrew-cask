@@ -9,11 +9,11 @@ cask 'wacom-bamboo-tablet' do
 
   pkg 'Install Wacom Tablet.pkg'
 
-  uninstall :launchctl => 'com.wacom.pentablet',
-            :quit      => [
-                            'com.wacom.TabletDriver',
-                            'com.wacom.PenTabletDriver',
-                            'com.wacom.ConsumerTouchDriver',
-                          ],
-            :pkgutil   => 'com.wacom.installpentablet'
+  uninstall launchctl: 'com.wacom.pentablet',
+            quit:      [
+                         'com.wacom.TabletDriver',
+                         'com.wacom.PenTabletDriver',
+                         'com.wacom.ConsumerTouchDriver',
+                       ],
+            pkgutil:   'com.wacom.installpentablet'
 end

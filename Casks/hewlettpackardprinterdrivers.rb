@@ -9,8 +9,8 @@ cask 'hewlettpackardprinterdrivers' do
 
   pkg 'HewlettPackardPrinterDrivers.pkg'
 
-  uninstall :pkgutil => [
-                          'com.apple.pkg.HewlettPackardPrinterDrivers',
-                          'com.apple.pkg.HewlettPackardPrinterDriversPreInstall',
-                        ]
+  uninstall pkgutil: [
+                       'com.apple.pkg.HewlettPackardPrinterDrivers',
+                       'com.apple.pkg.HewlettPackardPrinterDriversPreInstall',
+                     ]
 end

@@ -4,12 +4,12 @@ cask 'origami' do
 
   url "https://origami.facebook.com/download/Origami-#{version}.zip"
   appcast 'https://facebook.github.io/origami/update/updates.xml.rss',
-          :checkpoint => '3545a46eb237f2628d404bfe845987a4411e937e95bd6d6cd3b1e679a0e332b3'
+          checkpoint: '3545a46eb237f2628d404bfe845987a4411e937e95bd6d6cd3b1e679a0e332b3'
   name 'Origami'
   homepage 'https://facebook.github.io/origami'
   license :gratis
 
   pkg "Origami #{version}.pkg"
 
-  uninstall :pkgutil => 'com.facebook.origami.*'
+  uninstall pkgutil: 'com.facebook.origami.*'
 end

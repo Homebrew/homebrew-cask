@@ -9,5 +9,5 @@ cask 'easytether' do
 
   pkg 'EasyTetherUSBEthernet.pkg'
 
-  uninstall :pkgutil => 'com.mobile-stream.pkg.EasyTether'
+  uninstall pkgutil: 'com.mobile-stream.pkg.EasyTether'
 end

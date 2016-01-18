@@ -9,5 +9,5 @@ cask 'transmission-remote-gui' do
 
   pkg 'transgui.pkg'
 
-  uninstall :pkgutil => 'com.transgui.*'
+  uninstall pkgutil: 'com.transgui.*'
 end

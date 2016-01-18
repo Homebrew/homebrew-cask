@@ -9,10 +9,10 @@ cask 'firefox' do
 
   app 'Firefox.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/Firefox',
-                   '~/Library/Caches/Firefox',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Firefox',
+                '~/Library/Caches/Firefox',
+              ]
 
   caveats <<-EOS.undent
   The Mac App Store version of 1Password won't work with a Homebrew-cask-linked Mozilla Firefox. To bypass this limitation, you need to either:

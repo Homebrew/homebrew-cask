@@ -9,5 +9,5 @@ cask 'livesurface-context' do
 
   app 'LiveSurface Context.app'
 
-  zap :delete => '~/Library/*/*[Ll]ive[Ss]urface*'
+  zap delete: '~/Library/*/*[Ll]ive[Ss]urface*'
 end

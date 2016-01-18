@@ -4,12 +4,12 @@ cask 'keymo' do
 
   url 'https://manytricks.com/download/keymo'
   appcast 'https://manytricks.com/keymo/appcast.xml',
-          :checkpoint => '0fada217a8b17fe20397e043c45a94fa984b8928877efb59ffa88997c5b2939a'
+          checkpoint: '0fada217a8b17fe20397e043c45a94fa984b8928877efb59ffa88997c5b2939a'
   name 'Keymo'
   homepage 'https://manytricks.com/keymo'
   license :commercial
 
   app 'Keymo.app'
 
-  zap :delete => '~/Library/Preferences/com.manytricks.Keymo.plist'
+  zap delete: '~/Library/Preferences/com.manytricks.Keymo.plist'
 end

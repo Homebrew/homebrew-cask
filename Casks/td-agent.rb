@@ -10,6 +10,6 @@ cask 'td-agent' do
 
   pkg "tdagent-#{version}-0.pkg"
 
-  uninstall :pkgutil   => 'test.treasuredatainc.pkg.tdagent2',
-            :launchctl => 'td-agent'
+  uninstall pkgutil:   'test.treasuredatainc.pkg.tdagent2',
+            launchctl: 'td-agent'
 end

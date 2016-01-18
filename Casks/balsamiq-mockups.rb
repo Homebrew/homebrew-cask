@@ -9,12 +9,12 @@ cask 'balsamiq-mockups' do
 
   app "Balsamiq Mockups #{version.major}.app"
 
-  zap :delete => [
-                   # TODO: expand/glob for '~/Library/Caches/BalsamiqMockups#{version.major}.*',
-                   # TODO: expand/glob for '~/Library/Saved Application State/BalsamiqMockups#{version.major}.*',
-                 ],
-      :trash  => [
-                   '~/Library/Preferences/BalsamiqMockups#{version.major}',
-                   # TODO: expand/glob for '~/Library/Preferences/BalsamiqMockups#{version.major}.*',
-                 ]
+  zap delete: [
+                # TODO: expand/glob for '~/Library/Caches/BalsamiqMockups#{version.major}.*',
+                # TODO: expand/glob for '~/Library/Saved Application State/BalsamiqMockups#{version.major}.*',
+              ],
+      trash:  [
+                '~/Library/Preferences/BalsamiqMockups#{version.major}',
+                # TODO: expand/glob for '~/Library/Preferences/BalsamiqMockups#{version.major}.*',
+              ]
 end

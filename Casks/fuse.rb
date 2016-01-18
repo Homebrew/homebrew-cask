@@ -7,7 +7,7 @@ cask 'fuse' do
   homepage 'https://www.fusetools.com'
   license :closed
 
-  container :type => :pkg
+  container type: :pkg
 
   pkg 'fuse.pkg'
 
@@ -17,5 +17,5 @@ cask 'fuse' do
     system '/bin/mv', '--', staged_path.join('osx'), staged_path.join('fuse.pkg')
   end
 
-  uninstall :pkgutil => 'com.fusetools.fuse'
+  uninstall pkgutil: 'com.fusetools.fuse'
 end

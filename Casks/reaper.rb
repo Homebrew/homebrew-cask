@@ -17,11 +17,11 @@ cask 'reaper' do
   homepage 'http://www.reaper.fm/'
   license :commercial
 
-  zap :delete => [
-                   '~/Library/Application Support/REAPER',
-                   '~/Library/Saved Application State/com.cockos.reaper.savedState',
-                   '~/Library/Saved Application State/com.cockos.reaperhosti386.savedState',
-                   '~/Library/Saved Application State/com.cockos.reaperhostx8664.savedState',
-                   '~/Library/Saved Application State/com.cockos.ReaMote.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/REAPER',
+                '~/Library/Saved Application State/com.cockos.reaper.savedState',
+                '~/Library/Saved Application State/com.cockos.reaperhosti386.savedState',
+                '~/Library/Saved Application State/com.cockos.reaperhostx8664.savedState',
+                '~/Library/Saved Application State/com.cockos.ReaMote.savedState',
+              ]
 end

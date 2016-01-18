@@ -8,7 +8,7 @@ cask 'raw-photo-processor' do
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   # note: this value changes with each version
-  container :nested => 'RPP480_1703_64.dmg'
+  container nested: 'RPP480_1703_64.dmg'
 
   app 'Raw Photo Processor 64.app'
 end

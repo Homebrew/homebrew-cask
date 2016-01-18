@@ -4,7 +4,7 @@ cask 'senuti' do
 
   url "https://www.fadingred.com/files/senuti/senuti_#{version}.zip"
   appcast 'https://www.fadingred.com/senuti/updates.xml',
-          :checkpoint => '1f3cce3174440e69a0333f342a64637be122caef4d8bcbedcf34728e4c747e7c'
+          checkpoint: '1f3cce3174440e69a0333f342a64637be122caef4d8bcbedcf34728e4c747e7c'
   name 'Senuti'
   homepage 'https://www.fadingred.com/senuti/'
   license :commercial

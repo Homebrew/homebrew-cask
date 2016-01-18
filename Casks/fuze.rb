@@ -8,5 +8,5 @@ cask 'fuze' do
   homepage 'https://www.fuze.com/'
   license :commercial
 
-  installer :manual => 'Fuze_39e32182.app'
+  installer manual: 'Fuze_39e32182.app'
 end

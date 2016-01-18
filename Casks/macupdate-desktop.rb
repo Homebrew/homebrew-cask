@@ -4,7 +4,7 @@ cask 'macupdate-desktop' do
 
   url "http://cdn.macupdate.com/MacUpdateDesktop#{version}.zip"
   appcast 'http://www.macupdate.com/desktop/updates.xml',
-          :checkpoint => '2d1167e6e25b5c477fe0e20c1bcdb18b9eed13f989aa025a0aa5611f3fe7c678'
+          checkpoint: '2d1167e6e25b5c477fe0e20c1bcdb18b9eed13f989aa025a0aa5611f3fe7c678'
   name 'MacUpdate Desktop'
   homepage 'https://www.macupdate.com/desktop'
   license :freemium

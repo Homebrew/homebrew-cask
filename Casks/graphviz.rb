@@ -25,9 +25,9 @@ cask 'graphviz' do
   homepage 'http://www.graphviz.org/'
   license :eclipse
 
-  depends_on :macos => '>= :leopard'
+  depends_on macos: '>= :leopard'
 
   pkg "graphviz-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.att.graphviz.*'
+  uninstall pkgutil: 'com.att.graphviz.*'
 end

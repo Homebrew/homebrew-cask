@@ -10,5 +10,5 @@ cask 'splashtop-personal' do
 
   pkg 'Splashtop Personal.pkg'
 
-  uninstall :pkgutil => 'com.splashtop.stp.*'
+  uninstall pkgutil: 'com.splashtop.stp.*'
 end

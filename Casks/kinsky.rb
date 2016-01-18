@@ -9,5 +9,5 @@ cask 'kinsky' do
 
   pkg "Kinsky_#{version}_osx.pkg"
 
-  uninstall :pkgutil => 'uk.co.linn.Kinsky'
+  uninstall pkgutil: 'uk.co.linn.Kinsky'
 end

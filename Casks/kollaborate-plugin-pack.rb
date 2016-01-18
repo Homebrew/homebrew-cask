@@ -8,12 +8,12 @@ cask 'kollaborate-plugin-pack' do
   homepage 'https://www.kollaborate.tv/resources'
   license :gratis
 
-  installer :manual => 'Install Kollaborate Plugin Pack.pkg'
+  installer manual: 'Install Kollaborate Plugin Pack.pkg'
 
-  uninstall :pkgutil => [
-                          'com.digitalrebellion.KollabPluginPack',
-                          'com.digitalrebellion.pkg.KollabPluginPack.FCPX',
-                          'com.digitalrebellion.pkg.KollabPluginPack.Premiere',
-                          'com.digitalrebellion.pkg.KollabPluginPack.SystemPlugins',
-                        ]
+  uninstall pkgutil: [
+                       'com.digitalrebellion.KollabPluginPack',
+                       'com.digitalrebellion.pkg.KollabPluginPack.FCPX',
+                       'com.digitalrebellion.pkg.KollabPluginPack.Premiere',
+                       'com.digitalrebellion.pkg.KollabPluginPack.SystemPlugins',
+                     ]
 end

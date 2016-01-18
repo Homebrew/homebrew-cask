@@ -4,7 +4,7 @@ cask 'dterm' do
 
   url "http://files.decimus.net/DTerm/#{version.sub(%r{.*_}, '')}-#{version.sub(%r{_.*}, '')}-DTerm.zip"
   appcast 'https://decimus.net/appcasts/DTerm.xml',
-          :checkpoint => '482b6f4eeddf1fc1e347b5a9f293e2184dd01dcacf2695304b80b2d772faad6f'
+          checkpoint: '482b6f4eeddf1fc1e347b5a9f293e2184dd01dcacf2695304b80b2d772faad6f'
   name 'DTerm'
   homepage 'https://decimus.net/DTerm'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

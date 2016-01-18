@@ -4,7 +4,7 @@ cask 'powerkey' do
 
   url "https://github.com/pkamb/PowerKey/releases/download/v#{version}/PowerKey#{version}.zip"
   appcast 'https://github.com/pkamb/PowerKey/releases.atom',
-          :checkpoint => '776592bb04be331a5189385dcf83e0fabf7f46a415b2996a242465f3f3ebcb73'
+          checkpoint: '776592bb04be331a5189385dcf83e0fabf7f46a415b2996a242465f3f3ebcb73'
   name 'PowerKey'
   homepage 'https://pkamb.github.io/PowerKey/'
   license :mit

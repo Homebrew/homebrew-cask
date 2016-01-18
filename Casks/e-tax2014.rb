@@ -9,5 +9,5 @@ cask 'e-tax2014' do
 
   pkg 'etax2014_1.pkg'
 
-  uninstall :pkgutil => 'au.gov.ato.etax2014'
+  uninstall pkgutil: 'au.gov.ato.etax2014'
 end

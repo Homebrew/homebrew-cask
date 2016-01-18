@@ -10,5 +10,5 @@ cask 'amazon-workspaces' do
 
   pkg 'WorkSpaces.pkg'
 
-  uninstall :pkgutil => 'com.amazon.workspaces'
+  uninstall pkgutil: 'com.amazon.workspaces'
 end

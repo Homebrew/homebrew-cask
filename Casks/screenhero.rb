@@ -4,7 +4,7 @@ cask 'screenhero' do
 
   url "https://secure.screenhero.com/update/screenhero/Screenhero-#{version}.dmg"
   appcast 'https://d3hb26arjl8wb7.cloudfront.net/jsherwani/public/update/mac/screenhero/sparkle.xml',
-          :checkpoint => '06562363da8ceb90c9dd977171c836330c88372d06927b6940fe59264f37d87f'
+          checkpoint: '06562363da8ceb90c9dd977171c836330c88372d06927b6940fe59264f37d87f'
   name 'Screenhero'
   homepage 'https://screenhero.com/'
   license :commercial

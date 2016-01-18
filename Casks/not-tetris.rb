@@ -9,5 +9,5 @@ cask 'not-tetris' do
 
   app "Not Tetris #{version}.app"
 
-  zap :delete => '~/Library/Application Support/LOVE/not_tetris_2'
+  zap delete: '~/Library/Application Support/LOVE/not_tetris_2'
 end

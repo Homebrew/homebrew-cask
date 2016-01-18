@@ -10,5 +10,5 @@ cask 'qvod-player' do
 
   pkg '双击安装快播.pkg'
 
-  uninstall :pkgutil => 'com.kuaibo.pkg.QvodPlayer'
+  uninstall pkgutil: 'com.kuaibo.pkg.QvodPlayer'
 end

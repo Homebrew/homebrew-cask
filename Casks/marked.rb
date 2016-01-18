@@ -5,7 +5,7 @@ cask 'marked' do
   # abyss.designheresy.com is the official download host per the appcast feed
   url "http://abyss.designheresy.com/marked/Marked#{version}.zip"
   appcast 'http://abyss.designheresy.com/marked/marked.xml',
-          :checkpoint => '8a4726d1c1d8b9f5bbcf35b57f90230a746ad0f36645b3874e4c77163a17c34f'
+          checkpoint: '8a4726d1c1d8b9f5bbcf35b57f90230a746ad0f36645b3874e4c77163a17c34f'
   name 'Marked'
   homepage 'http://marked2app.com'
   license :commercial

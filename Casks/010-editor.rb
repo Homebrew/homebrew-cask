@@ -9,5 +9,5 @@ cask '010-editor' do
 
   pkg '010 Editor.pkg'
 
-  uninstall :pkgutil => 'com.SweetScape.010Editor.pkg'
+  uninstall pkgutil: 'com.SweetScape.010Editor.pkg'
 end

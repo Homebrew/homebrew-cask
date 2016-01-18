@@ -7,12 +7,12 @@ cask 'google-cloud-sdk' do
   homepage 'https://cloud.google.com/sdk/'
   license :apache
 
-  installer :script => 'google-cloud-sdk/install.sh',
-            :args   => %w[--usage-reporting false --bash-completion false --path-update false --rc-path false],
-            :sudo   => false
+  installer script: 'google-cloud-sdk/install.sh',
+            args:   %w[--usage-reporting false --bash-completion false --path-update false --rc-path false],
+            sudo:   false
   binary 'google-cloud-sdk/bin/bq'
   binary 'google-cloud-sdk/bin/gcloud'
-  binary 'google-cloud-sdk/bin/git-credential-gcloud.sh', :target => 'git-credential-gcloud'
+  binary 'google-cloud-sdk/bin/git-credential-gcloud.sh', target: 'git-credential-gcloud'
   binary 'google-cloud-sdk/bin/gsutil'
 
   caveats do

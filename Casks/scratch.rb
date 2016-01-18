@@ -7,14 +7,14 @@ cask 'scratch' do
   homepage 'https://scratch.mit.edu/scratch2download/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  depends_on :cask => 'adobe-air'
+  depends_on cask: 'adobe-air'
 
-  installer :script => 'Install Scratch 2.app/Contents/MacOS/Install Scratch 2',
-            :args   => %w[-silent],
-            :sudo   => true
+  installer script: 'Install Scratch 2.app/Contents/MacOS/Install Scratch 2',
+            args:   %w[-silent],
+            sudo:   true
 
-  uninstall :script => {
-                         :executable => Hbc::Container::Air::INSTALLER_PATHNAME,
-                         :args       => %w[-uninstall -silent /Applications/Scratch\ 2.app],
-                       }
+  uninstall script: {
+                      executable: Hbc::Container::Air::INSTALLER_PATHNAME,
+                      args:       %w[-uninstall -silent /Applications/Scratch\ 2.app],
+                    }
 end
