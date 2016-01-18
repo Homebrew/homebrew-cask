@@ -72,7 +72,7 @@ GEM
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.7)
-    rubocop-cask (0.4.0)
+    rubocop-cask (0.4.1)
       rubocop (~> 0.36)
     ruby-progressbar (1.7.5)
     simplecov (0.11.1)
