@@ -1,10 +1,8 @@
 cask 'toau' do
-  version :latest
-  sha256 :no_check
+  version '1.6'
+  sha256 'ef0e3044e1b76677db8f6466f593ed9691c6d457878f1bfa6ea69ff47e3a0228'
 
   url 'http://toauapp.com/download/Toau.zip'
-  appcast 'http://toauapp.com/up/updates.xml',
-          :checkpoint => '7e512c74e07bb600c1828e5a14db4a28b6550018a0f802f6cc00aaf8f03c1de5'
   name 'Toau'
   homepage 'http://toauapp.com'
   license :commercial
