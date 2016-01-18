@@ -35,5 +35,13 @@ module Hbc::Options
     def cleanup_outdated=(_cleanup_outdated)
       @cleanup_outdated = _cleanup_outdated
     end
+
+    def help
+      @help ||= false
+    end
+
+    def help=(_help)
+      @help = _help
+    end
   end
 end
