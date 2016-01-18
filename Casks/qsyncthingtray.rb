@@ -9,8 +9,6 @@ cask 'qsyncthingtray' do
   homepage 'https://github.com/sieren/QSyncthingTray'
   license :gpl
 
-  depends_on formula: 'syncthing'
-
   app 'QSyncthingTray.app'
 
   zap delete: '~/Library/Preferences/com.sieren.QSyncthingTray.plist'
