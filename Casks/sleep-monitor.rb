@@ -1,6 +1,6 @@
 cask 'sleep-monitor' do
-  version :latest
-  sha256 :no_check
+  version '3.0.2'
+  sha256 '673481aa7fcbf3781074e962bb41c59fdc4a18cf96f4cd9333ad231649bc95e6'
 
   url 'https://www.dssw.co.uk/sleepmonitor/dsswsleepmonitor.dmg'
   appcast 'https://version.dssw.co.uk/sleepmonitor/standard',
