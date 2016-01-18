@@ -1,12 +1,10 @@
 cask 'sketch' do
-  version :latest
-  sha256 :no_check
+  version '3.4.4'
+  sha256 '428f5d507f68a7b86cf5d97d3b0fc5c23297cd2048463dbf4e222375154cef79'
 
-  url 'http://bohemiancoding.com/static/download/sketch.zip'
-  appcast 'https://www.bohemiancoding.com/sketch/appcast.xml',
-          :checkpoint => 'f5d5ba56e17a9d4169d69a68ffe8c47509ff6a7b6073b430271fa0e48706e590'
+  url 'http://www.sketchapp.com/static/download/sketch.zip'
   name 'Sketch'
-  homepage 'https://www.bohemiancoding.com/sketch/'
+  homepage 'http://www.sketchapp.com/'
   license :commercial
 
   app 'Sketch.app'
