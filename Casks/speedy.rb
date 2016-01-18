@@ -1,6 +1,6 @@
 cask 'speedy' do
-  version :latest
-  sha256 :no_check
+  version '4.0.4'
+  sha256 '5dda979473073150d06cdeded654045063088e2f302cef45619281ac74242ca9'
 
   url 'http://www.apimac.com/download/Speedy.zip'
   appcast 'http://www.apimac.com/version_checking/speedy_mac.xml',
