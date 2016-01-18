@@ -1,6 +1,6 @@
 cask 'speedtao' do
-  version :latest
-  sha256 :no_check
+  version '0.9.98'
+  sha256 '61481dab9265c406cadd1658add93e713e6e90d7e8fd27350a125fcd60f7c40a'
 
   url 'http://www.speedtao.net/beta_latest'
   appcast 'http://speedtao.net/su/su.xml',
