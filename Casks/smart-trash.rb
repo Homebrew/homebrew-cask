@@ -7,7 +7,7 @@ cask 'smart-trash' do
   homepage 'http://www.hyperbolicsoftware.com/SmartTrash.html'
   license :commercial
 
-  container :nested => "Smart Trash #{version}.dmg"
+  container nested: "Smart Trash #{version}.dmg"
 
   app 'Smart Trash.app'
 end

@@ -4,7 +4,7 @@ cask 'time-tracker' do
 
   url "https://time-tracker-mac.googlecode.com/files/Time%20Tracker-#{version}.zip"
   appcast 'https://time-tracker-mac.googlecode.com/svn/appcast/timetracker-test.xml',
-          :checkpoint => '999226fed6dedc3056b0560226b73c0fcac51a0706568a47b029ee9899634ac9'
+          checkpoint: '999226fed6dedc3056b0560226b73c0fcac51a0706568a47b029ee9899634ac9'
   name 'TimeTracker'
   homepage 'https://github.com/rburgst/time-tracker-mac'
   license :gpl

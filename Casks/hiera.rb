@@ -9,5 +9,5 @@ cask 'hiera' do
 
   pkg "hiera-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.puppetlabs.hiera'
+  uninstall pkgutil: 'com.puppetlabs.hiera'
 end

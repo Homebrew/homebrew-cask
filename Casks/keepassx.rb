@@ -9,5 +9,5 @@ cask 'keepassx' do
 
   app 'KeePassX.app'
 
-  zap :delete => '~/.keepassx'
+  zap delete: '~/.keepassx'
 end

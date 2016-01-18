@@ -4,7 +4,7 @@ cask 'netshade' do
 
   url 'http://raynersoftware.com/downloads/NetShade.app.zip'
   appcast 'https://secure.raynersw.com/changelog.php?prod=ns&format=std&warnpay=0',
-          :checkpoint => '7ad23be85e4561f896bdba0743e1086d6b8f7b195ce0b7cea349cd210b0ce351'
+          checkpoint: '7ad23be85e4561f896bdba0743e1086d6b8f7b195ce0b7cea349cd210b0ce351'
   name 'NetShade'
   homepage 'http://raynersoftware.com/netshade/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

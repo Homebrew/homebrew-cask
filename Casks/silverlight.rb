@@ -9,12 +9,12 @@ cask 'silverlight' do
 
   pkg 'silverlight.pkg'
 
-  uninstall :pkgutil => 'com.microsoft.SilverlightInstaller'
+  uninstall pkgutil: 'com.microsoft.SilverlightInstaller'
 
-  zap       :delete => [
-                         '~/Library/Application Support/Microsoft/Silverlight',
-                         '~/Library/Preferences/com.microsoft.silverlight.plist',
-                         '~/Library/Saved Application State/com.microsoft.silverlight.savedState',
-                       ],
-            :rmdir  => '~/Library/Application Support/Microsoft/'
+  zap       delete: [
+                      '~/Library/Application Support/Microsoft/Silverlight',
+                      '~/Library/Preferences/com.microsoft.silverlight.plist',
+                      '~/Library/Saved Application State/com.microsoft.silverlight.savedState',
+                    ],
+            rmdir:  '~/Library/Application Support/Microsoft/'
 end

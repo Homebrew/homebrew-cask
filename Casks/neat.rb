@@ -9,6 +9,6 @@ cask 'neat' do
 
   pkg 'Install Neat.pkg'
 
-  uninstall :pkgutil => 'com.neat.pkg.NeatBall',
-            :quit    => 'com.neatreceipts.nrm'
+  uninstall pkgutil: 'com.neat.pkg.NeatBall',
+            quit:    'com.neatreceipts.nrm'
 end

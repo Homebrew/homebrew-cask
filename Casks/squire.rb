@@ -5,7 +5,7 @@ cask 'squire' do
   # amazonaws.com is the official download host per the appcast feed
   url "https://s3.amazonaws.com/Squire_Mac_Builds/Squire_Mac_#{version.dots_to_underscores}.zip"
   appcast 'http://www.sylion.com/squireapp/sparkle/SquireMac/appcastSquireMac.xml',
-          :checkpoint => 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856'
+          checkpoint: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856'
   name 'Squire'
   homepage 'http://squireapp.com'
   license :commercial

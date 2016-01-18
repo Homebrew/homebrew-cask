@@ -9,11 +9,11 @@ cask 'p4merge' do
 
   app 'p4merge.app'
 
-  zap :delete => [
-                   '~/Library/Preferences/com.perforce.p4merge',
-                   '~/Library/Preferences/com.perforce.p4merge.plist',
-                   '~/Library/Saved Application State/com.perforce.p4merge.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.perforce.p4merge',
+                '~/Library/Preferences/com.perforce.p4merge.plist',
+                '~/Library/Saved Application State/com.perforce.p4merge.savedState',
+              ]
 
   caveats <<-EOS.undent
     git can be configured to use p4merge as a merge tool via

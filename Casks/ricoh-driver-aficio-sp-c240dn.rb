@@ -9,5 +9,5 @@ cask 'ricoh-driver-aficio-sp-c240dn' do
 
   pkg 'Ricoh Aficio SP C240DN.pkg'
 
-  uninstall :pkgutil => 'printer.RICOH Aficio SP C240DN.com'
+  uninstall pkgutil: 'printer.RICOH Aficio SP C240DN.com'
 end

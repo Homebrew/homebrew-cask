@@ -8,7 +8,7 @@ cask 'alib1' do
   homepage 'http://presstube.com/blog/2011/alib1/'
   license :gratis
 
-  depends_on :cask => 'adobe-air'
+  depends_on cask: 'adobe-air'
 
   screen_saver 'Presstube-ALib1.app/Contents/Resources/Presstube - ALib1.saver'
 

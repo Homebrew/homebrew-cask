@@ -9,5 +9,5 @@ cask 'minilyrics' do
 
   pkg 'MiniLyrics.pkg'
 
-  uninstall :pkgutil => 'com.crintsoft.MiniLyrics.pkg'
+  uninstall pkgutil: 'com.crintsoft.MiniLyrics.pkg'
 end

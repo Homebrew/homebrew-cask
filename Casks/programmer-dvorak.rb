@@ -16,11 +16,11 @@ cask 'programmer-dvorak' do
     end
   end
 
-  uninstall :pkgutil => 'com.apple.keyboardlayout.Programmer Dvorak',
-            :delete  => [
-                          '/Library/Keyboard Layouts/Programmer Dvorak.bundle/',
-                          # TODO: expand/glob for '/Library/Caches/com.apple.IntlDataCache*',
-                          # todo expand/glob for '/System/Library/Caches/com.apple.IntlDataCache.le*',
-                          # todo expand/glob for '/private/var/folders/*/*/-Caches-/com.apple.IntlDataCache.le*',
-                        ]
+  uninstall pkgutil: 'com.apple.keyboardlayout.Programmer Dvorak',
+            delete:  [
+                       '/Library/Keyboard Layouts/Programmer Dvorak.bundle/',
+                       # TODO: expand/glob for '/Library/Caches/com.apple.IntlDataCache*',
+                       # todo expand/glob for '/System/Library/Caches/com.apple.IntlDataCache.le*',
+                       # todo expand/glob for '/private/var/folders/*/*/-Caches-/com.apple.IntlDataCache.le*',
+                     ]
 end

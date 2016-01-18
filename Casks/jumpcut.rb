@@ -4,7 +4,7 @@ cask 'jumpcut' do
 
   url "http://downloads.sourceforge.net/project/jumpcut/jumpcut/#{version}/Jumpcut_#{version}.tgz"
   appcast 'http://jumpcut.sf.net/jumpcut.appcast.xml',
-          :checkpoint => '4d5c939b294b4cbe6c04033bfc853c03d45b04da7fb44d744d944fc5bdcccf21'
+          checkpoint: '4d5c939b294b4cbe6c04033bfc853c03d45b04da7fb44d744d944fc5bdcccf21'
   name 'Jumpcut'
   homepage 'http://jumpcut.sourceforge.net/'
   license :mit

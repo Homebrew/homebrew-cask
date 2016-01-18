@@ -4,7 +4,7 @@ cask 'proxpn' do
 
   url "https://www.proxpn.biz/updater/proXPN-MacOSX-10.5-#{version}.dmg"
   appcast 'http://www.proxpn.biz/updater/appcast.rss',
-          :checkpoint => 'ca9606ee9082ea2d1bbacae83d9142079cc58ff63ec95ad0feba4a741734e0dd'
+          checkpoint: 'ca9606ee9082ea2d1bbacae83d9142079cc58ff63ec95ad0feba4a741734e0dd'
   name 'proXPN'
   homepage 'https://www.proxpn.biz/'
   license :freemium

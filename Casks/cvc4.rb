@@ -21,7 +21,7 @@ cask 'cvc4' do
   homepage 'https://cvc4.cs.nyu.edu/'
   license :oss
 
-  uninstall :pkgutil => 'org.macports.cvc4'
+  uninstall pkgutil: 'org.macports.cvc4'
 
   caveats do
     path_environment_variable('/opt/local/bin')

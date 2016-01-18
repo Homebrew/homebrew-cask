@@ -4,16 +4,16 @@ cask 'eloquent' do
 
   url "https://launchpad.net/eloquent/trunk/#{version}/+download/Eloquent-#{version}.app.zip"
   appcast 'http://www.eloquent-bible-study.eu/Eloquent_L2_Appcast.xml',
-          :checkpoint => '88014a9ab9d76ad70e66bc91fb9ed9931310d2e46810cd01b759b8266c02e9c9'
+          checkpoint: '88014a9ab9d76ad70e66bc91fb9ed9931310d2e46810cd01b759b8266c02e9c9'
   name 'Eloquent'
   homepage 'https://launchpad.net/eloquent'
   license :gratis
 
   app 'Eloquent.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/Eloquent',
-                   '~/Library/Caches/org.crosswire.Eloquent',
-                   '~/Library/Logs/Eloquent.log',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Eloquent',
+                '~/Library/Caches/org.crosswire.Eloquent',
+                '~/Library/Logs/Eloquent.log',
+              ]
 end

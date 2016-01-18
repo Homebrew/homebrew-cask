@@ -9,5 +9,5 @@ cask 'sdformatter' do
 
   pkg "SDFormatter_#{version}0B.pkg"
 
-  uninstall :pkgutil => 'jp.co.trendy.sdformatter.SDFormatter.pkg'
+  uninstall pkgutil: 'jp.co.trendy.sdformatter.SDFormatter.pkg'
 end

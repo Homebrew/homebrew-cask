@@ -9,5 +9,5 @@ cask 'ngrok' do
 
   binary 'ngrok'
 
-  zap :delete => '~/.ngrok2'
+  zap delete: '~/.ngrok2'
 end

@@ -7,7 +7,7 @@ cask 'fenics' do
   homepage 'http://fenicsproject.org/'
   license :gpl
 
-  depends_on :macos => '>= :mavericks'
+  depends_on macos: '>= :mavericks'
 
   app 'FEniCS.app'
 

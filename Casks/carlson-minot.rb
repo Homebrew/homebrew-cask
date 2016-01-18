@@ -9,8 +9,8 @@ cask 'carlson-minot' do
 
   pkg "arm-#{version}-arm-none-linux-gnueabi.osx.intelx86.bin.pkg"
 
-  uninstall :pkgutil => 'com.carlson-minot.arm-*',
-            :delete  => '/usr/local/carlson-minot'
+  uninstall pkgutil: 'com.carlson-minot.arm-*',
+            delete:  '/usr/local/carlson-minot'
 
   caveats do
     files_in_usr_local

@@ -7,7 +7,7 @@ cask 'jetphoto-studio' do
   homepage 'http://www.jetphotosoft.com/web/home/'
   license :freemium
 
-  container :nested => "JetPhoto Studio #{version}.dmg"
+  container nested: "JetPhoto Studio #{version}.dmg"
 
   app 'JetPhoto Studio.app'
 end

@@ -5,7 +5,7 @@ cask 'textsoap' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://unmarked.s3.amazonaws.com/textsoap#{version.major}.zip"
   appcast "https://unmarked.s3.amazonaws.com/appcast/textsoap#{version.major}.xml",
-          :checkpoint => 'ddbb0073e1116c64c75620c2fe43bd7af1befc07e82459a3cb614c92a294579d'
+          checkpoint: 'ddbb0073e1116c64c75620c2fe43bd7af1befc07e82459a3cb614c92a294579d'
   name 'TextSoap'
   homepage 'http://www.unmarked.com/textsoap/'
   license :commercial

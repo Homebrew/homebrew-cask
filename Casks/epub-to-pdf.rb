@@ -4,7 +4,7 @@ cask 'epub-to-pdf' do
 
   url "https://epub-2-pdf.googlecode.com/files/e2p-#{version.to_i}.dmg"
   appcast 'https://code.google.com/feeds/p/epub-2-pdf/downloads/basic',
-          :checkpoint => '229b6653b24597a90cf5c48f1fca8de73892d6342c7800e84c9d828e976dfe24'
+          checkpoint: '229b6653b24597a90cf5c48f1fca8de73892d6342c7800e84c9d828e976dfe24'
   name 'epub-2-pdf'
   homepage 'https://code.google.com/p/epub-2-pdf'
   license :oss

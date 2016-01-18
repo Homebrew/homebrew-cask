@@ -8,7 +8,7 @@ cask 'musescore' do
   homepage 'https://musescore.org/'
   license :gpl
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   app "MuseScore #{version.to_i}.app"
 end

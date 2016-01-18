@@ -5,7 +5,7 @@ cask 'espresso' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/macrabbit/downloads/Espresso%20#{version}.zip"
   appcast "https://update.macrabbit.com/espresso/#{version}.xml",
-          :checkpoint => '54f5a3da5544a66d475868f90c0a043170b684e4d3c5608ffbd29436b34d1f78'
+          checkpoint: '54f5a3da5544a66d475868f90c0a043170b684e4d3c5608ffbd29436b34d1f78'
   name 'Espresso'
   homepage 'http://macrabbit.com/espresso/'
   license :freemium

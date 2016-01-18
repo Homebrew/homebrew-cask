@@ -10,8 +10,8 @@ cask 'prey' do
 
   pkg "prey-mac-#{version}-x64.pkg"
 
-  uninstall :pkgutil   => 'com.prey.agent',
-            :launchctl => 'com.prey.agent'
+  uninstall pkgutil:   'com.prey.agent',
+            launchctl: 'com.prey.agent'
 
   caveats <<-EOS.undent
     To complete installation, Prey requires an API key. It may be set

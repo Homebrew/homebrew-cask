@@ -4,12 +4,12 @@ cask 'rightfont' do
 
   url "http://rightfontapp.com/downloads/#{version}/rightfont.zip"
   appcast 'http://rightfontapp.com/update/appcast.xml',
-          :checkpoint => '29075e8a2b23a95a6a5eade5181cea0fae4aa0f033f4f3c16987ef43dbbcbfae'
+          checkpoint: '29075e8a2b23a95a6a5eade5181cea0fae4aa0f033f4f3c16987ef43dbbcbfae'
   name 'RightFont'
   homepage 'http://rightfontapp.com/'
   license :commercial
 
-  depends_on :macos => '>= :yosemite'
+  depends_on macos: '>= :yosemite'
 
   app 'RightFont.app'
 end

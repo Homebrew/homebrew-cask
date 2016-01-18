@@ -13,5 +13,5 @@ cask 'unifi-controller' do
     set_ownership '~/Library/Application Support/UniFi'
   end
 
-  uninstall :pkgutil => 'com.ubnt.UniFi'
+  uninstall pkgutil: 'com.ubnt.UniFi'
 end

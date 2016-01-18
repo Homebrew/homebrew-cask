@@ -10,7 +10,7 @@ cask 'azure-cli' do
 
   pkg 'Install Command Line Interface.pkg'
 
-  uninstall :script => '/usr/local/bin/azure-uninstall'
+  uninstall script: '/usr/local/bin/azure-uninstall'
 
-  zap :delete => '~/.azure'
+  zap delete: '~/.azure'
 end

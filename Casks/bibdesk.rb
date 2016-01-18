@@ -4,15 +4,15 @@ cask 'bibdesk' do
 
   url "http://downloads.sourceforge.net/project/bibdesk/BibDesk/BibDesk-#{version}/BibDesk-#{version}.dmg"
   appcast 'http://bibdesk.sourceforge.net/bibdesk.xml',
-          :checkpoint => 'd22d10fc690401b19d54e65f86bfa8b17e30a4cfd539e814bc6c2d556f1af87d'
+          checkpoint: 'd22d10fc690401b19d54e65f86bfa8b17e30a4cfd539e814bc6c2d556f1af87d'
   name 'BibDesk'
   homepage 'http://bibdesk.sourceforge.net/'
   license :bsd
 
   app 'BibDesk.app'
 
-  zap :delete => [
-                   '~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist',
-                   '~/Library/Application Support/BibDesk',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist',
+                '~/Library/Application Support/BibDesk',
+              ]
 end

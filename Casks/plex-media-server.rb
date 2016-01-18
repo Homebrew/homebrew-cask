@@ -7,7 +7,7 @@ cask 'plex-media-server' do
   homepage 'https://plex.tv/'
   license :freemium
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   app 'Plex Media Server.app'
 end

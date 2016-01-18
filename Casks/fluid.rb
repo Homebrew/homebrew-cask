@@ -4,12 +4,12 @@ cask 'fluid' do
 
   url "http://fluidapp.com/dist/Fluid_#{version}.zip"
   appcast 'http://fluidapp.com/appcast/fluid1.rss',
-          :checkpoint => 'c90b9c819d4a6269f177bd496b6a3b43045e9b25c3d66973763d5b01af4fff53'
+          checkpoint: 'c90b9c819d4a6269f177bd496b6a3b43045e9b25c3d66973763d5b01af4fff53'
   name 'Fluid'
   homepage 'http://fluidapp.com/'
   license :freemium
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   app 'Fluid.app'
 end

@@ -7,7 +7,7 @@ cask 'genymotion' do
   homepage 'https://www.genymotion.com/'
   license :commercial
 
-  depends_on :cask => 'virtualbox'
+  depends_on cask: 'virtualbox'
 
   app 'Genymotion.app'
   app 'Genymotion Shell.app'

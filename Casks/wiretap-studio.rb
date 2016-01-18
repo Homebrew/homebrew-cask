@@ -4,7 +4,7 @@ cask 'wiretap-studio' do
 
   url 'http://www.ambrosiasw.com/dl/wiretap'
   appcast 'https://www.ambrosiasw.com/updates/profile.php/wiretap_studio/release',
-          :checkpoint => '3b4d71ae82f36bdd70586740d540c6acf07bf038ab0d879f8d3fb8d0735dd4db'
+          checkpoint: '3b4d71ae82f36bdd70586740d540c6acf07bf038ab0d879f8d3fb8d0735dd4db'
   name 'WireTap Studio'
   homepage 'http://www.ambrosiasw.com/utilities/wiretap/'
   license :commercial

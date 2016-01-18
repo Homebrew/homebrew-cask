@@ -7,7 +7,7 @@ cask 'silo' do
   homepage 'https://nevercenter.com/silo/'
   license :commercial
 
-  container :nested => "Install_Silo_#{version.gsub('.', '_')}_mac.dmg"
+  container nested: "Install_Silo_#{version.gsub('.', '_')}_mac.dmg"
 
   app "Silo #{version.sub(%r{^(\d+\.\d+).*}, '\1')}.app"
 end

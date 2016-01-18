@@ -9,5 +9,5 @@ cask 'polycom-realpresence-desktop' do
 
   pkg 'RealPresenceDesktop.pkg'
 
-  uninstall :pkgutil => 'com.polycom.RealPresenceDesktop'
+  uninstall pkgutil: 'com.polycom.RealPresenceDesktop'
 end

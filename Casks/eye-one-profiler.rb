@@ -9,7 +9,7 @@ cask 'eye-one-profiler' do
 
   pkg 'i1Profiler.pkg'
 
-  uninstall :pkgutil => 'com.xrite.i1profiler.*'
+  uninstall pkgutil: 'com.xrite.i1profiler.*'
 
   caveats do
     reboot

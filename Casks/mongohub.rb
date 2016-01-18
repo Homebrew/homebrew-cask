@@ -5,7 +5,7 @@ cask 'mongohub' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://mongohub.s3.amazonaws.com/MongoHub.zip'
   appcast 'https://github.com/jeromelebel/MongoHub-Mac/releases.atom',
-          :checkpoint => '6f591d790da4f6d9683753e2966899fe5efebd5c9b11d0ee91f1dd66ff2c4884'
+          checkpoint: '6f591d790da4f6d9683753e2966899fe5efebd5c9b11d0ee91f1dd66ff2c4884'
   name 'MongoHub'
   homepage 'https://github.com/jeromelebel/MongoHub-Mac'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

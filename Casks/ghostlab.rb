@@ -4,7 +4,7 @@ cask 'ghostlab' do
 
   url "https://awesome.vanamco.com/Ghostlab2/update/packages/mac/Ghostlab2-#{version}.zip"
   appcast 'https://awesome.vanamco.com/Ghostlab2/update/ghostlab2-cast.xml?vco=trkd',
-          :checkpoint => '3832edcaffbdc3adf5dcc3112095bf4ae69fe8628e89d548059a99417626aa2b'
+          checkpoint: '3832edcaffbdc3adf5dcc3112095bf4ae69fe8628e89d548059a99417626aa2b'
   name 'Ghostlab'
   homepage 'https://vanamco.com/ghostlab/'
   license :commercial

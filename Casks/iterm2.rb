@@ -5,7 +5,7 @@ cask 'iterm2' do
 
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.gsub('.', '_')}.zip"
   appcast 'https://iterm2.com/appcasts/final.xml',
-          :checkpoint => 'e9de319b2fa344a35dd297ee07cd9ea6c9d4ff93e96fece38c36409319767f55'
+          checkpoint: 'e9de319b2fa344a35dd297ee07cd9ea6c9d4ff93e96fece38c36409319767f55'
   name 'iTerm2'
   homepage 'https://www.iterm2.com/'
   license :gpl
@@ -14,5 +14,5 @@ cask 'iterm2' do
 
   app 'iTerm.app'
 
-  zap :delete => '~/Library/Preferences/com.googlecode.iterm2.plist'
+  zap delete: '~/Library/Preferences/com.googlecode.iterm2.plist'
 end

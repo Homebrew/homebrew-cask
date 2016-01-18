@@ -9,5 +9,5 @@ cask 'heka' do
 
   pkg "heka-#{version.gsub('.', '_')}-darwin-amd64.pkg"
 
-  uninstall :pkgutil => 'com.Mozilla.heka'
+  uninstall pkgutil: 'com.Mozilla.heka'
 end

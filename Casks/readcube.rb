@@ -7,9 +7,9 @@ cask 'readcube' do
   homepage 'https://www.readcube.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  installer :manual => 'Install ReadCube.app'
+  installer manual: 'Install ReadCube.app'
 
-  uninstall :trash => '/Applications/ReadCube.app'
+  uninstall trash: '/Applications/ReadCube.app'
 
-  zap :delete => '~/Library/Preferences/com.readcube.Desktop/'
+  zap delete: '~/Library/Preferences/com.readcube.Desktop/'
 end

@@ -7,8 +7,8 @@ cask 'navicat-data-modeler' do
   homepage 'http://www.navicat.com/products/navicat-data-modeler'
   license :commercial
 
-  depends_on :macos => '>= :lion'
-  depends_on :arch => :intel
+  depends_on macos: '>= :lion'
+  depends_on arch: :intel
 
   app 'Navicat Data Modeler.app'
 end

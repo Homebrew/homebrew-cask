@@ -4,7 +4,7 @@ cask 'xscope' do
 
   url "https://iconfactory.com/assets/software/xscope/xScope-#{version}.zip"
   appcast 'https://iconfactory.com/appcasts/xScope/appcast.xml',
-          :checkpoint => '8ca24804a212a277f857ed92478701e5433753f7c7e41299b7d6dc56e6dbdd38'
+          checkpoint: '8ca24804a212a277f857ed92478701e5433753f7c7e41299b7d6dc56e6dbdd38'
   name 'xScope'
   homepage 'http://iconfactory.com/software/xscope'
   license :commercial

@@ -5,17 +5,17 @@ cask 'bleep' do
   # utorrent.com is the official download host per the vendor homepage
   url 'https://download-new.utorrent.com/endpoint/bleep/os/osx/track/stable/'
   appcast 'https://bleeposx.bittorrent.com/appcast.xml',
-          :checkpoint => '11a834244e4ca4c4fce08580760fb77c05304f670d72755604e45cea460bc81e'
+          checkpoint: '11a834244e4ca4c4fce08580760fb77c05304f670d72755604e45cea460bc81e'
   name 'BitTorrent Bleep'
   homepage 'http://www.bleep.pm/'
   license :gratis
 
   app 'Bleep.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/Bleep',
-                   '~/Library/Caches/com.bittorrent.bleep.osx',
-                   '~/Library/Preferences/com.bittorrent.bleep.osx.plist',
-                   '~/Library/Saved Application State/com.bittorrent.bleep.osx.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Bleep',
+                '~/Library/Caches/com.bittorrent.bleep.osx',
+                '~/Library/Preferences/com.bittorrent.bleep.osx.plist',
+                '~/Library/Saved Application State/com.bittorrent.bleep.osx.savedState',
+              ]
 end

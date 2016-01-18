@@ -7,7 +7,7 @@ cask 'flycut' do
   homepage 'https://github.com/TermiT/Flycut'
   license :mit
 
-  pkg "flycut#{version}.pkg", :allow_untrusted => true
+  pkg "flycut#{version}.pkg", allow_untrusted: true
 
-  uninstall :pkgutil => 'com.generalarcade.flycut'
+  uninstall pkgutil: 'com.generalarcade.flycut'
 end

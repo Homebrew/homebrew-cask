@@ -9,7 +9,7 @@ cask 'xoctave' do
 
   app 'Xoctave.app'
 
-  uninstall :quit => 'org.magnifier.magnifier'
+  uninstall quit: 'org.magnifier.magnifier'
 
-  zap :delete => '~/xoctave'
+  zap delete: '~/xoctave'
 end

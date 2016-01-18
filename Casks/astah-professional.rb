@@ -9,5 +9,5 @@ cask 'astah-professional' do
 
   pkg "astah professional ver #{version.gsub('.', '_')}.pkg"
 
-  uninstall :pkgutil => 'com.change-vision.astahprofessional.astahprofessional.pkg'
+  uninstall pkgutil: 'com.change-vision.astahprofessional.astahprofessional.pkg'
 end

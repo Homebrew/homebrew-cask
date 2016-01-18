@@ -10,5 +10,5 @@ cask 'riffworkst4' do
 
   pkg "RiffWorksT4V#{version.gsub('.', '_')}.pkg"
 
-  uninstall :pkgutil => 'com.sonomawireworks.riffworkst4'
+  uninstall pkgutil: 'com.sonomawireworks.riffworkst4'
 end

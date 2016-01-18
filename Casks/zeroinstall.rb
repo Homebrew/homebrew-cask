@@ -10,5 +10,5 @@ cask 'zeroinstall' do
 
   pkg 'ZeroInstall.pkg'
 
-  uninstall :pkgutil => 'net.0install.pkg'
+  uninstall pkgutil: 'net.0install.pkg'
 end

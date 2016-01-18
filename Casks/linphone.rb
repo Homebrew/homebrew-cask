@@ -8,9 +8,9 @@ cask 'linphone' do
   homepage 'https://www.linphone.org/'
   license :gpl
   gpg "#{url}.sig",
-      :key_id => '3ecd52dee2f56985'
+      key_id: '3ecd52dee2f56985'
 
-  container :type => :xar
+  container type: :xar
 
   app 'Linphone.app'
 

@@ -10,11 +10,11 @@ cask 'logitech-harmony' do
 
   pkg 'LogitechRemoteSoftware.pkg'
 
-  uninstall :quit    => 'com.logitech.harmony.cappuccino.client.logitech',
-            :kext    => [
-                          'com.RemoteControl.USBLAN.usbpart',
-                          'com.Belcarra.iokit.USBLAN_netpart',
-                          'com.Belcarra.iokit.USBLAN_usbpart',
-                        ],
-            :pkgutil => 'com.logitech.harmony.logitechRemoteSoftware.*'
+  uninstall quit:    'com.logitech.harmony.cappuccino.client.logitech',
+            kext:    [
+                       'com.RemoteControl.USBLAN.usbpart',
+                       'com.Belcarra.iokit.USBLAN_netpart',
+                       'com.Belcarra.iokit.USBLAN_usbpart',
+                     ],
+            pkgutil: 'com.logitech.harmony.logitechRemoteSoftware.*'
 end

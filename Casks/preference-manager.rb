@@ -4,7 +4,7 @@ cask 'preference-manager' do
 
   url 'http://download.digitalrebellion.com/Pref_Man.dmg'
   appcast 'https://www.digitalrebellion.com/rss/appcasts/pref_man.xml',
-          :checkpoint => '58f8aa3bed4124c5996f2ef60124412ab42b3a138dc5e308870b559ae9a9768f'
+          checkpoint: '58f8aa3bed4124c5996f2ef60124412ab42b3a138dc5e308870b559ae9a9768f'
   name 'Preference Manager'
   homepage 'https://www.digitalrebellion.com/prefman'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

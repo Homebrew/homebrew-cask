@@ -4,12 +4,12 @@ cask 'clipy' do
 
   url "https://github.com/Clipy/Clipy/releases/download/#{version}/Clipy_#{version}.dmg"
   appcast 'https://clipy-app.com/appcast.xml',
-          :checkpoint => '5c66d9449c5f3a31e05d9605fa96d05f512c9bdfefe7756281d5be795dc8b011'
+          checkpoint: '5c66d9449c5f3a31e05d9605fa96d05f512c9bdfefe7756281d5be795dc8b011'
   name 'Clipy'
   homepage 'https://clipy-app.com/'
   license :mit
 
-  depends_on :macos => '>= :mavericks'
+  depends_on macos: '>= :mavericks'
 
   app 'Clipy.app'
 end

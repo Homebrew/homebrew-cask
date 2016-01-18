@@ -14,9 +14,9 @@ cask 'ftdi-vcp-driver' do
   homepage 'http://www.ftdichip.com/Drivers/VCP.htm'
   license :gratis
 
-  uninstall :pkgutil => 'com.FTDI.ftdiusbserialdriverinstaller.*',
-            :kext    => 'com.FTDI.driver.FTDIUSBSerialDriver',
-            :delete  => '/Library/Extensions/FTDIUSBSerialDriver.kext'
+  uninstall pkgutil: 'com.FTDI.ftdiusbserialdriverinstaller.*',
+            kext:    'com.FTDI.driver.FTDIUSBSerialDriver',
+            delete:  '/Library/Extensions/FTDIUSBSerialDriver.kext'
 
   caveats do
     reboot

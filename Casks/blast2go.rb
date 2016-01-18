@@ -7,10 +7,10 @@ cask 'blast2go' do
   homepage 'https://www.blast2go.com/'
   license :freemium
 
-  installer :script => 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
-            :args   => ['-q']
+  installer script: 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
+            args:   ['-q']
 
-  uninstall :delete => '/Applications/Blast2GO'
+  uninstall delete: '/Applications/Blast2GO'
 
   caveats do
     depends_on_java

@@ -9,5 +9,5 @@ cask 'privatetunnel' do
 
   pkg 'PrivateTunnel.mpkg'
 
-  uninstall :script => 'Uninstaller.command'
+  uninstall script: 'Uninstaller.command'
 end

@@ -7,8 +7,8 @@ cask 'eclipse-java' do
   homepage 'https://eclipse.org/'
   license :eclipse
 
-  depends_on :macos => '>= :leopard'
-  depends_on :arch => :x86_64
+  depends_on macos: '>= :leopard'
+  depends_on arch: :x86_64
 
   app 'Eclipse.app'
 end

@@ -8,9 +8,9 @@ cask 'fender-amp-drivers' do
   homepage 'https://fuse.fender.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   pkg 'Fender FUSE Installer.app/Contents/Resources/FenderDrivers.pkg'
 
-  uninstall :pkgutil => 'com.Fender.pkg.FenderAmpDrivers'
+  uninstall pkgutil: 'com.Fender.pkg.FenderAmpDrivers'
 end

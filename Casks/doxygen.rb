@@ -4,7 +4,7 @@ cask 'doxygen' do
 
   url "http://ftp.stack.nl/pub/users/dimitri/Doxygen-#{version}.dmg"
   appcast 'https://www.stack.nl/~dimitri/doxygen/manual/changelog.html',
-          :checkpoint => '47d68c2c457a2d6e3840bd189da9d6f4b4b71389e0bf17166a673d60703dd8dd'
+          checkpoint: '47d68c2c457a2d6e3840bd189da9d6f4b4b71389e0bf17166a673d60703dd8dd'
   name 'Doxygen'
   homepage 'https://www.stack.nl/~dimitri/doxygen/'
   license :gpl

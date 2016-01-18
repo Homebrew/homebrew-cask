@@ -18,5 +18,5 @@ cask 'openzfs' do
     pkg "OpenZFS on OS X #{version.sub(%r{-.*}, '')} El Capitan or higher.pkg"
   end
 
-  uninstall :pkgutil => 'net.lundman.openzfs.*'
+  uninstall pkgutil: 'net.lundman.openzfs.*'
 end

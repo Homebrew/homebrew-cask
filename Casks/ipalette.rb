@@ -4,7 +4,7 @@ cask 'ipalette' do
 
   url "http://ipalette.info/downloads/iPalette-#{version}.zip"
   appcast 'http://ipalette.info/appcast.xml',
-          :checkpoint => 'f2fd0099df0e42ed76ba3f48344471d806eeb63322b77079d345a4d3da14bf65'
+          checkpoint: 'f2fd0099df0e42ed76ba3f48344471d806eeb63322b77079d345a4d3da14bf65'
   name 'iPalette'
   homepage 'http://ipalette.info/'
   license :gratis

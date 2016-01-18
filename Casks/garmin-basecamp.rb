@@ -7,10 +7,10 @@ cask 'garmin-basecamp' do
   homepage 'https://www.garmin.com/en-US/shop/downloads/basecamp'
   license :gratis
 
-  depends_on :macos => '>= :yosemite'
-  depends_on :arch => :intel
+  depends_on macos: '>= :yosemite'
+  depends_on arch: :intel
 
   pkg 'Install BaseCamp.pkg'
 
-  uninstall :pkgutil => 'com.garmin.BaseCamp'
+  uninstall pkgutil: 'com.garmin.BaseCamp'
 end

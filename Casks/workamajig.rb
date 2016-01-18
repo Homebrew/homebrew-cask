@@ -8,7 +8,7 @@ cask 'workamajig' do
   homepage 'http://www.workamajig.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  depends_on :cask => 'adobe-air'
+  depends_on cask: 'adobe-air'
 
   app 'Workamajig.app'
 end

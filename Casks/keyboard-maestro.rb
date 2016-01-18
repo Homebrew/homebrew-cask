@@ -8,7 +8,7 @@ cask 'keyboard-maestro' do
   homepage 'https://www.keyboardmaestro.com/'
   license :commercial
 
-  depends_on :macos => '>= :yosemite'
+  depends_on macos: '>= :yosemite'
 
   app 'Keyboard Maestro.app'
 end

@@ -23,21 +23,21 @@ cask 'wireshark' do
     end
   end
 
-  uninstall :script  => {
-                          :executable => '/usr/sbin/dseditgroup',
-                          :args       => ['-o', 'delete', 'access_bpf'],
-                        },
-            :pkgutil => 'org.wireshark.*',
-            :delete  => [
-                          '/usr/local/bin/capinfos',
-                          '/usr/local/bin/dftest',
-                          '/usr/local/bin/dumpcap',
-                          '/usr/local/bin/editcap',
-                          '/usr/local/bin/mergecap',
-                          '/usr/local/bin/randpkt',
-                          '/usr/local/bin/rawshark',
-                          '/usr/local/bin/text2pcap',
-                          '/usr/local/bin/tshark',
-                          '/usr/local/bin/wireshark',
-                        ]
+  uninstall script:  {
+                       executable: '/usr/sbin/dseditgroup',
+                       args:       ['-o', 'delete', 'access_bpf'],
+                     },
+            pkgutil: 'org.wireshark.*',
+            delete:  [
+                       '/usr/local/bin/capinfos',
+                       '/usr/local/bin/dftest',
+                       '/usr/local/bin/dumpcap',
+                       '/usr/local/bin/editcap',
+                       '/usr/local/bin/mergecap',
+                       '/usr/local/bin/randpkt',
+                       '/usr/local/bin/rawshark',
+                       '/usr/local/bin/text2pcap',
+                       '/usr/local/bin/tshark',
+                       '/usr/local/bin/wireshark',
+                     ]
 end

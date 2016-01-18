@@ -4,7 +4,7 @@ cask 'bezel' do
 
   url "http://infinitapps.com/files/Bezel-#{version}.zip"
   appcast 'http://infinitapps.com/files/bezel-appcast.xml',
-          :checkpoint => '1368230610ccd16f1464bcb09337419ed88bd133fffe59abe2536bb269fbfea8'
+          checkpoint: '1368230610ccd16f1464bcb09337419ed88bd133fffe59abe2536bb269fbfea8'
   name 'bezel'
   homepage 'http://infinitapps.com/bezel/'
   license :gratis

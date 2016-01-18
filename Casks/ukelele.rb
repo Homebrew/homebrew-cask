@@ -4,17 +4,17 @@ cask 'ukelele' do
 
   url "https://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Ukelele_#{version}&filename=Ukelele_#{version}.dmg"
   appcast 'https://dl.dropboxusercontent.com/u/60565698/Ukelele/Ukelele_appcast.xml',
-          :checkpoint => '3baa19c697d7e4f53f541d404e09590bfebb6b2a99aefa293faf703cc4e5be4b'
+          checkpoint: '3baa19c697d7e4f53f541d404e09590bfebb6b2a99aefa293faf703cc4e5be4b'
   name 'Ukelele'
   homepage 'https://scripts.sil.org/ukelele'
   license :gratis
 
   app 'Ukelele.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sil.ukelele.sfl',
-                   '~/Library/Preferences/org.sil.ukelele.plist',
-                   '~/Library/Preferences/Ukelele',
-                   '~/Library/Caches/org.sil.Ukelele',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sil.ukelele.sfl',
+                '~/Library/Preferences/org.sil.ukelele.plist',
+                '~/Library/Preferences/Ukelele',
+                '~/Library/Caches/org.sil.Ukelele',
+              ]
 end

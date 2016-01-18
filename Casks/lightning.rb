@@ -7,7 +7,7 @@ cask 'lightning' do
   homepage 'https://www.filewave.com/products/imaging/lightning-thunderbolt'
   license :gratis
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   app 'Lightning.app'
 end

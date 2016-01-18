@@ -9,5 +9,5 @@ cask 'crashcrier' do
 
   app 'CrashCrier.app'
 
-  uninstall :quit => 'com.kainjow.CrashCrier'
+  uninstall quit: 'com.kainjow.CrashCrier'
 end

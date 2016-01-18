@@ -9,8 +9,8 @@ cask 'tal-chorus-lx' do
 
   pkg 'TAL-Chorus-LX-installer.pkg'
 
-  uninstall :pkgutil => [
-                          'ch.corrupt.talchoruslx.*',
-                          'ch.corrupt.talunolxInstaller.TAL-Chorus-LX-64.pkg',
-                        ]
+  uninstall pkgutil: [
+                       'ch.corrupt.talchoruslx.*',
+                       'ch.corrupt.talunolxInstaller.TAL-Chorus-LX-64.pkg',
+                     ]
 end

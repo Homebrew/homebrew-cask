@@ -5,7 +5,7 @@ cask 'nzbvortex' do
   # cloudfront.net is the official download host per the appcast feed
   url "http://d3qv7p1umdiwb4.cloudfront.net/NZBVortex-#{version}.zip"
   appcast 'http://www.nzbvortex.com/update/appcast.xml',
-          :checkpoint => '3a90a126c430ed60df9ecf9cc2ae1cc2691bee4ab2c4ed3bafb402d725537416'
+          checkpoint: '3a90a126c430ed60df9ecf9cc2ae1cc2691bee4ab2c4ed3bafb402d725537416'
   name 'NZBVortex'
   homepage 'http://www.nzbvortex.com/'
   license :commercial

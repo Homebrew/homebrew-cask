@@ -13,7 +13,7 @@ cask 'icompta' do
   homepage 'http://www.icompta-app.com/'
   license :commercial
 
-  depends_on :macos => '>= :leopard'
+  depends_on macos: '>= :leopard'
 
   app 'iCompta.app'
 end

@@ -11,5 +11,5 @@ cask 'droplr' do
 
   app 'Droplr.app'
 
-  uninstall :login_item => 'Droplr'
+  uninstall login_item: 'Droplr'
 end

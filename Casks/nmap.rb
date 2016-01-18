@@ -9,5 +9,5 @@ cask 'nmap' do
 
   pkg "nmap-#{version}.mpkg"
 
-  uninstall :pkgutil => 'org.insecure.nmap*.pkg'
+  uninstall pkgutil: 'org.insecure.nmap*.pkg'
 end

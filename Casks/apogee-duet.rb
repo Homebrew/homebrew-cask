@@ -7,11 +7,11 @@ cask 'apogee-duet' do
   homepage 'http://www.apogeedigital.com/support/software-downloads#tab-id-8'
   license :gratis
 
-  depends_on :macos => '>= :mavericks'
+  depends_on macos: '>= :mavericks'
 
   pkg 'Duet.pkg'
 
-  uninstall :pkgutil => 'com.apogee.pkg.*'
+  uninstall pkgutil: 'com.apogee.pkg.*'
 
   caveats do
     reboot

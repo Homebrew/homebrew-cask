@@ -9,5 +9,5 @@ cask 'facebook-ios-sdk' do
 
   pkg "facebook-ios-sdk-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.facebook.sdk.pkg'
+  uninstall pkgutil: 'com.facebook.sdk.pkg'
 end

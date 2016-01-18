@@ -4,7 +4,7 @@ cask 'flux' do
 
   url "https://justgetflux.com/mac/Flux#{version}.zip"
   appcast 'https://justgetflux.com/mac/macflux.xml',
-          :checkpoint => '9e37f570a848fd1876eda223962b80ae02fe723570f4a5f266c86a16cc97afa2'
+          checkpoint: '9e37f570a848fd1876eda223962b80ae02fe723570f4a5f266c86a16cc97afa2'
   name 'f.lux'
   homepage 'https://justgetflux.com/'
   license :gratis
@@ -15,7 +15,7 @@ cask 'flux' do
     suppress_move_to_applications
   end
 
-  uninstall :login_item => 'Flux'
+  uninstall login_item: 'Flux'
 
-  zap :delete => '~/Library/Preferences/org.herf.Flux.plist'
+  zap delete: '~/Library/Preferences/org.herf.Flux.plist'
 end

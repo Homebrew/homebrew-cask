@@ -4,7 +4,7 @@ cask 'fantastical' do
 
   url "http://cdn.flexibits.com/Fantastical_#{version}.zip"
   appcast 'https://flexibits.com/fantastical/appcast2.php',
-          :checkpoint => '891edbc3657ab7f08d356377092aa01beef808c6e7d5a19a99ef3d471786908a'
+          checkpoint: '891edbc3657ab7f08d356377092aa01beef808c6e7d5a19a99ef3d471786908a'
   name 'Fantastical'
   homepage 'https://flexibits.com/fantastical'
   license :freemium
@@ -15,5 +15,5 @@ cask 'fantastical' do
     suppress_move_to_applications
   end
 
-  zap :delete => '~/Library/Preferences/com.flexibits.fantastical.plist'
+  zap delete: '~/Library/Preferences/com.flexibits.fantastical.plist'
 end

@@ -23,7 +23,7 @@ cask 'go' do
   homepage 'https://golang.org/'
   license :bsd
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
-  uninstall :pkgutil => 'com.googlecode.go'
+  uninstall pkgutil: 'com.googlecode.go'
 end

@@ -7,8 +7,8 @@ cask 'beatunes' do
   homepage 'https://www.beatunes.com'
   license :closed
 
-  depends_on :macos => '>= :lion'
-  depends_on :arch => :x86_64
+  depends_on macos: '>= :lion'
+  depends_on arch: :x86_64
 
   app "beaTunes#{version.to_i}.app"
 end

@@ -9,5 +9,5 @@ cask 'garmin-training-center' do
 
   pkg 'Garmin Training Center.pkg'
 
-  uninstall :pkgutil => 'com.garmin.garminTrainingCenter.*pkg'
+  uninstall pkgutil: 'com.garmin.garminTrainingCenter.*pkg'
 end

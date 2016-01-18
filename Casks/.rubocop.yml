@@ -23,7 +23,7 @@ Style/FileName:
   Enabled: false
 
 Style/HashSyntax:
-  EnforcedStyle: hash_rockets
+  EnforcedStyle: ruby19_no_mixed_keys
 
 Style/IndentArray:
   EnforcedStyle: align_brackets

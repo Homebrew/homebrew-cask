@@ -7,7 +7,7 @@ cask 'boom' do
   homepage 'http://www.globaldelight.com/boom/'
   license :commercial
 
-  depends_on :macos => '>= :yosemite'
+  depends_on macos: '>= :yosemite'
 
   app 'Boom 2.app'
 

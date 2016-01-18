@@ -9,5 +9,5 @@ cask 'magican' do
 
   pkg 'Magican.pkg'
 
-  uninstall :pkgutil => 'com.magican.*'
+  uninstall pkgutil: 'com.magican.*'
 end

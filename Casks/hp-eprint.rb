@@ -9,10 +9,10 @@ cask 'hp-eprint' do
 
   pkg 'HP ePrint Installer.pkg'
 
-  uninstall :pkgutil => 'com.hp.pkg.cloudprint.HP-ePrint-Mobile'
+  uninstall pkgutil: 'com.hp.pkg.cloudprint.HP-ePrint-Mobile'
 
-  zap :delete => [
-                   '~/Library/Containers/com.hp.cloudprint.HP-ePrint-Mobile',
-                   '~/Library/PDF Services/HP ePrint',
-                 ]
+  zap delete: [
+                '~/Library/Containers/com.hp.cloudprint.HP-ePrint-Mobile',
+                '~/Library/PDF Services/HP ePrint',
+              ]
 end

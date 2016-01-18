@@ -10,5 +10,5 @@ cask 'marker-import' do
 
   app 'Marker Import.app'
 
-  zap :delete => '~/Library/Preferences/com.digitalrebellion.MarkerImport.plist'
+  zap delete: '~/Library/Preferences/com.digitalrebellion.MarkerImport.plist'
 end

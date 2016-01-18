@@ -7,7 +7,7 @@ cask 'duplicate-annihilator' do
   homepage 'http://brattoo.com/propaganda/'
   license :commercial
 
-  container :nested => 'Duplicate Annihilator.dmg'
+  container nested: 'Duplicate Annihilator.dmg'
 
   app 'Duplicate Annihilator.app'
 end

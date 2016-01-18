@@ -9,5 +9,5 @@ cask 'crosswebex' do
 
   pkg 'CrossWebEX.pkg'
 
-  uninstall :pkgutil => 'kr.co.iniline.pkg.CrossWebEX'
+  uninstall pkgutil: 'kr.co.iniline.pkg.CrossWebEX'
 end

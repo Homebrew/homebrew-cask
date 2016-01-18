@@ -4,7 +4,7 @@ cask 'tikzit' do
 
   url "http://downloads.sourceforge.net/sourceforge/tikzit/TikZiT-#{version}.dmg"
   appcast 'http://tikzit.sourceforge.net/appcast/tikzit.xml',
-          :checkpoint => '2fc201624061d05e5b3ae505e69611fd11824534f28ada3ab4150de98ebca5f3'
+          checkpoint: '2fc201624061d05e5b3ae505e69611fd11824534f28ada3ab4150de98ebca5f3'
   name 'TikZiT'
   homepage 'http://tikzit.sourceforge.net/'
   license :gpl

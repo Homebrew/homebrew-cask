@@ -5,7 +5,7 @@ cask 'actotracker' do
   # dropboxusercontent.com is the official download host per the vendor homepage
   url 'https://dl.dropboxusercontent.com/u/7614970/ActoTracker.zip'
   appcast 'https://onflapp.appspot.com/actotracker',
-          :checkpoint => '8ae126c057e71688c0d6c9b24ff45a56d97c62251dddd433d99bb724ddcb5492'
+          checkpoint: '8ae126c057e71688c0d6c9b24ff45a56d97c62251dddd433d99bb724ddcb5492'
   name 'ActoTracker'
   homepage 'https://onflapp.wordpress.com/actotracker/'
   license :gratis

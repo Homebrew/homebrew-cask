@@ -4,7 +4,7 @@ cask 'svnx' do
 
   url "https://subversion.assembla.com/svn/svnx/tags/svnX%20#{version}.dmg"
   appcast 'https://subversion.assembla.com/svn/svnx/rss/svnX.rss.xml',
-          :checkpoint => 'db70ff768403b7248e7dd75e64c400c13ff55623b149d4f294f92713ebc9517e'
+          checkpoint: 'db70ff768403b7248e7dd75e64c400c13ff55623b149d4f294f92713ebc9517e'
   name 'svnX'
   homepage 'https://subversion.assembla.com/svn/svnx/html/index.html'
   license :gratis
