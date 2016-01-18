@@ -1,6 +1,6 @@
 cask 'youdao' do
-  version :latest
-  sha256 :no_check
+  version '1.0b2'
+  sha256 '1d7ed89d2b77de4d1e45b854947df025aeea329ffcac91d7110db5e2dd0a2554'
 
   url 'http://cidian.youdao.com/download/YoudaoDictForMac.dmg'
   appcast 'http://cidian.youdao.com/apps/macupdate/update.xml',
