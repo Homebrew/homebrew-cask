@@ -7,8 +7,8 @@ test_cask 'with-uninstall-signal' do
 
   pkg 'MyFancyPkg/Fancy.pkg'
 
-  uninstall :signal => [
-                         ['TERM', 'my.fancy.package.app'],
-                         ['KILL', 'my.fancy.package.app'],
-                       ]
+  uninstall signal: [
+                      ['TERM', 'my.fancy.package.app'],
+                      ['KILL', 'my.fancy.package.app'],
+                    ]
 end

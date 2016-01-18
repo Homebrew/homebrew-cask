@@ -7,5 +7,5 @@ test_cask 'with-zap-kext' do
 
   pkg 'Fancy.pkg'
 
-  zap :kext => 'my.fancy.package.kernelextension'
+  zap kext: 'my.fancy.package.kernelextension'
 end

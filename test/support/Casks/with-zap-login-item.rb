@@ -7,5 +7,5 @@ test_cask 'with-zap-login-item' do
 
   pkg 'MyFancyPkg/Fancy.pkg'
 
-  zap :login_item => 'Fancy'
+  zap login_item: 'Fancy'
 end

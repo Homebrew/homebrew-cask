@@ -7,5 +7,5 @@ test_cask 'with-zap-early-script' do
 
   pkg 'MyFancyPkg/Fancy.pkg'
 
-  zap :early_script => { :executable => 'MyFancyPkg/FancyUninstaller.tool', :args => %w[--please] }
+  zap early_script: { executable: 'MyFancyPkg/FancyUninstaller.tool', args: %w[--please] }
 end

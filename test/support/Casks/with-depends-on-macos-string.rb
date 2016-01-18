@@ -5,7 +5,7 @@ test_cask 'with-depends-on-macos-string' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/with-depends-on-macos-string'
 
-  depends_on :macos => MacOS.release.to_s
+  depends_on macos: MacOS.release.to_s
 
   app 'Caffeine.app'
 end
