@@ -1,6 +1,6 @@
 cask 'spacemonkey' do
-  version :latest
-  sha256 :no_check
+  version '0.7.17'
+  sha256 '276c29a536e0a21539831dfbb6dd81f10dbd09a0e17bffeb11cd253c1dc78e57'
 
   url 'http://downloads.spacemonkey.com/client/mac/latest'
   appcast 'https://rink.hockeyapp.net/api/2/apps/aa33b6780fdfc71247b2995fa47b5d7c',
