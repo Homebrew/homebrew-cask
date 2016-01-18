@@ -55,14 +55,14 @@ cask 'shuttle' do
 
   url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
   appcast 'https://github.com/fitztrev/shuttle/releases.atom',
-          :sha256 => '9f66dbb98f73f69f4a1759d4bdb8d2552060d599548427740e239ca45185fe5c'
+          sha256: '9f66dbb98f73f69f4a1759d4bdb8d2552060d599548427740e239ca45185fe5c'
   name 'Shuttle'
   homepage 'https://fitztrev.github.io/shuttle/'
   license :mit
 
   app 'Shuttle.app'
 
-  zap :delete => '~/.shuttle.json'
+  zap delete: '~/.shuttle.json'
 end
 ```
 
@@ -81,14 +81,14 @@ cask 'gateblu' do
 
   pkg 'Gateblu Installer.pkg'
 
-  uninstall :pkgutil => 'com.octoblu.*',
-            :delete => '/Applications/Gateblu.app'
+  uninstall pkgutil: 'com.octoblu.*',
+            delete: '/Applications/Gateblu.app'
 end
 ```
 
 #### `version` methods
 
-In the examples above, when possible the `url` stanza uses `#{version}` ([string interpolation](https://en.wikipedia.org/wiki/String_interpolation#Ruby)) to create a Cask that only needs `version` and `sha256` changes when updated. This can be taken further, when needed, with [ruby String methods](http://ruby-doc.org/core/String.html). 
+In the examples above, when possible the `url` stanza uses `#{version}` ([string interpolation](https://en.wikipedia.org/wiki/String_interpolation#Ruby)) to create a Cask that only needs `version` and `sha256` changes when updated. This can be taken further, when needed, with [ruby String methods](http://ruby-doc.org/core/String.html).
 
 For example:
 
