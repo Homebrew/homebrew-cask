@@ -1,6 +1,6 @@
 cask 'sling' do
-  version :latest
-  sha256 :no_check
+  version '4.8.9.288'
+  sha256 'a1dde0cd5accb303e411e438d8eb56a1f4c88b0e36ba65a5538566006695d9c6'
 
   # move.tv is the official download host per the vendor homepage
   url 'http://webapp.movetv.com/player/osx/slingtv.dmg'
