@@ -1,11 +1,13 @@
 cask 'raptor' do
-  version '98u3f5'
-  sha256 'e19dc03ab5e0f7bb17179ce4bcf364211cee3928d7182d3db1dd0c4cf7ee87e0'
+  version '1.0rc4'
+  sha256 'd78684e7d8abb829f2751390cea3d338c6bdad1c5cc90b1949776b02912e8c7c'
 
-  url "https://raptor-chess-interface.googlecode.com/files/Raptor_v#{version}_OS_X_Cocoa_x86_64.dmg"
+  url "https://github.com/Raptor-Fics-Interface/Raptor/releases/download/#{version}/Raptor_v1.0rc4_OS_X_Cocoa_x86_64.dmg"
+  appcast 'https://github.com/Raptor-Fics-Interface/Raptor/releases.atom',
+          checkpoint: 'c918964a81c1309703b9b228af864ca974294c5a76e4e8fc7a6692d4455e902c'
   name 'Raptor Chess Interface'
-  homepage 'https://code.google.com/p/raptor-chess-interface/'
+  homepage 'https://github.com/raptor-fics-interface/raptor'
   license :bsd
 
-  app "Raptor_v#{version}/Raptor.app"
+  app 'Raptor.app'
 end
