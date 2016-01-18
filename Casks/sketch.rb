@@ -3,6 +3,8 @@ cask 'sketch' do
   sha256 '428f5d507f68a7b86cf5d97d3b0fc5c23297cd2048463dbf4e222375154cef79'
 
   url 'http://www.sketchapp.com/static/download/sketch.zip'
+  appcast 'http://www.sketchapp.com/appcast3.xml',
+          checkpoint: '0b34bdb96c002b62e83007990ecbb8e4fa69c6dc66dd5c752ad3c54b6818ca3c'
   name 'Sketch'
   homepage 'http://www.sketchapp.com/'
   license :commercial
