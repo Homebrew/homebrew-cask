@@ -55,7 +55,7 @@ cask 'shuttle' do
 
   url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
   appcast 'https://github.com/fitztrev/shuttle/releases.atom',
-          sha256: '9f66dbb98f73f69f4a1759d4bdb8d2552060d599548427740e239ca45185fe5c'
+          checkpoint: '9f66dbb98f73f69f4a1759d4bdb8d2552060d599548427740e239ca45185fe5c'
   name 'Shuttle'
   homepage 'https://fitztrev.github.io/shuttle/'
   license :mit
