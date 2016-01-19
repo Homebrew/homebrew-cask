@@ -1,6 +1,6 @@
 cask 'powerkey' do
   version '1.5'
-  sha256 '5f6246133953a65709252880738de7f69198ed3f23dc61bbfc062887e2313102'
+  sha256 'bd5c66ddb816057e7b301bc1ced9b055f423024b2e8a0648937bba9bbf2311e7'
 
   url "https://github.com/pkamb/PowerKey/archive/v#{version}.zip"
   appcast 'https://github.com/pkamb/PowerKey/releases.atom',
