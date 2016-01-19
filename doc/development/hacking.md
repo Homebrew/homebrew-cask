@@ -39,7 +39,7 @@ However, very little backend code is shared between the two projects. The Homebr
 
 Homebrew Formulae deal with many different build processes, and often include arbitrary Ruby code.
 
-Casks, by contrast, only need to support the few installation methods used by apps, pkg installers, and so on, making them suitable for a [declarative DSL](https://github.com/caskroom/homebrew-cask/blob/master/doc/CASK_LANGUAGE_REFERENCE.md).
+Casks, by contrast, only need to support the few installation methods used by apps, pkg installers, and so on, making them suitable for a [declarative DSL](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/).
 
 We encourage Cask authors to use the DSL as much as possible, since that makes things easier for everyone: from maintainers who review pull requests, to first-time contributors, to people who are unfamiliar with Ruby but would like to help.
 

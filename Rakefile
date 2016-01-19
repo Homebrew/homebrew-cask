@@ -47,5 +47,5 @@ end
 desc 'Generate man page from Markdown source'
 task :man do
   sh 'ronn --roff --pipe --organization=Homebrew-cask --manual=brew-cask ' \
-     'doc/src/brew-cask.1.md > man/man1/brew-cask.1'
+     'doc/man_page/brew-cask.1.md > man/man1/brew-cask.1'
 end
